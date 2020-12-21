@@ -1,0 +1,350 @@
+<form class="actor-sheet {{cssClass}}" autocomplete="off">
+    <header class="sheet-header">
+        <img src="{{actor.img}}" data-edit="img" title="{{actor.name}}" height="64" width="64"/>
+        <h1 class="charname"><input name="name" type="text" value="{{actor.name}}" placeholder="Name"/></h1>
+ 
+    </header>
+    <div>
+        <table>
+            <tr>
+                <th style="width:34%">{{localize "torgeternity.stats.wounds"}}</th>
+                <th style="width:33%">{{localize "torgeternity.stats.shock"}}</th>
+                <th style="width:33%">{{localize "torgeternity.stats.possibilities"}}</th>
+            </tr>
+            <tr>
+                <td style="text-align:center">
+                    <input name="data.wounds.value" type="text" value="{{data.wounds.value}}" data-dtype="Number" style="width:25%" />
+                    /
+                    <input name="data.wounds.max" type="text" value="{{data.wounds.max}}" data-dtype="Number" style="width:25%" />
+                </td>
+                <td style="text-align:center">
+                    <input name="data.shock.value" type="text" value="{{data.shock.value}}" data-dtype="Number" style="width: 25%" />
+                    /
+                    <input name="data.shock.max" type="text" value="{{data.shock.max}}" data-dtype="Number" style="width:25%" />
+                </td>
+                <td style="text-align:center">
+                    <input name="data.possibilities" type="text" value="{{data.possibilities}}" data-dtype="Number" style="width:15%" />
+                </td>
+            </tr>
+        </table>
+    </div>  
+
+
+    {{!-- Sheet Tab Navigation --}}
+    <nav class="sheet-tabs tabs" data-group="primary" >
+        <a class="item" data-tab="stats">Stats</a>
+        <a class="item" data-tab="perks">Perks</a>
+        <a class="item" data-tab="gear">Gear</a>
+        <a class="item" data-tab="powers">Powers</a>
+    </nav>
+
+    <secton class="sheet-body">
+
+        <div class="tab stats" data-group="primary" data-tab="stats">
+            <table>
+                <tr style="text-align:center">
+                    <td>
+                        <a class="skill-roll" data-skill-value="{{data.attributes.charisma}}" data-skill-name="Charisma"><i class="fas fa-dice-d20"></i></a>
+                        CHA: <input name="data.attributes.charisma" type="text" value="{{data.attributes.charisma}}" data-dtype="Number" style="width:25%" />
+                    </td>
+                    <td>
+                        <a class="skill-roll" data-skill-value="{{data.attributes.dexterity}}" data-skill-name="Dexterity"><i class="fas fa-dice-d20"></i></a>
+                        DEX: <input name="data.attributes.dexterity" type="text" value="{{data.attributes.dexterity}}" data-dtype="Number" style="width:25%"
+                    </td>
+                    <td>
+                        <a class="skill-roll" data-skill-value="{{data.attributes.mind}}" data-skill-name="Mind"><i class="fas fa-dice-d20"></i></a>                        
+                        MIN: <input name="data.attributes.mind" type="text" value="{{data.attributes.mind}}" data-dtype="Number" style="width:25%"
+                    </td>
+                    <td>
+                        <a class="skill-roll" data-skill-value="{{data.attributes.spirit}}" data-skill-name="Spirit"><i class="fas fa-dice-d20"></i></a>                        
+                        SPI: <input name="data.attributes.spirit" type="text" value="{{data.attributes.spirit}}" data-dtype="Number" style="width:25%"
+                    </td>
+                    <td>
+                        <a class="skill-roll" data-skill-value="{{data.attributes.strength}}" data-skill-name="Strength"><i class="fas fa-dice-d20"></i></a>                        
+                        STR: <input name="data.attributes.strength" type="text" value="{{data.attributes.strength}}" data-dtype="Number" style="width:25%"
+                    </td>
+                </tr> 
+            </table>
+            <table>
+                <tr style="text-align:center">
+                    <td>
+                        XP: <input name="data.xp.unspent" type="text" value="{{data.xp.unspent}}" data-dtype="Number" style="width:20%">
+                        /
+                        <input name="data.xp.earned" type="text" value="{{data.xp.earned}}" data-dtype="Number" style="width: 20%">
+                    </td>
+                    <td style="width:25%">Clearance: <input name="data.clearance" type="text" value="{{data.clearance}}" data-dtype="text" style="width:50%"</td>
+                    <td>
+                        Move: <input name="data.move" type="text" value="{{data.move}}" data-dtype="Number" style="width: 20%">
+                        /
+                        <input name="data.run" type="text" value="{{data.run}}" data-dtype="Number" style="width: 20%">
+                    </td>
+                    <td>
+                        Toughness: <input name="data.toughness" type="text" value="{{data.toughness}}" data-dtype="Number" style="width: 15%">
+                        (
+                        <input name="data.armor" type="text" value="{{data.armor}}" data-dtype="Number" style="width: 15%">
+                        )
+                    </td>
+                </tr>
+            </table>
+            <div style="text-align:center;background-color:black;color:cornsilk;font-size:125%;">
+                Skills
+            </div>
+
+            <table>
+                <tr>
+                    <td style="width:50%">
+                        <table>
+                            <tr style="text-align:left">
+                                <th>Skill</th>
+                                <th>Adds</th>
+                                <th>Attribute</th>
+                                <th>Total</th>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Air Vehicles
+                                </td>
+                                <td>
+                                    <input name="data.skills.airVehicles.adds" type="text" value="{{data.skills.airVehicles.adds}}" data-dtype="Number" style="width:30px;text-align:center" />
+                                </td>
+                                <td>
+                                    <select name="data.skills.airVehicles.baseAttribute" class="attribute-select">
+                                        <option value="charisma">Charisma</option>
+                                        <option value="dexterity">Dexterity</option>
+                                        <option value="mind">Mind</option>
+                                        <option value="spirit">Spirit</option>
+                                        <option value="strength">Strength</option>
+                                    </select>
+                                </td>
+                                <td>
+                                    <input name="data.skills.airVehicles.value" type="number" value="{{data.skills.airVehicles.value}}" data-dtype="Number" style="width:30px;text-align:center" />
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                    <td>
+                        Second Column
+                    </td>
+                </tr>
+                
+            </table>
+        </div>
+
+        <div class="tab perks" data-group="primary" data-tab="perks">
+            <ol class="item-list">
+                {{#each perk as |item id|}}
+                <li class="item flexrow" data-item-id="{{item._id}}">
+                    <img src="{{item.img}}" title="{{item.name}}" width="50" height="50" />
+                    <h4 class="item-name">{{item.name}}</h4>
+                    <div class="item-controls">
+                        <a class="item-control item-edit" title="Edit Item"><i class="fas fa-edit"></i></a>
+                        <a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
+                    </div>
+                </li>
+                {{/each}}
+            </ol>
+
+        </div>
+
+        <div class="tab gear" data-group="primary" data-tab="gear">
+            <div>
+                <div style="text-align:center;background-color:black;color:cornsilk;font-size:125%;">
+                    General Gear
+                </div>
+                <ol class="item-list">
+                    {{#each gear as |item id|}}
+                    <li class="item flexrow" data-item-id="{{item._id}}">
+                        <img src="{{item.img}}" title="{{item.name}}" width="50" height="50" />
+                        <h4 class="item-name">{{item.name}}</h4>
+                        <div class="item-controls">
+                            <a class="item-control item-edit" title="Edit Item"><i class="fas fa-edit"></i></a>
+                            <a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
+                        </div>
+                    </li>
+                    {{/each}}
+                </ol>
+
+                <div style="text-align:center;background-color:black;color:cornsilk;font-size:125%;">
+                    Armor
+                </div>
+                <ol class="item-list">
+                    {{#each armor as |item id|}}
+                    <li class="item flexrow" data-item-id="{{item._id}}">
+                        <img src="{{item.img}}" title="{{item.name}}" width="50" height="50" />
+                        <h4 class="item-name">{{item.name}}</h4>
+                        <div class="item-controls">
+                            <a class="item-control item-edit" title="Edit Item"><i class="fas fa-edit"></i></a>
+                            <a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
+                        </div>
+                    </li>
+                    {{/each}}
+                </ol>
+
+                <div style="text-align:center;background-color:black;color:cornsilk;font-size:125%;">
+                    Shields
+                </div>
+                <ol class="item-list">
+                    {{#each shield as |item id|}}
+                    <li class="item flexrow" data-item-id="{{item._id}}">
+                        <img src="{{item.img}}" title="{{item.name}}" width="50" height="50" />
+                        <h4 class="item-name">{{item.name}}</h4>
+                        <div class="item-controls">
+                            <a class="item-control item-edit" title="Edit Item"><i class="fas fa-edit"></i></a>
+                            <a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
+                        </div>
+                    </li>
+                    {{/each}}
+                </ol>
+
+                <div style="text-align:center;background-color:black;color:cornsilk;font-size:125%;">
+                    Melee Weapons
+                </div>
+               <ol class="item-list">
+                    {{#each meleeweapons as |item id|}}
+                    <li class="item flexrow" data-item-id="{{item._id}}">
+                        <img src="{{item.img}}" title="{{item.name}}" width="50" height="50" />
+                        <h4 class="item-name">{{item.name}}</h4>
+                        <div class="item-controls">
+                            <a class="item-control item-edit" title="Edit Item"><i class="fas fa-edit"></i></a>
+                            <a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
+                        </div>
+                    </li>
+                    {{/each}}
+                </ol>
+
+                <div style="text-align:center;background-color:black;color:cornsilk;font-size:125%;">
+                    Missile Weapons
+                </div>
+                <ol class="item-list">
+                    {{#each missileweapon as |item id|}}
+                    <li class="item flexrow" data-item-id="{{item._id}}">
+                        <img src="{{item.img}}" title="{{item.name}}" width="50" height="50" />
+                        <h4 class="item-name">{{item.name}}</h4>
+                        <div class="item-controls">
+                            <a class="item-control item-edit" title="Edit Item"><i class="fas fa-edit"></i></a>
+                            <a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
+                        </div>
+                    </li>
+                    {{/each}}
+                </ol>
+
+                <div style="text-align:center;background-color:black;color:cornsilk;font-size:125%;">
+                    Firearms
+                </div>
+                <ol class="item-list">
+                    {{#each firearm as |item id|}}
+                    <li class="item flexrow" data-item-id="{{item._id}}">
+                        <img src="{{item.img}}" title="{{item.name}}" width="50" height="50" />
+                        <h4 class="item-name">{{item.name}}</h4>
+                        <div class="item-controls">
+                            <a class="item-control item-edit" title="Edit Item"><i class="fas fa-edit"></i></a>
+                            <a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
+                        </div>
+                    </li>
+                    {{/each}}
+                </ol>
+
+                <div style="text-align:center;background-color:black;color:cornsilk;font-size:125%;">
+                    Implants
+                </div>
+                <ol class="item-list">
+                    {{#each implant as |item id|}}
+                    <li class="item flexrow" data-item-id="{{item._id}}">
+                        <img src="{{item.img}}" title="{{item.name}}" width="50" height="50" />
+                        <h4 class="item-name">{{item.name}}</h4>
+                        <div class="item-controls">
+                            <a class="item-control item-edit" title="Edit Item"><i class="fas fa-edit"></i></a>
+                            <a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
+                        </div>
+                    </li>
+                    {{/each}}
+                </ol>
+
+                <div style="text-align:center;background-color:black;color:cornsilk;font-size:125%;">
+                    Heavy Weapons
+                </div>
+                <ol class="item-list">
+                    {{#each heavyweapon as |item id|}}
+                    <li class="item flexrow" data-item-id="{{item._id}}">
+                        <img src="{{item.img}}" title="{{item.name}}" width="50" height="50" />
+                        <h4 class="item-name">{{item.name}}</h4>
+                        <div class="item-controls">
+                            <a class="item-control item-edit" title="Edit Item"><i class="fas fa-edit"></i></a>
+                            <a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
+                        </div>
+                    </li>
+                    {{/each}}
+                </ol>
+
+                <div style="text-align:center;background-color:black;color:cornsilk;font-size:125%;">
+                    Vehicles
+                </div>
+                <ol class="item-list">
+                    {{#each vehicle as |item id|}}
+                    <li class="item flexrow" data-item-id="{{item._id}}">
+                        <img src="{{item.img}}" title="{{item.name}}" width="50" height="50" />
+                        <h4 class="item-name">{{item.name}}</h4>
+                        <div class="item-controls">
+                            <a class="item-control item-edit" title="Edit Item"><i class="fas fa-edit"></i></a>
+                            <a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
+                        </div>
+                    </li>
+                    {{/each}}
+                </ol>
+
+            </div>
+        </div>
+
+        <div class="tab powers" data-group="primary" data-tab="powers">
+                <div style="text-align:center;background-color:black;color:cornsilk;font-size:125%;">
+                    Spells
+                </div>
+                <ol class="item-list">
+                    {{#each spell as |item id|}}
+                    <li class="item flexrow" data-item-id="{{item._id}}">
+                        <img src="{{item.img}}" title="{{item.name}}" width="50" height="50" />
+                        <h4 class="item-name">{{item.name}}</h4>
+                        <div class="item-controls">
+                            <a class="item-control item-edit" title="Edit Item"><i class="fas fa-edit"></i></a>
+                            <a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
+                        </div>
+                    </li>
+                    {{/each}}
+                </ol>
+
+                <div style="text-align:center;background-color:black;color:cornsilk;font-size:125%;">
+                    Miracles
+                </div>
+                <ol class="item-list">
+                    {{#each miracle as |item id|}}
+                    <li class="item flexrow" data-item-id="{{item._id}}">
+                        <img src="{{item.img}}" title="{{item.name}}" width="50" height="50" />
+                        <h4 class="item-name">{{item.name}}</h4>
+                        <div class="item-controls">
+                            <a class="item-control item-edit" title="Edit Item"><i class="fas fa-edit"></i></a>
+                            <a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
+                        </div>
+                    </li>
+                    {{/each}}
+                </ol>
+
+                <div style="text-align:center;background-color:black;color:cornsilk;font-size:125%;">
+                    Psionic Powers
+                </div>
+                <ol class="item-list">
+                    {{#each psionicpower as |item id|}}
+                    <li class="item flexrow" data-item-id="{{item._id}}">
+                        <img src="{{item.img}}" title="{{item.name}}" width="50" height="50" />
+                        <h4 class="item-name">{{item.name}}</h4>
+                        <div class="item-controls">
+                            <a class="item-control item-edit" title="Edit Item"><i class="fas fa-edit"></i></a>
+                            <a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
+                        </div>
+                    </li>
+                    {{/each}}
+                </ol>
+
+        </div>
+        
+    </secton>
+</form>

@@ -1,0 +1,51 @@
+{
+    "torgeternity":{
+        "attributes": {
+            "charisma": "Charisma",
+            "dexterity": "Dexterity",
+            "mind": "Mind",
+            "spirit": "Spirit",
+            "strength": "Strength"
+        },
+        "gear":{
+            "description":"Description",
+            "techlevel": "Tech Level",
+            "price": "Price",
+            "value": "Value",
+            "damagetype": "Type",
+            "damage": "Damage",
+            "damagebonus": "Bonus",
+            "notes": "Notes",
+            "cosm": "Cosm",
+            "bonus": "Bonus",
+            "maxDex": "Max Dex",
+            "range": "Range",
+            "ammo": "Ammo",
+            "topspeed": "Top Speed",
+            "passengers": "Pass",
+            "mr": "MR",
+            "wounds": "Wnds",
+            "toughness": "Tough"
+        },
+        "stats":{
+            "wounds": "Wounds",
+            "shock": "Shock",
+            "possibilities": "Possibilities"
+        },
+        "perks":{
+            "category": "Category",
+            "cosm": "Cosm",
+            "prerequisites": "Prerequisites",
+            "timestaken": "Times Taken",
+            "description": "Description"
+        },
+        "powers": {
+            "axiom": "Axiom",
+            "skill": "Skill",
+            "castingtime": "Casting Time",
+            "dn": "DN",
+            "range": "Range",
+            "duration": "Duration"
+        }
+    }
+}

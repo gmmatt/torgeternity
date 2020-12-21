@@ -1,0 +1,39 @@
+<form class="{{cssClass}}" autocomplete="off">
+    <header class="sheet-header">
+        <img src="{{item.img}}" data-edit="img" title="{{item.name}}" height="64" width="64"/>
+        <h1><input name="name" type="text" value="{{item.name}}" placeholder="Name"/></h1>
+    </header>
+    <div class="sheet-content">
+        <div style="padding-top:15px">
+            {{localize "torgeternity.gear.cosm"}}: <input name="data.cosm" type="text" value="{{data.cosm}}" style="width:75px" />
+            {{localize "torgeternity.gear.notes"}}: <input name="data.notes" type="text" value="{{data.notes}}" style="width:350px"/>
+        </div>
+        <table>
+            <tr>
+               <th>{{localize "torgeternity.gear.techlevel"}}</th>
+                <th>{{localize "torgeternity.gear.bonus"}}</th>
+                <th>{{localize "torgeternity.gear.price"}}</th>
+                <th>{{localize "torgeternity.gear.value"}}</th>
+                <th>{{localize "torgeternity.gear.maxDex"}}</th>
+            </tr>
+            <tr>
+                 <th>
+                    <input name="data.techlevel" type="text" value="{{data.techlevel}}" data-dtype="Number" />
+                </th>
+                <th>
+                    <input name="data.bonus" type="text" value="{{data.bonus}}" data-dtype="Number" />
+                </th>
+                <th>
+                    <input name="data.price" type="text" value="{{data.price}}" data-dtype="Number" />
+                </th>
+                <th>
+                    <input name="data.value" type="text" value="{{data.value}}" data-dtype="Number" />
+                </th>
+                <th>
+                    <input name="data.maxDex" type="text" value="{{data.maxDex}}" data-dtype="Number" />
+                </th>
+            </tr>
+        </table>
+        {{editor content=data.description target="data.description" button=true owner=owner editable=editable}}
+    </div>
+</form>

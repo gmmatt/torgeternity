@@ -1,0 +1,24 @@
+<form class="{{cssClass}}" autocomplete="off">
+    <header class="sheet-header">
+        <img src="{{item.img}}" data-edit="img" title="{{item.name}}" height="64" width="64"/>
+        <h1><input name="name" type="text" value="{{item.name}}" placeholder="Name"/></h1>
+    </header>
+    <div class="sheet-content">
+        <div style="padding-top:15px">
+            <p>
+                {{localize "torgeternity.perks.category"}}: <input name="data.category" type="text" value="{{data.category}}" style="width:75px" />
+            </p>
+            <p>
+                {{localize "torgeternity.perks.cosm"}}: <input name="data.cosm" type="text" value="{{data.cosm}}" style="width:100px" />
+            </p>
+            <p>
+                {{localize "torgeternity.perks.prerequisites"}}: <input name="data.prerequisites" type="text" value="{{data.prerequisites}}" style="width:200px" />
+            </p>
+            <p>
+                {{localize "torgeternity.perks.timestaken"}}: <input name="data.timestaken" type="text" value="{{data.timestaken}}" style="width:20px" />
+            </p>
+                         
+        DESCRIPTION:
+            {{editor content=data.description target="data.description" button=true owner=owner editable=editable}}
+    </div>
+</form>

@@ -1,0 +1,417 @@
+{
+    "Actor":{
+        "types":[
+            "stormknight",
+            "threat"
+        ],
+        "templates":{
+            "commonStats": {
+                "shock": {
+                    "max": 5,
+                    "value": 0
+                },
+                "wounds": {
+                    "max": 3,
+                    "value": 0
+                },
+                "homeCosm": "",
+                "possibilities": 0,
+                "attributes": {
+                    "charisma": 5,
+                    "dexterity": 5,
+                    "mind": 5,
+                    "spirit": 5,
+                    "strength": 5
+                },
+                "move": 5,
+                "run": 5,
+                "toughness": 5,
+                "armor": 0,
+                "skills": {
+                    "airVehicles":{
+                        "baseAttribute": "dexterity",
+                        "adds": 0,
+                        "value": 0,
+                        "unskilledUse": 0
+                    },
+                    "alteration":{
+                        "baseAttribute": "mind",
+                        "adds": 0,
+                        "value": 0,
+                        "unskilledUse": 0
+                    },
+                    "apportation":{
+                        "baseAttribute": "spirit",
+                        "adds": 0,
+                        "value": 0,
+                        "unskilledUse": 0
+                    },
+                    "beastRiding":{
+                        "baseAttribute": "dexterity",
+                        "adds": 0,
+                        "value": 0,
+                        "unskilledUse": 1
+                    },
+                    "computers":{
+                        "baseAttribute": "mind",
+                        "adds": 0,
+                        "value": 0,
+                        "unskilledUse": 1
+                    },
+                    "conjuration":{
+                        "baseAttribute": "spirit",
+                        "adds": 0,
+                        "value": 0,
+                        "unskilledUse": 0
+                    },
+                    "divination":{
+                        "baseAttribute": "mind",
+                        "adds": 0,
+                        "value": 0,
+                        "unskilledUse": 0
+                    },
+                    "dodge":{
+                        "baseAttribute": "dexterity",
+                        "adds": 0,
+                        "value": 0,
+                        "unskilledUse": 1
+                    },
+                    "energyWeapons":{
+                        "baseAttribute": "dexterity",
+                        "adds": 0,
+                        "value": 0,
+                        "unskilledUse": 1
+                    },
+                    "evidenceAnalysis":{
+                        "baseAttribute": "mind",
+                        "adds": 0,
+                        "value": 0,
+                        "unskilledUse": 1
+                    },
+                    "faith":{
+                        "baseAttribute": "spirit",
+                        "value": 0,
+                        "unskilledUse": 1
+                    },
+                    "find":{
+                        "baseAttribute": "mind",
+                        "adds": 0,
+                        "value": 0,
+                        "unskilledUse": 1
+                    },
+                    "fireCombat":{
+                        "baseAttribute": "dexterity",
+                        "adds": 0,
+                        "value": 0,
+                        "unskilledUse": 1
+                    },
+                    "firstAid":{
+                        "baseAttribute": "mind",
+                        "adds": 0,
+                        "value": 0,
+                        "unskilledUse": 1
+                    },
+                    "heavyWeapons":{
+                        "baseAttribute": "dexterity",
+                        "adds": 0,
+                        "value": 0,
+                        "unskilledUse": 1
+                    },
+                    "intimidation":{
+                        "baseAttribute": "spirit",
+                        "adds": 0,
+                        "value": 0,
+                        "unskilledUse": 1
+                    },
+                    "kinesis":{
+                        "baseAttribute": "spirit",
+                        "adds": 0,
+                        "value": 0,
+                        "unskilledUse": 0
+                    },
+                    "landVehicles":{
+                        "baseAttribute": "dexterity",
+                        "adds": 0,
+                        "value": 0,
+                        "unskilledUse": 1
+                    },
+                    "language":{
+                        "baseAttribute": "mind",
+                        "adds": 0,
+                        "value": 0,
+                        "unskilledUse": 0
+                    },
+                    "lockpicking":{
+                        "baseAttribute": "dexterity",
+                        "adds": 0,
+                        "value": 0,
+                        "unskilledUse": 0
+                    },
+                    "maneuver":{
+                        "baseAttribute": "dexterity",
+                        "adds": 0,
+                        "value": 0,
+                        "unskilledUse": 1
+                    },
+                    "medicine":{
+                        "baseAttribute": "mind",
+                        "adds": 0,
+                        "value": 0,
+                        "unskilledUse": 0
+                    },
+                    "meleeWeapons":{
+                        "baseAttribute": "dexterity",
+                        "adds": 0,
+                        "value": 0,
+                        "unskilledUse": 1
+                    },
+                    "missileWeapons":{
+                        "baseAttribute": "dexterity",
+                        "adds": 0,
+                        "value": 0,
+                        "unskilledUse": 1
+                    },
+                    "persuasion":{
+                        "baseAttribute": "charisma",
+                        "adds": 0,
+                        "value": 0,
+                        "unskilledUse": 1
+                    },
+                    "precognition":{
+                        "baseAttribute": "mind",
+                        "adds": 0,
+                        "value": 0,
+                        "unskilledUse": 0
+                    },
+                    "profession":{
+                        "baseAttribute": "mind",
+                        "adds": 0,
+                        "value": 0,
+                        "unskilledUse": 1
+                    },
+                    "reality":{
+                        "baseAttribute": "spirit",
+                        "adds": 0,
+                        "value": 0,
+                        "unskilledUse": 0
+                    },
+                    "scholar":{
+                        "baseAttribute": "mind",
+                        "adds": 0,
+                        "value": 0,
+                        "unskilledUse": 1
+                    },
+                    "science":{
+                        "baseAttribute": "mind",
+                        "adds": 0,
+                        "value": 0,
+                        "unskilledUse": 1
+                    },
+                    "stealth":{
+                        "baseAttribute": "dexterity",
+                        "adds": 0,
+                        "value": 0,
+                        "unskilledUse": 1
+                    },
+                    "streetwise":{
+                        "baseAttribute": "charisma",
+                        "adds": 0,
+                        "value": 0,
+                        "unskilledUse": 1
+                    },
+                    "survival":{
+                        "baseAttribute": "mind",
+                        "adds": 0,
+                        "value": 0,
+                        "unskilledUse": 1
+                    },
+                    "taunt":{
+                        "baseAttribute": "charisma",
+                        "adds": 0,
+                        "value": 0,
+                        "unskilledUse": 1
+                    },
+                    "telepathy":{
+                        "baseAttribute": "charisma",
+                        "adds": 0,
+                        "value": 0,
+                        "unskilledUse": 0
+                    },
+                    "tracking":{
+                        "baseAttribute": "mind",
+                        "adds": 0,
+                        "value": 0,
+                        "unskilledUse": 1
+                    },
+                    "trick":{
+                        "baseAttribute": "mind",
+                        "adds": 0,
+                        "value": 0,
+                        "unskilledUse": 1
+                    },
+                    "unarmedCombat":{
+                        "baseAttribute": "dexterity",
+                        "adds": 0,
+                        "value": 0,
+                        "unskilledUse": 1
+                    },
+                    "waterVehicles":{
+                        "baseAttribute": "dexterity",
+                        "adds": 0,
+                        "value": 0,
+                        "unskilledUse": 1
+                    },
+                    "willpower":{
+                        "baseAttribute": "spirit",
+                        "adds": 0,
+                        "value": 0,
+                        "unskilledUse": 1
+                    }           
+                }
+            },
+            "stormknight":{
+                "templates": [
+                    "commonStats"
+                ],
+                "race": "",
+                "xp": {
+                    "unspent": 0,
+                    "earned": 0
+                },
+                "clearance": ""
+            },
+            "threat": [
+                "commonstats"
+            ]
+        }
+    },
+    "Item":{
+        "types": [
+            "gear",
+            "armor",
+            "shield",
+            "meleeweapon",
+            "missileweapon",
+            "firearm",
+            "implant",
+            "heavyweapon",
+            "vehicle",
+            "perk",
+            "spell",
+            "miracle",
+            "psionicpower"
+        ],
+        "templates":{
+            "general":{
+                "cosm": "",
+                "description":"",
+                "techlevel": 1,
+                "price": 0,
+                "value": 0
+            },
+            "power": {
+                "axiom": 0,
+                "skill": "",
+                "castingtime": "",
+                "dn": "",
+                "range": "",
+                "duration": "",
+                "description": "",
+                "good": "",
+                "outstanding": ""
+            }
+        },
+        "gear":{
+            "templates": [
+                "general"
+            ]
+        },
+        "armor": {
+            "templates": [
+                "general"
+            ],
+            "bonus": 1,
+            "maxDex": 12,
+            "notes": ""
+        },
+        "shield": {
+            "templates": [
+                "general"
+            ],
+            "bonus": 1,
+            "notes": ""
+        },        
+        "meleeweapon":{
+            "templates":[
+                "general"
+            ],
+            "damagetype": 0,
+            "damage": 0,
+            "bonus": 2,
+            "notes": ""
+        },
+        "missileweapon":{
+            "templates":[
+                "general"
+            ],
+            "damage": 0,
+            "range": "",
+            "notes": ""
+        },
+        "firearm":{
+            "templates":[
+                "general"
+            ],
+            "damage": 0,
+            "ammo": 1,
+            "range": "",
+            "notes": ""
+        },
+        "implant": {
+            "templates": [
+                "general"
+            ]
+        },
+        "heavyweapon":{
+            "templates":[
+                "general"
+            ],
+            "damage": 0,
+            "ammo": 1,
+            "range": "",
+            "notes": ""
+        },
+        "vehicle": {
+            "templates": [
+                "general"
+            ],
+            "topspeed": "",
+            "pass": 1,
+            "mr": -1,
+            "wounds": 3,
+            "tough": ""
+        },
+        "perk": {
+            "category": "",
+            "cosm": "",
+            "prerequisites": "",
+            "timestaken": "",
+            "description": ""
+        },
+        "spell": {
+            "templates": [
+                "power"
+            ]
+        },
+        "miracle": {
+            "templates": [
+                "power"
+            ]
+        },
+        "psionicpower": {
+            "templates": [
+                "power"
+            ]
+        }
+    }
+}
