@@ -15,6 +15,7 @@ export default class torgeternityStormKnightSheet extends ActorSheet {
 
     getData () {
         const data = super.getData();
+
         data.meleeweapons = data.items.filter(function (item) { return item.type == "meleeweapon"});
         data.gear = data.items.filter(function (item) { return item.type == "gear"});
         data.armor = data.items.filter(function (item) { return item.type == "armor"});
@@ -28,6 +29,9 @@ export default class torgeternityStormKnightSheet extends ActorSheet {
         data.spell = data.items.filter(function (item) { return item.type == "spell"});
         data.miracle = data.items.filter(function (item) { return item.type == "miracle"});
         data.psionicpower = data.items.filter(function (item) { return item.type == "psionicpower"});
+
+        data.config = CONFIG.torgeternity;
+
         return data;
     }
 
@@ -68,4 +72,3 @@ export default class torgeternityStormKnightSheet extends ActorSheet {
         })
     }
 }
-

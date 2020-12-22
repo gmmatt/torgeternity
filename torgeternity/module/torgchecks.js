@@ -6,7 +6,7 @@ export function SkillCheck({
     dicerollint.toMessage();
     let diceroll = dicerollint.total;
     
-    var messageContent1 = '<p style="text-align:center;font-weight:bold">Rolling ' + skillName + ' Check </p>' + '<p>' + 'Skill Value: ' + skillValue + '</p><p>' + 'Roll Total:' + diceroll + '</p><p>';
+    var messageContent1 = '<p style="text-align:center;font-weight:bold">' + skillName + ' Check </p>' + '<p>' + 'Skill Value: ' + skillValue + '</p><p>' + 'Roll Total:' + diceroll + '</p><p>';
     
     
     if (diceroll == 1) {

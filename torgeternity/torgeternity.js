@@ -1,4 +1,4 @@
-import { torgeternity } from "./module/config.js";
+import {torgeternity} from "./module/config.js";
 import torgeternityItemSheet from "./module/sheets/torgeternityItemSheet.js";
 import torgeternityStormKnightSheet from "./module/sheets/torgeternityStormKnightSheet.js";
 

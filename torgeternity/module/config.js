@@ -5,5 +5,5 @@ torgeternity.attributeTypes = {
     dexterity: "torgeternity.attributes.dexterity",
     mind: "torgeternity.attributes.mind",
     spirit: "torgeternity.attributes.spirit",
-    strength: "torgeternity.attributestrength"
+    strength: "torgeternity.attributes.strength"
 }
