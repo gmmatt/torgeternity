@@ -8,7 +8,7 @@ export default class torgeternityStormKnightSheet extends ActorSheet {
             width: 600,
             height: 600,
             tabs: [{navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "stats"}],
-            scrollY: [".stats", ".perks", ".gear", ".powers"],
+            scrollY: [".stats", ".perks", ".gear", ".powers", "background"],
             dragdrop: [{dragSelector: ".item-list .item", dropSelector: null}]
         });
     }

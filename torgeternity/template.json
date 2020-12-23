@@ -278,7 +278,8 @@
                     "unspent": 0,
                     "earned": 0
                 },
-                "clearance": ""
+                "clearance": "",
+                "background": ""
             },
             "threat": [
                 "commonstats"
