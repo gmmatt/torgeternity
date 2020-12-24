@@ -6,7 +6,7 @@ However, there is already a simple character sheet and templates for perks, powe
 
 
 ## Installation
-**Manifest URL**: https://github.com/anvil-vtt/FateX/releases/latest/download/system.json
+**Manifest URL**: https://github.com/gmmatt/torgeternity/releases/latest/download/system.json
 
 For manual installation, use the provided manifest URL in the "*Install System*" popup window while managing game systems.
 
