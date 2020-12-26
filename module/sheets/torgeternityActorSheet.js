@@ -21,6 +21,7 @@ export default class torgeternityStormKnightSheet extends ActorSheet {
 
         data.meleeweapons = data.items.filter(function (item) { return item.type == "meleeweapon"});
         data.gear = data.items.filter(function (item) { return item.type == "gear"});
+        data.eternityshard = data.items.filter(function (item) {return item.type == "eternityshard"});
         data.armor = data.items.filter(function (item) { return item.type == "armor"});
         data.shield = data.items.filter(function (item) { return item.type == "shield"});
         data.missileweapon = data.items.filter(function (item) { return item.type == "missileweapon"});

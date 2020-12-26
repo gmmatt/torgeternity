@@ -67,7 +67,12 @@
             "passengers": "Pass",
             "mr": "MR",
             "wounds": "Wnds",
-            "toughness": "Tough"
+            "toughness": "Tough",
+            "possibilities": "Possibilities",
+            "tappingDifficulty": "Tapping Difficulty",
+            "purpose": "Purpose",
+            "powers": "Powers",
+            "restrictions": "Restrictions"
         },
         "stats":{
             "wounds": "Wounds",
@@ -87,7 +92,10 @@
             "castingtime": "Casting Time",
             "dn": "DN",
             "range": "Range",
-            "duration": "Duration"
+            "duration": "Duration",
+            "description": "Description",
+            "good": "Good Result",
+            "outstanding": "Outstanding Result"
         }
     }
 }

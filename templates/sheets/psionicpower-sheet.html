@@ -24,7 +24,23 @@
                 {{localize "torgeternity.powers.duration"}}: <input name="data.duration" type="text" value="{{data.duration}}" style="width:100px" />
             </p>
                            
-        Description/Success Levels:
-            {{editor content=data.description target="data.description" button=true owner=owner editable=editable}}
-    </div>
+            <p>
+                {{localize "torgeternity.powers.description"}}: 
+                <div style="height:200px;border:1px solid black">
+                    {{editor content=data.description target="data.description" button=true owner=owner editable=editable}}
+                </div>
+            </p>
+            <p>
+                {{localize "torgeternity.powers.good"}}: 
+                <div style="height:75px;border:1px solid black">
+                    {{editor content=data.good target="data.good" button=true owner=owner editable=editable}}
+                </div>
+            </p>
+            <p>
+                {{localize "torgeternity.powers.outstanding"}}: 
+                <div style="height:75px;border:1px solid black">
+                    {{editor content=data.outstanding target="data.outstanding" button=true owner=owner editable=editable}}
+                </div>
+            </p>
+        </div>
 </form>
