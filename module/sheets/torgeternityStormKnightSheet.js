@@ -44,6 +44,14 @@ export default class torgeternityStormKnightSheet extends ActorSheet {
             html.find(".skill-roll").click(this._onSkillRoll.bind(this));
         }
 
+        if (this.actor.owner) {
+            html.find(".possibility-roll").click(this._onPossibilityRoll.bind(this));
+        }
+
+        if (this.actor.owner) {
+            html.find(".bonus-roll").click(this._onBonusRoll.bind(this));
+        }
+
         super.activateListeners(html);
 
         // Everything below here is only needed if the sheet is editable
@@ -70,5 +78,12 @@ export default class torgeternityStormKnightSheet extends ActorSheet {
             skillValue: event.currentTarget.dataset.skillValue,
             skillName: event.currentTarget.dataset.skillName
         })
+    }
+    _onPossibilityRoll(event) {
+        torgchecks.PossibilityCheck ()
+    }
+
+    _onBonusRoll(event) {
+        torgchecks.BonusRoll ()
     }
 }

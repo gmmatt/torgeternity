@@ -1,15 +1,16 @@
 <form class="actor-sheet {{cssClass}}" autocomplete="off">
     <header class="sheet-header">
-        <img src="{{actor.img}}" data-edit="img" title="{{actor.name}}" height="64" width="64"/>
+        <img src="{{actor.img}}" class="profile-img" data-edit="img" title="{{actor.name}}" height="64" width="64"/>
         <h1 class="charname"><input name="name" type="text" value="{{actor.name}}" placeholder="Name"/></h1>
  
     </header>
     <div>
         <table>
             <tr>
-                <th style="width:34%">{{localize "torgeternity.stats.wounds"}}</th>
-                <th style="width:33%">{{localize "torgeternity.stats.shock"}}</th>
-                <th style="width:33%">{{localize "torgeternity.stats.possibilities"}}</th>
+                <th style="width:25%; font-family:Palatino Linotype;font-size=11">{{localize "torgeternity.stats.wounds"}}</th>
+                <th style="width:25%">{{localize "torgeternity.stats.shock"}}</th>
+                <th style="width:25%">{{localize "torgeternity.stats.possibilities"}}</th>
+                <th style="width:25%">Bonus</th>
             </tr>
             <tr>
                 <td style="text-align:center">
@@ -23,7 +24,11 @@
                     <input name="data.shock.max" type="text" value="{{data.shock.max}}" data-dtype="Number" style="width:25%" />
                 </td>
                 <td style="text-align:center">
+                    <a class="possibility-roll"><i class="fas fa-dice-d20"></i></a>
                     <input name="data.possibilities" type="text" value="{{data.possibilities}}" data-dtype="Number" style="width:15%" />
+                </td>
+                <td style="text-align:center">
+                    <a class="bonus-roll"><i class="fas fa-dice-d6"></i></a>
                 </td>
             </tr>
         </table>
