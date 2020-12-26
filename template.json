@@ -298,6 +298,7 @@
             "heavyweapon",
             "vehicle",
             "perk",
+            "specialability",
             "spell",
             "miracle",
             "psionicpower"
@@ -397,6 +398,9 @@
             "cosm": "",
             "prerequisites": "",
             "timestaken": "",
+            "description": ""
+        },
+        "specialability": {
             "description": ""
         },
         "spell": {

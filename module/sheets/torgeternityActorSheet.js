@@ -1,16 +1,19 @@
 import * as torgchecks from "../torgchecks.js";
 
-export default class torgeternityThreatSheet extends ActorSheet {
+export default class torgeternityStormKnightSheet extends ActorSheet {
     static get defaultOptions () {
         return mergeObject(super.defaultOptions, {
-            template: "systems/torgeternity/templates/sheets/threatSheet.hbs",
-            classes: ["torgeternity", "sheet", "threat"],
+            classes: ["torgeternity", "sheet", "actor"],
             width: 600,
             height: 600,
             tabs: [{navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "stats"}],
             scrollY: [".stats", ".perks", ".gear", ".powers", "background"],
             dragdrop: [{dragSelector: ".item-list .item", dropSelector: null}]
         });
+    }
+
+    get template() {
+        return `systems/torgeternity/templates/sheets/${this.actor.data.type}-sheet.hbs`;
     }
 
     getData () {
@@ -29,6 +32,7 @@ export default class torgeternityThreatSheet extends ActorSheet {
         data.spell = data.items.filter(function (item) { return item.type == "spell"});
         data.miracle = data.items.filter(function (item) { return item.type == "miracle"});
         data.psionicpower = data.items.filter(function (item) { return item.type == "psionicpower"});
+        data.specialability = data.items.filter(function (item) { return item.type == "specialability"});
 
         data.config = CONFIG.torgeternity;
 
