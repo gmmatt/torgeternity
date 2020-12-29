@@ -75,6 +75,17 @@ export default class torgeternityStormKnightSheet extends ActorSheet {
             this.actor.deleteOwnedItem(li.data("itemId"));
             li.slideUp(200, () => this.render(false));
       }); 
+        // Toggle Item Detail Visibility
+        html.find('.item-name').click(ev => {
+            let section = event.currentTarget.closest(".item");
+            let detail = $(section).find(".item-detail");
+            let content = detail.get(0);
+            if (content.style.maxHeight) {
+                content.style.maxHeight = null;
+            } else {
+                content.style.maxHeight = content.scrollHeight + "px";
+            }
+      });
     }
 
     _onSkillRoll(event) {
