@@ -41,3 +41,6 @@ SOFTWARE.
 ---
 This work is based on Torg eternity system published by Ulisses Spiele (https://www.ulisses-us.com/games/torg/). At the moment this
 work is provided by fans and is not endorsed by Ulisses Spiele.
+
+**This line is inserted into end of file to make sure I didn't break something
+when I re-named the development git.**
