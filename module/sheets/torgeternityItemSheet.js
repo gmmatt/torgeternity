@@ -12,6 +12,7 @@ export default class torgeternityItemSheet extends ItemSheet {
         return `systems/torgeternity/templates/sheets/${this.item.data.type}-sheet.html`;
     }
 
+
     getData(){
         const data = super.getData();
 
@@ -19,4 +20,5 @@ export default class torgeternityItemSheet extends ItemSheet {
 
         return data;
     }
+
 }

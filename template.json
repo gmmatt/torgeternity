@@ -289,6 +289,7 @@
     "Item":{
         "types": [
             "gear",
+            "eternityshard",
             "armor",
             "shield",
             "meleeweapon",
@@ -298,6 +299,7 @@
             "heavyweapon",
             "vehicle",
             "perk",
+            "specialability",
             "spell",
             "miracle",
             "psionicpower"
@@ -326,6 +328,15 @@
             "templates": [
                 "general"
             ]
+        },
+        "eternityshard": {
+            "cosm": "",
+            "possibilities": 3,
+            "tappingDifficulty": 18,
+            "purpose": "",
+            "description": "",
+            "powers": "",
+            "restrictions": ""
         },
         "armor": {
             "templates": [
@@ -397,6 +408,9 @@
             "cosm": "",
             "prerequisites": "",
             "timestaken": "",
+            "description": ""
+        },
+        "specialability": {
             "description": ""
         },
         "spell": {

@@ -1,6 +1,8 @@
 .sheet form {
     display: flex;
     flex-direction: column;
+    background-image: url('./images/bgparch.jpg');
+    background-size: 100% 100%;
 }
 .sheet .sheet-content {
     height: 100%;
@@ -23,6 +25,11 @@
     text-decoration: underline;
     text-shadow: none;
 }
+.torgeternity .item-list {
+  list-style-type:none;
+  margin: 0;
+  padding: 0;
+}
 .torgeternity .item-list .item {
     min-height: 30px;
     line-height: 24px;
@@ -33,7 +40,7 @@
 .torgeternity .item-list .item {
     min-height: 30px;
     line-height: 24px;
-    padding: 3px 0;
+    padding: 0px 0;
     border-bottom: 1px solid #BBB;
     align-items: stretch;
   }
@@ -46,7 +53,7 @@
     text-align: left;
   }
   .torgeternity .item-list .item-controls {
-    flex: 0 0 36px;
+    flex: 0 0 54px;
   }
   .torgeternity .item-list .item-buttons {
     display: flex;
@@ -67,4 +74,67 @@
     background-color:black;
     color:white;
     font-size:125%
+  }
+  .torgeternity .item-detail {
+    padding: 0 18px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+  }
+  .torgeternity .input-box {
+    background-color:white;
+    border-radius: 10px;
+    font-family:"Palatino Linotype";
+    font-size:12px;
+    text-align:center;
+    text-align-last:center;
+    width:140px;
+  }
+  .torgeternity .item-data-label {
+    font-family:"Palatino Linotype";
+    font-size:12px;
+    font-weight:bold;
+    text-align:center;
+    margin: 2px 2px 2px 2px;
+  }
+  .torgeternity .item-description-textarea {
+    font-family: "Palatino Linotype";
+    font-size: 12px;
+    height:355px;
+    width:350px;
+    background-color:#f0dec2;
+    border-radius:15px;
+    resize:none;
+    padding:5px 5px;
+  }
+  .torgeternity .item-dropdown-description {
+    font-family:"Palatino Linotype";
+    font-size:12px;
+    line-height:1.2;
+    padding: 5px 5px 5px 5px;
+    background-color:white;
+    border-radius:15px;
+  }
+  .torgeternity .item-dropdown-extras {
+    font-family:"Palatino Linotype";
+    font-size:12px;
+    font-weight:bold;
+    padding:2px 2px 2px 2px;
+    background-color:#f0dec2;
+    border-radius:10px;
+    display:inline-block
+  }
+  .perk-name-chat {
+    height:50px;
+    font-family:"Palatino Linotype";
+    font-size:24px;
+    font-weight:bold;
+    text-align:center;
+    vertical-align:center
+  }
+  .perk-description-chat {
+    font-family:"Palatino Linotype";
+    background-color:#f0dec2;
+    border-radius:15px;
+    padding:5px 5px;
   }
