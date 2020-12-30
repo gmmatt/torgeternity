@@ -96,6 +96,37 @@
             "description": "Description",
             "good": "Good Result",
             "outstanding": "Outstanding Result"
+        },
+        "cosms": {
+            "none": "(None)",
+            "coreEarth": "Core Earth",
+            "livingLand": "Living Land",
+            "nileEmpire": "Nile Empire",
+            "cyberpapacy": "Cyberpapacy",
+            "tharkhold": "Tharkhold",
+            "panPacifica": "Pan Pacifica",
+            "orrorsh": "Orrorsh"
+        },
+        "perkTypes": {
+            "cyberware": "Cyberware",
+            "darkness": "Darkness",
+            "dwarf": "Dwarf",
+            "edeinos": "Edeinos",
+            "electricSamurai": "Electric Samurai",
+            "elf": "Elf",
+            "faith": "Faith",
+            "kiPowers": "Ki Powers",
+            "leadership": "Leadership",
+            "light": "Light",
+            "occult": "Occult",
+            "occultech": "Occultech",
+            "outsider": "Outsider",
+            "prowess": "Prowess",
+            "pulpPowers": "Pulp Powers",
+            "reality": "Reality",
+            "savagery":"Savagery",
+            "social": "Social",
+            "spellcraft": "Spellcraft"
         }
     }
 }

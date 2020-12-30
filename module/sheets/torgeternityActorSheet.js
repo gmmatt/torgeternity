@@ -16,6 +16,7 @@ export default class torgeternityStormKnightSheet extends ActorSheet {
         return `systems/torgeternity/templates/sheets/${this.actor.data.type}-sheet.hbs`;
     }
 
+
     getData () {
         const data = super.getData();
 
@@ -55,6 +56,10 @@ export default class torgeternityStormKnightSheet extends ActorSheet {
 
         if (this.actor.owner) {
             html.find(".bonus-roll").click(this._onBonusRoll.bind(this));
+        }
+
+        if (this.actor.owner) {
+            html.find(".item-tochat").click(this._onItemChat.bind(this));
         }
 
         super.activateListeners(html);
@@ -102,4 +107,12 @@ export default class torgeternityStormKnightSheet extends ActorSheet {
     _onBonusRoll(event) {
         torgchecks.BonusRoll ()
     }
+
+    _onItemChat(event) {
+        const itemID = event.currentTarget.closest(".item").dataset.itemId;
+        const item = this.actor.getOwnedItem(itemID);
+
+        item.roll();
+    }
+
 }

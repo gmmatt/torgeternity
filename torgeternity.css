@@ -87,6 +87,8 @@
     font-family:"Palatino Linotype";
     font-size:12px;
     text-align:center;
+    text-align-last:center;
+    width:140px;
   }
   .torgeternity .item-data-label {
     font-family:"Palatino Linotype";
@@ -121,4 +123,18 @@
     background-color:#f0dec2;
     border-radius:10px;
     display:inline-block
+  }
+  .perk-name-chat {
+    height:50px;
+    font-family:"Palatino Linotype";
+    font-size:24px;
+    font-weight:bold;
+    text-align:center;
+    vertical-align:center
+  }
+  .perk-description-chat {
+    font-family:"Palatino Linotype";
+    background-color:#f0dec2;
+    border-radius:15px;
+    padding:5px 5px;
   }

@@ -11,11 +11,24 @@
                 <p class="item-data-label">
                     {{localize "torgeternity.perks.category"}}
                 </p>                
-                <input name="data.category" type="text" value="{{data.category}}" class="input-box" />
+                <select name="data.category" class="input-box">
+                    {{#select data.category}}
+                    {{#each config.perkTypes as |name type|}}
+                    <option value="{{localize name}}">{{localize name}}</option>
+                    {{/each}}
+                    {{/select}}
+                </select>
                 <p class="item-data-label">
                     {{localize "torgeternity.perks.cosm"}}
                 </p>
-                <input name="data.cosm" type="text" value="{{data.cosm}}" class="input-box" />
+                <select name="data.cosm" class="input-box">
+                    {{#select data.cosm}}
+                    {{#each config.cosmTypes as |name type|}}
+                    <option value="{{localize name}}">{{localize name}}</option>
+                    {{/each}}
+                    {{/select}}
+                </select>
+
                 <p class="item-data-label">
                     {{localize "torgeternity.perks.prerequisites"}}
                 </p>
