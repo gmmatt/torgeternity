@@ -40,3 +40,26 @@ torgeternity.perkTypes = {
     social: "torgeternity.perkTypes.social",
     spellcraft: "torgeternity.perkTypes.spellcraft"
 }
+
+torgeternity.attackTypes = {
+    unarmedCombat: "torgeternity.attackTypes.unarmedCombat",
+    meleeWeapons: "torgeternity.attackTypes.meleeWeapons",
+    missileWeapons: "torgeternity.attackTypes.missileWeapons",
+    fireCombat: "torgeternity.attackTypes.fireCombat",
+    energyWeapons: "torgeternity.attackTypes.energyWeapons",
+    heavyWeapons: "torgeternity.attackTypes.heavyWeapons",
+    alteration: "torgeternity.attackTypes.alteration",
+    apportation: "torgeternity.attackTypes.apportation",
+    conjuration: "torgeternity.attackTypes.conjuration",
+    divination: "torgeternity.attackTypes.divination",
+    kinesis: "torgeternity.attackTypes.kinesis",
+    precognition: "torgeternity.attackTypes.precognition",
+    telepathy: "torgeternity.attackTypes.telepathy",
+    faith: "torgeternity.attackTypes.faith"
+
+}
+
+torgeternity.damageTypes = {
+    strengthPlus: "torgeternity.damageTypes.strengthPlus",
+    flat: "torgeternity.damageTypes.flat" 
+}

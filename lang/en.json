@@ -54,7 +54,7 @@
             "techlevel": "Tech Level",
             "price": "Price",
             "value": "Value",
-            "damagetype": "Type",
+            "damageType": "Damage Type",
             "damage": "Damage",
             "damagebonus": "Bonus",
             "notes": "Notes",
@@ -63,6 +63,7 @@
             "maxDex": "Max Dex",
             "range": "Range",
             "ammo": "Ammo",
+            "attackWith": "Attack With",
             "topspeed": "Top Speed",
             "passengers": "Pass",
             "mr": "MR",
@@ -84,6 +85,10 @@
             "cosm": "Cosm",
             "prerequisites": "Prerequisites",
             "timestaken": "Times Taken",
+            "description": "Description"
+        },
+        "enhancements":{
+            "perk": "Related Perk",
             "description": "Description"
         },
         "powers": {
@@ -127,6 +132,58 @@
             "savagery":"Savagery",
             "social": "Social",
             "spellcraft": "Spellcraft"
+        },
+        "sheetLabels": {
+            "perks": "Perks",
+            "enhancements": "Enhancements",
+            "generalGear": "General Gear",
+            "armor": "Armor",
+            "shields": "Shields",
+            "meleeWeapons": "Melee Weapons",
+            "missileWeapons": "Missile Weapons",
+            "firearms": "Firearms",
+            "implants": "Implants",
+            "heavyWeapons": "Heavy Weapons",
+            "vehicles": "Vehicles",
+            "spells": "Spells",
+            "miracles": "Miracles",
+            "psionicPowers": "Psionic Powers"
+        },
+        "itemSheetDescriptions": {
+            "perk": "Perk",
+            "enhancement": "Enhancement",
+            "generalGear": "Gear",
+            "armor": "Armor",
+            "shield": "Shield",
+            "meleeWeapon": "Melee Weapon",
+            "missileWeapon": "Missile Weapon",
+            "firearm": "Firearm",
+            "implant": "Implant",
+            "heavyWeapon": "Heavy Weapon",
+            "vehicle": "Vehicle",
+            "spell": "Spell",
+            "miracle": "Miracle",
+            "psionicPower": "Psionic Power"
+        },
+        "attackTypes": {
+            "unarmedCombat": "Unarmed Combat",
+            "meleeWeapons": "Melee Weapons",
+            "missileWeapons": "Missile Weapons",
+            "fireCombat": "Fire Combat",
+            "energyWeapons": "Energy Weapons",
+            "heavyWeapons": "Heavy Weapons",
+            "alteration": "Alteration",
+            "apportation": "Apportation",
+            "conjuration": "Conjuration",
+            "divination": "Divination",
+            "kinesis": "Kinesis",
+            "precognition": "Precognition",
+            "telepathy": "Telepathy",
+            "faith": "Faith"
+        },
+        "damageTypes": {
+            "strengthPlus": "Strength +",
+            "flat": "Flat"
         }
     }
 }

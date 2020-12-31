@@ -35,6 +35,7 @@ export default class torgeternityStormKnightSheet extends ActorSheet {
         data.miracle = data.items.filter(function (item) { return item.type == "miracle"});
         data.psionicpower = data.items.filter(function (item) { return item.type == "psionicpower"});
         data.specialability = data.items.filter(function (item) { return item.type == "specialability"});
+        data.enhancement = data.items.filter(function (item) { return item.type == "enhancement"});
 
         data.config = CONFIG.torgeternity;
 
@@ -60,6 +61,10 @@ export default class torgeternityStormKnightSheet extends ActorSheet {
 
         if (this.actor.owner) {
             html.find(".item-tochat").click(this._onItemChat.bind(this));
+        }
+
+        if (this.actor.owner) {
+            html.find(".item-attackRoll").click(this._onAttackRoll.bind(this));
         }
 
         super.activateListeners(html);
@@ -113,6 +118,13 @@ export default class torgeternityStormKnightSheet extends ActorSheet {
         const item = this.actor.getOwnedItem(itemID);
 
         item.roll();
+    }
+
+    _onAttackRoll(event) {
+        const itemID = event.currentTarget.closest(".item").dataset.itemId;
+        const item = this.actor.getOwnedItem(itemID);
+
+        item.attack();
     }
 
 }

@@ -1,7 +1,7 @@
 export function SkillCheck({
     skillName = null,
     skillValue = null } = {}) {
-    // insert Skill Check Macro Code Here?
+    
     let dicerollint = new Roll('1d20x10x20').roll();
     dicerollint.toMessage();
     let diceroll = dicerollint.total;

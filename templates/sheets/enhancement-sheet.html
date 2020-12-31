@@ -1,0 +1,24 @@
+<form class="{{cssClass}}" autocomplete="off" height=400>
+    <header class="sheet-header">
+        <img src="{{item.img}}" data-edit="img" title="{{item.name}}" height="64" width="64"/>
+        <h1><input name="name" type="text" value="{{item.name}}" placeholder="Enhancement Name" style="background-color:white;border-radius:10px;width:270px;font-family:'Palatino Linotype"/></h1>
+        <h1 style="font-size:26px;text-align:right;font-family:'Palatino Linotype'">Enhancement</h1>
+    </header>
+    <div class="sheet-content">
+        <table style="background-color:transparent;border: 0px solid black">
+        <tr>
+            <td style="width:25%;vertical-align:top"> <!-- left column -->
+                <p class="item-data-label">
+                    {{localize "torgeternity.enhancements.perk"}}
+                </p>                
+                <input name="data.perk" type="text" value="{{data.perk}}" class="input-box" />
+             </td>
+            <td style="width:65%"> <!-- right column -->
+                <div style="padding:10px 10px">
+                    <textarea name="data.description" class="item-description-textarea">{{data.description}}</textarea>
+                </div>
+            </td> 
+        </tr>
+        </table>         
+    </div>
+</form>

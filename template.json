@@ -299,6 +299,7 @@
             "heavyweapon",
             "vehicle",
             "perk",
+            "enhancement",
             "specialability",
             "spell",
             "miracle",
@@ -374,6 +375,8 @@
             "templates":[
                 "general"
             ],
+            "attackWith": "",
+            "damageType": "",
             "damage": 0,
             "ammo": 1,
             "range": "",
@@ -408,6 +411,10 @@
             "cosm": "",
             "prerequisites": "",
             "timestaken": "",
+            "description": ""
+        },
+        "enhancement": {
+            "perk": "",
             "description": ""
         },
         "specialability": {

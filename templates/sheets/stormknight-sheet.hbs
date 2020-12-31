@@ -44,7 +44,7 @@
         <a class="item" data-tab="background">Background</a>
     </nav>
 
-    <secton class="sheet-body"  style="height:375px;display:flex;flex-direction:column">
+    <secton class="sheet-body"  style="display:flex;flex-direction:column">
 
         <div class="tab stats" data-group="primary" data-tab="stats">
             <table>
@@ -92,7 +92,7 @@
                     </td>
                 </tr>
             </table>
-            <div style="text-align:center;background-color:black;color:cornsilk;font-size:125%;">
+            <div class="list-section-heading">
                 Skills
             </div>
 
@@ -849,6 +849,9 @@
         </div>
 
         <div class="tab perks" data-group="primary" data-tab="perks">
+            <div class="list-section-heading">
+                {{localize "torgeternity.sheetLabels.perks"}}
+            </div>
             <ol class="item-list">
                 {{#each perk as |item id|}}
                 <li class="item" data-item-id="{{item._id}}">
@@ -879,18 +882,39 @@
                 </li>
                 {{/each}}
             </ol>
-
+            <div class="list-section-heading">
+                {{localize "torgeternity.sheetLabels.enhancements"}}
+            </div>
+            <ol class="item-list">
+                {{#each enhancement as |item id|}}
+                <li class="item" data-item-id="{{item._id}}">
+                    <div class="item-row flexrow">
+                        <img src="{{item.img}}" title="{{item.name}}" width="30" height="30" />
+                        <a class="item-name">{{item.name}} (Enhances {{item.data.perk}})</a>
+                        <div class="item-controls">
+                            <a class="item-control item-edit" title="Edit Item"><i class="fas fa-edit"></i></a>
+                            <a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
+                        </div>
+                    </div>
+                   <div class="item-detail">
+                        <div class="item-dropdown-description">
+                            {{item.data.description}}
+                        </div>
+                    </div>               
+               </li>
+                {{/each}}
+            </ol>
         </div>
 
         <div class="tab gear" data-group="primary" data-tab="gear">
             <div>
-                <div style="text-align:center;background-color:black;color:cornsilk;font-size:125%;">
+                <div class="list-section-heading">
                     General Gear
                 </div>
                 <ol class="item-list">
                     {{#each gear as |item id|}}
                     <li class="item flexrow" data-item-id="{{item._id}}">
-                        <img src="{{item.img}}" title="{{item.name}}" width="50" height="50" />
+                        <img src="{{item.img}}" title="{{item.name}}" width="30" height="30" />
                         <h4 class="item-name">{{item.name}}</h4>
                         <div class="item-controls">
                             <a class="item-control item-edit" title="Edit Item"><i class="fas fa-edit"></i></a>
@@ -900,13 +924,13 @@
                     {{/each}}
                 </ol>
 
-                <div style="text-align:center;background-color:black;color:cornsilk;font-size:125%;">
+                <div class="list-section-heading">
                     Armor
                 </div>
                 <ol class="item-list">
                     {{#each armor as |item id|}}
                     <li class="item flexrow" data-item-id="{{item._id}}">
-                        <img src="{{item.img}}" title="{{item.name}}" width="50" height="50" />
+                        <img src="{{item.img}}" title="{{item.name}}" width="30" height="30" />
                         <h4 class="item-name">{{item.name}}</h4>
                         <div class="item-controls">
                             <a class="item-control item-edit" title="Edit Item"><i class="fas fa-edit"></i></a>
@@ -916,13 +940,13 @@
                     {{/each}}
                 </ol>
 
-                <div style="text-align:center;background-color:black;color:cornsilk;font-size:125%;">
+                <div class="list-section-heading">
                     Shields
                 </div>
                 <ol class="item-list">
                     {{#each shield as |item id|}}
                     <li class="item flexrow" data-item-id="{{item._id}}">
-                        <img src="{{item.img}}" title="{{item.name}}" width="50" height="50" />
+                        <img src="{{item.img}}" title="{{item.name}}" width="30" height="30" />
                         <h4 class="item-name">{{item.name}}</h4>
                         <div class="item-controls">
                             <a class="item-control item-edit" title="Edit Item"><i class="fas fa-edit"></i></a>
@@ -932,13 +956,13 @@
                     {{/each}}
                 </ol>
 
-                <div style="text-align:center;background-color:black;color:cornsilk;font-size:125%;">
+                <div class="list-section-heading">
                     Melee Weapons
                 </div>
                <ol class="item-list">
                     {{#each meleeweapons as |item id|}}
                     <li class="item flexrow" data-item-id="{{item._id}}">
-                        <img src="{{item.img}}" title="{{item.name}}" width="50" height="50" />
+                        <img src="{{item.img}}" title="{{item.name}}" width="30" height="30" />
                         <h4 class="item-name">{{item.name}}</h4>
                         <div class="item-controls">
                             <a class="item-control item-edit" title="Edit Item"><i class="fas fa-edit"></i></a>
@@ -948,13 +972,13 @@
                     {{/each}}
                 </ol>
 
-                <div style="text-align:center;background-color:black;color:cornsilk;font-size:125%;">
+                <div class="list-section-heading">
                     Missile Weapons
                 </div>
                 <ol class="item-list">
                     {{#each missileweapon as |item id|}}
                     <li class="item flexrow" data-item-id="{{item._id}}">
-                        <img src="{{item.img}}" title="{{item.name}}" width="50" height="50" />
+                        <img src="{{item.img}}" title="{{item.name}}" width="30" height="30" />
                         <h4 class="item-name">{{item.name}}</h4>
                         <div class="item-controls">
                             <a class="item-control item-edit" title="Edit Item"><i class="fas fa-edit"></i></a>
@@ -964,23 +988,41 @@
                     {{/each}}
                 </ol>
 
-                <div style="text-align:center;background-color:black;color:cornsilk;font-size:125%;">
+                <div class="list-section-heading">
                     Firearms
                 </div>
                 <ol class="item-list">
                     {{#each firearm as |item id|}}
-                    <li class="item flexrow" data-item-id="{{item._id}}">
-                        <img src="{{item.img}}" title="{{item.name}}" width="50" height="50" />
-                        <h4 class="item-name">{{item.name}}</h4>
-                        <div class="item-controls">
-                            <a class="item-control item-edit" title="Edit Item"><i class="fas fa-edit"></i></a>
-                            <a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
+                    <li class="item" data-item-id="{{item._id}}">
+                        <div class="item-row flexrow">                        
+                            <img src="{{item.img}}" title="{{item.name}}" width="30" height="30" />
+                            <a class="item-name">{{item.name}}</a> 
+                            <div class="item-controls">
+                                <a class="item-control item-attackRoll" title="Attack Roll"><i class="fas fa-dice-d20"></i></a>
+                                <a class="item-control item-edit" title="Edit Item"><i class="fas fa-edit"></i></a>
+                                <a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
+                            </div>
+                        </div>
+                        <div class="item-detail">
+                            <div class="item-dropdown-description">
+                                {{item.data.description}}
+                                <p></p>
+                                <div class="item-dropdown-extras">
+                                    {{item.data.cosm}}
+                                </div>
+                                <div class="item-dropdown-extras">
+                                    TL {{item.data.techlevel}}
+                                </div>
+                                <div class="item-dropdown-extras">
+                                    {{item.data.price}} ({{item.data.value}})
+                                </div>                                 
+                            </div>
                         </div>
                     </li>
                     {{/each}}
                 </ol>
 
-                <div style="text-align:center;background-color:black;color:cornsilk;font-size:125%;">
+                <div class="list-section-heading">
                     Implants
                 </div>
                 <ol class="item-list">
@@ -996,7 +1038,7 @@
                     {{/each}}
                 </ol>
 
-                <div style="text-align:center;background-color:black;color:cornsilk;font-size:125%;">
+                <div class="list-section-heading">
                     Heavy Weapons
                 </div>
                 <ol class="item-list">
@@ -1012,7 +1054,7 @@
                     {{/each}}
                 </ol>
 
-                <div style="text-align:center;background-color:black;color:cornsilk;font-size:125%;">
+                <div class="list-section-heading">
                     Vehicles
                 </div>
                 <ol class="item-list">
@@ -1032,7 +1074,7 @@
         </div>
 
         <div class="tab powers" data-group="primary" data-tab="powers">
-                <div style="text-align:center;background-color:black;color:cornsilk;font-size:125%;">
+                <div class="list-section-heading">
                     Spells
                 </div>
                 <ol class="item-list">
@@ -1048,7 +1090,7 @@
                     {{/each}}
                 </ol>
 
-                <div style="text-align:center;background-color:black;color:cornsilk;font-size:125%;">
+                <div class="list-section-heading">
                     Miracles
                 </div>
                 <ol class="item-list">
@@ -1064,7 +1106,7 @@
                     {{/each}}
                 </ol>
 
-                <div style="text-align:center;background-color:black;color:cornsilk;font-size:125%;">
+                <div class="list-section-heading">
                     Psionic Powers
                 </div>
                 <ol class="item-list">
