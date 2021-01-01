@@ -13,6 +13,7 @@ torgeternity.cosmTypes = {
     coreEarth: "torgeternity.cosms.coreEarth",
     livingLand: "torgeternity.cosms.livingLand",
     nileEmpire: "torgeternity.cosms.nileEmpire",
+    aysle: "torgeternity.cosms.aysle",
     cyberpapacy: "torgeternity.cosms.cyberpapacy",
     tharkhold: "torgeternity.cosms.tharkhold",
     panPacifica: "torgeternity.cosms.panPacifica",

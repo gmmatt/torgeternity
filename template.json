@@ -385,7 +385,8 @@
         "implant": {
             "templates": [
                 "general"
-            ]
+            ],
+            "notes": ""
         },
         "heavyweapon":{
             "templates":[

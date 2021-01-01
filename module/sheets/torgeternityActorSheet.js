@@ -67,6 +67,10 @@ export default class torgeternityStormKnightSheet extends ActorSheet {
             html.find(".item-attackRoll").click(this._onAttackRoll.bind(this));
         }
 
+        if (this.actor.owner) {
+            html.find(".item-bonusRoll").click(this._onBonusRoll.bind(this));
+        }
+
         super.activateListeners(html);
 
         // Everything below here is only needed if the sheet is editable
@@ -125,6 +129,13 @@ export default class torgeternityStormKnightSheet extends ActorSheet {
         const item = this.actor.getOwnedItem(itemID);
 
         item.attack();
+    }
+
+    _onBonusRoll(event) {
+        const itemID = event.currentTarget.closest(".item").dataset.itemId;
+        const item = this.actor.getOwnedItem(itemID);
+
+        item.bonus();
     }
 
 }

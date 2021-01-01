@@ -46,7 +46,7 @@
                     {{localize "torgeternity.gear.damageType"}}
                 </p>
                 <select name="data.damageType" class="input-box">
-                    {{#select data.damageTypes}}
+                    {{#select data.damageType}}
                     {{#each config.damageTypes as |name type|}}
                     <option value="{{type}}">{{localize name}}</option>
                     {{/each}}

@@ -2,7 +2,14 @@ export default class torgeternityItem extends Item {
 
     chatTemplate = {
         "perk": "systems/torgeternity/templates/partials/perk-card.hbs",
-        "attack": "systems/torgeternity/templates/partials/attack-card.hbs"
+        "attack": "systems/torgeternity/templates/partials/attack-card.hbs",
+        "bonus": "systems/torgeternity/templates/partials/bonus-card.hbs",
+        "gear": "systems/torgeternity/templates/partials/gear-card.hbs",
+        "implant": "systems/torgeternity/templates/partials/implant-card.hbs",
+        "enhancement": "systems/torgeternity/templates/partials/enhancement-card.hbs",
+        "eternityshard": "systems/torgeternity/templates/partials/eternityshard-card.hbs",
+        "armor": "systems/torgeternity/templates/partials/armor-card.hbs",
+        "shield": "systems/torgeternity/templates/partials/shield-card.hbs"
     };
     
     async roll() {
@@ -62,32 +69,106 @@ export default class torgeternityItem extends Item {
            var bonus = 7 + Math.ceil((diceroll - 20)/5)
            var messageContent = `Bonus:` + bonus; }
         
-        // Retrieve the applicable skill value from the current actor
-           var skillValue = this.actor.data.data.skills.fireCombat.value    
+      // Calculate base damage
+      if (this.data.data.damageType == "flat") {
+         var baseDamage = this.data.data.damage;}
+      else if (this.data.data.damageType == "strengthPlus") {
+         var baseDamage = parseInt(this.actor.data.data.attributes.strength) + parseInt(this.data.data.damage) }
         
-        // Generate final Roll Result
+      // Retrieve the applicable skill value from the current actor
+      var skillToUse = this.actor.data.data.skills[this.data.data.attackWith]; 
+      var skillValue = skillToUse.value;
+        
+      // Generate final Roll Result
         var rollResult = parseInt(skillValue) + parseInt(bonus)
            
-        // Put together Chat Data
-        let chatData = {
-            user: game.user._id,
-            speaker: ChatMessage.getSpeaker(),
-        };
+      // Put together Chat Data
+      let chatData = {
+         user: game.user._id,
+         speaker: ChatMessage.getSpeaker(),
+      };
 
-        // Assemble information needed by attack card
-        let cardData = {
-            ...this.data,
-            owner: this.actor.id,
-            bonus: messageContent,
-            skillValue: skillValue,
-            result: rollResult
-        }
+      // Assemble information needed by attack card
+      let cardData = {
+         ...this.data,
+         owner: this.actor.id,
+         bonus: messageContent,
+         skillValue: skillValue,
+         result: rollResult,
+         baseDamage: baseDamage
+      }
 
-        // Send the chat
-        chatData.content = await renderTemplate(this.chatTemplate["attack"], cardData);
+      // Send the chat
+      chatData.content = await renderTemplate(this.chatTemplate["attack"], cardData);
 
-        chatData.attack = true;
+      chatData.attack = true;
 
-        return ChatMessage.create(chatData);
+      return ChatMessage.create(chatData);
     }
+   async bonus() {
+      var rollResult, dieValue, finalValue, totalDice, lastDie, lastDieImage, explosions, hideBonusFlag;
+      rollResult = new Roll('1d6').roll().total;
+      if (rollResult == 6) {
+         dieValue = 5;}
+      else if (rollResult <= 5) {
+         dieValue = rollResult
+      }
+      finalValue = dieValue
+      lastDie = dieValue
+      totalDice = 1
+      while (rollResult == 6) {
+         totalDice += 1
+         rollResult = new Roll('1d6').roll().total;
+         dieValue = rollResult
+         if (rollResult == 6) {
+            dieValue = 5;}
+         lastDie = rollResult
+         finalValue += parseInt(dieValue)
+     }
+
+     // Set number of explosions and flag for displaying infinity symbol
+     hideBonusFlag = ""
+     explosions = parseInt(totalDice)-1
+     if (explosions ==0) {
+         hideBonusFlag="display:none";
+     }
+
+      // Prepare image for last die
+      if (lastDie == 1) {
+         lastDieImage = "/systems/torgeternity/images/bonus-1.png";}
+      else if (lastDie == 2) {
+         lastDieImage = "/systems/torgeternity/images/bonus-2.png";}
+      else if (lastDie == 3) {
+         lastDieImage = "/systems/torgeternity/images/bonus-3.png";}
+      else if (lastDie == 4) {
+         lastDieImage = "/systems/torgeternity/images/bonus-4.png";}
+      else if (lastDie == 5) {
+         lastDieImage = "/systems/torgeternity/images/bonus-5.png";}
+
+      // Put together Chat Data
+      let chatData = {
+         user: game.user._id,
+         speaker: ChatMessage.getSpeaker(),
+      };
+
+      // Assemble information needed by attack card
+      let cardData = {
+         ...this.data,
+         owner: this.actor.id,
+         totalDice: totalDice,
+         explosions: explosions,
+         hideBonusFlag: hideBonusFlag,
+         lastDie: lastDie,
+         lastDieImage: lastDieImage,
+         finalValue: finalValue
+      }
+
+      // Send the chat
+      chatData.content = await renderTemplate(this.chatTemplate["bonus"], cardData);
+
+      chatData.bonus = true;
+
+      return ChatMessage.create(chatData);
+   
+   }
 }

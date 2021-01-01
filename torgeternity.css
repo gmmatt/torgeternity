@@ -54,7 +54,7 @@
     text-align: left;
   }
   .torgeternity .item-list .item-controls {
-    flex: 0 0 54px;
+    flex: 0 0 70px;
   }
   .torgeternity .item-list .item-buttons {
     display: flex;
@@ -125,7 +125,7 @@
     background-color:white;
     border-radius:15px;
   }
-  .torgeternity .item-dropdown-extras {
+  .item-dropdown-extras {
     font-family:"Palatino Linotype";
     font-size:12px;
     font-weight:bold;
@@ -134,7 +134,7 @@
     border-radius:10px;
     display:inline-block
   }
-  .perk-name-chat {
+  .chat-title {
     height:50px;
     font-family:"Palatino Linotype";
     font-size:24px;
@@ -142,9 +142,16 @@
     text-align:center;
     vertical-align:center
   }
-  .perk-description-chat {
+  .chat-text {
     font-family:"Palatino Linotype";
-    background-color:#f0dec2;
+    font-size: 20px;
+    font-weight: bold;
+    line-height:1.2;
+    padding:5px 5px
+  }
+  .item-description-chat {
+    font-family:"Palatino Linotype";
+    background-color:white;
     border-radius:15px;
     padding:5px 5px;
   }

@@ -107,6 +107,7 @@
             "coreEarth": "Core Earth",
             "livingLand": "Living Land",
             "nileEmpire": "Nile Empire",
+            "aysle": "Aysle",
             "cyberpapacy": "Cyberpapacy",
             "tharkhold": "Tharkhold",
             "panPacifica": "Pan Pacifica",
@@ -152,7 +153,8 @@
         "itemSheetDescriptions": {
             "perk": "Perk",
             "enhancement": "Enhancement",
-            "generalGear": "Gear",
+            "generalGear": "Other",
+            "eternityshard": "Eternity Shard",
             "armor": "Armor",
             "shield": "Shield",
             "meleeWeapon": "Melee Weapon",

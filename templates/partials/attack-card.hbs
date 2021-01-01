@@ -1,32 +1,18 @@
 <div class="attack-card sheet-card" data-type="{{data.type}}" style="background-image: url('systems/torgeternity/images/bgparch.jpg')">
-    Check out this attack!
-    <p>
-        Skill Name: {{data.attackWith}}
-    </p>
-    <p>
-        Skill Value: {{skillValue}}
-    </p>
-    <p>
-        {{bonus}}
-    </p>
-    <p>
-        Result: {{result}}
-    </p>
-
-
-
-
-<!--    <table style="border:none;background-color:transparent">
+    <table style="border:none;background-color:transparent">
     <tr style="border:none">
         <td>
-            <img class="perk-icon" src="{{img}}" title="{{name}}" style="width:50px;height:50px" />
+            <img class="actor-icon" src="{{img}}" title="{{name}}" style="width:50px;height:50px" />
         </td>
-        <td class="perk-name-chat">
-            {{name}}
+        <td class="chat-title" style="font-size:20px">
+            Attack ({{name}})
         </td>
     </tr>
     </table>
-    <div data-item-id="{{_id}}">
-        <div class="perk-description-chat">{{data.description}}</div>
-    </div> -->
+    <div class="chat-text">
+        <p>Skill value: {{skillValue}}</p>
+        <p>{{bonus}}</p>
+        <p>Result: {{result}}</p>
+        <p>Base Damage:{{baseDamage}}</p> 
+    </div>
 </div>
