@@ -71,6 +71,14 @@ export default class torgeternityStormKnightSheet extends ActorSheet {
             html.find(".item-bonusRoll").click(this._onBonusRoll.bind(this));
         }
 
+        if (this.actor.owner) {
+            html.find(".item-powerRoll").click(this._onPowerRoll.bind(this));
+        }
+
+        if (this.actor.owner) {
+            html.find(".up-roll").click(this._onUpRoll.bind(this));
+        }
+
         super.activateListeners(html);
 
         // Everything below here is only needed if the sheet is editable
@@ -113,6 +121,10 @@ export default class torgeternityStormKnightSheet extends ActorSheet {
         torgchecks.PossibilityCheck ()
     }
 
+    _onUpRoll(event) {
+        torgchecks.UpRoll ()
+    }
+
     _onBonusRoll(event) {
         torgchecks.BonusRoll ()
     }
@@ -136,6 +148,13 @@ export default class torgeternityStormKnightSheet extends ActorSheet {
         const item = this.actor.getOwnedItem(itemID);
 
         item.bonus();
+    }
+
+    _onPowerRoll(event) {
+        const itemID = event.currentTarget.closest(".item").dataset.itemId;
+        const item = this.actor.getOwnedItem(itemID);
+
+        item.power();
     }
 
 }

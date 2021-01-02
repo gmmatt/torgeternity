@@ -94,10 +94,12 @@
         "powers": {
             "axiom": "Axiom",
             "skill": "Skill",
+            "skilllevel": "Min. Skill Value",
             "castingtime": "Casting Time",
             "dn": "DN",
             "range": "Range",
             "duration": "Duration",
+            "damage": "Damage (if any)",
             "description": "Description",
             "good": "Good Result",
             "outstanding": "Outstanding Result"
@@ -165,7 +167,7 @@
             "vehicle": "Vehicle",
             "spell": "Spell",
             "miracle": "Miracle",
-            "psionicPower": "Psionic Power"
+            "psionicpower": "Psionic Power"
         },
         "attackTypes": {
             "unarmedCombat": "Unarmed Combat",
@@ -173,7 +175,9 @@
             "missileWeapons": "Missile Weapons",
             "fireCombat": "Fire Combat",
             "energyWeapons": "Energy Weapons",
-            "heavyWeapons": "Heavy Weapons",
+            "heavyWeapons": "Heavy Weapons"
+         },
+        "powerSkills": {
             "alteration": "Alteration",
             "apportation": "Apportation",
             "conjuration": "Conjuration",

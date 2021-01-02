@@ -14,13 +14,14 @@
     height: 100%;
 }
 .torgeternity .tabs {
-    flex: 0 0 40px;
+    flex: 0 0 30px;
     border-top: 1px solid #AAA;
     border-bottom: 1px solid #AAA;
 }
 .torgeternity .tabs .item {
-    line-height: 40px;
+    line-height: 30px;
     font-weight: bold;
+    font-family:"Palatino Linotype";
 }
 .torgeternity .tabs .item.active {
     text-decoration: underline;
@@ -54,7 +55,8 @@
     text-align: left;
   }
   .torgeternity .item-list .item-controls {
-    flex: 0 0 70px;
+    flex: 0 0 80px;
+    text-align:right;
   }
   .torgeternity .item-list .item-buttons {
     display: flex;
@@ -144,9 +146,11 @@
   }
   .chat-text {
     font-family:"Palatino Linotype";
-    font-size: 20px;
+    background-color:cornsilk;
+    border-radius:5px;
+    font-size: 14px;
     font-weight: bold;
-    line-height:1.2;
+    line-height:1.1;
     padding:5px 5px
   }
   .item-description-chat {
@@ -157,9 +161,36 @@
   }
   .torgeternity .list-section-heading {
     text-align:center;
-    background-color:black;
-    color:cornsilk;
+    background-color:#00134d;
+    border-radius:10px;
+    margin-bottom: 2px;
+    color:white;
     font-size:125%;
     font-family:"Palatino Linotype";
     font-weight:Bold;
+  }
+  .torgeternity .small-input {
+    border:none;
+    border-bottom:1px solid black;
+    width:20px;
+    border-radius:0px;
+    background:none;
+    height:14px;
+    text-align:center;
+  }
+  .torgeternity .skill-roll {
+    font-family:"Palatino Linotype";
+    font-size:16px;
+    line-height:1.1em;
+  }
+  .torgeternity .main-label {
+    font-family:"Palatino Linotype";
+    font-size:16px;
+    line-height:1.1em;
+  }
+  .torgeternity .stats-table {
+    border:0px black solid;
+    background-color:white;
+    padding-left:5px;
+    border-radius:10px;
   }

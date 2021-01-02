@@ -1,44 +1,73 @@
 <form class="{{cssClass}}" autocomplete="off">
     <header class="sheet-header">
         <img src="{{item.img}}" data-edit="img" title="{{item.name}}" height="64" width="64"/>
-        <h1><input name="name" type="text" value="{{item.name}}" placeholder="Name"/></h1>
+        <h1><input name="name" type="text" value="{{item.name}}" placeholder="Miracle Name" style="background-color:white;border-radius:10px;width:310px;font-family:'Palatino Linotype';font-size:22px"/></h1>
+        <h1 style="font-size:36px;text-align:right;font-family:'Palatino Linotype'">{{localize "torgeternity.itemSheetDescriptions.miracle"}}</h1>
     </header>
     <div class="sheet-content">
-        <div style="padding-top:15px">
-            <p>
-                {{localize "torgeternity.powers.axiom"}}: <input name="data.axiom" type="text" value="{{data.axiom}}" style="width:25px" />
-            </p>
-            <p>
-                {{localize "torgeternity.powers.skill"}}: <input name="data.skill" type="text" value="{{data.skill}}" style="width:80px" />
-            </p>
-            <p>
-                {{localize "torgeternity.powers.castingtime"}}: <input name="data.castingtime" type="text" value="{{data.castingtime}}" style="width:100px" />
-            </p>
-            <p>
-                {{localize "torgeternity.powers.dn"}}: <input name="data.dn" type="text" value="{{data.dn}}" style="width:100px" />
-            </p>
-            <p>
-                {{localize "torgeternity.powers.range"}}: <input name="data.range" type="text" value="{{data.range}}" style="width:100px" />
-            </p>
-            <p>
-                {{localize "torgeternity.powers.duration"}}: <input name="data.duration" type="text" value="{{data.duration}}" style="width:100px" />
-            </p>
-            <p>
-                {{localize "torgeternity.powers.description"}}: 
-                <div style="height:200px;border:1px solid black">
-                    {{editor content=data.description target="data.description" button=true owner=owner editable=editable}}
+        <table style="background-color:transparent;border: 0px solid black">
+        <tr>
+            <td style="width:25%;vertical-align:top"> <!-- left column -->
+                <p class="item-data-label">
+                    {{localize "torgeternity.powers.axiom"}}
+                </p>
+                <input name="data.axiom" type="text" value="{{data.axiom}}" class="input-box" />
+                <p class="item-data-label">
+                    {{localize "torgeternity.powers.skill"}}
+                </p>
+                <select name="data.skill" class="input-box" default="faith">
+                    {{#select data.skill}}
+                    {{#each config.powerSkills as |name type|}}
+                    <option value="{{type}}">{{localize name}}</option>
+                    {{/each}}
+                    {{/select}}
+                </select>
+                <p class="item-data-label">
+                    {{localize "torgeternity.powers.skilllevel"}}
+                </p>
+                <input name="data.skilllevel" type="text" value="{{data.skilllevel}}" class="input-box" />
+                <p class="item-data-label">
+                    {{localize "torgeternity.powers.castingtime"}}
+                </p>
+                <input name="data.castingtime" type="text" value="{{data.castingtime}}" class="input-box" />
+                <p class="item-data-label">
+                    {{localize "torgeternity.powers.dn"}}
+                </p>
+                <input name="data.dn" type="text" value="{{data.dn}}" class="input-box" />
+                <p class="item-data-label">
+                    {{localize "torgeternity.powers.range"}}
+                </p>
+                <input name="data.range" type="text" value="{{data.range}}" class="input-box" />
+                <p class="item-data-label">
+                    {{localize "torgeternity.powers.duration"}}
+                </p>
+                <input name="data.duration" type="text" value="{{data.duration}}" class="input-box" />
+                <p class="item-data-label">
+                    {{localize "torgeternity.powers.damage"}}
+                </p>
+                <input name="data.damage" type="text" value="{{data.damage}}" class="input-box" />
+             </td>
+            <td style="width:65%"> <!-- right column -->
+                <p class="item-data-label">
+                    Description
+                </p>
+                <div style="padding:0px 0px 0px 10px">
+                    <textarea name="data.description" class="item-description-textarea" style="height:150px">{{data.description}}</textarea>
                 </div>
-            </p>
-            <p>
-                {{localize "torgeternity.powers.good"}}: 
-                <div style="height:75px;border:1px solid black">
-                    {{editor content=data.good target="data.good" button=true owner=owner editable=editable}}
+                <p class="item-data-label">
+                    Good Result
+                </p>
+                <div style="padding:0px 0px 0px 10px">
+                    <textarea name="data.good" class="item-description-textarea" style="height:75px">{{data.good}}</textarea>
                 </div>
-            </p>
-            <p>
-                {{localize "torgeternity.powers.outstanding"}}: 
-                <div style="height:75px;border:1px solid black">
-                    {{editor content=data.outstanding target="data.outstanding" button=true owner=owner editable=editable}}
+                <p class="item-data-label">
+                    Outstanding Result
+                </p>
+                <div style="padding:0px 0px 0px 10px">
+                    <textarea name="data.outstanding" class="item-description-textarea" style="height:75px">{{data.outstanding}}</textarea>
                 </div>
-            </p>    </div>
+            </td> 
+        </tr>
+        </table>         
+    </div>
 </form>

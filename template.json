@@ -278,6 +278,12 @@
                     "unspent": 0,
                     "earned": 0
                 },
+                "axioms": {
+                    "magic": "",
+                    "social": "",
+                    "spirit": "",
+                    "tech": ""
+                },
                 "clearance": "",
                 "background": ""
             },
@@ -316,13 +322,16 @@
             "power": {
                 "axiom": 0,
                 "skill": "",
+                "skilllevel": "",
                 "castingtime": "",
                 "dn": "",
                 "range": "",
                 "duration": "",
                 "description": "",
                 "good": "",
-                "outstanding": ""
+                "outstanding": "",
+                "isAttack": "",
+                "damage": ""
             }
         },
         "gear":{

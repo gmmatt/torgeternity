@@ -49,18 +49,20 @@ torgeternity.attackTypes = {
     fireCombat: "torgeternity.attackTypes.fireCombat",
     energyWeapons: "torgeternity.attackTypes.energyWeapons",
     heavyWeapons: "torgeternity.attackTypes.heavyWeapons",
-    alteration: "torgeternity.attackTypes.alteration",
-    apportation: "torgeternity.attackTypes.apportation",
-    conjuration: "torgeternity.attackTypes.conjuration",
-    divination: "torgeternity.attackTypes.divination",
-    kinesis: "torgeternity.attackTypes.kinesis",
-    precognition: "torgeternity.attackTypes.precognition",
-    telepathy: "torgeternity.attackTypes.telepathy",
-    faith: "torgeternity.attackTypes.faith"
-
 }
 
 torgeternity.damageTypes = {
     strengthPlus: "torgeternity.damageTypes.strengthPlus",
     flat: "torgeternity.damageTypes.flat" 
+}
+
+torgeternity.powerSkills = {
+    alteration: "torgeternity.powerSkills.alteration",
+    apportation: "torgeternity.powerSkills.apportation",
+    conjuration: "torgeternity.powerSkills.conjuration",
+    divination: "torgeternity.powerSkills.divination",
+    kinesis: "torgeternity.powerSkills.kinesis",
+    precognition: "torgeternity.powerSkills.precognition",
+    telepathy: "torgeternity.powerSkills.telepathy",
+    faith: "torgeternity.powerSkills.faith"    
 }
