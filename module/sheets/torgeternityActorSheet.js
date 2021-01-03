@@ -158,3 +158,4 @@ export default class torgeternityStormKnightSheet extends ActorSheet {
     }
 
 }
+

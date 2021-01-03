@@ -190,6 +190,18 @@
         "damageTypes": {
             "strengthPlus": "Strength +",
             "flat": "Flat"
+        },
+        "clearances": {
+            "alpha": "Alpha",
+            "beta": "Beta",
+            "gamma": "Gamma",
+            "delta": "Delta",
+            "omega": "Omega"
+        },
+        "races": {
+            "human": "Human",
+            "dwarf": "Dwarf",
+            "elf": "Elf"
         }
     }
 }

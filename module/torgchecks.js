@@ -168,7 +168,7 @@ export function UpRoll () {
       buttons: {
          yes: {
             icon: "<i class='fas fa-check'></i>",
-            label: `Possibility`,
+            label: `Up`,
             callback: () => applyChanges = true
          },
          no: {

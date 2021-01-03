@@ -66,3 +66,17 @@ torgeternity.powerSkills = {
     telepathy: "torgeternity.powerSkills.telepathy",
     faith: "torgeternity.powerSkills.faith"    
 }
+
+torgeternity.clearances = {
+    alpha: "torgeternity.clearances.alpha",
+    beta: "torgeternity.clearances.beta",
+    gamma: "torgeternity.clearances.gamma",
+    delta: "torgeternity.clearances.delta",
+    omega: "torgeternity.clearances.omega"
+}
+
+torgeternity.races = {
+    human: "torgeternity.races.human",
+    dwarf: "torgeternity.races.dwarf",
+    elf: "torgeternity.races.elf"
+}
