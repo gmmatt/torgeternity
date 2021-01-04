@@ -150,7 +150,8 @@
             "vehicles": "Vehicles",
             "spells": "Spells",
             "miracles": "Miracles",
-            "psionicPowers": "Psionic Powers"
+            "psionicPowers": "Psionic Powers",
+            "specialAbility": "Special Ability"
         },
         "itemSheetDescriptions": {
             "perk": "Perk",

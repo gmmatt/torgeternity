@@ -46,12 +46,28 @@ export function SkillCheck({
     var messageContent2 = '<p>' + 'Result: ' + rollResult
     var finalMessage= messageContent1 + messageContent + messageContent2
     
+   var thisSpeaker = ChatMessage.getSpeaker();
+
     var chatData = {
-        user: game.user._id,
-        speaker: ChatMessage.getSpeaker(),
-        content: finalMessage};
+      user: game.user._id,
+      speaker: ChatMessage.getSpeaker(),
+      owner:  ChatMessage.getSpeakerActor(thisSpeaker).id
+   };
+   var cardData = {
+      skillName: skillName,
+      skillValue: skillValue,
+      bonus: messageContent,
+      result: rollResult,
+      actorPic: ChatMessage.getSpeakerActor(thisSpeaker).img
+   };
+
+   const templatePromise = renderTemplate("./systems/torgeternity/templates/partials/skill-card.hbs", cardData);
+
+   templatePromise.then(content => {
+      chatData.content = content;      
+      ChatMessage.create(chatData);
+   });
     
-    ChatMessage.create(chatData, {});
 }
 
 export function PossibilityCheck () {
@@ -119,6 +135,8 @@ export function PossibilityCheck () {
       var bonus = 7 + Math.ceil((diceroll - 20)/5)
       var messageContent = `Bonus: + ` + bonus; }
 
+      var thisSpeaker = ChatMessage.getSpeaker();
+
       // Put together Chat Data
       let chatData = {
          user: game.user._id,
@@ -128,39 +146,28 @@ export function PossibilityCheck () {
       let cardData = {
          newbonus: messageContent,
          previousroll: previousroll.value,
-         newtotal: diceroll
+         newtotal: diceroll,
+         actorPic: ChatMessage.getSpeakerActor(thisSpeaker).img
       }
 
-//    chatData.content = renderTemplate("systems/torgeternity/templates/partials/possibility-card.hbs", cardData); <-- HELP! could not make this work!
+      const templatePromise = renderTemplate("./systems/torgeternity/templates/partials/possibility-card.hbs", cardData);
 
-//    Shameless/Lazy Hack to Get Around my Problem
-      chatData.content = `
-      <div style="background-image: url('systems/torgeternity/images/bgparch.jpg')">
-         <div class="chat-title" style="height:30px">
-            Possibility Roll
-         </div>
-         <div class="chat-text">
-            <p>Previous Roll Total: ${previousroll.value}</p>
-            <p>New Roll Total: ${diceroll}</p>
-            <p>New ${messageContent}</p>
-         </div>
-      </div>
-      `
-//    Back to Business
-      ChatMessage.create(chatData), {};
-   }
-   }
-}).render(true);
+      templatePromise.then(content => {
+         chatData.content = content;      
+         ChatMessage.create(chatData);
+      });
+      }
+   }}).render(true);
 }
 
 export function UpRoll () {
    let applyChanges = false;
    new Dialog({
-      title: `Initial Roll Total`,
+      title: `Previous Roll Total`,
       content: `
          <form>
             <div class="form-group">
-            <label>Initial Roll Total:</label>
+            <label>Previous Roll Total:</label>
             <input type="number" id="previousroll" name="previousroll" size="3" />
             </div>
          </form>
@@ -218,6 +225,8 @@ export function UpRoll () {
       var bonus = 7 + Math.ceil((diceroll - 20)/5)
       var messageContent = `Bonus: + ` + bonus; }
 
+      var thisSpeaker = ChatMessage.getSpeaker();
+
       // Put together Chat Data
       let chatData = {
          user: game.user._id,
@@ -227,55 +236,16 @@ export function UpRoll () {
       let cardData = {
          newbonus: messageContent,
          previousroll: previousroll.value,
-         newtotal: diceroll
+         newtotal: diceroll,
+         actorPic: ChatMessage.getSpeakerActor(thisSpeaker).img
       }
 
-//    chatData.content = renderTemplate("systems/torgeternity/templates/partials/possibility-card.hbs", cardData); <-- HELP! could not make this work!
+      const templatePromise = renderTemplate("./systems/torgeternity/templates/partials/up-card.hbs", cardData);
 
-//    Shameless/Lazy Hack to Get Around my Problem
-      chatData.content = `
-      <div style="background-image: url('systems/torgeternity/images/bgparch.jpg')">
-         <div class="chat-title" style="height:30px">
-            Rolling With Up
-         </div>
-         <div class="chat-text">
-            <p>Previous Roll Total: ${previousroll.value}</p>
-            <p>New Roll Total: ${diceroll}</p>
-            <p>New ${messageContent}</p>
-         </div>
-      </div>
-      `
-//    Back to Business
-      ChatMessage.create(chatData), {};
-   }
-   }
-}).render(true);
-}
-export function BonusRoll () {
-      var rollResult, dieValue, finalValue, messageContent;
-   rollResult = new Roll('1d6').roll().total;
-   if (rollResult == 6) {
-      dieValue = 5;}
-   else if (rollResult <= 5) {
-      dieValue = rollResult
-   }
-   finalValue = dieValue
-   messageContent = "<p style='text-align:center;font-weight:bold'>Bonus Die</p>" + dieValue;
-   while (rollResult == 6) {
-      rollResult = new Roll('1d6').roll().total;
-      dieValue = rollResult
-      if (rollResult == 6) {
-         dieValue = 5;}
-      finalValue += parseInt(dieValue)
-      messageContent += " + " + dieValue
-   }
-
-   messageContent += " = " + finalValue;
-
-   var chatData = {
-      user: game.user._id,
-      speaker: ChatMessage.getSpeaker(),
-      content: messageContent};
-   
-   ChatMessage.create(chatData), {};
+      templatePromise.then(content => {
+         chatData.content = content;      
+         ChatMessage.create(chatData);
+      });
+      }
+   }}).render(true);
 }

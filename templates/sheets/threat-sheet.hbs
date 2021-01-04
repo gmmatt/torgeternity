@@ -828,6 +828,33 @@
         </div>
 
         <div class="tab perks" style="height:400px;overflow:scroll" data-group="primary" data-tab="perks">
+
+            <div class="list-section-heading">
+                {{localize "torgeternity.sheetLabels.specialability"}}
+            </div>
+
+            <ol class="item-list">
+                {{#each specialability as |item id|}}
+                <li class="item" data-item-id="{{item._id}}">
+                    <div class="item-row flexrow">
+                        <img src="{{item.img}}" title="{{item.name}}" width="30" height="30" />
+                        <a class="item-name">{{item.name}}</a>
+                        <div class="item-controls">
+                            <a class="item-control item-tochat" title="Send to Chat"><i class="fas fa-comment"></i></a>
+                            <a class="item-control item-edit" title="Edit Item"><i class="fas fa-edit"></i></a>
+                            <a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
+                        </div>
+                    </div>
+                    <div class="item-detail">
+                        <div class="item-dropdown-description">
+                            {{item.data.description}}
+                        </div>
+                    </div>
+                </li>
+                {{/each}}
+            </ol>
+
+
             <div class="list-section-heading">
                 {{localize "torgeternity.sheetLabels.perks"}}
             </div>
