@@ -278,6 +278,12 @@
                     "unspent": 0,
                     "earned": 0
                 },
+                "axioms": {
+                    "magic": "",
+                    "social": "",
+                    "spirit": "",
+                    "tech": ""
+                },
                 "clearance": "",
                 "background": ""
             },
@@ -299,6 +305,7 @@
             "heavyweapon",
             "vehicle",
             "perk",
+            "enhancement",
             "specialability",
             "spell",
             "miracle",
@@ -315,13 +322,16 @@
             "power": {
                 "axiom": 0,
                 "skill": "",
+                "skilllevel": "",
                 "castingtime": "",
                 "dn": "",
                 "range": "",
                 "duration": "",
                 "description": "",
                 "good": "",
-                "outstanding": ""
+                "outstanding": "",
+                "isAttack": "",
+                "damage": ""
             }
         },
         "gear":{
@@ -374,6 +384,8 @@
             "templates":[
                 "general"
             ],
+            "attackWith": "",
+            "damageType": "",
             "damage": 0,
             "ammo": 1,
             "range": "",
@@ -382,7 +394,8 @@
         "implant": {
             "templates": [
                 "general"
-            ]
+            ],
+            "notes": ""
         },
         "heavyweapon":{
             "templates":[
@@ -408,6 +421,10 @@
             "cosm": "",
             "prerequisites": "",
             "timestaken": "",
+            "description": ""
+        },
+        "enhancement": {
+            "perk": "",
             "description": ""
         },
         "specialability": {

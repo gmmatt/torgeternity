@@ -35,6 +35,7 @@ export default class torgeternityStormKnightSheet extends ActorSheet {
         data.miracle = data.items.filter(function (item) { return item.type == "miracle"});
         data.psionicpower = data.items.filter(function (item) { return item.type == "psionicpower"});
         data.specialability = data.items.filter(function (item) { return item.type == "specialability"});
+        data.enhancement = data.items.filter(function (item) { return item.type == "enhancement"});
 
         data.config = CONFIG.torgeternity;
 
@@ -60,6 +61,22 @@ export default class torgeternityStormKnightSheet extends ActorSheet {
 
         if (this.actor.owner) {
             html.find(".item-tochat").click(this._onItemChat.bind(this));
+        }
+
+        if (this.actor.owner) {
+            html.find(".item-attackRoll").click(this._onAttackRoll.bind(this));
+        }
+
+        if (this.actor.owner) {
+            html.find(".item-bonusRoll").click(this._onBonusRoll.bind(this));
+        }
+
+        if (this.actor.owner) {
+            html.find(".item-powerRoll").click(this._onPowerRoll.bind(this));
+        }
+
+        if (this.actor.owner) {
+            html.find(".up-roll").click(this._onUpRoll.bind(this));
         }
 
         super.activateListeners(html);
@@ -104,6 +121,10 @@ export default class torgeternityStormKnightSheet extends ActorSheet {
         torgchecks.PossibilityCheck ()
     }
 
+    _onUpRoll(event) {
+        torgchecks.UpRoll ()
+    }
+
     _onBonusRoll(event) {
         torgchecks.BonusRoll ()
     }
@@ -115,4 +136,26 @@ export default class torgeternityStormKnightSheet extends ActorSheet {
         item.roll();
     }
 
+    _onAttackRoll(event) {
+        const itemID = event.currentTarget.closest(".item").dataset.itemId;
+        const item = this.actor.getOwnedItem(itemID);
+
+        item.attack();
+    }
+
+    _onBonusRoll(event) {
+        const itemID = event.currentTarget.closest(".item").dataset.itemId;
+        const item = this.actor.getOwnedItem(itemID);
+
+        item.bonus();
+    }
+
+    _onPowerRoll(event) {
+        const itemID = event.currentTarget.closest(".item").dataset.itemId;
+        const item = this.actor.getOwnedItem(itemID);
+
+        item.power();
+    }
+
 }
+
