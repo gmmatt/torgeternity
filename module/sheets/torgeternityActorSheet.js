@@ -114,20 +114,27 @@ export default class torgeternityStormKnightSheet extends ActorSheet {
     _onSkillRoll(event) {
         
         torgchecks.SkillCheck ({
+            actor: this.actor,
             skillValue: event.currentTarget.dataset.skillValue,
             skillName: event.currentTarget.dataset.skillName
         })
     }
     _onPossibilityRoll(event) {
-        torgchecks.PossibilityCheck ()
+        torgchecks.PossibilityCheck ({
+            actor: this.actor,
+        })
     }
 
     _onUpRoll(event) {
-        torgchecks.UpRoll ()
+        torgchecks.UpRoll ({
+            actor: this.actor,
+        })
     }
 
     _onBonusRoll(event) {
-        torgchecks.BonusRoll ()
+        torgchecks.BonusRoll ({
+            actor: this.actor,
+        })
     }
 
     _onItemChat(event) {

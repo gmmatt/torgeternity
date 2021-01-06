@@ -1,6 +1,7 @@
 export function SkillCheck({
     skillName = null,
-    skillValue = null } = {}) {
+    skillValue = null,
+    actor = null } = {}) {
     
     let dicerollint = new Roll('1d20x10x20').roll();
     dicerollint.toMessage();
@@ -46,19 +47,18 @@ export function SkillCheck({
     var messageContent2 = '<p>' + 'Result: ' + rollResult
     var finalMessage= messageContent1 + messageContent + messageContent2
     
-   var thisSpeaker = ChatMessage.getSpeaker();
-
     var chatData = {
       user: game.user._id,
       speaker: ChatMessage.getSpeaker(),
-      owner:  ChatMessage.getSpeakerActor(thisSpeaker).id
+      owner:  actor
    };
+
    var cardData = {
       skillName: skillName,
       skillValue: skillValue,
       bonus: messageContent,
       result: rollResult,
-      actorPic: ChatMessage.getSpeakerActor(thisSpeaker).img
+      actorPic: actor.data.img
    };
 
    const templatePromise = renderTemplate("./systems/torgeternity/templates/partials/skill-card.hbs", cardData);
@@ -70,7 +70,8 @@ export function SkillCheck({
     
 }
 
-export function PossibilityCheck () {
+export function PossibilityCheck ({
+   actor = null}) {
    let applyChanges = false;
    new Dialog({
       title: `Previous Roll Total`,
@@ -135,19 +136,19 @@ export function PossibilityCheck () {
       var bonus = 7 + Math.ceil((diceroll - 20)/5)
       var messageContent = `Bonus: + ` + bonus; }
 
-      var thisSpeaker = ChatMessage.getSpeaker();
+      var thisSpeaker = ChatMessage.getSpeaker(this.actor);
 
       // Put together Chat Data
       let chatData = {
          user: game.user._id,
          speaker: ChatMessage.getSpeaker(),
-         owner: ChatMessage.getSpeaker().actor,
+         owner: actor,
       };
       let cardData = {
          newbonus: messageContent,
          previousroll: previousroll.value,
          newtotal: diceroll,
-         actorPic: ChatMessage.getSpeakerActor(thisSpeaker).img
+         actorPic: actor.data.img
       }
 
       const templatePromise = renderTemplate("./systems/torgeternity/templates/partials/possibility-card.hbs", cardData);
@@ -160,7 +161,8 @@ export function PossibilityCheck () {
    }}).render(true);
 }
 
-export function UpRoll () {
+export function UpRoll ({
+   actor = null}) {
    let applyChanges = false;
    new Dialog({
       title: `Previous Roll Total`,
@@ -225,19 +227,19 @@ export function UpRoll () {
       var bonus = 7 + Math.ceil((diceroll - 20)/5)
       var messageContent = `Bonus: + ` + bonus; }
 
-      var thisSpeaker = ChatMessage.getSpeaker();
+      var thisSpeaker = ChatMessage.getSpeaker(actor);
 
       // Put together Chat Data
       let chatData = {
          user: game.user._id,
          speaker: ChatMessage.getSpeaker(),
-         owner: ChatMessage.getSpeaker().actor,
+         owner: actor,
       };
       let cardData = {
          newbonus: messageContent,
          previousroll: previousroll.value,
          newtotal: diceroll,
-         actorPic: ChatMessage.getSpeakerActor(thisSpeaker).img
+         actorPic: actor.data.img
       }
 
       const templatePromise = renderTemplate("./systems/torgeternity/templates/partials/up-card.hbs", cardData);
