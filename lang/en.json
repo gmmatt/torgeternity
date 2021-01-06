@@ -168,7 +168,8 @@
             "vehicle": "Vehicle",
             "spell": "Spell",
             "miracle": "Miracle",
-            "psionicpower": "Psionic Power"
+            "psionicpower": "Psionic Power",
+            "specialability": "Special Ability"
         },
         "attackTypes": {
             "unarmedCombat": "Unarmed Combat",

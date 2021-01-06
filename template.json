@@ -307,6 +307,7 @@
             "perk",
             "enhancement",
             "specialability",
+            "specialability-rollable",
             "spell",
             "miracle",
             "psionicpower"
@@ -429,6 +430,11 @@
         },
         "specialability": {
             "description": ""
+        },
+        "specialability-rollable": {
+            "description": "",
+            "skill": "",
+            "damage": ""
         },
         "spell": {
             "templates": [

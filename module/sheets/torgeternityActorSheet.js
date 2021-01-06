@@ -35,6 +35,7 @@ export default class torgeternityStormKnightSheet extends ActorSheet {
         data.miracle = data.items.filter(function (item) { return item.type == "miracle"});
         data.psionicpower = data.items.filter(function (item) { return item.type == "psionicpower"});
         data.specialability = data.items.filter(function (item) { return item.type == "specialability"});
+        data.specialabilityRollable = data.items.filter(function (item) {return item.type == "specialability-rollable"});
         data.enhancement = data.items.filter(function (item) { return item.type == "enhancement"});
 
         data.config = CONFIG.torgeternity;

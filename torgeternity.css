@@ -24,6 +24,9 @@
     background-image: url('./images/bgparch.jpg');
     background-size: 100% 100%;
 }
+.specialability-sheet {
+  height:250px;
+}
 .torgeternity .tabs {
     flex: 0 0 30px;
     border-top: 1px solid #AAA;

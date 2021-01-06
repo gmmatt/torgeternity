@@ -1,0 +1,37 @@
+<form class="{{cssClass}} item-sheet specialability-sheet" autocomplete="off" style="height:250px">
+    <header class="sheet-header">
+        <img src="{{item.img}}" data-edit="img" title="{{item.name}}" height="64" width="64"/>
+        <h1><input name="name" type="text" value="{{item.name}}" placeholder="Firearm Name" style="background-color:white;border-radius:10px;width:280px;font-family:'Palatino Linotype';font-size:22px"/></h1>
+        <h1 style="font-size:24px;text-align:right;font-family:'Palatino Linotype'">{{localize "torgeternity.itemSheetDescriptions.specialability"}}</h1>
+    </header>
+    <div class="sheet-content">
+        <table style="background-color:transparent;border: 0px solid black;height:200px">
+        <tr>
+            <td style="width:25%;vertical-align:top"> <!-- left column -->
+                <p class="item-data-label">
+                    {{localize "torgeternity.powers.skill"}}
+                </p>
+                <select name="data.skill" class="input-box">
+                    {{#select data.skill}}
+                    {{#each config.skills as |name type|}}
+                    <option value="{{type}}">{{localize name}}</option>
+                    {{/each}}
+                    {{/select}}
+                </select>
+                <p class="item-data-label">
+                    {{localize "torgeternity.powers.damage"}}
+                </p>
+                <input name="data.damage" type="text" value="{{data.damage}}" class="input-box" />
+             </td>
+            <td style="width:65%"> <!-- right column -->
+                <p class="item-data-label">
+                    Description
+                </p>
+                <div style="padding:0px 0px 0px 10px">
+                    <textarea name="data.description" class="item-description-textarea" style="height:150px">{{data.description}}</textarea>
+                </div>
+            </td> 
+        </tr>
+        </table>         
+    </div>
+</form>
