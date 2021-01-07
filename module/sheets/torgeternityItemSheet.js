@@ -9,7 +9,7 @@ export default class torgeternityItemSheet extends ItemSheet {
 
         if ( this.object.data.type === "specialability-rollable" ) {
             this.options.width = this.position.width = 530;
-            this.option.height = this.position.height = 310;
+            this.options.height = this.position.height = 310;
         }
     }
 

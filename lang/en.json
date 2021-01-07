@@ -151,7 +151,8 @@
             "spells": "Spells",
             "miracles": "Miracles",
             "psionicPowers": "Psionic Powers",
-            "specialAbility": "Special Ability"
+            "specialAbility": "Special Abilities",
+            "threat": "Threat"
         },
         "itemSheetDescriptions": {
             "perk": "Perk",

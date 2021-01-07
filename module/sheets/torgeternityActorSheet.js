@@ -1,3 +1,4 @@
+import { torgeternity } from "../config.js";
 import * as torgchecks from "../torgchecks.js";
 
 export default class torgeternityStormKnightSheet extends ActorSheet {
@@ -78,6 +79,14 @@ export default class torgeternityStormKnightSheet extends ActorSheet {
 
         if (this.actor.owner) {
             html.find(".up-roll").click(this._onUpRoll.bind(this));
+        }
+
+        if (this.actor.owner) {
+            html.find(".item-create-sa").click(this._onCreateSa.bind(this));
+        }
+
+        if (this.actor.owner) {
+            html.find(".item-create-rsa").click(this._onCreateSaR.bind(this));
         }
 
         super.activateListeners(html);
@@ -163,6 +172,24 @@ export default class torgeternityStormKnightSheet extends ActorSheet {
         const item = this.actor.getOwnedItem(itemID);
 
         item.power();
+    }
+
+    _onCreateSa(event) {
+        event.preventDefault();
+        let itemData = {
+            name: "Name",
+            type: "specialability"
+        };
+        return this.actor.createOwnedItem(itemData,{renderSheet:true});
+    }
+
+    _onCreateSaR(event) {
+        event.preventDefault();
+        let itemData = {
+            name: "Name",
+            type: "specialability-rollable"
+        };
+        return this.actor.createOwnedItem(itemData,{renderSheet:true});
     }
 
 }

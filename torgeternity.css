@@ -214,3 +214,10 @@
     border-radius:10px;
     padding: 3px 7px 3px 7px;
   }
+
+  .torgeternity .threat-block {
+    text-indent:-20px;
+    padding-left:20px;
+    font-family:"Palatino Linotype";
+    font-size:14px;
+  }
