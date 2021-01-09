@@ -186,12 +186,13 @@
   .torgeternity .small-input {
     border:none;
     border-bottom:1px solid black;
-    width:20px;
+    width:10px;
     border-radius:0px;
     background:none;
     height:14px;
     text-align:center;
     font-family:"Pallatino Linotype";
+    padding: 0px;
   }
   .torgeternity .skill-roll {
     font-family:"Palatino Linotype";
