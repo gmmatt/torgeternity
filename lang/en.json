@@ -194,7 +194,12 @@
             "miracles": "Miracles",
             "psionicPowers": "Psionic Powers",
             "specialAbility": "Special Abilities",
-            "threat": "Threat"
+            "threat": "Threat",
+            "skills": "Skills",
+            "possibilitypotential": "Possibilities (Potential)",
+            "possibilities": "Possibilities",
+            "equipment": "Equipment",
+            "specialabilities": "Special Abilities"
         },
         "itemSheetDescriptions": {
             "perk": "Perk",

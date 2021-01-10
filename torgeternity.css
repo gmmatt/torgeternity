@@ -6,7 +6,7 @@
 .sheet .sheet-content {
     height: 100%;
     display: flex;
-    flex-direction: column; */
+    flex-direction: column; 
 }
 .sheet .sheet-content .editor {
     height: 100%;
@@ -194,6 +194,17 @@
     font-family:"Pallatino Linotype";
     padding: 0px;
   }
+  .torgeternity .text-input {
+      border:none;
+      border-bottom:1px solid black;
+      width:70px;
+      border-radius:0px;
+      background:none;
+      height:14px;
+      text-align:center;
+      font-family:"Pallatino Linotype";
+      padding: 0px;   
+  }
   .torgeternity .skill-roll {
     font-family:"Palatino Linotype";
     font-size:14px;
@@ -217,8 +228,27 @@
   }
 
   .torgeternity .threat-block {
-    text-indent:-20px;
-    padding-left:20px;
+    text-indent:-10px;
+    padding-left:10px;
     font-family:"Palatino Linotype";
     font-size:14px;
+  }
+
+  .torgeternity .threat-edit {
+    font-family:"Palatino Linotype";
+    font-size:12px;
+  }
+
+  .torgeternity .inline-skill-list .inline-skill-item:after {
+    content: ",";
+  }
+
+  .torgeternity .inline-skill-list .inline-skill-item:last-child:after {
+    content: "";
+  }
+  .torgeternity .specialability-list {
+    list-style: square outside bullet;
+    text-indent:0px;
+    padding-left:10px;
+    margin:0px;
   }

@@ -122,5 +122,4 @@ torgeternity.skills = {
     unarmedCombat: "torgeternity.skills.unarmedCombat",
     waterVehicles: "torgeternity.skills.waterVehicles",
     willpower: "torgeternity.skills.willpower"
-
 }

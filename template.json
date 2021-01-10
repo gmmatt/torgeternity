@@ -287,9 +287,13 @@
                 "clearance": "",
                 "background": ""
             },
-            "threat": [
-                "commonstats"
-            ]
+            "threat": {
+                "templates": [
+                "commonStats" 
+                ],
+                "possibilitypotential": "(none)",
+                "editstate": "inline"
+            }
         }
     },
     "Item":{

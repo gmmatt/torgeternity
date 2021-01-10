@@ -2,7 +2,6 @@ export function SkillCheck({
     skillName = null,
     skillValue = null,
     actor = null } = {}) {
-    
     let dicerollint = new Roll('1d20x10x20').roll();
     dicerollint.toMessage();
     let diceroll = dicerollint.total;
