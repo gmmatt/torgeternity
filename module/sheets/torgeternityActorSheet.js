@@ -1,3 +1,4 @@
+import { torgeternity } from "../config.js";
 import * as torgchecks from "../torgchecks.js";
 
 export default class torgeternityStormKnightSheet extends ActorSheet {
@@ -19,6 +20,7 @@ export default class torgeternityStormKnightSheet extends ActorSheet {
 
     getData () {
         const data = super.getData();
+        var firstItem = 0
 
         data.meleeweapons = data.items.filter(function (item) { return item.type == "meleeweapon"});
         data.gear = data.items.filter(function (item) { return item.type == "gear"});
@@ -38,9 +40,16 @@ export default class torgeternityStormKnightSheet extends ActorSheet {
         data.specialabilityRollable = data.items.filter(function (item) {return item.type == "specialability-rollable"});
         data.enhancement = data.items.filter(function (item) { return item.type == "enhancement"});
 
+        if (this.actor.data.data.editstate === "inline") {
+            data.editstate = "inline";
+        } else {
+            data.editstate = "none";
+        };
+
         data.config = CONFIG.torgeternity;
 
         return data;
+
     }
 
 
@@ -80,6 +89,18 @@ export default class torgeternityStormKnightSheet extends ActorSheet {
             html.find(".up-roll").click(this._onUpRoll.bind(this));
         }
 
+        if (this.actor.owner) {
+            html.find(".item-create-sa").click(this._onCreateSa.bind(this));
+        }
+
+        if (this.actor.owner) {
+            html.find(".item-create-rsa").click(this._onCreateSaR.bind(this));
+        }
+
+        if (this.actor.owner) {
+            html.find(".toggle-threat-edit").click(this._onToggleThreatEdit.bind(this));
+        }
+
         super.activateListeners(html);
 
         // Everything below here is only needed if the sheet is editable
@@ -114,20 +135,27 @@ export default class torgeternityStormKnightSheet extends ActorSheet {
     _onSkillRoll(event) {
         
         torgchecks.SkillCheck ({
+            actor: this.actor,
             skillValue: event.currentTarget.dataset.skillValue,
             skillName: event.currentTarget.dataset.skillName
         })
     }
     _onPossibilityRoll(event) {
-        torgchecks.PossibilityCheck ()
+        torgchecks.PossibilityCheck ({
+            actor: this.actor,
+        })
     }
 
     _onUpRoll(event) {
-        torgchecks.UpRoll ()
+        torgchecks.UpRoll ({
+            actor: this.actor,
+        })
     }
 
     _onBonusRoll(event) {
-        torgchecks.BonusRoll ()
+        torgchecks.BonusRoll ({
+            actor: this.actor,
+        })
     }
 
     _onItemChat(event) {
@@ -158,5 +186,35 @@ export default class torgeternityStormKnightSheet extends ActorSheet {
         item.power();
     }
 
+    _onCreateSa(event) {
+        event.preventDefault();
+        let itemData = {
+            name: "Name",
+            type: "specialability"
+        };
+        return this.actor.createOwnedItem(itemData,{renderSheet:true});
+    }
+
+    _onCreateSaR(event) {
+        event.preventDefault();
+        let itemData = {
+            name: "Name",
+            type: "specialability-rollable"
+        };
+        return this.actor.createOwnedItem(itemData,{renderSheet:true});
+    }
+
+    _onToggleThreatEdit(event) {
+        var toggleState = this.actor.data.data.editstate;
+        event.preventDefault();
+
+        if (toggleState === "none") {
+            document.getElementById("threat-editor").style.display = "inline";
+            this.actor.data.data.editstate = "inline";
+        } else {
+            document.getElementById("threat-editor").style.display = "none";
+            this.actor.data.data.editstate = "none";
+        }
+    }
 }
 

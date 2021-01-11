@@ -287,9 +287,13 @@
                 "clearance": "",
                 "background": ""
             },
-            "threat": [
-                "commonstats"
-            ]
+            "threat": {
+                "templates": [
+                "commonStats" 
+                ],
+                "possibilitypotential": "(none)",
+                "editstate": "inline"
+            }
         }
     },
     "Item":{
@@ -368,6 +372,7 @@
             "templates":[
                 "general"
             ],
+            "attackWith": "meleeWeapons",
             "damagetype": 0,
             "damage": 0,
             "bonus": 2,
@@ -377,6 +382,7 @@
             "templates":[
                 "general"
             ],
+            "attackWith": "missileWeapons",
             "damage": 0,
             "range": "",
             "notes": ""
@@ -385,7 +391,7 @@
             "templates":[
                 "general"
             ],
-            "attackWith": "",
+            "attackWith": "fireCombat",
             "damageType": "",
             "damage": 0,
             "ammo": 1,
@@ -402,6 +408,7 @@
             "templates":[
                 "general"
             ],
+            "attackWith": "heavyWeapons",
             "damage": 0,
             "ammo": 1,
             "range": "",
@@ -433,7 +440,7 @@
         },
         "specialability-rollable": {
             "description": "",
-            "skill": "",
+            "attackWith": "",
             "damage": ""
         },
         "spell": {

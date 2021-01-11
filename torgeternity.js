@@ -15,3 +15,13 @@ Hooks.once("init", function() {
     Actors.unregisterSheet("core", ItemSheet);
     Actors.registerSheet("torgeternity", torgeternityActorSheet, {makeDefault: true});
 });
+
+Handlebars.registerHelper("concatSkillValue", function(skillName){
+    var skillValue = "{{data.skills." + skillName + ".value}}";
+    return skillValue;
+});
+
+Handlebars.registerHelper("concatSkillName", function(skillName){
+    var localName = "torgeternity.skills." + skillName
+    return localName;
+})

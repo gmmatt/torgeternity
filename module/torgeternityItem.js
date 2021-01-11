@@ -13,7 +13,8 @@ export default class torgeternityItem extends Item {
         "shield": "systems/torgeternity/templates/partials/shield-card.hbs",
         "spell": "systems/torgeternity/templates/partials/spell-card.hbs",
         "miracle": "systems/torgeternity/templates/partials/miracle-card.hbs",
-        "psionicpower": "systems/torgeternity/templates/partials/psionicpower-card.hbs"
+        "psionicpower": "systems/torgeternity/templates/partials/psionicpower-card.hbs",
+        "specialability": "systems/torgeternity/templates/partials/specialability-card.hbs"
     };
     
     async roll() {
@@ -77,7 +78,10 @@ export default class torgeternityItem extends Item {
       if (this.data.data.damageType == "flat") {
          var baseDamage = this.data.data.damage;}
       else if (this.data.data.damageType == "strengthPlus") {
-         var baseDamage = parseInt(this.actor.data.data.attributes.strength) + parseInt(this.data.data.damage) }
+         var baseDamage = parseInt(this.actor.data.data.attributes.strength) + parseInt(this.data.data.damage)}
+      else {
+         var baseDamage = this.data.data.damage
+      }
         
       // Retrieve the applicable skill value from the current actor
       var skillToUse = this.actor.data.data.skills[this.data.data.attackWith]; 
@@ -89,7 +93,7 @@ export default class torgeternityItem extends Item {
       // Put together Chat Data
       let chatData = {
          user: game.user._id,
-         speaker: ChatMessage.getSpeaker(),
+         speaker: this.actor,
       };
 
       // Assemble information needed by attack card
