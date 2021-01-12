@@ -50,10 +50,8 @@
     <secton class="sheet-body sheet-content"  style="display:flex;flex-direction:column">
         <div class="tab stats" data-group="primary" data-tab="stats">
 
-            <div>
-                <a class="item-control toggle-threat-edit" id="skillToggle" title="Toggle Editor" style="display:inline;float:right;padding:0px 5px 0px 5px" data-state="shown"><i class="fas fa-pen"></i></a>
-            </div>
-            <div id="threat-editor" style="display:{{data.editstate}}">
+            <span style="font-family:'Palatino Linotype';font-size:12px;padding:0px;margin:0px">Edit Threat:</span><input id="trigger" name="Edit" type="checkbox" style="display:inline;height:12px;padding:0px;margin:0px" />
+            <div class="threat-editor" id="threat-editor" style="display:{{data.editstate}}">
                 <div class="threat-edit">
                     {{localize "torgeternity.attributes.charisma"}} <input name="data.attributes.charisma" type="text" value="{{data.attributes.charisma}}" data=dtype="Number" class="small-input" />,&nbsp;
                     {{localize "torgeternity.attributes.dexterity"}} <input name="data.attributes.dexterity" type="text" value="{{data.attributes.dexterity}}" data=dtype="Number" class="small-input" />,&nbsp;
@@ -253,7 +251,7 @@
                 </td>
                 <td width="45%" height="375px"> <!-- Right column -->
                     <div style="padding:0px 0px 0px 10px;height:375px;width:250px;margin:0px 10px 0px 10px;display:flex;flex-direction:column" class="item-description-textarea">
-                        {{editor content=data.background target="data.background" button=true owner=owner editable=editable}}
+                        {{editor content=data.description target="data.description" button=true owner=owner editable=editable}}
                     </div>
                 </td>
                 </tr>

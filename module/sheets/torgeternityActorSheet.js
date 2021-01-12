@@ -40,6 +40,7 @@ export default class torgeternityStormKnightSheet extends ActorSheet {
         data.specialabilityRollable = data.items.filter(function (item) {return item.type == "specialability-rollable"});
         data.enhancement = data.items.filter(function (item) { return item.type == "enhancement"});
 
+
         if (this.actor.data.data.editstate === "inline") {
             data.editstate = "inline";
         } else {
@@ -97,9 +98,9 @@ export default class torgeternityStormKnightSheet extends ActorSheet {
             html.find(".item-create-rsa").click(this._onCreateSaR.bind(this));
         }
 
-        if (this.actor.owner) {
-            html.find(".toggle-threat-edit").click(this._onToggleThreatEdit.bind(this));
-        }
+//        if (this.actor.owner) {
+//            html.find(".toggle-threat-edit").click(this._onToggleThreatEdit.bind(this));
+//        }
 
         super.activateListeners(html);
 
@@ -205,16 +206,18 @@ export default class torgeternityStormKnightSheet extends ActorSheet {
     }
 
     _onToggleThreatEdit(event) {
-        var toggleState = this.actor.data.data.editstate;
+        var actor = this.actor
+        var toggleState = actor.editstate;
         event.preventDefault();
 
         if (toggleState === "none") {
             document.getElementById("threat-editor").style.display = "inline";
-            this.actor.data.data.editstate = "inline";
+            actor.data.data.editstate = "inline";
         } else {
             document.getElementById("threat-editor").style.display = "none";
-            this.actor.data.data.editstate = "none";
-        }
+            actor.data.data.editstate = "none";
+        };
+        debugger
     }
 }
 
