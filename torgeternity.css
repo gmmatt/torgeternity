@@ -252,9 +252,4 @@
     padding-left:10px;
     margin:0px;
   }
-  .torgeternity .threat-editor {
-    display:none;
-  }
-  #trigger:checked + .threat-editor {
-    display:block;
-  }
+ 

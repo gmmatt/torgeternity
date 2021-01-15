@@ -50,7 +50,7 @@
     <secton class="sheet-body sheet-content"  style="display:flex;flex-direction:column">
         <div class="tab stats" data-group="primary" data-tab="stats">
 
-            <span style="font-family:'Palatino Linotype';font-size:12px;padding:0px;margin:0px">Edit Threat:</span><input id="trigger" name="Edit" type="checkbox" style="display:inline;height:12px;padding:0px;margin:0px" />
+<!--            <span style="font-family:'Palatino Linotype';font-size:12px;padding:0px;margin:0px">Edit Threat:</span><input id="trigger" name="Edit" type="checkbox" style="display:inline;height:12px;padding:0px;margin:0px" /> -->
             <div class="threat-editor" id="threat-editor" style="display:{{data.editstate}}">
                 <div class="threat-edit">
                     {{localize "torgeternity.attributes.charisma"}} <input name="data.attributes.charisma" type="text" value="{{data.attributes.charisma}}" data=dtype="Number" class="small-input" />,&nbsp;
@@ -131,17 +131,20 @@
                 <tr>
                 <td width="55%" height="375px" style="background-color:white;border-radius:10px;vertical-align:top"> <!-- Left column -->
                     <div class="threat-block">
-                        <b>Attributes: </b>
-                        <a class="skill-roll" data-skill-value="{{data.attributes.charisma}}" data-skill-name="Charisma">{{localize "torgeternity.attributes.charisma"}}</a> 
-                            {{data.attributes.charisma}}, &nbsp;
-                        <a class="skill-roll" data-skill-value="{{data.attributes.dexterity}}" data-skill-name="Dexterity">{{localize "torgeternity.attributes.dexterity"}}</a> 
-                            {{data.attributes.dexterity}},&nbsp;
-                        <a class="skill-roll" data-skill-value="{{data.attributes.mind}}" data-skill-name="Mind">{{localize "torgeternity.attributes.mind"}}</a> 
-                            {{data.attributes.mind}},&nbsp;
-                        <a class="skill-roll" data-skill-value="{{data.attributes.spirit}}" data-skill-name="Spirit">{{localize "torgeternity.attributes.spirit"}}</a> 
-                            {{data.attributes.spirit}},&nbsp;
-                        <a class="skill-roll" data-skill-value="{{data.attributes.strength}}" data-skill-name="Strength">{{localize "torgeternity.attributes.strength"}}</a> 
-                            {{data.attributes.strength}}
+                        <a class="toggle-threat-edit" title="Edit" style="float:right"><i class="fas fa-edit"></i></a>
+                        <div style="margin-right:10px">
+                            <b>Attributes: </b>
+                            <a class="skill-roll" data-skill-value="{{data.attributes.charisma}}" data-skill-name="Charisma">{{localize "torgeternity.attributes.charisma"}}</a> 
+                                {{data.attributes.charisma}}, &nbsp;
+                            <a class="skill-roll" data-skill-value="{{data.attributes.dexterity}}" data-skill-name="Dexterity">{{localize "torgeternity.attributes.dexterity"}}</a> 
+                                {{data.attributes.dexterity}},&nbsp;
+                            <a class="skill-roll" data-skill-value="{{data.attributes.mind}}" data-skill-name="Mind">{{localize "torgeternity.attributes.mind"}}</a> 
+                                {{data.attributes.mind}},&nbsp;
+                            <a class="skill-roll" data-skill-value="{{data.attributes.spirit}}" data-skill-name="Spirit">{{localize "torgeternity.attributes.spirit"}}</a> 
+                                {{data.attributes.spirit}},&nbsp;
+                            <a class="skill-roll" data-skill-value="{{data.attributes.strength}}" data-skill-name="Strength">{{localize "torgeternity.attributes.strength"}}</a> 
+                                {{data.attributes.strength}}
+                        </div>  
 
                     </div>
                     <div class="threat-block">

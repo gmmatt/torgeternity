@@ -292,7 +292,8 @@
                 "commonStats" 
                 ],
                 "possibilitypotential": "(none)",
-                "description": ""
+                "description": "",
+                "editstate": ""
             }
         }
     },
