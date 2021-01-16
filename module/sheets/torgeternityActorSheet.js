@@ -60,6 +60,10 @@ export default class torgeternityStormKnightSheet extends ActorSheet {
         }
 
         if (this.actor.owner) {
+            html.find(".skill-edit-toggle").click(this._onSkillEditToggle.bind(this));
+        }
+
+        if (this.actor.owner) {
             html.find(".possibility-roll").click(this._onPossibilityRoll.bind(this));
         }
 
@@ -97,6 +101,10 @@ export default class torgeternityStormKnightSheet extends ActorSheet {
 
         if (this.actor.owner) {
             html.find(".toggle-threat-edit").click(this._onToggleThreatEdit.bind(this));
+        }
+
+        if (this.actor.owner) {
+            html.find(".activeDefense-roll").click(this._onActiveDefenseRoll.bind(this));
         }
 
         super.activateListeners(html);
@@ -138,6 +146,20 @@ export default class torgeternityStormKnightSheet extends ActorSheet {
             skillName: event.currentTarget.dataset.skillName
         })
     }
+
+    _onSkillEditToggle(event) {
+
+        var toggleState = this.actor.data.data.editstate;
+        event.preventDefault();
+        if (toggleState === null) {
+            this.actor.update({"data.editstate":true});
+        } else {
+            this.actor.update({"data.editstate":null});
+        };
+
+
+    }
+
     _onPossibilityRoll(event) {
         torgchecks.PossibilityCheck ({
             actor: this.actor,
@@ -146,6 +168,12 @@ export default class torgeternityStormKnightSheet extends ActorSheet {
 
     _onUpRoll(event) {
         torgchecks.UpRoll ({
+            actor: this.actor,
+        })
+    }
+
+    _onActiveDefenseRoll(event) {
+        torgchecks.activeDefenseRoll({
             actor: this.actor,
         })
     }

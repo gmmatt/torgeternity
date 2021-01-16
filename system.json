@@ -3,7 +3,7 @@
   "title": "Torg Eternity",
   "description": "Unofficial Torg Eternity character sheet for Foundry VTT.",
   "author": "Matt Ritchie",
-  "version": "0.20.5",
+  "version": "0.20.6",
   "minimumCoreVersion": "0.7.8",
   "compatibleCoreVersion": "0.7.9", 
   "templateVersion": 2,

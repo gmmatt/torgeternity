@@ -285,7 +285,8 @@
                     "tech": ""
                 },
                 "clearance": "",
-                "background": ""
+                "background": "",
+                "editstate": "inline"
             },
             "threat": {
                 "templates": [

@@ -23,6 +23,11 @@ Handlebars.registerHelper("concatSkillValue", function(skillName){
     return skillValue;
 });
 
+Handlebars.registerHelper("concatAttributeName", function(attributeName){
+    var localName = "torgeternity.attributes." + attributeName
+    return localName;
+});
+
 Handlebars.registerHelper("concatSkillName", function(skillName){
     var localName = "torgeternity.skills." + skillName
     return localName;

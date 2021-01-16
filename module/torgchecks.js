@@ -249,4 +249,52 @@ export function UpRoll ({
       });
       }
    }}).render(true);
+   }
+
+   export function activeDefenseRoll ({
+      actor = null}) {
+      let dicerollint = new Roll('1d20x10x20').roll();
+      dicerollint.toMessage();
+      let diceroll = dicerollint.total;
+      
+ 
+     
+      if (diceroll <= 14) {
+         var messageContent = 'Bonus +1'; var bonus = 1;}
+      else if (diceroll == 15) {
+         var messageContent = 'Bonus +2'; var bonus = 2;}
+      else if (diceroll ==16) {
+         var messageContent = 'Bonus: +3'; var bonus = 3;}
+      else if (diceroll == 17) {
+         var messageContent = 'Bonus: +4'; var bonus = 4;}
+      else if (diceroll == 18) {
+         var messageContent = 'Bonus: +5'; var bonus = 5;}
+      else if (diceroll == 19) {
+         var messageContent = 'Bonus: +6'; var bonus = 6;}
+      else if (diceroll == 20) {
+         var messageContent = 'Bonus: +7'; var bonus = 7;}
+      else if (diceroll >= 21) {
+         var bonus = 7 + Math.ceil((diceroll - 20)/5)
+         var messageContent = `Bonus:` + bonus; }
+      
+      
+      var chatData = {
+         user: game.user._id,
+         speaker: ChatMessage.getSpeaker(),
+         owner:  actor
+      };
+   
+      var cardData = {
+         bonus: messageContent,
+         actorPic: actor.data.img
+      };
+   
+      const templatePromise = renderTemplate("./systems/torgeternity/templates/partials/activeDefense-card.hbs", cardData);
+   
+      templatePromise.then(content => {
+         chatData.content = content;      
+         ChatMessage.create(chatData);
+      });
+     
 }
+
