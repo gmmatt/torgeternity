@@ -1,7 +1,5 @@
 # Torg eternity system for Foundry VTT
-This is **Torg Eternity System** for Foundry VTT. It is still at its early stages of developpement.
-
-However, there is already a simple character sheet and templates for perks, powers, spells, miracles and psionics.
+**Torg Eternity System** for Foundry VTT.  
 
 
 
