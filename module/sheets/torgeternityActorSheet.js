@@ -1,7 +1,7 @@
 import { torgeternity } from "../config.js";
 import * as torgchecks from "../torgchecks.js";
 
-export default class torgeternityStormKnightSheet extends ActorSheet {
+export default class torgeternityActorSheet extends ActorSheet {
     static get defaultOptions () {
         return mergeObject(super.defaultOptions, {
             classes: ["torgeternity", "sheet", "actor"],

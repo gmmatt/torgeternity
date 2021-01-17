@@ -37,8 +37,8 @@
                 <input name="data.notes" type="text" value="{{data.notes}}" class="input-box" />
             </td>
             <td style="width:65%"> <!-- right column -->
-                <div style="padding:10px 10px">
-                    <textarea name="data.description" class="item-description-textarea">{{data.description}}</textarea>
+                <div class="item-description-textarea" style="padding:0px 0px 0px 10px">
+                    {{editor content=data.description target="data.description" button=true owner=owner editable=editable}}
                 </div>
             </td> 
         </tr>

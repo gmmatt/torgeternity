@@ -42,7 +42,9 @@
             </td>
             <td style="width:65%"> <!-- right column -->
                 <div style="padding:10px 10px">
-                    <textarea name="data.description" class="item-description-textarea">{{data.description}}</textarea>
+                    <div name="data.description" class="item-description-textarea">
+                        {{editor content=data.description target="data.description" button=true owner=owner editable=editable}}
+                    </div>
                 </div>
             </td> 
         </tr>
