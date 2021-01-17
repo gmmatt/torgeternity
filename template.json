@@ -14,8 +14,6 @@
                     "max": 3,
                     "value": 0
                 },
-                "homeCosm": "",
-                "possibilities": 0,
                 "attributes": {
                     "charisma": 5,
                     "dexterity": 5,
@@ -23,10 +21,14 @@
                     "spirit": 5,
                     "strength": 5
                 },
-                "move": 5,
-                "run": 5,
-                "toughness": 5,
-                "armor": 0,
+                "other": {
+                    "move": 5,
+                    "run": 5,
+                    "toughness": 5,
+                    "armor": 0,
+                    "cosm": "",
+                    "possibilities": 0
+                },
                 "skills": {
                     "airVehicles":{
                         "baseAttribute": "dexterity",
@@ -273,7 +275,6 @@
                 "templates": [
                     "commonStats"
                 ],
-                "race": "",
                 "xp": {
                     "unspent": 0,
                     "earned": 0
@@ -284,16 +285,21 @@
                     "spirit": "",
                     "tech": ""
                 },
-                "clearance": "",
-                "background": "",
+                "details": {
+                    "clearance": "",
+                    "background": "",
+                    "race": ""
+                },
                 "editstate": "inline"
             },
             "threat": {
                 "templates": [
                 "commonStats" 
                 ],
-                "possibilitypotential": "(none)",
-                "description": "",
+                "details": {
+                    "possibilitypotential": "(none)",
+                    "description": ""
+                },
                 "editstate": ""
             }
         }

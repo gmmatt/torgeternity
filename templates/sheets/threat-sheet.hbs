@@ -26,7 +26,7 @@
             <td style="text-align:center" width="30%">
                 <span class="vital-box">
                     <a class="item-control possibility-roll" title="Possibility Roll">Possibilities: </a>
-                    <input name="data.possibilities" type="text" value="{{data.possibilities}}" data-dtype="Number" class="small-input" />
+                    <input name="data.other.possibilities" type="text" value="{{data.other.possibilities}}" data-dtype="Number" class="small-input" />
                 </span>
             </td>
             <td style="text-align:center" width="10%">
@@ -61,13 +61,13 @@
                 </div>
                 <div class="threat-edit">
                         Move:&nbsp;
-                        <input name="data.move" class="small-input" type="number" value="{{data.move}}" data-dtype="Number" />;&nbsp;
+                        <input name="data.other.move" class="small-input" type="text" value="{{data.other.move}}" data-dtype="Number" />;&nbsp;
                         Tough:&nbsp;
-                        <input name="data.toughness" class="small-input" type="number" value="{{data.toughness}}" data-dtype="Number" />&nbsp;/&nbsp;(<input name="data.armor" class="small-input" type="number" value="{{data.armor}}" data-dtype="Number" />)
+                        <input name="data.other.toughness" class="small-input" type="text" value="{{data.other.toughness}}" data-dtype="Number" />&nbsp;/&nbsp;(<input name="data.other.armor" class="small-input" type="number" value="{{data.other.armor}}" data-dtype="Number" />)
                 </div>
                 <div class="threat-edit">
                     {{localize "torgeternity.sheetLabels.possibilitypotential"}}:&nbsp;
-                    <input name="data.possibilitypotential" class="text-input" type="text" value="{{data.possibilitypotential}}" />
+                    <input name="data.details.possibilitypotential" class="text-input" type="text" value="{{data.details.possibilitypotential}}" />
                 </div>
                 <div class="threat-edit">
                     <b>{{localize "torgeternity.sheetLabels.skills"}}</b>
@@ -163,8 +163,8 @@
                     </div>
 
                     <div class="threat-block">
-                        <b>Move:</b>&nbsp;{{data.move}};&nbsp;
-                        <b>Tough:</b>&nbsp;{{data.toughness}}&nbsp;({{data.armor}});&nbsp;
+                        <b>Move:</b>&nbsp;{{data.other.move}};&nbsp;
+                        <b>Tough:</b>&nbsp;{{data.other.toughness}}&nbsp;({{data.other.armor}});&nbsp;
                         <b>Shock:&nbsp;</b>
                         {{data.shock.max}};&nbsp;
                         <b>Wounds:&nbsp;</b>
@@ -224,7 +224,7 @@
 
                     <div class="threat-block">
                         <b>{{localize "torgeternity.sheetLabels.possibilities"}}</b>:&nbsp;
-                        <span>{{data.possibilitypotential}}</span>
+                        <span>{{data.details.possibilitypotential}}</span>
                     </div>
 
                     <div class="threat-block">
@@ -254,7 +254,7 @@
                 </td>
                 <td width="45%" height="385px" style="vertical-align:top"> <!-- Right column -->
                     <div style="padding:0px 0px 0px 10px;height:385px;width:250px;margin:0px 10px 0px 10px;display:flex;flex-direction:column;vertical-align:top" class="item-description-textarea">
-                        {{editor content=data.description target="data.description" button=true owner=owner editable=editable}}
+                        {{editor content=data.details.description target="data.details.description" button=true owner=owner editable=editable}}
                     </div>
                 </td>
                 </tr>
