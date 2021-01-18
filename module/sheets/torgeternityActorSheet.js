@@ -195,7 +195,7 @@ export default class torgeternityActorSheet extends ActorSheet {
         const itemID = event.currentTarget.closest(".item").dataset.itemId;
         const item = this.actor.getOwnedItem(itemID);
 
-        item.attack();
+        item.weaponAttack();
     }
 
     _onBonusRoll(event) {
@@ -235,6 +235,10 @@ export default class torgeternityActorSheet extends ActorSheet {
         var toggleState = this.actor.data.data.editstate;
         event.preventDefault();
         if (toggleState === "none") {
+            document.getElementById("threat-editor").style.display = "inline";
+            this.actor.data.data.editstate = "inline";
+            this.actor.update({"data.editstate":"inline"});
+        } else if (toggleState === undefined) {
             document.getElementById("threat-editor").style.display = "inline";
             this.actor.data.data.editstate = "inline";
             this.actor.update({"data.editstate":"inline"});
