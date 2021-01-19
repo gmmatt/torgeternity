@@ -252,3 +252,20 @@
     padding-left:10px;
     margin:0px;
   }
+  .torgeternity h1 {
+    font-family:"Palatnio Linotype";
+    font-size:24px;
+    font-weight:bold;
+    border-bottom:none;
+ }
+  .torgeternity h2 {
+    font-family:"Palatnio Linotype";
+    font-size:20px;
+    font-weight:bold;
+    border-bottom:none;
+}
+
+.torgeternity p {
+    font-family:"Palatino Linotype";
+    font-size:14px;
+}

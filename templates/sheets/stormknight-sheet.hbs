@@ -26,7 +26,7 @@
             <td style="text-align:center" width="30%">
                 <span class="vital-box">
                     <a class="item-control possibility-roll" title="Possibility Roll">Possibilities: </a>
-                    <input name="data.possibilities" type="text" value="{{data.possibilities}}" data-dtype="Number" class="small-input" />
+                    <input name="data.other.possibilities" type="text" value="{{data.other.possibilities}}" data-dtype="Number" class="small-input" />
                 </span>
             </td>
             <td style="text-align:center" width="10%">
@@ -105,7 +105,7 @@
                                 <span class="main-label">Move</span>
                             </td>
                             <td>
-                                <input name="data.attributes.move" type="text" value="{{data.attributes.move}}" data=dtype="Number" class="small-input" />
+                                <input name="data.other.move" type="text" value="{{data.other.move}}" data=dtype="Number" class="small-input" />
                             </td>
                         </tr>
                         <tr>
@@ -113,7 +113,7 @@
                                 <span class="main-label">Run</span>
                             </td>
                             <td>
-                                <input name="data.attributes.run" type="text" value="{{data.attributes.run}}" data=dtype="Number" class="small-input" />
+                                <input name="data.other.run" type="text" value="{{data.other.run}}" data=dtype="Number" class="small-input" />
                             </td>
                         </tr>
                         <tr>
@@ -121,7 +121,7 @@
                                 <span class="main-label">Toughness</span>
                             </td>
                             <td>
-                                <input name="data.attributes.toughness" type="text" value="{{data.attributes.toughness}}" data=dtype="Number" class="small-input" />
+                                <input name="data.other.toughness" type="text" value="{{data.other.toughness}}" data=dtype="Number" class="small-input" />
                             </td>
                         </tr>
                         <tr>
@@ -129,7 +129,7 @@
                                 <span class="main-label">Armor</span>
                             </td>
                             <td>
-                                <input name="data.attributes.armor" type="text" value="{{data.attributes.armor}}" data=dtype="Number" class="small-input" />
+                                <input name="data.other.armor" type="text" value="{{data.other.armor}}" data=dtype="Number" class="small-input" />
                             </td>
                         </tr>
                     </table>
@@ -138,8 +138,8 @@
                     <div class="list-section-heading">
                         Cosm
                     </div>
-                    <select name="data.cosm" class="input-box" style="width:100%;font-size:14px">
-                        {{#select data.cosm}}
+                    <select name="data.other.cosm" class="input-box" style="width:100%;font-size:14px">
+                        {{#select data.other.cosm}}
                         {{#each config.cosmTypes as |name type|}}
                         <option value="{{localize name}}">{{localize name}}</option>
                         {{/each}}
@@ -184,7 +184,7 @@
                 </td>
                 <td width="56%" height="400px" style="vertical-align:top;margin:3px;padding-top:0px;padding-bottom:0px">
                     <div class="list-section-heading">
-                        Skills
+                        <a class="skill-edit-toggle">Skills</a>
                     </div>
                     <div style="height:390px;overflow:scroll">
                         <table class="stats-table" style="overflow:auto">
@@ -195,606 +195,44 @@
                                 <th>Total</th>
                             </tr>
 
-                            <tr height="20px">
-                                <td>
-                                    <a class="skill-roll" data-skill-value="{{data.skills.airVehicles.value}}" data-skill-name="{{localize "torgeternity.skills.airVehicles"}}">{{localize "torgeternity.skills.airVehicles"}}</a> 
-                                </td>
-                                <td class="skill-roll">
-                                    {{localize "torgeternity.attributes.dexterity"}}
-                                </td>
-                                <td>
-                                    <input name="data.skills.airVehicles.adds" type="text" class="small-input" value="{{data.skills.airVehicles.adds}}" data-dtype="Number" style="width:30px;text-align:center" />
-                                </td>
-                                <td>
-                                    <input name="data.skills.airVehicles.value" type="number" class="small-input" value="{{data.skills.airVehicles.value}}" data-dtype="Number" style="width:30px;text-align:center" />
-                                </td>
-                            </tr>
 
-                            <tr>
-                                <td>
-                                    <a class="skill-roll" data-skill-value="{{data.skills.alteration.value}}" data-skill-name="{{localize "torgeternity.skills.alteration"}}">{{localize "torgeternity.skills.alteration"}}</a> 
-                                </td>
-                                <td class="skill-roll">
-                                    {{localize "torgeternity.attributes.mind"}}
-                                </td>
-                                <td>
-                                    <input name="data.skills.alteration.adds" class="small-input" type="text" value="{{data.skills.alteration.adds}}" data-dtype="Number" style="width:30px;text-align:center" />
-                                </td>
-                                <td>
-                                    <input name="data.skills.alteration.value" class="small-input" type="number" value="{{data.skills.alteration.value}}" data-dtype="Number" style="width:30px;text-align:center" />
-                                </td>
-                            </tr>
-
-                            <tr>
-                                <td>
-                                    <a class="skill-roll" data-skill-value="{{data.skills.apportation.value}}" data-skill-name="{{localize "torgeternity.skills.apportation"}}">{{localize "torgeternity.skills.apportation"}}</a> 
-                                </td>
-                                <td class="skill-roll">
-                                    {{localize "torgeternity.attributes.spirit"}}
-                                </td>
-                                <td>
-                                    <input name="data.skills.apportation.adds" class="small-input" type="text" value="{{data.skills.apportation.adds}}" data-dtype="Number" style="width:30px;text-align:center" />
-                                </td>
-                                <td>
-                                    <input name="data.skills.apportation.value" class="small-input" type="number" value="{{data.skills.apportation.value}}" data-dtype="Number" style="width:30px;text-align:center" />
-                                </td>
-                            </tr>
-
-                            <tr>
-                                <td>
-                                    <a class="skill-roll" data-skill-value="{{data.skills.beastRiding.value}}" data-skill-name="{{localize "torgeternity.skills.beastRiding"}}">{{localize "torgeternity.skills.beastRiding"}}</a> 
-                                </td>
-                                <td class="skill-roll">
-                                    {{localize "torgeternity.attributes.dexterity"}}
-                                </td>
-                                <td>
-                                    <input name="data.skills.beastRiding.adds" class="small-input" type="text" value="{{data.skills.beastRiding.adds}}" data-dtype="Number" style="width:30px;text-align:center" />
-                                </td>
-                                <td>
-                                    <input name="data.skills.beastRiding.value" class="small-input" type="number" value="{{data.skills.beastRiding.value}}" data-dtype="Number" style="width:30px;text-align:center" />
-                                </td>
-                            </tr>
-
-                            <tr>
-                                <td>
-                                    <a class="skill-roll" data-skill-value="{{data.skills.computers.value}}" data-skill-name="{{localize "torgeternity.skills.computers"}}">{{localize "torgeternity.skills.computers"}}</a> 
-                                </td>
-                                <td class="skill-roll">
-                                    {{localize "torgeternity.attributes.mind"}}
-                                </td>
-                                <td>
-                                    <input name="data.skills.computers.adds" class="small-input" type="text" value="{{data.skills.computers.adds}}" data-dtype="Number" style="width:30px;text-align:center" />
-                                </td>
-                                <td>
-                                    <input name="data.skills.computers.value" class="small-input" type="number" value="{{data.skills.computers.value}}" data-dtype="Number" style="width:30px;text-align:center" />
-                                </td>
-                            </tr>
-
-                            <tr>
-                                <td>
-                                    <a class="skill-roll" data-skill-value="{{data.skills.conjuration.value}}" data-skill-name="{{localize "torgeternity.skills.conjuration"}}">{{localize "torgeternity.skills.conjuration"}}</a> 
-                                </td>
-                                <td class="skill-roll">
-                                    {{localize "torgeternity.attributes.spirit"}}
-                                </td>
-                                <td>
-                                    <input name="data.skills.conjuration.adds" class="small-input" type="text" value="{{data.skills.conjuration.adds}}" data-dtype="Number" style="width:30px;text-align:center" />
-                                </td>
-                                <td>
-                                    <input name="data.skills.conjuration.value" class="small-input" type="number" value="{{data.skills.conjuration.value}}" data-dtype="Number" style="width:30px;text-align:center" />
-                                </td>
-                            </tr>
-
-                            <tr>
-                                <td>
-                                    <a class="skill-roll" data-skill-value="{{data.skills.divination.value}}" data-skill-name="{{localize "torgeternity.skills.divination"}}">{{localize "torgeternity.skills.divination"}}</a> 
-                                </td>
-                                <td class="skill-roll">
-                                    {{localize "torgeternity.attributes.mind"}}
-                                </td>
-                                <td>
-                                    <input name="data.skills.divination.adds" class="small-input" type="text" value="{{data.skills.divination.adds}}" data-dtype="Number" style="width:30px;text-align:center" />
-                                </td>
-                                <td>
-                                    <input name="data.skills.divination.value" class="small-input" type="number" value="{{data.skills.divination.value}}" data-dtype="Number" style="width:30px;text-align:center" />
-                                </td>
-                            </tr>
-
-                            <tr>
-                                <td>
-                                    <a class="skill-roll" data-skill-value="{{data.skills.dodge.value}}" data-skill-name="{{localize "torgeternity.skills.dodge"}}">{{localize "torgeternity.skills.dodge"}}</a> 
-                                </td>
-                                <td class="skill-roll">
-                                    {{localize "torgeternity.attributes.dexterity"}}
-                                </td>
-                                <td>
-                                    <input name="data.skills.dodge.adds" class="small-input" type="text" value="{{data.skills.dodge.adds}}" data-dtype="Number" style="width:30px;text-align:center" />
-                                </td>
-                                <td>
-                                    <input name="data.skills.dodge.value" class="small-input" type="number" value="{{data.skills.dodge.value}}" data-dtype="Number" style="width:30px;text-align:center" />
-                                </td>
-                            </tr>
-
-                            <tr>
-                                <td>
-                                    <a class="skill-roll" data-skill-value="{{data.skills.energyWeapons.value}}" data-skill-name="{{localize "torgeternity.skills.energyWeapons"}}">{{localize "torgeternity.skills.energyWeapons"}}</a> 
-                                </td>
-                                <td class="skill-roll">
-                                    {{localize "torgeternity.attributes.dexterity"}}
-                                </td>
-                                <td>
-                                    <input name="data.skills.energyWeapons.adds" class="small-input" type="text" value="{{data.skills.energyWeapons.adds}}" data-dtype="Number" style="width:30px;text-align:center" />
-                                </td>
-                                <td>
-                                    <input name="data.skills.energyWeapons.value" class="small-input" type="number" value="{{data.skills.energyWeapons.value}}" data-dtype="Number" style="width:30px;text-align:center" />
-                                </td>
-                            </tr>
-
-                            <tr>
-                                <td>
-                                    <a class="skill-roll" data-skill-value="{{data.skills.evidenceAnalysis.value}}" data-skill-name="{{localize "torgeternity.skills.evidenceAnalysis"}}">{{localize "torgeternity.skills.evidenceAnalysis"}}</a> 
-                                </td>
-                                <td class="skill-roll">
-                                    {{localize "torgeternity.attributes.mind"}}
-                                </td>
-                                <td>
-                                    <input name="data.skills.evidenceAnalysis.adds" class="small-input" type="text" value="{{data.skills.alteration.adds}}" data-dtype="Number" style="width:30px;text-align:center" />
-                                </td>
-                                <td>
-                                    <input name="data.skills.evidenceAnalysis.value" class="small-input" type="number" value="{{data.skills.evidenceAnalysis.value}}" data-dtype="Number" style="width:30px;text-align:center" />
-                                </td>
-                            </tr>
-
-                            <tr>
-                                <td>
-                                    <a class="skill-roll" data-skill-value="{{data.skills.faith.value}}" data-skill-name="{{localize "torgeternity.skills.faith"}}">{{localize "torgeternity.skills.faith"}}</a> 
-                                </td>
-                                <td class="skill-roll">
-                                    {{localize "torgeternity.attributes.spirit"}}
-                                </td>
-                                <td>
-                                    <input name="data.skills.faith.adds" class="small-input" type="text" value="{{data.skills.faith.adds}}" data-dtype="Number" style="width:30px;text-align:center" />
-                                </td>
-                                <td>
-                                    <input name="data.skills.faith.value" class="small-input" type="number" value="{{data.skills.faith.value}}" data-dtype="Number" style="width:30px;text-align:center" />
-                                </td>
-                            </tr>
-
-                            <tr>
-                                <td>
-                                    <a class="skill-roll" data-skill-value="{{data.skills.find.value}}" data-skill-name="{{localize "torgeternity.skills.find"}}">{{localize "torgeternity.skills.find"}}</a> 
-                                </td>
-                                <td class="skill-roll">
-                                    {{localize "torgeternity.attributes.mind"}}
-                                </td>
-                                <td>
-                                    <input name="data.skills.find.adds" class="small-input" type="text" value="{{data.skills.find.adds}}" data-dtype="Number" style="width:30px;text-align:center" />
-                                </td>
-                                <td>
-                                    <input name="data.skills.find.value" class="small-input" type="number" value="{{data.skills.find.value}}" data-dtype="Number" style="width:30px;text-align:center" />
-                                </td>
-                            </tr>
-
-                            <tr>
-                                <td>
-                                    <a class="skill-roll" data-skill-value="{{data.skills.fireCombat.value}}" data-skill-name="{{localize "torgeternity.skills.fireCombat"}}">{{localize "torgeternity.skills.fireCombat"}}</a> 
-                                </td>
-                                <td class="skill-roll">
-                                    {{localize "torgeternity.attributes.dexterity"}}
-                                </td>
-                                <td>
-                                    <input name="data.skills.fireCombat.adds" class="small-input" type="text" value="{{data.skills.fireCombat.adds}}" data-dtype="Number" style="width:30px;text-align:center" />
-                                </td>
-                                <td>
-                                    <input name="data.skills.fireCombat.value" class="small-input" type="number" value="{{data.skills.fireCombat.value}}" data-dtype="Number" style="width:30px;text-align:center" />
-                                </td>
-                            </tr>
-
-                            <tr>
-                                <td>
-                                    <a class="skill-roll" data-skill-value="{{data.skills.firstAid.value}}" data-skill-name="{{localize "torgeternity.skills.firstAid"}}">{{localize "torgeternity.skills.firstAid"}}</a> 
-                                </td>
-                                <td class="skill-roll">
-                                    {{localize "torgeternity.attributes.mind"}}
-                                </td>
-                                <td>
-                                    <input name="data.skills.firstAid.adds" class="small-input" type="text" value="{{data.skills.firstAid.adds}}" data-dtype="Number" style="width:30px;text-align:center" />
-                                </td>
-                                <td>
-                                    <input name="data.skills.firstAid.value" class="small-input" type="number" value="{{data.skills.firstAid.value}}" data-dtype="Number" style="width:30px;text-align:center" />
-                                </td>
-                            </tr>
-
-                            <tr>
-                                <td>
-                                    <a class="skill-roll" data-skill-value="{{data.skills.heavyWeapons.value}}" data-skill-name="{{localize "torgeternity.skills.heavyWeapons"}}">{{localize "torgeternity.skills.heavyWeapons"}}</a> 
-                                </td>
-                                <td class="skill-roll">
-                                    {{localize "torgeternity.attributes.dexterity"}}
-                                </td>
-                                <td>
-                                    <input name="data.skills.heavyWeapons.adds" class="small-input" type="text" value="{{data.skills.heavyWeapons.adds}}" data-dtype="Number" style="width:30px;text-align:center" />
-                                </td>
-                                <td>
-                                    <input name="data.skills.heavyWeapons.value" class="small-input" type="number" value="{{data.skills.heavyWeapons.value}}" data-dtype="Number" style="width:30px;text-align:center" />
-                                </td>
-                            </tr>
-
-                            <tr>
-                                <td>
-                                    <a class="skill-roll" data-skill-value="{{data.skills.intimidation.value}}" data-skill-name="{{localize "torgeternity.skills.intimidation"}}">{{localize "torgeternity.skills.intimidation"}}</a> 
-                                </td>
-                                <td class="skill-roll">
-                                    {{localize "torgeternity.attributes.spirit"}}
-                                </td>
-                                <td>
-                                    <input name="data.skills.intimidation.adds" class="small-input" type="text" value="{{data.skills.intimidation.adds}}" data-dtype="Number" style="width:30px;text-align:center" />
-                                </td>
-                                <td>
-                                    <input name="data.skills.intimidation.value" class="small-input" type="number" value="{{data.skills.intimidation.value}}" data-dtype="Number" style="width:30px;text-align:center" />
-                                </td>
-                            </tr>
-
-                            <tr>
-                                <td>
-                                    <a class="skill-roll" data-skill-value="{{data.skills.kinesis.value}}" data-skill-name="{{localize "torgeternity.skills.kinesis"}}">{{localize "torgeternity.skills.kinesis"}}</a> 
-                                </td>
-                                <td class="skill-roll">
-                                    {{localize "torgeternity.attributes.spirit"}}
-                                </td>
-                                <td>
-                                    <input name="data.skills.kinesis.adds" class="small-input" type="text" value="{{data.skills.kinesis.adds}}" data-dtype="Number" style="width:30px;text-align:center" />
-                                </td>
-                                <td>
-                                    <input name="data.skills.kinesis.value" class="small-input" type="number" value="{{data.skills.kinesis.value}}" data-dtype="Number" style="width:30px;text-align:center" />
-                                </td>
-                            </tr>
-
-                            <tr>
-                                <td>
-                                    <a class="skill-roll" data-skill-value="{{data.skills.landVehicles.value}}" data-skill-name="{{localize "torgeternity.skills.landVehicles"}}">{{localize "torgeternity.skills.landVehicles"}}</a> 
-                                </td>
-                                <td class="skill-roll">
-                                    {{localize "torgeternity.attributes.dexterity"}}
-                                </td>
-                                <td>
-                                    <input name="data.skills.landVehicles.adds" class="small-input" type="text" value="{{data.skills.landVehicles.adds}}" data-dtype="Number" style="width:30px;text-align:center" />
-                                </td>
-                                <td>
-                                    <input name="data.skills.landVehicles.value" class="small-input" type="number" value="{{data.skills.landVehicles.value}}" data-dtype="Number" style="width:30px;text-align:center" />
-                                </td>
-                            </tr>
-
-                            <tr>
-                                <td>
-                                    <a class="skill-roll" data-skill-value="{{data.skills.language.value}}" data-skill-name="{{localize "torgeternity.skills.language"}}">{{localize "torgeternity.skills.language"}}</a> 
-                                </td>
-                                <td class="skill-roll">
-                                    {{localize "torgeternity.attributes.mind"}}
-                                </td>
-                                <td>
-                                    <input name="data.skills.language.adds" class="small-input" type="text" value="{{data.skills.language.adds}}" data-dtype="Number" style="width:30px;text-align:center" />
-                                </td>
-                                <td>
-                                    <input name="data.skills.language.value" class="small-input" type="number" value="{{data.skills.language.value}}" data-dtype="Number" style="width:30px;text-align:center" />
-                                </td>
-                            </tr>
-
-                            <tr>
-                                <td>
-                                    <a class="skill-roll" data-skill-value="{{data.skills.lockpicking.value}}" data-skill-name="{{localize "torgeternity.skills.lockpicking"}}">{{localize "torgeternity.skills.lockpicking"}}</a> 
-                                </td>
-                                <td class="skill-roll">
-                                    {{localize "torgeternity.attributes.dexterity"}}
-                                </td>
-                                <td>
-                                    <input name="data.skills.lockpicking.adds" class="small-input" type="text" value="{{data.skills.lockpicking.adds}}" data-dtype="Number" style="width:30px;text-align:center" />
-                                </td>
-                                <td>
-                                    <input name="data.skills.lockpicking.value" class="small-input" type="number" value="{{data.skills.lockpicking.value}}" data-dtype="Number" style="width:30px;text-align:center" />
-                                </td>
-                            </tr>
-
-                            <tr>
-                                <td>
-                                    <a class="skill-roll" data-skill-value="{{data.skills.maneuver.value}}" data-skill-name="{{localize "torgeternity.skills.maneuver"}}">{{localize "torgeternity.skills.maneuver"}}</a> 
-                                </td>
-                                <td class="skill-roll">
-                                    {{localize "torgeternity.attributes.dexterity"}}
-                                </td>
-                                <td>
-                                    <input name="data.skills.maneuver.adds" class="small-input" type="text" value="{{data.skills.maneuver.adds}}" data-dtype="Number" style="width:30px;text-align:center" />
-                                </td>
-                                <td>
-                                    <input name="data.skills.maneuver.value" class="small-input" type="number" value="{{data.skills.maneuver.value}}" data-dtype="Number" style="width:30px;text-align:center" />
-                                </td>
-                            </tr>
-
-                            <tr>
-                                <td>
-                                    <a class="skill-roll" data-skill-value="{{data.skills.medicine.value}}" data-skill-name="{{localize "torgeternity.skills.medicine"}}">{{localize "torgeternity.skills.medicine"}}</a> 
-                                </td>
-                                <td class="skill-roll">
-                                    {{localize "torgeternity.attributes.mind"}}
-                                </td>
-                                <td>
-                                    <input name="data.skills.medicine.adds" class="small-input" type="text" value="{{data.skills.medicine.adds}}" data-dtype="Number" style="width:30px;text-align:center" />
-                                </td>
-                                <td>
-                                    <input name="data.skills.medicine.value" class="small-input" type="number" value="{{data.skills.medicine.value}}" data-dtype="Number" style="width:30px;text-align:center" />
-                                </td>
-                            </tr>
-
-                            <tr>
-                                <td>
-                                    <a class="skill-roll" data-skill-value="{{data.skills.meleeWeapons.value}}" data-skill-name="{{localize "torgeternity.skills.meleeWeapons"}}">{{localize "torgeternity.skills.meleeWeapons"}}</a> 
-                                </td>
-                                <td class="skill-roll">
-                                    {{localize "torgeternity.attributes.dexterity"}}
-                                </td>
-                                <td>
-                                    <input name="data.skills.meleeWeapons.adds" class="small-input" type="text" value="{{data.skills.meleeWeapons.adds}}" data-dtype="Number" style="width:30px;text-align:center" />
-                                </td>
-                                <td>
-                                    <input name="data.skills.meleeWeapons.value" class="small-input" type="number" value="{{data.skills.meleeWeapons.value}}" data-dtype="Number" style="width:30px;text-align:center" />
-                                </td>
-                            </tr>
-
-                            <tr>
-                                <td>
-                                    <a class="skill-roll" data-skill-value="{{data.skills.missileWeapons.value}}" data-skill-name="{{localize "torgeternity.skills.missileWeapons"}}">{{localize "torgeternity.skills.missileWeapons"}}</a> 
-                                </td>
-                                <td class="skill-roll">
-                                    {{localize "torgeternity.attributes.dexterity"}}
-                                </td>
-                                <td>
-                                    <input name="data.skills.missileWeapons.adds" class="small-input" type="text" value="{{data.skills.missileWeapons.adds}}" data-dtype="Number" style="width:30px;text-align:center" />
-                                </td>
-                                <td>
-                                    <input name="data.skills.missileWeapons.value" class="small-input" type="number" value="{{data.skills.missileWeapons.value}}" data-dtype="Number" style="width:30px;text-align:center" />
-                                </td>
-                            </tr>
-
-                            <tr>
-                                <td>
-                                    <a class="skill-roll" data-skill-value="{{data.skills.persuasion.value}}" data-skill-name="{{localize "torgeternity.skills.persuasion"}}">{{localize "torgeternity.skills.persuasion"}}</a> 
-                                </td>
-                                <td class="skill-roll">
-                                    {{localize "torgeternity.attributes.charisma"}}
-                                </td>
-                                <td>
-                                    <input name="data.skills.persuasion.adds" class="small-input" type="text" value="{{data.skills.persuasion.adds}}" data-dtype="Number" style="width:30px;text-align:center" />
-                                </td>
-                                <td>
-                                    <input name="data.skills.persuasion.value" class="small-input" type="number" value="{{data.skills.persuasion.value}}" data-dtype="Number" style="width:30px;text-align:center" />
-                                </td>
-                            </tr>
-
-                            <tr>
-                                <td>
-                                    <a class="skill-roll" data-skill-value="{{data.skills.precognition.value}}" data-skill-name="{{localize "torgeternity.skills.precognition"}}">{{localize "torgeternity.skills.precognition"}}</a> 
-                                </td>
-                                <td class="skill-roll">
-                                    {{localize "torgeternity.attributes.mind"}}
-                                </td>
-                                <td>
-                                    <input name="data.skills.precognition.adds" class="small-input" type="text" value="{{data.skills.precognition.adds}}" data-dtype="Number" style="width:30px;text-align:center" />
-                                </td>
-                                <td>
-                                    <input name="data.skills.precognition.value" class="small-input" type="number" value="{{data.skills.precognition.value}}" data-dtype="Number" style="width:30px;text-align:center" />
-                                </td>
-                            </tr>
-
-                            <tr>
-                                <td>
-                                    <a class="skill-roll" data-skill-value="{{data.skills.profession.value}}" data-skill-name="{{localize "torgeternity.skills.profession"}}">{{localize "torgeternity.skills.profession"}}</a> 
-                                </td>
-                                <td class="skill-roll">
-                                    {{localize "torgeternity.attributes.mind"}}
-                                </td>
-                                <td>
-                                    <input name="data.skills.profession.adds" class="small-input" type="text" value="{{data.skills.profession.adds}}" data-dtype="Number" style="width:30px;text-align:center" />
-                                </td>
-                                <td>
-                                    <input name="data.skills.profession.value" class="small-input" type="number" value="{{data.skills.profession.value}}" data-dtype="Number" style="width:30px;text-align:center" />
-                                </td>
-                            </tr>
-
-                            <tr>
-                                <td>
-                                    <a class="skill-roll" data-skill-value="{{data.skills.reality.value}}" data-skill-name="{{localize "torgeternity.skills.reality"}}">{{localize "torgeternity.skills.reality"}}</a> 
-                                </td>
-                                <td class="skill-roll">
-                                    {{localize "torgeternity.attributes.spirit"}}
-                                </td>
-                                <td>
-                                    <input name="data.skills.reality.adds" class="small-input" type="text" value="{{data.skills.reality.adds}}" data-dtype="Number" style="width:30px;text-align:center" />
-                                </td>
-                                <td>
-                                    <input name="data.skills.reality.value" class="small-input" type="number" value="{{data.skills.reality.value}}" data-dtype="Number" style="width:30px;text-align:center" />
-                                </td>
-                            </tr>
-
-                            <tr>
-                                <td>
-                                    <a class="skill-roll" data-skill-value="{{data.skills.scholar.value}}" data-skill-name="{{localize "torgeternity.skills.scholar"}}">{{localize "torgeternity.skills.scholar"}}</a> 
-                                </td>
-                                <td class="skill-roll">
-                                    {{localize "torgeternity.attributes.mind"}}
-                                </td>
-                                <td>
-                                    <input name="data.skills.scholar.adds" class="small-input" type="text" value="{{data.skills.scholar.adds}}" data-dtype="Number" style="width:30px;text-align:center" />
-                                </td>
-                                <td>
-                                    <input name="data.skills.scholar.value" class="small-input" type="number" value="{{data.skills.scholar.value}}" data-dtype="Number" style="width:30px;text-align:center" />
-                                </td>
-                            </tr>
-
-                            <tr>
-                                <td>
-                                    <a class="skill-roll" data-skill-value="{{data.skills.science.value}}" data-skill-name="{{localize "torgeternity.skills.science"}}">{{localize "torgeternity.skills.science"}}</a> 
-                                </td>
-                                <td class="skill-roll">
-                                    {{localize "torgeternity.attributes.mind"}}
-                                </td>
-                                <td>
-                                    <input name="data.skills.science.adds" class="small-input" type="text" value="{{data.skills.science.adds}}" data-dtype="Number" style="width:30px;text-align:center" />
-                                </td>
-                                <td>
-                                    <input name="data.skills.science.value" class="small-input" type="number" value="{{data.skills.science.value}}" data-dtype="Number" style="width:30px;text-align:center" />
-                                </td>
-                            </tr>
-
-                            <tr>
-                                <td>
-                                    <a class="skill-roll" data-skill-value="{{data.skills.stealth.value}}" data-skill-name="{{localize "torgeternity.skills.stealth"}}">{{localize "torgeternity.skills.stealth"}}</a> 
-                                </td>
-                                <td class="skill-roll">
-                                    {{localize "torgeternity.attributes.dexterity"}}
-                                </td>
-                                <td>
-                                    <input name="data.skills.stealth.adds" class="small-input" type="text" value="{{data.skills.stealth.adds}}" data-dtype="Number" style="width:30px;text-align:center" />
-                                </td>
-                                <td>
-                                    <input name="data.skills.stealth.value" class="small-input" type="number" value="{{data.skills.stealth.value}}" data-dtype="Number" style="width:30px;text-align:center" />
-                                </td>
-                            </tr>
-
-                            <tr>
-                                <td>
-                                    <a class="skill-roll" data-skill-value="{{data.skills.streetwise.value}}" data-skill-name="{{localize "torgeternity.skills.streetwise"}}">{{localize "torgeternity.skills.streetwise"}}</a> 
-                                </td>
-                                <td class="skill-roll">
-                                    {{localize "torgeternity.attributes.charisma"}}
-                                </td>
-                                <td>
-                                    <input name="data.skills.streetwise.adds" class="small-input" type="text" value="{{data.skills.streetwise.adds}}" data-dtype="Number" style="width:30px;text-align:center" />
-                                </td>
-                                <td>
-                                    <input name="data.skills.streetwise.value" class="small-input" type="number" value="{{data.skills.streetwise.value}}" data-dtype="Number" style="width:30px;text-align:center" />
-                                </td>
-                            </tr>
-
-                            <tr>
-                                <td>
-                                    <a class="skill-roll" data-skill-value="{{data.skills.survival.value}}" data-skill-name="{{localize "torgeternity.skills.survival"}}">{{localize "torgeternity.skills.survival"}}</a> 
-                                </td>
-                                <td class="skill-roll">
-                                    {{localize "torgeternity.attributes.mind"}}
-                                </td>
-                                <td>
-                                    <input name="data.skills.survival.adds" class="small-input" type="text" value="{{data.skills.survival.adds}}" data-dtype="Number" style="width:30px;text-align:center" />
-                                </td>
-                                <td>
-                                    <input name="data.skills.survival.value" class="small-input" type="number" value="{{data.skills.survival.value}}" data-dtype="Number" style="width:30px;text-align:center" />
-                                </td>
-                            </tr>
-
-                            <tr>
-                                <td>
-                                    <a class="skill-roll" data-skill-value="{{data.skills.taunt.value}}" data-skill-name="{{localize "torgeternity.skills.taunt"}}">{{localize "torgeternity.skills.taunt"}}</a> 
-                                </td>
-                                <td class="skill-roll">
-                                    {{localize "torgeternity.attributes.charisma"}}
-                                </td>
-                                <td>
-                                    <input name="data.skills.taunt.adds" class="small-input" type="text" value="{{data.skills.taunt.adds}}" data-dtype="Number" style="width:30px;text-align:center" />
-                                </td>
-                                <td>
-                                    <input name="data.skills.taunt.value" class="small-input" type="number" value="{{data.skills.taunt.value}}" data-dtype="Number" style="width:30px;text-align:center" />
-                                </td>
-                            </tr>
-
-                            <tr>
-                                <td>
-                                    <a class="skill-roll" data-skill-value="{{data.skills.telepathy.value}}" data-skill-name="{{localize "torgeternity.skills.telepathy"}}">{{localize "torgeternity.skills.telepathy"}}</a> 
-                                </td>
-                                <td class="skill-roll">
-                                    {{localize "torgeternity.attributes.charisma"}}
-                                </td>
-                                <td>
-                                    <input name="data.skills.telepathy.adds" class="small-input" type="text" value="{{data.skills.telepathy.adds}}" data-dtype="Number" style="width:30px;text-align:center" />
-                                </td>
-                                <td>
-                                    <input name="data.skills.telepathy.value" class="small-input" type="number" value="{{data.skills.telepathy.value}}" data-dtype="Number" style="width:30px;text-align:center" />
-                                </td>
-                            </tr>
-
-                            <tr>
-                                <td>
-                                    <a class="skill-roll" data-skill-value="{{data.skills.tracking.value}}" data-skill-name="{{localize "torgeternity.skills.tracking"}}">{{localize "torgeternity.skills.tracking"}}</a> 
-                                </td>
-                                <td class="skill-roll">
-                                    {{localize "torgeternity.attributes.mind"}}
-                                </td>
-                                <td>
-                                    <input name="data.skills.tracking.adds" class="small-input" type="text" value="{{data.skills.tracking.adds}}" data-dtype="Number" style="width:30px;text-align:center" />
-                                </td>
-                                <td>
-                                    <input name="data.skills.tracking.value" class="small-input" type="number" value="{{data.skills.tracking.value}}" data-dtype="Number" style="width:30px;text-align:center" />
-                                </td>
-                            </tr>
-
-                            <tr>
-                                <td>
-                                    <a class="skill-roll" data-skill-value="{{data.skills.trick.value}}" data-skill-name="{{localize "torgeternity.skills.trick"}}">{{localize "torgeternity.skills.trick"}}</a> 
-                                </td>
-                                <td class="skill-roll">
-                                    {{localize "torgeternity.attributes.mind"}}
-                                </td>
-                                <td>
-                                    <input name="data.skills.trick.adds" class="small-input" type="text" value="{{data.skills.trick.adds}}" data-dtype="Number" style="width:30px;text-align:center" />
-                                </td>
-                                <td>
-                                    <input name="data.skills.trick.value" class="small-input" type="number" value="{{data.skills.trick.value}}" data-dtype="Number" style="width:30px;text-align:center" />
-                                </td>
-                            </tr>
-
-                            <tr>
-                                <td>
-                                    <a class="skill-roll" data-skill-value="{{data.skills.unarmedCombat.value}}" data-skill-name="{{localize "torgeternity.skills.unarmedCombat"}}">{{localize "torgeternity.skills.unarmedCombat"}}</a> 
-                                </td>
-                                <td class="skill-roll">
-                                    {{localize "torgeternity.attributes.dexterity"}}
-                                </td>
-                                <td>
-                                    <input name="data.skills.unarmedCombat.adds" class="small-input" type="text" value="{{data.skills.unarmedCombat.adds}}" data-dtype="Number" style="width:30px;text-align:center" />
-                                </td>
-                                <td>
-                                    <input name="data.skills.unarmedCombat.value" class="small-input" type="number" value="{{data.skills.unarmedCombat.value}}" data-dtype="Number" style="width:30px;text-align:center" />
-                                </td>
-                            </tr>
-
-                            <tr>
-                                <td>
-                                    <a class="skill-roll" data-skill-value="{{data.skills.waterVehicles.value}}" data-skill-name="{{localize "torgeternity.skills.waterVehicles"}}">{{localize "torgeternity.skills.waterVehicles"}}</a> 
-                                </td>
-                                <td class="skill-roll">
-                                    {{localize "torgeternity.attributes.mind"}}
-                                </td>
-                                <td>
-                                    <input name="data.skills.waterVehicles.adds" class="small-input" type="text" value="{{data.skills.waterVehicles.adds}}" data-dtype="Number" style="width:30px;text-align:center" />
-                                </td>
-                                <td>
-                                    <input name="data.skills.waterVehicles.value" class="small-input" type="number" value="{{data.skills.waterVehicles.value}}" data-dtype="Number" style="width:30px;text-align:center" />
-                                </td>
-                            </tr>
-
-                            <tr>
-                                <td>
-                                    <a class="skill-roll" data-skill-value="{{data.skills.willpower.value}}" data-skill-name="{{localize "torgeternity.skills.willpower"}}">{{localize "torgeternity.skills.willpower"}}</a> 
-                                </td>
-                                <td class="skill-roll">
-                                    {{localize "torgeternity.attributes.spirit"}}
-                                </td>
-                                <td>
-                                    <input name="data.skills.willpower.adds" class="small-input" type="text" value="{{data.skills.willpower.adds}}" data-dtype="Number" style="width:30px;text-align:center" />
-                                </td>
-                                <td>
-                                    <input name="data.skills.willpower.value" class="small-input" type="number" value="{{data.skills.willpower.value}}" data-dtype="Number" style="width:30px;text-align:center" />
-                                </td>
-                            </tr>
-
+                            {{#if data.editstate}}
+                                {{#each data.skills as |content name|}}
+                                    <tr>
+                                        <td>
+                                            <a class="skill-roll" data-skill-value="{{content.value}}" data-skill-name="{{localize (concatSkillName name)}}">{{localize (concatSkillName name)}}</a> 
+                                        </td>
+                                        <td class="skill-roll">
+                                            {{localize (concatAttributeName content.baseAttribute)}}
+                                        </td>
+                                        <td>
+                                            <input name="data.skills.{{name}}.adds" type="text" class="small-input" value="{{content.adds}}" data-dtype="Number" style="width:30px;text-align:center" />
+                                        </td>
+                                        <td class="skill-roll" style="text-align:center">
+                                            {{content.value}}
+                                        </td>
+                                    </tr>
+                                {{/each}}
+                            {{else}}
+                                {{#each data.skills as |content name|}}
+                                    {{#if content.value}}                                                                            
+                                    <tr>
+                                        <td>
+                                            <a class="skill-roll" data-skill-value="{{content.value}}" data-skill-name="{{localize (concatSkillName name)}}">{{localize (concatSkillName name)}}</a> 
+                                        </td>
+                                        <td class="skill-roll">
+                                            {{localize (concatAttributeName content.baseAttribute)}}
+                                        </td>
+                                        <td>
+                                            <input name="data.skills.{{name}}.adds" type="text" class="small-input" value="{{content.adds}}" data-dtype="Number" style="width:30px;text-align:center" />
+                                        </td>
+                                        <td class="skill-roll" style="text-align:center">
+                                            {{content.value}}
+                                        </td>
+                                    </tr>
+                                    {{/if}}
+                                {{/each}}
+                            {{/if}}
 
                         </table>
                     </div>
@@ -804,7 +242,7 @@
                 </td>
                 <td width="20%" style="vertical-align:top;margin:3px">
                     <div class="list-section-heading">
-                        Defenses
+                        <a class="activeDefense-roll">Defenses</a>
                     </div>
                     <table class="stats-table">
                         <tr>
@@ -812,7 +250,7 @@
                                 <span class="main-label">Dodge</span>
                             </td>
                             <td>
-                                <span class="main-label">{{data.skills.dodge.value}}</span>
+                                <span class="main-label">{{data.dodgeDefense}}</span>
                             </td>
                         </tr>
                         <tr>
@@ -820,7 +258,7 @@
                                 <span class="main-label">Melee</span>
                             </td>
                             <td>
-                                <span class="main-label">{{data.skills.meleeWeapons.value}}</span>
+                                <span class="main-label">{{data.meleeWeaponsDefense}}</span>
                             </td>
                         </tr>
                         <tr>
@@ -828,7 +266,7 @@
                                 <span class="main-label">Unarmed</span>
                             </td>
                             <td>
-                                <span class="main-label">{{data.skills.unarmedCombat.value}}</span>
+                                <span class="main-label">{{data.unarmedCombatDefense}}</span>
                             </td>
                         </tr>
                         <tr>
@@ -836,7 +274,7 @@
                                 <span class="main-label">Intimidation</span>
                             </td>
                             <td>
-                                <span class="main-label">{{data.skills.intimidation.value}}</span>
+                                <span class="main-label">{{data.intimidationDefense}}</span>
                             </td>
                         </tr>
                         <tr>
@@ -844,7 +282,7 @@
                                 <span class="main-label">Maneuver</span>
                             </td>
                             <td>
-                                <span class="main-label">{{data.skills.maneuver.value}}</span>
+                                <span class="main-label">{{data.maneuverDefense}}</span>
                             </td>
                         </tr>
                         <tr>
@@ -852,7 +290,7 @@
                                 <span class="main-label">Taunt</span>
                             </td>
                             <td>
-                                <span class="main-label">{{data.skills.taunt.value}}</span>
+                                <span class="main-label">{{data.tauntDefense}}</span>
                             </td>
                         </tr>
                         <tr>
@@ -860,7 +298,7 @@
                                 <span class="main-label">Trick</span>
                             </td>
                             <td>
-                                <span class="main-label">{{data.skills.trick.value}}</span>
+                                <span class="main-label">{{data.trickDefense}}</span>
                             </td>
                         </tr>
                     </table>
@@ -889,8 +327,8 @@
                     <p class="item-data-label" style="padding:0px 0px 0px 0px">
                         Clearance
                     </p>
-                    <select name="data.clearance" class="input-box" style="font-size:14px">
-                        {{#select data.clearance}}
+                    <select name="data.details.clearance" class="input-box" style="font-size:14px">
+                        {{#select data.details.clearance}}
                         {{#each config.clearances as |name type|}}
                         <option value="{{type}}">{{localize name}}</option>
                         {{/each}}
@@ -904,8 +342,8 @@
                     <p class="item-data-label" style="padding:0px 0px 0px 0px">
                         Race
                     </p>
-                    <select name="data.race" class="input-box" style="font-size:14px">
-                        {{#select data.race}}
+                    <select name="data.details.race" class="input-box" style="font-size:14px">
+                        {{#select data.details.race}}
                         {{#each config.races as |name type|}}
                         <option value="{{type}}">{{localize name}}</option>
                         {{/each}}
@@ -935,7 +373,7 @@
                     </div>
                     <div class="item-detail">
                         <div class="item-dropdown-description">
-                            {{item.data.description}}
+                            {{{item.data.description}}}
                             <p></p>
                             <div class="item-dropdown-extras">
                                 {{item.data.category}}
@@ -968,7 +406,7 @@
                     </div>
                    <div class="item-detail">
                         <div class="item-dropdown-description">
-                            {{item.data.description}}
+                            {{{item.data.description}}}
                         </div>
                     </div>               
                </li>
@@ -995,7 +433,7 @@
                     </div>
                     <div class="item-detail">
                         <div class="item-dropdown-description">
-                            {{item.data.description}}
+                            {{{item.data.description}}}
                             <p></p>
                             <div class="item-dropdown-extras">
                                 {{item.data.cosm}}
@@ -1029,7 +467,7 @@
                     </div>
                     <div class="item-detail">
                         <div class="item-dropdown-description">
-                            {{item.data.description}}
+                            {{{item.data.description}}}
                             <p></p>
                             <div class="item-dropdown-extras">
                                 {{item.data.cosm}}
@@ -1069,7 +507,7 @@
                     </div>
                     <div class="item-detail">
                         <div class="item-dropdown-description">
-                            {{item.data.description}}
+                            {{{item.data.description}}}
                             <p></p>
                             <div class="item-dropdown-extras">
                                 {{item.data.cosm}}
@@ -1110,7 +548,7 @@
                     </div>
                     <div class="item-detail">
                         <div class="item-dropdown-description">
-                            {{item.data.description}}
+                            {{{item.data.description}}}
                             <p></p>
                             <div class="item-dropdown-extras">
                                 {{item.data.cosm}}
@@ -1154,7 +592,7 @@
                     </div>
                     <div class="item-detail">
                         <div class="item-dropdown-description">
-                            {{item.data.description}}
+                            {{{item.data.description}}}
                             <p></p>
                             <div class="item-dropdown-extras">
                                 {{item.data.cosm}}
@@ -1190,7 +628,7 @@
                     </div>
                     <div class="item-detail">
                         <div class="item-dropdown-description">
-                            {{item.data.description}}
+                            {{{item.data.description}}}
                             <p></p>
                             <div class="item-dropdown-extras">
                                 {{item.data.cosm}}
@@ -1228,7 +666,7 @@
                     </div>
                     <div class="item-detail">
                         <div class="item-dropdown-description">
-                            {{item.data.description}}
+                            {{{item.data.description}}}
                             <p></p>
                             <div class="item-dropdown-extras">
                                 {{item.data.cosm}}
@@ -1258,7 +696,7 @@
                     </div>
                     <div class="item-detail">
                         <div class="item-dropdown-description">
-                            {{item.data.description}}
+                            {{{item.data.description}}}
                             <p></p>
                             <div class="item-dropdown-extras">
                                 {{item.data.cosm}}
@@ -1288,7 +726,7 @@
                     </div>
                     <div class="item-detail">
                         <div class="item-dropdown-description">
-                            {{item.data.description}}
+                            {{{item.data.description}}}
                             <p></p>
                             <div class="item-dropdown-extras">
                                 {{item.data.cosm}}
@@ -1318,7 +756,7 @@
                     </div>
                     <div class="item-detail">
                         <div class="item-dropdown-description">
-                            {{item.data.description}}
+                            {{{item.data.description}}}
                             <p></p>
                             <div class="item-dropdown-extras">
                                 {{item.data.cosm}}
@@ -1359,7 +797,7 @@
                     </div>
                     <div class="item-detail">
                         <div class="item-dropdown-description">
-                            {{item.data.description}}
+                            {{{item.data.description}}}
                             <p></p>
                             <div class="item-dropdown-extras">
                                 {{item.data.skill}}
@@ -1398,7 +836,7 @@
                     </div>
                     <div class="item-detail">
                         <div class="item-dropdown-description">
-                            {{item.data.description}}
+                            {{{item.data.description}}}
                             <p></p>
                             <div class="item-dropdown-extras">
                                 {{item.data.skill}}
@@ -1437,7 +875,7 @@
                     </div>
                     <div class="item-detail">
                         <div class="item-dropdown-description">
-                            {{item.data.description}}
+                            {{{item.data.description}}}
                             <p></p>
                             <div class="item-dropdown-extras">
                                 {{item.data.skill}}
@@ -1464,7 +902,7 @@
 
         <div class="tab background" data-group="primary" data-tab="background">
             <div class="sheet-content" style="height:375px">
-                {{editor content=data.background target="data.background" button=true owner=owner editable=editable}}
+                {{editor content=data.details.background target="data.details.background" button=true owner=owner editable=editable}}
             </div>
         </div>
         

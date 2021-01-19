@@ -29,28 +29,10 @@
             </td>
             <td style="width:65%"> <!-- right column -->
                 <p class="item-data-label">
-                    Purpose
+                    Purpose/Description/Powers/Restrictions
                 </p>
-                <div style="padding:0px 0px 0px 10px">
-                    <textarea name="data.purpose" class="item-description-textarea" style="height:10px">{{data.purpose}}</textarea>
-                </div>
-                <p class="item-data-label">
-                    Description
-                </p>
-                <div style="padding:0px 0px 0px 10px">
-                    <textarea name="data.description" class="item-description-textarea" style="height:85px">{{data.description}}</textarea>
-                </div>
-                <p class="item-data-label">
-                    Powers
-                </p>
-                <div style="padding:0px 0px 0px 10px">
-                    <textarea name="data.powers" class="item-description-textarea" style="height:85px">{{data.powers}}</textarea>
-                </div>
-                <p class="item-data-label">
-                    Restrictions
-                </p>
-                <div style="padding:0px 0px 0px 10px">
-                    <textarea name="data.restrictions" class="item-description-textarea" style="height:10px">{{data.restrictions}}</textarea>
+                <div class="item-description-textarea" style="padding:0px 0px 0px 10px;height:350px">
+                    {{editor content=data.description target="data.description" button=true owner=owner editable=editable}}
                 </div>
             </td> 
         </tr>

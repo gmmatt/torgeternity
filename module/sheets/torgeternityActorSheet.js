@@ -1,7 +1,7 @@
 import { torgeternity } from "../config.js";
 import * as torgchecks from "../torgchecks.js";
 
-export default class torgeternityStormKnightSheet extends ActorSheet {
+export default class torgeternityActorSheet extends ActorSheet {
     static get defaultOptions () {
         return mergeObject(super.defaultOptions, {
             classes: ["torgeternity", "sheet", "actor"],
@@ -40,11 +40,10 @@ export default class torgeternityStormKnightSheet extends ActorSheet {
         data.specialabilityRollable = data.items.filter(function (item) {return item.type == "specialability-rollable"});
         data.enhancement = data.items.filter(function (item) { return item.type == "enhancement"});
 
-        if (this.actor.data.data.editstate === "inline") {
-            data.editstate = "inline";
-        } else {
-            data.editstate = "none";
+        if (this.actor.data.data.editstate === undefined) {
+            this.actor.data.data.editstate = "none";
         };
+
 
         data.config = CONFIG.torgeternity;
 
@@ -53,12 +52,15 @@ export default class torgeternityStormKnightSheet extends ActorSheet {
     }
 
 
-
     activateListeners(html) {
         
         //Owner-only Listeners
         if (this.actor.owner) {
             html.find(".skill-roll").click(this._onSkillRoll.bind(this));
+        }
+
+        if (this.actor.owner) {
+            html.find(".skill-edit-toggle").click(this._onSkillEditToggle.bind(this));
         }
 
         if (this.actor.owner) {
@@ -101,6 +103,10 @@ export default class torgeternityStormKnightSheet extends ActorSheet {
             html.find(".toggle-threat-edit").click(this._onToggleThreatEdit.bind(this));
         }
 
+        if (this.actor.owner) {
+            html.find(".activeDefense-roll").click(this._onActiveDefenseRoll.bind(this));
+        }
+
         super.activateListeners(html);
 
         // Everything below here is only needed if the sheet is editable
@@ -140,6 +146,20 @@ export default class torgeternityStormKnightSheet extends ActorSheet {
             skillName: event.currentTarget.dataset.skillName
         })
     }
+
+    _onSkillEditToggle(event) {
+
+        var toggleState = this.actor.data.data.editstate;
+        event.preventDefault();
+        if (toggleState === null) {
+            this.actor.update({"data.editstate":true});
+        } else {
+            this.actor.update({"data.editstate":null});
+        };
+
+
+    }
+
     _onPossibilityRoll(event) {
         torgchecks.PossibilityCheck ({
             actor: this.actor,
@@ -148,6 +168,12 @@ export default class torgeternityStormKnightSheet extends ActorSheet {
 
     _onUpRoll(event) {
         torgchecks.UpRoll ({
+            actor: this.actor,
+        })
+    }
+
+    _onActiveDefenseRoll(event) {
+        torgchecks.activeDefenseRoll({
             actor: this.actor,
         })
     }
@@ -169,7 +195,7 @@ export default class torgeternityStormKnightSheet extends ActorSheet {
         const itemID = event.currentTarget.closest(".item").dataset.itemId;
         const item = this.actor.getOwnedItem(itemID);
 
-        item.attack();
+        item.weaponAttack();
     }
 
     _onBonusRoll(event) {
@@ -205,16 +231,22 @@ export default class torgeternityStormKnightSheet extends ActorSheet {
     }
 
     _onToggleThreatEdit(event) {
+        var actor = this.actor
         var toggleState = this.actor.data.data.editstate;
         event.preventDefault();
-
         if (toggleState === "none") {
             document.getElementById("threat-editor").style.display = "inline";
             this.actor.data.data.editstate = "inline";
+            this.actor.update({"data.editstate":"inline"});
+        } else if (toggleState === undefined) {
+            document.getElementById("threat-editor").style.display = "inline";
+            this.actor.data.data.editstate = "inline";
+            this.actor.update({"data.editstate":"inline"});
         } else {
             document.getElementById("threat-editor").style.display = "none";
             this.actor.data.data.editstate = "none";
-        }
+            this.actor.update({"data.editstate":"none"});
+        };
     }
 }
 

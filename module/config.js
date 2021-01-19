@@ -35,6 +35,7 @@ torgeternity.perkTypes = {
     occultech: "torgeternity.perkTypes.occultech",
     outsider: "torgeternity.perkTypes.outsider",
     prowess: "torgeternity.perkTypes.prowess",
+    psionics: "torgeternity.perkTypes.psionics",
     pulpPowers: "torgeternity.perkTypes.pulpPowers",
     reality: "torgeternity.perkTypes.reality",
     savagery:"torgeternity.perkTypes.savagery",
@@ -78,6 +79,7 @@ torgeternity.clearances = {
 torgeternity.races = {
     human: "torgeternity.races.human",
     dwarf: "torgeternity.races.dwarf",
+    edeinos: "torgeternity.races.edeinos",
     elf: "torgeternity.races.elf"
 }
 

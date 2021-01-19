@@ -153,7 +153,7 @@
             "nileEmpire": "Nile Empire",
             "aysle": "Aysle",
             "cyberpapacy": "Cyberpapacy",
-            "tharkhold": "Tharkhold",
+            "tharkhold": "Tharkold",
             "panPacifica": "Pan Pacifica",
             "orrorsh": "Orrorsh"
         },
@@ -172,6 +172,7 @@
             "occultech": "Occultech",
             "outsider": "Outsider",
             "prowess": "Prowess",
+            "psionics": "Psionics",
             "pulpPowers": "Pulp Powers",
             "reality": "Reality",
             "savagery":"Savagery",
@@ -204,7 +205,7 @@
         "itemSheetDescriptions": {
             "perk": "Perk",
             "enhancement": "Enhancement",
-            "generalGear": "Other",
+            "generalGear": "Gear",
             "eternityshard": "Eternity Shard",
             "armor": "Armor",
             "shield": "Shield",
@@ -251,6 +252,7 @@
         "races": {
             "human": "Human",
             "dwarf": "Dwarf",
+            "edeinos": "Edeinos",
             "elf": "Elf"
         }
     }

@@ -1,5 +1,6 @@
 import {torgeternity} from "./module/config.js";
-import torgeternityItem from "./module/torgeternityItem.js"
+import torgeternityItem from "./module/torgeternityItem.js";
+import torgeternityActor from "./module/torgeternityActor.js";
 import torgeternityItemSheet from "./module/sheets/torgeternityItemSheet.js";
 import torgeternityActorSheet from "./module/sheets/torgeternityActorSheet.js";
 
@@ -8,6 +9,7 @@ Hooks.once("init", function() {
 
     CONFIG.torgeternity = torgeternity;
     CONFIG.Item.entityClass = torgeternityItem;
+    CONFIG.Actor.entityClass = torgeternityActor;
 
     Items.unregisterSheet("core", ItemSheet);
     Items.registerSheet("torgeternity", torgeternityItemSheet, {makeDefault: true});
@@ -19,6 +21,11 @@ Hooks.once("init", function() {
 Handlebars.registerHelper("concatSkillValue", function(skillName){
     var skillValue = "{{data.skills." + skillName + ".value}}";
     return skillValue;
+});
+
+Handlebars.registerHelper("concatAttributeName", function(attributeName){
+    var localName = "torgeternity.attributes." + attributeName
+    return localName;
 });
 
 Handlebars.registerHelper("concatSkillName", function(skillName){

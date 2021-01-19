@@ -51,20 +51,20 @@
                 <p class="item-data-label">
                     Description
                 </p>
-                <div style="padding:0px 0px 0px 10px">
-                    <textarea name="data.description" class="item-description-textarea" style="height:150px">{{data.description}}</textarea>
+                <div class="item-description-textarea" style="padding:0px 0px 0px 10px;height:200px">
+                    {{editor content=data.description target="data.description" button=true owner=owner editable=editable}}
                 </div>
                 <p class="item-data-label">
                     Good Result
                 </p>
                 <div style="padding:0px 0px 0px 10px">
-                    <textarea name="data.good" class="item-description-textarea" style="height:75px">{{data.good}}</textarea>
+                    <textarea name="data.good" class="item-description-textarea" style="height:55px">{{data.good}}</textarea>
                 </div>
                 <p class="item-data-label">
                     Outstanding Result
                 </p>
                 <div style="padding:0px 0px 0px 10px">
-                    <textarea name="data.outstanding" class="item-description-textarea" style="height:75px">{{data.outstanding}}</textarea>
+                    <textarea name="data.outstanding" class="item-description-textarea" style="height:55px">{{data.outstanding}}</textarea>
                 </div>
             </td> 
         </tr>

@@ -26,7 +26,7 @@
             <td style="text-align:center" width="30%">
                 <span class="vital-box">
                     <a class="item-control possibility-roll" title="Possibility Roll">Possibilities: </a>
-                    <input name="data.possibilities" type="text" value="{{data.possibilities}}" data-dtype="Number" class="small-input" />
+                    <input name="data.other.possibilities" type="text" value="{{data.other.possibilities}}" data-dtype="Number" class="small-input" />
                 </span>
             </td>
             <td style="text-align:center" width="10%">
@@ -50,10 +50,8 @@
     <secton class="sheet-body sheet-content"  style="display:flex;flex-direction:column">
         <div class="tab stats" data-group="primary" data-tab="stats">
 
-            <div>
-                <a class="item-control toggle-threat-edit" id="skillToggle" title="Toggle Editor" style="display:inline;float:right;padding:0px 5px 0px 5px" data-state="shown"><i class="fas fa-pen"></i></a>
-            </div>
-            <div id="threat-editor" style="display:{{data.editstate}}">
+<!--            <span style="font-family:'Palatino Linotype';font-size:12px;padding:0px;margin:0px">Edit Threat:</span><input id="trigger" name="Edit" type="checkbox" style="display:inline;height:12px;padding:0px;margin:0px" /> -->
+            <div class="threat-editor" id="threat-editor" style="display:{{data.editstate}}">
                 <div class="threat-edit">
                     {{localize "torgeternity.attributes.charisma"}} <input name="data.attributes.charisma" type="text" value="{{data.attributes.charisma}}" data=dtype="Number" class="small-input" />,&nbsp;
                     {{localize "torgeternity.attributes.dexterity"}} <input name="data.attributes.dexterity" type="text" value="{{data.attributes.dexterity}}" data=dtype="Number" class="small-input" />,&nbsp;
@@ -63,13 +61,13 @@
                 </div>
                 <div class="threat-edit">
                         Move:&nbsp;
-                        <input name="data.move" class="small-input" type="number" value="{{data.move}}" data-dtype="Number" />;&nbsp;
+                        <input name="data.other.move" class="small-input" type="text" value="{{data.other.move}}" data-dtype="Number" />;&nbsp;
                         Tough:&nbsp;
-                        <input name="data.toughness" class="small-input" type="number" value="{{data.toughness}}" data-dtype="Number" />&nbsp;/&nbsp;(<input name="data.armor" class="small-input" type="number" value="{{data.armor}}" data-dtype="Number" />)
+                        <input name="data.other.toughness" class="small-input" type="text" value="{{data.other.toughness}}" data-dtype="Number" />&nbsp;/&nbsp;(<input name="data.other.armor" class="small-input" type="number" value="{{data.other.armor}}" data-dtype="Number" />)
                 </div>
                 <div class="threat-edit">
                     {{localize "torgeternity.sheetLabels.possibilitypotential"}}:&nbsp;
-                    <input name="data.possibilitypotential" class="text-input" type="text" value="{{data.possibilitypotential}}" />
+                    <input name="data.details.possibilitypotential" class="text-input" type="text" value="{{data.details.possibilitypotential}}" />
                 </div>
                 <div class="threat-edit">
                     <b>{{localize "torgeternity.sheetLabels.skills"}}</b>
@@ -133,17 +131,20 @@
                 <tr>
                 <td width="55%" height="375px" style="background-color:white;border-radius:10px;vertical-align:top"> <!-- Left column -->
                     <div class="threat-block">
-                        <b>Attributes: </b>
-                        <a class="skill-roll" data-skill-value="{{data.attributes.charisma}}" data-skill-name="Charisma">{{localize "torgeternity.attributes.charisma"}}</a> 
-                            {{data.attributes.charisma}}, &nbsp;
-                        <a class="skill-roll" data-skill-value="{{data.attributes.dexterity}}" data-skill-name="Dexterity">{{localize "torgeternity.attributes.dexterity"}}</a> 
-                            {{data.attributes.dexterity}},&nbsp;
-                        <a class="skill-roll" data-skill-value="{{data.attributes.mind}}" data-skill-name="Mind">{{localize "torgeternity.attributes.mind"}}</a> 
-                            {{data.attributes.mind}},&nbsp;
-                        <a class="skill-roll" data-skill-value="{{data.attributes.spirit}}" data-skill-name="Spirit">{{localize "torgeternity.attributes.spirit"}}</a> 
-                            {{data.attributes.spirit}},&nbsp;
-                        <a class="skill-roll" data-skill-value="{{data.attributes.strength}}" data-skill-name="Strength">{{localize "torgeternity.attributes.strength"}}</a> 
-                            {{data.attributes.strength}}
+                        <a class="toggle-threat-edit" title="Edit" style="float:right"><i class="fas fa-edit"></i></a>
+                        <div style="margin-right:10px">
+                            <b>Attributes: </b>
+                            <a class="skill-roll" data-skill-value="{{data.attributes.charisma}}" data-skill-name="Charisma">{{localize "torgeternity.attributes.charisma"}}</a> 
+                                {{data.attributes.charisma}}, &nbsp;
+                            <a class="skill-roll" data-skill-value="{{data.attributes.dexterity}}" data-skill-name="Dexterity">{{localize "torgeternity.attributes.dexterity"}}</a> 
+                                {{data.attributes.dexterity}},&nbsp;
+                            <a class="skill-roll" data-skill-value="{{data.attributes.mind}}" data-skill-name="Mind">{{localize "torgeternity.attributes.mind"}}</a> 
+                                {{data.attributes.mind}},&nbsp;
+                            <a class="skill-roll" data-skill-value="{{data.attributes.spirit}}" data-skill-name="Spirit">{{localize "torgeternity.attributes.spirit"}}</a> 
+                                {{data.attributes.spirit}},&nbsp;
+                            <a class="skill-roll" data-skill-value="{{data.attributes.strength}}" data-skill-name="Strength">{{localize "torgeternity.attributes.strength"}}</a> 
+                                {{data.attributes.strength}}
+                        </div>  
 
                     </div>
                     <div class="threat-block">
@@ -162,8 +163,8 @@
                     </div>
 
                     <div class="threat-block">
-                        <b>Move:</b>&nbsp;{{data.move}};&nbsp;
-                        <b>Tough:</b>&nbsp;{{data.toughness}}&nbsp;({{data.armor}});&nbsp;
+                        <b>Move:</b>&nbsp;{{data.other.move}};&nbsp;
+                        <b>Tough:</b>&nbsp;{{data.other.toughness}}&nbsp;({{data.other.armor}});&nbsp;
                         <b>Shock:&nbsp;</b>
                         {{data.shock.max}};&nbsp;
                         <b>Wounds:&nbsp;</b>
@@ -223,7 +224,7 @@
 
                     <div class="threat-block">
                         <b>{{localize "torgeternity.sheetLabels.possibilities"}}</b>:&nbsp;
-                        <span>{{data.possibilitypotential}}</span>
+                        <span>{{data.details.possibilitypotential}}</span>
                     </div>
 
                     <div class="threat-block">
@@ -234,7 +235,7 @@
                                 <li>
                                     <b><a class="item-attackRoll item" data-item-id="{{item._id}}">{{item.name}}</a></b>
                                     .&nbsp;
-                                    {{item.data.description}}
+                                    {{{item.data.description}}}
                                 </li>
                             {{/each}}
 
@@ -242,7 +243,7 @@
                                 <li>
                                     <b>{{item.name}}</b>
                                     .&nbsp;
-                                    {{item.data.description}}
+                                    {{{item.data.description}}}
                                 </li>
                             {{/each}}
 
@@ -251,9 +252,9 @@
 
 
                 </td>
-                <td width="45%" height="375px"> <!-- Right column -->
-                    <div style="padding:0px 0px 0px 10px;height:375px;width:250px;margin:0px 10px 0px 10px;display:flex;flex-direction:column" class="item-description-textarea">
-                        {{editor content=data.background target="data.background" button=true owner=owner editable=editable}}
+                <td width="45%" height="385px" style="vertical-align:top"> <!-- Right column -->
+                    <div style="padding:0px 0px 0px 10px;height:385px;width:250px;margin:0px 10px 0px 10px;display:flex;flex-direction:column;vertical-align:top" class="item-description-textarea">
+                        {{editor content=data.details.description target="data.details.description" button=true owner=owner editable=editable}}
                     </div>
                 </td>
                 </tr>
@@ -288,7 +289,7 @@
                     </div>
                     <div class="item-detail">
                         <div class="item-dropdown-description">
-                            {{item.data.description}}
+                            {{{item.data.description}}}
                         </div>
                     </div>
                 </li>
@@ -310,7 +311,7 @@
                     </div>
                     <div class="item-detail">
                         <div class="item-dropdown-description">
-                            {{item.data.description}}
+                            {{{item.data.description}}}
                         </div>
                     </div>
                 </li>
@@ -335,7 +336,7 @@
                     </div>
                     <div class="item-detail">
                         <div class="item-dropdown-description">
-                            {{item.data.description}}
+                            {{{item.data.description}}}
                             <p></p>
                             <div class="item-dropdown-extras">
                                 {{item.data.category}}
@@ -368,7 +369,7 @@
                     </div>
                    <div class="item-detail">
                         <div class="item-dropdown-description">
-                            {{item.data.description}}
+                            {{{item.data.description}}}
                         </div>
                     </div>               
                </li>
@@ -395,7 +396,7 @@
                     </div>
                     <div class="item-detail">
                         <div class="item-dropdown-description">
-                            {{item.data.description}}
+                            {{{item.data.description}}}
                             <p></p>
                             <div class="item-dropdown-extras">
                                 {{item.data.cosm}}
@@ -429,7 +430,7 @@
                     </div>
                     <div class="item-detail">
                         <div class="item-dropdown-description">
-                            {{item.data.description}}
+                            {{{item.data.description}}}
                             <p></p>
                             <div class="item-dropdown-extras">
                                 {{item.data.cosm}}
@@ -469,7 +470,7 @@
                     </div>
                     <div class="item-detail">
                         <div class="item-dropdown-description">
-                            {{item.data.description}}
+                            {{{item.data.description}}}
                             <p></p>
                             <div class="item-dropdown-extras">
                                 {{item.data.cosm}}
@@ -510,7 +511,7 @@
                     </div>
                     <div class="item-detail">
                         <div class="item-dropdown-description">
-                            {{item.data.description}}
+                            {{{item.data.description}}}
                             <p></p>
                             <div class="item-dropdown-extras">
                                 {{item.data.cosm}}
@@ -554,7 +555,7 @@
                     </div>
                     <div class="item-detail">
                         <div class="item-dropdown-description">
-                            {{item.data.description}}
+                            {{{item.data.description}}}
                             <p></p>
                             <div class="item-dropdown-extras">
                                 {{item.data.cosm}}
@@ -590,7 +591,7 @@
                     </div>
                     <div class="item-detail">
                         <div class="item-dropdown-description">
-                            {{item.data.description}}
+                            {{{item.data.description}}}
                             <p></p>
                             <div class="item-dropdown-extras">
                                 {{item.data.cosm}}
@@ -628,7 +629,7 @@
                     </div>
                     <div class="item-detail">
                         <div class="item-dropdown-description">
-                            {{item.data.description}}
+                            {{{item.data.description}}}
                             <p></p>
                             <div class="item-dropdown-extras">
                                 {{item.data.cosm}}
@@ -658,7 +659,7 @@
                     </div>
                     <div class="item-detail">
                         <div class="item-dropdown-description">
-                            {{item.data.description}}
+                            {{{item.data.description}}}
                             <p></p>
                             <div class="item-dropdown-extras">
                                 {{item.data.cosm}}
@@ -688,7 +689,7 @@
                     </div>
                     <div class="item-detail">
                         <div class="item-dropdown-description">
-                            {{item.data.description}}
+                            {{{item.data.description}}}
                             <p></p>
                             <div class="item-dropdown-extras">
                                 {{item.data.cosm}}
@@ -718,7 +719,7 @@
                     </div>
                     <div class="item-detail">
                         <div class="item-dropdown-description">
-                            {{item.data.description}}
+                            {{{item.data.description}}}
                             <p></p>
                             <div class="item-dropdown-extras">
                                 {{item.data.cosm}}
@@ -759,7 +760,7 @@
                     </div>
                     <div class="item-detail">
                         <div class="item-dropdown-description">
-                            {{item.data.description}}
+                            {{{item.data.description}}}
                             <p></p>
                             <div class="item-dropdown-extras">
                                 {{item.data.skill}}
@@ -798,7 +799,7 @@
                     </div>
                     <div class="item-detail">
                         <div class="item-dropdown-description">
-                            {{item.data.description}}
+                            {{{item.data.description}}}
                             <p></p>
                             <div class="item-dropdown-extras">
                                 {{item.data.skill}}
@@ -837,7 +838,7 @@
                     </div>
                     <div class="item-detail">
                         <div class="item-dropdown-description">
-                            {{item.data.description}}
+                            {{{item.data.description}}}
                             <p></p>
                             <div class="item-dropdown-extras">
                                 {{item.data.skill}}

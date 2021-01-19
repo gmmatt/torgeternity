@@ -14,7 +14,8 @@ export default class torgeternityItem extends Item {
         "spell": "systems/torgeternity/templates/partials/spell-card.hbs",
         "miracle": "systems/torgeternity/templates/partials/miracle-card.hbs",
         "psionicpower": "systems/torgeternity/templates/partials/psionicpower-card.hbs",
-        "specialability": "systems/torgeternity/templates/partials/specialability-card.hbs"
+        "specialability": "systems/torgeternity/templates/partials/specialability-card.hbs",
+        "vehicle": "systems/torgeternity/templates/partials/vehicle-card.hbs"
     };
     
     async roll() {
@@ -35,44 +36,44 @@ export default class torgeternityItem extends Item {
         return ChatMessage.create(chatData);
     };
 
-    async attack() {
-        // Roll those dice!
-        let dicerollint = new Roll('1d20x10x20').roll();
-        dicerollint.toMessage();
-        let diceroll = dicerollint.total;
-        
-        // get Bonus number
-        if (diceroll == 1) {
-           var messageContent = `Failure (Check for Mishap)`; var bonus = -10;}
-        else if (diceroll == 2) {
-           var messageContent = 'Bonus: -8 (Disconnect if 4 Case)'; var bonus = -8;}
-        else if (diceroll <= 4) {
-           var messageContent = 'Bonus: -6 (Disconnect if 4 Case)'; var bonus = -6;}
-        else if (diceroll <= 6) {
-           var messageContent = 'Bonus: -4'; var bonus = -4;}
-        else if (diceroll <= 8) {
-           var messageContent = 'Bonus: -2'; var bonus = -2;}
-        else if (diceroll <= 10) {
-           var messageContent = 'Bonus: -1'; var bonus = -1;}
-        else if (diceroll <= 12) {
-           var messageContent = 'Bonus: +0'; var bonus = 0;}
-        else if (diceroll <= 14) {
-           var messageContent = 'Bonus +1'; var bonus = 1;}
-        else if (diceroll == 15) {
-           var messageContent = 'Bonus +2'; var bonus = 2;}
-        else if (diceroll ==16) {
-           var messageContent = 'Bonus: +3'; var bonus = 3;}
-        else if (diceroll == 17) {
-           var messageContent = 'Bonus: +4'; var bonus = 4;}
-        else if (diceroll == 18) {
-           var messageContent = 'Bonus: +5'; var bonus = 5;}
-        else if (diceroll == 19) {
-           var messageContent = 'Bonus: +6'; var bonus = 6;}
-        else if (diceroll == 20) {
-           var messageContent = 'Bonus: +7'; var bonus = 7;}
-        else if (diceroll >= 21) {
-           var bonus = 7 + Math.ceil((diceroll - 20)/5)
-           var messageContent = `Bonus:` + bonus; }
+   async weaponAttack() {
+      // Roll those dice!
+      let dicerollint = new Roll('1d20x10x20').roll();
+      dicerollint.toMessage();
+      let diceroll = dicerollint.total;
+      
+      // get Bonus number
+      if (diceroll == 1) {
+         var messageContent = `Failure (Check for Mishap)`; var bonus = -10;}
+      else if (diceroll == 2) {
+         var messageContent = 'Bonus: -8 (Disconnect if 4 Case)'; var bonus = -8;}
+      else if (diceroll <= 4) {
+         var messageContent = 'Bonus: -6 (Disconnect if 4 Case)'; var bonus = -6;}
+      else if (diceroll <= 6) {
+         var messageContent = 'Bonus: -4'; var bonus = -4;}
+      else if (diceroll <= 8) {
+         var messageContent = 'Bonus: -2'; var bonus = -2;}
+      else if (diceroll <= 10) {
+         var messageContent = 'Bonus: -1'; var bonus = -1;}
+      else if (diceroll <= 12) {
+         var messageContent = 'Bonus: +0'; var bonus = 0;}
+      else if (diceroll <= 14) {
+         var messageContent = 'Bonus +1'; var bonus = 1;}
+      else if (diceroll == 15) {
+         var messageContent = 'Bonus +2'; var bonus = 2;}
+      else if (diceroll ==16) {
+         var messageContent = 'Bonus: +3'; var bonus = 3;}
+      else if (diceroll == 17) {
+         var messageContent = 'Bonus: +4'; var bonus = 4;}
+      else if (diceroll == 18) {
+         var messageContent = 'Bonus: +5'; var bonus = 5;}
+      else if (diceroll == 19) {
+         var messageContent = 'Bonus: +6'; var bonus = 6;}
+      else if (diceroll == 20) {
+         var messageContent = 'Bonus: +7'; var bonus = 7;}
+      else if (diceroll >= 21) {
+         var bonus = 7 + Math.ceil((diceroll - 20)/5)
+         var messageContent = `Bonus:` + bonus; }
         
       // Calculate base damage
       if (this.data.data.damageType == "flat") {
@@ -82,7 +83,7 @@ export default class torgeternityItem extends Item {
       else {
          var baseDamage = this.data.data.damage
       }
-        
+
       // Retrieve the applicable skill value from the current actor
       var skillToUse = this.actor.data.data.skills[this.data.data.attackWith]; 
       var skillValue = skillToUse.value;
@@ -93,7 +94,7 @@ export default class torgeternityItem extends Item {
       // Put together Chat Data
       let chatData = {
          user: game.user._id,
-         speaker: this.actor,
+         speaker: ChatMessage.getSpeaker(),
       };
 
       // Assemble information needed by attack card
@@ -109,10 +110,11 @@ export default class torgeternityItem extends Item {
       // Send the chat
       chatData.content = await renderTemplate(this.chatTemplate["attack"], cardData);
 
-      chatData.attack = true;
-
+      chatData.weaponAttack = true;
+      
       return ChatMessage.create(chatData);
-    }
+   };
+
    async bonus() {
       var rollResult, dieValue, finalValue, totalDice, lastDie, lastDieImage, explosions, hideBonusFlag;
       rollResult = new Roll('1d6').roll().total;
@@ -173,6 +175,7 @@ export default class torgeternityItem extends Item {
 
       // Send the chat
       chatData.content = await renderTemplate(this.chatTemplate["bonus"], cardData);
+
       chatData.bonus = true;
 
       return ChatMessage.create(chatData);
@@ -243,7 +246,7 @@ export default class torgeternityItem extends Item {
     // Send the chat
     chatData.content = await renderTemplate(this.chatTemplate["power"], cardData);
 
-    chatData.attack = true;
+    chatData.power = true;
 
     return ChatMessage.create(chatData);
   }
