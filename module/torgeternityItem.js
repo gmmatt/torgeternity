@@ -14,7 +14,8 @@ export default class torgeternityItem extends Item {
         "spell": "systems/torgeternity/templates/partials/spell-card.hbs",
         "miracle": "systems/torgeternity/templates/partials/miracle-card.hbs",
         "psionicpower": "systems/torgeternity/templates/partials/psionicpower-card.hbs",
-        "specialability": "systems/torgeternity/templates/partials/specialability-card.hbs"
+        "specialability": "systems/torgeternity/templates/partials/specialability-card.hbs",
+        "vehicle": "systems/torgeternity/templates/partials/vehicle-card.hbs"
     };
     
     async roll() {
@@ -93,7 +94,7 @@ export default class torgeternityItem extends Item {
       // Put together Chat Data
       let chatData = {
          user: game.user._id,
-         speaker: this.actor,
+         speaker: ChatMessage.getSpeaker(),
       };
 
       // Assemble information needed by attack card
@@ -112,7 +113,8 @@ export default class torgeternityItem extends Item {
       chatData.weaponAttack = true;
       
       return ChatMessage.create(chatData);
-   }
+   };
+
    async bonus() {
       var rollResult, dieValue, finalValue, totalDice, lastDie, lastDieImage, explosions, hideBonusFlag;
       rollResult = new Roll('1d6').roll().total;
