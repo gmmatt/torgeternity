@@ -121,10 +121,32 @@ export default class torgeternityActorSheet extends ActorSheet {
   
         // Delete Inventory Item
         html.find('.item-delete').click(ev => {
-            const li = $(ev.currentTarget).parents(".item");
-            this.actor.deleteOwnedItem(li.data("itemId"));
-            li.slideUp(200, () => this.render(false));
-      }); 
+            let applyChanges = false;
+            new Dialog({
+                title: "Confirm Deletion",
+                content: "Are you sure you want to delete this? It will be permanently removed from the sheet.",
+                buttons: {
+                    yes: {
+                        icon: '<i class="fas fa-check"></i>',
+                        label: "Yes",
+                        callback: () => applyChanges = true
+                    },
+                    no: {
+                        icon: '<i class="fas fa-times"></i>',
+                        label: "No"
+                    },
+                },
+                default: "yes",
+                close: html => {
+                    if (applyChanges) {
+                        const li = $(ev.currentTarget).parents(".item");
+                        this.actor.deleteOwnedItem(li.data("itemId"));
+                        li.slideUp(200, () => this.render(false));            
+                    }
+                }                
+            }).render(true);
+        }); 
+
         // Toggle Item Detail Visibility
         html.find('.item-name').click(ev => {
             let section = event.currentTarget.closest(".item");
