@@ -76,6 +76,7 @@ export default class torgeternityItem extends Item {
          var messageContent = `Bonus:` + bonus; }
         
       // Calculate base damage
+      
       if (this.data.data.damageType == "flat") {
          var baseDamage = this.data.data.damage;}
       else if (this.data.data.damageType == "strengthPlus") {

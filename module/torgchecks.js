@@ -92,7 +92,7 @@ export function PossibilityCheck ({
             icon: "<i class='fas fa-times'></i>",
             label: `Cancel`
          },
-   },
+      },
          default: "yes",
    close: html => {
     if (applyChanges) {
