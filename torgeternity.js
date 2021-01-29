@@ -3,6 +3,7 @@ import torgeternityItem from "./module/torgeternityItem.js";
 import torgeternityActor from "./module/torgeternityActor.js";
 import torgeternityItemSheet from "./module/sheets/torgeternityItemSheet.js";
 import torgeternityActorSheet from "./module/sheets/torgeternityActorSheet.js";
+import statuses from "./module/statuses.js";
 
 Hooks.once("init", function() {
     console.log("torgeternity | Initializing Torg Eternity System");
@@ -16,6 +17,8 @@ Hooks.once("init", function() {
 
     Actors.unregisterSheet("core", ItemSheet);
     Actors.registerSheet("torgeternity", torgeternityActorSheet, {makeDefault: true});
+
+    statuses.registerStatusEffects();
 });
 
 Handlebars.registerHelper("concatSkillValue", function(skillName){
