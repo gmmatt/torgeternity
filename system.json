@@ -14,8 +14,55 @@
     "torgeternity.css"
   ],
   "packs": [
-
-    
+    {
+      "name": "firearms",
+      "label": "Firearms",
+      "system": "torgeternity",
+      "path": "./packs/firearms.db",
+      "entity": "Item"
+    },
+    {
+      "name": "heavyweapons",
+      "label": "Heavy Weapons",
+      "system": "torgeternity",
+      "path": "./packs/heavyweapons.db",
+      "entity": "Item"
+    },
+    {
+      "name": "miracles",
+      "label": "Miracles",
+      "system": "torgeternity",
+      "path": "./packs/miracles.db",
+      "entity": "Item"
+    },
+    {
+      "name": "missileweapons",
+      "label": "Missile Weapons",
+      "system": "torgeternity",
+      "path": "./packs/missileweapons.db",
+      "entity": "Item"
+    },
+    {
+      "name": "perks",
+      "label": "Perks",
+      "system": "torgeternity",
+      "path": "./packs/perks.db",
+      "entity": "Item"
+    },
+    {
+      "name": "psionicpowers",
+      "label": "Psionic Powers",
+      "system": "torgeternity",
+      "path": "./packs/psionicpowers.db",
+      "entity": "Item"
+    },
+    {
+      "name": "spells",
+      "label": "Spells",
+      "system": "torgeternity",
+      "path": "./packs/spells.db",
+      "entity": "Item"
+    }
   ],
   "languages": [
     {
