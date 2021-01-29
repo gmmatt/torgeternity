@@ -49,19 +49,19 @@
              </td>
             <td style="width:65%"> <!-- right column -->
                 <p class="item-data-label">
-                    Description
+                    {{localize "torgeternity.gear.description"}}
                 </p>
                 <div class="item-description-textarea" style="padding:0px 0px 0px 10px;height:200px">
                     {{editor content=data.description target="data.description" button=true owner=owner editable=editable}}
                 </div>
                 <p class="item-data-label">
-                    Good Result
+                    {{localize "torgeternity.sheetLabels.goodResult"}}
                 </p>
                 <div style="padding:0px 0px 0px 10px">
                     <textarea name="data.good" class="item-description-textarea" style="height:55px">{{data.good}}</textarea>
                 </div>
                 <p class="item-data-label">
-                    Outstanding Result
+                    {{localize "torgeternity.sheetLabels.outstandingResult"}}
                 </p>
                 <div style="padding:0px 0px 0px 10px">
                     <textarea name="data.outstanding" class="item-description-textarea" style="height:55px">{{data.outstanding}}</textarea>

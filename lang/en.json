@@ -232,7 +232,16 @@
             "other": "Other",
             "spell": "Spell",
             "miracle": "Miracle",
-            "psionicPower": "Psionic Power"
+            "psionicPower": "Psionic Power",
+            "abilities": "Abilities",
+            "implant": "Implant",
+            "eternityShard": "Eternity Shard",
+            "vehicle": "Vehicle",
+            "enhancement": "Enhancement",
+            "details": "Details",
+            "goodResult": "Good Result",
+            "outstandingResult": "Outstanding Result"
+
         },
         "itemSheetDescriptions": {
             "perk": "Perk",

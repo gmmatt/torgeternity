@@ -5,49 +5,6 @@ export default class torgeternityActor extends Actor {
         
         if (this._data.type === "stormknight") {        
             var skillset = this.data.data.skills;
-            // Set base attributes - because the defaults from template.json aren't showing up on all skills (not sure why)
-
-
-//            skillset.airVehicles.baseAttribute = "dexterity";
-//            skillset.alteration.baseAttribute = "mind";
-//            skillset.apportation.baseAttribute = "spirit";
-//            skillset.beastRiding.baseAttribute = "dexterity";
-//            skillset.computers.baseAttribute = "mind";
-//            skillset.conjuration.baseAttribute = "spirit";
-//            skillset.divination.baseAttribute = "mind";
-//            skillset.dodge.baseAttribute = "dexterity";
-//            skillset.energyWeapons.baseAttribute = "dexterity";
-//           skillset.evidenceAnalysis.baseAttribute = "mind";
-//            skillset.faith.baseAttribute = "spirit";
-//            skillset.find.baseAttribute = "mind";
-//            skillset.fireCombat.baseAttribute = "dexterity";
-//            skillset.firstAid.baseAttribute = "mind";
-//            skillset.heavyWeapons.baseAttribute = "dexterity";
-//            skillset.intimidation.baseAttribute = "spirit";
-//            skillset.kinesis.baseAttribute = "spirit";
-//            skillset.landVehicles.baseAttribute = "dexterity";
-//            skillset.language.baseAttribute = "mind";
-//            skillset.lockpicking.baseAttribute = "dexterity";
-//            skillset.maneuver.baseAttribute = "dexterity";
-//            skillset.medicine.baseAttribute = "mind";
-//            skillset.meleeWeapons.baseAttribute = "dexterity";
-//            skillset.missileWeapons.baseAttribute = "dexterity";
-//            skillset.persuasion.baseAttribute = "charisma";
-//            skillset.precognition.baseAttribute = "mind";
-//            skillset.profession.baseAttribute = "mind";
-//            skillset.reality.baseAttribute = "spirit";
-//            skillset.scholar.baseAttribute = "mind";
-//            skillset.science.baseAttribute = "mind";
-//            skillset.stealth.baseAttribute = "dexterity";
-//            skillset.streetwise.baseAttribute = "charisma";
-//            skillset.survival.baseAttribute = "mind";
-//            skillset.taunt.baseAttribute = "charisma";
-//           skillset.telepathy.baseAttribute = "charisma";
-//            skillset.tracking.baseAttribute = "mind";
-//            skillset.trick.baseAttribute = "mind";
-//            skillset.unarmedCombat.baseAttribute = "dexterity";
-//            skillset.waterVehicles.baseAttribute = "dexterity";
-//            skillset.willpower.baseAttribute = "spirit";
 
             // Derive Skill values for Storm Knights
             for (let [name, skill] of Object.entries(skillset)) {
@@ -97,6 +54,15 @@ export default class torgeternityActor extends Actor {
                 this.data.data.trickDefense = this.data.data.attributes.mind
             };
 
+            // Set Stymied and Vulnerable Conditions
+            if (this.data.data.stymied) {}
+            else {
+                this.data.data.stymied = 0
+            };
+            if (this.data.data.vulnerable){}
+            else {
+                this.data.data.vulnerable = 0
+            }
 
         };
 

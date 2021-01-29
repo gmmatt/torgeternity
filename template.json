@@ -291,7 +291,8 @@
                 "background": "",
                 "race": ""
             },
-            "editstate": "inline"
+            "editstate": "inline",
+            "fatigue": "1"
         },
         "threat": {
             "templates": [
