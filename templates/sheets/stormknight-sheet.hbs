@@ -200,7 +200,8 @@
                                 {{#each data.skills as |content name|}}
                                     <tr>
                                         <td>
-                                            <a class="skill-roll" data-skill-value="{{content.value}}" data-skill-name="{{localize (concatSkillName name)}}">{{localize (concatSkillName name)}}</a> 
+<!--                                            <a class="skill-roll" data-skill-value="{{content.value}}" data-skill-name="{{localize (concatSkillName name)}}">{{localize (concatSkillName name)}}</a>  -->
+                                            <a class="skill-roll" data-baseAttribute="{{content.baseAttribute}}" data-adds="{{content.adds}}" data-value="{{content.value}}" data-unskilledUse="{{content.unskilledUse}}" data-name="{{localize (concatSkillName name)}}">{{localize (concatSkillName name)}}</a>
                                         </td>
                                         <td class="skill-roll">
                                             {{localize (concatAttributeName content.baseAttribute)}}
@@ -215,7 +216,7 @@
                                 {{/each}}
                             {{else}}
                                 {{#each data.skills as |content name|}}
-                                    {{#if content.value}}                                                                            
+                                    {{#if content.adds}}                                                                            
                                     <tr>
                                         <td>
                                             <a class="skill-roll" data-skill-value="{{content.value}}" data-skill-name="{{localize (concatSkillName name)}}">{{localize (concatSkillName name)}}</a> 

@@ -8,7 +8,15 @@ export default class torgeternityActor extends Actor {
 
             // Derive Skill values for Storm Knights
             for (let [name, skill] of Object.entries(skillset)) {
-                skill.value = parseInt(skill.adds) + parseInt(this.data.data.attributes[skill.baseAttribute]);
+                if (skill.adds === null) {
+                    if (skill.unskilledUse === 1) {
+                        skill.value = parseInt(this.data.data.attributes[skill.baseAttribute]);
+                    } else {
+                        skill.value = "-"
+                    }
+                } else {
+                    skill.value = parseInt(skill.adds) + parseInt(this.data.data.attributes[skill.baseAttribute]);
+                }
             }
             
             // Set Defensive values for Storm Knight sheet

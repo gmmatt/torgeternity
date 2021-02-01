@@ -161,11 +161,13 @@ export default class torgeternityActorSheet extends ActorSheet {
     }
 
     _onSkillRoll(event) {
-        
         torgchecks.SkillCheck ({
             actor: this.actor,
-            skillValue: event.currentTarget.dataset.skillValue,
-            skillName: event.currentTarget.dataset.skillName
+            skillName: event.currentTarget.dataset.name,
+            skillBaseAttribute: event.currentTarget.dataset.baseAttribute,
+            skillAdds: event.currentTarget.dataset.adds,
+            skillValue: event.currentTarget.dataset.value,
+            unskilledUse: event.currentTarget.dataset.unskilledUse
         })
     }
 

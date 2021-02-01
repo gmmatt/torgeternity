@@ -4,14 +4,41 @@
         <td>
             <img class="actor-icon" src="{{actorPic}}" title="{{name}}" style="width:50px;height:50px" />
         </td>
-        <td class="chat-title" style="font-size:20px;padding:0px 0px 0px 0px">
-            {{skillName}} Test
+        <td>
+            <div width=100%>
+                <p class="skill-chat-title">{{skillName}} Test</p>
+                <p class="skill-unskilled-label" style="{{unskilledLabel}}">Unskilled</div>
+            </div>
         </td>
     </tr>
     </table>
     <div class="chat-text" style="padding:0px">
-        <p style="text-align:center;font-size:24px;font-weight:bold;padding:3px 0px 0px 0px">{{result}}</p>
-        <p style="padding:0px 0px 0px 5px">Skill Value: {{skillValue}}</p>
-        <p style="padding:0px 0px 8px 5px">{{bonus}}</p>
+        <p class="skill-roll-result">{{rollResult}}</p>
+        <p class="skill-roll-action-label">Action Total</p>
+        <table class="skill-roll-table">
+            <tr>
+                <td class="skill-roll-table-1">
+                    Skill Value:
+                </td>
+                <td class="skill-roll-table-2">
+                    {{skillValue}}
+                </td>
+            </tr>
+            <tr>
+                <td style="background:white">
+                    (Die Total {{rollTotal}})
+                </td>
+                <td style="background:white">
+                </td>
+            </tr>
+            <tr>
+                <td class="skill-roll-table-1">
+                    Bonus:
+                </td>
+                <td class="skill-roll-table-2">
+                    {{bonus}} 
+                </td>
+            </tr>
+        </table>
     </div>
 </div>

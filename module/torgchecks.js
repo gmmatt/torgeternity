@@ -1,50 +1,58 @@
 export function SkillCheck({
-    skillName = null,
-    skillValue = null,
-    actor = null } = {}) {
-    let dicerollint = new Roll('1d20x10x20').roll();
-    dicerollint.toMessage();
-    let diceroll = dicerollint.total;
-    
-    var messageContent1 = '<p style="text-align:center;font-weight:bold">' + skillName + ' Check </p>' + '<p>' + 'Skill Value: ' + skillValue + '</p><p>' + 'Roll Total:' + diceroll + '</p><p>';
-    
-    
-    if (diceroll == 1) {
-       var messageContent = `Failure (Check for Mishap)`; var bonus = -10;}
-    else if (diceroll == 2) {
-       var messageContent = 'Bonus: -8 (Disconnect if 4 Case)'; var bonus = -8;}
-    else if (diceroll <= 4) {
-       var messageContent = 'Bonus: -6 (Disconnect if 4 Case)'; var bonus = -6;}
-    else if (diceroll <= 6) {
-       var messageContent = 'Bonus: -4'; var bonus = -4;}
-    else if (diceroll <= 8) {
-       var messageContent = 'Bonus: -2'; var bonus = -2;}
-    else if (diceroll <= 10) {
-       var messageContent = 'Bonus: -1'; var bonus = -1;}
-    else if (diceroll <= 12) {
-       var messageContent = 'Bonus: +0'; var bonus = 0;}
-    else if (diceroll <= 14) {
-       var messageContent = 'Bonus +1'; var bonus = 1;}
-    else if (diceroll == 15) {
-       var messageContent = 'Bonus +2'; var bonus = 2;}
-    else if (diceroll ==16) {
-       var messageContent = 'Bonus: +3'; var bonus = 3;}
-    else if (diceroll == 17) {
-       var messageContent = 'Bonus: +4'; var bonus = 4;}
-    else if (diceroll == 18) {
-       var messageContent = 'Bonus: +5'; var bonus = 5;}
-    else if (diceroll == 19) {
-       var messageContent = 'Bonus: +6'; var bonus = 6;}
-    else if (diceroll == 20) {
-       var messageContent = 'Bonus: +7'; var bonus = 7;}
-    else if (diceroll >= 21) {
-       var bonus = 7 + Math.ceil((diceroll - 20)/5)
-       var messageContent = `Bonus:` + bonus; }
-    
-    var rollResult = parseInt(skillValue) + parseInt(bonus)
+   skillName = null,
+   skillBaseAttribute = null,
+   skillAdds = null,
+   skillValue= null,
+   unskilledUse = null,
+   actor = null } = {}) {
+   var test = {
+      actor: actor,
+      skillName: skillName,
+      skillBaseAttribute: skillBaseAttribute,
+      skillAdds: skillAdds,
+      skillValue: skillValue,
+      unskilledUse: unskilledUse
+   };
 
-    var messageContent2 = '<p>' + 'Result: ' + rollResult
-    var finalMessage= messageContent1 + messageContent + messageContent2
+   // Cannot Attempt Certain Tests Unskilled
+   if (test.skillValue === "-") {
+      var cantRollData = {
+         user: game.user._id,
+         speaker: ChatMessage.getSpeaker(),
+         owner: actor,
+      };
+
+      var templateData = {
+         message: skillName + " cannot be used unless it is learned (at least 1 skill add).",
+         actorPic: actor.data.img
+      };
+
+      const templatePromise = renderTemplate("./systems/torgeternity/templates/partials/skill-error-card.hbs",templateData);
+
+      templatePromise.then(content => {
+         cantRollData.content = content;
+         ChatMessage.create(cantRollData);
+      })
+
+      return
+   };
+   
+   // Roll as skilled or unskilled
+   var diceroll
+   if (test.skillAdds > 0) {
+      diceroll = new Roll('1d20x10x20').roll();
+      test.unskilledLabel = "display:none"
+   } else {
+      diceroll = new Roll('1d20x10').roll();
+      test.unskilledLabel = "display:block"
+   };
+   diceroll.toMessage();
+
+   // Get Bonus and Roll Result
+   test.rollTotal = diceroll.total;
+   test.bonus = torgBonus(test.rollTotal);
+            
+   test.rollResult = parseInt(test.skillValue) + parseInt(test.bonus);
     
     var chatData = {
       user: game.user._id,
@@ -52,15 +60,9 @@ export function SkillCheck({
       owner:  actor
    };
 
-   var cardData = {
-      skillName: skillName,
-      skillValue: skillValue,
-      bonus: messageContent,
-      result: rollResult,
-      actorPic: actor.data.img
-   };
+   test.actorPic = actor.data.img;
 
-   const templatePromise = renderTemplate("./systems/torgeternity/templates/partials/skill-card.hbs", cardData);
+   const templatePromise = renderTemplate("./systems/torgeternity/templates/partials/skill-card.hbs", test);
 
    templatePromise.then(content => {
       chatData.content = content;      
@@ -251,50 +253,85 @@ export function UpRoll ({
    }}).render(true);
    }
 
-   export function activeDefenseRoll ({
-      actor = null}) {
-      let dicerollint = new Roll('1d20x10x20').roll();
-      dicerollint.toMessage();
-      let diceroll = dicerollint.total;
-      
- 
-     
-      if (diceroll <= 14) {
-         var messageContent = 'Bonus +1'; var bonus = 1;}
-      else if (diceroll == 15) {
-         var messageContent = 'Bonus +2'; var bonus = 2;}
-      else if (diceroll ==16) {
-         var messageContent = 'Bonus: +3'; var bonus = 3;}
-      else if (diceroll == 17) {
-         var messageContent = 'Bonus: +4'; var bonus = 4;}
-      else if (diceroll == 18) {
-         var messageContent = 'Bonus: +5'; var bonus = 5;}
-      else if (diceroll == 19) {
-         var messageContent = 'Bonus: +6'; var bonus = 6;}
-      else if (diceroll == 20) {
-         var messageContent = 'Bonus: +7'; var bonus = 7;}
-      else if (diceroll >= 21) {
-         var bonus = 7 + Math.ceil((diceroll - 20)/5)
-         var messageContent = `Bonus:` + bonus; }
-      
-      
-      var chatData = {
-         user: game.user._id,
-         speaker: ChatMessage.getSpeaker(),
-         owner:  actor
-      };
+export function activeDefenseRoll ({
+   actor = null}) {
+   let dicerollint = new Roll('1d20x10x20').roll();
+   dicerollint.toMessage();
+   let diceroll = dicerollint.total;
    
-      var cardData = {
-         bonus: messageContent,
-         actorPic: actor.data.img
-      };
+
    
-      const templatePromise = renderTemplate("./systems/torgeternity/templates/partials/activeDefense-card.hbs", cardData);
+   if (diceroll <= 14) {
+      var messageContent = 'Bonus +1'; var bonus = 1;}
+   else if (diceroll == 15) {
+      var messageContent = 'Bonus +2'; var bonus = 2;}
+   else if (diceroll ==16) {
+      var messageContent = 'Bonus: +3'; var bonus = 3;}
+   else if (diceroll == 17) {
+      var messageContent = 'Bonus: +4'; var bonus = 4;}
+   else if (diceroll == 18) {
+      var messageContent = 'Bonus: +5'; var bonus = 5;}
+   else if (diceroll == 19) {
+      var messageContent = 'Bonus: +6'; var bonus = 6;}
+   else if (diceroll == 20) {
+      var messageContent = 'Bonus: +7'; var bonus = 7;}
+   else if (diceroll >= 21) {
+      var bonus = 7 + Math.ceil((diceroll - 20)/5)
+      var messageContent = `Bonus:` + bonus; }
    
-      templatePromise.then(content => {
-         chatData.content = content;      
-         ChatMessage.create(chatData);
-      });
-     
-}
+   
+   var chatData = {
+      user: game.user._id,
+      speaker: ChatMessage.getSpeaker(),
+      owner:  actor
+   };
+
+   var cardData = {
+      bonus: messageContent,
+      actorPic: actor.data.img
+   };
+
+   const templatePromise = renderTemplate("./systems/torgeternity/templates/partials/activeDefense-card.hbs", cardData);
+
+   templatePromise.then(content => {
+      chatData.content = content;      
+      ChatMessage.create(chatData);
+   });
+   
+   };
+
+export function torgBonus (rollTotal) {
+   if (rollTotal == 1) {
+      var bonus = -10}
+      else if (rollTotal == 2) {
+      var bonus = -8 }
+      else if (rollTotal <= 4) {
+      var bonus = -6 }
+      else if (rollTotal <= 6) {
+      var bonus = -4 }
+      else if (rollTotal <= 8) {
+      var bonus = -2 }
+      else if (rollTotal <= 10) {
+      var bonus = -1 }
+      else if (rollTotal <= 12) {
+      var bonus = 0 }
+      else if (rollTotal <= 14) {
+      var bonus = 1 }
+      else if (rollTotal == 15) {
+      var bonus = 2 }
+      else if (rollTotal ==16) {
+      var bonus = 3 }
+      else if (rollTotal == 17) {
+      var bonus = 4 }
+      else if (rollTotal == 18) {
+      var bonus = 5 }
+      else if (rollTotal == 19) {
+      var bonus = 6 }
+      else if (rollTotal == 20) {
+      var bonus = 7 }
+      else if (rollTotal >= 21) {
+      var bonus = 7 + Math.ceil((rollTotal - 20)/5) }
+      return bonus
+
+   }
 
