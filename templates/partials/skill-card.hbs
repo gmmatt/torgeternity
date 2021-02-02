@@ -13,20 +13,21 @@
     </tr>
     </table>
     <div class="chat-text" style="padding:0px">
-        <p class="skill-roll-result">{{rollResult}}</p>
-        <p class="skill-roll-action-label">Action Total</p>
+        <p class="skill-roll-result">{{resultText}}</p>
+        <p class="skill-roll-action-label" style="{{actionTotalLabel}}">Action Total</p>
+        <p class="skill-roll-disconnect-label" style="{{disconnectLabel}}">Possible Disconnect</p>
         <table class="skill-roll-table">
             <tr>
                 <td class="skill-roll-table-1">
-                    Skill Value:
+                    {{typeLabel}} Value:
                 </td>
                 <td class="skill-roll-table-2">
                     {{skillValue}}
                 </td>
             </tr>
-            <tr>
+            <tr style="border:1px solid black">
                 <td style="background:white">
-                    (Die Total {{rollTotal}})
+                    Die Total {{rollTotal}}
                 </td>
                 <td style="background:white">
                 </td>
@@ -36,9 +37,19 @@
                     Bonus:
                 </td>
                 <td class="skill-roll-table-2">
-                    {{bonus}} 
+                    <div><span style="{{bonusPlusLabel}}">+</span>{{bonus}}</div>
                 </td>
             </tr>
+
+            <tr style="{{modifierLabel}}">
+                <td class="skill-roll-table-1">
+                    Modifiers:
+                </td>
+                <td class="skill-roll-table-2">
+                    <div title="{{modifierText}}" style="display:block">{{modifiers}}</div>
+                </td>
+            </tr>
+
         </table>
     </div>
 </div>

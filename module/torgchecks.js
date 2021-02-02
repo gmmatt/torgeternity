@@ -1,4 +1,5 @@
 export function SkillCheck({
+   testType = null,
    skillName = null,
    skillBaseAttribute = null,
    skillAdds = null,
@@ -11,7 +12,8 @@ export function SkillCheck({
       skillBaseAttribute: skillBaseAttribute,
       skillAdds: skillAdds,
       skillValue: skillValue,
-      unskilledUse: unskilledUse
+      unskilledUse: unskilledUse,
+      testType: testType
    };
 
    // Cannot Attempt Certain Tests Unskilled
@@ -39,28 +41,82 @@ export function SkillCheck({
    
    // Roll as skilled or unskilled
    var diceroll
-   if (test.skillAdds > 0) {
+   if (test.testType === "skill") {
+      if (test.skillAdds > 0) {
+         diceroll = new Roll('1d20x10x20').roll();
+         test.unskilledLabel = "display:none"
+      } else {
+         diceroll = new Roll('1d20x10').roll();
+         test.unskilledLabel = "display:block"
+      };
+   } else {
       diceroll = new Roll('1d20x10x20').roll();
       test.unskilledLabel = "display:none"
-   } else {
-      diceroll = new Roll('1d20x10').roll();
-      test.unskilledLabel = "display:block"
    };
    diceroll.toMessage();
 
    // Get Bonus and Roll Result
    test.rollTotal = diceroll.total;
    test.bonus = torgBonus(test.rollTotal);
+
+   if (test.bonus >= 1) {
+      test.bonusPlusLabel = "display:inline"
+   } else {
+      test.bonusPlusLabel = "display:none"
+   }
             
-   test.rollResult = parseInt(test.skillValue) + parseInt(test.bonus);
+   // Set Modifiers and Chat Content Relating to Modifiers
+   test.displayModifiers = false;
+   test.modifiers = 0;
+   test.modifierText = "";
+
+   if (actor.data.data.wounds.value > 0) {
+      test.displayModifiers = true;
+      test.modifierText = "Wounds -" + actor.data.data.wounds.value;
+      test.modifiers = -(actor.data.data.wounds.value)
+   };
+
+   if (test.displayModifiers === true) {
+      test.modifierLabel = "display:"
+   } else {
+      test.modifierLabel = "display:none"
+   };
+
+
+   test.rollResult = parseInt(test.skillValue) + parseInt(test.bonus) + parseInt(test.modifiers);
+
+   // Choose Text to Display as Result
+   if (test.rollTotal === 1) {
+      test.resultText = "Mishap";
+      test.actionTotalLabel = "display:none"
+   } else {
+      test.resultText = test.rollResult;
+      test.actionTotalLabel = "display:block"
+   };
+
+
+   // Remind Player to Check for Disconnect?
+   if (test.rollTotal <= 4) {
+      test.disconnectLabel = "display:block"
+   } else {
+      test.disconnectLabel = "display:none"
+   }
+   
+   // Label as Skill vs Attribute Test
+   if (test.testType === "skill") {
+      test.typeLabel = "Skill"
+   } else {
+      test.typeLabel = "Attribute"
+   }
     
-    var chatData = {
+   // Build Remaining Roll Data
+   test.actorPic = actor.data.img;
+
+   var chatData = {
       user: game.user._id,
       speaker: ChatMessage.getSpeaker(),
       owner:  actor
    };
-
-   test.actorPic = actor.data.img;
 
    const templatePromise = renderTemplate("./systems/torgeternity/templates/partials/skill-card.hbs", test);
 
