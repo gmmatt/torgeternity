@@ -1,4 +1,5 @@
 import {torgeternity} from "./module/config.js";
+import * as Chat from "./module/chat.js";
 import torgeternityItem from "./module/torgeternityItem.js";
 import torgeternityActor from "./module/torgeternityActor.js";
 import torgeternityItemSheet from "./module/sheets/torgeternityItemSheet.js";
@@ -31,4 +32,6 @@ Handlebars.registerHelper("concatAttributeName", function(attributeName){
 Handlebars.registerHelper("concatSkillName", function(skillName){
     var localName = "torgeternity.skills." + skillName
     return localName;
-})
+});
+
+Hooks.on("renderChatLog", (app, html, data) => Chat.addChatListeners(html));
