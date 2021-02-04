@@ -6,7 +6,7 @@
         </td>
         <td>
             <div width=100%>
-                <p class="skill-chat-title">{{skillName}} Test</p>
+                <p class="skill-chat-title">{{chatTitle}}</p>
                 <p class="skill-unskilled-label" style="{{unskilledLabel}}">Unskilled</div>
             </div>
         </td>
@@ -27,7 +27,7 @@
             </tr>
             <tr style="border:1px solid black">
                 <td style="background:white">
-                    Die Total {{rollTotal}}
+                    Die Total {{combinedRollTotal}}
                 </td>
                 <td style="background:white">
                 </td>
@@ -53,11 +53,109 @@
         </table>
 
         <div class="skill-roll-menu">
-            <a class="roll-possibility" data-actor="{{actor}}" data-skillname="{{skillName}}">Possibility</a>&nbsp;&bull;&nbsp;
-            <a class="roll-up">Up</a>&nbsp;&bull;&nbsp;
-            <a class="roll-hero">Hero</a>&nbsp;&bull;&nbsp;
-            <a class="roll-drama">Drama</a>&nbsp;&bull;&nbsp;
-            <a class="roll-plus3">+3 Card</a>
+            <a class="roll-possibility" 
+                style="{{possibilityStyle}}"
+                data-actor="{{actor}}" 
+                data-actor-pic="{{actorPic}}" 
+                data-skill-name="{{skillName}}" 
+                data-skill-value="{{skillValue}}" 
+                data-test-type="{{testType}}" 
+                data-unskilled-use="{{unskilledUse}}" 
+                data-skill-adds="{{skillAdds}}" 
+                data-skill-base-attribute="{{skillBaseAttribute}}"
+                data-roll-total="{{rollTotal}}"
+                data-wound-modifier="{{woundModifier}}"
+                data-possibility-total="{{possibilityTotal}}"
+                data-up-total="{{upTotal}}"
+                data-hero-total = "{{heroTotal}}"
+                data-drama-total = "{{dramaTotal}}"
+                data-cards-played = "{{cardsPlayed}}"
+            >
+            Possibility
+            </a>
+            &nbsp;&bull;&nbsp;
+            <a class="roll-up"
+                style="{{upStyle}}"
+                data-actor="{{actor}}" 
+                data-actor-pic="{{actorPic}}" 
+                data-skill-name="{{skillName}}" 
+                data-skill-value="{{skillValue}}" 
+                data-test-type="{{testType}}" 
+                data-unskilled-use="{{unskilledUse}}" 
+                data-skill-adds="{{skillAdds}}" 
+                data-skill-base-attribute="{{skillBaseAttribute}}"
+                data-roll-total="{{rollTotal}}"
+                data-wound-modifier="{{woundModifier}}"
+                data-possibility-total="{{possibilityTotal}}"
+                data-up-total="{{upTotal}}"
+                data-hero-total = "{{heroTotal}}"
+                data-drama-total = "{{dramaTotal}}"
+                data-cards-played = "{{cardsPlayed}}"            
+            >
+            Up
+            </a>
+            &nbsp;&bull;&nbsp;
+            <a class="roll-hero"
+                style="{{heroStyle}}"
+                data-actor="{{actor}}" 
+                data-actor-pic="{{actorPic}}" 
+                data-skill-name="{{skillName}}" 
+                data-skill-value="{{skillValue}}" 
+                data-test-type="{{testType}}" 
+                data-unskilled-use="{{unskilledUse}}" 
+                data-skill-adds="{{skillAdds}}" 
+                data-skill-base-attribute="{{skillBaseAttribute}}"
+                data-roll-total="{{rollTotal}}"
+                data-wound-modifier="{{woundModifier}}"
+                data-possibility-total="{{possibilityTotal}}"
+                data-up-total="{{upTotal}}"
+                data-hero-total = "{{heroTotal}}"
+                data-drama-total = "{{dramaTotal}}"
+                data-cards-played = "{{cardsPlayed}}"
+             >
+             Hero
+             </a>
+             &nbsp;&bull;&nbsp;
+            <a class="roll-drama"
+                style="{{dramaStyle}}"
+                data-actor="{{actor}}" 
+                data-actor-pic="{{actorPic}}" 
+                data-skill-name="{{skillName}}" 
+                data-skill-value="{{skillValue}}" 
+                data-test-type="{{testType}}" 
+                data-unskilled-use="{{unskilledUse}}" 
+                data-skill-adds="{{skillAdds}}" 
+                data-skill-base-attribute="{{skillBaseAttribute}}"
+                data-roll-total="{{rollTotal}}"
+                data-wound-modifier="{{woundModifier}}"
+                data-possibility-total="{{possibilityTotal}}"
+                data-up-total="{{upTotal}}"
+                data-hero-total = "{{heroTotal}}"
+                data-drama-total = "{{dramaTotal}}"
+                data-cards-played = "{{cardsPlayed}}"            
+            >
+            Drama
+            </a>
+            &nbsp;&bull;&nbsp;
+            <a class="add-plus3"
+                data-actor="{{actor}}" 
+                data-actor-pic="{{actorPic}}" 
+                data-skill-name="{{skillName}}" 
+                data-skill-value="{{skillValue}}" 
+                data-test-type="{{testType}}" 
+                data-unskilled-use="{{unskilledUse}}" 
+                data-skill-adds="{{skillAdds}}" 
+                data-skill-base-attribute="{{skillBaseAttribute}}"
+                data-roll-total="{{rollTotal}}"
+                data-wound-modifier="{{woundModifier}}"
+                data-possibility-total="{{possibilityTotal}}"
+                data-up-total="{{upTotal}}"
+                data-hero-total = "{{heroTotal}}"
+                data-drama-total = "{{dramaTotal}}"
+                data-cards-played = "{{cardsPlayed}}"            
+            >
+            +3 Card
+            </a>
         </div>
     </div>
 </div>
