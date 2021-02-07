@@ -161,11 +161,14 @@ export default class torgeternityActorSheet extends ActorSheet {
     }
 
     _onSkillRoll(event) {
-        
         torgchecks.SkillCheck ({
             actor: this.actor,
-            skillValue: event.currentTarget.dataset.skillValue,
-            skillName: event.currentTarget.dataset.skillName
+            testType: event.currentTarget.dataset.testtype,
+            skillName: event.currentTarget.dataset.name,
+            skillBaseAttribute: event.currentTarget.dataset.baseattribute,
+            skillAdds: event.currentTarget.dataset.adds,
+            skillValue: event.currentTarget.dataset.value,
+            unskilledUse: event.currentTarget.dataset.unskilleduse
         })
     }
 
@@ -216,13 +219,47 @@ export default class torgeternityActorSheet extends ActorSheet {
     _onAttackRoll(event) {
         const itemID = event.currentTarget.closest(".item").dataset.itemId;
         const item = this.actor.getOwnedItem(itemID);
+        var weaponData = item.data.data;
+        var skillData = this.actor.data.data.skills[weaponData.attackWith];
+        torgchecks.weaponAttack ({
+            actor: this.actor,
+            item: item,
+            actorPic: this.actor.data.img,
+            skillName: weaponData.attackWith,
+            skillBaseAttribute: skillData.baseAttribute,
+            skillValue: skillData.value,
+            unskilledUse: skillData.unskilledUse,
+            strengthValue: this.actor.data.data.attributes.strength,
+            weaponName: item.data.name,
+            weaponDamageType: weaponData.damageType,
+            weaponDamage: weaponData.damage
+        })
 
-        item.weaponAttack();
+//        const itemID = event.currentTarget.closest(".item").dataset.itemId;
+//        const item = this.actor.getOwnedItem(itemID);
+//
+//        item.weaponAttack();
     }
 
     _onBonusRoll(event) {
         const itemID = event.currentTarget.closest(".item").dataset.itemId;
         const item = this.actor.getOwnedItem(itemID);
+        var weaponData = item.data.data;
+        var skillData = this.actor.data.data.skills[weaponData.attackWith];
+        torgchecks.weaponAttack ({
+            actor: this.actor,
+            item: item,
+            actorPic: this.actor.data.img,
+            skillName: weaponData.attackWith,
+            skillBaseAttribute: skillData.baseAttribute,
+            skillValue: skillData.value,
+            unskilledUse: skillData.unskilledUse,
+            strengthValue: this.actor.data.data.attributes.strength,
+            weaponName: item.data.name,
+            weaponDamageType: weaponData.damageType,
+            weaponDamage: weaponData.damage
+        })
+
 
         item.bonus();
     }

@@ -210,6 +210,11 @@
     font-size:14px;
     line-height:1.1em;
   }
+  .torgeternity .skill-text {
+    font-family: "Palatino Linotype";
+    font-size:14px;
+    line-height:1.1em
+  }
   .torgeternity .main-label {
     font-family:"Palatino Linotype";
     font-size:14px;
@@ -268,4 +273,75 @@
 .torgeternity p {
     font-family:"Palatino Linotype";
     font-size:14px;
+}
+
+.skill-chat-title {
+  font-size:20px;
+  padding:0px;
+  margin:0px;
+  text-align:center;
+  font-family:"Palatino Linotype"
+}
+
+.skill-unskilled-label {
+  font-size:12px;
+  text-align:center;
+  padding:0px;
+  margin:0px;
+  font-family:"Palatino Linotype";
+  width:100%
+}
+
+.skill-roll-disconnect-label {
+  font-size:12px;
+  text-align:center;
+  padding:0px;
+  margin:0px;
+  font-family:"Palatino Linotype";
+  width:100%;
+  font-style: italic
+}
+
+.skill-roll-result {
+  text-align: center;
+  font-size:24px;
+  font-weight: bold;
+  padding: 3px 0px 0px 0px; 
+  margin:0px
+}
+
+.skill-roll-action-label {
+  text-align:center;
+  font-size:12px;
+  padding:0px;
+  margin:0px
+}
+
+.skill-roll-table {
+  padding-bottom:5px;
+  margin-bottom:5px
+}
+
+.skill-roll-table-1 {
+  width:40%;
+  border:1px solid black
+}
+
+.skill-roll-table-2 {
+  width:60%;
+  background:#e8b017;
+  padding-left:5px;
+  border:1px solid black
+}
+
+.skill-roll-menu {
+  font-size:11px;
+  text-align:center
+}
+
+.skill-roll-damage-label {
+  font-family: "Palatino Linotype";
+  font-size: 18px;
+  font-weight:bold;
+  text-align:center
 }
