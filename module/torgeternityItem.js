@@ -36,7 +36,7 @@ export default class torgeternityItem extends Item {
         return ChatMessage.create(chatData);
     };
 
-   async weaponAttack() {
+   async weaponAttackOld() {
       // Roll those dice!
       let dicerollint = new Roll('1d20x10x20').roll();
       dicerollint.toMessage();

@@ -295,6 +295,27 @@
             "dwarf": "Dwarf",
             "edeinos": "Edeinos",
             "elf": "Elf"
+        },
+        "stymiedStates": {
+            "none": "Not Stymied",
+            "stymied": "Stymied",
+            "veryStymied": "Very Stymied"
+        },
+        "vulnerableStates": {
+            "none": "Not Vulnerable",
+            "vulnerable": "Vulnerable",
+            "veryVulnerable": "Very Vulnerable"
+        },
+        "statusEffects": {
+            "stymied": "Stymied",
+            "veryStymied": "Very Stymied",
+            "vulnerable": "Vulnerable",
+            "veryVulnerable": "Very Vulnerable",
+            "aiming": "Aiming",
+            "concentrating": "Concentrating",
+            "disconnected": "Disconnected",
+            "malfunction": "Malfunction",
+            "restrained": "Restrained"
         }
     }
 }

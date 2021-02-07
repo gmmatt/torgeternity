@@ -11,6 +11,7 @@ Hooks.once("init", function() {
     CONFIG.torgeternity = torgeternity;
     CONFIG.Item.entityClass = torgeternityItem;
     CONFIG.Actor.entityClass = torgeternityActor;
+    CONFIG.statusEffects = torgeternity.statusEffects;
 
     Items.unregisterSheet("core", ItemSheet);
     Items.registerSheet("torgeternity", torgeternityItemSheet, {makeDefault: true});

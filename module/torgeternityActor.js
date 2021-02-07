@@ -62,16 +62,6 @@ export default class torgeternityActor extends Actor {
                 this.data.data.trickDefense = this.data.data.attributes.mind
             };
 
-            // Set Stymied and Vulnerable Conditions
-            if (this.data.data.stymied) {}
-            else {
-                this.data.data.stymied = 0
-            };
-            if (this.data.data.vulnerable){}
-            else {
-                this.data.data.vulnerable = 0
-            }
-
         };
 
         //Set unknown edit states to none
@@ -79,5 +69,22 @@ export default class torgeternityActor extends Actor {
             this.data.data.editstate = "inline";
         }; 
 
+    }
+
+    applyActiveEffects() {
+        var i
+        const effects = this.data.effects
+        for (i=0; i < effects.length; i++) {
+            if (effects[i].flags.core.statusId === "stymied") {
+                this.data.data.stymiedModifier = -2;
+            } else if (effects[i].flags.core.statusId === "veryStymied") {
+                this.data.data.stymiedModifier = -4;
+            }
+            if (effects[i].flags.core.statusId === "vulnerable") {
+                this.data.data.vulnerableModifier = 2;
+            } else if (effects[i].flags.core.statusId === "veryVulnerable") {
+                this.data.data.vulnerableModifier = 4
+            }
+        }
     }
 }

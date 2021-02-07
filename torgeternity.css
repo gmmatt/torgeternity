@@ -210,6 +210,11 @@
     font-size:14px;
     line-height:1.1em;
   }
+  .torgeternity .skill-text {
+    font-family: "Palatino Linotype";
+    font-size:14px;
+    line-height:1.1em
+  }
   .torgeternity .main-label {
     font-family:"Palatino Linotype";
     font-size:14px;
@@ -330,6 +335,13 @@
 }
 
 .skill-roll-menu {
-  font-size:12px;
+  font-size:11px;
+  text-align:center
+}
+
+.skill-roll-damage-label {
+  font-family: "Palatino Linotype";
+  font-size: 18px;
+  font-weight:bold;
   text-align:center
 }

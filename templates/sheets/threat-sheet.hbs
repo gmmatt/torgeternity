@@ -68,6 +68,7 @@
                 <div class="threat-edit">
                     {{localize "torgeternity.sheetLabels.possibilitypotential"}}:&nbsp;
                     <input name="data.details.possibilitypotential" class="text-input" type="text" value="{{data.details.possibilitypotential}}" />
+                    Size Modifier: <input name="data.details.sizeBonus" class="text-input" type="text" value="{{data.details.sizeBonus}}" />
                 </div>
                 <div class="threat-edit">
                     <b>{{localize "torgeternity.sheetLabels.skills"}}</b>
@@ -134,15 +135,15 @@
                         <a class="toggle-threat-edit" title="Toggle Edit Display" style="float:right"><i class="fas fa-edit"></i></a>
                         <div style="margin-right:10px">
                             <b>Attributes: </b>
-                            <a class="skill-roll" data-skill-value="{{data.attributes.charisma}}" data-skill-name="Charisma">{{localize "torgeternity.attributes.charisma"}}</a> 
+                            <a class="skill-roll" data-testType="attribute" data-baseAttribute="{{data.attributes.charisma}}" data-adds="0" data-value="{{data.attributes.charisma}}" data-unskilledUse="1" data-name="{{localize "torgeternity.attributes.charisma"}}">{{localize "torgeternity.attributes.charisma"}}</a> 
                                 {{data.attributes.charisma}}, &nbsp;
-                            <a class="skill-roll" data-skill-value="{{data.attributes.dexterity}}" data-skill-name="Dexterity">{{localize "torgeternity.attributes.dexterity"}}</a> 
+                            <a class="skill-roll" data-testType="attribute" data-baseAttribute="{{data.attributes.dexterity}}" data-adds="0" data-value="{{data.attributes.dexterity}}" data-unskilledUse="1" data-name="{{localize "torgeternity.attributes.dexterity"}}">{{localize "torgeternity.attributes.dexterity"}}</a> 
                                 {{data.attributes.dexterity}},&nbsp;
-                            <a class="skill-roll" data-skill-value="{{data.attributes.mind}}" data-skill-name="Mind">{{localize "torgeternity.attributes.mind"}}</a> 
+                            <a class="skill-roll" data-testType="attribute" data-baseAttribute="{{data.attributes.mind}}" data-adds="0" data-value="{{data.attributes.mind}}" data-unskilledUse="1" data-name="{{localize "torgeternity.attributes.mind"}}">{{localize "torgeternity.attributes.mind"}}</a> 
                                 {{data.attributes.mind}},&nbsp;
-                            <a class="skill-roll" data-skill-value="{{data.attributes.spirit}}" data-skill-name="Spirit">{{localize "torgeternity.attributes.spirit"}}</a> 
+                            <a class="skill-roll" data-testType="attribute" data-baseAttribute="{{data.attributes.spirit}}" data-adds="0" data-value="{{data.attributes.spirit}}" data-unskilledUse="1" data-name="{{localize "torgeternity.attributes.spirit"}}">{{localize "torgeternity.attributes.spirit"}}</a> 
                                 {{data.attributes.spirit}},&nbsp;
-                            <a class="skill-roll" data-skill-value="{{data.attributes.strength}}" data-skill-name="Strength">{{localize "torgeternity.attributes.strength"}}</a> 
+                            <a class="skill-roll" data-testType="attribute" data-baseAttribute="{{data.attributes.strength}}" data-adds="0" data-value="{{data.attributes.strength}}" data-unskilledUse="1" data-name="{{localize "torgeternity.attributes.strength"}}">{{localize "torgeternity.attributes.strength"}}</a> 
                                 {{data.attributes.strength}}
                         </div>  
 
@@ -153,7 +154,7 @@
                         {{#each data.skills as |content name|}}
                             {{#if content.value}}
                                 <span class="inline-skill-item">
-                                    <a class="skill-roll" data-skill-value="{{content.value}}" data-skill-name="{{localize (concatSkillName name)}}">{{localize (concatSkillName name)}}</a>
+                                    <a class="skill-roll" data-testType="skill" data-baseAttribute="{{content.baseAttribute}}" data-adds="{{content.adds}}" data-value="{{content.value}}" data-unskilledUse="{{content.unskilledUse}}" data-name="{{localize (concatSkillName name)}}">{{localize (concatSkillName name)}}</a>
                                     &nbsp;{{content.value}}
                                 </span>
                             {{/if}}

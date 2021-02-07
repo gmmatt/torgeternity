@@ -300,7 +300,8 @@
             ],
             "details": {
                 "possibilitypotential": "(none)",
-                "description": ""
+                "description": "",
+                "sizeBonus": 0 
             },
             "editstate": ""
         }
@@ -383,7 +384,7 @@
                 "general"
             ],
             "attackWith": "meleeWeapons",
-            "damagetype": 0,
+            "damageType": 0,
             "damage": 0,
             "bonus": 2,
             "notes": ""
@@ -393,7 +394,9 @@
                 "general"
             ],
             "attackWith": "missileWeapons",
+            "damageType": "",
             "damage": 0,
+            "ammo": 1,
             "range": "",
             "notes": ""
         },
