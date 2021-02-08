@@ -15,11 +15,11 @@
                     "value": 0
                 },
                 "attributes": {
-                    "charisma": 8,
-                    "dexterity": 8,
-                    "mind": 8,
-                    "spirit": 8,
-                    "strength": 8
+                    "charisma": 5,
+                    "dexterity": 5,
+                    "mind": 5,
+                    "spirit": 5,
+                    "strength": 5
                 },
                 "other": {
                     "move": 5,
@@ -291,8 +291,7 @@
                 "background": "",
                 "race": ""
             },
-            "editstate": "inline",
-            "fatigue": "1"
+            "editstate": "inline"
         },
         "threat": {
             "templates": [
@@ -300,8 +299,7 @@
             ],
             "details": {
                 "possibilitypotential": "(none)",
-                "description": "",
-                "sizeBonus": 0 
+                "description": ""
             },
             "editstate": ""
         }
@@ -384,7 +382,7 @@
                 "general"
             ],
             "attackWith": "meleeWeapons",
-            "damageType": 0,
+            "damagetype": 0,
             "damage": 0,
             "bonus": 2,
             "notes": ""
@@ -394,9 +392,7 @@
                 "general"
             ],
             "attackWith": "missileWeapons",
-            "damageType": "",
             "damage": 0,
-            "ammo": 1,
             "range": "",
             "notes": ""
         },

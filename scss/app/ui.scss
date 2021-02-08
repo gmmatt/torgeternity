@@ -1,0 +1,119 @@
+//--------style global
+body {
+    font-family:Berlin;
+
+}
+
+
+
+.app {
+
+    border-radius: 5px;
+    box-shadow: 0 0 15px  #122529;
+    padding-bottom: 0.5em;
+   
+    color: black;
+    z-index: 30;
+    input[type="text"]::placeholder,
+    input[type="number"]::placeholder {
+        color: rgba(0, 0, 0, 0.472);
+        text-shadow: 0px 0px 10px black;
+    }
+    option{
+        background:grey;
+    }
+    optgroup{
+
+        background:rgb(68, 66, 66);
+    }
+
+    div.form-group{
+        margin:10px;
+        padding-bottom:5px;
+        border-bottom :2px solid black;
+
+    }
+
+}
+
+.window-app .window-header{
+    background: url(../images/tab-header.png);
+    background-size: 100% 100%;
+    font-family:gravebolt;
+    color:white
+
+}
+
+
+//---------bouttons scene control
+
+#controls .scene-control,
+#controls .control-tool,
+#controls .scene-control,
+#controls .control-tool {
+    background: url(../images/bg-sheet.png);
+    border: 1px solid black;
+    color: grey;
+    box-shadow: none;
+
+}
+
+
+#controls .scene-control,
+#controls .control-tool,
+#controls .scene-control:hover,
+#controls .control-tool:hover {
+    color: grey;
+   background-image: url(../images/bg-sheet.png);
+   background-size:cover;
+   border: none;
+    box-shadow: 0 0 10px black;
+    .fa, .fas {
+        font-weight: 600;
+        font-size: 16px;
+    }
+
+}
+
+#controls .scene-control.active,
+#controls .control-tool.active
+ {
+    color: black;
+    text-shadow:black 0px 0px 15px ;
+    box-shadow: none;
+    border :none;
+}
+#controls .scene-control:hover,
+#controls .control-tool:hover{
+    box-shadow: 0 0 10px black;
+    color: #1d353a
+
+}
+
+
+
+
+//------------SIDEBAR
+#sidebar {
+    color:white;
+    background-image:url(../images/thunder_black.png);
+    background-size:contain;
+    border: 1px solid #000;
+    border-top-color: rgb(0, 0, 0);
+    border-top-style: solid;
+    border-top-width: 1px;
+    border-right-color: rgb(0, 0, 0);
+    border-right-style: solid;
+    border-right-width: 1px;
+    border-bottom-color: rgb(0, 0, 0);
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-left-color: rgb(0, 0, 0);
+    border-left-style: solid;
+    border-left-width: 1px;
+    border-image-source: initial;
+    border-image-slice: initial;
+    border-image-width: initial;
+    border-image-outset: initial;
+    border-image-repeat: initial;
+}

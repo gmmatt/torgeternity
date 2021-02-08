@@ -1,0 +1,186 @@
+.item .window-content {
+  background-color: #e0ce79;
+  background-image: url(../images/bgparch.jpg);
+}
+
+.item .window-content input[type="text"]:hover,
+.item .window-content input[type="number"]:hover {
+  box-shadow: 0 0 10px #afb683;
+}
+
+.item .window-content input[type="text"]:focus,
+.item .window-content input[type="number"]:focus {
+  box-shadow: 0 0 10px #d3e274;
+}
+
+.item .window-content input[type="text"]::-moz-placeholder, .item .window-content input[type="number"]::-moz-placeholder {
+  color: rgba(109, 161, 161, 0.794);
+  text-shadow: 0px 0px 10px black;
+}
+
+.item .window-content input[type="text"]:-ms-input-placeholder, .item .window-content input[type="number"]:-ms-input-placeholder {
+  color: rgba(109, 161, 161, 0.794);
+  text-shadow: 0px 0px 10px black;
+}
+
+.item .window-content input[type="text"]::placeholder,
+.item .window-content input[type="number"]::placeholder {
+  color: rgba(109, 161, 161, 0.794);
+  text-shadow: 0px 0px 10px black;
+}
+
+.item .window-content .sheet-header {
+  background-image: url(../images/tab-header.png.png);
+  flex: 0 0 170px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin-bottom: 10px;
+}
+
+.item .window-content .sheet-header input[type="text"],
+.item .window-content .sheet-header input[type="number"],
+.item .window-content .sheet-header input[type="password"],
+.item .window-content .sheet-header input[type="date"],
+.item .window-content .sheet-header input[type="time"] {
+  min-width: 20px;
+  padding: 5px;
+  margin: 0;
+  color: #e6e6e6;
+  border: none;
+  border-bottom: 1px solid #7a7971;
+  border-radius: 3px;
+  -webkit-user-select: text;
+  -moz-user-select: text;
+  -ms-user-select: text;
+  user-select: text;
+}
+
+.item .window-content .sheet-header input[type="text"]:hover,
+.item .window-content .sheet-header input[type="number"]:hover {
+  box-shadow: 0 0 5px #717556;
+}
+
+.item .window-content .sheet-header input[type="text"]:focus,
+.item .window-content .sheet-header input[type="number"]:focus {
+  box-shadow: 0 0 10px #717556;
+}
+
+.item .window-content .sheet-header input[type="text"]::-moz-placeholder, .item .window-content .sheet-header input[type="number"]::-moz-placeholder {
+  color: rgba(109, 161, 161, 0.794);
+  text-shadow: 0px 0px 10px black;
+}
+
+.item .window-content .sheet-header input[type="text"]:-ms-input-placeholder, .item .window-content .sheet-header input[type="number"]:-ms-input-placeholder {
+  color: rgba(109, 161, 161, 0.794);
+  text-shadow: 0px 0px 10px black;
+}
+
+.item .window-content .sheet-header input[type="text"]::placeholder,
+.item .window-content .sheet-header input[type="number"]::placeholder {
+  color: rgba(109, 161, 161, 0.794);
+  text-shadow: 0px 0px 10px black;
+}
+
+.item .window-content .tabs {
+  border-top: 1px solid #AAA;
+  border-bottom: 1px solid #AAA;
+  font-family: attic;
+  color: black;
+  background-color: #20393e62;
+}
+
+.item .window-content .tabs .item {
+  line-height: 40px;
+  font-weight: bold;
+  align-items: center;
+}
+
+.item .window-content .tabs .item.active {
+  text-decoration: underline;
+  text-shadow: 0px 0px 10px #74d5ebc2;
+}
+
+.item .window-content .tab,
+.item .window-content .tab .editor {
+  height: 100%;
+  min-height: 60px;
+}
+
+.item .window-content .sheet-body h1 {
+  font-family: attic;
+}
+
+.item .window-content .sheet-body h1 input {
+  text-transform: uppercase;
+}
+
+.item .window-content .sheet-body h2 {
+  color: black;
+  font-family: attic;
+  border-bottom: 2px solid #20393E;
+}
+
+.item .window-content .sheet-body input {
+  width: 30px;
+  text-align: center;
+  padding: 0 5px;
+}
+
+.item .window-content .sheet-body .profile-img {
+  max-width: 30%;
+  max-height: 170px;
+  height: auto;
+  border: none;
+  box-shadow: 0px 2px 10px black;
+  margin: 5px;
+  border: 0;
+  vertical-align: middle;
+}
+
+.item .window-content .itemCol {
+  margin: 5px;
+  box-shadow: 0px 2px 10px black;
+  padding: 5px;
+}
+
+.item .window-content .attr-npc-line .energyParam {
+  float: left;
+  width: 250px;
+  padding: 0 5px 0 5px;
+}
+
+.item .window-content .attr-npc-line .statusParam {
+  float: left;
+  width: 250px;
+  padding: 0 5px 0 5px;
+}
+
+.item .window-content .attr-npc-line .basicAttributesParam {
+  float: left;
+  width: 250px;
+  padding: 0 5px 0 5px;
+}
+
+.item .window-content .charactParam .charact-list {
+  height: 90px;
+  width: 100%;
+  text-align: left;
+}
+
+.item .window-content .charactParam .charact-list li {
+  padding: 5px 0;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  display: -webkit-flex;
+  -webkit-flex-wrap: wrap;
+  align-content: flex-start;
+  width: 100%;
+}
+
+.item .window-content .charactParam .charact-list li .charact-label {
+  width: 100px;
+}

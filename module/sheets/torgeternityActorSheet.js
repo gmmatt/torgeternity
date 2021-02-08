@@ -5,16 +5,19 @@ export default class torgeternityActorSheet extends ActorSheet {
     static get defaultOptions () {
         return mergeObject(super.defaultOptions, {
             classes: ["torgeternity", "sheet", "actor"],
-            width: 600,
-            height: 600,
-            tabs: [{navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "stats"}],
+            width: 760,
+            height: 900,
+            tabs: [{navSelector: ".sheet-tabs", contentSelector: ".main", initial: "stats"}],
             scrollY: [".stats", ".perks", ".gear", ".powers", "background"],
             dragdrop: [{dragSelector: ".item-list .item", dropSelector: null}]
         });
     }
 
     get template() {
-        return `systems/torgeternity/templates/sheets/${this.actor.data.type}-sheet.hbs`;
+
+        //modified path => one folder per type
+        return `systems/torgeternity/templates/actors/${this.actor.data.type}/main.hbs`;
+        
     }
 
 
@@ -121,32 +124,10 @@ export default class torgeternityActorSheet extends ActorSheet {
   
         // Delete Inventory Item
         html.find('.item-delete').click(ev => {
-            let applyChanges = false;
-            new Dialog({
-                title: "Confirm Deletion",
-                content: "Are you sure you want to delete this? It will be permanently removed from the sheet.",
-                buttons: {
-                    yes: {
-                        icon: '<i class="fas fa-check"></i>',
-                        label: "Yes",
-                        callback: () => applyChanges = true
-                    },
-                    no: {
-                        icon: '<i class="fas fa-times"></i>',
-                        label: "No"
-                    },
-                },
-                default: "yes",
-                close: html => {
-                    if (applyChanges) {
-                        const li = $(ev.currentTarget).parents(".item");
-                        this.actor.deleteOwnedItem(li.data("itemId"));
-                        li.slideUp(200, () => this.render(false));            
-                    }
-                }                
-            }).render(true);
-        }); 
-
+            const li = $(ev.currentTarget).parents(".item");
+            this.actor.deleteOwnedItem(li.data("itemId"));
+            li.slideUp(200, () => this.render(false));
+      }); 
         // Toggle Item Detail Visibility
         html.find('.item-name').click(ev => {
             let section = event.currentTarget.closest(".item");
@@ -161,14 +142,11 @@ export default class torgeternityActorSheet extends ActorSheet {
     }
 
     _onSkillRoll(event) {
+        
         torgchecks.SkillCheck ({
             actor: this.actor,
-            testType: event.currentTarget.dataset.testtype,
-            skillName: event.currentTarget.dataset.name,
-            skillBaseAttribute: event.currentTarget.dataset.baseattribute,
-            skillAdds: event.currentTarget.dataset.adds,
-            skillValue: event.currentTarget.dataset.value,
-            unskilledUse: event.currentTarget.dataset.unskilleduse
+            skillValue: event.currentTarget.dataset.skillValue,
+            skillName: event.currentTarget.dataset.skillName
         })
     }
 
@@ -219,47 +197,13 @@ export default class torgeternityActorSheet extends ActorSheet {
     _onAttackRoll(event) {
         const itemID = event.currentTarget.closest(".item").dataset.itemId;
         const item = this.actor.getOwnedItem(itemID);
-        var weaponData = item.data.data;
-        var skillData = this.actor.data.data.skills[weaponData.attackWith];
-        torgchecks.weaponAttack ({
-            actor: this.actor,
-            item: item,
-            actorPic: this.actor.data.img,
-            skillName: weaponData.attackWith,
-            skillBaseAttribute: skillData.baseAttribute,
-            skillValue: skillData.value,
-            unskilledUse: skillData.unskilledUse,
-            strengthValue: this.actor.data.data.attributes.strength,
-            weaponName: item.data.name,
-            weaponDamageType: weaponData.damageType,
-            weaponDamage: weaponData.damage
-        })
 
-//        const itemID = event.currentTarget.closest(".item").dataset.itemId;
-//        const item = this.actor.getOwnedItem(itemID);
-//
-//        item.weaponAttack();
+        item.weaponAttack();
     }
 
     _onBonusRoll(event) {
         const itemID = event.currentTarget.closest(".item").dataset.itemId;
         const item = this.actor.getOwnedItem(itemID);
-        var weaponData = item.data.data;
-        var skillData = this.actor.data.data.skills[weaponData.attackWith];
-        torgchecks.weaponAttack ({
-            actor: this.actor,
-            item: item,
-            actorPic: this.actor.data.img,
-            skillName: weaponData.attackWith,
-            skillBaseAttribute: skillData.baseAttribute,
-            skillValue: skillData.value,
-            unskilledUse: skillData.unskilledUse,
-            strengthValue: this.actor.data.data.attributes.strength,
-            weaponName: item.data.name,
-            weaponDamageType: weaponData.damageType,
-            weaponDamage: weaponData.damage
-        })
-
 
         item.bonus();
     }

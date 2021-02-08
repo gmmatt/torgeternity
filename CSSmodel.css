@@ -1,0 +1,271 @@
+.sheet form {
+    /*    display: flex; */
+        flex-direction: column; 
+    
+      }
+    .sheet .sheet-content {
+        height: 100%;
+        display: flex;
+        flex-direction: column; 
+    }
+    .sheet .sheet-content .editor {
+        height: 100%;
+    }
+    
+    .actor-sheet {
+      display: flex;
+      flex-direction:column; 
+      background-image: url('./images/bgparch.jpg');
+      background-size: 100% 100%;
+    }
+    .item-sheet {
+        display: flex;
+        flex-direction:column; 
+        background-image: url('./images/bgparch.jpg');
+        background-size: 100% 100%;
+    }
+    .specialability-sheet {
+      height:250px;
+    }
+    .torgeternity .tabs {
+        flex: 0 0 30px;
+        border-top: 1px solid #AAA;
+        border-bottom: 1px solid #AAA;
+    }
+    .torgeternity .tabs .item {
+        line-height: 30px;
+        font-weight: bold;
+        font-family:"Palatino Linotype";
+    }
+    .torgeternity .tabs .item.active {
+        text-decoration: underline;
+        text-shadow: none;
+    }
+    .torgeternity .item-list {
+      list-style-type:none;
+      margin: 0;
+      padding: 0;
+    }
+    .torgeternity .item-list .item {
+        min-height: 30px;
+        line-height: 24px;
+        padding: 3px 0;
+        border-bottom: 1px solid #BBB;
+        align-items: stretch;
+    }
+    .torgeternity .item-list .item {
+        min-height: 30px;
+        line-height: 24px;
+        padding: 0px 0;
+        border-bottom: 1px solid #BBB;
+        align-items: stretch;
+      }
+      .torgeternity .item-list .item img {
+        flex: 0 0 24px;
+        margin-right: 5px;
+      }
+      .torgeternity .item-list .item-name {
+        margin: 0;
+        text-align: left;
+      }
+      .torgeternity .item-list .item-controls {
+        flex: 0 0 80px;
+        text-align:right;
+      }
+      .torgeternity .item-list .item-buttons {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        align-items: center;
+        flex: 2;
+        justify-content: flex-start;
+      }
+      .torgeternity .item-list .item-button {
+        line-height: 1;
+        font-size: 11px;
+        flex: none;
+        width: auto;
+      }
+      .torgeternity .section-heading {
+        text-align:center;
+        background-color:black;
+        color:white;
+        font-size:125%
+      }
+      .torgeternity .item-detail {
+        padding: 0 18px;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.2s ease-out;
+      }
+      .torgeternity .input-box {
+        background-color:white;
+        border-radius: 10px;
+        font-family:"Palatino Linotype";
+        font-size:12px;
+        text-align:center;
+        text-align-last:center;
+        width:140px;
+      }
+      .torgeternity .input-box-small {
+        background-color:white;
+        border-radius: 10px;
+        font-family:"Palatino Linotype";
+        font-size:12px;
+        text-align:center;
+        text-align-last:center;
+        width:65px;    
+      }
+      .torgeternity .item-data-label {
+        font-family:"Palatino Linotype";
+        font-size:12px;
+        font-weight:bold;
+        text-align:center;
+        margin: 2px 2px 2px 2px;
+      }
+      .torgeternity .item-description-textarea {
+        font-family: "Palatino Linotype";
+        font-size: 12px;
+        height:355px;
+        width:350px;
+        background-color:#f0dec2;
+        border-radius:15px;
+        resize:none;
+        padding:5px 5px;
+      }
+      .torgeternity .item-dropdown-description {
+        font-family:"Palatino Linotype";
+        font-size:12px;
+        line-height:1.2;
+        padding: 5px 5px 5px 5px;
+        background-color:white;
+        border-radius:15px;
+      }
+      .item-dropdown-extras {
+        font-family:"Palatino Linotype";
+        font-size:12px;
+        font-weight:bold;
+        padding:2px 2px 2px 2px;
+        background-color:#f0dec2;
+        border-radius:10px;
+        display:inline-block
+      }
+      .chat-title {
+        height:50px;
+        font-family:"Palatino Linotype";
+        font-size:24px;
+        font-weight:bold;
+        text-align:center;
+        vertical-align:center
+      }
+      .chat-text {
+        font-family:"Palatino Linotype";
+        background-color:cornsilk;
+        border-radius:5px;
+        font-size: 14px;
+        font-weight: bold;
+        line-height:1.1;
+        padding:5px 5px
+      }
+      .item-description-chat {
+        font-family:"Palatino Linotype";
+        background-color:white;
+        border-radius:15px;
+        padding:5px 5px;
+      }
+      .torgeternity .list-section-heading {
+        text-align:center;
+        background-color:#00134d;
+        border-radius:10px;
+        margin-bottom: 2px;
+        color:white;
+        font-size:125%;
+        font-family:"Palatino Linotype";
+        font-weight:Bold;
+      }
+      .torgeternity .small-input {
+        border:none;
+        border-bottom:1px solid black;
+        width:10px;
+        border-radius:0px;
+        background:none;
+        height:14px;
+        text-align:center;
+        font-family:"Pallatino Linotype";
+        padding: 0px;
+      }
+      .torgeternity .text-input {
+          border:none;
+          border-bottom:1px solid black;
+          width:70px;
+          border-radius:0px;
+          background:none;
+          height:14px;
+          text-align:center;
+          font-family:"Pallatino Linotype";
+          padding: 0px;   
+      }
+      .torgeternity .skill-roll {
+        font-family:"Palatino Linotype";
+        font-size:14px;
+        line-height:1.1em;
+      }
+      .torgeternity .main-label {
+        font-family:"Palatino Linotype";
+        font-size:14px;
+        line-height:1.1em;
+      }
+      .torgeternity .stats-table {
+        border:0px black solid;
+        background-color:white;
+        padding-left:5px;
+        border-radius:10px;
+      }
+      .torgeternity .vital-box {
+        background:white;
+        border-radius:10px;
+        padding: 3px 7px 3px 7px;
+      }
+    
+      .torgeternity .threat-block {
+        text-indent:-10px;
+        padding-left:10px;
+        font-family:"Palatino Linotype";
+        font-size:14px;
+      }
+    
+      .torgeternity .threat-edit {
+        font-family:"Palatino Linotype";
+        font-size:12px;
+      }
+    
+      .torgeternity .inline-skill-list .inline-skill-item:after {
+        content: ",";
+      }
+    
+      .torgeternity .inline-skill-list .inline-skill-item:last-child:after {
+        content: "";
+      }
+      .torgeternity .specialability-list {
+        list-style: square outside bullet;
+        text-indent:0px;
+        padding-left:10px;
+        margin:0px;
+      }
+      .torgeternity h1 {
+        font-family:"Palatnio Linotype";
+        font-size:24px;
+        font-weight:bold;
+        border-bottom:none;
+     }
+      .torgeternity h2 {
+        font-family:"Palatnio Linotype";
+        font-size:20px;
+        font-weight:bold;
+        border-bottom:none;
+    }
+    
+    .torgeternity p {
+        font-family:"Palatino Linotype";
+        font-size:14px;
+    }

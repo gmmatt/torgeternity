@@ -36,7 +36,7 @@ export default class torgeternityItem extends Item {
         return ChatMessage.create(chatData);
     };
 
-   async weaponAttackOld() {
+   async weaponAttack() {
       // Roll those dice!
       let dicerollint = new Roll('1d20x10x20').roll();
       dicerollint.toMessage();
@@ -76,7 +76,6 @@ export default class torgeternityItem extends Item {
          var messageContent = `Bonus:` + bonus; }
         
       // Calculate base damage
-      
       if (this.data.data.damageType == "flat") {
          var baseDamage = this.data.data.damage;}
       else if (this.data.data.damageType == "strengthPlus") {

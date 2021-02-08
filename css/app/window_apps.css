@@ -1,0 +1,15 @@
+.window-app .window-content {
+  font-family: Berlin;
+  background-image: url(../images/bgparch.jpg);
+  color: black;
+}
+
+.window-app .window-content .rollable:hover, .window-app .window-content .rollable:focus {
+  color: #000;
+  text-shadow: 0 0 10px white;
+  cursor: pointer;
+}
+
+.window-app .window-content form p.notes {
+  color: rgba(0, 0, 0, 0.65);
+}

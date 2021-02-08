@@ -1,19 +1,18 @@
 # Torg eternity system for Foundry VTT
+
 **Torg Eternity System** for Foundry VTT.  
 
+## RWAN acknowlegement
 
+this is just a WIP branch ; not everuthing is reorganized ; for exemple, i didn't split scss files for actors part, all is  in the same file for the moment. But the changes would be easier to make.
+
+## **the following is the copy of the main readme
 
 ## Installation
+
 **Manifest URL**: https://github.com/gmmatt/torgeternity/releases/latest/download/system.json
 
-This is a Foundry VTT system for Torg Eternity. Card play is not supported within the system,
-but is fully functional when used in conjunction with the Unofficial Card Support module for 
-Foundry. THIS SYSTEM IS A WORK IN PROGRESS. While the system is fully playable in its current 
-state, we are stil lroning out some bugs and inconveniences, and multiple additional features 
-are planned for the near future.
-
 For manual installation, use the provided manifest URL in the "*Install System*" popup window while managing game systems.
-
 
 ## License
 

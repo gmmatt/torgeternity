@@ -1,0 +1,158 @@
+<h2 class="list-section-heading">
+    Weapons
+</h2>
+<ol class="item-list">
+    {{#each meleeweapons as |item id|}}
+    <li class="item" data-item-id="{{item._id}}">
+        <div class="item-row flexrow">
+            <img src="{{item.img}}" title="{{item.name}}" width="30" height="30" />
+            <a class="item-name">{{item.name}} (Melee Weapon)</a>
+            <div class="item-controls">
+                <a class="item-control item-attackRoll" title="Attack Roll"><i class="fas fa-dice-d20"></i></a>
+                <a class="item-control item-bonusRoll" title="Bonus Roll"><i class="fas fa-dice-d6"></i></a>
+                <a class="item-control item-edit" title="Edit Item"><i class="fas fa-edit"></i></a>
+                <a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
+            </div>
+        </div>
+        <div class="item-detail">
+            <div class="item-dropdown-description">
+                {{{item.data.description}}}
+                <p></p>
+                <div class="item-dropdown-extras">
+                    {{item.data.cosm}}
+                </div>
+                <div class="item-dropdown-extras">
+                    TL {{item.data.techlevel}}
+                </div>
+                <div class="item-dropdown-extras">
+                    {{item.data.price}} ({{item.data.value}})
+                </div>
+                <div class="item-dropdown-extras">
+                    {{item.data.notes}}
+                </div>
+            </div>
+        </div>
+    </li>
+    {{/each}}
+</ol>
+<ol class="item-list">
+    {{#each missileweapon as |item id|}}
+    <li class="item" data-item-id="{{item._id}}">
+        <div class="item-row flexrow">
+            <img src="{{item.img}}" title="{{item.name}}" width="30" height="30" />
+            <a class="item-name">{{item.name}} (Missile Weapon)</a>
+            <div class="item-controls">
+                <a class="item-control item-attackRoll" title="Attack Roll"><i class="fas fa-dice-d20"></i></a>
+                <a class="item-control item-bonusRoll" title="Bonus Roll"><i class="fas fa-dice-d6"></i></a>
+                <a class="item-control item-edit" title="Edit Item"><i class="fas fa-edit"></i></a>
+                <a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
+            </div>
+        </div>
+        <div class="item-detail">
+            <div class="item-dropdown-description">
+                {{{item.data.description}}}
+                <p></p>
+                <div class="item-dropdown-extras">
+                    {{item.data.cosm}}
+                </div>
+                <div class="item-dropdown-extras">
+                    TL {{item.data.techlevel}}
+                </div>
+                <div class="item-dropdown-extras">
+                    {{item.data.price}} ({{item.data.value}})
+                </div>
+                <div class="item-dropdown-extras">
+                    {{item.data.range}}
+                </div>
+                <div class="item-dropdown-extras">
+                    Ammo: {{item.data.ammo}}
+                </div>
+                <div class="item-dropdown-extras">
+                    {{item.data.notes}}
+                </div>
+            </div>
+        </div>
+    </li>
+    {{/each}}
+</ol>
+<ol class="item-list">
+    {{#each firearm as |item id|}}
+    <li class="item" data-item-id="{{item._id}}">
+        <div class="item-row flexrow">
+            <img src="{{item.img}}" title="{{item.name}}" width="30" height="30" />
+            <a class="item-name">{{item.name}} (Firearm)</a>
+            <div class="item-controls">
+                <a class="item-control item-attackRoll" title="Attack Roll"><i class="fas fa-dice-d20"></i></a>
+                <a class="item-control item-bonusRoll" title="Bonus Roll"><i class="fas fa-dice-d6"></i></a>
+                <a class="item-control item-edit" title="Edit Item"><i class="fas fa-edit"></i></a>
+                <a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
+            </div>
+        </div>
+        <div class="item-detail">
+            <div class="item-dropdown-description">
+                {{{item.data.description}}}
+                <p></p>
+                <div class="item-dropdown-extras">
+                    {{item.data.cosm}}
+                </div>
+                <div class="item-dropdown-extras">
+                    TL {{item.data.techlevel}}
+                </div>
+                <div class="item-dropdown-extras">
+                    {{item.data.price}} ({{item.data.value}})
+                </div>
+                <div class="item-dropdown-extras">
+                    {{item.data.range}}
+                </div>
+                <div class="item-dropdown-extras">
+                    Ammo: {{item.data.ammo}}
+                </div>
+                <div class="item-dropdown-extras">
+                    {{item.data.notes}}
+                </div>
+            </div>
+        </div>
+    </li>
+    {{/each}}
+</ol>
+
+<ol class="item-list">
+    {{#each heavyweapon as |item id|}}
+    <li class="item" data-item-id="{{item._id}}">
+        <div class="item-row flexrow">
+            <img src="{{item.img}}" title="{{item.name}}" width="30" height="30" />
+            <a class="item-name">{{item.name}} (Heavy Weapon/Explosive)</a>
+            <div class="item-controls">
+                <a class="item-control item-attackRoll" title="Attack Roll"><i class="fas fa-dice-d20"></i></a>
+                <a class="item-control item-bonusRoll" title="Bonus Roll"><i class="fas fa-dice-d6"></i></a>
+                <a class="item-control item-edit" title="Edit Item"><i class="fas fa-edit"></i></a>
+                <a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
+            </div>
+        </div>
+        <div class="item-detail">
+            <div class="item-dropdown-description">
+                {{{item.data.description}}}
+                <p></p>
+                <div class="item-dropdown-extras">
+                    {{item.data.cosm}}
+                </div>
+                <div class="item-dropdown-extras">
+                    TL {{item.data.techlevel}}
+                </div>
+                <div class="item-dropdown-extras">
+                    {{item.data.price}} ({{item.data.value}})
+                </div>
+                <div class="item-dropdown-extras">
+                    {{item.data.range}}
+                </div>
+                <div class="item-dropdown-extras">
+                    Ammo: {{item.data.ammo}}
+                </div>
+                <div class="item-dropdown-extras">
+                    {{item.data.notes}}
+                </div>
+            </div>
+        </div>
+    </li>
+    {{/each}}
+</ol>

@@ -1,0 +1,53 @@
+<form class="actor-sheet {{cssClass}}" autocomplete="off">
+
+
+    <!--**************** tabs******************--->
+    <nav class="sheet-tabs tabs" data-group="primary">
+        <a class="item" data-tab="stats">Stats</a>
+        <a class="item" data-tab="perks">Perks</a>
+        <a class="item" data-tab="gear">Gear</a>
+        <a class="item" data-tab="powers">Powers</a>
+        <a class="item" data-tab="background">Background</a>
+    </nav>
+
+    <section class="main">
+        <!--**************** stat-tab******************--->
+        <div class="tab stats" data-group="primary" data-tab="stats">
+
+            <div class="sheet-header block">
+                {{> "systems/torgeternity/templates/actors/stormknight/header.hbs"}}
+            </div>
+
+            <div class="attributes block " >
+                {{> "systems/torgeternity/templates/actors/stormknight/attributes.hbs"}}
+            </div>
+
+            <div class="skills block" >
+                {{> "systems/torgeternity/templates/actors/stormknight/skills.hbs"}}
+            </div>
+
+            <div class="char_image">
+                <img src="{{actor.img}}" class="profile-img" data-edit="img" title="{{actor.name}}" />
+            </div>
+
+            <div class="perks block">
+                {{> "systems/torgeternity/templates/actors/stormknight/perks.hbs"}}
+            </div>
+
+            <div class="defense block">
+                {{> "systems/torgeternity/templates/actors/stormknight/defense.hbs"}}
+            </div>
+
+            <div class="weapons block">
+                {{> "systems/torgeternity/templates/actors/stormknight/weapons.hbs"}}
+            </div>
+
+        </div>
+        <div class="tab perks" data-group="primary" data-tab="perks">
+            testetettetetetet
+        </div>
+
+    </section>
+    
+
+</form>

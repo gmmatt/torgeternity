@@ -1,0 +1,19 @@
+<h1>ATTRIBUTES</h1>
+<ul>
+
+    {{#each data.attributes as |attr key|}}
+    <li class="attribut-block">
+        <a class="skill-roll" data-skill-value="{{attr}}" data-skill-name="{{key}}">{{localize key }}</a>
+        <input name="data.attributes.{{key}}" type="number" value="{{attr}}" data=dtype="Number" />
+    </li>
+    {{/each}}
+    <li class="attribut-block"><h2>others</h2></li>
+   
+    {{#each data.other as |other key|}}
+    <li class="attribut-block other">
+        <a class="skill-roll" data-skill-value="{{other}}" data-skill-name="{{key}}">{{localize key }}</a>
+        <input name="data.other.{{key}}" type="number" value="{{other}}" data=dtype="Number" />
+    </li>
+    {{/each}}
+    
+</ul>
