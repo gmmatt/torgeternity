@@ -62,6 +62,92 @@ export default class torgeternityActor extends Actor {
                 this.data.data.trickDefense = this.data.data.attributes.mind
             };
 
+            // Set base wounds to 3
+            this.data.data.wounds.max = 3;
+
+            //Set base shock to Spirit
+            this.data.data.shock.max = this.data.data.attributes.spirit;
+
+            //Set base move and run
+            this.data.data.other.move = this.data.data.attributes.dexterity;
+            this.data.data.other.run = parseInt(this.data.data.attributes.dexterity) * 3;
+
+            //Set base toughness
+            this.data.data.other.toughness = parseInt(this.data.data.attributes.strength) + parseInt(this.data.data.other.armor);
+
+            //Set axioms based on home reality
+            switch(this.data.data.other.cosm) {
+                case "coreEarth":
+                    this.data.data.axioms.magic = 9;
+                    this.data.data.axioms.social = 23;
+                    this.data.data.axioms.spirit = 10;
+                    this.data.data.axioms.tech = 23;
+                    break;
+                case "aysle":
+                    this.data.data.axioms.magic = 24;
+                    this.data.data.axioms.social = 16;
+                    this.data.data.axioms.spirit = 18;
+                    this.data.data.axioms.tech = 14;
+                    break;
+                case "cyberpapacy":
+                    this.data.data.axioms.magic = 15;
+                    this.data.data.axioms.social = 18;
+                    this.data.data.axioms.spirit = 16;
+                    this.data.data.axioms.tech = 26;
+                    break;
+                case "livingLand":
+                    this.data.data.axioms.magic = 1;
+                    this.data.data.axioms.social = 7;
+                    this.data.data.axioms.spirit = 24;
+                    this.data.data.axioms.tech = 6;
+                    break;
+                case "nileEmpire":
+                    this.data.data.axioms.magic = 14;
+                    this.data.data.axioms.social = 20;
+                    this.data.data.axioms.spirit = 18;
+                    this.data.data.axioms.tech = 20;
+                    break;
+                case "orrorsh":
+                    this.data.data.axioms.magic = 16;
+                    this.data.data.axioms.social = 18;
+                    this.data.data.axioms.spirit = 16;
+                    this.data.data.axioms.tech = 18;
+                    break;
+                case "panPacifica":
+                    this.data.data.axioms.magic = 4;
+                    this.data.data.axioms.social = 24;
+                    this.data.data.axioms.spirit = 8;
+                    this.data.data.axioms.tech = 24;
+                    break;
+                case "tharkold":
+                    this.data.data.axioms.magic = 12;
+                    this.data.data.axioms.social = 25;
+                    this.data.data.axioms.spirit = 4;
+                    this.data.data.axioms.tech = 25;
+                    break;
+                default:
+                    this.data.data.axioms.magic = "";
+                    this.data.data.axioms.social = "";
+                    this.data.data.axioms.spirit = "";
+                    this.data.data.axioms.tech = "";
+                    break;
+            }
+            
+            //Set clearance level
+            
+            if (this.data.data.xp.earned < 50) {
+                this.data.data.details.clearance = "alpha";
+            } else if (this.data.data.xp.earned < 200) {
+                this.data.data.details.clearance = "beta";
+            } else if (this.data.data.xp.earned < 500) {
+                this.data.data.details.clearance = "gamma";
+            } else if (this.data.data.xp.earned < 1000) {
+                this.data.data.details.clearance = "delta";
+            } else {
+                this.data.data.details.clearance = "omega";
+            };
+
+
         };
 
         //Set unknown edit states to none
