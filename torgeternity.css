@@ -345,3 +345,15 @@
   font-weight:bold;
   text-align:center
 }
+
+.storm-knight-label-small {
+  font-family: "Palatino Linotype";
+  font-size: 11px;
+  text-align:center
+}
+
+.storm-knight-label {
+  font-family: "Palatino Linotype";
+  font-size:14px;
+  text-align:center
+}

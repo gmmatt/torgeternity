@@ -12,7 +12,7 @@
                         {{localize "torgeternity.sheetLabels.wounds"}}: 
                         <input name="data.wounds.value" type="text" value="{{data.wounds.value}}" data-dtype="Number" class="small-input" />
                         /
-                        <input name="data.wounds.max" type="text" value="{{data.wounds.max}}" data-dtype="Number" class="small-input" />
+                        <span class="storm-knight-label-small">{{data.wounds.max}}</span>
                     </span>
                 </td>
                     <td style="text-align:center; font-size:11px" width="20%">
@@ -20,7 +20,7 @@
                             {{localize "torgeternity.sheetLabels.shock"}}: 
                             <input name="data.shock.value" type="text" value="{{data.shock.value}}" data-dtype="Number" class="small-input" />
                             /
-                            <input name="data.shock.max" type="text" value="{{data.shock.max}}" data-dtype="Number" class="small-input" />
+                            <span class="storm-knight-label-small">{{data.shock.max}}</span>
                         </span>
                     </td>
                 <td style="text-align:center; font-size:11px" width="20%">
@@ -100,7 +100,7 @@
                                 <span class="main-label">{{localize "torgeternity.sheetLabels.move"}}</span>
                             </td>
                             <td>
-                                <input name="data.other.move" type="text" value="{{data.other.move}}" data=dtype="Number" class="small-input" />
+                               <span class="storm-knight-label">{{data.other.move}}</span>
                             </td>
                         </tr>
                         <tr>
@@ -108,7 +108,7 @@
                                 <span class="main-label">{{localize "torgeternity.sheetLabels.run"}}</span>
                             </td>
                             <td>
-                                <input name="data.other.run" type="text" value="{{data.other.run}}" data=dtype="Number" class="small-input" />
+                               <span class="storm-knight-label">{{data.other.run}}</span>
                             </td>
                         </tr>
                         <tr>
@@ -116,7 +116,7 @@
                                 <span class="main-label">{{localize "torgeternity.sheetLabels.toughness"}}</span>
                             </td>
                             <td>
-                                <input name="data.other.toughness" type="text" value="{{data.other.toughness}}" data=dtype="Number" class="small-input" />
+                               <span class="storm-knight-label">{{data.other.toughness}}</span>
                             </td>
                         </tr>
                         <tr>
@@ -136,7 +136,7 @@
                     <select name="data.other.cosm" class="input-box" style="width:100%;font-size:14px">
                         {{#select data.other.cosm}}
                         {{#each config.cosmTypes as |name type|}}
-                        <option value="{{localize name}}">{{localize name}}</option>
+                        <option value="{{type}}">{{localize name}}</option>
                         {{/each}}
                         {{/select}}
                     </select>
@@ -146,14 +146,14 @@
                                 <span class="main-label">{{localize "torgeternity.sheetLabels.magic"}}</span>
                             </td>
                             <td>
-                                <input name="data.axioms.magic" type="text" value="{{data.axioms.magic}}" data=dtype="Number" class="small-input" />
+                                <span class="storm-knight-label">{{data.axioms.magic}}</span>
                         </tr>
                         <tr>
                             <td>
                                 <span class="main-label">{{localize "torgeternity.sheetLabels.social"}}</span>
                             </td>
                             <td>
-                                <input name="data.axioms.social" type="text" value="{{data.axioms.social}}" data=dtype="Number" class="small-input" />
+                                <span class="storm-knight-label">{{data.axioms.social}}</span>
                             </td>
                         </tr>
                         <tr>
@@ -161,7 +161,7 @@
                                 <span class="main-label">{{localize "torgeternity.sheetLabels.spirit"}}</span>
                             </td>
                             <td>
-                                <input name="data.axioms.spirit" type="text" value="{{data.axioms.spirit}}" data=dtype="Number" class="small-input" />
+                                <span class="storm-knight-label">{{data.axioms.spirit}}</span>
                             </td>
                         </tr>
                         <tr>
@@ -169,7 +169,7 @@
                                 <span class="main-label">{{localize "torgeternity.sheetLabels.tech"}}</span>
                             </td>
                             <td>
-                                <input name="data.axioms.tech" type="text" value="{{data.axioms.tech}}" data=dtype="Number" class="small-input" />
+                                <span class="storm-knight-label">{{data.axioms.tech}}</span>
                             </td>
                         </tr>
                     </table>
@@ -218,7 +218,7 @@
                                         <td class="skill-text">
                                             {{localize (concatAttributeName content.baseAttribute)}}
                                         </td>
-                                        <td class=skill-text>
+                                        <td class="skill-text">
                                             <input name="data.skills.{{name}}.adds" type="text" class="small-input" value="{{content.adds}}" data-dtype="Number" style="width:30px;text-align:center" />
                                         </td>
                                         <td class="skill-text" style="text-align:center">
@@ -322,13 +322,9 @@
                     <p class="item-data-label" style="padding:0px 0px 0px 0px">
                         {{localize "torgeternity.sheetLabels.clearance"}}
                     </p>
-                    <select name="data.details.clearance" class="input-box" style="font-size:14px">
-                        {{#select data.details.clearance}}
-                        {{#each config.clearances as |name type|}}
-                        <option value="{{type}}">{{localize name}}</option>
-                        {{/each}}
-                        {{/select}}
-                    </select>
+                    <div class="input-box" style="font-size:14px">
+                        {{localize (concatClearanceLevel data.details.clearance)}}
+                    </div>
 
                     <div style="height:15px">
 
