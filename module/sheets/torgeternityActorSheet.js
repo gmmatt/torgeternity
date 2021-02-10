@@ -267,8 +267,19 @@ export default class torgeternityActorSheet extends ActorSheet {
     _onPowerRoll(event) {
         const itemID = event.currentTarget.closest(".item").dataset.itemId;
         const item = this.actor.getOwnedItem(itemID);
-
-        item.power();
+        var powerData = item.data.data;
+        var skillData = this.actor.data.data.skills[powerData.skill];
+        torgchecks.powerRoll ({
+            actor: this.actor,
+            item: item,
+            actorPic: this.actor.data.img,
+            skillName: powerData.skill,
+            skillBaseAttribute: skillData.baseAttribute,
+            skillValue: skillData.value,
+            powerName: item.data.name,
+            powerAttack: powerData.isAttack,
+            powerDamage: powerData.damage
+        })
     }
 
     _onCreateSa(event) {

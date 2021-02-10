@@ -198,3 +198,7 @@ torgeternity.statusEffects = [
 
 ]
 
+torgeternity.yesNo = {
+    true: "torgeternity.yesNo.true",
+    false: "torgeternity.yesNo.false"
+}

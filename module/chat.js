@@ -33,7 +33,8 @@ function onPossibility(event) {
         heroTotal: event.currentTarget.dataset.heroTotal,
         dramaTotal: event.currentTarget.dataset.dramaTotal,
         cardsPlayed: event.currentTarget.dataset.cardsPlayed,
-        damage: event.currentTarget.dataset.damage
+        damage: event.currentTarget.dataset.damage,
+        powerAttack: event.currentTarget.dataset.powerAttack
     };
 
     //Roll for Possibility
@@ -72,7 +73,8 @@ function onUp(event) {
         heroTotal: event.currentTarget.dataset.heroTotal,
         dramaTotal: event.currentTarget.dataset.dramaTotal,
         cardsPlayed: event.currentTarget.dataset.cardsPlayed,
-        damage: event.currentTarget.dataset.damage
+        damage: event.currentTarget.dataset.damage,
+        powerAttack: event.currentTarget.dataset.powerAttack
     };
 
     //Roll for Up
@@ -108,7 +110,8 @@ function onHero(event) {
         heroTotal: event.currentTarget.dataset.heroTotal,
         dramaTotal: event.currentTarget.dataset.dramaTotal,
         cardsPlayed: event.currentTarget.dataset.cardsPlayed,
-        damage: event.currentTarget.dataset.damage
+        damage: event.currentTarget.dataset.damage,
+        powerAttack: event.currentTarget.dataset.powerAttack
     };
 
     //Roll for Possibility
@@ -147,7 +150,8 @@ function onDrama(event) {
         heroTotal: event.currentTarget.dataset.heroTotal,
         dramaTotal: event.currentTarget.dataset.dramaTotal,
         cardsPlayed: event.currentTarget.dataset.cardsPlayed,
-        damage: event.currentTarget.dataset.damage
+        damage: event.currentTarget.dataset.damage,
+        powerAttack: event.currentTarget.dataset.powerAttack
     };
 
     //Increase cards played by 1
@@ -186,7 +190,8 @@ function onPlus3(event) {
         heroTotal: event.currentTarget.dataset.heroTotal,
         dramaTotal: event.currentTarget.dataset.dramaTotal,
         cardsPlayed: event.currentTarget.dataset.cardsPlayed,
-        damage: event.currentTarget.dataset.damage
+        damage: event.currentTarget.dataset.damage,
+        powerAttack: event.currentTarget.dataset.powerAttack
     };
 
     //Add 1 to cards played
@@ -219,7 +224,8 @@ function onBd(event) {
         heroTotal: event.currentTarget.dataset.heroTotal,
         dramaTotal: event.currentTarget.dataset.dramaTotal,
         cardsPlayed: event.currentTarget.dataset.cardsPlayed,
-        damage: event.currentTarget.dataset.damage
+        damage: event.currentTarget.dataset.damage,
+        powerAttack: event.currentTarget.dataset.powerAttack
     };
 
     var finalValue = torgBD();

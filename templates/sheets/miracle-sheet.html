@@ -43,9 +43,16 @@
                 </p>
                 <input name="data.duration" type="text" value="{{data.duration}}" class="input-box" />
                 <p class="item-data-label">
-                    {{localize "torgeternity.powers.damage"}}
+                    Attack?/{{localize "torgeternity.powers.damage"}}
                 </p>
-                <input name="data.damage" type="text" value="{{data.damage}}" class="input-box" />
+                <select name="data.isAttack" class="input-box-small" default="false">
+                    {{#select data.isAttack}}
+                    {{#each config.yesNo as |name type|}}
+                    <option value="{{type}}">{{localize name}}</option>
+                    {{/each}}
+                    {{/select}}
+                </select>
+                <input name="data.damage" type="text" value="{{data.damage}}" class="input-box-small" />
              </td>
             <td style="width:65%"> <!-- right column -->
                 <p class="item-data-label">
