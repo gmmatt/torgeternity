@@ -92,6 +92,10 @@ export default class torgeternityActorSheet extends ActorSheet {
         }
 
         if (this.actor.owner) {
+            html.find(".item-equip").click(this._onItemEquip.bind(this));
+        }
+
+        if (this.actor.owner) {
             html.find(".item-create-sa").click(this._onCreateSa.bind(this));
         }
 
@@ -317,6 +321,17 @@ export default class torgeternityActorSheet extends ActorSheet {
             this.actor.data.data.editstate = "none";
             this.actor.update({"data.editstate":"none"});
         };
+    }
+
+    _onItemEquip(event) {
+        var actor = this.actor;
+        const itemID = event.currentTarget.closest(".item").dataset.itemId;
+        const item = this.actor.getOwnedItem(itemID);
+        if (item.equipped === false) {
+            item.equipped = true;    
+        } else {
+            item.equipped = false;
+        }
     }
 }
 

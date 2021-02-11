@@ -370,6 +370,7 @@
             ],
             "bonus": 1,
             "maxDex": 12,
+            "equipped": false,
             "notes": ""
         },
         "shield": {
@@ -377,6 +378,7 @@
                 "general"
             ],
             "bonus": 1,
+            "equipped": false,
             "notes": ""
         },        
         "meleeweapon":{
