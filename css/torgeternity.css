@@ -127,6 +127,15 @@ div.actor ::-webkit-scrollbar {
   color: white;
 }
 
+.window-app .window-content .editor {
+  width: 400px;
+  height: 400px;
+  background: url(../images/bckg-hex.png);
+  background-size: 110% 110%;
+  padding: 20px;
+  background-position: center;
+}
+
 .window-app .window-content .rollable:hover, .window-app .window-content .rollable:focus {
   color: #000;
   text-shadow: 0 0 10px white;
@@ -839,13 +848,86 @@ a:hover {
 }
 
 .item .window-content {
+  padding: 0px;
+}
+
+.item .window-content form.item-sheet {
+  padding: 10px;
   background-image: url(../images/bg-sheet.png);
   background-size: cover;
   font-family: Palatino;
   font-size: 0.9em;
 }
 
-.item .window-content nav.tabs {
+.item .window-content form.item-sheet .item-type {
+  background: url(../images/separatorRound.png);
+  position: absolute;
+  transform: rotateZ(-90deg);
+  left: -45%;
+  top: 55%;
+  width: 90%;
+  height: 40px;
+  background-size: 100% 100%;
+  text-align: center;
+  text-shadow: 0px 0px 20px #112635;
+  text-transform: uppercase;
+}
+
+.item .window-content form.item-sheet .item-type span {
+  background: black;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.item .window-content form.item-sheet header {
+  margin-top: 15px;
+}
+
+.item .window-content form.item-sheet header input[name="name"] {
+  border: none;
+  text-transform: uppercase;
+  text-shadow: 0px -2px 10px #0e0909;
+  font-family: Alaska;
+}
+
+.item .window-content form.item-sheet .sheet-content {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  margin: 15px;
+  color: black;
+}
+
+.item .window-content form.item-sheet .asside {
+  grid-row: 1/4;
+  grid-column: 1/2;
+}
+
+.item .window-content form.item-sheet .asside input[type="number"] {
+  border: none;
+  text-align: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 15px;
+  background: url(../images/roundBack.webp);
+  background-size: cover;
+}
+
+.item .window-content form.item-sheet .main-content {
+  grid-row: 1/4;
+  grid-column: 2/5;
+}
+
+.item .window-content form.item-sheet .editor {
+  width: 400px;
+  height: 400px;
+  background: url(../images/bckg-hex.png);
+  background-size: 110% 110%;
+  padding: 20px;
+  background-position: center;
+}
+
+.item .window-content form.item-sheet nav.tabs {
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -858,7 +940,7 @@ a:hover {
   top: 60px;
 }
 
-.item .window-content nav.tabs a.item {
+.item .window-content form.item-sheet nav.tabs a.item {
   min-width: 100px;
   transition: all 0.1s cubic-bezier(1, 0, 0, 1) 0.1s;
   color: white;
@@ -866,8 +948,8 @@ a:hover {
   background-size: contain;
 }
 
-.item .window-content nav.tabs a.item:hover,
-.item .window-content nav.tabs a.item:active {
+.item .window-content form.item-sheet nav.tabs a.item:hover,
+.item .window-content form.item-sheet nav.tabs a.item:active {
   text-transform: uppercase;
   transform: scaleX(1.1) scaleY(1.3) scaleZ(1.2);
   text-shadow: 0 0 10px #10813f;
@@ -875,36 +957,40 @@ a:hover {
   z-index: 0;
 }
 
-.item .window-content nav.tabs a.item.active {
+.item .window-content form.item-sheet nav.tabs a.item.active {
   background-image: url(../images/active_tab_back.png);
   text-transform: uppercase;
 }
 
-.item .window-content select:hover,
-.item .window-content select:focus,
-.item .window-content input[type="text"]:hover,
-.item .window-content input[type="number"]:hover,
-.item .window-content input[type="text"]:focus,
-.item .window-content input[type="number"]:focus {
+.item .window-content form.item-sheet select:hover,
+.item .window-content form.item-sheet select:focus,
+.item .window-content form.item-sheet input[type="text"]:hover,
+.item .window-content form.item-sheet input[type="number"]:hover,
+.item .window-content form.item-sheet input[type="text"]:focus,
+.item .window-content form.item-sheet input[type="number"]:focus {
   box-shadow: 0 0 10px #4f523c inset;
 }
 
-.item .window-content input[type="text"]::-moz-placeholder, .item .window-content input[type="number"]::-moz-placeholder {
+.item .window-content form.item-sheet input[type="text"]::-moz-placeholder, .item .window-content form.item-sheet input[type="number"]::-moz-placeholder {
   color: #293131;
   text-shadow: 0px 0px 10px black;
 }
 
-.item .window-content input[type="text"]:-ms-input-placeholder, .item .window-content input[type="number"]:-ms-input-placeholder {
+.item .window-content form.item-sheet input[type="text"]:-ms-input-placeholder, .item .window-content form.item-sheet input[type="number"]:-ms-input-placeholder {
   color: #293131;
   text-shadow: 0px 0px 10px black;
 }
 
-.item .window-content input[type="text"]::placeholder,
-.item .window-content input[type="number"]::placeholder {
+.item .window-content form.item-sheet input[type="text"]::placeholder,
+.item .window-content form.item-sheet input[type="number"]::placeholder {
   color: #293131;
   text-shadow: 0px 0px 10px black;
 }
 
-.item .window-content .item-data-label {
-  color: black;
+.item .window-content form.item-sheet .item-description-textarea {
+  font-family: "Palatino Linotype";
+  font-size: 12px;
+  border-radius: 15px;
+  resize: none;
+  padding: 5px 5px;
 }
