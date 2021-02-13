@@ -29,13 +29,8 @@
 }
 
 .torgeternity.actor .window-content {
-  width: calc(100% + 100px);
   background-image: url(../images/bg-sheet.png);
   background-size: cover;
-  position: relative;
-  top: -15px;
-  left: -45px;
-  padding: 5%;
   font-family: Palatino;
   font-size: 0.9em;
 }
@@ -48,7 +43,7 @@
 .actor-sheet .tab[data-tab].active {
   display: grid;
   grid-template-columns: repeat(8, 1fr);
-  grid-template-rows: repeat(10, minmax(25px, 115px));
+  grid-template-rows: repeat(8, minmax(25px, 115px));
   grid-gap: 5px;
   justify-content: center;
 }
@@ -84,10 +79,9 @@
   text-align: center;
   border: none;
   position: absolute;
-  top: 400px;
-  right: -5px;
   transform: rotateZ(90deg);
   font-family: Berlin;
+  right: -60px;
 }
 
 .actor-sheet a.item {
@@ -96,25 +90,18 @@
   color: white;
   background-image: url(../images/tab_back.png);
   background-size: contain;
-  transform: translateX(-300px);
 }
 
 .actor-sheet a.item:hover,
 .actor-sheet a.item:active {
   transform: scaleX(1.1) scaleY(1.3) scaleZ(1.2);
-  transform-origin: 50% 50% 0;
   text-shadow: 0 0 10px #10813f;
   color: #e5ecec;
-  transform: translateX(-300px);
   z-index: 0;
 }
 
 .actor-sheet a.item.active {
-  transform: scaleX(1.1) scaleY(1.3) scaleZ(1.2);
-  transform-origin: 50% 50% 0;
   background-image: url(../images/active_tab_back.png);
-  transform: translateX(-300px);
-  z-index: 100;
 }
 
 .actor-sheet input[type="text"]:hover,

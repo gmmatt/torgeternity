@@ -27,58 +27,54 @@
 // ----------------------------------------all globals for actors
 .torgeternity.actor .window-content {
 
-  
 
 
 
-    width: calc(100% + 100px);
+
+
     background-image: url(../images/bg-sheet.png);
     background-size: cover;
-    position: relative;
-    top: -15px;
-    left: -45px;
-    padding: 5%;
     font-family: Palatino;
     font-size: 0.9em;
 }
 
 
 
-    .actor-sheet {
+.actor-sheet {
 
-        //defining grid container for each tab
-        .tab[data-tab].active {
+    //defining grid container for each tab
+    .tab[data-tab].active {
 
-            display: grid;
-            grid-template-columns: repeat(8, 1fr);
-            grid-template-rows: repeat(10, minmax(25px, 115px));
-            grid-gap: 5px;
-            justify-content: center;
-        }
-
-
-
-
-        div.block {
-            border: solid 4px;
-            border-image: url(../images/separator.png);
-            border-image-slice: 50;
-            box-shadow: 2px 2px 15px #9e9686;
-            transition: all 0.3s cubic-bezier(0.6, -0.07, 0.56, 1.52) 0.2s;
-            overflow: scroll;
-
-        }
-
-        div.block:hover {
-            box-shadow: 2px 2px 15px black;
-
-        }
+        display: grid;
+        grid-template-columns: repeat(8, 1fr);
+        grid-template-rows: repeat(8, minmax(25px, 115px));
+        grid-gap: 5px;
+        justify-content: center;
+    }
 
 
 
-        //---------tabs selectors
-        nav.tabs {
-            /*
+
+    div.block {
+        border: solid 4px;
+        border-image: url(../images/separator.png);
+        border-image-slice: 50;
+        box-shadow: 2px 2px 15px #9e9686;
+        transition: all 0.3s cubic-bezier(0.6, -0.07, 0.56, 1.52) 0.2s;
+        overflow: scroll;
+
+    }
+
+    div.block:hover {
+        box-shadow: 2px 2px 15px black;
+
+    }
+
+
+
+    //---------tabs selectors
+    nav.tabs {
+        /*
             display: flex;
             flex-direction: column;
             position: relative;
@@ -89,50 +85,43 @@
             bottom: 0.2%;
             left: 50%;
 */
-            display: flex;
-            flex-direction: column;
-            text-align: center;
-            border: none;
-            position: absolute;
-            top: 400px;
-            right: -5px;
-            transform: rotateZ(90deg);
-            font-family:Berlin
-        }
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        border: none;
+        position: absolute;
+        transform: rotateZ(90deg);
+        font-family: Berlin;
+        right :-60px;
+        
+    }
 
-        a.item {
+    a.item {
 
-            min-width: 100px;
-            transition: all 0.1s cubic-bezier(1, 0, 0, 1) 0.1s;
-            color: white;
-            background-image: url(../images/tab_back.png);
-            background-size: contain;
-            transform: translateX(-300px);
-        }
+        min-width: 100px;
+        transition: all 0.1s cubic-bezier(1, 0, 0, 1) 0.1s;
+        color: white;
+        background-image: url(../images/tab_back.png);
+        background-size: contain;
+    }
 
-        a.item:hover,
-        a.item:active {
-            -webkit-transform: scaleX(1.1) scaleY(1.3) scaleZ(1.2);
-            transform: scaleX(1.1) scaleY(1.3) scaleZ(1.2);
-            -webkit-transform-origin: 50% 50% 0;
-            transform-origin: 50% 50% 0;
-            text-shadow: 0 0 10px rgb(16, 129, 63);
-            color: rgb(229, 236, 236);
-            transform: translateX(-300px);
-            z-index: 0;
-        }
+    a.item:hover,
+    a.item:active {
+        -webkit-transform: scaleX(1.1) scaleY(1.3) scaleZ(1.2);
+        transform: scaleX(1.1) scaleY(1.3) scaleZ(1.2);
+              text-shadow: 0 0 10px rgb(16, 129, 63);
+        color: rgb(229, 236, 236);
+       
+        z-index: 0;
+    }
 
-        a.item.active {
-            -webkit-transform: scaleX(1.1) scaleY(1.3) scaleZ(1.2);
-            transform: scaleX(1.1) scaleY(1.3) scaleZ(1.2);
-            -webkit-transform-origin: 50% 50% 0;
-            transform-origin: 50% 50% 0;
-            background-image: url(../images/active_tab_back.png);
+    a.item.active {
+       
+        background-image: url(../images/active_tab_back.png);
 
-            transform: translateX(-300px);
-            z-index: 100;
-        }
-    
+      
+    }
+
 
 
 
@@ -164,7 +153,7 @@
 
 
     }
-    
+
 
     h2 {
         color: black;
