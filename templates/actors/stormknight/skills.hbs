@@ -1,51 +1,52 @@
 <div class="skills">
-<h1> SKILLS</h1>
-<ul>
-    <li class="dark">
-        <span>Skill</span>
-        <span>Attribute</span>
-        <span>Adds</span>
-        <span>Total</span>
-    </li>
-    {{#if data.editstate}}
-    {{#each data.skills as |content name|}}
-    <li>
-        <span>
-            <a class="skill-roll" data-skill-value="{{content.value}}"
-                data-skill-name="{{localize (concatSkillName name)}}">{{localize (concatSkillName name)}}</a>
-        </span>
-        <span class="skill-roll">
-            {{localize (concatAttributeName content.baseAttribute)}}
-        </span>
-        <span>
-            <input name="data.skills.{{name}}.adds" type="text"  value="{{content.adds}}"data-dtype="Number"  />
-        </span>
-        <span class="skill-roll" >
-            {{content.value}}
-        </span>
-    </li>
-    {{/each}}
-    {{else}}
-    {{#each data.skills as |content name|}}
-    {{#if content.value}}
-    <li>
-        <span>
-            <a class="skill-roll" data-skill-value="{{content.value}}"
-                data-skill-name="{{localize (concatSkillName name)}}">{{localize (concatSkillName name)}}</a>
-        </span>
-        <span class="skill-roll">
-            {{localize (concatAttributeName content.baseAttribute)}}
-        </span>
-        <span>
-            <input name="data.skills.{{name}}.adds" type="text" class="small-input" value="{{content.adds}}"
-                data-dtype="Number" />
-        </span>
-        <span class="skill-roll" >
-            {{content.value}}
-        </span>
-    </li>
-    {{/if}}
-    {{/each}}
-    {{/if}}
-    </li>
-</ul></div>
+    <h2 class="skill-edit-toggle" title="Toggle Skill Display"><a>SKILLS</a> </h2>
+    <ul>
+        <li class="dark">
+            <span>Skill</span>
+            <span>Attribute</span>
+            <span>Adds</span>
+            <span>Total</span>
+        </li>
+        {{#if data.editstate}}
+        {{#each data.skills as |content name|}}
+        <li>
+            <span>
+                <a class="skill-roll" data-skill-value="{{content.value}}"
+                    data-skill-name="{{localize (concatSkillName name)}}">{{localize (concatSkillName name)}}</a>
+            </span>
+            <span class="skill-roll">
+                {{localize (concatAttributeName content.baseAttribute)}}
+            </span>
+            <span>
+                <input name="data.skills.{{name}}.adds" type="text" value="{{content.adds}}" data-dtype="Number" />
+            </span>
+            <span class="skill-roll">
+                {{content.value}}
+            </span>
+        </li>
+        {{/each}}
+        {{else}}
+        {{#each data.skills as |content name|}}
+        {{#if content.adds}}
+        <li>
+            <span>
+                <a class="skill-roll" data-skill-value="{{content.value}}"
+                    data-skill-name="{{localize (concatSkillName name)}}">{{localize (concatSkillName name)}}</a>
+            </span>
+            <span class="skill-roll">
+                {{localize (concatAttributeName content.baseAttribute)}}
+            </span>
+            <span>
+                <input name="data.skills.{{name}}.adds" type="text" class="small-input" value="{{content.adds}}"
+                    data-dtype="Number" />
+            </span>
+            <span class="skill-roll">
+                {{content.value}}
+            </span>
+        </li>
+        {{/if}}
+        {{/each}}
+        {{/if}}
+        </li>
+    </ul>
+</div>
