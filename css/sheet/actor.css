@@ -134,6 +134,10 @@
   height: auto;
 }
 
+.actor-sheet h3 {
+  font-family: graveBolt;
+}
+
 .actor-sheet h2 {
   color: black;
   border: none;
@@ -170,6 +174,34 @@
   -webkit-animation-name: roll;
   animation-name: roll;
   text-shadow: 0px 0px 10px #191e58;
+}
+
+.actor-sheet ol.item-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.actor-sheet ol.item-list img {
+  max-width: 100px;
+  max-height: auto;
+}
+
+.actor-sheet ol.item-list .item-control {
+  float: right;
+}
+
+.actor-sheet ol.item-list li {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-bottom: 1px solid black;
+}
+
+.actor-sheet ol.item-list li .item-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .actor-sheet .char_image {
@@ -239,7 +271,8 @@
 }
 
 .actor-sheet .attributes ul,
-.actor-sheet .others ul {
+.actor-sheet .others ul,
+.actor-sheet .perks-details ul {
   font-family: Berlin;
   display: flex;
   flex-direction: row;
@@ -247,7 +280,8 @@
 }
 
 .actor-sheet .attributes ul li.attribut-block,
-.actor-sheet .others ul li.attribut-block {
+.actor-sheet .others ul li.attribut-block,
+.actor-sheet .perks-details ul li.attribut-block {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -255,7 +289,8 @@
 }
 
 .actor-sheet .attributes ul li.attribut-block input[type="number"],
-.actor-sheet .others ul li.attribut-block input[type="number"] {
+.actor-sheet .others ul li.attribut-block input[type="number"],
+.actor-sheet .perks-details ul li.attribut-block input[type="number"] {
   border: none;
   text-align: center;
   width: 30px;
@@ -266,7 +301,8 @@
 }
 
 .actor-sheet .attributes ul li.attribut-block a,
-.actor-sheet .others ul li.attribut-block a {
+.actor-sheet .others ul li.attribut-block a,
+.actor-sheet .perks-details ul li.attribut-block a {
   margin-left: auto;
   text-align: center;
 }
@@ -308,9 +344,14 @@
   text-align: center;
 }
 
-.actor-sheet .perks {
+.actor-sheet .perks-list {
   grid-column: 5/9;
   grid-row: 5/7;
+}
+
+.actor-sheet .perks-details {
+  grid-column: 1/9;
+  grid-row: 1/9;
 }
 
 .actor-sheet .defense {

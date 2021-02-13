@@ -13,10 +13,11 @@ export const preloadTemplates = async function () {
         "systems/torgeternity/templates/actors/stormknight/attributes.hbs",
         "systems/torgeternity/templates/actors/stormknight/skills.hbs",
         "systems/torgeternity/templates/actors/stormknight/header.hbs",
-        "systems/torgeternity/templates/actors/stormknight/perks.hbs",
+        "systems/torgeternity/templates/actors/stormknight/perks-details.hbs",
         "systems/torgeternity/templates/actors/stormknight/defense.hbs",
         "systems/torgeternity/templates/actors/stormknight/weapons.hbs",
         "systems/torgeternity/templates/actors/stormknight/others.hbs",
+        "systems/torgeternity/templates/actors/stormknight/perks-list.hbs",
 
     ];
 
