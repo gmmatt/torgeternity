@@ -307,7 +307,7 @@ body {
   justify-content: center;
 }
 
-.actor-sheet div.block {
+.actor-sheet .block {
   border: solid 4px;
   -o-border-image: url(../images/separator.png);
   border-image: url(../images/separator.png);
@@ -338,9 +338,10 @@ body {
   text-align: center;
   border: none;
   position: absolute;
-  transform: rotateZ(90deg);
+  transform: rotateZ(-90deg);
   font-family: Berlin;
-  right: -60px;
+  left: -60px;
+  bottom: 30px;
 }
 
 .actor-sheet a.item {

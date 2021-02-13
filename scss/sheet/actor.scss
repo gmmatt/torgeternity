@@ -56,7 +56,7 @@
 
 
 
-    div.block {
+    .block {
         border: solid 4px;
         border-image: url(../images/separator.png);
         border-image-slice: 50;
@@ -91,9 +91,10 @@
         text-align: center;
         border: none;
         position: absolute;
-        transform: rotateZ(90deg);
+        transform: rotateZ(-90deg);
         font-family: Berlin;
-        right: -60px;
+        left: -60px;
+        bottom: 30px;
 
     }
 
