@@ -93,7 +93,6 @@
 
     //---------tabs selectors
     nav.tabs {
-
         display: flex;
         flex-direction: column;
         text-align: center;
@@ -106,7 +105,7 @@
         right: -60px;
         top: 60px;
 
-        a.item {
+    a.item {
 
             min-width: 100px;
             transition: all 0.1s cubic-bezier(1, 0, 0, 1) 0.1s;
