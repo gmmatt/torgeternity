@@ -3,11 +3,9 @@
   "title": "Torg Eternity",
   "description": "Unofficial Torg Eternity character sheet for Foundry VTT.",
   "author": "Matt Ritchie",
-<<<<<<< HEAD
+
   "version": "0.90.3",
-=======
-  "version": "0.91.0",
->>>>>>> 293856e836bdc2e3efa95053f7b3fb5ce342240a
+
   "minimumCoreVersion": "0.7.8",
   "compatibleCoreVersion": "0.7.9", 
   "templateVersion": 2,
@@ -26,18 +24,14 @@
       "name": "English",
       "path": "lang/en.json"
     },
-<<<<<<< HEAD
-    {
-      "lang": "es",
-      "name": "Español",
-      "path": "lang/es.json"
-=======
+
+    
 
     {
       "lang": "es",
       "name": "Español",
       "path": "lang/es.json"    
->>>>>>> 293856e836bdc2e3efa95053f7b3fb5ce342240a
+
     }
   ],
   "gridDistance": 5,
