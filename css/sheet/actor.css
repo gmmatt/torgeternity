@@ -201,6 +201,7 @@
   border: none;
   border-bottom: solid;
   max-height: 20px;
+  font-size: 0.9em;
 }
 
 .actor-sheet .sheet-header select:active,
