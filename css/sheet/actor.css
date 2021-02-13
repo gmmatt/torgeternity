@@ -178,7 +178,7 @@
 
 .actor-sheet ol.item-list {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-between;
 }
 
@@ -189,19 +189,20 @@
 
 .actor-sheet ol.item-list .item-control {
   float: right;
+  margin: 5px;
 }
 
 .actor-sheet ol.item-list li {
+  margin: 5px;
+  padding-bottom: 5px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  border-bottom: 1px solid black;
+  border-top: 1px solid black;
 }
 
-.actor-sheet ol.item-list li .item-details {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+.actor-sheet ol.item-list li div {
+  margin-right: 15px;
 }
 
 .actor-sheet .char_image {
@@ -271,17 +272,23 @@
 }
 
 .actor-sheet .attributes ul,
+.actor-sheet .attributes ol,
 .actor-sheet .others ul,
-.actor-sheet .perks-details ul {
+.actor-sheet .others ol,
+.actor-sheet .perks-details ul,
+.actor-sheet .perks-details ol {
   font-family: Berlin;
   display: flex;
-  flex-direction: row;
+  flex-direction: col;
   justify-content: space-around;
 }
 
 .actor-sheet .attributes ul li.attribut-block,
+.actor-sheet .attributes ol li.attribut-block,
 .actor-sheet .others ul li.attribut-block,
-.actor-sheet .perks-details ul li.attribut-block {
+.actor-sheet .others ol li.attribut-block,
+.actor-sheet .perks-details ul li.attribut-block,
+.actor-sheet .perks-details ol li.attribut-block {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -289,8 +296,11 @@
 }
 
 .actor-sheet .attributes ul li.attribut-block input[type="number"],
+.actor-sheet .attributes ol li.attribut-block input[type="number"],
 .actor-sheet .others ul li.attribut-block input[type="number"],
-.actor-sheet .perks-details ul li.attribut-block input[type="number"] {
+.actor-sheet .others ol li.attribut-block input[type="number"],
+.actor-sheet .perks-details ul li.attribut-block input[type="number"],
+.actor-sheet .perks-details ol li.attribut-block input[type="number"] {
   border: none;
   text-align: center;
   width: 30px;
@@ -301,8 +311,11 @@
 }
 
 .actor-sheet .attributes ul li.attribut-block a,
+.actor-sheet .attributes ol li.attribut-block a,
 .actor-sheet .others ul li.attribut-block a,
-.actor-sheet .perks-details ul li.attribut-block a {
+.actor-sheet .others ol li.attribut-block a,
+.actor-sheet .perks-details ul li.attribut-block a,
+.actor-sheet .perks-details ol li.attribut-block a {
   margin-left: auto;
   text-align: center;
 }
@@ -347,6 +360,16 @@
 .actor-sheet .perks-list {
   grid-column: 5/9;
   grid-row: 5/7;
+}
+
+.actor-sheet .perks-list .item-list li {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.actor-sheet .perks-list .item-list li img {
+  max-width: 30px;
 }
 
 .actor-sheet .perks-details {
