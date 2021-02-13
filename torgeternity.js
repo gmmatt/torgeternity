@@ -25,6 +25,8 @@ Hooks.once("init", function() {
     
 //----------preloading handlebars templates for partials sheet 
     preloadTemplates();
+//----------debug hooks
+CONFIG.debug.hooks=true;
 
 });
 
