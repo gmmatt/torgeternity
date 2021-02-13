@@ -30,7 +30,7 @@
         <select name="data.other.cosm" class="input-box">
             {{#select data.other.cosm}}
             {{#each config.cosmTypes as |name type|}}
-            <option value="{{localize name}}">{{localize name}}</option>
+            <option value="{{type}}">{{localize name}}</option>
             {{/each}}
             {{/select}}
         </select>

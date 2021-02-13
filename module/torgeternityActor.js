@@ -74,7 +74,7 @@ export default class torgeternityActor extends Actor {
             this.data.data.other.toughness = parseInt(this.data.data.attributes.strength) + parseInt(this.data.data.other.armor);
 
             //Set axioms based on home reality
-            switch(this.data.data.other.cosm.toLowerCase()) {
+            switch(this.data.data.other.cosm) {
                 case "coreEarth":
                     this.data.data.axioms.magic = 9;
                     this.data.data.axioms.social = 23;
