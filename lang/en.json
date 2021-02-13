@@ -180,7 +180,11 @@
             "spellcraft": "Spellcraft"
         },
         "sheetLabels": {
+            "stats": "Stats",
             "perks": "Perks",
+            "gear": "Gear",
+            "powers": "Powers",
+            "background": "Background",
             "enhancements": "Enhancements",
             "generalGear": "General Gear",
             "armor": "Armor",
@@ -199,8 +203,45 @@
             "skills": "Skills",
             "possibilitypotential": "Possibilities (Potential)",
             "possibilities": "Possibilities",
+            "up": "Up",
             "equipment": "Equipment",
-            "specialabilities": "Special Abilities"
+            "specialabilities": "Special Abilities",
+            "wounds": "Wounds",
+            "shock": "Shock",
+            "attributes": "Attributes",
+            "move": "Move",
+            "run": "Run",
+            "toughness": "Toughness",
+            "magic": "Magic",
+            "social": "Social",
+            "spirit": "Spirit",
+            "tech": "Tech",
+            "attribute": "Attribute",
+            "adds": "Adds",
+            "total": "Total",
+            "defenses": "Defenses",
+            "melee": "Melee",
+            "unarmed": "Unarmed",
+            "xp": "XP",
+            "unspent": "Unspent",
+            "earned": "Earned",
+            "clearance": "Clearance",
+            "race": "Race",
+            "weapons": "Weapons",
+            "armorAndShields": "Armor and Shields",
+            "other": "Other",
+            "spell": "Spell",
+            "miracle": "Miracle",
+            "psionicPower": "Psionic Power",
+            "abilities": "Abilities",
+            "implant": "Implant",
+            "eternityShard": "Eternity Shard",
+            "vehicle": "Vehicle",
+            "enhancement": "Enhancement",
+            "details": "Details",
+            "goodResult": "Good Result",
+            "outstandingResult": "Outstanding Result"
+
         },
         "itemSheetDescriptions": {
             "perk": "Perk",
@@ -254,6 +295,27 @@
             "dwarf": "Dwarf",
             "edeinos": "Edeinos",
             "elf": "Elf"
+        },
+        "stymiedStates": {
+            "none": "Not Stymied",
+            "stymied": "Stymied",
+            "veryStymied": "Very Stymied"
+        },
+        "vulnerableStates": {
+            "none": "Not Vulnerable",
+            "vulnerable": "Vulnerable",
+            "veryVulnerable": "Very Vulnerable"
+        },
+        "statusEffects": {
+            "stymied": "Stymied",
+            "veryStymied": "Very Stymied",
+            "vulnerable": "Vulnerable",
+            "veryVulnerable": "Very Vulnerable",
+            "aiming": "Aiming",
+            "concentrating": "Concentrating",
+            "disconnected": "Disconnected",
+            "malfunction": "Malfunction",
+            "restrained": "Restrained"
         }
     }
 }
