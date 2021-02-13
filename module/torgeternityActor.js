@@ -1,8 +1,6 @@
 export default class torgeternityActor extends Actor {
     prepareBaseData() {
-        
-
-        
+           
         if (this._data.type === "stormknight") {        
             var skillset = this.data.data.skills;
 
@@ -147,6 +145,25 @@ export default class torgeternityActor extends Actor {
                 this.data.data.details.clearance = "omega";
             };
 
+            //Set armor and shield toggle states
+            var i;
+            for (i=0; i < this.data.items.length; i++) {
+                var item = this.data.items[i];
+                if (item.type === "shield") {
+                    if (item.data.equipped === true) {
+                        this.data.items[i].data.equippedClass = "item-equipped"
+                    } else {
+                        this.data.items[i].data.equippedClass = "item-unequipped"
+                    }
+                }
+                if (item.type === "armor") {
+                    if (item.data.equipped === true) {
+                        this.data.items[i].data.equippedClass = "item-equipped"
+                    } else {
+                        this.data.items[i].data.equippedClass = "item-unequipped"
+                    }
+                }
+            }
 
         };
 

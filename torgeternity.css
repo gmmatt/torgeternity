@@ -258,12 +258,12 @@
     margin:0px;
   }
   
-  .torgeternity .item-equip.active {
-    color: #4b4a44;
+  .torgeternity .item-equipped {
+    color: black;
   }
 
-  .torgeternity .item-equip.fixed {
-    color: #44191a;
+  .torgeternity .item-unequipped {
+    color:gray;
   }
 
   .torgeternity .item-equip.fixed:hover {

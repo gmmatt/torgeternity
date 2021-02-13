@@ -1,6 +1,6 @@
 export default class torgeternityItem extends Item {
 
-    chatTemplate = {
+   chatTemplate = {
         "perk": "systems/torgeternity/templates/partials/perk-card.hbs",
         "attack": "systems/torgeternity/templates/partials/attack-card.hbs",
         "bonus": "systems/torgeternity/templates/partials/bonus-card.hbs",
@@ -18,7 +18,7 @@ export default class torgeternityItem extends Item {
         "vehicle": "systems/torgeternity/templates/partials/vehicle-card.hbs"
     };
     
-    async roll() {
+   async roll() {
         let chatData = {
             user: game.user._id,
             speaker: ChatMessage.getSpeaker()
