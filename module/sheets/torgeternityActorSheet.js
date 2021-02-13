@@ -95,6 +95,10 @@ export default class torgeternityActorSheet extends ActorSheet {
         }
 
         if (this.actor.owner) {
+            html.find(".item-equip").click(this._onItemEquip.bind(this));
+        }
+
+        if (this.actor.owner) {
             html.find(".item-create-sa").click(this._onCreateSa.bind(this));
         }
 
@@ -211,8 +215,19 @@ export default class torgeternityActorSheet extends ActorSheet {
     _onPowerRoll(event) {
         const itemID = event.currentTarget.closest(".item").dataset.itemId;
         const item = this.actor.getOwnedItem(itemID);
-
-        item.power();
+        var powerData = item.data.data;
+        var skillData = this.actor.data.data.skills[powerData.skill];
+        torgchecks.powerRoll ({
+            actor: this.actor,
+            item: item,
+            actorPic: this.actor.data.img,
+            skillName: powerData.skill,
+            skillBaseAttribute: skillData.baseAttribute,
+            skillValue: skillData.value,
+            powerName: item.data.name,
+            powerAttack: powerData.isAttack,
+            powerDamage: powerData.damage
+        })
     }
 
     _onCreateSa(event) {
@@ -250,6 +265,19 @@ export default class torgeternityActorSheet extends ActorSheet {
             this.actor.data.data.editstate = "none";
             this.actor.update({"data.editstate":"none"});
         };
+    }
+
+    _onItemEquip(event) {
+        var actor = this.actor;
+        const itemID = event.currentTarget.closest(".item").dataset.itemId;
+        const item = this.actor.getOwnedItem(itemID);
+        if (item.data.equipped === false) {
+            item.data.equipped = true;
+            item.update({"data.equipped": true})
+        } else {
+            item.data.equipped = false;
+            item.update({"data.equipped": false})
+        }
     }
 }
 

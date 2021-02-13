@@ -93,11 +93,16 @@
         },
         "gear":{
             "description":"Descripción",
+<<<<<<< HEAD
             "techlevel": "Nivel Tec.",
+=======
+            "techlevel": "Tec.",
+>>>>>>> 293856e836bdc2e3efa95053f7b3fb5ce342240a
             "price": "Precio",
             "value": "Valor",
             "damageType": "Tipo Daño",
             "damage": "Daño",
+<<<<<<< HEAD
             "damagebonus": "Bonus",
             "notes": "Notas",
             "cosm": "Cosmos",
@@ -114,6 +119,24 @@
             "possibilities": "Posibilidad",
             "tappingDifficulty": "Tapping Difficulty",
             "purpose": "Purpose",
+=======
+            "damagebonus": "Bono",
+            "notes": "Notas",
+            "cosm": "Cosmos",
+            "bonus": "Bonus",
+            "maxDex": "DES Máxima",
+            "range": "Alcance",
+            "ammo": "Munición",
+            "attackWith": "Ataca con",
+            "topspeed": "Vel. Máxima",
+            "passengers": "Pasajeros",
+            "mr": "VM",
+            "wounds": "Heridas",
+            "toughness": "Resistencia",
+            "possibilities": "Posibilidad",
+            "tappingDifficulty": "Dificultad Golpe",
+            "purpose": "Propósito",
+>>>>>>> 293856e836bdc2e3efa95053f7b3fb5ce342240a
             "powers": "Poderes",
             "restrictions": "Restricciones"
         },
@@ -137,9 +160,15 @@
             "axiom": "Axioma",
             "skill": "Habilidad",
             "skilllevel": "Valor Min. Habilidad",
+<<<<<<< HEAD
             "castingtime": "Tiempo Conj.",
             "dn": "DN",
             "range": "Rango",
+=======
+            "castingtime": "Tiempo Lanz.",
+            "dn": "ND",
+            "range": "Alcance",
+>>>>>>> 293856e836bdc2e3efa95053f7b3fb5ce342240a
             "duration": "Duración",
             "damage": "Daño (si aplica)",
             "description": "Descripción",
@@ -161,7 +190,11 @@
             "cyberware": "Ciberimplante",
             "darkness": "Oscuridad",
             "dwarf": "Enano",
+<<<<<<< HEAD
             "edeinos": "Edeinos",
+=======
+            "edeinos": "Edeino",
+>>>>>>> 293856e836bdc2e3efa95053f7b3fb5ce342240a
             "electricSamurai": "Samurai Eléctrico",
             "elf": "Elfo",
             "faith": "Fe",
@@ -169,6 +202,7 @@
             "leadership": "Liderazgo",
             "light": "Luz",
             "occult": "Ocultismo",
+<<<<<<< HEAD
             "occultech": "Occultech",
             "outsider": "Outsider",
             "prowess": "Prowess",
@@ -244,16 +278,162 @@
         },
         "clearances": {
             "alpha": "Alpha",
+=======
+            "occultech": "Ocultech",
+            "outsider": "Forastero",
+            "prowess": "Proeza",
+            "psionics": "Psiónica",
+            "pulpPowers": "Poderes Pulp",
+            "reality": "Realidad",
+            "savagery":"Barbarie",
+            "social": "Social",
+            "spellcraft": "Conjuros"
+        },
+        "sheetLabels": {
+			"stats": "Atributos",
+            "perks": "Dones",
+			"gear": "Equipo",
+            "powers": "Poderes",
+            "background": "Trasfondo",
+            "enhancements": "Mejoras",
+            "generalGear": "Equipo",
+            "armor": "Armadura",
+            "shields": "Escudo",
+            "meleeWeapons": "Armas CC",
+            "missileWeapons": "Armas Proyectil",
+            "firearms": "Armas Fuego",
+            "implants": "Implantes",
+            "heavyWeapons": "Armas Pesadas",
+            "vehicles": "Vehículos",
+            "spells": "Conjuros",
+            "miracles": "Milagros",
+            "psionicPowers": "Poderes Psiónicos",
+            "specialAbility": "Habilidades Especiales",
+            "threat": "Amenaza",
+            "skills": "Habilidades",
+            "possibilitypotential": "Posibilidad (Potencial)",
+            "possibilities": "Posibilidades",
+			"up": "Aumento",
+            "equipment": "Equipo",
+            "specialabilities": "Habilidades Especiales",
+			"wounds": "Heridas",
+            "shock": "Shock",
+            "attributes": "Atributos",
+            "move": "Movimiento",
+            "run": "Carrera",
+            "toughness": "Resistencia",
+            "magic": "Magia",
+            "social": "Social",
+            "spirit": "Espíritu",
+            "tech": "Tecno",
+            "attribute": "Atributo",
+            "adds": "Añadidos",
+            "total": "Total",
+            "defenses": "Defensa",
+            "melee": "Cuerpo a Cuerpo",
+            "unarmed": "Sin Armas",
+            "xp": "PX",
+            "unspent": "Sin Gastar",
+            "earned": "Totales",
+            "clearance": "Nivel Autorización",
+            "race": "Raza",
+            "weapons": "Armas",
+            "armorAndShields": "Armor and Shields",
+            "other": "Otro",
+            "spell": "Conjuro",
+            "miracle": "Milagro",
+            "psionicPower": "Poder Psiónico",
+            "abilities": "Habilidades",
+            "implant": "Implante",
+            "eternityShard": "Fragmento Eternidad",
+            "vehicle": "Vehículo",
+            "enhancement": "Mejora",
+            "details": "Detalles",
+            "goodResult": "Buen Resultado",
+            "outstandingResult": "Espectacular Resultado"
+			
+        },
+        "itemSheetDescriptions": {
+            "perk": "Dones",
+            "enhancement": "Mejoras",
+            "generalGear": "Equipo",
+            "eternityshard": "Fragmento Eternidad",
+            "armor": "Armadura",
+            "shield": "Escudo",
+            "meleeWeapon": "Arma Melé",
+            "missileWeapon": "Arma Proyectil",
+            "firearm": "Arma Fuego",
+            "implant": "Implante",
+            "heavyWeapon": "Arna Pesada",
+            "vehicle": "Vehículo",
+            "spell": "Conjuro",
+            "miracle": "Milagro",
+            "psionicpower": "Poder Psiónico",
+            "specialability": "Habilidad Especial"
+        },
+        "attackTypes": {
+            "unarmedCombat": "Combate Desarmado",
+            "meleeWeapons": "Arma CC",
+            "missileWeapons": "Arma Proyectil",
+            "fireCombat": "Arma Fuego",
+            "energyWeapons": "Arma Energía",
+            "heavyWeapons": "Arna Pesada"
+         },
+        "powerSkills": {
+            "alteration": "Alteración",
+            "apportation": "Aportación",
+            "conjuration": "Conjuración",
+            "divination": "Adivinación",
+            "kinesis": "Kinesis",
+            "precognition": "Precognición",
+            "telepathy": "Telepatía",
+            "faith": "Fe"
+        },
+        "damageTypes": {
+            "strengthPlus": "Fuerza +",
+            "flat": "Fijo"
+        },
+        "clearances": {
+            "alpha": "Alfa",
+>>>>>>> 293856e836bdc2e3efa95053f7b3fb5ce342240a
             "beta": "Beta",
             "gamma": "Gamma",
             "delta": "Delta",
             "omega": "Omega"
         },
         "races": {
+<<<<<<< HEAD
             "human": "Human",
             "dwarf": "Dwarf",
             "edeinos": "Edeinos",
             "elf": "Elf"
+=======
+            "human": "Humano",
+            "dwarf": "Enano",
+            "edeinos": "Edeino",
+            "elf": "Elfo"
+		},
+        "stymiedStates": {
+            "none": "No Impedido",
+            "stymied": "Impedido",
+            "veryStymied": "Muy Impedido"
+        },
+        "vulnerableStates": {
+            "none": "No Vulnerable",
+            "vulnerable": "Vulnerable",
+            "veryVulnerable": "Muy Vulnerable"
+        },
+        "statusEffects": {
+            "stymied": "Impedido",
+            "veryStymied": "Muy Impedido",
+            "vulnerable": "Vulnerable",
+            "veryVulnerable": "Muy Vulnerable",
+            "aiming": "Apuntando",
+            "concentrating": "Concentrado",
+            "disconnected": "Desconectado",
+            "malfunction": "Desperfecto",
+            "restrained": "Retenido"
+>>>>>>> 293856e836bdc2e3efa95053f7b3fb5ce342240a
         }
     }
 }

@@ -257,6 +257,19 @@
     padding-left:10px;
     margin:0px;
   }
+  
+  .torgeternity .item-equipped {
+    color: black;
+  }
+
+  .torgeternity .item-unequipped {
+    color:gray;
+  }
+
+  .torgeternity .item-equip.fixed:hover {
+    text-shadow: none;
+  }
+
   .torgeternity h1 {
     font-family:"Palatnio Linotype";
     font-size:24px;
@@ -343,5 +356,17 @@
   font-family: "Palatino Linotype";
   font-size: 18px;
   font-weight:bold;
+  text-align:center
+}
+
+.storm-knight-label-small {
+  font-family: "Palatino Linotype";
+  font-size: 11px;
+  text-align:center
+}
+
+.storm-knight-label {
+  font-family: "Palatino Linotype";
+  font-size:14px;
   text-align:center
 }

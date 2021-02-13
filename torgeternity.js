@@ -44,4 +44,15 @@ Handlebars.registerHelper("concatAttributeName", function(attributeName){
 Handlebars.registerHelper("concatSkillName", function(skillName){
     var localName = "torgeternity.skills." + skillName
     return localName;
+<<<<<<< HEAD
 })
+=======
+});
+
+Handlebars.registerHelper("concatClearanceLevel", function(clearance){
+    var localClearance = "torgeternity.clearances." + clearance;
+    return localClearance;
+});
+
+Hooks.on("renderChatLog", (app, html, data) => Chat.addChatListeners(html));
+>>>>>>> 293856e836bdc2e3efa95053f7b3fb5ce342240a

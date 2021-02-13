@@ -10,8 +10,226 @@
     </tr>
     </table>
     <div class="chat-text" style="padding:0px">
+<<<<<<< HEAD
         <p style="text-align:center;font-size:24px;font-weight:bold;padding:3px 0px 0px 0px">{{result}}</p>
         <p style="padding:0px 0px 0px 5px">Skill Value: {{skillValue}}</p>
         <p style="padding:0px 0px 8px 5px">{{bonus}}</p>
+=======
+        <p class="skill-roll-result">{{resultText}}</p>
+        <p class="skill-roll-action-label" style="{{actionTotalLabel}}">Action Total</p>
+        <p class="skill-roll-disconnect-label" style="{{disconnectLabel}}">Possible Disconnect</p>
+        <p class="skill-roll-damage-label" style="{{damageLabel}}">
+            {{damage}} Damage
+        </p>
+        <table class="skill-roll-table">
+            <tr>
+                <td class="skill-roll-table-1">
+                    {{typeLabel}} Value:
+                </td>
+                <td class="skill-roll-table-2">
+                    {{skillValue}}
+                </td>
+            </tr>
+
+            <tr style="border:1px solid black">
+                <td style="background:white">
+                    Die Total {{combinedRollTotal}}
+                </td>
+                <td style="background:white">
+                </td>
+            </tr>
+
+            <tr>
+                <td class="skill-roll-table-1">
+                    Bonus:
+                </td>
+                <td class="skill-roll-table-2">
+                    <div><span style="{{bonusPlusLabel}}">+</span>{{bonus}}</div>
+                </td>
+            </tr>
+
+            <tr style="{{modifierLabel}}">
+                <td class="skill-roll-table-1">
+                    Modifiers:
+                </td>
+                <td class="skill-roll-table-2">
+                    <div title="{{modifierText}}" style="display:block">{{modifiers}}</div>
+                </td>
+            </tr>
+
+            <tr style="{{cardsPlayedLabel}}">
+                <td class="skill-roll-table-1">
+                    +3 Cards:
+                </td>
+                <td class="skill-roll-table-2">
+                    <div style="display:">{{cardsPlayed}}</div>
+                </td>
+            </tr>
+
+        </table>
+
+        <div class="skill-roll-menu">
+            <a class="roll-possibility" 
+                style="{{possibilityStyle}}"
+                data-actor="{{actor}}" 
+                data-actor-pic="{{actorPic}}" 
+                data-actor-type="{{actorType}}"
+                data-skill-name="{{skillName}}" 
+                data-skill-value="{{skillValue}}" 
+                data-test-type="{{testType}}" 
+                data-unskilled-use="{{unskilledUse}}" 
+                data-skill-adds="{{skillAdds}}" 
+                data-skill-base-attribute="{{skillBaseAttribute}}"
+                data-roll-total="{{rollTotal}}"
+                data-wound-modifier="{{woundModifier}}"
+                data-size-modifier="{{sizeModifier}}"
+                data-vulnerable-modifier="{{vulnerableModifier}}"
+                data-stymied-modifier="{{stymiedModifier}}"
+                data-possibility-total="{{possibilityTotal}}"
+                data-up-total="{{upTotal}}"
+                data-hero-total = "{{heroTotal}}"
+                data-drama-total = "{{dramaTotal}}"
+                data-cards-played = "{{cardsPlayed}}"
+                data-damage = "{{damage}}"
+                data-power-attack="{{powerAttack}}"
+            >
+            Possibility
+            </a>
+            &nbsp;&bull;&nbsp;
+            <a class="roll-up"
+                style="{{upStyle}}"
+                data-actor="{{actor}}" 
+                data-actor-pic="{{actorPic}}" 
+                data-actor-type="{{actorType}}"
+                data-skill-name="{{skillName}}" 
+                data-skill-value="{{skillValue}}" 
+                data-test-type="{{testType}}" 
+                data-unskilled-use="{{unskilledUse}}" 
+                data-skill-adds="{{skillAdds}}" 
+                data-skill-base-attribute="{{skillBaseAttribute}}"
+                data-roll-total="{{rollTotal}}"
+                data-wound-modifier="{{woundModifier}}"
+                data-stymied-modifier="{{stymiedModifier}}"
+                data-size-modifier="{{sizeModifier}}"
+                data-vulnerable-modifier="{{vulnerableModifier}}"
+                data-possibility-total="{{possibilityTotal}}"
+                data-up-total="{{upTotal}}"
+                data-hero-total = "{{heroTotal}}"
+                data-drama-total = "{{dramaTotal}}"
+                data-cards-played = "{{cardsPlayed}}"
+                data-damage = "{{damage}}"
+                data-power-attack="{{powerAttack}}"            
+            >
+            Up
+            </a>
+            <span style="{{heroStyle}}">&nbsp;&bull;&nbsp;</span>
+            <a class="roll-hero"
+                style="{{heroStyle}}"
+                data-actor="{{actor}}" 
+                data-actor-pic="{{actorPic}}" 
+                data-actor-type="{{actorType}}"
+                data-skill-name="{{skillName}}" 
+                data-skill-value="{{skillValue}}" 
+                data-test-type="{{testType}}" 
+                data-unskilled-use="{{unskilledUse}}" 
+                data-skill-adds="{{skillAdds}}" 
+                data-skill-base-attribute="{{skillBaseAttribute}}"
+                data-roll-total="{{rollTotal}}"
+                data-wound-modifier="{{woundModifier}}"
+                data-stymied-modifier="{{stymiedModifier}}"
+                data-size-modifier="{{sizeModifier}}"
+                data-vulnerable-modifier="{{vulnerableModifier}}"
+                data-possibility-total="{{possibilityTotal}}"
+                data-up-total="{{upTotal}}"
+                data-hero-total = "{{heroTotal}}"
+                data-drama-total = "{{dramaTotal}}"
+                data-cards-played = "{{cardsPlayed}}"
+                data-damage = "{{damage}}"
+                data-power-attack="{{powerAttack}}"
+             >
+             Hero
+             </a>
+            <span style="{{heroStyle}}">&nbsp;&bull;&nbsp;</span>
+            <a class="roll-drama"
+                style="{{dramaStyle}}"
+                data-actor="{{actor}}" 
+                data-actor-pic="{{actorPic}}" 
+                data-actor-type="{{actorType}}"
+                data-skill-name="{{skillName}}" 
+                data-skill-value="{{skillValue}}" 
+                data-test-type="{{testType}}" 
+                data-unskilled-use="{{unskilledUse}}" 
+                data-skill-adds="{{skillAdds}}" 
+                data-skill-base-attribute="{{skillBaseAttribute}}"
+                data-roll-total="{{rollTotal}}"
+                data-wound-modifier="{{woundModifier}}"
+                data-stymied-modifier="{{stymiedModifier}}"
+                data-size-modifier="{{sizeModifier}}"
+                data-vulnerable-modifier="{{vulnerableModifier}}"
+                data-possibility-total="{{possibilityTotal}}"
+                data-up-total="{{upTotal}}"
+                data-hero-total = "{{heroTotal}}"
+                data-drama-total = "{{dramaTotal}}"
+                data-cards-played = "{{cardsPlayed}}"
+                data-damage = "{{damage}}"
+                data-power-attack = "{{powerAttack}}"            
+            >
+            Drama
+            </a>
+            <span style="{{dramaStyle}}">&nbsp;&bull;&nbsp;</span>
+            <a class="add-plus3"
+                style="{{plus3Style}}"
+                data-actor="{{actor}}" 
+                data-actor-pic="{{actorPic}}" 
+                data-actor-type="{{actorType}}"
+                data-skill-name="{{skillName}}" 
+                data-skill-value="{{skillValue}}" 
+                data-test-type="{{testType}}" 
+                data-unskilled-use="{{unskilledUse}}" 
+                data-skill-adds="{{skillAdds}}" 
+                data-skill-base-attribute="{{skillBaseAttribute}}"
+                data-roll-total="{{rollTotal}}"
+                data-wound-modifier="{{woundModifier}}"
+                data-stymied-modifier="{{stymiedModifier}}"
+                data-size-modifier="{{sizeModifier}}"
+                data-vulnerable-modifier="{{vulnerableModifier}}"
+                data-possibility-total="{{possibilityTotal}}"
+                data-up-total="{{upTotal}}"
+                data-hero-total = "{{heroTotal}}"
+                data-drama-total = "{{dramaTotal}}"
+                data-cards-played = "{{cardsPlayed}}"
+                data-damage = "{{damage}}"            
+                data-power-attack = "{{powerAttack}}"            
+            >
+            +3 Card
+            </a>
+            <span style="{{bdStyle}}">&nbsp;&bull;&nbsp;</span>
+            <a class="add-bd"
+                style="{{bdStyle}}"
+                data-actor="{{actor}}" 
+                data-actor-pic="{{actorPic}}" 
+                data-actor-type="{{actorType}}"
+                data-skill-name="{{skillName}}" 
+                data-skill-value="{{skillValue}}" 
+                data-test-type="{{testType}}" 
+                data-unskilled-use="{{unskilledUse}}" 
+                data-skill-adds="{{skillAdds}}" 
+                data-skill-base-attribute="{{skillBaseAttribute}}"
+                data-roll-total="{{rollTotal}}"
+                data-wound-modifier="{{woundModifier}}"
+                data-stymied-modifier="{{stymiedModifier}}"
+                data-size-modifier="{{sizeModifier}}"
+                data-vulnerable-modifier="{{vulnerableModifier}}"
+                data-possibility-total="{{possibilityTotal}}"
+                data-up-total="{{upTotal}}"
+                data-hero-total = "{{heroTotal}}"
+                data-drama-total = "{{dramaTotal}}"
+                data-cards-played = "{{cardsPlayed}}"
+                data-damage = "{{damage}}"
+                data-power-attack = "{{powerAttack}}"                        >
+                BD
+            </a>
+        </div>
+>>>>>>> 293856e836bdc2e3efa95053f7b3fb5ce342240a
     </div>
 </div>

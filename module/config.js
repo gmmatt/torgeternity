@@ -124,4 +124,84 @@ torgeternity.skills = {
     unarmedCombat: "torgeternity.skills.unarmedCombat",
     waterVehicles: "torgeternity.skills.waterVehicles",
     willpower: "torgeternity.skills.willpower"
+<<<<<<< HEAD
+=======
+}
+
+torgeternity.stymiedStates = {
+    none: "torgeternity.stymiedStates.none",
+    stymied: "torgeternity.stymiedStates.stymied",
+    veryStymied: "torgeternity.stymiedStates.veryStymied"
+}
+
+torgeternity.vulnerableStates = {
+    none: "torgeternity.vulnerableStates.none",
+    vulnerable: "torgeternity.vulnerableStates.vulnerable",
+    veryVulnerable: "torgeternity.vulnerableStates.veryVulnerable"
+}
+
+torgeternity.statusEffects = [
+    {
+        icon: 'systems/torgeternity/images/status-markers/stymied.jpg',
+        id: 'stymied',
+        label: 'torgeternity.statusEffects.stymied',
+        name: 'stymied'
+    },
+
+    {
+        icon: 'systems/torgeternity/images/status-markers/very-stymied.jpg',
+        id: 'veryStymied',
+        label: 'torgeternity.statusEffects.veryStymied',
+        name: 'veryStymied'
+    },
+
+    {
+        icon: 'systems/torgeternity/images/status-markers/vulnerable.jpg',
+        id: 'vulnerable',
+        label: 'torgeternity.statusEffects.vulnerable'
+    },
+
+    {
+        icon: 'systems/torgeternity/images/status-markers/very-vulnerable.jpg',
+        id: 'veryVulnerable',
+        label: 'torgeternity.statusEffects.veryVulnerable'
+    },
+
+    {
+        icon: 'systems/torgeternity/images/status-markers/disconnected.jpg',
+        id: 'disconnected',
+        label: 'torgeternity.statusEffects.disconnected'
+    },
+
+    {
+        icon: 'systems/torgeternity/images/status-markers/aiming.jpg',
+        id: 'aiming',
+        label: 'torgeternity.statusEffects.aiming'
+    },
+
+    {
+        icon: 'systems/torgeternity/images/status-markers/malfunction.jpg',
+        id: 'malfunction',
+        label: 'torgeternity.statusEffects.malfunction'
+    },
+
+    {
+        icon: 'systems/torgeternity/images/status-markers/concentrating.jpg',
+        id: 'concentrating',
+        label: 'torgeternity.statusEffects.concentrating'
+    },
+
+    {
+        icon: 'systems/torgeternity/images/status-markers/restrained.jpg',
+        id: 'restrained',
+        label: 'torgeternity.statusEffects.restrained'
+    },
+
+
+]
+
+torgeternity.yesNo = {
+    true: "torgeternity.yesNo.true",
+    false: "torgeternity.yesNo.false"
+>>>>>>> 293856e836bdc2e3efa95053f7b3fb5ce342240a
 }

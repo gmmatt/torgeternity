@@ -141,7 +141,7 @@
             "dn": "DN",
             "range": "Range",
             "duration": "Duration",
-            "damage": "Damage (if any)",
+            "damage": "Damage",
             "description": "Description",
             "good": "Good Result",
             "outstanding": "Outstanding Result"
@@ -316,6 +316,11 @@
             "disconnected": "Disconnected",
             "malfunction": "Malfunction",
             "restrained": "Restrained"
+        },
+
+        "yesNo": {
+            "true": "Yes",
+            "false": "No"
         }
     }
 }
