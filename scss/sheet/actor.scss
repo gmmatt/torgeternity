@@ -266,8 +266,16 @@
 
     // -----specific for attributs block-------this could be in a different file with an include property
     .attributes {
-        grid-column: 1/7;
+        grid-column: 1/5;
         grid-row: 2/3;
+
+    }
+    .others{
+        grid-column: 5/7;
+        grid-row: 2/3;
+    }
+        .attributes,
+        .others {
 
 
         ul {

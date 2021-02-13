@@ -485,25 +485,33 @@ body {
 }
 
 .actor-sheet .attributes {
-  grid-column: 1/7;
+  grid-column: 1/5;
   grid-row: 2/3;
 }
 
-.actor-sheet .attributes ul {
+.actor-sheet .others {
+  grid-column: 5/7;
+  grid-row: 2/3;
+}
+
+.actor-sheet .attributes ul,
+.actor-sheet .others ul {
   font-family: Berlin;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
 }
 
-.actor-sheet .attributes ul li.attribut-block {
+.actor-sheet .attributes ul li.attribut-block,
+.actor-sheet .others ul li.attribut-block {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
 }
 
-.actor-sheet .attributes ul li.attribut-block input[type="number"] {
+.actor-sheet .attributes ul li.attribut-block input[type="number"],
+.actor-sheet .others ul li.attribut-block input[type="number"] {
   border: none;
   text-align: center;
   width: 30px;
@@ -513,7 +521,8 @@ body {
   background-size: cover;
 }
 
-.actor-sheet .attributes ul li.attribut-block a {
+.actor-sheet .attributes ul li.attribut-block a,
+.actor-sheet .others ul li.attribut-block a {
   margin-left: auto;
   text-align: center;
 }
