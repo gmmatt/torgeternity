@@ -3,17 +3,7 @@
     <img src="systems/torgeternity/images/te-logo.png" title="TE Logo" />
 </div>
 <div>
-    <p class="item-data-label">
-        Clearance
-
-        <select name="data.details.clearance" class="input-box">
-            {{#select data.details.clearance}}
-            {{#each config.clearances as |name type|}}
-            <option value="{{type}}">{{localize name}}</option>
-            {{/each}}
-            {{/select}}
-        </select>
-    </p>
+    
     <p class="item-data-label">
         Race
 
@@ -61,6 +51,9 @@
     </p>
 </div>
 <div>
+       <p class="item-data-label">
+        Clearance : {{data.details.clearance}}
+    </p>
     <p>
         <span class="main-label">XP Unspent</span>
         <input name="data.xp.unspent" type="number" value="{{data.xp.unspent}}" data=dtype="Number" />
@@ -71,4 +64,5 @@
         <input name="data.xp.earned" type="number" value="{{data.xp.earned}}" data=dtype="Number" />
 
     </p>
+  
 </div>

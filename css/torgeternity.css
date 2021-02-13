@@ -299,7 +299,7 @@ body {
 .actor-sheet .tab[data-tab].active {
   display: grid;
   grid-template-columns: repeat(8, 1fr);
-  grid-template-rows: repeat(8, minmax(25px, 115px));
+  grid-template-rows: repeat(8, minmax(25px, 120px));
   grid-gap: 5px;
   justify-content: center;
 }
@@ -350,6 +350,7 @@ body {
 
 .actor-sheet a.item:hover,
 .actor-sheet a.item:active {
+  text-transform: capitalize;
   transform: scaleX(1.1) scaleY(1.3) scaleZ(1.2);
   text-shadow: 0 0 10px #10813f;
   color: #e5ecec;

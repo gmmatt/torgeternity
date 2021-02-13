@@ -36,6 +36,7 @@
     background-size: cover;
     font-family: Palatino;
     font-size: 0.9em;
+    
 }
 
 
@@ -47,7 +48,7 @@
 
         display: grid;
         grid-template-columns: repeat(8, 1fr);
-        grid-template-rows: repeat(8, minmax(25px, 115px));
+        grid-template-rows: repeat(8, minmax(25px, 120px));
         grid-gap: 5px;
         justify-content: center;
     }
@@ -107,6 +108,7 @@
 
     a.item:hover,
     a.item:active {
+        text-transform: capitalize;
         -webkit-transform: scaleX(1.1) scaleY(1.3) scaleZ(1.2);
         transform: scaleX(1.1) scaleY(1.3) scaleZ(1.2);
               text-shadow: 0 0 10px rgb(16, 129, 63);
@@ -116,10 +118,7 @@
     }
 
     a.item.active {
-       
         background-image: url(../images/active_tab_back.png);
-
-      
     }
 
 
