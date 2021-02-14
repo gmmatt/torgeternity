@@ -1,5 +1,6 @@
 import { torgeternity } from "../config.js";
 import * as torgchecks from "../torgchecks.js";
+import * as effects from "../effects.js"
 
 export default class torgeternityActorSheet extends ActorSheet {
     static get defaultOptions () {
@@ -43,6 +44,35 @@ export default class torgeternityActorSheet extends ActorSheet {
         if (this.actor.data.data.editstate === undefined) {
             this.actor.data.data.editstate = "none";
         };
+
+//        data.effects= prepareActiveEffectCategories(this.entity.effects);
+
+        //Prepare Active Effect Categories
+        const categories = {
+            temporary: {
+            type: "temporary",
+            label: "Temporary Effects",
+            effects: []
+            },
+            passive: {
+            type: "passive",
+            label: "Passive Effects",
+            effects: []
+            },
+            inactive: {
+            type: "inactive",
+            label: "Inactive Effects",
+            effects: []
+            }
+        };
+    
+        // Iterate over active effects, classifying them into categories
+        for ( let e of this.entity.effects ) {
+            e._getSourceName(); // Trigger a lookup for the source name
+            if ( e.data.disabled ) categories.inactive.effects.push(e);
+            else if ( e.isTemporary ) categories.temporary.effects.push(e);
+            else categories.passive.effects.push(e);
+        }
 
 
         data.config = CONFIG.torgeternity;
@@ -109,6 +139,10 @@ export default class torgeternityActorSheet extends ActorSheet {
 
         if (this.actor.owner) {
             html.find(".activeDefense-roll").click(this._onActiveDefenseRoll.bind(this));
+        }
+
+        if (this.actor.owner) {
+            html.find(".effect-control").click(ev => _onManageActiveEffect(ev, this.entity));
         }
 
         super.activateListeners(html);
@@ -335,5 +369,29 @@ export default class torgeternityActorSheet extends ActorSheet {
             item.update({"data.equipped": false})
         }
     }
+
+    _onManageActiveEffect (event, owner) {
+        event.preventDefault();
+        const a = event.currentTarget;
+        const li = a.closest("li");
+        const effect = li.dataset.effectId ? owner.effects.get(li.dataset.effectId) : null;
+        switch ( a.dataset.action ) {
+          case "create":
+            return ActiveEffect.create({
+              label: "New Effect",
+              icon: "icons/svg/aura.svg",
+              origin: owner.uuid,
+              "duration.rounds": li.dataset.effectType === "temporary" ? 1 : undefined,
+              disabled: li.dataset.effectType === "inactive"
+            }, owner).create();
+          case "edit":
+            return effect.sheet.render(true);
+          case "delete":
+            return effect.delete();
+          case "toggle":
+            return effect.update({disabled: !effect.data.disabled});
+        }      
+    }
+
 }
 

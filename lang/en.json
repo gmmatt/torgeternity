@@ -184,6 +184,7 @@
             "perks": "Perks",
             "gear": "Gear",
             "powers": "Powers",
+            "effects": "Effects",
             "background": "Background",
             "enhancements": "Enhancements",
             "generalGear": "General Gear",
@@ -240,7 +241,9 @@
             "enhancement": "Enhancement",
             "details": "Details",
             "goodResult": "Good Result",
-            "outstandingResult": "Outstanding Result"
+            "outstandingResult": "Outstanding Result",
+            "effectCreate": "Create Effect",
+            "add": "Add"
 
         },
         "itemSheetDescriptions": {

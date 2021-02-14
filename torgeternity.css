@@ -257,6 +257,33 @@
     padding-left:10px;
     margin:0px;
   }
+
+  .torgeternity .items-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    color: #7a7971;
+  }
+
+  .torgeternity .items-list .item-name {
+    flex: 2;
+    margin: 0;
+    overflow: hidden;
+    font-size: 13px;
+    text-align: left;
+    align-items: center;
+  }
+
+  .torgeternity .effects .item .effect-source,
+  .torgeternity .effects .item .effect-duration,
+  .torgeternity .effects .item .effect-controls {
+  text-align: center;
+  border-left: 1px solid #c9c7b8;
+  border-right: 1px solid #c9c7b8;
+  font-size: 12px;
+  }
   
   .torgeternity .item-equipped {
     color: black;

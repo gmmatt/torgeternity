@@ -1,4 +1,4 @@
-export default class torgeternityActor extends Actor {
+export default class torgeternityActor extends Actor {    
     prepareBaseData() {
            
         if (this._data.type === "stormknight") {        
@@ -190,4 +190,5 @@ export default class torgeternityActor extends Actor {
             }
         }
     }
+
 }
