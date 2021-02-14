@@ -412,6 +412,10 @@
     }
 
     .perks-details {
+        .item-dropdown-description{
+            li{
+            flex-direction: column;
+        }}
        overflow: scroll;
         grid-column: 1/9;
             grid-row: 1/9;
