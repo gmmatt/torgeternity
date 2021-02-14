@@ -4,6 +4,7 @@ import torgeternityItem from "./module/torgeternityItem.js";
 import torgeternityActor from "./module/torgeternityActor.js";
 import torgeternityItemSheet from "./module/sheets/torgeternityItemSheet.js";
 import torgeternityActorSheet from "./module/sheets/torgeternityActorSheet.js";
+  
 
 Hooks.once("init", function() {
     console.log("torgeternity | Initializing Torg Eternity System");
@@ -18,6 +19,11 @@ Hooks.once("init", function() {
 
     Actors.unregisterSheet("core", ItemSheet);
     Actors.registerSheet("torgeternity", torgeternityActorSheet, {makeDefault: true});
+
+    loadTemplates([    
+        // Shared Partials
+        "systems/torgeternity/templates/parts/active-effects.hbs",    
+    ]);
 });
 
 Handlebars.registerHelper("concatSkillValue", function(skillName){
