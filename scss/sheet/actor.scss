@@ -306,7 +306,8 @@
 
     .attributes,
     .others,
-    .perks-details {
+    .perks-details,
+    .weapons {
 
 
         ul,
@@ -390,12 +391,16 @@
     .perks-list {
         grid-column: 5/9;
         grid-row: 5/7;
-
+    }
+        .perks-list,
+        .weapons {
         .item-list {
             li{
             display: flex;
             flex-direction: row;
             justify-content: space-between;
+            border-top: 1px solid;
+
             img {
                 max-width: 30px;
             }
