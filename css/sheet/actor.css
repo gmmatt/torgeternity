@@ -386,7 +386,8 @@
   max-width: 30px;
 }
 
-.actor-sheet .perks-details {
+.actor-sheet .perks-details,
+.actor-sheet .gear {
   overflow: scroll;
   grid-column: 1/9;
   grid-row: 1/9;
@@ -397,26 +398,55 @@
   justify-content: center;
 }
 
-.actor-sheet .perks-details .item-dropdown-description li {
+.actor-sheet .perks-details .item-dropdown-description li,
+.actor-sheet .gear .item-dropdown-description li {
   flex-direction: column;
 }
 
-.actor-sheet .perks-details .perks {
+.actor-sheet .perks-details .perks,
+.actor-sheet .gear .perks {
   grid-column: 1/5;
   grid-row: 1/4;
 }
 
-.actor-sheet .perks-details .spells {
+.actor-sheet .perks-details .spells,
+.actor-sheet .gear .spells {
   grid-column: 5/9;
   grid-row: 1/4;
 }
 
-.actor-sheet .perks-details .miracles {
+.actor-sheet .perks-details .miracles,
+.actor-sheet .gear .miracles {
   grid-column: 1/5;
   grid-row: 4/9;
 }
 
-.actor-sheet .perks-details .psionic {
+.actor-sheet .perks-details .psionic,
+.actor-sheet .gear .psionic {
+  grid-column: 5/9;
+  grid-row: 4/9;
+}
+
+.actor-sheet .perks-details .perks,
+.actor-sheet .gear .perks {
+  grid-column: 1/5;
+  grid-row: 1/4;
+}
+
+.actor-sheet .perks-details .spells,
+.actor-sheet .gear .spells {
+  grid-column: 5/9;
+  grid-row: 1/4;
+}
+
+.actor-sheet .perks-details .miracles,
+.actor-sheet .gear .miracles {
+  grid-column: 1/5;
+  grid-row: 4/9;
+}
+
+.actor-sheet .perks-details .psionic,
+.actor-sheet .gear .psionic {
   grid-column: 5/9;
   grid-row: 4/9;
 }
