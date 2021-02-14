@@ -204,17 +204,19 @@
 
         img {
             max-width: 100px;
-            max-height: auto;
+            max-height: 100px;
         }
 
         .item-control {
             float: right;
             margin: 5px;
+            max-width: 30px;
         }
 
         li {
             div {
                 margin-right: 15px;
+                max-width: 500px;
             }
 
             margin:5px;
@@ -393,7 +395,7 @@
         grid-row: 5/7;
     }
         .perks-list,
-        .weapons {
+        .weapons-list {
         .item-list {
             li{
             display: flex;
@@ -422,7 +424,7 @@
         }
     }
 
-    .weapons {
+    .weapons-list {
         grid-column: 1/9;
         grid-row: 7/9;
     }

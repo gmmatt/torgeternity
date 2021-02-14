@@ -185,12 +185,13 @@
 
 .actor-sheet ol.item-list img {
   max-width: 100px;
-  max-height: auto;
+  max-height: 100px;
 }
 
 .actor-sheet ol.item-list .item-control {
   float: right;
   margin: 5px;
+  max-width: 30px;
 }
 
 .actor-sheet ol.item-list li {
@@ -204,6 +205,7 @@
 
 .actor-sheet ol.item-list li div {
   margin-right: 15px;
+  max-width: 500px;
 }
 
 .actor-sheet .char_image {
@@ -372,7 +374,7 @@
 }
 
 .actor-sheet .perks-list .item-list li,
-.actor-sheet .weapons .item-list li {
+.actor-sheet .weapons-list .item-list li {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -380,7 +382,7 @@
 }
 
 .actor-sheet .perks-list .item-list li img,
-.actor-sheet .weapons .item-list li img {
+.actor-sheet .weapons-list .item-list li img {
   max-width: 30px;
 }
 
@@ -398,7 +400,7 @@
   width: 25%;
 }
 
-.actor-sheet .weapons {
+.actor-sheet .weapons-list {
   grid-column: 1/9;
   grid-row: 7/9;
 }
