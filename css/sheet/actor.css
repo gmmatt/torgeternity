@@ -387,8 +387,34 @@
 }
 
 .actor-sheet .perks-details {
+  overflow: scroll;
   grid-column: 1/9;
   grid-row: 1/9;
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(8, 1fr);
+  grid-gap: 5px;
+  justify-content: center;
+}
+
+.actor-sheet .perks-details .perks {
+  grid-column: 1/5;
+  grid-row: 1/4;
+}
+
+.actor-sheet .perks-details .spells {
+  grid-column: 5/9;
+  grid-row: 1/4;
+}
+
+.actor-sheet .perks-details .miracles {
+  grid-column: 1/5;
+  grid-row: 4/9;
+}
+
+.actor-sheet .perks-details .psionic {
+  grid-column: 5/9;
+  grid-row: 4/9;
 }
 
 .actor-sheet .defense {
