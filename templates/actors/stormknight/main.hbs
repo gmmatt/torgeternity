@@ -1,5 +1,5 @@
 <form class="actor-sheet {{cssClass}}" autocomplete="off">
-{{log "-----------Torg Eternity actor-sheet----------" this}}
+    {{log "-----------Torg Eternity actor-sheet----------" this}}
 
     <!--**************** tabs******************--->
     <nav class="sheet-tabs tabs" data-group="primary">
@@ -9,6 +9,10 @@
         <a class="item" data-tab="powers">Powers</a>
         <a class="item" data-tab="background">Background</a>
     </nav>
+    <div class="wound-check">
+                {{> "systems/torgeternity/templates/actors/stormknight/wounds.hbs"}}
+
+    </div>
 
     <section class="main">
         <!--**************** stat-tab******************--->
@@ -18,14 +22,14 @@
                 {{> "systems/torgeternity/templates/actors/stormknight/header.hbs"}}
             </div>
 
-            <div class="attributes block " >
+            <div class="attributes block ">
                 {{> "systems/torgeternity/templates/actors/stormknight/attributes.hbs"}}
             </div>
             <div class="others block">
                 {{> "systems/torgeternity/templates/actors/stormknight/others.hbs"}}
             </div>
 
-            <div class="skills block" >
+            <div class="skills block">
                 {{> "systems/torgeternity/templates/actors/stormknight/skills.hbs"}}
             </div>
 
@@ -47,16 +51,21 @@
 
         </div>
         <div class="tab perks" data-group="primary" data-tab="perks">
-                <div class="perks-details block">
-                     {{> "systems/torgeternity/templates/actors/stormknight/perks-details.hbs"}}
-                </div>
+            <div class="perks-details block">
+                {{> "systems/torgeternity/templates/actors/stormknight/perks-details.hbs"}}
+            </div>
         </div>
-     <div class="tab perks" data-group="primary" data-tab="gear">
-                <div class="gear block">
-                     {{> "systems/torgeternity/templates/actors/stormknight/gear.hbs"}}
-                </div>
+        <div class="tab gear" data-group="primary" data-tab="gear">
+            <div class="gear block">
+                {{> "systems/torgeternity/templates/actors/stormknight/gear.hbs"}}
+            </div>
+        </div>
+        <div class="tab powers" data-group="primary" data-tab="powers">
+            <div class="gear block">
+                {{> "systems/torgeternity/templates/actors/stormknight/powers.hbs"}}
+            </div>
         </div>
     </section>
-    
+
 
 </form>
