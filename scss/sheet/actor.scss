@@ -275,7 +275,6 @@
         justify-content: space-between;
 
         div {
-            max-height: 0.4em;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
@@ -407,53 +406,77 @@
                 img {
                     max-width: 30px;
                 }
+
             }
         }
     }
 
     .perks-details,
     .gear {
-        .item-dropdown-description{
-            li{
-            flex-direction: column;
-        }}
-       overflow: scroll;
         grid-column: 1/9;
-            grid-row: 1/9;
+        grid-row: 1/9;
+
+        ol {
+            font-family: Berlin;
             display: grid;
-            grid-template-columns: repeat(8, 1fr);
-            grid-template-rows: repeat(8, 1fr);
-            grid-gap: 5px;
-            justify-content: center;
-        .perks {
-            grid-column: 1/5;
-            grid-row: 1/4;
+            grid-template-columns: repeat(3, auto);
+            grid-template-rows: repeat(3, auto);
+        
+
+        li {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+           
+            .item-detail {
+                overflow: scroll;
+                position:relative;
+                z-index: 1000;
+                max-height: 0px;
+
+                .item-dropdown-extras {
+                    font-style: italic;
+                    border: 1px grey
+                }
+            }
         }
+    }
+
+        
+
+        .perks {
+            grid-column: 1/9;
+            grid-row: 1/9;
+        }
+
         .spells {
             grid-column: 5/9;
             grid-row: 1/4;
         }
-        .miracles{
+
+        .miracles {
             grid-column: 1/5;
             grid-row: 4/9;
         }
-        .psionic{
+
+        .psionic {
             grid-column: 5/9;
             grid-row: 4/9;
         }
-        .perks {
-            grid-column: 1/5;
-            grid-row: 1/4;
-        }
+
+
+
         .spells {
             grid-column: 5/9;
             grid-row: 1/4;
         }
-        .miracles{
+
+        .miracles {
             grid-column: 1/5;
             grid-row: 4/9;
         }
-        .psionic{
+
+        .psionic {
             grid-column: 5/9;
             grid-row: 4/9;
         }
@@ -472,5 +495,43 @@
         grid-column: 1/9;
         grid-row: 7/9;
     }
-    
+
+    .wound-check {
+        padding: 10px;
+        display: flex;
+        flex-direction: row;
+        text-align: center;
+        border: none;
+        position: absolute;
+        transform: rotateZ(-90deg);
+        font-family: Berlin;
+        right: -265px;
+        top: 260px;
+        background-image: url(../images/separator.png);
+        background-size: cover;
+
+        ul {
+            color: white;
+            font-family: Berlin;
+            display: flex;
+            flex-direction: row;
+            list-style: none;
+            justify-content: space-around li;
+            display: inline-flex;
+            flex-direction: row;
+            justify-content: space-around;
+
+            input {
+                border: none;
+                text-align: center;
+                width: 18px;
+                height: 18px;
+
+
+            }
+        }
+
+       
+
+    }
 }

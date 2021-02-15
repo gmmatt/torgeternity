@@ -19,6 +19,9 @@ export const preloadTemplates = async function () {
         "systems/torgeternity/templates/actors/stormknight/others.hbs",
         "systems/torgeternity/templates/actors/stormknight/perks-list.hbs",
         "systems/torgeternity/templates/actors/stormknight/gear.hbs",
+        "systems/torgeternity/templates/actors/stormknight/powers.hbs",
+        "systems/torgeternity/templates/actors/stormknight/wounds.hbs",
+
     ];
 
     // Load the template parts
