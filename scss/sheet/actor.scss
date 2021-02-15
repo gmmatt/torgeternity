@@ -42,6 +42,10 @@
 
 
 .actor-sheet {
+    .list-section-heading {
+        font-size: 2em;
+        text-align: center;
+    }
 
     //defining grid container for each tab
     .tab[data-tab].active {
@@ -421,28 +425,32 @@
             display: grid;
             grid-template-columns: repeat(3, auto);
             grid-template-rows: repeat(3, auto);
-        
 
-        li {
-            position: relative;
-            display: flex;
-            flex-direction: column;
-           
-            .item-detail {
-                overflow: scroll;
-                position:relative;
-                z-index: 1000;
-                max-height: 0px;
+
+            li {
+                position: relative;
+                display: flex;
+                flex-direction: column;
+
+                .item-detail {
+                    overflow: scroll;
+                    position: relative;
+                    z-index: 1000;
+                    max-height: 0px;
+
+
+                }
 
                 .item-dropdown-extras {
                     font-style: italic;
-                    border: 1px grey
+                    border: 1px solid grey;
+                    text-align: center;
+                    background-color: #9e96868e;
                 }
             }
         }
-    }
 
-        
+
 
         .perks {
             grid-column: 1/9;
@@ -531,7 +539,7 @@
             }
         }
 
-       
+
 
     }
 }

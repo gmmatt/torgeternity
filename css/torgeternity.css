@@ -299,6 +299,11 @@ body {
   font-size: 0.9em;
 }
 
+.actor-sheet .list-section-heading {
+  font-size: 2em;
+  text-align: center;
+}
+
 .actor-sheet .tab[data-tab].active {
   display: grid;
   grid-template-columns: repeat(8, 1fr);
@@ -673,10 +678,12 @@ body {
   max-height: 0px;
 }
 
-.actor-sheet .perks-details ol li .item-detail .item-dropdown-extras,
-.actor-sheet .gear ol li .item-detail .item-dropdown-extras {
+.actor-sheet .perks-details ol li .item-dropdown-extras,
+.actor-sheet .gear ol li .item-dropdown-extras {
   font-style: italic;
-  border: 1px grey;
+  border: 1px solid grey;
+  text-align: center;
+  background-color: #9e96868e;
 }
 
 .actor-sheet .perks-details .perks,
