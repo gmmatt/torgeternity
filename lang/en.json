@@ -153,7 +153,7 @@
             "nileEmpire": "Nile Empire",
             "aysle": "Aysle",
             "cyberpapacy": "Cyberpapacy",
-            "tharkhold": "Tharkold",
+            "tharkold": "Tharkold",
             "panPacifica": "Pan Pacifica",
             "orrorsh": "Orrorsh"
         },
@@ -297,7 +297,9 @@
             "human": "Human",
             "dwarf": "Dwarf",
             "edeinos": "Edeinos",
-            "elf": "Elf"
+            "elf": "Elf",
+            "aspirants": "Aspirants",
+            "theRace": "The Race"
         },
         "stymiedStates": {
             "none": "Not Stymied",
