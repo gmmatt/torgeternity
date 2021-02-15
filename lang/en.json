@@ -153,7 +153,7 @@
             "nileEmpire": "Nile Empire",
             "aysle": "Aysle",
             "cyberpapacy": "Cyberpapacy",
-            "tharkhold": "Tharkold",
+            "tharkold": "Tharkold",
             "panPacifica": "Pan Pacifica",
             "orrorsh": "Orrorsh"
         },
@@ -184,6 +184,7 @@
             "perks": "Perks",
             "gear": "Gear",
             "powers": "Powers",
+            "effects": "Effects",
             "background": "Background",
             "enhancements": "Enhancements",
             "generalGear": "General Gear",
@@ -240,7 +241,9 @@
             "enhancement": "Enhancement",
             "details": "Details",
             "goodResult": "Good Result",
-            "outstandingResult": "Outstanding Result"
+            "outstandingResult": "Outstanding Result",
+            "effectCreate": "Create Effect",
+            "add": "Add"
 
         },
         "itemSheetDescriptions": {
@@ -294,7 +297,9 @@
             "human": "Human",
             "dwarf": "Dwarf",
             "edeinos": "Edeinos",
-            "elf": "Elf"
+            "elf": "Elf",
+            "aspirants": "Aspirants",
+            "theRace": "The Race"
         },
         "stymiedStates": {
             "none": "Not Stymied",

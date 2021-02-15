@@ -43,6 +43,10 @@
 .actor-sheet .list-section-heading {
   font-size: 2em;
   text-align: center;
+  background-image: url(../images/separator.png);
+  background-size: cover;
+  background-position: center;
+  color: white;
 }
 
 .actor-sheet .tab[data-tab].active {
@@ -288,7 +292,6 @@
 .actor-sheet .weapons ol {
   font-family: Berlin;
   display: flex;
-  flex-direction: col;
   justify-content: space-around;
 }
 
@@ -391,13 +394,15 @@
 }
 
 .actor-sheet .perks-details,
-.actor-sheet .gear {
+.actor-sheet .gear,
+.actor-sheet .powers {
   grid-column: 1/9;
   grid-row: 1/9;
 }
 
 .actor-sheet .perks-details ol,
-.actor-sheet .gear ol {
+.actor-sheet .gear ol,
+.actor-sheet .powers ol {
   font-family: Berlin;
   display: grid;
   grid-template-columns: repeat(3, auto);
@@ -405,14 +410,16 @@
 }
 
 .actor-sheet .perks-details ol li,
-.actor-sheet .gear ol li {
+.actor-sheet .gear ol li,
+.actor-sheet .powers ol li {
   position: relative;
   display: flex;
   flex-direction: column;
 }
 
 .actor-sheet .perks-details ol li .item-detail,
-.actor-sheet .gear ol li .item-detail {
+.actor-sheet .gear ol li .item-detail,
+.actor-sheet .powers ol li .item-detail {
   overflow: scroll;
   position: relative;
   z-index: 1000;
@@ -420,70 +427,80 @@
 }
 
 .actor-sheet .perks-details ol li .item-dropdown-extras,
-.actor-sheet .gear ol li .item-dropdown-extras {
+.actor-sheet .gear ol li .item-dropdown-extras,
+.actor-sheet .powers ol li .item-dropdown-extras {
   font-style: italic;
   border: 1px solid grey;
   text-align: center;
   background-color: #9e96868e;
 }
 
-.actor-sheet .perks-details .perks,
-.actor-sheet .gear .perks {
+.actor-sheet .gear h2 {
+  text-align: left;
+  position: relative;
+  background: #37465438;
+}
+
+.actor-sheet .background h2 {
+  grid-column: 1/9;
+  grid-row: 1/2;
+}
+
+.actor-sheet .background .editor {
+  grid-column: 1/9;
+  grid-row: 2/9;
+}
+
+.actor-sheet .perks {
   grid-column: 1/9;
   grid-row: 1/9;
 }
 
-.actor-sheet .perks-details .spells,
-.actor-sheet .gear .spells {
+.actor-sheet .spells {
   grid-column: 5/9;
   grid-row: 1/4;
 }
 
-.actor-sheet .perks-details .miracles,
-.actor-sheet .gear .miracles {
+.actor-sheet .miracles {
   grid-column: 1/5;
   grid-row: 4/9;
 }
 
-.actor-sheet .perks-details .psionic,
-.actor-sheet .gear .psionic {
+.actor-sheet .psionic {
   grid-column: 5/9;
   grid-row: 4/9;
 }
 
-.actor-sheet .perks-details .spells,
-.actor-sheet .gear .spells {
+.actor-sheet .spells {
   grid-column: 5/9;
   grid-row: 1/4;
 }
 
-.actor-sheet .perks-details .miracles,
-.actor-sheet .gear .miracles {
+.actor-sheet .miracles {
   grid-column: 1/5;
   grid-row: 4/9;
 }
 
-.actor-sheet .perks-details .psionic,
-.actor-sheet .gear .psionic {
+.actor-sheet .psionic {
   grid-column: 5/9;
   grid-row: 4/9;
 }
 
-.actor-sheet .defense {
+.defense {
   grid-column: 7/9;
   grid-row: 2/5;
 }
 
-.actor-sheet .defense input {
+.defense input {
   width: 25%;
 }
 
-.actor-sheet .weapons-list {
+.weapons-list {
   grid-column: 1/9;
   grid-row: 7/9;
 }
 
-.actor-sheet .wound-check {
+.wound-check {
   padding: 10px;
   display: flex;
   flex-direction: row;
@@ -492,13 +509,13 @@
   position: absolute;
   transform: rotateZ(-90deg);
   font-family: Berlin;
-  right: -265px;
+  right: -260px;
   top: 260px;
   background-image: url(../images/separator.png);
   background-size: cover;
 }
 
-.actor-sheet .wound-check ul {
+.wound-check ul {
   color: white;
   font-family: Berlin;
   display: flex;
@@ -510,7 +527,7 @@
   justify-content: space-around;
 }
 
-.actor-sheet .wound-check ul input {
+.wound-check ul input {
   border: none;
   text-align: center;
   width: 18px;

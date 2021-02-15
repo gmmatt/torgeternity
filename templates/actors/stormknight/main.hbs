@@ -61,8 +61,17 @@
             </div>
         </div>
         <div class="tab powers" data-group="primary" data-tab="powers">
-            <div class="gear block">
+            <div class="powers block">
                 {{> "systems/torgeternity/templates/actors/stormknight/powers.hbs"}}
+            </div>
+        </div>
+
+          <div class="tab background" data-group="primary" data-tab="background">
+            
+               <h2>Background and notes</h2>
+                {{editor content=data.details.background target="data.details.background" button=true owner=owner
+                editable=editable}}
+           
             </div>
         </div>
     </section>

@@ -1,9 +1,11 @@
+
 <div class="list-section-heading">
     {{localize "torgeternity.sheetLabels.weapons"}}
 </div>
+<h2>melee weapons</h2>
 <ol class="item-list">
     {{#each meleeweapons as |item id|}}
-    <li class="item" data-item-id="{{item._id}}">
+    <li class="item block" data-item-id="{{item._id}}">
         <div class="item-row flexrow">
             <img src="{{item.img}}" title="{{item.name}}" width="30" height="30" />
             <a class="item-name">{{item.name}} (Melee Weapon)</a>
@@ -34,9 +36,12 @@
     </li>
     {{/each}}
 </ol>
+
+<h2>Missile Weapon</h2>
 <ol class="item-list">
+    
     {{#each missileweapon as |item id|}}
-    <li class="item" data-item-id="{{item._id}}">
+    <li class="item block" data-item-id="{{item._id}}">
         <div class="item-row flexrow">
             <img src="{{item.img}}" title="{{item.name}}" width="30" height="30" />
             <a class="item-name">{{item.name}} (Missile Weapon)</a>
@@ -73,9 +78,11 @@
     </li>
     {{/each}}
 </ol>
+ <h2>Firearm</h2>
 <ol class="item-list">
+   
     {{#each firearm as |item id|}}
-    <li class="item" data-item-id="{{item._id}}">
+    <li class="item block" data-item-id="{{item._id}}">
         <div class="item-row flexrow">
             <img src="{{item.img}}" title="{{item.name}}" width="30" height="30" />
             <a class="item-name">{{item.name}} (Firearm)</a>
@@ -112,10 +119,11 @@
     </li>
     {{/each}}
 </ol>
-
+<h2>Heavy Weapon/Explosive</h2>
 <ol class="item-list">
+    
     {{#each heavyweapon as |item id|}}
-    <li class="item" data-item-id="{{item._id}}">
+    <li class="item block" data-item-id="{{item._id}}">
         <div class="item-row flexrow">
             <img src="{{item.img}}" title="{{item.name}}" width="30" height="30" />
             <a class="item-name">{{item.name}} (Heavy Weapon/Explosive)</a>
@@ -157,9 +165,11 @@
 <div class="list-section-heading">
     {{localize "torgeternity.sheetLabels.armorAndShields"}}
 </div>
+<h2>armor</h2>
 <ol class="item-list">
+    
     {{#each armor as |item id|}}
-    <li class="item" data-item-id="{{item._id}}">
+    <li class="item block" data-item-id="{{item._id}}">
         <div class="item-row flexrow">
             <img src="{{item.img}}" title="{{item.name}}" width="30" height="30" />
             <a class="item-name">{{item.name}}</a>
@@ -195,9 +205,11 @@
     </li>
     {{/each}}
 </ol>
+<h2>shield</h2>
 <ol class="item-list">
+    
     {{#each shield as |item id|}}
-    <li class="item" data-item-id="{{item._id}}">
+    <li class="item block" data-item-id="{{item._id}}">
         <div class="item-row flexrow">
             <img src="{{item.img}}" title="{{item.name}}" width="30" height="30" />
             <a class="item-name">{{item.name}}</a>
@@ -233,11 +245,13 @@
 
 
 <div class="list-section-heading">
-    {{torgeternity.itemSheetDescriptions.other}}
-</div>
+    {{localize  "torgeternity.sheetLabels.generalGear"}}
+</div> 
+<h2>gear</h2>
 <ol class="item-list">
+   
     {{#each gear as |item id|}}
-    <li class="item" data-item-id="{{item._id}}">
+    <li class="item block" data-item-id="{{item._id}}">
         <div class="item-row flexrow">
             <img src="{{item.img}}" title="{{item.name}}" width="30" height="30" />
             <a class="item-name">{{item.name}}</a>
@@ -265,9 +279,11 @@
     </li>
     {{/each}}
 </ol>
+<h2>implant</h2>
 <ol class="item-list">
+    
     {{#each implant as |item id|}}
-    <li class="item" data-item-id="{{item._id}}">
+    <li class="item block" data-item-id="{{item._id}}">
         <div class="item-row flexrow">
             <img src="{{item.img}}" title="{{item.name}}" width="30" height="30" />
             <a class="item-name">{{item.name}} (Implant)</a>
@@ -295,9 +311,11 @@
     </li>
     {{/each}}
 </ol>
+<h2>eternity Shard</h2>
 <ol class="item-list">
+    
     {{#each eternityshard as |item id|}}
-    <li class="item" data-item-id="{{item._id}}">
+    <li class="item block" data-item-id="{{item._id}}">
         <div class="item-row flexrow">
             <img src="{{item.img}}" title="{{item.name}}" width="30" height="30" />
             <a class="item-name">{{item.name}} (Eternity Shard)</a>
@@ -325,9 +343,11 @@
     </li>
     {{/each}}
 </ol>
+<h2>vehicle</h2>
 <ol class="item-list">
+    
     {{#each vehicle as |item id|}}
-    <li class="item" data-item-id="{{item._id}}">
+    <li class="item block" data-item-id="{{item._id}}">
         <div class="item-row flexrow">
             <img src="{{item.img}}" title="{{item.name}}" width="30" height="30" />
             <a class="item-name">{{item.name}} (Vehicle)</a>

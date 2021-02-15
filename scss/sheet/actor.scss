@@ -45,6 +45,10 @@
     .list-section-heading {
         font-size: 2em;
         text-align: center;
+        background-image: url(../images/separator.png);
+        background-size: cover;
+        background-position: center;
+        color: white;
     }
 
     //defining grid container for each tab
@@ -319,7 +323,6 @@
         ol {
             font-family: Berlin;
             display: flex;
-            flex-direction: col;
             justify-content: space-around;
 
             li.attribut-block {
@@ -416,7 +419,8 @@
     }
 
     .perks-details,
-    .gear {
+    .gear,
+    .powers {
         grid-column: 1/9;
         grid-row: 1/9;
 
@@ -449,97 +453,116 @@
                 }
             }
         }
-
-
-
-        .perks {
+    }
+    .gear{
+       h2{
+        text-align: left;
+        position: relative;
+        
+        background: #37465438;
+       }
+    }
+    .background{
+        h2{
             grid-column: 1/9;
-            grid-row: 1/9;
+        grid-row: 1/2; 
         }
-
-        .spells {
-            grid-column: 5/9;
-            grid-row: 1/4;
-        }
-
-        .miracles {
-            grid-column: 1/5;
-            grid-row: 4/9;
-        }
-
-        .psionic {
-            grid-column: 5/9;
-            grid-row: 4/9;
-        }
-
-
-
-        .spells {
-            grid-column: 5/9;
-            grid-row: 1/4;
-        }
-
-        .miracles {
-            grid-column: 1/5;
-            grid-row: 4/9;
-        }
-
-        .psionic {
-            grid-column: 5/9;
-            grid-row: 4/9;
+        .editor{
+        grid-column:1/9;
+        grid-row: 2/9;
         }
     }
+    
 
-    .defense {
-        grid-column: 7/9;
-        grid-row: 2/5;
 
-        input {
-            width: 25%
-        }
-    }
 
-    .weapons-list {
+    .perks {
         grid-column: 1/9;
-        grid-row: 7/9;
+        grid-row: 1/9;
     }
 
-    .wound-check {
-        padding: 10px;
+    .spells {
+        grid-column: 5/9;
+        grid-row: 1/4;
+    }
+
+    .miracles {
+        grid-column: 1/5;
+        grid-row: 4/9;
+    }
+
+    .psionic {
+        grid-column: 5/9;
+        grid-row: 4/9;
+    }
+
+
+
+    .spells {
+        grid-column: 5/9;
+        grid-row: 1/4;
+    }
+
+    .miracles {
+        grid-column: 1/5;
+        grid-row: 4/9;
+    }
+
+    .psionic {
+        grid-column: 5/9;
+        grid-row: 4/9;
+    }
+}
+
+.defense {
+    grid-column: 7/9;
+    grid-row: 2/5;
+
+    input {
+        width: 25%
+    }
+}
+
+.weapons-list {
+    grid-column: 1/9;
+    grid-row: 7/9;
+}
+
+.wound-check {
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    border: none;
+    position: absolute;
+    transform: rotateZ(-90deg);
+    font-family: Berlin;
+    right: -260px;
+    top: 260px;
+    background-image: url(../images/separator.png);
+    background-size: cover;
+
+    ul {
+        color: white;
+        font-family: Berlin;
         display: flex;
         flex-direction: row;
-        text-align: center;
-        border: none;
-        position: absolute;
-        transform: rotateZ(-90deg);
-        font-family: Berlin;
-        right: -265px;
-        top: 260px;
-        background-image: url(../images/separator.png);
-        background-size: cover;
+        list-style: none;
+        justify-content: space-around li;
+        display: inline-flex;
+        flex-direction: row;
+        justify-content: space-around;
 
-        ul {
-            color: white;
-            font-family: Berlin;
-            display: flex;
-            flex-direction: row;
-            list-style: none;
-            justify-content: space-around li;
-            display: inline-flex;
-            flex-direction: row;
-            justify-content: space-around;
-
-            input {
-                border: none;
-                text-align: center;
-                width: 18px;
-                height: 18px;
+        input {
+            border: none;
+            text-align: center;
+            width: 18px;
+            height: 18px;
 
 
-            }
         }
-
-
-
     }
+
+
+
 }
