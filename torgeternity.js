@@ -3,6 +3,7 @@ import torgeternityItem from "./module/torgeternityItem.js";
 import torgeternityActor from "./module/torgeternityActor.js";
 import torgeternityItemSheet from "./module/sheets/torgeternityItemSheet.js";
 import torgeternityActorSheet from "./module/sheets/torgeternityActorSheet.js";
+  
 
 import {preloadTemplates} from "./module/preloadTemplates.js";
 

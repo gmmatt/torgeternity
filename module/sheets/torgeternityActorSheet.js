@@ -1,14 +1,23 @@
 import { torgeternity } from "../config.js";
 import * as torgchecks from "../torgchecks.js";
+import {onManageActiveEffect, prepareActiveEffectCategories} from "/systems/torgeternity/module/effects.js";
 
 export default class torgeternityActorSheet extends ActorSheet {
+    constructor(...args) {
+        super(...args);
+
+        this._filters = {
+            effects: new Set()
+        }
+    }
+    
     static get defaultOptions () {
         return mergeObject(super.defaultOptions, {
             classes: ["torgeternity", "sheet", "actor"],
             width: 600,
             height: 600,
-            tabs: [{navSelector: ".sheet-tabs", contentSelector: ".main", initial: "stats"}],
-            scrollY: [".stats", ".perks", ".gear", ".powers", "background"],
+            tabs: [{navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "stats"}],
+            scrollY: [".stats", ".perks", ".gear", ".powers", "effects", "background"],
             dragdrop: [{dragSelector: ".item-list .item", dropSelector: null}]
         });
     }
@@ -47,6 +56,7 @@ export default class torgeternityActorSheet extends ActorSheet {
             this.actor.data.data.editstate = "none";
         };
 
+        data.effects= prepareActiveEffectCategories(this.entity.effects);
 
         data.config = CONFIG.torgeternity;
 
@@ -112,6 +122,10 @@ export default class torgeternityActorSheet extends ActorSheet {
 
         if (this.actor.owner) {
             html.find(".activeDefense-roll").click(this._onActiveDefenseRoll.bind(this));
+        }
+
+        if (this.actor.owner) {
+            html.find(".effect-control").click(ev => onManageActiveEffect(ev, this.entity));
         }
 
         super.activateListeners(html);

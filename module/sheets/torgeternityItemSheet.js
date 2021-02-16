@@ -1,3 +1,5 @@
+import {onManageActiveEffect, prepareActiveEffectCategories} from "/systems/torgeternity/module/effects.js";
+
 export default class torgeternityItemSheet extends ItemSheet {
     constructor(...args) {
         super(...args);
@@ -16,8 +18,11 @@ export default class torgeternityItemSheet extends ItemSheet {
     static get defaultOptions() {
         return mergeObject(super.defaultOptions, {
             width: 530,
-            height: 500,
-            classes: ["torgeternity", "sheet", "item"]
+            height: 550,
+            classes: ["torgeternity", "sheet", "item"],
+            tabs: [{navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "stats"}],
+            scrollY: [".stats", ".effects", ".background"],
+            dragdrop: [{dragSelector: ".item-list .item", dropSelector: null}]
         });
 
     }
@@ -31,9 +36,19 @@ export default class torgeternityItemSheet extends ItemSheet {
     getData(){
         const data = super.getData();
 
+        data.effects= prepareActiveEffectCategories(this.entity.effects);
+
         data.config = CONFIG.torgeternity;
 
         return data;
+    }
+
+    activateListeners(html) {
+        super.activateListeners(html);
+        html.find(".effect-control").click(ev => {
+            if ( this.item.isOwned ) return ui.notifications.warn("Managing Active Effects within an Owned Item is not currently supported and will be added in a subsequent update.")
+            onManageActiveEffect(ev, this.item)
+            });
     }
 
 }

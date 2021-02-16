@@ -11,27 +11,24 @@
             <tr>
                 <td style="text-align:center; font-size:11px" width="20%">
                     <span class="vital-box">
-                        {{localize "torgeternity.sheetLabels.wounds"}}:
-                        <input name="data.wounds.value" type="text" value="{{data.wounds.value}}" data-dtype="Number"
-                            class="small-input" />
+                        {{localize "torgeternity.sheetLabels.wounds"}}: 
+                        <input name="data.wounds.value" type="number" value="{{data.wounds.value}}" data-dtype="Number" class="small-input" />
                         /
                         <span class="storm-knight-label-small">{{data.wounds.max}}</span>
                     </span>
                 </td>
-                <td style="text-align:center; font-size:11px" width="20%">
-                    <span class="vital-box">
-                        {{localize "torgeternity.sheetLabels.shock"}}:
-                        <input name="data.shock.value" type="text" value="{{data.shock.value}}" data-dtype="Number"
-                            class="small-input" />
-                        /
-                        <span class="storm-knight-label-small">{{data.shock.max}}</span>
-                    </span>
-                </td>
+                    <td style="text-align:center; font-size:11px" width="20%">
+                        <span class="vital-box">
+                            {{localize "torgeternity.sheetLabels.shock"}}: 
+                            <input name="data.shock.value" type="number" value="{{data.shock.value}}" data-dtype="Number" class="small-input" />
+                            /
+                            <span class="storm-knight-label-small">{{data.shock.max}}</span>
+                        </span>
+                    </td>
                 <td style="text-align:center; font-size:11px" width="20%">
                     <span class="vital-box">
                         {{localize "torgeternity.sheetLabels.possibilities"}}:
-                        <input name="data.other.possibilities" type="text" value="{{data.other.possibilities}}"
-                            data-dtype="Number" class="small-input" />
+                        <input name="data.other.possibilities" type="number" value="{{data.other.possibilities}}" data-dtype="Number" class="small-input" />
                     </span>
                 </td>
             </tr>
@@ -46,6 +43,7 @@
         <a class="item" data-tab="perks">{{localize "torgeternity.sheetLabels.perks"}}</a>
         <a class="item" data-tab="gear">{{localize "torgeternity.sheetLabels.gear"}}</a>
         <a class="item" data-tab="powers">{{localize "torgeternity.sheetLabels.powers"}}</a>
+        <a class="item" data-tab="effects">{{localize "torgeternity.sheetLabels.effects"}}</a>
         <a class="item" data-tab="background">{{localize "torgeternity.sheetLabels.background"}}</a>
     </nav>
 
@@ -67,8 +65,7 @@
                                     "torgeternity.attributes.charisma"}}</a>
                             </td>
                             <td>
-                                <input name="data.attributes.charisma" type="text" value="{{data.attributes.charisma}}"
-                                    data=dtype="Number" class="small-input" />
+                                <input name="data.attributes.charisma" type="number" value="{{data.attributes.charisma}}" data=dtype="Number" class="small-input" /> 
                             </td>
                         </tr>
                         <tr>
@@ -80,8 +77,7 @@
                                     "torgeternity.attributes.dexterity"}}</a>
                             </td>
                             <td>
-                                <input name="data.attributes.dexterity" type="text"
-                                    value="{{data.attributes.dexterity}}" data=dtype="Number" class="small-input" />
+                                <input name="data.attributes.dexterity" type="number" value="{{data.attributes.dexterity}}" data=dtype="Number" class="small-input" />
                             </td>
                         </tr>
                         <tr>
@@ -92,8 +88,7 @@
                                     torgeternity.attributes.mind"}}">{{localize "torgeternity.attributes.mind"}}</a>
                             </td>
                             <td>
-                                <input name="data.attributes.mind" type="text" value="{{data.attributes.mind}}"
-                                    data=dtype="Number" class="small-input" />
+                                <input name="data.attributes.mind" type="number" value="{{data.attributes.mind}}" data=dtype="Number" class="small-input" />
                             </td>
                         </tr>
                         <tr>
@@ -105,8 +100,7 @@
                                     "torgeternity.attributes.spirit"}}</a>
                             </td>
                             <td>
-                                <input name="data.attributes.spirit" type="text" value="{{data.attributes.spirit}}"
-                                    data=dtype="Number" class="small-input" />
+                                <input name="data.attributes.spirit" type="number" value="{{data.attributes.spirit}}" data=dtype="Number" class="small-input" />
                             </td>
                         </tr>
                         <tr>
@@ -118,8 +112,7 @@
                                     "torgeternity.attributes.strength"}}</a>
                             </td>
                             <td>
-                                <input name="data.attributes.strength" type="text" value="{{data.attributes.strength}}"
-                                    data=dtype="Number" class="small-input" />
+                                <input name="data.attributes.strength" type="number" value="{{data.attributes.strength}}" data=dtype="Number" class="small-input" />
                             </td>
                         </tr>
                     </table>
@@ -154,8 +147,7 @@
                                 <span class="main-label">{{localize "torgeternity.sheetLabels.armor"}}</span>
                             </td>
                             <td>
-                                <input name="data.other.armor" type="text" value="{{data.other.armor}}"
-                                    data=dtype="Number" class="small-input" />
+                                <input name="data.other.armor" type="number" value="{{data.other.armor}}" data=dtype="Number" class="small-input" />
                             </td>
                         </tr>
                     </table>
@@ -223,53 +215,41 @@
 
 
                             {{#if data.editstate}}
-                            {{#each data.skills as |content name|}}
-                            <tr>
-                                <td>
-                                    <a class="skill-roll" data-testType="skill"
-                                        data-baseAttribute="{{content.baseAttribute}}" data-adds="{{content.adds}}"
-                                        data-value="{{content.value}}" data-unskilledUse="{{content.unskilledUse}}"
-                                        data-name="{{localize (concatSkillName name)}}">{{localize (concatSkillName
-                                        name)}}</a>
-                                </td>
-                                <td>
-                                    {{localize (concatAttributeName content.baseAttribute)}}
-                                </td>
-                                <td>
-                                    <input name="data.skills.{{name}}.adds" type="text" class="small-input"
-                                        value="{{content.adds}}" data-dtype="Number"
-                                        style="width:30px;text-align:center" />
-                                </td>
-                                <td style="text-align:center">
-                                    {{content.value}}
-                                </td>
-                            </tr>
-                            {{/each}}
+                                {{#each data.skills as |content name|}}
+                                    <tr>
+                                        <td>
+                                            <a class="skill-roll" data-testType="skill" data-baseAttribute="{{content.baseAttribute}}" data-adds="{{content.adds}}" data-value="{{content.value}}" data-unskilledUse="{{content.unskilledUse}}" data-name="{{localize (concatSkillName name)}}">{{localize (concatSkillName name)}}</a>
+                                        </td>
+                                        <td>
+                                            {{localize (concatAttributeName content.baseAttribute)}}
+                                        </td>
+                                        <td>
+                                            <input name="data.skills.{{name}}.adds" type="number" class="small-input" value="{{content.adds}}" data-dtype="Number" style="width:30px;text-align:center" />
+                                        </td>
+                                        <td style="text-align:center">
+                                            {{content.value}}
+                                        </td>
+                                    </tr>
+                                {{/each}}
                             {{else}}
-                            {{#each data.skills as |content name|}}
-                            {{#if content.adds}}
-                            <tr>
-                                <td>
-                                    <a class="skill-roll" data-testType="skill"
-                                        data-baseAttribute="{{content.baseAttribute}}" data-adds="{{content.adds}}"
-                                        data-value="{{content.value}}" data-unskilledUse="{{content.unskilledUse}}"
-                                        data-name="{{localize (concatSkillName name)}}">{{localize (concatSkillName
-                                        name)}}</a>
-                                </td>
-                                <td class="skill-text">
-                                    {{localize (concatAttributeName content.baseAttribute)}}
-                                </td>
-                                <td class="skill-text">
-                                    <input name="data.skills.{{name}}.adds" type="text" class="small-input"
-                                        value="{{content.adds}}" data-dtype="Number"
-                                        style="width:30px;text-align:center" />
-                                </td>
-                                <td class="skill-text" style="text-align:center">
-                                    {{content.value}}
-                                </td>
-                            </tr>
-                            {{/if}}
-                            {{/each}}
+                                {{#each data.skills as |content name|}}
+                                    {{#if content.adds}}                                                                            
+                                    <tr>
+                                        <td>
+                                            <a class="skill-roll" data-testType="skill" data-baseAttribute="{{content.baseAttribute}}" data-adds="{{content.adds}}" data-value="{{content.value}}" data-unskilledUse="{{content.unskilledUse}}" data-name="{{localize (concatSkillName name)}}">{{localize (concatSkillName name)}}</a>
+                                        </td>
+                                        <td class="skill-text">
+                                            {{localize (concatAttributeName content.baseAttribute)}}
+                                        </td>
+                                        <td class="skill-text">
+                                            <input name="data.skills.{{name}}.adds" type="number" class="small-input" value="{{content.adds}}" data-dtype="Number" style="width:30px;text-align:center" />
+                                        </td>
+                                        <td class="skill-text" style="text-align:center">
+                                            {{content.value}}
+                                        </td>
+                                    </tr>
+                                    {{/if}}
+                                {{/each}}
                             {{/if}}
 
                         </table>
@@ -350,8 +330,7 @@
                                 <span class="main-label">{{localize "torgeternity.sheetLabels.unspent"}}</span>
                             </td>
                             <td>
-                                <input name="data.xp.unspent" type="text" value="{{data.xp.unspent}}"
-                                    data=dtype="Number" class="small-input" />
+                                <input name="data.xp.unspent" type="number" value="{{data.xp.unspent}}" data=dtype="Number" class="small-input" />
                             </td>
                         </tr>
                         <tr>
@@ -359,8 +338,7 @@
                                 <span class="main-label">{{localize "torgeternity.sheetLabels.earned"}}</span>
                             </td>
                             <td>
-                                <input name="data.xp.earned" type="text" value="{{data.xp.earned}}" data=dtype="Number"
-                                    class="small-input" style="width:30px" />
+                                <input name="data.xp.earned" type="number" value="{{data.xp.earned}}" data=dtype="Number" class="small-input" style="width:30px" />
                             </td>
                         </tr>
                     </table>
@@ -691,7 +669,7 @@
 
 
             <div class="list-section-heading">
-                {{torgeternity.itemSheetDescriptions.other}}
+                {{localize "torgeternity.itemSheetDescriptions.other"}}
             </div>
             <ol class="item-list">
                 {{#each gear as |item id|}}
@@ -939,6 +917,10 @@
                 {{/each}}
             </ol>
 
+        </div>
+
+        <div class="tab background" data-group="primary" data-tab="effects">
+            {{> "systems/torgeternity/templates/parts/active-effects.hbs"}}
         </div>
 
         <div class="tab background" data-group="primary" data-tab="background">

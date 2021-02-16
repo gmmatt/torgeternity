@@ -1,3 +1,7 @@
+p {
+  font-family:"Palatino Linotype";
+}
+
 .sheet form {
 /*    display: flex; */
     flex-direction: column; 
@@ -20,7 +24,7 @@
 }
 .item-sheet {
     display: flex;
-    flex-direction:column; 
+    flex-direction:column;  
     background-image: url('./images/bgparch.jpg');
     background-size: 100% 100%;
 }
@@ -36,6 +40,12 @@
     line-height: 30px;
     font-weight: bold;
     font-family:"Palatino Linotype";
+}
+
+.torgeternity .item-tabs {
+  background-color:black;
+  color:white;
+  border-radius:10px
 }
 .torgeternity .tabs .item.active {
     text-decoration: underline;
@@ -256,6 +266,87 @@
     text-indent:0px;
     padding-left:10px;
     margin:0px;
+  }
+
+  .torgeternity .items-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    color: #7a7971;
+  }
+
+  .torgeternity .items-list .item-name {
+    flex: 2;
+    margin: 0;
+    overflow: hidden;
+    font-size: 13px;
+    text-align: left;
+    align-items: center;
+  }
+
+  .torgeternity .effect-name {
+    white-space: nowrap;
+    overflow-x: hidden;
+    text-align:left;
+    font-family:"Palatino Linotype";
+    padding:0px 0px 0px 10px;
+    width:25%
+  }
+
+  .torgeternity .effect-section-title {
+    width:25%;
+    padding:0px 0px 0px 10px;
+  }
+
+  .torgeternity .effects-heading {
+    height: 28px;
+    margin: 2px 0;
+    align-items: center;
+    background-color:#00134d;
+    border-radius:10px;
+    color:white;
+    font-weight: bold;
+    font-family:"Palatino Linotype"
+  }
+
+  .torgeternity .effects-item {
+    text-align: center;
+    border-left: 1px solid #c9c7b8;
+    border-right: 1px solid #c9c7b8;
+    font-size: 12px;
+    color:black;
+  }
+
+  .torgeternity .effect-source,
+  .torgeternity .effect-duration,
+  .torgeternity .effect-controls {
+    text-align:center;
+    border-left: 1px solid #c9c7b8;
+    border-right: 1px solic #c9c7b8;
+    font-size:12px;
+    font-family:"Palatino Linotype";
+    width:25%
+  }
+
+  .torgeternity .effect-controls {
+    border:none;
+    flex:1;
+  }
+
+  .torgeternity .effect-toggle,
+  .torgeternity .effect-edit,
+  .torgeternity .effect-delete {
+    padding:5px;
+  }
+
+  .torgeternity .effect-item-image {
+    flex: 0 0 30px;
+    height: 30px;
+    background-size: 30px;
+    border: none;
+    margin-right: 5px;
   }
   
   .torgeternity .item-equipped {

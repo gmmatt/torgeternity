@@ -4,69 +4,87 @@
         <h1><input name="name" type="text" value="{{item.name}}" placeholder="Firearm Name" style="background-color:white;border-radius:10px;width:270px;font-family:'Palatino Linotype"/></h1>
         <h1 style="font-size:46px;text-align:right;font-family:'Palatino Linotype'">{{localize "torgeternity.itemSheetDescriptions.firearm"}}</h1>
     </header>
-    <div class="sheet-content">
-        <table style="background-color:transparent;border: 0px solid black">
-        <tr>
-            <td style="width:25%;vertical-align:top"> <!-- left column -->
-                <p class="item-data-label">
-                    {{localize "torgeternity.gear.cosm"}}
-                </p>
-                <select name="data.cosm" class="input-box">
-                    {{#select data.cosm}}
-                    {{#each config.cosmTypes as |name type|}}
-                    <option value="{{localize name}}">{{localize name}}</option>
-                    {{/each}}
-                    {{/select}}
-                </select>
-                <p class="item-data-label">
-                    {{localize "torgeternity.gear.techlevel"}}/{{localize "torgeternity.gear.ammo"}}
-                </p>
-                <input name="data.techlevel" type="text" value="{{data.techlevel}}" class="input-box-small" />
-                <input name="data.ammo" type="text" value="{{data.ammo}}" class="input-box-small" />
-                <p class="item-data-label">
-                    {{localize "torgeternity.gear.price"}}/Value
-                </p>
-                <input name="data.price" type="text" value="{{data.price}}" class="input-box-small" />
-                <input name="data.value" type="text" value="{{data.value}}" class="input-box-small" />
-                <p class="item-data-label">
-                    {{localize "torgeternity.gear.range"}}
-                </p>
-                <input name="data.range" type="text" value="{{data.range}}" class="input-box" />
-                <p class="item-data-label">
-                    {{localize "torgeternity.gear.attackWith"}}
-                </p>
-                <select name="data.attackWith" class="input-box">
-                    {{#select data.attackWith}}
-                    {{#each config.attackTypes as |name type|}}
-                    <option value="{{type}}">{{localize name}}</option>
-                    {{/each}}
-                    {{/select}}
-                </select>
-                <p class="item-data-label">
-                    {{localize "torgeternity.gear.damageType"}}
-                </p>
-                <select name="data.damageType" class="input-box">
-                    {{#select data.damageType}}
-                    {{#each config.damageTypes as |name type|}}
-                    <option value="{{type}}">{{localize name}}</option>
-                    {{/each}}
-                    {{/select}}
-                </select>
-                <p class="item-data-label">
-                    {{localize "torgeternity.gear.damage"}}
-                </p>
-                <input name="data.damage" type="text" value="{{data.damage}}" class="input-box" />
-                <p class="item-data-label">
-                    {{localize "torgeternity.gear.notes"}}
-                </p>
-                <input name="data.notes" type="text" value="{{data.notes}}" class="input-box" />
-            </td>
-            <td style="width:65%"> <!-- right column -->
-                <div class="item-description-textarea" style="padding:0px 0px 0px 10px">
-                    {{editor content=data.description target="data.description" button=true owner=owner editable=editable}}
-                </div>
-            </td> 
-        </tr>
-        </table>         
-    </div>
+
+
+    <nav class="sheet-tabs item-tabs tabs" data-group="primary">
+        <a class="item" data-tab="stats" style="vertical-align:center">{{localize "torgeternity.sheetLabels.stats"}}</a>
+        <a class="item" data-tab="effects">{{localize "torgeternity.sheetLabels.effects"}}</a>
+    </nav>
+
+    <secton class="sheet-body"  style="display:flex;flex-direction:column">
+
+        <div class="tab stats" data-group="primary" data-tab="stats">
+
+            <div class="sheet-content">
+                <table style="background-color:transparent;border: 0px solid black">
+                <tr>
+                    <td style="width:25%;vertical-align:top"> <!-- left column -->
+                        <p class="item-data-label">
+                            {{localize "torgeternity.gear.cosm"}}
+                        </p>
+                        <select name="data.cosm" class="input-box">
+                            {{#select data.cosm}}
+                            {{#each config.cosmTypes as |name type|}}
+                            <option value="{{localize name}}">{{localize name}}</option>
+                            {{/each}}
+                            {{/select}}
+                        </select>
+                        <p class="item-data-label">
+                            {{localize "torgeternity.gear.techlevel"}}/{{localize "torgeternity.gear.ammo"}}
+                        </p>
+                        <input name="data.techlevel" type="text" value="{{data.techlevel}}" class="input-box-small" />
+                        <input name="data.ammo" type="text" value="{{data.ammo}}" class="input-box-small" />
+                        <p class="item-data-label">
+                            {{localize "torgeternity.gear.price"}}/Value
+                        </p>
+                        <input name="data.price" type="text" value="{{data.price}}" class="input-box-small" />
+                        <input name="data.value" type="text" value="{{data.value}}" class="input-box-small" />
+                        <p class="item-data-label">
+                            {{localize "torgeternity.gear.range"}}
+                        </p>
+                        <input name="data.range" type="text" value="{{data.range}}" class="input-box" />
+                        <p class="item-data-label">
+                            {{localize "torgeternity.gear.attackWith"}}
+                        </p>
+                        <select name="data.attackWith" class="input-box">
+                            {{#select data.attackWith}}
+                            {{#each config.attackTypes as |name type|}}
+                            <option value="{{type}}">{{localize name}}</option>
+                            {{/each}}
+                            {{/select}}
+                        </select>
+                        <p class="item-data-label">
+                            {{localize "torgeternity.gear.damageType"}}
+                        </p>
+                        <select name="data.damageType" class="input-box">
+                            {{#select data.damageType}}
+                            {{#each config.damageTypes as |name type|}}
+                            <option value="{{type}}">{{localize name}}</option>
+                            {{/each}}
+                            {{/select}}
+                        </select>
+                        <p class="item-data-label">
+                            {{localize "torgeternity.gear.damage"}}
+                        </p>
+                        <input name="data.damage" type="text" value="{{data.damage}}" class="input-box" />
+                        <p class="item-data-label">
+                            {{localize "torgeternity.gear.notes"}}
+                        </p>
+                        <input name="data.notes" type="text" value="{{data.notes}}" class="input-box" />
+                    </td>
+                    <td style="width:65%"> <!-- right column -->
+                        <div class="item-description-textarea" style="padding:0px 0px 0px 10px">
+                            {{editor content=data.description target="data.description" button=true owner=owner editable=editable}}
+                        </div>
+                    </td> 
+                </tr>
+                </table>
+            </div>
+        </div>
+        <div class="tab effects" data-group="primary" data-tab="effects">
+            {{> "systems/torgeternity/templates/parts/active-effects.hbs"}}
+        </div>
+    
+    </secton>
+    
 </form>
