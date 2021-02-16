@@ -15,7 +15,7 @@ export default class torgeternityActorSheet extends ActorSheet {
         return mergeObject(super.defaultOptions, {
             classes: ["torgeternity", "sheet", "actor"],
             width: 600,
-            height: 600,
+            height: 750,
             tabs: [{navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "stats"}],
             scrollY: [".stats", ".perks", ".gear", ".powers", "effects", "background"],
             dragdrop: [{dragSelector: ".item-list .item", dropSelector: null}]
