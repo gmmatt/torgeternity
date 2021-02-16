@@ -35,26 +35,30 @@
   font-size: 0.9em;
 }
 
-.actor-sheet {
+.window-content .actor-sheet {
+  color: black;
   font-family: Berlin2;
   font-size: 0.9em;
 }
 
-.actor-sheet section.sheet-body {
+.window-content .actor-sheet section.sheet-body {
   max-height: 750px;
 }
 
-.actor-sheet .list-section-heading {
+.window-content .actor-sheet .list-section-heading {
+  height: 40px;
   font-size: 2em;
   text-align: center;
   background-image: url(../images/separator.png);
   background-size: cover;
   background-position: center;
   color: white;
-  overflow: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.actor-sheet .tab[data-tab].active {
+.window-content .actor-sheet .tab[data-tab].active {
   display: grid;
   grid-template-columns: repeat(8, 1fr);
   grid-template-rows: repeat(5, minmax(60px, 130px));
@@ -62,7 +66,7 @@
   justify-content: center;
 }
 
-.actor-sheet .block {
+.window-content .actor-sheet .block {
   border: solid 4px;
   -o-border-image: url(../images/separator.png);
   border-image: url(../images/separator.png);
@@ -72,23 +76,24 @@
   overflow: scroll;
 }
 
-.actor-sheet div.block:hover {
+.window-content .actor-sheet div.block:hover {
   box-shadow: 2px 2px 15px black;
 }
 
-.actor-sheet nav.tabs {
+.window-content .actor-sheet nav.tabs {
   display: flex;
   flex-direction: column;
   text-align: center;
   border: none;
   position: absolute;
   transform: rotateZ(90deg);
-  font-family: Berlin;
+  font-family: Alaska;
+  text-transform: capitalize;
   right: -60px;
   top: 60px;
 }
 
-.actor-sheet nav.tabs a.item {
+.window-content .actor-sheet nav.tabs a.item {
   min-width: 100px;
   transition: all 0.1s cubic-bezier(1, 0, 0, 1) 0.1s;
   color: white;
@@ -96,43 +101,44 @@
   background-size: contain;
 }
 
-.actor-sheet nav.tabs a.item:hover,
-.actor-sheet nav.tabs a.item:active {
-  text-transform: capitalize;
+.window-content .actor-sheet nav.tabs a.item:hover,
+.window-content .actor-sheet nav.tabs a.item:active {
+  text-transform: uppercase;
   transform: scaleX(1.1) scaleY(1.3) scaleZ(1.2);
   text-shadow: 0 0 10px #10813f;
   color: #e5ecec;
   z-index: 0;
 }
 
-.actor-sheet nav.tabs a.item.active {
+.window-content .actor-sheet nav.tabs a.item.active {
   background-image: url(../images/active_tab_back.png);
+  text-transform: uppercase;
 }
 
-.actor-sheet input[type="text"]:hover,
-.actor-sheet input[type="number"]:hover,
-.actor-sheet input[type="text"]:focus,
-.actor-sheet input[type="number"]:focus {
+.window-content .actor-sheet input[type="text"]:hover,
+.window-content .actor-sheet input[type="number"]:hover,
+.window-content .actor-sheet input[type="text"]:focus,
+.window-content .actor-sheet input[type="number"]:focus {
   box-shadow: 0 0 10px #4f523c inset;
 }
 
-.actor-sheet input[type="text"]::-moz-placeholder, .actor-sheet input[type="number"]::-moz-placeholder {
+.window-content .actor-sheet input[type="text"]::-moz-placeholder, .window-content .actor-sheet input[type="number"]::-moz-placeholder {
   color: #293131;
   text-shadow: 0px 0px 10px black;
 }
 
-.actor-sheet input[type="text"]:-ms-input-placeholder, .actor-sheet input[type="number"]:-ms-input-placeholder {
+.window-content .actor-sheet input[type="text"]:-ms-input-placeholder, .window-content .actor-sheet input[type="number"]:-ms-input-placeholder {
   color: #293131;
   text-shadow: 0px 0px 10px black;
 }
 
-.actor-sheet input[type="text"]::placeholder,
-.actor-sheet input[type="number"]::placeholder {
+.window-content .actor-sheet input[type="text"]::placeholder,
+.window-content .actor-sheet input[type="number"]::placeholder {
   color: #293131;
   text-shadow: 0px 0px 10px black;
 }
 
-.actor-sheet img {
+.window-content .actor-sheet img {
   border: none;
   flex: 0 0 60px;
   height: auto;
@@ -140,12 +146,12 @@
   max-width: 120px;
 }
 
-.actor-sheet h3 {
+.window-content .actor-sheet h3 {
   font-family: Alaska;
   text-transform: uppercase;
 }
 
-.actor-sheet h2 {
+.window-content .actor-sheet h2 {
   color: black;
   border: none;
   text-align: center;
@@ -154,7 +160,7 @@
   text-transform: uppercase;
 }
 
-.actor-sheet h1 {
+.window-content .actor-sheet h1 {
   color: black;
   border: none;
   text-align: center;
@@ -163,7 +169,7 @@
   text-transform: uppercase;
 }
 
-.actor-sheet h1 input {
+.window-content .actor-sheet h1 input {
   color: white;
   border: none;
   text-align: center;
@@ -172,13 +178,13 @@
   text-transform: uppercase;
 }
 
-.actor-sheet .dark {
+.window-content .actor-sheet .dark {
   background-color: rgba(0, 0, 0, 0.561);
   color: white;
 }
 
-.actor-sheet a.skill-roll:hover,
-.actor-sheet a.skill-roll:active {
+.window-content .actor-sheet a.skill-roll:hover,
+.window-content .actor-sheet a.skill-roll:active {
   -webkit-animation-duration: 0.3s;
   animation-duration: 0.3s;
   -webkit-animation-name: roll;
@@ -186,28 +192,28 @@
   text-shadow: 0px 0px 10px #191e58;
 }
 
-.actor-sheet .item-name {
+.window-content .actor-sheet .item-name {
   max-width: 100px;
 }
 
-.actor-sheet ol.item-list {
+.window-content .actor-sheet ol.item-list {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
-.actor-sheet ol.item-list img {
+.window-content .actor-sheet ol.item-list img {
   max-width: 100px;
   max-height: 100px;
 }
 
-.actor-sheet ol.item-list .item-control {
+.window-content .actor-sheet ol.item-list .item-control {
   float: right;
   margin: 5px;
   max-width: 30px;
 }
 
-.actor-sheet ol.item-list li {
+.window-content .actor-sheet ol.item-list li {
   margin: 5px;
   padding-bottom: 5px;
   display: flex;
@@ -216,12 +222,12 @@
   border-top: 1px solid black;
 }
 
-.actor-sheet ol.item-list li div {
+.window-content .actor-sheet ol.item-list li div {
   margin-right: 15px;
   max-width: 500px;
 }
 
-.actor-sheet .char_image {
+.window-content .actor-sheet .char_image {
   border: solid 5px;
   -o-border-image: url(../images/separator.png) 20 round;
   border-image: url(../images/separator.png) 20 round;
@@ -230,11 +236,11 @@
   transition: all 0.6s cubic-bezier(1, 0, 0, 1) 0.1s;
 }
 
-.actor-sheet .char_image:hover {
+.window-content .actor-sheet .char_image:hover {
   transform: scale(1.1);
 }
 
-.actor-sheet .sheet-header {
+.window-content .actor-sheet .sheet-header {
   grid-column: 1/9;
   grid-row: 1/2;
   display: flex;
@@ -242,150 +248,151 @@
   justify-content: space-between;
 }
 
-.actor-sheet .sheet-header img {
+.window-content .actor-sheet .sheet-header img {
   max-width: 100%;
   max-height: 90px;
 }
 
-.actor-sheet .sheet-header select {
+.window-content .actor-sheet .sheet-header select {
+  color: black;
   border: none;
   border-bottom: solid;
   max-height: 20px;
   font-size: 0.9em;
 }
 
-.actor-sheet .sheet-header select:active,
-.actor-sheet .sheet-header select:focus {
+.window-content .actor-sheet .sheet-header select:active,
+.window-content .actor-sheet .sheet-header select:focus {
   box-shadow: 0 0 5px #0062ff;
 }
 
-.actor-sheet .sheet-header div {
+.window-content .actor-sheet .sheet-header div {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   margin-right: 5px;
 }
 
-.actor-sheet .sheet-header input[type="number"] {
+.window-content .actor-sheet .sheet-header input[type="number"] {
   border: none;
   text-align: center;
-  width: 30px;
-  height: 30px;
+  width: 40px;
+  height: 40px;
   border-radius: 15px;
   background: url(../images/roundBack.webp);
   background-size: cover;
 }
 
-.actor-sheet .attributes {
+.window-content .actor-sheet .attributes {
   grid-column: 1/5;
   grid-row: 2/3;
 }
 
-.actor-sheet .others {
+.window-content .actor-sheet .others {
   grid-column: 5/7;
   grid-row: 2/3;
 }
 
-.actor-sheet .attributes ul,
-.actor-sheet .attributes ol,
-.actor-sheet .others ul,
-.actor-sheet .others ol,
-.actor-sheet .perks-details ul,
-.actor-sheet .perks-details ol,
-.actor-sheet .weapons ul,
-.actor-sheet .weapons ol {
+.window-content .actor-sheet .attributes ul,
+.window-content .actor-sheet .attributes ol,
+.window-content .actor-sheet .others ul,
+.window-content .actor-sheet .others ol,
+.window-content .actor-sheet .perks-details ul,
+.window-content .actor-sheet .perks-details ol,
+.window-content .actor-sheet .weapons ul,
+.window-content .actor-sheet .weapons ol {
   font-family: Berlin;
   display: flex;
   justify-content: space-around;
 }
 
-.actor-sheet .attributes ul li.attribut-block,
-.actor-sheet .attributes ol li.attribut-block,
-.actor-sheet .others ul li.attribut-block,
-.actor-sheet .others ol li.attribut-block,
-.actor-sheet .perks-details ul li.attribut-block,
-.actor-sheet .perks-details ol li.attribut-block,
-.actor-sheet .weapons ul li.attribut-block,
-.actor-sheet .weapons ol li.attribut-block {
+.window-content .actor-sheet .attributes ul li.attribut-block,
+.window-content .actor-sheet .attributes ol li.attribut-block,
+.window-content .actor-sheet .others ul li.attribut-block,
+.window-content .actor-sheet .others ol li.attribut-block,
+.window-content .actor-sheet .perks-details ul li.attribut-block,
+.window-content .actor-sheet .perks-details ol li.attribut-block,
+.window-content .actor-sheet .weapons ul li.attribut-block,
+.window-content .actor-sheet .weapons ol li.attribut-block {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
 }
 
-.actor-sheet .attributes ul li.attribut-block input[type="number"],
-.actor-sheet .attributes ol li.attribut-block input[type="number"],
-.actor-sheet .others ul li.attribut-block input[type="number"],
-.actor-sheet .others ol li.attribut-block input[type="number"],
-.actor-sheet .perks-details ul li.attribut-block input[type="number"],
-.actor-sheet .perks-details ol li.attribut-block input[type="number"],
-.actor-sheet .weapons ul li.attribut-block input[type="number"],
-.actor-sheet .weapons ol li.attribut-block input[type="number"] {
+.window-content .actor-sheet .attributes ul li.attribut-block input[type="number"],
+.window-content .actor-sheet .attributes ol li.attribut-block input[type="number"],
+.window-content .actor-sheet .others ul li.attribut-block input[type="number"],
+.window-content .actor-sheet .others ol li.attribut-block input[type="number"],
+.window-content .actor-sheet .perks-details ul li.attribut-block input[type="number"],
+.window-content .actor-sheet .perks-details ol li.attribut-block input[type="number"],
+.window-content .actor-sheet .weapons ul li.attribut-block input[type="number"],
+.window-content .actor-sheet .weapons ol li.attribut-block input[type="number"] {
   border: none;
   text-align: center;
-  width: 30px;
-  height: 30px;
+  width: 40px;
+  height: 40px;
   border-radius: 15px;
   background: url(../images/roundBack.webp);
   background-size: cover;
 }
 
-.actor-sheet .attributes ul li.attribut-block a,
-.actor-sheet .attributes ol li.attribut-block a,
-.actor-sheet .others ul li.attribut-block a,
-.actor-sheet .others ol li.attribut-block a,
-.actor-sheet .perks-details ul li.attribut-block a,
-.actor-sheet .perks-details ol li.attribut-block a,
-.actor-sheet .weapons ul li.attribut-block a,
-.actor-sheet .weapons ol li.attribut-block a {
+.window-content .actor-sheet .attributes ul li.attribut-block a,
+.window-content .actor-sheet .attributes ol li.attribut-block a,
+.window-content .actor-sheet .others ul li.attribut-block a,
+.window-content .actor-sheet .others ol li.attribut-block a,
+.window-content .actor-sheet .perks-details ul li.attribut-block a,
+.window-content .actor-sheet .perks-details ol li.attribut-block a,
+.window-content .actor-sheet .weapons ul li.attribut-block a,
+.window-content .actor-sheet .weapons ol li.attribut-block a {
   margin-left: auto;
   text-align: center;
 }
 
-.actor-sheet .skills {
+.window-content .actor-sheet .skills {
   grid-column: 1/5;
   grid-row: 3/6;
   overflow: scroll;
 }
 
-.actor-sheet .skills ul {
+.window-content .actor-sheet .skills ul {
   font-family: Berlin;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
 }
 
-.actor-sheet .skills ul li {
+.window-content .actor-sheet .skills ul li {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   border-bottom: 1px solid grey;
 }
 
-.actor-sheet .skills ul li input {
+.window-content .actor-sheet .skills ul li input {
   border: none;
   text-align: center;
   width: 18px;
   height: 18px;
 }
 
-.actor-sheet .skills ul li span {
+.window-content .actor-sheet .skills ul li span {
   width: 90%;
   text-align: center;
 }
 
-.actor-sheet .skills ul li a {
+.window-content .actor-sheet .skills ul li a {
   margin-left: auto;
   text-align: center;
 }
 
-.actor-sheet .perks-list {
+.window-content .actor-sheet .perks-list {
   grid-column: 5/9;
   grid-row: 4/5;
 }
 
-.actor-sheet .perks-list .item-list li,
-.actor-sheet .weapons-list .item-list li {
+.window-content .actor-sheet .perks-list .item-list li,
+.window-content .actor-sheet .weapons-list .item-list li {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -394,114 +401,129 @@
   padding: 1px;
 }
 
-.actor-sheet .perks-list .item-list li img,
-.actor-sheet .weapons-list .item-list li img {
+.window-content .actor-sheet .perks-list .item-list li img,
+.window-content .actor-sheet .weapons-list .item-list li img {
   max-width: 30px;
 }
 
-.actor-sheet .perks-details,
-.actor-sheet .gear,
-.actor-sheet .powers {
+.window-content .actor-sheet .perks-details,
+.window-content .actor-sheet .gear,
+.window-content .actor-sheet .powers {
   grid-column: 1/9;
   grid-row: 1/9;
 }
 
-.actor-sheet .perks-details ol,
-.actor-sheet .gear ol,
-.actor-sheet .powers ol {
+.window-content .actor-sheet .perks-details ol,
+.window-content .actor-sheet .gear ol,
+.window-content .actor-sheet .powers ol {
   font-family: Berlin;
   display: grid;
   grid-template-columns: repeat(3, auto);
   grid-template-rows: repeat(3, auto);
 }
 
-.actor-sheet .perks-details ol li,
-.actor-sheet .gear ol li,
-.actor-sheet .powers ol li {
+.window-content .actor-sheet .perks-details ol li,
+.window-content .actor-sheet .gear ol li,
+.window-content .actor-sheet .powers ol li {
   position: relative;
   display: flex;
   flex-direction: column;
 }
 
-.actor-sheet .perks-details ol li .item-detail,
-.actor-sheet .gear ol li .item-detail,
-.actor-sheet .powers ol li .item-detail {
+.window-content .actor-sheet .perks-details ol li .item-detail,
+.window-content .actor-sheet .gear ol li .item-detail,
+.window-content .actor-sheet .powers ol li .item-detail {
   overflow: scroll;
   position: relative;
   z-index: 1000;
   max-height: 0px;
 }
 
-.actor-sheet .perks-details ol li .item-dropdown-extras,
-.actor-sheet .gear ol li .item-dropdown-extras,
-.actor-sheet .powers ol li .item-dropdown-extras {
+.window-content .actor-sheet .perks-details ol li .item-dropdown-extras,
+.window-content .actor-sheet .gear ol li .item-dropdown-extras,
+.window-content .actor-sheet .powers ol li .item-dropdown-extras {
   font-style: italic;
   border: 1px solid grey;
   text-align: center;
   background-color: #9e96868e;
 }
 
-.actor-sheet .gear h2 {
+.window-content .actor-sheet .gear h2 {
   text-align: left;
   position: relative;
   background: #37465438;
 }
 
-.actor-sheet .background h2 {
+.window-content .actor-sheet .background .list-section-heading {
   grid-column: 1/9;
   grid-row: 1/2;
 }
 
-.actor-sheet .background .editor {
+.window-content .actor-sheet .background .editor {
   grid-column: 1/9;
   grid-row: 2/9;
 }
 
-.actor-sheet .perks {
+.window-content .actor-sheet .perks {
   grid-column: 1/9;
   grid-row: 1/9;
 }
 
-.actor-sheet .spells {
+.window-content .actor-sheet .spells {
   grid-column: 5/9;
   grid-row: 1/4;
 }
 
-.actor-sheet .miracles {
+.window-content .actor-sheet .miracles {
   grid-column: 1/5;
   grid-row: 4/9;
 }
 
-.actor-sheet .psionic {
+.window-content .actor-sheet .psionic {
   grid-column: 5/9;
   grid-row: 4/9;
 }
 
-.actor-sheet .spells {
+.window-content .actor-sheet .spells {
   grid-column: 5/9;
   grid-row: 1/4;
 }
 
-.actor-sheet .miracles {
+.window-content .actor-sheet .miracles {
   grid-column: 1/5;
   grid-row: 4/9;
 }
 
-.actor-sheet .psionic {
+.window-content .actor-sheet .psionic {
   grid-column: 5/9;
   grid-row: 4/9;
 }
 
-.defense {
+.window-content .actor-sheet .defense {
   grid-column: 7/9;
   grid-row: 2/4;
 }
 
-.defense input {
+.window-content .actor-sheet .defense .p {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.window-content .actor-sheet .defense .p span {
+  display: block;
+}
+
+.window-content .actor-sheet .defense h3.vital-box {
+  justify-content: space-between;
+  display: flex;
+}
+
+.window-content .actor-sheet .defense input {
   width: 25%;
 }
 
-.weapons-list {
+.window-content .actor-sheet .weapons-list {
   grid-column: 5/9;
   grid-row: 5/6;
 }

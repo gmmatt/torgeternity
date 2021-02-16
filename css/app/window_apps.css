@@ -1,7 +1,8 @@
 .window-app .window-content {
   font-family: Berlin;
-  background-image: url(../images/bgparch.jpg);
-  color: black;
+  background-image: url(../images/thunder.png);
+  background-size: cover;
+  color: white;
 }
 
 .window-app .window-content .rollable:hover, .window-app .window-content .rollable:focus {
@@ -10,6 +11,18 @@
   cursor: pointer;
 }
 
-.window-app .window-content form p.notes {
-  color: rgba(0, 0, 0, 0.65);
+.window-app .window-content form .notes, .window-app .window-content form .hint {
+  color: #b1afaf;
+}
+
+.window-app .window-content form button, .window-app .window-content form select {
+  color: grey;
+}
+
+.window-app .window-content form button option, .window-app .window-content form select option {
+  color: white;
+}
+
+.window-app .window-content form button:hover {
+  box-shadow: 0px 0px 5px #4970fa;
 }

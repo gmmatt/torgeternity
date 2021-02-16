@@ -25,7 +25,7 @@
 }
 
 // ----------------------------------------all globals for actors
-.torgeternity.actor .window-content {
+.torgeternity.actor .window-content  {
 
 
 
@@ -42,20 +42,24 @@
 }
 
 
-.actor-sheet {
+.window-content  .actor-sheet {
+    color: black;
 
     section.sheet-body {
         max-height: 750px;
     }
 
     .list-section-heading {
+        height: 40px;
         font-size: 2em;
         text-align: center;
         background-image: url(../images/separator.png);
         background-size: cover;
         background-position: center;
         color: white;
-        overflow: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     //defining grid container for each tab
@@ -96,7 +100,9 @@
         border: none;
         position: absolute;
         transform: rotateZ(90deg);
-        font-family: Berlin;
+        font-family: Alaska;
+        text-transform: capitalize;
+
         right: -60px;
         top: 60px;
 
@@ -111,7 +117,7 @@
 
         a.item:hover,
         a.item:active {
-            text-transform: capitalize;
+            text-transform: uppercase;
             -webkit-transform: scaleX(1.1) scaleY(1.3) scaleZ(1.2);
             transform: scaleX(1.1) scaleY(1.3) scaleZ(1.2);
             text-shadow: 0 0 10px rgb(16, 129, 63);
@@ -122,6 +128,7 @@
 
         a.item.active {
             background-image: url(../images/active_tab_back.png);
+            text-transform: uppercase;
         }
     }
 
@@ -155,8 +162,8 @@
         border: none;
         flex: 0 0 60px;
         height: auto;
-        max-height:120px;
-        max-width:120px;
+        max-height: 120px;
+        max-width: 120px;
     }
 
     h3 {
@@ -207,9 +214,11 @@
 
 
     }
-.item-name{
-    max-width:100px
-}
+
+    .item-name {
+        max-width: 100px
+    }
+
     ol.item-list {
         display: flex;
         flex-direction: column;
@@ -268,6 +277,7 @@
 
 
         select {
+            color: black;
             border: none;
             border-bottom: solid;
             max-height: 20px;
@@ -299,8 +309,8 @@
         input[type="number"] {
             border: none;
             text-align: center;
-            width: 30px;
-            height: 30px;
+            width: 40px;
+            height: 40px;
             border-radius: 15px;
             background: url(../images/roundBack.webp);
             background-size: cover
@@ -340,8 +350,8 @@
                 input[type="number"] {
                     border: none;
                     text-align: center;
-                    width: 30px;
-                    height: 30px;
+                    width: 40px;
+                    height: 40px;
                     border-radius: 15px;
                     background: url(../images/roundBack.webp);
                     background-size: cover
@@ -473,7 +483,7 @@
     }
 
     .background {
-        h2 {
+        .list-section-heading {
             grid-column: 1/9;
             grid-row: 1/2;
         }
@@ -523,18 +533,35 @@
         grid-column: 5/9;
         grid-row: 4/9;
     }
-}
 
-.defense {
-    grid-column: 7/9;
-    grid-row: 2/4;
 
-    input {
-        width: 25%
+    .defense {
+        .p {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+
+            span {
+                display: block
+            }
+        }
+
+        grid-column: 7/9;
+        grid-row: 2/4;
+
+        h3.vital-box {
+            justify-content: space-between;
+            display: flex;
+
+        }
+
+        input {
+            width: 25%
+        }
     }
-}
 
-.weapons-list {
-    grid-column: 5/9;
-    grid-row: 5/6;
+    .weapons-list {
+        grid-column: 5/9;
+        grid-row: 5/6;
+    }
 }

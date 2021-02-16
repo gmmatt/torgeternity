@@ -1,47 +1,68 @@
 //--------style global
 body {
-    font-family:Berlin;
+    font-family: Berlin;
+
+    ::-webkit-scrollbar-thumb {
+        outline: none;
+        border-radius: 3px;
+        background: #227878;
+        border: 1px solid #efedeb;
+    }
+}
+
+button:hover,
+button:focus {
+
+    box-shadow: 0 0 10px#ffa200;
+}
+
+a:hover {
+    text-shadow: 0 0 10px#ffa200;
 
 }
 
-
-
-.app {
+.app,
+.window-app {
 
     border-radius: 5px;
-    box-shadow: 0 0 15px  #122529;
+    box-shadow: 0 0 15px #122529;
     padding-bottom: 0.5em;
-   
+
     color: black;
     z-index: 30;
+
     input[type="text"]::placeholder,
     input[type="number"]::placeholder {
         color: rgba(0, 0, 0, 0.472);
         text-shadow: 0px 0px 10px black;
     }
-    option{
-        background:grey;
-    }
-    optgroup{
 
-        background:rgb(68, 66, 66);
+    option {
+        background: grey;
     }
 
-    div.form-group{
-        margin:10px;
-        padding-bottom:5px;
-        border-bottom :2px solid black;
+    optgroup {
+
+        background: rgb(68, 66, 66);
+    }
+    textarea{
+        color:white;
+    }
+    div.form-group {
+        margin: 10px;
+        padding-bottom: 5px;
+        border-bottom: 2px solid black;
 
     }
 
 }
 
-.window-app .window-header{
+.window-app .window-header {
     background: url(../images/tab-header.png);
     background-size: 100% 100%;
-    font-family:gravebolt;
-    color:white
-
+    font-family: Alaska;
+    font-weight: bold;
+    color: white
 }
 
 
@@ -51,7 +72,6 @@ body {
 #controls .control-tool,
 #controls .scene-control,
 #controls .control-tool {
-    background: url(../images/bg-sheet.png);
     border: 1px solid black;
     color: grey;
     box-shadow: none;
@@ -63,12 +83,14 @@ body {
 #controls .control-tool,
 #controls .scene-control:hover,
 #controls .control-tool:hover {
+    background:  #0e1a1a;
     color: grey;
-   background-image: url(../images/bg-sheet.png);
-   background-size:cover;
-   border: none;
-    box-shadow: 0 0 10px black;
-    .fa, .fas {
+    background-size: cover;
+    border: none;
+   
+
+    .fa,
+    .fas {
         font-weight: 600;
         font-size: 16px;
     }
@@ -76,44 +98,51 @@ body {
 }
 
 #controls .scene-control.active,
-#controls .control-tool.active
- {
-    color: black;
-    text-shadow:black 0px 0px 15px ;
-    box-shadow: none;
-    border :none;
-}
+#controls .control-tool.active,
 #controls .scene-control:hover,
-#controls .control-tool:hover{
-    box-shadow: 0 0 10px black;
-    color: #1d353a
-
+#controls .control-tool:hover {
+    color: white;
+    text-shadow: black 0px 0px 15px;
+    box-shadow: none;
+    border: none;
+    background:  #1d3838;
 }
+
 
 
 
 
 //------------SIDEBAR
 #sidebar {
-    color:white;
-    background-image:url(../images/thunder.png);
-    background-size:cover;
-    border: 1px solid #000;
-    border-top-color: rgb(0, 0, 0);
-    border-top-style: solid;
-    border-top-width: 1px;
-    border-right-color: rgb(0, 0, 0);
-    border-right-style: solid;
-    border-right-width: 1px;
-    border-bottom-color: rgb(0, 0, 0);
-    border-bottom-style: solid;
-    border-bottom-width: 1px;
-    border-left-color: rgb(0, 0, 0);
-    border-left-style: solid;
-    border-left-width: 1px;
-    border-image-source: initial;
-    border-image-slice: initial;
-    border-image-width: initial;
-    border-image-outset: initial;
-    border-image-repeat: initial;
+    color: white;
+    background-image: url(../images/thunder.png);
+    background-size: cover;
+
+    #sidebar-tabs {
+        flex: 0 0 32px;
+        box-sizing: border-box;
+        margin: 0 0 5px;
+        border-bottom: 1px solid #2c6d6d;
+        box-shadow: 0 0 10px #227878;
+    }
+
+    #sidebar-tabs>.item.active {
+        color: #FFF;
+        border: 1px solid #154949;
+        border-bottom: none;
+        box-shadow: 0 0 6px inset #154949;
+    }
+
+    .tabs .item.active {
+        text-shadow: 0 0 10px #154949;
+    }
+
+    a:hover {
+        text-shadow: 0 0 10px#001aff;
+    }
+
+}
+
+.dialog-button {
+    color: rgb(180, 180, 180);
 }
