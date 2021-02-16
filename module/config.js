@@ -15,7 +15,7 @@ torgeternity.cosmTypes = {
     nileEmpire: "torgeternity.cosms.nileEmpire",
     aysle: "torgeternity.cosms.aysle",
     cyberpapacy: "torgeternity.cosms.cyberpapacy",
-    tharkhold: "torgeternity.cosms.tharkhold",
+    tharkold: "torgeternity.cosms.tharkold",
     panPacifica: "torgeternity.cosms.panPacifica",
     orrorsh: "torgeternity.cosms.orrorsh"
 }
@@ -80,7 +80,9 @@ torgeternity.races = {
     human: "torgeternity.races.human",
     dwarf: "torgeternity.races.dwarf",
     edeinos: "torgeternity.races.edeinos",
-    elf: "torgeternity.races.elf"
+    elf: "torgeternity.races.elf",
+    aspirants: "torgeternity.races.aspirants",
+    theRace: "torgeternity.races.theRace"
 }
 
 torgeternity.skills = {
@@ -198,3 +200,7 @@ torgeternity.statusEffects = [
 
 ]
 
+torgeternity.yesNo = {
+    true: "torgeternity.yesNo.true",
+    false: "torgeternity.yesNo.false"
+}

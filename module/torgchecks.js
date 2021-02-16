@@ -135,7 +135,7 @@ export function weaponAttack ({
       test.actorType = "threat"
    };
    
-      // Calculate damage
+   // Calculate damage
    if (test.weaponDamageType === "flat") {
       test.damage = test.weaponDamage
    } else if (test.weaponDamageType === "strengthPlus") {
@@ -186,6 +186,82 @@ export function weaponAttack ({
    renderSkillChat(test);
 
 }
+
+
+export function powerRoll({
+   testType = null,
+   skillName = null,
+   skillBaseAttribute = null,
+   skillAdds = null,
+   skillValue= null,
+   strengthValue = null,
+   powerName = null,
+   powerAttack = null,
+   powerDamage = null,
+   actor = null,
+   item = null,
+   actorPic = null } = {}) {
+   var test = {
+      actor: actor.data._id,
+      item: item.data._id,
+      actorPic: actorPic,
+      actorType: "stormknight",
+      skillName: skillName,
+      skillBaseAttribute: skillBaseAttribute,
+      skillAdds: skillAdds,
+      skillValue: skillValue,
+      strengthValue: strengthValue,
+      testType: "power",
+      powerName: powerName,
+      powerAttack: powerAttack,
+      damage: powerDamage,
+      possibilityTotal: 0,
+      upTotal: 0,
+      heroTotal: 0,
+      dramaTotal: 0,
+      cardsPlayed: 0,
+      sizeModifier: 0,
+      vulnerableModifier: 0
+   };
+   
+   // What kind of actor is this?
+   if (actor.data.type === "threat") {
+      test.actorType = "threat"
+   };
+
+   // Roll dice as skilled (assumes character would not have power unless skilled)
+   var diceroll = new Roll('1d20x10x20').roll();
+   test.unskilledLabel = "display:none"
+   diceroll.toMessage();
+
+   // Get Bonus and Roll Result
+   test.rollTotal = diceroll.total;
+
+   // Get modifiers; only modify based on target if this is an attack
+   test.woundModifier = parseInt(-(actor.data.data.wounds.value))
+
+   if (actor.data.data.stymiedModifier === parseInt(-2)) {
+      test.stymiedModifier = -2
+   } else if (actor.data.data.stymiedModifier === -4) {
+      test.stymiedModifier = -4
+   }
+
+   if (test.powerAttack === "true") {
+      if (Array.from(game.user.targets).length > 0) {
+         var target = Array.from(game.user.targets)[0];
+         if (target.actor.data.data.details.sizeBonus) {
+            test.sizeModifier = target.actor.data.data.details.sizeBonus;
+         };
+         test.vulnerableModifier = target.actor.data.data.vulnerableModifier
+      }
+   }
+   
+   // Set Chat Title
+   test.chatTitle = test.powerName;
+   
+   renderSkillChat(test);
+   
+   }
 
 
 export function renderSkillChat(test) {
@@ -266,6 +342,14 @@ export function renderSkillChat(test) {
       test.damageLabel = "display:none"
    };
 
+   // Determine whether to display damage for power roll
+   if (test.testType === "power") {
+      if (test.powerAttack === "true") {
+         test.damageLabel = "display:"
+      } else (
+         test.damageLabel = "display:none"
+      )
+   };
 
    // Remind Player to Check for Disconnect?
    if (test.rollTotal <= 4) {
@@ -274,12 +358,19 @@ export function renderSkillChat(test) {
       test.disconnectLabel = "display:none"
    }
    
-   // Label as Skill vs Attribute Test
+   // Label as Skill vs Attribute Test and turn on BD option if needed
    if (test.testType === "skill") {
       test.typeLabel = "Skill",
       test.bdStyle = "display:none"
    } else if (test.testType === "attack") {
       test.typeLabel = "Skill"
+   } else if (test.testType === "power") {
+      test.typeLabel = "Skill";
+      if (test.powerAttack === "true") {
+         test.bdStyle = "display:"
+      } else {
+         test.bdStyle = "display:none"
+      }
    } else {
       test.typeLabel = "Attribute"
       test.bdStyle = "display:none"
