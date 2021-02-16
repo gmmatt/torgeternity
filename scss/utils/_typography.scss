@@ -6,6 +6,13 @@
 ;
 
 @font-face {
+    font-family: "Alaka";
+    src: url("../fonts/alaskaextrabold.ttf"),
+}
+
+;
+
+@font-face {
     font-family: "Berlin";
     src: url("../fonts/Berlin Email 2.ttf"),
 }
@@ -40,4 +47,4 @@
 
 $font-primary:'Palatino';
 $font-secondary:'Friz';
-$font-bolt: 'graveBolt';
+$font-bolt: 'Alaska';

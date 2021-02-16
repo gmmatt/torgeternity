@@ -5,6 +5,11 @@
 }
 
 @font-face {
+  font-family: "Alaka";
+  src: url("../fonts/alaskaextrabold.ttf");
+}
+
+@font-face {
   font-family: "Berlin";
   src: url("../fonts/Berlin Email 2.ttf");
 }
@@ -393,14 +398,14 @@ body {
 }
 
 .actor-sheet h3 {
-  font-family: graveBolt;
+  font-family: Alaska;
 }
 
 .actor-sheet h2 {
   color: black;
   border: none;
   text-align: center;
-  font-family: graveBolt;
+  font-family: Alaska;
   text-shadow: 0px 0px 15px black;
 }
 
@@ -408,7 +413,7 @@ body {
   color: black;
   border: none;
   text-align: center;
-  font-family: graveBolt;
+  font-family: Alaska;
   text-shadow: 0px 0px 15px black;
 }
 
@@ -416,7 +421,7 @@ body {
   color: white;
   border: none;
   text-align: center;
-  font-family: graveBolt;
+  font-family: Alaska;
   text-shadow: 0px 0px 15px black;
 }
 
