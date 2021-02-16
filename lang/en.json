@@ -262,7 +262,8 @@
             "spell": "Spell",
             "miracle": "Miracle",
             "psionicpower": "Psionic Power",
-            "specialability": "Special Ability"
+            "specialability": "Special Ability",
+            "other": "General Gear"
         },
         "attackTypes": {
             "unarmedCombat": "Unarmed Combat",
