@@ -299,16 +299,16 @@ body {
   font-size: 0.9em;
 }
 
-.actor-sheet.editable {
+.actor-sheet {
   font-family: Berlin2;
   font-size: 0.9em;
 }
 
-.actor-sheet.editable section.sheet-body {
+.actor-sheet section.sheet-body {
   max-height: 750px;
 }
 
-.actor-sheet.editable .list-section-heading {
+.actor-sheet .list-section-heading {
   font-size: 2em;
   text-align: center;
   background-image: url(../images/separator.png);
@@ -318,7 +318,7 @@ body {
   overflow: auto;
 }
 
-.actor-sheet.editable .tab[data-tab].active {
+.actor-sheet .tab[data-tab].active {
   display: grid;
   grid-template-columns: repeat(8, 1fr);
   grid-template-rows: repeat(5, minmax(60px, 130px));
@@ -326,7 +326,7 @@ body {
   justify-content: center;
 }
 
-.actor-sheet.editable .block {
+.actor-sheet .block {
   border: solid 4px;
   -o-border-image: url(../images/separator.png);
   border-image: url(../images/separator.png);
@@ -336,11 +336,11 @@ body {
   overflow: scroll;
 }
 
-.actor-sheet.editable div.block:hover {
+.actor-sheet div.block:hover {
   box-shadow: 2px 2px 15px black;
 }
 
-.actor-sheet.editable nav.tabs {
+.actor-sheet nav.tabs {
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -352,7 +352,7 @@ body {
   top: 60px;
 }
 
-.actor-sheet.editable nav.tabs a.item {
+.actor-sheet nav.tabs a.item {
   min-width: 100px;
   transition: all 0.1s cubic-bezier(1, 0, 0, 1) 0.1s;
   color: white;
@@ -360,8 +360,8 @@ body {
   background-size: contain;
 }
 
-.actor-sheet.editable nav.tabs a.item:hover,
-.actor-sheet.editable nav.tabs a.item:active {
+.actor-sheet nav.tabs a.item:hover,
+.actor-sheet nav.tabs a.item:active {
   text-transform: capitalize;
   transform: scaleX(1.1) scaleY(1.3) scaleZ(1.2);
   text-shadow: 0 0 10px #10813f;
@@ -369,34 +369,34 @@ body {
   z-index: 0;
 }
 
-.actor-sheet.editable nav.tabs a.item.active {
+.actor-sheet nav.tabs a.item.active {
   background-image: url(../images/active_tab_back.png);
 }
 
-.actor-sheet.editable input[type="text"]:hover,
-.actor-sheet.editable input[type="number"]:hover,
-.actor-sheet.editable input[type="text"]:focus,
-.actor-sheet.editable input[type="number"]:focus {
+.actor-sheet input[type="text"]:hover,
+.actor-sheet input[type="number"]:hover,
+.actor-sheet input[type="text"]:focus,
+.actor-sheet input[type="number"]:focus {
   box-shadow: 0 0 10px #4f523c inset;
 }
 
-.actor-sheet.editable input[type="text"]::-moz-placeholder, .actor-sheet.editable input[type="number"]::-moz-placeholder {
+.actor-sheet input[type="text"]::-moz-placeholder, .actor-sheet input[type="number"]::-moz-placeholder {
   color: #293131;
   text-shadow: 0px 0px 10px black;
 }
 
-.actor-sheet.editable input[type="text"]:-ms-input-placeholder, .actor-sheet.editable input[type="number"]:-ms-input-placeholder {
+.actor-sheet input[type="text"]:-ms-input-placeholder, .actor-sheet input[type="number"]:-ms-input-placeholder {
   color: #293131;
   text-shadow: 0px 0px 10px black;
 }
 
-.actor-sheet.editable input[type="text"]::placeholder,
-.actor-sheet.editable input[type="number"]::placeholder {
+.actor-sheet input[type="text"]::placeholder,
+.actor-sheet input[type="number"]::placeholder {
   color: #293131;
   text-shadow: 0px 0px 10px black;
 }
 
-.actor-sheet.editable img {
+.actor-sheet img {
   border: none;
   flex: 0 0 60px;
   height: auto;
@@ -404,12 +404,12 @@ body {
   max-width: 120px;
 }
 
-.actor-sheet.editable h3 {
+.actor-sheet h3 {
   font-family: Alaska;
   text-transform: uppercase;
 }
 
-.actor-sheet.editable h2 {
+.actor-sheet h2 {
   color: black;
   border: none;
   text-align: center;
@@ -418,7 +418,7 @@ body {
   text-transform: uppercase;
 }
 
-.actor-sheet.editable h1 {
+.actor-sheet h1 {
   color: black;
   border: none;
   text-align: center;
@@ -427,7 +427,7 @@ body {
   text-transform: uppercase;
 }
 
-.actor-sheet.editable h1 input {
+.actor-sheet h1 input {
   color: white;
   border: none;
   text-align: center;
@@ -436,13 +436,13 @@ body {
   text-transform: uppercase;
 }
 
-.actor-sheet.editable .dark {
+.actor-sheet .dark {
   background-color: rgba(0, 0, 0, 0.561);
   color: white;
 }
 
-.actor-sheet.editable a.skill-roll:hover,
-.actor-sheet.editable a.skill-roll:active {
+.actor-sheet a.skill-roll:hover,
+.actor-sheet a.skill-roll:active {
   -webkit-animation-duration: 0.3s;
   animation-duration: 0.3s;
   -webkit-animation-name: roll;
@@ -450,28 +450,28 @@ body {
   text-shadow: 0px 0px 10px #191e58;
 }
 
-.actor-sheet.editable .item-name {
+.actor-sheet .item-name {
   max-width: 100px;
 }
 
-.actor-sheet.editable ol.item-list {
+.actor-sheet ol.item-list {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
-.actor-sheet.editable ol.item-list img {
+.actor-sheet ol.item-list img {
   max-width: 100px;
   max-height: 100px;
 }
 
-.actor-sheet.editable ol.item-list .item-control {
+.actor-sheet ol.item-list .item-control {
   float: right;
   margin: 5px;
   max-width: 30px;
 }
 
-.actor-sheet.editable ol.item-list li {
+.actor-sheet ol.item-list li {
   margin: 5px;
   padding-bottom: 5px;
   display: flex;
@@ -480,12 +480,12 @@ body {
   border-top: 1px solid black;
 }
 
-.actor-sheet.editable ol.item-list li div {
+.actor-sheet ol.item-list li div {
   margin-right: 15px;
   max-width: 500px;
 }
 
-.actor-sheet.editable .char_image {
+.actor-sheet .char_image {
   border: solid 5px;
   -o-border-image: url(../images/separator.png) 20 round;
   border-image: url(../images/separator.png) 20 round;
@@ -494,11 +494,11 @@ body {
   transition: all 0.6s cubic-bezier(1, 0, 0, 1) 0.1s;
 }
 
-.actor-sheet.editable .char_image:hover {
+.actor-sheet .char_image:hover {
   transform: scale(1.1);
 }
 
-.actor-sheet.editable .sheet-header {
+.actor-sheet .sheet-header {
   grid-column: 1/9;
   grid-row: 1/2;
   display: flex;
@@ -506,31 +506,31 @@ body {
   justify-content: space-between;
 }
 
-.actor-sheet.editable .sheet-header img {
+.actor-sheet .sheet-header img {
   max-width: 100%;
   max-height: 90px;
 }
 
-.actor-sheet.editable .sheet-header select {
+.actor-sheet .sheet-header select {
   border: none;
   border-bottom: solid;
   max-height: 20px;
   font-size: 0.9em;
 }
 
-.actor-sheet.editable .sheet-header select:active,
-.actor-sheet.editable .sheet-header select:focus {
+.actor-sheet .sheet-header select:active,
+.actor-sheet .sheet-header select:focus {
   box-shadow: 0 0 5px #0062ff;
 }
 
-.actor-sheet.editable .sheet-header div {
+.actor-sheet .sheet-header div {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   margin-right: 5px;
 }
 
-.actor-sheet.editable .sheet-header input[type="number"] {
+.actor-sheet .sheet-header input[type="number"] {
   border: none;
   text-align: center;
   width: 30px;
@@ -540,51 +540,51 @@ body {
   background-size: cover;
 }
 
-.actor-sheet.editable .attributes {
+.actor-sheet .attributes {
   grid-column: 1/5;
   grid-row: 2/3;
 }
 
-.actor-sheet.editable .others {
+.actor-sheet .others {
   grid-column: 5/7;
   grid-row: 2/3;
 }
 
-.actor-sheet.editable .attributes ul,
-.actor-sheet.editable .attributes ol,
-.actor-sheet.editable .others ul,
-.actor-sheet.editable .others ol,
-.actor-sheet.editable .perks-details ul,
-.actor-sheet.editable .perks-details ol,
-.actor-sheet.editable .weapons ul,
-.actor-sheet.editable .weapons ol {
+.actor-sheet .attributes ul,
+.actor-sheet .attributes ol,
+.actor-sheet .others ul,
+.actor-sheet .others ol,
+.actor-sheet .perks-details ul,
+.actor-sheet .perks-details ol,
+.actor-sheet .weapons ul,
+.actor-sheet .weapons ol {
   font-family: Berlin;
   display: flex;
   justify-content: space-around;
 }
 
-.actor-sheet.editable .attributes ul li.attribut-block,
-.actor-sheet.editable .attributes ol li.attribut-block,
-.actor-sheet.editable .others ul li.attribut-block,
-.actor-sheet.editable .others ol li.attribut-block,
-.actor-sheet.editable .perks-details ul li.attribut-block,
-.actor-sheet.editable .perks-details ol li.attribut-block,
-.actor-sheet.editable .weapons ul li.attribut-block,
-.actor-sheet.editable .weapons ol li.attribut-block {
+.actor-sheet .attributes ul li.attribut-block,
+.actor-sheet .attributes ol li.attribut-block,
+.actor-sheet .others ul li.attribut-block,
+.actor-sheet .others ol li.attribut-block,
+.actor-sheet .perks-details ul li.attribut-block,
+.actor-sheet .perks-details ol li.attribut-block,
+.actor-sheet .weapons ul li.attribut-block,
+.actor-sheet .weapons ol li.attribut-block {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
 }
 
-.actor-sheet.editable .attributes ul li.attribut-block input[type="number"],
-.actor-sheet.editable .attributes ol li.attribut-block input[type="number"],
-.actor-sheet.editable .others ul li.attribut-block input[type="number"],
-.actor-sheet.editable .others ol li.attribut-block input[type="number"],
-.actor-sheet.editable .perks-details ul li.attribut-block input[type="number"],
-.actor-sheet.editable .perks-details ol li.attribut-block input[type="number"],
-.actor-sheet.editable .weapons ul li.attribut-block input[type="number"],
-.actor-sheet.editable .weapons ol li.attribut-block input[type="number"] {
+.actor-sheet .attributes ul li.attribut-block input[type="number"],
+.actor-sheet .attributes ol li.attribut-block input[type="number"],
+.actor-sheet .others ul li.attribut-block input[type="number"],
+.actor-sheet .others ol li.attribut-block input[type="number"],
+.actor-sheet .perks-details ul li.attribut-block input[type="number"],
+.actor-sheet .perks-details ol li.attribut-block input[type="number"],
+.actor-sheet .weapons ul li.attribut-block input[type="number"],
+.actor-sheet .weapons ol li.attribut-block input[type="number"] {
   border: none;
   text-align: center;
   width: 30px;
@@ -594,62 +594,62 @@ body {
   background-size: cover;
 }
 
-.actor-sheet.editable .attributes ul li.attribut-block a,
-.actor-sheet.editable .attributes ol li.attribut-block a,
-.actor-sheet.editable .others ul li.attribut-block a,
-.actor-sheet.editable .others ol li.attribut-block a,
-.actor-sheet.editable .perks-details ul li.attribut-block a,
-.actor-sheet.editable .perks-details ol li.attribut-block a,
-.actor-sheet.editable .weapons ul li.attribut-block a,
-.actor-sheet.editable .weapons ol li.attribut-block a {
+.actor-sheet .attributes ul li.attribut-block a,
+.actor-sheet .attributes ol li.attribut-block a,
+.actor-sheet .others ul li.attribut-block a,
+.actor-sheet .others ol li.attribut-block a,
+.actor-sheet .perks-details ul li.attribut-block a,
+.actor-sheet .perks-details ol li.attribut-block a,
+.actor-sheet .weapons ul li.attribut-block a,
+.actor-sheet .weapons ol li.attribut-block a {
   margin-left: auto;
   text-align: center;
 }
 
-.actor-sheet.editable .skills {
+.actor-sheet .skills {
   grid-column: 1/5;
   grid-row: 3/6;
   overflow: scroll;
 }
 
-.actor-sheet.editable .skills ul {
+.actor-sheet .skills ul {
   font-family: Berlin;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
 }
 
-.actor-sheet.editable .skills ul li {
+.actor-sheet .skills ul li {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   border-bottom: 1px solid grey;
 }
 
-.actor-sheet.editable .skills ul li input {
+.actor-sheet .skills ul li input {
   border: none;
   text-align: center;
   width: 18px;
   height: 18px;
 }
 
-.actor-sheet.editable .skills ul li span {
+.actor-sheet .skills ul li span {
   width: 90%;
   text-align: center;
 }
 
-.actor-sheet.editable .skills ul li a {
+.actor-sheet .skills ul li a {
   margin-left: auto;
   text-align: center;
 }
 
-.actor-sheet.editable .perks-list {
+.actor-sheet .perks-list {
   grid-column: 5/9;
   grid-row: 4/5;
 }
 
-.actor-sheet.editable .perks-list .item-list li,
-.actor-sheet.editable .weapons-list .item-list li {
+.actor-sheet .perks-list .item-list li,
+.actor-sheet .weapons-list .item-list li {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -658,100 +658,100 @@ body {
   padding: 1px;
 }
 
-.actor-sheet.editable .perks-list .item-list li img,
-.actor-sheet.editable .weapons-list .item-list li img {
+.actor-sheet .perks-list .item-list li img,
+.actor-sheet .weapons-list .item-list li img {
   max-width: 30px;
 }
 
-.actor-sheet.editable .perks-details,
-.actor-sheet.editable .gear,
-.actor-sheet.editable .powers {
+.actor-sheet .perks-details,
+.actor-sheet .gear,
+.actor-sheet .powers {
   grid-column: 1/9;
   grid-row: 1/9;
 }
 
-.actor-sheet.editable .perks-details ol,
-.actor-sheet.editable .gear ol,
-.actor-sheet.editable .powers ol {
+.actor-sheet .perks-details ol,
+.actor-sheet .gear ol,
+.actor-sheet .powers ol {
   font-family: Berlin;
   display: grid;
   grid-template-columns: repeat(3, auto);
   grid-template-rows: repeat(3, auto);
 }
 
-.actor-sheet.editable .perks-details ol li,
-.actor-sheet.editable .gear ol li,
-.actor-sheet.editable .powers ol li {
+.actor-sheet .perks-details ol li,
+.actor-sheet .gear ol li,
+.actor-sheet .powers ol li {
   position: relative;
   display: flex;
   flex-direction: column;
 }
 
-.actor-sheet.editable .perks-details ol li .item-detail,
-.actor-sheet.editable .gear ol li .item-detail,
-.actor-sheet.editable .powers ol li .item-detail {
+.actor-sheet .perks-details ol li .item-detail,
+.actor-sheet .gear ol li .item-detail,
+.actor-sheet .powers ol li .item-detail {
   overflow: scroll;
   position: relative;
   z-index: 1000;
   max-height: 0px;
 }
 
-.actor-sheet.editable .perks-details ol li .item-dropdown-extras,
-.actor-sheet.editable .gear ol li .item-dropdown-extras,
-.actor-sheet.editable .powers ol li .item-dropdown-extras {
+.actor-sheet .perks-details ol li .item-dropdown-extras,
+.actor-sheet .gear ol li .item-dropdown-extras,
+.actor-sheet .powers ol li .item-dropdown-extras {
   font-style: italic;
   border: 1px solid grey;
   text-align: center;
   background-color: #9e96868e;
 }
 
-.actor-sheet.editable .gear h2 {
+.actor-sheet .gear h2 {
   text-align: left;
   position: relative;
   background: #37465438;
 }
 
-.actor-sheet.editable .background h2 {
+.actor-sheet .background h2 {
   grid-column: 1/9;
   grid-row: 1/2;
 }
 
-.actor-sheet.editable .background .editor {
+.actor-sheet .background .editor {
   grid-column: 1/9;
   grid-row: 2/9;
 }
 
-.actor-sheet.editable .perks {
+.actor-sheet .perks {
   grid-column: 1/9;
   grid-row: 1/9;
 }
 
-.actor-sheet.editable .spells {
+.actor-sheet .spells {
   grid-column: 5/9;
   grid-row: 1/4;
 }
 
-.actor-sheet.editable .miracles {
+.actor-sheet .miracles {
   grid-column: 1/5;
   grid-row: 4/9;
 }
 
-.actor-sheet.editable .psionic {
+.actor-sheet .psionic {
   grid-column: 5/9;
   grid-row: 4/9;
 }
 
-.actor-sheet.editable .spells {
+.actor-sheet .spells {
   grid-column: 5/9;
   grid-row: 1/4;
 }
 
-.actor-sheet.editable .miracles {
+.actor-sheet .miracles {
   grid-column: 1/5;
   grid-row: 4/9;
 }
 
-.actor-sheet.editable .psionic {
+.actor-sheet .psionic {
   grid-column: 5/9;
   grid-row: 4/9;
 }
