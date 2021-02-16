@@ -83,26 +83,17 @@
 
     //---------tabs selectors
     nav.tabs {
-        /*
-            display: flex;
-            flex-direction: column;
-            position: relative;
-            text-align: center;
 
-            border: none;
-            position: absolute;
-            bottom: 0.2%;
-            left: 50%;
-*/
         display: flex;
         flex-direction: column;
         text-align: center;
         border: none;
         position: absolute;
-        transform: rotateZ(-90deg);
+        transform: rotateZ(90deg);
         font-family: Berlin;
-        left: -60px;
-        bottom: 30px;
+        right: -60px;
+        top: 60px;
+    
 
     }
 

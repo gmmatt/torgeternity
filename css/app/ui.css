@@ -96,7 +96,7 @@ body {
 #sidebar {
   color: white;
   background-image: url(../images/thunder.png);
-  background-size: contain;
+  background-size: cover;
   border: 1px solid #000;
   border-top-color: black;
   border-top-style: solid;
