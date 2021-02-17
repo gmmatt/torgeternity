@@ -5,7 +5,8 @@
 <div>
     
     <p class="item-data-label">
-        Race
+        {{localize "torgeternity.sheetLabels.race"}}
+
 
         <select name="data.details.race" class="input-box">
             {{#select data.details.race}}
@@ -16,7 +17,7 @@
         </select>
     </p>
     <p>
-        <span>Cosm</span>
+        <span>{{localize "torgeternity.gear.cosm"}}</span>
         <select name="data.other.cosm" class="input-box">
             {{#select data.other.cosm}}
             {{#each config.cosmTypes as |name type|}}
@@ -52,15 +53,15 @@
 </div>
 <div>
        <p class="item-data-label">
-        Clearance : {{data.details.clearance}}
+        {{localize "torgeternity.sheetLabels.clearance"}} : {{localize (concatClearanceLevel data.details.clearance)}}
     </p>
     <p>
-        <span class="main-label">XP Unspent</span>
+        <span class="main-label">{{localize "torgeternity.sheetLabels.unspent"}}</span>
         <input name="data.xp.unspent" type="number" value="{{data.xp.unspent}}" data=dtype="Number" />
 
     </p>
     <p>
-        <span class="main-label">XP Earned</span>
+        <span class="main-label">{{localize "torgeternity.sheetLabels.xp"}}</span>
         <input name="data.xp.earned" type="number" value="{{data.xp.earned}}" data=dtype="Number" />
 
     </p>

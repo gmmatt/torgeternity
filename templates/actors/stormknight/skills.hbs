@@ -1,11 +1,11 @@
 <div class="skills">
-    <h2 class="skill-edit-toggle" title="Toggle Skill Display"><a>SKILLS</a> </h2>
+    <h2 class="skill-edit-toggle" title="Toggle Skill Display"><a>{{localize "torgeternity.sheetLabels.skills"}}</a> </h2>
     <ul>
         <li class="dark">
-            <span>Skill</span>
-            <span>Attribute</span>
-            <span>Adds</span>
-            <span>Total</span>
+            <span></span>
+            <span>{{localize "torgeternity.sheetLabels.attribute"}}</span>
+            <span>{{localize "torgeternity.sheetLabels.adds"}}</span>
+            <span>{{localize "torgeternity.sheetLabels.total"}}</span>
         </li>
         {{#if data.editstate}}
         {{#each data.skills as |content name|}}
