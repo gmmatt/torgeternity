@@ -6,8 +6,6 @@
 }
 
 .window-app .window-content .editor {
-  width: 400px;
-  height: 400px;
   background: url(../images/bckg-hex.png);
   background-size: 110% 110%;
   padding: 20px;
