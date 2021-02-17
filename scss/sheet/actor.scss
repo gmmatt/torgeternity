@@ -25,7 +25,7 @@
 }
 
 // ----------------------------------------all globals for actors
-.torgeternity.actor .window-content  {
+.torgeternity.actor .window-content {
 
 
 
@@ -42,7 +42,7 @@
 }
 
 
-.window-content  .actor-sheet {
+.window-content .actor-sheet {
     color: black;
 
     section.sheet-body {
@@ -105,7 +105,7 @@
         right: -60px;
         top: 60px;
 
-    a.item {
+        a.item {
 
             min-width: 100px;
             transition: all 0.1s cubic-bezier(1, 0, 0, 1) 0.1s;
@@ -215,7 +215,9 @@
     }
 
     .item-name {
-        max-width: 100px
+        max-width: 40px;
+        padding-top: 20%;
+        margin-right: 10px;
     }
 
     ol.item-list {
@@ -224,14 +226,13 @@
         justify-content: space-between;
 
         img {
-            max-width: 100px;
-            max-height: 100px;
+           max-width:60px;
+           max-height: 60px;
         }
 
-        .item-control {
-            float: right;
-            margin: 5px;
-            max-width: 30px;
+        .item-controls {
+            margin: 8px;
+            max-width: 10px;
         }
 
         li {
@@ -254,7 +255,7 @@
     //---------------character image
     .char_image {
         border: solid 5px;
-        border-image: url(../images/separator.png) 20 round;
+        border-image: url(../images/separator.png) 100 round;
         grid-column: 5/7;
         grid-row: 3/4;
         transition: all 0.6s cubic-bezier(1, 0, 0, 1) 0.1s;
@@ -321,7 +322,7 @@
         grid-column: 1/5;
         grid-row: 2/3;
     }
-       
+
 
     .others {
         grid-column: 5/7;
@@ -330,7 +331,6 @@
 
     .attributes,
     .others,
-    .perks-details,
     .weapons {
 
 
@@ -426,9 +426,13 @@
                 border-top: 1px solid;
                 margin: 1px;
                 padding: 1px;
-
+                .item-name{
+                    padding-top:5px;
+                    max-width: 150px;
+                }
                 img {
                     max-width: 30px;
+                    max-height: 30px;
                 }
 
             }
@@ -441,17 +445,26 @@
         grid-column: 1/9;
         grid-row: 1/9;
 
+        h2 {
+            text-align: left;
+            background: #37465438;
+        }
+
         ol {
             font-family: Berlin;
             display: grid;
             grid-template-columns: repeat(3, auto);
             grid-template-rows: repeat(3, auto);
-
+            grid-gap:3px;
 
             li {
                 position: relative;
                 display: flex;
                 flex-direction: column;
+
+                img {
+                    margin: 5px
+                }
 
                 .item-detail {
                     overflow: scroll;
@@ -472,14 +485,7 @@
         }
     }
 
-    .gear {
-        h2 {
-            text-align: left;
-            position: relative;
 
-            background: #37465438;
-        }
-    }
 
     .background {
         .list-section-heading {

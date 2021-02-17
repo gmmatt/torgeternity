@@ -1,12 +1,12 @@
-<h2>Perks</h2>
+<div class="list-section-heading">Perks</div>
 <ol class="item-list">
     {{#each perk as |item id|}}
 
-    
-    <li class="item" data-item-id="{{item._id}}">
+
+    <li class="item block" data-item-id="{{item._id}}">
         <div class="item-row flexrow">
             <img src="{{item.img}}" title="{{item.name}}" />
-            <h3 class="item-name">{{item.name}}</h3>
+            <a class="item-name">{{item.name}}</a>
             <div class="item-controls">
                 <a class="item-control item-tochat" title="Send to Chat"><i class="fas fa-comment"></i></a>
                 <a class="item-control item-edit" title="Edit Item"><i class="fas fa-edit"></i></a>
@@ -14,13 +14,10 @@
             </div>
         </div>
 
-
-        <div class="item-dropdown-description">
-            {{{item.data.description}}}
-        </div>
-
-
         <div class="item-detail">
+            <div class="item-dropdown-description">
+                {{{item.data.description}}}
+            </div>
             <div class="item-dropdown-extras">
                 {{item.data.category}}
             </div>
@@ -31,7 +28,9 @@
                 {{item.data.timestaken}}x
             </div>
         </div>
-        </div>
+
     </li>
     {{/each}}
 </ol>
+
+    

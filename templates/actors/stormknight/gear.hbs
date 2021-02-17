@@ -1,4 +1,3 @@
-
 <div class="list-section-heading">
     {{localize "torgeternity.sheetLabels.weapons"}}
 </div>
@@ -39,7 +38,7 @@
 
 <h2>Missile Weapon</h2>
 <ol class="item-list">
-    
+
     {{#each missileweapon as |item id|}}
     <li class="item block" data-item-id="{{item._id}}">
         <div class="item-row flexrow">
@@ -78,9 +77,9 @@
     </li>
     {{/each}}
 </ol>
- <h2>Firearm</h2>
+<h2>Firearm</h2>
 <ol class="item-list">
-   
+
     {{#each firearm as |item id|}}
     <li class="item block" data-item-id="{{item._id}}">
         <div class="item-row flexrow">
@@ -121,7 +120,7 @@
 </ol>
 <h2>Heavy Weapon/Explosive</h2>
 <ol class="item-list">
-    
+
     {{#each heavyweapon as |item id|}}
     <li class="item block" data-item-id="{{item._id}}">
         <div class="item-row flexrow">
@@ -167,7 +166,7 @@
 </div>
 <h2>armor</h2>
 <ol class="item-list">
-    
+
     {{#each armor as |item id|}}
     <li class="item block" data-item-id="{{item._id}}">
         <div class="item-row flexrow">
@@ -207,7 +206,7 @@
 </ol>
 <h2>shield</h2>
 <ol class="item-list">
-    
+
     {{#each shield as |item id|}}
     <li class="item block" data-item-id="{{item._id}}">
         <div class="item-row flexrow">
@@ -245,11 +244,11 @@
 
 
 <div class="list-section-heading">
-    {{localize  "torgeternity.sheetLabels.generalGear"}}
-</div> 
+    {{localize "torgeternity.sheetLabels.generalGear"}}
+</div>
 <h2>gear</h2>
 <ol class="item-list">
-   
+
     {{#each gear as |item id|}}
     <li class="item block" data-item-id="{{item._id}}">
         <div class="item-row flexrow">
@@ -264,24 +263,24 @@
         <div class="item-detail">
             <div class="item-dropdown-description">
                 {{{item.data.description}}}
-                <p></p>
-                <div class="item-dropdown-extras">
-                    {{item.data.cosm}}
-                </div>
-                <div class="item-dropdown-extras">
-                    {{item.data.price}} ({{item.data.value}})
-                </div>
-                <div class="item-dropdown-extras">
-                    TL {{item.data.techlevel}}
-                </div>
             </div>
+            <div class="item-dropdown-extras">
+                {{item.data.cosm}}
+            </div>
+            <div class="item-dropdown-extras">
+                {{item.data.price}} ({{item.data.value}})
+            </div>
+            <div class="item-dropdown-extras">
+                TL {{item.data.techlevel}}
+            </div>
+
         </div>
     </li>
     {{/each}}
 </ol>
 <h2>implant</h2>
 <ol class="item-list">
-    
+
     {{#each implant as |item id|}}
     <li class="item block" data-item-id="{{item._id}}">
         <div class="item-row flexrow">
@@ -313,7 +312,7 @@
 </ol>
 <h2>eternity Shard</h2>
 <ol class="item-list">
-    
+
     {{#each eternityshard as |item id|}}
     <li class="item block" data-item-id="{{item._id}}">
         <div class="item-row flexrow">
@@ -345,7 +344,7 @@
 </ol>
 <h2>vehicle</h2>
 <ol class="item-list">
-    
+
     {{#each vehicle as |item id|}}
     <li class="item block" data-item-id="{{item._id}}">
         <div class="item-row flexrow">

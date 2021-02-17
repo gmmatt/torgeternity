@@ -510,7 +510,9 @@ a:hover {
 }
 
 .window-content .actor-sheet .item-name {
-  max-width: 100px;
+  max-width: 40px;
+  padding-top: 20%;
+  margin-right: 10px;
 }
 
 .window-content .actor-sheet ol.item-list {
@@ -520,14 +522,13 @@ a:hover {
 }
 
 .window-content .actor-sheet ol.item-list img {
-  max-width: 100px;
-  max-height: 100px;
+  max-width: 60px;
+  max-height: 60px;
 }
 
-.window-content .actor-sheet ol.item-list .item-control {
-  float: right;
-  margin: 5px;
-  max-width: 30px;
+.window-content .actor-sheet ol.item-list .item-controls {
+  margin: 8px;
+  max-width: 10px;
 }
 
 .window-content .actor-sheet ol.item-list li {
@@ -546,8 +547,8 @@ a:hover {
 
 .window-content .actor-sheet .char_image {
   border: solid 5px;
-  -o-border-image: url(../images/separator.png) 20 round;
-  border-image: url(../images/separator.png) 20 round;
+  -o-border-image: url(../images/separator.png) 100 round;
+  border-image: url(../images/separator.png) 100 round;
   grid-column: 5/7;
   grid-row: 3/4;
   transition: all 0.6s cubic-bezier(1, 0, 0, 1) 0.1s;
@@ -614,8 +615,6 @@ a:hover {
 .window-content .actor-sheet .attributes ol,
 .window-content .actor-sheet .others ul,
 .window-content .actor-sheet .others ol,
-.window-content .actor-sheet .perks-details ul,
-.window-content .actor-sheet .perks-details ol,
 .window-content .actor-sheet .weapons ul,
 .window-content .actor-sheet .weapons ol {
   font-family: Berlin;
@@ -627,8 +626,6 @@ a:hover {
 .window-content .actor-sheet .attributes ol li.attribut-block,
 .window-content .actor-sheet .others ul li.attribut-block,
 .window-content .actor-sheet .others ol li.attribut-block,
-.window-content .actor-sheet .perks-details ul li.attribut-block,
-.window-content .actor-sheet .perks-details ol li.attribut-block,
 .window-content .actor-sheet .weapons ul li.attribut-block,
 .window-content .actor-sheet .weapons ol li.attribut-block {
   display: flex;
@@ -641,8 +638,6 @@ a:hover {
 .window-content .actor-sheet .attributes ol li.attribut-block input[type="number"],
 .window-content .actor-sheet .others ul li.attribut-block input[type="number"],
 .window-content .actor-sheet .others ol li.attribut-block input[type="number"],
-.window-content .actor-sheet .perks-details ul li.attribut-block input[type="number"],
-.window-content .actor-sheet .perks-details ol li.attribut-block input[type="number"],
 .window-content .actor-sheet .weapons ul li.attribut-block input[type="number"],
 .window-content .actor-sheet .weapons ol li.attribut-block input[type="number"] {
   border: none;
@@ -658,8 +653,6 @@ a:hover {
 .window-content .actor-sheet .attributes ol li.attribut-block a,
 .window-content .actor-sheet .others ul li.attribut-block a,
 .window-content .actor-sheet .others ol li.attribut-block a,
-.window-content .actor-sheet .perks-details ul li.attribut-block a,
-.window-content .actor-sheet .perks-details ol li.attribut-block a,
 .window-content .actor-sheet .weapons ul li.attribut-block a,
 .window-content .actor-sheet .weapons ol li.attribut-block a {
   margin-left: auto;
@@ -718,9 +711,16 @@ a:hover {
   padding: 1px;
 }
 
+.window-content .actor-sheet .perks-list .item-list li .item-name,
+.window-content .actor-sheet .weapons-list .item-list li .item-name {
+  padding-top: 5px;
+  max-width: 150px;
+}
+
 .window-content .actor-sheet .perks-list .item-list li img,
 .window-content .actor-sheet .weapons-list .item-list li img {
   max-width: 30px;
+  max-height: 30px;
 }
 
 .window-content .actor-sheet .perks-details,
@@ -730,6 +730,13 @@ a:hover {
   grid-row: 1/9;
 }
 
+.window-content .actor-sheet .perks-details h2,
+.window-content .actor-sheet .gear h2,
+.window-content .actor-sheet .powers h2 {
+  text-align: left;
+  background: #37465438;
+}
+
 .window-content .actor-sheet .perks-details ol,
 .window-content .actor-sheet .gear ol,
 .window-content .actor-sheet .powers ol {
@@ -737,6 +744,7 @@ a:hover {
   display: grid;
   grid-template-columns: repeat(3, auto);
   grid-template-rows: repeat(3, auto);
+  grid-gap: 3px;
 }
 
 .window-content .actor-sheet .perks-details ol li,
@@ -745,6 +753,12 @@ a:hover {
   position: relative;
   display: flex;
   flex-direction: column;
+}
+
+.window-content .actor-sheet .perks-details ol li img,
+.window-content .actor-sheet .gear ol li img,
+.window-content .actor-sheet .powers ol li img {
+  margin: 5px;
 }
 
 .window-content .actor-sheet .perks-details ol li .item-detail,
@@ -763,12 +777,6 @@ a:hover {
   border: 1px solid grey;
   text-align: center;
   background-color: #9e96868e;
-}
-
-.window-content .actor-sheet .gear h2 {
-  text-align: left;
-  position: relative;
-  background: #37465438;
 }
 
 .window-content .actor-sheet .background .list-section-heading {
