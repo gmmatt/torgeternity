@@ -4,3 +4,74 @@
   background: none;
   background-color: rgba(255, 255, 255, 0.575);
 }
+
+.chat-message .skill-chat-title {
+  font-size: 20px;
+  padding: 0px;
+  margin: 0px;
+  text-align: center;
+  font-family: "Palatino Linotype";
+}
+
+.chat-message .skill-unskilled-label {
+  font-size: 12px;
+  text-align: center;
+  padding: 0px;
+  margin: 0px;
+  font-family: "Palatino Linotype";
+  width: 100%;
+}
+
+.chat-message .skill-roll-disconnect-label {
+  font-size: 12px;
+  text-align: center;
+  padding: 0px;
+  margin: 0px;
+  font-family: "Palatino Linotype";
+  width: 100%;
+  font-style: italic;
+}
+
+.chat-message .skill-roll-result {
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  padding: 3px 0px 0px 0px;
+  margin: 0px;
+}
+
+.chat-message .skill-roll-action-label {
+  text-align: center;
+  font-size: 12px;
+  padding: 0px;
+  margin: 0px;
+}
+
+.chat-message .skill-roll-table {
+  padding-bottom: 5px;
+  margin-bottom: 5px;
+}
+
+.chat-message .skill-roll-table-1 {
+  width: 40%;
+  border: 1px solid black;
+}
+
+.chat-message .skill-roll-table-2 {
+  width: 60%;
+  background: #e8b017;
+  padding-left: 5px;
+  border: 1px solid black;
+}
+
+.chat-message .skill-roll-menu {
+  font-size: 11px;
+  text-align: center;
+}
+
+.chat-message .skill-roll-damage-label {
+  font-family: "Palatino Linotype";
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+}
