@@ -5,6 +5,10 @@
   color: white;
 }
 
+.window-app .window-content div.form-group input {
+  color: white;
+}
+
 .window-app .window-content .editor {
   background: url(../images/bckg-hex.png);
   background-size: 110% 110%;
