@@ -742,6 +742,12 @@ a:hover {
   grid-row: 6/7;
 }
 
+.window-content .actor-sheet .perks-list h2, .window-content .actor-sheet .perks-list h3,
+.window-content .actor-sheet .weapons-list h2,
+.window-content .actor-sheet .weapons-list h3 {
+  margin-bottom: 1px;
+}
+
 .window-content .actor-sheet .perks-list .item-list li,
 .window-content .actor-sheet .weapons-list .item-list li {
   display: flex;

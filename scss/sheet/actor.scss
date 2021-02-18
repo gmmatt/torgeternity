@@ -443,6 +443,9 @@
 
     .perks-list,
     .weapons-list {
+        h2,h3{
+            margin-bottom: 1px;
+        }
         .item-list {
             li {
                 display: flex;
