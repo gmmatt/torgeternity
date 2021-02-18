@@ -11,8 +11,17 @@
         {{#each data.skills as |content name|}}
         <li>
             <span>
-                <a class="skill-roll" data-skill-value="{{content.value}}"
-                    data-skill-name="{{localize (concatSkillName name)}}">{{localize (concatSkillName name)}}</a>
+                <a 
+                    class="skill-roll" 
+                    data-testType="skill" 
+                    data-baseAttribute="{{content.baseAttribute}}" 
+                    data-adds="{{content.adds}}" 
+                    data-value="{{content.value}}" 
+                    data-unskilledUse="{{content.unskilledUse}}" 
+                    data-name="{{localize (concatSkillName name)}}"
+                    >
+                    {{localize (concatSkillName name)}}
+                </a>            
             </span>
             <span class="skill-roll">
                 {{localize (concatAttributeName content.baseAttribute)}}
@@ -30,8 +39,17 @@
         {{#if content.adds}}
         <li>
             <span>
-                <a class="skill-roll" data-skill-value="{{content.value}}"
-                    data-skill-name="{{localize (concatSkillName name)}}">{{localize (concatSkillName name)}}</a>
+                <a 
+                    class="skill-roll" 
+                    data-testType="skill" 
+                    data-baseAttribute="{{content.baseAttribute}}" 
+                    data-adds="{{content.adds}}" 
+                    data-value="{{content.value}}" 
+                    data-unskilledUse="{{content.unskilledUse}}" 
+                    data-name="{{localize (concatSkillName name)}}"
+                    >
+                    {{localize (concatSkillName name)}}
+                </a>            
             </span>
             <span class="skill-roll">
                 {{localize (concatAttributeName content.baseAttribute)}}

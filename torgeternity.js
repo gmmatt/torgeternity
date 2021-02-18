@@ -1,4 +1,5 @@
 import {torgeternity} from "./module/config.js";
+import * as Chat from "./module/chat.js";
 import torgeternityItem from "./module/torgeternityItem.js";
 import torgeternityActor from "./module/torgeternityActor.js";
 import torgeternityItemSheet from "./module/sheets/torgeternityItemSheet.js";
