@@ -70,13 +70,16 @@
             </div>
         </div>
 
-          <div class="tab background" data-group="primary" data-tab="background">
-            
-               <h1 class="list-section-heading">Background and notes</h1>
-                {{editor content=data.details.background target="data.details.background" button=true owner=owner
-                editable=editable}}
-           
-            </div>
+        <div class="tab background" data-group="primary" data-tab="effects">
+            {{> "systems/torgeternity/templates/parts/active-effects.hbs"}}
+        </div>
+
+        <div class="tab background" data-group="primary" data-tab="background">
+        
+            <h1 class="list-section-heading">Background and notes</h1>
+            {{editor content=data.details.background target="data.details.background" button=true owner=owner
+            editable=editable}}
+        
         </div>
     </section>
 
