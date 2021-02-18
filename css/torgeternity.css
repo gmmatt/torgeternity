@@ -359,7 +359,7 @@ a:hover {
 }
 
 .window-content .actor-sheet section.sheet-body {
-  max-height: 750px;
+  height: 100%;
 }
 
 .window-content .actor-sheet .list-section-heading {
@@ -378,9 +378,11 @@ a:hover {
 .window-content .actor-sheet .tab[data-tab].active {
   display: grid;
   grid-template-columns: repeat(8, 1fr);
-  grid-template-rows: repeat(5, minmax(60px, 130px));
+  grid-template-rows: 0.3fr 0.2fr 0.4fr 0.3fr 0.3fr;
   grid-gap: 5px;
   justify-content: center;
+  width: 100%;
+  height: 100%;
 }
 
 .window-content .actor-sheet .block {
@@ -432,6 +434,19 @@ a:hover {
   text-transform: uppercase;
 }
 
+.window-content .actor-sheet input {
+  width: 20px;
+  height: 20px;
+  text-align: center;
+}
+
+.window-content .actor-sheet input[name="name"] {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  min-width: 150px;
+}
+
 .window-content .actor-sheet input[type="text"]:hover,
 .window-content .actor-sheet input[type="number"]:hover,
 .window-content .actor-sheet input[type="text"]:focus,
@@ -475,6 +490,7 @@ a:hover {
   font-family: Alaska;
   text-shadow: 0px 0px 15px black;
   text-transform: uppercase;
+  font-weight: bold;
 }
 
 .window-content .actor-sheet h1 {
@@ -484,6 +500,7 @@ a:hover {
   font-family: Alaska;
   text-shadow: 0px 0px 15px black;
   text-transform: uppercase;
+  font-weight: bold;
 }
 
 .window-content .actor-sheet h1 input {
@@ -491,7 +508,7 @@ a:hover {
   border: none;
   text-align: center;
   font-family: Alaska;
-  text-shadow: 0px 0px 15px black;
+  text-shadow: 0px 0px 5px black;
   text-transform: uppercase;
 }
 
@@ -562,13 +579,31 @@ a:hover {
   grid-column: 1/9;
   grid-row: 1/2;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-between;
 }
 
 .window-content .actor-sheet .sheet-header img {
   max-width: 100%;
   max-height: 90px;
+}
+
+.window-content .actor-sheet .sheet-header .axioms {
+  background: url(../images/roundBack.webp);
+  background-size: cover;
+  width: 50px;
+  height: 50px;
+  padding-top: 15px;
+  text-shadow: 0px 0px 15px #00c4ff;
+}
+
+.window-content .actor-sheet .sheet-header p {
+  text-align: center;
+  flex-direction: row;
+}
+
+.window-content .actor-sheet .sheet-header p span {
+  display: block;
 }
 
 .window-content .actor-sheet .sheet-header select {
@@ -586,9 +621,10 @@ a:hover {
 
 .window-content .actor-sheet .sheet-header div {
   display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
+  flex-direction: row;
+  justify-content: space-between;
   margin-right: 5px;
+  align-items: center;
 }
 
 .window-content .actor-sheet .sheet-header input[type="number"] {
@@ -607,7 +643,7 @@ a:hover {
 }
 
 .window-content .actor-sheet .others {
-  grid-column: 5/7;
+  grid-column: 5/9;
   grid-row: 2/3;
 }
 
@@ -655,7 +691,6 @@ a:hover {
 .window-content .actor-sheet .others ol li.attribut-block a,
 .window-content .actor-sheet .weapons ul li.attribut-block a,
 .window-content .actor-sheet .weapons ol li.attribut-block a {
-  margin-left: auto;
   text-align: center;
 }
 
@@ -825,17 +860,19 @@ a:hover {
 }
 
 .window-content .actor-sheet .defense {
+  line-height: 0.7em;
+  padding-top: 10px;
   grid-column: 7/9;
-  grid-row: 2/4;
+  grid-row: 3/4;
 }
 
-.window-content .actor-sheet .defense .p {
+.window-content .actor-sheet .defense p {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
 
-.window-content .actor-sheet .defense .p span {
+.window-content .actor-sheet .defense p span {
   display: block;
 }
 
