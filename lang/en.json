@@ -244,7 +244,8 @@
             "goodResult": "Good Result",
             "outstandingResult": "Outstanding Result",
             "effectCreate": "Create Effect",
-            "add": "Add"
+            "add": "Add",
+            "derivedValues": "Derived Values"
 
         },
         "itemSheetDescriptions": {
