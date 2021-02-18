@@ -20,6 +20,7 @@ export const preloadTemplates = async function () {
         "systems/torgeternity/templates/actors/stormknight/perks-list.hbs",
         "systems/torgeternity/templates/actors/stormknight/gear.hbs",
         "systems/torgeternity/templates/actors/stormknight/powers.hbs",
+        "systems/torgeternity/templates/actors/stormknight/xp.hbs",
 
 
         //active effect part: 

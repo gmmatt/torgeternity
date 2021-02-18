@@ -378,7 +378,7 @@ a:hover {
 .window-content .actor-sheet .tab[data-tab].active {
   display: grid;
   grid-template-columns: repeat(8, 1fr);
-  grid-template-rows: 0.3fr 0.2fr 0.4fr 0.3fr 0.3fr;
+  grid-template-rows: 0.3fr 0.2fr 0.2fr 0.13fr 0.3fr 0.3fr;
   grid-gap: 5px;
   justify-content: center;
   width: 100%;
@@ -696,8 +696,9 @@ a:hover {
 
 .window-content .actor-sheet .skills {
   grid-column: 1/5;
-  grid-row: 3/6;
+  grid-row: 3/7;
   overflow: scroll;
+  max-height: 500px;
 }
 
 .window-content .actor-sheet .skills ul {
@@ -733,7 +734,12 @@ a:hover {
 
 .window-content .actor-sheet .perks-list {
   grid-column: 5/9;
-  grid-row: 4/5;
+  grid-row: 5/6;
+}
+
+.window-content .actor-sheet .weapons-list {
+  grid-column: 5/9;
+  grid-row: 6/7;
 }
 
 .window-content .actor-sheet .perks-list .item-list li,
@@ -859,6 +865,23 @@ a:hover {
   grid-row: 4/9;
 }
 
+.window-content .actor-sheet .xp {
+  grid-column: 5/9;
+  grid-row: 4/5;
+  flex-direction: row;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.window-content .actor-sheet .xp input {
+  background: url(../images/roundBack.webp);
+  background-size: cover;
+  width: 50px;
+  height: 50px;
+  border: none;
+}
+
 .window-content .actor-sheet .defense {
   line-height: 0.7em;
   padding-top: 10px;
@@ -883,11 +906,6 @@ a:hover {
 
 .window-content .actor-sheet .defense input {
   width: 25%;
-}
-
-.window-content .actor-sheet .weapons-list {
-  grid-column: 5/9;
-  grid-row: 5/6;
 }
 
 .item .window-content {
