@@ -641,8 +641,6 @@ a:hover {
 }
 
 .window-content .actor-sheet .item-name {
-  max-width: 40px;
-  padding-top: 20%;
   margin-right: 10px;
 }
 
@@ -657,11 +655,6 @@ a:hover {
   max-height: 60px;
 }
 
-.window-content .actor-sheet ol.item-list .item-controls {
-  margin: 8px;
-  max-width: 10px;
-}
-
 .window-content .actor-sheet ol.item-list li {
   margin: 5px;
   padding-bottom: 5px;
@@ -671,9 +664,9 @@ a:hover {
   border-top: 1px solid black;
 }
 
-.window-content .actor-sheet ol.item-list li div {
+.window-content .actor-sheet ol.item-list li .fle
+div {
   margin-right: 15px;
-  max-width: 500px;
 }
 
 .window-content .actor-sheet .char_image {
@@ -902,10 +895,6 @@ a:hover {
 .window-content .actor-sheet .gear ol,
 .window-content .actor-sheet .powers ol {
   font-family: Berlin;
-  display: grid;
-  grid-template-columns: repeat(3, auto);
-  grid-template-rows: repeat(3, auto);
-  grid-gap: 3px;
 }
 
 .window-content .actor-sheet .perks-details ol li,
@@ -914,6 +903,12 @@ a:hover {
   position: relative;
   display: flex;
   flex-direction: column;
+}
+
+.window-content .actor-sheet .perks-details ol li .item-name,
+.window-content .actor-sheet .gear ol li .item-name,
+.window-content .actor-sheet .powers ol li .item-name {
+  text-align: center;
 }
 
 .window-content .actor-sheet .perks-details ol li img,
@@ -929,6 +924,19 @@ a:hover {
   position: relative;
   z-index: 1000;
   max-height: 0px;
+}
+
+.window-content .actor-sheet .perks-details ol li .item-controls,
+.window-content .actor-sheet .gear ol li .item-controls,
+.window-content .actor-sheet .powers ol li .item-controls {
+  justify-content: end;
+}
+
+.window-content .actor-sheet .perks-details ol li .item-controls a.item-control,
+.window-content .actor-sheet .gear ol li .item-controls a.item-control,
+.window-content .actor-sheet .powers ol li .item-controls a.item-control {
+  float: right;
+  margin-right: 10px;
 }
 
 .window-content .actor-sheet .perks-details ol li .item-dropdown-extras,
