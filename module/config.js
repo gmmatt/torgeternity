@@ -82,7 +82,8 @@ torgeternity.races = {
     edeinos: "torgeternity.races.edeinos",
     elf: "torgeternity.races.elf",
     aspirants: "torgeternity.races.aspirants",
-    theRace: "torgeternity.races.theRace"
+    theRace: "torgeternity.races.theRace",
+    other: "torgeternity.races.other"
 }
 
 torgeternity.skills = {

@@ -302,7 +302,8 @@
             "edeinos": "Edeinos",
             "elf": "Elf",
             "aspirants": "Aspirants",
-            "theRace": "The Race"
+            "theRace": "The Race",
+            "other": "Other"
         },
         "stymiedStates": {
             "none": "Not Stymied",
