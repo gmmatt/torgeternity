@@ -9,11 +9,24 @@
   color: white;
 }
 
-.window-app .window-content .editor {
-  background: url(../images/bckg-hex.png);
-  background-size: 110% 110%;
-  padding: 5%;
-  background-position: center;
+.window-app .window-content input[type="text"],
+.window-app .window-content input[type="number"],
+.window-app .window-content input[type="password"],
+.window-app .window-content input[type="date"],
+.window-app .window-content input[type="time"] .editor {
+  background-color: rgba(255, 255, 255, 0.39);
+}
+
+.window-app .window-content input::-moz-placeholder {
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.window-app .window-content input:-ms-input-placeholder {
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.window-app .window-content input::placeholder {
+  background-color: rgba(0, 0, 0, 0);
 }
 
 .window-app .window-content .rollable:hover, .window-app .window-content .rollable:focus {
@@ -22,18 +35,44 @@
   cursor: pointer;
 }
 
-.window-app .window-content form .notes, .window-app .window-content form .hint {
+.window-app .window-content form .notes,
+.window-app .window-content form .hint {
   color: #b1afaf;
 }
 
-.window-app .window-content form button, .window-app .window-content form select {
+.window-app .window-content form button,
+.window-app .window-content form select {
   color: grey;
 }
 
-.window-app .window-content form button option, .window-app .window-content form select option {
+.window-app .window-content form button option,
+.window-app .window-content form select option {
   color: white;
 }
 
 .window-app .window-content form button:hover {
   box-shadow: 0px 0px 5px #4970fa;
+}
+
+.window-app .window-content textarea {
+  background-color: rgba(90, 157, 163, 0.493);
+}
+
+.window-app .window-content textarea:focus,
+.window-app .window-content textarea:hover {
+  background-color: rgba(90, 157, 163, 0.65);
+  outline: 1px solid #222378;
+  box-shadow: 0 0 10px #008cff7a;
+}
+
+#module-management {
+  color: white;
+}
+
+#module-management input {
+  color: lightgray;
+}
+
+#module-management .package-list .package-title {
+  color: #c6e2fa;
 }

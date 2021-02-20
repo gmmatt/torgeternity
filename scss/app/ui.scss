@@ -13,11 +13,11 @@ body {
 button:hover,
 button:focus {
 
-    box-shadow: 0 0 10px#ffa200;
+    box-shadow: 0 0 10px #3bb3b3;
 }
 
 a:hover {
-    text-shadow: 0 0 10px#ffa200;
+    text-shadow: 0 0 10px#3bb3b3;
 
 }
 
@@ -28,7 +28,7 @@ a:hover {
     box-shadow: 0 0 15px #122529;
     padding-bottom: 0.5em;
 
-    color: black;
+    color: rgb(112, 112, 112);
     z-index: 30;
 
     input[type="text"]::placeholder,

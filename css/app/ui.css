@@ -11,11 +11,11 @@ body ::-webkit-scrollbar-thumb {
 
 button:hover,
 button:focus {
-  box-shadow: 0 0 10px #ffa200;
+  box-shadow: 0 0 10px #3bb3b3;
 }
 
 a:hover {
-  text-shadow: 0 0 10px #ffa200;
+  text-shadow: 0 0 10px #3bb3b3;
 }
 
 .app,
@@ -23,7 +23,7 @@ a:hover {
   border-radius: 5px;
   box-shadow: 0 0 15px #122529;
   padding-bottom: 0.5em;
-  color: black;
+  color: #707070;
   z-index: 30;
 }
 

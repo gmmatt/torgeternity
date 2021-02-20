@@ -1,22 +1,28 @@
 .window-app .window-content {
-    div.form-group{
-        input{
-            color:white
+    div.form-group {
+        input {
+            color: white
         }
     }
-    .editor {
-       
-        background: url(../images/bckg-hex.png);
-        background-size: 110% 110%;
-        padding: 5%;
-        background-position: center;
+
+    input[type="text"],
+    input[type="number"],
+    input[type="password"],
+    input[type="date"],
+    input[type="time"] .editor {
+        background-color: rgba(255, 255, 255, 0.39);
+    };
+    input::placeholder{
+        background-color: rgba(0, 0, 0, 0);
     }
-    font-family: Berlin;
     
+
+    font-family: Berlin;
+
     background-image: url(../images/thunder.png);
     background-size: cover;
     color: rgb(255, 255, 255);
-  
+
     .rollable {
 
         &:hover,
@@ -26,20 +32,51 @@
             cursor: pointer;
         }
     }
-    form{ 
-        .notes, .hint {
-        color: rgb(177, 175, 175);
+
+    form {
+
+        .notes,
+        .hint {
+            color: rgb(177, 175, 175);
         }
-        button, select{
-            color:grey;
-            option{
-                color:white
+
+        button,
+        select {
+            color: grey;
+
+            option {
+                color: white
             }
         }
-        button:hover{
+
+        button:hover {
             box-shadow: 0px 0px 5px rgb(73, 112, 250);
         }
-        
-       
+
+    }
+textarea{
+    background-color: rgba(90, 157, 163, 0.493);
+}
+textarea:focus,
+textarea:hover{
+    background-color: rgba(90, 157, 163, 0.65);
+    outline: 1px solid #222378;
+    box-shadow: 0 0 10px #008cff7a;
+}
+
+}
+
+#module-management {
+    color: white;
+
+    input {
+        color: lightgray
+    }
+
+    .package-list {
+        .package-title {
+            color: rgb(198, 226, 250);
+
+        }
     }
 }
