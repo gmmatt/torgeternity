@@ -698,10 +698,9 @@ div {
 .window-content .actor-sheet .sheet-header .axioms {
   background: url(../images/roundBack.webp);
   background-size: cover;
-  width: 50px;
-  height: 50px;
-  padding-top: 15px;
-  text-shadow: 0px 0px 15px #00c4ff;
+  width: 40px;
+  height: 40px;
+  padding-top: 35%;
 }
 
 .window-content .actor-sheet .sheet-header p {
@@ -951,11 +950,16 @@ div {
 .window-content .actor-sheet .background .list-section-heading {
   grid-column: 1/9;
   grid-row: 1/2;
+  align-items: center;
+  margin-top: 10%;
 }
 
 .window-content .actor-sheet .background .editor {
   grid-column: 1/9;
   grid-row: 2/9;
+  background: url(../images/bckg-hex.png);
+  background-size: cover;
+  padding: 15% 10% 10% 10%;
 }
 
 .window-content .actor-sheet .perks {
@@ -991,6 +995,11 @@ div {
 .window-content .actor-sheet .psionic {
   grid-column: 5/9;
   grid-row: 4/9;
+}
+
+.window-content .actor-sheet .effects {
+  grid-column: 1/9;
+  grid-row: 1/5;
 }
 
 .window-content .actor-sheet .xp {

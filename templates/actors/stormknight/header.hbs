@@ -25,21 +25,21 @@
             {{/select}}
         </select>
     </p>
-    <p class="axioms">
+    <p >
         <span class="main-label">{{localize "torgeternity.sheetLabels.magic"}}</span>
-        <span>{{data.axioms.magic}}</span>
+        <span class="axioms">{{data.axioms.magic}}</span>
     </p>
-    <p class="axioms">
+    <p >
         <span class="main-label">{{localize "torgeternity.sheetLabels.social"}}</span>
-        <span>{{data.axioms.social}}</span>
+        <span class="axioms">{{data.axioms.social}}</span>
     </p>
-    <p class="axioms">
+    <p >
         <span class="main-label">{{localize "torgeternity.sheetLabels.spirit"}}</span>
-        <span>{{data.axioms.spirit}}</span>
+        <span class="axioms">{{data.axioms.spirit}}</span>
     </p>
-    <p class="axioms">
+    <p >
         <span class="main-label">{{localize "torgeternity.sheetLabels.tech"}}</span>
-        <span>{{data.axioms.tech}}</span>
+        <span class="axioms">{{data.axioms.tech}}</span>
     </p>
     <p>
         <span class="vital-box">
@@ -65,57 +65,3 @@
         <input name="data.other.posibilities" type="number" value="{{data.other.posibilities}}" data=dtype="Number" />
     </p>
 </div>
-<!-- 
-   
-    <p>
-        <span>{{localize "torgeternity.gear.cosm"}}</span>
-        <select name="data.other.cosm" class="input-box">
-            {{#select data.other.cosm}}
-            {{#each config.cosmTypes as |name type|}}
-            <option value="{{type}}">{{localize name}}</option>
-            {{/each}}
-            {{/select}}
-        </select>
-    </p>
-</div>
-<div>
-
-    <p>
-    <table class="stats-table">
-        <p>
-            <span class="main-label">{{localize "torgeternity.sheetLabels.magic"}}</span>
-            <span >{{data.axioms.magic}}</span>
-        </p>
-        <p>
-            <span class="main-label">{{localize "torgeternity.sheetLabels.social"}}</span>
-            <span >{{data.axioms.social}}</span>
-        </p>
-        <p>
-            <span class="main-label">{{localize "torgeternity.sheetLabels.spirit"}}</span>
-            <span >{{data.axioms.spirit}}</span>
-        </p>
-        <p>
-            <span class="main-label">{{localize "torgeternity.sheetLabels.tech"}}</span>
-            <span >{{data.axioms.tech}}</span>
-        </p>
-    </table>
-
-    </p>
-</div>
-<div>
-       <p class="item-data-label">
-        {{localize "torgeternity.sheetLabels.clearance"}} : {{localize (concatClearanceLevel data.details.clearance)}}
-    </p>
-    <p>
-        <span class="main-label">{{localize "torgeternity.sheetLabels.unspent"}}</span>
-        <input name="data.xp.unspent" type="number" value="{{data.xp.unspent}}" data=dtype="Number" />
-
-    </p>
-    <p>
-        <span class="main-label">{{localize "torgeternity.sheetLabels.xp"}}</span>
-        <input name="data.xp.earned" type="number" value="{{data.xp.earned}}" data=dtype="Number" />
-
-    </p>
-  
-</div>
--->
