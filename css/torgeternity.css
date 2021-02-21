@@ -1213,3 +1213,8 @@ a:hover {
   resize: none;
   padding: 5px 5px;
 }
+
+.item .window-content form.item-sheet .effects .effects-list {
+  color: white;
+  background-color: black;
+}
