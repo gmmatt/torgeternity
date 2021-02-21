@@ -41,16 +41,16 @@
 
     {{!-- Sheet Tab Navigation --}}
     <nav class="sheet-tabs tabs" data-group="primary" style="background-image:url('systems/torgeternity/images/tab-header.png');background-size:578px 30px;background-repeat:no-repeat;color:white">
-        <a class="item" data-tab="stats" style="vertical-align:center">Stats</a>
-        <a class="item" data-tab="perks">Perks/Abilities</a>
-        <a class="item" data-tab="gear">Gear</a>
-        <a class="item" data-tab="powers">Powers</a>
+        <a class="item" data-tab="stats" style="vertical-align:center">{{localize "torgeternity.sheetLabels.stats"}}</a>
+        <a class="item" data-tab="perks">{{localize "torgeternity.sheetLabels.perksAbilities"}}</a>
+        <a class="item" data-tab="gear">{{localize "torgeternity.sheetLabels.gear"}}</a>
+        <a class="item" data-tab="powers">{{localize "torgeternity.sheetLabels.powers"}}</a>
+        <a class="item" data-tab="background">{{localize "torgeternity.sheetLabels.backgroundDescription"}}</a>
     </nav>
 
     <section class="sheet-body sheet-content"  style="display:flex;flex-direction:column">
-        <div class="tab stats" data-group="primary" data-tab="stats">
+        <div class="threat-tab stats" data-group="primary" data-tab="stats">
 
-<!--            <span style="font-family:'Palatino Linotype';font-size:12px;padding:0px;margin:0px">Edit Threat:</span><input id="trigger" name="Edit" type="checkbox" style="display:inline;height:12px;padding:0px;margin:0px" /> -->
             <div class="threat-editor" id="threat-editor" style="display:{{data.editstate}}">
                 <div class="threat-edit">
                     {{localize "torgeternity.attributes.charisma"}} <input name="data.attributes.charisma" type="number" value="{{data.attributes.charisma}}" data=dtype="Number" class="small-input" />,&nbsp;
@@ -127,143 +127,126 @@
                 </table>
             </div>            
                         
-            <table width="100%" height="375px" style="border:none;background:transparent">
-                <tr>
-                <td width="55%" height="375px" style="background-color:white;border-radius:10px;vertical-align:top"> <!-- Left column -->
-                    <div class="threat-block">
-                        <a class="toggle-threat-edit" title="Edit" style="float:right"><i class="fas fa-edit"></i></a>
-                        <div style="margin-right:10px">
-                            <b>Attributes: </b>
-                            <a class="skill-roll" data-skill-value="{{data.attributes.charisma}}" data-skill-name="Charisma">{{localize "torgeternity.attributes.charisma"}}</a> 
-                                {{data.attributes.charisma}}, &nbsp;
-                            <a class="skill-roll" data-skill-value="{{data.attributes.dexterity}}" data-skill-name="Dexterity">{{localize "torgeternity.attributes.dexterity"}}</a> 
-                                {{data.attributes.dexterity}},&nbsp;
-                            <a class="skill-roll" data-skill-value="{{data.attributes.mind}}" data-skill-name="Mind">{{localize "torgeternity.attributes.mind"}}</a> 
-                                {{data.attributes.mind}},&nbsp;
-                            <a class="skill-roll" data-skill-value="{{data.attributes.spirit}}" data-skill-name="Spirit">{{localize "torgeternity.attributes.spirit"}}</a> 
-                                {{data.attributes.spirit}},&nbsp;
-                            <a class="skill-roll" data-skill-value="{{data.attributes.strength}}" data-skill-name="Strength">{{localize "torgeternity.attributes.strength"}}</a> 
-                                {{data.attributes.strength}}
-                        </div>  
+            <div class="threat-block">
+                <a class="toggle-threat-edit" title="Edit" style="float:right"><i class="fas fa-edit"></i></a>
+                <div style="margin-right:10px">
+                    <b>Attributes: </b>
+                    <a class="skill-roll" data-skill-value="{{data.attributes.charisma}}" data-skill-name="Charisma">{{localize "torgeternity.attributes.charisma"}}</a> 
+                        {{data.attributes.charisma}}, &nbsp;
+                    <a class="skill-roll" data-skill-value="{{data.attributes.dexterity}}" data-skill-name="Dexterity">{{localize "torgeternity.attributes.dexterity"}}</a> 
+                        {{data.attributes.dexterity}},&nbsp;
+                    <a class="skill-roll" data-skill-value="{{data.attributes.mind}}" data-skill-name="Mind">{{localize "torgeternity.attributes.mind"}}</a> 
+                        {{data.attributes.mind}},&nbsp;
+                    <a class="skill-roll" data-skill-value="{{data.attributes.spirit}}" data-skill-name="Spirit">{{localize "torgeternity.attributes.spirit"}}</a> 
+                        {{data.attributes.spirit}},&nbsp;
+                    <a class="skill-roll" data-skill-value="{{data.attributes.strength}}" data-skill-name="Strength">{{localize "torgeternity.attributes.strength"}}</a> 
+                        {{data.attributes.strength}}
+                </div>  
 
-                    </div>
-                    <div class="threat-block">
-                        <b>Skills:&nbsp;</b>
-                        <span class="inline-skill-list">
-                        {{#each data.skills as |content name|}}
-                            {{#if content.value}}
-                                <span class="inline-skill-item">
-                                    <a class="skill-roll" data-skill-value="{{content.value}}" data-skill-name="{{localize (concatSkillName name)}}">{{localize (concatSkillName name)}}</a>
-                                    &nbsp;{{content.value}}
-                                </span>
-                            {{/if}}
-                        {{/each}}
+            </div>
+            <div class="threat-block">
+                <b>Skills:&nbsp;</b>
+                <span class="inline-skill-list">
+                {{#each data.skills as |content name|}}
+                    {{#if content.value}}
+                        <span class="inline-skill-item">
+                            <a class="skill-roll" data-skill-value="{{content.value}}" data-skill-name="{{localize (concatSkillName name)}}">{{localize (concatSkillName name)}}</a>
+                            &nbsp;{{content.value}}
                         </span>
+                    {{/if}}
+                {{/each}}
+                </span>
 
-                    </div>
+            </div>
 
-                    <div class="threat-block">
-                        <b>Move:</b>&nbsp;{{data.other.move}};&nbsp;
-                        <b>Tough:</b>&nbsp;{{data.other.toughness}}&nbsp;({{data.other.armor}});&nbsp;
-                        <b>Shock:&nbsp;</b>
-                        {{data.shock.max}};&nbsp;
-                        <b>Wounds:&nbsp;</b>
-                        {{data.wounds.max}}
-                    </div>
+            <div class="threat-block">
+                <b>Move:</b>&nbsp;{{data.other.move}};&nbsp;
+                <b>Tough:</b>&nbsp;{{data.other.toughness}}&nbsp;({{data.other.armor}});&nbsp;
+                <b>Shock:&nbsp;</b>
+                {{data.shock.max}};&nbsp;
+                <b>Wounds:&nbsp;</b>
+                {{data.wounds.max}}
+            </div>
 
-                    <div class="threat-block">
-                        <b>{{localize "torgeternity.sheetLabels.equipment"}}:</b>&nbsp;
-                        <span class="inline-skill-list">
-                            {{#each meleeweapons as |item id|}}
-                                <a class="item-attackRoll inline-skill-item item" data-item-id="{{item._id}}">{{item.name}}</a>
-                            {{/each}}
-                        
-                            {{#each missileweapon as |item id|}}
-                                <a class="item-attackRoll inline-skill-item item" data-item-id="{{item._id}}">{{item.name}}</a> 
-                            {{/each}}
+            <div class="threat-block">
+                <b>{{localize "torgeternity.sheetLabels.equipment"}}:</b>&nbsp;
+                <span class="inline-skill-list">
+                    {{#each meleeweapons as |item id|}}
+                        <a class="item-attackRoll inline-skill-item item" data-item-id="{{item._id}}">{{item.name}}</a>
+                    {{/each}}
+                
+                    {{#each missileweapon as |item id|}}
+                        <a class="item-attackRoll inline-skill-item item" data-item-id="{{item._id}}">{{item.name}}</a> 
+                    {{/each}}
 
-                            {{#each firearm as |item id|}}
-                                <a class="item-attackRoll inline-skill-item item" data-item-id="{{item._id}}">{{item.name}}</a> 
-                            {{/each}}
+                    {{#each firearm as |item id|}}
+                        <a class="item-attackRoll inline-skill-item item" data-item-id="{{item._id}}">{{item.name}}</a> 
+                    {{/each}}
 
-                            {{#each heavyweapon as |item id|}}
-                                <a class="item-attackRoll inline-skill-item item" data-item-id="{{item._id}}">{{item.name}}</a> 
-                            {{/each}}
+                    {{#each heavyweapon as |item id|}}
+                        <a class="item-attackRoll inline-skill-item item" data-item-id="{{item._id}}">{{item.name}}</a> 
+                    {{/each}}
 
-                            {{#each armor as |item id|}}
-                                <span class="inline-skill-item">{{item.name}}</span>
-                            {{/each}}
+                    {{#each armor as |item id|}}
+                        <span class="inline-skill-item">{{item.name}}</span>
+                    {{/each}}
 
-                            {{#each shield as |item id|}}
-                                <span class="inline-skill-item">{{item.name}}</span>
-                            {{/each}}
+                    {{#each shield as |item id|}}
+                        <span class="inline-skill-item">{{item.name}}</span>
+                    {{/each}}
 
-                            {{#each gear as |item id|}}
-                                <span class="inline-skill-item">{{item.name}}</span>
-                            {{/each}}
+                    {{#each gear as |item id|}}
+                        <span class="inline-skill-item">{{item.name}}</span>
+                    {{/each}}
 
-                            {{#each implant as |item id|}}
-                                <span class="inline-skill-item">{{item.name}}</span>
-                            {{/each}}
+                    {{#each implant as |item id|}}
+                        <span class="inline-skill-item">{{item.name}}</span>
+                    {{/each}}
 
-                            {{#each eternityshard as |item id|}}
-                                <span class="inline-skill-item">{{item.name}}</span>
-                            {{/each}}
+                    {{#each eternityshard as |item id|}}
+                        <span class="inline-skill-item">{{item.name}}</span>
+                    {{/each}}
 
-                        </span>
-                    </div>
+                </span>
+            </div>
 
-                    <div class="threat-block">
-                        <b>{{localize "torgeternity.sheetLabels.perks"}}</b>:&nbsp;
-                        <span class="inline-skill-list">                        
-                            {{#each perk as |item id|}}
-                                <span class="inline-skill-item">{{item.name}}</span>
-                            {{/each}}
-                        </span>
-                    </div>
+            <div class="threat-block">
+                <b>{{localize "torgeternity.sheetLabels.perks"}}</b>:&nbsp;
+                <span class="inline-skill-list">                        
+                    {{#each perk as |item id|}}
+                        <span class="inline-skill-item">{{item.name}}</span>
+                    {{/each}}
+                </span>
+            </div>
 
-                    <div class="threat-block">
-                        <b>{{localize "torgeternity.sheetLabels.possibilities"}}</b>:&nbsp;
-                        <span>{{data.details.possibilitypotential}}</span>
-                    </div>
+            <div class="threat-block">
+                <b>{{localize "torgeternity.sheetLabels.possibilities"}}</b>:&nbsp;
+                <span>{{data.details.possibilitypotential}}</span>
+            </div>
 
-                    <div class="threat-block">
-                        <b>{{localize "torgeternity.sheetLabels.specialabilities"}}</b>:
-                        <ul class="specialability-list">
-                            
-                            {{#each specialabilityRollable as |item id|}}
-                                <li>
-                                    <b><a class="item-attackRoll item" data-item-id="{{item._id}}">{{item.name}}</a></b>
-                                    .&nbsp;
-                                    {{{item.data.description}}}
-                                </li>
-                            {{/each}}
+            <div class="threat-block">
+                <b>{{localize "torgeternity.sheetLabels.specialabilities"}}</b>:
+                <ul class="specialability-list">
+                    
+                    {{#each specialabilityRollable as |item id|}}
+                        <li>
+                            <b><a class="item-attackRoll item" data-item-id="{{item._id}}">{{item.name}}</a></b>
+                            .&nbsp;
+                            {{{item.data.description}}}
+                        </li>
+                    {{/each}}
 
-                            {{#each specialability as |item id|}}
-                                <li>
-                                    <b>{{item.name}}</b>
-                                    .&nbsp;
-                                    {{{item.data.description}}}
-                                </li>
-                            {{/each}}
+                    {{#each specialability as |item id|}}
+                        <li>
+                            <b>{{item.name}}</b>
+                            .&nbsp;
+                            {{{item.data.description}}}
+                        </li>
+                    {{/each}}
 
-                        </ul>
-                    </div>
+                </ul>
 
-
-                </td>
-                <td width="45%" height="385px" style="vertical-align:top"> <!-- Right column -->
-                    <div style="padding:0px 0px 0px 10px;height:385px;width:250px;margin:0px 10px 0px 10px;display:flex;flex-direction:column;vertical-align:top" class="item-description-textarea">
-                        {{editor content=data.details.description target="data.details.description" button=true owner=owner editable=editable}}
-                    </div>
-                </td>
-                </tr>
-            </table>
-            
-            
-            
-            
-            
+            </div>
 
         </div>
 
@@ -863,6 +846,13 @@
 
         </div>
 
+        <div class="tab background" data-group="primary" data-tab="background">
         
+            <h1 class="list-section-heading">Background and notes</h1>
+            {{editor content=data.details.background target="data.details.background" button=true owner=owner
+            editable=editable}}
+        
+        </div>
+
     </section>
 </form>

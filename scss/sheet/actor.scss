@@ -68,6 +68,10 @@
 
     }
 
+    .threat-tab[data-tab].active {
+        display:inline;
+    }
+
 
 
 
@@ -733,4 +737,5 @@
             padding:5px;
         }
     }
+
 }
