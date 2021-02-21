@@ -662,5 +662,75 @@
         }
     }
 
+    .effects {
 
+        .item-list {
+            padding:0px;
+        }
+        
+        .effects-list {
+            padding:0px;
+        } 
+
+        .effects-heading {
+            color:white;
+            background-color:black;
+            margin: 2px 0;
+            align-items:center;
+            font-weight:bold;
+            font-family:"Palatino Linotype"
+        }
+
+        .effects-item {
+            text-align:center;
+            border-left: 1px solid #c9c7b8;
+            border-right: 1px solid #c9c7b8;
+            font-size:12px;
+            color:black
+        }
+
+        .effect-name {
+            white-space: nowrap;
+            overflow-x: hidden;
+            text-align:left;
+            font-family:"Palatino Linotype";
+            padding: 0px 0px 0px 10px;
+            width:25%;
+        }
+
+        .effect-section-title {
+            width:25%;
+            padding:0px 0px 0px 10px;
+        }
+
+        .effect-source,
+        .effect-duration,
+        .effect-controls {
+            text-align:center;
+            border-left: 1px solid #c9c7b8;
+            border-right: 1px solid #c9c7b8;
+            font-size:12px;
+            font-family: "Palatino Linotype";
+            width:25%
+        }
+
+        .effect-controls {
+            border:none;
+            flex:1;
+        }
+
+        .effect-item-image {
+            flex: 0 0 30px;
+            height:30px;
+            background-size: 30px;
+            border:none;
+            margin-right:5px;
+        }
+
+        .effect-toggle,
+        .effect-edit,
+        .effect-delete {
+            padding:5px;
+        }
+    }
 }

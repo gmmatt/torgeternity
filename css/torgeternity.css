@@ -1059,6 +1059,75 @@ a:hover {
   width: 25%;
 }
 
+.window-content .actor-sheet .effects .item-list {
+  padding: 0px;
+}
+
+.window-content .actor-sheet .effects .effects-list {
+  padding: 0px;
+}
+
+.window-content .actor-sheet .effects .effects-heading {
+  color: white;
+  background-color: black;
+  margin: 2px 0;
+  align-items: center;
+  font-weight: bold;
+  font-family: "Palatino Linotype";
+}
+
+.window-content .actor-sheet .effects .effects-item {
+  text-align: center;
+  border-left: 1px solid #c9c7b8;
+  border-right: 1px solid #c9c7b8;
+  font-size: 12px;
+  color: black;
+}
+
+.window-content .actor-sheet .effects .effect-name {
+  white-space: nowrap;
+  overflow-x: hidden;
+  text-align: left;
+  font-family: "Palatino Linotype";
+  padding: 0px 0px 0px 10px;
+  width: 25%;
+}
+
+.window-content .actor-sheet .effects .effect-section-title {
+  width: 25%;
+  padding: 0px 0px 0px 10px;
+}
+
+.window-content .actor-sheet .effects .effect-source,
+.window-content .actor-sheet .effects .effect-duration,
+.window-content .actor-sheet .effects .effect-controls {
+  text-align: center;
+  border-left: 1px solid #c9c7b8;
+  border-right: 1px solid #c9c7b8;
+  font-size: 12px;
+  font-family: "Palatino Linotype";
+  width: 25%;
+}
+
+.window-content .actor-sheet .effects .effect-controls {
+  border: none;
+  flex: 1;
+}
+
+.window-content .actor-sheet .effects .effect-item-image {
+  flex: 0 0 30px;
+  height: 30px;
+  background-size: 30px;
+  border: none;
+  margin-right: 5px;
+}
+
+.window-content .actor-sheet .effects .effect-toggle,
+.window-content .actor-sheet .effects .effect-edit,
+.window-content .actor-sheet .effects .effect-delete {
+  padding: 5px;
+}
+
 .item .window-content {
   padding: 0px;
 }
