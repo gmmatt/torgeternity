@@ -53,6 +53,7 @@
 .item .window-content form.item-sheet .asside {
   grid-row: 1/4;
   grid-column: 1/2;
+  text-align: center;
 }
 
 .item .window-content form.item-sheet .asside input[type="number"] {
@@ -63,6 +64,11 @@
   border-radius: 15px;
   background: url(../images/roundBack.webp);
   background-size: cover;
+}
+
+.item .window-content form.item-sheet .asside select {
+  color: black;
+  text-align: center;
 }
 
 .item .window-content form.item-sheet .main-content {
@@ -124,18 +130,18 @@
 }
 
 .item .window-content form.item-sheet input[type="text"]::-moz-placeholder, .item .window-content form.item-sheet input[type="number"]::-moz-placeholder {
-  color: #293131;
+  color: #161a1a;
   text-shadow: 0px 0px 10px black;
 }
 
 .item .window-content form.item-sheet input[type="text"]:-ms-input-placeholder, .item .window-content form.item-sheet input[type="number"]:-ms-input-placeholder {
-  color: #293131;
+  color: #161a1a;
   text-shadow: 0px 0px 10px black;
 }
 
 .item .window-content form.item-sheet input[type="text"]::placeholder,
 .item .window-content form.item-sheet input[type="number"]::placeholder {
-  color: #293131;
+  color: #161a1a;
   text-shadow: 0px 0px 10px black;
 }
 

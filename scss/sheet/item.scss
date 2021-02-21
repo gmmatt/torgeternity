@@ -50,6 +50,7 @@
         .asside {
             grid-row: 1/4;
             grid-column: 1/2;
+            text-align:center;
 
             input[type="number"] {
                 border: none;
@@ -59,6 +60,11 @@
                 border-radius: 15px;
                 background: url(../images/roundBack.webp);
                 background-size: cover
+            }
+
+            select {
+                color:black;
+                text-align:center;
             }
         }
 
@@ -132,7 +138,7 @@
         input[type="text"]::placeholder,
         input[type="number"]::placeholder {
 
-            color: rgb(41, 49, 49);
+            color: rgb(22, 26, 26);
             text-shadow: 0px 0px 10px black;
         }
 
