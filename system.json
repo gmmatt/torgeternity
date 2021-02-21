@@ -24,10 +24,14 @@
       "path": "lang/en.json"
     },
     {
+      "lang": "fr",
+      "name": "Francais",
+      "path": "lang/fr.json"
+    },
+    {
       "lang": "es",
       "name": "Español",
       "path": "lang/es.json"    
-
     }
   ],
   "gridDistance": 5,
