@@ -299,8 +299,10 @@ export default class torgeternityActorSheet extends ActorSheet {
 
     _onItemEquip(event) {
         var actor = this.actor;
-        const itemID = event.currentTarget.closest(".item").dataset.itemId;
+        const itemID = event.currentTarget.closest(".item").getAttribute("data-item-id");
+        console.log({itemID});
         const item = this.actor.getOwnedItem(itemID);
+        console.log({item})
         if (item.data.equipped === false) {
             item.data.equipped = true;
             item.update({"data.equipped": true})
