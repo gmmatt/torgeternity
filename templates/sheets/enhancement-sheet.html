@@ -1,24 +1,22 @@
 <form class="{{cssClass}} item-sheet" autocomplete="off" height=400>
+    <h3 class="item-type"><span>{{localize "torgeternity.itemSheetDescriptions.enhancement"}}</span></h3>
+
     <header class="sheet-header">
-        <img src="{{item.img}}" data-edit="img" title="{{item.name}}" height="64" width="64"/>
-        <h1><input name="name" type="text" value="{{item.name}}" placeholder="Enhancement Name" style="background-color:white;border-radius:10px;width:270px;font-family:'Palatino Linotype"/></h1>
-        <h1 style="font-size:26px;text-align:right;font-family:'Palatino Linotype'">Enhancement</h1>
+        <img src="{{item.img}}" data-edit="img" title="{{item.name}}" height="64" width="64" />
+        <h1><input name="name" type="text" value="{{item.name}}" placeholder="Enhancement Name" /></h1>
     </header>
     <div class="sheet-content">
-        <table style="background-color:transparent;border: 0px solid black">
-        <tr>
-            <td style="width:25%;vertical-align:top"> <!-- left column -->
-                <p class="item-data-label">
-                    {{localize "torgeternity.enhancements.perk"}}
-                </p>                
-                <input name="data.perk" type="text" value="{{data.perk}}" class="input-box" />
-             </td>
-            <td style="width:65%"> <!-- right column -->
-                <div class="item-description-textarea" style="padding:10px 10px">
-                    {{editor content=data.description target="data.description" button=true owner=owner editable=editable}}
-                </div>
-            </td> 
-        </tr>
-        </table>         
+        <div class="asside">
+            <p class="item-data-label">
+                {{localize "torgeternity.enhancements.perk"}}
+            </p>
+            <input name="data.perk" type="text" value="{{data.perk}}" class="input-box" />
+        </div>
+        <div class="main-content">
+            <!-- right column -->
+            <div class="item-description-textarea">
+                {{editor content=data.description target="data.description" button=true owner=owner editable=editable}}
+            </div>
+        </div>
     </div>
 </form>
