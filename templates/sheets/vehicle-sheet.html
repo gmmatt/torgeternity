@@ -1,7 +1,7 @@
 <form class="{{cssClass}} item-sheet" autocomplete="off">
     <header class="sheet-header">
-        <img src="{{item.img}}" data-edit="img" title="{{item.name}}" height="64" width="64"/>
-        <h1><input name="name" type="text" value="{{item.name}}" placeholder="Firearm Name" style="background-color:white;border-radius:10px;width:320px;font-family:'Palatino Linotype'"/></h1>
+        <img src="{{item.img}}" data-edit="img" title="{{item.name}}" />
+        <h1><input name="name" type="text" value="{{item.name}}" placeholder="vehicule Name" style="background-color:white;border-radius:10px;width:320px;font-family:'Palatino Linotype'"/></h1>
         <h1 style="font-size:34px;text-align:right;font-family:'Palatino Linotype'">{{localize "torgeternity.itemSheetDescriptions.vehicle"}}</h1>
     </header>
 
@@ -10,7 +10,7 @@
         <a class="item" data-tab="effects">{{localize "torgeternity.sheetLabels.effects"}}</a>
     </nav>
 
-    <secton class="sheet-body"  style="display:flex;flex-direction:column">
+    <section class="sheet-body"  style="display:flex;flex-direction:column">
 
         <div class="tab stats" data-group="primary" data-tab="stats">
 
@@ -68,5 +68,5 @@
             {{> "systems/torgeternity/templates/parts/active-effects.hbs"}}
         </div>
     
-    </secton>        
+    </section>        
 </form>

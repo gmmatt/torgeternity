@@ -1,6 +1,6 @@
 <form class="actor-sheet {{cssClass}}" autocomplete="off">
     <header class="sheet-header">
-        <img src="{{actor.img}}" class="profile-img" data-edit="img" title="{{actor.name}}" height="64" width="64" />
+        <img src="{{actor.img}}" class="profile-img" data-edit="img" title="{{actor.name}}"  />
         <h1 class="charname"><input name="name" type="text" value="{{actor.name}}" placeholder="Name"
                 style="font-family:'Palatino Linotype';background-color:white;border-radius:10px" /></h1>
         <img src="systems/torgeternity/images/te-logo.png" class="profile-img"
@@ -47,7 +47,7 @@
         <a class="item" data-tab="background">{{localize "torgeternity.sheetLabels.background"}}</a>
     </nav>
 
-    <secton class="sheet-body" style="display:flex;flex-direction:column">
+    <section class="sheet-body" style="display:flex;flex-direction:column">
 
         <div class="tab stats" data-group="primary" data-tab="stats">
             <table style="border:none;background-color:transparent;margin-top:0px;margin-bottom:0px">
@@ -930,5 +930,5 @@
             </div>
         </div>
 
-    </secton>
+    </section>
 </form>

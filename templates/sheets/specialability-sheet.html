@@ -1,15 +1,16 @@
 <form class="{{cssClass}} item-sheet specialability-sheet" autocomplete="off">
+    <h3 class="item-type"><span>{{localize "torgeternity.itemSheetDescriptions.specialability"}}</span></h3>
+
     <header class="sheet-header">
-        <img src="{{item.img}}" data-edit="img" title="{{item.name}}" height="64" width="64"/>
-        <h1><input name="name" type="text" value="{{item.name}}" placeholder="Firearm Name" style="background-color:white;border-radius:10px;width:260px;font-family:'Palatino Linotype';font-size:22px"/></h1>
-        <h1 style="font-size:24px;text-align:right;font-family:'Palatino Linotype'">{{localize "torgeternity.itemSheetDescriptions.specialability"}}</h1>
+        <img src="{{item.img}}" data-edit="img" title="{{item.name}}" />
+        <h1><input name="name" type="text" value="{{item.name}}" placeholder="special ability Name" /></h1>
     </header>
     <div class="sheet-content">
         <p class="item-data-label">
             Description
         </p>
-        <div style="padding:0px 0px 0px 10px">
-            <textarea name="data.description" class="item-description-textarea" style="height:150px;width:490px">{{data.description}}</textarea>
+        <div >
+            <textarea name="data.description" class="item-description-textarea" >{{data.description}}</textarea>
         </div>
 </div>
 </form>

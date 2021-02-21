@@ -1,65 +1,64 @@
 <form class="{{cssClass}} item-sheet" autocomplete="off" height=400>
+    <h3 class="item-type"><span>{{localize "torgeternity.itemSheetDescriptions.perk"}}</span></h3>
+
     <header class="sheet-header">
-        <img src="{{item.img}}" data-edit="img" title="{{item.name}}" height="64" width="64"/>
-        <h1><input name="name" type="text" value="{{item.name}}" placeholder="Perk Name" style="background-color:white;border-radius:10px;width:320px;font-family:'Palatino Linotype"/></h1>
-        <h1 style="font-size:46px;text-align:right;font-family:'Palatino Linotype'">Perk</h1>
+        <img src="{{item.img}}" data-edit="img" title="{{item.name}}"  />
+        <h1><input name="name" type="text" value="{{item.name}}" placeholder="Perk Name"
+                 /></h1>
     </header>
 
     <nav class="sheet-tabs item-tabs tabs" data-group="primary">
-        <a class="item" data-tab="stats" style="vertical-align:center">{{localize "torgeternity.sheetLabels.stats"}}</a>
+        <a class="item" data-tab="stats" >{{localize "torgeternity.sheetLabels.stats"}}</a>
         <a class="item" data-tab="effects">{{localize "torgeternity.sheetLabels.effects"}}</a>
     </nav>
 
-    <secton class="sheet-body"  style="display:flex;flex-direction:column">
+    <section class="sheet-body" >
 
         <div class="tab stats" data-group="primary" data-tab="stats">
 
             <div class="sheet-content">
-                <table style="background-color:transparent;border: 0px solid black">
-                <tr>
-                    <td style="width:25%;vertical-align:top"> <!-- left column -->
-                        <p class="item-data-label">
-                            {{localize "torgeternity.perks.category"}}
-                        </p>                
-                        <select name="data.category" class="input-box">
-                            {{#select data.category}}
-                            {{#each config.perkTypes as |name type|}}
-                            <option value="{{localize name}}">{{localize name}}</option>
-                            {{/each}}
-                            {{/select}}
-                        </select>
-                        <p class="item-data-label">
-                            {{localize "torgeternity.perks.cosm"}}
-                        </p>
-                        <select name="data.cosm" class="input-box">
-                            {{#select data.cosm}}
-                            {{#each config.cosmTypes as |name type|}}
-                            <option value="{{localize name}}">{{localize name}}</option>
-                            {{/each}}
-                            {{/select}}
-                        </select>
+                <div class="asside">
+                    <p class="item-data-label">
+                        {{localize "torgeternity.perks.category"}}
+                    </p>
+                    <select name="data.category" class="input-box">
+                        {{#select data.category}}
+                        {{#each config.perkTypes as |name type|}}
+                        <option value="{{localize name}}">{{localize name}}</option>
+                        {{/each}}
+                        {{/select}}
+                    </select>
+                    <p class="item-data-label">
+                        {{localize "torgeternity.perks.cosm"}}
+                    </p>
+                    <select name="data.cosm" class="input-box">
+                        {{#select data.cosm}}
+                        {{#each config.cosmTypes as |name type|}}
+                        <option value="{{localize name}}">{{localize name}}</option>
+                        {{/each}}
+                        {{/select}}
+                    </select>
 
-                        <p class="item-data-label">
-                            {{localize "torgeternity.perks.prerequisites"}}
-                        </p>
-                        <input name="data.prerequisites" type="text" value="{{data.prerequisites}}" class="input-box" />
-                        <p class="item-data-label">
-                            {{localize "torgeternity.perks.timestaken"}}
-                        </p>
-                        <input name="data.timestaken" type="text" value="{{data.timestaken}}" class="input-box" />
-                    </td>
-                    <td style="width:65%"> <!-- right column -->
-                        <div class="item-description-textarea" style="padding:0px 0px 0px 10px">
-                            {{editor content=data.description target="data.description" button=true owner=owner editable=editable}}
-                        </div>
-                    </td> 
-                </tr>
-                </table>         
+                    <p class="item-data-label">
+                        {{localize "torgeternity.perks.prerequisites"}}
+                    </p>
+                    <input name="data.prerequisites" type="text" value="{{data.prerequisites}}" class="input-box" />
+                    <p class="item-data-label">
+                        {{localize "torgeternity.perks.timestaken"}}
+                    </p>
+                    <input name="data.timestaken" type="text" value="{{data.timestaken}}" class="input-box" />
+                </div>
+                <div class="main-content">
+                    <div class="item-description-textarea" >
+                        {{editor content=data.description target="data.description" button=true owner=owner editable=editable}}
+                    </div>
+                </div>
+
             </div>
         </div>
         <div class="tab effects" data-group="primary" data-tab="effects">
             {{> "systems/torgeternity/templates/parts/active-effects.hbs"}}
         </div>
-    
-    </secton>        
+
+    </section>
 </form>

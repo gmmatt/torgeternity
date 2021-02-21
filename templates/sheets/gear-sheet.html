@@ -2,8 +2,8 @@
     <h3 class="item-type"><span>{{localize "torgeternity.itemSheetDescriptions.generalGear"}}</span></h3>
 
     <header class="sheet-header">
-        <img src="{{item.img}}" data-edit="img" title="{{item.name}}" height="64" width="64"/>
-        <h1><input name="name" type="text" value="{{item.name}}" placeholder="Firearm Name" /></h1>
+        <img src="{{item.img}}" data-edit="img" title="{{item.name}}" />
+        <h1><input name="name" type="text" value="{{item.name}}" placeholder="gear name" /></h1>
     </header>
 
     <nav class="sheet-tabs item-tabs tabs" data-group="primary">
@@ -11,7 +11,7 @@
         <a class="item" data-tab="effects">{{localize "torgeternity.sheetLabels.effects"}}</a>
     </nav>
 
-    <secton class="sheet-body"  >
+    <section class="sheet-body"  >
 
         <div class="tab stats" data-group="primary" data-tab="stats">
 
@@ -48,6 +48,6 @@
             {{> "systems/torgeternity/templates/parts/active-effects.hbs"}}
         </div>
     
-    </secton>        
+    </section>        
 
 </form>
