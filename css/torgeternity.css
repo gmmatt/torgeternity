@@ -1214,7 +1214,71 @@ a:hover {
   padding: 5px 5px;
 }
 
+.item .window-content form.item-sheet .effects .item-list {
+  padding: 0px;
+}
+
 .item .window-content form.item-sheet .effects .effects-list {
+  padding: 0px;
+}
+
+.item .window-content form.item-sheet .effects .effects-heading {
   color: white;
   background-color: black;
+  margin: 2px 0;
+  align-items: center;
+  font-weight: bold;
+  font-family: "Palatino Linotype";
+}
+
+.item .window-content form.item-sheet .effects .effects-item {
+  text-align: center;
+  border-left: 1px solid #c9c7b8;
+  border-right: 1px solid #c9c7b8;
+  font-size: 12px;
+  color: black;
+}
+
+.item .window-content form.item-sheet .effects .effect-name {
+  white-space: nowrap;
+  overflow-x: hidden;
+  text-align: left;
+  font-family: "Palatino Linotype";
+  padding: 0px 0px 0px 10px;
+  width: 25%;
+}
+
+.item .window-content form.item-sheet .effects .effect-section-title {
+  width: 25%;
+  padding: 0px 0px 0px 10px;
+}
+
+.item .window-content form.item-sheet .effects .effect-source,
+.item .window-content form.item-sheet .effects .effect-duration,
+.item .window-content form.item-sheet .effects .effect-controls {
+  text-align: center;
+  border-left: 1px solid #c9c7b8;
+  border-right: 1px solid #c9c7b8;
+  font-size: 12px;
+  font-family: "Palatino Linotype";
+  width: 25%;
+}
+
+.item .window-content form.item-sheet .effects .effect-controls {
+  border: none;
+  flex: 1;
+}
+
+.item .window-content form.item-sheet .effects .effect-item-image {
+  flex: 0 0 30px;
+  height: 30px;
+  background-size: 30px;
+  border: none;
+  margin-right: 5px;
+}
+
+.item .window-content form.item-sheet .effects .effect-toggle,
+.item .window-content form.item-sheet .effects .effect-edit,
+.item .window-content form.item-sheet .effects .effect-delete {
+  padding: 5px;
 }

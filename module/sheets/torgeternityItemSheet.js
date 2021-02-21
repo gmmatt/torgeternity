@@ -13,6 +13,11 @@ export default class torgeternityItemSheet extends ItemSheet {
             this.options.width = this.position.width = 530;
             this.options.height = this.position.height = 310;
         }
+
+        if ( this.object.data.type === "firearm") {
+            this.options.width = this.position.width = 530;
+            this.options.height = this.position.height = 600;
+        }
     }
 
     static get defaultOptions() {
