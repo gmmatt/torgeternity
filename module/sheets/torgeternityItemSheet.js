@@ -4,6 +4,12 @@ export default class torgeternityItemSheet extends ItemSheet {
     constructor(...args) {
         super(...args);
 
+        switch (this.object.data.type){
+
+            case "armor":
+
+        }
+
         if ( this.object.data.type === "specialability" ) {
             this.options.width= this.position.width = 530;
             this.options.height = this.position.height = 300;
@@ -18,7 +24,7 @@ export default class torgeternityItemSheet extends ItemSheet {
     static get defaultOptions() {
         return mergeObject(super.defaultOptions, {
             width: 530,
-            height: 550,
+            height: 580,
             classes: ["torgeternity", "sheet", "item"],
             tabs: [{navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "stats"}],
             scrollY: [".stats", ".effects", ".background"],

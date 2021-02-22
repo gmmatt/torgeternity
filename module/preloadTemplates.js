@@ -22,6 +22,19 @@ export const preloadTemplates = async function () {
         "systems/torgeternity/templates/actors/stormknight/powers.hbs",
         "systems/torgeternity/templates/actors/stormknight/xp.hbs",
 
+        // ACTOR--threats
+        "systems/torgeternity/templates/actors/threat/main.hbs",
+        "systems/torgeternity/templates/actors/threat/attributes.hbs",
+        "systems/torgeternity/templates/actors/threat/skills.hbs",
+        "systems/torgeternity/templates/actors/threat/header.hbs",
+        "systems/torgeternity/templates/actors/threat/perks-details.hbs",
+        "systems/torgeternity/templates/actors/threat/defense.hbs",
+        "systems/torgeternity/templates/actors/threat/weapons-list.hbs",
+        "systems/torgeternity/templates/actors/threat/others.hbs",
+        "systems/torgeternity/templates/actors/threat/perks-list.hbs",
+        "systems/torgeternity/templates/actors/threat/gear.hbs",
+        "systems/torgeternity/templates/actors/threat/powers.hbs",
+        "systems/torgeternity/templates/actors/threat/xp.hbs",
 
         //active effect part: 
         "systems/torgeternity/templates/parts/active-effects.hbs",
