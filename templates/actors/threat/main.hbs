@@ -1,7 +1,7 @@
 <form class="actor-sheet {{cssClass}} sheet" autocomplete="off">
     <h3 class="actor-type"><span>{{localize "torgeternity.sheetLabels.threat"}}</span></h3>
 
-    <header class="sheet-header">
+    <header class="sheet-header threat">
         <img src="{{actor.img}}" data-edit="img" title="{{actor.name}}"  />
         <h1><input name="name" type="text" value="{{actor.name}}" placeholder="Threat Name" /></h1>
     </header>
@@ -29,11 +29,6 @@
                 <span class="vital-box">
                     <a class="item-control possibility-roll" title="Possibility Roll">Possibilities: </a>
                     <input name="data.other.possibilities" type="number" value="{{data.other.possibilities}}" data-dtype="Number" class="small-input" />
-                </span>
-            </td>
-            <td style="text-align:center" width="10%">
-                <span class="vital-box">
-                    <a class="item-control up-roll" title="Up Roll">Up</a>
                 </span>
             </td>
             </tr>
@@ -255,7 +250,7 @@
 
         </div>
 
-        <div class="tab perks" style="height:400px;overflow:scroll" data-group="primary" data-tab="perks">
+        <div class="tab perks perks-list" style="height:400px;overflow:scroll" data-group="primary" data-tab="perks">
 
             <div class="list-section-heading">
                 {{localize "torgeternity.sheetLabels.specialAbility"}}
@@ -265,9 +260,10 @@
 
             <ol class="item-list">
                 {{#each specialability as |item id|}}
-                <li class="item" data-item-id="{{item._id}}">
-                    <div class="item-row flexrow">
-                        <img src="{{item.img}}" title="{{item.name}}" width="30" height="30" />
+                <li class="item block" data-item-id="{{item._id}}">
+
+                    <div class="item-row flexrow ">
+                        <img src="{{item.img}}" title="{{item.name}}" />
                         <a class="item-name">{{item.name}}</a>
                         <div class="item-controls">
                             <a class="item-control item-tochat" title="Send to Chat"><i class="fas fa-comment"></i></a>
@@ -275,6 +271,7 @@
                             <a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
                         </div>
                     </div>
+
                     <div class="item-detail">
                         <div class="item-dropdown-description">
                             {{{item.data.description}}}
@@ -298,7 +295,7 @@
                         </div>
                     </div>
                     <div class="item-detail">
-                        <div class="item-dropdown-description">
+                        <div class="item-dropdown-extras">
                             {{{item.data.description}}}
                         </div>
                     </div>

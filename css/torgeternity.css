@@ -787,6 +787,10 @@ form.actor-sheet header input[name="name"] {
   background-size: cover;
 }
 
+.window-content .actor-sheet .sheet-header.threat {
+  flex: none;
+}
+
 .window-content .actor-sheet .attributes {
   grid-column: 1/5;
   grid-row: 2/3;

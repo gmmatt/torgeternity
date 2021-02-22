@@ -383,6 +383,10 @@ form.actor-sheet {
         }
     }
 
+    .sheet-header.threat {
+        flex:none;
+    }
+
     // -----specific for attributs block-------this could be in a different file with an include property
     .attributes {
         grid-column: 1/5;
