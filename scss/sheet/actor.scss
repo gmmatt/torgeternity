@@ -35,8 +35,51 @@
 }
 
 
+form.actor-sheet {
+    .actor-type {
+        background: url(../images/separatorRound.png);
+        position: absolute;
+        transform: rotateZ(-90deg);
+        left: -150px;
+        top: 180px;
+        width: 300px;
+        background-size: 100% 100%;
+        text-align: right;
+        text-transform: uppercase;
+
+        span {
+            background: url(../images/type_back.png);
+            color: rgb(0, 0, 0);
+            text-shadow: 0px 0px 2px black;
+            background-size: 100% 100%;
+            padding: 3px 20px;
+
+        }
+    }
+
+    padding: 10px;
+
+    header {
+        display:inline;
+        input[name="name"] {
+            border: none;
+            text-transform: uppercase;
+            text-shadow: 0px -2px 10px #0e0909;
+            font-family: Alaska;
+            text-align: center;
+        }
+
+        margin-top: 15px;
+
+    }
+}
+
 .window-content .actor-sheet {
     color: black;
+
+    .threat-stat-line {
+        flex:none; 
+    }
 
     section.sheet-body {
         height: 100%;
@@ -68,12 +111,9 @@
 
     }
 
-    .threat-tab[data-tab].active {
+    .tab.threat-block-tab[data-tab].active {
         display:inline;
     }
-
-
-
 
     .block {
         border: solid 4px;

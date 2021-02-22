@@ -6,6 +6,11 @@ export default class torgeternityActorSheet extends ActorSheet {
     constructor(...args) {
         super(...args);
 
+        if ( this.object.data.type === "threat" ) {
+            this.options.width= this.position.width = 400;
+            this.options.height = this.position.height = 550;
+        };
+
         this._filters = {
             effects: new Set()
         }
