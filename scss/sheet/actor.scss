@@ -378,7 +378,7 @@ form.actor-sheet {
             text-align: center;
             width: 40px;
             height: 40px;
-            border-radius: 15px;
+            border-radius: 50%;
             background: url(../images/roundBack.webp);
             background-size: cover
         }
@@ -422,7 +422,7 @@ form.actor-sheet {
                     text-align: center;
                     width: 40px;
                     height: 40px;
-                    border-radius: 15px;
+                    border-radius: 50%;
                     background: url(../images/roundBack.webp);
                     background-size: cover
                 }
@@ -662,6 +662,7 @@ form.actor-sheet {
             width: 50px;
             height: 50px;
             border: none;
+            border-radius:50%
         }
     }
 
@@ -680,10 +681,6 @@ form.actor-sheet {
                 display: block
             }
         }
-
-
-
-
         h3.vital-box {
             justify-content: space-between;
             display: flex;
