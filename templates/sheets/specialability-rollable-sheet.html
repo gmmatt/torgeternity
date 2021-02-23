@@ -1,14 +1,13 @@
-<form class="{{cssClass}} item-sheet specialability-sheet" autocomplete="off" style="height:250px">
+<form class="{{cssClass}} item-sheet specialability-sheet" autocomplete="off" >
+    <h3 class="item-type"><span>{{localize "torgeternity.itemSheetDescriptions.specialability"}}</span></h3>
+
     <header class="sheet-header">
-        <img src="{{item.img}}" data-edit="img" title="{{item.name}}" height="64" width="64"/>
-        <h1><input name="name" type="text" value="{{item.name}}" placeholder="Firearm Name" style="background-color:white;border-radius:10px;width:260px;font-family:'Palatino Linotype';font-size:22px"/></h1>
-        <h1 style="font-size:24px;text-align:right;font-family:'Palatino Linotype'">{{localize "torgeternity.itemSheetDescriptions.specialability"}}</h1>
+        <img src="{{item.img}}" data-edit="img" title="{{item.name}}"/>
+        <h1><input name="name" type="text" value="{{item.name}}" placeholder="spacial ability Name" /></h1>
     </header>
     <div class="sheet-content">
-        <table style="background-color:transparent;border: 0px solid black;height:200px">
-        <tr>
-            <td style="width:25%;vertical-align:top"> <!-- left column -->
-                <p class="item-data-label">
+        <div class="asside">
+            <p class="item-data-label">
                     {{localize "torgeternity.powers.skill"}}
                 </p>
                 <select name="data.attackWith" class="input-box">
@@ -21,17 +20,14 @@
                 <p class="item-data-label">
                     {{localize "torgeternity.powers.damage"}}
                 </p>
-                <input name="data.damage" type="text" value="{{data.damage}}" class="input-box" />
-             </td>
-            <td style="width:65%"> <!-- right column -->
-                <p class="item-data-label">
-                    {{localize "torgeternity.gear.description"}}
-                </p>
-                <div style="padding:0px 0px 0px 10px;height:150px" class="item-description-textarea">
-                    <textarea name="data.description" class="item-description-textarea" style="height:150px;border:none">{{data.description}}</textarea> 
+                <input name="data.damage" type="number" value="{{data.damage}}" class="input-box" />
+            </div>
+            <div class="main-content">
+                <div name="data.description" class="item-description-textarea">
+                    {{editor content=data.description target="data.description" button=true owner=owner editable=editable}}
                 </div>
-             </td> 
-        </tr>
-        </table>         
+                
+            </div> 
+              
     </div>
 </form>

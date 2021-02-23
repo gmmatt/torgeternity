@@ -1,24 +1,22 @@
 <form class="{{cssClass}} item-sheet" autocomplete="off">
+    <h3 class="item-type"><span>{{localize "torgeternity.itemSheetDescriptions.miracle"}}</span></h3>
     <header class="sheet-header">
-        <img src="{{item.img}}" data-edit="img" title="{{item.name}}" height="64" width="64"/>
-        <h1><input name="name" type="text" value="{{item.name}}" placeholder="Miracle Name" style="background-color:white;border-radius:10px;width:310px;font-family:'Palatino Linotype';font-size:22px"/></h1>
-        <h1 style="font-size:36px;text-align:right;font-family:'Palatino Linotype'">{{localize "torgeternity.itemSheetDescriptions.miracle"}}</h1>
+        <img src="{{item.img}}" data-edit="img" title="{{item.name}}" />
+        <h1><input name="name" type="text" value="{{item.name}}" placeholder="Miracle Name" /></h1>
     </header>
 
     <nav class="sheet-tabs item-tabs tabs" data-group="primary">
-        <a class="item" data-tab="stats" style="vertical-align:center">{{localize "torgeternity.sheetLabels.stats"}}</a>
+        <a class="item" data-tab="stats" >{{localize "torgeternity.sheetLabels.stats"}}</a>
         <a class="item" data-tab="effects">{{localize "torgeternity.sheetLabels.effects"}}</a>
     </nav>
 
-    <secton class="sheet-body"  style="display:flex;flex-direction:column">
+    <section class="sheet-body"  >
 
         <div class="tab stats" data-group="primary" data-tab="stats">
 
             <div class="sheet-content">
-                <table style="background-color:transparent;border: 0px solid black">
-                <tr>
-                    <td style="width:25%;vertical-align:top"> <!-- left column -->
-                        <p class="item-data-label">
+                <div class="asside">
+                    <p class="item-data-label">
                             {{localize "torgeternity.powers.axiom"}}
                         </p>
                         <input name="data.axiom" type="text" value="{{data.axiom}}" class="input-box" />
@@ -35,23 +33,23 @@
                         <p class="item-data-label">
                             {{localize "torgeternity.powers.skilllevel"}}
                         </p>
-                        <input name="data.skilllevel" type="text" value="{{data.skilllevel}}" class="input-box" />
+                        <input name="data.skilllevel" type="number" value="{{data.skilllevel}}" class="input-box" />
                         <p class="item-data-label">
                             {{localize "torgeternity.powers.castingtime"}}
                         </p>
-                        <input name="data.castingtime" type="text" value="{{data.castingtime}}" class="input-box" />
+                        <input name="data.castingtime" type="number" value="{{data.castingtime}}" class="input-box" />
                         <p class="item-data-label">
                             {{localize "torgeternity.powers.dn"}}
                         </p>
-                        <input name="data.dn" type="text" value="{{data.dn}}" class="input-box" />
+                        <input name="data.dn" type="number" value="{{data.dn}}" class="input-box" />
                         <p class="item-data-label">
                             {{localize "torgeternity.powers.range"}}
                         </p>
-                        <input name="data.range" type="text" value="{{data.range}}" class="input-box" />
+                        <input name="data.range" type="number" value="{{data.range}}" class="input-box" />
                         <p class="item-data-label">
                             {{localize "torgeternity.powers.duration"}}
                         </p>
-                        <input name="data.duration" type="text" value="{{data.duration}}" class="input-box" />
+                        <input name="data.duration" type="number" value="{{data.duration}}" class="input-box" />
                         <p class="item-data-label">
                             Attack?/{{localize "torgeternity.powers.damage"}}
                         </p>
@@ -62,35 +60,34 @@
                             {{/each}}
                             {{/select}}
                         </select>
-                        <input name="data.damage" type="text" value="{{data.damage}}" class="input-box-small" />
-                    </td>
-                    <td style="width:65%"> <!-- right column -->
+                        <input name="data.damage" type="number" value="{{data.damage}}" class="input-box-small" />
+                    </div>
+                    <div class="main-content">
                         <p class="item-data-label">
                             {{localize "torgeternity.gear.description"}}
                         </p>
-                        <div class="item-description-textarea" style="padding:0px 0px 0px 10px;height:200px">
+                        <div class="item-description-textarea" >
                             {{editor content=data.description target="data.description" button=true owner=owner editable=editable}}
                         </div>
                         <p class="item-data-label">
                             {{localize "torgeternity.sheetLabels.goodResult"}}
                         </p>
-                        <div style="padding:0px 0px 0px 10px">
-                            <textarea name="data.good" class="item-description-textarea" style="height:55px">{{data.good}}</textarea>
+                        <div >
+                            <textarea name="data.good" class="item-description-textarea" >{{data.good}}</textarea>
                         </div>
                         <p class="item-data-label">
                             {{localize "torgeternity.sheetLabels.outstandingResult"}}
                         </p>
-                        <div style="padding:0px 0px 0px 10px">
-                            <textarea name="data.outstanding" class="item-description-textarea" style="height:55px">{{data.outstanding}}</textarea>
+                        <div >
+                            <textarea name="data.outstanding" class="item-description-textarea" >{{data.outstanding}}</textarea>
                         </div>
-                    </td> 
-                </tr>
-                </table>         
+                    </div> 
+                       
             </div>
         </div>
         <div class="tab effects" data-group="primary" data-tab="effects">
             {{> "systems/torgeternity/templates/parts/active-effects.hbs"}}
         </div>
     
-    </secton>        
+    </section>        
 </form>

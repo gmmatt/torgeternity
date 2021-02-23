@@ -6,6 +6,11 @@ export default class torgeternityActorSheet extends ActorSheet {
     constructor(...args) {
         super(...args);
 
+        if ( this.object.data.type === "threat" ) {
+            this.options.width= this.position.width = 400;
+            this.options.height = this.position.height = 550;
+        };
+
         this._filters = {
             effects: new Set()
         }
@@ -15,7 +20,7 @@ export default class torgeternityActorSheet extends ActorSheet {
         return mergeObject(super.defaultOptions, {
             classes: ["torgeternity", "sheet", "actor"],
             width: 600,
-            height: 600,
+            height: 750,
             tabs: [{navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "stats"}],
             scrollY: [".stats", ".perks", ".gear", ".powers", "effects", "background"],
             dragdrop: [{dragSelector: ".item-list .item", dropSelector: null}]
@@ -23,7 +28,10 @@ export default class torgeternityActorSheet extends ActorSheet {
     }
 
     get template() {
-        return `systems/torgeternity/templates/sheets/${this.actor.data.type}-sheet.hbs`;
+
+        //modified path => one folder per type
+        return `systems/torgeternity/templates/actors/${this.actor.data.type}/main.hbs`;
+        
     }
 
 
@@ -139,41 +147,21 @@ export default class torgeternityActorSheet extends ActorSheet {
   
         // Delete Inventory Item
         html.find('.item-delete').click(ev => {
-            let applyChanges = false;
-            new Dialog({
-                title: "Confirm Deletion",
-                content: "Are you sure you want to delete this? It will be permanently removed from the sheet.",
-                buttons: {
-                    yes: {
-                        icon: '<i class="fas fa-check"></i>',
-                        label: "Yes",
-                        callback: () => applyChanges = true
-                    },
-                    no: {
-                        icon: '<i class="fas fa-times"></i>',
-                        label: "No"
-                    },
-                },
-                default: "yes",
-                close: html => {
-                    if (applyChanges) {
-                        const li = $(ev.currentTarget).parents(".item");
-                        this.actor.deleteOwnedItem(li.data("itemId"));
-                        li.slideUp(200, () => this.render(false));            
-                    }
-                }                
-            }).render(true);
-        }); 
-
+            const li = $(ev.currentTarget).parents(".item");
+            this.actor.deleteOwnedItem(li.data("itemId"));
+            li.slideUp(200, () => this.render(false));
+      }); 
         // Toggle Item Detail Visibility
         html.find('.item-name').click(ev => {
-            let section = event.currentTarget.closest(".item");
+            let section = ev.currentTarget.closest(".item");
             let detail = $(section).find(".item-detail");
             let content = detail.get(0);
-            if (content.style.maxHeight) {
+            if (content != undefined && content.style.maxHeight) {
                 content.style.maxHeight = null;
             } else {
+                if (content){
                 content.style.maxHeight = content.scrollHeight + "px";
+                }
             }
       });
     }
@@ -252,32 +240,11 @@ export default class torgeternityActorSheet extends ActorSheet {
             weaponDamageType: weaponData.damageType,
             weaponDamage: weaponData.damage
         })
-
-//        const itemID = event.currentTarget.closest(".item").dataset.itemId;
-//        const item = this.actor.getOwnedItem(itemID);
-//
-//        item.weaponAttack();
-    }
+    };
 
     _onBonusRoll(event) {
         const itemID = event.currentTarget.closest(".item").dataset.itemId;
         const item = this.actor.getOwnedItem(itemID);
-        var weaponData = item.data.data;
-        var skillData = this.actor.data.data.skills[weaponData.attackWith];
-        torgchecks.weaponAttack ({
-            actor: this.actor,
-            item: item,
-            actorPic: this.actor.data.img,
-            skillName: weaponData.attackWith,
-            skillBaseAttribute: skillData.baseAttribute,
-            skillValue: skillData.value,
-            unskilledUse: skillData.unskilledUse,
-            strengthValue: this.actor.data.data.attributes.strength,
-            weaponName: item.data.name,
-            weaponDamageType: weaponData.damageType,
-            weaponDamage: weaponData.damage
-        })
-
 
         item.bonus();
     }
@@ -323,13 +290,13 @@ export default class torgeternityActorSheet extends ActorSheet {
         var toggleState = this.actor.data.data.editstate;
         event.preventDefault();
         if (toggleState === "none") {
-            document.getElementById("threat-editor").style.display = "inline";
-            this.actor.data.data.editstate = "inline";
-            this.actor.update({"data.editstate":"inline"});
+            document.getElementById("threat-editor").style.display = "block";
+            this.actor.data.data.editstate = "block";
+            this.actor.update({"data.editstate":"block"});
         } else if (toggleState === undefined) {
-            document.getElementById("threat-editor").style.display = "inline";
-            this.actor.data.data.editstate = "inline";
-            this.actor.update({"data.editstate":"inline"});
+            document.getElementById("threat-editor").style.display = "block";
+            this.actor.data.data.editstate = "block";
+            this.actor.update({"data.editstate":"block"});
         } else {
             document.getElementById("threat-editor").style.display = "none";
             this.actor.data.data.editstate = "none";
@@ -339,8 +306,10 @@ export default class torgeternityActorSheet extends ActorSheet {
 
     _onItemEquip(event) {
         var actor = this.actor;
-        const itemID = event.currentTarget.closest(".item").dataset.itemId;
+        const itemID = event.currentTarget.closest(".item").getAttribute("data-item-id");
+        console.log({itemID});
         const item = this.actor.getOwnedItem(itemID);
+        console.log({item})
         if (item.data.equipped === false) {
             item.data.equipped = true;
             item.update({"data.equipped": true})

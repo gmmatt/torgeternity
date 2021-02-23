@@ -1,5 +1,7 @@
 export const torgeternity = {};
-
+torgeternity.viewMode={
+    UI:true
+}
 torgeternity.attributeTypes = {
     charisma: "torgeternity.attributes.charisma",
     dexterity: "torgeternity.attributes.dexterity",
@@ -82,7 +84,8 @@ torgeternity.races = {
     edeinos: "torgeternity.races.edeinos",
     elf: "torgeternity.races.elf",
     aspirants: "torgeternity.races.aspirants",
-    theRace: "torgeternity.races.theRace"
+    theRace: "torgeternity.races.theRace",
+    other: "torgeternity.races.other"
 }
 
 torgeternity.skills = {
@@ -199,8 +202,3 @@ torgeternity.statusEffects = [
 
 
 ]
-
-torgeternity.yesNo = {
-    true: "torgeternity.yesNo.true",
-    false: "torgeternity.yesNo.false"
-}

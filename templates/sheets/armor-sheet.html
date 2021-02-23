@@ -1,68 +1,65 @@
 <form class="{{cssClass}} item-sheet" autocomplete="off">
+    <h3 class="item-type"><span>{{localize "torgeternity.itemSheetDescriptions.armor"}}</span></h3>
+
     <header class="sheet-header">
-        <img src="{{item.img}}" data-edit="img" title="{{item.name}}" height="64" width="64"/>
-        <h1><input name="name" type="text" value="{{item.name}}" placeholder="Firearm Name" style="background-color:white;border-radius:10px;width:300px;font-family:'Palatino Linotype"/></h1>
-        <h1 style="font-size:40px;text-align:right;font-family:'Palatino Linotype'">{{localize "torgeternity.itemSheetDescriptions.armor"}}</h1>
+        <img src="{{item.img}}" data-edit="img" title="{{item.name}}"  />
+        <h1><input name="name" type="text" value="{{item.name}}" placeholder="armor Name" /></h1>
     </header>
 
     <nav class="sheet-tabs item-tabs tabs" data-group="primary">
-        <a class="item" data-tab="stats" style="vertical-align:center">{{localize "torgeternity.sheetLabels.stats"}}</a>
+        <a class="item" data-tab="stats">{{localize "torgeternity.sheetLabels.stats"}}</a>
         <a class="item" data-tab="effects">{{localize "torgeternity.sheetLabels.effects"}}</a>
     </nav>
 
-    <secton class="sheet-body"  style="display:flex;flex-direction:column">
+    <section class="sheet-body">
 
         <div class="tab stats" data-group="primary" data-tab="stats">
             <div class="sheet-content">
-                <table style="background-color:transparent;border: 0px solid black">
-                <tr>
-                    <td style="width:25%;vertical-align:top"> <!-- left column -->
-                        <p class="item-data-label">
-                            {{localize "torgeternity.gear.cosm"}}
-                        </p>
-                        <select name="data.cosm" class="input-box">
-                            {{#select data.cosm}}
-                            {{#each config.cosmTypes as |name type|}}
-                            <option value="{{localize name}}">{{localize name}}</option>
-                            {{/each}}
-                            {{/select}}
-                        </select>
-                        <p class="item-data-label">
-                            {{localize "torgeternity.gear.techlevel"}}
-                        </p>
-                        <input name="data.techlevel" type="text" value="{{data.techlevel}}" class="input-box" />
-                        <p class="item-data-label">
-                            {{localize "torgeternity.gear.price"}}/{{localize "torgeternity.gear.value"}}
-                        </p>
-                        <input name="data.price" type="text" value="{{data.price}}" class="input-box-small" />
-                        <input name="data.value" type="text" value="{{data.value}}" class="input-box-small" />
-                        <p class="item-data-label">
-                            {{localize "torgeternity.gear.bonus"}}
-                        </p>
-                        <input name="data.bonus" type="text" value="{{data.bonus}}" class="input-box" />
-                        <p class="item-data-label">
-                            {{localize "torgeternity.gear.maxDex"}}
-                        </p>
-                        <input name="data.maxDex" type="text" value="{{data.maxDex}}" class="input-box" />
-                        <p class="item-data-label">
-                            {{localize "torgeternity.gear.notes"}}
-                        </p>
-                        <input name="data.notes" type="text" value="{{data.notes}}" class="input-box" />
-                    </td>
-                    <td style="width:65%"> <!-- right column -->
-                        <div style="padding:10px 10px">
-                            <div name="data.description" class="item-description-textarea">
-                                {{editor content=data.description target="data.description" button=true owner=owner editable=editable}}
-                            </div>
-                        </div>
-                    </td> 
-                </tr>
-                </table>         
+                <div class="asside">
+                    <p class="item-data-label">
+                        {{localize "torgeternity.gear.cosm"}}
+                    </p>
+                    <select name="data.cosm" class="input-box">
+                        {{#select data.cosm}}
+                        {{#each config.cosmTypes as |name type|}}
+                        <option value="{{localize name}}">{{localize name}}</option>
+                        {{/each}}
+                        {{/select}}
+                    </select>
+                    <p class="item-data-label">
+                        {{localize "torgeternity.gear.techlevel"}}
+                    </p>
+                    <input name="data.techlevel" type="number" value="{{data.techlevel}}" class="input-box" />
+                    <p class="item-data-label">
+                        {{localize "torgeternity.gear.price"}}/{{localize "torgeternity.gear.value"}}
+                    </p>
+                    <input name="data.price" type="number" value="{{data.price}}" class="input-box-small" />
+                    <input name="data.value" type="number" value="{{data.value}}" class="input-box-small" />
+                    <p class="item-data-label">
+                        {{localize "torgeternity.gear.bonus"}}
+                    </p>
+                    <input name="data.bonus" type="number" value="{{data.bonus}}" class="input-box" />
+                    <p class="item-data-label">
+                        {{localize "torgeternity.gear.maxDex"}}
+                    </p>
+                    <input name="data.maxDex" type="number" value="{{data.maxDex}}" class="input-box" />
+                    <p class="item-data-label">
+                        {{localize "torgeternity.gear.notes"}}
+                    </p>
+                    <input name="data.notes" type="text" value="{{data.notes}}" class="input-box" />
+                </div>
+                <div class="main-content">
+                    <div name="data.description" class="item-description-textarea">
+                        {{editor content=data.description target="data.description" button=true owner=owner editable=editable}}
+                    </div>
+                </div>
+
+
             </div>
         </div>
 
         <div class="tab effects" data-group="primary" data-tab="effects">
             {{> "systems/torgeternity/templates/parts/active-effects.hbs"}}
         </div>
-    </secton>
+    </section>
 </form>

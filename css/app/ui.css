@@ -1,0 +1,160 @@
+body {
+  font-family: Berlin;
+}
+
+body ::-webkit-scrollbar-thumb {
+  outline: none;
+  border-radius: 3px;
+  background: #227878;
+  border: 1px solid #efedeb;
+}
+
+button:hover,
+button:focus {
+  box-shadow: 0 0 10px #3bb3b3;
+}
+
+a:hover {
+  text-shadow: 0 0 10px #3bb3b3;
+}
+
+.app,
+.window-app {
+  border-radius: 5px;
+  box-shadow: 0 0 15px #122529;
+  padding-bottom: 0.5em;
+  color: #707070;
+  z-index: 30;
+}
+
+.app input[type="text"]::-moz-placeholder, .app input[type="number"]::-moz-placeholder, .window-app input[type="text"]::-moz-placeholder, .window-app input[type="number"]::-moz-placeholder {
+  color: rgba(0, 0, 0, 0.472);
+  text-shadow: 0px 0px 10px black;
+}
+
+.app input[type="text"]:-ms-input-placeholder, .app input[type="number"]:-ms-input-placeholder, .window-app input[type="text"]:-ms-input-placeholder, .window-app input[type="number"]:-ms-input-placeholder {
+  color: rgba(0, 0, 0, 0.472);
+  text-shadow: 0px 0px 10px black;
+}
+
+.app input[type="text"]::placeholder,
+.app input[type="number"]::placeholder,
+.window-app input[type="text"]::placeholder,
+.window-app input[type="number"]::placeholder {
+  color: rgba(0, 0, 0, 0.472);
+  text-shadow: 0px 0px 10px black;
+}
+
+.app option,
+.window-app option {
+  background: grey;
+}
+
+.app optgroup,
+.window-app optgroup {
+  background: #444242;
+}
+
+.app textarea,
+.window-app textarea {
+  color: white;
+}
+
+.app div.form-group,
+.window-app div.form-group {
+  margin: 10px;
+  padding-bottom: 5px;
+  border-bottom: 2px solid black;
+}
+
+.window-app .window-header {
+  background: url(../images/tab-header.png);
+  background-size: 100% 100%;
+  font-family: Alaska;
+  font-weight: bold;
+  color: white;
+}
+
+#controls .scene-control,
+#controls .control-tool,
+#controls .scene-control,
+#controls .control-tool {
+  border: 1px solid black;
+  color: grey;
+  box-shadow: none;
+}
+
+#controls .scene-control,
+#controls .control-tool,
+#controls .scene-control:hover,
+#controls .control-tool:hover {
+  background: #0e1a1a;
+  color: grey;
+  background-size: cover;
+  border: none;
+}
+
+#controls .scene-control .fa,
+#controls .scene-control .fas,
+#controls .control-tool .fa,
+#controls .control-tool .fas,
+#controls .scene-control:hover .fa,
+#controls .scene-control:hover .fas,
+#controls .control-tool:hover .fa,
+#controls .control-tool:hover .fas {
+  font-weight: 600;
+  font-size: 16px;
+}
+
+#controls .scene-control.active,
+#controls .control-tool.active,
+#controls .scene-control:hover,
+#controls .control-tool:hover {
+  color: white;
+  text-shadow: black 0px 0px 15px;
+  box-shadow: none;
+  border: none;
+  background: #1d3838;
+}
+
+#sidebar {
+  color: white;
+  background-image: url(../images/thunder.png);
+  background-size: cover;
+}
+
+#sidebar #sidebar-tabs {
+  flex: 0 0 32px;
+  box-sizing: border-box;
+  margin: 0 0 5px;
+  border-bottom: 1px solid #2c6d6d;
+  box-shadow: 0 0 10px #227878;
+}
+
+#sidebar #sidebar-tabs > .item.active {
+  color: #FFF;
+  border: 1px solid #154949;
+  border-bottom: none;
+  box-shadow: 0 0 6px inset #154949;
+}
+
+#sidebar .tabs .item.active {
+  text-shadow: 0 0 10px #154949;
+}
+
+#sidebar a:hover {
+  text-shadow: 0 0 10px #001aff;
+}
+
+.dialog-button {
+  color: #b4b4b4;
+}
+
+#controls,
+#logo,
+#navigation,
+#sidebar,
+#hotbar,
+#players {
+  transition: all 500ms cubic-bezier(0.42, 0, 0.58, 1) 10ms;
+}

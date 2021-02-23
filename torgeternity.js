@@ -4,10 +4,17 @@ import torgeternityItem from "./module/torgeternityItem.js";
 import torgeternityActor from "./module/torgeternityActor.js";
 import torgeternityItemSheet from "./module/sheets/torgeternityItemSheet.js";
 import torgeternityActorSheet from "./module/sheets/torgeternityActorSheet.js";
-  
+import {sheetResize}  from "./module/sheetResize.js";
+ 
+
+import {preloadTemplates} from "./module/preloadTemplates.js";
+import { toggleViewMode } from "./module/viewMode.js";
+
 
 Hooks.once("init", function() {
     console.log("torgeternity | Initializing Torg Eternity System");
+
+//-------moving to a n imported module ?? ./modules/config.js
 
     CONFIG.torgeternity = torgeternity;
     CONFIG.Item.entityClass = torgeternityItem;
@@ -19,12 +26,25 @@ Hooks.once("init", function() {
 
     Actors.unregisterSheet("core", ItemSheet);
     Actors.registerSheet("torgeternity", torgeternityActorSheet, {makeDefault: true});
+    
+    
+//----------preloading handlebars templates for partials sheet 
+    preloadTemplates();
+//----------debug hooks
+CONFIG.debug.hooks=true;
 
-    loadTemplates([    
-        // Shared Partials
-        "systems/torgeternity/templates/parts/active-effects.hbs",    
-    ]);
+
 });
+
+//-------------once everything ready
+Hooks.once("ready", function() {
+sheetResize();
+toggleViewMode();
+var logo = document.getElementById("logo");
+logo.style.position="absolute"
+logo.setAttribute("src", "/systems/torgeternity/images/vttLogo.png");
+})
+//----all this could be draft in another imported module ?? maybe like ./modules/handlebarsHelpers.js
 
 Handlebars.registerHelper("concatSkillValue", function(skillName){
     var skillValue = "{{data.skills." + skillName + ".value}}";
@@ -39,7 +59,7 @@ Handlebars.registerHelper("concatAttributeName", function(attributeName){
 Handlebars.registerHelper("concatSkillName", function(skillName){
     var localName = "torgeternity.skills." + skillName
     return localName;
-});
+})
 
 Handlebars.registerHelper("concatClearanceLevel", function(clearance){
     var localClearance = "torgeternity.clearances." + clearance;

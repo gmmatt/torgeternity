@@ -1,0 +1,45 @@
+<form class="actor-sheet {{cssClass}} threat sheet" autocomplete="off">
+
+    <!-- type -->
+    <h3 class="actor-type"><span>{{localize "torgeternity.sheetLabels.threat"}}</span></h3>
+    <!-- header -->
+    <header class="sheet-header threat block">
+        {{> "systems/torgeternity/templates/actors/threat/header.hbs"}}
+    </header>
+    {{!-- Sheet Tab Navigation --}}
+    <nav class="sheet-tabs tabs" data-group="primary">
+        <a class="item" data-tab="stats">{{localize "torgeternity.sheetLabels.stats"}}</a>
+        <a class="item" data-tab="perks">{{localize "torgeternity.sheetLabels.perksAbilities"}}</a>
+        <a class="item" data-tab="gear">{{localize "torgeternity.sheetLabels.gear"}}</a>
+        <a class="item" data-tab="powers">{{localize "torgeternity.sheetLabels.powers"}}</a>
+        <a class="item" data-tab="background">{{localize "torgeternity.sheetLabels.backgroundDescription"}}</a>
+    </nav>
+
+    <section class="sheet-body sheet-content">
+
+        <div class="tab threat-block-tab stats" data-group="primary" data-tab="stats">
+            {{> "systems/torgeternity/templates/actors/threat/stat-tab.hbs"}}
+        </div>
+
+        <div class="tab perks perks-list" data-group="primary" data-tab="perks">
+            {{> "systems/torgeternity/templates/actors/threat/perks-details.hbs"}}
+        </div>
+
+        <div class="tab gear" data-group="primary" data-tab="gear">
+            {{> "systems/torgeternity/templates/actors/threat/gears.hbs"}}
+        </div>
+
+        <div class="tab powers" data-group="primary" data-tab="powers">
+            {{> "systems/torgeternity/templates/actors/threat/powers.hbs"}}
+        </div>
+
+        <div class="tab background block" data-group="primary" data-tab="background">
+            <h1 class="list-section-heading">Background and notes</h1>
+            <div>
+            {{editor content=data.details.background target="data.details.background" button=true owner=owner
+            editable=editable}}</div>
+        </div>
+        
+
+    </section>
+</form>
