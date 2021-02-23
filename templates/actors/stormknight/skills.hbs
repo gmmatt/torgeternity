@@ -3,8 +3,8 @@
     <ul>
         <li class="dark">
             <span></span>
-            <span>{{localize "torgeternity.sheetLabels.attribute"}}</span>
-            <span>{{localize "torgeternity.sheetLabels.adds"}}</span>
+            <span class="skillAttr">{{localize "torgeternity.sheetLabels.attribute"}}</span>
+            <span class="skillAdd">{{localize "torgeternity.sheetLabels.adds"}}</span>
             <span>{{localize "torgeternity.sheetLabels.total"}}</span>
         </li>
         {{#if data.editstate}}
@@ -23,11 +23,11 @@
                     {{localize (concatSkillName name)}}
                 </a>            
             </span>
-            <span class="skill-roll">
+            <span class="skill-roll skillAttr">
                 {{localize (concatAttributeName content.baseAttribute)}}
             </span>
-            <span>
-                <input name="data.skills.{{name}}.adds" type="text" value="{{content.adds}}" data-dtype="Number" />
+            <span class="skillAdd">
+                <input name="data.skills.{{name}}.adds" type="number" value="{{content.adds}}" data-dtype="Number" />
             </span>
             <span class="skill-roll">
                 {{content.value}}
@@ -51,10 +51,10 @@
                     {{localize (concatSkillName name)}}
                 </a>            
             </span>
-            <span class="skill-roll">
+            <span class="skill-roll skillAttr">
                 {{localize (concatAttributeName content.baseAttribute)}}
             </span>
-            <span>
+            <span class="skillAdd">
                 <input name="data.skills.{{name}}.adds" type="number" class="small-input" value="{{content.adds}}"
                     data-dtype="Number" />
             </span>

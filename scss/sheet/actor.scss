@@ -60,7 +60,8 @@ form.actor-sheet {
     padding: 10px;
 
     header {
-        display:inline;
+        display: inline;
+
         input[name="name"] {
             border: none;
             text-transform: uppercase;
@@ -78,7 +79,7 @@ form.actor-sheet {
     color: black;
 
     .threat-stat-line {
-        flex:none; 
+        flex: none;
     }
 
     section.sheet-body {
@@ -112,7 +113,7 @@ form.actor-sheet {
     }
 
     .tab.threat-block-tab[data-tab].active {
-        display:inline;
+        display: inline;
     }
 
     .block {
@@ -337,7 +338,7 @@ form.actor-sheet {
             flex-direction: row;
 
             span {
-                display: block;                
+                display: block;
             }
         }
 
@@ -384,7 +385,7 @@ form.actor-sheet {
     }
 
     .sheet-header.threat {
-        flex:none;
+        flex: none;
     }
 
     // -----specific for attributs block-------this could be in a different file with an include property
@@ -614,7 +615,7 @@ form.actor-sheet {
             grid-row: 2/6;
             background: url(../images/bckg-hex.png);
             background-size: 100% 100%;
-            min-height:200px;
+            min-height: 200px;
             padding: 15% 10% 10% 10%;
         }
     }
@@ -704,6 +705,7 @@ form.actor-sheet {
             flex-direction: column;
 
         }
+
         .editor {
             width: 400px;
             height: 400px;
@@ -716,9 +718,9 @@ form.actor-sheet {
 
     .stat-block {
         grid-column: 1/9;
-        
+
         flex-direction: row;
-       
+
     }
 }
 
@@ -728,23 +730,24 @@ form.actor-sheet.threat {
     td {
         position: relative;
         line-height: 1.8;
+
         input {
-        right: 2px;
-        position: absolute;
+            right: 2px;
+            position: absolute;
+        }
     }
-    }
-     
-    
+
+
     .sheet-header {
-        flex-direction:row;
+        flex-direction: row;
     }
 
     .threat-edit {
-        vertical-align:top
+        vertical-align: top
     }
 
     .tab[data-tab].active {
-        display:block;
+        display: block;
 
         .list-section-heading {
             height: 40px;
@@ -757,55 +760,56 @@ form.actor-sheet.threat {
             display: flex;
             justify-content: center;
             align-items: center;
-    
+
             .item-create-rsa,
             .item-create-sa {
-                float:right;
-                padding:0px 5px 0px 5px;
+                float: right;
+                padding: 0px 5px 0px 5px;
 
             }
         }
 
         ol.item-list {
-            padding:0px;
+            padding: 0px;
 
             li {
-                display:block;
-                overflow:hidden;
-                padding-bottom:0px;
+                display: block;
+                overflow: hidden;
+                padding-bottom: 0px;
 
                 img {
-                    height:30px;
-                    width:30px;
-                    max-width:30px;
+                    height: 30px;
+                    width: 30px;
+                    max-width: 30px;
                 }
 
                 .block {
                     border: 1px 0px 0px 0px black;
-                    box-shadow:none
+                    box-shadow: none
                 }
+
                 .item-name {
-                    text-align:center;
-                    display:inline;
-                    max-width:500px;
+                    text-align: center;
+                    display: inline;
+                    max-width: 500px;
                 }
 
                 .item-controls {
-                    justify-content:end;
-                    max-width:80px;
-                    display:inline;
-                    
+                    justify-content: end;
+                    max-width: 80px;
+                    display: inline;
+
                     .item-control {
-                        margin-right:5px;
+                        margin-right: 5px;
                     }
 
                 }
 
                 .item-detail {
-                    max-height:0px;
+                    max-height: 0px;
 
                     .item-dropdown-description {
-                        max-height:inherit;
+                        max-height: inherit;
                     }
 
                     .item-dropdown-extras {
@@ -814,13 +818,96 @@ form.actor-sheet.threat {
                         text-align: center;
                         background-color: #9e96868e;
                     }
-    
+
                 }
             }
-        }    
-    
-    
+        }
+
+
     }
 }
 
+.compact {
+    .window-content{
+        padding:1px
+    }
+    form.actor-sheet {
+        .block {
+            border: none;
+            margin: 0px;
+            padding: 2px;
 
+        }
+
+        nav.sheet-tabs {
+            transform: rotateZ(90deg) scale(0.7);
+        }
+
+        .tab[data-tab].active {
+            display: flex;
+            flex-direction: column;
+
+            .sheet-header {
+                p {
+                    display: none
+                }
+
+                div:last-child {
+                    display: none
+                }
+            }
+
+            .attributes,
+            .others {
+                input {
+                    background: none;
+                    height: 20px;
+                }
+            }
+
+            .skills {
+
+                .skillAttr,
+                .skillAdd {
+                    display: none;
+                }
+            }
+
+            .char_image,
+            .xp,
+            .defense {
+                display: none
+            }
+
+            .perks-list,
+            .weapons-list {
+                h3 {
+                    display: none
+                }
+
+                ;
+
+                img {
+                    display: none;
+                }
+
+                li {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                }
+            }
+
+            .background {
+                h1 {
+                    display: none
+                }
+                .editor{
+                    height: 100%;
+                }
+
+
+            }
+        }
+    }
+}

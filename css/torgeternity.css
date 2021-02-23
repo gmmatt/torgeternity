@@ -1212,6 +1212,75 @@ form.actor-sheet.threat .tab[data-tab].active ol.item-list li .item-detail .item
   background-color: #9e96868e;
 }
 
+.compact .window-content {
+  padding: 1px;
+}
+
+.compact form.actor-sheet .block {
+  border: none;
+  margin: 0px;
+  padding: 2px;
+}
+
+.compact form.actor-sheet nav.sheet-tabs {
+  transform: rotateZ(90deg) scale(0.7);
+}
+
+.compact form.actor-sheet .tab[data-tab].active {
+  display: flex;
+  flex-direction: column;
+}
+
+.compact form.actor-sheet .tab[data-tab].active .sheet-header p {
+  display: none;
+}
+
+.compact form.actor-sheet .tab[data-tab].active .sheet-header div:last-child {
+  display: none;
+}
+
+.compact form.actor-sheet .tab[data-tab].active .attributes input,
+.compact form.actor-sheet .tab[data-tab].active .others input {
+  background: none;
+  height: 20px;
+}
+
+.compact form.actor-sheet .tab[data-tab].active .skills .skillAttr,
+.compact form.actor-sheet .tab[data-tab].active .skills .skillAdd {
+  display: none;
+}
+
+.compact form.actor-sheet .tab[data-tab].active .char_image,
+.compact form.actor-sheet .tab[data-tab].active .xp,
+.compact form.actor-sheet .tab[data-tab].active .defense {
+  display: none;
+}
+
+.compact form.actor-sheet .tab[data-tab].active .perks-list h3,
+.compact form.actor-sheet .tab[data-tab].active .weapons-list h3 {
+  display: none;
+}
+
+.compact form.actor-sheet .tab[data-tab].active .perks-list img,
+.compact form.actor-sheet .tab[data-tab].active .weapons-list img {
+  display: none;
+}
+
+.compact form.actor-sheet .tab[data-tab].active .perks-list li,
+.compact form.actor-sheet .tab[data-tab].active .weapons-list li {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.compact form.actor-sheet .tab[data-tab].active .background h1 {
+  display: none;
+}
+
+.compact form.actor-sheet .tab[data-tab].active .background .editor {
+  height: 100%;
+}
+
 .item .window-content {
   padding: 0px;
 }
