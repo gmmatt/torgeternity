@@ -722,24 +722,89 @@ form.actor-sheet {
 }
 
 // Styling specific to threat sheet
+
 form.actor-sheet.threat {
     
+    .sheet-header {
+        flex-direction:row;
+    }
+
+    .threat-edit {
+        vertical-align:top
+    }
+
     .tab[data-tab].active {
         display:block;
+
+        .list-section-heading {
+            height: 40px;
+            font-size: 2em;
+            text-align: center;
+            background-image: url(../images/separator.png);
+            background-size: cover;
+            background-position: center;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+    
+            .item-create-rsa,
+            .item-create-sa {
+                float:right;
+                padding:0px 5px 0px 5px;
+
+            }
+        }
 
         ol.item-list {
             padding:0px;
 
             li {
                 display:block;
+                overflow:hidden;
+                padding-bottom:0px;
 
+                img {
+                    height:30px;
+                    width:30px;
+                    max-width:30px;
+                }
+
+                .block {
+                    border: 1px 0px 0px 0px black;
+                    box-shadow:none
+                }
                 .item-name {
-                    text-align:center
+                    text-align:center;
+                    display:inline;
+                    max-width:500px;
                 }
 
                 .item-controls {
                     justify-content:end;
+                    max-width:80px;
+                    display:inline;
+                    
+                    .item-control {
+                        margin-right:5px;
+                    }
 
+                }
+
+                .item-detail {
+                    max-height:0px;
+
+                    .item-dropdown-description {
+                        max-height:inherit;
+                    }
+
+                    .item-dropdown-extras {
+                        font-style: italic;
+                        border: 1px solid grey;
+                        text-align: center;
+                        background-color: #9e96868e;
+                    }
+    
                 }
             }
         }    

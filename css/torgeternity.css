@@ -1118,8 +1118,35 @@ form.actor-sheet header input[name="name"] {
   flex-direction: row;
 }
 
+form.actor-sheet.threat .sheet-header {
+  flex-direction: row;
+}
+
+form.actor-sheet.threat .threat-edit {
+  vertical-align: top;
+}
+
 form.actor-sheet.threat .tab[data-tab].active {
   display: block;
+}
+
+form.actor-sheet.threat .tab[data-tab].active .list-section-heading {
+  height: 40px;
+  font-size: 2em;
+  text-align: center;
+  background-image: url(../images/separator.png);
+  background-size: cover;
+  background-position: center;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+form.actor-sheet.threat .tab[data-tab].active .list-section-heading .item-create-rsa,
+form.actor-sheet.threat .tab[data-tab].active .list-section-heading .item-create-sa {
+  float: right;
+  padding: 0px 5px 0px 5px;
 }
 
 form.actor-sheet.threat .tab[data-tab].active ol.item-list {
@@ -1128,14 +1155,50 @@ form.actor-sheet.threat .tab[data-tab].active ol.item-list {
 
 form.actor-sheet.threat .tab[data-tab].active ol.item-list li {
   display: block;
+  overflow: hidden;
+  padding-bottom: 0px;
+}
+
+form.actor-sheet.threat .tab[data-tab].active ol.item-list li img {
+  height: 30px;
+  width: 30px;
+  max-width: 30px;
+}
+
+form.actor-sheet.threat .tab[data-tab].active ol.item-list li .block {
+  border: 1px 0px 0px 0px black;
+  box-shadow: none;
 }
 
 form.actor-sheet.threat .tab[data-tab].active ol.item-list li .item-name {
   text-align: center;
+  display: inline;
+  max-width: 500px;
 }
 
 form.actor-sheet.threat .tab[data-tab].active ol.item-list li .item-controls {
   justify-content: end;
+  max-width: 80px;
+  display: inline;
+}
+
+form.actor-sheet.threat .tab[data-tab].active ol.item-list li .item-controls .item-control {
+  margin-right: 5px;
+}
+
+form.actor-sheet.threat .tab[data-tab].active ol.item-list li .item-detail {
+  max-height: 0px;
+}
+
+form.actor-sheet.threat .tab[data-tab].active ol.item-list li .item-detail .item-dropdown-description {
+  max-height: inherit;
+}
+
+form.actor-sheet.threat .tab[data-tab].active ol.item-list li .item-detail .item-dropdown-extras {
+  font-style: italic;
+  border: 1px solid grey;
+  text-align: center;
+  background-color: #9e96868e;
 }
 
 .item .window-content {

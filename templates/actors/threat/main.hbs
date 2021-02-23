@@ -84,11 +84,11 @@
                                 {{localize "torgeternity.skills.dodge"}} <input name="data.skills.dodge.value" type="number" class="small-input" value="{{data.skills.dodge.value}}" data-dtype="Number" /><br>
                                 {{localize "torgeternity.skills.energyWeapons"}} <input name="data.skills.energyWeapons.value" type="number" class="small-input" value="{{data.skills.energyWeapons.value}}" data-dtype="Number" /><br>
                                 {{localize "torgeternity.skills.evidenceAnalysis"}} <input name="data.skills.evidenceAnalysis.value" type="number" class="small-input" value="{{data.skills.evidenceAnalysis.value}}" data-dtype="Number" /><br>
-                            </td>
-                            <td width="25%">
                                 {{localize "torgeternity.skills.faith"}} <input name="data.skills.faith.value" type="number" class="small-input" value="{{data.skills.faith.value}}" data-dtype="Number" /><br>
                                 {{localize "torgeternity.skills.find"}} <input name="data.skills.find.value" type="number" class="small-input" value="{{data.skills.find.value}}" data-dtype="Number" /><br>
                                 {{localize "torgeternity.skills.fireCombat"}} <input name="data.skills.fireCombat.value" type="number" class="small-input" value="{{data.skills.fireCombat.value}}" data-dtype="Number" /><br>
+                            </td>
+                            <td width="25%">
                                 {{localize "torgeternity.skills.firstAid"}} <input name="data.skills.firstAid.value" type="number" class="small-input" value="{{data.skills.firstAid.value}}" data-dtype="Number" /><br>
                                 {{localize "torgeternity.skills.heavyWeapons"}} <input name="data.skills.heavyWeapons.value" type="number" class="small-input" value="{{data.skills.heavyWeapons.value}}" data-dtype="Number" /><br>
                                 {{localize "torgeternity.skills.intimidation"}} <input name="data.skills.intimidation.value" type="number" class="small-input" value="{{data.skills.intimidation.value}}" data-dtype="Number" /><br>
@@ -96,20 +96,18 @@
                                 {{localize "torgeternity.skills.landVehicles"}} <input name="data.skills.landVehicles.value" type="number" class="small-input" value="{{data.skills.landVehicles.value}}" data-dtype="Number" /><br>
                                 {{localize "torgeternity.skills.language"}} <input name="data.skills.language.value" type="number" class="small-input" value="{{data.skills.language.value}}" data-dtype="Number" /><br>
                                 {{localize "torgeternity.skills.lockpicking"}} <input name="data.skills.lockpicking.value" type="number" class="small-input" value="{{data.skills.lockpicking.value}}" data-dtype="Number" /><br>
-                            </td>
-                            <td width="25%">
                                 {{localize "torgeternity.skills.maneuver"}} <input name="data.skills.maneuver.value" type="number" class="small-input" value="{{data.skills.maneuver.value}}" data-dtype="Number" /><br>
                                 {{localize "torgeternity.skills.medicine"}} <input name="data.skills.medicine.value" type="number" class="small-input" value="{{data.skills.medicine.value}}" data-dtype="Number" /><br>
                                 {{localize "torgeternity.skills.meleeWeapons"}} <input name="data.skills.meleeWeapons.value" type="number" class="small-input" value="{{data.skills.meleeWeapons.value}}" data-dtype="Number" /><br>
                                 {{localize "torgeternity.skills.missileWeapons"}} <input name="data.skills.missileWeapons.value" type="number" class="small-input" value="{{data.skills.missileWeapons.value}}" data-dtype="Number" />   <br>                     
                                 {{localize "torgeternity.skills.persuasion"}} <input name="data.skills.persuasion.value" type="number" class="small-input" value="{{data.skills.persuasion.value}}" data-dtype="Number" /><br>
                                 {{localize "torgeternity.skills.precognition"}} <input name="data.skills.precognition.value" type="number" class="small-input" value="{{data.skills.precognition.value}}" data-dtype="Number" /><br>
+                            </td>
+                            <td width="25%">
                                 {{localize "torgeternity.skills.profession"}} <input name="data.skills.profession.value" type="number" class="small-input" value="{{data.skills.profession.value}}" data-dtype="Number" /><br>
                                 {{localize "torgeternity.skills.reality"}} <input name="data.skills.reality.value" type="number" class="small-input" value="{{data.skills.reality.value}}" data-dtype="Number" /><br>
                                 {{localize "torgeternity.skills.scholar"}} <input name="data.skills.scholar.value" type="number" class="small-input" value="{{data.skills.scholar.value}}" data-dtype="Number" /><br>
                                 {{localize "torgeternity.skills.science"}} <input name="data.skills.science.value" type="number" class="small-input" value="{{data.skills.science.value}}" data-dtype="Number" /><br>
-                            </td>
-                            <td width="25%">
                                 {{localize "torgeternity.skills.stealth"}} <input name="data.skills.stealth.value" type="number" class="small-input" value="{{data.skills.stealth.value}}" data-dtype="Number" /><br>
                                 {{localize "torgeternity.skills.streetwise"}} <input name="data.skills.streetwise.value" type="number" class="small-input" value="{{data.skills.streetwise.value}}" data-dtype="Number" />  <br>                      
                                 {{localize "torgeternity.skills.survival"}} <input name="data.skills.survival.value" type="number" class="small-input" value="{{data.skills.survival.value}}" data-dtype="Number" /><br>
@@ -214,15 +212,6 @@
                         </span>
                     </div>
 
-                <div class="threat-block">
-                    <b>{{localize "torgeternity.sheetLabels.perks"}}</b>:&nbsp;
-                    <span class="inline-skill-list">                        
-                        {{#each perk as |item id|}}
-                            <span class="inline-skill-item">{{item.name}}</span>
-                        {{/each}}
-                    </span>
-                </div>
-
                     <div class="threat-block">
                         <b>{{localize "torgeternity.sheetLabels.specialabilities"}}</b>:
                         <ul class="specialability-list">
@@ -257,15 +246,13 @@
 
             <div class="list-section-heading">
                 {{localize "torgeternity.sheetLabels.specialAbility"}}
-                <a class="item-control item-create-rsa" title="Create Rollable Special Ability"
-                    style="float:right;padding:0px 5px 0px 5px"><i class="fas fa-plus"></i></a>
-                <a class="item-control item-create-sa" title="Create Special Ability"
-                    style="float:right;padding:0px 5px 0px 5px"><i class="fas fa-plus"></i></a>
+                <a class="item-control item-create-rsa" title="Create Rollable Special Ability"><i class="fas fa-plus"></i></a>
+                <a class="item-control item-create-sa" title="Create Special Ability"><i class="fas fa-plus"></i></a>
             </div>
 
             <ol class="item-list">
                 {{#each specialability as |item id|}}
-                <li class="item block" data-item-id="{{item._id}}">
+                <li class="item" data-item-id="{{item._id}}">
 
                     <div class="item-row flexrow ">
                         <img src="{{item.img}}" title="{{item.name}}" />
@@ -301,7 +288,7 @@
                         </div>
                     </div>
                     <div class="item-detail">
-                        <div class="item-dropdown-extras">
+                        <div class="item-dropdown-description">
                             {{{item.data.description}}}
                         </div>
                     </div>
