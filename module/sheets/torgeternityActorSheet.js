@@ -153,13 +153,15 @@ export default class torgeternityActorSheet extends ActorSheet {
       }); 
         // Toggle Item Detail Visibility
         html.find('.item-name').click(ev => {
-            let section = event.currentTarget.closest(".item");
+            let section = ev.currentTarget.closest(".item");
             let detail = $(section).find(".item-detail");
             let content = detail.get(0);
-            if (content.style.maxHeight) {
+            if (content != undefined && content.style.maxHeight) {
                 content.style.maxHeight = null;
             } else {
+                if (content){
                 content.style.maxHeight = content.scrollHeight + "px";
+                }
             }
       });
     }
