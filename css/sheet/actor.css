@@ -592,6 +592,7 @@ form.actor-sheet header input[name="name"] {
   background: url(../images/bckg-hex.png);
   background-size: 100% 100%;
   min-height: 200px;
+  min-width: 150px;
   padding: 15% 10% 10% 10%;
 }
 
@@ -673,15 +674,6 @@ form.actor-sheet header input[name="name"] {
 
 .window-content .actor-sheet .threat-editor .threat-edit {
   flex-direction: column;
-}
-
-.window-content .actor-sheet .threat-editor .editor {
-  width: 400px;
-  height: 400px;
-  background: url(../images/bckg-hex.png);
-  background-size: 110% 110%;
-  padding: 20px;
-  background-position: center;
 }
 
 .window-content .actor-sheet .stat-block {
@@ -780,6 +772,15 @@ form.actor-sheet.threat .tab[data-tab].active ol.item-list li .item-detail .item
   border: 1px solid grey;
   text-align: center;
   background-color: #9e96868e;
+}
+
+form.actor-sheet.threat .tab[data-tab].active .editor {
+  width: 400px;
+  height: 400px;
+  background: url(../images/bckg-hex.png);
+  background-size: 110% 110%;
+  padding: 20px;
+  background-position: center;
 }
 
 .compact .window-content {

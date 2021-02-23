@@ -616,6 +616,7 @@ form.actor-sheet {
             background: url(../images/bckg-hex.png);
             background-size: 100% 100%;
             min-height: 200px;
+            min-width:150px;
             padding: 15% 10% 10% 10%;
         }
     }
@@ -703,14 +704,7 @@ form.actor-sheet {
 
         }
 
-        .editor {
-            width: 400px;
-            height: 400px;
-            background: url(../images/bckg-hex.png);
-            background-size: 110% 110%;
-            padding: 20px;
-            background-position: center;
-        }
+        
     }
 
     .stat-block {
@@ -819,7 +813,14 @@ form.actor-sheet.threat {
                 }
             }
         }
-
+        .editor {
+            width: 400px;
+           height: 400px;
+            background: url(../images/bckg-hex.png);
+            background-size: 110% 110%;
+            padding: 20px;
+            background-position: center;
+        }
 
     }
 }
