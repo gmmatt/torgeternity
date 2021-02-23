@@ -1118,6 +1118,26 @@ form.actor-sheet header input[name="name"] {
   flex-direction: row;
 }
 
+form.actor-sheet.threat .tab[data-tab].active {
+  display: block;
+}
+
+form.actor-sheet.threat .tab[data-tab].active ol.item-list {
+  padding: 0px;
+}
+
+form.actor-sheet.threat .tab[data-tab].active ol.item-list li {
+  display: block;
+}
+
+form.actor-sheet.threat .tab[data-tab].active ol.item-list li .item-name {
+  text-align: center;
+}
+
+form.actor-sheet.threat .tab[data-tab].active ol.item-list li .item-controls {
+  justify-content: end;
+}
+
 .item .window-content {
   padding: 0px;
 }

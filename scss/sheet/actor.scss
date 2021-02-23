@@ -721,3 +721,31 @@ form.actor-sheet {
     }
 }
 
+// Styling specific to threat sheet
+form.actor-sheet.threat {
+    
+    .tab[data-tab].active {
+        display:block;
+
+        ol.item-list {
+            padding:0px;
+
+            li {
+                display:block;
+
+                .item-name {
+                    text-align:center
+                }
+
+                .item-controls {
+                    justify-content:end;
+
+                }
+            }
+        }    
+    
+    
+    }
+}
+
+
