@@ -83,9 +83,9 @@ a:hover {
 #controls .control-tool,
 #controls .scene-control:hover,
 #controls .control-tool:hover {
-    background:  #0e1a1a;
-    color: grey;
-    background-size: cover;
+    background: url(../images/tab-header.png);
+    background-size: 100% 20%;
+    color: rgb(160, 159, 159);
     border: none;
    
 
@@ -103,9 +103,9 @@ a:hover {
 #controls .control-tool:hover {
     color: white;
     text-shadow: black 0px 0px 15px;
-    box-shadow: none;
+    box-shadow: 0px 0px 3px white;
     border: none;
-    background:  #1d3838;
+    background:  #5772a1;
 }
 
 
