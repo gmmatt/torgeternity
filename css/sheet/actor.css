@@ -687,6 +687,16 @@ form.actor-sheet header input[name="name"] {
   flex-direction: row;
 }
 
+form.actor-sheet.threat td {
+  position: relative;
+  line-height: 1.8;
+}
+
+form.actor-sheet.threat td input {
+  right: 2px;
+  position: absolute;
+}
+
 form.actor-sheet.threat .sheet-header {
   flex-direction: row;
 }
