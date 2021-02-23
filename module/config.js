@@ -1,5 +1,7 @@
 export const torgeternity = {};
-
+torgeternity.viewMode={
+    UI:true
+}
 torgeternity.attributeTypes = {
     charisma: "torgeternity.attributes.charisma",
     dexterity: "torgeternity.attributes.dexterity",

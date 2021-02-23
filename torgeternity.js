@@ -5,9 +5,10 @@ import torgeternityActor from "./module/torgeternityActor.js";
 import torgeternityItemSheet from "./module/sheets/torgeternityItemSheet.js";
 import torgeternityActorSheet from "./module/sheets/torgeternityActorSheet.js";
 import {sheetResize}  from "./module/sheetResize.js";
-  
+ 
 
 import {preloadTemplates} from "./module/preloadTemplates.js";
+import { toggleViewMode } from "./module/viewMode.js";
 
 
 Hooks.once("init", function() {
@@ -34,9 +35,11 @@ CONFIG.debug.hooks=true;
 
 
 });
-Hooks.once("ready", function() {
 
+//-------------once everything ready
+Hooks.once("ready", function() {
 sheetResize();
+toggleViewMode();
 })
 //----all this could be draft in another imported module ?? maybe like ./modules/handlebarsHelpers.js
 

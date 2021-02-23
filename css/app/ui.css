@@ -149,3 +149,12 @@ a:hover {
 .dialog-button {
   color: #b4b4b4;
 }
+
+#controls,
+#logo,
+#navigation,
+#sidebar,
+#hotbar,
+#players {
+  transition: all 500ms cubic-bezier(0.42, 0, 0.58, 1) 10ms;
+}
