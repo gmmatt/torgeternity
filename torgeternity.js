@@ -40,6 +40,9 @@ CONFIG.debug.hooks=true;
 Hooks.once("ready", function() {
 sheetResize();
 toggleViewMode();
+var logo = document.getElementById("logo");
+logo.style.position="absolute"
+logo.setAttribute("src", "/systems/torgeternity/images/vttLogo.png");
 })
 //----all this could be draft in another imported module ?? maybe like ./modules/handlebarsHelpers.js
 
