@@ -1,10 +1,14 @@
-<div class="list-section-heading">Perks</div>
+<div class="list-section-heading">
+    {{localize "torgeternity.sheetLabels.specialAbility"}}
+    <a class="item-control item-create-rsa" title="Create Rollable Special Ability"><i class="fas fa-plus"></i></a>
+    <a class="item-control item-create-sa" title="Create Special Ability"><i class="fas fa-plus"></i></a>
+</div>
+
 <ol class="item-list">
-    {{#each perk as |item id|}}
+    {{#each specialability as |item id|}}
+    <li class="item" data-item-id="{{item._id}}">
 
-
-    <li class="item block" data-item-id="{{item._id}}">
-        <div class="item-row flexrow">
+        <div class="item-row flexrow ">
             <img src="{{item.img}}" title="{{item.name}}" />
             <a class="item-name">{{item.name}}</a>
             <div class="item-controls">
@@ -18,19 +22,87 @@
             <div class="item-dropdown-description">
                 {{{item.data.description}}}
             </div>
-            <div class="item-dropdown-extras">
-                {{item.data.category}}
-            </div>
-            <div class="item-dropdown-extras">
-                {{item.data.cosm}}
-            </div>
-            <div class="item-dropdown-extras">
-                {{item.data.timestaken}}x
-            </div>
         </div>
-
     </li>
     {{/each}}
 </ol>
 
-    
+<ol class="item-list">
+    {{#each specialabilityRollable as |item id|}}
+    <li class="item" data-item-id="{{item._id}}">
+        <div class="item-row flexrow">
+            <img src="{{item.img}}" title="{{item.name}}" width="30" height="30" />
+            <a class="item-name">{{item.name}}</a>
+            <div class="item-controls">
+                <a class="item-control item-attackRoll" title="Attack Roll"><i class="fas fa-dice-d20"></i></a>
+                <a class="item-control item-bonusRoll" title="Bonus Roll"><i class="fas fa-dice-d6"></i></a>
+                <a class="item-control item-edit" title="Edit Item"><i class="fas fa-edit"></i></a>
+                <a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
+            </div>
+        </div>
+        <div class="item-detail">
+            <div class="item-dropdown-description">
+                {{{item.data.description}}}
+            </div>
+        </div>
+    </li>
+    {{/each}}
+</ol>
+
+
+<div class="list-section-heading">
+    {{localize "torgeternity.sheetLabels.perks"}}
+</div>
+<ol class="item-list">
+    {{#each perk as |item id|}}
+    <li class="item" data-item-id="{{item._id}}">
+        <div class="item-row flexrow">
+            <img src="{{item.img}}" title="{{item.name}}" width="30" height="30" />
+            <a class="item-name">{{item.name}}</a>
+            <div class="item-controls">
+                <a class="item-control item-tochat" title="Send to Chat"><i class="fas fa-comment"></i></a>
+                <a class="item-control item-edit" title="Edit Item"><i class="fas fa-edit"></i></a>
+                <a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
+            </div>
+        </div>
+        <div class="item-detail">
+            <div class="item-dropdown-description">
+                {{{item.data.description}}}
+                <p></p>
+                <div class="item-dropdown-extras">
+                    {{item.data.category}}
+                </div>
+                <div class="item-dropdown-extras">
+                    {{item.data.cosm}}
+                </div>
+                <div class="item-dropdown-extras">
+                    {{item.data.timestaken}}x
+                </div>
+            </div>
+        </div>
+    </li>
+    {{/each}}
+</ol>
+<div class="list-section-heading">
+    {{localize "torgeternity.sheetLabels.enhancements"}}
+</div>
+<ol class="item-list">
+    {{#each enhancement as |item id|}}
+    <li class="item" data-item-id="{{item._id}}">
+        <div class="item-row flexrow">
+            <img src="{{item.img}}" title="{{item.name}}" width="30" height="30" />
+            <a class="item-name">{{item.name}} (Enhances {{item.data.perk}})</a>
+            <div class="item-controls">
+                <a class="item-control item-tochat" title="Send to Chat"><i class="fas fa-comment"></i></a>
+                <a class="item-control item-edit" title="Edit Item"><i class="fas fa-edit"></i></a>
+                <a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
+            </div>
+        </div>
+        <div class="item-detail">
+            <div class="item-dropdown-description">
+                {{{item.data.description}}}
+            </div>
+        </div>
+    </li>
+    {{/each}}
+</ol>

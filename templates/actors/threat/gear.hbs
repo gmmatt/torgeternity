@@ -1,15 +1,15 @@
 <div class="list-section-heading">
-    {{localize "torgeternity.sheetLabels.weapons"}}
+    Weapons
 </div>
-<h2>melee weapons</h2>
 <ol class="item-list">
     {{#each meleeweapons as |item id|}}
-    <li class="item block" data-item-id="{{item._id}}">
+    <li class="item" data-item-id="{{item._id}}">
         <div class="item-row flexrow">
-            <img src="{{item.img}}" title="{{item.name}}"  />
+            <img src="{{item.img}}" title="{{item.name}}" width="30" height="30" />
             <a class="item-name">{{item.name}} (Melee Weapon)</a>
             <div class="item-controls">
                 <a class="item-control item-attackRoll" title="Attack Roll"><i class="fas fa-dice-d20"></i></a>
+                <a class="item-control item-bonusRoll" title="Bonus Roll"><i class="fas fa-dice-d6"></i></a>
                 <a class="item-control item-edit" title="Edit Item"><i class="fas fa-edit"></i></a>
                 <a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
             </div>
@@ -35,17 +35,15 @@
     </li>
     {{/each}}
 </ol>
-
-<h2>Missile Weapon</h2>
 <ol class="item-list">
-
     {{#each missileweapon as |item id|}}
-    <li class="item block" data-item-id="{{item._id}}">
+    <li class="item" data-item-id="{{item._id}}">
         <div class="item-row flexrow">
-            <img src="{{item.img}}" title="{{item.name}}"  />
+            <img src="{{item.img}}" title="{{item.name}}" width="30" height="30" />
             <a class="item-name">{{item.name}} (Missile Weapon)</a>
             <div class="item-controls">
                 <a class="item-control item-attackRoll" title="Attack Roll"><i class="fas fa-dice-d20"></i></a>
+                <a class="item-control item-bonusRoll" title="Bonus Roll"><i class="fas fa-dice-d6"></i></a>
                 <a class="item-control item-edit" title="Edit Item"><i class="fas fa-edit"></i></a>
                 <a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
             </div>
@@ -77,16 +75,15 @@
     </li>
     {{/each}}
 </ol>
-<h2>Firearm</h2>
 <ol class="item-list">
-
     {{#each firearm as |item id|}}
-    <li class="item block" data-item-id="{{item._id}}">
+    <li class="item" data-item-id="{{item._id}}">
         <div class="item-row flexrow">
-            <img src="{{item.img}}" title="{{item.name}}" />
+            <img src="{{item.img}}" title="{{item.name}}" width="30" height="30" />
             <a class="item-name">{{item.name}} (Firearm)</a>
             <div class="item-controls">
                 <a class="item-control item-attackRoll" title="Attack Roll"><i class="fas fa-dice-d20"></i></a>
+                <a class="item-control item-bonusRoll" title="Bonus Roll"><i class="fas fa-dice-d6"></i></a>
                 <a class="item-control item-edit" title="Edit Item"><i class="fas fa-edit"></i></a>
                 <a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
             </div>
@@ -118,16 +115,16 @@
     </li>
     {{/each}}
 </ol>
-<h2>Heavy Weapon/Explosive</h2>
-<ol class="item-list">
 
+<ol class="item-list">
     {{#each heavyweapon as |item id|}}
-    <li class="item block" data-item-id="{{item._id}}">
+    <li class="item" data-item-id="{{item._id}}">
         <div class="item-row flexrow">
-            <img src="{{item.img}}" title="{{item.name}}"/>
+            <img src="{{item.img}}" title="{{item.name}}" width="30" height="30" />
             <a class="item-name">{{item.name}} (Heavy Weapon/Explosive)</a>
             <div class="item-controls">
                 <a class="item-control item-attackRoll" title="Attack Roll"><i class="fas fa-dice-d20"></i></a>
+                <a class="item-control item-bonusRoll" title="Bonus Roll"><i class="fas fa-dice-d6"></i></a>
                 <a class="item-control item-edit" title="Edit Item"><i class="fas fa-edit"></i></a>
                 <a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
             </div>
@@ -162,19 +159,15 @@
 
 
 <div class="list-section-heading">
-    {{localize "torgeternity.sheetLabels.armorAndShields"}}
+    Armor and Shields
 </div>
-<h2>armor</h2>
 <ol class="item-list">
-
     {{#each armor as |item id|}}
-    <li class="item block" data-item-id="{{item._id}}">
+    <li class="item" data-item-id="{{item._id}}">
         <div class="item-row flexrow">
-            <img src="{{item.img}}" title="{{item.name}}"/>
+            <img src="{{item.img}}" title="{{item.name}}" width="30" height="30" />
             <a class="item-name">{{item.name}}</a>
             <div class="item-controls">
-                <a class="item-control item-equip {{item.data.equippedClass}}" title="Toggle Equip"><i
-                        class="fas fa-hand-paper"></i></a>
                 <a class="item-control item-tochat" title="Send to Chat"><i class="fas fa-comment"></i></a>
                 <a class="item-control item-edit" title="Edit Item"><i class="fas fa-edit"></i></a>
                 <a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
@@ -204,17 +197,13 @@
     </li>
     {{/each}}
 </ol>
-<h2>shield</h2>
 <ol class="item-list">
-
     {{#each shield as |item id|}}
-    <li class="item block" data-item-id="{{item._id}}">
+    <li class="item" data-item-id="{{item._id}}">
         <div class="item-row flexrow">
-            <img src="{{item.img}}" title="{{item.name}}" />
+            <img src="{{item.img}}" title="{{item.name}}" width="30" height="30" />
             <a class="item-name">{{item.name}}</a>
             <div class="item-controls">
-                <a class="item-control item-equip {{item.data.equippedClass}}" title="Toggle Equip"><i
-                        class="fas fa-hand-paper"></i></a>
                 <a class="item-control item-tochat" title="Send to Chat"><i class="fas fa-comment"></i></a>
                 <a class="item-control item-edit" title="Edit Item"><i class="fas fa-edit"></i></a>
                 <a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
@@ -244,15 +233,13 @@
 
 
 <div class="list-section-heading">
-    {{localize "torgeternity.sheetLabels.generalGear"}}
+    {{torgeternity.itemSheetDescriptions.generalGear}}Other
 </div>
-<h2>gear</h2>
 <ol class="item-list">
-
     {{#each gear as |item id|}}
-    <li class="item block" data-item-id="{{item._id}}">
+    <li class="item" data-item-id="{{item._id}}">
         <div class="item-row flexrow">
-            <img src="{{item.img}}" title="{{item.name}}"  />
+            <img src="{{item.img}}" title="{{item.name}}" width="30" height="30" />
             <a class="item-name">{{item.name}}</a>
             <div class="item-controls">
                 <a class="item-control item-tochat" title="Send to Chat"><i class="fas fa-comment"></i></a>
@@ -263,28 +250,26 @@
         <div class="item-detail">
             <div class="item-dropdown-description">
                 {{{item.data.description}}}
+                <p></p>
+                <div class="item-dropdown-extras">
+                    {{item.data.cosm}}
+                </div>
+                <div class="item-dropdown-extras">
+                    {{item.data.price}} ({{item.data.value}})
+                </div>
+                <div class="item-dropdown-extras">
+                    TL {{item.data.techlevel}}
+                </div>
             </div>
-            <div class="item-dropdown-extras">
-                {{item.data.cosm}}
-            </div>
-            <div class="item-dropdown-extras">
-                {{item.data.price}} ({{item.data.value}})
-            </div>
-            <div class="item-dropdown-extras">
-                TL {{item.data.techlevel}}
-            </div>
-
         </div>
     </li>
     {{/each}}
 </ol>
-<h2>implant</h2>
 <ol class="item-list">
-
     {{#each implant as |item id|}}
-    <li class="item block" data-item-id="{{item._id}}">
+    <li class="item" data-item-id="{{item._id}}">
         <div class="item-row flexrow">
-            <img src="{{item.img}}" title="{{item.name}}" />
+            <img src="{{item.img}}" title="{{item.name}}" width="30" height="30" />
             <a class="item-name">{{item.name}} (Implant)</a>
             <div class="item-controls">
                 <a class="item-control item-tochat" title="Send to Chat"><i class="fas fa-comment"></i></a>
@@ -310,13 +295,11 @@
     </li>
     {{/each}}
 </ol>
-<h2>eternity Shard</h2>
 <ol class="item-list">
-
     {{#each eternityshard as |item id|}}
-    <li class="item block" data-item-id="{{item._id}}">
+    <li class="item" data-item-id="{{item._id}}">
         <div class="item-row flexrow">
-            <img src="{{item.img}}" title="{{item.name}}" />
+            <img src="{{item.img}}" title="{{item.name}}" width="30" height="30" />
             <a class="item-name">{{item.name}} (Eternity Shard)</a>
             <div class="item-controls">
                 <a class="item-control item-tochat" title="Send to Chat"><i class="fas fa-comment"></i></a>
@@ -342,13 +325,11 @@
     </li>
     {{/each}}
 </ol>
-<h2>vehicle</h2>
 <ol class="item-list">
-
     {{#each vehicle as |item id|}}
-    <li class="item block" data-item-id="{{item._id}}">
+    <li class="item" data-item-id="{{item._id}}">
         <div class="item-row flexrow">
-            <img src="{{item.img}}" title="{{item.name}}"  />
+            <img src="{{item.img}}" title="{{item.name}}" width="30" height="30" />
             <a class="item-name">{{item.name}} (Vehicle)</a>
             <div class="item-controls">
                 <a class="item-control item-tochat" title="Send to Chat"><i class="fas fa-comment"></i></a>
@@ -380,4 +361,3 @@
     </li>
     {{/each}}
 </ol>
-</div>
