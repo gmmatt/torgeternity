@@ -200,5 +200,8 @@ torgeternity.statusEffects = [
         label: 'torgeternity.statusEffects.restrained'
     },
 
-
+    torgeternity.yesNo = {
+        true: "torgeternity.yesNo.true",
+        false: "torgeternity.yesNo.false"
+    }
 ]

@@ -147,9 +147,30 @@ export default class torgeternityActorSheet extends ActorSheet {
   
         // Delete Inventory Item
         html.find('.item-delete').click(ev => {
-            const li = $(ev.currentTarget).parents(".item");
-            this.actor.deleteOwnedItem(li.data("itemId"));
-            li.slideUp(200, () => this.render(false));
+            let applyChanges = false;
+            new Dialog({
+                title: "Confirm Deletion",
+                content: "Are you sure you want to delete this? It will be permanently removed from the sheet.",
+                buttons: {
+                    yes: {
+                        icon: '<i class="fas fa-check"></i>',
+                        label: "Yes",
+                        callback: () => applyChanges = true
+                    },
+                    no: {
+                        icon: '<i class="fas fa-times"></i>',
+                        label: "No"
+                    },
+                },
+                default: "yes",
+                close: html => {
+                    if (applyChanges) {
+                        const li = $(ev.currentTarget).parents(".item");
+                        this.actor.deleteOwnedItem(li.data("itemId"));
+                        li.slideUp(200, () => this.render(false));            
+                    }
+                }                
+            }).render(true);
       }); 
         // Toggle Item Detail Visibility
         html.find('.item-name').click(ev => {
@@ -290,13 +311,13 @@ export default class torgeternityActorSheet extends ActorSheet {
         var toggleState = this.actor.data.data.editstate;
         event.preventDefault();
         if (toggleState === "none") {
-            document.getElementById("threat-editor").style.display = "block";
-            this.actor.data.data.editstate = "block";
-            this.actor.update({"data.editstate":"block"});
+            document.getElementById("threat-editor").style.display = "inline";
+            this.actor.data.data.editstate = "inline";
+            this.actor.update({"data.editstate":"inline"});
         } else if (toggleState === undefined) {
-            document.getElementById("threat-editor").style.display = "block";
-            this.actor.data.data.editstate = "block";
-            this.actor.update({"data.editstate":"block"});
+            document.getElementById("threat-editor").style.display = "inline";
+            this.actor.data.data.editstate = "inline";
+            this.actor.update({"data.editstate":"inline"});
         } else {
             document.getElementById("threat-editor").style.display = "none";
             this.actor.data.data.editstate = "none";
