@@ -1,12 +1,5 @@
-# Torg eternity system for Foundry VTT
-
 **Torg Eternity System** for Foundry VTT.  
 
-## RWAN acknowlegement
-
-this is just a WIP branch ; not everuthing is reorganized ; for exemple, i didn't split scss files for actors part, all is  in the same file for the moment. But the changes would be easier to make.
-
-## **the following is the copy of the main readme
 
 ## Installation
 
@@ -14,6 +7,11 @@ this is just a WIP branch ; not everuthing is reorganized ; for exemple, i didn'
 
 For manual installation, use the provided manifest URL in the "*Install System*" popup window 
 while managing game systems.
+
+v. 0.92.0
+
+Major user interface update! We have completely revamped all of the sheets (thanks much
+to @rwanoux for all his hard work to get this done!).  
 
 NOTES FOR v. 0.91.0
 We have added support for active effects! These effects are available for each Storm Knight
@@ -29,7 +27,7 @@ that can be modified, see https://github.com/gmmatt/torgeternity/wiki/Storm-Knig
 
 ## License
 
-Copyright (c) 2021 Matt Ritchie
+Copyright (c) 2021 VTT Southwest, LLC
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
