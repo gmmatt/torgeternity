@@ -798,6 +798,18 @@ form.actor-sheet header input[name="name"] {
   background-size: cover;
 }
 
+.window-content .actor-sheet .sheet-header input[name="name"] {
+  border: none;
+  text-transform: uppercase;
+  text-shadow: 0px -2px 10px #0e0909;
+  font-family: Alaska;
+  text-align: center;
+  color: #0e0909;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
 .window-content .actor-sheet .sheet-header.threat {
   flex: none;
 }
