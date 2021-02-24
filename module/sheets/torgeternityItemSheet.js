@@ -23,11 +23,13 @@ export default class torgeternityItemSheet extends ItemSheet {
                 break;
 
             case "specialability":
-                this.options.height = this.position.height = 330;
+                this.options.width = this.position.width = 435;
+                this.options.height = this.position.height = 550;
                 break;
-                case "vehicle":
-                    this.options.height = this.position.height = 630;
-                    break;
+
+            case "vehicle":
+                this.options.height = this.position.height = 630;
+                break;
                 
             default:
                 this.options.height = this.position.height = 560;
