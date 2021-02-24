@@ -1441,6 +1441,10 @@ form.actor-sheet.threat .tab[data-tab].active .editor {
   text-shadow: 0px 0px 10px black;
 }
 
+.item .window-content form.item-sheet .item-data-label {
+  text-align: center;
+}
+
 .item .window-content form.item-sheet .item-description-textarea {
   font-family: "Palatino Linotype";
   font-size: 12px;
