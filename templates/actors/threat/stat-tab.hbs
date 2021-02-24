@@ -181,8 +181,14 @@
                 </div>
  </div>
 <div class="threat-editor block" id="threat-editor" style="display:{{data.editstate}}">
+    <div class="threat-edit">
+        <b>{{localize "torgeternity.sheetLabels.skills"}}</b>
+    </div>
+
     <table class="threat-edit">
+
         <tr>
+
             <td width="25%">
                 {{localize "torgeternity.skills.airVehicles"}} <input name="data.skills.airVehicles.value" type="number"
                     class="small-input" value="{{data.skills.airVehicles.value}}" data-dtype="Number" /><br>
@@ -309,9 +315,6 @@
         {{localize "torgeternity.sheetLabels.possibilitypotential"}}:&nbsp;
         <input name="data.details.possibilitypotential" class="text-input" type="number"
             value="{{data.details.possibilitypotential}}" />
-    </div>
-    <div class="threat-edit">
-        <b>{{localize "torgeternity.sheetLabels.skills"}}</b>
     </div>
 
 </div>
