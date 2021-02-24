@@ -1201,6 +1201,10 @@ form.actor-sheet.threat td input {
   position: absolute;
 }
 
+form.actor-sheet.threat .threat-edit input[type="text"] {
+  width: 100px;
+}
+
 form.actor-sheet.threat .sheet-header {
   flex-direction: row;
 }

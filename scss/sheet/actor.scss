@@ -802,6 +802,12 @@ form.actor-sheet.threat {
         }
     }
 
+    .threat-edit {
+        input[type="text"] {
+            width:100px
+        }
+    }
+
 
     .sheet-header {
         flex-direction: row;
