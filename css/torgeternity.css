@@ -248,6 +248,10 @@ textarea:hover {
   color: #c6e2fa;
 }
 
+#cardArea .deckControl {
+  max-height: 60px;
+}
+
 body {
   font-family: Berlin;
 }
