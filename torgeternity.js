@@ -2,6 +2,7 @@ import {
     torgeternity
 } from "./module/config.js";
 import * as Chat from "./module/chat.js";
+import * as Combat from "./module/combat.js";
 import torgeternityItem from "./module/torgeternityItem.js";
 import torgeternityActor from "./module/torgeternityActor.js";
 import torgeternityItemSheet from "./module/sheets/torgeternityItemSheet.js";
@@ -9,17 +10,13 @@ import torgeternityActorSheet from "./module/sheets/torgeternityActorSheet.js";
 import {
     sheetResize
 } from "./module/sheetResize.js";
-
-
 import {
     preloadTemplates
 } from "./module/preloadTemplates.js";
 import {
     toggleViewMode
 } from "./module/viewMode.js";
-import {
-    cardArea
-} from "./module/cards/cardsArea.js";
+
 
 Hooks.once("init", function () {
     console.log("torgeternity | Initializing Torg Eternity System");
@@ -58,10 +55,7 @@ Hooks.once("ready", function () {
     
     logo.style.position = "absolute"
     logo.setAttribute("src", "/systems/torgeternity/images/vttLogo.png");
-    let card_area=new cardArea;
-    logo.addEventListener('click',function () {
-        card_area.render(true);
-    });
+    
 })
 //----all this could be draft in another imported module ?? maybe like ./modules/handlebarsHelpers.js
 
@@ -86,3 +80,7 @@ Handlebars.registerHelper("concatClearanceLevel", function (clearance) {
 });
 
 Hooks.on("renderChatLog", (app, html, data) => Chat.addChatListeners(html));
+Hooks.on("renderCombatTracker",function(app,html,data){
+    Combat.addActionCardsArea(html);
+
+})

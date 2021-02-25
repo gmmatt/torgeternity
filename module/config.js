@@ -1,6 +1,55 @@
 export const torgeternity = {};
-torgeternity.viewMode={
-    UI:true
+torgeternity.gameCards = {
+    cardType: {
+        actionCards: {},
+        destinyCards: {},
+        cosmCards: {}
+    },
+    decks: {
+        actionDeck: {
+            label: "action cards deck",
+            backImage:"",
+            cardType: {},
+            cardList: [
+                {
+                    backImage:"systems/torgeternity/images/cardsImages/actionCardBack.png",
+                    frontImage:"systems/torgeternity/images/cardsImages/fuyez.png",
+                    label:"test 1",
+                },
+                {
+                    backImage:"systems/torgeternity/images/cardsImages/actionCardBack.png",
+                    frontImage:"systems/torgeternity/images/cardsImages/triomphe.png",
+                    label:"test 2",
+                }
+            ],
+            remainingCards: [],
+            playedCards: []
+        },
+        destinyDeck: {
+            label: "destiny cards deck",
+            cardType: {},
+            cardList: [],
+            remainingCards: [],
+            withdrawedCards: [],
+            playersHand:{
+
+            }
+
+        },
+        cosmDeck: {
+            label: "cosm cards deck",
+            cardType: {},
+            cardList: [],
+            remainingCards: [],
+            withdrawedCards: [],
+            playersHand:{
+                
+            }
+        }
+    }
+}
+torgeternity.viewMode = {
+    UI: true
 }
 torgeternity.attributeTypes = {
     charisma: "torgeternity.attributes.charisma",
@@ -40,7 +89,7 @@ torgeternity.perkTypes = {
     psionics: "torgeternity.perkTypes.psionics",
     pulpPowers: "torgeternity.perkTypes.pulpPowers",
     reality: "torgeternity.perkTypes.reality",
-    savagery:"torgeternity.perkTypes.savagery",
+    savagery: "torgeternity.perkTypes.savagery",
     social: "torgeternity.perkTypes.social",
     spellcraft: "torgeternity.perkTypes.spellcraft"
 }
@@ -56,7 +105,7 @@ torgeternity.attackTypes = {
 
 torgeternity.damageTypes = {
     strengthPlus: "torgeternity.damageTypes.strengthPlus",
-    flat: "torgeternity.damageTypes.flat" 
+    flat: "torgeternity.damageTypes.flat"
 }
 
 torgeternity.powerSkills = {
@@ -67,7 +116,7 @@ torgeternity.powerSkills = {
     kinesis: "torgeternity.powerSkills.kinesis",
     precognition: "torgeternity.powerSkills.precognition",
     telepathy: "torgeternity.powerSkills.telepathy",
-    faith: "torgeternity.powerSkills.faith"    
+    faith: "torgeternity.powerSkills.faith"
 }
 
 torgeternity.clearances = {
@@ -143,8 +192,7 @@ torgeternity.vulnerableStates = {
     veryVulnerable: "torgeternity.vulnerableStates.veryVulnerable"
 }
 
-torgeternity.statusEffects = [
-    {
+torgeternity.statusEffects = [{
         icon: 'systems/torgeternity/images/status-markers/stymied.jpg',
         id: 'stymied',
         label: 'torgeternity.statusEffects.stymied',

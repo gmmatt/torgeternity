@@ -199,7 +199,24 @@ div.actor ::-webkit-scrollbar {
   color: #c6e2fa;
 }
 
-#cardArea .deckControl {
+#combat #combat-tracker {
+  max-height: 350px;
+  min-height: 100px;
+}
+
+#combat #combat-controls {
+  margin: 0;
+  border-top: 2px groove #444;
+  padding-top: 4px;
+  border-bottom: 2px groove #444;
+  padding-bottom: 4px;
+}
+
+#combat #actionCardArea {
+  padding-top: 15px;
+}
+
+#combat #actionCardArea .deckControl {
   max-height: 60px;
 }
 

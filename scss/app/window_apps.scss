@@ -11,11 +11,14 @@
     input[type="date"],
     input[type="time"] .editor {
         background-color: rgba(255, 255, 255, 0.39);
-    };
-    input::placeholder{
+    }
+
+    ;
+
+    input::placeholder {
         background-color: rgba(0, 0, 0, 0);
     }
-    
+
 
     font-family: Berlin;
 
@@ -54,15 +57,17 @@
         }
 
     }
-textarea{
-    background-color: rgba(90, 157, 163, 0.493);
-}
-textarea:focus,
-textarea:hover{
-    background-color: rgba(90, 157, 163, 0.65);
-    outline: 1px solid #222378;
-    box-shadow: 0 0 10px #008cff7a;
-}
+
+    textarea {
+        background-color: rgba(90, 157, 163, 0.493);
+    }
+
+    textarea:focus,
+    textarea:hover {
+        background-color: rgba(90, 157, 163, 0.65);
+        outline: 1px solid #222378;
+        box-shadow: 0 0 10px #008cff7a;
+    }
 
 }
 
@@ -82,12 +87,24 @@ textarea:hover{
 }
 
 
+#combat {
+    #combat-tracker {
+        max-height: 350px;
+        min-height: 100px;
+    }
+    #combat-controls {
+        margin: 0;
+        border-top: 2px groove #444;
+        padding-top: 4px;
+        border-bottom: 2px groove #444;
+        padding-bottom: 4px;
+    }
 
+    #actionCardArea {
+        padding-top: 15px;
 
-#cardArea{
-    .deckControl{
-        max-height:60px;
-
-
+        .deckControl {
+            max-height: 60px;
+        }
     }
 }

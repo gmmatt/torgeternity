@@ -35,6 +35,11 @@ export const preloadTemplates = async function () {
         //active effect part: 
         "systems/torgeternity/templates/parts/active-effects.hbs",
 
+        //cards
+        "systems/torgeternity/templates/cards/actionCard.hbs",
+        "systems/torgeternity/templates/cards/actionCardsArea.hbs",
+
+
     ];
 
     // Load the template parts
