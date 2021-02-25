@@ -1,5 +1,63 @@
 p {
   font-family:"Palatino Linotype";
+  font-size:14px;
+  text-indent:8px;
+}
+
+.editor-content h1 {
+  font-family: "Alaska Extrabold Bold";
+  font-weight: Bold;
+  font-size:28px;
+  text-align:center;
+  border-bottom:none
+}
+
+.editor-content  h2 {
+  font-family: "Alaska Extrabold Bold";
+  font-weight:Bold;
+  font-size:20px;
+  text-align:left;
+  border-bottom:none;
+}
+
+.editor-content h3 {
+  font-family: "Alaska Extrabold Bold";
+  font-weight: Bold;
+  font-size:18px;
+  text-align:left;
+}
+
+.editor-content table {
+  border-top:none;
+  border-left:none;
+  border-right:none
+}
+
+.editor-content table tr:first-child {
+  background-color:black;
+  color:white;
+}
+
+.editor-content table tr:nth-child(even) {
+  background-color:#fff2e6;
+  border-width: 1px 0px;
+}
+
+.editor-content table tr:nth-child(odd) {
+  border-width: 1px 0px;
+}
+
+
+.editor-content table td:first-child {
+  border-left:none;
+}
+
+.editor-content table td:last-child {
+  border-right:none;
+}
+
+.journal-sheet .window-content {
+  background-image: url('./images/bg-sheet.png');
 }
 
 .sheet form {

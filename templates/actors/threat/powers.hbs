@@ -1,0 +1,116 @@
+<ol class="item-list">
+    {{#each spell as |item id|}}
+    <li class="item" data-item-id="{{item._id}}">
+        <div class="item-row flexrow">
+            <img src="{{item.img}}" title="{{item.name}}" width="30" height="30" />
+            <a class="item-name">{{item.name}} (Spell)</a>
+            <div class="item-controls">
+                <a class="item-control item-powerRoll" title="Spell Roll"><i class="fas fa-dice-d20"></i></a>
+                <a class="item-control item-bonusRoll" title="Bonus Roll"><i class="fas fa-dice-d6"></i></a>
+                <a class="item-control item-tochat" title="Send to Chat"><i class="fas fa-comment"></i></a>
+                <a class="item-control item-edit" title="Edit Item"><i class="fas fa-edit"></i></a>
+                <a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
+            </div>
+        </div>
+        <div class="item-detail">
+            <div class="item-dropdown-description">
+                {{{item.data.description}}}
+                <p></p>
+                <div class="item-dropdown-extras">
+                    {{item.data.skill}}
+                </div>
+                <div class="item-dropdown-extras">
+                    {{item.data.dn}}
+                </div>
+                <div class="item-dropdown-extras">
+                    {{item.data.castingtime}}
+                </div>
+                <div class="item-dropdown-extras">
+                    {{item.data.range}}
+                </div>
+                <div class="item-dropdown-extras">
+                    {{item.data.duration}}
+                </div>
+            </div>
+        </div>
+    </li>
+    {{/each}}
+</ol>
+
+<ol class="item-list">
+    {{#each miracle as |item id|}}
+    <li class="item" data-item-id="{{item._id}}">
+        <div class="item-row flexrow">
+            <img src="{{item.img}}" title="{{item.name}}" width="30" height="30" />
+            <a class="item-name">{{item.name}} (Miracle)</a>
+            <div class="item-controls">
+                <a class="item-control item-powerRoll" title="Miracle Roll"><i class="fas fa-dice-d20"></i></a>
+                <a class="item-control item-bonusRoll" title="Bonus Roll"><i class="fas fa-dice-d6"></i></a>
+                <a class="item-control item-tochat" title="Send to Chat"><i class="fas fa-comment"></i></a>
+                <a class="item-control item-edit" title="Edit Item"><i class="fas fa-edit"></i></a>
+                <a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
+            </div>
+        </div>
+        <div class="item-detail">
+            <div class="item-dropdown-description">
+                {{{item.data.description}}}
+                <p></p>
+                <div class="item-dropdown-extras">
+                    {{item.data.skill}}
+                </div>
+                <div class="item-dropdown-extras">
+                    {{item.data.dn}}
+                </div>
+                <div class="item-dropdown-extras">
+                    {{item.data.castingtime}}
+                </div>
+                <div class="item-dropdown-extras">
+                    {{item.data.range}}
+                </div>
+                <div class="item-dropdown-extras">
+                    {{item.data.duration}}
+                </div>
+            </div>
+        </div>
+    </li>
+    {{/each}}
+</ol>
+
+<ol class="item-list">
+    {{#each psionicpower as |item id|}}
+    <li class="item" data-item-id="{{item._id}}">
+        <div class="item-row flexrow">
+            <img src="{{item.img}}" title="{{item.name}}" width="30" height="30" />
+            <a class="item-name">{{item.name}} (Psionic)</a>
+            <div class="item-controls">
+                <a class="item-control item-powerRoll" title="Miracle Roll"><i class="fas fa-dice-d20"></i></a>
+                <a class="item-control item-bonusRoll" title="Bonus Roll"><i class="fas fa-dice-d6"></i></a>
+                <a class="item-control item-tochat" title="Send to Chat"><i class="fas fa-comment"></i></a>
+                <a class="item-control item-edit" title="Edit Item"><i class="fas fa-edit"></i></a>
+                <a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
+            </div>
+        </div>
+        <div class="item-detail">
+            <div class="item-dropdown-description">
+                {{{item.data.description}}}
+                <p></p>
+                <div class="item-dropdown-extras">
+                    {{item.data.skill}}
+                </div>
+                <div class="item-dropdown-extras">
+                    {{item.data.dn}}
+                </div>
+                <div class="item-dropdown-extras">
+                    {{item.data.castingtime}}
+                </div>
+                <div class="item-dropdown-extras">
+                    {{item.data.range}}
+                </div>
+                <div class="item-dropdown-extras">
+                    {{item.data.duration}}
+                </div>
+            </div>
+        </div>
+    </li>
+    {{/each}}
+</ol>

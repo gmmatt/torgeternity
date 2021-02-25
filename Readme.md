@@ -1,19 +1,17 @@
-# Torg eternity system for Foundry VTT
 **Torg Eternity System** for Foundry VTT.  
 
 
-
 ## Installation
-**Manifest URL**: https://github.com/gmmatt/torgeternity/releases/latest/download/system.json
 
-This is a Foundry VTT system for Torg Eternity. Card play is not supported within the system,
-but is fully functional when used in conjunction with the Unofficial Card Support module for 
-Foundry. THIS SYSTEM IS A WORK IN PROGRESS. While the system is fully playable in its current 
-state, we are stil lroning out some bugs and inconveniences, and multiple additional features 
-are planned for the near future.
+**Manifest URL**: https://github.com/gmmatt/torgeternity/releases/latest/download/system.json
 
 For manual installation, use the provided manifest URL in the "*Install System*" popup window 
 while managing game systems.
+
+v. 0.92.0
+
+Major user interface update! We have completely revamped all of the sheets (thanks much
+to @rwanoux for all his hard work to get this done!).  
 
 NOTES FOR v. 0.91.0
 We have added support for active effects! These effects are available for each Storm Knight
@@ -27,10 +25,9 @@ active effects within items once they are attached to a character, but you can s
 the effect on the character's "Effects" tab). For a list of Storm Knight statistics 
 that can be modified, see https://github.com/gmmatt/torgeternity/wiki/Storm-Knight-Data-Elements.
 
-
 ## License
 
-Copyright (c) 2021 Matt Ritchie
+Copyright (c) 2021 VTT Southwest, LLC
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

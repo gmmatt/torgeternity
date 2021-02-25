@@ -180,12 +180,15 @@
             "spellcraft": "Spellcraft"
         },
         "sheetLabels": {
+            "stormknight":"Stormknight",
             "stats": "Stats",
             "perks": "Perks",
+            "perksAbilities": "Perks/Abilities",
             "gear": "Gear",
             "powers": "Powers",
             "effects": "Effects",
             "background": "Background",
+            "backgroundDescription": "Background",
             "enhancements": "Enhancements",
             "generalGear": "General Gear",
             "armor": "Armor",
@@ -229,6 +232,7 @@
             "clearance": "Clearance",
             "race": "Race",
             "weapons": "Weapons",
+            "attacks": "Attacks",
             "armorAndShields": "Armor and Shields",
             "other": "Other",
             "spell": "Spell",
@@ -243,7 +247,8 @@
             "goodResult": "Good Result",
             "outstandingResult": "Outstanding Result",
             "effectCreate": "Create Effect",
-            "add": "Add"
+            "add": "Add",
+            "derivedValues": "Derived Values"
 
         },
         "itemSheetDescriptions": {
@@ -300,7 +305,8 @@
             "edeinos": "Edeinos",
             "elf": "Elf",
             "aspirants": "Aspirants",
-            "theRace": "The Race"
+            "theRace": "The Race",
+            "other": "Other"
         },
         "stymiedStates": {
             "none": "Not Stymied",

@@ -1,6 +1,6 @@
 <form class="{{cssClass}} item-sheet" autocomplete="off">
     <header class="sheet-header">
-        <img src="{{item.img}}" data-edit="img" title="{{item.name}}" height="64" width="64"/>
+        <img src="{{item.img}}" data-edit="img" title="{{item.name}}" />
         <h1><input name="name" type="text" value="{{item.name}}" placeholder="Name"/></h1>
     </header>
     <div class="sheet-content">
@@ -19,22 +19,22 @@
             </tr>
             <tr>
                 <th>
-                    <input name="data.damage" type="text" value="{{data.damage}}" data-dtype="Number" />
+                    <input name="data.damage" type="number" value="{{data.damage}}" data-dtype="Number" />
                 </th>
                 <th>
-                    <input name="data.ammo" type="text" value="{{data.ammo}}" />
+                    <input name="data.ammo" type="number" value="{{data.ammo}}" />
                 </th>
                 <th>
-                    <input name="data.techlevel" type="text" value="{{data.techlevel}}" data-dtype="Number" />
+                    <input name="data.techlevel" type="number" value="{{data.techlevel}}" data-dtype="Number" />
                 </th>
                 <th>
-                    <input name="data.range" type="text" value="{{data.range}}" />
+                    <input name="data.range" type="number" value="{{data.range}}" />
                 </th>
                 <th>
                     <input name="data.price" type="text" value="{{data.price}}" data-dtype="Number" />
                 </th>
                 <th>
-                    <input name="data.value" type="text" value="{{data.value}}" data-dtype="Number" />
+                    <input name="data.value" type="number" value="{{data.value}}" data-dtype="Number" />
                 </th>
             </tr>
         </table>
