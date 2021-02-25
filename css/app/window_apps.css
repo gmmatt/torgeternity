@@ -76,3 +76,7 @@
 #module-management .package-list .package-title {
   color: #c6e2fa;
 }
+
+#cardArea .deckControl {
+  max-height: 60px;
+}
