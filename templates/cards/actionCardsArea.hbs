@@ -1,0 +1,33 @@
+{{log this}}
+<h3 class="center">{{label}}</h3>
+<div class="flexrow deckControl">
+    <button id="drawCard">draw card</button>
+    <button id="restartDeck">restart deck</button>
+</div>
+<div class="flexcol playableArea">
+    
+    <div>
+        <ol class="remainingCards">
+          
+            {{#each cardList as |card | }}
+            {{card.frontImage}}
+
+            <li class="actionCard">
+                {{card.label}}
+                <div class="back"><img src="{{card.backImage}}" /></div>
+                <div class="front"><img src="{{card.frontImage}}" /></div>
+            </li>
+            {{/each}}
+        </ol>
+
+        <ol class="playedCards">
+            {{#each playedCards as |card | }}
+            <li class="actionCard">
+                <div class="back"><img src="{{card.backImage}}" /></div>
+                <div class="front"><img src="{{card.frontImage}}" /></div>
+            </li>
+            {{/each}}
+        </ol>
+    </div>
+    <div class="withdrawZone">withdraw</div>
+</div>
