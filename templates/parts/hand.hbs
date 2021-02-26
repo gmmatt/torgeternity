@@ -1,0 +1,62 @@
+<h2>destiny cards hand</h2>
+<ol class="destinyCards item-row">
+    {{#each destinyCard as |item id|}}
+    {{#unless item.reserved}}
+    
+    <li class="card item-row" data-item-id="{{item._id}}">
+        <div class="item-controls">
+            <a class="item-control item-tochat" title="Send to Chat"><i class="fas fa-comment"></i></a>
+            <a class="item-control item-edit" title="Edit Item"><i class="fas fa-edit"></i></a>
+            <a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
+        </div>
+        <div>
+            <img src="{{item.img}}" />
+
+        </div>
+
+
+
+    </li>
+    {{/unless}}
+    {{/each}}
+</ol>
+    <h2>reserved cards </h2>
+    <ol class="reseverdCards item-row">
+
+    {{#each destinyCard as |item id|}}
+    {{#if item.reserved}}
+    <li class="item item-row" data-item-id="{{item._id}}">
+       <input> 
+       <div class="item-controls">
+            <a class="item-control item-tochat" title="Send to Chat"><i class="fas fa-comment"></i></a>
+            <a class="item-control item-edit" title="Edit Item"><i class="fas fa-edit"></i></a>
+            <a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
+        </div>
+        <div>
+            <img src="{{item.img}}" title="{{item.name}}" />
+
+        </div>
+    </input>
+    </li>
+    {{/if}}
+    {{/each}}
+</ol>
+<h2>axiom card </h2>
+<ol class="axiomCards item-row">
+        
+
+    {{#each axiomCard as |item id|}}
+    <li class="item item-row" data-item-id="{{item._id}}">
+        <div class="item-controls">
+            <a class="item-control item-tochat" title="Send to Chat"><i class="fas fa-comment"></i></a>
+            <a class="item-control item-edit" title="Edit Item"><i class="fas fa-edit"></i></a>
+            <a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
+        </div>
+        <div>
+            <img src="{{item.img}}" title="{{item.name}}" />
+
+        </div>
+
+    </li>
+    {{/each}}
+</ol>

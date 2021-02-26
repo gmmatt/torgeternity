@@ -12,17 +12,28 @@ torgeternity.gameCards = {
             cardType: {},
             cardList: [
                 {
-                    backImage:"systems/torgeternity/images/cardsImages/actionCardBack.png",
-                    frontImage:"systems/torgeternity/images/cardsImages/fuyez.png",
+                    backImage:"systems/torgeternity/images/cardsImages/actionDeck/actionCardBack.png",
+                    frontImage:"systems/torgeternity/images/cardsImages/actionDeck/fuyez.png",
                     label:"test 1",
                 },
                 {
-                    backImage:"systems/torgeternity/images/cardsImages/actionCardBack.png",
-                    frontImage:"systems/torgeternity/images/cardsImages/triomphe.png",
+                    backImage:"systems/torgeternity/images/cardsImages/actionDeck/actionCardBack.png",
+                    frontImage:"systems/torgeternity/images/cardsImages/actionDeck/triomphe.png",
                     label:"test 2",
                 }
             ],
-            remainingCards: [],
+            remainingCards: [
+                {
+                    backImage:"systems/torgeternity/images/cardsImages/actionDeck/actionCardBack.png",
+                    frontImage:"systems/torgeternity/images/cardsImages/actionDeck/fuyez.png",
+                    label:"test 1",
+                },
+                {
+                    backImage:"systems/torgeternity/images/cardsImages/actionDeck/actionCardBack.png",
+                    frontImage:"systems/torgeternity/images/cardsImages/actionDeck/triomphe.png",
+                    label:"test 2",
+                }
+            ],
             playedCards: []
         },
         destinyDeck: {
