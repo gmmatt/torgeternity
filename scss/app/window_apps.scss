@@ -75,7 +75,7 @@
         text-transform: uppercase;
         font-family: Alaska;
         font-weight: bold;
-        color:#000
+        color: #000
     }
 
     ;
@@ -96,10 +96,20 @@
         margin-top: 4%;
         margin-left: 5%;
         width: 90%;
-        padding:2%
+        padding: 2%
     }
-
 }
+
+.window-app.image-popout{
+    .form-group.title { 
+        margin-top: 1%;
+        input {
+    height: 32px;
+    text-align: center;
+    margin-top:0%
+   
+}}
+} 
 
 textarea {
     background-color: rgba(90, 157, 163, 0.493);

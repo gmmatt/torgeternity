@@ -93,6 +93,16 @@
   padding: 2%;
 }
 
+.window-app.image-popout .form-group.title {
+  margin-top: 1%;
+}
+
+.window-app.image-popout .form-group.title input {
+  height: 32px;
+  text-align: center;
+  margin-top: 0%;
+}
+
 textarea {
   background-color: rgba(90, 157, 163, 0.493);
 }
