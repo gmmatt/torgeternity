@@ -26,7 +26,7 @@
 
 // ----------------------------------------all globals for actors
 .torgeternity.actor .window-content {
-
+    @import 'cards';
 
     background-image: url(../images/bg-sheet.png);
     background-size: cover;
@@ -102,83 +102,7 @@ form.actor-sheet {
     }
 
     //---handed cards
-    .handed-cards {
-        background: grey;
-    flex-direction: row;
-    position: absolute;
-    font-family: Alaska;
-    text-transform: capitalize;
-    min-width: 200px;
-    transform: rotateZ(-90deg);
-    border: 2px solid red;
-    left: 40px;
-    bottom: 10%;
-    z-index: -100;
-    transition: all 0.3s cubic-bezier(0.6, -0.07, 0.56, 1.52) 0.2s;
-
-        .destinyCards,
-        .reservedCards,
-        .axiomCards {
-            transition: all 0.3s cubic-bezier(0.6, -0.07, 0.56, 1.52) 0.2s;
-            border: 2px solid green;
-            display: flex;
-            flex-direction: row;
-            height:200px;
-
-            li.card {
-
-                position:absolute;
-                border: 2px solid green;
-                transform-origin: 50% 150% 0;
-                z-index: 1;
-                min-width: fit-content;
-                min-height: fit-content;
-            }
-           
-
-            li:nth-child(1) {
-                transform: rotateZ(-30deg) ;
-
-            }
-            
-            li:nth-child(2) {
-                transform: rotateZ(-10deg) ;
-
-            }
-            li:nth-child(3) {
-                transform: rotateZ(10deg) ;
-
-            }
-            li:nth-child(4) {
-                transform: rotateZ(30deg) ;
-
-            }
-            li:nth-child(1) ,
-            li:nth-child(2) ,
-            li:nth-child(3) ,
-            li:nth-child(4) {
-               
-                transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1) 10ms;
-
-            }
-            li:nth-child(1):hover ,
-            li:nth-child(2):hover ,
-            li:nth-child(3):hover ,
-            li:nth-child(4):hover {
-                transform:scale(2);
-                z-index:200;
-                transform-origin: 50% 80% 0;
-
-
-            }
-
-        }
-    }
-
-    .handed-cards:hover {
-        z-index: 100;
-        transform: scale(1.5)
-    }
+   
 
     //defining grid container for each tab
     .tab[data-tab].active {

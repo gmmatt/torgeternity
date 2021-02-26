@@ -15,15 +15,13 @@ function shuffle(array) {
 
 function restartActionDeck() {
     console.log("TORG-----new action card deck");
-    CONFIG.torgeternity.gameCards.decks.actionDeck.remainingCards=CONFIG.torgeternity.gameCards.decks.actionDeck.cardList;
+    CONFIG.torgeternity.gameCards.decks.actionDeck.remainingCards = CONFIG.torgeternity.gameCards.decks.actionDeck.cardList;
     let deck = CONFIG.torgeternity.gameCards.decks.actionDeck;
-    deck.playedCards=[];
-    deck.remainingCards=deck.cardList;
-    
-    
+    deck.playedCards = [];
+    deck.remainingCards = deck.cardList;
     shuffle(deck.remainingCards);
 
-console.log(deck)
+    console.log(deck)
     CONFIG.torgeternity.gameCards.decks.actionDeck = deck;
 
 
