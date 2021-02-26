@@ -11,11 +11,14 @@
     input[type="date"],
     input[type="time"] .editor {
         background-color: rgba(255, 255, 255, 0.39);
-    };
-    input::placeholder{
+    }
+
+    ;
+
+    input::placeholder {
         background-color: rgba(0, 0, 0, 0);
     }
-    
+
 
     font-family: Berlin;
 
@@ -55,18 +58,55 @@
 
     }
 }
+
 .journal-sheet .window-content {
-        font-family:Palatino;
-        background-image: url(../images/bg-sheet.png);
-        background-size: cover;
-        color: black;
+    font-family: Palatino;
+    background-image: url(../images/box-bckg.png);
+    background-size: cover;
+    color: black;
+
+    input[type="text"],
+    select {
+        margin-top: 4%;
+        margin-left: 5%;
+        width: 90%;
+        text-align: center;
+        border: none;
+        text-transform: uppercase;
+        font-family: Alaska;
+        font-weight: bold;
+        color:#000
+    }
+
+    ;
+
+    input[type="text"]:hover,
+    select:hover,
+    input[type="text"]:focus,
+    select:focus,
+    input[type="text"]:active,
+    select:active,
+    .editor:hover,
+    .editor:focus,
+    .editor:active {
+        box-shadow: 0 0 15px rgb(5, 48, 117);
+    }
+
+    .editor {
+        margin-top: 4%;
+        margin-left: 5%;
+        width: 90%;
+        padding:2%
+    }
+
 }
 
-textarea{
+textarea {
     background-color: rgba(90, 157, 163, 0.493);
 }
+
 textarea:focus,
-textarea:hover{
+textarea:hover {
     background-color: rgba(90, 157, 163, 0.65);
     outline: 1px solid #222378;
     box-shadow: 0 0 10px #008cff7a;
