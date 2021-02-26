@@ -100,6 +100,107 @@ form.actor-sheet header input[name="name"] {
   align-items: center;
 }
 
+.window-content .actor-sheet .handed-cards {
+  background: grey;
+  flex-direction: row;
+  position: absolute;
+  font-family: Alaska;
+  text-transform: capitalize;
+  min-width: 200px;
+  transform: rotateZ(-90deg);
+  border: 2px solid red;
+  left: 40px;
+  bottom: 10%;
+  z-index: -100;
+  transition: all 0.3s cubic-bezier(0.6, -0.07, 0.56, 1.52) 0.2s;
+}
+
+.window-content .actor-sheet .handed-cards .destinyCards,
+.window-content .actor-sheet .handed-cards .reservedCards,
+.window-content .actor-sheet .handed-cards .axiomCards {
+  transition: all 0.3s cubic-bezier(0.6, -0.07, 0.56, 1.52) 0.2s;
+  border: 2px solid green;
+  display: flex;
+  flex-direction: row;
+  height: 200px;
+}
+
+.window-content .actor-sheet .handed-cards .destinyCards li.card,
+.window-content .actor-sheet .handed-cards .reservedCards li.card,
+.window-content .actor-sheet .handed-cards .axiomCards li.card {
+  position: absolute;
+  border: 2px solid green;
+  transform-origin: 50% 150% 0;
+  z-index: 1;
+  min-width: -webkit-fit-content;
+  min-width: -moz-fit-content;
+  min-width: fit-content;
+  min-height: -webkit-fit-content;
+  min-height: -moz-fit-content;
+  min-height: fit-content;
+}
+
+.window-content .actor-sheet .handed-cards .destinyCards li:nth-child(1),
+.window-content .actor-sheet .handed-cards .reservedCards li:nth-child(1),
+.window-content .actor-sheet .handed-cards .axiomCards li:nth-child(1) {
+  transform: rotateZ(-30deg);
+}
+
+.window-content .actor-sheet .handed-cards .destinyCards li:nth-child(2),
+.window-content .actor-sheet .handed-cards .reservedCards li:nth-child(2),
+.window-content .actor-sheet .handed-cards .axiomCards li:nth-child(2) {
+  transform: rotateZ(-10deg);
+}
+
+.window-content .actor-sheet .handed-cards .destinyCards li:nth-child(3),
+.window-content .actor-sheet .handed-cards .reservedCards li:nth-child(3),
+.window-content .actor-sheet .handed-cards .axiomCards li:nth-child(3) {
+  transform: rotateZ(10deg);
+}
+
+.window-content .actor-sheet .handed-cards .destinyCards li:nth-child(4),
+.window-content .actor-sheet .handed-cards .reservedCards li:nth-child(4),
+.window-content .actor-sheet .handed-cards .axiomCards li:nth-child(4) {
+  transform: rotateZ(30deg);
+}
+
+.window-content .actor-sheet .handed-cards .destinyCards li:nth-child(1),
+.window-content .actor-sheet .handed-cards .destinyCards li:nth-child(2),
+.window-content .actor-sheet .handed-cards .destinyCards li:nth-child(3),
+.window-content .actor-sheet .handed-cards .destinyCards li:nth-child(4),
+.window-content .actor-sheet .handed-cards .reservedCards li:nth-child(1),
+.window-content .actor-sheet .handed-cards .reservedCards li:nth-child(2),
+.window-content .actor-sheet .handed-cards .reservedCards li:nth-child(3),
+.window-content .actor-sheet .handed-cards .reservedCards li:nth-child(4),
+.window-content .actor-sheet .handed-cards .axiomCards li:nth-child(1),
+.window-content .actor-sheet .handed-cards .axiomCards li:nth-child(2),
+.window-content .actor-sheet .handed-cards .axiomCards li:nth-child(3),
+.window-content .actor-sheet .handed-cards .axiomCards li:nth-child(4) {
+  transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1) 10ms;
+}
+
+.window-content .actor-sheet .handed-cards .destinyCards li:nth-child(1):hover,
+.window-content .actor-sheet .handed-cards .destinyCards li:nth-child(2):hover,
+.window-content .actor-sheet .handed-cards .destinyCards li:nth-child(3):hover,
+.window-content .actor-sheet .handed-cards .destinyCards li:nth-child(4):hover,
+.window-content .actor-sheet .handed-cards .reservedCards li:nth-child(1):hover,
+.window-content .actor-sheet .handed-cards .reservedCards li:nth-child(2):hover,
+.window-content .actor-sheet .handed-cards .reservedCards li:nth-child(3):hover,
+.window-content .actor-sheet .handed-cards .reservedCards li:nth-child(4):hover,
+.window-content .actor-sheet .handed-cards .axiomCards li:nth-child(1):hover,
+.window-content .actor-sheet .handed-cards .axiomCards li:nth-child(2):hover,
+.window-content .actor-sheet .handed-cards .axiomCards li:nth-child(3):hover,
+.window-content .actor-sheet .handed-cards .axiomCards li:nth-child(4):hover {
+  transform: scale(2);
+  z-index: 200;
+  transform-origin: 50% 80% 0;
+}
+
+.window-content .actor-sheet .handed-cards:hover {
+  z-index: 100;
+  transform: scale(1.5);
+}
+
 .window-content .actor-sheet .tab[data-tab].active {
   display: grid;
   grid-template-columns: repeat(8, 1fr);
@@ -291,6 +392,7 @@ form.actor-sheet header input[name="name"] {
   grid-column: 5/7;
   grid-row: 3/4;
   transition: all 0.6s cubic-bezier(1, 0, 0, 1) 0.1s;
+  padding-left: 15%;
 }
 
 .window-content .actor-sheet .char_image:hover {

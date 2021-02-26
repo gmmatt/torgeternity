@@ -1,7 +1,9 @@
 <form class="actor-sheet {{cssClass}}" autocomplete="off">
     {{log "-----------Torg Eternity actor-sheet----------" this}}
     <h3 class="actor-type"><span>{{localize "torgeternity.sheetLabels.stormknight"}}</span></h3>
-
+    <div class="handed-cards">
+        {{> "systems/torgeternity/templates/parts/hand.hbs"}}
+    </div>
     <!--**************** tabs******************--->
     <nav class="sheet-tabs tabs" data-group="primary">
         <a class="item" data-tab="stats">{{localize "torgeternity.sheetLabels.stats"}}</a>
@@ -11,7 +13,7 @@
         <a class="item" data-tab="effects">{{localize "torgeternity.sheetLabels.effects"}}</a>
         <a class="item" data-tab="background">{{localize "torgeternity.sheetLabels.background"}}</a>
     </nav>
-    
+
 
     <section class="sheet-body">
         <!--**************** stat-tab******************--->
@@ -43,7 +45,7 @@
             <div class="defense block">
                 {{> "systems/torgeternity/templates/actors/stormknight/defense.hbs"}}
             </div>
-             <div class="xp block">
+            <div class="xp block">
                 {{> "systems/torgeternity/templates/actors/stormknight/xp.hbs"}}
             </div>
 
@@ -53,7 +55,7 @@
 
         </div>
 
-        
+
         <div class="tab perks" data-group="primary" data-tab="perks">
             <div class="perks-details block">
                 {{> "systems/torgeternity/templates/actors/stormknight/perks-details.hbs"}}
@@ -65,7 +67,7 @@
             <div class="gear block">
                 {{> "systems/torgeternity/templates/actors/stormknight/gear.hbs"}}
             </div>
-            
+
         </div>
 
 
@@ -76,17 +78,17 @@
         </div>
 
         <div class="tab effects" data-group="primary" data-tab="effects">
-             <div class="effects block">
-            {{> "systems/torgeternity/templates/parts/active-effects.hbs"}}
+            <div class="effects block">
+                {{> "systems/torgeternity/templates/parts/active-effects.hbs"}}
             </div>
         </div>
 
         <div class="tab background" data-group="primary" data-tab="background">
-        
+
             <h1 class="list-section-heading">Background and Notes</h1>
             {{editor content=data.details.background target="data.details.background" button=true owner=owner
             editable=editable}}
-        
+
         </div>
     </section>
 
