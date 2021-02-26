@@ -7,6 +7,9 @@ import {
     prepareActiveEffectCategories
 } from "/systems/torgeternity/module/effects.js";
 
+
+import  * as Card from "../cards/cardActions.js";
+
 export default class torgeternityActorSheet extends ActorSheet {
     constructor(...args) {
         super(...args);
@@ -128,6 +131,30 @@ export default class torgeternityActorSheet extends ActorSheet {
 
     activateListeners(html) {
 
+        //----------cards action: 
+        if (this.actor.owner) {
+            html.find(".card-reserve").click(this._onCardReserve.bind(this));
+        }
+        if (this.actor.owner) {
+            html.find(".card-play").click(this._onCardPlay.bind(this));
+        }
+        if (this.actor.owner) {
+            html.find(".card-exchange").click(this._onCardExchange.bind(this));
+        }
+        //--------cards display
+        for (let card of html.find(".cardHand")){
+            this._displayCard(card)
+        }
+        html.find('li.card').click(function(ev){
+            ev.currentTarget.classList.toggle("focusedCard");
+            
+        })
+        
+        
+        
+
+        
+        
         //Owner-only Listeners
         if (this.actor.owner) {
             html.find(".skill-roll").click(this._onSkillRoll.bind(this));
@@ -418,5 +445,50 @@ export default class torgeternityActorSheet extends ActorSheet {
                 "data.equipped": false
             })
         }
+    }
+
+
+    //------CARDS----
+
+    //---general animations
+    _displayCard(hand){
+      
+       for (let i=0; i<hand.children.length;i++){
+           if (!hand.children[i].classList.contains("focusedCard")){
+               
+           
+           hand.children[i].style.transformOrigin="50% 150%";
+           hand.children[i].style.transform=`rotateZ(${i*10}deg)`;
+       }}
+       hand.style.transform=`rotateZ(${hand.children.length*-5}deg)`
+        
+    }
+
+    _onCardReserve(event){
+        const cardID = event.currentTarget.closest(".card").getAttribute("data-item-id");
+        const card = this.actor.getOwnedItem(cardID);
+       console.log(card.data)
+        if (card.data.data.reserved === false) {
+            card.data.data.reserved = true;
+            card.update({
+                "data.reserved": true
+            })
+        } else {
+            card.data.data.reserved = false;
+            card.update({
+                "data.reserved": false
+            })
+        }
+        this.getData()
+    }
+    _onCardExchange(event){
+
+    }
+   
+    _onCardPlay(event){
+        const cardID = event.currentTarget.closest(".card").getAttribute("data-item-id");
+        const card = this.actor.getOwnedItem(cardID);
+        card.roll();
+        this.actor.deleteOwnedItem(cardID);
     }
 }
