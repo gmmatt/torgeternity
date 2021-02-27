@@ -527,7 +527,6 @@ div#sidebar::before {
   height: 120%;
   position: absolute;
   left: 0px;
-  /* top: -50px; */
   background: url(../images/separatorSidebar.png);
   content: "";
   margin-right: 150px;
