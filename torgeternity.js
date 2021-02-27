@@ -48,8 +48,8 @@ Hooks.once("init", async function () {
 
     //----socket receiver
     game.socket.on("system.torgeternity", data => {
-        if (data.msg == 'logmessage') {
-           console.log(data.content.message);
+        if (data.msg == 'cardPlayed') {
+           console.log(data.content.card, data.content.player);
         }
      });
 
