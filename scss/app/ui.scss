@@ -123,33 +123,32 @@ a:hover {
 
 //---------bouttons scene control
 
-#controls .scene-control,
-#controls .control-tool,
-#controls .scene-control,
-#controls .control-tool {
-    border: 1px solid black;
-    color: grey;
-    box-shadow: none;
+#controls {
 
-}
+    .scene-control,
+    .control-tool,
+    .scene-control:hover,
+    .control-tool:hover {
+        transition: all 250ms cubic-bezier(0.42, 0, 0.58, 1) 10ms;
 
+        background: url(../images/resizerRound.png);
+        background-size: 100% 100%;
+        color: rgb(107, 107, 107);
+        border: none;
+        border-radius: 50% 50%;
+        box-shadow: 0px 0px 15px rgb(0, 0, 0) inset ;
 
-#controls .scene-control,
-#controls .control-tool,
-#controls .scene-control:hover,
-#controls .control-tool:hover {
-    background: url(../images/tab-header.png);
-    background-size: 100% 20%;
-    color: rgb(160, 159, 159);
-    border: none;
-
-
-    .fa,
-    .fas {
-        font-weight: 600;
-        font-size: 16px;
+        i.fa,
+        i.fas {
+            font-weight: 600;
+            font-size: 16px;
+        };
+        i.fa::before,
+        i.fas:before{
+            position:relative;
+            top:-2px
+        }
     }
-
 }
 
 #controls .scene-control.active,
@@ -158,12 +157,10 @@ a:hover {
 #controls .control-tool:hover {
     color: white;
     text-shadow: black 0px 0px 15px;
-    box-shadow: 0px 0px 3px white;
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.678) inset;
+
     border: none;
-    background: #5772a1;
 }
-
-
 
 
 

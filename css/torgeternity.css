@@ -393,33 +393,39 @@ a:hover {
 
 #controls .scene-control,
 #controls .control-tool,
-#controls .scene-control,
-#controls .control-tool {
-  border: 1px solid black;
-  color: grey;
-  box-shadow: none;
-}
-
-#controls .scene-control,
-#controls .control-tool,
 #controls .scene-control:hover,
 #controls .control-tool:hover {
-  background: url(../images/tab-header.png);
-  background-size: 100% 20%;
-  color: #a09f9f;
+  transition: all 250ms cubic-bezier(0.42, 0, 0.58, 1) 10ms;
+  background: url(../images/resizerRound.png);
+  background-size: 100% 100%;
+  color: #6b6b6b;
   border: none;
+  border-radius: 50% 50%;
+  box-shadow: 0px 0px 15px black inset;
 }
 
-#controls .scene-control .fa,
-#controls .scene-control .fas,
-#controls .control-tool .fa,
-#controls .control-tool .fas,
-#controls .scene-control:hover .fa,
-#controls .scene-control:hover .fas,
-#controls .control-tool:hover .fa,
-#controls .control-tool:hover .fas {
+#controls .scene-control i.fa,
+#controls .scene-control i.fas,
+#controls .control-tool i.fa,
+#controls .control-tool i.fas,
+#controls .scene-control:hover i.fa,
+#controls .scene-control:hover i.fas,
+#controls .control-tool:hover i.fa,
+#controls .control-tool:hover i.fas {
   font-weight: 600;
   font-size: 16px;
+}
+
+#controls .scene-control i.fa::before,
+#controls .scene-control i.fas:before,
+#controls .control-tool i.fa::before,
+#controls .control-tool i.fas:before,
+#controls .scene-control:hover i.fa::before,
+#controls .scene-control:hover i.fas:before,
+#controls .control-tool:hover i.fa::before,
+#controls .control-tool:hover i.fas:before {
+  position: relative;
+  top: -2px;
 }
 
 #controls .scene-control.active,
@@ -428,9 +434,8 @@ a:hover {
 #controls .control-tool:hover {
   color: white;
   text-shadow: black 0px 0px 15px;
-  box-shadow: 0px 0px 3px white;
+  box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.678) inset;
   border: none;
-  background: #5772a1;
 }
 
 #sidebar {
