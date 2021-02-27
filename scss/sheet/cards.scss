@@ -18,8 +18,7 @@
 
 
 .handed-cards {
-    background: url(../images/backg-page.png);
-    background-size: cover;
+   
     display: flex;
     flex-direction: row;
     position: fixed;
@@ -33,16 +32,20 @@
     bottom: -270px;
     z-index: -100;
     transition: all 0.3s cubic-bezier(0.6, -0.07, 0.56, 1.52) 0.2s;
-    box-shadow: 1px 1px 20px 5px rgba(0, 0, 0, 1);
 
     .cardArea {
+        background: url(../images/backg-page.png);
+        background-size: 120% 100%;
+        background-position: center;
         width: 100%;
+        box-shadow: 1px 1px 20px 15px rgba(0, 0, 0, 0.575) inset;
+        border-radius: 10% 10% 0% 0%;
 
         h3.cardTitle {
             text-align: center;
             color: white;
             margin-top: 10px;
-            text-shadow: 0px 5px 5px #0117ff;
+            text-shadow: 0px 5px 5px #010961;
         }
 
         .destinyCards,

@@ -248,6 +248,55 @@ textarea:hover {
   color: #c6e2fa;
 }
 
+.journal-sheet .window-content {
+  font-family: Palatino;
+  background-image: url(../images/box-bckg.png);
+  background-size: cover;
+  color: black;
+}
+
+.journal-sheet .window-content input[type="text"],
+.journal-sheet .window-content select {
+  margin-top: 4%;
+  margin-left: 5%;
+  width: 90%;
+  text-align: center;
+  border: none;
+  text-transform: uppercase;
+  font-family: Alaska;
+  font-weight: bold;
+  color: #000;
+}
+
+.journal-sheet .window-content input[type="text"]:hover,
+.journal-sheet .window-content select:hover,
+.journal-sheet .window-content input[type="text"]:focus,
+.journal-sheet .window-content select:focus,
+.journal-sheet .window-content input[type="text"]:active,
+.journal-sheet .window-content select:active,
+.journal-sheet .window-content .editor:hover,
+.journal-sheet .window-content .editor:focus,
+.journal-sheet .window-content .editor:active {
+  box-shadow: 0 0 15px #053075;
+}
+
+.journal-sheet .window-content .editor {
+  margin-top: 4%;
+  margin-left: 5%;
+  width: 90%;
+  padding: 2%;
+}
+
+.window-app.image-popout .form-group.title {
+  margin-top: 1%;
+}
+
+.window-app.image-popout .form-group.title input {
+  height: 32px;
+  text-align: center;
+  margin-top: 0%;
+}
+
 #combat #combat-tracker {
   max-height: 350px;
   min-height: 100px;
@@ -876,8 +925,6 @@ div#sidebar.collapsed {
 }
 
 .torgeternity.actor .window-content .handed-cards {
-  background: url(../images/backg-page.png);
-  background-size: cover;
   display: flex;
   flex-direction: row;
   position: fixed;
@@ -890,18 +937,22 @@ div#sidebar.collapsed {
   bottom: -270px;
   z-index: -100;
   transition: all 0.3s cubic-bezier(0.6, -0.07, 0.56, 1.52) 0.2s;
-  box-shadow: 1px 1px 20px 5px black;
 }
 
 .torgeternity.actor .window-content .handed-cards .cardArea {
+  background: url(../images/backg-page.png);
+  background-size: 120% 100%;
+  background-position: center;
   width: 100%;
+  box-shadow: 1px 1px 20px 15px rgba(0, 0, 0, 0.575) inset;
+  border-radius: 10% 10% 0% 0%;
 }
 
 .torgeternity.actor .window-content .handed-cards .cardArea h3.cardTitle {
   text-align: center;
   color: white;
   margin-top: 10px;
-  text-shadow: 0px 5px 5px #0117ff;
+  text-shadow: 0px 5px 5px #010961;
 }
 
 .torgeternity.actor .window-content .handed-cards .cardArea .destinyCards,
