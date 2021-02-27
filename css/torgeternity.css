@@ -199,6 +199,55 @@ div.actor ::-webkit-scrollbar {
   color: #c6e2fa;
 }
 
+.journal-sheet .window-content {
+  font-family: Palatino;
+  background-image: url(../images/box-bckg.png);
+  background-size: cover;
+  color: black;
+}
+
+.journal-sheet .window-content input[type="text"],
+.journal-sheet .window-content select {
+  margin-top: 4%;
+  margin-left: 5%;
+  width: 90%;
+  text-align: center;
+  border: none;
+  text-transform: uppercase;
+  font-family: Alaska;
+  font-weight: bold;
+  color: #000;
+}
+
+.journal-sheet .window-content input[type="text"]:hover,
+.journal-sheet .window-content select:hover,
+.journal-sheet .window-content input[type="text"]:focus,
+.journal-sheet .window-content select:focus,
+.journal-sheet .window-content input[type="text"]:active,
+.journal-sheet .window-content select:active,
+.journal-sheet .window-content .editor:hover,
+.journal-sheet .window-content .editor:focus,
+.journal-sheet .window-content .editor:active {
+  box-shadow: 0 0 15px #053075;
+}
+
+.journal-sheet .window-content .editor {
+  margin-top: 4%;
+  margin-left: 5%;
+  width: 90%;
+  padding: 2%;
+}
+
+.window-app.image-popout .form-group.title {
+  margin-top: 1%;
+}
+
+.window-app.image-popout .form-group.title input {
+  height: 32px;
+  text-align: center;
+  margin-top: 0%;
+}
+
 #combat #combat-tracker {
   max-height: 350px;
   min-height: 100px;
@@ -289,12 +338,57 @@ a:hover {
   border-bottom: 2px solid black;
 }
 
+.window-app .window-resizable-handle {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  bottom: -10px;
+  right: -10px;
+  background: url(../images/resizerRound.png);
+  background-size: 115% 115%;
+  background-position: center;
+  padding: 2px;
+  border: none;
+  border-radius: 50%;
+  box-shadow: 0px 0px 5px blue;
+  transition: all 500ms cubic-bezier(0.42, 0, 0.58, 1) 10ms;
+}
+
+.window-app .window-resizable-handle i.fas {
+  transition: all 500ms cubic-bezier(0.42, 0, 0.58, 1) 10ms;
+  transform: rotate(45deg);
+  top: 25%;
+  left: 25%;
+  position: absolute;
+  color: rgba(255, 255, 255, 0);
+  text-shadow: 0px 0px 30px rgba(255, 255, 255, 0);
+}
+
+.window-app .window-resizable-handle i.fas:hover {
+  transform: rotate(45deg) scaleX(1.6);
+  color: #ffffff;
+  -webkit-text-fill-color: white;
+  /* Will override color (regardless of order) */
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+}
+
+.window-app .window-resizable-handle:active {
+  box-shadow: 0px 0px 30px blue;
+}
+
 .window-app .window-header {
   background: url(../images/tab-header.png);
   background-size: 100% 100%;
   font-family: Alaska;
   font-weight: bold;
   color: white;
+  transform: scaleX(1.06);
+  padding-left: 5%;
+  padding-right: 5%;
+  border: none;
+  box-shadow: 0px 15px 30px black;
+  z-index: 100;
 }
 
 #controls .scene-control,
@@ -342,7 +436,13 @@ a:hover {
 #sidebar {
   color: white;
   background-image: url(../images/thunder.png);
-  background-size: cover;
+  background-size: 80% 100%;
+  padding-left: 80px;
+  width: 380px;
+  background-position-x: 80px;
+  background-repeat: no-repeat;
+  border: none;
+  box-shadow: none;
 }
 
 #sidebar #sidebar-tabs {
@@ -366,6 +466,33 @@ a:hover {
 
 #sidebar a:hover {
   text-shadow: 0 0 10px #001aff;
+}
+
+div#sidebar::before {
+  width: 80px;
+  height: 120%;
+  position: absolute;
+  left: 0px;
+  /* top: -50px; */
+  background: url(../images/separatorDiamond.png);
+  content: "";
+  margin-right: 150px;
+  background-size: 80% 100%;
+  background-position: 280% 50%;
+  background-repeat: no-repeat;
+  box-shadow: 10px 0px 60px #246270a6;
+}
+
+div#sidebar.collapsed::before {
+  width: 0px;
+  content: unset;
+}
+
+div#sidebar.collapsed {
+  right: 0px;
+  padding-left: 0px;
+  background-position: center;
+  background-size: 100% 100%;
 }
 
 .dialog-button {
@@ -529,8 +656,6 @@ a:hover {
 }
 
 .torgeternity.actor .window-content .handed-cards {
-  background: url(../images/backg-page.png);
-  background-size: cover;
   display: flex;
   flex-direction: row;
   position: fixed;
@@ -543,18 +668,22 @@ a:hover {
   bottom: -270px;
   z-index: -100;
   transition: all 0.3s cubic-bezier(0.6, -0.07, 0.56, 1.52) 0.2s;
-  box-shadow: 1px 1px 20px 5px black;
 }
 
 .torgeternity.actor .window-content .handed-cards .cardArea {
+  background: url(../images/backg-page.png);
+  background-size: 120% 100%;
+  background-position: center;
   width: 100%;
+  box-shadow: 1px 1px 20px 15px rgba(0, 0, 0, 0.575) inset;
+  border-radius: 10% 10% 0% 0%;
 }
 
 .torgeternity.actor .window-content .handed-cards .cardArea h3.cardTitle {
   text-align: center;
   color: white;
   margin-top: 10px;
-  text-shadow: 0px 5px 5px #0117ff;
+  text-shadow: 0px 5px 5px #010961;
 }
 
 .torgeternity.actor .window-content .handed-cards .cardArea .destinyCards,

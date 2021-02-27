@@ -77,6 +77,55 @@
   color: #c6e2fa;
 }
 
+.journal-sheet .window-content {
+  font-family: Palatino;
+  background-image: url(../images/box-bckg.png);
+  background-size: cover;
+  color: black;
+}
+
+.journal-sheet .window-content input[type="text"],
+.journal-sheet .window-content select {
+  margin-top: 4%;
+  margin-left: 5%;
+  width: 90%;
+  text-align: center;
+  border: none;
+  text-transform: uppercase;
+  font-family: Alaska;
+  font-weight: bold;
+  color: #000;
+}
+
+.journal-sheet .window-content input[type="text"]:hover,
+.journal-sheet .window-content select:hover,
+.journal-sheet .window-content input[type="text"]:focus,
+.journal-sheet .window-content select:focus,
+.journal-sheet .window-content input[type="text"]:active,
+.journal-sheet .window-content select:active,
+.journal-sheet .window-content .editor:hover,
+.journal-sheet .window-content .editor:focus,
+.journal-sheet .window-content .editor:active {
+  box-shadow: 0 0 15px #053075;
+}
+
+.journal-sheet .window-content .editor {
+  margin-top: 4%;
+  margin-left: 5%;
+  width: 90%;
+  padding: 2%;
+}
+
+.window-app.image-popout .form-group.title {
+  margin-top: 1%;
+}
+
+.window-app.image-popout .form-group.title input {
+  height: 32px;
+  text-align: center;
+  margin-top: 0%;
+}
+
 #combat #combat-tracker {
   max-height: 350px;
   min-height: 100px;
