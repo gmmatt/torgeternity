@@ -121,7 +121,9 @@ a:hover {
 }
 
 
-//---------bouttons scene control
+//-----------
+//---controls
+//-----------
 
 #controls {
 
@@ -163,8 +165,9 @@ a:hover {
 }
 
 
-
-//------------SIDEBAR
+//-----------
+//---SIDEBAR
+//-----------
 #sidebar {
     color: white;
     background-image: url(../images/thunder.png);
@@ -207,7 +210,6 @@ div#sidebar::before {
     height: 120%;
     position: absolute;
     left: 0px;
-    /* top: -50px; */
     background: url(../images/separatorSidebar.png);
     content: "";
     margin-right: 150px;
@@ -229,11 +231,36 @@ div#sidebar.collapsed {
     background-size: 100% 100%;
 
 }
+//-----------
+//---macros bar
+//-----------
+#hotbar{
+    #macro-list{
+        border:none;
+     .macro {
+        position: relative;
+        flex: 0 0 50px;
+        height: 50px;
+        background: url(../images/backg-page.png);
+        border-radius: 25%;
+        box-shadow: 0 0 5px #000 inset;
+        cursor: pointer;
+    }
+    .macro:hover {
+        box-shadow: 0 0 10px #004777 inset;
+    }
+}
+}
 
 
 .dialog-button {
     color: rgb(180, 180, 180);
 }
+
+
+
+
+//----------ALL UI transition
 
 #controls,
 #logo,
