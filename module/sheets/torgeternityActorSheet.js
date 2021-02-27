@@ -513,19 +513,28 @@ export default class torgeternityActorSheet extends ActorSheet {
     }
 
     _onCardPlay(event) {
-
+       
         const cardID = event.currentTarget.closest(".card").getAttribute("data-item-id");
-        const card = this.actor.getOwnedItem(cardID);
-        if (Gamepad.combat === null || card.type == "cosm") {
+        const card = this.actor.getOwnedItem(cardID); 
+        console.log({card})
+        if (game.combat === null || card.data.type == "cosm") {
             card.roll();
             this.actor.deleteOwnedItem(cardID);
+            game.socket.on("system.torgeternity", data=>{
+                ui.notifications.war(`played card ${data.msg}`)
+                })
         } else {
-            if (!card.reserved) {
+            if (!card.data.data.reserved) {
                 ui.notifications.warn('please play a reserved card while playing a dramtic scene');
             } else {
                 card.roll();
                 this.actor.deleteOwnedItem(cardID);
+                game.socket.emit("system.torgeternity", {
+                    msg: "logmessage",
+                    content: { message: "hello world" }
+                });
             }
         }
+        
     }
 }
