@@ -406,7 +406,7 @@
             "spell",
             "miracle",
             "psionicpower",
-            "axiomCard",
+            "cosmCard",
             "destinyCard",
             "dramaCard"
         ],
@@ -438,7 +438,7 @@
 
             }
         },
-        "axiomCard": {
+        "cosmCard": {
             "templates": [
                 "card"
             ]

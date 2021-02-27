@@ -8,7 +8,7 @@ import {
 } from "/systems/torgeternity/module/effects.js";
 
 
-import  * as Card from "../cards/cardActions.js";
+import * as Card from "../cards/cardActions.js";
 
 export default class torgeternityActorSheet extends ActorSheet {
     constructor(...args) {
@@ -111,8 +111,8 @@ export default class torgeternityActorSheet extends ActorSheet {
         data.destinyCard = data.items.filter(function (item) {
             return item.type == "destinyCard"
         });
-        data.axiomCard = data.items.filter(function (item) {
-            return item.type == "axiomCard"
+        data.cosmCard = data.items.filter(function (item) {
+            return item.type == "cosmCard"
         });
 
 
@@ -142,19 +142,20 @@ export default class torgeternityActorSheet extends ActorSheet {
             html.find(".card-exchange").click(this._onCardExchange.bind(this));
         }
         //--------cards display
-        for (let card of html.find(".cardHand")){
+        for (let card of html.find(".cardHand")) {
             this._displayCard(card)
         }
-        html.find('li.card').click(function(ev){
+        html.find('li.card').click(function (ev) {
             ev.currentTarget.classList.toggle("focusedCard");
-            
-        })
-        
-        
-        
 
-        
-        
+        })
+
+
+
+
+
+
+
         //Owner-only Listeners
         if (this.actor.owner) {
             html.find(".skill-roll").click(this._onSkillRoll.bind(this));
@@ -268,7 +269,7 @@ export default class torgeternityActorSheet extends ActorSheet {
                 }
             }
         });
-        
+
 
     }
 
@@ -451,23 +452,24 @@ export default class torgeternityActorSheet extends ActorSheet {
     //------CARDS----
 
     //---general animations
-    _displayCard(hand){
-      
-       for (let i=0; i<hand.children.length;i++){
-           if (!hand.children[i].classList.contains("focusedCard")){
-               
-           
-           hand.children[i].style.transformOrigin="50% 150%";
-           hand.children[i].style.transform=`rotateZ(${i*10}deg)`;
-       }}
-       hand.style.transform=`rotateZ(${hand.children.length*-5}deg)`
-        
+    _displayCard(hand) {
+
+        for (let i = 0; i < hand.children.length; i++) {
+            if (!hand.children[i].classList.contains("focusedCard")) {
+
+
+                hand.children[i].style.transformOrigin = "50% 150%";
+                hand.children[i].style.transform = `rotateZ(${i*10}deg)`;
+            }
+        }
+        hand.style.transform = `rotateZ(${hand.children.length*-5}deg)`
+
     }
 
-    _onCardReserve(event){
+    _onCardReserve(event) {
         const cardID = event.currentTarget.closest(".card").getAttribute("data-item-id");
         const card = this.actor.getOwnedItem(cardID);
-       console.log(card.data)
+        console.log(card.data)
         if (card.data.data.reserved === false) {
             card.data.data.reserved = true;
             card.update({
@@ -479,16 +481,51 @@ export default class torgeternityActorSheet extends ActorSheet {
                 "data.reserved": false
             })
         }
-        this.getData()
-    }
-    _onCardExchange(event){
 
     }
-   
-    _onCardPlay(event){
+    _onCardExchange(event) {
+
+        let applyChanges = false;
+        new Dialog({
+            title: "card exchange proposal",
+            content: "Are you sure you want to delete this? It will be permanently removed from the sheet.",
+            buttons: {
+                yes: {
+                    icon: '<i class="fas fa-check"></i>',
+                    label: "Yes",
+                    callback: () => applyChanges = true
+                },
+                no: {
+                    icon: '<i class="fas fa-times"></i>',
+                    label: "No"
+                },
+            },
+            default: "yes",
+            close: html => {
+                if (applyChanges) {
+                    const li = $(ev.currentTarget).parents(".item");
+                    this.actor.deleteOwnedItem(li.data("itemId"));
+                    li.slideUp(200, () => this.render(false));
+                }
+            }
+        }).render(true);
+
+    }
+
+    _onCardPlay(event) {
+
         const cardID = event.currentTarget.closest(".card").getAttribute("data-item-id");
         const card = this.actor.getOwnedItem(cardID);
-        card.roll();
-        this.actor.deleteOwnedItem(cardID);
+        if (Gamepad.combat === null || card.type == "cosm") {
+            card.roll();
+            this.actor.deleteOwnedItem(cardID);
+        } else {
+            if (!card.reserved) {
+                ui.notifications.warn('please play a reserved card while playing a dramtic scene');
+            } else {
+                card.roll();
+                this.actor.deleteOwnedItem(cardID);
+            }
+        }
     }
 }
