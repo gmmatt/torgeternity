@@ -66,6 +66,10 @@
   background-size: cover;
 }
 
+.item .window-content form.item-sheet .asside input[name="data.price"] {
+  width: 50px;
+}
+
 .item .window-content form.item-sheet .asside select {
   color: black;
   text-align: center;

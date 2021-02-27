@@ -708,7 +708,7 @@ form.actor-sheet header input[name="name"] {
 .window-content .actor-sheet .perks-details ol li .item-controls a.item-equip.item-unequipped,
 .window-content .actor-sheet .gear ol li .item-controls a.item-equip.item-unequipped,
 .window-content .actor-sheet .powers ol li .item-controls a.item-equip.item-unequipped {
-  color: #680000;
+  color: #1f0101;
   text-shadow: 0px 0px 5px #f80202;
 }
 

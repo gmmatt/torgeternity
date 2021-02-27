@@ -8,7 +8,6 @@ export function sheetResize() {
                 
                 if (cr.width<510 ||cr.height<700){
                     sheet.classList.add("compact")
-                    console.log("compact-style")
                 }else{
                     sheet.classList.remove("compact");
                 }

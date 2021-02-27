@@ -59,19 +59,71 @@
         }
 
     }
-
-    textarea {
-        background-color: rgba(90, 157, 163, 0.493);
-    }
-
-    textarea:focus,
-    textarea:hover {
-        background-color: rgba(90, 157, 163, 0.65);
-        outline: 1px solid #222378;
-        box-shadow: 0 0 10px #008cff7a;
-    }
-
 }
+
+.journal-sheet .window-content {
+    font-family: Palatino;
+    background-image: url(../images/box-bckg.png);
+    background-size: cover;
+    color: black;
+
+    input[type="text"],
+    select {
+        margin-top: 4%;
+        margin-left: 5%;
+        width: 90%;
+        text-align: center;
+        border: none;
+        text-transform: uppercase;
+        font-family: Alaska;
+        font-weight: bold;
+        color: #000
+    }
+
+    ;
+
+    input[type="text"]:hover,
+    select:hover,
+    input[type="text"]:focus,
+    select:focus,
+    input[type="text"]:active,
+    select:active,
+    .editor:hover,
+    .editor:focus,
+    .editor:active {
+        box-shadow: 0 0 15px rgb(5, 48, 117);
+    }
+
+    .editor {
+        margin-top: 4%;
+        margin-left: 5%;
+        width: 90%;
+        padding: 2%
+    }
+}
+
+.window-app.image-popout{
+    .form-group.title { 
+        margin-top: 1%;
+        input {
+    height: 32px;
+    text-align: center;
+    margin-top:0%
+   
+}}
+} 
+
+textarea {
+    background-color: rgba(90, 157, 163, 0.493);
+}
+
+textarea:focus,
+textarea:hover {
+    background-color: rgba(90, 157, 163, 0.65);
+    outline: 1px solid #222378;
+    box-shadow: 0 0 10px #008cff7a;
+}
+
 
 #module-management {
     color: white;
