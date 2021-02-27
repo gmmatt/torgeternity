@@ -843,6 +843,38 @@ div#sidebar.collapsed {
   font-size: 0.9em;
 }
 
+@-webkit-keyframes focusedCard {
+  from {
+    position: absolute;
+    transform-origin: 50% 150% 0;
+  }
+  to {
+    transform: scale(2);
+    top: -300px;
+    width: 200px;
+    height: 250px;
+    transform-origin: 50% 50% 0;
+    left: -50px;
+    transform: rotateZ(0deg);
+  }
+}
+
+@keyframes focusedCard {
+  from {
+    position: absolute;
+    transform-origin: 50% 150% 0;
+  }
+  to {
+    transform: scale(2);
+    top: -300px;
+    width: 200px;
+    height: 250px;
+    transform-origin: 50% 50% 0;
+    left: -50px;
+    transform: rotateZ(0deg);
+  }
+}
+
 .torgeternity.actor .window-content .handed-cards {
   background: url(../images/backg-page.png);
   background-size: cover;
@@ -874,7 +906,7 @@ div#sidebar.collapsed {
 
 .torgeternity.actor .window-content .handed-cards .cardArea .destinyCards,
 .torgeternity.actor .window-content .handed-cards .cardArea .reservedCards,
-.torgeternity.actor .window-content .handed-cards .cardArea .axiomCards {
+.torgeternity.actor .window-content .handed-cards .cardArea .cosmCards {
   transition: all 0.3s cubic-bezier(0.6, -0.07, 0.56, 1.52) 0.2s;
   display: flex;
   flex-direction: row;
@@ -883,7 +915,8 @@ div#sidebar.collapsed {
 
 .torgeternity.actor .window-content .handed-cards .cardArea .destinyCards li.card,
 .torgeternity.actor .window-content .handed-cards .cardArea .reservedCards li.card,
-.torgeternity.actor .window-content .handed-cards .cardArea .axiomCards li.card {
+.torgeternity.actor .window-content .handed-cards .cardArea .cosmCards li.card {
+  transition: all 0.3s cubic-bezier(0.6, -0.07, 0.56, 1.52) 0.2s;
   box-shadow: 1px 1px 20px 5px black;
   position: absolute;
   transform-origin: 50% 150% 0;
@@ -893,18 +926,23 @@ div#sidebar.collapsed {
 
 .torgeternity.actor .window-content .handed-cards .cardArea .destinyCards li.card div.item-controls,
 .torgeternity.actor .window-content .handed-cards .cardArea .reservedCards li.card div.item-controls,
-.torgeternity.actor .window-content .handed-cards .cardArea .axiomCards li.card div.item-controls {
+.torgeternity.actor .window-content .handed-cards .cardArea .cosmCards li.card div.item-controls {
   background-color: #2c7dc3;
   display: flex;
   justify-content: space-around;
   border-radius: 15% 15% 0% 0%;
 }
 
+.torgeternity.actor .window-content .handed-cards .cardArea .destinyCards li.card:hover,
+.torgeternity.actor .window-content .handed-cards .cardArea .reservedCards li.card:hover,
+.torgeternity.actor .window-content .handed-cards .cardArea .cosmCards li.card:hover {
+  z-index: 300;
+}
+
 .torgeternity.actor .window-content .handed-cards .cardArea .destinyCards li.focusedCard,
 .torgeternity.actor .window-content .handed-cards .cardArea .reservedCards li.focusedCard,
-.torgeternity.actor .window-content .handed-cards .cardArea .axiomCards li.focusedCard {
-  display: flex;
-  flex-direction: column;
+.torgeternity.actor .window-content .handed-cards .cardArea .cosmCards li.focusedCard {
+  transition: all 0.3s cubic-bezier(0.6, -0.07, 0.56, 1.52) 0.2s;
   z-index: 200;
   transform: scale(2);
   top: -300px;
@@ -917,7 +955,7 @@ div#sidebar.collapsed {
 
 .torgeternity.actor .window-content .handed-cards .cardArea .destinyCards li.focusedCard img,
 .torgeternity.actor .window-content .handed-cards .cardArea .reservedCards li.focusedCard img,
-.torgeternity.actor .window-content .handed-cards .cardArea .axiomCards li.focusedCard img {
+.torgeternity.actor .window-content .handed-cards .cardArea .cosmCards li.focusedCard img {
   max-width: 200px;
   width: 200px;
   max-height: 300px;
