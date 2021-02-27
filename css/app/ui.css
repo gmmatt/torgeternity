@@ -67,12 +67,57 @@ a:hover {
   border-bottom: 2px solid black;
 }
 
+.window-app .window-resizable-handle {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  bottom: -10px;
+  right: -10px;
+  background: url(../images/resizerRound.png);
+  background-size: 115% 115%;
+  background-position: center;
+  padding: 2px;
+  border: none;
+  border-radius: 50%;
+  box-shadow: 0px 0px 5px blue;
+  transition: all 500ms cubic-bezier(0.42, 0, 0.58, 1) 10ms;
+}
+
+.window-app .window-resizable-handle i.fas {
+  transition: all 500ms cubic-bezier(0.42, 0, 0.58, 1) 10ms;
+  transform: rotate(45deg);
+  top: 25%;
+  left: 25%;
+  position: absolute;
+  color: rgba(255, 255, 255, 0);
+  text-shadow: 0px 0px 30px rgba(255, 255, 255, 0);
+}
+
+.window-app .window-resizable-handle i.fas:hover {
+  transform: rotate(45deg) scaleX(1.6);
+  color: #ffffff;
+  -webkit-text-fill-color: white;
+  /* Will override color (regardless of order) */
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+}
+
+.window-app .window-resizable-handle:active {
+  box-shadow: 0px 0px 30px blue;
+}
+
 .window-app .window-header {
   background: url(../images/tab-header.png);
   background-size: 100% 100%;
   font-family: Alaska;
   font-weight: bold;
   color: white;
+  transform: scaleX(1.06);
+  padding-left: 5%;
+  padding-right: 5%;
+  border: none;
+  box-shadow: 0px 15px 30px black;
+  z-index: 100;
 }
 
 #controls .scene-control,
@@ -120,7 +165,13 @@ a:hover {
 #sidebar {
   color: white;
   background-image: url(../images/thunder.png);
-  background-size: cover;
+  background-size: 80% 100%;
+  padding-left: 80px;
+  width: 380px;
+  background-position-x: 80px;
+  background-repeat: no-repeat;
+  border: none;
+  box-shadow: none;
 }
 
 #sidebar #sidebar-tabs {
@@ -144,6 +195,33 @@ a:hover {
 
 #sidebar a:hover {
   text-shadow: 0 0 10px #001aff;
+}
+
+div#sidebar::before {
+  width: 80px;
+  height: 120%;
+  position: absolute;
+  left: 0px;
+  /* top: -50px; */
+  background: url(../images/separatorDiamond.png);
+  content: "";
+  margin-right: 150px;
+  background-size: 80% 100%;
+  background-position: 280% 50%;
+  background-repeat: no-repeat;
+  box-shadow: 10px 0px 60px #246270a6;
+}
+
+div#sidebar.collapsed::before {
+  width: 0px;
+  content: unset;
+}
+
+div#sidebar.collapsed {
+  right: 0px;
+  padding-left: 0px;
+  background-position: center;
+  background-size: 100% 100%;
 }
 
 .dialog-button {
