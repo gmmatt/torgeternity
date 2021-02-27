@@ -1,9 +1,7 @@
 export function sheetResize() {
     Hooks.on("rendertorgeternityActorSheet", async function (app, html, data) {
-        console.log(app);
         if (app.object.data.type==="stormknight"){
         let sheet = document.getElementById(app.id);
-        console.log(sheet);
         var ro = new ResizeObserver(entries => {
             for (let entry of entries) {
                 const cr = entry.contentRect;
@@ -13,7 +11,6 @@ export function sheetResize() {
                     console.log("compact-style")
                 }else{
                     sheet.classList.remove("compact");
-                    console.log("normal-style")
                 }
             };
 

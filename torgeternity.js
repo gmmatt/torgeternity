@@ -18,7 +18,7 @@ import {
 } from "./module/viewMode.js";
 
 
-Hooks.once("init", function () {
+Hooks.once("init", async function () {
     console.log("torgeternity | Initializing Torg Eternity System");
 
     //-------moving to a n imported module ?? ./modules/config.js
@@ -41,9 +41,17 @@ Hooks.once("init", function () {
 
     //----------preloading handlebars templates for partials sheet 
     preloadTemplates();
+
+
     //----------debug hooks
     CONFIG.debug.hooks = true;
 
+    //----socket receiver
+    game.socket.on("system.torgeternity", data => {
+        if (data.msg == 'logmessage') {
+           console.log(data.content.message);
+        }
+     });
 
 });
 
@@ -52,10 +60,10 @@ Hooks.once("ready", function () {
     sheetResize();
     toggleViewMode();
     var logo = document.getElementById("logo");
-    
+
     logo.style.position = "absolute"
     logo.setAttribute("src", "/systems/torgeternity/images/vttLogo.png");
-    
+
 })
 //----all this could be draft in another imported module ?? maybe like ./modules/handlebarsHelpers.js
 
@@ -80,7 +88,7 @@ Handlebars.registerHelper("concatClearanceLevel", function (clearance) {
 });
 
 Hooks.on("renderChatLog", (app, html, data) => Chat.addChatListeners(html));
-Hooks.on("renderCombatTracker",function(app,html,data){
+Hooks.on("renderCombatTracker", function (app, html, data) {
     Combat.addActionCardsArea(html);
 
-})
+});
