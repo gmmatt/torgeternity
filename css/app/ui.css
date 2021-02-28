@@ -306,7 +306,7 @@ div#sidebar.collapsed {
 }
 
 #navigation #scene-list .scene.gm {
-  background: url(../images/scene.png);
+  background: url(../images/scene-gm.png);
   background-size: 100% 100%;
   border: none;
   box-shadow: none;
@@ -320,7 +320,7 @@ div#sidebar.collapsed {
 }
 
 #navigation #scene-list .scene.view {
-  background: url(../images/scene-player-access.png);
+  background: url(../images/scene-view.png);
   background-size: 100% 100%;
   border: none;
   box-shadow: none;
