@@ -115,7 +115,8 @@
             "tappingDifficulty": "Tapping Difficulty",
             "purpose": "Purpose",
             "powers": "Powers",
-            "restrictions": "Restrictions"
+            "restrictions": "Restrictions",
+            "minStrength": "Min Str"
         },
         "stats":{
             "wounds": "Wounds",

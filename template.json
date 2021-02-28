@@ -450,6 +450,7 @@
             ],
             "bonus": 1,
             "maxDex": 12,
+            "minStrength": "",
             "equipped": false,
             "equippedClass": ".item-unequipped",
             "notes": ""
@@ -459,6 +460,7 @@
                 "general"
             ],
             "bonus": 1,
+            "minStrength": "",
             "equipped": false,
             "equippedClass": ".item-unequipped",
             "notes": ""
@@ -470,6 +472,7 @@
             "attackWith": "meleeWeapons",
             "damageType": 0,
             "damage": 0,
+            "ap": 0,
             "bonus": 2,
             "notes": ""
         },
@@ -480,7 +483,12 @@
             "attackWith": "missileWeapons",
             "damageType": "",
             "damage": 0,
-            "ammo": 1,
+            "ap": 0,
+            "ammo": {
+                "max": 1,
+                "value": 1
+            },
+            "minStrength": "",
             "range": "",
             "notes": ""
         },
@@ -491,7 +499,11 @@
             "attackWith": "fireCombat",
             "damageType": "",
             "damage": 0,
-            "ammo": 1,
+            "ap": 0,
+            "ammo": {
+                "max": 1,
+                "value": 1
+            },
             "range": "",
             "notes": ""
         },
@@ -507,7 +519,11 @@
             ],
             "attackWith": "heavyWeapons",
             "damage": 0,
-            "ammo": 1,
+            "ap": 0,
+            "ammo": {
+                "max": 1,
+                "value": 1
+            },
             "range": "",
             "notes": ""
         },

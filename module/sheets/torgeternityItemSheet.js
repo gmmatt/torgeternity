@@ -14,7 +14,7 @@ export default class torgeternityItemSheet extends ItemSheet {
             case "meleeweapon":
             case "missileweapon":
 
-                this.options.height = this.position.height = 650;
+                this.options.height = this.position.height = 675;
                 break;
             case "miracle":
             case "psionicpower":
@@ -30,6 +30,11 @@ export default class torgeternityItemSheet extends ItemSheet {
             case "vehicle":
                 this.options.height = this.position.height = 630;
                 break;
+
+            case "implant":
+            case "armor":
+            case "shield":
+                this.option.height = this.position.height = 615;
                 
             default:
                 this.options.height = this.position.height = 560;

@@ -36,27 +36,28 @@
                     <input name="data.price" type="text" value="{{data.price}}" class="input-box-small" />
                     <input name="data.value" type="number" value="{{data.value}}" class="input-box-small" />
                     <p class="item-data-label">
-                        {{localize "torgeternity.gear.bonus"}}
+                        {{localize "torgeternity.gear.minStrength"}}
                     </p>
-                    <input name="data.bonus" type="number" value="{{data.bonus}}" class="input-box" />
+                    <input name="data.minStrength" type="number" value="{{data.minStrength}}" class="input-box-small" />                
                     <p class="item-data-label">
                         {{localize "torgeternity.gear.maxDex"}}
                     </p>
                     <input name="data.maxDex" type="number" value="{{data.maxDex}}" class="input-box" />
                     <p class="item-data-label">
-                        {{localize "torgeternity.gear.notes"}}
+                        {{localize "torgeternity.gear.bonus"}}
                     </p>
-                    <input name="data.notes" type="text" value="{{data.notes}}" class="input-box" />
+                    <input name="data.bonus" type="number" value="{{data.bonus}}" class="input-box" />
                 </div>
                 <div class="main-content">
+                    <p class="item-data-label">
+                        {{localize "torgeternity.gear.notes"}}&nbsp;
+                        <input name="data.notes" type="text" value="{{data.notes}}" class="input-box" />
+                    </p>
                     <div name="data.description" class="item-description-textarea">
                         {{editor content=data.description target="data.description" button=true owner=owner editable=editable}}
                     </div>
                 </div>
-
-
             </div>
-        </div>
 
         <div class="tab effects" data-group="primary" data-tab="effects">
             {{> "systems/torgeternity/templates/parts/active-effects.hbs"}}
