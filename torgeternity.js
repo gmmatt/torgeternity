@@ -16,6 +16,7 @@ import {
 import {
     toggleViewMode
 } from "./module/viewMode.js";
+import * as Cards from "./module/cards.js";
 
 
 Hooks.once("init", async function () {
@@ -49,8 +50,17 @@ Hooks.once("init", async function () {
     //----socket receiver
     game.socket.on("system.torgeternity", data => {
         if (data.msg == 'cardPlayed') {
-           console.log(data.content.card, data.content.player);
+           Cards.cardPlayed(data);
         }
+        if (data.msg == 'cardReserved') {
+            Cards.cardReserved(data);
+         }
+         if (data.msg == 'cardExchangePropose') {
+            Cards.cardExchangePropose(data);
+         }
+         if (data.msg == 'cardExchangeValide') {
+            Cards.cardExchangeValide(data);
+         }
      });
 
 });
@@ -59,10 +69,19 @@ Hooks.once("init", async function () {
 Hooks.once("ready", function () {
     sheetResize();
     toggleViewMode();
-    var logo = document.getElementById("logo");
 
-    logo.style.position = "absolute"
+    var logo = document.getElementById("logo");
+    logo.style.position = "fixe"
     logo.setAttribute("src", "/systems/torgeternity/images/vttLogo.png");
+
+
+    let handedCardArea = document.createElement('div');
+    renderTemplate("systems/torgeternity/templates/cards/hand.hbs",game).then(html => {
+    handedCardArea.id = "handed-cards";
+    handedCardArea.classList.add('handed-cards')
+    handedCardArea.innerHTML = html;
+    document.body.append(handedCardArea);
+});
 
 })
 //----all this could be draft in another imported module ?? maybe like ./modules/handlebarsHelpers.js
@@ -88,7 +107,8 @@ Handlebars.registerHelper("concatClearanceLevel", function (clearance) {
 });
 
 Hooks.on("renderChatLog", (app, html, data) => Chat.addChatListeners(html));
+
+
 Hooks.on("renderCombatTracker", function (app, html, data) {
     Combat.addActionCardsArea(html);
-
 });
