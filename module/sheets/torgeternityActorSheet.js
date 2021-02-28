@@ -474,21 +474,35 @@ export default class torgeternityActorSheet extends ActorSheet {
             card.data.data.reserved = true;
             card.update({
                 "data.reserved": true
-            })
+            });
+            game.socket.emit("system.torgeternity", {
+                msg: "cardReserved",
+                data: { 
+                    player: game.user.data._id ,
+                    card : card
+                }
+            });
         } else {
             card.data.data.reserved = false;
             card.update({
                 "data.reserved": false
-            })
+            });
+            game.socket.emit("system.torgeternity", {
+                msg: "cardReserved",
+                data: { 
+                    player: game.user.data._id ,
+                    card : card
+                }
+            });
         }
 
     }
     _onCardExchange(event) {
-
+/*
         let applyChanges = false;
         new Dialog({
             title: "card exchange proposal",
-            content: "Are you sure you want to delete this? It will be permanently removed from the sheet.",
+            content: "",
             buttons: {
                 yes: {
                     icon: '<i class="fas fa-check"></i>',
@@ -509,7 +523,7 @@ export default class torgeternityActorSheet extends ActorSheet {
                 }
             }
         }).render(true);
-
+*/
     }
 
     _onCardPlay(event) {
@@ -522,7 +536,7 @@ export default class torgeternityActorSheet extends ActorSheet {
             this.actor.deleteOwnedItem(cardID);
             game.socket.emit("system.torgeternity", {
                 msg: "cardPlayed",
-                content: { 
+                data: { 
                     player: game.user.data._id ,
                     card : card
                 }
@@ -535,7 +549,7 @@ export default class torgeternityActorSheet extends ActorSheet {
                 this.actor.deleteOwnedItem(cardID);
                 game.socket.emit("system.torgeternity", {
                     msg: "cardPlayed",
-                    content: { 
+                    data: { 
                         player: game.user.data._id ,
                         card : card
                     }

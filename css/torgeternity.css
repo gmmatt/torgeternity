@@ -657,6 +657,133 @@ div#sidebar.collapsed {
   text-align: center;
 }
 
+@-webkit-keyframes focusedCard {
+  from {
+    position: absolute;
+    transform-origin: 50% 150% 0;
+  }
+  to {
+    transform: scale(2);
+    top: -300px;
+    width: 200px;
+    height: 250px;
+    transform-origin: 50% 50% 0;
+    left: -50px;
+    transform: rotateZ(0deg);
+  }
+}
+
+@keyframes focusedCard {
+  from {
+    position: absolute;
+    transform-origin: 50% 150% 0;
+  }
+  to {
+    transform: scale(2);
+    top: -300px;
+    width: 200px;
+    height: 250px;
+    transform-origin: 50% 50% 0;
+    left: -50px;
+    transform: rotateZ(0deg);
+  }
+}
+
+.handed-cards {
+  display: flex;
+  flex-direction: row;
+  position: fixed;
+  font-family: Alaska;
+  text-transform: capitalize;
+  min-width: 600px;
+  border-radius: 5% 5% 0% 0%;
+  left: 50%;
+  height: 300px;
+  bottom: -270px;
+  transition: all 0.3s cubic-bezier(0.6, -0.07, 0.56, 1.52) 0.2s;
+}
+
+.handed-cards .cardArea {
+  background: url(../images/backg-page.png);
+  background-size: 120% 100%;
+  background-position: center;
+  width: 100%;
+  border: 2px solid black;
+  box-shadow: 1px 1px 20px 15px rgba(0, 0, 0, 0.575) inset;
+  border-radius: 10% 10% 0% 0%;
+}
+
+.handed-cards .cardArea h3.cardTitle {
+  text-align: center;
+  color: white;
+  margin-top: 5px;
+  text-shadow: 0px 5px 5px #010961;
+}
+
+.handed-cards .cardArea .destinyCards,
+.handed-cards .cardArea .reservedCards,
+.handed-cards .cardArea .cosmCards {
+  transition: all 0.3s cubic-bezier(0.6, -0.07, 0.56, 1.52) 0.2s;
+  display: flex;
+  flex-direction: row;
+  height: 200px;
+}
+
+.handed-cards .cardArea .destinyCards li.card,
+.handed-cards .cardArea .reservedCards li.card,
+.handed-cards .cardArea .cosmCards li.card {
+  transition: all 0.3s cubic-bezier(0.6, -0.07, 0.56, 1.52) 0.2s;
+  box-shadow: 1px 1px 20px 5px black;
+  position: absolute;
+  transform-origin: 50% 150% 0;
+  z-index: 1;
+  list-style: none;
+}
+
+.handed-cards .cardArea .destinyCards li.card div.item-controls,
+.handed-cards .cardArea .reservedCards li.card div.item-controls,
+.handed-cards .cardArea .cosmCards li.card div.item-controls {
+  background-color: #2c7dc3;
+  display: flex;
+  justify-content: space-around;
+  border-radius: 15% 15% 0% 0%;
+}
+
+.handed-cards .cardArea .destinyCards li.card:hover,
+.handed-cards .cardArea .reservedCards li.card:hover,
+.handed-cards .cardArea .cosmCards li.card:hover {
+  z-index: 300;
+}
+
+.handed-cards .cardArea .destinyCards li.focusedCard,
+.handed-cards .cardArea .reservedCards li.focusedCard,
+.handed-cards .cardArea .cosmCards li.focusedCard {
+  transition: all 0.3s cubic-bezier(0.6, -0.07, 0.56, 1.52) 0.2s;
+  z-index: 200;
+  transform: scale(2);
+  top: -300px;
+  width: 200px;
+  height: 250px;
+  transform-origin: 50% 50% 0;
+  left: -50px;
+  transform: rotateZ(0deg);
+}
+
+.handed-cards .cardArea .destinyCards li.focusedCard img,
+.handed-cards .cardArea .reservedCards li.focusedCard img,
+.handed-cards .cardArea .cosmCards li.focusedCard img {
+  max-width: 200px;
+  width: 200px;
+  max-height: 300px;
+  height: auto;
+}
+
+.handed-cards:hover {
+  z-index: 100;
+  transform: scale(1.5);
+  bottom: -100px;
+}
+
 /* Styles limited to torg sheets */
 @-webkit-keyframes roll {
   from {
@@ -692,133 +819,6 @@ div#sidebar.collapsed {
   background-size: cover;
   font-family: Palatino;
   font-size: 0.9em;
-}
-
-@-webkit-keyframes focusedCard {
-  from {
-    position: absolute;
-    transform-origin: 50% 150% 0;
-  }
-  to {
-    transform: scale(2);
-    top: -300px;
-    width: 200px;
-    height: 250px;
-    transform-origin: 50% 50% 0;
-    left: -50px;
-    transform: rotateZ(0deg);
-  }
-}
-
-@keyframes focusedCard {
-  from {
-    position: absolute;
-    transform-origin: 50% 150% 0;
-  }
-  to {
-    transform: scale(2);
-    top: -300px;
-    width: 200px;
-    height: 250px;
-    transform-origin: 50% 50% 0;
-    left: -50px;
-    transform: rotateZ(0deg);
-  }
-}
-
-.torgeternity.actor .window-content .handed-cards {
-  display: flex;
-  flex-direction: row;
-  position: fixed;
-  font-family: Alaska;
-  text-transform: capitalize;
-  min-width: 600px;
-  border-radius: 5% 5% 0% 0%;
-  left: 50%;
-  height: 300px;
-  bottom: -270px;
-  z-index: -100;
-  transition: all 0.3s cubic-bezier(0.6, -0.07, 0.56, 1.52) 0.2s;
-}
-
-.torgeternity.actor .window-content .handed-cards .cardArea {
-  background: url(../images/backg-page.png);
-  background-size: 120% 100%;
-  background-position: center;
-  width: 100%;
-  box-shadow: 1px 1px 20px 15px rgba(0, 0, 0, 0.575) inset;
-  border-radius: 10% 10% 0% 0%;
-}
-
-.torgeternity.actor .window-content .handed-cards .cardArea h3.cardTitle {
-  text-align: center;
-  color: white;
-  margin-top: 10px;
-  text-shadow: 0px 5px 5px #010961;
-}
-
-.torgeternity.actor .window-content .handed-cards .cardArea .destinyCards,
-.torgeternity.actor .window-content .handed-cards .cardArea .reservedCards,
-.torgeternity.actor .window-content .handed-cards .cardArea .cosmCards {
-  transition: all 0.3s cubic-bezier(0.6, -0.07, 0.56, 1.52) 0.2s;
-  display: flex;
-  flex-direction: row;
-  height: 200px;
-}
-
-.torgeternity.actor .window-content .handed-cards .cardArea .destinyCards li.card,
-.torgeternity.actor .window-content .handed-cards .cardArea .reservedCards li.card,
-.torgeternity.actor .window-content .handed-cards .cardArea .cosmCards li.card {
-  transition: all 0.3s cubic-bezier(0.6, -0.07, 0.56, 1.52) 0.2s;
-  box-shadow: 1px 1px 20px 5px black;
-  position: absolute;
-  transform-origin: 50% 150% 0;
-  z-index: 1;
-  list-style: none;
-}
-
-.torgeternity.actor .window-content .handed-cards .cardArea .destinyCards li.card div.item-controls,
-.torgeternity.actor .window-content .handed-cards .cardArea .reservedCards li.card div.item-controls,
-.torgeternity.actor .window-content .handed-cards .cardArea .cosmCards li.card div.item-controls {
-  background-color: #2c7dc3;
-  display: flex;
-  justify-content: space-around;
-  border-radius: 15% 15% 0% 0%;
-}
-
-.torgeternity.actor .window-content .handed-cards .cardArea .destinyCards li.card:hover,
-.torgeternity.actor .window-content .handed-cards .cardArea .reservedCards li.card:hover,
-.torgeternity.actor .window-content .handed-cards .cardArea .cosmCards li.card:hover {
-  z-index: 300;
-}
-
-.torgeternity.actor .window-content .handed-cards .cardArea .destinyCards li.focusedCard,
-.torgeternity.actor .window-content .handed-cards .cardArea .reservedCards li.focusedCard,
-.torgeternity.actor .window-content .handed-cards .cardArea .cosmCards li.focusedCard {
-  transition: all 0.3s cubic-bezier(0.6, -0.07, 0.56, 1.52) 0.2s;
-  z-index: 200;
-  transform: scale(2);
-  top: -300px;
-  width: 200px;
-  height: 250px;
-  transform-origin: 50% 50% 0;
-  left: -50px;
-  transform: rotateZ(0deg);
-}
-
-.torgeternity.actor .window-content .handed-cards .cardArea .destinyCards li.focusedCard img,
-.torgeternity.actor .window-content .handed-cards .cardArea .reservedCards li.focusedCard img,
-.torgeternity.actor .window-content .handed-cards .cardArea .cosmCards li.focusedCard img {
-  max-width: 200px;
-  width: 200px;
-  max-height: 300px;
-  height: auto;
-}
-
-.torgeternity.actor .window-content .handed-cards:hover {
-  z-index: 100;
-  transform: scale(1.5);
-  bottom: -100px;
 }
 
 form.actor-sheet {
