@@ -37,7 +37,6 @@ export const preloadTemplates = async function () {
 
         //cards
         "systems/torgeternity/templates/cards/actionCard.hbs",
-        "systems/torgeternity/templates/cards/actionCardsArea.hbs",
         "systems/torgeternity/templates/cards/hand.hbs",
 
     ];

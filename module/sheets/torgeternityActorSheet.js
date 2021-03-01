@@ -8,7 +8,6 @@ import {
 } from "/systems/torgeternity/module/effects.js";
 
 
-import * as Card from "../cards/cardActions.js";
 
 export default class torgeternityActorSheet extends ActorSheet {
     constructor(...args) {

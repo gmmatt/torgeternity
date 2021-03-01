@@ -2,7 +2,6 @@ import {
     torgeternity
 } from "./module/config.js";
 import * as Chat from "./module/chat.js";
-import * as Combat from "./module/combat.js";
 import torgeternityItem from "./module/torgeternityItem.js";
 import torgeternityActor from "./module/torgeternityActor.js";
 import torgeternityItemSheet from "./module/sheets/torgeternityItemSheet.js";
@@ -109,6 +108,4 @@ Handlebars.registerHelper("concatClearanceLevel", function (clearance) {
 Hooks.on("renderChatLog", (app, html, data) => Chat.addChatListeners(html));
 
 
-Hooks.on("renderCombatTracker", function (app, html, data) {
-    Combat.addActionCardsArea(html);
-});
+
