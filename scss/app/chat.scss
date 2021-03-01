@@ -1,4 +1,31 @@
+
+@keyframes flip {
+  0% {
+    -webkit-transform: translateX(100%) rotateY(-180deg) scale(0.2);
+    transform: translateX(100%) rotateY(-180deg)scale(0.2);
+-webkit-transform-origin: 0% 50%;
+    transform-origin: 0% 50%;
+  }
+  100% {
+    
+            -webkit-transform: translateX(0) rotateZ(0)scale(1);
+            transform: translateX(0) rotateZ(0)scale(1);
+    -webkit-transform-origin: 100% 50%;
+            transform-origin: 100% 50%;
+  }
+}
+
+
+
+
+
 .chat-message {
+
+
+	-webkit-animation: flip 0.5s linear both;
+	        animation: flip 0.5s linear both;
+
+
     margin: 5px;
     color:black;
     background: none;
