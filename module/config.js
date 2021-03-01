@@ -42,7 +42,8 @@ torgeternity.perkTypes = {
     reality: "torgeternity.perkTypes.reality",
     savagery:"torgeternity.perkTypes.savagery",
     social: "torgeternity.perkTypes.social",
-    spellcraft: "torgeternity.perkTypes.spellcraft"
+    spellcraft: "torgeternity.perkTypes.spellcraft",
+    racial: "torgeternity.perkTypes.racial"
 }
 
 torgeternity.attackTypes = {

@@ -178,7 +178,8 @@
             "reality": "Reality",
             "savagery":"Savagery",
             "social": "Social",
-            "spellcraft": "Spellcraft"
+            "spellcraft": "Spellcraft",
+            "racial": "Racial"
         },
         "sheetLabels": {
             "stormknight":"Stormknight",
