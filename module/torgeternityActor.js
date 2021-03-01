@@ -70,6 +70,9 @@ export default class torgeternityActor extends Actor {
             this.data.data.other.move = this.data.data.attributes.dexterity;
             this.data.data.other.run = parseInt(this.data.data.attributes.dexterity) * 3;
 
+            //Set base armor to zero
+            this.data.data.other.armor = 0;
+
             //Set base toughness
             this.data.data.other.toughness = parseInt(this.data.data.attributes.strength) + parseInt(this.data.data.other.armor);
 
