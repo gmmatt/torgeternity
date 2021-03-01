@@ -30,15 +30,22 @@ export default class torgeternityItemSheet extends ItemSheet {
             case "vehicle":
                 this.options.height = this.position.height = 630;
                 break;
+
+            case "implant":
+            case "armor":
+            case "shield":
+                this.option.height = this.position.height = 615;
+                break;
             case 'destinyCard':
             case 'cosmCard':
                 this.options.height = this.position.height = 800;
                 this.options.width = this.position.width = 310;
                 break;
-                case 'dramaCard':
-                    this.options.height = this.position.height = 570;
-                    this.options.width = this.position.width = 530;
-                    break;
+
+            case 'dramaCard':
+                this.options.height = this.position.height = 570;
+                this.options.width = this.position.width = 530;
+                break;
                 break;
 
             default:

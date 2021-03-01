@@ -39,7 +39,7 @@ Hooks.once("init", async function () {
     });
 
 
-    //----------preloading handlebars templates for partials sheet 
+    //----------preloading handlebars templates  
     preloadTemplates();
 
 
@@ -72,17 +72,8 @@ Hooks.once("ready", function () {
     var logo = document.getElementById("logo");
     logo.style.position = "fixe"
     logo.setAttribute("src", "/systems/torgeternity/images/vttLogo.png");
-
-
-    let handedCardArea = document.createElement('div');
-    renderTemplate("systems/torgeternity/templates/cards/hand.hbs",game).then(html => {
-    handedCardArea.id = "handed-cards";
-    handedCardArea.classList.add('handed-cards')
-    handedCardArea.innerHTML = html;
-    document.body.append(handedCardArea);
+  
 });
-
-})
 //----all this could be draft in another imported module ?? maybe like ./modules/handlebarsHelpers.js
 
 Handlebars.registerHelper("concatSkillValue", function (skillName) {
