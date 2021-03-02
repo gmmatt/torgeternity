@@ -16,17 +16,27 @@ import {
     toggleViewMode
 } from "./module/viewMode.js";
 import * as Cards from "./module/cards.js";
+import torgeternityCombat from "./module/dramaticScene/torgeternityCombat.js";
+import torgeternityCombatTracker from "./module/dramaticScene/torgeternityCombatTracker.js";
 
 
 Hooks.once("init", async function () {
     console.log("torgeternity | Initializing Torg Eternity System");
 
-    //-------moving to a n imported module ?? ./modules/config.js
+    //-------global
 
     CONFIG.torgeternity = torgeternity;
+
+
     CONFIG.Item.entityClass = torgeternityItem;
     CONFIG.Actor.entityClass = torgeternityActor;
     CONFIG.statusEffects = torgeternity.statusEffects;
+
+
+    //--------combats
+    CONFIG.Combat.initiative.formula = "0";
+    CONFIG.Combat.entityClass=torgeternityCombat;
+    CONFIG.ui.combat=torgeternityCombatTracker;
 
     Items.unregisterSheet("core", ItemSheet);
     Items.registerSheet("torgeternity", torgeternityItemSheet, {
