@@ -31,7 +31,7 @@
     background-image: url(../images/bg-sheet.png);
     background-size: cover;
     font-family: Palatino;
-    font-size: 0.9em;
+    font-size: 12px;
 }
 
 
@@ -181,8 +181,8 @@ form.actor-sheet {
 
 
     //--all elements in character sheet
-    font-family: Berlin2;
-    font-size: 0.9em;
+    font-family: Palatino;
+    font-size: 12px;
 
     input {
         width: 20px;
@@ -335,7 +335,7 @@ form.actor-sheet {
             background-size: cover;
             width: 40px;
             height: 40px;
-            padding-top: 15px
+            padding-top: 11px
         }
 
         p {
@@ -421,7 +421,7 @@ form.actor-sheet {
 
         ul,
         ol {
-            font-family: Berlin;
+            font-family: Palatino;
             display: flex;
             justify-content: space-around;
 
@@ -461,7 +461,8 @@ form.actor-sheet {
 
         ul {
 
-            font-family: Berlin;
+            font-family: Palatino;
+            font-size:12px;
             display: flex;
             flex-direction: column;
             justify-content: space-around;
@@ -550,7 +551,7 @@ form.actor-sheet {
         }
 
         ol {
-            font-family: Berlin;
+            font-family: Palatino;
 
 
             li {
@@ -676,7 +677,7 @@ form.actor-sheet {
             margin: 2px 0;
             align-items:center;
             font-weight:bold;
-            font-family:"Palatino Linotype"
+            font-family:"Palatino Linotype";
         }
 
         .effects-item {
