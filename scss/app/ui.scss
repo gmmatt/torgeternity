@@ -236,26 +236,7 @@ div#sidebar.collapsed {
     background-size: 100% 100%;
 
 }
-//-----------
-//---macros bar
-//-----------
-#hotbar{
-    #macro-list{
-        border:none;
-     .macro {
-        position: relative;
-        flex: 0 0 50px;
-        height: 50px;
-        background: url(../images/backg-page.png);
-        border-radius: 25%;
-        box-shadow: 0 0 5px #000 inset;
-        cursor: pointer;
-    }
-    .macro:hover {
-        box-shadow: 0 0 10px #004777 inset;
-    }
-}
-}
+
 
 //-----------
 //---macros bar
@@ -302,18 +283,17 @@ div#sidebar.collapsed {
     }
 
     #macro-list {
-        border: none;
-
-        .macro {
+        #macro-list{
+            border:none;
+         .macro {
             position: relative;
             flex: 0 0 50px;
             height: 50px;
-
+            background: url(../images/backg-page.png);
             border-radius: 25%;
             box-shadow: 0 0 5px #000 inset;
             cursor: pointer;
         }
-
         .macro:hover {
             box-shadow: 0 0 10px #004777 inset;
         }
