@@ -457,7 +457,7 @@ a:hover {
 }
 
 #sidebar #sidebar-tabs > .item.active {
-  color: #FFF;
+  color: #fff;
   border: 1px solid #154949;
   border-bottom: none;
   box-shadow: 0 0 6px inset #154949;
@@ -537,20 +537,26 @@ div#sidebar.collapsed {
   transform: scale(1.8);
 }
 
-#hotbar #macro-list {
+#hotbar #action-bar ol#macro-list {
   border: none;
 }
 
-#hotbar #macro-list .macro {
+#hotbar #action-bar ol#macro-list li.macro {
   position: relative;
   flex: 0 0 50px;
   height: 50px;
+  background: url(../images/backg-page.png);
   border-radius: 25%;
   box-shadow: 0 0 5px #000 inset;
   cursor: pointer;
+  border-radius: 0% 0% 75%;
 }
 
-#hotbar #macro-list .macro:hover {
+#hotbar #action-bar ol#macro-list li.macro.active {
+  border-radius: 10%;
+}
+
+#hotbar #action-bar ol#macro-list li.macro:hover {
   box-shadow: 0 0 10px #004777 inset;
 }
 
@@ -690,7 +696,7 @@ div#sidebar.collapsed {
   background: url(../images/separatorRound.png);
   width: 230px;
   height: 35px;
-  content: '';
+  content: "";
 }
 
 #controls,
