@@ -87,10 +87,29 @@
 }
 
 .journal-sheet .window-content .editor {
-  margin-top: 4%;
+  margin-top: 2%;
   margin-left: 5%;
   width: 90%;
   padding: 2%;
+}
+
+.journal-sheet .window-content .editor .editor-content h1 {
+  font-family: Alaska;
+  text-transform: uppercase;
+  text-align: center;
+  color: white;
+  background-color: #0a0b3b;
+  border-bottom: none;
+}
+
+.journal-sheet .window-content .editor .editor-content h2 {
+  font-family: Alaska;
+  border-bottom: none;
+}
+
+.journal-sheet .window-content .editor .editor-content h3 {
+  font-family: Alaska;
+  font-weight: bold;
 }
 
 .window-app.image-popout .form-group.title {
