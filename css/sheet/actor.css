@@ -181,7 +181,7 @@ form.actor-sheet header input[name="name"] {
 .window-content .actor-sheet input[type="number"]:hover,
 .window-content .actor-sheet input[type="text"]:focus,
 .window-content .actor-sheet input[type="number"]:focus {
-  box-shadow: 0 0 10px #4f523c inset;
+  box-shadow: 0 0 15px #778ba2 inset;
 }
 
 .window-content .actor-sheet input[type="text"]::-moz-placeholder, .window-content .actor-sheet input[type="number"]::-moz-placeholder {

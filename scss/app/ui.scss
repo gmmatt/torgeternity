@@ -236,10 +236,10 @@ div#sidebar.collapsed {
     -webkit-text-fill-color: white;
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: black;
-    background-size: 120% 120%;
+    background-size: 100% 100%;
     background-position: center;
     border: none;
-    box-shadow: 0 0 15px #00001b;
+    box-shadow: none;
     border-radius: 40%;
     font-weight: bolder;
 
@@ -349,8 +349,7 @@ div#sidebar.collapsed {
 //---players
 //-----------
 #players {
-  background-image: url(../images/bckg-hex.png);
-  background-size: 110% 105%;
+  background-image: url(../images/thunder.png);
   background-position: center;
   bottom: 0px;
   left: 0px;
@@ -364,20 +363,15 @@ div#sidebar.collapsed {
   color: black;
 
   h3 {
-    background-image: url(../images/bckg-hex.png);
-    background-size: 110% 105%;
-    background-position: center;
     text-shadow: 0px 3px 10px #8181cc;
-    margin: 3px;
+
     padding: 4px;
     border: none;
-    box-shadow: 0px 0px 15px black inset;
-    margin-left: 15px;
-    margin-right: 15px;
-    border-radius: 50%;
+    box-shadow: 0px 5px 15px rgb(255, 255, 255) ;
     text-align: center;
+    color : white;
     .players-mode {
-      color: black;
+      color: rgb(255, 255, 255);
     }
   }
 
@@ -408,11 +402,12 @@ div#sidebar.collapsed {
 
       .player-name {
         text-shadow: 0px 3px 10px #8181cc;
+        color:white
       }
 
       .player-name.self {
         text-decoration: underline;
-        color: black;
+        color: rgb(246, 246, 246);
       }
     }
   }
