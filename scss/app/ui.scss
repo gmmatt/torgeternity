@@ -364,12 +364,13 @@ div#sidebar.collapsed {
 
   h3 {
     text-shadow: 0px 3px 10px #8181cc;
-
     padding: 4px;
     border: none;
-    box-shadow: 0px 5px 15px rgb(255, 255, 255) ;
+    box-shadow: 0px 5px 15px rgba(255, 255, 255, 0.459);
     text-align: center;
-    color : white;
+    color: rgb(255, 255, 255);
+    top: -10px;
+    position: relative;
     .players-mode {
       color: rgb(255, 255, 255);
     }
