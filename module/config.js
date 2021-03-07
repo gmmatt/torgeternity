@@ -42,7 +42,8 @@ torgeternity.perkTypes = {
     reality: "torgeternity.perkTypes.reality",
     savagery:"torgeternity.perkTypes.savagery",
     social: "torgeternity.perkTypes.social",
-    spellcraft: "torgeternity.perkTypes.spellcraft"
+    spellcraft: "torgeternity.perkTypes.spellcraft",
+    racial: "torgeternity.perkTypes.racial"
 }
 
 torgeternity.attackTypes = {
@@ -143,6 +144,12 @@ torgeternity.vulnerableStates = {
     veryVulnerable: "torgeternity.vulnerableStates.veryVulnerable"
 }
 
+torgeternity.yesNo = {
+    true: "torgeternity.yesNo.true",
+    false: "torgeternity.yesNo.false"
+}
+
+
 torgeternity.statusEffects = [
     {
         icon: 'systems/torgeternity/images/status-markers/stymied.jpg',
@@ -198,10 +205,6 @@ torgeternity.statusEffects = [
         icon: 'systems/torgeternity/images/status-markers/restrained.jpg',
         id: 'restrained',
         label: 'torgeternity.statusEffects.restrained'
-    },
-
-    torgeternity.yesNo = {
-        true: "torgeternity.yesNo.true",
-        false: "torgeternity.yesNo.false"
     }
+
 ]

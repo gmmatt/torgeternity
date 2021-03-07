@@ -8,6 +8,22 @@
 For manual installation, use the provided manifest URL in the "*Install System*" popup window 
 while managing game systems.
 
+v. 0.92.1
+
+Various bug fixes and some additional UI enhancements. Added data structure to some
+items and reorganized some of the item windows to accommodate additional data structure.
+Added ability to track ammo by treating ammo as a resource (current/max). NOTE: sorry,
+everyone, but you are going to lose the data in your ammo field in existing weapons sheets. You'll 
+need to re-input the max ammo for any existing items. We will try to avoid doing this
+much, if any, in the future.
+
+Updated appearance of journal entry windows.
+
+Known issue: some sheets that were created with a VERY early version of the system may
+display the attributes window improperly on the Storm Knight sheet. We haven't tried
+to fix this because we assume there aren't many sheets like that floating around out
+there. But if it is an issue for you, let us know. We can fix it.
+
 v. 0.92.0
 
 Major user interface update! We have completely revamped all of the sheets (thanks much

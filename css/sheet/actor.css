@@ -32,7 +32,7 @@
   background-image: url(../images/bg-sheet.png);
   background-size: cover;
   font-family: Palatino;
-  font-size: 0.9em;
+  font-size: 12px;
 }
 
 form.actor-sheet {
@@ -75,8 +75,8 @@ form.actor-sheet header input[name="name"] {
 
 .window-content .actor-sheet {
   color: black;
-  font-family: Berlin2;
-  font-size: 0.9em;
+  font-family: Palatino;
+  font-size: 12px;
 }
 
 .window-content .actor-sheet .threat-stat-line {
@@ -315,7 +315,7 @@ form.actor-sheet header input[name="name"] {
   background-size: cover;
   width: 40px;
   height: 40px;
-  padding-top: 35%;
+  padding-top: 11px;
 }
 
 .window-content .actor-sheet .sheet-header p {
@@ -390,7 +390,7 @@ form.actor-sheet header input[name="name"] {
 .window-content .actor-sheet .others ol,
 .window-content .actor-sheet .weapons ul,
 .window-content .actor-sheet .weapons ol {
-  font-family: Berlin;
+  font-family: Palatino;
   display: flex;
   justify-content: space-around;
 }
@@ -439,7 +439,8 @@ form.actor-sheet header input[name="name"] {
 }
 
 .window-content .actor-sheet .skills ul {
-  font-family: Berlin;
+  font-family: Palatino;
+  font-size: 12px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -525,7 +526,7 @@ form.actor-sheet header input[name="name"] {
 .window-content .actor-sheet .perks-details ol,
 .window-content .actor-sheet .gear ol,
 .window-content .actor-sheet .powers ol {
-  font-family: Berlin;
+  font-family: Palatino;
 }
 
 .window-content .actor-sheet .perks-details ol li,
@@ -580,7 +581,7 @@ form.actor-sheet header input[name="name"] {
 .window-content .actor-sheet .perks-details ol li .item-controls a.item-equip.item-unequipped,
 .window-content .actor-sheet .gear ol li .item-controls a.item-equip.item-unequipped,
 .window-content .actor-sheet .powers ol li .item-controls a.item-equip.item-unequipped {
-  color: #680000;
+  color: #1f0101;
   text-shadow: 0px 0px 5px #f80202;
 }
 

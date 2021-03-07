@@ -36,19 +36,23 @@
                         <input name="data.price" type="text" value="{{data.price}}" class="input-box-small" />
                         <input name="data.value" type="number" value="{{data.value}}" class="input-box-small" />
                         <p class="item-data-label">
+                            {{localize "torgeternity.gear.minStrength"}}
+                        </p>
+                        <input name="data.minStrength" type="number" value="{{data.minStrength}}" class="input-box-small" />                
+                            <p class="item-data-label">
                             {{localize "torgeternity.gear.bonus"}}
                         </p>
                         <input name="data.bonus" type="number" value="{{data.bonus}}" class="input-box" />
-                        <p class="item-data-label">
-                            {{localize "torgeternity.gear.notes"}}
-                        </p>
+                </div>
+                <div class="main-content">
+                    <p class="item-data-label">
+                        {{localize "torgeternity.gear.notes"}}&nbsp;
                         <input name="data.notes" type="text" value="{{data.notes}}" class="input-box" />
+                    </p>
+                    <div class="item-description-textarea" >
+                        {{editor content=data.description target="data.description" button=true owner=owner editable=editable}}
                     </div>
-                    <div class="main-content">
-                        <div class="item-description-textarea" >
-                            {{editor content=data.description target="data.description" button=true owner=owner editable=editable}}
-                        </div>
-                    </div> 
+                </div> 
                        
             </div>
         </div>

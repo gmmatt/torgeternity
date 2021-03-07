@@ -115,7 +115,8 @@
             "tappingDifficulty": "Tapping Difficulty",
             "purpose": "Purpose",
             "powers": "Powers",
-            "restrictions": "Restrictions"
+            "restrictions": "Restrictions",
+            "minStrength": "Min Str"
         },
         "stats":{
             "wounds": "Wounds",
@@ -177,7 +178,8 @@
             "reality": "Reality",
             "savagery":"Savagery",
             "social": "Social",
-            "spellcraft": "Spellcraft"
+            "spellcraft": "Spellcraft",
+            "racial": "Racial"
         },
         "sheetLabels": {
             "stormknight":"Stormknight",

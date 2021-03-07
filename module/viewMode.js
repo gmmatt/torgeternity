@@ -10,12 +10,12 @@ export function toggleViewMode() {
             console.log(torgeternity.viewMode);
 
             if (view.UI == true) {
-                document.getElementById("players").style.bottom = "-100px";
-                document.getElementById("hotbar").style.bottom = "-100px";
-                document.getElementById("controls").style.left = "-100px";
-                document.getElementById("sidebar").style.right = "-300px";
-                document.getElementById("logo").style.bottom = "-100px";
-                document.getElementById("navigation").style.top = "-100px";
+                document.getElementById("players").style.bottom = "-600px";
+                document.getElementById("hotbar").style.bottom = "-600px";
+                document.getElementById("controls").style.left = "-600px";
+                document.getElementById("sidebar").style.right = "-600px";
+                document.getElementById("logo").style.bottom = "-600px";
+                document.getElementById("navigation").style.top = "-600px";
                 return view.UI = false
             }
             if (view.UI == false) {
