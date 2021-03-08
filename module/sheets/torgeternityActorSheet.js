@@ -13,8 +13,8 @@ export default class torgeternityActorSheet extends ActorSheet {
     constructor(...args) {
         super(...args);
 
-        if (this.object.data.type === "threat") {
-            this.options.width = this.position.width = 400;
+        if ( this.object.data.type === "threat" ) {
+            this.options.width= this.position.width = 450;
             this.options.height = this.position.height = 550;
         };
 
@@ -26,13 +26,9 @@ export default class torgeternityActorSheet extends ActorSheet {
     static get defaultOptions() {
         return mergeObject(super.defaultOptions, {
             classes: ["torgeternity", "sheet", "actor"],
-            width: 600,
-            height: 750,
-            tabs: [{
-                navSelector: ".sheet-tabs",
-                contentSelector: ".sheet-body",
-                initial: "stats"
-            }],
+            width: 675,
+            height: 860,
+            tabs: [{navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "stats"}],
             scrollY: [".stats", ".perks", ".gear", ".powers", "effects", "background"],
             dragdrop: [{
                 dragSelector: ".item-list .item",

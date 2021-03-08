@@ -92,16 +92,34 @@
   }
 }
 
-.window-app.image-popout {
-  .form-group.title {
-    margin-top: 1%;
-    input {
-      height: 32px;
-      text-align: center;
-      margin-top: 0%;
+    .editor {
+        margin-top: 2%;
+        margin-left: 5%;
+        width: 90%;
+        padding: 2%
     }
-  }
-}
+
+    .editor .editor-content {
+        h1 {
+            font-family:Alaska;
+            text-transform:uppercase;
+            text-align:center;
+            color:white;
+            background-color:#0a0b3b;
+            border-bottom:none;
+        }
+
+        h2 {
+            font-family:Alaska;
+            border-bottom:none;
+        }
+
+        h3 {
+            font-family:Alaska;
+            font-weight:bold;
+        }
+    }
+
 
 textarea {
   background-color: rgba(90, 157, 163, 0.493);

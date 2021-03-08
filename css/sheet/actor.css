@@ -32,7 +32,7 @@
   background-image: url(../images/bg-sheet.png);
   background-size: cover;
   font-family: Palatino;
-  font-size: 0.9em;
+  font-size: 12px;
 }
 
 form.actor-sheet {
@@ -75,8 +75,8 @@ form.actor-sheet header input[name="name"] {
 
 .window-content .actor-sheet {
   color: black;
-  font-family: Berlin2;
-  font-size: 0.9em;
+  font-family: Palatino;
+  font-size: 12px;
 }
 
 .window-content .actor-sheet .threat-stat-line {
@@ -181,7 +181,7 @@ form.actor-sheet header input[name="name"] {
 .window-content .actor-sheet input[type="number"]:hover,
 .window-content .actor-sheet input[type="text"]:focus,
 .window-content .actor-sheet input[type="number"]:focus {
-  box-shadow: 0 0 10px #4f523c inset;
+  box-shadow: 0 0 15px #778ba2 inset;
 }
 
 .window-content .actor-sheet input[type="text"]::-moz-placeholder, .window-content .actor-sheet input[type="number"]::-moz-placeholder {
@@ -206,6 +206,9 @@ form.actor-sheet header input[name="name"] {
   height: auto;
   max-height: 120px;
   max-width: 120px;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .window-content .actor-sheet h3 {
@@ -231,6 +234,7 @@ form.actor-sheet header input[name="name"] {
   text-shadow: 0px 0px 15px black;
   text-transform: uppercase;
   font-weight: bold;
+  width: 100%;
 }
 
 .window-content .actor-sheet h1 input {
@@ -291,7 +295,8 @@ form.actor-sheet header input[name="name"] {
   grid-column: 5/7;
   grid-row: 3/4;
   transition: all 0.6s cubic-bezier(1, 0, 0, 1) 0.1s;
-  padding-left: 15%;
+  display: flex;
+  justify-content: center;
 }
 
 .window-content .actor-sheet .char_image:hover {
@@ -316,7 +321,7 @@ form.actor-sheet header input[name="name"] {
   background-size: cover;
   width: 40px;
   height: 40px;
-  padding-top: 15px;
+  padding-top: 11px;
 }
 
 .window-content .actor-sheet .sheet-header p {
@@ -331,7 +336,7 @@ form.actor-sheet header input[name="name"] {
 .window-content .actor-sheet .sheet-header select {
   color: black;
   border: none;
-  border-bottom: solid;
+  border-bottom: 1px solid grey;
   max-height: 20px;
   font-size: 0.9em;
 }
@@ -359,16 +364,18 @@ form.actor-sheet header input[name="name"] {
   background-size: cover;
 }
 
-.window-content .actor-sheet .sheet-header input[name="name"] {
+.window-content .actor-sheet .sheet-header h1 {
+  width: 100%;
+}
+
+.window-content .actor-sheet .sheet-header h1 input[name="name"] {
   border: none;
   text-transform: uppercase;
   text-shadow: 0px -2px 10px #0e0909;
   font-family: Alaska;
   text-align: center;
   color: #0e0909;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
+  width: 100%;
 }
 
 .window-content .actor-sheet .sheet-header.threat {
@@ -391,7 +398,7 @@ form.actor-sheet header input[name="name"] {
 .window-content .actor-sheet .others ol,
 .window-content .actor-sheet .weapons ul,
 .window-content .actor-sheet .weapons ol {
-  font-family: Berlin;
+  font-family: Palatino;
   display: flex;
   justify-content: space-around;
 }
@@ -440,7 +447,8 @@ form.actor-sheet header input[name="name"] {
 }
 
 .window-content .actor-sheet .skills ul {
-  font-family: Berlin;
+  font-family: Palatino;
+  font-size: 12px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -526,7 +534,7 @@ form.actor-sheet header input[name="name"] {
 .window-content .actor-sheet .perks-details ol,
 .window-content .actor-sheet .gear ol,
 .window-content .actor-sheet .powers ol {
-  font-family: Berlin;
+  font-family: Palatino;
 }
 
 .window-content .actor-sheet .perks-details ol li,
