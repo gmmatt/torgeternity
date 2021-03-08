@@ -9,14 +9,15 @@
   src: url("../fonts/Alaska Extrabold Bold.ttf");
 }
 
+/*
 @font-face {
-  font-family: "Berlin";
-  src: url("../fonts/Berlin Email 2.ttf");
+    font-family: "Berlin";
+    src: url("../fonts/Berlin Email Bold.ttf"),
 }
-
+*/
 @font-face {
   font-family: "Berlin2";
-  src: url("../fonts/Berlin Email Bold.ttf");
+  src: url("../fonts/Friz Quadrata TT Regular.ttf");
 }
 
 @font-face {
@@ -363,7 +364,7 @@ textarea:hover {
 }
 
 body {
-  font-family: Berlin;
+  font-family: Berlin2;
 }
 
 body ::-webkit-scrollbar-thumb {

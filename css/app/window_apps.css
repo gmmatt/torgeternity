@@ -87,13 +87,20 @@
 }
 
 .journal-sheet .window-content .editor {
+  margin-top: 4%;
+  margin-left: 5%;
+  width: 90%;
+  padding: 2%;
+}
+
+.editor {
   margin-top: 2%;
   margin-left: 5%;
   width: 90%;
   padding: 2%;
 }
 
-.journal-sheet .window-content .editor .editor-content h1 {
+.editor .editor-content h1 {
   font-family: Alaska;
   text-transform: uppercase;
   text-align: center;
@@ -102,24 +109,14 @@
   border-bottom: none;
 }
 
-.journal-sheet .window-content .editor .editor-content h2 {
+.editor .editor-content h2 {
   font-family: Alaska;
   border-bottom: none;
 }
 
-.journal-sheet .window-content .editor .editor-content h3 {
+.editor .editor-content h3 {
   font-family: Alaska;
   font-weight: bold;
-}
-
-.window-app.image-popout .form-group.title {
-  margin-top: 1%;
-}
-
-.window-app.image-popout .form-group.title input {
-  height: 32px;
-  text-align: center;
-  margin-top: 0%;
 }
 
 textarea {
