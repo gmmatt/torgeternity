@@ -10,13 +10,13 @@
 }
 
 @font-face {
-  font-family: "Berlin";
-  src: url("../fonts/Berlin Email 2.ttf");
+  font-family: "OptiBold";
+  src: url("../fonts/OPTITriplettBoldAgency.otf");
 }
 
 @font-face {
-  font-family: "Berlin2";
-  src: url("../fonts/Berlin Email Bold.ttf");
+  font-family: "OptiLight";
+  src: url("../fonts/OPTITriplettLight-Agency.otf");
 }
 
 @font-face {
@@ -121,7 +121,7 @@ div.actor ::-webkit-scrollbar {
 
 /* foundry parts */
 .window-app .window-content {
-  font-family: Berlin;
+  font-family: OptiLight;
   background-image: url(../images/thunder.png);
   background-size: cover;
   color: white;
@@ -268,7 +268,8 @@ textarea:hover {
 }
 
 body {
-  font-family: Berlin;
+  font-family: OptiLight;
+  font-size: 12px;
 }
 
 body ::-webkit-scrollbar-thumb {
@@ -276,6 +277,21 @@ body ::-webkit-scrollbar-thumb {
   border-radius: 3px;
   background: #227878;
   border: 1px solid #efedeb;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="password"],
+input[type="date"],
+input[type="time"],
+select,
+option,
+textarea {
+  font-family: OptiLight;
+}
+
+button {
+  font-family: OptiBold;
 }
 
 button:hover,
@@ -693,6 +709,12 @@ div#sidebar.collapsed {
   width: 230px;
   height: 35px;
   content: "";
+}
+
+#player-config label {
+  color: lightblue;
+  font-weight: normal;
+  font-size: 12px;
 }
 
 #controls,

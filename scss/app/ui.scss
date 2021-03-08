@@ -1,6 +1,7 @@
 //--------style global
 body {
-  font-family: Berlin;
+  font-family: OptiLight;
+  font-size: 12px;
 
   ::-webkit-scrollbar-thumb {
     outline: none;
@@ -9,7 +10,19 @@ body {
     border: 1px solid #efedeb;
   }
 }
-
+input[type="text"],
+input[type="number"],
+input[type="password"],
+input[type="date"],
+input[type="time"],
+select,
+option,
+textarea {
+  font-family: OptiLight;
+}
+button {
+  font-family: OptiBold;
+}
 button:hover,
 button:focus {
   box-shadow: 0 0 10px #3bb3b3;
@@ -272,7 +285,7 @@ div#sidebar.collapsed {
         border-radius: 0% 0% 75%;
       }
       li.macro.active {
-          border-radius: 10%;
+        border-radius: 10%;
       }
       li.macro:hover {
         box-shadow: 0 0 10px #004777 inset;
@@ -403,7 +416,7 @@ div#sidebar.collapsed {
 
       .player-name {
         text-shadow: 0px 3px 10px #8181cc;
-        color:white
+        color: white;
       }
 
       .player-name.self {
@@ -419,6 +432,14 @@ div#sidebar.collapsed {
   width: 230px;
   height: 35px;
   content: "";
+}
+#player-config{
+  label{
+    color : lightblue;
+    font-weight: normal;
+    font-size:12px
+
+  }
 }
 
 //----------ALL UI transition
