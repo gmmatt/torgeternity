@@ -8,6 +8,9 @@
 For manual installation, use the provided manifest URL in the "*Install System*" popup window 
 while managing game systems.
 
+v. 0.92.2
+- Changed some fonts in UI; updated UI appearance
+
 v. 0.92.1
 
 Various bug fixes and some additional UI enhancements. Added data structure to some
