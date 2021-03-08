@@ -15,13 +15,13 @@
     .actor-sheet {
       display: flex;
       flex-direction:column; 
-      background-image: url('./images/bgparch.jpg');
+      background-image: url('./images/bgparch.webp');
       background-size: 100% 100%;
     }
     .item-sheet {
         display: flex;
         flex-direction:column; 
-        background-image: url('./images/bgparch.jpg');
+        background-image: url('./images/bgparch.webp');
         background-size: 100% 100%;
     }
     .specialability-sheet {

@@ -534,15 +534,15 @@ export function torgBD () {
 
    // Prepare image for last die
    if (lastDie == 1) {
-       lastDieImage = "/systems/torgeternity/images/bonus-1.png";}
+       lastDieImage = "/systems/torgeternity/images/bonus-1.webp";}
    else if (lastDie == 2) {
-       lastDieImage = "/systems/torgeternity/images/bonus-2.png";}
+       lastDieImage = "/systems/torgeternity/images/bonus-2.webp";}
    else if (lastDie == 3) {
-       lastDieImage = "/systems/torgeternity/images/bonus-3.png";}
+       lastDieImage = "/systems/torgeternity/images/bonus-3.webp";}
    else if (lastDie == 4) {
-       lastDieImage = "/systems/torgeternity/images/bonus-4.png";}
+       lastDieImage = "/systems/torgeternity/images/bonus-4.webp";}
    else if (lastDie == 5) {
-       lastDieImage = "/systems/torgeternity/images/bonus-5.png";}
+       lastDieImage = "/systems/torgeternity/images/bonus-5.webp";}
 
    // Put together Chat Data
    let chatData = {

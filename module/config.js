@@ -152,57 +152,57 @@ torgeternity.yesNo = {
 
 torgeternity.statusEffects = [
     {
-        icon: 'systems/torgeternity/images/status-markers/stymied.jpg',
+        icon: 'systems/torgeternity/images/status-markers/stymied.webp',
         id: 'stymied',
         label: 'torgeternity.statusEffects.stymied',
         name: 'stymied'
     },
 
     {
-        icon: 'systems/torgeternity/images/status-markers/very-stymied.jpg',
+        icon: 'systems/torgeternity/images/status-markers/very-stymied.webp',
         id: 'veryStymied',
         label: 'torgeternity.statusEffects.veryStymied',
         name: 'veryStymied'
     },
 
     {
-        icon: 'systems/torgeternity/images/status-markers/vulnerable.jpg',
+        icon: 'systems/torgeternity/images/status-markers/vulnerable.webp',
         id: 'vulnerable',
         label: 'torgeternity.statusEffects.vulnerable'
     },
 
     {
-        icon: 'systems/torgeternity/images/status-markers/very-vulnerable.jpg',
+        icon: 'systems/torgeternity/images/status-markers/very-vulnerable.webp',
         id: 'veryVulnerable',
         label: 'torgeternity.statusEffects.veryVulnerable'
     },
 
     {
-        icon: 'systems/torgeternity/images/status-markers/disconnected.jpg',
+        icon: 'systems/torgeternity/images/status-markers/disconnected.webp',
         id: 'disconnected',
         label: 'torgeternity.statusEffects.disconnected'
     },
 
     {
-        icon: 'systems/torgeternity/images/status-markers/aiming.jpg',
+        icon: 'systems/torgeternity/images/status-markers/aiming.webp',
         id: 'aiming',
         label: 'torgeternity.statusEffects.aiming'
     },
 
     {
-        icon: 'systems/torgeternity/images/status-markers/malfunction.jpg',
+        icon: 'systems/torgeternity/images/status-markers/malfunction.webp',
         id: 'malfunction',
         label: 'torgeternity.statusEffects.malfunction'
     },
 
     {
-        icon: 'systems/torgeternity/images/status-markers/concentrating.jpg',
+        icon: 'systems/torgeternity/images/status-markers/concentrating.webp',
         id: 'concentrating',
         label: 'torgeternity.statusEffects.concentrating'
     },
 
     {
-        icon: 'systems/torgeternity/images/status-markers/restrained.jpg',
+        icon: 'systems/torgeternity/images/status-markers/restrained.webp',
         id: 'restrained',
         label: 'torgeternity.statusEffects.restrained'
     }

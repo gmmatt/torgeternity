@@ -15,7 +15,7 @@
   "styles": [
     "./css/torgeternity.css"
   ],
-  "background":"images/splash.png",
+  "background":"images/splash.webp",
   "packs": [
   ],
   "languages": [

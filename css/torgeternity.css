@@ -122,7 +122,7 @@ div.actor ::-webkit-scrollbar {
 /* foundry parts */
 .window-app .window-content {
   font-family: OptiLight;
-  background-image: url(../images/thunder.png);
+  background-image: url(../images/thunder.webp);
   background-size: cover;
   color: white;
 }
@@ -178,7 +178,7 @@ div.actor ::-webkit-scrollbar {
 
 .journal-sheet .window-content {
   font-family: Palatino;
-  background-image: url(../images/box-bckg.png);
+  background-image: url(../images/box-bckg.webp);
   background-size: cover;
   color: black;
 }
@@ -358,7 +358,7 @@ a:hover {
   position: absolute;
   bottom: -10px;
   right: -10px;
-  background: url(../images/resizerRound.png);
+  background: url(../images/resizerRound.webp);
   background-size: 115% 115%;
   background-position: center;
   padding: 2px;
@@ -392,7 +392,7 @@ a:hover {
 }
 
 .window-app .window-header {
-  background: url(../images/tab-header.png);
+  background: url(../images/tab-header.webp);
   background-size: 100% 100%;
   font-family: Alaska;
   font-weight: bold;
@@ -410,7 +410,7 @@ a:hover {
 #controls .scene-control:hover,
 #controls .control-tool:hover {
   transition: all 250ms cubic-bezier(0.42, 0, 0.58, 1) 10ms;
-  background: url(../images/resizerRound.png);
+  background: url(../images/resizerRound.webp);
   background-size: 100% 100%;
   color: #6b6b6b;
   border: none;
@@ -454,7 +454,7 @@ a:hover {
 
 #sidebar {
   color: white;
-  background-image: url(../images/thunder.png);
+  background-image: url(../images/thunder.webp);
   background-size: 80% 100%;
   padding-left: 80px;
   width: 380px;
@@ -493,7 +493,7 @@ div#sidebar::before {
   position: absolute;
   left: 0px;
   /* top: -50px; */
-  background: url(../images/separatorSidebar.png);
+  background: url(../images/separatorSidebar.webp);
   content: "";
   margin-right: 150px;
   background-size: 80% 100%;
@@ -528,7 +528,7 @@ div#sidebar.collapsed {
   height: 120%;
   margin: 0 2px;
   text-align: center;
-  background: url(../images/resizerRound.png);
+  background: url(../images/resizerRound.webp);
   -webkit-text-fill-color: white;
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: black;
@@ -561,7 +561,7 @@ div#sidebar.collapsed {
   position: relative;
   flex: 0 0 50px;
   height: 50px;
-  background: url(../images/backg-page.png);
+  background: url(../images/backg-page.webp);
   border-radius: 25%;
   box-shadow: 0 0 5px #000 inset;
   cursor: pointer;
@@ -579,7 +579,7 @@ div#sidebar.collapsed {
 #navigation #nav-toggle {
   flex: 0 0 50px;
   height: 50px;
-  background: url(../images/resizerRound.png);
+  background: url(../images/resizerRound.webp);
   background-size: 100% 100%;
   text-align: center;
   text-shadow: 0 0 10px #db0303;
@@ -597,7 +597,7 @@ div#sidebar.collapsed {
 
 #navigation #scene-list .scene {
   text-align: justify;
-  background: url(../images/scene.png);
+  background: url(../images/scene.webp);
   background-size: 100% 100%;
   padding-left: 10px;
   padding-right: 10px;
@@ -613,21 +613,21 @@ div#sidebar.collapsed {
 }
 
 #navigation #scene-list .scene.gm {
-  background: url(../images/scene-gm.png);
+  background: url(../images/scene-gm.webp);
   background-size: 100% 100%;
   border: none;
   box-shadow: none;
 }
 
 #navigation #scene-list .scene.active {
-  background: url(../images/scene-active.png);
+  background: url(../images/scene-active.webp);
   background-size: 100% 100%;
   border: none;
   box-shadow: none;
 }
 
 #navigation #scene-list .scene.view {
-  background: url(../images/scene-view.png);
+  background: url(../images/scene-view.webp);
   background-size: 100% 100%;
   border: none;
   box-shadow: none;
@@ -638,7 +638,7 @@ div#sidebar.collapsed {
 }
 
 #players {
-  background-image: url(../images/thunder.png);
+  background-image: url(../images/thunder.webp);
   background-position: center;
   bottom: 0px;
   left: 0px;
@@ -705,7 +705,7 @@ div#sidebar.collapsed {
 }
 
 #players::after {
-  background: url(../images/separatorRound.png);
+  background: url(../images/separatorRound.webp);
   width: 230px;
   height: 35px;
   content: "";
@@ -859,7 +859,7 @@ div#sidebar.collapsed {
 }
 
 .torgeternity.actor .window-content {
-  background-image: url(../images/bg-sheet.png);
+  background-image: url(../images/bg-sheet.webp);
   background-size: cover;
   font-family: Palatino;
   font-size: 12px;
@@ -870,7 +870,7 @@ form.actor-sheet {
 }
 
 form.actor-sheet .actor-type {
-  background: url(../images/separatorRound.png);
+  background: url(../images/separatorRound.webp);
   position: absolute;
   transform: rotateZ(-90deg);
   left: -150px;
@@ -882,7 +882,7 @@ form.actor-sheet .actor-type {
 }
 
 form.actor-sheet .actor-type span {
-  background: url(../images/type_back.png);
+  background: url(../images/type_back.webp);
   color: black;
   text-shadow: 0px 0px 2px black;
   background-size: 100% 100%;
@@ -921,7 +921,7 @@ form.actor-sheet header input[name="name"] {
   height: 40px;
   font-size: 2em;
   text-align: center;
-  background-image: url(../images/separator.png);
+  background-image: url(../images/separator.webp);
   background-size: cover;
   background-position: center;
   color: white;
@@ -946,8 +946,8 @@ form.actor-sheet header input[name="name"] {
 
 .window-content .actor-sheet .block {
   border: solid 4px;
-  -o-border-image: url(../images/separator.png);
-  border-image: url(../images/separator.png);
+  -o-border-image: url(../images/separator.webp);
+  border-image: url(../images/separator.webp);
   border-image-slice: 50;
   box-shadow: 2px 2px 15px #9e9686;
   transition: all 0.3s cubic-bezier(0.6, -0.07, 0.56, 1.52) 0.2s;
@@ -975,7 +975,7 @@ form.actor-sheet header input[name="name"] {
   min-width: 100px;
   transition: all 0.1s cubic-bezier(1, 0, 0, 1) 0.1s;
   color: white;
-  background-image: url(../images/tab_back.png);
+  background-image: url(../images/tab_back.webp);
   background-size: contain;
 }
 
@@ -989,7 +989,7 @@ form.actor-sheet header input[name="name"] {
 }
 
 .window-content .actor-sheet nav.tabs a.item.active {
-  background-image: url(../images/active_tab_back.png);
+  background-image: url(../images/active_tab_back.webp);
   text-transform: uppercase;
 }
 
@@ -1120,8 +1120,8 @@ form.actor-sheet header input[name="name"] {
 
 .window-content .actor-sheet .char_image {
   border: solid 5px;
-  -o-border-image: url(../images/separator.png) 100 round;
-  border-image: url(../images/separator.png) 100 round;
+  -o-border-image: url(../images/separator.webp) 100 round;
+  border-image: url(../images/separator.webp) 100 round;
   grid-column: 5/7;
   grid-row: 3/4;
   transition: all 0.6s cubic-bezier(1, 0, 0, 1) 0.1s;
@@ -1442,7 +1442,7 @@ form.actor-sheet header input[name="name"] {
 .window-content .actor-sheet .background .editor {
   grid-column: 1/9;
   grid-row: 2/6;
-  background: url(../images/bckg-hex.png);
+  background: url(../images/bckg-hex.webp);
   background-size: 100% 100%;
   min-height: 200px;
   min-width: 150px;
@@ -1632,7 +1632,7 @@ form.actor-sheet.threat .tab[data-tab].active .list-section-heading {
   height: 40px;
   font-size: 2em;
   text-align: center;
-  background-image: url(../images/separator.png);
+  background-image: url(../images/separator.webp);
   background-size: cover;
   background-position: center;
   color: white;
@@ -1702,7 +1702,7 @@ form.actor-sheet.threat .tab[data-tab].active ol.item-list li .item-detail .item
 form.actor-sheet.threat .tab[data-tab].active .editor {
   width: 400px;
   height: 400px;
-  background: url(../images/bckg-hex.png);
+  background: url(../images/bckg-hex.webp);
   background-size: 110% 110%;
   padding: 20px;
   background-position: center;
@@ -1783,14 +1783,14 @@ form.actor-sheet.threat .tab[data-tab].active .editor {
 
 .item .window-content form.item-sheet {
   padding: 10px;
-  background-image: url(../images/bg-sheet.png);
+  background-image: url(../images/bg-sheet.webp);
   background-size: cover;
   font-family: Palatino;
   font-size: 0.9em;
 }
 
 .item .window-content form.item-sheet .item-type {
-  background: url(../images/separatorRound.png);
+  background: url(../images/separatorRound.webp);
   position: absolute;
   transform: rotateZ(-90deg);
   left: -150px;
@@ -1802,7 +1802,7 @@ form.actor-sheet.threat .tab[data-tab].active .editor {
 }
 
 .item .window-content form.item-sheet .item-type span {
-  background: url(../images/type_back.png);
+  background: url(../images/type_back.webp);
   color: black;
   text-shadow: 0px 0px 2px black;
   background-size: 100% 100%;
@@ -1862,7 +1862,7 @@ form.actor-sheet.threat .tab[data-tab].active .editor {
 .item .window-content form.item-sheet .editor {
   width: 400px;
   height: 400px;
-  background: url(../images/bckg-hex.png);
+  background: url(../images/bckg-hex.webp);
   background-size: 110% 110%;
   padding: 20px;
   background-position: center;
@@ -1885,7 +1885,7 @@ form.actor-sheet.threat .tab[data-tab].active .editor {
   min-width: 100px;
   transition: all 0.1s cubic-bezier(1, 0, 0, 1) 0.1s;
   color: white;
-  background-image: url(../images/tab_back.png);
+  background-image: url(../images/tab_back.webp);
   background-size: contain;
 }
 
@@ -1899,7 +1899,7 @@ form.actor-sheet.threat .tab[data-tab].active .editor {
 }
 
 .item .window-content form.item-sheet nav.tabs a.item.active {
-  background-image: url(../images/active_tab_back.png);
+  background-image: url(../images/active_tab_back.webp);
   text-transform: uppercase;
 }
 

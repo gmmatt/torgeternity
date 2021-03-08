@@ -42,7 +42,7 @@ sheetResize();
 toggleViewMode();
 var logo = document.getElementById("logo");
 logo.style.position="absolute"
-logo.setAttribute("src", "/systems/torgeternity/images/vttLogo.png");
+logo.setAttribute("src", "/systems/torgeternity/images/vttLogo.webp");
 })
 //----all this could be draft in another imported module ?? maybe like ./modules/handlebarsHelpers.js
 
