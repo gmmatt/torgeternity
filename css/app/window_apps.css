@@ -1,6 +1,6 @@
 .window-app .window-content {
-  font-family: Berlin;
-  background-image: url(../images/thunder.png);
+  font-family: OptiLight;
+  background-image: url(../images/thunder.webp);
   background-size: cover;
   color: white;
 }
@@ -56,7 +56,7 @@
 
 .journal-sheet .window-content {
   font-family: Palatino;
-  background-image: url(../images/box-bckg.png);
+  background-image: url(../images/box-bckg.webp);
   background-size: cover;
   color: black;
 }

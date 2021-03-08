@@ -75,15 +75,13 @@ Hooks.once("init", async function () {
 });
 
 //-------------once everything ready
-Hooks.once("ready", function () {
-    sheetResize();
-    toggleViewMode();
-
-    var logo = document.getElementById("logo");
-    logo.style.position = "fixe"
-    logo.setAttribute("src", "/systems/torgeternity/images/vttLogo.png");
-  
-});
+Hooks.once("ready", function() {
+sheetResize();
+toggleViewMode();
+var logo = document.getElementById("logo");
+logo.style.position="absolute"
+logo.setAttribute("src", "/systems/torgeternity/images/vttLogo.webp");
+})
 //----all this could be draft in another imported module ?? maybe like ./modules/handlebarsHelpers.js
 
 Handlebars.registerHelper("concatSkillValue", function (skillName) {

@@ -1,6 +1,7 @@
 //--------style global
 body {
-  font-family: Berlin2;
+  font-family: OptiLight;
+  font-size: 12px;
 
   ::-webkit-scrollbar-thumb {
     outline: none;
@@ -9,7 +10,19 @@ body {
     border: 1px solid #efedeb;
   }
 }
-
+input[type="text"],
+input[type="number"],
+input[type="password"],
+input[type="date"],
+input[type="time"],
+select,
+option,
+textarea {
+  font-family: OptiLight;
+}
+button {
+  font-family: OptiBold;
+}
 button:hover,
 button:focus {
   box-shadow: 0 0 10px #3bb3b3;
@@ -59,7 +72,7 @@ a:hover {
   position: absolute;
   bottom: -10px;
   right: -10px;
-  background: url(../images/resizerRound.png);
+  background: url(../images/resizerRound.webp);
   background-size: 115% 115%;
   background-position: center;
   padding: 2px;
@@ -94,7 +107,7 @@ a:hover {
 }
 
 .window-app .window-header {
-  background: url(../images/tab-header.png);
+  background: url(../images/tab-header.webp);
   background-size: 100% 100%;
   font-family: Alaska;
   font-weight: bold;
@@ -118,7 +131,7 @@ a:hover {
   .control-tool:hover {
     transition: all 250ms cubic-bezier(0.42, 0, 0.58, 1) 10ms;
 
-    background: url(../images/resizerRound.png);
+    background: url(../images/resizerRound.webp);
     background-size: 100% 100%;
     color: rgb(107, 107, 107);
     border: none;
@@ -155,7 +168,7 @@ a:hover {
 //-----------
 #sidebar {
   color: white;
-  background-image: url(../images/thunder.png);
+  background-image: url(../images/thunder.webp);
 
   background-size: 80% 100%;
   padding-left: 80px;
@@ -195,7 +208,7 @@ div#sidebar::before {
   position: absolute;
   left: 0px;
   /* top: -50px; */
-  background: url(../images/separatorSidebar.png);
+  background: url(../images/separatorSidebar.webp);
   content: "";
   margin-right: 150px;
   background-size: 80% 100%;
@@ -233,7 +246,7 @@ div#sidebar.collapsed {
     height: 120%;
     margin: 0 2px;
     text-align: center;
-    background: url(../images/resizerRound.png);
+    background: url(../images/resizerRound.webp);
     -webkit-text-fill-color: white;
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: black;
@@ -266,14 +279,14 @@ div#sidebar.collapsed {
         position: relative;
         flex: 0 0 50px;
         height: 50px;
-        background: url(../images/backg-page.png);
+        background: url(../images/backg-page.webp);
         border-radius: 25%;
         box-shadow: 0 0 5px #000 inset;
         cursor: pointer;
         border-radius: 0% 0% 75%;
       }
       li.macro.active {
-          border-radius: 10%;
+        border-radius: 10%;
       }
       li.macro:hover {
         box-shadow: 0 0 10px #004777 inset;
@@ -286,7 +299,7 @@ div#sidebar.collapsed {
   #nav-toggle {
     flex: 0 0 50px;
     height: 50px;
-    background: url(../images/resizerRound.png);
+    background: url(../images/resizerRound.webp);
     background-size: 100% 100%;
     text-align: center;
     text-shadow: 0 0 10px rgb(219, 3, 3);
@@ -304,7 +317,7 @@ div#sidebar.collapsed {
   #scene-list {
     .scene {
       text-align: justify;
-      background: url(../images/scene.png);
+      background: url(../images/scene.webp);
       background-size: 100% 100%;
       padding-left: 10px;
       padding-right: 10px;
@@ -320,21 +333,21 @@ div#sidebar.collapsed {
     }
 
     .scene.gm {
-      background: url(../images/scene-gm.png);
+      background: url(../images/scene-gm.webp);
       background-size: 100% 100%;
       border: none;
       box-shadow: none;
     }
 
     .scene.active {
-      background: url(../images/scene-active.png);
+      background: url(../images/scene-active.webp);
       background-size: 100% 100%;
       border: none;
       box-shadow: none;
     }
 
     .scene.view {
-      background: url(../images/scene-view.png);
+      background: url(../images/scene-view.webp);
       background-size: 100% 100%;
       border: none;
       box-shadow: none;
@@ -350,7 +363,7 @@ div#sidebar.collapsed {
 //---players
 //-----------
 #players {
-  background-image: url(../images/thunder.png);
+  background-image: url(../images/thunder.webp);
   background-position: center;
   bottom: 0px;
   left: 0px;
@@ -404,7 +417,7 @@ div#sidebar.collapsed {
 
       .player-name {
         text-shadow: 0px 3px 10px #8181cc;
-        color:white
+        color: white;
       }
 
       .player-name.self {
@@ -416,10 +429,18 @@ div#sidebar.collapsed {
 }
 
 #players::after {
-  background: url(../images/separatorRound.png);
+  background: url(../images/separatorRound.webp);
   width: 230px;
   height: 35px;
   content: "";
+}
+#player-config{
+  label{
+    color : lightblue;
+    font-weight: normal;
+    font-size:12px
+
+  }
 }
 
 //----------ALL UI transition

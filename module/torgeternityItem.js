@@ -165,16 +165,15 @@ export default class torgeternityItem extends Item {
 
       // Prepare image for last die
       if (lastDie == 1) {
-         lastDieImage = "/systems/torgeternity/images/bonus-1.png";
-      } else if (lastDie == 2) {
-         lastDieImage = "/systems/torgeternity/images/bonus-2.png";
-      } else if (lastDie == 3) {
-         lastDieImage = "/systems/torgeternity/images/bonus-3.png";
-      } else if (lastDie == 4) {
-         lastDieImage = "/systems/torgeternity/images/bonus-4.png";
-      } else if (lastDie == 5) {
-         lastDieImage = "/systems/torgeternity/images/bonus-5.png";
-      }
+         lastDieImage = "/systems/torgeternity/images/bonus-1.webp";}
+      else if (lastDie == 2) {
+         lastDieImage = "/systems/torgeternity/images/bonus-2.webp";}
+      else if (lastDie == 3) {
+         lastDieImage = "/systems/torgeternity/images/bonus-3.webp";}
+      else if (lastDie == 4) {
+         lastDieImage = "/systems/torgeternity/images/bonus-4.webp";}
+      else if (lastDie == 5) {
+         lastDieImage = "/systems/torgeternity/images/bonus-5.webp";}
 
       // Put together Chat Data
       let chatData = {
