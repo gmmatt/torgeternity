@@ -87,20 +87,13 @@
 }
 
 .journal-sheet .window-content .editor {
-  margin-top: 4%;
-  margin-left: 5%;
-  width: 90%;
-  padding: 2%;
-}
-
-.editor {
   margin-top: 2%;
   margin-left: 5%;
   width: 90%;
   padding: 2%;
 }
 
-.editor .editor-content h1 {
+.journal-sheet .window-content .editor .editor-content h1 {
   font-family: Alaska;
   text-transform: uppercase;
   text-align: center;
@@ -109,14 +102,24 @@
   border-bottom: none;
 }
 
-.editor .editor-content h2 {
+.journal-sheet .window-content .editor .editor-content h2 {
   font-family: Alaska;
   border-bottom: none;
 }
 
-.editor .editor-content h3 {
+.journal-sheet .window-content .editor .editor-content h3 {
   font-family: Alaska;
   font-weight: bold;
+}
+
+.window-app.image-popout .form-group.title {
+  margin-top: 1%;
+}
+
+.window-app.image-popout .form-group.title input {
+  height: 32px;
+  text-align: center;
+  margin-top: 0%;
 }
 
 textarea {
@@ -140,102 +143,4 @@ textarea:hover {
 
 #module-management .package-list .package-title {
   color: #c6e2fa;
-}
-
-.journal-sheet .window-content {
-  font-family: Palatino;
-  background-image: url(../images/box-bckg.png);
-  background-size: cover;
-  color: black;
-}
-
-.journal-sheet .window-content input[type="text"],
-.journal-sheet .window-content select {
-  margin-top: 4%;
-  margin-left: 5%;
-  width: 90%;
-  text-align: center;
-  border: none;
-  text-transform: uppercase;
-  font-family: Alaska;
-  font-weight: bold;
-  color: #000;
-}
-
-.journal-sheet .window-content input[type="text"]:hover,
-.journal-sheet .window-content select:hover,
-.journal-sheet .window-content input[type="text"]:focus,
-.journal-sheet .window-content select:focus,
-.journal-sheet .window-content input[type="text"]:active,
-.journal-sheet .window-content select:active,
-.journal-sheet .window-content .editor:hover,
-.journal-sheet .window-content .editor:focus,
-.journal-sheet .window-content .editor:active {
-  box-shadow: 0 0 15px #053075;
-}
-
-.journal-sheet .window-content .editor {
-  margin-top: 4%;
-  margin-left: 5%;
-  width: 90%;
-  padding: 2%;
-}
-
-.window-app.image-popout .form-group.title {
-  margin-top: 1%;
-}
-
-.window-app.image-popout .form-group.title input {
-  height: 32px;
-  text-align: center;
-  margin-top: 0%;
-}
-
-#combat #combat-tracker {
-  max-height: 350px;
-  min-height: 100px;
-}
-
-#combat #combat-controls {
-  margin: 0;
-  border-top: 2px groove #444;
-  padding-top: 4px;
-  border-bottom: 2px groove #444;
-  padding-bottom: 4px;
-}
-
-#combat #actionCardArea {
-  padding-top: 15px;
-}
-
-#combat #actionCardArea .deckControl {
-  max-height: 60px;
-}
-
-#combat .combatant-init {
-  color: white;
-  border: none;
-  text-align: center;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background: url(../images/roundBack.webp);
-  background-size: cover;
-}
-
-#combat .token-initiative {
-  flex: 0 0 48px;
-  text-align: center;
-  flex-direction: row;
-  display: flex;
-}
-
-#combat .token-initiative .init-up,
-#combat .token-initiative .init-down {
-  margin-left: 3px;
-}
-
-#combat .token-initiative .init-up:hover,
-#combat .token-initiative .init-down:hover {
-  text-shadow: 0px 0px 3px cyan;
 }
