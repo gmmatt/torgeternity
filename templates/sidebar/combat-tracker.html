@@ -64,7 +64,7 @@
             data-token-id="{{this.tokenId}}">
             <img class="token-image" data-src="{{this.img}}" title="{{this.name}}" />
             <div class="token-name flexcol">
-                <h4 color="{{this.flags.color}}">{{this.name}}</h4>
+                <h4 style="color:{{this.flags.color}}">{{this.name}}</h4>
                 <div class="combatant-controls flexrow">
                     {{#if ../user.isGM}}
                     <a class="combatant-control {{#if this.hidden}}active{{/if}}"

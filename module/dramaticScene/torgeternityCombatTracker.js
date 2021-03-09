@@ -27,57 +27,57 @@ export default class torgeternityCombatTracker extends CombatTracker {
     let btn = ev.currentTarget;
     let li = btn.closest(".combatant");
     let c = this.combat.getCombatant(li.dataset.combatantId);
-    console.log(li);
-    await this.combat.updateCombatant({
-      _id: c._id,
-      ["initiative"]: c.initiative - 1,
-    });
-    let otherDown = this.combat.combatants.filter(
-      (oth) => oth.initiative >= c.initiative && oth._id != c._id
-    );
-    for (let oth of otherDown) {
-      if (oth.initiative == c.initiative) {
-        await this.combat.updateCombatant({
-          _id: oth._id,
-          ["initiative"]: oth.initiative + 1,
-        });
+    if (c.initiative > 1) {
+      await this.combat.updateCombatant({
+        _id: c._id,
+        ["initiative"]: c.initiative - 1,
+      });
+      let otherDown = this.combat.combatants.filter(
+        (oth) => oth.initiative >= c.initiative && oth._id != c._id
+      );
+      for (let oth of otherDown) {
+        if (oth.initiative == c.initiative) {
+          await this.combat.updateCombatant({
+            _id: oth._id,
+            ["initiative"]: oth.initiative + 1,
+          });
+        }
       }
+      this.render();
     }
-    console.log(otherDown);
-
-    this.render();
   }
   async _onInitDown(ev) {
     let btn = ev.currentTarget;
     let li = btn.closest(".combatant");
     let c = this.combat.getCombatant(li.dataset.combatantId);
+    if (c.initiative < this.combat.combatants.length) {
+      await this.combat.updateCombatant({
+        _id: c._id,
+        ["initiative"]: c.initiative + 1,
+      });
+      let otherUp = this.combat.combatants.filter(
+        (oth) => oth.initiative <= c.initiative && oth._id != c._id
+      );
 
-    await this.combat.updateCombatant({
-      _id: c._id,
-      ["initiative"]: c.initiative + 1,
-    });
-    let otherUp = this.combat.combatants.filter(
-      (oth) => oth.initiative <= c.initiative && oth._id != c._id
-    );
-
-    for (let oth of otherUp) {
-      if (oth.initiative == c.initiative) {
-        await this.combat.updateCombatant({
-          _id: oth._id,
-          ["initiative"]: oth.initiative - 1,
-        });
+      for (let oth of otherUp) {
+        if (oth.initiative == c.initiative) {
+          await this.combat.updateCombatant({
+            _id: oth._id,
+            ["initiative"]: oth.initiative - 1,
+          });
+        }
       }
     }
-
     this.render();
   }
-  async _onHasPlayed(ev){
+  async _onHasPlayed(ev) {
     ev.currentTarget.classList.replace("not-played", "played-ok");
     let li = ev.currentTarget.closest(".combatant");
     let c = this.combat.getCombatant(li.dataset.combatantId);
-if (c==this.combat.combatant){
-    await this.combat.nextTurn();
-}else{ui.notifications.warn("other character have to play")}
-
+    if (c == this.combat.combatant) {
+      await this.combat.nextTurn();
+    } else {
+      ui.notifications.warn("other character have to play");
+    }
   }
 }

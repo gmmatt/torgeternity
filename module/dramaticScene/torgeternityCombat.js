@@ -3,6 +3,8 @@ export default class TorgCombat extends Combat {
     _sortCombatants(a, b) {
         const ia = Number.isNumeric(a.initiative) ? a.initiative : -9999;
         const ib = Number.isNumeric(b.initiative) ? b.initiative : -9999;
+
+
         if (ia>ib){
              
             return 1
@@ -24,7 +26,11 @@ export default class TorgCombat extends Combat {
         };
         combatant.helpers = [];
         combatant.flags.type=c.actor.data.type;
-        combatant.flags.color=c.players[0].data.color;
+        
+        if(c.players.length>0){
+            combatant.flags.color=c.players[0].color;
+        }
+        
 
         return combatant;
     }

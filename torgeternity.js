@@ -34,7 +34,7 @@ Hooks.once("init", async function () {
 
 
     //--------combats
-    CONFIG.Combat.initiative.formula = "0";
+    CONFIG.Combat.initiative.formula = "1";
     CONFIG.Combat.entityClass=torgeternityCombat;
     CONFIG.ui.combat=torgeternityCombatTracker;
 
