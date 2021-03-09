@@ -17,23 +17,23 @@
 }
 
 
-.handed-cards {
+#handedCards {
    
     display: flex;
     flex-direction: row;
     position: fixed;
     font-family: Alaska;
     text-transform: capitalize;
-    min-width: 600px;
+    min-width: 400px;
     border-radius: 5% 5% 0% 0%;
 
-    left: 50%;
+    right: 0%;
     height: 300px;
     bottom: -270px;
     transition: all 0.3s cubic-bezier(0.6, -0.07, 0.56, 1.52) 0.2s;
 
     .cardArea {
-        background: url(../images/backg-page.png);
+        background: url(../images/backg-page.webp);
         background-size: 120% 100%;
         background-position: center;
         width: 100%;
@@ -63,6 +63,7 @@
                 box-shadow: 1px 1px 20px 5px rgba(0, 0, 0, 1);
 
                 div.item-controls {
+                    color:white;
                     background-color: rgb(44, 125, 195);
                     display: flex;
                     justify-content: space-around;
@@ -106,8 +107,10 @@
 }
 
 
-.handed-cards:hover {
+#handedCards:hover {
     z-index: 100;
     transform: scale(1.5);
-    bottom: -100px
+    bottom: -100px;
+    right: 10%;
 }
+
