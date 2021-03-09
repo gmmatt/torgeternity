@@ -59,6 +59,7 @@
 .chat-message .skill-roll-result {
   text-align: center;
   font-size: 24px;
+  font-family: "Palatino Linotype";
   font-weight: bold;
   padding: 3px 0px 0px 0px;
   margin: 0px;
@@ -66,6 +67,7 @@
 
 .chat-message .skill-roll-action-label {
   text-align: center;
+  font-family: "Palatino Linotype";
   font-size: 12px;
   padding: 0px;
   margin: 0px;
@@ -73,11 +75,13 @@
 
 .chat-message .skill-roll-table {
   padding-bottom: 5px;
+  font-family: "Palatino Linotype";
   margin-bottom: 5px;
 }
 
 .chat-message .skill-roll-table-1 {
   width: 40%;
+  font-family: "Palatino Linotype";
   border: 1px solid black;
 }
 
@@ -85,10 +89,12 @@
   width: 60%;
   background: #e8b017;
   padding-left: 5px;
+  font-family: "Palatino Linotype";
   border: 1px solid black;
 }
 
 .chat-message .skill-roll-menu {
+  font-family: "Palatino Linotype";
   font-size: 11px;
   text-align: center;
 }
