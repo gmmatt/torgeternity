@@ -1,22 +1,24 @@
-export default class GMDecks {
-  constructor() {
-    this.destiny = {
+export let  GMDecks ={
+ 
+    destiny : {
       label: "destiny deck",
       remainingCards: [],
       playedCards: [],
-    };
-    this.action = {
-        label: "action deck",
-        remainingCards: [],
-        playedCards: [],
-        activeCard:{}
-      };
-      this.cosm = {
-        label: "cosm deck",
-        remainingCards: [],
-        playedCards: [],
-        activeCard:{}
-      };
+    },
+    action : {
+      label: "action deck",
+      remainingCards: [],
+      playedCards: [],
+      activeCard: {},
+    },
+    cosm : {
+      label: "cosm deck",
+      cosmFilter: "",
+      remainingCards: [],
+      playedCards: [],
+      activeCard: {},
+    }
+  
+ 
 
-  }
 }

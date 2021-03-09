@@ -28,7 +28,8 @@ export default class GMDecks extends Application {
   /** @override */
   getData(options) {
    let data=super.getData();
-   data.decks=game.cards.GMDecks
+
+   data.decks=game.user.data.flags.torgeternity.GMDeck
 
     // Return the data for rendering
     return data;
