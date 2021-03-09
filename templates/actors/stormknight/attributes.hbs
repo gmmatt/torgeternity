@@ -1,6 +1,80 @@
 <h2>ATTRIBUTES</h2>
 <ul>
 
+    <!-- iterate each attribute individually to avoid a problem with data structures in sheets created under early versions of system -->
+
+    <li class="attribut-block">
+        <a class="skill-roll"
+            data-testType="attribute" 
+            data-value="{{data.attributes.charisma}}" 
+            data-name="{{localize "torgeternity.attributes.charisma"}}"
+            data-baseAttribute="{{localize "torgeternity.attributes.charisma"}}" 
+            data-adds="0"
+            data-unskilledUse="1"      
+            >
+            {{localize "torgeternity.attributes.charisma"}}
+        </a>
+        <input name="data.attributes.charisma" type="number" value="{{data.attributes.charisma}}" data=dtype="Number" />
+    </li>
+    
+        <li class="attribut-block">
+        <a class="skill-roll"
+            data-testType="attribute" 
+            data-value="{{data.attributes.dexterity}}" 
+            data-name="{{localize "torgeternity.attributes.dexterity"}}"
+            data-baseAttribute="{{localize "torgeternity.attributes.dexterity"}}" 
+            data-adds="0"
+            data-unskilledUse="1"      
+            >
+            {{localize "torgeternity.attributes.dexterity"}}
+        </a>
+        <input name="data.attributes.dexterity" type="number" value="{{data.attributes.dexterity}}" data=dtype="Number" />
+    </li>
+
+    <li class="attribut-block">
+        <a class="skill-roll"
+            data-testType="attribute" 
+            data-value="{{data.attributes.mind}}" 
+            data-name="{{localize "torgeternity.attributes.mind"}}"
+            data-baseAttribute="{{localize "torgeternity.attributes.mind"}}" 
+            data-adds="0"
+            data-unskilledUse="1"      
+            >
+            {{localize "torgeternity.attributes.mind"}}
+        </a>
+        <input name="data.attributes.mind" type="number" value="{{data.attributes.mind}}" data=dtype="Number" />
+    </li>
+
+    <li class="attribut-block">
+        <a class="skill-roll"
+            data-testType="attribute" 
+            data-value="{{data.attributes.spirit}}" 
+            data-name="{{localize "torgeternity.attributes.spirit"}}"
+            data-baseAttribute="{{localize "torgeternity.attributes.spirit"}}" 
+            data-adds="0"
+            data-unskilledUse="1"      
+            >
+            {{localize "torgeternity.attributes.spirit"}}
+        </a>
+        <input name="data.attributes.spirit" type="number" value="{{data.attributes.spirit}}" data=dtype="Number" />
+    </li>
+
+    <li class="attribut-block">
+        <a class="skill-roll"
+            data-testType="attribute" 
+            data-value="{{data.attributes.strength}}" 
+            data-name="{{localize "torgeternity.attributes.strength"}}"
+            data-baseAttribute="{{localize "torgeternity.attributes.strength"}}" 
+            data-adds="0"
+            data-unskilledUse="1"      
+            >
+            {{localize "torgeternity.attributes.strength"}}
+        </a>
+        <input name="data.attributes.strength" type="number" value="{{data.attributes.strength}}" data=dtype="Number" />
+    </li>
+
+
+    <!-- obsolete code: eventually needs to be deleted    
     {{#each data.attributes as |attr key|}}
     <li class="attribut-block">
         <a class="skill-roll"
@@ -17,6 +91,6 @@
         <input name="data.attributes.{{key}}" type="number" value="{{attr}}" data=dtype="Number" />
     </li>
     {{/each}}
-    
+    -->
     
 </ul>
