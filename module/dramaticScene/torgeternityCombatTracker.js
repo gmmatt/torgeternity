@@ -8,6 +8,7 @@ export default class torgeternityCombatTracker extends CombatTracker {
     html.find("input.combatant-init").change(this._onUpdateInit.bind(this));
     html.find("a.init-up").click(this._onInitUp.bind(this));
     html.find("a.init-down").click(this._onInitDown.bind(this));
+    html.find("a.has-played").click(this._onHasPlayed.bind(this));
   }
 
   async _onUpdateInit(ev) {
@@ -18,6 +19,7 @@ export default class torgeternityCombatTracker extends CombatTracker {
       _id: c._id,
       ["initiative"]: input.value,
     });
+
     this.render();
   }
 
@@ -25,12 +27,23 @@ export default class torgeternityCombatTracker extends CombatTracker {
     let btn = ev.currentTarget;
     let li = btn.closest(".combatant");
     let c = this.combat.getCombatant(li.dataset.combatantId);
-    console.log(li)
+    console.log(li);
     await this.combat.updateCombatant({
       _id: c._id,
       ["initiative"]: c.initiative - 1,
     });
-   
+    let otherDown = this.combat.combatants.filter(
+      (oth) => oth.initiative >= c.initiative && oth._id != c._id
+    );
+    for (let oth of otherDown) {
+      if (oth.initiative == c.initiative) {
+        await this.combat.updateCombatant({
+          _id: oth._id,
+          ["initiative"]: oth.initiative + 1,
+        });
+      }
+    }
+    console.log(otherDown);
 
     this.render();
   }
@@ -43,8 +56,28 @@ export default class torgeternityCombatTracker extends CombatTracker {
       _id: c._id,
       ["initiative"]: c.initiative + 1,
     });
-   
+    let otherUp = this.combat.combatants.filter(
+      (oth) => oth.initiative <= c.initiative && oth._id != c._id
+    );
+
+    for (let oth of otherUp) {
+      if (oth.initiative == c.initiative) {
+        await this.combat.updateCombatant({
+          _id: oth._id,
+          ["initiative"]: oth.initiative - 1,
+        });
+      }
+    }
 
     this.render();
+  }
+  async _onHasPlayed(ev){
+    ev.currentTarget.classList.replace("not-played", "played-ok");
+    let li = ev.currentTarget.closest(".combatant");
+    let c = this.combat.getCombatant(li.dataset.combatantId);
+if (c==this.combat.combatant){
+    await this.combat.nextTurn();
+}else{ui.notifications.warn("other character have to play")}
+
   }
 }

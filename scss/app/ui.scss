@@ -456,3 +456,34 @@ div#sidebar.collapsed {
   -o-transition: all 500ms cubic-bezier(0.42, 0, 0.58, 1) 10ms;
   transition: all 500ms cubic-bezier(0.42, 0, 0.58, 1) 10ms;
 }
+
+
+
+//----------
+//---COMBAT
+//----------
+
+#combat{
+  .combatant-init{
+    color:white
+  }
+
+  ol{
+    li.combatant.stormknight{
+    background-color: rgba(0, 47, 255, 0.28);
+
+  }
+  li.combatant.threat{
+    background-color: rgba(255, 0, 0, 0.28);
+
+  }
+  li.combatant.active.stormknight{
+    background-color: rgba(0, 47, 255, 0.705);
+
+  }
+  li.combatant.active.threat{
+    background-color: rgba(255, 0, 0, 0.856);
+  } 
+  }
+ 
+}

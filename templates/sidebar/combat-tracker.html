@@ -60,11 +60,11 @@
 
     <ol id="combat-tracker" class="directory-list">
         {{#each turns}}
-        <li class="combatant actor directory-item flexrow {{this.css}}" data-combatant-id="{{this._id}}"
+        <li class="combatant actor directory-item flexrow {{this.css}} {{this.flags.type}}" data-combatant-id="{{this._id}}"
             data-token-id="{{this.tokenId}}">
             <img class="token-image" data-src="{{this.img}}" title="{{this.name}}" />
             <div class="token-name flexcol">
-                <h4>{{this.name}}</h4>
+                <h4 color="{{this.flags.color}}">{{this.name}}</h4>
                 <div class="combatant-controls flexrow">
                     {{#if ../user.isGM}}
                     <a class="combatant-control {{#if this.hidden}}active{{/if}}"
@@ -83,17 +83,12 @@
                 </div>
             </div>
 
-            {{#if this.hasResource}}
-            <div class="token-resource">
-                <span class="resource">{{this.resource}}</span>
-            </div>
-            {{/if}}
+         
+            <a class="has-played not-played"><i class="fas fa-check"></i></a>
             <a class="init-up"><i class="fas fa-arrow-up"></i></a>
             <a class="init-down"><i class="fas fa-arrow-down"></i></a>
             <div class="token-initiative">
-
-                <input class="combatant-init" name="combatant.initiative" value="{{this.initiative}}" />
-
+                <input type="number" class="combatant-init" name="combatant.initiative" value="{{this.initiative}}" />
             </div>
         </li>
         {{/each}}
