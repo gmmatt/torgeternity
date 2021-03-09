@@ -10,6 +10,8 @@ while managing game systems.
 
 v. 0.92.2
 - Changed some fonts in UI; updated UI appearance
+- Fixed an issue where some sheets creted under very early versions of the TE system were
+not correctly displaying attributes on SK sheets.
 
 v. 0.92.1
 
