@@ -89,10 +89,9 @@ export default class torgeternityCombatTracker extends CombatTracker {
  
 
   async _sortVilainsFirst() {
-    console.log(this.combat)
-  let vilains = this.combat.combatants.filter((c) => c.flags.type === "threat");
-  let heros = this.combat.combatants.filter((c) => c.flags.type === "stormknight");
-  console.log({vilains},{heros});
+    let vilains = this.combat.combatants.filter((c) => c.token.disposition < 1);
+    let heros = this.combat.combatants.filter((c) => c.token.disposition >0);
+    console.log({vilains},{heros});
   for (let v of vilains){
     await this.combat.updateCombatant({
       _id: v._id,
@@ -108,8 +107,8 @@ export default class torgeternityCombatTracker extends CombatTracker {
   
 }
 async _sortHerosFirst() {
-  let vilains = this.combat.combatants.filter((c) => c.flags.type === "threat");
-  let heros = this.combat.combatants.filter((c) => c.flags.type === "stormknight");
+  let vilains = this.combat.combatants.filter((c) => c.token.disposition < 1);
+  let heros = this.combat.combatants.filter((c) => c.token.disposition >0);
   console.log({vilains},{heros});
   for (let v of vilains){
     await this.combat.updateCombatant({

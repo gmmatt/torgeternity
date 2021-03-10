@@ -470,11 +470,14 @@ div#sidebar.collapsed {
     li.combatant {
       border-left: 5px solid black;
     }
-    li.combatant.stormknight {
+    li.combatant.dispo1 {
       background-color: rgba(15, 47, 189, 0.212);
     }
-    li.combatant.threat {
+    li.combatant.dispo-1 {
       background-color: rgba(143, 1, 1, 0.28);
+    }
+    li.combatant.dispo0 {
+      background-color: rgba(141, 143, 1, 0.28);
     }
     li.combatant.active {
       border-left: 5px solid rgb(255, 255, 255);

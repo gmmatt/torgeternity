@@ -736,12 +736,16 @@ div#sidebar.collapsed {
   border-left: 5px solid black;
 }
 
-#combat ol li.combatant.stormknight {
+#combat ol li.combatant.dispo1 {
   background-color: rgba(15, 47, 189, 0.212);
 }
 
-#combat ol li.combatant.threat {
+#combat ol li.combatant.dispo-1 {
   background-color: rgba(143, 1, 1, 0.28);
+}
+
+#combat ol li.combatant.dispo0 {
+  background-color: rgba(141, 143, 1, 0.28);
 }
 
 #combat ol li.combatant.active {
