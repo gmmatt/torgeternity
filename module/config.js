@@ -5,59 +5,36 @@ torgeternity.gameCards = {
         destinyCards: {},
         cosmCards: {}
     },
-    decks: {
-        actionDeck: {
-            label: "action cards deck",
-            backImage:"",
-            cardType: {},
-            cardList: [
-                {
-                    backImage:"systems/torgeternity/images/cardsImages/actionDeck/actionCardBack.png",
-                    frontImage:"systems/torgeternity/images/cardsImages/actionDeck/fuyez.png",
-                    label:"test 1",
-                },
-                {
-                    backImage:"systems/torgeternity/images/cardsImages/actionDeck/actionCardBack.png",
-                    frontImage:"systems/torgeternity/images/cardsImages/actionDeck/triomphe.png",
-                    label:"test 2",
-                }
-            ],
-            remainingCards: [
-                {
-                    backImage:"systems/torgeternity/images/cardsImages/actionDeck/actionCardBack.png",
-                    frontImage:"systems/torgeternity/images/cardsImages/actionDeck/fuyez.png",
-                    label:"test 1",
-                },
-                {
-                    backImage:"systems/torgeternity/images/cardsImages/actionDeck/actionCardBack.png",
-                    frontImage:"systems/torgeternity/images/cardsImages/actionDeck/triomphe.png",
-                    label:"test 2",
-                }
-            ],
-            playedCards: []
+    GMDecks :{
+ 
+        destiny : {
+          compendiums:[],
+          label: "destiny deck",
+          remainingCards: [],
+          playedCards: [],
+          backImg:""
         },
-        destinyDeck: {
-            label: "destiny cards deck",
-            cardType: {},
-            cardList: [],
-            remainingCards: [],
-            withdrawedCards: [],
-            playersHand:{
-
-            }
-
+        action : {
+          compendiums:[],
+          label: "action deck",
+          remainingCards: [],
+          playedCards: [],
+          activeCard: {},
+          backImg:""
+    
         },
-        cosmDeck: {
-            label: "cosm cards deck",
-            cardType: {},
-            cardList: [],
-            remainingCards: [],
-            withdrawedCards: [],
-            playersHand:{
-                
-            }
+        cosm : {
+          compendiums:[],
+          label: "cosm deck",
+          cosmFilter: "",
+          remainingCards: [],
+          playedCards: [],
+          activeCard: {},
+          backImg:""
+    
         }
     }
+    
 }
 torgeternity.viewMode = {
     UI: true

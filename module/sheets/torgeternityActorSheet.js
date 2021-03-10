@@ -126,26 +126,6 @@ export default class torgeternityActorSheet extends ActorSheet {
 
     activateListeners(html) {
 
-        //----------cards action: 
-        if (this.actor.owner) {
-            html.find(".card-reserve").click(this._onCardReserve.bind(this));
-        }
-        if (this.actor.owner) {
-            html.find(".card-play").click(this._onCardPlay.bind(this));
-        }
-        if (this.actor.owner) {
-            html.find(".card-exchange").click(this._onCardExchange.bind(this));
-        }
-        //--------cards display
-        for (let card of html.find(".cardHand")) {
-            this._displayCard(card)
-        }
-        html.find('li.card').click(function (ev) {
-            ev.currentTarget.classList.toggle("focusedCard");
-
-        })
-
-
 
 
 

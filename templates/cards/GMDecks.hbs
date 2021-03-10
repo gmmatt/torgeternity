@@ -1,11 +1,13 @@
 {{log this}}
 <div id="handedCards" class="app {{#if hide}}hidden{{/if}}">
+    
+    {{#each decks as |deck id|}}
     <div class="cardArea">
-        <h3 class="cardTitle">destiny Deck</h3>
+        <h3 class="cardTitle">{{deck.label}}</h3>
         <ol class="destinyCards cardHand">
           
 
-            <li class="card " data-item-id="{{destinyDeck._id}}">
+            <li class="card deck" data-deck="{{id}}" >
                 <div class="item-controls">
                     <a class="item-control deck-shuffle" title="shuffle deck"><i class="fa fa-random"></i></a>
                     <a class="item-control deck-config" title="deck config"><i class="fa fa-cog"></i></a>
@@ -13,59 +15,16 @@
                     <a class="item-control deck-history" title="draw history"><i class="fa fa-undo"></i></a>
                 </div>
                 <div>
-                    <img src="{{destinyDeck.img}}" />
+                    <img src="{{deck.backImg}}" />
 
                 </div>
             </li>
            
         </ol>
     </div>
-    <div class="cardArea">
-
-        <h3 class="cardTitle">action deck</h3>
-        <ol class="reservedCards cardHand">
-
-            {{#each destinyCard as |item id|}}
-            {{#if item.data.reserved}}
-            <li class="card " data-item-id="{{item._id}}">
-
-                <div class="item-controls">
-                    <a class="item-control card-play" title="play card"><i class="fa fa-share"></i></a>
-                    <a class="item-control card-exchange" title="exchange card"><i class="fa fa-retweet"></i></a>
-                    <a class="item-control card-reserve" title="unreserve card"><i class="fa fa-star"
-                            style="color:rgb(136, 91, 91)"></i></a>
-                </div>
-                <div>
-                    <img src="{{item.img}}" title="{{item.name}}" />
-
-                </div>
-
-            </li>
-            {{/if}}
-            {{/each}}
-        </ol>
-    </div>
-    <div class="cardArea">
-
-        <h3 class="cardTitle">cosm deck </h3>
-        <ol class="cosmCards cardHand">
-
-
-            {{#each cosmCard as |item id|}}
-            <li class="card " data-item-id="{{item._id}}">
-                <div class="item-controls">
-                    <a class="item-control card-play" title="play card"><i class="fa fa-share"></i></a>
-                    <a class="item-control card-expand" title="expand card"><i class="fa fa-expand"></i></a>
-
-                </div>
-                <div>
-                    <img src="{{item.img}}" title="{{item.name}}" />
-
-                </div>
-
-            </li>
-            {{/each}}
-        </ol>
-    </div>
+ 
+        
+    {{/each}}
+   
     
 </div>

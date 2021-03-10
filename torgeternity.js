@@ -68,30 +68,31 @@ Hooks.once("init", async function () {
 });
 
 //-------------once everything ready
-Hooks.once("ready", function () {
-  //-----applying players card ui:
-  if (game.user.data.role == false || game.user.data.role != 4) {
-    let user=game.users.get(game.user._id)
-    if (user.getFlag("torgeternity","handedCards")){console.log(`User already has cards= `,user.getFlag("torgeternity","handedCards"))}
-    else{user.setFlag("torgeternity","handedCards",HandedCards);console.log("no cards found , pre-building card hand")}
-    ui.HandedCards = new HandedCardsApp();
-    ui.HandedCards.render(true);
-  }
-  //-----applying GM card ui:
-  if (game.user.data.role == 4 || game.user.data.role == 3) {
-    //init cards GM Decks
-    let user=game.users.get(game.user._id)
-    if (user.getFlag("torgeternity","GMDeck")){console.log(`GM decks already found= `,user.getFlag("torgeternity","GMDeck"))}
-    else{user.setFlag("torgeternity","GMDeck",GMDecks);console.log("no GM deck found , it just have been built")}
-    ui.GMDecks = new GMDecksApp();
-    ui.GMDecks.render(true);
-  }
-
+Hooks.on("ready", function () {
   sheetResize();
   toggleViewMode();
   var logo = document.getElementById("logo");
   logo.style.position = "absolute";
   logo.setAttribute("src", "/systems/torgeternity/images/vttLogo.webp");
+
+
+  //-----applying players card ui:
+  if (game.user.data.role == false || game.user.data.role != 4) {
+    let user=game.users.get(game.user._id)
+    
+    ui.HandedCards = new HandedCardsApp();
+    ui.HandedCards.render(true);
+  };
+  //-----applying GM card ui:
+  if (game.user.data.role == 4 || game.user.data.role == 3) {
+    //init cards GM Decks
+    let user=game.users.get(game.user._id)
+   
+    ui.GMDecks = new GMDecksApp();
+    ui.GMDecks.render(true);
+  };
+
+ 
 });
 //----all this could be draft in another imported module ?? maybe like ./modules/handlebarsHelpers.js
 
