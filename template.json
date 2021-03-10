@@ -405,10 +405,8 @@
             "specialability-rollable",
             "spell",
             "miracle",
-            "psionicpower",
-            "cosmCard",
-            "destinyCard",
-            "dramaCard"
+            "psionicpower"
+            
         ],
         "templates": {
             "general": {
@@ -431,29 +429,10 @@
                 "outstanding": "",
                 "isAttack": "",
                 "damage": ""
-            },
-            "card": {
-                "backImage": "",
-                "label":""
-
             }
+            
         },
-        "cosmCard": {
-            "templates": [
-                "card"
-            ]
-        },
-        "destinyCard": {
-            "templates": [
-                "card"
-            ],
-            "reserved":false
-        },
-        "dramaCard": {
-            "templates": [
-                "card"
-            ]
-        },
+        
         "gear": {
             "templates": [
                 "general"

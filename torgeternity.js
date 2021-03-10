@@ -8,11 +8,6 @@ import { sheetResize } from "./module/sheetResize.js";
 import { preloadTemplates } from "./module/preloadTemplates.js";
 import { toggleViewMode } from "./module/viewMode.js";
 
-import HandedCardsApp from "./module/cards/HandedCardsApp.js";
-import {HandedCards} from "./module/cards/HandedCards.js";
-
-import GMDecksApp from "./module/cards/GMDecksApp.js";
-import { GMDecks } from "./module/cards/GMDecks.js";
 
 import torgeternityCombat from "./module/dramaticScene/torgeternityCombat.js";
 import torgeternityCombatTracker from "./module/dramaticScene/torgeternityCombatTracker.js";
@@ -49,7 +44,7 @@ Hooks.once("init", async function () {
 
   //----------debug hooks
   CONFIG.debug.hooks = true;
-
+/*
   //----socket receiver
   game.socket.on("system.torgeternity", (data) => {
     if (data.msg == "cardPlayed") {
@@ -65,6 +60,8 @@ Hooks.once("init", async function () {
       Cards.cardExchangeValide(data);
     }
   });
+*/
+
 });
 
 //-------------once everything ready
@@ -74,7 +71,7 @@ Hooks.on("ready", function () {
   var logo = document.getElementById("logo");
   logo.style.position = "absolute";
   logo.setAttribute("src", "/systems/torgeternity/images/vttLogo.webp");
-
+/*
 
   //-----applying players card ui:
   if (game.user.data.role == false || game.user.data.role != 4) {
@@ -92,7 +89,7 @@ Hooks.on("ready", function () {
     ui.GMDecks.render(true);
   };
 
- 
+*/
 });
 //----all this could be draft in another imported module ?? maybe like ./modules/handlebarsHelpers.js
 
