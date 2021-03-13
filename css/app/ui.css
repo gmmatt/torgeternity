@@ -189,6 +189,7 @@ a:hover {
   background-size: 80% 100%;
   padding-left: 80px;
   width: 380px;
+  height: 100%;
   background-position-x: 80px;
   background-repeat: no-repeat;
   border: none;
@@ -454,5 +455,53 @@ div#sidebar.collapsed {
 #sidebar,
 #hotbar,
 #players {
+  position: absolute;
   transition: all 500ms cubic-bezier(0.42, 0, 0.58, 1) 10ms;
+}
+
+#combat .combatant-init {
+  color: white;
+}
+
+#combat ol li.combatant {
+  border-left: 5px solid black;
+}
+
+#combat ol li.combatant.dispo1 {
+  background-color: rgba(15, 47, 189, 0.212);
+}
+
+#combat ol li.combatant.dispo-1 {
+  background-color: rgba(143, 1, 1, 0.28);
+}
+
+#combat ol li.combatant.dispo0 {
+  background-color: rgba(141, 143, 1, 0.28);
+}
+
+#combat ol li.combatant.active {
+  border-left: 5px solid white;
+  box-shadow: 0px -10px 40px rgba(255, 255, 255, 0.5) inset;
+}
+
+#combat ol a.has-played {
+  color: rgba(128, 128, 128, 0.739);
+  text-shadow: 0px 0px 6px black;
+  max-width: 5%;
+}
+
+#combat ol a.has-played.playedOK {
+  color: #a0bd8e;
+  text-shadow: 0px 0px 6px white;
+}
+
+#combat ol a.init-up,
+#combat ol a.init-down {
+  max-width: 5%;
+}
+
+#combat ol a.init-up:hover,
+#combat ol a.init-down:hover {
+  text-shadow: 0px 0px 5px #c8cf00;
+  color: #f8f83c;
 }

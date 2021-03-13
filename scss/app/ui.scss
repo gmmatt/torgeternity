@@ -173,6 +173,7 @@ a:hover {
   background-size: 80% 100%;
   padding-left: 80px;
   width: 380px;
+  height: 100%;
   background-position-x: 80px;
   background-repeat: no-repeat;
   border: none;
@@ -433,12 +434,11 @@ div#sidebar.collapsed {
   height: 35px;
   content: "";
 }
-#player-config{
-  label{
-    color : lightblue;
+#player-config {
+  label {
+    color: lightblue;
     font-weight: normal;
-    font-size:12px
-
+    font-size: 12px;
   }
 }
 
@@ -450,8 +450,56 @@ div#sidebar.collapsed {
 #sidebar,
 #hotbar,
 #players {
+  position: absolute;
   -webkit-transition: all 500ms cubic-bezier(0.42, 0, 0.58, 1) 10ms;
   -moz-transition: all 500ms cubic-bezier(0.42, 0, 0.58, 1) 10ms;
   -o-transition: all 500ms cubic-bezier(0.42, 0, 0.58, 1) 10ms;
   transition: all 500ms cubic-bezier(0.42, 0, 0.58, 1) 10ms;
+}
+
+//----------
+//---COMBAT
+//----------
+
+#combat {
+  .combatant-init {
+    color: white;
+  }
+
+  ol {
+    li.combatant {
+      border-left: 5px solid black;
+    }
+    li.combatant.dispo1 {
+      background-color: rgba(15, 47, 189, 0.212);
+    }
+    li.combatant.dispo-1 {
+      background-color: rgba(143, 1, 1, 0.28);
+    }
+    li.combatant.dispo0 {
+      background-color: rgba(141, 143, 1, 0.28);
+    }
+    li.combatant.active {
+      border-left: 5px solid rgb(255, 255, 255);
+      box-shadow: 0px -10px 40px rgba(255, 255, 255, 0.5) inset;
+    }
+    a.has-played {
+      color: rgba(128, 128, 128, 0.739);
+      text-shadow: 0px 0px 6px black;
+      max-width: 5%;
+    }
+    a.has-played.playedOK {
+      color: rgb(160, 189, 142);
+      text-shadow: 0px 0px 6px rgb(255, 255, 255);
+    }
+    a.init-up,
+    a.init-down {
+      max-width: 5%;
+    }
+    a.init-up:hover,
+    a.init-down:hover {
+      text-shadow: 0px 0px 5px #c8cf00;
+      color: rgb(248, 248, 60);
+    }
+  }
 }
