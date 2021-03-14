@@ -649,7 +649,7 @@ div#sidebar.collapsed {
   min-width: 200px;
   min-height: 20px;
   box-shadow: none;
-  padding: 0.5% 0% 5% 0%;
+  padding: 0% 0% 0% 0%;
   color: black;
 }
 
@@ -680,7 +680,7 @@ div#sidebar.collapsed {
 }
 
 #players ol li.player {
-  line-height: 60px;
+  line-height: 25px;
   padding: 1px 8px;
   justify-content: flex-end;
   display: flex;
@@ -691,7 +691,7 @@ div#sidebar.collapsed {
   height: 15px;
   border: 1px solid #000;
   border-radius: 50%;
-  margin: 18px 8px 0 0;
+  margin: 5px 5px 0 0;
   background-size: cover;
 }
 
