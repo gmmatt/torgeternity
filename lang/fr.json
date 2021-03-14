@@ -327,6 +327,28 @@
         "yesNo": {
             "true": "Oui",
             "false": "Non"
+        },
+        "chatText": {
+            "possibility": "Possibilité",
+            "hero": "Héros",
+            "heroCard": "Carte Héros",
+            "drama": "Action",
+            "dramaCard": "Carte Action",
+            "bonusCard": "Carte +3",
+            "bonusDamage": "Dommages bonus",
+            "up": "Un de plus!",
+            "bonusDice": "DB",
+            "actionTotal": "Total d'action",
+            "skillTestLabel": "Valeur de compétence",
+            "attributeTestLabel": "Valeur d'attribut",
+            "dieTotal": "Total du dé",
+            "unskilled": "Incompétence",
+            "possibleDisconnect": "Déconnexion possible",
+            "damage": "Dommages",
+            "bonus": "Bonus",
+            "modifiers": "Modifiers",
+            "attack": "Attaque",
+            "baseDamage": "Dommages de base"
         }
     }
 }
