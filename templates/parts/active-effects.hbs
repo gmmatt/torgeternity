@@ -2,8 +2,8 @@
 {{#each effects as |section sid|}}
     <li class="effects-heading flexrow" data-effect-type="{{section.type}}">
         <div class="effect-section-title flexrow">{{localize section.label}}</div>
-        <div class="effect-source">Source</div>
-        <div class="effect-duration">Duration</div>
+        <div class="effect-source">{{localize "torgeternity.sheetLabels.source"}}</div>
+        <div class="effect-duration">{{localize "torgeternity.powers.duration"}}</div>
         <div class="effect-controls flexrow">
             <a class="effect-control" data-action="create" title="{{localize 'torgeternity.sheetLabels.effectCreate'}}">
                 <i class="fas fa-plus"></i> {{localize "torgeternity.sheetLabels.add"}}

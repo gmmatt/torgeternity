@@ -94,6 +94,7 @@
         "gear":{
             "description":"Description",
             "techlevel": "Axiome Tech",
+            "tl": "Tech",
             "price": "Prix",
             "value": "Valeur",
             "damageType": "Type de dommage",
@@ -112,7 +113,9 @@
             "wounds": "Bles",
             "toughness": "Résist",
             "possibilities": "Possibilités",
+            "poss": "Poss",
             "tappingDifficulty": "Difficulté d'activation",
+            "tappingDifficultyAbbr": "Diff",
             "purpose": "Vocation",
             "powers": "Pouvoirs",
             "restrictions": "Restrictions"
@@ -120,7 +123,8 @@
         "stats":{
             "wounds": "Blessures",
             "shock": "Chocs",
-            "possibilities": "Possibilités"
+            "possibilities": "Possibilités",
+            "description": "Description"
         },
         "perks":{
             "category": "Categorie",
@@ -131,7 +135,8 @@
         },
         "enhancements":{
             "perk": "Atout associé",
-            "description": "Description"
+            "description": "Description",
+            "enhances": "Améliore"
         },
         "powers": {
             "axiom": "Axiome",
@@ -180,21 +185,27 @@
             "spellcraft": "Arts magiques"
         },
         "sheetLabels": {
-            "stats": "Stats",
+            "stormknight":"Chevalier des tempêtes",
+            "stats": "Caracs",
             "perks": "Atouts",
-            "gear": "Equipement",
+            "perksAbilities": "Atouts/Capacités",
+            "gear": "Équipement",
             "powers": "Pouvoirs",
             "effects": "Effets",
             "background": "Historique",
+            "backgroundDescription": "Description",
+            "backgroundAndNotes": "Historique et notes",
             "enhancements": "Améliorations",
             "generalGear": "Equipement général",
             "armor": "Armure",
+            "shield": "Bouclier",
             "shields": "Boucliers",
             "meleeWeapons": "Armes de mêlée",
             "missileWeapons": "Armes de jet",
             "firearms": "Armes à feu",
             "implants": "Implants",
             "heavyWeapons": "Armes lourdes",
+            "explosives": "explosifs",
             "vehicles": "Véhicules",
             "spells": "Sortilèges",
             "miracles": "Miracles",
@@ -205,7 +216,7 @@
             "possibilitypotential": "Possibilités (Potentielle)",
             "possibilities": "Possibilités",
             "up": "Un de plus",
-            "equipment": "Equipement",
+            "equipment": "Équipement",
             "specialabilities": "Capacités spéciales",
             "wounds": "Blessures",
             "shock": "Chocs",
@@ -213,6 +224,7 @@
             "move": "Déplacement",
             "run": "Course",
             "toughness": "Résistance",
+            "tough": "Rés",
             "magic": "Magie",
             "social": "Social",
             "spirit": "Spirituel",
@@ -220,19 +232,22 @@
             "attribute": "Attribut",
             "adds": "Adds",
             "total": "Total",
-            "defenses": "Defenses",
+            "defenses": "Défenses",
+            "activeDefense": "Défense active",
             "melee": "Mêlée",
             "unarmed": "Mains nues",
-            "xp": "XP",
+            "xp": "PX",
             "unspent": "Disponibles",
             "earned": "Total",
             "clearance": "Habilitation",
             "race": "Race",
             "weapons": "Armes",
+            "attacks": "Attaques",
             "armorAndShields": "Armures et boucliers",
             "other": "Autres",
             "spell": "Sortilège",
             "miracle": "Miracle",
+            "psionic": "Psionique",
             "psionicPower": "Psionique",
             "abilities": "Capacités",
             "implant": "Implant",
@@ -240,10 +255,15 @@
             "vehicle": "Véhicule",
             "enhancement": "Amélioration",
             "details": "Details",
-            "goodResult": "Succès supérieur",
-            "outstandingResult": "Succès spécatulaire",
-            "effectCreate": "Créer Effet",
-            "add": "Add"
+            "goodResult": "Good Result",
+            "outstandingResult": "Outstanding Result",
+            "effectCreate": "Create Effect",
+            "add": "Add",
+            "derivedValues": "Valeurs dérivées",
+            "tempEffects": "Effets temporaires",
+            "passiveEffects": "Effets passifs",
+            "inactiveEffects": "Effects inactifs",
+            "source": "Source"
 
         },
         "itemSheetDescriptions": {
@@ -258,6 +278,7 @@
             "firearm": "Armes à feu",
             "implant": "Implant",
             "heavyWeapon": "Armes lourdes",
+            "explosive": "Explosif",
             "vehicle": "Véhicule",
             "spell": "Sortilège",
             "miracle": "Miracle",
@@ -300,7 +321,8 @@
             "edeinos": "Edeinos",
             "elf": "Elfe",
             "aspirants": "Aspirants",
-            "theRace": "La Race"
+            "theRace": "The Race",
+            "other": "Autre"
         },
         "stymiedStates": {
             "none": "non Déstabilisé",

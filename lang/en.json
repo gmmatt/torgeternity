@@ -94,6 +94,7 @@
         "gear":{
             "description":"Description",
             "techlevel": "Tech Level",
+            "tl": "TL",
             "price": "Price",
             "value": "Value",
             "damageType": "Damage Type",
@@ -112,7 +113,9 @@
             "wounds": "Wnds",
             "toughness": "Tough",
             "possibilities": "Possibilities",
+            "poss": "Poss",
             "tappingDifficulty": "Tapping Difficulty",
+            "tappingDifficultyAbbr": "Tap",
             "purpose": "Purpose",
             "powers": "Powers",
             "restrictions": "Restrictions",
@@ -121,7 +124,8 @@
         "stats":{
             "wounds": "Wounds",
             "shock": "Shock",
-            "possibilities": "Possibilities"
+            "possibilities": "Possibilities",
+            "description": "Description"
         },
         "perks":{
             "category": "Category",
@@ -132,7 +136,8 @@
         },
         "enhancements":{
             "perk": "Related Perk",
-            "description": "Description"
+            "description": "Description",
+            "enhances": "Enhances"
         },
         "powers": {
             "axiom": "Axiom",
@@ -191,15 +196,18 @@
             "effects": "Effects",
             "background": "Background",
             "backgroundDescription": "Background",
+            "backgroundAndNotes": "Background and Notes",
             "enhancements": "Enhancements",
             "generalGear": "General Gear",
             "armor": "Armor",
+            "shield": "Shield",
             "shields": "Shields",
             "meleeWeapons": "Melee Weapons",
             "missileWeapons": "Missile Weapons",
             "firearms": "Firearms",
             "implants": "Implants",
             "heavyWeapons": "Heavy Weapons",
+            "explosives": "explosives",
             "vehicles": "Vehicles",
             "spells": "Spells",
             "miracles": "Miracles",
@@ -218,6 +226,7 @@
             "move": "Move",
             "run": "Run",
             "toughness": "Toughness",
+            "tough": "Tough",
             "magic": "Magic",
             "social": "Social",
             "spirit": "Spirit",
@@ -226,6 +235,7 @@
             "adds": "Adds",
             "total": "Total",
             "defenses": "Defenses",
+            "activeDefense": "Active Defense",
             "melee": "Melee",
             "unarmed": "Unarmed",
             "xp": "XP",
@@ -239,6 +249,7 @@
             "other": "Other",
             "spell": "Spell",
             "miracle": "Miracle",
+            "psionic": "Psionic",
             "psionicPower": "Psionic Power",
             "abilities": "Abilities",
             "implant": "Implant",
@@ -250,7 +261,11 @@
             "outstandingResult": "Outstanding Result",
             "effectCreate": "Create Effect",
             "add": "Add",
-            "derivedValues": "Derived Values"
+            "derivedValues": "Derived Values",
+            "tempEffects": "Temporary Effects",
+            "passiveEffects": "Passive Effects",
+            "inactiveEffects": "Inactive Effects",
+            "source": "Source"
 
         },
         "itemSheetDescriptions": {
@@ -265,6 +280,7 @@
             "firearm": "Firearm",
             "implant": "Implant",
             "heavyWeapon": "Heavy Weapon",
+            "explosive": "Explosive",
             "vehicle": "Vehicle",
             "spell": "Spell",
             "miracle": "Miracle",
