@@ -1,160 +1,160 @@
 .window-app .window-content {
-    div.form-group {
-        input {
-            color: white
-        }
-    }
+  div.form-group {
+      input {
+          color: white
+      }
+  }
 
-    input[type="text"],
-    input[type="number"],
-    input[type="password"],
-    input[type="date"],
-    input[type="time"] .editor {
-        background-color: rgba(255, 255, 255, 0.39);
-    }
+  input[type="text"],
+  input[type="number"],
+  input[type="password"],
+  input[type="date"],
+  input[type="time"] .editor {
+      background-color: rgba(255, 255, 255, 0.39);
+  }
 
-    ;
+  ;
 
-    input::placeholder {
-        background-color: rgba(0, 0, 0, 0);
-    }
+  input::placeholder {
+      background-color: rgba(0, 0, 0, 0);
+  }
 
 
-    font-family: Berlin;
+  font-family: OptiLight;
 
-    background-image: url(../images/thunder.png);
-    background-size: cover;
-    color: rgb(255, 255, 255);
+  background-image: url(../images/thunder.webp);
+  background-size: cover;
+  color: rgb(255, 255, 255);
 
-    .rollable {
+  .rollable {
 
-        &:hover,
-        &:focus {
-            color: #000;
-            text-shadow: 0 0 10px white;
-            cursor: pointer;
-        }
-    }
+      &:hover,
+      &:focus {
+          color: #000;
+          text-shadow: 0 0 10px white;
+          cursor: pointer;
+      }
+  }
 
-    form {
+  form {
 
-        .notes,
-        .hint {
-            color: rgb(177, 175, 175);
-        }
+      .notes,
+      .hint {
+          color: rgb(177, 175, 175);
+      }
 
-        button,
-        select {
-            color: grey;
+      button,
+      select {
+          color: grey;
 
-            option {
-                color: white
-            }
-        }
+          option {
+              color: white
+          }
+      }
 
-        button:hover {
-            box-shadow: 0px 0px 5px rgb(73, 112, 250);
-        }
+      button:hover {
+          box-shadow: 0px 0px 5px rgb(73, 112, 250);
+      }
 
-    }
+  }
 }
 
 .journal-sheet .window-content {
-    font-family: Palatino;
-    background-image: url(../images/box-bckg.png);
-    background-size: cover;
-    color: black;
+  font-family: Palatino;
+  background-image: url(../images/box-bckg.webp);
+  background-size: cover;
+  color: black;
 
-    input[type="text"],
-    select {
-        margin-top: 4%;
-        margin-left: 5%;
-        width: 90%;
-        text-align: center;
-        border: none;
-        text-transform: uppercase;
-        font-family: Alaska;
-        font-weight: bold;
-        color: #000
-    }
+  input[type="text"],
+  select {
+      margin-top: 4%;
+      margin-left: 5%;
+      width: 90%;
+      text-align: center;
+      border: none;
+      text-transform: uppercase;
+      font-family: Alaska;
+      font-weight: bold;
+      color: #000
+  }
 
-    ;
+  ;
 
-    input[type="text"]:hover,
-    select:hover,
-    input[type="text"]:focus,
-    select:focus,
-    input[type="text"]:active,
-    select:active,
-    .editor:hover,
-    .editor:focus,
-    .editor:active {
-        box-shadow: 0 0 15px rgb(5, 48, 117);
-    }
+  input[type="text"]:hover,
+  select:hover,
+  input[type="text"]:focus,
+  select:focus,
+  input[type="text"]:active,
+  select:active,
+  .editor:hover,
+  .editor:focus,
+  .editor:active {
+      box-shadow: 0 0 15px rgb(5, 48, 117);
+  }
 
-    .editor {
-        margin-top: 2%;
-        margin-left: 5%;
-        width: 90%;
-        padding: 2%
-    }
+  .editor {
+      margin-top: 2%;
+      margin-left: 5%;
+      width: 90%;
+      padding: 2%
+  }
 
-    .editor .editor-content {
-        h1 {
-            font-family:Alaska;
-            text-transform:uppercase;
-            text-align:center;
-            color:white;
-            background-color:#0a0b3b;
-            border-bottom:none;
-        }
+  .editor .editor-content {
+      h1 {
+          font-family:Alaska;
+          text-transform:uppercase;
+          text-align:center;
+          color:white;
+          background-color:#0a0b3b;
+          border-bottom:none;
+      }
 
-        h2 {
-            font-family:Alaska;
-            border-bottom:none;
-        }
+      h2 {
+          font-family:Alaska;
+          border-bottom:none;
+      }
 
-        h3 {
-            font-family:Alaska;
-            font-weight:bold;
-        }
-    }
+      h3 {
+          font-family:Alaska;
+          font-weight:bold;
+      }
+  }
 }
 
 .window-app.image-popout{
-    .form-group.title { 
-        margin-top: 1%;
-        input {
-    height: 32px;
-    text-align: center;
-    margin-top:0%
-   
+  .form-group.title { 
+      margin-top: 1%;
+      input {
+  height: 32px;
+  text-align: center;
+  margin-top:0%
+ 
 }}
 } 
 
 textarea {
-    background-color: rgba(90, 157, 163, 0.493);
+  background-color: rgba(90, 157, 163, 0.493);
 }
 
 textarea:focus,
 textarea:hover {
-    background-color: rgba(90, 157, 163, 0.65);
-    outline: 1px solid #222378;
-    box-shadow: 0 0 10px #008cff7a;
+  background-color: rgba(90, 157, 163, 0.65);
+  outline: 1px solid #222378;
+  box-shadow: 0 0 10px #008cff7a;
 }
 
 
 #module-management {
-    color: white;
+  color: white;
 
-    input {
-        color: lightgray
-    }
+  input {
+      color: lightgray
+  }
 
-    .package-list {
-        .package-title {
-            color: rgb(198, 226, 250);
+  .package-list {
+      .package-title {
+          color: rgb(198, 226, 250);
 
-        }
-    }
+      }
+  }
 }

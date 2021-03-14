@@ -8,6 +8,14 @@
 For manual installation, use the provided manifest URL in the "*Install System*" popup window 
 while managing game systems.
 
+v. 0.92.2
+- Combat tracker update - multiple customizations to combat tracker. You can now sort
+combatants by heroes/villains. Conditions for each combatant now shown. Combatant can
+be checked off once they have finished their turn.
+- Changed some fonts in UI; updated UI appearance
+- Fixed an issue where some sheets creted under very early versions of the TE system were
+not correctly displaying attributes on SK sheets.
+
 v. 0.92.1
 
 Various bug fixes and some additional UI enhancements. Added data structure to some

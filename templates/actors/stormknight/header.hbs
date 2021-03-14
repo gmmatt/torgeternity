@@ -1,9 +1,12 @@
 <div>
     <h1> <input name="name" type="text" value="{{actor.name}}" placeholder="Name" /></h1>
-    <p class="item-data-label">
-        {{localize "torgeternity.sheetLabels.race"}}
+    
+    <p><img src="systems/torgeternity/images/te-logo.webp" title="TE Logo" /></p>
+</div>
+<div>
+    <p>
 
-
+        <span>{{localize "torgeternity.sheetLabels.race"}}</span>
         <select name="data.details.race" class="input-box">
             {{#select data.details.race}}
             {{#each config.races as |name type|}}
@@ -11,11 +14,7 @@
             {{/each}}
             {{/select}}
         </select>
-    </p>
-    <p><img src="systems/torgeternity/images/te-logo.png" title="TE Logo" /></p>
-</div>
-<div>
-    <p>
+
         <span>{{localize "torgeternity.gear.cosm"}}</span>
         <select name="data.other.cosm" class="input-box">
             {{#select data.other.cosm}}
@@ -24,6 +23,7 @@
             {{/each}}
             {{/select}}
         </select>
+
     </p>
     <p >
         <span class="main-label">{{localize "torgeternity.sheetLabels.magic"}}</span>

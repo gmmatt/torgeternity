@@ -28,7 +28,7 @@
 
     margin: 5px;
     color:black;
-    background: none;
+    background: url("../images/bgparch.webp");
     background-color: rgba(255, 255, 255, 0.575);
 
     .skill-chat-title {
@@ -61,6 +61,7 @@
       .skill-roll-result {
         text-align: center;
         font-size:24px;
+        font-family:"Palatino Linotype";
         font-weight: bold;
         padding: 3px 0px 0px 0px; 
         margin:0px
@@ -68,6 +69,7 @@
       
       .skill-roll-action-label {
         text-align:center;
+        font-family:"Palatino Linotype";
         font-size:12px;
         padding:0px;
         margin:0px
@@ -75,11 +77,13 @@
       
       .skill-roll-table {
         padding-bottom:5px;
+        font-family:"Palatino Linotype";
         margin-bottom:5px
       }
       
       .skill-roll-table-1 {
         width:40%;
+        font-family:"Palatino Linotype";
         border:1px solid black
       }
       
@@ -87,10 +91,12 @@
         width:60%;
         background:#e8b017;
         padding-left:5px;
+        font-family:"Palatino Linotype";
         border:1px solid black
       }
       
       .skill-roll-menu {
+        font-family:"Palatino Linotype";
         font-size:11px;
         text-align:center
       }

@@ -1,6 +1,43 @@
 export const torgeternity = {};
-torgeternity.viewMode={
-    UI:true
+torgeternity.gameCards = {
+    cardType: {
+        actionCards: {},
+        destinyCards: {},
+        cosmCards: {}
+    },
+    GMDecks :{
+ 
+        destiny : {
+          compendiums:[],
+          label: "destiny deck",
+          remainingCards: [],
+          playedCards: [],
+          backImg:""
+        },
+        action : {
+          compendiums:[],
+          label: "action deck",
+          remainingCards: [],
+          playedCards: [],
+          activeCard: {},
+          backImg:""
+    
+        },
+        cosm : {
+          compendiums:[],
+          label: "cosm deck",
+          cosmFilter: "",
+          remainingCards: [],
+          playedCards: [],
+          activeCard: {},
+          backImg:""
+    
+        }
+    }
+    
+}
+torgeternity.viewMode = {
+    UI: true
 }
 torgeternity.attributeTypes = {
     charisma: "torgeternity.attributes.charisma",
@@ -40,7 +77,7 @@ torgeternity.perkTypes = {
     psionics: "torgeternity.perkTypes.psionics",
     pulpPowers: "torgeternity.perkTypes.pulpPowers",
     reality: "torgeternity.perkTypes.reality",
-    savagery:"torgeternity.perkTypes.savagery",
+    savagery: "torgeternity.perkTypes.savagery",
     social: "torgeternity.perkTypes.social",
     spellcraft: "torgeternity.perkTypes.spellcraft",
     racial: "torgeternity.perkTypes.racial"
@@ -57,7 +94,7 @@ torgeternity.attackTypes = {
 
 torgeternity.damageTypes = {
     strengthPlus: "torgeternity.damageTypes.strengthPlus",
-    flat: "torgeternity.damageTypes.flat" 
+    flat: "torgeternity.damageTypes.flat"
 }
 
 torgeternity.powerSkills = {
@@ -68,7 +105,7 @@ torgeternity.powerSkills = {
     kinesis: "torgeternity.powerSkills.kinesis",
     precognition: "torgeternity.powerSkills.precognition",
     telepathy: "torgeternity.powerSkills.telepathy",
-    faith: "torgeternity.powerSkills.faith"    
+    faith: "torgeternity.powerSkills.faith"
 }
 
 torgeternity.clearances = {
@@ -152,57 +189,57 @@ torgeternity.yesNo = {
 
 torgeternity.statusEffects = [
     {
-        icon: 'systems/torgeternity/images/status-markers/stymied.jpg',
+        icon: 'systems/torgeternity/images/status-markers/stymied.webp',
         id: 'stymied',
         label: 'torgeternity.statusEffects.stymied',
         name: 'stymied'
     },
 
     {
-        icon: 'systems/torgeternity/images/status-markers/very-stymied.jpg',
+        icon: 'systems/torgeternity/images/status-markers/very-stymied.webp',
         id: 'veryStymied',
         label: 'torgeternity.statusEffects.veryStymied',
         name: 'veryStymied'
     },
 
     {
-        icon: 'systems/torgeternity/images/status-markers/vulnerable.jpg',
+        icon: 'systems/torgeternity/images/status-markers/vulnerable.webp',
         id: 'vulnerable',
         label: 'torgeternity.statusEffects.vulnerable'
     },
 
     {
-        icon: 'systems/torgeternity/images/status-markers/very-vulnerable.jpg',
+        icon: 'systems/torgeternity/images/status-markers/very-vulnerable.webp',
         id: 'veryVulnerable',
         label: 'torgeternity.statusEffects.veryVulnerable'
     },
 
     {
-        icon: 'systems/torgeternity/images/status-markers/disconnected.jpg',
+        icon: 'systems/torgeternity/images/status-markers/disconnected.webp',
         id: 'disconnected',
         label: 'torgeternity.statusEffects.disconnected'
     },
 
     {
-        icon: 'systems/torgeternity/images/status-markers/aiming.jpg',
+        icon: 'systems/torgeternity/images/status-markers/aiming.webp',
         id: 'aiming',
         label: 'torgeternity.statusEffects.aiming'
     },
 
     {
-        icon: 'systems/torgeternity/images/status-markers/malfunction.jpg',
+        icon: 'systems/torgeternity/images/status-markers/malfunction.webp',
         id: 'malfunction',
         label: 'torgeternity.statusEffects.malfunction'
     },
 
     {
-        icon: 'systems/torgeternity/images/status-markers/concentrating.jpg',
+        icon: 'systems/torgeternity/images/status-markers/concentrating.webp',
         id: 'concentrating',
         label: 'torgeternity.statusEffects.concentrating'
     },
 
     {
-        icon: 'systems/torgeternity/images/status-markers/restrained.jpg',
+        icon: 'systems/torgeternity/images/status-markers/restrained.webp',
         id: 'restrained',
         label: 'torgeternity.statusEffects.restrained'
     }

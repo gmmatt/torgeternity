@@ -4,7 +4,7 @@
   "description": "Unofficial Torg Eternity character sheet for Foundry VTT.",
   "author": "Matt Ritchie",
 
-  "version": "0.92.1",
+  "version": "0.92.2",
 
   "minimumCoreVersion": "0.7.8",
   "compatibleCoreVersion": "0.7.9", 
@@ -15,7 +15,7 @@
   "styles": [
     "./css/torgeternity.css"
   ],
-  "background":"images/splash.png",
+  "background":"images/splash.webp",
   "packs": [
   ],
   "languages": [
@@ -35,8 +35,9 @@
       "path": "lang/es.json"    
     }
   ],
-  "gridDistance": 5,
-  "gridUnits": "ft",
+  "socket":true,
+  "gridDistance": 1,
+  "gridUnits": "m",
   "primaryTokenAttribute": "wounds",
   "secondaryTokenAttribute": "shock",
   "url": "https://github.com/gmmatt/torgeternity",
