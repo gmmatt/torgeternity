@@ -458,6 +458,7 @@ a:hover {
   background-size: 80% 100%;
   padding-left: 80px;
   width: 380px;
+  height: 100%;
   background-position-x: 80px;
   background-repeat: no-repeat;
   border: none;
@@ -648,7 +649,7 @@ div#sidebar.collapsed {
   min-width: 200px;
   min-height: 20px;
   box-shadow: none;
-  padding: 0.5% 0% 5% 0%;
+  padding: 0% 0% 0% 0%;
   color: black;
 }
 
@@ -679,7 +680,7 @@ div#sidebar.collapsed {
 }
 
 #players ol li.player {
-  line-height: 60px;
+  line-height: 25px;
   padding: 1px 8px;
   justify-content: flex-end;
   display: flex;
@@ -690,7 +691,7 @@ div#sidebar.collapsed {
   height: 15px;
   border: 1px solid #000;
   border-radius: 50%;
-  margin: 18px 8px 0 0;
+  margin: 5px 5px 0 0;
   background-size: cover;
 }
 
@@ -723,7 +724,55 @@ div#sidebar.collapsed {
 #sidebar,
 #hotbar,
 #players {
+  position: absolute;
   transition: all 500ms cubic-bezier(0.42, 0, 0.58, 1) 10ms;
+}
+
+#combat .combatant-init {
+  color: white;
+}
+
+#combat ol li.combatant {
+  border-left: 5px solid black;
+}
+
+#combat ol li.combatant.dispo1 {
+  background-color: rgba(15, 47, 189, 0.212);
+}
+
+#combat ol li.combatant.dispo-1 {
+  background-color: rgba(143, 1, 1, 0.28);
+}
+
+#combat ol li.combatant.dispo0 {
+  background-color: rgba(141, 143, 1, 0.28);
+}
+
+#combat ol li.combatant.active {
+  border-left: 5px solid white;
+  box-shadow: 0px -10px 40px rgba(255, 255, 255, 0.5) inset;
+}
+
+#combat ol a.has-played {
+  color: rgba(128, 128, 128, 0.739);
+  text-shadow: 0px 0px 6px black;
+  max-width: 5%;
+}
+
+#combat ol a.has-played.playedOK {
+  color: #a0bd8e;
+  text-shadow: 0px 0px 6px white;
+}
+
+#combat ol a.init-up,
+#combat ol a.init-down {
+  max-width: 5%;
+}
+
+#combat ol a.init-up:hover,
+#combat ol a.init-down:hover {
+  text-shadow: 0px 0px 5px #c8cf00;
+  color: #f8f83c;
 }
 
 @-webkit-keyframes flip {
@@ -832,6 +881,135 @@ div#sidebar.collapsed {
   font-size: 18px;
   font-weight: bold;
   text-align: center;
+}
+
+@-webkit-keyframes focusedCard {
+  from {
+    position: absolute;
+    transform-origin: 50% 150% 0;
+  }
+  to {
+    transform: scale(2);
+    top: -300px;
+    width: 200px;
+    height: 250px;
+    transform-origin: 50% 50% 0;
+    left: -50px;
+    transform: rotateZ(0deg);
+  }
+}
+
+@keyframes focusedCard {
+  from {
+    position: absolute;
+    transform-origin: 50% 150% 0;
+  }
+  to {
+    transform: scale(2);
+    top: -300px;
+    width: 200px;
+    height: 250px;
+    transform-origin: 50% 50% 0;
+    left: -50px;
+    transform: rotateZ(0deg);
+  }
+}
+
+#handedCards {
+  display: flex;
+  flex-direction: row;
+  position: fixed;
+  font-family: Alaska;
+  text-transform: capitalize;
+  min-width: 400px;
+  border-radius: 5% 5% 0% 0%;
+  right: 0%;
+  height: 300px;
+  bottom: -270px;
+  transition: all 0.3s cubic-bezier(0.6, -0.07, 0.56, 1.52) 0.2s;
+}
+
+#handedCards .cardArea {
+  background: url(../images/backg-page.webp);
+  background-size: 120% 100%;
+  background-position: center;
+  width: 100%;
+  border: 2px solid black;
+  box-shadow: 1px 1px 20px 15px rgba(0, 0, 0, 0.575) inset;
+  border-radius: 10% 10% 0% 0%;
+}
+
+#handedCards .cardArea h3.cardTitle {
+  text-align: center;
+  color: white;
+  margin-top: 5px;
+  text-shadow: 0px 5px 5px #010961;
+}
+
+#handedCards .cardArea .destinyCards,
+#handedCards .cardArea .reservedCards,
+#handedCards .cardArea .cosmCards {
+  transition: all 0.3s cubic-bezier(0.6, -0.07, 0.56, 1.52) 0.2s;
+  display: flex;
+  flex-direction: row;
+  height: 200px;
+}
+
+#handedCards .cardArea .destinyCards li.card,
+#handedCards .cardArea .reservedCards li.card,
+#handedCards .cardArea .cosmCards li.card {
+  transition: all 0.3s cubic-bezier(0.6, -0.07, 0.56, 1.52) 0.2s;
+  box-shadow: 1px 1px 20px 5px black;
+  position: absolute;
+  transform-origin: 50% 150% 0;
+  z-index: 1;
+  list-style: none;
+}
+
+#handedCards .cardArea .destinyCards li.card div.item-controls,
+#handedCards .cardArea .reservedCards li.card div.item-controls,
+#handedCards .cardArea .cosmCards li.card div.item-controls {
+  color: white;
+  background-color: #2c7dc3;
+  display: flex;
+  justify-content: space-around;
+  border-radius: 15% 15% 0% 0%;
+}
+
+#handedCards .cardArea .destinyCards li.card:hover,
+#handedCards .cardArea .reservedCards li.card:hover,
+#handedCards .cardArea .cosmCards li.card:hover {
+  z-index: 300;
+}
+
+#handedCards .cardArea .destinyCards li.focusedCard,
+#handedCards .cardArea .reservedCards li.focusedCard,
+#handedCards .cardArea .cosmCards li.focusedCard {
+  transition: all 0.3s cubic-bezier(0.6, -0.07, 0.56, 1.52) 0.2s;
+  z-index: 200;
+  transform: scale(2);
+  top: -300px;
+  width: 200px;
+  height: 250px;
+  transform-origin: 50% 50% 0;
+  left: -50px;
+  transform: rotateZ(0deg);
+}
+
+#handedCards .cardArea .destinyCards li.focusedCard img,
+#handedCards .cardArea .reservedCards li.focusedCard img,
+#handedCards .cardArea .cosmCards li.focusedCard img {
+  max-width: 200px;
+  width: 200px;
+  max-height: 300px;
+  height: auto;
+}
+
+#handedCards:hover {
+  z-index: 100;
+  transform: scale(1.5);
+  bottom: -100px;
+  right: 10%;
 }
 
 /* Styles limited to torg sheets */

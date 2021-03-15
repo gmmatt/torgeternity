@@ -1,0 +1,116 @@
+@keyframes focusedCard {
+    from {
+        position: absolute;
+
+        transform-origin: 50% 150% 0;
+    }
+
+    to {
+        transform: scale(2);
+        top: -300px;
+        width: 200px;
+        height: 250px;
+        transform-origin: 50% 50% 0;
+        left: -50px;
+        transform: rotateZ(0deg);
+    }
+}
+
+
+#handedCards {
+   
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+    font-family: Alaska;
+    text-transform: capitalize;
+    min-width: 400px;
+    border-radius: 5% 5% 0% 0%;
+
+    right: 0%;
+    height: 300px;
+    bottom: -270px;
+    transition: all 0.3s cubic-bezier(0.6, -0.07, 0.56, 1.52) 0.2s;
+
+    .cardArea {
+        background: url(../images/backg-page.webp);
+        background-size: 120% 100%;
+        background-position: center;
+        width: 100%;
+        border:2px solid black;
+        box-shadow: 1px 1px 20px 15px rgba(0, 0, 0, 0.575) inset;
+        border-radius: 10% 10% 0% 0%;
+
+        h3.cardTitle {
+            text-align: center;
+            color: white;
+            margin-top: 5px;
+            text-shadow: 0px 5px 5px #010961;
+        }
+
+        .destinyCards,
+        .reservedCards,
+        .cosmCards {
+            transition: all 0.3s cubic-bezier(0.6, -0.07, 0.56, 1.52) 0.2s;
+
+            display: flex;
+            flex-direction: row;
+            height: 200px;
+
+            li.card {
+                transition: all 0.3s cubic-bezier(0.6, -0.07, 0.56, 1.52) 0.2s;
+
+                box-shadow: 1px 1px 20px 5px rgba(0, 0, 0, 1);
+
+                div.item-controls {
+                    color:white;
+                    background-color: rgb(44, 125, 195);
+                    display: flex;
+                    justify-content: space-around;
+                    border-radius: 15% 15% 0% 0%;
+                }
+
+                position: absolute;
+
+                transform-origin: 50% 150% 0;
+                z-index: 1;
+                list-style: none;
+
+            }
+
+            li.card:hover {
+                z-index: 300;
+            }
+
+            li.focusedCard {
+                transition: all 0.3s cubic-bezier(0.6, -0.07, 0.56, 1.52) 0.2s;
+
+                z-index: 200;
+                transform: scale(2);
+                top: -300px;
+                width: 200px;
+                height: 250px;
+                transform-origin: 50% 50% 0;
+                left: -50px;
+                transform: rotateZ(0deg);
+
+                img {
+                    max-width: 200px;
+                    width: 200px;
+                    max-height: 300px;
+                    height: auto;
+                }
+            }
+
+        }
+    }
+}
+
+
+#handedCards:hover {
+    z-index: 100;
+    transform: scale(1.5);
+    bottom: -100px;
+    right: 10%;
+}
+

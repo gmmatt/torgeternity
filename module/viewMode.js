@@ -5,9 +5,8 @@ export function toggleViewMode() {
     let view = torgeternity.viewMode;
     let board = document.getElementById('board')
     board.addEventListener('auxclick', function (e) {
+      
         if (e.button == 1) {
-            console.log("middlebutton clic");
-            console.log(torgeternity.viewMode);
 
             if (view.UI == true) {
                 document.getElementById("players").style.bottom = "-600px";

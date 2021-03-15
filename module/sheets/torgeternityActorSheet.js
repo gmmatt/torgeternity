@@ -1,6 +1,13 @@
-import { torgeternity } from "../config.js";
+import {
+    torgeternity
+} from "../config.js";
 import * as torgchecks from "../torgchecks.js";
-import {onManageActiveEffect, prepareActiveEffectCategories} from "/systems/torgeternity/module/effects.js";
+import {
+    onManageActiveEffect,
+    prepareActiveEffectCategories
+} from "/systems/torgeternity/module/effects.js";
+
+
 
 export default class torgeternityActorSheet extends ActorSheet {
     constructor(...args) {
@@ -15,15 +22,18 @@ export default class torgeternityActorSheet extends ActorSheet {
             effects: new Set()
         }
     }
-    
-    static get defaultOptions () {
+
+    static get defaultOptions() {
         return mergeObject(super.defaultOptions, {
             classes: ["torgeternity", "sheet", "actor"],
             width: 675,
             height: 860,
             tabs: [{navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "stats"}],
             scrollY: [".stats", ".perks", ".gear", ".powers", "effects", "background"],
-            dragdrop: [{dragSelector: ".item-list .item", dropSelector: null}]
+            dragdrop: [{
+                dragSelector: ".item-list .item",
+                dropSelector: null
+            }]
         });
     }
 
@@ -31,37 +41,81 @@ export default class torgeternityActorSheet extends ActorSheet {
 
         //modified path => one folder per type
         return `systems/torgeternity/templates/actors/${this.actor.data.type}/main.hbs`;
-        
+
     }
 
 
-    getData () {
+    getData() {
         const data = super.getData();
         var firstItem = 0
 
-        data.meleeweapons = data.items.filter(function (item) { return item.type == "meleeweapon"});
-        data.gear = data.items.filter(function (item) { return item.type == "gear"});
-        data.eternityshard = data.items.filter(function (item) {return item.type == "eternityshard"});
-        data.armor = data.items.filter(function (item) { return item.type == "armor"});
-        data.shield = data.items.filter(function (item) { return item.type == "shield"});
-        data.missileweapon = data.items.filter(function (item) { return item.type == "missileweapon"});
-        data.firearm = data.items.filter(function (item) { return item.type == "firearm"});
-        data.implant = data.items.filter(function (item) { return item.type == "implant"});
-        data.heavyweapon = data.items.filter(function (item) { return item.type == "heavyweapon"});
-        data.vehicle = data.items.filter(function (item) { return item.type == "vehicle"});
-        data.perk = data.items.filter(function (item) { return item.type == "perk"});
-        data.spell = data.items.filter(function (item) { return item.type == "spell"});
-        data.miracle = data.items.filter(function (item) { return item.type == "miracle"});
-        data.psionicpower = data.items.filter(function (item) { return item.type == "psionicpower"});
-        data.specialability = data.items.filter(function (item) { return item.type == "specialability"});
-        data.specialabilityRollable = data.items.filter(function (item) {return item.type == "specialability-rollable"});
-        data.enhancement = data.items.filter(function (item) { return item.type == "enhancement"});
+        data.meleeweapons = data.items.filter(function (item) {
+            return item.type == "meleeweapon"
+        });
+        data.gear = data.items.filter(function (item) {
+            return item.type == "gear"
+        });
+        data.eternityshard = data.items.filter(function (item) {
+            return item.type == "eternityshard"
+        });
+        data.armor = data.items.filter(function (item) {
+            return item.type == "armor"
+        });
+        data.shield = data.items.filter(function (item) {
+            return item.type == "shield"
+        });
+        data.missileweapon = data.items.filter(function (item) {
+            return item.type == "missileweapon"
+        });
+        data.firearm = data.items.filter(function (item) {
+            return item.type == "firearm"
+        });
+        data.implant = data.items.filter(function (item) {
+            return item.type == "implant"
+        });
+        data.heavyweapon = data.items.filter(function (item) {
+            return item.type == "heavyweapon"
+        });
+        data.vehicle = data.items.filter(function (item) {
+            return item.type == "vehicle"
+        });
+        data.perk = data.items.filter(function (item) {
+            return item.type == "perk"
+        });
+        data.spell = data.items.filter(function (item) {
+            return item.type == "spell"
+        });
+        data.miracle = data.items.filter(function (item) {
+            return item.type == "miracle"
+        });
+        data.psionicpower = data.items.filter(function (item) {
+            return item.type == "psionicpower"
+        });
+        data.specialability = data.items.filter(function (item) {
+            return item.type == "specialability"
+        });
+        data.specialabilityRollable = data.items.filter(function (item) {
+            return item.type == "specialability-rollable"
+        });
+        data.enhancement = data.items.filter(function (item) {
+            return item.type == "enhancement"
+        });
+        data.dramaCard = data.items.filter(function (item) {
+            return item.type == "dramaCard"
+        });
+        data.destinyCard = data.items.filter(function (item) {
+            return item.type == "destinyCard"
+        });
+        data.cosmCard = data.items.filter(function (item) {
+            return item.type == "cosmCard"
+        });
+
 
         if (this.actor.data.data.editstate === undefined) {
             this.actor.data.data.editstate = "none";
         };
 
-        data.effects= prepareActiveEffectCategories(this.entity.effects);
+        data.effects = prepareActiveEffectCategories(this.entity.effects);
 
         data.config = CONFIG.torgeternity;
 
@@ -71,7 +125,12 @@ export default class torgeternityActorSheet extends ActorSheet {
 
 
     activateListeners(html) {
-        
+
+
+
+
+
+
         //Owner-only Listeners
         if (this.actor.owner) {
             html.find(".skill-roll").click(this._onSkillRoll.bind(this));
@@ -136,15 +195,15 @@ export default class torgeternityActorSheet extends ActorSheet {
         super.activateListeners(html);
 
         // Everything below here is only needed if the sheet is editable
-        if ( !this.options.editable ) return;
+        if (!this.options.editable) return;
 
         // Update Inventory Item
         html.find('.item-edit').click(ev => {
             const li = $(ev.currentTarget).parents(".item");
             const item = this.actor.getOwnedItem(li.data("itemId"));
             item.sheet.render(true);
-      });
-  
+        });
+
         // Delete Inventory Item
         html.find('.item-delete').click(ev => {
             let applyChanges = false;
@@ -167,11 +226,11 @@ export default class torgeternityActorSheet extends ActorSheet {
                     if (applyChanges) {
                         const li = $(ev.currentTarget).parents(".item");
                         this.actor.deleteOwnedItem(li.data("itemId"));
-                        li.slideUp(200, () => this.render(false));            
+                        li.slideUp(200, () => this.render(false));
                     }
-                }                
+                }
             }).render(true);
-      }); 
+        });
         // Toggle Item Detail Visibility
         html.find('.item-name').click(ev => {
             let section = ev.currentTarget.closest(".item");
@@ -180,15 +239,17 @@ export default class torgeternityActorSheet extends ActorSheet {
             if (content != undefined && content.style.maxHeight) {
                 content.style.maxHeight = null;
             } else {
-                if (content){
-                content.style.maxHeight = content.scrollHeight + "px";
+                if (content) {
+                    content.style.maxHeight = content.scrollHeight + "px";
                 }
             }
-      });
+        });
+
+
     }
 
     _onSkillRoll(event) {
-        torgchecks.SkillCheck ({
+        torgchecks.SkillCheck({
             actor: this.actor,
             testType: event.currentTarget.dataset.testtype,
             skillName: event.currentTarget.dataset.name,
@@ -204,22 +265,26 @@ export default class torgeternityActorSheet extends ActorSheet {
         var toggleState = this.actor.data.data.editstate;
         event.preventDefault();
         if (toggleState === null) {
-            this.actor.update({"data.editstate":true});
+            this.actor.update({
+                "data.editstate": true
+            });
         } else {
-            this.actor.update({"data.editstate":null});
+            this.actor.update({
+                "data.editstate": null
+            });
         };
 
 
     }
 
     _onPossibilityRoll(event) {
-        torgchecks.PossibilityCheck ({
+        torgchecks.PossibilityCheck({
             actor: this.actor,
         })
     }
 
     _onUpRoll(event) {
-        torgchecks.UpRoll ({
+        torgchecks.UpRoll({
             actor: this.actor,
         })
     }
@@ -231,7 +296,7 @@ export default class torgeternityActorSheet extends ActorSheet {
     }
 
     _onBonusRoll(event) {
-        torgchecks.BonusRoll ({
+        torgchecks.BonusRoll({
             actor: this.actor,
         })
     }
@@ -248,7 +313,7 @@ export default class torgeternityActorSheet extends ActorSheet {
         const item = this.actor.getOwnedItem(itemID);
         var weaponData = item.data.data;
         var skillData = this.actor.data.data.skills[weaponData.attackWith];
-        torgchecks.weaponAttack ({
+        torgchecks.weaponAttack({
             actor: this.actor,
             item: item,
             actorPic: this.actor.data.img,
@@ -275,7 +340,7 @@ export default class torgeternityActorSheet extends ActorSheet {
         const item = this.actor.getOwnedItem(itemID);
         var powerData = item.data.data;
         var skillData = this.actor.data.data.skills[powerData.skill];
-        torgchecks.powerRoll ({
+        torgchecks.powerRoll({
             actor: this.actor,
             item: item,
             actorPic: this.actor.data.img,
@@ -294,7 +359,9 @@ export default class torgeternityActorSheet extends ActorSheet {
             name: "Name",
             type: "specialability"
         };
-        return this.actor.createOwnedItem(itemData,{renderSheet:true});
+        return this.actor.createOwnedItem(itemData, {
+            renderSheet: true
+        });
     }
 
     _onCreateSaR(event) {
@@ -303,7 +370,9 @@ export default class torgeternityActorSheet extends ActorSheet {
             name: "Name",
             type: "specialability-rollable"
         };
-        return this.actor.createOwnedItem(itemData,{renderSheet:true});
+        return this.actor.createOwnedItem(itemData, {
+            renderSheet: true
+        });
     }
 
     _onToggleThreatEdit(event) {
@@ -313,31 +382,155 @@ export default class torgeternityActorSheet extends ActorSheet {
         if (toggleState === "none") {
             document.getElementById("threat-editor").style.display = "inline";
             this.actor.data.data.editstate = "inline";
-            this.actor.update({"data.editstate":"inline"});
+            this.actor.update({
+                "data.editstate": "inline"
+            });
         } else if (toggleState === undefined) {
             document.getElementById("threat-editor").style.display = "inline";
             this.actor.data.data.editstate = "inline";
-            this.actor.update({"data.editstate":"inline"});
+            this.actor.update({
+                "data.editstate": "inline"
+            });
         } else {
             document.getElementById("threat-editor").style.display = "none";
             this.actor.data.data.editstate = "none";
-            this.actor.update({"data.editstate":"none"});
+            this.actor.update({
+                "data.editstate": "none"
+            });
         };
     }
 
     _onItemEquip(event) {
         var actor = this.actor;
         const itemID = event.currentTarget.closest(".item").getAttribute("data-item-id");
-        console.log({itemID});
+        console.log({
+            itemID
+        });
         const item = this.actor.getOwnedItem(itemID);
-        console.log({item})
+        console.log({
+            item
+        })
         if (item.data.equipped === false) {
             item.data.equipped = true;
-            item.update({"data.equipped": true})
+            item.update({
+                "data.equipped": true
+            })
         } else {
             item.data.equipped = false;
-            item.update({"data.equipped": false})
+            item.update({
+                "data.equipped": false
+            })
         }
     }
-}
 
+
+    //------CARDS----
+
+    //---general animations
+    _displayCard(hand) {
+
+        for (let i = 0; i < hand.children.length; i++) {
+            if (!hand.children[i].classList.contains("focusedCard")) {
+
+
+                hand.children[i].style.transformOrigin = "50% 150%";
+                hand.children[i].style.transform = `rotateZ(${i*10}deg)`;
+            }
+        }
+        hand.style.transform = `rotateZ(${hand.children.length*-5}deg)`
+
+    }
+
+    _onCardReserve(event) {
+        const cardID = event.currentTarget.closest(".card").getAttribute("data-item-id");
+        const card = this.actor.getOwnedItem(cardID);
+        console.log(card.data)
+        if (card.data.data.reserved === false) {
+            card.data.data.reserved = true;
+            card.update({
+                "data.reserved": true
+            });
+            game.socket.emit("system.torgeternity", {
+                msg: "cardReserved",
+                data: { 
+                    player: game.user.data._id ,
+                    card : card
+                }
+            });
+        } else {
+            card.data.data.reserved = false;
+            card.update({
+                "data.reserved": false
+            });
+            game.socket.emit("system.torgeternity", {
+                msg: "cardReserved",
+                data: { 
+                    player: game.user.data._id ,
+                    card : card
+                }
+            });
+        }
+
+    }
+    _onCardExchange(event) {
+/*
+        let applyChanges = false;
+        new Dialog({
+            title: "card exchange proposal",
+            content: "",
+            buttons: {
+                yes: {
+                    icon: '<i class="fas fa-check"></i>',
+                    label: "Yes",
+                    callback: () => applyChanges = true
+                },
+                no: {
+                    icon: '<i class="fas fa-times"></i>',
+                    label: "No"
+                },
+            },
+            default: "yes",
+            close: html => {
+                if (applyChanges) {
+                    const li = $(ev.currentTarget).parents(".item");
+                    this.actor.deleteOwnedItem(li.data("itemId"));
+                    li.slideUp(200, () => this.render(false));
+                }
+            }
+        }).render(true);
+*/
+    }
+
+    _onCardPlay(event) {
+       
+        const cardID = event.currentTarget.closest(".card").getAttribute("data-item-id");
+        const card = this.actor.getOwnedItem(cardID); 
+        console.log({card})
+        if (game.combat === null || card.data.type == "cosm") {
+            card.roll();
+            this.actor.deleteOwnedItem(cardID);
+            game.socket.emit("system.torgeternity", {
+                msg: "cardPlayed",
+                data: { 
+                    player: game.user.data._id ,
+                    card : card
+                }
+            });
+        } else {
+            if (!card.data.data.reserved) {
+                ui.notifications.warn('please play a reserved card while playing a dramtic scene');
+            } else {
+                card.roll();
+                this.actor.deleteOwnedItem(cardID);
+                game.socket.emit("system.torgeternity", {
+                    msg: "cardPlayed",
+                    data: { 
+                        player: game.user.data._id ,
+                        card : card
+                    }
+                });
+            }
+        }
+        
+    }
+}

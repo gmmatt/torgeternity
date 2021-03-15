@@ -1,10 +1,10 @@
 {
-    "Actor":{
-        "types":[
+    "Actor": {
+        "types": [
             "stormknight",
             "threat"
         ],
-        "templates":{
+        "templates": {
             "commonStats": {
                 "shock": {
                     "max": 5,
@@ -30,7 +30,7 @@
                     "possibilities": 0
                 },
                 "skills": {
-                    "airVehicles":{
+                    "airVehicles": {
                         "baseAttribute": "dexterity",
                         "adds": "",
                         "value": 0,
@@ -38,7 +38,7 @@
                         "groupName": "other",
                         "unskilledUse": 0
                     },
-                    "alteration":{
+                    "alteration": {
                         "baseAttribute": "mind",
                         "adds": "",
                         "value": 0,
@@ -46,7 +46,7 @@
                         "groupName": "other",
                         "unskilledUse": 0
                     },
-                    "apportation":{
+                    "apportation": {
                         "baseAttribute": "spirit",
                         "adds": "",
                         "value": 0,
@@ -54,7 +54,7 @@
                         "groupName": "other",
                         "unskilledUse": 0
                     },
-                    "beastRiding":{
+                    "beastRiding": {
                         "baseAttribute": "dexterity",
                         "adds": "",
                         "value": 0,
@@ -62,7 +62,7 @@
                         "groupName": "other",
                         "unskilledUse": 1
                     },
-                    "computers":{
+                    "computers": {
                         "baseAttribute": "mind",
                         "adds": "",
                         "value": 0,
@@ -70,7 +70,7 @@
                         "groupName": "other",
                         "unskilledUse": 1
                     },
-                    "conjuration":{
+                    "conjuration": {
                         "baseAttribute": "spirit",
                         "adds": "",
                         "value": 0,
@@ -78,7 +78,7 @@
                         "groupName": "other",
                         "unskilledUse": 0
                     },
-                    "divination":{
+                    "divination": {
                         "baseAttribute": "mind",
                         "adds": "",
                         "value": 0,
@@ -86,7 +86,7 @@
                         "groupName": "other",
                         "unskilledUse": 0
                     },
-                    "dodge":{
+                    "dodge": {
                         "baseAttribute": "dexterity",
                         "adds": "",
                         "value": 0,
@@ -94,7 +94,7 @@
                         "groupName": "other",
                         "unskilledUse": 1
                     },
-                    "energyWeapons":{
+                    "energyWeapons": {
                         "baseAttribute": "dexterity",
                         "adds": "",
                         "value": 0,
@@ -102,7 +102,7 @@
                         "groupName": "combat",
                         "unskilledUse": 1
                     },
-                    "evidenceAnalysis":{
+                    "evidenceAnalysis": {
                         "baseAttribute": "mind",
                         "adds": "",
                         "value": 0,
@@ -110,14 +110,14 @@
                         "groupName": "other",
                         "unskilledUse": 1
                     },
-                    "faith":{
+                    "faith": {
                         "baseAttribute": "spirit",
                         "value": 0,
                         "isFav": false,
                         "groupName": "other",
                         "unskilledUse": 1
                     },
-                    "find":{
+                    "find": {
                         "baseAttribute": "mind",
                         "adds": "",
                         "value": 0,
@@ -125,7 +125,7 @@
                         "groupName": "other",
                         "unskilledUse": 1
                     },
-                    "fireCombat":{
+                    "fireCombat": {
                         "baseAttribute": "dexterity",
                         "adds": "",
                         "value": 0,
@@ -133,7 +133,7 @@
                         "groupName": "combat",
                         "unskilledUse": 1
                     },
-                    "firstAid":{
+                    "firstAid": {
                         "baseAttribute": "mind",
                         "adds": "",
                         "value": 0,
@@ -141,7 +141,7 @@
                         "groupName": "other",
                         "unskilledUse": 1
                     },
-                    "heavyWeapons":{
+                    "heavyWeapons": {
                         "baseAttribute": "dexterity",
                         "adds": "",
                         "value": 0,
@@ -149,7 +149,7 @@
                         "groupName": "combat",
                         "unskilledUse": 1
                     },
-                    "intimidation":{
+                    "intimidation": {
                         "baseAttribute": "spirit",
                         "adds": "",
                         "value": 0,
@@ -157,7 +157,7 @@
                         "groupName": "interaction",
                         "unskilledUse": 1
                     },
-                    "kinesis":{
+                    "kinesis": {
                         "baseAttribute": "spirit",
                         "adds": "",
                         "value": 0,
@@ -165,7 +165,7 @@
                         "groupName": "other",
                         "unskilledUse": 0
                     },
-                    "landVehicles":{
+                    "landVehicles": {
                         "baseAttribute": "dexterity",
                         "adds": "",
                         "value": 0,
@@ -173,7 +173,7 @@
                         "groupName": "other",
                         "unskilledUse": 1
                     },
-                    "language":{
+                    "language": {
                         "baseAttribute": "mind",
                         "adds": "",
                         "value": 0,
@@ -181,7 +181,7 @@
                         "groupName": "other",
                         "unskilledUse": 0
                     },
-                    "lockpicking":{
+                    "lockpicking": {
                         "baseAttribute": "dexterity",
                         "adds": "",
                         "value": 0,
@@ -189,7 +189,7 @@
                         "groupName": "other",
                         "unskilledUse": 0
                     },
-                    "maneuver":{
+                    "maneuver": {
                         "baseAttribute": "dexterity",
                         "adds": "",
                         "value": 0,
@@ -197,7 +197,7 @@
                         "groupName": "interaction",
                         "unskilledUse": 1
                     },
-                    "medicine":{
+                    "medicine": {
                         "baseAttribute": "mind",
                         "adds": "",
                         "value": 0,
@@ -205,7 +205,7 @@
                         "groupName": "other",
                         "unskilledUse": 0
                     },
-                    "meleeWeapons":{
+                    "meleeWeapons": {
                         "baseAttribute": "dexterity",
                         "adds": "",
                         "value": 0,
@@ -213,7 +213,7 @@
                         "groupName": "combat",
                         "unskilledUse": 1
                     },
-                    "missileWeapons":{
+                    "missileWeapons": {
                         "baseAttribute": "dexterity",
                         "adds": "",
                         "value": 0,
@@ -221,7 +221,7 @@
                         "groupName": "other",
                         "unskilledUse": 1
                     },
-                    "persuasion":{
+                    "persuasion": {
                         "baseAttribute": "charisma",
                         "adds": "",
                         "value": 0,
@@ -229,7 +229,7 @@
                         "groupName": "other",
                         "unskilledUse": 1
                     },
-                    "precognition":{
+                    "precognition": {
                         "baseAttribute": "mind",
                         "adds": "",
                         "value": 0,
@@ -237,7 +237,7 @@
                         "groupName": "other",
                         "unskilledUse": 0
                     },
-                    "profession":{
+                    "profession": {
                         "baseAttribute": "mind",
                         "adds": "",
                         "value": 0,
@@ -245,7 +245,7 @@
                         "groupName": "other",
                         "unskilledUse": 1
                     },
-                    "reality":{
+                    "reality": {
                         "baseAttribute": "spirit",
                         "adds": "",
                         "value": 0,
@@ -253,7 +253,7 @@
                         "groupName": "other",
                         "unskilledUse": 0
                     },
-                    "scholar":{
+                    "scholar": {
                         "baseAttribute": "mind",
                         "adds": "",
                         "value": 0,
@@ -261,7 +261,7 @@
                         "groupName": "other",
                         "unskilledUse": 1
                     },
-                    "science":{
+                    "science": {
                         "baseAttribute": "mind",
                         "adds": "",
                         "value": 0,
@@ -269,7 +269,7 @@
                         "groupName": "other",
                         "unskilledUse": 1
                     },
-                    "stealth":{
+                    "stealth": {
                         "baseAttribute": "dexterity",
                         "adds": "",
                         "value": 0,
@@ -277,7 +277,7 @@
                         "groupName": "other",
                         "unskilledUse": 1
                     },
-                    "streetwise":{
+                    "streetwise": {
                         "baseAttribute": "charisma",
                         "adds": "",
                         "value": 0,
@@ -285,7 +285,7 @@
                         "groupName": "other",
                         "unskilledUse": 1
                     },
-                    "survival":{
+                    "survival": {
                         "baseAttribute": "mind",
                         "adds": "",
                         "value": 0,
@@ -293,7 +293,7 @@
                         "groupName": "other",
                         "unskilledUse": 1
                     },
-                    "taunt":{
+                    "taunt": {
                         "baseAttribute": "charisma",
                         "adds": "",
                         "value": 0,
@@ -301,7 +301,7 @@
                         "groupName": "interaction",
                         "unskilledUse": 1
                     },
-                    "telepathy":{
+                    "telepathy": {
                         "baseAttribute": "charisma",
                         "adds": "",
                         "value": 0,
@@ -309,7 +309,7 @@
                         "groupName": "other",
                         "unskilledUse": 0
                     },
-                    "tracking":{
+                    "tracking": {
                         "baseAttribute": "mind",
                         "adds": "",
                         "value": 0,
@@ -317,7 +317,7 @@
                         "groupName": "other",
                         "unskilledUse": 1
                     },
-                    "trick":{
+                    "trick": {
                         "baseAttribute": "mind",
                         "adds": "",
                         "value": 0,
@@ -325,7 +325,7 @@
                         "groupName": "interaction",
                         "unskilledUse": 1
                     },
-                    "unarmedCombat":{
+                    "unarmedCombat": {
                         "baseAttribute": "dexterity",
                         "adds": "",
                         "value": 0,
@@ -333,7 +333,7 @@
                         "groupName": "combat",
                         "unskilledUse": 1
                     },
-                    "waterVehicles":{
+                    "waterVehicles": {
                         "baseAttribute": "dexterity",
                         "adds": "",
                         "value": 0,
@@ -341,18 +341,18 @@
                         "groupName": "other",
                         "unskilledUse": 1
                     },
-                    "willpower":{
+                    "willpower": {
                         "baseAttribute": "spirit",
                         "adds": "",
                         "value": 0,
                         "isFav": false,
                         "groupName": "other",
                         "unskilledUse": 1
-                    }           
+                    }
                 }
             }
         },
-        "stormknight":{
+        "stormknight": {
             "templates": [
                 "commonStats"
             ],
@@ -376,18 +376,18 @@
         },
         "threat": {
             "templates": [
-            "commonStats" 
+                "commonStats"
             ],
             "details": {
                 "possibilitypotential": "(none)",
                 "description": "",
-                "sizeBonus": 0 
+                "sizeBonus": 0
             },
             "editstate": ""
         }
-        
+
     },
-    "Item":{
+    "Item": {
         "types": [
             "gear",
             "eternityshard",
@@ -406,11 +406,12 @@
             "spell",
             "miracle",
             "psionicpower"
+            
         ],
-        "templates":{
-            "general":{
+        "templates": {
+            "general": {
                 "cosm": "",
-                "description":"",
+                "description": "",
                 "techlevel": 1,
                 "price": 0,
                 "value": 0
@@ -429,8 +430,10 @@
                 "isAttack": "",
                 "damage": ""
             }
+            
         },
-        "gear":{
+        
+        "gear": {
             "templates": [
                 "general"
             ]
@@ -464,9 +467,9 @@
             "equipped": false,
             "equippedClass": ".item-unequipped",
             "notes": ""
-        },        
-        "meleeweapon":{
-            "templates":[
+        },
+        "meleeweapon": {
+            "templates": [
                 "general"
             ],
             "attackWith": "meleeWeapons",
@@ -476,8 +479,8 @@
             "bonus": 2,
             "notes": ""
         },
-        "missileweapon":{
-            "templates":[
+        "missileweapon": {
+            "templates": [
                 "general"
             ],
             "attackWith": "missileWeapons",
@@ -492,8 +495,8 @@
             "range": "",
             "notes": ""
         },
-        "firearm":{
-            "templates":[
+        "firearm": {
+            "templates": [
                 "general"
             ],
             "attackWith": "fireCombat",
@@ -513,8 +516,8 @@
             ],
             "notes": ""
         },
-        "heavyweapon":{
-            "templates":[
+        "heavyweapon": {
+            "templates": [
                 "general"
             ],
             "attackWith": "heavyWeapons",
