@@ -20,11 +20,7 @@ export default class TorgCombat extends Combat {
     return combatant;
   };
   async nextTurn() {
-    
-        await this.updateCombatant({
-            _id:this.combatant._id,
-            hasPlayed:true
-        });
+       
     
     super.nextTurn();
     return this

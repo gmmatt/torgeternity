@@ -326,16 +326,18 @@ textarea:hover {
   }
 }
 
-body {
+body * {
   font-family: OptiLight;
   font-size: 12px;
+  scrollbar-color: #227878 #2e2e2e94;
+  scrollbar-width: thin;
 }
 
-body ::-webkit-scrollbar-thumb {
+body * ::-webkit-scrollbar-thumb {
   outline: none;
   border-radius: 3px;
   background: #227878;
-  border: 1px solid #efedeb;
+  border: 1px solid #2e2e2e94;
 }
 
 input[type="text"],
