@@ -169,6 +169,10 @@ form.actor-sheet header input[name="name"] {
   text-align: center;
 }
 
+.window-content .actor-sheet input[type="number"] {
+  font-family: Palatino;
+}
+
 .window-content .actor-sheet input[name="name"] {
   color: #212341;
   min-width: 150px;
@@ -339,6 +343,7 @@ form.actor-sheet header input[name="name"] {
   border-bottom: 1px solid grey;
   max-height: 20px;
   font-size: 0.9em;
+  font-family: Palatino;
 }
 
 .window-content .actor-sheet .sheet-header select:active,
@@ -362,6 +367,7 @@ form.actor-sheet header input[name="name"] {
   border-radius: 50%;
   background: url(../images/roundBack.webp);
   background-size: cover;
+  font-family: Palatino;
 }
 
 .window-content .actor-sheet .sheet-header h1 {

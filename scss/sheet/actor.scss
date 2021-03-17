@@ -172,6 +172,10 @@ form.actor-sheet {
     text-align: center;
   }
 
+  input[type="number"] {
+    font-family:Palatino;
+  }
+
   input[name="name"] {
     color: #212341;
     min-width: 150px;
@@ -324,6 +328,7 @@ form.actor-sheet {
       border-bottom: 1px solid grey;
       max-height: 20px;
       font-size: 0.9em;
+      font-family:Palatino;
     }
 
     select:active,
@@ -354,6 +359,7 @@ form.actor-sheet {
       border-radius: 50%;
       background: url(../images/roundBack.webp);
       background-size: cover;
+      font-family:Palatino;
     }
     h1 {
       width: 100%;
