@@ -148,8 +148,9 @@
             "duration": "Durée",
             "damage": "Dommage",
             "description": "Description",
-            "good": "Succès supérieur",
-            "outstanding": "Succès spectaculaire"
+            "good": "Supérieur",
+            "outstanding": "Spectaculaire",
+            "attack": "Attaque"
         },
         "cosms": {
             "none": "(Non)",
@@ -196,7 +197,7 @@
             "backgroundDescription": "Description",
             "backgroundAndNotes": "Historique et notes",
             "enhancements": "Améliorations",
-            "generalGear": "Equipement général",
+            "generalGear": "Équipement général",
             "armor": "Armure",
             "shield": "Bouclier",
             "shields": "Boucliers",
@@ -255,8 +256,8 @@
             "vehicle": "Véhicule",
             "enhancement": "Amélioration",
             "details": "Details",
-            "goodResult": "Good Result",
-            "outstandingResult": "Outstanding Result",
+            "goodResult": "Résultat supérieur",
+            "outstandingResult": "Résultat spectaculaire",
             "effectCreate": "Créer Effet",
             "add": "Add",
             "derivedValues": "Valeurs dérivées",
@@ -269,7 +270,7 @@
         "itemSheetDescriptions": {
             "perk": "Atout",
             "enhancement": "Amélioration",
-            "generalGear": "Equipement",
+            "generalGear": "Équipement",
             "eternityshard": "Fragment d'éternité",
             "armor": "Armure",
             "shield": "Bouclier",
@@ -284,7 +285,7 @@
             "miracle": "Miracle",
             "psionicpower": "Psionique",
             "specialability": "Capacité spéciale",
-            "other": "Equipement général"
+            "other": "Équipement général"
         },
         "attackTypes": {
             "unarmedCombat": "Combat à mains nues",
