@@ -52,7 +52,6 @@ form.actor-sheet {
     }
   }
 
-  padding: 10px;
 
   header {
     display: inline;
@@ -100,7 +99,7 @@ form.actor-sheet {
     grid-template-columns: repeat(8, 1fr);
     grid-template-rows: 0.3fr 0.2fr 0.2fr 0.13fr 0.3fr 0.3fr;
 
-    grid-gap: 5px;
+    grid-gap: 0px 5px;
     justify-content: center;
     width: 100%;
     height: 100%;
@@ -117,6 +116,7 @@ form.actor-sheet {
     box-shadow: 2px 2px 15px #9e9686;
     transition: all 0.3s cubic-bezier(0.6, -0.07, 0.56, 1.52) 0.2s;
     overflow: scroll;
+    padding:0px
   }
 
   div.block:hover {
@@ -165,6 +165,7 @@ form.actor-sheet {
   //--all elements in character sheet
   font-family: Palatino;
   font-size: 12px;
+  line-height: 14px;
 
   input {
     width: 20px;
@@ -221,6 +222,7 @@ form.actor-sheet {
     text-shadow: 0px 0px 15px black;
     text-transform: uppercase;
     font-weight: bold;
+    margin: 0 0 0rem;
   }
 
   h1 {
