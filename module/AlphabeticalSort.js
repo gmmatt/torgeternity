@@ -2,7 +2,7 @@
 
 
 export function alphabSort() {
-    const lists = document.getElementsByClassName("alphab-list");
+    const lists = document.getElementsByClassName("skill-list");
     for (let list of lists) {
         const li = list.childNodes;
         let complist = [];
@@ -19,6 +19,5 @@ export function alphabSort() {
         for (let sk of complist) {
             list.appendChild(sk)
         }
-
     }
 }
