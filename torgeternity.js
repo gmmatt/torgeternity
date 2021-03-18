@@ -11,6 +11,7 @@ import { toggleViewMode } from "./module/viewMode.js";
 
 import torgeternityCombat from "./module/dramaticScene/torgeternityCombat.js";
 import torgeternityCombatTracker from "./module/dramaticScene/torgeternityCombatTracker.js";
+import { alphabSort } from "./module/AlphabeticalSort.js";
 
 Hooks.once("init", async function () {
   console.log("torgeternity | Initializing Torg Eternity System");
@@ -114,3 +115,4 @@ Handlebars.registerHelper("concatClearanceLevel", function (clearance) {
 });
 
 Hooks.on("renderChatLog", (app, html, data) => Chat.addChatListeners(html));
+Hooks.on("renderActorSheet", (app, html, data) => alphabSort());
