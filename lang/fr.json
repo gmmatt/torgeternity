@@ -1,5 +1,5 @@
 {
-    "torgeternity":{
+    "torgeternity": {
         "attributes": {
             "charisma": "Charisme",
             "dexterity": "Dexterité",
@@ -89,10 +89,22 @@
             "trick": "Ruse",
             "unarmedCombat": "Combat à mains nues",
             "waterVehicles": "Véhicules aquatiques",
-            "willpower": "Volonté"
+            "willpower": "Volonté",
+            "airvehicles": "",
+            "beastriding": "",
+            "energyweapons": "",
+            "evidenceanalysis": "",
+            "firecombat": "",
+            "firstaid": "",
+            "heavyweapons": "",
+            "landvehicles": "",
+            "meleeweapons": "",
+            "missileweapons": "",
+            "unarmedcombat": "",
+            "watervehicles": ""
         },
-        "gear":{
-            "description":"Description",
+        "gear": {
+            "description": "Description",
             "techlevel": "Axiome Tech",
             "tl": "Tech",
             "price": "Prix",
@@ -118,22 +130,23 @@
             "tappingDifficultyAbbr": "Diff",
             "purpose": "Vocation",
             "powers": "Pouvoirs",
-            "restrictions": "Restrictions"
+            "restrictions": "Restrictions",
+            "minStrength": "Force min"
         },
-        "stats":{
+        "stats": {
             "wounds": "Blessures",
             "shock": "Chocs",
             "possibilities": "Possibilités",
             "description": "Description"
         },
-        "perks":{
+        "perks": {
             "category": "Categorie",
             "cosm": "Cosm",
             "prerequisites": "Prérequis",
             "timestaken": "Temps requis",
             "description": "Description"
         },
-        "enhancements":{
+        "enhancements": {
             "perk": "Atout associé",
             "description": "Description",
             "enhances": "Améliore"
@@ -148,8 +161,9 @@
             "duration": "Durée",
             "damage": "Dommage",
             "description": "Description",
-            "good": "Succès supérieur",
-            "outstanding": "Succès spectaculaire"
+            "good": "Supérieur",
+            "outstanding": "Spectaculaire",
+            "attack": "Attaque"
         },
         "cosms": {
             "none": "(Non)",
@@ -160,7 +174,8 @@
             "cyberpapacy": "Cyberpapauté",
             "tharkold": "Tharkold",
             "panPacifica": "Pan Pacifica",
-            "orrorsh": "Orrorsh"
+            "orrorsh": "Orrorsh",
+            "tharkhold": ""
         },
         "perkTypes": {
             "cyberware": "Cybertechnologie",
@@ -180,12 +195,13 @@
             "psionics": "Psioniques",
             "pulpPowers": "Pouvoirs Pulps",
             "reality": "Réalité",
-            "savagery":"Sauvagerie",
+            "savagery": "Sauvagerie",
             "social": "Social",
-            "spellcraft": "Arts magiques"
+            "spellcraft": "Arts magiques",
+            "racial": "Racial"
         },
         "sheetLabels": {
-            "stormknight":"Chevalier des tempêtes",
+            "stormknight": "Chevalier des tempêtes",
             "stats": "Caracs",
             "perks": "Atouts",
             "perksAbilities": "Atouts/Capacités",
@@ -196,7 +212,7 @@
             "backgroundDescription": "Description",
             "backgroundAndNotes": "Historique et notes",
             "enhancements": "Améliorations",
-            "generalGear": "Equipement général",
+            "generalGear": "Équipement général",
             "armor": "Armure",
             "shield": "Bouclier",
             "shields": "Boucliers",
@@ -255,8 +271,8 @@
             "vehicle": "Véhicule",
             "enhancement": "Amélioration",
             "details": "Details",
-            "goodResult": "Good Result",
-            "outstandingResult": "Outstanding Result",
+            "goodResult": "Résultat supérieur",
+            "outstandingResult": "Résultat spectaculaire",
             "effectCreate": "Créer Effet",
             "add": "Add",
             "derivedValues": "Valeurs dérivées",
@@ -264,12 +280,11 @@
             "passiveEffects": "Effets passifs",
             "inactiveEffects": "Effects inactifs",
             "source": "Source"
-
         },
         "itemSheetDescriptions": {
             "perk": "Atout",
             "enhancement": "Amélioration",
-            "generalGear": "Equipement",
+            "generalGear": "Équipement",
             "eternityshard": "Fragment d'éternité",
             "armor": "Armure",
             "shield": "Bouclier",
@@ -284,7 +299,7 @@
             "miracle": "Miracle",
             "psionicpower": "Psionique",
             "specialability": "Capacité spéciale",
-            "other": "Equipement général"
+            "other": "Équipement général"
         },
         "attackTypes": {
             "unarmedCombat": "Combat à mains nues",
@@ -293,7 +308,7 @@
             "fireCombat": "Armes à feu",
             "energyWeapons": "Armes à énergie",
             "heavyWeapons": "Armes lourdes"
-         },
+        },
         "powerSkills": {
             "alteration": "Altération",
             "apportation": "Cinétique",
@@ -345,7 +360,6 @@
             "malfunction": "Défaillance",
             "restrained": "Entravé"
         },
-
         "yesNo": {
             "true": "Oui",
             "false": "Non"
@@ -371,7 +385,7 @@
             "modifiers": "Modifiers",
             "attack": "Attaque",
             "baseDamage": "Dommages de base",
-			"value": "Valeur"
+            "value": "Valeur"
         }
     }
 }

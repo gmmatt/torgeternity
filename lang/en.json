@@ -149,8 +149,9 @@
             "duration": "Duration",
             "damage": "Damage",
             "description": "Description",
-            "good": "Good Result",
-            "outstanding": "Outstanding Result"
+            "good": "Good",
+            "outstanding": "Outstanding",
+            "attack": "Attack"
         },
         "cosms": {
             "none": "(None)",
