@@ -115,4 +115,4 @@ Handlebars.registerHelper("concatClearanceLevel", function (clearance) {
 });
 
 Hooks.on("renderChatLog", (app, html, data) => Chat.addChatListeners(html));
-Hooks.on("renderActorSheet", (app, html, data) => alphabSort());
+Hooks.on("renderActorSheet", (app, html, data) => alphabSort(html, data));
