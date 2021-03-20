@@ -154,7 +154,7 @@
         </span>
     </div>
 </div>
-<div class="threat-editor block" id="threat-editor" style="display:{{data.editstate}}">
+<div class="threat-editor " id="threat-editor" style="display:{{data.editstate}}">
 
     <div class="threat-edit attribut-list-edit">
         <span>
@@ -184,7 +184,7 @@
         <div class="skill-element-edit">
             <span>{{localize (concatSkillName key)}} </span>
             <input name="data.skills.{{key}}.value" type="number" class="small-input"
-                value="{{skills.airVehicles.value}}" data-dtype="Number" />
+                value="{{skill.value}}" data-dtype="Number" />
         </div>
         {{/each}}
     </div>
