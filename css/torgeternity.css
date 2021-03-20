@@ -1098,6 +1098,9 @@ form.actor-sheet header input[name="name"] {
 
 .inline-skill-item:after {
   content: ",";
+  position: relative;
+  left: 2px;
+  margin-right: 2px;
 }
 
 .inline-skill-item:last-child:after {
