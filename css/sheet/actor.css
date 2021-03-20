@@ -69,6 +69,14 @@ form.actor-sheet header input[name="name"] {
   color: #0e0909;
 }
 
+.inline-skill-item:after {
+  content: ",";
+}
+
+.inline-skill-item:last-child:after {
+  content: "";
+}
+
 .window-content .actor-sheet {
   color: black;
   font-family: Palatino;
@@ -315,8 +323,8 @@ form.actor-sheet header input[name="name"] {
 }
 
 .window-content .actor-sheet .sheet-header img {
-  max-width: 100%;
-  max-height: 90px;
+  max-width: 64px;
+  max-height: 64px;
 }
 
 .window-content .actor-sheet .sheet-header .axioms {

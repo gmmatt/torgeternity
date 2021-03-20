@@ -68,6 +68,15 @@ form.actor-sheet {
   }
 }
 
+.inline-skill-item:after {
+  content: ",";
+}
+
+.inline-skill-item:last-child:after {
+  content: "";
+}
+
+
 .window-content .actor-sheet {
   color: black;
 
@@ -302,8 +311,8 @@ form.actor-sheet {
 
   .sheet-header {
     img {
-      max-width: 100%;
-      max-height: 90px;
+      max-width: 64px;
+      max-height: 64px;
     }
 
     .axioms {
