@@ -1800,6 +1800,17 @@ form.actor-sheet header input[name="name"] {
   flex-direction: row;
 }
 
+form.actor-sheet.threat div.skill-list-edit {
+  display: grid;
+  grid-template-columns: repeat(3, 0.3fr);
+}
+
+form.actor-sheet.threat div.skill-list-edit .skill-element-edit {
+  display: flex;
+  justify-content: flex-end;
+  text-align: end;
+}
+
 form.actor-sheet.threat td {
   position: relative;
   line-height: 1.8;

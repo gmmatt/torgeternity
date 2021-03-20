@@ -52,7 +52,6 @@ form.actor-sheet {
     }
   }
 
-
   header {
     display: inline;
 
@@ -116,7 +115,7 @@ form.actor-sheet {
     box-shadow: 2px 2px 15px #9e9686;
     transition: all 0.3s cubic-bezier(0.6, -0.07, 0.56, 1.52) 0.2s;
     overflow: scroll;
-    padding:0px
+    padding: 0px;
   }
 
   div.block:hover {
@@ -174,7 +173,7 @@ form.actor-sheet {
   }
 
   input[type="number"] {
-    font-family:Palatino;
+    font-family: Palatino;
   }
 
   input[name="name"] {
@@ -204,9 +203,9 @@ form.actor-sheet {
     height: auto;
     max-height: 120px;
     max-width: 120px;
-    width:80%;
-    margin-left:auto;
-    margin-right:auto
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   h3 {
@@ -291,7 +290,7 @@ form.actor-sheet {
     grid-column: 5/7;
     grid-row: 3/4;
     transition: all 0.6s cubic-bezier(1, 0, 0, 1) 0.1s;
-    display:flex;
+    display: flex;
     justify-content: center;
   }
 
@@ -330,7 +329,7 @@ form.actor-sheet {
       border-bottom: 1px solid grey;
       max-height: 20px;
       font-size: 0.9em;
-      font-family:Palatino;
+      font-family: Palatino;
     }
 
     select:active,
@@ -361,7 +360,7 @@ form.actor-sheet {
       border-radius: 50%;
       background: url(../images/roundBack.webp);
       background-size: cover;
-      font-family:Palatino;
+      font-family: Palatino;
     }
     h1 {
       width: 100%;
@@ -745,6 +744,16 @@ form.actor-sheet {
 // Styling specific to threat sheet
 
 form.actor-sheet.threat {
+  div.skill-list-edit {
+    display: grid;
+    grid-template-columns: repeat(3, 0.3fr);
+    .skill-element-edit {
+      display: flex;
+      justify-content: flex-end;
+      text-align: end;
+    }
+  }
+
   td {
     position: relative;
     line-height: 1.8;
@@ -852,7 +861,7 @@ form.actor-sheet.threat {
     }
   }
 }
-
+//-----------specific compact style
 .compact {
   .window-content {
     padding: 1px;
