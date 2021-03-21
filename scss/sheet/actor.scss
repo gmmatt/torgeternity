@@ -70,15 +70,14 @@ form.actor-sheet {
 
 .inline-skill-item:after {
   content: ",";
-  position:relative;
-  left:2px;
-  margin-right: 2px
+  position: relative;
+  left: 2px;
+  margin-right: 2px;
 }
 
 .inline-skill-item:last-child:after {
   content: "";
 }
-
 
 .window-content .actor-sheet {
   color: black;
@@ -456,6 +455,28 @@ form.actor-sheet {
         flex-direction: row;
         justify-content: space-around;
         border-bottom: 1px solid grey;
+        position: relative;
+
+        input[type="checkbox"] {
+          opacity: 0.01;
+          position: relative;
+          left:-25px;
+          cursor:pointer;
+        }
+        a.toggleFav{
+          color: grey;
+          position: relative;
+          font-size: 10px;
+          top: -4px;
+        }
+        a.toggleFav.checked{
+          font-size:15px;
+          color:rgba(8, 83, 8, 0.794);
+          animation-duration: 0.3s;
+          animation-name: roll;
+          text-shadow: 0px 0px 3px green;
+      
+        }
 
         input {
           border: none;
@@ -757,6 +778,23 @@ form.actor-sheet {
 // Styling specific to threat sheet
 
 form.actor-sheet.threat {
+
+  input[type="checkbox"] {
+    opacity: 0.01;
+    position: relative;
+    left:-25px;
+    cursor:pointer;
+  }
+  a.toggleFav{
+    color: grey;
+    position: relative;
+    font-size: 10px;
+  }
+  a.toggleFav.checked{
+    color:rgba(8, 83, 8, 0.794);
+    text-shadow: 0px 0px 3px green;
+
+  }
   div.skill-list-edit {
     display: grid;
     grid-template-columns: repeat(3, 0.3fr);
@@ -764,6 +802,7 @@ form.actor-sheet.threat {
       display: flex;
       justify-content: flex-end;
       text-align: end;
+      
     }
   }
 

@@ -31,8 +31,13 @@
             <span class="skill-roll">
                 {{content.value}}
             </span>
-            <span><a class="toggleFav"><i class="far fa-star" {{#if content.isFav}}style="color:green"
-                        {{/if}}></i></a></span>
+            <span> 
+                <a class="toggleFav {{#if content.isFav}}checked
+                        {{/if}}"><i class="far fa-star" ></i></a>
+                <input class="favCheck" type="checkbox" name="data.skills.{{name}}.isFav" {{checked content.isFav}}
+                data-dtype="Boolean" />
+         </span>
+
         </li>
         {{/each}}
         {{else}}
@@ -57,9 +62,13 @@
                 {{content.value}}
             </span>
 
-
-            <input type="checkbox" name="data.skills.{{name}}.isFav" {{checked content.isFav}} data-dtype="Boolean" />
-
+            <span> 
+                <a class="toggleFav {{#if content.isFav}}checked
+                        {{/if}}"><i class="far fa-star" ></i></a>
+                <input class="favCheck" type="checkbox" name="data.skills.{{name}}.isFav" {{checked content.isFav}}
+                data-dtype="Boolean" />
+         </span>
+           
         </li>
         {{/if}}
         {{/each}}
