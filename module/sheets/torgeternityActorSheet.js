@@ -136,6 +136,9 @@ export default class torgeternityActorSheet extends ActorSheet {
 
         //Owner-only Listeners
         if (this.actor.owner) {
+            html.find("a.toggleFav").click(this._onToggleFav.bind(this));
+        }
+        if (this.actor.owner) {
             html.find(".skill-roll").click(this._onSkillRoll.bind(this));
         }
 
@@ -250,6 +253,17 @@ export default class torgeternityActorSheet extends ActorSheet {
 
 
     }
+   async _onToggleFav(event) {
+    let data=this.getData();
+    console.log(data)
+    event.preventDefault();
+    const field = event.currentTarget.previousElementSibling;
+    
+    if (field.value===1) { this.actor.update({[field.name]: 0});field.value=1;console.log(this.actor.data.data[field])}
+    if (field.value===0){ this.actor.update({[field.name]: 1});field.value=0;console.log(this.actor.data.data[field])}
+     
+    }
+
 
     _onSkillRoll(event) {
         torgchecks.SkillCheck({
