@@ -287,7 +287,8 @@
             "miracle": "Miracle",
             "psionicpower": "Psionic Power",
             "specialability": "Special Ability",
-            "other": "General Gear"
+            "other": "General Gear",
+            "customAttack": "Custom Attack"
         },
         "attackTypes": {
             "unarmedCombat": "Unarmed Combat",
@@ -308,8 +309,12 @@
             "faith": "Faith"
         },
         "damageTypes": {
+            "flat": "Flat",
             "strengthPlus": "Strength +",
-            "flat": "Flat"
+            "charismaPlus": "Charisma +",
+            "dexterityPlus": "Dexterity +",
+            "mindPlus": "Mind +",
+            "spiritPlus": "Spirit +"
         },
         "clearances": {
             "alpha": "Alpha",

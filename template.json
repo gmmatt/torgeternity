@@ -393,6 +393,7 @@
             "eternityshard",
             "armor",
             "shield",
+            "customAttack",
             "meleeweapon",
             "missileweapon",
             "firearm",
@@ -468,6 +469,16 @@
             "equippedClass": ".item-unequipped",
             "notes": ""
         },
+
+        "customAttack": {
+            "description": "",
+            "attackWith": "unarmedCombat",
+            "damageType": "",
+            "damage": 0,
+            "ap": 0,
+            "notes": ""
+        },
+
         "meleeweapon": {
             "templates": [
                 "general"
