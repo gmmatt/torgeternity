@@ -56,10 +56,9 @@
             <span class="skill-roll">
                 {{content.value}}
             </span>
-           
-            <span>{{content.isFav}}
-                <input type="hidden" name="data.skills.{{name}}.isFav" value={{content.isFav}} data-dtype="Number"/>
-                <a class="toggleFav"><i class="far fa-star" {{#if content.isFav}}style="color:green"{{/if}}></i></a></span>
+
+
+            <input type="checkbox" name="data.skills.{{name}}.isFav" {{checked content.isFav}} data-dtype="Boolean" />
 
         </li>
         {{/if}}

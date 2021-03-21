@@ -254,13 +254,11 @@ export default class torgeternityActorSheet extends ActorSheet {
 
     }
    async _onToggleFav(event) {
-    let data=this.getData();
-    console.log(data)
     event.preventDefault();
     const field = event.currentTarget.previousElementSibling;
     
-    if (field.value===1) { this.actor.update({[field.name]: 0});field.value=1;console.log(this.actor.data.data[field])}
-    if (field.value===0){ this.actor.update({[field.name]: 1});field.value=0;console.log(this.actor.data.data[field])}
+   console.log(field.value)
+   this.actor.update({[field.name]: !field.value});
      
     }
 
