@@ -178,7 +178,8 @@ form.actor-sheet header input[name="name"] {
   text-align: center;
 }
 
-.window-content .actor-sheet input[type="number"] {
+.window-content .actor-sheet input[type="number"],
+.window-content .actor-sheet input[type="text"] {
   font-family: Palatino;
 }
 

@@ -18,6 +18,7 @@ and returns either flat damages or damages based on any chosen attribute-plus-bo
 - Fixed an issue where some sheets creted under very early versions of the TE system were
 not correctly displaying attributes on SK sheets.
 - Fixed an issue where spells were not rollable.
+- Updated appearance of threat sheets.
 
 v. 0.92.1
 
