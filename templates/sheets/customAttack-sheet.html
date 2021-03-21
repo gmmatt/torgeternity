@@ -20,8 +20,8 @@
                     <p class="item-data-label">
                         {{localize "torgeternity.powers.skill"}}
                     </p>
-                    <select name="data.skill" class="input-box">
-                        {{#select data.skill}}
+                    <select name="data.attackWith" class="input-box">
+                        {{#select data.attackWith}}
                         {{#each config.skills as |name type|}}
                         <option value="{{type}}">{{localize name}}</option>
                         {{/each}}

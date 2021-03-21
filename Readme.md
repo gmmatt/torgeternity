@@ -15,6 +15,7 @@ be checked off once they have finished their turn.
 - Changed some fonts in UI; updated UI appearance
 - Fixed an issue where some sheets creted under very early versions of the TE system were
 not correctly displaying attributes on SK sheets.
+- Fixed an issue where spells were not rollable.
 
 v. 0.92.1
 

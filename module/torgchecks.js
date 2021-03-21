@@ -100,6 +100,10 @@ export function weaponAttack ({
    skillValue= null,
    unskilledUse = null,
    strengthValue = null,
+   charismaValue = null,
+   dexterityValue = null,
+   mindValue = null,
+   spiritValue = null,
    weaponName = null,
    weaponDamageType = null,
    weaponDamage = null,
@@ -117,6 +121,10 @@ export function weaponAttack ({
       skillValue: skillValue,
       unskilledUse: unskilledUse,
       strengthValue: strengthValue,
+      charismaValue: charismaValue,
+      dexterityValue: dexterityValue,
+      mindValue: mindValue,
+      spiritValue: spiritValue,
       testType: "attack",
       weaponName: weaponName,
       weaponDamageType: weaponDamageType,
@@ -140,6 +148,14 @@ export function weaponAttack ({
       test.damage = test.weaponDamage
    } else if (test.weaponDamageType === "strengthPlus") {
       test.damage = parseInt(test.strengthValue) + parseInt(test.weaponDamage)
+   } else if (test.weaponDamageType === "charismaPlus") {
+      test.damage = parseInt(test.charismaValue) + parseInt(test.weaponDamage)
+   } else if (test.weaponDamageType === "dexterityPlus") {
+      test.damage = parseInt(test.dexterityValue) + parseInt(test.weaponDamage)
+   } else if (test.weaponDamageType === "mindPlus") {
+      test.damage = parseInt(test.mindValue) + parseInt(test.weaponDamage)
+   } else if (test.weaponDamageType === "spiritPlus") {
+      test.damage = parseInt(test.spiritValue) + parseInt(test.weaponDamage)
    } else {
       test.damage = test.weaponDamage
    }

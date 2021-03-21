@@ -52,6 +52,9 @@ export default class torgeternityActorSheet extends ActorSheet {
         data.meleeweapons = data.items.filter(function (item) {
             return item.type == "meleeweapon"
         });
+        data.customAttack = data.items.filter(function (item) {
+            return item.type == "customAttack"
+        });
         data.gear = data.items.filter(function (item) {
             return item.type == "gear"
         });
@@ -322,6 +325,10 @@ export default class torgeternityActorSheet extends ActorSheet {
             skillValue: skillData.value,
             unskilledUse: skillData.unskilledUse,
             strengthValue: this.actor.data.data.attributes.strength,
+            charismaValue: this.actor.data.data.attributes.charisma,
+            dexterityValue: this.actor.data.data.attributes.dexterity,
+            mindValue: this.actor.data.data.attributes.mind,
+            spiritValue: this.actor.data.data.attributes.spirit,
             weaponName: item.data.name,
             weaponDamageType: weaponData.damageType,
             weaponDamage: weaponData.damage

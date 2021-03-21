@@ -266,7 +266,8 @@
             "tempEffects": "Temporary Effects",
             "passiveEffects": "Passive Effects",
             "inactiveEffects": "Inactive Effects",
-            "source": "Source"
+            "source": "Source",
+            "otherAttacks": "Other"
 
         },
         "itemSheetDescriptions": {
