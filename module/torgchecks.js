@@ -360,19 +360,19 @@ export function renderSkillChat(test) {
    
    // Label as Skill vs Attribute Test and turn on BD option if needed
    if (test.testType === "skill") {
-      test.typeLabel = "Skill",
+      test.typeLabel = `${game.i18n.localize("torgeternity.chatText.skillTestLabel")}`,
       test.bdStyle = "display:none"
    } else if (test.testType === "attack") {
-      test.typeLabel = "Skill"
+      test.typeLabel = `${game.i18n.localize("torgeternity.chatText.skillTestLabel")}`
    } else if (test.testType === "power") {
-      test.typeLabel = "Skill";
+      test.typeLabel = `${game.i18n.localize("torgeternity.chatText.skillTestLabel")}`;
       if (test.powerAttack === "true") {
          test.bdStyle = "display:"
       } else {
          test.bdStyle = "display:none"
       }
    } else {
-      test.typeLabel = "Attribute"
+      test.typeLabel = `${game.i18n.localize("torgeternity.chatText.attributeTestLabel")}`
       test.bdStyle = "display:none"
    }
 

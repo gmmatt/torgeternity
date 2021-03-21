@@ -46,7 +46,7 @@ function onPossibility(event) {
     };
     diceroll.toMessage();
 
-    test.chatTitle = "Possibility";
+    test.chatTitle = `${game.i18n.localize("torgeternity.chatText.possibility")}`;
     test.unskilledLabel = "display:none";
 
     renderSkillChat(test);
@@ -82,7 +82,7 @@ function onUp(event) {
     test.upTotal = diceroll.total
     diceroll.toMessage();
 
-    test.chatTitle = "Up";
+    test.chatTitle = `${game.i18n.localize("torgeternity.chatText.up")}`;
     test.unskilledLabel = "display:none";
 
     renderSkillChat(test);
@@ -123,7 +123,7 @@ function onHero(event) {
     };
     diceroll.toMessage();
 
-    test.chatTitle = "Hero Card";
+    test.chatTitle = `${game.i18n.localize("torgeternity.chatText.heroCard")}`;
     test.unskilledLabel = "display:none";
 
     renderSkillChat(test);
@@ -163,7 +163,7 @@ function onDrama(event) {
     };
     diceroll.toMessage();
 
-    test.chatTitle = "Drama Card";
+    test.chatTitle = `${game.i18n.localize("torgeternity.chatText.dramaCard")}`;
     test.unskilledLabel = "display:none";
 
     renderSkillChat(test);
@@ -197,7 +197,7 @@ function onPlus3(event) {
     //Add 1 to cards played
     test.cardsPlayed++;
 
-    test.chatTitle = "+3 Bonus Card";
+    test.chatTitle = `${game.i18n.localize("torgeternity.chatText.bonusCard")}`;
     test.unskilledLabel = "display:none";
 
     renderSkillChat(test);
@@ -233,7 +233,7 @@ function onBd(event) {
     var newDamage = parseInt(test.damage) + parseInt(finalValue);
     test.damage = newDamage;
 
-    test.chatTitle = "Bonus Damage";
+    test.chatTitle = `${game.i18n.localize("torgeternity.chatText.bonusDamage")}`;
     test.unskilledLabel = "display:none";
 
     renderSkillChat(test);

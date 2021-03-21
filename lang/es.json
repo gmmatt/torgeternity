@@ -254,6 +254,28 @@
             "dwarf": "Dwarf",
             "edeinos": "Edeinos",
             "elf": "Elf"
+        },
+        "chatText": {
+            "possibility": "Possibility",
+            "hero": "Hero",
+            "heroCard": "Hero Card",
+            "drama": "Drama",
+            "dramaCard": "Drama Card",
+            "bonusCard": "+3 Card",
+            "bonusDamage": "Bonus Damage",
+            "up": "Up",
+            "bonusDice": "BD",
+            "actionTotal": "Action Total",
+            "skillTestLabel": "Skill Value",
+            "attributeTestLabel": "Attribute",
+            "dieTotal": "Die Total",
+            "unskilled": "Unskilled",
+            "possibleDisconnect": "Possible Disconnect",
+            "damage": "Damage",
+            "bonus": "Bonus",
+            "modifiers": "Modifiers",
+            "attack": "Attack",
+            "baseDamage": "Base Damage"
         }
     }
 }

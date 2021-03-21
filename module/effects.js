@@ -27,7 +27,7 @@ export function prepareActiveEffectCategories(effects) {
     const categories = {
         temporary: {
         type: "temporary",
-        label: "Temporary Effects",
+        label: `${game.i18n.localize("torgeternity.sheetLabels.tempEffects")}`,
         effects: []
         },
         passive: {

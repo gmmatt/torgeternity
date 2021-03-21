@@ -183,7 +183,7 @@
                             </ul>
                         </div>
                         <div class="threat-block">
-                            <b>Description</b>
+                            <b>{{localize "torgeternity.stats.description"}}</b>
                             {{{data.details.description}}}
                         </div>
                     </span>
@@ -312,10 +312,10 @@
             value="{{data.attributes.strength}}" data=dtype="Number" class="small-input" />
     </div>
     <div class="threat-edit">
-        Move:&nbsp;
+        {{localize "torgeternity.sheetLabels.move"}}:&nbsp;
         <input name="data.other.move" class="small-input" type="number" value="{{data.other.move}}"
             data-dtype="Number" />;&nbsp;
-        Tough:&nbsp;
+        {{localize "torgeternity.sheetLabels.tough"}}:&nbsp;
         <input name="data.other.toughness" class="small-input" type="number" value="{{data.other.toughness}}"
             data-dtype="Number" />&nbsp;/&nbsp;(<input name="data.other.armor" class="small-input" type="number"
             value="{{data.other.armor}}" data-dtype="Number" />)
