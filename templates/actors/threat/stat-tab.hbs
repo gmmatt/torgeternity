@@ -133,7 +133,7 @@
                     <li>
                         <b><a class="item-attackRoll item" data-item-id="{{item._id}}">{{item.name}}</a></b>
                         .&nbsp;
-                        {{{item.data.description}}}
+                        {{{concatSpecialAbility item.data.description}}}
                     </li>
                     {{/each}}
 
@@ -141,7 +141,7 @@
                     <li>
                         <b>{{item.name}}</b>
                         .&nbsp;
-                        {{{item.data.description}}}
+                        {{{concatSpecialAbility item.data.description}}}
                     </li>
                     {{/each}}
 

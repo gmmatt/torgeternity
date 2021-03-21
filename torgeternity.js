@@ -114,5 +114,17 @@ Handlebars.registerHelper("concatClearanceLevel", function (clearance) {
   return localClearance;
 });
 
+Handlebars.registerHelper("concatSpecialAbility", function (description) {
+  // Removes <p> and </p> from the beginning and end of special ability descriptions so that they appear inline on threat sheet
+  if (description.startsWith("<p>")) {
+    var updatedDescription;
+    var endPoint = description.length;
+    updatedDescription = description.substr(3,endPoint);
+    return updatedDescription;
+  } else {
+    return description;
+  }
+});
+
 Hooks.on("renderChatLog", (app, html, data) => Chat.addChatListeners(html));
 Hooks.on("renderActorSheet", (app, html, data) => alphabSort(html, data));
