@@ -135,7 +135,18 @@ export default class torgeternityActorSheet extends ActorSheet {
 
 
         //Owner-only Listeners
-       
+        if (this.actor.owner) {
+            let handler = ev => this._onDragStart(ev);
+            // Find all items on the character sheet.
+            html.find('a.item-name').each((i, a) => {
+              // Ignore for the header row.
+              if (a.classList.contains("item-header")) return;
+              // Add draggable attribute and dragstart listener.
+              a.setAttribute("draggable", true);
+              a.addEventListener("dragstart", handler, false);
+            });
+          }
+
         if (this.actor.owner) {
             html.find(".skill-roll").click(this._onSkillRoll.bind(this));
         }
@@ -195,6 +206,7 @@ export default class torgeternityActorSheet extends ActorSheet {
         if (this.actor.owner) {
             html.find(".effect-control").click(ev => onManageActiveEffect(ev, this.entity));
         }
+        
 
         super.activateListeners(html);
 
