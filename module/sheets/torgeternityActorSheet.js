@@ -135,6 +135,7 @@ export default class torgeternityActorSheet extends ActorSheet {
 
 
         //Owner-only Listeners
+       
         if (this.actor.owner) {
             html.find(".skill-roll").click(this._onSkillRoll.bind(this));
         }
@@ -250,6 +251,8 @@ export default class torgeternityActorSheet extends ActorSheet {
 
 
     }
+   
+
 
     _onSkillRoll(event) {
         torgchecks.SkillCheck({

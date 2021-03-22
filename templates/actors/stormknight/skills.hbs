@@ -1,27 +1,26 @@
 <div class="skills">
-    <h2 class="skill-edit-toggle" title="Toggle Skill Display"><a>{{localize "torgeternity.sheetLabels.skills"}}</a> </h2>
+    <h2 class="skill-edit-toggle" title="Toggle Skill Display"><a>{{localize "torgeternity.sheetLabels.skills"}}</a>
+    </h2>
     <ul class="skill-list">
         <li class="dark">
             <span></span>
             <span class="skillAttr">{{localize "torgeternity.sheetLabels.attribute"}}</span>
             <span class="skillAdd">{{localize "torgeternity.sheetLabels.adds"}}</span>
             <span>{{localize "torgeternity.sheetLabels.total"}}</span>
+            <span>{{localize "torgeternity.sheetLabels.favorite"}}</span>
+
         </li>
         {{#if data.editstate}}
         {{#each data.skills as |content name|}}
         <li>
             <span>
-                <a 
-                    class="skill-roll" 
-                    data-testType="skill" 
-                    data-baseAttribute="{{content.baseAttribute}}" 
-                    data-adds="{{content.adds}}" 
-                    data-value="{{content.value}}" 
-                    data-unskilledUse="{{content.unskilledUse}}" 
-                    data-name="{{localize (concatSkillName name)}}"
-                    >
+                <a class="skill-roll" data-testType="skill" data-baseAttribute="{{content.baseAttribute}}"
+                    data-adds="{{content.adds}}" data-value="{{content.value}}"
+                    data-unskilledUse="{{content.unskilledUse}}" data-name="{{localize (concatSkillName name)}}">
                     {{localize (concatSkillName name)}}
-                </a>            
+                </a>
+
+
             </span>
             <span class="skill-roll skillAttr">
                 {{localize (concatAttributeName content.baseAttribute)}}
@@ -32,6 +31,13 @@
             <span class="skill-roll">
                 {{content.value}}
             </span>
+            <span> 
+                <a class="toggleFav {{#if content.isFav}}checked
+                        {{/if}}"><i class="far fa-star" ></i></a>
+                <input class="favCheck" type="checkbox" name="data.skills.{{name}}.isFav" {{checked content.isFav}}
+                data-dtype="Boolean" />
+         </span>
+
         </li>
         {{/each}}
         {{else}}
@@ -39,17 +45,11 @@
         {{#if content.adds}}
         <li>
             <span>
-                <a 
-                    class="skill-roll" 
-                    data-testType="skill" 
-                    data-baseAttribute="{{content.baseAttribute}}" 
-                    data-adds="{{content.adds}}" 
-                    data-value="{{content.value}}" 
-                    data-unskilledUse="{{content.unskilledUse}}" 
-                    data-name="{{localize (concatSkillName name)}}"
-                    >
+                <a class="skill-roll" data-testType="skill" data-baseAttribute="{{content.baseAttribute}}"
+                    data-adds="{{content.adds}}" data-value="{{content.value}}"
+                    data-unskilledUse="{{content.unskilledUse}}" data-name="{{localize (concatSkillName name)}}">
                     {{localize (concatSkillName name)}}
-                </a>            
+                </a>
             </span>
             <span class="skill-roll skillAttr">
                 {{localize (concatAttributeName content.baseAttribute)}}
@@ -61,6 +61,14 @@
             <span class="skill-roll">
                 {{content.value}}
             </span>
+
+            <span> 
+                <a class="toggleFav {{#if content.isFav}}checked
+                        {{/if}}"><i class="far fa-star" ></i></a>
+                <input class="favCheck" type="checkbox" name="data.skills.{{name}}.isFav" {{checked content.isFav}}
+                data-dtype="Boolean" />
+         </span>
+           
         </li>
         {{/if}}
         {{/each}}

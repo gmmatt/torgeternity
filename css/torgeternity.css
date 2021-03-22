@@ -1503,6 +1503,31 @@ form.actor-sheet header input[name="name"] {
   flex-direction: row;
   justify-content: space-around;
   border-bottom: 1px solid grey;
+  position: relative;
+}
+
+.window-content .actor-sheet .skills ul li input[type="checkbox"] {
+  opacity: 0.01;
+  position: relative;
+  left: -25px;
+  cursor: pointer;
+}
+
+.window-content .actor-sheet .skills ul li a.toggleFav {
+  color: grey;
+  position: relative;
+  font-size: 10px;
+  top: -4px;
+}
+
+.window-content .actor-sheet .skills ul li a.toggleFav.checked {
+  font-size: 15px;
+  color: rgba(8, 83, 8, 0.794);
+  -webkit-animation-duration: 0.3s;
+  animation-duration: 0.3s;
+  -webkit-animation-name: roll;
+  animation-name: roll;
+  text-shadow: 0px 0px 3px green;
 }
 
 .window-content .actor-sheet .skills ul li input {
@@ -1814,6 +1839,24 @@ form.actor-sheet header input[name="name"] {
 .window-content .actor-sheet .stat-block {
   grid-column: 1/9;
   flex-direction: row;
+}
+
+form.actor-sheet.threat input[type="checkbox"] {
+  opacity: 0.01;
+  position: relative;
+  left: -25px;
+  cursor: pointer;
+}
+
+form.actor-sheet.threat a.toggleFav {
+  color: grey;
+  position: relative;
+  font-size: 10px;
+}
+
+form.actor-sheet.threat a.toggleFav.checked {
+  color: rgba(8, 83, 8, 0.794);
+  text-shadow: 0px 0px 3px green;
 }
 
 form.actor-sheet.threat div.skill-list-edit {
