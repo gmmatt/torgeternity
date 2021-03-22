@@ -460,22 +460,21 @@ form.actor-sheet {
         input[type="checkbox"] {
           opacity: 0.01;
           position: relative;
-          left:-25px;
-          cursor:pointer;
+          left: -25px;
+          cursor: pointer;
         }
-        a.toggleFav{
+        a.toggleFav {
           color: grey;
           position: relative;
           font-size: 10px;
           top: -4px;
         }
-        a.toggleFav.checked{
-          font-size:15px;
-          color:rgba(8, 83, 8, 0.794);
+        a.toggleFav.checked {
+          font-size: 15px;
+          color: rgba(8, 83, 8, 0.794);
           animation-duration: 0.3s;
           animation-name: roll;
           text-shadow: 0px 0px 3px green;
-      
         }
 
         input {
@@ -778,31 +777,57 @@ form.actor-sheet {
 // Styling specific to threat sheet
 
 form.actor-sheet.threat {
-
   input[type="checkbox"] {
     opacity: 0.01;
     position: relative;
-    left:-25px;
-    cursor:pointer;
+    left: -25px;
+    cursor: pointer;
+    top: 5px;
+    width: 10px;
   }
-  a.toggleFav{
+  a.toggleFav {
     color: grey;
     position: relative;
     font-size: 10px;
+    left: -4px;
   }
-  a.toggleFav.checked{
-    color:rgba(8, 83, 8, 0.794);
+  a.toggleFav.checked {
+    color: rgba(8, 83, 8, 0.794);
     text-shadow: 0px 0px 3px green;
-
+  }
+  span.inputsFav {
+    display: inline-block;
+    max-width: 40px;
   }
   div.skill-list-edit {
     display: grid;
+    justify-items: flex-end;
+    justify-content: center;
     grid-template-columns: repeat(3, 0.3fr);
+
     .skill-element-edit {
       display: flex;
-      justify-content: flex-end;
-      text-align: end;
-      
+      padding-right: 5px;
+      align-items: center;
+      span{
+        text-align: end;
+      }
+
+      span.inputsFav {
+        position: relative;
+        position: relative;
+    margin-left: 5px;
+        input[type="checkbox"],
+        a.toggleFav {
+          position: absolute;
+          left: 13px;
+          max-width: 30px;
+          top: -5px;
+          width: 10px;
+          margin: 0px;
+          background: white;
+        }
+      }
     }
   }
 
