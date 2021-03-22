@@ -160,6 +160,11 @@ function rollItemMacro(itemName) {
     case "heavyweapon":
       return item.weaponAttack();
       break;
+    case "psionicpower":
+    case "miracle":
+    case "spell":
+      return item.power();
+      break;
 
     default:
       return item.roll();
