@@ -36,7 +36,7 @@ const css = gulp.series(compileScss);
 /* ----------------------------------------- */
 
 function watchUpdates() {
-  gulp.watch(SYSTEM_SCSS, css);
+  gulp.watch(["scss/**/*.scss"], css);
 }
 
 /* ----------------------------------------- */
