@@ -117,6 +117,7 @@ export default class torgeternityItem extends Item {
       };
 
       // Assemble information needed by attack card
+      
       let cardData = {
          ...this.data,
          owner: this.actor.id,

@@ -7,7 +7,7 @@ import torgeternityActorSheet from "./module/sheets/torgeternityActorSheet.js";
 import { sheetResize } from "./module/sheetResize.js";
 import { preloadTemplates } from "./module/preloadTemplates.js";
 import { toggleViewMode } from "./module/viewMode.js";
-
+import * as torgchecks from "./module/torgchecks.js";
 import torgeternityCombat from "./module/dramaticScene/torgeternityCombat.js";
 import torgeternityCombatTracker from "./module/dramaticScene/torgeternityCombatTracker.js";
 import { alphabSort } from "./module/AlphabeticalSort.js";
@@ -96,36 +96,28 @@ Hooks.on("ready", function () {
 
 */
 });
+
 /* -------------------------------------------- */
 /*  Hotbar Macros                               */
 /* -------------------------------------------- */
 
-/**
- * Create a Macro from an Item drop.
- * Get an existing item macro if one exists, otherwise create a new one.
- * @param {Object} data     The dropped data
- * @param {number} slot     The hotbar slot to use
- * @returns {Promise}
- */
 async function createTorgEternityMacro(data, slot) {
   if (data.type !== "Item") return;
   if (!("data" in data))
     return ui.notifications.warn(
       "You can only create macro buttons for owned Items"
     );
-  const item = data.data;
-  console.log(item);
-
+  const itemData = data.data;
   // Create the macro command
-  const command = `game.torgeternity.rollItemMacro("${item.name}");`;
+  const command = `game.torgeternity.rollItemMacro("${itemData.name}");`;
   let macro = game.macros.entities.find(
-    (m) => m.name === item.name && m.command === command
+    (m) => m.name === itemData.name && m.command === command
   );
   if (!macro) {
     macro = await Macro.create({
-      name: item.name,
+      name: itemData.name,
       type: "script",
-      img: item.img,
+      img: itemData.img,
       command: command,
       flags: { "torgeternity.itemMacro": true },
     });
@@ -158,12 +150,46 @@ function rollItemMacro(itemName) {
     case "missileweapon":
     case "firearm":
     case "heavyweapon":
-      return item.weaponAttack();
+    case "heavyweapon":
+    var weaponData = item.data.data;
+    var skillData = item.actor.data.data.skills[weaponData.attackWith];
+    torgchecks.weaponAttack({
+        actor: item.actor,
+        item: item,
+        actorPic: item.actor.data.img,
+        skillName: weaponData.attackWith,
+        skillBaseAttribute: skillData.baseAttribute,
+        skillValue: skillData.value,
+        unskilledUse: skillData.unskilledUse,
+        strengthValue: item.actor.data.data.attributes.strength,
+        charismaValue: item.actor.data.data.attributes.charisma,
+        dexterityValue: item.actor.data.data.attributes.dexterity,
+        mindValue: item.actor.data.data.attributes.mind,
+        spiritValue: item.actor.data.data.attributes.spirit,
+        weaponName: item.data.name,
+        weaponDamageType: weaponData.damageType,
+        weaponDamage: weaponData.damage
+    })
       break;
     case "psionicpower":
     case "miracle":
     case "spell":
-      return item.power();
+      
+      
+      var powerData = item.data.data;
+      var skillData = item.actor.data.data.skills[powerData.skill];
+      console.log(powerData,skillData)
+      torgchecks.powerRoll({
+        actor: item.actor,
+        item: item,
+        actorPic: item.actor.data.img,
+        skillName: powerData.skill,
+        skillBaseAttribute: skillData.baseAttribute,
+        skillValue: skillData.value,
+        powerName: item.data.name,
+        powerAttack: powerData.isAttack,
+        powerDamage: powerData.damage,
+      });
       break;
 
     default:
