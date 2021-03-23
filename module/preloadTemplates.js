@@ -34,8 +34,36 @@ export const preloadTemplates = async function () {
 
         //active effect part: 
         "systems/torgeternity/templates/parts/active-effects.hbs",
-/*
-        //cards
+
+        //chatCards
+      "systems/torgeternity/templates/partials/activeDefense-card.hbs",
+        "systems/torgeternity/templates/partials/armor-card.hbs",
+        "systems/torgeternity/templates/partials/attack-card.hbs",
+        "systems/torgeternity/templates/partials/bonus-card.hbs",
+        "systems/torgeternity/templates/partials/enhancement-card.hbs",
+        "systems/torgeternity/templates/partials/eternityshard-card.hbs",
+        "systems/torgeternity/templates/partials/gear-card.hbs",
+        "systems/torgeternity/templates/partials/implant-card.hbs",
+        "systems/torgeternity/templates/partials/meleeweapon-card.hbs",
+        "systems/torgeternity/templates/partials/miracle-card.hbs",
+        "systems/torgeternity/templates/partials/perk-card.hbs",
+        "systems/torgeternity/templates/partials/possibility-card.hbs",
+        "systems/torgeternity/templates/partials/power-card.hbs",
+        "systems/torgeternity/templates/partials/psionicpower-card.hbs",
+        "systems/torgeternity/templates/partials/shield-card.hbs",
+        "systems/torgeternity/templates/partials/skill-card.hbs",
+        "systems/torgeternity/templates/partials/specialability-card.hbs",
+        "systems/torgeternity/templates/partials/skill-error-card.hbs",
+        "systems/torgeternity/templates/partials/spell-card.hbs",
+        "systems/torgeternity/templates/partials/up-card.hbs",
+        "systems/torgeternity/templates/partials/vehicle-card.hbs",
+
+
+
+
+
+
+/*          //cards
         "systems/torgeternity/templates/cards/actionCard.hbs",
         "systems/torgeternity/templates/cards/hand.hbs",
 */
