@@ -12,7 +12,7 @@ function handleError(err) {
   this.emit('end');
 }
 
-const SYSTEM_SCSS = ["scss/**/*.scss"];
+const SYSTEM_SCSS = ["scss/*.scss"];
 
 function compileScss() {
   // Configure options for sass output. For example, 'expanded' or 'nested'

@@ -68,17 +68,14 @@ form.actor-sheet {
   }
 }
 
+
 .inline-skill-item:after {
   content: ",";
-<<<<<<< HEAD
   position:relative;
   left:-2px;
   margin-right: 2px
-=======
-  position: relative;
-  left: 2px;
-  margin-right: 2px;
->>>>>>> 18ce967e2e1909422dc0d54fadb2a431409ed525
+
+
 }
 
 .inline-skill-item:last-child:after {
