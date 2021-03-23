@@ -1,7 +1,6 @@
 //------------remettre les compétence en ordre alphabétique
 
 export function alphabSort(html, data) {
-  console.log(data);
   if (data.actor.type === "stormknight") {
     let skillLists = document.getElementsByClassName("skill-list");
     for (let list of skillLists) {
@@ -49,7 +48,6 @@ export function alphabSort(html, data) {
     }
   }
   if (data.actor.type === "threat") {
-    console.log(data, "threat");
 
     let inlineSkillLists = document.getElementsByClassName("inline-skill-list");
     for (let list of inlineSkillLists) {
@@ -57,10 +55,8 @@ export function alphabSort(html, data) {
       let complist = [];
       for (let sk of spans) {
         if (sk.tagName == "SPAN") {
-          console.log(sk);
           complist.push(sk);
         }
-        console.log(complist);
 
         complist.sort(function (a, b) {
           if (a.firstElementChild.innerText && b.firstElementChild.innerText) {
@@ -81,10 +77,8 @@ export function alphabSort(html, data) {
       let complist = [];
       for (let sk of divs) {
         if (sk.tagName == "DIV") {
-          console.log(sk);
           complist.push(sk);
         }
-        console.log(complist);
 
         complist.sort(function (a, b) {
           if (a.firstElementChild.innerText && b.firstElementChild.innerText) {
@@ -104,10 +98,8 @@ export function alphabSort(html, data) {
       let complist = [];
       for (let sk of spans) {
         if (sk.tagName == "SPAN") {
-          console.log(sk);
           complist.push(sk);
         }
-        console.log(complist);
 
         complist.sort(function (a, b) {
           if (a.firstElementChild.innerText && b.firstElementChild.innerText) {

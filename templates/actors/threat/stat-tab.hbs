@@ -57,9 +57,10 @@
                     data-adds="{{content.adds}}" data-value="{{content.value}}"
                     data-unskilledUse="{{content.unskilledUse}}" data-name="{{localize (concatSkillName name)}}">
                     {{localize (concatSkillName name)}}
-                </a>
+                </a>{{#if content.isFav}}<a class="toggleFav checked"><i class="far fa-star"></i></a>{{/if}}
                 &nbsp;{{content.value}}
             </span>
+
             {{/if}}
             {{/each}}
         </span>
@@ -182,9 +183,17 @@
     <div class="skill-list-edit">
         {{#each data.skills as |skill key|}}
         <div class="skill-element-edit">
-            <span>{{localize (concatSkillName key)}} </span>
-            <input name="data.skills.{{key}}.value" type="number" class="small-input"
-                value="{{skill.value}}" data-dtype="Number" />
+            <span style="position:relative">{{localize (concatSkillName key)}}
+            </span>
+            <span class="inputsFav">
+                <input name="data.skills.{{key}}.value" type="number" class="small-input" value="{{skill.value}}"
+                    data-dtype="Number" />
+
+                <a class="toggleFav {{#if skill.isFav}}checked
+                        {{/if}}"><i class="far fa-star"></i></a>
+                <input class="favCheck" type="checkbox" name="data.skills.{{key}}.isFav" {{checked skill.isFav}}
+                    data-dtype="Boolean" />
+            </span>
         </div>
         {{/each}}
     </div>

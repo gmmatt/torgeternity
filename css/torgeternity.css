@@ -1846,12 +1846,15 @@ form.actor-sheet.threat input[type="checkbox"] {
   position: relative;
   left: -25px;
   cursor: pointer;
+  top: 5px;
+  width: 10px;
 }
 
 form.actor-sheet.threat a.toggleFav {
   color: grey;
   position: relative;
   font-size: 10px;
+  left: -4px;
 }
 
 form.actor-sheet.threat a.toggleFav.checked {
@@ -1859,15 +1862,43 @@ form.actor-sheet.threat a.toggleFav.checked {
   text-shadow: 0px 0px 3px green;
 }
 
+form.actor-sheet.threat span.inputsFav {
+  display: inline-block;
+  max-width: 40px;
+}
+
 form.actor-sheet.threat div.skill-list-edit {
   display: grid;
+  justify-items: flex-end;
+  justify-content: center;
   grid-template-columns: repeat(3, 0.3fr);
 }
 
 form.actor-sheet.threat div.skill-list-edit .skill-element-edit {
   display: flex;
-  justify-content: flex-end;
+  padding-right: 5px;
+  align-items: center;
+}
+
+form.actor-sheet.threat div.skill-list-edit .skill-element-edit span {
   text-align: end;
+}
+
+form.actor-sheet.threat div.skill-list-edit .skill-element-edit span.inputsFav {
+  position: relative;
+  position: relative;
+  margin-left: 5px;
+}
+
+form.actor-sheet.threat div.skill-list-edit .skill-element-edit span.inputsFav input[type="checkbox"],
+form.actor-sheet.threat div.skill-list-edit .skill-element-edit span.inputsFav a.toggleFav {
+  position: absolute;
+  left: 13px;
+  max-width: 30px;
+  top: -5px;
+  width: 10px;
+  margin: 0px;
+  background: white;
 }
 
 form.actor-sheet.threat td {
