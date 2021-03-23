@@ -19,6 +19,9 @@ and returns either flat damages or damages based on any chosen attribute-plus-bo
 not correctly displaying attributes on SK sheets.
 - Fixed an issue where spells were not rollable.
 - Updated appearance of threat sheets.
+- Draggable macros! Players can drag any perk, gear, weapon, power, etc. onto the macro
+hotbar for easier access during play. (Thanks again, @rwan for this and the combat tracker
+update!)
 
 v. 0.92.1
 
