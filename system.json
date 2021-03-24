@@ -33,12 +33,6 @@
       "manifest": "https://github.com/spacemandev-git/fvtt-card-support",
     }
   ],
-  "dependencies": [
-    {
-      "name": "cardsupport",
-      "type": "module"
-    }
-  ],
   "languages": [
     {
       "lang": "en",
