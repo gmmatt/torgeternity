@@ -7,18 +7,20 @@ import torgeternityActorSheet from "./module/sheets/torgeternityActorSheet.js";
 import { sheetResize } from "./module/sheetResize.js";
 import { preloadTemplates } from "./module/preloadTemplates.js";
 import { toggleViewMode } from "./module/viewMode.js";
-
-
+import * as torgchecks from "./module/torgchecks.js";
 import torgeternityCombat from "./module/dramaticScene/torgeternityCombat.js";
 import torgeternityCombatTracker from "./module/dramaticScene/torgeternityCombatTracker.js";
+import { alphabSort } from "./module/AlphabeticalSort.js";
 
 Hooks.once("init", async function () {
   console.log("torgeternity | Initializing Torg Eternity System");
 
   //-------global
+  game.torgeternity = {
+    rollItemMacro,
+  };
 
   CONFIG.torgeternity = torgeternity;
-
   CONFIG.Item.entityClass = torgeternityItem;
   CONFIG.Actor.entityClass = torgeternityActor;
   CONFIG.statusEffects = torgeternity.statusEffects;
@@ -44,7 +46,7 @@ Hooks.once("init", async function () {
 
   //----------debug hooks
   CONFIG.debug.hooks = true;
-/*
+  /*
   //----socket receiver
   game.socket.on("system.torgeternity", (data) => {
     if (data.msg == "cardPlayed") {
@@ -61,7 +63,6 @@ Hooks.once("init", async function () {
     }
   });
 */
-
 });
 
 //-------------once everything ready
@@ -71,7 +72,11 @@ Hooks.on("ready", function () {
   var logo = document.getElementById("logo");
   logo.style.position = "absolute";
   logo.setAttribute("src", "/systems/torgeternity/images/vttLogo.webp");
-/*
+
+  Hooks.on("hotbarDrop", (bar, data, slot) =>
+    createTorgEternityMacro(data, slot)
+  );
+  /*
 
   //-----applying players card ui:
   if (game.user.data.role == false || game.user.data.role != 4) {
@@ -91,6 +96,107 @@ Hooks.on("ready", function () {
 
 */
 });
+
+/* -------------------------------------------- */
+/*  Hotbar Macros                               */
+/* -------------------------------------------- */
+
+async function createTorgEternityMacro(data, slot) {
+  if (data.type !== "Item") return;
+  if (!("data" in data))
+    return ui.notifications.warn(
+      "You can only create macro buttons for owned Items"
+    );
+  const itemData = data.data;
+  // Create the macro command
+  const command = `game.torgeternity.rollItemMacro("${itemData.name}");`;
+  let macro = game.macros.entities.find(
+    (m) => m.name === itemData.name && m.command === command
+  );
+  if (!macro) {
+    macro = await Macro.create({
+      name: itemData.name,
+      type: "script",
+      img: itemData.img,
+      command: command,
+      flags: { "torgeternity.itemMacro": true },
+    });
+  }
+  game.user.assignHotbarMacro(macro, slot);
+  return false;
+}
+
+/**
+ * Create a Macro from an Item drop.
+ * Get an existing item macro if one exists, otherwise create a new one.
+ * @param {string} itemName
+ * @return {Promise}
+ */
+function rollItemMacro(itemName) {
+  const speaker = ChatMessage.getSpeaker();
+  let actor;
+  if (speaker.token) actor = game.actors.tokens[speaker.token];
+  if (!actor) actor = game.actors.get(speaker.actor);
+  const item = actor ? actor.items.find((i) => i.name === itemName) : null;
+  if (!item)
+    return ui.notifications.warn(
+      `Your controlled Actor does not have an item named ${itemName}`
+    );
+
+  // Trigger the item roll
+  switch (item.data.type) {
+    case "customAttack":
+    case "meleeweapon":
+    case "missileweapon":
+    case "firearm":
+    case "heavyweapon":
+    case "heavyweapon":
+    var weaponData = item.data.data;
+    var skillData = item.actor.data.data.skills[weaponData.attackWith];
+    torgchecks.weaponAttack({
+        actor: item.actor,
+        item: item,
+        actorPic: item.actor.data.img,
+        skillName: weaponData.attackWith,
+        skillBaseAttribute: skillData.baseAttribute,
+        skillValue: skillData.value,
+        unskilledUse: skillData.unskilledUse,
+        strengthValue: item.actor.data.data.attributes.strength,
+        charismaValue: item.actor.data.data.attributes.charisma,
+        dexterityValue: item.actor.data.data.attributes.dexterity,
+        mindValue: item.actor.data.data.attributes.mind,
+        spiritValue: item.actor.data.data.attributes.spirit,
+        weaponName: item.data.name,
+        weaponDamageType: weaponData.damageType,
+        weaponDamage: weaponData.damage
+    })
+      break;
+    case "psionicpower":
+    case "miracle":
+    case "spell":
+      
+      
+      var powerData = item.data.data;
+      var skillData = item.actor.data.data.skills[powerData.skill];
+      console.log(powerData,skillData)
+      torgchecks.powerRoll({
+        actor: item.actor,
+        item: item,
+        actorPic: item.actor.data.img,
+        skillName: powerData.skill,
+        skillBaseAttribute: skillData.baseAttribute,
+        skillValue: skillData.value,
+        powerName: item.data.name,
+        powerAttack: powerData.isAttack,
+        powerDamage: powerData.damage,
+      });
+      break;
+
+    default:
+      return item.roll();
+  }
+}
+
 //----all this could be draft in another imported module ?? maybe like ./modules/handlebarsHelpers.js
 
 Handlebars.registerHelper("concatSkillValue", function (skillName) {
@@ -113,4 +219,17 @@ Handlebars.registerHelper("concatClearanceLevel", function (clearance) {
   return localClearance;
 });
 
+Handlebars.registerHelper("concatSpecialAbility", function (description) {
+  // Removes <p> and </p> from the beginning and end of special ability descriptions so that they appear inline on threat sheet
+  if (description.startsWith("<p>")) {
+    var updatedDescription;
+    var endPoint = description.length;
+    updatedDescription = description.substr(3, endPoint);
+    return updatedDescription;
+  } else {
+    return description;
+  }
+});
+
 Hooks.on("renderChatLog", (app, html, data) => Chat.addChatListeners(html));
+Hooks.on("renderActorSheet", (app, html, data) => alphabSort(html, data));

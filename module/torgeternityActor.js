@@ -4,7 +4,14 @@ export default class torgeternityActor extends Actor {
     
     prepareBaseData() {
            
-        if (this._data.type === "stormknight") {        
+        if (this._data.type === "stormknight") { 
+          mergeObject(this.data.token, {
+           
+            actorLink: true,
+            disposition: 1
+          }, {overwrite: true});
+          
+
             var skillset = this.data.data.skills;
 
             // Derive Skill values for Storm Knights
@@ -200,5 +207,6 @@ export default class torgeternityActor extends Actor {
             }
         }
     }
+
 
 }

@@ -100,6 +100,10 @@ export function weaponAttack ({
    skillValue= null,
    unskilledUse = null,
    strengthValue = null,
+   charismaValue = null,
+   dexterityValue = null,
+   mindValue = null,
+   spiritValue = null,
    weaponName = null,
    weaponDamageType = null,
    weaponDamage = null,
@@ -117,6 +121,10 @@ export function weaponAttack ({
       skillValue: skillValue,
       unskilledUse: unskilledUse,
       strengthValue: strengthValue,
+      charismaValue: charismaValue,
+      dexterityValue: dexterityValue,
+      mindValue: mindValue,
+      spiritValue: spiritValue,
       testType: "attack",
       weaponName: weaponName,
       weaponDamageType: weaponDamageType,
@@ -140,6 +148,14 @@ export function weaponAttack ({
       test.damage = test.weaponDamage
    } else if (test.weaponDamageType === "strengthPlus") {
       test.damage = parseInt(test.strengthValue) + parseInt(test.weaponDamage)
+   } else if (test.weaponDamageType === "charismaPlus") {
+      test.damage = parseInt(test.charismaValue) + parseInt(test.weaponDamage)
+   } else if (test.weaponDamageType === "dexterityPlus") {
+      test.damage = parseInt(test.dexterityValue) + parseInt(test.weaponDamage)
+   } else if (test.weaponDamageType === "mindPlus") {
+      test.damage = parseInt(test.mindValue) + parseInt(test.weaponDamage)
+   } else if (test.weaponDamageType === "spiritPlus") {
+      test.damage = parseInt(test.spiritValue) + parseInt(test.weaponDamage)
    } else {
       test.damage = test.weaponDamage
    }
@@ -360,19 +376,19 @@ export function renderSkillChat(test) {
    
    // Label as Skill vs Attribute Test and turn on BD option if needed
    if (test.testType === "skill") {
-      test.typeLabel = "Skill",
+      test.typeLabel = `${game.i18n.localize("torgeternity.chatText.skillTestLabel")}`,
       test.bdStyle = "display:none"
    } else if (test.testType === "attack") {
-      test.typeLabel = "Skill"
+      test.typeLabel = `${game.i18n.localize("torgeternity.chatText.skillTestLabel")}`
    } else if (test.testType === "power") {
-      test.typeLabel = "Skill";
+      test.typeLabel = `${game.i18n.localize("torgeternity.chatText.skillTestLabel")}`;
       if (test.powerAttack === "true") {
          test.bdStyle = "display:"
       } else {
          test.bdStyle = "display:none"
       }
    } else {
-      test.typeLabel = "Attribute"
+      test.typeLabel = `${game.i18n.localize("torgeternity.chatText.attributeTestLabel")}`
       test.bdStyle = "display:none"
    }
 

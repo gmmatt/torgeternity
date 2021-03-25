@@ -32,7 +32,7 @@ export default class torgeternityItem extends Item {
          ...this.data,
          owner: this.actor.id
       };
-
+      
       chatData.content = await renderTemplate(this.chatTemplate[this.type], cardData);
 
       chatData.roll = true;
@@ -117,6 +117,7 @@ export default class torgeternityItem extends Item {
       };
 
       // Assemble information needed by attack card
+      
       let cardData = {
          ...this.data,
          owner: this.actor.id,

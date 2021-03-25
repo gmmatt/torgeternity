@@ -8,13 +8,20 @@
 For manual installation, use the provided manifest URL in the "*Install System*" popup window 
 while managing game systems.
 
-v. 0.92.2
+v. 0.92.3
 - Combat tracker update - multiple customizations to combat tracker. You can now sort
 combatants by heroes/villains. Conditions for each combatant now shown. Combatant can
 be checked off once they have finished their turn.
+- New entity called "Custom Attack." You can now specify an attack that rolls any skill
+and returns either flat damages or damages based on any chosen attribute-plus-bonus.
 - Changed some fonts in UI; updated UI appearance
 - Fixed an issue where some sheets creted under very early versions of the TE system were
 not correctly displaying attributes on SK sheets.
+- Fixed an issue where spells were not rollable.
+- Updated appearance of threat sheets.
+- Draggable macros! Players can drag any perk, gear, weapon, power, etc. onto the macro
+hotbar for easier access during play. (Thanks again, @rwan for this and the combat tracker
+update!)
 
 v. 0.92.1
 

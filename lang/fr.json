@@ -1,5 +1,5 @@
 {
-    "torgeternity":{
+    "torgeternity": {
         "attributes": {
             "charisma": "Charisme",
             "dexterity": "Dexterité",
@@ -50,50 +50,51 @@
             "willpower": "Volonté"
         },
         "skills-nocap": {
-            "airVehicles": "Véhicules aériens",
+            "airVehicles": "véhicules aériens",
             "alteration": "altération",
-            "apportation": "Cinétique",
+            "apportation": "cinétique",
             "beastRiding": "Equitation",
-            "computers": "Informatique",
+            "computers": "informatique",
             "conjuration": "conjuration",
             "divination": "divination",
-            "dodge": "Esquive",
-            "energyWeapons": "Armes à énergie",
-            "evidenceAnalysis": "Analyse d'indices",
-            "faith": "Foi",
-            "find": "Observation",
-            "fireCombat": "Armes à feu",
-            "firstAid": "Premiers soins",
-            "heavyWeapons": "Armes lourdes",
+            "dodge": "esquive",
+            "energyWeapons": "armes à énergie",
+            "evidenceAnalysis": "analyse d'indices",
+            "faith": "foi",
+            "find": "observation",
+            "fireCombat": "armes à feu",
+            "firstAid": "premiers soins",
+            "heavyWeapons": "armes lourdes",
             "intimidation": "intimidation",
-            "kinesis": "Kinésie",
-            "landVehicles": "Véhicules terrestres",
+            "kinesis": "kinésie",
+            "landVehicles": "véhicules terrestres",
             "language": "langue",
-            "lockpicking": "Crochetage",
-            "maneuver": "Manoeuvre",
-            "medicine": "Médecine",
-            "meleeWeapons": "Armes de mêlée",
-            "missileWeapons": "Armes de jet",
+            "lockpicking": "crochetage",
+            "maneuver": "manoeuvre",
+            "medicine": "médecine",
+            "meleeWeapons": "armes de mêlée",
+            "missileWeapons": "armes de jet",
             "persuasion": "persuasion",
             "precognition": "précognition",
             "profession": "profession",
-            "reality": "Réalité",
-            "scholar": "Sciences humaines",
-            "science": "Science",
-            "stealth": "Discrétion",
-            "streetwise": "Débrouillardise",
-            "survival": "Survie",
-            "taunt": "Provocation",
+            "reality": "réalité",
+            "scholar": "sciences humaines",
+            "science": "science",
+            "stealth": "discrétion",
+            "streetwise": "débrouillardise",
+            "survival": "survie",
+            "taunt": "provocation",
             "telepathy": "Télépathie",
-            "tracking": "Pistage",
-            "trick": "Ruse",
-            "unarmedCombat": "Combat à mains nues",
-            "waterVehicles": "Véhicules aquatiques",
-            "willpower": "Volonté"
+            "tracking": "pistage",
+            "trick": "ruse",
+            "unarmedCombat": "combat à mains nues",
+            "waterVehicles": "véhicules aquatiques",
+            "willpower": "volonté"
         },
-        "gear":{
-            "description":"Description",
+        "gear": {
+            "description": "Description",
             "techlevel": "Axiome Tech",
+            "tl": "Tech",
             "price": "Prix",
             "value": "Valeur",
             "damageType": "Type de dommage",
@@ -112,26 +113,31 @@
             "wounds": "Bles",
             "toughness": "Résist",
             "possibilities": "Possibilités",
+            "poss": "Poss",
             "tappingDifficulty": "Difficulté d'activation",
+            "tappingDifficultyAbbr": "Diff",
             "purpose": "Vocation",
             "powers": "Pouvoirs",
-            "restrictions": "Restrictions"
+            "restrictions": "Restrictions",
+            "minStrength": "Force min"
         },
-        "stats":{
+        "stats": {
             "wounds": "Blessures",
             "shock": "Chocs",
-            "possibilities": "Possibilités"
+            "possibilities": "Possibilités",
+            "description": "Description"
         },
-        "perks":{
+        "perks": {
             "category": "Categorie",
             "cosm": "Cosm",
             "prerequisites": "Prérequis",
             "timestaken": "Temps requis",
             "description": "Description"
         },
-        "enhancements":{
+        "enhancements": {
             "perk": "Atout associé",
-            "description": "Description"
+            "description": "Description",
+            "enhances": "Améliore"
         },
         "powers": {
             "axiom": "Axiome",
@@ -143,8 +149,9 @@
             "duration": "Durée",
             "damage": "Dommage",
             "description": "Description",
-            "good": "Succès supérieur",
-            "outstanding": "Succès spectaculaire"
+            "good": "Supérieur",
+            "outstanding": "Spectaculaire",
+            "attack": "Attaque"
         },
         "cosms": {
             "none": "(Non)",
@@ -155,7 +162,8 @@
             "cyberpapacy": "Cyberpapauté",
             "tharkold": "Tharkold",
             "panPacifica": "Pan Pacifica",
-            "orrorsh": "Orrorsh"
+            "orrorsh": "Orrorsh",
+            "tharkhold": "Tharkhold"
         },
         "perkTypes": {
             "cyberware": "Cybertechnologie",
@@ -175,26 +183,33 @@
             "psionics": "Psioniques",
             "pulpPowers": "Pouvoirs Pulps",
             "reality": "Réalité",
-            "savagery":"Sauvagerie",
+            "savagery": "Sauvagerie",
             "social": "Social",
-            "spellcraft": "Arts magiques"
+            "spellcraft": "Arts magiques",
+            "racial": "Racial"
         },
         "sheetLabels": {
-            "stats": "Stats",
+            "stormknight": "Chevalier des tempêtes",
+            "stats": "Caracs",
             "perks": "Atouts",
-            "gear": "Equipement",
+            "perksAbilities": "Atouts/Capa.",
+            "gear": "Équipement",
             "powers": "Pouvoirs",
             "effects": "Effets",
             "background": "Historique",
+            "backgroundDescription": "Description",
+            "backgroundAndNotes": "Historique et notes",
             "enhancements": "Améliorations",
-            "generalGear": "Equipement général",
+            "generalGear": "Équipement général",
             "armor": "Armure",
+            "shield": "Bouclier",
             "shields": "Boucliers",
             "meleeWeapons": "Armes de mêlée",
             "missileWeapons": "Armes de jet",
             "firearms": "Armes à feu",
             "implants": "Implants",
             "heavyWeapons": "Armes lourdes",
+            "explosives": "Explosifs",
             "vehicles": "Véhicules",
             "spells": "Sortilèges",
             "miracles": "Miracles",
@@ -202,10 +217,11 @@
             "specialAbility": "Capacité spéciale",
             "threat": "Menace",
             "skills": "Compétences",
+            "favorite":"Favorisée",
             "possibilitypotential": "Possibilités (Potentielle)",
             "possibilities": "Possibilités",
             "up": "Un de plus",
-            "equipment": "Equipement",
+            "equipment": "Équipement",
             "specialabilities": "Capacités spéciales",
             "wounds": "Blessures",
             "shock": "Chocs",
@@ -213,6 +229,7 @@
             "move": "Déplacement",
             "run": "Course",
             "toughness": "Résistance",
+            "tough": "Rés",
             "magic": "Magie",
             "social": "Social",
             "spirit": "Spirituel",
@@ -220,19 +237,22 @@
             "attribute": "Attribut",
             "adds": "Adds",
             "total": "Total",
-            "defenses": "Defenses",
+            "defenses": "Défenses",
+            "activeDefense": "Défense active",
             "melee": "Mêlée",
             "unarmed": "Mains nues",
-            "xp": "XP",
+            "xp": "PX",
             "unspent": "Disponibles",
             "earned": "Total",
             "clearance": "Habilitation",
             "race": "Race",
             "weapons": "Armes",
+            "attacks": "Attaques",
             "armorAndShields": "Armures et boucliers",
             "other": "Autres",
             "spell": "Sortilège",
             "miracle": "Miracle",
+            "psionic": "Psionique",
             "psionicPower": "Psionique",
             "abilities": "Capacités",
             "implant": "Implant",
@@ -240,16 +260,21 @@
             "vehicle": "Véhicule",
             "enhancement": "Amélioration",
             "details": "Details",
-            "goodResult": "Succès supérieur",
-            "outstandingResult": "Succès spécatulaire",
+            "goodResult": "Résultat supérieur",
+            "outstandingResult": "Résultat spectaculaire",
             "effectCreate": "Créer Effet",
-            "add": "Add"
-
+            "add": "Add",
+            "derivedValues": "Valeurs dérivées",
+            "tempEffects": "Effets temporaires",
+            "passiveEffects": "Effets passifs",
+            "inactiveEffects": "Effects inactifs",
+            "source": "Source",
+            "otherAttacks": "Autres"
         },
         "itemSheetDescriptions": {
             "perk": "Atout",
             "enhancement": "Amélioration",
-            "generalGear": "Equipement",
+            "generalGear": "Équipement",
             "eternityshard": "Fragment d'éternité",
             "armor": "Armure",
             "shield": "Bouclier",
@@ -258,12 +283,14 @@
             "firearm": "Armes à feu",
             "implant": "Implant",
             "heavyWeapon": "Armes lourdes",
+            "explosive": "Explosif",
             "vehicle": "Véhicule",
             "spell": "Sortilège",
             "miracle": "Miracle",
             "psionicpower": "Psionique",
             "specialability": "Capacité spéciale",
-            "other": "Equipement général"
+            "other": "Équipement général",
+            "customAttack": "Attaque personnalisée"
         },
         "attackTypes": {
             "unarmedCombat": "Combat à mains nues",
@@ -272,7 +299,7 @@
             "fireCombat": "Armes à feu",
             "energyWeapons": "Armes à énergie",
             "heavyWeapons": "Armes lourdes"
-         },
+        },
         "powerSkills": {
             "alteration": "Altération",
             "apportation": "Cinétique",
@@ -284,8 +311,12 @@
             "faith": "Foi"
         },
         "damageTypes": {
+            "flat": "Fixe",
             "strengthPlus": "Force +",
-            "flat": "Fixe"
+            "charismaPlus": "Charisme +",
+            "dexterityPlus": "Dextérité +",
+            "mindPlus": "Raison +",
+            "spiritPlus": "Esprit +"
         },
         "clearances": {
             "alpha": "Alpha",
@@ -300,7 +331,8 @@
             "edeinos": "Edeinos",
             "elf": "Elfe",
             "aspirants": "Aspirants",
-            "theRace": "La Race"
+            "theRace": "La Race",
+            "other": "Autre"
         },
         "stymiedStates": {
             "none": "non Déstabilisé",
@@ -323,10 +355,32 @@
             "malfunction": "Défaillance",
             "restrained": "Entravé"
         },
-
         "yesNo": {
             "true": "Oui",
             "false": "Non"
+        },
+        "chatText": {
+            "possibility": "Possibilité",
+            "hero": "Héros",
+            "heroCard": "Carte Héros",
+            "drama": "Action",
+            "dramaCard": "Carte Action",
+            "bonusCard": "Carte +3",
+            "bonusDamage": "Dommages bonus",
+            "up": "Un de plus!",
+            "bonusDice": "DB",
+            "actionTotal": "Total d'action",
+            "skillTestLabel": "Valeur de compétence",
+            "attributeTestLabel": "Valeur d'attribut",
+            "dieTotal": "Total du dé",
+            "unskilled": "Incompétence",
+            "possibleDisconnect": "Déconnexion possible",
+            "damage": "Dommages",
+            "bonus": "Bonus",
+            "modifiers": "Modifiers",
+            "attack": "Attaque",
+            "baseDamage": "Dommages de base",
+            "value": "Valeur"
         }
     }
 }

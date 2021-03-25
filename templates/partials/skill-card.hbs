@@ -7,22 +7,22 @@
         <td>
             <div width=100%>
                 <p class="skill-chat-title">{{chatTitle}}</p>
-                <p class="skill-unskilled-label" style="{{unskilledLabel}}">Unskilled</div>
+                <p class="skill-unskilled-label" style="{{unskilledLabel}}">{{localize 'torgeternity.chatText.unskilled'}}</div>
             </div>
         </td>
     </tr>
     </table>
     <div class="chat-text" style="padding:0px">
         <p class="skill-roll-result">{{resultText}}</p>
-        <p class="skill-roll-action-label" style="{{actionTotalLabel}}">Action Total</p>
-        <p class="skill-roll-disconnect-label" style="{{disconnectLabel}}">Possible Disconnect</p>
+        <p class="skill-roll-action-label" style="{{actionTotalLabel}}">{{localize 'torgeternity.chatText.actionTotal'}}</p>
+        <p class="skill-roll-disconnect-label" style="{{disconnectLabel}}">{{localize 'torgeternity.chatText.possibleDisconnect'}}</p>
         <p class="skill-roll-damage-label" style="{{damageLabel}}">
-            {{damage}} Damage
+            {{damage}} {{localize 'torgeternity.chatText.damage'}}
         </p>
         <table class="skill-roll-table">
             <tr>
                 <td class="skill-roll-table-1">
-                    {{typeLabel}} Value:
+                    {{typeLabel}}:
                 </td>
                 <td class="skill-roll-table-2">
                     {{skillValue}}
@@ -31,7 +31,7 @@
 
             <tr style="border:1px solid black">
                 <td style="background:white">
-                    Die Total {{combinedRollTotal}}
+                    {{localize 'torgeternity.chatText.dieTotal'}} {{combinedRollTotal}}
                 </td>
                 <td style="background:white">
                 </td>
@@ -39,7 +39,7 @@
 
             <tr>
                 <td class="skill-roll-table-1">
-                    Bonus:
+                    {{localize 'torgeternity.chatText.bonus'}}:
                 </td>
                 <td class="skill-roll-table-2">
                     <div><span style="{{bonusPlusLabel}}">+</span>{{bonus}}</div>
@@ -48,7 +48,7 @@
 
             <tr style="{{modifierLabel}}">
                 <td class="skill-roll-table-1">
-                    Modifiers:
+                    {{localize 'torgeternity.chatText.modifiers'}}:
                 </td>
                 <td class="skill-roll-table-2">
                     <div title="{{modifierText}}" style="display:block">{{modifiers}}</div>
@@ -57,7 +57,7 @@
 
             <tr style="{{cardsPlayedLabel}}">
                 <td class="skill-roll-table-1">
-                    +3 Cards:
+                    {{localize 'torgeternity.chatText.bonusCard'}}:
                 </td>
                 <td class="skill-roll-table-2">
                     <div style="display:">{{cardsPlayed}}</div>
@@ -91,7 +91,7 @@
                 data-damage = "{{damage}}"
                 data-power-attack="{{powerAttack}}"
             >
-            Possibility
+            {{localize 'torgeternity.chatText.possibility'}}
             </a>
             &nbsp;&bull;&nbsp;
             <a class="roll-up"
@@ -118,7 +118,7 @@
                 data-damage = "{{damage}}"
                 data-power-attack="{{powerAttack}}"            
             >
-            Up
+            {{localize 'torgeternity.chatText.up'}}
             </a>
             <span style="{{heroStyle}}">&nbsp;&bull;&nbsp;</span>
             <a class="roll-hero"
@@ -145,7 +145,7 @@
                 data-damage = "{{damage}}"
                 data-power-attack="{{powerAttack}}"
              >
-             Hero
+             {{localize 'torgeternity.chatText.hero'}}
              </a>
             <span style="{{heroStyle}}">&nbsp;&bull;&nbsp;</span>
             <a class="roll-drama"
@@ -172,7 +172,7 @@
                 data-damage = "{{damage}}"
                 data-power-attack = "{{powerAttack}}"            
             >
-            Drama
+            {{localize 'torgeternity.chatText.drama'}}
             </a>
             <span style="{{dramaStyle}}">&nbsp;&bull;&nbsp;</span>
             <a class="add-plus3"
@@ -199,7 +199,7 @@
                 data-damage = "{{damage}}"            
                 data-power-attack = "{{powerAttack}}"            
             >
-            +3 Card
+            {{localize 'torgeternity.chatText.bonusCard'}}
             </a>
             <span style="{{bdStyle}}">&nbsp;&bull;&nbsp;</span>
             <a class="add-bd"
@@ -225,7 +225,7 @@
                 data-cards-played = "{{cardsPlayed}}"
                 data-damage = "{{damage}}"
                 data-power-attack = "{{powerAttack}}"                        >
-                BD
+                {{localize 'torgeternity.chatText.bonusDice'}}
             </a>
         </div>
     </div>

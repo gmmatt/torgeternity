@@ -1,4 +1,5 @@
 node_modules
 .gitconfig
-*.zip
 images/cardsImages
+images/cards
+images/characters

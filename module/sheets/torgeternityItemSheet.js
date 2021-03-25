@@ -36,7 +36,9 @@ export default class torgeternityItemSheet extends ItemSheet {
             case "shield":
                 this.options.height = this.position.height = 615;
                 break;
-                
+            case "customAttack":
+                this.options.height = this.position.height = 615;
+                break;
             default:
                 this.options.height = this.position.height = 560;
         }

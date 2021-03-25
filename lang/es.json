@@ -143,8 +143,8 @@
             "duration": "Duración",
             "damage": "Daño (si aplica)",
             "description": "Descripción",
-            "good": "Buen Resultado",
-            "outstanding": "Resultado Espectacular"
+            "good": "Buen",
+            "outstanding": "Espectacular"
         },
         "cosms": {
             "none": "(Ninguno)",

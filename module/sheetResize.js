@@ -6,7 +6,7 @@ export function sheetResize() {
             for (let entry of entries) {
                 const cr = entry.contentRect;
                 
-                if (cr.width<510 ||cr.height<700){
+                if (cr.width<510 ||cr.height<650){
                     sheet.classList.add("compact")
                 }else{
                     sheet.classList.remove("compact");

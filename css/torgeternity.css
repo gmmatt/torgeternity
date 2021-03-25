@@ -806,12 +806,25 @@ div#sidebar.collapsed {
   background-color: rgba(255, 255, 255, 0.575);
 }
 
+.chat-message table td {
+  padding: 0px 0px;
+}
+
+.chat-message .item-description-chat {
+  font-family: Palatino;
+}
+
+.chat-message .chat-title {
+  font-family: Alaska;
+  font-size: 18px;
+}
+
 .chat-message .skill-chat-title {
   font-size: 20px;
   padding: 0px;
   margin: 0px;
   text-align: center;
-  font-family: "Palatino Linotype";
+  font-family: Alaska;
 }
 
 .chat-message .skill-unskilled-label {
@@ -1049,10 +1062,6 @@ div#sidebar.collapsed {
   font-size: 12px;
 }
 
-form.actor-sheet {
-  padding: 10px;
-}
-
 form.actor-sheet .actor-type {
   background: url(../images/separatorRound.webp);
   position: absolute;
@@ -1087,10 +1096,22 @@ form.actor-sheet header input[name="name"] {
   color: #0e0909;
 }
 
+.inline-skill-item:after {
+  content: ",";
+  position: relative;
+  left: -2px;
+  margin-right: 2px;
+}
+
+.inline-skill-item:last-child:after {
+  content: "";
+}
+
 .window-content .actor-sheet {
   color: black;
   font-family: Palatino;
   font-size: 12px;
+  line-height: 14px;
 }
 
 .window-content .actor-sheet .threat-stat-line {
@@ -1118,7 +1139,7 @@ form.actor-sheet header input[name="name"] {
   display: grid;
   grid-template-columns: repeat(8, 1fr);
   grid-template-rows: 0.3fr 0.2fr 0.2fr 0.13fr 0.3fr 0.3fr;
-  grid-gap: 5px;
+  grid-gap: 0px 5px;
   justify-content: center;
   width: 100%;
   height: 100%;
@@ -1136,6 +1157,7 @@ form.actor-sheet header input[name="name"] {
   box-shadow: 2px 2px 15px #9e9686;
   transition: all 0.3s cubic-bezier(0.6, -0.07, 0.56, 1.52) 0.2s;
   overflow: scroll;
+  padding: 0px;
 }
 
 .window-content .actor-sheet div.block:hover {
@@ -1181,6 +1203,11 @@ form.actor-sheet header input[name="name"] {
   width: 20px;
   height: 20px;
   text-align: center;
+}
+
+.window-content .actor-sheet input[type="number"],
+.window-content .actor-sheet input[type="text"] {
+  font-family: Palatino;
 }
 
 .window-content .actor-sheet input[name="name"] {
@@ -1238,6 +1265,7 @@ form.actor-sheet header input[name="name"] {
   text-shadow: 0px 0px 15px black;
   text-transform: uppercase;
   font-weight: bold;
+  margin: 0 0 0rem;
 }
 
 .window-content .actor-sheet h1 {
@@ -1326,8 +1354,8 @@ form.actor-sheet header input[name="name"] {
 }
 
 .window-content .actor-sheet .sheet-header img {
-  max-width: 100%;
-  max-height: 90px;
+  max-width: 64px;
+  max-height: 64px;
 }
 
 .window-content .actor-sheet .sheet-header .axioms {
@@ -1353,6 +1381,7 @@ form.actor-sheet header input[name="name"] {
   border-bottom: 1px solid grey;
   max-height: 20px;
   font-size: 0.9em;
+  font-family: Palatino;
 }
 
 .window-content .actor-sheet .sheet-header select:active,
@@ -1376,6 +1405,7 @@ form.actor-sheet header input[name="name"] {
   border-radius: 50%;
   background: url(../images/roundBack.webp);
   background-size: cover;
+  font-family: Palatino;
 }
 
 .window-content .actor-sheet .sheet-header h1 {
@@ -1473,6 +1503,31 @@ form.actor-sheet header input[name="name"] {
   flex-direction: row;
   justify-content: space-around;
   border-bottom: 1px solid grey;
+  position: relative;
+}
+
+.window-content .actor-sheet .skills ul li input[type="checkbox"] {
+  opacity: 0.01;
+  position: relative;
+  left: -25px;
+  cursor: pointer;
+}
+
+.window-content .actor-sheet .skills ul li a.toggleFav {
+  color: grey;
+  position: relative;
+  font-size: 10px;
+  top: -4px;
+}
+
+.window-content .actor-sheet .skills ul li a.toggleFav.checked {
+  font-size: 15px;
+  color: rgba(8, 83, 8, 0.794);
+  -webkit-animation-duration: 0.3s;
+  animation-duration: 0.3s;
+  -webkit-animation-name: roll;
+  animation-name: roll;
+  text-shadow: 0px 0px 3px green;
 }
 
 .window-content .actor-sheet .skills ul li input {
@@ -1784,6 +1839,66 @@ form.actor-sheet header input[name="name"] {
 .window-content .actor-sheet .stat-block {
   grid-column: 1/9;
   flex-direction: row;
+}
+
+form.actor-sheet.threat input[type="checkbox"] {
+  opacity: 0.01;
+  position: relative;
+  left: -25px;
+  cursor: pointer;
+  top: 5px;
+  width: 10px;
+}
+
+form.actor-sheet.threat a.toggleFav {
+  color: grey;
+  position: relative;
+  font-size: 10px;
+  left: -4px;
+}
+
+form.actor-sheet.threat a.toggleFav.checked {
+  color: rgba(8, 83, 8, 0.794);
+  text-shadow: 0px 0px 3px green;
+}
+
+form.actor-sheet.threat span.inputsFav {
+  display: inline-block;
+  max-width: 40px;
+}
+
+form.actor-sheet.threat div.skill-list-edit {
+  display: grid;
+  justify-items: flex-end;
+  justify-content: center;
+  grid-template-columns: repeat(3, 0.3fr);
+}
+
+form.actor-sheet.threat div.skill-list-edit .skill-element-edit {
+  display: flex;
+  padding-right: 5px;
+  align-items: center;
+}
+
+form.actor-sheet.threat div.skill-list-edit .skill-element-edit span {
+  text-align: end;
+}
+
+form.actor-sheet.threat div.skill-list-edit .skill-element-edit span.inputsFav {
+  position: relative;
+  position: relative;
+  margin-left: 5px;
+}
+
+form.actor-sheet.threat div.skill-list-edit .skill-element-edit span.inputsFav input[type="checkbox"],
+form.actor-sheet.threat div.skill-list-edit .skill-element-edit span.inputsFav a.toggleFav {
+  position: absolute;
+  left: 13px;
+  max-width: 30px;
+  top: -5px;
+  width: 10px;
+  margin: 0px;
+  background: white;
 }
 
 form.actor-sheet.threat td {

@@ -93,8 +93,12 @@ torgeternity.attackTypes = {
 }
 
 torgeternity.damageTypes = {
+    flat: "torgeternity.damageTypes.flat",
     strengthPlus: "torgeternity.damageTypes.strengthPlus",
-    flat: "torgeternity.damageTypes.flat"
+    charismaPlus: "torgeternity.damageTypes.charismaPlus",
+    dexterityPlus: "torgeternity.damageTypes.dexterityPlus",
+    mindPlus: "torgeternity.damageTypes.mindPlus",
+    spiritPlus: "torgeternity.damageTypes.spiritPlus"
 }
 
 torgeternity.powerSkills = {
