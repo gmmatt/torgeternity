@@ -455,6 +455,7 @@ a:hover {
 #sidebar {
   color: white;
   background-image: url(../images/thunder.webp);
+  overflow: visible;
   background-size: 80% 100%;
   padding-left: 80px;
   width: 380px;
@@ -488,6 +489,10 @@ a:hover {
   text-shadow: 0 0 10px #001aff;
 }
 
+#sidebar textarea#chat-message {
+  color: black;
+}
+
 div#sidebar::before {
   width: 80px;
   height: 120%;
@@ -500,7 +505,6 @@ div#sidebar::before {
   background-size: 80% 100%;
   background-position: 280% 50%;
   background-repeat: no-repeat;
-  box-shadow: 20px 0px 100px #000000a6;
   z-index: 200;
 }
 
