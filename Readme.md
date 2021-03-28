@@ -8,6 +8,10 @@
 For manual installation, use the provided manifest URL in the "*Install System*" popup window 
 while managing game systems.
 
+v. 0.92.4
+- Fixed an issue where ammo current/max was not displaying properly in item drop-downs
+- Updated localization
+
 v. 0.92.3
 - Combat tracker update - multiple customizations to combat tracker. You can now sort
 combatants by heroes/villains. Conditions for each combatant now shown. Combatant can
