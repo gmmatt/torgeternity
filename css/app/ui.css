@@ -1,3 +1,41 @@
+@-webkit-keyframes rotateblur {
+  0% {
+    transform: rotateZ(0deg);
+    top: 5px;
+  }
+  50% {
+    transform: rotateZ(180deg);
+    top: -65px;
+  }
+  75% {
+    transform: rotateZ(310deg);
+    top: 20px;
+  }
+  100% {
+    transform: rotateZ(360deg);
+    top: 5px;
+  }
+}
+
+@keyframes rotateblur {
+  0% {
+    transform: rotateZ(0deg);
+    top: 5px;
+  }
+  50% {
+    transform: rotateZ(180deg);
+    top: -65px;
+  }
+  75% {
+    transform: rotateZ(310deg);
+    top: 20px;
+  }
+  100% {
+    transform: rotateZ(360deg);
+    top: 5px;
+  }
+}
+
 body {
   font-family: OptiLight;
   font-size: 12px;
@@ -134,6 +172,17 @@ a:hover {
   border: none;
   box-shadow: 0px 15px 30px black;
   z-index: 100;
+}
+
+#pause img {
+  content: url(../images/pause.webp);
+  height: 130px;
+  width: 130px;
+  top: -0px;
+  left: calc(50% - 65px);
+  opacity: 0.7;
+  -webkit-animation: rotateblur  3s linear infinite;
+  animation: rotateblur  3s linear infinite;
 }
 
 #controls .scene-control,

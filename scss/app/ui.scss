@@ -1,3 +1,22 @@
+
+
+@keyframes rotateblur {
+  0% { 
+    transform: rotateZ(0deg);top:5px;
+  }
+ 50% { 
+    transform: rotateZ(180deg);;top:-65px;
+  }
+  75% {
+    transform: rotateZ(310deg);;top:20px;
+  }
+  100% { 
+    transform: rotateZ(360deg);top:5px;
+  }
+}
+
+
+
 //--------style global
 body {
   font-family: OptiLight;
@@ -120,6 +139,19 @@ a:hover {
   z-index: 100;
 }
 
+//-----------
+//---pause
+//-----------
+#pause img{
+ 
+  content: url(../images/pause.webp);
+  height: 130px;
+  width: 130px;
+  top: -0px;
+  left: calc(50% - 65px);
+  opacity:0.7;
+  animation:rotateblur  3s linear infinite;
+}
 //-----------
 //---controls
 //-----------
