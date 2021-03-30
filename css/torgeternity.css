@@ -455,7 +455,6 @@ a:hover {
 #sidebar {
   color: white;
   background-image: url(../images/thunder.webp);
-  overflow: visible;
   background-size: 80% 100%;
   padding-left: 80px;
   width: 380px;
@@ -505,6 +504,7 @@ div#sidebar::before {
   background-size: 80% 100%;
   background-position: 280% 50%;
   background-repeat: no-repeat;
+  box-shadow: 20px 0px 100px #000000a6;
   z-index: 200;
 }
 
@@ -642,6 +642,14 @@ div#sidebar.collapsed {
   color: #b4b4b4;
 }
 
+#players-popout div.app {
+  top: 0%;
+  width: 100%;
+  z-index: auto;
+  background-size: cover;
+  line-height: 25px;
+}
+
 #players {
   background-image: url(../images/thunder.webp);
   background-position: center;
@@ -654,7 +662,16 @@ div#sidebar.collapsed {
   min-height: 20px;
   box-shadow: none;
   padding: 0% 0% 0% 0%;
-  color: black;
+  color: white;
+}
+
+#players .players-popout {
+  color: white;
+  font-size: larger;
+  position: relative;
+  top: -25px;
+  z-index: +1;
+  left: 15px;
 }
 
 #players h3 {
@@ -664,7 +681,6 @@ div#sidebar.collapsed {
   box-shadow: 0px 5px 15px rgba(255, 255, 255, 0.459);
   text-align: center;
   color: white;
-  top: -10px;
   position: relative;
 }
 
@@ -777,6 +793,40 @@ div#sidebar.collapsed {
 #combat ol a.init-down:hover {
   text-shadow: 0px 0px 5px #c8cf00;
   color: #f8f83c;
+}
+
+#party-sheet h1,
+#party-sheet h2,
+#party-sheet h3,
+#party-sheet h4 {
+  text-align: center;
+}
+
+#party-sheet h2 {
+  border-bottom: 2px solid #419c9c;
+}
+
+#party-sheet h3 {
+  border-bottom: 2px solid #215050;
+}
+
+#party-sheet h4 {
+  text-decoration: underline;
+}
+
+#party-sheet .flexrow {
+  margin: 4px;
+}
+
+#party-sheet .flexrow div {
+  border: 1px solid rgba(128, 128, 128, 0.301);
+  padding: 2px;
+  box-shadow: 0px 0px 0px rgba(87, 87, 87, 0.301) inset;
+  transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1) 10ms;
+}
+
+#party-sheet .flexrow div div:hover {
+  box-shadow: 0px 0px 35px #5a5a5a inset;
 }
 
 @-webkit-keyframes flip {

@@ -11,6 +11,7 @@ import * as torgchecks from "./module/torgchecks.js";
 import torgeternityCombat from "./module/dramaticScene/torgeternityCombat.js";
 import torgeternityCombatTracker from "./module/dramaticScene/torgeternityCombatTracker.js";
 import { alphabSort } from "./module/AlphabeticalSort.js";
+import TorgeternityPlayerList from "./module/users/TorgeternityPlayerList.js";
 
 Hooks.once("init", async function () {
   console.log("torgeternity | Initializing Torg Eternity System");
@@ -30,6 +31,11 @@ Hooks.once("init", async function () {
   CONFIG.Combat.entityClass = torgeternityCombat;
   CONFIG.ui.combat = torgeternityCombatTracker;
 
+
+    //---custom user class
+    CONFIG.ui.players = TorgeternityPlayerList;
+   
+  
   //---register items and actors
   Items.unregisterSheet("core", ItemSheet);
   Items.registerSheet("torgeternity", torgeternityItemSheet, {

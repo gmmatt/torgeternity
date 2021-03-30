@@ -1,0 +1,120 @@
+@-webkit-keyframes flip {
+  0% {
+    transform: translateX(100%) rotateY(-180deg) scale(0.2);
+    transform-origin: 0% 50%;
+  }
+  100% {
+    transform: translateX(0) rotateZ(0) scale(1);
+    transform-origin: 100% 50%;
+  }
+}
+
+@keyframes flip {
+  0% {
+    transform: translateX(100%) rotateY(-180deg) scale(0.2);
+    transform-origin: 0% 50%;
+  }
+  100% {
+    transform: translateX(0) rotateZ(0) scale(1);
+    transform-origin: 100% 50%;
+  }
+}
+
+.chat-message {
+  -webkit-animation: flip 0.5s linear both;
+  animation: flip 0.5s linear both;
+  margin: 5px;
+  color: black;
+  background: url("../images/bgparch.webp");
+  background-color: rgba(255, 255, 255, 0.575);
+}
+
+.chat-message table td {
+  padding: 0px 0px;
+}
+
+.chat-message .item-description-chat {
+  font-family: Palatino;
+}
+
+.chat-message .chat-title {
+  font-family: Alaska;
+  font-size: 18px;
+}
+
+.chat-message .skill-chat-title {
+  font-size: 20px;
+  padding: 0px;
+  margin: 0px;
+  text-align: center;
+  font-family: Alaska;
+}
+
+.chat-message .skill-unskilled-label {
+  font-size: 12px;
+  text-align: center;
+  padding: 0px;
+  margin: 0px;
+  font-family: "Palatino Linotype";
+  width: 100%;
+}
+
+.chat-message .skill-roll-disconnect-label {
+  font-size: 12px;
+  text-align: center;
+  padding: 0px;
+  margin: 0px;
+  font-family: "Palatino Linotype";
+  width: 100%;
+  font-style: italic;
+}
+
+.chat-message .skill-roll-result {
+  text-align: center;
+  font-size: 24px;
+  font-family: "Palatino Linotype";
+  font-weight: bold;
+  padding: 3px 0px 0px 0px;
+  margin: 0px;
+}
+
+.chat-message .skill-roll-action-label {
+  text-align: center;
+  font-family: "Palatino Linotype";
+  font-size: 12px;
+  padding: 0px;
+  margin: 0px;
+}
+
+.chat-message .skill-roll-table {
+  padding-bottom: 5px;
+  font-family: "Palatino Linotype";
+  margin-bottom: 5px;
+}
+
+.chat-message .skill-roll-table-1 {
+  width: 40%;
+  font-family: "Palatino Linotype";
+  border: 1px solid black;
+}
+
+.chat-message .skill-roll-table-2 {
+  width: 60%;
+  background: #e8b017;
+  padding-left: 5px;
+  font-family: "Palatino Linotype";
+  border: 1px solid black;
+}
+
+.chat-message .skill-roll-menu {
+  font-family: "Palatino Linotype";
+  font-size: 11px;
+  text-align: center;
+}
+
+.chat-message .skill-roll-damage-label {
+  font-family: "Palatino Linotype";
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+}
