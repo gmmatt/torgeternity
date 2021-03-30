@@ -101,11 +101,16 @@
 				<ul>
 					{{#each user.character.data.data.skills as |skill key|}}
 					{{#if skill.adds}}
+					
 					<li class="attribut-block">
 						<span>
-							{{localize (concatSkillName key) }}
+							
+					{{localize (concatSkillName key) }}
 						</span>
 						<span> : {{skill.value}}</span>
+						{{#if skill.isFav}}
+						<i class="far fa-star" ></i>
+					{{/if}}
 					</li>
 					{{/if}}
 					{{/each}}
