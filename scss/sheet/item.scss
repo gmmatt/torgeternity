@@ -62,7 +62,8 @@
                 background-size: cover
             }
 
-            input[name="data.price"] {
+            input[name="data.price"],
+            input[name="data.tough"] {
                 width:50px;
             }
 

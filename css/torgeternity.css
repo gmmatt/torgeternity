@@ -2247,7 +2247,8 @@ form.actor-sheet.threat .tab[data-tab].active .editor {
   background-size: cover;
 }
 
-.item .window-content form.item-sheet .asside input[name="data.price"] {
+.item .window-content form.item-sheet .asside input[name="data.price"],
+.item .window-content form.item-sheet .asside input[name="data.tough"] {
   width: 50px;
 }
 
