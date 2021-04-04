@@ -13,6 +13,8 @@ v. 0.92.4
 - Fixed an issue where ammo current/max was not displaying properly in item drop-downs
 - Updated localization
 - Updated vehicle sheet so toughness can accommodate text input
+- Updated journal frame to remove overlap between text and frame when sheet is resized
+- Added back save button to journal window
 
 v. 0.92.3
 - Combat tracker update - multiple customizations to combat tracker. You can now sort
