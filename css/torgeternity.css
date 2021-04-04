@@ -179,8 +179,15 @@ div.actor ::-webkit-scrollbar {
 .journal-sheet .window-content {
   font-family: Palatino;
   background-image: url(../images/box-bckg.webp);
-  background-size: cover;
+  background-size: 100% 100%;
   color: black;
+}
+
+.journal-sheet .window-content button[name="submit"] {
+  position: absolute;
+  bottom: 0px;
+  left: -2px;
+  background-color: rgba(0, 0, 0, 0.68);
 }
 
 .journal-sheet .window-content input[type="text"],
@@ -196,6 +203,18 @@ div.actor ::-webkit-scrollbar {
   color: #000;
 }
 
+.journal-sheet .window-content input[type="text"] {
+  position: absolute;
+  top: 3%;
+  margin-left: 4%;
+}
+
+.journal-sheet .window-content select {
+  position: absolute;
+  top: 9%;
+  margin-left: 4%;
+}
+
 .journal-sheet .window-content input[type="text"]:hover,
 .journal-sheet .window-content select:hover,
 .journal-sheet .window-content input[type="text"]:focus,
@@ -209,9 +228,11 @@ div.actor ::-webkit-scrollbar {
 }
 
 .journal-sheet .window-content .editor {
+  top: 15%;
   margin-top: 2%;
-  margin-left: 5%;
+  margin-left: 4%;
   width: 90%;
+  height: 80%;
   padding: 2%;
 }
 
