@@ -119,7 +119,8 @@
             "purpose": "Purpose",
             "powers": "Powers",
             "restrictions": "Restrictions",
-            "minStrength": "Min Str"
+            "minStrength": "Min Str",
+            "ap": "AP"
         },
         "stats":{
             "wounds": "Wounds",

@@ -15,6 +15,7 @@ v. 0.92.4
 - Updated vehicle sheet so toughness can accommodate text input
 - Updated journal frame to remove overlap between text and frame when sheet is resized
 - Added back save button to journal window
+- Added AP stat to heavy weapons
 
 v. 0.92.3
 - Combat tracker update - multiple customizations to combat tracker. You can now sort
