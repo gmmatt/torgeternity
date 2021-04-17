@@ -317,8 +317,8 @@ form.actor-sheet {
 
   .sheet-header {
     img {
-      max-width: 64px;
-      max-height: 64px;
+      max-width: 250px;
+      max-height: 200px;
     }
 
     .axioms {
@@ -780,6 +780,10 @@ form.actor-sheet {
 // Styling specific to threat sheet
 
 form.actor-sheet.threat {
+  img.profile-img {
+    max-width: 64px;
+    max-height: 64px;
+  }
   input[type="checkbox"] {
     opacity: 0.01;
     position: relative;

@@ -357,11 +357,16 @@ body {
   font-size: 12px;
 }
 
-body ::-webkit-scrollbar-thumb {
+body * {
+  scrollbar-color: #227878 #2e2e2e94;
+  scrollbar-width: thin;
+}
+
+body * ::-webkit-scrollbar-thumb {
   outline: none;
   border-radius: 3px;
   background: #227878;
-  border: 1px solid #efedeb;
+  border: 1px solid #2e2e2e94;
 }
 
 input[type="text"],
@@ -395,6 +400,11 @@ a:hover {
   padding-bottom: 0.5em;
   color: #707070;
   z-index: 30;
+}
+
+.app a.entity-link,
+.window-app a.entity-link {
+  color: black;
 }
 
 .app input[type="text"]::-moz-placeholder, .app input[type="number"]::-moz-placeholder, .window-app input[type="text"]::-moz-placeholder, .window-app input[type="number"]::-moz-placeholder {
@@ -497,8 +507,8 @@ a:hover {
   top: -0px;
   left: calc(50% - 65px);
   opacity: 0.7;
-  -webkit-animation: rotateblur  3s linear infinite;
-  animation: rotateblur  3s linear infinite;
+  -webkit-animation: rotateblur 3s linear infinite;
+  animation: rotateblur 3s linear infinite;
 }
 
 #controls .scene-control,
@@ -925,6 +935,11 @@ div#sidebar.collapsed {
   box-shadow: 0px 0px 35px #5a5a5a inset;
 }
 
+div.readme a.compendium {
+  text-decoration: underline;
+  color: #419c9c;
+}
+
 @-webkit-keyframes flip {
   0% {
     transform: translateX(100%) rotateY(-180deg) scale(0.2);
@@ -947,9 +962,12 @@ div#sidebar.collapsed {
   }
 }
 
-.chat-message {
+.chat-message.flip-card {
   -webkit-animation: flip 0.5s linear both;
   animation: flip 0.5s linear both;
+}
+
+.chat-message {
   margin: 5px;
   color: black;
   background: url("../images/bgparch.webp");
@@ -1504,8 +1522,8 @@ form.actor-sheet header input[name="name"] {
 }
 
 .window-content .actor-sheet .sheet-header img {
-  max-width: 64px;
-  max-height: 64px;
+  max-width: 250px;
+  max-height: 200px;
 }
 
 .window-content .actor-sheet .sheet-header .axioms {
@@ -1989,6 +2007,11 @@ form.actor-sheet header input[name="name"] {
 .window-content .actor-sheet .stat-block {
   grid-column: 1/9;
   flex-direction: row;
+}
+
+form.actor-sheet.threat img.profile-img {
+  max-width: 64px;
+  max-height: 64px;
 }
 
 form.actor-sheet.threat input[type="checkbox"] {
