@@ -252,14 +252,12 @@ Hooks.on("renderChatLog", (app, html, data) => {
   Chat.addChatListeners(html);
 
   if (game.settings.get("torgeternity", "animatedChat") == false) {
-    console.log(html);
     let messFlips = html.find("li.flip-card");
     for (let mes of messFlips) {
       mes.classList.remove("flip-card");
     }
   }
   if (game.settings.get("torgeternity", "animatedChat") == true) {
-    console.log(html);
     let messFlips = html.find("li.chat-message");
     for (let mes of messFlips) {
       mes.classList.add("flip-card");
