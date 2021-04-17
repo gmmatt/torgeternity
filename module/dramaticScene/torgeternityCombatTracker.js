@@ -16,16 +16,17 @@ export default class torgeternityCombatTracker extends CombatTracker {
     let check = ev.currentTarget;
     let li = check.closest(".combatant");
     let c = this.combat.getCombatant(li.dataset.combatantId);
-    if (c.hasPlayed == false||c.hasPlayed == undefined) {
-      await this.combat.updateCombatant({
-        _id: c._id,
-        ["hasPlayed"]: !c.hasPlayed,
-      });
+
+    await this.combat.updateCombatant({
+      _id: c._id,
+      ["hasPlayed"]: !c.hasPlayed,
+    });
+    if (c.hasPlayed) {
       if (c.tokenId == this.combat.current.tokenId) {
         await this.combat.updateCombatant({
-          _id:this.combat.combatant._id,
-          hasPlayed:true
-      });
+          _id: this.combat.combatant._id,
+          hasPlayed: true,
+        });
         this.combat.nextTurn();
       }
 
