@@ -21,11 +21,12 @@ Hooks.once("init", async function () {
   game.settings.register("torgeternity", "animatedChat", {
     // game.setting.register("NameOfTheModule", "VariableName",
     name: "chat card animation", // Register a module setting with checkbox
-    hint: "If checked, enable chat card animations", // Description of the settings
+    hint: "If checked, enable chat card animations. changes will reload the app", // Description of the settings
     scope: "world", // This specifies a client-stored setting
     config: true, // This specifies that the setting appears in the configuration view
     type: Boolean,
     default: true, // The default value for the setting
+    onChange: () => window.location.reload()
   });
 
   //-------global
@@ -249,12 +250,26 @@ Handlebars.registerHelper("concatSpecialAbility", function (description) {
 
 Hooks.on("renderChatLog", (app, html, data) => {
   Chat.addChatListeners(html);
+
+  if (game.settings.get("torgeternity", "animatedChat") == false) {
+    console.log(html);
+    let messFlips = html.find("li.flip-card");
+    for (let mes of messFlips) {
+      mes.classList.remove("flip-card");
+    }
+  }
+  if (game.settings.get("torgeternity", "animatedChat") == true) {
+    console.log(html);
+    let messFlips = html.find("li.chat-message");
+    for (let mes of messFlips) {
+      mes.classList.add("flip-card");
+    }
+  }
 });
 Hooks.on("renderChatMessage", (mess, html, data) => {
   if (game.settings.get("torgeternity", "animatedChat") == true) {
-    console.log(mess,html)
-;    html[0].classList.add("flip-card")
+    html[0].classList.add("flip-card");
   }
-  });
+});
 
 Hooks.on("renderActorSheet", (app, html, data) => alphabSort(html, data));
