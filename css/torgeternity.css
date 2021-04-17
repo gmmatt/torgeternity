@@ -936,9 +936,12 @@ div.readme a.compendium {
   }
 }
 
-.chat-message {
+.chat-message.flip-card {
   -webkit-animation: flip 0.5s linear both;
   animation: flip 0.5s linear both;
+}
+
+.chat-message {
   margin: 5px;
   color: black;
   background: url("../images/bgparch.webp");

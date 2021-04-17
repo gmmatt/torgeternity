@@ -16,6 +16,18 @@ import TorgeternityPlayerList from "./module/users/TorgeternityPlayerList.js";
 Hooks.once("init", async function () {
   console.log("torgeternity | Initializing Torg Eternity System");
 
+  //-----system settings
+
+  game.settings.register("torgeternity", "animatedChat", {
+    // game.setting.register("NameOfTheModule", "VariableName",
+    name: "chat card animation", // Register a module setting with checkbox
+    hint: "If checked, enable chat card animations", // Description of the settings
+    scope: "world", // This specifies a client-stored setting
+    config: true, // This specifies that the setting appears in the configuration view
+    type: Boolean,
+    default: true, // The default value for the setting
+  });
+
   //-------global
   game.torgeternity = {
     rollItemMacro,
@@ -31,11 +43,9 @@ Hooks.once("init", async function () {
   CONFIG.Combat.entityClass = torgeternityCombat;
   CONFIG.ui.combat = torgeternityCombatTracker;
 
+  //---custom user class
+  CONFIG.ui.players = TorgeternityPlayerList;
 
-    //---custom user class
-    CONFIG.ui.players = TorgeternityPlayerList;
-   
-  
   //---register items and actors
   Items.unregisterSheet("core", ItemSheet);
   Items.registerSheet("torgeternity", torgeternityItemSheet, {
@@ -78,6 +88,8 @@ Hooks.on("ready", function () {
   var logo = document.getElementById("logo");
   logo.style.position = "absolute";
   logo.setAttribute("src", "/systems/torgeternity/images/vttLogo.webp");
+
+  //toggle off chatcard animation:
 
   Hooks.on("hotbarDrop", (bar, data, slot) =>
     createTorgEternityMacro(data, slot)
@@ -157,9 +169,9 @@ function rollItemMacro(itemName) {
     case "firearm":
     case "heavyweapon":
     case "heavyweapon":
-    var weaponData = item.data.data;
-    var skillData = item.actor.data.data.skills[weaponData.attackWith];
-    torgchecks.weaponAttack({
+      var weaponData = item.data.data;
+      var skillData = item.actor.data.data.skills[weaponData.attackWith];
+      torgchecks.weaponAttack({
         actor: item.actor,
         item: item,
         actorPic: item.actor.data.img,
@@ -174,17 +186,15 @@ function rollItemMacro(itemName) {
         spiritValue: item.actor.data.data.attributes.spirit,
         weaponName: item.data.name,
         weaponDamageType: weaponData.damageType,
-        weaponDamage: weaponData.damage
-    })
+        weaponDamage: weaponData.damage,
+      });
       break;
     case "psionicpower":
     case "miracle":
     case "spell":
-      
-      
       var powerData = item.data.data;
       var skillData = item.actor.data.data.skills[powerData.skill];
-      console.log(powerData,skillData)
+      console.log(powerData, skillData);
       torgchecks.powerRoll({
         actor: item.actor,
         item: item,
@@ -237,5 +247,14 @@ Handlebars.registerHelper("concatSpecialAbility", function (description) {
   }
 });
 
-Hooks.on("renderChatLog", (app, html, data) => Chat.addChatListeners(html));
+Hooks.on("renderChatLog", (app, html, data) => {
+  Chat.addChatListeners(html);
+});
+Hooks.on("renderChatMessage", (mess, html, data) => {
+  if (game.settings.get("torgeternity", "animatedChat") == true) {
+    console.log(mess,html)
+;    html[0].classList.add("flip-card")
+  }
+  });
+
 Hooks.on("renderActorSheet", (app, html, data) => alphabSort(html, data));
