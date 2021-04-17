@@ -16,6 +16,7 @@ v. 0.92.4
 - Updated journal frame to remove overlap between text and frame when sheet is resized
 - Added back save button to journal window
 - Added AP stat to heavy weapons
+- Added setting that allows users to activate/deactivate animations of chat messages
 
 v. 0.92.3
 - Combat tracker update - multiple customizations to combat tracker. You can now sort
