@@ -326,9 +326,12 @@ textarea:hover {
   }
 }
 
-body * {
+body {
   font-family: OptiLight;
   font-size: 12px;
+}
+
+body * {
   scrollbar-color: #227878 #2e2e2e94;
   scrollbar-width: thin;
 }
@@ -371,6 +374,11 @@ a:hover {
   padding-bottom: 0.5em;
   color: #707070;
   z-index: 30;
+}
+
+.app a.entity-link,
+.window-app a.entity-link {
+  color: black;
 }
 
 .app input[type="text"]::-moz-placeholder, .app input[type="number"]::-moz-placeholder, .window-app input[type="text"]::-moz-placeholder, .window-app input[type="number"]::-moz-placeholder {
@@ -473,8 +481,8 @@ a:hover {
   top: -0px;
   left: calc(50% - 65px);
   opacity: 0.7;
-  -webkit-animation: rotateblur  3s linear infinite;
-  animation: rotateblur  3s linear infinite;
+  -webkit-animation: rotateblur 3s linear infinite;
+  animation: rotateblur 3s linear infinite;
 }
 
 #controls .scene-control,
@@ -899,6 +907,11 @@ div#sidebar.collapsed {
 
 #party-sheet .flexrow div div:hover {
   box-shadow: 0px 0px 35px #5a5a5a inset;
+}
+
+div.readme a.compendium {
+  text-decoration: underline;
+  color: #419c9c;
 }
 
 @-webkit-keyframes flip {
