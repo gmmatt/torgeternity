@@ -1496,8 +1496,8 @@ form.actor-sheet header input[name="name"] {
 }
 
 .window-content .actor-sheet .sheet-header img {
-  max-width: 64px;
-  max-height: 64px;
+  max-width: 250px;
+  max-height: 200px;
 }
 
 .window-content .actor-sheet .sheet-header .axioms {
@@ -1981,6 +1981,11 @@ form.actor-sheet header input[name="name"] {
 .window-content .actor-sheet .stat-block {
   grid-column: 1/9;
   flex-direction: row;
+}
+
+form.actor-sheet.threat img.profile-img {
+  max-width: 64px;
+  max-height: 64px;
 }
 
 form.actor-sheet.threat input[type="checkbox"] {
