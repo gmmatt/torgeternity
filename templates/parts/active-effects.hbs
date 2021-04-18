@@ -13,7 +13,7 @@
 
     <ol class="item-list">
     {{#each section.effects as |effect|}}
-        <li class="item effect effects-item flexrow" data-effect-id="{{effect.id}}">
+        <li class="item effect effects-item flexrow" style="display:flex" data-effect-id="{{effect.id}}">
             <div class="effect-name flexrow">
                 <img class="effect-item-image" src="{{effect.data.icon}}"/>
                 {{effect.data.label}}

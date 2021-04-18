@@ -2129,6 +2129,10 @@ form.actor-sheet.threat .tab[data-tab].active ol.item-list li {
   padding-bottom: 0px;
 }
 
+form.actor-sheet.threat .tab[data-tab].active ol.item-list li .item .effects .effects-item .flexrow {
+  display: flex;
+}
+
 form.actor-sheet.threat .tab[data-tab].active ol.item-list li img {
   height: 30px;
   width: 30px;
