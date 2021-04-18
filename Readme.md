@@ -8,6 +8,16 @@
 For manual installation, use the provided manifest URL in the "*Install System*" popup window 
 while managing game systems.
 
+v. 0.92.4
+- New Feature! Party sheet with summary of each player's stats.
+- Fixed an issue where ammo current/max was not displaying properly in item drop-downs
+- Updated localization
+- Updated vehicle sheet so toughness can accommodate text input
+- Updated journal frame to remove overlap between text and frame when sheet is resized
+- Added back save button to journal window
+- Added AP stat to heavy weapons
+- Added setting that allows users to activate/deactivate animations of chat messages
+
 v. 0.92.3
 - Combat tracker update - multiple customizations to combat tracker. You can now sort
 combatants by heroes/villains. Conditions for each combatant now shown. Combatant can

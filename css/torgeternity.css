@@ -179,8 +179,15 @@ div.actor ::-webkit-scrollbar {
 .journal-sheet .window-content {
   font-family: Palatino;
   background-image: url(../images/box-bckg.webp);
-  background-size: cover;
+  background-size: 100% 100%;
   color: black;
+}
+
+.journal-sheet .window-content button[name="submit"] {
+  position: absolute;
+  bottom: 0px;
+  left: -2px;
+  background-color: rgba(0, 0, 0, 0.68);
 }
 
 .journal-sheet .window-content input[type="text"],
@@ -196,6 +203,18 @@ div.actor ::-webkit-scrollbar {
   color: #000;
 }
 
+.journal-sheet .window-content input[type="text"] {
+  position: absolute;
+  top: 3%;
+  margin-left: 4%;
+}
+
+.journal-sheet .window-content select {
+  position: absolute;
+  top: 9%;
+  margin-left: 4%;
+}
+
 .journal-sheet .window-content input[type="text"]:hover,
 .journal-sheet .window-content select:hover,
 .journal-sheet .window-content input[type="text"]:focus,
@@ -209,9 +228,11 @@ div.actor ::-webkit-scrollbar {
 }
 
 .journal-sheet .window-content .editor {
+  top: 15%;
   margin-top: 2%;
-  margin-left: 5%;
+  margin-left: 4%;
   width: 90%;
+  height: 80%;
   padding: 2%;
 }
 
@@ -232,6 +253,32 @@ div.actor ::-webkit-scrollbar {
 .journal-sheet .window-content .editor .editor-content h3 {
   font-family: Alaska;
   font-weight: bold;
+}
+
+.journal-sheet .window-content .editor .editor-content th {
+  background-color: black;
+  color: white;
+}
+
+.journal-sheet .window-content .editor .editor-content tr:nth-child(even) {
+  background-color: #f3f0eb;
+}
+
+.journal-sheet .window-content .editor .editor-content tr:nth-child(odd) {
+  background-color: #f5ead9;
+}
+
+.journal-sheet .window-content .editor .editor-content table td {
+  border: 1px solid black;
+  padding: 0px 3px 0px 3px;
+}
+
+.journal-sheet .window-content .editor .editor-content table tr td:first-child {
+  border-left: 0;
+}
+
+.journal-sheet .window-content .editor .editor-content table tr td:last-child {
+  border-right: 0;
 }
 
 .window-app.image-popout .form-group.title {
@@ -267,16 +314,59 @@ textarea:hover {
   color: #c6e2fa;
 }
 
+@-webkit-keyframes rotateblur {
+  0% {
+    transform: rotateZ(0deg);
+    top: 5px;
+  }
+  50% {
+    transform: rotateZ(180deg);
+    top: -65px;
+  }
+  75% {
+    transform: rotateZ(310deg);
+    top: 20px;
+  }
+  100% {
+    transform: rotateZ(360deg);
+    top: 5px;
+  }
+}
+
+@keyframes rotateblur {
+  0% {
+    transform: rotateZ(0deg);
+    top: 5px;
+  }
+  50% {
+    transform: rotateZ(180deg);
+    top: -65px;
+  }
+  75% {
+    transform: rotateZ(310deg);
+    top: 20px;
+  }
+  100% {
+    transform: rotateZ(360deg);
+    top: 5px;
+  }
+}
+
 body {
   font-family: OptiLight;
   font-size: 12px;
 }
 
-body ::-webkit-scrollbar-thumb {
+body * {
+  scrollbar-color: #227878 #2e2e2e94;
+  scrollbar-width: thin;
+}
+
+body * ::-webkit-scrollbar-thumb {
   outline: none;
   border-radius: 3px;
   background: #227878;
-  border: 1px solid #efedeb;
+  border: 1px solid #2e2e2e94;
 }
 
 input[type="text"],
@@ -310,6 +400,11 @@ a:hover {
   padding-bottom: 0.5em;
   color: #707070;
   z-index: 30;
+}
+
+.app a.entity-link,
+.window-app a.entity-link {
+  color: black;
 }
 
 .app input[type="text"]::-moz-placeholder, .app input[type="number"]::-moz-placeholder, .window-app input[type="text"]::-moz-placeholder, .window-app input[type="number"]::-moz-placeholder {
@@ -405,6 +500,17 @@ a:hover {
   z-index: 100;
 }
 
+#pause img {
+  content: url(../images/pause.webp);
+  height: 130px;
+  width: 130px;
+  top: -0px;
+  left: calc(50% - 65px);
+  opacity: 0.7;
+  -webkit-animation: rotateblur 3s linear infinite;
+  animation: rotateblur 3s linear infinite;
+}
+
 #controls .scene-control,
 #controls .control-tool,
 #controls .scene-control:hover,
@@ -486,6 +592,10 @@ a:hover {
 
 #sidebar a:hover {
   text-shadow: 0 0 10px #001aff;
+}
+
+#sidebar textarea#chat-message {
+  color: black;
 }
 
 div#sidebar::before {
@@ -638,6 +748,14 @@ div#sidebar.collapsed {
   color: #b4b4b4;
 }
 
+#players-popout div.app {
+  top: 0%;
+  width: 100%;
+  z-index: auto;
+  background-size: cover;
+  line-height: 25px;
+}
+
 #players {
   background-image: url(../images/thunder.webp);
   background-position: center;
@@ -650,7 +768,16 @@ div#sidebar.collapsed {
   min-height: 20px;
   box-shadow: none;
   padding: 0% 0% 0% 0%;
-  color: black;
+  color: white;
+}
+
+#players .players-popout {
+  color: white;
+  font-size: larger;
+  position: relative;
+  top: -25px;
+  z-index: +1;
+  left: 15px;
 }
 
 #players h3 {
@@ -660,7 +787,6 @@ div#sidebar.collapsed {
   box-shadow: 0px 5px 15px rgba(255, 255, 255, 0.459);
   text-align: center;
   color: white;
-  top: -10px;
   position: relative;
 }
 
@@ -775,6 +901,45 @@ div#sidebar.collapsed {
   color: #f8f83c;
 }
 
+#party-sheet h1,
+#party-sheet h2,
+#party-sheet h3,
+#party-sheet h4 {
+  text-align: center;
+}
+
+#party-sheet h2 {
+  border-bottom: 2px solid #419c9c;
+}
+
+#party-sheet h3 {
+  border-bottom: 2px solid #215050;
+}
+
+#party-sheet h4 {
+  text-decoration: underline;
+}
+
+#party-sheet .flexrow {
+  margin: 4px;
+}
+
+#party-sheet .flexrow div {
+  border: 1px solid rgba(128, 128, 128, 0.301);
+  padding: 2px;
+  box-shadow: 0px 0px 0px rgba(87, 87, 87, 0.301) inset;
+  transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1) 10ms;
+}
+
+#party-sheet .flexrow div div:hover {
+  box-shadow: 0px 0px 35px #5a5a5a inset;
+}
+
+div.readme a.compendium {
+  text-decoration: underline;
+  color: #419c9c;
+}
+
 @-webkit-keyframes flip {
   0% {
     transform: translateX(100%) rotateY(-180deg) scale(0.2);
@@ -797,9 +962,12 @@ div#sidebar.collapsed {
   }
 }
 
-.chat-message {
+.chat-message.flip-card {
   -webkit-animation: flip 0.5s linear both;
   animation: flip 0.5s linear both;
+}
+
+.chat-message {
   margin: 5px;
   color: black;
   background: url("../images/bgparch.webp");
@@ -1354,8 +1522,8 @@ form.actor-sheet header input[name="name"] {
 }
 
 .window-content .actor-sheet .sheet-header img {
-  max-width: 64px;
-  max-height: 64px;
+  max-width: 250px;
+  max-height: 200px;
 }
 
 .window-content .actor-sheet .sheet-header .axioms {
@@ -1841,6 +2009,11 @@ form.actor-sheet header input[name="name"] {
   flex-direction: row;
 }
 
+form.actor-sheet.threat img.profile-img {
+  max-width: 64px;
+  max-height: 64px;
+}
+
 form.actor-sheet.threat input[type="checkbox"] {
   opacity: 0.01;
   position: relative;
@@ -2144,7 +2317,8 @@ form.actor-sheet.threat .tab[data-tab].active .editor {
   background-size: cover;
 }
 
-.item .window-content form.item-sheet .asside input[name="data.price"] {
+.item .window-content form.item-sheet .asside input[name="data.price"],
+.item .window-content form.item-sheet .asside input[name="data.tough"] {
   width: 50px;
 }
 

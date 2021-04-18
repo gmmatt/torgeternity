@@ -62,9 +62,15 @@
 .journal-sheet .window-content {
   font-family: Palatino;
   background-image: url(../images/box-bckg.webp);
-  background-size: cover;
+  background-size: 100% 100%;
   color: black;
+button[name="submit"]{
+    position: absolute;
+    bottom: 0px;
+    left: -2px;
+    background-color: rgba(0, 0, 0, 0.68);
 
+}
   input[type="text"],
   select {
       margin-top: 4%;
@@ -77,6 +83,17 @@
       font-weight: bold;
       color: #000
   }
+  input[type="text"]{
+      position: absolute;
+      top: 3%;
+      margin-left: 4%;
+
+  }
+  select {
+    position: absolute;
+    top: 9%;
+    margin-left: 4%;
+}
 
   ;
 
@@ -93,11 +110,13 @@
   }
 
   .editor {
-      margin-top: 2%;
-      margin-left: 5%;
-      width: 90%;
-      padding: 2%
-  }
+    top: 15%;
+    margin-top: 2%;
+    margin-left: 4%;
+    width: 90%;
+    height: 80%;
+    padding: 2%;
+}
 
   .editor .editor-content {
       h1 {
@@ -117,6 +136,32 @@
       h3 {
           font-family:Alaska;
           font-weight:bold;
+      }
+
+      th {
+          background-color:black;
+          color:white
+      }
+
+      tr:nth-child(even) {
+        background-color:#f3f0eb
+      }
+
+      tr:nth-child(odd) {
+        background-color:#f5ead9
+      }
+
+      table td {
+          border: 1px solid black;
+          padding: 0px 3px 0px 3px;
+      }
+
+      table tr td:first-child {
+          border-left: 0;
+      }
+
+      table tr td:last-child {
+          border-right:0;
       }
   }
 }

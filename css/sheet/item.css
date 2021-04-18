@@ -1,0 +1,231 @@
+.item .window-content {
+  padding: 0px;
+}
+
+.item .window-content form.item-sheet {
+  padding: 10px;
+  background-image: url(../images/bg-sheet.webp);
+  background-size: cover;
+  font-family: Palatino;
+  font-size: 0.9em;
+}
+
+.item .window-content form.item-sheet .item-type {
+  background: url(../images/separatorRound.webp);
+  position: absolute;
+  transform: rotateZ(-90deg);
+  left: -150px;
+  top: 180px;
+  width: 300px;
+  background-size: 100% 100%;
+  text-align: right;
+  text-transform: uppercase;
+}
+
+.item .window-content form.item-sheet .item-type span {
+  background: url(../images/type_back.webp);
+  color: black;
+  text-shadow: 0px 0px 2px black;
+  background-size: 100% 100%;
+  padding: 3px 20px;
+}
+
+.item .window-content form.item-sheet header {
+  margin-top: 15px;
+}
+
+.item .window-content form.item-sheet header input[name="name"] {
+  border: none;
+  text-transform: uppercase;
+  text-shadow: 0px -2px 10px #0e0909;
+  font-family: Alaska;
+  text-align: center;
+}
+
+.item .window-content form.item-sheet .sheet-content {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  margin: 15px;
+  color: black;
+}
+
+.item .window-content form.item-sheet .asside {
+  grid-row: 1/4;
+  grid-column: 1/2;
+  text-align: center;
+}
+
+.item .window-content form.item-sheet .asside input[type="number"] {
+  border: none;
+  text-align: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 15px;
+  background: url(../images/roundBack.webp);
+  background-size: cover;
+}
+
+.item .window-content form.item-sheet .asside input[name="data.price"] {
+  width: 50px;
+}
+
+.item .window-content form.item-sheet .asside select {
+  color: black;
+  text-align: center;
+}
+
+.item .window-content form.item-sheet .main-content {
+  grid-row: 1/4;
+  grid-column: 2/5;
+}
+
+.item .window-content form.item-sheet .editor {
+  width: 400px;
+  height: 400px;
+  background: url(../images/bckg-hex.webp);
+  background-size: 110% 110%;
+  padding: 20px;
+  background-position: center;
+}
+
+.item .window-content form.item-sheet nav.tabs {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  border: none;
+  position: absolute;
+  transform: rotateZ(90deg);
+  font-family: Alaska;
+  text-transform: capitalize;
+  right: -60px;
+  top: 60px;
+}
+
+.item .window-content form.item-sheet nav.tabs a.item {
+  min-width: 100px;
+  transition: all 0.1s cubic-bezier(1, 0, 0, 1) 0.1s;
+  color: white;
+  background-image: url(../images/tab_back.webp);
+  background-size: contain;
+}
+
+.item .window-content form.item-sheet nav.tabs a.item:hover,
+.item .window-content form.item-sheet nav.tabs a.item:active {
+  text-transform: uppercase;
+  transform: scaleX(1.1) scaleY(1.3) scaleZ(1.2);
+  text-shadow: 0 0 10px #10813f;
+  color: #e5ecec;
+  z-index: 0;
+}
+
+.item .window-content form.item-sheet nav.tabs a.item.active {
+  background-image: url(../images/active_tab_back.webp);
+  text-transform: uppercase;
+}
+
+.item .window-content form.item-sheet select:hover,
+.item .window-content form.item-sheet select:focus,
+.item .window-content form.item-sheet input[type="text"]:hover,
+.item .window-content form.item-sheet input[type="number"]:hover,
+.item .window-content form.item-sheet input[type="text"]:focus,
+.item .window-content form.item-sheet input[type="number"]:focus {
+  box-shadow: 0 0 10px #4f523c inset;
+}
+
+.item .window-content form.item-sheet input[type="text"]::-moz-placeholder, .item .window-content form.item-sheet input[type="number"]::-moz-placeholder {
+  color: #161a1a;
+  text-shadow: 0px 0px 10px black;
+}
+
+.item .window-content form.item-sheet input[type="text"]:-ms-input-placeholder, .item .window-content form.item-sheet input[type="number"]:-ms-input-placeholder {
+  color: #161a1a;
+  text-shadow: 0px 0px 10px black;
+}
+
+.item .window-content form.item-sheet input[type="text"]::placeholder,
+.item .window-content form.item-sheet input[type="number"]::placeholder {
+  color: #161a1a;
+  text-shadow: 0px 0px 10px black;
+}
+
+.item .window-content form.item-sheet .item-data-label {
+  text-align: center;
+}
+
+.item .window-content form.item-sheet .item-description-textarea {
+  font-family: "Palatino Linotype";
+  font-size: 12px;
+  border-radius: 15px;
+  resize: none;
+  padding: 5px 5px;
+}
+
+.item .window-content form.item-sheet .effects .item-list {
+  padding: 0px;
+}
+
+.item .window-content form.item-sheet .effects .effects-list {
+  padding: 0px;
+}
+
+.item .window-content form.item-sheet .effects .effects-heading {
+  color: white;
+  background-color: black;
+  margin: 2px 0;
+  align-items: center;
+  font-weight: bold;
+  font-family: "Palatino Linotype";
+}
+
+.item .window-content form.item-sheet .effects .effects-item {
+  text-align: center;
+  border-left: 1px solid #c9c7b8;
+  border-right: 1px solid #c9c7b8;
+  font-size: 12px;
+  color: black;
+}
+
+.item .window-content form.item-sheet .effects .effect-name {
+  white-space: nowrap;
+  overflow-x: hidden;
+  text-align: left;
+  font-family: "Palatino Linotype";
+  padding: 0px 0px 0px 10px;
+  width: 25%;
+}
+
+.item .window-content form.item-sheet .effects .effect-section-title {
+  width: 25%;
+  padding: 0px 0px 0px 10px;
+}
+
+.item .window-content form.item-sheet .effects .effect-source,
+.item .window-content form.item-sheet .effects .effect-duration,
+.item .window-content form.item-sheet .effects .effect-controls {
+  text-align: center;
+  border-left: 1px solid #c9c7b8;
+  border-right: 1px solid #c9c7b8;
+  font-size: 12px;
+  font-family: "Palatino Linotype";
+  width: 25%;
+}
+
+.item .window-content form.item-sheet .effects .effect-controls {
+  border: none;
+  flex: 1;
+}
+
+.item .window-content form.item-sheet .effects .effect-item-image {
+  flex: 0 0 30px;
+  height: 30px;
+  background-size: 30px;
+  border: none;
+  margin-right: 5px;
+}
+
+.item .window-content form.item-sheet .effects .effect-toggle,
+.item .window-content form.item-sheet .effects .effect-edit,
+.item .window-content form.item-sheet .effects .effect-delete {
+  padding: 5px;
+}
