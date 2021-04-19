@@ -8,6 +8,11 @@
 For manual installation, use the provided manifest URL in the "*Install System*" popup window 
 while managing game systems.
 
+v. 0.92.5
+- Updated threat sheets so that effects can be managed for threats
+- NOTE: Armor effects should be inactive or deleted for threats since their toughness/
+  armor needs to be entered manually on their sheets. 
+
 v. 0.92.4
 - New Feature! Party sheet with summary of each player's stats.
 - Fixed an issue where ammo current/max was not displaying properly in item drop-downs
