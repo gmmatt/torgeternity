@@ -120,6 +120,10 @@ div.actor ::-webkit-scrollbar {
 }
 
 /* foundry parts */
+#modalIO {
+  color: black;
+}
+
 .window-app .window-content {
   font-family: OptiLight;
   background-image: url(../images/thunder.webp);
