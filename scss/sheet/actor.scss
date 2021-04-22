@@ -892,6 +892,10 @@ form.actor-sheet.threat {
         overflow: hidden;
         padding-bottom: 0px;
 
+        .item .effects .effects-item .flexrow {
+          display:flex
+        }
+
         img {
           height: 30px;
           width: 30px;
@@ -935,6 +939,7 @@ form.actor-sheet.threat {
         }
       }
     }
+
     .editor {
       width: 400px;
       height: 400px;
