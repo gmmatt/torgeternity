@@ -5,6 +5,8 @@ export function SkillCheck({
    skillAdds = null,
    skillValue= null,
    unskilledUse = null,
+   woundModifier = null,
+   stymiedModifier = null,
    actor = null } = {}) {
    var test = {
       actor: actor.data._id,
@@ -15,6 +17,8 @@ export function SkillCheck({
       skillAdds: skillAdds,
       skillValue: skillValue,
       unskilledUse: unskilledUse,
+      woundModifier: woundModifier,
+      stymiedModifier: stymiedModifier,
       testType: testType,
       possibilityTotal: 0,
       upTotal: 0,
@@ -299,15 +303,15 @@ export function renderSkillChat(test) {
    if (test.woundModifier < 0) {
       test.displayModifiers = true;
       test.modifierText = "Wounds " + test.woundModifier + " ";
-      test.modifiers = test.woundModifier
+      test.modifiers = parseInt(test.woundModifier)
    };
 
    if (test.stymiedModifier < 0) {
       test.displayModifiers= true;
-      if (test.stymiedModifier === -2) {
+      if (test.stymiedModifier == -2) {
          test.modifierText += "Stymied -2 ";
          test.modifiers += -2;
-      } else if (test.stymiedModifier === -4) {
+      } else if (test.stymiedModifier == -4) {
          test.modifierText += "Very Stymied -4 ";
          test.modifiers += -4;
       }
