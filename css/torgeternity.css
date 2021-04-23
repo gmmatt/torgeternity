@@ -1207,29 +1207,17 @@ div.readme a.compendium {
 @-webkit-keyframes roll {
   from {
     transform: scaleX(1.2) scaleY(1.2);
-    transform-origin: 50% 50% 0;
-  }
-  33% {
-    transform: scaleX(0.8) scaleY(0.8);
-    transform-origin: 50% 50% 0;
   }
   to {
     transform: scaleX(0.8) scaleY(0.8);
-    transform-origin: 50% 50% 0;
   }
 }
 @keyframes roll {
   from {
     transform: scaleX(1.2) scaleY(1.2);
-    transform-origin: 50% 50% 0;
-  }
-  33% {
-    transform: scaleX(0.8) scaleY(0.8);
-    transform-origin: 50% 50% 0;
   }
   to {
     transform: scaleX(0.8) scaleY(0.8);
-    transform-origin: 50% 50% 0;
   }
 }
 
@@ -1473,11 +1461,7 @@ form.actor-sheet header input[name="name"] {
 
 .window-content .actor-sheet a.skill-roll:hover,
 .window-content .actor-sheet a.skill-roll:active {
-  -webkit-animation-duration: 0.3s;
-  animation-duration: 0.3s;
-  -webkit-animation-name: roll;
-  animation-name: roll;
-  text-shadow: 0px 0px 10px #191e58;
+  text-shadow: 0px 0px 10px #474a68;
 }
 
 .window-content .actor-sheet .item-name {

@@ -4,22 +4,12 @@
   from {
     -webkit-transform: scaleX(1.2) scaleY(1.2);
     transform: scaleX(1.2) scaleY(1.2);
-    -webkit-transform-origin: 50% 50% 0;
-    transform-origin: 50% 50% 0;
   }
 
-  33% {
-    -webkit-transform: scaleX(0.8) scaleY(0.8);
-    transform: scaleX(0.8) scaleY(0.8);
-    -webkit-transform-origin: 50% 50% 0;
-    transform-origin: 50% 50% 0;
-  }
 
   to {
     -webkit-transform: scaleX(0.8) scaleY(0.8);
     transform: scaleX(0.8) scaleY(0.8);
-    -webkit-transform-origin: 50% 50% 0;
-    transform-origin: 50% 50% 0;
   }
 }
 
@@ -265,9 +255,7 @@ form.actor-sheet {
 
   a.skill-roll:hover,
   a.skill-roll:active {
-    animation-duration: 0.3s;
-    animation-name: roll;
-    text-shadow: 0px 0px 10px rgb(25, 30, 88);
+    text-shadow: 0px 0px 10px rgb(71, 74, 104);
   }
 
   .item-name {
