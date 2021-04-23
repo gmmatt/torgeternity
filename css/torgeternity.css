@@ -984,6 +984,10 @@ div.readme a.compendium {
   background-color: rgba(255, 255, 255, 0.575);
 }
 
+.chat-message .message-header .flavor-text {
+  font-size: unset;
+}
+
 .chat-message table td {
   padding: 0px 0px;
 }
