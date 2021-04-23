@@ -28,7 +28,7 @@ Hooks.once("init", async function () {
     default: true, // The default value for the setting
     onChange: () => window.location.reload()
   });
-
+  
   //-------global
   game.torgeternity = {
     rollItemMacro,
