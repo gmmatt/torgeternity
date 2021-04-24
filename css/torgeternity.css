@@ -716,6 +716,52 @@ div#sidebar.collapsed {
   border: none;
 }
 
+#navigation a.scene-name .cosm-icone {
+  min-width: 28px;
+  min-height: 28px;
+  display: inline-block;
+}
+
+#navigation a.scene-name .coreEarth {
+  background: url(../images/cosm-icons/coreEarth.webp);
+  background-size: 100% 100%;
+}
+
+#navigation a.scene-name .livingLand {
+  background: url(../images/cosm-icons/livingLand.webp);
+  background-size: 100% 100%;
+}
+
+#navigation a.scene-name .nileEmpire {
+  background: url(../images/cosm-icons/nileEmpire.webp);
+  background-size: 100% 100%;
+}
+
+#navigation a.scene-name .aysle {
+  background: url(../images/cosm-icons/aysle.webp);
+  background-size: 100% 100%;
+}
+
+#navigation a.scene-name .cyberpapacy {
+  background: url(../images/cosm-icons/cyberpapacy.webp);
+  background-size: 100% 100%;
+}
+
+#navigation a.scene-name .tharkold {
+  background: url(../images/cosm-icons/tharkold.webp);
+  background-size: 100% 100%;
+}
+
+#navigation a.scene-name .panPacifica {
+  background: url(../images/cosm-icons/panPacifica.webp);
+  background-size: 100% 100%;
+}
+
+#navigation a.scene-name .orrorsh {
+  background: url(../images/cosm-icons/orrorsh.webp);
+  background-size: 100% 100%;
+}
+
 #navigation #scene-list .scene {
   text-align: justify;
   background: url(../images/scene.webp);
