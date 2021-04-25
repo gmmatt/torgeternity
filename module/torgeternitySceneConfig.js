@@ -8,8 +8,11 @@ export default class torgeternitySceneConfig extends SceneConfig {
     }
     activateListeners(html) {
         super.activateListeners(html);
-       let sel= html.find("select.cosm")[0];
-       sel.addEventListener("change",this._onChangeCosm.bind(this))
+       let selCosm= html.find("select.cosm")[0];
+       selCosm.addEventListener("change",this._onChangeCosm.bind(this));
+        let selZone= html.find("select.zone-type")[0];
+        selZone.addEventListener("change",this._onChangeZone.bind(this));
+
       }
 
       _onChangeCosm(ev){
@@ -18,4 +21,10 @@ export default class torgeternitySceneConfig extends SceneConfig {
 
          
       }
+      _onChangeZone(ev){
+        let zone=ev.currentTarget.options[ev.currentTarget.selectedIndex].value;
+        this.entity.setFlag("torgeternity","zone",zone)
+
+       
+    }
 }

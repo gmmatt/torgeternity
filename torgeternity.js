@@ -93,7 +93,6 @@ Hooks.once("init", async function () {
 Hooks.on("ready", function () {
   sheetResize();
   toggleViewMode();
-  displayAxioms();
   var logo = document.getElementById("logo");
   logo.style.position = "absolute";
   logo.setAttribute("src", "/systems/torgeternity/images/vttLogo.webp");

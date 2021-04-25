@@ -1,6 +1,53 @@
 {{log "scene config" this}}
-
 <form autocomplete="off">
+    <header class="form-header">
+        <h3><i class="far fa-image"></i> Reality</h3>
+    </header>
+    <p class="notes">Configure the reality of the scene zone</p>
+
+
+
+
+    <div class="form-group">
+        <label>{{localize "SCENES.SceneName"}}</label>
+        <div class="form-fields">
+            <input type="text" name="name" placeholder="Name" value="{{entity.name}}" data-dtype="String" />
+        </div>
+    </div>
+
+    <div class="form-group">
+
+
+        <label>{{localize "torgeternity.perks.cosm"}}</label>
+        
+        <select name="flags.torgeternity.cosm" class="cosm" data-dtype="String">
+            {{#select entity.flags.torgeternity.cosm}}
+            <option value="none">{{localize "torgeternity.cosms.none"}}</option>
+            <option value="coreEarth">{{localize "torgeternity.cosms.coreEarth"}}</option>
+            <option value="livingLand">{{localize "torgeternity.cosms.livingLand"}}</option>
+            <option value="nileEmpire">{{localize "torgeternity.cosms.nileEmpire"}}</option>
+            <option value="aysle">{{localize "torgeternity.cosms.aysle"}}</option>
+            <option value="cyberpapacy">{{localize "torgeternity.cosms.cyberpapacy"}}</option>
+            <option value="tharkold">{{localize "torgeternity.cosms.tharkold"}}</option>
+            <option value="panPacifica">{{localize "torgeternity.cosms.panPacifica"}}</option>
+            <option value="orrorsh">{{localize "torgeternity.cosms.orrorsh"}}</option>
+            <option value="tharkold">{{localize "torgeternity.cosms.tharkold"}}</option>
+            {{/select}}
+        </select>
+
+        <select name="flags.torgeternity.zone" class="zone-type" data-dtype="String">
+            {{#select entity.flags.torgeternity.zone}}
+            <option value="pure">pure</option>
+            <option value="dominant">dominant</option>
+            <option value="mixed">mixed</option>
+
+            {{/select}}
+        </select>
+
+
+    </div>
+
+
 
     <!-- Details Tab -->
     <header class="form-header">
@@ -8,41 +55,19 @@
     </header>
     <p class="notes">{{localize "SCENES.HeaderDetailsHint"}}</p>
 
-    <div class="form-group">
-        <label>{{localize "SCENES.SceneName"}}</label>
-        <div class="form-fields">
-            <input type="text" name="name" placeholder="Name" value="{{entity.name}}" data-dtype="String"/>
-        </div>
-    </div>
-<div class="form-group">
-    <label>{{localize "torgeternity.perks.cosm"}}</label>
-    <select name="flags.torgeternity.cosm" class="cosm" data-dtype="String">
-            {{#select entity.flags.torgeternity.cosm}}
-                <option value="none">{{localize "torgeternity.cosms.none"}}</option>
-                <option value="coreEarth">{{localize "torgeternity.cosms.coreEarth"}}</option>
-                <option value="livingLand">{{localize "torgeternity.cosms.livingLand"}}</option>
-                <option value="nileEmpire">{{localize "torgeternity.cosms.nileEmpire"}}</option>
-                <option value="aysle">{{localize "torgeternity.cosms.aysle"}}</option>
-                <option value="cyberpapacy">{{localize "torgeternity.cosms.cyberpapacy"}}</option>
-                <option value="tharkold">{{localize "torgeternity.cosms.tharkold"}}</option>
-                <option value="panPacifica">{{localize "torgeternity.cosms.panPacifica"}}</option>
-                <option value="orrorsh">{{localize "torgeternity.cosms.orrorsh"}}</option>
-                <option value="tharkold">{{localize "torgeternity.cosms.tharkold"}}</option>
-            {{/select}}
-            </select>
-</div>
+
     <div class="form-group">
         <label>{{localize "SCENES.Accessibility"}}</label>
         <div class="form-fields">
             <label class="checkbox">
                 {{localize "SCENES.ShowNav"}}
-                <input type="checkbox" name="navigation" value="1" data-dtype="Boolean" {{checked entity.navigation}}/>
+                <input type="checkbox" name="navigation" value="1" data-dtype="Boolean" {{checked entity.navigation}} />
             </label>
             <select name="permission.default" data-dtype="Number">
-            {{#select entity.permission.default}}
+                {{#select entity.permission.default}}
                 <option value="0">{{localize "SCENES.AccessibilityGM"}}</option>
                 <option value="3">{{localize "SCENES.AccessibilityAll"}}</option>
-            {{/select}}
+                {{/select}}
             </select>
         </div>
     </div>
@@ -50,7 +75,7 @@
     <div class="form-group">
         <label>{{localize "SCENES.NavName"}}</label>
         <div class="form-fields">
-            <input type="text" name="navName" value="{{entity.navName}}" data-dtype="String"/>
+            <input type="text" name="navName" value="{{entity.navName}}" data-dtype="String" />
         </div>
     </div>
 
@@ -59,7 +84,7 @@
         <label>{{localize "SCENES.BackgroundImage"}}</label>
         <div class="form-fields">
             {{filePicker target="img" type="imagevideo"}}
-            <input class="image" type="text" name="img" placeholder="{{localize 'File Path'}}" value="{{entity.img}}"/>
+            <input class="image" type="text" name="img" placeholder="{{localize 'File Path'}}" value="{{entity.img}}" />
         </div>
     </div>
 
@@ -67,16 +92,17 @@
         <label>{{localize "SCENES.Dimensions"}} <span class="units">({{localize "SCENES.Pixels"}})</span></label>
         <div class="form-fields">
             <label class="grid-label">{{localize "Width"}}</label>
-            <input type="number" name="width" placeholder="{{localize 'SCENES.Pixels'}}" value="{{entity.width}}"/>
+            <input type="number" name="width" placeholder="{{localize 'SCENES.Pixels'}}" value="{{entity.width}}" />
             <label class="grid-label">{{localize "Height"}}</label>
-            <input type="number" name="height" placeholder="{{localize 'SCENES.Pixels'}}" value="{{entity.height}}"/>
+            <input type="number" name="height" placeholder="{{localize 'SCENES.Pixels'}}" value="{{entity.height}}" />
         </div>
     </div>
 
     <div class="form-group">
         <label>{{localize "SCENES.Padding"}}</label>
         <div class="form-fields">
-            <input type="range" name="padding" value="{{entity.padding}}" min="0" max="0.5" step="0.05" data-dtype="Number"/>
+            <input type="range" name="padding" value="{{entity.padding}}" min="0" max="0.5" step="0.05"
+                data-dtype="Number" />
             <span class="range-value">{{entity.padding}}</span>
         </div>
     </div>
@@ -84,8 +110,8 @@
     <div class="form-group">
         <label>{{localize "SCENES.BackgroundColor"}}</label>
         <div class="form-fields">
-            <input type="text" name="backgroundColor" value="{{entity.backgroundColor}}" data-dtype="String"/>
-            <input type="color" value="{{entity.backgroundColor}}" data-edit="backgroundColor"/>
+            <input type="text" name="backgroundColor" value="{{entity.backgroundColor}}" data-dtype="String" />
+            <input type="color" value="{{entity.backgroundColor}}" data-edit="backgroundColor" />
         </div>
     </div>
 
@@ -99,13 +125,13 @@
         <label>{{localize "SCENES.GridType"}}</label>
         <div class="form-fields">
             <select name="gridType" data-dtype="Number">
-            {{#select entity.gridType}}
-            {{#each gridTypes as |label t|}}
+                {{#select entity.gridType}}
+                {{#each gridTypes as |label t|}}
                 <option value="{{t}}">{{localize label}}</option>
-            {{/each}}
-            {{/select}}
+                {{/each}}
+                {{/select}}
             </select>
-            <button type="button" class="grid-config" title="{{ localize "SCENES.GridConfigTool" }}">
+            <button type="button" class="grid-config" title="{{ localize " SCENES.GridConfigTool" }}">
                 <i class="fas fa-ruler-combined"></i>
             </button>
         </div>
@@ -114,7 +140,8 @@
     <div class="form-group">
         <label>{{localize "SCENES.GridSize"}} <span class="units">({{localize "SCENES.Pixels"}})</span></label>
         <div class="form-fields">
-            <input type="text" name="grid" placeholder="{{localize 'SCENES.Pixels'}}" value="{{entity.grid}}" data-dtype="Number"/>
+            <input type="text" name="grid" placeholder="{{localize 'SCENES.Pixels'}}" value="{{entity.grid}}"
+                data-dtype="Number" />
         </div>
     </div>
 
@@ -122,9 +149,9 @@
         <label>{{localize "SCENES.ShiftBG"}} <span class="units">({{localize "SCENES.Pixels"}})</span></label>
         <div class="form-fields">
             <label class="grid-label">{{localize "SCENES.ShiftHorizontal"}}</label>
-            <input type="number" name="shiftX" placeholder="{{localize 'SCENES.Pixels'}}" value="{{entity.shiftX}}"/>
+            <input type="number" name="shiftX" placeholder="{{localize 'SCENES.Pixels'}}" value="{{entity.shiftX}}" />
             <label class="grid-label">{{localize "SCENES.ShiftVertical"}}</label>
-            <input type="number" name="shiftY" placeholder="{{localize 'SCENES.Pixels'}}" value="{{entity.shiftY}}"/>
+            <input type="number" name="shiftY" placeholder="{{localize 'SCENES.Pixels'}}" value="{{entity.shiftY}}" />
         </div>
     </div>
 
@@ -132,24 +159,25 @@
         <label>{{localize "SCENES.GridScale"}}</label>
         <div class="form-fields">
             <label class="grid-label">{{localize "SCENES.GridDistance"}}</label>
-            <input type="number" step="any" name="gridDistance" placeholder="5" value="{{entity.gridDistance}}"/>
+            <input type="number" step="any" name="gridDistance" placeholder="5" value="{{entity.gridDistance}}" />
             <label class="grid-label">{{localize "SCENES.GridUnits"}}</label>
-            <input type="text" name="gridUnits" placeholder="ft" value="{{entity.gridUnits}}"/>
+            <input type="text" name="gridUnits" placeholder="ft" value="{{entity.gridUnits}}" />
         </div>
     </div>
 
     <div class="form-group">
         <label>{{localize "SCENES.GridColor"}}</label>
         <div class="form-fields">
-            <input type="text" name="gridColor" value="{{entity.gridColor}}" data-dtype="String"/>
-            <input type="color" value="{{entity.gridColor}}" data-edit="gridColor"/>
+            <input type="text" name="gridColor" value="{{entity.gridColor}}" data-dtype="String" />
+            <input type="color" value="{{entity.gridColor}}" data-edit="gridColor" />
         </div>
     </div>
 
     <div class="form-group">
         <label>{{localize "SCENES.GridOpacity"}}</label>
         <div class="form-fields">
-            <input type="range" name="gridAlpha" value="{{entity.gridAlpha}}" min="0" max="1" step="0.05" data-dtype="Number"/>
+            <input type="range" name="gridAlpha" value="{{entity.gridAlpha}}" min="0" max="1" step="0.05"
+                data-dtype="Number" />
             <span class="range-value">{{entity.gridAlpha}}</span>
         </div>
     </div>
@@ -162,26 +190,27 @@
 
     <div class="form-group">
         <label>{{localize "SCENES.TokenVision"}}</label>
-        <input type="checkbox" name="tokenVision" {{checked entity.tokenVision}}/>
+        <input type="checkbox" name="tokenVision" {{checked entity.tokenVision}} />
         <p class="notes">{{localize "SCENES.TokenVisionHint"}}</p>
     </div>
 
     <div class="form-group">
         <label>{{localize "SCENES.GlobalIllum"}}</label>
-        <input type="checkbox" name="globalLight" {{checked entity.globalLight}}/>
+        <input type="checkbox" name="globalLight" {{checked entity.globalLight}} />
         <p class="notes">{{localize "SCENES.GlobalIllumHint"}}</p>
     </div>
 
     <div class="form-group">
         <label>{{localize "SCENES.FogExplore"}}</label>
-        <input type="checkbox" name="fogExploration" {{checked entity.fogExploration}}/>
+        <input type="checkbox" name="fogExploration" {{checked entity.fogExploration}} />
         <p class="notes">{{localize "SCENES.FogExploreHint"}}</p>
     </div>
 
     <div class="form-group">
         <label>{{localize "SCENES.Darkness"}}</label>
         <div class="form-fields">
-            <input type="range" name="darkness" value="{{entity.darkness}}" min="0" max="1" step="0.05" data-dtype="Number"/>
+            <input type="range" name="darkness" value="{{entity.darkness}}" min="0" max="1" step="0.05"
+                data-dtype="Number" />
             <span class="range-value">{{entity.darkness}}</span>
         </div>
         <p class="notes">{{localize "SCENES.DarknessHint"}}</p>
@@ -191,9 +220,10 @@
         <label>{{localize "SCENES.GlobalLightThreshold"}}</label>
         <div class="form-fields">
             <label class="checkbox">
-               <input type="checkbox" name="hasGlobalThreshold" {{ checked hasGlobalThreshold }}/>
+                <input type="checkbox" name="hasGlobalThreshold" {{ checked hasGlobalThreshold }} />
             </label>
-            <input type="range" name="globalLightThreshold" value="{{entity.globalLightThreshold}}" min="0" max="1" step="0.05" data-dtype="Number"/>
+            <input type="range" name="globalLightThreshold" value="{{entity.globalLightThreshold}}" min="0" max="1"
+                step="0.05" data-dtype="Number" />
             <span class="range-value">{{entity.globalLightThreshold}}</span>
         </div>
         <p class="notes">{{localize "SCENES.GlobalLightThresholdHint"}}</p>
@@ -248,12 +278,13 @@
         <label>{{localize "SCENES.InitialView"}}</label>
         <div class="form-fields">
             <label>x</label>
-            <input type="text" name="initial.x" placeholder="0" value="{{entity.initial.x}}" data-dtype="Number"/>
+            <input type="text" name="initial.x" placeholder="0" value="{{entity.initial.x}}" data-dtype="Number" />
             <label>y</label>
-            <input type="text" name="initial.y" placeholder="0" value="{{entity.initial.y}}" data-dtype="Number"/>
+            <input type="text" name="initial.y" placeholder="0" value="{{entity.initial.y}}" data-dtype="Number" />
             <label>zoom</label>
-            <input type="text" name="initial.scale" placeholder="1" value="{{entity.initial.scale}}" data-dtype="Number"/>
-            <button class="capture-position" type="button" title="{{ localize "SCENES.InitialViewButton" }}">
+            <input type="text" name="initial.scale" placeholder="1" value="{{entity.initial.scale}}"
+                data-dtype="Number" />
+            <button class="capture-position" type="button" title="{{ localize " SCENES.InitialViewButton" }}">
                 <i class="fas fa-crop-alt"></i>
             </button>
         </div>

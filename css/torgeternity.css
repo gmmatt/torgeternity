@@ -131,6 +131,10 @@ div.actor ::-webkit-scrollbar {
   color: white;
 }
 
+.window-app .window-content .form-header {
+  color: white;
+}
+
 .window-app .window-content div.form-group input {
   color: white;
 }
@@ -710,6 +714,69 @@ div#sidebar.collapsed {
   font-size: 30px;
 }
 
+#navigation div.cosm-card {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  width: 600px;
+  height: 400px;
+  transform: scale(0.1) translateY(0px);
+  transform-origin: 0% 0%;
+  opacity: 0;
+  z-index: 1000;
+  transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1) 10ms;
+}
+
+#navigation div.cosm-card:hover {
+  top: 0%;
+  left: 0%;
+  width: 600px;
+  height: 400px;
+  transform: scale(1) translateY(0px);
+  transform-origin: 0% 0%;
+  opacity: 1;
+}
+
+#navigation .cosm-card.coreEarth {
+  background: url(../images/cosm-cards/coreEarth.webp);
+  background-size: 100% 100%;
+}
+
+#navigation .cosm-card.livingLand {
+  background: url(../images/cosm-cards/livingLand.webp);
+  background-size: 100% 100%;
+}
+
+#navigation .cosm-card.nileEmpire {
+  background: url(../images/cosm-cards/nileEmpire.webp);
+  background-size: 100% 100%;
+}
+
+#navigation .cosm-card.aysle {
+  background: url(../images/cosm-cards/aysle.webp);
+  background-size: 100% 100%;
+}
+
+#navigation .cosm-card.cyberpapacy {
+  background: url(../images/cosm-cards/cyberpapacy.webp);
+  background-size: 100% 100%;
+}
+
+#navigation .cosm-card.panPacifica {
+  background: url(../images/cosm-cards/panPacifica.webp);
+  background-size: 100% 100%;
+}
+
+#navigation .cosm-card.orrorsh {
+  background: url(../images/cosm-cards/orrorsh.webp);
+  background-size: 100% 100%;
+}
+
+#navigation .cosm-card.tharkold {
+  background: url(../images/cosm-cards/tharkold.webp);
+  background-size: 100% 100%;
+}
+
 #navigation a.scene-name {
   font-family: "Alaska";
   text-transform: uppercase;
@@ -720,44 +787,45 @@ div#sidebar.collapsed {
   min-width: 28px;
   min-height: 28px;
   display: inline-block;
+  position: relative;
 }
 
-#navigation a.scene-name .coreEarth {
+#navigation a.scene-name .cosm-icone.coreEarth {
   background: url(../images/cosm-icons/coreEarth.webp);
   background-size: 100% 100%;
 }
 
-#navigation a.scene-name .livingLand {
+#navigation a.scene-name .cosm-icone.livingLand {
   background: url(../images/cosm-icons/livingLand.webp);
   background-size: 100% 100%;
 }
 
-#navigation a.scene-name .nileEmpire {
+#navigation a.scene-name .cosm-icone.nileEmpire {
   background: url(../images/cosm-icons/nileEmpire.webp);
   background-size: 100% 100%;
 }
 
-#navigation a.scene-name .aysle {
+#navigation a.scene-name .cosm-icone.aysle {
   background: url(../images/cosm-icons/aysle.webp);
   background-size: 100% 100%;
 }
 
-#navigation a.scene-name .cyberpapacy {
+#navigation a.scene-name .cosm-icone.cyberpapacy {
   background: url(../images/cosm-icons/cyberpapacy.webp);
   background-size: 100% 100%;
 }
 
-#navigation a.scene-name .tharkold {
+#navigation a.scene-name .cosm-icone.tharkold {
   background: url(../images/cosm-icons/tharkold.webp);
   background-size: 100% 100%;
 }
 
-#navigation a.scene-name .panPacifica {
+#navigation a.scene-name .cosm-icone.panPacifica {
   background: url(../images/cosm-icons/panPacifica.webp);
   background-size: 100% 100%;
 }
 
-#navigation a.scene-name .orrorsh {
+#navigation a.scene-name .cosm-icone.orrorsh {
   background: url(../images/cosm-icons/orrorsh.webp);
   background-size: 100% 100%;
 }
