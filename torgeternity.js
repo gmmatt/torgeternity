@@ -87,6 +87,16 @@ registerTorgSettings()
 Hooks.on("ready", function () {
   sheetResize();
   toggleViewMode();
+
+//----pause image----
+  Hooks.on("renderPause", () =>{
+
+  let path=game.settings.get("torgeternity", "pauseMedia");
+  let img = document.getElementById("pause").firstElementChild;
+  path="./"+path;
+  img.style.content=`url(${path})`
+  })
+
   var logo = document.getElementById("logo");
   logo.style.position = "absolute";
   logo.setAttribute("src", "/systems/torgeternity/images/vttLogo.webp");

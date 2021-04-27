@@ -12,9 +12,7 @@ export function registerTorgSettings() {
         scope: 'world',
         config: true,
         restricted: true,
-        onChange: path => {
-            setPauseImage(path);
-        }
+        
     });
     //animated chat messages
 
@@ -147,9 +145,4 @@ function setCosmCard(cosm, path) {
         }
     }
 
-}
-function setPauseImage(path) {
-    let img = document.getElementById("pause").firstElementChild;
-    path="./"+path;
-    img.style.content=`url(${path})`;
 }

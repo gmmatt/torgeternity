@@ -515,8 +515,6 @@ a:hover {
   top: -0px;
   left: calc(50% - 65px);
   opacity: 0.7;
-  -webkit-animation: rotateblur 3s linear infinite;
-  animation: rotateblur 3s linear infinite;
 }
 
 #controls .scene-control,

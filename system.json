@@ -12,6 +12,7 @@
   "esmodules": [
     "torgeternity.js"
   ],
+  "scripts":["./module/lib/setting-extender.js"],
   "styles": [
     "./css/torgeternity.css"
   ],
