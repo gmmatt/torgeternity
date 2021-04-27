@@ -1,7 +1,22 @@
 export function registerTorgSettings() {
 
-    //animated chat messages
 
+    //------pause image
+
+    game.settings.register("torgeternity", "pauseMedia", {
+        // game.setting.register("NameOfTheModule", "VariableName",
+        name: "pause image media", // Register a module setting with checkbox
+        hint: "choose the image displayed when the game is paused", // Description of the settings
+        type: window.Azzu.SettingsTypes.FilePickerImage,
+        default: 'systems/torgeternity/images/pause.webp',
+        scope: 'world',
+        config: true,
+        restricted: true,
+        onChange: path => {
+            setPauseImage(path);
+        }
+    });
+    //animated chat messages
 
     game.settings.register("torgeternity", "animatedChat", {
         // game.setting.register("NameOfTheModule", "VariableName",
@@ -126,10 +141,15 @@ export function registerTorgSettings() {
 function setCosmCard(cosm, path) {
     let cards = document.getElementsByClassName("cosm-card");
     for (let card of cards) {
-        if (card.classList.contains(cosm) ){
-                card.style.background = `url(${path})`
+        if (card.classList.contains(cosm)) {
+            card.style.background = `url(${path})`
 
-            }
         }
-
     }
+
+}
+function setPauseImage(path) {
+    let img = document.getElementById("pause").firstElementChild;
+    path="./"+path;
+    img.style.content=`url(${path})`;
+}
