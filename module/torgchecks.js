@@ -438,10 +438,13 @@ export function renderSkillChat(test,diceroll) {
    const templatePromise = renderTemplate("./systems/torgeternity/templates/partials/skill-card.hbs", test);
 
    templatePromise.then(content => {
-      chatData.flavor = content;      
       if (test.diceroll !== undefined) {
+         chatData.flavor = content;
          test.diceroll.toMessage(chatData);
-      }
+      } else {
+         chatData.content = content;
+         ChatMessage.create(chatData);
+      };
    });
     
 

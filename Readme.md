@@ -16,9 +16,10 @@ v. 0.92.5
 - Fixed a bug where modifiers weren't displaying correctly in rolls from chat cards
 - NEW FEATURE! Each map can now be designated with a cosm and zone type on the map
   configuration screen. Hover over the cosm icon to see the table tent for the current
-  cosm
+  cosm (thanks again Rwan!)
 - Dice rolls/roll totals now display as a part of the roll result chat message instead
   of as a second message.
+- Fixed a bug where attribute names weren't appearing on threat rolls.
 
 v. 0.92.4
 - New Feature! Party sheet with summary of each player's stats.
