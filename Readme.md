@@ -14,6 +14,11 @@ v. 0.92.5
   armor needs to be entered manually on their sheets. 
 - Updated an issue where some text was appearing as white instead of black.
 - Fixed a bug where modifiers weren't displaying correctly in rolls from chat cards
+- NEW FEATURE! Each map can now be designated with a cosm and zone type on the map
+  configuration screen. Hover over the cosm icon to see the table tent for the current
+  cosm
+- Dice rolls/roll totals now display as a part of the roll result chat message instead
+  of as a second message.
 
 v. 0.92.4
 - New Feature! Party sheet with summary of each player's stats.

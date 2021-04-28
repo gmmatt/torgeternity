@@ -77,6 +77,7 @@ export function SkillCheck({
       test.unskilledLabel = "display:none"
    };
    //diceroll.toMessage();
+   test.diceroll = diceroll;
 
    // Get Bonus and Roll Result
    test.rollTotal = diceroll.total;
@@ -178,6 +179,7 @@ export function weaponAttack ({
       test.unskilledLabel = "display:none"
    }
    //diceroll.toMessage();
+   test.diceroll = diceroll;
 
    // Get Bonus and Roll Result
    test.rollTotal = diceroll.total;
@@ -253,6 +255,7 @@ export function powerRoll({
    var diceroll = new Roll('1d20x10x20').roll();
    test.unskilledLabel = "display:none"
    //diceroll.toMessage();
+   test.diceroll = diceroll;
 
    // Get Bonus and Roll Result
    test.rollTotal = diceroll.total;
@@ -436,7 +439,9 @@ export function renderSkillChat(test,diceroll) {
 
    templatePromise.then(content => {
       chatData.flavor = content;      
-      diceroll.toMessage(chatData);
+      if (test.diceroll !== undefined) {
+         test.diceroll.toMessage(chatData);
+      }
    });
     
 
