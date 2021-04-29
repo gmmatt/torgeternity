@@ -19,7 +19,7 @@
 
 
         <label>{{localize "torgeternity.perks.cosm"}}</label>
-        
+
         <select name="flags.torgeternity.cosm" class="cosm" data-dtype="String">
             {{#select entity.flags.torgeternity.cosm}}
             <option value="none">{{localize "torgeternity.cosms.none"}}</option>
@@ -40,13 +40,30 @@
             <option value="pure">pure</option>
             <option value="dominant">dominant</option>
             <option value="mixed">mixed</option>
-
+            {{/select}}
+        </select>
+    </div>
+    {{#if entity.flags.torgeternity.displayCosm2}}
+    <div class="form-group cosm-secondary">
+        <label>secondary cosm </label>
+        <select name="flags.torgeternity.cosm2" class="cosm-secondary" data-dtype="String">
+            {{#select entity.flags.torgeternity.cosm2}}
+            <option value="none">{{localize "torgeternity.cosms.none"}}</option>
+            <option value="coreEarth">{{localize "torgeternity.cosms.coreEarth"}}</option>
+            <option value="livingLand">{{localize "torgeternity.cosms.livingLand"}}</option>
+            <option value="nileEmpire">{{localize "torgeternity.cosms.nileEmpire"}}</option>
+            <option value="aysle">{{localize "torgeternity.cosms.aysle"}}</option>
+            <option value="cyberpapacy">{{localize "torgeternity.cosms.cyberpapacy"}}</option>
+            <option value="tharkold">{{localize "torgeternity.cosms.tharkold"}}</option>
+            <option value="panPacifica">{{localize "torgeternity.cosms.panPacifica"}}</option>
+            <option value="orrorsh">{{localize "torgeternity.cosms.orrorsh"}}</option>
+            <option value="tharkold">{{localize "torgeternity.cosms.tharkold"}}</option>
             {{/select}}
         </select>
 
 
     </div>
-
+{{/if}}
 
 
     <!-- Details Tab -->
