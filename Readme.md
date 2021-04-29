@@ -8,6 +8,19 @@
 For manual installation, use the provided manifest URL in the "*Install System*" popup window 
 while managing game systems.
 
+v. 0.92.5
+- Updated threat sheets so that effects can be managed for threats
+- NOTE: Armor effects should be inactive or deleted for threats since their toughness/
+  armor needs to be entered manually on their sheets. 
+- Updated an issue where some text was appearing as white instead of black.
+- Fixed a bug where modifiers weren't displaying correctly in rolls from chat cards
+- NEW FEATURE! Each map can now be designated with a cosm and zone type on the map
+  configuration screen. Hover over the cosm icon to see the table tent for the current
+  cosm (thanks again Rwan!)
+- Dice rolls/roll totals now display as a part of the roll result chat message instead
+  of as a second message.
+- Fixed a bug where attribute names weren't appearing on threat rolls.
+
 v. 0.92.4
 - New Feature! Party sheet with summary of each player's stats.
 - Fixed an issue where ammo current/max was not displaying properly in item drop-downs

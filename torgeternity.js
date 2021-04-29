@@ -12,23 +12,18 @@ import torgeternityCombat from "./module/dramaticScene/torgeternityCombat.js";
 import torgeternityCombatTracker from "./module/dramaticScene/torgeternityCombatTracker.js";
 import { alphabSort } from "./module/AlphabeticalSort.js";
 import TorgeternityPlayerList from "./module/users/TorgeternityPlayerList.js";
+import torgeternitySceneConfig from "./module/torgeternitySceneConfig.js";
+import torgeternityNav from "./module/torgeternityNav.js";
+import { registerTorgSettings } from "./module/settings.js";
+
 
 Hooks.once("init", async function () {
   console.log("torgeternity | Initializing Torg Eternity System");
 
   //-----system settings
-
-  game.settings.register("torgeternity", "animatedChat", {
-    // game.setting.register("NameOfTheModule", "VariableName",
-    name: "chat card animation", // Register a module setting with checkbox
-    hint: "If checked, enable chat card animations. changes will reload the app", // Description of the settings
-    scope: "world", // This specifies a client-stored setting
-    config: true, // This specifies that the setting appears in the configuration view
-    type: Boolean,
-    default: true, // The default value for the setting
-    onChange: () => window.location.reload()
-  });
-
+registerTorgSettings()
+ 
+  
   //-------global
   game.torgeternity = {
     rollItemMacro,
@@ -44,6 +39,12 @@ Hooks.once("init", async function () {
   CONFIG.Combat.entityClass = torgeternityCombat;
   CONFIG.ui.combat = torgeternityCombatTracker;
 
+
+  //----scenes
+  CONFIG.Scene.sheetClass=torgeternitySceneConfig;
+  CONFIG.ui.nav=torgeternityNav;
+
+  
   //---custom user class
   CONFIG.ui.players = TorgeternityPlayerList;
 
@@ -86,6 +87,16 @@ Hooks.once("init", async function () {
 Hooks.on("ready", function () {
   sheetResize();
   toggleViewMode();
+
+//----pause image----
+  Hooks.on("renderPause", () =>{
+
+  let path=game.settings.get("torgeternity", "pauseMedia");
+  let img = document.getElementById("pause").firstElementChild;
+  path="./"+path;
+  img.style.content=`url(${path})`
+  })
+
   var logo = document.getElementById("logo");
   logo.style.position = "absolute";
   logo.setAttribute("src", "/systems/torgeternity/images/vttLogo.webp");

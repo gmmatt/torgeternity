@@ -5,6 +5,8 @@ export function SkillCheck({
    skillAdds = null,
    skillValue= null,
    unskilledUse = null,
+   woundModifier = null,
+   stymiedModifier = null,
    actor = null } = {}) {
    var test = {
       actor: actor.data._id,
@@ -15,6 +17,8 @@ export function SkillCheck({
       skillAdds: skillAdds,
       skillValue: skillValue,
       unskilledUse: unskilledUse,
+      woundModifier: woundModifier,
+      stymiedModifier: stymiedModifier,
       testType: testType,
       possibilityTotal: 0,
       upTotal: 0,
@@ -72,7 +76,8 @@ export function SkillCheck({
       diceroll = new Roll('1d20x10x20').roll();
       test.unskilledLabel = "display:none"
    };
-   diceroll.toMessage();
+   //diceroll.toMessage();
+   test.diceroll = diceroll;
 
    // Get Bonus and Roll Result
    test.rollTotal = diceroll.total;
@@ -89,7 +94,7 @@ export function SkillCheck({
    // Set Chat Title
    test.chatTitle = test.skillName + " Test";
 
-   renderSkillChat(test);
+   renderSkillChat(test,diceroll);
 };
 
 export function weaponAttack ({
@@ -173,7 +178,8 @@ export function weaponAttack ({
       diceroll = new Roll('1d20x10x20').roll();
       test.unskilledLabel = "display:none"
    }
-   diceroll.toMessage();
+   //diceroll.toMessage();
+   test.diceroll = diceroll;
 
    // Get Bonus and Roll Result
    test.rollTotal = diceroll.total;
@@ -199,7 +205,7 @@ export function weaponAttack ({
    // Set Chat Title
    test.chatTitle = test.weaponName;
 
-   renderSkillChat(test);
+   renderSkillChat(test,diceroll);
 
 }
 
@@ -248,7 +254,8 @@ export function powerRoll({
    // Roll dice as skilled (assumes character would not have power unless skilled)
    var diceroll = new Roll('1d20x10x20').roll();
    test.unskilledLabel = "display:none"
-   diceroll.toMessage();
+   //diceroll.toMessage();
+   test.diceroll = diceroll;
 
    // Get Bonus and Roll Result
    test.rollTotal = diceroll.total;
@@ -275,12 +282,12 @@ export function powerRoll({
    // Set Chat Title
    test.chatTitle = test.powerName;
    
-   renderSkillChat(test);
+   renderSkillChat(test,diceroll);
    
    }
 
 
-export function renderSkillChat(test) {
+export function renderSkillChat(test,diceroll) {
    // Get current bonus and make + label visible if number is positive
    test.combinedRollTotal = parseInt(test.rollTotal) + parseInt(test.upTotal) + parseInt(test.possibilityTotal) + parseInt(test.heroTotal) + parseInt(test.dramaTotal)
    test.bonus = torgBonus(test.combinedRollTotal);
@@ -299,15 +306,15 @@ export function renderSkillChat(test) {
    if (test.woundModifier < 0) {
       test.displayModifiers = true;
       test.modifierText = "Wounds " + test.woundModifier + " ";
-      test.modifiers = test.woundModifier
+      test.modifiers = parseInt(test.woundModifier)
    };
 
    if (test.stymiedModifier < 0) {
       test.displayModifiers= true;
-      if (test.stymiedModifier === -2) {
+      if (test.stymiedModifier == -2) {
          test.modifierText += "Stymied -2 ";
          test.modifiers += -2;
-      } else if (test.stymiedModifier === -4) {
+      } else if (test.stymiedModifier == -4) {
          test.modifierText += "Very Stymied -4 ";
          test.modifiers += -4;
       }
@@ -431,8 +438,13 @@ export function renderSkillChat(test) {
    const templatePromise = renderTemplate("./systems/torgeternity/templates/partials/skill-card.hbs", test);
 
    templatePromise.then(content => {
-      chatData.content = content;      
-      ChatMessage.create(chatData);
+      if (test.diceroll !== undefined) {
+         chatData.flavor = content;
+         test.diceroll.toMessage(chatData);
+      } else {
+         chatData.content = content;
+         ChatMessage.create(chatData);
+      };
    });
     
 
@@ -441,7 +453,7 @@ export function renderSkillChat(test) {
 export function activeDefenseRoll ({
    actor = null}) {
    let dicerollint = new Roll('1d20x10x20').roll();
-   dicerollint.toMessage();
+   //dicerollint.toMessage();
    let diceroll = dicerollint.total;
    
 
@@ -479,8 +491,8 @@ export function activeDefenseRoll ({
    const templatePromise = renderTemplate("./systems/torgeternity/templates/partials/activeDefense-card.hbs", cardData);
 
    templatePromise.then(content => {
-      chatData.content = content;      
-      ChatMessage.create(chatData);
+      chatData.flavor = content;      
+      dicerollint.toMessage(chatData);
    });
    
    };

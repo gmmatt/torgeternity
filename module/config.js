@@ -247,5 +247,6 @@ torgeternity.statusEffects = [
         id: 'restrained',
         label: 'torgeternity.statusEffects.restrained'
     }
+    
 
 ]

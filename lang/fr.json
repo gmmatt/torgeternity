@@ -119,7 +119,8 @@
             "purpose": "Vocation",
             "powers": "Pouvoirs",
             "restrictions": "Restrictions",
-            "minStrength": "Force min"
+            "minStrength": "Force min",
+            "ap":"AP"
         },
         "stats": {
             "wounds": "Blessures",
@@ -162,8 +163,7 @@
             "cyberpapacy": "Cyberpapauté",
             "tharkold": "Tharkold",
             "panPacifica": "Pan Pacifica",
-            "orrorsh": "Orrorsh",
-            "tharkhold": "Tharkhold"
+            "orrorsh": "Orrorsh"
         },
         "perkTypes": {
             "cyberware": "Cybertechnologie",

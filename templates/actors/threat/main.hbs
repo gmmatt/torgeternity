@@ -12,6 +12,7 @@
         <a class="item" data-tab="perks">{{localize "torgeternity.sheetLabels.perksAbilities"}}</a>
         <a class="item" data-tab="gear">{{localize "torgeternity.sheetLabels.gear"}}</a>
         <a class="item" data-tab="powers">{{localize "torgeternity.sheetLabels.powers"}}</a>
+        <a class="item" data-tab="effects">{{localize "torgeternity.sheetLabels.effects"}}</a>
         <a class="item" data-tab="background">{{localize "torgeternity.sheetLabels.backgroundDescription"}}</a>
     </nav>
 
@@ -32,6 +33,13 @@
         <div class="tab powers" data-group="primary" data-tab="powers">
             {{> "systems/torgeternity/templates/actors/threat/powers.hbs"}}
         </div>
+
+        <div class="tab effects" data-group="primary" data-tab="effects">
+            <div class="effects block">
+                {{> "systems/torgeternity/templates/parts/active-effects.hbs"}}
+            </div>
+        </div>
+
 
         <div class="tab background block" data-group="primary" data-tab="background">
             <h1 class="list-section-heading">{{localize "torgeternity.sheetLabels.backgroundAndNotes"}}</h1>

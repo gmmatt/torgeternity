@@ -44,7 +44,8 @@ function onPossibility(event) {
     } else {
         test.possibilityTotal = diceroll.total
     };
-    diceroll.toMessage();
+    // diceroll.toMessage();
+    test.diceroll = diceroll
 
     test.chatTitle = `${game.i18n.localize("torgeternity.chatText.possibility")}`;
     test.unskilledLabel = "display:none";
@@ -80,7 +81,8 @@ function onUp(event) {
     //Roll for Up
     var diceroll = new Roll('1d20x10x20').roll();
     test.upTotal = diceroll.total
-    diceroll.toMessage();
+    // diceroll.toMessage();
+    test.diceroll = diceroll;
 
     test.chatTitle = `${game.i18n.localize("torgeternity.chatText.up")}`;
     test.unskilledLabel = "display:none";
@@ -121,7 +123,8 @@ function onHero(event) {
     } else {
         test.heroTotal = diceroll.total
     };
-    diceroll.toMessage();
+    // diceroll.toMessage();
+    test.diceroll=diceroll
 
     test.chatTitle = `${game.i18n.localize("torgeternity.chatText.heroCard")}`;
     test.unskilledLabel = "display:none";
@@ -161,7 +164,8 @@ function onDrama(event) {
     } else {
         test.dramaTotal = diceroll.total
     };
-    diceroll.toMessage();
+    // diceroll.toMessage();
+    test.diceroll=diceroll
 
     test.chatTitle = `${game.i18n.localize("torgeternity.chatText.dramaCard")}`;
     test.unskilledLabel = "display:none";

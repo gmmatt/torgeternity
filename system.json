@@ -4,7 +4,7 @@
   "description": "Unofficial Torg Eternity character sheet for Foundry VTT.",
   "author": "Matt Ritchie",
 
-  "version": "0.92.4",
+  "version": "0.92.5",
 
   "minimumCoreVersion": "0.7.8",
   "compatibleCoreVersion": "0.7.9", 
@@ -12,6 +12,7 @@
   "esmodules": [
     "torgeternity.js"
   ],
+  "scripts":["./module/lib/setting-extender.js"],
   "styles": [
     "./css/torgeternity.css"
   ],

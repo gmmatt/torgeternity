@@ -3,14 +3,17 @@
     transform: rotateZ(0deg);
     top: 5px;
   }
+
   50% {
     transform: rotateZ(180deg);
     top: -65px;
   }
+
   75% {
     transform: rotateZ(310deg);
     top: 20px;
   }
+
   100% {
     transform: rotateZ(360deg);
     top: 5px;
@@ -19,10 +22,11 @@
 
 //--------style global
 body {
-   font-family: OptiLight;
-    font-size: 12px;
+  font-family: OptiLight;
+  font-size: 12px;
+
   * {
-   
+
     scrollbar-color: #227878 #2e2e2e94;
     scrollbar-width: thin;
 
@@ -33,8 +37,9 @@ body {
       border: 1px solid #2e2e2e94;
     }
   }
- 
+
 }
+
 input[type="text"],
 input[type="number"],
 input[type="password"],
@@ -45,9 +50,11 @@ option,
 textarea {
   font-family: OptiLight;
 }
+
 button {
   font-family: OptiBold;
 }
+
 button:hover,
 button:focus {
   box-shadow: 0 0 10px #3bb3b3;
@@ -59,8 +66,8 @@ a:hover {
 
 .app,
 .window-app {
-  a.entity-link{
-    color:black
+  a.entity-link {
+    color: black
   }
 
   border-radius: 5px;
@@ -159,13 +166,14 @@ a:hover {
   top: -0px;
   left: calc(50% - 65px);
   opacity: 0.7;
-  animation: rotateblur 3s linear infinite;
 }
+
 //-----------
 //---controls
 //-----------
 
 #controls {
+
   .scene-control,
   .control-tool,
   .scene-control:hover,
@@ -228,7 +236,7 @@ a:hover {
     box-shadow: 0 0 10px #227878;
   }
 
-  #sidebar-tabs > .item.active {
+  #sidebar-tabs>.item.active {
     color: #fff;
     border: 1px solid #154949;
     border-bottom: none;
@@ -242,6 +250,7 @@ a:hover {
   a:hover {
     text-shadow: 0 0 10px#001aff;
   }
+
   textarea#chat-message {
     color: black;
   }
@@ -250,8 +259,8 @@ a:hover {
 div#sidebar::before {
   width: 80px;
   height: 120%;
-  position: absolute;
-  left: 0px;
+  position: fixed;
+  right: 155px;
   /* top: -50px; */
   background: url(../images/separatorSidebar.webp);
   content: "";
@@ -259,13 +268,22 @@ div#sidebar::before {
   background-size: 80% 100%;
   background-position: 280% 50%;
   background-repeat: no-repeat;
-  box-shadow: 20px 0px 100px #000000a6;
+  /* box-shadow: 20px 0px 100px #000000a6; */
   z-index: 200;
+  opacity: 1;
+  transition: all 500ms cubic-bezier(0.42, 0, 0.58, 1) 10ms;
+
+
 }
 
 div#sidebar.collapsed::before {
   width: 0px;
-  content: unset;
+  height: 0px;
+  opacity: 0;
+  z-index: -100;
+  right: -210px;
+  transition: all 500ms cubic-bezier(0.42, 0, 0.58, 1) 10ms;
+
 }
 
 div#sidebar.collapsed {
@@ -319,6 +337,7 @@ div#sidebar.collapsed {
   #action-bar {
     ol#macro-list {
       border: none;
+
       li.macro {
         position: relative;
         flex: 0 0 50px;
@@ -329,9 +348,11 @@ div#sidebar.collapsed {
         cursor: pointer;
         border-radius: 0% 0% 75%;
       }
+
       li.macro.active {
         border-radius: 10%;
       }
+
       li.macro:hover {
         box-shadow: 0 0 10px #004777 inset;
       }
@@ -352,11 +373,138 @@ div#sidebar.collapsed {
     padding-top: 10px;
     font-size: 30px;
   }
+
+  div.cosm-card {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 600px;
+    height: 400px;
+    transform: scale(0.1) translateY(-0px);
+    transform-origin: 0% 0%;
+    opacity: 0;
+    z-index:1000;
+    transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1) 10ms;
+  }
+
+
+    div.cosm-card:hover{
+    top: 0%;
+    left: 0%;
+    width: 600px;
+    height: 400px;
+    transform: scale(0.5) translateY(-0px);
+    transform-origin: 0% 0%;
+    opacity: 1;
+  }
+
+
+  .cosm-card.coreEarth {
+    background: url(../images/cosm-cards/coreEarth.webp);
+    background-size: 100% 100%;
+  }
+
+  .cosm-card.livingLand {
+    background: url(../images/cosm-cards/livingLand.webp);
+    background-size: 100% 100%;
+  }
+
+  .cosm-card.nileEmpire {
+    background: url(../images/cosm-cards/nileEmpire.webp);
+    background-size: 100% 100%;
+
+  }
+
+  .cosm-card.aysle {
+    background: url(../images/cosm-cards/aysle.webp);
+    background-size: 100% 100%;
+
+  }
+
+  .cosm-card.cyberpapacy {
+
+    background: url(../images/cosm-cards/cyberpapacy.webp);
+    background-size: 100% 100%;
+
+  }
+
+  .cosm-card.panPacifica {
+    background: url(../images/cosm-cards/panPacifica.webp);
+    background-size: 100% 100%;
+
+  }
+
+  .cosm-card.orrorsh {
+    background: url(../images/cosm-cards/orrorsh.webp);
+    background-size: 100% 100%;
+
+  }
+  .cosm-card.tharkold {
+    background: url(../images/cosm-cards/tharkold.webp);
+    background-size: 100% 100%;
+
+  }
+
   a.scene-name {
     font-family: "Alaska";
     text-transform: uppercase;
     border: none;
+
+    .cosm-icone {
+      min-width: 28px;
+      min-height: 28px;
+      display: inline-block;
+      position:relative
+    }
+
+    .cosm-icone.coreEarth {
+      background: url(../images/cosm-icons/coreEarth.webp);
+      background-size: 100% 100%;
+    }
+
+    .cosm-icone.livingLand {
+      background: url(../images/cosm-icons/livingLand.webp);
+      background-size: 100% 100%;
+    }
+
+    .cosm-icone.nileEmpire {
+      background: url(../images/cosm-icons/nileEmpire.webp);
+      background-size: 100% 100%;
+
+    }
+
+    .cosm-icone.aysle {
+      background: url(../images/cosm-icons/aysle.webp);
+      background-size: 100% 100%;
+
+    }
+
+    .cosm-icone.cyberpapacy {
+      background: url(../images/cosm-icons/cyberpapacy.webp);
+      background-size: 100% 100%;
+
+    }
+
+    .cosm-icone.tharkold {
+      background: url(../images/cosm-icons/tharkold.webp);
+      background-size: 100% 100%;
+
+    }
+
+    .cosm-icone.panPacifica {
+      background: url(../images/cosm-icons/panPacifica.webp);
+      background-size: 100% 100%;
+
+    }
+
+    .cosm-icone.orrorsh {
+      background: url(../images/cosm-icons/orrorsh.webp);
+      background-size: 100% 100%;
+
+    }
+
   }
+
 
   #scene-list {
     .scene {
@@ -447,6 +595,7 @@ div#sidebar.collapsed {
     text-align: center;
     color: rgb(255, 255, 255);
     position: relative;
+
     .players-mode {
       color: rgb(255, 255, 255);
     }
@@ -496,6 +645,7 @@ div#sidebar.collapsed {
   height: 35px;
   content: "";
 }
+
 #player-config {
   label {
     color: lightblue;
@@ -512,7 +662,7 @@ div#sidebar.collapsed {
 #sidebar,
 #hotbar,
 #players {
-  position: absolute;
+  position: fixed;
   -webkit-transition: all 500ms cubic-bezier(0.42, 0, 0.58, 1) 10ms;
   -moz-transition: all 500ms cubic-bezier(0.42, 0, 0.58, 1) 10ms;
   -o-transition: all 500ms cubic-bezier(0.42, 0, 0.58, 1) 10ms;
@@ -532,32 +682,40 @@ div#sidebar.collapsed {
     li.combatant {
       border-left: 5px solid black;
     }
+
     li.combatant.dispo1 {
       background-color: rgba(15, 47, 189, 0.212);
     }
+
     li.combatant.dispo-1 {
       background-color: rgba(143, 1, 1, 0.28);
     }
+
     li.combatant.dispo0 {
       background-color: rgba(141, 143, 1, 0.28);
     }
+
     li.combatant.active {
       border-left: 5px solid rgb(255, 255, 255);
       box-shadow: 0px -10px 40px rgba(255, 255, 255, 0.5) inset;
     }
+
     a.has-played {
       color: rgba(128, 128, 128, 0.739);
       text-shadow: 0px 0px 6px black;
       max-width: 5%;
     }
+
     a.has-played.playedOK {
       color: rgb(160, 189, 142);
       text-shadow: 0px 0px 6px rgb(255, 255, 255);
     }
+
     a.init-up,
     a.init-down {
       max-width: 5%;
     }
+
     a.init-up:hover,
     a.init-down:hover {
       text-shadow: 0px 0px 5px #c8cf00;
@@ -565,33 +723,41 @@ div#sidebar.collapsed {
     }
   }
 }
+
 //----------
 //---Party-sheet
 //----------
 
 #party-sheet {
+
   h1,
   h2,
   h3,
   h4 {
     text-align: center;
   }
+
   h2 {
     border-bottom: 2px solid #419c9c;
   }
+
   h3 {
     border-bottom: 2px solid #215050;
   }
+
   h4 {
     text-decoration: underline;
   }
+
   .flexrow {
     margin: 4px;
+
     div {
       border: 1px solid rgba(128, 128, 128, 0.301);
       padding: 2px;
       box-shadow: 0px 0px 0px rgba(87, 87, 87, 0.301) inset;
       transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1) 10ms;
+
       div:hover {
         box-shadow: 0px 0px 35px rgb(90, 90, 90) inset;
       }
@@ -599,10 +765,11 @@ div#sidebar.collapsed {
   }
 }
 
-div.readme{
-  a.compendium{
-    text-decoration: underline;
-    color:#419c9c
-  }
 
+
+div.readme {
+  a.compendium {
+    text-decoration: underline;
+    color: #419c9c
+  }
 }
