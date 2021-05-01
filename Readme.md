@@ -8,6 +8,17 @@
 For manual installation, use the provided manifest URL in the "*Install System*" popup window 
 while managing game systems.
 
+v. 1.0.0
+- Welcome to version 1! Thanks to everyone who has contributed through the testing
+  of our Beta builds!
+- We are excited to now be the official Foundry system for Torg Eternity!
+- All cards from the core deck are now available as part of the TE system. 
+- All original/core archetypes for Torg Eternity are available in a compendium
+- Token bars now begin filled/green when you have 0 wounds or shock and deplete
+  as you take more wounds/shock (the default was a little counterintuitive so
+  we changed it)
+- Updated active defense checks  so they work more like skill, weapon, and power checks.
+
 v. 0.92.5
 - Updated threat sheets so that effects can be managed for threats
 - NOTE: Armor effects should be inactive or deleted for threats since their toughness/
