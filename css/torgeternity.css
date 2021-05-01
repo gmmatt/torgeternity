@@ -452,7 +452,7 @@ a:hover {
 .window-app div.form-group {
   margin: 10px;
   padding-bottom: 5px;
-  border-bottom: 2px solid black;
+  border-bottom: 2px solid #777777;
 }
 
 .window-app .window-resizable-handle {
