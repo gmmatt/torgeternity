@@ -567,6 +567,7 @@ a:hover {
 #sidebar {
   color: white;
   background-image: url(../images/thunder.webp);
+  z-index: 20;
   background-size: 80% 100%;
   padding-left: 80px;
   width: 380px;
@@ -733,7 +734,7 @@ div#sidebar.collapsed {
   transform: scale(0.7) translateY(0px);
   transform-origin: 0% 0%;
   opacity: 1;
-  z-index: 2000;
+  z-index: 200;
 }
 
 #navigation .cosm-card.coreEarth {
