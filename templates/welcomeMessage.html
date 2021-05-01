@@ -1,0 +1,15 @@
+{{log "welcome" this}}
+<h1>Welcome to the Torg Eternity System for Foundry VTT</h1>
+{{#unless this.cardModule}}
+<div class="form-group">
+<p>Since Torg Eternity use cards you certainly want to install the fantastic  <a href="https://github.com/spacemandev-git/fvtt-card-support">" Cards Support (Unoficial)" module </a> </p>
+<p>you can find a tutorial <a href="https://youtu.be/qmxG8AaufXA">here</a></p>
+</div>
+{{/unless}}
+{{#if this.cardModule}}
+{{#unless this.cardModule.active}}
+<div class="form-group">
+<p>It look like you haven't activate Card Support (Unofficial) module</p>
+</div>
+{{/unless}}
+{{/if}}

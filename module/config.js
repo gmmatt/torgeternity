@@ -1,4 +1,6 @@
 export const torgeternity = {};
+torgeternity.welcomeMessage="";
+
 torgeternity.gameCards = {
     cardType: {
         actionCards: {},

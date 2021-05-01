@@ -20,6 +20,15 @@ import { registerTorgSettings } from "./module/settings.js";
 Hooks.once("init", async function () {
   console.log("torgeternity | Initializing Torg Eternity System");
 
+
+  let welcomeData={
+    cardModule:game.modules.get("cardsupport")
+  }
+torgeternity.welcomeMessage=await renderTemplate("systems/torgeternity/templates/welcomeMessage.html",welcomeData);
+
+
+
+
   //-----system settings
 registerTorgSettings()
  
@@ -88,6 +97,28 @@ Hooks.on("ready", function () {
   sheetResize();
   toggleViewMode();
 
+  if (game.settings.get("torgeternity", "welcomeMessage") == true) {
+        let d = new Dialog({
+          title: "Welcome to the Torg Eternity Official System for Founfry VTT !",
+          content: torgeternity.welcomeMessage,
+          buttons: {
+            one: {
+              icon: '<i class="fas fa-check"></i>',
+              label: "OK",
+            },
+            two: {
+              icon: '<i class="fas fa-ban"></i>',
+              label: "Don't show again",
+              callback: () =>
+                game.settings.set("torgeternity", "welcomeMessage", false),
+            },
+          },
+        },{
+          left:100,
+          top:100
+        });
+        d.render(true);
+      }
 //----pause image----
   Hooks.on("renderPause", () =>{
 

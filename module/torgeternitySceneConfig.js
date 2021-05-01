@@ -30,7 +30,7 @@ export default class torgeternitySceneConfig extends SceneConfig {
     _onChangeZone(ev) {
         let zone = ev.currentTarget.options[ev.currentTarget.selectedIndex].value;
         this.entity.setFlag("torgeternity", "zone", zone);
-        if (zone != "pure") {
+        if (zone === "mixed"||zone==="dominant") {
             this.entity.setFlag("torgeternity", "displayCosm2", true);
         } else {
             this.entity.setFlag("torgeternity", "displayCosm2", false);
