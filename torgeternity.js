@@ -15,6 +15,7 @@ import TorgeternityPlayerList from "./module/users/TorgeternityPlayerList.js";
 import torgeternitySceneConfig from "./module/torgeternitySceneConfig.js";
 import torgeternityNav from "./module/torgeternityNav.js";
 import { registerTorgSettings } from "./module/settings.js";
+import { modifyTokenBars } from "./module/tokenBars.js";
 
 
 Hooks.once("init", async function () {
@@ -64,6 +65,10 @@ Hooks.once("init", async function () {
   //----------preloading handlebars templates
   preloadTemplates();
 
+
+   //-----modify token bars
+ 
+
   //----------debug hooks
   CONFIG.debug.hooks = true;
   /*
@@ -84,9 +89,15 @@ Hooks.once("init", async function () {
   });
 */
 });
+Hooks.once("setup",async function () {
+modifyTokenBars();
 
+})
 //-------------once everything ready
 Hooks.on("ready",async function () {
+  
+ 
+
   sheetResize();
   toggleViewMode();
 
@@ -195,6 +206,7 @@ torgeternity.welcomeMessage = await renderTemplate("systems/torgeternity/templat
   logo.addEventListener("click", function () {
    externalLinks.render(true)
   })
+
 
 
   Hooks.on("hotbarDrop", (bar, data, slot) =>
