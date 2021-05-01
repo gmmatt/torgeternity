@@ -1,0 +1,38 @@
+{{log "welcome" this}}
+
+<h1>Welcome to the Torg Eternity System for Foundry VTT</h1>
+{{#if this.user.isGM}}
+{{#unless this.cardModule}}
+<div class="form-group">
+    <p>Since Torg Eternity use cards you certainly want to install the fantastic <a
+            href="https://github.com/spacemandev-git/fvtt-card-support">" Cards Support (Unoficial)" module </a> </p>
+    <p>you can find a tutorial <a href="https://youtu.be/qmxG8AaufXA">here</a></p>
+</div>
+{{/unless}}
+{{#if this.cardModule}}
+{{#unless this.cardModule.active}}
+<div class="form-group">
+    <p>It look like you haven't activate Card Support (Unofficial) module</p>
+</div>
+{{/unless}}
+{{/if}}
+{{/if}}
+<div class="form-group">
+    <h3>
+        Hello {{user.data.name}}
+    </h3>
+    <p>
+        We are pleased to provide you the official Torg Eternity system for Foundry vtt.
+    </p>
+    <p>
+        This system as been developped by VTT Southwest, LLC under <a href="https://ulisses-us.com/"><img
+                src="systems/torgeternity/images/ulissesLogo.webp" alt="logo ulisses"></a>
+    </p>
+    <p>
+        here are some videos to help you manage this system
+    </p>
+    <iframe width="280" height="157" src="https://www.youtube.com/embed/SEHNjLHPK94" title="YouTube video player"
+        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
+
+</div>
