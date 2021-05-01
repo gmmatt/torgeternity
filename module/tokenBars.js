@@ -6,7 +6,7 @@ export function modifyTokenBars() {
         let h = Math.max((canvas.dimensions.size / 12), 8);
         if (this.data.height >= 2) h *= 1.6;  // Enlarge the bar for large tokens
         // Draw the bar
-        let color =  [(pct*1.3), 0.5-(pct*0.5), (pct*0.1)];
+        let color = [Math.clamped((pct * 1.3),0,1), 0.5 - (pct * 0.5), (pct * 0.1)];
         bar.clear()
             .beginFill(0x009900, 1)
             .lineStyle(1, 0x000000, 1)
@@ -18,6 +18,6 @@ export function modifyTokenBars() {
         // Set position
         let posY = number === 0 ? this.h - h : 0;
         bar.position.set(0, posY);
- }
+    }
 
 }
