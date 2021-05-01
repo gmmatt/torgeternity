@@ -98,7 +98,7 @@ let welcomeData = {
 torgeternity.welcomeMessage = await renderTemplate("systems/torgeternity/templates/welcomeMessage.hbs", welcomeData);
   if (game.settings.get("torgeternity", "welcomeMessage") == true) {
     let d = new Dialog({
-      title: "Welcome to the Torg Eternity Official System for Founfry VTT !",
+      title: "Welcome to the Official Torg Eternity System for Foundry VTT!",
       content: torgeternity.welcomeMessage,
       buttons: {
         one: {

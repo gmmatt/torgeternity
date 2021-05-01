@@ -19,6 +19,12 @@
   "background":"images/splash.webp",
   "packs": [
   ],
+  "dependencies": [
+    {
+      "name": "cardsupport",
+      "type": "module"
+    }
+  ],
   "languages": [
     {
       "lang": "en",
