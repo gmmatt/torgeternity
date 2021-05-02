@@ -17,20 +17,20 @@
     "./css/torgeternity.css"
   ],
   "background":"images/splash.webp",
-  "packs": [
+   "packs": [
     {
       "name": "archetypes",
       "label": "Archetypes",
       "system": "torgeternity",
       "module": "torgeternity",
-      "path": "/packs/archetypes.db",
+      "path": "packs/archetypes.db",
       "entity": "Actor"
     }
   ],
-  "dependencies": [
+    "dependencies": [
     {
       "name": "cardsupport",
-      "manifest": "https://github.com/spacemandev-git/fvtt-card-support",
+      "type": "module"
     }
   ],
   "languages": [
