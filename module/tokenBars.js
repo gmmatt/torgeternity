@@ -8,13 +8,17 @@ export function modifyTokenBars() {
         // Draw the bar
         let color = [0.8, (1 - pct), (0)];
         bar.clear()
-            .beginFill(0x009900, 1)
+            .beginFill(0x005500, 1)
             .lineStyle(1, 0x000000, 1)
-            .drawRoundedRect(0, 0, this.w, h, 3)
-            .beginFill(PIXI.utils.rgb2hex(color), 0.8)
+            for ( let index=0; index<data.max; index++){
+                bar.drawRect(index*(this.w/data.max), 0, (this.w/data.max), h);
+                }
+           
+           bar.beginFill(PIXI.utils.rgb2hex(color), 0.8)
             .lineStyle(1, 0x000000, 1)
-            .drawRoundedRect(1, 1, pct * (this.w - 2), h - 2, 2);
-
+            for ( let index=0; index<val; index++){
+                               bar.drawRect(index*(this.w/data.max), 0, (this.w/data.max), h);
+                }
         // Set position
         let posY = number === 0 ? this.h - h : 0;
         bar.position.set(0, posY);
