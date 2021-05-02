@@ -1,3 +1,4 @@
+'use strict';
 import { torgeternity } from "./module/config.js";
 import * as Chat from "./module/chat.js";
 import torgeternityItem from "./module/torgeternityItem.js";
@@ -103,6 +104,7 @@ Hooks.on("ready", async function () {
   //----run card installer
   if (game.settings.get("torgeternity", "cardInstaller") == true) {
     let applyChanges = false;
+    if (game.modules.get("cardsupport") && game.modules.get("cardsupport").active)
     new Dialog({
       title: "Install Drama Deck?",
       content: "Would you like to install the core Drama Deck in this world?",
@@ -120,11 +122,7 @@ Hooks.on("ready", async function () {
       default: "yes",
       close: html => {
         if (applyChanges) {
-          let deckfile = {
-            path: "systems/torgeternity/images/cards/drama-core.zip",
-            name: "drama-core.zip"
-          }
-          game.decks.create(deckfile,"systems/torgeternity/images/cards/drama-back.jpg")
+          installDecks();
         }
       }
   }).render(true);
@@ -294,6 +292,14 @@ async function createTorgEternityMacro(data, slot) {
   }
   game.user.assignHotbarMacro(macro, slot);
   return false;
+}
+
+function installDecks() {
+  let dramaDeckBlob = yield (yield fetch('systems/torgeternity/images/cards/drama-core.zip')).blob();
+  let dramaDeckFile = new File([dramaDeckBlob],'drama-core.zip');
+  let dramaDeckImgBlob = yield (yield fetch('systems/torgeternity/images/cards/drama-back.jpb')).blob();
+  let dramaDeckImgFile = new File([dramaDeckImgBlob], 'drama-back.jpg');
+  game.decks.create(dramaDeckFile, dramaDeckImgFile);          
 }
 
 /**
