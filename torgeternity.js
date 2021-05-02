@@ -16,12 +16,14 @@ import torgeternitySceneConfig from "./module/torgeternitySceneConfig.js";
 import torgeternityNav from "./module/torgeternityNav.js";
 import { registerTorgSettings } from "./module/settings.js";
 import { modifyTokenBars } from "./module/tokenBars.js";
+import { registerHelpers } from "./module/handlebarHelpers.js";
 
 
 Hooks.once("init", async function () {
   console.log("torgeternity | Initializing Torg Eternity System");
 
-
+//----helpers
+registerHelpers();
 
   //-----system settings
   registerTorgSettings()
@@ -66,8 +68,8 @@ Hooks.once("init", async function () {
   preloadTemplates();
 
 
-   //-----modify token bars
- 
+  //-----modify token bars
+
 
   //----------debug hooks
   CONFIG.debug.hooks = true;
@@ -89,24 +91,23 @@ Hooks.once("init", async function () {
   });
 */
 });
-Hooks.once("setup",async function () {
-modifyTokenBars();
+Hooks.once("setup", async function () {
+  modifyTokenBars();
 
 })
 //-------------once everything ready
-Hooks.on("ready",async function () {
-  
- 
-
+Hooks.on("ready", async function () {
   sheetResize();
   toggleViewMode();
 
-//----load template for welcome message
-let welcomeData = {
-  cardModule: game.modules.get("cardsupport"),
-  user : game.user
-}
-torgeternity.welcomeMessage = await renderTemplate("systems/torgeternity/templates/welcomeMessage.hbs", welcomeData);
+  //----load template for welcome message
+  let welcomeData = {
+    cardModule: game.modules.get("cardsupport"),
+    user: game.user
+  }
+  torgeternity.welcomeMessage = await renderTemplate("systems/torgeternity/templates/welcomeMessage.hbs", welcomeData);
+  
+  //----rendering welcome message
   if (game.settings.get("torgeternity", "welcomeMessage") == true) {
     let d = new Dialog({
       title: "Welcome to the Official Torg Eternity System for Foundry VTT!",
@@ -126,10 +127,12 @@ torgeternity.welcomeMessage = await renderTemplate("systems/torgeternity/templat
     }, {
       left: 100,
       top: 100,
-      resizable:true
+      resizable: true
     });
     d.render(true);
   }
+
+  
   //----pause image----
   Hooks.on("renderPause", () => {
 
@@ -145,66 +148,67 @@ torgeternity.welcomeMessage = await renderTemplate("systems/torgeternity/templat
     content: "<p>here are some usefull links</p>",
     buttons: {
 
-        one: {
-            icon: '<i class="fas fa-expand-arrows-alt"style="font-size:24px"></i>',
-            label: "<p>open torg game reference</p>",
-            callback: () => {
-              new FrameViewer("http://torg-gamereference.com/index.php", {
-                title: "torg game reference",
-               top:200,
-                left:200,
-                width:520,
-                height:520,
-                resizable:true}).render(true);
-            }
-        },
-        two: {
-            icon: '<i class="fab fa-discord"style="font-size:24px"></i>',
-            label: "<p>join us on discord</p>",
-            callback: () => {
-              ui.notifications.info("your browser will open a new page to join us on our discord server");
-              var windowObjectReference = window.open("https://discord.gg/cArWtdgp", "_blank");
-          
-            }
-        },
-      
-       
-        three:{
-            icon: '<i class="fas fa-bug" style="font-size:24px"></i>',
-            label: "<p>found a bug ?</p>",
-            callback: () => {
-              ui.notifications.info("your browser will open a new page to complete an issue");
-              var windowObjectReference = window.open("https://github.com/gmmatt/torgeternity/issues/new", "_blank");
+      one: {
+        icon: '<i class="fas fa-expand-arrows-alt"style="font-size:24px"></i>',
+        label: "<p>open torg game reference</p>",
+        callback: () => {
+          new FrameViewer("http://torg-gamereference.com/index.php", {
+            title: "torg game reference",
+            top: 200,
+            left: 200,
+            width: 520,
+            height: 520,
+            resizable: true
+          }).render(true);
+        }
+      },
+      two: {
+        icon: '<i class="fab fa-discord"style="font-size:24px"></i>',
+        label: "<p>join us on discord</p>",
+        callback: () => {
+          ui.notifications.info("your browser will open a new page to join us on our discord server");
+          var windowObjectReference = window.open("https://discord.gg/cArWtdgp", "_blank");
 
-            }
-        },
-        four:{
-          icon: '<img src="systems/torgeternity/images/ulissesLogo.webp" alt="logo ulisses" style="filter:grayscale(1)">',
-          label: "<p>publisher website</p>",
-          callback: () => {
-            ui.notifications.info("your browser will open a new page to complete an issue");
-            var windowObjectReference = window.open("https://ulisses-us.com", "_blank");
+        }
+      },
 
-          }
+
+      three: {
+        icon: '<i class="fas fa-bug" style="font-size:24px"></i>',
+        label: "<p>found a bug ?</p>",
+        callback: () => {
+          ui.notifications.info("your browser will open a new page to complete an issue");
+          var windowObjectReference = window.open("https://github.com/gmmatt/torgeternity/issues/new", "_blank");
+
+        }
+      },
+      four: {
+        icon: '<img src="systems/torgeternity/images/ulissesLogo.webp" alt="logo ulisses" style="filter:grayscale(1)">',
+        label: "<p>publisher website</p>",
+        callback: () => {
+          ui.notifications.info("your browser will open a new page to complete an issue");
+          var windowObjectReference = window.open("https://ulisses-us.com", "_blank");
+
+        }
       }
 
     }
-},
+  },
     {
-        width: 400,
-        height: 250,
-        left: 100,
-        top: 20
+      width: 400,
+      height: 250,
+      left: 100,
+      top: 20
     }
-);
-//----logo image
+  );
+  //----logo image
   var logo = document.getElementById("logo");
   logo.style.position = "absolute";
   logo.setAttribute("src", "/systems/torgeternity/images/vttLogo.webp");
   //----open links when click on logo
-  logo.title="external links"
+  logo.title = "external links"
   logo.addEventListener("click", function () {
-   externalLinks.render(true)
+    externalLinks.render(true)
   })
 
 
@@ -331,39 +335,7 @@ function rollItemMacro(itemName) {
   }
 }
 
-//----all this could be draft in another imported module ?? maybe like ./modules/handlebarsHelpers.js
 
-Handlebars.registerHelper("concatSkillValue", function (skillName) {
-  var skillValue = "{{data.skills." + skillName + ".value}}";
-  return skillValue;
-});
-
-Handlebars.registerHelper("concatAttributeName", function (attributeName) {
-  var localName = "torgeternity.attributes." + attributeName;
-  return localName;
-});
-
-Handlebars.registerHelper("concatSkillName", function (skillName) {
-  var localName = "torgeternity.skills." + skillName;
-  return localName;
-});
-
-Handlebars.registerHelper("concatClearanceLevel", function (clearance) {
-  var localClearance = "torgeternity.clearances." + clearance;
-  return localClearance;
-});
-
-Handlebars.registerHelper("concatSpecialAbility", function (description) {
-  // Removes <p> and </p> from the beginning and end of special ability descriptions so that they appear inline on threat sheet
-  if (description.startsWith("<p>")) {
-    var updatedDescription;
-    var endPoint = description.length;
-    updatedDescription = description.substr(3, endPoint);
-    return updatedDescription;
-  } else {
-    return description;
-  }
-});
 
 
 
