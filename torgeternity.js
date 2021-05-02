@@ -99,7 +99,37 @@ Hooks.once("setup", async function () {
 Hooks.on("ready", async function () {
   sheetResize();
   toggleViewMode();
-
+  
+  //----run card installer
+  if (game.settings.get("torgeternity", "cardInstaller") == true) {
+    let applyChanges = false;
+    new Dialog({
+      title: "Install Drama Deck?",
+      content: "Would you like to install the core Drama Deck in this world?",
+      buttons: {
+          yes: {
+              icon: '<i class="fas fa-check"></i>',
+              label: "Yes",
+              callback: () => applyChanges = true
+          },
+          no: {
+              icon: '<i class="fas fa-times"></i>',
+              label: "No"
+          },
+      },
+      default: "yes",
+      close: html => {
+        if (applyChanges) {
+          let deckfile = {
+            path: "systems/torgeternity/images/cards/drama-core.zip",
+            name: "drama-core.zip"
+          }
+          game.decks.create(deckfile,"systems/torgeternity/images/cards/drama-back.jpg")
+        }
+      }
+  }).render(true);
+  } 
+  
   //----load template for welcome message
   let welcomeData = {
     cardModule: game.modules.get("cardsupport"),

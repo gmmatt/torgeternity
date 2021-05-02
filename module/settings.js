@@ -39,111 +39,15 @@ export function registerTorgSettings() {
         onChange: () => window.location.reload()
     });
 
-    game.settings.register("torgeternity", "aysleCardImage", {
-        // game.setting.register("NameOfTheModule", "VariableName",
-        name: "Aysle card image", // Register a module setting with checkbox
-        hint: "the path of the image for the Aysle Cosm card", // Description of the settings
-        type: window.Azzu.SettingsTypes.FilePickerImage,
-        default: 'systems/torgeternity/images/cosm-cards/aysle.webp',
-        scope: 'world',
+    game.settings.register("torgeternity", "cardInstaller", {
+        name: "Ask to Install Drama Deck",
+        hint: "When checked, the game will prompt to install the Drama Deck",
+        scope: "world",
         config: true,
-        restricted: true,
-        onChange: path => {
-            setCosmCard("aysle", path);
-        }
+        type: Boolean,
+        default: true,
+        onChange: () => window.location.reload()
     });
-    game.settings.register("torgeternity", "coreEarthCardImage", {
-        // game.setting.register("NameOfTheModule", "VariableName",
-        name: "coreEarth card image", // Register a module setting with checkbox
-        hint: "the path of the image for the coreEarth Cosm card", // Description of the settings
-        type: window.Azzu.SettingsTypes.FilePickerImage,
-        default: 'systems/torgeternity/images/cosm-cards/coreEarth.webp',
-        scope: 'world',
-        config: true,
-        restricted: true,
-        onChange: path => {
-            setCosmCard("coreEarth", path);
-        }
-    });
-    game.settings.register("torgeternity", "livingLandCardImage", {
-        // game.setting.register("NameOfTheModule", "VariableName",
-        name: "livingLand card image", // Register a module setting with checkbox
-        hint: "the path of the image for the livingLand Cosm card", // Description of the settings
-        type: window.Azzu.SettingsTypes.FilePickerImage,
-        default: 'systems/torgeternity/images/cosm-cards/livingLand.webp',
-        scope: 'world',
-        config: true,
-        restricted: true,
-        onChange: path => {
-            setCosmCard("livingLand", path);
-        }
-    });
-    game.settings.register("torgeternity", "orrorshCardImage", {
-        // game.setting.register("NameOfTheModule", "VariableName",
-        name: "orrorsh card image", // Register a module setting with checkbox
-        hint: "the path of the image for the orrorsh Cosm card", // Description of the settings
-        type: window.Azzu.SettingsTypes.FilePickerImage,
-        default: 'systems/torgeternity/images/cosm-cards/orrorsh.webp',
-        scope: 'world',
-        config: true,
-        restricted: true,
-        onChange: path => {
-            setCosmCard("orrorsh", path);
-        }
-    });
-    game.settings.register("torgeternity", "panPacificaCardImage", {
-        // game.setting.register("NameOfTheModule", "VariableName",
-        name: "panPacifica card image", // Register a module setting with checkbox
-        hint: "the path of the image for the panPacifica Cosm card", // Description of the settings
-        type: window.Azzu.SettingsTypes.FilePickerImage,
-        default: 'systems/torgeternity/images/cosm-cards/panPacifica.webp',
-        scope: 'world',
-        config: true,
-        restricted: true,
-        onChange: path => {
-            setCosmCard("panPacifica", path);
-        }
-    });
-    game.settings.register("torgeternity", "tharkoldCardImage", {
-        // game.setting.register("NameOfTheModule", "VariableName",
-        name: "tharkold card image", // Register a module setting with checkbox
-        hint: "the path of the image for the tharkold Cosm card", // Description of the settings
-        type: window.Azzu.SettingsTypes.FilePickerImage,
-        default: 'systems/torgeternity/images/cosm-cards/tharkold.webp',
-        scope: 'world',
-        config: true,
-        restricted: true,
-        onChange: path => {
-            setCosmCard("tharkold", path);
-        }
-    });
-    game.settings.register("torgeternity", "cyberpapacyCardImage", {
-        // game.setting.register("NameOfTheModule", "VariableName",
-        name: "cyberpapacy card image", // Register a module setting with checkbox
-        hint: "the path of the image for the cyberpapacy Cosm card", // Description of the settings
-        type: window.Azzu.SettingsTypes.FilePickerImage,
-        default: 'systems/torgeternity/images/cosm-cards/cyberpapacy.webp',
-        scope: 'world',
-        config: true,
-        restricted: true,
-        onChange: path => {
-            setCosmCard("cyberpapacy", path);
-        }
-    });
-    game.settings.register("torgeternity", "nileEmpireCardImage", {
-        // game.setting.register("NameOfTheModule", "VariableName",
-        name: "nileEmpire card image", // Register a module setting with checkbox
-        hint: "the path of the image for the nileEmpire Cosm card", // Description of the settings
-        type: window.Azzu.SettingsTypes.FilePickerImage,
-        default: 'systems/torgeternity/images/cosm-cards/nileEmpire.webp',
-        scope: 'world',
-        config: true,
-        restricted: true,
-        onChange: path => {
-            setCosmCard("nileEmpire", path);
-        }
-    });
-
 }
 
 
