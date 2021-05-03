@@ -123,13 +123,21 @@ Hooks.on("ready", async function () {
               icon: '<i class="fas fa-times"></i>',
               label: "No"
           },
+          never:{
+            icon: '<i class="fas fa-ban"></i>',
+              label: "No, don't ask anymore",
+              callback:()=>{
+                game.settings.set("torgeternity", "cardInstaller", false)
+              }
+          }
       },
       default: "yes",
       close: html => {
         if (applyChanges) {
           installDecks();
+          game.settings.set("torgeternity", "cardInstaller", false)
+
         }
-//        game.settings.set("torgeternity", "cardInstaller", false);      
       }
   }).render(true);
   } 
