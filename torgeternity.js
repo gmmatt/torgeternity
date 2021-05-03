@@ -33,6 +33,7 @@ registerHelpers();
   //-------global
   game.torgeternity = {
     rollItemMacro,
+    viewMode:true
   };
 
   CONFIG.torgeternity = torgeternity;
