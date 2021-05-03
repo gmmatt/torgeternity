@@ -6,15 +6,19 @@ export function modifyTokenBars() {
         let h = Math.max((canvas.dimensions.size / 12), 8);
         if (this.data.height >= 2) h *= 1.6;  // Enlarge the bar for large tokens
         // Draw the bar
-        let color = [Math.clamped((pct * 1.3),0,1), 0.5 - (pct * 0.5), (pct * 0.1)];
+        let color = [0.8, (1 - pct), (0)];
         bar.clear()
-            .beginFill(0x009900, 1)
+            .beginFill(0x005500, 1)
             .lineStyle(1, 0x000000, 1)
-            .drawRoundedRect(0, 0, this.w, h, 3)
-            .beginFill(PIXI.utils.rgb2hex(color), 0.8)
+            for ( let index=0; index<data.max; index++){
+                bar.drawRect(index*(this.w/data.max), 0, (this.w/data.max), h);
+                }
+           
+           bar.beginFill(PIXI.utils.rgb2hex(color), 0.8)
             .lineStyle(1, 0x000000, 1)
-            .drawRoundedRect(1, 1, pct * (this.w - 2), h - 2, 2);
-
+            for ( let index=0; index<val; index++){
+                               bar.drawRect(index*(this.w/data.max), 0, (this.w/data.max), h);
+                }
         // Set position
         let posY = number === 0 ? this.h - h : 0;
         bar.position.set(0, posY);
