@@ -12,8 +12,8 @@ v. 1.0.0
 - Welcome to version 1! Thanks to everyone who has contributed through the testing
   of our Beta builds!
 - We are excited to now be the official Foundry system for Torg Eternity!
-- All cards from the core deck are now available as part of the TE system. 
-- All original/core archetypes for Torg Eternity are available in a compendium
+- All cards from the core Drama Deck are now available as part of the TE system. 
+- All 16 original/core archetypes for Torg Eternity are available in a compendium
 - Token bars now begin filled/green when you have 0 wounds or shock and deplete
   as you take more wounds/shock (the default was a little counterintuitive so
   we changed it)
