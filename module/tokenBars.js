@@ -9,11 +9,12 @@ export function modifyTokenBars() {
         let color = [0.8, (1 - pct), (0)];
         bar.clear()
             .beginFill(0x005500, 1)
-            .lineStyle(1, 0x000000, 1)
+            .lineStyle(1, 0x000000, 1);
+            // each max draw a green rectangle in background
             for ( let index=0; index<data.max; index++){
                 bar.drawRect(index*(this.w/data.max), 0, (this.w/data.max), h);
                 }
-           
+           // each actual value draw a rectangle from dark green to red
            bar.beginFill(PIXI.utils.rgb2hex(color), 0.8)
             .lineStyle(1, 0x000000, 1)
             for ( let index=0; index<val; index++){
