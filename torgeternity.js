@@ -102,10 +102,10 @@ Hooks.on("ready", async function () {
   sheetResize();
   toggleViewMode();
   
-  //If card support is inactive then activate it
-  if (game.modules.get("cardsupport").active === false) {
-    game.modules.get("cardsupport").active = true;
-  }
+  //If card support is inactive then activate it - doesn't work!
+  // if (game.modules.get("cardsupport").active === false) {
+  //  game.modules.get("cardsupport").active = true;
+  // }
 
   //----run card installer
   if (game.settings.get("torgeternity", "cardInstaller") == true) {

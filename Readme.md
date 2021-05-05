@@ -12,8 +12,8 @@ v. 1.0.0
 - Welcome to version 1! Thanks to everyone who has contributed through the testing
   of our Beta builds!
 - We are excited to now be the official Foundry system for Torg Eternity!
-- All cards from the core deck are now available as part of the TE system. 
-- All original/core archetypes for Torg Eternity are available in a compendium
+- All cards from the core Drama Deck are now available as part of the TE system. 
+- All 16 original/core archetypes for Torg Eternity are available in a compendium
 - Token bars now begin filled/green when you have 0 wounds or shock and deplete
   as you take more wounds/shock (the default was a little counterintuitive so
   we changed it)
@@ -92,22 +92,16 @@ that can be modified, see https://github.com/gmmatt/torgeternity/wiki/Storm-Knig
 
 ## License
 
-Copyright (c) 2021 VTT Southwest, LLC
+This system is produced by VTT Southwest, LLC under license from Ulisses Spiele.
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction for any non-commercial purpose, 
-including without limitation the rights to use, copy, modify, or merge,the 
-Software, and to permit persons to whom the Software is furnished to do so, 
-subject to the following conditions:
+All Torg Eternity content is Copyright (c) 2017, 2021 Ulisses Spiele. Torg: The Possibility 
+Wars and all unique characters, concepts, locations, and creatures are trademarks and/or
+copyrights of Ulisses Spiele. All rights reserved.
 
-The copyright claim above extents only to original content and original
-components of this software. No copyright claims are made with respect to 
-Torg, Torg Eternity, or any content that is a part of the Torg Eternity 
-RPG system published by Ulisses Speile. 
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+All components of this software that are not subject to the above trademarks and copyrights of 
+Ulisses Spiele are Copyright (c) 2021 VTT Southwest, LLC. Permission is granted to use the 
+system and to make modifications to the system so long as the system is used within the Foundry 
+VTT enviornment.
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
@@ -117,7 +111,3 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
----
-This work is based on Torg eternity system published by Ulisses Spiele
- (https://www.ulisses-us.com/games/torg/). This work is provided by fans 
- and is not endorsed by Ulisses Spiele.
