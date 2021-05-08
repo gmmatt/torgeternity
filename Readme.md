@@ -18,6 +18,7 @@ v. 1.0.0
   as you take more wounds/shock (the default was a little counterintuitive so
   we changed it)
 - Updated active defense checks  so they work more like skill, weapon, and power checks.
+- Fixed an issue where NaN results were displaying when clicking on certain parts of skill line
 
 v. 0.92.5
 - Updated threat sheets so that effects can be managed for threats
