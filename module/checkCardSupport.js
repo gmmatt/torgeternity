@@ -2,16 +2,16 @@ export  async function checkCardSupport(){
   // if card support module not installed
   if (!game.modules.get('cardsupport')) {
     new Dialog({
-      title: "No card support module",
-      content: '<p style="font-size:30px">You should install card support (unofficial) module in order to fully enjoy your Torg Eternity Game</p>',
+      title: "Card Support Module Not Installed",
+      content: '<p style="font-size:30px">In order add card play to this world, you will need to install the Card Support (Unofficial) module from the Foundry main menu. Would you like to do so?</p>',
       buttons: {
         stay: {
           icon: '<i class="fas fa-ban"></i>',
-          label: "ok, but i want to stay on this world",
+          label: "Not Now",
         },
         close: {
             icon: '<i class="fas fa-check"></i>',
-            label: "ok, bring me to the Foundry configuration to install card support (unofficial) module",
+            label: "Return to Foundry Main Menu",
             callback: () => game.shutDown(true)
           },
       },
@@ -23,8 +23,8 @@ export  async function checkCardSupport(){
   // if card support not active
   if (game.modules.get('cardsupport') && !game.modules.get('cardsupport').active) {
     new Dialog({
-      title: "you should activate card support module",
-      content: '<p style="font-size:30px">You should activate card support module in order to fully enjoy your Torg Eternity Game?</p>',
+      title: "Card Support Module Not Active",
+      content: '<p style="font-size:30px">In order to add card play to this world, you will need to activate the Card Support (Unofficial) module. Would you like to do so now?</p>',
       buttons: {
         yes: {
           icon: '<i class="fas fa-check"></i>',
@@ -34,7 +34,7 @@ export  async function checkCardSupport(){
         },
         no: {
             icon: '<i class="fas fa-ban"></i>',
-            label: "no thanks",
+            label: "No Thanks",
   
           }
       },
@@ -57,7 +57,7 @@ export  async function checkCardSupport(){
         buttons: {
           yes: {
             icon: '<i class="fas fa-check"></i>',
-            label: "Yes <p style='color:red'>be patient</p>",
+            label: "Yes <p style='color:red'>(This may take a few minutes)</p>",
             callback: () => applyChanges = true
           },
           no: {
@@ -66,7 +66,7 @@ export  async function checkCardSupport(){
           },
           never: {
             icon: '<i class="fas fa-ban"></i>',
-            label: "No, don't ask anymore",
+            label: "No. Don't ask any more.",
             callback: () => {
               game.settings.set("torgeternity", "cardInstaller", false)
             }
