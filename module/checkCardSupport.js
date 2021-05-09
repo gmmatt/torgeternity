@@ -57,7 +57,7 @@ export  async function checkCardSupport(){
         buttons: {
           yes: {
             icon: '<i class="fas fa-check"></i>',
-            label: "Yes",
+            label: "Yes <p style='color:red'>be patient</p>",
             callback: () => applyChanges = true
           },
           no: {
