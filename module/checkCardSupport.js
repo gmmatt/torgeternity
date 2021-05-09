@@ -3,14 +3,19 @@ export  async function checkCardSupport(){
   if (!game.modules.get('cardsupport')) {
     new Dialog({
       title: "No card support module",
-      content: "You should install card support (unofficial) module in order to fully enjoy your Torg Eternity Game",
+      content: '<p style="font-size:30px">You should install card support (unofficial) module in order to fully enjoy your Torg Eternity Game</p>',
       buttons: {
-        yes: {
-          icon: '<i class="fas fa-check"></i>',
-          label: "ok, got it",
-        }
+        stay: {
+          icon: '<i class="fas fa-ban"></i>',
+          label: "ok, but i want to stay on this world",
+        },
+        close: {
+            icon: '<i class="fas fa-check"></i>',
+            label: "ok, bring me to the Foundry configuration to install card support (unofficial) module",
+            callback: () => game.shutDown(true)
+          },
       },
-      default: "yes"
+      default: "stay"
 
     }).render(true);
 
@@ -19,14 +24,19 @@ export  async function checkCardSupport(){
   if (game.modules.get('cardsupport') && !game.modules.get('cardsupport').active) {
     new Dialog({
       title: "you should activate card support module",
-      content: "You should activate card support module in order to fully enjoy your Torg Eternity Game?",
+      content: '<p style="font-size:30px">You should activate card support module in order to fully enjoy your Torg Eternity Game?</p>',
       buttons: {
         yes: {
           icon: '<i class="fas fa-check"></i>',
           label: "Yes",
           callback: () => new ModuleManagement().render(true)
 
-        }
+        },
+        no: {
+            icon: '<i class="fas fa-ban"></i>',
+            label: "no thanks",
+  
+          }
       },
       default: "yes"
 
@@ -43,7 +53,7 @@ export  async function checkCardSupport(){
       let applyChanges = false;
       new Dialog({
         title: "Install Drama Deck?",
-        content: "Would you like to install the core Drama Deck in this world?",
+        content: '<p style="font-size=30px"> Would you like to install the core Drama Deck in this world?</p>',
         buttons: {
           yes: {
             icon: '<i class="fas fa-check"></i>',
