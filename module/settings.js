@@ -42,12 +42,11 @@ export function registerTorgSettings() {
     // Card Installer
     game.settings.register("torgeternity", "cardInstaller", {
         name: "Ask to Install Drama Deck",
-        hint: "When checked, the game will prompt to install the Drama Deck (Card Support module must be active)",
+        hint: "When checked, the game will prompt to install the Drama Deck (Card Support module must be active). You will have to manually refresh your app/browser to make the popup appear.",
         scope: "world",
         config: true,
         type: Boolean,
-        default: false,
-        onChange: () => window.location.reload()
+        default: true,
     });
 }
 
