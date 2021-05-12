@@ -608,8 +608,8 @@ a:hover {
 div#sidebar::before {
   width: 80px;
   height: 120%;
-  position: fixed;
-  right: 155px;
+  position: absolute;
+  right: 150px;
   /* top: -50px; */
   background: url(../images/separatorSidebar.webp);
   content: "";
