@@ -1,0 +1,315 @@
+{{log "scene config" this}}
+<form autocomplete="off">
+    <header class="form-header">
+        <h3><i class="far fa-image"></i> Reality</h3>
+    </header>
+    <p class="notes">Configure the reality of the scene zone</p>
+
+
+
+
+    <div class="form-group">
+        <label>{{localize "SCENES.SceneName"}}</label>
+        <div class="form-fields">
+            <input type="text" name="name" placeholder="Name" value="{{entity.name}}" data-dtype="String" />
+        </div>
+    </div>
+
+    <div class="form-group">
+
+
+        <label>{{localize "torgeternity.perks.cosm"}}</label>
+
+        <select name="flags.torgeternity.cosm" class="cosm" data-dtype="String">
+            {{#select entity.flags.torgeternity.cosm}}
+            <option value="none">{{localize "torgeternity.cosms.none"}}</option>
+            <option value="coreEarth">{{localize "torgeternity.cosms.coreEarth"}}</option>
+            <option value="livingLand">{{localize "torgeternity.cosms.livingLand"}}</option>
+            <option value="nileEmpire">{{localize "torgeternity.cosms.nileEmpire"}}</option>
+            <option value="aysle">{{localize "torgeternity.cosms.aysle"}}</option>
+            <option value="cyberpapacy">{{localize "torgeternity.cosms.cyberpapacy"}}</option>
+            <option value="tharkold">{{localize "torgeternity.cosms.tharkold"}}</option>
+            <option value="panPacifica">{{localize "torgeternity.cosms.panPacifica"}}</option>
+            <option value="orrorsh">{{localize "torgeternity.cosms.orrorsh"}}</option>
+            <option value="tharkold">{{localize "torgeternity.cosms.tharkold"}}</option>
+            {{/select}}
+        </select>
+
+        <select name="flags.torgeternity.zone" class="zone-type" data-dtype="String">
+            {{#select entity.flags.torgeternity.zone}}
+            <option value="pure">pure</option>
+            <option value="dominant">dominant</option>
+            <option value="mixed">mixed</option>
+            {{/select}}
+        </select>
+    </div>
+    {{#if this.entity.flags.torgeternity.displayCosm2}}
+    <div class="form-group cosm-secondary">
+        <label>secondary cosm </label>
+        <select name="flags.torgeternity.cosm2" class="cosm-secondary" data-dtype="String">
+            {{#select entity.flags.torgeternity.cosm2}}
+            <option value="none">{{localize "torgeternity.cosms.none"}}</option>
+            <option value="coreEarth">{{localize "torgeternity.cosms.coreEarth"}}</option>
+            <option value="livingLand">{{localize "torgeternity.cosms.livingLand"}}</option>
+            <option value="nileEmpire">{{localize "torgeternity.cosms.nileEmpire"}}</option>
+            <option value="aysle">{{localize "torgeternity.cosms.aysle"}}</option>
+            <option value="cyberpapacy">{{localize "torgeternity.cosms.cyberpapacy"}}</option>
+            <option value="tharkold">{{localize "torgeternity.cosms.tharkold"}}</option>
+            <option value="panPacifica">{{localize "torgeternity.cosms.panPacifica"}}</option>
+            <option value="orrorsh">{{localize "torgeternity.cosms.orrorsh"}}</option>
+            <option value="tharkold">{{localize "torgeternity.cosms.tharkold"}}</option>
+            {{/select}}
+        </select>
+
+
+    </div>
+{{/if}}
+
+
+    <!-- Details Tab -->
+    <header class="form-header">
+        <h3><i class="far fa-image"></i> {{localize "SCENES.HeaderDetails"}}</h3>
+    </header>
+    <p class="notes">{{localize "SCENES.HeaderDetailsHint"}}</p>
+
+
+    <div class="form-group">
+        <label>{{localize "SCENES.Accessibility"}}</label>
+        <div class="form-fields">
+            <label class="checkbox">
+                {{localize "SCENES.ShowNav"}}
+                <input type="checkbox" name="navigation" value="1" data-dtype="Boolean" {{checked entity.navigation}} />
+            </label>
+            <select name="permission.default" data-dtype="Number">
+                {{#select entity.permission.default}}
+                <option value="0">{{localize "SCENES.AccessibilityGM"}}</option>
+                <option value="3">{{localize "SCENES.AccessibilityAll"}}</option>
+                {{/select}}
+            </select>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label>{{localize "SCENES.NavName"}}</label>
+        <div class="form-fields">
+            <input type="text" name="navName" value="{{entity.navName}}" data-dtype="String" />
+        </div>
+    </div>
+
+    <p class="notes">{{localize "SCENES.BackgroundImageHint"}}</p>
+    <div class="form-group">
+        <label>{{localize "SCENES.BackgroundImage"}}</label>
+        <div class="form-fields">
+            {{filePicker target="img" type="imagevideo"}}
+            <input class="image" type="text" name="img" placeholder="{{localize 'File Path'}}" value="{{entity.img}}" />
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label>{{localize "SCENES.Dimensions"}} <span class="units">({{localize "SCENES.Pixels"}})</span></label>
+        <div class="form-fields">
+            <label class="grid-label">{{localize "Width"}}</label>
+            <input type="number" name="width" placeholder="{{localize 'SCENES.Pixels'}}" value="{{entity.width}}" />
+            <label class="grid-label">{{localize "Height"}}</label>
+            <input type="number" name="height" placeholder="{{localize 'SCENES.Pixels'}}" value="{{entity.height}}" />
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label>{{localize "SCENES.Padding"}}</label>
+        <div class="form-fields">
+            <input type="range" name="padding" value="{{entity.padding}}" min="0" max="0.5" step="0.05"
+                data-dtype="Number" />
+            <span class="range-value">{{entity.padding}}</span>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label>{{localize "SCENES.BackgroundColor"}}</label>
+        <div class="form-fields">
+            <input type="text" name="backgroundColor" value="{{entity.backgroundColor}}" data-dtype="String" />
+            <input type="color" value="{{entity.backgroundColor}}" data-edit="backgroundColor" />
+        </div>
+    </div>
+
+    <!-- Grid Configuration -->
+    <header class="form-header">
+        <h3 class="form-header"><i class="fas fa-ruler"></i> {{localize "SCENES.HeaderGrid"}}</h3>
+    </header>
+    <p class="notes">{{localize "SCENES.HeaderGridHint"}}</p>
+
+    <div class="form-group">
+        <label>{{localize "SCENES.GridType"}}</label>
+        <div class="form-fields">
+            <select name="gridType" data-dtype="Number">
+                {{#select entity.gridType}}
+                {{#each gridTypes as |label t|}}
+                <option value="{{t}}">{{localize label}}</option>
+                {{/each}}
+                {{/select}}
+            </select>
+            <button type="button" class="grid-config" title="{{ localize " SCENES.GridConfigTool" }}">
+                <i class="fas fa-ruler-combined"></i>
+            </button>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label>{{localize "SCENES.GridSize"}} <span class="units">({{localize "SCENES.Pixels"}})</span></label>
+        <div class="form-fields">
+            <input type="text" name="grid" placeholder="{{localize 'SCENES.Pixels'}}" value="{{entity.grid}}"
+                data-dtype="Number" />
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label>{{localize "SCENES.ShiftBG"}} <span class="units">({{localize "SCENES.Pixels"}})</span></label>
+        <div class="form-fields">
+            <label class="grid-label">{{localize "SCENES.ShiftHorizontal"}}</label>
+            <input type="number" name="shiftX" placeholder="{{localize 'SCENES.Pixels'}}" value="{{entity.shiftX}}" />
+            <label class="grid-label">{{localize "SCENES.ShiftVertical"}}</label>
+            <input type="number" name="shiftY" placeholder="{{localize 'SCENES.Pixels'}}" value="{{entity.shiftY}}" />
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label>{{localize "SCENES.GridScale"}}</label>
+        <div class="form-fields">
+            <label class="grid-label">{{localize "SCENES.GridDistance"}}</label>
+            <input type="number" step="any" name="gridDistance" placeholder="5" value="{{entity.gridDistance}}" />
+            <label class="grid-label">{{localize "SCENES.GridUnits"}}</label>
+            <input type="text" name="gridUnits" placeholder="ft" value="{{entity.gridUnits}}" />
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label>{{localize "SCENES.GridColor"}}</label>
+        <div class="form-fields">
+            <input type="text" name="gridColor" value="{{entity.gridColor}}" data-dtype="String" />
+            <input type="color" value="{{entity.gridColor}}" data-edit="gridColor" />
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label>{{localize "SCENES.GridOpacity"}}</label>
+        <div class="form-fields">
+            <input type="range" name="gridAlpha" value="{{entity.gridAlpha}}" min="0" max="1" step="0.05"
+                data-dtype="Number" />
+            <span class="range-value">{{entity.gridAlpha}}</span>
+        </div>
+    </div>
+
+    <!-- Lighting and Vision -->
+    <header class="form-header">
+        <h3 class="form-header"><i class="fas fa-lightbulb"></i> {{localize "SCENES.HeaderVision"}}</h3>
+    </header>
+    <p class="notes">{{ localize "SCENES.HeaderVisionHint" }}</p>
+
+    <div class="form-group">
+        <label>{{localize "SCENES.TokenVision"}}</label>
+        <input type="checkbox" name="tokenVision" {{checked entity.tokenVision}} />
+        <p class="notes">{{localize "SCENES.TokenVisionHint"}}</p>
+    </div>
+
+    <div class="form-group">
+        <label>{{localize "SCENES.GlobalIllum"}}</label>
+        <input type="checkbox" name="globalLight" {{checked entity.globalLight}} />
+        <p class="notes">{{localize "SCENES.GlobalIllumHint"}}</p>
+    </div>
+
+    <div class="form-group">
+        <label>{{localize "SCENES.FogExplore"}}</label>
+        <input type="checkbox" name="fogExploration" {{checked entity.fogExploration}} />
+        <p class="notes">{{localize "SCENES.FogExploreHint"}}</p>
+    </div>
+
+    <div class="form-group">
+        <label>{{localize "SCENES.Darkness"}}</label>
+        <div class="form-fields">
+            <input type="range" name="darkness" value="{{entity.darkness}}" min="0" max="1" step="0.05"
+                data-dtype="Number" />
+            <span class="range-value">{{entity.darkness}}</span>
+        </div>
+        <p class="notes">{{localize "SCENES.DarknessHint"}}</p>
+    </div>
+
+    <div class="form-group">
+        <label>{{localize "SCENES.GlobalLightThreshold"}}</label>
+        <div class="form-fields">
+            <label class="checkbox">
+                <input type="checkbox" name="hasGlobalThreshold" {{ checked hasGlobalThreshold }} />
+            </label>
+            <input type="range" name="globalLightThreshold" value="{{entity.globalLightThreshold}}" min="0" max="1"
+                step="0.05" data-dtype="Number" />
+            <span class="range-value">{{entity.globalLightThreshold}}</span>
+        </div>
+        <p class="notes">{{localize "SCENES.GlobalLightThresholdHint"}}</p>
+    </div>
+
+    <!-- Ambience and Atmosphere -->
+    <header class="form-header">
+        <h3 class="form-header"><i class="fas fa-cloud-sun"></i> {{localize "SCENES.HeaderAmbience"}}</h3>
+    </header>
+    <p class="notes">{{localize "SCENES.HeaderAmbienceHint"}}</p>
+
+    <div class="form-group">
+        <label>{{localize "SCENES.JournalNotes"}}</label>
+        <select name="journal" data-dtype="String">
+            <option value=""></option>
+            {{#select entity.journal}}
+            {{#each journals}}
+            <option value="{{this._id}}">{{this.name}}</option>
+            {{/each}}
+            {{/select}}
+        </select>
+        <p class="notes">{{localize "SCENES.JournalNotesHint"}}</p>
+    </div>
+
+    <div class="form-group">
+        <label>{{localize "SCENES.AudioPlaylist"}}</label>
+        <select name="playlist" data-dtype="String">
+            <option value=""></option>
+            {{#select entity.playlist}}
+            {{#each playlists}}
+            <option value="{{this._id}}">{{this.name}}</option>
+            {{/each}}
+            {{/select}}
+        </select>
+        <p class="notes">{{localize "SCENES.AudioPlaylistHint"}}</p>
+    </div>
+
+    <div class="form-group">
+        <label>{{localize "SCENES.WeatherEffect"}}</label>
+        <select name="weather" data-dtype="String">
+            <option value=""></option>
+            {{#select entity.weather}}
+            {{#each weatherTypes as |label t|}}
+            <option value="{{t}}">{{label}}</option>
+            {{/each}}
+            {{/select}}
+        </select>
+        <p class="notes">{{localize "SCENES.WeatherEffectHint"}}</p>
+    </div>
+
+    <div class="form-group initial-position">
+        <label>{{localize "SCENES.InitialView"}}</label>
+        <div class="form-fields">
+            <label>x</label>
+            <input type="text" name="initial.x" placeholder="0" value="{{entity.initial.x}}" data-dtype="Number" />
+            <label>y</label>
+            <input type="text" name="initial.y" placeholder="0" value="{{entity.initial.y}}" data-dtype="Number" />
+            <label>zoom</label>
+            <input type="text" name="initial.scale" placeholder="1" value="{{entity.initial.scale}}"
+                data-dtype="Number" />
+            <button class="capture-position" type="button" title="{{ localize " SCENES.InitialViewButton" }}">
+                <i class="fas fa-crop-alt"></i>
+            </button>
+        </div>
+        <p class="notes">{{localize "SCENES.InitialViewHint"}}</p>
+    </div>
+
+    <!-- Form Submission -->
+    <button type="submit" name="submit">
+        <i class="far fa-save"></i> {{localize "Save Changes"}}
+    </button>
+</form>

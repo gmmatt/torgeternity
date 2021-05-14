@@ -15,7 +15,7 @@ export default class torgeternityActorSheet extends ActorSheet {
 
         if ( this.object.data.type === "threat" ) {
             this.options.width= this.position.width = 450;
-            this.options.height = this.position.height = 550;
+            this.options.height = this.position.height = 645;
         };
 
         this._filters = {
@@ -119,7 +119,7 @@ export default class torgeternityActorSheet extends ActorSheet {
         };
 
         data.effects = prepareActiveEffectCategories(this.entity.effects);
-
+        
         data.config = CONFIG.torgeternity;
 
         return data;
@@ -309,7 +309,7 @@ export default class torgeternityActorSheet extends ActorSheet {
 
     _onActiveDefenseRoll(event) {
         torgchecks.activeDefenseRoll({
-            actor: this.actor,
+            actor: this.actor
         })
     }
 

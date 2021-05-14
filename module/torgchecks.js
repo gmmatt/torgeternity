@@ -5,6 +5,8 @@ export function SkillCheck({
    skillAdds = null,
    skillValue= null,
    unskilledUse = null,
+   woundModifier = null,
+   stymiedModifier = null,
    actor = null } = {}) {
    var test = {
       actor: actor.data._id,
@@ -15,6 +17,8 @@ export function SkillCheck({
       skillAdds: skillAdds,
       skillValue: skillValue,
       unskilledUse: unskilledUse,
+      woundModifier: woundModifier,
+      stymiedModifier: stymiedModifier,
       testType: testType,
       possibilityTotal: 0,
       upTotal: 0,
@@ -72,7 +76,8 @@ export function SkillCheck({
       diceroll = new Roll('1d20x10x20').roll();
       test.unskilledLabel = "display:none"
    };
-   diceroll.toMessage();
+   //diceroll.toMessage();
+   test.diceroll = diceroll;
 
    // Get Bonus and Roll Result
    test.rollTotal = diceroll.total;
@@ -89,7 +94,7 @@ export function SkillCheck({
    // Set Chat Title
    test.chatTitle = test.skillName + " Test";
 
-   renderSkillChat(test);
+   renderSkillChat(test,diceroll);
 };
 
 export function weaponAttack ({
@@ -173,7 +178,8 @@ export function weaponAttack ({
       diceroll = new Roll('1d20x10x20').roll();
       test.unskilledLabel = "display:none"
    }
-   diceroll.toMessage();
+   //diceroll.toMessage();
+   test.diceroll = diceroll;
 
    // Get Bonus and Roll Result
    test.rollTotal = diceroll.total;
@@ -199,7 +205,7 @@ export function weaponAttack ({
    // Set Chat Title
    test.chatTitle = test.weaponName;
 
-   renderSkillChat(test);
+   renderSkillChat(test,diceroll);
 
 }
 
@@ -248,7 +254,8 @@ export function powerRoll({
    // Roll dice as skilled (assumes character would not have power unless skilled)
    var diceroll = new Roll('1d20x10x20').roll();
    test.unskilledLabel = "display:none"
-   diceroll.toMessage();
+   //diceroll.toMessage();
+   test.diceroll = diceroll;
 
    // Get Bonus and Roll Result
    test.rollTotal = diceroll.total;
@@ -275,16 +282,24 @@ export function powerRoll({
    // Set Chat Title
    test.chatTitle = test.powerName;
    
-   renderSkillChat(test);
+   renderSkillChat(test,diceroll);
    
    }
 
 
-export function renderSkillChat(test) {
+export function renderSkillChat(test,diceroll) {
    // Get current bonus and make + label visible if number is positive
    test.combinedRollTotal = parseInt(test.rollTotal) + parseInt(test.upTotal) + parseInt(test.possibilityTotal) + parseInt(test.heroTotal) + parseInt(test.dramaTotal)
    test.bonus = torgBonus(test.combinedRollTotal);
+   
+   // Raise bonus to 1 if actively defending
+   if (test.testType === "activeDefense") {
+      if (test.bonus < 1) {
+         test.bonus = 1
+      }
+   }
 
+   // Add plus label if number is positive
    if (test.bonus >= 1) {
       test.bonusPlusLabel = "display:inline"
    } else {
@@ -299,15 +314,15 @@ export function renderSkillChat(test) {
    if (test.woundModifier < 0) {
       test.displayModifiers = true;
       test.modifierText = "Wounds " + test.woundModifier + " ";
-      test.modifiers = test.woundModifier
+      test.modifiers = parseInt(test.woundModifier)
    };
 
    if (test.stymiedModifier < 0) {
       test.displayModifiers= true;
-      if (test.stymiedModifier === -2) {
+      if (test.stymiedModifier == -2) {
          test.modifierText += "Stymied -2 ";
          test.modifiers += -2;
-      } else if (test.stymiedModifier === -4) {
+      } else if (test.stymiedModifier == -4) {
          test.modifierText += "Very Stymied -4 ";
          test.modifiers += -4;
       }
@@ -339,16 +354,27 @@ export function renderSkillChat(test) {
       test.modifierLabel = "display:none"
    };
 
+   // Add +3 cards to bonus
+   test.bonus += (3*parseInt(test.cardsPlayed));
 
-   test.rollResult = parseInt(test.skillValue) + parseInt(test.bonus) + parseInt(test.modifiers) + (3*parseInt(test.cardsPlayed));
+   test.rollResult = parseInt(test.skillValue) + parseInt(test.bonus) + parseInt(test.modifiers);
 
    // Choose Text to Display as Result
    if (test.rollTotal === 1) {
       test.resultText = "Mishap";
       test.actionTotalLabel = "display:none";
    } else {
-      test.resultText = test.rollResult;
-      test.actionTotalLabel = "display:block"
+      if (test.testType === "activeDefense") {
+         if (test.bonus < 2) {
+            test.resultText = "+ 1"
+         }  else {
+            test.resultText = "+ " + test.bonus;
+         }
+         test.actionTotalLabel = "display:none"
+      } else {
+         test.resultText = test.rollResult;
+         test.actionTotalLabel = "display:block"
+      }
    };
 
    // If an attack, display base damage
@@ -431,17 +457,85 @@ export function renderSkillChat(test) {
    const templatePromise = renderTemplate("./systems/torgeternity/templates/partials/skill-card.hbs", test);
 
    templatePromise.then(content => {
-      chatData.content = content;      
-      ChatMessage.create(chatData);
+      if (test.diceroll !== undefined) {
+         chatData.flavor = content;
+         test.diceroll.toMessage(chatData);
+      } else {
+         chatData.content = content;
+         ChatMessage.create(chatData);
+      };
    });
     
 
 }
 
 export function activeDefenseRoll ({
+   testType = null,
+   skillName = null,
+   skillBaseAttribute = null,
+   skillAdds = null,
+   skillValue= null,
+   unskilledUse = null,
+   woundModifier = null,
+   stymiedModifier = null,
+   actor = null } = {}) {
+   var test = {
+      actor: actor.data._id,
+      actorPic: actor.data.img,
+      actorType: "stormknight",
+      skillName: "Active Defense",
+      skillBaseAttribute: 0,
+      skillAdds: null,
+      skillValue: null,
+      unskilledUse: null,
+      woundModifier: woundModifier,
+      stymiedModifier: stymiedModifier,
+      testType: "activeDefense",
+      possibilityTotal: 0,
+      upTotal: 0,
+      heroTotal: 0,
+      dramaTotal: 0,
+      cardsPlayed: 0,
+      sizeModifier: 0,
+      vulnerableModifier: 0
+   };
+
+   // What kind of actor is this?
+
+   if (actor.data.type === "threat") {
+      test.actorType = "threat"
+   };
+ 
+   // Roll as skilled
+   var diceroll = new Roll('1d20x10x20').roll();
+   test.unskilledLabel = "display:none"
+   //diceroll.toMessage();
+   test.diceroll = diceroll;
+
+   // Get Bonus and Roll Result
+   test.rollTotal = diceroll.total;
+
+   // Get modifiers
+   test.woundModifier = parseInt(-(actor.data.data.wounds.value))
+
+   if (actor.data.data.stymiedModifier === parseInt(-2)) {
+      test.stymiedModifier = -2
+   } else if (actor.data.data.stymiedModifier === parseInt(-4)) {
+      test.stymiedModifier = -4
+   }
+
+   // Set Chat Title
+   test.chatTitle = "Active Defense";
+
+   renderSkillChat(test,diceroll);
+   
+
+   };
+
+export function activeDefenseRollOld ({
    actor = null}) {
    let dicerollint = new Roll('1d20x10x20').roll();
-   dicerollint.toMessage();
+   //dicerollint.toMessage();
    let diceroll = dicerollint.total;
    
 
@@ -479,8 +573,9 @@ export function activeDefenseRoll ({
    const templatePromise = renderTemplate("./systems/torgeternity/templates/partials/activeDefense-card.hbs", cardData);
 
    templatePromise.then(content => {
-      chatData.content = content;      
-      ChatMessage.create(chatData);
+      chatData.content = content;   
+      dicerollint.toMessage(chatData);
+      ChatMessage.create(chatData);   
    });
    
    };

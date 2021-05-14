@@ -1,3 +1,4 @@
+'use strict';
 import { torgeternity } from "./module/config.js";
 import * as Chat from "./module/chat.js";
 import torgeternityItem from "./module/torgeternityItem.js";
@@ -12,26 +13,28 @@ import torgeternityCombat from "./module/dramaticScene/torgeternityCombat.js";
 import torgeternityCombatTracker from "./module/dramaticScene/torgeternityCombatTracker.js";
 import { alphabSort } from "./module/AlphabeticalSort.js";
 import TorgeternityPlayerList from "./module/users/TorgeternityPlayerList.js";
+import torgeternitySceneConfig from "./module/torgeternitySceneConfig.js";
+import torgeternityNav from "./module/torgeternityNav.js";
+import { registerTorgSettings } from "./module/settings.js";
+import { modifyTokenBars } from "./module/tokenBars.js";
+import { registerHelpers } from "./module/handlebarHelpers.js";
+import { checkCardSupport } from "./module/checkCardSupport.js";
+
 
 Hooks.once("init", async function () {
   console.log("torgeternity | Initializing Torg Eternity System");
 
-  //-----system settings
+  //----helpers
+  registerHelpers();
 
-  game.settings.register("torgeternity", "animatedChat", {
-    // game.setting.register("NameOfTheModule", "VariableName",
-    name: "chat card animation", // Register a module setting with checkbox
-    hint: "If checked, enable chat card animations. changes will reload the app", // Description of the settings
-    scope: "world", // This specifies a client-stored setting
-    config: true, // This specifies that the setting appears in the configuration view
-    type: Boolean,
-    default: true, // The default value for the setting
-    onChange: () => window.location.reload()
-  });
+  //-----system settings
+  registerTorgSettings()
+
 
   //-------global
   game.torgeternity = {
     rollItemMacro,
+    viewMode: true
   };
 
   CONFIG.torgeternity = torgeternity;
@@ -43,6 +46,12 @@ Hooks.once("init", async function () {
   CONFIG.Combat.initiative.formula = "1";
   CONFIG.Combat.entityClass = torgeternityCombat;
   CONFIG.ui.combat = torgeternityCombatTracker;
+
+
+  //----scenes
+  CONFIG.Scene.sheetClass = torgeternitySceneConfig;
+  CONFIG.ui.nav = torgeternityNav;
+
 
   //---custom user class
   CONFIG.ui.players = TorgeternityPlayerList;
@@ -60,6 +69,10 @@ Hooks.once("init", async function () {
 
   //----------preloading handlebars templates
   preloadTemplates();
+
+
+  //-----modify token bars
+
 
   //----------debug hooks
   CONFIG.debug.hooks = true;
@@ -81,16 +94,129 @@ Hooks.once("init", async function () {
   });
 */
 });
+Hooks.once("setup", async function () {
+  modifyTokenBars();
 
+})
 //-------------once everything ready
-Hooks.on("ready", function () {
+Hooks.on("ready", async function () {
   sheetResize();
   toggleViewMode();
+  await checkCardSupport();
+
+
+  //----load template for welcome message
+  let welcomeData = {
+    cardModule: game.modules.get("cardsupport"),
+    user: game.user
+  }
+  torgeternity.welcomeMessage = await renderTemplate("systems/torgeternity/templates/welcomeMessage.hbs", welcomeData);
+
+  //----rendering welcome message
+  if (game.settings.get("torgeternity", "welcomeMessage") == true) {
+    let d = new Dialog({
+      title: "Welcome to the Official Torg Eternity System for Foundry VTT!",
+      content: torgeternity.welcomeMessage,
+      buttons: {
+        one: {
+          icon: '<i class="fas fa-check"></i>',
+          label: "OK",
+        },
+        two: {
+          icon: '<i class="fas fa-ban"></i>',
+          label: "Don't show again",
+          callback: () =>
+            game.settings.set("torgeternity", "welcomeMessage", false),
+        },
+      },
+    }, {
+      left: 100,
+      top: 100,
+      resizable: true
+    });
+    d.render(true);
+  }
+
+
+  //----pause image----
+  Hooks.on("renderPause", () => {
+
+    let path = game.settings.get("torgeternity", "pauseMedia");
+    let img = document.getElementById("pause").firstElementChild;
+    path = "./" + path;
+    img.style.content = `url(${path})`
+  })
+
+  //-------define a dialog for external links
+  let externalLinks = new Dialog({
+    title: "exxternal links",
+    content: "<p>here are some usefull links</p>",
+    buttons: {
+
+      one: {
+        icon: '<i class="fas fa-expand-arrows-alt"style="font-size:24px"></i>',
+        label: "<p>open torg game reference</p>",
+        callback: () => {
+          new FrameViewer("http://torg-gamereference.com/index.php", {
+            title: "torg game reference",
+            top: 200,
+            left: 200,
+            width: 520,
+            height: 520,
+            resizable: true
+          }).render(true);
+        }
+      },
+      two: {
+        icon: '<i class="fab fa-discord"style="font-size:24px"></i>',
+        label: "<p>join us on discord</p>",
+        callback: () => {
+          ui.notifications.info("your browser will open a new page to join us on our discord server");
+          var windowObjectReference = window.open("https://discord.gg/cArWtdgp", "_blank");
+
+        }
+      },
+
+
+      three: {
+        icon: '<i class="fas fa-bug" style="font-size:24px"></i>',
+        label: "<p>found a bug ?</p>",
+        callback: () => {
+          ui.notifications.info("your browser will open a new page to complete an issue");
+          var windowObjectReference = window.open("https://github.com/gmmatt/torgeternity/issues/new", "_blank");
+
+        }
+      },
+      four: {
+        icon: '<img src="systems/torgeternity/images/ulissesLogo.webp" alt="logo ulisses" style="filter:grayscale(1)">',
+        label: "<p>publisher website</p>",
+        callback: () => {
+          ui.notifications.info("your browser will open a new page to complete an issue");
+          var windowObjectReference = window.open("https://ulisses-us.com", "_blank");
+
+        }
+      }
+
+    }
+  },
+    {
+      width: 400,
+      height: 250,
+      left: 100,
+      top: 20
+    }
+  );
+  //----logo image
   var logo = document.getElementById("logo");
   logo.style.position = "absolute";
   logo.setAttribute("src", "/systems/torgeternity/images/vttLogo.webp");
+  //----open links when click on logo
+  logo.title = "external links"
+  logo.addEventListener("click", function () {
+    externalLinks.render(true)
+  })
 
-  //toggle off chatcard animation:
+
 
   Hooks.on("hotbarDrop", (bar, data, slot) =>
     createTorgEternityMacro(data, slot)
@@ -214,42 +340,18 @@ function rollItemMacro(itemName) {
   }
 }
 
-//----all this could be draft in another imported module ?? maybe like ./modules/handlebarsHelpers.js
 
-Handlebars.registerHelper("concatSkillValue", function (skillName) {
-  var skillValue = "{{data.skills." + skillName + ".value}}";
-  return skillValue;
-});
 
-Handlebars.registerHelper("concatAttributeName", function (attributeName) {
-  var localName = "torgeternity.attributes." + attributeName;
-  return localName;
-});
 
-Handlebars.registerHelper("concatSkillName", function (skillName) {
-  var localName = "torgeternity.skills." + skillName;
-  return localName;
-});
 
-Handlebars.registerHelper("concatClearanceLevel", function (clearance) {
-  var localClearance = "torgeternity.clearances." + clearance;
-  return localClearance;
-});
 
-Handlebars.registerHelper("concatSpecialAbility", function (description) {
-  // Removes <p> and </p> from the beginning and end of special ability descriptions so that they appear inline on threat sheet
-  if (description.startsWith("<p>")) {
-    var updatedDescription;
-    var endPoint = description.length;
-    updatedDescription = description.substr(3, endPoint);
-    return updatedDescription;
-  } else {
-    return description;
-  }
-});
 
 Hooks.on("renderChatLog", (app, html, data) => {
+  //----chat messages listeners
   Chat.addChatListeners(html);
+
+
+  //-----toggle animation on chat message
 
   if (game.settings.get("torgeternity", "animatedChat") == false) {
     let messFlips = html.find("li.flip-card");
@@ -270,4 +372,7 @@ Hooks.on("renderChatMessage", (mess, html, data) => {
   }
 });
 
+
+
+//----alphabetic sorting in character sheets
 Hooks.on("renderActorSheet", (app, html, data) => alphabSort(html, data));

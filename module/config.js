@@ -1,4 +1,6 @@
 export const torgeternity = {};
+torgeternity.welcomeMessage="";
+
 torgeternity.gameCards = {
     cardType: {
         actionCards: {},
@@ -247,5 +249,6 @@ torgeternity.statusEffects = [
         id: 'restrained',
         label: 'torgeternity.statusEffects.restrained'
     }
+    
 
 ]

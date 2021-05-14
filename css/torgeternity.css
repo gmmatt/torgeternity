@@ -120,10 +120,18 @@ div.actor ::-webkit-scrollbar {
 }
 
 /* foundry parts */
+#modalIO {
+  color: black;
+}
+
 .window-app .window-content {
   font-family: OptiLight;
   background-image: url(../images/thunder.webp);
   background-size: cover;
+  color: white;
+}
+
+.window-app .window-content .form-header {
   color: white;
 }
 
@@ -444,7 +452,7 @@ a:hover {
 .window-app div.form-group {
   margin: 10px;
   padding-bottom: 5px;
-  border-bottom: 2px solid black;
+  border-bottom: 2px solid #777777;
 }
 
 .window-app .window-resizable-handle {
@@ -507,8 +515,6 @@ a:hover {
   top: -0px;
   left: calc(50% - 65px);
   opacity: 0.7;
-  -webkit-animation: rotateblur 3s linear infinite;
-  animation: rotateblur 3s linear infinite;
 }
 
 #controls .scene-control,
@@ -561,6 +567,7 @@ a:hover {
 #sidebar {
   color: white;
   background-image: url(../images/thunder.webp);
+  z-index: 20;
   background-size: 80% 100%;
   padding-left: 80px;
   width: 380px;
@@ -602,7 +609,7 @@ div#sidebar::before {
   width: 80px;
   height: 120%;
   position: absolute;
-  left: 0px;
+  right: 150px;
   /* top: -50px; */
   background: url(../images/separatorSidebar.webp);
   content: "";
@@ -610,13 +617,19 @@ div#sidebar::before {
   background-size: 80% 100%;
   background-position: 280% 50%;
   background-repeat: no-repeat;
-  box-shadow: 20px 0px 100px #000000a6;
+  /* box-shadow: 20px 0px 100px #000000a6; */
   z-index: 200;
+  opacity: 1;
+  transition: all 500ms cubic-bezier(0.42, 0, 0.58, 1) 10ms;
 }
 
 div#sidebar.collapsed::before {
   width: 0px;
-  content: unset;
+  height: 0px;
+  opacity: 0;
+  z-index: -100;
+  right: -210px;
+  transition: all 500ms cubic-bezier(0.42, 0, 0.58, 1) 10ms;
 }
 
 div#sidebar.collapsed {
@@ -700,10 +713,121 @@ div#sidebar.collapsed {
   font-size: 30px;
 }
 
+#navigation div.cosm-card {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  width: 600px;
+  height: 400px;
+  transform: scale(0.05) translateY(0px);
+  transform-origin: 0% 0%;
+  opacity: 0;
+  z-index: 1000;
+  transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1) 10ms;
+}
+
+#navigation div.cosm-card:hover {
+  top: 0%;
+  left: 0%;
+  width: 600px;
+  height: 400px;
+  transform: scale(0.7) translateY(0px);
+  transform-origin: 0% 0%;
+  opacity: 1;
+  z-index: 200;
+}
+
+#navigation .cosm-card.coreEarth {
+  background: url(../images/cosm-cards/coreEarth.webp);
+  background-size: 100% 100%;
+}
+
+#navigation .cosm-card.livingLand {
+  background: url(../images/cosm-cards/livingLand.webp);
+  background-size: 100% 100%;
+}
+
+#navigation .cosm-card.nileEmpire {
+  background: url(../images/cosm-cards/nileEmpire.webp);
+  background-size: 100% 100%;
+}
+
+#navigation .cosm-card.aysle {
+  background: url(../images/cosm-cards/aysle.webp);
+  background-size: 100% 100%;
+}
+
+#navigation .cosm-card.cyberpapacy {
+  background: url(../images/cosm-cards/cyberpapacy.webp);
+  background-size: 100% 100%;
+}
+
+#navigation .cosm-card.panPacifica {
+  background: url(../images/cosm-cards/panPacifica.webp);
+  background-size: 100% 100%;
+}
+
+#navigation .cosm-card.orrorsh {
+  background: url(../images/cosm-cards/orrorsh.webp);
+  background-size: 100% 100%;
+}
+
+#navigation .cosm-card.tharkold {
+  background: url(../images/cosm-cards/tharkold.webp);
+  background-size: 100% 100%;
+}
+
 #navigation a.scene-name {
   font-family: "Alaska";
   text-transform: uppercase;
   border: none;
+}
+
+#navigation a.scene-name .cosm-icone {
+  min-width: 28px;
+  min-height: 28px;
+  display: inline-block;
+  position: relative;
+}
+
+#navigation a.scene-name .cosm-icone.coreEarth {
+  background: url(../images/cosm-icons/coreEarth.webp);
+  background-size: 100% 100%;
+}
+
+#navigation a.scene-name .cosm-icone.livingLand {
+  background: url(../images/cosm-icons/livingLand.webp);
+  background-size: 100% 100%;
+}
+
+#navigation a.scene-name .cosm-icone.nileEmpire {
+  background: url(../images/cosm-icons/nileEmpire.webp);
+  background-size: 100% 100%;
+}
+
+#navigation a.scene-name .cosm-icone.aysle {
+  background: url(../images/cosm-icons/aysle.webp);
+  background-size: 100% 100%;
+}
+
+#navigation a.scene-name .cosm-icone.cyberpapacy {
+  background: url(../images/cosm-icons/cyberpapacy.webp);
+  background-size: 100% 100%;
+}
+
+#navigation a.scene-name .cosm-icone.tharkold {
+  background: url(../images/cosm-icons/tharkold.webp);
+  background-size: 100% 100%;
+}
+
+#navigation a.scene-name .cosm-icone.panPacifica {
+  background: url(../images/cosm-icons/panPacifica.webp);
+  background-size: 100% 100%;
+}
+
+#navigation a.scene-name .cosm-icone.orrorsh {
+  background: url(../images/cosm-icons/orrorsh.webp);
+  background-size: 100% 100%;
 }
 
 #navigation #scene-list .scene {
@@ -850,7 +974,7 @@ div#sidebar.collapsed {
 #sidebar,
 #hotbar,
 #players {
-  position: absolute;
+  position: fixed;
   transition: all 500ms cubic-bezier(0.42, 0, 0.58, 1) 10ms;
 }
 
@@ -972,6 +1096,10 @@ div.readme a.compendium {
   color: black;
   background: url("../images/bgparch.webp");
   background-color: rgba(255, 255, 255, 0.575);
+}
+
+.chat-message .message-header .flavor-text {
+  font-size: unset;
 }
 
 .chat-message table td {
@@ -1197,29 +1325,17 @@ div.readme a.compendium {
 @-webkit-keyframes roll {
   from {
     transform: scaleX(1.2) scaleY(1.2);
-    transform-origin: 50% 50% 0;
-  }
-  33% {
-    transform: scaleX(0.8) scaleY(0.8);
-    transform-origin: 50% 50% 0;
   }
   to {
     transform: scaleX(0.8) scaleY(0.8);
-    transform-origin: 50% 50% 0;
   }
 }
 @keyframes roll {
   from {
     transform: scaleX(1.2) scaleY(1.2);
-    transform-origin: 50% 50% 0;
-  }
-  33% {
-    transform: scaleX(0.8) scaleY(0.8);
-    transform-origin: 50% 50% 0;
   }
   to {
     transform: scaleX(0.8) scaleY(0.8);
-    transform-origin: 50% 50% 0;
   }
 }
 
@@ -1463,11 +1579,7 @@ form.actor-sheet header input[name="name"] {
 
 .window-content .actor-sheet a.skill-roll:hover,
 .window-content .actor-sheet a.skill-roll:active {
-  -webkit-animation-duration: 0.3s;
-  animation-duration: 0.3s;
-  -webkit-animation-name: roll;
-  animation-name: roll;
-  text-shadow: 0px 0px 10px #191e58;
+  text-shadow: 0px 0px 10px #474a68;
 }
 
 .window-content .actor-sheet .item-name {
@@ -2127,6 +2239,10 @@ form.actor-sheet.threat .tab[data-tab].active ol.item-list li {
   display: block;
   overflow: hidden;
   padding-bottom: 0px;
+}
+
+form.actor-sheet.threat .tab[data-tab].active ol.item-list li .item .effects .effects-item .flexrow {
+  display: flex;
 }
 
 form.actor-sheet.threat .tab[data-tab].active ol.item-list li img {

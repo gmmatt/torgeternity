@@ -1,5 +1,6 @@
 node_modules
+<<<<<<< HEAD
 .gitconfig
-images/cardsImages
-images/cards
-images/characters
+=======
+.gitconfig
+>>>>>>> 9c68e0a (added all cards and card backs)

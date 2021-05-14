@@ -1,0 +1,32 @@
+{{log "scenes" this}}
+
+<nav id="navigation" class="app flexrow {{#if collapsed}}collapsed{{/if}}">
+    {{#if scenes}}
+	<a id="nav-toggle" class="nav-item">
+		<i class="fas fa-caret-{{#if collapsed}}down{{else}}up{{/if}}"></i>
+	</a>
+    {{/if}}
+    
+    <ol id="scene-list">
+		{{#each scenes}}
+       
+        <li class="scene nav-item {{this.css}}" data-scene-id="{{this._id}}">
+             
+            <a class="scene-name">
+                {{#if this.active}}<i class="fas fa-bullseye"></i>{{/if}}
+                {{{this.name}}}
+                                <div class="cosm-icone {{this.flags.torgeternity.cosm}}">  <div class="cosm-card {{this.flags.torgeternity.cosm}}"></div> </div>
+                {{#if this.flags.torgeternity.displayCosm2}}
+                <div {{#unless this.flags.torgeternity.isMixed}}style="filter:grayscale(0.8)"{{/unless}}class="cosm-icone {{this.flags.torgeternity.cosm2}}">  <div class="cosm-card cosm2 {{this.flags.torgeternity.cosm2}}"></div> </div>
+                {{/if}}
+            </a>
+            <ul class="scene-players">
+            {{#each this.users as |user i|}}
+                <li class="scene-player" style="background-color: {{user.color}};">{{user.letter}}</li>
+            {{/each}}
+            </ul> 
+          
+        </li>
+    	{{/each}}
+    </ol>
+</nav>
