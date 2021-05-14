@@ -4,7 +4,7 @@
   "description": "Unofficial Torg Eternity character sheet for Foundry VTT.",
   "author": "Matt Ritchie",
 
-  "version": "0.92.5",
+  "version": "1.0.0",
 
   "minimumCoreVersion": "0.7.8",
   "compatibleCoreVersion": "0.7.9", 
@@ -17,7 +17,21 @@
     "./css/torgeternity.css"
   ],
   "background":"images/splash.webp",
-  "packs": [
+   "packs": [
+    {
+      "name": "archetypes",
+      "label": "Archetypes",
+      "system": "torgeternity",
+      "module": "torgeternity",
+      "path": "packs/archetypes.db",
+      "entity": "Actor"
+    }
+  ],
+    "dependencies": [
+    {
+      "name": "cardsupport",
+      "type": "module"
+    }
   ],
   "languages": [
     {

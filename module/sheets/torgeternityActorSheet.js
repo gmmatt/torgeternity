@@ -309,7 +309,7 @@ export default class torgeternityActorSheet extends ActorSheet {
 
     _onActiveDefenseRoll(event) {
         torgchecks.activeDefenseRoll({
-            actor: this.actor,
+            actor: this.actor
         })
     }
 

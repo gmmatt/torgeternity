@@ -452,7 +452,7 @@ a:hover {
 .window-app div.form-group {
   margin: 10px;
   padding-bottom: 5px;
-  border-bottom: 2px solid black;
+  border-bottom: 2px solid #777777;
 }
 
 .window-app .window-resizable-handle {
@@ -567,6 +567,7 @@ a:hover {
 #sidebar {
   color: white;
   background-image: url(../images/thunder.webp);
+  z-index: 20;
   background-size: 80% 100%;
   padding-left: 80px;
   width: 380px;
@@ -607,8 +608,8 @@ a:hover {
 div#sidebar::before {
   width: 80px;
   height: 120%;
-  position: fixed;
-  right: 155px;
+  position: absolute;
+  right: 150px;
   /* top: -50px; */
   background: url(../images/separatorSidebar.webp);
   content: "";
@@ -718,7 +719,7 @@ div#sidebar.collapsed {
   left: 0%;
   width: 600px;
   height: 400px;
-  transform: scale(0.1) translateY(0px);
+  transform: scale(0.05) translateY(0px);
   transform-origin: 0% 0%;
   opacity: 0;
   z-index: 1000;
@@ -730,9 +731,10 @@ div#sidebar.collapsed {
   left: 0%;
   width: 600px;
   height: 400px;
-  transform: scale(0.5) translateY(0px);
+  transform: scale(0.7) translateY(0px);
   transform-origin: 0% 0%;
   opacity: 1;
+  z-index: 200;
 }
 
 #navigation .cosm-card.coreEarth {

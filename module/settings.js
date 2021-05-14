@@ -1,6 +1,18 @@
 export function registerTorgSettings() {
 
 
+    //--------welcome message 
+
+    game.settings.register("torgeternity", "welcomeMessage", {
+        // game.setting.register("NameOfTheModule", "VariableName",
+        name: "display the welcome message", // Register a module setting with checkbox
+        hint: "If checked, the welcome message will pop once your world loaded", // Description of the settings
+        scope: "world", // This specifies a client-stored setting
+        config: true, // This specifies that the setting appears in the configuration view
+        type: Boolean,
+        default: true, // The default value for the setting
+    });
+
     //------pause image
 
     game.settings.register("torgeternity", "pauseMedia", {
@@ -26,6 +38,23 @@ export function registerTorgSettings() {
         default: true, // The default value for the setting
         onChange: () => window.location.reload()
     });
+
+    // Card Installer
+    game.settings.register("torgeternity", "cardInstaller", {
+        name: "Ask to Install Drama Deck",
+        hint: "When checked, the game will prompt to install the Drama Deck (Card Support module must be active). You will have to manually refresh your app/browser to make the popup appear.",
+        scope: "world",
+        config: true,
+        type: Boolean,
+        default: true,
+    });
+}
+
+
+/* I commented that but i think it should be displayed ; maybe in another window app ?
+
+
+//--------cosm cards image path. usefull for foreign langages with other images
 
     game.settings.register("torgeternity", "aysleCardImage", {
         // game.setting.register("NameOfTheModule", "VariableName",
@@ -135,7 +164,7 @@ export function registerTorgSettings() {
 }
 
 
-
+*/
 function setCosmCard(cosm, path) {
     let cards = document.getElementsByClassName("cosm-card");
     for (let card of cards) {
