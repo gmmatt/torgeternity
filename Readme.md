@@ -10,6 +10,7 @@ while managing game systems.
 
 v. 1.0.1
 - Changed character sheet backgrounds to allow for more contrast with text (thanks Forja!)
+- Updated Spanish localization (thanks again Forja!)
 
 v. 1.0.0
 - Welcome to version 1! Thanks to everyone who has contributed through the testing
