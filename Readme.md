@@ -8,6 +8,9 @@
 For manual installation, use the provided manifest URL in the "*Install System*" popup window 
 while managing game systems.
 
+v. 1.0.1
+- Changed character sheet backgrounds to allow for more contrast with text (thanks Forja!)
+
 v. 1.0.0
 - Welcome to version 1! Thanks to everyone who has contributed through the testing
   of our Beta builds!
