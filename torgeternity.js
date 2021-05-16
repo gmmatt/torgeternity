@@ -75,7 +75,7 @@ Hooks.once("init", async function () {
 
 
   //----------debug hooks
-  CONFIG.debug.hooks = true;
+  //CONFIG.debug.hooks = true;
   /*
   //----socket receiver
   game.socket.on("system.torgeternity", (data) => {
