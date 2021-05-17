@@ -943,13 +943,11 @@ div#sidebar.collapsed {
 }
 
 #players ol li.player span.posibilities {
-  right: -30%;
-  position: relative;
+  margin-left: 20%;
 }
 
 #players ol li.player span.posibilities .possValue {
   display: inline-block;
-  margin-left: 10%;
   width: 2em;
   height: 2em;
   background: black;
@@ -980,6 +978,9 @@ div#sidebar.collapsed {
 #players ol li.player .player-name {
   text-shadow: 0px 3px 10px #8181cc;
   color: white;
+  overflow: hidden;
+  white-space: unset;
+  word-break: unset;
 }
 
 #players ol li.player .player-name.self {

@@ -28,21 +28,21 @@
 				{{#if this.isGM}} [GM]
 				{{else if this.charname}} [{{this.charname}}]
 				{{/if}}
-			</span>
-		</li>
-		{{#if this.character}}
-		<li class="player">
 
+				{{#if this.character}}
+</span>
 			<span class="posibilities">
-				<span>{{localize "torgeternity.stats.possibilities"}}</span>
+				<span><i class="fas fa-bolt" title="stormknight's possibilities"></i></span>
 				<em class="possValue">{{this.character.data.data.other.posibilities}}</em>
 				{{#if ../self.isGM}}
 				<em class="possAdd" data-targetId="{{this.character.data._id}}"><i class="fas fa-plus-circle"></i></em>
 				<em class="possMinus" data-targetId="{{this.character.data._id}}"><i class="fas fa-minus-circle"></i></em>
 				{{/if}}
 			</span>
-		</li>
 		{{/if}}
+			
+		</li>
+		
 		{{/each}}
 	</ol>
 
