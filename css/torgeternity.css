@@ -913,6 +913,12 @@ div#sidebar.collapsed {
   left: 15px;
 }
 
+#players .possReset {
+  position: relative;
+  left: 40%;
+  top: -25px;
+}
+
 #players h3 {
   text-shadow: 0px 3px 10px #8181cc;
   padding: 4px;
