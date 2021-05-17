@@ -75,7 +75,7 @@ Hooks.once("init", async function () {
 
 
   //----------debug hooks
-  //CONFIG.debug.hooks = true;
+  CONFIG.debug.hooks = true;
   /*
   //----socket receiver
   game.socket.on("system.torgeternity", (data) => {
@@ -375,4 +375,13 @@ Hooks.on("renderChatMessage", (mess, html, data) => {
 
 
 //----alphabetic sorting in character sheets
-Hooks.on("renderActorSheet", (app, html, data) => alphabSort(html, data));
+Hooks.on("renderActorSheet", (app, html, data) => {
+
+  // alphabetical sorting 
+  alphabSort(html, data);
+});
+
+Hooks.on('updateActor', (actor, data, options, id)=>{
+  //updating playerList with users character up-to-date data
+  ui.players.render(true);
+})

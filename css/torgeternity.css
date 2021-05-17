@@ -926,15 +926,38 @@ div#sidebar.collapsed {
   display: flex;
   justify-content: space-around;
   flex-direction: column;
-  margin-right: 25%;
   /* justify-items: flex-end; */
 }
 
 #players ol li.player {
   line-height: 25px;
   padding: 1px 8px;
-  justify-content: flex-end;
-  display: flex;
+}
+
+#players ol li.player span.posibilities {
+  right: -30%;
+  position: relative;
+}
+
+#players ol li.player span.posibilities .possValue {
+  display: inline-block;
+  margin-left: 10%;
+  width: 2em;
+  height: 2em;
+  background: black;
+  border: 1px solid white;
+  border-radius: 50%;
+  text-align: center;
+}
+
+#players ol li.player span.posibilities .possAdd,
+#players ol li.player span.posibilities .possMinus {
+  display: none;
+}
+
+#players ol li.player span.posibilities:hover .possAdd,
+#players ol li.player span.posibilities:hover .possMinus {
+  display: inline;
 }
 
 #players ol li.player .player-active {

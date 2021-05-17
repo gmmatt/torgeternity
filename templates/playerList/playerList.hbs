@@ -1,7 +1,5 @@
-
-
 <div id="players" class="app {{#if hide}}hidden{{/if}}">
-    <h3>
+	<h3>
 		<i class="fas fa-users"></i>
 		{{ localize "PLAYERS.Title" }}
 		{{#if showOffline}}
@@ -9,18 +7,22 @@
 		{{else}}
 		<i class="players-mode fas fa-angle-down"></i>
 		{{/if}}
-		
+
 	</h3>
-    	
-{{#if self.isGM}}
-        <i class="players-popout far fa-window-restore" title ="open party-sheet"></i>
-		{{/if}}
+
+	{{#if self.isGM}}
+	<p class=" flexrow">
+		<i class="players-popout far fa-window-restore" title="open party-sheet"></i>
+		<i class="fas fa-bolt possReset" title="reset stormnight's possibilities"></i>
+	</p>{{/if}}
+
+
 	<ol id="player-list">
-		
-	{{#each users}}
+
+		{{#each users}}
 		<li class="player {{#if this.isGM}}gm{{/if}} flexrow" data-user-id="{{this._id}}">
 			<span class="player-active {{#if this.active}}active{{else}}inactive{{/if}}"
-				  style="background: {{this.color}}; border: 1px solid {{this.border}}"></span>
+				style="background: {{this.color}}; border: 1px solid {{this.border}}"></span>
 			<span class="player-name {{#if this.isSelf}}self{{/if}}">
 				{{this.name}}
 				{{#if this.isGM}} [GM]
@@ -28,9 +30,20 @@
 				{{/if}}
 			</span>
 		</li>
-		
-	{{/each}}
-	</ol>
-    
-</div>
+		{{#if this.character}}
+		<li class="player">
 
+			<span class="posibilities">
+				<span>{{localize "torgeternity.stats.possibilities"}}</span>
+				<em class="possValue">{{this.character.data.data.other.posibilities}}</em>
+				{{#if ../self.isGM}}
+				<em class="possAdd" data-targetId="{{this.character.data._id}}"><i class="fas fa-plus-circle"></i></em>
+				<em class="possMinus" data-targetId="{{this.character.data._id}}"><i class="fas fa-minus-circle"></i></em>
+				{{/if}}
+			</span>
+		</li>
+		{{/if}}
+		{{/each}}
+	</ol>
+
+</div>
