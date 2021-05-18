@@ -10,6 +10,8 @@ export default class TorgeternityPlayerList extends PlayerList {
   getData() {
     let data = super.getData();
     data.self = game.user;
+    let GM = game.users.find(user => user.isGM)
+    data.GMpossibilities = GM.getFlag('torgeternity', 'GMpossibilities')
     return data
   }
   activateListeners(html) {
@@ -34,28 +36,44 @@ export default class TorgeternityPlayerList extends PlayerList {
 
 
   async addPossibility(ev) {
-    let targetActor = game.actors.get(ev.currentTarget.getAttribute("data-targetId"));
-    console.log(targetActor)
-    await targetActor.update({
-      _id: targetActor._id,
-      data: {
-        other: {
-          posibilities: (targetActor.data.data.other.posibilities) + 1
-        }
-      },
-    })
-  };
- async  minusPossibility(ev) {
-    let targetActor = game.actors.get(ev.currentTarget.getAttribute("data-targetId"));
-    await targetActor.update({
-      _id: targetActor._id,
-      data: {
-        other: {
-          posibilities: (targetActor.data.data.other.posibilities) - 1
-        }
-      },
+    if (ev.currentTarget.getAttribute("data-targetId") === "GMpossibilities") {
+      let GM = game.users.find(user => user.isGM)
+      let newVal = (GM.getFlag('torgeternity', 'GMpossibilities')) + 1;
+      GM.setFlag('torgeternity', 'GMpossibilities', newVal);
+      ui.players.render(true);
 
-    })
+    } else {
+      let targetActor = game.actors.get(ev.currentTarget.getAttribute("data-targetId"));
+      console.log(targetActor)
+      await targetActor.update({
+        _id: targetActor._id,
+        data: {
+          other: {
+            posibilities: (targetActor.data.data.other.posibilities) + 1
+          }
+        },
+      });
+    }
+  };
+  async minusPossibility(ev) {
+    if (ev.currentTarget.getAttribute("data-targetId") === "GMpossibilities") {
+      let GM = game.users.find(user => user.isGM)
+      let newVal = (GM.getFlag('torgeternity', 'GMpossibilities')) - 1;
+      GM.setFlag('torgeternity', 'GMpossibilities', newVal);
+      ui.players.render(true);
+
+    } else {
+      let targetActor = game.actors.get(ev.currentTarget.getAttribute("data-targetId"));
+      await targetActor.update({
+        _id: targetActor._id,
+        data: {
+          other: {
+            posibilities: (targetActor.data.data.other.posibilities) - 1
+          }
+        },
+
+      })
+    }
 
   }
 
@@ -63,7 +81,7 @@ export default class TorgeternityPlayerList extends PlayerList {
 
   resetPossibilities(ev) {
 
-    let possibilitiesDial= new Dialog({
+    let possibilitiesDial = new Dialog({
       title: "reseting StormKnights possibilities",
       content: `
         
@@ -78,12 +96,12 @@ export default class TorgeternityPlayerList extends PlayerList {
         one: {
           icon: '<i class="fas fa-check"></i>',
           label: "Apply",
-          callback: (html) =>{
+          callback: (html) => {
 
-            game.users.forEach(user=>{
-              if (user.character){
-                let target=game.actors.get(user.character.data._id);
-                let newVal=parseInt(document.getElementById('possibilitiesValue').value)
+            game.users.forEach(user => {
+              if (user.character) {
+                let target = game.actors.get(user.character.data._id);
+                let newVal = parseInt(document.getElementById('possibilitiesValue').value)
                 target.update({
                   _id: target._id,
                   data: {
@@ -95,18 +113,18 @@ export default class TorgeternityPlayerList extends PlayerList {
               }
             })
           }
-            
+
         },
         two: {
           icon: '<i class="fas fa-ban"></i>',
           label: "Cancel",
-          
+
         },
       },
     });
     possibilitiesDial.render(true);
 
-    
+
   }
 
 }

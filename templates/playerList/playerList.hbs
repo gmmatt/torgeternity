@@ -1,4 +1,7 @@
-<div id="players" class="app {{#if hide}}hidden{{/if}}">
+<div
+	id="players"
+	class="app {{#if hide}}hidden{{/if}}"
+>
 	<h3>
 		<i class="fas fa-users"></i>
 		{{ localize "PLAYERS.Title" }}
@@ -12,37 +15,62 @@
 
 	{{#if self.isGM}}
 	<p class=" flexrow">
-		<i class="players-popout far fa-window-restore" title="open party-sheet"></i>
-		<i class="fas fa-bolt possReset" title="reset stormknight's possibilities"></i>
+		<i
+			class="players-popout far fa-window-restore"
+			title="open party-sheet"
+		></i>
+		<i
+			class="fas fa-bolt possReset"
+			title="reset stormknight's possibilities"
+		></i>
 	</p>{{/if}}
 
 
 	<ol id="player-list">
 
 		{{#each users}}
-		<li class="player {{#if this.isGM}}gm{{/if}} flexrow" data-user-id="{{this._id}}">
-			<span class="player-active {{#if this.active}}active{{else}}inactive{{/if}}"
-				style="background: {{this.color}}; border: 1px solid {{this.border}}"></span>
+		<li
+			class="player {{#if this.isGM}}gm{{/if}} "
+			data-user-id="{{this._id}}"
+		>
+			<span
+				class="player-active {{#if this.active}}active{{else}}inactive{{/if}}"
+				style="background: {{this.color}}; border: 1px solid {{this.border}}"
+			></span>
 			<span class="player-name {{#if this.isSelf}}self{{/if}}">
 				{{this.name}}
 				{{#if this.isGM}} [GM]
 				{{else if this.charname}} [{{this.charname}}]
 				{{/if}}
 
-				{{#if this.character}}
-</span>
-			<span class="posibilities">
-				<span><i class="fas fa-bolt" title="stormknight's possibilities"></i></span>
-				<em class="possValue">{{this.character.data.data.other.posibilities}}</em>
-				{{#if ../self.isGM}}
-				<em class="possAdd" data-targetId="{{this.character.data._id}}"><i class="fas fa-plus-circle"></i></em>
-				<em class="possMinus" data-targetId="{{this.character.data._id}}"><i class="fas fa-minus-circle"></i></em>
-				{{/if}}
+				
 			</span>
-		{{/if}}
 			
+			<span class="posibilities" title="{{#if this.isGM}}GM's possibility pool{{else}}character's possibilities{{/if}}">
+				
+				<em class="possValue" >
+					{{#if this.character}}
+					{{this.character.data.data.other.posibilities}}
+					{{/if}}
+					{{#if this.isGM}}
+					{{../GMpossibilities}}
+					{{/if}}
+					</em>
+				{{#if ../self.isGM}}
+				<em
+					class="possAdd"
+					data-targetId="{{#if this.isGM}}GMpossibilities{{else}}{{this.character.data._id}}{{/if}}"
+				><i class="fas fa-plus-circle"></i></em>
+				<em
+					class="possMinus"
+					data-targetId="{{#if this.isGM}}GMpossibilities{{else}}{{this.character.data._id}}{{/if}}"
+				><i class="fas fa-minus-circle"></i></em>
+				
+			</span>
+				{{/if}}
+
 		</li>
-		
+
 		{{/each}}
 	</ol>
 

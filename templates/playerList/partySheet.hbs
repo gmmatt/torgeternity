@@ -122,7 +122,10 @@
 
 				<ul>{{#each user.character.items as |item key|}}
 					<li>
-						<span>{{item.data.name}}</span>
+						
+						<span><a class="item-link" 
+						data-actorID="{{../this.character.data._id}}"
+						data-itemID="{{item.data._id}}">{{item.data.name}}</a> -<em>{{item.data.type}}</em></span>
 					</li>{{/each}}
 				</ul>
 

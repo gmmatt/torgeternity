@@ -104,6 +104,10 @@ Hooks.on("ready", async function () {
   toggleViewMode();
   await checkCardSupport();
 
+  //-----applying GM possibilities pool if absent
+  if (game.user.isGM && !game.user.getFlag('torgeternity', 'GMpossibilities')){
+    game.user.setFlag('torgeternity', 'GMpossibilities', 0)
+  }
 
   //----load template for welcome message
   let welcomeData = {
@@ -149,7 +153,7 @@ Hooks.on("ready", async function () {
 
   //-------define a dialog for external links
   let externalLinks = new Dialog({
-    title: "exxternal links",
+    title: "external links",
     content: "<p>here are some usefull links</p>",
     buttons: {
 
@@ -172,7 +176,7 @@ Hooks.on("ready", async function () {
         label: "<p>join us on discord</p>",
         callback: () => {
           ui.notifications.info("your browser will open a new page to join us on our discord server");
-          var windowObjectReference = window.open("https://discord.gg/cArWtdgp", "_blank");
+          var windowObjectReference = window.open("https://discord.com/channels/170995199584108546/842809090316828693", "_blank");
 
         }
       },

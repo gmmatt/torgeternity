@@ -555,7 +555,7 @@ div#sidebar.collapsed {
   background-position: center;
   bottom: 0px;
   left: 0px;
-  width: 200px;
+  width: 220px;
   margin: 0;
   border: none;
   min-width: 200px;
@@ -598,6 +598,7 @@ div#sidebar.collapsed {
     margin: 0 0 4px;
     padding: 0;
     display: flex;
+
     justify-content: space-around;
     flex-direction: column;
 
@@ -605,11 +606,15 @@ div#sidebar.collapsed {
     li.player {
       line-height: 25px;
       padding: 1px 8px;
+      position:relative;
 
       span.posibilities {
-        margin-left: 20%;
+        margin-left: 0.5em; 
+        position:absolute;
+        right:4px;
         .possValue {
           display: inline-block;
+         
           width: 2em;
           height: 2em;
           background: black;
