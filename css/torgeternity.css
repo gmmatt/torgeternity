@@ -959,7 +959,7 @@ div#sidebar.collapsed {
   display: inline-block;
   width: 2em;
   height: 2em;
-  background: black;
+  background: rgba(13, 94, 119, 0.226);
   border: 1px solid white;
   border-radius: 50%;
   text-align: center;
