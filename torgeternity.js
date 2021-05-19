@@ -38,13 +38,13 @@ Hooks.once("init", async function () {
   };
 
   CONFIG.torgeternity = torgeternity;
-  CONFIG.Item.entityClass = torgeternityItem;
-  CONFIG.Actor.entityClass = torgeternityActor;
+  CONFIG.Item.documentClass = torgeternityItem;
+  CONFIG.Actor.documentClass = torgeternityActor;
   CONFIG.statusEffects = torgeternity.statusEffects;
 
   //--------combats
   CONFIG.Combat.initiative.formula = "1";
-  CONFIG.Combat.entityClass = torgeternityCombat;
+  CONFIG.Combat.documentClass = torgeternityCombat;
   CONFIG.ui.combat = torgeternityCombatTracker;
 
 

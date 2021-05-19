@@ -135,7 +135,7 @@ export default class torgeternityActorSheet extends ActorSheet {
 
 
         //Owner-only Listeners
-        if (this.actor.owner) {
+        if (this.actor.isOwner) {
             let handler = ev => this._onDragStart(ev);
             // Find all items on the character sheet.
             html.find('a.item-name').each((i, a) => {
@@ -147,63 +147,63 @@ export default class torgeternityActorSheet extends ActorSheet {
             });
           }
 
-        if (this.actor.owner) {
+        if (this.actor.isOwner) {
             html.find(".skill-roll").click(this._onSkillRoll.bind(this));
         }
 
-        if (this.actor.owner) {
+        if (this.actor.isOwner) {
             html.find(".skill-edit-toggle").click(this._onSkillEditToggle.bind(this));
         }
 
-        if (this.actor.owner) {
+        if (this.actor.isOwner) {
             html.find(".possibility-roll").click(this._onPossibilityRoll.bind(this));
         }
 
-        if (this.actor.owner) {
+        if (this.actor.isOwner) {
             html.find(".bonus-roll").click(this._onBonusRoll.bind(this));
         }
 
-        if (this.actor.owner) {
+        if (this.actor.isOwner) {
             html.find(".item-tochat").click(this._onItemChat.bind(this));
         }
 
-        if (this.actor.owner) {
+        if (this.actor.isOwner) {
             html.find(".item-attackRoll").click(this._onAttackRoll.bind(this));
         }
 
-        if (this.actor.owner) {
+        if (this.actor.isOwner) {
             html.find(".item-bonusRoll").click(this._onBonusRoll.bind(this));
         }
 
-        if (this.actor.owner) {
+        if (this.actor.isOwner) {
             html.find(".item-powerRoll").click(this._onPowerRoll.bind(this));
         }
 
-        if (this.actor.owner) {
+        if (this.actor.isOwner) {
             html.find(".up-roll").click(this._onUpRoll.bind(this));
         }
 
-        if (this.actor.owner) {
+        if (this.actor.isOwner) {
             html.find(".item-equip").click(this._onItemEquip.bind(this));
         }
 
-        if (this.actor.owner) {
+        if (this.actor.isOwner) {
             html.find(".item-create-sa").click(this._onCreateSa.bind(this));
         }
 
-        if (this.actor.owner) {
+        if (this.actor.isOwner) {
             html.find(".item-create-rsa").click(this._onCreateSaR.bind(this));
         }
 
-        if (this.actor.owner) {
+        if (this.actor.isOwner) {
             html.find(".toggle-threat-edit").click(this._onToggleThreatEdit.bind(this));
         }
 
-        if (this.actor.owner) {
+        if (this.actor.isOwner) {
             html.find(".activeDefense-roll").click(this._onActiveDefenseRoll.bind(this));
         }
 
-        if (this.actor.owner) {
+        if (this.actor.isOwner) {
             html.find(".effect-control").click(ev => onManageActiveEffect(ev, this.entity));
         }
         
