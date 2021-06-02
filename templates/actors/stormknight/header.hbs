@@ -8,7 +8,7 @@
 
         <span>{{localize "torgeternity.sheetLabels.race"}}</span>
         <select name="data.details.race" class="input-box">
-            {{#select data.details.race}}
+            {{#select data.data.details.race}}
             {{#each config.races as |name type|}}
             <option value="{{type}}">{{localize name}}</option>
             {{/each}}
@@ -17,7 +17,7 @@
 
         <span>{{localize "torgeternity.gear.cosm"}}</span>
         <select name="data.other.cosm" class="input-box">
-            {{#select data.other.cosm}}
+            {{#select data.data.other.cosm}}
             {{#each config.cosmTypes as |name type|}}
             <option value="{{type}}">{{localize name}}</option>
             {{/each}}
@@ -27,42 +27,42 @@
     </p>
     <p >
         <span class="main-label">{{localize "torgeternity.sheetLabels.magic"}}</span>
-        <span class="axioms">{{data.axioms.magic}}</span>
+        <span class="axioms">{{data.data.axioms.magic}}</span>
     </p>
     <p >
         <span class="main-label">{{localize "torgeternity.sheetLabels.social"}}</span>
-        <span class="axioms">{{data.axioms.social}}</span>
+        <span class="axioms">{{data.data.axioms.social}}</span>
     </p>
     <p >
         <span class="main-label">{{localize "torgeternity.sheetLabels.spirit"}}</span>
-        <span class="axioms">{{data.axioms.spirit}}</span>
+        <span class="axioms">{{data.data.axioms.spirit}}</span>
     </p>
     <p >
         <span class="main-label">{{localize "torgeternity.sheetLabels.tech"}}</span>
-        <span class="axioms">{{data.axioms.tech}}</span>
+        <span class="axioms">{{data.data.axioms.tech}}</span>
     </p>
     <p>
         <span class="vital-box">
             {{localize "torgeternity.sheetLabels.wounds"}}:</span>
-        <input name="data.wounds.value" type="number" value="{{data.wounds.value}}" data-dtype="Number"
+        <input name="data.wounds.value" type="number" value="{{data.data.wounds.value}}" data-dtype="Number"
             class="small-input" />
         /
-        <input name="data.wounds.max" type="number" value="{{data.wounds.max}}" data-dtype="Number" 
+        <input name="data.wounds.max" type="number" value="{{data.data.wounds.max}}" data-dtype="Number" 
             class="small-input" disabled />
 
     </p>
     <p>
         <span class="vital-box">
             {{localize "torgeternity.sheetLabels.shock"}}:</span>
-        <input name="data.shock.value" type="number" value="{{data.shock.value}}" data-dtype="Number"
+        <input name="data.shock.value" type="number" value="{{data.data.shock.value}}" data-dtype="Number"
             class="small-input" />
         /
-        <input name="data.shock.max" type="number" value="{{data.shock.max}}" data-dtype="Number" class="small-input" disabled />
+        <input name="data.shock.max" type="number" value="{{data.data.shock.max}}" data-dtype="Number" class="small-input" disabled />
 
     </p>
     <p class="attribut-block">
         <span class="other-label" data-skill-value="{{data.other.posibilities}}"
             data-skill-name="{{data.other.posibilities}}">{{localize "torgeternity.sheetLabels.possibilities"}}</span>
-        <input name="data.other.posibilities" type="number" value="{{data.other.posibilities}}" data=dtype="Number" />
+        <input name="data.other.posibilities" type="number" value="{{data.data.other.posibilities}}" data=dtype="Number" />
     </p>
 </div>

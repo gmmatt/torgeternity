@@ -5,10 +5,10 @@
         <img src="{{item.img}}" data-edit="img" title="{{item.name}}" />
         <h1><input name="name" type="text" value="{{item.name}}" placeholder="special ability Name" /></h1>
     </header>
-    <div class="sheet-content"?
+    <div class="sheet-content">
         <div class="main-content">
             <div name="data.description" class="item-description-textarea">
-                {{editor content=data.description target="data.description" button=true owner=owner editable=editable}}
+                {{editor content=data.data.description target="data.data.description" button=true owner=owner editable=editable}}
             </div>        
         </div> 
     </div>

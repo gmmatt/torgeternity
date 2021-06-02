@@ -10,8 +10,8 @@
             <span>{{localize "torgeternity.sheetLabels.favored"}}</span>
 
         </li>
-        {{#if data.editstate}}
-        {{#each data.skills as |content name|}}
+        {{#if data.data.editstate}}
+        {{#each data.data.skills as |content name|}}
         <li>
             <span>
                 <a class="skill-roll" data-testType="skill" data-baseAttribute="{{content.baseAttribute}}"
@@ -41,7 +41,7 @@
         </li>
         {{/each}}
         {{else}}
-        {{#each data.skills as |content name|}}
+        {{#each data.data.skills as |content name|}}
         {{#if content.adds}}
         <li>
             <span>

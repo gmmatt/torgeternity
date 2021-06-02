@@ -21,12 +21,12 @@
                     <p class="item-data-label">
                         {{localize "torgeternity.enhancements.perk"}}
                     </p>
-                    <input name="data.perk" type="text" value="{{data.perk}}" class="input-box" />
+                    <input name="data.perk" type="text" value="{{data.data.perk}}" class="input-box" />
                 </div>
                 <div class="main-content">
                     <!-- right column -->
                     <div class="item-description-textarea">
-                        {{editor content=data.description target="data.description" button=true owner=owner editable=editable}}
+                        {{editor content=data.data.description target="data.data.description" button=true owner=owner editable=editable}}
                     </div>
                 </div>
             </div>

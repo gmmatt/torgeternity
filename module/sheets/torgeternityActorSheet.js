@@ -118,7 +118,7 @@ export default class torgeternityActorSheet extends ActorSheet {
             this.actor.data.data.editstate = "none";
         };
 
-        data.effects = prepareActiveEffectCategories(this.entity.effects);
+        data.effects = prepareActiveEffectCategories(this.document.effects);
         
         data.config = CONFIG.torgeternity;
 
@@ -204,7 +204,7 @@ export default class torgeternityActorSheet extends ActorSheet {
         }
 
         if (this.actor.isOwner) {
-            html.find(".effect-control").click(ev => onManageActiveEffect(ev, this.entity));
+            html.find(".effect-control").click(ev => onManageActiveEffect(ev, this.document));
         }
         
 

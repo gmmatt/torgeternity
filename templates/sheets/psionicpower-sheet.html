@@ -20,12 +20,12 @@
                     <p class="item-data-label">
                             {{localize "torgeternity.powers.axiom"}}
                         </p>
-                        <input name="data.axiom" type="number" value="{{data.axiom}}" class="input-box" />
+                        <input name="data.axiom" type="number" value="{{data.data.axiom}}" class="input-box" />
                         <p class="item-data-label">
                             {{localize "torgeternity.powers.skill"}}
                         </p>
                         <select name="data.skill" class="input-box">
-                            {{#select data.skill}}
+                            {{#select data.data.skill}}
                             {{#each config.powerSkills as |name type|}}
                             <option value="{{type}}">{{localize name}}</option>
                             {{/each}}
@@ -34,52 +34,52 @@
                         <p class="item-data-label">
                             {{localize "torgeternity.powers.skilllevel"}}
                         </p>
-                        <input name="data.skilllevel" type="number" value="{{data.skilllevel}}" class="input-box" />
+                        <input name="data.skilllevel" type="number" value="{{data.data.skilllevel}}" class="input-box" />
                         <p class="item-data-label">
                             {{localize "torgeternity.powers.castingtime"}}
                         </p>
-                        <input name="data.castingtime" type="text" value="{{data.castingtime}}" class="input-box" />
+                        <input name="data.castingtime" type="text" value="{{data.data.castingtime}}" class="input-box" />
                         <p class="item-data-label">
                             {{localize "torgeternity.powers.dn"}}
                         </p>
-                        <input name="data.dn" type="text" value="{{data.dn}}" class="input-box" />
+                        <input name="data.dn" type="text" value="{{data.data.dn}}" class="input-box" />
                         <p class="item-data-label">
                             {{localize "torgeternity.powers.range"}}
                         </p>
-                        <input name="data.range" type="text" value="{{data.range}}" class="input-box" />
+                        <input name="data.range" type="text" value="{{data.data.range}}" class="input-box" />
                         <p class="item-data-label">
                             {{localize "torgeternity.powers.duration"}}
                         </p>
-                        <input name="data.duration" type="text" value="{{data.duration}}" class="input-box" />
+                        <input name="data.duration" type="text" value="{{data.data.duration}}" class="input-box" />
                         <p class="item-data-label">
                             {{localize "torgeternity.powers.attack"}}?/{{localize "torgeternity.powers.damage"}}
                         </p>
                         <select name="data.isAttack" class="input-box-small" default="false">
-                            {{#select data.isAttack}}
+                            {{#select data.data.isAttack}}
                             {{#each config.yesNo as |name type|}}
                             <option value="{{type}}">{{localize name}}</option>
                             {{/each}}
                             {{/select}}
                         </select>
-                        <input name="data.damage" type="number" value="{{data.damage}}" class="input-box-small" />
+                        <input name="data.damage" type="number" value="{{data.data.damage}}" class="input-box-small" />
                     </div>
                     <div class="main-content">
                         <p class="item-data-label">
                             {{localize "torgeternity.gear.description"}}
                         </p>
                         <div class="item-description-textarea" >
-                            {{editor content=data.description target="data.description" button=true owner=owner editable=editable}}
+                            {{editor content=data.data.description target="data.data.description" button=true owner=owner editable=editable}}
                         </div>
                         <p class="item-data-label">
                             {{localize "torgeternity.sheetLabels.goodResult"}}
                         </p>
                         <div >
-                            <textarea name="data.good" class="item-description-textarea" >{{data.good}}</textarea>
+                            <textarea name="data.good" class="item-description-textarea" >{{data.data.good}}</textarea>
                         </div>
                         <p class="item-data-label">
                             {{localize "torgeternity.sheetLabels.outstandingResult"}}
                         </p>
-                        <textarea name="data.outstanding"class="item-description-textarea">{{data.outstanding}}</textarea>
+                        <textarea name="data.outstanding"class="item-description-textarea">{{data.data.outstanding}}</textarea>
                         </div>
                     </div> 
             </div>
