@@ -1,4 +1,5 @@
-export function SkillCheck({
+export async function SkillCheck({
+
    testType = null,
    skillName = null,
    skillBaseAttribute = null,
@@ -38,7 +39,7 @@ export function SkillCheck({
    // Cannot Attempt Certain Tests Unskilled
    if (test.skillValue === "-") {
       var cantRollData = {
-         user: game.user._id,
+         user: game.user.data._id,
          speaker: ChatMessage.getSpeaker(),
          owner: actor,
       };
@@ -62,18 +63,22 @@ export function SkillCheck({
    var diceroll
    if (test.testType === "skill") {
       if (test.skillAdds > 0) {
-         diceroll = new Roll('1d20x10x20').roll();
+         diceroll =  new Roll('1d20x10x20').evaluate({async:false})
+         ;
          test.unskilledLabel = "display:none"
       } else if (test.skillAdds === 0) {
-         diceroll = new Roll('1d20x10').roll();
+         diceroll =  new Roll('1d20x10').evaluate({async:false})
+         ;
          test.unskilledLabel = "display:block"
       // Should trigger only if this is a threat and test.skilAdds therefore equals null   
       } else {
-         diceroll = new Roll('1d20x10x20').roll();
+         diceroll =  new Roll('1d20x10x20').evaluate({async:false})
+         ;
          test.unskilledLabel = "display:none"
       }
    } else {
-      diceroll = new Roll('1d20x10x20').roll();
+      diceroll =  new Roll('1d20x10x20').evaluate({async:false})
+      ;
       test.unskilledLabel = "display:none"
    };
    //diceroll.toMessage();
@@ -449,7 +454,7 @@ export function renderSkillChat(test,diceroll) {
    }
     
    var chatData = {
-      user: game.user._id,
+      user: game.user.data._id,
       speaker: ChatMessage.getSpeaker(),
       owner:  test.actor
    };
@@ -560,7 +565,7 @@ export function activeDefenseRollOld ({
    
    
    var chatData = {
-      user: game.user._id,
+      user: game.user.data._id,
       speaker: ChatMessage.getSpeaker(),
       owner:  actor
    };
@@ -657,7 +662,7 @@ export function torgBD () {
 
    // Put together Chat Data
    let chatData = {
-       user: game.user._id,
+       user: game.user.data._id,
        speaker: ChatMessage.getSpeaker(),
    };
 
