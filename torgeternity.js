@@ -229,7 +229,7 @@ Hooks.on("ready", async function () {
 
   //-----applying players card ui:
   if (game.user.data.role == false || game.user.data.role != 4) {
-    let user=game.users.get(game.user._id)
+    let user=game.users.get(game.user.data._id)
     
     ui.HandedCards = new HandedCardsApp();
     ui.HandedCards.render(true);
@@ -237,7 +237,7 @@ Hooks.on("ready", async function () {
   //-----applying GM card ui:
   if (game.user.data.role == 4 || game.user.data.role == 3) {
     //init cards GM Decks
-    let user=game.users.get(game.user._id)
+    let user=game.users.get(game.user.data._id)
    
     ui.GMDecks = new GMDecksApp();
     ui.GMDecks.render(true);

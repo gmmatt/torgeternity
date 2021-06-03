@@ -24,7 +24,7 @@ export default class torgeternityItem extends Item {
 
    async roll() {
       let chatData = {
-         user: game.user._id,
+         user: game.user.data._id,
          speaker: ChatMessage.getSpeaker()
       };
 
@@ -112,7 +112,7 @@ export default class torgeternityItem extends Item {
 
       // Put together Chat Data
       let chatData = {
-         user: game.user._id,
+         user: game.user.data._id,
          speaker: ChatMessage.getSpeaker(),
       };
 
@@ -178,7 +178,7 @@ export default class torgeternityItem extends Item {
 
       // Put together Chat Data
       let chatData = {
-         user: game.user._id,
+         user: game.user.data._id,
          speaker: ChatMessage.getSpeaker(),
       };
 
@@ -265,7 +265,7 @@ export default class torgeternityItem extends Item {
 
       // Put together Chat Data
       let chatData = {
-         user: game.user._id,
+         user: game.user.data._id,
          speaker: ChatMessage.getSpeaker(),
       };
 
