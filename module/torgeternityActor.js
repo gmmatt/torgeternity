@@ -4,7 +4,7 @@ export default class torgeternityActor extends Actor {
     
     prepareBaseData() {
            
-        if (this._data.type === "stormknight") { 
+        if (this.data._source.type === "stormknight") { 
           mergeObject(this.data.token, {
            
             actorLink: true,

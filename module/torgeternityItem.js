@@ -30,7 +30,7 @@ export default class torgeternityItem extends Item {
 
       let cardData = {
          ...this.data,
-         owner: this.actor.id
+         owner: this.actor.data._id
       };
       
       chatData.content = await renderTemplate(this.chatTemplate[this.type], cardData);
@@ -120,7 +120,7 @@ export default class torgeternityItem extends Item {
       
       let cardData = {
          ...this.data,
-         owner: this.actor.id,
+         owner: this.actor.data._id,
          bonus: messageContent,
          skillValue: skillValue,
          result: rollResult,
@@ -185,7 +185,7 @@ export default class torgeternityItem extends Item {
       // Assemble information needed by attack card
       let cardData = {
          ...this.data,
-         owner: this.actor.id,
+         owner: this.actor.data._id,
          totalDice: totalDice,
          explosions: explosions,
          hideBonusFlag: hideBonusFlag,
@@ -272,7 +272,7 @@ export default class torgeternityItem extends Item {
       // Assemble information needed by attack card
       let cardData = {
          ...this.data,
-         owner: this.actor.id,
+         owner: this.actor.data._id,
          bonus: messageContent,
          skillValue: skillValue,
          result: rollResult,
