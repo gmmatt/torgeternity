@@ -38,8 +38,8 @@
                         <input name="data.value" type="number" value="{{data.data.value}}" class="input-box-small" />
                     </div>
                     <div class="main-content">
-                        <div class="item-description-textarea" >
-                            {{editor content=data.data.data.description target="data.data.data.description" button=true owner=owner editable=editable}}
+                        <div name="data.description" class="item-description-textarea">
+                        {{editor content=data.data.description target="data.description" button=true owner=owner editable=editable}}
                         </div>
                     </div> 
             </div>
