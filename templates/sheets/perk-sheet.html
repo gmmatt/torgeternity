@@ -49,8 +49,8 @@
                     <input name="data.timestaken" type="number" value="{{data.data.timestaken}}" class="input-box" />
                 </div>
                 <div class="main-content">
-                    <div class="item-description-textarea" >
-                        {{editor content=data.data.description target="data.data.description" button=true owner=owner editable=editable}}
+                    <div name="data.description" class="item-description-textarea">
+                        {{editor content=data.data.description target="data.description" button=true owner=owner editable=editable}}
                     </div>
                 </div>
 
