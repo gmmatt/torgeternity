@@ -29,7 +29,7 @@ export default class PartySheet extends PlayerList {
   _clickItem(ev) {
     let itemId = ev.currentTarget.getAttribute('data-itemID');
     let actorId = ev.currentTarget.getAttribute('data-actorID');
-    let item = game.actors.get(actorId).getOwnedItem(itemId);
+    let item = game.actors.get(actorId).items.get(itemId);
     item.sheet.render(true)
 
   }
