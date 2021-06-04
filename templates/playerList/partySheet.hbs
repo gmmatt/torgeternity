@@ -1,5 +1,3 @@
-
-
 <div class="flexrow">
 
 	{{#each users as |user key|}}
@@ -101,16 +99,16 @@
 				<ul>
 					{{#each user.character.data.data.skills as |skill key|}}
 					{{#if skill.adds}}
-					
+
 					<li class="attribut-block">
 						<span>
-							
-					{{localize (concatSkillName key) }}
+
+							{{localize (concatSkillName key) }}
 						</span>
 						<span> : {{skill.value}}</span>
 						{{#if skill.isFav}}
-						<i class="far fa-star" ></i>
-					{{/if}}
+						<i class="far fa-star"></i>
+						{{/if}}
 					</li>
 					{{/if}}
 					{{/each}}
@@ -122,10 +120,9 @@
 
 				<ul>{{#each user.character.items as |item key|}}
 					<li>
-						
-						<span><a class="item-link" 
-						data-actorID="{{../this.character.data._id}}"
-						data-itemID="{{item.data._id}}">{{item.data.name}}</a> -<em>{{item.data.type}}</em></span>
+
+						<span><a class="item-link" data-actorID="{{../this.character.data._id}}"
+								data-itemID="{{item.data}}">{{item.data.name}}</a> -<em>{{item.data.type}}</em></span>
 					</li>{{/each}}
 				</ul>
 

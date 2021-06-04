@@ -21,18 +21,18 @@ export default class TorgCombat extends Combat {
   };
   async nextTurn() {
     let turn = this.turn;
-    let nextPlayed=this.turns[turn+1]?.hasPlayed;
-   
+    let nextPlayed = this.turns[turn + 1]?.hasPlayed;
+
     let skip = this.settings.skipDefeated || nextPlayed;
 
     // Determine the next turn number
     let next = null;
-    if ( skip ) {
-      for ( let [i, t] of this.turns.entries() ) {
-        if ( i <= turn ) continue;
-        if ( t.defeated ) continue;
+    if (skip) {
+      for (let [i, t] of this.turns.entries()) {
+        if (i <= turn) continue;
+        if (t.defeated) continue;
         if (t.hasPlayed) continue;
-        if ( t.actor?.effects.find(e => e.getFlag("core", "statusId") === CONFIG.Combat.defeatedStatusId ) ) continue;
+        if (t.actor?.effects.find(e => e.getFlag("core", "statusId") === CONFIG.Combat.defeatedStatusId)) continue;
         next = i;
         break;
       }
@@ -41,21 +41,21 @@ export default class TorgCombat extends Combat {
 
     // Maybe advance to the next round
     let round = this.round;
-    if ( (this.round === 0) || (next === null) || (next >= this.turns.length) ) {
+    if ((this.round === 0) || (next === null) || (next >= this.turns.length)) {
       return this.nextRound();
     }
 
     // Update the encounter
     const advanceTime = CONFIG.time.turnTime;
-    this.update({round: round, turn: next}, {advanceTime});
+    this.update({ round: round, turn: next }, { advanceTime });
   }
 
   async nextRound() {
-    for (let c of this.combatants){
-        await this.updateCombatant({
-            _id:c._id,
-            hasPlayed:false
-        });
+    for (let c of this.combatants) {
+      await this.updateCombatant({
+        _id: c.data._id,
+        hasPlayed: false
+      });
     }
     super.nextRound();
     return this
@@ -80,5 +80,5 @@ export default class TorgCombat extends Combat {
     return super.startCombat();
   }
 
- 
+
 }

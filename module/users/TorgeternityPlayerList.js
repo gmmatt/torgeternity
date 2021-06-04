@@ -46,7 +46,7 @@ export default class TorgeternityPlayerList extends PlayerList {
       let targetActor = game.actors.get(ev.currentTarget.getAttribute("data-targetId"));
       console.log(targetActor)
       await targetActor.update({
-        _id: targetActor._id,
+        _id: targetActor.data._id,
         data: {
           other: {
             posibilities: (targetActor.data.data.other.posibilities) + 1
@@ -65,7 +65,7 @@ export default class TorgeternityPlayerList extends PlayerList {
     } else {
       let targetActor = game.actors.get(ev.currentTarget.getAttribute("data-targetId"));
       await targetActor.update({
-        _id: targetActor._id,
+        _id: targetActor.data._id,
         data: {
           other: {
             posibilities: (targetActor.data.data.other.posibilities) - 1
@@ -103,7 +103,7 @@ export default class TorgeternityPlayerList extends PlayerList {
                 let target = game.actors.get(user.character.data._id);
                 let newVal = parseInt(document.getElementById('possibilitiesValue').value)
                 target.update({
-                  _id: target._id,
+                  _id: target.data._id,
                   data: {
                     other: {
                       posibilities: newVal

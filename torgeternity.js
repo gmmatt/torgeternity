@@ -75,7 +75,7 @@ Hooks.once("init", async function () {
 
 
   //----------debug hooks
- // CONFIG.debug.hooks = true;
+  // CONFIG.debug.hooks = true;
   /*
   //----socket receiver
   game.socket.on("system.torgeternity", (data) => {
@@ -105,7 +105,7 @@ Hooks.on("ready", async function () {
   await checkCardSupport();
 
   //-----applying GM possibilities pool if absent
-  if (game.user.isGM && !game.user.getFlag('torgeternity', 'GMpossibilities')){
+  if (game.user.isGM && !game.user.getFlag('torgeternity', 'GMpossibilities')) {
     game.user.setFlag('torgeternity', 'GMpossibilities', 0)
   }
 
@@ -385,7 +385,7 @@ Hooks.on("renderActorSheet", (app, html, data) => {
   alphabSort(html, data);
 });
 
-Hooks.on('updateActor', (actor, data, options, id)=>{
+Hooks.on('updateActor', (actor, data, options, id) => {
   //updating playerList with users character up-to-date data
   ui.players.render(true);
 })
