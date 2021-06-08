@@ -401,23 +401,18 @@ export default class torgeternityActorSheet extends ActorSheet {
         var actor = this.actor
         var toggleState = this.actor.data.data.editstate;
         event.preventDefault();
-        if (toggleState === "none") {
+        if (toggleState === "none" || undefined) {
             document.getElementById("threat-editor").style.display = "inline";
             this.actor.data.data.editstate = "inline";
             this.actor.update({
-                "data.editstate": "inline"
+                "data.data.editstate": "inline"
             });
-        } else if (toggleState === undefined) {
-            document.getElementById("threat-editor").style.display = "inline";
-            this.actor.data.data.editstate = "inline";
-            this.actor.update({
-                "data.editstate": "inline"
-            });
+
         } else {
             document.getElementById("threat-editor").style.display = "none";
             this.actor.data.data.editstate = "none";
             this.actor.update({
-                "data.editstate": "none"
+                "data.data.editstate": "none"
             });
         };
     }
