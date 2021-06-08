@@ -6,7 +6,7 @@
 
 <ol class="item-list">
     {{#each specialability as |item id|}}
-    <li class="item" data-item-id="{{item.data._id}}">
+    <li class="item" data-item-id="{{item._id}}">
 
         <div class="item-row flexrow ">
             <img src="{{item.img}}" title="{{item.name}}" />
@@ -29,7 +29,7 @@
 
 <ol class="item-list">
     {{#each specialabilityRollable as |item id|}}
-    <li class="item" data-item-id="{{item.data._id}}">
+    <li class="item" data-item-id="{{item._id}}">
         <div class="item-row flexrow">
             <img src="{{item.img}}" title="{{item.name}}" width="30" height="30" />
             <a class="item-name">{{item.name}}</a>
@@ -55,7 +55,7 @@
 </div>
 <ol class="item-list">
     {{#each perk as |item id|}}
-    <li class="item" data-item-id="{{item.data._id}}">
+    <li class="item" data-item-id="{{item._id}}">
         <div class="item-row flexrow">
             <img src="{{item.img}}" title="{{item.name}}" width="30" height="30" />
             <a class="item-name">{{item.name}}</a>
@@ -88,7 +88,7 @@
 </div>
 <ol class="item-list">
     {{#each enhancement as |item id|}}
-    <li class="item" data-item-id="{{item.data._id}}">
+    <li class="item" data-item-id="{{item._id}}">
         <div class="item-row flexrow">
             <img src="{{item.img}}" title="{{item.name}}" width="30" height="30" />
             <a class="item-name">{{item.name}} ({{localize "torgeternity.enhancements.enhances"}}

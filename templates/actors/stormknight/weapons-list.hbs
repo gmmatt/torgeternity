@@ -4,7 +4,7 @@
 <h3>{{localize "torgeternity.sheetLabels.meleeWeapons"}}</h3>
 <div class="item-list">
     {{#each meleeweapons as |item id|}}
-    <li class="item" data-item-id="{{item.data._id}}">
+    <li class="item" data-item-id="{{item._id}}">
 
         <div>
             <img src="{{item.img}}" title="{{item.name}}" />
@@ -23,7 +23,7 @@
 <h3>{{localize "torgeternity.sheetLabels.missileWeapons"}}</h3>
 <div class="item-list">
     {{#each missileweapon as |item id|}}
-    <li class="item" data-item-id="{{item.data._id}}">
+    <li class="item" data-item-id="{{item._id}}">
 
         <div>
             <img src="{{item.img}}" title="{{item.name}}" />
@@ -44,7 +44,7 @@
 
 
     {{#each firearm as |item id|}}
-    <li class="item" data-item-id="{{item.data._id}}">
+    <li class="item" data-item-id="{{item._id}}">
 
         <div>
             <img src="{{item.img}}" title="{{item.name}}" />
@@ -65,7 +65,7 @@
 
 
     {{#each heavyweapon as |item id|}}
-    <li class="item" data-item-id="{{item.data._id}}">
+    <li class="item" data-item-id="{{item._id}}">
 
         <div>
             <img src="{{item.img}}" title="{{item.name}}" />
@@ -84,7 +84,7 @@
 <h3>{{localize "torgeternity.sheetLabels.otherAttacks"}}</h3>
 <div class="item-list">
     {{#each customAttack as |item id|}}
-    <li class="item" data-item-id="{{item.data._id}}">
+    <li class="item" data-item-id="{{item._id}}">
         <div>
             <img src="{{item.img}}" title="{{item.name}}" />
 

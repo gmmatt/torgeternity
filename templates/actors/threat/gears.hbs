@@ -3,7 +3,7 @@
 </div>
 <ol class="item-list">
     {{#each meleeweapons as |item id|}}
-    <li class="item" data-item-id="{{item.data._id}}">
+    <li class="item" data-item-id="{{item._id}}">
         <div class="item-row flexrow">
             <img src="{{item.img}}" title="{{item.name}}" width="30" height="30" />
             <a class="item-name">{{item.name}} ({{localize "torgeternity.itemSheetDescriptions.meleeWeapon"}})</a>
@@ -37,7 +37,7 @@
 </ol>
 <ol class="item-list">
     {{#each missileweapon as |item id|}}
-    <li class="item" data-item-id="{{item.data._id}}">
+    <li class="item" data-item-id="{{item._id}}">
         <div class="item-row flexrow">
             <img src="{{item.img}}" title="{{item.name}}" width="30" height="30" />
             <a class="item-name">{{item.name}} ({{localize "torgeternity.itemSheetDescriptions.missileWeapon"}})</a>
@@ -78,7 +78,7 @@
 </ol>
 <ol class="item-list">
     {{#each firearm as |item id|}}
-    <li class="item" data-item-id="{{item.data._id}}">
+    <li class="item" data-item-id="{{item._id}}">
         <div class="item-row flexrow">
             <img src="{{item.img}}" title="{{item.name}}" width="30" height="30" />
             <a class="item-name">{{item.name}} ({{localize "torgeternity.itemSheetDescriptions.firearm"}})</a>
@@ -119,7 +119,7 @@
 
 <ol class="item-list">
     {{#each heavyweapon as |item id|}}
-    <li class="item" data-item-id="{{item.data._id}}">
+    <li class="item" data-item-id="{{item._id}}">
         <div class="item-row flexrow">
             <img src="{{item.img}}" title="{{item.name}}" width="30" height="30" />
             <a class="item-name">{{item.name}} ({{localize "torgeternity.itemSheetDescriptions.heavyWeapon"}}/{{localize
@@ -165,7 +165,7 @@
 </div>
 <ol class="item-list">
     {{#each armor as |item id|}}
-    <li class="item" data-item-id="{{item.data._id}}">
+    <li class="item" data-item-id="{{item._id}}">
         <div class="item-row flexrow">
             <img src="{{item.img}}" title="{{item.name}}" width="30" height="30" />
             <a class="item-name">{{item.name}}</a>
@@ -201,7 +201,7 @@
 </ol>
 <ol class="item-list">
     {{#each shield as |item id|}}
-    <li class="item" data-item-id="{{item.data._id}}">
+    <li class="item" data-item-id="{{item._id}}">
         <div class="item-row flexrow">
             <img src="{{item.img}}" title="{{item.name}}" width="30" height="30" />
             <a class="item-name">{{item.name}}</a>
@@ -239,7 +239,7 @@
 </div>
 <ol class="item-list">
     {{#each gear as |item id|}}
-    <li class="item" data-item-id="{{item.data._id}}">
+    <li class="item" data-item-id="{{item._id}}">
         <div class="item-row flexrow">
             <img src="{{item.img}}" title="{{item.name}}" width="30" height="30" />
             <a class="item-name">{{item.name}}</a>
@@ -269,7 +269,7 @@
 </ol>
 <ol class="item-list">
     {{#each implant as |item id|}}
-    <li class="item" data-item-id="{{item.data._id}}">
+    <li class="item" data-item-id="{{item._id}}">
         <div class="item-row flexrow">
             <img src="{{item.img}}" title="{{item.name}}" width="30" height="30" />
             <a class="item-name">{{item.name}} (Implant)</a>
@@ -299,7 +299,7 @@
 </ol>
 <ol class="item-list">
     {{#each eternityshard as |item id|}}
-    <li class="item" data-item-id="{{item.data._id}}">
+    <li class="item" data-item-id="{{item._id}}">
         <div class="item-row flexrow">
             <img src="{{item.img}}" title="{{item.name}}" width="30" height="30" />
             <a class="item-name">{{item.name}} ({{localize "torgeternity.sheetLabels.eternityShard"}})</a>
@@ -329,7 +329,7 @@
 </ol>
 <ol class="item-list">
     {{#each vehicle as |item id|}}
-    <li class="item" data-item-id="{{item.data._id}}">
+    <li class="item" data-item-id="{{item._id}}">
         <div class="item-row flexrow">
             <img src="{{item.img}}" title="{{item.name}}" width="30" height="30" />
             <a class="item-name">{{item.name}} ({{localize "torgeternity.sheetLabels.vehicle"}})</a>

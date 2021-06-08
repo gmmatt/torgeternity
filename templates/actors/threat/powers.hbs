@@ -1,6 +1,6 @@
 <ol class="item-list">
     {{#each spell as |item id|}}
-    <li class="item" data-item-id="{{item.data._id}}">
+    <li class="item" data-item-id="{{item._id}}">
         <div class="item-row flexrow">
             <img src="{{item.img}}" title="{{item.name}}" width="30" height="30" />
             <a class="item-name">{{item.name}} ({{localize "torgeternity.sheetLabels.spell"}})</a>
@@ -39,7 +39,7 @@
 
 <ol class="item-list">
     {{#each miracle as |item id|}}
-    <li class="item" data-item-id="{{item.data._id}}">
+    <li class="item" data-item-id="{{item._id}}">
         <div class="item-row flexrow">
             <img src="{{item.img}}" title="{{item.name}}" width="30" height="30" />
             <a class="item-name">{{item.name}} ({{localize "torgeternity.sheetLabels.miracle"}})</a>
@@ -78,7 +78,7 @@
 
 <ol class="item-list">
     {{#each psionicpower as |item id|}}
-    <li class="item" data-item-id="{{item.data._id}}">
+    <li class="item" data-item-id="{{item._id}}">
         <div class="item-row flexrow">
             <img src="{{item.img}}" title="{{item.name}}" width="30" height="30" />
             <a class="item-name">{{item.name}} ({{localize "torgeternity.sheetLabels.psionic"}})</a>
