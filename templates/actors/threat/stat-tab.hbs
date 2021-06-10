@@ -81,19 +81,19 @@
         <b>{{localize "torgeternity.sheetLabels.equipment"}}:</b>&nbsp;
         <span>
             {{#each meleeweapons as |item id|}}
-            <a class="item-attackRoll inline-skill-item item" data-item-id="{{item.data._id}}">{{item.name}}</a>
+            <a class="item-attackRoll inline-skill-item item" data-item-id="{{item._id}}">{{item.name}}</a>
             {{/each}}
 
             {{#each missileweapon as |item id|}}
-            <a class="item-attackRoll inline-skill-item item" data-item-id="{{item.data._id}}">{{item.name}}</a>
+            <a class="item-attackRoll inline-skill-item item" data-item-id="{{item._id}}">{{item.name}}</a>
             {{/each}}
 
             {{#each firearm as |item id|}}
-            <a class="item-attackRoll inline-skill-item item" data-item-id="{{item.data._id}}">{{item.name}}</a>
+            <a class="item-attackRoll inline-skill-item item" data-item-id="{{item._id}}">{{item.name}}</a>
             {{/each}}
 
             {{#each heavyweapon as |item id|}}
-            <a class="item-attackRoll inline-skill-item item" data-item-id="{{item.data._id}}">{{item.name}}</a>
+            <a class="item-attackRoll inline-skill-item item" data-item-id="{{item._id}}">{{item.name}}</a>
             {{/each}}
 
             {{#each armor as |item id|}}
@@ -135,7 +135,7 @@
 
                     {{#each specialabilityRollable as |item id|}}
                     <li>
-                        <b><a class="item-attackRoll item" data-item-id="{{item.data._id}}">{{item.name}}</a></b>
+                        <b><a class="item-attackRoll item" data-item-id="{{item._id}}">{{item.name}}</a></b>
                         .&nbsp;
                         {{{concatSpecialAbility item.data.description}}}
                     </li>
