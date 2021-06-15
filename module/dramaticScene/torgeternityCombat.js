@@ -1,24 +1,31 @@
 export default class TorgCombat extends Combat {
-  _sortCombatants(a, b) {
-    const ia = Number.isNumeric(a.initiative) ? a.initiative : -9999;
-    const ib = Number.isNumeric(b.initiative) ? b.initiative : -9999;
+  
+  // Not working in 0.8.x, but left here for posterity
+  //_sortCombatants(a, b) {
+  //  const ia = Number.isNumeric(a.initiative) ? a.initiative : -9999;
+  //  const ib = Number.isNumeric(b.initiative) ? b.initiative : -9999;
 
-    if (ia > ib) {
-      return 1;
-    }
-    if (ia < ib) {
-      return -1;
-    }
+  //  if (ia > ib) {
+  //    return 1;
+  //  }
+  //  if (ia < ib) {
+  //    return -1;
+  //  }
+  // }
+
+  //_prepareCombatant(c, scene, players, settings = {}) {
+  //  let combatant = super._Combatant.create(c, scene, players, (settings = {}));
+  //  combatant.flags.type = c.actor.data.type;
+  //  if (c.players.length > 0) {
+  //    combatant.flags.color = c.players[0].color;
+  //  }
+  //  return combatant;
+  // };
+
+  _onUpdateEmbeddedDocuments(embeddedName,documents,result,options,userId) {
+    let a=this;
   }
 
-  _prepareCombatant(c, scene, players, settings = {}) {
-    let combatant = super._prepareCombatant(c, scene, players, (settings = {}));
-    combatant.flags.type = c.actor.data.type;
-    if (c.players.length > 0) {
-      combatant.flags.color = c.players[0].color;
-    }
-    return combatant;
-  };
   async nextTurn() {
     let turn = this.turn;
     let nextPlayed = this.turns[turn + 1]?.hasPlayed;

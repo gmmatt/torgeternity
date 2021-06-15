@@ -19,6 +19,7 @@ import { registerTorgSettings } from "./module/settings.js";
 import { modifyTokenBars } from "./module/tokenBars.js";
 import { registerHelpers } from "./module/handlebarHelpers.js";
 import { checkCardSupport } from "./module/checkCardSupport.js";
+import torgCombatant from "./module/dramaticScene/torgeternityCombatant.js";
 
 
 Hooks.once("init", async function () {
@@ -46,6 +47,7 @@ Hooks.once("init", async function () {
   CONFIG.Combat.initiative.formula = "1";
   CONFIG.Combat.documentClass = torgeternityCombat;
   CONFIG.ui.combat = torgeternityCombatTracker;
+  CONFIG.torgCombatant = torgCombatant;
 
 
   //----scenes
