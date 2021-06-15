@@ -61,7 +61,7 @@
     <ol id="combat-tracker" class="directory-list">
         {{#each turns}}
         
-            <li class="combatant actor directory-item flexrow {{this.css}} dispo{{this.token.disposition}}" data-combatant-id="{{this._id}}"
+            <li class="combatant actor directory-item flexrow {{this.css}} dispo{{this.token.disposition}}" data-combatant-id="{{this.id}}"
             data-token-id="{{this.tokenId}}">
             <div class="token-initiative">
                 <span>{{this.initiative}}</span>
