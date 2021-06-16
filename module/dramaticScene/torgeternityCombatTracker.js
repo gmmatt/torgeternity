@@ -15,15 +15,16 @@ export default class torgeternityCombatTracker extends CombatTracker {
   async _hasPlayed(ev) {
     let check = ev.currentTarget;
     let li = check.closest(".combatant");
-    let c = this.viewed.getCombatant(li.dataset.combatantId);
-
-    await this.viewed.updateCombatant({
+    let c = this.viewed.combatants.get(li.dataset.combatantId);
+    console.log(c)
+    await this.viewed.combatant.update({
       _id: c.data._id,
-      ["hasPlayed"]: !c.hasPlayed,
+      ["hasPlayed"]: !c.data.hasPlayed,
     });
+    console.log(c);
     if (c.hasPlayed) {
-      if (c.tokenId == this.viewed.current.tokenId) {
-        await this.viewed.updateCombatant({
+      if (c.data.tokenId == this.viewed.current.data.tokenId) {
+        await this.viewed.combatant.update({
           _id: this.viewed.combatant.data._id,
           hasPlayed: true,
         });
@@ -36,8 +37,8 @@ export default class torgeternityCombatTracker extends CombatTracker {
   async _onUpdateInit(ev) {
     let input = ev.currentTarget;
     let li = input.closest(".combatant");
-    let c = this.viewed.getCombatant(li.dataset.combatantId);
-    await this.viewed.updateCombatant({
+    let c = this.viewed.combatants.get(li.dataset.combatantId);
+    await this.viewed.combatant.update({
       _id: c.data._id,
       ["initiative"]: input.value,
     });
@@ -48,19 +49,19 @@ export default class torgeternityCombatTracker extends CombatTracker {
   async _onInitUp(ev) {
     let btn = ev.currentTarget;
     let li = btn.closest(".combatant");
-    let c = this.viewed.getCombatant(li.dataset.combatantId); //hope this works!
+    let c = this.viewed.combatants.get(li.dataset.combatantId); //hope this works!
 
-    if (c.initiative > 1) {
-      await this.viewed.updateCombatant({
+    if (c.data.initiative > 1) {
+      await this.viewed.combatant.update({
         _id: c.data._id,
-        ["initiative"]: c.initiative - 1,
+        ["initiative"]: c.data.initiative - 1,
       });
       let otherDown = this.viewed.combatants.filter(
-        (oth) => oth.initiative >= c.initiative && oth.data._id != c.data._id
+        (oth) => oth.data.initiative >= c.data.initiative && oth.data._id != c.data._id
       );
       for (let oth of otherDown) {
-        if (oth.initiative == c.initiative) {
-          await this.viewed.updateCombatant({
+        if (oth.data.initiative == c.data.initiative) {
+          await this.viewed.combatant.update({
             _id: oth.data._id,
             ["initiative"]: oth.initiative + 1,
           });
@@ -72,20 +73,20 @@ export default class torgeternityCombatTracker extends CombatTracker {
   async _onInitDown(ev) {
     let btn = ev.currentTarget;
     let li = btn.closest(".combatant");
-    let c = this.viewed.getCombatant(li.dataset.combatantId);
+    let c = this.viewed.combatants.get(li.dataset.combatantId);
 
-    if (c.initiative < this.viewed.combatants.length) {
-      await this.viewed.updateCombatant({
+    if (c.data.initiative < this.viewed.combatants.length) {
+      await this.viewed.combatant.update({
         _id: c.data._id,
-        ["initiative"]: c.initiative + 1,
+        ["initiative"]: c.data.initiative + 1,
       });
       let otherUp = this.viewed.combatants.filter(
-        (oth) => oth.initiative <= c.initiative && oth.data._id != c.data._id
+        (oth) => oth.initiative <= c.data.initiative && oth.data._id != c.data._id
       );
 
       for (let oth of otherUp) {
-        if (oth.initiative == c.initiative) {
-          await this.viewed.updateCombatant({
+        if (oth.initiative == c.data.initiative) {
+          await this.viewed.combatant.update({
             _id: oth.data._id,
             ["initiative"]: oth.initiative - 1,
           });
@@ -100,13 +101,13 @@ export default class torgeternityCombatTracker extends CombatTracker {
     let heros = this.viewed.combatants.filter((c) => c.token.disposition > 0);
     console.log({ vilains }, { heros });
     for (let v of vilains) {
-      await this.viewed.updateCombatant({
+      await this.viewed.combatant.update({
         _id: v.data._id,
         ["initiative"]: vilains.indexOf(v) + 1,
       });
     }
     for (let h of heros) {
-      await this.viewed.updateCombatant({
+      await this.viewed.combatant.update({
         _id: h.data._id,
         ["initiative"]: vilains.length + heros.indexOf(h) + 1,
       });
@@ -117,13 +118,13 @@ export default class torgeternityCombatTracker extends CombatTracker {
     let heros = this.viewed.combatants.filter((c) => c.token.disposition > 0);
     console.log({ vilains }, { heros });
     for (let v of vilains) {
-      await this.viewed.updateCombatant({
+      await this.viewed.combatant.update({
         _id: v.data._id,
         ["initiative"]: heros.length + vilains.indexOf(v) + 1,
       });
     }
     for (let h of heros) {
-      await this.viewed.updateCombatant({
+      await this.viewed.combatant.update({
         _id: h.data._id,
         ["initiative"]: heros.indexOf(h) + 1,
       });

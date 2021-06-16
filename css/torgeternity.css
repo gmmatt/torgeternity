@@ -1028,6 +1028,10 @@ div#sidebar.collapsed {
   border-left: 5px solid black;
 }
 
+#combat ol li.combatant .token-image {
+  max-width: 54px;
+}
+
 #combat ol li.combatant.dispo1 {
   background-color: rgba(15, 47, 189, 0.212);
 }
