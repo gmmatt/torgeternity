@@ -180,10 +180,11 @@ export default class torgeternityActor extends Actor {
 
         };
 
+        /*
         //Set unknown edit states to none
         if (this.data.data.editstate === undefined) {
             this.data.data.editstate = "inline";
-        }; 
+        };  */
 
     }
 

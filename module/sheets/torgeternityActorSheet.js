@@ -114,9 +114,9 @@ export default class torgeternityActorSheet extends ActorSheet {
         });
 
 
-        if (this.actor.data.data.editstate === undefined) {
+        /* if (this.actor.data.data.editstate === undefined) {
             this.actor.data.data.editstate = "none";
-        };
+        }; */
 
         data.effects = prepareActiveEffectCategories(this.document.effects);
 
@@ -151,9 +151,9 @@ export default class torgeternityActorSheet extends ActorSheet {
             html.find(".skill-roll").click(this._onSkillRoll.bind(this));
         }
 
-        if (this.actor.isOwner) {
+        /* if (this.actor.isOwner) {
             html.find(".skill-edit-toggle").click(this._onSkillEditToggle.bind(this));
-        }
+        } */
 
         if (this.actor.isOwner) {
             html.find(".possibility-roll").click(this._onPossibilityRoll.bind(this));
@@ -278,22 +278,22 @@ export default class torgeternityActorSheet extends ActorSheet {
         })
     }
 
-    _onSkillEditToggle(event) {
+/*    _onSkillEditToggle(event) {
 
         var toggleState = this.actor.data.data.editstate;
         event.preventDefault();
         if (toggleState === null) {
             this.actor.update({
-                "data.editstate": true
+                "data.data.editstate": true
             });
         } else {
             this.actor.update({
-                "data.editstate": null
+                "data.data.editstate": null
             });
         };
 
 
-    }
+    } */
 
     _onPossibilityRoll(event) {
         torgchecks.PossibilityCheck({
@@ -401,18 +401,22 @@ export default class torgeternityActorSheet extends ActorSheet {
         var actor = this.actor
         var toggleState = this.actor.data.data.editstate;
         event.preventDefault();
-        if (toggleState === "none" || undefined) {
+        if (toggleState === "none") {
             document.getElementById("threat-editor").style.display = "inline";
-            this.actor.data.data.editstate = "inline";
             this.actor.update({
-                "data.data.editstate": "inline"
+                "data.editstate": "inline"
             });
 
-        } else {
+        } else if (toggleState === "") {
+            document.getElementById("threat-editor").style.display = "inline";
+            this.actor.update ({
+                "data.editstate": "inline"
+            });
+        }
+          else {
             document.getElementById("threat-editor").style.display = "none";
-            this.actor.data.data.editstate = "none";
             this.actor.update({
-                "data.data.editstate": "none"
+                "data.editstate": "none"
             });
         };
     }

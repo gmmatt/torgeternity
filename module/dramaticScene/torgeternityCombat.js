@@ -1,6 +1,5 @@
 export default class TorgCombat extends Combat {
 
-  // Not working in 0.8.x, but left here for posterity
   _sortCombatants(a, b) {
     const ia = Number.isNumeric(a.initiative) ? a.initiative : -9999;
     const ib = Number.isNumeric(b.initiative) ? b.initiative : -9999;
@@ -13,6 +12,7 @@ export default class TorgCombat extends Combat {
     }
 
   }
+    // Not working in 0.8.x, but left here for posterity
   /*
     _prepareCombatant(c, scene, players, settings = {}) {
       let combatant = super._Combatant.create(c, scene, players, (settings = {}));
