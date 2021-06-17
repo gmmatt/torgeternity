@@ -8,15 +8,30 @@ export default class torgeternityCombatTracker extends CombatTracker {
     html.find("input.combatant-init").change(this._onUpdateInit.bind(this));
     html.find("a.init-up").click(this._onInitUp.bind(this));
     html.find("a.init-down").click(this._onInitDown.bind(this));
-    html.find("a.heros-first").click(this._sortHerosFirst.bind(this));
+    html.find("a.heros-first").click(this._sortHeroesFirst.bind(this));
     html.find("a.vilains-first").click(this._sortVilainsFirst.bind(this));
-    html.find("a.has-played").click(this._hasPlayed.bind(this));
+    //html.find("a.has-played").click(this._hasPlayed.bind(this));
+    html.find(".fa-check-circle").click(this._toggleCheck.bind(this));
   }
+  
+  _toggleCheck(x) {
+    let y = x
+    if (x.target = "fas fa-check-circle") {
+      
+    }
+    x.target.toggle("fas fa-check-circle")
+  }
+
   async _hasPlayed(ev) {
     let check = ev.currentTarget;
+    // check.toggleClass('fa-check-square fa-minus-circle')
+    
+    
     let li = check.closest(".combatant");
     let c = this.viewed.combatants.get(li.dataset.combatantId);
     console.log(c)
+    await c.setFlag("world", "turnTaken", true)
+    /*
     await this.viewed.combatant.update({
       _id: c.data._id,
       ["hasPlayed"]: !c.data.hasPlayed,
@@ -33,6 +48,7 @@ export default class torgeternityCombatTracker extends CombatTracker {
 
       this.render();
     }
+    */
   }
   async _onUpdateInit(ev) {
     let input = ev.currentTarget;
@@ -97,6 +113,25 @@ export default class torgeternityCombatTracker extends CombatTracker {
   }
 
   async _sortVilainsFirst() {
+    await this.viewed.resetAll()
+    var combatantArray = null;
+    var i = 0
+    let test = this.viewed.turns[0].name;
+    for (combatantArray = this.viewed.turns; i < combatantArray.length; i++) {
+      if (this.viewed.turns[i]._token.data.disposition < 1) {                      // token disposition is neutral or hostile (0 or -1)
+        await this.viewed.turns[i].update ({
+          "initiative": 2
+        })
+      } else {                                                                    // token disposition is frinedly 1
+        await this.viewed.turns[i].update ({
+          "initiative": 1
+        })
+      }
+    }
+    // await this.viewed.setupTurns()
+    this.render()
+    
+    /* Old Code 
     let vilains = this.viewed.combatants.filter((c) => c.token.disposition < 1);
     let heros = this.viewed.combatants.filter((c) => c.token.disposition > 0);
     console.log({ vilains }, { heros });
@@ -111,9 +146,28 @@ export default class torgeternityCombatTracker extends CombatTracker {
         _id: h.data._id,
         ["initiative"]: vilains.length + heros.indexOf(h) + 1,
       });
-    }
+    } */
   }
-  async _sortHerosFirst() {
+
+  async _sortHeroesFirst() {
+    await this.viewed.resetAll();
+    var combatantArray = null;
+    var i = 0
+    for (combatantArray = this.viewed.turns; i < combatantArray.length; i++) {
+      if (this.viewed.turns[i]._token.data.disposition < 1) {                      // token disposition is neutral or hostile (0 or -1)
+        await this.viewed.turns[i].update ({
+          "initiative": 1
+        })
+      } else {                                                                    // token disposition is frinedly 1
+        await this.viewed.turns[i].update ({
+          "initiative": 2
+        })
+      }
+    }
+    // await this.viewed.setupTurns()
+    this.render()
+
+    /* Old Code
     let vilains = this.viewed.combatants.filter((c) => c.token.disposition < 1);
     let heros = this.viewed.combatants.filter((c) => c.token.disposition > 0);
     console.log({ vilains }, { heros });
@@ -129,5 +183,6 @@ export default class torgeternityCombatTracker extends CombatTracker {
         ["initiative"]: heros.indexOf(h) + 1,
       });
     }
+  */
   }
 }

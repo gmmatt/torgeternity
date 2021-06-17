@@ -1,13 +1,8 @@
 export default class torgCombatant extends Combatant {
 
-  async _preCreate(data, options, user) {
+  async _onUpdate() {
 
-    this.update({
-      flags: {
-        type: data.actor.data.type,
-        color: data.players[0].color
-      }
-    });
+    this.setFlag("world", "turnTaken", false);
 
     await super._preCreate(data, options, user);
   }

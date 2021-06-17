@@ -1,51 +1,48 @@
 <div class="threat-contents block">
     <div class="threat-block">
-        <a class="toggle-threat-edit" title="Edit" style="float:right"><i class="fas fa-edit"></i></a>
+<!--    <a class="toggle-threat-edit" title="Edit" style="float:right"><i class="fas fa-edit"></i></a>  removing the editor button for now-->
         <div class="attribut-list" style="margin-right:10px">
             <b>{{localize "torgeternity.sheetLabels.attributes"}}: </b>
             <span class="inline-skill-list">
                 <span>
                     <a class="skill-roll" data-testType="attribute"
                         data-baseAttribute="{{data.data.attributes.charisma}}" data-adds="0"
-                        data-value="{{data.data.attributes.charisma}}" data-unskilledUse="1" data-name="{{localize "
-                        torgeternity.attributes.charisma"}}">
+                        data-value="{{data.data.attributes.charisma}}" data-unskilledUse="1" data-name="{{localize "torgeternity.attributes.charisma"}}">
                         {{localize "torgeternity.attributes.charisma"}}
                     </a>
-                    {{data.attributes.charisma}}, &nbsp;
+                    {{data.data.attributes.charisma}}, &nbsp;
                 </span>
                 <span>
                     <a class="skill-roll" data-testType="attribute"
                         data-baseAttribute="{{data.data.attributes.dexterity}}" data-adds="0"
-                        data-value="{{data.data.attributes.dexterity}}" data-unskilledUse="1" data-name="{{localize "
-                        torgeternity.attributes.dexterity"}}">
+                        data-value="{{data.data.attributes.dexterity}}" data-unskilledUse="1" data-name="{{localize "torgeternity.attributes.dexterity"}}">
                         {{localize "torgeternity.attributes.dexterity"}}
                     </a>
-                    {{data.attributes.dexterity}}, &nbsp;
+                    {{data.data.attributes.dexterity}}, &nbsp;
                 </span>
                 <span>
                     <a class="skill-roll" data-testType="attribute" data-baseAttribute="{{data.data.attributes.mind}}"
                         data-adds="0" data-value="{{data.data.attributes.mind}}" data-unskilledUse="1"
-                        data-name="{{localize " torgeternity.attributes.mind"}}">
+                        data-name="{{localize "torgeternity.attributes.mind"}}">
                         {{localize "torgeternity.attributes.mind"}}
                     </a>
-                    {{data.attributes.mind}}, &nbsp;
+                    {{data.data.attributes.mind}}, &nbsp;
                 </span>
                 <span>
                     <a class="skill-roll" data-testType="attribute" data-baseAttribute="{{data.data.attributes.spirit}}"
                         data-adds="0" data-value="{{data.data.attributes.spirit}}" data-unskilledUse="1"
-                        data-name="{{localize " torgeternity.attributes.spirit"}}">
+                        data-name="{{localize "torgeternity.attributes.spirit"}}">
                         {{localize "torgeternity.attributes.spirit"}}
                     </a>
-                    {{data.attributes.spirit}}, &nbsp;
+                    {{data.data.attributes.spirit}}, &nbsp;
                 </span>
                 <span>
                     <a class="skill-roll" data-testType="attribute"
                         data-baseAttribute="{{data.data.attributes.strength}}" data-adds="0"
-                        data-value="{{data.data.attributes.strength}}" data-unskilledUse="1" data-name="{{localize "
-                        torgeternity.attributes.strength"}}">
+                        data-value="{{data.data.attributes.strength}}" data-unskilledUse="1" data-name="{{localize "torgeternity.attributes.strength"}}">
                         {{localize "torgeternity.attributes.strength"}}
                     </a>
-                    {{data.attributes.strength}}, &nbsp;
+                    {{data.data.attributes.strength}}, &nbsp;
                 </span>
             </span>
         </div>
@@ -151,10 +148,10 @@
 
                 </ul>
             </div>
-            <div class="threat-block">
+<!--        <div class="threat-block">
                 <b>{{localize "torgeternity.stats.description"}}</b>
-                {{{data.details.description}}}
-            </div>
+                {{{data.data.details.description}}}
+            </div> -->
         </span>
     </div>
 </div>

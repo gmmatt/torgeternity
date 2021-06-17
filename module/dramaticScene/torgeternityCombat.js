@@ -1,5 +1,6 @@
 export default class TorgCombat extends Combat {
 
+  /*
   _sortCombatants(a, b) {
     const ia = Number.isNumeric(a.initiative) ? a.initiative : -9999;
     const ib = Number.isNumeric(b.initiative) ? b.initiative : -9999;
@@ -11,7 +12,7 @@ export default class TorgCombat extends Combat {
       return -1;
     }
 
-  }
+  } */
     // Not working in 0.8.x, but left here for posterity
   /*
     _prepareCombatant(c, scene, players, settings = {}) {
@@ -22,12 +23,12 @@ export default class TorgCombat extends Combat {
       }
       return combatant;
     };
-  */
+    
   _onUpdateEmbeddedDocuments(embeddedName, documents, result, options, userId) {
     let a = this;
   }
 
-  async nextTurn() {
+  /* async nextTurn() {
     let turn = this.current.turn;
     let nextPlayed = this.turns[turn + 1]?.hasPlayed;
     console.log(this)
@@ -88,6 +89,6 @@ export default class TorgCombat extends Combat {
     await this.setFlag("torgeternity", "turnHistory", []);
     return super.startCombat();
   }
-
+ */
 
 }

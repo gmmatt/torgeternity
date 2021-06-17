@@ -61,11 +61,11 @@
     <ol id="combat-tracker" class="directory-list">
         {{#each turns}}
 
-        <li class="combatant actor directory-item flexrow {{this.css}} dispo{{this.token.disposition}}"
+        <li class="combatant actor directory-item flexrow {{this.css}} dispo{{this._token.data.disposition}}"
             data-combatant-id="{{this.id}}" data-token-id="{{this.data.tokenId}}">
-            <div class="token-initiative">
-                <span>{{this.initiative}}</span>
-            </div>
+<!--            <div class="token-initiative">            **removing token initiative for now
+                    <span>{{this.initiative}}</span>
+                </div>                                                  -->
             <img class="token-image" data-src="{{this.img}}" title="{{this.name}}" />
             <div class="token-name flexcol">
                 <h4 style="color:white">{{this.name}}</h4>
@@ -88,10 +88,10 @@
             </div>
 
 
-            <a class="has-played {{#if this.hasPlayed}}playedOK{{/if}}"><i class="fas fa-check"></i></a>
+            <a class="has-played {{#if this.hasPlayed}}playedOK{{/if}}"><i class="far fa-check-circle"></i></a>
             {{#if ../user.isGM}}
-            <a class="init-up"><i class="fas fa-arrow-up"></i></a>
-            <a class="init-down"><i class="fas fa-arrow-down"></i></a>
+<!--            <a class="init-up"><i class="fas fa-arrow-up"></i></a>
+                <a class="init-down"><i class="fas fa-arrow-down"></i></a> -->
             {{/if}}
         </li>
         {{/each}}
