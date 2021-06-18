@@ -723,14 +723,14 @@ div#sidebar.collapsed {
     }
 
     a.has-played {
-      color: rgba(128, 128, 128, 0.739);
+      color: rgba(238, 238, 238, 0.739);
       text-shadow: 0px 0px 6px black;
       max-width: 5%;
-    }
-
-    a.has-played.playedOK {
-      color: rgb(160, 189, 142);
-      text-shadow: 0px 0px 6px rgb(255, 255, 255);
+      align-self: center;
+      .playedOK {
+        color: rgb(98, 255, 0);
+        text-shadow: 0px 0px 6px rgb(0, 0, 0);
+      }
     }
 
     a.init-up,
