@@ -151,9 +151,9 @@ export default class torgeternityActorSheet extends ActorSheet {
             html.find(".skill-roll").click(this._onSkillRoll.bind(this));
         }
 
-        /* if (this.actor.isOwner) {
+        if (this.actor.isOwner) {
             html.find(".skill-edit-toggle").click(this._onSkillEditToggle.bind(this));
-        } */
+        } 
 
         if (this.actor.isOwner) {
             html.find(".possibility-roll").click(this._onPossibilityRoll.bind(this));
@@ -278,22 +278,22 @@ export default class torgeternityActorSheet extends ActorSheet {
         })
     }
 
-/*    _onSkillEditToggle(event) {
+    _onSkillEditToggle(event) {
 
         var toggleState = this.actor.data.data.editstate;
         event.preventDefault();
         if (toggleState === null) {
             this.actor.update({
-                "data.data.editstate": true
+                "data.editstate": true
             });
         } else {
             this.actor.update({
-                "data.data.editstate": null
+                "data.editstate": null
             });
         };
 
 
-    } */
+    } 
 
     _onPossibilityRoll(event) {
         torgchecks.PossibilityCheck({

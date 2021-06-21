@@ -371,7 +371,7 @@
                 "background": "",
                 "race": ""
             },
-            "editstate": "inline",
+            "editstate": true,
             "fatigue": "1"
         },
         "threat": {
