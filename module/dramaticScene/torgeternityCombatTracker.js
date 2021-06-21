@@ -13,20 +13,20 @@ export default class torgeternityCombatTracker extends CombatTracker {
     html.find("a.has-played").click(this._hasPlayed.bind(this));
     // html.find(".fa-check-circle").click(this._toggleCheck.bind(this));
   }
-  
-  _toggleCheck(x) {
-    let y = x
-    if (x.target = "fas fa-check-circle") {
-      
-    }
-    x.target.toggle("fas fa-check-circle")
+
+  _toggleCheck(ev) {
+
+    ev.currentTarget.classList.toggle("fas");
+    ev.currentTarget.classList.toggle("far");
+    ev.currentTarget.classList.toggle("playedOK");
+
   }
 
   async _hasPlayed(ev) {
     let check = ev.currentTarget;
     // check.toggleClass('fa-check-square fa-minus-circle')
-    
-    
+
+
     let li = check.closest(".combatant");
     let c = this.viewed.combatants.get(li.dataset.combatantId);
     console.log(c)
@@ -124,18 +124,18 @@ export default class torgeternityCombatTracker extends CombatTracker {
     let test = this.viewed.turns[0].name;
     for (combatantArray = this.viewed.turns; i < combatantArray.length; i++) {
       if (this.viewed.turns[i]._token.data.disposition < 1) {                      // token disposition is neutral or hostile (0 or -1)
-        await this.viewed.turns[i].update ({
+        await this.viewed.turns[i].update({
           "initiative": 2
         })
       } else {                                                                    // token disposition is frinedly 1
-        await this.viewed.turns[i].update ({
+        await this.viewed.turns[i].update({
           "initiative": 1
         })
       }
     }
     // await this.viewed.setupTurns()
     this.render()
-    
+
     /* Old Code 
     let vilains = this.viewed.combatants.filter((c) => c.token.disposition < 1);
     let heros = this.viewed.combatants.filter((c) => c.token.disposition > 0);
@@ -160,11 +160,11 @@ export default class torgeternityCombatTracker extends CombatTracker {
     var i = 0
     for (combatantArray = this.viewed.turns; i < combatantArray.length; i++) {
       if (this.viewed.turns[i]._token.data.disposition < 1) {                      // token disposition is neutral or hostile (0 or -1)
-        await this.viewed.turns[i].update ({
+        await this.viewed.turns[i].update({
           "initiative": 1
         })
       } else {                                                                    // token disposition is frinedly 1
-        await this.viewed.turns[i].update ({
+        await this.viewed.turns[i].update({
           "initiative": 2
         })
       }
