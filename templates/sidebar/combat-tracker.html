@@ -60,7 +60,6 @@
 
     <ol id="combat-tracker" class="directory-list">
         {{#each combat.turns}}
-        {{log this}}
         <li class="combatant actor directory-item flexrow dispo{{this._token.data.disposition}}" data-combatant-id="{{this.id}}">
 <!--            <div class="token-initiative">            **removing token initiative for now
                     <span>{{this.initiative}}</span>
