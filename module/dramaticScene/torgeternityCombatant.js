@@ -1,10 +1,10 @@
 export default class torgCombatant extends Combatant {
 
-  async _onUpdate() {
+  async _onCreate(data,options,user) {
 
-    this.setFlag("world", "turnTaken", false);
+    this.setFlag("world","turnTaken",false)
 
-    await super._preCreate(data, options, user);
+    await super._onCreate(data, options, user);
   }
 
 

@@ -1,5 +1,18 @@
 export default class TorgCombat extends Combat {
 
+  async nextRound() {
+    let x = this.getEmbeddedCollection("Combatant")
+    let combatantLength = x.contents.length
+    for (let i=0; i < combatantLength; i++) {
+      let c = x.contents[i]
+
+      await c.setFlag("world", "turnTaken", false) 
+      let y = 0
+    }
+
+    await super.nextRound();
+
+  }
   /*
   _sortCombatants(a, b) {
     const ia = Number.isNumeric(a.initiative) ? a.initiative : -9999;

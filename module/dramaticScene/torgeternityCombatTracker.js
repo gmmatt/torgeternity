@@ -10,8 +10,8 @@ export default class torgeternityCombatTracker extends CombatTracker {
     html.find("a.init-down").click(this._onInitDown.bind(this));
     html.find("a.heros-first").click(this._sortHeroesFirst.bind(this));
     html.find("a.vilains-first").click(this._sortVilainsFirst.bind(this));
-    //html.find("a.has-played").click(this._hasPlayed.bind(this));
-    html.find(".fa-check-circle").click(this._toggleCheck.bind(this));
+    html.find("a.has-played").click(this._hasPlayed.bind(this));
+    // html.find(".fa-check-circle").click(this._toggleCheck.bind(this));
   }
   
   _toggleCheck(x) {
@@ -30,7 +30,12 @@ export default class torgeternityCombatTracker extends CombatTracker {
     let li = check.closest(".combatant");
     let c = this.viewed.combatants.get(li.dataset.combatantId);
     console.log(c)
-    await c.setFlag("world", "turnTaken", true)
+    if (c.data.flags.world.turnTaken === false ) {
+        await c.setFlag("world","turnTaken", true)
+    } else {
+        await c.setFlag("world", "turnTaken", false)
+    }
+
     /*
     await this.viewed.combatant.update({
       _id: c.data._id,

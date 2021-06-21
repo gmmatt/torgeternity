@@ -59,18 +59,18 @@
     </header>
 
     <ol id="combat-tracker" class="directory-list">
-        {{#each turns}}
-
-        <li class="combatant actor directory-item flexrow {{this.css}} dispo{{this._token.data.disposition}}"
-            data-combatant-id="{{this.id}}" data-token-id="{{this.data.tokenId}}">
+        {{#each combat.turns}}
+        {{log this}}
+        <li class="combatant actor directory-item flexrow dispo{{this._token.data.disposition}}" data-combatant-id="{{this.id}}">
 <!--            <div class="token-initiative">            **removing token initiative for now
                     <span>{{this.initiative}}</span>
-                </div>                                                  -->
+                </div> -->
             <img class="token-image" data-src="{{this.img}}" title="{{this.name}}" />
             <div class="token-name flexcol">
                 <h4 style="color:white">{{this.name}}</h4>
                 <div class="combatant-controls flexrow">
                     {{#if ../user.isGM}}
+                    <a class="has-played" style="margin: 0px 5px 0px 0px"><i {{#if this.data.flags.world.turnTaken}}class="fas fa-check" style="color:green"{{else}}class="fas fa-check" style="color:gray"{{/if}}></i></a>                    
                     <a class="combatant-control {{#if this.hidden}}active{{/if}}"
                         title="{{localize 'COMBAT.ToggleVis'}}" data-control="toggleHidden">
                         <i class="fas fa-eye-slash"></i></a>
@@ -78,7 +78,6 @@
                         title="{{localize 'COMBAT.ToggleDead'}}" data-control="toggleDefeated">
                         <i class="fas fa-skull"></i></a>
                     {{/if}}
-
                     <div class="token-effects">
                         {{#each this.effects}}
                         <img class="token-effect" src="{{this}}" />
@@ -86,13 +85,12 @@
                     </div>
                 </div>
             </div>
+           
 
-
-            <a class="has-played {{#if this.hasPlayed}}playedOK{{/if}}"><i class="far fa-check-circle"></i></a>
-            {{#if ../user.isGM}}
-<!--            <a class="init-up"><i class="fas fa-arrow-up"></i></a>
-                <a class="init-down"><i class="fas fa-arrow-down"></i></a> -->
-            {{/if}}
+<!--        {{#if ../user.isGM}}
+                <a class="init-up"><i class="fas fa-arrow-up"></i></a>
+                <a class="init-down"><i class="fas fa-arrow-down"></i></a> 
+            {{/if}} -->
         </li>
         {{/each}}
     </ol>

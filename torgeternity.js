@@ -47,7 +47,7 @@ Hooks.once("init", async function () {
   CONFIG.Combat.initiative.formula = "1";
   CONFIG.Combat.documentClass = torgeternityCombat;
   CONFIG.ui.combat = torgeternityCombatTracker;
-  CONFIG.torgCombatant = torgCombatant;
+  CONFIG.Combatant.documentClass = torgCombatant;
 
 
   //----scenes
