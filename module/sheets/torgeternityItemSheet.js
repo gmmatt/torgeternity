@@ -73,7 +73,7 @@ export default class torgeternityItemSheet extends ItemSheet {
     getData() {
         const data = super.getData();
 
-        data.effects = prepareActiveEffectCategories(this.entity.effects);
+        data.effects = prepareActiveEffectCategories(this.document.effects);
 
         data.config = CONFIG.torgeternity;
 

@@ -19,6 +19,7 @@ import { registerTorgSettings } from "./module/settings.js";
 import { modifyTokenBars } from "./module/tokenBars.js";
 import { registerHelpers } from "./module/handlebarHelpers.js";
 import { checkCardSupport } from "./module/checkCardSupport.js";
+import torgCombatant from "./module/dramaticScene/torgeternityCombatant.js";
 
 
 Hooks.once("init", async function () {
@@ -38,14 +39,15 @@ Hooks.once("init", async function () {
   };
 
   CONFIG.torgeternity = torgeternity;
-  CONFIG.Item.entityClass = torgeternityItem;
-  CONFIG.Actor.entityClass = torgeternityActor;
+  CONFIG.Item.documentClass = torgeternityItem;
+  CONFIG.Actor.documentClass = torgeternityActor;
   CONFIG.statusEffects = torgeternity.statusEffects;
 
   //--------combats
   CONFIG.Combat.initiative.formula = "1";
-  CONFIG.Combat.entityClass = torgeternityCombat;
+  CONFIG.Combat.documentClass = torgeternityCombat;
   CONFIG.ui.combat = torgeternityCombatTracker;
+  CONFIG.Combatant.documentClass = torgCombatant;
 
 
   //----scenes
@@ -75,7 +77,7 @@ Hooks.once("init", async function () {
 
 
   //----------debug hooks
-  CONFIG.debug.hooks = true;
+  // CONFIG.debug.hooks = true;
   /*
   //----socket receiver
   game.socket.on("system.torgeternity", (data) => {
@@ -104,6 +106,10 @@ Hooks.on("ready", async function () {
   toggleViewMode();
   await checkCardSupport();
 
+  //-----applying GM possibilities pool if absent
+  if (game.user.isGM && !game.user.getFlag('torgeternity', 'GMpossibilities')) {
+    game.user.setFlag('torgeternity', 'GMpossibilities', 0)
+  }
 
   //----load template for welcome message
   let welcomeData = {
@@ -149,7 +155,7 @@ Hooks.on("ready", async function () {
 
   //-------define a dialog for external links
   let externalLinks = new Dialog({
-    title: "exxternal links",
+    title: "external links",
     content: "<p>here are some usefull links</p>",
     buttons: {
 
@@ -172,7 +178,7 @@ Hooks.on("ready", async function () {
         label: "<p>join us on discord</p>",
         callback: () => {
           ui.notifications.info("your browser will open a new page to join us on our discord server");
-          var windowObjectReference = window.open("https://discord.gg/cArWtdgp", "_blank");
+          var windowObjectReference = window.open("https://discord.com/channels/170995199584108546/842809090316828693", "_blank");
 
         }
       },
@@ -225,7 +231,7 @@ Hooks.on("ready", async function () {
 
   //-----applying players card ui:
   if (game.user.data.role == false || game.user.data.role != 4) {
-    let user=game.users.get(game.user._id)
+    let user=game.users.get(game.user.data._id)
     
     ui.HandedCards = new HandedCardsApp();
     ui.HandedCards.render(true);
@@ -233,7 +239,7 @@ Hooks.on("ready", async function () {
   //-----applying GM card ui:
   if (game.user.data.role == 4 || game.user.data.role == 3) {
     //init cards GM Decks
-    let user=game.users.get(game.user._id)
+    let user=game.users.get(game.user.data._id)
    
     ui.GMDecks = new GMDecksApp();
     ui.GMDecks.render(true);
@@ -375,4 +381,13 @@ Hooks.on("renderChatMessage", (mess, html, data) => {
 
 
 //----alphabetic sorting in character sheets
-Hooks.on("renderActorSheet", (app, html, data) => alphabSort(html, data));
+Hooks.on("renderActorSheet", (app, html, data) => {
+
+  // alphabetical sorting 
+  alphabSort(html, data);
+});
+
+Hooks.on('updateActor', (actor, data, options, id) => {
+  //updating playerList with users character up-to-date data
+  ui.players.render(true);
+})

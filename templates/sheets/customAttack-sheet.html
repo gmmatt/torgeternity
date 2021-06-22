@@ -21,7 +21,7 @@
                         {{localize "torgeternity.powers.skill"}}
                     </p>
                     <select name="data.attackWith" class="input-box">
-                        {{#select data.attackWith}}
+                        {{#select data.data.attackWith}}
                         {{#each config.skills as |name type|}}
                         <option value="{{type}}">{{localize name}}</option>
                         {{/each}}
@@ -31,7 +31,7 @@
                         {{localize "torgeternity.gear.damageType"}}
                     </p>
                     <select name="data.damageType" class="input-box">
-                        {{#select data.damageType}}
+                        {{#select data.data.damageType}}
                         {{#each config.damageTypes as |name type|}}
                         <option value="{{type}}">{{localize name}}</option>
                         {{/each}}
@@ -40,15 +40,15 @@
                     <p class="item-data-label">
                         {{localize "torgeternity.gear.damage"}}
                     </p>
-                    <input name="data.damage" type="number" value="{{data.damage}}" class="input-box" />
+                    <input name="data.damage" type="number" value="{{data.data.damage}}" class="input-box" />
                 </div>
                     <div class="main-content">
                         <p class="item-data-label">
                             {{localize "torgeternity.gear.notes"}}&nbsp;
-                            <input name="data.notes" type="text" value="{{data.notes}}" class="input-box" />
+                            <input name="data.notes" type="text" value="{{data.data.notes}}" class="input-box" />
                         </p>
-                            <div class="item-description-textarea" >
-                            {{editor content=data.description target="data.description" button=true owner=owner editable=editable}}
+                            <div name="data.description" class="item-description-textarea">
+                        {{editor content=data.data.description target="data.description" button=true owner=owner editable=editable}}
                         </div>
                     </div> 
             </div>

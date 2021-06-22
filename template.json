@@ -371,7 +371,7 @@
                 "background": "",
                 "race": ""
             },
-            "editstate": "inline",
+            "editstate": true,
             "fatigue": "1"
         },
         "threat": {
@@ -383,7 +383,7 @@
                 "description": "",
                 "sizeBonus": 0
             },
-            "editstate": ""
+            "editstate": "none"
         }
 
     },

@@ -4,7 +4,7 @@ export default class torgeternityActor extends Actor {
     
     prepareBaseData() {
            
-        if (this._data.type === "stormknight") { 
+        if (this.data._source.type === "stormknight") { 
           mergeObject(this.data.token, {
            
             actorLink: true,
@@ -180,10 +180,11 @@ export default class torgeternityActor extends Actor {
 
         };
 
+        /*
         //Set unknown edit states to none
         if (this.data.data.editstate === undefined) {
             this.data.data.editstate = "inline";
-        }; 
+        };  */
 
     }
 
@@ -192,16 +193,16 @@ export default class torgeternityActor extends Actor {
                 
         var i;
         const effects = this.data.effects
-        for (i=0; i < effects.length; i++) {
-            if (effects[i].flags.hasOwnProperty("core")) {
-                if (effects[i].flags.core.statusId === "stymied") {
+        for (i=0; i < effects.contents.length; i++) {
+            if (effects.contents[i].data.flags.hasOwnProperty("core")) {
+                if (effects.contents[i].data.flags.core.statusId === "stymied") {
                     this.data.data.stymiedModifier = -2;
-                } else if (effects[i].flags.core.statusId === "veryStymied") {
+                } else if (effects.contents[i].data.flags.core.statusId === "veryStymied") {
                     this.data.data.stymiedModifier = -4;
                 }
-                if (effects[i].flags.core.statusId === "vulnerable") {
+                if (effects.contents[i].data.flags.core.statusId === "vulnerable") {
                     this.data.data.vulnerableModifier = 2;
-                } else if (effects[i].flags.core.statusId === "veryVulnerable") {
+                } else if (effects.contents[i].data.flags.core.statusId === "veryVulnerable") {
                     this.data.data.vulnerableModifier = 4
                 }
             }
