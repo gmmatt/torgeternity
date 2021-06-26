@@ -58,7 +58,8 @@ torgeternity.cosmTypes = {
     cyberpapacy: "torgeternity.cosms.cyberpapacy",
     tharkold: "torgeternity.cosms.tharkold",
     panPacifica: "torgeternity.cosms.panPacifica",
-    orrorsh: "torgeternity.cosms.orrorsh"
+    orrorsh: "torgeternity.cosms.orrorsh",
+    other: "torgeternity.cosms.other"
 }
 
 torgeternity.perkTypes = {
