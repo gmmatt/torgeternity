@@ -1817,6 +1817,20 @@ form.actor-sheet header input[name="name"] {
   max-height: 500px;
 }
 
+.window-content .actor-sheet .skills select {
+  color: black;
+  border: none;
+  border-bottom: 1px solid grey;
+  max-height: 20px;
+  font-size: 0.9em;
+  font-family: Palatino;
+}
+
+.window-content .actor-sheet .skills select:active,
+.window-content .actor-sheet .skills select:focus {
+  box-shadow: 0 0 5px #0062ff;
+}
+
 .window-content .actor-sheet .skills ul {
   font-family: Palatino;
   font-size: 12px;

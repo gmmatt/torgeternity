@@ -434,6 +434,20 @@ form.actor-sheet {
     overflow: scroll;
     max-height: 500px;
 
+    select {
+      color: black;
+      border: none;
+      border-bottom: 1px solid grey;
+      max-height: 20px;
+      font-size: 0.9em;
+      font-family: Palatino;
+    }
+
+    select:active,
+    select:focus {
+      box-shadow: 0 0 5px rgb(0, 98, 255);
+    }
+
     ul {
       font-family: Palatino;
       font-size: 12px;
