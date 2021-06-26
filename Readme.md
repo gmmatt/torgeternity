@@ -8,6 +8,15 @@
 For manual installation, use the provided manifest URL in the "*Install System*" popup window 
 while managing game systems.
 
+v. 1.1.1
+- The base attribute for each skill on Storm Knights can now be changed
+- Updates Spanish localization (thanks again Forja)
+- "Other" Cosm type is now available
+- Axioms for Storm Knights can now be edited. However, edits will only allow changes
+  for "other" cosm types. Use effects on perks, etc. to change axioms in main cosms.
+- Fixed an issue where descriptions of special abilities and rollable special abilities
+  weren't displaying properly
+
 v. 1.1.0
 - Updated functionality for Foundry v. 0.8.x
 - Changed character sheet backgrounds to allow for more contrast with text (thanks Forja!)

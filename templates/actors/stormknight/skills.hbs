@@ -23,7 +23,13 @@
 
             </span>
             <span class="skill-line skillAttr">
-                {{localize (concatAttributeName content.baseAttribute)}}
+                <select name="data.skills.{{name}}.baseAttribute" class="input-box">
+                    {{#select content.baseAttribute}}
+                    {{#each ../config.attributeTypes as |name type|}}
+                    <option value="{{type}}">{{localize name}}</option>
+                    {{/each}}
+                    {{/select}}
+                </select>
             </span>
             <span class="skillAdd">
                 <input name="data.skills.{{name}}.adds" type="number" value="{{content.adds}}" data-dtype="Number" />
@@ -52,7 +58,13 @@
                 </a>
             </span>
             <span class="skill-line skillAttr">
-                {{localize (concatAttributeName content.baseAttribute)}}
+                <select name="data.skills.{{name}}.baseAttribute" class="input-box">
+                    {{#select content.baseAttribute}}
+                    {{#each ../config.attributeTypes as |name type|}}
+                    <option value="{{type}}">{{localize name}}</option>
+                    {{/each}}
+                    {{/select}}
+                </select>
             </span>
             <span class="skillAdd">
                 <input name="data.skills.{{name}}.adds" type="number" class="small-input" value="{{content.adds}}"

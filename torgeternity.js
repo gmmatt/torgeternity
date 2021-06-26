@@ -42,6 +42,7 @@ Hooks.once("init", async function () {
   CONFIG.Item.documentClass = torgeternityItem;
   CONFIG.Actor.documentClass = torgeternityActor;
   CONFIG.statusEffects = torgeternity.statusEffects;
+  CONFIG.attributeTypes = torgeternity.attributeTypes;
 
   //--------combats
   CONFIG.Combat.initiative.formula = "1";
