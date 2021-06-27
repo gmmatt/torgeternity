@@ -86,6 +86,12 @@ export default class torgeternityItemSheet extends ItemSheet {
             if (this.item.isOwned) return ui.notifications.warn("Managing Active Effects within an Owned Item is not currently supported and will be added in a subsequent update.")
             onManageActiveEffect(ev, this.item)
         });
+
+        html.find(".convert-rsa").click(ev => {
+            this.item.update ({
+                "type": "specialability-rollable"        
+            })
+        });
     }
 
 }
