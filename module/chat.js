@@ -234,8 +234,9 @@ function onBd(event) {
 
     var finalValue = torgBD();
     
-    var newDamage = parseInt(test.damage) + parseInt(finalValue);
+    var newDamage = parseInt(test.damage) + parseInt(finalValue.total);
     test.damage = newDamage;
+    test.diceroll = finalValue;
 
     test.chatTitle = `${game.i18n.localize("torgeternity.chatText.bonusDamage")}`;
     test.unskilledLabel = "display:none";

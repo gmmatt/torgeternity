@@ -10,6 +10,7 @@ while managing game systems.
 
 v. 1.1.2
 - Added button in special abilities window to convert to rollable special ability
+- Converted bonus damage rolls to standard Foundry rolls
 
 v. 1.1.1
 - The base attribute for each skill on Storm Knights can now be changed

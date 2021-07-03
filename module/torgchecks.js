@@ -644,6 +644,15 @@ export function torgBonus(rollTotal) {
 }
 
 export function torgBD() {
+   var diceroll;
+   diceroll = new Roll('1d6x6max5').roll();
+
+   return diceroll
+}
+
+// Old BD function
+/*
+export function torgBD() {
    var rollResult, dieValue, finalValue, totalDice, lastDie, lastDieImage, explosions, hideBonusFlag;
    rollResult = new Roll('1d6').roll().total;
    if (rollResult == 6) {
@@ -716,4 +725,4 @@ export function torgBD() {
 
    return finalValue
 
-}
+} */

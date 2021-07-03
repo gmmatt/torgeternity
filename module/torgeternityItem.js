@@ -136,6 +136,23 @@ export default class torgeternityItem extends Item {
    };
 
    async bonus() {
+      var rollResult;
+      rollResult = new Roll('1d6x6max5').roll();
+
+      let chatData = {
+         user: game.user.data._id,
+         speaker: ChatMessage.getSpeaker(),
+      };
+
+      chatData.content = await rollResult.render();
+
+
+      return ChatMessage.create(chatData)
+   }
+
+   // Old Bonus Code
+   /*
+   async bonus() {
       var rollResult, dieValue, finalValue, totalDice, lastDie, lastDieImage, explosions, hideBonusFlag;
       rollResult = new Roll('1d6').roll().total;
       if (rollResult == 6) {
@@ -201,7 +218,8 @@ export default class torgeternityItem extends Item {
 
       return ChatMessage.create(chatData);
 
-   }
+   } */
+
    async power() {
       // Roll those dice!
       let dicerollint = new Roll('1d20x10x20').roll();
