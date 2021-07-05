@@ -207,7 +207,6 @@ export default class torgeternityActorSheet extends ActorSheet {
             html.find(".effect-control").click(ev => onManageActiveEffect(ev, this.document));
         }
 
-
         super.activateListeners(html);
 
         // Everything below here is only needed if the sheet is editable
