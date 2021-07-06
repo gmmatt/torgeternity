@@ -11,6 +11,8 @@ while managing game systems.
 v. 1.1.3
 - Fixed an issue where descriptions of enhancements and vehicles weren't displaying
   properly.
+- Fixed an issue where character sheet-based BD rolls weren't triggering animation
+  in the DiceSoNice module.
 
 v. 1.1.2
 - Added button in special abilities window to convert to rollable special ability
