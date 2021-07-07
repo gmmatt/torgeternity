@@ -140,7 +140,9 @@ export default class torgeternityItem extends Item {
       rollResult = new Roll('1d6x6max5').roll();
 
       let chatData = {
+         type: CONST.CHAT_MESSAGE_TYPES.ROLL,
          user: game.user.data._id,
+         roll: rollResult,
          speaker: ChatMessage.getSpeaker(),
       };
 
