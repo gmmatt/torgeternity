@@ -32,7 +32,7 @@
       "system": "torgeternity",
       "module": "torgeternity",
       "path": "packs/basic-rules.db",
-      "entity": "Item"
+      "entity": "JournalEntry"
     }
   ],
     "dependencies": [
