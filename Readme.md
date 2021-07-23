@@ -10,6 +10,10 @@ while managing game systems.
 
 v. 1.1.4
 - Fixed an issue where PC character descriptions weren't displaying properly
+- Fixed an issue where heavy weapon descriptions weren't displaying properly
+- Added a new generic profile for threats, which should appear in Core Rulebook and
+  other official releases. You can also use it (point to systems/torgeternity/images
+  /icons/threat.webp)
 
 v. 1.1.3
 - Fixed an issue where descriptions of enhancements and vehicles weren't displaying
