@@ -1,6 +1,4 @@
 node_modules
-<<<<<<< HEAD
 .gitconfig
-=======
 .gitconfig
->>>>>>> 9c68e0a (added all cards and card backs)
+packs/basic-rules.db
