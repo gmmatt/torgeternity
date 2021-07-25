@@ -25,6 +25,14 @@
       "module": "torgeternity",
       "path": "packs/archetypes.db",
       "entity": "Actor"
+    },
+    {
+      "name": "basic-rules",
+      "label": "Basic Rules",
+      "system": "torgeternity",
+      "module": "torgeternity",
+      "path": "packs/basic-rules.db",
+      "entity": "JournalEntry"
     }
   ],
     "dependencies": [
