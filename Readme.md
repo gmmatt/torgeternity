@@ -8,6 +8,9 @@
 For manual installation, use the provided manifest URL in the "*Install System*" popup window 
 while managing game systems.
 
+v. 1.1.5
+- Added Basic Rules compendium
+
 v. 1.1.4
 - Fixed an issue where PC character descriptions weren't displaying properly
 - Fixed an issue where heavy weapon descriptions weren't displaying properly
