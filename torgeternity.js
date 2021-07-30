@@ -20,6 +20,7 @@ import { modifyTokenBars } from "./module/tokenBars.js";
 import { registerHelpers } from "./module/handlebarHelpers.js";
 import { checkCardSupport } from "./module/checkCardSupport.js";
 import torgCombatant from "./module/dramaticScene/torgeternityCombatant.js";
+import { registerDiceSoNice } from "./module/dice-so-nice.js";
 
 
 Hooks.once("init", async function () {
@@ -30,7 +31,6 @@ Hooks.once("init", async function () {
 
   //-----system settings
   registerTorgSettings()
-
 
   //-------global
   game.torgeternity = {
@@ -73,7 +73,6 @@ Hooks.once("init", async function () {
   //----------preloading handlebars templates
   preloadTemplates();
 
-
   //-----modify token bars
 
 
@@ -97,10 +96,16 @@ Hooks.once("init", async function () {
   });
 */
 });
+
 Hooks.once("setup", async function () {
   modifyTokenBars();
 
-})
+}),
+
+Hooks.once("diceSoNiceReady", (dice3d) => {
+	registerDiceSoNice(dice3d);
+});
+
 //-------------once everything ready
 Hooks.on("ready", async function () {
   sheetResize();

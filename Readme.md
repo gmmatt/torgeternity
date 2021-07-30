@@ -9,7 +9,10 @@ For manual installation, use the provided manifest URL in the "*Install System*"
 while managing game systems.
 
 v. 1.1.5
-- Added Basic Rules compendium
+- Added custom Torg Eternity dice that are compatible with the Dice So Nice module.
+- Added Basic Rules compendium - these are not the official rules, but an informal set
+  of quick start rules that can be substituted in their place for those who want to 
+  try out the game. 
 
 v. 1.1.4
 - Fixed an issue where PC character descriptions weren't displaying properly
