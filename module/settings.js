@@ -48,6 +48,20 @@ export function registerTorgSettings() {
         type: Boolean,
         default: true,
     });
+
+    //GM Screen
+    game.settings.register("torgeternity", "gmScreen", {
+        name: "Select the GM Screen You Want to Use",
+        hint: "You can select a GM screen from any active module. If you select a module that is not installed, the GM screen function may not work properly. NOTE: you need to refresh your browser (F5) after switching screens.",
+        scope: "world",
+        config: true,
+        type: String,
+        choices: {
+            torgEternity: "Core Rulebook GM Screen",
+            livingLand: "Living Land GM Screen"
+        }
+    })
+
 }
 
 
