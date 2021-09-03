@@ -1,5 +1,5 @@
 <form class="actor-sheet {{cssClass}}" autocomplete="off">
-    {{log "-----------Torg Eternity actor-sheet----------" this}}
+
     <h3 class="actor-type"><span>{{localize "torgeternity.sheetLabels.stormknight"}}</span></h3>
     
     <!--**************** tabs******************--->
@@ -84,7 +84,7 @@
         <div class="tab background" data-group="primary" data-tab="background">
 
             <h1 class="list-section-heading">{{localize "torgeternity.sheetLabels.backgroundAndNotes"}}</h1>
-            {{editor content=data.details.background target="data.details.background" button=true owner=owner
+            {{editor content=data.data.details.background target="data.details.background" button=true owner=owner
             editable=editable}}
 
         </div>

@@ -1,9 +1,10 @@
-export function SkillCheck({
+export async function SkillCheck({
+
    testType = null,
    skillName = null,
    skillBaseAttribute = null,
    skillAdds = null,
-   skillValue= null,
+   skillValue = null,
    unskilledUse = null,
    woundModifier = null,
    stymiedModifier = null,
@@ -38,7 +39,7 @@ export function SkillCheck({
    // Cannot Attempt Certain Tests Unskilled
    if (test.skillValue === "-") {
       var cantRollData = {
-         user: game.user._id,
+         user: game.user.data._id,
          speaker: ChatMessage.getSpeaker(),
          owner: actor,
       };
@@ -48,7 +49,7 @@ export function SkillCheck({
          actorPic: actor.data.img
       };
 
-      const templatePromise = renderTemplate("./systems/torgeternity/templates/partials/skill-error-card.hbs",templateData);
+      const templatePromise = renderTemplate("./systems/torgeternity/templates/partials/skill-error-card.hbs", templateData);
 
       templatePromise.then(content => {
          cantRollData.content = content;
@@ -57,23 +58,27 @@ export function SkillCheck({
 
       return
    };
-   
+
    // Roll as skilled or unskilled
    var diceroll
    if (test.testType === "skill") {
       if (test.skillAdds > 0) {
-         diceroll = new Roll('1d20x10x20').roll();
+         diceroll = new Roll('1d20x10x20').evaluate({ async: false })
+            ;
          test.unskilledLabel = "display:none"
       } else if (test.skillAdds === 0) {
-         diceroll = new Roll('1d20x10').roll();
+         diceroll = new Roll('1d20x10').evaluate({ async: false })
+            ;
          test.unskilledLabel = "display:block"
-      // Should trigger only if this is a threat and test.skilAdds therefore equals null   
+         // Should trigger only if this is a threat and test.skilAdds therefore equals null   
       } else {
-         diceroll = new Roll('1d20x10x20').roll();
+         diceroll = new Roll('1d20x10x20').evaluate({ async: false })
+            ;
          test.unskilledLabel = "display:none"
       }
    } else {
-      diceroll = new Roll('1d20x10x20').roll();
+      diceroll = new Roll('1d20x10x20').evaluate({ async: false })
+         ;
       test.unskilledLabel = "display:none"
    };
    //diceroll.toMessage();
@@ -94,15 +99,15 @@ export function SkillCheck({
    // Set Chat Title
    test.chatTitle = test.skillName + " Test";
 
-   renderSkillChat(test,diceroll);
+   renderSkillChat(test, diceroll);
 };
 
-export function weaponAttack ({
+export function weaponAttack({
    testType = null,
    skillName = null,
    skillBaseAttribute = null,
    skillAdds = null,
-   skillValue= null,
+   skillValue = null,
    unskilledUse = null,
    strengthValue = null,
    charismaValue = null,
@@ -117,7 +122,7 @@ export function weaponAttack ({
    actorPic = null } = {}) {
    var test = {
       actor: actor.data._id,
-      item: item.data._id,
+      item: item.data,
       actorPic: actorPic,
       actorType: "stormknight",
       skillName: skillName,
@@ -147,7 +152,7 @@ export function weaponAttack ({
    if (actor.data.type === "threat") {
       test.actorType = "threat"
    };
-   
+
    // Calculate damage
    if (test.weaponDamageType === "flat") {
       test.damage = test.weaponDamage
@@ -164,7 +169,7 @@ export function weaponAttack ({
    } else {
       test.damage = test.weaponDamage
    }
-   
+
    // Roll as skilled or unskilled
    var diceroll
    if (test.skillAdds > 0) {
@@ -173,7 +178,7 @@ export function weaponAttack ({
    } else if (test.skillAdds === 0) {
       diceroll = new Roll('1d20x10').roll();
       test.unskilledLabel = "display:block"
-   // Should trigger only if this is a threat and test.skilAdds therefore equals null   
+      // Should trigger only if this is a threat and test.skilAdds therefore equals null   
    } else {
       diceroll = new Roll('1d20x10x20').roll();
       test.unskilledLabel = "display:none"
@@ -186,7 +191,7 @@ export function weaponAttack ({
 
    // Get modifiers
    test.woundModifier = parseInt(-(actor.data.data.wounds.value))
-   
+
    if (actor.data.data.stymiedModifier === parseInt(-2)) {
       test.stymiedModifier = -2
    } else if (actor.data.data.stymiedModifier === -4) {
@@ -205,7 +210,7 @@ export function weaponAttack ({
    // Set Chat Title
    test.chatTitle = test.weaponName;
 
-   renderSkillChat(test,diceroll);
+   renderSkillChat(test, diceroll);
 
 }
 
@@ -215,7 +220,7 @@ export function powerRoll({
    skillName = null,
    skillBaseAttribute = null,
    skillAdds = null,
-   skillValue= null,
+   skillValue = null,
    strengthValue = null,
    powerName = null,
    powerAttack = null,
@@ -225,7 +230,7 @@ export function powerRoll({
    actorPic = null } = {}) {
    var test = {
       actor: actor.data._id,
-      item: item.data._id,
+      item: item.data,
       actorPic: actorPic,
       actorType: "stormknight",
       skillName: skillName,
@@ -245,7 +250,7 @@ export function powerRoll({
       sizeModifier: 0,
       vulnerableModifier: 0
    };
-   
+
    // What kind of actor is this?
    if (actor.data.type === "threat") {
       test.actorType = "threat"
@@ -278,20 +283,20 @@ export function powerRoll({
          test.vulnerableModifier = target.actor.data.data.vulnerableModifier
       }
    }
-   
+
    // Set Chat Title
    test.chatTitle = test.powerName;
-   
-   renderSkillChat(test,diceroll);
-   
-   }
+
+   renderSkillChat(test, diceroll);
+
+}
 
 
-export function renderSkillChat(test,diceroll) {
+export function renderSkillChat(test, diceroll) {
    // Get current bonus and make + label visible if number is positive
    test.combinedRollTotal = parseInt(test.rollTotal) + parseInt(test.upTotal) + parseInt(test.possibilityTotal) + parseInt(test.heroTotal) + parseInt(test.dramaTotal)
    test.bonus = torgBonus(test.combinedRollTotal);
-   
+
    // Raise bonus to 1 if actively defending
    if (test.testType === "activeDefense") {
       if (test.bonus < 1) {
@@ -305,7 +310,7 @@ export function renderSkillChat(test,diceroll) {
    } else {
       test.bonusPlusLabel = "display:none"
    }
-            
+
    // Set Modifiers and Chat Content Relating to Modifiers
    test.displayModifiers = false;
    test.modifiers = 0;
@@ -318,7 +323,7 @@ export function renderSkillChat(test,diceroll) {
    };
 
    if (test.stymiedModifier < 0) {
-      test.displayModifiers= true;
+      test.displayModifiers = true;
       if (test.stymiedModifier == -2) {
          test.modifierText += "Stymied -2 ";
          test.modifiers += -2;
@@ -329,7 +334,7 @@ export function renderSkillChat(test,diceroll) {
    };
 
    if (test.sizeModifier != 0) {
-      test.displayModifiers=true;
+      test.displayModifiers = true;
       test.modifiers += parseInt(test.sizeModifier);
       if (test.sizeModifier > 0) {
          test.modifierText += "Target Size + " + test.sizeModifier + " "
@@ -339,9 +344,9 @@ export function renderSkillChat(test,diceroll) {
    }
 
    if (test.vulnerableModifier > 0) {
-      test.displayModifiers=true;
+      test.displayModifiers = true;
       test.modifiers += parseInt(test.vulnerableModifier);
-      if(test.vulnerableModifier === 2) {
+      if (test.vulnerableModifier === 2) {
          test.modifierText += "Target Vulnerable +2 "
       } else if (test.vulnerableModifier === 4) {
          test.modifierText += "Target Very Vulnerable +4"
@@ -355,7 +360,7 @@ export function renderSkillChat(test,diceroll) {
    };
 
    // Add +3 cards to bonus
-   test.bonus += (3*parseInt(test.cardsPlayed));
+   test.bonus += (3 * parseInt(test.cardsPlayed));
 
    test.rollResult = parseInt(test.skillValue) + parseInt(test.bonus) + parseInt(test.modifiers);
 
@@ -367,7 +372,7 @@ export function renderSkillChat(test,diceroll) {
       if (test.testType === "activeDefense") {
          if (test.bonus < 2) {
             test.resultText = "+ 1"
-         }  else {
+         } else {
             test.resultText = "+ " + test.bonus;
          }
          test.actionTotalLabel = "display:none"
@@ -399,11 +404,11 @@ export function renderSkillChat(test,diceroll) {
    } else {
       test.disconnectLabel = "display:none"
    }
-   
+
    // Label as Skill vs Attribute Test and turn on BD option if needed
    if (test.testType === "skill") {
       test.typeLabel = `${game.i18n.localize("torgeternity.chatText.skillTestLabel")}`,
-      test.bdStyle = "display:none"
+         test.bdStyle = "display:none"
    } else if (test.testType === "attack") {
       test.typeLabel = `${game.i18n.localize("torgeternity.chatText.skillTestLabel")}`
    } else if (test.testType === "power") {
@@ -444,14 +449,14 @@ export function renderSkillChat(test,diceroll) {
 
    if (test.actorType === "threat") {
       test.heroStyle = "display:none",
-      test.dramaStyle = "display:none",
-      test.plus3Style = "display:none"
+         test.dramaStyle = "display:none",
+         test.plus3Style = "display:none"
    }
-    
+
    var chatData = {
-      user: game.user._id,
+      user: game.user.data._id,
       speaker: ChatMessage.getSpeaker(),
-      owner:  test.actor
+      owner: test.actor
    };
 
    const templatePromise = renderTemplate("./systems/torgeternity/templates/partials/skill-card.hbs", test);
@@ -465,16 +470,16 @@ export function renderSkillChat(test,diceroll) {
          ChatMessage.create(chatData);
       };
    });
-    
+
 
 }
 
-export function activeDefenseRoll ({
+export function activeDefenseRoll({
    testType = null,
    skillName = null,
    skillBaseAttribute = null,
    skillAdds = null,
-   skillValue= null,
+   skillValue = null,
    unskilledUse = null,
    woundModifier = null,
    stymiedModifier = null,
@@ -505,7 +510,7 @@ export function activeDefenseRoll ({
    if (actor.data.type === "threat") {
       test.actorType = "threat"
    };
- 
+
    // Roll as skilled
    var diceroll = new Roll('1d20x10x20').roll();
    test.unskilledLabel = "display:none"
@@ -527,42 +532,50 @@ export function activeDefenseRoll ({
    // Set Chat Title
    test.chatTitle = "Active Defense";
 
-   renderSkillChat(test,diceroll);
-   
+   renderSkillChat(test, diceroll);
 
-   };
 
-export function activeDefenseRollOld ({
-   actor = null}) {
+};
+
+export function activeDefenseRollOld({
+   actor = null }) {
    let dicerollint = new Roll('1d20x10x20').roll();
    //dicerollint.toMessage();
    let diceroll = dicerollint.total;
-   
 
-   
+
+
    if (diceroll <= 14) {
-      var messageContent = 'Bonus +1'; var bonus = 1;}
+      var messageContent = 'Bonus +1'; var bonus = 1;
+   }
    else if (diceroll == 15) {
-      var messageContent = 'Bonus +2'; var bonus = 2;}
-   else if (diceroll ==16) {
-      var messageContent = 'Bonus: +3'; var bonus = 3;}
+      var messageContent = 'Bonus +2'; var bonus = 2;
+   }
+   else if (diceroll == 16) {
+      var messageContent = 'Bonus: +3'; var bonus = 3;
+   }
    else if (diceroll == 17) {
-      var messageContent = 'Bonus: +4'; var bonus = 4;}
+      var messageContent = 'Bonus: +4'; var bonus = 4;
+   }
    else if (diceroll == 18) {
-      var messageContent = 'Bonus: +5'; var bonus = 5;}
+      var messageContent = 'Bonus: +5'; var bonus = 5;
+   }
    else if (diceroll == 19) {
-      var messageContent = 'Bonus: +6'; var bonus = 6;}
+      var messageContent = 'Bonus: +6'; var bonus = 6;
+   }
    else if (diceroll == 20) {
-      var messageContent = 'Bonus: +7'; var bonus = 7;}
+      var messageContent = 'Bonus: +7'; var bonus = 7;
+   }
    else if (diceroll >= 21) {
-      var bonus = 7 + Math.ceil((diceroll - 20)/5)
-      var messageContent = `Bonus:` + bonus; }
-   
-   
+      var bonus = 7 + Math.ceil((diceroll - 20) / 5)
+      var messageContent = `Bonus:` + bonus;
+   }
+
+
    var chatData = {
-      user: game.user._id,
+      user: game.user.data._id,
       speaker: ChatMessage.getSpeaker(),
-      owner:  actor
+      owner: actor
    };
 
    var cardData = {
@@ -573,53 +586,78 @@ export function activeDefenseRollOld ({
    const templatePromise = renderTemplate("./systems/torgeternity/templates/partials/activeDefense-card.hbs", cardData);
 
    templatePromise.then(content => {
-      chatData.content = content;   
+      chatData.content = content;
       dicerollint.toMessage(chatData);
-      ChatMessage.create(chatData);   
+      ChatMessage.create(chatData);
    });
-   
-   };
 
-export function torgBonus (rollTotal) {
+};
+
+export function torgBonus(rollTotal) {
    if (rollTotal == 1) {
-      var bonus = -10}
-      else if (rollTotal == 2) {
-      var bonus = -8 }
-      else if (rollTotal <= 4) {
-      var bonus = -6 }
-      else if (rollTotal <= 6) {
-      var bonus = -4 }
-      else if (rollTotal <= 8) {
-      var bonus = -2 }
-      else if (rollTotal <= 10) {
-      var bonus = -1 }
-      else if (rollTotal <= 12) {
-      var bonus = 0 }
-      else if (rollTotal <= 14) {
-      var bonus = 1 }
-      else if (rollTotal == 15) {
-      var bonus = 2 }
-      else if (rollTotal ==16) {
-      var bonus = 3 }
-      else if (rollTotal == 17) {
-      var bonus = 4 }
-      else if (rollTotal == 18) {
-      var bonus = 5 }
-      else if (rollTotal == 19) {
-      var bonus = 6 }
-      else if (rollTotal == 20) {
-      var bonus = 7 }
-      else if (rollTotal >= 21) {
-      var bonus = 7 + Math.ceil((rollTotal - 20)/5) }
-      return bonus
-
+      var bonus = -10
    }
+   else if (rollTotal == 2) {
+      var bonus = -8
+   }
+   else if (rollTotal <= 4) {
+      var bonus = -6
+   }
+   else if (rollTotal <= 6) {
+      var bonus = -4
+   }
+   else if (rollTotal <= 8) {
+      var bonus = -2
+   }
+   else if (rollTotal <= 10) {
+      var bonus = -1
+   }
+   else if (rollTotal <= 12) {
+      var bonus = 0
+   }
+   else if (rollTotal <= 14) {
+      var bonus = 1
+   }
+   else if (rollTotal == 15) {
+      var bonus = 2
+   }
+   else if (rollTotal == 16) {
+      var bonus = 3
+   }
+   else if (rollTotal == 17) {
+      var bonus = 4
+   }
+   else if (rollTotal == 18) {
+      var bonus = 5
+   }
+   else if (rollTotal == 19) {
+      var bonus = 6
+   }
+   else if (rollTotal == 20) {
+      var bonus = 7
+   }
+   else if (rollTotal >= 21) {
+      var bonus = 7 + Math.ceil((rollTotal - 20) / 5)
+   }
+   return bonus
 
-export function torgBD () {
+}
+
+export function torgBD() {
+   var diceroll;
+   diceroll = new Roll('1d6x6max5').roll();
+
+   return diceroll
+}
+
+// Old BD function
+/*
+export function torgBD() {
    var rollResult, dieValue, finalValue, totalDice, lastDie, lastDieImage, explosions, hideBonusFlag;
    rollResult = new Roll('1d6').roll().total;
    if (rollResult == 6) {
-      dieValue = 5;}
+      dieValue = 5;
+   }
    else if (rollResult <= 5) {
       dieValue = rollResult
    }
@@ -631,54 +669,60 @@ export function torgBD () {
       rollResult = new Roll('1d6').roll().total;
       dieValue = rollResult
       if (rollResult == 6) {
-         dieValue = 5;}
+         dieValue = 5;
+      }
       lastDie = rollResult
       finalValue += parseInt(dieValue)
-  }
+   }
 
    // Set number of explosions and flag for displaying infinity symbol
    hideBonusFlag = ""
-   explosions = parseInt(totalDice)-1
-   if (explosions ==0) {
-       hideBonusFlag="display:none";
+   explosions = parseInt(totalDice) - 1
+   if (explosions == 0) {
+      hideBonusFlag = "display:none";
    }
 
    // Prepare image for last die
    if (lastDie == 1) {
-       lastDieImage = "/systems/torgeternity/images/bonus-1.webp";}
+      lastDieImage = "/systems/torgeternity/images/bonus-1.webp";
+   }
    else if (lastDie == 2) {
-       lastDieImage = "/systems/torgeternity/images/bonus-2.webp";}
+      lastDieImage = "/systems/torgeternity/images/bonus-2.webp";
+   }
    else if (lastDie == 3) {
-       lastDieImage = "/systems/torgeternity/images/bonus-3.webp";}
+      lastDieImage = "/systems/torgeternity/images/bonus-3.webp";
+   }
    else if (lastDie == 4) {
-       lastDieImage = "/systems/torgeternity/images/bonus-4.webp";}
+      lastDieImage = "/systems/torgeternity/images/bonus-4.webp";
+   }
    else if (lastDie == 5) {
-       lastDieImage = "/systems/torgeternity/images/bonus-5.webp";}
+      lastDieImage = "/systems/torgeternity/images/bonus-5.webp";
+   }
 
    // Put together Chat Data
    let chatData = {
-       user: game.user._id,
-       speaker: ChatMessage.getSpeaker(),
+      user: game.user.data._id,
+      speaker: ChatMessage.getSpeaker(),
    };
 
    // Assemble information needed by attack card
    let cardData = {
-       totalDice: totalDice,
-       explosions: explosions,
-       hideBonusFlag: hideBonusFlag,
-       lastDie: lastDie,
-       lastDieImage: lastDieImage,
-       finalValue: finalValue
+      totalDice: totalDice,
+      explosions: explosions,
+      hideBonusFlag: hideBonusFlag,
+      lastDie: lastDie,
+      lastDieImage: lastDieImage,
+      finalValue: finalValue
    }
 
    // Send the chat
    const templatePromise = renderTemplate('/systems/torgeternity/templates/partials/bonus-card.hbs', cardData);
 
    templatePromise.then(content => {
-       chatData.content = content;      
-       ChatMessage.create(chatData);
-    });
+      chatData.content = content;
+      ChatMessage.create(chatData);
+   });
 
-    return finalValue
+   return finalValue
 
-}
+} */

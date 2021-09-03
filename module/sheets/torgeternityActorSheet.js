@@ -13,8 +13,8 @@ export default class torgeternityActorSheet extends ActorSheet {
     constructor(...args) {
         super(...args);
 
-        if ( this.object.data.type === "threat" ) {
-            this.options.width= this.position.width = 450;
+        if (this.object.data.type === "threat") {
+            this.options.width = this.position.width = 450;
             this.options.height = this.position.height = 645;
         };
 
@@ -26,9 +26,9 @@ export default class torgeternityActorSheet extends ActorSheet {
     static get defaultOptions() {
         return mergeObject(super.defaultOptions, {
             classes: ["torgeternity", "sheet", "actor"],
-            width: 675,
+            width: 773,
             height: 860,
-            tabs: [{navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "stats"}],
+            tabs: [{ navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "stats" }],
             scrollY: [".stats", ".perks", ".gear", ".powers", "effects", "background"],
             dragdrop: [{
                 dragSelector: ".item-list .item",
@@ -114,12 +114,12 @@ export default class torgeternityActorSheet extends ActorSheet {
         });
 
 
-        if (this.actor.data.data.editstate === undefined) {
+        /* if (this.actor.data.data.editstate === undefined) {
             this.actor.data.data.editstate = "none";
-        };
+        }; */
 
-        data.effects = prepareActiveEffectCategories(this.entity.effects);
-        
+        data.effects = prepareActiveEffectCategories(this.document.effects);
+
         data.config = CONFIG.torgeternity;
 
         return data;
@@ -135,78 +135,77 @@ export default class torgeternityActorSheet extends ActorSheet {
 
 
         //Owner-only Listeners
-        if (this.actor.owner) {
+        if (this.actor.isOwner) {
             let handler = ev => this._onDragStart(ev);
             // Find all items on the character sheet.
             html.find('a.item-name').each((i, a) => {
-              // Ignore for the header row.
-              if (a.classList.contains("item-header")) return;
-              // Add draggable attribute and dragstart listener.
-              a.setAttribute("draggable", true);
-              a.addEventListener("dragstart", handler, false);
+                // Ignore for the header row.
+                if (a.classList.contains("item-header")) return;
+                // Add draggable attribute and dragstart listener.
+                a.setAttribute("draggable", true);
+                a.addEventListener("dragstart", handler, false);
             });
-          }
+        }
 
-        if (this.actor.owner) {
+        if (this.actor.isOwner) {
             html.find(".skill-roll").click(this._onSkillRoll.bind(this));
         }
 
-        if (this.actor.owner) {
+        if (this.actor.isOwner) {
             html.find(".skill-edit-toggle").click(this._onSkillEditToggle.bind(this));
-        }
+        } 
 
-        if (this.actor.owner) {
+        if (this.actor.isOwner) {
             html.find(".possibility-roll").click(this._onPossibilityRoll.bind(this));
         }
 
-        if (this.actor.owner) {
+        if (this.actor.isOwner) {
             html.find(".bonus-roll").click(this._onBonusRoll.bind(this));
         }
 
-        if (this.actor.owner) {
+        if (this.actor.isOwner) {
             html.find(".item-tochat").click(this._onItemChat.bind(this));
         }
 
-        if (this.actor.owner) {
+        if (this.actor.isOwner) {
             html.find(".item-attackRoll").click(this._onAttackRoll.bind(this));
         }
 
-        if (this.actor.owner) {
+        if (this.actor.isOwner) {
             html.find(".item-bonusRoll").click(this._onBonusRoll.bind(this));
         }
 
-        if (this.actor.owner) {
+        if (this.actor.isOwner) {
             html.find(".item-powerRoll").click(this._onPowerRoll.bind(this));
         }
 
-        if (this.actor.owner) {
+        if (this.actor.isOwner) {
             html.find(".up-roll").click(this._onUpRoll.bind(this));
         }
 
-        if (this.actor.owner) {
+        if (this.actor.isOwner) {
             html.find(".item-equip").click(this._onItemEquip.bind(this));
         }
 
-        if (this.actor.owner) {
+        if (this.actor.isOwner) {
             html.find(".item-create-sa").click(this._onCreateSa.bind(this));
         }
 
-        if (this.actor.owner) {
+        if (this.actor.isOwner) {
             html.find(".item-create-rsa").click(this._onCreateSaR.bind(this));
         }
 
-        if (this.actor.owner) {
+        if (this.actor.isOwner) {
             html.find(".toggle-threat-edit").click(this._onToggleThreatEdit.bind(this));
         }
 
-        if (this.actor.owner) {
+        if (this.actor.isOwner) {
             html.find(".activeDefense-roll").click(this._onActiveDefenseRoll.bind(this));
         }
 
-        if (this.actor.owner) {
-            html.find(".effect-control").click(ev => onManageActiveEffect(ev, this.entity));
+        if (this.actor.isOwner) {
+            html.find(".effect-control").click(ev => onManageActiveEffect(ev, this.document));
         }
-        
 
         super.activateListeners(html);
 
@@ -216,7 +215,7 @@ export default class torgeternityActorSheet extends ActorSheet {
         // Update Inventory Item
         html.find('.item-edit').click(ev => {
             const li = $(ev.currentTarget).parents(".item");
-            const item = this.actor.getOwnedItem(li.data("itemId"));
+            const item = this.actor.items.get(li.data("itemId"));
             item.sheet.render(true);
         });
 
@@ -263,7 +262,7 @@ export default class torgeternityActorSheet extends ActorSheet {
 
 
     }
-   
+
 
 
     _onSkillRoll(event) {
@@ -293,7 +292,7 @@ export default class torgeternityActorSheet extends ActorSheet {
         };
 
 
-    }
+    } 
 
     _onPossibilityRoll(event) {
         torgchecks.PossibilityCheck({
@@ -321,14 +320,14 @@ export default class torgeternityActorSheet extends ActorSheet {
 
     _onItemChat(event) {
         const itemID = event.currentTarget.closest(".item").dataset.itemId;
-        const item = this.actor.getOwnedItem(itemID);
+        const item = this.actor.items.get(itemID);
 
         item.roll();
     }
 
     _onAttackRoll(event) {
         const itemID = event.currentTarget.closest(".item").dataset.itemId;
-        const item = this.actor.getOwnedItem(itemID);
+        const item = this.actor.items.get(itemID);
         var weaponData = item.data.data;
         var skillData = this.actor.data.data.skills[weaponData.attackWith];
         torgchecks.weaponAttack({
@@ -352,14 +351,14 @@ export default class torgeternityActorSheet extends ActorSheet {
 
     _onBonusRoll(event) {
         const itemID = event.currentTarget.closest(".item").dataset.itemId;
-        const item = this.actor.getOwnedItem(itemID);
+        const item = this.actor.items.get(itemID);
 
         item.bonus();
     }
 
     _onPowerRoll(event) {
         const itemID = event.currentTarget.closest(".item").dataset.itemId;
-        const item = this.actor.getOwnedItem(itemID);
+        const item = this.actor.items.get(itemID);
         var powerData = item.data.data;
         var skillData = this.actor.data.data.skills[powerData.skill];
         torgchecks.powerRoll({
@@ -403,19 +402,18 @@ export default class torgeternityActorSheet extends ActorSheet {
         event.preventDefault();
         if (toggleState === "none") {
             document.getElementById("threat-editor").style.display = "inline";
-            this.actor.data.data.editstate = "inline";
             this.actor.update({
                 "data.editstate": "inline"
             });
-        } else if (toggleState === undefined) {
+
+        } else if (toggleState === "") {
             document.getElementById("threat-editor").style.display = "inline";
-            this.actor.data.data.editstate = "inline";
-            this.actor.update({
+            this.actor.update ({
                 "data.editstate": "inline"
             });
-        } else {
+        }
+          else {
             document.getElementById("threat-editor").style.display = "none";
-            this.actor.data.data.editstate = "none";
             this.actor.update({
                 "data.editstate": "none"
             });
@@ -428,7 +426,7 @@ export default class torgeternityActorSheet extends ActorSheet {
         console.log({
             itemID
         });
-        const item = this.actor.getOwnedItem(itemID);
+        const item = this.actor.items.get(itemID);
         console.log({
             item
         })
@@ -456,16 +454,16 @@ export default class torgeternityActorSheet extends ActorSheet {
 
 
                 hand.children[i].style.transformOrigin = "50% 150%";
-                hand.children[i].style.transform = `rotateZ(${i*10}deg)`;
+                hand.children[i].style.transform = `rotateZ(${i * 10}deg)`;
             }
         }
-        hand.style.transform = `rotateZ(${hand.children.length*-5}deg)`
+        hand.style.transform = `rotateZ(${hand.children.length * -5}deg)`
 
     }
 
     _onCardReserve(event) {
         const cardID = event.currentTarget.closest(".card").getAttribute("data-item-id");
-        const card = this.actor.getOwnedItem(cardID);
+        const card = this.actor.items.get(cardID);
         console.log(card.data)
         if (card.data.data.reserved === false) {
             card.data.data.reserved = true;
@@ -474,9 +472,9 @@ export default class torgeternityActorSheet extends ActorSheet {
             });
             game.socket.emit("system.torgeternity", {
                 msg: "cardReserved",
-                data: { 
-                    player: game.user.data._id ,
-                    card : card
+                data: {
+                    player: game.user.data._id,
+                    card: card
                 }
             });
         } else {
@@ -486,56 +484,56 @@ export default class torgeternityActorSheet extends ActorSheet {
             });
             game.socket.emit("system.torgeternity", {
                 msg: "cardReserved",
-                data: { 
-                    player: game.user.data._id ,
-                    card : card
+                data: {
+                    player: game.user.data._id,
+                    card: card
                 }
             });
         }
 
     }
     _onCardExchange(event) {
-/*
-        let applyChanges = false;
-        new Dialog({
-            title: "card exchange proposal",
-            content: "",
-            buttons: {
-                yes: {
-                    icon: '<i class="fas fa-check"></i>',
-                    label: "Yes",
-                    callback: () => applyChanges = true
-                },
-                no: {
-                    icon: '<i class="fas fa-times"></i>',
-                    label: "No"
-                },
-            },
-            default: "yes",
-            close: html => {
-                if (applyChanges) {
-                    const li = $(ev.currentTarget).parents(".item");
-                    this.actor.deleteOwnedItem(li.data("itemId"));
-                    li.slideUp(200, () => this.render(false));
-                }
-            }
-        }).render(true);
-*/
+        /*
+                let applyChanges = false;
+                new Dialog({
+                    title: "card exchange proposal",
+                    content: "",
+                    buttons: {
+                        yes: {
+                            icon: '<i class="fas fa-check"></i>',
+                            label: "Yes",
+                            callback: () => applyChanges = true
+                        },
+                        no: {
+                            icon: '<i class="fas fa-times"></i>',
+                            label: "No"
+                        },
+                    },
+                    default: "yes",
+                    close: html => {
+                        if (applyChanges) {
+                            const li = $(ev.currentTarget).parents(".item");
+                            this.actor.deleteOwnedItem(li.data("itemId"));
+                            li.slideUp(200, () => this.render(false));
+                        }
+                    }
+                }).render(true);
+        */
     }
 
     _onCardPlay(event) {
-       
+
         const cardID = event.currentTarget.closest(".card").getAttribute("data-item-id");
-        const card = this.actor.getOwnedItem(cardID); 
-        console.log({card})
+        const card = this.actor.items.get(cardID);
+        console.log({ card })
         if (game.combat === null || card.data.type == "cosm") {
             card.roll();
             this.actor.deleteOwnedItem(cardID);
             game.socket.emit("system.torgeternity", {
                 msg: "cardPlayed",
-                data: { 
-                    player: game.user.data._id ,
-                    card : card
+                data: {
+                    player: game.user.data._id,
+                    card: card
                 }
             });
         } else {
@@ -546,13 +544,13 @@ export default class torgeternityActorSheet extends ActorSheet {
                 this.actor.deleteOwnedItem(cardID);
                 game.socket.emit("system.torgeternity", {
                     msg: "cardPlayed",
-                    data: { 
-                        player: game.user.data._id ,
-                        card : card
+                    data: {
+                        player: game.user.data._id,
+                        card: card
                     }
                 });
             }
         }
-        
+
     }
 }

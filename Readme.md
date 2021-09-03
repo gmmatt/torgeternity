@@ -8,6 +8,48 @@
 For manual installation, use the provided manifest URL in the "*Install System*" popup window 
 while managing game systems.
 
+v. 1.1.5
+- Added custom Torg Eternity dice that are compatible with the Dice So Nice module.
+- Added Basic Rules compendium - these are not the official rules, but an informal set
+  of quick start rules that can be substituted in their place for those who want to 
+  try out the game. 
+
+v. 1.1.4
+- Fixed an issue where PC character descriptions weren't displaying properly
+- Fixed an issue where heavy weapon descriptions weren't displaying properly
+- Added a new generic profile for threats, which should appear in Core Rulebook and
+  other official releases. You can also use it (point to systems/torgeternity/images
+  /icons/threat.webp)
+
+v. 1.1.3
+- Fixed an issue where descriptions of enhancements and vehicles weren't displaying
+  properly.
+- Fixed an issue where character sheet-based BD rolls weren't triggering animation
+  in the DiceSoNice module.
+
+v. 1.1.2
+- Added button in special abilities window to convert to rollable special ability
+- Converted bonus damage rolls to standard Foundry rolls
+
+v. 1.1.1
+- The base attribute for each skill on Storm Knights can now be changed
+- Updates Spanish localization (thanks again Forja)
+- "Other" Cosm type is now available
+- Axioms for Storm Knights can now be edited. However, edits will only allow changes
+  for "other" cosm types. Use effects on perks, etc. to change axioms in main cosms.
+- Fixed an issue where descriptions of special abilities and rollable special abilities
+  weren't displaying properly
+
+v. 1.1.0
+- Updated functionality for Foundry v. 0.8.x
+- Changed character sheet backgrounds to allow for more contrast with text (thanks Forja!)
+- Updated Spanish localization (thanks again Forja!)
+- Updated player list UI so that GM can take and give possibilities to players
+- Re-worked parts of the combat tracker; most of the changes are under the hood
+- Fixed a bug where NaN error was displaying when clicking on attributes
+- Known Issue: Threats are loading a little more slowly than they should. We are looking 
+  into this.
+
 v. 1.0.0
 - Welcome to version 1! Thanks to everyone who has contributed through the testing
   of our Beta builds!

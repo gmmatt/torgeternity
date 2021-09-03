@@ -1,13 +1,13 @@
 {
   "name": "torgeternity",
   "title": "Torg Eternity",
-  "description": "Unofficial Torg Eternity character sheet for Foundry VTT.",
+  "description": "Torg Eternity character sheet for Foundry VTT.",
   "author": "Matt Ritchie",
 
-  "version": "1.0.0",
+  "version": "1.1.5",
 
-  "minimumCoreVersion": "0.7.8",
-  "compatibleCoreVersion": "0.7.9", 
+  "minimumCoreVersion": "0.8.6",
+  "compatibleCoreVersion": "0.8.8", 
   "templateVersion": 2,
   "esmodules": [
     "torgeternity.js"
@@ -25,6 +25,14 @@
       "module": "torgeternity",
       "path": "packs/archetypes.db",
       "entity": "Actor"
+    },
+    {
+      "name": "basic-rules",
+      "label": "Basic Rules",
+      "system": "torgeternity",
+      "module": "torgeternity",
+      "path": "packs/basic-rules.db",
+      "entity": "JournalEntry"
     }
   ],
     "dependencies": [

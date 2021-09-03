@@ -48,7 +48,7 @@ form.actor-sheet {
     input[name="name"] {
       border: none;
       text-transform: uppercase;
-      text-shadow: 0px -2px 10px #0e0909;
+      text-shadow: 0px -2px 7px #0e0909;
       font-family: Alaska;
       text-align: center;
       color: #0e0909;
@@ -433,6 +433,20 @@ form.actor-sheet {
     grid-row: 3/7;
     overflow: scroll;
     max-height: 500px;
+
+    select {
+      color: black;
+      border: none;
+      border-bottom: 1px solid grey;
+      max-height: 20px;
+      font-size: 0.9em;
+      font-family: Palatino;
+    }
+
+    select:active,
+    select:focus {
+      box-shadow: 0 0 5px rgb(0, 98, 255);
+    }
 
     ul {
       font-family: Palatino;

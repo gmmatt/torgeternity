@@ -73,7 +73,7 @@ export default class torgeternityItemSheet extends ItemSheet {
     getData() {
         const data = super.getData();
 
-        data.effects = prepareActiveEffectCategories(this.entity.effects);
+        data.effects = prepareActiveEffectCategories(this.document.effects);
 
         data.config = CONFIG.torgeternity;
 
@@ -85,6 +85,12 @@ export default class torgeternityItemSheet extends ItemSheet {
         html.find(".effect-control").click(ev => {
             if (this.item.isOwned) return ui.notifications.warn("Managing Active Effects within an Owned Item is not currently supported and will be added in a subsequent update.")
             onManageActiveEffect(ev, this.item)
+        });
+
+        html.find(".convert-rsa").click(ev => {
+            this.item.update ({
+                "type": "specialability-rollable"        
+            })
         });
     }
 

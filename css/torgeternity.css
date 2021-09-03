@@ -455,6 +455,14 @@ a:hover {
   border-bottom: 2px solid #777777;
 }
 
+.app {
+  color: white;
+}
+
+form input {
+  color: white;
+}
+
 .window-app .window-resizable-handle {
   width: 30px;
   height: 30px;
@@ -504,7 +512,7 @@ a:hover {
   padding-left: 5%;
   padding-right: 5%;
   border: none;
-  box-shadow: 0px 15px 30px black;
+  box-shadow: 0px 15px 30px #00000061;
   z-index: 100;
 }
 
@@ -781,6 +789,7 @@ div#sidebar.collapsed {
   font-family: "Alaska";
   text-transform: uppercase;
   border: none;
+  margin-left: 28px;
 }
 
 #navigation a.scene-name .cosm-icone {
@@ -885,7 +894,7 @@ div#sidebar.collapsed {
   background-position: center;
   bottom: 0px;
   left: 0px;
-  width: 200px;
+  width: 220px;
   margin: 0;
   border: none;
   min-width: 200px;
@@ -902,6 +911,12 @@ div#sidebar.collapsed {
   top: -25px;
   z-index: +1;
   left: 15px;
+}
+
+#players .possReset {
+  position: relative;
+  left: 40%;
+  top: -25px;
 }
 
 #players h3 {
@@ -925,15 +940,39 @@ div#sidebar.collapsed {
   display: flex;
   justify-content: space-around;
   flex-direction: column;
-  margin-right: 25%;
   /* justify-items: flex-end; */
 }
 
 #players ol li.player {
   line-height: 25px;
   padding: 1px 8px;
-  justify-content: flex-end;
-  display: flex;
+  position: relative;
+}
+
+#players ol li.player span.posibilities {
+  margin-left: 0.5em;
+  position: absolute;
+  right: 4px;
+}
+
+#players ol li.player span.posibilities .possValue {
+  display: inline-block;
+  width: 2em;
+  height: 2em;
+  background: rgba(13, 94, 119, 0.226);
+  border: 1px solid white;
+  border-radius: 50%;
+  text-align: center;
+}
+
+#players ol li.player span.posibilities .possAdd,
+#players ol li.player span.posibilities .possMinus {
+  display: none;
+}
+
+#players ol li.player span.posibilities:hover .possAdd,
+#players ol li.player span.posibilities:hover .possMinus {
+  display: inline;
 }
 
 #players ol li.player .player-active {
@@ -948,6 +987,9 @@ div#sidebar.collapsed {
 #players ol li.player .player-name {
   text-shadow: 0px 3px 10px #8181cc;
   color: white;
+  overflow: hidden;
+  white-space: unset;
+  word-break: unset;
 }
 
 #players ol li.player .player-name.self {
@@ -986,6 +1028,10 @@ div#sidebar.collapsed {
   border-left: 5px solid black;
 }
 
+#combat ol li.combatant .token-image {
+  max-width: 54px;
+}
+
 #combat ol li.combatant.dispo1 {
   background-color: rgba(15, 47, 189, 0.212);
 }
@@ -1004,14 +1050,15 @@ div#sidebar.collapsed {
 }
 
 #combat ol a.has-played {
-  color: rgba(128, 128, 128, 0.739);
+  color: rgba(238, 238, 238, 0.739);
   text-shadow: 0px 0px 6px black;
   max-width: 5%;
+  align-self: center;
 }
 
-#combat ol a.has-played.playedOK {
-  color: #a0bd8e;
-  text-shadow: 0px 0px 6px white;
+#combat ol a.has-played .playedOK {
+  color: #62ff00;
+  text-shadow: 0px 0px 6px black;
 }
 
 #combat ol a.init-up,
@@ -1374,7 +1421,7 @@ form.actor-sheet header {
 form.actor-sheet header input[name="name"] {
   border: none;
   text-transform: uppercase;
-  text-shadow: 0px -2px 10px #0e0909;
+  text-shadow: 0px -2px 7px #0e0909;
   font-family: Alaska;
   text-align: center;
   color: #0e0909;
@@ -1768,6 +1815,20 @@ form.actor-sheet header input[name="name"] {
   grid-row: 3/7;
   overflow: scroll;
   max-height: 500px;
+}
+
+.window-content .actor-sheet .skills select {
+  color: black;
+  border: none;
+  border-bottom: 1px solid grey;
+  max-height: 20px;
+  font-size: 0.9em;
+  font-family: Palatino;
+}
+
+.window-content .actor-sheet .skills select:active,
+.window-content .actor-sheet .skills select:focus {
+  box-shadow: 0 0 5px #0062ff;
 }
 
 .window-content .actor-sheet .skills ul {

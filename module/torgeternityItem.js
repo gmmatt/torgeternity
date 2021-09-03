@@ -24,13 +24,13 @@ export default class torgeternityItem extends Item {
 
    async roll() {
       let chatData = {
-         user: game.user._id,
+         user: game.user.data._id,
          speaker: ChatMessage.getSpeaker()
       };
 
       let cardData = {
          ...this.data,
-         owner: this.actor.id
+         owner: this.actor.data._id
       };
       
       chatData.content = await renderTemplate(this.chatTemplate[this.type], cardData);
@@ -112,7 +112,7 @@ export default class torgeternityItem extends Item {
 
       // Put together Chat Data
       let chatData = {
-         user: game.user._id,
+         user: game.user.data._id,
          speaker: ChatMessage.getSpeaker(),
       };
 
@@ -120,7 +120,7 @@ export default class torgeternityItem extends Item {
       
       let cardData = {
          ...this.data,
-         owner: this.actor.id,
+         owner: this.actor.data._id,
          bonus: messageContent,
          skillValue: skillValue,
          result: rollResult,
@@ -135,6 +135,25 @@ export default class torgeternityItem extends Item {
       return ChatMessage.create(chatData);
    };
 
+   async bonus() {
+      var rollResult;
+      rollResult = new Roll('1d6x6max5').roll();
+
+      let chatData = {
+         type: CONST.CHAT_MESSAGE_TYPES.ROLL,
+         user: game.user.data._id,
+         roll: rollResult,
+         speaker: ChatMessage.getSpeaker(),
+      };
+
+      chatData.content = await rollResult.render();
+
+
+      return ChatMessage.create(chatData)
+   }
+
+   // Old Bonus Code
+   /*
    async bonus() {
       var rollResult, dieValue, finalValue, totalDice, lastDie, lastDieImage, explosions, hideBonusFlag;
       rollResult = new Roll('1d6').roll().total;
@@ -178,14 +197,14 @@ export default class torgeternityItem extends Item {
 
       // Put together Chat Data
       let chatData = {
-         user: game.user._id,
+         user: game.user.data._id,
          speaker: ChatMessage.getSpeaker(),
       };
 
       // Assemble information needed by attack card
       let cardData = {
          ...this.data,
-         owner: this.actor.id,
+         owner: this.actor.data._id,
          totalDice: totalDice,
          explosions: explosions,
          hideBonusFlag: hideBonusFlag,
@@ -201,7 +220,8 @@ export default class torgeternityItem extends Item {
 
       return ChatMessage.create(chatData);
 
-   }
+   } */
+
    async power() {
       // Roll those dice!
       let dicerollint = new Roll('1d20x10x20').roll();
@@ -265,14 +285,14 @@ export default class torgeternityItem extends Item {
 
       // Put together Chat Data
       let chatData = {
-         user: game.user._id,
+         user: game.user.data._id,
          speaker: ChatMessage.getSpeaker(),
       };
 
       // Assemble information needed by attack card
       let cardData = {
          ...this.data,
-         owner: this.actor.id,
+         owner: this.actor.data._id,
          bonus: messageContent,
          skillValue: skillValue,
          result: rollResult,
