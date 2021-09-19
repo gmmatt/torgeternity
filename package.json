@@ -6,12 +6,13 @@
   "dependencies": {
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^7.0.1",
+    "gulp-scss": "^1.4.0",
     "gulp-zip": "^5.0.2"
   },
   "devDependencies": {
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^7.0.1",
-    "gulp-sass": "^4.1.0",
+    "gulp-sass": "^4.1.1",
     "gulp-zip": "^5.0.2"
   },
   "scripts": {

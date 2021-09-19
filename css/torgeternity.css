@@ -1440,8 +1440,8 @@ form.actor-sheet header input[name="name"] {
 
 .window-content .actor-sheet {
   color: black;
-  font-family: Palatino;
-  font-size: 12px;
+  font-family: "Modesto Condensed";
+  font-size: 16px;
   line-height: 14px;
 }
 
@@ -1538,7 +1538,8 @@ form.actor-sheet header input[name="name"] {
 
 .window-content .actor-sheet input[type="number"],
 .window-content .actor-sheet input[type="text"] {
-  font-family: Palatino;
+  font-family: Signika;
+  font-size: 15px;
 }
 
 .window-content .actor-sheet input[name="name"] {
@@ -1596,7 +1597,7 @@ form.actor-sheet header input[name="name"] {
   text-shadow: 0px 0px 15px black;
   text-transform: uppercase;
   font-weight: bold;
-  margin: 0 0 0rem;
+  margin: 5px 0px 0px 0px;
 }
 
 .window-content .actor-sheet h1 {
@@ -1707,8 +1708,8 @@ form.actor-sheet header input[name="name"] {
   border: none;
   border-bottom: 1px solid grey;
   max-height: 20px;
-  font-size: 0.9em;
-  font-family: Palatino;
+  font-size: 13px;
+  font-family: Signika;
 }
 
 .window-content .actor-sheet .sheet-header select:active,
@@ -1732,7 +1733,8 @@ form.actor-sheet header input[name="name"] {
   border-radius: 50%;
   background: url(../images/roundBack.webp);
   background-size: cover;
-  font-family: Palatino;
+  font-family: Signika;
+  font-size: 15px;
 }
 
 .window-content .actor-sheet .sheet-header h1 {
@@ -1744,6 +1746,7 @@ form.actor-sheet header input[name="name"] {
   text-transform: uppercase;
   text-shadow: 0px -2px 10px #0e0909;
   font-family: Alaska;
+  font-size: 24px;
   text-align: center;
   color: #0e0909;
   width: 100%;
@@ -1769,7 +1772,8 @@ form.actor-sheet header input[name="name"] {
 .window-content .actor-sheet .others ol,
 .window-content .actor-sheet .weapons ul,
 .window-content .actor-sheet .weapons ol {
-  font-family: Palatino;
+  font-family: "Modesto Condensed";
+  font-size: 16px;
   display: flex;
   justify-content: space-around;
 }
@@ -1822,8 +1826,8 @@ form.actor-sheet header input[name="name"] {
   border: none;
   border-bottom: 1px solid grey;
   max-height: 20px;
-  font-size: 0.9em;
-  font-family: Palatino;
+  font-size: 13px;
+  font-family: Signika;
 }
 
 .window-content .actor-sheet .skills select:active,
@@ -1832,8 +1836,8 @@ form.actor-sheet header input[name="name"] {
 }
 
 .window-content .actor-sheet .skills ul {
-  font-family: Palatino;
-  font-size: 12px;
+  font-family: Signika;
+  font-size: 13px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -1843,6 +1847,7 @@ form.actor-sheet header input[name="name"] {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  align-items: center;
   border-bottom: 1px solid grey;
   position: relative;
 }
@@ -1891,6 +1896,8 @@ form.actor-sheet header input[name="name"] {
 .window-content .actor-sheet .perks-list {
   grid-column: 5/9;
   grid-row: 5/6;
+  font-family: "Signika";
+  font-size: 13px;
 }
 
 .window-content .actor-sheet .weapons-list {
@@ -1902,7 +1909,16 @@ form.actor-sheet header input[name="name"] {
 .window-content .actor-sheet .perks-list h3,
 .window-content .actor-sheet .weapons-list h2,
 .window-content .actor-sheet .weapons-list h3 {
-  margin-bottom: 1px;
+  margin-bottom: 8px;
+}
+
+.window-content .actor-sheet .weapons-list h2 {
+  font-size: 19.5px;
+}
+
+.window-content .actor-sheet .weapons-list h3 {
+  font-family: "Modesto Condensed";
+  font-size: 20px;
 }
 
 .window-content .actor-sheet .perks-list .item-list li,
@@ -1911,6 +1927,8 @@ form.actor-sheet header input[name="name"] {
   flex-direction: row;
   justify-content: space-between;
   border-top: 1px solid;
+  font-family: "Signika";
+  font-size: 13px;
   margin: 1px;
   padding: 1px;
 }
@@ -2217,6 +2235,7 @@ form.actor-sheet.threat div.skill-list-edit {
   display: grid;
   justify-items: flex-end;
   justify-content: center;
+  align-items: center;
   grid-template-columns: repeat(3, 0.3fr);
 }
 
