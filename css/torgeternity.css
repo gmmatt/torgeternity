@@ -125,7 +125,7 @@ div.actor ::-webkit-scrollbar {
 }
 
 .window-app .window-content {
-  font-family: OptiLight;
+  font-family: Alaska;
   background-image: url(../images/thunder.webp);
   background-size: cover;
   color: white;
@@ -168,6 +168,8 @@ div.actor ::-webkit-scrollbar {
 .window-app .window-content form .notes,
 .window-app .window-content form .hint {
   color: #b1afaf;
+  font-family: Palatino;
+  font-size: 14px;
 }
 
 .window-app .window-content form button,
@@ -272,7 +274,16 @@ div.actor ::-webkit-scrollbar {
   margin: 0px 0px 10px 0px;
 }
 
+.editor .editor-content h3 {
+  font-size: 15px;
+}
+
 .editor .editor-content p {
+  font-family: "Palatino Linotype";
+  font-size: 14px;
+}
+
+.editor .editor-content li {
   font-family: "Palatino Linotype";
   font-size: 14px;
 }
@@ -370,7 +381,7 @@ textarea:hover {
 }
 
 body {
-  font-family: OptiLight;
+  font-family: Alaska;
   font-size: 12px;
 }
 
@@ -394,11 +405,12 @@ input[type="time"],
 select,
 option,
 textarea {
-  font-family: OptiLight;
+  font-family: "Signika";
+  font-size: 13px;
 }
 
 button {
-  font-family: OptiBold;
+  font-family: "Palatino Linotype";
 }
 
 button:hover,
@@ -1512,6 +1524,7 @@ form.actor-sheet header input[name="name"] {
   position: absolute;
   transform: rotateZ(90deg);
   font-family: Alaska;
+  font-size: 13px;
   text-transform: capitalize;
   right: -60px;
   top: 60px;
@@ -1606,7 +1619,7 @@ form.actor-sheet header input[name="name"] {
   text-shadow: 0px 0px 15px black;
   text-transform: uppercase;
   font-weight: bold;
-  margin: 5px 0px 5px 0px;
+  margin: 15px 0px 15px 0px;
 }
 
 .window-content .actor-sheet h1 {
@@ -1904,14 +1917,14 @@ form.actor-sheet header input[name="name"] {
 
 .window-content .actor-sheet .perks-list {
   grid-column: 5/9;
-  grid-row: 5/6;
+  grid-row: 6/7;
   font-family: "Signika";
   font-size: 13px;
 }
 
 .window-content .actor-sheet .weapons-list {
   grid-column: 5/9;
-  grid-row: 6/7;
+  grid-row: 5/6;
 }
 
 .window-content .actor-sheet .perks-list h2,
@@ -1972,7 +1985,7 @@ form.actor-sheet header input[name="name"] {
 .window-content .actor-sheet .gear ol,
 .window-content .actor-sheet .powers ol {
   font-family: "Signika";
-  font-size: 15px;
+  font-size: 13px;
 }
 
 .window-content .actor-sheet .perks-details ol li,
@@ -2305,7 +2318,7 @@ form.actor-sheet.threat .tab[data-tab].active {
 
 form.actor-sheet.threat .tab[data-tab].active .list-section-heading {
   height: 40px;
-  font-size: 2em;
+  font-size: 18px;
   text-align: center;
   background-image: url(../images/separator.webp);
   background-size: cover;
@@ -2349,6 +2362,7 @@ form.actor-sheet.threat .tab[data-tab].active ol.item-list li .block {
 
 form.actor-sheet.threat .tab[data-tab].active ol.item-list li .item-name {
   text-align: center;
+  font-size: 13px;
   display: inline;
   max-width: 500px;
 }
@@ -2497,6 +2511,7 @@ form.actor-sheet.threat .tab[data-tab].active .editor {
   text-transform: uppercase;
   text-shadow: 0px -2px 10px #0e0909;
   font-family: Alaska;
+  font-size: 20px;
   text-align: center;
 }
 
@@ -2610,6 +2625,8 @@ form.actor-sheet.threat .tab[data-tab].active .editor {
 
 .item .window-content form.item-sheet .item-data-label {
   text-align: center;
+  font-family: "Modesto Condensed";
+  font-size: 16px;
 }
 
 .item .window-content form.item-sheet .item-description-textarea {
@@ -2688,4 +2705,15 @@ form.actor-sheet.threat .tab[data-tab].active .editor {
 .item .window-content form.item-sheet .effects .effect-edit,
 .item .window-content form.item-sheet .effects .effect-delete {
   padding: 5px;
+}
+
+.threat-block {
+  font-family: "Signika";
+  font-size: 13px;
+}
+
+.directory-item {
+  font-family: Palatino;
+  font-size: 15px;
+  font-weight: bold;
 }
