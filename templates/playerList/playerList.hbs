@@ -31,7 +31,7 @@
 		{{#each users}}
 		<li
 			class="player {{#if this.isGM}}gm{{/if}} "
-			data-user-id="{{this._id}}"
+			data-user-id="{{this.id}}"
 		>
 			<span
 				class="player-active {{#if this.active}}active{{else}}inactive{{/if}}"
@@ -59,11 +59,11 @@
 				{{#if ../self.isGM}}
 				<em
 					class="possAdd"
-					data-targetId="{{#if this.isGM}}GMpossibilities{{else}}{{this.character.data._id}}{{/if}}"
+					data-targetId="{{#if this.isGM}}GMpossibilities{{else}}{{this.character.data.id}}{{/if}}"
 				><i class="fas fa-plus-circle"></i></em>
 				<em
 					class="possMinus"
-					data-targetId="{{#if this.isGM}}GMpossibilities{{else}}{{this.character.data._id}}{{/if}}"
+					data-targetId="{{#if this.isGM}}GMpossibilities{{else}}{{this.character.data.id}}{{/if}}"
 				><i class="fas fa-minus-circle"></i></em>
 				
 			</span>
