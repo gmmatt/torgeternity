@@ -1035,7 +1035,7 @@ div#sidebar.collapsed {
 #sidebar,
 #hotbar,
 #players {
-  position: fixed;
+  /* position: fixed; */
   transition: all 500ms cubic-bezier(0.42, 0, 0.58, 1) 10ms;
 }
 
