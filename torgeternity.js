@@ -18,7 +18,6 @@ import torgeternityNav from "./module/torgeternityNav.js";
 import { registerTorgSettings } from "./module/settings.js";
 import { modifyTokenBars } from "./module/tokenBars.js";
 import { registerHelpers } from "./module/handlebarHelpers.js";
-import { checkCardSupport } from "./module/checkCardSupport.js";
 import torgCombatant from "./module/dramaticScene/torgeternityCombatant.js";
 import { registerDiceSoNice } from "./module/dice-so-nice.js";
 
@@ -109,8 +108,7 @@ Hooks.once("diceSoNiceReady", (dice3d) => {
 //-------------once everything ready
 Hooks.on("ready", async function () {
   sheetResize();
-  toggleViewMode();
-  await checkCardSupport();
+  //toggleViewMode();
 
   //-----applying GM possibilities pool if absent
   if (game.user.isGM && !game.user.getFlag('torgeternity', 'GMpossibilities')) {
