@@ -11,6 +11,7 @@ while managing game systems.
 v. 1.1.6
  - Update Storm Knight sheet to make it easier to read
  - Update Spanish localization (thanks to lozaljo and ForjaSalve)
+ - Removed gulpfile and scss dependencies. CSS should now be edited directly.
 
 v. 1.1.5
 - Added custom Torg Eternity dice that are compatible with the Dice So Nice module.
