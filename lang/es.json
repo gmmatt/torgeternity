@@ -8,7 +8,7 @@
             "strength": "Fuerza"
         },
         "skills": {
-            "airVehicles": "Vehículos Aereos",
+            "airVehicles": "Vehículos Aéreos",
             "alteration": "Alteración",
             "apportation": "Aportación",
             "beastRiding": "Montar Bestias",
@@ -16,7 +16,7 @@
             "conjuration": "Conjuración",
             "divination": "Adivinación",
             "dodge": "Esquivar",
-            "energyWeapons": "Arnas Energía",
+            "energyWeapons": "Armas Energía",
             "evidenceAnalysis": "Análisis Pruebas",
             "faith": "Fe",
             "find": "Encontrar",
@@ -25,7 +25,7 @@
             "heavyWeapons": "Armas Pesadas",
             "intimidation": "Intimidación",
             "kinesis": "Kinesis",
-            "landVehicles": "Vehícules Terrestres",
+            "landVehicles": "Vehículos Terrestres",
             "language": "Idiomas",
             "lockpicking": "Forzar Cerraduras",
             "maneuver": "Maniobrar",
@@ -50,7 +50,7 @@
             "willpower": "Fuerza Voluntad"
         },
         "skills-nocap": {
-            "airvehicles": "vehículos aereos",
+            "airvehicles": "vehículos aéreos",
             "alteration": "alteración",
             "apportation": "aportación",
             "beastriding": "montar bestias",
@@ -58,7 +58,7 @@
             "conjuration": "conjuración",
             "divination": "adivinación",
             "dodge": "esquivar",
-            "energyweapons": "arnas energía",
+            "energyweapons": "armas energía",
             "evidenceanalysis": "análisis pruebas",
             "faith": "fe",
             "find": "encontrar",
@@ -67,7 +67,7 @@
             "heavyweapons": "armas pesadas",
             "intimidation": "intimidación",
             "kinesis": "kinesis",
-            "landvehicles": "vehícules terrestres",
+            "landvehicles": "vehículos terrestres",
             "language": "idiomas",
             "lockpicking": "forzar cerraduras",
             "maneuver": "maniobrar",
@@ -131,7 +131,7 @@
         "perks":{
             "category": "Categoria",
             "cosm": "Cosmos",
-            "prerequisites": "Prerequisitos",
+            "prerequisites": "Prerrequisitos",
             "timestaken": "Nivel",
             "description": "Descripción"
         },
@@ -163,7 +163,8 @@
             "cyberpapacy": "Ciberpapado",
             "tharkhold": "Tharkold",
             "panPacifica": "Pan Pacifica",
-            "orrorsh": "Orrorsh"
+            "orrorsh": "Orrorsh",
+            "other": "Otro"
         },
         "perkTypes": {
             "cyberware": "Ciberimplante",
@@ -283,7 +284,7 @@
             "missileWeapon": "Arma Proyectil",
             "firearm": "Arma Fuego",
             "implant": "Implante",
-            "heavyWeapon": "Arna Pesada",
+            "heavyWeapon": "Arma Pesada",
 			"explosive": "Explosivos",
             "vehicle": "Vehículo",
             "spell": "Conjuro",
