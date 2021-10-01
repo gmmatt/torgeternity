@@ -1461,8 +1461,8 @@ form.actor-sheet header input[name="name"] {
 
 .window-content .actor-sheet {
   color: black;
-  font-family: "Modesto Condensed";
-  font-size: 16px;
+  font-family: "Alaska";
+  font-size: 13px;
   line-height: 14px;
 }
 
@@ -1794,8 +1794,8 @@ form.actor-sheet header input[name="name"] {
 .window-content .actor-sheet .others ol,
 .window-content .actor-sheet .weapons ul,
 .window-content .actor-sheet .weapons ol {
-  font-family: "Modesto Condensed";
-  font-size: 16px;
+  font-family: "Alaska";
+  font-size: 13px;
   display: flex;
   justify-content: space-around;
 }
@@ -2625,8 +2625,8 @@ form.actor-sheet.threat .tab[data-tab].active .editor {
 
 .item .window-content form.item-sheet .item-data-label {
   text-align: center;
-  font-family: "Modesto Condensed";
-  font-size: 16px;
+  font-family: "Alaska";
+  font-size: 14px;
 }
 
 .item .window-content form.item-sheet .item-description-textarea {
