@@ -253,3 +253,9 @@ torgeternity.statusEffects = [
     
 
 ]
+
+torgeternity.cardTypes = {
+    destiny: "Destiny",
+    cosm: "Cosm",
+    drama: "Drama"
+}
