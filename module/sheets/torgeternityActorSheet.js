@@ -265,7 +265,47 @@ export default class torgeternityActorSheet extends ActorSheet {
 
 
 
-    _onSkillRoll(event) {
+    async _onSkillRoll(event) {
+        let test = {
+            actor: this.actor,
+            woundModifier: parseInt(-(this.actor.data.data.wounds.value)),
+            stymiedModifier: parseInt(this.actor.data.data.stymiedModifier),
+            darknessModifier: parseInt(this.actor.data.data.darknessModifier),
+            type: event.currentTarget.dataset.testtype,
+            skillName: event.currentTarget.dataset.name,
+            skillBaseAttribute: event.currentTarget.dataset.baseattribute,
+            skillAdds: event.currentTarget.dataset.adds,
+            skillValue: event.currentTarget.dataset.value,
+            unskilledUse: event.currentTarget.dataset.unskilleduse
+        }
+        if (this.actor.data.data.stymiedModifier === parseInt(-2)) {
+            test.stymiedModifier = -2
+         } else if (this.actor.data.data.stymiedModifier === -4) {
+            test.stymiedModifier = -4
+         }
+        if (event.shiftKey) {
+            let skillContent = await renderTemplate("systems/torgeternity/templates/skill-check.hbs",test);
+            let skillDialog = new Dialog ({
+                title: test.skillName + " Check (Skill Value: " + test.skillValue + ")",
+                content: skillContent,
+                buttons: {
+                    one: {
+                        icon: '<i class="fas fa-dice-d20"></i>',
+                        label: "Roll",
+                    },
+                    two: {
+                        icon: '<i class="fas fa-ban"></i>',
+                        label: "Cancel",              
+                    }
+                },
+                left: 100,
+                top: 100
+            });
+            skillDialog.render(true);
+        } else {
+            
+        } 
+
         torgchecks.SkillCheck({
             actor: this.actor,
             testType: event.currentTarget.dataset.testtype,

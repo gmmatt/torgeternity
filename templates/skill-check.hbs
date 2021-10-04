@@ -1,0 +1,79 @@
+<div>
+    <fieldset>
+        <legend>Status Effects</legend>
+        <div class="skill-check-dialog-status-effects">
+            {{#if stymiedModifier}}Stymied Modifier: {{stymiedModifier}}<br> {{/if}}
+            {{#if darknessModifier}}Darkness Modifier: {{darknessModifier}}<br> {{/if}}
+            {{#if woundModifier}}Wound Modifier: {{woundModifier}} <br>{{/if}}
+        </div>
+    </fieldset>
+    <table>
+            <tr>
+                <td>
+                    <fieldset>
+                        <legend>Difficulty</legend>
+                        <label for="dn">DN: </label>
+                        <input type="number" id="dn" name="dn" value=10 style="width:3em"><br>
+                    </fieldset>
+                </td>
+                <td>
+                    <fieldset>
+                        <legend>Movement Penalty</legend>
+                        <input type="radio" id="walking" name="movement" value=0 checked>
+                        <label for="walking">Walking (None)</label><br>
+                        <input type="radio" id="running" name="movement" value=-2>
+                        <label for="running">Running (-2)</label>
+                    </fieldset>
+                </td>
+            </tr>
+        </table>
+        <fieldset>
+            <legend>Multi-Action Penalty</legend>
+            Actions: 
+            <input type="radio" id="1" name="multiAction" value=0 checked>
+            <label for="1">1</label>
+            <input type="radio" id="2" name="multiAction" value=-2>
+            <label for="2">2 (-2)</label>
+            <input type="radio" id="3" name="multiAction" value=-4>
+            <label for="3">3 (-4)</label>
+            <input type="radio" id="4" name="multiAction" value=-6>
+            <label for="4">4 (-6)</label>
+        </fieldset>
+        <fieldset>
+            <legend>Other Modifiers</legend>
+            <table>
+                <tr>
+                    <th style="width:75%">
+                        Description
+                    </th>
+                    <th>
+                        Effect
+                    </th>
+                <tr>
+                    <td>
+                        <input type="text" id="otherDescription1" name="otherDescription1" value="">
+                    </td>
+                    <td>
+                        <input type="number" id="otherEffect1" name="otherEffect1" value=0>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="text" id="otherDescription2" name="otherDescription2" value="">        
+                    </td>
+                    <td>
+                        <input type="number" id="otherEffect2" name="otherEffect2" value=0>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="text" id="otherDescription3" name="otherDescription3" value="">
+                    </td>
+                    <td>
+                        <input type="number" id="otherEffect3" name="otherEffect3" value=0>
+                    </td>
+                </tr>
+            </table>
+        </fieldset>
+    </table>
+</div>

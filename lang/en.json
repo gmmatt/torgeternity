@@ -355,7 +355,11 @@
             "concentrating": "Concentrating",
             "disconnected": "Disconnected",
             "malfunction": "Malfunction",
-            "restrained": "Restrained"
+            "restrained": "Restrained",
+            "dim": "Dim",
+            "dark": "Dark",
+            "pitchBlack": "Pitch Black",
+            "waiting": "Waiting"
         },
 
         "yesNo": {
