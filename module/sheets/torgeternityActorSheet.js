@@ -282,7 +282,7 @@ export default class torgeternityActorSheet extends ActorSheet {
             let testDialog = new skillDialog(test);
             testDialog.render(true);
         } else {
-            
+            torgchecks.SkillCheck(test);
         } 
     }
 
