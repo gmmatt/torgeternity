@@ -1,79 +1,161 @@
 <div>
-    <fieldset>
-        <legend>Status Effects</legend>
-        <div class="skill-check-dialog-status-effects">
-            {{#if stymiedModifier}}Stymied Modifier: {{stymiedModifier}}<br> {{/if}}
-            {{#if darknessModifier}}Darkness Modifier: {{darknessModifier}}<br> {{/if}}
-            {{#if woundModifier}}Wound Modifier: {{woundModifier}} <br>{{/if}}
-        </div>
-    </fieldset>
+    <form>
     <table>
-            <tr>
-                <td>
-                    <fieldset>
-                        <legend>Difficulty</legend>
-                        <label for="dn">DN: </label>
-                        <input type="number" id="dn" name="dn" value=10 style="width:3em"><br>
-                    </fieldset>
-                </td>
-                <td>
-                    <fieldset>
-                        <legend>Movement Penalty</legend>
-                        <input type="radio" id="walking" name="movement" value=0 checked>
-                        <label for="walking">Walking (None)</label><br>
-                        <input type="radio" id="running" name="movement" value=-2>
+        <tr>
+            <td>
+                <table>
+                    <tr>
+                        <td>
+                            <fieldset>
+                                <legend>Difficulty</legend>
+                                <span class="skill-check-options">
+                                    <label for="dn">DN: </label>
+                                    <input type="number" id="dn" name="dn" value=10 style="width:3em">
+                                </span>
+                            </fieldset>
+                        </td>
+                        <td>
+                            <fieldset>
+                                <legend title="Choose whether to (1) roll for a bonus number or (2) input a previously generated bonus when attempting a multi-action.">Bonus</legend>
+                                <span class="skill-check-options">
+                                    <input type="radio" id="roll" name="bonus" value=0 checked>
+                                    <label for="roll">Roll</label>
+                                    <input type="radio" title="When engaged in multi-actions, check this box to input the bonus number from a previous test." id="input" name="bonus" value=1>
+                                    <label for="input">Input Existing</label>
+                                    <input type="number" id="bonus" title="Input BONUS NUMBER from previous test, not die total." value=0 style="width:3em">
+                                </span>
+                            </fieldset>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <fieldset>
+                    <legend>Movement Penalty</legend>
+                    <span class="skill-check-options">
+                        <input type="radio" class="walking-radio" name="movement" value=0 checked>
+                        <label for="walking">Walking (None)</label>
+                        <input type="radio" id="running-radio" class="running-radio" name="movement" value=-2>
                         <label for="running">Running (-2)</label>
-                    </fieldset>
-                </td>
-            </tr>
-        </table>
-        <fieldset>
-            <legend>Multi-Action Penalty</legend>
-            Actions: 
-            <input type="radio" id="1" name="multiAction" value=0 checked>
-            <label for="1">1</label>
-            <input type="radio" id="2" name="multiAction" value=-2>
-            <label for="2">2 (-2)</label>
-            <input type="radio" id="3" name="multiAction" value=-4>
-            <label for="3">3 (-4)</label>
-            <input type="radio" id="4" name="multiAction" value=-6>
-            <label for="4">4 (-6)</label>
-        </fieldset>
-        <fieldset>
-            <legend>Other Modifiers</legend>
+                    </span>
+                </fieldset>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <fieldset>
+                    <legend>Multi-Action Penalty</legend>
+                    <span class="skill-check-options">Actions:
+                        <input type="radio" id="1" name="multiAction" value=0 checked>
+                        <label for="1">1</label>
+                        <input type="radio" id="2" name="multiAction" value=-2>
+                        <label for="2">2 (-2)</label>
+                        <input type="radio" id="3" name="multiAction" value=-4>
+                        <label for="3">3 (-4)</label>
+                        <input type="radio" id="4" name="multiAction" value=-6>
+                        <label for="4">4 (-6)</label>
+                    </span>
+                </fieldset>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <fieldset>
+                    <legend>Multi-Target Penalty</legend>
+                    <span class="skill-check-options">
+                        Targets: 
+                        <input type="radio" id="1" name="multiTarget" value=0 checked>
+                        <label for="1">1</label>
+                        <input type="radio" id="2" name="multiTarget" value=-2>
+                        <label for="2">2 (-2)</label>
+                        <input type="radio" id="3" name="multiTarget" value=-4>
+                        <label for="3">3 (-4)</label>
+                        <input type="radio" id="4" name="multiTarget" value=-6>
+                        <label for="4">4 (-6)</label>
+                        <input type="radio" id="5" name="multiTarget" value=-8>
+                        <label for="4">5 (-8)</label>
+                        <input type="radio" id="6" name="multiTarget" value=-10>
+                        <label for="4">6 (-10)</label>
+                    </span>
+                </fieldset>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <fieldset>
+                    <legend>Other Modifiers</legend>
+                    <table>
+                        <tr>
+                            <th style="width:75%">
+                                Description
+                            </th>
+                            <th>
+                                Effect
+                            </th>
+                        <tr>
+                            <td>
+                                <input type="text" id="otherDescription1" name="otherDescription1" value="">
+                            </td>
+                            <td>
+                                <input type="number" id="otherEffect1" name="otherEffect1" value=0>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="text" id="otherDescription2" name="otherDescription2" value="">        
+                            </td>
+                            <td>
+                                <input type="number" id="otherEffect2" name="otherEffect2" value=0>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="text" id="otherDescription3" name="otherDescription3" value="">
+                            </td>
+                            <td>
+                                <input type="number" id="otherEffect3" name="otherEffect3" value=0>
+                            </td>
+                        </tr>
+                    </table>
+                </fieldset>
+            </td>
+        </tr>
+        <tr>
             <table>
                 <tr>
-                    <th style="width:75%">
-                        Description
-                    </th>
-                    <th>
-                        Effect
-                    </th>
-                <tr>
                     <td>
-                        <input type="text" id="otherDescription1" name="otherDescription1" value="">
+                        <fieldset>
+                            <legend>Status Effects</legend>
+                            <div class="skill-check-dialog-status-effects">
+                                {{#if stymiedModifier}}Stymied: {{stymiedModifier}}<br> {{/if}}
+                                {{#if darknessModifier}}Darkness: {{darknessModifier}}<br> {{/if}}
+                                {{#if woundModifier}}Wound: {{woundModifier}} <br>{{/if}}
+                            </div>
+                        </fieldset>
                     </td>
                     <td>
-                        <input type="number" id="otherEffect1" name="otherEffect1" value=0>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <input type="text" id="otherDescription2" name="otherDescription2" value="">        
-                    </td>
-                    <td>
-                        <input type="number" id="otherEffect2" name="otherEffect2" value=0>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <input type="text" id="otherDescription3" name="otherDescription3" value="">
-                    </td>
-                    <td>
-                        <input type="number" id="otherEffect3" name="otherEffect3" value=0>
+                        <fieldset>
+                            <legend>Test</legend>
+                            <div class="skill-check-options">
+                                Modifiers: 
+                                <span id="cumulativeModifiers">{{mod}}</span>
+                            </div>
+                            <div class="skill-check-options">
+                                Modified Skill Value: 
+                                <span id="modifiedSkillValue">10</span>
+                            </div>
+                            <div>
+                                Bonus Needed: 
+                                <span id="bonusNeeded">0</span>
+                            </div>
+                        </fieldset>
                     </td>
                 </tr>
             </table>
-        </fieldset>
+        </tr>
     </table>
+    </form>
+    <button class="skill-roll-button">Roll</button>
 </div>

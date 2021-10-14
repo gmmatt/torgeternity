@@ -6,8 +6,7 @@ import {
     onManageActiveEffect,
     prepareActiveEffectCategories
 } from "/systems/torgeternity/module/effects.js";
-
-
+import {skillDialog} from "/systems/torgeternity/module/skill-dialog.js"
 
 export default class torgeternityActorSheet extends ActorSheet {
     constructor(...args) {
@@ -128,11 +127,6 @@ export default class torgeternityActorSheet extends ActorSheet {
 
 
     activateListeners(html) {
-
-
-
-
-
 
         //Owner-only Listeners
         if (this.actor.isOwner) {
@@ -283,38 +277,13 @@ export default class torgeternityActorSheet extends ActorSheet {
          } else if (this.actor.data.data.stymiedModifier === -4) {
             test.stymiedModifier = -4
          }
-        if (event.shiftKey) {
-            let skillContent = await renderTemplate("systems/torgeternity/templates/skill-check.hbs",test);
-            let skillDialog = new Dialog ({
-                title: test.skillName + " Check (Skill Value: " + test.skillValue + ")",
-                content: skillContent,
-                buttons: {
-                    one: {
-                        icon: '<i class="fas fa-dice-d20"></i>',
-                        label: "Roll",
-                    },
-                    two: {
-                        icon: '<i class="fas fa-ban"></i>',
-                        label: "Cancel",              
-                    }
-                },
-                left: 100,
-                top: 100
-            });
-            skillDialog.render(true);
+
+         if (event.shiftKey) {
+            let testDialog = new skillDialog(test);
+            testDialog.render(true);
         } else {
             
         } 
-
-        torgchecks.SkillCheck({
-            actor: this.actor,
-            testType: event.currentTarget.dataset.testtype,
-            skillName: event.currentTarget.dataset.name,
-            skillBaseAttribute: event.currentTarget.dataset.baseattribute,
-            skillAdds: event.currentTarget.dataset.adds,
-            skillValue: event.currentTarget.dataset.value,
-            unskilledUse: event.currentTarget.dataset.unskilleduse
-        })
     }
 
     _onSkillEditToggle(event) {
