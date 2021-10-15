@@ -1,4 +1,5 @@
-export async function SkillCheck({
+export async function SkillCheck(test) {
+/*   {
 
    testType = null,
    skillName = null,
@@ -28,13 +29,13 @@ export async function SkillCheck({
       cardsPlayed: 0,
       sizeModifier: 0,
       vulnerableModifier: 0
-   };
+   }; */
 
    // What kind of actor is this?
 
-   if (actor.data.type === "threat") {
+/*   if (actor.data.type === "threat") {
       test.actorType = "threat"
-   };
+   }; */
 
    // Cannot Attempt Certain Tests Unskilled
    if (test.skillValue === "-") {
@@ -81,6 +82,7 @@ export async function SkillCheck({
          ;
       test.unskilledLabel = "display:none"
    };
+
    //diceroll.toMessage();
    test.diceroll = diceroll;
 
@@ -88,13 +90,13 @@ export async function SkillCheck({
    test.rollTotal = diceroll.total;
 
    // Get modifiers
-   test.woundModifier = parseInt(-(actor.data.data.wounds.value))
+   /* test.woundModifier = parseInt(-(actor.data.data.wounds.value))
 
    if (actor.data.data.stymiedModifier === parseInt(-2)) {
       test.stymiedModifier = -2
    } else if (actor.data.data.stymiedModifier === -4) {
       test.stymiedModifier = -4
-   }
+   } */
 
    // Set Chat Title
    test.chatTitle = test.skillName + " Test";
@@ -318,28 +320,70 @@ export function renderSkillChat(test, diceroll) {
 
    if (test.woundModifier < 0) {
       test.displayModifiers = true;
-      test.modifierText = "Wounds " + test.woundModifier + " ";
+      test.modifierText = "Wounds " + test.woundModifier + "\n";
       test.modifiers = parseInt(test.woundModifier)
    };
 
    if (test.stymiedModifier < 0) {
       test.displayModifiers = true;
       if (test.stymiedModifier == -2) {
-         test.modifierText += "Stymied -2 ";
+         test.modifierText += "Stymied -2 \n";
          test.modifiers += -2;
       } else if (test.stymiedModifier == -4) {
-         test.modifierText += "Very Stymied -4 ";
+         test.modifierText += "Very Stymied -4 \n";
          test.modifiers += -4;
       }
    };
+
+   if (test.darknessModifier < 0) {
+      test.displayModifiers = true;
+      test.modifierText += "Darkness " + test.darknessModifier + "\n";
+      test.modifiers += parseInt(test.darknessModifier);
+   }
+
+   if (test.movementModifier < 0) {
+      test.displayModifiers = true;
+      test.modifierText += "Running -2 \n";
+      test.modifiers += -2;
+   }
+
+   if (test.multiModifier < 0) {
+      test.displayModifiers = true;
+      test.modifierText += "Multi-Action " + test.multiModifier + "\n";
+      test.modifiers += parseInt(test.multiModifier);
+   }
+
+   if (test.targetsModifier < 0) {
+      test.displayModifiers = true;
+      test.modifierText += "Multi-Target " + test.targetsModifier + "\n";
+      test.modifiers += parseInt(test.targetsModifier); 
+   }
+
+   if (test.isOther1 == true) {
+      test.displayModifiers = true;
+      test.modifierText += test.other1Description + " " + test.other1Modifier + "\n";
+      test.modifiers += parseInt(test.other1Modifier);
+   }
+
+   if (test.isOther2 == true) {
+      test.displayModifiers = true;
+      test.modifierText += test.other2Description + " " + test.other2Modifier + "\n";
+      test.modifiers += parseInt(test.other2Modifier);
+   }
+
+   if (test.isOther3 == true) {
+      test.displayModifiers = true;
+      test.modifierText += test.other3Description + " " + test.other3Modifier + "\n";
+      test.modifiers += parseInt(test.other3Modifier);
+   }
 
    if (test.sizeModifier != 0) {
       test.displayModifiers = true;
       test.modifiers += parseInt(test.sizeModifier);
       if (test.sizeModifier > 0) {
-         test.modifierText += "Target Size + " + test.sizeModifier + " "
+         test.modifierText += "Target Size + " + test.sizeModifier + "\n"
       } else {
-         test.modifierText += "Target Size " + test.sizeModifier + " "
+         test.modifierText += "Target Size " + test.sizeModifier + "\n"
       }
    }
 
@@ -347,9 +391,9 @@ export function renderSkillChat(test, diceroll) {
       test.displayModifiers = true;
       test.modifiers += parseInt(test.vulnerableModifier);
       if (test.vulnerableModifier === 2) {
-         test.modifierText += "Target Vulnerable +2 "
+         test.modifierText += "Target Vulnerable +2 \n"
       } else if (test.vulnerableModifier === 4) {
-         test.modifierText += "Target Very Vulnerable +4"
+         test.modifierText += "Target Very Vulnerable +4 \n"
       }
    }
 

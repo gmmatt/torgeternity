@@ -82,7 +82,7 @@ export class skillDialog extends FormApplication {
         }
 
         // Add other modifier 1
-        if (document.getElementById("other1-modifier-text").value != "") {
+        if (document.getElementById("other1-modifier-text").value != 0) {
             this.test.isOther1 = true;
             this.test.other1Description = document.getElementById("other1-description-text").value
             this.test.other1Modifier = document.getElementById("other1-modifier-text").value
@@ -91,7 +91,7 @@ export class skillDialog extends FormApplication {
         }
 
         // Add other modifier 2
-        if (document.getElementById("other2-modifier-text").value != "") {
+        if (document.getElementById("other2-modifier-text").value != 0) {
             this.test.isOther2 = true;
             this.test.other2Description = document.getElementById("other2-description-text").value
             this.test.other2Modifier = document.getElementById("other2-modifier-text").value
@@ -100,7 +100,7 @@ export class skillDialog extends FormApplication {
         }
 
         // Add other modifier 3
-        if (document.getElementById("other3-modifier-text").value != "") {
+        if (document.getElementById("other3-modifier-text").value != 0) {
             this.test.isOther3 = true;
             this.test.other3Description = document.getElementById("other3-description-text").value
             this.test.other3Modifier = document.getElementById("other3-modifier-text").value

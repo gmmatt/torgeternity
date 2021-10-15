@@ -261,16 +261,26 @@ export default class torgeternityActorSheet extends ActorSheet {
 
     async _onSkillRoll(event) {
         let test = {
+            testType: "skill",
             actor: this.actor,
-            woundModifier: parseInt(-(this.actor.data.data.wounds.value)),
-            stymiedModifier: parseInt(this.actor.data.data.stymiedModifier),
-            darknessModifier: parseInt(this.actor.data.data.darknessModifier),
-            type: event.currentTarget.dataset.testtype,
+            actorPic: this.actor.data.img,
+            actorType: this.actor.data.type,
             skillName: event.currentTarget.dataset.name,
             skillBaseAttribute: event.currentTarget.dataset.baseattribute,
             skillAdds: event.currentTarget.dataset.adds,
             skillValue: event.currentTarget.dataset.value,
-            unskilledUse: event.currentTarget.dataset.unskilleduse
+            unskilledUse: event.currentTarget.dataset.unskilleduse,
+            woundModifier: parseInt(-(this.actor.data.data.wounds.value)),
+            stymiedModifier: parseInt(this.actor.data.data.stymiedModifier),
+            darknessModifier: parseInt(this.actor.data.data.darknessModifier),
+            type: event.currentTarget.dataset.testtype,
+            possibilityTotal: 0,
+            upTotal: 0,
+            heroTotal: 0,
+            dramaTotal: 0,
+            cardsPlayed: 0,
+            sizeModifier: 0,
+            vulnerableModifier: 0      
         }
         if (this.actor.data.data.stymiedModifier === parseInt(-2)) {
             test.stymiedModifier = -2
