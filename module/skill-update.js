@@ -1,13 +1,13 @@
 import * as torgchecks from "/systems/torgeternity/module/torgchecks.js";
 
-export class skillDialog extends FormApplication {
+export class skillUpdate extends FormApplication {
 
     static get defaultOptions(){
         const options = super.defaultOptions;
-        options.template = "systems/torgeternity/templates/skill-check.hbs";
+        options.template = "systems/torgeternity/templates/skill-check-update.hbs";
         options.width = "auto";
         options.height = "auto";
-        options.title = "Skill Test";
+        options.title = "Update Modifiers for Skill Test";
         options.resizeable = false;
         return options
     }
@@ -28,25 +28,16 @@ export class skillDialog extends FormApplication {
 
     activateListeners(html) {
 
-        html.find(".skill-roll-button").click(this._onRoll.bind(this));
+        html.find(".skill-update-button").click(this._onUpdate.bind(this));
 
         super.activateListeners(html);
     }
 
-    _onRoll(event,html) {
+    _onUpdate(event,html) {
         
         // Add DN
         this.test.isDN = true;
         this.test.DN = document.getElementById("dn-text").value;
-
-        // Add bonus, if needed
-        if (document.getElementById("previous-bonus").checked) {
-            this.test.previousBonus = true
-            this.test.bonus = document.getElementById("bonus-text").value
-        } else {
-            this.test.previousBonus = false
-            this.test.bonus = null
-        }
 
         // Add movement modifier
         if (document.getElementById("running-radio").checked) {
@@ -108,8 +99,9 @@ export class skillDialog extends FormApplication {
             this.test.isOther3 = false
         }
 
-        var x = event;
-        torgchecks.SkillCheck(this.test);
+        this.test.diceroll = null;
+
+        torgchecks.renderSkillChat(this.test, null);
         this.close()
     }
 }

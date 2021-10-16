@@ -42,12 +42,12 @@ export async function SkillCheck(test) {
       var cantRollData = {
          user: game.user.data._id,
          speaker: ChatMessage.getSpeaker(),
-         owner: actor,
+         owner: test.actor,
       };
 
       var templateData = {
-         message: skillName + " cannot be used unless it is learned (at least 1 skill add).",
-         actorPic: actor.data.img
+         message: test.skillName + " cannot be used unless it is learned (at least 1 skill add).",
+         actorPic: test.actor.data.img
       };
 
       const templatePromise = renderTemplate("./systems/torgeternity/templates/partials/skill-error-card.hbs", templateData);
@@ -62,7 +62,12 @@ export async function SkillCheck(test) {
 
    // Roll as skilled or unskilled
    var diceroll
-   if (test.testType === "skill") {
+   if (test.previousBonus === true) {
+      //Don't roll anything
+      if (test.skillAdds > 0) {
+         test.unskilledLabel = "display:none"
+      }
+   } else if (test.testType === "skill") {
       if (test.skillAdds > 0) {
          diceroll = new Roll('1d20x10x20').evaluate({ async: false })
             ;
@@ -84,10 +89,14 @@ export async function SkillCheck(test) {
    };
 
    //diceroll.toMessage();
-   test.diceroll = diceroll;
+   if (test.previousBonus === true) {
+      test.diceroll = null;
+   } else {
+      test.diceroll = diceroll;
+      test.rollTotal = diceroll.total;
+   }
 
    // Get Bonus and Roll Result
-   test.rollTotal = diceroll.total;
 
    // Get modifiers
    /* test.woundModifier = parseInt(-(actor.data.data.wounds.value))
@@ -297,7 +306,11 @@ export function powerRoll({
 export function renderSkillChat(test, diceroll) {
    // Get current bonus and make + label visible if number is positive
    test.combinedRollTotal = parseInt(test.rollTotal) + parseInt(test.upTotal) + parseInt(test.possibilityTotal) + parseInt(test.heroTotal) + parseInt(test.dramaTotal)
-   test.bonus = torgBonus(test.combinedRollTotal);
+   if (test.previousBonus != true) {
+      test.bonus = torgBonus(test.combinedRollTotal);
+   } else {
+      test.combinedRollTotal = "-"
+   }
 
    // Raise bonus to 1 if actively defending
    if (test.testType === "activeDefense") {
@@ -314,7 +327,7 @@ export function renderSkillChat(test, diceroll) {
    }
 
    // Set Modifiers and Chat Content Relating to Modifiers
-   test.displayModifiers = false;
+   test.displayModifiers = true;
    test.modifiers = 0;
    test.modifierText = "";
 
@@ -404,27 +417,45 @@ export function renderSkillChat(test, diceroll) {
    };
 
    // Add +3 cards to bonus
-   test.bonus += (3 * parseInt(test.cardsPlayed));
+   const tempBonus = parseInt(test.bonus)
+   test.bonus = parseInt(tempBonus + test.cardsPlayed)
 
-   test.rollResult = parseInt(test.skillValue) + parseInt(test.bonus) + parseInt(test.modifiers);
+   test.rollResult = parseInt(parseInt(test.skillValue) + parseInt(test.bonus) + parseInt(test.modifiers));
+
+   // Determine Outcome
+   test.outcome = null
+   test.actionTotalContent = "Action Total"
+   const testDifference = test.rollResult - test.DN
+   if (test.isDN === true) {
+      test.actionTotalContent = "DN " + test.DN + " - " + test.rollResult + " Action Total"
+      if (testDifference < 0) {
+         test.outcome = "Failure"
+      } else if (testDifference > 9 ) {
+         test.outcome = "Outstanding Success"
+      } else if (testDifference > 4) {
+         test.outcome = "Good Success"
+      } else {
+         test.outcome = "Standard Success"
+      }
+   }
 
    // Choose Text to Display as Result
    if (test.rollTotal === 1) {
       test.resultText = "Mishap";
       test.actionTotalLabel = "display:none";
-   } else {
-      if (test.testType === "activeDefense") {
-         if (test.bonus < 2) {
-            test.resultText = "+ 1"
+   } else if (test.testType === "activeDefense") {
+      if (test.bonus < 2) {
+         test.resultText = "+ 1"
          } else {
             test.resultText = "+ " + test.bonus;
          }
          test.actionTotalLabel = "display:none"
-      } else {
+   } else if (test.isDN === true) {
+      test.resultText = test.outcome
+   } else {
          test.resultText = test.rollResult;
          test.actionTotalLabel = "display:block"
-      }
-   };
+   }
 
    // If an attack, display base damage
    if (test.testType === "attack") {
@@ -475,9 +506,6 @@ export function renderSkillChat(test, diceroll) {
    };
 
    // Disable unavailable menu options
-   if (test.possibilityTotal > 0) {
-      test.possibilityStyle = "pointer-events:none;color:gray"
-   }
 
    if (test.upTotal > 0) (
       test.upStyle = "pointer-events:none;color:gray"
@@ -509,7 +537,7 @@ export function renderSkillChat(test, diceroll) {
    const messageData = {...chatData, flags: {torgeternity: {test}}}
 
    templatePromise.then(content => {
-      if (test.diceroll !== undefined) {
+      if (test.diceroll !== null) {
          messageData.flavor = content;
          test.diceroll.toMessage(messageData);
       } else {
