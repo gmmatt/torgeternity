@@ -497,23 +497,26 @@ export function renderSkillChat(test, diceroll) {
          test.plus3Style = "display:none"
    }
 
+  
    var chatData = {
       user: game.user.data._id,
       speaker: ChatMessage.getSpeaker(),
-      owner: test.actor
+      owner: test.actor,
    };
 
-   const templatePromise = renderTemplate("./systems/torgeternity/templates/partials/skill-card.hbs", test);
+   const templatePromise = renderTemplate("./systems/torgeternity/templates/partials/skill-card.hbs", test)
+
+   const messageData = {...chatData, flags: {torgeternity: {test}}}
 
    templatePromise.then(content => {
       if (test.diceroll !== undefined) {
-         chatData.flavor = content;
-         test.diceroll.toMessage(chatData);
+         messageData.flavor = content;
+         test.diceroll.toMessage(messageData);
       } else {
-         chatData.content = content;
-         ChatMessage.create(chatData);
+         messageData.content = content;
+         ChatMessage.create(messageData);
       };
-   });
+   }); 
 
 
 }

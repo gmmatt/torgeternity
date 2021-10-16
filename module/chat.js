@@ -13,7 +13,7 @@ export function addChatListeners(html) {
 }
 
 function onPossibility(event) {
-    var test = {
+    /* var test = {
         actor: event.currentTarget.dataset.actor,
         actorPic: event.currentTarget.dataset.actorPic,
         actorType: event.currentTarget.dataset.actorType,
@@ -35,7 +35,12 @@ function onPossibility(event) {
         cardsPlayed: event.currentTarget.dataset.cardsPlayed,
         damage: event.currentTarget.dataset.damage,
         powerAttack: event.currentTarget.dataset.powerAttack
-    };
+    }; */
+
+    const parentMessageId =event.currentTarget.offsetParent.dataset.messageId;
+    var parentMessage = game.messages.find( ({id}) => id === parentMessageId)
+    var test = parentMessage.getFlag("torgeternity", "test")
+
 
     //Roll for Possibility
     var diceroll = new Roll('1d20x10x20').roll();
