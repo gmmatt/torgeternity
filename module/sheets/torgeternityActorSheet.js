@@ -6,7 +6,8 @@ import {
     onManageActiveEffect,
     prepareActiveEffectCategories
 } from "/systems/torgeternity/module/effects.js";
-import {skillDialog} from "/systems/torgeternity/module/skill-dialog.js"
+import {skillDialog} from "/systems/torgeternity/module/skill-dialog.js";
+import {attackDialog} from "/systems/torgeternity/module/attack-dialog.js";
 
 export default class torgeternityActorSheet extends ActorSheet {
     constructor(...args) {
@@ -348,10 +349,66 @@ export default class torgeternityActorSheet extends ActorSheet {
         const itemID = event.currentTarget.closest(".item").dataset.itemId;
         const item = this.actor.items.get(itemID);
         var weaponData = item.data.data;
+        var attackWith = weaponData.attackWith;
         var skillData = this.actor.data.data.skills[weaponData.attackWith];
-        torgchecks.weaponAttack({
+        var sizeModifier = 0;
+        var vulnerableModifier = 0;
+        var targetToughness = 0;
+        var targetArmor = 0;
+        var targetDefenseSkill = "Dodge";
+        var targetDefenseValue = 0;
+
+        // Exit if no target or get target data
+        if (event.shiftKey) {
+            if (Array.from(game.user.targets).length === 0) {
+                var needTargetData = {
+                    user: game.user.data._id,
+                    speaker: ChatMessage.getSpeaker(),
+                    owner: this.actor,
+                };
+        
+                var templateData = {
+                    message: "Cannot attempt enhanced attack test without a target. Select a target and try again.",
+                    actorPic: this.actor.data.img
+                };
+        
+                const templatePromise = renderTemplate("./systems/torgeternity/templates/partials/skill-error-card.hbs", templateData);
+        
+                templatePromise.then(content => {
+                    needTargetData.content = content;
+                    ChatMessage.create(needTargetData);
+                })
+        
+                return;
+            } else {
+                var target = Array.from(game.user.targets)[0];
+                if (target.actor.data.data.details.sizeBonus) {
+                    sizeModifier = target.actor.data.data.details.sizeBonus;
+                };
+                vulnerableModifier = target.actor.data.data.vulnerableModifier;
+                targetToughness = target.actor.data.data.other.toughness;
+                targetArmor = target.actor.data.data.other.armor;
+                if (attackWith === "fireCombat" || attackWith === "energyWeapons" || attackWith === "heavyWeapons") {
+                    targetDefenseSkill = "Dodge";
+                    targetDefenseValue = target.actor.data.data.skills.dodge.value;
+                } else {
+                    if (target.actor.data.data.skills.meleeWeapons.adds > 1) {
+                        targetDefenseSkill = "Melee Weapons";
+                        targetDefenseValue = target.actor.data.data.skills.meleeWeapons.value;
+                    } else {
+                        targetDefenseSkill = "Unarmed Combat";
+                        targetDefenseValue = target.actor.data.data.skills.unarmedCombat.value;
+                    }
+                }
+            }
+        };
+
+        var test = {
+
+            testType: "attack",
             actor: this.actor,
-            item: item,
+            actorType: this.actor.data.type,
+            item: this.actor.items.get(itemID),
             actorPic: this.actor.data.img,
             skillName: weaponData.attackWith,
             skillBaseAttribute: skillData.baseAttribute,
@@ -362,10 +419,36 @@ export default class torgeternityActorSheet extends ActorSheet {
             dexterityValue: this.actor.data.data.attributes.dexterity,
             mindValue: this.actor.data.data.attributes.mind,
             spiritValue: this.actor.data.data.attributes.spirit,
+            possibilityTotal: 0,
+            upTotal: 0,
+            heroTotal: 0,
+            dramaTotal: 0,
+            cardsPlayed: 0,
             weaponName: item.data.name,
             weaponDamageType: weaponData.damageType,
-            weaponDamage: weaponData.damage
-        })
+            weaponDamage: weaponData.damage,
+            damage: weaponData.damage,
+            weaponAP: weaponData.ap,
+            targetToughness: targetToughness,
+            targetArmor: targetArmor,
+            targetDefenseSkill: targetDefenseSkill,
+            targetDefenseValue: targetDefenseValue,
+            woundModifier: parseInt(-(this.actor.data.data.wounds.value)),
+            stymiedModifier: parseInt(this.actor.data.data.stymiedModifier),
+            darknessModifier: parseInt(this.actor.data.data.darknessModifier),
+            sizeModifier: sizeModifier,
+            vulnerableModifier: vulnerableModifier,
+            vitalAreaDamageModifier: 0
+
+        }
+        
+        if (event.shiftKey) {
+            let testDialog = new attackDialog(test);
+            testDialog.render(true);
+        } else {
+            torgchecks.weaponAttack(test)            
+        }
+    
     };
 
     _onBonusRoll(event) {

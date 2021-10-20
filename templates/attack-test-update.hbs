@@ -1,0 +1,168 @@
+<div>
+    <form>
+    <table>
+        <tr>
+            <td>
+                <fieldset>
+                    <legend>Movement Penalty</legend>
+                    <span class="skill-check-options">
+                        <input type="radio" class="walking-radio" name="movement" value=0 checked>
+                        <label for="walking">Walking (None)</label>
+                        <input type="radio" id="running-radio" class="running-radio" name="movement" value=-2>
+                        <label for="running">Running (-2)</label>
+                    </span>
+                </fieldset>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <fieldset>
+                    <legend>Multi-Action Penalty</legend>
+                    <span class="skill-check-options">Actions:
+                        <input type="radio" id="multi1-radio" name="multiAction" value=0 checked>
+                        <label for="1">1</label>
+                        <input type="radio" id="multi2-radio" name="multiAction" value=-2>
+                        <label for="2">2 (-2)</label>
+                        <input type="radio" id="multi3-radio" name="multiAction" value=-4>
+                        <label for="3">3 (-4)</label>
+                        <input type="radio" id="multi4-radio" name="multiAction" value=-6>
+                        <label for="4">4 (-6)</label>
+                    </span>
+                </fieldset>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <fieldset>
+                    <legend>Multi-Target Penalty</legend>
+                    <span class="skill-check-options">
+                        Targets: 
+                        <input type="radio" id="targets1-radio" name="multiTarget" value=0 checked>
+                        <label for="1">1</label>
+                        <input type="radio" id="targets2-radio" name="multiTarget" value=-2>
+                        <label for="2">2 (-2)</label>
+                        <input type="radio" id="targets3-radio" name="multiTarget" value=-4>
+                        <label for="3">3 (-4)</label>
+                        <input type="radio" id="targets4-radio" name="multiTarget" value=-6>
+                        <label for="4">4 (-6)</label>
+                        <input type="radio" id="targets5-radio" name="multiTarget" value=-8>
+                        <label for="4">5 (-8)</label>
+                        <input type="radio" id="targets6-radio" name="multiTarget" value=-10>
+                        <label for="4">6 (-10)</label>
+                    </span>
+                </fieldset>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <fieldset>
+                    <legend>Attack Options</legend>
+                    <span class="skill-check-options">
+                        Called Shot: 
+                        <input type="radio" id="called-shot-none" name="calledShot" value = 0 checked>
+                        <label for="called-shot-none">None</label>
+                        <input type="radio" id="called-shot-2" name="calledShot" value = -2>
+                        <label for="called-shot-1">-2</label>
+                        <input type="radio" id="called-shot-4" name="calledShot" value = -4>
+                        <label for="called-shot-4">-4</label>
+                        <input type="radio" id="called-shot-6" name="calledShot" value = -6>
+                        <label for="called-shot-6">-6</label>
+                        <input type="checkbox" id="vital-area" title="+4 Damage" name="vitalArea" value=4>
+                        <label for="called-shot-damage">Vital Area</label><br>
+
+                        Burst: 
+                        <input type="radio" id="burst-none" name="burst" value = 0 checked>
+                        <label for="burst-none">None</label>
+                        <input type="radio" id="burst-short" name="burst" title="Automatic weapons only" value=2>
+                        <label for="burst-short">Short (+2)</label>
+                        <input type="radio" id="burst-long" name="burst" title="Automatic weapons only" value=4>
+                        <label for="burst-long">Long (+4)</label><br>
+
+                        <input type="checkbox" id="all-out" name="all-out" title="+4 Bonus/Very Vulnerable (Melee and unarmed attacks only)" value=4>
+                        <label for="all-out">All-Out Attack</label>
+                        <input type="checkbox" id="aimed" name="aimed" title="Aimed Shot (ranged attacks only)" value=4>
+                        <label for="aimed">Aimed</label>
+                        <input type="checkbox" id="blind-fire" title="Location of target only generally known" value=-6>
+                        <label for="blind-fire">Blind Fire</label>
+                    </span>
+                </fieldset>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <fieldset>
+                    <legend>Target Options</legend>
+                    <span class="skill-check-options">
+                        Concealment:
+                        <input type="radio" id="concealment-none" name="concealment" value=0 checked>
+                        <label for="concealment-none">None</label>
+                        <input type="radio" id="concealment-2" name="concealment" value=-2>
+                        <label for="concealment-2">-2</label>
+                        <input type="radio" id="concealment-4" name="concealment" value=-4>
+                        <label for="concealment-4">-4</label>
+                        <input type="radio" id="concealment-6" name="concealment" value=-6>
+                        <label for="concealment-6">-6</label>
+                        | 
+                        Cover Bonus: 
+                        <input type="text" id="cover" name="cover" title="Bonus added to target toughness as a result of cover" style="width:3em" value=0>
+                    </span>
+                </fieldset>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <fieldset>
+                    <legend>Other Modifiers</legend>
+                    <table>
+                        <tr>
+                            <th style="width:75%">
+                                Description
+                            </th>
+                            <th>
+                                Effect
+                            </th>
+                        <tr>
+                            <td>
+                                <input type="text" id="other1-description-text" name="otherDescription1" value="">
+                            </td>
+                            <td>
+                                <input type="number" id="other1-modifier-text" name="otherEffect1" value=0>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="text" id="other2-description-text" name="otherDescription2" value="">        
+                            </td>
+                            <td>
+                                <input type="number" id="other2-modifier-text" name="otherEffect2" value=0>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="text" id="other3-description-text" name="otherDescription3" value="">
+                            </td>
+                            <td>
+                                <input type="number" id="other3-modifier-text" name="otherEffect3" value=0>
+                            </td>
+                        </tr>
+                    </table>
+                </fieldset>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <fieldset>
+                    <legend>Status Effects</legend>
+                    <div class="skill-check-dialog-status-effects">
+                        {{#if test.stymiedModifier}}Stymied: {{test.stymiedModifier}}<br> {{/if}}
+                        {{#if test.darknessModifier}}Darkness: {{test.darknessModifier}}<br> {{/if}}
+                        {{#if test.woundModifier}}Wound: {{test.woundModifier}} <br>{{/if}}
+                        {{#if test.sizeModifier}}Target Size: +{{test.sizeModifier}} <br>{{/if}}
+                        {{#if test.vulnerableModifier}} Target Vulnerability: +{{test.vulnerableModifier}}<br>{{/if}}
+                    </div>
+                </fieldset>
+            </td>
+    </table>
+    </form>
+    <button class="update-roll-button">Update</button>
+</div>
