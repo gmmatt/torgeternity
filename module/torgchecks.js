@@ -461,6 +461,13 @@ export function renderSkillChat(test, diceroll) {
       }
    }
 
+   // Turn on + sign for modifiers?
+   if (test.modifiers >=1) {
+      test.modifierPlusLabel = "display:"
+   } else {
+      test.modifierPlusLabel = "display:none"
+   }
+
    // Choose Text to Display as Result
    if (test.rollTotal === 1) {
       test.resultText = "Mishap";
@@ -562,7 +569,7 @@ export function renderSkillChat(test, diceroll) {
       test.cardsPlayedLabel = "display:none"
    };
 
-   // Disable unavailable menu options
+   // Disable unavailable menu options (Note: possibilities are always available)
 
    if (test.upTotal > 0) (
       test.upStyle = "pointer-events:none;color:gray"

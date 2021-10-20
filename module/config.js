@@ -194,6 +194,15 @@ torgeternity.yesNo = {
     false: "torgeternity.yesNo.false"
 }
 
+torgeternity.sizes = {
+    normal: "torgeternity.sizes.normal",
+    tiny: "torgeternity.sizes.tiny",
+    verySmall: "torgeternity.sizes.verySmall",
+    small: "torgeternity.sizes.small",
+    large: "torgeternity.sizes.large",
+    veryLarge: "torgeternity.sizes.veryLarge"
+}
+
 
 torgeternity.statusEffects = [
     {

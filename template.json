@@ -381,7 +381,7 @@
             "details": {
                 "possibilitypotential": "(none)",
                 "description": "",
-                "sizeBonus": 0
+                "sizeBonus": "normal"
             },
             "editstate": "none"
         }

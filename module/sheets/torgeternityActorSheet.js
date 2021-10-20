@@ -382,9 +382,19 @@ export default class torgeternityActorSheet extends ActorSheet {
                 return;
             } else {
                 var target = Array.from(game.user.targets)[0];
-                if (target.actor.data.data.details.sizeBonus) {
-                    sizeModifier = target.actor.data.data.details.sizeBonus;
-                };
+                if (target.actor.data.data.details.sizeBonus === "tiny") {
+                    sizeModifier = -6;
+                } else if (target.actor.data.data.details.sizeBonus === "verySmall") {
+                    sizeModifier = -4;
+                } else if (target.actor.data.data.details.sizeBonus === "small") {
+                    sizeModifier = -2;
+                } else if (target.actor.data.data.details.sizeBonus === "large") {
+                    sizeModifier = 2;
+                } else if (target.actor.data.data.details.sizeBonus === "veryLarge") {
+                    sizeModifier = 4;
+                } else {
+                    sizeModifier = 0;
+                }
                 vulnerableModifier = target.actor.data.data.vulnerableModifier;
                 targetToughness = target.actor.data.data.other.toughness;
                 targetArmor = target.actor.data.data.other.armor;

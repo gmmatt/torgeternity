@@ -220,6 +220,7 @@
             "skills": "Skills",
             "favored":"Favored",
             "possibilitypotential": "Possibilities (Potential)",
+            "size": "Size",
             "possibilities": "Possibilities",
             "up": "Up",
             "equipment": "Equipment",
@@ -388,6 +389,15 @@
             "attack": "Attack",
             "baseDamage": "Base Damage",
 			"value": "Value"
+        },
+
+        "sizes": {
+            "tiny": "Tiny",
+            "verySmall": "Very Small",
+            "small": "Small",
+            "normal": "Normal",
+            "large": "Large",
+            "veryLarge": "Very Large"
         }
     }
 }

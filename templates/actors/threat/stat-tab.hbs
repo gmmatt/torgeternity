@@ -217,5 +217,15 @@
         <input name="data.details.possibilitypotential" class="text-input" type="text"
             value="{{data.data.details.possibilitypotential}}" />
     </div>
+    <div class="threat-edit">
+        {{localize "torgeternity.sheetLabels.size"}}: &nbsp;
+        <select name="data.details.sizeBonus" class="input-box">
+            {{#select data.data.details.sizeBonus}}
+            {{#each config.sizes as |name type|}}
+            <option value="{{type}}">{{localize name}}</option>
+            {{/each}}
+            {{/select}}
+        </select>
+    </div>
 
 </div>

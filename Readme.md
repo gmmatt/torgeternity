@@ -8,7 +8,7 @@
 For manual installation, use the provided manifest URL in the "*Install System*" popup window 
 while managing game systems.
 
-v. 1.1.6
+v. 1.2.0
  - Update Storm Knight sheet to make it easier to read
  - Update Spanish localization (thanks to lozaljo and ForjaSalve)
  - Removed gulpfile and scss dependencies. CSS should now be edited directly.

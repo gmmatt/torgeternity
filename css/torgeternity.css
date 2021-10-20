@@ -1467,6 +1467,10 @@ form.actor-sheet header input[name="name"] {
   line-height: 14px;
 }
 
+.threat-edit {
+  font-family: Arial;
+}
+
 .window-content .actor-sheet .threat-stat-line {
   flex: none;
 }
@@ -1554,15 +1558,15 @@ form.actor-sheet header input[name="name"] {
 }
 
 .window-content .actor-sheet input {
-  width: 20px;
+  width: 30px;
   height: 20px;
   text-align: center;
 }
 
 .window-content .actor-sheet input[type="number"],
 .window-content .actor-sheet input[type="text"] {
-  font-family: Signika;
-  font-size: 15px;
+  font-family: Arial;
+  font-size: 12px;
 }
 
 .window-content .actor-sheet input[name="name"] {
@@ -2218,6 +2222,7 @@ form.actor-sheet header input[name="name"] {
 
 .window-content .actor-sheet .threat-editor .threat-edit {
   flex-direction: column;
+  font-family: Arial;
 }
 
 .window-content .actor-sheet .stat-block {
@@ -2272,6 +2277,7 @@ form.actor-sheet.threat div.skill-list-edit .skill-element-edit {
 
 form.actor-sheet.threat div.skill-list-edit .skill-element-edit span {
   text-align: end;
+  font-family: Arial;
 }
 
 form.actor-sheet.threat div.skill-list-edit .skill-element-edit span.inputsFav {
@@ -2283,7 +2289,7 @@ form.actor-sheet.threat div.skill-list-edit .skill-element-edit span.inputsFav {
 form.actor-sheet.threat div.skill-list-edit .skill-element-edit span.inputsFav input[type="checkbox"],
 form.actor-sheet.threat div.skill-list-edit .skill-element-edit span.inputsFav a.toggleFav {
   position: absolute;
-  left: 13px;
+  left: 20px;
   max-width: 30px;
   top: -5px;
   width: 10px;
