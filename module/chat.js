@@ -145,7 +145,7 @@ function onModifier(event) {
     var parentMessage = game.messages.find( ({id}) => id === parentMessageId)
     var test = parentMessage.getFlag("torgeternity", "test")
 
-    if (test.type === "skill") {
+    if (test.testType === "skill" || test.testType === "power") {
         let testDialog = new skillUpdate(test);
         testDialog.render(true)
     } else {

@@ -7,9 +7,9 @@
                     <tr>
                         <td>
                             <fieldset>
-                                <legend>Difficulty</legend>
+                                <legend>{{localize "torgeternity.sheetLabels.difficulty"}}</legend>
                                 <span class="skill-check-options">
-                                    <label for="dn">DN: </label>
+                                    <label for="dn">{{localize "torgeternity.sheetLabels.difficulty"}}: </label>
                                     <input type="number" id="dn-text" name="dn" value=10 style="width:3em">
                                 </span>
                             </fieldset>
@@ -19,9 +19,9 @@
                                 <legend title="Choose whether to (1) roll for a bonus number or (2) input a previously generated bonus when attempting a multi-action.">Bonus</legend>
                                 <span class="skill-check-options">
                                     <input type="radio" id="roll" name="bonus" value=0 checked>
-                                    <label for="roll">Roll</label>
+                                    <label for="roll">{{localize "torgeternity.sheetLabels.roll"}}</label>
                                     <input type="radio" id="previous-bonus" title="When engaged in multi-actions, check this box to input the bonus number from a previous test." name="bonus" value=1>
-                                    <label for="input">Input Existing</label>
+                                    <label for="input">{{localize "torgeternity.sheetLabels.inputExisting"}}</label>
                                     <input type="number" id="bonus-text" title="Input BONUS NUMBER from previous test, not die total." value=0 style="width:3em">
                                 </span>
                             </fieldset>
@@ -33,12 +33,12 @@
         <tr>
             <td>
                 <fieldset>
-                    <legend>Movement Penalty</legend>
+                    <legend>{{localize "torgeternity.sheetLabels.movementPenalty"}}</legend>
                     <span class="skill-check-options">
                         <input type="radio" class="walking-radio" name="movement" value=0 checked>
-                        <label for="walking">Walking (None)</label>
+                        <label for="walking">{{localize "torgeternity.sheetLabels.walking"}}</label>
                         <input type="radio" id="running-radio" class="running-radio" name="movement" value=-2>
-                        <label for="running">Running (-2)</label>
+                        <label for="running">{{localize "torgeternity.sheetLabels.running"}}</label>
                     </span>
                 </fieldset>
             </td>
@@ -46,8 +46,8 @@
         <tr>
             <td>
                 <fieldset>
-                    <legend>Multi-Action Penalty</legend>
-                    <span class="skill-check-options">Actions:
+                    <legend>{{localize "torgeternity.sheetLabels.multiActionPenalty"}}</legend>
+                    <span class="skill-check-options">{{localize "torgeternity.sheetLabels.actions"}}:
                         <input type="radio" id="multi1-radio" name="multiAction" value=0 checked>
                         <label for="1">1</label>
                         <input type="radio" id="multi2-radio" name="multiAction" value=-2>
@@ -63,9 +63,9 @@
         <tr>
             <td>
                 <fieldset>
-                    <legend>Multi-Target Penalty</legend>
+                    <legend>{{localize "torgeternity.sheetLabels.multiTargetPenalty"}}</legend>
                     <span class="skill-check-options">
-                        Targets: 
+                        {{localize "torgeternity.sheetLabels.targets"}}: 
                         <input type="radio" id="targets1-radio" name="multiTarget" value=0 checked>
                         <label for="1">1</label>
                         <input type="radio" id="targets2-radio" name="multiTarget" value=-2>
@@ -85,14 +85,14 @@
         <tr>
             <td>
                 <fieldset>
-                    <legend>Other Modifiers</legend>
+                    <legend>{{localize "torgeternity.sheetLabels.otherModifiers"}}</legend>
                     <table>
                         <tr>
                             <th style="width:75%">
-                                Description
+                                {{localize "torgeternity.sheetLabels.description"}}
                             </th>
                             <th>
-                                Effect
+                                {{localize "torgeternity.sheetLabels.effect"}}
                             </th>
                         <tr>
                             <td>
@@ -125,15 +125,15 @@
         <tr>
             <td>
                 <fieldset>
-                    <legend>Status Effects</legend>
+                    <legend>{{localize "torgeternity.sheetLabels.statusEffects"}}</legend>
                     <div class="skill-check-dialog-status-effects">
-                        {{#if test.stymiedModifier}}Stymied: {{test.stymiedModifier}}<br> {{/if}}
-                        {{#if test.darknessModifier}}Darkness: {{test.darknessModifier}}<br> {{/if}}
-                        {{#if test.woundModifier}}Wound: {{test.woundModifier}} <br>{{/if}}
+                        {{#if test.stymiedModifier}}{{localize "torgeternity.statusEffects.stymied"}}: {{test.stymiedModifier}}<br> {{/if}}
+                        {{#if test.darknessModifier}}{{localize "torgeternity.statusEffects.darkness"}}: {{test.darknessModifier}}<br> {{/if}}
+                        {{#if test.woundModifier}}{{localize "torgeternity.stats.wounds"}}: {{test.woundModifier}} <br>{{/if}}
                     </div>
                 </fieldset>
             </td>
     </table>
     </form>
-    <button class="skill-roll-button">Roll</button>
+    <button class="skill-roll-button"><i class="fas fa-dice-d20"></i>{{localize "torgeternity.sheetLabels.roll"}}</button>
 </div>

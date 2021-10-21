@@ -219,46 +219,7 @@ export function weaponAttack(test) {
 }
 
 
-export function powerRoll({
-   testType = null,
-   skillName = null,
-   skillBaseAttribute = null,
-   skillAdds = null,
-   skillValue = null,
-   strengthValue = null,
-   powerName = null,
-   powerAttack = null,
-   powerDamage = null,
-   actor = null,
-   item = null,
-   actorPic = null } = {}) {
-   var test = {
-      actor: actor.data._id,
-      item: item.data,
-      actorPic: actorPic,
-      actorType: "stormknight",
-      skillName: skillName,
-      skillBaseAttribute: skillBaseAttribute,
-      skillAdds: skillAdds,
-      skillValue: skillValue,
-      strengthValue: strengthValue,
-      testType: "power",
-      powerName: powerName,
-      powerAttack: powerAttack,
-      damage: powerDamage,
-      possibilityTotal: 0,
-      upTotal: 0,
-      heroTotal: 0,
-      dramaTotal: 0,
-      cardsPlayed: 0,
-      sizeModifier: 0,
-      vulnerableModifier: 0
-   };
-
-   // What kind of actor is this?
-   if (actor.data.type === "threat") {
-      test.actorType = "threat"
-   };
+export function powerRoll(test) {
 
    // Roll dice as skilled (assumes character would not have power unless skilled)
    var diceroll = new Roll('1d20x10x20').roll();
@@ -269,14 +230,14 @@ export function powerRoll({
    // Get Bonus and Roll Result
    test.rollTotal = diceroll.total;
 
-   // Get modifiers; only modify based on target if this is an attack
-   test.woundModifier = parseInt(-(actor.data.data.wounds.value))
+   /* Get modifiers; only modify based on target if this is an attack
+   test.woundModifier = parseInt(-(test.actor.data.data.wounds.value))
 
    if (actor.data.data.stymiedModifier === parseInt(-2)) {
       test.stymiedModifier = -2
    } else if (actor.data.data.stymiedModifier === -4) {
       test.stymiedModifier = -4
-   }
+   } */
 
    if (test.powerAttack === "true") {
       if (Array.from(game.user.targets).length > 0) {
@@ -532,9 +493,12 @@ export function renderSkillChat(test, diceroll) {
    if (test.testType === "power") {
       if (test.powerAttack === "true") {
          test.damageLabel = "display:"
-      } else (
-         test.damageLabel = "display:none"
-      )
+         test.damageSubLabel = "display:none";
+         test.damageDescription = test.damage + " Damage";
+      } else {
+         test.damageLabel = "display:none";
+         test.damageSubLabel = "display:none"
+      }
    };
 
    // Remind Player to Check for Disconnect?

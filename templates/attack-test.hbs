@@ -7,9 +7,9 @@
                     <tr>
                         <td>
                             <fieldset>
-                                <legend>Difficulty</legend>
+                                <legend>{{localize "torgeternity.sheetLabels.difficulty"}}</legend>
                                 <span class="skill-check-options">
-                                    Target {{test.targetDefenseSkill}}: {{test.targetDefenseValue}}
+                                    {{localize "torgeternity.sheetLabels.target"}} {{test.targetDefenseSkill}}: {{test.targetDefenseValue}}
                                 </span>
                             </fieldset>
                         </td>
@@ -32,12 +32,12 @@
         <tr>
             <td>
                 <fieldset>
-                    <legend>Movement Penalty</legend>
+                    <legend>{{localize "torgeternity.sheetLabels.movementPenalty"}}</legend>
                     <span class="skill-check-options">
                         <input type="radio" class="walking-radio" name="movement" value=0 checked>
-                        <label for="walking">Walking (None)</label>
+                        <label for="walking">{{localize "torgeternity.sheetLabels.walking"}}</label>
                         <input type="radio" id="running-radio" class="running-radio" name="movement" value=-2>
-                        <label for="running">Running (-2)</label>
+                        <label for="running">{{localize "torgeternity.sheetLabels.running"}}</label>
                     </span>
                 </fieldset>
             </td>
@@ -45,8 +45,8 @@
         <tr>
             <td>
                 <fieldset>
-                    <legend>Multi-Action Penalty</legend>
-                    <span class="skill-check-options">Actions:
+                    <legend>{{localize "torgeternity.sheetLabels.multiActionPenalty"}}</legend>
+                    <span class="skill-check-options">{{localize "torgeternity.sheetLabels.actions"}}:
                         <input type="radio" id="multi1-radio" name="multiAction" value=0 checked>
                         <label for="1">1</label>
                         <input type="radio" id="multi2-radio" name="multiAction" value=-2>
@@ -62,9 +62,9 @@
         <tr>
             <td>
                 <fieldset>
-                    <legend>Multi-Target Penalty</legend>
+                    <legend>{{localize "torgeternity.sheetLabels.multiTargetPenalty"}}</legend>
                     <span class="skill-check-options">
-                        Targets: 
+                        {{localize "torgeternity.sheetLabels.targets"}}: 
                         <input type="radio" id="targets1-radio" name="multiTarget" value=0 checked>
                         <label for="1">1</label>
                         <input type="radio" id="targets2-radio" name="multiTarget" value=-2>
@@ -84,11 +84,11 @@
         <tr>
             <td>
                 <fieldset>
-                    <legend>Attack Options</legend>
+                    <legend>{{localize "torgeternity.sheetLabels.attackOptions"}}</legend>
                     <span class="skill-check-options">
-                        Called Shot: 
+                        {{localize "torgeternity.sheetLabels.calledShot"}}: 
                         <input type="radio" id="called-shot-none" name="calledShot" value = 0 checked>
-                        <label for="called-shot-none">None</label>
+                        <label for="called-shot-none">{{localize "torgeternity.sheetLabels.none"}}</label>
                         <input type="radio" id="called-shot-2" name="calledShot" value = -2>
                         <label for="called-shot-1">-2</label>
                         <input type="radio" id="called-shot-4" name="calledShot" value = -4>
@@ -96,22 +96,22 @@
                         <input type="radio" id="called-shot-6" name="calledShot" value = -6>
                         <label for="called-shot-6">-6</label>
                         <input type="checkbox" id="vital-area" title="+4 Damage" name="vitalArea" value=4>
-                        <label for="called-shot-damage">Vital Area</label><br>
+                        <label for="called-shot-damage">{{localize "torgeternity.sheetLabels.vitalArea"}}</label><br>
 
-                        Burst: 
+                        {{localize "torgeternity.sheetLabels.burst"}}: 
                         <input type="radio" id="burst-none" name="burst" value = 0 checked>
-                        <label for="burst-none">None</label>
+                        <label for="burst-none">{{localize "torgeternity.sheetLabels.none"}}</label>
                         <input type="radio" id="burst-short" name="burst" title="Automatic weapons only" value=2>
-                        <label for="burst-short">Short (+2)</label>
+                        <label for="burst-short">{{localize "torgeternity.sheetLabels.shortBurst"}}</label>
                         <input type="radio" id="burst-long" name="burst" title="Automatic weapons only" value=4>
-                        <label for="burst-long">Long (+4)</label><br>
+                        <label for="burst-long">{{localize "torgeternity.sheetLabels.longBurst"}}</label><br>
 
                         <input type="checkbox" id="all-out" name="all-out" title="+4 Bonus/Very Vulnerable (Melee and unarmed attacks only)" value=4>
-                        <label for="all-out">All-Out Attack</label>
+                        <label for="all-out">{{localize "torgeternity.sheetLabels.allOut"}}</label>
                         <input type="checkbox" id="aimed" name="aimed" title="Aimed Shot (ranged attacks only)" value=4>
-                        <label for="aimed">Aimed</label>
+                        <label for="aimed">{{localize "torgeternity.sheetLabels.aimed"}}</label>
                         <input type="checkbox" id="blind-fire" title="Location of target only generally known" value=-6>
-                        <label for="blind-fire">Blind Fire</label>
+                        <label for="blind-fire">{{localize "torgeternity.sheetLabels.blindFire"}}</label>
                     </span>
                 </fieldset>
             </td>
@@ -119,9 +119,9 @@
         <tr>
             <td>
                 <fieldset>
-                    <legend>Target Options</legend>
+                    <legend>{{localize "torgeternity.sheetLabels.targetOptions"}}</legend>
                     <span class="skill-check-options">
-                        Concealment:
+                        {{localize "torgeternity.sheetLabels.concealment"}}:
                         <input type="radio" id="concealment-none" name="concealment" value=0 checked>
                         <label for="concealment-none">None</label>
                         <input type="radio" id="concealment-2" name="concealment" value=-2>
@@ -131,7 +131,7 @@
                         <input type="radio" id="concealment-6" name="concealment" value=-6>
                         <label for="concealment-6">-6</label>
                         | 
-                        Cover Bonus: 
+                        {{localize "torgeternity.sheetLabels.coverBonus"}} 
                         <input type="text" id="cover" name="cover" title="Bonus added to target toughness as a result of cover" style="width:3em" value=0>
                     </span>
                 </fieldset>
@@ -140,14 +140,14 @@
         <tr>
             <td>
                 <fieldset>
-                    <legend>Other Modifiers</legend>
+                    <legend>{{localize "torgeternity.sheetLabels.otherModifiers"}}</legend>
                     <table>
                         <tr>
                             <th style="width:75%">
-                                Description
+                                {{localize "torgeternity.sheetLabels.description"}}
                             </th>
                             <th>
-                                Effect
+                                {{localize "torgeternity.sheetLabels.effect"}}
                             </th>
                         <tr>
                             <td>
@@ -180,17 +180,17 @@
         <tr>
             <td>
                 <fieldset>
-                    <legend>Status Effects</legend>
+                    <legend>{{localize "torgeternity.sheetLabels.statusEffects"}}</legend>
                     <div class="skill-check-dialog-status-effects">
-                        {{#if test.stymiedModifier}}Stymied: {{test.stymiedModifier}}<br> {{/if}}
-                        {{#if test.darknessModifier}}Darkness: {{test.darknessModifier}}<br> {{/if}}
-                        {{#if test.woundModifier}}Wound: {{test.woundModifier}} <br>{{/if}}
-                        {{#if test.sizeModifier}}Target Size: +{{test.sizeModifier}} <br>{{/if}}
-                        {{#if test.vulnerableModifier}} Target Vulnerability: +{{test.vulnerableModifier}}<br>{{/if}}
+                        {{#if test.stymiedModifier}}{{localize "torgeternity.statusEffects.stymied"}}: {{test.stymiedModifier}}<br> {{/if}}
+                        {{#if test.darknessModifier}}{{localize "torgeternity.statusEffects.darkness"}}: {{test.darknessModifier}}<br> {{/if}}
+                        {{#if test.woundModifier}}{{localize "torgeternity.stats.wounds"}}: {{test.woundModifier}} <br>{{/if}}
+                        {{#if test.sizeModifier}}{{localize "torgeternity.statusEffects.targetSize"}}: +{{test.sizeModifier}} <br>{{/if}}
+                        {{#if test.vulnerableModifier}} {{localize "torgeternity.statusEffects.targetVulnerability"}}: +{{test.vulnerableModifier}}<br>{{/if}}
                     </div>
                 </fieldset>
             </td>
     </table>
     </form>
-    <button class="attack-roll-button">Roll</button>
+    <button class="attack-roll-button"><i class="fas fa-dice-d20"></i>{{localize "torgeternity.sheetLabels.roll"}}</button>
 </div>

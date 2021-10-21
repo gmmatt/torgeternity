@@ -473,17 +473,40 @@ export default class torgeternityActorSheet extends ActorSheet {
         const item = this.actor.items.get(itemID);
         var powerData = item.data.data;
         var skillData = this.actor.data.data.skills[powerData.skill];
-        torgchecks.powerRoll({
+        
+        let test = {
+            testType: "power",
             actor: this.actor,
-            item: item,
             actorPic: this.actor.data.img,
-            skillName: powerData.skill,
-            skillBaseAttribute: skillData.baseAttribute,
+            actorType: this.actor.data.type,
+            item: item,
+            skillName: skillData.name,
+            skillBaseAttribute: skillData.baseattribute,
+            skillAdds: skillData.adds,
             skillValue: skillData.value,
+            strengthValue: 0, // not sure what this is?
             powerName: item.data.name,
             powerAttack: powerData.isAttack,
-            powerDamage: powerData.damage
-        })
+            damage: powerData.damage,
+            unskilledUse: event.currentTarget.dataset.unskilleduse,
+            woundModifier: parseInt(-(this.actor.data.data.wounds.value)),
+            stymiedModifier: parseInt(this.actor.data.data.stymiedModifier),
+            darknessModifier: parseInt(this.actor.data.data.darknessModifier),
+            type: event.currentTarget.dataset.testtype,
+            possibilityTotal: 0,
+            upTotal: 0,
+            heroTotal: 0,
+            dramaTotal: 0,
+            cardsPlayed: 0,
+            sizeModifier: 0,
+            vulnerableModifier: 0      
+        }
+        if (event.shiftKey) {
+            let testDialog = new skillDialog(test);
+            testDialog.render(true);
+        } else {
+            torgchecks.powerRoll(test);
+        } 
     }
 
     _onCreateSa(event) {
