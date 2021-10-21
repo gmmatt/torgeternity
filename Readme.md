@@ -8,6 +8,10 @@
 For manual installation, use the provided manifest URL in the "*Install System*" popup window 
 while managing game systems.
 
+v. 2.0.1
+- Added ability to edit AP on all weapons (previously only heavy weapons had
+  the option for editing AP)
+  
 v. 2.0.0
 - Enhanced skill test update! The new system includes multiple enhancements
   to the skill test system. Shift-click on any skill name or attack icon to
