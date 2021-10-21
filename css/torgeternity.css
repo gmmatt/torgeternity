@@ -1521,7 +1521,7 @@ form.actor-sheet header input[name="name"] {
 
 .window-content .actor-sheet nav.tabs {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   text-align: center;
   border: none;
   position: absolute;
@@ -1529,8 +1529,8 @@ form.actor-sheet header input[name="name"] {
   font-family: Alaska;
   font-size: 13px;
   text-transform: capitalize;
-  right: -60px;
-  top: 60px;
+  right: -310px;
+  top: 310px;
 }
 
 .window-content .actor-sheet nav.tabs a.item {
