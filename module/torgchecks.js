@@ -1,4 +1,5 @@
-export async function SkillCheck({
+export async function SkillCheck(test) {
+/*   {
 
    testType = null,
    skillName = null,
@@ -28,25 +29,25 @@ export async function SkillCheck({
       cardsPlayed: 0,
       sizeModifier: 0,
       vulnerableModifier: 0
-   };
+   }; */
 
    // What kind of actor is this?
 
-   if (actor.data.type === "threat") {
+/*   if (actor.data.type === "threat") {
       test.actorType = "threat"
-   };
+   }; */
 
    // Cannot Attempt Certain Tests Unskilled
    if (test.skillValue === "-") {
       var cantRollData = {
          user: game.user.data._id,
          speaker: ChatMessage.getSpeaker(),
-         owner: actor,
+         owner: test.actor,
       };
 
       var templateData = {
-         message: skillName + " cannot be used unless it is learned (at least 1 skill add).",
-         actorPic: actor.data.img
+         message: test.skillName + " cannot be used unless it is learned (at least 1 skill add).",
+         actorPic: test.actor.data.img
       };
 
       const templatePromise = renderTemplate("./systems/torgeternity/templates/partials/skill-error-card.hbs", templateData);
@@ -61,7 +62,12 @@ export async function SkillCheck({
 
    // Roll as skilled or unskilled
    var diceroll
-   if (test.testType === "skill") {
+   if (test.previousBonus === true) {
+      //Don't roll anything
+      if (test.skillAdds > 0) {
+         test.unskilledLabel = "display:none"
+      }
+   } else if (test.testType === "skill") {
       if (test.skillAdds > 0) {
          diceroll = new Roll('1d20x10x20').evaluate({ async: false })
             ;
@@ -81,20 +87,25 @@ export async function SkillCheck({
          ;
       test.unskilledLabel = "display:none"
    };
+
    //diceroll.toMessage();
-   test.diceroll = diceroll;
+   if (test.previousBonus === true) {
+      test.diceroll = null;
+   } else {
+      test.diceroll = diceroll;
+      test.rollTotal = diceroll.total;
+   }
 
    // Get Bonus and Roll Result
-   test.rollTotal = diceroll.total;
 
    // Get modifiers
-   test.woundModifier = parseInt(-(actor.data.data.wounds.value))
+   /* test.woundModifier = parseInt(-(actor.data.data.wounds.value))
 
    if (actor.data.data.stymiedModifier === parseInt(-2)) {
       test.stymiedModifier = -2
    } else if (actor.data.data.stymiedModifier === -4) {
       test.stymiedModifier = -4
-   }
+   } */
 
    // Set Chat Title
    test.chatTitle = test.skillName + " Test";
@@ -102,7 +113,8 @@ export async function SkillCheck({
    renderSkillChat(test, diceroll);
 };
 
-export function weaponAttack({
+export function weaponAttack(test) {
+/*   {
    testType = null,
    skillName = null,
    skillBaseAttribute = null,
@@ -146,66 +158,58 @@ export function weaponAttack({
       cardsPlayed: 0,
       sizeModifier: 0,
       vulnerableModifier: 0
-   };
-
-   // What kind of actor is this?
-   if (actor.data.type === "threat") {
-      test.actorType = "threat"
-   };
+   }; */
 
    // Calculate damage
    if (test.weaponDamageType === "flat") {
       test.damage = test.weaponDamage
    } else if (test.weaponDamageType === "strengthPlus") {
-      test.damage = parseInt(test.strengthValue) + parseInt(test.weaponDamage)
+      test.damage = parseInt(test.strengthValue) + parseInt(test.weaponDamage) + parseInt(test.vitalAreaDamageModifier)
    } else if (test.weaponDamageType === "charismaPlus") {
-      test.damage = parseInt(test.charismaValue) + parseInt(test.weaponDamage)
+      test.damage = parseInt(test.charismaValue) + parseInt(test.weaponDamage) + parseInt(test.vitalAreaDamageModifier)
    } else if (test.weaponDamageType === "dexterityPlus") {
-      test.damage = parseInt(test.dexterityValue) + parseInt(test.weaponDamage)
+      test.damage = parseInt(test.dexterityValue) + parseInt(test.weaponDamage)+ parseInt(test.vitalAreaDamageModifier)
    } else if (test.weaponDamageType === "mindPlus") {
-      test.damage = parseInt(test.mindValue) + parseInt(test.weaponDamage)
+      test.damage = parseInt(test.mindValue) + parseInt(test.weaponDamage)+ parseInt(test.vitalAreaDamageModifier)
    } else if (test.weaponDamageType === "spiritPlus") {
-      test.damage = parseInt(test.spiritValue) + parseInt(test.weaponDamage)
+      test.damage = parseInt(test.spiritValue) + parseInt(test.weaponDamage)+ parseInt(test.vitalAreaDamageModifier)
    } else {
-      test.damage = test.weaponDamage
+      test.damage = parseInt(test.weaponDamage) + parseInt(test.vitalAreaDamageModifier)
    }
 
    // Roll as skilled or unskilled
-   var diceroll
-   if (test.skillAdds > 0) {
-      diceroll = new Roll('1d20x10x20').roll();
-      test.unskilledLabel = "display:none"
-   } else if (test.skillAdds === 0) {
-      diceroll = new Roll('1d20x10').roll();
-      test.unskilledLabel = "display:block"
-      // Should trigger only if this is a threat and test.skilAdds therefore equals null   
+   var diceroll = ""
+   if (test.previousBonus === true) {
+      //Don't roll anything
+      if (test.skillAdds > 0) {
+         test.unskilledLabel = "display:none"
+      }
+   } else if (test.testType === "skill") {
+      if (test.skillAdds > 0) {
+         diceroll = new Roll('1d20x10x20').evaluate({ async: false })
+            ;
+         test.unskilledLabel = "display:none"
+      } else if (test.skillAdds === 0) {
+         diceroll = new Roll('1d20x10').evaluate({ async: false })
+            ;
+         test.unskilledLabel = "display:block"
+         // Should trigger only if this is a threat and test.skilAdds therefore equals null   
+      } else {
+         diceroll = new Roll('1d20x10x20').evaluate({ async: false });
+         test.unskilledLabel = "display:none"
+      }
    } else {
-      diceroll = new Roll('1d20x10x20').roll();
+      diceroll = new Roll('1d20x10x20').evaluate({ async: false });
       test.unskilledLabel = "display:none"
-   }
+   };
+
    //diceroll.toMessage();
-   test.diceroll = diceroll;
-
-   // Get Bonus and Roll Result
-   test.rollTotal = diceroll.total;
-
-   // Get modifiers
-   test.woundModifier = parseInt(-(actor.data.data.wounds.value))
-
-   if (actor.data.data.stymiedModifier === parseInt(-2)) {
-      test.stymiedModifier = -2
-   } else if (actor.data.data.stymiedModifier === -4) {
-      test.stymiedModifier = -4
+   if (test.previousBonus === true) {
+      test.diceroll = null;
+   } else {
+      test.diceroll = diceroll;
+      test.rollTotal = diceroll.total;
    }
-
-   if (Array.from(game.user.targets).length > 0) {
-      var target = Array.from(game.user.targets)[0];
-      if (target.actor.data.data.details.sizeBonus) {
-         test.sizeModifier = target.actor.data.data.details.sizeBonus;
-      };
-      test.vulnerableModifier = target.actor.data.data.vulnerableModifier
-   }
-
 
    // Set Chat Title
    test.chatTitle = test.weaponName;
@@ -215,46 +219,7 @@ export function weaponAttack({
 }
 
 
-export function powerRoll({
-   testType = null,
-   skillName = null,
-   skillBaseAttribute = null,
-   skillAdds = null,
-   skillValue = null,
-   strengthValue = null,
-   powerName = null,
-   powerAttack = null,
-   powerDamage = null,
-   actor = null,
-   item = null,
-   actorPic = null } = {}) {
-   var test = {
-      actor: actor.data._id,
-      item: item.data,
-      actorPic: actorPic,
-      actorType: "stormknight",
-      skillName: skillName,
-      skillBaseAttribute: skillBaseAttribute,
-      skillAdds: skillAdds,
-      skillValue: skillValue,
-      strengthValue: strengthValue,
-      testType: "power",
-      powerName: powerName,
-      powerAttack: powerAttack,
-      damage: powerDamage,
-      possibilityTotal: 0,
-      upTotal: 0,
-      heroTotal: 0,
-      dramaTotal: 0,
-      cardsPlayed: 0,
-      sizeModifier: 0,
-      vulnerableModifier: 0
-   };
-
-   // What kind of actor is this?
-   if (actor.data.type === "threat") {
-      test.actorType = "threat"
-   };
+export function powerRoll(test) {
 
    // Roll dice as skilled (assumes character would not have power unless skilled)
    var diceroll = new Roll('1d20x10x20').roll();
@@ -265,14 +230,14 @@ export function powerRoll({
    // Get Bonus and Roll Result
    test.rollTotal = diceroll.total;
 
-   // Get modifiers; only modify based on target if this is an attack
-   test.woundModifier = parseInt(-(actor.data.data.wounds.value))
+   /* Get modifiers; only modify based on target if this is an attack
+   test.woundModifier = parseInt(-(test.actor.data.data.wounds.value))
 
    if (actor.data.data.stymiedModifier === parseInt(-2)) {
       test.stymiedModifier = -2
    } else if (actor.data.data.stymiedModifier === -4) {
       test.stymiedModifier = -4
-   }
+   } */
 
    if (test.powerAttack === "true") {
       if (Array.from(game.user.targets).length > 0) {
@@ -295,7 +260,11 @@ export function powerRoll({
 export function renderSkillChat(test, diceroll) {
    // Get current bonus and make + label visible if number is positive
    test.combinedRollTotal = parseInt(test.rollTotal) + parseInt(test.upTotal) + parseInt(test.possibilityTotal) + parseInt(test.heroTotal) + parseInt(test.dramaTotal)
-   test.bonus = torgBonus(test.combinedRollTotal);
+   if (test.previousBonus != true) {
+      test.bonus = torgBonus(test.combinedRollTotal);
+   } else {
+      test.combinedRollTotal = "-"
+   }
 
    // Raise bonus to 1 if actively defending
    if (test.testType === "activeDefense") {
@@ -312,34 +281,76 @@ export function renderSkillChat(test, diceroll) {
    }
 
    // Set Modifiers and Chat Content Relating to Modifiers
-   test.displayModifiers = false;
+   test.displayModifiers = true;
    test.modifiers = 0;
    test.modifierText = "";
 
    if (test.woundModifier < 0) {
       test.displayModifiers = true;
-      test.modifierText = "Wounds " + test.woundModifier + " ";
+      test.modifierText = "Wounds " + test.woundModifier + "\n";
       test.modifiers = parseInt(test.woundModifier)
    };
 
    if (test.stymiedModifier < 0) {
       test.displayModifiers = true;
       if (test.stymiedModifier == -2) {
-         test.modifierText += "Stymied -2 ";
+         test.modifierText += "Stymied -2 \n";
          test.modifiers += -2;
       } else if (test.stymiedModifier == -4) {
-         test.modifierText += "Very Stymied -4 ";
+         test.modifierText += "Very Stymied -4 \n";
          test.modifiers += -4;
       }
    };
+
+   if (test.darknessModifier < 0) {
+      test.displayModifiers = true;
+      test.modifierText += "Darkness " + test.darknessModifier + "\n";
+      test.modifiers += parseInt(test.darknessModifier);
+   }
+
+   if (test.movementModifier < 0) {
+      test.displayModifiers = true;
+      test.modifierText += "Running -2 \n";
+      test.modifiers += -2;
+   }
+
+   if (test.multiModifier < 0) {
+      test.displayModifiers = true;
+      test.modifierText += "Multi-Action " + test.multiModifier + "\n";
+      test.modifiers += parseInt(test.multiModifier);
+   }
+
+   if (test.targetsModifier < 0) {
+      test.displayModifiers = true;
+      test.modifierText += "Multi-Target " + test.targetsModifier + "\n";
+      test.modifiers += parseInt(test.targetsModifier); 
+   }
+
+   if (test.isOther1 == true) {
+      test.displayModifiers = true;
+      test.modifierText += test.other1Description + " " + test.other1Modifier + "\n";
+      test.modifiers += parseInt(test.other1Modifier);
+   }
+
+   if (test.isOther2 == true) {
+      test.displayModifiers = true;
+      test.modifierText += test.other2Description + " " + test.other2Modifier + "\n";
+      test.modifiers += parseInt(test.other2Modifier);
+   }
+
+   if (test.isOther3 == true) {
+      test.displayModifiers = true;
+      test.modifierText += test.other3Description + " " + test.other3Modifier + "\n";
+      test.modifiers += parseInt(test.other3Modifier);
+   }
 
    if (test.sizeModifier != 0) {
       test.displayModifiers = true;
       test.modifiers += parseInt(test.sizeModifier);
       if (test.sizeModifier > 0) {
-         test.modifierText += "Target Size + " + test.sizeModifier + " "
+         test.modifierText += "Target Size + " + test.sizeModifier + "\n"
       } else {
-         test.modifierText += "Target Size " + test.sizeModifier + " "
+         test.modifierText += "Target Size " + test.sizeModifier + "\n"
       }
    }
 
@@ -347,10 +358,39 @@ export function renderSkillChat(test, diceroll) {
       test.displayModifiers = true;
       test.modifiers += parseInt(test.vulnerableModifier);
       if (test.vulnerableModifier === 2) {
-         test.modifierText += "Target Vulnerable +2 "
+         test.modifierText += "Target Vulnerable +2 \n"
       } else if (test.vulnerableModifier === 4) {
-         test.modifierText += "Target Very Vulnerable +4"
+         test.modifierText += "Target Very Vulnerable +4 \n"
       }
+   }
+
+   if (test.calledShotModifier < 0) {
+      test.modifiers += parseInt(test.calledShotModifier);
+      test.modifierText += "Called Shot " + test.calledShotModifier + "\n"
+   }
+
+   if (test.burstModifier > 0) {
+      test.modifiers += parseInt(test.burstModifier);
+      if (test.burstModifier === 2) {
+         test.modifierText += "Short Burst +2 \n"
+      } else if (test.burstModifier === 4) {
+         test.modifierText += "Long Burst +4 \n"
+      }
+   }
+
+   if (test.allOutModifier > 0) {
+      test.modifiers += 4;
+      test.modifierText += "All-Out Attack +4 \n"
+   }
+
+   if (test.aimedModifier > 0) {
+      test.modifiers += 4;
+      test.modifierText += "Aimed Shot +4"
+   }
+
+   if (test.concealmentModifier < 0) {
+      test.modifiers += parseInt(test.concealmentModifier);
+      test.modifierText += "Target Concealment " + test.concealmentModifier + "\n"
    }
 
    if (test.displayModifiers === true) {
@@ -360,42 +400,105 @@ export function renderSkillChat(test, diceroll) {
    };
 
    // Add +3 cards to bonus
-   test.bonus += (3 * parseInt(test.cardsPlayed));
+   const tempBonus = parseInt(test.bonus)
+   test.bonus = parseInt(tempBonus) + (parseInt(test.cardsPlayed) * 3)
 
-   test.rollResult = parseInt(test.skillValue) + parseInt(test.bonus) + parseInt(test.modifiers);
+   test.rollResult = parseInt(parseInt(test.skillValue) + parseInt(test.bonus) + parseInt(test.modifiers));
+
+   // Determine Outcome
+   test.outcome = null
+   test.actionTotalContent = "Action Total"
+   const testDifference = test.rollResult - test.DN
+   if (test.isDN === true) {
+      test.actionTotalContent = "DN " + test.DN + " - " + test.rollResult + " Action Total"
+      if (testDifference < 0) {
+         test.outcome = "Failure"
+      } else if (testDifference > 9 ) {
+         test.outcome = "Outstanding Success"
+      } else if (testDifference > 4) {
+         test.outcome = "Good Success"
+      } else {
+         test.outcome = "Standard Success"
+      }
+   }
+
+   // Turn on + sign for modifiers?
+   if (test.modifiers >=1) {
+      test.modifierPlusLabel = "display:"
+   } else {
+      test.modifierPlusLabel = "display:none"
+   }
 
    // Choose Text to Display as Result
    if (test.rollTotal === 1) {
       test.resultText = "Mishap";
       test.actionTotalLabel = "display:none";
-   } else {
-      if (test.testType === "activeDefense") {
-         if (test.bonus < 2) {
-            test.resultText = "+ 1"
+   } else if (test.testType === "activeDefense") {
+      if (test.bonus < 2) {
+         test.resultText = "+ 1"
          } else {
             test.resultText = "+ " + test.bonus;
          }
          test.actionTotalLabel = "display:none"
-      } else {
+   } else if (test.isDN === true) {
+      test.resultText = test.outcome
+   } else {
          test.resultText = test.rollResult;
          test.actionTotalLabel = "display:block"
-      }
-   };
+   }
 
-   // If an attack, display base damage
+
+   // If an attack, calculate and display damage
    if (test.testType === "attack") {
+      test.damageLabel = "display: block";
+      //Check for basic vs. enhanced roll using isDN
+      if (test.isDN === true) {
+         test.damageSubLabel = "display:block";
+         // Adjust toughness based on AP effects and cover modifier
+         if (test.weaponAP > 0) {
+            if (test.weaponAP <= test.targetArmor) {
+               test.targetAdjustedToughness = parseInt(test.targetToughness) - parseInt(test.weaponAP) + parseInt(test.coverModifier);
+            } else {
+               test.targetAdjustedToughness = parseInt(test.targetToughness) - parseInt(test.targetArmor) + parseInt(test.coverModifier);
+            }
+         } else {
+            test.targetAdjustedToughness = parseInt(test.targetToughness) + parseInt(test.coverModifier);
+         }
+         // Generate damage description and damage sublabel 
+         if (test.resultText === "Failure" || test.resultText === "Mishap") {
+            test.damageDescription = "(No Damage)";
+            test.damageSubDescription = "Attack Missed";
+         } else {
+            test.damageDescription = torgDamage(test.damage,test.targetAdjustedToughness)
+            test.damageSubDescription = "Damage " + test.damage + " vs. " + test.targetAdjustedToughness + " Toughness"
+         }
+      } else {
+         // Basic roll
+         test.damageSubLabel = "display:none";
+         test.damageDescription = test.damage + " Damage";
+      }
+   } else {
+      test.damageLabel = "display:none"
+      test.damageSubLabel = "display:none"
+   }
+   
+   
+   /* Old if (test.testType === "attack") {
       test.damageLabel = "display:"
    } else {
       test.damageLabel = "display:none"
-   };
+   }; */
 
    // Determine whether to display damage for power roll
    if (test.testType === "power") {
       if (test.powerAttack === "true") {
          test.damageLabel = "display:"
-      } else (
-         test.damageLabel = "display:none"
-      )
+         test.damageSubLabel = "display:none";
+         test.damageDescription = test.damage + " Damage";
+      } else {
+         test.damageLabel = "display:none";
+         test.damageSubLabel = "display:none"
+      }
    };
 
    // Remind Player to Check for Disconnect?
@@ -430,10 +533,7 @@ export function renderSkillChat(test, diceroll) {
       test.cardsPlayedLabel = "display:none"
    };
 
-   // Disable unavailable menu options
-   if (test.possibilityTotal > 0) {
-      test.possibilityStyle = "pointer-events:none;color:gray"
-   }
+   // Disable unavailable menu options (Note: possibilities are always available)
 
    if (test.upTotal > 0) (
       test.upStyle = "pointer-events:none;color:gray"
@@ -453,23 +553,26 @@ export function renderSkillChat(test, diceroll) {
          test.plus3Style = "display:none"
    }
 
+  
    var chatData = {
       user: game.user.data._id,
       speaker: ChatMessage.getSpeaker(),
-      owner: test.actor
+      owner: test.actor,
    };
 
-   const templatePromise = renderTemplate("./systems/torgeternity/templates/partials/skill-card.hbs", test);
+   const templatePromise = renderTemplate("./systems/torgeternity/templates/partials/skill-card.hbs", test)
+
+   const messageData = {...chatData, flags: {torgeternity: {test}}}
 
    templatePromise.then(content => {
-      if (test.diceroll !== undefined) {
-         chatData.flavor = content;
-         test.diceroll.toMessage(chatData);
+      if (test.diceroll !== null) {
+         messageData.flavor = content;
+         test.diceroll.toMessage(messageData);
       } else {
-         chatData.content = content;
-         ChatMessage.create(chatData);
+         messageData.content = content;
+         ChatMessage.create(messageData);
       };
-   });
+   }); 
 
 
 }
@@ -650,6 +753,24 @@ export function torgBD() {
    return diceroll
 }
 
+export function torgDamage(damage,toughness) {
+   const damageDiff = parseInt(damage) - parseInt(toughness)
+   var torgDamage;
+   if (damageDiff < -5) {
+      torgDamage = "(No Damage)"
+   } else if (damageDiff < 0) {
+      torgDamage = "1 Shock"
+   } else if (damageDiff < 5) {
+      torgDamage = "2 Shock"
+   } else if (damageDiff < 10) {
+      torgDamage = "1 Wound, 2 Shock"
+   } else {
+      const wounds = Math.floor(damageDiff/5);
+      const shock = (Math.floor(damageDiff/5) *2) + 2;
+      torgDamage = wounds + " Wounds, " + shock + " Shock";
+   }
+   return torgDamage
+}
 // Old BD function
 /*
 export function torgBD() {

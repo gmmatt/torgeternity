@@ -220,6 +220,7 @@
             "skills": "Skills",
             "favored":"Favored",
             "possibilitypotential": "Possibilities (Potential)",
+            "size": "Size",
             "possibilities": "Possibilities",
             "up": "Up",
             "equipment": "Equipment",
@@ -270,7 +271,38 @@
             "passiveEffects": "Passive Effects",
             "inactiveEffects": "Inactive Effects",
             "source": "Source",
-            "otherAttacks": "Other"
+            "otherAttacks": "Other",
+            "difficulty": "Difficulty",
+            "dn": "DN",
+            "roll": "Roll",
+            "target": "Target",
+            "inputExisting": "Input Existing",
+            "movementPenalty": "Movement Penalty",
+            "walking": "Walking (None)",
+            "running": "Running (-2)",
+            "multiActionPenalty": "Multi-Action Penalty",
+            "actions": "Actions",
+            "multiTargetPenalty": "Multi-Target Penalty",
+            "targets": "Targets",
+            "otherModifiers": "Other Modifiers",
+            "description": "Description",
+            "effect": "Effect",
+            "statusEffects": "Status Effects",
+            "update": "Update",
+            "attackOptions": "Attack Options",
+            "calledShot": "Called Shot",
+            "none": "None",
+            "vitalArea": "Vital Area",
+            "burst": "Burst",
+            "shortBurst": "Short (+2)",
+            "longBurst": "Long (+4)",
+            "allOut": "All-Out Attack",
+            "aimed": "Aimed",
+            "blindFire": "Blind Fire",
+            "targetOptions": "Target Options",
+            "concealment": "Concealment",
+            "coverBonus": "Cover Bonus"
+
 
         },
         "itemSheetDescriptions": {
@@ -355,7 +387,14 @@
             "concentrating": "Concentrating",
             "disconnected": "Disconnected",
             "malfunction": "Malfunction",
-            "restrained": "Restrained"
+            "restrained": "Restrained",
+            "dim": "Dim",
+            "dark": "Dark",
+            "pitchBlack": "Pitch Black",
+            "waiting": "Waiting",
+            "darkness": "Darkness",
+            "targetSize": "Target Size",
+            "targetVulnerability": "Target Vulnerability"
         },
 
         "yesNo": {
@@ -384,6 +423,15 @@
             "attack": "Attack",
             "baseDamage": "Base Damage",
 			"value": "Value"
+        },
+
+        "sizes": {
+            "tiny": "Tiny",
+            "verySmall": "Very Small",
+            "small": "Small",
+            "normal": "Normal",
+            "large": "Large",
+            "veryLarge": "Very Large"
         }
     }
 }

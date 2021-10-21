@@ -8,10 +8,23 @@
 For manual installation, use the provided manifest URL in the "*Install System*" popup window 
 while managing game systems.
 
-v. 1.1.6
- - Update Storm Knight sheet to make it easier to read
- - Update Spanish localization (thanks to lozaljo and ForjaSalve)
- - Removed gulpfile and scss dependencies. CSS should now be edited directly.
+v. 2.0.1
+- Added ability to edit AP on all weapons (previously only heavy weapons had
+  the option for editing AP)
+  
+v. 2.0.0
+- Enhanced skill test update! The new system includes multiple enhancements
+  to the skill test system. Shift-click on any skill name or attack icon to
+  get a dialog with options for your DN and various modifiers. After rolling,
+  click on the "Modifiers" label in chat to update/change DN and modifiers.
+- Added target size option to threats (this makes it possible for automation
+  to take target size into account when calculating DNs)
+- Remomved disabling of possibility button in skill test chat after first
+  check. This enables spending more than one possibility on a test, where it
+  is permitted (e.g., Nile Empire).
+- Update Storm Knight sheet to make it easier to read
+- Update Spanish localization (thanks to lozaljo and ForjaSalve)
+- Removed gulpfile and scss dependencies. CSS should now be edited directly.
 
 v. 1.1.5
 - Added custom Torg Eternity dice that are compatible with the Dice So Nice module.

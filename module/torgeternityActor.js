@@ -215,6 +215,13 @@ export default class torgeternityActor extends Actor {
                 } else if (effects.contents[i].data.flags.core.statusId === "veryVulnerable") {
                     this.data.data.vulnerableModifier = 4
                 }
+                if (effects.contents[i].data.flags.core.statusId === "dim") {
+                    this.data.data.darknessModifier = -2
+                } else if (effects.contents[i].data.flags.core.statusId === "dark") {
+                    this.data.data.darknessModifier = -4
+                } else if (effects.contents[i].data.flags.core.statusId === "pitchBlack") {
+                    this.data.data.darknessModifier = -6
+                }
             }
         }
     }

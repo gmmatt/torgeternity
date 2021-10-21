@@ -1,5 +1,6 @@
 export const torgeternity = {};
 torgeternity.welcomeMessage="";
+torgeternity.skillDialog="";
 
 torgeternity.gameCards = {
     cardType: {
@@ -193,6 +194,15 @@ torgeternity.yesNo = {
     false: "torgeternity.yesNo.false"
 }
 
+torgeternity.sizes = {
+    normal: "torgeternity.sizes.normal",
+    tiny: "torgeternity.sizes.tiny",
+    verySmall: "torgeternity.sizes.verySmall",
+    small: "torgeternity.sizes.small",
+    large: "torgeternity.sizes.large",
+    veryLarge: "torgeternity.sizes.veryLarge"
+}
+
 
 torgeternity.statusEffects = [
     {
@@ -249,6 +259,30 @@ torgeternity.statusEffects = [
         icon: 'systems/torgeternity/images/status-markers/restrained.webp',
         id: 'restrained',
         label: 'torgeternity.statusEffects.restrained'
+    },
+
+    {
+        icon: 'systems/torgeternity/images/status-markers/dark-2.png',
+        id: 'dim',
+        label: 'torgeternity.statusEffects.dim'
+    },
+
+    {
+        icon: 'systems/torgeternity/images/status-markers/dark-4.png',
+        id: 'dark',
+        label: 'torgeternity.statusEffects.dark'
+    },
+
+    {
+        icon: 'systems/torgeternity/images/status-markers/dark-6.png',
+        id: 'pitchBlack',
+        label: 'torgeternity.statusEffects.pitchBlack' 
+    },
+
+    {
+        icon: 'systems/torgeternity/images/status-markers/waiting.png',
+        id: 'waiting',
+        label: 'torgeternity.statusEffects.waiting'
     }
     
 

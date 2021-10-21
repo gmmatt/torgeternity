@@ -350,12 +350,6 @@ function rollItemMacro(itemName) {
   }
 }
 
-
-
-
-
-
-
 Hooks.on("renderChatLog", (app, html, data) => {
   //----chat messages listeners
   Chat.addChatListeners(html);
@@ -376,6 +370,8 @@ Hooks.on("renderChatLog", (app, html, data) => {
     }
   }
 });
+
+
 Hooks.on("renderChatMessage", (mess, html, data) => {
   if (game.settings.get("torgeternity", "animatedChat") == true) {
     html[0].classList.add("flip-card");
