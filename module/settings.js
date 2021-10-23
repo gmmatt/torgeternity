@@ -88,6 +88,7 @@ export function registerTorgSettings() {
         config: true,
         type: String,
         choices: {
+            coreDrama: "Drama Deck",
             coreEarth: "Core Earth Drama Deck",
             aysle: "Aysle Drama Deck",
             cyberPapacy: "Cyberpapacy Drama Deck",
