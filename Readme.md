@@ -9,9 +9,11 @@ For manual installation, use the provided manifest URL in the "*Install System*"
 while managing game systems.
 
 v. 2.0.2
-- Updated fr.json (thanks VieuxTroll!)
+- Updated fr.json (thanks VieuxTroll!).
 - Attempting Magic/Miracles/Psionics tests unskilled now generates a message 
   indicating that the test cannot be completed.
+- Fixed an issue where enhanced missile weapon attacks were using Melee 
+  Weapons/Unarmed Combat as a defense, rather than dodge.
   
 
 v. 2.0.1
