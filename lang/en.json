@@ -296,6 +296,7 @@
             "burst": "Burst",
             "shortBurst": "Short (+2)",
             "longBurst": "Long (+4)",
+            "heavyBurst": "Heavy (+6)",
             "allOut": "All-Out Attack",
             "aimed": "Aimed",
             "blindFire": "Blind Fire",

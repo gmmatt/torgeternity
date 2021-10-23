@@ -398,7 +398,7 @@ export default class torgeternityActorSheet extends ActorSheet {
                 vulnerableModifier = target.actor.data.data.vulnerableModifier;
                 targetToughness = target.actor.data.data.other.toughness;
                 targetArmor = target.actor.data.data.other.armor;
-                if (attackWith === "fireCombat" || attackWith === "energyWeapons" || attackWith === "heavyWeapons") {
+                if (attackWith === "fireCombat" || attackWith === "energyWeapons" || attackWith === "heavyWeapons" || attackWith === "missileWeapons") {
                     targetDefenseSkill = "Dodge";
                     targetDefenseValue = target.actor.data.data.skills.dodge.value;
                 } else {

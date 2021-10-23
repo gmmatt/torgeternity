@@ -221,6 +221,29 @@ export function weaponAttack(test) {
 
 export function powerRoll(test) {
 
+   // Cannot Attempt Power Tests Unskilled
+   if (test.skillValue === "-") {
+      var cantRollData = {
+         user: game.user.data._id,
+         speaker: ChatMessage.getSpeaker(),
+         owner: test.actor,
+      };
+
+      var templateData = {
+         message: test.powerName + " cannot be used without at least 1 add in the required skill.",
+         actorPic: test.actor.data.img
+      };
+
+      const templatePromise = renderTemplate("./systems/torgeternity/templates/partials/skill-error-card.hbs", templateData);
+
+      templatePromise.then(content => {
+         cantRollData.content = content;
+         ChatMessage.create(cantRollData);
+      })
+
+      return
+   };
+   
    // Roll dice as skilled (assumes character would not have power unless skilled)
    var diceroll = new Roll('1d20x10x20').evaluate({async: false});
    test.unskilledLabel = "display:none"
@@ -375,6 +398,8 @@ export function renderSkillChat(test, diceroll) {
          test.modifierText += "Short Burst +2 \n"
       } else if (test.burstModifier === 4) {
          test.modifierText += "Long Burst +4 \n"
+      } else if (test.burstModifier === 6) {
+         test.modifierText += "Heavy Burst +6 \n"
       }
    }
 
