@@ -106,6 +106,8 @@ export class attackDialog extends FormApplication {
             this.test.burstModifier = 2
         } else if (document.getElementById("burst-long").checked) {
             this.test.burstModifier = 4
+        } else if (document.getElementById("burst-heavy").checked) {
+            this.test.burstModifier = 6
         }
 
         // Add All-Out Attack

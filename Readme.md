@@ -14,6 +14,7 @@ v. 2.0.2
   indicating that the test cannot be completed.
 - Fixed an issue where enhanced missile weapon attacks were using Melee 
   Weapons/Unarmed Combat as a defense, rather than dodge.
+- Added heavy burst to Rapid Fire options in enhanced attack tests
   
 
 v. 2.0.1

@@ -398,6 +398,8 @@ export function renderSkillChat(test, diceroll) {
          test.modifierText += "Short Burst +2 \n"
       } else if (test.burstModifier === 4) {
          test.modifierText += "Long Burst +4 \n"
+      } else if (test.burstModifier === 6) {
+         test.modifierText += "Heavy Burst +6 \n"
       }
    }
 
