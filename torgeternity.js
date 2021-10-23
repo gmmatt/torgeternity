@@ -20,6 +20,7 @@ import { modifyTokenBars } from "./module/tokenBars.js";
 import { registerHelpers } from "./module/handlebarHelpers.js";
 import torgCombatant from "./module/dramaticScene/torgeternityCombatant.js";
 import { registerDiceSoNice } from "./module/dice-so-nice.js";
+import torgeternityPlayerHand from "./module/cards/torgeternityPlayerHand.js"
 
 
 Hooks.once("init", async function () {
@@ -54,7 +55,6 @@ Hooks.once("init", async function () {
   CONFIG.Scene.sheetClass = torgeternitySceneConfig;
   CONFIG.ui.nav = torgeternityNav;
 
-
   //---custom user class
   CONFIG.ui.players = TorgeternityPlayerList;
 
@@ -68,6 +68,9 @@ Hooks.once("init", async function () {
   Actors.registerSheet("torgeternity", torgeternityActorSheet, {
     makeDefault: true,
   });
+
+  //---register cards
+  DocumentSheetConfig.registerSheet(Cards, "core", torgeternityPlayerHand, {label: "Torg Player Hand", types: ["hand"]});
 
   //----------preloading handlebars templates
   preloadTemplates();

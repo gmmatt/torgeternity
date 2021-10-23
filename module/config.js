@@ -39,6 +39,12 @@ torgeternity.gameCards = {
     }
     
 }
+
+torgeternity.cardTypes = {
+    drama: "torgeternity.cardTypes.drama",
+    destiny: "torgeternity.cardTypes.destiny",
+    cosm: "torgeternity.cardDyptes.cosm"
+}
 torgeternity.viewMode = {
     UI: true
 }
@@ -203,7 +209,6 @@ torgeternity.sizes = {
     veryLarge: "torgeternity.sizes.veryLarge"
 }
 
-
 torgeternity.statusEffects = [
     {
         icon: 'systems/torgeternity/images/status-markers/stymied.webp',
@@ -287,9 +292,3 @@ torgeternity.statusEffects = [
     
 
 ]
-
-torgeternity.cardTypes = {
-    destiny: "Destiny",
-    cosm: "Cosm",
-    drama: "Drama"
-}

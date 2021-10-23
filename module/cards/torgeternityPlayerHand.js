@@ -1,0 +1,125 @@
+export default class  torgeternityPlayerHand extends CardsHand {
+
+    static get defaultOptions() {
+        return foundry.utils.mergeObject(super.defaultOptions, {
+            classes: ["torgeternity", "sheet", "cardsHand", "cards-config"],
+
+        })
+    }
+
+    get template() {
+        
+        return "systems/torgeternity/templates/cards/torgeternityPlayerHand.hbs";
+
+    }
+
+    async _onCardControl(event) {
+        // Shamelessly stolen from core software
+        const button = event.currentTarget;
+        const li = button.closest(".card");
+        const card = li ? this.object.cards.get(li.dataset.cardId) : null;
+        const cls = getDocumentClass("Card");
+    
+        // Save any pending change to the form
+        await this._onSubmit(event, {preventClose: true, preventRender: true});
+    
+        // Handle the control action
+        switch ( button.dataset.action ) {
+          case "play":
+              card.pass(game.cards.getName("Destiny Discard"));
+              card.toMessage({content: `<div class="card-draw flexrow"><img class="card-face" src="${card.img}"/><h4 class="card-name">Plays ${card.name}</h4>
+            </div>`})
+              return;
+          case "view":
+              new ImagePopout(card.img, {title: card.name}).render(true,{width:425,height:650});
+              return;
+          case "display":
+              let x = new ImagePopout(card.img, {title: card.name}).render(true,{width:425,height:650});
+              x.shareImage();
+              return;
+          case "discard":
+              card.pass(game.cards.getName("Destiny Discard"));
+              card.toMessage({content: `<div class="card-draw flexrow"><img class="card-face" src="${card.img}"/><h4 class="card-name">Discards ${card.name}</h4></div>`});
+              return;
+          case "pass":
+              this.playerPassDialog(card);
+              return;
+          case "create":
+            return cls.createDialog({}, {parent: this.object, pack: this.object.pack});
+          case "edit":
+            return card.sheet.render(true);
+          case "delete":
+            return card.deleteDialog();
+          case "deal":
+            return this.object.dealDialog();
+          case "draw":
+            return this.object.drawDialog();
+          case "pass":
+            return this.object.passDialog();
+          case "reset":
+            this._sortStandard = true;
+            return this.object.reset();
+          case "shuffle":
+            this._sortStandard = false;
+            return this.object.shuffle();
+          case "toggleSort":
+            this._sortStandard = !this._sortStandard;
+            return this.render();
+          case "nextFace":
+            return card.update({face: card.data.face === null ? 0 : card.data.face+1});
+          case "prevFace":
+            return card.update({face: card.data.face === 0 ? null : card.data.face-1});
+        }
+      }
+    
+    async playerPassDialog(card) {
+      const cards = game.cards.filter(c => (c !== this) && (c.type !== "deck") && c.testUserPermission(game.user, "LIMITED"));
+      if ( !cards.length ) return ui.notifications.warn("No hands available!", {localize: true});
+  
+      // Construct the dialog HTML
+      const html = await renderTemplate("systems/torgeternity/templates/cards/playerPassDialog.hbs", {
+        cards: cards,
+      });
+  
+      // Display the prompt
+      return Dialog.prompt({
+        title: game.i18n.localize("torgeternity.dialogPrompts.playerPassTitle"),
+        label: game.i18n.localize("torgeternity.dialogPrompts.playerPassLabel"),
+        content: html,
+        callback: html => {
+          const form = html.querySelector("form.cards-dialog");
+          const fd = new FormDataExtended(form).toObject();
+          const to = game.cards.get(fd.to);
+          return card.pass(to).catch(err => {
+            ui.notifications.error(err.message);
+            return this;
+          });
+        },
+        options: {jQuery: false}
+      });
+    } 
+    
+    /* Probably don't need to do any of this
+    
+    _canDragStart(selector) {
+        super.canDragStart(html);
+    }
+
+    _onDragStart(event) {
+        super.onDragStart(event)
+    }
+
+    _canDragDrop(selector) {
+        super.canDragDrop(selector)
+    }
+
+    async _ondrop(event) {
+        super.onDrop(event);
+    }
+
+    _onSortCard(event,card) {
+        super.onSortCard(event,card)
+    } 
+    
+    */
+}

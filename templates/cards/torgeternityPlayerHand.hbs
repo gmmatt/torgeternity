@@ -1,0 +1,60 @@
+<form class="{{cssClass}}" autocomplete="off">
+    <header class="sheet-header flexrow">
+        <h1 class="name">
+            <input type="text" name="name" value="{{data.name}}" placeholder="{{localize 'Name'}}"/>
+        </h1>
+    </header>
+
+    <div>
+        <header class="cards-header flexrow">
+            <span class="card-faces">{{localize "CARD.Face"}}</span>
+            <a class="card-control sort-mode" title="{{localize "CARDS.SortMode"}}" data-action="toggleSort">
+                <i class="fas fa-sort fa-fw"></i>
+            </a>
+            <h4 class="card-name">{{localize "CARD.Name"}}</h4>
+            <span class="card-type">{{localize "CARD.Type"}}</span>
+            <div class="card-controls">
+                Actions        
+            </div>
+        </header>
+        <ol class="cards">
+        {{#each cards as |card|}}
+            <li class="card flexrow" data-card-id="{{card.id}}">
+                <div class="card-faces flexcol">
+                    <a class="card-control" title="{{localize 'CARD.FaceNext'}}" data-action="nextFace" {{#unless card.hasNextFace}}disabled{{/unless}}><i class="fas fa-caret-up"></i></a>
+                    <a class="card-control" title="{{localize 'CARD.FacePrevious'}}" data-action="prevFace" {{#unless card.hasPreviousFace}}disabled{{/unless}}><i class="fas fa-caret-down"></i></a>
+                </div>
+                <img class="card-face" src="{{card.img}}" alt="{{card.name}}" height="48">
+                <h4 class="card-name">{{card.name}}</h4>
+                {{#if card.showFace}}
+                <span class="card-type">{{card.type}}</span>
+                <div class="card-controls">
+                    <a class="card-control" title="Play Card" data-action="play"><i class="fas fa-play-circle" style="color:white"></i></a>
+                    <a class="card-control" title="View Card" data-action="view"><i class="fas fa-eye" style="color:white"></i></a>
+                    <a class="card-control" title="Display for All Players" data-action="display"><i class="fas fa-broadcast-tower" style="color:white"></i></a>
+                    <a class="card-control" title="Pass to Another Player" data-action="pass"><i class="fas fa-share-square" style="color:white"></i></a>
+                    <a class="card-control" title="Discard" data-action="discard"><i class="fas fa-inbox" style="color:white"></i></a>
+                </div>
+                {{/if}}
+            </li>
+        {{else}}
+            <li>
+                <p class="hint">{{localize "CARDS.NoCards"}}</p>
+            </li>
+        {{/each}}
+        </ol>
+    </div>
+
+    <!-- Sheet Footer -->
+    <footer class="sheet-footer flexrow">
+        {{#if owner}}
+        <button class="card-control" type="button" data-action="draw">
+            <i class="fas fa-plus"></i> {{localize "CARDS.Draw"}}
+        </button>
+        <button class="card-control" type="button" data-action="pass">
+            <i class="fas fa-share-square"></i> {{localize "CARDS.Pass"}}
+        </button>
+        {{/if}}
+    </footer>
+
+</form>

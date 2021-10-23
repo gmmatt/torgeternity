@@ -222,7 +222,7 @@ export function weaponAttack(test) {
 export function powerRoll(test) {
 
    // Roll dice as skilled (assumes character would not have power unless skilled)
-   var diceroll = new Roll('1d20x10x20').roll();
+   var diceroll = new Roll('1d20x10x20').evaluate({async: false});
    test.unskilledLabel = "display:none"
    //diceroll.toMessage();
    test.diceroll = diceroll;

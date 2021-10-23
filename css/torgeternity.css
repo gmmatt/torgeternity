@@ -2732,3 +2732,7 @@ form.actor-sheet.threat .tab[data-tab].active .editor {
   font-family: Palatino;
   font-size: 13px;
 }
+
+.torg-cards-action-icons fas-fa:before {
+  color: white;
+}

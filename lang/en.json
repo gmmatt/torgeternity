@@ -432,6 +432,14 @@
             "normal": "Normal",
             "large": "Large",
             "veryLarge": "Very Large"
+        },
+
+        "dialogPrompts": {
+            "playerPassTitle": "Pass to Player",
+            "playerPassLabel": "Pass",
+            "playerPassInstructions": "Select Player to Receive Card",
+            "playerPassTo": "Pass To"
         }
+        
     }
 }
