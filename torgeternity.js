@@ -113,6 +113,7 @@ Hooks.on("ready", async function () {
   sheetResize();
   //toggleViewMode();
 
+  
   //-----applying GM possibilities pool if absent
   if (game.user.isGM && !game.user.getFlag('torgeternity', 'GMpossibilities')) {
     game.user.setFlag('torgeternity', 'GMpossibilities', 0)
@@ -394,3 +395,4 @@ Hooks.on('updateActor', (actor, data, options, id) => {
   //updating playerList with users character up-to-date data
   ui.players.render(true);
 })
+
