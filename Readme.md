@@ -8,6 +8,12 @@
 For manual installation, use the provided manifest URL in the "*Install System*" popup window 
 while managing game systems.
 
+v. 2.0.2
+- Updated fr.json (thanks VieuxTroll!)
+- Attempting Magic/Miracles/Psionics tests unskilled now generates a message 
+  indicating that the test cannot be completed.
+  
+
 v. 2.0.1
 - Added ability to edit AP on all weapons (previously only heavy weapons had
   the option for editing AP)

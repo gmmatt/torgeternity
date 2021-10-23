@@ -120,7 +120,7 @@
             "powers": "Pouvoirs",
             "restrictions": "Restrictions",
             "minStrength": "Force min",
-            "ap":"AP"
+            "ap": "AP"
         },
         "stats": {
             "wounds": "Blessures",
@@ -138,7 +138,7 @@
         "enhancements": {
             "perk": "Atout associé",
             "description": "Description",
-            "enhances": "Améliore"
+            "enhances": "Amélioration"
         },
         "powers": {
             "axiom": "Axiome",
@@ -163,7 +163,8 @@
             "cyberpapacy": "Cyberpapauté",
             "tharkold": "Tharkold",
             "panPacifica": "Pan Pacifica",
-            "orrorsh": "Orrorsh"
+            "orrorsh": "Orrorsh",
+            "other": "Autre"
         },
         "perkTypes": {
             "cyberware": "Cybertechnologie",
@@ -217,8 +218,9 @@
             "specialAbility": "Capacité spéciale",
             "threat": "Menace",
             "skills": "Compétences",
-            "favorite":"Favorisée",
+            "favorite": "Favorisée",
             "possibilitypotential": "Possibilités (Potentielle)",
+            "size": "Size",
             "possibilities": "Possibilités",
             "up": "Un de plus",
             "equipment": "Équipement",
@@ -241,7 +243,7 @@
             "activeDefense": "Défense active",
             "melee": "Mêlée",
             "unarmed": "Mains nues",
-            "xp": "PX",
+            "xp": "XP",
             "unspent": "Disponibles",
             "earned": "Total",
             "clearance": "Habilitation",
@@ -269,7 +271,39 @@
             "passiveEffects": "Effets passifs",
             "inactiveEffects": "Effects inactifs",
             "source": "Source",
-            "otherAttacks": "Autres"
+            "otherAttacks": "Autres",
+            "difficulty": "Difficulté",
+            "dn": "ND",
+            "roll": "Lancer",
+            "target": "Cible",
+            "inputExisting": "Saisie existante",
+            "movementPenalty": "Pénalité de mouvement",
+            "walking": "Marche (Non)",
+            "running": "Course (-2)",
+            "multiActionPenalty": "Pénalité actions multiples",
+            "actions": "Actions",
+            "multiTargetPenalty": "Pénalté cibles multiples",
+            "targets": "Cibles",
+            "otherModifiers": "Autres modificateurs",
+            "description": "Description",
+            "effect": "Effet",
+            "statusEffects": "Status Effects",
+            "update": "Mise à jour",
+            "attackOptions": "Options d'attaque",
+            "calledShot": "Attaque ciblée",
+            "none": "Non",
+            "vitalArea": "Coup fatal",
+            "burst": "Rafale",
+            "shortBurst": "Courte (+2)",
+            "longBurst": "Longue (+4)",
+            "allOut": "Attaque totale",
+            "aimed": "Visée",
+            "blindFire": "Tir au jugé",
+            "targetOptions": "Cibles",
+            "concealment": "Dissimultation",
+            "coverBonus": "Couvert"
+
+            
         },
         "itemSheetDescriptions": {
             "perk": "Atout",
@@ -353,8 +387,16 @@
             "concentrating": "Concentration",
             "disconnected": "Deconnecté",
             "malfunction": "Défaillance",
-            "restrained": "Entravé"
+            "restrained": "Entravé",
+            "dim": "Faible",
+            "dark": "Sombre",
+            "pitchBlack": "Noir complet",
+            "waiting": "Attendre",
+            "darkness": "Obscurité",
+            "targetSize": "Taille de la cible",
+            "targetVulnerability": "Cible Vulnérable"
         },
+
         "yesNo": {
             "true": "Oui",
             "false": "Non"
@@ -381,6 +423,15 @@
             "attack": "Attaque",
             "baseDamage": "Dommages de base",
             "value": "Valeur"
+       },
+
+        "sizes": {
+            "tiny": "Minuscule",
+            "verySmall": "Très petite",
+            "small": "Petite",
+            "normal": "Normal",
+            "large": "Grande",
+            "veryLarge": "Très grande"
         }
     }
 }
