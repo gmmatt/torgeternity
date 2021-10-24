@@ -2778,3 +2778,36 @@ form.actor-sheet.threat .tab[data-tab].active .editor {
     text-align: right;
     padding-right:4px;
 }
+
+.card-tooltip {
+    text-decoration:none;
+}
+
+.card-tooltip span {
+    display:none;
+    -moz-border-radius:6px;
+    -webkit-border-radius:6px;
+    border-radius:6px;
+    color:black;
+    background:white
+}
+
+.card-tooltip span img {
+    float:left;
+    margin: 0px 8px 8px 0;
+}
+
+.card-tooltip:hover span {
+    display:block;
+    position:absolute;
+    top:100px;
+    left:120px;
+    z-index:1000;
+    max-width:320px;
+    min-height:128px;
+    border:1px solid black;
+    margin-top:5px;
+    margin-left:5px;
+    overflow:hidden;
+    padding:8px;
+}
