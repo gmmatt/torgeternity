@@ -77,9 +77,33 @@ export default class  torgeternityPlayerHand extends CardsHand {
           case "prevFace":
             return card.update({face: card.data.face === 0 ? null : card.data.face-1});
         }
-      }
     
-    async playerPassDialog(card) {
+    }
+
+    async _onChangeInput(event) {
+      const input = event.currentTarget;
+      const li= input.closest(".card");
+      const card = li ? this.object.cards.get(li.dataset.cardId) : null;
+      const cls = getDocumentClass("Card");
+
+      //Save any pending change
+      await this._onSubmit(event, {preventClose: true, preventRender: true});
+
+      //Handle the control action
+      switch ( input.dataset.action) {
+        case "poolToggle":
+          if (input.checked === true) {
+            await card.setFlag("torgeternity","pooled", true)
+          } else  {
+            await card.setFlag("torgeternity","pooled", false)
+          }
+          console.log(card.getFlag("torgeternity", "pooled"))
+          return;
+      }
+    }
+    
+       
+      async playerPassDialog(card) {
       const cards = game.cards.filter(c => (c !== this) && (c.type !== "deck") && c.testUserPermission(game.user, "LIMITED"));
       if ( !cards.length ) return ui.notifications.warn("No hands available!", {localize: true});
   

@@ -33,7 +33,7 @@
                 {{#if card.showFace}}
                 <span class="card-type">{{card.type}}</span>
                 {{#ifequal card.type "destiny"}}
-                <span class="card-pooled"><input type="checkbox" id="pooled" value="false"></span>
+                <span class="card-pooled"><input type="checkbox" data-action="poolToggle" id="pooled" value="false"></span>
                 {{else}}
                 <span class="card-pooled"></span>
                 {{/ifequal}}
