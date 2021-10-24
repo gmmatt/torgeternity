@@ -53,6 +53,7 @@ export function registerTorgSettings() {
     })
 
     //Cards
+    /* These settings not used for now. May come back and apply them later
     game.settings.register("torgeternity", "activeDestinyDeck", {
         name: "Active Destiny Deck",
         hint: "Name of the deck that players should use to draw Destiny cards.",
@@ -80,7 +81,7 @@ export function registerTorgSettings() {
             tharkold: "Tharkold Cosm Deck"
         }
     })
-
+    */
     game.settings.register("torgeternity", "activeDramaDeck", {
         name: "Active Drama Deck",
         hint: "Name of the deck that is used to draw Drama cards.",
