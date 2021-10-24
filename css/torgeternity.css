@@ -2220,10 +2220,11 @@ form.actor-sheet header input[name="name"] {
 }
 
 .window-content .actor-sheet .defense {
-    line-height: 0.7em;
+    line-height: 0.4em;
     padding-top: 10px;
     grid-column: 7/9;
     grid-row: 3/4;
+    font-size: 0.9em;
 }
 
 .window-content .actor-sheet .defense p {
