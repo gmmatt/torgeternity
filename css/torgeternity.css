@@ -599,6 +599,19 @@ nav#controls .control-tool:hover {
     top: -2px;
 }
 
+#controls ol .control-tool.toggle {
+    border: 1px solid #000000;
+    filter: grayscale(1);
+}
+
+#controls ol .control-tool.toggle.active {
+    border: 1px solid #ffffff;
+    filter: grayscale(0);
+    opacity: 1;
+    background: url(../images/resizerRound.webp);
+    background-size: 100% 100%;
+}
+
 #controls ol .scene-control.active,
 #controls ol .control-tool.active,
 #controls ol .scene-control:hover,
