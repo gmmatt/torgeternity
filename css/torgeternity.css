@@ -2800,7 +2800,7 @@ form.actor-sheet.threat .tab[data-tab].active .editor {
 .card-tooltip:hover span {
     display:block;
     position:absolute;
-    top:100px;
+    top:10px;
     left:120px;
     z-index:1000;
     max-width:320px;
