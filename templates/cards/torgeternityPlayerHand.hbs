@@ -12,6 +12,7 @@
                 <i class="fas fa-sort fa-fw"></i>
             </a>
             <h4 class="card-name">{{localize "CARD.Name"}}</h4>
+            <h4 class="card-pooled">{{localize "torgeternity.dialogPrompts.cardPooled"}}</h4>
             <span class="card-type">{{localize "CARD.Type"}}</span>
             <div class="card-controls">
                 Actions        
@@ -27,6 +28,7 @@
                 <img class="card-face" src="{{card.img}}" alt="{{card.name}}" height="48">
                 <h4 class="card-name">{{card.name}}</h4>
                 {{#if card.showFace}}
+                <span class="card-pooled"><input type="checkbox" id="pooled" value="false"></span>
                 <span class="card-type">{{card.type}}</span>
                 <div class="card-controls">
                     <a class="card-control" title="Play Card" data-action="play"><i class="fas fa-play-circle" style="color:white"></i></a>

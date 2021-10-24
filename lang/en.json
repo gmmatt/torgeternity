@@ -444,7 +444,8 @@
             "drawCosm": "Draw Cosm",
             "selectCosmDeck": "Select Cosm Deck",
             "cosmDialogTitle": "Draw Cosm Card",
-            "cosmDeckDialogLabel": "Draw"
+            "cosmDeckDialogLabel": "Draw",
+            "cardPooled": "In Pool?"
         },
 
         "cosmDecks": {
