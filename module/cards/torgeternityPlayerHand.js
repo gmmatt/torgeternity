@@ -5,7 +5,7 @@ export default class  torgeternityPlayerHand extends CardsHand {
     static get defaultOptions() {
         return foundry.utils.mergeObject(super.defaultOptions, {
             classes: ["torgeternity", "sheet", "cardsHand", "cards-config"],
-
+            width: 500,
         })
     }
 
