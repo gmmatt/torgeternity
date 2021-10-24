@@ -1,3 +1,5 @@
+import {torgeternity} from "/systems/torgeternity/module/config.js";
+
 export default class  torgeternityPlayerHand extends CardsHand {
 
     static get defaultOptions() {
@@ -40,6 +42,11 @@ export default class  torgeternityPlayerHand extends CardsHand {
           case "discard":
               card.pass(game.cards.getName("Destiny Discard"));
               card.toMessage({content: `<div class="card-draw flexrow"><img class="card-face" src="${card.img}"/><h4 class="card-name">Discards ${card.name}</h4></div>`});
+              return;
+          case "drawDestiny":
+              return this.object.draw(game.cards.getName("Destiny Deck"));
+          case "drawCosm":
+              this.drawCosmDialog();
               return;
           case "pass":
               this.playerPassDialog(card);
@@ -98,6 +105,26 @@ export default class  torgeternityPlayerHand extends CardsHand {
         options: {jQuery: false}
       });
     } 
+  
+    async drawCosmDialog() {
+      const cosmDecks = torgeternity.cosmDecks;
+      const html = await renderTemplate("systems/torgeternity/templates/cards/drawCosmDialog.hbs", cosmDecks)
+
+      return Dialog.prompt({
+        title: game.i18n.localize("torgeternity.dialogPrompts.cosmDialogTitle"),
+        label: game.i18n.localize("torgeternity.dialogPrompts.cosmDeckDialogLabel"),
+        content: html,
+        callback: html => {
+          const form = html[0].querySelector("form.cosm-dialog");
+          const fd = new FormDataExtended(form).toObject();
+          const from = game.cards.getName(fd.from);
+          return this.object.draw(from).catch(err => {
+            ui.notifications.error(err.message);
+            return this;
+          });
+        }
+      });
+    }
     
     /* Probably don't need to do any of this
     

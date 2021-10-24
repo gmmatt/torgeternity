@@ -439,7 +439,23 @@
             "playerPassTitle": "Pass to Player",
             "playerPassLabel": "Pass",
             "playerPassInstructions": "Select Player to Receive Card",
-            "playerPassTo": "Pass To"
+            "playerPassTo": "Pass To",
+            "drawDestiny": "Draw Destiny",
+            "drawCosm": "Draw Cosm",
+            "selectCosmDeck": "Select Cosm Deck",
+            "cosmDialogTitle": "Draw Cosm Card",
+            "cosmDeckDialogLabel": "Draw"
+        },
+
+        "cosmDecks": {
+            "coreEarth": "Core Earth Cosm Deck",
+            "aysle": "Aysle Cosm Deck",
+            "cyberpapacy": "Cyberpapacy Cosm Deck",
+            "livingLand": "Living Land Cosm Deck",
+            "nileEmpire": "Nile Empire Cosm Deck",
+            "orrorsh": "Orrorsh Cosm Deck",
+            "panPacifica": "Pan Pacifica Cosm Deck",
+            "tharkold": "Tharkold Cosm Deck"         
         }
         
     }

@@ -45,6 +45,18 @@ torgeternity.cardTypes = {
     destiny: "torgeternity.cardTypes.destiny",
     cosm: "torgeternity.cardDyptes.cosm"
 }
+
+torgeternity.cosmDecks = {
+    coreEarth: "torgeternity.cosmDecks.coreEarth",
+    aysle: "torgeternity.cosmDecks.aysle",
+    cyberpapacy: "torgeternity.cosmDecks.cyberpapacy",
+    livingLand: "torgeternity.cosmDecks.livingLand",
+    nileEmpire: "torgeternity.cosmDecks.nileEmpire",
+    orrorsh: "torgeternity.cosmDecks.orrorsh",
+    panPacifica: "torgeternity.cosmDecks.panPacifica",
+    tharkold: "torgeternity.cosmDecks.tharkold"
+}
+
 torgeternity.viewMode = {
     UI: true
 }
