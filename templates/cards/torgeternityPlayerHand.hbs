@@ -32,7 +32,11 @@
                 <h4 class="card-name">{{card.name}}</h4>
                 {{#if card.showFace}}
                 <span class="card-type">{{card.type}}</span>
+                {{#ifequal card.type "destiny"}}
                 <span class="card-pooled"><input type="checkbox" id="pooled" value="false"></span>
+                {{else}}
+                <span class="card-pooled"></span>
+                {{/ifequal}}
                 <div class="torg-card-controls">
                     <a class="card-control" title="Play Card" data-action="play"><i class="fas fa-play-circle" style="color:white"></i></a>
                     <!-- <a class="card-control" title="View Card" data-action="view"><i class="fas fa-eye" style="color:white"></i></a> not needed with thumbnail? -->

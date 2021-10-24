@@ -585,5 +585,28 @@
                 "power"
             ]
         }
+    },
+
+    "Card": {
+        
+        "types": [
+            "destiny",
+            "cosm",
+            "drama"
+        ],
+        
+        "destiny": {
+
+        },
+
+        "cosm": {
+
+        },
+
+        "drama": {
+            
+        }
     }
+
+
 }

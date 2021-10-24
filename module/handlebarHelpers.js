@@ -40,6 +40,5 @@ Handlebars.registerHelper("concatSkillValue", function (skillName) {
   Handlebars.registerHelper('ifnotequal', function (a, b, options) {
     if (a != b) { return options.fn(this); }
     return options.inverse(this);
-  });
-  
+  })
 }
