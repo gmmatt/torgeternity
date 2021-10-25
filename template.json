@@ -596,15 +596,21 @@
         ],
         
         "destiny": {
-
+            "pooled": false
         },
 
         "cosm": {
-
+            "cosm": ""
         },
 
         "drama": {
-            
+            "cosm": "",
+            "flavor": "",
+            "rule": "",
+            "heroesFirst": true,
+            "heroesConditions": "",
+            "villainsConditions": "",
+            "dsrLine": ""
         }
     }
 

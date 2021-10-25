@@ -92,11 +92,16 @@ export default class  torgeternityPlayerHand extends CardsHand {
       //Handle the control action
       switch ( input.dataset.action) {
         case "poolToggle":
-          if (input.checked === true) {
+          if (card.getFlag("torgeternity", "pooled") === true) {
+            await card.setFlag("torgeternity", "pooled", false)
+          } else {
+            await card.setFlag("torgeternity", "pooled", true)
+          }
+          /*if (input.checked === true) {
             await card.setFlag("torgeternity","pooled", true)
           } else  {
             await card.setFlag("torgeternity","pooled", false)
-          }
+          } */
           console.log(card.getFlag("torgeternity", "pooled"))
           return;
       }
