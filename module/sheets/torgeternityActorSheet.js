@@ -456,6 +456,7 @@ export default class torgeternityActorSheet extends ActorSheet {
             targetArmor: targetArmor,
             targetDefenseSkill: targetDefenseSkill,
             targetDefenseValue: targetDefenseValue,
+            targetType: targetType,
             woundModifier: parseInt(-(this.actor.data.data.wounds.value)),
             stymiedModifier: parseInt(this.actor.data.data.stymiedModifier),
             darknessModifier: parseInt(this.actor.data.data.darknessModifier),
