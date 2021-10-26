@@ -8,6 +8,10 @@
 For manual installation, use the provided manifest URL in the "*Install System*" popup window 
 while managing game systems.
 
+v. 2.0.4
+- Improved detection of defenses that are automatically detected for 
+  enhanced attacks.
+
 v. 2.0.3
 - Updated fr.json (thanks VieuxTroll!).
 - Attempting Magic/Miracles/Psionics tests unskilled now generates a message 

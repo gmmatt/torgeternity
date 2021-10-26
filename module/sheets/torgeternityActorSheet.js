@@ -382,6 +382,7 @@ export default class torgeternityActorSheet extends ActorSheet {
                 return;
             } else {
                 var target = Array.from(game.user.targets)[0];
+                var targetType = target.actor.data.type;
                 if (target.actor.data.data.details.sizeBonus === "tiny") {
                     sizeModifier = -6;
                 } else if (target.actor.data.data.details.sizeBonus === "verySmall") {
@@ -400,14 +401,26 @@ export default class torgeternityActorSheet extends ActorSheet {
                 targetArmor = target.actor.data.data.other.armor;
                 if (attackWith === "fireCombat" || attackWith === "energyWeapons" || attackWith === "heavyWeapons" || attackWith === "missileWeapons") {
                     targetDefenseSkill = "Dodge";
-                    targetDefenseValue = target.actor.data.data.skills.dodge.value;
+                    if (targetType === "threat") {
+                        targetDefenseValue = target.actor.data.data.skills.dodge.value;
+                    } else {
+                        targetDefenseValue = target.actor.data.data.dodgeDefense;
+                    }
                 } else {
-                    if (target.actor.data.data.skills.meleeWeapons.adds > 1) {
+                    if (target.actor.data.data.skills.meleeWeapons.adds > 0 || (targetType === "threat" && target.actor.data.data.skills.meleeWeapons.value > 0)) {
                         targetDefenseSkill = "Melee Weapons";
-                        targetDefenseValue = target.actor.data.data.skills.meleeWeapons.value;
+                        if (targetType === "threat") {
+                            targetDefenseValue = target.actor.data.data.skills.meleeWeapons.value;
+                        } else {
+                            targetDefenseValue = target.actor.data.data.meleeWeaponsDefense;
+                        }
                     } else {
                         targetDefenseSkill = "Unarmed Combat";
-                        targetDefenseValue = target.actor.data.data.skills.unarmedCombat.value;
+                        if (targetType === "threat") {
+                            targetDefenseValue = target.actor.data.data.skills.unarmedCombat.value;
+                        } else {
+                            targetDefenseValue = target.actor.data.data.unarmedCombatDefense;
+                        }
                     }
                 }
             }
