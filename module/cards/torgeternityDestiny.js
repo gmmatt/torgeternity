@@ -4,14 +4,14 @@ export default class  torgeternityDestiny extends CardsPile {
 
     static get defaultOptions() {
         return foundry.utils.mergeObject(super.defaultOptions, {
-            classes: ["torgeternity", "sheet", "cardsDeck", "cards-config"],
+            classes: ["torgeternity", "sheet", "card", "cards-config", "destiny-config"],
             width: 400,
         })
     }
 
     get template() {
         
-        return "systems/torgeternity/templates/cards/torgeternityDeck.hbs";
+        return "systems/torgeternity/templates/cards/torgeternityDestiny.hbs";
 
     }
 
@@ -77,36 +77,4 @@ export default class  torgeternityDestiny extends CardsPile {
     
     }
 
-    async passDialog() {
-      const cards = game.cards.filter(c => (c !== this) && (c.type !== "deck") && c.testUserPermission(game.user, "LIMITED"));
-      if ( !cards.length ) return ui.notifications.warn("CARDS.PassWarnNoTargets", {localize: true});
-  
-      // Construct the dialog HTML
-      const html = await renderTemplate("templates/cards/dialog-pass.html", {
-        cards: cards,
-        modes: {
-          [CONST.CARD_DRAW_MODES.TOP]: "CARDS.DrawModeTop",
-          [CONST.CARD_DRAW_MODES.BOTTOM]: "CARDS.DrawModeBottom",
-          [CONST.CARD_DRAW_MODES.RANDOM]: "CARDS.DrawModeRandom",
-        }
-      });
-  
-      // Display the prompt
-      return Dialog.prompt({
-        title: game.i18n.localize("CARDS.PassTitle"),
-        label: game.i18n.localize("CARDS.Pass"),
-        content: html,
-        callback: html => {
-          const form = html.querySelector("form.cards-dialog");
-          const fd = new FormDataExtended(form).toObject();
-          const to = game.cards.get(fd.to);
-          const options = {how: fd.how, updateData: fd.down ? {face: null} : {}};
-          return this.deal([to], fd.number, options).catch(err => {
-            ui.notifications.error(err.message);
-            return this;
-          });
-        },
-        options: {jQuery: false}
-      });
-    }
 }

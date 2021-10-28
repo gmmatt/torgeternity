@@ -608,11 +608,14 @@
         "drama": {
             "cosm": "",
             "number": "",
-            "flavor": "",
             "rule": "",
-            "heroesFirst": true,
-            "heroesConditions": "",
-            "villainsConditions": "",
+            "heroesFirstStandard": true,
+            "heroesFirstDramatic": true,
+            "heroesConditionsStandard": "",
+            "villainsConditionsStandard": "",
+            "heroesConditionsDramatic": "",
+            "villainsConditionsDramatic": "",
+            "approvedActions": "",
             "dsrLine": ""
         }
     }
