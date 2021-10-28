@@ -23,29 +23,29 @@ export default class torgeternitySceneConfig extends SceneConfig {
 
     _onChangeCosm(ev) {
         let cosm = ev.currentTarget.options[ev.currentTarget.selectedIndex].value;
-        this.entity.setFlag("torgeternity", "cosm", cosm)
+        this.document.setFlag("torgeternity", "cosm", cosm)
 
 
     }
     _onChangeZone(ev) {
         let zone = ev.currentTarget.options[ev.currentTarget.selectedIndex].value;
-        this.entity.setFlag("torgeternity", "zone", zone);
+        this.document.setFlag("torgeternity", "zone", zone);
         if (zone === "mixed" || zone === "dominant") {
-            this.entity.setFlag("torgeternity", "displayCosm2", true);
+            this.document.setFlag("torgeternity", "displayCosm2", true);
         } else {
-            this.entity.setFlag("torgeternity", "displayCosm2", false);
+            this.document.setFlag("torgeternity", "displayCosm2", false);
 
         }
         if (zone === "mixed") {
-            this.entity.setFlag("torgeternity", "isMixed", true);
+            this.document.setFlag("torgeternity", "isMixed", true);
         } else {
-            this.entity.setFlag("torgeternity", "isMixed", false);
+            this.document.setFlag("torgeternity", "isMixed", false);
 
         }
     }
     _onChangeCosm2(ev) {
         let cosm = ev.currentTarget.options[ev.currentTarget.selectedIndex].value;
-        this.entity.setFlag("torgeternity", "cosm2", cosm)
+        this.document.setFlag("torgeternity", "cosm2", cosm)
     }
 
 }
