@@ -20,7 +20,10 @@ import { modifyTokenBars } from "./module/tokenBars.js";
 import { registerHelpers } from "./module/handlebarHelpers.js";
 import torgCombatant from "./module/dramaticScene/torgeternityCombatant.js";
 import { registerDiceSoNice } from "./module/dice-so-nice.js";
-import torgeternityPlayerHand from "./module/cards/torgeternityPlayerHand.js"
+import torgeternityPlayerHand from "./module/cards/torgeternityPlayerHand.js";
+import torgeternityPile from "./module/cards/torgeternityPile.js";
+import torgeternityDeck from "./module/cards/torgeternityDeck.js";
+import torgeternityDestiny from "./module/cards/torgeternityDestiny.js";
 
 
 Hooks.once("init", async function () {
@@ -71,6 +74,9 @@ Hooks.once("init", async function () {
 
   //---register cards
   DocumentSheetConfig.registerSheet(Cards, "core", torgeternityPlayerHand, {label: "Torg Player Hand", types: ["hand"]});
+  DocumentSheetConfig.registerSheet(Cards, "core", torgeternityPile, {label: "Torg Pile", types: ["pile"]});
+  DocumentSheetConfig.registerSheet(Cards, "core", torgeternityDeck, {label: "Torg Deck", types: ["deck"]});
+  DocumentSheetConfig.registerSheet(Cards, "core", torgeternityDestiny, {label: "Torg Destiny Configuration", types: ["card"]})
 
   //----------preloading handlebars templates
   preloadTemplates();

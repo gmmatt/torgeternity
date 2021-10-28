@@ -1,0 +1,99 @@
+<form class="{{cssClass}}" autocomplete="off">
+    <header class="sheet-header flexrow">
+        <img class="card-face" src="{{data.img}}" title="{{data.name}}"/>
+        <h1 class="name">
+            <input type="text" name="name" value="{{data.name}}" placeholder="{{localize 'Name'}}"/>
+        </h1>
+    </header>
+
+    <!-- Tab Navigation -->
+    <nav class="sheet-tabs tabs" data-group="main">
+        <a class="item" data-tab="details"><i class="fas fa-cogs"></i> {{localize "CARDS.HeaderDetails"}}</a>
+        <a class="item" data-tab="cards"><i class="fas fa-id-badge"></i> {{localize "CARDS.HeaderCards"}}</a>
+    </nav>
+
+    <!-- Details Tab -->
+    <div class="tab" data-tab="details">
+        <div class="form-group">
+            <label>{{ localize "CARDS.Image" }}</label>
+            <div class="form-fields">
+                {{filePicker target="img" type="image"}}
+                <input type="text" name="img" placeholder="{{localize 'CARDS.Image'}}" value="{{data.img}}">
+            </div>
+        </div>
+
+        <div class="form-group stacked">
+            <label>{{ localize "CARDS.Description" }}</label>
+            <textarea name="description">{{ data.description }}</textarea>
+        </div>
+
+        <div class="form-group">
+            <label>{{localize "CARDS.Dimensions"}}</label>
+            <div class="form-fields">
+                <label>{{localize "Width"}}</label>
+                {{numberInput data.width name="width" step=1}}
+                <label>{{localize "Height"}}</label>
+                {{numberInput data.height name="height" step=1}}
+                <label>{{localize "Rotation"}}</label>
+                {{numberInput data.rotation name="rotation" step=1 min=0 max=360}}
+            </div>
+        </div>
+    </div>
+
+    <!-- Cards Tab -->
+    <div class="tab" data-tab="cards">
+        <header class="cards-header flexrow">
+            <span class="card-faces">{{localize "CARD.Face"}}</span>
+            <a class="card-control sort-mode" title="{{localize "CARDS.SortMode"}}" data-action="toggleSort">
+                <i class="fas fa-sort fa-fw"></i>
+            </a>
+            <h4 class="card-name">{{localize "CARD.Name"}}</h4>
+            <span class="card-type">{{localize "CARD.Type"}}</span>
+            <span class="card-drawn">{{localize "CARD.Drawn"}}</span>
+            <div class="card-controls">
+                <a class="card-control" title="{{localize 'CARD.Create'}}" data-action="create"><i class="fas fa-plus"></i> {{localize "Add"}}</a>
+            </div>
+        </header>
+        <ol class="cards">
+        {{#each cards as |card|}}
+            <li class="card flexrow" data-card-id="{{card.id}}">
+                <div class="card-faces flexcol">
+                    <a class="card-control" title="{{localize 'CARD.FaceNext'}}" data-action="nextFace" {{#unless card.hasNextFace}}disabled{{/unless}}><i class="fas fa-caret-up"></i></a>
+                    <a class="card-control" title="{{localize 'CARD.FacePrevious'}}" data-action="prevFace" {{#unless card.hasPreviousFace}}disabled{{/unless}}><i class="fas fa-caret-down"></i></a>
+                </div>
+                <img class="card-face" data-src="{{card.img}}" alt="{{card.name}}" height="48">
+                <h4 class="card-name">{{card.data.name}}</h4>
+                <span class="card-type">{{card.type}}</span>
+                <div class="card-drawn">
+                    <input type="checkbox" class="card-value" {{checked card.data.drawn}} disabled>
+                </div>
+                <div class="card-controls">
+                    <a class="card-control" title="{{localize 'CARD.Edit'}}" data-action="edit"><i class="fas fa-edit"></i></a>
+                    <a class="card-control" title="{{localize 'CARD.Delete'}}" data-action="delete"><i class="fas fa-trash"></i></a>
+                </div>
+            </li>
+        {{else}}
+            <li>
+                <p class="hint">{{localize "CARDS.NoCards"}}</p>
+            </li>
+        {{/each}}
+        </ol>
+    </div>
+
+    <!-- Sheet Footer -->
+    <footer class="sheet-footer flexrow">
+        {{#if owner}}
+        <button class="card-control" type="button" data-action="shuffle">
+            <i class="fas fa-random"></i> {{localize "CARDS.Shuffle"}}
+        </button>
+        <button class="card-control" type="button" data-action="deal">
+            <i class="fas fa-share-square"></i> {{localize "CARDS.Deal"}}
+        </button>
+        <button class="card-control" type="button" data-action="reset">
+            <i class="fas fa-undo"></i> {{localize "CARDS.Reset"}}
+        </button>
+        <button class="submit" type="submit"><i class="fas fa-save"></i> {{ localize "CARDS.Save" }}</button>
+        {{/if}}
+    </footer>
+</form>
+

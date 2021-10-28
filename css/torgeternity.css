@@ -2811,3 +2811,8 @@ form.actor-sheet.threat .tab[data-tab].active .editor {
     overflow:hidden;
     padding:8px;
 }
+
+.open-hand  {
+    width:150px; 
+    color:black !important;
+}

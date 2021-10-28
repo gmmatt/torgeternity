@@ -207,6 +207,25 @@ export default class torgeternityActorSheet extends ActorSheet {
         // Everything below here is only needed if the sheet is editable
         if (!this.options.editable) return;
 
+        // Open Cards Hand
+
+        html.find('.open-hand').click(ev => {
+            let characterHand = game.cards.getName(this.actor.data.name);
+            if (characterHand) {
+                characterHand.sheet.render(true);
+            } else {
+                let characterHand = new Cards({
+                    name: this.actor.data.name,
+                    type: "hand"
+                });
+                let cardData = {
+                    name: this.actor.data.name,
+                    type: "hand"
+                }
+                characterHand = Cards.create(cardData, {keepId: true, renderSheet:true});
+            }
+        });
+        
         // Update Inventory Item
         html.find('.item-edit').click(ev => {
             const li = $(ev.currentTarget).parents(".item");

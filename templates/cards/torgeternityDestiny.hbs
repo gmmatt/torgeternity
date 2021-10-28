@@ -1,0 +1,128 @@
+<form class="{{cssClass}}" autocomplete="off">
+    <header class="sheet-header flexrow">
+        <img class="card-face" src="{{document.img}}" title="{{data.name}}"/>
+        <h1 class="name">
+            <input type="text" name="name" value="{{data.name}}" placeholder="{{localize 'Name'}}"/>
+        </h1>
+    </header>
+
+    <!-- Tab Navigation -->
+    <nav class="sheet-tabs tabs" data-group="main">
+        <a class="item" data-tab="details"><i class="fas fa-cogs"></i> {{localize "CARD.HeaderDetails"}}</a>
+        <a class="item" data-tab="faces"><i class="fas fa-id-badge"></i> {{localize "CARD.HeaderFaces"}}</a>
+        <a class="item" data-tab="back"><i class="fas fa-id-badge"></i> {{localize "CARD.HeaderBack"}}</a>
+    </nav>
+
+    <!-- Details Tab -->
+    <div class="tab" data-tab="details">
+        <div class="form-group">
+            <label>{{ localize "CARD.Type" }}</label>
+            <div class="form-fields">
+                <select name="type">
+                    {{selectOptions types selected=data.type localize=true}}
+                </select>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label>{{ localize "CARD.Suit" }}</label>
+            <div class="form-fields">
+                <input type="text" name="suit" value="{{data.suit}}">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label>{{ localize "CARD.Value" }}</label>
+            <div class="form-fields">
+                {{numberInput data.value name="value" step=1}}
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label>{{localize "CARD.Dimensions"}}</label>
+            <div class="form-fields">
+                <label>{{localize "Width"}}</label>
+                {{numberInput data.width name="width" step=1}}
+                <label>{{localize "Height"}}</label>
+                {{numberInput data.height name="height" step=1}}
+                <label>{{localize "Rotation"}}</label>
+                {{numberInput data.rotation name="rotation" step=1 min=0 max=360}}
+            </div>
+        </div>
+
+        <div class="form-group stacked">
+            <label>{{ localize "CARD.Description" }}</label>
+            <textarea name="description">{{ data.description }}</textarea>
+        </div>
+    </div>
+
+    <!-- Faces Tab -->
+    <div class="tab" data-tab="faces">
+        <div class="form-group">
+            <label>{{ localize "CARD.Face" }}</label>
+            <div class="form-fields">
+                {{numberInput data.face name="face" min=0 step=1}}
+                <button type="button" class="face-control" title="{{localize 'CARD.FaceAdd'}}" data-action="addFace">
+                    <i class="fas fa-plus fa-fw"></i>
+                </button>
+            </div>
+        </div>
+        {{#each data.faces as |face i|}}
+        <div class="face" data-face="{{i}}">
+            <div class="form-group">
+                <label>{{ localize "CARD.FaceName" }}</label>
+                <div class="form-fields">
+                    <input type="text" name="faces.{{i}}.name" value="{{face.name}}">
+                    <button type="button" class="face-control"  title="{{localize 'CARD.FaceDelete'}}" data-action="deleteFace">
+                        <i class="fas fa-trash fa-fw"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="form-group">
+                <label>{{ localize "CARD.FaceImage" }}</label>
+                <div class="form-fields">
+                    <input type="text" name="faces.{{i}}.img" value="{{face.img}}">
+                    {{filePicker target=(concat "faces." i ".img") type="image"}}
+                </div>
+            </div>
+            <div class="form-group">
+                <label>{{ localize "CARD.FaceText" }}</label>
+                <div class="form-fields">
+                    <textarea name="faces.{{i}}.text">{{face.text}}</textarea>
+                </div>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+
+    <!-- Back Tab -->
+    <div class="tab" data-tab="back">
+
+        <div class="form-group">
+            <label>{{ localize "CARD.BackName" }}</label>
+            <div class="form-fields">
+                <input type="text" name="back.name" placeholder="{{localize 'CARD.BackName'}}" value="{{data.back.name}}">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label>{{ localize "CARD.BackImage" }}</label>
+            <div class="form-fields">
+                {{filePicker target="back.img" type="image"}}
+                <input type="text" name="back.img" placeholder="{{localize 'CARD.BackImage'}}" value="{{data.back.img}}">
+            </div>
+        </div>
+
+        <div class="form-group stacked">
+            <label>{{ localize "CARD.BackText" }}</label>
+            <textarea name="back.text">{{ data.back.text }}</textarea>
+        </div>
+    </div>
+
+    <!-- Sheet Footer -->
+    <footer class="sheet-footer flexrow">
+        {{#if owner}}
+        <button class="submit" type="submit"><i class="fas fa-save"></i> {{ localize "CARD.Save" }}</button>
+        {{/if}}
+    </footer>
+</form>
