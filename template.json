@@ -596,15 +596,18 @@
         ],
         
         "destiny": {
-            "pooled": false
+            "pooled": false,
+            "number": ""
         },
 
         "cosm": {
-            "cosm": ""
+            "cosm": "",
+            "number": ""
         },
 
         "drama": {
             "cosm": "",
+            "number": "",
             "flavor": "",
             "rule": "",
             "heroesFirst": true,
