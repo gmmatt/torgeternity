@@ -1,3 +1,4 @@
+{{log this}}
 <div class="flexrow">
 
 	{{#each users as |user key|}}
@@ -8,7 +9,10 @@
 
 		{{#if user.character }}
 
-		<h3 class="actorName" data-actorID="{{user.character.data._id}}"><a>{{user.character.name}}</a></h3>
+		<h3
+			class="actorName"
+			data-actorID="{{user.character.data._id}}"
+		><a>{{user.character.name}}</a></h3>
 		<div class="flexrow">
 			<div>
 				<p>
@@ -121,8 +125,11 @@
 				<ul>{{#each user.character.items as |item key|}}
 					<li>
 
-						<span><a class="item-link" data-actorID="{{../this.character.data._id}}"
-								data-itemID="{{item.data}}">{{item.data.name}}</a> -<em>{{item.data.type}}</em></span>
+						<span><a
+								class="item-link"
+								data-actorID="{{../this.character.data._id}}"
+								data-itemID="{{item.data._id}}"
+							>{{item.data.name}}</a> -<em>{{item.data.type}}</em></span>
 					</li>{{/each}}
 				</ul>
 
