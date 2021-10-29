@@ -71,7 +71,13 @@ export default class torgeternityCombatTracker extends CombatTracker {
         let btn = ev.currentTarget;
         let li = btn.closest(".combatant");
         let c = this.viewed.combatants.get(li.dataset.combatantId); //hope this works!
-
+        console.log(c.name);
+        await this.viewed.combatant.update({
+            _id: c.data.id,
+            ["initiative"]: c.data.initiative + 1,
+        });
+        this.render();
+        /*
         if (c.data.initiative > 1) {
             await this.viewed.combatant.update({
                 _id: c.data._id,
@@ -90,12 +96,19 @@ export default class torgeternityCombatTracker extends CombatTracker {
             }
             this.render();
         }
+        */
     }
     async _onInitDown(ev) {
         let btn = ev.currentTarget;
-        let li = btn.closest(".combatant");
-        let c = this.viewed.combatants.get(li.dataset.combatantId);
-
+        let li = btn.closest("li.combatant");
+        let c = this.viewed.combatants.get(li.dataset.combatantId); //hope this works!
+        console.log(c.name);
+        await this.viewed.combatant.update({
+            _id: c.data.id,
+            ["initiative"]: c.data.initiative - 1,
+        });
+        this.render();
+        /*
         if (c.data.initiative < this.viewed.combatants.length) {
             await this.viewed.combatant.update({
                 _id: c.data._id,
@@ -114,7 +127,7 @@ export default class torgeternityCombatTracker extends CombatTracker {
                 }
             }
         }
-        this.render();
+        this.render();*/
     }
 
     async _sortVilainsFirst() {
