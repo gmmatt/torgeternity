@@ -1,5 +1,3 @@
-{{log this}}
-
 <section
     class="sidebar-tab tab flexcol"
     id="combat"
@@ -104,10 +102,11 @@
             "
             data-combatant-id="{{turn.id}}"
         >
+            <!--
             <div class="token-initiative">
                 <span>{{turn.initiative}}</span>
             </div>
-            {{this.current.turn}}
+        -->
             <img
                 class="token-image"
                 data-src="{{turn.img}}"
@@ -150,10 +149,12 @@
                 </div>
             </div>
 
-
+            <!--
             {{#if ../user.isGM}}
             <a class="init-up"><i class="fas fa-arrow-up"></i></a>
-            <a class="init-down"><i class="fas fa-arrow-down"></i></a> {{/if}}
+            <a class="init-down"><i class="fas fa-arrow-down"></i></a> 
+            {{/if}}
+-->
         </li>
         {{/each}}
     </ol>
