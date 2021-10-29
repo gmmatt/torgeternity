@@ -1,10 +1,10 @@
 import {torgeternity} from "/systems/torgeternity/module/config.js";
 
-export default class  torgeternityDestiny extends CardsPile {
+export default class  torgeternityDeck extends CardsPile {
 
     static get defaultOptions() {
         return foundry.utils.mergeObject(super.defaultOptions, {
-            classes: ["torgeternity", "sheet", "cardsDeck", "cards-config"],
+            classes: ["torgeternity", "sheet", "cardsDeck"],
             width: 400,
         })
     }

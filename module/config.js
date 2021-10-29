@@ -43,7 +43,7 @@ torgeternity.gameCards = {
 torgeternity.cardTypes = {
     drama: "torgeternity.cardTypes.drama",
     destiny: "torgeternity.cardTypes.destiny",
-    cosm: "torgeternity.cardDyptes.cosm"
+    cosm: "torgeternity.cardTypes.cosm"
 }
 
 torgeternity.cosmDecks = {

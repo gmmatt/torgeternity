@@ -594,9 +594,10 @@
             "cosm",
             "drama"
         ],
+
+        "templates" : {},
         
         "destiny": {
-            "pooled": false,
             "number": ""
         },
 
