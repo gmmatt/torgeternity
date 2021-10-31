@@ -61,7 +61,7 @@
                     <a class="card-control" title="{{localize 'CARD.FaceNext'}}" data-action="nextFace" {{#unless card.hasNextFace}}disabled{{/unless}}><i class="fas fa-caret-up"></i></a>
                     <a class="card-control" title="{{localize 'CARD.FacePrevious'}}" data-action="prevFace" {{#unless card.hasPreviousFace}}disabled{{/unless}}><i class="fas fa-caret-down"></i></a>
                 </div>
-                <img class="card-face" data-src="{{card.img}}" alt="{{card.name}}" height="48">
+                <img class="card-face" data-src="{{card.img}}" alt="{{card.name}}" height="48" style="object-fit:contain">
                 <h4 class="card-name">{{card.data.name}}</h4>
                 <span class="card-type">{{card.type}}</span>
                 <div class="card-drawn">
