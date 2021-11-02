@@ -1,3 +1,4 @@
+import TorgCombat from "../dramaticScene/torgeternityCombat.js";
 import {torgeternity} from "/systems/torgeternity/module/config.js";
 
 export default class  torgeternityPile extends CardsPile {
@@ -74,8 +75,9 @@ export default class  torgeternityPile extends CardsPile {
           case "prevFace":
             return card.update({face: card.data.face === 0 ? null : card.data.face-1});
         }
-    
+        
     }
+
 
     async passDialog() {
       const cards = game.cards.filter(c => (c !== this) && (c.type !== "deck") && c.testUserPermission(game.user, "LIMITED"));

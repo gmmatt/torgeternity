@@ -20,7 +20,7 @@
                     <a class="card-control" title="{{localize 'CARD.FacePrevious'}}" data-action="prevFace" {{#unless card.hasPreviousFace}}disabled{{/unless}}><i class="fas fa-caret-down"></i></a>
                 </div>
                 <img class="card-face" data-src="{{card.img}}" alt="{{card.name}}" height="48">
-                <h4 class="card-name">{{card.name}}</h4>
+                <h4 class="card-name">{{card.data.name}}</h4>
                 {{#if card.showFace}}
                 <span class="card-type">{{card.type}}</span>
                 {{/if}}

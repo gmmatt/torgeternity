@@ -10,9 +10,65 @@ export default class TorgCombat extends Combat {
       let y = 0
     }
 
+    const activeStack = game.cards.getName("Active Drama Card");
+    if (activeStack.data.cards.document.availableCards.length > 0) {
+      await game.cards.getName("Active Drama Card").data.cards.document.availableCards[0].pass(game.cards.getName("Drama Discard"));
+    }
+    await game.cards.getName("Active Drama Card").draw(game.cards.getName("Drama Deck"));
+    await this._onUpdate;
+   
     await super.nextRound();
 
   }
+
+  _onCreate (data,options,userId) {
+    game.cards.getName("Active Drama Card").draw(game.cards.getName("Drama Deck"));   
+    
+    super._onCreate(data,options,userId);
+  }
+
+  _onDelete (options, userId) {
+
+    const activeStack = game.cards.getName("Active Drama Card");
+
+    if (activeStack.data.cards.document.availableCards.length > 0) {
+      game.cards.getName("Active Drama Card").data.cards.document.availableCards[0].pass(game.cards.getName("Drama Discard"));
+    }
+    
+    super._onDelete(options,userId);
+
+  } 
+
+
+  async nextRoundKeep() {
+    let x = this.getEmbeddedCollection("Combatant")
+    let combatantLength = x.contents.length
+    for (let i=0; i < combatantLength; i++) {
+      let c = x.contents[i]
+
+      await c.setFlag("world", "turnTaken", false) 
+      let y = 0
+    }
+
+    await super.nextRound();
+
+  }
+  
+  _onUpdate (changed,options,userId) {
+
+    const activeStack = game.cards.getName("Active Drama Card");
+    if (activeStack.data.cards.document.availableCards.length > 0) {
+      const activeCard = activeStack.data.cards.document.availableCards[0];
+      const activeImage = activeCard.data.faces[0].img;
+      this.setFlag("torgeternity", "activeCard", activeImage)
+      //document.getElementById("active-drama-card").src = activeImage;
+      let x = 0;
+    } else {
+      this.setFlag("torgeternity", "activeCard", "")
+    }
+
+  }
+
   /*
   _sortCombatants(a, b) {
     const ia = Number.isNumeric(a.initiative) ? a.initiative : -9999;
@@ -105,3 +161,5 @@ export default class TorgCombat extends Combat {
  */
 
 }
+
+

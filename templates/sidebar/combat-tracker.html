@@ -43,7 +43,12 @@
         </nav>
         {{/if}}
 
-        <img src="systems/torgeternity/images/cards/drama/01.jpg">
+        {{#if combat.data.flags.torgeternity.activeCard}}
+        <img src="{{combat.data.flags.torgeternity.activeCard}}" style="object-fit:contain">
+        {{else}}
+        <img src="systems/torgeternity/images/cards/drama-back.jpg" style="object-fit:contain">
+        {{/if}}
+        <!-- <img src="systems/torgeternity/images/cards/drama-back.jpg" id="active-drama-card" style="object-fit:contain"> -->
         <nav class="encounters flexrow">
             {{#if user.isGM}}
             <a
@@ -165,32 +170,44 @@
         class="directory-footer flexrow"
     >
         {{#if hasCombat}} {{#if user.isGM}} {{#if round}}
+<!--
         <a
             class="combat-control"
             title="{{localize 'COMBAT.RoundPrev'}}"
             data-control="previousRound"
         ><i class="fas fa-step-backward"></i></a>
+
         <a
             class="combat-control"
             title="{{localize 'COMBAT.TurnPrev'}}"
             data-control="previousTurn"
         ><i class="fas fa-arrow-left"></i></a>
+-->
         <a
-            class="combat-control center"
+            class="combat-control"
+            title="{{localize 'COMBAT.RoundNext'}} (New Card)"
+            data-control="nextRound"
+        ><i class="fas fa-step-forward"></i>  New</a> 
+
+        <a
+            class="combat-control"
+            title="Next Round (Keep Current Card)"
+            data-control="nextRoundKeep"
+        ><i class="fas fa-step-forward"></i>  Keep</a>
+
+        <a
+            class="combat-control"
             title="{{localize 'COMBAT.End'}}"
             data-control="endCombat"
-        >{{localize
-            'COMBAT.End'}}</a>
+        ><i class="fas fa-stop"></i>  End</a>
+<!--
         <a
             class="combat-control"
             title="{{localize 'COMBAT.TurnNext'}}"
             data-control="nextTurn"
         ><i class="fas fa-arrow-right"></i></a>
-        <a
-            class="combat-control"
-            title="{{localize 'COMBAT.RoundNext'}}"
-            data-control="nextRound"
-        ><i class="fas fa-step-forward"></i></a> {{else}}
+-->
+        {{else}}
         <a
             class="combat-control center"
             title="{{localize 'COMBAT.Begin'}}"

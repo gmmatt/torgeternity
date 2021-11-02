@@ -183,6 +183,8 @@ export default class torgeternityCombatTracker extends CombatTracker {
         }
         // await this.viewed.setupTurns()
         this.render()
+    }
+    
 
         /* Old Code
     let vilains = this.viewed.combatants.filter((c) => c.token.disposition < 1);
@@ -201,5 +203,4 @@ export default class torgeternityCombatTracker extends CombatTracker {
       });
     }
   */
-    }
 }
