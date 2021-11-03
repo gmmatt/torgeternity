@@ -773,7 +773,7 @@ export function torgBonus(rollTotal) {
 
 export function torgBD() {
    var diceroll;
-   diceroll = new Roll('1d6x6max5').roll();
+   diceroll = new Roll('1d6x6max5').evaluate({ async: false });
 
    return diceroll
 }

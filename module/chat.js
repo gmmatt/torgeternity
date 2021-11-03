@@ -24,7 +24,7 @@ function onPossibility(event) {
 
 
     //Roll for Possibility
-    var diceroll = new Roll('1d20x10x20').roll();
+    var diceroll = new Roll('1d20x10x20').evaluate({ async: false });
     if (diceroll.total < 10) {
         test.possibilityTotal += 10
     } else {
@@ -46,7 +46,7 @@ function onUp(event) {
     var test = parentMessage.getFlag("torgeternity", "test")
 
     //Roll for Up
-    var diceroll = new Roll('1d20x10x20').roll();
+    var diceroll = new Roll('1d20x10x20').evaluate({ async: false });
     test.upTotal = diceroll.total
     // diceroll.toMessage();
     test.diceroll = diceroll;
@@ -65,7 +65,7 @@ function onHero(event) {
     var test = parentMessage.getFlag("torgeternity", "test")
 
     //Roll for Possibility
-    var diceroll = new Roll('1d20x10x20').roll();
+    var diceroll = new Roll('1d20x10x20').evaluate({ async: false });
     if (diceroll.total < 10) {
         test.heroTotal = 10
     } else {
@@ -87,7 +87,7 @@ function onDrama(event) {
     var test = parentMessage.getFlag("torgeternity", "test")
 
     //Increase cards played by 1
-    var diceroll = new Roll('1d20x10x20').roll();
+    var diceroll = new Roll('1d20x10x20').evaluate({ async: false });
     if (diceroll.total < 10) {
         test.dramaTotal = 10
     } else {

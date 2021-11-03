@@ -5,7 +5,7 @@ export function registerTorgSettings() {
 
     game.settings.register("torgeternity", "welcomeMessage", {
         // game.setting.register("NameOfTheModule", "VariableName",
-        name: "display the welcome message", // Register a module setting with checkbox
+        name: "Display the Welcome Message", // Register a module setting with checkbox
         hint: "If checked, the welcome message will pop up after your world loads.", // Description of the settings
         scope: "world", // This specifies a client-stored setting
         config: true, // This specifies that the setting appears in the configuration view
@@ -17,7 +17,7 @@ export function registerTorgSettings() {
 
     game.settings.register("torgeternity", "pauseMedia", {
         // game.setting.register("NameOfTheModule", "VariableName",
-        name: "pause image media", // Register a module setting with checkbox
+        name: "Pause Image Media", // Register a module setting with checkbox
         hint: "Choose the image that is displayed when the game is paused.", // Description of the settings
         type: window.Azzu.SettingsTypes.FilePickerImage,
         default: 'systems/torgeternity/images/pause.webp',
@@ -30,7 +30,7 @@ export function registerTorgSettings() {
 
     game.settings.register("torgeternity", "animatedChat", {
         // game.setting.register("NameOfTheModule", "VariableName",
-        name: "chat card animation", // Register a module setting with checkbox
+        name: "Chat Card Animation", // Register a module setting with checkbox
         hint: "If checked, enable chat card animations. Changing this setting will reload the app", // Description of the settings
         scope: "world", // This specifies a client-stored setting
         config: true, // This specifies that the setting appears in the configuration view
@@ -51,6 +51,8 @@ export function registerTorgSettings() {
             livingLand: "Living Land GM Screen"
         }
     })
+
+
 
     //Cards
     /* These settings not used for now. May come back and apply them later
@@ -82,6 +84,7 @@ export function registerTorgSettings() {
         }
     })
     */
+/*
     game.settings.register("torgeternity", "activeDramaDeck", {
         name: "Active Drama Deck",
         hint: "Name of the deck that is used to draw Drama cards.",
@@ -101,6 +104,7 @@ export function registerTorgSettings() {
         }
     
     })
+*/
 
 }
 
