@@ -41,4 +41,8 @@ Handlebars.registerHelper("concatSkillValue", function (skillName) {
     if (a != b) { return options.fn(this); }
     return options.inverse(this);
   })
+
+  Handlebars.registerHelper('isStormKnight', function (thisActor) {
+    testVariable = thisActor;
+  })
 }
