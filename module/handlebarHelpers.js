@@ -42,7 +42,27 @@ Handlebars.registerHelper("concatSkillValue", function (skillName) {
     return options.inverse(this);
   })
 
-  Handlebars.registerHelper('isStormKnight', function (thisActor) {
-    testVariable = thisActor;
+  Handlebars.registerHelper('poolList', function (actorName) {
+    var testVariable = actorName;
+    var poolList = "";
+    if (game.cards.getName(actorName)) {
+      const stack = game.cards.getName(actorName);
+      const hand = stack.data.cards
+      var i = 0;
+      var firstItemExists = false;
+      for (i = 0; i < hand.size; i++) {
+        if (hand.document.availableCards[i].data.flags?.torgeternity?.pooled === true)  {
+            if (firstItemExists === true) { 
+              poolList += ", " + hand.document.availableCards[i].data.name;
+            } else {
+              poolList = hand.document.availableCards[i].data.name;
+              firstItemExists = true;
+            }
+          }
+      }
+      return poolList;
+    } else {
+      return "No pool list?";
+    }
   })
 }

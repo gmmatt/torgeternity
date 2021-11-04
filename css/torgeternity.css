@@ -2823,3 +2823,8 @@ form.actor-sheet.threat .tab[data-tab].active .editor {
     margin: 0.5em 0;
     padding: 0 0 0 1.5em;
 }
+
+.pool-list {
+    font-family: Palatino;
+    font-size: 12px;
+}

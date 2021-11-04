@@ -28,9 +28,11 @@ export default class  torgeternityPlayerHand extends CardsHand {
         // Handle the control action
         switch ( button.dataset.action ) {
           case "play":
-              card.pass(game.cards.getName("Destiny Discard"));
+              await card.setFlag("torgeternity", "pooled", false)
+              await card.pass(game.cards.getName("Destiny Discard"));
               card.toMessage({content: `<div class="card-draw flexrow"><img class="card-face" src="${card.img}"/><h4 class="card-name">Plays ${card.name}</h4>
             </div>`})
+              game.combats.apps[0].render();
               return;
           case "view":
               new ImagePopout(card.img, {title: card.name}).render(true,{width:425,height:650});
@@ -40,8 +42,10 @@ export default class  torgeternityPlayerHand extends CardsHand {
               x.shareImage();
               return;
           case "discard":
-              card.pass(game.cards.getName("Destiny Discard"));
+              await card.setFlag("torgeternity", "pooled", false);
+              await card.pass(game.cards.getName("Destiny Discard"));
               card.toMessage({content: `<div class="card-draw flexrow"><img class="card-face" src="${card.img}"/><h4 class="card-name">Discards ${card.name}</h4></div>`});
+              game.combats.apps[0].render();
               return;
           case "drawDestiny":
               return this.object.draw(game.cards.getName("Destiny Deck"));
@@ -49,7 +53,9 @@ export default class  torgeternityPlayerHand extends CardsHand {
               this.drawCosmDialog();
               return;
           case "pass":
-              this.playerPassDialog(card);
+              await card.setFlag("torgeternity", "pooled", false);
+              await this.playerPassDialog(card);
+              game.combats.apps[0].render();
               return;
           case "create":
             return cls.createDialog({}, {parent: this.object, pack: this.object.pack});
@@ -94,15 +100,16 @@ export default class  torgeternityPlayerHand extends CardsHand {
         case "poolToggle":
           if (card.getFlag("torgeternity", "pooled") === true) {
             await card.setFlag("torgeternity", "pooled", false)
+            game.combats.apps[0].render();
           } else {
             await card.setFlag("torgeternity", "pooled", true)
+            game.combats.apps[0].render();
           }
           /*if (input.checked === true) {
             await card.setFlag("torgeternity","pooled", true)
           } else  {
             await card.setFlag("torgeternity","pooled", false)
           } */
-          console.log(card.getFlag("torgeternity", "pooled"))
           return;
       }
     }
