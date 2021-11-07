@@ -53,9 +53,10 @@ Handlebars.registerHelper("concatSkillValue", function (skillName) {
       for (i = 0; i < hand.size; i++) {
         if (hand.document.availableCards[i].data.flags?.torgeternity?.pooled === true)  {
             if (firstItemExists === true) { 
-              poolList += ", " + hand.document.availableCards[i].data.name;
+              poolList += ", " + "<a class='pool-tooltip' href=''>" + hand.document.availableCards[i].data.name + "<span><img src='"+ hand.document.availableCards[i].img + "'></span></a>";
             } else {
-              poolList = hand.document.availableCards[i].data.name;
+              poolList = "<a class='pool-tooltip' href=''>" + hand.document.availableCards[i].data.name + "<span><img src='"+ hand.document.availableCards[i].img + "'></span></a>"
+              //poolList = hand.document.availableCards[i].data.name;
               firstItemExists = true;
             }
           }
