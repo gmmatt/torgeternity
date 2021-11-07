@@ -125,6 +125,12 @@ export class attackUpdate extends FormApplication {
         // Add Concealment Modifier
         if (document.getElementById("concealment-none").checked) {
             this.test.concealmentModifier = 0
+        } else if (document.getElementById("concealment-2").checked) {
+            this.test.concealmentModifier = -2
+        } else if (document.getElementById("concealment-4").checked) {
+            this.test.concealmentModifier = -4
+        } else if (document.getElementById("concealment-6").checked) {
+            this.test.concealmentModifier = -6
         }
 
         // Add Cover Modifier
