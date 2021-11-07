@@ -35,6 +35,14 @@
       "module": "torgeternity",
       "path": "packs/basic-rules.db",
       "entity": "JournalEntry"
+    },
+    {
+      "name": "core-card-set",
+      "label": "Core Card Set",
+      "system": "torgeternity",
+      "module": "torgeternity",
+      "path": "packs/core-card-set.db",
+      "entity": "Cards"
     }
   ],
     "dependencies": [
