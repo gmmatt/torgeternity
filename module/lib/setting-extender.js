@@ -357,6 +357,7 @@
 
 		getData() {
 			const data = super.getData();
+			/* Appears to be incompatible with Foundry v 0.9
 			const modules = Compatibility.getSettingsConfigModules(data);
 			modules.flatMap(m => m.settings).forEach(setting => {
 				const key = setting.module + '.' + setting.key;
@@ -367,6 +368,7 @@
 					setting.type = 'unknown'
 				}
 			});
+			*/
 			return data;
 		}
 

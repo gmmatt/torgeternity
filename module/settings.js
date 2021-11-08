@@ -1,6 +1,6 @@
 export function registerTorgSettings() {
 
-
+    
     //--------welcome message 
 
     game.settings.register("torgeternity", "welcomeMessage", {
@@ -38,6 +38,7 @@ export function registerTorgSettings() {
         default: true, // The default value for the setting
         onChange: () => window.location.reload()
     });
+    
 
     //GM Screen
     game.settings.register("torgeternity", "gmScreen", {
@@ -49,7 +50,8 @@ export function registerTorgSettings() {
         choices: {
             torgEternity: "Core Rulebook GM Screen",
             livingLand: "Living Land GM Screen"
-        }
+        },
+        default: "torgEternity"
     })
 
 
@@ -106,9 +108,7 @@ export function registerTorgSettings() {
     })
 */
 
-}
-
-function setCosmCard(cosm, path) {
+/* function setCosmCard(cosm, path) {
     let cards = document.getElementsByClassName("cosm-card");
     for (let card of cards) {
         if (card.classList.contains(cosm)) {
@@ -117,4 +117,6 @@ function setCosmCard(cosm, path) {
         }
     }
 
+} 
+*/
 }
