@@ -13,6 +13,16 @@ export function registerTorgSettings() {
         default: true, // The default value for the setting
     });
 
+    //---------Set up Cards
+    game.settings.register("torgeternity", "setUpCards", {
+        name: "Setup the Cards Directory",
+        hint: "If checked, the system will re-set the decks and discard piles in the Card Stacks tab.",
+        scope: "world",
+        config: true,
+        type: Boolean,
+        default: true
+    });
+
     //------pause image
 
     game.settings.register("torgeternity", "pauseMedia", {

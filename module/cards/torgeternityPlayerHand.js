@@ -133,6 +133,8 @@ export default class  torgeternityPlayerHand extends CardsHand {
           const form = html.querySelector("form.cards-dialog");
           const fd = new FormDataExtended(form).toObject();
           const to = game.cards.get(fd.to);
+          const toName = to.data.name;
+          card.toMessage({content: `<div class="card-draw flexrow"><img class="card-face" src="${card.img}"/><h4 class="card-name">Passes ${card.name} to ${toName}.</h4></div>`});
           return card.pass(to).catch(err => {
             ui.notifications.error(err.message);
             return this;

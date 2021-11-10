@@ -157,6 +157,17 @@ Hooks.on("ready", async function() {
         d.render(true);
     }
 
+    //----setup cards if needed
+    /*
+    if (game.settings.get("torgeternity", "setUpCards") === true) {
+        if (game.cards.getName("Destiny Deck") == null) {
+            let cardCompendium = game.system.packs.getName("core-card-set");
+            let destinyDeck = cardCompendium.getName("Destiny Deck")
+            let id = deckName.id
+            await collection.importFromCompendium("core-card-set",id)
+        }
+    }
+    */
 
     //----pause image----
     Hooks.on("renderPause", () => {
