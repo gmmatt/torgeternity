@@ -160,11 +160,11 @@ Hooks.on("ready", async function() {
     //----setup cards if needed
     /*
     if (game.settings.get("torgeternity", "setUpCards") === true) {
+        // Add Destiny Deck
+        const pack = game.packs.get("torgeternity.core-card-set");
         if (game.cards.getName("Destiny Deck") == null) {
-            let cardCompendium = game.system.packs.getName("core-card-set");
-            let destinyDeck = cardCompendium.getName("Destiny Deck")
-            let id = deckName.id
-            await collection.importFromCompendium("core-card-set",id)
+            const itemId = pack.index.getName("Destiny Deck")._id;
+            game.cards.importFromCompendium(pack,itemId)
         }
     }
     */
