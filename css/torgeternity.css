@@ -2734,3 +2734,8 @@ form.actor-sheet.threat .tab[data-tab].active .editor {
   font-family: Palatino;
   font-size: 13px;
 }
+
+.interaction-attack-list {
+  margin: 10px;
+  text-align: center
+}

@@ -302,8 +302,8 @@
             "blindFire": "Blind Fire",
             "targetOptions": "Target Options",
             "concealment": "Concealment",
-            "coverBonus": "Cover Bonus"
-
+            "coverBonus": "Cover Bonus",
+            "interactionAttacks": "Interaction Attacks"
 
         },
         "itemSheetDescriptions": {

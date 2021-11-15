@@ -3,6 +3,7 @@ import { torgBD } from "./torgchecks.js";
 import {skillDialog} from "/systems/torgeternity/module/skill-dialog.js";
 import {skillUpdate} from "/systems/torgeternity/module/skill-update.js";
 import {attackUpdate} from "/systems/torgeternity/module/attack-update.js";
+import {interactionUpdate} from "/systems/torgeternity/module/interaction-update.js"
 
 
 export function addChatListeners(html) {
@@ -148,8 +149,11 @@ function onModifier(event) {
     if (test.testType === "skill" || test.testType === "power") {
         let testDialog = new skillUpdate(test);
         testDialog.render(true)
-    } else {
+    } else if (test.testType === "attack") {
         let testDialog = new attackUpdate(test);
+        testDialog.render(true)
+    } else {
+        let testDialog = new interactionUpdate(test);
         testDialog.render(true)
     }
         
