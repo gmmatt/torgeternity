@@ -2764,6 +2764,7 @@ form.actor-sheet.threat .tab[data-tab].active .editor {
 }
 
 .skill-check-options {
+<<<<<<< HEAD
     font-family: Palatino;
     font-size: 13px;
 }
@@ -2897,4 +2898,13 @@ form.actor-sheet.threat .tab[data-tab].active .editor {
 
 .chat-message .card-draw .card-name {
     line-height: 20px;
+=======
+  font-family: Palatino;
+  font-size: 13px;
+}
+
+.interaction-attack-list {
+  margin: 10px;
+  text-align: center
+>>>>>>> origin/dev
 }

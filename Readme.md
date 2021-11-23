@@ -12,6 +12,9 @@ v. 2.0.4
 - Improved detection of defenses that are automatically set for 
   enhanced attacks.
 - Corrected issue where concealment modifier is not detected.
+- Added filter to attacks section and gears section so that empty categories
+  are not shown.
+- Added interaction attacks for Storm Knights.
 
 v. 2.0.3
 - Updated fr.json (thanks VieuxTroll!).

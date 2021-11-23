@@ -1,6 +1,7 @@
 <div class="list-section-heading">
     {{localize "torgeternity.sheetLabels.weapons"}}
 </div>
+{{#if meleeweapons}}
 <h2>{{localize "torgeternity.sheetLabels.meleeWeapons"}}</h2>
 <ol class="item-list">
     {{#each meleeweapons as |item id|}}
@@ -35,7 +36,8 @@
     </li>
     {{/each}}
 </ol>
-
+{{/if}}
+{{#if missileweapon}}
 <h2>{{localize "torgeternity.sheetLabels.missileWeapons"}}</h2>
 <ol class="item-list">
 
@@ -77,6 +79,8 @@
     </li>
     {{/each}}
 </ol>
+{{/if}}
+{{#if firearm}}
 <h2>{{localize "torgeternity.sheetLabels.firearms"}}</h2>
 <ol class="item-list">
 
@@ -118,6 +122,8 @@
     </li>
     {{/each}}
 </ol>
+{{/if}}
+{{#if heavyweapon}}
 <h2>{{localize "torgeternity.sheetLabels.heavyWeapons"}}/{{localize "torgeternity.sheetLabels.explosives"}}</h2>
 <ol class="item-list">
 
@@ -159,11 +165,13 @@
     </li>
     {{/each}}
 </ol>
+{{/if}}
 
 
 <div class="list-section-heading">
     {{localize "torgeternity.sheetLabels.armorAndShields"}}
 </div>
+{{#if armor}}
 <h2>{{localize "torgeternity.sheetLabels.armor"}}</h2>
 <ol class="item-list">
 
@@ -204,6 +212,8 @@
     </li>
     {{/each}}
 </ol>
+{{/if}}
+{{#if shield}}
 <h2>{{localize "torgeternity.sheetLabels.shield"}}</h2>
 <ol class="item-list">
 
@@ -241,11 +251,13 @@
     </li>
     {{/each}}
 </ol>
+{{/if}}
 
 
 <div class="list-section-heading">
     {{localize "torgeternity.sheetLabels.generalGear"}}
 </div>
+{{#if gear}}
 <h2>{{localize "torgeternity.sheetLabels.gear"}}</h2>
 <ol class="item-list">
 
@@ -278,6 +290,8 @@
     </li>
     {{/each}}
 </ol>
+{{/if}}
+{{#if implant}}
 <h2>{{localize "torgeternity.sheetLabels.implant"}}</h2>
 <ol class="item-list">
 
@@ -310,6 +324,8 @@
     </li>
     {{/each}}
 </ol>
+{{/if}}
+{{#if eternityshard}}
 <h2>{{localize "torgeternity.sheetLabels.eternityShard"}}</h2>
 <ol class="item-list">
 
@@ -342,6 +358,8 @@
     </li>
     {{/each}}
 </ol>
+{{/if}}
+{{#if vehicle}}
 <h2>{{localize "torgeternity.sheetLabels.vehicle"}}</h2>
 <ol class="item-list">
 
@@ -380,4 +398,5 @@
     </li>
     {{/each}}
 </ol>
+{{/if}}
 </div>

@@ -218,6 +218,49 @@ export function weaponAttack(test) {
 
 }
 
+export function interactionAttack(test) {
+   
+      // Roll as skilled or unskilled
+      var diceroll = ""
+      if (test.previousBonus === true) {
+         //Don't roll anything
+         if (test.skillAdds > 0) {
+            test.unskilledLabel = "display:none"
+         }
+      } else if (test.testType === "interactionAttack") {
+         if (test.skillAdds > 0) {
+            diceroll = new Roll('1d20x10x20').evaluate({ async: false })
+               ;
+            test.unskilledLabel = "display:none"
+         } else if (test.skillAdds === 0) {
+            diceroll = new Roll('1d20x10').evaluate({ async: false })
+               ;
+            test.unskilledLabel = "display:block"
+            // Should trigger only if this is a threat and test.skilAdds therefore equals null   
+         } else {
+            diceroll = new Roll('1d20x10x20').evaluate({ async: false });
+            test.unskilledLabel = "display:none"
+         }
+      } else {
+         diceroll = new Roll('1d20x10x20').evaluate({ async: false });
+         test.unskilledLabel = "display:none"
+      };
+   
+      //diceroll.toMessage();
+      if (test.previousBonus === true) {
+         test.diceroll = null;
+      } else {
+         test.diceroll = diceroll;
+         test.rollTotal = diceroll.total;
+      }
+   
+      // Set Chat Title
+      test.chatTitle = test.skillName + " " + game.i18n.localize("torgeternity.powers.attack");
+   
+      renderSkillChat(test, diceroll);
+   
+   }
+   
 
 export function powerRoll(test) {
 

@@ -303,8 +303,12 @@
             "targetOptions": "Target Options",
             "concealment": "Concealment",
             "coverBonus": "Cover Bonus",
+<<<<<<< HEAD
             "number": "Number"
 
+=======
+            "interactionAttacks": "Interaction Attacks"
+>>>>>>> origin/dev
 
         },
         "itemSheetDescriptions": {

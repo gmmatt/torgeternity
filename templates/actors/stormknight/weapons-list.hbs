@@ -1,6 +1,51 @@
 <h2>
     {{localize "torgeternity.sheetLabels.attacks"}}
 </h2>
+<h3>
+    {{localize "torgeternity.sheetLabels.interactionAttacks"}}
+</h3>
+<div class="interaction-attack-list">
+    <a class="interaction-attack"
+        data-name = "{{localize "torgeternity.skills.intimidation"}}"
+        data-base-attribute = {{data.data.attributes.spirit.value}}
+        data-adds = {{data.data.skills.intimidation.adds}}
+        data-skill-value= {{data.data.skills.intimidation.value}}
+        data-attack-type= "intimidation"
+    >
+        {{localize "torgeternity.skills.intimidation"}}
+    </a>
+    &bull;
+    <a class="interaction-attack"
+        data-name = "{{localize "torgeternity.skills.maneuver"}}"
+        data-base-attribute = {{data.data.attributes.dexterity.value}}
+        data-adds = {{data.data.skills.maneuver.adds}}
+        data-skill-value= {{data.data.skills.maneuver.value}}
+        data-attack-type= "maneuver"
+    >
+        {{localize "torgeternity.skills.maneuver"}}
+    </a>
+    &bull;
+    <a class="interaction-attack"
+        data-name = "{{localize "torgeternity.skills.taunt"}}"
+        data-base-attribute = {{data.data.attributes.charisma.value}}
+        data-adds = {{data.data.skills.taunt.adds}}
+        data-skill-value= {{data.data.skills.taunt.value}}
+        data-attack-type= "taunt"    
+    >
+        {{localize "torgeternity.skills.taunt"}}
+    </a>
+    &bull;
+    <a class="interaction-attack"
+        data-name = "{{localize "torgeternity.skills.trick"}}"
+        data-base-attribute = {{data.data.attributes.mind.value}}
+        data-adds = {{data.data.skills.trick.adds}}
+        data-skill-value= {{data.data.skills.trick.value}}
+        data-attack-type= "trick"    
+    >
+        {{localize "torgeternity.skills.trick"}}
+    </a>
+</div>
+{{#if meleeweapons}}
 <h3>{{localize "torgeternity.sheetLabels.meleeWeapons"}}</h3>
 <div class="item-list">
     {{#each meleeweapons as |item id|}}
@@ -20,6 +65,8 @@
     </li>
     {{/each}}
 </div>
+{{/if}}
+{{#if missileweapon}}
 <h3>{{localize "torgeternity.sheetLabels.missileWeapons"}}</h3>
 <div class="item-list">
     {{#each missileweapon as |item id|}}
@@ -39,6 +86,8 @@
     </li>
     {{/each}}
 </div>
+{{/if}}
+{{#if firearm}}
 <h3>{{localize "torgeternity.sheetLabels.firearms"}}</h3>
 <div class="item-list">
 
@@ -60,6 +109,8 @@
     </li>
     {{/each}}
 </div>
+{{/if}}
+{{#if heavyweapon}}
 <h3>{{localize "torgeternity.sheetLabels.heavyWeapons"}}</h3>
 <div class="item-list">
 
@@ -81,6 +132,8 @@
     </li>
     {{/each}}
 </div>
+{{/if}}
+{{#if customAttack}}
 <h3>{{localize "torgeternity.sheetLabels.otherAttacks"}}</h3>
 <div class="item-list">
     {{#each customAttack as |item id|}}
@@ -99,3 +152,4 @@
     </li>
     {{/each}}
 </div>
+{{/if}}
