@@ -16,7 +16,7 @@ export function registerTorgSettings() {
     //---------Set up Cards
     game.settings.register("torgeternity", "setUpCards", {
         name: "Setup the Cards Directory",
-        hint: "If checked, the system will re-set the decks and discard piles in the Card Stacks tab.",
+        hint: "If checked, the system will re-set the decks and discard piles in the Card Stacks tab. You will need to refresh your browser before the changes are made.",
         scope: "world",
         config: true,
         type: Boolean,

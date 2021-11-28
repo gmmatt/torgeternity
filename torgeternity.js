@@ -73,10 +73,10 @@ Hooks.once("init", async function() {
     });
 
     //---register cards
-    DocumentSheetConfig.registerSheet(Cards, "core", torgeternityPlayerHand, { label: "Torg Player Hand", types: ["hand"] });
-    DocumentSheetConfig.registerSheet(Cards, "core", torgeternityPile, { label: "Torg Pile", types: ["pile"] });
-    DocumentSheetConfig.registerSheet(Cards, "core", torgeternityDeck, { label: "Torg Deck", types: ["deck"] });
-    DocumentSheetConfig.registerSheet(Card, "core", torgeternityCardConfig, {label: "Torg Eternity Card Configuration", types: ["destiny", "drama", "cosm"]})
+    DocumentSheetConfig.registerSheet(Cards, "core", torgeternityPlayerHand, { label: "Torg Player Hand", types: ["hand"], makeDefault: true });
+    DocumentSheetConfig.registerSheet(Cards, "core", torgeternityPile, { label: "Torg Pile", types: ["pile"], makeDefault: true });
+    DocumentSheetConfig.registerSheet(Cards, "core", torgeternityDeck, { label: "Torg Deck", types: ["deck"], makeDefault: true });
+    DocumentSheetConfig.registerSheet(Card, "core", torgeternityCardConfig, {label: "Torg Eternity Card Configuration", types: ["destiny", "drama", "cosm"], makeDefault: true})
 
     //----------preloading handlebars templates
     preloadTemplates();
@@ -158,16 +158,54 @@ Hooks.on("ready", async function() {
     }
 
     //----setup cards if needed
-    /*
+    
     if (game.settings.get("torgeternity", "setUpCards") === true) {
-        // Add Destiny Deck
         const pack = game.packs.get("torgeternity.core-card-set");
+        // Add Destiny Deck
         if (game.cards.getName("Destiny Deck") == null) {
             const itemId = pack.index.getName("Destiny Deck")._id;
             game.cards.importFromCompendium(pack,itemId)
         }
+        // Add Drama Deck
+        if (game.cards.getName("Drama Deck") ==  null) {
+            const itemId = pack.index.getName("Drama Deck")._id;
+            game.cards.importFromCompendium(pack,itemId)
+        }
+        // Add Cosm Discard
+        if (game.cards.getName("Cosm Discard") == null) {
+            let cardData = {
+                name: "Cosm Discard",
+                type: "pile"
+            }
+            let cosmDiscard = Cards.create(cardData, {keepId: true, renderSheet:false});
+        }
+        // Add Drama Discard
+        if (game.cards.getName("Drama Discard") == null) {
+            let cardData = {
+                name: "Drama Discard",
+                type: "pile"
+            }
+            let dramaDiscard = Cards.create(cardData, {keepId: true, renderSheet:false});
+        }
+        // Add Destiny Discard
+        if (game.cards.getName("Destiny Discard") == null) {
+            let cardData = {
+                name: "Destiny Discard",
+                type: "pile"
+            }
+            let destinyDiscard = Cards.create(cardData, {keepId: true, renderSheet:false});
+        }
+        // Add Active Drama
+        if (game.cards.getName("Active Drama Card") == null) {
+            let cardData = {
+                name: "Active Drama Card",
+                type: "pile"
+            }
+            let activeDrama = Cards.create(cardData, {keepId: true, renderSheet:false});
+        }
+        game.settings.set("torgeternity", "setUpCards", false)
     }
-    */
+    
 
     //----pause image----
     Hooks.on("renderPause", () => {
