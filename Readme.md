@@ -8,6 +8,9 @@
 For manual installation, use the provided manifest URL in the "*Install System*" popup window 
 while managing game systems.
 
+v. 2.0.5
+- Update Spanish localization (thanks to ForjaSalve!)
+
 v. 2.0.4
 - Improved detection of defenses that are automatically set for 
   enhanced attacks.

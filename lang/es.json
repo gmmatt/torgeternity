@@ -220,6 +220,7 @@
             "skills": "Habilidades",
 			"favored":"Preferente",
             "possibilitypotential": "Posibilidad (Potencial)",
+            "size": "Tamaño",
             "possibilities": "Posibilidades",
 			"up": "Aumento",
             "equipment": "Equipo",
@@ -270,7 +271,39 @@
             "passiveEffects": "Efecto Pasivo",
             "inactiveEffects": "Efecto Inactivo",
             "source": "Fuente",
-            "otherAttacks": "Otro"
+            "otherAttacks": "Otro",
+            "difficulty": "Dificultad",
+            "dn": "ND",
+            "roll": "Tirar",
+            "target": "Objetivo",
+            "inputExisting": "Entrada Existente",
+            "movementPenalty": "Movimiento",
+            "walking": "Moverse (Nada)",
+            "running": "Correr (-2)",
+            "multiActionPenalty": "Acción Múltiple",
+            "actions": "Acciones",
+            "multiTargetPenalty": "Objetivo Múltiple",
+            "targets": "Objetivos",
+            "otherModifiers": "Otros Modificadores",
+            "description": "Descripción",
+            "effect": "Efecto",
+            "statusEffects": "Efecto Estado",
+            "update": "Actualizar",
+            "attackOptions": "Opciones Ataque",
+            "calledShot": "Tiro Preciso",
+            "none": "Nada",
+            "vitalArea": "Golpe Vital",
+            "burst": "Ráfaga",
+            "shortBurst": "Corta (+2)",
+            "longBurst": "Larga (+4)",
+            "heavyBurst": "Continua (+6)",
+            "allOut": "Ataque Total",
+            "aimed": "Apuntar",
+            "blindFire": "Fuego a Ciegas",
+            "targetOptions": "Opciones Objetivo",
+            "concealment": "Cobertura",
+            "coverBonus": "Mod. Cobertura",
+            "interactionAttacks": "Ataque Interacción"
 			
         },
         "itemSheetDescriptions": {
@@ -355,7 +388,14 @@
             "concentrating": "Concentrado",
             "disconnected": "Desconectado",
             "malfunction": "Desperfecto",
-            "restrained": "Retenido"
+            "restrained": "Retenido",
+            "dim": "Tenue",
+            "dark": "Oscuridad",
+            "pitchBlack": "Negrura Total",
+            "waiting": "Espera",
+            "darkness": "Oscuridad",
+            "targetSize": "Tamaño Objetivo",
+            "targetVulnerability": "Vulnerabilidad Objetivo"
         },
 		
 		"yesNo": {
@@ -384,6 +424,15 @@
             "attack": "Ataca",
             "baseDamage": "Daño Base",
 			"value": "Valor"
+        },
+        
+        "sizes": {
+            "tiny": "Diminuto",
+            "verySmall": "Muy Pequeño",
+            "small": "Pequeño",
+            "normal": "Medio",
+            "large": "Grande",
+            "veryLarge": "Muy Grande"
         }
     }
 }
