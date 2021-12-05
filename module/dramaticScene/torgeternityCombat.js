@@ -14,15 +14,24 @@ export default class TorgCombat extends Combat {
     if (activeStack.data.cards.document.availableCards.length > 0) {
       await game.cards.getName("Active Drama Card").data.cards.document.availableCards[0].pass(game.cards.getName("Drama Discard"));
     }
-    await game.cards.getName("Active Drama Card").draw(game.cards.getName("Drama Deck"));
-    await this._onUpdate;
+    var cardCount = game.cards.getName("Drama Deck").availableCards.length;
+    if (game.cards.getName("Drama Deck").availableCards.length > 0) {  
+      game.cards.getName("Active Drama Card").draw(game.cards.getName("Drama Deck"));
+      await this._onUpdate;
+    } else {
+      ui.notifications.info("The Drama Deck is empty. Reset the Drama Deck to continue.")
+    }
    
     await super.nextRound();
 
   }
 
   _onCreate (data,options,userId) {
-    game.cards.getName("Active Drama Card").draw(game.cards.getName("Drama Deck"));   
+    if (game.cards.getName("Drama Deck").availableCards.length > 0) {  
+      game.cards.getName("Active Drama Card").draw(game.cards.getName("Drama Deck"));
+    } else {
+      ui.notifications.info("The Drama Deck is empty. Reset the Drama Deck to continue.")
+    }
     
     super._onCreate(data,options,userId);
   }

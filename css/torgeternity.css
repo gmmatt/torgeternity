@@ -2764,7 +2764,6 @@ form.actor-sheet.threat .tab[data-tab].active .editor {
 }
 
 .skill-check-options {
-<<<<<<< HEAD
     font-family: Palatino;
     font-size: 13px;
 }
@@ -2833,20 +2832,22 @@ form.actor-sheet.threat .tab[data-tab].active .editor {
 .pool-tooltip:hover span {
     display: block;
     position: absolute;
-    top: 100px;
-    right: 350px;
-    z-index: 1000;
-    max-width: 320px;
-    min-height: 128px;
+    top: 30px;
+    right: 30px;
+    z-index: 0;
+    max-width: 246px;
+    min-height: 99px;
     border: 1px solid black;
-    margin-top: 5px;
-    margin-left: 5px;
+    margin-top: 2px;
+    margin-left: 2px;
     overflow: hidden;
     padding: 8px;
 }
 
+
 .card-chat-tooltip {
     text-decoration: none;
+    flex:none;
 }
 
 .card-chat-tooltip span {
@@ -2866,15 +2867,15 @@ form.actor-sheet.threat .tab[data-tab].active .editor {
 .card-chat-tooltip:hover span {
     display: block;
     position: absolute;
-    top: 100px;
-    right: 350px;
+    top: -370px;
+    right: 0px;
     z-index: 1000;
     max-width: 320px;
     min-height: 128px;
     border: 1px solid black;
     margin-top: 5px;
     margin-left: 5px;
-    overflow: hidden;
+    overflow: visible;
     padding: 8px;
 }
 
@@ -2898,13 +2899,4 @@ form.actor-sheet.threat .tab[data-tab].active .editor {
 
 .chat-message .card-draw .card-name {
     line-height: 20px;
-=======
-  font-family: Palatino;
-  font-size: 13px;
-}
-
-.interaction-attack-list {
-  margin: 10px;
-  text-align: center
->>>>>>> origin/dev
 }

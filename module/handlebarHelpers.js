@@ -19,6 +19,11 @@ Handlebars.registerHelper("concatSkillValue", function (skillName) {
     var localClearance = "torgeternity.clearances." + clearance;
     return localClearance;
   });
+
+  Handlebars.registerHelper("concatCardType", function (cardType) {
+    var localCardType = "torgeternity.cardTypes." + cardType;
+    return localCardType;
+  });
   
   Handlebars.registerHelper("concatSpecialAbility", function (description) {
     // Removes <p> and </p> from the beginning and end of special ability descriptions so that they appear inline on threat sheet
@@ -53,9 +58,9 @@ Handlebars.registerHelper("concatSkillValue", function (skillName) {
       for (i = 0; i < hand.size; i++) {
         if (hand.document.availableCards[i].data.flags?.torgeternity?.pooled === true)  {
             if (firstItemExists === true) { 
-              poolList += ", " + "<a class='pool-tooltip' href=''>" + hand.document.availableCards[i].data.name + "<span><img src='"+ hand.document.availableCards[i].img + "'></span></a>";
+              poolList += ", " + '<span class="pool-tooltip">' + hand.document.availableCards[i].data.name + "<span><img src='"+ hand.document.availableCards[i].img + "'></span></span>";
             } else {
-              poolList = "<a class='pool-tooltip' href=''>" + hand.document.availableCards[i].data.name + "<span><img src='"+ hand.document.availableCards[i].img + "'></span></a>"
+              poolList = "<span class='pool-tooltip'>" + hand.document.availableCards[i].data.name + "<span><img src='"+ hand.document.availableCards[i].img + "'></span></span>"
               //poolList = hand.document.availableCards[i].data.name;
               firstItemExists = true;
             }

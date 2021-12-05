@@ -30,7 +30,7 @@ export default class  torgeternityPlayerHand extends CardsHand {
           case "play":
               await card.setFlag("torgeternity", "pooled", false)
               await card.pass(game.cards.getName("Destiny Discard"));
-              card.toMessage({content: `<div class="card-draw flexrow"><img class="card-face" src="${card.img}"/><h4 class="card-name">Plays ${card.name}</h4>
+              card.toMessage({content: `<div class="card-draw flexrow"><span class="card-chat-tooltip"><img class="card-face" src="${card.img}"/><span><img src="${card.img}"></span></span><span class="card-name">Plays ${card.name}</span>
             </div>`})
               game.combats.apps[0].render();
               return;
@@ -44,7 +44,8 @@ export default class  torgeternityPlayerHand extends CardsHand {
           case "discard":
               await card.setFlag("torgeternity", "pooled", false);
               await card.pass(game.cards.getName("Destiny Discard"));
-              card.toMessage({content: `<div class="card-draw flexrow"><img class="card-face" src="${card.img}"/><h4 class="card-name">Discards ${card.name}</h4></div>`});
+              card.toMessage({content: `<div class="card-draw flexrow"><span class="card-chat-tooltip"><img class="card-face" src="${card.img}"/><span><img src="${card.img}"></span></span><span class="card-name">Discards ${card.name}</span>
+              </div>`});
               game.combats.apps[0].render();
               return;
           case "drawDestiny":
@@ -116,32 +117,32 @@ export default class  torgeternityPlayerHand extends CardsHand {
     
        
       async playerPassDialog(card) {
-      const cards = game.cards.filter(c => (c !== this) && (c.type !== "deck") && c.testUserPermission(game.user, "LIMITED"));
-      if ( !cards.length ) return ui.notifications.warn("No hands available!", {localize: true});
-  
-      // Construct the dialog HTML
-      const html = await renderTemplate("systems/torgeternity/templates/cards/playerPassDialog.hbs", {
-        cards: cards,
-      });
-  
-      // Display the prompt
-      return Dialog.prompt({
-        title: game.i18n.localize("torgeternity.dialogPrompts.playerPassTitle"),
-        label: game.i18n.localize("torgeternity.dialogPrompts.playerPassLabel"),
-        content: html,
-        callback: html => {
-          const form = html.querySelector("form.cards-dialog");
-          const fd = new FormDataExtended(form).toObject();
-          const to = game.cards.get(fd.to);
-          const toName = to.data.name;
-          card.toMessage({content: `<div class="card-draw flexrow"><img class="card-face" src="${card.img}"/><h4 class="card-name">Passes ${card.name} to ${toName}.</h4></div>`});
-          return card.pass(to).catch(err => {
-            ui.notifications.error(err.message);
-            return this;
-          });
-        },
-        options: {jQuery: false}
-      });
+        const cards = game.cards.filter(c => (c !== this) && (c.type !== "deck") && c.testUserPermission(game.user, "LIMITED"));
+        if ( !cards.length ) return ui.notifications.warn("No hands available!", {localize: true});
+    
+        // Construct the dialog HTML
+        const html = await renderTemplate("systems/torgeternity/templates/cards/playerPassDialog.hbs", {
+          cards: cards,
+        });
+    
+        // Display the prompt
+        return Dialog.prompt({
+          title: game.i18n.localize("torgeternity.dialogPrompts.playerPassTitle"),
+          label: game.i18n.localize("torgeternity.dialogPrompts.playerPassLabel"),
+          content: html,
+          callback: html => {
+            const form = html.querySelector("form.cards-dialog");
+            const fd = new FormDataExtended(form).toObject();
+            const to = game.cards.get(fd.to);
+            const toName = to.data.name;
+            card.toMessage({content: `<div class="card-draw flexrow"><span class="card-chat-tooltip"><img class="card-face" src="${card.img}"/><span><img src="${card.img}"></span></span><h4 class="card-name">Passes ${card.name} to ${toName}.</h4></div>`});
+            return card.pass(to).catch(err => {
+              ui.notifications.error(err.message);
+              return this;
+            });
+          },
+          options: {jQuery: false}
+        });
     } 
   
     async drawCosmDialog() {

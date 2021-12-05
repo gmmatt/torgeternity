@@ -61,12 +61,12 @@
                     <a class="card-control" title="{{localize 'CARD.FaceNext'}}" data-action="nextFace" {{#unless card.hasNextFace}}disabled{{/unless}}><i class="fas fa-caret-up"></i></a>
                     <a class="card-control" title="{{localize 'CARD.FacePrevious'}}" data-action="prevFace" {{#unless card.hasPreviousFace}}disabled{{/unless}}><i class="fas fa-caret-down"></i></a>
                 </div>
-                <a class="card-tooltip" href="">
+                <span class="card-tooltip" href="">
                     <img class="card-face" src="{{card.img}}" alt="{{card.name}}" height="48">
                     <span><img src="{{card.img}}"></span>    
-                </a>
+                </span>
                 <h4 class="card-name">{{card.data.name}}</h4>
-                <span class="card-type">{{card.type}}</span>
+                <span class="card-type">{{localize (concatCardType card.type)}}</span>
                 <div class="card-drawn">
                     <input type="checkbox" class="card-value" {{checked card.data.drawn}} disabled>
                 </div>

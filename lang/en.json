@@ -304,7 +304,10 @@
             "concealment": "Concealment",
             "coverBonus": "Cover Bonus",
             "number": "Number",
-            "interactionAttacks": "Interaction Attacks"
+            "interactionAttacks": "Interaction Attacks",
+            "new": "New",
+            "keep": "Keep",
+            "end": "End"
         },
         "itemSheetDescriptions": {
             "perk": "Perk",
@@ -457,6 +460,12 @@
             "orrorsh": "Orrorsh Cosm Deck",
             "panPacifica": "Pan Pacifica Cosm Deck",
             "tharkold": "Tharkold Cosm Deck"         
+        },
+
+        "cardTypes": {
+            "destiny": "Destiny",
+            "drama": "Drama",
+            "cosm": "Cosm"
         }
         
     }
