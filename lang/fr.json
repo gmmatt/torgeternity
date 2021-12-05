@@ -120,7 +120,7 @@
             "powers": "Pouvoirs",
             "restrictions": "Restrictions",
             "minStrength": "Force min",
-            "ap": "AP"
+            "ap": "PA"
         },
         "stats": {
             "wounds": "Blessures",
@@ -296,14 +296,15 @@
             "burst": "Rafale",
             "shortBurst": "Courte (+2)",
             "longBurst": "Longue (+4)",
+            "heavyBurst": "Nourrie (+6)",
             "allOut": "Attaque totale",
             "aimed": "Visée",
             "blindFire": "Tir au jugé",
             "targetOptions": "Cibles",
             "concealment": "Dissimultation",
-            "coverBonus": "Couvert"
-
-            
+            "coverBonus": "Couvert",
+            "number": "Nombre",
+            "interactionAttacks": "Interactions offensives"
         },
         "itemSheetDescriptions": {
             "perk": "Atout",
@@ -405,8 +406,8 @@
             "possibility": "Possibilité",
             "hero": "Héros",
             "heroCard": "Carte Héros",
-            "drama": "Action",
-            "dramaCard": "Carte Action",
+            "drama": "Drame",
+            "dramaCard": "Carte Drame",
             "bonusCard": "Carte +3",
             "bonusDamage": "Dommages bonus",
             "up": "Un de plus!",
@@ -432,6 +433,31 @@
             "normal": "Normal",
             "large": "Grande",
             "veryLarge": "Très grande"
+        },
+
+        "dialogPrompts": {
+            "playerPassTitle": "Donner au joueur",
+            "playerPassLabel": "Donner",
+            "playerPassInstructions": "Sélection du joueur recevant la carte",
+            "playerPassTo": "Donner à",
+            "drawDestiny": "Tirer carte Destin",
+            "drawCosm": "Tirer carte Cosm",
+            "selectCosmDeck": "Sélectionner le Cosm",
+            "cosmDialogTitle": "Tirer carte Cosm",
+            "cosmDeckDialogLabel": "Tirer",
+            "cardPooled": "Réserve d'action"
+        },
+
+        "cosmDecks": {
+            "coreEarth": "Cartes Cosm Prime Terre",
+            "aysle": "Cartes Cosm Aysle",
+            "cyberpapacy": "Cartes Cosm Cyberpapauté",
+            "livingLand": "Cartes Cosm Terre Vivante",
+            "nileEmpire": "Cartes Cosm Empire du Nil",
+            "orrorsh": "Carte Cosm Orrorsh",
+            "panPacifica": "Cartes Cosm Pan Pacifica",
+            "tharkold": "Cartes Cosm Tharkold"         
         }
+        
     }
 }
