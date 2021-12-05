@@ -2900,3 +2900,9 @@ form.actor-sheet.threat .tab[data-tab].active .editor {
 .chat-message .card-draw .card-name {
     line-height: 20px;
 }
+
+
+.interaction-attack-list {
+    margin: 10px;
+    text-align: center
+  }
