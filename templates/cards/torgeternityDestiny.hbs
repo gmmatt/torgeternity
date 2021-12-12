@@ -17,6 +17,15 @@
     <div class="tab" data-tab="details">
 
         <div class="form-group">
+            <label>{{ localize "CARD.Type" }}</label>
+            <div class="form-fields">
+                <select name="type">
+                    {{selectOptions types selected=data.type localize=true}}
+                </select>
+            </div>
+        </div>
+
+        <div class="form-group">
             <label>{{ localize "torgeternity.sheetLabels.number" }}</label>
             <div class="form-fields">
                 {{numberInput data.data.number name="number" step=1}}
