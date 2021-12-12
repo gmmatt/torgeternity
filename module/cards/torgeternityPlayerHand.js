@@ -29,7 +29,11 @@ export default class  torgeternityPlayerHand extends CardsHand {
         switch ( button.dataset.action ) {
           case "play":
               await card.setFlag("torgeternity", "pooled", false)
-              await card.pass(game.cards.getName("Destiny Discard"));
+              if (card.data.type == "destiny") {
+                await card.pass(game.cards.getName("Destiny Discard"));
+              } else {
+                await card.pass(game.cards.getName("Cosm Discard"));
+              }
               card.toMessage({content: `<div class="card-draw flexrow"><span class="card-chat-tooltip"><img class="card-face" src="${card.img}"/><span><img src="${card.img}"></span></span><span class="card-name">Plays ${card.name}</span>
             </div>`})
               game.combats.apps[0].render();
@@ -43,7 +47,11 @@ export default class  torgeternityPlayerHand extends CardsHand {
               return;
           case "discard":
               await card.setFlag("torgeternity", "pooled", false);
-              await card.pass(game.cards.getName("Destiny Discard"));
+              if (card.data.type == "destiny") {
+                await card.pass(game.cards.getName("Destiny Discard"));
+              } else {
+                await card.pass(game.cards.getName("Cosm Discard"));
+              }
               card.toMessage({content: `<div class="card-draw flexrow"><span class="card-chat-tooltip"><img class="card-face" src="${card.img}"/><span><img src="${card.img}"></span></span><span class="card-name">Discards ${card.name}</span>
               </div>`});
               game.combats.apps[0].render();
