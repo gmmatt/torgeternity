@@ -74,6 +74,10 @@ export default class  torgeternityPile extends CardsPile {
             return card.update({face: card.data.face === null ? 0 : card.data.face+1});
           case "prevFace":
             return card.update({face: card.data.face === 0 ? null : card.data.face-1});
+          case "return":
+            for (let i = 0; i < this.object.data.cards.size; i++) {
+              this.object.data.cards.contents[i].reset()
+            }
         }
         
     }

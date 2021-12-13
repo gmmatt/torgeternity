@@ -307,7 +307,8 @@
             "interactionAttacks": "Interaction Attacks",
             "new": "New",
             "keep": "Keep",
-            "end": "End"
+            "end": "End",
+            "return": "Return"
         },
         "itemSheetDescriptions": {
             "perk": "Perk",
