@@ -126,19 +126,23 @@
                         <a
                             class="has-played"
                             style="margin: 0px 5px 0px 0px"
+                            title="Check when character's turn is complete"
                         ><i
-                                {{#if turn.data.flags.world.turnTaken}}class="fas fa-check"
-                                style="color:green"
-                                {{else}}class="fas fa-check"
-                                style="color:gray"
+                                {{#if turn.data.flags.world.turnTaken}}
+                                    class="fas fa-check"
+                                    style="color:green"
+                                {{else}}
+                                    class="fas fa-check"
+                                    style="color:gray"
                                 {{/if}}
                             ></i></a>
-                        <a
+<!--                        <a
                             class="combatant-control {{#if turn.hidden}}active{{/if}}"
                             title="{{localize 'COMBAT.ToggleVis'}}"
                             data-control="toggleHidden"
                         >
                             <i class="fas fa-eye-slash"></i></a>
+-->
                         <a
                             class="combatant-control {{#if turn.defeated}}active{{/if}}"
                             title="{{localize 'COMBAT.ToggleDead'}}"
