@@ -24,6 +24,7 @@ import torgeternityPlayerHand from "./module/cards/torgeternityPlayerHand.js";
 import torgeternityPile from "./module/cards/torgeternityPile.js";
 import torgeternityDeck from "./module/cards/torgeternityDeck.js";
 import torgeternityCardConfig from "./module/cards/torgeternityCardConfig.js";
+import { torgeternityCards } from "./module/cards/torgeternityCards.js";
 
 
 Hooks.once("init", async function() {
@@ -61,6 +62,9 @@ Hooks.once("init", async function() {
     //---custom user class
     CONFIG.ui.players = TorgeternityPlayerList;
 
+    //---cards
+    CONFIG.Cards.documentClass = torgeternityCards;
+
     //---register items and actors
     Items.unregisterSheet("core", ItemSheet);
     Items.registerSheet("torgeternity", torgeternityItemSheet, {
@@ -77,6 +81,7 @@ Hooks.once("init", async function() {
     DocumentSheetConfig.registerSheet(Cards, "core", torgeternityPile, { label: "Torg Pile", types: ["pile"], makeDefault: true });
     DocumentSheetConfig.registerSheet(Cards, "core", torgeternityDeck, { label: "Torg Deck", types: ["deck"], makeDefault: true });
     DocumentSheetConfig.registerSheet(Card, "core", torgeternityCardConfig, {label: "Torg Eternity Card Configuration", types: ["destiny", "drama", "cosm"], makeDefault: true})
+    
 
     //----------preloading handlebars templates
     preloadTemplates();
