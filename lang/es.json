@@ -433,6 +433,11 @@
             "normal": "Medio",
             "large": "Grande",
             "veryLarge": "Muy Grande"
+        },
+
+        "dialogPrompts": {
+            "plays": "Juega",
+            "discards": "Descarta"
         }
     }
 }

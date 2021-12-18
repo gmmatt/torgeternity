@@ -34,7 +34,7 @@ export default class  torgeternityPlayerHand extends CardsHand {
               } else {
                 await card.pass(game.cards.getName("Cosm Discard"));
               }
-              card.toMessage({content: `<div class="card-draw flexrow"><span class="card-chat-tooltip"><img class="card-face" src="${card.img}"/><span><img src="${card.img}"></span></span><span class="card-name">Plays ${card.name}</span>
+              card.toMessage({content: `<div class="card-draw flexrow"><span class="card-chat-tooltip"><img class="card-face" src="${card.img}"/><span><img src="${card.img}"></span></span><span class="card-name">${game.i18n.localize("torgeternity.dialogPrompts.plays")} ${card.name}</span>
             </div>`})
               game.combats.apps[0].render();
               return;
@@ -52,7 +52,7 @@ export default class  torgeternityPlayerHand extends CardsHand {
               } else {
                 await card.pass(game.cards.getName("Cosm Discard"));
               }
-              card.toMessage({content: `<div class="card-draw flexrow"><span class="card-chat-tooltip"><img class="card-face" src="${card.img}"/><span><img src="${card.img}"></span></span><span class="card-name">Discards ${card.name}</span>
+              card.toMessage({content: `<div class="card-draw flexrow"><span class="card-chat-tooltip"><img class="card-face" src="${card.img}"/><span><img src="${card.img}"></span></span><span class="card-name">${game.i18n.localize("torgeternity.dialogPrompts.discards")} ${card.name}</span>
               </div>`});
               game.combats.apps[0].render();
               return;
