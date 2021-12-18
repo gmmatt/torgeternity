@@ -8,6 +8,10 @@
 For manual installation, use the provided manifest URL in the "*Install System*" popup window 
 while managing game systems.
 
+v. 2.1.0
+- Added card support! Too many new features to document here, but you can
+  see a demonstration video here: https://www.youtube.com/watch?v=D2VKq_JtJeI&t=227s
+
 v. 2.0.5
 - Update Spanish localization (thanks to ForjaSalve!)
 
