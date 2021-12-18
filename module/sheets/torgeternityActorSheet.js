@@ -259,7 +259,7 @@ export default class torgeternityActorSheet extends ActorSheet {
                 close: html => {
                     if (applyChanges) {
                         const li = $(ev.currentTarget).parents(".item");
-                        this.actor.deleteOwnedItem(li.data("itemId"));
+                        this.actor.deleteEmbeddedDocuments("Item", [ li.data("itemId") ] );
                         li.slideUp(200, () => this.render(false));
                     }
                 }
