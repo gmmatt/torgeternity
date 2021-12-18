@@ -449,7 +449,9 @@
             "selectCosmDeck": "Select Cosm Deck",
             "cosmDialogTitle": "Draw Cosm Card",
             "cosmDeckDialogLabel": "Draw",
-            "cardPooled": "In Pool?"
+            "cardPooled": "In Pool?",
+            "plays": "Plays",
+            "discards": "Discards"
         },
 
         "cosmDecks": {

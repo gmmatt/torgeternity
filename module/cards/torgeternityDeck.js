@@ -29,7 +29,7 @@ export default class  torgeternityDeck extends CardsPile {
         switch ( button.dataset.action ) {
           case "play":
               card.pass(game.cards.getName("Destiny Discard"));
-              card.toMessage({content: `<div class="card-draw flexrow"><img class="card-face" src="${card.img}"/><h4 class="card-name">Plays ${card.name}</h4>
+              card.toMessage({content: `<div class="card-draw flexrow"><img class="card-face" src="${card.img}"/><h4 class="card-name">${game.i18n.localize("torgeternity.dialogPrompts.plays")} ${card.name}</h4>
             </div>`})
               return;
           case "view":
@@ -41,7 +41,7 @@ export default class  torgeternityDeck extends CardsPile {
               return;
           case "discard":
               card.pass(game.cards.getName("Destiny Discard"));
-              card.toMessage({content: `<div class="card-draw flexrow"><img class="card-face" src="${card.img}"/><h4 class="card-name">Discards ${card.name}</h4></div>`});
+              card.toMessage({content: `<div class="card-draw flexrow"><img class="card-face" src="${card.img}"/><h4 class="card-name">${game.i18n.localize("torgeternity.dialogPrompts.discards")} ${card.name}</h4></div>`});
               return;
           case "drawDestiny":
               return this.object.draw(game.cards.getName("Destiny Deck"));
