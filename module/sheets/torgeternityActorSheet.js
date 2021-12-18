@@ -652,7 +652,7 @@ export default class torgeternityActorSheet extends ActorSheet {
             name: "Name",
             type: "specialability"
         };
-        return this.actor.createOwnedItem(itemData, {
+        return this.actor.createEmbeddedDocuments("Item", [ itemData ], {
             renderSheet: true
         });
     }
@@ -663,7 +663,7 @@ export default class torgeternityActorSheet extends ActorSheet {
             name: "Name",
             type: "specialability-rollable"
         };
-        return this.actor.createOwnedItem(itemData, {
+        return this.actor.createEmbeddedDocuments("Item", [ itemData ], {
             renderSheet: true
         });
     }
