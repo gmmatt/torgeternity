@@ -304,7 +304,11 @@
             "concealment": "Dissimultation",
             "coverBonus": "Couvert",
             "number": "Nombre",
-            "interactionAttacks": "Interactions offensives"
+            "interactionAttacks": "Interactions offensives",
+            "new": "Nouveau",
+            "keep": "Poursuivre",
+            "end": "Fin",
+            "return": "Retour"
         },
         "itemSheetDescriptions": {
             "perk": "Atout",
@@ -445,7 +449,9 @@
             "selectCosmDeck": "Sélectionner le Cosm",
             "cosmDialogTitle": "Tirer carte Cosm",
             "cosmDeckDialogLabel": "Tirer",
-            "cardPooled": "Réserve d'action"
+            "cardPooled": "Réserve d'action",
+            "plays": "Jouer",
+            "discards": "Défausser"
         },
 
         "cosmDecks": {
@@ -457,7 +463,12 @@
             "orrorsh": "Carte Cosm Orrorsh",
             "panPacifica": "Cartes Cosm Pan Pacifica",
             "tharkold": "Cartes Cosm Tharkold"         
-        }
-        
+        },
+     
+        "cardTypes": {
+            "destiny": "Destin",
+            "drama": "Action",
+            "cosm": "Cosm"
+        } 
     }
 }

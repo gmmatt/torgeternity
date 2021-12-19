@@ -152,7 +152,7 @@
             "description": "Descripción",
             "good": "Buen Resultado",
             "outstanding": "Resultado Espectacular",
-			"attack": "Ataca"
+			"attack": "Ataque"
         },
         "cosms": {
             "none": "(Ninguno)",
@@ -162,7 +162,7 @@
             "aysle": "Aysle",
             "cyberpapacy": "Ciberpapado",
             "tharkhold": "Tharkold",
-            "panPacifica": "Pan Pacifica",
+            "panPacifica": "Pan Pacífica",
             "orrorsh": "Orrorsh",
             "other": "Otro"
         },
@@ -276,9 +276,9 @@
             "dn": "ND",
             "roll": "Tirar",
             "target": "Objetivo",
-            "inputExisting": "Entrada Existente",
+            "inputExisting": "Valor Directo",
             "movementPenalty": "Movimiento",
-            "walking": "Moverse (Nada)",
+            "walking": "Normal (0)",
             "running": "Correr (-2)",
             "multiActionPenalty": "Acción Múltiple",
             "actions": "Acciones",
@@ -291,7 +291,7 @@
             "update": "Actualizar",
             "attackOptions": "Opciones Ataque",
             "calledShot": "Tiro Preciso",
-            "none": "Nada",
+            "none": "No",
             "vitalArea": "Golpe Vital",
             "burst": "Ráfaga",
             "shortBurst": "Corta (+2)",
@@ -303,8 +303,12 @@
             "targetOptions": "Opciones Objetivo",
             "concealment": "Cobertura",
             "coverBonus": "Mod. Cobertura",
-            "interactionAttacks": "Ataque Interacción"
-			
+            "number": "Valor",
+            "interactionAttacks": "Ataque Interacción",
+            "new": "Nuevo",
+            "keep": "Mantener",
+            "end": "Fin",
+            "return": "Regresar"
         },
         "itemSheetDescriptions": {
             "perk": "Dones",
@@ -421,7 +425,7 @@
             "damage": "Daño",
             "bonus": "Bonus",
             "modifiers": "Modificadores",
-            "attack": "Ataca",
+            "attack": "Ataque",
             "baseDamage": "Daño Base",
 			"value": "Valor"
         },
@@ -436,8 +440,35 @@
         },
 
         "dialogPrompts": {
+            "playerPassTitle": "Intercambiar con Jugador",
+            "playerPassLabel": "Intercambia",
+            "playerPassInstructions": "Escoge Jugador Recibes Carta",
+            "playerPassTo": "Intercambio con",
+            "drawDestiny": "Robar Destino",
+            "drawCosm": "Robar Cosmos",
+            "selectCosmDeck": "Escoge Mazo Cosmos",
+            "cosmDialogTitle": "Robar Carta Cosmos",
+            "cosmDeckDialogLabel": "Robar",
+            "cardPooled": "¿En Reserva?",
             "plays": "Juega",
             "discards": "Descarta"
+        },
+
+        "cosmDecks": {
+            "coreEarth": "Mazo Cosmos Tierra Base",
+            "aysle": "Mazo Cosmos Aysle",
+            "cyberpapacy": "Mazo Cosmos Ciberpapado",
+            "livingLand": "Mazo Cosmos Tierra Viviente",
+            "nileEmpire": "Mazo Cosmos Imperio del Nilo",
+            "orrorsh": "Mazo Cosmos Orrorsh",
+            "panPacifica": "Mazo Cosmos Pan Pacífica",
+            "tharkold": "Mazo Cosmos Tharkold"         
+        },
+
+        "cardTypes": {
+            "destiny": "Destino",
+            "drama": "Drama",
+            "cosm": "Cosmos"
         }
     }
 }
