@@ -1,8 +1,8 @@
 <form autocomplete="off">
     <header class="form-header">
-        <h3><i class="far fa-image"></i> Reality</h3>
+        <h3><i class="far fa-image"></i> {{localize "torgeternity.scenes.reality"}}</h3>
     </header>
-    <p class="notes">Configure the reality of the scene zone</p>
+    <p class="notes">{{localize "torgeternity.scenes.realityHint"}}</p>
 
 
 
@@ -69,7 +69,7 @@
     <header class="form-header">
         <h3><i class="far fa-image"></i> {{localize "SCENES.HeaderDetails"}}</h3>
     </header>
-    <p class="notes">{{localize "SCENES.HeaderDetailsHint"}}</p>
+    <p class="notes">{{localize "torgeternity.scenes.HeaderDetailsHint"}}</p>
 
 
     <div class="form-group">
@@ -135,7 +135,7 @@
     <header class="form-header">
         <h3 class="form-header"><i class="fas fa-ruler"></i> {{localize "SCENES.HeaderGrid"}}</h3>
     </header>
-    <p class="notes">{{localize "SCENES.HeaderGridHint"}}</p>
+    <p class="notes">{{localize "torgeternity.scenes.HeaderGridHint"}}</p>
 
     <div class="form-group">
         <label>{{localize "SCENES.GridType"}}</label>
@@ -202,7 +202,7 @@
     <header class="form-header">
         <h3 class="form-header"><i class="fas fa-lightbulb"></i> {{localize "SCENES.HeaderVision"}}</h3>
     </header>
-    <p class="notes">{{ localize "SCENES.HeaderVisionHint" }}</p>
+    <p class="notes">{{ localize "torgeternity.scenes.HeaderVisionHint" }}</p>
 
     <div class="form-group">
         <label>{{localize "SCENES.TokenVision"}}</label>
@@ -249,10 +249,10 @@
     <header class="form-header">
         <h3 class="form-header"><i class="fas fa-cloud-sun"></i> {{localize "SCENES.HeaderAmbience"}}</h3>
     </header>
-    <p class="notes">{{localize "SCENES.HeaderAmbienceHint"}}</p>
+    <p class="notes">{{localize "torgeternity.scenes.HeaderAmbienceHint"}}</p>
 
     <div class="form-group">
-        <label>{{localize "SCENES.JournalNotes"}}</label>
+        <label>{{localize "SCENES.JournalEntry"}}</label>
         <select name="journal" data-dtype="String">
             <option value=""></option>
             {{#select data.journal}}
@@ -261,7 +261,7 @@
             {{/each}}
             {{/select}}
         </select>
-        <p class="notes">{{localize "SCENES.JournalNotesHint"}}</p>
+        <p class="notes">{{localize "SCENES.JournalEntryHint"}}</p>
     </div>
 
     <div class="form-group">
