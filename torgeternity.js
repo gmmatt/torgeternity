@@ -64,6 +64,7 @@ Hooks.once("init", async function() {
 
     //---cards
     CONFIG.Cards.documentClass = torgeternityCards;
+    CONFIG.cardTypes = torgeternity.cardTypes;
 
     //---register items and actors
     Items.unregisterSheet("core", ItemSheet);

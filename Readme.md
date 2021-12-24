@@ -15,6 +15,7 @@ v. 2.1.1
   from previous versions)
 - Updated links dialog
 - Update German localization (thanks Algor!)
+- Fixed issue where card types were not localizing in configuration windows
 
 v. 2.1.0
 - Added card support! Too many new features to document here, but you can

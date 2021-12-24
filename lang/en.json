@@ -479,5 +479,11 @@
 			"HeaderVisionHint": "Configure the vision, lighting, and fog of war settings which apply to this Scene.",
 			"HeaderAmbienceHint": "Configure additional integrations between this scene and Journal Entries, Audio Playlists, or Weather Effects."
         }
+    },
+
+    "CARD":{
+        "TypeCosm": "Cosm",
+        "TypeDestiny": "Destiny",
+        "TypeDrama": "Drama"
     }
 }
