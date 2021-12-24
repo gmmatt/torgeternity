@@ -4,7 +4,7 @@
   "description": "Torg Eternity character sheet for Foundry VTT.",
   "author": "Matt Ritchie",
 
-  "version": "2.1.0",
+  "version": "2.1.1",
 
   "minimumCoreVersion": "9",
   "compatibleCoreVersion": "9", 
@@ -43,12 +43,6 @@
       "module": "torgeternity",
       "path": "packs/core-card-set.db",
       "entity": "Cards"
-    }
-  ],
-    "dependencies": [
-    {
-      "name": "cardsupport",
-      "type": "module"
     }
   ],
   "languages": [

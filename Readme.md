@@ -10,6 +10,7 @@ while managing game systems.
 
 v. 2.1.1
 - Fixed tab alignment issue in items
+- Removed unofficial card support module dependency
 
 v. 2.1.0
 - Added card support! Too many new features to document here, but you can
