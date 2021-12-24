@@ -8,6 +8,9 @@
 For manual installation, use the provided manifest URL in the "*Install System*" popup window 
 while managing game systems.
 
+v. 2.2.0
+- Added evaluation for Blind Fire in attack rolls
+
 v. 2.1.1
 - Fixed tab alignment issue in items
 - Removed unofficial card support module dependency

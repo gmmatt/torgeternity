@@ -456,6 +456,11 @@ export function renderSkillChat(test, diceroll) {
       test.modifierText += "Aimed Shot +4"
    }
 
+   if (test.blindFireModifier < 0) {
+      test.modifiers += -6;
+      test.modifierText += "Blind Fire -6 \n"
+   }
+
    if (test.concealmentModifier < 0) {
       test.modifiers += parseInt(test.concealmentModifier);
       test.modifierText += "Target Concealment " + test.concealmentModifier + "\n"
