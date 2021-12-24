@@ -308,7 +308,8 @@
             "new": "New",
             "keep": "Keep",
             "end": "End",
-            "return": "Return"
+            "return": "Return",
+            "notes": "Notes"
         },
         "itemSheetDescriptions": {
             "perk": "Perk",

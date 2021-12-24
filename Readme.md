@@ -16,6 +16,7 @@ v. 2.1.1
 - Updated links dialog
 - Update German localization (thanks Algor!)
 - Fixed issue where card types were not localizing in configuration windows
+- Changed titles of some threat tabs so that tabs format correctly
 
 v. 2.1.0
 - Added card support! Too many new features to document here, but you can
