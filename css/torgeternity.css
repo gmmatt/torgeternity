@@ -2092,12 +2092,11 @@ form.actor-sheet header input[name="name"] {
     grid-column: 1/9;
     grid-row: 1/2;
     align-items: center;
-    margin-top: 10%;
 }
 
 .window-content .actor-sheet .background .editor {
     grid-column: 1/9;
-    grid-row: 2/6;
+    grid-row: 1/9;
     background: url(../images/bckg-hex.webp);
     background-size: 100% 100%;
     min-height: 200px;

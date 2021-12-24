@@ -18,6 +18,7 @@ v. 2.1.1
 - Fixed issue where card types were not localizing in configuration windows
 - Changed titles of some threat tabs so that tabs format correctly
 - Fixed issue where threat equipment lists weren't formatting correctly
+- Improved formatting on background tab of Storm Knights
 
 v. 2.1.0
 - Added card support! Too many new features to document here, but you can
