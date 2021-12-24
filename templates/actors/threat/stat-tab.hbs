@@ -112,39 +112,36 @@
             {{#each eternityshard as |item id|}}
             <span class="inline-skill-item">{{item.name}}</span>
             {{/each}}
+        </span>
 
-            {{#each eternityshard as |item id|}}
-            <span class="inline-skill-item">{{item.name}}</span>
-            {{/each}}
+        <div class="threat-block">
+            <b>{{localize "torgeternity.sheetLabels.perks"}}</b>:&nbsp;
+            <span>
+                {{#each perk as |item id|}}
+                <span class="inline-skill-item">{{item.name}}</span>
+                {{/each}}
+            </span>
+        </div>
 
-            <div class="threat-block">
-                <b>{{localize "torgeternity.sheetLabels.perks"}}</b>:&nbsp;
-                <span>
-                    {{#each perk as |item id|}}
-                    <span class="inline-skill-item">{{item.name}}</span>
-                    {{/each}}
-                </span>
-            </div>
+        <div class="threat-block">
+            <b>{{localize "torgeternity.sheetLabels.specialabilities"}}</b>:
+            <ul class="specialability-list">
 
-            <div class="threat-block">
-                <b>{{localize "torgeternity.sheetLabels.specialabilities"}}</b>:
-                <ul class="specialability-list">
+                {{#each specialabilityRollable as |item id|}}
+                <li>
+                    <b><a class="item-attackRoll item" data-item-id="{{item._id}}">{{item.name}}</a></b>
+                    .&nbsp;
+                    {{{concatSpecialAbility item.data.description}}}
+                </li>
+                {{/each}}
 
-                    {{#each specialabilityRollable as |item id|}}
-                    <li>
-                        <b><a class="item-attackRoll item" data-item-id="{{item._id}}">{{item.name}}</a></b>
-                        .&nbsp;
-                        {{{concatSpecialAbility item.data.description}}}
-                    </li>
-                    {{/each}}
-
-                    {{#each specialability as |item id|}}
-                    <li>
-                        <b>{{item.name}}</b>
-                        .&nbsp;
-                        {{{concatSpecialAbility item.data.description}}}
-                    </li>
-                    {{/each}}
+                {{#each specialability as |item id|}}
+                <li>
+                    <b>{{item.name}}</b>
+                    .&nbsp;
+                    {{{concatSpecialAbility item.data.description}}}
+                </li>
+                {{/each}}
 
                 </ul>
             </div>
