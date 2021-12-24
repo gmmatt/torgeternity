@@ -13,6 +13,7 @@ v. 2.1.1
 - Removed unofficial card support module dependency
 - Updated Welcome message (revised for new version and removed outdated elements 
   from previous versions)
+- Updated links dialog
 
 v. 2.1.0
 - Added card support! Too many new features to document here, but you can

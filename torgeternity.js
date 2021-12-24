@@ -223,13 +223,13 @@ Hooks.on("ready", async function() {
 
     //-------define a dialog for external links
     let externalLinks = new Dialog({
-        title: "external links",
-        content: "<p>here are some usefull links</p>",
+        title: "Links",
+        content: "<p>Need help? Want to report a bug? Here are a few usefull links.</p>",
         buttons: {
 
             one: {
                 icon: '<i class="fas fa-expand-arrows-alt"style="font-size:24px"></i>',
-                label: "<p>open torg game reference</p>",
+                label: "<p>Reference</p>",
                 callback: () => {
                     new FrameViewer("http://torg-gamereference.com/index.php", {
                         title: "torg game reference",
@@ -243,10 +243,10 @@ Hooks.on("ready", async function() {
             },
             two: {
                 icon: '<i class="fab fa-discord"style="font-size:24px"></i>',
-                label: "<p>join us on discord</p>",
+                label: "<p>Discord</p>",
                 callback: () => {
-                    ui.notifications.info("your browser will open a new page to join us on our discord server");
-                    var windowObjectReference = window.open("https://discord.com/channels/170995199584108546/842809090316828693", "_blank");
+                    ui.notifications.info("Your browser will open a new page to join us on our discord server");
+                    var windowObjectReference = window.open("https://discord.gg/foundryvtt", "_blank");
 
                 }
             },
@@ -254,7 +254,7 @@ Hooks.on("ready", async function() {
 
             three: {
                 icon: '<i class="fas fa-bug" style="font-size:24px"></i>',
-                label: "<p>found a bug ?</p>",
+                label: "<p>Bug?</p>",
                 callback: () => {
                     ui.notifications.info("your browser will open a new page to complete an issue");
                     var windowObjectReference = window.open("https://github.com/gmmatt/torgeternity/issues/new", "_blank");
@@ -263,7 +263,7 @@ Hooks.on("ready", async function() {
             },
             four: {
                 icon: '<img src="systems/torgeternity/images/ulissesLogo.webp" alt="logo ulisses" style="filter:grayscale(1)">',
-                label: "<p>publisher website</p>",
+                label: "<p>Publisher</p>",
                 callback: () => {
                     ui.notifications.info("your browser will open a new page to complete an issue");
                     var windowObjectReference = window.open("https://ulisses-us.com", "_blank");
