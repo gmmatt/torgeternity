@@ -2603,15 +2603,15 @@ form.actor-sheet.threat .tab[data-tab].active .editor {
 
 .item .window-content form.item-sheet nav.tabs {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     text-align: center;
     border: none;
     position: absolute;
     transform: rotateZ(90deg);
     font-family: Alaska;
     text-transform: capitalize;
-    right: -60px;
-    top: 60px;
+    right: -110px;
+    top: 115px;
 }
 
 .item .window-content form.item-sheet nav.tabs a.item {
