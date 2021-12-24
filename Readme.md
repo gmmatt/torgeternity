@@ -14,6 +14,7 @@ v. 2.1.1
 - Updated Welcome message (revised for new version and removed outdated elements 
   from previous versions)
 - Updated links dialog
+- Update German localization (thanks Algor!)
 
 v. 2.1.0
 - Added card support! Too many new features to document here, but you can
