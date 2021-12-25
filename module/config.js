@@ -300,7 +300,38 @@ torgeternity.statusEffects = [
         icon: 'systems/torgeternity/images/status-markers/waiting.png',
         id: 'waiting',
         label: 'torgeternity.statusEffects.waiting'
+    },
+
+    {
+        icon: 'icons/svg/skull.svg',
+        id: 'dead',
+        label: 'torgeternity.statusEffects.dead'
+    },
+
+    {
+        icon: 'icons/svg/falling.svg',
+        id: 'prone',
+        label: 'torgeternity.statusEffects.prone'
+    },
+
+    {
+        icon: 'icons/svg/paralysis.svg',
+        id: 'incapacitated',
+        label: 'torgeternity.statusEffects.incapacitated'
+    },
+
+    {
+        icon: 'icons/svg/unconscious.svg',
+        id: 'unconscious',
+        label: 'torgeternity.statusEffects.unconscious'
+    },
+
+    {
+        icon: 'icons/svg/blind.svg',
+        id: 'blind',
+        label: 'torgeternity.statusEffects.blind'
     }
-    
+
+
 
 ]

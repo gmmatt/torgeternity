@@ -400,7 +400,12 @@
             "waiting": "Waiting",
             "darkness": "Darkness",
             "targetSize": "Target Size",
-            "targetVulnerability": "Target Vulnerability"
+            "targetVulnerability": "Target Vulnerability",
+            "dead": "Dead",
+            "prone": "Prone",
+            "incapacitated": "Incapacitated",
+            "unconscious": "Unconscious",
+            "blind": "Blind"
         },
 
         "yesNo": {
