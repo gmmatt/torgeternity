@@ -11,7 +11,8 @@ while managing game systems.
 v. 2.2.0
 - Fixed bug where Blind Fire was not evaluated in attack rolls
 - Multiple additional status effects
-- 
+- Added effects to rollable special abilities (Note: as a general rule, 
+  threats should be set up as static entities, so use sparingly)
 
 v. 2.1.1
 - Fixed tab alignment issue in items
