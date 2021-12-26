@@ -2905,3 +2905,8 @@ form.actor-sheet.threat .tab[data-tab].active .editor {
     margin: 10px;
     text-align: center
   }
+
+.app-sidebar-popout {
+    height: auto !important;
+    max-height: 90%
+}
