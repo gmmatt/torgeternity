@@ -168,6 +168,24 @@
                         >
                             <i class="fas fa-skull"></i></a>
                         {{/if}}
+
+                        <a class="player-dsr-counter" {{#unless turns}}disabled{{/unless}}>
+                            <span class="player-dsr-token">
+                                <span class="dsr-step">
+                                    {{#if data.flags.torgeternity.dsrStage}}
+                                    {{localize "torgeternity.tokens.step"}}
+                                    {{else}}
+                                    {{localize "torgeternity.tokens.noDSR"}}
+                                    {{/if}}
+                                </span>
+                                <span class="dsr-step-number">
+                                    {{#if data.flags.torgeternity.dsrStage}}
+                                    &nbsp;{{data.flags.torgeternity.dsrStage}}
+                                    {{/if}}
+                                </span>
+                            </span>
+                        </a>
+                                    
                         <div class="token-effects">
                             {{#each turn.effects}}
                             <img

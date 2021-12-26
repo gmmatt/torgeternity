@@ -14,9 +14,10 @@ v. 2.2.0
 - Added effects to rollable special abilities (Note: as a general rule, 
   threats should be set up as static entities, so use sparingly)
 - Updated scene configuration so it is consistent with Version 9
+- Fixed bug where secondary cosm was available in dominant zone scenes
 - Fixed issue where combat tracker height was not adjusting properly in 
   popouts
-- Added DSR counter to combat tracker
+- Added DSR counter to combat tracker and to individual combatants
 
 v. 2.1.1
 - Fixed tab alignment issue in items

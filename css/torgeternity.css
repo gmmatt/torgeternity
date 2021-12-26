@@ -2925,6 +2925,20 @@ form.actor-sheet.threat .tab[data-tab].active .editor {
 
 }
 
+.player-dsr-token {
+    font-family: Palatino;
+    font-size:10px;
+    font-weight: bold;
+    border: 2px solid black;
+    background-color: beige;
+    outline-color: black;
+    display:inline-block;
+    border-radius: 10px;
+    padding: 0px 5px 0px 5px;
+    width: 50px;
+    text-shadow:none;
+}
+
 .dsr-step {
     color: black;
     display: inline;
