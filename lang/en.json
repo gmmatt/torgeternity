@@ -309,7 +309,9 @@
             "keep": "Keep",
             "end": "End",
             "return": "Return",
-            "notes": "Notes"
+            "notes": "Notes",
+            "cosm": "Cosm",
+            "secondaryCosm": "Secondary Cosm"
         },
         "itemSheetDescriptions": {
             "perk": "Perk",
