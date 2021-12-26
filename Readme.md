@@ -16,6 +16,7 @@ v. 2.2.0
 - Updated scene configuration so it is consistent with Version 9
 - Fixed issue where combat tracker height was not adjusting properly in 
   popouts
+- Added DSR counter to combat tracker
 
 v. 2.1.1
 - Fixed tab alignment issue in items
