@@ -35,7 +35,7 @@ export default class TorgCombat extends Combat {
       ui.notifications.info("The Drama Deck is empty. Reset the Drama Deck to continue.")
     }
 
-    await super._onCreate(data,options,userId);
+    super._onCreate(data,options,userId);
     
   }
 
