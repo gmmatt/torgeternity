@@ -11,6 +11,7 @@ export default class torgeternityCombatTracker extends CombatTracker {
         html.find("a.heros-first").click(this._sortHeroesFirst.bind(this));
         html.find("a.vilains-first").click(this._sortVilainsFirst.bind(this));
         html.find("a.has-played").click(this._hasPlayed.bind(this));
+        html.find("a.dsr-counter").click(this._dsrCounter.bind(this));
         // html.find(".fa-check-circle").click(this._toggleCheck.bind(this));
     }
 
@@ -183,6 +184,32 @@ export default class torgeternityCombatTracker extends CombatTracker {
         }
         // await this.viewed.setupTurns()
         this.render()
+    }
+
+    async _dsrCounter(ev) {
+        let currentStep = this.viewed.getFlag("torgeternity","dsrStage");
+        
+        switch (currentStep) {
+            case undefined:
+                this.viewed.setFlag("torgeternity", "dsrStage","A");
+                break;
+            case "":
+                this.viewed.setFlag("torgeternity", "dsrStage", "A");
+                break;
+            case "A":
+                this.viewed.setFlag("torgeternity", "dsrStage", "B");
+                break;
+            case "B":
+                this.viewed.setFlag("torgeternity", "dsrStage", "C");
+                break;
+            case "C":
+                this.viewed.setFlag("torgeternity", "dsrStage", "D");
+                break;
+            case "D":
+                this.viewed.setFlag("torgeternity", "dsrStage", "");
+                break;
+        }
+
     }
     
 

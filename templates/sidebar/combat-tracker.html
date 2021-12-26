@@ -72,7 +72,24 @@
                     style="color:rgb(253, 148, 148)"
                 ></i>
             </a>
-            {{/if}} {{#if combatCount}} {{#if combat.data.round}}
+            {{/if}}
+            <a class="dsr-counter" {{#unless turns}}disabled{{/unless}}>
+                <span class="dsr-token">
+                    <span class="dsr-step">
+                        {{#if combat.data.flags.torgeternity.dsrStage}}
+                        {{localize "torgeternity.tokens.step"}}
+                        {{else}}
+                        {{localize "torgeternity.tokens.noDSR"}}
+                        {{/if}}
+                    </span>
+                    <span class="dsr-step-number">
+                        {{#if combat.data.flags.torgeternity.dsrStage}}
+                        &nbsp;{{combat.data.flags.torgeternity.dsrStage}}
+                        {{/if}}
+                    </span>
+                </span>
+            </a>
+            {{#if combatCount}} {{#if combat.data.round}}
             <h3>{{localize 'COMBAT.Round'}} {{combat.data.round}}</h3>
             {{else}}
             <h3>{{localize 'COMBAT.NotStarted'}}</h3>
