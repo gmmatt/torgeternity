@@ -18,6 +18,7 @@ v. 2.2.0
 - Fixed issue where combat tracker height was not adjusting properly in 
   popouts
 - Added DSR counter to combat tracker and to individual combatants
+- Updated the Basic Rules based on changes in version 2
 
 v. 2.1.1
 - Fixed tab alignment issue in items
