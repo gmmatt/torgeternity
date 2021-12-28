@@ -56,6 +56,9 @@ export default class torgeternityActorSheet extends ActorSheet {
         data.customAttack = data.items.filter(function (item) {
             return item.type == "customAttack"
         });
+        data.customSkill = data.items.filter(function (item) {
+            return item.type == "customSkill"
+        });
         data.gear = data.items.filter(function (item) {
             return item.type == "gear"
         });

@@ -406,7 +406,8 @@
             "specialability-rollable",
             "spell",
             "miracle",
-            "psionicpower"
+            "psionicpower",
+            "customSkill"
             
         ],
         "templates": {
@@ -584,7 +585,17 @@
             "templates": [
                 "power"
             ]
+        },
+
+        "customSkill": {
+            "name": "",
+            "adds": "1", 
+            "value": "",
+            "description": "",
+            "baseAttribute": "strength",
+            "isFav": ""
         }
+
     },
 
     "Card": {

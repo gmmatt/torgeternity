@@ -311,7 +311,11 @@
             "return": "Return",
             "notes": "Notes",
             "cosm": "Cosm",
-            "secondaryCosm": "Secondary Cosm"
+            "secondaryCosm": "Secondary Cosm",
+            "skillValue": "Skill Value",
+            "baseAttribute": "Base Attribute",
+            "customSkills": "Custom Skills",
+            "skillAdds": "Adds"
         },
         "itemSheetDescriptions": {
             "perk": "Perk",
@@ -332,7 +336,8 @@
             "psionicpower": "Psionic Power",
             "specialability": "Special Ability",
             "other": "General Gear",
-            "customAttack": "Custom Attack"
+            "customAttack": "Custom Attack",
+            "customSkill": "Custom Skill"
         },
         "attackTypes": {
             "unarmedCombat": "Unarmed Combat",

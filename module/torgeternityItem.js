@@ -18,7 +18,8 @@ export default class torgeternityItem extends Item {
       "vehicle": "systems/torgeternity/templates/partials/vehicle-card.hbs",
       "destinyCard": "systems/torgeternity/templates/partials/destinyCard.hbs",
       "cosmCard": "systems/torgeternity/templates/partials/cosmCard.hbs",
-      "dramaCard": "systems/torgeternity/templates/partials/dramaCard.hbs"
+      "dramaCard": "systems/torgeternity/templates/partials/dramaCard.hbs",
+      "customSkill": "systems/torgeternity/templates/partials/customSkill-card.hbs"
 
    };
 

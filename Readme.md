@@ -8,6 +8,10 @@
 For manual installation, use the provided manifest URL in the "*Install System*" popup window 
 while managing game systems.
 
+v. 2.3.0
+- Added custom skills (in Perks tab). Known issue: custom skills
+  cannot be flagged as favored.
+
 v. 2.2.0
 - Fixed bug where Blind Fire was not evaluated in attack rolls
 - Multiple additional status effects

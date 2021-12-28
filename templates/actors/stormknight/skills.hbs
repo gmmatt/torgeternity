@@ -11,45 +11,70 @@
 
         </li>
         {{#if data.data.editstate}}
-        {{#each data.data.skills as |content name|}}
-        <li>
-            <span>
-                <a class="skill-roll" data-testType="skill" data-baseAttribute="{{content.baseAttribute}}"
-                    data-adds="{{content.adds}}" data-value="{{content.value}}"
-                    data-unskilledUse="{{content.unskilledUse}}" data-name="{{localize (concatSkillName name)}}">
-                    {{localize (concatSkillName name)}}
-                </a>
+            {{#each data.data.skills as |content name|}}
+                <li title="Shift-click for enhanced skill test">
+                <span>
+                    <a class="skill-roll" data-testType="skill" data-baseAttribute="{{content.baseAttribute}}"
+                        data-adds="{{content.adds}}" data-value="{{content.value}}"
+                        data-unskilledUse="{{content.unskilledUse}}" data-name="{{localize (concatSkillName name)}}">
+                        {{localize (concatSkillName name)}}
+                    </a>
 
 
-            </span>
-            <span class="skill-line skillAttr">
-                <select name="data.skills.{{name}}.baseAttribute" class="input-box">
-                    {{#select content.baseAttribute}}
-                    {{#each ../config.attributeTypes as |name type|}}
-                    <option value="{{type}}">{{localize name}}</option>
-                    {{/each}}
-                    {{/select}}
-                </select>
-            </span>
-            <span class="skillAdd">
-                <input name="data.skills.{{name}}.adds" type="number" value="{{content.adds}}" data-dtype="Number" />
-            </span>
-            <span class="skill-line">
-                {{content.value}}
-            </span>
-            <span> 
-                <a class="toggleFav {{#if content.isFav}}checked
-                        {{/if}}"><i class="far fa-star" ></i></a>
-                <input class="favCheck" type="checkbox" name="data.skills.{{name}}.isFav" {{checked content.isFav}}
-                data-dtype="Boolean" />
-         </span>
-
-        </li>
-        {{/each}}
+                </span>
+                <span class="skill-line skillAttr">
+                    <select name="data.skills.{{name}}.baseAttribute" class="input-box">
+                        {{#select content.baseAttribute}}
+                        {{#each ../config.attributeTypes as |name type|}}
+                        <option value="{{type}}">{{localize name}}</option>
+                        {{/each}}
+                        {{/select}}
+                    </select>
+                </span>
+                <span class="skillAdd">
+                    <input name="data.skills.{{name}}.adds" type="number" value="{{content.adds}}" data-dtype="Number" />
+                </span>
+                <span class="skill-line">
+                    {{content.value}}
+                </span>
+                <span> 
+                    <a class="toggleFav {{#if content.isFav}}checked
+                            {{/if}}"><i class="far fa-star" ></i></a>
+                    <input class="favCheck" type="checkbox" name="data.skills.{{name}}.isFav" {{checked content.isFav}}
+                    data-dtype="Boolean" />
+                </span>
+                </li>
+            {{/each}}
+            {{#each customSkill as | content name|}}
+                <li title="Custom skills can be edited in the Perks tab">
+                <span>
+                    <a class="skill-roll" data-testType="skill" data-baseAttribute="{{content.data.baseAttribute}}"
+                        data-adds="{{content.data.adds}}" data-value="{{content.data.value}}"
+                        data-unskilledUse="0" data-name="{{content.name}}">
+                        {{content.name}} 
+                    </a>
+                </span>
+                <span class="skill-line skillAttr" style="width:365px">
+                    {{localize (concatAttributeName content.data.baseAttribute)}}
+                </span>
+                <span class="skillAdd">
+                    {{content.data.adds}}
+                </span>
+                <span class="skill-line">
+                    {{content.data.value}}
+                </span>
+                <span> 
+                    <a class="toggleFav {{#if content.data.isFav}}checked
+                            {{/if}}"><i class="far fa-star" ></i></a>
+                    <input class="favCheck" type="checkbox" name="customSkill.isFav" {{checked content.data.isFav}}
+                    data-dtype="Boolean" />
+                </span>
+                </li>
+            {{/each}}
         {{else}}
         {{#each data.data.skills as |content name|}}
         {{#if content.adds}}
-        <li>
+        <li title="Shift-click for enhanced skill test">
             <span>
                 <a class="skill-roll" data-testType="skill" data-baseAttribute="{{content.baseAttribute}}"
                     data-adds="{{content.adds}}" data-value="{{content.value}}"
@@ -84,6 +109,33 @@
         </li>
         {{/if}}
         {{/each}}
+        {{#each customSkill as | content name|}}
+            <li title="Custom skills can be edited in the Perks tab">
+            <span>
+                <a class="skill-roll" data-testType="skill" data-baseAttribute="{{content.data.baseAttribute}}"
+                    data-adds="{{content.data.adds}}" data-value="{{content.data.value}}"
+                    data-unskilledUse="0" data-name="{{content.name}}">
+                    {{content.name}} 
+                </a>
+            </span>
+            <span class="skill-line skillAttr" style="width:365px">
+                {{localize (concatAttributeName content.data.baseAttribute)}}
+            </span>
+            <span class="skillAdd">
+                {{content.data.adds}}
+            </span>
+            <span class="skill-line">
+                {{content.data.value}}
+            </span>
+            <span> 
+                <a class="toggleFav {{#if content.data.isFav}}checked
+                        {{/if}}"><i class="far fa-star" ></i></a>
+                <input class="favCheck" type="checkbox" name="customSkill.isFav" {{checked content.data.isFav}}
+                data-dtype="Boolean" />
+            </span>
+            </li>
+        {{/each}}
+
         {{/if}}
         </li>
     </ul>
