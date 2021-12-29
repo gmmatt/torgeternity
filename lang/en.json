@@ -442,7 +442,8 @@
             "modifiers": "Modifiers",
             "attack": "Attack",
             "baseDamage": "Base Damage",
-			"value": "Value"
+			"value": "Value",
+            "notes": "Notes"
         },
 
         "sizes": {

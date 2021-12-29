@@ -8,14 +8,14 @@
 For manual installation, use the provided manifest URL in the "*Install System*" popup window 
 while managing game systems.
 
-v. 2.3.0
+v. 2.3.0 - Character QoL Update
 - Added custom skills (in Perks tab). Known issue: custom skills
   cannot be flagged as favored.
 - Added AP stat to rollable special abilities
 - Added chat notes for output with weapon attacks (keep these brief or you'll
   clutter your chat log!)
 
-v. 2.2.0
+v. 2.2.0 - Dramatic Skill Resolution Trackers
 - Fixed bug where Blind Fire was not evaluated in attack rolls
 - Multiple additional status effects
 - Added effects to rollable special abilities (Note: as a general rule, 

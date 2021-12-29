@@ -588,7 +588,8 @@ export default class torgeternityActorSheet extends ActorSheet {
             darknessModifier: parseInt(this.actor.data.data.darknessModifier),
             sizeModifier: sizeModifier,
             vulnerableModifier: vulnerableModifier,
-            vitalAreaDamageModifier: 0
+            vitalAreaDamageModifier: 0,
+            chatNote: weaponData.chatNote
 
         }
         

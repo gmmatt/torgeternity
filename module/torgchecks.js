@@ -626,6 +626,14 @@ export function renderSkillChat(test, diceroll) {
          test.plus3Style = "display:none"
    }
 
+   // Display chat notes label?
+
+   if (test.chatNote === "") {
+      test.notesLabel = "display:none"
+   } else {
+      test.notesLabel = "display:"
+   }
+
   
    var chatData = {
       user: game.user.data._id,
