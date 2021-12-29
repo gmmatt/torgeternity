@@ -477,7 +477,8 @@
             "damageType": "",
             "damage": 0,
             "ap": 0,
-            "notes": ""
+            "notes": "",
+            "chatNote": ""
         },
 
         "meleeweapon": {
@@ -489,7 +490,8 @@
             "damage": 0,
             "ap": 0,
             "bonus": 2,
-            "notes": ""
+            "notes": "",
+            "chatNote": ""
         },
         "missileweapon": {
             "templates": [
@@ -505,7 +507,8 @@
             },
             "minStrength": "",
             "range": "",
-            "notes": ""
+            "notes": "",
+            "chatNote": ""
         },
         "firearm": {
             "templates": [
@@ -520,7 +523,8 @@
                 "value": 1
             },
             "range": "",
-            "notes": ""
+            "notes": "",
+            "chatNote": ""
         },
         "implant": {
             "templates": [
@@ -540,7 +544,8 @@
                 "value": 1
             },
             "range": "",
-            "notes": ""
+            "notes": "",
+            "chatNote": ""
         },
         "vehicle": {
             "templates": [
@@ -569,7 +574,9 @@
         "specialability-rollable": {
             "description": "",
             "attackWith": "",
-            "damage": ""
+            "damage": "",
+            "ap": 0,
+            "chatNote": ""
         },
         "spell": {
             "templates": [

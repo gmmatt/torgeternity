@@ -10,34 +10,39 @@ export default class torgeternityItemSheet extends ItemSheet {
         switch (this.object.data.type) {
 
             case "firearm":
+                this.options.height = this.position.height = 710;
+                break;
             case "heavyweapon":
+                this.options.height = this.position.height = 710;
+                break;
             case "meleeweapon":
-            case "missileweapon":
-
                 this.options.height = this.position.height = 675;
+                break;
+            case "missileweapon":
+                this.options.height = this.position.height = 710;
                 break;
             case "miracle":
             case "psionicpower":
             case "spell":
                 this.options.height = this.position.height = 750;
                 break;
-
             case "specialability":
                 this.options.width = this.position.width = 435;
                 this.options.height = this.position.height = 550;
                 break;
-
+            case "specialability-rollable":
+                this.options.height = this.position.height = 625;
+                break;
             case "vehicle":
                 this.options.height = this.position.height = 630;
                 break;
-
             case "implant":
             case "armor":
             case "shield":
                 this.options.height = this.position.height = 615;
                 break;
             case "customAttack":
-                this.options.height = this.position.height = 615;
+                this.options.height = this.position.height = 675;
                 break;
             default:
                 this.options.height = this.position.height = 560;

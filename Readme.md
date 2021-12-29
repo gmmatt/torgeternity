@@ -11,6 +11,9 @@ while managing game systems.
 v. 2.3.0
 - Added custom skills (in Perks tab). Known issue: custom skills
   cannot be flagged as favored.
+- Added AP stat to rollable special abilities
+- Added chat notes for output with weapon attacks (keep these brief or you'll
+  clutter your chat log!)
 
 v. 2.2.0
 - Fixed bug where Blind Fire was not evaluated in attack rolls

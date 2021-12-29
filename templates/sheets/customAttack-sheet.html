@@ -51,7 +51,11 @@
                             {{localize "torgeternity.gear.notes"}}&nbsp;
                             <input name="data.notes" type="text" value="{{data.data.notes}}" class="input-box" />
                         </p>
-                            <div name="data.description" class="item-description-textarea">
+                        <p class="item-data-label">
+                            {{localize "torgeternity.gear.chatNote"}}
+                            <input name="data.chatNote" type="text" value="{{data.data.chatNote}}" class="input-box" />
+                        </p>
+                        <div name="data.description" class="item-description-textarea">
                         {{editor content=data.data.description target="data.description" button=true owner=owner editable=editable}}
                         </div>
                     </div> 

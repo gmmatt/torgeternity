@@ -30,8 +30,16 @@
                                 {{localize "torgeternity.powers.damage"}}
                             </p>
                             <input name="data.damage" type="number" value="{{data.data.damage}}" class="input-box" />
+                            <p class="item-data-label">
+                                {{localize "torgeternity.powers.ap"}}
+                            </p>
+                            <input name="data.ap" type="number" value="{{data.data.ap}}" class="input-box" />
                         </div>
                         <div class="main-content">
+                            <p class="item-data-label">
+                                {{localize "torgeternity.gear.chatNote"}}
+                                <input name="data.chatNote" type="text" value="{{data.data.chatNote}}" class="input-box" />
+                            </p>    
                             <div name="data.description" class="item-description-textarea">
                                 {{editor content=data.data.description target="data.description" button=true owner=owner editable=editable}}
                             </div>

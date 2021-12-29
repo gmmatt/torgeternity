@@ -120,7 +120,8 @@
             "powers": "Powers",
             "restrictions": "Restrictions",
             "minStrength": "Min Str",
-            "ap": "AP"
+            "ap": "AP",
+            "chatNote": "Chat Note"
         },
         "stats":{
             "wounds": "Wounds",
@@ -152,7 +153,8 @@
             "description": "Description",
             "good": "Good",
             "outstanding": "Outstanding",
-            "attack": "Attack"
+            "attack": "Attack",
+            "ap": "AP"
         },
         "cosms": {
             "none": "(None)",
