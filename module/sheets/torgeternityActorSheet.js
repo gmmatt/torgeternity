@@ -210,6 +210,13 @@ export default class torgeternityActorSheet extends ActorSheet {
             html.find(".effect-control").click(ev => onManageActiveEffect(ev, this.document));
         }
 
+        if (this.actor.isOwner) {
+            html.find(".apply-fatigue").click(ev => {                
+                let newShock = parseInt(this.actor.data.data.shock.value) + parseInt(ev.currentTarget.dataset.fatigue)
+                this.actor.update({'data.shock.value': newShock})
+            });
+        }
+
         super.activateListeners(html);
 
         // Everything below here is only needed if the sheet is editable

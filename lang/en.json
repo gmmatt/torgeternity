@@ -317,7 +317,8 @@
             "skillValue": "Skill Value",
             "baseAttribute": "Base Attribute",
             "customSkills": "Custom Skills",
-            "skillAdds": "Adds"
+            "skillAdds": "Adds",
+            "fatigue": "Fatigue"
         },
         "itemSheetDescriptions": {
             "perk": "Perk",

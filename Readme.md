@@ -9,11 +9,13 @@ For manual installation, use the provided manifest URL in the "*Install System*"
 while managing game systems.
 
 v. 2.3.0 - Character QoL Update
-- Added custom skills (in Perks tab). Known issue: custom skills
-  cannot be flagged as favored.
+- Added custom skills (create/edit them in Perks tab). Known issue: custom 
+  skills cannot be flagged as favored.
 - Added AP stat to rollable special abilities
 - Added chat notes for output with weapon attacks (keep these brief or you'll
   clutter your chat log!)
+- Added fatigue to character sheet. Fatigue effects can now be added to armor.
+- Click on Fatigue label on sheet to automatically increase shock
 
 v. 2.2.0 - Dramatic Skill Resolution Trackers
 - Fixed bug where Blind Fire was not evaluated in attack rolls
