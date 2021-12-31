@@ -10,6 +10,8 @@ while managing game systems.
 
 v. 2.3.1 - Pulp Powers Update
 - Updated perk types for all official releases to date (thanks @fscx!)
+- Fixed a bug where skill test chat buttons didn't work while animated 
+  chat was turned off
 
 v. 2.3.0 - Character QoL Update
 - Added custom skills (create/edit them in Perks tab). Known issue: custom 

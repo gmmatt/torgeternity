@@ -19,7 +19,7 @@ export function addChatListeners(html) {
 
 function onPossibility(event) {
 
-    const parentMessageId =event.currentTarget.offsetParent.dataset.messageId;
+    const parentMessageId = event.currentTarget.closest(".chat-message").dataset.messageId;
     var parentMessage = game.messages.find( ({id}) => id === parentMessageId)
     var test = parentMessage.getFlag("torgeternity", "test")
 
@@ -42,7 +42,7 @@ function onPossibility(event) {
 
 function onUp(event) {
 
-    const parentMessageId =event.currentTarget.offsetParent.dataset.messageId;
+    const parentMessageId = event.currentTarget.closest(".chat-message").dataset.messageId;
     var parentMessage = game.messages.find( ({id}) => id === parentMessageId)
     var test = parentMessage.getFlag("torgeternity", "test")
 
@@ -61,7 +61,7 @@ function onUp(event) {
 
 function onHero(event) {
 
-    const parentMessageId =event.currentTarget.offsetParent.dataset.messageId;
+    const parentMessageId = event.currentTarget.closest(".chat-message").dataset.messageId;
     var parentMessage = game.messages.find( ({id}) => id === parentMessageId)
     var test = parentMessage.getFlag("torgeternity", "test")
 
@@ -83,7 +83,7 @@ function onHero(event) {
 
 function onDrama(event) {
 
-    const parentMessageId =event.currentTarget.offsetParent.dataset.messageId;
+    const parentMessageId = event.currentTarget.closest(".chat-message").dataset.messageId;
     var parentMessage = game.messages.find( ({id}) => id === parentMessageId)
     var test = parentMessage.getFlag("torgeternity", "test")
 
@@ -105,7 +105,7 @@ function onDrama(event) {
 
 function onPlus3(event) {
 
-    const parentMessageId =event.currentTarget.offsetParent.dataset.messageId;
+    const parentMessageId = event.currentTarget.closest(".chat-message").dataset.messageId;
     var parentMessage = game.messages.find( ({id}) => id === parentMessageId)
     var test = parentMessage.getFlag("torgeternity", "test")
 
@@ -123,7 +123,7 @@ function onPlus3(event) {
 
 function onBd(event) {
 
-    const parentMessageId =event.currentTarget.offsetParent.dataset.messageId;
+    const parentMessageId = event.currentTarget.closest(".chat-message").dataset.messageId;
     var parentMessage = game.messages.find( ({id}) => id === parentMessageId)
     var test = parentMessage.getFlag("torgeternity", "test")
 
@@ -142,7 +142,7 @@ function onBd(event) {
 
 function onModifier(event) {
 
-    const parentMessageId =event.currentTarget.offsetParent.offsetParent.offsetParent.dataset.messageId;
+    const parentMessageId = event.currentTarget.closest(".chat-message").dataset.messageId;
     var parentMessage = game.messages.find( ({id}) => id === parentMessageId)
     var test = parentMessage.getFlag("torgeternity", "test")
 
