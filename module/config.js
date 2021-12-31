@@ -102,7 +102,15 @@ torgeternity.perkTypes = {
     savagery: "torgeternity.perkTypes.savagery",
     social: "torgeternity.perkTypes.social",
     spellcraft: "torgeternity.perkTypes.spellcraft",
-    racial: "torgeternity.perkTypes.racial"
+    racial: "torgeternity.perkTypes.racial",
+    human: "torgeternity.perkTypes.human",
+    hacker: "torgeternity.perkTypes.hacker",
+    abomination: "torgeternity.perkTypes.abomination",
+    aspirant: "torgeternity.perkTypes.aspirant",
+    depravity: "torgeternity.perkTypes.depravity",
+    theRace: "torgeternity.perkTypes.theRace",
+    corruption: "torgeternity.perkTypes.corruption",
+    hope: "torgeternity.perkTypes.hope"
 }
 
 torgeternity.attackTypes = {

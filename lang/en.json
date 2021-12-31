@@ -189,7 +189,15 @@
             "savagery":"Savagery",
             "social": "Social",
             "spellcraft": "Spellcraft",
-            "racial": "Racial"
+            "racial": "Racial",
+            "hacker": "Hacker",
+            "human": "Human",
+            "abomination": "Abomination",
+            "aspirant": "Aspirant",
+            "depravity": "Depravity",
+            "theRace": "The Race",
+            "corruption": "Corruption",
+            "hope": "Hope"
         },
         "sheetLabels": {
             "stormknight":"Stormknight",
