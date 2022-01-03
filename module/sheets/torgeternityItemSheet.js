@@ -82,6 +82,10 @@ export default class torgeternityItemSheet extends ItemSheet {
 
         data.config = CONFIG.torgeternity;
 
+        data.availableEnhancements = this.item.data.data.pulpPower.enhancements.filter(function (enhancement) {
+            return enhancement.taken = false
+        })
+
         return data;
     }
 
@@ -96,6 +100,17 @@ export default class torgeternityItemSheet extends ItemSheet {
             this.item.update ({
                 "type": "specialability-rollable"        
             })
+        });
+
+        html.find(".create-enhancement").click(ev => {
+            var enhancements = this.item.data.data.pulpPower.enhancements;
+            const newEnhancement = {
+                id: foundry.utils.randomID(16),
+                taken: false,
+                description: ""
+            };
+            enhancements.push(newEnhancement)
+            this.document.update('data.data.pulpPower'.enhancements,newEnhancement)
         });
     }
 

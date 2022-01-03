@@ -8,7 +8,7 @@
 For manual installation, use the provided manifest URL in the "*Install System*" popup window 
 while managing game systems.
 
-v. 2.3.1 - Pulp Powers Update
+v. 2.3.2 - Pulp Powers Update
 - Updated perk types for all official releases to date (thanks @fscx!)
 - Fixed a bug where skill test chat buttons didn't work while animated 
   chat was turned off

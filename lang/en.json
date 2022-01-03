@@ -326,7 +326,9 @@
             "baseAttribute": "Base Attribute",
             "customSkills": "Custom Skills",
             "skillAdds": "Adds",
-            "fatigue": "Fatigue"
+            "fatigue": "Fatigue",
+            "limitations": "Limitations",
+            "availableEnhancements": "Available Enhancements"
         },
         "itemSheetDescriptions": {
             "perk": "Perk",

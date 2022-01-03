@@ -562,7 +562,11 @@
             "cosm": "",
             "prerequisites": "",
             "timestaken": "",
-            "description": ""
+            "description": "",
+            "pulpPower": {
+                "enhancements": [],
+                "limitations": []
+            }
         },
         "enhancement": {
             "perk": "",

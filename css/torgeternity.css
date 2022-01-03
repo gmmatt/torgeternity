@@ -1450,7 +1450,6 @@ form.actor-sheet .actor-type {
     left: -150px;
     top: 180px;
     width: 300px;
-    background-size: 100% 100%;
     text-align: right;
     text-transform: uppercase;
 }
@@ -1507,7 +1506,7 @@ form.actor-sheet header input[name="name"] {
     height: 100%;
 }
 
-.window-content .actor-sheet .list-section-heading {
+.window-content .list-section-heading {
     height: 40px;
     font-size: 2em;
     text-align: center;
@@ -2526,7 +2525,6 @@ form.actor-sheet.threat .tab[data-tab].active .editor {
     left: -150px;
     top: 180px;
     width: 300px;
-    background-size: 100% 100%;
     text-align: right;
     text-transform: uppercase;
 }

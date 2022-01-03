@@ -23,6 +23,7 @@ export default class torgeternityItem extends Item {
 
    };
 
+
    async roll() {
       let chatData = {
          user: game.user.data._id,

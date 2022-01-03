@@ -7,8 +7,10 @@
                  /></h1>
     </header>
 
-    <nav class="sheet-tabs item-tabs tabs" data-group="primary">
+    <nav class="sheet-tabs item-tabs tabs" data-group="primary" style="right:-210px;top:210px">
         <a class="item" data-tab="stats" >{{localize "torgeternity.sheetLabels.stats"}}</a>
+        <a class="item" data-tab="enhancements" style="font-size:10px">{{localize "torgeternity.sheetLabels.enhancements"}}</a>
+        <a class="item" data-tab="limitations">{{localize "torgeternity.sheetLabels.limitations"}}</a>
         <a class="item" data-tab="effects">{{localize "torgeternity.sheetLabels.effects"}}</a>
     </nav>
 
@@ -56,6 +58,44 @@
 
             </div>
         </div>
+
+        <div class="tab enhancements" data-group="primary" data-tab="enhancements">
+
+            <div class="list-section-heading">{{localize "torgeternity.sheetLabels.enhancements"}}</div>
+            <ol class="item-list">
+                {{#each selectedEnhancements as |item id|}}
+                <li class="item-block" data-item-id="{{item.id}}">
+                    <div class="item-row flexrow">
+                        <div class="item-name">
+                            {{item.data.description}}
+                        </div>
+                    </div>
+                </li>                
+                {{/each}}
+            </ol>
+
+            <div class="list-section-heading">
+                {{localize "torgeternity.sheetLabels.availableEnhancements"}}
+                <a class="item-control create-enhancement" title="Create Enhancement"><i class="fas fa-plus"></i></a>
+            </div>
+            <ol class="item-list">
+                {{#each availableEnhancements as |item id|}}
+                <li class="item-block" data-item-id="{{item.id}}">
+                    <div class="item-row flexrow">
+                        <div class="item-name">
+                            {{item.data.description}}
+                        </div>
+                    </div>
+                </li>                
+                {{/each}}
+            </ol>
+
+        </div>
+
+        <div class="tab limitations" data-group="primary" data-tab="limitations">
+            <div>Limitations Tab!</div>
+        </div>
+
         <div class="tab effects" data-group="primary" data-tab="effects">
             {{> "systems/torgeternity/templates/parts/active-effects.hbs"}}
         </div>
