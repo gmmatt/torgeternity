@@ -181,7 +181,8 @@ Hooks.on("ready", async function() {
         if (game.cards.getName("Cosm Discard") == null) {
             let cardData = {
                 name: "Cosm Discard",
-                type: "pile"
+                type: "pile",
+                permission: {default: CONST.DOCUMENT_PERMISSION_LEVELS.OWNER}
             }
             let cosmDiscard = Cards.create(cardData, {keepId: true, renderSheet:false});
         }
@@ -189,7 +190,8 @@ Hooks.on("ready", async function() {
         if (game.cards.getName("Drama Discard") == null) {
             let cardData = {
                 name: "Drama Discard",
-                type: "pile"
+                type: "pile",
+                permission: {default: CONST.DOCUMENT_PERMISSION_LEVELS.OWNER}
             }
             let dramaDiscard = Cards.create(cardData, {keepId: true, renderSheet:false});
         }
@@ -197,7 +199,8 @@ Hooks.on("ready", async function() {
         if (game.cards.getName("Destiny Discard") == null) {
             let cardData = {
                 name: "Destiny Discard",
-                type: "pile"
+                type: "pile",
+                permission: {default: CONST.DOCUMENT_PERMISSION_LEVELS.OWNER}
             }
             let destinyDiscard = Cards.create(cardData, {keepId: true, renderSheet:false});
         }

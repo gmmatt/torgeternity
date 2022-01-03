@@ -8,6 +8,9 @@
 For manual installation, use the provided manifest URL in the "*Install System*" popup window 
 while managing game systems.
 
+v. 2.3.1 - Cards Permissions Patch
+- Multiple changes to the way default permissions on cards are handled
+
 v. 2.3.0 - Character QoL Update
 - Added custom skills (create/edit them in Perks tab). Known issue: custom 
   skills cannot be flagged as favored.
