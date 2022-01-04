@@ -167,6 +167,7 @@ Hooks.on("ready", async function() {
     
     if (game.settings.get("torgeternity", "setUpCards") === true) {
         const pack = game.packs.get("torgeternity.core-card-set");
+        const basicRules = game.packs.get("torgeternity.basic-rules")
         // Add Destiny Deck
         if (game.cards.getName("Destiny Deck") == null) {
             const itemId = pack.index.getName("Destiny Deck")._id;
@@ -181,7 +182,8 @@ Hooks.on("ready", async function() {
         if (game.cards.getName("Cosm Discard") == null) {
             let cardData = {
                 name: "Cosm Discard",
-                type: "pile"
+                type: "pile",
+                permission: {default: CONST.DOCUMENT_PERMISSION_LEVELS.OWNER}
             }
             let cosmDiscard = Cards.create(cardData, {keepId: true, renderSheet:false});
         }
@@ -189,7 +191,8 @@ Hooks.on("ready", async function() {
         if (game.cards.getName("Drama Discard") == null) {
             let cardData = {
                 name: "Drama Discard",
-                type: "pile"
+                type: "pile",
+                permission: {default: CONST.DOCUMENT_PERMISSION_LEVELS.OWNER}
             }
             let dramaDiscard = Cards.create(cardData, {keepId: true, renderSheet:false});
         }
@@ -197,7 +200,8 @@ Hooks.on("ready", async function() {
         if (game.cards.getName("Destiny Discard") == null) {
             let cardData = {
                 name: "Destiny Discard",
-                type: "pile"
+                type: "pile",
+                permission: {default: CONST.DOCUMENT_PERMISSION_LEVELS.OWNER}
             }
             let destinyDiscard = Cards.create(cardData, {keepId: true, renderSheet:false});
         }
@@ -209,6 +213,13 @@ Hooks.on("ready", async function() {
             }
             let activeDrama = Cards.create(cardData, {keepId: true, renderSheet:false});
         }
+
+        // Add journal entry with instructions relating to cards
+        if (game.journal.getName("Managing Cards") == null) {
+            const itemId = basicRules.index.getName("Managing Cards")._id;
+            game.journal.importFromCompendium(basicRules,itemId);
+        }
+
         game.settings.set("torgeternity", "setUpCards", false)
     }
     
