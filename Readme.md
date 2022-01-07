@@ -12,6 +12,9 @@ v. 2.3.2 - Pulp Powers Update
 - Updated perk types for all official releases to date (thanks @fscx!)
 - Fixed a bug where skill test chat buttons didn't work while animated 
   chat was turned off
+- Changed base fatigue to 2 (facepalm!)
+- Clarified error message displayed in combat tracker when there is no
+  matching hand for a Storm Knight
   
 v. 2.3.1 - Cards Permissions Patch
 - Multiple changes to the way default permissions on cards are handled
