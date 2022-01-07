@@ -68,7 +68,7 @@ Handlebars.registerHelper("concatSkillValue", function (skillName) {
       }
       return poolList;
     } else {
-      return "No pool list?";
+      return "No hand available - hand names must exactly match the corresponding Storm Knight names.";
     }
   })
 }
