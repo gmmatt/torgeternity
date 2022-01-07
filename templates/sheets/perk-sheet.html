@@ -61,33 +61,35 @@
 
         <div class="tab enhancements" data-group="primary" data-tab="enhancements">
 
-            <div class="list-section-heading">{{localize "torgeternity.sheetLabels.enhancements"}}</div>
-            <ol class="item-list">
-                {{#each selectedEnhancements as |item id|}}
-                <li class="item-block" data-item-id="{{item.id}}">
-                    <div class="item-row flexrow">
-                        <div class="item-name">
-                            {{item.data.description}}
-                        </div>
-                    </div>
-                </li>                
-                {{/each}}
-            </ol>
-
             <div class="list-section-heading">
-                {{localize "torgeternity.sheetLabels.availableEnhancements"}}
-                <a class="item-control create-enhancement" title="Create Enhancement"><i class="fas fa-plus"></i></a>
+                {{localize "torgeternity.sheetLabels.enhancements"}}
+            </div>
+            <div class="available-enhancement">
+                {{localize "torgeternity.sheetLabels.availableEnhancements"}}:
+                <input name="data.pulpPowers.enhancementNumber" type="number" value="{{data.data.pulpPowers.enhancementNumber}}" class="available-enhancement-input" title="Number of enhancements available for this perk" />
             </div>
             <ol class="item-list">
-                {{#each availableEnhancements as |item id|}}
-                <li class="item-block" data-item-id="{{item.id}}">
+                <li class="item-block">
                     <div class="item-row flexrow">
-                        <div class="item-name">
-                            {{item.data.description}}
+                        <div class="item-name enhancement-check">
+                            {{localize "torgeternity.sheetLabels.taken"}}
+                        </div>
+                        <div class="item-name enhancement-content">
+                            {{localize "torgeternity.sheetLabels.titleDescription"}}
+                        </div>
+                    </div>
+                </li>
+                <li class="item-block">
+                    <div class="item-row flexrow">
+                        <div class="item-name enhancement-check">
+                            <input name="data.pulpPowers.enhancement01.taken" class="toggle" type="checkbox" id="taken01" {{checked data.data.pulpPowers.enhancement01.taken}} title="Check if enhancement has been selected by Storm Knight">
+                        </div>
+                        <div class="item-name enhancement-content">
+                            <input type="text" name="data.pulpPowers.enhancement01.title" value="{{data.data.pulpPowers.enhancement01.title}}" class="input-box" />
+                            <textarea name="data.pulpPowers.enhancement01.description" class="pulp-description">{{data.data.pulpPowers.enhancement01.description}}</textarea>
                         </div>
                     </div>
                 </li>                
-                {{/each}}
             </ol>
 
         </div>

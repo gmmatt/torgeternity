@@ -563,8 +563,83 @@
             "prerequisites": "",
             "timestaken": "",
             "description": "",
-            "pulpPower": {
-                "enhancements": [],
+            "pulpPowers": {
+                "enhancementNumber": 0,
+                "enhancement01": {
+                    "title": "",
+                    "description": "",
+                    "taken": false
+                },
+                "enhancement02": {
+                    "title": "",
+                    "description": "",
+                    "taken": false
+                },
+                "enhancement03": {
+                    "title": "",
+                    "description": "",
+                    "taken": false
+                },
+                "enhancement04": {
+                    "title": "",
+                    "description": "",
+                    "taken": false
+                },
+                "enhancement05": {
+                    "title": "",
+                    "description": "",
+                    "taken": false
+                },
+                "enhancement06": {
+                    "title": "",
+                    "description": "",
+                    "taken": false
+                },
+                "enhancement07": {
+                    "title": "",
+                    "description": "",
+                    "taken": false
+                },
+                "enhancement08": {
+                    "title": "",
+                    "description": "",
+                    "taken": false
+                },
+                "enhancement09": {
+                    "title": "",
+                    "description": "",
+                    "taken": false
+                },
+                "enhancement10": {
+                    "title": "",
+                    "description": "",
+                    "taken": false
+                },
+                "enhancement11": {
+                    "title": "",
+                    "description": "",
+                    "taken": false
+                },
+                "enhancement12": {
+                    "title": "",
+                    "description": "",
+                    "taken": false
+                },
+                "enhancement13": {
+                    "title": "",
+                    "description": "",
+                    "taken": false
+                },
+                "enhancement14": {
+                    "title": "",
+                    "description": "",
+                    "taken": false
+                },
+                "enhancement15": {
+                    "title": "",
+                    "description": "",
+                    "taken": false
+                },
                 "limitations": []
             }
         },

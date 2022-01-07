@@ -328,7 +328,9 @@
             "skillAdds": "Adds",
             "fatigue": "Fatigue",
             "limitations": "Limitations",
-            "availableEnhancements": "Available Enhancements"
+            "availableEnhancements": "Available Enhancements",
+            "taken": "Taken",
+            "titleDescription": "Title/Description"
         },
         "itemSheetDescriptions": {
             "perk": "Perk",

@@ -2948,3 +2948,43 @@ form.actor-sheet.threat .tab[data-tab].active .editor {
     display:inline;
     text-align:center
 }
+
+.item-sheet .item-list {
+    list-style: none;
+    padding: 0 0 0 0;
+}
+
+.enhancement-check {
+    flex:10%;
+    color:black;
+    font-family:Alaska;
+    font-size: 12px;
+
+}
+
+.enhancement-content {
+    flex:90%;
+    color:black;
+    font-family:Alaska;
+    font-size:12px;
+}
+
+.available-enhancement-input {
+    width: 25px !important;
+}
+
+.available-enhancement {
+    color:black;
+    text-align:center;
+}
+
+.pulp-description {
+    background-color:rgba(255,255,255,0.39);
+    color: var(--color-text-dark-primary) !important;
+    border:1px solid var(--color-border-light-tertiary)
+}
+
+.pulp-description:hover, .pulp-description:focus {
+    box-shadow: 0 0 15px #4f523c inset;
+    background-color:rgba(255,255,255,0.39)
+}

@@ -82,10 +82,6 @@ export default class torgeternityItemSheet extends ItemSheet {
 
         data.config = CONFIG.torgeternity;
 
-        data.availableEnhancements = this.item.data.data.pulpPower.enhancements.filter(function (enhancement) {
-            return enhancement.taken = false
-        })
-
         return data;
     }
 
