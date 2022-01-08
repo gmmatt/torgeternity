@@ -61,8 +61,14 @@
 
         <div class="tab enhancements" data-group="primary" data-tab="enhancements">
 
-            <div class="list-section-heading">
-                {{localize "torgeternity.sheetLabels.enhancements"}}
+            <div class="enhancements-section-heading">
+                <span class="enhancements-title">
+                    {{localize "torgeternity.sheetLabels.enhancements"}}
+                </span>
+                <div class="enhancements-controls">
+                    <a class="remove-enhancement" title="Remove last available enhancement"><i class="fas fa-minus"></i></a>
+                    <a class="add-enhancement" title="Add available enhancement to end of list"><i class="fas fa-plus"></i></a>
+                </div>
             </div>
             <div class="available-enhancement">
                 {{localize "torgeternity.sheetLabels.availableEnhancements"}}:
