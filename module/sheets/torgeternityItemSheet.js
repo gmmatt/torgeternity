@@ -100,14 +100,42 @@ export default class torgeternityItemSheet extends ItemSheet {
 
         html.find(".add-enhancement").click(ev => {
             var currentShown = this.item.data.data.pulpPowers.enhancementNumber;
-            var newShown = currentShown + 1;
+            if (currentShown < 15) {
+                var newShown = currentShown + 1;
+            } else {
+                var newShown = currentShown;
+            }
             this.item.update({'data.pulpPowers.enhancementNumber': newShown})
         })
 
         html.find(".remove-enhancement").click(ev => {
             var currentShown = this.item.data.data.pulpPowers.enhancementNumber;
-            var newShown = currentShown - 1;
+            if (0 < currentShown) {
+                var newShown = currentShown - 1;
+            } else {
+                var newShown = currentShown;
+            }
             this.item.update({'data.pulpPowers.enhancementNumber': newShown})
+        })
+
+        html.find(".add-limitation").click(ev => {
+            var currentShown = this.item.data.data.pulpPowers.limitationNumber;
+            if (currentShown < 10) {
+                var newShown = currentShown + 1;
+            } else {
+                var newShown = currentShown;
+            }
+            this.item.update({'data.pulpPowers.limitationNumber': newShown})
+        })
+
+        html.find(".remove-limitation").click(ev => {
+            var currentShown = this.item.data.data.pulpPowers.limitationNumber;
+            if (0 < currentShown) {
+                var newShown = currentShown - 1;
+            } else {
+                var newShown = currentShown;
+            }
+            this.item.update({'data.pulpPowers.limitationNumber': newShown})
         })
 
 

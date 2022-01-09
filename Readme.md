@@ -10,6 +10,9 @@ while managing game systems.
 
 v. 2.3.2 - Pulp Powers Update
 - Updated perk types for all official releases to date (thanks @fscx!)
+- Updated perk data structure and perk item screen for pulp powers. Now,
+  when you set up a pulp power item, you get two more tabs where you can
+  create, select, and edit enhahcements and limitations.
 - Fixed a bug where skill test chat buttons didn't work while animated 
   chat was turned off
 - Changed base fatigue to 2 (facepalm!)

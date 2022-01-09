@@ -640,7 +640,17 @@
                     "description": "",
                     "taken": false
                 },
-                "limitations": []
+                "limitationNumber": 0,
+                "limitation01": "",
+                "limitation02": "",
+                "limitation03": "",
+                "limitation04": "",
+                "limitation05": "",
+                "limitation06": "",
+                "limitation07": "",
+                "limitation08": "",
+                "limitation09": "",
+                "limitation10": "" 
             }
         },
         "enhancement": {
