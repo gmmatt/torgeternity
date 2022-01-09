@@ -8,6 +8,9 @@
 For manual installation, use the provided manifest URL in the "*Install System*" popup window 
 while managing game systems.
 
+v. 2.3.3 - Minor Bug Patch
+- Fixed issue where item macros could not be created
+
 v. 2.3.2 - Pulp Powers Update
 - Updated perk types for all official releases to date (thanks @fscx!)
 - Updated perk data structure and perk item screen for pulp powers. Now,
