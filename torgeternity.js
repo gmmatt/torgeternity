@@ -339,7 +339,7 @@ async function createTorgEternityMacro(data, slot) {
     const itemData = data.data;
     // Create the macro command
     const command = `game.torgeternity.rollItemMacro("${itemData.name}");`;
-    let macro = game.macros.entities.find(
+    let macro = game.macros.find(
         (m) => m.name === itemData.name && m.command === command
     );
     if (!macro) {
