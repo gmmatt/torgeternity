@@ -120,7 +120,8 @@
             "powers": "Pouvoirs",
             "restrictions": "Restrictions",
             "minStrength": "Force min",
-            "ap": "PA"
+            "ap": "PA",
+            "chatNote": "Note"
         },
         "stats": {
             "wounds": "Blessures",
@@ -152,7 +153,8 @@
             "description": "Description",
             "good": "Supérieur",
             "outstanding": "Spectaculaire",
-            "attack": "Attaque"
+            "attack": "Attaque",
+            "ap": "PA"
         },
         "cosms": {
             "none": "(Non)",
@@ -187,7 +189,15 @@
             "savagery": "Sauvagerie",
             "social": "Social",
             "spellcraft": "Arts magiques",
-            "racial": "Racial"
+            "racial": "Racial",
+            "hacker": "Hacker",
+            "human": "Humain",
+            "abomination": "Abomination",
+            "aspirant": "Aspirant",
+            "depravity": "Depravation",
+            "theRace": "La Race",
+            "corruption": "Corruption",
+            "hope": "Espoir"
         },
         "sheetLabels": {
             "stormknight": "Chevalier des tempêtes",
@@ -287,7 +297,7 @@
             "otherModifiers": "Autres modificateurs",
             "description": "Description",
             "effect": "Effet",
-            "statusEffects": "Status Effects",
+            "statusEffects": "Status",
             "update": "Mise à jour",
             "attackOptions": "Options d'attaque",
             "calledShot": "Attaque ciblée",
@@ -308,7 +318,19 @@
             "new": "Nouveau",
             "keep": "Poursuivre",
             "end": "Fin",
-            "return": "Retour"
+            "return": "Retour",
+            "notes": "Notes",
+            "cosm": "Cosm",
+            "secondaryCosm": "Cosm secondaire",
+            "skillValue": "Compétence",
+            "baseAttribute": "Attribut",
+            "customSkills": "Compétences personnalisées",
+            "skillAdds": "Rangs",
+            "fatigue": "Fatigue",
+            "limitations": "Limitations",
+            "availableEnhancements": "Améliorations disponibles",
+            "taken": "Acquis",
+            "titleDescription": "Titre/Description"
         },
         "itemSheetDescriptions": {
             "perk": "Atout",
@@ -329,7 +351,8 @@
             "psionicpower": "Psionique",
             "specialability": "Capacité spéciale",
             "other": "Équipement général",
-            "customAttack": "Attaque personnalisée"
+            "customAttack": "Attaque personnalisée",
+            "customSkill": "Compétences personnalisées"
         },
         "attackTypes": {
             "unarmedCombat": "Combat à mains nues",
@@ -399,7 +422,12 @@
             "waiting": "Attendre",
             "darkness": "Obscurité",
             "targetSize": "Taille de la cible",
-            "targetVulnerability": "Cible Vulnérable"
+            "targetVulnerability": "Cible Vulnérable",
+            "dead": "Mort",
+            "prone": "Au sol",
+            "incapacitated": "Neutralisé",
+            "unconscious": "Inconscient",
+            "blind": "Aveugle"
         },
 
         "yesNo": {
@@ -427,7 +455,8 @@
             "modifiers": "Modifiers",
             "attack": "Attaque",
             "baseDamage": "Dommages de base",
-            "value": "Valeur"
+            "value": "Valeur",
+            "notes": "Notes"
        },
 
         "sizes": {
@@ -469,6 +498,34 @@
             "destiny": "Destin",
             "drama": "Action",
             "cosm": "Cosm"
-        } 
+        },
+        
+        "scenes": {
+            "reality": "Réalité",
+            "realityHint": "Configure la réalité de la zone de la scène",
+			"HeaderDetailsHint": "Configure les détails de base pour cette scène et les permissions qui contrôlent sa visibilité.",
+			"HeaderGridHint": "Configure les dimensions de la grille qui sont utilisées pour mesurer le mouvement des tokens dans cette scène.",
+			"HeaderVisionHint": "Configure les paramètres de vision, d'éclairage et de brouillard de guerre pour cette scène.",
+			"HeaderAmbienceHint": "Configure les intégrations supplémentaires entre cette scène et Journal Entries, les playlists ou les effets météo."
+        },
+
+        "tokens": {
+
+            "noDSR": "RDT",
+            "step": "Step",
+            "a": " A",
+            "b": " B",
+            "c": " C",
+            "d": " D"
+
+        }
+
+    },
+
+
+    "CARD":{
+        "TypeCosm": "Cosm",
+        "TypeDestiny": "Destin",
+        "TypeDrama": "Action"
     }
 }
