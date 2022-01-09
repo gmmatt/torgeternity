@@ -7,10 +7,10 @@
                  /></h1>
     </header>
 
-    <nav class="sheet-tabs item-tabs tabs" data-group="primary" style="right:-210px;top:210px">
+    <nav class="sheet-tabs item-tabs tabs" data-group="primary" style="{{data.data.navStyle}}">
         <a class="item" data-tab="stats" >{{localize "torgeternity.sheetLabels.stats"}}</a>
-        <a class="item" data-tab="enhancements" style="font-size:10px">{{localize "torgeternity.sheetLabels.enhancements"}}</a>
-        <a class="item" data-tab="limitations">{{localize "torgeternity.sheetLabels.limitations"}}</a>
+        <a class="item" data-tab="enhancements" style="font-size:10px" {{#unless data.data.extendedNav}}hidden{{/unless}}>{{localize "torgeternity.sheetLabels.enhancements"}}</a>
+        <a class="item" data-tab="limitations" {{#unless data.data.extendedNav}}hidden{{/unless}}>{{localize "torgeternity.sheetLabels.limitations"}}</a>
         <a class="item" data-tab="effects">{{localize "torgeternity.sheetLabels.effects"}}</a>
     </nav>
 
@@ -26,7 +26,7 @@
                     <select name="data.category" class="input-box">
                         {{#select data.data.category}}
                         {{#each config.perkTypes as |name type|}}
-                        <option value="{{localize name}}">{{localize name}}</option>
+                        <option value="{{localize type}}">{{localize name}}</option>
                         {{/each}}
                         {{/select}}
                     </select>
@@ -70,12 +70,8 @@
                     <a class="add-enhancement" title="Add available enhancement to end of list"><i class="fas fa-plus"></i></a>
                 </div>
             </div>
-            <div class="available-enhancement">
-                {{localize "torgeternity.sheetLabels.availableEnhancements"}}:
-                <input name="data.pulpPowers.enhancementNumber" type="number" value="{{data.data.pulpPowers.enhancementNumber}}" class="available-enhancement-input" title="Number of enhancements available for this perk" />
-            </div>
             <ol class="item-list">
-                <li class="item-block">
+                <li class="item-block" {{hideElement data.data.pulpPowers.enhancementNumber 1}}>
                     <div class="item-row flexrow">
                         <div class="item-name enhancement-check">
                             {{localize "torgeternity.sheetLabels.taken"}}
@@ -85,7 +81,7 @@
                         </div>
                     </div>
                 </li>
-                <li class="item-block">
+                <li class="item-block" {{hideElement data.data.pulpPowers.enhancementNumber 1}}>
                     <div class="item-row flexrow">
                         <div class="item-name enhancement-check">
                             <input name="data.pulpPowers.enhancement01.taken" class="toggle" type="checkbox" id="taken01" {{checked data.data.pulpPowers.enhancement01.taken}} title="Check if enhancement has been selected by Storm Knight">
@@ -96,6 +92,161 @@
                         </div>
                     </div>
                 </li>                
+                <li class="item-block" {{hideElement data.data.pulpPowers.enhancementNumber 2}}>
+                    <div class="item-row flexrow">
+                        <div class="item-name enhancement-check">
+                            <input name="data.pulpPowers.enhancement02.taken" class="toggle" type="checkbox" id="taken02" {{checked data.data.pulpPowers.enhancement02.taken}} title="Check if enhancement has been selected by Storm Knight">
+                        </div>
+                        <div class="item-name enhancement-content">
+                            <input type="text" name="data.pulpPowers.enhancement02.title" value="{{data.data.pulpPowers.enhancement02.title}}" class="input-box" />
+                            <textarea name="data.pulpPowers.enhancement02.description" class="pulp-description">{{data.data.pulpPowers.enhancement02.description}}</textarea>
+                        </div>
+                    </div>
+                </li>                
+                <li class="item-block" {{hideElement data.data.pulpPowers.enhancementNumber 3}}>
+                    <div class="item-row flexrow">
+                        <div class="item-name enhancement-check">
+                            <input name="data.pulpPowers.enhancement03.taken" class="toggle" type="checkbox" id="taken03" {{checked data.data.pulpPowers.enhancement03.taken}} title="Check if enhancement has been selected by Storm Knight">
+                        </div>
+                        <div class="item-name enhancement-content">
+                            <input type="text" name="data.pulpPowers.enhancement03.title" value="{{data.data.pulpPowers.enhancement03.title}}" class="input-box" />
+                            <textarea name="data.pulpPowers.enhancement03.description" class="pulp-description">{{data.data.pulpPowers.enhancement03.description}}</textarea>
+                        </div>
+                    </div>
+                </li>                
+                <li class="item-block" {{hideElement data.data.pulpPowers.enhancementNumber 4}}>
+                    <div class="item-row flexrow">
+                        <div class="item-name enhancement-check">
+                            <input name="data.pulpPowers.enhancement04.taken" class="toggle" type="checkbox" id="taken04" {{checked data.data.pulpPowers.enhancement04.taken}} title="Check if enhancement has been selected by Storm Knight">
+                        </div>
+                        <div class="item-name enhancement-content">
+                            <input type="text" name="data.pulpPowers.enhancement04.title" value="{{data.data.pulpPowers.enhancement04.title}}" class="input-box" />
+                            <textarea name="data.pulpPowers.enhancement04.description" class="pulp-description">{{data.data.pulpPowers.enhancement04.description}}</textarea>
+                        </div>
+                    </div>
+                </li>                
+                <li class="item-block" {{hideElement data.data.pulpPowers.enhancementNumber 5}}>
+                    <div class="item-row flexrow">
+                        <div class="item-name enhancement-check">
+                            <input name="data.pulpPowers.enhancement05.taken" class="toggle" type="checkbox" id="taken05" {{checked data.data.pulpPowers.enhancement05.taken}} title="Check if enhancement has been selected by Storm Knight">
+                        </div>
+                        <div class="item-name enhancement-content">
+                            <input type="text" name="data.pulpPowers.enhancement05.title" value="{{data.data.pulpPowers.enhancement05.title}}" class="input-box" />
+                            <textarea name="data.pulpPowers.enhancement05.description" class="pulp-description">{{data.data.pulpPowers.enhancement05.description}}</textarea>
+                        </div>
+                    </div>
+                </li>                
+                <li class="item-block" {{hideElement data.data.pulpPowers.enhancementNumber 6}}>
+                    <div class="item-row flexrow">
+                        <div class="item-name enhancement-check">
+                            <input name="data.pulpPowers.enhancement06.taken" class="toggle" type="checkbox" id="taken06" {{checked data.data.pulpPowers.enhancement06.taken}} title="Check if enhancement has been selected by Storm Knight">
+                        </div>
+                        <div class="item-name enhancement-content">
+                            <input type="text" name="data.pulpPowers.enhancement06.title" value="{{data.data.pulpPowers.enhancement06.title}}" class="input-box" />
+                            <textarea name="data.pulpPowers.enhancement06.description" class="pulp-description">{{data.data.pulpPowers.enhancement06.description}}</textarea>
+                        </div>
+                    </div>
+                </li>                
+                <li class="item-block" {{hideElement data.data.pulpPowers.enhancementNumber 7}}>
+                    <div class="item-row flexrow">
+                        <div class="item-name enhancement-check">
+                            <input name="data.pulpPowers.enhancement07.taken" class="toggle" type="checkbox" id="taken07" {{checked data.data.pulpPowers.enhancement07.taken}} title="Check if enhancement has been selected by Storm Knight">
+                        </div>
+                        <div class="item-name enhancement-content">
+                            <input type="text" name="data.pulpPowers.enhancement07.title" value="{{data.data.pulpPowers.enhancement07.title}}" class="input-box" />
+                            <textarea name="data.pulpPowers.enhancement07.description" class="pulp-description">{{data.data.pulpPowers.enhancement07.description}}</textarea>
+                        </div>
+                    </div>
+                </li>                
+                <li class="item-block" {{hideElement data.data.pulpPowers.enhancementNumber 8}}>
+                    <div class="item-row flexrow">
+                        <div class="item-name enhancement-check">
+                            <input name="data.pulpPowers.enhancement08.taken" class="toggle" type="checkbox" id="taken08" {{checked data.data.pulpPowers.enhancement08.taken}} title="Check if enhancement has been selected by Storm Knight">
+                        </div>
+                        <div class="item-name enhancement-content">
+                            <input type="text" name="data.pulpPowers.enhancement08.title" value="{{data.data.pulpPowers.enhancement08.title}}" class="input-box" />
+                            <textarea name="data.pulpPowers.enhancement08.description" class="pulp-description">{{data.data.pulpPowers.enhancement08.description}}</textarea>
+                        </div>
+                    </div>
+                </li>                
+                <li class="item-block" {{hideElement data.data.pulpPowers.enhancementNumber 9}}>
+                    <div class="item-row flexrow">
+                        <div class="item-name enhancement-check">
+                            <input name="data.pulpPowers.enhancement09.taken" class="toggle" type="checkbox" id="taken09" {{checked data.data.pulpPowers.enhancement09.taken}} title="Check if enhancement has been selected by Storm Knight">
+                        </div>
+                        <div class="item-name enhancement-content">
+                            <input type="text" name="data.pulpPowers.enhancement09.title" value="{{data.data.pulpPowers.enhancement09.title}}" class="input-box" />
+                            <textarea name="data.pulpPowers.enhancement09.description" class="pulp-description">{{data.data.pulpPowers.enhancement09.description}}</textarea>
+                        </div>
+                    </div>
+                </li>                
+                <li class="item-block" {{hideElement data.data.pulpPowers.enhancementNumber 10}}>
+                    <div class="item-row flexrow">
+                        <div class="item-name enhancement-check">
+                            <input name="data.pulpPowers.enhancement10.taken" class="toggle" type="checkbox" id="taken10" {{checked data.data.pulpPowers.enhancement10.taken}} title="Check if enhancement has been selected by Storm Knight">
+                        </div>
+                        <div class="item-name enhancement-content">
+                            <input type="text" name="data.pulpPowers.enhancement10.title" value="{{data.data.pulpPowers.enhancement10.title}}" class="input-box" />
+                            <textarea name="data.pulpPowers.enhancement10.description" class="pulp-description">{{data.data.pulpPowers.enhancement10.description}}</textarea>
+                        </div>
+                    </div>
+                </li>                
+                <li class="item-block" {{hideElement data.data.pulpPowers.enhancementNumber 11}}>
+                    <div class="item-row flexrow">
+                        <div class="item-name enhancement-check">
+                            <input name="data.pulpPowers.enhancement11.taken" class="toggle" type="checkbox" id="taken11" {{checked data.data.pulpPowers.enhancement11.taken}} title="Check if enhancement has been selected by Storm Knight">
+                        </div>
+                        <div class="item-name enhancement-content">
+                            <input type="text" name="data.pulpPowers.enhancement11.title" value="{{data.data.pulpPowers.enhancement11.title}}" class="input-box" />
+                            <textarea name="data.pulpPowers.enhancement11.description" class="pulp-description">{{data.data.pulpPowers.enhancement11.description}}</textarea>
+                        </div>
+                    </div>
+                </li>                
+                <li class="item-block" {{hideElement data.data.pulpPowers.enhancementNumber 12}}>
+                    <div class="item-row flexrow">
+                        <div class="item-name enhancement-check">
+                            <input name="data.pulpPowers.enhancement12.taken" class="toggle" type="checkbox" id="taken12" {{checked data.data.pulpPowers.enhancement12.taken}} title="Check if enhancement has been selected by Storm Knight">
+                        </div>
+                        <div class="item-name enhancement-content">
+                            <input type="text" name="data.pulpPowers.enhancement12.title" value="{{data.data.pulpPowers.enhancement12.title}}" class="input-box" />
+                            <textarea name="data.pulpPowers.enhancement12.description" class="pulp-description">{{data.data.pulpPowers.enhancement12.description}}</textarea>
+                        </div>
+                    </div>
+                </li>                
+                <li class="item-block" {{hideElement data.data.pulpPowers.enhancementNumber 13}}>
+                    <div class="item-row flexrow">
+                        <div class="item-name enhancement-check">
+                            <input name="data.pulpPowers.enhancement13.taken" class="toggle" type="checkbox" id="taken13" {{checked data.data.pulpPowers.enhancement13.taken}} title="Check if enhancement has been selected by Storm Knight">
+                        </div>
+                        <div class="item-name enhancement-content">
+                            <input type="text" name="data.pulpPowers.enhancement13.title" value="{{data.data.pulpPowers.enhancement13.title}}" class="input-box" />
+                            <textarea name="data.pulpPowers.enhancement13.description" class="pulp-description">{{data.data.pulpPowers.enhancement13.description}}</textarea>
+                        </div>
+                    </div>
+                </li>                
+                <li class="item-block" {{hideElement data.data.pulpPowers.enhancementNumber 14}}>
+                    <div class="item-row flexrow">
+                        <div class="item-name enhancement-check">
+                            <input name="data.pulpPowers.enhancement14.taken" class="toggle" type="checkbox" id="taken14" {{checked data.data.pulpPowers.enhancement14.taken}} title="Check if enhancement has been selected by Storm Knight">
+                        </div>
+                        <div class="item-name enhancement-content">
+                            <input type="text" name="data.pulpPowers.enhancement14.title" value="{{data.data.pulpPowers.enhancement14.title}}" class="input-box" />
+                            <textarea name="data.pulpPowers.enhancement14.description" class="pulp-description">{{data.data.pulpPowers.enhancement14.description}}</textarea>
+                        </div>
+                    </div>
+                </li>                
+                <li class="item-block" {{hideElement data.data.pulpPowers.enhancementNumber 15}}>
+                    <div class="item-row flexrow">
+                        <div class="item-name enhancement-check">
+                            <input name="data.pulpPowers.enhancement15.taken" class="toggle" type="checkbox" id="taken15" {{checked data.data.pulpPowers.enhancement15.taken}} title="Check if enhancement has been selected by Storm Knight">
+                        </div>
+                        <div class="item-name enhancement-content">
+                            <input type="text" name="data.pulpPowers.enhancement15.title" value="{{data.data.pulpPowers.enhancement15.title}}" class="input-box" />
+                            <textarea name="data.pulpPowers.enhancement15.description" class="pulp-description">{{data.data.pulpPowers.enhancement15.description}}</textarea>
+                        </div>
+                    </div>
+                </li>                
+
             </ol>
 
         </div>

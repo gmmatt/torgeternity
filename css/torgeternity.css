@@ -495,6 +495,11 @@ form input {
     color: white;
 }
 
+#mgme_question,
+#mgme_re_question {
+    color:black;
+}
+
 .window-app .window-resizable-handle {
     width: 30px;
     height: 30px;

@@ -71,4 +71,12 @@ Handlebars.registerHelper("concatSkillValue", function (skillName) {
       return "No hand available - hand names must exactly match the corresponding Storm Knight names.";
     }
   })
+
+  Handlebars.registerHelper('hideElement', function (displayTo, current) {
+    if (parseInt(current) > parseInt(displayTo)) {
+      return "hidden"
+    } else {
+      return ""
+    }
+  })
 }

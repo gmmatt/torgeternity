@@ -83,7 +83,7 @@ export default class torgeternityActor extends Actor {
             //Set base armor to zero
             this.data.data.other.armor = 0;
 
-            //Set fatigue to 2
+            //Set base fatigue to 2
             this.data.data.other.fatigue = 2;
 
             //Set base toughness

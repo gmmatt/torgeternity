@@ -98,16 +98,19 @@ export default class torgeternityItemSheet extends ItemSheet {
             })
         });
 
-        html.find(".create-enhancement").click(ev => {
-            var enhancements = this.item.data.data.pulpPower.enhancements;
-            const newEnhancement = {
-                id: foundry.utils.randomID(16),
-                taken: false,
-                description: ""
-            };
-            enhancements.push(newEnhancement)
-            this.document.update('data.data.pulpPower'.enhancements,newEnhancement)
-        });
+        html.find(".add-enhancement").click(ev => {
+            var currentShown = this.item.data.data.pulpPowers.enhancementNumber;
+            var newShown = currentShown + 1;
+            this.item.update({'data.pulpPowers.enhancementNumber': newShown})
+        })
+
+        html.find(".remove-enhancement").click(ev => {
+            var currentShown = this.item.data.data.pulpPowers.enhancementNumber;
+            var newShown = currentShown - 1;
+            this.item.update({'data.pulpPowers.enhancementNumber': newShown})
+        })
+
+
     }
 
 }
