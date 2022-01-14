@@ -25,6 +25,7 @@ import torgeternityPile from "./module/cards/torgeternityPile.js";
 import torgeternityDeck from "./module/cards/torgeternityDeck.js";
 import torgeternityCardConfig from "./module/cards/torgeternityCardConfig.js";
 import { torgeternityCards } from "./module/cards/torgeternityCards.js";
+import {attackDialog} from "/systems/torgeternity/module/attack-dialog.js";//Added
 
 
 Hooks.once("init", async function() {
@@ -340,8 +341,8 @@ async function createTorgEternityMacro(data, slot) {
     // Create the macro command
     const command = `game.torgeternity.rollItemMacro("${itemData.name}");`;
     let macro = game.macros.find(
-        (m) => m.name === itemData.name && m.command === command
-    );
+        (m) => m.name === itemData.name && m.data.command === command
+    )
     if (!macro) {
         macro = await Macro.create({
             name: itemData.name,
@@ -378,31 +379,138 @@ function rollItemMacro(itemName) {
         case "meleeweapon":
         case "missileweapon":
         case "firearm":
+        case "energyweapon":
         case "heavyweapon":
-        case "heavyweapon":
-            var weaponData = item.data.data;
-            var skillData = item.actor.data.data.skills[weaponData.attackWith];
-            torgchecks.weaponAttack({
-                actor: item.actor,
-                item: item,
-                actorPic: item.actor.data.img,
-                skillName: weaponData.attackWith,
-                skillBaseAttribute: skillData.baseAttribute,
-                skillValue: skillData.value,
-                unskilledUse: skillData.unskilledUse,
-                strengthValue: item.actor.data.data.attributes.strength,
-                charismaValue: item.actor.data.data.attributes.charisma,
-                dexterityValue: item.actor.data.data.attributes.dexterity,
-                mindValue: item.actor.data.data.attributes.mind,
-                spiritValue: item.actor.data.data.attributes.spirit,
-                weaponName: item.data.name,
-                weaponDamageType: weaponData.damageType,
-                weaponDamage: weaponData.damage,
-            });
+// The following is copied/pasted/adjusted from _onAttackRoll in torgeternityActorSheet
+                var weaponData = item.data.data;
+                var attackWith = weaponData.attackWith;
+                var skillData = actor.data.data.skills[weaponData.attackWith];
+                var sizeModifier = 0;
+                var vulnerableModifier = 0;
+                var targetToughness = 0;
+                var targetArmor = 0;
+                var targetDefenseSkill = "Dodge";
+                console.log(targetDefenseSkill);
+                var targetDefenseValue = 0;
+        
+                // Exit if no target or get target data
+                    if (Array.from(game.user.targets).length === 0) {
+                        var needTargetData = {
+                            user: game.user.data._id,
+                            speaker: ChatMessage.getSpeaker(),
+                            owner: actor,
+                        };
+                
+                        var templateData = {
+                            message: "Cannot attempt enhanced attack test without a target. Select a target and try again.",
+                            actorPic: actor.data.img
+                        };
+                
+                        const templatePromise = renderTemplate("./systems/torgeternity/templates/partials/skill-error-card.hbs", templateData);
+                
+                        templatePromise.then(content => {
+                            needTargetData.content = content;
+                            ChatMessage.create(needTargetData);
+                        })
+                
+                        return;
+                    } else {
+                        var target = Array.from(game.user.targets)[0];
+                        var targetType = target.actor.data.type;
+                        if (target.actor.data.data.details.sizeBonus === "tiny") {
+                            sizeModifier = -6;
+                        } else if (target.actor.data.data.details.sizeBonus === "verySmall") {
+                            sizeModifier = -4;
+                        } else if (target.actor.data.data.details.sizeBonus === "small") {
+                            sizeModifier = -2;
+                        } else if (target.actor.data.data.details.sizeBonus === "large") {
+                            sizeModifier = 2;
+                        } else if (target.actor.data.data.details.sizeBonus === "veryLarge") {
+                            sizeModifier = 4;
+                        } else {
+                            sizeModifier = 0;
+                        }
+                        vulnerableModifier = target.actor.data.data.vulnerableModifier;
+                        targetToughness = target.actor.data.data.other.toughness;
+                        targetArmor = target.actor.data.data.other.armor;
+                        if (attackWith === "fireCombat" || attackWith === "energyWeapons" || attackWith === "heavyWeapons" || attackWith === "missileWeapons") {
+                            targetDefenseSkill = "Dodge";
+                            console.log(targetDefenseSkill);
+                            if (targetType === "threat") {
+                                targetDefenseValue = target.actor.data.data.skills.dodge.value;
+                            } else {
+                                targetDefenseValue = target.actor.data.data.dodgeDefense;
+                            }
+                        } else {
+                            if (target.actor.data.data.skills.meleeWeapons.adds > 0 || (targetType === "threat" && target.actor.data.data.skills.meleeWeapons.value > 0)) {
+                                targetDefenseSkill = "Melee Weapons";
+                                console.log(targetDefenseSkill);
+                                if (targetType === "threat") {
+                                    targetDefenseValue = target.actor.data.data.skills.meleeWeapons.value;
+                                } else {
+                                    targetDefenseValue = target.actor.data.data.meleeWeaponsDefense;
+                                }
+                            } else {
+                                targetDefenseSkill = "Unarmed Combat";
+                                console.log(targetDefenseSkill);
+                                if (targetType === "threat") {
+                                    targetDefenseValue = target.actor.data.data.skills.unarmedCombat.value;
+                                } else {
+                                    targetDefenseValue = target.actor.data.data.unarmedCombatDefense;
+                                }
+                            }
+                        }
+                };
+        
+                var mTest = {
+        
+                    testType: "attack",
+                    actor: actor,
+                    actorType: actor.data.type,
+                    item: item,
+                    actorPic: actor.data.img,
+                    skillName: weaponData.attackWith,
+                    skillBaseAttribute: skillData.baseAttribute,
+                    skillValue: skillData.value,
+                    unskilledUse: skillData.unskilledUse,
+                    strengthValue: actor.data.data.attributes.strength,
+                    charismaValue: actor.data.data.attributes.charisma,
+                    dexterityValue: actor.data.data.attributes.dexterity,
+                    mindValue: actor.data.data.attributes.mind,
+                    spiritValue: actor.data.data.attributes.spirit,
+                    possibilityTotal: 0,
+                    upTotal: 0,
+                    heroTotal: 0,
+                    dramaTotal: 0,
+                    cardsPlayed: 0,
+                    weaponName: item.data.name,
+                    weaponDamageType: weaponData.damageType,
+                    weaponDamage: weaponData.damage,
+                    damage: weaponData.damage,
+                    weaponAP: weaponData.ap,
+                    targetToughness: targetToughness,
+                    targetArmor: targetArmor,
+                    targetDefenseSkill: targetDefenseSkill,
+                    targetDefenseValue: targetDefenseValue,
+                    targetType: targetType,
+                    woundModifier: parseInt(-(actor.data.data.wounds.value)),
+                    stymiedModifier: parseInt(actor.data.data.stymiedModifier),
+                    darknessModifier: parseInt(actor.data.data.darknessModifier),
+                    sizeModifier: sizeModifier,
+                    vulnerableModifier: vulnerableModifier,
+                    vitalAreaDamageModifier: 0,
+                    chatNote: weaponData.chatNote
+        
+                }
+                
+                let testDialog = new attackDialog(mTest);
+                    testDialog.render(true);
+// End of copied/pasted/adjusted, choosed to open the Dialog (as with shift event), drawback NEED a Target
             break;
         case "psionicpower":
         case "miracle":
         case "spell":
+/* This part is not functional, kept for test purpose, replaced by the following "log" and "ui.notification"
             var powerData = item.data.data;
             var skillData = item.actor.data.data.skills[powerData.skill];
             console.log(powerData, skillData);
@@ -417,9 +525,12 @@ function rollItemMacro(itemName) {
                 powerAttack: powerData.isAttack,
                 powerDamage: powerData.damage,
             });
+*/
+            console.log("Same action for Psi/Miracles/Spells");
+            ui.notifications.info("Not Handled at this moment");
             break;
-
         default:
+            ui.notifications.info("Default action, Gear for example");
             return item.roll();
     }
 }
