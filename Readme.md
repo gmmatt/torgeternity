@@ -8,12 +8,14 @@
 For manual installation, use the provided manifest URL in the "*Install System*" popup window 
 while managing game systems.
 
-v. 2.3.3 - Minor Bug Patch
+v. 2.3.3 - Squashing Bugs
 - Fixed issue where item macros could not be created
 - Fixed multiple issues involving player combat trackers either
   generating errors or not updating correctly
 - (Confirmed that perk categories should not reset again after
   this update nor should they reset after future updates)
+- Fixed issue where possibilities were not updating when GM
+  uses player bar
 
 v. 2.3.2 - Pulp Powers Update
 - Updated perk types for all official releases to date (thanks @fscx!)

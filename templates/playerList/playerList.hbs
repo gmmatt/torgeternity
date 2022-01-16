@@ -17,11 +17,11 @@
 	<p class=" flexrow">
 		<i
 			class="players-popout far fa-window-restore"
-			title="open party-sheet"
+			title=",ypen party-sheet"
 		></i>
 		<i
 			class="fas fa-bolt possReset"
-			title="reset stormknight's possibilities"
+			title="Reset Storm Knight Possibilities"
 		></i>
 	</p>{{/if}}
 
@@ -59,11 +59,11 @@
 				{{#if ../self.isGM}}
 				<em
 					class="possAdd"
-					data-targetId="{{#if this.isGM}}GMpossibilities{{else}}{{this.character.data.id}}{{/if}}"
+					data-targetId="{{#if this.isGM}}GMpossibilities{{else}}{{this.character.data._id}}{{/if}}"
 				><i class="fas fa-plus-circle"></i></em>
 				<em
 					class="possMinus"
-					data-targetId="{{#if this.isGM}}GMpossibilities{{else}}{{this.character.data.id}}{{/if}}"
+					data-targetId="{{#if this.isGM}}GMpossibilities{{else}}{{this.character.data._id}}{{/if}}"
 				><i class="fas fa-minus-circle"></i></em>
 				
 			</span>
