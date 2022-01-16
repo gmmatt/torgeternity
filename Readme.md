@@ -28,6 +28,8 @@ v. 2.3.3 - Squashing Bugs
 - Enhancements and Limitations tabs now available for all perks
 - Added German compendiums and ability to hide English/German compendiums
   (many thanks to Algor for his work to get this added!)
+- Fixed drag-and-drop attack macros so that they now work properly
+  (thanks for the contribution, Durak!)
 
 v. 2.3.2 - Pulp Powers Update
 - Updated perk types for all official releases to date (thanks @fscx!)
