@@ -17,6 +17,7 @@ v. 2.3.3 - Squashing Bugs
 - Fixed issue where possibilities were not updating when GM
   uses player bar
 - Enhancements and Limitations tabs now available for all perks
+- Added German compendiums and ability to hide English/German compendiums
 
 v. 2.3.2 - Pulp Powers Update
 - Updated perk types for all official releases to date (thanks @fscx!)

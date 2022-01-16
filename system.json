@@ -43,6 +43,27 @@
       "module": "torgeternity",
       "path": "packs/core-card-set.db",
       "entity": "Cards"
+    },
+    {
+      "name": "system-de-archetypen",
+      "label": "Archetypen",
+      "path": "packs/deutsch/archetypen.db",
+      "module": "torgeternity",
+      "entity": "Actor"
+    },
+    {
+      "name": "system-de-basisregeln",
+      "label": "Basisregeln",
+      "path": "packs/deutsch/basisregeln.db",
+      "module": "torgeternity",
+      "entity": "JournalEntry"
+    },
+    {
+      "name": "system-de-grundkarten",
+      "label": "Dramadeck",
+      "path": "packs/deutsch/core-card-set-de.db",
+      "module": "torgeternity",
+      "entity": "Cards"
     }
   ],
   "languages": [

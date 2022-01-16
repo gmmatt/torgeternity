@@ -137,7 +137,7 @@ Hooks.on("ready", async function() {
         user: game.user
     }
     torgeternity.welcomeMessage = await renderTemplate("systems/torgeternity/templates/welcomeMessage.hbs", welcomeData);
-
+    
     //----rendering welcome message
     if (game.settings.get("torgeternity", "welcomeMessage") == true) {
         let d = new Dialog({
@@ -162,6 +162,46 @@ Hooks.on("ready", async function() {
         });
         d.render(true);
     }
+
+    //------Ask about hiding nonlocal compendium
+    if (game.i18n.lang === "en" && game.settings.get("torgeternity", "welcomeMessage") == true) {
+        let d = new Dialog ({
+            title: "Hide German Compendiums?",
+            content: "This system includes both English and German language compendiums. Do you want to hide the German compendiums?",
+            buttons: {
+                one: {
+                    icon: `<i class="fas fa-check"></i>`,
+                    label: "Yes",
+                    callback: () =>
+                        game.settings.set("torgeternity", "hideGerman", true)
+                },
+                two: {
+                    icon: '<i class="fas fa-ban"></i>',
+                    label: "No",
+                }
+            }
+        });
+        d.render(true);
+    } else if (game.i18n.lang === "de" && game.settings.get("torgeternity", "welcomeMessage") == true) {
+        let d = new Dialog ({
+            title: "Hide English Compendiums?",
+            content: "This system includes both English and German language compendiums. Do you want to hide the English compendiums?",
+            buttons: {
+                one: {
+                    icon: `<i class="fas fa-check"></i>`,
+                    label: "Yes",
+                    callback: () =>
+                        game.settings.set("torgeternity", "hideEnglish", true)
+                },
+                two: {
+                    icon: '<i class="fas fa-ban"></i>',
+                    label: "No",
+                }
+            }
+        });
+        d.render(true);
+    }
+    
 
     //----setup cards if needed
     
@@ -430,6 +470,32 @@ Hooks.on("renderCombatTracker", (combatTracker) => {
         hand.apps[combatTracker.id] = combatTracker;
     }
 })
+
+Hooks.on("renderCompendiumDirectory", (app, html, data) => {
+    if (game.settings.get("torgeternity", "hideGerman") == true) {
+        game.packs.delete("torgeternity.system-de-archetypen");
+        html.find('li[data-pack="torgeternity.system-de-archetypen"]').hide();
+
+        game.packs.delete("torgeternity.system-de-basisregeln");
+        html.find('li[data-pack="torgeternity.system-de-basisregeln"]').hide();
+
+        game.packs.delete("torgeternity.system-de-grundkarten");
+        html.find('li[data-pack="torgeternity.system-de-grundkarten"]').hide()
+    }
+
+    if (game.settings.get("torgeternity", "hideEnglish") == true) {
+        game.packs.delete("torgeternity.archetypes");
+        html.find('li[data-pack="torgeternity.archetypes"]').hide();
+
+        game.packs.delete("torgeternity.basic-rules");
+        html.find('li[data-pack="torgeternity.basic-rules"]').hide();
+
+        game.packs.delete("torgeternity.core-card-set");
+        html.find('li[data-pack="torgeternity.core-card-set"]').hide();
+        
+    }
+})
+
 
 Hooks.on("renderChatLog", (app, html, data) => {
     //----chat messages listeners

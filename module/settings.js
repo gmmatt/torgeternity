@@ -62,6 +62,25 @@ export function registerTorgSettings() {
             livingLand: "Living Land GM Screen"
         },
         default: "torgEternity"
+    });
+
+    //Hide Compendiums
+    game.settings.register("torgeternity", "hideGerman", {
+        name: "Hide German Compendiums",
+        hint: "Select to hide German compendiums on startup.",
+        scope: "world",
+        config: true,
+        type: Boolean,
+        default: false
+    });
+
+    game.settings.register("torgeternity", "hideEnglish", {
+        name: "Hide English Compendiums",
+        hint: "Select to hide English compendiums on startup.",
+        scope: "world",
+        config: true,
+        type: Boolean,
+        default: false
     })
 
 
