@@ -16,6 +16,7 @@ v. 2.3.3 - Squashing Bugs
   this update nor should they reset after future updates)
 - Fixed issue where possibilities were not updating when GM
   uses player bar
+- Enhancements and Limitations tabs now available for all perks
 
 v. 2.3.2 - Pulp Powers Update
 - Updated perk types for all official releases to date (thanks @fscx!)

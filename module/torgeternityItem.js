@@ -26,9 +26,7 @@ export default class torgeternityItem extends Item {
    prepareBaseData() {
 
       //Handle perk-related data
-      if (this.data._source.type === "perk" && this.data.data.category === "pulpPowers") {
-
-
+      if (this.data._source.type === "perk") {
          this.data.data.navStyle = "right:-210px;top:210px";
          this.data.data.extendedNav = true
       } else {
