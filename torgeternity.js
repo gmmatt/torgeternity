@@ -424,6 +424,13 @@ function rollItemMacro(itemName) {
     }
 }
 
+Hooks.on("renderCombatTracker", (combatTracker) => {
+    const hands = game.cards;
+    for (let hand of hands) {
+        hand.apps[combatTracker.id] = combatTracker;
+    }
+})
+
 Hooks.on("renderChatLog", (app, html, data) => {
     //----chat messages listeners
     Chat.addChatListeners(html);

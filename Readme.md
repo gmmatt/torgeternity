@@ -10,6 +10,10 @@ while managing game systems.
 
 v. 2.3.3 - Minor Bug Patch
 - Fixed issue where item macros could not be created
+- Fixed multiple issues involving player combat trackers either
+  generating errors or not updating correctly
+- (Confirmed that perk categories should not reset again after
+  this update nor should they reset after future updates)
 
 v. 2.3.2 - Pulp Powers Update
 - Updated perk types for all official releases to date (thanks @fscx!)

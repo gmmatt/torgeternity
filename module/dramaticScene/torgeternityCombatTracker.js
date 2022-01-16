@@ -243,7 +243,7 @@ export default class torgeternityCombatTracker extends CombatTracker {
 
 
     }
-    
+
 
         /* Old Code
     let vilains = this.viewed.combatants.filter((c) => c.token.disposition < 1);

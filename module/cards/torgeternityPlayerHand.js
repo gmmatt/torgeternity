@@ -36,7 +36,7 @@ export default class  torgeternityPlayerHand extends CardsHand {
               }
               card.toMessage({content: `<div class="card-draw flexrow"><span class="card-chat-tooltip"><img class="card-face" src="${card.img}"/><span><img src="${card.img}"></span></span><span class="card-name">${game.i18n.localize("torgeternity.dialogPrompts.plays")} ${card.name}</span>
             </div>`})
-              game.combats.apps[0].render();
+            // await game.combats.apps[0].viewed.resetAll();
               return;
           case "view":
               new ImagePopout(card.img, {title: card.name}).render(true,{width:425,height:650});
@@ -54,7 +54,7 @@ export default class  torgeternityPlayerHand extends CardsHand {
               }
               card.toMessage({content: `<div class="card-draw flexrow"><span class="card-chat-tooltip"><img class="card-face" src="${card.img}"/><span><img src="${card.img}"></span></span><span class="card-name">${game.i18n.localize("torgeternity.dialogPrompts.discards")} ${card.name}</span>
               </div>`});
-              game.combats.apps[0].render();
+              // await game.combats.apps[0].viewed.resetAll();
               return;
           case "drawDestiny":
               return this.object.draw(game.cards.getName("Destiny Deck"));
@@ -64,7 +64,7 @@ export default class  torgeternityPlayerHand extends CardsHand {
           case "pass":
               await card.setFlag("torgeternity", "pooled", false);
               await this.playerPassDialog(card);
-              game.combats.apps[0].render();
+              // await game.combats.apps[0].viewed.resetAll();
               return;
           case "create":
             return cls.createDialog({}, {parent: this.object, pack: this.object.pack});
@@ -109,10 +109,10 @@ export default class  torgeternityPlayerHand extends CardsHand {
         case "poolToggle":
           if (card.getFlag("torgeternity", "pooled") === true) {
             await card.setFlag("torgeternity", "pooled", false)
-            game.combats.apps[0].render();
+            // await game.combats.apps[0].viewed.resetAll();
           } else {
             await card.setFlag("torgeternity", "pooled", true)
-            game.combats.apps[0].render();
+            // await game.combats.apps[0].viewed.resetAll();
           }
           /*if (input.checked === true) {
             await card.setFlag("torgeternity","pooled", true)

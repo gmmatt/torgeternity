@@ -1,38 +1,41 @@
 export default class TorgCombat extends Combat {
 
   async nextRound() {
-    let x = this.getEmbeddedCollection("Combatant")
-    let combatantLength = x.contents.length
-    for (let i=0; i < combatantLength; i++) {
-      let c = x.contents[i]
+    if (game.user.isGM) {
+      let x = this.getEmbeddedCollection("Combatant")
+      let combatantLength = x.contents.length
+      for (let i=0; i < combatantLength; i++) {
+        let c = x.contents[i]
 
-      await c.setFlag("world", "turnTaken", false) 
-      let y = 0
-    }
+        await c.setFlag("world", "turnTaken", false) 
+        let y = 0
+      }
 
-    const activeStack = game.cards.getName("Active Drama Card");
-    if (activeStack.data.cards.document.availableCards.length > 0) {
-      await game.cards.getName("Active Drama Card").data.cards.document.availableCards[0].pass(game.cards.getName("Drama Discard"));
+      const activeStack = game.cards.getName("Active Drama Card");
+      if (activeStack.data.cards.document.availableCards.length > 0) {
+        await game.cards.getName("Active Drama Card").data.cards.document.availableCards[0].pass(game.cards.getName("Drama Discard"));
+      }
+      var cardCount = game.cards.getName("Drama Deck").availableCards.length;
+      if (game.cards.getName("Drama Deck").availableCards.length > 0) {  
+        game.cards.getName("Active Drama Card").draw(game.cards.getName("Drama Deck"));
+        await this._onUpdate;
+      } else {
+        ui.notifications.info("The Drama Deck is empty. Reset the Drama Deck to continue.")
+      }
     }
-    var cardCount = game.cards.getName("Drama Deck").availableCards.length;
-    if (game.cards.getName("Drama Deck").availableCards.length > 0) {  
-      game.cards.getName("Active Drama Card").draw(game.cards.getName("Drama Deck"));
-      await this._onUpdate;
-    } else {
-      ui.notifications.info("The Drama Deck is empty. Reset the Drama Deck to continue.")
-    }
-   
     await super.nextRound();
 
   }
 
   _onCreate (data,options,userId) {
     
+    if (game.user.isGM) {
+      if (game.cards.getName("Drama Deck").availableCards.length > 0) {  
+        game.cards.getName("Active Drama Card").draw(game.cards.getName("Drama Deck"));
+      } else {
+        ui.notifications.info("The Drama Deck is empty. Reset the Drama Deck to continue.")
+      }
 
-    if (game.cards.getName("Drama Deck").availableCards.length > 0) {  
-      game.cards.getName("Active Drama Card").draw(game.cards.getName("Drama Deck"));
-    } else {
-      ui.notifications.info("The Drama Deck is empty. Reset the Drama Deck to continue.")
     }
 
     super._onCreate(data,options,userId);
@@ -41,12 +44,14 @@ export default class TorgCombat extends Combat {
 
   _onDelete (options, userId) {
 
-    const activeStack = game.cards.getName("Active Drama Card");
+    if (game.user.isGM) {
+      const activeStack = game.cards.getName("Active Drama Card");
 
-    if (activeStack.data.cards.document.availableCards.length > 0) {
-      game.cards.getName("Active Drama Card").data.cards.document.availableCards[0].pass(game.cards.getName("Drama Discard"));
-    }
+      if (activeStack.data.cards.document.availableCards.length > 0) {
+        game.cards.getName("Active Drama Card").data.cards.document.availableCards[0].pass(game.cards.getName("Drama Discard"));
+      }
     
+    }
     super._onDelete(options,userId);
 
   } 
@@ -68,17 +73,18 @@ export default class TorgCombat extends Combat {
   
   _onUpdate (changed,options,userId) {
 
-    const activeStack = game.cards.getName("Active Drama Card");
-    if (activeStack.data.cards.document.availableCards.length > 0) {
-      const activeCard = activeStack.data.cards.document.availableCards[0];
-      const activeImage = activeCard.data.faces[0].img;
-      this.setFlag("torgeternity", "activeCard", activeImage)
-      //document.getElementById("active-drama-card").src = activeImage;
-      let x = 0;
-    } else {
-      this.setFlag("torgeternity", "activeCard", "")
+    if (game.user.isGM) {
+      const activeStack = game.cards.getName("Active Drama Card");
+      if (activeStack.data.cards.document.availableCards.length > 0) {
+        const activeCard = activeStack.data.cards.document.availableCards[0];
+        const activeImage = activeCard.data.faces[0].img;
+        this.setFlag("torgeternity", "activeCard", activeImage)
+        //document.getElementById("active-drama-card").src = activeImage;
+        let x = 0;
+      } else {
+        this.setFlag("torgeternity", "activeCard", "")
+      }
     }
-
   }
 
   /*
