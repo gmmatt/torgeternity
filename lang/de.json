@@ -120,7 +120,8 @@
             "powers": "Kräfte",
             "restrictions": "Einschränkungen",
 			"minStrength": "Min Stä",
-            "ap":"PB"
+            "ap":"PB",
+            "chatNote": "In den Chat"
         },
         "stats":{
             "wounds": "Wunden",
@@ -152,7 +153,8 @@
             "description": "Beschreibung",
             "good": "Gut",
             "outstanding": "Hervorragend",
-			"attack": "Angriff"
+			"attack": "Angriff",
+            "ap": "PB"
         },
         "cosms": {
             "none": "(Keins)",
@@ -179,7 +181,7 @@
             "light": "Licht",
             "occult": "Okkult",
             "occultech": "Okkultech",
-            "outsider": "Außenseider",
+            "outsider": "Außenseiter",
             "prowess": "Kampfkraft",
             "psionics": "Psionik",
             "pulpPowers": "Pulp Superkräfte",
@@ -187,7 +189,15 @@
             "savagery":"Wildnis",
             "social": "Sozial",
             "spellcraft": "Zauberkunde",
-			"racial": "Volk"
+			"racial": "Volk",
+            "hacker": "Hacker",
+            "human": "Mensch",
+            "abomination": "Abscheulichkeit",
+            "aspirant": "Aspirant",
+            "depravity": "Verderbtheit",
+            "theRace": "Das Volk",
+            "corruption": "Korruption",
+            "hope": "Hoffnung"
         },
         "sheetLabels": {
             "stormknight":"Storm Knight",
@@ -308,7 +318,19 @@
             "new": "Neu",
             "keep": "Behalten",
             "end": "Ende",
-            "return": "Zurück"
+            "return": "Zurück",
+            "notes": "Notizen",
+            "cosm": "Cosm",
+            "secondaryCosm": "Sekundäres Cosm",
+            "skillValue": "Fertigkeitswert",
+            "baseAttribute": "Basisattribut",
+            "customSkills": "Eigene Fertigkeiten",
+            "skillAdds": "Fertigkeitsstufen",
+            "fatigue": "Erschöpfung",
+            "limitations": "Einschränkungen",
+            "availableEnhancements": "Verfügbare Verbesserungen",
+            "taken": "Gekauft",
+            "titleDescription": "Titel/Beschreibung"
         },
         "itemSheetDescriptions": {
             "perk": "Vorzug",
@@ -329,7 +351,8 @@
             "psionicpower": "Psikraft",
             "specialability": "Spezialfähigkeit",
             "other": "Allgemeine Ausrüstung",
-			"customAttack": "Individueller Angriff"
+			"customAttack": "Individueller Angriff",
+            "customSkill": "Eigene Fertigkeit"
         },
         "attackTypes": {
             "unarmedCombat": "Waffenloser Kampf",
@@ -399,7 +422,12 @@
             "waiting": "Warten",
             "darkness": "Dunkelheit",
             "targetSize": "Zielgröße",
-            "targetVulnerability": "Schwachstelle"            
+            "targetVulnerability": "Schwachstelle",
+            "dead": "Tod",
+            "prone": "Anfällig",
+            "incapacitated": "Bewegungsunfähig",
+            "unconscious": "K.O.",
+            "blind": "Blind" 
         },
 
         "yesNo": {
@@ -427,7 +455,8 @@
             "modifiers": "Modifikator",
             "attack": "Angriff",
             "baseDamage": "Grundschaden",
-			"value": "Wert"
+			"value": "Wert",
+            "notes": "Notizen"
         },
 
         "sizes": {
@@ -469,6 +498,34 @@
             "destiny": "Schicksal",
             "drama": "Drama",
             "cosm": "Cosm"
-        }                
+        },
+        
+        "scenes": {
+            "reality": "Realität",
+            "realityHint": "Stelle die Realität der Zone ein.",
+			"HeaderDetailsHint": "Hier werden grundlegende Details für diese Szene und die Berechtigungen, die die Sichtbarkeit der Szene steuern, konfiguriert.",
+			"HeaderGridHint": "Wähle die Rastermaße, die zur Messung der Tokenbewegung in dieser Szene verwendet werden.",
+			"HeaderVisionHint": "Hier werden die für diese Szene geltenden Einstellungen für Sicht, Beleuchtung und Kriegsnebel konfiguriert.",
+			"HeaderAmbienceHint": "Konfiguriere zusätzliche Integrierungen zwischen dieser Szene und Journaleinträgen, Audio-Playlists oder Wettereffekten."
+        },
+
+        "tokens": {
+
+            "noDSR": "Keine DPA",
+            "step": "Schritt",
+            "a": " A",
+            "b": " B",
+            "c": " C",
+            "d": " D"
+
+        }
+
+    },
+
+
+    "CARD":{
+        "TypeCosm": "Cosm",
+        "TypeDestiny": "Schicksal",
+        "TypeDrama": "Drama"
     }
 }
