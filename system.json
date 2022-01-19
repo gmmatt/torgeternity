@@ -16,7 +16,8 @@
     "./module/lib/setting-extender.js"
   ],
   "styles": [
-    "./css/torgeternity.css"
+    "./css/torgeternity.css",
+    "./css/journal.css"
   ],
   "background":"images/splash.webp",
    "packs": [
