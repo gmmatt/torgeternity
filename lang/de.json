@@ -296,7 +296,7 @@
             "targets": "Ziele",
             "otherModifiers": "Andere Modifikatoren",
             "description": "Beschreibung",
-            "effect": "Effekt",
+            "effect": "Modif.",
             "statusEffects": "Statuseffekte",
             "update": "Update",
             "attackOptions": "Angriffsoptionen",
