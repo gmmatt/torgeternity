@@ -1,3 +1,9 @@
+/*adjustments for <p>*/
+Div.editor-content p{
+    text-align:justify;
+    padding-right: 10px;
+}
+
 /*hr will become Torg-Style*/
 Div.editor-content hr {
     Background-image: URL(../../../systems/torgeternity/images/separator.webp);
@@ -6,7 +12,7 @@ Div.editor-content hr {
     border:none;
     transform: scaleY(0.5);
     }
-
+/*h1 will become Torg-Style*/
 Div.editor-content h1 {
     Background-image: URL(../../../systems/torgeternity/images/tab-header.webp);
     background-repeat: no-repeat;
@@ -14,7 +20,6 @@ Div.editor-content h1 {
     text-align:center;
     border:none;
     }
-    
 /*The <h2> Header will become Torg-Style with grey outlines and centered align*/
 Div.editor-content h2 {
     text-align: center;
@@ -25,27 +30,22 @@ Div.editor-content h2 {
                     #878787 -1.5px -1.5px 0px;
     text-transform:uppercase;
                 }
-
 /*Image-wraparound, image on left side*/
 .imgleft{
     float: left;
     margin-right: 0.5rem;
     border: none;
     }
-
 /*Image-wraparound, image on right side.*/
 .imgright{
     float: right;
     margin-left: 0.5rem;
     border: none;
     }
-
 /*Use this class in the next <p> after layouting with classes .imgright and .imgleft*/
 .passagebreak {
     clear: both;
     }
-
-
 /*Center images and scale them up to 100% to all sides*/
 .img-mid{
     display: block; 
@@ -58,3 +58,14 @@ Div.editor-content h2 {
 .moreheight{
     line-height: 1.5rem;
 }
+/*use the background-image for sidenotes*/
+.sidenote{
+    background-image: url(../images/mapDetailBack.webp);
+    background-repeat:no-repeat;
+    background-size: cover;
+    padding: 10px;
+    background-color: rgba(255, 247, 247, 0.5);
+}
+/*.white{
+    background-color: rgba(255, 247, 247, 0.5);
+}*/
