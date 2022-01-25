@@ -30,6 +30,12 @@ Div.editor-content h2 {
                     #878787 -1.5px -1.5px 0px;
     text-transform:uppercase;
                 }
+
+/*<img> comes with a border, what is never seen in TE*/
+Div.editor-content img{
+    border-image: none;
+}
+
 /*Image-wraparound, image on left side*/
 .imgleft{
     float: left;
@@ -64,8 +70,8 @@ Div.editor-content h2 {
     background-repeat:no-repeat;
     background-size: cover;
     padding: 10px;
+    
+}
+.sidenote p{
     background-color: rgba(255, 247, 247, 0.5);
 }
-/*.white{
-    background-color: rgba(255, 247, 247, 0.5);
-}*/
