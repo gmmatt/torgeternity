@@ -2,7 +2,11 @@
 Div.editor-content p{
     text-align:justify;
     padding-right: 10px;
-}
+    text-indent: 12px;
+    }
+Div.editor-content p :first-of-type{
+    text-indent:0;
+    }
 
 /*hr will become Torg-Style*/
 Div.editor-content hr {
@@ -12,6 +16,7 @@ Div.editor-content hr {
     border:none;
     transform: scaleY(0.5);
     }
+
 /*h1 will become Torg-Style*/
 Div.editor-content h1 {
     Background-image: URL(../../../systems/torgeternity/images/tab-header.webp);
@@ -20,6 +25,7 @@ Div.editor-content h1 {
     text-align:center;
     border:none;
     }
+
 /*The <h2> Header will become Torg-Style with grey outlines and centered align*/
 Div.editor-content h2 {
     text-align: center;
@@ -29,12 +35,12 @@ Div.editor-content h2 {
                     #878787 -1.5px 1.5px 0px,
                     #878787 -1.5px -1.5px 0px;
     text-transform:uppercase;
-                }
+    }
 
 /*<img> comes with a border, what is never seen in TE*/
 Div.editor-content img{
     border-image: none;
-}
+    }
 
 /*Image-wraparound, image on left side*/
 .imgleft{
@@ -42,16 +48,19 @@ Div.editor-content img{
     margin-right: 0.5rem;
     border: none;
     }
+
 /*Image-wraparound, image on right side.*/
 .imgright{
     float: right;
     margin-left: 0.5rem;
     border: none;
     }
+
 /*Use this class in the next <p> after layouting with classes .imgright and .imgleft*/
 .passagebreak {
     clear: both;
     }
+
 /*Center images and scale them up to 100% to all sides*/
 .img-mid{
     display: block; 
@@ -59,19 +68,25 @@ Div.editor-content img{
     width: 100%; 
     height: 100%;
     border: none;
-}
+    }
+
 /*A class for more line-height, because links in journals are often to close to another*/
 .moreheight{
     line-height: 1.5rem;
-}
-/*use the background-image for sidenotes*/
+    }
+
+/*use the background-image for sidenotes, heritage-class for white background*/
 .sidenote{
     background-image: url(../images/mapDetailBack.webp);
     background-repeat:no-repeat;
     background-size: cover;
     padding: 10px;
-    
-}
-.sidenote p{
+    }
+.sidenote :is(p, h3, ul){
     background-color: rgba(255, 247, 247, 0.5);
-}
+    margin:0;
+    padding-top: 10px;
+    }
+.sidenote :first-of-type{
+    padding-top: 0;
+    }
