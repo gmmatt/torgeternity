@@ -95,3 +95,37 @@ Div.editor-content img{
 .sidenote :first-of-type{
     padding-top: 0;
     }
+
+/*Adventures often come with directives from Sebastian. This class is to bring them on the grafic parchments with the right font. Please use an h3 for the headline.*/
+@font-face {
+    font-family: "gunplay";
+    src: url("../fonts/gunplay_rg.ttf") format("ttf");
+}
+Div.editor-content Div.directive1{
+    background-image: url(../images/parchment1.webp);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    padding: 3rem;
+    }
+    Div.editor-content Div.directive1 :is(p,h3){
+        font-family: "gunplay";
+        transform: rotate(-3deg);
+        text-indent: 0px;
+    }
+    Div.editor-content Div.directive1 h3{
+        font-size: 21px; 
+    }
+Div.editor-content Div.directive2{
+    background-image: url(../images/parchment2.webp);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    padding: 3rem;
+    }
+    Div.editor-content Div.directive2 :is(p,h3){
+        font-family: "gunplay";
+        transform: rotate(2deg);
+        text-indent: 0px;
+    }
+    Div.editor-content Div.directive2 h3{
+        font-size: 21px; 
+    }
