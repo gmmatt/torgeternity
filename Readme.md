@@ -8,6 +8,9 @@
 For manual installation, use the provided manifest URL in the "*Install System*" popup window 
 while managing game systems.
 
+v. 2.3.4 
+- Added icon to identify a pooled card in the Monarch module
+
 v. 2.3.3 - Squashing Bugs
 - Fixed issue where item macros could not be created
 - Fixed multiple issues involving player combat trackers either

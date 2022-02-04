@@ -346,7 +346,8 @@ Hooks.on("ready", async function() {
     Hooks.on("hotbarDrop", (bar, data, slot) =>
         createTorgEternityMacro(data, slot)
     );
-    /*
+
+  /*
 
   //-----applying players card ui:
   if (game.user.data.role == false || game.user.data.role != 4) {
@@ -370,6 +371,23 @@ Hooks.on("ready", async function() {
 /* -------------------------------------------- */
 /*  Hotbar Macros                               */
 /* -------------------------------------------- */
+
+Hooks.on("getMonarchHandComponents", (hand, components) => {
+    components.markers.push({
+        tooltip: "Card in pool",
+        class: "pool-marker",
+        icon: "fas fa-circle",
+        color: "#800080",
+        show: (card) => card.getFlag("torgeternity", "pooled")
+    });
+    components.controls.push({
+        class: "pool-toggle",
+        tooltip: "Toggle pooled",
+        icon: "fas fa-circle",
+        color: "#800080",
+        onclick: (event, card) => card.setFlag("torgeternity", "pooled", !card.getFlag("torgeternity", "pooled"))
+    })
+});
 
 async function createTorgEternityMacro(data, slot) {
     if (data.type !== "Item") return;
