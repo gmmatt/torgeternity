@@ -2,11 +2,15 @@
 Div.editor-content p{
     text-align:justify;
     padding-right: 10px;
-    text-indent: 12px;
     }
-Div.editor-content p :first-of-type{
-    text-indent:0;
-    }
+
+    Div.editor-content p + p{
+        text-indent: 12px;
+        }
+
+    Div.editor-content p:first-of-type{
+        text-indent:0;
+        }
 
 /*hr will become Torg-Style*/
 Div.editor-content hr {
