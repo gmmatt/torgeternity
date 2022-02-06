@@ -519,9 +519,13 @@
             "d": " D"
 
         },
-        "poolToggle":{
-            "inPool": "Card in pool",
-            "toogle": "Toggle pooled"
+        "monarchToggles":{
+            "markerPool": "Card in pool",
+            "tooglePool": "Toggle pooled",
+            "markerDestiny": "Destiny card",
+            "toogleDestiny": "Toggle destiny",
+            "markerDrama": "Drama card",
+            "toogleDrama": "Toggle drama"
         }
 
     },
