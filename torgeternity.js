@@ -421,20 +421,13 @@ Hooks.on("getMonarchHandComponents", (hand, components) => {
 
 Hooks.on("getMonarchDeckComponents", (hand, components) => {
     components.markers.push({
-        class: "pool-marker",
-        tooltip: `${game.i18n.localize("torgeternity.monarchToggles.markerPool")}`,
-        icon: "fas fa-arrow-circle-up",
-        color: "#ff9900",
-        show: (card) => card.getFlag("torgeternity", "pooled")
-    },
-		{
         class: "destiny-marker",
         tooltip: `${game.i18n.localize("torgeternity.monarchToggles.markerDestiny")}`,
         icon: "fas fa-tags",
         color: "#0099ff",
         show: (card) => card.getFlag("torgeternity", "destiny")
     },
-		{
+	{
         class: "drama-marker",
         tooltip: `${game.i18n.localize("torgeternity.monarchToggles.markerDrama")}`,
         icon: "fas fa-tags",
