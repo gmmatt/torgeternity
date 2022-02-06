@@ -518,6 +518,10 @@
             "c": " C",
             "d": " D"
 
+        },
+        "poolToggle":{
+            "inPool": "Card in pool",
+            "toogle": "Toggle pooled"
         }
 
     },

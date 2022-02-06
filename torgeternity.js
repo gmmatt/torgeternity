@@ -374,17 +374,17 @@ Hooks.on("ready", async function() {
 
 Hooks.on("getMonarchHandComponents", (hand, components) => {
     components.markers.push({
-        tooltip: "Card in pool",
+        tooltip: `${game.i18n.localize("torgeternity.poolToggle.inPool")}`,
         class: "pool-marker",
-        icon: "fas fa-circle",
-        color: "#800080",
+        icon: "fas fa-tags",
+        color: "#00BFFF",
         show: (card) => card.getFlag("torgeternity", "pooled")
     });
     components.controls.push({
         class: "pool-toggle",
-        tooltip: "Toggle pooled",
-        icon: "fas fa-circle",
-        color: "#800080",
+        tooltip: `${game.i18n.localize("torgeternity.poolToggle.toogle")}`,
+        icon: "fas fa-tags",
+        color: "#00BFFF",
         onclick: (event, card) => card.setFlag("torgeternity", "pooled", !card.getFlag("torgeternity", "pooled"))
     })
 });
