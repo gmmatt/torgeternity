@@ -524,8 +524,8 @@
             "tooglePool": "Toggle pooled",
             "markerDestiny": "Destiny card",
             "toogleDestiny": "Toggle destiny",
-            "markerDrama": "Drama card",
-            "toogleDrama": "Toggle drama"
+            "markerCosm": "Cosm card",
+            "toogleCosm": "Toggle cosm"
         }
 
     },

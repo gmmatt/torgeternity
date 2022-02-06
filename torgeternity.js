@@ -380,19 +380,19 @@ Hooks.on("getMonarchHandComponents", (hand, components) => {
         color: "#ff9900",
         show: (card) => card.getFlag("torgeternity", "pooled")
     },
-	{
+    {
         class: "destiny-marker",
         tooltip: `${game.i18n.localize("torgeternity.monarchToggles.markerDestiny")}`,
         icon: "fas fa-tags",
         color: "#0099ff",
         show: (card) => card.getFlag("torgeternity", "destiny")
     },
-	{
-        class: "drama-marker",
-        tooltip: `${game.i18n.localize("torgeternity.monarchToggles.markerDrama")}`,
+    {
+        class: "cosm-marker",
+        tooltip: `${game.i18n.localize("torgeternity.monarchToggles.markerCosm")}`,
         icon: "fas fa-tags",
         color: "#993366",
-        show: (card) => card.getFlag("torgeternity", "drama")
+        show: (card) => card.getFlag("torgeternity", "cosm")
     });
     components.controls.push({
         class: "pool-toggle",
@@ -410,11 +410,11 @@ Hooks.on("getMonarchHandComponents", (hand, components) => {
 			onclick: (event, card) => card.setFlag("torgeternity", "destiny", !card.getFlag("torgeternity", "destiny"))
 		},
 		{
-			class: "drama-toggle",
-			tooltip: `${game.i18n.localize("torgeternity.monarchToggles.toogleDrama")}`,
+			class: "cosm-toggle",
+			tooltip: `${game.i18n.localize("torgeternity.monarchToggles.toogleCosm")}`,
 			icon: "fas fa-tags",
 			color: "#993366",
-			onclick: (event, card) => card.setFlag("torgeternity", "drama", !card.getFlag("torgeternity", "drama"))
+			onclick: (event, card) => card.setFlag("torgeternity", "cosm", !card.getFlag("torgeternity", "cosm"))
 		});		
 	}
 });
@@ -427,12 +427,12 @@ Hooks.on("getMonarchDeckComponents", (hand, components) => {
         color: "#0099ff",
         show: (card) => card.getFlag("torgeternity", "destiny")
     },
-	{
-        class: "drama-marker",
-        tooltip: `${game.i18n.localize("torgeternity.monarchToggles.markerDrama")}`,
+    {
+        class: "cosm-marker",
+        tooltip: `${game.i18n.localize("torgeternity.monarchToggles.markerCosm")}`,
         icon: "fas fa-tags",
         color: "#993366",
-        show: (card) => card.getFlag("torgeternity", "drama")
+        show: (card) => card.getFlag("torgeternity", "cosm")
     });
     components.controls.push({
         class: "destiny-toggle",
@@ -442,11 +442,11 @@ Hooks.on("getMonarchDeckComponents", (hand, components) => {
         onclick: (event, card) => card.setFlag("torgeternity", "destiny", !card.getFlag("torgeternity", "destiny"))
     },
 	{
-        class: "drama-toggle",
-        tooltip: `${game.i18n.localize("torgeternity.monarchToggles.toogleDrama")}`,
+        class: "cosm-toggle",
+        tooltip: `${game.i18n.localize("torgeternity.monarchToggles.toogleCosm")}`,
         icon: "fas fa-tags",
         color: "#993366",
-        onclick: (event, card) => card.setFlag("torgeternity", "drama", !card.getFlag("torgeternity", "drama"))
+        onclick: (event, card) => card.setFlag("torgeternity", "cosm", !card.getFlag("torgeternity", "cosm"))
     });
 });
 
