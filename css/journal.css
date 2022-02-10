@@ -91,7 +91,7 @@ Div.editor-content img{
     background-size: cover;
     padding: 10px;
     }
-.sidenote :is(p, h3, ul){
+.sidenote :is(p, h2, h3, ul){
     background-color: rgba(255, 247, 247, 0.5);
     margin:0;
     padding-left:10px;
