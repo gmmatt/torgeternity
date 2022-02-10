@@ -12,6 +12,7 @@ Div.editor-content p{
         text-indent:0;
         }
 
+
 /*hr will become Torg-Style*/
 Div.editor-content hr {
     Background-image: URL(../../../systems/torgeternity/images/separator.webp);
@@ -133,3 +134,8 @@ Div.editor-content Div.directive2{
     Div.editor-content Div.directive2 h3{
         font-size: 21px; 
     }
+
+/*Multi-purpose classes*/
+Div.editor-content .noindent p + p {
+    text-indent:0;
+}
