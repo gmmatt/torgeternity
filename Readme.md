@@ -9,7 +9,9 @@ For manual installation, use the provided manifest URL in the "*Install System*"
 while managing game systems.
 
 v. 2.3.4 
-- Added icon to identify a pooled card in the Monarch module
+- Added support for Monarch cards module (thanks to LordZeel for all his
+  work! It looks amazing)
+- Adjusted location of tool tips in sidebar
 
 v. 2.3.3 - Squashing Bugs
 - Fixed issue where item macros could not be created

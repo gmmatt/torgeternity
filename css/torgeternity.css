@@ -2874,8 +2874,8 @@ form.actor-sheet.threat .tab[data-tab].active .editor {
 .card-chat-tooltip:hover span {
     display: block;
     position: absolute;
-    top: -370px;
-    right: 0px;
+    top: 100px;
+    right: 350px;
     z-index: 1000;
     max-width: 320px;
     min-height: 128px;
