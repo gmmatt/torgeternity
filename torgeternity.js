@@ -377,16 +377,56 @@ Hooks.on("getMonarchHandComponents", (hand, components) => {
         tooltip: `${game.i18n.localize("torgeternity.poolToggle.inPool")}`,
         class: "pool-marker",
         icon: "fas fa-tags",
-        color: "#00BFFF",
+        color: "#FFFFFF",
         show: (card) => card.getFlag("torgeternity", "pooled")
+    });
+    components.controls.push({
+        tooltip: `${game.i18n.localize("torgeternity.monarch.discard")}`,
+        class: "discard-button",
+        icon: "fas fa-inbox",
+        color: "#FFFFFF",
+        onclick: (event,card) => {
+            card.setFlag("torgeternity", "pooled", false);
+            if (card.data.type == "destiny") {
+              card.pass(game.cards.getName("Destiny Discard"));
+            } else {
+              card.pass(game.cards.getName("Cosm Discard"));
+            }
+            card.toMessage({content: `<div class="card-draw flexrow"><span class="card-chat-tooltip"><img class="card-face" src="${card.img}"/><span><img src="${card.img}"></span></span><span class="card-name">${game.i18n.localize("torgeternity.dialogPrompts.discards")} ${card.name}</span></div>`});
+    }
+    });
+    components.controls.push({
+        tooltip: `${game.i18n.localize("torgeternity.monarch.broadcast")}`,
+        class: "broadcast-button",
+        icon: "fas fa-broadcast-tower",
+        color: "#FFFFFF",
+        onclick: (event,card) => {
+            let x = new ImagePopout(card.img, {title: card.name}).render(true,{width:425,height:650});
+            x.shareImage();
+      }
+    });
+    components.controls.push({
+        tooltip: `${game.i18n.localize("torgeternity.monarch.play")}`,
+        class: "play-button",
+        icon: "fas fa-play",
+        color: "#FFFFFF",
+        onclick: (event,card) => {
+            card.setFlag("torgeternity", "pooled", false);
+            if (card.data.type == "destiny") {
+                card.pass(game.cards.getName("Destiny Discard"));
+            } else {
+                card.pass(game.cards.getName("Cosm Discard"));
+            }
+            card.toMessage({content: `<div class="card-draw flexrow"><span class="card-chat-tooltip"><img class="card-face" src="${card.img}"/><span><img src="${card.img}"></span></span><span class="card-name">${game.i18n.localize("torgeternity.dialogPrompts.plays")} ${card.name}</span></div>`})
+        }
     });
     components.controls.push({
         class: "pool-toggle",
         tooltip: `${game.i18n.localize("torgeternity.poolToggle.toogle")}`,
         icon: "fas fa-tags",
-        color: "#00BFFF",
+        color: "#FFFFFF",
         onclick: (event, card) => card.setFlag("torgeternity", "pooled", !card.getFlag("torgeternity", "pooled"))
-    })
+    });
 });
 
 async function createTorgEternityMacro(data, slot) {

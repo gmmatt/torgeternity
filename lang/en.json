@@ -522,7 +522,13 @@
         "poolToggle":{
             "inPool": "Card in pool",
             "toogle": "Toggle pooled"
-        }
+        },
+
+        "monarch": {
+            "play": "Play this card",
+            "broadcast": "Show this card to everyone",
+            "discard": "Discard this card"
+        }    
 
     },
 
@@ -532,4 +538,5 @@
         "TypeDestiny": "Destiny",
         "TypeDrama": "Drama"
     }
+
 }
