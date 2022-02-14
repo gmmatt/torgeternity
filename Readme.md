@@ -15,6 +15,7 @@ v. 2.3.4
 - Multiple updates to journal styling (thanks Algor!)
 - Updates to German basic rules
 - Corrected an error relating to the template for the Faith skill
+- Known issue: clicking Defenses does not roll active defenses
 
 v. 2.3.3 - Squashing Bugs
 - Fixed issue where item macros could not be created
