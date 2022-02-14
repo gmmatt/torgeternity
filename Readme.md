@@ -12,6 +12,9 @@ v. 2.3.4
 - Added support for Monarch cards module (thanks to LordZeel for all his
   work! It looks amazing)
 - Adjusted location of tool tips in sidebar
+- Multiple updates to journal styling (thanks Algor!)
+- Updates to German basic rules
+- Corrected an error relating to the template for the Faith skill
 
 v. 2.3.3 - Squashing Bugs
 - Fixed issue where item macros could not be created

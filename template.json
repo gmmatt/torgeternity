@@ -112,6 +112,7 @@
                     },
                     "faith": {
                         "baseAttribute": "spirit",
+                        "adds": "",
                         "value": 0,
                         "isFav":false,
                         "groupName": "other",
