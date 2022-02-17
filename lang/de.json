@@ -518,7 +518,17 @@
             "c": " C",
             "d": " D"
 
-        }
+        },
+        "poolToggle":{
+            "inPool": "Karte im Aktionsvorrat",
+            "toogle": "Aktionenvorrat umschalten"
+        },
+        
+        "monarch": {
+            "play": "Diese Karte ausspielen",
+            "broadcast": "Zeige jedem diese Karte",
+            "discard": "Wirf diese Karte weg"
+        }    
 
     },
 
