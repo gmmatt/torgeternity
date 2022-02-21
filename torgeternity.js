@@ -430,26 +430,69 @@ Hooks.on("getMonarchHandComponents", (hand, components) => {
 });
 
 async function createTorgEternityMacro(data, slot) {
-    if (data.type !== "Item") return;
+    if (data.type !== "Item" && data.type !== "skill" && data.type !== "interaction" && data.type !== "attribute") return;
     if (!("data" in data))
         return ui.notifications.warn(
-            "You can only create macro buttons for owned Items"
+            "You can only create macro buttons for owned Items and Attributes/Skills"
         );
-    const itemData = data.data;
+    const objData = data.data;
     // Create the macro command
-    const command = `game.torgeternity.rollItemMacro("${itemData.name}");`;
-    let macro = game.macros.find(
-        (m) => m.name === itemData.name && m.data.command === command
-    )
-    if (!macro) {
-        macro = await Macro.create({
-            name: itemData.name,
-            type: "script",
-            img: itemData.img,
-            command: command,
-            flags: { "torgeternity.itemMacro": true },
-        });
-    }
+    var command = null;
+	var macro = null;
+	if (data.type === "Item")
+	{
+		command = `game.torgeternity.rollItemMacro("${objData.name}");`;
+		macro = game.macros.find(
+			(m) => m.name === objData.name && m.data.command === command
+		)
+		if (!macro) {
+			macro = await Macro.create({
+				name: objData.name,
+				type: "script",
+				img: objData.img,
+				command: command,
+				flags: { "torgeternity.itemMacro": true },
+			});
+		}
+	}
+	else // attribute, skill, interaction
+	{
+		// do interaction attacks need to be a different macro???
+		const captializedSkillName = capitalizeText(objData.name);
+		const captializedAttributeName = capitalizeText(objData.attribute);
+		command = `game.torgeternity.rollSkillMacro("${captializedSkillName}", "${captializedAttributeName}");`;
+
+		var macroName = null;
+		if (data.type === "skill")
+			macroName = captializedSkillName + "/" + captializedAttributeName;
+		else if (data.type === "attribute")
+			macroName = captializedAttributeName;
+		macro = game.macros.find(
+			(m) => m.name === macroName && m.data.command === command
+		)
+		if (!macro) {
+			macro = await Macro.create({
+				name: macroName,
+				type: "script",
+				img: "systems/torgeternity/images/icons/explosion-icon.jpg", // need skill icons!
+					/*
+						I would add more skill groupNames for icon-selecting purposes. Right now
+						there is "combat" and "interaction." There is room for "miracle," 
+						"psionicpower," and "spell" (using the icons for those power types). And 
+						then I think you can maybe break up the remaining skills into broad 
+						categories: "vehicle," "investigation," "outdoors?," "social," "smarts," 
+						etc. that can each have their own icon.
+						
+						OR, there could be one icon for each attribute, which can be used for 
+						attribute tests and for any skill using that attribute, maybe with a 
+						slightly modified version for the skills so there's a visual difference.
+					 */
+				command: command,
+				flags: { "torgeternity.skillMacro": true },
+			});
+		}
+	}
+	
     game.user.assignHotbarMacro(macro, slot);
     return false;
 }
@@ -631,6 +674,101 @@ function rollItemMacro(itemName) {
             ui.notifications.info("Default action, Gear for example");
             return item.roll();
     }
+}
+
+function capitalizeText(text) {
+	return text.toLowerCase().split(' ').map((s) => s.charAt(0).toUpperCase() + s.substring(1)).join(' ');
+}
+
+/**
+ * Create a Macro from a skill, attribute, or interaction (?) drop.
+ * Get an existing macro if one exists, otherwise create a new one.
+ * @param {string} skillName
+ * @param {string} attributeName
+ * @return {Promise}
+ */
+function rollSkillMacro(skillName, attributeName) {
+    const speaker = ChatMessage.getSpeaker();
+    let actor = null;
+    if (speaker.token) actor = game.actors.tokens[speaker.token];
+    if (!actor) actor = game.actors.get(speaker.actor);
+	let isAttributeTest = (skillName === attributeName);
+	let skill = null;
+	if (!isAttributeTest) {
+		const skillNameKey = skillName.toLowerCase();
+		skill = actor && Object.keys(actor.data.data.skills).includes(skillNameKey) ? actor.data.data.skills[skillNameKey] : null;
+		if (!skill)
+			return ui.notifications.warn(
+				`Your controlled Actor does not have a skill named ${skillName}`
+			);
+	}
+	
+	const attributeNameKey = attributeName.toLowerCase();
+	const attribute = actor && Object.keys(actor.data.data.attributes).includes(attributeNameKey) ? actor.data.data.attributes[attributeNameKey] : null;
+    if (!attribute)
+        return ui.notifications.warn(
+            `Your controlled Actor does not have an attribute named ${attributeName}`
+        );
+	if (isAttributeTest) {
+		skill = {
+			baseAttribute: attributeName,
+			adds: 0,
+			value: attribute,
+			isFav: false,
+			groupName: "other",
+			unskilledUse: 1
+		};
+	}
+
+	// calculate the value using the attribute and skill adds, as the attribute might be different
+	//	than the skill's current baseAttribute. This assumes the actor is a stormknight - different
+	//	logic is needed for threats, who don't have adds.
+	let skillValue = attribute;
+	if (!isAttributeTest) {
+		if (actor.type === "stormknight") {
+			skillValue += skill.adds;
+		}
+		else if (actor.type == "threat") {
+			const otherAttribute = actor.data.data.attributes[skill.baseAttribute];
+			skillValue = skill.value - otherAttribute + attribute;
+		}
+	}
+    // Trigger the skill roll
+// The following is copied/pasted/adjusted from _onSkillRoll in torgeternityActorSheet
+	let test = {
+		testType: "skill",
+		actor: actor,
+		actorPic: actor.data.img,
+		actorType: actor.data.type,
+		skillName: skillName,
+		skillBaseAttribute: attributeName,
+		skillAdds: skill.adds,
+		skillValue: skillValue,
+		unskilledUse: skill.unskilledUse,
+		woundModifier: parseInt(-(actor.data.data.wounds.value)),
+		stymiedModifier: parseInt(actor.data.data.stymiedModifier),
+		darknessModifier: parseInt(actor.data.data.darknessModifier),
+		type: "skill",
+		possibilityTotal: 0,
+		upTotal: 0,
+		heroTotal: 0,
+		dramaTotal: 0,
+		cardsPlayed: 0,
+		sizeModifier: 0,
+		vulnerableModifier: 0      
+	}
+	if (actor.data.data.stymiedModifier === parseInt(-2)) {
+		test.stymiedModifier = -2
+	 } else if (actor.data.data.stymiedModifier === -4) {
+		test.stymiedModifier = -4
+	 }
+
+	 if (event.shiftKey) {
+		let testDialog = new skillDialog(test);
+		testDialog.render(true);
+	} else {
+		torgchecks.SkillCheck(test);
+	} 
 }
 
 Hooks.on("renderCombatTracker", (combatTracker) => {
