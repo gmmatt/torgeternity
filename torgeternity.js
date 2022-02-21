@@ -459,15 +459,17 @@ async function createTorgEternityMacro(data, slot) {
 	else // attribute, skill, interaction
 	{
 		// do interaction attacks need to be a different macro???
-		const captializedSkillName = capitalizeText(objData.name);
-		const captializedAttributeName = capitalizeText(objData.attribute);
-		command = `game.torgeternity.rollSkillMacro("${captializedSkillName}", "${captializedAttributeName}");`;
+		const capitalizedSkillName = capitalizeText(objData.name);
+		const capitalizedAttributeName = capitalizeText(objData.attribute);
+		command = `game.torgeternity.rollSkillMacro("${capitalizedSkillName}", "${capitalizedAttributeName}");`;
 
 		var macroName = null;
 		if (data.type === "skill")
-			macroName = captializedSkillName + "/" + captializedAttributeName;
+			macroName = capitalizedSkillName + "/" + capitalizedAttributeName;
 		else if (data.type === "attribute")
-			macroName = captializedAttributeName;
+			macroName = capitalizedAttributeName;
+		else if (data.type === "interaction")
+			macroName = capitalizedSkillName;
 		macro = game.macros.find(
 			(m) => m.name === macroName && m.data.command === command
 		)
