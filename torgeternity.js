@@ -25,12 +25,12 @@ import torgeternityPile from "./module/cards/torgeternityPile.js";
 import torgeternityDeck from "./module/cards/torgeternityDeck.js";
 import torgeternityCardConfig from "./module/cards/torgeternityCardConfig.js";
 import { torgeternityCards } from "./module/cards/torgeternityCards.js";
-import {attackDialog} from "/systems/torgeternity/module/attack-dialog.js";//Added
+import { attackDialog } from "/systems/torgeternity/module/attack-dialog.js"; //Added
 
 
 Hooks.once("init", async function() {
     console.log("torgeternity | Initializing Torg Eternity System");
-
+    CONFIG.debug.hooks = true;
     //----helpers
     registerHelpers();
 
@@ -82,8 +82,8 @@ Hooks.once("init", async function() {
     DocumentSheetConfig.registerSheet(Cards, "core", torgeternityPlayerHand, { label: "Torg Player Hand", types: ["hand"], makeDefault: true });
     DocumentSheetConfig.registerSheet(Cards, "core", torgeternityPile, { label: "Torg Pile", types: ["pile"], makeDefault: true });
     DocumentSheetConfig.registerSheet(Cards, "core", torgeternityDeck, { label: "Torg Deck", types: ["deck"], makeDefault: true });
-    DocumentSheetConfig.registerSheet(Card, "core", torgeternityCardConfig, {label: "Torg Eternity Card Configuration", types: ["destiny", "drama", "cosm"], makeDefault: true})
-    
+    DocumentSheetConfig.registerSheet(Card, "core", torgeternityCardConfig, { label: "Torg Eternity Card Configuration", types: ["destiny", "drama", "cosm"], makeDefault: true })
+
 
     //----------preloading handlebars templates
     preloadTemplates();
@@ -132,13 +132,12 @@ Hooks.on("ready", async function() {
         game.user.setFlag('torgeternity', 'GMpossibilities', 0)
     }
 
-    //----load template for welcome message
-    let welcomeData = {
-        cardModule: game.modules.get("cardsupport"),
-        user: game.user
-    }
-    torgeternity.welcomeMessage = await renderTemplate("systems/torgeternity/templates/welcomeMessage.hbs", welcomeData);
-    
+    //----load template for welcome message depending on supported languages
+    let lang = game.settings.get("core", "language");
+    torgeternity.supportedLanguages.indexOf(lang) == -1 ? lang = "en" : lang = lang;
+
+    torgeternity.welcomeMessage = await renderTemplate(`systems/torgeternity/templates/welcomeMessage/${lang}.hbs`);
+
     //----rendering welcome message
     if (game.settings.get("torgeternity", "welcomeMessage") == true) {
         let d = new Dialog({
@@ -166,7 +165,7 @@ Hooks.on("ready", async function() {
 
     //------Ask about hiding nonlocal compendium
     if (game.i18n.lang === "en" && game.settings.get("torgeternity", "welcomeMessage") == true) {
-        let d = new Dialog ({
+        let d = new Dialog({
             title: "Hide German Compendiums?",
             content: "This system includes both English and German language compendiums. Do you want to hide the German compendiums?",
             buttons: {
@@ -181,10 +180,14 @@ Hooks.on("ready", async function() {
                     label: "No",
                 }
             }
+        }, {
+            top: 860,
+            left: 100
+
         });
         d.render(true);
     } else if (game.i18n.lang === "de" && game.settings.get("torgeternity", "welcomeMessage") == true) {
-        let d = new Dialog ({
+        let d = new Dialog({
             title: "Hide English Compendiums?",
             content: "This system includes both English and German language compendiums. Do you want to hide the English compendiums?",
             buttons: {
@@ -199,52 +202,56 @@ Hooks.on("ready", async function() {
                     label: "No",
                 }
             }
+        }, {
+            top: 860,
+            left: 100
+
         });
         d.render(true);
     }
-    
+
 
     //----setup cards if needed
-    
+
     if (game.settings.get("torgeternity", "setUpCards") === true) {
         const pack = game.packs.get("torgeternity.core-card-set");
         const basicRules = game.packs.get("torgeternity.basic-rules")
-        // Add Destiny Deck
+            // Add Destiny Deck
         if (game.cards.getName("Destiny Deck") == null) {
             const itemId = pack.index.getName("Destiny Deck")._id;
-            game.cards.importFromCompendium(pack,itemId)
+            game.cards.importFromCompendium(pack, itemId)
         }
         // Add Drama Deck
-        if (game.cards.getName("Drama Deck") ==  null) {
+        if (game.cards.getName("Drama Deck") == null) {
             const itemId = pack.index.getName("Drama Deck")._id;
-            game.cards.importFromCompendium(pack,itemId)
+            game.cards.importFromCompendium(pack, itemId)
         }
         // Add Cosm Discard
         if (game.cards.getName("Cosm Discard") == null) {
             let cardData = {
                 name: "Cosm Discard",
                 type: "pile",
-                permission: {default: CONST.DOCUMENT_PERMISSION_LEVELS.OWNER}
+                permission: { default: CONST.DOCUMENT_PERMISSION_LEVELS.OWNER }
             }
-            let cosmDiscard = Cards.create(cardData, {keepId: true, renderSheet:false});
+            let cosmDiscard = Cards.create(cardData, { keepId: true, renderSheet: false });
         }
         // Add Drama Discard
         if (game.cards.getName("Drama Discard") == null) {
             let cardData = {
                 name: "Drama Discard",
                 type: "pile",
-                permission: {default: CONST.DOCUMENT_PERMISSION_LEVELS.OWNER}
+                permission: { default: CONST.DOCUMENT_PERMISSION_LEVELS.OWNER }
             }
-            let dramaDiscard = Cards.create(cardData, {keepId: true, renderSheet:false});
+            let dramaDiscard = Cards.create(cardData, { keepId: true, renderSheet: false });
         }
         // Add Destiny Discard
         if (game.cards.getName("Destiny Discard") == null) {
             let cardData = {
                 name: "Destiny Discard",
                 type: "pile",
-                permission: {default: CONST.DOCUMENT_PERMISSION_LEVELS.OWNER}
+                permission: { default: CONST.DOCUMENT_PERMISSION_LEVELS.OWNER }
             }
-            let destinyDiscard = Cards.create(cardData, {keepId: true, renderSheet:false});
+            let destinyDiscard = Cards.create(cardData, { keepId: true, renderSheet: false });
         }
         // Add Active Drama
         if (game.cards.getName("Active Drama Card") == null) {
@@ -252,18 +259,18 @@ Hooks.on("ready", async function() {
                 name: "Active Drama Card",
                 type: "pile"
             }
-            let activeDrama = Cards.create(cardData, {keepId: true, renderSheet:false});
+            let activeDrama = Cards.create(cardData, { keepId: true, renderSheet: false });
         }
 
         // Add journal entry with instructions relating to cards
         if (game.journal.getName("Managing Cards") == null) {
             const itemId = basicRules.index.getName("Managing Cards")._id;
-            game.journal.importFromCompendium(basicRules,itemId);
+            game.journal.importFromCompendium(basicRules, itemId);
         }
 
         game.settings.set("torgeternity", "setUpCards", false)
     }
-    
+
 
     //----pause image----
     Hooks.on("renderPause", () => {
@@ -347,7 +354,7 @@ Hooks.on("ready", async function() {
         createTorgEternityMacro(data, slot)
     );
 
-  /*
+    /*
 
   //-----applying players card ui:
   if (game.user.data.role == false || game.user.data.role != 4) {
@@ -385,39 +392,39 @@ Hooks.on("getMonarchHandComponents", (hand, components) => {
         class: "discard-button",
         icon: "fas fa-inbox",
         color: "#FFFFFF",
-        onclick: (event,card) => {
-            card.setFlag("torgeternity", "pooled", false);
-            if (card.data.type == "destiny") {
-              card.pass(game.cards.getName("Destiny Discard"));
-            } else {
-              card.pass(game.cards.getName("Cosm Discard"));
-            }
-            card.toMessage({content: `<div class="card-draw flexrow"><span class="card-chat-tooltip"><img class="card-face" src="${card.img}"/><span><img src="${card.img}"></span></span><span class="card-name">${game.i18n.localize("torgeternity.dialogPrompts.discards")} ${card.name}</span></div>`});
-    }
-    });
-    components.controls.push({
-        tooltip: `${game.i18n.localize("torgeternity.monarch.broadcast")}`,
-        class: "broadcast-button",
-        icon: "fas fa-broadcast-tower",
-        color: "#FFFFFF",
-        onclick: (event,card) => {
-            let x = new ImagePopout(card.img, {title: card.name}).render(true,{width:425,height:650});
-            x.shareImage();
-      }
-    });
-    components.controls.push({
-        tooltip: `${game.i18n.localize("torgeternity.monarch.play")}`,
-        class: "play-button",
-        icon: "fas fa-play",
-        color: "#FFFFFF",
-        onclick: (event,card) => {
+        onclick: (event, card) => {
             card.setFlag("torgeternity", "pooled", false);
             if (card.data.type == "destiny") {
                 card.pass(game.cards.getName("Destiny Discard"));
             } else {
                 card.pass(game.cards.getName("Cosm Discard"));
             }
-            card.toMessage({content: `<div class="card-draw flexrow"><span class="card-chat-tooltip"><img class="card-face" src="${card.img}"/><span><img src="${card.img}"></span></span><span class="card-name">${game.i18n.localize("torgeternity.dialogPrompts.plays")} ${card.name}</span></div>`})
+            card.toMessage({ content: `<div class="card-draw flexrow"><span class="card-chat-tooltip"><img class="card-face" src="${card.img}"/><span><img src="${card.img}"></span></span><span class="card-name">${game.i18n.localize("torgeternity.dialogPrompts.discards")} ${card.name}</span></div>` });
+        }
+    });
+    components.controls.push({
+        tooltip: `${game.i18n.localize("torgeternity.monarch.broadcast")}`,
+        class: "broadcast-button",
+        icon: "fas fa-broadcast-tower",
+        color: "#FFFFFF",
+        onclick: (event, card) => {
+            let x = new ImagePopout(card.img, { title: card.name }).render(true, { width: 425, height: 650 });
+            x.shareImage();
+        }
+    });
+    components.controls.push({
+        tooltip: `${game.i18n.localize("torgeternity.monarch.play")}`,
+        class: "play-button",
+        icon: "fas fa-play",
+        color: "#FFFFFF",
+        onclick: (event, card) => {
+            card.setFlag("torgeternity", "pooled", false);
+            if (card.data.type == "destiny") {
+                card.pass(game.cards.getName("Destiny Discard"));
+            } else {
+                card.pass(game.cards.getName("Cosm Discard"));
+            }
+            card.toMessage({ content: `<div class="card-draw flexrow"><span class="card-chat-tooltip"><img class="card-face" src="${card.img}"/><span><img src="${card.img}"></span></span><span class="card-name">${game.i18n.localize("torgeternity.dialogPrompts.plays")} ${card.name}</span></div>` })
         }
     });
     components.controls.push({
@@ -479,151 +486,151 @@ function rollItemMacro(itemName) {
         case "firearm":
         case "energyweapon":
         case "heavyweapon":
-// The following is copied/pasted/adjusted from _onAttackRoll in torgeternityActorSheet
-                var weaponData = item.data.data;
-                var attackWith = weaponData.attackWith;
-                var skillData = actor.data.data.skills[weaponData.attackWith];
-                var sizeModifier = 0;
-                var vulnerableModifier = 0;
-                var targetToughness = 0;
-                var targetArmor = 0;
-                var targetDefenseSkill = "Dodge";
-                console.log(targetDefenseSkill);
-                var targetDefenseValue = 0;
-        
-                // Exit if no target or get target data
-                    if (Array.from(game.user.targets).length === 0) {
-                        var needTargetData = {
-                            user: game.user.data._id,
-                            speaker: ChatMessage.getSpeaker(),
-                            owner: actor,
-                        };
-                
-                        var templateData = {
-                            message: "Cannot attempt enhanced attack test without a target. Select a target and try again.",
-                            actorPic: actor.data.img
-                        };
-                
-                        const templatePromise = renderTemplate("./systems/torgeternity/templates/partials/skill-error-card.hbs", templateData);
-                
-                        templatePromise.then(content => {
-                            needTargetData.content = content;
-                            ChatMessage.create(needTargetData);
-                        })
-                
-                        return;
-                    } else {
-                        var target = Array.from(game.user.targets)[0];
-                        var targetType = target.actor.data.type;
-                        if (target.actor.data.data.details.sizeBonus === "tiny") {
-                            sizeModifier = -6;
-                        } else if (target.actor.data.data.details.sizeBonus === "verySmall") {
-                            sizeModifier = -4;
-                        } else if (target.actor.data.data.details.sizeBonus === "small") {
-                            sizeModifier = -2;
-                        } else if (target.actor.data.data.details.sizeBonus === "large") {
-                            sizeModifier = 2;
-                        } else if (target.actor.data.data.details.sizeBonus === "veryLarge") {
-                            sizeModifier = 4;
-                        } else {
-                            sizeModifier = 0;
-                        }
-                        vulnerableModifier = target.actor.data.data.vulnerableModifier;
-                        targetToughness = target.actor.data.data.other.toughness;
-                        targetArmor = target.actor.data.data.other.armor;
-                        if (attackWith === "fireCombat" || attackWith === "energyWeapons" || attackWith === "heavyWeapons" || attackWith === "missileWeapons") {
-                            targetDefenseSkill = "Dodge";
-                            console.log(targetDefenseSkill);
-                            if (targetType === "threat") {
-                                targetDefenseValue = target.actor.data.data.skills.dodge.value;
-                            } else {
-                                targetDefenseValue = target.actor.data.data.dodgeDefense;
-                            }
-                        } else {
-                            if (target.actor.data.data.skills.meleeWeapons.adds > 0 || (targetType === "threat" && target.actor.data.data.skills.meleeWeapons.value > 0)) {
-                                targetDefenseSkill = "Melee Weapons";
-                                console.log(targetDefenseSkill);
-                                if (targetType === "threat") {
-                                    targetDefenseValue = target.actor.data.data.skills.meleeWeapons.value;
-                                } else {
-                                    targetDefenseValue = target.actor.data.data.meleeWeaponsDefense;
-                                }
-                            } else {
-                                targetDefenseSkill = "Unarmed Combat";
-                                console.log(targetDefenseSkill);
-                                if (targetType === "threat") {
-                                    targetDefenseValue = target.actor.data.data.skills.unarmedCombat.value;
-                                } else {
-                                    targetDefenseValue = target.actor.data.data.unarmedCombatDefense;
-                                }
-                            }
-                        }
+            // The following is copied/pasted/adjusted from _onAttackRoll in torgeternityActorSheet
+            var weaponData = item.data.data;
+            var attackWith = weaponData.attackWith;
+            var skillData = actor.data.data.skills[weaponData.attackWith];
+            var sizeModifier = 0;
+            var vulnerableModifier = 0;
+            var targetToughness = 0;
+            var targetArmor = 0;
+            var targetDefenseSkill = "Dodge";
+            console.log(targetDefenseSkill);
+            var targetDefenseValue = 0;
+
+            // Exit if no target or get target data
+            if (Array.from(game.user.targets).length === 0) {
+                var needTargetData = {
+                    user: game.user.data._id,
+                    speaker: ChatMessage.getSpeaker(),
+                    owner: actor,
                 };
-        
-                var mTest = {
-        
-                    testType: "attack",
-                    actor: actor,
-                    actorType: actor.data.type,
-                    item: item,
-                    actorPic: actor.data.img,
-                    skillName: weaponData.attackWith,
-                    skillBaseAttribute: skillData.baseAttribute,
-                    skillValue: skillData.value,
-                    unskilledUse: skillData.unskilledUse,
-                    strengthValue: actor.data.data.attributes.strength,
-                    charismaValue: actor.data.data.attributes.charisma,
-                    dexterityValue: actor.data.data.attributes.dexterity,
-                    mindValue: actor.data.data.attributes.mind,
-                    spiritValue: actor.data.data.attributes.spirit,
-                    possibilityTotal: 0,
-                    upTotal: 0,
-                    heroTotal: 0,
-                    dramaTotal: 0,
-                    cardsPlayed: 0,
-                    weaponName: item.data.name,
-                    weaponDamageType: weaponData.damageType,
-                    weaponDamage: weaponData.damage,
-                    damage: weaponData.damage,
-                    weaponAP: weaponData.ap,
-                    targetToughness: targetToughness,
-                    targetArmor: targetArmor,
-                    targetDefenseSkill: targetDefenseSkill,
-                    targetDefenseValue: targetDefenseValue,
-                    targetType: targetType,
-                    woundModifier: parseInt(-(actor.data.data.wounds.value)),
-                    stymiedModifier: parseInt(actor.data.data.stymiedModifier),
-                    darknessModifier: parseInt(actor.data.data.darknessModifier),
-                    sizeModifier: sizeModifier,
-                    vulnerableModifier: vulnerableModifier,
-                    vitalAreaDamageModifier: 0,
-                    chatNote: weaponData.chatNote
-        
+
+                var templateData = {
+                    message: "Cannot attempt enhanced attack test without a target. Select a target and try again.",
+                    actorPic: actor.data.img
+                };
+
+                const templatePromise = renderTemplate("./systems/torgeternity/templates/partials/skill-error-card.hbs", templateData);
+
+                templatePromise.then(content => {
+                    needTargetData.content = content;
+                    ChatMessage.create(needTargetData);
+                })
+
+                return;
+            } else {
+                var target = Array.from(game.user.targets)[0];
+                var targetType = target.actor.data.type;
+                if (target.actor.data.data.details.sizeBonus === "tiny") {
+                    sizeModifier = -6;
+                } else if (target.actor.data.data.details.sizeBonus === "verySmall") {
+                    sizeModifier = -4;
+                } else if (target.actor.data.data.details.sizeBonus === "small") {
+                    sizeModifier = -2;
+                } else if (target.actor.data.data.details.sizeBonus === "large") {
+                    sizeModifier = 2;
+                } else if (target.actor.data.data.details.sizeBonus === "veryLarge") {
+                    sizeModifier = 4;
+                } else {
+                    sizeModifier = 0;
                 }
-                
-                let testDialog = new attackDialog(mTest);
-                    testDialog.render(true);
-// End of copied/pasted/adjusted, choosed to open the Dialog (as with shift event), drawback NEED a Target
+                vulnerableModifier = target.actor.data.data.vulnerableModifier;
+                targetToughness = target.actor.data.data.other.toughness;
+                targetArmor = target.actor.data.data.other.armor;
+                if (attackWith === "fireCombat" || attackWith === "energyWeapons" || attackWith === "heavyWeapons" || attackWith === "missileWeapons") {
+                    targetDefenseSkill = "Dodge";
+                    console.log(targetDefenseSkill);
+                    if (targetType === "threat") {
+                        targetDefenseValue = target.actor.data.data.skills.dodge.value;
+                    } else {
+                        targetDefenseValue = target.actor.data.data.dodgeDefense;
+                    }
+                } else {
+                    if (target.actor.data.data.skills.meleeWeapons.adds > 0 || (targetType === "threat" && target.actor.data.data.skills.meleeWeapons.value > 0)) {
+                        targetDefenseSkill = "Melee Weapons";
+                        console.log(targetDefenseSkill);
+                        if (targetType === "threat") {
+                            targetDefenseValue = target.actor.data.data.skills.meleeWeapons.value;
+                        } else {
+                            targetDefenseValue = target.actor.data.data.meleeWeaponsDefense;
+                        }
+                    } else {
+                        targetDefenseSkill = "Unarmed Combat";
+                        console.log(targetDefenseSkill);
+                        if (targetType === "threat") {
+                            targetDefenseValue = target.actor.data.data.skills.unarmedCombat.value;
+                        } else {
+                            targetDefenseValue = target.actor.data.data.unarmedCombatDefense;
+                        }
+                    }
+                }
+            };
+
+            var mTest = {
+
+                testType: "attack",
+                actor: actor,
+                actorType: actor.data.type,
+                item: item,
+                actorPic: actor.data.img,
+                skillName: weaponData.attackWith,
+                skillBaseAttribute: skillData.baseAttribute,
+                skillValue: skillData.value,
+                unskilledUse: skillData.unskilledUse,
+                strengthValue: actor.data.data.attributes.strength,
+                charismaValue: actor.data.data.attributes.charisma,
+                dexterityValue: actor.data.data.attributes.dexterity,
+                mindValue: actor.data.data.attributes.mind,
+                spiritValue: actor.data.data.attributes.spirit,
+                possibilityTotal: 0,
+                upTotal: 0,
+                heroTotal: 0,
+                dramaTotal: 0,
+                cardsPlayed: 0,
+                weaponName: item.data.name,
+                weaponDamageType: weaponData.damageType,
+                weaponDamage: weaponData.damage,
+                damage: weaponData.damage,
+                weaponAP: weaponData.ap,
+                targetToughness: targetToughness,
+                targetArmor: targetArmor,
+                targetDefenseSkill: targetDefenseSkill,
+                targetDefenseValue: targetDefenseValue,
+                targetType: targetType,
+                woundModifier: parseInt(-(actor.data.data.wounds.value)),
+                stymiedModifier: parseInt(actor.data.data.stymiedModifier),
+                darknessModifier: parseInt(actor.data.data.darknessModifier),
+                sizeModifier: sizeModifier,
+                vulnerableModifier: vulnerableModifier,
+                vitalAreaDamageModifier: 0,
+                chatNote: weaponData.chatNote
+
+            }
+
+            let testDialog = new attackDialog(mTest);
+            testDialog.render(true);
+            // End of copied/pasted/adjusted, choosed to open the Dialog (as with shift event), drawback NEED a Target
             break;
         case "psionicpower":
         case "miracle":
         case "spell":
-/* This part is not functional, kept for test purpose, replaced by the following "log" and "ui.notification"
-            var powerData = item.data.data;
-            var skillData = item.actor.data.data.skills[powerData.skill];
-            console.log(powerData, skillData);
-            torgchecks.powerRoll({
-                actor: item.actor,
-                item: item,
-                actorPic: item.actor.data.img,
-                skillName: powerData.skill,
-                skillBaseAttribute: skillData.baseAttribute,
-                skillValue: skillData.value,
-                powerName: item.data.name,
-                powerAttack: powerData.isAttack,
-                powerDamage: powerData.damage,
-            });
-*/
+            /* This part is not functional, kept for test purpose, replaced by the following "log" and "ui.notification"
+                        var powerData = item.data.data;
+                        var skillData = item.actor.data.data.skills[powerData.skill];
+                        console.log(powerData, skillData);
+                        torgchecks.powerRoll({
+                            actor: item.actor,
+                            item: item,
+                            actorPic: item.actor.data.img,
+                            skillName: powerData.skill,
+                            skillBaseAttribute: skillData.baseAttribute,
+                            skillValue: skillData.value,
+                            powerName: item.data.name,
+                            powerAttack: powerData.isAttack,
+                            powerDamage: powerData.damage,
+                        });
+            */
             console.log("Same action for Psi/Miracles/Spells");
             ui.notifications.info("Not Handled at this moment");
             break;
@@ -661,7 +668,7 @@ Hooks.on("renderCompendiumDirectory", (app, html, data) => {
 
         game.packs.delete("torgeternity.core-card-set");
         html.find('li[data-pack="torgeternity.core-card-set"]').hide();
-        
+
     }
 })
 

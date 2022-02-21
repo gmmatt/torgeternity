@@ -1,6 +1,9 @@
 export const torgeternity = {};
-torgeternity.welcomeMessage="";
-torgeternity.skillDialog="";
+torgeternity.supportedLanguages = [
+    "en", "fr", "de"
+];
+torgeternity.welcomeMessage = "";
+torgeternity.skillDialog = "";
 
 torgeternity.gameCards = {
     cardType: {
@@ -8,36 +11,36 @@ torgeternity.gameCards = {
         destinyCards: {},
         cosmCards: {}
     },
-    GMDecks :{
- 
-        destiny : {
-          compendiums:[],
-          label: "destiny deck",
-          remainingCards: [],
-          playedCards: [],
-          backImg:""
+    GMDecks: {
+
+        destiny: {
+            compendiums: [],
+            label: "destiny deck",
+            remainingCards: [],
+            playedCards: [],
+            backImg: ""
         },
-        action : {
-          compendiums:[],
-          label: "action deck",
-          remainingCards: [],
-          playedCards: [],
-          activeCard: {},
-          backImg:""
-    
+        action: {
+            compendiums: [],
+            label: "action deck",
+            remainingCards: [],
+            playedCards: [],
+            activeCard: {},
+            backImg: ""
+
         },
-        cosm : {
-          compendiums:[],
-          label: "cosm deck",
-          cosmFilter: "",
-          remainingCards: [],
-          playedCards: [],
-          activeCard: {},
-          backImg:""
-    
+        cosm: {
+            compendiums: [],
+            label: "cosm deck",
+            cosmFilter: "",
+            remainingCards: [],
+            playedCards: [],
+            activeCard: {},
+            backImg: ""
+
         }
     }
-    
+
 }
 
 torgeternity.cardTypes = {
@@ -229,8 +232,7 @@ torgeternity.sizes = {
     veryLarge: "torgeternity.sizes.veryLarge"
 }
 
-torgeternity.statusEffects = [
-    {
+torgeternity.statusEffects = [{
         icon: 'systems/torgeternity/images/status-markers/stymied.webp',
         id: 'stymied',
         label: 'torgeternity.statusEffects.stymied',
@@ -301,7 +303,7 @@ torgeternity.statusEffects = [
     {
         icon: 'systems/torgeternity/images/status-markers/dark-6.png',
         id: 'pitchBlack',
-        label: 'torgeternity.statusEffects.pitchBlack' 
+        label: 'torgeternity.statusEffects.pitchBlack'
     },
 
     {
