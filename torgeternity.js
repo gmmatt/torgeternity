@@ -40,6 +40,7 @@ Hooks.once("init", async function() {
     //-------global
     game.torgeternity = {
         rollItemMacro,
+	rollSkillMacro,
         viewMode: true
     };
 
