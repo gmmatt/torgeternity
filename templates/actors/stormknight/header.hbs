@@ -1,69 +1,67 @@
- <div>
-    <h1> <input name="name" type="text" value="{{actor.name}}" placeholder="Name" /></h1>   
-    <p><img src="systems/torgeternity/images/te-logo.webp" title="TE Logo" /></p>
-    <button type="button" id="open-hand" class="open-hand">Open Hand</button>
+<div>
+	<h1>
+		<input name="name" type="text" value="{{actor.name}}" placeholder="Name"/></h1>
+	<p><img src="systems/torgeternity/images/te-logo.webp" title="TE Logo"/></p>
+	<img class="open-hand" src="systems/torgeternity/images/icons/cardhand.webp" title="{{localize "torgeternity.dialogPrompts.openHand"}}">
 </div>
 <div>
-    <p>
+	<p>
 
-        <span>{{localize "torgeternity.sheetLabels.race"}}</span>
-        <select name="data.details.race" class="input-box">
-            {{#select data.data.details.race}}
-            {{#each config.races as |name type|}}
-            <option value="{{type}}">{{localize name}}</option>
-            {{/each}}
-            {{/select}}
-        </select>
+		<span>{{localize "torgeternity.sheetLabels.race"}}</span>
+		<select name="data.details.race" class="input-box">
+			{{#select data.data.details.race}}
+				{{#each config.races as |name type|}}
+					<option value="{{type}}">{{localize name}}</option>
+				{{/each}}
+			{{/select}}
+		</select>
 
-        <span>{{localize "torgeternity.gear.cosm"}}</span>
-        <select name="data.other.cosm" class="input-box">
-            {{#select data.data.other.cosm}}
-            {{#each config.cosmTypes as |name type|}}
-            <option value="{{type}}">{{localize name}}</option>
-            {{/each}}
-            {{/select}}
-        </select>
+		<span>{{localize "torgeternity.gear.cosm"}}</span>
+		<select name="data.other.cosm" class="input-box">
+			{{#select data.data.other.cosm}}
+				{{#each config.cosmTypes as |name type|}}
+					<option value="{{type}}">{{localize name}}</option>
+				{{/each}}
+			{{/select}}
+		</select>
 
-    </p>
-    <p >
-        <span class="main-label">{{localize "torgeternity.sheetLabels.magic"}}</span>
-        <input name="data.axioms.magic" type="number" value="{{data.data.axioms.magic}}" data-dtype="Number" class="small-input" />
-<!--        <span class="axioms">{{data.data.axioms.magic}}</span> -->
-    </p>
-    <p >
-        <span class="main-label">{{localize "torgeternity.sheetLabels.social"}}</span>
-        <input name="data.axioms.social" type="number" value="{{data.data.axioms.social}}" data-dtype="Number" class="small-input" />
-    </p>
-    <p >
-        <span class="main-label">{{localize "torgeternity.sheetLabels.spirit"}}</span>
-        <input name="data.axioms.spirit" type="number" value="{{data.data.axioms.spirit}}" data-dtype="Number" class="small-input" />
-    </p>
-    <p >
-        <span class="main-label">{{localize "torgeternity.sheetLabels.tech"}}</span>
-        <input name="data.axioms.tech" type="number" value="{{data.data.axioms.tech}}" data-dtype="Number" class="small-input" />
-    </p>
-    <p>
-        <span class="vital-box">
-            {{localize "torgeternity.sheetLabels.wounds"}}:</span>
-        <input name="data.wounds.value" type="number" value="{{data.data.wounds.value}}" data-dtype="Number"
-            class="small-input" />
-        /
-        <input name="data.wounds.max" type="number" value="{{data.data.wounds.max}}" data-dtype="Number" 
-            class="small-input" disabled />
+	</p>
+	<p>
+		<span class="main-label">{{localize "torgeternity.sheetLabels.magic"}}</span>
+		<input
+		name="data.axioms.magic" type="number" value="{{data.data.axioms.magic}}" data-dtype="Number" class="small-input"/>
+	<!--        <span class="axioms">{{data.data.axioms.magic}}</span> -->
+	</p>
+	<p>
+		<span class="main-label">{{localize "torgeternity.sheetLabels.social"}}</span>
+		<input name="data.axioms.social" type="number" value="{{data.data.axioms.social}}" data-dtype="Number" class="small-input"/>
+	</p>
+	<p>
+		<span class="main-label">{{localize "torgeternity.sheetLabels.spirit"}}</span>
+		<input name="data.axioms.spirit" type="number" value="{{data.data.axioms.spirit}}" data-dtype="Number" class="small-input"/>
+	</p>
+	<p>
+		<span class="main-label">{{localize "torgeternity.sheetLabels.tech"}}</span>
+		<input name="data.axioms.tech" type="number" value="{{data.data.axioms.tech}}" data-dtype="Number" class="small-input"/>
+	</p>
+	<p>
+		<span class="vital-box">
+			{{localize "torgeternity.sheetLabels.wounds"}}:</span>
+		<input name="data.wounds.value" type="number" value="{{data.data.wounds.value}}" data-dtype="Number" class="small-input"/>
+		/
+		<input name="data.wounds.max" type="number" value="{{data.data.wounds.max}}" data-dtype="Number" class="small-input" disabled/>
 
-    </p>
-    <p>
-        <span class="vital-box">
-            {{localize "torgeternity.sheetLabels.shock"}}:</span>
-        <input name="data.shock.value" type="number" value="{{data.data.shock.value}}" data-dtype="Number"
-            class="small-input" />
-        /
-        <input name="data.shock.max" type="number" value="{{data.data.shock.max}}" data-dtype="Number" class="small-input" disabled />
+	</p>
+	<p>
+		<span class="vital-box">
+			{{localize "torgeternity.sheetLabels.shock"}}:</span>
+		<input name="data.shock.value" type="number" value="{{data.data.shock.value}}" data-dtype="Number" class="small-input"/>
+		/
+		<input name="data.shock.max" type="number" value="{{data.data.shock.max}}" data-dtype="Number" class="small-input" disabled/>
 
-    </p>
-    <p class="attribut-block">
-        <span class="other-label" data-skill-value="{{data.other.posibilities}}"
-            data-skill-name="{{data.other.posibilities}}">{{localize "torgeternity.sheetLabels.possibilities"}}</span>
-        <input name="data.other.posibilities" type="number" value="{{data.data.other.posibilities}}" data=dtype="Number" />
-    </p>
+	</p>
+	<p class="attribut-block">
+		<span class="other-label" data-skill-value="{{data.other.posibilities}}" data-skill-name="{{data.other.posibilities}}">{{localize "torgeternity.sheetLabels.possibilities"}}</span>
+		<input name="data.other.posibilities" type="number" value="{{data.data.other.posibilities}}" data="dtype=" number""/>
+	</p>
 </div>

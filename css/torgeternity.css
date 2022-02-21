@@ -497,7 +497,7 @@ form input {
 
 #mgme_question,
 #mgme_re_question {
-    color:black;
+    color: black;
 }
 
 .window-app .window-resizable-handle {
@@ -1747,6 +1747,17 @@ form.actor-sheet header input[name="name"] {
     max-height: 200px;
 }
 
+.window-content .actor-sheet .sheet-header img.open-hand {
+    max-height: 64px;
+    width: auto;
+    transition: 0.2s;
+    transform: rotate(0deg) scale(1);
+}
+
+.window-content .actor-sheet .sheet-header img.open-hand:hover {
+    transform: rotate(5deg) scale(1.2);
+}
+
 .window-content .actor-sheet .sheet-header .axioms {
     background: url(../images/roundBack.webp);
     background-size: cover;
@@ -2375,10 +2386,9 @@ form.actor-sheet.threat .tab[data-tab].active .list-section-heading .item-create
 .add-enhancement,
 .remove-enhancement,
 .add-limitation,
-.remove-limitation
- {
+.remove-limitation {
     padding: 0px 5px 0px 5px;
-    float:right;
+    float: right;
 }
 
 form.actor-sheet.threat .tab[data-tab].active ol.item-list {
@@ -2851,10 +2861,9 @@ form.actor-sheet.threat .tab[data-tab].active .editor {
     padding: 8px;
 }
 
-
 .card-chat-tooltip {
     text-decoration: none;
-    flex:none;
+    flex: none;
 }
 
 .card-chat-tooltip span {
@@ -2892,9 +2901,9 @@ form.actor-sheet.threat .tab[data-tab].active .editor {
 }
 
 .card-faces {
-    flex-basis:20px;
-    flex-grow:.1;
-    flex-shrink:2;
+    flex-basis: 20px;
+    flex-grow: .1;
+    flex-shrink: 2;
     margin: 0.5em 0;
     padding: 0 0 0 1.5em;
 }
@@ -2908,11 +2917,10 @@ form.actor-sheet.threat .tab[data-tab].active .editor {
     line-height: 20px;
 }
 
-
 .interaction-attack-list {
     margin: 10px;
     text-align: center
-  }
+}
 
 .app.sidebar-popout {
     height: auto !important;
@@ -2922,41 +2930,40 @@ form.actor-sheet.threat .tab[data-tab].active .editor {
 .dsr-token {
     font-family: Palatino;
     font-size: 14px;
-    font-weight:bold;
-    border: 2px solid black;
-    background-color: beige;
-    outline-color: black;
-    display:inline-block;
-    border-radius: 10px;
-    padding: 0px 5px 0px 5px;
-    width: 65px;
-
-}
-
-.player-dsr-token {
-    font-family: Palatino;
-    font-size:10px;
     font-weight: bold;
     border: 2px solid black;
     background-color: beige;
     outline-color: black;
-    display:inline-block;
+    display: inline-block;
+    border-radius: 10px;
+    padding: 0px 5px 0px 5px;
+    width: 65px;
+}
+
+.player-dsr-token {
+    font-family: Palatino;
+    font-size: 10px;
+    font-weight: bold;
+    border: 2px solid black;
+    background-color: beige;
+    outline-color: black;
+    display: inline-block;
     border-radius: 10px;
     padding: 0px 5px 0px 5px;
     width: 50px;
-    text-shadow:none;
+    text-shadow: none;
 }
 
 .dsr-step {
     color: black;
     display: inline;
-    text-align:center;
+    text-align: center;
 }
 
 .dsr-step-number {
     color: red;
-    display:inline;
-    text-align:center
+    display: inline;
+    text-align: center
 }
 
 .item-sheet .item-list {
@@ -2965,18 +2972,17 @@ form.actor-sheet.threat .tab[data-tab].active .editor {
 }
 
 .enhancement-check {
-    flex:10%;
-    color:black;
-    font-family:Alaska;
+    flex: 10%;
+    color: black;
+    font-family: Alaska;
     font-size: 12px;
-
 }
 
 .enhancement-content {
-    flex:90%;
-    color:black;
-    font-family:Alaska;
-    font-size:12px;
+    flex: 90%;
+    color: black;
+    font-family: Alaska;
+    font-size: 12px;
 }
 
 .available-enhancement-input {
@@ -2984,19 +2990,20 @@ form.actor-sheet.threat .tab[data-tab].active .editor {
 }
 
 .available-enhancement {
-    color:black;
-    text-align:center;
+    color: black;
+    text-align: center;
 }
 
 .pulp-description {
-    background-color:rgba(255,255,255,0.39);
+    background-color: rgba(255, 255, 255, 0.39);
     color: var(--color-text-dark-primary) !important;
-    border:1px solid var(--color-border-light-tertiary)
+    border: 1px solid var(--color-border-light-tertiary)
 }
 
-.pulp-description:hover, .pulp-description:focus {
+.pulp-description:hover,
+.pulp-description:focus {
     box-shadow: 0 0 15px #4f523c inset;
-    background-color:rgba(255,255,255,0.39)
+    background-color: rgba(255, 255, 255, 0.39)
 }
 
 .enhancements-section-heading {
@@ -3006,20 +3013,20 @@ form.actor-sheet.threat .tab[data-tab].active .editor {
     background-image: url(../images/separator.webp);
     background-size: cover;
     background-position: center;
-    display:flex;
+    display: flex;
     color: white;
     justify-content: center;
     align-items: center;
-    position:relative;
+    position: relative;
 }
 
 .enhancements-title {
-    vertical-align:middle;
-    font-size:18px;
+    vertical-align: middle;
+    font-size: 18px;
 }
 
 .enhancements-controls {
-    position:absolute;
-    right:0;
-    font-size:10px;
+    position: absolute;
+    right: 0;
+    font-size: 10px;
 }

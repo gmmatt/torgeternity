@@ -1,5 +1,5 @@
 {
-    "torgeternity":{
+    "torgeternity": {
         "attributes": {
             "charisma": "Charisma",
             "dexterity": "Dexterity",
@@ -91,8 +91,8 @@
             "waterVehicles": "water vehicles",
             "willpower": "willpower"
         },
-        "gear":{
-            "description":"Description",
+        "gear": {
+            "description": "Description",
             "techlevel": "Tech Level",
             "tl": "TL",
             "price": "Price",
@@ -123,20 +123,20 @@
             "ap": "AP",
             "chatNote": "Chat Note"
         },
-        "stats":{
+        "stats": {
             "wounds": "Wounds",
             "shock": "Shock",
             "possibilities": "Possibilities",
             "description": "Description"
         },
-        "perks":{
+        "perks": {
             "category": "Category",
             "cosm": "Cosm",
             "prerequisites": "Prerequisites",
             "timestaken": "Times Taken",
             "description": "Description"
         },
-        "enhancements":{
+        "enhancements": {
             "perk": "Related Perk",
             "description": "Description",
             "enhances": "Enhances"
@@ -186,7 +186,7 @@
             "psionics": "Psionics",
             "pulpPowers": "Pulp Powers",
             "reality": "Reality",
-            "savagery":"Savagery",
+            "savagery": "Savagery",
             "social": "Social",
             "spellcraft": "Spellcraft",
             "racial": "Racial",
@@ -200,7 +200,7 @@
             "hope": "Hope"
         },
         "sheetLabels": {
-            "stormknight":"Stormknight",
+            "stormknight": "Stormknight",
             "stats": "Stats",
             "perks": "Perks",
             "perksAbilities": "Perks/Abilities",
@@ -228,7 +228,7 @@
             "specialAbility": "Special Abilities",
             "threat": "Threat",
             "skills": "Skills",
-            "favored":"Favored",
+            "favored": "Favored",
             "possibilitypotential": "Possibilities (Potential)",
             "size": "Size",
             "possibilities": "Possibilities",
@@ -361,7 +361,7 @@
             "fireCombat": "Fire Combat",
             "energyWeapons": "Energy Weapons",
             "heavyWeapons": "Heavy Weapons"
-         },
+        },
         "powerSkills": {
             "alteration": "Alteration",
             "apportation": "Apportation",
@@ -455,7 +455,7 @@
             "modifiers": "Modifiers",
             "attack": "Attack",
             "baseDamage": "Base Damage",
-			"value": "Value",
+            "value": "Value",
             "notes": "Notes"
         },
 
@@ -480,7 +480,8 @@
             "cosmDeckDialogLabel": "Draw",
             "cardPooled": "In Pool?",
             "plays": "Plays",
-            "discards": "Discards"
+            "discards": "Discards",
+            "openHand": "Open Hand"
         },
 
         "cosmDecks": {
@@ -491,22 +492,23 @@
             "nileEmpire": "Nile Empire Cosm Deck",
             "orrorsh": "Orrorsh Cosm Deck",
             "panPacifica": "Pan Pacifica Cosm Deck",
-            "tharkold": "Tharkold Cosm Deck"         
+            "tharkold": "Tharkold Cosm Deck"
         },
 
         "cardTypes": {
             "destiny": "Destiny",
             "drama": "Drama",
-            "cosm": "Cosm"
+            "cosm": "Cosm",
+            "hand": "Hand"
         },
 
         "scenes": {
             "reality": "Reality",
             "realityHint": "Configure the reality of the scene zone",
-			"HeaderDetailsHint": "Configure the basic details for this scene and permissions which control its visibility.",
-			"HeaderGridHint": "Configure the grid dimensions which are used to measure token movement in this scene.",
-			"HeaderVisionHint": "Configure the vision, lighting, and fog of war settings which apply to this Scene.",
-			"HeaderAmbienceHint": "Configure additional integrations between this scene and Journal Entries, Audio Playlists, or Weather Effects."
+            "HeaderDetailsHint": "Configure the basic details for this scene and permissions which control its visibility.",
+            "HeaderGridHint": "Configure the grid dimensions which are used to measure token movement in this scene.",
+            "HeaderVisionHint": "Configure the vision, lighting, and fog of war settings which apply to this Scene.",
+            "HeaderAmbienceHint": "Configure additional integrations between this scene and Journal Entries, Audio Playlists, or Weather Effects."
         },
 
         "tokens": {
@@ -519,7 +521,7 @@
             "d": " D"
 
         },
-        "poolToggle":{
+        "poolToggle": {
             "inPool": "Card in pool",
             "toogle": "Toggle pooled"
         },
@@ -528,12 +530,12 @@
             "play": "Play this card",
             "broadcast": "Show this card to everyone",
             "discard": "Discard this card"
-        }    
+        }
 
     },
 
 
-    "CARD":{
+    "CARD": {
         "TypeCosm": "Cosm",
         "TypeDestiny": "Destiny",
         "TypeDrama": "Drama"

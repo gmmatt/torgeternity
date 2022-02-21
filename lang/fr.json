@@ -457,7 +457,7 @@
             "baseDamage": "Dommages de base",
             "value": "Valeur",
             "notes": "Notes"
-       },
+        },
 
         "sizes": {
             "tiny": "Minuscule",
@@ -480,7 +480,8 @@
             "cosmDeckDialogLabel": "Tirer",
             "cardPooled": "Réserve d'action",
             "plays": "Jouer",
-            "discards": "Défausser"
+            "discards": "Défausser",
+            "openHand": "voir sa main"
         },
 
         "cosmDecks": {
@@ -491,22 +492,24 @@
             "nileEmpire": "Cartes Cosm Empire du Nil",
             "orrorsh": "Carte Cosm Orrorsh",
             "panPacifica": "Cartes Cosm Pan Pacifica",
-            "tharkold": "Cartes Cosm Tharkold"         
+            "tharkold": "Cartes Cosm Tharkold"
         },
-     
+
         "cardTypes": {
             "destiny": "Destin",
             "drama": "Action",
-            "cosm": "Cosm"
+            "cosm": "Cosm",
+            "hand": "Main"
+
         },
-        
+
         "scenes": {
             "reality": "Réalité",
             "realityHint": "Configure la réalité de la zone de la scène",
-			"HeaderDetailsHint": "Configure les détails de base pour cette scène et les permissions qui contrôlent sa visibilité.",
-			"HeaderGridHint": "Configure les dimensions de la grille qui sont utilisées pour mesurer le mouvement des tokens dans cette scène.",
-			"HeaderVisionHint": "Configure les paramètres de vision, d'éclairage et de brouillard de guerre pour cette scène.",
-			"HeaderAmbienceHint": "Configure les intégrations supplémentaires entre cette scène et Journal Entries, les playlists ou les effets météo."
+            "HeaderDetailsHint": "Configure les détails de base pour cette scène et les permissions qui contrôlent sa visibilité.",
+            "HeaderGridHint": "Configure les dimensions de la grille qui sont utilisées pour mesurer le mouvement des tokens dans cette scène.",
+            "HeaderVisionHint": "Configure les paramètres de vision, d'éclairage et de brouillard de guerre pour cette scène.",
+            "HeaderAmbienceHint": "Configure les intégrations supplémentaires entre cette scène et Journal Entries, les playlists ou les effets météo."
         },
 
         "tokens": {
@@ -523,9 +526,10 @@
     },
 
 
-    "CARD":{
+    "CARD": {
         "TypeCosm": "Cosm",
         "TypeDestiny": "Destin",
         "TypeDrama": "Action"
+
     }
 }
