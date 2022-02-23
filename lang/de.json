@@ -539,6 +539,36 @@
             "play": "Diese Karte ausspielen",
             "broadcast": "Zeige jedem diese Karte",
             "discard": "Wirf diese Karte weg"
+        },
+        "settingMenu": {
+            "welcome": {
+                "name": "Willkommensnachricht anzeigen",
+                "hint": "Wenn ausgewählt, erscheint beim Laden die Willkommensnachricht"
+            },
+            "setupCards": {
+                "name": "Kartenpakete installieren",
+                "hint": "Wenn ausgewählt; das System wird alle Kartendecks, und Ablagestapel neu installieren. Sie müssen den Browser oder die Anwendung aktualisieren (F5)"
+            },
+            "pauseMedia": {
+                "name": "Pausenbild",
+                "hint": "Wähle das Bild, das angezeigt wird, wenn das Spiel pausiert."
+            },
+            "animatedChat": {
+                "name": "Animation des message du chat",
+                "hint": "Si sélectionné les message du chat apparaitront avec une animation. Changer ce paramètre rafraichira le navigateur ou l'application"
+            },
+            "gmScreen": {
+                "name": "Bildschirmbild auswählen",
+                "hint": "Sie können auswählen, welcher GM-Bildschirm angezeigt werden soll. Wenn Sie ein nicht installiertes Modul auswählen, wird der GM-Bildschirm nicht funktionieren. HINWEIS: Sie müssen den Browser oder die Anwendung aktualisieren (F5), nachdem Sie Ihre Auswahl bestätigt haben."
+            },
+            "hideGerman": {
+                "name": "Deutsche Kompendien ausblenden",
+                "hint": "Auswählen, um deutschsprachige Kompendien auszublenden"
+            },
+            "hideEnglish": {
+                "name": "Englische Kompendien ausblenden",
+                "hint": "Auswählen, um englischsprachige Kompendien auszublenden"
+            }
         }
 
     },
