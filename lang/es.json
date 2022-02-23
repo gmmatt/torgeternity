@@ -1,5 +1,5 @@
 {
-    "torgeternity":{
+    "torgeternity": {
         "attributes": {
             "charisma": "Carisma",
             "dexterity": "Destreza",
@@ -91,10 +91,10 @@
             "watervehicles": "vehículos acuáticos",
             "willpower": "fuerza voluntad"
         },
-        "gear":{
-            "description":"Descripción",
+        "gear": {
+            "description": "Descripción",
             "techlevel": "Nivel Tec.",
-			"tl": "NT",
+            "tl": "NT",
             "price": "Precio",
             "value": "Valor",
             "damageType": "Tipo Daño",
@@ -113,32 +113,32 @@
             "wounds": "Heridas",
             "toughness": "Resistencia",
             "possibilities": "Posibilidad",
-			"poss": "Pos.",
+            "poss": "Pos.",
             "tappingDifficulty": "Golpe Dificultad",
-			"tappingDifficultyAbbr": "Golp",
+            "tappingDifficultyAbbr": "Golp",
             "purpose": "Propósito",
             "powers": "Poderes",
             "restrictions": "Restricciones",
-			"minStrength": "FUE Min",
-			"ap": "PA"
+            "minStrength": "FUE Min",
+            "ap": "PA"
         },
-        "stats":{
+        "stats": {
             "wounds": "Heridas",
             "shock": "Shock",
             "possibilities": "Posibilidad",
-			"description": "Descripción"
+            "description": "Descripción"
         },
-        "perks":{
+        "perks": {
             "category": "Categoria",
             "cosm": "Cosmos",
             "prerequisites": "Prerrequisitos",
             "timestaken": "Nivel",
             "description": "Descripción"
         },
-        "enhancements":{
+        "enhancements": {
             "perk": "Don",
             "description": "Descripción",
-			"enhances": "Mejora"
+            "enhances": "Mejora"
         },
         "powers": {
             "axiom": "Axioma",
@@ -152,7 +152,7 @@
             "description": "Descripción",
             "good": "Buen Resultado",
             "outstanding": "Resultado Espectacular",
-			"attack": "Ataque"
+            "attack": "Ataque"
         },
         "cosms": {
             "none": "(Ninguno)",
@@ -164,7 +164,10 @@
             "tharkhold": "Tharkold",
             "panPacifica": "Pan Pacífica",
             "orrorsh": "Orrorsh",
-            "other": "Otro"
+            "other": "Otro",
+            "pure": "puro",
+            "mixed": "mixto",
+            "dominant": "dominante"
         },
         "perkTypes": {
             "cyberware": "Ciberimplante",
@@ -184,33 +187,33 @@
             "psionics": "Psiónica",
             "pulpPowers": "Poderes Pulp",
             "reality": "Realidad",
-            "savagery":"Barbarie",
+            "savagery": "Barbarie",
             "social": "Social",
             "spellcraft": "Conjuros",
-			"racial": "Racial"
+            "racial": "Racial"
         },
         "sheetLabels": {
-			"stormknight":"CaballeroTormenta",
-			"stats": "Atributos",
+            "stormknight": "CaballeroTormenta",
+            "stats": "Atributos",
             "perks": "Dones",
-			"perksAbilities": "Dones/Habil.",
-			"gear": "Equipo",
+            "perksAbilities": "Dones/Habil.",
+            "gear": "Equipo",
             "powers": "Poderes",
-			"effects": "Efectos",
+            "effects": "Efectos",
             "background": "Trasfondo",
-			"backgroundDescription": "Trasfondo",
+            "backgroundDescription": "Trasfondo",
             "backgroundAndNotes": "Trasfondo y Notas",
             "enhancements": "Mejoras",
             "generalGear": "Equipo",
             "armor": "Armadura",
-			"shield": "Escudo",
+            "shield": "Escudo",
             "shields": "Escudos",
             "meleeWeapons": "Armas CC",
             "missileWeapons": "Armas Proyectil",
             "firearms": "Armas Fuego",
             "implants": "Implantes",
             "heavyWeapons": "Armas Pesadas",
-			"explosives": "Explosivos",
+            "explosives": "Explosivos",
             "vehicles": "Vehículos",
             "spells": "Conjuros",
             "miracles": "Milagros",
@@ -218,20 +221,20 @@
             "specialAbility": "Habilidades Especiales",
             "threat": "Amenaza",
             "skills": "Habilidades",
-			"favored":"Preferente",
+            "favored": "Preferente",
             "possibilitypotential": "Posibilidad (Potencial)",
             "size": "Tamaño",
             "possibilities": "Posibilidades",
-			"up": "Aumento",
+            "up": "Aumento",
             "equipment": "Equipo",
             "specialabilities": "Habilidades Especiales",
-			"wounds": "Heridas",
+            "wounds": "Heridas",
             "shock": "Shock",
             "attributes": "Atributos",
             "move": "Movimiento",
             "run": "Carrera",
             "toughness": "Resistencia",
-			"tough": "Res.",
+            "tough": "Res.",
             "magic": "Magia",
             "social": "Social",
             "spirit": "Espíritu",
@@ -240,7 +243,7 @@
             "adds": "Adición",
             "total": "Total",
             "defenses": "Defensa",
-			"activeDefense": "Defensa Activa",
+            "activeDefense": "Defensa Activa",
             "melee": "Cuerpo a Cuerpo",
             "unarmed": "Sin Armas",
             "xp": "PX",
@@ -249,12 +252,12 @@
             "clearance": "Nivel Autorización",
             "race": "Raza",
             "weapons": "Armas",
-			"attacks": "Ataques",
+            "attacks": "Ataques",
             "armorAndShields": "Armadura y Escudo",
             "other": "Otro",
             "spell": "Conjuro",
             "miracle": "Milagro",
-			"psionic": "Psiónica",
+            "psionic": "Psiónica",
             "psionicPower": "Poder Psiónico",
             "abilities": "Habilidades",
             "implant": "Implante",
@@ -264,7 +267,7 @@
             "details": "Detalles",
             "goodResult": "Buen Resultado",
             "outstandingResult": "Espectacular Resultado",
-			"effectCreate": "Crear Efecto",
+            "effectCreate": "Crear Efecto",
             "add": "Añade",
             "derivedValues": "Valor Resultado",
             "tempEffects": "Efecto Temporal",
@@ -308,7 +311,24 @@
             "new": "Nuevo",
             "keep": "Mantener",
             "end": "Fin",
-            "return": "Regresar"
+            "return": "Regresar",
+            "notes": "Notes",
+            "cosm": "Cosm",
+            "secondaryCosm": "Secondary Cosm",
+            "skillValue": "Skill Value",
+            "baseAttribute": "Base Attribute",
+            "customSkills": "Custom Skills",
+            "skillAdds": "Adds",
+            "fatigue": "Fatigue",
+            "limitations": "Limitations",
+            "availableEnhancements": "Available Enhancements",
+            "taken": "Taken",
+            "titleDescription": "Title/Description",
+            "pool": "pool"
+        },
+        "combat": {
+            "nextKeep": "nueva ronda (mantener la tarjeta actual)",
+            "nextNew": "nueva ronda (nueva carta de acción)"
         },
         "itemSheetDescriptions": {
             "perk": "Dones",
@@ -322,13 +342,13 @@
             "firearm": "Arma Fuego",
             "implant": "Implante",
             "heavyWeapon": "Arma Pesada",
-			"explosive": "Explosivos",
+            "explosive": "Explosivos",
             "vehicle": "Vehículo",
             "spell": "Conjuro",
             "miracle": "Milagro",
             "psionicpower": "Poder Psiónico",
             "specialability": "Habilidad Especial",
-			"other": "Equipo General",
+            "other": "Equipo General",
             "customAttack": "Ataque Custom"
         },
         "attackTypes": {
@@ -338,7 +358,7 @@
             "fireCombat": "Arma Fuego",
             "energyWeapons": "Arma Energía",
             "heavyWeapons": "Arna Pesada"
-         },
+        },
         "powerSkills": {
             "alteration": "Alteración",
             "apportation": "Aportación",
@@ -351,7 +371,7 @@
         },
         "damageTypes": {
             "flat": "Fijo",
-			"strengthPlus": "Fuerza +",
+            "strengthPlus": "Fuerza +",
             "charismaPlus": "Carisma +",
             "dexterityPlus": "Destreza +",
             "mindPlus": "Mente +",
@@ -369,10 +389,10 @@
             "dwarf": "Enano",
             "edeinos": "Edeino",
             "elf": "Elfo",
-			"aspirants": "Aspirantes",
+            "aspirants": "Aspirantes",
             "theRace": "La Raza",
             "other": "Otra"
-		},
+        },
         "stymiedStates": {
             "none": "No Impedido",
             "stymied": "Impedido",
@@ -401,8 +421,8 @@
             "targetSize": "Tamaño Objetivo",
             "targetVulnerability": "Vulnerabilidad Objetivo"
         },
-		
-		"yesNo": {
+
+        "yesNo": {
             "true": "Si",
             "false": "No"
         },
@@ -427,9 +447,9 @@
             "modifiers": "Modificadores",
             "attack": "Ataque",
             "baseDamage": "Daño Base",
-			"value": "Valor"
+            "value": "Valor"
         },
-        
+
         "sizes": {
             "tiny": "Diminuto",
             "verySmall": "Muy Pequeño",
@@ -451,7 +471,10 @@
             "cosmDeckDialogLabel": "Robar",
             "cardPooled": "¿En Reserva?",
             "plays": "Juega",
-            "discards": "Descarta"
+            "discards": "Descarta",
+            "openHand": "ver su mano",
+            "lifelike": "visualización de la 'vida real'"
+
         },
 
         "cosmDecks": {
@@ -462,7 +485,7 @@
             "nileEmpire": "Mazo Cosmos Imperio del Nilo",
             "orrorsh": "Mazo Cosmos Orrorsh",
             "panPacifica": "Mazo Cosmos Pan Pacífica",
-            "tharkold": "Mazo Cosmos Tharkold"         
+            "tharkold": "Mazo Cosmos Tharkold"
         },
 
         "cardTypes": {

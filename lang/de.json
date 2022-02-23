@@ -1,5 +1,5 @@
 {
-    "torgeternity":{
+    "torgeternity": {
         "attributes": {
             "charisma": "Charisma",
             "dexterity": "Geschicklichkeit",
@@ -91,10 +91,10 @@
             "waterVehicles": "Wasserfahrzeuge",
             "willpower": "Willenskraft"
         },
-        "gear":{
-            "description":"Beschreibung",
+        "gear": {
+            "description": "Beschreibung",
             "techlevel": "Tech",
-			"tl": "TL",
+            "tl": "TL",
             "price": "Preis",
             "value": "Wert",
             "damageType": "Schadensart",
@@ -113,33 +113,33 @@
             "wounds": "Wunden",
             "toughness": "Robustheit",
             "possibilities": "Möglichkeiten",
-			"poss": "Mög",
+            "poss": "Mög",
             "tappingDifficulty": "Anwendungs-Mindestwurf",
-			"tappingDifficultyAbbr": "Anw",
+            "tappingDifficultyAbbr": "Anw",
             "purpose": "Zweck",
             "powers": "Kräfte",
             "restrictions": "Einschränkungen",
-			"minStrength": "Min Stä",
-            "ap":"PB",
+            "minStrength": "Min Stä",
+            "ap": "PB",
             "chatNote": "In den Chat"
         },
-        "stats":{
+        "stats": {
             "wounds": "Wunden",
             "shock": "Schock",
             "possibilities": "Möglichkeiten",
-			"description": "Beschreibung"
+            "description": "Beschreibung"
         },
-        "perks":{
+        "perks": {
             "category": "Gruppe",
             "cosm": "Cosm",
             "prerequisites": "Vorraussetzung",
             "timestaken": "Male genommen",
             "description": "Beschreibung"
         },
-        "enhancements":{
+        "enhancements": {
             "perk": "Verbundener Vorzug",
             "description": "Beschreibung",
-			"enhances": "verbessert"
+            "enhances": "verbessert"
         },
         "powers": {
             "axiom": "Axiom",
@@ -153,7 +153,7 @@
             "description": "Beschreibung",
             "good": "Gut",
             "outstanding": "Hervorragend",
-			"attack": "Angriff",
+            "attack": "Angriff",
             "ap": "PB"
         },
         "cosms": {
@@ -166,7 +166,10 @@
             "tharkold": "Tharkold",
             "panPacifica": "Pan-Pacifica",
             "orrorsh": "Orrorsh",
-            "other": "Andere"
+            "other": "Andere",
+            "pure": "pure",
+            "mixed": "gemischt",
+            "dominant": "dominant"
         },
         "perkTypes": {
             "cyberware": "Cyberware",
@@ -186,10 +189,10 @@
             "psionics": "Psionik",
             "pulpPowers": "Pulp Superkräfte",
             "reality": "Realität",
-            "savagery":"Wildnis",
+            "savagery": "Wildnis",
             "social": "Sozial",
             "spellcraft": "Zauberkunde",
-			"racial": "Volk",
+            "racial": "Volk",
             "hacker": "Hacker",
             "human": "Mensch",
             "abomination": "Abscheulichkeit",
@@ -200,7 +203,7 @@
             "hope": "Hoffnung"
         },
         "sheetLabels": {
-            "stormknight":"Storm Knight",
+            "stormknight": "Storm Knight",
             "stats": "Werte",
             "perks": "Vorzüge",
             "perksAbilities": "Vorzüge/Fähigkeiten",
@@ -209,18 +212,18 @@
             "effects": "Effekte",
             "background": "Hintergrund",
             "backgroundDescription": "Hintergrund",
-			"backgroundAndNotes": "Hintergrund und Notizen",
+            "backgroundAndNotes": "Hintergrund und Notizen",
             "enhancements": "Verbesserungen",
             "generalGear": "Allgemeine Ausrüstung",
             "armor": "Rüstung",
-			"shield": "Schild",
+            "shield": "Schild",
             "shields": "Schilde",
             "meleeWeapons": "Nahkampfwaffen",
             "missileWeapons": "Projektilwaffen",
             "firearms": "Feuerwaffen",
             "implants": "Implantate",
             "heavyWeapons": "Schwere Waffen",
-			"explosives": "Sprengstoffe",
+            "explosives": "Sprengstoffe",
             "vehicles": "Fahrzeuge",
             "spells": "Zauber",
             "miracles": "Wunder",
@@ -228,7 +231,7 @@
             "specialAbility": "Spezielle Fähigkeit",
             "threat": "Bedrohung",
             "skills": "Fertigkeit",
-            "favored":"Bevorzugt",
+            "favored": "Bevorzugt",
             "possibilitypotential": "Möglichkeiten (Potential)",
             "size": "Größe",
             "possibilities": "Möglichkeiten",
@@ -241,7 +244,7 @@
             "move": "Bewegung",
             "run": "Laufen",
             "toughness": "Robustheit",
-			"tough": "Robust",
+            "tough": "Robust",
             "magic": "Magie",
             "social": "Sozial",
             "spirit": "Spiritualität",
@@ -250,7 +253,7 @@
             "adds": "Fertigkeitsstufen",
             "total": "Gesamt",
             "defenses": "Verteidigung",
-			"activeDefense": "Aktive Verteidigung",
+            "activeDefense": "Aktive Verteidigung",
             "melee": "Bewaffneter Kampf",
             "unarmed": "Unbewaffnet",
             "xp": "EP",
@@ -264,7 +267,7 @@
             "other": "Sonstige",
             "spell": "Zauber",
             "miracle": "Wunder",
-			"psionic": "Psionisch",
+            "psionic": "Psionisch",
             "psionicPower": "Psikraft",
             "abilities": "Fähigkeiten",
             "implant": "Implantat",
@@ -277,7 +280,7 @@
             "effectCreate": "Effekt erstellen",
             "add": "Hinzufügen",
             "derivedValues": "Abgeleitete Werte",
-			"tempEffects": "Vorrübergenede Effekte",
+            "tempEffects": "Vorrübergenede Effekte",
             "passiveEffects": "Passive Effekte",
             "inactiveEffects": "Inaktive Effekte",
             "source": "Quelle",
@@ -330,7 +333,12 @@
             "limitations": "Einschränkungen",
             "availableEnhancements": "Verfügbare Verbesserungen",
             "taken": "Gekauft",
-            "titleDescription": "Titel/Beschreibung"
+            "titleDescription": "Titel/Beschreibung",
+            "pool": "Aktionenpool"
+        },
+        "combat": {
+            "nextKeep": "Neue Runde (aktuelle Karte behalten)",
+            "nextNew": "neue Runde (neue Aktionskarte)"
         },
         "itemSheetDescriptions": {
             "perk": "Vorzug",
@@ -345,13 +353,13 @@
             "implant": "Implantat",
             "heavyWeapon": "Schwere Waffe",
             "vehicle": "Fahrzeuge",
-			"explosive": "Sprengstoff",
+            "explosive": "Sprengstoff",
             "spell": "Zauber",
             "miracle": "Wunder",
             "psionicpower": "Psikraft",
             "specialability": "Spezialfähigkeit",
             "other": "Allgemeine Ausrüstung",
-			"customAttack": "Individueller Angriff",
+            "customAttack": "Individueller Angriff",
             "customSkill": "Eigene Fertigkeit"
         },
         "attackTypes": {
@@ -361,7 +369,7 @@
             "fireCombat": "Schusswaffen",
             "energyWeapons": "Energiewaffen",
             "heavyWeapons": "Schwere Waffen"
-         },
+        },
         "powerSkills": {
             "alteration": "Verwandlung",
             "apportation": "Apportation",
@@ -374,8 +382,8 @@
         },
         "damageTypes": {
             "flat": "Reiner Schaden",
-			"strengthPlus": "Stärke +",
-			"charismaPlus": "Charisma +",
+            "strengthPlus": "Stärke +",
+            "charismaPlus": "Charisma +",
             "dexterityPlus": "Geschicklichkeit +",
             "mindPlus": "Verstand +",
             "spiritPlus": "Geist +"
@@ -427,14 +435,14 @@
             "prone": "Anfällig",
             "incapacitated": "Bewegungsunfähig",
             "unconscious": "K.O.",
-            "blind": "Blind" 
+            "blind": "Blind"
         },
 
         "yesNo": {
             "true": "Ja",
             "false": "Nein"
         },
-		"chatText": {
+        "chatText": {
             "possibility": "Möglichkeit",
             "hero": "Held",
             "heroCard": "Heldenhaft-Karte",
@@ -455,7 +463,7 @@
             "modifiers": "Modifikator",
             "attack": "Angriff",
             "baseDamage": "Grundschaden",
-			"value": "Wert",
+            "value": "Wert",
             "notes": "Notizen"
         },
 
@@ -480,7 +488,10 @@
             "cosmDeckDialogLabel": "Ziehe",
             "cardPooled": "Im Aktionenpool?",
             "plays": "Spielt aus:",
-            "discards": "Wirft weg:"
+            "discards": "Wirft weg:",
+            "openHand": "offene Hand",
+            "lifelike": "realitätsnahe Darstellung"
+
         },
 
         "cosmDecks": {
@@ -491,7 +502,7 @@
             "nileEmpire": "Nil-Imperium Cosm-Deck",
             "orrorsh": "Orrorsh Cosm-Deck",
             "panPacifica": "Pan-Pacifica Cosm-Deck",
-            "tharkold": "Tharkold Cosm-Deck"         
+            "tharkold": "Tharkold Cosm-Deck"
         },
 
         "cardTypes": {
@@ -499,14 +510,14 @@
             "drama": "Drama",
             "cosm": "Cosm"
         },
-        
+
         "scenes": {
             "reality": "Realität",
             "realityHint": "Stelle die Realität der Zone ein.",
-			"HeaderDetailsHint": "Hier werden grundlegende Details für diese Szene und die Berechtigungen, die die Sichtbarkeit der Szene steuern, konfiguriert.",
-			"HeaderGridHint": "Wähle die Rastermaße, die zur Messung der Tokenbewegung in dieser Szene verwendet werden.",
-			"HeaderVisionHint": "Hier werden die für diese Szene geltenden Einstellungen für Sicht, Beleuchtung und Kriegsnebel konfiguriert.",
-			"HeaderAmbienceHint": "Konfiguriere zusätzliche Integrierungen zwischen dieser Szene und Journaleinträgen, Audio-Playlists oder Wettereffekten."
+            "HeaderDetailsHint": "Hier werden grundlegende Details für diese Szene und die Berechtigungen, die die Sichtbarkeit der Szene steuern, konfiguriert.",
+            "HeaderGridHint": "Wähle die Rastermaße, die zur Messung der Tokenbewegung in dieser Szene verwendet werden.",
+            "HeaderVisionHint": "Hier werden die für diese Szene geltenden Einstellungen für Sicht, Beleuchtung und Kriegsnebel konfiguriert.",
+            "HeaderAmbienceHint": "Konfiguriere zusätzliche Integrierungen zwischen dieser Szene und Journaleinträgen, Audio-Playlists oder Wettereffekten."
         },
 
         "tokens": {
@@ -519,21 +530,21 @@
             "d": " D"
 
         },
-        "poolToggle":{
+        "poolToggle": {
             "inPool": "Karte im Aktionsvorrat",
             "toogle": "Aktionenvorrat umschalten"
         },
-        
+
         "monarch": {
             "play": "Diese Karte ausspielen",
             "broadcast": "Zeige jedem diese Karte",
             "discard": "Wirf diese Karte weg"
-        }    
+        }
 
     },
 
 
-    "CARD":{
+    "CARD": {
         "TypeCosm": "Cosm",
         "TypeDestiny": "Schicksal",
         "TypeDrama": "Drama"

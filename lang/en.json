@@ -166,7 +166,10 @@
             "tharkold": "Tharkold",
             "panPacifica": "Pan Pacifica",
             "orrorsh": "Orrorsh",
-            "other": "Other"
+            "other": "Other",
+            "pure": "pure",
+            "mixed": "mixed",
+            "dominant": "dominant"
         },
         "perkTypes": {
             "cyberware": "Cyberware",
@@ -330,7 +333,13 @@
             "limitations": "Limitations",
             "availableEnhancements": "Available Enhancements",
             "taken": "Taken",
-            "titleDescription": "Title/Description"
+            "titleDescription": "Title/Description",
+            "pool": "pool"
+
+        },
+        "combat": {
+            "nextKeep": "Next Round (Keep Current Card)",
+            "nextNew": "Next Round (New Card)"
         },
         "itemSheetDescriptions": {
             "perk": "Perk",
@@ -481,7 +490,8 @@
             "cardPooled": "In Pool?",
             "plays": "Plays",
             "discards": "Discards",
-            "openHand": "Open Hand"
+            "openHand": "Open Hand",
+            "lifelike": "lifelike display"
         },
 
         "cosmDecks": {
@@ -530,7 +540,40 @@
             "play": "Play this card",
             "broadcast": "Show this card to everyone",
             "discard": "Discard this card"
+        },
+        "settingMenu": {
+            "welcome": {
+                "name": "Display the Welcome Message",
+                "hint": "If checked, the welcome message will pop up after your world loads."
+            },
+            "setupCards": {
+                "name": "Setup the Cards Directory",
+                "hint": "If checked, the system will re-set the decks and discard piles in the Card Stacks tab. You will need to refresh your browser before the changes are made."
+            },
+            "pauseMedia": {
+                "name": "Pause Image Media",
+                "hint": "Choose the image that is displayed when the game is paused."
+            },
+            "animatedChat": {
+                "name": "Chat Card Animation",
+                "hint": "If checked, enable chat card animations. Changing this setting will reload the app"
+            },
+            "gmScreen": {
+                "name": "Select the GM Screen You Want to Use",
+                "hint": "You can select a GM screen from any active module. If you select a module that is not installed, the GM screen function may not work properly. NOTE: you need to refresh your browser (F5) after switching screens."
+            },
+            "hideGerman": {
+                "name": "Hide German Compendiums",
+                "hint": "Select to hide German compendiums on startup"
+            },
+            "hideEnglish": {
+                "name": "Hide English Compendiums",
+                "hint": "Select to hide English compendiums on startup"
+            }
         }
+
+
+
 
     },
 

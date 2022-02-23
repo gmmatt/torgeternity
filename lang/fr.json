@@ -166,7 +166,10 @@
             "tharkold": "Tharkold",
             "panPacifica": "Pan Pacifica",
             "orrorsh": "Orrorsh",
-            "other": "Autre"
+            "other": "Autre",
+            "pure": "zone pure",
+            "mixed": "zone mixte",
+            "dominant": "zone dominante"
         },
         "perkTypes": {
             "cyberware": "Cybertechnologie",
@@ -330,7 +333,13 @@
             "limitations": "Limitations",
             "availableEnhancements": "Améliorations disponibles",
             "taken": "Acquis",
-            "titleDescription": "Titre/Description"
+            "titleDescription": "Titre/Description",
+            "pool": "reserve d'action"
+
+        },
+        "combat": {
+            "nextKeep": "nouveau round (garder la carte actuelle)",
+            "nextNew": "nouveau round (nouvelle carte action)"
         },
         "itemSheetDescriptions": {
             "perk": "Atout",
@@ -481,7 +490,9 @@
             "cardPooled": "Réserve d'action",
             "plays": "Jouer",
             "discards": "Défausser",
-            "openHand": "voir sa main"
+            "openHand": "voir sa main",
+            "lifelike": "affichage 'comme en vrai'"
+
         },
 
         "cosmDecks": {
@@ -515,12 +526,46 @@
         "tokens": {
 
             "noDSR": "RDT",
-            "step": "Step",
+            "step": "ét.",
             "a": " A",
             "b": " B",
             "c": " C",
             "d": " D"
 
+        },
+        "poolToggle": {
+            "inPool": "carte réservée",
+            "toogle": "réserver"
+        },
+        "settingMenu": {
+            "welcome": {
+                "name": "Afficher le message de bienvenue",
+                "hint": "Si sélectionné, le message de bienvenue apparaitra au chargement"
+            },
+            "setupCards": {
+                "name": "Installer les paquets de cartes",
+                "hint": "Si sélectionné ; le système ré-installera tous les paquets de cartes, et les piles de défausse. Vous devrez rafraichir le navigateur ou l'application (F5)"
+            },
+            "pauseMedia": {
+                "name": "image de pause",
+                "hint": "Choisissez l'image affichée lorsque le jeu est en pause."
+            },
+            "animatedChat": {
+                "name": "Animation des message du chat",
+                "hint": "Si sélectionné les message du chat apparaitront avec une animation. Changer ce paramètre rafraichira le navigateur ou l'application"
+            },
+            "gmScreen": {
+                "name": "Sélectionner l'image de l'écran",
+                "hint": "Vous pouvez choisir quel écran du MJ afficher . Si vous sélectionnez un module non installé, l'écran du MJ ne fonctionnera pas. NOTE: Vous devez rafraichir le navigateur ou l'application (F5) après avoir validé votre choix"
+            },
+            "hideGerman": {
+                "name": "Masquer les compendium allemands",
+                "hint": "Sélectionner pour masquer les compendiums en langue allemande"
+            },
+            "hideEnglish": {
+                "name": "Masquer les compendiums anglais",
+                "hint": "Sélectionner pour masquer les compendiums en langue anglaise"
+            }
         }
 
     },
