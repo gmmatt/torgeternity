@@ -1,7 +1,7 @@
 <form class="actor-sheet {{cssClass}}" autocomplete="off">
 
     <h3 class="actor-type"><span>{{localize "torgeternity.sheetLabels.stormknight"}}</span></h3>
-    
+
     <!--**************** tabs******************--->
     <nav class="sheet-tabs tabs" data-group="primary">
         <a class="item" data-tab="stats">{{localize "torgeternity.sheetLabels.stats"}}</a>
@@ -83,7 +83,8 @@
 
         <div class="tab background" data-group="primary" data-tab="background">
 
-            <h1 class="list-section-heading" style="color:white">{{localize "torgeternity.sheetLabels.backgroundAndNotes"}}</h1>
+            <h1 class="list-section-heading" style="color:white">{{localize
+                "torgeternity.sheetLabels.backgroundAndNotes"}}</h1>
             {{editor content=data.data.details.background target="data.details.background" button=true owner=owner
             editable=editable}}
 

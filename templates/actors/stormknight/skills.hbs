@@ -1,142 +1,137 @@
 <div class="skills">
-    <h2 class="skill-edit-toggle" title="Toggle Skill Display"><a>{{localize "torgeternity.sheetLabels.skills"}}</a>
-    </h2>
-    <ul class="skill-list">
-        <li class="dark">
-            <span></span>
-            <span class="skillAttr">{{localize "torgeternity.sheetLabels.attribute"}}</span>
-            <span class="skillAdd">{{localize "torgeternity.sheetLabels.adds"}}</span>
-            <span>{{localize "torgeternity.sheetLabels.total"}}</span>
-            <span>{{localize "torgeternity.sheetLabels.favored"}}</span>
+	<h2 class="skill-edit-toggle" title="Toggle Skill Display">
+		<a>{{localize "torgeternity.sheetLabels.skills"}}</a>
+	</h2>
+	<ul class="skill-list">
+		<li class="dark">
+			<span></span>
+			<span class="skillAttr">{{localize "torgeternity.sheetLabels.attribute"}}</span>
+			<span class="skillAdd">{{localize "torgeternity.sheetLabels.adds"}}</span>
+			<span>{{localize "torgeternity.sheetLabels.total"}}</span>
+			<span>{{localize "torgeternity.sheetLabels.favored"}}</span>
 
-        </li>
-        {{#if data.data.editstate}}
-            {{#each data.data.skills as |content name|}}
-                <li title="Shift-click for enhanced skill test">
-                <span>
-                    <a class="skill-roll" data-testType="skill" data-baseAttribute="{{content.baseAttribute}}"
-                        data-adds="{{content.adds}}" data-value="{{content.value}}"
-                        data-unskilledUse="{{content.unskilledUse}}" data-name="{{localize (concatSkillName name)}}">
-                        {{localize (concatSkillName name)}}
-                    </a>
+		</li>
+		{{#if data.data.editstate}}
+			{{#each data.data.skills as |content name|}}
+				<li title="Shift-click for enhanced skill test">
+					<span>
+						<a class="skill-roll" data-testtype="skill" data-baseattribute="{{content.baseAttribute}}" data-adds="{{content.adds}}" data-value="{{content.value}}" data-unskilleduse="{{content.unskilledUse}}" data-name="{{localize (concatSkillName name)}}">
+							{{localize (concatSkillName name)}}
+						</a>
 
 
-                </span>
-                <span class="skill-line skillAttr">
-                    <select name="data.skills.{{name}}.baseAttribute" class="input-box">
-                        {{#select content.baseAttribute}}
-                        {{#each ../config.attributeTypes as |name type|}}
-                        <option value="{{type}}">{{localize name}}</option>
-                        {{/each}}
-                        {{/select}}
-                    </select>
-                </span>
-                <span class="skillAdd">
-                    <input name="data.skills.{{name}}.adds" type="number" value="{{content.adds}}" data-dtype="Number" />
-                </span>
-                <span class="skill-line">
-                    {{content.value}}
-                </span>
-                <span> 
-                    <a class="toggleFav {{#if content.isFav}}checked
-                            {{/if}}"><i class="far fa-star" ></i></a>
-                    <input class="favCheck" type="checkbox" name="data.skills.{{name}}.isFav" {{checked content.isFav}}
-                    data-dtype="Boolean" />
-                </span>
-                </li>
-            {{/each}}
-            {{#each customSkill as | content name|}}
-                <li title="Custom skills can be edited in the Perks tab">
-                <span>
-                    <a class="skill-roll" data-testType="skill" data-baseAttribute="{{content.data.baseAttribute}}"
-                        data-adds="{{content.data.adds}}" data-value="{{content.data.value}}"
-                        data-unskilledUse="0" data-name="{{content.name}}">
-                        {{content.name}} 
-                    </a>
-                </span>
-                <span class="skill-line skillAttr" style="width:365px">
-                    {{localize (concatAttributeName content.data.baseAttribute)}}
-                </span>
-                <span class="skillAdd">
-                    {{content.data.adds}}
-                </span>
-                <span class="skill-line">
-                    {{content.data.value}}
-                </span>
-                <span> 
-                    <a class="toggleFav {{#if content.data.isFav}}checked
-                            {{/if}}"><i class="far fa-star" ></i></a>
-                    <input class="favCheck" type="checkbox" name="customSkill.isFav" {{checked content.data.isFav}}
-                    data-dtype="Boolean" />
-                </span>
-                </li>
-            {{/each}}
-        {{else}}
-        {{#each data.data.skills as |content name|}}
-        {{#if content.adds}}
-        <li title="Shift-click for enhanced skill test">
-            <span>
-                <a class="skill-roll" data-testType="skill" data-baseAttribute="{{content.baseAttribute}}"
-                    data-adds="{{content.adds}}" data-value="{{content.value}}"
-                    data-unskilledUse="{{content.unskilledUse}}" data-name="{{localize (concatSkillName name)}}">
-                    {{localize (concatSkillName name)}}
-                </a>
-            </span>
-            <span class="skill-line skillAttr">
-                <select name="data.skills.{{name}}.baseAttribute" class="input-box">
-                    {{#select content.baseAttribute}}
-                    {{#each ../config.attributeTypes as |name type|}}
-                    <option value="{{type}}">{{localize name}}</option>
-                    {{/each}}
-                    {{/select}}
-                </select>
-            </span>
-            <span class="skillAdd">
-                <input name="data.skills.{{name}}.adds" type="number" class="small-input" value="{{content.adds}}"
-                    data-dtype="Number" />
-            </span>
-            <span class="skill-line">
-                {{content.value}}
-            </span>
+					</span>
+					<span class="skill-line skillAttr">
+						<select name="data.skills.{{name}}.baseAttribute" class="input-box">
+							{{#select content.baseAttribute}}
+								{{#each ../config.attributeTypes as |name type|}}
+									<option value="{{type}}">{{localize name}}</option>
+								{{/each}}
+							{{/select}}
+						</select>
+					</span>
+					<span class="skillAdd">
+						<input name="data.skills.{{name}}.adds" type="number" value="{{content.adds}}" data-dtype="Number"/>
+					</span>
+					<span class="skill-line">
+						{{content.value}}
+					</span>
+					<span>
+						<a class="toggleFav {{#if content.isFav}}checked
+																								                            {{/if}}">
+							<i class="far fa-star"></i>
+						</a>
+						<input class="favCheck" type="checkbox" name="data.skills.{{name}}.isFav" {{checked content.isFav}} data-dtype="Boolean"/>
+					</span>
+				</li>
+			{{/each}}
+			{{#each customSkill as | content name|}}
+				<li title="Custom skills can be edited in the Perks tab">
+					<span>
+						<a class="skill-roll" data-testtype="skill" data-baseattribute="{{content.data.baseAttribute}}" data-adds="{{content.data.adds}}" data-value="{{content.data.value}}" data-unskilleduse="0" data-name="{{content.name}}">
+							{{content.name}}
+						</a>
+					</span>
+					<span class="skill-line skillAttr" style="width:365px">
+						{{localize (concatAttributeName content.data.baseAttribute)}}
+					</span>
+					<span class="skillAdd">
+						{{content.data.adds}}
+					</span>
+					<span class="skill-line">
+						{{content.data.value}}
+					</span>
+					<span>
+						<a class="toggleFav {{#if content.data.isFav}}checked
+																								                            {{/if}}">
+							<i class="far fa-star"></i>
+						</a>
+						<input class="favCheck" type="checkbox" name="customSkill.isFav" {{checked content.data.isFav}} data-dtype="Boolean"/>
+					</span>
+				</li>
+			{{/each}}
+		{{else}}
+			{{#each data.data.skills as |content name|}}
+				{{#if content.adds}}
+					<li>
+						<span>
+							<a title="{{localize 'torgeternity.sheetLabels.skillRollHint'}}" class="skill-roll" data-testtype="skill" data-baseattribute="{{content.baseAttribute}}" data-adds="{{content.adds}}" data-value="{{content.value}}" data-unskilleduse="{{content.unskilledUse}}" data-name="{{localize (concatSkillName name)}}">
+								{{localize (concatSkillName name)}}
+							</a>
+						</span>
+						<span class="skill-line skillAttr">
+							<select name="data.skills.{{name}}.baseAttribute" class="input-box">
+								{{#select content.baseAttribute}}
+									{{#each ../config.attributeTypes as |name type|}}
+										<option value="{{type}}">{{localize name}}</option>
+									{{/each}}
+								{{/select}}
+							</select>
+						</span>
+						<span class="skillAdd">
+							<input name="data.skills.{{name}}.adds" type="number" class="small-input" value="{{content.adds}}" data-dtype="Number"/>
+						</span>
+						<span class="skill-line">
+							{{content.value}}
+						</span>
 
-            <span> 
-                <a class="toggleFav {{#if content.isFav}}checked
-                        {{/if}}"><i class="far fa-star" ></i></a>
-                <input class="favCheck" type="checkbox" name="data.skills.{{name}}.isFav" {{checked content.isFav}}
-                data-dtype="Boolean" />
-         </span>
-           
-        </li>
-        {{/if}}
-        {{/each}}
-        {{#each customSkill as | content name|}}
-            <li title="Custom skills can be edited in the Perks tab">
-            <span>
-                <a class="skill-roll" data-testType="skill" data-baseAttribute="{{content.data.baseAttribute}}"
-                    data-adds="{{content.data.adds}}" data-value="{{content.data.value}}"
-                    data-unskilledUse="0" data-name="{{content.name}}">
-                    {{content.name}} 
-                </a>
-            </span>
-            <span class="skill-line skillAttr" style="width:365px">
-                {{localize (concatAttributeName content.data.baseAttribute)}}
-            </span>
-            <span class="skillAdd">
-                {{content.data.adds}}
-            </span>
-            <span class="skill-line">
-                {{content.data.value}}
-            </span>
-            <span> 
-                <a class="toggleFav {{#if content.data.isFav}}checked
-                        {{/if}}"><i class="far fa-star" ></i></a>
-                <input class="favCheck" type="checkbox" name="customSkill.isFav" {{checked content.data.isFav}}
-                data-dtype="Boolean" />
-            </span>
-            </li>
-        {{/each}}
+						<span>
+							<a class="toggleFav {{#if content.isFav}}checked
+																											                        {{/if}}">
+								<i class="far fa-star"></i>
+							</a>
+							<input class="favCheck" type="checkbox" name="data.skills.{{name}}.isFav" {{checked content.isFav}} data-dtype="Boolean"/>
+						</span>
 
-        {{/if}}
-        </li>
-    </ul>
-</div>
+					</li>
+				{{/if}}
+			{{/each}}
+			{{#each customSkill as | content name|}}
+				<li title="Custom skills can be edited in the Perks tab">
+					<span>
+						<a class="skill-roll" data-testtype="skill" data-baseattribute="{{content.data.baseAttribute}}" data-adds="{{content.data.adds}}" data-value="{{content.data.value}}" data-unskilleduse="0" data-name="{{content.name}}">
+							{{content.name}}
+						</a>
+					</span>
+					<span class="skill-line skillAttr" style="width:365px">
+						{{localize (concatAttributeName content.data.baseAttribute)}}
+					</span>
+					<span class="skillAdd">
+						{{content.data.adds}}
+					</span>
+					<span class="skill-line">
+						{{content.data.value}}
+					</span>
+					<span>
+						<a class="toggleFav {{#if content.data.isFav}}checked
+																								                        {{/if}}">
+							<i class="far fa-star"></i>
+						</a>
+						<input class="favCheck" type="checkbox" name="customSkill.isFav" {{checked content.data.isFav}} data-dtype="Boolean"/>
+					</span>
+				</li>
+			{{/each}}
+
+		{{/if}}
+	</li>
+</ul></div>

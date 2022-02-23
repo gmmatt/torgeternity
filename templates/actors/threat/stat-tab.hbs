@@ -1,228 +1,218 @@
 <div class="threat-contents block">
-    <div class="threat-block">
-        <a class="toggle-threat-edit" title="Edit" style="float:right"><i class="fas fa-edit"></i></a> 
-        <div class="attribut-list" style="margin-right:10px">
-            <b>{{localize "torgeternity.sheetLabels.attributes"}}: </b>
-            <span class="inline-skill-list">
-                <span>
-                    <a class="skill-roll" data-testType="attribute"
-                        data-baseAttribute="{{data.data.attributes.charisma}}" data-adds="0"
-                        data-value="{{data.data.attributes.charisma}}" data-unskilledUse="1" data-name="{{localize "torgeternity.attributes.charisma"}}">
-                        {{localize "torgeternity.attributes.charisma"}}
-                    </a>
-                    {{data.data.attributes.charisma}}, &nbsp;
-                </span>
-                <span>
-                    <a class="skill-roll" data-testType="attribute"
-                        data-baseAttribute="{{data.data.attributes.dexterity}}" data-adds="0"
-                        data-value="{{data.data.attributes.dexterity}}" data-unskilledUse="1" data-name="{{localize "torgeternity.attributes.dexterity"}}">
-                        {{localize "torgeternity.attributes.dexterity"}}
-                    </a>
-                    {{data.data.attributes.dexterity}}, &nbsp;
-                </span>
-                <span>
-                    <a class="skill-roll" data-testType="attribute" data-baseAttribute="{{data.data.attributes.mind}}"
-                        data-adds="0" data-value="{{data.data.attributes.mind}}" data-unskilledUse="1"
-                        data-name="{{localize "torgeternity.attributes.mind"}}">
-                        {{localize "torgeternity.attributes.mind"}}
-                    </a>
-                    {{data.data.attributes.mind}}, &nbsp;
-                </span>
-                <span>
-                    <a class="skill-roll" data-testType="attribute" data-baseAttribute="{{data.data.attributes.spirit}}"
-                        data-adds="0" data-value="{{data.data.attributes.spirit}}" data-unskilledUse="1"
-                        data-name="{{localize "torgeternity.attributes.spirit"}}">
-                        {{localize "torgeternity.attributes.spirit"}}
-                    </a>
-                    {{data.data.attributes.spirit}}, &nbsp;
-                </span>
-                <span>
-                    <a class="skill-roll" data-testType="attribute"
-                        data-baseAttribute="{{data.data.attributes.strength}}" data-adds="0"
-                        data-value="{{data.data.attributes.strength}}" data-unskilledUse="1" data-name="{{localize "torgeternity.attributes.strength"}}">
-                        {{localize "torgeternity.attributes.strength"}}
-                    </a>
-                    {{data.data.attributes.strength}}, &nbsp;
-                </span>
-            </span>
-        </div>
-    </div>
-    <div class="threat-block">
-        <b>{{localize "torgeternity.sheetLabels.skills"}}:&nbsp;</b>
-        <span class="inline-skill-list">
-            {{#each data.data.skills as |content name|}}
-            {{#if content.value}}
-            <span class="inline-skill-item">
-                <a class="skill-roll" data-testType="skill" data-baseAttribute="{{content.baseAttribute}}"
-                    data-adds="{{content.adds}}" data-value="{{content.value}}"
-                    data-unskilledUse="{{content.unskilledUse}}" data-name="{{localize (concatSkillName name)}}">
-                    {{localize (concatSkillName name)}}
-                </a>{{#if content.isFav}}<a class="toggleFav checked"><i class="far fa-star"></i></a>{{/if}}
-                &nbsp;{{content.value}}
-            </span>
+	<div class="threat-block">
+		<a class="toggle-threat-edit" title="{{localize 'torgeternity.iconeTitles.edit'}}" style="float:right">
+			<i class="fas fa-edit"></i>
+		</a>
+		<div class="attribut-list" style="margin-right:10px">
+			<b>{{localize "torgeternity.sheetLabels.attributes"}}:
+			</b>
+			<span class="inline-skill-list">
+				<span>
+					<a class="skill-roll" data-testtype="attribute" data-baseattribute="{{data.data.attributes.charisma}}" data-adds="0" data-value="{{data.data.attributes.charisma}}" data-unskilleduse="1" data-name="{{localize "torgeternity.attributes.charisma"}}">
+						{{localize "torgeternity.attributes.charisma"}}
+					</a>
+					{{data.data.attributes.charisma}}, &nbsp;
+				</span>
+				<span>
+					<a class="skill-roll" data-testtype="attribute" data-baseattribute="{{data.data.attributes.dexterity}}" data-adds="0" data-value="{{data.data.attributes.dexterity}}" data-unskilleduse="1" data-name="{{localize "torgeternity.attributes.dexterity"}}">
+						{{localize "torgeternity.attributes.dexterity"}}
+					</a>
+					{{data.data.attributes.dexterity}}, &nbsp;
+				</span>
+				<span>
+					<a class="skill-roll" data-testtype="attribute" data-baseattribute="{{data.data.attributes.mind}}" data-adds="0" data-value="{{data.data.attributes.mind}}" data-unskilleduse="1" data-name="{{localize "torgeternity.attributes.mind"}}">
+						{{localize "torgeternity.attributes.mind"}}
+					</a>
+					{{data.data.attributes.mind}}, &nbsp;
+				</span>
+				<span>
+					<a class="skill-roll" data-testtype="attribute" data-baseattribute="{{data.data.attributes.spirit}}" data-adds="0" data-value="{{data.data.attributes.spirit}}" data-unskilleduse="1" data-name="{{localize "torgeternity.attributes.spirit"}}">
+						{{localize "torgeternity.attributes.spirit"}}
+					</a>
+					{{data.data.attributes.spirit}}, &nbsp;
+				</span>
+				<span>
+					<a class="skill-roll" data-testtype="attribute" data-baseattribute="{{data.data.attributes.strength}}" data-adds="0" data-value="{{data.data.attributes.strength}}" data-unskilleduse="1" data-name="{{localize "torgeternity.attributes.strength"}}">
+						{{localize "torgeternity.attributes.strength"}}
+					</a>
+					{{data.data.attributes.strength}}, &nbsp;
+				</span>
+			</span>
+		</div>
+	</div>
+	<div class="threat-block">
+		<b>{{localize "torgeternity.sheetLabels.skills"}}:&nbsp;</b>
+		<span class="inline-skill-list">
+			{{#each data.data.skills as |content name|}}
+				{{#if content.value}}
+					<span class="inline-skill-item">
+						<a class="skill-roll" data-testtype="skill" data-baseattribute="{{content.baseAttribute}}" data-adds="{{content.adds}}" data-value="{{content.value}}" data-unskilleduse="{{content.unskilledUse}}" data-name="{{localize (concatSkillName name)}}">
+							{{localize (concatSkillName name)}}
+						</a>
+						{{#if content.isFav}}
+							<a class="toggleFav checked">
+								<i class="far fa-star"></i>
+							</a>
+						{{/if}}
+						&nbsp;{{content.value}}
+					</span>
 
-            {{/if}}
-            {{/each}}
-        </span>
-    </div>
-    <div class="threat-block">
-        <b>{{localize "torgeternity.sheetLabels.move"}}:</b>&nbsp;{{data.data.other.move}};&nbsp;
-        <b>{{localize
+				{{/if}}
+			{{/each}}
+		</span>
+	</div>
+	<div class="threat-block">
+		<b>{{localize "torgeternity.sheetLabels.move"}}:</b>&nbsp;{{data.data.other.move}};&nbsp;
+		<b>{{localize
             "torgeternity.sheetLabels.toughness"}}:</b>&nbsp;{{data.data.other.toughness}}&nbsp;({{data.data.other.armor}});&nbsp;
-        <b>{{localize "torgeternity.sheetLabels.shock"}}:&nbsp;</b>
-        {{data.data.shock.max}};&nbsp;
-        <b>{{localize "torgeternity.sheetLabels.wounds"}}:&nbsp;</b>
-        {{data.data.wounds.max}}
-    </div>
-    <div class="threat-block">
-        <b>{{localize "torgeternity.sheetLabels.equipment"}}:</b>&nbsp;
-        <span>
-            {{#each meleeweapons as |item id|}}
-            <a class="item-attackRoll inline-skill-item item" data-item-id="{{item._id}}">{{item.name}}</a>
-            {{/each}}
+		<b>{{localize "torgeternity.sheetLabels.shock"}}:&nbsp;</b>
+		{{data.data.shock.max}};&nbsp;
+		<b>{{localize "torgeternity.sheetLabels.wounds"}}:&nbsp;</b>
+		{{data.data.wounds.max}}
+	</div>
+	<div class="threat-block">
+		<b>{{localize "torgeternity.sheetLabels.equipment"}}:</b>&nbsp;
+		<span>
+			{{#each meleeweapons as |item id|}}
+				<a class="item-attackRoll inline-skill-item item" data-item-id="{{item._id}}">{{item.name}}</a>
+			{{/each}}
 
-            {{#each missileweapon as |item id|}}
-            <a class="item-attackRoll inline-skill-item item" data-item-id="{{item._id}}">{{item.name}}</a>
-            {{/each}}
+			{{#each missileweapon as |item id|}}
+				<a class="item-attackRoll inline-skill-item item" data-item-id="{{item._id}}">{{item.name}}</a>
+			{{/each}}
 
-            {{#each firearm as |item id|}}
-            <a class="item-attackRoll inline-skill-item item" data-item-id="{{item._id}}">{{item.name}}</a>
-            {{/each}}
+			{{#each firearm as |item id|}}
+				<a class="item-attackRoll inline-skill-item item" data-item-id="{{item._id}}">{{item.name}}</a>
+			{{/each}}
 
-            {{#each heavyweapon as |item id|}}
-            <a class="item-attackRoll inline-skill-item item" data-item-id="{{item._id}}">{{item.name}}</a>
-            {{/each}}
+			{{#each heavyweapon as |item id|}}
+				<a class="item-attackRoll inline-skill-item item" data-item-id="{{item._id}}">{{item.name}}</a>
+			{{/each}}
 
-            {{#each armor as |item id|}}
-            <span class="inline-skill-item">{{item.name}}</span>
-            {{/each}}
+			{{#each armor as |item id|}}
+				<span class="inline-skill-item">{{item.name}}</span>
+			{{/each}}
 
-            {{#each shield as |item id|}}
-            <span class="inline-skill-item">{{item.name}}</span>
-            {{/each}}
+			{{#each shield as |item id|}}
+				<span class="inline-skill-item">{{item.name}}</span>
+			{{/each}}
 
-            {{#each gear as |item id|}}
-            <span class="inline-skill-item">{{item.name}}</span>
-            {{/each}}
+			{{#each gear as |item id|}}
+				<span class="inline-skill-item">{{item.name}}</span>
+			{{/each}}
 
-            {{#each implant as |item id|}}
-            <span class="inline-skill-item">{{item.name}}</span>
-            {{/each}}
+			{{#each implant as |item id|}}
+				<span class="inline-skill-item">{{item.name}}</span>
+			{{/each}}
 
-            {{#each eternityshard as |item id|}}
-            <span class="inline-skill-item">{{item.name}}</span>
-            {{/each}}
-        </span>
+			{{#each eternityshard as |item id|}}
+				<span class="inline-skill-item">{{item.name}}</span>
+			{{/each}}
+		</span>
 
-        <div class="threat-block">
-            <b>{{localize "torgeternity.sheetLabels.perks"}}</b>:&nbsp;
-            <span>
-                {{#each perk as |item id|}}
-                <span class="inline-skill-item">{{item.name}}</span>
-                {{/each}}
-            </span>
-        </div>
+		<div class="threat-block">
+			<b>{{localize "torgeternity.sheetLabels.perks"}}</b>:&nbsp;
+			<span>
+				{{#each perk as |item id|}}
+					<span class="inline-skill-item">{{item.name}}</span>
+				{{/each}}
+			</span>
+		</div>
 
-        <div class="threat-block">
-            <b>{{localize "torgeternity.sheetLabels.specialabilities"}}</b>:
-            <ul class="specialability-list">
+		<div class="threat-block">
+			<b>{{localize "torgeternity.sheetLabels.specialabilities"}}</b>:
+			<ul class="specialability-list">
 
-                {{#each specialabilityRollable as |item id|}}
-                <li>
-                    <b><a class="item-attackRoll item" data-item-id="{{item._id}}">{{item.name}}</a></b>
-                    .&nbsp;
-                    {{{concatSpecialAbility item.data.description}}}
-                </li>
-                {{/each}}
+				{{#each specialabilityRollable as |item id|}}
+					<li>
+						<b>
+							<a class="item-attackRoll item" data-item-id="{{item._id}}">{{item.name}}</a>
+						</b>
+						.&nbsp;
+						{{{concatSpecialAbility item.data.description}}}
+					</li>
+				{{/each}}
 
-                {{#each specialability as |item id|}}
-                <li>
-                    <b>{{item.name}}</b>
-                    .&nbsp;
-                    {{{concatSpecialAbility item.data.description}}}
-                </li>
-                {{/each}}
+				{{#each specialability as |item id|}}
+					<li>
+						<b>{{item.name}}</b>
+						.&nbsp;
+						{{{concatSpecialAbility item.data.description}}}
+					</li>
+				{{/each}}
 
-                </ul>
-            </div>
-<!--        <div class="threat-block">
-                <b>{{localize "torgeternity.stats.description"}}</b>
-                {{{data.data.details.description}}}
-            </div> -->
-        </span>
-    </div>
-</div>
-<div class="threat-editor " id="threat-editor" style="display:{{data.data.editstate}}">
+			</ul>
+		</div>
+		<!--        <div class="threat-block">
+		                <b>{{localize "torgeternity.stats.description"}}</b>
+		                {{{data.data.details.description}}}
+		            </div> -->
+	</span>
+</div></div><div class="threat-editor " id="threat-editor" style="display:{{data.data.editstate}}">
 
-    <div class="threat-edit attribut-list-edit">
-        <span>
-            <span>{{localize "torgeternity.attributes.charisma"}}</span> <input name="data.attributes.charisma"
-                type="number" value="{{data.data.attributes.charisma}}" data=dtype="Number"
-                class="small-input" />,&nbsp;
-        </span>
-        <span><span>{{localize "torgeternity.attributes.dexterity"}}</span> <input name="data.attributes.dexterity"
-                type="number" value="{{data.data.attributes.dexterity}}" data=dtype="Number"
-                class="small-input" />,&nbsp;
-        </span>
-        <span> <span>{{localize "torgeternity.attributes.mind"}}</span> <input name="data.attributes.mind" type="number"
-                value="{{data.data.attributes.mind}}" data=dtype="Number" class="small-input" />,&nbsp;
-        </span>
-        <span><span>{{localize "torgeternity.attributes.spirit"}}</span> <input name="data.attributes.spirit"
-                type="number" value="{{data.data.attributes.spirit}}" data=dtype="Number" class="small-input" />,&nbsp;
-        </span>
-        <span><span>{{localize "torgeternity.attributes.strength"}}</span> <input name="data.attributes.strength"
-                type="number" value="{{data.data.attributes.strength}}" data=dtype="Number" class="small-input" />
-        </span>
+<div class="threat-edit attribut-list-edit">
+	<span>
+		<span>{{localize "torgeternity.attributes.charisma"}}</span>
+		<input name="data.attributes.charisma" type="number" value="{{data.data.attributes.charisma}}" data="dtype="Number"" class="small-input"/>,&nbsp;
+	</span>
+	<span>
+		<span>{{localize "torgeternity.attributes.dexterity"}}</span>
+		<input name="data.attributes.dexterity" type="number" value="{{data.data.attributes.dexterity}}" data="dtype="Number"" class="small-input"/>,&nbsp;
+	</span>
+	<span>
+		<span>{{localize "torgeternity.attributes.mind"}}</span>
+		<input name="data.attributes.mind" type="number" value="{{data.data.attributes.mind}}" data="dtype="Number"" class="small-input"/>,&nbsp;
+	</span>
+	<span>
+		<span>{{localize "torgeternity.attributes.spirit"}}</span>
+		<input name="data.attributes.spirit" type="number" value="{{data.data.attributes.spirit}}" data="dtype="Number"" class="small-input"/>,&nbsp;
+	</span>
+	<span>
+		<span>{{localize "torgeternity.attributes.strength"}}</span>
+		<input name="data.attributes.strength" type="number" value="{{data.data.attributes.strength}}" data="dtype="Number"" class="small-input"/>
+	</span>
 
-
-    </div>
-    <div class="threat-edit">
-        <b>{{localize "torgeternity.sheetLabels.skills"}}</b>
-    </div>
-    <div class="skill-list-edit">
-        {{#each data.data.skills as |skill key|}}
-        <div class="skill-element-edit">
-            <span style="position:relative">{{localize (concatSkillName key)}}
-            </span>
-            <span class="inputsFav">
-                <input name="data.skills.{{key}}.value" type="number" class="small-input" value="{{skill.value}}"
-                    data-dtype="Number" />
-
-                <a class="toggleFav {{#if skill.isFav}}checked
-                        {{/if}}"><i class="far fa-star"></i></a>
-                <input class="favCheck" type="checkbox" name="data.skills.{{key}}.isFav" {{checked skill.isFav}}
-                    data-dtype="Boolean" />
-            </span>
-        </div>
-        {{/each}}
-    </div>
-
-
-
-
-    <div class="threat-edit">
-        {{localize "torgeternity.sheetLabels.move"}}:&nbsp;
-        <input name="data.other.move" class="small-input" type="number" value="{{data.data.other.move}}"
-            data-dtype="Number" />;&nbsp;
-        {{localize "torgeternity.sheetLabels.tough"}}:&nbsp;
-        <input name="data.other.toughness" class="small-input" type="number" value="{{data.data.other.toughness}}"
-            data-dtype="Number" />&nbsp;/&nbsp;(<input name="data.other.armor" class="small-input" type="number"
-            value="{{data.data.other.armor}}" data-dtype="Number" />)
-    </div>
-    <div class="threat-edit">
-        {{localize "torgeternity.sheetLabels.possibilitypotential"}}:&nbsp;
-        <input name="data.details.possibilitypotential" class="text-input" type="text"
-            value="{{data.data.details.possibilitypotential}}" />
-    </div>
-    <div class="threat-edit">
-        {{localize "torgeternity.sheetLabels.size"}}: &nbsp;
-        <select name="data.details.sizeBonus" class="input-box">
-            {{#select data.data.details.sizeBonus}}
-            {{#each config.sizes as |name type|}}
-            <option value="{{type}}">{{localize name}}</option>
-            {{/each}}
-            {{/select}}
-        </select>
-    </div>
 
 </div>
+<div class="threat-edit">
+	<b>{{localize "torgeternity.sheetLabels.skills"}}</b>
+</div>
+<div class="skill-list-edit">
+	{{#each data.data.skills as |skill key|}}
+		<div class="skill-element-edit">
+			<span style="position:relative">{{localize (concatSkillName key)}}
+			</span>
+			<span class="inputsFav">
+				<input name="data.skills.{{key}}.value" type="number" class="small-input" value="{{skill.value}}" data-dtype="Number"/>
+
+				<a class="toggleFav {{#if skill.isFav}}checked
+						                        {{/if}}">
+					<i class="far fa-star"></i>
+				</a>
+				<input class="favCheck" type="checkbox" name="data.skills.{{key}}.isFav" {{checked skill.isFav}} data-dtype="Boolean"/>
+			</span>
+		</div>
+	{{/each}}
+</div>
+
+
+<div class="threat-edit">
+	{{localize "torgeternity.sheetLabels.move"}}:&nbsp;
+	<input name="data.other.move" class="small-input" type="number" value="{{data.data.other.move}}" data-dtype="Number"/>;&nbsp;
+	{{localize "torgeternity.sheetLabels.tough"}}:&nbsp;
+	<input name="data.other.toughness" class="small-input" type="number" value="{{data.data.other.toughness}}" data-dtype="Number"/>&nbsp;/&nbsp;(<input name="data.other.armor" class="small-input" type="number" value="{{data.data.other.armor}}" data-dtype="Number"/>)
+</div>
+<div class="threat-edit">
+	{{localize "torgeternity.sheetLabels.possibilitypotential"}}:&nbsp;
+	<input name="data.details.possibilitypotential" class="text-input" type="text" value="{{data.data.details.possibilitypotential}}"/>
+</div>
+<div class="threat-edit">
+	{{localize "torgeternity.sheetLabels.size"}}: &nbsp;
+	<select name="data.details.sizeBonus" class="input-box">
+		{{#select data.data.details.sizeBonus}}
+			{{#each config.sizes as |name type|}}
+				<option value="{{type}}">{{localize name}}</option>
+			{{/each}}
+		{{/select}}
+	</select>
+</div></div>

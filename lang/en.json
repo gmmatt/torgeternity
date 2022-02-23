@@ -334,7 +334,8 @@
             "availableEnhancements": "Available Enhancements",
             "taken": "Taken",
             "titleDescription": "Title/Description",
-            "pool": "pool"
+            "pool": "pool",
+            "skillRollHint": "Shift-click for enhanced skill test"
 
         },
         "combat": {
@@ -438,10 +439,18 @@
             "unconscious": "Unconscious",
             "blind": "Blind"
         },
-
         "yesNo": {
             "true": "Yes",
             "false": "No"
+        },
+        "submit": {
+            "true": "Yes",
+            "false": "No",
+            "cancel": "Cancel",
+            "apply": "Apply",
+            "OK": "OK",
+            "dontShow": "Don't show again"
+
         },
         "chatText": {
             "possibility": "Possibility",
@@ -492,6 +501,18 @@
             "discards": "Discards",
             "openHand": "Open Hand",
             "lifelike": "lifelike display"
+        },
+        "iconeTitles": {
+            "openParty": "Open the party sheet",
+            "resetPossibilities": "Reset Stormknight possibilities",
+            "delete": "Delete",
+            "edit": "Edit",
+            "sendToChat": "Send to Chat",
+            "toggle": "Toggle",
+            "attackRoll": "Attack Roll",
+            "spellRoll": "Spell roll",
+            "miracleRoll": "Miracle roll",
+            "psionicRoll": "Psionic power roll"
         },
 
         "cosmDecks": {

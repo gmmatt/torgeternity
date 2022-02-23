@@ -231,7 +231,7 @@
             "specialAbility": "Capacité spéciale",
             "threat": "Menace",
             "skills": "Compétences",
-            "favorite": "Favorisée",
+            "favored": "Favorisée",
             "possibilitypotential": "Possibilités (Potentielle)",
             "size": "Size",
             "possibilities": "Possibilités",
@@ -250,8 +250,8 @@
             "spirit": "Spirituel",
             "tech": "Technologie",
             "attribute": "Attribut",
-            "adds": "Adds",
-            "total": "Total",
+            "adds": "Rang",
+            "total": "Valeur",
             "defenses": "Défenses",
             "activeDefense": "Défense active",
             "melee": "Mêlée",
@@ -278,7 +278,7 @@
             "goodResult": "Résultat supérieur",
             "outstandingResult": "Résultat spectaculaire",
             "effectCreate": "Créer Effet",
-            "add": "Add",
+            "add": "Ajout",
             "derivedValues": "Valeurs dérivées",
             "tempEffects": "Effets temporaires",
             "passiveEffects": "Effets passifs",
@@ -334,7 +334,8 @@
             "availableEnhancements": "Améliorations disponibles",
             "taken": "Acquis",
             "titleDescription": "Titre/Description",
-            "pool": "reserve d'action"
+            "pool": "reserve d'action",
+            "skillRollHint": "Shift-click pour un jet avancé"
 
         },
         "combat": {
@@ -438,10 +439,18 @@
             "unconscious": "Inconscient",
             "blind": "Aveugle"
         },
-
         "yesNo": {
             "true": "Oui",
             "false": "Non"
+        },
+
+        "submit": {
+            "true": "Oui",
+            "false": "Non",
+            "cancel": "Annuler",
+            "apply": "Appliquer",
+            "OK": "OK",
+            "dontShow": "Ne plus afficher"
         },
         "chatText": {
             "possibility": "Possibilité",
@@ -494,7 +503,18 @@
             "lifelike": "affichage 'comme en vrai'"
 
         },
-
+        "iconeTitles": {
+            "openParty": "Ouvrir la fiche du groupe",
+            "resetPossibilities": "Rétablir les possibilités des Chevalier des Tempêtes",
+            "delete": "Supprimer",
+            "edit": "Editer",
+            "sendToChat": "Envoyer dans le chat",
+            "toggle": "activer/désactiver",
+            "attackRoll": "jet d'attaque",
+            "spellRoll": "jet de sort",
+            "miracleRoll": "jet de miracle",
+            "psionicRoll": "jet de pouvoir psionnique"
+        },
         "cosmDecks": {
             "coreEarth": "Cartes Cosm Prime Terre",
             "aysle": "Cartes Cosm Aysle",
