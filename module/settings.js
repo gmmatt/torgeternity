@@ -1,12 +1,12 @@
 export function registerTorgSettings() {
 
-    
+
     //--------welcome message 
 
     game.settings.register("torgeternity", "welcomeMessage", {
         // game.setting.register("NameOfTheModule", "VariableName",
-        name: "Display the Welcome Message", // Register a module setting with checkbox
-        hint: "If checked, the welcome message will pop up after your world loads.", // Description of the settings
+        name: "torgeternity.settingMenu.welcome.name", // Register a module setting with checkbox
+        hint: "torgeternity.settingMenu.welcome.hint", // Description of the settings
         scope: "world", // This specifies a client-stored setting
         config: true, // This specifies that the setting appears in the configuration view
         type: Boolean,
@@ -15,8 +15,8 @@ export function registerTorgSettings() {
 
     //---------Set up Cards
     game.settings.register("torgeternity", "setUpCards", {
-        name: "Setup the Cards Directory",
-        hint: "If checked, the system will re-set the decks and discard piles in the Card Stacks tab. You will need to refresh your browser before the changes are made.",
+        name: "torgeternity.settingMenu.setupCards.name", // Register a module setting with checkbox
+        hint: "torgeternity.settingMenu.setupCards.hint", // Description of the settings
         scope: "world",
         config: true,
         type: Boolean,
@@ -27,33 +27,33 @@ export function registerTorgSettings() {
 
     game.settings.register("torgeternity", "pauseMedia", {
         // game.setting.register("NameOfTheModule", "VariableName",
-        name: "Pause Image Media", // Register a module setting with checkbox
-        hint: "Choose the image that is displayed when the game is paused.", // Description of the settings
+        name: "torgeternity.settingMenu.pauseMedia.name", // Register a module setting with checkbox
+        hint: "torgeternity.settingMenu.pauseMedia.hint", // Description of the settings
         type: window.Azzu.SettingsTypes.FilePickerImage,
-        default: 'systems/torgeternity/images/pause.webp',
+        default: {},
         scope: 'world',
         config: true,
         restricted: true,
-        
+
     });
     //animated chat messages
 
     game.settings.register("torgeternity", "animatedChat", {
         // game.setting.register("NameOfTheModule", "VariableName",
-        name: "Chat Card Animation", // Register a module setting with checkbox
-        hint: "If checked, enable chat card animations. Changing this setting will reload the app", // Description of the settings
+        name: "torgeternity.settingMenu.animatedChat.name", // Register a module setting with checkbox
+        hint: "torgeternity.settingMenu.animatedChat.hint", // Description of the settings
         scope: "world", // This specifies a client-stored setting
         config: true, // This specifies that the setting appears in the configuration view
         type: Boolean,
         default: true, // The default value for the setting
         onChange: () => window.location.reload()
     });
-    
+
 
     //GM Screen
     game.settings.register("torgeternity", "gmScreen", {
-        name: "Select the GM Screen You Want to Use",
-        hint: "You can select a GM screen from any active module. If you select a module that is not installed, the GM screen function may not work properly. NOTE: you need to refresh your browser (F5) after switching screens.",
+        name: "torgeternity.settingMenu.gmScreen.name", // Register a module setting with checkbox
+        hint: "torgeternity.settingMenu.gmScreen.hint", // Description of the settings
         scope: "world",
         config: true,
         type: String,
@@ -66,8 +66,8 @@ export function registerTorgSettings() {
 
     //Hide Compendiums
     game.settings.register("torgeternity", "hideGerman", {
-        name: "Hide German Compendiums",
-        hint: "Select to hide German compendiums on startup.",
+        name: "torgeternity.settingMenu.hideGerman.name", // Register a module setting with checkbox
+        hint: "torgeternity.settingMenu.hideGerman.hint", // Description of the settings
         scope: "world",
         config: true,
         type: Boolean,
@@ -75,8 +75,8 @@ export function registerTorgSettings() {
     });
 
     game.settings.register("torgeternity", "hideEnglish", {
-        name: "Hide English Compendiums",
-        hint: "Select to hide English compendiums on startup.",
+        name: "torgeternity.settingMenu.hideEnglish.name", // Register a module setting with checkbox
+        hint: "torgeternity.settingMenu.hideEnglish.hint", // Description of the settings
         scope: "world",
         config: true,
         type: Boolean,
@@ -115,37 +115,37 @@ export function registerTorgSettings() {
         }
     })
     */
-/*
-    game.settings.register("torgeternity", "activeDramaDeck", {
-        name: "Active Drama Deck",
-        hint: "Name of the deck that is used to draw Drama cards.",
-        scope: "world",
-        config: true,
-        type: String,
-        choices: {
-            coreDrama: "Drama Deck",
-            coreEarth: "Core Earth Drama Deck",
-            aysle: "Aysle Drama Deck",
-            cyberPapacy: "Cyberpapacy Drama Deck",
-            livingLand: "Living Land Drama Deck",
-            nileEmpire: "Nile Empire Drama Deck",
-            orrorsh: "Orrorsh Drama Deck",
-            panPacifica: "Pan Pacifica Drama Deck",
-            tharkold: "Tharkold Drama Deck"
+    /*
+        game.settings.register("torgeternity", "activeDramaDeck", {
+            name: "Active Drama Deck",
+            hint: "Name of the deck that is used to draw Drama cards.",
+            scope: "world",
+            config: true,
+            type: String,
+            choices: {
+                coreDrama: "Drama Deck",
+                coreEarth: "Core Earth Drama Deck",
+                aysle: "Aysle Drama Deck",
+                cyberPapacy: "Cyberpapacy Drama Deck",
+                livingLand: "Living Land Drama Deck",
+                nileEmpire: "Nile Empire Drama Deck",
+                orrorsh: "Orrorsh Drama Deck",
+                panPacifica: "Pan Pacifica Drama Deck",
+                tharkold: "Tharkold Drama Deck"
+            }
+        
+        })
+    */
+
+    /* function setCosmCard(cosm, path) {
+        let cards = document.getElementsByClassName("cosm-card");
+        for (let card of cards) {
+            if (card.classList.contains(cosm)) {
+                card.style.background = `url(${path})`
+
+            }
         }
-    
-    })
-*/
 
-/* function setCosmCard(cosm, path) {
-    let cards = document.getElementsByClassName("cosm-card");
-    for (let card of cards) {
-        if (card.classList.contains(cosm)) {
-            card.style.background = `url(${path})`
-
-        }
-    }
-
-} 
-*/
+    } 
+    */
 }
