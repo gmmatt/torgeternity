@@ -197,10 +197,10 @@ export default class torgeternityPlayerHand extends CardsHand {
             for (let i = 0; i < area.children.length; i++) {
 
                 let card = area.children[i];
-                card.style.transform = `rotateZ(${(i*20)}deg)`;
+                card.style.transform = `rotateZ(${(i*4)}deg) translateX(${i*30}px)`;
                 console.log(card)
             }
-            area.style.transform = `rotateZ(${-((area.children.length-1)*10)}deg)`
+            area.style.transform = `rotateZ(${-((area.children.length-1)*2)}deg) translateX(-${area.children.length*15}px)`
 
         }
     }

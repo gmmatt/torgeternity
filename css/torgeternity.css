@@ -511,9 +511,14 @@ form input {
     background-position: center;
     padding: 2px;
     border: none;
+    z-index: -1;
     border-radius: 50%;
     box-shadow: 0px 0px 5px blue;
     transition: all 500ms cubic-bezier(0.42, 0, 0.58, 1) 10ms;
+}
+
+.window-app .window-resizable-handle:hover {
+    z-index: +1;
 }
 
 .window-app .window-resizable-handle i.fas {
