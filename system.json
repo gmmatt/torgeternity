@@ -1,100 +1,99 @@
 {
-  "name": "torgeternity",
-  "title": "Torg Eternity",
-  "description": "Torg Eternity character sheet for Foundry VTT.",
-  "author": "Matt Ritchie",
+    "name": "torgeternity",
+    "title": "Torg Eternity",
+    "description": "Torg Eternity character sheet for Foundry VTT.",
+    "author": "Matt Ritchie",
 
-  "version": "2.3.4",
+    "version": "2.3.4",
 
-  "minimumCoreVersion": "9",
-  "compatibleCoreVersion": "9", 
-  "templateVersion": "4.2.2",
-  "esmodules": [
-    "torgeternity.js"
-  ],
-  "scripts":[
-    "./module/lib/setting-extender.js"
-  ],
-  "styles": [
-    "./css/torgeternity.css",
-    "./css/journal.css"
-  ],
-  "background":"images/splash.webp",
-   "packs": [
-    {
-      "name": "archetypes",
-      "label": "Archetypes",
-      "system": "torgeternity",
-      "module": "torgeternity",
-      "path": "packs/archetypes.db",
-      "entity": "Actor"
-    },
-    {
-      "name": "basic-rules",
-      "label": "Basic Rules",
-      "system": "torgeternity",
-      "module": "torgeternity",
-      "path": "packs/basic-rules.db",
-      "entity": "JournalEntry"
-    },
-    {
-      "name": "core-card-set",
-      "label": "Core Card Set",
-      "system": "torgeternity",
-      "module": "torgeternity",
-      "path": "packs/core-card-set.db",
-      "entity": "Cards"
-    },
-    {
-      "name": "system-de-archetypen",
-      "label": "Archetypen",
-      "path": "packs/deutsch/archetypen.db",
-      "module": "torgeternity",
-      "entity": "Actor"
-    },
-    {
-      "name": "system-de-basisregeln",
-      "label": "Basisregeln",
-      "path": "packs/deutsch/basisregeln.db",
-      "module": "torgeternity",
-      "entity": "JournalEntry"
-    },
-    {
-      "name": "system-de-grundkarten",
-      "label": "Dramadeck",
-      "path": "packs/deutsch/core-card-set-de.db",
-      "module": "torgeternity",
-      "entity": "Cards"
-    }
-  ],
-  "languages": [
-    {
-      "lang": "en",
-      "name": "English",
-      "path": "lang/en.json"
-    },
-    {
-      "lang": "fr",
-      "name": "Francais",
-      "path": "lang/fr.json"
-    },
-    {
-      "lang": "es",
-      "name": "Español",
-      "path": "lang/es.json"    
-    },
-    {
-      "lang": "de",
-      "name": "German",
-      "path": "lang/de.json"    
-    }
-  ],
-  "socket":true,
-  "gridDistance": 1,
-  "gridUnits": "m",
-  "primaryTokenAttribute": "wounds",
-  "secondaryTokenAttribute": "shock",
-  "url": "https://github.com/gmmatt/torgeternity",
-  "manifest": "https://github.com/gmmatt/torgeternity/releases/latest/download/system.json",
-  "download": "https://github.com/gmmatt/torgeternity/releases/latest/download/torgeternity.zip"
+    "minimumCoreVersion": "9",
+    "compatibleCoreVersion": "9",
+    "templateVersion": "4.2.2",
+    "esmodules": [
+        "torgeternity.js"
+    ],
+    "scripts": [
+        "./module/lib/setting-extender.js"
+    ],
+    "styles": [
+        "./css/torgeternity.css",
+        "./css/journal.css",
+        "./css/cards.css"
+    ],
+    "background": "images/splash.webp",
+    "packs": [{
+            "name": "archetypes",
+            "label": "Archetypes",
+            "system": "torgeternity",
+            "module": "torgeternity",
+            "path": "packs/archetypes.db",
+            "entity": "Actor"
+        },
+        {
+            "name": "basic-rules",
+            "label": "Basic Rules",
+            "system": "torgeternity",
+            "module": "torgeternity",
+            "path": "packs/basic-rules.db",
+            "entity": "JournalEntry"
+        },
+        {
+            "name": "core-card-set",
+            "label": "Core Card Set",
+            "system": "torgeternity",
+            "module": "torgeternity",
+            "path": "packs/core-card-set.db",
+            "entity": "Cards"
+        },
+        {
+            "name": "system-de-archetypen",
+            "label": "Archetypen",
+            "path": "packs/deutsch/archetypen.db",
+            "module": "torgeternity",
+            "entity": "Actor"
+        },
+        {
+            "name": "system-de-basisregeln",
+            "label": "Basisregeln",
+            "path": "packs/deutsch/basisregeln.db",
+            "module": "torgeternity",
+            "entity": "JournalEntry"
+        },
+        {
+            "name": "system-de-grundkarten",
+            "label": "Dramadeck",
+            "path": "packs/deutsch/core-card-set-de.db",
+            "module": "torgeternity",
+            "entity": "Cards"
+        }
+    ],
+    "languages": [{
+            "lang": "en",
+            "name": "English",
+            "path": "lang/en.json"
+        },
+        {
+            "lang": "fr",
+            "name": "Francais",
+            "path": "lang/fr.json"
+        },
+        {
+            "lang": "es",
+            "name": "Español",
+            "path": "lang/es.json"
+        },
+        {
+            "lang": "de",
+            "name": "German",
+            "path": "lang/de.json"
+        }
+    ],
+    "socket": true,
+    "gridDistance": 1,
+    "gridUnits": "m",
+    "primaryTokenAttribute": "wounds",
+    "secondaryTokenAttribute": "shock",
+    "url": "https://github.com/gmmatt/torgeternity",
+    "manifest": "https://github.com/gmmatt/torgeternity/releases/latest/download/system.json",
+    "download": "https://github.com/gmmatt/torgeternity/releases/latest/download/torgeternity.zip"
 }
