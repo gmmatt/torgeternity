@@ -1443,7 +1443,8 @@ form.actor-sheet header input[name="name"] {
     transition: all 0.1s cubic-bezier(1, 0, 0, 1) 0.1s;
     color: white;
     background-image: url(../images/tab_back.webp);
-    background-size: contain;
+    background-size: 100% 100%;
+    padding: 8px 1px;
 }
 
 .window-content .actor-sheet nav.tabs a.item:hover,
