@@ -6,9 +6,9 @@ import {
     onManageActiveEffect,
     prepareActiveEffectCategories
 } from "/systems/torgeternity/module/effects.js";
-import {skillDialog} from "/systems/torgeternity/module/skill-dialog.js";
-import {attackDialog} from "/systems/torgeternity/module/attack-dialog.js";
-import {interactionDialog} from "/systems/torgeternity/module/interaction-dialog.js";
+import { skillDialog } from "/systems/torgeternity/module/skill-dialog.js";
+import { attackDialog } from "/systems/torgeternity/module/attack-dialog.js";
+import { interactionDialog } from "/systems/torgeternity/module/interaction-dialog.js";
 
 export default class torgeternityActorSheet extends ActorSheet {
     constructor(...args) {
@@ -50,70 +50,70 @@ export default class torgeternityActorSheet extends ActorSheet {
         const data = super.getData();
         var firstItem = 0
 
-        data.meleeweapons = data.items.filter(function (item) {
+        data.meleeweapons = data.items.filter(function(item) {
             return item.type == "meleeweapon"
         });
-        data.customAttack = data.items.filter(function (item) {
+        data.customAttack = data.items.filter(function(item) {
             return item.type == "customAttack"
         });
-        data.customSkill = data.items.filter(function (item) {
+        data.customSkill = data.items.filter(function(item) {
             return item.type == "customSkill"
         });
-        data.gear = data.items.filter(function (item) {
+        data.gear = data.items.filter(function(item) {
             return item.type == "gear"
         });
-        data.eternityshard = data.items.filter(function (item) {
+        data.eternityshard = data.items.filter(function(item) {
             return item.type == "eternityshard"
         });
-        data.armor = data.items.filter(function (item) {
+        data.armor = data.items.filter(function(item) {
             return item.type == "armor"
         });
-        data.shield = data.items.filter(function (item) {
+        data.shield = data.items.filter(function(item) {
             return item.type == "shield"
         });
-        data.missileweapon = data.items.filter(function (item) {
+        data.missileweapon = data.items.filter(function(item) {
             return item.type == "missileweapon"
         });
-        data.firearm = data.items.filter(function (item) {
+        data.firearm = data.items.filter(function(item) {
             return item.type == "firearm"
         });
-        data.implant = data.items.filter(function (item) {
+        data.implant = data.items.filter(function(item) {
             return item.type == "implant"
         });
-        data.heavyweapon = data.items.filter(function (item) {
+        data.heavyweapon = data.items.filter(function(item) {
             return item.type == "heavyweapon"
         });
-        data.vehicle = data.items.filter(function (item) {
+        data.vehicle = data.items.filter(function(item) {
             return item.type == "vehicle"
         });
-        data.perk = data.items.filter(function (item) {
+        data.perk = data.items.filter(function(item) {
             return item.type == "perk"
         });
-        data.spell = data.items.filter(function (item) {
+        data.spell = data.items.filter(function(item) {
             return item.type == "spell"
         });
-        data.miracle = data.items.filter(function (item) {
+        data.miracle = data.items.filter(function(item) {
             return item.type == "miracle"
         });
-        data.psionicpower = data.items.filter(function (item) {
+        data.psionicpower = data.items.filter(function(item) {
             return item.type == "psionicpower"
         });
-        data.specialability = data.items.filter(function (item) {
+        data.specialability = data.items.filter(function(item) {
             return item.type == "specialability"
         });
-        data.specialabilityRollable = data.items.filter(function (item) {
+        data.specialabilityRollable = data.items.filter(function(item) {
             return item.type == "specialability-rollable"
         });
-        data.enhancement = data.items.filter(function (item) {
+        data.enhancement = data.items.filter(function(item) {
             return item.type == "enhancement"
         });
-        data.dramaCard = data.items.filter(function (item) {
+        data.dramaCard = data.items.filter(function(item) {
             return item.type == "dramaCard"
         });
-        data.destinyCard = data.items.filter(function (item) {
+        data.destinyCard = data.items.filter(function(item) {
             return item.type == "destinyCard"
         });
-        data.cosmCard = data.items.filter(function (item) {
+        data.cosmCard = data.items.filter(function(item) {
             return item.type == "cosmCard"
         });
 
@@ -152,7 +152,7 @@ export default class torgeternityActorSheet extends ActorSheet {
 
         if (this.actor.isOwner) {
             html.find(".skill-edit-toggle").click(this._onSkillEditToggle.bind(this));
-        } 
+        }
 
         if (this.actor.isOwner) {
             html.find(".possibility-roll").click(this._onPossibilityRoll.bind(this));
@@ -211,9 +211,9 @@ export default class torgeternityActorSheet extends ActorSheet {
         }
 
         if (this.actor.isOwner) {
-            html.find(".apply-fatigue").click(ev => {                
+            html.find(".apply-fatigue").click(ev => {
                 let newShock = parseInt(this.actor.data.data.shock.value) + parseInt(ev.currentTarget.dataset.fatigue)
-                this.actor.update({'data.shock.value': newShock})
+                this.actor.update({ 'data.shock.value': newShock })
             });
         }
 
@@ -237,10 +237,10 @@ export default class torgeternityActorSheet extends ActorSheet {
                     name: this.actor.data.name,
                     type: "hand"
                 }
-                characterHand = Cards.create(cardData, {keepId: true, renderSheet:true});
+                characterHand = Cards.create(cardData, { keepId: true, renderSheet: true });
             }
         });
-        
+
         // Update Inventory Item
         html.find('.item-edit').click(ev => {
             const li = $(ev.currentTarget).parents(".item");
@@ -269,7 +269,7 @@ export default class torgeternityActorSheet extends ActorSheet {
                 close: html => {
                     if (applyChanges) {
                         const li = $(ev.currentTarget).parents(".item");
-                        this.actor.deleteEmbeddedDocuments("Item", [ li.data("itemId") ] );
+                        this.actor.deleteEmbeddedDocuments("Item", [li.data("itemId")]);
                         li.slideUp(200, () => this.render(false));
                     }
                 }
@@ -315,20 +315,20 @@ export default class torgeternityActorSheet extends ActorSheet {
             dramaTotal: 0,
             cardsPlayed: 0,
             sizeModifier: 0,
-            vulnerableModifier: 0      
+            vulnerableModifier: 0
         }
         if (this.actor.data.data.stymiedModifier === parseInt(-2)) {
             test.stymiedModifier = -2
-         } else if (this.actor.data.data.stymiedModifier === -4) {
+        } else if (this.actor.data.data.stymiedModifier === -4) {
             test.stymiedModifier = -4
-         }
+        }
 
-         if (event.shiftKey) {
+        if (event.shiftKey) {
             let testDialog = new skillDialog(test);
             testDialog.render(true);
         } else {
             torgchecks.SkillCheck(test);
-        } 
+        }
     }
 
     _onInteractionAttack(event) {
@@ -355,75 +355,75 @@ export default class torgeternityActorSheet extends ActorSheet {
             dramaTotal: 0,
             cardsPlayed: 0,
             sizeModifier: 0,
-            vulnerableModifier: 0      
+            vulnerableModifier: 0
         }
 
         // Exit if no target or get target data
-            if (Array.from(game.user.targets).length === 0) {
-                var needTargetData = {
-                    user: game.user.data._id,
-                    speaker: ChatMessage.getSpeaker(),
-                    owner: this.actor,
-                };
-        
-                var templateData = {
-                    message: "Cannot attempt interaction attack test without a target. Select a target and try again.",
-                    actorPic: this.actor.data.img
-                };
-        
-                const templatePromise = renderTemplate("./systems/torgeternity/templates/partials/skill-error-card.hbs", templateData);
-        
-                templatePromise.then(content => {
-                    needTargetData.content = content;
-                    ChatMessage.create(needTargetData);
-                })
-        
-                return;
-            } else {
-                var target = Array.from(game.user.targets)[0];
-                var targetType = target.actor.data.type;
-                test.vulnerableModifier = target.actor.data.data.vulnerableModifier;
-                if (test.interactionAttackType === "intimidation") {
-                    if (target.actor.data.data.skills.intimidation.value > 0) {
-                        test.targetDefenseSkill = game.i18n.localize("torgeternity.skills.intimidation")
-                        test.targetDefenseValue = target.actor.data.data.skills.intimidation.value
-                    } else {
-                        test.targetDefenseSkill = game.i18n.localize("torgeternity.attributes.charisma")
-                        test.targetDefenseValue = target.actor.data.data.attributes.charisma
-                    }
-                } else if (test.interactionAttackType === "maneuver") {
-                    if (target.actor.data.data.skills.maneuver.value > 0) {
-                        test.targetDefenseSkill = game.i18n.localize("torgeternity.skills.maneuver")
-                        test.targetDefenseValue = target.actor.data.data.skills.maneuver.value
-                    } else {
-                        test.targetDefenseSkill = game.i18n.localize("torgeternity.attributes.dexterity")
-                        test.targetDefenseValue = target.actor.data.data.attributes.dexterity
-                    }
-                } else if (test.interactionAttackType === "taunt") {
-                    if (target.actor.data.data.skills.taunt.value > 0) {
-                            test.targetDefenseSkill = game.i18n.localize("torgeternity.skills.taunt")
-                            test.targetDefenseValue = target.actor.data.data.skills.taunt.value
-                        } else {
-                            test.targetDefenseSkill = game.i18n.localize("torgeternity.attributes.spirit")
-                            test.targetDefenseValue = target.actor.data.data.attributes.spirit
-                    }
-                } else if (test.interactionAttackType === "trick") {
-                    if (target.actor.data.data.skills.trick.value > 0) {
-                        test.targetDefenseSkill = game.i18n.localize("torgeternity.skills.trick")
-                        test.targetDefenseValue = target.actor.data.data.skills.trick.value
-                    } else {
-                        test.targetDefenseSkill = game.i18n.localize("torgeternity.attributes.mind")
-                        test.targetDefenseValue = target.actor.data.data.attributes.mind
-                    }
+        if (Array.from(game.user.targets).length === 0) {
+            var needTargetData = {
+                user: game.user.data._id,
+                speaker: ChatMessage.getSpeaker(),
+                owner: this.actor,
+            };
+
+            var templateData = {
+                message: game.i18n.localize('torgeternity.chatText.check.needTarget'),
+                actorPic: this.actor.data.img
+            };
+
+            const templatePromise = renderTemplate("./systems/torgeternity/templates/partials/skill-error-card.hbs", templateData);
+
+            templatePromise.then(content => {
+                needTargetData.content = content;
+                ChatMessage.create(needTargetData);
+            })
+
+            return;
+        } else {
+            var target = Array.from(game.user.targets)[0];
+            var targetType = target.actor.data.type;
+            test.vulnerableModifier = target.actor.data.data.vulnerableModifier;
+            if (test.interactionAttackType === "intimidation") {
+                if (target.actor.data.data.skills.intimidation.value > 0) {
+                    test.targetDefenseSkill = game.i18n.localize("torgeternity.skills.intimidation")
+                    test.targetDefenseValue = target.actor.data.data.skills.intimidation.value
+                } else {
+                    test.targetDefenseSkill = game.i18n.localize("torgeternity.attributes.charisma")
+                    test.targetDefenseValue = target.actor.data.data.attributes.charisma
+                }
+            } else if (test.interactionAttackType === "maneuver") {
+                if (target.actor.data.data.skills.maneuver.value > 0) {
+                    test.targetDefenseSkill = game.i18n.localize("torgeternity.skills.maneuver")
+                    test.targetDefenseValue = target.actor.data.data.skills.maneuver.value
+                } else {
+                    test.targetDefenseSkill = game.i18n.localize("torgeternity.attributes.dexterity")
+                    test.targetDefenseValue = target.actor.data.data.attributes.dexterity
+                }
+            } else if (test.interactionAttackType === "taunt") {
+                if (target.actor.data.data.skills.taunt.value > 0) {
+                    test.targetDefenseSkill = game.i18n.localize("torgeternity.skills.taunt")
+                    test.targetDefenseValue = target.actor.data.data.skills.taunt.value
+                } else {
+                    test.targetDefenseSkill = game.i18n.localize("torgeternity.attributes.spirit")
+                    test.targetDefenseValue = target.actor.data.data.attributes.spirit
+                }
+            } else if (test.interactionAttackType === "trick") {
+                if (target.actor.data.data.skills.trick.value > 0) {
+                    test.targetDefenseSkill = game.i18n.localize("torgeternity.skills.trick")
+                    test.targetDefenseValue = target.actor.data.data.skills.trick.value
+                } else {
+                    test.targetDefenseSkill = game.i18n.localize("torgeternity.attributes.mind")
+                    test.targetDefenseValue = target.actor.data.data.attributes.mind
                 }
             }
+        }
 
 
         if (this.actor.data.data.stymiedModifier === parseInt(-2)) {
             test.stymiedModifier = -2
-         } else if (this.actor.data.data.stymiedModifier === -4) {
+        } else if (this.actor.data.data.stymiedModifier === -4) {
             test.stymiedModifier = -4
-         }
+        }
 
         let testDialog = new interactionDialog(test);
         testDialog.render(true);
@@ -445,7 +445,7 @@ export default class torgeternityActorSheet extends ActorSheet {
         };
 
 
-    } 
+    }
 
     _onPossibilityRoll(event) {
         torgchecks.PossibilityCheck({
@@ -499,19 +499,19 @@ export default class torgeternityActorSheet extends ActorSheet {
                     speaker: ChatMessage.getSpeaker(),
                     owner: this.actor,
                 };
-        
+
                 var templateData = {
-                    message: "Cannot attempt enhanced attack test without a target. Select a target and try again.",
+                    message: game.i18n.localize('torgeternity.chatText.check.needTarget'),
                     actorPic: this.actor.data.img
                 };
-        
+
                 const templatePromise = renderTemplate("./systems/torgeternity/templates/partials/skill-error-card.hbs", templateData);
-        
+
                 templatePromise.then(content => {
                     needTargetData.content = content;
                     ChatMessage.create(needTargetData);
                 })
-        
+
                 return;
             } else {
                 var target = Array.from(game.user.targets)[0];
@@ -599,14 +599,14 @@ export default class torgeternityActorSheet extends ActorSheet {
             chatNote: weaponData.chatNote
 
         }
-        
+
         if (event.shiftKey) {
             let testDialog = new attackDialog(test);
             testDialog.render(true);
         } else {
-            torgchecks.weaponAttack(test)            
+            torgchecks.weaponAttack(test)
         }
-    
+
     };
 
     _onBonusRoll(event) {
@@ -621,7 +621,7 @@ export default class torgeternityActorSheet extends ActorSheet {
         const item = this.actor.items.get(itemID);
         var powerData = item.data.data;
         var skillData = this.actor.data.data.skills[powerData.skill];
-        
+
         let test = {
             testType: "power",
             actor: this.actor,
@@ -647,14 +647,14 @@ export default class torgeternityActorSheet extends ActorSheet {
             dramaTotal: 0,
             cardsPlayed: 0,
             sizeModifier: 0,
-            vulnerableModifier: 0      
+            vulnerableModifier: 0
         }
         if (event.shiftKey) {
             let testDialog = new skillDialog(test);
             testDialog.render(true);
         } else {
             torgchecks.powerRoll(test);
-        } 
+        }
     }
 
     _onCreateSa(event) {
@@ -663,7 +663,7 @@ export default class torgeternityActorSheet extends ActorSheet {
             name: "Name",
             type: "specialability"
         };
-        return this.actor.createEmbeddedDocuments("Item", [ itemData ], {
+        return this.actor.createEmbeddedDocuments("Item", [itemData], {
             renderSheet: true
         });
     }
@@ -674,7 +674,7 @@ export default class torgeternityActorSheet extends ActorSheet {
             name: "Name",
             type: "specialability-rollable"
         };
-        return this.actor.createEmbeddedDocuments("Item", [ itemData ], {
+        return this.actor.createEmbeddedDocuments("Item", [itemData], {
             renderSheet: true
         });
     }
@@ -691,11 +691,10 @@ export default class torgeternityActorSheet extends ActorSheet {
 
         } else if (toggleState === "") {
             document.getElementById("threat-editor").style.display = "inline";
-            this.actor.update ({
+            this.actor.update({
                 "data.editstate": "inline"
             });
-        }
-          else {
+        } else {
             document.getElementById("threat-editor").style.display = "none";
             this.actor.update({
                 "data.editstate": "none"

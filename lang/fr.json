@@ -335,7 +335,9 @@
             "taken": "Acquis",
             "titleDescription": "Titre/Description",
             "pool": "reserve d'action",
-            "skillRollHint": "Shift-click pour un jet avancé"
+            "skillRollHint": "Shift-click pour un jet avancé",
+            "toggleSkillDisplay": "afficher/masquer les compétences sans rang"
+
 
         },
         "combat": {
@@ -474,7 +476,50 @@
             "attack": "Attaque",
             "baseDamage": "Dommages de base",
             "value": "Valeur",
-            "notes": "Notes"
+            "notes": "Notes",
+            "check": {
+                "needTarget": "Impossible de réaliser un jet avancé sans cible. Ciblez un token puis ré-essayez.",
+                "cantUseUntrained": " ne peut pas être utilisé sans être appris (au moins un point de rang).",
+                "cantUseSkillRecquired": " ne peut pas être utilisé sans au moins un rang dans la compétence recquise",
+                "modifier": {
+                    "wounds": "blessures",
+                    "stymied": "destabilisé (-2 )",
+                    "veryStymied": "très destabilisé (-4)",
+                    "darkness": "obscurité ",
+                    "running": "course (-2) ",
+                    "multiAttack": "attaques multiples ",
+                    "multiAction": "actions multiples ",
+                    "multiTarget": "cibles multiples ",
+                    "targetSize": "taille de la cible",
+                    "targetVulnerable": "cible vulnérable (+2)",
+                    "targetVeryVulnerable": "cible très vulnérable (+4)",
+                    "calledShot": "attaque ciblée",
+                    "shortBurst": "rafale courte(+2)",
+                    "longBurst": "rafale longue(+4)",
+                    "heavyBurst": "rafale nourrie(+6)",
+                    "allOutAttack": "attaque totale",
+                    "aimedShot": "tir visé (+4)",
+                    "blindFire": "tir au jugé (-6)",
+                    "targetConcealment": "dissimulation de la cible"
+                },
+                "result": {
+                    "actionTotal": "total de l'action",
+                    "failure": "échec",
+                    "outstandingSuccess": "succès spéctaculaire",
+                    "goodSuccess": "succès supérieur",
+                    "standartSuccess": "succès simple",
+                    "mishape": "échec critique",
+                    "damage": "dommage",
+                    "toughness": "résistance",
+                    "noDamage": "pas de dommages",
+                    "attackMissed": "attaque ratée"
+                }
+
+
+
+
+
+            }
         },
 
         "sizes": {

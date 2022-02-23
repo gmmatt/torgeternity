@@ -507,7 +507,7 @@ function rollItemMacro(itemName) {
                 };
 
                 var templateData = {
-                    message: "Cannot attempt enhanced attack test without a target. Select a target and try again.",
+                    message: game.i18n.locallize('torgeternity.chatText.check.needTarget'),
                     actorPic: actor.data.img
                 };
 
@@ -636,7 +636,7 @@ function rollItemMacro(itemName) {
             break;
         default:
             ui.notifications.info("Default action, Gear for example");
-            return item.roll();
+            return item.roll({ async: false });
     }
 }
 

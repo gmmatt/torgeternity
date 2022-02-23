@@ -335,7 +335,8 @@
             "taken": "Taken",
             "titleDescription": "Title/Description",
             "pool": "pool",
-            "skillRollHint": "Shift-click for enhanced skill test"
+            "skillRollHint": "Shift-click for enhanced skill test",
+            "toggleSkillDisplay": "Click to toggle Skills display"
 
         },
         "combat": {
@@ -474,7 +475,45 @@
             "attack": "Attack",
             "baseDamage": "Base Damage",
             "value": "Value",
-            "notes": "Notes"
+            "notes": "Notes",
+            "check": {
+                "needTarget": "Cannot attempt enhanced attack test without a target. Select a target and try again.",
+                "cantUseUntrained": " cannot be used unless it is learned (at least 1 skill add).",
+                "cantUseSkillRecquired": " cannot be used without at least 1 add in the required skill.",
+                "modifier": {
+                    "wounds": "Wounds",
+                    "stymied": "Stymied (-2 )",
+                    "veryStymied": "Very Stymied (-4)",
+                    "darkness": "Darkness ",
+                    "running": "Running (-2) ",
+                    "multiAttack": "Multi-attack ",
+                    "multiAction": "Multi-action ",
+                    "multiTarget": "Multi-target ",
+                    "targetSize": "Target Size",
+                    "targetVulnerable": "Target Vulnerable (+2)",
+                    "targetVeryVulnerable": "Target very Vulnerable (+4)",
+                    "calledShot": "Called Shot",
+                    "shortBurst": "Short Burst(+2)",
+                    "longBurst": "Long Burst(+4)",
+                    "heavyBurst": "Heavy Burst(+6)",
+                    "allOutAttack": "All out Attack",
+                    "aimedShot": "Aimed Shot (+4)",
+                    "blindFire": "Blind Fire (-6)",
+                    "targetConcealment": "Target Concealment"
+                },
+                "result": {
+                    "actionTotal": "Action Total",
+                    "failure": "Failure",
+                    "outstandingSuccess": "Outstanding Success",
+                    "goodSuccess": "Good Success",
+                    "standartSuccess": "Standart Success",
+                    "mishape": "Mishape",
+                    "damage": "Damage",
+                    "toughness": "Toughness",
+                    "noDamage": "No Damage",
+                    "attackMissed": "Attack Missed"
+                }
+            }
         },
 
         "sizes": {
