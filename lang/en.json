@@ -500,7 +500,8 @@
             "plays": "Plays",
             "discards": "Discards",
             "openHand": "Open Hand",
-            "lifelike": "lifelike display"
+            "lifelike": "lifelike display",
+            "return": "Returns all cards to their deck(s). Does NOT automatically reshuffle the deck(s)."
         },
         "iconeTitles": {
             "openParty": "Open the party sheet",
@@ -512,7 +513,12 @@
             "attackRoll": "Attack Roll",
             "spellRoll": "Spell roll",
             "miracleRoll": "Miracle roll",
-            "psionicRoll": "Psionic power roll"
+            "psionicRoll": "Psionic power roll",
+            "bonusRoll": "Bonus roll"
+        },
+        "possibilitiesReset": {
+            "name": "Reset Stormknight possibilities",
+            "hint": "How many possibilities should the StormKnights get ?"
         },
 
         "cosmDecks": {

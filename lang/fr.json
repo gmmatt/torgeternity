@@ -500,7 +500,8 @@
             "plays": "Jouer",
             "discards": "Défausser",
             "openHand": "voir sa main",
-            "lifelike": "affichage 'comme en vrai'"
+            "lifelike": "affichage 'comme en vrai'",
+            "return": "renvoit toutes les cartes dans leur pile d'origine.Ne remélange PAS automatiquement la pile."
 
         },
         "iconeTitles": {
@@ -513,7 +514,12 @@
             "attackRoll": "jet d'attaque",
             "spellRoll": "jet de sort",
             "miracleRoll": "jet de miracle",
-            "psionicRoll": "jet de pouvoir psionnique"
+            "psionicRoll": "jet de pouvoir psionnique",
+            "bonusRoll": "jet bonus"
+        },
+        "possibilitiesReset": {
+            "name": "ré-initialiser les possibilités",
+            "hint": "Combien de possibilités les Chevalier des Tempêtes doivent avoir ?"
         },
         "cosmDecks": {
             "coreEarth": "Cartes Cosm Prime Terre",

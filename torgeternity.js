@@ -146,11 +146,11 @@ Hooks.on("ready", async function() {
             buttons: {
                 one: {
                     icon: '<i class="fas fa-check"></i>',
-                    label: "OK",
+                    label: `${game.i18n.localize("torgeternity.submit.OK")}`,
                 },
                 two: {
                     icon: '<i class="fas fa-ban"></i>',
-                    label: "Don't show again",
+                    label: `${game.i18n.localize("torgeternity.submit.dontShow")}`,
                     callback: () =>
                         game.settings.set("torgeternity", "welcomeMessage", false),
                 },
