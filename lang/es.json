@@ -120,7 +120,8 @@
             "powers": "Poderes",
             "restrictions": "Restricciones",
             "minStrength": "FUE Min",
-            "ap": "PA"
+            "ap": "PA",
+            "chatNote": "Nota del chat"
         },
         "stats": {
             "wounds": "Heridas",
@@ -152,7 +153,8 @@
             "description": "Descripción",
             "good": "Buen Resultado",
             "outstanding": "Resultado Espectacular",
-            "attack": "Ataque"
+            "attack": "Ataque",
+            "ap": "AP"
         },
         "cosms": {
             "none": "(Ninguno)",
@@ -190,7 +192,15 @@
             "savagery": "Barbarie",
             "social": "Social",
             "spellcraft": "Conjuros",
-            "racial": "Racial"
+            "racial": "Racial",
+            "hacker": "Hacker",
+            "human": "Humano",
+            "abomination": "Abominación",
+            "aspirant": "Aspirante",
+            "depravity": "Depravación",
+            "theRace": "La carrera",
+            "corruption": "Corrupción",
+            "hope": "Esperanza"
         },
         "sheetLabels": {
             "stormknight": "CaballeroTormenta",
@@ -314,17 +324,18 @@
             "return": "Regresar",
             "notes": "Notes",
             "cosm": "Cosm",
-            "secondaryCosm": "Secondary Cosm",
-            "skillValue": "Skill Value",
-            "baseAttribute": "Base Attribute",
-            "customSkills": "Custom Skills",
-            "skillAdds": "Adds",
-            "fatigue": "Fatigue",
-            "limitations": "Limitations",
-            "availableEnhancements": "Available Enhancements",
-            "taken": "Taken",
-            "titleDescription": "Title/Description",
-            "pool": "pool"
+            "secondaryCosm": "Secundario Cosm",
+            "skillValue": "Valor de la habilidad",
+            "baseAttribute": "Atributo base",
+            "customSkills": "Habilidades personalizadas",
+            "skillAdds": "Añade",
+            "fatigue": "Fatiga",
+            "limitations": "Limitaciones",
+            "availableEnhancements": "Mejoras disponibles",
+            "taken": "Tomado",
+            "titleDescription": "Título/Descripción",
+            "pool": "reserva"
+
         },
         "combat": {
             "nextKeep": "nueva ronda (mantener la tarjeta actual)",
@@ -419,7 +430,12 @@
             "waiting": "Espera",
             "darkness": "Oscuridad",
             "targetSize": "Tamaño Objetivo",
-            "targetVulnerability": "Vulnerabilidad Objetivo"
+            "targetVulnerability": "Vulnerabilidad Objetivo",
+            "dead": "Mero",
+            "prone": "En el suelo",
+            "incapacitated": "Incapacitado",
+            "unconscious": "Inconsciente",
+            "blind": "Ciego"
         },
 
         "yesNo": {
@@ -491,7 +507,75 @@
         "cardTypes": {
             "destiny": "Destino",
             "drama": "Drama",
-            "cosm": "Cosmos"
+            "cosm": "Cosmos",
+            "hand": "Mano"
+
+        },
+
+        "scenes": {
+            "reality": "Realidad",
+            "realityHint": "Establece la realidad del área de la escena",
+            "HeaderDetailsHint": "Establece los detalles básicos de esta escena y los permisos que controlan su visibilidad",
+            "HeaderGridHint": "Configura las dimensiones de la cuadrícula que se utilizan para medir el movimiento de las fichas en esta escena.",
+            "HeaderVisionHint": "Configura los parámetros de visión, iluminación y niebla de guerra para esta escena",
+            "HeaderAmbienceHint": "Configura integraciones adicionales entre esta escena y las entradas del diario, las listas de reproducción o los efectos meteorológicos"
+        },
+
+        "tokens": {
+
+            "noDSR": "RDT",
+            "step": "step",
+            "a": " A",
+            "b": " B",
+            "c": " C",
+            "d": " D"
+
+        },
+        "poolToggle": {
+            "inPool": "tarjeta reservada",
+            "toogle": "reservar"
+        },
+        "settingMenu": {
+            "welcome": {
+                "name": "Mostrar mensaje de bienvenida",
+                "hint": "Si se selecciona, el mensaje de bienvenida aparecerá al cargar"
+            },
+            "setupCards": {
+                "name": "Instalar paquetes de tarjetas",
+                "hint": "Si se selecciona, el sistema reinstalará todos los mazos y descartará los montones. Deberá actualizar el navegador o la aplicación (F5)"
+            },
+            "pauseMedia": {
+                "name": "imagen de pausa",
+                "hint": "Elige la imagen que se muestra cuando el juego está en pausa"
+            },
+            "animatedChat": {
+                "name": "Animación de mensajes de chat",
+                " hint": "Si se selecciona, los mensajes del chat aparecerán con una animación. Al cambiar esta configuración se actualizará el navegador o la aplicación"
+            },
+            "gmScreen": {
+                "name": "Seleccionar imagen de pantalla",
+                "hint": "Puedes elegir qué pantalla de GM mostrar. Si selecciona un módulo que no está instalado, la pantalla GM no funcionará. NOTA: Debe actualizar el navegador o la aplicación (F5) después de validar su elección"
+            },
+            "hideGerman": {
+                "name": "Ocultar compendios alemanes",
+                "hint": "Seleccione para ocultar los compendios alemanes",
+
+                "hideEnglish": {
+                    "name": "Ocultar compendios en inglés",
+                    "hint": "Seleccionar para ocultar los compendios en inglés",
+                    "hideEnglish": {
+                        "name": "Hide English compendiums"
+                    }
+                }
+            }
         }
+    },
+
+
+    "CARD": {
+        "TypeCosm": "Cosm",
+        "TypeDestiny": "Destin",
+        "TypeDrama": "Action"
+
     }
 }
