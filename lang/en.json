@@ -542,6 +542,19 @@
             "lifelike": "lifelike display",
             "return": "Returns all cards to their deck(s). Does NOT automatically reshuffle the deck(s)."
         },
+        "dialogWindow": {
+            "hideForeignCompendium": {
+                "title": "Hide foreign languages Compendiums ?",
+                "content": "This system includes both English and German language compendiums. Do you want to hide foreign language compendiums ?"
+            },
+            "externalLinks": {
+                "title": "Links",
+                "content": "<p>Need help? Want to report a bug? Here are a few usefull links.</p>",
+                "reference": "<p>Reference</p>",
+                "bug": "<p>Bug?</p>",
+                "publisher": "<p>Publisher</p>"
+            }
+        },
         "iconeTitles": {
             "openParty": "Open the party sheet",
             "resetPossibilities": "Reset Stormknight possibilities",

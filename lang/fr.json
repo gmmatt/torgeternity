@@ -545,9 +545,15 @@
             "plays": "Jouer",
             "discards": "Défausser",
             "openHand": "voir sa main",
-            "lifelike": "affichage 'comme en vrai'",
+            "lifelike": "affichage 'en éventail'",
             "return": "renvoit toutes les cartes dans leur pile d'origine.Ne remélange PAS automatiquement la pile."
 
+        },
+        "dialogWindow": {
+            "hideForeignCompendium": {
+                "title": "cacher les compendiums en langue étrangère ?",
+                "content": "Ce système comprend des compendiums en anglais et en allemand. Voulez-vous masquer les compendiums en langues étrangères ? "
+            }
         },
         "iconeTitles": {
             "openParty": "Ouvrir la fiche du groupe",
