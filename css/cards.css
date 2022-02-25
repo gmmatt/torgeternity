@@ -38,7 +38,6 @@
     position: relative;
     right: 0%;
     top: 0;
-    transition: all 0.3s cubic-bezier(0.6, -0.07, 0.56, 1.52) 0.2s;
     width: 100%;
 }
 
@@ -60,26 +59,33 @@
 
 #handedCards .destinyCards li.card,
 #handedCards .cosmCards li.card {
-    transition: z-index 0.5s step-end, box-shadow 0.3s linear;
+    transition: all 0.7s;
     box-shadow: 1px 1px 20px 5px #111111;
     position: absolute;
     transform-origin: 50% 200% 0;
     transform: rotateZ( -5deg);
-    z-index: auto;
     top: 0;
     width: 100%;
     height: 100%;
     list-style: none;
 }
 
+#handedCards .destinyCards li.focusedCard,
+#handedCards .cosmCards li.focusedCard {
+    z-index: 400;
+    transform: scale(2);
+    width: 300%;
+    height: 300%;
+    transform-origin: 50% 50% 0;
+}
+
 #handedCards .destinyCards li.card:hover,
 #handedCards .cosmCards li.card:hover {
-    z-index: +1;
+    z-index: 302;
     box-shadow: 1px 1px 20px 5px #3a3a3a;
 }
 
 #handedCards .destinyCards li.card img.card-face,
-#handedCards .pooledCards li.card img.card-face,
 #handedCards .cosmCards li.card img.card-face {
     position: absolute;
     top: 0;
@@ -100,7 +106,12 @@
     transition: 0.5s;
     font-size: 1em;
     width: 0px;
+    height: 0;
     display: flex;
+}
+
+#handedCards li.card div.torg-card-controls>* {
+    height: 0;
 }
 
 #handedCards li.card div.torg-card-controls i {
@@ -115,17 +126,8 @@
 #handedCards li.card.focusedCard div.torg-card-controls {
     opacity: 1;
     width: 47px;
-    left: -47px
-}
-
-#handedCards .destinyCards li.focusedCard,
-#handedCards .cosmCards li.focusedCard {
-    transition: all 0.3s cubic-bezier(0.6, -0.07, 0.56, 1.52) 0.2s;
-    z-index: 300;
-    transform: scale(2);
-    width: 300%;
-    height: 300%;
-    transform-origin: 50% 50% 0;
+    left: -47px;
+    height: 100%
 }
 
 li.card.pooled {
