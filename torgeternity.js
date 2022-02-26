@@ -165,42 +165,23 @@ Hooks.on("ready", async function() {
     }
 
     //------Ask about hiding nonlocal compendium
-    if (game.i18n.lang === "en" && game.settings.get("torgeternity", "welcomeMessage") == true) {
+    if (game.settings.get("torgeternity", "welcomeMessage") == true && !game.settings.get("torgeternity", "hideForeignCompendium")) {
         let d = new Dialog({
-            title: "Hide German Compendiums?",
-            content: "This system includes both English and German language compendiums. Do you want to hide the German compendiums?",
+            title: game.i18n.localize("torgeternity.dialogWindow.hideForeignCompendium.title"),
+            content: game.i18n.localize("torgeternity.dialogWindow.hideForeignCompendium.content"),
             buttons: {
                 one: {
                     icon: `<i class="fas fa-check"></i>`,
-                    label: "Yes",
-                    callback: () =>
-                        game.settings.set("torgeternity", "hideGerman", true)
-                },
-                two: {
-                    icon: '<i class="fas fa-ban"></i>',
-                    label: "No",
-                }
-            }
-        }, {
-            top: 860,
-            left: 100
+                    label: game.i18n.localize("torgeternity.yesNo.true"),
+                    callback: async() => {
+                        await game.settings.set("torgeternity", "hideForeignCompendium", true);
+                        window.location.reload();
+                    }
 
-        });
-        d.render(true);
-    } else if (game.i18n.lang === "de" && game.settings.get("torgeternity", "welcomeMessage") == true) {
-        let d = new Dialog({
-            title: "Hide English Compendiums?",
-            content: "This system includes both English and German language compendiums. Do you want to hide the English compendiums?",
-            buttons: {
-                one: {
-                    icon: `<i class="fas fa-check"></i>`,
-                    label: "Yes",
-                    callback: () =>
-                        game.settings.set("torgeternity", "hideEnglish", true)
                 },
                 two: {
                     icon: '<i class="fas fa-ban"></i>',
-                    label: "No",
+                    label: game.i18n.localize("torgeternity.yesNo.false"),
                 }
             }
         }, {
