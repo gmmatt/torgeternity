@@ -640,7 +640,7 @@
                 "name": "Bildschirmbild auswählen",
                 "hint": "Sie können auswählen, welcher GM-Bildschirm angezeigt werden soll. Wenn Sie ein nicht installiertes Modul auswählen, wird der GM-Bildschirm nicht funktionieren. HINWEIS: Sie müssen den Browser oder die Anwendung aktualisieren (F5), nachdem Sie Ihre Auswahl bestätigt haben."
             },
-            "hideGerman": {
+            "hideForeignCompendium": {
                 "name": "Deutsche Kompendien ausblenden",
                 "hint": "Auswählen, um deutschsprachige Kompendien auszublenden"
             }
