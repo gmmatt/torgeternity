@@ -23,7 +23,7 @@
     "background": "images/splash.webp",
     "packs": [{
             "name": "archetypes",
-            "label": "Archetypes",
+            "label": "Archetypes (en)",
             "system": "torgeternity",
             "module": "torgeternity",
             "path": "packs/archetypes.db",
@@ -31,7 +31,7 @@
         },
         {
             "name": "basic-rules",
-            "label": "Basic Rules",
+            "label": "Basic Rules (en)",
             "system": "torgeternity",
             "module": "torgeternity",
             "path": "packs/basic-rules.db",
@@ -39,7 +39,7 @@
         },
         {
             "name": "core-card-set",
-            "label": "Core Card Set",
+            "label": "Core Card Set (en)",
             "system": "torgeternity",
             "module": "torgeternity",
             "path": "packs/core-card-set.db",
@@ -47,21 +47,21 @@
         },
         {
             "name": "system-de-archetypen",
-            "label": "Archetypen",
+            "label": "Archetypen (de)",
             "path": "packs/deutsch/archetypen.db",
             "module": "torgeternity",
             "entity": "Actor"
         },
         {
             "name": "system-de-basisregeln",
-            "label": "Basisregeln",
+            "label": "Basisregeln (de)",
             "path": "packs/deutsch/basisregeln.db",
             "module": "torgeternity",
             "entity": "JournalEntry"
         },
         {
             "name": "system-de-grundkarten",
-            "label": "Dramadeck",
+            "label": "Dramadeck (de)",
             "path": "packs/deutsch/core-card-set-de.db",
             "module": "torgeternity",
             "entity": "Cards"
