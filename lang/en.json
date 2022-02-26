@@ -553,6 +553,11 @@
                 "reference": "<p>Reference</p>",
                 "bug": "<p>Bug?</p>",
                 "publisher": "<p>Publisher</p>"
+            },
+            "itemDeletion": {
+                "title": "Confirm Deletion",
+                "content": "Are you sure you want to delete this? It will be permanently removed from the sheet."
+
             }
         },
         "iconeTitles": {

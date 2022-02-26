@@ -553,6 +553,10 @@
                 "reference": "<p>Referenz</p>",
                 "bug": "<p>Bug?</p>",
                 "publisher": "<p>Herausgeber</p>"
+            },
+            "itemDeletion": {
+                "title": "Bestätigen Sie die Löschung",
+                "content": "Sind Sie sicher, dass Sie dies löschen wollen? Es wird dauerhaft aus dem Blatt entfernt werden"
             }
         },
         "iconeTitles": {

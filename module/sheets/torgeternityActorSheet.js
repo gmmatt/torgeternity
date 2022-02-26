@@ -252,17 +252,17 @@ export default class torgeternityActorSheet extends ActorSheet {
         html.find('.item-delete').click(ev => {
             let applyChanges = false;
             new Dialog({
-                title: "Confirm Deletion",
-                content: "Are you sure you want to delete this? It will be permanently removed from the sheet.",
+                title: game.i18n.localize('torgeternity.dialogWindow.itemDeletion.title'),
+                content: game.i18n.localize('torgeternity.dialogWindow.itemDeletion.content'),
                 buttons: {
                     yes: {
                         icon: '<i class="fas fa-check"></i>',
-                        label: "Yes",
+                        label: game.i18n.localize('torgeternity.yesNo.true'),
                         callback: () => applyChanges = true
                     },
                     no: {
                         icon: '<i class="fas fa-times"></i>',
-                        label: "No"
+                        label: game.i18n.localize('torgeternity.yesNo.false')
                     },
                 },
                 default: "yes",

@@ -266,13 +266,13 @@ Hooks.on("ready", async function() {
     //-------define a dialog for external links
 
     let dialData = {
-        title: "Links",
-        content: "<p>Need help? Want to report a bug? Here are a few usefull links.</p>",
+        title: game.i18n.localize('torgeternity.dialogWindow.externalLinks.title'),
+        content: game.i18n.localize('torgeternity.dialogWindow.externalLinks.content'),
         buttons: {
 
             one: {
                 icon: '<i class="fas fa-expand-arrows-alt"style="font-size:24px"></i>',
-                label: "<p>Reference</p>",
+                label: game.i18n.localize('torgeternity.dialogWindow.externalLinks.reference'),
                 callback: () => {
                     new FrameViewer("http://torg-gamereference.com/index.php", {
                         title: "torg game reference",
@@ -297,7 +297,7 @@ Hooks.on("ready", async function() {
 
             three: {
                 icon: '<i class="fas fa-bug" style="font-size:24px"></i>',
-                label: "<p>Bug?</p>",
+                label: game.i18n.localize('torgeternity.dialogWindow.externalLinks.bug'),
                 callback: () => {
                     ui.notifications.info("your browser will open a new page to complete an issue");
                     var windowObjectReference = window.open("https://github.com/gmmatt/torgeternity/issues/new", "_blank");
@@ -306,7 +306,7 @@ Hooks.on("ready", async function() {
             },
             four: {
                 icon: '<img src="systems/torgeternity/images/ulissesLogo.webp" alt="logo ulisses" style="filter:grayscale(1)">',
-                label: "<p>Publisher</p>",
+                label: game.i18n.localize('torgeternity.dialogWindow.externalLinks.publisher'),
                 callback: () => {
                     ui.notifications.info("your browser will open a new page to complete an issue");
                     var windowObjectReference = window.open("https://ulisses-us.com", "_blank");
@@ -317,7 +317,7 @@ Hooks.on("ready", async function() {
         }
     };
     let dialOption = {
-        width: 400,
+        width: 'auto',
         height: 250,
         left: 100,
         top: 20
@@ -326,7 +326,7 @@ Hooks.on("ready", async function() {
     if (game.settings.get("core", "language") == "fr") {
         dialData.buttons.five = {
             icon: '<img src="systems/torgeternity/images/BBE_logo.webp" alt="logo ulisses" style="filter:grayscale(1);max-height:3em">',
-            label: "<p>Publisher</p>",
+            label: "<p>Distr. français</p>",
             callback: () => {
                 ui.notifications.info("your browser will open a new page to complete an issue");
                 var windowObjectReference = window.open("https://www.black-book-editions.fr/catalogue.php?id=668", "_blank");

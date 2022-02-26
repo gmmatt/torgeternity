@@ -555,6 +555,10 @@
                 "reference": "<p>Reference (site en anglais)</p>",
                 "bug": "<p>Bug?</p>",
                 "publisher": "<p>Editeur</p>"
+            },
+            "itemDeletion": {
+                "title": "confirmer la suppression",
+                "content": "Etes-vous sûr de vouloir supprimer ceci ? Cela sera effacé de votre fiche de manière permanente."
             }
         },
         "iconeTitles": {
