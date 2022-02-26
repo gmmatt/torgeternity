@@ -38,7 +38,9 @@
 
 					<em class="possValue">
 						{{#if this.character}}
-							{{this.character.data.data.other.posibilities}}
+							{{#unless this.isGM}}
+								{{this.character.data.data.other.posibilities}}
+							{{/unless}}
 						{{/if}}
 						{{#if this.isGM}}
 							{{../GMpossibilities}}
