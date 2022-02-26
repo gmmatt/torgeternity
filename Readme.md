@@ -8,6 +8,13 @@
 For manual installation, use the provided manifest URL in the "*Install System*" popup window 
 while managing game systems.
 
+v. 2.3.5
+- Added "life-like" hand option in player hand window (amazing work,
+   Rwan!)
+- From Spatula (thanks!): drag-drop skill macros for players
+- Intimidation attacks now target Spirit instead of Charisma
+- Fixed Active Defense functionality
+
 v. 2.3.4 
 - Added support for Monarch cards module (thanks to LordZeel for all his
   work! It looks amazing)

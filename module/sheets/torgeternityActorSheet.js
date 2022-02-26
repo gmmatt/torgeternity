@@ -472,7 +472,6 @@ export default class torgeternityActorSheet extends ActorSheet {
                     }
                 }
             }
-        }
 
 
         if (this.actor.data.data.stymiedModifier === parseInt(-2)) {
