@@ -115,6 +115,14 @@ Hooks.once("init", async function() {
 
 Hooks.once("setup", async function() {
         modifyTokenBars();
+        //changing stutus marker 
+        //preparing status marker
+
+        if (game.settings.get("core", "language") === "fr") {
+            for (let effect of CONFIG.statusEffects) {
+                effect.icon = effect.icon.replace("systems/torgeternity/images/status-markers", "systems/torgeternity/images/status-markers/fr")
+            }
+        }
 
     }),
 
