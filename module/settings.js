@@ -65,23 +65,17 @@ export function registerTorgSettings() {
     });
 
     //Hide Compendiums
-    game.settings.register("torgeternity", "hideGerman", {
-        name: "torgeternity.settingMenu.hideGerman.name", // Register a module setting with checkbox
-        hint: "torgeternity.settingMenu.hideGerman.hint", // Description of the settings
+    game.settings.register("torgeternity", "hideForeignCompendium", {
+        name: "torgeternity.settingMenu.hideForeignCompendium.name", // Register a module setting with checkbox
+        hint: "torgeternity.settingMenu.hideForeignCompendium.hint", // Description of the settings
         scope: "world",
         config: true,
         type: Boolean,
-        default: false
+        default: false,
+        onChange: () => window.location.reload()
+
     });
 
-    game.settings.register("torgeternity", "hideEnglish", {
-        name: "torgeternity.settingMenu.hideEnglish.name", // Register a module setting with checkbox
-        hint: "torgeternity.settingMenu.hideEnglish.hint", // Description of the settings
-        scope: "world",
-        config: true,
-        type: Boolean,
-        default: false
-    })
 
 
 

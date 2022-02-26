@@ -26,6 +26,7 @@ import torgeternityDeck from "./module/cards/torgeternityDeck.js";
 import torgeternityCardConfig from "./module/cards/torgeternityCardConfig.js";
 import { torgeternityCards } from "./module/cards/torgeternityCards.js";
 import { attackDialog } from "/systems/torgeternity/module/attack-dialog.js"; //Added
+import { hideCompendium } from '/systems/torgeternity/module/hideCompendium.js';
 
 
 Hooks.once("init", async function() {
@@ -369,25 +370,6 @@ Hooks.on("ready", async function() {
         createTorgEternityMacro(data, slot)
     );
 
-    /*
-
-  //-----applying players card ui:
-  if (game.user.data.role == false || game.user.data.role != 4) {
-    let user=game.users.get(game.user.data._id)
-    
-    ui.HandedCards = new HandedCardsApp();
-    ui.HandedCards.render(true);
-  };
-  //-----applying GM card ui:
-  if (game.user.data.role == 4 || game.user.data.role == 3) {
-    //init cards GM Decks
-    let user=game.users.get(game.user.data._id)
-   
-    ui.GMDecks = new GMDecksApp();
-    ui.GMDecks.render(true);
-  };
-
-*/
 });
 
 /* -------------------------------------------- */
@@ -663,26 +645,9 @@ Hooks.on("renderCombatTracker", (combatTracker) => {
 })
 
 Hooks.on("renderCompendiumDirectory", (app, html, data) => {
-    if (game.settings.get("torgeternity", "hideGerman") == true) {
-        game.packs.delete("torgeternity.system-de-archetypen");
-        html.find('li[data-pack="torgeternity.system-de-archetypen"]').hide();
-
-        game.packs.delete("torgeternity.system-de-basisregeln");
-        html.find('li[data-pack="torgeternity.system-de-basisregeln"]').hide();
-
-        game.packs.delete("torgeternity.system-de-grundkarten");
-        html.find('li[data-pack="torgeternity.system-de-grundkarten"]').hide()
-    }
-
-    if (game.settings.get("torgeternity", "hideEnglish") == true) {
-        game.packs.delete("torgeternity.archetypes");
-        html.find('li[data-pack="torgeternity.archetypes"]').hide();
-
-        game.packs.delete("torgeternity.basic-rules");
-        html.find('li[data-pack="torgeternity.basic-rules"]').hide();
-
-        game.packs.delete("torgeternity.core-card-set");
-        html.find('li[data-pack="torgeternity.core-card-set"]').hide();
+    console.log('----------directory compendium')
+    if (game.settings.get("torgeternity", "hideForeignCompendium") == true) {
+        hideCompendium(game.settings.get("core", "language"), html)
 
     }
 })
@@ -691,7 +656,6 @@ Hooks.on("renderCompendiumDirectory", (app, html, data) => {
 Hooks.on("renderChatLog", (app, html, data) => {
     //----chat messages listeners
     Chat.addChatListeners(html);
-
 
     //-----toggle animation on chat message
 
