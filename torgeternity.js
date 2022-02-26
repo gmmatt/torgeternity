@@ -282,7 +282,8 @@ Hooks.on("ready", async function() {
     })
 
     //-------define a dialog for external links
-    let externalLinks = new Dialog({
+
+    let dialData = {
         title: "Links",
         content: "<p>Need help? Want to report a bug? Here are a few usefull links.</p>",
         buttons: {
@@ -332,13 +333,27 @@ Hooks.on("ready", async function() {
             }
 
         }
-    }, {
+    };
+    let dialOption = {
         width: 400,
         height: 250,
         left: 100,
         top: 20
-    });
-    //----logo image
+    };
+    //adding french links (shamelessly)
+    if (game.settings.get("core", "language") == "fr") {
+        dialData.buttons.five = {
+            icon: '<img src="systems/torgeternity/images/BBE_logo.webp" alt="logo ulisses" style="filter:grayscale(1);max-height:3em">',
+            label: "<p>Publisher</p>",
+            callback: () => {
+                ui.notifications.info("your browser will open a new page to complete an issue");
+                var windowObjectReference = window.open("https://www.black-book-editions.fr/catalogue.php?id=668", "_blank");
+
+            }
+        }
+    }
+    let externalLinks = new Dialog(dialData, dialOption)
+        //----logo image
     var logo = document.getElementById("logo");
     logo.style.position = "absolute";
     logo.setAttribute("src", "/systems/torgeternity/images/vttLogo.webp");
