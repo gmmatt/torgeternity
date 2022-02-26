@@ -514,11 +514,6 @@
                     "noDamage": "pas de dommages",
                     "attackMissed": "attaque ratée"
                 }
-
-
-
-
-
             }
         },
 
@@ -553,6 +548,13 @@
             "hideForeignCompendium": {
                 "title": "cacher les compendiums en langue étrangère ?",
                 "content": "Ce système comprend des compendiums en anglais et en allemand. Voulez-vous masquer les compendiums en langues étrangères ? "
+            },
+            "externalLinks": {
+                "title": "Liens",
+                "content": "<p>Besoin d'aide ? Vous voulez signaler un bug ? Voici quelques liens utils</p>",
+                "reference": "<p>Reference (site en anglais)</p>",
+                "bug": "<p>Bug?</p>",
+                "publisher": "<p>Editeur</p>"
             }
         },
         "iconeTitles": {
@@ -635,13 +637,10 @@
                 "name": "Sélectionner l'image de l'écran",
                 "hint": "Vous pouvez choisir quel écran du MJ afficher . Si vous sélectionnez un module non installé, l'écran du MJ ne fonctionnera pas. NOTE: Vous devez rafraichir le navigateur ou l'application (F5) après avoir validé votre choix"
             },
-            "hideGerman": {
-                "name": "Masquer les compendium allemands",
-                "hint": "Sélectionner pour masquer les compendiums en langue allemande"
-            },
-            "hideEnglish": {
-                "name": "Masquer les compendiums anglais",
-                "hint": "Sélectionner pour masquer les compendiums en langue anglaise"
+            "hideForeignCompendium": {
+                "name": "Masquer les compendiiums en langues étrangères",
+                "hint": "Validez pour masquer tous les compendiums qui ne sont pas en français"
+
             }
         }
 

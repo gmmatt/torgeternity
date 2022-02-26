@@ -334,7 +334,9 @@
             "availableEnhancements": "Verfügbare Verbesserungen",
             "taken": "Gekauft",
             "titleDescription": "Titel/Beschreibung",
-            "pool": "Aktionenpool"
+            "pool": "Aktionenpool",
+            "skillRollHint": "Umschalt-Klick für erweiterten Fähigkeitstest",
+            "toggleSkillDisplay": "Klicken Sie auf , um die Anzeige der Fertigkeiten umzuschalten"
         },
         "combat": {
             "nextKeep": "Neue Runde (aktuelle Karte behalten)",
@@ -442,6 +444,15 @@
             "true": "Ja",
             "false": "Nein"
         },
+        "submit": {
+            "true": "Ja",
+            "false": "Nein",
+            "cancel": "Abbrechen",
+            "apply": "Anwenden",
+            "OK": "OK",
+            "dontShow": "Nicht mehr anzeigen"
+
+        },
         "chatText": {
             "possibility": "Möglichkeit",
             "hero": "Held",
@@ -465,6 +476,44 @@
             "baseDamage": "Grundschaden",
             "value": "Wert",
             "notes": "Notizen"
+        },
+        "check": {
+            "needTarget": "Der erweiterte Angriffstest kann ohne Ziel nicht durchgeführt werden. Wählen Sie ein Ziel und versuchen Sie es erneut.",
+            "cantUseUntrained": " kann nicht verwendet werden, wenn es nicht erlernt wurde (mindestens 1 Fertigkeit hinzugefügt).",
+            "cantUseSkillRecquired": " kann nicht ohne mindestens 1 Add in der erforderlichen Fertigkeit verwendet werden.",
+            "modifier": {
+                "wounds": "Wunden",
+                "stymied": "Stymied (-2 )",
+                "veryStymied": "Very Stymied (-4)",
+                "darkness": "Dunkelheit",
+                "running": "Laufend (-2)",
+                "multiAttack": "Multi-attack ",
+                "multiAction": "Multi-Aktion ",
+                "multiTarget": "Multi-Ziel": "Multi-Ziel",
+                "targetSize": "Zielgröße",
+                "targetVulnerable": "Ziel verwundbar (+2)",
+                "targetVeryVulnerable": "Ziel sehr verwundbar (+4)",
+                "calledShot": "Aufgerufener Schuss",
+                "shortBurst": "Short Burst(+2)",
+                "longBurst": "Langer Ausbruch(+4)",
+                "heavyBurst": "Schwerer Ausbruch(+6)",
+                "allOutAttack": "All Out Attack",
+                "gezielterSchuss": "Gezielter Schuss (+4)",
+                "blindFire": "Blindes Feuer (-6)",
+                "targetConcealment": "Zielverschleierung"
+            },
+            "result": {
+                "actionTotal": "Aktion insgesamt",
+                "failure": "Fehlschlag",
+                "outstandingSuccess": "Hervorragender Erfolg",
+                "goodSuccess": "Guter Erfolg",
+                "standartSuccess": "Standart Erfolg",
+                "mishape": "Mishape",
+                "damage": "Schaden",
+                "toughness": "Zähigkeit",
+                "noDamage": "Kein Schaden",
+                "attackMissed": "Angriff verfehlt"
+            }
         },
 
         "sizes": {
@@ -490,8 +539,38 @@
             "plays": "Spielt aus:",
             "discards": "Wirft weg:",
             "openHand": "offene Hand",
-            "lifelike": "realitätsnahe Darstellung"
-
+            "lifelike": "realitätsnahe Darstellung",
+            "return": "Legt alle Karten in ihre(n) Stapel zurück. Mischt die Kartenstapel NICHT automatisch neu."
+        },
+        "dialogWindow": {
+            "hideForeignCompendium": {
+                "title": "Fremdsprachenkompendien ausblenden ?",
+                "content": "Dieses System umfasst sowohl englisch- als auch deutschsprachige Kompendien. Möchten Sie fremdsprachige Kompendien ausblenden?"
+            },
+            "externalLinks": {
+                "title": "Links",
+                "content": "<p>Sie brauchen Hilfe? Möchten Sie einen Fehler melden? Hier sind ein paar nützliche Links</p>",
+                "reference": "<p>Referenz</p>",
+                "bug": "<p>Bug?</p>",
+                "publisher": "<p>Herausgeber</p>"
+            }
+        },
+        "iconeTitles": {
+            "openParty": "Öffnen Sie das Parteiblatt",
+            "resetPossibilities": "Zurücksetzen der Möglichkeiten des Sturmritters",
+            "delete": "Löschen",
+            "edit": "bearbeiten",
+            "sendToChat": "An Chat senden",
+            "toggle": "Umschalten auf",
+            "attackRoll": "Angriffsrolle",
+            "spellRoll": "Bannrolle",
+            "miracleRoll": "Mirakelrolle",
+            "psionicRoll": "Psionische Machtrolle",
+            "bonusRoll": "Bonusrolle"
+        },
+        "possibilitiesReset": {
+            "name": "Reset Stormknight possibilities",
+            "hint": "Wie viele Möglichkeiten sollten die StormKnights erhalten?"
         },
 
         "cosmDecks": {
@@ -564,10 +643,6 @@
             "hideGerman": {
                 "name": "Deutsche Kompendien ausblenden",
                 "hint": "Auswählen, um deutschsprachige Kompendien auszublenden"
-            },
-            "hideEnglish": {
-                "name": "Englische Kompendien ausblenden",
-                "hint": "Auswählen, um englischsprachige Kompendien auszublenden"
             }
         }
 

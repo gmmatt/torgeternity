@@ -641,19 +641,12 @@
                 "name": "Select the GM Screen You Want to Use",
                 "hint": "You can select a GM screen from any active module. If you select a module that is not installed, the GM screen function may not work properly. NOTE: you need to refresh your browser (F5) after switching screens."
             },
-            "hideGerman": {
-                "name": "Hide German Compendiums",
-                "hint": "Select to hide German compendiums on startup"
-            },
-            "hideEnglish": {
-                "name": "Hide English Compendiums",
-                "hint": "Select to hide English compendiums on startup"
+            "hideForeignCompendium": {
+                "name": "Hide foreign Compendiums",
+                "hint": "Select to hide all compendium in foreign language"
+
             }
         }
-
-
-
-
     },
 
 
