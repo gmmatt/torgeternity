@@ -803,6 +803,21 @@ div#sidebar.collapsed {
     z-index: 200;
 }
 
+#navigation div.fr.cosm-card:hover {
+    transform: scale(1) translateY(0px);
+}
+
+#navigation div.de.cosm-card:hover {
+    transform: scale(1, 0.7) translateY(0px);
+}
+
+
+/*-------------------------
+-----------------------------
+Base english tent cards images
+-------------------------------
+--------------------------*/
+
 #navigation .cosm-card.coreEarth {
     background: url(../images/cosm-cards/coreEarth.webp);
     background-size: 100% 100%;
@@ -840,6 +855,100 @@ div#sidebar.collapsed {
 
 #navigation .cosm-card.tharkold {
     background: url(../images/cosm-cards/tharkold.webp);
+    background-size: 100% 100%;
+}
+
+
+/*-------------------------
+-----------------------------
+french tent cards images
+-------------------------------
+--------------------------*/
+
+#navigation .fr.cosm-card.coreEarth {
+    background: url(../images/cosm-cards/fr/coreEarth.webp);
+    background-size: 100% 100%;
+}
+
+#navigation .fr.cosm-card.livingLand {
+    background: url(../images/cosm-cards/fr/livingLand.webp);
+    background-size: 100% 100%;
+}
+
+#navigation .fr.cosm-card.nileEmpire {
+    background: url(../images/cosm-cards/fr/nileEmpire.webp);
+    background-size: 100% 100%;
+}
+
+#navigation .fr.cosm-card.aysle {
+    background: url(../images/cosm-cards/fr/aysle.webp);
+    background-size: 100% 100%;
+}
+
+#navigation .fr.cosm-card.cyberpapacy {
+    background: url(../images/cosm-cards/fr/cyberpapacy.webp);
+    background-size: 100% 100%;
+}
+
+#navigation .fr.cosm-card.panPacifica {
+    background: url(../images/cosm-cards/fr/panPacifica.webp);
+    background-size: 100% 100%;
+}
+
+#navigation .fr.cosm-card.orrorsh {
+    background: url(../images/cosm-cards/fr/orrorsh.webp);
+    background-size: 100% 100%;
+}
+
+#navigation .fr.cosm-card.tharkold {
+    background: url(../images/cosm-cards/fr/tharkold.webp);
+    background-size: 100% 100%;
+}
+
+
+/*-------------------------
+-----------------------------
+german tent cards images
+-------------------------------
+--------------------------*/
+
+#navigation .de.cosm-card.coreEarth {
+    background: url(../images/deutsch/cosm-tabletents/ZentralErde.webp);
+    background-size: 100% 100%;
+}
+
+#navigation .de.cosm-card.livingLand {
+    background: url(../images/deutsch/cosm-tabletents/LebendesLand.webp);
+    background-size: 100% 100%;
+}
+
+#navigation .de.cosm-card.nileEmpire {
+    background: url(../images/deutsch/cosm-tabletents/Nil-Imperium.webp);
+    background-size: 100% 100%;
+}
+
+#navigation .de.cosm-card.aysle {
+    background: url(../images/deutsch/cosm-tabletents/Aysle.webp);
+    background-size: 100% 100%;
+}
+
+#navigation .de.cosm-card.cyberpapacy {
+    background: url(../images/deutsch/cosm-tabletents/Cynerpontifikat.webp);
+    background-size: 100% 100%;
+}
+
+#navigation .de.cosm-card.panPacifica {
+    background: url(../images/deutsch/cosm-tabletents/Pan-Pacifica.webp);
+    background-size: 100% 100%;
+}
+
+#navigation .de.cosm-card.orrorsh {
+    background: url(../images/deutsch/cosm-tabletents/Orrorsh.webp);
+    background-size: 100% 100%;
+}
+
+#navigation .de.cosm-card.tharkold {
+    background: url(../images/deutsch/cosm-tabletents/Tharkold.webp);
     background-size: 100% 100%;
 }
 
