@@ -540,7 +540,7 @@
             "plays": "Plays",
             "discards": "Discards",
             "openHand": "Open Hand",
-            "lifelike": "lifelike display",
+            "lifelike": "Enhanced Display",
             "return": "Returns all cards to their deck(s). Does NOT automatically reshuffle the deck(s)."
         },
         "dialogWindow": {
@@ -599,11 +599,11 @@
 
         "scenes": {
             "reality": "Reality",
-            "realityHint": "Configure the reality of the scene zone",
-            "HeaderDetailsHint": "Configure the basic details for this scene and permissions which control its visibility.",
-            "HeaderGridHint": "Configure the grid dimensions which are used to measure token movement in this scene.",
-            "HeaderVisionHint": "Configure the vision, lighting, and fog of war settings which apply to this Scene.",
-            "HeaderAmbienceHint": "Configure additional integrations between this scene and Journal Entries, Audio Playlists, or Weather Effects."
+            "realityHint": "Configure Reality",
+            "HeaderDetailsHint": "Configure Details",
+            "HeaderGridHint": "Configure Grid Dimensions.",
+            "HeaderVisionHint": "Configure Vision and Lighting Options.",
+            "HeaderAmbienceHint": "Configure Other Enviornmental Options."
         },
 
         "tokens": {
