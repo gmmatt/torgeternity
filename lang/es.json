@@ -575,7 +575,9 @@
     "CARD": {
         "TypeCosm": "Cosm",
         "TypeDestiny": "Destin",
-        "TypeDrama": "Action"
+        "TypeDrama": "Action",
+        "discard": "Discard",
+        "display": "Show this card to players"
 
     }
 }

@@ -527,6 +527,7 @@
         },
 
         "dialogPrompts": {
+            "showToPlayers": "monter à tous les joueurs",
             "playerPassTitle": "Donner au joueur",
             "playerPassLabel": "Donner",
             "playerPassInstructions": "Sélection du joueur recevant la carte",
@@ -654,7 +655,9 @@
     "CARD": {
         "TypeCosm": "Cosm",
         "TypeDestiny": "Destin",
-        "TypeDrama": "Action"
+        "TypeDrama": "Action",
+        "discard": "Défausser",
+        "display": "Montrer cette carte aux joueurs"
 
     }
 }

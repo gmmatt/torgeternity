@@ -526,6 +526,7 @@
         },
 
         "dialogPrompts": {
+            "showToPlayers": "show card to all players",
             "playerPassTitle": "Pass to Player",
             "playerPassLabel": "Pass",
             "playerPassInstructions": "Select Player to Receive Card",
@@ -658,7 +659,9 @@
     "CARD": {
         "TypeCosm": "Cosm",
         "TypeDestiny": "Destiny",
-        "TypeDrama": "Drama"
+        "TypeDrama": "Drama",
+        "discard": "Discard",
+        "display": "Show this card to players"
     }
 
 }

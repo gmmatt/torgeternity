@@ -526,6 +526,7 @@
         },
 
         "dialogPrompts": {
+            "showToPlayers": "show card to all players",
             "playerPassTitle": "An Spieler weitergeben",
             "playerPassLabel": "Weitergeben",
             "playerPassInstructions": "Spieler auswählen, der die Karte erhalten soll",
@@ -656,6 +657,8 @@
     "CARD": {
         "TypeCosm": "Cosm",
         "TypeDestiny": "Schicksal",
-        "TypeDrama": "Drama"
+        "TypeDrama": "Drama",
+        "discard": "Discard",
+        "display": "Show this card to players"
     }
 }
