@@ -480,6 +480,7 @@
                 "needTarget": "Cannot attempt enhanced attack test without a target. Select a target and try again.",
                 "cantUseUntrained": " cannot be used unless it is learned (at least 1 skill add).",
                 "cantUseSkillRecquired": " cannot be used without at least 1 add in the required skill.",
+				"cantAttemptInteraction": "Cannot attempt interaction attack test without a target. Select a target and try again.",
                 "modifier": {
                     "wounds": "Wounds",
                     "stymied": "Stymied (-2 )",
@@ -511,7 +512,8 @@
                     "damage": "Damage",
                     "toughness": "Toughness",
                     "noDamage": "No Damage",
-                    "attackMissed": "Attack Missed"
+                    "attackMissed": "Attack Missed",
+					"testUnsuccessful": "Test Unsuccessful"
                 }
             }
         },
