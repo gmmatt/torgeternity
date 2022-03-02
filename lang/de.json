@@ -337,7 +337,6 @@
             "pool": "Aktionenpool",
             "skillRollHint": "Umschalt-Klick für erweiterten Fähigkeitstest",
             "toggleSkillDisplay": "Klicken Sie auf , um die Anzeige der Fertigkeiten umzuschalten"
-        
         },
         "combat": {
             "nextKeep": "Neue Runde (aktuelle Karte behalten)",
@@ -440,6 +439,7 @@
             "unconscious": "K.O.",
             "blind": "Blind"
         },
+
         "yesNo": {
             "true": "Ja",
             "false": "Nein"
@@ -539,7 +539,7 @@
             "cardPooled": "Im Aktionenpool?",
             "plays": "Spielt aus:",
             "discards": "Wirft weg:",
-            "openHand": "offene Hand",
+            "openHand": "Öffne Hand",
             "lifelike": "realitätsnahe Darstellung",
             "return": "Legt alle Karten in ihre(n) Stapel zurück. Mischt die Kartenstapel NICHT automatisch neu."
         },
