@@ -8,6 +8,10 @@
 For manual installation, use the provided manifest URL in the "*Install System*" popup window 
 while managing game systems.
 
+v. 2.3.6
+- Fixed issue where player hand cosm button was drawing Destiny
+  cards instead
+
 v. 2.3.5
 - Added "life-like" hand option in player hand window (amazing work,
    Rwan!)
