@@ -337,6 +337,7 @@
             "pool": "Aktionenpool",
             "skillRollHint": "Umschalt-Klick für erweiterten Fähigkeitstest",
             "toggleSkillDisplay": "Klicken Sie auf , um die Anzeige der Fertigkeiten umzuschalten"
+        
         },
         "combat": {
             "nextKeep": "Neue Runde (aktuelle Karte behalten)",
@@ -439,7 +440,6 @@
             "unconscious": "K.O.",
             "blind": "Blind"
         },
-
         "yesNo": {
             "true": "Ja",
             "false": "Nein"
@@ -558,6 +558,7 @@
             "itemDeletion": {
                 "title": "Bestätigen Sie die Löschung",
                 "content": "Sind Sie sicher, dass Sie dies löschen wollen? Es wird dauerhaft aus dem Blatt entfernt werden"
+            
             }
         },
         "iconeTitles": {
@@ -567,10 +568,10 @@
             "edit": "bearbeiten",
             "sendToChat": "An Chat senden",
             "toggle": "Umschalten auf",
-            "attackRoll": "Angriffsrolle",
-            "spellRoll": "Bannrolle",
-            "miracleRoll": "Mirakelrolle",
-            "psionicRoll": "Psionische Machtrolle",
+            "attackRoll": "Angriffswurf",
+            "spellRoll": "Bannwurf",
+            "miracleRoll": "Mirakelwurf",
+            "psionicRoll": "Psionischer Wurf",
             "bonusRoll": "Bonusrolle"
         },
         "possibilitiesReset": {
@@ -592,7 +593,8 @@
         "cardTypes": {
             "destiny": "Schicksal",
             "drama": "Drama",
-            "cosm": "Cosm"
+            "cosm": "Cosm",
+            "hand": "Handkarten"
         },
 
         "scenes": {
@@ -631,19 +633,19 @@
             },
             "setupCards": {
                 "name": "Kartenpakete installieren",
-                "hint": "Wenn ausgewählt; das System wird alle Kartendecks, und Ablagestapel neu installieren. Sie müssen den Browser oder die Anwendung aktualisieren (F5)"
+                "hint": "Wenn ausgewählt, wird das System alle Kartendecks beim Start der Welt zurücksetzen. Du musst deinen Browser refreshen (F5), damit diese Änderung sofort greift."
             },
             "pauseMedia": {
                 "name": "Pausenbild",
                 "hint": "Wähle das Bild, das angezeigt wird, wenn das Spiel pausiert."
             },
             "animatedChat": {
-                "name": "Animation des message du chat",
-                "hint": "Si sélectionné les message du chat apparaitront avec une animation. Changer ce paramètre rafraichira le navigateur ou l'application"
+                "name": "Animation der Chatkarten",
+                "hint": "Wenn ausgewählt, wird die Einblendung der Chatkarten animiert."
             },
             "gmScreen": {
-                "name": "Bildschirmbild auswählen",
-                "hint": "Sie können auswählen, welcher GM-Bildschirm angezeigt werden soll. Wenn Sie ein nicht installiertes Modul auswählen, wird der GM-Bildschirm nicht funktionieren. HINWEIS: Sie müssen den Browser oder die Anwendung aktualisieren (F5), nachdem Sie Ihre Auswahl bestätigt haben."
+                "name": "SL-Schirm auswählen",
+                "hint": "Wähle hier aus, welchen SL-Schirm du angezeigt bekommen möchtest. Du musst deinen Browser refreshen (F5), damit diese Änderung sofort greift."
             },
             "hideForeignCompendium": {
                 "name": "Deutsche Kompendien ausblenden",

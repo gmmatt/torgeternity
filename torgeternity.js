@@ -25,9 +25,10 @@ import torgeternityPile from "./module/cards/torgeternityPile.js";
 import torgeternityDeck from "./module/cards/torgeternityDeck.js";
 import torgeternityCardConfig from "./module/cards/torgeternityCardConfig.js";
 import { torgeternityCards } from "./module/cards/torgeternityCards.js";
-import {attackDialog} from "/systems/torgeternity/module/attack-dialog.js";//Added
-import {skillDialog} from "/systems/torgeternity/module/skill-dialog.js";
-import {interactionDialog} from "/systems/torgeternity/module/interaction-dialog.js";
+import { attackDialog } from "/systems/torgeternity/module/attack-dialog.js"; //Added
+import { skillDialog } from "/systems/torgeternity/module/skill-dialog.js";
+import { interactionDialog } from "/systems/torgeternity/module/interaction-dialog.js";
+import { hideCompendium } from './module/hideCompendium.js';
 
 Hooks.once("init", async function() {
     console.log("torgeternity | Initializing Torg Eternity System");
@@ -41,7 +42,7 @@ Hooks.once("init", async function() {
     //-------global
     game.torgeternity = {
         rollItemMacro,
-    rollSkillMacro,
+        rollSkillMacro,
         viewMode: true
     };
 
@@ -334,7 +335,7 @@ Hooks.on("ready", async function() {
     //adding french links (shamelessly)
     if (game.settings.get("core", "language") == "fr") {
         dialData.buttons.five = {
-            icon: '<img src="systems/torgeternity/images/BBE_logo.webp" alt="logo ulisses" style="filter:grayscale(1);max-height:3em">',
+            icon: '<img src="systems/torgeternity/images/BBE_logo.webp" alt="logo BBE" style="filter:grayscale(1);max-height:3em">',
             label: "<p>Distr. français</p>",
             callback: () => {
                 ui.notifications.info("your browser will open a new page to complete an issue");
@@ -360,7 +361,7 @@ Hooks.on("ready", async function() {
         createTorgEternityMacro(data, slot)
     );
 
-  /*
+    /*
   //-----applying players card ui:
   if (game.user.data.role == false || game.user.data.role != 4) {
     let user=game.users.get(game.user.data._id)
@@ -453,15 +454,13 @@ async function createTorgEternityMacro(data, slot) {
     let macroName = null;
     let macroImg = null;
     let macroFlag = null;
-    
-    if (data.type === "Item")
-    {
+
+    if (data.type === "Item") {
         command = `game.torgeternity.rollItemMacro("${objData.name}");`;
         macroName = objData.name;
         macroImg = objData.img;
         macroFlag = "torgeternity.itemMacro";
-    }
-    else // attribute, skill, interaction
+    } else // attribute, skill, interaction
     {
         const capitalizedSkillName = capitalizeText(objData.name);
         const capitalizedAttributeName = capitalizeText(objData.attribute);
@@ -475,19 +474,19 @@ async function createTorgEternityMacro(data, slot) {
         else if (data.type === "interaction")
             macroName = capitalizedSkillName;
         macroImg = "systems/torgeternity/images/icons/explosion-icon.jpg"; // need skill icons!
-            /*
-                I would add more skill groupNames for icon-selecting purposes. Right now
-                there is "combat" and "interaction." There is room for "miracle," 
-                "psionicpower," and "spell" (using the icons for those power types). And 
-                then I think you can maybe break up the remaining skills into broad 
-                categories: "vehicle," "investigation," "outdoors?," "social," "smarts," 
-                etc. that can each have their own icon.
-                
-                OR, there could be one icon for each attribute, which can be used for 
-                attribute tests and for any skill using that attribute, maybe with a 
-                slightly modified version for the skills so there's a visual difference.
-             */
-         macroFlag = "torgeternity.skillMacro";
+        /*
+            I would add more skill groupNames for icon-selecting purposes. Right now
+            there is "combat" and "interaction." There is room for "miracle," 
+            "psionicpower," and "spell" (using the icons for those power types). And 
+            then I think you can maybe break up the remaining skills into broad 
+            categories: "vehicle," "investigation," "outdoors?," "social," "smarts," 
+            etc. that can each have their own icon.
+            
+            OR, there could be one icon for each attribute, which can be used for 
+            attribute tests and for any skill using that attribute, maybe with a 
+            slightly modified version for the skills so there's a visual difference.
+         */
+        macroFlag = "torgeternity.skillMacro";
     }
 
     macro = game.macros.find(
@@ -502,7 +501,7 @@ async function createTorgEternityMacro(data, slot) {
             flags: { macroFlag: true },
         });
     }
-    
+
     game.user.assignHotbarMacro(macro, slot);
     return false;
 }
@@ -553,7 +552,7 @@ function rollItemMacro(itemName) {
                 };
 
                 var templateData = {
-                    message: game.i18n.locallize('torgeternity.chatText.check.needTarget'),
+                    message: game.i18n.localize('torgeternity.chatText.check.needTarget'),
                     actorPic: actor.data.img
                 };
 
@@ -739,15 +738,14 @@ function rollSkillMacro(skillName, attributeName, isInteractionAttack) {
     if (!isAttributeTest) {
         if (actor.type === "stormknight") {
             skillValue += skill.adds;
-        }
-        else if (actor.type == "threat") {
+        } else if (actor.type == "threat") {
             const otherAttribute = actor.data.data.attributes[skill.baseAttribute];
             skillValue = skill.value - otherAttribute + attribute;
         }
     }
     // Trigger the skill roll
-// The following is copied/pasted/adjusted from _onSkillRoll and _onInteractionAttack in torgeternityActorSheet
-// This code needs to be centrally located!!!
+    // The following is copied/pasted/adjusted from _onSkillRoll and _onInteractionAttack in torgeternityActorSheet
+    // This code needs to be centrally located!!!
     let test = {
         testType: "skill",
         actor: actor,
@@ -760,7 +758,7 @@ function rollSkillMacro(skillName, attributeName, isInteractionAttack) {
         unskilledUse: skill.unskilledUse,
         woundModifier: parseInt(-(actor.data.data.wounds.value)),
         stymiedModifier: parseInt(actor.data.data.stymiedModifier),
-        darknessModifier: 0,//parseInt(actor.data.data.darknessModifier),
+        darknessModifier: 0, //parseInt(actor.data.data.darknessModifier),
         type: "skill",
         possibilityTotal: 0,
         upTotal: 0,
@@ -768,15 +766,15 @@ function rollSkillMacro(skillName, attributeName, isInteractionAttack) {
         dramaTotal: 0,
         cardsPlayed: 0,
         sizeModifier: 0,
-        vulnerableModifier: 0      
+        vulnerableModifier: 0
     };
     if (isInteractionAttack) {
         test["type"] = "interactionAttack";
         test["testType"] = "interactionAttack";
         test["interactionAttackType"] = skillName.toLowerCase();
-        test["darknessModifier"] = 0; 
-            // Darkness seems like it would be hard to determine if it should apply to 
-            //    skill/attribute tests or not, maybe should be option in dialog?
+        test["darknessModifier"] = 0;
+        // Darkness seems like it would be hard to determine if it should apply to 
+        //    skill/attribute tests or not, maybe should be option in dialog?
 
         // Exit if no target or get target data
         if (Array.from(game.user.targets).length === 0) {
@@ -785,19 +783,19 @@ function rollSkillMacro(skillName, attributeName, isInteractionAttack) {
                 speaker: ChatMessage.getSpeaker(),
                 owner: actor
             };
-        
+
             var templateData = {
                 message: "Cannot attempt interaction attack test without a target. Select a target and try again.",
                 actorPic: actor.data.img
             };
-    
+
             const templatePromise = renderTemplate("./systems/torgeternity/templates/partials/skill-error-card.hbs", templateData);
-    
+
             templatePromise.then(content => {
                 needTargetData.content = content;
                 ChatMessage.create(needTargetData);
             })
-    
+
             return;
         } else {
             var target = Array.from(game.user.targets)[0];
@@ -821,11 +819,11 @@ function rollSkillMacro(skillName, attributeName, isInteractionAttack) {
                 }
             } else if (test.interactionAttackType === "taunt") {
                 if (target.actor.data.data.skills.taunt.value > 0) {
-                        test.targetDefenseSkill = game.i18n.localize("torgeternity.skills.taunt");
-                        test.targetDefenseValue = target.actor.data.data.skills.taunt.value;
-                    } else {
-                        test.targetDefenseSkill = game.i18n.localize("torgeternity.attributes.charisma");
-                        test.targetDefenseValue = target.actor.data.data.attributes.charisma;
+                    test.targetDefenseSkill = game.i18n.localize("torgeternity.skills.taunt");
+                    test.targetDefenseValue = target.actor.data.data.skills.taunt.value;
+                } else {
+                    test.targetDefenseSkill = game.i18n.localize("torgeternity.attributes.charisma");
+                    test.targetDefenseValue = target.actor.data.data.attributes.charisma;
                 }
             } else if (test.interactionAttackType === "trick") {
                 if (target.actor.data.data.skills.trick.value > 0) {
@@ -847,13 +845,12 @@ function rollSkillMacro(skillName, attributeName, isInteractionAttack) {
     if (isInteractionAttack) {
         let testDialog = new interactionDialog(test);
         testDialog.render(true);
-    }
-    else if (event.shiftKey) {
+    } else if (event.shiftKey) {
         let testDialog = new skillDialog(test);
         testDialog.render(true);
     } else {
         torgchecks.SkillCheck(test);
-    } 
+    }
 }
 
 Hooks.on("renderCombatTracker", (combatTracker) => {
