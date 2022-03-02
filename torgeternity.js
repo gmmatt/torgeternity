@@ -474,33 +474,53 @@ async function createTorgEternityMacro(data, slot) {
             macroName = capitalizedAttributeName;
         else if (data.type === "interaction")
             macroName = capitalizedSkillName;
-        macroImg = "systems/torgeternity/images/icons/explosion-icon.jpg"; // need skill icons!
-            /*
-                I would add more skill groupNames for icon-selecting purposes. Right now
-                there is "combat" and "interaction." There is room for "miracle," 
-                "psionicpower," and "spell" (using the icons for those power types). And 
-                then I think you can maybe break up the remaining skills into broad 
-                categories: "vehicle," "investigation," "outdoors?," "social," "smarts," 
-                etc. that can each have their own icon.
-                
-                OR, there could be one icon for each attribute, which can be used for 
-                attribute tests and for any skill using that attribute, maybe with a 
-                slightly modified version for the skills so there's a visual difference.
-             */
          macroFlag = "torgeternity.skillMacro";
+
+		if (capitalizedSkillName !== capitalizedAttributeName) {
+			// not attribute test
+			// don't have skill icons yet
+			// macroImg = "systems/torgeternity/images/icons/skill-" + capitalizedSkillName.toLowerCase().replaceAll(' ', '-') + "-icon.png";
+		}
+		else {
+			// this is an attribute test
+			// use built-in foundry icons
+			if (capitalizedAttributeName === "Charisma")
+				macroImg = "icons/skills/social/diplomacy-handshake.webp";
+			else if (capitalizedAttributeName === "Dexterity")
+				macroImg = "icons/skills/movement/feet-winged-boots-brown.webp";
+			else if (capitalizedAttributeName === "Mind")
+				macroImg = "icons/sundries/books/book-stack.webp";
+			else if (capitalizedAttributeName === "Spirit")
+				macroImg = "icons/magic/life/heart-shadow-red.webp";
+			else if (capitalizedAttributeName === "Strength")
+				macroImg = "icons/magic/control/buff-strength-muscle-damage.webp";
+		}
     }
 
     macro = game.macros.find(
         (m) => m.name === macroName && m.data.command === command
     );
     if (!macro) {
-        macro = await Macro.create({
-            name: macroName,
-            type: "script",
-            img: macroImg,
-            command: command,
-            flags: { macroFlag: true },
-        });
+		// there is a difference between img: null or img: "" and not including img at all
+		// the latter results in default macro icon, the others give broken image icon
+		// can remove this when we have skill icons
+		if (!macroImg) {
+			macro = await Macro.create({
+				name: macroName,
+				type: "script",
+				command: command,
+				flags: { macroFlag: true },
+			});
+		}
+		else {
+			macro = await Macro.create({
+				name: macroName,
+				type: "script",
+				img: macroImg,
+				command: command,
+				flags: { macroFlag: true },
+			});
+		}
     }
     
     game.user.assignHotbarMacro(macro, slot);
