@@ -660,7 +660,7 @@
         "TypeCosm": "Cosm",
         "TypeDestiny": "Schicksal",
         "TypeDrama": "Drama",
-        "discard": "Discard",
-        "display": "Show this card to players"
+        "discard": "Wegwerfen",
+        "display": "Zeige diese Karte den anderen Spielern"
     }
 }
