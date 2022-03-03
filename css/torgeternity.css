@@ -636,14 +636,10 @@ nav#controls ol .control-tool:hover {
     color: white;
     background-image: url(../images/thunder.webp);
     z-index: 20;
-    background-size: 80% 100%;
-    padding-left: 80px;
+    background-size: 100% 100%;
     width: 380px;
     height: 100%;
-    background-position-x: 80px;
-    background-repeat: no-repeat;
     border: none;
-    box-shadow: none;
 }
 
 #sidebar #sidebar-tabs {
@@ -671,38 +667,6 @@ nav#controls ol .control-tool:hover {
 
 #sidebar textarea#chat-message {
     color: black;
-}
-
-div#sidebar::before {
-    width: 80px;
-    height: 120%;
-    position: absolute;
-    right: 150px;
-    background: url(../images/separatorSidebar.webp);
-    content: "";
-    margin-right: 150px;
-    background-size: 80% 100%;
-    background-position: 280% 50%;
-    background-repeat: no-repeat;
-    z-index: 200;
-    opacity: 1;
-    transition: all 500ms cubic-bezier(0.42, 0, 0.58, 1) 10ms;
-}
-
-div#sidebar.collapsed::before {
-    width: 0px;
-    height: 0px;
-    opacity: 0;
-    z-index: -100;
-    right: -210px;
-    transition: all 500ms cubic-bezier(0.42, 0, 0.58, 1) 10ms;
-}
-
-div#sidebar.collapsed {
-    right: 0px;
-    padding-left: 0px;
-    background-position: center;
-    background-size: 100% 100%;
 }
 
 #hotbar {
