@@ -343,20 +343,19 @@ export default class torgeternityActorSheet extends ActorSheet {
                 }
             }
         });
-
-
     }
 
-
-
     async _onSkillRoll(event) {
+        const skillName = event.currentTarget.dataset.name;
+        const attributeName = event.currentTarget.dataset.baseattribute;
+        const isAttributeTest = event.currentTarget.dataset.testtype === "attribute";
         let test = {
-            testType: "skill",
+            testType: event.currentTarget.dataset.testtype,
             actor: this.actor,
             actorPic: this.actor.data.img,
             actorType: this.actor.data.type,
-            skillName: event.currentTarget.dataset.name,
-            skillBaseAttribute: event.currentTarget.dataset.baseattribute,
+            skillName: isAttributeTest ? game.i18n.localize("torgeternity.attributes." + attributeName) : game.i18n.localize("torgeternity.skills." + skillName),
+            skillBaseAttribute: game.i18n.localize("torgeternity.attributes." + attributeName),
             skillAdds: event.currentTarget.dataset.adds,
             skillValue: event.currentTarget.dataset.value,
             unskilledUse: event.currentTarget.dataset.unskilleduse,
@@ -393,8 +392,8 @@ export default class torgeternityActorSheet extends ActorSheet {
             actorPic: this.actor.data.img,
             actorType: this.actor.data.type,
             interactionAttackType: event.currentTarget.getAttribute("data-attack-type"),
-            skillName: event.currentTarget.getAttribute("data-name"),
-            skillBaseAttribute: event.currentTarget.getAttribute("data-base-attribute"),
+            skillName: game.i18n.localize("torgeternity.skills." + event.currentTarget.getAttribute("data-name")),
+            skillBaseAttribute: game.i18n.localize("torgeternity.skills." + event.currentTarget.getAttribute("data-base-attribute")),
             skillAdds: event.currentTarget.getAttribute("data-adds"),
             skillValue: event.currentTarget.getAttribute("data-skill-value"),
             unskilledUse: true,
@@ -414,64 +413,64 @@ export default class torgeternityActorSheet extends ActorSheet {
         }
 
         // Exit if no target or get target data
-            if (Array.from(game.user.targets).length === 0) {
-                var needTargetData = {
-                    user: game.user.data._id,
-                    speaker: ChatMessage.getSpeaker(),
-                    owner: this.actor,
-                };
-        
-                var templateData = {
-                    message: "Cannot attempt interaction attack test without a target. Select a target and try again.",
-                    actorPic: this.actor.data.img
-                };
-        
-                const templatePromise = renderTemplate("./systems/torgeternity/templates/partials/skill-error-card.hbs", templateData);
-        
-                templatePromise.then(content => {
-                    needTargetData.content = content;
-                    ChatMessage.create(needTargetData);
-                })
-        
-                return;
-            } else {
-                var target = Array.from(game.user.targets)[0];
-                var targetType = target.actor.data.type;
-                test.vulnerableModifier = target.actor.data.data.vulnerableModifier;
-                if (test.interactionAttackType === "intimidation") {
-                    if (target.actor.data.data.skills.intimidation.value > 0) {
-                        test.targetDefenseSkill = game.i18n.localize("torgeternity.skills.intimidation");
-                        test.targetDefenseValue = target.actor.data.data.skills.intimidation.value;
-                    } else {
-                        test.targetDefenseSkill = game.i18n.localize("torgeternity.attributes.spirit");
-                        test.targetDefenseValue = target.actor.data.data.attributes.spirit;
-                    }
-                } else if (test.interactionAttackType === "maneuver") {
-                    if (target.actor.data.data.skills.maneuver.value > 0) {
-                        test.targetDefenseSkill = game.i18n.localize("torgeternity.skills.maneuver");
-                        test.targetDefenseValue = target.actor.data.data.skills.maneuver.value;
-                    } else {
-                        test.targetDefenseSkill = game.i18n.localize("torgeternity.attributes.dexterity");
-                        test.targetDefenseValue = target.actor.data.data.attributes.dexterity;
-                    }
-                } else if (test.interactionAttackType === "taunt") {
-                    if (target.actor.data.data.skills.taunt.value > 0) {
-                            test.targetDefenseSkill = game.i18n.localize("torgeternity.skills.taunt");
-                            test.targetDefenseValue = target.actor.data.data.skills.taunt.value;
-                        } else {
-                            test.targetDefenseSkill = game.i18n.localize("torgeternity.attributes.charisma");
-                            test.targetDefenseValue = target.actor.data.data.attributes.charisma;
-                    }
-                } else if (test.interactionAttackType === "trick") {
-                    if (target.actor.data.data.skills.trick.value > 0) {
-                        test.targetDefenseSkill = game.i18n.localize("torgeternity.skills.trick");
-                        test.targetDefenseValue = target.actor.data.data.skills.trick.value;
-                    } else {
-                        test.targetDefenseSkill = game.i18n.localize("torgeternity.attributes.mind");
-                        test.targetDefenseValue = target.actor.data.data.attributes.mind;
-                    }
+        if (Array.from(game.user.targets).length === 0) {
+            var needTargetData = {
+                user: game.user.data._id,
+                speaker: ChatMessage.getSpeaker(),
+                owner: this.actor,
+            };
+    
+            var templateData = {
+                message: "Cannot attempt interaction attack test without a target. Select a target and try again.",
+                actorPic: this.actor.data.img
+            };
+    
+            const templatePromise = renderTemplate("./systems/torgeternity/templates/partials/skill-error-card.hbs", templateData);
+    
+            templatePromise.then(content => {
+                needTargetData.content = content;
+                ChatMessage.create(needTargetData);
+            })
+    
+            return;
+        } else {
+            var target = Array.from(game.user.targets)[0];
+            var targetType = target.actor.data.type;
+            test.vulnerableModifier = target.actor.data.data.vulnerableModifier;
+            if (test.interactionAttackType === "intimidation") {
+                if (target.actor.data.data.skills.intimidation.value > 0) {
+                    test.targetDefenseSkill = game.i18n.localize("torgeternity.skills.intimidation");
+                    test.targetDefenseValue = target.actor.data.data.skills.intimidation.value;
+                } else {
+                    test.targetDefenseSkill = game.i18n.localize("torgeternity.attributes.spirit");
+                    test.targetDefenseValue = target.actor.data.data.attributes.spirit;
+                }
+            } else if (test.interactionAttackType === "maneuver") {
+                if (target.actor.data.data.skills.maneuver.value > 0) {
+                    test.targetDefenseSkill = game.i18n.localize("torgeternity.skills.maneuver");
+                    test.targetDefenseValue = target.actor.data.data.skills.maneuver.value;
+                } else {
+                    test.targetDefenseSkill = game.i18n.localize("torgeternity.attributes.dexterity");
+                    test.targetDefenseValue = target.actor.data.data.attributes.dexterity;
+                }
+            } else if (test.interactionAttackType === "taunt") {
+                if (target.actor.data.data.skills.taunt.value > 0) {
+                    test.targetDefenseSkill = game.i18n.localize("torgeternity.skills.taunt");
+                    test.targetDefenseValue = target.actor.data.data.skills.taunt.value;
+                } else {
+                    test.targetDefenseSkill = game.i18n.localize("torgeternity.attributes.charisma");
+                    test.targetDefenseValue = target.actor.data.data.attributes.charisma;
+                }
+            } else if (test.interactionAttackType === "trick") {
+                if (target.actor.data.data.skills.trick.value > 0) {
+                    test.targetDefenseSkill = game.i18n.localize("torgeternity.skills.trick");
+                    test.targetDefenseValue = target.actor.data.data.skills.trick.value;
+                } else {
+                    test.targetDefenseSkill = game.i18n.localize("torgeternity.attributes.mind");
+                    test.targetDefenseValue = target.actor.data.data.attributes.mind;
                 }
             }
+        }
 
 
         if (this.actor.data.data.stymiedModifier === parseInt(-2)) {

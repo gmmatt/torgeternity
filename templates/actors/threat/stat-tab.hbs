@@ -8,31 +8,31 @@
 			</b>
 			<span class="inline-skill-list">
 				<span>
-					<a class="skill-roll" data-testtype="attribute" data-baseattribute="{{data.data.attributes.charisma}}" data-adds="0" data-value="{{data.data.attributes.charisma}}" data-unskilleduse="1" data-name="{{localize "torgeternity.attributes.charisma"}}">
+					<a class="skill-roll" data-testtype="attribute" data-baseattribute="charisma" data-adds="0" data-value="{{data.data.attributes.charisma}}" data-unskilleduse="1" data-name="charisma">
 						{{localize "torgeternity.attributes.charisma"}}
 					</a>
 					{{data.data.attributes.charisma}}, &nbsp;
 				</span>
 				<span>
-					<a class="skill-roll" data-testtype="attribute" data-baseattribute="{{data.data.attributes.dexterity}}" data-adds="0" data-value="{{data.data.attributes.dexterity}}" data-unskilleduse="1" data-name="{{localize "torgeternity.attributes.dexterity"}}">
+					<a class="skill-roll" data-testtype="attribute" data-baseattribute="dexterity" data-adds="0" data-value="{{data.data.attributes.dexterity}}" data-unskilleduse="1" data-name="dexterity">
 						{{localize "torgeternity.attributes.dexterity"}}
 					</a>
 					{{data.data.attributes.dexterity}}, &nbsp;
 				</span>
 				<span>
-					<a class="skill-roll" data-testtype="attribute" data-baseattribute="{{data.data.attributes.mind}}" data-adds="0" data-value="{{data.data.attributes.mind}}" data-unskilleduse="1" data-name="{{localize "torgeternity.attributes.mind"}}">
+					<a class="skill-roll" data-testtype="attribute" data-baseattribute="mind" data-adds="0" data-value="{{data.data.attributes.mind}}" data-unskilleduse="1" data-name="mind">
 						{{localize "torgeternity.attributes.mind"}}
 					</a>
 					{{data.data.attributes.mind}}, &nbsp;
 				</span>
 				<span>
-					<a class="skill-roll" data-testtype="attribute" data-baseattribute="{{data.data.attributes.spirit}}" data-adds="0" data-value="{{data.data.attributes.spirit}}" data-unskilleduse="1" data-name="{{localize "torgeternity.attributes.spirit"}}">
+					<a class="skill-roll" data-testtype="attribute" data-baseattribute="spirit" data-adds="0" data-value="{{data.data.attributes.spirit}}" data-unskilleduse="1" data-name="spirit">
 						{{localize "torgeternity.attributes.spirit"}}
 					</a>
 					{{data.data.attributes.spirit}}, &nbsp;
 				</span>
 				<span>
-					<a class="skill-roll" data-testtype="attribute" data-baseattribute="{{data.data.attributes.strength}}" data-adds="0" data-value="{{data.data.attributes.strength}}" data-unskilleduse="1" data-name="{{localize "torgeternity.attributes.strength"}}">
+					<a class="skill-roll" data-testtype="attribute" data-baseattribute="strength" data-adds="0" data-value="{{data.data.attributes.strength}}" data-unskilleduse="1" data-name="strength">
 						{{localize "torgeternity.attributes.strength"}}
 					</a>
 					{{data.data.attributes.strength}}, &nbsp;
@@ -46,7 +46,7 @@
 			{{#each data.data.skills as |content name|}}
 				{{#if content.value}}
 					<span class="inline-skill-item">
-						<a class="skill-roll" data-testtype="skill" data-baseattribute="{{content.baseAttribute}}" data-adds="{{content.adds}}" data-value="{{content.value}}" data-unskilleduse="{{content.unskilledUse}}" data-name="{{localize (concatSkillName name)}}">
+						<a class="skill-roll" data-testtype="skill" data-baseattribute="{{content.baseAttribute}}" data-adds="{{content.adds}}" data-value="{{content.value}}" data-unskilleduse="{{content.unskilledUse}}" data-name="{{name}}">
 							{{localize (concatSkillName name)}}
 						</a>
 						{{#if content.isFav}}

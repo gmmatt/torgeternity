@@ -15,7 +15,7 @@
 			{{#each data.data.skills as |content name|}}
 				<li title="Shift-click for enhanced skill test">
 					<span>
-						<a class="skill-roll" data-testtype="skill" data-baseattribute="{{content.baseAttribute}}" data-adds="{{content.adds}}" data-value="{{content.value}}" data-unskilleduse="{{content.unskilledUse}}" data-name="{{localize (concatSkillName name)}}">
+						<a class="skill-roll" data-testtype="skill" data-baseattribute="{{content.baseAttribute}}" data-adds="{{content.adds}}" data-value="{{content.value}}" data-unskilleduse="{{content.unskilledUse}}" data-name="{{name}}">
 							{{localize (concatSkillName name)}}
 						</a>
 
@@ -75,7 +75,7 @@
 				{{#if content.adds}}
 					<li>
 						<span>
-							<a title="{{localize 'torgeternity.sheetLabels.skillRollHint'}}" class="skill-roll" data-testtype="skill" data-baseattribute="{{content.baseAttribute}}" data-adds="{{content.adds}}" data-value="{{content.value}}" data-unskilleduse="{{content.unskilledUse}}" data-name="{{localize (concatSkillName name)}}">
+							<a title="{{localize 'torgeternity.sheetLabels.skillRollHint'}}" class="skill-roll" data-testtype="skill" data-baseattribute="{{content.baseAttribute}}" data-adds="{{content.adds}}" data-value="{{content.value}}" data-unskilleduse="{{content.unskilledUse}}" data-name="{{name}}">
 								{{localize (concatSkillName name)}}
 							</a>
 						</span>

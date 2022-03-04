@@ -463,64 +463,67 @@ async function createTorgEternityMacro(data, slot) {
     }
     else // attribute, skill, interaction
     {
-        const capitalizedSkillName = capitalizeText(objData.name);
-        const capitalizedAttributeName = capitalizeText(objData.attribute);
-        let isInteractionAttack = (data.type === "interaction");
-        command = `game.torgeternity.rollSkillMacro("${capitalizedSkillName}", "${capitalizedAttributeName}", ${isInteractionAttack});`;
+        const internalSkillName = objData.name;
+        const internalAttributeName = objData.attribute;
+        const displaySkillName = game.i18n.locallize("torgeternity.skills." + internalSkillName);
+        const displayAttributeName = game.i18n.locallize("torgeternity.attributes." + internalAttributeName);
+        const isInteractionAttack = (data.type === "interaction");
+        
+        command = `game.torgeternity.rollSkillMacro("${internalSkillName}", "${internalAttributeName}", ${isInteractionAttack});`;
 
         if (data.type === "skill")
-            macroName = capitalizedSkillName + "/" + capitalizedAttributeName;
+            macroName = displaySkillName + "/" + displayAttributeName;
         else if (data.type === "attribute")
-            macroName = capitalizedAttributeName;
+            macroName = displayAttributeName;
         else if (data.type === "interaction")
-            macroName = capitalizedSkillName;
+            macroName = displaySkillName;
          macroFlag = "torgeternity.skillMacro";
 
-		if (capitalizedSkillName !== capitalizedAttributeName) {
-			// not attribute test
-			// don't have skill icons yet
-			// macroImg = "systems/torgeternity/images/icons/skill-" + capitalizedSkillName.toLowerCase().replaceAll(' ', '-') + "-icon.png";
-		}
-		else {
-			// this is an attribute test
-			// use built-in foundry icons
-			if (capitalizedAttributeName === "Charisma")
-				macroImg = "icons/skills/social/diplomacy-handshake.webp";
-			else if (capitalizedAttributeName === "Dexterity")
-				macroImg = "icons/skills/movement/feet-winged-boots-brown.webp";
-			else if (capitalizedAttributeName === "Mind")
-				macroImg = "icons/sundries/books/book-stack.webp";
-			else if (capitalizedAttributeName === "Spirit")
-				macroImg = "icons/magic/life/heart-shadow-red.webp";
-			else if (capitalizedAttributeName === "Strength")
-				macroImg = "icons/magic/control/buff-strength-muscle-damage.webp";
-		}
+        if (data.type === "attribute") {
+            // this is an attribute test
+            // use built-in foundry icons
+            if (capitalizedAttributeName === "Charisma")
+                macroImg = "icons/skills/social/diplomacy-handshake.webp";
+            else if (capitalizedAttributeName === "Dexterity")
+                macroImg = "icons/skills/movement/feet-winged-boots-brown.webp";
+            else if (capitalizedAttributeName === "Mind")
+                macroImg = "icons/sundries/books/book-stack.webp";
+            else if (capitalizedAttributeName === "Spirit")
+                macroImg = "icons/magic/life/heart-shadow-red.webp";
+            else if (capitalizedAttributeName === "Strength")
+                macroImg = "icons/magic/control/buff-strength-muscle-damage.webp";
+        }
+        else {
+            // not attribute test
+            // don't have skill icons yet
+            // macroImg = "systems/torgeternity/images/icons/skill-" + capitalizedSkillName.toLowerCase().replaceAll(' ', '-') + "-icon.png";
+        }
     }
 
     macro = game.macros.find(
         (m) => m.name === macroName && m.data.command === command
     );
     if (!macro) {
-		// there is a difference between img: null or img: "" and not including img at all
-		// the latter results in default macro icon, the others give broken image icon
-		// can remove this when we have skill icons
-		if (!macroImg) {
-			macro = await Macro.create({
-				name: macroName,
-				type: "script",
-				command: command,
-				flags: { macroFlag: true },
-			});
-		}
-		else {
-			macro = await Macro.create({
-				name: macroName,
-				type: "script",
-				img: macroImg,
-				command: command,
-				flags: { macroFlag: true },
-			});
-		}
+        // there is a difference between img: null or img: "" and not including img at all
+        // the latter results in default macro icon, the others give broken image icon
+        // can remove this when we have skill icons
+        if (!macroImg) {
+            macro = await Macro.create({
+                name: macroName,
+                type: "script",
+                command: command,
+                flags: { macroFlag: true },
+            });
+        }
+        else {
+            macro = await Macro.create({
+                name: macroName,
+                type: "script",
+                img: macroImg,
+                command: command,
+                flags: { macroFlag: true },
+            });
+        }
     }
     
     game.user.assignHotbarMacro(macro, slot);
@@ -706,10 +709,6 @@ function rollItemMacro(itemName) {
     }
 }
 
-function capitalizeText(text) {
-    return text.toLowerCase().split(' ').map((s) => s.charAt(0).toUpperCase() + s.substring(1)).join(' ');
-}
-
 /**
  * Create a Macro from a skill, attribute, or interaction (?) drop.
  * Get an existing macro if one exists, otherwise create a new one.
@@ -723,10 +722,11 @@ function rollSkillMacro(skillName, attributeName, isInteractionAttack) {
     let actor = null;
     if (speaker.token) actor = game.actors.tokens[speaker.token];
     if (!actor) actor = game.actors.get(speaker.actor);
-    let isAttributeTest = (skillName === attributeName);
+    const isAttributeTest = (skillName === attributeName);
     let skill = null;
     if (!isAttributeTest) {
-        const skillNameKey = skillName.toLowerCase();
+        const skillNameKey = skillName; // skillName required to be internal value
+            // would be nice to use display value as an input instead but we can't translate from i18n to internal values
         skill = actor && Object.keys(actor.data.data.skills).includes(skillNameKey) ? actor.data.data.skills[skillNameKey] : null;
         if (!skill)
             return ui.notifications.warn(
@@ -769,12 +769,12 @@ function rollSkillMacro(skillName, attributeName, isInteractionAttack) {
 // The following is copied/pasted/adjusted from _onSkillRoll and _onInteractionAttack in torgeternityActorSheet
 // This code needs to be centrally located!!!
     let test = {
-        testType: "skill",
+        testType: isAttributeTest ? "attribute" : "skill",
         actor: actor,
         actorPic: actor.data.img,
         actorType: actor.data.type,
-        skillName: skillName,
-        skillBaseAttribute: attributeName,
+        skillName: isAttributeTest ? game.i18n.localize("torgeternity.attributes." + attributeName) : game.i18n.localize("torgeternity.skills." + skillName),
+        skillBaseAttribute: game.i18n.localize("torgeternity.attributes." + attributeName),
         skillAdds: skill.adds,
         skillValue: skillValue,
         unskilledUse: skill.unskilledUse,
@@ -793,7 +793,7 @@ function rollSkillMacro(skillName, attributeName, isInteractionAttack) {
     if (isInteractionAttack) {
         test["type"] = "interactionAttack";
         test["testType"] = "interactionAttack";
-        test["interactionAttackType"] = skillName.toLowerCase();
+        test["interactionAttackType"] = skillName;
         test["darknessModifier"] = 0; 
             // Darkness seems like it would be hard to determine if it should apply to 
             //    skill/attribute tests or not, maybe should be option in dialog?
