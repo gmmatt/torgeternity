@@ -41,7 +41,7 @@ Hooks.once("init", async function() {
     //-------global
     game.torgeternity = {
         rollItemMacro,
-    rollSkillMacro,
+        rollSkillMacro,
         viewMode: true
     };
 
@@ -465,11 +465,13 @@ async function createTorgEternityMacro(data, slot) {
     {
         const internalSkillName = objData.name;
         const internalAttributeName = objData.attribute;
-        const displaySkillName = game.i18n.locallize("torgeternity.skills." + internalSkillName);
-        const displayAttributeName = game.i18n.locallize("torgeternity.attributes." + internalAttributeName);
+        const isAttributeTest = (internalSkillName === internalAttributeName);
         const isInteractionAttack = (data.type === "interaction");
         
         command = `game.torgeternity.rollSkillMacro("${internalSkillName}", "${internalAttributeName}", ${isInteractionAttack});`;
+
+        const displaySkillName = isAttributeTest ? null : game.i18n.localize("torgeternity.skills." + internalSkillName);
+        const displayAttributeName = game.i18n.localize("torgeternity.attributes." + internalAttributeName);
 
         if (data.type === "skill")
             macroName = displaySkillName + "/" + displayAttributeName;
@@ -482,21 +484,21 @@ async function createTorgEternityMacro(data, slot) {
         if (data.type === "attribute") {
             // this is an attribute test
             // use built-in foundry icons
-            if (capitalizedAttributeName === "Charisma")
+            if (internalAttributeName === "charisma")
                 macroImg = "icons/skills/social/diplomacy-handshake.webp";
-            else if (capitalizedAttributeName === "Dexterity")
+            else if (internalAttributeName === "dexterity")
                 macroImg = "icons/skills/movement/feet-winged-boots-brown.webp";
-            else if (capitalizedAttributeName === "Mind")
+            else if (internalAttributeName === "mind")
                 macroImg = "icons/sundries/books/book-stack.webp";
-            else if (capitalizedAttributeName === "Spirit")
+            else if (internalAttributeName === "spirit")
                 macroImg = "icons/magic/life/heart-shadow-red.webp";
-            else if (capitalizedAttributeName === "Strength")
+            else if (internalAttributeName === "strength")
                 macroImg = "icons/magic/control/buff-strength-muscle-damage.webp";
         }
         else {
             // not attribute test
             // don't have skill icons yet
-            // macroImg = "systems/torgeternity/images/icons/skill-" + capitalizedSkillName.toLowerCase().replaceAll(' ', '-') + "-icon.png";
+            // macroImg = "systems/torgeternity/images/icons/skill-" + internalSkillName + "-icon.png";
         }
     }
 
@@ -576,7 +578,7 @@ function rollItemMacro(itemName) {
                 };
 
                 var templateData = {
-                    message: game.i18n.locallize('torgeternity.chatText.check.needTarget'),
+                    message: game.i18n.localize('torgeternity.chatText.check.needTarget'),
                     actorPic: actor.data.img
                 };
 

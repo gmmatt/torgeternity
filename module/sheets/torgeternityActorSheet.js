@@ -139,10 +139,10 @@ export default class torgeternityActorSheet extends ActorSheet {
     {
         this._onDragStart(evt);
         let skillAttrData = {
-            type: evt.currentTarget.attributes["data-testtype"].value, // lowercase
+            type: evt.currentTarget.attributes["data-testtype"].value,
             data: {
-                name: evt.currentTarget.attributes["data-name"].value, // capitalized
-                attribute: evt.currentTarget.attributes["data-baseattribute"].value, // lowercase
+                name: evt.currentTarget.attributes["data-name"].value,
+                attribute: evt.currentTarget.attributes["data-baseattribute"].value,
                 adds: evt.currentTarget.attributes["data-adds"].value,
                 value: evt.currentTarget.attributes["data-value"].value,
                 unskilledUse: evt.currentTarget.attributes["data-unskilleduse"].value,
@@ -156,17 +156,18 @@ export default class torgeternityActorSheet extends ActorSheet {
     _interactionDragStart(evt)
     {
         this._onDragStart(evt);
-        let skillNameKey = evt.currentTarget.attributes["data-name"].value.toLowerCase();
+        let skillNameKey = evt.currentTarget.attributes["data-name"].value;
         let skill = this.actor.data.data.skills[skillNameKey];
+		let value = skill.value ? skill.value : skill.adds + this.actor.data.data.attributes[skill.baseAttribute];
         let skillAttrData = {
             type: "interaction",
             data: {
-                name: evt.currentTarget.attributes["data-name"].value, // capitalized
-                attribute: skill.baseAttribute, // lowercase
-                adds: skill.adds.toString(),
-                value: evt.currentTarget.attributes["data-skill-value"].value,
-                unskilledUse: skill.unskilledUse.toString(),
-                attackType: evt.currentTarget.attributes["data-attack-type"].value // lowercase
+                name: skillNameKey,
+                attribute: skill.baseAttribute,
+                adds: skill.adds,
+                value: value,
+                unskilledUse: skill.unskilledUse,
+                attackType: evt.currentTarget.attributes["data-attack-type"].value
             }
         };
         evt.dataTransfer.setData('text/plain', JSON.stringify(skillAttrData));
@@ -348,7 +349,7 @@ export default class torgeternityActorSheet extends ActorSheet {
     async _onSkillRoll(event) {
         const skillName = event.currentTarget.dataset.name;
         const attributeName = event.currentTarget.dataset.baseattribute;
-        const isAttributeTest = event.currentTarget.dataset.testtype === "attribute";
+        const isAttributeTest = (event.currentTarget.dataset.testtype === "attribute");
         let test = {
             testType: event.currentTarget.dataset.testtype,
             actor: this.actor,
