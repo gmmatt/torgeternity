@@ -507,7 +507,7 @@
                     "outstandingSuccess": "Outstanding Success",
                     "goodSuccess": "Good Success",
                     "standartSuccess": "Standart Success",
-                    "mishape": "Mishape",
+                    "mishape": "Mishap",
                     "damage": "Damage",
                     "toughness": "Toughness",
                     "noDamage": "No Damage",
@@ -526,7 +526,7 @@
         },
 
         "dialogPrompts": {
-            "showToPlayers": "show card to all players",
+            "showToPlayers": "Show to All players",
             "playerPassTitle": "Pass to Player",
             "playerPassLabel": "Pass",
             "playerPassInstructions": "Select Player to Receive Card",
@@ -545,8 +545,8 @@
         },
         "dialogWindow": {
             "hideForeignCompendium": {
-                "title": "Hide foreign languages Compendiums ?",
-                "content": "This system includes both English and German language compendiums. Do you want to hide foreign language compendiums ?"
+                "title": "Hide foreign languages Compendiums?",
+                "content": "This system includes both English and German language compendiums. Do you want to hide foreign language compendiums?"
             },
             "externalLinks": {
                 "title": "Links",
@@ -563,20 +563,20 @@
         },
         "iconeTitles": {
             "openParty": "Open the party sheet",
-            "resetPossibilities": "Reset Stormknight possibilities",
+            "resetPossibilities": "Reset Storm Knight Possibilities",
             "delete": "Delete",
             "edit": "Edit",
             "sendToChat": "Send to Chat",
             "toggle": "Toggle",
             "attackRoll": "Attack Roll",
-            "spellRoll": "Spell roll",
-            "miracleRoll": "Miracle roll",
-            "psionicRoll": "Psionic power roll",
-            "bonusRoll": "Bonus roll"
+            "spellRoll": "Spell Roll",
+            "miracleRoll": "Miracle Roll",
+            "psionicRoll": "Psionic Power Roll",
+            "bonusRoll": "Bonus Roll"
         },
         "possibilitiesReset": {
-            "name": "Reset Stormknight possibilities",
-            "hint": "How many possibilities should the StormKnights get ?"
+            "name": "Reset Storm Knight Possibilities",
+            "hint": "How many possibilities should the StormKnights get?"
         },
 
         "cosmDecks": {
