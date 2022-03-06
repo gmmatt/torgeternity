@@ -12,6 +12,10 @@ Div.editor-content p{
         text-indent:0;
         }
 
+Div.editor-content :is(ul, ol){
+    text-align: justify;
+    padding-right: 10px;
+}
 
 /*hr will become Torg-Style*/
 Div.editor-content hr {
@@ -23,11 +27,11 @@ Div.editor-content hr {
     }
 
 /*h1 will become Torg-Style*/
-Div.editor-content h1 {
+Div.editor-content h1{
     Background-image: URL(../../../systems/torgeternity/images/tab-header.webp);
     background-repeat: no-repeat;
     background-size:100% 100%;
-    text-align:center;
+    background-color: transparent;
     border:none;
     }
 
@@ -45,7 +49,7 @@ Div.editor-content h2 {
 /*There is still a headline, bolt white upper case with a small black outline. As this wasn't defined, it will be <h4> for not confusing with other headlines*/
 Div.editor-content h4 {
     text-align: center;
-    font-size: 2rem;
+    font-size: 1.5rem;
     color: white;
     font-family: Alaska;
     text-shadow: black    1.3px 1.3px 0px,
@@ -55,9 +59,19 @@ Div.editor-content h4 {
     text-transform: uppercase;
 }
 
+/*In Cosm-Books, there is a headline similiar to h4 but with the bar that is used as background-image for the <hr>. Making this a class.*/
+Div.editor-content h4.bar{
+    background-image: url(../images/separator.webp);
+    background-position-y: -8px;
+    background-repeat: no-repeat;
+    background-size: auto;
+    /*height: 4rem;*/
+}
+
 /*<img> comes with a border, what is never seen in TE*/
 Div.editor-content img{
     border-image: none;
+    border: none;
     }
 
 /*Image-wraparound, image on left side*/
@@ -68,6 +82,10 @@ Div.editor-content img{
     width: 50%;
     height:50%;
     }
+    .imgleft div.editor-content h1{
+        background-size: 50% 100% !important;
+        background-color: none !important;
+    }
 
 /*Image-wraparound, image on right side.*/
 .imgright{
@@ -76,6 +94,10 @@ Div.editor-content img{
     border: none;
     width:50%;
     height:50%;
+    }
+    .imgright div.editor-content h1{
+        background-size: 50% 100% !important;
+        background-color: none !important;
     }
 
 /*Use this class in the next <p> after layouting with classes .imgright and .imgleft*/
@@ -90,6 +112,14 @@ Div.editor-content img{
     width: 100%; 
     height: 100%;
     border: none;
+    }
+
+.charimg{
+    float: right;
+    shape-margin: 0.5rem !important;
+    shape-image-threshold: 0.1;
+    max-width: 50% !important;
+    max-height: 50% !important;
     }
 
 /*A class for more line-height, because links in journals are often to close to another*/
@@ -110,9 +140,26 @@ Div.editor-content img{
     padding-left:10px;
     padding-top: 10px;
     }
+    .sidenote ul{
+        list-style-position: inside;
+        text-align: justify;
+        padding-right: 10px;
+    }
 .sidenote :first-of-type{
     padding-top: 0;
     }
+
+.sidenote.left{
+    float: left;
+    width: 50%;
+    margin-right: 0.5rem;
+}
+
+.sidenote.right{
+    float: right;
+    width: 50%;
+    margin-left: 0.5rem;
+}
 
 /*Adventures often come with directives from Sebastian. This class is to bring them on the grafic parchments with the right font. Please use an h3 for the headline.*/
 @font-face {
