@@ -256,7 +256,7 @@ div.actor ::-webkit-scrollbar {
     text-transform: uppercase;
     text-align: center;
     color: white;
-    background-color: #0a0b3b;
+    /*background-color: #0a0b3b;*/
     border-bottom: none;
 }
 
