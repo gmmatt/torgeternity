@@ -337,8 +337,6 @@
             "pool": "reserve d'action",
             "skillRollHint": "Shift-click pour un jet avancé",
             "toggleSkillDisplay": "afficher/masquer les compétences sans rang"
-
-
         },
         "combat": {
             "nextKeep": "nouveau round (garder la carte actuelle)",
@@ -445,7 +443,6 @@
             "true": "Oui",
             "false": "Non"
         },
-
         "submit": {
             "true": "Oui",
             "false": "Non",
@@ -516,7 +513,6 @@
                 }
             }
         },
-
         "sizes": {
             "tiny": "Minuscule",
             "verySmall": "Très petite",
@@ -525,7 +521,6 @@
             "large": "Grande",
             "veryLarge": "Très grande"
         },
-
         "dialogPrompts": {
             "showToPlayers": "monter à tous les joueurs",
             "playerPassTitle": "Donner au joueur",
@@ -543,7 +538,6 @@
             "openHand": "voir sa main",
             "lifelike": "affichage 'en éventail'",
             "return": "renvoit toutes les cartes dans leur pile d'origine.Ne remélange PAS automatiquement la pile."
-
         },
         "dialogWindow": {
             "hideForeignCompendium": {
@@ -589,15 +583,12 @@
             "panPacifica": "Cartes Cosm Pan Pacifica",
             "tharkold": "Cartes Cosm Tharkold"
         },
-
         "cardTypes": {
             "destiny": "Destin",
             "drama": "Action",
             "cosm": "Cosm",
             "hand": "Main"
-
         },
-
         "scenes": {
             "reality": "Réalité",
             "realityHint": "Configure la réalité de la zone de la scène",
@@ -606,16 +597,13 @@
             "HeaderVisionHint": "Configure les paramètres de vision, d'éclairage et de brouillard de guerre pour cette scène.",
             "HeaderAmbienceHint": "Configure les intégrations supplémentaires entre cette scène et Journal Entries, les playlists ou les effets météo."
         },
-
         "tokens": {
-
             "noDSR": "RDT",
             "step": "ét.",
             "a": " A",
             "b": " B",
             "c": " C",
             "d": " D"
-
         },
         "poolToggle": {
             "inPool": "carte réservée",
@@ -645,19 +633,29 @@
             "hideForeignCompendium": {
                 "name": "Masquer les compendiiums en langues étrangères",
                 "hint": "Validez pour masquer tous les compendiums qui ne sont pas en français"
-
             }
+        },
+        "notifications": {
+            "macroTypeWarning": "Vous ne pouvez créer des macros que pour vos items, attributs ou compétences",
+            "openIssue": "votre navigateur va ouvrir un onglet pour remplir une issue",
+            "openUlisses": "votre navigateur va ouvrir le site de Ulisses Spiele",
+            "openDiscord": "votre navigateur va ouvrir un onglet pour rejoindre discord ",
+            "noItemNamed": "L' acteur que vous controllez n'a pas d'item nommé  ",
+            "noSkillNamed": "L' acteur que vous controllez n'a pas d'de compétence nommé ",
+            "noAttrNamed": "L' acteur que vous controllez n'a pas d'attribut nommé ",
+            "notImplemented": "Pas encore implémenté",
+            "defaultAction": "action par default, equipement par exemple",
+            "noHands": "pas de main de carte disponible!",
+            "dramaDeckEmpty": "le paquet de cartes d'actions est vide. Ré-initialisez-le.",
+            "onlyReservedCard": "vous ne pouvez jouer que les cartes réservées durant une scène dramatique",
+            "noActiveEffectInOwnedItem": "Configurer les effets actifs à l'intérieur des Items possédés n'est pas encore possible."
         }
-
     },
-
-
     "CARD": {
         "TypeCosm": "Cosm",
         "TypeDestiny": "Destin",
         "TypeDrama": "Action",
         "discard": "Défausser",
         "display": "Montrer cette carte aux joueurs"
-
     }
 }

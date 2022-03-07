@@ -298,7 +298,7 @@ Hooks.on("ready", async function() {
                 icon: '<i class="fab fa-discord"style="font-size:24px"></i>',
                 label: "<p>Discord</p>",
                 callback: () => {
-                    ui.notifications.info("Your browser will open a new page to join us on our discord server");
+                    ui.notifications.info(game.i18n.localize('torgeternity.notifications.openDiscord'));
                     var windowObjectReference = window.open("https://discord.gg/foundryvtt", "_blank");
 
                 }
@@ -309,7 +309,7 @@ Hooks.on("ready", async function() {
                 icon: '<i class="fas fa-bug" style="font-size:24px"></i>',
                 label: game.i18n.localize('torgeternity.dialogWindow.externalLinks.bug'),
                 callback: () => {
-                    ui.notifications.info("your browser will open a new page to complete an issue");
+                    ui.notifications.info(game.i18n.localize('torgeternity.notifications.openIssue'));
                     var windowObjectReference = window.open("https://github.com/gmmatt/torgeternity/issues/new", "_blank");
 
                 }
@@ -318,7 +318,7 @@ Hooks.on("ready", async function() {
                 icon: '<img src="systems/torgeternity/images/ulissesLogo.webp" alt="logo ulisses" style="filter:grayscale(1)">',
                 label: game.i18n.localize('torgeternity.dialogWindow.externalLinks.publisher'),
                 callback: () => {
-                    ui.notifications.info("your browser will open a new page to complete an issue");
+                    ui.notifications.info(game.i18n.localize('torgeternity.notifications.openUlisses'));
                     var windowObjectReference = window.open("https://ulisses-us.com", "_blank");
 
                 }
@@ -338,7 +338,7 @@ Hooks.on("ready", async function() {
             icon: '<img src="systems/torgeternity/images/BBE_logo.webp" alt="logo BBE" style="filter:grayscale(1);max-height:3em">',
             label: "<p>Distr. français</p>",
             callback: () => {
-                ui.notifications.info("your browser will open a new page to complete an issue");
+                ui.notifications.info("votre navigateur va ouvrir le site de BlackBook Editions dans un nouvel onglet  ");
                 var windowObjectReference = window.open("https://www.black-book-editions.fr/catalogue.php?id=668", "_blank");
 
             }
@@ -445,7 +445,7 @@ async function createTorgEternityMacro(data, slot) {
     if (data.type !== "Item" && data.type !== "skill" && data.type !== "interaction" && data.type !== "attribute") return;
     if (!("data" in data))
         return ui.notifications.warn(
-            "You can only create macro buttons for owned Items and Attributes/Skills"
+            game.i18n.localize('torgeternity.notifications.macroTypeWarning')
         );
     const objData = data.data;
     // Create the macro command
@@ -520,7 +520,7 @@ function rollItemMacro(itemName) {
     const item = actor ? actor.items.find((i) => i.name === itemName) : null;
     if (!item)
         return ui.notifications.warn(
-            `Your controlled Actor does not have an item named ${itemName}`
+            game.i18n.localize('torgeternity.notifications.noItemNamed') + item.name
         );
 
     // Trigger the item roll
@@ -677,10 +677,10 @@ function rollItemMacro(itemName) {
                         });
             */
             console.log("Same action for Psi/Miracles/Spells");
-            ui.notifications.info("Not Handled at this moment");
+            ui.notifications.info(game.i18n.localize('torgeternity.notifications.notImplemented'));
             break;
         default:
-            ui.notifications.info("Default action, Gear for example");
+            ui.notifications.info(game.i18n.localize('torgeternity.notifications.defaultAction'));
             return item.roll({ async: false });
     }
 }
@@ -709,7 +709,7 @@ function rollSkillMacro(skillName, attributeName, isInteractionAttack) {
         skill = actor && Object.keys(actor.data.data.skills).includes(skillNameKey) ? actor.data.data.skills[skillNameKey] : null;
         if (!skill)
             return ui.notifications.warn(
-                `Your controlled Actor does not have a skill named ${skillName}`
+                game.i18n.localize('torgeternity.notifications.noSkillNamed') + skillName
             );
     }
 
@@ -717,7 +717,7 @@ function rollSkillMacro(skillName, attributeName, isInteractionAttack) {
     const attribute = actor && Object.keys(actor.data.data.attributes).includes(attributeNameKey) ? actor.data.data.attributes[attributeNameKey] : null;
     if (!attribute)
         return ui.notifications.warn(
-            `Your controlled Actor does not have an attribute named ${attributeName}`
+            game.i18n.localize('torgeternity.notifications.noItemNamed')
         );
     if (isAttributeTest) {
         // dummy skill object since there's no actual skill in this case

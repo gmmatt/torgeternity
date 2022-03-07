@@ -337,7 +337,6 @@
             "pool": "pool",
             "skillRollHint": "Shift-click for enhanced skill test",
             "toggleSkillDisplay": "Click to toggle Skills display"
-
         },
         "combat": {
             "nextKeep": "Next Round (Keep Current Card)",
@@ -451,7 +450,6 @@
             "apply": "Apply",
             "OK": "OK",
             "dontShow": "Don't show again"
-
         },
         "chatText": {
             "possibility": "Possibility",
@@ -515,7 +513,6 @@
                 }
             }
         },
-
         "sizes": {
             "tiny": "Tiny",
             "verySmall": "Very Small",
@@ -524,7 +521,6 @@
             "large": "Large",
             "veryLarge": "Very Large"
         },
-
         "dialogPrompts": {
             "showToPlayers": "Show to All players",
             "playerPassTitle": "Pass to Player",
@@ -558,7 +554,6 @@
             "itemDeletion": {
                 "title": "Confirm Deletion",
                 "content": "Are you sure you want to delete this? It will be permanently removed from the sheet."
-
             }
         },
         "iconeTitles": {
@@ -578,7 +573,6 @@
             "name": "Reset Storm Knight Possibilities",
             "hint": "How many possibilities should the StormKnights get?"
         },
-
         "cosmDecks": {
             "coreEarth": "Core Earth Cosm Deck",
             "aysle": "Aysle Cosm Deck",
@@ -589,14 +583,12 @@
             "panPacifica": "Pan Pacifica Cosm Deck",
             "tharkold": "Tharkold Cosm Deck"
         },
-
         "cardTypes": {
             "destiny": "Destiny",
             "drama": "Drama",
             "cosm": "Cosm",
             "hand": "Hand"
         },
-
         "scenes": {
             "reality": "Reality",
             "realityHint": "Configure Reality",
@@ -605,22 +597,18 @@
             "HeaderVisionHint": "Configure Vision and Lighting Options.",
             "HeaderAmbienceHint": "Configure Other Enviornmental Options."
         },
-
         "tokens": {
-
             "noDSR": "No DSR",
             "step": "Step",
             "a": " A",
             "b": " B",
             "c": " C",
             "d": " D"
-
         },
         "poolToggle": {
             "inPool": "Card in pool",
             "toogle": "Toggle pooled"
         },
-
         "monarch": {
             "play": "Play this card",
             "broadcast": "Show this card to everyone",
@@ -650,12 +638,24 @@
             "hideForeignCompendium": {
                 "name": "Hide foreign Compendiums",
                 "hint": "Select to hide all compendium in foreign language"
-
             }
+        },
+        "notifications": {
+            "macroTypeWarning": "You can only create macro buttons for owned Items and Attributes/Skills",
+            "openIssue": "your browser will open a new page to complete an issue",
+            "openUlisses": "Your browser will open a new tab to join Ulisses website",
+            "openDiscord": "Your browser will open a new page to join us on our discord server ",
+            "noItemNamed": "Your controlled Actor does not have an item named ",
+            "noSkillNamed": "Your controlled Actor does not have a skill named ",
+            "noAttrNamed": "Your controlled Actor does not have an attribute named ",
+            "notImplemented": "Not implemented at this moment",
+            "defaultAction": "Default action, Gear for example",
+            "noHands": "No hands available!",
+            "dramaDeckEmpty": "The Drama Deck is empty. Reset the Drama Deck to continue.",
+            "onlyReservedCard": "please play a reserved card while playing a dramatic scene",
+            "noActiveEffectInOwnedItem": "Managing Active Effects within an Owned Item is not currently supported and will be added in a subsequent update."
         }
     },
-
-
     "CARD": {
         "TypeCosm": "Cosm",
         "TypeDestiny": "Destiny",
@@ -663,5 +663,4 @@
         "discard": "Discard",
         "display": "Show this card to players"
     }
-
 }
