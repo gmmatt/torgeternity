@@ -2590,7 +2590,8 @@ form.actor-sheet.threat .tab[data-tab].active .editor {
     transition: all 0.1s cubic-bezier(1, 0, 0, 1) 0.1s;
     color: white;
     background-image: url(../images/tab_back.webp);
-    background-size: contain;
+    background-size: 100% 100%;
+    padding: 8px 1px;
 }
 
 .item .window-content form.item-sheet nav.tabs a.item:hover,
