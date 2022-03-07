@@ -1247,22 +1247,18 @@ div.readme a.compendium {
 @-webkit-keyframes flip {
     0% {
         margin-left: 100%;
-        max-height: 0%
     }
     100% {
         margin-left: 0%;
-        max-height: 100%
     }
 }
 
 @keyframes flip {
     0% {
         margin-left: 100%;
-        max-height: 0%
     }
     100% {
         margin-left: 0%;
-        max-height: 100%
     }
 }
 
