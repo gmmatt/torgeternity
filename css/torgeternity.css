@@ -875,6 +875,53 @@ french tent cards images
 
 /*-------------------------
 -----------------------------
+spanish tent cards images
+-------------------------------
+--------------------------*/
+
+#navigation .es.cosm-card.coreEarth {
+    background: url(../images/cosm-cards/es/coreEarth.webp);
+    background-size: 100% 100%;
+}
+
+#navigation .es.cosm-card.livingLand {
+    background: url(../images/cosm-cards/es/livingLand.webp);
+    background-size: 100% 100%;
+}
+
+#navigation .es.cosm-card.nileEmpire {
+    background: url(../images/cosm-cards/es/nileEmpire.webp);
+    background-size: 100% 100%;
+}
+
+#navigation .es.cosm-card.aysle {
+    background: url(../images/cosm-cards/es/aysle.webp);
+    background-size: 100% 100%;
+}
+
+#navigation .es.cosm-card.cyberpapacy {
+    background: url(../images/cosm-cards/es/cyberpapacy.webp);
+    background-size: 100% 100%;
+}
+
+#navigation .es.cosm-card.panPacifica {
+    background: url(../images/cosm-cards/es/panPacifica.webp);
+    background-size: 100% 100%;
+}
+
+#navigation .es.cosm-card.orrorsh {
+    background: url(../images/cosm-cards/es/orrorsh.webp);
+    background-size: 100% 100%;
+}
+
+#navigation .es.cosm-card.tharkold {
+    background: url(../images/cosm-cards/es/tharkold.webp);
+    background-size: 100% 100%;
+}
+
+
+/*-------------------------
+-----------------------------
 german tent cards images
 -------------------------------
 --------------------------*/
