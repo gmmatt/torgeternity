@@ -145,7 +145,7 @@ export default class torgeternityPlayerHand extends CardsHand {
 
     async playerPassDialog(card) {
         const cards = game.cards.filter(c => (c !== this) && (c.type !== "deck") && c.testUserPermission(game.user, "LIMITED"));
-        if (!cards.length) return ui.notifications.warn("No hands available!", { localize: true });
+        if (!cards.length) return ui.notifications.warn(game.i18n.localize('torgeternity.notifications.noHand'), { localize: true });
 
         // Construct the dialog HTML
         const html = await renderTemplate("systems/torgeternity/templates/cards/playerPassDialog.hbs", {

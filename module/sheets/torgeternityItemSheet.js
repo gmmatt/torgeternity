@@ -88,13 +88,13 @@ export default class torgeternityItemSheet extends ItemSheet {
     activateListeners(html) {
         super.activateListeners(html);
         html.find(".effect-control").click(ev => {
-            if (this.item.isOwned) return ui.notifications.warn("Managing Active Effects within an Owned Item is not currently supported and will be added in a subsequent update.")
+            if (this.item.isOwned) return ui.notifications.warn(game.i18n.localize('torgeternity.notifications.noActiveEffectInOwnedItem'))
             onManageActiveEffect(ev, this.item)
         });
 
         html.find(".convert-rsa").click(ev => {
-            this.item.update ({
-                "type": "specialability-rollable"        
+            this.item.update({
+                "type": "specialability-rollable"
             })
         });
 
@@ -105,7 +105,7 @@ export default class torgeternityItemSheet extends ItemSheet {
             } else {
                 var newShown = currentShown;
             }
-            this.item.update({'data.pulpPowers.enhancementNumber': newShown})
+            this.item.update({ 'data.pulpPowers.enhancementNumber': newShown })
         })
 
         html.find(".remove-enhancement").click(ev => {
@@ -115,7 +115,7 @@ export default class torgeternityItemSheet extends ItemSheet {
             } else {
                 var newShown = currentShown;
             }
-            this.item.update({'data.pulpPowers.enhancementNumber': newShown})
+            this.item.update({ 'data.pulpPowers.enhancementNumber': newShown })
         })
 
         html.find(".add-limitation").click(ev => {
@@ -125,7 +125,7 @@ export default class torgeternityItemSheet extends ItemSheet {
             } else {
                 var newShown = currentShown;
             }
-            this.item.update({'data.pulpPowers.limitationNumber': newShown})
+            this.item.update({ 'data.pulpPowers.limitationNumber': newShown })
         })
 
         html.find(".remove-limitation").click(ev => {
@@ -135,7 +135,7 @@ export default class torgeternityItemSheet extends ItemSheet {
             } else {
                 var newShown = currentShown;
             }
-            this.item.update({'data.pulpPowers.limitationNumber': newShown})
+            this.item.update({ 'data.pulpPowers.limitationNumber': newShown })
         })
 
 

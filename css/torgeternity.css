@@ -256,7 +256,7 @@ div.actor ::-webkit-scrollbar {
     text-transform: uppercase;
     text-align: center;
     color: white;
-    background-color: #0a0b3b;
+    /*background-color: #0a0b3b;*/
     border-bottom: none;
 }
 
@@ -1294,22 +1294,18 @@ div.readme a.compendium {
 @-webkit-keyframes flip {
     0% {
         margin-left: 100%;
-        max-height: 0%
     }
     100% {
         margin-left: 0%;
-        max-height: 100%
     }
 }
 
 @keyframes flip {
     0% {
         margin-left: 100%;
-        max-height: 0%
     }
     100% {
         margin-left: 0%;
-        max-height: 100%
     }
 }
 
@@ -2637,7 +2633,8 @@ form.actor-sheet.threat .tab[data-tab].active .editor {
     transition: all 0.1s cubic-bezier(1, 0, 0, 1) 0.1s;
     color: white;
     background-image: url(../images/tab_back.webp);
-    background-size: contain;
+    background-size: 100% 100%;
+    padding: 8px 1px;
 }
 
 .item .window-content form.item-sheet nav.tabs a.item:hover,

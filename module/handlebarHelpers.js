@@ -1,20 +1,20 @@
-export function registerHelpers(){
+export function registerHelpers() {
 
-Handlebars.registerHelper("concatSkillValue", function (skillName) {
+  Handlebars.registerHelper("concatSkillValue", function (skillName) {
     var skillValue = "{{data.skills." + skillName + ".value}}";
     return skillValue;
   });
-  
+
   Handlebars.registerHelper("concatAttributeName", function (attributeName) {
     var localName = "torgeternity.attributes." + attributeName;
     return localName;
   });
-  
+
   Handlebars.registerHelper("concatSkillName", function (skillName) {
     var localName = "torgeternity.skills." + skillName;
     return localName;
   });
-  
+
   Handlebars.registerHelper("concatClearanceLevel", function (clearance) {
     var localClearance = "torgeternity.clearances." + clearance;
     return localClearance;
@@ -24,7 +24,7 @@ Handlebars.registerHelper("concatSkillValue", function (skillName) {
     var localCardType = "torgeternity.cardTypes." + cardType;
     return localCardType;
   });
-  
+
   Handlebars.registerHelper("concatSpecialAbility", function (description) {
     // Removes <p> and </p> from the beginning and end of special ability descriptions so that they appear inline on threat sheet
     if (description.startsWith("<p>")) {
@@ -36,12 +36,12 @@ Handlebars.registerHelper("concatSkillValue", function (skillName) {
       return description;
     }
   });
-  
+
   Handlebars.registerHelper('ifequal', function (a, b, options) {
     if (a == b) { return options.fn(this); }
     return options.inverse(this);
   });
-  
+
   Handlebars.registerHelper('ifnotequal', function (a, b, options) {
     if (a != b) { return options.fn(this); }
     return options.inverse(this);
@@ -56,19 +56,19 @@ Handlebars.registerHelper("concatSkillValue", function (skillName) {
       var i = 0;
       var firstItemExists = false;
       for (i = 0; i < hand.size; i++) {
-        if (hand.document.availableCards[i].data.flags?.torgeternity?.pooled === true)  {
-            if (firstItemExists === true) { 
-              poolList += ", " + '<span class="pool-tooltip">' + hand.document.availableCards[i].data.name + "<span><img src='"+ hand.document.availableCards[i].img + "'></span></span>";
-            } else {
-              poolList = "<span class='pool-tooltip'>" + hand.document.availableCards[i].data.name + "<span><img src='"+ hand.document.availableCards[i].img + "'></span></span>"
-              //poolList = hand.document.availableCards[i].data.name;
-              firstItemExists = true;
-            }
+        if (hand.document.availableCards[i].data.flags?.torgeternity?.pooled === true) {
+          if (firstItemExists === true) {
+            poolList += ", " + '<span class="pool-tooltip">' + hand.document.availableCards[i].data.name + "<span><img src='" + hand.document.availableCards[i].img + "'></span></span>";
+          } else {
+            poolList = "<span class='pool-tooltip'>" + hand.document.availableCards[i].data.name + "<span><img src='" + hand.document.availableCards[i].img + "'></span></span>"
+            //poolList = hand.document.availableCards[i].data.name;
+            firstItemExists = true;
           }
+        }
       }
       return poolList;
     } else {
-      return "No hand available - hand names must exactly match the corresponding Storm Knight names.";
+      return game.i18n.localize('torgeternity.notifications.noHands');
     }
   })
 
