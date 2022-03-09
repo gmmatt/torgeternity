@@ -32,7 +32,6 @@ Div.editor-content h1{
     background-repeat: no-repeat;
     background-size:100% 100%;
     overflow:hidden;
-    /*background-color: transparent;*/
     border:none;
     }
 
@@ -66,7 +65,7 @@ Div.editor-content h4.bar{
     background-position-y: -8px;
     background-repeat: no-repeat;
     background-size: auto;
-    /*height: 4rem;*/
+
 }
 
 /*<img> comes with a border, what is never seen in TE*/
@@ -141,16 +140,14 @@ Div.editor-content figcaption{
     }*/
 
 
-/*.imgfloatmid{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0.5rem;
+.imgfloatmid{
+    display: block;
+    margin: auto;
     shape-outside:content-box;
     shape-margin: 0.5rem;
     width:50%;
     height:50%;
-}*/
+}
 
 /*Use this class in the next <p> after layouting with classes .imgright and .imgleft*/
 .passagebreak {
