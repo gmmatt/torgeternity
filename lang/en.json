@@ -336,8 +336,10 @@
             "titleDescription": "Title/Description",
             "pool": "pool",
             "skillRollHint": "Shift-click for enhanced skill test",
-            "toggleSkillDisplay": "Click to toggle Skills display"
-
+            "toggleSkillDisplay": "Click to toggle Skills display",
+            "combatSkills": "Combat",
+            "interactionSkills": "Interaction",
+            "otherSkills": "Other"
         },
         "combat": {
             "nextKeep": "Next Round (Keep Current Card)",

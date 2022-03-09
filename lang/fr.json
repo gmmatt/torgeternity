@@ -336,9 +336,10 @@
             "titleDescription": "Titre/Description",
             "pool": "reserve d'action",
             "skillRollHint": "Shift-click pour un jet avancé",
-            "toggleSkillDisplay": "afficher/masquer les compétences sans rang"
-
-
+            "toggleSkillDisplay": "afficher/masquer les compétences sans rang",
+            "combatSkills": "Combat",
+            "interactionSkills": "Interaction",
+            "otherSkills": "Autre"
         },
         "combat": {
             "nextKeep": "nouveau round (garder la carte actuelle)",

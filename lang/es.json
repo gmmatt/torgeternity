@@ -334,8 +334,10 @@
             "availableEnhancements": "Mejoras disponibles",
             "taken": "Tomado",
             "titleDescription": "Título/Descripción",
-            "pool": "reserva"
-
+            "pool": "reserva",
+            "combatSkills": "Combate",
+            "interactionSkills": "Interacción",
+            "otherSkills": "Otro"
         },
         "combat": {
             "nextKeep": "nueva ronda (mantener la tarjeta actual)",
