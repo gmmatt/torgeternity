@@ -514,6 +514,7 @@ async function createTorgEternityMacro(data, slot) {
                 name: macroName,
                 type: "script",
                 command: command,
+				permission: { default: 2 },
                 flags: { macroFlag: true },
             });
         }
@@ -523,6 +524,7 @@ async function createTorgEternityMacro(data, slot) {
                 type: "script",
                 img: macroImg,
                 command: command,
+				permission: { default: 2 },
                 flags: { macroFlag: true },
             });
         }
