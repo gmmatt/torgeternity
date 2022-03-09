@@ -31,7 +31,8 @@ Div.editor-content h1{
     Background-image: URL(../../../systems/torgeternity/images/tab-header.webp);
     background-repeat: no-repeat;
     background-size:100% 100%;
-    background-color: transparent;
+    overflow:hidden;
+    /*background-color: transparent;*/
     border:none;
     }
 
@@ -74,31 +75,82 @@ Div.editor-content img{
     border: none;
     }
 
+/*
+Div.editor-content figcaption{
+    position: relative;
+    float: right;
+    text-align: center;
+    font-size: 0.75rem;
+    color: white;
+    font-family: Alaska;
+    text-shadow: black    1.3px 1.3px 0px,
+                 black    1.3px -1.3px 0px,
+                 black    -1.3px 1.3px 0px,
+                 black    -1.3px 1.3px 0px;
+    text-transform: uppercase;
+}*/
+
 /*Image-wraparound, image on left side*/
 .imgleft{
     float: left;
     margin-right: 0.5rem;
     border: none;
     width: 50%;
-    height:50%;
+    height: 50%;
     }
-    .imgleft div.editor-content h1{
-        background-size: 50% 100% !important;
-        background-color: none !important;
-    }
+    
+/*    .imgleft figcaption{
+    position: relative;
+    float:right;
+    text-align: center;
+    font-size: 1rem;
+    color: white;
+    font-family: Alaska;
+    text-shadow: black    1.3px 1.3px 0px,
+                 black    1.3px -1.3px 0px,
+                 black    -1.3px 1.3px 0px,
+                 black    -1.3px 1.3px 0px;
+    text-transform: uppercase;
+    }*/
 
 /*Image-wraparound, image on right side.*/
 .imgright{
     float: right;
     margin-left: 0.5rem;
     border: none;
+    width: 50%;
+    height: 50%;
+    }
+    /*
+    .imgright figcaption{
+        position: sticky;
+        float: right;
+        bottom:auto;
+        left: auto;
+
+        text-align: center;
+        font-size: 1rem;
+        color: white;
+        font-family: Alaska;
+        text-shadow: black    1.3px 1.3px 0px,
+                     black    1.3px -1.3px 0px,
+                     black    -1.3px 1.3px 0px,
+                     black    -1.3px 1.3px 0px;
+        text-transform: uppercase;
+        }    
+    }*/
+
+
+/*.imgfloatmid{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0.5rem;
+    shape-outside:content-box;
+    shape-margin: 0.5rem;
     width:50%;
     height:50%;
-    }
-    .imgright div.editor-content h1{
-        background-size: 50% 100% !important;
-        background-color: none !important;
-    }
+}*/
 
 /*Use this class in the next <p> after layouting with classes .imgright and .imgleft*/
 .passagebreak {
@@ -160,6 +212,15 @@ Div.editor-content img{
     width: 50%;
     margin-left: 0.5rem;
 }
+
+.exampletext{
+    background-color: rgb(241,221,192);
+    margin: 0px 30px;
+    padding: 5px 10px;
+}
+    .exampletext.exampletext p + p{
+        text-indent: 0px;
+    }
 
 /*Adventures often come with directives from Sebastian. This class is to bring them on the grafic parchments with the right font. Please use an h3 for the headline.*/
 @font-face {
