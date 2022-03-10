@@ -93,10 +93,20 @@ Div.editor-content figcaption{
 .imgleft{
     float: left;
     margin-right: 0.5rem;
-    border: none;
     width: 50%;
     height: 50%;
     }
+
+    .imgleft.shrink20p{
+        width: 20%;
+        height: 20%;
+    }
+
+    .imgleft.shrink30p{
+        width: 30%;
+        height: 30%;
+    }
+    
     
 /*    .imgleft figcaption{
     position: relative;
@@ -116,10 +126,21 @@ Div.editor-content figcaption{
 .imgright{
     float: right;
     margin-left: 0.5rem;
-    border: none;
     width: 50%;
     height: 50%;
     }
+    
+    .imgright.shrink20p{
+        width: 20%;
+        height: 20%;
+    }
+    
+    .imgright.shrink30p{
+        width: 30%;
+        height: 30%;
+    }
+
+
     /*
     .imgright figcaption{
         position: sticky;
@@ -148,6 +169,16 @@ Div.editor-content figcaption{
     width:50%;
     height:50%;
 }
+
+    .imgfloatmid.shrink20p{
+        width:20%;
+        height:20%;
+    }
+
+    .imgfloatmid.shrink30p{
+        width:30%;
+        height:30%;
+    }
 
 /*Use this class in the next <p> after layouting with classes .imgright and .imgleft*/
 .passagebreak {
@@ -254,6 +285,7 @@ Div.editor-content Div.directive2{
     }
 
 /*Multi-purpose classes*/
+
 Div.editor-content .noindent p + p {
-    text-indent:0;
+    text-indent:0px;
 }
