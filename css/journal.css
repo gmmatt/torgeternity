@@ -65,7 +65,6 @@ Div.editor-content h4.bar{
     background-position-y: -8px;
     background-repeat: no-repeat;
     background-size: auto;
-
 }
 
 /*<img> comes with a border, what is never seen in TE*/
@@ -74,22 +73,8 @@ Div.editor-content img{
     border: none;
     }
 
-/*
-Div.editor-content figcaption{
-    position: relative;
-    float: right;
-    text-align: center;
-    font-size: 0.75rem;
-    color: white;
-    font-family: Alaska;
-    text-shadow: black    1.3px 1.3px 0px,
-                 black    1.3px -1.3px 0px,
-                 black    -1.3px 1.3px 0px,
-                 black    -1.3px 1.3px 0px;
-    text-transform: uppercase;
-}*/
-
 /*Image-wraparound, image on left side*/
+
 .imgleft{
     float: left;
     margin-right: 0.5rem;
@@ -106,23 +91,9 @@ Div.editor-content figcaption{
         width: 30%;
         height: 30%;
     }
-    
-    
-/*    .imgleft figcaption{
-    position: relative;
-    float:right;
-    text-align: center;
-    font-size: 1rem;
-    color: white;
-    font-family: Alaska;
-    text-shadow: black    1.3px 1.3px 0px,
-                 black    1.3px -1.3px 0px,
-                 black    -1.3px 1.3px 0px,
-                 black    -1.3px 1.3px 0px;
-    text-transform: uppercase;
-    }*/
 
 /*Image-wraparound, image on right side.*/
+
 .imgright{
     float: right;
     margin-left: 0.5rem;
@@ -140,14 +111,16 @@ Div.editor-content figcaption{
         height: 30%;
     }
 
-
-    /*
-    .imgright figcaption{
-        position: sticky;
-        float: right;
-        bottom:auto;
+/*IMG underlines */
+div.subtitleright{
+    position: relative;
+    width: 30%;
+    float: right;
+}
+    div.subtitleright p, div.subtitleleft p{
+        margin: 0.5rem;
+        bottom: auto;
         left: auto;
-
         text-align: center;
         font-size: 1rem;
         color: white;
@@ -157,10 +130,18 @@ Div.editor-content figcaption{
                      black    -1.3px 1.3px 0px,
                      black    -1.3px 1.3px 0px;
         text-transform: uppercase;
-        }    
-    }*/
+    }
+    div.subtitleright img, div.subtitleleft img{
+        width: 100%;
+    }
 
+div.subtitleleft{
+    position: relative;
+    width: 30%;
+    float: left;
+}
 
+/*Floating images that are center aligned*/
 .imgfloatmid{
     display: block;
     margin: auto;
@@ -246,6 +227,9 @@ Div.editor-content figcaption{
     margin: 0px 30px;
     padding: 5px 10px;
 }
+    .exampletext.exampletext p:first-of-type{
+        text-indent: 0px;
+    }
     .exampletext.exampletext p + p{
         text-indent: 0px;
     }
@@ -255,6 +239,7 @@ Div.editor-content figcaption{
     font-family: "gunplay";
     src: url("../fonts/gunplay_rg.ttf") format("ttf");
 }
+
 Div.editor-content Div.directive1{
     background-image: url(../images/parchment1.webp);
     background-repeat: no-repeat;
@@ -269,6 +254,7 @@ Div.editor-content Div.directive1{
     Div.editor-content Div.directive1 h3{
         font-size: 21px; 
     }
+
 Div.editor-content Div.directive2{
     background-image: url(../images/parchment2.webp);
     background-repeat: no-repeat;
