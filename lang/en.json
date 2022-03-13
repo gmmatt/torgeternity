@@ -336,7 +336,10 @@
             "titleDescription": "Title/Description",
             "pool": "pool",
             "skillRollHint": "Shift-click for enhanced skill test",
-            "toggleSkillDisplay": "Click to toggle Skills display"
+            "toggleSkillDisplay": "Click to toggle Skills display",
+            "combatSkills": "Combat",
+            "interactionSkills": "Interaction",
+            "otherSkills": "Other"
         },
         "combat": {
             "nextKeep": "Next Round (Keep Current Card)",
@@ -489,7 +492,7 @@
                     "multiTarget": "Multi-target ",
                     "targetSize": "Target Size",
                     "targetVulnerable": "Target Vulnerable (+2)",
-                    "targetVeryVulnerable": "Target very Vulnerable (+4)",
+                    "targetVeryVulnerable": "Target Very Vulnerable (+4)",
                     "calledShot": "Called Shot",
                     "shortBurst": "Short Burst(+2)",
                     "longBurst": "Long Burst(+4)",
@@ -504,7 +507,7 @@
                     "failure": "Failure",
                     "outstandingSuccess": "Outstanding Success",
                     "goodSuccess": "Good Success",
-                    "standartSuccess": "Standart Success",
+                    "standartSuccess": "Standard Success",
                     "mishape": "Mishap",
                     "damage": "Damage",
                     "toughness": "Toughness",
@@ -663,4 +666,5 @@
         "discard": "Discard",
         "display": "Show this card to players"
     }
+
 }

@@ -138,10 +138,10 @@ export default class torgeternityActorSheet extends ActorSheet {
     _skillAttrDragStart(evt) {
         this._onDragStart(evt);
         let skillAttrData = {
-            type: evt.currentTarget.attributes["data-testtype"].value, // lowercase
+            type: evt.currentTarget.attributes["data-testtype"].value,
             data: {
-                name: evt.currentTarget.attributes["data-name"].value, // capitalized
-                attribute: evt.currentTarget.attributes["data-baseattribute"].value, // lowercase
+                name: evt.currentTarget.attributes["data-name"].value,
+                attribute: evt.currentTarget.attributes["data-baseattribute"].value,
                 adds: evt.currentTarget.attributes["data-adds"].value,
                 value: evt.currentTarget.attributes["data-value"].value,
                 unskilledUse: evt.currentTarget.attributes["data-unskilleduse"].value,
@@ -154,17 +154,18 @@ export default class torgeternityActorSheet extends ActorSheet {
     // See _skillAttrDragStart above.
     _interactionDragStart(evt) {
         this._onDragStart(evt);
-        let skillNameKey = evt.currentTarget.attributes["data-name"].value.toLowerCase();
+        let skillNameKey = evt.currentTarget.attributes["data-name"].value;
         let skill = this.actor.data.data.skills[skillNameKey];
+		let value = skill.value ? skill.value : skill.adds + this.actor.data.data.attributes[skill.baseAttribute];
         let skillAttrData = {
             type: "interaction",
             data: {
-                name: evt.currentTarget.attributes["data-name"].value, // capitalized
-                attribute: skill.baseAttribute, // lowercase
-                adds: skill.adds.toString(),
-                value: evt.currentTarget.attributes["data-skill-value"].value,
-                unskilledUse: skill.unskilledUse.toString(),
-                attackType: evt.currentTarget.attributes["data-attack-type"].value // lowercase
+                name: skillNameKey,
+                attribute: skill.baseAttribute,
+                adds: skill.adds,
+                value: value,
+                unskilledUse: skill.unskilledUse,
+                attackType: evt.currentTarget.attributes["data-attack-type"].value
             }
         };
         evt.dataTransfer.setData('text/plain', JSON.stringify(skillAttrData));
@@ -341,20 +342,19 @@ export default class torgeternityActorSheet extends ActorSheet {
                 }
             }
         });
-
-
     }
 
-
-
     async _onSkillRoll(event) {
+        const skillName = event.currentTarget.dataset.name;
+        const attributeName = event.currentTarget.dataset.baseattribute;
+        const isAttributeTest = (event.currentTarget.dataset.testtype === "attribute");
         let test = {
-            testType: "skill",
+            testType: event.currentTarget.dataset.testtype,
             actor: this.actor,
             actorPic: this.actor.data.img,
             actorType: this.actor.data.type,
-            skillName: event.currentTarget.dataset.name,
-            skillBaseAttribute: event.currentTarget.dataset.baseattribute,
+            skillName: isAttributeTest ? game.i18n.localize("torgeternity.attributes." + attributeName) : game.i18n.localize("torgeternity.skills." + skillName),
+            skillBaseAttribute: game.i18n.localize("torgeternity.attributes." + attributeName),
             skillAdds: event.currentTarget.dataset.adds,
             skillValue: event.currentTarget.dataset.value,
             unskilledUse: event.currentTarget.dataset.unskilleduse,
@@ -391,8 +391,8 @@ export default class torgeternityActorSheet extends ActorSheet {
             actorPic: this.actor.data.img,
             actorType: this.actor.data.type,
             interactionAttackType: event.currentTarget.getAttribute("data-attack-type"),
-            skillName: event.currentTarget.getAttribute("data-name"),
-            skillBaseAttribute: event.currentTarget.getAttribute("data-base-attribute"),
+            skillName: game.i18n.localize("torgeternity.skills." + event.currentTarget.getAttribute("data-name")),
+            skillBaseAttribute: game.i18n.localize("torgeternity.skills." + event.currentTarget.getAttribute("data-base-attribute")),
             skillAdds: event.currentTarget.getAttribute("data-adds"),
             skillValue: event.currentTarget.getAttribute("data-skill-value"),
             unskilledUse: true,
@@ -418,19 +418,19 @@ export default class torgeternityActorSheet extends ActorSheet {
                 speaker: ChatMessage.getSpeaker(),
                 owner: this.actor,
             };
-
+    
             var templateData = {
                 message: "Cannot attempt interaction attack test without a target. Select a target and try again.",
                 actorPic: this.actor.data.img
             };
-
+    
             const templatePromise = renderTemplate("./systems/torgeternity/templates/partials/skill-error-card.hbs", templateData);
-
+    
             templatePromise.then(content => {
                 needTargetData.content = content;
                 ChatMessage.create(needTargetData);
             })
-
+    
             return;
         } else {
             var target = Array.from(game.user.targets)[0];

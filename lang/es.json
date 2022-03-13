@@ -335,9 +335,9 @@
             "taken": "Ocupado",
             "titleDescription": "Título/Descripción",
             "pool": "reserva",
-            "skillRollHint": "Clic Izq. tirada avanzada",
-            "toggleSkillDisplay": "Clic cambia listado Habilidad"
-			
+            "combatSkills": "Combate",
+            "interactionSkills": "Interacción",
+            "otherSkills": "Otro"
         },
         "combat": {
             "nextKeep": "Sigu. Turno (Mantener Carta)",

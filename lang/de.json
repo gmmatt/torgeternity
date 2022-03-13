@@ -336,7 +336,10 @@
             "titleDescription": "Titel/Beschreibung",
             "pool": "Aktionenpool",
             "skillRollHint": "Umschalt-Klick für erweiterten Fähigkeitstest",
-            "toggleSkillDisplay": "Klicken Sie auf , um die Anzeige der Fertigkeiten umzuschalten"
+            "toggleSkillDisplay": "Klicken Sie auf, um die Anzeige der Fertigkeiten umzuschalten",
+            "combatSkills": "Kampf",
+            "interactionSkills": "Interaktion",
+            "otherSkills": "Andere"
         },
         "combat": {
             "nextKeep": "Neue Runde (aktuelle Karte behalten)",

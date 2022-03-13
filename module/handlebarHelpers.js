@@ -79,4 +79,24 @@ export function registerHelpers() {
       return ""
     }
   })
+
+  Handlebars.registerHelper('displaySkill', function (editstate, skill) {
+    return (editstate || skill.adds);
+  })
+
+  Handlebars.registerHelper('skillIsCombat', function (skill) {
+    return (skill.groupName === "combat");
+  })
+
+  Handlebars.registerHelper('skillIsInteraction', function (skill) {
+    return (skill.groupName === "interaction");
+  })
+
+  Handlebars.registerHelper('skillIsOther', function (skill) {
+    return (skill.groupName === "other");
+  })
+
+  Handlebars.registerHelper("log", function(message) {
+    console.log(message);
+  })
 }
