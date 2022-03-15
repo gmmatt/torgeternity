@@ -1,0 +1,121 @@
+<form>
+    {{log this}}
+    <h2>{{localize "CARDS.TypeDeck"}}
+        {{localize "torgeternity.cardTypes.destiny"}}</h2>
+
+    <div class="form-group">
+        <select name="destinyDeck">
+            {{#each deckList as |deck index|}}
+            <option value="{{deck.name}}" {{#ifequal deck.name ../object.destinyDeck}} selected="true" {{/ifequal}}>
+                {{deck.name}}
+            </option>
+            {{/each}}
+        </select>
+    </div>
+
+    <h2>{{localize "CARDS.TypeDeck"}}
+        {{localize "torgeternity.cardTypes.drama"}}</h2>
+    <div class="form-group">
+        <select name="dramaDeck">
+            {{#each deckList as |deck index|}}
+            <option value="{{deck.name}}" {{#ifequal deck.name ../object.dramaDeck}} selected="true" {{/ifequal}}>
+                {{deck.name}}
+            </option>
+            {{/each}}
+        </select>
+    </div>
+
+
+    <h2>{{localize "CARDS.TypeDeck"}}
+        {{localize "torgeternity.cardTypes.cosm"}}</h2>
+
+
+    <div class="form-group">
+        <label>{{localize "torgeternity.cosmDecks.coreEarth"}}</label>
+        <select name="coreEarth" data-type="String" class="selectDeck formFields">
+            {{#select deckList}}
+            {{#each deckList as |deck index|}}
+            <option value="{{deck.name}}">{{deck.name}}</option>
+            {{/each}}
+            {{/select}}
+        </select>
+    </div>
+    <div class="form-group">
+        <label>{{localize "torgeternity.cosmDecks.aysle"}}</label>
+        <select name="aysle" data-type="String" class="selectDeck formFields">
+            {{#each deckList as |deck index|}}
+            <option value="{{deck.name}}" {{#ifequal deck.name ../object.aysle}} selected="true" {{/ifequal}}>
+                {{deck.name}}
+            </option>
+            {{/each}}
+        </select>
+    </div>
+    <div class="form-group">
+        <label>{{localize "torgeternity.cosmDecks.cyberpapacy"}}</label>
+        <select name="cyberpapacy" data-type="String" class="selectDeck formFields">
+            {{#each deckList as |deck index|}}
+            <option value="{{deck.name}}" {{#ifequal deck.name ../object.cyberpapacy}} selected="true" {{/ifequal}}>
+                {{deck.name}}
+            </option>
+            {{/each}}
+        </select>
+    </div>
+    <div class="form-group">
+        <label>{{localize "torgeternity.cosmDecks.livingLand"}}</label>
+        <select name="livingLand" data-type="String" class="selectDeck formFields">
+            {{#each deckList as |deck index|}}
+            <option value="{{deck.name}}" {{#ifequal deck.name ../object.livingLand}} selected="true" {{/ifequal}}>
+                {{deck.name}}
+            </option>
+            {{/each}}
+        </select>
+    </div>
+    <div class="form-group">
+        <label>{{localize "torgeternity.cosmDecks.nileEmpire"}}</label>
+        <select name="nileEmpire" data-type="String" class="selectDeck formFields">
+            {{#each deckList as |deck index|}}
+            <option value="{{deck.name}}" {{#ifequal deck.name ../object.nileEmpire}} selected="true" {{/ifequal}}>
+                {{deck.name}}
+            </option>
+            {{/each}}
+        </select>
+    </div>
+    <div class="form-group">
+        <label>{{localize "torgeternity.cosmDecks.orrorsh"}}</label>
+        <select name="orrorsh" data-type="String" class="selectDeck formFields">
+            {{#each deckList as |deck index|}}
+            <option value="{{deck.name}}" {{#ifequal deck.name ../object.orrorsh}} selected="true" {{/ifequal}}>
+                {{deck.name}}
+            </option>
+            {{/each}}
+        </select>
+    </div>
+    <div class="form-group">
+        <label>{{localize "torgeternity.cosmDecks.panPacifica"}}</label>
+        <select name="panPacifica" data-type="String" class="selectDeck formFields">
+            {{#each deckList as |deck index|}}
+            <option value="{{deck.name}}" {{#ifequal deck.name ../object.panPacifica}} selected="true" {{/ifequal}}>
+                {{deck.name}}
+            </option>
+            {{/each}}
+        </select>
+    </div>
+    <div class="form-group">
+        <label>{{localize "torgeternity.cosmDecks.tharkold"}}</label>
+        <select name="tharkold" data-type="String" class="selectDeck formFields">
+            {{#each deckList as |deck index|}}
+            <option value="{{deck.name}}" {{#ifequal deck.name ../object.tharkold}} selected="true" {{/ifequal}}>
+                {{deck.name}}
+            </option>
+            {{/each}}
+        </select>
+    </div>
+
+    <div class="footer flexrow">
+        <button type="submit" name="submit">
+            <i class="fas fa-check"></i>
+            {{localize "SETTINGS.Save"}}</button>
+
+
+    </div>
+</form>

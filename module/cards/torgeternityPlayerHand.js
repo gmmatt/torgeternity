@@ -76,7 +76,7 @@ export default class torgeternityPlayerHand extends CardsHand {
                 // await game.combats.apps[0].viewed.resetAll();
                 return;
             case "drawDestiny":
-                return this.object.draw(game.cards.getName("Destiny Deck"));
+                return this.object.draw(game.cards.getName(game.settings.get("torgeternity", "deckSetting").destinyDeck));
             case "drawCosm":
                 this.drawCosmDialog();
                 return;
@@ -173,8 +173,9 @@ export default class torgeternityPlayerHand extends CardsHand {
     }
 
     async drawCosmDialog() {
-        const cosmDecks = torgeternity.cosmDecks;
-        const html = await renderTemplate("systems/torgeternity/templates/cards/drawCosmDialog.hbs", cosmDecks)
+        let data = {};
+        data.decks = game.settings.get("torgeternity", "deckSetting")
+        const html = await renderTemplate("systems/torgeternity/templates/cards/drawCosmDialog.hbs", data)
 
         return Dialog.prompt({
             title: game.i18n.localize("torgeternity.dialogPrompts.cosmDialogTitle"),
@@ -198,7 +199,6 @@ export default class torgeternityPlayerHand extends CardsHand {
 
                 let card = area.children[i];
                 card.style.transform = `rotateZ(${(i*4)}deg) translateX(${i*30}px)`;
-                console.log(card)
             }
             area.style.transform = `rotateZ(${-((area.children.length-1)*2)}deg) translateX(-${area.children.length*15}px)`
 

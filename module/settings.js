@@ -1,3 +1,4 @@
+import deckSettingMenu from './cards/cardSettingMenu.js';
 export function registerTorgSettings() {
 
 
@@ -76,8 +77,36 @@ export function registerTorgSettings() {
 
     });
 
+    game.settings.registerMenu("torgeternity", "cardDecks", {
+        name: "deck setting window",
+        label: "card deck settings", // The text label used in the button
+        hint: "configurez ici les differents decks de cartes par default",
+        icon: "fas fa-bars",
+        title: "deck settings", // A Font Awesome icon used in the submenu button
+        type: deckSettingMenu, // A FormApplication subclass
+        restricted: true // Restrict this submenu to gamemaster only?
+    });
 
 
+    game.settings.register('torgeternity', 'deckSetting', {
+        scope: 'world',
+        config: false,
+        type: Object,
+        default: {
+            destinyDeck: "Destiny Deck",
+            dramaDeck: "Drama Deck",
+            coreEarth: "Core Earth Cosm Deck",
+            aysle: "Aysle Cosm Deck",
+            cyberpapacy: "Cyberpapacy Cosm Deck",
+            livingLand: "Living Land Cosm Deck",
+            nileEmpire: "Nile Empire Cosm Deck",
+            orrorsh: "Orrorsh Cosm Deck",
+            panPacifica: "Pan Pacifica Cosm Deck",
+            tharkold: "Tharkold Cosm Deck"
+
+
+        },
+    });
 
     //Cards
     /* These settings not used for now. May come back and apply them later
