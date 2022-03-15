@@ -31,7 +31,6 @@ export default class torgeternityCombatTracker extends CombatTracker {
 
         let li = check.closest(".combatant");
         let c = this.viewed.combatants.get(li.dataset.combatantId);
-        console.log(c)
         if (c.data.flags.world.turnTaken === false) {
             await c.setFlag("world", "turnTaken", true)
         } else {
@@ -73,7 +72,6 @@ export default class torgeternityCombatTracker extends CombatTracker {
         let btn = ev.currentTarget;
         let li = btn.closest(".combatant");
         let c = this.viewed.combatants.get(li.dataset.combatantId); //hope this works!
-        console.log(c.name);
         await this.viewed.combatant.update({
             _id: c.data.id,
             ["initiative"]: c.data.initiative + 1,
@@ -104,7 +102,6 @@ export default class torgeternityCombatTracker extends CombatTracker {
         let btn = ev.currentTarget;
         let li = btn.closest("li.combatant");
         let c = this.viewed.combatants.get(li.dataset.combatantId); //hope this works!
-        console.log(c.name);
         await this.viewed.combatant.update({
             _id: c.data.id,
             ["initiative"]: c.data.initiative - 1,
@@ -188,11 +185,11 @@ export default class torgeternityCombatTracker extends CombatTracker {
     }
 
     async _dsrCounter(ev) {
-        let currentStep = this.viewed.getFlag("torgeternity","dsrStage");
-        
+        let currentStep = this.viewed.getFlag("torgeternity", "dsrStage");
+
         switch (currentStep) {
             case undefined:
-                this.viewed.setFlag("torgeternity", "dsrStage","A");
+                this.viewed.setFlag("torgeternity", "dsrStage", "A");
                 break;
             case "":
                 this.viewed.setFlag("torgeternity", "dsrStage", "A");
@@ -216,13 +213,13 @@ export default class torgeternityCombatTracker extends CombatTracker {
     async _playerDsrCounter(ev) {
         let btn = ev.currentTarget;
         let li = btn.closest("li.combatant");
-        let c = this.viewed.combatants.get(li.dataset.combatantId); 
+        let c = this.viewed.combatants.get(li.dataset.combatantId);
 
         let currentStep = c.getFlag("torgeternity", "dsrStage");
 
         switch (currentStep) {
             case undefined:
-                c.setFlag("torgeternity", "dsrStage","A");
+                c.setFlag("torgeternity", "dsrStage", "A");
                 break;
             case "":
                 c.setFlag("torgeternity", "dsrStage", "A");
@@ -245,7 +242,7 @@ export default class torgeternityCombatTracker extends CombatTracker {
     }
 
 
-        /* Old Code
+    /* Old Code
     let vilains = this.viewed.combatants.filter((c) => c.token.disposition < 1);
     let heros = this.viewed.combatants.filter((c) => c.token.disposition > 0);
     console.log({ vilains }, { heros });

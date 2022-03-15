@@ -44,7 +44,6 @@ export default class TorgeternityPlayerList extends PlayerList {
 
         } else {
             let targetActor = game.actors.get(ev.currentTarget.getAttribute("data-targetId"));
-            console.log(targetActor)
             await targetActor.update({
                 _id: targetActor.data._id,
                 data: {

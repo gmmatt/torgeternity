@@ -17,12 +17,10 @@ export function hideCompendium(defaultLang, html) {
             break;
 
     }
-    console.log("in function____________", comps, hiddingKeys)
 
     for (let key of hiddingKeys) {
         for (let comp of comps) {
             let indexForeign = comp.innerText.indexOf(key);
-            console.log(indexForeign);
             if (indexForeign !== -1) {
                 comp.parentElement.style.display = "none";
             }

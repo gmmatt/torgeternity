@@ -156,7 +156,7 @@ export default class torgeternityActorSheet extends ActorSheet {
         this._onDragStart(evt);
         let skillNameKey = evt.currentTarget.attributes["data-name"].value;
         let skill = this.actor.data.data.skills[skillNameKey];
-		let value = skill.value ? skill.value : skill.adds + this.actor.data.data.attributes[skill.baseAttribute];
+        let value = skill.value ? skill.value : skill.adds + this.actor.data.data.attributes[skill.baseAttribute];
         let skillAttrData = {
             type: "interaction",
             data: {
@@ -418,19 +418,19 @@ export default class torgeternityActorSheet extends ActorSheet {
                 speaker: ChatMessage.getSpeaker(),
                 owner: this.actor,
             };
-    
+
             var templateData = {
                 message: "Cannot attempt interaction attack test without a target. Select a target and try again.",
                 actorPic: this.actor.data.img
             };
-    
+
             const templatePromise = renderTemplate("./systems/torgeternity/templates/partials/skill-error-card.hbs", templateData);
-    
+
             templatePromise.then(content => {
                 needTargetData.content = content;
                 ChatMessage.create(needTargetData);
             })
-    
+
             return;
         } else {
             var target = Array.from(game.user.targets)[0];
@@ -758,13 +758,7 @@ export default class torgeternityActorSheet extends ActorSheet {
     _onItemEquip(event) {
         var actor = this.actor;
         const itemID = event.currentTarget.closest(".item").getAttribute("data-item-id");
-        console.log({
-            itemID
-        });
         const item = this.actor.items.get(itemID);
-        console.log({
-            item
-        })
         if (item.data.equipped === false) {
             item.data.equipped = true;
             item.update({
@@ -799,7 +793,6 @@ export default class torgeternityActorSheet extends ActorSheet {
     _onCardReserve(event) {
         const cardID = event.currentTarget.closest(".card").getAttribute("data-item-id");
         const card = this.actor.items.get(cardID);
-        console.log(card.data)
         if (card.data.data.reserved === false) {
             card.data.data.reserved = true;
             card.update({
@@ -860,7 +853,6 @@ export default class torgeternityActorSheet extends ActorSheet {
 
         const cardID = event.currentTarget.closest(".card").getAttribute("data-item-id");
         const card = this.actor.items.get(cardID);
-        console.log({ card })
         if (game.combat === null || card.data.type == "cosm") {
             card.roll();
             this.actor.deleteOwnedItem(cardID);
