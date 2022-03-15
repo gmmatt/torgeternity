@@ -149,7 +149,7 @@ div.actor ::-webkit-scrollbar {
 .window-app .window-content input[type="date"],
 .window-app .window-content input[type="time"] .editor {
     background-color: rgba(255, 255, 255, 0.39);
-    color: white;
+    /*color:white;*/
 }
 
 .window-app .window-content input::-moz-placeholder {
@@ -443,40 +443,6 @@ button {
 button:hover,
 button:focus {
     box-shadow: 0 0 10px #3bb3b3;
-}
-
-
-/*Styling the Buttons of right taskbar*/
-
-.directory .action-buttons button {
-    all: unset;
-    flex: 1;
-    width: 100%;
-    font-family: "Palatino Linotype";
-    font-size: 1rem;
-    color: white;
-    text-shadow: 2px 2px 0px black;
-    background-image: url(../images/red_norm.webp);
-    background-repeat: no-repeat;
-    background-size: 100%;
-    background-color: transparent;
-    border: none;
-    padding: 0.9rem 0 0.5rem 0;
-    line-height: 1.2;
-    box-shadow: none;
-    cursor: pointer;
-    min-height: 2rem;
-    white-space: normal;
-}
-
-.directory .action-buttons button:hover {
-    background-image: url(../images/red_hover.webp);
-    transition: all 0.2s ease;
-}
-
-.directory .action-buttons button:active {
-    background-image: url(../images/red_pressed.webp);
-    transition: all 0.3s ease;
 }
 
 a:hover {
@@ -1913,7 +1879,6 @@ form.actor-sheet header input[name="name"] {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    min-width: fit-content;
     margin-right: 5px;
     align-items: center;
 }
@@ -1928,6 +1893,7 @@ form.actor-sheet header input[name="name"] {
     background-size: cover;
     font-family: Signika;
     font-size: 15px;
+    color: black;
 }
 
 .window-content .actor-sheet .sheet-header h1 {
@@ -1996,6 +1962,7 @@ form.actor-sheet header input[name="name"] {
     border-radius: 50%;
     background: url(../images/roundBack.webp);
     background-size: cover;
+    color: black;
 }
 
 .window-content .actor-sheet .attributes ul li.attribut-block a,
@@ -2351,6 +2318,7 @@ form.actor-sheet header input[name="name"] {
     height: 50px;
     border: none;
     border-radius: 50%;
+    color: black;
 }
 
 .window-content .actor-sheet .defense {
@@ -2689,6 +2657,7 @@ form.actor-sheet.threat .tab[data-tab].active .editor {
     font-family: Alaska;
     font-size: 20px;
     text-align: center;
+    color: black;
 }
 
 .item .window-content form.item-sheet .sheet-content {
@@ -2713,11 +2682,13 @@ form.actor-sheet.threat .tab[data-tab].active .editor {
     border-radius: 15px;
     background: url(../images/roundBack.webp);
     background-size: cover;
+    color: black;
 }
 
 .item .window-content form.item-sheet .asside input[name="data.price"],
 .item .window-content form.item-sheet .asside input[name="data.tough"] {
     width: 50px;
+    color: black;
 }
 
 .item .window-content form.item-sheet .asside select {
