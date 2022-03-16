@@ -50,23 +50,23 @@
             "label": "Archetypes (fr)",
             "system": "torgeternity",
             "module": "torgeternity",
-            "path": "packs/archetypes.db",
+            "path": "packs/french/archetypes.db",
             "entity": "Actor"
         },
         {
-            "name": "basic-rules",
+            "name": "basic-rules-fr",
             "label": "regles basiques (fr)",
             "system": "torgeternity",
             "module": "torgeternity",
-            "path": "packs/basic-rules.db",
+            "path": "packs/french/basic-rules.db",
             "entity": "JournalEntry"
         },
         {
-            "name": "core-card-set",
+            "name": "core-card-set-fr",
             "label": "paquets de cartes de base (fr)",
             "system": "torgeternity",
             "module": "torgeternity",
-            "path": "packs/core-card-set.db",
+            "path": "packs/french/core-card-set.db",
             "entity": "Cards"
         },
         {
