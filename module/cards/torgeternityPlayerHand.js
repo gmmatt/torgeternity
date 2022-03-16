@@ -76,7 +76,13 @@ export default class torgeternityPlayerHand extends CardsHand {
                 // await game.combats.apps[0].viewed.resetAll();
                 return;
             case "drawDestiny":
-                return this.object.draw(game.cards.getName(game.settings.get("torgeternity", "deckSetting").destinyDeck));
+				let destinyDeck = game.cards.getName(game.settings.get("torgeternity", "deckSetting").destinyDeck);
+				if (destinyDeck.data.cards.size) {
+					const [firstCardKey] = destinyDeck.data.cards.keys(); // need to grab a card to get toMessage access
+					const card = destinyDeck.data.cards.get(firstCardKey);
+					card.toMessage({ content: `<div class="card-draw flexrow"><span class="card-chat-tooltip"><img class="card-face" src="${destinyDeck.data.img}"/><span><img src="${destinyDeck.data.img}"></span></span><h4 class="card-name">Draws from the ${destinyDeck.data.name}.</h4></div>` });
+				}
+                return this.object.draw(destinyDeck);
             case "drawCosm":
                 this.drawCosmDialog();
                 return;
@@ -184,8 +190,13 @@ export default class torgeternityPlayerHand extends CardsHand {
             callback: html => {
                 const form = html[0].querySelector("form.cosm-dialog");
                 const fd = new FormDataExtended(form).toObject();
-                const from = game.cards.getName(fd.from);
-                return this.object.draw(from).catch(err => {
+                const cosmDeck = game.cards.getName(fd.from);
+				if (cosmDeck.data.cards.size) {
+					const [firstCardKey] = cosmDeck.data.cards.keys(); // need to grab a card to get toMessage access
+					const card = cosmDeck.data.cards.get(firstCardKey);
+					card.toMessage({ content: `<div class="card-draw flexrow"><span class="card-chat-tooltip"><img class="card-face" src="${cosmDeck.data.img}"/><span><img src="${cosmDeck.data.img}"></span></span><h4 class="card-name">Draws from the ${cosmDeck.data.name}.</h4></div>` });
+				}
+                return this.object.draw(cosmDeck).catch(err => {
                     ui.notifications.error(err.message);
                     return this;
                 });
