@@ -513,7 +513,7 @@ async function createTorgEternityMacro(data, slot) {
                 name: macroName,
                 type: "script",
                 command: command,
-				permission: { default: 2 },
+				permission: { default: CONST.DOCUMENT_PERMISSION_LEVELS.OBSERVER },
                 flags: { macroFlag: true },
             });
         }
@@ -523,7 +523,7 @@ async function createTorgEternityMacro(data, slot) {
                 type: "script",
                 img: macroImg,
                 command: command,
-				permission: { default: 2 },
+				permission: { default: CONST.DOCUMENT_PERMISSION_LEVELS.OBSERVER },
                 flags: { macroFlag: true },
             });
         }

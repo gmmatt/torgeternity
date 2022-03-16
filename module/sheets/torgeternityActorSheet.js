@@ -289,6 +289,7 @@ export default class torgeternityActorSheet extends ActorSheet {
                 });
                 let cardData = {
                     name: this.actor.data.name,
+                    permission: { default: CONST.DOCUMENT_PERMISSION_LEVELS.OBSERVER },
                     type: "hand"
                 }
                 characterHand = Cards.create(cardData, { keepId: true, renderSheet: true });
