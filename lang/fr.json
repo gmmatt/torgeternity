@@ -530,7 +530,7 @@
             "veryLarge": "Très grande"
         },
         "dialogPrompts": {
-            "showToPlayers": "monter à tous les joueurs",
+            "showToPlayers": "Monter à tous les joueurs",
             "playerPassTitle": "Donner au joueur",
             "playerPassLabel": "Donner",
             "playerPassInstructions": "Sélection du joueur recevant la carte",

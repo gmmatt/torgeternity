@@ -534,7 +534,7 @@
         },
 
         "dialogPrompts": {
-            "showToPlayers": "show card to all players",
+            "showToPlayers": "Karte allen Spielern zeigen",
             "playerPassTitle": "An Spieler weitergeben",
             "playerPassLabel": "Weitergeben",
             "playerPassInstructions": "Spieler auswählen, der die Karte erhalten soll",
