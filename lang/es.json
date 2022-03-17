@@ -513,7 +513,12 @@
                     "noDamage": "Sin Daño",
                     "attackMissed": "Ataque Falla"
                 }
-            }
+            },
+            "playsCard": "Jugar",
+            "discardsCard": "Descartar",
+            "drawsCard": "Roba de la",
+            "passesCard1": "Pasa",
+            "passesCard2": "a"
         },
         
         "sizes": {
@@ -537,8 +542,8 @@
             "cosmDialogTitle": "Roba Carta Cosmos",
             "cosmDeckDialogLabel": "Roba",
             "cardPooled": "Reserva",
-            "plays": "Jugar",
-            "discards": "Descartar",
+            "playCard": "Juega",
+            "discardCard": "Descarta",
             "openHand": "Abrir Mano",
             "lifelike": "Visor Mejorado",
             "return": "Devuelve todas las cartas a sus mazos. NO baraja automáticamente los mazos."

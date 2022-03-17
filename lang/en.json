@@ -514,7 +514,12 @@
                     "noDamage": "No Damage",
                     "attackMissed": "Attack Missed"
                 }
-            }
+            },
+            "playsCard": "Plays",
+            "discardsCard": "Discards",
+            "drawsCard": "Draws from the",
+            "passesCard1": "Passes",
+            "passesCard2": "to"
         },
         "sizes": {
             "tiny": "Tiny",
@@ -536,8 +541,8 @@
             "cosmDialogTitle": "Draw Cosm Card",
             "cosmDeckDialogLabel": "Draw",
             "cardPooled": "In Pool?",
-            "plays": "Plays",
-            "discards": "Discards",
+            "playCard": "Play",
+            "discardCard": "Discard",
             "openHand": "Open Hand",
             "lifelike": "Enhanced Display",
             "return": "Returns all cards to their deck(s). Does NOT automatically reshuffle the deck(s)."

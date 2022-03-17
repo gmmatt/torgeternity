@@ -53,7 +53,7 @@ export default class torgeternityPlayerHand extends CardsHand {
                 } else {
                     await card.pass(game.cards.getName("Cosm Discard"));
                 }
-                card.toMessage({ content: `<div class="card-draw flexrow"><span class="card-chat-tooltip"><img class="card-face" src="${card.img}"/><span><img src="${card.img}"></span></span><span class="card-name">${game.i18n.localize("torgeternity.dialogPrompts.plays")} ${card.name}</span>
+                card.toMessage({ content: `<div class="card-draw flexrow"><span class="card-chat-tooltip"><img class="card-face" src="${card.img}"/><span><img src="${card.img}"></span></span><span class="card-name">${game.i18n.localize("torgeternity.chatText.playsCard")} ${card.name}</span>
             </div>` })
                     // await game.combats.apps[0].viewed.resetAll();
                 return;
@@ -71,7 +71,7 @@ export default class torgeternityPlayerHand extends CardsHand {
                 } else {
                     await card.pass(game.cards.getName("Cosm Discard"));
                 }
-                card.toMessage({ content: `<div class="card-draw flexrow"><span class="card-chat-tooltip"><img class="card-face" src="${card.img}"/><span><img src="${card.img}"></span></span><span class="card-name">${game.i18n.localize("torgeternity.dialogPrompts.discards")} ${card.name}</span>
+                card.toMessage({ content: `<div class="card-draw flexrow"><span class="card-chat-tooltip"><img class="card-face" src="${card.img}"/><span><img src="${card.img}"></span></span><span class="card-name">${game.i18n.localize("torgeternity.chatText.discardsCard")} ${card.name}</span>
               </div>` });
                 // await game.combats.apps[0].viewed.resetAll();
                 return;
@@ -80,7 +80,7 @@ export default class torgeternityPlayerHand extends CardsHand {
                 if (destinyDeck.data.cards.size) {
                     const [firstCardKey] = destinyDeck.data.cards.keys(); // need to grab a card to get toMessage access
                     const card = destinyDeck.data.cards.get(firstCardKey);
-                    card.toMessage({ content: `<div class="card-draw flexrow"><span class="card-chat-tooltip"><img class="card-face" src="${destinyDeck.data.img}"/><span><img src="${destinyDeck.data.img}"></span></span><h4 class="card-name">${game.i18n.localize("torgeternity.dialogPrompts.drawDestiny")}.</h4></div>` });
+                    card.toMessage({ content: `<div class="card-draw flexrow"><span class="card-chat-tooltip"><img class="card-face" src="${destinyDeck.data.img}"/><span><img src="${destinyDeck.data.img}"></span></span><h4 class="card-name">${game.i18n.localize("torgeternity.chatText.drawsCard")} ${destinyDeck.data.name}.</h4></div>` });
                 }
                 return this.object.draw(destinyDeck);
             case "drawCosm":
@@ -168,7 +168,7 @@ export default class torgeternityPlayerHand extends CardsHand {
                 const fd = new FormDataExtended(form).toObject();
                 const to = game.cards.get(fd.to);
                 const toName = to.data.name;
-                card.toMessage({ content: `<div class="card-draw flexrow"><span class="card-chat-tooltip"><img class="card-face" src="${card.img}"/><span><img src="${card.img}"></span></span><h4 class="card-name">Passes ${card.name} to ${toName}.</h4></div>` });
+                card.toMessage({ content: `<div class="card-draw flexrow"><span class="card-chat-tooltip"><img class="card-face" src="${card.img}"/><span><img src="${card.img}"></span></span><h4 class="card-name">${game.i18n.localize("torgeternity.chatText.passesCard1")} ${card.name} ${game.i18n.localize("torgeternity.chatText.passesCard2")} ${toName}.</h4></div>` });
                 return card.pass(to).catch(err => {
                     ui.notifications.error(err.message);
                     return this;
@@ -194,7 +194,7 @@ export default class torgeternityPlayerHand extends CardsHand {
                 if (cosmDeck.data.cards.size) {
                     const [firstCardKey] = cosmDeck.data.cards.keys(); // need to grab a card to get toMessage access
                     const card = cosmDeck.data.cards.get(firstCardKey);
-                    card.toMessage({ content: `<div class="card-draw flexrow"><span class="card-chat-tooltip"><img class="card-face" src="${cosmDeck.data.img}"/><span><img src="${cosmDeck.data.img}"></span></span><h4 class="card-name">Draws from the ${cosmDeck.data.name}.</h4></div>` });
+                    card.toMessage({ content: `<div class="card-draw flexrow"><span class="card-chat-tooltip"><img class="card-face" src="${cosmDeck.data.img}"/><span><img src="${cosmDeck.data.img}"></span></span><h4 class="card-name">${game.i18n.localize("torgeternity.chatText.drawsCard")} ${cosmDeck.data.name}.</h4></div>` });
                 }
                 return this.object.draw(cosmDeck).catch(err => {
                     ui.notifications.error(err.message);

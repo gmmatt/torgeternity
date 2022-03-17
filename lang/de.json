@@ -478,7 +478,12 @@
             "attack": "Angriff",
             "baseDamage": "Grundschaden",
             "value": "Wert",
-            "notes": "Notizen"
+            "notes": "Notizen",
+            "playsCard": "Spielt aus:",
+            "discardsCard": "Wirft weg:",
+            "drawsCard": "Zieht vom",
+            "passesCard1": "Gibt",
+            "passesCard2": "an"
         },
         "check": {
             "needTarget": "Der erweiterte Angriffstest kann ohne Ziel nicht durchgeführt werden. Wählen Sie ein Ziel und versuchen Sie es erneut.",
@@ -540,8 +545,8 @@
             "cosmDialogTitle": "Ziehe Cosm-Karte",
             "cosmDeckDialogLabel": "Ziehe",
             "cardPooled": "Im Aktionenpool?",
-            "plays": "Spielt aus:",
-            "discards": "Wirft weg:",
+            "playCard": "Spielen",
+            "discardCard": "Wirf",
             "openHand": "Öffne Hand",
             "lifelike": "realitätsnahe Darstellung",
             "return": "Legt alle Karten in ihre(n) Stapel zurück. Mischt die Kartenstapel NICHT automatisch neu."

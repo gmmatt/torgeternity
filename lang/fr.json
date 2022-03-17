@@ -514,7 +514,12 @@
                     "noDamage": "pas de dommages",
                     "attackMissed": "attaque ratée"
                 }
-            }
+            },
+            "playsCard": "Jouer",
+            "discardsCard": "Défausser",
+            "drawsCard": "Tire du",
+            "passesCard1": "Passe",
+            "passesCard2": "à"
         },
         "sizes": {
             "tiny": "Minuscule",
@@ -536,8 +541,8 @@
             "cosmDialogTitle": "Tirer carte Cosm",
             "cosmDeckDialogLabel": "Tirer",
             "cardPooled": "Réserve d'action",
-            "plays": "Jouer",
-            "discards": "Défausser",
+            "playCard": "Jouez",
+            "discardCard": "Défaussez",
             "openHand": "voir sa main",
             "lifelike": "affichage 'en éventail'",
             "return": "renvoit toutes les cartes dans leur pile d'origine.Ne remélange PAS automatiquement la pile."

@@ -29,8 +29,9 @@ export default class  torgeternityPile extends CardsPile {
         // Handle the control action
         switch ( button.dataset.action ) {
           case "play":
+              card.setFlag("torgeternity", "pooled", false)
               card.pass(game.cards.getName("Destiny Discard"));
-              card.toMessage({content: `<div class="card-draw flexrow"><img class="card-face" src="${card.img}"/><h4 class="card-name">${game.i18n.localize("torgeternity.dialogPrompts.plays")} ${card.name}</h4>
+              card.toMessage({content: `<div class="card-draw flexrow"><img class="card-face" src="${card.img}"/><h4 class="card-name">${game.i18n.localize("torgeternity.chatText.playsCard")} ${card.name}</h4>
             </div>`})
               return;
           case "view":
@@ -41,11 +42,18 @@ export default class  torgeternityPile extends CardsPile {
               x.shareImage();
               return;
           case "discard":
+              card.setFlag("torgeternity", "pooled", false);
               card.pass(game.cards.getName("Destiny Discard"));
-              card.toMessage({content: `<div class="card-draw flexrow"><img class="card-face" src="${card.img}"/><h4 class="card-name">${game.i18n.localize("torgeternity.dialogPrompts.discards")} ${card.name}</h4></div>`});
+              card.toMessage({content: `<div class="card-draw flexrow"><img class="card-face" src="${card.img}"/><h4 class="card-name">${game.i18n.localize("torgeternity.chatText.discardsCard")} ${card.name}</h4></div>`});
               return;
           case "drawDestiny":
-              return this.object.draw(game.cards.getName("Destiny Deck"));
+                let destinyDeck = game.cards.getName(game.settings.get("torgeternity", "deckSetting").destinyDeck);
+                if (destinyDeck.data.cards.size) {
+                    const [firstCardKey] = destinyDeck.data.cards.keys(); // need to grab a card to get toMessage access
+                    const card = destinyDeck.data.cards.get(firstCardKey);
+                    card.toMessage({ content: `<div class="card-draw flexrow"><span class="card-chat-tooltip"><img class="card-face" src="${destinyDeck.data.img}"/><span><img src="${destinyDeck.data.img}"></span></span><h4 class="card-name">${game.i18n.localize("torgeternity.chatText.drawsCard")} ${destinyDeck.data.name}.</h4></div>` });
+                }
+                return this.object.draw(destinyDeck);
           case "drawCosm":
               this.drawCosmDialog();
               return;
