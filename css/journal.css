@@ -74,6 +74,25 @@ Div.editor-content img{
     border: none;
     }
 /*...................................................................*/
+/*Inline links are pretty boring in standard-style, let's pimp'em!*/
+a.entity-link, a.content-link, a.inline-roll{
+    background-image: url(../images/lightning_bar.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white !important;
+    text-shadow: black    1.0px 1.0px 0px,
+    black    1.0px -1.0px 0px,
+    black    -1.0px 1.0px 0px,
+    black    -1.0px 1.0px 0px;
+    font-size: 14px;
+}
+    /*Coloring the symbols before the text (seems like they're ASCII-Code) and a little gap to the following text*/
+    .fa-user:before, .fa-book-open:before, .fa-id-badge:before, .fa-suitcase:before, .fa-map:before, .fa-th-list:before, .fa-music:before {
+        color: rgb(245, 245, 245);
+        margin-right: 5px;
+    }
+    
+/*...................................................................*/
 /*Image-wraparound, image on left side*/
 
 .imgleft{
