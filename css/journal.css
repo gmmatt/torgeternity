@@ -87,7 +87,7 @@ a.entity-link, a.content-link, a.inline-roll{
     font-size: 14px;
 }
     /*Coloring the symbols before the text (seems like they're ASCII-Code) and a little gap to the following text*/
-    .fa-user:before, .fa-book-open:before, .fa-id-badge:before, .fa-suitcase:before, .fa-map:before, .fa-th-list:before, .fa-music:before {
+    .fa-user:before, .fa-book-open:before, .fa-id-badge:before, .fa-suitcase:before, .fa-map:before, .fa-th-list:before, .fa-music:before, .fa-dice-d20:before {
         color: rgb(245, 245, 245);
         margin-right: 5px;
     }
