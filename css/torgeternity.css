@@ -766,8 +766,8 @@ nav#controls ol .control-tool:hover {
     z-index: +1;
 }
 
-#navigation div.cosm-icone.mixed {
-    filter: grayscale(0.8)
+#navigation div.cosm-icone.dominant2ndCosm .cosm-card {
+    filter: grayscale(1)
 }
 
 #navigation div.cosm-icone:hover div.fr.cosm-card {

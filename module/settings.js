@@ -78,9 +78,9 @@ export function registerTorgSettings() {
     });
 
     game.settings.registerMenu("torgeternity", "cardDecks", {
-        name: "deck setting window",
-        label: "card deck settings", // The text label used in the button
-        hint: "configurez ici les differents decks de cartes par default",
+        name: "torgeternity.settingMenu.deckSetting.name",
+        label: "torgeternity.settingMenu.deckSetting.label", // The text label used in the button
+        hint: "torgeternity.settingMenu.deckSetting.hint",
         icon: "fas fa-bars",
         title: "deck settings", // A Font Awesome icon used in the submenu button
         type: deckSettingMenu, // A FormApplication subclass
@@ -94,7 +94,9 @@ export function registerTorgSettings() {
         type: Object,
         default: {
             destinyDeck: "Destiny Deck",
+            destinyDiscard: "Destiny Discard",
             dramaDeck: "Drama Deck",
+            dramaDiscard: "Drama Discard",
             coreEarth: "Core Earth Cosm Deck",
             aysle: "Aysle Cosm Deck",
             cyberpapacy: "Cyberpapacy Cosm Deck",

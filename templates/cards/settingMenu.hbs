@@ -1,5 +1,4 @@
 <form>
-    {{log this}}
     <h2>{{localize "CARDS.TypeDeck"}}
         {{localize "torgeternity.cardTypes.destiny"}}</h2>
 
@@ -12,6 +11,16 @@
             {{/each}}
         </select>
     </div>
+    <div class="form-group">
+        <label for="destinyDiscard"> {{localize "torgeternity.cardTypes.discardPile"}}</label>
+        <select name="destinyDiscard">
+            {{#each deckList as |deck index|}}
+            <option value="{{deck.name}}" {{#ifequal deck.name ../object.destinyDiscard}} selected="true" {{/ifequal}}>
+                {{deck.name}}
+            </option>
+            {{/each}}
+        </select>
+    </div>
 
     <h2>{{localize "CARDS.TypeDeck"}}
         {{localize "torgeternity.cardTypes.drama"}}</h2>
@@ -19,6 +28,16 @@
         <select name="dramaDeck">
             {{#each deckList as |deck index|}}
             <option value="{{deck.name}}" {{#ifequal deck.name ../object.dramaDeck}} selected="true" {{/ifequal}}>
+                {{deck.name}}
+            </option>
+            {{/each}}
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="dramaDiscar"> {{localize "torgeternity.cardTypes.discardPile"}}</label>
+        <select name="dramaDiscard">
+            {{#each deckList as |deck index|}}
+            <option value="{{deck.name}}" {{#ifequal deck.name ../object.dramaDiscard}} selected="true" {{/ifequal}}>
                 {{deck.name}}
             </option>
             {{/each}}

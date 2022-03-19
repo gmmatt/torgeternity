@@ -595,7 +595,10 @@
             "destiny": "Destiny",
             "drama": "Drama",
             "cosm": "Cosm",
-            "hand": "Hand"
+            "hand": "Hand",
+            "discardPile": "Discard Pile"
+
+
         },
         "scenes": {
             "reality": "Reality",
@@ -646,6 +649,12 @@
             "hideForeignCompendium": {
                 "name": "Hide foreign Compendiums",
                 "hint": "Select to hide all compendium in foreign language"
+            },
+
+            "deckSetting": {
+                "name": "default card deck configuration",
+                "label": "default card pack configuration",
+                "hint": "configurez ici de quels paquets seront piochées les différents type de cartes, ainsi que les piles où elles seront défaussées"
             }
         },
         "notifications": {
