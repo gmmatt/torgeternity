@@ -595,7 +595,8 @@
             "destiny": "Destin",
             "drama": "Action",
             "cosm": "Cosm",
-            "hand": "Main"
+            "hand": "Main",
+            "discardPile": "pile de défausse"
         },
         "scenes": {
             "reality": "Réalité",
@@ -641,6 +642,12 @@
             "hideForeignCompendium": {
                 "name": "Masquer les compendiiums en langues étrangères",
                 "hint": "Validez pour masquer tous les compendiums qui ne sont pas en français"
+            },
+            "deckSetting": {
+                "name": "configuration des paquets de cartes par defaut",
+                "label": "configuration des paquets de cartes par defaut",
+                "hint": "configurez ici de quels paquets seront piochées les différents type de cartes, ainsi que les piles où elles seront défaussées"
+
             }
         },
         "notifications": {
