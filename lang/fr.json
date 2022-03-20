@@ -596,7 +596,8 @@
             "drama": "Action",
             "cosm": "Cosm",
             "hand": "Main",
-            "discardPile": "pile de défausse"
+            "discardPile": "pile de défausse",
+            "activeDrama": "Carte Action Active"
         },
         "scenes": {
             "reality": "Réalité",

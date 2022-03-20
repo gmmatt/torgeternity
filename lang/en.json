@@ -596,7 +596,8 @@
             "drama": "Drama",
             "cosm": "Cosm",
             "hand": "Hand",
-            "discardPile": "Discard Pile"
+            "discardPile": "Discard Pile",
+            "activeDrama": "Active Drama Card"
 
 
         },

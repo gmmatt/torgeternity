@@ -137,8 +137,9 @@ Hooks.on("ready", async function() {
     sheetResize();
     //toggleViewMode();
 
-
-    //-----applying GM possibilities pool if absent
+    let decks = game.settings.get("torgeternity", "deckSetting")
+    console.log({ decks })
+        //-----applying GM possibilities pool if absent
     if (game.user.isGM && !game.user.getFlag('torgeternity', 'GMpossibilities')) {
         game.user.setFlag('torgeternity', 'GMpossibilities', 0)
     }
@@ -466,7 +467,7 @@ async function createTorgEternityMacro(data, slot) {
         const internalAttributeName = objData.attribute;
         const isAttributeTest = (internalSkillName === internalAttributeName);
         const isInteractionAttack = (data.type === "interaction");
-        
+
         command = `game.torgeternity.rollSkillMacro("${internalSkillName}", "${internalAttributeName}", ${isInteractionAttack});`;
 
         const displaySkillName = isAttributeTest ? null : game.i18n.localize("torgeternity.skills." + internalSkillName);
@@ -478,7 +479,7 @@ async function createTorgEternityMacro(data, slot) {
             macroName = displayAttributeName;
         else if (data.type === "interaction")
             macroName = displaySkillName;
-         macroFlag = "torgeternity.skillMacro";
+        macroFlag = "torgeternity.skillMacro";
 
         if (data.type === "attribute") {
             // this is an attribute test
@@ -493,8 +494,7 @@ async function createTorgEternityMacro(data, slot) {
                 macroImg = "icons/magic/life/heart-shadow-red.webp";
             else if (internalAttributeName === "strength")
                 macroImg = "icons/magic/control/buff-strength-muscle-damage.webp";
-        }
-        else {
+        } else {
             // not attribute test
             // don't have skill icons yet
             // macroImg = "systems/torgeternity/images/icons/skill-" + internalSkillName + "-icon.png";
@@ -513,17 +513,16 @@ async function createTorgEternityMacro(data, slot) {
                 name: macroName,
                 type: "script",
                 command: command,
-				permission: { default: CONST.DOCUMENT_PERMISSION_LEVELS.OBSERVER },
+                permission: { default: CONST.DOCUMENT_PERMISSION_LEVELS.OBSERVER },
                 flags: { macroFlag: true },
             });
-        }
-        else {
+        } else {
             macro = await Macro.create({
                 name: macroName,
                 type: "script",
                 img: macroImg,
                 command: command,
-				permission: { default: CONST.DOCUMENT_PERMISSION_LEVELS.OBSERVER },
+                permission: { default: CONST.DOCUMENT_PERMISSION_LEVELS.OBSERVER },
                 flags: { macroFlag: true },
             });
         }
@@ -729,7 +728,7 @@ function rollSkillMacro(skillName, attributeName, isInteractionAttack) {
     let skill = null;
     if (!isAttributeTest) {
         const skillNameKey = skillName; // skillName required to be internal value
-            // would be nice to use display value as an input instead but we can't translate from i18n to internal values
+        // would be nice to use display value as an input instead but we can't translate from i18n to internal values
         skill = actor && Object.keys(actor.data.data.skills).includes(skillNameKey) ? actor.data.data.skills[skillNameKey] : null;
         if (!skill)
             return ui.notifications.warn(
@@ -796,9 +795,9 @@ function rollSkillMacro(skillName, attributeName, isInteractionAttack) {
         test["type"] = "interactionAttack";
         test["testType"] = "interactionAttack";
         test["interactionAttackType"] = skillName;
-        test["darknessModifier"] = 0; 
-            // Darkness seems like it would be hard to determine if it should apply to 
-            //    skill/attribute tests or not, maybe should be option in dialog?
+        test["darknessModifier"] = 0;
+        // Darkness seems like it would be hard to determine if it should apply to 
+        //    skill/attribute tests or not, maybe should be option in dialog?
 
         // Exit if no target or get target data
         if (Array.from(game.user.targets).length === 0) {
