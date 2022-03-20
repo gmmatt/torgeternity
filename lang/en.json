@@ -653,13 +653,13 @@
 
             "deckSetting": {
                 "name": "default card deck configuration",
-                "label": "default card pack configuration",
+                "label": "Default card pack configuration",
                 "hint": "configurez ici de quels paquets seront piochées les différents type de cartes, ainsi que les piles où elles seront défaussées"
             }
         },
         "notifications": {
             "macroTypeWarning": "You can only create macro buttons for owned Items and Attributes/Skills",
-            "openIssue": "your browser will open a new page to complete an issue",
+            "openIssue": "Your browser will open a new page to complete an issue",
             "openUlisses": "Your browser will open a new tab to join Ulisses website",
             "openDiscord": "Your browser will open a new page to join us on our discord server ",
             "noItemNamed": "Your controlled Actor does not have an item named ",
@@ -669,7 +669,7 @@
             "defaultAction": "Default action, Gear for example",
             "noHands": "No hands available!",
             "dramaDeckEmpty": "The Drama Deck is empty. Reset the Drama Deck to continue.",
-            "onlyReservedCard": "please play a reserved card while playing a dramatic scene",
+            "onlyReservedCard": "Please play a reserved card while playing a dramatic scene",
             "noActiveEffectInOwnedItem": "Managing Active Effects within an Owned Item is not currently supported and will be added in a subsequent update."
         }
     },
