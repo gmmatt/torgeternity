@@ -553,34 +553,33 @@
         },
         "dialogWindow": {
             "hideForeignCompendium": {
-                "title": "Fremdsprachenkompendien ausblenden ?",
-                "content": "Dieses System umfasst sowohl englisch- als auch deutschsprachige Kompendien. Möchten Sie fremdsprachige Kompendien ausblenden?"
+                "title": "Fremdsprachige Kompendien ausblenden?",
+                "content": "Dieses System umfasst sowohl englisch- als auch deutschsprachige Kompendien. Möchtest du fremdsprachige Kompendien ausblenden?"
             },
             "externalLinks": {
                 "title": "Links",
-                "content": "<p>Sie brauchen Hilfe? Möchten Sie einen Fehler melden? Hier sind ein paar nützliche Links</p>",
+                "content": "<p>Du brauchst Hilfe? Möchtest einen Fehler melden? Hier sind ein paar nützliche Links</p>",
                 "reference": "<p>Referenz</p>",
                 "bug": "<p>Bug?</p>",
                 "publisher": "<p>Herausgeber</p>"
             },
             "itemDeletion": {
-                "title": "Bestätigen Sie die Löschung",
-                "content": "Sind Sie sicher, dass Sie dies löschen wollen? Es wird dauerhaft aus dem Blatt entfernt werden"
-            
+                "title": "Wirklich löschen?",
+                "content": "Bist du sicher, dass du das löschen willst? Es wird dauerhaft aus deinem Blatt entfernt."
             }
         },
         "iconeTitles": {
-            "openParty": "Öffnen Sie das Parteiblatt",
-            "resetPossibilities": "Zurücksetzen der Möglichkeiten des Sturmritters",
+            "openParty": "Öffnet die Gruppenübersicht",
+            "resetPossibilities": "Möglichkeiten zurücksetzen",
             "delete": "Löschen",
             "edit": "bearbeiten",
             "sendToChat": "An Chat senden",
             "toggle": "Umschalten auf",
             "attackRoll": "Angriffswurf",
-            "spellRoll": "Bannwurf",
-            "miracleRoll": "Mirakelwurf",
+            "spellRoll": "Zauberwurf",
+            "miracleRoll": "Wunder-wurf",
             "psionicRoll": "Psionischer Wurf",
-            "bonusRoll": "Bonusrolle"
+            "bonusRoll": "Bonuswürfel"
         },
         "possibilitiesReset": {
             "name": "Reset Stormknight possibilities",
