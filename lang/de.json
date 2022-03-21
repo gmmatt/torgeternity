@@ -442,7 +442,6 @@
             "unconscious": "K.O.",
             "blind": "Blind"
         },
-
         "yesNo": {
             "true": "Ja",
             "false": "Nein"
@@ -454,7 +453,6 @@
             "apply": "Anwenden",
             "OK": "OK",
             "dontShow": "Nicht mehr anzeigen"
-
         },
         "chatText": {
             "possibility": "Möglichkeit",
@@ -479,51 +477,50 @@
             "baseDamage": "Grundschaden",
             "value": "Wert",
             "notes": "Notizen",
-            "playsCard": "Spielt aus:",
-            "discardsCard": "Wirft weg:",
-            "drawsCard": "Zieht vom",
-            "passesCard1": "Gibt",
-            "passesCard2": "an"
-        },
-        "check": {
-            "needTarget": "Der erweiterte Angriffstest kann ohne Ziel nicht durchgeführt werden. Wählen Sie ein Ziel und versuchen Sie es erneut.",
-            "cantUseUntrained": " kann nicht verwendet werden, wenn es nicht erlernt wurde (mindestens 1 Fertigkeit hinzugefügt).",
-            "cantUseSkillRecquired": " kann nicht ohne mindestens 1 Add in der erforderlichen Fertigkeit verwendet werden.",
+            "check": {
+            "needTarget": "Der ausgeweitete Angriffswurf kann ohne Ziel nicht durchgeführt werden. Wähle ein Ziel und versuche es erneut.",
+            "cantUseUntrained": "Kann nicht untrainiert verwendet werden (mindestens Fertigkeitswert 1)",
+            "cantUseSkillRecquired": "Kann nicht ohne mindestens 1 Fertigkeitspunkt in der erforderlichen Fertigkeit verwendet werden.",
             "modifier": {
                 "wounds": "Wunden",
-                "stymied": "Stymied (-2 )",
-                "veryStymied": "Very Stymied (-4)",
+                "stymied": "Angeschlagen (-2 )",
+                "veryStymied": "Sehr Angeschlagen (-4)",
                 "darkness": "Dunkelheit",
                 "running": "Laufend (-2)",
-                "multiAttack": "Multi-attack ",
-                "multiAction": "Multi-Aktion ",
-                "multiTarget": "Multi-Ziel",
-                "targetSize": "Zielgröße",
+                "multiAttack": "Mehrfach-Attacke",
+                "multiAction": "Mehrfachaktion",
+                "multiTarget": "Mehrfach-Zielauswahl",
+                "targetSize": "Größe des Ziels",
                 "targetVulnerable": "Ziel verwundbar (+2)",
                 "targetVeryVulnerable": "Ziel sehr verwundbar (+4)",
-                "calledShot": "Aufgerufener Schuss",
-                "shortBurst": "Short Burst(+2)",
-                "longBurst": "Langer Ausbruch(+4)",
-                "heavyBurst": "Schwerer Ausbruch(+6)",
-                "allOutAttack": "All Out Attack",
-                "gezielterSchuss": "Gezielter Schuss (+4)",
-                "blindFire": "Blindes Feuer (-6)",
-                "targetConcealment": "Zielverschleierung"
+                "calledShot": "Gezielter Angriff",
+                "shortBurst": "Kurzer Feuerstoß (+2)",
+                "longBurst": "Langer Feuerstoß (+4)",
+                "heavyBurst": "Schwerer Feuerstoß (+6)",
+                "allOutAttack": "Rücksichtsloser Angriff",
+                "gezielterSchuss": "Zielen (+4)",
+                "blindFire": "Blindes Feuern (-6)",
+                "targetConcealment": "Deckungsschutz"
             },
             "result": {
                 "actionTotal": "Aktion insgesamt",
                 "failure": "Fehlschlag",
                 "outstandingSuccess": "Hervorragender Erfolg",
                 "goodSuccess": "Guter Erfolg",
-                "standartSuccess": "Standart Erfolg",
-                "mishape": "Mishape",
+                "standartSuccess": "Standarderfolg",
+                "mishape": "Patzer",
                 "damage": "Schaden",
-                "toughness": "Zähigkeit",
+                "toughness": "Robustheit",
                 "noDamage": "Kein Schaden",
                 "attackMissed": "Angriff verfehlt"
             }
         },
-
+        "playsCard": "Spielt aus:",
+        "discardsCard": "Wirft weg:",
+        "drawsCard": "Zieht vom",
+        "passesCard1": "Gibt",
+        "passesCard2": "an"
+        },
         "sizes": {
             "tiny": "Winzig",
             "verySmall": "Sehr klein",
@@ -532,7 +529,6 @@
             "large": "Groß",
             "veryLarge": "Sehr groß"
         },
-
         "dialogPrompts": {
             "showToPlayers": "Karte allen Spielern zeigen",
             "playerPassTitle": "An Spieler weitergeben",
@@ -585,7 +581,6 @@
             "name": "Reset Stormknight possibilities",
             "hint": "Wie viele Möglichkeiten sollten die StormKnights erhalten?"
         },
-
         "cosmDecks": {
             "coreEarth": "Zentralerde Cosm-Deck",
             "aysle": "Aysle Cosm-Deck",
@@ -596,14 +591,16 @@
             "panPacifica": "Pan-Pacifica Cosm-Deck",
             "tharkold": "Tharkold Cosm-Deck"
         },
-
         "cardTypes": {
             "destiny": "Schicksal",
             "drama": "Drama",
             "cosm": "Cosm",
-            "hand": "Handkarten"
+            "hand": "Handkarten",
+            "discardPile": "Kartenfriedhof",
+            "activeDrama": "Aktive Dramakarte"
+        
+        
         },
-
         "scenes": {
             "reality": "Realität",
             "realityHint": "Stelle die Realität der Zone ein.",
@@ -612,22 +609,18 @@
             "HeaderVisionHint": "Hier werden die für diese Szene geltenden Einstellungen für Sicht, Beleuchtung und Kriegsnebel konfiguriert.",
             "HeaderAmbienceHint": "Konfiguriere zusätzliche Integrierungen zwischen dieser Szene und Journaleinträgen, Audio-Playlists oder Wettereffekten."
         },
-
         "tokens": {
-
             "noDSR": "Keine DPA",
             "step": "Schritt",
             "a": " A",
             "b": " B",
             "c": " C",
             "d": " D"
-
         },
         "poolToggle": {
             "inPool": "Karte im Aktionsvorrat",
             "toogle": "Aktionenvorrat umschalten"
         },
-
         "monarch": {
             "play": "Diese Karte ausspielen",
             "broadcast": "Zeige jedem diese Karte",
@@ -657,12 +650,30 @@
             "hideForeignCompendium": {
                 "name": "Deutsche Kompendien ausblenden",
                 "hint": "Auswählen, um deutschsprachige Kompendien auszublenden"
+            },
+
+            "deckSetting": {
+                "name": "Standard-Deckkonfiguration",
+                "label": "Standard-Kartenpack-Konfiguration",
+                "hint": "Konfiguriere hier die Standard-Decks, aus denen die Karten gezogen und abgelegt werden."
             }
-        }
-
     },
-
-
+    "notifications": {
+        "macroTypeWarning": "Du kannst nur Makro-Buttons für Items/Attribute/Fertigkeiten kreieren, die dir gehören.",
+        "openIssue": "Dein Browser wird einen neuen Tab öffnen, um diese Aufgabe durchzuführen.",
+        "openUlisses": "Dein Browser wird einen neuen Tab öffnen und dich auf die Ulisses-Webseite weiterleiten.",
+        "openDiscord": "Dein Browser wird einen neuen Tab öffnen, der dich zum Discord-Server weiterleitet.",
+        "noItemNamed": "Dein Kontrollierter Charakter hat keinen Gegenstand der heißt: ",
+        "noSkillNamed": "Dein Kontrollierter Charakter hat keine Fertigkeit, die heißt: ",
+        "noAttrNamed": "Dein Kontrollierter Charakter hat kein Attribut, das heißt: ",
+        "notImplemented": "Aktuell noch nicht implementiert",
+        "defaultAction": "Standardaktion, Ausrüstung z. Bsp.",
+        "noHands": "Keine Kartenhand verfügbar!",
+        "dramaDeckEmpty": "Das Dramadeck ist aufgebraucht. Bitte das Dramadeck zurücksetzen.",
+        "onlyReservedCard": "Bitte nur Karten aus dem Aktionenpool spielen.",
+        "noActiveEffectInOwnedItem": "Das Ändern von aktiven Effekten innerhalb eines Items mit Besitzrechten ist zur Zeit noch nicht implementiert."
+    }
+    },
     "CARD": {
         "TypeCosm": "Cosm",
         "TypeDestiny": "Schicksal",
@@ -670,4 +681,5 @@
         "discard": "Wegwerfen",
         "display": "Zeige diese Karte den anderen Spielern"
     }
+
 }
