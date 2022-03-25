@@ -26,7 +26,6 @@ export default class deckSettingMenu extends FormApplication {
 
     async activateListeners(html) {
         html.find(".selectDeck").change(this.onChangeDeck.bind(this, html));
-        html.find(".reset").click(this.render(false))
 
 
     }
@@ -34,5 +33,4 @@ export default class deckSettingMenu extends FormApplication {
         const data = expandObject(formData);
         game.settings.set('torgeternity', 'deckSetting', data);
     }
-    async onChangeDeck(html, ev) {}
 }

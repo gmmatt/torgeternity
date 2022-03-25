@@ -29,6 +29,7 @@ import { attackDialog } from "/systems/torgeternity/module/attack-dialog.js"; //
 import { skillDialog } from "/systems/torgeternity/module/skill-dialog.js";
 import { interactionDialog } from "/systems/torgeternity/module/interaction-dialog.js";
 import { hideCompendium } from './module/hideCompendium.js';
+import deckSettingMenu from './module/cards/cardSettingMenu.js';
 
 Hooks.once("init", async function() {
     console.log("torgeternity | Initializing Torg Eternity System");
@@ -91,6 +92,51 @@ Hooks.once("init", async function() {
     //----------preloading handlebars templates
     preloadTemplates();
 
+    //adding layer control for cards
+    class torgLayer extends CanvasLayer {
+        static get layerOptions() {
+            return foundry.utils.mergeObject(super.layerOptions, {
+                name: "Torg",
+                canDragCreate: false,
+                controllableObjects: true,
+                rotatableObjects: true,
+                zIndex: 666,
+            });
+        }
+    }
+    CONFIG.Canvas.layers.torgeternity = { layerClass: torgLayer, group: "primary" }
+    Hooks.on("getSceneControlButtons", btns => {
+        let menu = [{
+            name: game.i18n.localize("CARDS.TypeHand"),
+            title: game.i18n.localize("CARDS.TypeHand"),
+            icon: "fa fa-id-badge",
+            button: true,
+            onClick: () => {
+                game.cards.getName(game.settings.get("torgeternity", "defaultUserHand")).sheet.render(true)
+            }
+        }];
+        if (game.user.isGM) {
+            menu.push({
+                name: game.i18n.localize("torgeternity.settingMenu.deckSetting.name"),
+                title: game.i18n.localize("torgeternity.settingMenu.deckSetting.name"),
+                icon: "fa fa-cog",
+                button: true,
+                onClick: () => {
+
+                    new deckSettingMenu().render(true)
+                }
+            })
+        }
+
+        btns.push({
+            name: game.i18n.localize("CARDS.TypeHand"),
+            title: game.i18n.localize("CARDS.TypeHand"),
+            icon: "fas fa-id-badge",
+            layer: "torgeternity",
+            tools: menu
+        })
+
+    });
     //-----modify token bars
 
 
@@ -135,11 +181,9 @@ Hooks.once("setup", async function() {
 //-------------once everything ready
 Hooks.on("ready", async function() {
     sheetResize();
-    //toggleViewMode();
 
-    let decks = game.settings.get("torgeternity", "deckSetting")
-    console.log({ decks })
-        //-----applying GM possibilities pool if absent
+
+    //-----applying GM possibilities pool if absent
     if (game.user.isGM && !game.user.getFlag('torgeternity', 'GMpossibilities')) {
         game.user.setFlag('torgeternity', 'GMpossibilities', 0)
     }
@@ -202,8 +246,13 @@ Hooks.on("ready", async function() {
         });
         d.render(true);
     }
-
-
+    /*
+        for (let [k, v] of game.settings.settings.entries()) {
+            if (k == "torgeternity.deckSetting") {
+                console.log('______________________ok', { v })
+            }
+        }
+      */
     //----setup cards if needed
 
     if (game.settings.get("torgeternity", "setUpCards") === true) {
@@ -260,6 +309,7 @@ Hooks.on("ready", async function() {
             const itemId = basicRules.index.getName("Managing Cards")._id;
             game.journal.importFromCompendium(basicRules, itemId);
         }
+
 
         game.settings.set("torgeternity", "setUpCards", false)
     }
@@ -401,9 +451,9 @@ Hooks.on("getMonarchHandComponents", (hand, components) => {
         onclick: (event, card) => {
             card.setFlag("torgeternity", "pooled", false);
             if (card.data.type == "destiny") {
-                card.pass(game.cards.getName("Destiny Discard"));
+                card.pass(game.cards.getName(game.settings.get("torgeternity", "deckSetting").destinyDiscard));
             } else {
-                card.pass(game.cards.getName("Cosm Discard"));
+                card.pass(game.cards.getName(game.settings.get("torgeternity", "deckSetting").cosmDiscard));
             }
             card.toMessage({ content: `<div class="card-draw flexrow"><span class="card-chat-tooltip"><img class="card-face" src="${card.img}"/><span><img src="${card.img}"></span></span><span class="card-name">${game.i18n.localize("torgeternity.chatText.discardsCard")} ${card.name}</span></div>` });
         }
@@ -426,9 +476,9 @@ Hooks.on("getMonarchHandComponents", (hand, components) => {
         onclick: (event, card) => {
             card.setFlag("torgeternity", "pooled", false);
             if (card.data.type == "destiny") {
-                card.pass(game.cards.getName("Destiny Discard"));
+                card.pass(game.cards.getName(game.settings.get("torgeternity", "deckSetting").destinyDiscard));
             } else {
-                card.pass(game.cards.getName("Cosm Discard"));
+                card.pass(game.cards.getName(game.settings.get("torgeternity", "deckSetting").cosmDiscard));
             }
             card.toMessage({ content: `<div class="card-draw flexrow"><span class="card-chat-tooltip"><img class="card-face" src="${card.img}"/><span><img src="${card.img}"></span></span><span class="card-name">${game.i18n.localize("torgeternity.chatText.playsCard")} ${card.name}</span></div>` })
         }
@@ -931,4 +981,4 @@ Hooks.on("renderActorSheet", (app, html, data) => {
 Hooks.on('updateActor', (actor, data, options, id) => {
     //updating playerList with users character up-to-date data
     ui.players.render(true);
-})
+});
