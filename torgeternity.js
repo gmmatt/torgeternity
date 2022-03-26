@@ -105,16 +105,20 @@ Hooks.once("init", async function() {
         }
     }
     CONFIG.Canvas.layers.torgeternity = { layerClass: torgLayer, group: "primary" }
+    
+    /* Removing scene controls for now
     Hooks.on("getSceneControlButtons", btns => {
+        
         let menu = [{
             name: game.i18n.localize("CARDS.TypeHand"),
             title: game.i18n.localize("CARDS.TypeHand"),
             icon: "fa fa-id-badge",
             button: true,
-            onClick: () => {
+            onClick: () => {            
                 game.cards.getName(game.settings.get("torgeternity", "defaultUserHand")).sheet.render(true)
             }
         }];
+        
         if (game.user.isGM) {
             menu.push({
                 name: game.i18n.localize("torgeternity.settingMenu.deckSetting.name"),
@@ -122,12 +126,11 @@ Hooks.once("init", async function() {
                 icon: "fa fa-cog",
                 button: true,
                 onClick: () => {
-
                     new deckSettingMenu().render(true)
                 }
             })
         }
-
+        
         btns.push({
             name: game.i18n.localize("CARDS.TypeHand"),
             title: game.i18n.localize("CARDS.TypeHand"),
@@ -135,8 +138,10 @@ Hooks.once("init", async function() {
             layer: "torgeternity",
             tools: menu
         })
+        
 
     });
+    */
     //-----modify token bars
 
 

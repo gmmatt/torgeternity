@@ -190,7 +190,6 @@ export default class torgeternityPlayerHand extends CardsHand {
             callback: html => {
                 const form = html[0].querySelector("form.cosm-dialog");
                 const fd = new FormDataExtended(form).toObject();
-                // const cosmDeck = game.cards.getName(game.settings.get("torgeternity", "deckSetting")[fd.from]);
                 const cosmDeck = game.cards.getName(fd.from);
                 if (cosmDeck.data.cards.size) {
                     const [firstCardKey] = cosmDeck.data.cards.keys(); // need to grab a card to get toMessage access
