@@ -77,6 +77,18 @@ export function registerTorgSettings() {
 
     });
 
+    /* Temporarily removing this, but we may put back in once we have a good solution for a per-character deck
+    game.settings.register("torgeternity", "defaultUserHand", {
+        name: "torgeternity.settingMenu.defaultUserHand.name", // Register a module setting with checkbox
+        hint: "torgeternity.settingMenu.defaultUserHand.hint", // Description of the settings
+        scope: "client",
+        config: true,
+        type: String,
+        default: false,
+
+    });
+    */
+
     game.settings.registerMenu("torgeternity", "cardDecks", {
         name: "torgeternity.settingMenu.deckSetting.name",
         label: "torgeternity.settingMenu.deckSetting.label", // The text label used in the button
@@ -107,9 +119,7 @@ export function registerTorgSettings() {
             orrorsh: "Orrorsh Cosm Deck",
             panPacifica: "Pan Pacifica Cosm Deck",
             tharkold: "Tharkold Cosm Deck"
-
-
-        },
+        }
     });
 
     //Cards

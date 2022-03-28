@@ -632,6 +632,25 @@ nav#controls ol .control-tool:hover {
     border: none;
 }
 
+nav#controls ol .torgHand {
+    position: relative;
+    width: 100%;
+    height: 25px;
+}
+
+nav#controls ol .torgHand:before {
+    content: '';
+    background-image: url(../images/icons/cardhand.webp);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: -5px;
+}
+
 #sidebar {
     color: white;
     background-image: url(../images/thunder.webp);
