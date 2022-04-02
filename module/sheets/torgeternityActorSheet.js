@@ -542,8 +542,16 @@ export default class torgeternityActorSheet extends ActorSheet {
         var vulnerableModifier = 0;
         var targetToughness = 0;
         var targetArmor = 0;
-        var targetDefenseSkill = "Dodge";
-        var targetDefenseValue = 0;
+        // var targetDefenseSkill = "Dodge";
+        // var targetDefenseValue = 0;
+        var defaultDodge = false;
+        var defaultMelee = false;
+        var defaultUnarmed = false;
+        var targetDodge = 0;
+        var targetMelee= 0;
+        var targetUnarmed = 0;
+
+
 
         // Exit if no target or get target data
         if (event.shiftKey) {
@@ -570,6 +578,8 @@ export default class torgeternityActorSheet extends ActorSheet {
             } else {
                 var target = Array.from(game.user.targets)[0];
                 var targetType = target.actor.data.type;
+
+                // Set target size bonus
                 if (target.actor.data.data.details.sizeBonus === "tiny") {
                     sizeModifier = -6;
                 } else if (target.actor.data.data.details.sizeBonus === "verySmall") {
@@ -583,31 +593,36 @@ export default class torgeternityActorSheet extends ActorSheet {
                 } else {
                     sizeModifier = 0;
                 }
+
+                // Set target defense values
+                if (target.actor.data.data.skills.dodge.value > 0) {
+                    targetDodge = target.actor.data.data.skills.dodge.value;
+                } else {
+                    targetDodge = target.actor.data.data.attributes.dexterity;
+                }
+
+                if (target.actor.data.data.skills.meleeWeapons.value > 0) {
+                    targetMelee = target.actor.data.data.skills.meleeWeapons.value;
+                } else {
+                    targetMelee = target.actor.data.data.attributes.dexterity;
+                }
+
+                if (target.actor.data.data.skills.unarmedCombat.value > 0) {
+                    targetUnarmed = target.actor.data.data.skills.unarmedCombat.value;
+                } else {
+                    targetUnarmed = target.actor.data.data.attributes.dexterity;
+                }
+
                 vulnerableModifier = target.actor.data.data.vulnerableModifier;
                 targetToughness = target.actor.data.data.other.toughness;
                 targetArmor = target.actor.data.data.other.armor;
                 if (attackWith === "fireCombat" || attackWith === "energyWeapons" || attackWith === "heavyWeapons" || attackWith === "missileWeapons") {
-                    targetDefenseSkill = "Dodge";
-                    if (targetType === "threat") {
-                        targetDefenseValue = target.actor.data.data.skills.dodge.value;
-                    } else {
-                        targetDefenseValue = target.actor.data.data.dodgeDefense;
-                    }
+                    defaultDodge=true;
                 } else {
                     if (target.actor.data.data.skills.meleeWeapons.adds > 0 || (targetType === "threat" && target.actor.data.data.skills.meleeWeapons.value > 0)) {
-                        targetDefenseSkill = "Melee Weapons";
-                        if (targetType === "threat") {
-                            targetDefenseValue = target.actor.data.data.skills.meleeWeapons.value;
-                        } else {
-                            targetDefenseValue = target.actor.data.data.meleeWeaponsDefense;
-                        }
+                        defaultMelee = true;
                     } else {
-                        targetDefenseSkill = "Unarmed Combat";
-                        if (targetType === "threat") {
-                            targetDefenseValue = target.actor.data.data.skills.unarmedCombat.value;
-                        } else {
-                            targetDefenseValue = target.actor.data.data.unarmedCombatDefense;
-                        }
+                        defaultUnarmed = true;
                     }
                 }
             }
@@ -641,8 +656,6 @@ export default class torgeternityActorSheet extends ActorSheet {
             weaponAP: weaponData.ap,
             targetToughness: targetToughness,
             targetArmor: targetArmor,
-            targetDefenseSkill: targetDefenseSkill,
-            targetDefenseValue: targetDefenseValue,
             targetType: targetType,
             woundModifier: parseInt(-(this.actor.data.data.wounds.value)),
             stymiedModifier: parseInt(this.actor.data.data.stymiedModifier),
@@ -650,7 +663,13 @@ export default class torgeternityActorSheet extends ActorSheet {
             sizeModifier: sizeModifier,
             vulnerableModifier: vulnerableModifier,
             vitalAreaDamageModifier: 0,
-            chatNote: weaponData.chatNote
+            chatNote: weaponData.chatNote,
+            defaultDodge: defaultDodge,
+            defaultMelee: defaultMelee,
+            defaultUnarmed: defaultUnarmed,
+            targetDodge: targetDodge,
+            targetMelee: targetMelee,
+            targetUnarmed: targetUnarmed
 
         }
 
