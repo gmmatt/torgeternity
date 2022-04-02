@@ -18,7 +18,6 @@ export default class TorgCombat extends Combat {
             if (activeStack.data.cards.document.availableCards.length > 0) {
                 await game.cards.getName(dramaActive).data.cards.document.availableCards[0].pass(game.cards.getName(dramaDiscard));
             }
-            var cardCount = game.cards.getName("Drama Deck").availableCards.length;
             if (game.cards.getName(dramaDeck).availableCards.length > 0) {
                 game.cards.getName(dramaActive).draw(game.cards.getName(dramaDeck));
                 await this._onUpdate;
