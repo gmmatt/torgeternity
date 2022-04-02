@@ -1,6 +1,32 @@
-<legend>{{localize "torgeternity.sheetLabels.difficulty"}}</legend>
+<legend>{{localize "torgeternity.sheetLabels.targetDefense"}}</legend>
 <span class="skill-check-options">
-    {{localize "torgeternity.sheetLabels.target"}}
-    {{test.targetDefenseSkill}}:
-    {{test.targetDefenseValue}}
+    <select name="defense" class="input-box">
+        <option 
+            value="dodge"
+            {{#if test.defaultDodge}}
+                selected = "true"
+            {{/if}}
+            >Dodge
+            &nbsp;
+            ({{test.targetDodge}})
+        </option>
+        <option 
+            value="meleeCombat"
+            {{#if test.defaultMelee}}
+                selected = "true"
+            {{/if}}
+            >Melee Combat
+            &nbsp;
+            ({{test.targetMelee}})
+        </option>
+        <option 
+            value="unarmedCombat"
+            {{#if test.defaultUnarmed}}
+                selected = "true"
+            {{/if}}
+            >Unarmed Combat
+            &nbsp;
+            ({{test.targetUnarmed}})
+        </option>
+    </select>
 </span>

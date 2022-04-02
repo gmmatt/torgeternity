@@ -30,7 +30,8 @@ export const preloadTemplates = async function () {
         "systems/torgeternity/templates/actors/threat/gears.hbs",
         "systems/torgeternity/templates/actors/threat/powers.hbs",
 
-
+      // Test Dialogs
+      "systems/torgeternity/templates/testDialogs/attack-difficulty.hbs",
 
         //active effect part: 
         "systems/torgeternity/templates/parts/active-effects.hbs",
