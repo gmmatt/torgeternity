@@ -339,7 +339,8 @@
             "toggleSkillDisplay": "Click to toggle Skills display",
             "combatSkills": "Combat",
             "interactionSkills": "Interaction",
-            "otherSkills": "Other"
+            "otherSkills": "Other",
+            "targetDefense": "Target Defense"
         },
         "combat": {
             "nextKeep": "Next Round (Keep Current Card)",
