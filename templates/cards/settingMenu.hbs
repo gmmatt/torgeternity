@@ -5,7 +5,7 @@
                 {{localize "torgeternity.cardTypes.destiny"}}</h2>
 
             <div class="form-group">
-                <select name="destinyDeck">
+                <select name="destinyDeck" class="selectDeck">
                     {{#each deckList as |deck index|}}
                     <option value="{{deck.name}}" {{#ifequal deck.name ../object.destinyDeck}} selected="true"
                         {{/ifequal}}>
@@ -16,7 +16,7 @@
             </div>
             <div class="form-group">
                 <label for="destinyDiscard"> {{localize "torgeternity.cardTypes.discardPile"}}</label>
-                <select name="destinyDiscard">
+                <select name="destinyDiscard" class="selectDeck">
                     {{#each deckList as |deck index|}}
                     <option value="{{deck.name}}" {{#ifequal deck.name ../object.destinyDiscard}} selected="true"
                         {{/ifequal}}>
@@ -30,7 +30,7 @@
             <h2>{{localize "CARDS.TypeDeck"}}
                 {{localize "torgeternity.cardTypes.drama"}}</h2>
             <div class="form-group">
-                <select name="dramaDeck">
+                <select name="dramaDeck" class="selectDeck">
                     {{#each deckList as |deck index|}}
                     <option value="{{deck.name}}" {{#ifequal deck.name ../object.dramaDeck}} selected="true"
                         {{/ifequal}}>
@@ -41,7 +41,7 @@
             </div>
             <div class="form-group">
                 <label for="dramaDiscard"> {{localize "torgeternity.cardTypes.discardPile"}}</label>
-                <select name="dramaDiscard">
+                <select name="dramaDiscard" class="selectDeck">
                     {{#each deckList as |deck index|}}
                     <option value="{{deck.name}}" {{#ifequal deck.name ../object.dramaDiscard}} selected="true"
                         {{/ifequal}}>
@@ -52,7 +52,7 @@
             </div>
             <div class="form-group">
                 <label for="dramaActive"> {{localize "torgeternity.cardTypes.activeDrama"}}</label>
-                <select name="dramaActive">
+                <select name="dramaActive" class="selectDeck">
                     {{#each deckList as |deck index|}}
                     <option value="{{deck.name}}" {{#ifequal deck.name ../object.dramaActive}} selected="true"
                         {{/ifequal}}>

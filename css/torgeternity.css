@@ -179,12 +179,29 @@ div.actor ::-webkit-scrollbar {
 
 .window-app .window-content form button,
 .window-app .window-content form select {
-    color: grey;
+    color: rgb(233, 233, 233);
+    cursor: pointer;
 }
 
-.window-app .window-content form button option,
+.window-app .window-content form button[disabled] {
+    color: gray;
+    border: 1px solid red;
+    cursor: not-allowed
+}
+
 .window-app .window-content form select option {
     color: white;
+}
+
+.window-app .window-content form select option.disabled {
+    color: rgb(156, 100, 100);
+    background-color: rgb(83, 77, 77);
+}
+
+.window-app .window-content form select.doubled {
+    background-color: rgb(238, 148, 148);
+    color: black;
+    border: 1px solid red
 }
 
 .window-app .window-content form button:hover {
