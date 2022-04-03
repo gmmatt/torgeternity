@@ -32,6 +32,7 @@ export const preloadTemplates = async function () {
 
       // Test Dialogs
       "systems/torgeternity/templates/testDialogs/attack-difficulty.hbs",
+      "systems/torgeternity/templates/testDialogs/disfavored.hbs",
 
         //active effect part: 
         "systems/torgeternity/templates/parts/active-effects.hbs",

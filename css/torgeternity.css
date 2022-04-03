@@ -3065,3 +3065,8 @@ form.actor-sheet.threat .tab[data-tab].active .editor {
     right: 0;
     font-size: 10px;
 }
+
+.attack-dialog-checkbox {
+    width: 15px !important;
+    height: 15px !important;
+}
