@@ -1,12 +1,5 @@
 <form>
-    <div class="flexrow">
-        <button class="createCards" data-cardType="deck"><i class="fas fa-plus"></i>{{localize
-            "CARDS.TypeDeck"}}</button>
-        <button class="createCards" data-cardType="pile"><i class="fas fa-plus"></i>{{localize
-            "CARDS.TypePile"}}</button>
-        <button class="createCards" data-cardType="hand"><i class="fas fa-plus"></i>{{localize
-            "CARDS.TypeHand"}}</button>
-    </div>
+
     <div class="flexrow">
         <div>
             <h2>{{localize "CARDS.TypeDeck"}}
@@ -221,9 +214,15 @@
 
     </div>
     <div class="footer flexrow">
+        <button class="createCards"><i class="fas fa-plus"></i>{{localize
+            "DOCUMENT.Cards"}}</button>
+
         <button type="submit" name="submit">
             <i class="fas fa-check"></i>
             {{localize "SETTINGS.Save"}}</button>
+        <button type="cancel" name="cancel">
+            <i class="fas fa-ban"></i>
+            {{localize "Cancel"}}</button>
 
 
     </div>

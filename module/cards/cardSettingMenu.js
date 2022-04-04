@@ -34,12 +34,26 @@ export default class deckSettingMenu extends FormApplication {
         // changing default deck
         html.find(".selectDeck").change(this.onChangeDeck.bind(this, html));
         // assigning user rights for stormknights owners
-        html.find("select.stormknightHand").change(this.onChangeHand.bind(this, html))
+        html.find("select.stormknightHand").change(this.onChangeHand.bind(this, html));
+        //creating new cards decks or piles or hand
+        html.find("button.createCards").click(this.onCreateCards.bind(this))
 
     }
     _updateObject(event, formData) {
         const data = expandObject(formData);
         game.settings.set('torgeternity', 'deckSetting', data);
+    }
+    onCreateCards(event) {
+        event.preventDefault();
+
+
+        let cardData = {
+            type: type,
+            permission: { default: CONST.DOCUMENT_PERMISSION_LEVELS.OWNER }
+        }
+        Cards.createDialog();
+
+
     }
     onChangeDeck(html, event) {
         //getting selected value
