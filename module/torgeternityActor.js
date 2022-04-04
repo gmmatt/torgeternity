@@ -239,4 +239,22 @@ export default class torgeternityActor extends Actor {
             return false;
         }
     }
+    async createDefaultHand() {
+        // creating a card hand then render it
+        let cardData = {
+            name: this.actor.data.name,
+            permission: { default: CONST.DOCUMENT_PERMISSION_LEVELS.OBSERVER },
+            type: "hand"
+        }
+        characterHand = await Cards.create(cardData, { keepId: true, renderSheet: true });
+
+        // getting ids of actor and card hand
+        let actorId = this.id;
+        let handId = characterHand.id
+
+        // storing ids in game.settings
+        let settingData = game.settings.get("torgeternity", "deckSetting");
+        settingData.stormknightsHands[actorId] = handId;
+        game.settings.set("torgeternity", "deckSetting", settingData);
+    }
 }

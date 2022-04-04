@@ -96,7 +96,7 @@ export function registerTorgSettings() {
         icon: "fas fa-bars",
         title: "deck settings", // A Font Awesome icon used in the submenu button
         type: deckSettingMenu, // A FormApplication subclass
-        restricted: false // not restricted to GM => user should manage their stormknight hand. 
+        restricted: true // only GM can manage default decks
     });
 
 

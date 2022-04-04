@@ -47,10 +47,6 @@ export default class deckSettingMenu extends FormApplication {
         event.preventDefault();
 
 
-        let cardData = {
-            type: type,
-            permission: { default: CONST.DOCUMENT_PERMISSION_LEVELS.OWNER }
-        }
         Cards.createDialog();
 
 
