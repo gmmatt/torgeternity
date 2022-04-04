@@ -50,8 +50,9 @@ export function registerHelpers() {
     Handlebars.registerHelper('poolList', function (actorName) {
         var testVariable = actorName;
         var poolList = "";
-        if (game.cards.getName(actorName)) {
-            const stack = game.cards.getName(actorName);
+        let actor = game.actors.getName(actorName);
+        if (actor.getDefaultHand()) {
+            const stack = actor.getDefaultHand();
             const hand = stack.data.cards
             var i = 0;
             var firstItemExists = false;

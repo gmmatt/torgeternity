@@ -278,23 +278,9 @@ export default class torgeternityActorSheet extends ActorSheet {
 
         // Open Cards Hand
 
-        html.find('.open-hand').click(ev => {
-            let characterHand = game.cards.getName(this.actor.data.name);
-            if (characterHand) {
-                characterHand.sheet.render(true);
-            } else {
-                let characterHand = new Cards({
-                    name: this.actor.data.name,
-                    type: "hand"
-                });
-                let cardData = {
-                    name: this.actor.data.name,
-                    permission: { default: CONST.DOCUMENT_PERMISSION_LEVELS.OBSERVER },
-                    type: "hand"
-                }
-                characterHand = Cards.create(cardData, { keepId: true, renderSheet: true });
-            }
-        });
+        html.find('.open-hand').click(this.onOpenHand.bind(this));
+
+
 
         // Update Inventory Item
         html.find('.item-edit').click(ev => {
@@ -344,7 +330,31 @@ export default class torgeternityActorSheet extends ActorSheet {
             }
         });
     }
+    async onOpenHand(event) {
 
+
+        let characterHand = this.object.getDefaultHand();
+        if (characterHand) {
+            characterHand.sheet.render(true);
+        } else {
+
+            let cardData = {
+                name: this.actor.data.name,
+                permission: { default: CONST.DOCUMENT_PERMISSION_LEVELS.OBSERVER },
+                type: "hand"
+            }
+            characterHand = await Cards.create(cardData, { keepId: true, renderSheet: true });
+            let actorId = this.object.id;
+            let handId = characterHand.id
+
+            let settingData = game.settings.get("torgeternity", "deckSetting");
+            settingData.stormknightsHands[actorId] = handId;
+
+            game.settings.set("torgeternity", "deckSetting", settingData);
+            console.log(settingData)
+        }
+
+    }
     async _onSkillRoll(event) {
         const skillName = event.currentTarget.dataset.name;
         const attributeName = event.currentTarget.dataset.baseattribute;

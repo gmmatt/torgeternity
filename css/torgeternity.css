@@ -1247,6 +1247,7 @@ nav#controls,
 
 #combat ol li.combatant .token-image {
     max-width: 54px;
+    max-height: 54px;
 }
 
 #combat ol li.combatant.dispo1 {
