@@ -96,7 +96,7 @@ export function registerTorgSettings() {
         icon: "fas fa-bars",
         title: "deck settings", // A Font Awesome icon used in the submenu button
         type: deckSettingMenu, // A FormApplication subclass
-        restricted: true // Restrict this submenu to gamemaster only?
+        restricted: false // not restricted to GM => user should manage their stormknight hand. 
     });
 
 
@@ -118,7 +118,8 @@ export function registerTorgSettings() {
             nileEmpire: "Nile Empire Cosm Deck",
             orrorsh: "Orrorsh Cosm Deck",
             panPacifica: "Pan Pacifica Cosm Deck",
-            tharkold: "Tharkold Cosm Deck"
+            tharkold: "Tharkold Cosm Deck",
+            stormknights: {}
         }
     });
 
