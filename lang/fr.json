@@ -649,6 +649,10 @@
                 "label": "configuration des paquets de cartes par defaut",
                 "hint": "configurez ici de quels paquets seront piochées les différents type de cartes, ainsi que les piles où elles seront défaussées"
 
+            },
+            "defaultUserHand": {
+                "name": "nom de la main de cartes par default de l'utilisateur",
+                "hint": "tapez ici le nom de votre jeu de cartes par défaut, ce jeu sera ouvert par défaut lorsque l'on clique sur l'outil 'main de carte'."
             }
         },
         "notifications": {

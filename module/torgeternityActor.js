@@ -1,16 +1,16 @@
-export default class torgeternityActor extends Actor {    
+export default class torgeternityActor extends Actor {
 
 
-    
+
     prepareBaseData() {
-           
-        if (this.data._source.type === "stormknight") { 
-          mergeObject(this.data.token, {
-           
-            actorLink: true,
-            disposition: 1
-          }, {overwrite: true});
-          
+
+        if (this.data._source.type === "stormknight") {
+            mergeObject(this.data.token, {
+
+                actorLink: true,
+                disposition: 1
+            }, { overwrite: true });
+
 
             var skillset = this.data.data.skills;
 
@@ -26,7 +26,7 @@ export default class torgeternityActor extends Actor {
                     skill.value = parseInt(skill.adds) + parseInt(this.data.data.attributes[skill.baseAttribute]);
                 }
             }
-            
+
             // Set Defensive values for Storm Knight sheet
             if (skillset.dodge.value) {
                 this.data.data.dodgeDefense = this.data.data.skills.dodge.value;
@@ -39,9 +39,9 @@ export default class torgeternityActor extends Actor {
             } else {
                 this.data.data.meleeWeaponsDefense = this.data.data.attributes.dexterity
             };
-            
+
             if (skillset.unarmedCombat.value) {
-            this.data.data.unarmedCombatDefense = this.data.data.skills.unarmedCombat.value;
+                this.data.data.unarmedCombatDefense = this.data.data.skills.unarmedCombat.value;
             } else {
                 this.data.data.unarmedCombatDefense = this.data.data.attributes.dexterity
             };
@@ -94,7 +94,7 @@ export default class torgeternityActor extends Actor {
             let socialAxiom = this.data.data.axioms.social;
             let spiritAxiom = this.data.data.axioms.spirit;
             let techAxiom = this.data.data.axioms.tech;
-            switch(this.data.data.other.cosm) {
+            switch (this.data.data.other.cosm) {
                 case "coreEarth":
                     this.data.data.axioms.magic = 9;
                     this.data.data.axioms.social = 23;
@@ -145,7 +145,7 @@ export default class torgeternityActor extends Actor {
                     break;
                 case "other":
                     this.data.data.axioms.magic = magicAxiom;
-                    this.data.data.axioms.social  = socialAxiom;
+                    this.data.data.axioms.social = socialAxiom;
                     this.data.data.axioms.spirit = spiritAxiom;
                     this.data.data.axioms.tech = techAxiom;
                     break;
@@ -156,9 +156,9 @@ export default class torgeternityActor extends Actor {
                     this.data.data.axioms.tech = "";
                     break;
             }
-            
+
             //Set clearance level
-            
+
             if (this.data.data.xp.earned < 50) {
                 this.data.data.details.clearance = "alpha";
             } else if (this.data.data.xp.earned < 200) {
@@ -173,7 +173,7 @@ export default class torgeternityActor extends Actor {
 
             //Set armor and shield toggle states
             var i;
-            for (i=0; i < this.data.items.length; i++) {
+            for (i = 0; i < this.data.items.length; i++) {
                 var item = this.data.items[i];
                 if (item.type === "shield") {
                     if (item.data.equipped === true) {
@@ -203,10 +203,10 @@ export default class torgeternityActor extends Actor {
 
     applyActiveEffects() {
         super.applyActiveEffects();
-                
+
         var i;
         const effects = this.data.effects
-        for (i=0; i < effects.contents.length; i++) {
+        for (i = 0; i < effects.contents.length; i++) {
             if (effects.contents[i].data.flags.hasOwnProperty("core")) {
                 if (effects.contents[i].data.flags.core.statusId === "stymied") {
                     this.data.data.stymiedModifier = -2;
@@ -229,5 +229,32 @@ export default class torgeternityActor extends Actor {
         }
     }
 
+    //adding a method to get defauld stormknight cardhand
+    getDefaultHand() {
+        if (game.settings.get("torgeternity", "deckSetting").stormknightsHands.hasOwnProperty(this.id)) {
+            return game.cards.get(game.settings.get("torgeternity", "deckSetting").stormknightsHands[this.id]);
 
+        } else {
+            console.error(`no default hand for actor : ${this.name}`);
+            return false;
+        }
+    }
+    async createDefaultHand() {
+        // creating a card hand then render it
+        let cardData = {
+            name: this.actor.data.name,
+            permission: { default: CONST.DOCUMENT_PERMISSION_LEVELS.OBSERVER },
+            type: "hand"
+        }
+        characterHand = await Cards.create(cardData, { keepId: true, renderSheet: true });
+
+        // getting ids of actor and card hand
+        let actorId = this.id;
+        let handId = characterHand.id
+
+        // storing ids in game.settings
+        let settingData = game.settings.get("torgeternity", "deckSetting");
+        settingData.stormknightsHands[actorId] = handId;
+        game.settings.set("torgeternity", "deckSetting", settingData);
+    }
 }

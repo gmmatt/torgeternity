@@ -11,6 +11,14 @@ while managing game systems.
 v. 2.3.6
 - Fixed issue where player hand cosm button was drawing Destiny
   cards instead
+- Multiple enhancements to drag n drop macros, thanks to Spatula!
+- Better default permissions on various discard piles (also thanks to
+  Spatula!)
+- You can now select the decks that are used for various game functions,
+  rather than always being forced to use the defaults (thanks Rwan!)
+- Lots of other changes made to journals, formatting, localization, etc.
+  to make things smoother for multi-language play and module releases
+  (Algor has been working tirelessly on all of this, thanks!)
 
 v. 2.3.5
 - Added "life-like" hand option in player hand window (amazing work,

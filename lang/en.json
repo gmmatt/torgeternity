@@ -653,9 +653,13 @@
             },
 
             "deckSetting": {
-                "name": "default card deck configuration",
-                "label": "Default card pack configuration",
-                "hint": "configurez ici de quels paquets seront piochées les différents type de cartes, ainsi que les piles où elles seront défaussées"
+                "name": "Default card deck configuration",
+                "label": "Default card deck configuration",
+                "hint": "Configure the names that are used for your card decks and discard piles."
+            },
+            "defaultUserHand": {
+                "name": "Default user cards hand name",
+                "hint": "Hand name for this user."
             }
         },
         "notifications": {

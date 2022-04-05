@@ -1,27 +1,30 @@
 <form>
+
     <div class="flexrow">
         <div>
             <h2>{{localize "CARDS.TypeDeck"}}
                 {{localize "torgeternity.cardTypes.destiny"}}</h2>
 
             <div class="form-group">
-                <select name="destinyDeck">
+                <select name="destinyDeck" class="selectDeck">
                     {{#each deckList as |deck index|}}
-                    <option value="{{deck.name}}" {{#ifequal deck.name ../object.destinyDeck}} selected="true"
-                        {{/ifequal}}>
+                    {{#ifequal deck.type "deck"}}
+                    <option value="{{deck.name}}" {{#ifequal deck.name ../object.destinyDeck}} selected {{/ifequal}}>
                         {{deck.name}}
                     </option>
+                    {{/ifequal}}
                     {{/each}}
                 </select>
             </div>
             <div class="form-group">
                 <label for="destinyDiscard"> {{localize "torgeternity.cardTypes.discardPile"}}</label>
-                <select name="destinyDiscard">
+                <select name="destinyDiscard" class="selectDeck">
                     {{#each deckList as |deck index|}}
-                    <option value="{{deck.name}}" {{#ifequal deck.name ../object.destinyDiscard}} selected="true"
-                        {{/ifequal}}>
+                    {{#ifequal deck.type "pile"}}
+                    <option value="{{deck.name}}" {{#ifequal deck.name ../object.destinyDiscard}} selected {{/ifequal}}>
                         {{deck.name}}
                     </option>
+                    {{/ifequal}}
                     {{/each}}
                 </select>
             </div>
@@ -30,34 +33,37 @@
             <h2>{{localize "CARDS.TypeDeck"}}
                 {{localize "torgeternity.cardTypes.drama"}}</h2>
             <div class="form-group">
-                <select name="dramaDeck">
+                <select name="dramaDeck" class="selectDeck">
                     {{#each deckList as |deck index|}}
-                    <option value="{{deck.name}}" {{#ifequal deck.name ../object.dramaDeck}} selected="true"
-                        {{/ifequal}}>
+                    {{#ifequal deck.type "deck"}}
+                    <option value="{{deck.name}}" {{#ifequal deck.name ../object.dramaDeck}} selected {{/ifequal}}>
                         {{deck.name}}
                     </option>
+                    {{/ifequal}}
                     {{/each}}
                 </select>
             </div>
             <div class="form-group">
                 <label for="dramaDiscard"> {{localize "torgeternity.cardTypes.discardPile"}}</label>
-                <select name="dramaDiscard">
+                <select name="dramaDiscard" class="selectDeck">
                     {{#each deckList as |deck index|}}
-                    <option value="{{deck.name}}" {{#ifequal deck.name ../object.dramaDiscard}} selected="true"
-                        {{/ifequal}}>
+                    {{#ifequal deck.type "pile"}}
+                    <option value="{{deck.name}}" {{#ifequal deck.name ../object.dramaDiscard}} selected {{/ifequal}}>
                         {{deck.name}}
                     </option>
+                    {{/ifequal}}
                     {{/each}}
                 </select>
             </div>
             <div class="form-group">
                 <label for="dramaActive"> {{localize "torgeternity.cardTypes.activeDrama"}}</label>
-                <select name="dramaActive">
+                <select name="dramaActive" class="selectDeck">
                     {{#each deckList as |deck index|}}
-                    <option value="{{deck.name}}" {{#ifequal deck.name ../object.dramaActive}} selected="true"
-                        {{/ifequal}}>
+                    {{#ifequal deck.type "pile"}}
+                    <option value="{{deck.name}}" {{#ifequal deck.name ../object.dramaActive}} selected {{/ifequal}}>
                         {{deck.name}}
                     </option>
+                    {{/ifequal}}
                     {{/each}}
                 </select>
             </div>
@@ -75,9 +81,10 @@
                 <select name="cosmDiscard" data-type="String" class="selectDeck formFields">
                     {{#select deckList}}
                     {{#each deckList as |deck index|}}
-                    <option value="{{deck.name}}" {{#ifequal deck.name ../object.cosmDiscard}} selected="true"
-                        {{/ifequal}}>
+                    {{#ifequal deck.type "pile"}}
+                    <option value="{{deck.name}}" {{#ifequal deck.name ../object.cosmDiscard}} selected {{/ifequal}}>
                         {{deck.name}}</option>
+                    {{/ifequal}}
                     {{/each}}
                     {{/select}}
                 </select>
@@ -87,9 +94,10 @@
                 <select name="coreEarth" data-type="String" class="selectDeck formFields">
                     {{#select deckList}}
                     {{#each deckList as |deck index|}}
-                    <option value="{{deck.name}}" {{#ifequal deck.name ../object.coreEarth}} selected="true"
-                        {{/ifequal}}>
+                    {{#ifequal deck.type "deck"}}
+                    <option value="{{deck.name}}" {{#ifequal deck.name ../object.coreEarth}} selected {{/ifequal}}>
                         {{deck.name}}</option>
+                    {{/ifequal}}
                     {{/each}}
                     {{/select}}
                 </select>
@@ -98,9 +106,11 @@
                 <label>{{localize "torgeternity.cosmDecks.aysle"}}</label>
                 <select name="aysle" data-type="String" class="selectDeck formFields">
                     {{#each deckList as |deck index|}}
-                    <option value="{{deck.name}}" {{#ifequal deck.name ../object.aysle}} selected="true" {{/ifequal}}>
+                    {{#ifequal deck.type "deck"}}
+                    <option value="{{deck.name}}" {{#ifequal deck.name ../object.aysle}} selected {{/ifequal}}>
                         {{deck.name}}
                     </option>
+                    {{/ifequal}}
                     {{/each}}
                 </select>
             </div>
@@ -108,10 +118,11 @@
                 <label>{{localize "torgeternity.cosmDecks.cyberpapacy"}}</label>
                 <select name="cyberpapacy" data-type="String" class="selectDeck formFields">
                     {{#each deckList as |deck index|}}
-                    <option value="{{deck.name}}" {{#ifequal deck.name ../object.cyberpapacy}} selected="true"
-                        {{/ifequal}}>
+                    {{#ifequal deck.type "deck"}}
+                    <option value="{{deck.name}}" {{#ifequal deck.name ../object.cyberpapacy}} selected {{/ifequal}}>
                         {{deck.name}}
                     </option>
+                    {{/ifequal}}
                     {{/each}}
                 </select>
             </div>
@@ -119,10 +130,11 @@
                 <label>{{localize "torgeternity.cosmDecks.livingLand"}}</label>
                 <select name="livingLand" data-type="String" class="selectDeck formFields">
                     {{#each deckList as |deck index|}}
-                    <option value="{{deck.name}}" {{#ifequal deck.name ../object.livingLand}} selected="true"
-                        {{/ifequal}}>
+                    {{#ifequal deck.type "deck"}}
+                    <option value="{{deck.name}}" {{#ifequal deck.name ../object.livingLand}} selected {{/ifequal}}>
                         {{deck.name}}
                     </option>
+                    {{/ifequal}}
                     {{/each}}
                 </select>
             </div>
@@ -130,10 +142,11 @@
                 <label>{{localize "torgeternity.cosmDecks.nileEmpire"}}</label>
                 <select name="nileEmpire" data-type="String" class="selectDeck formFields">
                     {{#each deckList as |deck index|}}
-                    <option value="{{deck.name}}" {{#ifequal deck.name ../object.nileEmpire}} selected="true"
-                        {{/ifequal}}>
+                    {{#ifequal deck.type "deck"}}
+                    <option value="{{deck.name}}" {{#ifequal deck.name ../object.nileEmpire}} selected {{/ifequal}}>
                         {{deck.name}}
                     </option>
+                    {{/ifequal}}
                     {{/each}}
                 </select>
             </div>
@@ -141,9 +154,11 @@
                 <label>{{localize "torgeternity.cosmDecks.orrorsh"}}</label>
                 <select name="orrorsh" data-type="String" class="selectDeck formFields">
                     {{#each deckList as |deck index|}}
-                    <option value="{{deck.name}}" {{#ifequal deck.name ../object.orrorsh}} selected="true" {{/ifequal}}>
+                    {{#ifequal deck.type "deck"}}
+                    <option value="{{deck.name}}" {{#ifequal deck.name ../object.orrorsh}} selected {{/ifequal}}>
                         {{deck.name}}
                     </option>
+                    {{/ifequal}}
                     {{/each}}
                 </select>
             </div>
@@ -151,10 +166,11 @@
                 <label>{{localize "torgeternity.cosmDecks.panPacifica"}}</label>
                 <select name="panPacifica" data-type="String" class="selectDeck formFields">
                     {{#each deckList as |deck index|}}
-                    <option value="{{deck.name}}" {{#ifequal deck.name ../object.panPacifica}} selected="true"
-                        {{/ifequal}}>
+                    {{#ifequal deck.type "deck"}}
+                    <option value="{{deck.name}}" {{#ifequal deck.name ../object.panPacifica}} selected {{/ifequal}}>
                         {{deck.name}}
                     </option>
+                    {{/ifequal}}
                     {{/each}}
                 </select>
             </div>
@@ -162,22 +178,51 @@
                 <label>{{localize "torgeternity.cosmDecks.tharkold"}}</label>
                 <select name="tharkold" data-type="String" class="selectDeck formFields">
                     {{#each deckList as |deck index|}}
-                    <option value="{{deck.name}}" {{#ifequal deck.name ../object.tharkold}} selected="true"
-                        {{/ifequal}}>
+                    {{#ifequal deck.type "deck"}}
+                    <option value="{{deck.name}}" {{#ifequal deck.name ../object.tharkold}} selected {{/ifequal}}>
                         {{deck.name}}
                     </option>
+                    {{/ifequal}}
                     {{/each}}
                 </select>
             </div>
         </div>
 
+        <div>
+            <h2>{{localize "torgeternity.sheetLabels.stormknight"}}</h2>
+            <div class="stormknight-list">
+                {{#each stormknights as |stormknight index|}}
+                {{#if stormknight.isOwner}}
+                <div class="formFields flexrow">
+                    <label>{{stormknight.name}}</label>
+                    <select name="stormknightsHands.{{stormknight.id}}" data-type="String"
+                        class="selectDeck formFields stormknightHand">
+                        {{#each ../deckList as |deck index|}}
+                        {{#ifequal deck.type "hand"}}
+                        <option value="{{deck.id}}" {{#ifequal (lookup @root/stormknightsHands stormknight.id)
+                            deck.id}}selected {{/ifequal}}>
+                            {{deck.name}}
+                        </option>
+                        {{/ifequal}}
+                        {{/each}}
+                    </select>
+                </div>
+                {{/if}}
+                {{/each}}
+            </div>
+        </div>
+
     </div>
-
-
     <div class="footer flexrow">
+        <button class="createCards"><i class="fas fa-plus"></i>{{localize
+            "DOCUMENT.Cards"}}</button>
+
         <button type="submit" name="submit">
             <i class="fas fa-check"></i>
             {{localize "SETTINGS.Save"}}</button>
+        <button type="cancel" name="cancel">
+            <i class="fas fa-ban"></i>
+            {{localize "Cancel"}}</button>
 
 
     </div>
