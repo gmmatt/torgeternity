@@ -8,6 +8,7 @@ export default class deckSettingMenu extends FormApplication {
         const options = super.defaultOptions;
         options.template = "/systems/torgeternity/templates/cards/settingMenu.hbs";
         options.top = 300;
+        options.title = game.i18n.localize("torgeternity.settingMenu.deckSetting.name")
         options.left = 500;
         options.submitOnChange = true;
         options.editable = true;
@@ -23,7 +24,9 @@ export default class deckSettingMenu extends FormApplication {
             stormknightsHands: {}
         };
         for (let sk of data.stormknights) {
-            data.stormknightsHands[sk.id] = game.settings.get("torgeternity", "deckSetting").stormknightsHands[sk.id];
+            if (game.settings.get("torgeternity", "deckSetting").stormknightsHands) {
+                data.stormknightsHands[sk.id] = game.settings.get("torgeternity", "deckSetting").stormknightsHands[sk.id];
+            }
         }
         return mergeObject(super.getData(), data);
     }

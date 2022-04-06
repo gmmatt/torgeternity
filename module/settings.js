@@ -94,7 +94,7 @@ export function registerTorgSettings() {
         label: "torgeternity.settingMenu.deckSetting.label", // The text label used in the button
         hint: "torgeternity.settingMenu.deckSetting.hint",
         icon: "fas fa-bars",
-        title: "deck settings", // A Font Awesome icon used in the submenu button
+        title: "torgeternity.settingMenu.deckSetting.name", // A Font Awesome icon used in the submenu button
         type: deckSettingMenu, // A FormApplication subclass
         restricted: true // only GM can manage default decks
     });
