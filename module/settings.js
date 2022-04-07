@@ -77,26 +77,15 @@ export function registerTorgSettings() {
 
     });
 
-    /* Temporarily removing this, but we may put back in once we have a good solution for a per-character deck
-    game.settings.register("torgeternity", "defaultUserHand", {
-        name: "torgeternity.settingMenu.defaultUserHand.name", // Register a module setting with checkbox
-        hint: "torgeternity.settingMenu.defaultUserHand.hint", // Description of the settings
-        scope: "client",
-        config: true,
-        type: String,
-        default: false,
-
-    });
-    */
 
     game.settings.registerMenu("torgeternity", "cardDecks", {
         name: "torgeternity.settingMenu.deckSetting.name",
         label: "torgeternity.settingMenu.deckSetting.label", // The text label used in the button
         hint: "torgeternity.settingMenu.deckSetting.hint",
         icon: "fas fa-bars",
-        title: "deck settings", // A Font Awesome icon used in the submenu button
+        title: "torgeternity.settingMenu.deckSetting.name", // A Font Awesome icon used in the submenu button
         type: deckSettingMenu, // A FormApplication subclass
-        restricted: true // Restrict this submenu to gamemaster only?
+        restricted: true // only GM can manage default decks
     });
 
 
@@ -118,71 +107,9 @@ export function registerTorgSettings() {
             nileEmpire: "Nile Empire Cosm Deck",
             orrorsh: "Orrorsh Cosm Deck",
             panPacifica: "Pan Pacifica Cosm Deck",
-            tharkold: "Tharkold Cosm Deck"
+            tharkold: "Tharkold Cosm Deck",
+            stormknights: {}
         }
     });
 
-    //Cards
-    /* These settings not used for now. May come back and apply them later
-    game.settings.register("torgeternity", "activeDestinyDeck", {
-        name: "Active Destiny Deck",
-        hint: "Name of the deck that players should use to draw Destiny cards.",
-        scope: "world",
-        config: true,
-        type: String,
-        default: "Destiny Deck"
-
-    })
-
-    game.settings.register("torgeternity", "activeCosmDeck", {
-        name: "Active Cosm Deck",
-        hint: "Name of the deck that players should use to draw Cosm cards.",
-        scope: "world",
-        config: true,
-        type: String,
-        choices: {
-            coreEarth: "Core Earth Cosm Deck",
-            aysle: "Aysle Cosm Deck",
-            cyberPapacy: "Cyberpapacy Cosm Deck",
-            livingLand: "Living Land Cosm Deck",
-            nileEmpire: "Nile Empire Cosm Deck",
-            orrorsh: "Orrorsh Cosm Deck",
-            panPacifica: "Pan Pacifica Cosm Deck",
-            tharkold: "Tharkold Cosm Deck"
-        }
-    })
-    */
-    /*
-        game.settings.register("torgeternity", "activeDramaDeck", {
-            name: "Active Drama Deck",
-            hint: "Name of the deck that is used to draw Drama cards.",
-            scope: "world",
-            config: true,
-            type: String,
-            choices: {
-                coreDrama: "Drama Deck",
-                coreEarth: "Core Earth Drama Deck",
-                aysle: "Aysle Drama Deck",
-                cyberPapacy: "Cyberpapacy Drama Deck",
-                livingLand: "Living Land Drama Deck",
-                nileEmpire: "Nile Empire Drama Deck",
-                orrorsh: "Orrorsh Drama Deck",
-                panPacifica: "Pan Pacifica Drama Deck",
-                tharkold: "Tharkold Drama Deck"
-            }
-        
-        })
-    */
-
-    /* function setCosmCard(cosm, path) {
-        let cards = document.getElementsByClassName("cosm-card");
-        for (let card of cards) {
-            if (card.classList.contains(cosm)) {
-                card.style.background = `url(${path})`
-
-            }
-        }
-
-    } 
-    */
 }
