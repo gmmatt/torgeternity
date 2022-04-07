@@ -4,9 +4,9 @@ torgeternity.supportedLanguages = [
     "en", "fr", "de"
 ];
 torgeternity.availableScreens = {
-    system: "none",
-
+    'none': "none",
 }
+
 torgeternity.welcomeMessage = "";
 torgeternity.skillDialog = "";
 
