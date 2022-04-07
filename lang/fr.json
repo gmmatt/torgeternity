@@ -638,7 +638,7 @@
             },
             "gmScreen": {
                 "name": "Sélectionner l'image de l'écran",
-                "hint": "Vous pouvez choisir quel écran du MJ afficher . Si vous sélectionnez un module non installé, l'écran du MJ ne fonctionnera pas. NOTE: Vous devez rafraichir le navigateur ou l'application (F5) après avoir validé votre choix"
+                "hint": "Vous pouvez choisir quel écran du MJ afficher ."
             },
             "hideForeignCompendium": {
                 "name": "Masquer les compendiiums en langues étrangères",

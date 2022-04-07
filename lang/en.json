@@ -645,7 +645,7 @@
             },
             "gmScreen": {
                 "name": "Select the GM Screen You Want to Use",
-                "hint": "You can select a GM screen from any active module. If you select a module that is not installed, the GM screen function may not work properly. NOTE: you need to refresh your browser (F5) after switching screens."
+                "hint": "You can select a GM screen from any active module. "
             },
             "hideForeignCompendium": {
                 "name": "Hide foreign Compendiums",
