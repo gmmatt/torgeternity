@@ -300,6 +300,9 @@ Div.editor-content Div.directive2{
 /*...................................................................*/
 /*Multi-purpose classes*/
 
-Div.editor-content .noindent p + p {
+Div.editor-content .noindent {
     text-indent:0px;
 }
+    div.editor-content .noindent p + p {
+        text-indent: 0px;
+    }
