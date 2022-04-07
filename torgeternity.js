@@ -29,7 +29,7 @@ import { attackDialog } from "/systems/torgeternity/module/attack-dialog.js"; //
 import { skillDialog } from "/systems/torgeternity/module/skill-dialog.js";
 import { interactionDialog } from "/systems/torgeternity/module/interaction-dialog.js";
 import { hideCompendium } from './module/hideCompendium.js';
-import deckSettingMenu from './module/cards/cardSettingMenu.js';
+import initTorgControlButtons from './module/controlButtons.js';
 
 Hooks.once("init", async function() {
     console.log("torgeternity | Initializing Torg Eternity System");
@@ -37,8 +37,6 @@ Hooks.once("init", async function() {
     //----helpers
     registerHelpers();
 
-    //-----system settings
-    registerTorgSettings()
 
     //-------global
     game.torgeternity = {
@@ -71,6 +69,9 @@ Hooks.once("init", async function() {
     CONFIG.Cards.documentClass = torgeternityCards;
     CONFIG.cardTypes = torgeternity.cardTypes;
 
+
+    // all settings after config
+    registerTorgSettings();
     //---register items and actors
     Items.unregisterSheet("core", ItemSheet);
     Items.registerSheet("torgeternity", torgeternityItemSheet, {
@@ -92,59 +93,7 @@ Hooks.once("init", async function() {
     //----------preloading handlebars templates
     preloadTemplates();
 
-    //adding layer control for cards
-    class torgLayer extends CanvasLayer {
-        static get layerOptions() {
-            return foundry.utils.mergeObject(super.layerOptions, {
-                name: "Torg",
-                canDragCreate: false,
-                controllableObjects: true,
-                rotatableObjects: true,
-                zIndex: 666,
-            });
-        }
-    }
-    CONFIG.Canvas.layers.torgeternity = { layerClass: torgLayer, group: "primary" }
-
-    Hooks.on("getSceneControlButtons", btns => {
-
-        let menu = [{
-            name: game.i18n.localize("CARDS.TypeHand"),
-            title: game.i18n.localize("CARDS.TypeHand"),
-            icon: "fa fa-id-badge",
-            button: true,
-            onClick: () => {
-                if (game.user.character) {
-                    game.user.character.getDefaultHand().sheet.render(true)
-                } else {
-                    ui.notifications.error(game.i18n.localize("torgeternity.notifications.noHands"))
-                }
-            }
-        }];
-
-        if (game.user.isGM) {
-            menu.push({
-                name: game.i18n.localize("torgeternity.settingMenu.deckSetting.name"),
-                title: game.i18n.localize("torgeternity.settingMenu.deckSetting.name"),
-                icon: "fa fa-cog",
-                button: true,
-                onClick: () => {
-                    new deckSettingMenu().render(true)
-                }
-            })
-        }
-
-        btns.push({
-            name: game.i18n.localize("CARDS.TypeHand"),
-            title: game.i18n.localize("CARDS.TypeHand"),
-            icon: "fas fa-id-badge",
-            layer: "torgeternity",
-            tools: menu
-        })
-
-
-    });
-
+    initTorgControlButtons();
     //-----modify token bars
 
 
@@ -170,6 +119,7 @@ Hooks.once("init", async function() {
 });
 
 Hooks.once("setup", async function() {
+
         modifyTokenBars();
         //changing stutus marker 
         //preparing status marker

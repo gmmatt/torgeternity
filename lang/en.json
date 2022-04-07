@@ -676,6 +676,10 @@
             "dramaDeckEmpty": "The Drama Deck is empty. Reset the Drama Deck to continue.",
             "onlyReservedCard": "Please play a reserved card while playing a dramatic scene",
             "noActiveEffectInOwnedItem": "Managing Active Effects within an Owned Item is not currently supported and will be added in a subsequent update."
+        },
+        "gmScreen": {
+            "title": "GM screen",
+            "toggle": "Toggle the GM screen"
         }
     },
     "CARD": {

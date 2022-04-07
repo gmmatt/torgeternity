@@ -669,6 +669,10 @@
             "dramaDeckEmpty": "le paquet de cartes d'actions est vide. Ré-initialisez-le.",
             "onlyReservedCard": "vous ne pouvez jouer que les cartes réservées durant une scène dramatique",
             "noActiveEffectInOwnedItem": "Configurer les effets actifs à l'intérieur des Items possédés n'est pas encore possible."
+        },
+        "gmScreen": {
+            "title": "écran du meneur",
+            "toggle": "afficher/masquer l'écran"
         }
     },
     "CARD": {

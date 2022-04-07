@@ -1,7 +1,6 @@
 import deckSettingMenu from './cards/cardSettingMenu.js';
+
 export function registerTorgSettings() {
-
-
     //--------welcome message 
 
     game.settings.register("torgeternity", "welcomeMessage", {
@@ -23,20 +22,22 @@ export function registerTorgSettings() {
         type: Boolean,
         default: true
     });
+    /*
+        //------pause image
 
-    //------pause image
+        game.settings.register("torgeternity", "pauseMedia", {
+            // game.setting.register("NameOfTheModule", "VariableName",
+            name: "torgeternity.settingMenu.pauseMedia.name", // Register a module setting with checkbox
+            hint: "torgeternity.settingMenu.pauseMedia.hint", // Description of the settings
+            type: window.Azzu.SettingsTypes.FilePickerImage,
+            default: {},
+            scope: 'world',
+            config: true,
+            restricted: true,
 
-    game.settings.register("torgeternity", "pauseMedia", {
-        // game.setting.register("NameOfTheModule", "VariableName",
-        name: "torgeternity.settingMenu.pauseMedia.name", // Register a module setting with checkbox
-        hint: "torgeternity.settingMenu.pauseMedia.hint", // Description of the settings
-        type: window.Azzu.SettingsTypes.FilePickerImage,
-        default: {},
-        scope: 'world',
-        config: true,
-        restricted: true,
+        });
 
-    });
+        */
     //animated chat messages
 
     game.settings.register("torgeternity", "animatedChat", {
@@ -58,10 +59,7 @@ export function registerTorgSettings() {
         scope: "world",
         config: true,
         type: String,
-        choices: {
-            torgEternity: "Core Rulebook GM Screen",
-            livingLand: "Living Land GM Screen"
-        },
+        choices: CONFIG.torgeternity.availableScreens,
         default: "torgEternity"
     });
 
