@@ -16,6 +16,7 @@ Div.editor-content p{
 Div.editor-content :is(ul, ol){
     text-align: justify;
     padding-right: 10px;
+    list-style-position: inside;
 }
 /*...................................................................*/
 /*hr will become Torg-Style*/
@@ -136,12 +137,14 @@ a.entity-link, a.content-link, a.inline-roll{
 div.subtitleright{
     position: relative;
     width: 30%;
+    /*height: 30%;*/
     float: right;
 }
 
 div.subtitleleft{
     position: relative;
     width: 30%;
+    /*height: 30%;*/
     float: left;
 }
 
