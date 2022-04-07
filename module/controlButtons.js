@@ -54,9 +54,9 @@
            }
 
            btns.push({
-               name: game.i18n.localize("CARDS.TypeHand"),
-               title: game.i18n.localize("CARDS.TypeHand"),
-               icon: "fas fa-id-badge",
+               name: "TORG",
+               title: "TORG",
+               icon: "torg",
                layer: "torgeternity",
                tools: menu
            })
