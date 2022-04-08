@@ -3060,13 +3060,13 @@ form.actor-sheet.threat .tab[data-tab].active .editor {
     font-size: 18px;
 }
 
-.enhancements-controls {
+.attack-dialog-checkbox {
+    width: 15px !important;
+    height: 15px !important;
+    
+}.enhancements-controls {
     position: absolute;
     right: 0;
     font-size: 10px;
 }
 
-.attack-dialog-checkbox {
-    width: 15px !important;
-    height: 15px !important;
-}
