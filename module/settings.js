@@ -60,7 +60,7 @@ export function registerTorgSettings() {
         config: true,
         type: String,
         choices: CONFIG.torgeternity.availableScreens,
-        default: "torgEternity"
+        default: "none"
     });
 
     //Hide Compendiums
@@ -75,7 +75,7 @@ export function registerTorgSettings() {
 
     });
 
-
+    // the deck setting menu
     game.settings.registerMenu("torgeternity", "cardDecks", {
         name: "torgeternity.settingMenu.deckSetting.name",
         label: "torgeternity.settingMenu.deckSetting.label", // The text label used in the button
@@ -86,7 +86,7 @@ export function registerTorgSettings() {
         restricted: true // only GM can manage default decks
     });
 
-
+    // the deck setting 
     game.settings.register('torgeternity', 'deckSetting', {
         scope: 'world',
         config: false,
@@ -109,5 +109,18 @@ export function registerTorgSettings() {
             stormknights: {}
         }
     });
+
+    // disabling the clearance and XP for players
+    //---------Set up Cards
+    game.settings.register("torgeternity", "disableXP", {
+        name: "torgeternity.settingMenu.disableXP.name", // Register a module setting with checkbox
+        hint: "torgeternity.settingMenu.disableXP.hint", // Description of the settings
+        scope: "world",
+        config: true,
+        type: Boolean,
+        default: false
+    });
+
+
 
 }

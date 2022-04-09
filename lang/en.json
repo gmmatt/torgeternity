@@ -257,6 +257,7 @@
             "melee": "Melee",
             "unarmed": "Unarmed",
             "xp": "XP",
+            "xpOnlyGM": "only GM can fill",
             "unspent": "Unspent",
             "earned": "Earned",
             "clearance": "Clearance",
@@ -660,6 +661,10 @@
             "defaultUserHand": {
                 "name": "Default user cards hand name",
                 "hint": "Hand name for this user."
+            },
+            "disableXP": {
+                "name": "Disabling the XP input for players",
+                "hint": "If checked, only GM should be able to fill XP in character sheet."
             }
         },
         "notifications": {

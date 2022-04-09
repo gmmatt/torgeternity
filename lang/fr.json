@@ -257,6 +257,7 @@
             "melee": "Mêlée",
             "unarmed": "Mains nues",
             "xp": "XP",
+            "xpOnlyGM": "seul le MJ peut remplir",
             "unspent": "Disponibles",
             "earned": "Total",
             "clearance": "Habilitation",
@@ -653,6 +654,10 @@
             "defaultUserHand": {
                 "name": "nom de la main de cartes par default de l'utilisateur",
                 "hint": "tapez ici le nom de votre jeu de cartes par défaut, ce jeu sera ouvert par défaut lorsque l'on clique sur l'outil 'main de carte'."
+            },
+            "disableXP": {
+                "name": "désactiver le champ XP pour les joueurs",
+                "hint": "Si coché, seul le MJ pourra renseigné l'XP sur les fiches de personnage."
             }
         },
         "notifications": {

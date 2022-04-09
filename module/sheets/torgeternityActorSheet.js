@@ -125,6 +125,10 @@ export default class torgeternityActorSheet extends ActorSheet {
         data.effects = prepareActiveEffectCategories(this.document.effects);
 
         data.config = CONFIG.torgeternity;
+        data.disableXP = true;
+        if (game.user.isGM || !game.settings.get("torgeternity", "disableXP")) {
+            data.disableXP = false
+        }
 
         return data;
 
