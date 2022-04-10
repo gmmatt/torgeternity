@@ -174,7 +174,7 @@
     }
     
     .window-app .window-content form button,
-    .window-app .window-content form select {
+    .window-ap:not(.actor) .window-content form select {
         color: rgb(233, 233, 233);
         cursor: pointer;
     }
@@ -1479,6 +1479,10 @@ german tent cards images
         }
     }
     
+    .torgeternity.actor {
+        min-height: 630px;
+    }
+    
     .torgeternity.actor .window-content {
         background-image: url(../images/bg-sheet.webp);
         background-size: cover;
@@ -1673,6 +1677,12 @@ german tent cards images
         text-shadow: 0px 0px 10px black;
     }
     
+    .window-content .actor-sheet input.small-input {
+        min-width: 5px;
+        border: none;
+        width: 20px;
+    }
+    
     .window-content .actor-sheet img {
         border: none;
         flex: 0 0 60px;
@@ -1814,7 +1824,7 @@ german tent cards images
         display: block;
     }
     
-    .window-content .actor-sheet .sheet-header select {
+    .window-content .actor-sheet select {
         color: black;
         border: none;
         border-bottom: 1px solid grey;
@@ -1823,8 +1833,8 @@ german tent cards images
         font-family: Signika;
     }
     
-    .window-content .actor-sheet .sheet-header select:active,
-    .window-content .actor-sheet .sheet-header select:focus {
+    .window-content .actor-sheet select:active,
+    .window-content .actor-sheet select:focus {
         box-shadow: 0 0 5px #0062ff;
     }
     
@@ -2307,6 +2317,7 @@ german tent cards images
     .window-content .actor-sheet .threat-editor .threat-edit {
         flex-direction: column;
         font-family: Arial;
+        margin-top: 5px;
     }
     
     .window-content .actor-sheet .stat-block {
@@ -2322,9 +2333,9 @@ german tent cards images
     form.actor-sheet.threat input[type="checkbox"] {
         opacity: 0.01;
         position: relative;
-        left: -25px;
         cursor: pointer;
         top: 5px;
+        left: -3px;
         width: 10px;
     }
     
@@ -2332,7 +2343,7 @@ german tent cards images
         color: grey;
         position: relative;
         font-size: 10px;
-        left: -4px;
+        left: 15px;
     }
     
     form.actor-sheet.threat a.toggleFav.checked {
@@ -2342,7 +2353,7 @@ german tent cards images
     
     form.actor-sheet.threat span.inputsFav {
         display: inline-block;
-        max-width: 40px;
+        max-width: 100px;
     }
     
     form.actor-sheet.threat div.skill-list-edit {
@@ -2350,7 +2361,7 @@ german tent cards images
         justify-items: flex-end;
         justify-content: center;
         align-items: center;
-        grid-template-columns: repeat(3, 0.3fr);
+        grid-template-columns: repeat(2, 0.5fr);
     }
     
     form.actor-sheet.threat div.skill-list-edit .skill-element-edit {
@@ -2373,9 +2384,9 @@ german tent cards images
     form.actor-sheet.threat div.skill-list-edit .skill-element-edit span.inputsFav input[type="checkbox"],
     form.actor-sheet.threat div.skill-list-edit .skill-element-edit span.inputsFav a.toggleFav {
         position: absolute;
-        left: 20px;
+        left: 5px;
         max-width: 30px;
-        top: -5px;
+        top: 3px;
         width: 10px;
         margin: 0px;
         background: white;
