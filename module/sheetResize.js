@@ -25,21 +25,11 @@ export function sheetResize() {
                     if (cr.height < 630) {
                         sheet.classList.add("tabsOff");
                         sheet.classList.remove("tabsOn");
-                        console.log(data);
-                        data.actor.update({
-                            data: {
-                                editstate: "none"
-                            }
-                        })
+
 
                     } else {
                         sheet.classList.remove("tabsOff");
                         sheet.classList.add("tabsOn");
-                        data.actor.update({
-                            data: {
-                                editstate: "inline"
-                            }
-                        })
                     }
                 }
 
