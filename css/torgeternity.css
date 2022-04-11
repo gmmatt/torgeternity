@@ -1480,7 +1480,7 @@ german tent cards images
     }
     
     .torgeternity.actor {
-        min-height: 630px;
+        min-width: 450px;
     }
     
     .torgeternity.actor .window-content {
@@ -1607,6 +1607,14 @@ german tent cards images
         text-transform: capitalize;
         right: -310px;
         top: 310px;
+    }
+    
+    .tabsOff .window-content .actor-sheet nav.tabs {
+        display: none
+    }
+    
+    .tabsOff .window-content .actor-sheet #threat-editor {
+        display: none;
     }
     
     .window-content .actor-sheet nav.tabs a.item {
@@ -2343,7 +2351,7 @@ german tent cards images
         color: grey;
         position: relative;
         font-size: 10px;
-        left: 15px;
+        left: 5px;
     }
     
     form.actor-sheet.threat a.toggleFav.checked {
@@ -2361,18 +2369,21 @@ german tent cards images
         justify-items: flex-end;
         justify-content: center;
         align-items: center;
-        grid-template-columns: repeat(2, 0.5fr);
+        grid-template-columns: repeat(3, 1fr);
     }
     
     form.actor-sheet.threat div.skill-list-edit .skill-element-edit {
         display: flex;
         padding-right: 5px;
         align-items: center;
+        flex-direction: row;
+        border-bottom: 1px solid lightgray;
     }
     
     form.actor-sheet.threat div.skill-list-edit .skill-element-edit span {
         text-align: end;
         font-family: Arial;
+        margin-right: 15px;
     }
     
     form.actor-sheet.threat div.skill-list-edit .skill-element-edit span.inputsFav {
@@ -2384,7 +2395,7 @@ german tent cards images
     form.actor-sheet.threat div.skill-list-edit .skill-element-edit span.inputsFav input[type="checkbox"],
     form.actor-sheet.threat div.skill-list-edit .skill-element-edit span.inputsFav a.toggleFav {
         position: absolute;
-        left: 5px;
+        left: 19px;
         max-width: 30px;
         top: 3px;
         width: 10px;

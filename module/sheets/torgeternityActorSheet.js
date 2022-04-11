@@ -16,8 +16,9 @@ export default class torgeternityActorSheet extends ActorSheet {
 
         if (this.object.data.type === "threat") {
             this.options.width = this.position.width = 450;
-            this.options.height = this.position.height = 645;
-        };
+            this.options.height = this.position.height = 350;
+
+        }
 
         this._filters = {
             effects: new Set()
@@ -36,6 +37,7 @@ export default class torgeternityActorSheet extends ActorSheet {
                 dropSelector: null
             }]
         });
+
     }
 
     get template() {
@@ -257,10 +259,6 @@ export default class torgeternityActorSheet extends ActorSheet {
         }
 
         if (this.actor.isOwner) {
-            html.find(".toggle-threat-edit").click(this._onToggleThreatEdit.bind(this));
-        }
-
-        if (this.actor.isOwner) {
             html.find(".activeDefense-roll").click(this._onActiveDefenseRoll.bind(this));
         }
 
@@ -333,6 +331,22 @@ export default class torgeternityActorSheet extends ActorSheet {
                 }
             }
         });
+
+        //compute adds from total for threats
+        if (this.actor.type == "threat") {
+            html.find('.threat-skill-total').change(this.setThreatAdds.bind(this));
+
+
+        }
+    }
+    async setThreatAdds(event) {
+        let data = this.actor.data;
+
+        let skill = event.currentTarget.dataset.skill
+        let skillObject = this.actor.data.data.skills[skill]
+
+        data.data.skills[skill].adds = event.currentTarget.value - this.actor.data.data.attributes[skillObject.baseAttribute];
+        this.actor.update(data);
     }
     async onOpenHand(event) {
 
@@ -734,28 +748,7 @@ export default class torgeternityActorSheet extends ActorSheet {
         });
     }
 
-    _onToggleThreatEdit(event) {
-        var actor = this.actor
-        var toggleState = this.actor.data.data.editstate;
-        event.preventDefault();
-        if (toggleState === "none") {
-            document.getElementById("threat-editor").style.display = "inline";
-            this.actor.update({
-                "data.editstate": "inline"
-            });
 
-        } else if (toggleState === "") {
-            document.getElementById("threat-editor").style.display = "inline";
-            this.actor.update({
-                "data.editstate": "inline"
-            });
-        } else {
-            document.getElementById("threat-editor").style.display = "none";
-            this.actor.update({
-                "data.editstate": "none"
-            });
-        };
-    }
 
     _onItemEquip(event) {
         var actor = this.actor;

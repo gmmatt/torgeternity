@@ -1,8 +1,6 @@
 <div class="threat-contents block">
 	<div class="threat-block">
-		<a class="toggle-threat-edit" title="{{localize 'torgeternity.iconeTitles.edit'}}" style="float:right">
-			<i class="fas fa-edit"></i>
-		</a>
+
 		<div class="attribut-list" style="margin-right:10px">
 			<b>{{localize "torgeternity.sheetLabels.attributes"}}:
 			</b>
@@ -194,21 +192,18 @@
 	<div class="skill-list-edit">
 		{{#each data.data.skills as |skill key|}}
 		<div class="skill-element-edit">
-			<span style="position:relative">
+			<span style="position:relative">{{localize (concatSkillName key)}}
+			</span>
+			<span class="inputsFav">
+				<input name="data.skills.{{key}}.value" type="number" class="small-input threat-skill-total"
+					value="{{skill.value}}" data-skill="{{key}}" data-dtype="Number" />
+
 				<a class="toggleFav {{#if skill.isFav}}checked
 						                        {{/if}}">
 					<i class="far fa-star"></i>
 				</a>
 				<input class="favCheck" type="checkbox" name="data.skills.{{key}}.isFav" {{checked skill.isFav}}
-					data-dtype="Boolean" />{{localize (concatSkillName key)}}
-			</span>
-			<span class="inputsFav">
-				<input name="data.skills.{{key}}.adds" type="number" class="small-input" value="{{skill.adds}}"
-					data-dtype="Number" title="{{localize 'torgeternity.sheetLabels.adds'}}" />
-				/
-				<input name="data.skills.{{key}}.value" type="number" class="small-input" value="{{skill.value}}"
-					data-dtype="Number" title="{{localize 'torgeternity.sheetLabels.total'}}" disabled />
-
+					data-dtype="Boolean" />
 			</span>
 		</div>
 		{{/each}}
