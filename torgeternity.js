@@ -30,6 +30,8 @@ import { skillDialog } from "/systems/torgeternity/module/skill-dialog.js";
 import { interactionDialog } from "/systems/torgeternity/module/interaction-dialog.js";
 import { hideCompendium } from './module/hideCompendium.js';
 import initTorgControlButtons from './module/controlButtons.js';
+import createTorgShortcuts from './module/keybinding.js';
+
 
 Hooks.once("init", async function() {
     console.log("torgeternity | Initializing Torg Eternity System");
@@ -92,30 +94,13 @@ Hooks.once("init", async function() {
 
     //----------preloading handlebars templates
     preloadTemplates();
-
+    // adding special torg buttons
     initTorgControlButtons();
-    //-----modify token bars
+    //create torg shortcuts
+    createTorgShortcuts();
 
 
-    //----------debug hooks
-    // CONFIG.debug.hooks = true;
-    /*
-  //----socket receiver
-  game.socket.on("system.torgeternity", (data) => {
-    if (data.msg == "cardPlayed") {
-      Cards.cardPlayed(data);
-    }
-    if (data.msg == "cardReserved") {
-      Cards.cardReserved(data);
-    }
-    if (data.msg == "cardExchangePropose") {
-      Cards.cardExchangePropose(data);
-    }
-    if (data.msg == "cardExchangeValide") {
-      Cards.cardExchangeValide(data);
-    }
-  });
-*/
+
 });
 
 Hooks.once("setup", async function() {
@@ -267,6 +252,7 @@ Hooks.on("ready", async function() {
             const itemId = basicRules.index.getName("Managing Cards")._id;
             game.journal.importFromCompendium(basicRules, itemId);
         }
+
 
 
         game.settings.set("torgeternity", "setUpCards", false)
