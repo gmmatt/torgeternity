@@ -4,6 +4,7 @@ export default class GMScreen extends Application {
         options.template = "systems/torgeternity/templates/gmscreen/screen.html";
         options.width = "1300";
         options.height = "600";
+        options.id = "GMScreen"
         options.title = game.i18n.localize("torgeternity.gmScreen.title");
         options.resizable = true;
         options.top = 10;
@@ -16,9 +17,6 @@ export default class GMScreen extends Application {
         super.activateListeners(html);
 
         html.find(".screen-panel").click(this.clickPanel.bind(this));
-
-
-
     }
     clickPanel(evt) {
         let cl;
@@ -44,7 +42,6 @@ export default class GMScreen extends Application {
     }
     getData() {
         let data = super.getData();
-
         let path = game.settings.get("torgeternity", "gmScreen");
         let lang = game.settings.get("core", "language");
 
@@ -52,16 +49,19 @@ export default class GMScreen extends Application {
         if (lang != "en" && lang != "de") {
             lang = "en"
         }
-        console.log(data);
         if (path == "none") {
             data.noScreen = true;
             data.background = false;
-
-
         } else {
             data.background = `style="background-image:url(./modules/${path}/images/gmscreen/${lang}.webp)"`;
         }
-        console.log(data);
         return data
+    }
+    toggleRender() {
+        if (this.rendered) {
+            return this.close()
+        } else {
+            return this.render(true)
+        }
     }
 }

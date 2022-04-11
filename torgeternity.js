@@ -7,7 +7,6 @@ import torgeternityItemSheet from "./module/sheets/torgeternityItemSheet.js";
 import torgeternityActorSheet from "./module/sheets/torgeternityActorSheet.js";
 import { sheetResize } from "./module/sheetResize.js";
 import { preloadTemplates } from "./module/preloadTemplates.js";
-import { toggleViewMode } from "./module/viewMode.js";
 import * as torgchecks from "./module/torgchecks.js";
 import torgeternityCombat from "./module/dramaticScene/torgeternityCombat.js";
 import torgeternityCombatTracker from "./module/dramaticScene/torgeternityCombatTracker.js";
@@ -31,6 +30,7 @@ import { interactionDialog } from "/systems/torgeternity/module/interaction-dial
 import { hideCompendium } from './module/hideCompendium.js';
 import initTorgControlButtons from './module/controlButtons.js';
 import createTorgShortcuts from './module/keybinding.js';
+import GMScreen from './module/GMScreen.js'
 
 
 Hooks.once("init", async function() {
@@ -71,7 +71,7 @@ Hooks.once("init", async function() {
     CONFIG.Cards.documentClass = torgeternityCards;
     CONFIG.cardTypes = torgeternity.cardTypes;
 
-
+    ui.GMScreen = new GMScreen();
     // all settings after config
     registerTorgSettings();
     //---register items and actors
@@ -124,6 +124,7 @@ Hooks.once("setup", async function() {
 //-------------once everything ready
 Hooks.on("ready", async function() {
     sheetResize();
+    ui.gmscreen = new GMScreen();
 
 
     //-----applying GM possibilities pool if absent
@@ -252,8 +253,6 @@ Hooks.on("ready", async function() {
             const itemId = basicRules.index.getName("Managing Cards")._id;
             game.journal.importFromCompendium(basicRules, itemId);
         }
-
-
 
         game.settings.set("torgeternity", "setUpCards", false)
     }

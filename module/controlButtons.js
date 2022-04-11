@@ -26,7 +26,7 @@
                button: true,
                onClick: () => {
                    if (game.user.character) {
-                       game.user.character.getDefaultHand().sheet.render(true)
+                       game.user.character.getDefaultHand().sheet.toggleRender()
                    } else {
                        ui.notifications.error(game.i18n.localize("torgeternity.notifications.noHands"))
                    }
@@ -40,7 +40,7 @@
                    icon: "fa fa-book-open",
                    button: true,
                    onClick: () => {
-                       new GMScreen().render(true)
+                       ui.GMScreen.toggleRender()
                    }
                }, {
                    name: game.i18n.localize("torgeternity.settingMenu.deckSetting.name"),

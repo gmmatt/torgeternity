@@ -216,38 +216,22 @@ export default class torgeternityPlayerHand extends CardsHand {
         }
     }
     focusCard(ev) {
-            let card = ev.currentTarget.closest('li.card');
-            card.classList.toggle('focusedCard');
-            if (card.classList.contains("focusedCard")) {
-                card.setAttribute("data-rot", card.style.transform)
-                let correction = parseInt(card.parentElement.style.transform.replace("rotateZ(", "").replace(")deg", "")) * -1;
-                card.style.transform = `rotateZ(${correction}deg)`
+        let card = ev.currentTarget.closest('li.card');
+        card.classList.toggle('focusedCard');
+        if (card.classList.contains("focusedCard")) {
+            card.setAttribute("data-rot", card.style.transform)
+            let correction = parseInt(card.parentElement.style.transform.replace("rotateZ(", "").replace(")deg", "")) * -1;
+            card.style.transform = `rotateZ(${correction}deg)`
 
-            } else {
-                card.style.transform = card.getAttribute("data-rot")
-            }
+        } else {
+            card.style.transform = card.getAttribute("data-rot")
         }
-        /* Probably don't need to do any of this
-            
-                    _canDragStart(selector) {
-                        super.canDragStart(html);
-                    }
-
-                    _onDragStart(event) {
-                        super.onDragStart(event)
-                    }
-
-                    _canDragDrop(selector) {
-                        super.canDragDrop(selector)
-                    }
-
-                    async _ondrop(event) {
-                        super.onDrop(event);
-                    }
-
-                    _onSortCard(event,card) {
-                        super.onSortCard(event,card)
-                    } 
-            
-                    */
+    }
+    toggleRender() {
+        if (this.rendered) {
+            return this.close()
+        } else {
+            return this.render(true)
+        }
+    }
 }
