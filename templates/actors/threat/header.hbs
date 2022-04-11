@@ -1,4 +1,5 @@
-<img src="{{actor.img}}" class="profile-img" data-edit="img" title="{{actor.name}}" /> <!-- profile-img needed to maintain compatibility with VTT Tokenizer -->
+<img src="{{actor.img}}" class="profile-img" data-edit="img" title="{{actor.name}}" />
+<!-- profile-img needed to maintain compatibility with VTT Tokenizer -->
 <h1><input name="name" type="text" value="{{actor.name}}" placeholder="Threat Name" /></h1>
 <div class="threat-stat-line">
 
@@ -11,8 +12,8 @@
             <input name="data.wounds.max" type="number" value="{{data.data.wounds.max}}" data-dtype="Number"
                 class="small-input" />
         </span>
-        </p>
-        <p>
+    </p>
+    <p>
         <span class="vital-box">
             {{localize "torgeternity.sheetLabels.shock"}}:
             <input name="data.shock.value" type="number" value="{{data.data.shock.value}}" data-dtype="Number"
@@ -24,8 +25,23 @@
     </p>
     <p>
         <span class="vital-box">
-            <a class="item-control possibility-roll" title="Possibility Roll">{{localize "torgeternity.sheetLabels.possibilities"}}: </a>
-            <input name="data.other.possibilities" type="number" value="{{data.data.other.possibilities}}"
-                data-dtype="Number" class="small-input" />
+            {{localize "torgeternity.sheetLabels.fatigue"}} : <input name="data.other.fatigue" type="number"
+                value="{{data.data.other.fatigue}}" data-dtype="Number" disabled />
+
         </span>
     </p>
+</div>
+<div class="threat-stat-line">
+    <p>
+        <span class="vital-box">
+            <a class="item-control possibility-roll" title="Possibility Roll">{{localize
+                "torgeternity.sheetLabels.possibilities"}}: </a>
+            <input name="data.other.possibilities" type="number" value="{{data.data.other.possibilities}}"
+                data-dtype="Number" class="small-input" />
+            {{localize "torgeternity.sheetLabels.possibilitypotential"}} :
+            {{data.data.details.possibilitypotential}}
+        </span>
+
+
+    </p>
+</div>
