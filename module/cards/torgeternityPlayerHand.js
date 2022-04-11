@@ -229,9 +229,9 @@ export default class torgeternityPlayerHand extends CardsHand {
     }
     toggleRender() {
         if (this.rendered) {
-            return this.close()
-        } else {
-            return this.render(true)
-        }
+            if (this._minimized) return this.maximize();
+            else return this.close()
+        } else return this.render(true)
+
     }
 }
