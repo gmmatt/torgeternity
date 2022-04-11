@@ -2,7 +2,7 @@ import GMScreen from './GMScreen.js';
 export default function createTorgShortcuts() {
     //creating keyboard shortcuts
     game.keybindings.register('torgeternity', 'openHand', {
-        name: "test open hand",
+        name: game.i18n.localize("CARDS.TypeHand"),
         editable: [{
             key: "KeyH",
         }],
@@ -13,7 +13,7 @@ export default function createTorgShortcuts() {
         }
     });
     game.keybindings.register('torgeternity', 'openGMScreen', {
-        name: "test open screen",
+        name: game.i18n.localize("torgeternity.gmScreen.toggle"),
         editable: [{
             key: "KeyG",
         }],
