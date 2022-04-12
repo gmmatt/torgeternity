@@ -811,7 +811,7 @@
         top: 0%;
         width: 600px;
         height: 400px;
-        transform: scale(0.7);
+        transform: scale(1);
         transform-origin: 0% 0%;
         opacity: 1;
         z-index: +1;
@@ -826,7 +826,7 @@
     }
     
     #navigation div.cosm-icone:hover div.de.cosm-card {
-        transform: scale(1, 0.7);
+        transform: scale(1, 0.85);
     }
     /*-------------------------
 -----------------------------
@@ -1929,7 +1929,7 @@ german tent cards images
         grid-column: 1/5;
         grid-row: 3/7;
         overflow: scroll;
-        max-height: 500px;
+        max-height: 650px;
     }
     
     .window-content .actor-sheet .skills select {
