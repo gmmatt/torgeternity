@@ -1565,7 +1565,7 @@ german tent cards images
     .window-content .actor-sheet .tab[data-tab].active {
         display: grid;
         grid-template-columns: repeat(8, 1fr);
-        grid-template-rows: 0.3fr 0.2fr 0.2fr 0.13fr 0.3fr 0.3fr;
+        grid-template-rows: repeat(6, minmax(80px, max-content));
         grid-gap: 0px 5px;
         justify-content: center;
         width: 100%;
