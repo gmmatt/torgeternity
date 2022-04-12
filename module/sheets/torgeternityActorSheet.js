@@ -125,6 +125,10 @@ export default class torgeternityActorSheet extends ActorSheet {
         data.effects = prepareActiveEffectCategories(this.document.effects);
 
         data.config = CONFIG.torgeternity;
+        data.disableXP = true;
+        if (game.user.isGM || !game.settings.get("torgeternity", "disableXP")) {
+            data.disableXP = false
+        }
 
         return data;
 
@@ -418,7 +422,7 @@ export default class torgeternityActorSheet extends ActorSheet {
             };
 
             var templateData = {
-                message: "Cannot attempt interaction attack test without a target. Select a target and try again.",
+                message: game.i18n.localize("torgeternity.chatText.check.interactionNeedTarget"),
                 actorPic: this.actor.data.img
             };
 

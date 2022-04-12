@@ -7,7 +7,6 @@ import torgeternityItemSheet from "./module/sheets/torgeternityItemSheet.js";
 import torgeternityActorSheet from "./module/sheets/torgeternityActorSheet.js";
 import { sheetResize } from "./module/sheetResize.js";
 import { preloadTemplates } from "./module/preloadTemplates.js";
-import { toggleViewMode } from "./module/viewMode.js";
 import * as torgchecks from "./module/torgchecks.js";
 import torgeternityCombat from "./module/dramaticScene/torgeternityCombat.js";
 import torgeternityCombatTracker from "./module/dramaticScene/torgeternityCombatTracker.js";
@@ -29,7 +28,10 @@ import { attackDialog } from "/systems/torgeternity/module/attack-dialog.js"; //
 import { skillDialog } from "/systems/torgeternity/module/skill-dialog.js";
 import { interactionDialog } from "/systems/torgeternity/module/interaction-dialog.js";
 import { hideCompendium } from './module/hideCompendium.js';
-import deckSettingMenu from './module/cards/cardSettingMenu.js';
+import initTorgControlButtons from './module/controlButtons.js';
+import createTorgShortcuts from './module/keybinding.js';
+import GMScreen from './module/GMScreen.js'
+
 
 Hooks.once("init", async function() {
     console.log("torgeternity | Initializing Torg Eternity System");
@@ -37,8 +39,6 @@ Hooks.once("init", async function() {
     //----helpers
     registerHelpers();
 
-    //-----system settings
-    registerTorgSettings()
 
     //-------global
     game.torgeternity = {
@@ -71,6 +71,9 @@ Hooks.once("init", async function() {
     CONFIG.Cards.documentClass = torgeternityCards;
     CONFIG.cardTypes = torgeternity.cardTypes;
 
+    ui.GMScreen = new GMScreen();
+    // all settings after config
+    registerTorgSettings();
     //---register items and actors
     Items.unregisterSheet("core", ItemSheet);
     Items.registerSheet("torgeternity", torgeternityItemSheet, {
@@ -91,85 +94,17 @@ Hooks.once("init", async function() {
 
     //----------preloading handlebars templates
     preloadTemplates();
-
-    //adding layer control for cards
-    class torgLayer extends CanvasLayer {
-        static get layerOptions() {
-            return foundry.utils.mergeObject(super.layerOptions, {
-                name: "Torg",
-                canDragCreate: false,
-                controllableObjects: true,
-                rotatableObjects: true,
-                zIndex: 666,
-            });
-        }
-    }
-    CONFIG.Canvas.layers.torgeternity = { layerClass: torgLayer, group: "primary" }
-
-    Hooks.on("getSceneControlButtons", btns => {
-
-        let menu = [{
-            name: game.i18n.localize("CARDS.TypeHand"),
-            title: game.i18n.localize("CARDS.TypeHand"),
-            icon: "fa fa-id-badge",
-            button: true,
-            onClick: () => {
-                if (game.user.character) {
-                    game.user.character.getDefaultHand().sheet.render(true)
-                } else {
-                    ui.notifications.error(game.i18n.localize("torgeternity.notifications.noHands"))
-                }
-            }
-        }];
-
-        if (game.user.isGM) {
-            menu.push({
-                name: game.i18n.localize("torgeternity.settingMenu.deckSetting.name"),
-                title: game.i18n.localize("torgeternity.settingMenu.deckSetting.name"),
-                icon: "fa fa-cog",
-                button: true,
-                onClick: () => {
-                    new deckSettingMenu().render(true)
-                }
-            })
-        }
-
-        btns.push({
-            name: game.i18n.localize("CARDS.TypeHand"),
-            title: game.i18n.localize("CARDS.TypeHand"),
-            icon: "fas fa-id-badge",
-            layer: "torgeternity",
-            tools: menu
-        })
+    // adding special torg buttons
+    initTorgControlButtons();
+    //create torg shortcuts
+    createTorgShortcuts();
 
 
-    });
 
-    //-----modify token bars
-
-
-    //----------debug hooks
-    // CONFIG.debug.hooks = true;
-    /*
-  //----socket receiver
-  game.socket.on("system.torgeternity", (data) => {
-    if (data.msg == "cardPlayed") {
-      Cards.cardPlayed(data);
-    }
-    if (data.msg == "cardReserved") {
-      Cards.cardReserved(data);
-    }
-    if (data.msg == "cardExchangePropose") {
-      Cards.cardExchangePropose(data);
-    }
-    if (data.msg == "cardExchangeValide") {
-      Cards.cardExchangeValide(data);
-    }
-  });
-*/
 });
 
 Hooks.once("setup", async function() {
+
         modifyTokenBars();
         //changing stutus marker 
         //preparing status marker
@@ -189,6 +124,7 @@ Hooks.once("setup", async function() {
 //-------------once everything ready
 Hooks.on("ready", async function() {
     sheetResize();
+    ui.gmscreen = new GMScreen();
 
 
     //-----applying GM possibilities pool if absent
@@ -317,7 +253,6 @@ Hooks.on("ready", async function() {
             const itemId = basicRules.index.getName("Managing Cards")._id;
             game.journal.importFromCompendium(basicRules, itemId);
         }
-
 
         game.settings.set("torgeternity", "setUpCards", false)
     }
@@ -866,7 +801,7 @@ function rollSkillMacro(skillName, attributeName, isInteractionAttack) {
             };
 
             var templateData = {
-                message: "Cannot attempt interaction attack test without a target. Select a target and try again.",
+                message: game.i18n.localize("torgeternity.chatText.check.interactionNeedTarget"),
                 actorPic: actor.data.img
             };
 

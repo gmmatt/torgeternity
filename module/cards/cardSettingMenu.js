@@ -8,6 +8,7 @@ export default class deckSettingMenu extends FormApplication {
         const options = super.defaultOptions;
         options.template = "/systems/torgeternity/templates/cards/settingMenu.hbs";
         options.top = 300;
+        options.title = game.i18n.localize("torgeternity.settingMenu.deckSetting.name")
         options.left = 500;
         options.submitOnChange = true;
         options.editable = true;
@@ -23,7 +24,9 @@ export default class deckSettingMenu extends FormApplication {
             stormknightsHands: {}
         };
         for (let sk of data.stormknights) {
-            data.stormknightsHands[sk.id] = game.settings.get("torgeternity", "deckSetting").stormknightsHands[sk.id];
+            if (game.settings.get("torgeternity", "deckSetting").stormknightsHands) {
+                data.stormknightsHands[sk.id] = game.settings.get("torgeternity", "deckSetting").stormknightsHands[sk.id];
+            }
         }
         return mergeObject(super.getData(), data);
     }
@@ -36,7 +39,15 @@ export default class deckSettingMenu extends FormApplication {
         // assigning user rights for stormknights owners
         html.find("select.stormknightHand").change(this.onChangeHand.bind(this, html));
         //creating new cards decks or piles or hand
-        html.find("button.createCards").click(this.onCreateCards.bind(this))
+        html.find("button.createCards").click(this.onCreateCards.bind(this));
+
+
+        //adding hook on for refreshing the display while a card stack is created
+        //avoid having to re-open the menu to have new card stack available in selects
+        Hooks.on("createCards", (card, options, id) => {
+            if (this.rendered) { this.render(true) }
+        })
+
 
     }
     _updateObject(event, formData) {
@@ -45,11 +56,7 @@ export default class deckSettingMenu extends FormApplication {
     }
     onCreateCards(event) {
         event.preventDefault();
-
-
         Cards.createDialog();
-
-
     }
     onChangeDeck(html, event) {
         //getting selected value

@@ -257,6 +257,7 @@
             "melee": "Mêlée",
             "unarmed": "Mains nues",
             "xp": "XP",
+            "xpOnlyGM": "seul le MJ peut remplir",
             "unspent": "Disponibles",
             "earned": "Total",
             "clearance": "Habilitation",
@@ -479,6 +480,7 @@
             "notes": "Notes",
             "check": {
                 "needTarget": "Impossible de réaliser un jet avancé sans cible. Ciblez un token puis ré-essayez.",
+                "interactionNeedTarget": "Impossible de réaliser une attaque d'interaction sans cible. Ciblez un token puis ré-essayez.",
                 "cantUseUntrained": " ne peut pas être utilisé sans être appris (au moins un point de rang).",
                 "cantUseSkillRecquired": " ne peut pas être utilisé sans au moins un rang dans la compétence recquise",
                 "modifier": {
@@ -638,7 +640,7 @@
             },
             "gmScreen": {
                 "name": "Sélectionner l'image de l'écran",
-                "hint": "Vous pouvez choisir quel écran du MJ afficher . Si vous sélectionnez un module non installé, l'écran du MJ ne fonctionnera pas. NOTE: Vous devez rafraichir le navigateur ou l'application (F5) après avoir validé votre choix"
+                "hint": "Vous pouvez choisir quel écran du MJ afficher ."
             },
             "hideForeignCompendium": {
                 "name": "Masquer les compendiiums en langues étrangères",
@@ -653,6 +655,10 @@
             "defaultUserHand": {
                 "name": "nom de la main de cartes par default de l'utilisateur",
                 "hint": "tapez ici le nom de votre jeu de cartes par défaut, ce jeu sera ouvert par défaut lorsque l'on clique sur l'outil 'main de carte'."
+            },
+            "disableXP": {
+                "name": "désactiver le champ XP pour les joueurs",
+                "hint": "Si coché, seul le MJ pourra renseigné l'XP sur les fiches de personnage."
             }
         },
         "notifications": {
@@ -669,6 +675,12 @@
             "dramaDeckEmpty": "le paquet de cartes d'actions est vide. Ré-initialisez-le.",
             "onlyReservedCard": "vous ne pouvez jouer que les cartes réservées durant une scène dramatique",
             "noActiveEffectInOwnedItem": "Configurer les effets actifs à l'intérieur des Items possédés n'est pas encore possible."
+        },
+        "gmScreen": {
+            "title": "écran du meneur",
+            "toggle": "afficher/masquer l'écran",
+            "noScreen": "Aucun écran sélectionné",
+            "noScreenMessage": "Vous n'avez sélectionné aucun écran. Les écrans sont rendu disponible par les modules pour Torg Eternity disponibles ici : "
         }
     },
     "CARD": {

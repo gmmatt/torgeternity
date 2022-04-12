@@ -3,6 +3,10 @@ export const torgeternity = {};
 torgeternity.supportedLanguages = [
     "en", "fr", "de"
 ];
+torgeternity.availableScreens = {
+    'none': "none",
+}
+
 torgeternity.welcomeMessage = "";
 torgeternity.skillDialog = "";
 
