@@ -801,7 +801,7 @@ function rollSkillMacro(skillName, attributeName, isInteractionAttack) {
             };
 
             var templateData = {
-                message: "Cannot attempt interaction attack test without a target. Select a target and try again.",
+                message: game.i18n.localize("torgeternity.chatText.check.interactionNeedTarget"),
                 actorPic: actor.data.img
             };
 

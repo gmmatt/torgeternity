@@ -46,7 +46,7 @@ export async function SkillCheck(test) {
         };
 
         let templateData = {
-            message: test.skillName + game.i18n.localize('torgeternity.chatText.checkResults.cantUseUntrained'),
+            message: test.skillName + " " + game.i18n.localize('torgeternity.chatText.check.cantUseUntrained'),
             actorPic: test.actor.data.img
         };
 
@@ -576,7 +576,7 @@ export function renderSkillChat(test, diceroll) {
     // Label as Skill vs Attribute Test and turn on BD option if needed
     if (test.testType === "skill" || test.testType === "interactionAttack") {
         test.typeLabel = `${game.i18n.localize("torgeternity.chatText.skillTestLabel")}`,
-        test.bdStyle = "display:none"
+            test.bdStyle = "display:none"
     } else if (test.testType === "attack") {
         test.typeLabel = `${game.i18n.localize("torgeternity.chatText.skillTestLabel")}`
     } else if (test.testType === "power") {
