@@ -1929,7 +1929,7 @@ german tent cards images
         grid-column: 1/5;
         grid-row: 3/7;
         overflow: scroll;
-        max-height: 650px;
+        max-height: 100%;
     }
     
     .window-content .actor-sheet .skills select {
