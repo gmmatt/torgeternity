@@ -664,6 +664,11 @@
             "disableXP": {
                 "name": "désactiver le champ XP pour les joueurs",
                 "hint": "Si coché, seul le MJ pourra renseigné l'XP sur les fiches de personnage."
+            },
+            "autoDamages": {
+                "name": "Application des dommages automatiques",
+                "hint": "Si coché, les chocs et blessures seront automatiquement appliqués si le joueur à un token cible valide."
+
             }
         },
         "notifications": {
@@ -679,7 +684,9 @@
             "noHands": "pas de main de carte disponible!",
             "dramaDeckEmpty": "le paquet de cartes d'actions est vide. Ré-initialisez-le.",
             "onlyReservedCard": "vous ne pouvez jouer que les cartes réservées durant une scène dramatique",
-            "noActiveEffectInOwnedItem": "Configurer les effets actifs à l'intérieur des Items possédés n'est pas encore possible."
+            "noActiveEffectInOwnedItem": "Configurer les effets actifs à l'intérieur des Items possédés n'est pas encore possible.",
+            "noTarget": "Pas de token cible valide"
+
         },
         "gmScreen": {
             "title": "écran du meneur",
