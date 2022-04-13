@@ -203,6 +203,7 @@
             "hope": "Hope"
         },
         "sheetLabels": {
+            "editableTooltip": "expand the threat sheet to display editable fields",
             "stormknight": "Stormknight",
             "stats": "Stats",
             "perks": "Perks",

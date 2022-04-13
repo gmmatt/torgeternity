@@ -203,6 +203,7 @@
             "hope": "Espoir"
         },
         "sheetLabels": {
+            "editableTooltip": "agrandissez la fiche pour faire apparaitre les champs editables",
             "stormknight": "Chevalier des tempêtes",
             "stats": "Caracs",
             "perks": "Atouts",
