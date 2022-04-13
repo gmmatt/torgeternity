@@ -1,8 +1,94 @@
 export default class torgeternityActor extends Actor {
+    static get defaultOptions() {
+        const options = super.defaultOptions;
+        if (this.actor.type == "threat") {
+            options.classes.push("threat")
+        }
+        return options
+    }
 
 
+    prepareData() {
+        super.prepareData();
 
-    prepareBaseData() {
+        var skillset = this.data.data.skills;
+
+        // Derive Skill values for Storm Knights
+        for (let [name, skill] of Object.entries(skillset)) {
+            if (skill.adds === null || skill.adds === "") {
+                if (skill.unskilledUse === 1) {
+                    skill.value = parseInt(this.data.data.attributes[skill.baseAttribute]);
+                } else {
+                    skill.value = "-"
+                }
+            } else {
+                skill.value = parseInt(skill.adds) + parseInt(this.data.data.attributes[skill.baseAttribute]);
+            }
+        }
+
+        // Set Defensive values for Storm Knight sheet
+        if (skillset.dodge.value) {
+            this.data.data.dodgeDefense = this.data.data.skills.dodge.value;
+        } else {
+            this.data.data.dodgeDefense = this.data.data.attributes.dexterity
+        }
+
+        if (skillset.meleeWeapons.value) {
+            this.data.data.meleeWeaponsDefense = this.data.data.skills.meleeWeapons.value;
+        } else {
+            this.data.data.meleeWeaponsDefense = this.data.data.attributes.dexterity
+        }
+
+        if (skillset.unarmedCombat.value) {
+            this.data.data.unarmedCombatDefense = this.data.data.skills.unarmedCombat.value;
+        } else {
+            this.data.data.unarmedCombatDefense = this.data.data.attributes.dexterity
+        }
+
+        if (skillset.intimidation.value) {
+            this.data.data.intimidationDefense = this.data.data.skills.intimidation.value;
+        } else {
+            this.data.data.intimidationDefense = this.data.data.attributes.spirit
+        }
+
+        if (skillset.maneuver.value) {
+            this.data.data.maneuverDefense = this.data.data.skills.maneuver.value;
+        } else {
+            this.data.data.maneuverDefense = this.data.data.attributes.dexterity
+        }
+
+        if (skillset.taunt.value) {
+            this.data.data.tauntDefense = this.data.data.skills.taunt.value;
+        } else {
+            this.data.data.tauntDefense = this.data.data.attributes.charisma
+        }
+
+        if (skillset.trick.value) {
+            this.data.data.trickDefense = this.data.data.skills.trick.value;
+        } else {
+            this.data.data.trickDefense = this.data.data.attributes.mind
+        }
+
+        // Set base wounds to 3
+        this.data.data.wounds.max = 3;
+
+        //Set base shock to Spirit
+        this.data.data.shock.max = this.data.data.attributes.spirit;
+
+        //Set base move and run
+        this.data.data.other.move = this.data.data.attributes.dexterity;
+        this.data.data.other.run = parseInt(this.data.data.attributes.dexterity) * 3;
+
+        //Set base armor to zero
+        this.data.data.other.armor = 0;
+
+        //Set base fatigue to 2
+        this.data.data.other.fatigue = 2;
+
+        //Set base toughness
+        this.data.data.other.toughness = parseInt(this.data.data.attributes.strength) + parseInt(this.data.data.other.armor);
+
+
 
         if (this.data._source.type === "stormknight") {
             mergeObject(this.data.token, {
@@ -12,83 +98,39 @@ export default class torgeternityActor extends Actor {
             }, { overwrite: true });
 
 
-            var skillset = this.data.data.skills;
+            //Set clearance level
 
-            // Derive Skill values for Storm Knights
-            for (let [name, skill] of Object.entries(skillset)) {
-                if (skill.adds === null) {
-                    if (skill.unskilledUse === 1) {
-                        skill.value = parseInt(this.data.data.attributes[skill.baseAttribute]);
-                    } else {
-                        skill.value = "-"
-                    }
-                } else {
-                    skill.value = parseInt(skill.adds) + parseInt(this.data.data.attributes[skill.baseAttribute]);
-                }
+            if (this.data.data.xp.earned < 50) {
+                this.data.data.details.clearance = "alpha";
+            } else if (this.data.data.xp.earned < 200) {
+                this.data.data.details.clearance = "beta";
+            } else if (this.data.data.xp.earned < 500) {
+                this.data.data.details.clearance = "gamma";
+            } else if (this.data.data.xp.earned < 1000) {
+                this.data.data.details.clearance = "delta";
+            } else {
+                this.data.data.details.clearance = "omega";
             }
 
-            // Set Defensive values for Storm Knight sheet
-            if (skillset.dodge.value) {
-                this.data.data.dodgeDefense = this.data.data.skills.dodge.value;
-            } else {
-                this.data.data.dodgeDefense = this.data.data.attributes.dexterity
-            };
-
-            if (skillset.meleeWeapons.value) {
-                this.data.data.meleeWeaponsDefense = this.data.data.skills.meleeWeapons.value;
-            } else {
-                this.data.data.meleeWeaponsDefense = this.data.data.attributes.dexterity
-            };
-
-            if (skillset.unarmedCombat.value) {
-                this.data.data.unarmedCombatDefense = this.data.data.skills.unarmedCombat.value;
-            } else {
-                this.data.data.unarmedCombatDefense = this.data.data.attributes.dexterity
-            };
-
-            if (skillset.intimidation.value) {
-                this.data.data.intimidationDefense = this.data.data.skills.intimidation.value;
-            } else {
-                this.data.data.intimidationDefense = this.data.data.attributes.spirit
-            };
-
-            if (skillset.maneuver.value) {
-                this.data.data.maneuverDefense = this.data.data.skills.maneuver.value;
-            } else {
-                this.data.data.maneuverDefense = this.data.data.attributes.dexterity
-            };
-
-            if (skillset.taunt.value) {
-                this.data.data.tauntDefense = this.data.data.skills.taunt.value;
-            } else {
-                this.data.data.tauntDefense = this.data.data.attributes.charisma
-            };
-
-            if (skillset.trick.value) {
-                this.data.data.trickDefense = this.data.data.skills.trick.value;
-            } else {
-                this.data.data.trickDefense = this.data.data.attributes.mind
-            };
-
-            // Set base wounds to 3
-            this.data.data.wounds.max = 3;
-
-            //Set base shock to Spirit
-            this.data.data.shock.max = this.data.data.attributes.spirit;
-
-            //Set base move and run
-            this.data.data.other.move = this.data.data.attributes.dexterity;
-            this.data.data.other.run = parseInt(this.data.data.attributes.dexterity) * 3;
-
-            //Set base armor to zero
-            this.data.data.other.armor = 0;
-
-            //Set base fatigue to 2
-            this.data.data.other.fatigue = 2;
-
-            //Set base toughness
-            this.data.data.other.toughness = parseInt(this.data.data.attributes.strength) + parseInt(this.data.data.other.armor);
-
+            //Set armor and shield toggle states
+            var i;
+            for (i = 0; i < this.data.items.length; i++) {
+                var item = this.data.items[i];
+                if (item.type === "shield") {
+                    if (item.data.equipped === true) {
+                        this.data.items[i].data.equippedClass = "item-equipped"
+                    } else {
+                        this.data.items[i].data.equippedClass = "item-unequipped"
+                    }
+                }
+                if (item.type === "armor") {
+                    if (item.data.equipped === true) {
+                        this.data.items[i].data.equippedClass = "item-equipped"
+                    } else {
+                        this.data.items[i].data.equippedClass = "item-unequipped"
+                    }
+                }
+            }
             //Set axioms based on home reality
             let magicAxiom = this.data.data.axioms.magic;
             let socialAxiom = this.data.data.axioms.social;
@@ -156,49 +198,7 @@ export default class torgeternityActor extends Actor {
                     this.data.data.axioms.tech = "";
                     break;
             }
-
-            //Set clearance level
-
-            if (this.data.data.xp.earned < 50) {
-                this.data.data.details.clearance = "alpha";
-            } else if (this.data.data.xp.earned < 200) {
-                this.data.data.details.clearance = "beta";
-            } else if (this.data.data.xp.earned < 500) {
-                this.data.data.details.clearance = "gamma";
-            } else if (this.data.data.xp.earned < 1000) {
-                this.data.data.details.clearance = "delta";
-            } else {
-                this.data.data.details.clearance = "omega";
-            };
-
-            //Set armor and shield toggle states
-            var i;
-            for (i = 0; i < this.data.items.length; i++) {
-                var item = this.data.items[i];
-                if (item.type === "shield") {
-                    if (item.data.equipped === true) {
-                        this.data.items[i].data.equippedClass = "item-equipped"
-                    } else {
-                        this.data.items[i].data.equippedClass = "item-unequipped"
-                    }
-                }
-                if (item.type === "armor") {
-                    if (item.data.equipped === true) {
-                        this.data.items[i].data.equippedClass = "item-equipped"
-                    } else {
-                        this.data.items[i].data.equippedClass = "item-unequipped"
-                    }
-                }
-            }
-
-        };
-
-        /*
-        //Set unknown edit states to none
-        if (this.data.data.editstate === undefined) {
-            this.data.data.editstate = "inline";
-        };  */
-
+        }
     }
 
     applyActiveEffects() {
