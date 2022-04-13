@@ -2,28 +2,33 @@
 
 <ul>
     <li class="attribut-block">
-        <span class="other-label" data-skill-value="{{data.data.other.move}}" data-skill-name="{{data.other.move}}">{{localize "torgeternity.sheetLabels.move"}}</span>
+        <span class="other-label" data-skill-value="{{data.data.other.move}}"
+            data-skill-name="{{data.other.move}}">{{localize "torgeternity.sheetLabels.move"}}</span>
         <input name="data.other.move" type="number" value="{{data.data.other.move}}" data=dtype="Number" disabled />
     </li>
     <li class="attribut-block">
-        <span class="other-label" data-skill-value="{{data.data.other.run}}" data-skill-name="{{data.other.run}}">{{localize "torgeternity.sheetLabels.run"}}</span>
+        <span class="other-label" data-skill-value="{{data.data.other.run}}"
+            data-skill-name="{{data.other.run}}">{{localize "torgeternity.sheetLabels.run"}}</span>
         <input name="data.other.run" type="number" value="{{data.data.other.run}}" data=dtype="Number" disabled />
-    </li>
-    
-    <li class="attribut-block">
-        <span class="other-label" data-skill-value="{{data.data.other.toughness}}"
-            data-skill-name="{{data.other.toughness}}">{{localize "torgeternity.sheetLabels.toughness"}}</span>
-        <input name="data.other.toughness" type="number" value="{{data.data.other.toughness}}" data=dtype="Number" disabled />
     </li>
 
     <li class="attribut-block">
-        <span class="other-label" data-skill-value="{{data.data.other.armor}}" data-skill-name="{{data.other.armor}}">{{localize "torgeternity.sheetLabels.armor"}}</span>
+        <span class="other-label" data-skill-value="{{data.data.other.toughness}}"
+            data-skill-name="{{data.other.toughness}}">{{localize "torgeternity.sheetLabels.toughness"}}</span>
+        <input name="data.other.toughness" type="number" value="{{data.data.other.toughness}}" data=dtype="Number"
+            disabled />
+    </li>
+
+    <li class="attribut-block">
+        <span class="other-label" data-skill-value="{{data.data.other.armor}}"
+            data-skill-name="{{data.other.armor}}">{{localize "torgeternity.sheetLabels.armor"}}</span>
         <input name="data.other.armor" type="number" value="{{data.data.other.armor}}" data=dtype="Number" disabled />
     </li>
 
     <li class="attribut-block">
-        <a class="attribut-block apply-fatigue" data-fatigue={{data.data.other.fatigue}} title="Click to apply fatigue">{{localize "torgeternity.sheetLabels.fatigue"}}</a>
-        <input name="data.other.fatigue" type="number" value="{{data.data.other.fatigue}}" data-dtype="Number" disabled />
+        <a class="attribut-block apply-fatigue" data-fatigue={{data.data.fatigue}}
+            title="Click to apply fatigue">{{localize "torgeternity.sheetLabels.fatigue"}}</a>
+        <input name="data.other.fatigue" type="number" value="{{data.data.fatigue}}" data-dtype="Number" disabled />
     </li>
-    
+
 </ul>
