@@ -854,7 +854,7 @@ export function torgDamage(damage, toughness) {
         };
     } else {
         const wounds = Math.floor(damageDiff / 5);
-        const shock = (Math.floor(damageDiff / 5) * 2) + 2;
+        const shock = wounds * 2;
         damages = {
             label: wounds + " " + game.i18n.localize('torgeternity.stats.wounds') + " " + shock + " " + game.i18n.localize('torgeternity.stats.shock'),
             shocks: shock,
