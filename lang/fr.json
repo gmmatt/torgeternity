@@ -507,6 +507,9 @@
                     "targetConcealment": "dissimulation de la cible"
                 },
                 "result": {
+                    "result": "résultat",
+                    "previous": "Précedent résultat de jet",
+                    "new": "Nouveau résultat de jet",
                     "actionTotal": "total de l'action",
                     "failure": "échec",
                     "outstandingSuccess": "succès spéctaculaire",

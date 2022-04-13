@@ -507,6 +507,9 @@
                     "targetConcealment": "Target Concealment"
                 },
                 "result": {
+                    "result": "result",
+                    "previous": "Previous roll total",
+                    "new": "New Roll Total",
                     "actionTotal": "Action Total",
                     "failure": "Failure",
                     "outstandingSuccess": "Outstanding Success",
