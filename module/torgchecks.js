@@ -875,13 +875,13 @@ export async function applyDamages(damageObject) {
             "data.shock.value": newShock,
             "data.wounds.value": newWound,
         });
-        //too many shocks => apply KO///////////////TODO
+        //too many shocks => apply KO/
         if (newShock >= targetToken.actor.data.data.shock.max) {
-            //TODO
+            //TODO : apply KO status
         }
-        //too many wounds => apply defeat///////////////TODO
+        //too many wounds => apply defeat
         if (newWound > targetToken.actor.data.data.wounds.max) {
-            //TODO
+            //TODO : test defeat apply defeat
         }
 
     } else {

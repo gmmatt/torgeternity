@@ -312,6 +312,6 @@ torgeternity.statusEffects = [{
         label: 'torgeternity.statusEffects.blind'
     }
 
-
+    //TODO : create KO and defeat status
 
 ]

@@ -83,7 +83,7 @@ export default class torgeternityActor extends Actor {
         this.data.data.other.armor = 0;
 
         //Set base fatigue to 2
-        this.data.data.other.fatigue = 2;
+        this.data.data.fatigue = 2;
 
         //Set base toughness
         this.data.data.other.toughness = parseInt(this.data.data.attributes.strength) + parseInt(this.data.data.other.armor);
@@ -243,7 +243,7 @@ export default class torgeternityActor extends Actor {
         // creating a card hand then render it
         let cardData = {
             name: this.actor.data.name,
-            permission: { default: CONST.DOCUMENT_PERMISSION_LEVELS.OBSERVER },
+            permission: { default: CONST.DOCUMENT_PERMISSION_LEVELS.OWNER },
             type: "hand"
         }
         characterHand = await Cards.create(cardData, { keepId: true, renderSheet: true });
