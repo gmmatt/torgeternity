@@ -1798,7 +1798,16 @@ form.actor-sheet header input[name="name"] {
     grid-row: 3/4;
     transition: all 0.6s cubic-bezier(1, 0, 0, 1) 0.1s;
     display: flex;
+    flex-direction: column;
     justify-content: center;
+}
+
+.window-content .actor-sheet .char_image img {
+    height: 94%;
+    margin-top: 3%;
+    max-width: unset;
+    max-height: unset;
+    width: 100%;
 }
 
 .window-content .actor-sheet .char_image:hover {
