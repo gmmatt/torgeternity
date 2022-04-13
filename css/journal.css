@@ -207,6 +207,7 @@ div.subtitleleft{
     shape-image-threshold: 0.1;
     max-width: 50% !important;
     max-height: 50% !important;
+    margin-left: 0.5rem !important;
     }
 /*...................................................................*/
 /*A class for more line-height, because links in journals are often to close to another*/
