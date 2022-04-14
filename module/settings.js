@@ -1,7 +1,6 @@
 import deckSettingMenu from './cards/cardSettingMenu.js';
+
 export function registerTorgSettings() {
-
-
     //--------welcome message 
 
     game.settings.register("torgeternity", "welcomeMessage", {
@@ -23,20 +22,22 @@ export function registerTorgSettings() {
         type: Boolean,
         default: true
     });
+    /*
+        //------pause image
 
-    //------pause image
+        game.settings.register("torgeternity", "pauseMedia", {
+            // game.setting.register("NameOfTheModule", "VariableName",
+            name: "torgeternity.settingMenu.pauseMedia.name", // Register a module setting with checkbox
+            hint: "torgeternity.settingMenu.pauseMedia.hint", // Description of the settings
+            type: window.Azzu.SettingsTypes.FilePickerImage,
+            default: {},
+            scope: 'world',
+            config: true,
+            restricted: true,
 
-    game.settings.register("torgeternity", "pauseMedia", {
-        // game.setting.register("NameOfTheModule", "VariableName",
-        name: "torgeternity.settingMenu.pauseMedia.name", // Register a module setting with checkbox
-        hint: "torgeternity.settingMenu.pauseMedia.hint", // Description of the settings
-        type: window.Azzu.SettingsTypes.FilePickerImage,
-        default: {},
-        scope: 'world',
-        config: true,
-        restricted: true,
+        });
 
-    });
+        */
     //animated chat messages
 
     game.settings.register("torgeternity", "animatedChat", {
@@ -58,11 +59,8 @@ export function registerTorgSettings() {
         scope: "world",
         config: true,
         type: String,
-        choices: {
-            torgEternity: "Core Rulebook GM Screen",
-            livingLand: "Living Land GM Screen"
-        },
-        default: "torgEternity"
+        choices: CONFIG.torgeternity.availableScreens,
+        default: "none"
     });
 
     //Hide Compendiums
@@ -76,8 +74,17 @@ export function registerTorgSettings() {
         onChange: () => window.location.reload()
 
     });
+    game.settings.register("torgeternity", "autoDamages", {
+        name: "torgeternity.settingMenu.autoDamages.name", // Register a module setting with checkbox
+        hint: "torgeternity.settingMenu.autoDamages.hint", // Description of the settings
+        scope: "world",
+        config: true,
+        type: Boolean,
+        default: false,
 
+    });
 
+    // the deck setting menu
     game.settings.registerMenu("torgeternity", "cardDecks", {
         name: "torgeternity.settingMenu.deckSetting.name",
         label: "torgeternity.settingMenu.deckSetting.label", // The text label used in the button
@@ -88,7 +95,7 @@ export function registerTorgSettings() {
         restricted: true // only GM can manage default decks
     });
 
-
+    // the deck setting 
     game.settings.register('torgeternity', 'deckSetting', {
         scope: 'world',
         config: false,
@@ -111,5 +118,18 @@ export function registerTorgSettings() {
             stormknights: {}
         }
     });
+
+    // disabling the clearance and XP for players
+    //---------Set up Cards
+    game.settings.register("torgeternity", "disableXP", {
+        name: "torgeternity.settingMenu.disableXP.name", // Register a module setting with checkbox
+        hint: "torgeternity.settingMenu.disableXP.hint", // Description of the settings
+        scope: "world",
+        config: true,
+        type: Boolean,
+        default: false
+    });
+
+
 
 }

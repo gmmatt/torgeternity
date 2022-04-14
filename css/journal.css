@@ -16,6 +16,7 @@ Div.editor-content p{
 Div.editor-content :is(ul, ol){
     text-align: justify;
     padding-right: 10px;
+    list-style-position: inside;
 }
 /*...................................................................*/
 /*hr will become Torg-Style*/
@@ -136,12 +137,14 @@ a.entity-link, a.content-link, a.inline-roll{
 div.subtitleright{
     position: relative;
     width: 30%;
+    /*height: 30%;*/
     float: right;
 }
 
 div.subtitleleft{
     position: relative;
     width: 30%;
+    /*height: 30%;*/
     float: left;
 }
 
@@ -204,6 +207,7 @@ div.subtitleleft{
     shape-image-threshold: 0.1;
     max-width: 50% !important;
     max-height: 50% !important;
+    margin-left: 0.5rem !important;
     }
 /*...................................................................*/
 /*A class for more line-height, because links in journals are often to close to another*/
@@ -297,6 +301,9 @@ Div.editor-content Div.directive2{
 /*...................................................................*/
 /*Multi-purpose classes*/
 
-Div.editor-content .noindent p + p {
+Div.editor-content .noindent {
     text-indent:0px;
 }
+    div.editor-content .noindent p + p {
+        text-indent: 0px;
+    }

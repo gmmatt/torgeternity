@@ -3,6 +3,10 @@ export const torgeternity = {};
 torgeternity.supportedLanguages = [
     "en", "fr", "de"
 ];
+torgeternity.availableScreens = {
+    'none': "none",
+}
+
 torgeternity.welcomeMessage = "";
 torgeternity.skillDialog = "";
 
@@ -308,6 +312,6 @@ torgeternity.statusEffects = [{
         label: 'torgeternity.statusEffects.blind'
     }
 
-
+    //TODO : create KO and defeat status
 
 ]
