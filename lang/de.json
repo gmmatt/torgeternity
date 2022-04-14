@@ -203,6 +203,7 @@
             "hope": "Hoffnung"
         },
         "sheetLabels": {
+            "editableTooltip": "erweitert das den Bogen der Bedrohung um editierbare Felder anzuzeigen",
             "stormknight": "Storm Knight",
             "stats": "Werte",
             "perks": "Vorzüge",
@@ -257,6 +258,7 @@
             "melee": "Bewaffneter Kampf",
             "unarmed": "Unbewaffnet",
             "xp": "EP",
+            "xpOnlyGM": "Nur die SL darf das füllen",
             "unspent": "nicht ausgegeben",
             "earned": "erhalten",
             "clearance": "Sicherheitsstufe",
@@ -478,31 +480,36 @@
             "value": "Wert",
             "notes": "Notizen",
             "check": {
-            "needTarget": "Der ausgeweitete Angriffswurf kann ohne Ziel nicht durchgeführt werden. Wähle ein Ziel und versuche es erneut.",
-            "cantUseUntrained": "Kann nicht untrainiert verwendet werden (mindestens Fertigkeitswert 1)",
-            "cantUseSkillRecquired": "Kann nicht ohne mindestens 1 Fertigkeitspunkt in der erforderlichen Fertigkeit verwendet werden.",
-            "modifier": {
-                "wounds": "Wunden",
-                "stymied": "Angeschlagen (-2 )",
-                "veryStymied": "Sehr Angeschlagen (-4)",
-                "darkness": "Dunkelheit",
-                "running": "Laufend (-2)",
-                "multiAttack": "Mehrfach-Attacke",
-                "multiAction": "Mehrfachaktion",
-                "multiTarget": "Mehrfach-Zielauswahl",
-                "targetSize": "Größe des Ziels",
-                "targetVulnerable": "Ziel verwundbar (+2)",
-                "targetVeryVulnerable": "Ziel sehr verwundbar (+4)",
-                "calledShot": "Gezielter Angriff",
-                "shortBurst": "Kurzer Feuerstoß (+2)",
-                "longBurst": "Langer Feuerstoß (+4)",
-                "heavyBurst": "Schwerer Feuerstoß (+6)",
-                "allOutAttack": "Rücksichtsloser Angriff",
-                "gezielterSchuss": "Zielen (+4)",
-                "blindFire": "Blindes Feuern (-6)",
-                "targetConcealment": "Deckungsschutz"
-            },
+                "testUnsuccessfull": "Probe nicht erfolgreich",
+                "needTarget": "Der ausgeweitete Angriffswurf kann ohne Ziel nicht durchgeführt werden. Wähle ein Ziel und versuche es erneut.",
+                "InteractionNeedTarget": "Der Interaktionsangriff kann ohne ausgewähltes Ziel nicht durchgeführt werden. Bitte Ziel auswählen und nochmal versuchen.",
+                "cantUseUntrained": "Kann nicht untrainiert verwendet werden (mindestens Fertigkeitswert 1)",
+                "cantUseSkillRecquired": "Kann nicht ohne mindestens 1 Fertigkeitspunkt in der erforderlichen Fertigkeit verwendet werden.",
+                "modifier": {
+                    "wounds": "Wunden",
+                    "stymied": "Angeschlagen (-2 )",
+                    "veryStymied": "Sehr Angeschlagen (-4)",
+                    "darkness": "Dunkelheit",
+                    "running": "Laufend (-2)",
+                    "multiAttack": "Mehrfach-Attacke",
+                    "multiAction": "Mehrfachaktion",
+                    "multiTarget": "Mehrfach-Zielauswahl",
+                    "targetSize": "Größe des Ziels",
+                    "targetVulnerable": "Ziel verwundbar (+2)",
+                    "targetVeryVulnerable": "Ziel sehr verwundbar (+4)",
+                    "calledShot": "Gezielter Angriff",
+                    "shortBurst": "Kurzer Feuerstoß (+2)",
+                    "longBurst": "Langer Feuerstoß (+4)",
+                    "heavyBurst": "Schwerer Feuerstoß (+6)",
+                    "allOutAttack": "Rücksichtsloser Angriff",
+                    "gezielterSchuss": "Zielen (+4)",
+                    "blindFire": "Blindes Feuern (-6)",
+                    "targetConcealment": "Deckungsschutz"
+                },
             "result": {
+                "result": "Ergebnis",
+                "previous": "Summe des vorangegangenen Wurfs",
+                "new": "Neue Summe",
                 "actionTotal": "Aktion insgesamt",
                 "failure": "Fehlschlag",
                 "outstandingSuccess": "Hervorragender Erfolg",
@@ -619,7 +626,7 @@
         },
         "poolToggle": {
             "inPool": "Karte im Aktionsvorrat",
-            "toogle": "Aktionenvorrat umschalten"
+            "toogle": "Aktionsvorrat umschalten"
         },
         "monarch": {
             "play": "Diese Karte ausspielen",
@@ -656,7 +663,20 @@
                 "name": "Standard-Deckkonfiguration",
                 "label": "Standard-Kartenpack-Konfiguration",
                 "hint": "Konfiguriere hier die Standard-Decks, aus denen die Karten gezogen und abgelegt werden."
-            }
+            },
+            "defaultUserHand": {
+                "name": "Standard-Benutzer Kartenhand",
+                "hint": "Kartenhand-Name für diesen Benutzer."
+            },
+            "disableXP": {
+                "name": "Deaktiviere die Änderungsmöglichkeit der EP für Spieler",
+                "hint": "Wenn angehakt, darf nur die SL die EP im Charakterdatenblatt ändern."
+            },
+            "autoDamages": {
+                "name": "Schaden automatisch anwenden",
+                "hint": "Wenn angehakt, werden Schock und Wunden automatisch auf das Ziel angewendet werden."
+
+            }            
     },
     "notifications": {
         "macroTypeWarning": "Du kannst nur Makro-Buttons für Items/Attribute/Fertigkeiten kreieren, die dir gehören.",
@@ -671,8 +691,15 @@
         "noHands": "Keine Kartenhand verfügbar!",
         "dramaDeckEmpty": "Das Dramadeck ist aufgebraucht. Bitte das Dramadeck zurücksetzen.",
         "onlyReservedCard": "Bitte nur Karten aus dem Aktionenpool spielen.",
-        "noActiveEffectInOwnedItem": "Das Ändern von aktiven Effekten innerhalb eines Items mit Besitzrechten ist zur Zeit noch nicht implementiert."
-    }
+        "noActiveEffectInOwnedItem": "Das Ändern von aktiven Effekten innerhalb eines Items mit Besitzrechten ist zur Zeit noch nicht implementiert.",
+        "noTarget": "Kein valides Token im Ziel"
+    },
+    "gmScreen": {
+        "title": "SL-Schirm",
+        "toggle": "SL-Schirm an-/ ausschalten",
+        "noScreen": "Kein SL-Schirm verfügbar",
+        "noScreenMessage": "Du hast keinen SL-Schirm ausgewählt. SL-Schirme werden von Premium-Modulen unterstützt, die du hier findest:"
+    }    
     },
     "CARD": {
         "TypeCosm": "Cosm",
