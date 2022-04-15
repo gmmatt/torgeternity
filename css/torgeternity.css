@@ -183,6 +183,10 @@ div.actor ::-webkit-scrollbar {
     cursor: pointer;
 }
 
+.window-app.actor .window-content form select {
+    color: black;
+}
+
 .window-app .window-content form button[disabled] {
     color: gray;
     border: 1px solid red;
@@ -1493,6 +1497,10 @@ div.readme a.compendium {
     }
 }
 
+.torgeternity.actor {
+    min-width: 450px;
+}
+
 .torgeternity.actor .window-content {
     background-image: url(../images/bg-sheet.webp);
     background-size: cover;
@@ -1559,6 +1567,20 @@ form.actor-sheet header input[name="name"] {
     flex: none;
 }
 
+.tabsOn .window-content .actor-sheet h5.editable-tooltip {
+    display: none
+}
+
+.window-content .actor-sheet h5.editable-tooltip {
+    margin: 0px;
+    width: 100%;
+    text-align: center;
+    padding: 0px;
+    position: absolute;
+    text-shadow: 0px 0px 3px rgb(255, 74, 74);
+    font-size: 0.8em;
+}
+
 .window-content .actor-sheet section.sheet-body {
     height: 100%;
 }
@@ -1579,7 +1601,7 @@ form.actor-sheet header input[name="name"] {
 .window-content .actor-sheet .tab[data-tab].active {
     display: grid;
     grid-template-columns: repeat(8, 1fr);
-    grid-template-rows: repeat(6, minmax(80px, max-content));
+    grid-template-rows: 0.3fr 0.2fr 0.2fr 0.13fr 0.3fr 0.3fr;
     grid-gap: 0px 5px;
     justify-content: center;
     width: 100%;
@@ -1617,6 +1639,14 @@ form.actor-sheet header input[name="name"] {
     text-transform: capitalize;
     right: -310px;
     top: 310px;
+}
+
+.tabsOff .window-content .actor-sheet nav.tabs {
+    display: none
+}
+
+.tabsOff .window-content .actor-sheet #threat-editor {
+    display: none;
 }
 
 .window-content .actor-sheet nav.tabs a.item {
@@ -1685,6 +1715,12 @@ form.actor-sheet header input[name="name"] {
 .window-content .actor-sheet input[type="number"]::placeholder {
     color: #293131;
     text-shadow: 0px 0px 10px black;
+}
+
+.window-content .actor-sheet input.small-input {
+    min-width: 5px;
+    border: none;
+    width: 20px;
 }
 
 .window-content .actor-sheet img {
@@ -1780,16 +1816,7 @@ form.actor-sheet header input[name="name"] {
     grid-row: 3/4;
     transition: all 0.6s cubic-bezier(1, 0, 0, 1) 0.1s;
     display: flex;
-    flex-direction: column;
     justify-content: center;
-}
-
-.window-content .actor-sheet .char_image img {
-    height: 94%;
-    margin-top: 3%;
-    max-width: unset;
-    max-height: unset;
-    width: 100%;
 }
 
 .window-content .actor-sheet .char_image:hover {
@@ -1837,7 +1864,7 @@ form.actor-sheet header input[name="name"] {
     display: block;
 }
 
-.window-content .actor-sheet .sheet-header select {
+.window-content .actor-sheet select {
     color: black;
     border: none;
     border-bottom: 1px solid grey;
@@ -1846,8 +1873,8 @@ form.actor-sheet header input[name="name"] {
     font-family: Signika;
 }
 
-.window-content .actor-sheet .sheet-header select:active,
-.window-content .actor-sheet .sheet-header select:focus {
+.window-content .actor-sheet select:active,
+.window-content .actor-sheet select:focus {
     box-shadow: 0 0 5px #0062ff;
 }
 
@@ -2330,6 +2357,7 @@ form.actor-sheet header input[name="name"] {
 .window-content .actor-sheet .threat-editor .threat-edit {
     flex-direction: column;
     font-family: Arial;
+    margin-top: 5px;
 }
 
 .window-content .actor-sheet .stat-block {
@@ -2345,9 +2373,9 @@ form.actor-sheet.threat img.profile-img {
 form.actor-sheet.threat input[type="checkbox"] {
     opacity: 0.01;
     position: relative;
-    left: -25px;
     cursor: pointer;
     top: 5px;
+    left: -3px;
     width: 10px;
 }
 
@@ -2355,7 +2383,7 @@ form.actor-sheet.threat a.toggleFav {
     color: grey;
     position: relative;
     font-size: 10px;
-    left: -4px;
+    left: 5px;
 }
 
 form.actor-sheet.threat a.toggleFav.checked {
@@ -2365,7 +2393,7 @@ form.actor-sheet.threat a.toggleFav.checked {
 
 form.actor-sheet.threat span.inputsFav {
     display: inline-block;
-    max-width: 40px;
+    max-width: 100px;
 }
 
 form.actor-sheet.threat div.skill-list-edit {
@@ -2373,18 +2401,21 @@ form.actor-sheet.threat div.skill-list-edit {
     justify-items: flex-end;
     justify-content: center;
     align-items: center;
-    grid-template-columns: repeat(3, 0.3fr);
+    grid-template-columns: repeat(3, 1fr);
 }
 
 form.actor-sheet.threat div.skill-list-edit .skill-element-edit {
     display: flex;
     padding-right: 5px;
     align-items: center;
+    flex-direction: row;
+    border-bottom: 1px solid lightgray;
 }
 
 form.actor-sheet.threat div.skill-list-edit .skill-element-edit span {
     text-align: end;
     font-family: Arial;
+    margin-right: 15px;
 }
 
 form.actor-sheet.threat div.skill-list-edit .skill-element-edit span.inputsFav {
@@ -2396,9 +2427,9 @@ form.actor-sheet.threat div.skill-list-edit .skill-element-edit span.inputsFav {
 form.actor-sheet.threat div.skill-list-edit .skill-element-edit span.inputsFav input[type="checkbox"],
 form.actor-sheet.threat div.skill-list-edit .skill-element-edit span.inputsFav a.toggleFav {
     position: absolute;
-    left: 20px;
+    left: 19px;
     max-width: 30px;
-    top: -5px;
+    top: 3px;
     width: 10px;
     margin: 0px;
     background: white;
