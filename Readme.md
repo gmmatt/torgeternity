@@ -8,6 +8,20 @@
 For manual installation, use the provided manifest URL in the "*Install System*" popup window 
 while managing game systems.
 
+v. 2.3.7
+- New GM screen interface - be sure to update your Living Land and
+  Core Rulebook modules before using this feature.
+- Hotkeys for GM Screen ("G") and player hands ("H")
+- Fixed issue where interactions with no adds would not properly
+  generate an interaction attack.
+- Threat interface improvements. Expand the threat window to edit
+  the threat's statistics and access its tabs. Collapse the threat
+  window to work with a compact stat block.
+- Beta Feature - (use with caution!): you can now automaticlaly apply
+  damage to targets. Check the box in the system settings menu to
+  enable this feature.
+- Thanks to Rwan for the improvements in this update!
+
 v. 2.3.6
 - Fixed issue where player hand cosm button was drawing Destiny
   cards instead
