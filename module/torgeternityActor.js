@@ -4,6 +4,10 @@ export default class torgeternityActor extends Actor {
 
     prepareBaseData() {
 
+        //Set base fatigue to 2
+        this.data.data.other.fatigue = 2;
+
+        
         if (this.data._source.type === "stormknight") {
             mergeObject(this.data.token, {
 
@@ -82,9 +86,6 @@ export default class torgeternityActor extends Actor {
 
             //Set base armor to zero
             this.data.data.other.armor = 0;
-
-            //Set base fatigue to 2
-            this.data.data.other.fatigue = 2;
 
             //Set base toughness
             this.data.data.other.toughness = parseInt(this.data.data.attributes.strength) + parseInt(this.data.data.other.armor);
