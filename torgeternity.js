@@ -261,10 +261,12 @@ Hooks.on("ready", async function() {
     //----pause image----
     Hooks.on("renderPause", () => {
 
-        let path = game.settings.get("torgeternity", "pauseMedia");
-        let img = document.getElementById("pause").firstElementChild;
-        path = "./" + path;
-        img.style.content = `url(${path})`
+        // Removing this because it doesn't appear to do anything any longer?
+
+        // let path = game.settings.get("torgeternity", "pauseMedia");
+        // let img = document.getElementById("pause").firstElementChild;
+        // path = "./" + path;
+        // img.style.content = `url(${path})`
     })
 
     //-------define a dialog for external links
