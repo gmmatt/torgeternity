@@ -9,15 +9,19 @@ export default class torgeternityActor extends Actor {
 
 
     prepareData() {
-        super.prepareData();
+        // super.prepareData();
 
         //Storm Knights AND Threats
 
-        //Set base fatigue to 2
-        this.data.data.fatigue = 2;
 
         // Storm Knights ONLY
         if (this.data._source.type === "stormknight") {
+            
+            mergeObject(this.data.token, {
+
+                actorLink: true,
+                disposition: 1
+            }, { overwrite: true });
             var skillset = this.data.data.skills;
 
             // Derive Skill values for Storm Knights
@@ -95,13 +99,8 @@ export default class torgeternityActor extends Actor {
             //Set base toughness
             this.data.data.other.toughness = parseInt(this.data.data.attributes.strength) + parseInt(this.data.data.other.armor);
 
-
-
-            mergeObject(this.data.token, {
-
-                actorLink: true,
-                disposition: 1
-            }, { overwrite: true });
+            //Set base fatigue to 2
+            this.data.data.fatigue = 2;
 
 
             //Set clearance level
@@ -205,6 +204,7 @@ export default class torgeternityActor extends Actor {
                     break;
             }
         }
+
     }
 
     applyActiveEffects() {
