@@ -139,6 +139,7 @@ div.subtitleright{
     width: 30%;
     /*height: 30%;*/
     float: right;
+    margin-left:0.5rem;
 }
 
 div.subtitleleft{
@@ -146,6 +147,7 @@ div.subtitleleft{
     width: 30%;
     /*height: 30%;*/
     float: left;
+    margin-right:0.5rem;
 }
 
     div.subtitleright p, div.subtitleleft p{
