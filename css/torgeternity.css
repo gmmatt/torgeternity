@@ -1604,7 +1604,7 @@ form.actor-sheet header input[name="name"] {
 .window-content .actor-sheet .tab[data-tab].active {
     display: grid;
     grid-template-columns: repeat(8, 1fr);
-    grid-template-rows: 0.3fr 0.2fr 0.2fr 0.13fr 0.3fr 0.3fr;
+    grid-template-rows: repeat(8, minmax(100px, min-content));
     grid-gap: 0px 5px;
     justify-content: center;
     width: 100%;
@@ -1820,6 +1820,7 @@ form.actor-sheet header input[name="name"] {
     transition: all 0.6s cubic-bezier(1, 0, 0, 1) 0.1s;
     display: flex;
     justify-content: center;
+    flex-direction: column;
 }
 
 .window-content .actor-sheet .char_image:hover {
