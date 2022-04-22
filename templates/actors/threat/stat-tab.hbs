@@ -47,7 +47,7 @@
 		<b>{{localize "torgeternity.sheetLabels.skills"}}:&nbsp;</b>
 		<span class="inline-skill-list">
 			{{#each data.data.skills as |content name|}}
-			{{#if content.adds}}
+			{{#if content.value}}
 			<span class="inline-skill-item">
 				<a class="skill-roll" data-testtype="skill" data-baseattribute="{{content.baseAttribute}}"
 					data-adds="{{content.adds}}" data-value="{{content.value}}"
