@@ -5,7 +5,8 @@ Div.editor-content p{
     }
 
     Div.editor-content p + p{
-        text-indent: 12px;
+        text-indent: 0.75rem;
+        margin-bottom: 0.75rem;
         }
 
     Div.editor-content p:first-of-type{
@@ -35,17 +36,19 @@ Div.editor-content h1{
     background-size:100% 100%;
     overflow:hidden;
     border:none;
+    margin: 0.625rem 0;
     }
 /*...................................................................*/
 /*The <h2> Header will become Torg-Style with grey outlines and centered align*/
 Div.editor-content h2 {
     text-align: center;
-    font-size: 2em;
+    font-size: 1.5rem;
     text-shadow:    #878787 1.5px 1.5px 0px,
                     #878787 1.5px -1.5px 0px,
                     #878787 -1.5px 1.5px 0px,
                     #878787 -1.5px -1.5px 0px;
     text-transform:uppercase;
+    margin: 1rem 0px 0.7rem 0px;
     }
 /*...................................................................*/
 /*There is still a headline, bolt white upper case with a small black outline. As this wasn't defined, it will be <h4> for not confusing with other headlines*/
@@ -74,6 +77,20 @@ Div.editor-content img{
     border-image: none;
     border: none;
     }
+/*...................................................................*/
+/*formatting tables*/
+Div.editor-content table{
+    font-size: 0.875rem;
+    background-color: transparent;
+}
+
+.journal-sheet .window-content .editor .editor-content tr:nth-child(even){
+    background-color: #F6E9D7;
+}
+
+.journal-sheet .window-content .editor .editor-content tr:nth-child(odd){
+    background-color: transparent;
+}
 /*...................................................................*/
 /*Inline links are pretty boring in standard-style, let's pimp'em!*/
 a.entity-link, a.content-link, a.inline-roll{
@@ -227,8 +244,7 @@ div.subtitleleft{
 .sidenote :is(p, h2, h3, h4, ul){
     background-color: rgba(255, 247, 247, 0.5);
     margin:0 !important;
-    padding-left:10px;
-    padding-top: 10px;
+    padding:10px 0px 10px 10px;
     }
     .sidenote ul{
         list-style-position: inside;
@@ -253,7 +269,7 @@ div.subtitleleft{
 /*...................................................................*/
 .exampletext{
     background-color: rgb(241,221,192);
-    margin: 0px 30px;
+    margin: 16px 30px;
     padding: 5px 10px;
     font-size: 14px;
     text-align: justify;
