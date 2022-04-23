@@ -8,6 +8,10 @@
 For manual installation, use the provided manifest URL in the "*Install System*" popup window 
 while managing game systems.
 
+v. 2.3.9
+- Fixed bug from last two releases that caused problems with
+  updating threat skills
+
 v. 2.3.8
 - Fixed bug from 2.3.7 that caused all threats to have 3 wounds
 - Fixed bug from 2.3.7 that caused effects (such as armor) to not be applied
