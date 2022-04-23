@@ -1,3 +1,39 @@
+/*New Journal window styling, 2nd section for restyling the submit changes button*/
+.journal-sheet .window-content{
+    background-image: url(../images/journal-background.webp);
+}
+.journal-sheet .window-content .editor{
+    padding:0%;
+    top:12%;
+    height: 82%;
+}
+.editor-content{
+    background-color: rgba(255, 247, 247, 0.25);
+    padding-left: 10px;
+}
+.window-app .window-content input[type="text"], .window-app .window-content input[type="number"], .window-app .window-content input[type="password"], .window-app .window-content input[type="date"], .window-app .window-content input[type="time"] .editor{
+    background-color: rgba(255,255,255, 0.25);
+}
+.window-app .window-content form button, .window-app .window-content form select {
+    text-shadow:    black    1.3px 1.3px 0px,
+                    black    1.3px -1.3px 0px,
+                    black    -1.3px 1.3px 0px,
+                    black    -1.3px 1.3px 0px;
+    
+}
+
+.journal-sheet .window-content button[name="submit"]{
+    background-color: rgba(0, 0, 0, 0.45);
+    text-shadow:    black    1.3px 1.3px 0px,
+                    black    1.3px -1.3px 0px,
+                    black    -1.3px 1.3px 0px,
+                    black    -1.3px 1.3px 0px;
+}
+form button {
+    border: 1px groove var(--color-border-light-highlight);
+}
+
+/*...................................................................*/
 /*adjustments for <p>*/
 Div.editor-content p{
     text-align:justify;
@@ -36,11 +72,11 @@ Div.editor-content h1{
     background-size:100% 100%;
     overflow:hidden;
     border:none;
-    margin: 0.625rem 0;
+    margin: 1rem 0px 0.7rem 0px;
     }
 /*...................................................................*/
 /*The <h2> Header will become Torg-Style with grey outlines and centered align*/
-Div.editor-content h2 {
+.editor .editor-content h2 {
     text-align: center;
     font-size: 1.5rem;
     text-shadow:    #878787 1.5px 1.5px 0px,
@@ -50,6 +86,10 @@ Div.editor-content h2 {
     text-transform:uppercase;
     margin: 1rem 0px 0.7rem 0px;
     }
+/*...................................................................*/
+.editor .editor-content h3 {
+    margin: 2px 0px 9px 0px;
+}
 /*...................................................................*/
 /*There is still a headline, bolt white upper case with a small black outline. As this wasn't defined, it will be <h4> for not confusing with other headlines*/
 Div.editor-content h4 {
@@ -62,6 +102,7 @@ Div.editor-content h4 {
                  black    -1.3px 1.3px 0px,
                  black    -1.3px 1.3px 0px;
     text-transform: uppercase;
+    margin: 1rem 0px 0.7rem 0px;
 }
 
 /*In Cosm-Books, there is a headline similiar to h4 but with the bar that is used as background-image for the <hr>. Making this a class.*/
