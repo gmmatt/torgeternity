@@ -22,6 +22,9 @@
                     black    -1.3px 1.3px 0px;
     
 }
+body#tinymce.mce-content-body{
+    background-color: rgba(255, 247, 247, 0.25);
+}
 
 .journal-sheet .window-content button[name="submit"]{
     background-color: rgba(0, 0, 0, 0.45);
@@ -133,6 +136,26 @@ Div.editor-content table{
 .journal-sheet .window-content .editor .editor-content tr:nth-child(odd){
     background-color: transparent;
 }
+/*...................................................................*/
+/*Formatting of Blockcode Torg-Style*/
+blockquote{
+    background-color: rgb(241,221,192);
+    margin: 16px 30px;
+    padding: 5px 10px;
+    font-size: 14px;
+    text-align: justify;
+    overflow:hidden;
+    border-left: none;
+    font-style:normal;
+}
+
+    blockquote p:first-of-type{
+        text-indent: 0px;
+    }
+
+    blockquote p + p{
+        text-indent: 0px;
+    }
 /*...................................................................*/
 /*Inline links are pretty boring in standard-style, let's pimp'em!*/
 a.entity-link, a.content-link, a.inline-roll{
@@ -323,6 +346,7 @@ div.subtitleleft{
     .exampletext.exampletext p + p{
         text-indent: 0px;
     }
+
 /*...................................................................*/
 /*Adventures often come with directives from Sebastian. This class is to bring them on the grafic parchments with the right font. Please use an h3 for the headline.*/
 @font-face {
