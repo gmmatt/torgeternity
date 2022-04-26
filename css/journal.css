@@ -315,6 +315,7 @@ div.subtitleleft{
         background-color: rgba(255, 247, 247, 0.5);
     margin:0;
     padding-bottom:8px;
+    padding-left: 10px;
     }
     .sidenote ul{
         list-style-position: inside;
