@@ -306,19 +306,24 @@ div.subtitleleft{
     background-size: cover;
     padding: 10px;
     }
-.editor-content .sidenote :is(p, h2, h3, h4, ul, table){
+.editor-content .sidenote :is(h2, h3, h4, ul, table){
     background-color: rgba(255, 247, 247, 0.5);
     margin:0;
     padding:10px;
+    }
+    .editor-content .sidenote p{
+        background-color: rgba(255, 247, 247, 0.5);
+    margin:0;
+    padding-bottom:8px;
     }
     .sidenote ul{
         list-style-position: inside;
         text-align: justify;
         padding-right: 10px;
     }
-.sidenote :first-of-type{
-    padding-top: 0;
-    }
+    .sidenote :first-of-type{
+        padding-top: 0;
+        }
 
 .sidenote.left{
     float: left;
