@@ -28,6 +28,9 @@
     text-shadow: none;
     color:black;
 }
+.window-app.actor .window-content form select{
+    text-shadow:none;
+}
 body#tinymce.mce-content-body{
     background-color: rgba(255, 247, 247, 0.25);
 }
