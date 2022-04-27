@@ -20,8 +20,11 @@
                     black    1.3px -1.3px 0px,
                     black    -1.3px 1.3px 0px,
                     black    -1.3px 1.3px 0px;
-    
 }
+.item .window-content form.item-sheet .asside select {
+    text-shadow: none;
+}
+
 body#tinymce.mce-content-body{
     background-color: rgba(255, 247, 247, 0.25);
 }
