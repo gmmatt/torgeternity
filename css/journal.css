@@ -24,7 +24,10 @@
 .item .window-content form.item-sheet .asside select {
     text-shadow: none;
 }
-
+.tox .tox-tbtn--bespoke .tox-tbtn__select-label{
+    text-shadow: none;
+    color:black;
+}
 body#tinymce.mce-content-body{
     background-color: rgba(255, 247, 247, 0.25);
 }
