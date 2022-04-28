@@ -43,7 +43,11 @@ body#tinymce.mce-content-body{
     background-color: rgba(255, 247, 247, 0.25);
     background: none;
 }
+.tox.tox-tinymce .tox-tbtn{
+    background:none
+}
 /*/fixed stylebleeds*/
+/*Changing safe button on journal entry*/
 .journal-sheet .window-content button[name="submit"]{
     background-color: rgba(0, 0, 0, 0.45);
     text-shadow:    black    1.3px 1.3px 0px,
