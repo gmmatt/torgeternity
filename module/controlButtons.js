@@ -15,7 +15,7 @@
                });
            }
        }
-       CONFIG.Canvas.layers.torgeternity = { layerClass: torgLayer, group: "primary" }
+       CONFIG.Canvas.layers.torgeternity = { layerClass: ControlsLayer, group: "primary" }
 
        Hooks.on("getSceneControlButtons", btns => {
 
