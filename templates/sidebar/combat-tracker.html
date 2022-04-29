@@ -75,7 +75,6 @@
 
     <ol id="combat-tracker" class="directory-list">
         {{#each combat.turns as |turn id|}}
-        {{log turn}}
         <li class="combatant actor directory-item flexrow dispo{{turn.token.data.disposition}}
             {{#ifequal ../this.combat.current.turn id}} active{{/ifequal}}
             " data-combatant-id="{{turn.id}}">
