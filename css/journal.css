@@ -46,6 +46,14 @@ body#tinymce.mce-content-body{
 .tox.tox-tinymce .tox-tbtn{
     background:none
 }
+.tox.tox-tinymce .tox-edit-area__iframe {
+    background-color: #ffffff7a;
+}
+
+/*
+.tox .tox-editor-container {
+    background-color: #ffffff7a;
+    }*/
 /*/fixed stylebleeds*/
 /*Changing safe button on journal entry*/
 .journal-sheet .window-content button[name="submit"]{
@@ -58,6 +66,7 @@ body#tinymce.mce-content-body{
 form button {
     border: 1px groove var(--color-border-light-highlight);
 }
+
 
 /*...................................................................*/
 /*adjustments for <p>*/
@@ -89,6 +98,7 @@ Div.editor-content hr {
     width:auto;
     border:none;
     transform: scaleY(0.5);
+    margin: -15px 10px -15px 0px;
     }
 /*...................................................................*/
 /*h1 will become Torg-Style*/
