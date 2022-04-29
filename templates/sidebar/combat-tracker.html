@@ -75,6 +75,7 @@
 
     <ol id="combat-tracker" class="directory-list">
         {{#each combat.turns as |turn id|}}
+        {{log turn}}
         <li class="combatant actor directory-item flexrow dispo{{turn.token.data.disposition}}
             {{#ifequal ../this.combat.current.turn id}} active{{/ifequal}}
             " data-combatant-id="{{turn.id}}">
@@ -130,7 +131,7 @@
                     {{#ifequal turn.actor.type "stormknight"}}
                     <ul style="margin: 0 0 0.5em 0">
                         {{localize "torgeternity.sheetLabels.pool"}}:
-                        <span class="pool-list">{{{poolList turn.name}}}</span>
+                        <span class="pool-list">{{{poolList turn.actor.name}}}</span>
 
                     </ul>
                     {{/ifequal}}
