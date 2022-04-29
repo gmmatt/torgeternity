@@ -232,7 +232,8 @@ export default class torgeternityActor extends Actor {
 
     //adding a method to get defauld stormknight cardhand
     getDefaultHand() {
-        if (game.settings.get("torgeternity", "deckSetting").stormknights.hasOwnProperty(this.id)) {
+
+        if (game.settings.get("torgeternity", "deckSetting").stormknights[this.id]) {
             return game.cards.get(game.settings.get("torgeternity", "deckSetting").stormknights[this.id]);
 
         } else {
