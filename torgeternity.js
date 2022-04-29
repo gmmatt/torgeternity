@@ -874,3 +874,24 @@ Hooks.on('updateActor', (actor, data, options, id) => {
     //updating playerList with users character up-to-date data
     ui.players.render(true);
 });
+
+// by default creating a  hand for each stormknight
+Hooks.on("createActor", async(actor, options, userId) => {
+    if (actor.type === "stormknight") {
+        let cardData = {
+            name: actor.name,
+            type: "hand"
+        }
+        let characterHand = await Cards.create(cardData);
+
+        // getting ids of actor and card hand
+        let actorId = actor.id;
+        let handId = characterHand.id
+
+        // storing ids in game.settings
+        let settingData = game.settings.get("torgeternity", "deckSetting");
+        settingData.stormknights[actorId] = handId;
+        game.settings.set("torgeternity", "deckSetting", settingData);
+    }
+
+})
