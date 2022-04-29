@@ -106,24 +106,32 @@ Hooks.once("init", async function() {
 
 Hooks.once("setup", async function() {
 
-        modifyTokenBars();
-        //changing stutus marker 
-        //preparing status marker
+    modifyTokenBars();
+    //changing stutus marker 
+    //preparing status marker
 
-        if (game.settings.get("core", "language") === "fr") {
-            for (let effect of CONFIG.statusEffects) {
-                effect.icon = effect.icon.replace("systems/torgeternity/images/status-markers", "systems/torgeternity/images/status-markers/fr")
-            }
+    if (game.settings.get("core", "language") === "fr") {
+        for (let effect of CONFIG.statusEffects) {
+            effect.icon = effect.icon.replace("systems/torgeternity/images/status-markers", "systems/torgeternity/images/status-markers/fr")
         }
+    }
 
-    }),
 
-    Hooks.once("diceSoNiceReady", (dice3d) => {
-        registerDiceSoNice(dice3d);
-    });
+});
+
+Hooks.once("diceSoNiceReady", (dice3d) => {
+    registerDiceSoNice(dice3d);
+});
 
 //-------------once everything ready
 Hooks.on("ready", async function() {
+    // code to migrate new game settings
+    let deckSettings = game.settings.get("torgeternity", "deckSetting")
+    if (deckSettings.stormknightsHands) {
+        deckSettings.stormknights = deckSettings.stormknightsHands;
+        deckSettings.stormknightsHands = null;
+        game.settings.set("torgeternity", "deckSetting", deckSettings)
+    }
     sheetResize();
     ui.gmscreen = new GMScreen();
 
