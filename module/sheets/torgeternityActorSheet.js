@@ -684,7 +684,8 @@ export default class torgeternityActorSheet extends ActorSheet {
             defaultUnarmed: defaultUnarmed,
             targetDodge: targetDodge,
             targetMelee: targetMelee,
-            targetUnarmed: targetUnarmed
+            targetUnarmed: targetUnarmed,
+            disfavored: false
 
         }
 

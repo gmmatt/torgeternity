@@ -4,6 +4,7 @@
         <select name="defense" class="input-box">
             <option 
                 value="dodge"
+                id="defend-dodge" 
                 {{#if test.defaultDodge}}
                     selected = "true"
                 {{/if}}
@@ -13,6 +14,7 @@
             </option>
             <option 
                 value="meleeCombat"
+                id="defend-meleeCombat" 
                 {{#if test.defaultMelee}}
                     selected = "true"
                 {{/if}}
@@ -21,7 +23,8 @@
                 ({{test.targetMelee}})
             </option>
             <option 
-                value="unarmedCombat"
+                value="unarmedCombat" 
+                id="defend-unarmedCombat"
                 {{#if test.defaultUnarmed}}
                     selected = "true"
                 {{/if}}
