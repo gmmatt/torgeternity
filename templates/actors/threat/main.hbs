@@ -44,10 +44,15 @@
         <div class="tab background block" data-group="primary" data-tab="background">
             <h1 class="list-section-heading">{{localize "torgeternity.sheetLabels.backgroundAndNotes"}}</h1>
             <div>
-            {{editor content=data.data.details.description target="data.details.description" button=true owner=owner
-            editable=editable}}</div>
+                {{editor content=data.data.details.description target="data.details.description" button=true owner=owner
+                editable=editable}}</div>
         </div>
-        
+
 
     </section>
+
+    <h5 class="editable-tooltip">{{localize "torgeternity.sheetLabels.editableTooltip"}}
+        <i class="fas fa-chevron-double-down"></i>
+    </h5>
+
 </form>

@@ -1,3 +1,74 @@
+/*New Journal window styling, 2nd section for restyling the submit changes button*/
+.journal-sheet .window-content{
+    background-image: url(../images/journal-background.webp);
+}
+.journal-sheet .window-content .editor{
+    padding:0%;
+    top:12%;
+    height: 82%;
+    width: 91.5%;
+}
+.editor-content{
+    background-color: rgba(255, 247, 247, 0.25);
+    padding-left: 10px;
+}
+.window-app .window-content input[type="text"], .window-app .window-content input[type="number"], .window-app .window-content input[type="password"], .window-app .window-content input[type="date"], .window-app .window-content input[type="time"] .editor{
+    background-color: rgba(255,255,255, 0.25);
+}
+.window-app .window-content form button, .window-app .window-content form select {
+    text-shadow:    black    1.3px 1.3px 0px,
+                    black    1.3px -1.3px 0px,
+                    black    -1.3px 1.3px 0px,
+                    black    -1.3px 1.3px 0px;
+    background-image:url(../images/lightning_bar.webp);
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position-x: center;
+}
+/*Fixing stylebleed*/
+.item .window-content form.item-sheet .asside select {
+    text-shadow: none;
+    background: none;
+}
+.tox .tox-tbtn--bespoke .tox-tbtn__select-label{
+    text-shadow: none;
+    color:black;
+    background: none;
+}
+.window-app.actor .window-content form select{
+    text-shadow:none;
+    background: none;
+}
+body#tinymce.mce-content-body{
+    background-color: rgba(255, 247, 247, 0.25);
+    background: none;
+}
+.tox.tox-tinymce .tox-tbtn{
+    background:none
+}
+.tox.tox-tinymce .tox-edit-area__iframe {
+    background-color: #ffffff7a;
+}
+
+/*
+.tox .tox-editor-container {
+    background-color: #ffffff7a;
+    }*/
+/*/fixed stylebleeds*/
+/*Changing safe button on journal entry*/
+.journal-sheet .window-content button[name="submit"]{
+    background-color: rgba(0, 0, 0, 0.45);
+    text-shadow:    black    1.3px 1.3px 0px,
+                    black    1.3px -1.3px 0px,
+                    black    -1.3px 1.3px 0px,
+                    black    -1.3px 1.3px 0px;
+}
+form button {
+    border: 1px groove var(--color-border-light-highlight);
+}
+
+
+/*...................................................................*/
 /*adjustments for <p>*/
 Div.editor-content p{
     text-align:justify;
@@ -5,7 +76,8 @@ Div.editor-content p{
     }
 
     Div.editor-content p + p{
-        text-indent: 12px;
+        text-indent: 0.75rem;
+        margin-bottom: 0.75rem;
         }
 
     Div.editor-content p:first-of-type{
@@ -26,6 +98,7 @@ Div.editor-content hr {
     width:auto;
     border:none;
     transform: scaleY(0.5);
+    margin: -15px 10px -15px 0px;
     }
 /*...................................................................*/
 /*h1 will become Torg-Style*/
@@ -35,18 +108,24 @@ Div.editor-content h1{
     background-size:100% 100%;
     overflow:hidden;
     border:none;
+    margin: 1rem 0px 0.7rem 0px;
     }
 /*...................................................................*/
 /*The <h2> Header will become Torg-Style with grey outlines and centered align*/
-Div.editor-content h2 {
+.editor .editor-content h2 {
     text-align: center;
-    font-size: 2em;
+    font-size: 1.5rem;
     text-shadow:    #878787 1.5px 1.5px 0px,
                     #878787 1.5px -1.5px 0px,
                     #878787 -1.5px 1.5px 0px,
                     #878787 -1.5px -1.5px 0px;
     text-transform:uppercase;
+    margin: 1rem 0px 0.7rem 0px;
     }
+/*...................................................................*/
+.editor .editor-content h3 {
+    margin: 2px 0px 9px 0px;
+}
 /*...................................................................*/
 /*There is still a headline, bolt white upper case with a small black outline. As this wasn't defined, it will be <h4> for not confusing with other headlines*/
 Div.editor-content h4 {
@@ -59,6 +138,7 @@ Div.editor-content h4 {
                  black    -1.3px 1.3px 0px,
                  black    -1.3px 1.3px 0px;
     text-transform: uppercase;
+    margin: 1rem 0px 0.7rem 0px;
 }
 
 /*In Cosm-Books, there is a headline similiar to h4 but with the bar that is used as background-image for the <hr>. Making this a class.*/
@@ -73,6 +153,40 @@ Div.editor-content h4.bar{
 Div.editor-content img{
     border-image: none;
     border: none;
+    }
+/*...................................................................*/
+/*formatting tables*/
+Div.editor-content table{
+    font-size: 0.875rem;
+    background-color: transparent;
+}
+
+.journal-sheet .window-content .editor .editor-content tr:nth-child(even){
+    background-color: #F6E9D7;
+}
+
+.journal-sheet .window-content .editor .editor-content tr:nth-child(odd){
+    background-color: transparent;
+}
+/*...................................................................*/
+/*Formatting of Blockcode Torg-Style*/
+blockquote{
+    background-color: rgb(241,221,192);
+    margin: 16px 30px;
+    padding: 5px 10px;
+    font-size: 14px;
+    text-align: justify;
+    overflow:hidden;
+    border-left: none;
+    font-style:normal;
+}
+
+    blockquote p:first-of-type{
+        text-indent: 0px;
+    }
+
+    blockquote p + p{
+        text-indent: 0px;
     }
 /*...................................................................*/
 /*Inline links are pretty boring in standard-style, let's pimp'em!*/
@@ -139,6 +253,7 @@ div.subtitleright{
     width: 30%;
     /*height: 30%;*/
     float: right;
+    margin-left:0.5rem;
 }
 
 div.subtitleleft{
@@ -146,6 +261,7 @@ div.subtitleleft{
     width: 30%;
     /*height: 30%;*/
     float: left;
+    margin-right:0.5rem;
 }
 
     div.subtitleright p, div.subtitleleft p{
@@ -207,6 +323,7 @@ div.subtitleleft{
     shape-image-threshold: 0.1;
     max-width: 50% !important;
     max-height: 50% !important;
+    margin-left: 0.5rem !important;
     }
 /*...................................................................*/
 /*A class for more line-height, because links in journals are often to close to another*/
@@ -221,20 +338,25 @@ div.subtitleleft{
     background-size: cover;
     padding: 10px;
     }
-.sidenote :is(p, h2, h3, h4, ul){
+.editor-content .sidenote :is(h2, h3, h4, ul, table){
     background-color: rgba(255, 247, 247, 0.5);
     margin:0;
-    padding-left:10px;
-    padding-top: 10px;
+    padding:10px;
+    }
+    .editor-content .sidenote p{
+        background-color: rgba(255, 247, 247, 0.5);
+    margin:0;
+    padding-bottom:8px;
+    padding-left: 10px;
     }
     .sidenote ul{
         list-style-position: inside;
         text-align: justify;
         padding-right: 10px;
     }
-.sidenote :first-of-type{
-    padding-top: 0;
-    }
+    .sidenote :first-of-type{
+        padding-top: 0;
+        }
 
 .sidenote.left{
     float: left;
@@ -250,10 +372,11 @@ div.subtitleleft{
 /*...................................................................*/
 .exampletext{
     background-color: rgb(241,221,192);
-    margin: 0px 30px;
+    margin: 16px 30px;
     padding: 5px 10px;
     font-size: 14px;
     text-align: justify;
+    overflow:hidden;
 }
     .exampletext.exampletext p:first-of-type{
         text-indent: 0px;
@@ -261,6 +384,7 @@ div.subtitleleft{
     .exampletext.exampletext p + p{
         text-indent: 0px;
     }
+
 /*...................................................................*/
 /*Adventures often come with directives from Sebastian. This class is to bring them on the grafic parchments with the right font. Please use an h3 for the headline.*/
 @font-face {

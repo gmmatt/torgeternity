@@ -203,6 +203,7 @@
             "hope": "Hope"
         },
         "sheetLabels": {
+            "editableTooltip": "expand the threat sheet to display editable fields",
             "stormknight": "Stormknight",
             "stats": "Stats",
             "perks": "Perks",
@@ -479,6 +480,7 @@
             "value": "Value",
             "notes": "Notes",
             "check": {
+                "testUnsuccessfull": "Test unsuccessfull",
                 "needTarget": "Cannot attempt enhanced attack test without a target. Select a target and try again.",
                 "InteractionNeedTarget": "Cannot attempt interaction attack test without a target. Select a target and try again.",
                 "cantUseUntrained": " cannot be used unless it is learned (at least 1 skill add).",
@@ -505,6 +507,9 @@
                     "targetConcealment": "Target Concealment"
                 },
                 "result": {
+                    "result": "result",
+                    "previous": "Previous roll total",
+                    "new": "New Roll Total",
                     "actionTotal": "Action Total",
                     "failure": "Failure",
                     "outstandingSuccess": "Outstanding Success",
@@ -666,6 +671,11 @@
             "disableXP": {
                 "name": "Disabling the XP input for players",
                 "hint": "If checked, only GM should be able to fill XP in character sheet."
+            },
+            "autoDamages": {
+                "name": "Apply damages automatically",
+                "hint": "If checked, shocks and wounds would be automatically apply if player has a valid target token."
+
             }
         },
         "notifications": {
@@ -681,7 +691,8 @@
             "noHands": "No hands available!",
             "dramaDeckEmpty": "The Drama Deck is empty. Reset the Drama Deck to continue.",
             "onlyReservedCard": "Please play a reserved card while playing a dramatic scene",
-            "noActiveEffectInOwnedItem": "Managing Active Effects within an Owned Item is not currently supported and will be added in a subsequent update."
+            "noActiveEffectInOwnedItem": "Managing Active Effects within an Owned Item is not currently supported and will be added in a subsequent update.",
+            "noTarget": "No valid Target Token"
         },
         "gmScreen": {
             "title": "GM screen",
