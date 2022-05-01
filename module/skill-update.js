@@ -39,14 +39,7 @@ export class skillUpdate extends FormApplication {
         this.test.isDN = true;
         this.test.DN = document.getElementById("dn-text").value;
 
-        // Check for disfavored and flag if needed
-        if (document.getElementById("disfavored").checked) {
-            this.test.disfavored = true
-        } else {
-            this.test.disfavored = false
-        }
-
-        
+      
         // Add movement modifier
         if (document.getElementById("running-radio").checked) {
             this.test.movementModifier = -2
