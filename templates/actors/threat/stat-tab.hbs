@@ -47,7 +47,7 @@
 		<b>{{localize "torgeternity.sheetLabels.skills"}}:&nbsp;</b>
 		<span class="inline-skill-list">
 			{{#each data.data.skills as |content name|}}
-			{{#if content.adds}}
+			{{#if content.value}}
 			<span class="inline-skill-item">
 				<a class="skill-roll" data-testtype="skill" data-baseattribute="{{content.baseAttribute}}"
 					data-adds="{{content.adds}}" data-value="{{content.value}}"
@@ -195,8 +195,8 @@
 			<span style="position:relative">{{localize (concatSkillName key)}}
 			</span>
 			<span class="inputsFav">
-				<input name="data.skills.{{key}}.value" type="number" class="small-input threat-skill-total"
-					value="{{skill.value}}" data-skill="{{key}}" data-dtype="Number" />
+				<input name="data.skills.{{key}}.value" type="number" class="small-input"
+					value="{{skill.value}}" data-dtype="Number" />
 
 				<a class="toggleFav {{#if skill.isFav}}checked
 						                        {{/if}}">

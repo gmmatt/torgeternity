@@ -139,6 +139,7 @@ div.subtitleright{
     width: 30%;
     /*height: 30%;*/
     float: right;
+    margin-left:0.5rem;
 }
 
 div.subtitleleft{
@@ -146,6 +147,7 @@ div.subtitleleft{
     width: 30%;
     /*height: 30%;*/
     float: left;
+    margin-right:0.5rem;
 }
 
     div.subtitleright p, div.subtitleleft p{
@@ -224,7 +226,7 @@ div.subtitleleft{
     }
 .sidenote :is(p, h2, h3, h4, ul){
     background-color: rgba(255, 247, 247, 0.5);
-    margin:0;
+    margin:0 !important;
     padding-left:10px;
     padding-top: 10px;
     }
@@ -255,6 +257,7 @@ div.subtitleleft{
     padding: 5px 10px;
     font-size: 14px;
     text-align: justify;
+    overflow:hidden;
 }
     .exampletext.exampletext p:first-of-type{
         text-indent: 0px;
