@@ -384,7 +384,8 @@ export default class torgeternityActorSheet extends ActorSheet {
             dramaTotal: 0,
             cardsPlayed: 0,
             sizeModifier: 0,
-            vulnerableModifier: 0
+            vulnerableModifier: 0,
+            disfavored: false
         }
         if (this.actor.data.data.stymiedModifier === parseInt(-2)) {
             test.stymiedModifier = -2
@@ -424,7 +425,8 @@ export default class torgeternityActorSheet extends ActorSheet {
             dramaTotal: 0,
             cardsPlayed: 0,
             sizeModifier: 0,
-            vulnerableModifier: 0
+            vulnerableModifier: 0,
+            disfavored: false
         }
 
         // Exit if no target or get target data
@@ -736,7 +738,8 @@ export default class torgeternityActorSheet extends ActorSheet {
             dramaTotal: 0,
             cardsPlayed: 0,
             sizeModifier: 0,
-            vulnerableModifier: 0
+            vulnerableModifier: 0,
+            disfavored: false
         }
         if (event.shiftKey) {
             let testDialog = new skillDialog(test);
