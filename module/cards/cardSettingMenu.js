@@ -21,11 +21,10 @@ export default class deckSettingMenu extends FormApplication {
             deckList: game.cards.contents,
             object: game.settings.get("torgeternity", "deckSetting"),
             stormknights: game.actors.filter(act => act.type == "stormknight"),
-            stormknightsHands: {}
         };
         for (let sk of data.stormknights) {
-            if (game.settings.get("torgeternity", "deckSetting").stormknightsHands) {
-                data.stormknightsHands[sk.id] = game.settings.get("torgeternity", "deckSetting").stormknightsHands[sk.id];
+            if (game.settings.get("torgeternity", "deckSetting").stormknights) {
+                data.stormknights[sk.id] = game.settings.get("torgeternity", "deckSetting").stormknights[sk.id];
             }
         }
         return mergeObject(super.getData(), data);
@@ -79,7 +78,7 @@ export default class deckSettingMenu extends FormApplication {
         }
     }
     onChangeHand(html, event) {
-        let actorId = event.currentTarget.getAttribute("name").replace("stormknightsHands.", "");
+        let actorId = event.currentTarget.getAttribute("name").replace("stormknights.", "");
         let handId = event.currentTarget.options[event.currentTarget.selectedIndex].value;
 
         let actor = game.actors.get(actorId);
