@@ -21,11 +21,9 @@
         "./css/cards.css"
     ],
     "background": "images/splash.webp",
-    "dependencies": [
-        {
-            "name": "chain-reaction"
-        }
-    ],
+    "dependencies": [{
+        "name": "chain-reaction"
+    }],
     "packs": [{
             "name": "archetypes",
             "label": "Archetypes (en)",
@@ -55,7 +53,7 @@
             "label": "Archetypes (fr)",
             "system": "torgeternity",
             "module": "torgeternity",
-            "path": "packs/french/archetypes.db",
+            "path": "packs/french/actor-archetypes.db",
             "entity": "Actor"
         },
         {
