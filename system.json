@@ -66,7 +66,7 @@
             "label": "regles basiques (fr)",
             "system": "torgeternity",
             "module": "torgeternity",
-            "path": "packs/french/basic-rules.db",
+            "path": "packs/french/journal-basic-rules.db",
             "entity": "JournalEntry"
         },
         {
