@@ -58,7 +58,7 @@
             "label": "Archetypes (fr)",
             "system": "torgeternity",
             "module": "torgeternity",
-            "path": "packs/french/archetypes.db",
+            "path": "packs/french/actor-archetypes.db",
             "entity": "Actor"
         },
         {
