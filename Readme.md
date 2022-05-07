@@ -8,9 +8,12 @@
 For manual installation, use the provided manifest URL in the "*Install System*" popup window 
 while managing game systems.
 
-enhanced-check-update branch
+v. 2.4.0
 - Updated enhanced checks to include disfavored rolls
 - Attack rolls now allow user to select defense used
+- Integrated code from Chain Reaction module so that exploding
+  dice now operate in tandem with TE rules
+- Lots of CSS to make journal entries look more Torg-Like
 
 v. 2.3.9
 - Fixed bug from last two releases that caused problems with
