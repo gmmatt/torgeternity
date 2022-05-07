@@ -30,7 +30,8 @@ import { interactionDialog } from "/systems/torgeternity/module/interaction-dial
 import { hideCompendium } from './module/hideCompendium.js';
 import initTorgControlButtons from './module/controlButtons.js';
 import createTorgShortcuts from './module/keybinding.js';
-import GMScreen from './module/GMScreen.js'
+import GMScreen from './module/GMScreen.js';
+import { explode } from './module/explode.js';
 
 
 Hooks.once("init", async function() {
@@ -123,7 +124,14 @@ Hooks.once("setup", async function() {
 
 //-------------once everything ready
 Hooks.on("ready", async function() {
+
+    //defining behaviour of character sheets depending on their size
     sheetResize();
+
+    //modifying explosion methode for dices
+    Die.prototype.explode = explode;
+
+    //adding gmScreen to UI
     ui.gmscreen = new GMScreen();
 
 
