@@ -8,6 +8,10 @@
 For manual installation, use the provided manifest URL in the "*Install System*" popup window 
 while managing game systems.
 
+enhanced-check-update branch
+- Updated enhanced checks to include disfavored rolls
+- Attack rolls now allow user to select defense used
+
 v. 2.3.9
 - Fixed bug from last two releases that caused problems with
   updating threat skills

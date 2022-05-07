@@ -69,19 +69,35 @@ export async function SkillCheck(test) {
         }
     } else if (test.testType === "skill") {
         if (test.skillAdds > 0) {
-            diceroll = new Roll('1d20x10x20').evaluate({ async: false });
+            if (test.disfavored === false) {
+                diceroll = new Roll('1d20x10x20').evaluate({ async: false });
+            } else {
+                diceroll = new Roll('1d20').evaluate({async:false});
+            }
             test.unskilledLabel = "display:none"
         } else if (test.skillAdds === 0) {
-            diceroll = new Roll('1d20x10').evaluate({ async: false });
+            if (test.disfavored === false) {
+                diceroll = new Roll('1d20x10').evaluate({ async: false });
+            } else {
+                diceroll = new Roll('1d20').evaluate({async:false});
+            }
             test.unskilledLabel = "display:block"
-                // Should trigger only if this is a threat and test.skilAdds therefore equals null   
+        // Should trigger only if this is a threat and test.skilAdds therefore equals null   
         } else {
-            diceroll = new Roll('1d20x10x20').evaluate({ async: false });
+            if (test.disfavored === false) {
+                diceroll = new Roll('1d20x10').evaluate({ async: false });
+            } else {
+                diceroll = new Roll('1d20').evaluate({async:false});
+            }
             test.unskilledLabel = "display:none"
         }
     } else {
-        diceroll = new Roll('1d20x10x20').evaluate({ async: false });
-        test.unskilledLabel = "display:none"
+        if (test.disfavored === false) {
+            diceroll = new Roll('1d20x10x20').evaluate({ async: false });
+        } else {
+            diceroll = new Roll('1d20').evaluate({async:false});
+        }
+    test.unskilledLabel = "display:none"
     }
 
     //diceroll.toMessage();
@@ -182,18 +198,34 @@ export function weaponAttack(test) {
         }
     } else if (test.testType === "skill") {
         if (test.skillAdds > 0) {
-            diceroll = new Roll('1d20x10x20').evaluate({ async: false });
+            if (test.disfavored === false) {
+                diceroll = new Roll('1d20x10x20').evaluate({ async: false });
+            } else {
+                diceroll = new Roll('1d20').evaluate({async:false});
+            }
             test.unskilledLabel = "display:none"
         } else if (test.skillAdds === 0) {
-            diceroll = new Roll('1d20x10').evaluate({ async: false });
+            if (test.disfavored === false) {
+                diceroll = new Roll('1d20x10').evaluate({ async: false });
+            } else {
+                diceroll = new Roll('1d20').evaluate({async:false});
+            }
             test.unskilledLabel = "display:block"
-                // Should trigger only if this is a threat and test.skilAdds therefore equals null   
+        // Should trigger only if this is a threat and test.skilAdds therefore equals null   
         } else {
-            diceroll = new Roll('1d20x10x20').evaluate({ async: false });
+            if (test.disfavored === false) {
+                diceroll = new Roll('1d20x10').evaluate({ async: false });
+            } else {
+                diceroll = new Roll('1d20').evaluate({async:false});
+            }
             test.unskilledLabel = "display:none"
         }
     } else {
-        diceroll = new Roll('1d20x10x20').evaluate({ async: false });
+        if (test.disfavored === false) {
+            diceroll = new Roll('1d20x10x20').evaluate({ async: false });
+        } else {
+            diceroll = new Roll('1d20').evaluate({async:false});
+        }
         test.unskilledLabel = "display:none"
     };
 
@@ -223,18 +255,34 @@ export function interactionAttack(test) {
         }
     } else if (test.testType === "interactionAttack") {
         if (test.skillAdds > 0) {
-            diceroll = new Roll('1d20x10x20').evaluate({ async: false });
+            if (test.disfavored === false) {
+                diceroll = new Roll('1d20x10x20').evaluate({ async: false });
+            } else {
+                diceroll = new Roll('1d20').evaluate({async:false});
+            }
             test.unskilledLabel = "display:none"
         } else if (test.skillAdds === 0) {
-            diceroll = new Roll('1d20x10').evaluate({ async: false });
+            if (test.disfavored === false) {
+                diceroll = new Roll('1d20x10').evaluate({ async: false });
+            } else {
+                diceroll = new Roll('1d20').evaluate({async:false});
+            }
             test.unskilledLabel = "display:block"
-                // Should trigger only if this is a threat and test.skilAdds therefore equals null   
+        // Should trigger only if this is a threat and test.skillAdds therefore equals null   
         } else {
-            diceroll = new Roll('1d20x10x20').evaluate({ async: false });
+            if (test.disfavored === false) {
+                diceroll = new Roll('1d20x10').evaluate({ async: false });
+            } else {
+                diceroll = new Roll('1d20').evaluate({async:false});
+            }
             test.unskilledLabel = "display:none"
         }
     } else {
-        diceroll = new Roll('1d20x10x20').evaluate({ async: false });
+        if (test.disfavored === false) {
+            diceroll = new Roll('1d20x10x20').evaluate({ async: false });
+        } else {
+            diceroll = new Roll('1d20').evaluate({async:false});
+        }
         test.unskilledLabel = "display:none"
     };
 

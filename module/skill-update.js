@@ -39,6 +39,7 @@ export class skillUpdate extends FormApplication {
         this.test.isDN = true;
         this.test.DN = document.getElementById("dn-text").value;
 
+      
         // Add movement modifier
         if (document.getElementById("running-radio").checked) {
             this.test.movementModifier = -2
