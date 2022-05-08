@@ -609,37 +609,38 @@ function rollItemMacro(itemName) {
                 } else {
                     sizeModifier = 0;
                 }
+                // Set target defense values
+                if (target.actor.data.data.skills.dodge.value > 0) {
+                    targetDodge = target.actor.data.data.skills.dodge.value;
+                } else {
+                    targetDodge = target.actor.data.data.attributes.dexterity;
+                }
+
+                if (target.actor.data.data.skills.meleeWeapons.value > 0) {
+                    targetMelee = target.actor.data.data.skills.meleeWeapons.value;
+                } else {
+                    targetMelee = target.actor.data.data.attributes.dexterity;
+                }
+
+                if (target.actor.data.data.skills.unarmedCombat.value > 0) {
+                    targetUnarmed = target.actor.data.data.skills.unarmedCombat.value;
+                } else {
+                    targetUnarmed = target.actor.data.data.attributes.dexterity;
+                }
+
                 vulnerableModifier = target.actor.data.data.vulnerableModifier;
                 targetToughness = target.actor.data.data.other.toughness;
                 targetArmor = target.actor.data.data.other.armor;
                 if (attackWith === "fireCombat" || attackWith === "energyWeapons" || attackWith === "heavyWeapons" || attackWith === "missileWeapons") {
-                    targetDefenseSkill = "Dodge";
-                    console.log(targetDefenseSkill);
-                    if (targetType === "threat") {
-                        targetDefenseValue = target.actor.data.data.skills.dodge.value;
-                    } else {
-                        targetDefenseValue = target.actor.data.data.dodgeDefense;
-                    }
+                    defaultDodge=true;
                 } else {
                     if (target.actor.data.data.skills.meleeWeapons.adds > 0 || (targetType === "threat" && target.actor.data.data.skills.meleeWeapons.value > 0)) {
-                        targetDefenseSkill = "Melee Weapons";
-                        console.log(targetDefenseSkill);
-                        if (targetType === "threat") {
-                            targetDefenseValue = target.actor.data.data.skills.meleeWeapons.value;
-                        } else {
-                            targetDefenseValue = target.actor.data.data.meleeWeaponsDefense;
-                        }
+                        defaultMelee = true;
                     } else {
-                        targetDefenseSkill = "Unarmed Combat";
-                        console.log(targetDefenseSkill);
-                        if (targetType === "threat") {
-                            targetDefenseValue = target.actor.data.data.skills.unarmedCombat.value;
-                        } else {
-                            targetDefenseValue = target.actor.data.data.unarmedCombatDefense;
-                        }
+                        defaultUnarmed = true;
                     }
                 }
-            };
+            }
 
             var mTest = {
 
@@ -678,7 +679,14 @@ function rollItemMacro(itemName) {
                 sizeModifier: sizeModifier,
                 vulnerableModifier: vulnerableModifier,
                 vitalAreaDamageModifier: 0,
-                chatNote: weaponData.chatNote
+                chatNote: weaponData.chatNote,
+                defaultDodge: defaultDodge,
+                defaultMelee: defaultMelee,
+                defaultUnarmed: defaultUnarmed,
+                targetDodge: targetDodge,
+                targetMelee: targetMelee,
+                targetUnarmed: targetUnarmed,
+                disfavored: false
 
             }
 
@@ -792,7 +800,8 @@ function rollSkillMacro(skillName, attributeName, isInteractionAttack) {
         dramaTotal: 0,
         cardsPlayed: 0,
         sizeModifier: 0,
-        vulnerableModifier: 0
+        vulnerableModifier: 0,
+        disfavored: false
     };
     if (isInteractionAttack) {
         test["type"] = "interactionAttack";
