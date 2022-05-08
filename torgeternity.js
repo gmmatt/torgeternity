@@ -568,9 +568,14 @@ function rollItemMacro(itemName) {
             var vulnerableModifier = 0;
             var targetToughness = 0;
             var targetArmor = 0;
-            var targetDefenseSkill = "Dodge";
-            console.log(targetDefenseSkill);
-            var targetDefenseValue = 0;
+            // var targetDefenseSkill = "Dodge";
+            // var targetDefenseValue = 0;
+            var defaultDodge = false;
+            var defaultMelee = false;
+            var defaultUnarmed = false;
+            var targetDodge = 0;
+            var targetMelee= 0;
+            var targetUnarmed = 0;
 
             // Exit if no target or get target data
             if (Array.from(game.user.targets).length === 0) {
@@ -670,8 +675,8 @@ function rollItemMacro(itemName) {
                 weaponAP: weaponData.ap,
                 targetToughness: targetToughness,
                 targetArmor: targetArmor,
-                targetDefenseSkill: targetDefenseSkill,
-                targetDefenseValue: targetDefenseValue,
+                //targetDefenseSkill: targetDefenseSkill,
+                //targetDefenseValue: targetDefenseValue,
                 targetType: targetType,
                 woundModifier: parseInt(-(actor.data.data.wounds.value)),
                 stymiedModifier: parseInt(actor.data.data.stymiedModifier),
