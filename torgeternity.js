@@ -32,6 +32,7 @@ import initTorgControlButtons from './module/controlButtons.js';
 import createTorgShortcuts from './module/keybinding.js';
 import GMScreen from './module/GMScreen.js'
 import { setUpCardPiles } from './module/cards/setUpCardPiles.js';
+import { explode } from './module/explode.js';
 
 
 Hooks.once("init", async function() {
@@ -133,6 +134,11 @@ Hooks.on("ready", async function() {
         game.settings.set("torgeternity", "deckSetting", deckSettings)
     }
     sheetResize();
+
+    //modifying explosion methode for dices
+    Die.prototype.explode = explode;
+
+    //adding gmScreen to UI
     ui.gmscreen = new GMScreen();
 
 

@@ -398,7 +398,7 @@ Div.editor-content Div.directive1{
     background-size: 100% 100%;
     padding: 3rem;
     }
-    Div.editor-content Div.directive1 :is(p,h3){
+    Div.editor-content Div.directive1 :is(p,h3,h4){
         font-family: "gunplay";
         transform: rotate(-3deg);
         text-indent: 0px;
@@ -413,7 +413,7 @@ Div.editor-content Div.directive2{
     background-size: 100% 100%;
     padding: 3rem;
     }
-    Div.editor-content Div.directive2 :is(p,h3){
+    Div.editor-content Div.directive2 :is(p,h3,h4){
         font-family: "gunplay";
         transform: rotate(2deg);
         text-indent: 0px;

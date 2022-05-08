@@ -35,9 +35,18 @@ export class attackUpdate extends FormApplication {
 
     _onModify(event,html) {
         
-        // Add DN
+        // Add DN based on selected target attribute
         this.test.isDN = true;
-        this.test.DN = this.test.targetDefenseValue;
+        if (document.getElementById("defend-dodge").selected) {
+            this.test.DN = this.test.targetDodge
+        }
+        if (document.getElementById("defend-meleeCombat").selected) {
+            this.test.DN = this.test.targetMelee
+        }
+        if (document.getElementById("defend-unarmedCombat").selected) {
+            this.test.DN = this.test.targetUnarmed
+        }
+
 
         // Add movement modifier
         if (document.getElementById("running-radio").checked) {
