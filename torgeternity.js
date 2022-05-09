@@ -568,6 +568,12 @@ function rollItemMacro(itemName) {
             var vulnerableModifier = 0;
             var targetToughness = 0;
             var targetArmor = 0;
+            var targetDodge = 0;
+            var targetMelee = 0;
+            var targetUnarmed = 0;
+            var defaultDodge = false;
+            var defaultMelee = false;
+            var defaultUnarmed = false;
             var targetDefenseSkill = "Dodge";
             console.log(targetDefenseSkill);
             var targetDefenseValue = 0;
