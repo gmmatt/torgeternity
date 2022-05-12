@@ -106,32 +106,26 @@ Hooks.once("init", async function() {
 
 Hooks.once("setup", async function() {
 
-    modifyTokenBars();
-    //changing stutus marker 
-    //preparing status marker
+        modifyTokenBars();
+        //changing stutus marker 
+        //preparing status marker
 
-    if (game.settings.get("core", "language") === "fr") {
-        for (let effect of CONFIG.statusEffects) {
-            effect.icon = effect.icon.replace("systems/torgeternity/images/status-markers", "systems/torgeternity/images/status-markers/fr")
+        if (game.settings.get("core", "language") === "fr") {
+            for (let effect of CONFIG.statusEffects) {
+                effect.icon = effect.icon.replace("systems/torgeternity/images/status-markers", "systems/torgeternity/images/status-markers/fr")
+            }
         }
-    }
 
+    }),
 
-});
-
-Hooks.once("diceSoNiceReady", (dice3d) => {
-    registerDiceSoNice(dice3d);
-});
+    Hooks.once("diceSoNiceReady", (dice3d) => {
+        registerDiceSoNice(dice3d);
+    });
 
 //-------------once everything ready
 Hooks.on("ready", async function() {
-    // code to migrate new game settings
-    let deckSettings = game.settings.get("torgeternity", "deckSetting")
-    if (deckSettings.stormknightsHands) {
-        deckSettings.stormknights = deckSettings.stormknightsHands;
-        deckSettings.stormknightsHands = null;
-        game.settings.set("torgeternity", "deckSetting", deckSettings)
-    }
+
+    //defining behaviour of character sheets depending on their size
     sheetResize();
 
     //modifying explosion methode for dices
@@ -214,7 +208,61 @@ Hooks.on("ready", async function() {
     //----setup cards if needed
 
     if (game.settings.get("torgeternity", "setUpCards") === true) {
-        setUpCardPiles();
+        const pack = game.packs.get("torgeternity.core-card-set");
+        const basicRules = game.packs.get("torgeternity.basic-rules")
+            // Add Destiny Deck
+        if (game.cards.getName("Destiny Deck") == null) {
+            const itemId = pack.index.getName("Destiny Deck")._id;
+            game.cards.importFromCompendium(pack, itemId)
+        }
+        // Add Drama Deck
+        if (game.cards.getName("Drama Deck") == null) {
+            const itemId = pack.index.getName("Drama Deck")._id;
+            game.cards.importFromCompendium(pack, itemId)
+        }
+        // Add Cosm Discard
+        if (game.cards.getName("Cosm Discard") == null) {
+            let cardData = {
+                name: "Cosm Discard",
+                type: "pile",
+                permission: { default: CONST.DOCUMENT_PERMISSION_LEVELS.OWNER }
+            }
+            let cosmDiscard = Cards.create(cardData, { keepId: true, renderSheet: false });
+        }
+        // Add Drama Discard
+        if (game.cards.getName("Drama Discard") == null) {
+            let cardData = {
+                name: "Drama Discard",
+                type: "pile",
+                permission: { default: CONST.DOCUMENT_PERMISSION_LEVELS.OWNER }
+            }
+            let dramaDiscard = Cards.create(cardData, { keepId: true, renderSheet: false });
+        }
+        // Add Destiny Discard
+        if (game.cards.getName("Destiny Discard") == null) {
+            let cardData = {
+                name: "Destiny Discard",
+                type: "pile",
+                permission: { default: CONST.DOCUMENT_PERMISSION_LEVELS.OWNER }
+            }
+            let destinyDiscard = Cards.create(cardData, { keepId: true, renderSheet: false });
+        }
+        // Add Active Drama
+        if (game.cards.getName("Active Drama Card") == null) {
+            let cardData = {
+                name: "Active Drama Card",
+                type: "pile"
+            }
+            let activeDrama = Cards.create(cardData, { keepId: true, renderSheet: false });
+        }
+
+        // Add journal entry with instructions relating to cards
+        if (game.journal.getName("Managing Cards") == null) {
+            const itemId = basicRules.index.getName("Managing Cards")._id;
+            game.journal.importFromCompendium(basicRules, itemId);
+        }
+
+        game.settings.set("torgeternity", "setUpCards", false)
     }
 
 
@@ -520,6 +568,12 @@ function rollItemMacro(itemName) {
             var vulnerableModifier = 0;
             var targetToughness = 0;
             var targetArmor = 0;
+            var targetDodge = 0;
+            var targetMelee = 0;
+            var targetUnarmed = 0;
+            var defaultDodge = false;
+            var defaultMelee = false;
+            var defaultUnarmed = false;
             var targetDefenseSkill = "Dodge";
             console.log(targetDefenseSkill);
             var targetDefenseValue = 0;
@@ -561,37 +615,38 @@ function rollItemMacro(itemName) {
                 } else {
                     sizeModifier = 0;
                 }
+                // Set target defense values
+                if (target.actor.data.data.skills.dodge.value > 0) {
+                    targetDodge = target.actor.data.data.skills.dodge.value;
+                } else {
+                    targetDodge = target.actor.data.data.attributes.dexterity;
+                }
+
+                if (target.actor.data.data.skills.meleeWeapons.value > 0) {
+                    targetMelee = target.actor.data.data.skills.meleeWeapons.value;
+                } else {
+                    targetMelee = target.actor.data.data.attributes.dexterity;
+                }
+
+                if (target.actor.data.data.skills.unarmedCombat.value > 0) {
+                    targetUnarmed = target.actor.data.data.skills.unarmedCombat.value;
+                } else {
+                    targetUnarmed = target.actor.data.data.attributes.dexterity;
+                }
+
                 vulnerableModifier = target.actor.data.data.vulnerableModifier;
                 targetToughness = target.actor.data.data.other.toughness;
                 targetArmor = target.actor.data.data.other.armor;
                 if (attackWith === "fireCombat" || attackWith === "energyWeapons" || attackWith === "heavyWeapons" || attackWith === "missileWeapons") {
-                    targetDefenseSkill = "Dodge";
-                    console.log(targetDefenseSkill);
-                    if (targetType === "threat") {
-                        targetDefenseValue = target.actor.data.data.skills.dodge.value;
-                    } else {
-                        targetDefenseValue = target.actor.data.data.dodgeDefense;
-                    }
+                    defaultDodge = true;
                 } else {
                     if (target.actor.data.data.skills.meleeWeapons.adds > 0 || (targetType === "threat" && target.actor.data.data.skills.meleeWeapons.value > 0)) {
-                        targetDefenseSkill = "Melee Weapons";
-                        console.log(targetDefenseSkill);
-                        if (targetType === "threat") {
-                            targetDefenseValue = target.actor.data.data.skills.meleeWeapons.value;
-                        } else {
-                            targetDefenseValue = target.actor.data.data.meleeWeaponsDefense;
-                        }
+                        defaultMelee = true;
                     } else {
-                        targetDefenseSkill = "Unarmed Combat";
-                        console.log(targetDefenseSkill);
-                        if (targetType === "threat") {
-                            targetDefenseValue = target.actor.data.data.skills.unarmedCombat.value;
-                        } else {
-                            targetDefenseValue = target.actor.data.data.unarmedCombatDefense;
-                        }
+                        defaultUnarmed = true;
                     }
                 }
-            };
+            }
 
             var mTest = {
 
@@ -630,7 +685,14 @@ function rollItemMacro(itemName) {
                 sizeModifier: sizeModifier,
                 vulnerableModifier: vulnerableModifier,
                 vitalAreaDamageModifier: 0,
-                chatNote: weaponData.chatNote
+                chatNote: weaponData.chatNote,
+                defaultDodge: defaultDodge,
+                defaultMelee: defaultMelee,
+                defaultUnarmed: defaultUnarmed,
+                targetDodge: targetDodge,
+                targetMelee: targetMelee,
+                targetUnarmed: targetUnarmed,
+                disfavored: false
 
             }
 
@@ -744,7 +806,8 @@ function rollSkillMacro(skillName, attributeName, isInteractionAttack) {
         dramaTotal: 0,
         cardsPlayed: 0,
         sizeModifier: 0,
-        vulnerableModifier: 0
+        vulnerableModifier: 0,
+        disfavored: false
     };
     if (isInteractionAttack) {
         test["type"] = "interactionAttack";
@@ -887,24 +950,3 @@ Hooks.on('updateActor', (actor, data, options, id) => {
     //updating playerList with users character up-to-date data
     ui.players.render(true);
 });
-
-// by default creating a  hand for each stormknight
-Hooks.on("createActor", async(actor, options, userId) => {
-    if (actor.type === "stormknight") {
-        let cardData = {
-            name: actor.name,
-            type: "hand"
-        }
-        let characterHand = await Cards.create(cardData);
-
-        // getting ids of actor and card hand
-        let actorId = actor.id;
-        let handId = characterHand.id
-
-        // storing ids in game.settings
-        let settingData = game.settings.get("torgeternity", "deckSetting");
-        settingData.stormknights[actorId] = handId;
-        game.settings.set("torgeternity", "deckSetting", settingData);
-    }
-
-})
