@@ -19,6 +19,9 @@
 		},
 		{
 			"path": "..\\..\\..\\..\\..\\..\\..\\..\\Program Files\\Foundry Virtual Tabletop"
+		},
+		{
+			"path": "..\\..\\modules\\te002-up-the-creek"
 		}
 	],
 	"settings": {}
