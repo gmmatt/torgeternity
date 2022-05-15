@@ -455,37 +455,17 @@ export default class torgeternityActorSheet extends ActorSheet {
             var targetType = target.actor.data.type;
             test.vulnerableModifier = target.actor.data.data.vulnerableModifier;
             if (test.interactionAttackType === "intimidation") {
-                if (target.actor.data.data.skills.intimidation.value > 0) {
-                    test.targetDefenseSkill = game.i18n.localize("torgeternity.skills.intimidation");
-                    test.targetDefenseValue = target.actor.data.data.skills.intimidation.value;
-                } else {
-                    test.targetDefenseSkill = game.i18n.localize("torgeternity.attributes.spirit");
-                    test.targetDefenseValue = target.actor.data.data.attributes.spirit;
-                }
+                test.targetDefenseSkill = game.i18n.localize("torgeternity.skills.intimidation");
+                test.targetDefenseValue = target.actor.data.data.skills.intimidationDefense.value;
             } else if (test.interactionAttackType === "maneuver") {
-                if (target.actor.data.data.skills.maneuver.value > 0) {
-                    test.targetDefenseSkill = game.i18n.localize("torgeternity.skills.maneuver");
-                    test.targetDefenseValue = target.actor.data.data.skills.maneuver.value;
-                } else {
-                    test.targetDefenseSkill = game.i18n.localize("torgeternity.attributes.dexterity");
-                    test.targetDefenseValue = target.actor.data.data.attributes.dexterity;
-                }
+                test.targetDefenseSkill = game.i18n.localize("torgeternity.skills.maneuver");
+                test.targetDefenseValue = target.actor.data.data.skills.maneuverDefense.value;
             } else if (test.interactionAttackType === "taunt") {
-                if (target.actor.data.data.skills.taunt.value > 0) {
-                    test.targetDefenseSkill = game.i18n.localize("torgeternity.skills.taunt");
-                    test.targetDefenseValue = target.actor.data.data.skills.taunt.value;
-                } else {
-                    test.targetDefenseSkill = game.i18n.localize("torgeternity.attributes.charisma");
-                    test.targetDefenseValue = target.actor.data.data.attributes.charisma;
-                }
+                test.targetDefenseSkill = game.i18n.localize("torgeternity.skills.taunt");
+                test.targetDefenseValue = target.actor.data.data.skills.tauntDefense.value;
             } else if (test.interactionAttackType === "trick") {
-                if (target.actor.data.data.skills.trick.value > 0) {
-                    test.targetDefenseSkill = game.i18n.localize("torgeternity.skills.trick");
-                    test.targetDefenseValue = target.actor.data.data.skills.trick.value;
-                } else {
-                    test.targetDefenseSkill = game.i18n.localize("torgeternity.attributes.mind");
-                    test.targetDefenseValue = target.actor.data.data.attributes.mind;
-                }
+                test.targetDefenseSkill = game.i18n.localize("torgeternity.skills.trick");
+                test.targetDefenseValue = target.actor.data.data.skills.trickDefense.value;
             }
         }
 
