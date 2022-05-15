@@ -456,16 +456,16 @@ export default class torgeternityActorSheet extends ActorSheet {
             test.vulnerableModifier = target.actor.data.data.vulnerableModifier;
             if (test.interactionAttackType === "intimidation") {
                 test.targetDefenseSkill = game.i18n.localize("torgeternity.skills.intimidation");
-                test.targetDefenseValue = target.actor.data.data.skills.intimidationDefense;
+                test.targetDefenseValue = target.actor.data.data.intimidationDefense;
             } else if (test.interactionAttackType === "maneuver") {
                 test.targetDefenseSkill = game.i18n.localize("torgeternity.skills.maneuver");
-                test.targetDefenseValue = target.actor.data.data.skills.maneuverDefense;
+                test.targetDefenseValue = target.actor.data.data.maneuverDefense;
             } else if (test.interactionAttackType === "taunt") {
                 test.targetDefenseSkill = game.i18n.localize("torgeternity.skills.taunt");
-                test.targetDefenseValue = target.actor.data.data.skills.tauntDefense;
+                test.targetDefenseValue = target.actor.data.data.tauntDefense;
             } else if (test.interactionAttackType === "trick") {
                 test.targetDefenseSkill = game.i18n.localize("torgeternity.skills.trick");
-                test.targetDefenseValue = target.actor.data.data.skills.trickDefense;
+                test.targetDefenseValue = target.actor.data.data.trickDefense;
             }
         }
 
