@@ -386,7 +386,8 @@
             "kinesis": "Kinesis",
             "precognition": "Precognition",
             "telepathy": "Telepathy",
-            "faith": "Faith"
+            "faith": "Faith",
+            "reality": "Reality"
         },
         "damageTypes": {
             "flat": "Flat",

@@ -424,14 +424,18 @@
                 "skill": "",
                 "skilllevel": "",
                 "castingtime": "",
+                "dnType": "",
                 "dn": "",
+                "targetDefense": "",
+                "modifier": "",
                 "range": "",
                 "duration": "",
                 "description": "",
                 "good": "",
                 "outstanding": "",
                 "isAttack": "",
-                "damage": ""
+                "damage": "",
+                "ap": 0
             }
             
         },
