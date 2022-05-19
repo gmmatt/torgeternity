@@ -62,7 +62,7 @@
                 </p>
                 <input name="data.duration" type="text" value="{{data.data.duration}}" class="input-box" />
                 <p class="item-data-label">
-                    {{localize "torgeternity.powers.attack"}}?/{{localize "torgeternity.powers.damage"}}
+                    {{localize "torgeternity.powers.attack"}}?/{{localize "torgeternity.powers.damage"}}/{{localize "torgeternity.powers.ap"}}
                 </p>
                 <select name="data.isAttack" class="input-box-small" default="false">
                     {{#select data.data.isAttack}}
@@ -72,9 +72,6 @@
                     {{/select}}
                 </select>
                 <input name="data.damage" type="number" value="{{data.data.damage}}" class="input-box-small" />
-                <p class="item-data-label">
-                    {{localize "torgeternity.powers.ap"}}
-                </p>
                 <input name="data.ap" type="number" value="{{data.data.ap}}" class="input-box-small" />
             </div>
             <div class="main-content">
