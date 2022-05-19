@@ -9,6 +9,7 @@ import {
 import { skillDialog } from "/systems/torgeternity/module/skill-dialog.js";
 import { attackDialog } from "/systems/torgeternity/module/attack-dialog.js";
 import { interactionDialog } from "/systems/torgeternity/module/interaction-dialog.js";
+import { powerDialog } from "/systems/torgeternity/module/power-dialog.js";
 
 export default class torgeternityActorSheet extends ActorSheet {
     constructor(...args) {
@@ -708,7 +709,7 @@ export default class torgeternityActorSheet extends ActorSheet {
             disfavored: false
         }
         if (event.shiftKey) {
-            let testDialog = new skillDialog(test);
+            let testDialog = new powerDialog(test);
             testDialog.render(true);
         } else {
             torgchecks.powerRoll(test);
