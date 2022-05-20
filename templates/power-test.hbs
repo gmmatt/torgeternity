@@ -6,8 +6,39 @@
 					<table>
 						<tr>
 							<td>
-								{{> "systems/torgeternity/templates/testDialogs/attack-difficulty.hbs"}}
-							</td>
+								<fieldset>
+									<legend>{{localize "torgeternity.sheetLabels.dn"}}</legend>
+									<span class="skill-check-options">
+										<select name="dn" class="input-box">
+											<option 
+												value="veryEasy"
+												id="dn-veryEasy" 
+												{{#if test.dnVeryEasy}}
+													selected = "true"
+												{{/if}}
+												>{{localize "torgeternity.dnTypes.veryEasy"}}
+											</option>
+											<option 
+												value="easy"
+												id="dn-easy" 
+												{{#if test.dnEasy}}
+													selected = "true"
+												{{/if}}
+												>{{localize "torgeternity.dnTypes.easy"}}
+											</option>
+											<option 
+												value="unarmedCombat" 
+												id="defend-unarmedCombat"
+												{{#if test.defaultUnarmed}}
+													selected = "true"
+												{{/if}}
+												>Unarmed Combat
+												&nbsp;
+												({{test.targetUnarmed}})
+											</option>
+										</select>
+									</span>
+								</fieldset>							</td>
 							<td>
 								<fieldset>
 									<legend title="Choose whether to (1) roll for a bonus number or (2) input a previously generated bonus when attempting a multi-action.">Bonus</legend>
