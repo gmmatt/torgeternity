@@ -9,7 +9,7 @@
 								<fieldset>
 									<legend>{{localize "torgeternity.sheetLabels.dn"}}</legend>
 									<span class="skill-check-options">
-										<select name="dn" class="input-box">
+										<select name="difficulty" class="input-box">
 											<option 
 												value="6"
 												id="dn-veryEasy" 
@@ -80,7 +80,7 @@
 												{{#if test.dnTargetCharisma}}
 													selected = "true"
 												{{/if}}
-												>{{localize "torgeternity.dnTypes.targetCharisma"}}
+												>{{localize "torgeternity.dnTypes.targetCharisma"}} ({{test.targetCharisma}})
 											</option>
 											<option 
 												value="{{test.targetDexterity}}"
@@ -88,7 +88,7 @@
 												{{#if test.dnTargetDexterity}}
 													selected = "true"
 												{{/if}}
-												>{{localize "torgeternity.dnTypes.targetDexterity"}}
+												>{{localize "torgeternity.dnTypes.targetDexterity"}} ({{test.targetDexterity}})
 											</option>
 											<option 
 												value="{{test.targetMind}}"
@@ -96,7 +96,7 @@
 												{{#if test.dnTargetMind}}
 													selected = "true"
 												{{/if}}
-												>{{localize "torgeternity.dnTypes.targetMind"}}
+												>{{localize "torgeternity.dnTypes.targetMind"}} ({{test.targetMind}})
 											</option>
 											<option 
 												value="{{test.targetSpirit}}"
@@ -104,7 +104,7 @@
 												{{#if test.dnTargetSpirit}}
 													selected = "true"
 												{{/if}}
-												>{{localize "torgeternity.dnTypes.targetSpirit"}}
+												>{{localize "torgeternity.dnTypes.targetSpirit"}} ({{test.targetSpirit}})
 											</option>
 											<option 
 												value="{{test.targetStrength}}"
@@ -112,7 +112,7 @@
 												{{#if test.dnTargetStrength}}
 													selected = "true"
 												{{/if}}
-												>{{localize "torgeternity.dnTypes.targetStrength"}}
+												>{{localize "torgeternity.dnTypes.targetStrength"}} ({{test.targetStrength}})
 											</option>
 											<option 
 												value="{{test.targetAlteration}}"
@@ -120,7 +120,7 @@
 												{{#if test.dnTargetAlteration}}
 													selected = "true"
 												{{/if}}
-												>{{localize "torgeternity.dnTypes.targetAlteration"}}
+												>{{localize "torgeternity.dnTypes.targetAlteration"}} ({{test.targetAlteration}})
 											</option>
 											<option 
 												value="{{test.targetConjuration}}"
@@ -128,7 +128,7 @@
 												{{#if test.dnTargetConjuration}}
 													selected = "true"
 												{{/if}}
-												>{{localize "torgeternity.dnTypes.targetConjuration"}}
+												>{{localize "torgeternity.dnTypes.targetConjuration"}} ({{test.targetConjuration}})
 											</option>
 											<option 
 												value="{{test.targetDivination}}"
@@ -136,7 +136,7 @@
 												{{#if test.dnTargetDivination}}
 													selected = "true"
 												{{/if}}
-												>{{localize "torgeternity.dnTypes.targetDivination"}}
+												>{{localize "torgeternity.dnTypes.targetDivination"}} ({{test.targetDivination}})
 											</option>
 											<option 
 												value="{{test.targetDodge}}"
@@ -144,7 +144,7 @@
 												{{#if test.dnTargetDodge}}
 													selected = "true"
 												{{/if}}
-												>{{localize "torgeternity.dnTypes.targetDodge"}}
+												>{{localize "torgeternity.dnTypes.targetDodge"}} ({{test.targetDodge}})
 											</option>
 											<option 
 												value="{{test.targetFaith}}"
@@ -152,7 +152,7 @@
 												{{#if test.dnTargetFaith}}
 													selected = "true"
 												{{/if}}
-												>{{localize "torgeternity.dnTypes.targetFaith"}}
+												>{{localize "torgeternity.dnTypes.targetFaith"}} ({{test.targetFaith}})
 											</option>
 											<option 
 												value="{{test.targetIntimidation}}"
@@ -160,7 +160,7 @@
 												{{#if test.dnTargetIntimidation}}
 													selected = "true"
 												{{/if}}
-												>{{localize "torgeternity.dnTypes.targetIntimidation"}}
+												>{{localize "torgeternity.dnTypes.targetIntimidation"}} ({{test.targetIntimidation})
 											</option>
 											<option 
 												value="{{test.targetKinesis}}"
@@ -168,7 +168,7 @@
 												{{#if test.dnTargetKinesis}}
 													selected = "true"
 												{{/if}}
-												>{{localize "torgeternity.dnTypes.targetKinesis"}}
+												>{{localize "torgeternity.dnTypes.targetKinesis"}} ({{test.targetKinesis}})
 											</option>
 											<option 
 												value="{{test.targetManeuver}}"
@@ -176,7 +176,7 @@
 												{{#if test.dnTargetManeuver}}
 													selected = "true"
 												{{/if}}
-												>{{localize "torgeternity.dnTypes.targetManeuver"}}
+												>{{localize "torgeternity.dnTypes.targetManeuver"}} ({{test.targetManeuver}})
 											</option>
 											<option 
 												value="{{test.targetMeleeWeapons}}"
@@ -184,7 +184,7 @@
 												{{#if test.dnTargetMeleeWeapons}}
 													selected = "true"
 												{{/if}}
-												>{{localize "torgeternity.dnTypes.targetMeleeWeapons"}}
+												>{{localize "torgeternity.dnTypes.targetMeleeWeapons"}} ({{test.targetMeleeWeapons}})
 											</option>
 											<option 
 												value="{{test.targetPrecognition}}"
@@ -192,7 +192,7 @@
 												{{#if test.dnTargetPrecognition}}
 													selected = "true"
 												{{/if}}
-												>{{localize "torgeternity.dnTypes.targetPrecognition"}}
+												>{{localize "torgeternity.dnTypes.targetPrecognition"}} ({{test.targetPrecognition}})
 											</option>
 											<option 
 												value="{{test.targetStealth}}"
@@ -200,7 +200,7 @@
 												{{#if test.dnTargetStealth}}
 													selected = "true"
 												{{/if}}
-												>{{localize "torgeternity.dnTypes.targetStealth"}}
+												>{{localize "torgeternity.dnTypes.targetStealth"}} ({{test.targetStealth}})
 											</option>
 											<option 
 												value="{{test.targetTaunt}}"
@@ -208,7 +208,7 @@
 												{{#if test.dnTargetTaunt}}
 													selected = "true"
 												{{/if}}
-												>{{localize "torgeternity.dnTypes.targetTaunt"}}
+												>{{localize "torgeternity.dnTypes.targetTaunt"}} ({{test.targetTaunt}})
 											</option>
 											<option 
 												value="{{test.targetTrick}}"
@@ -216,7 +216,7 @@
 												{{#if test.dnTargetTrick}}
 													selected = "true"
 												{{/if}}
-												>{{localize "torgeternity.dnTypes.targetTrick"}}
+												>{{localize "torgeternity.dnTypes.targetTrick"}} ({{test.targetTrick}})
 											</option>
 											<option 
 												value="{{test.targetUnarmedCombat}}"
@@ -224,7 +224,7 @@
 												{{#if test.dnTargetUnarmedCombat}}
 													selected = "true"
 												{{/if}}
-												>{{localize "torgeternity.dnTypes.targetUnarmedCombat"}}
+												>{{localize "torgeternity.dnTypes.targetUnarmedCombat"}} ({{test.targetUnarmedCombat}})
 											</option>
 											<option 
 												value="{{test.targetWillpower}}"
@@ -232,7 +232,7 @@
 												{{#if test.dnTargetWillpower}}
 													selected = "true"
 												{{/if}}
-												>{{localize "torgeternity.dnTypes.targetWillpower"}}
+												>{{localize "torgeternity.dnTypes.targetWillpower"}} ({{test.targetWillpower}})
 											</option>
 										</select>
 									</span>

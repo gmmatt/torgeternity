@@ -35,8 +35,10 @@ export class powerDialog extends FormApplication {
 
     _onRoll(event,html) {
         
-        // Add DN based on selected target attribute
+        // Add DN based on selected difficulty
         this.test.isDN = true;
+
+
         if (document.getElementById("defend-dodge").selected) {
             this.test.DN = this.test.targetDodge
         }

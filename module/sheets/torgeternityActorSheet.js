@@ -788,7 +788,7 @@ export default class torgeternityActorSheet extends ActorSheet {
             skillBaseAttribute: skillData.baseattribute,
             skillAdds: skillData.adds,
             skillValue: skillData.value,
-            dn: powerData.dn,
+            difficulty: powerData.dn,
             modifier: powerData.modifier,
             powerName: item.data.name,
             powerAttack: powerData.isAttack,
@@ -872,7 +872,7 @@ export default class torgeternityActorSheet extends ActorSheet {
         }
 
         // Set dn for selector
-        switch(test.dn) {
+        switch(test.difficulty) {
             case "veryEasy":
                 test.dnVeryEasy = true;
                 break;
