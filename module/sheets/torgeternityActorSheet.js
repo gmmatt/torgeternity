@@ -679,7 +679,6 @@ export default class torgeternityActorSheet extends ActorSheet {
         const item = this.actor.items.get(itemID);
         var powerData = item.data.data;
         var skillData = this.actor.data.data.skills[powerData.skill];
-        var targetData = target.actor.data.data
 
         // Declare target variables
         var sizeModifier = 0;
@@ -733,6 +732,8 @@ export default class torgeternityActorSheet extends ActorSheet {
             } else {
                 var target = Array.from(game.user.targets)[0];
                 var targetType = target.actor.data.type;
+                var targetData = target.actor.data.data
+
 
                 // Set target size bonus
                 if (target.actor.data.data.details.sizeBonus === "tiny") {
@@ -872,88 +873,88 @@ export default class torgeternityActorSheet extends ActorSheet {
 
         // Set dn for selector
         switch(test.dn) {
-            case veryEasy:
+            case "veryEasy":
                 test.dnVeryEasy === true;
                 break;
-            case easy:
+            case "easy":
                 test.dnEasy === true;
                 break;
-            case standard:
+            case "standard":
                 test.dnStandard === true;
                 break;
-            case challenging:
+            case "challenging":
                 test.dnChallenging === true;
                 break;
-            case hard:
+            case "hard":
                 test.dnHard === true;
                 break;
-            case veryHard:
+            case "veryHard":
                 test.dnVeryHard === true;
                 break;
-            case heroic:
+            case "heroic":
                 test.dnHeroic === true;
                 break;
-            case nearImpossible:
+            case "nearImpossible":
                 test.dnNearImpossible === true;
                 break;
-            case targetCharisma:
+            case "targetCharisma":
                 test.dnTargetCharisma === true;
                 break;
-            case targetDexterity:
+            case "targetDexterity":
                 test.dnTargetDexterity === true;
                 break;
-            case targetMind:
+            case "targetMind":
                 test.dnTargetMind === true;
                 break;
-            case targetSpirit:
+            case "targetSpirit":
                 test.dnTargetSpirit === true;
                 break;
-            case targetStrength:
+            case "targetStrength":
                 test.dnTargetStrength === true;
                 break;
-            case targetAlteration:
+            case "targetAlteration":
                 test.dnTargetAlteration === true;
                 break;
-            case targetConjuration:
+            case "targetConjuration":
                 test.dnTargetConjuration === true;
                 break;
-            case targetDivination:
+            case "targetDivination":
                 test.dnTargetDivination === true;
                 break;
-            case targetDodge:
+            case "targetDodge":
                 test.dnTargetDodge === true;
                 break;
-            case targetFaith:
+            case "targetFaith":
                 test.dnTargetFaith === true;
                 break;
-            case targetIntimidation:
+            case "targetIntimidation":
                 test.dnTargetIntimidation === true;
                 break;
-            case targetKinesis:
+            case "targetKinesis":
                 test.dnTargetKinesis === true;
                 break;
-            case targetManeuver:
+            case "targetManeuver":
                 test.dnTargetManeuver === true;
                 break;
-            case targetMeleeWeapons:
+            case "targetMeleeWeapons":
                 test.dnTargetMeleeWeapons === true;
                 break;
-            case targetPrecognition:
+            case "targetPrecognition":
                 test.dnTargetPrecognition === true;
                 break;
-            case targetStealth:
+            case "targetStealth":
                 test.dnTargetStealth === true;
                 break;
-            case targetTaunt:
+            case "targetTaunt":
                 test.dnTargetTaunt === true;
                 break;
-            case targetTrick:
+            case "targetTrick":
                 test.dnTargetTrick === true;
                 break;
-            case targetUnarmedCombat:
+            case "targetUnarmedCombat":
                 test.dnTargetUnarmedCombat === true;
                 break;
-            case targetWillpower:
+            case "targetWillpower":
                 test.dnTargetWillpower === true;
                 break;
             default:
