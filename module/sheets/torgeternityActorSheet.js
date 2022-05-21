@@ -836,6 +836,7 @@ export default class torgeternityActorSheet extends ActorSheet {
             powerAttack: powerData.isAttack,
             damage: powerData.damage,
             ap: powerData.ap,
+            dn: 0,
             unskilledUse: event.currentTarget.dataset.unskilleduse,
             strengthValue: this.actor.data.data.attributes.strength,
             charismaValue: this.actor.data.data.attributes.charisma,

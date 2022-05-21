@@ -38,16 +38,10 @@ export class powerDialog extends FormApplication {
         // Add DN based on selected difficulty
         this.test.isDN = true;
 
-
-        if (document.getElementById("defend-dodge").selected) {
-            this.test.DN = this.test.targetDodge
-        }
-        if (document.getElementById("defend-meleeCombat").selected) {
-            this.test.DN = this.test.targetMelee
-        }
-        if (document.getElementById("defend-unarmedCombat").selected) {
-            this.test.DN = this.test.targetUnarmed
-        }
+        var select = document.getElementById('difficulty');
+        var value = select.options[select.selectedIndex].value;
+        
+        this.test.dn = value;
 
         // Check for disfavored and flag if needed
         if (document.getElementById("disfavored").checked) {
@@ -114,38 +108,6 @@ export class powerDialog extends FormApplication {
             this.test.vitalAreaDamageModifier = 4
         } else {
             this.test.vitalAreaDamageModifier = 0
-        }
-
-        // Add Burst Modifier
-        if (document.getElementById("burst-none").checked) {
-            this.test.burstModifier = 0
-        } else if (document.getElementById("burst-short").checked) {
-            this.test.burstModifier = 2
-        } else if (document.getElementById("burst-long").checked) {
-            this.test.burstModifier = 4
-        } else if (document.getElementById("burst-heavy").checked) {
-            this.test.burstModifier = 6
-        }
-
-        // Add All-Out Attack
-        if (document.getElementById("all-out").checked) {
-            this.test.allOutModifier = 4
-        } else {
-            this.test.allOutModifier = 0
-        }
-
-        // Add Amied Shot
-        if (document.getElementById("aimed").checked) {
-            this.test.aimedModifier = 4
-        } else {
-            this.test.aimedModifier = 0
-        }
-
-        // Add Blind Fire
-        if (document.getElementById("blind-fire").checked) {
-            this.test.blindFireModifier = -6
-        } else {
-            this.test.blindFireModifier = 0
         }
 
         // Add Concealment Modifier
