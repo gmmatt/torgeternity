@@ -679,7 +679,110 @@ export default class torgeternityActorSheet extends ActorSheet {
         const item = this.actor.items.get(itemID);
         var powerData = item.data.data;
         var skillData = this.actor.data.data.skills[powerData.skill];
+        var targetData = target.actor.data.data
 
+        // Declare target variables
+        var sizeModifier = 0;
+        var vulnerableModifier = 0;
+        var targetToughness = 0;
+        var targetArmor = 0;
+        var targetCharisma = 0;
+        var targetDexterity = 0;
+        var targetMind = 0;
+        var targetSpirit = 0;
+        var targetStrength = 0;
+        var targetAlteration = 0;
+        var targetConjuration = 0;
+        var targetDivination = 0;
+        var targetDodge = 0;
+        var targetFaith = 0;
+        var targetIntimidation = 0;
+        var targetKinesis = 0;
+        var targetManeuver = 0;
+        var targetMeleeWeapons = 0;
+        var targetPrecognition = 0;
+        var targetStealth = 0;
+        var targetTaunt = 0;
+        var targetTrick = 0;
+        var targetUnarmedCombat = 0;
+        var targetWillpower = 0;
+        var defaultDodge = false;
+        var defaultMelee = false;
+        var defaultUnarmed = false;
+        var targetDodge = 0;
+        var targetMelee= 0;
+        var targetUnarmed = 0;
+
+
+        // Exit if no target or get target data
+        if (event.shiftKey) {
+            if (Array.from(game.user.targets).length === 0) {
+                var needTargetData = {
+                    user: game.user.data._id,
+                    speaker: ChatMessage.getSpeaker(),
+                    owner: this.actor,
+                };
+
+                var templateData = {
+                    message: game.i18n.localize('torgeternity.chatText.check.needTarget'),
+                    actorPic: this.actor.data.img
+                };
+
+                const templatePromise = renderTemplate("./systems/torgeternity/templates/partials/skill-error-card.hbs", templateData);
+
+                templatePromise.then(content => {
+                    needTargetData.content = content;
+                    ChatMessage.create(needTargetData);
+                })
+
+                return;
+            } else {
+                var target = Array.from(game.user.targets)[0];
+                var targetType = target.actor.data.type;
+
+                // Set target size bonus
+                if (target.actor.data.data.details.sizeBonus === "tiny") {
+                    sizeModifier = -6;
+                } else if (target.actor.data.data.details.sizeBonus === "verySmall") {
+                    sizeModifier = -4;
+                } else if (target.actor.data.data.details.sizeBonus === "small") {
+                    sizeModifier = -2;
+                } else if (target.actor.data.data.details.sizeBonus === "large") {
+                    sizeModifier = 2;
+                } else if (target.actor.data.data.details.sizeBonus === "veryLarge") {
+                    sizeModifier = 4;
+                } else {
+                    sizeModifier = 0;
+                }
+
+                vulnerableModifier = target.actor.data.data.vulnerableModifier;
+                targetToughness = targetData.other.toughness;
+                targetArmor = targetData.other.armor;
+                
+                targetCharisma = targetData.attributes.charisma;
+                targetDexterity = targetData.attributes.dexterity;
+                targetMind = targetData.attributes.mind;
+                targetSpirit = targetData.attributes.spirit;
+                targetStrength = targetData.attributes.strength;
+
+                targetAlteration = targetData.skills.alteration.value;
+                targetConjuration = targetData.skills.conjuration.value;
+                targetDivination = targetData.skills.divination.value;
+                targetDodge = targetData.dodgeDefense;
+                targetFaith = targetData.skills.faith.value;
+                targetIntimidation = targetData.intimidationDefense;
+                targetKinesis = targetData.skills.kinesis.value;
+                targetManeuver = targetData.maneuverDefense;
+                targetMeleeWeapons = targetData.meleeWeaponsDefense;
+                targetPrecognition = targetData.skills.precognition.value;
+                targetStealth = targetData.skills.stealth.value;
+                targetTaunt = targetData.tauntDefense;
+                targetTrick = targetData.trickDefense;
+                targetUnarmedCombat = targetData.unarmedCombatDefense;
+                targetWillpower = targetData.skills.willpower.value;
+
+            }
+        };
         let test = {
             testType: "power",
             actor: this.actor,
@@ -697,9 +800,20 @@ export default class torgeternityActorSheet extends ActorSheet {
             damage: powerData.damage,
             ap: powerData.ap,
             unskilledUse: event.currentTarget.dataset.unskilleduse,
+            strengthValue: this.actor.data.data.attributes.strength,
+            charismaValue: this.actor.data.data.attributes.charisma,
+            dexterityValue: this.actor.data.data.attributes.dexterity,
+            mindValue: this.actor.data.data.attributes.mind,
+            spiritValue: this.actor.data.data.attributes.spirit,
+            targetToughness: targetToughness,
+            targetArmor: targetArmor,
+            targetType: targetType,
             woundModifier: parseInt(-(this.actor.data.data.wounds.value)),
             stymiedModifier: parseInt(this.actor.data.data.stymiedModifier),
             darknessModifier: parseInt(this.actor.data.data.darknessModifier),
+            sizeModifier: sizeModifier,
+            vulnerableModifier: vulnerableModifier,
+            vitalAreaDamageModifier: 0,
             type: event.currentTarget.dataset.testtype,
             possibilityTotal: 0,
             upTotal: 0,
@@ -708,7 +822,58 @@ export default class torgeternityActorSheet extends ActorSheet {
             cardsPlayed: 0,
             sizeModifier: 0,
             vulnerableModifier: 0,
-            disfavored: false
+            disfavored: false,
+
+            targetCharisma: targetCharisma,
+            targetDexterity: targetDexterity,
+            targetMind: targetMind,
+            targetSpirit: targetSpirit,
+            targetStrength: targetStrength,
+            targetAlteration: targetAlteration,
+            targetConjuration: targetConjuration,
+            targetDivination: targetDivination,
+            targetDodge: targetDodge,
+            targetFaith: targetFaith,
+            targetIntimidation: targetIntimidation,
+            targetKinesis: targetKinesis,
+            targetManeuver: targetManeuver,
+            targetMeleeWeapons: targetMeleeWeapons,
+            targetPrecognition: targetPrecognition,
+            targetStealth: targetStealth,
+            targetTaunt: targetTaunt,
+            targetTrick: targetTrick,
+            targetUnarmedCombat: targetUnarmedCombat,
+            targetWillpower: targetWillpower,
+
+            dnVeryEasy: false,
+            dnEasy: false,
+            dnStandard: false,
+            dnChallenging: false,
+            dnHard: false,
+            dnVeryHard: false,
+            dnHeroic: false,
+            dnNearImpossible: false,
+            dnTargetCharisma: false,
+            dnTargetDexterity: false,
+            dnTargetMind: false,
+            dnTargetSpirit: false,
+            dnTargetStrength: false,
+            dnTargetAlteration: false,
+            dnTargetConjuration: false,
+            dnTargetDivination: false,
+            dnTargetDodge: false,
+            dnTargetFaith: false,
+            dnTargetIntimidation: false,
+            dnTargetKinesis: false,
+            dnTargetManeuver: false,
+            dnTargetMeleeWeapons: false,
+            dnTargetPrecognition: false,
+            dnTargetStealth: false,
+            dnTargetTaunt: false,
+            dnTargetTrick: false,
+            dnTargetUnarmedCombat: false,
+            dnTargetWillpower: false
+
         }
         if (event.shiftKey) {
             let testDialog = new powerDialog(test);
