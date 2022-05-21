@@ -760,21 +760,63 @@ export default class torgeternityActorSheet extends ActorSheet {
                 targetSpirit = targetData.attributes.spirit;
                 targetStrength = targetData.attributes.strength;
 
-                targetAlteration = targetData.skills.alteration.value;
-                targetConjuration = targetData.skills.conjuration.value;
-                targetDivination = targetData.skills.divination.value;
+                // Set defensive values that are already calculated
                 targetDodge = targetData.dodgeDefense;
-                targetFaith = targetData.skills.faith.value;
                 targetIntimidation = targetData.intimidationDefense;
-                targetKinesis = targetData.skills.kinesis.value;
-                targetManeuver = targetData.maneuverDefense;
-                targetMeleeWeapons = targetData.meleeWeaponsDefense;
-                targetPrecognition = targetData.skills.precognition.value;
-                targetStealth = targetData.skills.stealth.value;
                 targetTaunt = targetData.tauntDefense;
                 targetTrick = targetData.trickDefense;
                 targetUnarmedCombat = targetData.unarmedCombatDefense;
-                targetWillpower = targetData.skills.willpower.value;
+                targetMeleeWeapons = targetData.meleeWeaponsDefense;
+                targetManeuver = targetData.maneuverDefense;
+
+                // Set other defensive values
+                if (targetData.skills.alteration.value === null) {
+                    targetAlteration = targetMind;
+                } else {
+                    targetAlteration = targetData.skills.alteration.value;
+                }
+
+                if (targetData.skills.conjuration.value === null) {
+                    targetConjuration = targetSpirit;
+                } else {
+                    targetConjuration = targetData.skills.conjuration.value;
+                }
+
+                if (targetData.skills.divination.value === null) {
+                    targetDivination = targetMind;
+                } else {
+                    targetDivination = targetData.skills.divination.value;
+                }
+
+                if (targetData.skills.faith.value === null) {
+                    targetFaith = targetSpirit;
+                } else {
+                    targetFaith = targetData.skills.faith.value;
+                }
+
+                if (targetData.skills.kinesis.value === null) {
+                    targetKinesis = targetSpirit;
+                } else {
+                    targetKinesis = targetData.skills.kinesis.value;
+                }
+
+                if (targetData.skills.precognition.value === null) {
+                    targetPrecognition = targetMind;
+                } else {
+                    targetPrecognition = targetData.skills.precognition.value;
+                }
+
+                if (targetData.skills.stealth.value === null) {
+                    targetStealth = targetDexterity;
+                } else {
+                    targetStealth = targetData.skills.stealth.value;
+                }
+
+                if (targetData.skills.willpower.value === null) {
+                    targetWillpower = targetSpirit;
+                } else {
+                    targetWillpower = targetData.skills.willpower.value;
+                }
 
             }
         };
