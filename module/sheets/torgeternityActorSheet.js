@@ -706,12 +706,6 @@ export default class torgeternityActorSheet extends ActorSheet {
         var targetTrick = 0;
         var targetUnarmedCombat = 0;
         var targetWillpower = 0;
-        var defaultDodge = false;
-        var defaultMelee = false;
-        var defaultUnarmed = false;
-        var targetDodge = 0;
-        var targetMelee= 0;
-        var targetUnarmed = 0;
 
 
         // Exit if no target or get target data
@@ -875,6 +869,97 @@ export default class torgeternityActorSheet extends ActorSheet {
             dnTargetWillpower: false
 
         }
+
+        // Set dn for selector
+        switch(test.dn) {
+            case veryEasy:
+                test.dnVeryEasy === true;
+                break;
+            case easy:
+                test.dnEasy === true;
+                break;
+            case standard:
+                test.dnStandard === true;
+                break;
+            case challenging:
+                test.dnChallenging === true;
+                break;
+            case hard:
+                test.dnHard === true;
+                break;
+            case veryHard:
+                test.dnVeryHard === true;
+                break;
+            case heroic:
+                test.dnHeroic === true;
+                break;
+            case nearImpossible:
+                test.dnNearImpossible === true;
+                break;
+            case targetCharisma:
+                test.dnTargetCharisma === true;
+                break;
+            case targetDexterity:
+                test.dnTargetDexterity === true;
+                break;
+            case targetMind:
+                test.dnTargetMind === true;
+                break;
+            case targetSpirit:
+                test.dnTargetSpirit === true;
+                break;
+            case targetStrength:
+                test.dnTargetStrength === true;
+                break;
+            case targetAlteration:
+                test.dnTargetAlteration === true;
+                break;
+            case targetConjuration:
+                test.dnTargetConjuration === true;
+                break;
+            case targetDivination:
+                test.dnTargetDivination === true;
+                break;
+            case targetDodge:
+                test.dnTargetDodge === true;
+                break;
+            case targetFaith:
+                test.dnTargetFaith === true;
+                break;
+            case targetIntimidation:
+                test.dnTargetIntimidation === true;
+                break;
+            case targetKinesis:
+                test.dnTargetKinesis === true;
+                break;
+            case targetManeuver:
+                test.dnTargetManeuver === true;
+                break;
+            case targetMeleeWeapons:
+                test.dnTargetMeleeWeapons === true;
+                break;
+            case targetPrecognition:
+                test.dnTargetPrecognition === true;
+                break;
+            case targetStealth:
+                test.dnTargetStealth === true;
+                break;
+            case targetTaunt:
+                test.dnTargetTaunt === true;
+                break;
+            case targetTrick:
+                test.dnTargetTrick === true;
+                break;
+            case targetUnarmedCombat:
+                test.dnTargetUnarmedCombat === true;
+                break;
+            case targetWillpower:
+                test.dnTargetWillpower === true;
+                break;
+            default:
+                test.dnTargetStandard === true;
+        }
+
         if (event.shiftKey) {
             let testDialog = new powerDialog(test);
             testDialog.render(true);
