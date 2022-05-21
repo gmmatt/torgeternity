@@ -874,91 +874,91 @@ export default class torgeternityActorSheet extends ActorSheet {
         // Set dn for selector
         switch(test.dn) {
             case "veryEasy":
-                test.dnVeryEasy === true;
+                test.dnVeryEasy = true;
                 break;
             case "easy":
-                test.dnEasy === true;
+                test.dnEasy = true;
                 break;
             case "standard":
-                test.dnStandard === true;
+                test.dnStandard = true;
                 break;
             case "challenging":
-                test.dnChallenging === true;
+                test.dnChallenging = true;
                 break;
             case "hard":
-                test.dnHard === true;
+                test.dnHard = true;
                 break;
             case "veryHard":
-                test.dnVeryHard === true;
+                test.dnVeryHard = true;
                 break;
             case "heroic":
-                test.dnHeroic === true;
+                test.dnHeroic = true;
                 break;
             case "nearImpossible":
-                test.dnNearImpossible === true;
+                test.dnNearImpossible = true;
                 break;
             case "targetCharisma":
-                test.dnTargetCharisma === true;
+                test.dnTargetCharisma = true;
                 break;
             case "targetDexterity":
-                test.dnTargetDexterity === true;
+                test.dnTargetDexterity = true;
                 break;
             case "targetMind":
-                test.dnTargetMind === true;
+                test.dnTargetMind = true;
                 break;
             case "targetSpirit":
-                test.dnTargetSpirit === true;
+                test.dnTargetSpirit = true;
                 break;
             case "targetStrength":
-                test.dnTargetStrength === true;
+                test.dnTargetStrength = true;
                 break;
             case "targetAlteration":
-                test.dnTargetAlteration === true;
+                test.dnTargetAlteration = true;
                 break;
             case "targetConjuration":
-                test.dnTargetConjuration === true;
+                test.dnTargetConjuration = true;
                 break;
             case "targetDivination":
-                test.dnTargetDivination === true;
+                test.dnTargetDivination = true;
                 break;
             case "targetDodge":
-                test.dnTargetDodge === true;
+                test.dnTargetDodge = true;
                 break;
             case "targetFaith":
-                test.dnTargetFaith === true;
+                test.dnTargetFaith = true;
                 break;
             case "targetIntimidation":
-                test.dnTargetIntimidation === true;
+                test.dnTargetIntimidation = true;
                 break;
             case "targetKinesis":
-                test.dnTargetKinesis === true;
+                test.dnTargetKinesis = true;
                 break;
             case "targetManeuver":
-                test.dnTargetManeuver === true;
+                test.dnTargetManeuver = true;
                 break;
             case "targetMeleeWeapons":
-                test.dnTargetMeleeWeapons === true;
+                test.dnTargetMeleeWeapons = true;
                 break;
             case "targetPrecognition":
-                test.dnTargetPrecognition === true;
+                test.dnTargetPrecognition = true;
                 break;
             case "targetStealth":
-                test.dnTargetStealth === true;
+                test.dnTargetStealth = true;
                 break;
             case "targetTaunt":
-                test.dnTargetTaunt === true;
+                test.dnTargetTaunt = true;
                 break;
             case "targetTrick":
-                test.dnTargetTrick === true;
+                test.dnTargetTrick = true;
                 break;
             case "targetUnarmedCombat":
-                test.dnTargetUnarmedCombat === true;
+                test.dnTargetUnarmedCombat = true;
                 break;
             case "targetWillpower":
-                test.dnTargetWillpower === true;
+                test.dnTargetWillpower = true;
                 break;
             default:
-                test.dnTargetStandard === true;
+                test.dnTargetStandard = true;
         }
 
         if (event.shiftKey) {
