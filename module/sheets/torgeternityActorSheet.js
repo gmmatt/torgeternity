@@ -540,26 +540,8 @@ export default class torgeternityActorSheet extends ActorSheet {
         var vulnerableModifier = 0;
         var targetToughness = 0;
         var targetArmor = 0;
-        var targetCharisma = 0;
-        var targetDexterity = 0;
-        var targetMind = 0;
-        var targetSpirit = 0;
-        var targetStrength = 0;
-        var targetAlteration = 0;
-        var targetConjuration = 0;
-        var targetDivination = 0;
-        var targetDodge = 0;
-        var targetFaith = 0;
-        var targetIntimidation = 0;
-        var targetKinesis = 0;
-        var targetManeuver = 0;
-        var targetMeleeWeapons = 0;
-        var targetPrecognition = 0;
-        var targetStealth = 0;
-        var targetTaunt = 0;
-        var targetTrick = 0;
-        var targetUnarmedCombat = 0;
-        var targetWillpower = 0;
+        // var targetDefenseSkill = "Dodge";
+        // var targetDefenseValue = 0;
         var defaultDodge = false;
         var defaultMelee = false;
         var defaultUnarmed = false;
@@ -609,6 +591,11 @@ export default class torgeternityActorSheet extends ActorSheet {
                 } else {
                     sizeModifier = 0;
                 }
+
+                // Set target defense values
+                targetDodge = target.actor.data.data.dodgeDefense;
+                targetMelee = target.actor.data.data.meleeWeaponsDefense;
+                targetUnarmed = target.actor.data.data.unarmedCombatDefense;
 
                 vulnerableModifier = target.actor.data.data.vulnerableModifier;
                 targetToughness = target.actor.data.data.other.toughness;
@@ -664,148 +651,13 @@ export default class torgeternityActorSheet extends ActorSheet {
             defaultDodge: defaultDodge,
             defaultMelee: defaultMelee,
             defaultUnarmed: defaultUnarmed,
-            targetCharisma: target.actor.data.data.attributes.charisma,
-            targetDexterity: target.actor.data.data.attributes.dexterity,
-            targetMind: target.actor.data.data.attributes.mind,
-            targetSpirit: target.actor.data.data.attributes.spirit,
-            targetStrength: target.actor.data.data.attributes.strength,
-            targetAlteration: target.actor.data.data.skills.alteration.value,
-            targetConjuration: target.actor.data.data.skills.conjuration.value,
-            targetDivination: target.actor.data.data.skills.divination.value,
-            targetDodge: target.actor.data.data.dodgeDefense,
-            targetFaith: target.actor.data.data.skills.faith.value,
-            targetIntimidation: target.actor.data.data.intimidationDefense,
-            targetKinesis: target.actor.data.data.skills.kinesis.value,
-            targetManeuver: target.actor.data.data.maneuverDefense,
-            targetMeleeWeapons: target.actor.data.data.meleeWeaponsDefense,
-            targetPrecognition: target.actor.data.data.skills.precognition.value,
-            targetStealth: target.actor.data.data.skills.stealth,
-            targetTaunt: target.actor.data.data.tauntDefense,
-            targetTrick: target.actor.data.data.trickDefense,
-            targetUnarmedCombat: target.actor.data.data.unarmedCombatDefense,
-            targetWillpower: target.actor.data.data.skills.willpower.value,
-            disfavored: false,
-            dnVeryEasy: false,
-            dnEasy: false,
-            dnStandard: false,
-            dnChallenging: false,
-            dnHard: false,
-            dnVeryHard: false,
-            dnHeroic: false,
-            dnNearImpossible: false,
-            dnTargetCharisma: false,
-            dnTargetDexterity: false,
-            dnTargetMind: false,
-            dnTargetSpirit: false,
-            dnTargetStrength: false,
-            dnTargetAlteration: false,
-            dnTargetConjuration: false,
-            dnTargetDivination: false,
-            dnTargetDodge: false,
-            dnTargetFaith: false,
-            dnTargetIntimidation: false,
-            dnTargetKinesis: false,
-            dnTargetManeuver: false,
-            dnTargetMeleeWeapons: false,
-            dnTargetPrecognition: false,
-            dnTargetStealth: false,
-            dnTargetTaunt: false,
-            dnTargetTrick: false,
-            dnTargetUnarmedCombat: false,
-            dnTargetWillpower: false,
+            targetDodge: targetDodge,
+            targetMelee: targetMelee,
+            targetUnarmed: targetUnarmed,
+            disfavored: false
 
         }
 
-        // Set dn for selector
-        switch(test.dn) {
-            case veryEasy:
-                test.dnVeryEasy === true;
-                break;
-            case easy:
-                test.dnEasy === true;
-                break;
-            case standard:
-                test.dnStandard === true;
-                break;
-            case challenging:
-                test.dnChallenging === true;
-                break;
-            case hard:
-                test.dnHard === true;
-                break;
-            case veryHard:
-                test.dnVeryHard === true;
-                break;
-            case heroic:
-                test.dnHeroic === true;
-                break;
-            case nearImpossible:
-                test.dnNearImpossible === true;
-                break;
-            case targetCharisma:
-                test.dnTargetCharisma === true;
-                break;
-            case targetDexterity:
-                test.dnTargetDexterity === true;
-                break;
-            case targetMind:
-                test.dnTargetMind === true;
-                break;
-            case targetSpirit:
-                test.dnTargetSpirit === true;
-                break;
-            case targetStrength:
-                test.dnTargetStrength === true;
-                break;
-            case targetAlteration:
-                test.dnTargetAlteration === true;
-                break;
-            case targetConjuration:
-                test.dnTargetConjuration === true;
-                break;
-            case targetDivination:
-                test.dnTargetDivination === true;
-                break;
-            case targetDodge:
-                test.dnTargetDodge === true;
-                break;
-            case targetFaith:
-                test.dnTargetFaith === true;
-                break;
-            case targetIntimidation:
-                test.dnTargetIntimidation === true;
-                break;
-            case targetKinesis:
-                test.dnTargetKinesis === true;
-                break;
-            case targetManeuver:
-                test.dnTargetManeuver === true;
-                break;
-            case targetMeleeWeapons:
-                test.dnTargetMeleeWeapons === true;
-                break;
-            case targetPrecognition:
-                test.dnTargetPrecognition === true;
-                break;
-            case targetStealth:
-                test.dnTargetStealth === true;
-                break;
-            case targetTaunt:
-                test.dnTargetTaunt === true;
-                break;
-            case targetTrick:
-                test.dnTargetTrick === true;
-                break;
-            case targetUnarmedCombat:
-                test.dnTargetUnarmedCombat === true;
-                break;
-            case targetWillpower:
-                test.dnTargetWillpower === true;
-                break;
-            default:
-                test.dnTargetStandard === true;
-        }
-        
         if (event.shiftKey) {
             let testDialog = new attackDialog(test);
             testDialog.render(true);
