@@ -112,39 +112,8 @@ torgeternity.powerSkills = {
     kinesis: "torgeternity.powerSkills.kinesis",
     precognition: "torgeternity.powerSkills.precognition",
     telepathy: "torgeternity.powerSkills.telepathy",
-    faith: "torgeternity.powerSkills.faith",
-    reality: "torgeternity.powerSkills.reality"
-}
-
-torgeternity.dnTypes = {
-    veryEasy: "torgeternity.dnTypes.veryEasy",
-    easy: "torgeternity.dnTypes.easy",
-    standard: "torgeternity.dnTypes.standard",
-    challenging: "torgeternity.dnTypes.challenging",
-    hard: "torgeternity.dnTypes.hard",
-    veryHard: "torgeternity.dnTypes.veryHard",
-    heroic: "torgeternity.dnTypes.heroic",
-    nearImpossible: "torgeternity.dnTypes.nearImpossible",
-    targetCharisma: "torgeternity.dnTypes.targetCharisma",
-    targetDexterity: "torgeternity.dnTypes.targetDexterity",
-    targetMind: "torgeternity.dnTypes.targetMind",
-    targetSpirit: "torgeternity.dnTypes.targetSpirit",
-    targetStrength: "torgeternity.dnTypes.targetStrength",
-    targetAlteration: "torgeternity.dnTypes.targetAlteration",
-    targetConjuration: "torgeternity.dnTypes.targetConjuration",
-    targetDivination: "torgeternity.dnTypes.targetDivination",
-    targetDodge: "torgeternity.dnTypes.targetDodge",
-    targetFaith: "torgeternity.dnTypes.targetFaith",
-    targetIntimidation: "torgeternity.dnTypes.targetIntimidation",
-    targetKinesis: "torgeternity.dnTypes.targetKinesis",
-    targetManeuver: "torgeternity.dnTypes.targetManeuver",
-    targetMeleeWeapons: "torgeternity.dnTypes.targetMeleeWeapons",
-    targetPrecognition: "torgeternity.dnTypes.targetPrecognition",
-    targetStealth: "torgeternity.dnTypes.targetStealth",
-    targetTaunt: "torgeternity.dnTypes.targetTaunt",
-    targetTrick: "torgeternity.dnTypes.targetTrick",
-    targetUnarmedCombat: "torgeternity.dnTypes.targetUnarmedCombat",
-    targetWillpower: "torgeternity.dnTypes.targetWillpower"
+    reality: "torgeternity.powerSkills.reality",
+    faith: "torgeternity.powerSkills.faith"
 }
 
 torgeternity.clearances = {

@@ -422,6 +422,10 @@ Div.editor-content Div.directive2{
         font-size: 21px; 
     }
 /*...................................................................*/
+.heighttr :is(tr, td, th){
+    height:1.5rem;
+}
+/*...................................................................*/
 /*Multi-purpose classes*/
 
 Div.editor-content .noindent {
