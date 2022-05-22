@@ -41,7 +41,7 @@ export class powerDialog extends FormApplication {
         var select = document.getElementById('difficulty');
         var value = select.options[select.selectedIndex].value;
         
-        this.test.dn = value;
+        this.test.DN = parseInt(value);
 
         // Check for disfavored and flag if needed
         if (document.getElementById("disfavored").checked) {
@@ -157,7 +157,7 @@ export class powerDialog extends FormApplication {
         }
 
         var x = event;
-        torgchecks.weaponAttack(this.test);
+        torgchecks.powerRoll(this.test);
         this.close()
     }
 }

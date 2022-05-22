@@ -836,7 +836,7 @@ export default class torgeternityActorSheet extends ActorSheet {
             powerAttack: powerData.isAttack,
             damage: powerData.damage,
             ap: powerData.ap,
-            dn: 0,
+            DN: 0,
             unskilledUse: event.currentTarget.dataset.unskilleduse,
             strengthValue: this.actor.data.data.attributes.strength,
             charismaValue: this.actor.data.data.attributes.charisma,
@@ -849,7 +849,7 @@ export default class torgeternityActorSheet extends ActorSheet {
             woundModifier: parseInt(-(this.actor.data.data.wounds.value)),
             stymiedModifier: parseInt(this.actor.data.data.stymiedModifier),
             darknessModifier: parseInt(this.actor.data.data.darknessModifier),
-            sizeModifier: sizeModifier,
+            sizeModifier: 0,                                                       //Size modifiers not applied to Powers tests; must be manually applied
             vulnerableModifier: vulnerableModifier,
             vitalAreaDamageModifier: 0,
             type: event.currentTarget.dataset.testtype,

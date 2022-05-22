@@ -304,6 +304,8 @@ export function interactionAttack(test) {
 
 export function powerRoll(test) {
 
+    var diceroll = "";
+    
     // Cannot Attempt Power Tests Unskilled
     if (test.skillValue === "-") {
         let cantRollData = {
@@ -327,8 +329,14 @@ export function powerRoll(test) {
         return
     };
 
+
+
     // Roll dice as skilled (assumes character would not have power unless skilled)
-    let diceroll = new Roll('1d20x10x20').evaluate({ async: false });
+    if (test.disfavored === false) {
+        diceroll = new Roll('1d20x10x20').evaluate({ async: false });
+    } else {
+        diceroll = new Roll('1d20').evaluate({async:false});
+    }
     test.unskilledLabel = "display:none"
         //diceroll.toMessage();
     test.diceroll = diceroll;
