@@ -493,6 +493,11 @@ a:hover {
     text-shadow: 0px 0px 10px black;
 }
 
+/*search-fields on items*/
+.directory .directory-header .header-search input{
+    background:transparent;
+}
+
 .app option,
 .window-app option {
     background: grey;
