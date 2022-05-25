@@ -446,19 +446,24 @@ button:focus {
 }
 
 .directory .action-buttons button {
+    all: unset;
+    flex: 1;
+    width: 100%;
+    font-family: "Palatino Linotype";
+    font-size: 1rem;
     color: white;
     text-shadow: 2px 2px 0px black;
     background-image: url(../images/red_norm.webp);
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 100%;
     background-color: transparent;
-    overflow: inherit;
     border: none;
-    padding-bottom: 50px;
-    line-height: 50px;
-    text-overflow: inherit;
+    padding: 0.9rem 0 0.5rem 0;
+    line-height: 1.2;
     box-shadow: none;
     cursor: pointer;
+    min-height: 2rem;
+    white-space: normal;
 }
 
 .create-document button {
