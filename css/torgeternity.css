@@ -466,10 +466,6 @@ button:focus {
     white-space: normal;
 }
 
-.create-document button {
-    size: 170px 0px;
-}
-
 .directory .action-buttons button:hover {
     background-image: url(../images/red_hover.webp);
     transition: all 0.2s ease;
