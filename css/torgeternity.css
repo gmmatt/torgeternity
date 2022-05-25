@@ -445,6 +445,9 @@ button:focus {
     box-shadow: 0 0 10px #3bb3b3;
 }
 
+
+/*Styling the Buttons of right taskbar*/
+
 .directory .action-buttons button {
     all: unset;
     flex: 1;
