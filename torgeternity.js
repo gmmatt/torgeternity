@@ -209,9 +209,20 @@ Hooks.on("ready", async function() {
     //----setup cards if needed
 
     if (game.settings.get("torgeternity", "setUpCards") === true) {
+
+        let lang = game.settings.get("core", "language");
+
         const pack = game.packs.get("torgeternity.core-card-set");
-        const basicRules = game.packs.get("torgeternity.basic-rules")
-            // Add Destiny Deck
+        let basicRules = game.packs.get("torgeternity.basic-rules");
+
+        if (lang == "fr") {
+            basicRules = game.packs.get("torgeternity.basic-rules-fr");
+        }
+        if (lang == "de") {
+            basicRules = game.packs.get("torgeternity.system-de-basisregeln");
+        }
+
+        // Add Destiny Deck
         if (game.cards.getName("Destiny Deck") == null) {
             const itemId = pack.index.getName("Destiny Deck")._id;
             game.cards.importFromCompendium(pack, itemId)
@@ -257,9 +268,17 @@ Hooks.on("ready", async function() {
             let activeDrama = Cards.create(cardData, { keepId: true, renderSheet: false });
         }
 
-        // Add journal entry with instructions relating to cards
-        if (game.journal.getName("Managing Cards") == null) {
-            const itemId = basicRules.index.getName("Managing Cards")._id;
+        // Add journal entry with instructions relating to cards depending on language
+        let journalName = "Managing Cards"
+        if (lang == "fr") {
+            journalName = "gestion des cartes"
+        }
+        if (lang == "de") {
+            journalName = "Der Umgang mit Karten in Foundry"
+        }
+
+        if (game.journal.getName(journalName) == null) {
+            const itemId = basicRules.index.getName(journalName)._id;
             game.journal.importFromCompendium(basicRules, itemId);
         }
 
