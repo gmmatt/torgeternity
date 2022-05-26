@@ -1873,6 +1873,7 @@ form.actor-sheet header input[name="name"] {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    min-width: fit-content;
     margin-right: 5px;
     align-items: center;
 }
