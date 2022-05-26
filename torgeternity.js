@@ -30,7 +30,8 @@ import { interactionDialog } from "/systems/torgeternity/module/interaction-dial
 import { hideCompendium } from './module/hideCompendium.js';
 import initTorgControlButtons from './module/controlButtons.js';
 import createTorgShortcuts from './module/keybinding.js';
-import GMScreen from './module/GMScreen.js';
+import GMScreen from './module/GMScreen.js'
+import { setUpCardPiles } from './module/cards/setUpCardPiles.js';
 import { explode } from './module/explode.js';
 
 
@@ -106,26 +107,53 @@ Hooks.once("init", async function() {
 
 Hooks.once("setup", async function() {
 
-        modifyTokenBars();
-        //changing stutus marker 
-        //preparing status marker
+    modifyTokenBars();
+    //changing stutus marker 
+    //preparing status marker
 
-        if (game.settings.get("core", "language") === "fr") {
-            for (let effect of CONFIG.statusEffects) {
-                effect.icon = effect.icon.replace("systems/torgeternity/images/status-markers", "systems/torgeternity/images/status-markers/fr")
-            }
+    if (game.settings.get("core", "language") === "fr") {
+        for (let effect of CONFIG.statusEffects) {
+            effect.icon = effect.icon.replace("systems/torgeternity/images/status-markers", "systems/torgeternity/images/status-markers/fr")
         }
+    }
 
-    }),
 
-    Hooks.once("diceSoNiceReady", (dice3d) => {
-        registerDiceSoNice(dice3d);
-    });
+});
+
+Hooks.once("diceSoNiceReady", (dice3d) => {
+    registerDiceSoNice(dice3d);
+});
 
 //-------------once everything ready
 Hooks.on("ready", async function() {
 
-    //defining behaviour of character sheets depending on their size
+
+    //migration script
+    if (game.system.data.version <= "2.4.0") {
+        // code to migrate missile weappon groupName
+
+        ui.notifications.warn("migrating system version .............")
+        game.actors.forEach(async act => {
+                if (act.data.data.skills.missileWeapons.groupName != "combat") {
+                    await act.update({ "data.skills.missileWeapons.groupName": "combat" })
+                    ui.notifications.info(act.name + " : migrated")
+                }
+
+            })
+            // code to migrate new game settings
+        let deckSettings = game.settings.get("torgeternity", "deckSetting")
+        if (deckSettings.stormknightsHands) {
+            ui.notifications.warn("updating system settings .............")
+
+            deckSettings.stormknights = deckSettings.stormknightsHands;
+            deckSettings.stormknightsHands = null;
+            await game.settings.set("torgeternity", "deckSetting", deckSettings);
+
+        }
+    }
+
+
+
     sheetResize();
 
     //modifying explosion methode for dices
@@ -657,7 +685,7 @@ function rollItemMacro(itemName) {
                 targetToughness = target.actor.data.data.other.toughness;
                 targetArmor = target.actor.data.data.other.armor;
                 if (attackWith === "fireCombat" || attackWith === "energyWeapons" || attackWith === "heavyWeapons" || attackWith === "missileWeapons") {
-                    defaultDodge=true;
+                    defaultDodge = true;
                 } else {
                     if (target.actor.data.data.skills.meleeWeapons.adds > 0 || (targetType === "threat" && target.actor.data.data.skills.meleeWeapons.value > 0)) {
                         defaultMelee = true;
@@ -969,3 +997,24 @@ Hooks.on('updateActor', (actor, data, options, id) => {
     //updating playerList with users character up-to-date data
     ui.players.render(true);
 });
+
+// by default creating a  hand for each stormknight
+Hooks.on("preCreateActor", async(actor, options, userId) => {
+    if (actor.type === "stormknight") {
+        let cardData = {
+            name: actor.name,
+            type: "hand"
+        }
+        let characterHand = await Cards.create(cardData);
+
+        // getting ids of actor and card hand
+        let actorId = actor.id;
+        let handId = characterHand.id
+
+        // storing ids in game.settings
+        let settingData = game.settings.get("torgeternity", "deckSetting");
+        settingData.stormknights[actorId] = handId;
+        await game.settings.set("torgeternity", "deckSetting", settingData);
+    }
+
+})

@@ -18,6 +18,10 @@ export function registerHelpers() {
         var localName = "torgeternity.skills." + skillName;
         return localName;
     });
+    Handlebars.registerHelper("concatPerkType", function (type) {
+        var localName = "torgeternity.perkTypes." + type;
+        return localName;
+    });
 
     Handlebars.registerHelper("concatClearanceLevel", function (clearance) {
         var localClearance = "torgeternity.clearances." + clearance;
