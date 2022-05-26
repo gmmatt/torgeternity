@@ -203,6 +203,7 @@
             "hope": "Hope"
         },
         "sheetLabels": {
+            "editableTooltip": "expand the threat sheet to display editable fields",
             "stormknight": "Stormknight",
             "stats": "Stats",
             "perks": "Perks",
@@ -257,6 +258,7 @@
             "melee": "Melee",
             "unarmed": "Unarmed",
             "xp": "XP",
+            "xpOnlyGM": "only GM can fill",
             "unspent": "Unspent",
             "earned": "Earned",
             "clearance": "Clearance",
@@ -339,7 +341,8 @@
             "toggleSkillDisplay": "Click to toggle Skills display",
             "combatSkills": "Combat",
             "interactionSkills": "Interaction",
-            "otherSkills": "Other"
+            "otherSkills": "Other",
+            "targetDefense": "Target Defense"
         },
         "combat": {
             "nextKeep": "Next Round (Keep Current Card)",
@@ -478,7 +481,9 @@
             "value": "Value",
             "notes": "Notes",
             "check": {
+                "testUnsuccessfull": "Test unsuccessfull",
                 "needTarget": "Cannot attempt enhanced attack test without a target. Select a target and try again.",
+                "InteractionNeedTarget": "Cannot attempt interaction attack test without a target. Select a target and try again.",
                 "cantUseUntrained": " cannot be used unless it is learned (at least 1 skill add).",
                 "cantUseSkillRecquired": " cannot be used without at least 1 add in the required skill.",
                 "modifier": {
@@ -503,6 +508,9 @@
                     "targetConcealment": "Target Concealment"
                 },
                 "result": {
+                    "result": "result",
+                    "previous": "Previous roll total",
+                    "new": "New Roll Total",
                     "actionTotal": "Action Total",
                     "failure": "Failure",
                     "outstandingSuccess": "Outstanding Success",
@@ -645,7 +653,7 @@
             },
             "gmScreen": {
                 "name": "Select the GM Screen You Want to Use",
-                "hint": "You can select a GM screen from any active module. If you select a module that is not installed, the GM screen function may not work properly. NOTE: you need to refresh your browser (F5) after switching screens."
+                "hint": "You can select a GM screen from any active module. "
             },
             "hideForeignCompendium": {
                 "name": "Hide foreign Compendiums",
@@ -660,7 +668,20 @@
             "defaultUserHand": {
                 "name": "Default user cards hand name",
                 "hint": "Hand name for this user."
+            },
+            "disableXP": {
+                "name": "Disabling the XP input for players",
+                "hint": "If checked, only GM should be able to fill XP in character sheet."
+            },
+            "autoDamages": {
+                "name": "Apply damages automatically",
+                "hint": "If checked, shocks and wounds would be automatically apply if player has a valid target token."
+
             }
+        },
+        "skillDialogs": {
+            "disfavored": "Disfavored",
+            "disfavoredTip": "Check if this test is disfavored. The die roll will not explode on a 10 or 20." 
         },
         "notifications": {
             "macroTypeWarning": "You can only create macro buttons for owned Items and Attributes/Skills",
@@ -675,7 +696,14 @@
             "noHands": "No hands available!",
             "dramaDeckEmpty": "The Drama Deck is empty. Reset the Drama Deck to continue.",
             "onlyReservedCard": "Please play a reserved card while playing a dramatic scene",
-            "noActiveEffectInOwnedItem": "Managing Active Effects within an Owned Item is not currently supported and will be added in a subsequent update."
+            "noActiveEffectInOwnedItem": "Managing Active Effects within an Owned Item is not currently supported and will be added in a subsequent update.",
+            "noTarget": "No valid Target Token"
+        },
+        "gmScreen": {
+            "title": "GM screen",
+            "toggle": "Toggle the GM screen",
+            "noScreen": "No gm screen available",
+            "noScreenMessage": "you don't have selected any gm screen. The gm screens are provided by the modules that you can find here: "
         }
     },
     "CARD": {

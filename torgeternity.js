@@ -7,7 +7,6 @@ import torgeternityItemSheet from "./module/sheets/torgeternityItemSheet.js";
 import torgeternityActorSheet from "./module/sheets/torgeternityActorSheet.js";
 import { sheetResize } from "./module/sheetResize.js";
 import { preloadTemplates } from "./module/preloadTemplates.js";
-import { toggleViewMode } from "./module/viewMode.js";
 import * as torgchecks from "./module/torgchecks.js";
 import torgeternityCombat from "./module/dramaticScene/torgeternityCombat.js";
 import torgeternityCombatTracker from "./module/dramaticScene/torgeternityCombatTracker.js";
@@ -29,7 +28,11 @@ import { attackDialog } from "/systems/torgeternity/module/attack-dialog.js"; //
 import { skillDialog } from "/systems/torgeternity/module/skill-dialog.js";
 import { interactionDialog } from "/systems/torgeternity/module/interaction-dialog.js";
 import { hideCompendium } from './module/hideCompendium.js';
-import deckSettingMenu from './module/cards/cardSettingMenu.js';
+import initTorgControlButtons from './module/controlButtons.js';
+import createTorgShortcuts from './module/keybinding.js';
+import GMScreen from './module/GMScreen.js';
+import { explode } from './module/explode.js';
+
 
 Hooks.once("init", async function() {
     console.log("torgeternity | Initializing Torg Eternity System");
@@ -37,8 +40,6 @@ Hooks.once("init", async function() {
     //----helpers
     registerHelpers();
 
-    //-----system settings
-    registerTorgSettings()
 
     //-------global
     game.torgeternity = {
@@ -71,6 +72,9 @@ Hooks.once("init", async function() {
     CONFIG.Cards.documentClass = torgeternityCards;
     CONFIG.cardTypes = torgeternity.cardTypes;
 
+    ui.GMScreen = new GMScreen();
+    // all settings after config
+    registerTorgSettings();
     //---register items and actors
     Items.unregisterSheet("core", ItemSheet);
     Items.registerSheet("torgeternity", torgeternityItemSheet, {
@@ -91,85 +95,17 @@ Hooks.once("init", async function() {
 
     //----------preloading handlebars templates
     preloadTemplates();
-
-    //adding layer control for cards
-    class torgLayer extends CanvasLayer {
-        static get layerOptions() {
-            return foundry.utils.mergeObject(super.layerOptions, {
-                name: "Torg",
-                canDragCreate: false,
-                controllableObjects: true,
-                rotatableObjects: true,
-                zIndex: 666,
-            });
-        }
-    }
-    CONFIG.Canvas.layers.torgeternity = { layerClass: torgLayer, group: "primary" }
-
-    Hooks.on("getSceneControlButtons", btns => {
-
-        let menu = [{
-            name: game.i18n.localize("CARDS.TypeHand"),
-            title: game.i18n.localize("CARDS.TypeHand"),
-            icon: "fa fa-id-badge",
-            button: true,
-            onClick: () => {
-                if (game.user.character) {
-                    game.user.character.getDefaultHand().sheet.render(true)
-                } else {
-                    ui.notifications.error(game.i18n.localize("torgeternity.notifications.noHands"))
-                }
-            }
-        }];
-
-        if (game.user.isGM) {
-            menu.push({
-                name: game.i18n.localize("torgeternity.settingMenu.deckSetting.name"),
-                title: game.i18n.localize("torgeternity.settingMenu.deckSetting.name"),
-                icon: "fa fa-cog",
-                button: true,
-                onClick: () => {
-                    new deckSettingMenu().render(true)
-                }
-            })
-        }
-
-        btns.push({
-            name: game.i18n.localize("CARDS.TypeHand"),
-            title: game.i18n.localize("CARDS.TypeHand"),
-            icon: "fas fa-id-badge",
-            layer: "torgeternity",
-            tools: menu
-        })
+    // adding special torg buttons
+    initTorgControlButtons();
+    //create torg shortcuts
+    createTorgShortcuts();
 
 
-    });
 
-    //-----modify token bars
-
-
-    //----------debug hooks
-    // CONFIG.debug.hooks = true;
-    /*
-  //----socket receiver
-  game.socket.on("system.torgeternity", (data) => {
-    if (data.msg == "cardPlayed") {
-      Cards.cardPlayed(data);
-    }
-    if (data.msg == "cardReserved") {
-      Cards.cardReserved(data);
-    }
-    if (data.msg == "cardExchangePropose") {
-      Cards.cardExchangePropose(data);
-    }
-    if (data.msg == "cardExchangeValide") {
-      Cards.cardExchangeValide(data);
-    }
-  });
-*/
 });
 
 Hooks.once("setup", async function() {
+
         modifyTokenBars();
         //changing stutus marker 
         //preparing status marker
@@ -188,7 +124,15 @@ Hooks.once("setup", async function() {
 
 //-------------once everything ready
 Hooks.on("ready", async function() {
+
+    //defining behaviour of character sheets depending on their size
     sheetResize();
+
+    //modifying explosion methode for dices
+    Die.prototype.explode = explode;
+
+    //adding gmScreen to UI
+    ui.gmscreen = new GMScreen();
 
 
     //-----applying GM possibilities pool if absent
@@ -337,7 +281,6 @@ Hooks.on("ready", async function() {
             game.journal.importFromCompendium(basicRules, itemId);
         }
 
-
         game.settings.set("torgeternity", "setUpCards", false)
     }
 
@@ -345,10 +288,12 @@ Hooks.on("ready", async function() {
     //----pause image----
     Hooks.on("renderPause", () => {
 
-        let path = game.settings.get("torgeternity", "pauseMedia");
-        let img = document.getElementById("pause").firstElementChild;
-        path = "./" + path;
-        img.style.content = `url(${path})`
+        // Removing this because it doesn't appear to do anything any longer?
+
+        // let path = game.settings.get("torgeternity", "pauseMedia");
+        // let img = document.getElementById("pause").firstElementChild;
+        // path = "./" + path;
+        // img.style.content = `url(${path})`
     })
 
     //-------define a dialog for external links
@@ -642,6 +587,12 @@ function rollItemMacro(itemName) {
             var vulnerableModifier = 0;
             var targetToughness = 0;
             var targetArmor = 0;
+            var targetDodge = 0;
+            var targetMelee = 0;
+            var targetUnarmed = 0;
+            var defaultDodge = false;
+            var defaultMelee = false;
+            var defaultUnarmed = false;
             var targetDefenseSkill = "Dodge";
             console.log(targetDefenseSkill);
             var targetDefenseValue = 0;
@@ -683,37 +634,38 @@ function rollItemMacro(itemName) {
                 } else {
                     sizeModifier = 0;
                 }
+                // Set target defense values
+                if (target.actor.data.data.skills.dodge.value > 0) {
+                    targetDodge = target.actor.data.data.skills.dodge.value;
+                } else {
+                    targetDodge = target.actor.data.data.attributes.dexterity;
+                }
+
+                if (target.actor.data.data.skills.meleeWeapons.value > 0) {
+                    targetMelee = target.actor.data.data.skills.meleeWeapons.value;
+                } else {
+                    targetMelee = target.actor.data.data.attributes.dexterity;
+                }
+
+                if (target.actor.data.data.skills.unarmedCombat.value > 0) {
+                    targetUnarmed = target.actor.data.data.skills.unarmedCombat.value;
+                } else {
+                    targetUnarmed = target.actor.data.data.attributes.dexterity;
+                }
+
                 vulnerableModifier = target.actor.data.data.vulnerableModifier;
                 targetToughness = target.actor.data.data.other.toughness;
                 targetArmor = target.actor.data.data.other.armor;
                 if (attackWith === "fireCombat" || attackWith === "energyWeapons" || attackWith === "heavyWeapons" || attackWith === "missileWeapons") {
-                    targetDefenseSkill = "Dodge";
-                    console.log(targetDefenseSkill);
-                    if (targetType === "threat") {
-                        targetDefenseValue = target.actor.data.data.skills.dodge.value;
-                    } else {
-                        targetDefenseValue = target.actor.data.data.dodgeDefense;
-                    }
+                    defaultDodge=true;
                 } else {
                     if (target.actor.data.data.skills.meleeWeapons.adds > 0 || (targetType === "threat" && target.actor.data.data.skills.meleeWeapons.value > 0)) {
-                        targetDefenseSkill = "Melee Weapons";
-                        console.log(targetDefenseSkill);
-                        if (targetType === "threat") {
-                            targetDefenseValue = target.actor.data.data.skills.meleeWeapons.value;
-                        } else {
-                            targetDefenseValue = target.actor.data.data.meleeWeaponsDefense;
-                        }
+                        defaultMelee = true;
                     } else {
-                        targetDefenseSkill = "Unarmed Combat";
-                        console.log(targetDefenseSkill);
-                        if (targetType === "threat") {
-                            targetDefenseValue = target.actor.data.data.skills.unarmedCombat.value;
-                        } else {
-                            targetDefenseValue = target.actor.data.data.unarmedCombatDefense;
-                        }
+                        defaultUnarmed = true;
                     }
                 }
-            };
+            }
 
             var mTest = {
 
@@ -752,7 +704,14 @@ function rollItemMacro(itemName) {
                 sizeModifier: sizeModifier,
                 vulnerableModifier: vulnerableModifier,
                 vitalAreaDamageModifier: 0,
-                chatNote: weaponData.chatNote
+                chatNote: weaponData.chatNote,
+                defaultDodge: defaultDodge,
+                defaultMelee: defaultMelee,
+                defaultUnarmed: defaultUnarmed,
+                targetDodge: targetDodge,
+                targetMelee: targetMelee,
+                targetUnarmed: targetUnarmed,
+                disfavored: false
 
             }
 
@@ -866,7 +825,8 @@ function rollSkillMacro(skillName, attributeName, isInteractionAttack) {
         dramaTotal: 0,
         cardsPlayed: 0,
         sizeModifier: 0,
-        vulnerableModifier: 0
+        vulnerableModifier: 0,
+        disfavored: false
     };
     if (isInteractionAttack) {
         test["type"] = "interactionAttack";
@@ -885,7 +845,7 @@ function rollSkillMacro(skillName, attributeName, isInteractionAttack) {
             };
 
             var templateData = {
-                message: "Cannot attempt interaction attack test without a target. Select a target and try again.",
+                message: game.i18n.localize("torgeternity.chatText.check.interactionNeedTarget"),
                 actorPic: actor.data.img
             };
 

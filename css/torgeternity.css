@@ -183,6 +183,10 @@ div.actor ::-webkit-scrollbar {
     cursor: pointer;
 }
 
+.window-app.actor .window-content form select {
+    color: black;
+}
+
 .window-app .window-content form button[disabled] {
     color: gray;
     border: 1px solid red;
@@ -584,6 +588,25 @@ form input {
     opacity: 0.7;
 }
 
+i.torg {
+    width: 56px;
+    height: 30px;
+    background-image: url(../images/te-logo.webp);
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    position: relative;
+    left: -25%;
+    filter: grayscale(1);
+    transition: 0.3s;
+}
+
+li.scene-control.active i.torg,
+i.torg:hover {
+    filter: grayscale(0);
+}
+
 nav#controls {
     position: relative;
     top: 6vh
@@ -796,7 +819,7 @@ nav#controls ol .torgHand:before {
     top: 0%;
     width: 600px;
     height: 400px;
-    transform: scale(0.7);
+    transform: scale(1);
     transform-origin: 0% 0%;
     opacity: 1;
     z-index: +1;
@@ -811,7 +834,7 @@ nav#controls ol .torgHand:before {
 }
 
 #navigation div.cosm-icone:hover div.de.cosm-card {
-    transform: scale(1, 0.7);
+    transform: scale(1, 0.85);
 }
 
 
@@ -1474,6 +1497,10 @@ div.readme a.compendium {
     }
 }
 
+.torgeternity.actor {
+    min-width: 450px;
+}
+
 .torgeternity.actor .window-content {
     background-image: url(../images/bg-sheet.webp);
     background-size: cover;
@@ -1540,6 +1567,23 @@ form.actor-sheet header input[name="name"] {
     flex: none;
 }
 
+.tabsOn .window-content .actor-sheet h5.editable-tooltip {
+    display: none
+}
+
+.window-content .actor-sheet h5.editable-tooltip {
+    margin: 0px;
+    width: 100%;
+    text-align: right;
+    padding: 0px;
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    text-shadow: 0px 0px 3px rgb(255 74 74);
+    font-size: 0.8em;
+    box-shadow: 0px 0px 3px gray inset;
+}
+
 .window-content .actor-sheet section.sheet-body {
     height: 100%;
 }
@@ -1560,7 +1604,7 @@ form.actor-sheet header input[name="name"] {
 .window-content .actor-sheet .tab[data-tab].active {
     display: grid;
     grid-template-columns: repeat(8, 1fr);
-    grid-template-rows: 0.3fr 0.2fr 0.2fr 0.13fr 0.3fr 0.3fr;
+    grid-template-rows: repeat(8, minmax(100px, min-content));
     grid-gap: 0px 5px;
     justify-content: center;
     width: 100%;
@@ -1598,6 +1642,14 @@ form.actor-sheet header input[name="name"] {
     text-transform: capitalize;
     right: -310px;
     top: 310px;
+}
+
+.tabsOff .window-content .actor-sheet nav.tabs {
+    display: none
+}
+
+.tabsOff .window-content .actor-sheet #threat-editor {
+    display: none;
 }
 
 .window-content .actor-sheet nav.tabs a.item {
@@ -1666,6 +1718,12 @@ form.actor-sheet header input[name="name"] {
 .window-content .actor-sheet input[type="number"]::placeholder {
     color: #293131;
     text-shadow: 0px 0px 10px black;
+}
+
+.window-content .actor-sheet input.small-input {
+    min-width: 5px;
+    border: none;
+    width: 20px;
 }
 
 .window-content .actor-sheet img {
@@ -1762,6 +1820,7 @@ form.actor-sheet header input[name="name"] {
     transition: all 0.6s cubic-bezier(1, 0, 0, 1) 0.1s;
     display: flex;
     justify-content: center;
+    flex-direction: column;
 }
 
 .window-content .actor-sheet .char_image:hover {
@@ -1809,7 +1868,7 @@ form.actor-sheet header input[name="name"] {
     display: block;
 }
 
-.window-content .actor-sheet .sheet-header select {
+.window-content .actor-sheet select {
     color: black;
     border: none;
     border-bottom: 1px solid grey;
@@ -1818,8 +1877,8 @@ form.actor-sheet header input[name="name"] {
     font-family: Signika;
 }
 
-.window-content .actor-sheet .sheet-header select:active,
-.window-content .actor-sheet .sheet-header select:focus {
+.window-content .actor-sheet select:active,
+.window-content .actor-sheet select:focus {
     box-shadow: 0 0 5px #0062ff;
 }
 
@@ -1924,7 +1983,7 @@ form.actor-sheet header input[name="name"] {
     grid-column: 1/5;
     grid-row: 3/7;
     overflow: scroll;
-    max-height: 500px;
+    max-height: 100%;
 }
 
 .window-content .actor-sheet .skills select {
@@ -2302,6 +2361,7 @@ form.actor-sheet header input[name="name"] {
 .window-content .actor-sheet .threat-editor .threat-edit {
     flex-direction: column;
     font-family: Arial;
+    margin-top: 5px;
 }
 
 .window-content .actor-sheet .stat-block {
@@ -2317,9 +2377,9 @@ form.actor-sheet.threat img.profile-img {
 form.actor-sheet.threat input[type="checkbox"] {
     opacity: 0.01;
     position: relative;
-    left: -25px;
     cursor: pointer;
     top: 5px;
+    left: -3px;
     width: 10px;
 }
 
@@ -2327,7 +2387,7 @@ form.actor-sheet.threat a.toggleFav {
     color: grey;
     position: relative;
     font-size: 10px;
-    left: -4px;
+    left: 5px;
 }
 
 form.actor-sheet.threat a.toggleFav.checked {
@@ -2337,7 +2397,7 @@ form.actor-sheet.threat a.toggleFav.checked {
 
 form.actor-sheet.threat span.inputsFav {
     display: inline-block;
-    max-width: 40px;
+    max-width: 100px;
 }
 
 form.actor-sheet.threat div.skill-list-edit {
@@ -2345,18 +2405,21 @@ form.actor-sheet.threat div.skill-list-edit {
     justify-items: flex-end;
     justify-content: center;
     align-items: center;
-    grid-template-columns: repeat(3, 0.3fr);
+    grid-template-columns: repeat(3, 1fr);
 }
 
 form.actor-sheet.threat div.skill-list-edit .skill-element-edit {
     display: flex;
     padding-right: 5px;
     align-items: center;
+    flex-direction: row;
+    border-bottom: 1px solid lightgray;
 }
 
 form.actor-sheet.threat div.skill-list-edit .skill-element-edit span {
     text-align: end;
     font-family: Arial;
+    margin-right: 15px;
 }
 
 form.actor-sheet.threat div.skill-list-edit .skill-element-edit span.inputsFav {
@@ -2368,9 +2431,9 @@ form.actor-sheet.threat div.skill-list-edit .skill-element-edit span.inputsFav {
 form.actor-sheet.threat div.skill-list-edit .skill-element-edit span.inputsFav input[type="checkbox"],
 form.actor-sheet.threat div.skill-list-edit .skill-element-edit span.inputsFav a.toggleFav {
     position: absolute;
-    left: 20px;
+    left: 19px;
     max-width: 30px;
-    top: -5px;
+    top: 3px;
     width: 10px;
     margin: 0px;
     background: white;
@@ -3064,4 +3127,72 @@ form.actor-sheet.threat .tab[data-tab].active .editor {
     position: absolute;
     right: 0;
     font-size: 10px;
+}
+
+#gm-screen {
+    position: absolute;
+    width: 120%;
+    height: 85%;
+    margin-left: -10%;
+    z-index: 1000;
+    transform: translateX(-0%) rotateX(15deg) scale (1);
+    transition: all 500ms cubic-bezier(0.42, 0, 0.58, 1) 10ms;
+}
+
+#gm-screen>div {
+    width: 33%;
+    height: 100%;
+    background-size: 300% 100%;
+    box-shadow: 0px 15px 40px black;
+    transition: all 500ms cubic-bezier(0.42, 0, 0.58, 1) 10ms;
+}
+
+#gm-screen>#left-panel {
+    position: absolute;
+    left: 0%;
+    top: 0%;
+    transform: rotateY(10deg);
+    transform-origin: 100% 0% 0;
+}
+
+#gm-screen>#center-panel {
+    position: absolute;
+    left: 33%;
+    top: 0%;
+    transform: rotate3d(1, 15, -1, 0deg);
+    background-position-x: 50%;
+    z-index: -1;
+}
+
+#gm-screen>#right-panel {
+    position: absolute;
+    left: 66%;
+    top: 0%;
+    background-position-x: 100%;
+    transform: rotateY(-10deg);
+    transform-origin: 0% 0% 0;
+}
+
+#gm-screen.hidden {
+    top: 105%;
+}
+
+#gm-screen.hidden>#left-panel {
+    transform: rotateY(90deg);
+}
+
+#gm-screen.hidden>#right-panel {
+    transform: rotateY(-90deg);
+}
+
+#gm-screen.focus-left {
+    transform: scale(2) translateX(33%) translateY(25%);
+}
+
+#gm-screen.focus-center {
+    transform: scale(2) translateY(25%);
+}
+
+#gm-screen.focus-right {
+    transform: scale(2) translateX(-33%) translateY(25%);
 }
