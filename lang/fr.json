@@ -509,7 +509,7 @@
                     "goodSuccess": "succès supérieur",
                     "standartSuccess": "succès simple",
                     "mishape": "échec critique",
-                    "damage": "dommage",
+                    "damage": "dommages",
                     "toughness": "résistance",
                     "noDamage": "pas de dommages",
                     "attackMissed": "attaque ratée"
