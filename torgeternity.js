@@ -73,7 +73,6 @@ Hooks.once("init", async function() {
     CONFIG.Cards.documentClass = torgeternityCards;
     CONFIG.cardTypes = torgeternity.cardTypes;
 
-    ui.GMScreen = new GMScreen();
     // all settings after config
     registerTorgSettings();
     //---register items and actors
@@ -133,7 +132,7 @@ Hooks.on("ready", async function() {
     Die.prototype.explode = explode;
 
     //adding gmScreen to UI
-    ui.gmscreen = new GMScreen();
+    ui.GMScreen = new GMScreen();
 
 
     //-----applying GM possibilities pool if absent
