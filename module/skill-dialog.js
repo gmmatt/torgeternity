@@ -39,13 +39,6 @@ export class skillDialog extends FormApplication {
         this.test.isDN = true;
         this.test.DN = document.getElementById("dn-text").value;
 
-        // Check for disfavored and flag if needed
-        if (document.getElementById("disfavored").checked) {
-            this.test.disfavored = true
-        } else {
-            this.test.disfavored = false
-        }
-
         // Add bonus, if needed
         if (document.getElementById("previous-bonus").checked) {
             this.test.previousBonus = true

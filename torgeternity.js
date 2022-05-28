@@ -31,8 +31,6 @@ import { hideCompendium } from './module/hideCompendium.js';
 import initTorgControlButtons from './module/controlButtons.js';
 import createTorgShortcuts from './module/keybinding.js';
 import GMScreen from './module/GMScreen.js'
-import { setUpCardPiles } from './module/cards/setUpCardPiles.js';
-import { explode } from './module/explode.js';
 
 
 Hooks.once("init", async function() {
@@ -73,6 +71,7 @@ Hooks.once("init", async function() {
     CONFIG.Cards.documentClass = torgeternityCards;
     CONFIG.cardTypes = torgeternity.cardTypes;
 
+    ui.GMScreen = new GMScreen();
     // all settings after config
     registerTorgSettings();
     //---register items and actors
@@ -106,60 +105,26 @@ Hooks.once("init", async function() {
 
 Hooks.once("setup", async function() {
 
-    modifyTokenBars();
-    //changing stutus marker 
-    //preparing status marker
+        modifyTokenBars();
+        //changing stutus marker 
+        //preparing status marker
 
-    if (game.settings.get("core", "language") === "fr") {
-        for (let effect of CONFIG.statusEffects) {
-            effect.icon = effect.icon.replace("systems/torgeternity/images/status-markers", "systems/torgeternity/images/status-markers/fr")
+        if (game.settings.get("core", "language") === "fr") {
+            for (let effect of CONFIG.statusEffects) {
+                effect.icon = effect.icon.replace("systems/torgeternity/images/status-markers", "systems/torgeternity/images/status-markers/fr")
+            }
         }
-    }
 
+    }),
 
-});
-
-Hooks.once("diceSoNiceReady", (dice3d) => {
-    registerDiceSoNice(dice3d);
-});
+    Hooks.once("diceSoNiceReady", (dice3d) => {
+        registerDiceSoNice(dice3d);
+    });
 
 //-------------once everything ready
 Hooks.on("ready", async function() {
-
-
-    //migration script
-    if (game.system.data.version <= "2.4.0") {
-        // code to migrate missile weappon groupName
-
-        ui.notifications.warn("migrating system version .............")
-        game.actors.forEach(async act => {
-                if (act.data.data.skills.missileWeapons.groupName != "combat") {
-                    await act.update({ "data.skills.missileWeapons.groupName": "combat" })
-                    ui.notifications.info(act.name + " : migrated")
-                }
-
-            })
-            // code to migrate new game settings
-        let deckSettings = game.settings.get("torgeternity", "deckSetting")
-        if (deckSettings.stormknightsHands) {
-            ui.notifications.warn("updating system settings .............")
-
-            deckSettings.stormknights = deckSettings.stormknightsHands;
-            deckSettings.stormknightsHands = null;
-            await game.settings.set("torgeternity", "deckSetting", deckSettings);
-
-        }
-    }
-
-
-
     sheetResize();
-
-    //modifying explosion methode for dices
-    Die.prototype.explode = explode;
-
-    //adding gmScreen to UI
-    ui.GMScreen = new GMScreen();
+    ui.gmscreen = new GMScreen();
 
 
     //-----applying GM possibilities pool if absent
@@ -235,20 +200,9 @@ Hooks.on("ready", async function() {
     //----setup cards if needed
 
     if (game.settings.get("torgeternity", "setUpCards") === true) {
-
-        let lang = game.settings.get("core", "language");
-
         const pack = game.packs.get("torgeternity.core-card-set");
-        let basicRules = game.packs.get("torgeternity.basic-rules");
-
-        if (lang == "fr") {
-            basicRules = game.packs.get("torgeternity.basic-rules-fr");
-        }
-        if (lang == "de") {
-            basicRules = game.packs.get("torgeternity.system-de-basisregeln");
-        }
-
-        // Add Destiny Deck
+        const basicRules = game.packs.get("torgeternity.basic-rules")
+            // Add Destiny Deck
         if (game.cards.getName("Destiny Deck") == null) {
             const itemId = pack.index.getName("Destiny Deck")._id;
             game.cards.importFromCompendium(pack, itemId)
@@ -294,17 +248,9 @@ Hooks.on("ready", async function() {
             let activeDrama = Cards.create(cardData, { keepId: true, renderSheet: false });
         }
 
-        // Add journal entry with instructions relating to cards depending on language
-        let journalName = "Managing Cards"
-        if (lang == "fr") {
-            journalName = "gestion des cartes"
-        }
-        if (lang == "de") {
-            journalName = "Der Umgang mit Karten in Foundry"
-        }
-
-        if (game.journal.getName(journalName) == null) {
-            const itemId = basicRules.index.getName(journalName)._id;
+        // Add journal entry with instructions relating to cards
+        if (game.journal.getName("Managing Cards") == null) {
+            const itemId = basicRules.index.getName("Managing Cards")._id;
             game.journal.importFromCompendium(basicRules, itemId);
         }
 
@@ -614,13 +560,8 @@ function rollItemMacro(itemName) {
             var vulnerableModifier = 0;
             var targetToughness = 0;
             var targetArmor = 0;
-            var targetDodge = 0;
-            var targetMelee = 0;
-            var targetUnarmed = 0;
-            var defaultDodge = false;
-            var defaultMelee = false;
-            var defaultUnarmed = false;
             var targetDefenseSkill = "Dodge";
+            console.log(targetDefenseSkill);
             var targetDefenseValue = 0;
 
             // Exit if no target or get target data
@@ -660,38 +601,37 @@ function rollItemMacro(itemName) {
                 } else {
                     sizeModifier = 0;
                 }
-                // Set target defense values
-                if (target.actor.data.data.skills.dodge.value > 0) {
-                    targetDodge = target.actor.data.data.skills.dodge.value;
-                } else {
-                    targetDodge = target.actor.data.data.attributes.dexterity;
-                }
-
-                if (target.actor.data.data.skills.meleeWeapons.value > 0) {
-                    targetMelee = target.actor.data.data.skills.meleeWeapons.value;
-                } else {
-                    targetMelee = target.actor.data.data.attributes.dexterity;
-                }
-
-                if (target.actor.data.data.skills.unarmedCombat.value > 0) {
-                    targetUnarmed = target.actor.data.data.skills.unarmedCombat.value;
-                } else {
-                    targetUnarmed = target.actor.data.data.attributes.dexterity;
-                }
-
                 vulnerableModifier = target.actor.data.data.vulnerableModifier;
                 targetToughness = target.actor.data.data.other.toughness;
                 targetArmor = target.actor.data.data.other.armor;
                 if (attackWith === "fireCombat" || attackWith === "energyWeapons" || attackWith === "heavyWeapons" || attackWith === "missileWeapons") {
-                    defaultDodge = true;
+                    targetDefenseSkill = "Dodge";
+                    console.log(targetDefenseSkill);
+                    if (targetType === "threat") {
+                        targetDefenseValue = target.actor.data.data.skills.dodge.value;
+                    } else {
+                        targetDefenseValue = target.actor.data.data.dodgeDefense;
+                    }
                 } else {
                     if (target.actor.data.data.skills.meleeWeapons.adds > 0 || (targetType === "threat" && target.actor.data.data.skills.meleeWeapons.value > 0)) {
-                        defaultMelee = true;
+                        targetDefenseSkill = "Melee Weapons";
+                        console.log(targetDefenseSkill);
+                        if (targetType === "threat") {
+                            targetDefenseValue = target.actor.data.data.skills.meleeWeapons.value;
+                        } else {
+                            targetDefenseValue = target.actor.data.data.meleeWeaponsDefense;
+                        }
                     } else {
-                        defaultUnarmed = true;
+                        targetDefenseSkill = "Unarmed Combat";
+                        console.log(targetDefenseSkill);
+                        if (targetType === "threat") {
+                            targetDefenseValue = target.actor.data.data.skills.unarmedCombat.value;
+                        } else {
+                            targetDefenseValue = target.actor.data.data.unarmedCombatDefense;
+                        }
                     }
                 }
-            }
+            };
 
             var mTest = {
 
@@ -730,14 +670,7 @@ function rollItemMacro(itemName) {
                 sizeModifier: sizeModifier,
                 vulnerableModifier: vulnerableModifier,
                 vitalAreaDamageModifier: 0,
-                chatNote: weaponData.chatNote,
-                defaultDodge: defaultDodge,
-                defaultMelee: defaultMelee,
-                defaultUnarmed: defaultUnarmed,
-                targetDodge: targetDodge,
-                targetMelee: targetMelee,
-                targetUnarmed: targetUnarmed,
-                disfavored: false
+                chatNote: weaponData.chatNote
 
             }
 
@@ -851,8 +784,7 @@ function rollSkillMacro(skillName, attributeName, isInteractionAttack) {
         dramaTotal: 0,
         cardsPlayed: 0,
         sizeModifier: 0,
-        vulnerableModifier: 0,
-        disfavored: false
+        vulnerableModifier: 0
     };
     if (isInteractionAttack) {
         test["type"] = "interactionAttack";
@@ -947,6 +879,7 @@ Hooks.on("renderCombatTracker", (combatTracker) => {
 })
 
 Hooks.on("renderCompendiumDirectory", (app, html, data) => {
+    console.log('----------directory compendium')
     if (game.settings.get("torgeternity", "hideForeignCompendium") == true) {
         hideCompendium(game.settings.get("core", "language"), html)
 
@@ -994,24 +927,3 @@ Hooks.on('updateActor', (actor, data, options, id) => {
     //updating playerList with users character up-to-date data
     ui.players.render(true);
 });
-
-// by default creating a  hand for each stormknight
-Hooks.on("preCreateActor", async(actor, options, userId) => {
-    if (actor.type === "stormknight") {
-        let cardData = {
-            name: actor.name,
-            type: "hand"
-        }
-        let characterHand = await Cards.create(cardData);
-
-        // getting ids of actor and card hand
-        let actorId = actor.id;
-        let handId = characterHand.id
-
-        // storing ids in game.settings
-        let settingData = game.settings.get("torgeternity", "deckSetting");
-        settingData.stormknights[actorId] = handId;
-        await game.settings.set("torgeternity", "deckSetting", settingData);
-    }
-
-})

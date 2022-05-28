@@ -3,39 +3,39 @@
 	{{#each perk as |item id|}}
 
 
-	<li class="item block" data-item-id="{{item._id}}">
-		<div class="item-row flexrow">
-			<img src="{{item.img}}" title="{{item.name}}" />
-			<a class="item-name">{{item.name}}</a>
-			<div class="item-controls">
-				<a class="item-control item-tochat" title="{{localize 'torgeternity.iconeTitles.sendToChat'}}">
-					<i class="fas fa-comment"></i>
-				</a>
-				<a class="item-control item-edit" title="{{localize 'torgeternity.iconeTitles.edit'}}">
-					<i class="fas fa-edit"></i>
-				</a>
-				<a class="item-control item-delete" title="{{localize 'torgeternity.iconeTitles.delete'}}">
-					<i class="fas fa-trash"></i>
-				</a>
+		<li class="item block" data-item-id="{{item._id}}">
+			<div class="item-row flexrow">
+				<img src="{{item.img}}" title="{{item.name}}"/>
+				<a class="item-name">{{item.name}}</a>
+				<div class="item-controls">
+					<a class="item-control item-tochat" title="{{localize 'torgeternity.iconeTitles.sendToChat'}}">
+						<i class="fas fa-comment"></i>
+					</a>
+					<a class="item-control item-edit" title="{{localize 'torgeternity.iconeTitles.edit'}}">
+						<i class="fas fa-edit"></i>
+					</a>
+					<a class="item-control item-delete" title="{{localize 'torgeternity.iconeTitles.delete'}}">
+						<i class="fas fa-trash"></i>
+					</a>
+				</div>
 			</div>
-		</div>
 
-		<div class="item-detail">
-			<div class="item-dropdown-description">
-				{{{item.data.description}}}
+			<div class="item-detail">
+				<div class="item-dropdown-description">
+					{{{item.data.description}}}
+				</div>
+				<div class="item-dropdown-extras">
+					{{item.data.category}}
+				</div>
+				<div class="item-dropdown-extras">
+					{{item.data.cosm}}
+				</div>
+				<div class="item-dropdown-extras">
+					{{item.data.timestaken}}x
+				</div>
 			</div>
-			<div class="item-dropdown-extras">
-				{{localize (concatPerkType item.data.category)}}
-			</div>
-			<div class="item-dropdown-extras">
-				{{item.data.cosm}}
-			</div>
-			<div class="item-dropdown-extras">
-				{{item.data.timestaken}}x
-			</div>
-		</div>
 
-	</li>
+		</li>
 	{{/each}}
 </ol>
 
@@ -44,29 +44,29 @@
 	{{#each customSkill as |item id|}}
 
 
-	<li class="item block" data-item-id="{{item._id}}">
-		<div class="item-row flexrow">
-			<img src="{{item.img}}" title="{{item.name}}" />
-			<a class="item-name">{{item.name}}</a>
-			<div class="item-controls">
-				<a class="item-control item-tochat" title="{{localize 'torgeternity.iconeTitles.sendToChat'}}">
-					<i class="fas fa-comment"></i>
-				</a>
-				<a class="item-control item-edit" title="{{localize 'torgeternity.iconeTitles.edit'}}">
-					<i class="fas fa-edit"></i>
-				</a>
-				<a class="item-control item-delete" title="{{localize 'torgeternity.iconeTitles.delete'}}">
-					<i class="fas fa-trash"></i>
-				</a>
+		<li class="item block" data-item-id="{{item._id}}">
+			<div class="item-row flexrow">
+				<img src="{{item.img}}" title="{{item.name}}"/>
+				<a class="item-name">{{item.name}}</a>
+				<div class="item-controls">
+					<a class="item-control item-tochat" title="{{localize 'torgeternity.iconeTitles.sendToChat'}}">
+						<i class="fas fa-comment"></i>
+					</a>
+					<a class="item-control item-edit" title="{{localize 'torgeternity.iconeTitles.edit'}}">
+						<i class="fas fa-edit"></i>
+					</a>
+					<a class="item-control item-delete" title="{{localize 'torgeternity.iconeTitles.delete'}}">
+						<i class="fas fa-trash"></i>
+					</a>
+				</div>
 			</div>
-		</div>
 
-		<div class="item-detail">
-			<div class="item-dropdown-description">
-				{{{item.data.description}}}
+			<div class="item-detail">
+				<div class="item-dropdown-description">
+					{{{item.data.description}}}
+				</div>
 			</div>
-		</div>
 
-	</li>
+		</li>
 	{{/each}}
 </ol>
