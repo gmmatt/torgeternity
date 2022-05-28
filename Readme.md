@@ -8,7 +8,7 @@
 For manual installation, use the provided manifest URL in the "*Install System*" popup window 
 while managing game systems.
 
-v. 2.4.0 (Beta)
+v. 2.4.0
 - Updated enhanced checks to include disfavored rolls
 - Attack rolls now allow user to select defense used
 - Integrated code from Chain Reaction module so that exploding
