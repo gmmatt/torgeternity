@@ -21,12 +21,6 @@
         "./css/cards.css"
     ],
     "background": "images/splash.webp",
-<<<<<<< HEAD
-    "dependencies": [{
-        "name": "chain-reaction"
-    }],
-=======
->>>>>>> 72d822ae8a8836a0aaf674a792c0a6fe13c78b3a
     "packs": [{
             "name": "archetypes",
             "label": "Archetypes (en)",

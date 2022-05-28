@@ -30,12 +30,8 @@ import { interactionDialog } from "/systems/torgeternity/module/interaction-dial
 import { hideCompendium } from './module/hideCompendium.js';
 import initTorgControlButtons from './module/controlButtons.js';
 import createTorgShortcuts from './module/keybinding.js';
-<<<<<<< HEAD
-import GMScreen from './module/GMScreen.js';
-=======
 import GMScreen from './module/GMScreen.js'
 import { setUpCardPiles } from './module/cards/setUpCardPiles.js';
->>>>>>> 72d822ae8a8836a0aaf674a792c0a6fe13c78b3a
 import { explode } from './module/explode.js';
 
 
@@ -129,9 +125,6 @@ Hooks.once("setup", async function() {
 //-------------once everything ready
 Hooks.on("ready", async function() {
 
-<<<<<<< HEAD
-    //defining behaviour of character sheets depending on their size
-=======
 
     //migration script
     if (game.system.data.version <= "2.4.0") {
@@ -159,7 +152,6 @@ Hooks.on("ready", async function() {
 
 
 
->>>>>>> 72d822ae8a8836a0aaf674a792c0a6fe13c78b3a
     sheetResize();
 
     //modifying explosion methode for dices
@@ -242,11 +234,6 @@ Hooks.on("ready", async function() {
     //----setup cards if needed
 
     if (game.settings.get("torgeternity", "setUpCards") === true) {
-<<<<<<< HEAD
-        const pack = game.packs.get("torgeternity.core-card-set");
-        const basicRules = game.packs.get("torgeternity.basic-rules")
-            // Add Destiny Deck
-=======
 
         let lang = game.settings.get("core", "language");
 
@@ -261,7 +248,6 @@ Hooks.on("ready", async function() {
         }
 
         // Add Destiny Deck
->>>>>>> 72d822ae8a8836a0aaf674a792c0a6fe13c78b3a
         if (game.cards.getName("Destiny Deck") == null) {
             const itemId = pack.index.getName("Destiny Deck")._id;
             game.cards.importFromCompendium(pack, itemId)
@@ -307,11 +293,6 @@ Hooks.on("ready", async function() {
             let activeDrama = Cards.create(cardData, { keepId: true, renderSheet: false });
         }
 
-<<<<<<< HEAD
-        // Add journal entry with instructions relating to cards
-        if (game.journal.getName("Managing Cards") == null) {
-            const itemId = basicRules.index.getName("Managing Cards")._id;
-=======
         // Add journal entry with instructions relating to cards depending on language
         let journalName = "Managing Cards"
         if (lang == "fr") {
@@ -323,7 +304,6 @@ Hooks.on("ready", async function() {
 
         if (game.journal.getName(journalName) == null) {
             const itemId = basicRules.index.getName(journalName)._id;
->>>>>>> 72d822ae8a8836a0aaf674a792c0a6fe13c78b3a
             game.journal.importFromCompendium(basicRules, itemId);
         }
 
@@ -681,29 +661,9 @@ function rollItemMacro(itemName) {
                     sizeModifier = 0;
                 }
                 // Set target defense values
-<<<<<<< HEAD
-                if (target.actor.data.data.skills.dodge.value > 0) {
-                    targetDodge = target.actor.data.data.skills.dodge.value;
-                } else {
-                    targetDodge = target.actor.data.data.attributes.dexterity;
-                }
-
-                if (target.actor.data.data.skills.meleeWeapons.value > 0) {
-                    targetMelee = target.actor.data.data.skills.meleeWeapons.value;
-                } else {
-                    targetMelee = target.actor.data.data.attributes.dexterity;
-                }
-
-                if (target.actor.data.data.skills.unarmedCombat.value > 0) {
-                    targetUnarmed = target.actor.data.data.skills.unarmedCombat.value;
-                } else {
-                    targetUnarmed = target.actor.data.data.attributes.dexterity;
-                }
-=======
                 targetDodge = target.actor.data.data.dodgeDefense;
                 targetMelee = target.actor.data.data.meleeWeaponsDefense;
                 targetUnarmed = target.actor.data.data.unarmedCombatDefense;
->>>>>>> 72d822ae8a8836a0aaf674a792c0a6fe13c78b3a
 
                 vulnerableModifier = target.actor.data.data.vulnerableModifier;
                 targetToughness = target.actor.data.data.other.toughness;
@@ -1001,9 +961,6 @@ Hooks.on("renderActorSheet", (app, html, data) => {
 Hooks.on('updateActor', (actor, data, options, id) => {
     //updating playerList with users character up-to-date data
     ui.players.render(true);
-<<<<<<< HEAD
-});
-=======
 });
 
 // by default creating a  hand for each stormknight
@@ -1026,4 +983,3 @@ Hooks.on("preCreateActor", async(actor, options, userId) => {
     }
 
 })
->>>>>>> 72d822ae8a8836a0aaf674a792c0a6fe13c78b3a
