@@ -35,9 +35,24 @@ export class attackDialog extends FormApplication {
 
     _onAttack(event,html) {
         
-        // Add DN
+        // Add DN based on selected target attribute
         this.test.isDN = true;
-        this.test.DN = this.test.targetDefenseValue;
+        if (document.getElementById("defend-dodge").selected) {
+            this.test.DN = this.test.targetDodge
+        }
+        if (document.getElementById("defend-meleeCombat").selected) {
+            this.test.DN = this.test.targetMelee
+        }
+        if (document.getElementById("defend-unarmedCombat").selected) {
+            this.test.DN = this.test.targetUnarmed
+        }
+
+        // Check for disfavored and flag if needed
+        if (document.getElementById("disfavored").checked) {
+            this.test.disfavored = true
+        } else {
+            this.test.disfavored = false
+        }
 
         // Add bonus, if needed
         if (document.getElementById("previous-bonus").checked) {
