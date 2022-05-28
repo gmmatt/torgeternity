@@ -662,9 +662,23 @@ function rollItemMacro(itemName) {
                     sizeModifier = 0;
                 }
                 // Set target defense values
-                targetDodge = target.actor.data.data.dodgeDefense;
-                targetMelee = target.actor.data.data.meleeWeaponsDefense;
-                targetUnarmed = target.actor.data.data.unarmedCombatDefense;
+                if (target.actor.data.data.skills.dodge.value > 0) {
+                    targetDodge = target.actor.data.data.skills.dodge.value;
+                } else {
+                    targetDodge = target.actor.data.data.attributes.dexterity;
+                }
+
+                if (target.actor.data.data.skills.meleeWeapons.value > 0) {
+                    targetMelee = target.actor.data.data.skills.meleeWeapons.value;
+                } else {
+                    targetMelee = target.actor.data.data.attributes.dexterity;
+                }
+
+                if (target.actor.data.data.skills.unarmedCombat.value > 0) {
+                    targetUnarmed = target.actor.data.data.skills.unarmedCombat.value;
+                } else {
+                    targetUnarmed = target.actor.data.data.attributes.dexterity;
+                }
 
                 vulnerableModifier = target.actor.data.data.vulnerableModifier;
                 targetToughness = target.actor.data.data.other.toughness;
@@ -875,21 +889,40 @@ function rollSkillMacro(skillName, attributeName, isInteractionAttack) {
             var targetType = target.actor.data.type;
             test.vulnerableModifier = target.actor.data.data.vulnerableModifier;
             if (test.interactionAttackType === "intimidation") {
-                test.targetDefenseSkill = game.i18n.localize("torgeternity.skills.intimidation");
-                test.targetDefenseValue = target.actor.data.data.intimidationDefense;
+                if (target.actor.data.data.skills.intimidation.value > 0) {
+                    test.targetDefenseSkill = game.i18n.localize("torgeternity.skills.intimidation");
+                    test.targetDefenseValue = target.actor.data.data.skills.intimidation.value;
+                } else {
+                    test.targetDefenseSkill = game.i18n.localize("torgeternity.attributes.spirit");
+                    test.targetDefenseValue = target.actor.data.data.attributes.spirit;
+                }
             } else if (test.interactionAttackType === "maneuver") {
-                test.targetDefenseSkill = game.i18n.localize("torgeternity.skills.maneuver");
-                test.targetDefenseValue = target.actor.data.data.maneuverDefense;
+                if (target.actor.data.data.skills.maneuver.value > 0) {
+                    test.targetDefenseSkill = game.i18n.localize("torgeternity.skills.maneuver");
+                    test.targetDefenseValue = target.actor.data.data.skills.maneuver.value;
+                } else {
+                    test.targetDefenseSkill = game.i18n.localize("torgeternity.attributes.dexterity");
+                    test.targetDefenseValue = target.actor.data.data.attributes.dexterity;
+                }
             } else if (test.interactionAttackType === "taunt") {
-                test.targetDefenseSkill = game.i18n.localize("torgeternity.skills.taunt");
-                test.targetDefenseValue = target.actor.data.data.tauntDefense;
+                if (target.actor.data.data.skills.taunt.value > 0) {
+                    test.targetDefenseSkill = game.i18n.localize("torgeternity.skills.taunt");
+                    test.targetDefenseValue = target.actor.data.data.skills.taunt.value;
+                } else {
+                    test.targetDefenseSkill = game.i18n.localize("torgeternity.attributes.charisma");
+                    test.targetDefenseValue = target.actor.data.data.attributes.charisma;
+                }
             } else if (test.interactionAttackType === "trick") {
-                test.targetDefenseSkill = game.i18n.localize("torgeternity.skills.trick");
-                test.targetDefenseValue = target.actor.data.data.trickDefense;
+                if (target.actor.data.data.skills.trick.value > 0) {
+                    test.targetDefenseSkill = game.i18n.localize("torgeternity.skills.trick");
+                    test.targetDefenseValue = target.actor.data.data.skills.trick.value;
+                } else {
+                    test.targetDefenseSkill = game.i18n.localize("torgeternity.attributes.mind");
+                    test.targetDefenseValue = target.actor.data.data.attributes.mind;
+                }
             }
         }
     }
-    // Add Stymied Modifiers
     if (actor.data.data.stymiedModifier === parseInt(-2)) {
         test.stymiedModifier = -2;
     } else if (actor.data.data.stymiedModifier === -4) {
