@@ -1828,6 +1828,10 @@ form.actor-sheet header input[name="name"] {
     justify-content: space-between;
 }
 
+.window-content .actor-sheet .sheet-header .threatHeader {
+    min-width: max-content;
+}
+
 .window-content .actor-sheet .sheet-header img {
     max-width: 250px;
     max-height: 200px;
