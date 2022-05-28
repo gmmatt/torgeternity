@@ -1,14 +1,13 @@
-<div class="miracle-border sheet-card {{data.type}}" data-type="{{data.type}}"
-    style="background-image: url('systems/torgeternity/images/bgparch.webp')">
+<div class="miracle-border sheet-card {{data.type}}" data-type="{{data.type}}" style="background-image: url('systems/torgeternity/images/bgparch.webp')">
     <table style="border:none;background-color:transparent">
-        <tr style="border:none">
-            <td>
-                <img class="perk-icon" src="{{img}}" title="{{name}}" style="width:50px;height:50px" />
-            </td>
-            <td class="chat-title">
-                {{name}}
-            </td>
-        </tr>
+    <tr style="border:none">
+        <td>
+            <img class="perk-icon" src="{{img}}" title="{{name}}" style="width:50px;height:50px" />
+        </td>
+        <td class="chat-title">
+            {{name}}
+        </td>
+    </tr>
     </table>
     <div class="item-description-chat" data-item-id="{{_id}}">
         <div class="item-description-chat">{{{data.description}}}</div>
@@ -20,18 +19,18 @@
             {{localize "torgeternity.attributes.spirit"}} {{data.axiom}}
         </div>
         <div class="item-dropdown-extras">
-            {{ localize (concatSkillName data.skill)}}
+            {{data.skill}}
         </div>
         <div class="item-dropdown-extras">
             {{data.castingtime}}
-        </div>
+        </div>  
         <div class="item-dropdown-extras">
             {{data.range}}
-        </div>
+        </div>  
         <div class="item-dropdown-extras">
             {{data.duration}}
-        </div>
+        </div>  
     </div>
-
+                               
 
 </div>

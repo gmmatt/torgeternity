@@ -8,20 +8,12 @@
 For manual installation, use the provided manifest URL in the "*Install System*" popup window 
 while managing game systems.
 
-v. 2.4.0 (Beta)
+v. 2.4.0
 - Updated enhanced checks to include disfavored rolls
 - Attack rolls now allow user to select defense used
 - Integrated code from Chain Reaction module so that exploding
   dice now operate in tandem with TE rules
 - Lots of CSS to make journal entries look more Torg-Like
-- Integrated "Session Zero" on EN and DE compendiums as a bonus
-- Threats now have derived defense values that can be modified
-  by effects (gear with defenses now "works" for threats, so you
-  may need to alter existing threats in your game worlds)
-- All enhanced interaction and combat attacks now use the target's
-  defense values, rather than their base skills/stats
-- Fixed bug where attribute tests would not work with enhanced
-  rolls
 
 v. 2.3.9
 - Fixed bug from last two releases that caused problems with

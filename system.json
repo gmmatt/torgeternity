@@ -4,7 +4,7 @@
     "description": "Torg Eternity character sheet for Foundry VTT.",
     "author": "Matt Ritchie",
 
-    "version": "2.3.9",
+    "version": "2.4.0",
 
     "minimumCoreVersion": "9",
     "compatibleCoreVersion": "9",
@@ -21,6 +21,9 @@
         "./css/cards.css"
     ],
     "background": "images/splash.webp",
+    "dependencies": [{
+        "name": "chain-reaction"
+    }],
     "packs": [{
             "name": "archetypes",
             "label": "Archetypes (en)",
@@ -44,14 +47,6 @@
             "module": "torgeternity",
             "path": "packs/core-card-set.db",
             "entity": "Cards"
-        },
-        {
-            "name": "core-scenes",
-            "label": "Standardscene (en)",
-            "system": "torgeternity",
-            "module": "torgeternity",
-            "path": "packs/standardscene.db",
-            "entity": "Scene"
         },
         {
             "name": "archetypes-fr",
@@ -90,14 +85,6 @@
             "path": "packs/deutsch/basisregeln.db",
             "module": "torgeternity",
             "entity": "JournalEntry"
-        },
-        {
-            "name": "core-de-scenes",
-            "label": "Standardszene (de)",
-            "system": "torgeternity",
-            "module": "torgeternity",
-            "path": "packs/deutsch/standardszene.db",
-            "entity": "Scene"
         },
         {
             "name": "system-de-grundkarten",
