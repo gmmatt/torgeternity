@@ -32,24 +32,15 @@
         </tr>
         <tr>
             <td>
-                <table>
-                    <tr>
-                        <td>
-                            {{> "systems/torgeternity/templates/testDialogs/disfavored.hbs"}}
-                        </td>
-                        <td>
-                            <fieldset>
-                                <legend>{{localize "torgeternity.sheetLabels.movementPenalty"}}</legend>
-                                <span class="skill-check-options">
-                                    <input type="radio" class="walking-radio" name="movement" value=0 checked>
-                                    <label for="walking">{{localize "torgeternity.sheetLabels.walking"}}</label>
-                                    <input type="radio" id="running-radio" class="running-radio" name="movement" value=-2>
-                                    <label for="running">{{localize "torgeternity.sheetLabels.running"}}</label>
-                                </span>
-                            </fieldset>
-                        </td>
-                    </tr>
-                </table>
+                <fieldset>
+                    <legend>{{localize "torgeternity.sheetLabels.movementPenalty"}}</legend>
+                    <span class="skill-check-options">
+                        <input type="radio" class="walking-radio" name="movement" value=0 checked>
+                        <label for="walking">{{localize "torgeternity.sheetLabels.walking"}}</label>
+                        <input type="radio" id="running-radio" class="running-radio" name="movement" value=-2>
+                        <label for="running">{{localize "torgeternity.sheetLabels.running"}}</label>
+                    </span>
+                </fieldset>
             </td>
         </tr>
         <tr>

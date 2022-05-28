@@ -192,18 +192,14 @@
             <h2>{{localize "torgeternity.sheetLabels.stormknight"}}</h2>
             <div class="stormknight-list">
                 {{#each stormknights as |stormknight index|}}
-                {{log stormknight.id}}
                 {{#if stormknight.isOwner}}
                 <div class="formFields flexrow">
                     <label>{{stormknight.name}}</label>
-                    <select name="stormknights.{{stormknight.id}}" data-type="String"
+                    <select name="stormknightsHands.{{stormknight.id}}" data-type="String"
                         class="selectDeck formFields stormknightHand">
                         {{#each ../deckList as |deck index|}}
-
                         {{#ifequal deck.type "hand"}}
-                        {{log deck.id}}
-                        {{log stormknight.id}}
-                        <option value="{{deck.id}}" {{#ifequal (lookup @root/stormknights stormknight.id)
+                        <option value="{{deck.id}}" {{#ifequal (lookup @root/stormknightsHands stormknight.id)
                             deck.id}}selected {{/ifequal}}>
                             {{deck.name}}
                         </option>

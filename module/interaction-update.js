@@ -39,7 +39,6 @@ export class interactionUpdate extends FormApplication {
         this.test.isDN = true;
         this.test.DN = this.test.targetDefenseValue;
 
-
         // Add movement modifier
         if (document.getElementById("running-radio").checked) {
             this.test.movementModifier = -2
