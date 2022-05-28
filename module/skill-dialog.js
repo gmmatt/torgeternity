@@ -116,7 +116,7 @@ export class skillDialog extends FormApplication {
         }
 
         var x = event;
-        if (this.test.testType === "skill" | this.test.testType === "attribute") {
+        if (this.test.testType === "skill") {
             torgchecks.SkillCheck(this.test);
             this.close()
         } else if (this.test.testType === "power") {

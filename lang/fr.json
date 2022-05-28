@@ -2,7 +2,7 @@
     "torgeternity": {
         "attributes": {
             "charisma": "Charisme",
-            "dexterity": "Dextérité",
+            "dexterity": "Dexterité",
             "mind": "Raison",
             "spirit": "Esprit",
             "strength": "Force"
@@ -11,7 +11,7 @@
             "airVehicles": "Véhicules aériens",
             "alteration": "Altération",
             "apportation": "Cinétique",
-            "beastRiding": "Équitation",
+            "beastRiding": "Equitation",
             "computers": "Informatique",
             "conjuration": "Conjuration",
             "divination": "Divination",
@@ -28,7 +28,7 @@
             "landVehicles": "Véhicules terrestres",
             "language": "Langue",
             "lockpicking": "Crochetage",
-            "maneuver": "Manœuvre",
+            "maneuver": "Manoeuvre",
             "medicine": "Médecine",
             "meleeWeapons": "Armes de mêlée",
             "missileWeapons": "Armes de jet",
@@ -70,7 +70,7 @@
             "landVehicles": "véhicules terrestres",
             "language": "langue",
             "lockpicking": "crochetage",
-            "maneuver": "manœuvre",
+            "maneuver": "manoeuvre",
             "medicine": "médecine",
             "meleeWeapons": "armes de mêlée",
             "missileWeapons": "armes de jet",
@@ -99,13 +99,13 @@
             "value": "Valeur",
             "damageType": "Type de dommage",
             "damage": "Dommage",
-            "damagebonus": "Bonus dommages",
+            "damagebonus": "Bonus dommage",
             "notes": "Notes",
             "cosm": "Cosm",
             "bonus": "Bonus",
-            "maxDex": "Dex max",
+            "maxDex": "Dex Max",
             "range": "Portée",
-            "ammo": "Munitions",
+            "ammo": "Munition",
             "attackWith": "Attaque avec",
             "topspeed": "Vitesse max",
             "passengers": "Pass",
@@ -144,7 +144,7 @@
         "powers": {
             "axiom": "Axiome",
             "skill": "Compétence",
-            "skilllevel": "Compétence min.",
+            "skilllevel": "Compétence Min.",
             "castingtime": "Temps de lancement",
             "dn": "ND",
             "range": "Portée",
@@ -157,9 +157,9 @@
             "ap": "PA"
         },
         "cosms": {
-            "none": "(Sans cosm)",
-            "coreEarth": "Prime-Terre",
-            "livingLand": "Terre-Vivante",
+            "none": "(Non)",
+            "coreEarth": "Prime Terre",
+            "livingLand": "Terre vivante",
             "nileEmpire": "Empire du Nil",
             "aysle": "Aysle",
             "cyberpapacy": "Cyberpapauté",
@@ -187,7 +187,7 @@
             "outsider": "Paria",
             "prowess": "Prouesses",
             "psionics": "Psioniques",
-            "pulpPowers": "Pouvoirs pulps",
+            "pulpPowers": "Pouvoirs Pulps",
             "reality": "Réalité",
             "savagery": "Sauvagerie",
             "social": "Social",
@@ -203,8 +203,8 @@
             "hope": "Espoir"
         },
         "sheetLabels": {
-            "editableTooltip": "Agrandissez la fiche pour faire apparaître les champs éditables",
-            "stormknight": "Chevalier des Tempêtes",
+            "editableTooltip": "agrandissez la fiche pour faire apparaitre les champs éditables",
+            "stormknight": "Chevalier des tempêtes",
             "stats": "Caracs",
             "perks": "Atouts",
             "perksAbilities": "Atouts/Capa.",
@@ -233,7 +233,7 @@
             "threat": "Menace",
             "skills": "Compétences",
             "favored": "Favorisée",
-            "possibilitypotential": "Potentiel de Possibilités",
+            "possibilitypotential": "Possibilités (Potentielle)",
             "size": "Taille",
             "possibilities": "Possibilités",
             "up": "Un de plus",
@@ -258,7 +258,7 @@
             "melee": "Mêlée",
             "unarmed": "Mains nues",
             "xp": "XP",
-            "xpOnlyGM": "Seul le MJ peut remplir",
+            "xpOnlyGM": "seul le MJ peut remplir",
             "unspent": "Disponibles",
             "earned": "Total",
             "clearance": "Habilitation",
@@ -279,12 +279,12 @@
             "details": "Détails",
             "goodResult": "Résultat supérieur",
             "outstandingResult": "Résultat spectaculaire",
-            "effectCreate": "Créer un effet",
+            "effectCreate": "Créer Effet",
             "add": "Ajout",
             "derivedValues": "Valeurs dérivées",
             "tempEffects": "Effets temporaires",
             "passiveEffects": "Effets passifs",
-            "inactiveEffects": "Effets inactifs",
+            "inactiveEffects": "Effects inactifs",
             "source": "Source",
             "otherAttacks": "Autres",
             "difficulty": "Difficulté",
@@ -295,14 +295,14 @@
             "movementPenalty": "Pénalité de mouvement",
             "walking": "Marche (Non)",
             "running": "Course (-2)",
-            "multiActionPenalty": "Pénalité d’actions multiples",
+            "multiActionPenalty": "Pénalité actions multiples",
             "actions": "Actions",
-            "multiTargetPenalty": "Pénalité de cibles multiples",
+            "multiTargetPenalty": "Pénalité cibles multiples",
             "targets": "Cibles",
             "otherModifiers": "Autres modificateurs",
             "description": "Description",
             "effect": "Effet",
-            "statusEffects": "Statut",
+            "statusEffects": "Status",
             "update": "Mise à jour",
             "attackOptions": "Options d'attaque",
             "calledShot": "Attaque ciblée",
@@ -316,7 +316,7 @@
             "aimed": "Visée",
             "blindFire": "Tir au jugé",
             "targetOptions": "Cibles",
-            "concealment": "Dissimulation",
+            "concealment": "Dissimultation",
             "coverBonus": "Couvert",
             "number": "Nombre",
             "interactionAttacks": "Interactions offensives",
@@ -336,16 +336,16 @@
             "availableEnhancements": "Améliorations disponibles",
             "taken": "Acquis",
             "titleDescription": "Titre/Description",
-            "pool": "Réserve d'action",
-            "skillRollHint": "Maj-clic pour un jet avancé",
-            "toggleSkillDisplay": "Afficher/masquer les compétences sans rang",
+            "pool": "réserve d'action",
+            "skillRollHint": "Shift-click pour un jet avancé",
+            "toggleSkillDisplay": "afficher/masquer les compétences sans rang",
             "combatSkills": "Combat",
             "interactionSkills": "Interaction",
             "otherSkills": "Autre"
         },
         "combat": {
             "nextKeep": "Nouveau round (garder la carte actuelle)",
-            "nextNew": "Nouveau round (nouvelle carte Action)"
+            "nextNew": "Nouveau round (nouvelle carte action)"
         },
         "itemSheetDescriptions": {
             "perk": "Atout",
@@ -367,7 +367,7 @@
             "specialability": "Capacité spéciale",
             "other": "Equipement général",
             "customAttack": "Attaque personnalisée",
-            "customSkill": "Compétence personnalisée"
+            "customSkill": "Compétences personnalisées"
         },
         "attackTypes": {
             "unarmedCombat": "Combat à mains nues",
@@ -412,20 +412,20 @@
             "other": "Autre"
         },
         "stymiedStates": {
-            "none": "Non déstabilisé",
+            "none": "Non Déstabilisé",
             "stymied": "Déstabilisé",
-            "veryStymied": "Très déstabilisé"
+            "veryStymied": "Très Déstabilisé"
         },
         "vulnerableStates": {
-            "none": "Non vulnérable",
+            "none": "Non Vulnérable",
             "vulnerable": "Vulnérable",
-            "veryVulnerable": "Très vulnérable"
+            "veryVulnerable": "Très Vulnérable"
         },
         "statusEffects": {
             "stymied": "Déstabilisé",
-            "veryStymied": "Très déstabilisé",
+            "veryStymied": "Très Déstabilisé",
             "vulnerable": "Vulnérable",
-            "veryVulnerable": "Très vulnérable",
+            "veryVulnerable": "Très Vulnérable",
             "aiming": "Visée",
             "concentrating": "Concentration",
             "disconnected": "Déconnecté",
@@ -464,7 +464,7 @@
             "dramaCard": "Carte Drame",
             "bonusCard": "Carte +3",
             "bonusDamage": "Dommages bonus",
-            "up": "Un de plus !",
+            "up": "Un de plus!",
             "bonusDice": "DB",
             "actionTotal": "Total d'action",
             "skillTestLabel": "Valeur de compétence",
@@ -480,11 +480,11 @@
             "value": "Valeur",
             "notes": "Notes",
             "check": {
-                "testUnsuccessfull": "Le jet n'a pas réussi",
-                "needTarget": "Impossible d’effectuer un jet avancé sans cible. Ciblez un token puis réessayez.",
-                "interactionNeedTarget": "Impossible d’effectuer une attaque d'interaction sans cible. Ciblez un token puis réessayez.",
-                "cantUseUntrained": " ne peut pas être utilisé sans être appris (au moins un rang).",
-                "cantUseSkillRecquired": " ne peut pas être utilisé sans au moins un rang dans la compétence requise",
+                "testUnsuccessfull": "Le jet n'a pas abouti.",
+                "needTarget": "Impossible de réaliser un jet avancé sans cible. Ciblez un token puis ré-essayez.",
+                "interactionNeedTarget": "Impossible de réaliser une attaque d'interaction sans cible. Ciblez un token puis ré-essayez.",
+                "cantUseUntrained": " ne peut pas être utilisé sans être appris (au moins un point de rang).",
+                "cantUseSkillRecquired": " ne peut pas être utilisé sans au moins un rang dans la compétence requise.",
                 "modifier": {
                     "wounds": "blessures",
                     "stymied": "déstabilisé (-2 )",
@@ -508,33 +508,33 @@
                 },
                 "result": {
                     "result": "Résultat",
-                    "previous": "Résultat du jet précédent",
-                    "new": "Résultat du nouveau jet",
+                    "previous": "Précédent résultat de jet",
+                    "new": "Nouveau résultat de jet",
                     "actionTotal": "Total de l'action",
-                    "failure": "Échec",
-                    "outstandingSuccess": "Succès spectaculaire",
-                    "goodSuccess": "Succès supérieur",
-                    "standartSuccess": "Succès simple",
-                    "mishape": "Échec critique",
-                    "damage": "Dommage",
-                    "toughness": "Résistance",
-                    "noDamage": "Pas de dommages",
-                    "attackMissed": "Attaque ratée"
+                    "failure": "échec",
+                    "outstandingSuccess": "succès spectaculaire",
+                    "goodSuccess": "succès supérieur",
+                    "standartSuccess": "succès simple",
+                    "mishape": "échec critique",
+                    "damage": "dommage",
+                    "toughness": "résistance",
+                    "noDamage": "pas de dommages",
+                    "attackMissed": "attaque ratée"
                 }
             },
             "playsCard": "Jouer",
             "discardsCard": "Défausser",
-            "drawsCard": "Pioche du",
+            "drawsCard": "Tire du",
             "passesCard1": "Passe",
             "passesCard2": "à"
         },
         "sizes": {
-            "tiny": "minuscule",
-            "verySmall": "très petite",
-            "small": "petite",
-            "normal": "normale",
-            "large": "grande",
-            "veryLarge": "très grande"
+            "tiny": "Minuscule",
+            "verySmall": "Très petite",
+            "small": "Petite",
+            "normal": "Normale",
+            "large": "Grande",
+            "veryLarge": "Très grande"
         },
         "dialogPrompts": {
             "showToPlayers": "Montrer à tous les joueurs",
@@ -542,57 +542,57 @@
             "playerPassLabel": "Donner",
             "playerPassInstructions": "Sélection du joueur recevant la carte",
             "playerPassTo": "Donner à",
-            "drawDestiny": "Piocher une carte Destin",
-            "drawCosm": "Piocher une carte Cosm",
-            "selectCosmDeck": "Sélectionner le cosm",
-            "cosmDialogTitle": "Piocher une carte cosm",
-            "cosmDeckDialogLabel": "Piocher",
+            "drawDestiny": "Tirer carte Destin",
+            "drawCosm": "Tirer carte Cosm",
+            "selectCosmDeck": "Sélectionner le Cosm",
+            "cosmDialogTitle": "Tirer carte Cosm",
+            "cosmDeckDialogLabel": "Tirer",
             "cardPooled": "Réserve d'action",
             "playCard": "Jouez",
             "discardCard": "Défaussez",
-            "openHand": "Voir sa main",
-            "lifelike": "Affichage en éventail",
-            "return": "Renvoie toutes les cartes dans leur pioche d'origine. Ne remélange PAS automatiquement la pioche."
+            "openHand": "voir sa main",
+            "lifelike": "affichage 'en éventail'",
+            "return": "renvoit toutes les cartes dans leur pile d'origine.Ne remélange PAS automatiquement la pile."
         },
         "dialogWindow": {
             "hideForeignCompendium": {
                 "title": "Cacher les compendiums en langue étrangère ?",
-                "content": "Ce système comprend des compendiums en anglais et en allemand. Voulez-vous masquer les compendiums en langues étrangères ? "
+                "content": "Ce système comprend des compendiums en anglais et en allemand. Voulez-vous masquer les compendiums en langues étrangères ?"
             },
             "externalLinks": {
                 "title": "Liens",
-                "content": "<p>Besoin d'aide ? Vous voulez signaler un bug ? Voici quelques liens utiles.</p>",
-                "reference": "<p>Références (site en anglais)</p>",
+                "content": "<p>Besoin d'aide ? Vous voulez signaler un bug ? Voici quelques liens utiles</p>",
+                "reference": "<p>Référence (site en anglais)</p>",
                 "bug": "<p>Bug?</p>",
-                "publisher": "<p>Éditeur</p>"
+                "publisher": "<p>Editeur</p>"
             },
             "itemDeletion": {
-                "title": "Confirmer la suppression",
-                "content": "Êtes-vous sûr de vouloir supprimer ceci ? Cela sera effacé de votre fiche de manière permanente."
+                "title": "confirmer la suppression",
+                "content": "Etes-vous sûr de vouloir supprimer ceci ? Cela sera effacé de votre fiche de manière permanente."
             }
         },
         "iconeTitles": {
             "openParty": "Ouvrir la fiche du groupe",
             "resetPossibilities": "Rétablir les possibilités des Chevaliers des Tempêtes",
             "delete": "Supprimer",
-            "edit": "Éditer",
+            "edit": "Editer",
             "sendToChat": "Envoyer dans le chat",
-            "toggle": "Activer/désactiver",
-            "attackRoll": "Jet d'attaque",
-            "spellRoll": "Jet de sort",
-            "miracleRoll": "Jet de miracle",
-            "psionicRoll": "Jet de pouvoir psionique",
-            "bonusRoll": "Jet bonus"
+            "toggle": "activer/désactiver",
+            "attackRoll": "jet d'attaque",
+            "spellRoll": "jet de sort",
+            "miracleRoll": "jet de miracle",
+            "psionicRoll": "jet de pouvoir psionique",
+            "bonusRoll": "jet bonus"
         },
         "possibilitiesReset": {
-            "name": "Réinitialiser les possibilités",
-            "hint": "Combien de possibilités les Chevaliers des tempêtes doivent-ils avoir ?"
+            "name": "ré-initialiser les possibilités",
+            "hint": "Combien de possibilités les Chevaliers des Tempêtes doivent-ils avoir ?"
         },
         "cosmDecks": {
-            "coreEarth": "Cartes Cosm Prime-Terre",
+            "coreEarth": "Cartes Cosm Prime Terre",
             "aysle": "Cartes Cosm Aysle",
             "cyberpapacy": "Cartes Cosm Cyberpapauté",
-            "livingLand": "Cartes Cosm Terre-Vivante",
+            "livingLand": "Cartes Cosm Terre Vivante",
             "nileEmpire": "Cartes Cosm Empire du Nil",
             "orrorsh": "Carte Cosm Orrorsh",
             "panPacifica": "Cartes Cosm Pan Pacifica",
@@ -603,16 +603,16 @@
             "drama": "Action",
             "cosm": "Cosm",
             "hand": "Main",
-            "discardPile": "Défausse",
-            "activeDrama": "Carte Action active"
+            "discardPile": "Pile de défausse",
+            "activeDrama": "Carte Action Active"
         },
         "scenes": {
             "reality": "Réalité",
             "realityHint": "Configure la réalité de la zone de la scène.",
-            "HeaderDetailsHint": "Configure les détails de base de la scène et les permissions qui contrôlent sa visibilité.",
-            "HeaderGridHint": "Configure les dimensions de la grille qui sont utilisées pour mesurer le mouvement des tokens de la scène.",
-            "HeaderVisionHint": "Configure les paramètres de vision, d'éclairage et de brouillard de guerre de la scène.",
-            "HeaderAmbienceHint": "Configure les intégrations supplémentaires entre la scène et les articles, les playlists ou les effets météo."
+            "HeaderDetailsHint": "Configure les détails de base pour cette scène et les permissions qui contrôlent sa visibilité.",
+            "HeaderGridHint": "Configure les dimensions de la grille qui sont utilisées pour mesurer le mouvement des tokens dans cette scène.",
+            "HeaderVisionHint": "Configure les paramètres de vision, d'éclairage et de brouillard de guerre pour cette scène.",
+            "HeaderAmbienceHint": "Configure les intégrations supplémentaires entre cette scène et Journal Entries, les playlists ou les effets météo."
         },
         "tokens": {
             "noDSR": "RDT",
@@ -623,17 +623,17 @@
             "d": " D"
         },
         "poolToggle": {
-            "inPool": "Carte réservée",
-            "toogle": "Réserver"
+            "inPool": "carte réservée",
+            "toogle": "réserver"
         },
         "settingMenu": {
             "welcome": {
-                "name": "Afficher le message de bienvenue",
-                "hint": "Si sélectionné, le message de bienvenue apparaîtra au chargement"
+                "name": "Afficher le message de bienvenue.",
+                "hint": "Si sélectionné, le message de bienvenue apparaitra au chargement."
             },
             "setupCards": {
-                "name": "Installer les paquets de cartes",
-                "hint": "Si sélectionné, le système réinstallera tous les paquets de cartes, et les défausses. Vous devrez rafraîchir le navigateur ou l'application (F5)."
+                "name": "Installer les paquets de cartes.",
+                "hint": "Si sélectionné, le système ré-installera tous les paquets de cartes, et les piles de défausse. Vous devrez rafraichir le navigateur ou l'application (F5)."
             },
             "pauseMedia": {
                 "name": "Image de pause",
@@ -641,58 +641,58 @@
             },
             "animatedChat": {
                 "name": "Animation des messages du chat",
-                "hint": "Si sélectionné, les messages du chat apparaîtront avec une animation. Changer ce paramètre rafraîchira le navigateur ou l'application."
+                "hint": "Si sélectionné, les messages du chat apparaitront avec une animation. Changer ce paramètre rafraichira le navigateur ou l'application."
             },
             "gmScreen": {
-                "name": "Sélectionner l'image de l'écran",
-                "hint": "Vous pouvez choisir l’écran du MJ affiché."
+                "name": "Sélectionner l'image de l'écran.",
+                "hint": "Vous pouvez choisir quel écran du MJ afficher."
             },
             "hideForeignCompendium": {
-                "name": "Masquer les compendiums en langues étrangères",
+                "name": "Masquer les compendiiums en langues étrangères.",
                 "hint": "Validez pour masquer tous les compendiums qui ne sont pas en français."
             },
             "deckSetting": {
-                "name": "Configuration des paquets de cartes par défaut",
-                "label": "Configuration des paquets de cartes par défaut",
-                "hint": "Configuration ici de quels paquets seront piochés les différents type de cartes, ainsi que leurs défausses."
+                "name": "Configuration des paquets de cartes par défaut.",
+                "label": "Configuration des paquets de cartes par défaut.",
+                "hint": "Configurez ici de quels paquets seront piochées les différents types de cartes, ainsi que les piles où elles seront défaussées."
 
             },
             "defaultUserHand": {
-                "name": "Nom de la main de cartes par défaut de l'utilisateur",
-                "hint": "Tapez ici le nom de votre jeu de cartes par défaut ; ce jeu sera ouvert par défaut lorsque l'on clique sur l'outil 'main de carte'."
+                "name": "Nom de la main de cartes par défaut de l'utilisateur.",
+                "hint": "Tapez ici le nom de votre jeu de cartes par défaut, ce jeu sera ouvert par défaut lorsque l'on clique sur l'outil 'main de carte'."
             },
             "disableXP": {
-                "name": "Désactiver le champ XP pour les joueurs",
+                "name": "Désactiver le champ XP pour les joueurs.",
                 "hint": "Si coché, seul le MJ pourra renseigner l'XP sur les fiches de personnage."
             },
             "autoDamages": {
-                "name": "Application des dommages automatiques",
-                "hint": "Si coché, les chocs et les blessures seront automatiquement appliqués si le joueur à un token cible valide."
+                "name": "Application des dommages automatique.",
+                "hint": "Si coché, les chocs et blessures seront automatiquement appliqués si le joueur a un token cible valide."
 
             }
         },
         "notifications": {
-            "macroTypeWarning": "Vous ne pouvez créer des macros que pour vos objets, attributs ou compétences",
-            "openIssue": "Votre navigateur va ouvrir un onglet pour signaler un problème.",
-            "openUlisses": "Votre navigateur va ouvrir le site d’Ulisses Spiele.",
-            "openDiscord": "Votre navigateur va ouvrir un onglet pour rejoindre Discord.",
-            "noItemNamed": "L'acteur que vous contrôlez n'a pas d'objet nommé ",
-            "noSkillNamed": "L'acteur que vous contrôlez n'a pas de compétence nommée ",
+            "macroTypeWarning": "Vous ne pouvez créer des macros que pour vos items, attributs, ou compétences.",
+            "openIssue": "Votre navigateur va ouvrir un onglet pour remplir une 'issue'.",
+            "openUlisses": "Votre navigateur va ouvrir le site de Ulisses Spiele.",
+            "openDiscord": "Votre navigateur va ouvrir un onglet pour rejoindre discord.",
+            "noItemNamed": "L'acteur que vous contrôlez n'a pas d'item nommé ",
+            "noSkillNamed": "L'acteur que vous contrôlez n'a pas de compétence nommé ",
             "noAttrNamed": "L'acteur que vous contrôlez n'a pas d'attribut nommé ",
             "notImplemented": "Pas encore implémenté.",
-            "defaultAction": "Action par défaut , équipement par exemple.",
+            "defaultAction": "Action par defaut, équipement par exemple.",
             "noHands": "Pas de main de carte disponible!",
-            "dramaDeckEmpty": "Le paquet de cartes Action est vide. Réinitialisez-le.",
+            "dramaDeckEmpty": "Le paquet de cartes d'actions est vide. Ré-initialisez-le.",
             "onlyReservedCard": "Vous ne pouvez jouer que les cartes réservées durant une scène dramatique.",
-            "noActiveEffectInOwnedItem": "Configurer les effets actifs à l'intérieur des objets possédés n'est pas encore possible.",
+            "noActiveEffectInOwnedItem": "Configurer les effets actifs à l'intérieur des Items possédés n'est pas encore possible.",
             "noTarget": "Pas de token cible valide."
 
         },
         "gmScreen": {
-            "title": "Écran du meneur",
-            "toggle": "Afficher/masquer l'écran",
+            "title": "écran du meneur",
+            "toggle": "afficher/masquer l'écran",
             "noScreen": "Aucun écran sélectionné",
-            "noScreenMessage": "Vous n'avez sélectionné aucun écran. Les écrans sont disponibles dans les modules pour Torg Eternity disponibles ici : "
+            "noScreenMessage": "Vous n'avez sélectionné aucun écran. Les écrans sont rendus disponibles par les modules pour Torg Eternity disponibles ici : "
         }
     },
     "CARD": {

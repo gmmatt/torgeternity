@@ -386,8 +386,7 @@
             "kinesis": "Kinese",
             "precognition": "Präkognition",
             "telepathy": "Telepatie",
-            "faith": "Glauben",
-            "reality": "Realität"
+            "faith": "Glauben"
         },
         "damageTypes": {
             "flat": "Reiner Schaden",
