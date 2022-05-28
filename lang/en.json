@@ -341,7 +341,8 @@
             "toggleSkillDisplay": "Click to toggle Skills display",
             "combatSkills": "Combat",
             "interactionSkills": "Interaction",
-            "otherSkills": "Other"
+            "otherSkills": "Other",
+            "targetDefense": "Target Defense"
         },
         "combat": {
             "nextKeep": "Next Round (Keep Current Card)",
@@ -677,6 +678,10 @@
                 "hint": "If checked, shocks and wounds would be automatically apply if player has a valid target token."
 
             }
+        },
+        "skillDialogs": {
+            "disfavored": "Disfavored",
+            "disfavoredTip": "Check if this test is disfavored. The die roll will not explode on a 10 or 20." 
         },
         "notifications": {
             "macroTypeWarning": "You can only create macro buttons for owned Items and Attributes/Skills",

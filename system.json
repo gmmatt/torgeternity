@@ -46,6 +46,14 @@
             "entity": "Cards"
         },
         {
+            "name": "core-scenes",
+            "label": "Standardscene (en)",
+            "system": "torgeternity",
+            "module": "torgeternity",
+            "path": "packs/standardscene.db",
+            "entity": "Scene"
+        },
+        {
             "name": "archetypes-fr",
             "label": "Archetypes (fr)",
             "system": "torgeternity",
@@ -82,6 +90,14 @@
             "path": "packs/deutsch/basisregeln.db",
             "module": "torgeternity",
             "entity": "JournalEntry"
+        },
+        {
+            "name": "core-de-scenes",
+            "label": "Standardszene (de)",
+            "system": "torgeternity",
+            "module": "torgeternity",
+            "path": "packs/deutsch/standardszene.db",
+            "entity": "Scene"
         },
         {
             "name": "system-de-grundkarten",
