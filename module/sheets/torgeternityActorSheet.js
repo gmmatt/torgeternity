@@ -16,7 +16,7 @@ export default class torgeternityActorSheet extends ActorSheet {
         super(...args);
 
         if (this.object.data.type === "threat") {
-            this.options.width = this.position.width = 450;
+            this.options.width = this.position.width = 485;
             this.options.height = this.position.height = 350;
 
         }
@@ -546,7 +546,7 @@ export default class torgeternityActorSheet extends ActorSheet {
         var defaultMelee = false;
         var defaultUnarmed = false;
         var targetDodge = 0;
-        var targetMelee= 0;
+        var targetMelee = 0;
         var targetUnarmed = 0;
 
 
@@ -601,7 +601,7 @@ export default class torgeternityActorSheet extends ActorSheet {
                 targetToughness = target.actor.data.data.other.toughness;
                 targetArmor = target.actor.data.data.other.armor;
                 if (attackWith === "fireCombat" || attackWith === "energyWeapons" || attackWith === "heavyWeapons" || attackWith === "missileWeapons") {
-                    defaultDodge=true;
+                    defaultDodge = true;
                 } else {
                     if (target.actor.data.data.skills.meleeWeapons.adds > 0 || (targetType === "threat" && target.actor.data.data.skills.meleeWeapons.value > 0)) {
                         defaultMelee = true;

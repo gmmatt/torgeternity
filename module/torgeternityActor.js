@@ -9,51 +9,6 @@ export default class torgeternityActor extends Actor {
         //Set base fatigue to 2
         this.data.data.fatigue = 2;
 
-        // Set Defensive values for all actors
-        if (skillset.dodge.value) {
-            this.data.data.dodgeDefense = this.data.data.skills.dodge.value;
-        } else {
-            this.data.data.dodgeDefense = this.data.data.attributes.dexterity
-        };
-
-        if (skillset.meleeWeapons.value) {
-            this.data.data.meleeWeaponsDefense = this.data.data.skills.meleeWeapons.value;
-        } else {
-            this.data.data.meleeWeaponsDefense = this.data.data.attributes.dexterity
-        };
-
-        if (skillset.unarmedCombat.value) {
-            this.data.data.unarmedCombatDefense = this.data.data.skills.unarmedCombat.value;
-        } else {
-            this.data.data.unarmedCombatDefense = this.data.data.attributes.dexterity
-        };
-
-        if (skillset.intimidation.value) {
-            this.data.data.intimidationDefense = this.data.data.skills.intimidation.value;
-        } else {
-            this.data.data.intimidationDefense = this.data.data.attributes.spirit
-        };
-
-        if (skillset.maneuver.value) {
-            this.data.data.maneuverDefense = this.data.data.skills.maneuver.value;
-        } else {
-            this.data.data.maneuverDefense = this.data.data.attributes.dexterity
-        };
-
-        if (skillset.taunt.value) {
-            this.data.data.tauntDefense = this.data.data.skills.taunt.value;
-        } else {
-            this.data.data.tauntDefense = this.data.data.attributes.charisma
-        };
-
-        if (skillset.trick.value) {
-            this.data.data.trickDefense = this.data.data.skills.trick.value;
-        } else {
-            this.data.data.trickDefense = this.data.data.attributes.mind
-        };
-        
-
-        
         if (this.data._source.type === "stormknight") {
             mergeObject(this.data.token, {
 
@@ -233,22 +188,24 @@ export default class torgeternityActor extends Actor {
 
     //adding a method to get defauld stormknight cardhand
     getDefaultHand() {
-        if (game.settings.get("torgeternity", "deckSetting").stormknightsHands.hasOwnProperty(this.id)) {
-            return game.cards.get(game.settings.get("torgeternity", "deckSetting").stormknightsHands[this.id]);
+
+        if (game.settings.get("torgeternity", "deckSetting").stormknights[this.id]) {
+            return game.cards.get(game.settings.get("torgeternity", "deckSetting").stormknights[this.id]);
 
         } else {
-            console.error(`no default hand for actor : ${this.name}`);
+            console.error(`
+            no default hand for actor : ${this.name}`);
             return false;
         }
     }
     async createDefaultHand() {
+
         // creating a card hand then render it
         let cardData = {
-            name: this.actor.data.name,
-            permission: { default: CONST.DOCUMENT_PERMISSION_LEVELS.OBSERVER },
+            name: this.name,
             type: "hand"
         }
-        characterHand = await Cards.create(cardData, { keepId: true, renderSheet: true });
+        let characterHand = await Cards.create(cardData);
 
         // getting ids of actor and card hand
         let actorId = this.id;
@@ -256,7 +213,7 @@ export default class torgeternityActor extends Actor {
 
         // storing ids in game.settings
         let settingData = game.settings.get("torgeternity", "deckSetting");
-        settingData.stormknightsHands[actorId] = handId;
+        settingData.stormknights[actorId] = handId;
         game.settings.set("torgeternity", "deckSetting", settingData);
     }
 }
