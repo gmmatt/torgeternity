@@ -15,7 +15,7 @@ export default class torgeternityActorSheet extends ActorSheet {
         super(...args);
 
         if (this.object.data.type === "threat") {
-            this.options.width = this.position.width = 450;
+            this.options.width = this.position.width = 485;
             this.options.height = this.position.height = 350;
 
         }
@@ -455,37 +455,17 @@ export default class torgeternityActorSheet extends ActorSheet {
             var targetType = target.actor.data.type;
             test.vulnerableModifier = target.actor.data.data.vulnerableModifier;
             if (test.interactionAttackType === "intimidation") {
-                if (target.actor.data.data.skills.intimidation.value > 0) {
-                    test.targetDefenseSkill = game.i18n.localize("torgeternity.skills.intimidation");
-                    test.targetDefenseValue = target.actor.data.data.skills.intimidation.value;
-                } else {
-                    test.targetDefenseSkill = game.i18n.localize("torgeternity.attributes.spirit");
-                    test.targetDefenseValue = target.actor.data.data.attributes.spirit;
-                }
+                test.targetDefenseSkill = game.i18n.localize("torgeternity.skills.intimidation");
+                test.targetDefenseValue = target.actor.data.data.intimidationDefense;
             } else if (test.interactionAttackType === "maneuver") {
-                if (target.actor.data.data.skills.maneuver.value > 0) {
-                    test.targetDefenseSkill = game.i18n.localize("torgeternity.skills.maneuver");
-                    test.targetDefenseValue = target.actor.data.data.skills.maneuver.value;
-                } else {
-                    test.targetDefenseSkill = game.i18n.localize("torgeternity.attributes.dexterity");
-                    test.targetDefenseValue = target.actor.data.data.attributes.dexterity;
-                }
+                test.targetDefenseSkill = game.i18n.localize("torgeternity.skills.maneuver");
+                test.targetDefenseValue = target.actor.data.data.maneuverDefense;
             } else if (test.interactionAttackType === "taunt") {
-                if (target.actor.data.data.skills.taunt.value > 0) {
-                    test.targetDefenseSkill = game.i18n.localize("torgeternity.skills.taunt");
-                    test.targetDefenseValue = target.actor.data.data.skills.taunt.value;
-                } else {
-                    test.targetDefenseSkill = game.i18n.localize("torgeternity.attributes.charisma");
-                    test.targetDefenseValue = target.actor.data.data.attributes.charisma;
-                }
+                test.targetDefenseSkill = game.i18n.localize("torgeternity.skills.taunt");
+                test.targetDefenseValue = target.actor.data.data.tauntDefense;
             } else if (test.interactionAttackType === "trick") {
-                if (target.actor.data.data.skills.trick.value > 0) {
-                    test.targetDefenseSkill = game.i18n.localize("torgeternity.skills.trick");
-                    test.targetDefenseValue = target.actor.data.data.skills.trick.value;
-                } else {
-                    test.targetDefenseSkill = game.i18n.localize("torgeternity.attributes.mind");
-                    test.targetDefenseValue = target.actor.data.data.attributes.mind;
-                }
+                test.targetDefenseSkill = game.i18n.localize("torgeternity.skills.trick");
+                test.targetDefenseValue = target.actor.data.data.trickDefense;
             }
         }
 
@@ -565,7 +545,7 @@ export default class torgeternityActorSheet extends ActorSheet {
         var defaultMelee = false;
         var defaultUnarmed = false;
         var targetDodge = 0;
-        var targetMelee= 0;
+        var targetMelee = 0;
         var targetUnarmed = 0;
 
 
@@ -612,29 +592,15 @@ export default class torgeternityActorSheet extends ActorSheet {
                 }
 
                 // Set target defense values
-                if (target.actor.data.data.skills.dodge.value > 0) {
-                    targetDodge = target.actor.data.data.skills.dodge.value;
-                } else {
-                    targetDodge = target.actor.data.data.attributes.dexterity;
-                }
-
-                if (target.actor.data.data.skills.meleeWeapons.value > 0) {
-                    targetMelee = target.actor.data.data.skills.meleeWeapons.value;
-                } else {
-                    targetMelee = target.actor.data.data.attributes.dexterity;
-                }
-
-                if (target.actor.data.data.skills.unarmedCombat.value > 0) {
-                    targetUnarmed = target.actor.data.data.skills.unarmedCombat.value;
-                } else {
-                    targetUnarmed = target.actor.data.data.attributes.dexterity;
-                }
+                targetDodge = target.actor.data.data.dodgeDefense;
+                targetMelee = target.actor.data.data.meleeWeaponsDefense;
+                targetUnarmed = target.actor.data.data.unarmedCombatDefense;
 
                 vulnerableModifier = target.actor.data.data.vulnerableModifier;
                 targetToughness = target.actor.data.data.other.toughness;
                 targetArmor = target.actor.data.data.other.armor;
                 if (attackWith === "fireCombat" || attackWith === "energyWeapons" || attackWith === "heavyWeapons" || attackWith === "missileWeapons") {
-                    defaultDodge=true;
+                    defaultDodge = true;
                 } else {
                     if (target.actor.data.data.skills.meleeWeapons.adds > 0 || (targetType === "threat" && target.actor.data.data.skills.meleeWeapons.value > 0)) {
                         defaultMelee = true;

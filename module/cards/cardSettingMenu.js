@@ -107,7 +107,7 @@ export default class deckSettingMenu extends FormApplication {
             } else {
                 if (this.doubledValues.indexOf(value) > -1) {
                     console.log(this.doubledValues.indexOf(value));
-                    this.doubledValues.splice(this.doubledValues.indexOf(value), 1);
+                    this.doubledValues = this.doubledValues.filter(val => val != value);
                 }
             }
         }
@@ -121,5 +121,4 @@ export default class deckSettingMenu extends FormApplication {
         }
 
     }
-
 }

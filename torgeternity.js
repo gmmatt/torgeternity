@@ -30,7 +30,8 @@ import { interactionDialog } from "/systems/torgeternity/module/interaction-dial
 import { hideCompendium } from './module/hideCompendium.js';
 import initTorgControlButtons from './module/controlButtons.js';
 import createTorgShortcuts from './module/keybinding.js';
-import GMScreen from './module/GMScreen.js';
+import GMScreen from './module/GMScreen.js'
+import { setUpCardPiles } from './module/cards/setUpCardPiles.js';
 import { explode } from './module/explode.js';
 
 
@@ -72,7 +73,6 @@ Hooks.once("init", async function() {
     CONFIG.Cards.documentClass = torgeternityCards;
     CONFIG.cardTypes = torgeternity.cardTypes;
 
-    ui.GMScreen = new GMScreen();
     // all settings after config
     registerTorgSettings();
     //---register items and actors
@@ -125,14 +125,40 @@ Hooks.once("setup", async function() {
 //-------------once everything ready
 Hooks.on("ready", async function() {
 
-    //defining behaviour of character sheets depending on their size
+
+    //migration script
+    if (game.system.data.version <= "2.4.0") {
+        // code to migrate missile weappon groupName
+
+        ui.notifications.warn("migrating system version .............")
+        game.actors.forEach(async act => {
+                if (act.data.data.skills.missileWeapons.groupName != "combat") {
+                    await act.update({ "data.skills.missileWeapons.groupName": "combat" })
+                    ui.notifications.info(act.name + " : migrated")
+                }
+
+            })
+            // code to migrate new game settings
+        let deckSettings = game.settings.get("torgeternity", "deckSetting")
+        if (deckSettings.stormknightsHands) {
+            ui.notifications.warn("updating system settings .............")
+
+            deckSettings.stormknights = deckSettings.stormknightsHands;
+            deckSettings.stormknightsHands = null;
+            await game.settings.set("torgeternity", "deckSetting", deckSettings);
+
+        }
+    }
+
+
+
     sheetResize();
 
     //modifying explosion methode for dices
     Die.prototype.explode = explode;
 
     //adding gmScreen to UI
-    ui.gmscreen = new GMScreen();
+    ui.GMScreen = new GMScreen();
 
 
     //-----applying GM possibilities pool if absent
@@ -208,9 +234,20 @@ Hooks.on("ready", async function() {
     //----setup cards if needed
 
     if (game.settings.get("torgeternity", "setUpCards") === true) {
+
+        let lang = game.settings.get("core", "language");
+
         const pack = game.packs.get("torgeternity.core-card-set");
-        const basicRules = game.packs.get("torgeternity.basic-rules")
-            // Add Destiny Deck
+        let basicRules = game.packs.get("torgeternity.basic-rules");
+
+        if (lang == "fr") {
+            basicRules = game.packs.get("torgeternity.basic-rules-fr");
+        }
+        if (lang == "de") {
+            basicRules = game.packs.get("torgeternity.system-de-basisregeln");
+        }
+
+        // Add Destiny Deck
         if (game.cards.getName("Destiny Deck") == null) {
             const itemId = pack.index.getName("Destiny Deck")._id;
             game.cards.importFromCompendium(pack, itemId)
@@ -256,9 +293,17 @@ Hooks.on("ready", async function() {
             let activeDrama = Cards.create(cardData, { keepId: true, renderSheet: false });
         }
 
-        // Add journal entry with instructions relating to cards
-        if (game.journal.getName("Managing Cards") == null) {
-            const itemId = basicRules.index.getName("Managing Cards")._id;
+        // Add journal entry with instructions relating to cards depending on language
+        let journalName = "Managing Cards"
+        if (lang == "fr") {
+            journalName = "gestion des cartes"
+        }
+        if (lang == "de") {
+            journalName = "Der Umgang mit Karten in Foundry"
+        }
+
+        if (game.journal.getName(journalName) == null) {
+            const itemId = basicRules.index.getName(journalName)._id;
             game.journal.importFromCompendium(basicRules, itemId);
         }
 
@@ -616,23 +661,9 @@ function rollItemMacro(itemName) {
                     sizeModifier = 0;
                 }
                 // Set target defense values
-                if (target.actor.data.data.skills.dodge.value > 0) {
-                    targetDodge = target.actor.data.data.skills.dodge.value;
-                } else {
-                    targetDodge = target.actor.data.data.attributes.dexterity;
-                }
-
-                if (target.actor.data.data.skills.meleeWeapons.value > 0) {
-                    targetMelee = target.actor.data.data.skills.meleeWeapons.value;
-                } else {
-                    targetMelee = target.actor.data.data.attributes.dexterity;
-                }
-
-                if (target.actor.data.data.skills.unarmedCombat.value > 0) {
-                    targetUnarmed = target.actor.data.data.skills.unarmedCombat.value;
-                } else {
-                    targetUnarmed = target.actor.data.data.attributes.dexterity;
-                }
+                targetDodge = target.actor.data.data.dodgeDefense;
+                targetMelee = target.actor.data.data.meleeWeaponsDefense;
+                targetUnarmed = target.actor.data.data.unarmedCombatDefense;
 
                 vulnerableModifier = target.actor.data.data.vulnerableModifier;
                 targetToughness = target.actor.data.data.other.toughness;
@@ -843,40 +874,21 @@ function rollSkillMacro(skillName, attributeName, isInteractionAttack) {
             var targetType = target.actor.data.type;
             test.vulnerableModifier = target.actor.data.data.vulnerableModifier;
             if (test.interactionAttackType === "intimidation") {
-                if (target.actor.data.data.skills.intimidation.value > 0) {
-                    test.targetDefenseSkill = game.i18n.localize("torgeternity.skills.intimidation");
-                    test.targetDefenseValue = target.actor.data.data.skills.intimidation.value;
-                } else {
-                    test.targetDefenseSkill = game.i18n.localize("torgeternity.attributes.spirit");
-                    test.targetDefenseValue = target.actor.data.data.attributes.spirit;
-                }
+                test.targetDefenseSkill = game.i18n.localize("torgeternity.skills.intimidation");
+                test.targetDefenseValue = target.actor.data.data.intimidationDefense;
             } else if (test.interactionAttackType === "maneuver") {
-                if (target.actor.data.data.skills.maneuver.value > 0) {
-                    test.targetDefenseSkill = game.i18n.localize("torgeternity.skills.maneuver");
-                    test.targetDefenseValue = target.actor.data.data.skills.maneuver.value;
-                } else {
-                    test.targetDefenseSkill = game.i18n.localize("torgeternity.attributes.dexterity");
-                    test.targetDefenseValue = target.actor.data.data.attributes.dexterity;
-                }
+                test.targetDefenseSkill = game.i18n.localize("torgeternity.skills.maneuver");
+                test.targetDefenseValue = target.actor.data.data.maneuverDefense;
             } else if (test.interactionAttackType === "taunt") {
-                if (target.actor.data.data.skills.taunt.value > 0) {
-                    test.targetDefenseSkill = game.i18n.localize("torgeternity.skills.taunt");
-                    test.targetDefenseValue = target.actor.data.data.skills.taunt.value;
-                } else {
-                    test.targetDefenseSkill = game.i18n.localize("torgeternity.attributes.charisma");
-                    test.targetDefenseValue = target.actor.data.data.attributes.charisma;
-                }
+                test.targetDefenseSkill = game.i18n.localize("torgeternity.skills.taunt");
+                test.targetDefenseValue = target.actor.data.data.tauntDefense;
             } else if (test.interactionAttackType === "trick") {
-                if (target.actor.data.data.skills.trick.value > 0) {
-                    test.targetDefenseSkill = game.i18n.localize("torgeternity.skills.trick");
-                    test.targetDefenseValue = target.actor.data.data.skills.trick.value;
-                } else {
-                    test.targetDefenseSkill = game.i18n.localize("torgeternity.attributes.mind");
-                    test.targetDefenseValue = target.actor.data.data.attributes.mind;
-                }
+                test.targetDefenseSkill = game.i18n.localize("torgeternity.skills.trick");
+                test.targetDefenseValue = target.actor.data.data.trickDefense;
             }
         }
     }
+    // Add Stymied Modifiers
     if (actor.data.data.stymiedModifier === parseInt(-2)) {
         test.stymiedModifier = -2;
     } else if (actor.data.data.stymiedModifier === -4) {
@@ -950,3 +962,24 @@ Hooks.on('updateActor', (actor, data, options, id) => {
     //updating playerList with users character up-to-date data
     ui.players.render(true);
 });
+
+// by default creating a  hand for each stormknight
+Hooks.on("preCreateActor", async(actor, options, userId) => {
+    if (actor.type === "stormknight") {
+        let cardData = {
+            name: actor.name,
+            type: "hand"
+        }
+        let characterHand = await Cards.create(cardData);
+
+        // getting ids of actor and card hand
+        let actorId = actor.id;
+        let handId = characterHand.id
+
+        // storing ids in game.settings
+        let settingData = game.settings.get("torgeternity", "deckSetting");
+        settingData.stormknights[actorId] = handId;
+        await game.settings.set("torgeternity", "deckSetting", settingData);
+    }
+
+})
