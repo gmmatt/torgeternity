@@ -125,7 +125,33 @@ Hooks.once("setup", async function() {
 //-------------once everything ready
 Hooks.on("ready", async function() {
 
-    //defining behaviour of character sheets depending on their size
+
+    //migration script
+    if (game.system.data.version <= "2.4.0") {
+        // code to migrate missile weappon groupName
+
+        ui.notifications.warn("migrating system version .............")
+        game.actors.forEach(async act => {
+                if (act.data.data.skills.missileWeapons.groupName != "combat") {
+                    await act.update({ "data.skills.missileWeapons.groupName": "combat" })
+                    ui.notifications.info(act.name + " : migrated")
+                }
+
+            })
+            // code to migrate new game settings
+        let deckSettings = game.settings.get("torgeternity", "deckSetting")
+        if (deckSettings.stormknightsHands) {
+            ui.notifications.warn("updating system settings .............")
+
+            deckSettings.stormknights = deckSettings.stormknightsHands;
+            deckSettings.stormknightsHands = null;
+            await game.settings.set("torgeternity", "deckSetting", deckSettings);
+
+        }
+    }
+
+
+
     sheetResize();
 
     //modifying explosion methode for dices
@@ -536,8 +562,11 @@ async function createTorgEternityMacro(data, slot) {
                 type: "script",
                 command: command,
                 permission: { default: CONST.DOCUMENT_PERMISSION_LEVELS.OBSERVER },
-                flags: { torgeternity: {
-                        [macroFlag]: true } },
+                flags: {
+                    torgeternity: {
+                        [macroFlag]: true
+                    }
+                },
             });
         } else {
             macro = await Macro.create({
@@ -546,8 +575,11 @@ async function createTorgEternityMacro(data, slot) {
                 img: macroImg,
                 command: command,
                 permission: { default: CONST.DOCUMENT_PERMISSION_LEVELS.OBSERVER },
-                flags: { torgeternity: {
-                        [macroFlag]: true } },
+                flags: {
+                    torgeternity: {
+                        [macroFlag]: true
+                    }
+                },
             });
         }
     }
@@ -637,23 +669,9 @@ function rollItemMacro(itemName) {
                     sizeModifier = 0;
                 }
                 // Set target defense values
-                if (target.actor.data.data.skills.dodge.value > 0) {
-                    targetDodge = target.actor.data.data.skills.dodge.value;
-                } else {
-                    targetDodge = target.actor.data.data.attributes.dexterity;
-                }
-
-                if (target.actor.data.data.skills.meleeWeapons.value > 0) {
-                    targetMelee = target.actor.data.data.skills.meleeWeapons.value;
-                } else {
-                    targetMelee = target.actor.data.data.attributes.dexterity;
-                }
-
-                if (target.actor.data.data.skills.unarmedCombat.value > 0) {
-                    targetUnarmed = target.actor.data.data.skills.unarmedCombat.value;
-                } else {
-                    targetUnarmed = target.actor.data.data.attributes.dexterity;
-                }
+                targetDodge = target.actor.data.data.dodgeDefense;
+                targetMelee = target.actor.data.data.meleeWeaponsDefense;
+                targetUnarmed = target.actor.data.data.unarmedCombatDefense;
 
                 vulnerableModifier = target.actor.data.data.vulnerableModifier;
                 targetToughness = target.actor.data.data.other.toughness;
@@ -952,3 +970,24 @@ Hooks.on('updateActor', (actor, data, options, id) => {
     //updating playerList with users character up-to-date data
     ui.players.render(true);
 });
+
+// by default creating a  hand for each stormknight
+Hooks.on("preCreateActor", async(actor, options, userId) => {
+    if (actor.type === "stormknight") {
+        let cardData = {
+            name: actor.name,
+            type: "hand"
+        }
+        let characterHand = await Cards.create(cardData);
+
+        // getting ids of actor and card hand
+        let actorId = actor.id;
+        let handId = characterHand.id
+
+        // storing ids in game.settings
+        let settingData = game.settings.get("torgeternity", "deckSetting");
+        settingData.stormknights[actorId] = handId;
+        await game.settings.set("torgeternity", "deckSetting", settingData);
+    }
+
+})
