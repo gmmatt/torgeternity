@@ -621,7 +621,6 @@ function rollItemMacro(itemName) {
             var defaultMelee = false;
             var defaultUnarmed = false;
             var targetDefenseSkill = "Dodge";
-            console.log(targetDefenseSkill);
             var targetDefenseValue = 0;
 
             // Exit if no target or get target data
@@ -948,7 +947,6 @@ Hooks.on("renderCombatTracker", (combatTracker) => {
 })
 
 Hooks.on("renderCompendiumDirectory", (app, html, data) => {
-    console.log('----------directory compendium')
     if (game.settings.get("torgeternity", "hideForeignCompendium") == true) {
         hideCompendium(game.settings.get("core", "language"), html)
 

@@ -106,7 +106,6 @@ export default class deckSettingMenu extends FormApplication {
                 this.doubledValues.push(value)
             } else {
                 if (this.doubledValues.indexOf(value) > -1) {
-                    console.log(this.doubledValues.indexOf(value));
                     this.doubledValues = this.doubledValues.filter(val => val != value);
                 }
             }
