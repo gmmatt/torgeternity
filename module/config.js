@@ -118,6 +118,18 @@ torgeternity.dnTypes = {
 
 }
 
+torgeternity.dnTypesBasic = {
+    veryEasy: "torgeternity.dnTypes.veryEasy",
+    easy: "torgeternity.dnTypes.easy",
+    standard: "torgeternity.dnTypes.standard",
+    challenging: "torgeternity.dnTypes.challenging",
+    hard: "torgeternity.dnTypes.hard",
+    veryHard: "torgeternity.dnTypes.veryHard",
+    heroic: "torgeternity.dnTypes.heroic",
+    nearImpossible: "torgeternity.dnTypes.nearImpossible"
+}
+
+
 torgeternity.attackTypes = {
     unarmedCombat: "torgeternity.attackTypes.unarmedCombat",
     meleeWeapons: "torgeternity.attackTypes.meleeWeapons",

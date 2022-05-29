@@ -34,6 +34,14 @@ export const preloadTemplates = async function () {
       "systems/torgeternity/templates/testDialogs/attack-difficulty.hbs",
       "systems/torgeternity/templates/testDialogs/difficulty-selector.hbs",
       "systems/torgeternity/templates/testDialogs/disfavored.hbs",
+      "systems/torgeternity/templates/testDialogs/bonus-selector.hbs",
+      "systems/torgeternity/templates/testDialogs/movement-penalty-selector.hbs",
+      "systems/torgeternity/templates/testDialogs/multi-action-selector.hbs",
+      "systems/torgeternity/templates/testDialogs/multi-target-selector.hbs",
+      "systems/torgeternity/templates/testDialogs/modifiers-table.hbs",
+
+
+
 
         //active effect part: 
         "systems/torgeternity/templates/parts/active-effects.hbs",

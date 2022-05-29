@@ -158,6 +158,7 @@
             "ap": "AP",
             "dnType": "DN Type"
         },
+        
         "dnTypes": {
             "veryEasy": "Very Easy (6)",
             "easy": "Easy (8)",
@@ -167,6 +168,15 @@
             "veryHard": "Very Hard (16)",
             "heroic": "Heroic (18)",
             "nearImpossible": "Near Impossible (20)",
+            "targetDodge": "Target Dodge",
+            "targetMeleeWeapons": "Target Melee Weapons",
+            "targetUnarmedCombat": "Target Unarmed Combat",
+            "targetIntimidation": "Target Intimidation",
+            "targetManeuver": "Target Maneuver",
+            "targetTaunt": "Target Taunt",
+            "targetTrick": "Target Trick",
+            "targetWillpower": "Target Willpower",
+            "targetFaith": "Target Faith",
             "targetCharisma": "Target Charisma",
             "targetDexterity": "Target Dexterity",
             "targetMind": "Target Mind",
@@ -175,19 +185,22 @@
             "targetAlteration": "Target Alteration",
             "targetConjuration": "Target Conjuration",
             "targetDivination": "Target Divination",
-            "targetDodge": "Target Dodge",
-            "targetFaith": "Target Faith",
-            "targetIntimidation": "Target Intimidation",
             "targetKinesis": "Target Kinesis",
-            "targetManeuver": "Target Maneuver",
-            "targetMeleeWeapons": "Target Melee Weapons",
             "targetPrecognition": "Target Precognition",
-            "targetStealth": "Target Stealth",
-            "targetTaunt": "Target Taunt",
-            "targetTrick": "Target Trick",
-            "targetUnarmedCombat": "Target Unarmed Combat",
-            "targetWillpower": "Target Willpower"
+            "targetStealth": "Target Stealth"
         },
+
+        "dnTypesBasic": {
+            "veryEasy": "Very Easy (6)",
+            "easy": "Easy (8)",
+            "standard": "Standard (10)",
+            "challenging": "Challenging (12)",
+            "hard": "Hard (14)",
+            "veryHard": "Very Hard (16)",
+            "heroic": "Heroic (18)",
+            "nearImpossible": "Near Impossible (20)"         
+        },
+
         "cosms": {
             "none": "(None)",
             "coreEarth": "Core Earth",

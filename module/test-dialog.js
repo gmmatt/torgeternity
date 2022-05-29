@@ -23,6 +23,8 @@ export class testDialog extends FormApplication {
 
         data.test = this.test;
 
+        data.config = CONFIG.torgeternity;
+
         return data;
 
     }

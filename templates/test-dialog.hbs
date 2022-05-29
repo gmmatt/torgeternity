@@ -9,16 +9,7 @@
                             {{> "systems/torgeternity/templates/testDialogs/difficulty-selector.hbs"}}
                         </td>
                         <td>
-                            <fieldset>
-                                <legend title="Choose whether to (1) roll for a bonus number or (2) input a previously generated bonus when attempting a multi-action.">Bonus</legend>
-                                <span class="skill-check-options">
-                                    <input type="radio" id="roll" name="bonus" value=0 checked>
-                                    <label for="roll">{{localize "torgeternity.sheetLabels.roll"}}</label>
-                                    <input type="radio" id="previous-bonus" title="When engaged in multi-actions, check this box to input the bonus number from a previous test." name="bonus" value=1>
-                                    <label for="input">{{localize "torgeternity.sheetLabels.inputExisting"}}</label>
-                                    <input type="number" id="bonus-text" title="Input BONUS NUMBER from previous test, not die total." value=0 style="width:3em">
-                                </span>
-                            </fieldset>
+                            {{> "systems/torgeternity/templates/testDialogs/bonus-selector.hbs"}}                            
                         </td>
                     </tr>
                 </table>
@@ -32,15 +23,7 @@
                             {{> "systems/torgeternity/templates/testDialogs/disfavored.hbs"}}
                         </td>
                         <td>
-                            <fieldset>
-                                <legend>{{localize "torgeternity.sheetLabels.movementPenalty"}}</legend>
-                                <span class="skill-check-options">
-                                    <input type="radio" class="walking-radio" name="movement" value=0 checked>
-                                    <label for="walking">{{localize "torgeternity.sheetLabels.walking"}}</label>
-                                    <input type="radio" id="running-radio" class="running-radio" name="movement" value=-2>
-                                    <label for="running">{{localize "torgeternity.sheetLabels.running"}}</label>
-                                </span>
-                            </fieldset>
+                            {{> "systems/torgeternity/templates/testDialogs/movement-penalty-selector.hbs"}}
                         </td>
                     </tr>
                 </table>
@@ -48,81 +31,17 @@
         </tr>
         <tr>
             <td>
-                <fieldset>
-                    <legend>{{localize "torgeternity.sheetLabels.multiActionPenalty"}}</legend>
-                    <span class="skill-check-options">{{localize "torgeternity.sheetLabels.actions"}}:
-                        <input type="radio" id="multi1-radio" name="multiAction" value=0 checked>
-                        <label for="1">1</label>
-                        <input type="radio" id="multi2-radio" name="multiAction" value=-2>
-                        <label for="2">2 (-2)</label>
-                        <input type="radio" id="multi3-radio" name="multiAction" value=-4>
-                        <label for="3">3 (-4)</label>
-                        <input type="radio" id="multi4-radio" name="multiAction" value=-6>
-                        <label for="4">4 (-6)</label>
-                    </span>
-                </fieldset>
+                {{> "systems/torgeternity/templates/testDialogs/multi-action-selector.hbs"}}
             </td>
         </tr>
         <tr>
             <td>
-                <fieldset>
-                    <legend>{{localize "torgeternity.sheetLabels.multiTargetPenalty"}}</legend>
-                    <span class="skill-check-options">
-                        {{localize "torgeternity.sheetLabels.targets"}}: 
-                        <input type="radio" id="targets1-radio" name="multiTarget" value=0 checked>
-                        <label for="1">1</label>
-                        <input type="radio" id="targets2-radio" name="multiTarget" value=-2>
-                        <label for="2">2 (-2)</label>
-                        <input type="radio" id="targets3-radio" name="multiTarget" value=-4>
-                        <label for="3">3 (-4)</label>
-                        <input type="radio" id="targets4-radio" name="multiTarget" value=-6>
-                        <label for="4">4 (-6)</label>
-                        <input type="radio" id="targets5-radio" name="multiTarget" value=-8>
-                        <label for="4">5 (-8)</label>
-                        <input type="radio" id="targets6-radio" name="multiTarget" value=-10>
-                        <label for="4">6 (-10)</label>
-                    </span>
-                </fieldset>
+                {{> "systems/torgeternity/templates/testDialogs/multi-target-selector.hbs"}}
             </td>
         </tr>
         <tr>
             <td>
-                <fieldset>
-                    <legend>{{localize "torgeternity.sheetLabels.otherModifiers"}}</legend>
-                    <table>
-                        <tr>
-                            <th style="width:75%">
-                                {{localize "torgeternity.sheetLabels.description"}}
-                            </th>
-                            <th>
-                                {{localize "torgeternity.sheetLabels.effect"}}
-                            </th>
-                        <tr>
-                            <td>
-                                <input type="text" id="other1-description-text" name="otherDescription1" value="">
-                            </td>
-                            <td>
-                                <input type="number" id="other1-modifier-text" name="otherEffect1" value=0>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <input type="text" id="other2-description-text" name="otherDescription2" value="">        
-                            </td>
-                            <td>
-                                <input type="number" id="other2-modifier-text" name="otherEffect2" value=0>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <input type="text" id="other3-description-text" name="otherDescription3" value="">
-                            </td>
-                            <td>
-                                <input type="number" id="other3-modifier-text" name="otherEffect3" value=0>
-                            </td>
-                        </tr>
-                    </table>
-                </fieldset>
+                {{> "systems/torgeternity/templates/testDialogs/modifiers-table.hbs"}}
             </td>
         </tr>
         <tr>
