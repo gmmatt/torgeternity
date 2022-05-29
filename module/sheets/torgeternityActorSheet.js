@@ -369,11 +369,12 @@ export default class torgeternityActorSheet extends ActorSheet {
             testType: event.currentTarget.dataset.testtype,
             actor: this.actor,
             skillName: isAttributeTest ? game.i18n.localize("torgeternity.attributes." + attributeName) : game.i18n.localize("torgeternity.skills." + skillName),
-            targets: Array.from(game.user.targets)
+            targets: Array.from(game.user.targets),
+            DN: "standard"
         }
 
-        let testDialog = new testDialog(test);
-        testDialog.render(true);
+        let dialog = new testDialog(test);
+        dialog.render(true);
 
     }
 

@@ -25,7 +25,7 @@ import torgeternityDeck from "./module/cards/torgeternityDeck.js";
 import torgeternityCardConfig from "./module/cards/torgeternityCardConfig.js";
 import { torgeternityCards } from "./module/cards/torgeternityCards.js";
 import { attackDialog } from "/systems/torgeternity/module/attack-dialog.js"; //Added
-import { skillDialog } from "/systems/torgeternity/module/skill-dialog.js";
+import { testDialog } from "/systems/torgeternity/module/test-dialog.js";
 import { interactionDialog } from "/systems/torgeternity/module/interaction-dialog.js";
 import { hideCompendium } from './module/hideCompendium.js';
 import initTorgControlButtons from './module/controlButtons.js';
@@ -828,7 +828,7 @@ function rollSkillMacro(skillName, attributeName, isInteractionAttack) {
         let testDialog = new interactionDialog(test);
         testDialog.render(true);
     } else if (event.shiftKey) {
-        let testDialog = new skillDialog(test);
+        let testDialog = new testDialog(test);
         testDialog.render(true);
     } else {
         torgchecks.SkillCheck(test);

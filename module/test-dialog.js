@@ -1,4 +1,5 @@
 import * as torgchecks from "/systems/torgeternity/module/torgchecks.js";
+import { torgeternity } from "/systems/torgeternity/module/config.js";
 
 export class testDialog extends FormApplication {
 

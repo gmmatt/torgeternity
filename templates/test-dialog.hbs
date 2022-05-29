@@ -6,13 +6,7 @@
                 <table>
                     <tr>
                         <td>
-                            <fieldset>
-                                <legend>{{localize "torgeternity.sheetLabels.difficulty"}}</legend>
-                                <span class="skill-check-options">
-                                    <label for="dn">{{localize "torgeternity.sheetLabels.difficulty"}}: </label>
-                                    <input type="number" id="dn-text" name="dn" value=10 style="width:3em">
-                                </span>
-                            </fieldset>
+                            {{> "systems/torgeternity/templates/testDialogs/difficulty-selector.hbs"}}
                         </td>
                         <td>
                             <fieldset>
