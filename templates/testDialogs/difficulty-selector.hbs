@@ -1,0 +1,231 @@
+<fieldset>
+    <legend>{{localize "torgeternity.sheetLabels.dn"}}</legend>
+    <span class="skill-check-options">
+        <select id="difficulty" name="difficulty" class="input-box">
+            <option 
+                value="6"
+                id="dn-veryEasy" 
+                {{#if test.dnVeryEasy}}
+                    selected = "true"
+                {{/if}}
+                >{{localize "torgeternity.dnTypes.veryEasy"}}
+            </option>
+            <option 
+                value="8"
+                id="dn-easy" 
+                {{#if test.dnEasy}}
+                    selected = "true"
+                {{/if}}
+                >{{localize "torgeternity.dnTypes.easy"}}
+            </option>
+            <option 
+                value="10"
+                id="dn-standard" 
+                {{#if test.dnStandard}}
+                    selected = "true"
+                {{/if}}
+                >{{localize "torgeternity.dnTypes.standard"}}
+            </option>
+            <option 
+                value="12"
+                id="dn-challenging" 
+                {{#if test.dnChallenging}}
+                    selected = "true"
+                {{/if}}
+                >{{localize "torgeternity.dnTypes.challenging"}}
+            </option>
+            <option 
+                value="14"
+                id="dn-hard" 
+                {{#if test.dnHard}}
+                    selected = "true"
+                {{/if}}
+                >{{localize "torgeternity.dnTypes.hard"}}
+            </option>
+            <option 
+                value="16"
+                id="dn-veryHard" 
+                {{#if test.dnVeryHard}}
+                    selected = "true"
+                {{/if}}
+                >{{localize "torgeternity.dnTypes.veryHard"}}
+            </option>
+            <option 
+                value="18"
+                id="dn-heroic" 
+                {{#if test.dnHeroic}}
+                    selected = "true"
+                {{/if}}
+                >{{localize "torgeternity.dnTypes.heroic"}}
+            </option>
+            <option 
+                value="20"
+                id="dn-nearImpossible" 
+                {{#if test.dnNearImpossible}}
+                    selected = "true"
+                {{/if}}
+                >{{localize "torgeternity.dnTypes.nearImpossible"}}
+            </option>
+            <option 
+                value="{{test.targetCharisma}}"
+                id="dn-targetCharisma" 
+                {{#if test.dnTargetCharisma}}
+                    selected = "true"
+                {{/if}}
+                >{{localize "torgeternity.dnTypes.targetCharisma"}} ({{test.targetCharisma}})
+            </option>
+            <option 
+                value="{{test.targetDexterity}}"
+                id="dn-targetDexterity" 
+                {{#if test.dnTargetDexterity}}
+                    selected = "true"
+                {{/if}}
+                >{{localize "torgeternity.dnTypes.targetDexterity"}} ({{test.targetDexterity}})
+            </option>
+            <option 
+                value="{{test.targetMind}}"
+                id="dn-targetMind" 
+                {{#if test.dnTargetMind}}
+                    selected = "true"
+                {{/if}}
+                >{{localize "torgeternity.dnTypes.targetMind"}} ({{test.targetMind}})
+            </option>
+            <option 
+                value="{{test.targetSpirit}}"
+                id="dn-targetSpirit" 
+                {{#if test.dnTargetSpirit}}
+                    selected = "true"
+                {{/if}}
+                >{{localize "torgeternity.dnTypes.targetSpirit"}} ({{test.targetSpirit}})
+            </option>
+            <option 
+                value="{{test.targetStrength}}"
+                id="dn-targetStrength" 
+                {{#if test.dnTargetStrength}}
+                    selected = "true"
+                {{/if}}
+                >{{localize "torgeternity.dnTypes.targetStrength"}} ({{test.targetStrength}})
+            </option>
+            <option 
+                value="{{test.targetAlteration}}"
+                id="dn-targetAlteration" 
+                {{#if test.dnTargetAlteration}}
+                    selected = "true"
+                {{/if}}
+                >{{localize "torgeternity.dnTypes.targetAlteration"}} ({{test.targetAlteration}})
+            </option>
+            <option 
+                value="{{test.targetConjuration}}"
+                id="dn-targetConjuration" 
+                {{#if test.dnTargetConjuration}}
+                    selected = "true"
+                {{/if}}
+                >{{localize "torgeternity.dnTypes.targetConjuration"}} ({{test.targetConjuration}})
+            </option>
+            <option 
+                value="{{test.targetDivination}}"
+                id="dn-targetDivination" 
+                {{#if test.dnTargetDivination}}
+                    selected = "true"
+                {{/if}}
+                >{{localize "torgeternity.dnTypes.targetDivination"}} ({{test.targetDivination}})
+            </option>
+            <option 
+                value="{{test.targetDodge}}"
+                id="dn-targetDodge" 
+                {{#if test.dnTargetDodge}}
+                    selected = "true"
+                {{/if}}
+                >{{localize "torgeternity.dnTypes.targetDodge"}} ({{test.targetDodge}})
+            </option>
+            <option 
+                value="{{test.targetFaith}}"
+                id="dn-targetFaith" 
+                {{#if test.dnTargetFaith}}
+                    selected = "true"
+                {{/if}}
+                >{{localize "torgeternity.dnTypes.targetFaith"}} ({{test.targetFaith}})
+            </option>
+            <option 
+                value="{{test.targetIntimidation}}"
+                id="dn-targetIntimidation" 
+                {{#if test.dnTargetIntimidation}}
+                    selected = "true"
+                {{/if}}
+                >{{localize "torgeternity.dnTypes.targetIntimidation"}} ({{test.targetIntimidation}})
+            </option>
+            <option 
+                value="{{test.targetKinesis}}"
+                id="dn-targetKinesis" 
+                {{#if test.dnTargetKinesis}}
+                    selected = "true"
+                {{/if}}
+                >{{localize "torgeternity.dnTypes.targetKinesis"}} ({{test.targetKinesis}})
+            </option>
+            <option 
+                value="{{test.targetManeuver}}"
+                id="dn-targetManeuver" 
+                {{#if test.dnTargetManeuver}}
+                    selected = "true"
+                {{/if}}
+                >{{localize "torgeternity.dnTypes.targetManeuver"}} ({{test.targetManeuver}})
+            </option>
+            <option 
+                value="{{test.targetMeleeWeapons}}"
+                id="dn-targetMeleeWeapons" 
+                {{#if test.dnTargetMeleeWeapons}}
+                    selected = "true"
+                {{/if}}
+                >{{localize "torgeternity.dnTypes.targetMeleeWeapons"}} ({{test.targetMeleeWeapons}})
+            </option>
+            <option 
+                value="{{test.targetPrecognition}}"
+                id="dn-targetPrecognition" 
+                {{#if test.dnTargetPrecognition}}
+                    selected = "true"
+                {{/if}}
+                >{{localize "torgeternity.dnTypes.targetPrecognition"}} ({{test.targetPrecognition}})
+            </option>
+            <option 
+                value="{{test.targetStealth}}"
+                id="dn-targetStealth" 
+                {{#if test.dnTargetStealth}}
+                    selected = "true"
+                {{/if}}
+                >{{localize "torgeternity.dnTypes.targetStealth"}} ({{test.targetStealth}})
+            </option>
+            <option 
+                value="{{test.targetTaunt}}"
+                id="dn-targetTaunt" 
+                {{#if test.dnTargetTaunt}}
+                    selected = "true"
+                {{/if}}
+                >{{localize "torgeternity.dnTypes.targetTaunt"}} ({{test.targetTaunt}})
+            </option>
+            <option 
+                value="{{test.targetTrick}}"
+                id="dn-targetTrick" 
+                {{#if test.dnTargetTrick}}
+                    selected = "true"
+                {{/if}}
+                >{{localize "torgeternity.dnTypes.targetTrick"}} ({{test.targetTrick}})
+            </option>
+            <option 
+                value="{{test.targetUnarmedCombat}}"
+                id="dn-targetUnarmedCombat" 
+                {{#if test.dnTargetUnarmedCombat}}
+                    selected = "true"
+                {{/if}}
+                >{{localize "torgeternity.dnTypes.targetUnarmedCombat"}} ({{test.targetUnarmedCombat}})
+            </option>
+            <option 
+                value="{{test.targetWillpower}}"
+                id="dn-targetWillpower" 
+                {{#if test.dnTargetWillpower}}
+                    selected = "true"
+                {{/if}}
+                >{{localize "torgeternity.dnTypes.targetWillpower"}} ({{test.targetWillpower}})
+            </option>
+        </select>
+    </span>
+</fieldset>

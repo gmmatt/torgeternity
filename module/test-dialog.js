@@ -1,10 +1,10 @@
 import * as torgchecks from "/systems/torgeternity/module/torgchecks.js";
 
-export class skillDialog extends FormApplication {
+export class testDialog extends FormApplication {
 
     static get defaultOptions(){
         const options = super.defaultOptions;
-        options.template = "systems/torgeternity/templates/skill-check.hbs";
+        options.template = "systems/torgeternity/templates/test-dialog.hbs";
         options.width = "auto";
         options.height = "auto";
         options.title = "Skill Test";

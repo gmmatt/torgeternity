@@ -6,7 +6,7 @@ import {
     onManageActiveEffect,
     prepareActiveEffectCategories
 } from "/systems/torgeternity/module/effects.js";
-import { skillDialog } from "/systems/torgeternity/module/skill-dialog.js";
+import { testDialog } from "/systems/torgeternity/module/test-dialog.js";
 import { attackDialog } from "/systems/torgeternity/module/attack-dialog.js";
 import { interactionDialog } from "/systems/torgeternity/module/interaction-dialog.js";
 import { powerDialog } from "/systems/torgeternity/module/power-dialog.js";
@@ -368,38 +368,13 @@ export default class torgeternityActorSheet extends ActorSheet {
         let test = {
             testType: event.currentTarget.dataset.testtype,
             actor: this.actor,
-            actorPic: this.actor.data.img,
-            actorType: this.actor.data.type,
             skillName: isAttributeTest ? game.i18n.localize("torgeternity.attributes." + attributeName) : game.i18n.localize("torgeternity.skills." + skillName),
-            skillBaseAttribute: game.i18n.localize("torgeternity.attributes." + attributeName),
-            skillAdds: event.currentTarget.dataset.adds,
-            skillValue: event.currentTarget.dataset.value,
-            unskilledUse: event.currentTarget.dataset.unskilleduse,
-            woundModifier: parseInt(-(this.actor.data.data.wounds.value)),
-            stymiedModifier: parseInt(this.actor.data.data.stymiedModifier),
-            darknessModifier: parseInt(this.actor.data.data.darknessModifier),
-            type: event.currentTarget.dataset.testtype,
-            possibilityTotal: 0,
-            upTotal: 0,
-            heroTotal: 0,
-            dramaTotal: 0,
-            cardsPlayed: 0,
-            sizeModifier: 0,
-            vulnerableModifier: 0,
-            disfavored: false
-        }
-        if (this.actor.data.data.stymiedModifier === parseInt(-2)) {
-            test.stymiedModifier = -2
-        } else if (this.actor.data.data.stymiedModifier === -4) {
-            test.stymiedModifier = -4
+            targets: Array.from(game.user.targets)
         }
 
-        if (event.shiftKey) {
-            let testDialog = new skillDialog(test);
-            testDialog.render(true);
-        } else {
-            torgchecks.SkillCheck(test);
-        }
+        let testDialog = new testDialog(test);
+        testDialog.render(true);
+
     }
 
     _onInteractionAttack(event) {
