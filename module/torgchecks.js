@@ -372,6 +372,12 @@ export function powerRoll(test) {
 
 
 export function renderSkillChat(test, diceroll) {
+    // Establish DN for this test based on DNDescriptor
+    //
+    // CODE GOES HERE
+    //
+    
+
     // Get current bonus and make + label visible if number is positive
     test.combinedRollTotal = parseInt(test.rollTotal) + parseInt(test.upTotal) + parseInt(test.possibilityTotal) + parseInt(test.heroTotal) + parseInt(test.dramaTotal)
     if (test.previousBonus != true) {

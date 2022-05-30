@@ -365,12 +365,39 @@ export default class torgeternityActorSheet extends ActorSheet {
         const skillName = event.currentTarget.dataset.name;
         const attributeName = event.currentTarget.dataset.baseattribute;
         const isAttributeTest = (event.currentTarget.dataset.testtype === "attribute");
+        var skillValue = event.currentTarget.dataset.value;
+        
+        // Before calculating roll, check to see if a skill point is required; exit test if actor doesn't have required skill
+        if (skillValue === "-") {
+            let cantRollData = {
+                user: game.user.data._id,
+                speaker: ChatMessage.getSpeaker(),
+                owner: this.actor,
+            };
+
+            let templateData = {
+                message: skillName + " " + game.i18n.localize('torgeternity.chatText.check.cantUseUntrained'),
+                actorPic: this.actor.data.img
+            };
+
+            const templatePromise = renderTemplate("./systems/torgeternity/templates/partials/skill-error-card.hbs", templateData);
+
+            templatePromise.then(content => {
+                cantRollData.content = content;
+                ChatMessage.create(cantRollData);
+            })
+
+            return
+        }
+        
+        
         let test = {
             testType: event.currentTarget.dataset.testtype,
             actor: this.actor,
             skillName: isAttributeTest ? game.i18n.localize("torgeternity.attributes." + attributeName) : game.i18n.localize("torgeternity.skills." + skillName),
+            skillValue: event.currentTarget.getAttribute("data-skill-value"),
             targets: Array.from(game.user.targets),
-            DN: "standard"
+            DNDescriptor: "standard"
         }
 
         let dialog = new testDialog(test);
