@@ -25,6 +25,19 @@ export class testDialog extends FormApplication {
 
         data.config = CONFIG.torgeternity;
 
+        // Set Modifiers from Actor Wounds and Status Effects
+        data.test.woundModifier = parseInt(-(data.test.actor.data.data.wounds.value));
+        data.test.stymiedModifier = parseInt(data.test.actor.data.data.stymiedModifier);
+        data.test.darknessModifier = parseInt(data.test.actor.data.data.darknessModifier);
+
+        // If Target Selected, Set Modifiers for Target Vulnerability and (Where Appropriate) Size
+        if (data.test.targets.length > 0) {
+            var target = Array.from(data.test.targets)[0];
+            data.test.vulnerableModifier = target.actor.data.data.vulnerableModifier;
+
+            // Size modifier code will eventually go here
+        }
+
         return data;
 
     }
