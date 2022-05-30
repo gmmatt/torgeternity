@@ -22,6 +22,9 @@
 		},
 		{
 			"path": "..\\..\\modules\\te002-up-the-creek"
+		},
+		{
+			"path": "..\\..\\modules\\pdfReaderTest"
 		}
 	],
 	"settings": {}
