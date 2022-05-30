@@ -607,8 +607,6 @@
             "hand": "Hand",
             "discardPile": "Discard Pile",
             "activeDrama": "Active Drama Card"
-
-
         },
         "scenes": {
             "reality": "Reality",
@@ -660,7 +658,6 @@
                 "name": "Hide foreign Compendiums",
                 "hint": "Select to hide all compendium in foreign language"
             },
-
             "deckSetting": {
                 "name": "Default card deck configuration",
                 "label": "Default card deck configuration",
@@ -714,5 +711,4 @@
         "discard": "Discard",
         "display": "Show this card to players"
     }
-
 }

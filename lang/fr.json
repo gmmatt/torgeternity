@@ -343,13 +343,11 @@
             "interactionSkills": "Interaction",
             "otherSkills": "Autre",
             "targetDefense": "Défense de la cible"
-
         },
         "combat": {
             "nextKeep": "Nouveau round (garder la carte actuelle)",
             "nextNew": "Nouveau round (nouvelle carte Action)",
             "dramaBack": "systems/torgeternity/images/cards/drama-back-fr.webp"
-
         },
         "itemSheetDescriptions": {
             "perk": "Atout",
@@ -630,6 +628,11 @@
             "inPool": "Carte réservée",
             "toogle": "Réserver"
         },
+        "monarch": {
+            "play": "Jouer cette carte",
+            "broadcast": "Montrer cette carte à tous",
+            "discard": "se défausser de cette carte"
+        },
         "settingMenu": {
             "welcome": {
                 "name": "Afficher le message de bienvenue",
@@ -672,7 +675,6 @@
             "autoDamages": {
                 "name": "Application des dommages automatiques",
                 "hint": "Si coché, les chocs et les blessures seront automatiquement appliqués si le joueur à un token cible valide."
-
             }
         },
         "skillDialogs": {
@@ -694,7 +696,6 @@
             "onlyReservedCard": "Vous ne pouvez jouer que les cartes réservées durant une scène dramatique.",
             "noActiveEffectInOwnedItem": "Configurer les effets actifs à l'intérieur des objets possédés n'est pas encore possible.",
             "noTarget": "Pas de token cible valide."
-
         },
         "gmScreen": {
             "title": "Écran du meneur",
