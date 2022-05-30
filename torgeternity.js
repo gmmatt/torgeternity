@@ -34,6 +34,7 @@ import GMScreen from './module/GMScreen.js'
 import { setUpCardPiles } from './module/cards/setUpCardPiles.js';
 import { explode } from './module/explode.js';
 
+//test
 
 Hooks.once("init", async function() {
     console.log("torgeternity | Initializing Torg Eternity System");
