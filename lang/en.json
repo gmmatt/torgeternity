@@ -346,7 +346,8 @@
         },
         "combat": {
             "nextKeep": "Next Round (Keep Current Card)",
-            "nextNew": "Next Round (New Card)"
+            "nextNew": "Next Round (New Card)",
+            "dramaBack": "systems/torgeternity/images/cards/drama-back.jpg"
         },
         "itemSheetDescriptions": {
             "perk": "Perk",
@@ -681,7 +682,7 @@
         },
         "skillDialogs": {
             "disfavored": "Disfavored",
-            "disfavoredTip": "Check if this test is disfavored. The die roll will not explode on a 10 or 20." 
+            "disfavoredTip": "Check if this test is disfavored. The die roll will not explode on a 10 or 20."
         },
         "notifications": {
             "macroTypeWarning": "You can only create macro buttons for owned Items and Attributes/Skills",

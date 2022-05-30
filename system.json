@@ -4,7 +4,7 @@
     "description": "Torg Eternity character sheet for Foundry VTT.",
     "author": "Matt Ritchie",
 
-    "version": "2.4.0",
+    "version": "2.3.9",
 
     "minimumCoreVersion": "9",
     "compatibleCoreVersion": "9",
@@ -21,9 +21,6 @@
         "./css/cards.css"
     ],
     "background": "images/splash.webp",
-    "dependencies": [{
-        "name": "chain-reaction"
-    }],
     "packs": [{
             "name": "archetypes",
             "label": "Archetypes (en)",
@@ -49,11 +46,19 @@
             "entity": "Cards"
         },
         {
+            "name": "core-scenes",
+            "label": "Standardscene (en)",
+            "system": "torgeternity",
+            "module": "torgeternity",
+            "path": "packs/standardscene.db",
+            "entity": "Scene"
+        },
+        {
             "name": "archetypes-fr",
             "label": "Archetypes (fr)",
             "system": "torgeternity",
             "module": "torgeternity",
-            "path": "packs/french/actor-archetypes.db",
+            "path": "packs/french/archetypes.db",
             "entity": "Actor"
         },
         {
@@ -61,7 +66,7 @@
             "label": "regles basiques (fr)",
             "system": "torgeternity",
             "module": "torgeternity",
-            "path": "packs/french/journal-basic-rules.db",
+            "path": "packs/french/basic-rules.db",
             "entity": "JournalEntry"
         },
         {
@@ -85,6 +90,14 @@
             "path": "packs/deutsch/basisregeln.db",
             "module": "torgeternity",
             "entity": "JournalEntry"
+        },
+        {
+            "name": "core-de-scenes",
+            "label": "Standardszene (de)",
+            "system": "torgeternity",
+            "module": "torgeternity",
+            "path": "packs/deutsch/standardszene.db",
+            "entity": "Scene"
         },
         {
             "name": "system-de-grundkarten",

@@ -30,7 +30,8 @@ import { interactionDialog } from "/systems/torgeternity/module/interaction-dial
 import { hideCompendium } from './module/hideCompendium.js';
 import initTorgControlButtons from './module/controlButtons.js';
 import createTorgShortcuts from './module/keybinding.js';
-import GMScreen from './module/GMScreen.js';
+import GMScreen from './module/GMScreen.js'
+import { setUpCardPiles } from './module/cards/setUpCardPiles.js';
 import { explode } from './module/explode.js';
 
 
@@ -72,7 +73,6 @@ Hooks.once("init", async function() {
     CONFIG.Cards.documentClass = torgeternityCards;
     CONFIG.cardTypes = torgeternity.cardTypes;
 
-    ui.GMScreen = new GMScreen();
     // all settings after config
     registerTorgSettings();
     //---register items and actors
@@ -106,33 +106,60 @@ Hooks.once("init", async function() {
 
 Hooks.once("setup", async function() {
 
-        modifyTokenBars();
-        //changing stutus marker 
-        //preparing status marker
+    modifyTokenBars();
+    //changing stutus marker 
+    //preparing status marker
 
-        if (game.settings.get("core", "language") === "fr") {
-            for (let effect of CONFIG.statusEffects) {
-                effect.icon = effect.icon.replace("systems/torgeternity/images/status-markers", "systems/torgeternity/images/status-markers/fr")
-            }
+    if (game.settings.get("core", "language") === "fr") {
+        for (let effect of CONFIG.statusEffects) {
+            effect.icon = effect.icon.replace("systems/torgeternity/images/status-markers", "systems/torgeternity/images/status-markers/fr")
         }
+    }
 
-    }),
 
-    Hooks.once("diceSoNiceReady", (dice3d) => {
-        registerDiceSoNice(dice3d);
-    });
+});
+
+Hooks.once("diceSoNiceReady", (dice3d) => {
+    registerDiceSoNice(dice3d);
+});
 
 //-------------once everything ready
 Hooks.on("ready", async function() {
 
-    //defining behaviour of character sheets depending on their size
+
+    //migration script
+    if (game.system.data.version <= "2.4.0") {
+        // code to migrate missile weappon groupName
+
+        ui.notifications.warn("migrating system version .............")
+        game.actors.forEach(async act => {
+                if (act.data.data.skills.missileWeapons.groupName != "combat") {
+                    await act.update({ "data.skills.missileWeapons.groupName": "combat" })
+                    ui.notifications.info(act.name + " : migrated")
+                }
+
+            })
+            // code to migrate new game settings
+        let deckSettings = game.settings.get("torgeternity", "deckSetting")
+        if (deckSettings.stormknightsHands) {
+            ui.notifications.warn("updating system settings .............")
+
+            deckSettings.stormknights = deckSettings.stormknightsHands;
+            deckSettings.stormknightsHands = null;
+            await game.settings.set("torgeternity", "deckSetting", deckSettings);
+
+        }
+    }
+
+
+
     sheetResize();
 
     //modifying explosion methode for dices
     Die.prototype.explode = explode;
 
     //adding gmScreen to UI
-    ui.gmscreen = new GMScreen();
+    ui.GMScreen = new GMScreen();
 
 
     //-----applying GM possibilities pool if absent
@@ -208,61 +235,8 @@ Hooks.on("ready", async function() {
     //----setup cards if needed
 
     if (game.settings.get("torgeternity", "setUpCards") === true) {
-        const pack = game.packs.get("torgeternity.core-card-set");
-        const basicRules = game.packs.get("torgeternity.basic-rules")
-            // Add Destiny Deck
-        if (game.cards.getName("Destiny Deck") == null) {
-            const itemId = pack.index.getName("Destiny Deck")._id;
-            game.cards.importFromCompendium(pack, itemId)
-        }
-        // Add Drama Deck
-        if (game.cards.getName("Drama Deck") == null) {
-            const itemId = pack.index.getName("Drama Deck")._id;
-            game.cards.importFromCompendium(pack, itemId)
-        }
-        // Add Cosm Discard
-        if (game.cards.getName("Cosm Discard") == null) {
-            let cardData = {
-                name: "Cosm Discard",
-                type: "pile",
-                permission: { default: CONST.DOCUMENT_PERMISSION_LEVELS.OWNER }
-            }
-            let cosmDiscard = Cards.create(cardData, { keepId: true, renderSheet: false });
-        }
-        // Add Drama Discard
-        if (game.cards.getName("Drama Discard") == null) {
-            let cardData = {
-                name: "Drama Discard",
-                type: "pile",
-                permission: { default: CONST.DOCUMENT_PERMISSION_LEVELS.OWNER }
-            }
-            let dramaDiscard = Cards.create(cardData, { keepId: true, renderSheet: false });
-        }
-        // Add Destiny Discard
-        if (game.cards.getName("Destiny Discard") == null) {
-            let cardData = {
-                name: "Destiny Discard",
-                type: "pile",
-                permission: { default: CONST.DOCUMENT_PERMISSION_LEVELS.OWNER }
-            }
-            let destinyDiscard = Cards.create(cardData, { keepId: true, renderSheet: false });
-        }
-        // Add Active Drama
-        if (game.cards.getName("Active Drama Card") == null) {
-            let cardData = {
-                name: "Active Drama Card",
-                type: "pile"
-            }
-            let activeDrama = Cards.create(cardData, { keepId: true, renderSheet: false });
-        }
 
-        // Add journal entry with instructions relating to cards
-        if (game.journal.getName("Managing Cards") == null) {
-            const itemId = basicRules.index.getName("Managing Cards")._id;
-            game.journal.importFromCompendium(basicRules, itemId);
-        }
-
-        game.settings.set("torgeternity", "setUpCards", false)
+        setUpCardPiles()
     }
 
 
@@ -583,7 +557,6 @@ function rollItemMacro(itemName) {
             var defaultMelee = false;
             var defaultUnarmed = false;
             var targetDefenseSkill = "Dodge";
-            console.log(targetDefenseSkill);
             var targetDefenseValue = 0;
 
             // Exit if no target or get target data
@@ -907,10 +880,10 @@ Hooks.on("renderCombatTracker", (combatTracker) => {
     for (let hand of hands) {
         hand.apps[combatTracker.id] = combatTracker;
     }
+
 })
 
 Hooks.on("renderCompendiumDirectory", (app, html, data) => {
-    console.log('----------directory compendium')
     if (game.settings.get("torgeternity", "hideForeignCompendium") == true) {
         hideCompendium(game.settings.get("core", "language"), html)
 
@@ -958,3 +931,10 @@ Hooks.on('updateActor', (actor, data, options, id) => {
     //updating playerList with users character up-to-date data
     ui.players.render(true);
 });
+
+// by default creating a  hand for each stormknight
+Hooks.on("createActor", async(actor, options, userId) => {
+    if (actor.type === "stormknight") {
+        await actor.createDefaultHand();
+    }
+})
