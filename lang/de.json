@@ -338,10 +338,11 @@
             "titleDescription": "Titel/Beschreibung",
             "pool": "Aktionenpool",
             "skillRollHint": "Umschalt-Klick für erweiterten Fähigkeitstest",
-            "toggleSkillDisplay": "Klicken Sie auf, um die Anzeige der Fertigkeiten umzuschalten",
+            "toggleSkillDisplay": "Klicke hierauf, um die Anzeige der Fertigkeiten umzuschalten",
             "combatSkills": "Kampf",
             "interactionSkills": "Interaktion",
-            "otherSkills": "Andere"
+            "otherSkills": "Andere",
+            "targetDefense": "Verteidigung des Ziels"
         },
         "combat": {
             "nextKeep": "Neue Runde (aktuelle Karte behalten)",
@@ -678,6 +679,10 @@
                 "hint": "Wenn angehakt, werden Schock und Wunden automatisch auf das Ziel angewendet werden."
 
             }            
+    },
+    "skillDialogs": {
+        "disfavored": "Benachteiligt",
+        "disfavoredTip": "Anhaken, wenn der Wurf benachteiligt ist. Der Würfelwurf wird dann nicht auf einer 10 oder 20 explodieren." 
     },
     "notifications": {
         "macroTypeWarning": "Du kannst nur Makro-Buttons für Items/Attribute/Fertigkeiten kreieren, die dir gehören.",

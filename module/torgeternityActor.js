@@ -54,6 +54,7 @@ export default class torgeternityActor extends Actor {
         
 
         
+
         if (this.data._source.type === "stormknight") {
             mergeObject(this.data.token, {
 
@@ -233,22 +234,24 @@ export default class torgeternityActor extends Actor {
 
     //adding a method to get defauld stormknight cardhand
     getDefaultHand() {
-        if (game.settings.get("torgeternity", "deckSetting").stormknightsHands.hasOwnProperty(this.id)) {
-            return game.cards.get(game.settings.get("torgeternity", "deckSetting").stormknightsHands[this.id]);
+
+        if (game.settings.get("torgeternity", "deckSetting").stormknights[this.id]) {
+            return game.cards.get(game.settings.get("torgeternity", "deckSetting").stormknights[this.id]);
 
         } else {
-            console.error(`no default hand for actor : ${this.name}`);
+            console.error(`
+            no default hand for actor : ${this.name}`);
             return false;
         }
     }
     async createDefaultHand() {
+
         // creating a card hand then render it
         let cardData = {
-            name: this.actor.data.name,
-            permission: { default: CONST.DOCUMENT_PERMISSION_LEVELS.OBSERVER },
+            name: this.name,
             type: "hand"
         }
-        characterHand = await Cards.create(cardData, { keepId: true, renderSheet: true });
+        let characterHand = await Cards.create(cardData);
 
         // getting ids of actor and card hand
         let actorId = this.id;
@@ -256,7 +259,7 @@ export default class torgeternityActor extends Actor {
 
         // storing ids in game.settings
         let settingData = game.settings.get("torgeternity", "deckSetting");
-        settingData.stormknightsHands[actorId] = handId;
+        settingData.stormknights[actorId] = handId;
         game.settings.set("torgeternity", "deckSetting", settingData);
     }
 }
