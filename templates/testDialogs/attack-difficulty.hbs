@@ -2,33 +2,18 @@
     <legend>{{localize "torgeternity.sheetLabels.targetDefense"}}</legend>
     <span class="skill-check-options">
         <select name="defense" class="input-box">
-            <option 
-                value="dodge"
-                id="defend-dodge" 
-                {{#if test.defaultDodge}}
-                    selected = "true"
-                {{/if}}
-                >Dodge
+            <option value="dodge" id="defend-dodge" {{#if test.defaultDodge}} selected="true" {{/if}}>{{localize
+                "torgeternity.skills.dodge"}}
                 &nbsp;
                 ({{test.targetDodge}})
             </option>
-            <option 
-                value="meleeCombat"
-                id="defend-meleeCombat" 
-                {{#if test.defaultMelee}}
-                    selected = "true"
-                {{/if}}
-                >Melee Combat
+            <option value="meleeCombat" id="defend-meleeCombat" {{#if test.defaultMelee}} selected="true" {{/if}}>
+                {{localize "torgeternity.skills.meleeWeapons"}}
                 &nbsp;
                 ({{test.targetMelee}})
             </option>
-            <option 
-                value="unarmedCombat" 
-                id="defend-unarmedCombat"
-                {{#if test.defaultUnarmed}}
-                    selected = "true"
-                {{/if}}
-                >Unarmed Combat
+            <option value="unarmedCombat" id="defend-unarmedCombat" {{#if test.defaultUnarmed}} selected="true" {{/if}}>
+                {{localize "torgeternity.skills.unarmedCombat"}}
                 &nbsp;
                 ({{test.targetUnarmed}})
             </option>

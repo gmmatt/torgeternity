@@ -8,12 +8,13 @@
 For manual installation, use the provided manifest URL in the "*Install System*" popup window 
 while managing game systems.
 
-v. 2.4.0
+v. 2.4.0 (Beta)
 - Updated enhanced checks to include disfavored rolls
 - Attack rolls now allow user to select defense used
 - Integrated code from Chain Reaction module so that exploding
   dice now operate in tandem with TE rules
 - Lots of CSS to make journal entries look more Torg-Like
+- Integrated "Session Zero" on EN and DE compendiums as a bonus
 
 v. 2.3.9
 - Fixed bug from last two releases that caused problems with

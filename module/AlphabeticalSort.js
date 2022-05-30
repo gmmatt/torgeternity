@@ -1,5 +1,14 @@
 //------------remettre les compétence en ordre alphabétique
-
+function strNoAccent(a) {
+    var b = "áàâäãåçéèêëíïîìñóòôöõúùûüýÁÀÂÄÃÅÇÉÈÊËÍÏÎÌÑÓÒÔÖÕÚÙÛÜÝ",
+        c = "aaaaaaceeeeiiiinooooouuuuyAAAAAACEEEEIIIINOOOOOUUUUY",
+        d = "";
+    for (var i = 0, j = a.length; i < j; i++) {
+        var e = a.substr(i, 1);
+        d += (b.indexOf(e) !== -1) ? c.substr(b.indexOf(e), 1) : e;
+    }
+    return d;
+}
 export function alphabSort(html, data) {
     if (data.actor.type === "stormknight") {
         let skillLists = document.getElementsByClassName("skill-list");
@@ -16,8 +25,8 @@ export function alphabSort(html, data) {
                     a.firstElementChild.firstElementChild &&
                     b.firstElementChild.firstElementChild
                 ) {
-                    return a.firstElementChild.firstElementChild.innerHTML >
-                        b.firstElementChild.firstElementChild.innerHTML ?
+                    return strNoAccent(a.firstElementChild.firstElementChild.innerHTML) >
+                        strNoAccent(b.firstElementChild.firstElementChild.innerHTML) ?
                         1 :
                         -1;
                 }
@@ -37,7 +46,7 @@ export function alphabSort(html, data) {
             }
             complist.sort(function(a, b) {
                 if (a.firstElementChild && b.firstElementChild) {
-                    return a.firstElementChild.innerHTML > b.firstElementChild.innerHTML ?
+                    return strNoAccent(a.firstElementChild.innerHTML) > strNoAccent(b.firstElementChild.innerHTML) ?
                         1 :
                         -1;
                 }
@@ -60,7 +69,7 @@ export function alphabSort(html, data) {
 
                 complist.sort(function(a, b) {
                     if (a.firstElementChild.innerText && b.firstElementChild.innerText) {
-                        return a.firstElementChild.innerText > b.firstElementChild.innerText ?
+                        return strNoAccent(a.firstElementChild.innerText) > strNoAccent(b.firstElementChild.innerText) ?
                             1 :
                             -1;
                     }
@@ -82,7 +91,7 @@ export function alphabSort(html, data) {
 
                 complist.sort(function(a, b) {
                     if (a.firstElementChild.innerText && b.firstElementChild.innerText) {
-                        return a.firstElementChild.innerText > b.firstElementChild.innerText ?
+                        return strNoAccent(a.firstElementChild.innerText) > strNoAccent(b.firstElementChild.innerText) ?
                             1 :
                             -1;
                     }
@@ -103,7 +112,7 @@ export function alphabSort(html, data) {
 
                 complist.sort(function(a, b) {
                     if (a.firstElementChild.innerText && b.firstElementChild.innerText) {
-                        return a.firstElementChild.innerText > b.firstElementChild.innerText ?
+                        return strNoAccent(a.firstElementChild.innerText) > strNoAccent(b.firstElementChild.innerText) ?
                             1 :
                             -1;
                     }
