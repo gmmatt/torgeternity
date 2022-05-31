@@ -78,6 +78,14 @@
             "entity": "Cards"
         },
         {
+            "name": "core-scenes-fr",
+            "label": "Scène Standard (fr)",
+            "system": "torgeternity",
+            "module": "torgeternity",
+            "path": "packs/french/standardscene.db",
+            "entity": "Scene"
+        },
+        {
             "name": "system-de-archetypen",
             "label": "Archetypen (de)",
             "path": "packs/deutsch/archetypen.db",
