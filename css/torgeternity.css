@@ -2953,7 +2953,7 @@ form.actor-sheet.threat .tab[data-tab].active .editor {
     display: block;
     position: absolute;
     top: 30px;
-    right: 30px;
+    right: 380px;
     z-index: 0;
     max-width: 246px;
     min-height: 99px;
