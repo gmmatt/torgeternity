@@ -631,7 +631,7 @@
         "monarch": {
             "play": "Jouer cette carte",
             "broadcast": "Montrer cette carte à tous",
-            "discard": "se défausser de cette carte"
+            "discard": "Se défausser de cette carte"
         },
         "settingMenu": {
             "welcome": {
@@ -674,7 +674,7 @@
             },
             "autoDamages": {
                 "name": "Application des dommages automatiques",
-                "hint": "Si coché, les chocs et les blessures seront automatiquement appliqués si le joueur à un token cible valide."
+                "hint": "Si coché, les chocs et les blessures seront automatiquement appliqués si le joueur a un token cible valide."
             }
         },
         "skillDialogs": {
