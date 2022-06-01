@@ -484,7 +484,7 @@
             "check": {
                 "testUnsuccessfull": "Probe nicht erfolgreich",
                 "needTarget": "Der ausgeweitete Angriffswurf kann ohne Ziel nicht durchgeführt werden. Wähle ein Ziel und versuche es erneut.",
-                "InteractionNeedTarget": "Der Interaktionsangriff kann ohne ausgewähltes Ziel nicht durchgeführt werden. Bitte Ziel auswählen und nochmal versuchen.",
+                "interactionNeedTarget": "Der Interaktionsangriff kann ohne ausgewähltes Ziel nicht durchgeführt werden. Bitte Ziel auswählen und nochmal versuchen.",
                 "cantUseUntrained": "Kann nicht untrainiert verwendet werden (mindestens Fertigkeitswert 1)",
                 "cantUseSkillRecquired": "Kann nicht ohne mindestens 1 Fertigkeitspunkt in der erforderlichen Fertigkeit verwendet werden.",
                 "modifier": {
