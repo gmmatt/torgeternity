@@ -131,12 +131,9 @@ export class testDialog extends FormApplication {
         }
 
         var x = event;
-        if (this.test.testType === "skill" | this.test.testType === "attribute") {
-            torgchecks.SkillCheck(this.test);
-            this.close()
-        } else if (this.test.testType === "power") {
-            torgchecks.powerRoll(this.test)
-            this.close()
-        }
+
+        torgchecks.renderSkillChat(this.test);
+        this.close()
+
     }
 }

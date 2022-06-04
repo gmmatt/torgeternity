@@ -371,12 +371,50 @@ export function powerRoll(test) {
 }
 
 
-export function renderSkillChat(test, diceroll) {
-    // Establish DN for this test based on DNDescriptor
+export function renderSkillChat(test) {
+    // ----------Set title for Chat Message in test.chatTitle ------------//
+    
+    // --------Establish DN for this test based on DNDescriptor-----------//
     //
     // CODE GOES HERE
     //
     
+    // -----------------------Determine Bonus---------------------------- //
+
+    // Do we need to generate a rollTotal?
+    if (test.rollTotal === 0 & test.previousBonus === false) {
+        // Generate dice roll
+        var dice 
+        if (test.actor.data.type === "stormknight") {
+            if (test.disfavored === true) {
+                dice = "1d20"
+                if (test.actor.data.data.skills[test.skillName].adds === 0) {
+                    test.unskilledLabel = "display:block";
+                } else {
+                    test.unskilledLabel = "display:none";
+                }
+            } else {
+                if (test.actor.data.data.skills[test.skillName].adds > 0) {
+                    dice = "1d20x10x20"
+                    test.unskilledLabel = "display:none"
+                } else {
+                    dice = "1d20x10"
+                    test.unskilledLabel = "display:block"
+                }
+            }
+        } else {
+            test.unskilledLabel = "display:none"
+            if (test.disfavored === true) {
+                dice = "1d20"
+            } else {
+                dice = "1d20x10x20"
+            }
+        }
+        test.diceroll = new Roll(dice).evaluate({ async: false });
+        test.rollTotal = diceroll.total;
+    } else {
+        test.diceroll = null
+    }
 
     // Get current bonus and make + label visible if number is positive
     test.combinedRollTotal = parseInt(test.rollTotal) + parseInt(test.upTotal) + parseInt(test.possibilityTotal) + parseInt(test.heroTotal) + parseInt(test.dramaTotal)
