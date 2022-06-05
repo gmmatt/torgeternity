@@ -505,6 +505,7 @@
         },
         "chatText": {
             "possibility": "Possibility",
+            "test": "Test",
             "hero": "Hero",
             "heroCard": "Hero Card",
             "drama": "Drama",

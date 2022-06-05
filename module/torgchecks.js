@@ -372,12 +372,96 @@ export function powerRoll(test) {
 
 
 export function renderSkillChat(test) {
+    //
     // ----------Set title for Chat Message in test.chatTitle ------------//
+    //
+    switch(test.testType) {
+        case "attribute":
+        case "skill":
+            test.chatTitle = test.skillName + " " + game.i18n.localize('torgeternity.chatText.test');
+            break;
+        
+        default:
+            test.chatTitle = test.skillName + " " + game.i18n.localize('torgeternity.chatText.test');
+
+    }
     
-    // --------Establish DN for this test based on DNDescriptor-----------//
     //
-    // CODE GOES HERE
+    // --------Establish DN for this test based on test.DNDescriptor-----------//
     //
+    // Start by getting first target in the array (multiple targets not implemented)
+    var target = Array.from(test.targets)[0];
+    var targetAttributes = target.actor.data.data.attributes;
+    var targetSkills = target.actor.data.data.skills;
+    
+    switch(test.DNDescriptor) {
+        case "veryEasy":
+            test.DN = 6;
+            break;
+        case "easy":
+            test.DN = 8;
+            break;
+        case "standard":
+            test.DN = 10;
+            break;
+        case "challenging":
+            test.DN = 12;
+            break;
+        case "hard":
+            test.DN = 14;
+            break;
+        case "veryHard":
+            test.DN = 16;
+            break;
+        case "heroic":
+            test.DN = 18;
+            break;
+        case "nearImpossible":
+            test.DN = 20;
+            break;
+        case "targetCharisma":
+            test.DN = targetAttributes.charisma;
+            break;
+        case "targetDexterity":
+            test.DN = targetAttributes.dexterity;
+            break;
+        case "targetMind":
+            test.DN = targetAttributes.mind;
+            break;
+        case "targetSpirit":
+            test.DN = targetAttributes.spirit;
+            break;
+        case "targetStrength":
+            test.DN = targetAttributes.strength;
+            break;
+        case "targetAlteration":
+            if (targetSkills.alteration.value) {
+                test.DN = targetSkills.alteration.value;
+            } else {
+                test.DN = targetAttributes.mind;
+            }
+            break;
+        case "targetConjuration":
+            if (targetSkills.conjuration.value) {
+                test.DN = targetSkills.conjuration.value;
+            } else {
+                test.DN = targetAttributes.spirit
+            }
+            break;
+        case "targetDivination":
+            if (targetSkills.divination.value) {
+                test.DN = targetSkills.divination.value;
+            } else {
+                test.DN = targetAttribute.mind
+            }
+            break;
+        case "targetDodge":
+            test.DN = target.actor.data.data.dodgeDefense;
+            break;
+        
+        default:
+            test.DN = 10
+    }
     
     // -----------------------Determine Bonus---------------------------- //
 

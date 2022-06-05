@@ -52,7 +52,7 @@ export class testDialog extends FormApplication {
     _onRoll(event,html) {
         
         // Set DN Descriptor
-        this.test.DNDescriptor = document.getElementById("difficulty");
+        this.test.DNDescriptor = document.getElementById("difficulty").value;
 
         // Check for disfavored and flag if needed
         if (document.getElementById("disfavored").checked) {
