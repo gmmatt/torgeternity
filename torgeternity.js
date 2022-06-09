@@ -893,7 +893,7 @@ Hooks.on('updateActor', (actor, data, options, id) => {
 });
 
 // by default creating a  hand for each stormknight
-Hooks.on("preCreateActor", async(actor, options, userId) => {
+Hooks.on("createActor", async(actor, options, userId) => {
     if (actor.type === "stormknight") {
         let cardData = {
             name: actor.name,
@@ -907,7 +907,7 @@ Hooks.on("preCreateActor", async(actor, options, userId) => {
 
         // storing ids in game.settings
         let settingData = game.settings.get("torgeternity", "deckSetting");
-        settingData.stormknights[actorId] = handId;
+        settingData.stormknightsHands[actorId] = handId;
         await game.settings.set("torgeternity", "deckSetting", settingData);
     }
 
