@@ -115,7 +115,7 @@ export function registerTorgSettings() {
             orrorsh: "Orrorsh Cosm Deck",
             panPacifica: "Pan Pacifica Cosm Deck",
             tharkold: "Tharkold Cosm Deck",
-            stormknights: {}
+            stormknightsHands: {}
         }
     });
 
