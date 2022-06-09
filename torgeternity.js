@@ -235,7 +235,7 @@ Hooks.on("ready", async function() {
       */
     //----setup cards if needed
 
-    if (game.settings.get("torgeternity", "setUpCards") === true) {
+    if (game.settings.get("torgeternity", "setUpCards") === true && game.user.isGM) {
         setUpCardPiles();
     }
 
