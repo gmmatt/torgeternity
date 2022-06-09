@@ -437,7 +437,7 @@ async function createTorgEternityMacro(data, slot) {
         command = `game.torgeternity.rollItemMacro("${objData.name}");`;
         macroName = objData.name;
         macroImg = objData.img;
-        macroFlag = "torgeternity.itemMacro";
+        macroFlag = "itemMacro";
     } else // attribute, skill, interaction
     {
         const internalSkillName = objData.name;
@@ -456,7 +456,7 @@ async function createTorgEternityMacro(data, slot) {
             macroName = displayAttributeName;
         else if (data.type === "interaction")
             macroName = displaySkillName;
-        macroFlag = "torgeternity.skillMacro";
+        macroFlag = "skillMacro";
 
         if (data.type === "attribute") {
             // this is an attribute test
@@ -491,7 +491,7 @@ async function createTorgEternityMacro(data, slot) {
                 type: "script",
                 command: command,
                 permission: { default: CONST.DOCUMENT_PERMISSION_LEVELS.OBSERVER },
-                flags: { macroFlag: true },
+                flags: { torgeternity:{[macroFlag]: true }},
             });
         } else {
             macro = await Macro.create({
@@ -500,7 +500,7 @@ async function createTorgEternityMacro(data, slot) {
                 img: macroImg,
                 command: command,
                 permission: { default: CONST.DOCUMENT_PERMISSION_LEVELS.OBSERVER },
-                flags: { macroFlag: true },
+                flags: { torgeternity:{[macroFlag]: true }},
             });
         }
     }
