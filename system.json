@@ -55,7 +55,7 @@
         },
         {
             "name": "archetypes-fr",
-            "label": "Archetypes (fr)",
+            "label": "Archétypes (fr)",
             "system": "torgeternity",
             "module": "torgeternity",
             "path": "packs/french/archetypes.db",
@@ -63,7 +63,7 @@
         },
         {
             "name": "basic-rules-fr",
-            "label": "regles basiques (fr)",
+            "label": "règles basiques (fr)",
             "system": "torgeternity",
             "module": "torgeternity",
             "path": "packs/french/basic-rules.db",
