@@ -693,6 +693,10 @@
             "toggle": "afficher/masquer l'écran",
             "noScreen": "Aucun écran sélectionné",
             "noScreenMessage": "Vous n'avez sélectionné aucun écran. Les écrans sont rendu disponible par les modules pour Torg Eternity disponibles ici : "
+        },
+        "packs": {
+            "basicRules" : "torgeternity.basic-rules-fr",
+            "decks" : "torgeternity.core-card-set-fr"
         }
     },
     "CARD": {

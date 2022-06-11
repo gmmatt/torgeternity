@@ -606,6 +606,9 @@
             "cosm": "Cosm",
             "hand": "Handkarten",
             "discardPile": "Kartenfriedhof",
+            "cosmDiscard": "Ablagestapel Cosmkarten",  
+            "dramaDiscard": "Ablagestapel Dramakarten",
+            "destinyDiscard": "Ablagestapel Schicksalskarten",
             "activeDrama": "Aktive Dramakarte"
         
         
@@ -705,6 +708,10 @@
         "toggle": "SL-Schirm an-/ ausschalten",
         "noScreen": "Kein SL-Schirm verfügbar",
         "noScreenMessage": "Du hast keinen SL-Schirm ausgewählt. SL-Schirme werden von Premium-Modulen unterstützt, die du hier findest:"
+    },
+    "packs": {
+        "basicRules" : "torgeternity.system-de-basisregeln",
+        "decks" : "torgeternity.system-de-grundkarten"
     }    
     },
     "CARD": {
