@@ -35,6 +35,7 @@ import { setUpCardPiles } from './module/cards/setUpCardPiles.js';
 import { explode } from './module/explode.js';
 import { activateStandartScene } from './module/activateStandartScene.js'
 
+//test
 
 Hooks.once("init", async function() {
     console.log("torgeternity | Initializing Torg Eternity System");
@@ -74,7 +75,6 @@ Hooks.once("init", async function() {
     CONFIG.Cards.documentClass = torgeternityCards;
     CONFIG.cardTypes = torgeternity.cardTypes;
 
-    ui.GMScreen = new GMScreen();
     // all settings after config
     registerTorgSettings();
     //---register items and actors
@@ -161,7 +161,7 @@ Hooks.on("ready", async function() {
     Die.prototype.explode = explode;
 
     //adding gmScreen to UI
-    ui.gmscreen = new GMScreen();
+    ui.GMScreen = new GMScreen();
 
 
     //-----applying GM possibilities pool if absent
@@ -236,8 +236,9 @@ Hooks.on("ready", async function() {
       */
     //----setup cards if needed
 
-    if (game.settings.get("torgeternity", "setUpCards") === true && game.user.isGM) {
-        setUpCardPiles();
+    if (game.settings.get("torgeternity", "setUpCards") === true) {
+
+        setUpCardPiles()
     }
 
     // activation of standart scene
@@ -563,7 +564,6 @@ function rollItemMacro(itemName) {
             var defaultMelee = false;
             var defaultUnarmed = false;
             var targetDefenseSkill = "Dodge";
-            console.log(targetDefenseSkill);
             var targetDefenseValue = 0;
 
             // Exit if no target or get target data
@@ -604,9 +604,23 @@ function rollItemMacro(itemName) {
                     sizeModifier = 0;
                 }
                 // Set target defense values
-                targetDodge = target.actor.data.data.dodgeDefense;
-                targetMelee = target.actor.data.data.meleeWeaponsDefense;
-                targetUnarmed = target.actor.data.data.unarmedCombatDefense;
+                if (target.actor.data.data.skills.dodge.value > 0) {
+                    targetDodge = target.actor.data.data.skills.dodge.value;
+                } else {
+                    targetDodge = target.actor.data.data.attributes.dexterity;
+                }
+
+                if (target.actor.data.data.skills.meleeWeapons.value > 0) {
+                    targetMelee = target.actor.data.data.skills.meleeWeapons.value;
+                } else {
+                    targetMelee = target.actor.data.data.attributes.dexterity;
+                }
+
+                if (target.actor.data.data.skills.unarmedCombat.value > 0) {
+                    targetUnarmed = target.actor.data.data.skills.unarmedCombat.value;
+                } else {
+                    targetUnarmed = target.actor.data.data.attributes.dexterity;
+                }
 
                 vulnerableModifier = target.actor.data.data.vulnerableModifier;
                 targetToughness = target.actor.data.data.other.toughness;
@@ -817,21 +831,40 @@ function rollSkillMacro(skillName, attributeName, isInteractionAttack) {
             var targetType = target.actor.data.type;
             test.vulnerableModifier = target.actor.data.data.vulnerableModifier;
             if (test.interactionAttackType === "intimidation") {
-                test.targetDefenseSkill = game.i18n.localize("torgeternity.skills.intimidation");
-                test.targetDefenseValue = target.actor.data.data.intimidationDefense;
+                if (target.actor.data.data.skills.intimidation.value > 0) {
+                    test.targetDefenseSkill = game.i18n.localize("torgeternity.skills.intimidation");
+                    test.targetDefenseValue = target.actor.data.data.skills.intimidation.value;
+                } else {
+                    test.targetDefenseSkill = game.i18n.localize("torgeternity.attributes.spirit");
+                    test.targetDefenseValue = target.actor.data.data.attributes.spirit;
+                }
             } else if (test.interactionAttackType === "maneuver") {
-                test.targetDefenseSkill = game.i18n.localize("torgeternity.skills.maneuver");
-                test.targetDefenseValue = target.actor.data.data.maneuverDefense;
+                if (target.actor.data.data.skills.maneuver.value > 0) {
+                    test.targetDefenseSkill = game.i18n.localize("torgeternity.skills.maneuver");
+                    test.targetDefenseValue = target.actor.data.data.skills.maneuver.value;
+                } else {
+                    test.targetDefenseSkill = game.i18n.localize("torgeternity.attributes.dexterity");
+                    test.targetDefenseValue = target.actor.data.data.attributes.dexterity;
+                }
             } else if (test.interactionAttackType === "taunt") {
-                test.targetDefenseSkill = game.i18n.localize("torgeternity.skills.taunt");
-                test.targetDefenseValue = target.actor.data.data.tauntDefense;
+                if (target.actor.data.data.skills.taunt.value > 0) {
+                    test.targetDefenseSkill = game.i18n.localize("torgeternity.skills.taunt");
+                    test.targetDefenseValue = target.actor.data.data.skills.taunt.value;
+                } else {
+                    test.targetDefenseSkill = game.i18n.localize("torgeternity.attributes.charisma");
+                    test.targetDefenseValue = target.actor.data.data.attributes.charisma;
+                }
             } else if (test.interactionAttackType === "trick") {
-                test.targetDefenseSkill = game.i18n.localize("torgeternity.skills.trick");
-                test.targetDefenseValue = target.actor.data.data.trickDefense;
+                if (target.actor.data.data.skills.trick.value > 0) {
+                    test.targetDefenseSkill = game.i18n.localize("torgeternity.skills.trick");
+                    test.targetDefenseValue = target.actor.data.data.skills.trick.value;
+                } else {
+                    test.targetDefenseSkill = game.i18n.localize("torgeternity.attributes.mind");
+                    test.targetDefenseValue = target.actor.data.data.attributes.mind;
+                }
             }
         }
     }
-    // Add Stymied Modifiers
     if (actor.data.data.stymiedModifier === parseInt(-2)) {
         test.stymiedModifier = -2;
     } else if (actor.data.data.stymiedModifier === -4) {
@@ -854,10 +887,10 @@ Hooks.on("renderCombatTracker", (combatTracker) => {
     for (let hand of hands) {
         hand.apps[combatTracker.id] = combatTracker;
     }
+
 })
 
 Hooks.on("renderCompendiumDirectory", (app, html, data) => {
-    console.log('----------directory compendium')
     if (game.settings.get("torgeternity", "hideForeignCompendium") == true) {
         hideCompendium(game.settings.get("core", "language"), html)
 
@@ -909,7 +942,6 @@ Hooks.on('updateActor', (actor, data, options, id) => {
 // by default creating a  hand for each stormknight
 Hooks.on("createActor", async(actor, options, userId) => {
     if (actor.type === "stormknight") {
-        actor.createDefaultHand()
+        await actor.createDefaultHand();
     }
-
 })

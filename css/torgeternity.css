@@ -493,9 +493,11 @@ a:hover {
     text-shadow: 0px 0px 10px black;
 }
 
+
 /*search-fields on items*/
-.directory .directory-header .header-search input{
-    background:transparent;
+
+.directory .directory-header .header-search input {
+    background: transparent;
 }
 
 .app option,
@@ -1509,10 +1511,6 @@ div.readme a.compendium {
     }
 }
 
-.torgeternity.actor {
-    min-width: 450px;
-}
-
 .torgeternity.actor .window-content {
     background-image: url(../images/bg-sheet.webp);
     background-size: cover;
@@ -1579,23 +1577,6 @@ form.actor-sheet header input[name="name"] {
     flex: none;
 }
 
-.tabsOn .window-content .actor-sheet h5.editable-tooltip {
-    display: none
-}
-
-.window-content .actor-sheet h5.editable-tooltip {
-    margin: 0px;
-    width: 100%;
-    text-align: right;
-    padding: 0px;
-    position: absolute;
-    bottom: 5px;
-    right: 5px;
-    text-shadow: 0px 0px 3px rgb(255 74 74);
-    font-size: 0.8em;
-    box-shadow: 0px 0px 3px gray inset;
-}
-
 .window-content .actor-sheet section.sheet-body {
     height: 100%;
 }
@@ -1616,7 +1597,7 @@ form.actor-sheet header input[name="name"] {
 .window-content .actor-sheet .tab[data-tab].active {
     display: grid;
     grid-template-columns: repeat(8, 1fr);
-    grid-template-rows: repeat(8, minmax(100px, min-content));
+    grid-template-rows: repeat(6, minmax(80px, max-content));
     grid-gap: 0px 5px;
     justify-content: center;
     width: 100%;
@@ -1654,14 +1635,6 @@ form.actor-sheet header input[name="name"] {
     text-transform: capitalize;
     right: -310px;
     top: 310px;
-}
-
-.tabsOff .window-content .actor-sheet nav.tabs {
-    display: none
-}
-
-.tabsOff .window-content .actor-sheet #threat-editor {
-    display: none;
 }
 
 .window-content .actor-sheet nav.tabs a.item {
@@ -1736,12 +1709,6 @@ form.actor-sheet header input[name="name"] {
     color: rgba(245, 245, 245, 0.9);
     background-color: transparent;
     text-shadow: 0px 0px 10px black;
-}
-
-.window-content .actor-sheet input.small-input {
-    min-width: 5px;
-    border: none;
-    width: 20px;
 }
 
 .window-content .actor-sheet img {
@@ -1837,8 +1804,16 @@ form.actor-sheet header input[name="name"] {
     grid-row: 3/4;
     transition: all 0.6s cubic-bezier(1, 0, 0, 1) 0.1s;
     display: flex;
-    justify-content: center;
     flex-direction: column;
+    justify-content: center;
+}
+
+.window-content .actor-sheet .char_image img {
+    height: 94%;
+    margin-top: 3%;
+    max-width: unset;
+    max-height: unset;
+    width: 100%;
 }
 
 .window-content .actor-sheet .char_image:hover {
@@ -1851,6 +1826,10 @@ form.actor-sheet header input[name="name"] {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+}
+
+.window-content .actor-sheet .sheet-header .threatHeader {
+    min-width: max-content;
 }
 
 .window-content .actor-sheet .sheet-header img {
@@ -1886,7 +1865,7 @@ form.actor-sheet header input[name="name"] {
     display: block;
 }
 
-.window-content .actor-sheet select {
+.window-content .actor-sheet .sheet-header select {
     color: black;
     border: none;
     border-bottom: 1px solid grey;
@@ -1895,8 +1874,8 @@ form.actor-sheet header input[name="name"] {
     font-family: Signika;
 }
 
-.window-content .actor-sheet select:active,
-.window-content .actor-sheet select:focus {
+.window-content .actor-sheet .sheet-header select:active,
+.window-content .actor-sheet .sheet-header select:focus {
     box-shadow: 0 0 5px #0062ff;
 }
 
@@ -1918,7 +1897,7 @@ form.actor-sheet header input[name="name"] {
     background-size: cover;
     font-family: Signika;
     font-size: 15px;
-    color:black;
+    color: black;
 }
 
 .window-content .actor-sheet .sheet-header h1 {
@@ -1987,7 +1966,7 @@ form.actor-sheet header input[name="name"] {
     border-radius: 50%;
     background: url(../images/roundBack.webp);
     background-size: cover;
-    color:black;
+    color: black;
 }
 
 .window-content .actor-sheet .attributes ul li.attribut-block a,
@@ -2343,7 +2322,7 @@ form.actor-sheet header input[name="name"] {
     height: 50px;
     border: none;
     border-radius: 50%;
-    color:black;
+    color: black;
 }
 
 .window-content .actor-sheet .defense {
@@ -2382,7 +2361,6 @@ form.actor-sheet header input[name="name"] {
 .window-content .actor-sheet .threat-editor .threat-edit {
     flex-direction: column;
     font-family: Arial;
-    margin-top: 5px;
 }
 
 .window-content .actor-sheet .stat-block {
@@ -2398,9 +2376,9 @@ form.actor-sheet.threat img.profile-img {
 form.actor-sheet.threat input[type="checkbox"] {
     opacity: 0.01;
     position: relative;
+    left: -25px;
     cursor: pointer;
     top: 5px;
-    left: -3px;
     width: 10px;
 }
 
@@ -2408,7 +2386,7 @@ form.actor-sheet.threat a.toggleFav {
     color: grey;
     position: relative;
     font-size: 10px;
-    left: 5px;
+    left: -4px;
 }
 
 form.actor-sheet.threat a.toggleFav.checked {
@@ -2418,7 +2396,7 @@ form.actor-sheet.threat a.toggleFav.checked {
 
 form.actor-sheet.threat span.inputsFav {
     display: inline-block;
-    max-width: 100px;
+    max-width: 40px;
 }
 
 form.actor-sheet.threat div.skill-list-edit {
@@ -2426,21 +2404,18 @@ form.actor-sheet.threat div.skill-list-edit {
     justify-items: flex-end;
     justify-content: center;
     align-items: center;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 0.3fr);
 }
 
 form.actor-sheet.threat div.skill-list-edit .skill-element-edit {
     display: flex;
     padding-right: 5px;
     align-items: center;
-    flex-direction: row;
-    border-bottom: 1px solid lightgray;
 }
 
 form.actor-sheet.threat div.skill-list-edit .skill-element-edit span {
     text-align: end;
     font-family: Arial;
-    margin-right: 15px;
 }
 
 form.actor-sheet.threat div.skill-list-edit .skill-element-edit span.inputsFav {
@@ -2452,9 +2427,9 @@ form.actor-sheet.threat div.skill-list-edit .skill-element-edit span.inputsFav {
 form.actor-sheet.threat div.skill-list-edit .skill-element-edit span.inputsFav input[type="checkbox"],
 form.actor-sheet.threat div.skill-list-edit .skill-element-edit span.inputsFav a.toggleFav {
     position: absolute;
-    left: 19px;
+    left: 20px;
     max-width: 30px;
-    top: 3px;
+    top: -5px;
     width: 10px;
     margin: 0px;
     background: white;
@@ -2686,7 +2661,7 @@ form.actor-sheet.threat .tab[data-tab].active .editor {
     font-family: Alaska;
     font-size: 20px;
     text-align: center;
-    color:black;
+    color: black;
 }
 
 .item .window-content form.item-sheet .sheet-content {
@@ -2711,13 +2686,13 @@ form.actor-sheet.threat .tab[data-tab].active .editor {
     border-radius: 15px;
     background: url(../images/roundBack.webp);
     background-size: cover;
-    color:black;
+    color: black;
 }
 
 .item .window-content form.item-sheet .asside input[name="data.price"],
 .item .window-content form.item-sheet .asside input[name="data.tough"] {
     width: 50px;
-    color:black;
+    color: black;
 }
 
 .item .window-content form.item-sheet .asside select {
@@ -2978,7 +2953,7 @@ form.actor-sheet.threat .tab[data-tab].active .editor {
     display: block;
     position: absolute;
     top: 30px;
-    right: 30px;
+    right: 380px;
     z-index: 0;
     max-width: 246px;
     min-height: 99px;

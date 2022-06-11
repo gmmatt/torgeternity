@@ -4,9 +4,17 @@ export function registerHelpers() {
         var skillValue = "{{data.skills." + skillName + ".value}}";
         return skillValue;
     });
+    Handlebars.registerHelper("concatPowerSkill", function (skillName) {
+        var skillValue = "torgeternity.powerSkills." + skillName;
+        return skillValue;
+    });
 
     Handlebars.registerHelper("concatAttributeName", function (attributeName) {
         var localName = "torgeternity.attributes." + attributeName;
+        return localName;
+    });
+    Handlebars.registerHelper("concatPerkType", function (type) {
+        var localName = "torgeternity.perkTypes." + type;
         return localName;
     });
 
