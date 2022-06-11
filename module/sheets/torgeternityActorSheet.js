@@ -375,9 +375,12 @@ export default class torgeternityActorSheet extends ActorSheet {
         let test = {
             testType: event.currentTarget.dataset.testtype,
             actor: this.actor,
-            skillName: isAttributeTest ? game.i18n.localize("torgeternity.attributes." + attributeName) : game.i18n.localize("torgeternity.skills." + skillName),
-            skillValue: event.currentTarget.getAttribute("data-skill-value"),
+            actorPic: this.actor.data.img,
+            actorType: this.actor.data.type,
+            skillName: isAttributeTest ? attributeName : skillName,
+            skillValue: skillValue,
             targets: Array.from(game.user.targets),
+            applySize: true, //Needs to eventually be se to false for base skill rolls. Is set to true for testing purposes.
             DNDescriptor: "standard",
             rollTotal: 0, // A zero indicates that a rollTotal needs to be generated when renderSkillChat is called //
         }

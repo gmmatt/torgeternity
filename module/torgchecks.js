@@ -372,27 +372,38 @@ export function powerRoll(test) {
 
 
 export function renderSkillChat(test) {
+    // First set up some basic data about the targets, if any
+    var targetPresent;
+    var target;
+    var targetAttributes;
+    var targetSkills;
+    if (test.targets.length > 0) {
+        targetPresent = true;
+        target = Array.from(test.targets)[0];
+        targetAttributes = target.actor.data.data.attributes;
+        targetSkills = target.actor.data.data.skills;
+    } else {
+        targetPresent = false;
+    }
     //
     // ----------Set title for Chat Message in test.chatTitle ------------//
     //
     switch(test.testType) {
         case "attribute":
-        case "skill":
-            test.chatTitle = test.skillName + " " + game.i18n.localize('torgeternity.chatText.test');
+            var localId = "torgeternity.attributes." + test.skillName;
+            test.chatTitle = game.i18n.localize(localId) + " " + game.i18n.localize('torgeternity.chatText.test');
             break;
-        
+        case "skill":
+            var localId = "torgeternity.skills." + test.skillName;
+            test.chatTitle = game.i18n.localize(localId) + " " + game.i18n.localize('torgeternity.chatText.test');
+            break;
         default:
             test.chatTitle = test.skillName + " " + game.i18n.localize('torgeternity.chatText.test');
-
     }
     
     //
     // --------Establish DN for this test based on test.DNDescriptor-----------//
     //
-    // Start by getting first target in the array (multiple targets not implemented)
-    var target = Array.from(test.targets)[0];
-    var targetAttributes = target.actor.data.data.attributes;
-    var targetSkills = target.actor.data.data.skills;
     
     switch(test.DNDescriptor) {
         case "veryEasy":
@@ -452,55 +463,118 @@ export function renderSkillChat(test) {
             if (targetSkills.divination.value) {
                 test.DN = targetSkills.divination.value;
             } else {
-                test.DN = targetAttribute.mind
+                test.DN = targetAttributes.mind
             }
             break;
         case "targetDodge":
             test.DN = target.actor.data.data.dodgeDefense;
             break;
-        
+        case "targetFaith":
+            if (targetSkills.faith.value) {
+                test.DN = targetSkills.faith.value;
+            } else {
+                test.DN = targetAddtributes.spirit;
+            }
+            break;
+        case "targetIntimidation":
+            test.DN = target.actor.data.data.intimidationDefense;
+            break;
+        case "targetKinesis":
+            if (targetSkills.kinesis.value) {
+                test.DN = targetSkills.kinesis.value
+            } else {
+                test.DN = targetAttributes.spirit
+            };
+            break;
+        case "targetManeuver":
+            test.DN = target.actor.data.data.maneuverDefense;
+            break;
+        case "targetMeleeWeapons":
+            test.DN = target.actor.data.data.meleeWeaponsDefense;
+            break;
+        case "targetPrecognition":
+            if (targetSkills.precognition.value) {
+                test.DN = targetSkills.precognition.value
+            } else {
+                test.DN = targetAttributes.mind
+            }
+            break;
+        case "targetStealth":
+            if (targetSkills.stealth.value) {
+                test.DN = targetSkills.stealth.value
+            } else {
+                test.DN = targetAttributes.dexterity
+            }
+            break;
+        case "targetTaunt":
+            test.DN = target.actor.data.data.tauntDefense;
+            break;
+        case "targetTrick":
+            test.DN = target.actor.data.data.trickDefense;
+            break;
+        case "targetUnarmedCombat":
+            test.DN = target.actor.data.data.unarmedCombatDefense;
+            break;
+        case "targetWillpower":
+            if (targetSkills.willpower.value) {
+                test.DN = targetSkills.willpower.value
+            } else {
+                test.DN = targetAttributes.spirit
+            }
+            break;
+
         default:
             test.DN = 10
     }
     
     // -----------------------Determine Bonus---------------------------- //
 
+    // Do we display the unskilled label for a Storm Knight?
+    var unskilledTest = false;
+    if (test.actor.data.type === "stormknight" & test.testType != "attribute") {
+        if (test.actor.data.data.skills[test.skillName].adds === 0 | test.actor.data.data.skills[test.skillName].adds === null) {
+               unskilledTest = true;
+        }
+    }
+
+    if (unskilledTest === true) {
+        test.unskilledLabel = "display:block"
+    } else {
+        test.unskilledLabel = "display:none"
+    }
+    
     // Do we need to generate a rollTotal?
     if (test.rollTotal === 0 & test.previousBonus === false) {
         // Generate dice roll
-        var dice 
-        if (test.actor.data.type === "stormknight") {
-            if (test.disfavored === true) {
-                dice = "1d20"
-                if (test.actor.data.data.skills[test.skillName].adds === 0) {
-                    test.unskilledLabel = "display:block";
-                } else {
-                    test.unskilledLabel = "display:none";
-                }
-            } else {
-                if (test.actor.data.data.skills[test.skillName].adds > 0) {
-                    dice = "1d20x10x20"
-                    test.unskilledLabel = "display:none"
-                } else {
-                    dice = "1d20x10"
-                    test.unskilledLabel = "display:block"
-                }
-            }
-        } else {
-            test.unskilledLabel = "display:none"
-            if (test.disfavored === true) {
-                dice = "1d20"
-            } else {
-                dice = "1d20x10x20"
-            }
+        var dice = "1d20x10x20"
+        if (test.disfavored === true) {
+            dice = "1d20"
+        } else if (unskilledTest === true) {
+            dice = "1d20x10"
         }
         test.diceroll = new Roll(dice).evaluate({ async: false });
-        test.rollTotal = diceroll.total;
+        test.rollTotal = test.diceroll.total;
     } else {
         test.diceroll = null
     }
 
+    //
     // Get current bonus and make + label visible if number is positive
+    //
+    // Initialize upTotal, possibilityTotal, heroTotal, and dramaTotal at zero, if necessary
+    if (! test.upTotal) {
+        test.upTotal = 0;
+    }
+    if (! test.possibilityTotal) {
+        test.possibilityTotal = 0
+    }
+    if (! test.heroTotal) {
+        test.heroTotal = 0
+    }
+    if (! test.dramaTotal) {
+        test.dramaTotal = 0
+    }
+
     test.combinedRollTotal = parseInt(test.rollTotal) + parseInt(test.upTotal) + parseInt(test.possibilityTotal) + parseInt(test.heroTotal) + parseInt(test.dramaTotal)
     if (test.previousBonus != true) {
         test.bonus = torgBonus(test.combinedRollTotal);
@@ -586,24 +660,57 @@ export function renderSkillChat(test) {
         test.modifiers += parseInt(test.other3Modifier);
     }
 
-    if (test.sizeModifier != 0) {
-        test.displayModifiers = true;
-        test.modifiers += parseInt(test.sizeModifier);
-        if (test.sizeModifier > 0) {
-            test.modifierText += game.i18n.localize('torgeternity.chatText.check.modifier.targetSize') + " +" + test.sizeModifier + "\n"
-        } else {
-            test.modifierText += game.i18n.localize('torgeternity.chatText.check.modifier.targetSize') + " " + test.sizeModifier + "\n"
-        }
-    }
+    // Apply target-related modifiers
+    if (targetPresent) {
+        // Apply the size modifier in appropriate circumstances
+        if (test.applySize) {
+            var sizeBonus = target.actor.data.data.sizeBonus;
+            switch (sizeBonus) {
+                case "normal":
+                    test.sizeModifier = 0
+                    break;
+                case "tiny":
+                    test.sizeModifier = -6;
+                    break;
+                case "verySmall":
+                    test.sizeModifier = -4;
+                    break;
+                case "small":
+                    test.sizeModifier = -2;
+                    break;
+                case "large":
+                    test.sizeModifier = 2;
+                    break;
+                case "veryLarge":
+                    test.sizeModifier = 4;
+                    break;
+                default:
+                    test.sizeModifier = 0;
+            }
 
-    if (test.vulnerableModifier > 0) {
-        test.displayModifiers = true;
-        test.modifiers += parseInt(test.vulnerableModifier);
-        if (test.vulnerableModifier === 2) {
+            if (test.sizeModifier > 0) {
+                test.displayModifiers = true;
+                test.modifiers += parseInt(test.sizeModifier);
+                test.modifierText += game.i18n.localize('torgeternity.chatText.check.modifier.targetSize') + " +" + sizeModifier + "\n"
+            } else if (test.sizeModifier < 0) {
+                test.displayModifiers = true;
+                test.modifiers += parseInt(test.sizeModifier)
+                test.modifierText += game.i18n.localize('torgeternity.chatText.check.modifier.targetSize') + " " + sizeModifier + "\n"
+            }
+        }
+
+        // Apply target vulnerability modifier
+        var vulnerableModifier = target.actor.data.data.vulnerableModifier;
+        if (vulnerableModifier === 2) {
+            test.displayModifiers = true;
+            test.modifiers += parseInt(vulnerableModifier)
             test.modifierText += game.i18n.localize('torgeternity.chatText.check.modifier.targetVulnerable') + "\n"
-        } else if (test.vulnerableModifier === 4) {
+        } else if (vulnerableModifier === 4) {
+            test.displayModifiers = true;
+            test.modifiers += parseInt(vulnerableModifier)
             test.modifierText += game.i18n.localize('torgeternity.chatText.check.modifier.targetVeryVulnerable') + "\n"
         }
+
     }
 
     if (test.calledShotModifier < 0) {
@@ -649,6 +756,10 @@ export function renderSkillChat(test) {
     };
 
     // Add +3 cards to bonus
+    // Initialize cardsPlayed if null
+    if (! test.cardsPlayed) {
+        test.cardsPlayed = 0;
+    }
     const tempBonus = parseInt(test.bonus)
     test.bonus = parseInt(tempBonus) + (parseInt(test.cardsPlayed) * 3)
 
