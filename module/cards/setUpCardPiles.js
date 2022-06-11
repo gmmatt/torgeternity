@@ -66,7 +66,7 @@ export async function setUpCardPiles() {
     if (game.cards.getName(decks.drama) == null) {
         const itemId = decks.pack.index.getName(decks.drama)._id;
         game.cards.importFromCompendium(decks.pack, itemId);
-        deckSetting.dramaDeck == decks.drama
+        deckSetting.dramaDeck = decks.drama
 
     }
     // Add Aysle Deck
