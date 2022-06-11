@@ -53,7 +53,7 @@ export default class torgeternityPlayerHand extends CardsHand {
                 } else {
                     await card.pass(game.cards.getName(game.settings.get("torgeternity", "deckSetting").cosmDiscard));
                 }
-                card.toMessage({ content: `<div class="card-draw flexrow"><span class="card-chat-tooltip"><img class="card-face" src="${card.img}"/><span><img src="${card.img}"></span></span><span class="card-name">${game.i18n.localize("torgeternity.chatText.playsCard")} ${card.name}</span>
+                card.toMessage({ content: `<div class="card-draw flexrow"><span class="card-chat-tooltip"><img class="card-face" src="${card.img}"/><span><img src="${card.img}"></span></span><span class="card-name">${game.i18n.localize("torgeternity.chatText.playsCard")} ${card.data.name} </span>
             </div>` })
                     // await game.combats.apps[0].viewed.resetAll();
                 return;
@@ -71,7 +71,7 @@ export default class torgeternityPlayerHand extends CardsHand {
                 } else {
                     await card.pass(game.cards.getName(game.settings.get("torgeternity", "deckSetting").cosmDiscard));
                 }
-                card.toMessage({ content: `<div class="card-draw flexrow"><span class="card-chat-tooltip"><img class="card-face" src="${card.img}"/><span><img src="${card.img}"></span></span><span class="card-name">${game.i18n.localize("torgeternity.chatText.discardsCard")} ${card.name}</span>
+                card.toMessage({ content: `<div class="card-draw flexrow"><span class="card-chat-tooltip"><img class="card-face" src="${card.img}"/><span><img src="${card.img}"></span></span><span class="card-name">${game.i18n.localize("torgeternity.chatText.discardsCard")} ${card.data.name}</span>
               </div>` });
                 // await game.combats.apps[0].viewed.resetAll();
                 return;
@@ -168,7 +168,7 @@ export default class torgeternityPlayerHand extends CardsHand {
                 const fd = new FormDataExtended(form).toObject();
                 const to = game.cards.get(fd.to);
                 const toName = to.data.name;
-                card.toMessage({ content: `<div class="card-draw flexrow"><span class="card-chat-tooltip"><img class="card-face" src="${card.img}"/><span><img src="${card.img}"></span></span><h4 class="card-name">${game.i18n.localize("torgeternity.chatText.passesCard1")} ${card.name} ${game.i18n.localize("torgeternity.chatText.passesCard2")} ${toName}.</h4></div>` });
+                card.toMessage({ content: `<div class="card-draw flexrow"><span class="card-chat-tooltip"><img class="card-face" src="${card.img}"/><span><img src="${card.img}"></span></span><h4 class="card-name">${game.i18n.localize("torgeternity.chatText.passesCard1")} ${card.data.name} ${game.i18n.localize("torgeternity.chatText.passesCard2")} ${toName}.</h4></div>` });
                 return card.pass(to).catch(err => {
                     ui.notifications.error(err.message);
                     return this;
