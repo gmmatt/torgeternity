@@ -584,7 +584,8 @@
             "spellRoll": "Jet de sort",
             "miracleRoll": "Jet de miracle",
             "psionicRoll": "Jet de pouvoir psionique",
-            "bonusRoll": "Jet bonus"
+            "bonusRoll": "Jet bonus",
+            "toggleEquip": "Équiper/Déséquiper"
         },
         "possibilitiesReset": {
             "name": "Réinitialiser les possibilités",
