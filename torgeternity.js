@@ -33,6 +33,7 @@ import createTorgShortcuts from './module/keybinding.js';
 import GMScreen from './module/GMScreen.js'
 import { setUpCardPiles } from './module/cards/setUpCardPiles.js';
 import { explode } from './module/explode.js';
+import { activateStandartScene } from './module/activateStandartScene.js'
 
 
 Hooks.once("init", async function() {
@@ -237,6 +238,11 @@ Hooks.on("ready", async function() {
 
     if (game.settings.get("torgeternity", "setUpCards") === true && game.user.isGM) {
         setUpCardPiles();
+    }
+
+    // activation of standart scene
+    if (game.scenes.size < 1) {
+        activateStandartScene();
     }
 
 
@@ -491,7 +497,11 @@ async function createTorgEternityMacro(data, slot) {
                 type: "script",
                 command: command,
                 permission: { default: CONST.DOCUMENT_PERMISSION_LEVELS.OBSERVER },
-                flags: { torgeternity:{[macroFlag]: true }},
+                flags: {
+                    torgeternity: {
+                        [macroFlag]: true
+                    }
+                },
             });
         } else {
             macro = await Macro.create({
@@ -500,7 +510,11 @@ async function createTorgEternityMacro(data, slot) {
                 img: macroImg,
                 command: command,
                 permission: { default: CONST.DOCUMENT_PERMISSION_LEVELS.OBSERVER },
-                flags: { torgeternity:{[macroFlag]: true }},
+                flags: {
+                    torgeternity: {
+                        [macroFlag]: true
+                    }
+                },
             });
         }
     }
@@ -598,7 +612,7 @@ function rollItemMacro(itemName) {
                 targetToughness = target.actor.data.data.other.toughness;
                 targetArmor = target.actor.data.data.other.armor;
                 if (attackWith === "fireCombat" || attackWith === "energyWeapons" || attackWith === "heavyWeapons" || attackWith === "missileWeapons") {
-                    defaultDodge=true;
+                    defaultDodge = true;
                 } else {
                     if (target.actor.data.data.skills.meleeWeapons.adds > 0 || (targetType === "threat" && target.actor.data.data.skills.meleeWeapons.value > 0)) {
                         defaultMelee = true;
