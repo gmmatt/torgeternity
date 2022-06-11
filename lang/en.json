@@ -703,6 +703,9 @@
             "toggle": "Toggle the GM screen",
             "noScreen": "No gm screen available",
             "noScreenMessage": "you don't have selected any gm screen. The gm screens are provided by the modules that you can find here: "
+        },
+        "partySheet": {
+            "noCharacter": "This user doesn't own any character"
         }
     },
     "CARD": {
