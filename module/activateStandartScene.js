@@ -6,7 +6,7 @@ export async function activateStandartScene() {
                 case "fr":
             pack = game.packs.get("torgeternity.core-scenes-fr");
             sceneId = pack.index.getName("Scène standard")._id;
-            scene = game.cards.importFromCompendium(pack, sceneId).then(s => { s.activate() });
+            scene = game.scenes.importFromCompendium(pack, sceneId).then(s => { s.activate() });
 
                     break;
         */
