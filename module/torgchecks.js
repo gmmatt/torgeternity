@@ -769,17 +769,15 @@ export function renderSkillChat(test) {
     test.outcome = null
     test.actionTotalContent = game.i18n.localize('torgeternity.chatText.check.result.actionTotal');
     const testDifference = test.rollResult - test.DN
-    if (test.isDN === true) {
-        test.actionTotalContent = "DN " + test.DN + " - " + test.rollResult + " " + game.i18n.localize('torgeternity.chatText.check.result.actionTotal');
-        if (testDifference < 0) {
-            test.outcome = game.i18n.localize('torgeternity.chatText.check.result.failure');
-        } else if (testDifference > 9) {
-            test.outcome = game.i18n.localize('torgeternity.chatText.check.result.outstandingSuccess');
-        } else if (testDifference > 4) {
-            test.outcome = game.i18n.localize('torgeternity.chatText.check.result.goodSuccess');
-        } else {
-            test.outcome = game.i18n.localize('torgeternity.chatText.check.result.standartSuccess');
-        }
+    test.actionTotalContent = game.i18n.localize('torgeternity.chatText.check.result.actionTotal') + " " +  test.rollResult + " vs. " + test.DN + " DN";
+    if (testDifference < 0) {
+        test.outcome = game.i18n.localize('torgeternity.chatText.check.result.failure');
+    } else if (testDifference > 9) {
+        test.outcome = game.i18n.localize('torgeternity.chatText.check.result.outstandingSuccess');
+    } else if (testDifference > 4) {
+        test.outcome = game.i18n.localize('torgeternity.chatText.check.result.goodSuccess');
+    } else {
+        test.outcome = game.i18n.localize('torgeternity.chatText.check.result.standartSuccess');
     }
 
     // Turn on + sign for modifiers?
@@ -800,12 +798,9 @@ export function renderSkillChat(test) {
             test.resultText = "+ " + test.bonus;
         }
         test.actionTotalLabel = "display:none"
-    } else if (test.isDN === true) {
-        test.resultText = test.outcome
     } else {
-        test.resultText = test.rollResult;
-        test.actionTotalLabel = "display:block"
-    }
+        test.resultText = test.outcome
+    } 
 
 
     // If an attack, calculate and display damage
