@@ -97,7 +97,7 @@ Hooks.once("init", async function() {
         "perk": game.i18n.localize("torgeternity.itemSheetDescriptions.perk"),
         "enhancement": game.i18n.localize("torgeternity.itemSheetDescriptions.enhancement"),
         "specialability": game.i18n.localize("torgeternity.itemSheetDescriptions.specialability"),
-        "specialability-rollable": game.i18n.localize("torgeternity.itemSheetDescriptions.specialailityRollable"),
+        "specialability-rollable": game.i18n.localize("torgeternity.itemSheetDescriptions.specialabilityRollable"),
         "spell": game.i18n.localize("torgeternity.itemSheetDescriptions.spell"),
         "miracle": game.i18n.localize("torgeternity.itemSheetDescriptions.miracle"),
         "psionicpower": game.i18n.localize("torgeternity.itemSheetDescriptions.psionicpower"),
