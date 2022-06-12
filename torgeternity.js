@@ -74,6 +74,38 @@ Hooks.once("init", async function() {
     CONFIG.Cards.documentClass = torgeternityCards;
     CONFIG.cardTypes = torgeternity.cardTypes;
 
+
+
+    //---localizing entities labels
+    CONFIG.Actor.typeLabels = {
+        stormknight: game.i18n.localize("torgeternity.sheetLabels.stormknight"),
+        threat: game.i18n.localize("torgeternity.sheetLabels.threat")
+    }
+    CONFIG.Item.typeLabels = {
+
+        "gear": game.i18n.localize("torgeternity.itemSheetDescriptions.generalGear"),
+        "eternityshard": game.i18n.localize("torgeternity.itemSheetDescriptions.eternityshard"),
+        "armor": game.i18n.localize("torgeternity.itemSheetDescriptions.armor"),
+        "shield": game.i18n.localize("torgeternity.itemSheetDescriptions.shield"),
+        "customAttack": game.i18n.localize("torgeternity.itemSheetDescriptions.customAttack"),
+        "meleeweapon": game.i18n.localize("torgeternity.itemSheetDescriptions.meleeWeapon"),
+        "missileweapon": game.i18n.localize("torgeternity.itemSheetDescriptions.missileWeapon"),
+        "firearm": game.i18n.localize("torgeternity.itemSheetDescriptions.firearm"),
+        "implant": game.i18n.localize("torgeternity.itemSheetDescriptions.implant"),
+        "heavyweapon": game.i18n.localize("torgeternity.itemSheetDescriptions.heavyWeapon"),
+        "vehicle": game.i18n.localize("torgeternity.itemSheetDescriptions.vehicule"),
+        "perk": game.i18n.localize("torgeternity.itemSheetDescriptions.perk"),
+        "enhancement": game.i18n.localize("torgeternity.itemSheetDescriptions.enhancement"),
+        "specialability": game.i18n.localize("torgeternity.itemSheetDescriptions.specialability"),
+        "specialability-rollable": game.i18n.localize("torgeternity.itemSheetDescriptions.specialabilityRollable"),
+        "spell": game.i18n.localize("torgeternity.itemSheetDescriptions.spell"),
+        "miracle": game.i18n.localize("torgeternity.itemSheetDescriptions.miracle"),
+        "psionicpower": game.i18n.localize("torgeternity.itemSheetDescriptions.psionicpower"),
+        "customSkill": game.i18n.localize("torgeternity.itemSheetDescriptions.customSkill")
+
+    }
+
+    ui.GMScreen = new GMScreen();
     // all settings after config
     registerTorgSettings();
     //---register items and actors
