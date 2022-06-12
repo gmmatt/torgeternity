@@ -939,7 +939,7 @@ Hooks.on('updateActor', (actor, data, options, id) => {
 
 // by default creating a  hand for each stormknight
 Hooks.on("createActor", async(actor, options, userId) => {
-    if (actor.type === "stormknight") {
+    if (actor.type === "stormknight" && game.userId === userId) {
         actor.createDefaultHand()
     }
 
