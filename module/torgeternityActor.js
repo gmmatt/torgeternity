@@ -7,10 +7,6 @@ export default class torgeternityActor extends Actor {
         //Set base fatigue to 2
         this.data.data.fatigue = 2;
 
-<<<<<<< HEAD
-
-=======
->>>>>>> dev
         if (this.data._source.type === "stormknight") {
             mergeObject(this.data.token, {
 
