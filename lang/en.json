@@ -606,6 +606,9 @@
             "cosm": "Cosm",
             "hand": "Hand",
             "discardPile": "Discard Pile",
+            "cosmDiscard": "Cosm Discard Pile",  
+            "dramaDiscard": "Drama Discard Pile",
+            "destinyDiscard": "Destiny Discard Pile",
             "activeDrama": "Active Drama Card"
 
 
@@ -705,6 +708,10 @@
             "toggle": "Toggle the GM screen",
             "noScreen": "No gm screen available",
             "noScreenMessage": "you don't have selected any gm screen. The gm screens are provided by the modules that you can find here: "
+        },
+        "packs": {
+            "basicRules" : "torgeternity.basic-rules",
+            "decks" : "torgeternity.core-card-set"
         }
     },
     "CARD": {
