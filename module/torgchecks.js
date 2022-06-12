@@ -386,145 +386,149 @@ export function renderSkillChat(test) {
         targetPresent = false;
     }
     //
-    // ----------Set title for Chat Message in test.chatTitle ------------//
+    // Check to see if we already have a chat title from a chat card roll. If not, Set title for Chat Message in test.chatTitle //
     //
-    switch(test.testType) {
-        case "attribute":
-            var localId = "torgeternity.attributes." + test.skillName;
-            test.chatTitle = game.i18n.localize(localId) + " " + game.i18n.localize('torgeternity.chatText.test');
-            break;
-        case "skill":
-            var localId = "torgeternity.skills." + test.skillName;
-            test.chatTitle = game.i18n.localize(localId) + " " + game.i18n.localize('torgeternity.chatText.test');
-            break;
-        default:
-            test.chatTitle = test.skillName + " " + game.i18n.localize('torgeternity.chatText.test');
+    if (! test.chatTitle) {
+        switch(test.testType) {
+            case "attribute":
+                var localId = "torgeternity.attributes." + test.skillName;
+                test.chatTitle = game.i18n.localize(localId) + " " + game.i18n.localize('torgeternity.chatText.test');
+                break;
+            case "skill":
+                var localId = "torgeternity.skills." + test.skillName;
+                test.chatTitle = game.i18n.localize(localId) + " " + game.i18n.localize('torgeternity.chatText.test');
+                break;
+            default:
+                test.chatTitle = test.skillName + " " + game.i18n.localize('torgeternity.chatText.test');
+        }
     }
     
     //
-    // --------Establish DN for this test based on test.DNDescriptor-----------//
+    // Do we have a DN yet? If not, Establish DN for this test based on test.DNDescriptor //
     //
     
-    switch(test.DNDescriptor) {
-        case "veryEasy":
-            test.DN = 6;
-            break;
-        case "easy":
-            test.DN = 8;
-            break;
-        case "standard":
-            test.DN = 10;
-            break;
-        case "challenging":
-            test.DN = 12;
-            break;
-        case "hard":
-            test.DN = 14;
-            break;
-        case "veryHard":
-            test.DN = 16;
-            break;
-        case "heroic":
-            test.DN = 18;
-            break;
-        case "nearImpossible":
-            test.DN = 20;
-            break;
-        case "targetCharisma":
-            test.DN = targetAttributes.charisma;
-            break;
-        case "targetDexterity":
-            test.DN = targetAttributes.dexterity;
-            break;
-        case "targetMind":
-            test.DN = targetAttributes.mind;
-            break;
-        case "targetSpirit":
-            test.DN = targetAttributes.spirit;
-            break;
-        case "targetStrength":
-            test.DN = targetAttributes.strength;
-            break;
-        case "targetAlteration":
-            if (targetSkills.alteration.value) {
-                test.DN = targetSkills.alteration.value;
-            } else {
+    if (! test.DN) {
+        switch(test.DNDescriptor) {
+            case "veryEasy":
+                test.DN = 6;
+                break;
+            case "easy":
+                test.DN = 8;
+                break;
+            case "standard":
+                test.DN = 10;
+                break;
+            case "challenging":
+                test.DN = 12;
+                break;
+            case "hard":
+                test.DN = 14;
+                break;
+            case "veryHard":
+                test.DN = 16;
+                break;
+            case "heroic":
+                test.DN = 18;
+                break;
+            case "nearImpossible":
+                test.DN = 20;
+                break;
+            case "targetCharisma":
+                test.DN = targetAttributes.charisma;
+                break;
+            case "targetDexterity":
+                test.DN = targetAttributes.dexterity;
+                break;
+            case "targetMind":
                 test.DN = targetAttributes.mind;
-            }
-            break;
-        case "targetConjuration":
-            if (targetSkills.conjuration.value) {
-                test.DN = targetSkills.conjuration.value;
-            } else {
-                test.DN = targetAttributes.spirit
-            }
-            break;
-        case "targetDivination":
-            if (targetSkills.divination.value) {
-                test.DN = targetSkills.divination.value;
-            } else {
-                test.DN = targetAttributes.mind
-            }
-            break;
-        case "targetDodge":
-            test.DN = target.actor.data.data.dodgeDefense;
-            break;
-        case "targetFaith":
-            if (targetSkills.faith.value) {
-                test.DN = targetSkills.faith.value;
-            } else {
-                test.DN = targetAddtributes.spirit;
-            }
-            break;
-        case "targetIntimidation":
-            test.DN = target.actor.data.data.intimidationDefense;
-            break;
-        case "targetKinesis":
-            if (targetSkills.kinesis.value) {
-                test.DN = targetSkills.kinesis.value
-            } else {
-                test.DN = targetAttributes.spirit
-            };
-            break;
-        case "targetManeuver":
-            test.DN = target.actor.data.data.maneuverDefense;
-            break;
-        case "targetMeleeWeapons":
-            test.DN = target.actor.data.data.meleeWeaponsDefense;
-            break;
-        case "targetPrecognition":
-            if (targetSkills.precognition.value) {
-                test.DN = targetSkills.precognition.value
-            } else {
-                test.DN = targetAttributes.mind
-            }
-            break;
-        case "targetStealth":
-            if (targetSkills.stealth.value) {
-                test.DN = targetSkills.stealth.value
-            } else {
-                test.DN = targetAttributes.dexterity
-            }
-            break;
-        case "targetTaunt":
-            test.DN = target.actor.data.data.tauntDefense;
-            break;
-        case "targetTrick":
-            test.DN = target.actor.data.data.trickDefense;
-            break;
-        case "targetUnarmedCombat":
-            test.DN = target.actor.data.data.unarmedCombatDefense;
-            break;
-        case "targetWillpower":
-            if (targetSkills.willpower.value) {
-                test.DN = targetSkills.willpower.value
-            } else {
-                test.DN = targetAttributes.spirit
-            }
-            break;
+                break;
+            case "targetSpirit":
+                test.DN = targetAttributes.spirit;
+                break;
+            case "targetStrength":
+                test.DN = targetAttributes.strength;
+                break;
+            case "targetAlteration":
+                if (targetSkills.alteration.value) {
+                    test.DN = targetSkills.alteration.value;
+                } else {
+                    test.DN = targetAttributes.mind;
+                }
+                break;
+            case "targetConjuration":
+                if (targetSkills.conjuration.value) {
+                    test.DN = targetSkills.conjuration.value;
+                } else {
+                    test.DN = targetAttributes.spirit
+                }
+                break;
+            case "targetDivination":
+                if (targetSkills.divination.value) {
+                    test.DN = targetSkills.divination.value;
+                } else {
+                    test.DN = targetAttributes.mind
+                }
+                break;
+            case "targetDodge":
+                test.DN = target.actor.data.data.dodgeDefense;
+                break;
+            case "targetFaith":
+                if (targetSkills.faith.value) {
+                    test.DN = targetSkills.faith.value;
+                } else {
+                    test.DN = targetAddtributes.spirit;
+                }
+                break;
+            case "targetIntimidation":
+                test.DN = target.actor.data.data.intimidationDefense;
+                break;
+            case "targetKinesis":
+                if (targetSkills.kinesis.value) {
+                    test.DN = targetSkills.kinesis.value
+                } else {
+                    test.DN = targetAttributes.spirit
+                };
+                break;
+            case "targetManeuver":
+                test.DN = target.actor.data.data.maneuverDefense;
+                break;
+            case "targetMeleeWeapons":
+                test.DN = target.actor.data.data.meleeWeaponsDefense;
+                break;
+            case "targetPrecognition":
+                if (targetSkills.precognition.value) {
+                    test.DN = targetSkills.precognition.value
+                } else {
+                    test.DN = targetAttributes.mind
+                }
+                break;
+            case "targetStealth":
+                if (targetSkills.stealth.value) {
+                    test.DN = targetSkills.stealth.value
+                } else {
+                    test.DN = targetAttributes.dexterity
+                }
+                break;
+            case "targetTaunt":
+                test.DN = target.actor.data.data.tauntDefense;
+                break;
+            case "targetTrick":
+                test.DN = target.actor.data.data.trickDefense;
+                break;
+            case "targetUnarmedCombat":
+                test.DN = target.actor.data.data.unarmedCombatDefense;
+                break;
+            case "targetWillpower":
+                if (targetSkills.willpower.value) {
+                    test.DN = targetSkills.willpower.value
+                } else {
+                    test.DN = targetAttributes.spirit
+                }
+                break;
 
-        default:
-            test.DN = 10
+            default:
+                test.DN = 10
+        }
     }
     
     // -----------------------Determine Bonus---------------------------- //
@@ -543,7 +547,7 @@ export function renderSkillChat(test) {
         test.unskilledLabel = "display:none"
     }
     
-    // Do we need to generate a rollTotal?
+    // Generate roll, if needed
     if (test.rollTotal === 0 & test.previousBonus === false) {
         // Generate dice roll
         var dice = "1d20x10x20"
@@ -769,7 +773,8 @@ export function renderSkillChat(test) {
     test.outcome = null
     test.actionTotalContent = game.i18n.localize('torgeternity.chatText.check.result.actionTotal');
     const testDifference = test.rollResult - test.DN
-    test.actionTotalContent = game.i18n.localize('torgeternity.chatText.check.result.actionTotal') + " " +  test.rollResult + " vs. " + test.DN + " DN";
+    const dnLabel = "torgeternity.dnTypes." + test.DNDescriptor
+    test.actionTotalContent = game.i18n.localize('torgeternity.chatText.check.result.actionTotal') + " " +  test.rollResult + " vs. " + test.DN + " " + game.i18n.localize(dnLabel);
     if (testDifference < 0) {
         test.outcome = game.i18n.localize('torgeternity.chatText.check.result.failure');
     } else if (testDifference > 9) {
@@ -921,6 +926,8 @@ export function renderSkillChat(test) {
         test.notesLabel = "display:"
     }
 
+    // Cannot pass target array to chat, so we have to clear it out here
+    test.targets = ""
 
     let chatData = {
         user: game.user.data._id,
