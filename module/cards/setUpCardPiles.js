@@ -1,123 +1,95 @@
 export async function setUpCardPiles() {
-    let deckSetting = game.settings.get("torgeternity", "deckSetting");
-    const pack = game.packs.get("torgeternity.core-card-set");
-    const basicRules = game.packs.get("torgeternity.basic-rules")
-        // Add Destiny Deck
-    if (game.cards.getName("Destiny Deck") == null) {
-        const itemId = pack.index.getName("Destiny Deck")._id;
-        let pile = game.cards.importFromCompendium(pack, itemId);
-        deckSetting.destinyDeck = "Destiny Deck"
+    const deckSetting = game.settings.get("torgeternity", "deckSetting");
+    const basicRulesPack = game.packs.get(game.i18n.localize("torgeternity.packs.basicRules"))
+    const deckPack = game.packs.get(game.i18n.localize("torgeternity.packs.decks"))
+    let deckFolder = (
+        game.folders.find(folder => folder.data.flags?.torgeternity?.usage === "coreCards") || 
+        game.folders.getName(deckPack.title)
+    )
+    if(!deckFolder || deckFolder.data.type != "Cards"){
+        deckFolder = await Folder.create({
+            name:deckPack.title, 
+            type:"Cards", 
+            flags: {
+                torgeternity:{
+                    usage: "coreCards"
+                }}})
     }
-    // Add Drama Deck
-    if (game.cards.getName("Drama Deck") == null) {
-        const itemId = pack.index.getName("Drama Deck")._id;
-        game.cards.importFromCompendium(pack, itemId);
-        deckSetting.dramaDeck = "Drama Deck"
-    }
-    // Add Cosm Discard
-    if (game.cards.getName("Cosm Discard") == null) {
-        let cardData = {
-            name: "Cosm Discard",
-            type: "pile",
-            permission: { default: CONST.DOCUMENT_PERMISSION_LEVELS.OWNER }
+    /*list of deck keys for all the decks that will be in the pack - i.e. all keys of deckSettings aside from discard piles, active card, and storm knight hands*/
+    const deckKeys = [
+        "destinyDeck",
+        "dramaDeck",
+        "coreEarth",
+        "aysle",
+        "cyberpapacy",
+        "livingLand",
+        "nileEmpire",
+        "orrorsh",
+        "panPacifica",
+        "tharkold"
+    ] 
+
+    console.log(`Torg eternity system // setting up default card decks`)
+
+    let deckIndex = await deckPack.getIndex({fields: ["flags.torgeternity.usage"]})
+    let journalIndex = await basicRulesPack.getIndex({fields: ["flags.torgeternity.usage"]})
+
+    for (let deckKey of deckKeys){
+        if (!game.cards.getName(deckSetting[deckKey])) { //if the deck defined by the current setting does not exist
+            const deckId = deckIndex.find(deck => deck.flags?.torgeternity?.usage === deckKey)._id; //find the ID of the deck with the appropriate flag
+            let deck = await game.cards.importFromCompendium(deckPack, deckId, {folder: deckFolder.id}) //import that deck
+            deckSetting[deckKey] = deck.name //add the deck name to the temporary settings object
         }
-        let cosmDiscard = Cards.create(cardData, { keepId: true, renderSheet: false });
-        deckSetting.cosmDiscard = "Cosm Discard";
     }
-    // Add Drama Discard
-    if (game.cards.getName("Drama Discard") == null) {
-        let cardData = {
-            name: "Drama Discard",
-            type: "pile",
-            permission: { default: CONST.DOCUMENT_PERMISSION_LEVELS.OWNER }
+
+    console.log(`Torg eternity system // setting up default discard piles and active card piles`)
+
+    let discardKeys = [
+        "cosmDiscard",
+        "dramaDiscard",
+        "destinyDiscard"
+    ]
+    //set up discard piles
+    for (let discardKey of discardKeys){
+        if (!game.cards.getName(deckSetting[discardKey])) {
+            let cardData = {
+                name: game.i18n.localize("torgeternity.cardTypes."+discardKey),
+                type: "pile",
+                permission: { default: CONST.DOCUMENT_PERMISSION_LEVELS.OWNER },
+                folder: deckFolder.id
+            }
+            let discard = await Cards.create(cardData, { keepId: true, renderSheet: false });
+            deckSetting[discardKey] = discard.name;
         }
-        let dramaDiscard = Cards.create(cardData, { keepId: true, renderSheet: false });
-        deckSetting.dramaDiscard = "Drama Discard"
     }
-    // Add Destiny Discard
-    if (game.cards.getName("Destiny Discard") == null) {
-        let cardData = {
-            name: "Destiny Discard",
-            type: "pile",
-            permission: { default: CONST.DOCUMENT_PERMISSION_LEVELS.OWNER }
-        }
-        let destinyDiscard = Cards.create(cardData, { keepId: true, renderSheet: false });
-        deckSetting.destinyDiscard = "Destiny Discard"
-    }
+
     // Add Active Drama
-    if (game.cards.getName("Active Drama Card") == null) {
+    if (!game.cards.getName(deckSetting.activeDrama) ){
         let cardData = {
-            name: "Active Drama Card",
-            type: "pile"
-        }
-        let activeDrama = Cards.create(cardData, { keepId: true, renderSheet: false });
-        deckSetting.dramaActive = "Active Drama Card"
+            name: game.i18n.localize("torgeternity.cardTypes.activeDrama"),
+            type: "pile",
+            folder: deckFolder.id
+        };
+        let activeDrama = await Cards.create(cardData, { keepId: true, renderSheet: false });
+        deckSetting.dramaActive = activeDrama.name;
+
     }
 
-    //adding cosm decks
-    //-----------------
-    if (game.cards.getName("Core Earth Cosm Deck") == null) {
-        const itemId = pack.index.getName("Core Earth Cosm Deck")._id;
-        game.cards.importFromCompendium(pack, itemId);
-        deckSetting.coreEarth = "Core Earth Cosm Deck"
+    // Add journal entry with instructions relating to cards depending on language
+    if(!game.journal.find(journal => journal.data.flags?.torgeternity?.usage === "manageCards")){//if the card management journal doesn't exist
+        let journalId = journalIndex.find(journal => journal.flags?.torgeternity?.usage === "manageCards")._id
+        await game.journal.importFromCompendium(basicRulesPack, journalId)
     }
-    if (game.cards.getName("Aysle Cosm Deck") == null) {
-        const itemId = pack.index.getName("Aysle Cosm Deck")._id;
-        game.cards.importFromCompendium(pack, itemId);
-        deckSetting.aysle = "Aysle Cosm Deck"
-    }
-    if (game.cards.getName("Cyberpapacy Cosm Deck") == null) {
-        const itemId = pack.index.getName("Cyberpapacy Cosm Deck")._id;
-        game.cards.importFromCompendium(pack, itemId);
-        deckSetting.cyberpapacy = "Cyberpapacy Cosm Deck"
-    }
-    if (game.cards.getName("Living Land Cosm Deck") == null) {
-        const itemId = pack.index.getName("Living Land Cosm Deck")._id;
-        game.cards.importFromCompendium(pack, itemId);
-        deckSetting.livingLand = "Living Land Cosm Deck"
-    }
-    if (game.cards.getName("Nile Empire Cosm Deck") == null) {
-        const itemId = pack.index.getName("Nile Empire Cosm Deck")._id;
-        game.cards.importFromCompendium(pack, itemId);
-        deckSetting.nileEmpire = "Nile Empire Cosm Deck"
-    }
-    if (game.cards.getName("Orrorsh Cosm Deck") == null) {
-        const itemId = pack.index.getName("Orrorsh Cosm Deck")._id;
-        game.cards.importFromCompendium(pack, itemId);
-        deckSetting.orrorsh = "Orrorsh Cosm Deck"
-    }
-    if (game.cards.getName("Pan Pacifica Cosm Deck") == null) {
-        const itemId = pack.index.getName("Pan Pacifica Cosm Deck")._id;
-        game.cards.importFromCompendium(pack, itemId);
-        deckSetting.panPacifica = "Pan Pacifica Cosm Deck"
-    }
-    if (game.cards.getName("Tharkold Cosm Deck") == null) {
-        const itemId = pack.index.getName("Tharkold Cosm Deck")._id;
-        game.cards.importFromCompendium(pack, itemId);
-        deckSetting.tharkold = "Tharkold Cosm Deck"
-    }
-    // Add journal entry with instructions relating to cards
-    if (game.journal.getName("Managing Cards") == null) {
-        const itemId = basicRules.index.getName("Managing Cards")._id;
-        game.journal.importFromCompendium(basicRules, itemId);
-    }
-
-
 
 
 
     let stormknights = game.actors.filter(act => act.type == "stormknight");
     for (let sk of stormknights) {
         if (!sk.getDefaultHand()) {
-
-
             await sk.createDefaultHand();
-
         }
-
-
     }
-
-    game.settings.set("torgeternity", "setUpCards", false)
+    game.settings.set("torgeternity", "deckSetting", deckSetting);
+    game.settings.set("torgeternity", "setUpCards", false);
 
 }

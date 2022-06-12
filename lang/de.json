@@ -338,10 +338,11 @@
             "titleDescription": "Titel/Beschreibung",
             "pool": "Aktionenpool",
             "skillRollHint": "Umschalt-Klick für erweiterten Fähigkeitstest",
-            "toggleSkillDisplay": "Klicken Sie auf, um die Anzeige der Fertigkeiten umzuschalten",
+            "toggleSkillDisplay": "Klicke hierauf, um die Anzeige der Fertigkeiten umzuschalten",
             "combatSkills": "Kampf",
             "interactionSkills": "Interaktion",
-            "otherSkills": "Andere"
+            "otherSkills": "Andere",
+            "targetDefense": "Verteidigung des Ziels"
         },
         "combat": {
             "nextKeep": "Neue Runde (aktuelle Karte behalten)",
@@ -482,7 +483,7 @@
             "check": {
                 "testUnsuccessfull": "Probe nicht erfolgreich",
                 "needTarget": "Der ausgeweitete Angriffswurf kann ohne Ziel nicht durchgeführt werden. Wähle ein Ziel und versuche es erneut.",
-                "InteractionNeedTarget": "Der Interaktionsangriff kann ohne ausgewähltes Ziel nicht durchgeführt werden. Bitte Ziel auswählen und nochmal versuchen.",
+                "interactionNeedTarget": "Der Interaktionsangriff kann ohne ausgewähltes Ziel nicht durchgeführt werden. Bitte Ziel auswählen und nochmal versuchen.",
                 "cantUseUntrained": "Kann nicht untrainiert verwendet werden (mindestens Fertigkeitswert 1)",
                 "cantUseSkillRecquired": "Kann nicht ohne mindestens 1 Fertigkeitspunkt in der erforderlichen Fertigkeit verwendet werden.",
                 "modifier": {
@@ -604,6 +605,9 @@
             "cosm": "Cosm",
             "hand": "Handkarten",
             "discardPile": "Kartenfriedhof",
+            "cosmDiscard": "Ablagestapel Cosmkarten",  
+            "dramaDiscard": "Ablagestapel Dramakarten",
+            "destinyDiscard": "Ablagestapel Schicksalskarten",
             "activeDrama": "Aktive Dramakarte"
         
         
@@ -678,6 +682,10 @@
 
             }            
     },
+    "skillDialogs": {
+        "disfavored": "Benachteiligt",
+        "disfavoredTip": "Anhaken, wenn der Wurf benachteiligt ist. Der Würfelwurf wird dann nicht auf einer 10 oder 20 explodieren." 
+    },
     "notifications": {
         "macroTypeWarning": "Du kannst nur Makro-Buttons für Items/Attribute/Fertigkeiten kreieren, die dir gehören.",
         "openIssue": "Dein Browser wird einen neuen Tab öffnen, um diese Aufgabe durchzuführen.",
@@ -699,6 +707,10 @@
         "toggle": "SL-Schirm an-/ ausschalten",
         "noScreen": "Kein SL-Schirm verfügbar",
         "noScreenMessage": "Du hast keinen SL-Schirm ausgewählt. SL-Schirme werden von Premium-Modulen unterstützt, die du hier findest:"
+    },
+    "packs": {
+        "basicRules" : "torgeternity.system-de-basisregeln",
+        "decks" : "torgeternity.system-de-grundkarten"
     }    
     },
     "CARD": {

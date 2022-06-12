@@ -8,6 +8,13 @@
 For manual installation, use the provided manifest URL in the "*Install System*" popup window 
 while managing game systems.
 
+v. 2.4.1
+- Card settings and world setup working much smoother now thanks to 
+  Rwan and BadIdeasBureau.
+- Under the hood, deck identifications are getting handled much
+  more elegantly thanks to BadIdeasBureau. 
+- Also thanks to Bad, we localization of decks is a lot easier.
+
 v. 2.4.0
 - Updated enhanced checks to include disfavored rolls
 - Attack rolls now allow user to select defense used

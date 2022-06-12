@@ -483,7 +483,7 @@
             "check": {
                 "testUnsuccessfull": "Test unsuccessfull",
                 "needTarget": "Cannot attempt enhanced attack test without a target. Select a target and try again.",
-                "InteractionNeedTarget": "Cannot attempt interaction attack test without a target. Select a target and try again.",
+                "interactionNeedTarget": "Cannot attempt interaction attack test without a target. Select a target and try again.",
                 "cantUseUntrained": " cannot be used unless it is learned (at least 1 skill add).",
                 "cantUseSkillRecquired": " cannot be used without at least 1 add in the required skill.",
                 "modifier": {
@@ -605,6 +605,9 @@
             "cosm": "Cosm",
             "hand": "Hand",
             "discardPile": "Discard Pile",
+            "cosmDiscard": "Cosm Discard Pile",  
+            "dramaDiscard": "Drama Discard Pile",
+            "destinyDiscard": "Destiny Discard Pile",
             "activeDrama": "Active Drama Card"
 
 
@@ -704,6 +707,10 @@
             "toggle": "Toggle the GM screen",
             "noScreen": "No gm screen available",
             "noScreenMessage": "you don't have selected any gm screen. The gm screens are provided by the modules that you can find here: "
+        },
+        "packs": {
+            "basicRules" : "torgeternity.basic-rules",
+            "decks" : "torgeternity.core-card-set"
         }
     },
     "CARD": {

@@ -7,7 +7,10 @@ export default class torgeternityActor extends Actor {
         //Set base fatigue to 2
         this.data.data.fatigue = 2;
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> dev
         if (this.data._source.type === "stormknight") {
             mergeObject(this.data.token, {
 
@@ -232,8 +235,7 @@ export default class torgeternityActor extends Actor {
 
     //adding a method to get defauld stormknight cardhand
     getDefaultHand() {
-
-        if (game.settings.get("torgeternity", "deckSetting").stormknights[this.id]) {
+        if (game.settings.get("torgeternity", "deckSetting").stormknights.hasOwnProperty(this.id)) {
             return game.cards.get(game.settings.get("torgeternity", "deckSetting").stormknights[this.id]);
 
         } else {

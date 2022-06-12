@@ -603,8 +603,16 @@
             "drama": "Action",
             "cosm": "Cosm",
             "hand": "Main",
+<<<<<<< HEAD
             "discardPile": "Défausse",
             "activeDrama": "Carte Action active"
+=======
+            "discardPile": "pile de défausse",
+            "cosmDiscard": "Défausse Cartes de Cosm",  
+            "dramaDiscard": "Défausse Cartes d'Action",
+            "destinyDiscard": "Défausse Cartes du Destin",
+            "activeDrama": "Carte Action Active"
+>>>>>>> dev
         },
         "scenes": {
             "reality": "Réalité",
@@ -692,7 +700,15 @@
             "title": "Écran du meneur",
             "toggle": "Afficher/masquer l'écran",
             "noScreen": "Aucun écran sélectionné",
+<<<<<<< HEAD
             "noScreenMessage": "Vous n'avez sélectionné aucun écran. Les écrans sont disponibles dans les modules pour Torg Eternity disponibles ici : "
+=======
+            "noScreenMessage": "Vous n'avez sélectionné aucun écran. Les écrans sont rendu disponible par les modules pour Torg Eternity disponibles ici : "
+        },
+        "packs": {
+            "basicRules" : "torgeternity.basic-rules-fr",
+            "decks" : "torgeternity.core-card-set-fr"
+>>>>>>> dev
         }
     },
     "CARD": {

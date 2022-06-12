@@ -370,6 +370,88 @@ div.subtitleleft{
     margin-left: 0.5rem;
 }
 /*...................................................................*/
+/*Splotches! All of them!
+Class-Syntax: 
+class="splotch aysle/cyber/nile/or/panpa/thark left/right
+*/
+
+div.editor-content .splotch{
+    background-size:100% 100%;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    width: 50%;
+    display:inline-block;
+    margin-left:25%;
+    min-height:100px;
+}
+
+div.editor-content .splotch.aysle{
+    background-image:url(../images/Splotch_Aysle.webp);
+}
+
+div.editor-content .splotch.cyber{
+    background-image: url(../images/splotch_cyberpapacy.webp);
+}
+
+div.editor-content .splotch.nile{
+    background-image:url(../images/Splotch_Nile.webp);
+}
+
+div.editor-content .splotch.or{
+    background-image:url(../images/Splotch_Orrorsh.webp);
+}
+
+div.editor-content .splotch.panpa{
+    background-image:url(../images/Splotch_PanPacifica.webp);
+}
+
+div.editor-content .splotch.thark{
+    background-image:url(../images/Splotch_Tharkold.webp);
+}
+
+div.editor-content .splotch p{
+    text-align: left;
+    font-size: 1rem;
+    color: white;
+    font-family: Alaska;
+    text-shadow: black    1.3px 1.3px 0px,
+                 black    1.3px -1.3px 0px,
+                 black    -1.3px 1.3px 0px,
+                 black    -1.3px 1.3px 0px;
+    text-transform: uppercase;
+    padding: 0 1em;
+    margin-left:2.2rem;
+    }
+
+div.editor-content div.splotch p:only-of-type{
+    margin-top: 1.8em;
+    margin-bottom: 1.8em;
+    padding:inherit;
+    }
+
+div.editor-content div.splotch p:first-of-type{
+    margin-top:1.8em;
+    padding:inherit;
+    }
+
+div.editor-content div.splotch p + p:last-of-type{
+    margin-bottom:1.8em;
+    padding:inherit;
+    text-indent:0px;
+    }
+
+div.editor-content .splotch.right{
+    float:right;
+    margin-left:0.5rem;
+}
+
+div.editor-content .splotch.left{
+    float:left;
+    margin-right:0.5rem;
+    margin-left:unset;
+}
+
+/*...................................................................*/
 .exampletext{
     background-color: rgb(241,221,192);
     margin: 16px 30px;

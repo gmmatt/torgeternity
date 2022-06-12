@@ -33,11 +33,12 @@ import createTorgShortcuts from './module/keybinding.js';
 import GMScreen from './module/GMScreen.js'
 import { setUpCardPiles } from './module/cards/setUpCardPiles.js';
 import { explode } from './module/explode.js';
+import { activateStandartScene } from './module/activateStandartScene.js'
 
 
 Hooks.once("init", async function() {
     console.log("torgeternity | Initializing Torg Eternity System");
-    CONFIG.debug.hooks = true;
+    //CONFIG.debug.hooks = true; //The Developer Mode module can do this for you without accidentally leaving hooks on for anyone working in your system
     //----helpers
     registerHelpers();
 
@@ -234,6 +235,7 @@ Hooks.on("ready", async function() {
       */
     //----setup cards if needed
 
+<<<<<<< HEAD
     if (game.settings.get("torgeternity", "setUpCards") === true) {
 
         let lang = game.settings.get("core", "language");
@@ -309,6 +311,15 @@ Hooks.on("ready", async function() {
         }
 
         game.settings.set("torgeternity", "setUpCards", false)
+=======
+    if (game.settings.get("torgeternity", "setUpCards") === true && game.user.isGM) {
+        setUpCardPiles();
+>>>>>>> dev
+    }
+
+    // activation of standart scene
+    if (game.scenes.size < 1) {
+        activateStandartScene();
     }
 
 
@@ -509,7 +520,7 @@ async function createTorgEternityMacro(data, slot) {
         command = `game.torgeternity.rollItemMacro("${objData.name}");`;
         macroName = objData.name;
         macroImg = objData.img;
-        macroFlag = "torgeternity.itemMacro";
+        macroFlag = "itemMacro";
     } else // attribute, skill, interaction
     {
         const internalSkillName = objData.name;
@@ -528,7 +539,7 @@ async function createTorgEternityMacro(data, slot) {
             macroName = displayAttributeName;
         else if (data.type === "interaction")
             macroName = displaySkillName;
-        macroFlag = "torgeternity.skillMacro";
+        macroFlag = "skillMacro";
 
         if (data.type === "attribute") {
             // this is an attribute test
@@ -563,7 +574,11 @@ async function createTorgEternityMacro(data, slot) {
                 type: "script",
                 command: command,
                 permission: { default: CONST.DOCUMENT_PERMISSION_LEVELS.OBSERVER },
-                flags: { macroFlag: true },
+                flags: {
+                    torgeternity: {
+                        [macroFlag]: true
+                    }
+                },
             });
         } else {
             macro = await Macro.create({
@@ -572,7 +587,11 @@ async function createTorgEternityMacro(data, slot) {
                 img: macroImg,
                 command: command,
                 permission: { default: CONST.DOCUMENT_PERMISSION_LEVELS.OBSERVER },
-                flags: { macroFlag: true },
+                flags: {
+                    torgeternity: {
+                        [macroFlag]: true
+                    }
+                },
             });
         }
     }
@@ -996,22 +1015,9 @@ Hooks.on('updateActor', (actor, data, options, id) => {
 });
 
 // by default creating a  hand for each stormknight
-Hooks.on("preCreateActor", async(actor, options, userId) => {
+Hooks.on("createActor", async(actor, options, userId) => {
     if (actor.type === "stormknight") {
-        let cardData = {
-            name: actor.name,
-            type: "hand"
-        }
-        let characterHand = await Cards.create(cardData);
-
-        // getting ids of actor and card hand
-        let actorId = actor.id;
-        let handId = characterHand.id
-
-        // storing ids in game.settings
-        let settingData = game.settings.get("torgeternity", "deckSetting");
-        settingData.stormknights[actorId] = handId;
-        await game.settings.set("torgeternity", "deckSetting", settingData);
+        actor.createDefaultHand()
     }
 
 })
