@@ -38,7 +38,7 @@ import { activateStandartScene } from './module/activateStandartScene.js'
 
 Hooks.once("init", async function() {
     console.log("torgeternity | Initializing Torg Eternity System");
-    CONFIG.debug.hooks = true;
+    //CONFIG.debug.hooks = true; //The Developer Mode module can do this for you without accidentally leaving hooks on for anyone working in your system
     //----helpers
     registerHelpers();
 
