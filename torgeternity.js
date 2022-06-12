@@ -939,7 +939,8 @@ Hooks.on('updateActor', (actor, data, options, id) => {
 
 // by default creating a  hand for each stormknight
 Hooks.on("createActor", async(actor, options, userId) => {
-    if (actor.type === "stormknight" && game.userId === userId) {
+    //run by first active GM. Will be skipped if no GM is present, but that's the best we can do at the moment
+    if (actor.type === "stormknight" && game.userId === game.users.find(u=>u.isGM && u.active).id) { 
         actor.createDefaultHand()
     }
 
