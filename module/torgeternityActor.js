@@ -245,7 +245,8 @@ export default class torgeternityActor extends Actor {
         // creating a card hand then render it
         let cardData = {
             name: this.name,
-            type: "hand"
+            type: "hand",
+            permission: this.getHandPermission()
         }
         let characterHand = await Cards.create(cardData);
 
@@ -257,5 +258,22 @@ export default class torgeternityActor extends Actor {
         let settingData = game.settings.get("torgeternity", "deckSetting");
         settingData.stormknights[actorId] = handId;
         game.settings.set("torgeternity", "deckSetting", settingData);
+
+        //return the hand
+        return characterHand
+    }
+
+    //return a permission update object for use with the corresponding hand - which has the same owners as the SK, the default as observer, and deletes other permissions
+    getHandPermission() {
+        let handPermission = duplicate(this.data.permission)
+        for(let key of Object.keys(handPermission)){
+            //remove any permissions that are not owner
+            if(handPermission[key] < CONST.DOCUMENT_PERMISSION_LEVELS.OWNER){
+                delete handPermission[key]
+            }
+            //set default permission to observer
+            handPermission.default = CONST.DOCUMENT_PERMISSION_LEVELS.OBSERVER
+        }
+        return handPermission
     }
 }
