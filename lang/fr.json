@@ -365,6 +365,7 @@
             "miracle": "Miracle",
             "psionicpower": "Psionique",
             "specialability": "Capacité spéciale",
+            "specialabilityRollable": "Capacité spéciale avec jet",
             "other": "Équipement général",
             "customAttack": "Attaque personnalisée",
             "customSkill": "Compétences personnalisées"
@@ -604,7 +605,7 @@
             "cosm": "Cosm",
             "hand": "Main",
             "discardPile": "pile de défausse",
-            "cosmDiscard": "Défausse Cartes de Cosm",  
+            "cosmDiscard": "Défausse Cartes de Cosm",
             "dramaDiscard": "Défausse Cartes d'Action",
             "destinyDiscard": "Défausse Cartes du Destin",
             "activeDrama": "Carte Action Active"
@@ -698,8 +699,8 @@
             "noScreenMessage": "Vous n'avez sélectionné aucun écran. Les écrans sont rendu disponible par les modules pour Torg Eternity disponibles ici : "
         },
         "packs": {
-            "basicRules" : "torgeternity.basic-rules-fr",
-            "decks" : "torgeternity.core-card-set-fr"
+            "basicRules": "torgeternity.basic-rules-fr",
+            "decks": "torgeternity.core-card-set-fr"
         }
     },
     "CARD": {
