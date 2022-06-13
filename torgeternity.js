@@ -34,6 +34,7 @@ import GMScreen from './module/GMScreen.js'
 import { setUpCardPiles } from './module/cards/setUpCardPiles.js';
 import { explode } from './module/explode.js';
 import { activateStandartScene } from './module/activateStandartScene.js'
+import { torgMigration } from "./module/migrations.js"
 
 
 Hooks.once("init", async function() {
@@ -161,28 +162,7 @@ Hooks.on("ready", async function() {
 
 
     //migration script
-    if (game.system.data.version <= "2.4.0") {
-        // code to migrate missile weappon groupName
-
-        ui.notifications.warn("migrating system version .............")
-        game.actors.forEach(async act => {
-                if (act.data.data.skills.missileWeapons.groupName != "combat") {
-                    await act.update({ "data.skills.missileWeapons.groupName": "combat" })
-                    ui.notifications.info(act.name + " : migrated")
-                }
-
-            })
-            // code to migrate new game settings
-        let deckSettings = game.settings.get("torgeternity", "deckSetting")
-        if (deckSettings.stormknightsHands) {
-            ui.notifications.warn("updating system settings .............")
-
-            deckSettings.stormknights = deckSettings.stormknightsHands;
-            deckSettings.stormknightsHands = null;
-            await game.settings.set("torgeternity", "deckSetting", deckSettings);
-
-        }
-    }
+    if(game.user.isGM) torgMigration()
 
 
 
@@ -278,7 +258,7 @@ Hooks.on("ready", async function() {
 
 
     //----pause image----
-    Hooks.on("renderPause", () => {
+    //Hooks.on("renderPause", () => {
 
         // Removing this because it doesn't appear to do anything any longer?
 
@@ -286,7 +266,7 @@ Hooks.on("ready", async function() {
         // let img = document.getElementById("pause").firstElementChild;
         // path = "./" + path;
         // img.style.content = `url(${path})`
-    })
+    //})
 
     //-------define a dialog for external links
 
@@ -372,9 +352,7 @@ Hooks.on("ready", async function() {
 
 
 
-    Hooks.on("hotbarDrop", (bar, data, slot) =>
-        createTorgEternityMacro(data, slot)
-    );
+
 
     /*
   //-----applying players card ui:
@@ -394,6 +372,12 @@ Hooks.on("ready", async function() {
   };
 */
 });
+
+
+//moved out of the setup hook, because it had no need to be in there
+Hooks.on("hotbarDrop", (bar, data, slot) =>
+    createTorgEternityMacro(data, slot)
+);
 
 /* -------------------------------------------- */
 /*  Hotbar Macros                               */
