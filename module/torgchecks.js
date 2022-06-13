@@ -558,9 +558,7 @@ export function renderSkillChat(test) {
         }
         test.diceroll = new Roll(dice).evaluate({ async: false });
         test.rollTotal = test.diceroll.total;
-    } else {
-        test.diceroll = null
-    }
+    } 
 
     //
     // Get current bonus and make + label visible if number is positive
