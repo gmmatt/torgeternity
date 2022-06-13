@@ -367,6 +367,7 @@
             "miracle": "Miracle",
             "psionicpower": "Pouvoir psionique",
             "specialability": "Capacité spéciale",
+            "specialabilityRollable": "Capacité spéciale avec jet",
             "other": "Équipement général",
             "customAttack": "Attaque personnalisée",
             "customSkill": "Compétence personnalisée"
@@ -607,7 +608,10 @@
             "cosm": "Cosm",
             "hand": "Main",
             "discardPile": "Défausse",
-            "activeDrama": "Carte Action active"
+            "cosmDiscard": "Défausse Cartes de Cosm",
+            "dramaDiscard": "Défausse Cartes d'Action",
+            "destinyDiscard": "Défausse Cartes du Destin",
+            "activeDrama": "Carte Action Active"
         },
         "scenes": {
             "reality": "Réalité",
@@ -705,7 +709,12 @@
             "noScreenMessage": "Vous n'avez sélectionné aucun écran. Les écrans sont disponibles dans les modules pour Torg Eternity disponibles ici : "
         },
         "partySheet": {
-            "noCharacter": "Cet utilisateur ne possède pas de personnage"
+            "noCharacter": "Cet utilisateur ne possède pas de personnage",
+            "noScreenMessage": "Vous n'avez sélectionné aucun écran. Les écrans sont rendu disponible par les modules pour Torg Eternity disponibles ici : "
+        },
+        "packs": {
+            "basicRules": "torgeternity.basic-rules-fr",
+            "decks": "torgeternity.core-card-set-fr"
         }
     },
     "CARD": {

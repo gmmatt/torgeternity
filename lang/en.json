@@ -367,6 +367,7 @@
             "miracle": "Miracle",
             "psionicpower": "Psionic Power",
             "specialability": "Special Ability",
+            "specialabilityRollable": "Special Ability Rollable",
             "other": "General Gear",
             "customAttack": "Custom Attack",
             "customSkill": "Custom Skill"
@@ -607,6 +608,9 @@
             "cosm": "Cosm",
             "hand": "Hand",
             "discardPile": "Discard Pile",
+            "cosmDiscard": "Cosm Discard Pile",
+            "dramaDiscard": "Drama Discard Pile",
+            "destinyDiscard": "Destiny Discard Pile",
             "activeDrama": "Active Drama Card"
         },
         "scenes": {
@@ -706,13 +710,18 @@
         },
         "partySheet": {
             "noCharacter": "This user doesn't own any character"
+
+        },
+        "packs": {
+            "basicRules": "torgeternity.basic-rules",
+            "decks": "torgeternity.core-card-set"
+        },
+        "CARD": {
+            "TypeCosm": "Cosm",
+            "TypeDestiny": "Destiny",
+            "TypeDrama": "Drama",
+            "discard": "Discard",
+            "display": "Show this card to players"
         }
-    },
-    "CARD": {
-        "TypeCosm": "Cosm",
-        "TypeDestiny": "Destiny",
-        "TypeDrama": "Drama",
-        "discard": "Discard",
-        "display": "Show this card to players"
     }
 }

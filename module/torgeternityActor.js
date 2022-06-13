@@ -7,6 +7,49 @@ export default class torgeternityActor extends Actor {
         //Set base fatigue to 2
         this.data.data.fatigue = 2;
 
+        // Set Defensive Values
+        if (skillset.dodge.value) {
+            this.data.data.dodgeDefense = this.data.data.skills.dodge.value;
+        } else {
+            this.data.data.dodgeDefense = this.data.data.attributes.dexterity
+        };
+
+        if (skillset.meleeWeapons.value) {
+            this.data.data.meleeWeaponsDefense = this.data.data.skills.meleeWeapons.value;
+        } else {
+            this.data.data.meleeWeaponsDefense = this.data.data.attributes.dexterity
+        };
+
+        if (skillset.unarmedCombat.value) {
+            this.data.data.unarmedCombatDefense = this.data.data.skills.unarmedCombat.value;
+        } else {
+            this.data.data.unarmedCombatDefense = this.data.data.attributes.dexterity
+        };
+
+        if (skillset.intimidation.value) {
+            this.data.data.intimidationDefense = this.data.data.skills.intimidation.value;
+        } else {
+            this.data.data.intimidationDefense = this.data.data.attributes.spirit
+        };
+
+        if (skillset.maneuver.value) {
+            this.data.data.maneuverDefense = this.data.data.skills.maneuver.value;
+        } else {
+            this.data.data.maneuverDefense = this.data.data.attributes.dexterity
+        };
+
+        if (skillset.taunt.value) {
+            this.data.data.tauntDefense = this.data.data.skills.taunt.value;
+        } else {
+            this.data.data.tauntDefense = this.data.data.attributes.charisma
+        };
+
+        if (skillset.trick.value) {
+            this.data.data.trickDefense = this.data.data.skills.trick.value;
+        } else {
+            this.data.data.trickDefense = this.data.data.attributes.mind
+        };
+
         if (this.data._source.type === "stormknight") {
             mergeObject(this.data.token, {
 
@@ -245,7 +288,8 @@ export default class torgeternityActor extends Actor {
         // creating a card hand then render it
         let cardData = {
             name: this.name,
-            type: "hand"
+            type: "hand",
+            permission: this.getHandPermission()
         }
         let characterHand = await Cards.create(cardData);
 
@@ -257,5 +301,22 @@ export default class torgeternityActor extends Actor {
         let settingData = game.settings.get("torgeternity", "deckSetting");
         settingData.stormknights[actorId] = handId;
         game.settings.set("torgeternity", "deckSetting", settingData);
+
+        //return the hand
+        return characterHand
+    }
+
+    //return a permission update object for use with the corresponding hand - which has the same owners as the SK, the default as observer, and deletes other permissions
+    getHandPermission() {
+        let handPermission = duplicate(this.data.permission)
+        for(let key of Object.keys(handPermission)){
+            //remove any permissions that are not owner
+            if(handPermission[key] < CONST.DOCUMENT_PERMISSION_LEVELS.OWNER){
+                delete handPermission[key]
+            }
+            //set default permission to observer
+            handPermission.default = CONST.DOCUMENT_PERMISSION_LEVELS.OBSERVER
+        }
+        return handPermission
     }
 }

@@ -39,7 +39,7 @@ import { activateStandartScene } from './module/activateStandartScene.js'
 
 Hooks.once("init", async function() {
     console.log("torgeternity | Initializing Torg Eternity System");
-    CONFIG.debug.hooks = true;
+    //CONFIG.debug.hooks = true; //The Developer Mode module can do this for you without accidentally leaving hooks on for anyone working in your system
     //----helpers
     registerHelpers();
 
@@ -75,6 +75,38 @@ Hooks.once("init", async function() {
     CONFIG.Cards.documentClass = torgeternityCards;
     CONFIG.cardTypes = torgeternity.cardTypes;
 
+
+
+    //---localizing entities labels
+    CONFIG.Actor.typeLabels = {
+        stormknight: game.i18n.localize("torgeternity.sheetLabels.stormknight"),
+        threat: game.i18n.localize("torgeternity.sheetLabels.threat")
+    }
+    CONFIG.Item.typeLabels = {
+
+        "gear": game.i18n.localize("torgeternity.itemSheetDescriptions.generalGear"),
+        "eternityshard": game.i18n.localize("torgeternity.itemSheetDescriptions.eternityshard"),
+        "armor": game.i18n.localize("torgeternity.itemSheetDescriptions.armor"),
+        "shield": game.i18n.localize("torgeternity.itemSheetDescriptions.shield"),
+        "customAttack": game.i18n.localize("torgeternity.itemSheetDescriptions.customAttack"),
+        "meleeweapon": game.i18n.localize("torgeternity.itemSheetDescriptions.meleeWeapon"),
+        "missileweapon": game.i18n.localize("torgeternity.itemSheetDescriptions.missileWeapon"),
+        "firearm": game.i18n.localize("torgeternity.itemSheetDescriptions.firearm"),
+        "implant": game.i18n.localize("torgeternity.itemSheetDescriptions.implant"),
+        "heavyweapon": game.i18n.localize("torgeternity.itemSheetDescriptions.heavyWeapon"),
+        "vehicle": game.i18n.localize("torgeternity.itemSheetDescriptions.vehicule"),
+        "perk": game.i18n.localize("torgeternity.itemSheetDescriptions.perk"),
+        "enhancement": game.i18n.localize("torgeternity.itemSheetDescriptions.enhancement"),
+        "specialability": game.i18n.localize("torgeternity.itemSheetDescriptions.specialability"),
+        "specialability-rollable": game.i18n.localize("torgeternity.itemSheetDescriptions.specialabilityRollable"),
+        "spell": game.i18n.localize("torgeternity.itemSheetDescriptions.spell"),
+        "miracle": game.i18n.localize("torgeternity.itemSheetDescriptions.miracle"),
+        "psionicpower": game.i18n.localize("torgeternity.itemSheetDescriptions.psionicpower"),
+        "customSkill": game.i18n.localize("torgeternity.itemSheetDescriptions.customSkill")
+
+    }
+
+    ui.GMScreen = new GMScreen();
     // all settings after config
     registerTorgSettings();
     //---register items and actors
@@ -934,14 +966,33 @@ Hooks.on("renderActorSheet", (app, html, data) => {
     alphabSort(html, data);
 });
 
-Hooks.on('updateActor', (actor, data, options, id) => {
+Hooks.on('updateActor', (actor, change, options, userId) => {
     //updating playerList with users character up-to-date data
     ui.players.render(true);
+
+    if (actor.type === "stormknight") {
+        let hand = actor.getDefaultHand()
+            //If there is no hand for that SK, and a GM is online, create one
+        if (!hand && game.userId === game.users.find(u => u.isGM && u.active).id) {
+            actor.createDefaultHand()
+        }
+        //If the update includes permissions, sync them to the hand
+        if (hand && change.permission && game.userId === userId) {
+            //DO NOT PUT ANYTHING ELSE IN THIS UPDATE! diff:false, recursive:false can easily nuke stuff
+            hand.update({ permission: actor.getHandPermission() }, { diff: false, recursive: false })
+        }
+    }
 });
 
 // by default creating a  hand for each stormknight
-Hooks.on("createActor", async(actor, options, userId) => {
-    if (actor.type === "stormknight") {
-        await actor.createDefaultHand();
-    }
-})
+Hooks.on("createActor", async(actor, options, userId) => { <<
+            << << < HEAD
+            if (actor.type === "stormknight") {
+                await actor.createDefaultHand(); ===
+                === =
+                //run by first active GM. Will be skipped if no GM is present, but that's the best we can do at the moment
+                if (actor.type === "stormknight" && game.userId === game.users.find(u => u.isGM && u.active).id) {
+                    actor.createDefaultHand() >>>
+                        >>> > dev
+                }
+            })
