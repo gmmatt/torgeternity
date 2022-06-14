@@ -493,9 +493,11 @@ a:hover {
     text-shadow: 0px 0px 10px black;
 }
 
+
 /*search-fields on items*/
-.directory .directory-header .header-search input{
-    background:transparent;
+
+.directory .directory-header .header-search input {
+    background: transparent;
 }
 
 .app option,
@@ -1853,6 +1855,10 @@ form.actor-sheet header input[name="name"] {
     justify-content: space-between;
 }
 
+.window-content .actor-sheet .sheet-header .threatHeader {
+    min-width: max-content;
+}
+
 .window-content .actor-sheet .sheet-header img {
     max-width: 250px;
     max-height: 200px;
@@ -1918,7 +1924,7 @@ form.actor-sheet header input[name="name"] {
     background-size: cover;
     font-family: Signika;
     font-size: 15px;
-    color:black;
+    color: black;
 }
 
 .window-content .actor-sheet .sheet-header h1 {
@@ -1987,7 +1993,7 @@ form.actor-sheet header input[name="name"] {
     border-radius: 50%;
     background: url(../images/roundBack.webp);
     background-size: cover;
-    color:black;
+    color: black;
 }
 
 .window-content .actor-sheet .attributes ul li.attribut-block a,
@@ -2343,7 +2349,7 @@ form.actor-sheet header input[name="name"] {
     height: 50px;
     border: none;
     border-radius: 50%;
-    color:black;
+    color: black;
 }
 
 .window-content .actor-sheet .defense {
@@ -2686,7 +2692,7 @@ form.actor-sheet.threat .tab[data-tab].active .editor {
     font-family: Alaska;
     font-size: 20px;
     text-align: center;
-    color:black;
+    color: black;
 }
 
 .item .window-content form.item-sheet .sheet-content {
@@ -2711,13 +2717,13 @@ form.actor-sheet.threat .tab[data-tab].active .editor {
     border-radius: 15px;
     background: url(../images/roundBack.webp);
     background-size: cover;
-    color:black;
+    color: black;
 }
 
 .item .window-content form.item-sheet .asside input[name="data.price"],
 .item .window-content form.item-sheet .asside input[name="data.tough"] {
     width: 50px;
-    color:black;
+    color: black;
 }
 
 .item .window-content form.item-sheet .asside select {
