@@ -8,6 +8,11 @@
 For manual installation, use the provided manifest URL in the "*Install System*" popup window 
 while managing game systems.
 
+v. 2.4.2
+- Fixed bug where defenses were not calculated in 2.4.1
+- User experience with cards improved even more thanks to BadIdeasBureau
+- More French localization goodness, thanks to Rwan
+
 v. 2.4.1
 - Card settings and world setup working much smoother now thanks to 
   Rwan and BadIdeasBureau.
