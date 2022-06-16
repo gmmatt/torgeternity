@@ -398,6 +398,10 @@ export function renderSkillChat(test) {
                 var localId = "torgeternity.skills." + test.skillName;
                 test.chatTitle = game.i18n.localize(localId) + " " + game.i18n.localize('torgeternity.chatText.test');
                 break;
+            case "interactionAttack":
+                var localId = "torgeternity.skills." + test.skillName;
+                test.chatTitle = game.i18n.localize(localId) + " " + game.i18n.localize("torgeternity.chatText.attack");
+                break;
             default:
                 test.chatTitle = test.skillName + " " + game.i18n.localize('torgeternity.chatText.test');
         }
