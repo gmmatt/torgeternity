@@ -4,10 +4,10 @@ export default class torgeternityActor extends Actor {
 
     prepareBaseData() {
 
-        var skillset = this.data.data.skills;
-
         //Set base fatigue to 2
         this.data.data.fatigue = 2;
+
+            var skillset = this.data.data.skills;
 
         // Set Defensive Values
         if (skillset.dodge.value) {
@@ -58,6 +58,7 @@ export default class torgeternityActor extends Actor {
                 actorLink: true,
                 disposition: 1
             }, { overwrite: true });
+
 
 
             // Derive Skill values for Storm Knights

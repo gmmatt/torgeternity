@@ -156,7 +156,6 @@ torgeternity.powerSkills = {
     kinesis: "torgeternity.powerSkills.kinesis",
     precognition: "torgeternity.powerSkills.precognition",
     telepathy: "torgeternity.powerSkills.telepathy",
-    reality: "torgeternity.powerSkills.reality",
     faith: "torgeternity.powerSkills.faith"
 }
 

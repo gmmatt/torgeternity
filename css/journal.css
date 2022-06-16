@@ -202,31 +202,12 @@ a.entity-link, a.content-link, a.inline-roll{
     font-size: 14px;
     text-indent: 0px;
 }
-
-.app a.entity-link, .window-app a.entity-link{
-    font-weight:normal;
-}
-.app a.entity-link, .window-app a.entity-link::before{
-    content:unset;
-}
     /*Coloring the symbols before the text (seems like they're ASCII-Code) and a little gap to the following text*/
     div.editor-content .fa-user:before, div.editor-content .fa-book-open:before, div.editor-content .fa-id-badge:before, div.editor-content .fa-suitcase:before, div.editor-content .fa-map:before, div.editor-content .fa-th-list:before, div.editor-content .fa-music:before, div.editor-content .fa-dice-d20:before {
         color: rgb(245, 245, 245);
         margin-right: 5px;
     }
     
-/*...................................................................*/
-/*Formatting hyperlinks in journals*/
-.editor-content a{
-    color:rgb(3, 0, 189);
-    text-decoration: none;
-    font-weight: bolder;
-}
-
-.editor-content a::before{
-    content:'\2794';
-}
-
 /*...................................................................*/
 /*Image-wraparound, image on left side*/
 
@@ -522,10 +503,6 @@ Div.editor-content Div.directive2{
     Div.editor-content Div.directive2 h3{
         font-size: 21px; 
     }
-/*...................................................................*/
-.heighttr :is(tr, td, th){
-    height:1.5rem;
-}
 /*...................................................................*/
 /*Multi-purpose classes*/
 

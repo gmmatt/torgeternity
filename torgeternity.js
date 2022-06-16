@@ -34,6 +34,7 @@ import GMScreen from './module/GMScreen.js'
 import { setUpCardPiles } from './module/cards/setUpCardPiles.js';
 import { explode } from './module/explode.js';
 import { activateStandartScene } from './module/activateStandartScene.js'
+import { torgMigration } from "./module/migrations.js"
 
 
 Hooks.once("init", async function() {
@@ -161,28 +162,7 @@ Hooks.on("ready", async function() {
 
 
     //migration script
-    if (game.system.data.version <= "2.4.0") {
-        // code to migrate missile weappon groupName
-
-        ui.notifications.warn("migrating system version .............")
-        game.actors.forEach(async act => {
-                if (act.data.data.skills.missileWeapons.groupName != "combat") {
-                    await act.update({ "data.skills.missileWeapons.groupName": "combat" })
-                    ui.notifications.info(act.name + " : migrated")
-                }
-
-            })
-            // code to migrate new game settings
-        let deckSettings = game.settings.get("torgeternity", "deckSetting")
-        if (deckSettings.stormknightsHands) {
-            ui.notifications.warn("updating system settings .............")
-
-            deckSettings.stormknights = deckSettings.stormknightsHands;
-            deckSettings.stormknightsHands = null;
-            await game.settings.set("torgeternity", "deckSetting", deckSettings);
-
-        }
-    }
+    if(game.user.isGM) torgMigration()
 
 
 
@@ -192,7 +172,7 @@ Hooks.on("ready", async function() {
     Die.prototype.explode = explode;
 
     //adding gmScreen to UI
-    ui.gmscreen = new GMScreen();
+    ui.GMScreen = new GMScreen();
 
 
     //-----applying GM possibilities pool if absent
@@ -278,7 +258,7 @@ Hooks.on("ready", async function() {
 
 
     //----pause image----
-    Hooks.on("renderPause", () => {
+    //Hooks.on("renderPause", () => {
 
         // Removing this because it doesn't appear to do anything any longer?
 
@@ -286,7 +266,7 @@ Hooks.on("ready", async function() {
         // let img = document.getElementById("pause").firstElementChild;
         // path = "./" + path;
         // img.style.content = `url(${path})`
-    })
+    //})
 
     //-------define a dialog for external links
 
@@ -372,9 +352,7 @@ Hooks.on("ready", async function() {
 
 
 
-    Hooks.on("hotbarDrop", (bar, data, slot) =>
-        createTorgEternityMacro(data, slot)
-    );
+
 
     /*
   //-----applying players card ui:
@@ -394,6 +372,12 @@ Hooks.on("ready", async function() {
   };
 */
 });
+
+
+//moved out of the setup hook, because it had no need to be in there
+Hooks.on("hotbarDrop", (bar, data, slot) =>
+    createTorgEternityMacro(data, slot)
+);
 
 /* -------------------------------------------- */
 /*  Hotbar Macros                               */
@@ -594,7 +578,6 @@ function rollItemMacro(itemName) {
             var defaultMelee = false;
             var defaultUnarmed = false;
             var targetDefenseSkill = "Dodge";
-            console.log(targetDefenseSkill);
             var targetDefenseValue = 0;
 
             // Exit if no target or get target data
@@ -635,9 +618,23 @@ function rollItemMacro(itemName) {
                     sizeModifier = 0;
                 }
                 // Set target defense values
-                targetDodge = target.actor.data.data.dodgeDefense;
-                targetMelee = target.actor.data.data.meleeWeaponsDefense;
-                targetUnarmed = target.actor.data.data.unarmedCombatDefense;
+                if (target.actor.data.data.skills.dodge.value > 0) {
+                    targetDodge = target.actor.data.data.skills.dodge.value;
+                } else {
+                    targetDodge = target.actor.data.data.attributes.dexterity;
+                }
+
+                if (target.actor.data.data.skills.meleeWeapons.value > 0) {
+                    targetMelee = target.actor.data.data.skills.meleeWeapons.value;
+                } else {
+                    targetMelee = target.actor.data.data.attributes.dexterity;
+                }
+
+                if (target.actor.data.data.skills.unarmedCombat.value > 0) {
+                    targetUnarmed = target.actor.data.data.skills.unarmedCombat.value;
+                } else {
+                    targetUnarmed = target.actor.data.data.attributes.dexterity;
+                }
 
                 vulnerableModifier = target.actor.data.data.vulnerableModifier;
                 targetToughness = target.actor.data.data.other.toughness;
@@ -848,21 +845,40 @@ function rollSkillMacro(skillName, attributeName, isInteractionAttack) {
             var targetType = target.actor.data.type;
             test.vulnerableModifier = target.actor.data.data.vulnerableModifier;
             if (test.interactionAttackType === "intimidation") {
-                test.targetDefenseSkill = game.i18n.localize("torgeternity.skills.intimidation");
-                test.targetDefenseValue = target.actor.data.data.intimidationDefense;
+                if (target.actor.data.data.skills.intimidation.value > 0) {
+                    test.targetDefenseSkill = game.i18n.localize("torgeternity.skills.intimidation");
+                    test.targetDefenseValue = target.actor.data.data.skills.intimidation.value;
+                } else {
+                    test.targetDefenseSkill = game.i18n.localize("torgeternity.attributes.spirit");
+                    test.targetDefenseValue = target.actor.data.data.attributes.spirit;
+                }
             } else if (test.interactionAttackType === "maneuver") {
-                test.targetDefenseSkill = game.i18n.localize("torgeternity.skills.maneuver");
-                test.targetDefenseValue = target.actor.data.data.maneuverDefense;
+                if (target.actor.data.data.skills.maneuver.value > 0) {
+                    test.targetDefenseSkill = game.i18n.localize("torgeternity.skills.maneuver");
+                    test.targetDefenseValue = target.actor.data.data.skills.maneuver.value;
+                } else {
+                    test.targetDefenseSkill = game.i18n.localize("torgeternity.attributes.dexterity");
+                    test.targetDefenseValue = target.actor.data.data.attributes.dexterity;
+                }
             } else if (test.interactionAttackType === "taunt") {
-                test.targetDefenseSkill = game.i18n.localize("torgeternity.skills.taunt");
-                test.targetDefenseValue = target.actor.data.data.tauntDefense;
+                if (target.actor.data.data.skills.taunt.value > 0) {
+                    test.targetDefenseSkill = game.i18n.localize("torgeternity.skills.taunt");
+                    test.targetDefenseValue = target.actor.data.data.skills.taunt.value;
+                } else {
+                    test.targetDefenseSkill = game.i18n.localize("torgeternity.attributes.charisma");
+                    test.targetDefenseValue = target.actor.data.data.attributes.charisma;
+                }
             } else if (test.interactionAttackType === "trick") {
-                test.targetDefenseSkill = game.i18n.localize("torgeternity.skills.trick");
-                test.targetDefenseValue = target.actor.data.data.trickDefense;
+                if (target.actor.data.data.skills.trick.value > 0) {
+                    test.targetDefenseSkill = game.i18n.localize("torgeternity.skills.trick");
+                    test.targetDefenseValue = target.actor.data.data.skills.trick.value;
+                } else {
+                    test.targetDefenseSkill = game.i18n.localize("torgeternity.attributes.mind");
+                    test.targetDefenseValue = target.actor.data.data.attributes.mind;
+                }
             }
         }
     }
-    // Add Stymied Modifiers
     if (actor.data.data.stymiedModifier === parseInt(-2)) {
         test.stymiedModifier = -2;
     } else if (actor.data.data.stymiedModifier === -4) {
@@ -888,7 +904,6 @@ Hooks.on("renderCombatTracker", (combatTracker) => {
 })
 
 Hooks.on("renderCompendiumDirectory", (app, html, data) => {
-    console.log('----------directory compendium')
     if (game.settings.get("torgeternity", "hideForeignCompendium") == true) {
         hideCompendium(game.settings.get("core", "language"), html)
 
