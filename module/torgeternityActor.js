@@ -7,6 +7,8 @@ export default class torgeternityActor extends Actor {
         //Set base fatigue to 2
         this.data.data.fatigue = 2;
 
+        var skillset = this.data.data.skills;
+
         // Set Defensive Values
         if (skillset.dodge.value) {
             this.data.data.dodgeDefense = this.data.data.skills.dodge.value;
@@ -58,7 +60,6 @@ export default class torgeternityActor extends Actor {
             }, { overwrite: true });
 
 
-            var skillset = this.data.data.skills;
 
             // Derive Skill values for Storm Knights
             for (let [name, skill] of Object.entries(skillset)) {
@@ -309,9 +310,9 @@ export default class torgeternityActor extends Actor {
     //return a permission update object for use with the corresponding hand - which has the same owners as the SK, the default as observer, and deletes other permissions
     getHandPermission() {
         let handPermission = duplicate(this.data.permission)
-        for(let key of Object.keys(handPermission)){
+        for (let key of Object.keys(handPermission)) {
             //remove any permissions that are not owner
-            if(handPermission[key] < CONST.DOCUMENT_PERMISSION_LEVELS.OWNER){
+            if (handPermission[key] < CONST.DOCUMENT_PERMISSION_LEVELS.OWNER) {
                 delete handPermission[key]
             }
             //set default permission to observer

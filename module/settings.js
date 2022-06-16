@@ -130,6 +130,11 @@ export function registerTorgSettings() {
         default: false
     });
 
-
+    game.settings.register("torgeternity", "migrationVersion", {
+        scope: "world",
+        config: false,
+        type: String,
+        default: "1.0.0"
+    });
 
 }
