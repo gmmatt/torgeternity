@@ -8,6 +8,12 @@
 For manual installation, use the provided manifest URL in the "*Install System*" popup window 
 while managing game systems.
 
+v. 2.4.3
+- Fixed issue with defenses improperly calculating on sheet and
+  in attacks
+- Updated sheet styling so that expandable skills do not change
+  size of other sheet elements.
+  
 v. 2.4.2
 - Fixed bug where defenses were not calculated in 2.4.1
 - User experience with cards improved even more thanks to BadIdeasBureau
