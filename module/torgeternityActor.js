@@ -7,7 +7,21 @@ export default class torgeternityActor extends Actor {
         //Set base fatigue to 2
         this.data.data.fatigue = 2;
 
-            var skillset = this.data.data.skills;
+        var skillset = this.data.data.skills;
+
+        // Derive Skill values for Storm Knights
+        for (let [name, skill] of Object.entries(skillset)) {
+            if (skill.adds === null) {
+                if (skill.unskilledUse === 1) {
+                    skill.value = parseInt(this.data.data.attributes[skill.baseAttribute]);
+                } else {
+                    skill.value = "-"
+                }
+            } else {
+                skill.value = parseInt(skill.adds) + parseInt(this.data.data.attributes[skill.baseAttribute]);
+            }
+        }
+
 
         // Set Defensive Values
         if (skillset.dodge.value) {
@@ -58,21 +72,6 @@ export default class torgeternityActor extends Actor {
                 actorLink: true,
                 disposition: 1
             }, { overwrite: true });
-
-
-
-            // Derive Skill values for Storm Knights
-            for (let [name, skill] of Object.entries(skillset)) {
-                if (skill.adds === null) {
-                    if (skill.unskilledUse === 1) {
-                        skill.value = parseInt(this.data.data.attributes[skill.baseAttribute]);
-                    } else {
-                        skill.value = "-"
-                    }
-                } else {
-                    skill.value = parseInt(skill.adds) + parseInt(this.data.data.attributes[skill.baseAttribute]);
-                }
-            }
 
             // Set base wounds to 3
             this.data.data.wounds.max = 3;
