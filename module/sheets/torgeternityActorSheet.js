@@ -546,24 +546,11 @@ export default class torgeternityActorSheet extends ActorSheet {
                 }
 
                 // Set target defense values
-                if (target.actor.data.data.skills.dodge.value > 0) {
-                    targetDodge = target.actor.data.data.skills.dodge.value;
-                } else {
-                    targetDodge = target.actor.data.data.attributes.dexterity;
-                }
+                targetDodge = target.actor.data.data.dodgeDefense
+                targetMelee = target.actor.data.data.meleeWeaponsDefense
+                targetUnarmed = target.actor.data.data.unarmedCombatDefense
 
-                if (target.actor.data.data.skills.meleeWeapons.value > 0) {
-                    targetMelee = target.actor.data.data.skills.meleeWeapons.value;
-                } else {
-                    targetMelee = target.actor.data.data.attributes.dexterity;
-                }
-
-                if (target.actor.data.data.skills.unarmedCombat.value > 0) {
-                    targetUnarmed = target.actor.data.data.skills.unarmedCombat.value;
-                } else {
-                    targetUnarmed = target.actor.data.data.attributes.dexterity;
-                }
-
+                // Set other targt modifiers
                 vulnerableModifier = target.actor.data.data.vulnerableModifier;
                 targetToughness = target.actor.data.data.other.toughness;
                 targetArmor = target.actor.data.data.other.armor;
