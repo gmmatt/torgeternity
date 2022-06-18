@@ -372,6 +372,8 @@ export default class torgeternityActorSheet extends ActorSheet {
             return;
         }      
         
+        var testTarget = Array.from(game.user.targets)[0].actor;
+
         let test = {
             testType: event.currentTarget.dataset.testtype,
             actor: this.actor,
@@ -380,7 +382,7 @@ export default class torgeternityActorSheet extends ActorSheet {
             skillName: isAttributeTest ? attributeName : skillName,
             skillValue: skillValue,
             targets: Array.from(game.user.targets),
-            target: Array.from(game.user.targets)[0],
+            target: testTarget,
             applySize: true, //Needs to eventually be se to false for base skill rolls. Is set to true for testing purposes.
             DNDescriptor: "standard",
             rollTotal: 0, // A zero indicates that a rollTotal needs to be generated when renderSkillChat is called //
