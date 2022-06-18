@@ -3,7 +3,7 @@
     <span class="skill-check-options">
         <select id="difficulty" name="DNDescriptor" class="input-box">
             {{#select test.DNDescriptor}}
-                {{#if test.targets}}
+                {{#if test.target}}
                     {{selectOptions config.dnTypes selected=test.DNDescriptor localize=true}}
                 {{else}}
                     {{selectOptions config.dnTypesBasic selected=test.DNDescriptor localize=true}}
