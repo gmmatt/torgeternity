@@ -3,7 +3,7 @@ export async function torgMigration(){
     const migrationVersion = game.settings.get("torgeternity", "migrationVersion")
 
     //if current version is not newer than migration version, nothing to do here
-    //if(!isNewerVersion(currentVersion, migrationVersion)) return
+    if(!isNewerVersion(currentVersion, migrationVersion)) return
 
     //check for new worlds, which don't need migrating, and set their migration version accordingly
     if(migrationVersion === "1.0.0" && isNewWorld()) {
@@ -36,7 +36,7 @@ export async function torgMigration(){
         }
     }
 
-    if(isNewerVersion("2.5.0", migrationVersion)){
+    if(isNewerVersion("2.4.5", migrationVersion)){
         let deckSetting = game.settings.get("torgeternity", "deckSetting")
         let deckKeys = Object.keys(deckSetting)
         for(let key of deckKeys){
