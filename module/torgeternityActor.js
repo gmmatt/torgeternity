@@ -10,15 +10,17 @@ export default class torgeternityActor extends Actor {
         var skillset = this.data.data.skills;
 
         // Derive Skill values for Storm Knights
-        for (let [name, skill] of Object.entries(skillset)) {
-            if (skill.adds === null) {
-                if (skill.unskilledUse === 1) {
-                    skill.value = parseInt(this.data.data.attributes[skill.baseAttribute]);
+        if(this.data._source.type === "stormknight"){
+            for (let [name, skill] of Object.entries(skillset)) {
+                if (skill.adds === null) {
+                    if (skill.unskilledUse === 1) {
+                        skill.value = parseInt(this.data.data.attributes[skill.baseAttribute]);
+                    } else {
+                        skill.value = "-"
+                    }
                 } else {
-                    skill.value = "-"
+                    skill.value = parseInt(skill.adds) + parseInt(this.data.data.attributes[skill.baseAttribute]);
                 }
-            } else {
-                skill.value = parseInt(skill.adds) + parseInt(this.data.data.attributes[skill.baseAttribute]);
             }
         }
 

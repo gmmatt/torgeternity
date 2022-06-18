@@ -8,6 +8,9 @@
 For manual installation, use the provided manifest URL in the "*Install System*" popup window 
 while managing game systems.
 
+v. 2.4.4
+- Fixed bug that prevented entry of threat data
+
 v. 2.4.3
 - Fixed issue with defenses improperly calculating on sheet and
   in attacks
