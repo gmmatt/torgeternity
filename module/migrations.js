@@ -3,7 +3,7 @@ export async function torgMigration(){
     const migrationVersion = game.settings.get("torgeternity", "migrationVersion")
 
     //if current version is not newer than migration version, nothing to do here
-    if(!isNewerVersion(currentVersion, migrationVersion)) return
+    //if(!isNewerVersion(currentVersion, migrationVersion)) return
 
     //check for new worlds, which don't need migrating, and set their migration version accordingly
     if(migrationVersion === "1.0.0" && isNewWorld()) {
@@ -29,7 +29,6 @@ export async function torgMigration(){
         // code to migrate new game settings
         let deckSettings = game.settings.get("torgeternity", "deckSetting")
         if (deckSettings.stormknightsHands) {
-            ui.notifications.warn("updating system settings .............")
             deckSettings.stormknights = deckSettings.stormknightsHands;
             deckSettings.stormknightsHands = null;
             await game.settings.set("torgeternity", "deckSetting", deckSettings);
@@ -41,10 +40,10 @@ export async function torgMigration(){
         let deckSetting = game.settings.get("torgeternity", "deckSetting")
         let deckKeys = Object.keys(deckSetting)
         for(let key of deckKeys){
-            if (!deckSetting[key] instanceof String) continue
-            deck = game.cards.getName(deckSetting[key])
+            if (key === "stormknights" || key === "stormknightsHands") continue
+            let deck = game.cards.getName(deckSetting[key])
             if(!deck){
-                let deck = game.cards.get(deckSetting[key])
+                deck = game.cards.get(deckSetting[key])
                 if(!deck){
                     delete deckSetting[key]
                     ui.notifications.error("Torg Eternity: Migrating setting for deck " + key + "failed.  Deck settings will need to be reconfigured manually")
