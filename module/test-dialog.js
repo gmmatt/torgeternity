@@ -30,12 +30,32 @@ export class testDialog extends FormApplication {
         data.test.stymiedModifier = parseInt(data.test.actor.data.data.stymiedModifier);
         data.test.darknessModifier = parseInt(data.test.actor.data.data.darknessModifier);
 
-        // If Target Selected, Set Modifiers for Target Vulnerability and (Where Appropriate) Size
+        //
+        // ***Set Target Data***
+        // This is done here because test.target tends to degrade when transferred to a chat message
+        //       
         if (data.test.targets.length > 0) {
-            var target = Array.from(data.test.targets)[0];
-            data.test.vulnerableModifier = target.actor.data.data.vulnerableModifier;
+            // Identify the first target
+            var target = Array.from(data.test.targets)[0].actor;
 
-            // Size modifier code will eventually go here
+            data.test.target = {
+                present: true,
+                skills: target.data.data.skills,
+                attributes:target.data.data.attributes,
+                defenses: {
+                    dodge: target.data.data.dodgeDefense,
+                    unarmedCombat: target.data.data.unarmedCombatDefense,
+                    meleeWeapons: target.data.data.meleeWeaponsDefense,
+                    intimidation: target.data.data.intimidationDefense,
+                    maneuver: target.data.data.maneuverDefense,
+                    taunt: target.data.data.tauntDefense,
+                    trick:target.data.data.trickDefense
+                }
+            }
+        } else {
+            data.test.target = {
+                present: false,
+            }
         }
 
         return data;

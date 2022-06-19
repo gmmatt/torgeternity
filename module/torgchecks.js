@@ -372,19 +372,8 @@ export function powerRoll(test) {
 
 
 export function renderSkillChat(test) {
-    // First set up some basic data about the targets, if any
-    var targetPresent;
-    var target;
-    var targetAttributes;
-    var targetSkills;
-    if (test.target) {
-        targetPresent = true;
-        target = test.target;
-        targetAttributes = target.data.attributes;
-        targetSkills = target.data.skills;
-    } else {
-        targetPresent = false;
-    }
+    var target = test.target;
+
     //
     // Check to see if we already have a chat title from a chat card roll. If not, Set title for Chat Message in test.chatTitle //
     //
@@ -437,95 +426,95 @@ export function renderSkillChat(test) {
             test.DN = 20;
             break;
         case "targetCharisma":
-            test.DN = targetAttributes.charisma;
+            test.DN = target.attributes.charisma;
             break;
         case "targetDexterity":
-            test.DN = targetAttributes.dexterity;
+            test.DN = target.attributes.dexterity;
             break;
         case "targetMind":
-            test.DN = targetAttributes.mind;
+            test.DN = target.attributes.mind;
             break;
         case "targetSpirit":
-            test.DN = targetAttributes.spirit;
+            test.DN = target.attributes.spirit;
             break;
         case "targetStrength":
-            test.DN = targetAttributes.strength;
+            test.DN = target.attributes.strength;
             break;
         case "targetAlteration":
-            if (targetSkills.alteration.value) {
-                test.DN = targetSkills.alteration.value;
+            if (target.skills.alteration.value) {
+                test.DN = target.skills.alteration.value;
             } else {
-                test.DN = targetAttributes.mind;
+                test.DN = target.attributes.mind;
             }
             break;
         case "targetConjuration":
-            if (targetSkills.conjuration.value) {
-                test.DN = targetSkills.conjuration.value;
+            if (target.skills.conjuration.value) {
+                test.DN = target.skills.conjuration.value;
             } else {
-                test.DN = targetAttributes.spirit
+                test.DN = target.attributes.spirit
             }
             break;
         case "targetDivination":
-            if (targetSkills.divination.value) {
-                test.DN = targetSkills.divination.value;
+            if (target.skills.divination.value) {
+                test.DN = target.skills.divination.value;
             } else {
-                test.DN = targetAttributes.mind
+                test.DN = target.attributes.mind
             }
             break;
         case "targetDodge":
-            test.DN = target.actor.data.data.dodgeDefense;
+            test.DN = target.defenses.dodge;
             break;
         case "targetFaith":
-            if (targetSkills.faith.value) {
-                test.DN = targetSkills.faith.value;
+            if (target.skills.faith.value) {
+                test.DN = target.skills.faith.value;
             } else {
                 test.DN = targetAddtributes.spirit;
             }
             break;
         case "targetIntimidation":
-            test.DN = target.data.data.intimidationDefense;
+            test.DN = target.defenses.intimidation;
             break;
         case "targetKinesis":
-            if (targetSkills.kinesis.value) {
-                test.DN = targetSkills.kinesis.value
+            if (target.skills.kinesis.value) {
+                test.DN = target.skills.kinesis.value
             } else {
-                test.DN = targetAttributes.spirit
+                test.DN = target.attributes.spirit
             };
             break;
         case "targetManeuver":
             test.DN = target.data.data.maneuverDefense;
             break;
         case "targetMeleeWeapons":
-            test.DN = target.data.data.meleeWeaponsDefense;
+            test.DN = target.defenses.meleeWeapons;
             break;
         case "targetPrecognition":
-            if (targetSkills.precognition.value) {
-                test.DN = targetSkills.precognition.value
+            if (target.skills.precognition.value) {
+                test.DN = target.skills.precognition.value
             } else {
-                test.DN = targetAttributes.mind
+                test.DN = target.attributes.mind
             }
             break;
         case "targetStealth":
-            if (targetSkills.stealth.value) {
-                test.DN = targetSkills.stealth.value
+            if (target.skills.stealth.value) {
+                test.DN = target.skills.stealth.value
             } else {
-                test.DN = targetAttributes.dexterity
+                test.DN = target.attributes.dexterity
             }
             break;
         case "targetTaunt":
-            test.DN = target.data.data.tauntDefense;
+            test.DN = target.defenses.taunt;
             break;
         case "targetTrick":
-            test.DN = target.data.data.trickDefense;
+            test.DN = target.defenses.trick;
             break;
         case "targetUnarmedCombat":
-            test.DN = target.data.data.unarmedCombatDefense;
+            test.DN = target.defenses.unarmedCombat;
             break;
         case "targetWillpower":
-            if (targetSkills.willpower.value) {
-                test.DN = targetSkills.willpower.value
+            if (target.skills.willpower.value) {
+                test.DN = target.skills.willpower.value
             } else {
-                test.DN = targetAttributes.spirit
+                test.DN = target.attributes.spirit
             }
             break;
 
@@ -665,10 +654,10 @@ export function renderSkillChat(test) {
     }
 
     // Apply target-related modifiers
-    if (targetPresent) {
+    if (target.present) {
         // Apply the size modifier in appropriate circumstances
         if (test.applySize) {
-            var sizeBonus = target.data.data.sizeBonus;
+            var sizeBonus = target.sizeBonus;
             switch (sizeBonus) {
                 case "normal":
                     test.sizeModifier = 0
@@ -692,11 +681,11 @@ export function renderSkillChat(test) {
                     test.sizeModifier = 0;
             }
 
-            if (test.sizeModifier > 0) {
+            if (test.target.sizeModifier > 0) {
                 test.displayModifiers = true;
                 test.modifiers += parseInt(test.sizeModifier);
                 test.modifierText += game.i18n.localize('torgeternity.chatText.check.modifier.targetSize') + " +" + sizeModifier + "\n"
-            } else if (test.sizeModifier < 0) {
+            } else if (test.target.sizeModifier < 0) {
                 test.displayModifiers = true;
                 test.modifiers += parseInt(test.sizeModifier)
                 test.modifierText += game.i18n.localize('torgeternity.chatText.check.modifier.targetSize') + " " + sizeModifier + "\n"
@@ -704,7 +693,7 @@ export function renderSkillChat(test) {
         }
 
         // Apply target vulnerability modifier
-        var vulnerableModifier = target.data.data.vulnerableModifier;
+        var vulnerableModifier = target.vulnerableModifier;
         if (vulnerableModifier === 2) {
             test.displayModifiers = true;
             test.modifiers += parseInt(vulnerableModifier)
@@ -926,7 +915,7 @@ export function renderSkillChat(test) {
         test.notesLabel = "display:"
     }
 
-    // Cannot pass target array to chat, so we have to clear it out here
+    // Cannot pass target array to chat because Bad Things happen when I try it, so we have to clear it out here
     test.targets = ""
 
     let chatData = {
