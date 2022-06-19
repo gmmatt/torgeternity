@@ -801,17 +801,17 @@ export function renderSkillChat(test) {
     if (test.testType === "attack") {
         test.damageLabel = "display: block";
         //Check for basic vs. enhanced roll using isDN
-        if (test.isDN === true) {
+        if (test.target.present === true) {
             test.damageSubLabel = "display:block";
             // Adjust toughness based on AP effects and cover modifier
             if (test.weaponAP > 0) {
-                if (test.weaponAP <= test.targetArmor) {
-                    test.targetAdjustedToughness = parseInt(test.targetToughness) - parseInt(test.weaponAP) + parseInt(test.coverModifier);
+                if (test.weaponAP <= test.target.armor) {
+                    test.targetAdjustedToughness = parseInt(test.target.toughness) - parseInt(test.weaponAP) + parseInt(test.coverModifier);
                 } else {
-                    test.targetAdjustedToughness = parseInt(test.targetToughness) - parseInt(test.targetArmor) + parseInt(test.coverModifier);
+                    test.targetAdjustedToughness = parseInt(test.target.toughness) - parseInt(test.target.armor) + parseInt(test.coverModifier);
                 }
             } else {
-                test.targetAdjustedToughness = parseInt(test.targetToughness) + parseInt(test.coverModifier);
+                test.targetAdjustedToughness = parseInt(test.target.toughness) + parseInt(test.coverModifier);
             }
             // Generate damage description and damage sublabel 
             if (test.resultText === game.i18n.localize('torgeternity.chatText.check.result.failure') || test.resultText === game.i18n.localize('torgeternity.chatText.check.result.mishape')) {
@@ -835,13 +835,6 @@ export function renderSkillChat(test) {
         test.damageLabel = "display:none"
         test.damageSubLabel = "display:none"
     }
-
-
-    /* Old if (test.testType === "attack") {
-       test.damageLabel = "display:"
-    } else {
-       test.damageLabel = "display:none"
-    }; */
 
     // Determine whether to display damage for power roll
     if (test.testType === "power") {

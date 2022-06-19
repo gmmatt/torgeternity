@@ -32,7 +32,7 @@ export class testDialog extends FormApplication {
 
         //
         // ***Set Target Data***
-        // This is done here because test.target tends to degrade when transferred to a chat message
+        // Transfer data here because passing the entire target to a chat message tends to degrade the data
         //       
         if (data.test.targets.length > 0) {
             // Identify the first target
@@ -40,8 +40,11 @@ export class testDialog extends FormApplication {
 
             data.test.target = {
                 present: true,
+                type: target.data.type,
                 skills: target.data.data.skills,
                 attributes:target.data.data.attributes,
+                toughness: target.data.data.other.toughness,
+                armor: target.data.data.other.armor,
                 defenses: {
                     dodge: target.data.data.dodgeDefense,
                     unarmedCombat: target.data.data.unarmedCombatDefense,
@@ -121,6 +124,79 @@ export class testDialog extends FormApplication {
             this.test.targetsModifier = -8
         } else {
             this.test.targetsModifier = -10
+        }
+
+        //
+        // Add attack and target options if needed
+        //
+        if (this.test.attackOptions = true) {
+            //Add Called Shot Modifier
+            if (document.getElementById("called-shot-none").checked) {
+                this.test.calledShotModifier = 0
+            } else if (document.getElementById("called-shot-2").checked) {
+                this.test.calledShotModifier = -2
+            } else if (document.getElementById("called-shot-4").checked) {
+                this.test.calledShotModifier = -4
+            } else if (document.getElementById("called-shot-6").checked) {
+                this.test.calledShotModifier = -6
+            }
+
+            // Add Vital Hit Modifier
+            if (document.getElementById("vital-area").checked) {
+                this.test.vitalAreaDamageModifier = 4
+            } else {
+                this.test.vitalAreaDamageModifier = 0
+            }
+
+            // Add Burst Modifier
+            if (document.getElementById("burst-none").checked) {
+                this.test.burstModifier = 0
+            } else if (document.getElementById("burst-short").checked) {
+                this.test.burstModifier = 2
+            } else if (document.getElementById("burst-long").checked) {
+                this.test.burstModifier = 4
+            } else if (document.getElementById("burst-heavy").checked) {
+                this.test.burstModifier = 6
+            }
+
+            // Add All-Out Attack
+            if (document.getElementById("all-out").checked) {
+                this.test.allOutModifier = 4
+            } else {
+                this.test.allOutModifier = 0
+            }
+
+            // Add Amied Shot
+            if (document.getElementById("aimed").checked) {
+                this.test.aimedModifier = 4
+            } else {
+                this.test.aimedModifier = 0
+            }
+
+            // Add Blind Fire
+            if (document.getElementById("blind-fire").checked) {
+                this.test.blindFireModifier = -6
+            } else {
+                this.test.blindFireModifier = 0
+            }
+
+            // Add Concealment Modifier
+            if (document.getElementById("concealment-none").checked) {
+                this.test.concealmentModifier = 0
+            } else if (document.getElementById("concealment-2").checked) {
+                this.test.concealmentModifier = -2
+            } else if (document.getElementById("concealment-4").checked) {
+                this.test.concealmentModifier = -4
+            } else if (document.getElementById("concealment-6").checked) {
+                this.test.concealmentModifier = -6
+            }
+
+            // Add Cover Modifier
+            if (document.getElementById("cover") != 0) {
+                this.test.coverModifier = document.getElementById("cover").value
+            } else {
+                this.test.coverModifier = 0
+            }
         }
 
         // Add other modifier 1

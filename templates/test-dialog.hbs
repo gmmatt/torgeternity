@@ -39,6 +39,18 @@
                 {{> "systems/torgeternity/templates/testDialogs/multi-target-selector.hbs"}}
             </td>
         </tr>
+        {{#if test.attackOptions}}
+        <tr>
+            <td>
+                {{> "systems/torgeternity/templates/testDialogs/attack-options.hbs"}}
+            </td>
+        </tr>
+        <tr>
+            <td>
+                {{> "systems/torgeternity/templates/testDialogs/target-options.hbs"}}
+            </td>
+        </tr>
+        {{/if}}
         <tr>
             <td>
                 {{> "systems/torgeternity/templates/testDialogs/modifiers-table.hbs"}}

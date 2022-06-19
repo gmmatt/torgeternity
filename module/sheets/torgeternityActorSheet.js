@@ -382,6 +382,7 @@ export default class torgeternityActorSheet extends ActorSheet {
             targets: Array.from(game.user.targets),
             applySize: true, //Needs to eventually be se to false for base skill rolls. Is set to true for testing purposes.
             DNDescriptor: "standard",
+            attackOptions: false,
             rollTotal: 0, // A zero indicates that a rollTotal needs to be generated when renderSkillChat is called //
         }
 
@@ -393,21 +394,25 @@ export default class torgeternityActorSheet extends ActorSheet {
     _onInteractionAttack(event) {
         var dnDescriptor = "standard";
         var attackType = event.currentTarget.getAttribute("data-attack-type")
-        switch (attackType) {
-            case "intimidation":
-                dnDescriptor = "targetIntimidation";
-                break;
-            case "maneuver":
-                dnDescriptor = "targetManeuver";
-                break;
-            case "taunt":
-                dnDescriptor = "targetTaunt";
-                break;
-            case "trick":
-                dnDescriptor = "targetTrick";
-                break;
-            default:
-                dnDescriptor = "standard"
+        if (Array.from(game.user.targets).length > 0) {
+            switch (attackType) {
+                case "intimidation":
+                    dnDescriptor = "targetIntimidation";
+                    break;
+                case "maneuver":
+                    dnDescriptor = "targetManeuver";
+                    break;
+                case "taunt":
+                    dnDescriptor = "targetTaunt";
+                    break;
+                case "trick":
+                    dnDescriptor = "targetTrick";
+                    break;
+                default:
+                    dnDescriptor = "standard"
+            }
+        } else {
+            dnDescriptor = "standard"
         }
 
         let test = {
@@ -425,7 +430,8 @@ export default class torgeternityActorSheet extends ActorSheet {
             DNDescriptor: dnDescriptor,
             type: "interactionAttack",
             targets: Array.from(game.user.targets),
-            applySize: true,
+            applySize: false,
+            attackOptions: false,
             rollTotal: 0
         }
 
@@ -489,6 +495,61 @@ export default class torgeternityActorSheet extends ActorSheet {
         var weaponData = item.data.data;
         var attackWith = weaponData.attackWith;
         var skillData = this.actor.data.data.skills[weaponData.attackWith];
+        var dnDescriptor = "standard";
+        var attackType = event.currentTarget.getAttribute("data-attack-type")
+
+        if (Array.from(game.user.targets).length > 0) {
+            
+            switch (attackWith) {
+                case "fireCombat":
+                case "energyWeapons":
+                case "heavyWeapons":
+                case "missileWeapons":
+                    dnDescriptor = "targetDodge";
+                    break;
+                default:
+                    dnDescriptor = "targetMeleeWeapons"
+            }
+        } else {
+            dnDescriptor = "standard"
+        }
+    
+        let test = {
+            testType: "attack",
+            actor: this.actor,
+            actorPic: this.actor.data.img,
+            actorType: this.actor.data.type,
+            attackType: attackType,
+            skillName: attackWith,
+            skillBaseAttribute: game.i18n.localize("torgeternity.skills." + event.currentTarget.getAttribute("data-base-attribute")),
+            skillAdds: skillData.adds,
+            skillValue: skillData.value,
+            unskilledUse: true,
+            weaponName: item.data.name,
+            weaponDamageType: weaponData.damageType,
+            weaponDamage: weaponData.damage,
+            damage: weaponData.damage,
+            weaponAP: weaponData.ap,
+            darknessModifier: 0,
+            DNDescriptor: dnDescriptor,
+            type: "interactionAttack",
+            targets: Array.from(game.user.targets),
+            applySize: true,
+            attackOptions: true,
+            rollTotal: 0
+        }
+
+
+        let dialog = new testDialog(test);
+        dialog.render(true);
+    
+    
+    
+    
+    
+    
+    
+/* Old code    
         var sizeModifier = 0;
         var vulnerableModifier = 0;
         var targetToughness = 0;
@@ -587,11 +648,6 @@ export default class torgeternityActorSheet extends ActorSheet {
             heroTotal: 0,
             dramaTotal: 0,
             cardsPlayed: 0,
-            weaponName: item.data.name,
-            weaponDamageType: weaponData.damageType,
-            weaponDamage: weaponData.damage,
-            damage: weaponData.damage,
-            weaponAP: weaponData.ap,
             targetToughness: targetToughness,
             targetArmor: targetArmor,
             targetType: targetType,
@@ -618,7 +674,7 @@ export default class torgeternityActorSheet extends ActorSheet {
         } else {
             torgchecks.weaponAttack(test)
         }
-
+*/
     };
 
     _onBonusRoll(event) {
