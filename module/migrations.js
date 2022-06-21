@@ -29,7 +29,6 @@ export async function torgMigration(){
         // code to migrate new game settings
         let deckSettings = game.settings.get("torgeternity", "deckSetting")
         if (deckSettings.stormknightsHands) {
-            ui.notifications.warn("updating system settings .............")
             deckSettings.stormknights = deckSettings.stormknightsHands;
             deckSettings.stormknightsHands = null;
             await game.settings.set("torgeternity", "deckSetting", deckSettings);
@@ -37,6 +36,25 @@ export async function torgMigration(){
         }
     }
 
+    if(isNewerVersion("2.4.5", migrationVersion)){
+        let deckSetting = game.settings.get("torgeternity", "deckSetting")
+        let deckKeys = Object.keys(deckSetting)
+        for(let key of deckKeys){
+            if (key === "stormknights" || key === "stormknightsHands") continue
+            let deck = game.cards.getName(deckSetting[key])
+            if(!deck){
+                deck = game.cards.get(deckSetting[key])
+                if(!deck){
+                    delete deckSetting[key]
+                    ui.notifications.error("Torg Eternity: Migrating setting for deck " + key + "failed.  Deck settings will need to be reconfigured manually")
+                }
+                continue
+            }
+            deckSetting[key] = deck.id
+        }
+        game.settings.set("torgeternity", "deckSetting", deckSetting)
+        
+    }
     /*************************************************************
     New migrations go here.
 
