@@ -1511,6 +1511,10 @@ div.readme a.compendium {
     }
 }
 
+.torgeternity.actor {
+    min-width: 450px;
+}
+
 .torgeternity.actor .window-content {
     background-image: url(../images/bg-sheet.webp);
     background-size: cover;
@@ -1577,6 +1581,23 @@ form.actor-sheet header input[name="name"] {
     flex: none;
 }
 
+.tabsOn .window-content .actor-sheet h5.editable-tooltip {
+    display: none
+}
+
+.window-content .actor-sheet h5.editable-tooltip {
+    margin: 0px;
+    width: 100%;
+    text-align: right;
+    padding: 0px;
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    text-shadow: 0px 0px 3px rgb(255 74 74);
+    font-size: 0.8em;
+    box-shadow: 0px 0px 3px gray inset;
+}
+
 .window-content .actor-sheet section.sheet-body {
     height: 100%;
 }
@@ -1635,6 +1656,19 @@ form.actor-sheet header input[name="name"] {
     text-transform: capitalize;
     right: -310px;
     top: 310px;
+}
+
+.tabsOff .window-content .actor-sheet nav.tabs {
+    display: none
+}
+
+.tabsOff .window-content .actor-sheet #threat-editor {
+    display: none;
+}
+
+.torgeternity.actor.tabsOff {
+    min-height: min-content!important;
+    height: unset
 }
 
 .window-content .actor-sheet nav.tabs a.item {
