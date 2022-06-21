@@ -36,7 +36,9 @@ export async function torgMigration(){
         }
     }
 
-    if(isNewerVersion("2.4.5", migrationVersion)){
+    if(isNewerVersion("2.5.0", migrationVersion)){
+
+        //Deck settings migration to use id
         let deckSetting = game.settings.get("torgeternity", "deckSetting")
         let deckKeys = Object.keys(deckSetting)
         for(let key of deckKeys){
@@ -53,6 +55,44 @@ export async function torgMigration(){
             deckSetting[key] = deck.id
         }
         game.settings.set("torgeternity", "deckSetting", deckSetting)
+        
+
+        //Deck back image migration
+        function imageToWebp(oldImg){
+            let img = oldImg
+            if(
+                oldImg.includes("/torgeternity/") &&
+                oldImg.includes("/images/") &&
+                !oldImg.toLowerCase().includes("webp")
+            ){
+                img = oldImg.replace("png", "webp")
+                img = oldImg.replace("jpg", "webp")
+            }
+            return img
+        }
+
+        function updateAllImagesData(document){
+            let oldImg= document.data.img
+            return {img: imageToWebp(oldImg)}
+        }
+        await game.cards.updateAll(updateAllImagesData)
+
+        //Card image migration
+        function changeCardImages(document){
+            let cards = document.cards
+            let updates = []
+            for(let card of cards){
+                let _id = card.id
+                let img = imageToWebp(card.img)
+                let face = duplicate(card.data.faces[0])
+                face.img = img
+                updates.push({_id, faces: [face]})
+            }
+            return updates
+        }
+        for (let deck of game.cards){
+            await deck.updateEmbeddedDocuments("Card", changeCardImages(deck))
+        }
         
     }
     /*************************************************************
