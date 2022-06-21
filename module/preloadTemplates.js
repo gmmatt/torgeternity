@@ -68,6 +68,9 @@ export const preloadTemplates = async function () {
         "systems/torgeternity/templates/partials/up-card.hbs",
         "systems/torgeternity/templates/partials/vehicle-card.hbs",
 
+        // Powers
+        "systems/torgeternity/templates/partials/powers-sheet.hbs",
+
 
 
 
