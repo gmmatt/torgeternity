@@ -435,7 +435,9 @@
                 "outstanding": "",
                 "isAttack": "",
                 "damage": "",
-                "ap": 0
+                "ap": 0,
+                "applySize": true,
+                "applyArmor": true
             }
 
         },

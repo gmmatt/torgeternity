@@ -29,6 +29,8 @@ export class testDialog extends FormApplication {
         data.test.woundModifier = parseInt(-(data.test.actor.data.data.wounds.value));
         data.test.stymiedModifier = parseInt(data.test.actor.data.data.stymiedModifier);
         data.test.darknessModifier = parseInt(data.test.actor.data.data.darknessModifier);
+        data.test.sizeModifier = 0;
+        data.test.vulnerableModifier = 0;
 
         //
         // ***Set Target Data***
@@ -55,6 +57,34 @@ export class testDialog extends FormApplication {
                     trick:target.data.data.trickDefense
                 }
             }
+            if (this.test.applySize == true) {
+                var sizeBonus = target.data.data.details.sizeBonus;
+                switch (sizeBonus) {
+                    case "normal":
+                        data.test.sizeModifier = 0
+                        break;
+                    case "tiny":
+                        data.test.sizeModifier = -6;
+                        break;
+                    case "verySmall":
+                        data.test.sizeModifier = -4;
+                        break;
+                    case "small":
+                        data.test.sizeModifier = -2;
+                        break;
+                    case "large":
+                        data.test.sizeModifier = 2;
+                        break;
+                    case "veryLarge":
+                        data.test.sizeModifier = 4;
+                        break;
+                    default:
+                        data.test.sizeModifier = 0;
+                }
+            }
+
+            data.test.vulnerableModifier = target.data.data.vulnerableModifier;
+
         } else {
             data.test.target = {
                 present: false,
@@ -129,7 +159,7 @@ export class testDialog extends FormApplication {
         //
         // Add attack and target options if needed
         //
-        if (this.test.attackOptions = true) {
+        if (this.test.attackOptions === true) {
             //Add Called Shot Modifier
             if (document.getElementById("called-shot-none").checked) {
                 this.test.calledShotModifier = 0

@@ -377,6 +377,7 @@ export default class torgeternityActorSheet extends ActorSheet {
             actor: this.actor,
             actorPic: this.actor.data.img,
             actorType: this.actor.data.type,
+            isAttack: false,
             skillName: isAttributeTest ? attributeName : skillName,
             skillValue: skillValue,
             targets: Array.from(game.user.targets),
@@ -420,6 +421,7 @@ export default class torgeternityActorSheet extends ActorSheet {
             actor: this.actor,
             actorPic: this.actor.data.img,
             actorType: this.actor.data.type,
+            isAttack: false,
             interactionAttackType: event.currentTarget.getAttribute("data-attack-type"),
             skillName: event.currentTarget.getAttribute("data-name"),
             skillBaseAttribute: game.i18n.localize("torgeternity.skills." + event.currentTarget.getAttribute("data-base-attribute")),
@@ -471,9 +473,31 @@ export default class torgeternityActorSheet extends ActorSheet {
     }
 
     _onActiveDefenseRoll(event) {
-        torgchecks.activeDefenseRoll({
-            actor: this.actor
-        })
+        var dnDescriptor = "standard"
+
+        let test = {
+            testType: "activeDefense",
+            actor: this.actor,
+            actorPic: this.actor.data.img,
+            actorType: this.actor.data.type,
+            isAttack: false,
+            skillName: "activeDefense",
+            skillBaseAttribute: 0,
+            skillAdds: null,
+            skillValue: null,
+            unskilledUse: true,
+            darknessModifier: 0,
+            DNDescriptor: dnDescriptor,
+            type: "activeDefense",
+            targets: Array.from(game.user.targets),
+            applySize: false,
+            attackOptions: false,
+            rollTotal: 0
+        }
+
+
+        let dialog = new testDialog(test);
+        dialog.render(true);
     }
 
     _onBonusRoll(event) {
@@ -520,16 +544,15 @@ export default class torgeternityActorSheet extends ActorSheet {
             actorPic: this.actor.data.img,
             actorType: this.actor.data.type,
             attackType: attackType,
+            isAttack: true,
             skillName: attackWith,
             skillBaseAttribute: game.i18n.localize("torgeternity.skills." + event.currentTarget.getAttribute("data-base-attribute")),
             skillAdds: skillData.adds,
             skillValue: skillData.value,
             unskilledUse: true,
-            weaponName: item.data.name,
-            weaponDamageType: weaponData.damageType,
-            weaponDamage: weaponData.damage,
             damage: weaponData.damage,
             weaponAP: weaponData.ap,
+            applyArmor: true,
             darknessModifier: 0,
             DNDescriptor: dnDescriptor,
             type: "interactionAttack",
@@ -542,139 +565,7 @@ export default class torgeternityActorSheet extends ActorSheet {
 
         let dialog = new testDialog(test);
         dialog.render(true);
-    
-    
-    
-    
-    
-    
-    
-/* Old code    
-        var sizeModifier = 0;
-        var vulnerableModifier = 0;
-        var targetToughness = 0;
-        var targetArmor = 0;
-        // var targetDefenseSkill = "Dodge";
-        // var targetDefenseValue = 0;
-        var defaultDodge = false;
-        var defaultMelee = false;
-        var defaultUnarmed = false;
-        var targetDodge = 0;
-        var targetMelee = 0;
-        var targetUnarmed = 0;
-
-
-
-        // Exit if no target or get target data
-        if (event.shiftKey) {
-            if (Array.from(game.user.targets).length === 0) {
-                var needTargetData = {
-                    user: game.user.data._id,
-                    speaker: ChatMessage.getSpeaker(),
-                    owner: this.actor,
-                };
-
-                var templateData = {
-                    message: game.i18n.localize('torgeternity.chatText.check.needTarget'),
-                    actorPic: this.actor.data.img
-                };
-
-                const templatePromise = renderTemplate("./systems/torgeternity/templates/partials/skill-error-card.hbs", templateData);
-
-                templatePromise.then(content => {
-                    needTargetData.content = content;
-                    ChatMessage.create(needTargetData);
-                })
-
-                return;
-            } else {
-                var target = Array.from(game.user.targets)[0];
-                var targetType = target.actor.data.type;
-
-                // Set target size bonus
-                if (target.actor.data.data.details.sizeBonus === "tiny") {
-                    sizeModifier = -6;
-                } else if (target.actor.data.data.details.sizeBonus === "verySmall") {
-                    sizeModifier = -4;
-                } else if (target.actor.data.data.details.sizeBonus === "small") {
-                    sizeModifier = -2;
-                } else if (target.actor.data.data.details.sizeBonus === "large") {
-                    sizeModifier = 2;
-                } else if (target.actor.data.data.details.sizeBonus === "veryLarge") {
-                    sizeModifier = 4;
-                } else {
-                    sizeModifier = 0;
-                }
-
-                // Set target defense values
-                targetDodge = target.actor.data.data.dodgeDefense
-                targetMelee = target.actor.data.data.meleeWeaponsDefense
-                targetUnarmed = target.actor.data.data.unarmedCombatDefense
-
-                // Set other targt modifiers
-                vulnerableModifier = target.actor.data.data.vulnerableModifier;
-                targetToughness = target.actor.data.data.other.toughness;
-                targetArmor = target.actor.data.data.other.armor;
-                if (attackWith === "fireCombat" || attackWith === "energyWeapons" || attackWith === "heavyWeapons" || attackWith === "missileWeapons") {
-                    defaultDodge = true;
-                } else {
-                    if (target.actor.data.data.skills.meleeWeapons.adds > 0 || (targetType === "threat" && target.actor.data.data.skills.meleeWeapons.value > 0)) {
-                        defaultMelee = true;
-                    } else {
-                        defaultUnarmed = true;
-                    }
-                }
-            }
-        };
-
-        var test = {
-
-            testType: "attack",
-            actor: this.actor,
-            actorType: this.actor.data.type,
-            item: this.actor.items.get(itemID),
-            actorPic: this.actor.data.img,
-            skillName: weaponData.attackWith,
-            skillBaseAttribute: skillData.baseAttribute,
-            skillValue: skillData.value,
-            unskilledUse: skillData.unskilledUse,
-            strengthValue: this.actor.data.data.attributes.strength,
-            charismaValue: this.actor.data.data.attributes.charisma,
-            dexterityValue: this.actor.data.data.attributes.dexterity,
-            mindValue: this.actor.data.data.attributes.mind,
-            spiritValue: this.actor.data.data.attributes.spirit,
-            possibilityTotal: 0,
-            upTotal: 0,
-            heroTotal: 0,
-            dramaTotal: 0,
-            cardsPlayed: 0,
-            targetToughness: targetToughness,
-            targetArmor: targetArmor,
-            targetType: targetType,
-            woundModifier: parseInt(-(this.actor.data.data.wounds.value)),
-            stymiedModifier: parseInt(this.actor.data.data.stymiedModifier),
-            darknessModifier: parseInt(this.actor.data.data.darknessModifier),
-            sizeModifier: sizeModifier,
-            vulnerableModifier: vulnerableModifier,
-            vitalAreaDamageModifier: 0,
-            chatNote: weaponData.chatNote,
-            defaultDodge: defaultDodge,
-            defaultMelee: defaultMelee,
-            defaultUnarmed: defaultUnarmed,
-            targetDodge: targetDodge,
-            targetMelee: targetMelee,
-            targetUnarmed: targetUnarmed,
-            disfavored: false
-
-        }
-
-        if (event.shiftKey) {
-            let testDialog = new attackDialog(test);
-            testDialog.render(true);
-        } else {
-            torgchecks.weaponAttack(test)
-        }
-*/
+        
     };
 
     _onBonusRoll(event) {
@@ -686,6 +577,77 @@ export default class torgeternityActorSheet extends ActorSheet {
 
     _onPowerRoll(event) {
         const itemID = event.currentTarget.closest(".item").dataset.itemId;
+        const item = this.actor.items.get(itemID);
+        var powerData = item.data.data;
+        var skillName = powerData.skill;
+        var skillData = this.actor.data.data.skills[skillName];
+        var dnDescriptor = "standard";
+        var isAttack = false;
+        var applyArmor = true;
+        var applySize = true;
+
+        // Convert yes/no options from sheet into boolean values (or else renderSkillChat gets confused)
+        if (powerData.isAttack == "true") {
+            isAttack = true
+        } else {
+            isAttack = false
+        }
+
+        if (powerData.applyArmor == "true") {
+            applyArmor = true;
+        } else {
+            applyArmor = false;
+        }
+
+        if (powerData.applySize == "true") {
+            applySize = true;
+        } else {
+            applySize = false;
+        }
+
+        // Set difficulty descriptor based on presense of target
+        if (Array.from(game.user.targets).length > 0) {
+            dnDescriptor = powerData.dn;
+        } else {
+            dnDescriptor = "standard"
+        }
+    
+        let test = {
+            testType: "power",
+            actor: this.actor,
+            actorPic: this.actor.data.img,
+            actorType: this.actor.data.type,
+            attackType: "power",
+            powerName: item.name,
+            isAttack: isAttack,
+            skillName: skillName,
+            skillBaseAttribute: game.i18n.localize("torgeternity.skills." + event.currentTarget.getAttribute("data-base-attribute")),
+            skillAdds: skillData.adds,
+            skillValue: skillData.value,
+            unskilledUse: false,
+            damage: powerData.damage,
+            weaponAP: powerData.ap,
+            applyArmor: applyArmor,
+            darknessModifier: 0,
+            DNDescriptor: dnDescriptor,
+            type: "power",
+            targets: Array.from(game.user.targets),
+            applySize: applySize,
+            attackOptions: true,
+            rollTotal: 0
+        }
+
+
+        let dialog = new testDialog(test);
+        dialog.render(true);
+
+
+
+
+
+
+
+/*        const itemID = event.currentTarget.closest(".item").dataset.itemId;
         const item = this.actor.items.get(itemID);
         var powerData = item.data.data;
         var skillData = this.actor.data.data.skills[powerData.skill];
@@ -1020,6 +982,7 @@ export default class torgeternityActorSheet extends ActorSheet {
         } else {
             torgchecks.powerRoll(test);
         }
+    */
     }
 
     _onCreateSa(event) {

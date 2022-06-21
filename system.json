@@ -8,7 +8,7 @@
 
     "minimumCoreVersion": "9",
     "compatibleCoreVersion": "9",
-    "templateVersion": "4.3.0",
+    "templateVersion": "4.4.0",
     "esmodules": [
         "torgeternity.js"
     ],

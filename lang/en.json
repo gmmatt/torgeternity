@@ -144,7 +144,7 @@
         "powers": {
             "axiom": "Axiom",
             "skill": "Skill",
-            "skilllevel": "Min. Skill Value",
+            "skilllevel": "Min. Value",
             "castingtime": "Casting Time",
             "dn": "DN",
             "modifier": "Modifier",
@@ -156,7 +156,9 @@
             "outstanding": "Outstanding",
             "attack": "Attack",
             "ap": "AP",
-            "dnType": "DN Type"
+            "dnType": "DN Type",
+            "applySize": "Apply Size",
+            "applyArmor": "Armor"
         },
         
         "dnTypes": {
