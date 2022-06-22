@@ -184,12 +184,12 @@
             "targetMind": "Raison de la cible",
             "targetSpirit": "Esprit de la cible",
             "targetStrength": "Force de la cible",
-            "targetAlteration": "de la cible Alteration",
-            "targetConjuration": "de la cible Conjuration",
-            "targetDivination": "de la cible Divination",
-            "targetKinesis": "de la cible Kinesis",
-            "targetPrecognition": "de la cible Precognition",
-            "targetStealth": "de la cible Stealth"
+            "targetAlteration": "Altération de la cible",
+            "targetConjuration": "Conjuration de la cible",
+            "targetDivination": "Divination de la cible",
+            "targetKinesis": "Kinésie de la cible Kinesis",
+            "targetPrecognition": "Précognition de la cible",
+            "targetStealth": "Discrétion de la cible"
         },
 
         "dnTypesBasic": {
