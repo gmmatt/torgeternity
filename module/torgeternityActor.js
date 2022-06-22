@@ -5,7 +5,7 @@ export default class torgeternityActor extends Actor {
     prepareBaseData() {
 
         //Set base fatigue to 2
-        this.data.data.fatigue = 2;
+        this.data.data.other.fatigue = 2;
 
         var skillset = this.data.data.skills;
 
