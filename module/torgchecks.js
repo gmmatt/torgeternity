@@ -682,7 +682,7 @@ export function renderSkillChat(test) {
             test.displayModifiers = true;
             test.modifiers += parseInt(test.vulnerableModifier)
             test.modifierText += game.i18n.localize('torgeternity.chatText.check.modifier.targetVulnerable') + "\n"
-        } else if (vulnerableModifier === 4) {
+        } else if (test.vulnerableModifier === 4) {
             test.displayModifiers = true;
             test.modifiers += parseInt(test.vulnerableModifier)
             test.modifierText += game.i18n.localize('torgeternity.chatText.check.modifier.targetVeryVulnerable') + "\n"
