@@ -63,8 +63,9 @@ export async function torgMigration(){
             deckSetting[key] = deck.id
         }
         game.settings.set("torgeternity", "deckSetting", deckSetting)
-        
-        migrateImagestoWebp({system:true, modules:true})
+        if(!isNewerVersion("2.5.0", currentVersion)){
+            migrateImagestoWebp({system:true, modules:true})
+        }
 
     }
     /*************************************************************
