@@ -9,7 +9,7 @@
                 <select name="destinyDeck" class="selectDeck">
                     {{#each deckList as |deck index|}}
                     {{#ifequal deck.type "deck"}}
-                    <option value="{{deck.name}}" {{#ifequal deck.name ../object.destinyDeck}} selected {{/ifequal}}>
+                    <option value="{{deck.id}}" {{#ifequal deck.id ../object.destinyDeck}} selected {{/ifequal}}>
                         {{deck.name}}
                     </option>
                     {{/ifequal}}
@@ -21,7 +21,7 @@
                 <select name="destinyDiscard" class="selectDeck">
                     {{#each deckList as |deck index|}}
                     {{#ifequal deck.type "pile"}}
-                    <option value="{{deck.name}}" {{#ifequal deck.name ../object.destinyDiscard}} selected {{/ifequal}}>
+                    <option value="{{deck.id}}" {{#ifequal deck.id ../object.destinyDiscard}} selected {{/ifequal}}>
                         {{deck.name}}
                     </option>
                     {{/ifequal}}
@@ -36,7 +36,7 @@
                 <select name="dramaDeck" class="selectDeck">
                     {{#each deckList as |deck index|}}
                     {{#ifequal deck.type "deck"}}
-                    <option value="{{deck.name}}" {{#ifequal deck.name ../object.dramaDeck}} selected {{/ifequal}}>
+                    <option value="{{deck.id}}" {{#ifequal deck.id ../object.dramaDeck}} selected {{/ifequal}}>
                         {{deck.name}}
                     </option>
                     {{/ifequal}}
@@ -48,7 +48,7 @@
                 <select name="dramaDiscard" class="selectDeck">
                     {{#each deckList as |deck index|}}
                     {{#ifequal deck.type "pile"}}
-                    <option value="{{deck.name}}" {{#ifequal deck.name ../object.dramaDiscard}} selected {{/ifequal}}>
+                    <option value="{{deck.id}}" {{#ifequal deck.id ../object.dramaDiscard}} selected {{/ifequal}}>
                         {{deck.name}}
                     </option>
                     {{/ifequal}}
@@ -60,7 +60,7 @@
                 <select name="dramaActive" class="selectDeck">
                     {{#each deckList as |deck index|}}
                     {{#ifequal deck.type "pile"}}
-                    <option value="{{deck.name}}" {{#ifequal deck.name ../object.dramaActive}} selected {{/ifequal}}>
+                    <option value="{{deck.id}}" {{#ifequal deck.id ../object.dramaActive}} selected {{/ifequal}}>
                         {{deck.name}}
                     </option>
                     {{/ifequal}}
@@ -82,7 +82,7 @@
                     {{#select deckList}}
                     {{#each deckList as |deck index|}}
                     {{#ifequal deck.type "pile"}}
-                    <option value="{{deck.name}}" {{#ifequal deck.name ../object.cosmDiscard}} selected {{/ifequal}}>
+                    <option value="{{deck.id}}" {{#ifequal deck.id ../object.cosmDiscard}} selected {{/ifequal}}>
                         {{deck.name}}</option>
                     {{/ifequal}}
                     {{/each}}
@@ -95,7 +95,7 @@
                     {{#select deckList}}
                     {{#each deckList as |deck index|}}
                     {{#ifequal deck.type "deck"}}
-                    <option value="{{deck.name}}" {{#ifequal deck.name ../object.coreEarth}} selected {{/ifequal}}>
+                    <option value="{{deck.id}}" {{#ifequal deck.id ../object.coreEarth}} selected {{/ifequal}}>
                         {{deck.name}}</option>
                     {{/ifequal}}
                     {{/each}}
@@ -107,7 +107,7 @@
                 <select name="aysle" data-type="String" class="selectDeck formFields">
                     {{#each deckList as |deck index|}}
                     {{#ifequal deck.type "deck"}}
-                    <option value="{{deck.name}}" {{#ifequal deck.name ../object.aysle}} selected {{/ifequal}}>
+                    <option value="{{deck.id}}" {{#ifequal deck.id ../object.aysle}} selected {{/ifequal}}>
                         {{deck.name}}
                     </option>
                     {{/ifequal}}
@@ -119,7 +119,7 @@
                 <select name="cyberpapacy" data-type="String" class="selectDeck formFields">
                     {{#each deckList as |deck index|}}
                     {{#ifequal deck.type "deck"}}
-                    <option value="{{deck.name}}" {{#ifequal deck.name ../object.cyberpapacy}} selected {{/ifequal}}>
+                    <option value="{{deck.id}}" {{#ifequal deck.id ../object.cyberpapacy}} selected {{/ifequal}}>
                         {{deck.name}}
                     </option>
                     {{/ifequal}}
@@ -131,7 +131,7 @@
                 <select name="livingLand" data-type="String" class="selectDeck formFields">
                     {{#each deckList as |deck index|}}
                     {{#ifequal deck.type "deck"}}
-                    <option value="{{deck.name}}" {{#ifequal deck.name ../object.livingLand}} selected {{/ifequal}}>
+                    <option value="{{deck.id}}" {{#ifequal deck.id ../object.livingLand}} selected {{/ifequal}}>
                         {{deck.name}}
                     </option>
                     {{/ifequal}}
@@ -143,7 +143,7 @@
                 <select name="nileEmpire" data-type="String" class="selectDeck formFields">
                     {{#each deckList as |deck index|}}
                     {{#ifequal deck.type "deck"}}
-                    <option value="{{deck.name}}" {{#ifequal deck.name ../object.nileEmpire}} selected {{/ifequal}}>
+                    <option value="{{deck.id}}" {{#ifequal deck.id ../object.nileEmpire}} selected {{/ifequal}}>
                         {{deck.name}}
                     </option>
                     {{/ifequal}}
@@ -155,7 +155,7 @@
                 <select name="orrorsh" data-type="String" class="selectDeck formFields">
                     {{#each deckList as |deck index|}}
                     {{#ifequal deck.type "deck"}}
-                    <option value="{{deck.name}}" {{#ifequal deck.name ../object.orrorsh}} selected {{/ifequal}}>
+                    <option value="{{deck.id}}" {{#ifequal deck.id ../object.orrorsh}} selected {{/ifequal}}>
                         {{deck.name}}
                     </option>
                     {{/ifequal}}
@@ -167,7 +167,7 @@
                 <select name="panPacifica" data-type="String" class="selectDeck formFields">
                     {{#each deckList as |deck index|}}
                     {{#ifequal deck.type "deck"}}
-                    <option value="{{deck.name}}" {{#ifequal deck.name ../object.panPacifica}} selected {{/ifequal}}>
+                    <option value="{{deck.id}}" {{#ifequal deck.id ../object.panPacifica}} selected {{/ifequal}}>
                         {{deck.name}}
                     </option>
                     {{/ifequal}}
@@ -179,7 +179,7 @@
                 <select name="tharkold" data-type="String" class="selectDeck formFields">
                     {{#each deckList as |deck index|}}
                     {{#ifequal deck.type "deck"}}
-                    <option value="{{deck.name}}" {{#ifequal deck.name ../object.tharkold}} selected {{/ifequal}}>
+                    <option value="{{deck.id}}" {{#ifequal deck.id ../object.tharkold}} selected {{/ifequal}}>
                         {{deck.name}}
                     </option>
                     {{/ifequal}}

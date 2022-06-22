@@ -2,3 +2,4 @@ node_modules
 .gitconfig
 .gitconfig
 jsconfig.json
+workspace.code-workspace

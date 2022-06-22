@@ -399,9 +399,9 @@ Hooks.on("getMonarchHandComponents", (hand, components) => {
         onclick: (event, card) => {
             card.setFlag("torgeternity", "pooled", false);
             if (card.data.type == "destiny") {
-                card.pass(game.cards.getName(game.settings.get("torgeternity", "deckSetting").destinyDiscard));
+                card.pass(game.cards.get(game.settings.get("torgeternity", "deckSetting").destinyDiscard));
             } else {
-                card.pass(game.cards.getName(game.settings.get("torgeternity", "deckSetting").cosmDiscard));
+                card.pass(game.cards.get(game.settings.get("torgeternity", "deckSetting").cosmDiscard));
             }
             card.toMessage({ content: `<div class="card-draw flexrow"><span class="card-chat-tooltip"><img class="card-face" src="${card.img}"/><span><img src="${card.img}"></span></span><span class="card-name">${game.i18n.localize("torgeternity.chatText.discardsCard")} ${card.name}</span></div>` });
         }
@@ -424,9 +424,9 @@ Hooks.on("getMonarchHandComponents", (hand, components) => {
         onclick: (event, card) => {
             card.setFlag("torgeternity", "pooled", false);
             if (card.data.type == "destiny") {
-                card.pass(game.cards.getName(game.settings.get("torgeternity", "deckSetting").destinyDiscard));
+                card.pass(game.cards.get(game.settings.get("torgeternity", "deckSetting").destinyDiscard));
             } else {
-                card.pass(game.cards.getName(game.settings.get("torgeternity", "deckSetting").cosmDiscard));
+                card.pass(game.cards.get(game.settings.get("torgeternity", "deckSetting").cosmDiscard));
             }
             card.toMessage({ content: `<div class="card-draw flexrow"><span class="card-chat-tooltip"><img class="card-face" src="${card.img}"/><span><img src="${card.img}"></span></span><span class="card-name">${game.i18n.localize("torgeternity.chatText.playsCard")} ${card.name}</span></div>` })
         }

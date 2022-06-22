@@ -55,10 +55,10 @@ export function registerHelpers() {
         return options.inverse(this);
     })
 
-    Handlebars.registerHelper('poolList', function (actorName) {
-        var testVariable = actorName;
+    Handlebars.registerHelper('poolList', function (actorId) {
+        var testVariable = actorId;
         var poolList = "";
-        let actor = game.actors.getName(actorName);
+        let actor = game.actors.get(actorId);
         if (actor.getDefaultHand()) {
             const stack = actor.getDefaultHand();
             const hand = stack.data.cards
