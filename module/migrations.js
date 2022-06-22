@@ -65,8 +65,12 @@ export async function torgMigration(){
                 oldImg.includes("/images/") &&
                 !oldImg.toLowerCase().includes("webp")
             ){
-                img = oldImg.replace("png", "webp")
-                img = oldImg.replace("jpg", "webp")
+                let imgarray = img.split(".")
+                let extensions = ["png", "jpg", "jpeg"]
+                if(extensions.includes(imgarray[imgarray.length -1].toLowerCase())){
+                    imgarray[imgarray.length -1] = "webp"
+                    img = imgarray.join(".")
+                }
             }
             return img
         }
@@ -75,7 +79,17 @@ export async function torgMigration(){
             let oldImg= document.data.img
             return {img: imageToWebp(oldImg)}
         }
+
+        function embedsImageData(collection){
+            let updates = []
+            for(let document of collection){
+                updates.push({_id: document.id, img: imageToWebp(document.data.img)})
+            }
+            return updates
+        }
+
         await game.cards.updateAll(updateAllImagesData)
+        
 
         //Card image migration
         function changeCardImages(document){
@@ -93,7 +107,32 @@ export async function torgMigration(){
         for (let deck of game.cards){
             await deck.updateEmbeddedDocuments("Card", changeCardImages(deck))
         }
+        ui.notifications.info("Migrated card images to webp format")
+
+        //world item images migration
+        await game.items.updateAll(updateAllImagesData)
+
+        //migrate actor and prototype token images
+        function ActorsImageData(document){
+            let update = updateAllImagesData(document)
+            let tokenImg = document.data.token.img
+            update.token = {img: imageToWebp(tokenImg)}
+            return update
+        }
         
+        await game.actors.updateAll(ActorsImageData)
+        ui.notifications.info("Migrated actor images to webp format")
+
+        //migrate item images on actors
+        for(let actor of game.actors){
+            actor.updateEmbeddedDocuments("Item",embedsImageData(actor.items))
+        }
+
+        //migrate tokens on scenes
+        for(let scene of game.scenes){
+            scene.updateEmbeddedDocuments("Token",embedsImageData(scene.tokens))
+        }
+        ui.notifications.info("Migrated token images to webp format")
     }
     /*************************************************************
     New migrations go here.
