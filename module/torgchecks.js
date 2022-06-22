@@ -475,7 +475,7 @@ export function renderSkillChat(test) {
             if (target.skills.faith.value) {
                 test.DN = target.skills.faith.value;
             } else {
-                test.DN = targetAddtributes.spirit;
+                test.DN = target.attributes.spirit;
             }
             break;
         case "targetIntimidation":
@@ -908,6 +908,8 @@ export function renderSkillChat(test) {
         speaker: ChatMessage.getSpeaker(),
         owner: test.actor,
     };
+    chatData.speaker.actor = test.actor.id;
+    chatData.speaker.alias = test.actor.name;
 
     const templatePromise = renderTemplate("./systems/torgeternity/templates/partials/skill-card.hbs", test)
 
