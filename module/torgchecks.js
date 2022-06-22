@@ -72,22 +72,22 @@ export async function SkillCheck(test) {
             if (test.disfavored === false) {
                 diceroll = new Roll('1d20x10x20').evaluate({ async: false });
             } else {
-                diceroll = new Roll('1d20').evaluate({async:false});
+                diceroll = new Roll('1d20').evaluate({ async: false });
             }
             test.unskilledLabel = "display:none"
         } else if (test.skillAdds === 0) {
             if (test.disfavored === false) {
                 diceroll = new Roll('1d20x10').evaluate({ async: false });
             } else {
-                diceroll = new Roll('1d20').evaluate({async:false});
+                diceroll = new Roll('1d20').evaluate({ async: false });
             }
             test.unskilledLabel = "display:block"
-        // Should trigger only if this is a threat and test.skilAdds therefore equals null   
+            // Should trigger only if this is a threat and test.skilAdds therefore equals null   
         } else {
             if (test.disfavored === false) {
                 diceroll = new Roll('1d20x10').evaluate({ async: false });
             } else {
-                diceroll = new Roll('1d20').evaluate({async:false});
+                diceroll = new Roll('1d20').evaluate({ async: false });
             }
             test.unskilledLabel = "display:none"
         }
@@ -95,9 +95,9 @@ export async function SkillCheck(test) {
         if (test.disfavored === false) {
             diceroll = new Roll('1d20x10x20').evaluate({ async: false });
         } else {
-            diceroll = new Roll('1d20').evaluate({async:false});
+            diceroll = new Roll('1d20').evaluate({ async: false });
         }
-    test.unskilledLabel = "display:none"
+        test.unskilledLabel = "display:none"
     }
 
     //diceroll.toMessage();
@@ -201,22 +201,22 @@ export function weaponAttack(test) {
             if (test.disfavored === false) {
                 diceroll = new Roll('1d20x10x20').evaluate({ async: false });
             } else {
-                diceroll = new Roll('1d20').evaluate({async:false});
+                diceroll = new Roll('1d20').evaluate({ async: false });
             }
             test.unskilledLabel = "display:none"
         } else if (test.skillAdds === 0) {
             if (test.disfavored === false) {
                 diceroll = new Roll('1d20x10').evaluate({ async: false });
             } else {
-                diceroll = new Roll('1d20').evaluate({async:false});
+                diceroll = new Roll('1d20').evaluate({ async: false });
             }
             test.unskilledLabel = "display:block"
-        // Should trigger only if this is a threat and test.skilAdds therefore equals null   
+            // Should trigger only if this is a threat and test.skilAdds therefore equals null   
         } else {
             if (test.disfavored === false) {
                 diceroll = new Roll('1d20x10').evaluate({ async: false });
             } else {
-                diceroll = new Roll('1d20').evaluate({async:false});
+                diceroll = new Roll('1d20').evaluate({ async: false });
             }
             test.unskilledLabel = "display:none"
         }
@@ -224,7 +224,7 @@ export function weaponAttack(test) {
         if (test.disfavored === false) {
             diceroll = new Roll('1d20x10x20').evaluate({ async: false });
         } else {
-            diceroll = new Roll('1d20').evaluate({async:false});
+            diceroll = new Roll('1d20').evaluate({ async: false });
         }
         test.unskilledLabel = "display:none"
     };
@@ -258,22 +258,22 @@ export function interactionAttack(test) {
             if (test.disfavored === false) {
                 diceroll = new Roll('1d20x10x20').evaluate({ async: false });
             } else {
-                diceroll = new Roll('1d20').evaluate({async:false});
+                diceroll = new Roll('1d20').evaluate({ async: false });
             }
             test.unskilledLabel = "display:none"
         } else if (test.skillAdds === 0) {
             if (test.disfavored === false) {
                 diceroll = new Roll('1d20x10').evaluate({ async: false });
             } else {
-                diceroll = new Roll('1d20').evaluate({async:false});
+                diceroll = new Roll('1d20').evaluate({ async: false });
             }
             test.unskilledLabel = "display:block"
-        // Should trigger only if this is a threat and test.skillAdds therefore equals null   
+            // Should trigger only if this is a threat and test.skillAdds therefore equals null   
         } else {
             if (test.disfavored === false) {
                 diceroll = new Roll('1d20x10').evaluate({ async: false });
             } else {
-                diceroll = new Roll('1d20').evaluate({async:false});
+                diceroll = new Roll('1d20').evaluate({ async: false });
             }
             test.unskilledLabel = "display:none"
         }
@@ -281,7 +281,7 @@ export function interactionAttack(test) {
         if (test.disfavored === false) {
             diceroll = new Roll('1d20x10x20').evaluate({ async: false });
         } else {
-            diceroll = new Roll('1d20').evaluate({async:false});
+            diceroll = new Roll('1d20').evaluate({ async: false });
         }
         test.unskilledLabel = "display:none"
     };
@@ -305,7 +305,7 @@ export function interactionAttack(test) {
 export function powerRoll(test) {
 
     var diceroll = "";
-    
+
     // Cannot Attempt Power Tests Unskilled
     if (test.skillValue === "-") {
         let cantRollData = {
@@ -335,10 +335,10 @@ export function powerRoll(test) {
     if (test.disfavored === false) {
         diceroll = new Roll('1d20x10x20').evaluate({ async: false });
     } else {
-        diceroll = new Roll('1d20').evaluate({async:false});
+        diceroll = new Roll('1d20').evaluate({ async: false });
     }
     test.unskilledLabel = "display:none"
-        //diceroll.toMessage();
+    //diceroll.toMessage();
     test.diceroll = diceroll;
 
     // Get Bonus and Roll Result
@@ -377,8 +377,8 @@ export function renderSkillChat(test) {
     //
     // Check to see if we already have a chat title from a chat card roll. If not, Set title for Chat Message in test.chatTitle //
     //
-    if (! test.chatTitle) {
-        switch(test.testType) {
+    if (!test.chatTitle) {
+        switch (test.testType) {
             case "attribute":
                 var localId = "torgeternity.attributes." + test.skillName;
                 test.chatTitle = game.i18n.localize(localId) + " " + game.i18n.localize('torgeternity.chatText.test');
@@ -402,12 +402,12 @@ export function renderSkillChat(test) {
                 test.chatTitle = test.skillName + " " + game.i18n.localize('torgeternity.chatText.test');
         }
     }
-    
+
     //
     // Establish DN for this test based on test.DNDescriptor //
     //
-    
-    switch(test.DNDescriptor) {
+
+    switch (test.DNDescriptor) {
         case "veryEasy":
             test.DN = 6;
             break;
@@ -528,14 +528,14 @@ export function renderSkillChat(test) {
         default:
             test.DN = 10
     }
-    
+
     // -----------------------Determine Bonus---------------------------- //
 
     // Do we display the unskilled label for a Storm Knight?
     var unskilledTest = false;
     if (test.actor.data.type === "stormknight" & test.testType != "attribute" & test.testType != "activeDefense") {
         if (test.actor.data.data.skills[test.skillName].adds === 0 | test.actor.data.data.skills[test.skillName].adds === null) {
-               unskilledTest = true;
+            unskilledTest = true;
         }
     }
 
@@ -544,7 +544,7 @@ export function renderSkillChat(test) {
     } else {
         test.unskilledLabel = "display:none"
     }
-    
+
     // Generate roll, if needed
     if (test.rollTotal === 0 & test.previousBonus === false) {
         // Generate dice roll
@@ -556,22 +556,22 @@ export function renderSkillChat(test) {
         }
         test.diceroll = new Roll(dice).evaluate({ async: false });
         test.rollTotal = test.diceroll.total;
-    } 
+    }
 
     //
     // Get current bonus and make + label visible if number is positive
     //
     // Initialize upTotal, possibilityTotal, heroTotal, and dramaTotal at zero, if necessary
-    if (! test.upTotal) {
+    if (!test.upTotal) {
         test.upTotal = 0;
     }
-    if (! test.possibilityTotal) {
+    if (!test.possibilityTotal) {
         test.possibilityTotal = 0
     }
-    if (! test.heroTotal) {
+    if (!test.heroTotal) {
         test.heroTotal = 0
     }
-    if (! test.dramaTotal) {
+    if (!test.dramaTotal) {
         test.dramaTotal = 0
     }
 
@@ -734,7 +734,7 @@ export function renderSkillChat(test) {
 
     // Add +3 cards to bonus
     // Initialize cardsPlayed if null
-    if (! test.cardsPlayed) {
+    if (!test.cardsPlayed) {
         test.cardsPlayed = 0;
     }
     const tempBonus = parseInt(test.bonus)
@@ -747,7 +747,7 @@ export function renderSkillChat(test) {
     test.actionTotalContent = game.i18n.localize('torgeternity.chatText.check.result.actionTotal');
     const testDifference = test.rollResult - test.DN
     const dnLabel = "torgeternity.dnTypes." + test.DNDescriptor
-    test.actionTotalContent = game.i18n.localize('torgeternity.chatText.check.result.actionTotal') + " " +  test.rollResult + " vs. " + test.DN + " " + game.i18n.localize(dnLabel);
+    test.actionTotalContent = game.i18n.localize('torgeternity.chatText.check.result.actionTotal') + " " + test.rollResult + " vs. " + test.DN + " " + game.i18n.localize(dnLabel);
     if (testDifference < 0) {
         test.outcome = game.i18n.localize('torgeternity.chatText.check.result.failure');
     } else if (testDifference > 9) {
@@ -778,11 +778,11 @@ export function renderSkillChat(test) {
         test.actionTotalLabel = "display:none"
     } else {
         test.resultText = test.outcome
-    } 
+    }
 
 
     // If an attack, calculate and display damage
-    if (test.isAttack === true ) {
+    if (test.isAttack === true) {
         test.damageLabel = "display: block";
         //Check for whether a target is present & turn on display of damage sub-label
         if (test.target.present === true) {
@@ -798,7 +798,7 @@ export function renderSkillChat(test) {
                 } else {
                     test.targetAdjustedToughness = parseInt(test.target.toughness) + parseInt(test.coverModifier);
                 }
-            // Ignore armor and cover
+                // Ignore armor and cover
             } else {
                 test.targetAdjustedToughness = parseInt(test.target.toughness) - parseInt(test.target.armor)
             }
@@ -874,7 +874,7 @@ export function renderSkillChat(test) {
 
     // Disable unavailable menu options (Note: possibilities are always available)
 
-    if (test.upTotal > 0)(
+    if (test.upTotal > 0) (
         test.upStyle = "pointer-events:none;color:gray"
     )
 
@@ -911,7 +911,7 @@ export function renderSkillChat(test) {
 
     const templatePromise = renderTemplate("./systems/torgeternity/templates/partials/skill-card.hbs", test)
 
-    const messageData = {...chatData, flags: { torgeternity: { test } } }
+    const messageData = { ...chatData, flags: { torgeternity: { test } } }
 
     templatePromise.then(content => {
         if (test.diceroll !== null) {
@@ -1015,7 +1015,7 @@ export function torgDamage(damage, toughness) {
 }
 export async function applyDamages(damageObject) {
     let targetToken = Array.from(game.user.targets)[0]
-        //checking if user has target
+    //checking if user has target
     if (targetToken) {
         //computing new values
         let newShock = targetToken.actor.data.data.shock.value + damageObject.shocks;
