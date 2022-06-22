@@ -489,7 +489,7 @@ export function renderSkillChat(test) {
             };
             break;
         case "targetManeuver":
-            test.DN = target.data.data.maneuverDefense;
+            test.DN = target.defenses.maneuver;
             break;
         case "targetMeleeWeapons":
             test.DN = target.defenses.meleeWeapons;
