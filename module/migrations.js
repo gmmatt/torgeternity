@@ -4,14 +4,14 @@ export async function torgMigration(){
 
 
     //if current version is not newer than migration version, nothing to do here aside from maybe some module specific migrations for premium content
-    if(!isNewerVersion(currentVersion, migrationVersion)){
+    /*if(!isNewerVersion(currentVersion, migrationVersion)){
         //If module images need updating, do that
         if(game.settings.get("torgeternity", "moduleImageUpdate")){
             await migrateImagestoWebp({system:false, modules: true})
             ui.notifications.info("Premium Content Image Migration Complete")
         }
         return
-    } 
+    }*/ 
 
     //check for new worlds, which don't need migrating, and set their migration version accordingly
     if(migrationVersion === "1.0.0" && isNewWorld()) {
@@ -63,9 +63,9 @@ export async function torgMigration(){
             deckSetting[key] = deck.id
         }
         game.settings.set("torgeternity", "deckSetting", deckSetting)
-        if(!isNewerVersion("2.5.0", currentVersion)){
-            migrateImagestoWebp({system:true, modules:true})
-        }
+        
+        migrateImagestoWebp({system:true, modules:true})
+        
 
     }
     /*************************************************************
@@ -102,32 +102,49 @@ function isNewWorld(){
 }
 
 async function migrateImagestoWebp(options = {system: true, modules: true}){
+    let moduleUpdates = {"te001-core-rulebook": false, "te004-living-land": false, "te006-nile-empire": false}
     function isModuleImage(oldImg){
         let modules = [
-            {name: "te001-core-rulebook", oldVersion: "1.5.0"},
-            {name: "te004-living-land", oldVersion: "1.2.0"},
-            {name: "te006-nile-empire", oldVersion: "0.1"}
+            //name: module id/name, oldVersion: Version prior to image updates, pathArray: array of folders cotnaining only webp images
+            {name: "te001-core-rulebook", oldVersion: "1.5.0", pathArray: []}, 
+            {name: "te004-living-land", oldVersion: "1.2.0", pathArray: ["/cards/"]},
+            {name: "te006-nile-empire", oldVersion: "0.1", pathArray: ["/images/cards"]}
         ]
         let retVal = false
         for(let module of modules){
             let modData = game.modules.get(module.name)
             if(!modData) continue
             if(!isNewerVersion(modData.data.version, module.oldVersion)){
-                ui.notifications.warn("Module update available for " +module.name)
-                game.settings.set("torgeternity", "moduleImageUpdate", true)
+                moduleUpdates[module.name] = true
                 continue
             }
-            if(oldImg.includes(module.name)) retVal = true
+            if(oldImg.includes(module.name)) {
+                for(let path of pathArray){
+                    if(oldImg.includes(path)) retVal = true
+                }
+        }
+        }
+        return retVal
+    }
+
+    function isSystemImage(oldImg){
+        if(!oldImg.includes("/torgeternity/")) return false
+        retVal = false
+        let pathArray = [
+            "/cards/",
+            "/images/deutsch/"
+        ]
+        for(let path of pathArray){
+            if(oldImg.includes(path)) retVal = true
         }
         return retVal
     }
     //Deck back image migration
-    async function imageToWebp(oldImg){
+    function imageToWebp(oldImg){
         let img = oldImg
         if(
-            ( (options.system && oldImg.includes("/torgeternity/")) || (options.modules && isModuleImage(oldImg))) &&
-            oldImg.includes("/images/") &&
-            !oldImg.toLowerCase().includes("webp")
+             (options.system && isSystemImage(oldImg)) || 
+             (options.modules && isModuleImage(oldImg))
         ){
             let imgarray = img.split(".")
             let extensions = ["png", "jpg", "jpeg"]
@@ -136,20 +153,19 @@ async function migrateImagestoWebp(options = {system: true, modules: true}){
                 img = imgarray.join(".")
             }
         }
-        let response = await fetch(img, {method:"HEAD"})
-        if(response.ok) return img 
-        return oldImg
+        return img 
+
     }
 
-    async function updateAllImagesData(document){
+    function updateAllImagesData(document){
         let oldImg= document.data.img
-        return {img: await imageToWebp(oldImg)}
+        return {img: imageToWebp(oldImg)}
     }
 
-    async function embedsImageData(collection){
+    function embedsImageData(collection){
         let updates = []
         for(let document of collection){
-            updates.push({_id: document.id, img: await imageToWebp(document.data.img)})
+            updates.push({_id: document.id, img: imageToWebp(document.data.img)})
         }
         return updates
     }
@@ -158,12 +174,12 @@ async function migrateImagestoWebp(options = {system: true, modules: true}){
     
 
     //Card image migration
-    async function changeCardImages(document){
+    function changeCardImages(document){
         let cards = document.cards
         let updates = []
         for(let card of cards){
             let _id = card.id
-            let img = await imageToWebp(card.img)
+            let img = imageToWebp(card.img)
             let face = duplicate(card.data.faces[0])
             face.img = img
             updates.push({_id, faces: [face]})
@@ -171,7 +187,7 @@ async function migrateImagestoWebp(options = {system: true, modules: true}){
         return updates
     }
     for (let deck of game.cards){
-        await deck.updateEmbeddedDocuments("Card", await changeCardImages(deck))
+        await deck.updateEmbeddedDocuments("Card", changeCardImages(deck))
     }
     ui.notifications.info("Migrated card images to webp format")
 
@@ -179,8 +195,8 @@ async function migrateImagestoWebp(options = {system: true, modules: true}){
     await game.items.updateAll(updateAllImagesData)
 
     //migrate actor and prototype token images
-    async function ActorsImageData(document){
-        let update = await updateAllImagesData(document)
+    function ActorsImageData(document){
+        let update = updateAllImagesData(document)
         let tokenImg = document.data.token.img
         update.token = {img: imageToWebp(tokenImg)}
         return update
@@ -191,12 +207,21 @@ async function migrateImagestoWebp(options = {system: true, modules: true}){
 
     //migrate item images on actors
     for(let actor of game.actors){
-        actor.updateEmbeddedDocuments("Item", await embedsImageData(actor.items))
+        actor.updateEmbeddedDocuments("Item", embedsImageData(actor.items))
     }
 
     //migrate tokens on scenes
     for(let scene of game.scenes){
-        scene.updateEmbeddedDocuments("Token", await embedsImageData(scene.tokens))
+        scene.updateEmbeddedDocuments("Token", embedsImageData(scene.tokens))
     }
     ui.notifications.info("Migrated token images to webp format")
+    
+    //If any modules need an update, flag it to the user
+    for(let key of Object.keys(moduleUpdates)){
+        if(moduleUpdates.key){
+            ui.notifications.warn("Update available for premium content " +key)
+            game.settings.set("torgeternity", "moduleImageUpdate")
+        }
+    }
+
 }
