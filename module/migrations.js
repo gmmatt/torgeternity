@@ -4,14 +4,14 @@ export async function torgMigration(){
 
 
     //if current version is not newer than migration version, nothing to do here aside from maybe some module specific migrations for premium content
-    /*if(!isNewerVersion(currentVersion, migrationVersion)){
+    if(!isNewerVersion(currentVersion, migrationVersion)){
         //If module images need updating, do that
         if(game.settings.get("torgeternity", "moduleImageUpdate")){
             await migrateImagestoWebp({system:false, modules: true})
             ui.notifications.info("Premium Content Image Migration Complete")
         }
         return
-    }*/ 
+    }/**/ 
 
     //check for new worlds, which don't need migrating, and set their migration version accordingly
     if(migrationVersion === "1.0.0" && isNewWorld()) {
