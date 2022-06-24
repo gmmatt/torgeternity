@@ -122,7 +122,7 @@ async function migrateImagestoWebp(options = {system: true, modules: true}){
         return retVal
     }
     //Deck back image migration
-    function imageToWebp(oldImg){
+    async function imageToWebp(oldImg){
         let img = oldImg
         if(
             ( (options.system && oldImg.includes("/torgeternity/")) || (options.modules && isModuleImage(oldImg))) &&
@@ -136,18 +136,20 @@ async function migrateImagestoWebp(options = {system: true, modules: true}){
                 img = imgarray.join(".")
             }
         }
-        return img
+        let response = await fetch(img, {method:"HEAD"})
+        if(response.ok) return img 
+        return oldImg
     }
 
-    function updateAllImagesData(document){
+    async function updateAllImagesData(document){
         let oldImg= document.data.img
-        return {img: imageToWebp(oldImg)}
+        return {img: await imageToWebp(oldImg)}
     }
 
-    function embedsImageData(collection){
+    async function embedsImageData(collection){
         let updates = []
         for(let document of collection){
-            updates.push({_id: document.id, img: imageToWebp(document.data.img)})
+            updates.push({_id: document.id, img: await imageToWebp(document.data.img)})
         }
         return updates
     }
@@ -156,12 +158,12 @@ async function migrateImagestoWebp(options = {system: true, modules: true}){
     
 
     //Card image migration
-    function changeCardImages(document){
+    async function changeCardImages(document){
         let cards = document.cards
         let updates = []
         for(let card of cards){
             let _id = card.id
-            let img = imageToWebp(card.img)
+            let img = await imageToWebp(card.img)
             let face = duplicate(card.data.faces[0])
             face.img = img
             updates.push({_id, faces: [face]})
@@ -169,7 +171,7 @@ async function migrateImagestoWebp(options = {system: true, modules: true}){
         return updates
     }
     for (let deck of game.cards){
-        await deck.updateEmbeddedDocuments("Card", changeCardImages(deck))
+        await deck.updateEmbeddedDocuments("Card", await changeCardImages(deck))
     }
     ui.notifications.info("Migrated card images to webp format")
 
@@ -177,8 +179,8 @@ async function migrateImagestoWebp(options = {system: true, modules: true}){
     await game.items.updateAll(updateAllImagesData)
 
     //migrate actor and prototype token images
-    function ActorsImageData(document){
-        let update = updateAllImagesData(document)
+    async function ActorsImageData(document){
+        let update = await updateAllImagesData(document)
         let tokenImg = document.data.token.img
         update.token = {img: imageToWebp(tokenImg)}
         return update
@@ -189,12 +191,12 @@ async function migrateImagestoWebp(options = {system: true, modules: true}){
 
     //migrate item images on actors
     for(let actor of game.actors){
-        actor.updateEmbeddedDocuments("Item",embedsImageData(actor.items))
+        actor.updateEmbeddedDocuments("Item", await embedsImageData(actor.items))
     }
 
     //migrate tokens on scenes
     for(let scene of game.scenes){
-        scene.updateEmbeddedDocuments("Token",embedsImageData(scene.tokens))
+        scene.updateEmbeddedDocuments("Token", await embedsImageData(scene.tokens))
     }
     ui.notifications.info("Migrated token images to webp format")
 }
