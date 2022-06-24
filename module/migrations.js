@@ -64,7 +64,7 @@ export async function torgMigration(){
         }
         game.settings.set("torgeternity", "deckSetting", deckSetting)
         
-        migrateImagestoWebp({system:true, modules:true})
+        await migrateImagestoWebp({system:true, modules:true})
         
 
     }
@@ -105,10 +105,10 @@ async function migrateImagestoWebp(options = {system: true, modules: true}){
     let moduleUpdates = {"te001-core-rulebook": false, "te004-living-land": false, "te006-nile-empire": false}
     function isModuleImage(oldImg){
         let modules = [
-            //name: module id/name, oldVersion: Version prior to image updates, pathArray: array of folders cotnaining only webp images
+            //name: module id/name, oldVersion: Version prior to image updates, pathArray: array of (root) folders containing only webp images in which images have been updated
             {name: "te001-core-rulebook", oldVersion: "1.5.0", pathArray: []}, 
             {name: "te004-living-land", oldVersion: "1.2.0", pathArray: ["/cards/"]},
-            {name: "te006-nile-empire", oldVersion: "0.1", pathArray: ["/images/cards"]}
+            {name: "te006-nile-empire", oldVersion: "0.1", pathArray: ["/images/cards/"]}
         ]
         let retVal = false
         for(let module of modules){
@@ -129,7 +129,7 @@ async function migrateImagestoWebp(options = {system: true, modules: true}){
 
     function isSystemImage(oldImg){
         if(!oldImg.includes("/torgeternity/")) return false
-        retVal = false
+        let retVal = false
         let pathArray = [
             "/cards/",
             "/images/deutsch/"
@@ -191,6 +191,8 @@ async function migrateImagestoWebp(options = {system: true, modules: true}){
     }
     ui.notifications.info("Migrated card images to webp format")
 
+    /*********
+    //COMMENTED OUT SINCE THESE IMAGES AREN'T CHANGED YET
     //world item images migration
     await game.items.updateAll(updateAllImagesData)
 
@@ -215,7 +217,8 @@ async function migrateImagestoWebp(options = {system: true, modules: true}){
         scene.updateEmbeddedDocuments("Token", embedsImageData(scene.tokens))
     }
     ui.notifications.info("Migrated token images to webp format")
-    
+    ********/
+
     //If any modules need an update, flag it to the user
     for(let key of Object.keys(moduleUpdates)){
         if(moduleUpdates.key){
