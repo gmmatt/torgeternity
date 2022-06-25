@@ -114,7 +114,8 @@ torgeternity.dnTypes = {
     targetTaunt: "torgeternity.dnTypes.targetTaunt",
     targetTrick: "torgeternity.dnTypes.targetTrick",
     targetUnarmedCombat: "torgeternity.dnTypes.targetUnarmedCombat",
-    targetWillpower: "torgeternity.dnTypes.targetWillpower"
+    targetWillpower: "torgeternity.dnTypes.targetWillpower",
+    targetWillpowerMind: "torgeternity.dnTypes.targetWillpowerMind"
 
 }
 

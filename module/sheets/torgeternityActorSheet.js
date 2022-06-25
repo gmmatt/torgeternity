@@ -516,11 +516,15 @@ export default class torgeternityActorSheet extends ActorSheet {
     _onAttackRoll(event) {
         const itemID = event.currentTarget.closest(".item").dataset.itemId;
         const item = this.actor.items.get(itemID);
+        var attributes = this.actor.data.data.attributes
         var weaponData = item.data.data;
         var attackWith = weaponData.attackWith;
+        var damageType = weaponData.damageType;
+        var weaponDamage = weaponData.damage;
         var skillData = this.actor.data.data.skills[weaponData.attackWith];
         var dnDescriptor = "standard";
-        var attackType = event.currentTarget.getAttribute("data-attack-type")
+        var attackType = event.currentTarget.getAttribute("data-attack-type");
+        var adjustedDamage = 0;
 
         if (Array.from(game.user.targets).length > 0) {
             
@@ -538,6 +542,30 @@ export default class torgeternityActorSheet extends ActorSheet {
             dnDescriptor = "standard"
         }
     
+        // Calculate damage caused by this weapon
+        switch (damageType) {
+            case "flat":
+                adjustedDamage = weaponDamage;
+                break;
+            case "strengthPlus":
+                adjustedDamage = parseInt(attributes.strength) + parseInt(weaponDamage);
+                break;
+            case "charismaPlus":
+                adjustedDamage = parseInt(attributes.charisma) + parseInt(weaponDamage);
+                break;
+            case "dexterityPlus":
+                adjustedDamage = parseInt(attributes.dexterity) + parseInt(weaponDamage);
+                break;
+            case "mindPlus":
+                adjustedDamage = parseInt(attributes.mind) + parseInt(weaponDamage);
+                break;
+            case "spiritPlus":
+                adjustedDamage = parseInt(attributes.spirit) + parseInt(weaponDamage);
+                break;
+            default:
+                adjustedDamage = parseInt(weaponDamage)
+        }
+        
         let test = {
             testType: "attack",
             actor: this.actor,
@@ -550,7 +578,7 @@ export default class torgeternityActorSheet extends ActorSheet {
             skillAdds: skillData.adds,
             skillValue: skillData.value,
             unskilledUse: true,
-            damage: weaponData.damage,
+            damage: adjustedDamage,
             weaponAP: weaponData.ap,
             applyArmor: true,
             darknessModifier: 0,

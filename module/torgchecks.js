@@ -172,6 +172,9 @@ export function weaponAttack(test) {
           vulnerableModifier: 0
        }; */
 
+    
+       /*
+    
     // Calculate damage
     if (test.weaponDamageType === "flat") {
         test.damage = test.weaponDamage
@@ -188,6 +191,7 @@ export function weaponAttack(test) {
     } else {
         test.damage = parseInt(test.weaponDamage) + parseInt(test.vitalAreaDamageModifier)
     }
+    */
 
     // Roll as skilled or unskilled
     let diceroll = ""
@@ -524,7 +528,13 @@ export function renderSkillChat(test) {
                 test.DN = target.attributes.spirit
             }
             break;
-
+        case "targetWillpowerMind":
+            if (target.skills.willpower.value) {
+                test.DN = target.skills.willpower.value - target.attributes.spirit + target.attributes.mind
+            } else {
+                test.DN = target.attributes.mind
+            }
+            break;
         default:
             test.DN = 10
     }
@@ -784,6 +794,11 @@ export function renderSkillChat(test) {
     // If an attack, calculate and display damage
     if (test.isAttack === true) {
         test.damageLabel = "display: block";
+        // Add damage modifier for vital area hits, if necessary
+        var adjustedDamage = test.damage
+        if (test.vitalAreaDamageModifier) {
+            adjustedDamage = test.damage + test.vitalAreaDamageModifier;
+        }
         //Check for whether a target is present & turn on display of damage sub-label
         if (test.target.present === true) {
             test.damageSubLabel = "display:block";
@@ -807,18 +822,18 @@ export function renderSkillChat(test) {
                 test.damageDescription = game.i18n.localize('torgeternity.chatText.check.result.noDamage');;
                 test.damageSubDescription = game.i18n.localize('torgeternity.chatText.check.result.attackMissed');;
             } else {
-                test.damageDescription = torgDamage(test.damage, test.targetAdjustedToughness).label
-                test.damageSubDescription = game.i18n.localize('torgeternity.chatText.check.result.damage') + " " + test.damage + " vs. " + test.targetAdjustedToughness + " " + game.i18n.localize('torgeternity.chatText.check.result.toughness');
+                test.damageDescription = torgDamage(adjustedDamage, test.targetAdjustedToughness).label
+                test.damageSubDescription = game.i18n.localize('torgeternity.chatText.check.result.damage') + " " + adjustedDamage + " vs. " + test.targetAdjustedToughness + " " + game.i18n.localize('torgeternity.chatText.check.result.toughness');
                 //if auto apply damages == true in settings
                 if (game.settings.get("torgeternity", "autoDamages")) {
-                    applyDamages(torgDamage(test.damage, test.targetAdjustedToughness))
+                    applyDamages(torgDamage(adjustedDamage, test.targetAdjustedToughness))
                 }
 
             }
         } else {
             // Basic roll
             test.damageSubLabel = "display:none";
-            test.damageDescription = test.damage + " " + game.i18n.localize('torgeternity.chatText.check.result.damage');
+            test.damageDescription = adjustedDamage + " " + game.i18n.localize('torgeternity.chatText.check.result.damage');
         }
     } else {
         test.damageLabel = "display:none"
