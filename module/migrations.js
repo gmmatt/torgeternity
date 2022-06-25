@@ -64,7 +64,7 @@ export async function torgMigration(){
         }
         game.settings.set("torgeternity", "deckSetting", deckSetting)
         if(!isNewerVersion("2.5.0", currentVersion)){
-            migrateImagestoWebp({system:true, modules:true})
+//            migrateImagestoWebp({system:true, modules:true})
         }
 
     }
