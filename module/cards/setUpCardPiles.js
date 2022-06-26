@@ -35,10 +35,10 @@ export async function setUpCardPiles() {
     let journalIndex = await basicRulesPack.getIndex({fields: ["flags.torgeternity.usage"]})
 
     for (let deckKey of deckKeys){
-        if (!game.cards.get(deckSetting[deckKey])) { //if the deck defined by the current setting does not exist
+        if (!game.cards.getName(deckSetting[deckKey])) { //if the deck defined by the current setting does not exist
             const deckId = deckIndex.find(deck => deck.flags?.torgeternity?.usage === deckKey)._id; //find the ID of the deck with the appropriate flag
             let deck = await game.cards.importFromCompendium(deckPack, deckId, {folder: deckFolder.id}) //import that deck
-            deckSetting[deckKey] = deck.id //add the deck name to the temporary settings object
+            deckSetting[deckKey] = deck.name //add the deck name to the temporary settings object
         }
     }
 
@@ -51,7 +51,7 @@ export async function setUpCardPiles() {
     ]
     //set up discard piles
     for (let discardKey of discardKeys){
-        if (!game.cards.get(deckSetting[discardKey])) {
+        if (!game.cards.getName(deckSetting[discardKey])) {
             let cardData = {
                 name: game.i18n.localize("torgeternity.cardTypes."+discardKey),
                 type: "pile",
@@ -59,19 +59,19 @@ export async function setUpCardPiles() {
                 folder: deckFolder.id
             }
             let discard = await Cards.create(cardData, { keepId: true, renderSheet: false });
-            deckSetting[discardKey] = discard.id;
+            deckSetting[discardKey] = discard.name;
         }
     }
 
     // Add Active Drama
-    if (!game.cards.get(deckSetting.activeDrama) ){
+    if (!game.cards.getName(deckSetting.activeDrama) ){
         let cardData = {
             name: game.i18n.localize("torgeternity.cardTypes.activeDrama"),
             type: "pile",
             folder: deckFolder.id
         };
         let activeDrama = await Cards.create(cardData, { keepId: true, renderSheet: false });
-        deckSetting.dramaActive = activeDrama.id;
+        deckSetting.dramaActive = activeDrama.name;
 
     }
 

@@ -2,9 +2,9 @@ export default class TorgCombat extends Combat {
 
     async nextRound() {
         if (game.user.isGM) {
-            let dramaDeck = game.cards.get(game.settings.get("torgeternity", "deckSetting").dramaDeck);
-            let dramaDiscard = game.cards.get(game.settings.get("torgeternity", "deckSetting").dramaDiscard);
-            let dramaActive = game.cards.get(game.settings.get("torgeternity", "deckSetting").dramaActive);
+            let dramaDeck = game.cards.getName(game.settings.get("torgeternity", "deckSetting").dramaDeck).data.name;
+            let dramaDiscard = game.cards.getName(game.settings.get("torgeternity", "deckSetting").dramaDiscard).data.name;
+            let dramaActive = game.cards.getName(game.settings.get("torgeternity", "deckSetting").dramaActive).data.name;
             let x = this.getEmbeddedCollection("Combatant")
             let combatantLength = x.contents.length
             for (let i = 0; i < combatantLength; i++) {
@@ -14,12 +14,12 @@ export default class TorgCombat extends Combat {
                 let y = 0
             }
 
-            const activeStack = dramaActive;
+            const activeStack = game.cards.getName(dramaActive);
             if (activeStack.data.cards.document.availableCards.length > 0) {
-                await dramaActive.data.cards.document.availableCards[0].pass(dramaDiscard);
+                await game.cards.getName(dramaActive).data.cards.document.availableCards[0].pass(game.cards.getName(dramaDiscard));
             }
-            if (dramaDeck.availableCards.length > 0) {
-                dramaActive.draw(dramaDeck);
+            if (game.cards.getName(dramaDeck).availableCards.length > 0) {
+                game.cards.getName(dramaActive).draw(game.cards.getName(dramaDeck));
                 await this._onUpdate;
             } else {
                 ui.notifications.info(game.i18n.localize('torgeternity.notifications.dramaDeckEmpty'))
@@ -32,11 +32,11 @@ export default class TorgCombat extends Combat {
     _onCreate(data, options, userId) {
 
         if (game.user.isGM) {
-          let dramaDeck = game.cards.get(game.settings.get("torgeternity", "deckSetting").dramaDeck);
-          let dramaDiscard = game.cards.get(game.settings.get("torgeternity", "deckSetting").dramaDiscard);
-          let dramaActive = game.cards.get(game.settings.get("torgeternity", "deckSetting").dramaActive);
-          if (dramaDeck.availableCards.length > 0) {
-                dramaActive.draw(dramaDeck);
+          let dramaDeck = game.cards.getName(game.settings.get("torgeternity", "deckSetting").dramaDeck).data.name;
+          let dramaDiscard = game.cards.getName(game.settings.get("torgeternity", "deckSetting").dramaDiscard).data.name;
+          let dramaActive = game.cards.getName(game.settings.get("torgeternity", "deckSetting").dramaActive).data.name;
+          if (game.cards.getName(dramaDeck).availableCards.length > 0) {
+                game.cards.getName(dramaActive).draw(game.cards.getName(dramaDeck));
             } else {
                 ui.notifications.info(game.i18n.localize('torgeternity.notifications.dramaDeckEmpty'))
             }
@@ -50,13 +50,13 @@ export default class TorgCombat extends Combat {
     _onDelete(options, userId) {
 
         if (game.user.isGM) {
-          let dramaDeck = game.cards.get(game.settings.get("torgeternity", "deckSetting").dramaDeck);
-          let dramaDiscard = game.cards.get(game.settings.get("torgeternity", "deckSetting").dramaDiscard);
-          let dramaActive = game.cards.get(game.settings.get("torgeternity", "deckSetting").dramaActive);
-          const activeStack = dramaActive;
+          let dramaDeck = game.cards.getName(game.settings.get("torgeternity", "deckSetting").dramaDeck).data.name;
+          let dramaDiscard = game.cards.getName(game.settings.get("torgeternity", "deckSetting").dramaDiscard).data.name;
+          let dramaActive = game.cards.getName(game.settings.get("torgeternity", "deckSetting").dramaActive).data.name;
+          const activeStack = game.cards.getName(dramaActive);
 
             if (activeStack.data.cards.document.availableCards.length > 0) {
-                dramaActive.data.cards.document.availableCards[0].pass(dramaDiscard);
+                game.cards.getName(dramaActive).data.cards.document.availableCards[0].pass(game.cards.getName(dramaDiscard));
             }
 
         }
@@ -82,10 +82,10 @@ export default class TorgCombat extends Combat {
     _onUpdate(changed, options, userId) {
 
         if (game.user.isGM) {
-          let dramaDeck = game.cards.get(game.settings.get("torgeternity", "deckSetting").dramaDeck);
-          let dramaDiscard = game.cards.get(game.settings.get("torgeternity", "deckSetting").dramaDiscard);
-          let dramaActive = game.cards.get(game.settings.get("torgeternity", "deckSetting").dramaActive);
-          const activeStack = dramaActive;
+          let dramaDeck = game.cards.getName(game.settings.get("torgeternity", "deckSetting").dramaDeck).data.name;
+          let dramaDiscard = game.cards.getName(game.settings.get("torgeternity", "deckSetting").dramaDiscard).data.name;
+          let dramaActive = game.cards.getName(game.settings.get("torgeternity", "deckSetting").dramaActive).data.name;
+          const activeStack = game.cards.getName(dramaActive);
             if (activeStack.data.cards.document.availableCards.length > 0) {
                 const activeCard = activeStack.data.cards.document.availableCards[0];
                 const activeImage = activeCard.data.faces[0].img;
