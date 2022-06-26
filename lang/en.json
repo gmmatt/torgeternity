@@ -390,7 +390,8 @@
             "combatSkills": "Combat",
             "interactionSkills": "Interaction",
             "otherSkills": "Other",
-            "targetDefense": "Target Defense"
+            "targetDefense": "Target Defense",
+            "defensesTip": "Click to roll for/disable active defenses"
         },
         "combat": {
             "nextKeep": "Next Round (Keep Current Card)",
@@ -570,7 +571,8 @@
                     "damage": "Damage",
                     "toughness": "Toughness",
                     "noDamage": "No Damage",
-                    "attackMissed": "Attack Missed"
+                    "attackMissed": "Attack Missed",
+                    "resetDefense": "No longer actively defending."
                 }
             },
             "playsCard": "Plays",

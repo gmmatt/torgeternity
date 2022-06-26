@@ -8,6 +8,9 @@
 For manual installation, use the provided manifest URL in the "*Install System*" popup window 
 while managing game systems.
 
+v. 2.5.0
+- From Durak: When rolling for active defenses, an Active Effect
+  is created that modifies those defenses.
 v. 2.4.4
 - Fixed bug that prevented entry of threat data
 
