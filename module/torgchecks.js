@@ -672,7 +672,7 @@ export function renderSkillChat(test) {
     }
 
     // Apply target-related modifiers
-    if (target.present == true) {
+    if (target?.present == true) {
         // Apply the size modifier in appropriate circumstances
         if (test.applySize == true) {
 
@@ -776,17 +776,86 @@ export function renderSkillChat(test) {
     }
 
     // Choose Text to Display as Result
-    if (test.rollTotal === 1) {
+    var actorID = test.actor.data?._id || test.actor._id;
+    console.log(actorID);
+    if ((test.rollTotal === 1) && !((test.testType === "activeDefenseUpdate") || (test.testType === "activeDefense"))) {   //Roll 1 and not defense = Mishape
         test.resultText = game.i18n.localize('torgeternity.chatText.check.result.mishape');
         test.actionTotalLabel = "display:none";
-    } else if (test.testType === "activeDefense") {
-        if (test.bonus < 2) {
-            test.resultText = "+ 1"
-        } else {
+    // Create and Manage Active Effect if SK is Actively Defending (thanks Durak!)
+    } else if (test.testType === "activeDefense") {                                                         //Click on defense
+        var oldAD = game.actors.get(actorID).data.effects.find(a => a.data.label === "ActiveDefense");      //Search for an ActiveDefense effect
+        if (!oldAD) {                                                                                       //Create it if not present (if it exists, will be deleted farther)
+            let NewActiveDefense = {
+                label : "ActiveDefense",                                                                    //Add an icon to remind the defense, bigger ? Change color of Defense ?
+                icon : "icons/equipment/shield/heater-crystal-blue.webp",                                   //To change I think, taken in Core, should have a dedicated file
+                duration : {"rounds" : 1},
+                changes : [{                                                                                //Modify all existing "basic" defense in block
+                        "key": "data.dodgeDefense",                                                         //Should need other work for defense vs powers
+                        "value": test.bonus,                                                                //that don't target xxDefense
+                        "priority": 20,                                                                     //Create a data.ADB that store the bonus ?
+                        "mode": 2
+                        },{
+                        "key": "data.intimidationDefense",
+                        "value": test.bonus,
+                        "priority": 20,
+                        "mode": 2
+                        },{
+                        "key": "data.maneuverDefense",
+                        "value": test.bonus,
+                        "priority": 20,
+                        "mode": 2
+                        },{
+                        "key": "data.meleeWeaponsDefense",
+                        "value": test.bonus,
+                        "priority": 20,
+                        "mode": 2
+                        },{
+                        "key": "data.tauntDefense",
+                        "value": test.bonus,
+                        "priority": 20,
+                        "mode": 2
+                        },{
+                        "key": "data.trickDefense",
+                        "value": test.bonus,
+                        "priority": 20,
+                        "mode": 2
+                        },{
+                        "key": "data.unarmedCombatDefense",
+                        "value": test.bonus,
+                        "priority": 20,
+                        "mode": 2
+                    }],
+                disabled : false
+            };
+            game.actors.get(actorID).createEmbeddedDocuments("ActiveEffect",[NewActiveDefense]);
+            test.testType = "activeDefenseUpdate";    
             test.resultText = "+ " + test.bonus;
-        }
-        test.actionTotalLabel = "display:none"
-    } else {
+            test.actionTotalLabel = "display:none";
+        };
+        if (oldAD) {                                                                                        //if present, reset by deleting
+            game.actors.get(actorID).data.effects.find(a => a.data.label === "ActiveDefense").delete();
+            ////
+            let RAD = {                                                                                     //Simple chat message for information
+                speaker: ChatMessage.getSpeaker(),
+                content: game.i18n.localize('torgeternity.chatText.check.result.resetDefense')              //Need to be implemented if incorporated
+            };
+            ChatMessage.create(RAD);
+            return
+            ///
+        };
+
+    } else if (test.testType === "activeDefenseUpdate") {                                                   //update bonus in case of bonus roll possibility / up
+        var oldAD = game.actors.get(actorID).data.effects.find(a => a.data.label === "ActiveDefense");
+        if (test.bonus < 1) {
+            test.bonus = 1
+        };
+        test.resultText = "+ " + test.bonus;
+        for (let t of oldAD.data.changes) {
+            t.update({"value" : test.bonus});
+        };
+        test.testType = "activeDefenseUpdate";
+        game.actors.get(actorID).data.effects.find(a => a.data.label === "ActiveDefense").update({"changes" : oldAD.data.changes});
+        } else {
         test.resultText = test.outcome
     }
 
