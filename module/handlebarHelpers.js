@@ -45,6 +45,17 @@ export function registerHelpers() {
         }
     });
 
+    Handlebars.registerHelper("detectActiveDefense", function (data) {
+        var i;
+        const effects = data.effects;
+        for (i = 0; i < effects.length; i++) {
+            if (effects[i].label === "ActiveDefense") {
+                return true;
+            }            
+        };
+        return false;
+    });
+
     Handlebars.registerHelper('ifequal', function (a, b, options) {
         if (a == b) { return options.fn(this); }
         return options.inverse(this);

@@ -127,6 +127,7 @@ export default class torgeternityActorSheet extends ActorSheet {
 
         data.effects = prepareActiveEffectCategories(this.document.effects);
 
+
         data.config = CONFIG.torgeternity;
         data.disableXP = true;
         if (game.user.isGM || !game.settings.get("torgeternity", "disableXP")) {
@@ -261,6 +262,10 @@ export default class torgeternityActorSheet extends ActorSheet {
 
         if (this.actor.isOwner) {
             html.find(".activeDefense-roll").click(this._onActiveDefenseRoll.bind(this));
+        }
+
+        if (this.actor.isOwner) {
+            html.find(".activeDefense-roll-glow").click(this._onActiveDefenseCancel.bind(this));
         }
 
         if (this.actor.isOwner) {
@@ -477,6 +482,7 @@ export default class torgeternityActorSheet extends ActorSheet {
 
         let test = {
             testType: "activeDefense",
+            activelyDefending: false,
             actor: this.actor,
             actorPic: this.actor.data.img,
             actorType: this.actor.data.type,
@@ -500,6 +506,34 @@ export default class torgeternityActorSheet extends ActorSheet {
         dialog.render(true);
     }
 
+    _onActiveDefenseCancel(event) {
+        var dnDescriptor = "standard"
+
+        let test = {
+            testType: "activeDefense",
+            activelyDefending: true,
+            actor: this.actor,
+            actorPic: this.actor.data.img,
+            actorType: this.actor.data.type,
+            isAttack: false,
+            skillName: "activeDefense",
+            skillBaseAttribute: 0,
+            skillAdds: null,
+            skillValue: null,
+            unskilledUse: true,
+            darknessModifier: 0,
+            DNDescriptor: dnDescriptor,
+            type: "activeDefense",
+            targets: Array.from(game.user.targets),
+            applySize: false,
+            attackOptions: false,
+            rollTotal: 0
+        }
+
+
+        // If cancelling activeDefense, bypass dialog
+        torgchecks.renderSkillChat(test);
+    }
     _onBonusRoll(event) {
         torgchecks.BonusRoll({
             actor: this.actor,
