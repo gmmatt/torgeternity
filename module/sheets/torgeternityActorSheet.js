@@ -153,7 +153,10 @@ export default class torgeternityActorSheet extends ActorSheet {
                 adds: evt.currentTarget.attributes["data-adds"].value,
                 value: evt.currentTarget.attributes["data-value"].value,
                 unskilledUse: evt.currentTarget.attributes["data-unskilleduse"].value,
-                attackType: ""
+                attackType: "",
+                targets: Array.from(game.user.targets),
+                DNDescriptor: "standard",
+                rollTotal: 0
             }
         };
         evt.dataTransfer.setData('text/plain', JSON.stringify(skillAttrData));
@@ -386,7 +389,7 @@ export default class torgeternityActorSheet extends ActorSheet {
             skillName: isAttributeTest ? attributeName : skillName,
             skillValue: skillValue,
             targets: Array.from(game.user.targets),
-            applySize: true, //Needs to eventually be se to false for base skill rolls. Is set to true for testing purposes.
+            applySize: false, 
             DNDescriptor: "standard",
             attackOptions: false,
             rollTotal: 0, // A zero indicates that a rollTotal needs to be generated when renderSkillChat is called //
@@ -617,11 +620,12 @@ export default class torgeternityActorSheet extends ActorSheet {
             applyArmor: true,
             darknessModifier: 0,
             DNDescriptor: dnDescriptor,
-            type: "interactionAttack",
+            type: "attack",
             targets: Array.from(game.user.targets),
             applySize: true,
             attackOptions: true,
-            rollTotal: 0
+            rollTotal: 0,
+            chatNote: weaponData.chatNote
         }
 
 
