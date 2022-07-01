@@ -104,8 +104,12 @@ export class testDialog extends FormApplication {
 
     _onRoll(event,html) {
         
-        // Set DN Descriptor
-        this.test.DNDescriptor = document.getElementById("difficulty").value;
+        // Set DN Descriptor unless actively defending (in which case no DN, but we set to standard to avoid problems down the line)
+        if (this.test.testType != "activeDefense") { 
+            this.test.DNDescriptor = document.getElementById("difficulty").value;
+        } else {
+            this.test.DNDescriptor = "standard";
+        }
 
         // Check for disfavored and flag if needed
         if (document.getElementById("disfavored").checked) {

@@ -5,9 +5,11 @@
             <td>
                 <table>
                     <tr>
+                        {{#if (activeDefenseRoll test)}}{{else}}
                         <td>
                             {{> "systems/torgeternity/templates/testDialogs/difficulty-selector.hbs"}}
                         </td>
+                        {{/if}}
                         <td>
                             {{> "systems/torgeternity/templates/testDialogs/bonus-selector.hbs"}}                            
                         </td>
