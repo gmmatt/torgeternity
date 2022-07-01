@@ -8,9 +8,15 @@
 For manual installation, use the provided manifest URL in the "*Install System*" popup window 
 while managing game systems.
 
-v. 2.5.0
+v. 2.4.5
+- This is a beta for what will eventually be 2.5.0
 - From Durak: When rolling for active defenses, an Active Effect
   is created that modifies those defenses.
+- Substantial overhaul of skill check system. The system is now
+  streamlined to create a consistent skill test experience. No
+  need to shift-click to get test to account for targets.
+- Attack-type powers now work as attacks.
+
 v. 2.4.4
 - Fixed bug that prevented entry of threat data
 
