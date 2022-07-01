@@ -452,21 +452,21 @@ export function renderSkillChat(test) {
             test.DN = target.attributes.strength;
             break;
         case "targetAlteration":
-            if (target.skills.alteration.value) {
+            if (target.skills.alteration.value && target.skills.alteration.value != "-") {
                 test.DN = target.skills.alteration.value;
             } else {
                 test.DN = target.attributes.mind;
             }
             break;
         case "targetConjuration":
-            if (target.skills.conjuration.value) {
+            if (target.skills.conjuration.value && target.skills.conjuration.value != "-") {
                 test.DN = target.skills.conjuration.value;
             } else {
                 test.DN = target.attributes.spirit
             }
             break;
         case "targetDivination":
-            if (target.skills.divination.value) {
+            if (target.skills.divination.value && target.skills.divination.value != "-") {
                 test.DN = target.skills.divination.value;
             } else {
                 test.DN = target.attributes.mind
@@ -486,7 +486,7 @@ export function renderSkillChat(test) {
             test.DN = target.defenses.intimidation;
             break;
         case "targetKinesis":
-            if (target.skills.kinesis.value) {
+            if (target.skills.kinesis.value && target.skills.kinesis.value != "-") {
                 test.DN = target.skills.kinesis.value
             } else {
                 test.DN = target.attributes.spirit
@@ -499,7 +499,7 @@ export function renderSkillChat(test) {
             test.DN = target.defenses.meleeWeapons;
             break;
         case "targetPrecognition":
-            if (target.skills.precognition.value) {
+            if (target.skills.precognition.value && target.skills.precognition.value != "-") {
                 test.DN = target.skills.precognition.value
             } else {
                 test.DN = target.attributes.mind
