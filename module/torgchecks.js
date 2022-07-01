@@ -1000,7 +1000,7 @@ export function renderSkillChat(test) {
     const messageData = { ...chatData, flags: { torgeternity: { test } } }
 
     templatePromise.then(content => {
-        if (test.diceroll !== null) {
+        if (test.previousBonus === false) {
             messageData.flavor = content;
             test.diceroll.toMessage(messageData);
         } else {

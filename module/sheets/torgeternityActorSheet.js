@@ -392,7 +392,7 @@ export default class torgeternityActorSheet extends ActorSheet {
             applySize: false, 
             DNDescriptor: "standard",
             attackOptions: false,
-            rollTotal: 0, // A zero indicates that a rollTotal needs to be generated when renderSkillChat is called //
+            rollTotal: 0 // A zero indicates that a rollTotal needs to be generated when renderSkillChat is called //
         }
 
         let dialog = new testDialog(test);
@@ -423,6 +423,7 @@ export default class torgeternityActorSheet extends ActorSheet {
         } else {
             dnDescriptor = "standard"
         }
+
 
         let test = {
             testType: "interactionAttack",
@@ -652,6 +653,7 @@ export default class torgeternityActorSheet extends ActorSheet {
         var applyArmor = true;
         var applySize = true;
 
+        
         // Convert yes/no options from sheet into boolean values (or else renderSkillChat gets confused)
         if (powerData.isAttack == "true") {
             isAttack = true
