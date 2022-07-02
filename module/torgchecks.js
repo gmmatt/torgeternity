@@ -594,7 +594,7 @@ export function renderSkillChat(test) {
     }
 
     // Raise bonus to 1 if actively defending
-    if (test.testType === "activeDefense") {
+    if (test.testType === "activeDefense" || test.testType === "activeDefenseUpdate") {
         if (test.bonus < 1) {
             test.bonus = 1
         }
@@ -939,7 +939,7 @@ export function renderSkillChat(test) {
         test.typeLabel = `${game.i18n.localize("torgeternity.chatText.skillTestLabel")}`
     } else if (test.testType === "power") {
         test.typeLabel = `${game.i18n.localize("torgeternity.chatText.skillTestLabel")}`;
-        if (test.powerAttack === "true") {
+        if (test.isAttack === true) {
             test.bdStyle = "display:"
         } else {
             test.bdStyle = "display:none"
@@ -1000,7 +1000,7 @@ export function renderSkillChat(test) {
     const messageData = { ...chatData, flags: { torgeternity: { test } } }
 
     templatePromise.then(content => {
-        if (test.previousBonus === false) {
+        if (test.diceroll != null) {
             messageData.flavor = content;
             test.diceroll.toMessage(messageData);
         } else {
