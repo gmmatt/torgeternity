@@ -535,6 +535,27 @@ export function renderSkillChat(test) {
                 test.DN = target.attributes.mind
             }
             break;
+        case "targetLandVehicles":
+            if (target.skills.landVehicles.value) {
+                test.DN = target.skills.landVehicles.value
+            } else {
+                test.DN = target.attributes.dexterity
+            }
+            break;
+        case "targetAirVehicles":
+            if (target.skills.airVehicles.value) {
+                test.DN = target.skills.airVehicles.value
+            } else {
+                test.DN = target.attributes.dexterity
+            }
+            break;
+        case "targetWaterVehicles":
+            if (target.skills.waterVehicles.value) {
+                test.DN = target.skills.waterVehicles.value
+            } else {
+                test.DN = target.attributes.dexterity
+            }
+            break;
         default:
             test.DN = 10
     }

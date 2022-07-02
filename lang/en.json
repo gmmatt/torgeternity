@@ -190,7 +190,10 @@
             "targetKinesis": "Target Kinesis",
             "targetPrecognition": "Target Precognition",
             "targetStealth": "Target stealth or Dexterity",
-            "targetWillpowerMind": "Target willpower or Mind"
+            "targetWillpowerMind": "Target willpower or Mind",
+            "targetLandVehicles": "Target land vehicles or Dexterity",
+            "targetAirVehicles": "Target air vehicles or Dexterity",
+            "targetWaterVehicles": "Targer water vehicles or Dexterity"
         },
 
         "dnTypesBasic": {

@@ -115,7 +115,10 @@ torgeternity.dnTypes = {
     targetTrick: "torgeternity.dnTypes.targetTrick",
     targetUnarmedCombat: "torgeternity.dnTypes.targetUnarmedCombat",
     targetWillpower: "torgeternity.dnTypes.targetWillpower",
-    targetWillpowerMind: "torgeternity.dnTypes.targetWillpowerMind"
+    targetWillpowerMind: "torgeternity.dnTypes.targetWillpowerMind",
+    targetLandVehicles: "torgeternity.dnTypes.targetLandVehicles",
+    targetWaterVehicles: "torgeternity.dyTypes.targetWaterVehicles",
+    targetAirVehicles: "torgeternity.dnTypes.targetAirVehicles"
 
 }
 
