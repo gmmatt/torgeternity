@@ -8,14 +8,18 @@
 For manual installation, use the provided manifest URL in the "*Install System*" popup window 
 while managing game systems.
 
-v. 2.4.5
-- This is a beta for what will eventually be 2.5.0
+v. 2.5.0
 - From Durak: When rolling for active defenses, an Active Effect
   is created that modifies those defenses.
 - Substantial overhaul of skill check system. The system is now
   streamlined to create a consistent skill test experience. No
   need to shift-click to get test to account for targets.
-- Attack-type powers now work as attacks.
+- Attack-type powers now work as attacks versus targets, and calculate
+  damage.
+- Powers are now listed below attacks on main page of character sheet
+- We have migrated all card images to webp format. Thanks to BadIdeasBureau
+  your custom decks that rely on images in the core system or published
+  modules should also migrate to the new format.
 
 v. 2.4.4
 - Fixed bug that prevented entry of threat data
