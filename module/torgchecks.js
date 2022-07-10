@@ -757,6 +757,14 @@ export function renderSkillChat(test) {
         test.modifierText += game.i18n.localize('torgeternity.chatText.check.modifier.targetConcealment') + " " + test.concealmentModifier + "\n"
     }
 
+    if (test.type === "power") {
+        if (test.powerModifier > 0 || test.powerModifier < 0) {
+            test.displayModifiers === true;
+            test.modifiers += parseInt(test.powerModifier)
+            test.modifierText += game.i18n.localize('torgeternity.chatText.check.modifier.powerModifier') + " " + test.powerModifier + "\n"
+        }
+    }
+
     if (test.displayModifiers === true) {
         test.modifierLabel = "display:"
     } else {

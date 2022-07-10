@@ -315,7 +315,7 @@
             "clearance": "Clearance",
             "race": "Race",
             "weapons": "Weapons",
-            "attacks": "Attacks",
+            "attacks": "Attacks and Powers",
             "armorAndShields": "Armor and Shields",
             "other": "Other",
             "spell": "Spell",
@@ -559,7 +559,8 @@
                     "allOutAttack": "All out Attack",
                     "aimedShot": "Aimed Shot (+4)",
                     "blindFire": "Blind Fire (-6)",
-                    "targetConcealment": "Target Concealment"
+                    "targetConcealment": "Target Concealment",
+                    "powerModifier": "Modifier from Power"
                 },
                 "result": {
                     "result": "result",

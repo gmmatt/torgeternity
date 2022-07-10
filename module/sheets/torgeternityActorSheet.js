@@ -652,6 +652,7 @@ export default class torgeternityActorSheet extends ActorSheet {
         var isAttack = false;
         var applyArmor = true;
         var applySize = true;
+        var powerModifier = 0;
 
         
         // Convert yes/no options from sheet into boolean values (or else renderSkillChat gets confused)
@@ -673,6 +674,13 @@ export default class torgeternityActorSheet extends ActorSheet {
             applySize = false;
         }
 
+        // Set modifier for this power
+        if (item.data.data.modifier > 0 || item.data.data.modifier < 0) {
+            powerModifier = item.data.data.modifier
+        } else {
+            powerModifier = 0
+        }
+        
         // Set difficulty descriptor based on presense of target
         if (Array.from(game.user.targets).length > 0) {
             dnDescriptor = powerData.dn;
@@ -687,6 +695,7 @@ export default class torgeternityActorSheet extends ActorSheet {
             actorType: this.actor.data.type,
             attackType: "power",
             powerName: item.name,
+            powerModifier: powerModifier,
             isAttack: isAttack,
             skillName: skillName,
             skillBaseAttribute: game.i18n.localize("torgeternity.skills." + event.currentTarget.getAttribute("data-base-attribute")),
