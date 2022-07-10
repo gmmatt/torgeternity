@@ -4,6 +4,7 @@ export async function torgMigration(){
 
 
     //if current version is not newer than migration version, nothing to do here aside from maybe some module specific migrations for premium content
+    /**/
     if(!isNewerVersion(currentVersion, migrationVersion)){
         //If module images need updating, do that
         if(game.settings.get("torgeternity", "moduleImageUpdate")){
@@ -122,7 +123,7 @@ async function migrateImagestoWebp(options = {system: true, modules: true}){
                 continue
             }
             if(oldImg.includes(module.name)) {
-                for(let path of pathArray){
+                for(let path of module.pathArray){
                     if(oldImg.includes(path)) isModule = true
                 }
         }
@@ -131,26 +132,27 @@ async function migrateImagestoWebp(options = {system: true, modules: true}){
 
         let img= imageToWebp(oldImg) //convert to webp path
 
+                    //handle the card backs, which need moving to their corresponding system backs.  DE drama back gets cast to the EN one, because they're identical anyway.
+            //might fail on the forge - if so, I can tweak this to grab the image path from the compendiums instead - though that relies on the module being loaded, and would be async, and.... yeah, maybe best not...
+        let specialCases = [
+            ["/living-land-back.jpg", "systems/torgeternity/images/cards/living-land-back.webp"],
+            ["/drama-back.jpg", "systems/torgeternity/images/cards/drama-back.webp"],
+            ["/destiny-back.jpg", "systems/torgeternity/images/cards/destiny-back.webp"],
+            ["/LZZR%C3%BCckseite.jpg", "systems/torgeternity/images/deutsch/cards/Cosmkarten/Das%20lebende%20Land/LZZR%C3%BCckseite.webp"],
+            ["/Schicksalskarten/ZZR%C3%BCckseite.jpg", "systems/torgeternity/images/deutsch/cards/Schicksalskarten/ZZR%C3%BCckseite.webp"]
+        ]
+        for(let specialCase of specialCases){
+            if(oldImg.includes(specialCase[0])) return specialCase[1]
+        }
         //Special case for Living Land folder migration:
         if(img.includes("/te004-living-land/")){
-            //handle the card backs, which need moving to their corresponding system backs.  DE drama back gets cast to the EN one, because they're identical anyway.
-            //might fail on the forge - if so, I can tweak this to grab the image path from the compendiums instead - though that relies on the module being loaded, and would be async, and.... yeah, maybe best not...
-            let specialCases = [
-                ["/living-land-back.jpg", "systems/torgeternity/images/cards/living-land-back.webp"],
-                ["/drama-back.jpg", "systems/torgeternity/images/cards/drama-back.webp"],
-                ["/destiny-back.jpg", "systems/torgeternity/images/cards/destiny-back.webp"],
-                ["/LZZR%C3%BCckseite.jpg", "systems/torgeternity/images/deutsch/cards/Cosmkarten/Das%20lebende%20Land/LZZR%C3%BCckseite.webp"],
-                ["/Schicksalskarten/ZZR%C3%BCckseite.jpg", "systems/torgeternity/images/deutsch/cards/Schicksalskarten/ZZR%C3%BCckseite.webp"]
-            ]
-            for(let specialCase of specialCases){
-                if(oldImg.includes(specialCase[0])) return specialCase[1]
-            }
+
             //rejig folders to match new structure
             img = img.replace("/cards/", "/images/cards/")
             if(!img.includes("/de/")){ //if not a DE image, must be English
                 img = img.replace("/cards/", "/cards/en/")
             } else {
-                img = img.replace("/schicksal/", "/drama/")
+                img = img.replace("/schicksal/", "/destiny/")
             }
         }
         return img
