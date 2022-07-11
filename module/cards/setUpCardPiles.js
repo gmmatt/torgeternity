@@ -169,7 +169,7 @@ export async function setUpCardPiles() {
     // Add journal entry with instructions relating to cards depending on language
     let journalName = "Managing Cards"
     if (lang == "fr") {
-        journalName = "gestion des cartes"
+        journalName = "Gestion des cartes"
     }
     if (lang == "de") {
         journalName = "Der Umgang mit Karten in Foundry"
