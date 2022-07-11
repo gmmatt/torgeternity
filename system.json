@@ -4,11 +4,11 @@
     "description": "Torg Eternity character sheet for Foundry VTT.",
     "author": "Matt Ritchie",
 
-    "version": "2.4.4",
+    "version": "2.5.0",
 
     "minimumCoreVersion": "9",
     "compatibleCoreVersion": "9",
-    "templateVersion": "4.2.2",
+    "templateVersion": "4.4.0",
     "esmodules": [
         "torgeternity.js"
     ],

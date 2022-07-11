@@ -29,6 +29,17 @@
     src: url("../fonts/palatino_linotype.ttf");
 }
 
+/*Defining colors as variables, using it in an animation-keyframe*/
+:root {
+    --torgblue: rgb(65,90,155);
+    --torgred: rgb(150,0,0);
+}
+
+@keyframes colorchange{
+    0%      {color: var(--torgblue);}
+    100%    {color: var(--torgred);}
+}
+
 div.actor ::-webkit-scrollbar {
     background: transparent none;
 }
@@ -1554,6 +1565,15 @@ form.actor-sheet header input[name="name"] {
     text-align: center;
     color: #0e0909;
 }
+
+.activeDefense-roll{
+    animation: none;
+    color: black;
+}
+
+.activeDefense-roll-glow{
+    animation: colorchange 2s infinite alternate;
+    }
 
 .inline-skill-item:after {
     content: ",";

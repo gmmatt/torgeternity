@@ -86,6 +86,54 @@ torgeternity.perkTypes = {
     hope: "torgeternity.perkTypes.hope"
 }
 
+torgeternity.dnTypes = {
+    veryEasy: "torgeternity.dnTypes.veryEasy",
+    easy: "torgeternity.dnTypes.easy",
+    standard: "torgeternity.dnTypes.standard",
+    challenging: "torgeternity.dnTypes.challenging",
+    hard: "torgeternity.dnTypes.hard",
+    veryHard: "torgeternity.dnTypes.veryHard",
+    heroic: "torgeternity.dnTypes.heroic",
+    nearImpossible: "torgeternity.dnTypes.nearImpossible",
+    targetCharisma: "torgeternity.dnTypes.targetCharisma",
+    targetDexterity: "torgeternity.dnTypes.targetDexterity",
+    targetMind: "torgeternity.dnTypes.targetMind",
+    targetSpirit: "torgeternity.dnTypes.targetSpirit",
+    targetStrength: "torgeternity.dnTypes.targetStrength",
+    targetAlteration: "torgeternity.dnTypes.targetAlteration",
+    targetConjuration: "torgeternity.dnTypes.targetConjuration",
+    targetDivination: "torgeternity.dnTypes.targetDivination",
+    targetDodge: "torgeternity.dnTypes.targetDodge",
+    targetFaith: "torgeternity.dnTypes.targetFaith",
+    targetIntimidation: "torgeternity.dnTypes.targetIntimidation",
+    targetKinesis: "torgeternity.dnTypes.targetKinesis",
+    targetManeuver: "torgeternity.dnTypes.targetManeuver",
+    targetMeleeWeapons: "torgeternity.dnTypes.targetMeleeWeapons",
+    targetPrecognition: "torgeternity.dnTypes.targetPrecognition",
+    targetStealth: "torgeternity.dnTypes.targetStealth",
+    targetTaunt: "torgeternity.dnTypes.targetTaunt",
+    targetTrick: "torgeternity.dnTypes.targetTrick",
+    targetUnarmedCombat: "torgeternity.dnTypes.targetUnarmedCombat",
+    targetWillpower: "torgeternity.dnTypes.targetWillpower",
+    targetWillpowerMind: "torgeternity.dnTypes.targetWillpowerMind",
+    targetLandVehicles: "torgeternity.dnTypes.targetLandVehicles",
+    targetWaterVehicles: "torgeternity.dyTypes.targetWaterVehicles",
+    targetAirVehicles: "torgeternity.dnTypes.targetAirVehicles"
+
+}
+
+torgeternity.dnTypesBasic = {
+    veryEasy: "torgeternity.dnTypes.veryEasy",
+    easy: "torgeternity.dnTypes.easy",
+    standard: "torgeternity.dnTypes.standard",
+    challenging: "torgeternity.dnTypes.challenging",
+    hard: "torgeternity.dnTypes.hard",
+    veryHard: "torgeternity.dnTypes.veryHard",
+    heroic: "torgeternity.dnTypes.heroic",
+    nearImpossible: "torgeternity.dnTypes.nearImpossible"
+}
+
+
 torgeternity.attackTypes = {
     unarmedCombat: "torgeternity.attackTypes.unarmedCombat",
     meleeWeapons: "torgeternity.attackTypes.meleeWeapons",

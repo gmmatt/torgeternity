@@ -24,7 +24,7 @@ export default class torgeternityItemSheet extends ItemSheet {
             case "miracle":
             case "psionicpower":
             case "spell":
-                this.options.height = this.position.height = 750;
+                this.options.height = this.position.height = 780;
                 break;
             case "specialability":
                 this.options.width = this.position.width = 435;

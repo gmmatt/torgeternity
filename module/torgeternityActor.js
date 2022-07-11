@@ -5,7 +5,7 @@ export default class torgeternityActor extends Actor {
     prepareBaseData() {
 
         //Set base fatigue to 2
-        this.data.data.fatigue = 2;
+        this.data.data.other.fatigue = 2;
 
         var skillset = this.data.data.skills;
 
@@ -174,7 +174,7 @@ export default class torgeternityActor extends Actor {
                 this.data.data.details.clearance = "delta";
             } else {
                 this.data.data.details.clearance = "omega";
-            };
+            };  
 
             //Set armor and shield toggle states
             var i;
@@ -210,7 +210,7 @@ export default class torgeternityActor extends Actor {
         super.applyActiveEffects();
 
         var i;
-        const effects = this.data.effects
+        const effects = this.data.effects;
         for (i = 0; i < effects.contents.length; i++) {
             if (effects.contents[i].data.flags.hasOwnProperty("core")) {
                 if (effects.contents[i].data.flags.core.statusId === "stymied") {

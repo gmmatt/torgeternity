@@ -144,9 +144,10 @@
         "powers": {
             "axiom": "Axiom",
             "skill": "Skill",
-            "skilllevel": "Min. Skill Value",
+            "skilllevel": "Min. Value",
             "castingtime": "Casting Time",
             "dn": "DN",
+            "modifier": "Modifier",
             "range": "Range",
             "duration": "Duration",
             "damage": "Damage",
@@ -154,8 +155,58 @@
             "good": "Good",
             "outstanding": "Outstanding",
             "attack": "Attack",
-            "ap": "AP"
+            "ap": "AP",
+            "dnType": "DN Type",
+            "applySize": "Apply Size",
+            "applyArmor": "Armor"
         },
+        
+        "dnTypes": {
+            "veryEasy": "Very Easy (6)",
+            "easy": "Easy (8)",
+            "standard": "Standard (10)",
+            "challenging": "Challenging (12)",
+            "hard": "Hard (14)",
+            "veryHard": "Very Hard (16)",
+            "heroic": "Heroic (18)",
+            "nearImpossible": "Near Impossible (20)",
+            "targetDodge": "Target dodge or Dexterity",
+            "targetMeleeWeapons": "Target melee weapons or Dexterity",
+            "targetUnarmedCombat": "Target unarmed combat or Dexterity",
+            "targetIntimidation": "Target intimidation or Spirit",
+            "targetManeuver": "Target maneuver or Dexterity",
+            "targetTaunt": "Target taunt or Charisma",
+            "targetTrick": "Target trick or Mind",
+            "targetWillpower": "Target willpower or Spirit",
+            "targetFaith": "Target faith or Spirit",
+            "targetCharisma": "Target Charisma",
+            "targetDexterity": "Target Dexterity",
+            "targetMind": "Target Mind",
+            "targetSpirit": "Target Spirit",
+            "targetStrength": "Target Strength",
+            "targetAlteration": "Target Alteration",
+            "targetConjuration": "Target Conjuration",
+            "targetDivination": "Target Divination",
+            "targetKinesis": "Target Kinesis",
+            "targetPrecognition": "Target Precognition",
+            "targetStealth": "Target stealth or Dexterity",
+            "targetWillpowerMind": "Target willpower or Mind",
+            "targetLandVehicles": "Target land vehicles or Dexterity",
+            "targetAirVehicles": "Target air vehicles or Dexterity",
+            "targetWaterVehicles": "Targer water vehicles or Dexterity"
+        },
+
+        "dnTypesBasic": {
+            "veryEasy": "Very Easy (6)",
+            "easy": "Easy (8)",
+            "standard": "Standard (10)",
+            "challenging": "Challenging (12)",
+            "hard": "Hard (14)",
+            "veryHard": "Very Hard (16)",
+            "heroic": "Heroic (18)",
+            "nearImpossible": "Near Impossible (20)"         
+        },
+
         "cosms": {
             "none": "(None)",
             "coreEarth": "Core Earth",
@@ -264,7 +315,7 @@
             "clearance": "Clearance",
             "race": "Race",
             "weapons": "Weapons",
-            "attacks": "Attacks",
+            "attacks": "Attacks and Powers",
             "armorAndShields": "Armor and Shields",
             "other": "Other",
             "spell": "Spell",
@@ -342,7 +393,8 @@
             "combatSkills": "Combat",
             "interactionSkills": "Interaction",
             "otherSkills": "Other",
-            "targetDefense": "Target Defense"
+            "targetDefense": "Target Defense",
+            "defensesTip": "Click to roll for/disable active defenses"
         },
         "combat": {
             "nextKeep": "Next Round (Keep Current Card)",
@@ -461,6 +513,7 @@
         },
         "chatText": {
             "possibility": "Possibility",
+            "test": "Test",
             "hero": "Hero",
             "heroCard": "Hero Card",
             "drama": "Drama",
@@ -507,7 +560,8 @@
                     "allOutAttack": "All out Attack",
                     "aimedShot": "Aimed Shot (+4)",
                     "blindFire": "Blind Fire (-6)",
-                    "targetConcealment": "Target Concealment"
+                    "targetConcealment": "Target Concealment",
+                    "powerModifier": "Modifier from Power"
                 },
                 "result": {
                     "result": "result",
@@ -522,7 +576,8 @@
                     "damage": "Damage",
                     "toughness": "Toughness",
                     "noDamage": "No Damage",
-                    "attackMissed": "Attack Missed"
+                    "attackMissed": "Attack Missed",
+                    "resetDefense": "No longer actively defending."
                 }
             },
             "playsCard": "Plays",

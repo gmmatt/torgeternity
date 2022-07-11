@@ -147,6 +147,7 @@
             "skilllevel": "Min. Fertigkeitswert",
             "castingtime": "Wirkzeit",
             "dn": "MW",
+            "modifier": "Modifikator",
             "range": "Reichweite",
             "duration": "Dauer",
             "damage": "Schaden",
@@ -154,8 +155,54 @@
             "good": "Gut",
             "outstanding": "Hervorragend",
             "attack": "Angriff",
-            "ap": "PB"
+            "ap": "PB",
+            "dnType": "MW-Art",
+            "applySize": "Anwenden: Größe",
+            "applyArmor": "Rüstung"
         },
+
+        "dnTypes": {
+            "veryEasy": "Sehr einfach (6)",
+            "easy": "Einfach (8)",
+            "standard": "Standard (10)",
+            "challenging": "Anspruchsvoll (12)",
+            "hard": "Schwer (14)",
+            "veryHard": "Sehr schwer (16)",
+            "heroic": "Heldenhaft (18)",
+            "nearImpossible": "Fast unmöglich (20)",
+            "targetDodge": "Ausweichen des Ziels",
+            "targetMeleeWeapons": "Nahkampfwaffen des Ziels",
+            "targetUnarmedCombat": "Waffenloser Kampf  des Ziels",
+            "targetIntimidation": "Einschüchtern des Ziels",
+            "targetManeuver": "Manövrieren des Ziels",
+            "targetTaunt": "Verspotten des Ziels",
+            "targetTrick": "Tricksen des Ziels",
+            "targetWillpower": "Willenskraft des Ziels",
+            "targetFaith": "Glauben des Ziels",
+            "targetCharisma": "Charisma des Ziels",
+            "targetDexterity": "Geschicklichkeit des Ziels",
+            "targetMind": "Verstand des Ziels",
+            "targetSpirit": "Geist  des Ziels",
+            "targetStrength": "Stärke des Ziels",
+            "targetAlteration": "Verwandlung des Ziels",
+            "targetConjuration": "Beschwörung des Ziels",
+            "targetDivination": "Wahrsagung des Ziels",
+            "targetKinesis": "Kinese  des Ziels",
+            "targetPrecognition": "Präkognition des Ziels",
+            "targetStealth": "Heimlichkeit des Ziels"
+        },
+
+        "dnTypesBasic": {
+            "veryEasy": "Sehr einfach (6)",
+            "easy": "Einfach (8)",
+            "standard": "Standard (10)",
+            "challenging": "Anspruchsvoll (12)",
+            "hard": "Schwer (14)",
+            "veryHard": "Sehr schwer (16)",
+            "heroic": "Heldenhaft (18)",
+            "nearImpossible": "Fast unmöglich (20)"         
+        },
+
         "cosms": {
             "none": "(Keins)",
             "coreEarth": "Zentralerde",
@@ -366,6 +413,7 @@
             "miracle": "Wunder",
             "psionicpower": "Psikraft",
             "specialability": "Spezialfähigkeit",
+            "specialabilityRollable": "Spezialfähigkeit (würfelbar)",
             "other": "Allgemeine Ausrüstung",
             "customAttack": "Individueller Angriff",
             "customSkill": "Eigene Fertigkeit"
@@ -459,6 +507,7 @@
         },
         "chatText": {
             "possibility": "Möglichkeit",
+            "test": "Probe",
             "hero": "Held",
             "heroCard": "Heldenhaft-Karte",
             "drama": "Drama",
@@ -659,8 +708,8 @@
                 "hint": "Wähle hier aus, welchen SL-Schirm du angezeigt bekommen möchtest. Du musst deinen Browser refreshen (F5), damit diese Änderung sofort greift."
             },
             "hideForeignCompendium": {
-                "name": "Deutsche Kompendien ausblenden",
-                "hint": "Auswählen, um deutschsprachige Kompendien auszublenden"
+                "name": "Anderssprachige Kompendien ausblenden",
+                "hint": "Auswählen, um anderssprachige Kompendien auszublenden (funktioniert nicht mit Modul \"Compendium Folders\""
             },
 
             "deckSetting": {
@@ -677,7 +726,7 @@
                 "hint": "Wenn angehakt, darf nur die SL die EP im Charakterdatenblatt ändern."
             },
             "autoDamages": {
-                "name": "Schaden automatisch anwenden",
+                "name": "Schaden automatisch anwenden (BETA!)",
                 "hint": "Wenn angehakt, werden Schock und Wunden automatisch auf das Ziel angewendet werden."
 
             }            

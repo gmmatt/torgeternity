@@ -1,9 +1,10 @@
 import { renderSkillChat } from "./torgchecks.js";
 import { torgBD } from "./torgchecks.js";
-import {skillDialog} from "/systems/torgeternity/module/skill-dialog.js";
+import {testDialog} from "/systems/torgeternity/module/test-dialog.js";
 import {skillUpdate} from "/systems/torgeternity/module/skill-update.js";
 import {attackUpdate} from "/systems/torgeternity/module/attack-update.js";
-import {interactionUpdate} from "/systems/torgeternity/module/interaction-update.js"
+import {interactionUpdate} from "/systems/torgeternity/module/interaction-update.js";
+import {testUpdate} from "/systems/torgeternity/module/test-update.js"
 
 
 export function addChatListeners(html) {
@@ -146,16 +147,7 @@ function onModifier(event) {
     var parentMessage = game.messages.find( ({id}) => id === parentMessageId)
     var test = parentMessage.getFlag("torgeternity", "test")
 
-    if (test.testType === "skill" || test.testType === "power") {
-        let testDialog = new skillUpdate(test);
-        testDialog.render(true)
-    } else if (test.testType === "attack") {
-        let testDialog = new attackUpdate(test);
-        testDialog.render(true)
-    } else {
-        let testDialog = new interactionUpdate(test);
-        testDialog.render(true)
-    }
-        
+    let testDialog = new testUpdate(test);
+    testDialog.render(true)
 
 }

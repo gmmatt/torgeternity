@@ -1,0 +1,33 @@
+<fieldset>
+    <legend>{{localize "torgeternity.sheetLabels.attackOptions"}}</legend>
+    <span class="skill-check-options">
+        {{localize "torgeternity.sheetLabels.calledShot"}}:
+        <input type="radio" id="called-shot-none" name="calledShot" value="0" checked>
+        <label for="called-shot-none">{{localize "torgeternity.sheetLabels.none"}}</label>
+        <input type="radio" id="called-shot-2" name="calledShot" value="-2">
+        <label for="called-shot-1">-2</label>
+        <input type="radio" id="called-shot-4" name="calledShot" value="-4">
+        <label for="called-shot-4">-4</label>
+        <input type="radio" id="called-shot-6" name="calledShot" value="-6">
+        <label for="called-shot-6">-6</label>
+        <input type="checkbox" id="vital-area" title="+4 Damage" name="vitalArea" value="4">
+        <label for="called-shot-damage">{{localize "torgeternity.sheetLabels.vitalArea"}}</label><br>
+
+        {{localize "torgeternity.sheetLabels.burst"}}:
+        <input type="radio" id="burst-none" name="burst" value="0" checked>
+        <label for="burst-none">{{localize "torgeternity.sheetLabels.none"}}</label>
+        <input type="radio" id="burst-short" name="burst" title="Automatic weapons only" value="2">
+        <label for="burst-short">{{localize "torgeternity.sheetLabels.shortBurst"}}</label>
+        <input type="radio" id="burst-long" name="burst" title="Automatic weapons only" value="4">
+        <label for="burst-long">{{localize "torgeternity.sheetLabels.longBurst"}}</label>
+        <input type="radio" id="burst-heavy" name="burst" title="Automatic weapons only" value="6">
+        <label for="burst-heavy">{{localize "torgeternity.sheetLabels.heavyBurst"}}</label><br>
+
+        <input type="checkbox" id="all-out" name="all-out" title="+4 Bonus/Very Vulnerable (Melee and unarmed attacks only)" value="4">
+        <label for="all-out">{{localize "torgeternity.sheetLabels.allOut"}}</label>
+        <input type="checkbox" id="aimed" name="aimed" title="Aimed Shot (ranged attacks only)" value="4">
+        <label for="aimed">{{localize "torgeternity.sheetLabels.aimed"}}</label>
+        <input type="checkbox" id="blind-fire" title="Location of target only generally known" value="-6">
+        <label for="blind-fire">{{localize "torgeternity.sheetLabels.blindFire"}}</label>
+    </span>
+</fieldset>

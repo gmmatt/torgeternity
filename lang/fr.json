@@ -147,6 +147,7 @@
             "skilllevel": "Compétence min.",
             "castingtime": "Temps de lancement",
             "dn": "ND",
+            "modifier": "modificateur",
             "range": "Portée",
             "duration": "Durée",
             "damage": "Dommage",
@@ -154,8 +155,54 @@
             "good": "Supérieur",
             "outstanding": "Spectaculaire",
             "attack": "Attaque",
-            "ap": "PA"
+            "ap": "PA",
+            "dnType": "Type de ND",
+            "applySize": "Appliquer la taille",
+            "applyArmor": "Appliquer l'armure"
         },
+
+        "dnTypes": {
+            "veryEasy": "Très facile  (6)",
+            "easy": "Facile (8)",
+            "standard": "Normale (10)",
+            "challenging": "Complexe (12)",
+            "hard": "Difficile (14)",
+            "veryHard": "Très difficile (16)",
+            "heroic": "Héroïque (18)",
+            "nearImpossible": "Presque impossible (20)",
+            "targetDodge": "Esquive de la cible",
+            "targetMeleeWeapons": "Armes de mêlée de la cible",
+            "targetUnarmedCombat": "Combat à mains nues de la cible",
+            "targetIntimidation": "Intimidation de la cible",
+            "targetManeuver": "Maneuvre de la cible",
+            "targetTaunt": "Provocation de la cible",
+            "targetTrick": "Ruse de la cible",
+            "targetWillpower": "Volonté de la cible",
+            "targetFaith": "Foie de la cible",
+            "targetCharisma": "Charisme de la cible",
+            "targetDexterity": "Dextérité de la cible",
+            "targetMind": "Raison de la cible",
+            "targetSpirit": "Esprit de la cible",
+            "targetStrength": "Force de la cible",
+            "targetAlteration": "Altération de la cible",
+            "targetConjuration": "Conjuration de la cible",
+            "targetDivination": "Divination de la cible",
+            "targetKinesis": "Kinésie de la cible Kinesis",
+            "targetPrecognition": "Précognition de la cible",
+            "targetStealth": "Discrétion de la cible"
+        },
+
+        "dnTypesBasic": {
+            "veryEasy": "Très facile  (6)",
+            "easy": "Facile (8)",
+            "standard": "Normale (10)",
+            "challenging": "Complexe (12)",
+            "hard": "Difficile (14)",
+            "veryHard": "Très difficile (16)",
+            "heroic": "Héroïque (18)",
+            "nearImpossible": "Presque impossible (20)"
+        },
+
         "cosms": {
             "none": "(Sans cosm)",
             "coreEarth": "Prime Terre",
@@ -461,6 +508,7 @@
         },
         "chatText": {
             "possibility": "Possibilité",
+            "test": "Test",
             "hero": "Héros",
             "heroCard": "Carte Héros",
             "drama": "Drame",

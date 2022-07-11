@@ -32,7 +32,15 @@ export const preloadTemplates = async function () {
 
       // Test Dialogs
       "systems/torgeternity/templates/testDialogs/attack-difficulty.hbs",
+      "systems/torgeternity/templates/testDialogs/difficulty-selector.hbs",
       "systems/torgeternity/templates/testDialogs/disfavored.hbs",
+      "systems/torgeternity/templates/testDialogs/bonus-selector.hbs",
+      "systems/torgeternity/templates/testDialogs/movement-penalty-selector.hbs",
+      "systems/torgeternity/templates/testDialogs/multi-action-selector.hbs",
+      "systems/torgeternity/templates/testDialogs/multi-target-selector.hbs",
+      "systems/torgeternity/templates/testDialogs/modifiers-table.hbs",
+      "systems/torgeternity/templates/testDialogs/attack-options.hbs",
+      "systems/torgeternity/templates/testDialogs/target-options.hbs",
 
         //active effect part: 
         "systems/torgeternity/templates/parts/active-effects.hbs",
@@ -59,6 +67,9 @@ export const preloadTemplates = async function () {
         "systems/torgeternity/templates/partials/spell-card.hbs",
         "systems/torgeternity/templates/partials/up-card.hbs",
         "systems/torgeternity/templates/partials/vehicle-card.hbs",
+
+        // Powers
+        "systems/torgeternity/templates/partials/powers-sheet.hbs",
 
 
 

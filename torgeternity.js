@@ -25,7 +25,7 @@ import torgeternityDeck from "./module/cards/torgeternityDeck.js";
 import torgeternityCardConfig from "./module/cards/torgeternityCardConfig.js";
 import { torgeternityCards } from "./module/cards/torgeternityCards.js";
 import { attackDialog } from "/systems/torgeternity/module/attack-dialog.js"; //Added
-import { skillDialog } from "/systems/torgeternity/module/skill-dialog.js";
+import { testDialog } from "/systems/torgeternity/module/test-dialog.js";
 import { interactionDialog } from "/systems/torgeternity/module/interaction-dialog.js";
 import { hideCompendium } from './module/hideCompendium.js';
 import initTorgControlButtons from './module/controlButtons.js';
@@ -580,128 +580,86 @@ function rollItemMacro(itemName) {
             var defaultUnarmed = false;
             var targetDefenseSkill = "Dodge";
             var targetDefenseValue = 0;
+            var dnDescriptor = "standard";
+            var damageType = weaponData.damageType;
+            var adjustedDamage;
+            var weaponDamage = weaponData.damage;
+            var attributes = actor.data.data.attributes;
+            var attackType = weaponData.damageType;
 
-            // Exit if no target or get target data
-            if (Array.from(game.user.targets).length === 0) {
-                var needTargetData = {
-                    user: game.user.data._id,
-                    speaker: ChatMessage.getSpeaker(),
-                    owner: actor,
-                };
-
-                var templateData = {
-                    message: game.i18n.localize('torgeternity.chatText.check.needTarget'),
-                    actorPic: actor.data.img
-                };
-
-                const templatePromise = renderTemplate("./systems/torgeternity/templates/partials/skill-error-card.hbs", templateData);
-
-                templatePromise.then(content => {
-                    needTargetData.content = content;
-                    ChatMessage.create(needTargetData);
-                })
-
-                return;
+            // Modify dnDecriptor if target exists
+            if (Array.from(game.user.targets).length > 0) {
+            
+                switch (attackWith) {
+                    case "fireCombat":
+                    case "energyWeapons":
+                    case "heavyWeapons":
+                    case "missileWeapons":
+                        dnDescriptor = "targetDodge";
+                        break;
+                    default:
+                        dnDescriptor = "targetMeleeWeapons"
+                }
             } else {
-                var target = Array.from(game.user.targets)[0];
-                var targetType = target.actor.data.type;
-                if (target.actor.data.data.details.sizeBonus === "tiny") {
-                    sizeModifier = -6;
-                } else if (target.actor.data.data.details.sizeBonus === "verySmall") {
-                    sizeModifier = -4;
-                } else if (target.actor.data.data.details.sizeBonus === "small") {
-                    sizeModifier = -2;
-                } else if (target.actor.data.data.details.sizeBonus === "large") {
-                    sizeModifier = 2;
-                } else if (target.actor.data.data.details.sizeBonus === "veryLarge") {
-                    sizeModifier = 4;
-                } else {
-                    sizeModifier = 0;
-                }
-                // Set target defense values
-                if (target.actor.data.data.skills.dodge.value > 0) {
-                    targetDodge = target.actor.data.data.skills.dodge.value;
-                } else {
-                    targetDodge = target.actor.data.data.attributes.dexterity;
-                }
-
-                if (target.actor.data.data.skills.meleeWeapons.value > 0) {
-                    targetMelee = target.actor.data.data.skills.meleeWeapons.value;
-                } else {
-                    targetMelee = target.actor.data.data.attributes.dexterity;
-                }
-
-                if (target.actor.data.data.skills.unarmedCombat.value > 0) {
-                    targetUnarmed = target.actor.data.data.skills.unarmedCombat.value;
-                } else {
-                    targetUnarmed = target.actor.data.data.attributes.dexterity;
-                }
-
-                vulnerableModifier = target.actor.data.data.vulnerableModifier;
-                targetToughness = target.actor.data.data.other.toughness;
-                targetArmor = target.actor.data.data.other.armor;
-                if (attackWith === "fireCombat" || attackWith === "energyWeapons" || attackWith === "heavyWeapons" || attackWith === "missileWeapons") {
-                    defaultDodge = true;
-                } else {
-                    if (target.actor.data.data.skills.meleeWeapons.adds > 0 || (targetType === "threat" && target.actor.data.data.skills.meleeWeapons.value > 0)) {
-                        defaultMelee = true;
-                    } else {
-                        defaultUnarmed = true;
-                    }
-                }
+                dnDescriptor = "standard"
             }
 
+            //Calculate damage caused by weapon
+            switch (damageType) {
+                case "flat":
+                    adjustedDamage = weaponDamage;
+                    break;
+                case "strengthPlus":
+                    adjustedDamage = parseInt(attributes.strength) + parseInt(weaponDamage);
+                    break;
+                case "charismaPlus":
+                    adjustedDamage = parseInt(attributes.charisma) + parseInt(weaponDamage);
+                    break;
+                case "dexterityPlus":
+                    adjustedDamage = parseInt(attributes.dexterity) + parseInt(weaponDamage);
+                    break;
+                case "mindPlus":
+                    adjustedDamage = parseInt(attributes.mind) + parseInt(weaponDamage);
+                    break;
+                case "spiritPlus":
+                    adjustedDamage = parseInt(attributes.spirit) + parseInt(weaponDamage);
+                    break;
+                default:
+                    adjustedDamage = parseInt(weaponDamage)
+            }
+                    
             var mTest = {
 
                 testType: "attack",
+                type: "attack",
                 actor: actor,
                 actorType: actor.data.type,
                 item: item,
+                attackType: attackType,
+                isAttack: true,
                 actorPic: actor.data.img,
                 skillName: weaponData.attackWith,
                 skillBaseAttribute: skillData.baseAttribute,
                 skillValue: skillData.value,
-                unskilledUse: skillData.unskilledUse,
-                strengthValue: actor.data.data.attributes.strength,
-                charismaValue: actor.data.data.attributes.charisma,
-                dexterityValue: actor.data.data.attributes.dexterity,
-                mindValue: actor.data.data.attributes.mind,
-                spiritValue: actor.data.data.attributes.spirit,
-                possibilityTotal: 0,
-                upTotal: 0,
-                heroTotal: 0,
-                dramaTotal: 0,
-                cardsPlayed: 0,
+                skillAdds: skillData.adds,
+                unskilledUse: true,
+                rollTotal: 0,
+                DNDescriptor: dnDescriptor,
                 weaponName: item.data.name,
                 weaponDamageType: weaponData.damageType,
                 weaponDamage: weaponData.damage,
-                damage: weaponData.damage,
+                damage: adjustedDamage,
                 weaponAP: weaponData.ap,
-                targetToughness: targetToughness,
-                targetArmor: targetArmor,
-                targetDefenseSkill: targetDefenseSkill,
-                targetDefenseValue: targetDefenseValue,
-                targetType: targetType,
-                woundModifier: parseInt(-(actor.data.data.wounds.value)),
-                stymiedModifier: parseInt(actor.data.data.stymiedModifier),
-                darknessModifier: parseInt(actor.data.data.darknessModifier),
-                sizeModifier: sizeModifier,
-                vulnerableModifier: vulnerableModifier,
-                vitalAreaDamageModifier: 0,
-                chatNote: weaponData.chatNote,
-                defaultDodge: defaultDodge,
-                defaultMelee: defaultMelee,
-                defaultUnarmed: defaultUnarmed,
-                targetDodge: targetDodge,
-                targetMelee: targetMelee,
-                targetUnarmed: targetUnarmed,
-                disfavored: false
-
+                applyArmor: true,
+                targets: Array.from(game.user.targets),
+                applySize: true,
+                attackOptions: true,
+                darknessModifier: 0,
+                chatNote: weaponData.chatNote
             }
 
-            let testDialog = new attackDialog(mTest);
-            testDialog.render(true);
-            // End of copied/pasted/adjusted, choosed to open the Dialog (as with shift event), drawback NEED a Target
+            let dialog = new testDialog(mTest);
+            dialog.render(true);
             break;
         case "psionicpower":
         case "miracle":
@@ -794,23 +752,21 @@ function rollSkillMacro(skillName, attributeName, isInteractionAttack) {
         actor: actor,
         actorPic: actor.data.img,
         actorType: actor.data.type,
-        skillName: isAttributeTest ? game.i18n.localize("torgeternity.attributes." + attributeName) : game.i18n.localize("torgeternity.skills." + skillName),
+        skillName: isAttributeTest ? attributeName : skillName,
         skillBaseAttribute: game.i18n.localize("torgeternity.attributes." + attributeName),
         skillAdds: skill.adds,
         skillValue: skillValue,
+        isAttack: false,
+        targets: Array.from(game.user.targets),
+        applySize: false,
+        DNDescriptor: "standard",
+        attackOptions: false,
+        rollTotal: 0,
         unskilledUse: skill.unskilledUse,
         woundModifier: parseInt(-(actor.data.data.wounds.value)),
         stymiedModifier: parseInt(actor.data.data.stymiedModifier),
         darknessModifier: 0, //parseInt(actor.data.data.darknessModifier),
-        type: "skill",
-        possibilityTotal: 0,
-        upTotal: 0,
-        heroTotal: 0,
-        dramaTotal: 0,
-        cardsPlayed: 0,
-        sizeModifier: 0,
-        vulnerableModifier: 0,
-        disfavored: false
+        type: "skill"
     };
     if (isInteractionAttack) {
         test["type"] = "interactionAttack";
@@ -821,80 +777,34 @@ function rollSkillMacro(skillName, attributeName, isInteractionAttack) {
         //    skill/attribute tests or not, maybe should be option in dialog?
 
         // Exit if no target or get target data
-        if (Array.from(game.user.targets).length === 0) {
-            var needTargetData = {
-                user: game.user.data._id,
-                speaker: ChatMessage.getSpeaker(),
-                owner: actor
-            };
-
-            var templateData = {
-                message: game.i18n.localize("torgeternity.chatText.check.interactionNeedTarget"),
-                actorPic: actor.data.img
-            };
-
-            const templatePromise = renderTemplate("./systems/torgeternity/templates/partials/skill-error-card.hbs", templateData);
-
-            templatePromise.then(content => {
-                needTargetData.content = content;
-                ChatMessage.create(needTargetData);
-            })
-
-            return;
-        } else {
-            var target = Array.from(game.user.targets)[0];
-            var targetType = target.actor.data.type;
-            test.vulnerableModifier = target.actor.data.data.vulnerableModifier;
-            if (test.interactionAttackType === "intimidation") {
-                if (target.actor.data.data.skills.intimidation.value > 0) {
-                    test.targetDefenseSkill = game.i18n.localize("torgeternity.skills.intimidation");
-                    test.targetDefenseValue = target.actor.data.data.skills.intimidation.value;
-                } else {
-                    test.targetDefenseSkill = game.i18n.localize("torgeternity.attributes.spirit");
-                    test.targetDefenseValue = target.actor.data.data.attributes.spirit;
-                }
-            } else if (test.interactionAttackType === "maneuver") {
-                if (target.actor.data.data.skills.maneuver.value > 0) {
-                    test.targetDefenseSkill = game.i18n.localize("torgeternity.skills.maneuver");
-                    test.targetDefenseValue = target.actor.data.data.skills.maneuver.value;
-                } else {
-                    test.targetDefenseSkill = game.i18n.localize("torgeternity.attributes.dexterity");
-                    test.targetDefenseValue = target.actor.data.data.attributes.dexterity;
-                }
-            } else if (test.interactionAttackType === "taunt") {
-                if (target.actor.data.data.skills.taunt.value > 0) {
-                    test.targetDefenseSkill = game.i18n.localize("torgeternity.skills.taunt");
-                    test.targetDefenseValue = target.actor.data.data.skills.taunt.value;
-                } else {
-                    test.targetDefenseSkill = game.i18n.localize("torgeternity.attributes.charisma");
-                    test.targetDefenseValue = target.actor.data.data.attributes.charisma;
-                }
-            } else if (test.interactionAttackType === "trick") {
-                if (target.actor.data.data.skills.trick.value > 0) {
-                    test.targetDefenseSkill = game.i18n.localize("torgeternity.skills.trick");
-                    test.targetDefenseValue = target.actor.data.data.skills.trick.value;
-                } else {
-                    test.targetDefenseSkill = game.i18n.localize("torgeternity.attributes.mind");
-                    test.targetDefenseValue = target.actor.data.data.attributes.mind;
-                }
+        var dnDescriptor;
+        if (Array.from(game.user.targets).length > 0) {
+            switch (skillName) {
+                case "intimidation":
+                    dnDescriptor = "targetIntimidation";
+                    break;
+                case "maneuver":
+                    dnDescriptor = "targetManeuver";
+                    break;
+                case "taunt":
+                    dnDescriptor = "targetTaunt";
+                    break;
+                case "trick":
+                    dnDescriptor = "targetTrick";
+                    break;
+                default:
+                    dnDescriptor = "standard"
             }
+        } else {
+            dnDescriptor = "standard"
         }
-    }
-    if (actor.data.data.stymiedModifier === parseInt(-2)) {
-        test.stymiedModifier = -2;
-    } else if (actor.data.data.stymiedModifier === -4) {
-        test.stymiedModifier = -4;
+        test.DNDescriptor = dnDescriptor;
+        test.unskilledUse = true;
+
     }
 
-    if (isInteractionAttack) {
-        let testDialog = new interactionDialog(test);
-        testDialog.render(true);
-    } else if (event.shiftKey) {
-        let testDialog = new skillDialog(test);
-        testDialog.render(true);
-    } else {
-        torgchecks.SkillCheck(test);
-    }
+    let dialog = new testDialog(test);
+    dialog.render(true);
 }
 
 Hooks.on("renderCombatTracker", (combatTracker) => {
