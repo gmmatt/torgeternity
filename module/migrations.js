@@ -202,6 +202,36 @@ async function migrateImagestoWebp(options = { system: true, modules: true }) {
         return { img: convertImage(oldImg) }
     }
 
+    function imageToWebp(img) {
+        let imgarray = img.split(".")
+        let extensions = ["png", "jpg", "jpeg"]
+        if (extensions.includes(imgarray[imgarray.length - 1].toLowerCase())) {
+            imgarray[imgarray.length - 1] = "webp"
+            img = imgarray.join(".")
+        }
+        return img
+    }
+
+    //Deck back image migration
+    function convertImage(oldImg) {
+        let img = oldImg
+        if (
+            (options.system && isSystemImage(oldImg))
+        ) {
+            img = imageToWebp(img)
+        }
+        if (options.modules) {
+            img = convertModuleImage(img)
+        }
+        return img
+
+    }
+
+    function updateAllImagesData(document) {
+        let oldImg = document.data.img
+        return { img: convertImage(oldImg) }
+    }
+
     function embedsImageData(collection) {
         let updates = []
         for (let document of collection) {
