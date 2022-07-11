@@ -117,7 +117,7 @@ torgeternity.dnTypes = {
     targetWillpower: "torgeternity.dnTypes.targetWillpower",
     targetWillpowerMind: "torgeternity.dnTypes.targetWillpowerMind",
     targetLandVehicles: "torgeternity.dnTypes.targetLandVehicles",
-    targetWaterVehicles: "torgeternity.dyTypes.targetWaterVehicles",
+    targetWaterVehicles: "torgeternity.dnTypes.targetWaterVehicles",
     targetAirVehicles: "torgeternity.dnTypes.targetAirVehicles"
 
 }
@@ -251,114 +251,114 @@ torgeternity.sizes = {
 }
 
 torgeternity.statusEffects = [{
-        icon: 'systems/torgeternity/images/status-markers/stymied.webp',
-        id: 'stymied',
-        label: 'torgeternity.statusEffects.stymied',
-        name: 'stymied'
-    },
+    icon: 'systems/torgeternity/images/status-markers/stymied.webp',
+    id: 'stymied',
+    label: 'torgeternity.statusEffects.stymied',
+    name: 'stymied'
+},
 
-    {
-        icon: 'systems/torgeternity/images/status-markers/very-stymied.webp',
-        id: 'veryStymied',
-        label: 'torgeternity.statusEffects.veryStymied',
-        name: 'veryStymied'
-    },
+{
+    icon: 'systems/torgeternity/images/status-markers/very-stymied.webp',
+    id: 'veryStymied',
+    label: 'torgeternity.statusEffects.veryStymied',
+    name: 'veryStymied'
+},
 
-    {
-        icon: 'systems/torgeternity/images/status-markers/vulnerable.webp',
-        id: 'vulnerable',
-        label: 'torgeternity.statusEffects.vulnerable'
-    },
+{
+    icon: 'systems/torgeternity/images/status-markers/vulnerable.webp',
+    id: 'vulnerable',
+    label: 'torgeternity.statusEffects.vulnerable'
+},
 
-    {
-        icon: 'systems/torgeternity/images/status-markers/very-vulnerable.webp',
-        id: 'veryVulnerable',
-        label: 'torgeternity.statusEffects.veryVulnerable'
-    },
+{
+    icon: 'systems/torgeternity/images/status-markers/very-vulnerable.webp',
+    id: 'veryVulnerable',
+    label: 'torgeternity.statusEffects.veryVulnerable'
+},
 
-    {
-        icon: 'systems/torgeternity/images/status-markers/disconnected.webp',
-        id: 'disconnected',
-        label: 'torgeternity.statusEffects.disconnected'
-    },
+{
+    icon: 'systems/torgeternity/images/status-markers/disconnected.webp',
+    id: 'disconnected',
+    label: 'torgeternity.statusEffects.disconnected'
+},
 
-    {
-        icon: 'systems/torgeternity/images/status-markers/aiming.webp',
-        id: 'aiming',
-        label: 'torgeternity.statusEffects.aiming'
-    },
+{
+    icon: 'systems/torgeternity/images/status-markers/aiming.webp',
+    id: 'aiming',
+    label: 'torgeternity.statusEffects.aiming'
+},
 
-    {
-        icon: 'systems/torgeternity/images/status-markers/malfunction.webp',
-        id: 'malfunction',
-        label: 'torgeternity.statusEffects.malfunction'
-    },
+{
+    icon: 'systems/torgeternity/images/status-markers/malfunction.webp',
+    id: 'malfunction',
+    label: 'torgeternity.statusEffects.malfunction'
+},
 
-    {
-        icon: 'systems/torgeternity/images/status-markers/concentrating.webp',
-        id: 'concentrating',
-        label: 'torgeternity.statusEffects.concentrating'
-    },
+{
+    icon: 'systems/torgeternity/images/status-markers/concentrating.webp',
+    id: 'concentrating',
+    label: 'torgeternity.statusEffects.concentrating'
+},
 
-    {
-        icon: 'systems/torgeternity/images/status-markers/restrained.webp',
-        id: 'restrained',
-        label: 'torgeternity.statusEffects.restrained'
-    },
+{
+    icon: 'systems/torgeternity/images/status-markers/restrained.webp',
+    id: 'restrained',
+    label: 'torgeternity.statusEffects.restrained'
+},
 
-    {
-        icon: 'systems/torgeternity/images/status-markers/dark-2.png',
-        id: 'dim',
-        label: 'torgeternity.statusEffects.dim'
-    },
+{
+    icon: 'systems/torgeternity/images/status-markers/dark-2.png',
+    id: 'dim',
+    label: 'torgeternity.statusEffects.dim'
+},
 
-    {
-        icon: 'systems/torgeternity/images/status-markers/dark-4.png',
-        id: 'dark',
-        label: 'torgeternity.statusEffects.dark'
-    },
+{
+    icon: 'systems/torgeternity/images/status-markers/dark-4.png',
+    id: 'dark',
+    label: 'torgeternity.statusEffects.dark'
+},
 
-    {
-        icon: 'systems/torgeternity/images/status-markers/dark-6.png',
-        id: 'pitchBlack',
-        label: 'torgeternity.statusEffects.pitchBlack'
-    },
+{
+    icon: 'systems/torgeternity/images/status-markers/dark-6.png',
+    id: 'pitchBlack',
+    label: 'torgeternity.statusEffects.pitchBlack'
+},
 
-    {
-        icon: 'systems/torgeternity/images/status-markers/waiting.png',
-        id: 'waiting',
-        label: 'torgeternity.statusEffects.waiting'
-    },
+{
+    icon: 'systems/torgeternity/images/status-markers/waiting.png',
+    id: 'waiting',
+    label: 'torgeternity.statusEffects.waiting'
+},
 
-    {
-        icon: 'icons/svg/skull.svg',
-        id: 'dead',
-        label: 'torgeternity.statusEffects.dead'
-    },
+{
+    icon: 'icons/svg/skull.svg',
+    id: 'dead',
+    label: 'torgeternity.statusEffects.dead'
+},
 
-    {
-        icon: 'icons/svg/falling.svg',
-        id: 'prone',
-        label: 'torgeternity.statusEffects.prone'
-    },
+{
+    icon: 'icons/svg/falling.svg',
+    id: 'prone',
+    label: 'torgeternity.statusEffects.prone'
+},
 
-    {
-        icon: 'icons/svg/paralysis.svg',
-        id: 'incapacitated',
-        label: 'torgeternity.statusEffects.incapacitated'
-    },
+{
+    icon: 'icons/svg/paralysis.svg',
+    id: 'incapacitated',
+    label: 'torgeternity.statusEffects.incapacitated'
+},
 
-    {
-        icon: 'icons/svg/unconscious.svg',
-        id: 'unconscious',
-        label: 'torgeternity.statusEffects.unconscious'
-    },
+{
+    icon: 'icons/svg/unconscious.svg',
+    id: 'unconscious',
+    label: 'torgeternity.statusEffects.unconscious'
+},
 
-    {
-        icon: 'icons/svg/blind.svg',
-        id: 'blind',
-        label: 'torgeternity.statusEffects.blind'
-    }
+{
+    icon: 'icons/svg/blind.svg',
+    id: 'blind',
+    label: 'torgeternity.statusEffects.blind'
+}
 
     //TODO : create KO and defeat status
 
