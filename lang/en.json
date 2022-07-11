@@ -399,7 +399,7 @@
         "combat": {
             "nextKeep": "Next Round (Keep Current Card)",
             "nextNew": "Next Round (New Card)",
-            "dramaBack": "systems/torgeternity/images/cards/drama-back.jpg"
+            "dramaBack": "systems/torgeternity/images/cards/drama-back.webp"
         },
         "itemSheetDescriptions": {
             "perk": "Perk",
