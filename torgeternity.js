@@ -36,6 +36,7 @@ import { explode } from './module/explode.js';
 import { activateStandartScene } from './module/activateStandartScene.js'
 import { torgMigration } from "./module/migrations.js"
 
+//test
 
 Hooks.once("init", async function() {
     console.log("torgeternity | Initializing Torg Eternity System");
@@ -162,7 +163,7 @@ Hooks.on("ready", async function() {
 
 
     //migration script
-    if(game.user.isGM) torgMigration()
+    if (game.user.isGM) torgMigration()
 
 
 
@@ -260,12 +261,12 @@ Hooks.on("ready", async function() {
     //----pause image----
     //Hooks.on("renderPause", () => {
 
-        // Removing this because it doesn't appear to do anything any longer?
+    // Removing this because it doesn't appear to do anything any longer?
 
-        // let path = game.settings.get("torgeternity", "pauseMedia");
-        // let img = document.getElementById("pause").firstElementChild;
-        // path = "./" + path;
-        // img.style.content = `url(${path})`
+    // let path = game.settings.get("torgeternity", "pauseMedia");
+    // let img = document.getElementById("pause").firstElementChild;
+    // path = "./" + path;
+    // img.style.content = `url(${path})`
     //})
 
     //-------define a dialog for external links
@@ -399,9 +400,9 @@ Hooks.on("getMonarchHandComponents", (hand, components) => {
         onclick: (event, card) => {
             card.setFlag("torgeternity", "pooled", false);
             if (card.data.type == "destiny") {
-                card.pass(game.cards.get(game.settings.get("torgeternity", "deckSetting").destinyDiscard));
+                card.pass(game.cards.getName(game.settings.get("torgeternity", "deckSetting").destinyDiscard));
             } else {
-                card.pass(game.cards.get(game.settings.get("torgeternity", "deckSetting").cosmDiscard));
+                card.pass(game.cards.getName(game.settings.get("torgeternity", "deckSetting").cosmDiscard));
             }
             card.toMessage({ content: `<div class="card-draw flexrow"><span class="card-chat-tooltip"><img class="card-face" src="${card.img}"/><span><img src="${card.img}"></span></span><span class="card-name">${game.i18n.localize("torgeternity.chatText.discardsCard")} ${card.name}</span></div>` });
         }
@@ -424,9 +425,9 @@ Hooks.on("getMonarchHandComponents", (hand, components) => {
         onclick: (event, card) => {
             card.setFlag("torgeternity", "pooled", false);
             if (card.data.type == "destiny") {
-                card.pass(game.cards.get(game.settings.get("torgeternity", "deckSetting").destinyDiscard));
+                card.pass(game.cards.getName(game.settings.get("torgeternity", "deckSetting").destinyDiscard));
             } else {
-                card.pass(game.cards.get(game.settings.get("torgeternity", "deckSetting").cosmDiscard));
+                card.pass(game.cards.getName(game.settings.get("torgeternity", "deckSetting").cosmDiscard));
             }
             card.toMessage({ content: `<div class="card-draw flexrow"><span class="card-chat-tooltip"><img class="card-face" src="${card.img}"/><span><img src="${card.img}"></span></span><span class="card-name">${game.i18n.localize("torgeternity.chatText.playsCard")} ${card.name}</span></div>` })
         }
@@ -811,6 +812,7 @@ Hooks.on("renderCombatTracker", (combatTracker) => {
     for (let hand of hands) {
         hand.apps[combatTracker.id] = combatTracker;
     }
+
 })
 
 Hooks.on("renderCompendiumDirectory", (app, html, data) => {
@@ -860,17 +862,17 @@ Hooks.on("renderActorSheet", (app, html, data) => {
 Hooks.on('updateActor', (actor, change, options, userId) => {
     //updating playerList with users character up-to-date data
     ui.players.render(true);
-    
-    if(actor.type === "stormknight"){
+
+    if (actor.type === "stormknight") {
         let hand = actor.getDefaultHand()
-        //If there is no hand for that SK, and a GM is online, create one
-        if(!hand && game.userId === game.users.find(u=>u.isGM && u.active).id){
+            //If there is no hand for that SK, and a GM is online, create one
+        if (!hand && game.userId === game.users.find(u => u.isGM && u.active).id) {
             actor.createDefaultHand()
         }
         //If the update includes permissions, sync them to the hand
-        if(hand && change.permission && game.userId === userId){
+        if (hand && change.permission && game.userId === userId) {
             //DO NOT PUT ANYTHING ELSE IN THIS UPDATE! diff:false, recursive:false can easily nuke stuff
-            hand.update({permission: actor.getHandPermission()},{diff:false, recursive: false})
+            hand.update({ permission: actor.getHandPermission() }, { diff: false, recursive: false })
         }
     }
 });
@@ -878,8 +880,7 @@ Hooks.on('updateActor', (actor, change, options, userId) => {
 // by default creating a  hand for each stormknight
 Hooks.on("createActor", async(actor, options, userId) => {
     //run by first active GM. Will be skipped if no GM is present, but that's the best we can do at the moment
-    if (actor.type === "stormknight" && game.userId === game.users.find(u=>u.isGM && u.active).id) { 
+    if (actor.type === "stormknight" && game.userId === game.users.find(u => u.isGM && u.active).id) {
         actor.createDefaultHand()
     }
-
 })

@@ -13,7 +13,7 @@ export default class torgeternityActor extends Actor {
         //
         // NOTE: Threat skill values are created directly by user, but SK skill values are derived based on attribute + adds.
         //       
-        if(this.data._source.type === "stormknight"){
+        if (this.data._source.type === "stormknight") {
             for (let [name, skill] of Object.entries(skillset)) {
                 if (skill.adds === null) {
                     if (skill.unskilledUse === 1) {
@@ -271,9 +271,9 @@ export default class torgeternityActor extends Actor {
     //return a permission update object for use with the corresponding hand - which has the same owners as the SK, the default as observer, and deletes other permissions
     getHandPermission() {
         let handPermission = duplicate(this.data.permission)
-        for(let key of Object.keys(handPermission)){
+        for (let key of Object.keys(handPermission)) {
             //remove any permissions that are not owner
-            if(handPermission[key] < CONST.DOCUMENT_PERMISSION_LEVELS.OWNER){
+            if (handPermission[key] < CONST.DOCUMENT_PERMISSION_LEVELS.OWNER) {
                 delete handPermission[key]
             }
             //set default permission to observer

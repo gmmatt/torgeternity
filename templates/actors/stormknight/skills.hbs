@@ -3,8 +3,8 @@
         <a>{{localize "torgeternity.sheetLabels.skills"}}</a>
     </h2>
     {{#*inline "skillRow" content name attrTypes}}
-    <li title="Shift-click for enhanced skill test">
-        <span>
+    <li>
+        <span title="{{localize 'torgeternity.sheetLabels.skillRollHint'}}">
             <a class="skill-roll" data-testtype="skill" data-baseattribute="{{content.baseAttribute}}"
                 data-adds="{{content.adds}}" data-value="{{content.value}}" data-unskilleduse="{{content.unskilledUse}}"
                 data-name="{{name}}">

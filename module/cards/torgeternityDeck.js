@@ -29,7 +29,7 @@ export default class torgeternityDeck extends CardsPile {
         switch (button.dataset.action) {
             case "play":
                 card.setFlag("torgeternity", "pooled", false)
-                card.pass(game.cards.get(game.settings.get("torgeternity", "deckSetting").destinyDiscard));
+                card.pass(game.cards.getName(game.settings.get("torgeternity", "deckSetting").destinyDiscard));
                 card.toMessage({ content: `<div class="card-draw flexrow"><img class="card-face" src="${card.img}"/><h4 class="card-name">${game.i18n.localize("torgeternity.chatText.playsCard")} ${card.name}</h4>
             </div>` })
                 return;
@@ -42,11 +42,11 @@ export default class torgeternityDeck extends CardsPile {
                 return;
             case "discard":
                 card.setFlag("torgeternity", "pooled", false)
-                card.pass(game.cards.get(game.settings.get("torgeternity", "deckSetting").destinyDiscard));
+                card.pass(game.cards.getName(game.settings.get("torgeternity", "deckSetting").destinyDiscard));
                 card.toMessage({ content: `<div class="card-draw flexrow"><img class="card-face" src="${card.img}"/><h4 class="card-name">${game.i18n.localize("torgeternity.chatText.discardsCard")} ${card.name}</h4></div>` });
                 return;
             case "drawDestiny":
-                let destinyDeck = game.cards.get(game.settings.get("torgeternity", "deckSetting").destinyDeck);
+                let destinyDeck = game.cards.getName(game.settings.get("torgeternity", "deckSetting").destinyDeck);
                 if (destinyDeck.data.cards.size) {
                     const [firstCardKey] = destinyDeck.data.cards.keys(); // need to grab a card to get toMessage access
                     const card = destinyDeck.data.cards.get(firstCardKey);

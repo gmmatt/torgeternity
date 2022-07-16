@@ -398,7 +398,8 @@
         },
         "combat": {
             "nextKeep": "Next Round (Keep Current Card)",
-            "nextNew": "Next Round (New Card)"
+            "nextNew": "Next Round (New Card)",
+            "dramaBack": "systems/torgeternity/images/cards/drama-back.webp"
         },
         "itemSheetDescriptions": {
             "perk": "Perk",
@@ -639,7 +640,8 @@
             "spellRoll": "Spell Roll",
             "miracleRoll": "Miracle Roll",
             "psionicRoll": "Psionic Power Roll",
-            "bonusRoll": "Bonus Roll"
+            "bonusRoll": "Bonus Roll",
+            "toggleEquip": "Toggle Equip"
         },
         "possibilitiesReset": {
             "name": "Reset Storm Knight Possibilities",
@@ -665,8 +667,6 @@
             "dramaDiscard": "Drama Discard Pile",
             "destinyDiscard": "Destiny Discard Pile",
             "activeDrama": "Active Drama Card"
-
-
         },
         "scenes": {
             "reality": "Reality",
@@ -718,7 +718,6 @@
                 "name": "Hide foreign Compendiums",
                 "hint": "Select to hide all compendium in foreign language"
             },
-
             "deckSetting": {
                 "name": "Default card deck configuration",
                 "label": "Default card deck configuration",
@@ -764,17 +763,20 @@
             "noScreen": "No gm screen available",
             "noScreenMessage": "you don't have selected any gm screen. The gm screens are provided by the modules that you can find here: "
         },
+        "partySheet": {
+            "noCharacter": "This user doesn't own any character"
+
+        },
         "packs": {
             "basicRules": "torgeternity.basic-rules",
             "decks": "torgeternity.core-card-set"
+        },
+        "CARD": {
+            "TypeCosm": "Cosm",
+            "TypeDestiny": "Destiny",
+            "TypeDrama": "Drama",
+            "discard": "Discard",
+            "display": "Show this card to players"
         }
-    },
-    "CARD": {
-        "TypeCosm": "Cosm",
-        "TypeDestiny": "Destiny",
-        "TypeDrama": "Drama",
-        "discard": "Discard",
-        "display": "Show this card to players"
     }
-
 }

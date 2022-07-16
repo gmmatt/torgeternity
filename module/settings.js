@@ -136,9 +136,8 @@ export function registerTorgSettings() {
         type: String,
         default: "1.0.0"
     });
-
     //Hidden setting to determine whether module image updates are needed after migrating system images on intial update
-    game.settings.register("torgeternity", "moduleImageUpdate",{
+    game.settings.register("torgeternity", "moduleImageUpdate", {
         scope: "world",
         config: false,
         type: Boolean,

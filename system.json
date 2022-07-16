@@ -55,7 +55,7 @@
         },
         {
             "name": "archetypes-fr",
-            "label": "Archetypes (fr)",
+            "label": "Archétypes (fr)",
             "system": "torgeternity",
             "module": "torgeternity",
             "path": "packs/french/archetypes.db",
@@ -63,7 +63,7 @@
         },
         {
             "name": "basic-rules-fr",
-            "label": "regles basiques (fr)",
+            "label": "règles basiques (fr)",
             "system": "torgeternity",
             "module": "torgeternity",
             "path": "packs/french/basic-rules.db",
@@ -76,6 +76,14 @@
             "module": "torgeternity",
             "path": "packs/french/core-card-set.db",
             "entity": "Cards"
+        },
+        {
+            "name": "core-scenes-fr",
+            "label": "Scène Standard (fr)",
+            "system": "torgeternity",
+            "module": "torgeternity",
+            "path": "packs/french/standardscene.db",
+            "entity": "Scene"
         },
         {
             "name": "system-de-archetypen",
