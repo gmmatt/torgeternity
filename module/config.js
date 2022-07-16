@@ -83,7 +83,10 @@ torgeternity.perkTypes = {
     depravity: "torgeternity.perkTypes.depravity",
     theRace: "torgeternity.perkTypes.theRace",
     corruption: "torgeternity.perkTypes.corruption",
-    hope: "torgeternity.perkTypes.hope"
+    hope: "torgeternity.perkTypes.hope",
+    cursed: "torgeternity.perkTypes.cursed",
+    biotech: "torgeternity.perkTypes.biotech",
+    powerSuit: "torgeternity.perkTypes.powerSuit"
 }
 
 torgeternity.dnTypes = {
