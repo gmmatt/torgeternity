@@ -70,6 +70,14 @@ export async function torgMigration() {
 
 
     }
+
+    if(isNewerVersion("2.5.1", migrationVersion)){ //quick migration to fix any worlds which imported the incorrect decks in 2.5.0
+        let needsFix = false
+        for(let deck of game.cards.contents){
+            if(deck.data?.img?.includes("jpg")) needsFix = true
+        }
+        if(needsFix) await migrateImagestoWebp({system: true, modules: false})
+    }
     /*************************************************************
     New migrations go here.
 
