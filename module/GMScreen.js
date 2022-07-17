@@ -3,7 +3,7 @@ export default class GMScreen extends Application {
         const options = super.defaultOptions;
         options.template = "systems/torgeternity/templates/gmscreen/screen.html";
         options.width = "1300";
-        options.height = "600";
+        options.height = "500";
         options.id = "GMScreen"
         options.title = game.i18n.localize("torgeternity.gmScreen.title");
         options.resizable = true;
@@ -46,7 +46,7 @@ export default class GMScreen extends Application {
         let lang = game.settings.get("core", "language");
 
         // setting english as default
-        if (lang != "en" && lang != "de") {
+        if (lang != "en" && lang != "de" && lang != "fr") {
             lang = "en"
         }
         if (path == "none") {

@@ -178,7 +178,7 @@
             "targetTaunt": "Provocation de la cible",
             "targetTrick": "Ruse de la cible",
             "targetWillpower": "Volonté de la cible",
-            "targetFaith": "Foie de la cible",
+            "targetFaith": "Foi de la cible",
             "targetCharisma": "Charisme de la cible",
             "targetDexterity": "Dextérité de la cible",
             "targetMind": "Raison de la cible",
@@ -187,10 +187,14 @@
             "targetAlteration": "Altération de la cible",
             "targetConjuration": "Conjuration de la cible",
             "targetDivination": "Divination de la cible",
-            "targetKinesis": "Kinésie de la cible Kinesis",
+            "targetKinesis": "Kinésie de la cible",
             "targetPrecognition": "Précognition de la cible",
-            "targetStealth": "Discrétion de la cible"
-        },
+            "targetStealth": "Discrétion de la cible",
+            "targetWillpowerMind": "Volonté ou Esprit de la cible",
+            "targetLandVehicles": "Véhicules terrestres ou Dextérité de la cible",
+            "targetAirVehicles": "Véhicules aériens ou Dextérité de la cible",
+            "targetWaterVehicles": "Véhicules aquatiques ou Dextérité de la cible"
+               },
 
         "dnTypesBasic": {
             "veryEasy": "Très facile  (6)",
@@ -205,8 +209,8 @@
 
         "cosms": {
             "none": "(Sans cosm)",
-            "coreEarth": "Prime-Terre",
-            "livingLand": "Terre-Vivante",
+            "coreEarth": "Prime Terre",
+            "livingLand": "Terre Vivante",
             "nileEmpire": "Empire du Nil",
             "aysle": "Aysle",
             "cyberpapacy": "Cyberpapauté",
@@ -389,11 +393,13 @@
             "combatSkills": "Combat",
             "interactionSkills": "Interaction",
             "otherSkills": "Autre",
-            "targetDefense": "Défense de la cible"
+            "targetDefense": "Défense de la cible",
+            "defensesTip": "Cliquer pour faire un jet de défense active ou pour désactiver"
         },
         "combat": {
             "nextKeep": "Nouveau round (garder la carte actuelle)",
-            "nextNew": "Nouveau round (nouvelle carte Action)"
+            "nextNew": "Nouveau round (nouvelle carte Action)",
+            "dramaBack": "systems/torgeternity/images/cards/drama-back-fr.webp"
         },
         "itemSheetDescriptions": {
             "perk": "Atout",
@@ -554,7 +560,8 @@
                     "allOutAttack": "attaque totale",
                     "aimedShot": "tir visé (+4)",
                     "blindFire": "tir au jugé (-6)",
-                    "targetConcealment": "dissimulation de la cible"
+                    "targetConcealment": "dissimulation de la cible",
+                    "powerModifier": "Modificateur d'un pouvoir"
                 },
                 "result": {
                     "result": "Résultat",
@@ -566,10 +573,11 @@
                     "goodSuccess": "Succès supérieur",
                     "standartSuccess": "Succès simple",
                     "mishape": "Échec critique",
-                    "damage": "Dommage",
+                    "damage": "Dommages",
                     "toughness": "Résistance",
                     "noDamage": "Pas de dommages",
-                    "attackMissed": "Attaque ratée"
+                    "attackMissed": "Attaque ratée",
+                    "resetDefense": "Ne se défend plus activement."
                 }
             },
             "playsCard": "Jouer",
@@ -632,17 +640,18 @@
             "spellRoll": "Jet de sort",
             "miracleRoll": "Jet de miracle",
             "psionicRoll": "Jet de pouvoir psionique",
-            "bonusRoll": "Jet bonus"
+            "bonusRoll": "Jet bonus",
+            "toggleEquip": "Équiper/Déséquiper"
         },
         "possibilitiesReset": {
             "name": "Réinitialiser les possibilités",
             "hint": "Combien de possibilités les Chevaliers des tempêtes doivent-ils avoir ?"
         },
         "cosmDecks": {
-            "coreEarth": "Cartes Cosm Prime-Terre",
+            "coreEarth": "Cartes Cosm Prime Terre",
             "aysle": "Cartes Cosm Aysle",
             "cyberpapacy": "Cartes Cosm Cyberpapauté",
-            "livingLand": "Cartes Cosm Terre-Vivante",
+            "livingLand": "Cartes Cosm Terre Vivante",
             "nileEmpire": "Cartes Cosm Empire du Nil",
             "orrorsh": "Carte Cosm Orrorsh",
             "panPacifica": "Cartes Cosm Pan Pacifica",
@@ -658,8 +667,6 @@
             "dramaDiscard": "Défausse Cartes d'Action",
             "destinyDiscard": "Défausse Cartes du Destin",
             "activeDrama": "Carte Action Active"
-
-
         },
         "scenes": {
             "reality": "Réalité",
@@ -715,7 +722,6 @@
                 "name": "Configuration des paquets de cartes par défaut",
                 "label": "Configuration des paquets de cartes par défaut",
                 "hint": "Configuration ici de quels paquets seront piochés les différents type de cartes, ainsi que leurs défausses."
-
             },
             "defaultUserHand": {
                 "name": "Nom de la main de cartes par défaut de l'utilisateur",
@@ -727,8 +733,8 @@
             },
             "autoDamages": {
                 "name": "Application des dommages automatiques",
-                "hint": "Si coché, les chocs et les blessures seront automatiquement appliqués si le joueur à un token cible valide."
-
+                "hint": "Si coché, les chocs et les blessures seront automatiquement appliqués si le joueur a un token cible valide."
+           
             }
         },
         "skillDialogs": {
@@ -755,19 +761,22 @@
             "title": "Écran du meneur",
             "toggle": "Afficher/masquer l'écran",
             "noScreen": "Aucun écran sélectionné",
+            "noScreenMessage": "Vous n'avez sélectionné aucun écran. Les écrans sont disponibles dans les modules pour Torg Eternity disponibles ici : "
+        },
+        "partySheet": {
+            "noCharacter": "Cet utilisateur ne possède pas de personnage",
             "noScreenMessage": "Vous n'avez sélectionné aucun écran. Les écrans sont rendu disponible par les modules pour Torg Eternity disponibles ici : "
         },
         "packs": {
             "basicRules": "torgeternity.basic-rules-fr",
             "decks": "torgeternity.core-card-set-fr"
+        },
+        "CARD": {
+            "TypeCosm": "Cosm",
+            "TypeDestiny": "Destin",
+            "TypeDrama": "Action",
+            "discard": "Défausser",
+            "display": "Montrer cette carte aux joueurs"
         }
-    },
-    "CARD": {
-        "TypeCosm": "Cosm",
-        "TypeDestiny": "Destin",
-        "TypeDrama": "Action",
-        "discard": "Défausser",
-        "display": "Montrer cette carte aux joueurs"
     }
-
 }
