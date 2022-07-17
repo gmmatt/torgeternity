@@ -251,7 +251,7 @@ export default class torgeternityActor extends Actor {
         let cardData = {
             name: this.name,
             type: "hand",
-            permission: this.getHandPermission()
+            ownership: this.getHandOwnership()
         }
         let characterHand = await Cards.create(cardData);
 
@@ -269,16 +269,16 @@ export default class torgeternityActor extends Actor {
     }
 
     //return a permission update object for use with the corresponding hand - which has the same owners as the SK, the default as observer, and deletes other permissions
-    getHandPermission() {
-        let handPermission = duplicate(this.data.permission)
-        for(let key of Object.keys(handPermission)){
+    getHandOwnership() {
+        let handOwnership = duplicate(this.ownership)
+        for(let key of Object.keys(handOwnership)){
             //remove any permissions that are not owner
-            if(handPermission[key] < CONST.DOCUMENT_PERMISSION_LEVELS.OWNER){
-                delete handPermission[key]
+            if(handOwnership[key] < CONST.DOCUMENT_OWNERSHIP_LEVELS.OWNER){
+                delete handOwnership[key]
             }
             //set default permission to observer
-            handPermission.default = CONST.DOCUMENT_PERMISSION_LEVELS.OBSERVER
+            handOwnership.default = CONST.DOCUMENT_OWNERSHIP_LEVELS.OBSERVER
         }
-        return handPermission
+        return handOwnership
     }
 }
