@@ -230,7 +230,7 @@
             "electricSamurai": "Electric Samurai",
             "elf": "Elf",
             "faith": "Faith",
-            "kiPowers": "Ki Powers",
+            "kiPowers": "Vitality",     
             "leadership": "Leadership",
             "light": "Light",
             "occult": "Occult",
@@ -251,7 +251,11 @@
             "depravity": "Depravity",
             "theRace": "The Race",
             "corruption": "Corruption",
-            "hope": "Hope"
+            "hope": "Hope",
+            "cursed": "Cursed",
+            "biotech": "Biotech",
+            "powerSuit": "Power Suit"
+
         },
         "sheetLabels": {
             "editableTooltip": "expand the threat sheet to display editable fields",

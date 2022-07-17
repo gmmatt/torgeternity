@@ -8,6 +8,14 @@
 For manual installation, use the provided manifest URL in the "*Install System*" popup window 
 while managing game systems.
 
+v. 2.5.1
+- Fixed issue with card images in system (thanks BadIdeasBureau!)
+- Updated archetypes (known issue: archetype powers still not updated
+  to new data structure) (thanks Helmut/Algor!)
+- Added French compendiums (thanks Rwan!)
+- Added new perk categories from Orrorsh and Pan Pacifica books
+- Renamed "Ki Powers" to "Vitality" per Pan Pacifica backer preview
+
 v. 2.5.0
 - From Durak: When rolling for active defenses, an Active Effect
   is created that modifies those defenses.

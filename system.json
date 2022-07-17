@@ -4,7 +4,7 @@
     "description": "Torg Eternity character sheet for Foundry VTT.",
     "author": "Matt Ritchie",
 
-    "version": "2.5.0",
+    "version": "2.5.1",
 
     "minimumCoreVersion": "9",
     "compatibleCoreVersion": "9",
