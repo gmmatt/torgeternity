@@ -71,7 +71,7 @@ export default class torgeternityPile extends CardsPile {
                 return this.object.passDialog();
             case "reset":
                 this._sortStandard = true;
-                return this.object.reset();
+                return this.object.recall();
             case "shuffle":
                 this._sortStandard = false;
                 return this.object.shuffle();
@@ -84,7 +84,7 @@ export default class torgeternityPile extends CardsPile {
                 return card.update({ face: card.data.face === 0 ? null : card.data.face - 1 });
             case "return":
                 for (let i = 0; i < this.object.data.cards.size; i++) {
-                    this.object.data.cards.contents[i].reset()
+                    this.object.data.cards.contents[i].recall()
                 }
         }
 

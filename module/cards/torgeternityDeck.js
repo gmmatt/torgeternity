@@ -70,7 +70,7 @@ export default class torgeternityDeck extends CardsPile {
                 return this.object.passDialog();
             case "reset":
                 this._sortStandard = true;
-                return this.object.reset();
+                return this.object.recall();
             case "shuffle":
                 this._sortStandard = false;
                 return this.object.shuffle();
