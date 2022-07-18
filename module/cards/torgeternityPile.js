@@ -31,7 +31,8 @@ export default class torgeternityPile extends CardsPile {
             case "play":
                 card.setFlag("torgeternity", "pooled", false)
                 card.pass(game.cards.get(game.settings.get("torgeternity", "deckSetting").destinyDiscard));
-                card.toMessage({ content: `<div class="card-draw flexrow"><img class="card-face" src="${card.img}"/><h4 class="card-name">${game.i18n.localize("torgeternity.chatText.playsCard")} ${card.name}</h4>
+                card.toMessage({
+                    content: `<div class="card-draw flexrow"><img class="card-face" src="${card.img}"/><h4 class="card-name">${game.i18n.localize("torgeternity.chatText.playsCard")} ${card.data.name}</h4>
             </div>` })
                 return;
             case "view":
@@ -44,7 +45,7 @@ export default class torgeternityPile extends CardsPile {
             case "discard":
                 card.setFlag("torgeternity", "pooled", false);
                 card.pass(game.cards.get(game.settings.get("torgeternity", "deckSetting").destinyDiscard));
-                card.toMessage({ content: `<div class="card-draw flexrow"><img class="card-face" src="${card.img}"/><h4 class="card-name">${game.i18n.localize("torgeternity.chatText.discardsCard")} ${card.name}</h4></div>` });
+                card.toMessage({ content: `<div class="card-draw flexrow"><img class="card-face" src="${card.img}"/><h4 class="card-name">${game.i18n.localize("torgeternity.chatText.discardsCard")} ${card.data.name}</h4></div>` });
                 return;
             case "drawDestiny":
                 let destinyDeck = game.cards.get(game.settings.get("torgeternity", "deckSetting").destinyDeck);
