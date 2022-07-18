@@ -212,7 +212,7 @@
             "aysle": "Aysle",
             "cyberpapacy": "Cyberpapacy",
             "tharkold": "Tharkold",
-            "panPacifica": "Pan Pacifica",
+            "panPacifica": "Pan-Pacifica",
             "orrorsh": "Orrorsh",
             "other": "Other",
             "pure": "pure",
@@ -654,7 +654,7 @@
             "livingLand": "Living Land Cosm Deck",
             "nileEmpire": "Nile Empire Cosm Deck",
             "orrorsh": "Orrorsh Cosm Deck",
-            "panPacifica": "Pan Pacifica Cosm Deck",
+            "panPacifica": "Pan-Pacifica Cosm Deck",
             "tharkold": "Tharkold Cosm Deck"
         },
         "cardTypes": {
