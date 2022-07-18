@@ -249,9 +249,9 @@
             "theRace": "La Race",
             "corruption": "Corruption",
             "hope": "Espoir",
-            "cursed": "Cursed",
+            "cursed": "Maudit",
             "biotech": "Biotech",
-            "powerSuit": "Power Suit"
+            "powerSuit": "Armur énergétique"
         },
         "sheetLabels": {
             "editableTooltip": "Agrandissez la fiche pour faire apparaître les champs éditables",
