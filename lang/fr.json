@@ -133,7 +133,7 @@
             "category": "Catégorie",
             "cosm": "Cosm",
             "prerequisites": "Prérequis",
-            "timestaken": "Nombre de fois choisi",
+            "timestaken": "Nombre de choix",
             "description": "Description"
         },
         "enhancements": {
