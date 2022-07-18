@@ -763,7 +763,7 @@
             "noScreenMessage": "Vous n'avez sélectionné aucun écran. Les écrans sont disponibles dans les modules pour Torg Eternity disponibles ici : "
         },
         "partySheet": {
-            "noCharacter": "Cet utilisateur ne possède pas de personnage",
+            "noCharacter": "Cet utilisateur ne possède pas de personnage"
         },
         "packs": {
             "basicRules": "torgeternity.basic-rules-fr",
