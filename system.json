@@ -54,6 +54,14 @@
             "entity": "Scene"
         },
         {
+            "name": "core-scenes-fr",
+            "label": "Scène standard (fr)",
+            "system": "torgeternity",
+            "module": "torgeternity",
+            "path": "packs/french/standardscene.db",
+            "entity": "Scene"
+        },
+        {
             "name": "archetypes-fr",
             "label": "Archetypes (fr)",
             "system": "torgeternity",
