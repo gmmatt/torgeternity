@@ -37,7 +37,7 @@ export function prepareActiveEffectCategories(effects) {
     },
     inactive: {
       type: "inactive",
-      label: "Inactive Effects", label: `${game.i18n.localize("torgeternity.sheetLabels.inactiveEffects")}`,
+      label: `${game.i18n.localize("torgeternity.sheetLabels.inactiveEffects")}`,
 
       effects: []
     }
