@@ -564,8 +564,9 @@ export function renderSkillChat(test) {
 
     // Do we display the unskilled label for a Storm Knight?
     var unskilledTest = false;
-    if (test.actor.data.type === "stormknight" & test.testType != "attribute" & test.testType != "activeDefense") {
-        if (test.actor.data.data.skills[test.skillName].adds === 0 | test.actor.data.data.skills[test.skillName].adds === null) {
+    var myActor = game.actors.get(test.actor)
+    if (myActor.type === "stormknight" & test.testType != "attribute" & test.testType != "activeDefense") {
+        if (myActor.system.skills[test.skillName].adds === 0 | myActor.system.skills[test.skillName].adds === null) {
             unskilledTest = true;
         }
     }

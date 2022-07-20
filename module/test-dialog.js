@@ -26,9 +26,10 @@ export class testDialog extends FormApplication {
         data.config = CONFIG.torgeternity;
 
         // Set Modifiers from Actor Wounds and Status Effects
-        data.test.woundModifier = parseInt(-(data.test.actor.data.data.wounds.value));
-        data.test.stymiedModifier = parseInt(data.test.actor.data.data.stymiedModifier);
-        data.test.darknessModifier = parseInt(data.test.actor.data.data.darknessModifier);
+        let myActor = game.actors.get(data.test.actor)
+        data.test.woundModifier = parseInt(-(myActor.system.wounds.value));
+        data.test.stymiedModifier = parseInt(myActor.system.stymiedModifier);
+        data.test.darknessModifier = parseInt(myActor.system.darknessModifier);
         data.test.sizeModifier = 0;
         data.test.vulnerableModifier = 0;
 
