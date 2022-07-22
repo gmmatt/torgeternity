@@ -91,11 +91,11 @@ export function registerHelpers() {
         let actor = game.actors.get(actorId);
         if (actor.getDefaultHand()) {
             const stack = actor.getDefaultHand();
-            const hand = stack.data.cards
+            const hand = stack.cards
             var i = 0;
             var firstItemExists = false;
             for (i = 0; i < hand.size; i++) {
-                if (hand.document.availableCards[i].data.flags?.torgeternity?.pooled === true) {
+                if (hand.contents[i].flags?.torgeternity?.pooled === true) {
                     if (firstItemExists === true) {
                         poolList += ", " + '<span class="pool-tooltip">' + hand.document.availableCards[i].data.name + "<span><img src='" + hand.document.availableCards[i].img + "'></span></span>";
                     } else {
