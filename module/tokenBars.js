@@ -24,6 +24,7 @@ export function modifyTokenBars() {
         let posY = number === 0 ? this.h - h : 0;
         bar.position.set(0, posY);
     }
+    /*
     Token.prototype._drawEffect=async function (src, i, bg, w, tint) {
         let tex = await loadTexture(src, {fallback: 'icons/svg/hazard.svg'});
         let icon = this.hud.effects.addChild(new PIXI.Sprite(tex));
@@ -35,10 +36,11 @@ export function modifyTokenBars() {
         bg.drawRoundedRect(icon.x + 1, icon.y + 1, w - 2, w - 2, 2);
       }
     
-    Token.prototype.drawEffects=async function () {
-        this.hud.effects.removeChildren().forEach(c => c.destroy());
-        const tokenEffects = this.data.effects;
-        const actorEffects = this.actor?.temporaryEffects || [];
+    
+      Token.prototype.drawEffects=async function () {
+      this.hud.effects.removeChildren().forEach(c => c.destroy());
+      const tokenEffects = this.data.effects;
+      const actorEffects = this.actor?.temporaryEffects || [];
         let overlay = {
           src: this.data.overlayEffect,
           tint: null
@@ -73,6 +75,7 @@ export function modifyTokenBars() {
     
         // Draw overlay effect
         return this._drawOverlay(overlay)
-      }
     
+  }
+    */
 }
