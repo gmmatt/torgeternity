@@ -24,10 +24,10 @@ export function modifyTokenBars() {
         let posY = number === 0 ? this.h - h : 0;
         bar.position.set(0, posY);
     }
-    /*
+    
     Token.prototype._drawEffect=async function (src, i, bg, w, tint) {
         let tex = await loadTexture(src, {fallback: 'icons/svg/hazard.svg'});
-        let icon = this.hud.effects.addChild(new PIXI.Sprite(tex));
+        let icon = this.effects.addChild(new PIXI.Sprite(tex));
         icon.width = icon.height = w;
         const nr = Math.floor(this.data.height * 3);
         icon.x = Math.floor(i / nr) * w*-1;
@@ -38,7 +38,7 @@ export function modifyTokenBars() {
     
     
       Token.prototype.drawEffects=async function () {
-      this.hud.effects.removeChildren().forEach(c => c.destroy());
+      this.effects.removeChildren().forEach(c => c.destroy());
       const tokenEffects = this.data.effects;
       const actorEffects = this.actor?.temporaryEffects || [];
         let overlay = {
@@ -50,7 +50,7 @@ export function modifyTokenBars() {
         if ( tokenEffects.length || actorEffects.length ) {
           const promises = [];
           let w = Math.round(canvas.dimensions.size / 2 / 3) * 2;
-          let bg = this.hud.effects.addChild(new PIXI.Graphics()).beginFill(0x000000, 0.40).lineStyle(1.0, 0x000000);
+          let bg = this.effects.addChild(new PIXI.Graphics()).beginFill(0x000000, 0.40).lineStyle(1.0, 0x000000);
           let i = 0;
     
           // Draw actor effects first
@@ -77,5 +77,5 @@ export function modifyTokenBars() {
         return this._drawOverlay(overlay)
     
   }
-    */
+    
 }
