@@ -97,9 +97,9 @@ export function registerHelpers() {
             for (i = 0; i < hand.size; i++) {
                 if (hand.contents[i].flags?.torgeternity?.pooled === true) {
                     if (firstItemExists === true) {
-                        poolList += ", " + '<span class="pool-tooltip">' + hand.document.availableCards[i].data.name + "<span><img src='" + hand.document.availableCards[i].img + "'></span></span>";
+                        poolList += ", " + '<span class="pool-tooltip">' + hand.contents[i].name + "<span><img src='" + hand.contents[i].img + "'></span></span>";
                     } else {
-                        poolList = "<span class='pool-tooltip'>" + hand.document.availableCards[i].data.name + "<span><img src='" + hand.document.availableCards[i].img + "'></span></span>"
+                        poolList = "<span class='pool-tooltip'>" + hand.contents[i].name + "<span><img src='" + hand.contents[i].img + "'></span></span>"
                         //poolList = hand.document.availableCards[i].data.name;
                         firstItemExists = true;
                     }
