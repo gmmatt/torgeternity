@@ -133,7 +133,7 @@
             "category": "Catégorie",
             "cosm": "Cosm",
             "prerequisites": "Prérequis",
-            "timestaken": "Temps requis",
+            "timestaken": "Nombre de choix",
             "description": "Description"
         },
         "enhancements": {
@@ -160,7 +160,6 @@
             "applySize": "Appliquer la taille",
             "applyArmor": "Appliquer l'armure"
         },
-
         "dnTypes": {
             "veryEasy": "Très facile  (6)",
             "easy": "Facile (8)",
@@ -194,8 +193,7 @@
             "targetLandVehicles": "Véhicules terrestres ou Dextérité de la cible",
             "targetAirVehicles": "Véhicules aériens ou Dextérité de la cible",
             "targetWaterVehicles": "Véhicules aquatiques ou Dextérité de la cible"
-               },
-
+        },
         "dnTypesBasic": {
             "veryEasy": "Très facile  (6)",
             "easy": "Facile (8)",
@@ -206,7 +204,6 @@
             "heroic": "Héroïque (18)",
             "nearImpossible": "Presque impossible (20)"
         },
-
         "cosms": {
             "none": "(Sans cosm)",
             "coreEarth": "Prime Terre",
@@ -215,7 +212,7 @@
             "aysle": "Aysle",
             "cyberpapacy": "Cyberpapauté",
             "tharkold": "Tharkold",
-            "panPacifica": "Pan Pacifica",
+            "panPacifica": "Pan-Pacifica",
             "orrorsh": "Orrorsh",
             "other": "Autre",
             "pure": "zone pure",
@@ -225,12 +222,12 @@
         "perkTypes": {
             "cyberware": "Cybertechnologie",
             "darkness": "Ténèbres",
-            "dwarf": "Nains",
+            "dwarf": "Nain",
             "edeinos": "Edeinos",
             "electricSamurai": "Samouraï électrique",
             "elf": "Elfe",
             "faith": "Foi",
-            "kiPowers": "Pouvoirs du Ki",
+            "kiPowers": "Pouvoirs du Ki / Vitalité",
             "leadership": "Commandement",
             "light": "Lumière",
             "occult": "Occulte",
@@ -251,7 +248,10 @@
             "depravity": "Dépravation",
             "theRace": "La Race",
             "corruption": "Corruption",
-            "hope": "Espoir"
+            "hope": "Espoir",
+            "cursed": "Maudit",
+            "biotech": "Biotech",
+            "powerSuit": "Armure énergétique"
         },
         "sheetLabels": {
             "editableTooltip": "Agrandissez la fiche pour faire apparaître les champs éditables",
@@ -654,7 +654,7 @@
             "livingLand": "Cartes Cosm Terre Vivante",
             "nileEmpire": "Cartes Cosm Empire du Nil",
             "orrorsh": "Carte Cosm Orrorsh",
-            "panPacifica": "Cartes Cosm Pan Pacifica",
+            "panPacifica": "Cartes Cosm Pan-Pacifica",
             "tharkold": "Cartes Cosm Tharkold"
         },
         "cardTypes": {
@@ -734,7 +734,6 @@
             "autoDamages": {
                 "name": "Application des dommages automatiques",
                 "hint": "Si coché, les chocs et les blessures seront automatiquement appliqués si le joueur a un token cible valide."
-           
             }
         },
         "skillDialogs": {
@@ -764,19 +763,18 @@
             "noScreenMessage": "Vous n'avez sélectionné aucun écran. Les écrans sont disponibles dans les modules pour Torg Eternity disponibles ici : "
         },
         "partySheet": {
-            "noCharacter": "Cet utilisateur ne possède pas de personnage",
-            "noScreenMessage": "Vous n'avez sélectionné aucun écran. Les écrans sont rendu disponible par les modules pour Torg Eternity disponibles ici : "
+            "noCharacter": "Cet utilisateur ne possède pas de personnage"
         },
         "packs": {
             "basicRules": "torgeternity.basic-rules-fr",
             "decks": "torgeternity.core-card-set-fr"
-        },
-        "CARD": {
-            "TypeCosm": "Cosm",
-            "TypeDestiny": "Destin",
-            "TypeDrama": "Action",
-            "discard": "Défausser",
-            "display": "Montrer cette carte aux joueurs"
         }
+    },
+    "CARD": {
+        "TypeCosm": "Cosm",
+        "TypeDestiny": "Destin",
+        "TypeDrama": "Action",
+        "discard": "Défausser",
+        "display": "Montrer cette carte aux joueurs"
     }
 }
