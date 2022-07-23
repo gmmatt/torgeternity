@@ -1,16 +1,16 @@
 <p class="item-data-label">
-    {{localize "torgeternity.sheetLabels.clearance"}} : {{localize (concatClearanceLevel data.data.details.clearance)}}
+    {{localize "torgeternity.sheetLabels.clearance"}} : {{localize (concatClearanceLevel actor.system.details.clearance)}}
 </p>
 
 <p class='attribut-block'>
     <span class="main-label">{{localize "torgeternity.sheetLabels.unspent"}}</span>
-    <input class="roundBack" name="data.xp.unspent" type="number" value="{{data.data.xp.unspent}}" data=dtype="Number"
+    <input class="roundBack" name="data.xp.unspent" type="number" value="{{actor.system.xp.unspent}}" data=dtype="Number"
         {{#if disableXP}} disabled title="{{localize 'torgeternity.sheetLabels.xpOnlyGM'}}" {{/if}} />
 
 </p>
 <p class='attribut-block'>
     <span class="main-label">{{localize "torgeternity.sheetLabels.xp"}}</span>
-    <input name="data.xp.earned" class="roundBack" type="number" value="{{data.data.xp.earned}}" data=dtype="Number"
+    <input name="data.xp.earned" class="roundBack" type="number" value="{{actor.system.xp.earned}}" data=dtype="Number"
         {{#if disableXP}} disabled title="{{localize 'torgeternity.sheetLabels.xpOnlyGM'}}" {{/if}} />
 
 </p>
