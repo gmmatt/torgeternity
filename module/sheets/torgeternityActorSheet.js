@@ -382,7 +382,7 @@ export default class torgeternityActorSheet extends ActorSheet {
         
         let test = {
             testType: event.currentTarget.dataset.testtype,
-            actor: this.actor._id,
+            actor: this.actor.uuid,
             actorPic: this.actor.data.img,
             actorType: this.actor.data.type,
             isAttack: false,
@@ -427,7 +427,7 @@ export default class torgeternityActorSheet extends ActorSheet {
 
         let test = {
             testType: "interactionAttack",
-            actor: this.actor._id,
+            actor: this.actor.uuid,
             actorPic: this.actor.data.img,
             actorType: this.actor.data.type,
             isAttack: false,
@@ -487,7 +487,7 @@ export default class torgeternityActorSheet extends ActorSheet {
         let test = {
             testType: "activeDefense",
             activelyDefending: false,
-            actor: this.actor._id,
+            actor: this.actor.uuid,
             actorPic: this.actor.data.img,
             actorType: this.actor.data.type,
             isAttack: false,
@@ -516,7 +516,7 @@ export default class torgeternityActorSheet extends ActorSheet {
         let test = {
             testType: "activeDefense",
             activelyDefending: true,
-            actor: this.actor._id,
+            actor: this.actor.uuid,
             actorPic: this.actor.img,
             actorType: this.actor.type,
             isAttack: false,
@@ -606,7 +606,7 @@ export default class torgeternityActorSheet extends ActorSheet {
         
         let test = {
             testType: "attack",
-            actor: this.actor._id,
+            actor: this.actor.uuid,
             actorPic: this.actor.data.img,
             actorType: this.actor.data.type,
             attackType: attackType,
@@ -690,7 +690,7 @@ export default class torgeternityActorSheet extends ActorSheet {
     
         let test = {
             testType: "power",
-            actor: this.actor._id,
+            actor: this.actor.uuid,
             actorPic: this.actor.data.img,
             actorType: this.actor.data.type,
             attackType: "power",
