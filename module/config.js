@@ -120,7 +120,7 @@ torgeternity.dnTypes = {
     targetWillpower: "torgeternity.dnTypes.targetWillpower",
     targetWillpowerMind: "torgeternity.dnTypes.targetWillpowerMind",
     targetLandVehicles: "torgeternity.dnTypes.targetLandVehicles",
-    targetWaterVehicles: "torgeternity.dynTypes.targetWaterVehicles",
+    targetWaterVehicles: "torgeternity.dnTypes.targetWaterVehicles",
     targetAirVehicles: "torgeternity.dnTypes.targetAirVehicles"
 
 }
