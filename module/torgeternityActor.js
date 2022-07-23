@@ -5,24 +5,24 @@ export default class torgeternityActor extends Actor {
     prepareBaseData() {
 
         //Set base fatigue to 2
-        this.data.data.other.fatigue = 2;
+        this.system.other.fatigue = 2;
 
-        var skillset = this.data.data.skills;
+        var skillset = this.system.skills;
 
         // Derive Skill values for Storm Knights
         //
         // NOTE: Threat skill values are created directly by user, but SK skill values are derived based on attribute + adds.
         //       
-        if(this.data._source.type === "stormknight"){
+        if(this._source.type === "stormknight"){
             for (let [name, skill] of Object.entries(skillset)) {
                 if (skill.adds === null) {
                     if (skill.unskilledUse === 1) {
-                        skill.value = parseInt(this.data.data.attributes[skill.baseAttribute]);
+                        skill.value = parseInt(this.system.attributes[skill.baseAttribute]);
                     } else {
                         skill.value = "-"
                     }
                 } else {
-                    skill.value = parseInt(skill.adds) + parseInt(this.data.data.attributes[skill.baseAttribute]);
+                    skill.value = parseInt(skill.adds) + parseInt(this.system.attributes[skill.baseAttribute]);
                 }
             }
         }
@@ -30,48 +30,48 @@ export default class torgeternityActor extends Actor {
 
         // Set Defensive Values
         if (skillset.dodge.value) {
-            this.data.data.dodgeDefense = this.data.data.skills.dodge.value;
+            this.system.dodgeDefense = this.system.skills.dodge.value;
         } else {
-            this.data.data.dodgeDefense = this.data.data.attributes.dexterity
+            this.system.dodgeDefense = this.system.attributes.dexterity
         };
 
         if (skillset.meleeWeapons.value) {
-            this.data.data.meleeWeaponsDefense = this.data.data.skills.meleeWeapons.value;
+            this.system.meleeWeaponsDefense = this.system.skills.meleeWeapons.value;
         } else {
-            this.data.data.meleeWeaponsDefense = this.data.data.attributes.dexterity
+            this.system.meleeWeaponsDefense = this.system.attributes.dexterity
         };
 
         if (skillset.unarmedCombat.value) {
-            this.data.data.unarmedCombatDefense = this.data.data.skills.unarmedCombat.value;
+            this.system.unarmedCombatDefense = this.system.skills.unarmedCombat.value;
         } else {
-            this.data.data.unarmedCombatDefense = this.data.data.attributes.dexterity
+            this.system.unarmedCombatDefense = this.system.attributes.dexterity
         };
 
         if (skillset.intimidation.value) {
-            this.data.data.intimidationDefense = this.data.data.skills.intimidation.value;
+            this.system.intimidationDefense = this.system.skills.intimidation.value;
         } else {
-            this.data.data.intimidationDefense = this.data.data.attributes.spirit
+            this.system.intimidationDefense = this.system.attributes.spirit
         };
 
         if (skillset.maneuver.value) {
-            this.data.data.maneuverDefense = this.data.data.skills.maneuver.value;
+            this.system.maneuverDefense = this.system.skills.maneuver.value;
         } else {
-            this.data.data.maneuverDefense = this.data.data.attributes.dexterity
+            this.system.maneuverDefense = this.system.attributes.dexterity
         };
 
         if (skillset.taunt.value) {
-            this.data.data.tauntDefense = this.data.data.skills.taunt.value;
+            this.system.tauntDefense = this.system.skills.taunt.value;
         } else {
-            this.data.data.tauntDefense = this.data.data.attributes.charisma
+            this.system.tauntDefense = this.system.attributes.charisma
         };
 
         if (skillset.trick.value) {
-            this.data.data.trickDefense = this.data.data.skills.trick.value;
+            this.system.trickDefense = this.system.skills.trick.value;
         } else {
-            this.data.data.trickDefense = this.data.data.attributes.mind
+            this.system.trickDefense = this.system.attributes.mind
         };
 
-        if (this.data._source.type === "stormknight") {
+        if (this._source.type === "stormknight") {
             mergeObject(this.data.token, {
 
                 actorLink: true,
@@ -79,101 +79,101 @@ export default class torgeternityActor extends Actor {
             }, { overwrite: true });
 
             // Set base wounds to 3
-            this.data.data.wounds.max = 3;
+            this.system.wounds.max = 3;
 
             //Set base shock to Spirit
-            this.data.data.shock.max = this.data.data.attributes.spirit;
+            this.system.shock.max = this.system.attributes.spirit;
 
             //Set base move and run
-            this.data.data.other.move = this.data.data.attributes.dexterity;
-            this.data.data.other.run = parseInt(this.data.data.attributes.dexterity) * 3;
+            this.system.other.move = this.system.attributes.dexterity;
+            this.system.other.run = parseInt(this.system.attributes.dexterity) * 3;
 
             //Set base armor to zero
-            this.data.data.other.armor = 0;
+            this.system.other.armor = 0;
 
             //Set base toughness
-            this.data.data.other.toughness = parseInt(this.data.data.attributes.strength) + parseInt(this.data.data.other.armor);
+            this.system.other.toughness = parseInt(this.system.attributes.strength) + parseInt(this.system.other.armor);
 
             //Set axioms based on home reality
-            let magicAxiom = this.data.data.axioms.magic;
-            let socialAxiom = this.data.data.axioms.social;
-            let spiritAxiom = this.data.data.axioms.spirit;
-            let techAxiom = this.data.data.axioms.tech;
-            switch (this.data.data.other.cosm) {
+            let magicAxiom = this.system.axioms.magic;
+            let socialAxiom = this.system.axioms.social;
+            let spiritAxiom = this.system.axioms.spirit;
+            let techAxiom = this.system.axioms.tech;
+            switch (this.system.other.cosm) {
                 case "coreEarth":
-                    this.data.data.axioms.magic = 9;
-                    this.data.data.axioms.social = 23;
-                    this.data.data.axioms.spirit = 10;
-                    this.data.data.axioms.tech = 23;
+                    this.system.axioms.magic = 9;
+                    this.system.axioms.social = 23;
+                    this.system.axioms.spirit = 10;
+                    this.system.axioms.tech = 23;
                     break;
                 case "aysle":
-                    this.data.data.axioms.magic = 24;
-                    this.data.data.axioms.social = 16;
-                    this.data.data.axioms.spirit = 18;
-                    this.data.data.axioms.tech = 14;
+                    this.system.axioms.magic = 24;
+                    this.system.axioms.social = 16;
+                    this.system.axioms.spirit = 18;
+                    this.system.axioms.tech = 14;
                     break;
                 case "cyberpapacy":
-                    this.data.data.axioms.magic = 15;
-                    this.data.data.axioms.social = 18;
-                    this.data.data.axioms.spirit = 16;
-                    this.data.data.axioms.tech = 26;
+                    this.system.axioms.magic = 15;
+                    this.system.axioms.social = 18;
+                    this.system.axioms.spirit = 16;
+                    this.system.axioms.tech = 26;
                     break;
                 case "livingLand":
-                    this.data.data.axioms.magic = 1;
-                    this.data.data.axioms.social = 7;
-                    this.data.data.axioms.spirit = 24;
-                    this.data.data.axioms.tech = 6;
+                    this.system.axioms.magic = 1;
+                    this.system.axioms.social = 7;
+                    this.system.axioms.spirit = 24;
+                    this.system.axioms.tech = 6;
                     break;
                 case "nileEmpire":
-                    this.data.data.axioms.magic = 14;
-                    this.data.data.axioms.social = 20;
-                    this.data.data.axioms.spirit = 18;
-                    this.data.data.axioms.tech = 20;
+                    this.system.axioms.magic = 14;
+                    this.system.axioms.social = 20;
+                    this.system.axioms.spirit = 18;
+                    this.system.axioms.tech = 20;
                     break;
                 case "orrorsh":
-                    this.data.data.axioms.magic = 16;
-                    this.data.data.axioms.social = 18;
-                    this.data.data.axioms.spirit = 16;
-                    this.data.data.axioms.tech = 18;
+                    this.system.axioms.magic = 16;
+                    this.system.axioms.social = 18;
+                    this.system.axioms.spirit = 16;
+                    this.system.axioms.tech = 18;
                     break;
                 case "panPacifica":
-                    this.data.data.axioms.magic = 4;
-                    this.data.data.axioms.social = 24;
-                    this.data.data.axioms.spirit = 8;
-                    this.data.data.axioms.tech = 24;
+                    this.system.axioms.magic = 4;
+                    this.system.axioms.social = 24;
+                    this.system.axioms.spirit = 8;
+                    this.system.axioms.tech = 24;
                     break;
                 case "tharkold":
-                    this.data.data.axioms.magic = 12;
-                    this.data.data.axioms.social = 25;
-                    this.data.data.axioms.spirit = 4;
-                    this.data.data.axioms.tech = 25;
+                    this.system.axioms.magic = 12;
+                    this.system.axioms.social = 25;
+                    this.system.axioms.spirit = 4;
+                    this.system.axioms.tech = 25;
                     break;
                 case "other":
-                    this.data.data.axioms.magic = magicAxiom;
-                    this.data.data.axioms.social = socialAxiom;
-                    this.data.data.axioms.spirit = spiritAxiom;
-                    this.data.data.axioms.tech = techAxiom;
+                    this.system.axioms.magic = magicAxiom;
+                    this.system.axioms.social = socialAxiom;
+                    this.system.axioms.spirit = spiritAxiom;
+                    this.system.axioms.tech = techAxiom;
                     break;
                 default:
-                    this.data.data.axioms.magic = "";
-                    this.data.data.axioms.social = "";
-                    this.data.data.axioms.spirit = "";
-                    this.data.data.axioms.tech = "";
+                    this.system.axioms.magic = "";
+                    this.system.axioms.social = "";
+                    this.system.axioms.spirit = "";
+                    this.system.axioms.tech = "";
                     break;
             }
 
             //Set clearance level
 
-            if (this.data.data.xp.earned < 50) {
-                this.data.data.details.clearance = "alpha";
-            } else if (this.data.data.xp.earned < 200) {
-                this.data.data.details.clearance = "beta";
-            } else if (this.data.data.xp.earned < 500) {
-                this.data.data.details.clearance = "gamma";
-            } else if (this.data.data.xp.earned < 1000) {
-                this.data.data.details.clearance = "delta";
+            if (this.system.xp.earned < 50) {
+                this.system.details.clearance = "alpha";
+            } else if (this.system.xp.earned < 200) {
+                this.system.details.clearance = "beta";
+            } else if (this.system.xp.earned < 500) {
+                this.system.details.clearance = "gamma";
+            } else if (this.system.xp.earned < 1000) {
+                this.system.details.clearance = "delta";
             } else {
-                this.data.data.details.clearance = "omega";
+                this.system.details.clearance = "omega";
             };  
 
             //Set armor and shield toggle states
@@ -200,8 +200,8 @@ export default class torgeternityActor extends Actor {
 
         /*
         //Set unknown edit states to none
-        if (this.data.data.editstate === undefined) {
-            this.data.data.editstate = "inline";
+        if (this.system.editstate === undefined) {
+            this.system.editstate = "inline";
         };  */
 
     }
@@ -212,23 +212,23 @@ export default class torgeternityActor extends Actor {
         var i;
         const effects = this.data.effects;
         for (i = 0; i < effects.contents.length; i++) {
-            if (effects.contents[i].data.flags.hasOwnProperty("core")) {
-                if (effects.contents[i].data.flags.core.statusId === "stymied") {
-                    this.data.data.stymiedModifier = -2;
-                } else if (effects.contents[i].data.flags.core.statusId === "veryStymied") {
-                    this.data.data.stymiedModifier = -4;
+            if (effects.contents[i].flags.hasOwnProperty("core")) {
+                if (effects.contents[i].flags.core.statusId === "stymied") {
+                    this.system.stymiedModifier = -2;
+                } else if (effects.contents[i].flags.core.statusId === "veryStymied") {
+                    this.system.stymiedModifier = -4;
                 }
-                if (effects.contents[i].data.flags.core.statusId === "vulnerable") {
-                    this.data.data.vulnerableModifier = 2;
-                } else if (effects.contents[i].data.flags.core.statusId === "veryVulnerable") {
-                    this.data.data.vulnerableModifier = 4
+                if (effects.contents[i].flags.core.statusId === "vulnerable") {
+                    this.system.vulnerableModifier = 2;
+                } else if (effects.contents[i].flags.core.statusId === "veryVulnerable") {
+                    this.system.vulnerableModifier = 4
                 }
-                if (effects.contents[i].data.flags.core.statusId === "dim") {
-                    this.data.data.darknessModifier = -2
-                } else if (effects.contents[i].data.flags.core.statusId === "dark") {
-                    this.data.data.darknessModifier = -4
-                } else if (effects.contents[i].data.flags.core.statusId === "pitchBlack") {
-                    this.data.data.darknessModifier = -6
+                if (effects.contents[i].flags.core.statusId === "dim") {
+                    this.system.darknessModifier = -2
+                } else if (effects.contents[i].flags.core.statusId === "dark") {
+                    this.system.darknessModifier = -4
+                } else if (effects.contents[i].flags.core.statusId === "pitchBlack") {
+                    this.system.darknessModifier = -6
                 }
             }
         }
