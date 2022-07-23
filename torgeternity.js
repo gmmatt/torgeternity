@@ -65,7 +65,8 @@ Hooks.once("init", async function() {
 
 
     //----scenes
-    CONFIG.Scene.sheetClass = torgeternitySceneConfig;
+    // CONFIG.Scene.sheetClass = torgeternitySceneConfig;
+    DocumentSheetConfig.registerSheet(Scene, 'torgeternity', torgeternitySceneConfig, {label: "Torg Eternity Scene Config", makeDefault: true});
     CONFIG.ui.nav = torgeternityNav;
 
     //---custom user class
