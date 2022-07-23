@@ -39,10 +39,10 @@ export function modifyTokenBars() {
     
       Token.prototype.drawEffects=async function () {
       this.effects.removeChildren().forEach(c => c.destroy());
-      const tokenEffects = this.data.effects;
+      const tokenEffects = this.effects;
       const actorEffects = this.actor?.temporaryEffects || [];
         let overlay = {
-          src: this.data.overlayEffect,
+          src: this.overlayEffect,
           tint: null
         };
     

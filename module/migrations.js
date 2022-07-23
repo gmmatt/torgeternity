@@ -1,5 +1,5 @@
 export async function torgMigration(){
-    const currentVersion = game.system.data.version
+    const currentVersion = game.system.version
     const migrationVersion = game.settings.get("torgeternity", "migrationVersion")
 
 

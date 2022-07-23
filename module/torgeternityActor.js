@@ -72,7 +72,7 @@ export default class torgeternityActor extends Actor {
         };
 
         if (this._source.type === "stormknight") {
-            mergeObject(this.data.token, {
+            mergeObject(this.prototypeToken, {
 
                 actorLink: true,
                 disposition: 1
@@ -178,7 +178,7 @@ export default class torgeternityActor extends Actor {
 
             //Set armor and shield toggle states
             var i;
-            for (i = 0; i < this.data.items.length; i++) {
+            for (i = 0; i < this.items.length; i++) {
                 var item = this.data.items[i];
                 if (item.type === "shield") {
                     if (item.data.equipped === true) {
@@ -210,7 +210,7 @@ export default class torgeternityActor extends Actor {
         super.applyActiveEffects();
 
         var i;
-        const effects = this.data.effects;
+        const effects = this.effects;
         for (i = 0; i < effects.contents.length; i++) {
             if (effects.contents[i].flags.hasOwnProperty("core")) {
                 if (effects.contents[i].flags.core.statusId === "stymied") {
