@@ -15,7 +15,7 @@ export default class torgeternityActorSheet extends ActorSheet {
     constructor(...args) {
         super(...args);
 
-        if (this.object.data.type === "threat") {
+        if (this.object.type === "threat") {
             this.options.width = this.position.width = 485;
             this.options.height = this.position.height = 350;
 
@@ -44,7 +44,7 @@ export default class torgeternityActorSheet extends ActorSheet {
     get template() {
 
         //modified path => one folder per type
-        return `systems/torgeternity/templates/actors/${this.actor.data.type}/main.hbs`;
+        return `systems/torgeternity/templates/actors/${this.actor.type}/main.hbs`;
 
     }
 
