@@ -230,14 +230,14 @@ div.actor ::-webkit-scrollbar {
     background-size: 100% 100%;
     color: black;
 }
-
+/* Commenting out - this is interfering with journal formatting under v10
 .journal-sheet .window-content button[name="submit"] {
     position: absolute;
     bottom: 0px;
     left: -2px;
     background-color: rgba(0, 0, 0, 0.68);
 }
-
+*/
 .journal-sheet .window-content input[type="text"],
 .journal-sheet .window-content select {
     margin-top: 4%;
@@ -250,13 +250,13 @@ div.actor ::-webkit-scrollbar {
     font-weight: bold;
     color: #000;
 }
-
+/* Commenting out - this is interfering with journal formatting under v10
 .journal-sheet .window-content input[type="text"] {
     position: absolute;
     top: 3%;
     margin-left: 4%;
 }
-
+*/
 .journal-sheet .window-content select {
     position: absolute;
     top: 9%;
