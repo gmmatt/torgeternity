@@ -2,8 +2,8 @@
     <h3 class="item-type"><span>{{localize "torgeternity.itemSheetDescriptions.implant"}}</span></h3>
 
     <header class="sheet-header">
-        <img src="{{item.img}}" data-edit="img" title="{{item.name}}"  />
-        <h1><input name="name" type="text" value="{{item.name}}" placeholder="implant Name"
+        <img src="{{img}}" data-edit="img" title="{{name}}"  />
+        <h1><input name="name" type="text" value="{{name}}" placeholder="implant Name"
                  />
         </h1>
     </header>
@@ -22,8 +22,8 @@
                     <p class="item-data-label">
                         {{localize "torgeternity.gear.cosm"}}
                     </p>
-                    <select name="data.cosm" class="input-box">
-                        {{#select data.data.cosm}}
+                    <select name="cosm" class="input-box">
+                        {{#select cosm}}
                         {{#each config.cosmTypes as |name type|}}
                         <option value="{{localize name}}">{{localize name}}</option>
                         {{/each}}
@@ -32,21 +32,21 @@
                     <p class="item-data-label">
                         {{localize "torgeternity.gear.techlevel"}}
                     </p>
-                    <input name="data.techlevel" type="number" value="{{data.data.techlevel}}" class="input-box" />
+                    <input name="techlevel" type="number" value="{{techlevel}}" class="input-box" />
                     <p class="item-data-label">
                         {{localize "torgeternity.gear.price"}}/{{torgeternity.gear.value}}
                     </p>
-                    <input name="data.price" type="text" value="{{data.data.price}}" class="input-box-small" />
-                    <input name="data.value" type="number" value="{{data.data.value}}" class="input-box-small" />
+                    <input name="price" type="text" value="{{price}}" class="input-box-small" />
+                    <input name="value" type="number" value="{{value}}" class="input-box-small" />
                 </div>
                 <div class="main-content">
                     <!-- right column -->
                     <p class="item-data-label">
                         {{localize "torgeternity.gear.notes"}}&nbsp;
-                        <input name="data.notes" type="text" value="{{data.data.notes}}" class="input-box" />
+                        <input name="notes" type="text" value="{{notes}}" class="input-box" />
                     </p>
-                    <div name="data.description" class="item-description-textarea">
-                        {{editor content=data.data.description target="data.description" button=true owner=owner editable=editable}}
+                    <div name="description" class="item-description-textarea">
+                        {{editor content=description target="data.description" button=true owner=owner editable=editable}}
                     </div>
                 </div>
             </div>
