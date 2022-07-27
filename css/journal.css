@@ -1,13 +1,15 @@
 /*New Journal window styling, 2nd section for restyling the submit changes button*/
-.journal-sheet .window-content {
+.window-content {
     background-image: url(../images/journal-background.webp);
 }
 
-.journal-sheet .window-content .editor {
-    padding: 0%;
-    top: 12%;
-    height: 82%;
-    width: 91.5%;
+.window-content div.editor {
+    top: 5%;
+    margin-top: 2%;
+    margin-left: 4%;
+    width: 90%;
+    height: 80%;
+    padding: 2%;
 }
 
 .editor-content {
@@ -24,11 +26,11 @@
 }
 
 /*preventing buttons to go under content*/
-.app.window-app.sheet.journal-sheet section.window-content footer.sheet-footer {
+.app.window-app.sheet section.window-content footer.sheet-footer {
     margin-top: 80px;
 }
 
-.app.window-app.sheet.journal-sheet nav.directory {
+.app.window-app.sheet nav.directory {
     background: url(../images/journal-background.webp);
     background-size: auto 100%;
     box-shadow: -20px 0px 150px black inset,
@@ -36,14 +38,14 @@
     padding: 8%;
 }
 
-.journal-sheet nav .pages-list .directory-item.active {
+nav .pages-list .directory-item.active {
     border-color: #009fff;
     box-shadow: 0px 5px 10px #009fff63 inset;
 }
 
 .window-app .window-content form button,
 .window-app .window-content form select,
-.journal-sheet .directory .action-buttons button {
+.directory .action-buttons button {
     text-shadow: black 1.3px 1.3px 0px,
         black 1.3px -1.3px 0px,
         black -1.3px 1.3px 0px,
@@ -92,7 +94,7 @@ body#tinymce.mce-content-body {
 /*/fixed stylebleeds*/
 /*Changing safe button on journal entry*/
 /* Reversed changes to save button to improve v10 Compatibility
-.journal-sheet .window-content button[name="submit"]{
+ .window-content button[name="submit"]{
     background-color: rgba(0, 0, 0, 0.45);
     text-shadow:    black    1.3px 1.3px 0px,
                     black    1.3px -1.3px 0px,
@@ -107,23 +109,23 @@ form button {
 
 /*...................................................................*/
 /*adjustments for <p>*/
-.app.window-app.sheet.journal-sheet section.window-content section.journal-entry-pages p {
+.app.window-app.sheet section.window-content section.journal-entry-pages p {
     text-align: justify;
     padding-right: 10px;
 }
 
-.app.window-app.sheet.journal-sheet section.window-content section.journal-entry-pages p+p {
+.app.window-app.sheet section.window-content section.journal-entry-pages p+p {
     text-indent: 0.75rem;
     margin-bottom: 0.75rem;
 }
 
-.app.window-app.sheet.journal-sheet section.window-content section.journal-entry-pages p:first-of-type {
+.app.window-app.sheet section.window-content section.journal-entry-pages p:first-of-type {
     text-indent: 0;
 }
 
 /*...................................................................*/
 /*adjustments for ul & ol*/
-.app.window-app.sheet.journal-sheet section.window-content section.journal-entry-pages :is(ul, ol) {
+.app.window-app.sheet section.window-content section.journal-entry-pages :is(ul, ol) {
     text-align: justify;
     padding-right: 10px;
     list-style-position: inside;
@@ -131,7 +133,7 @@ form button {
 
 /*...................................................................*/
 /*hr will become Torg-Style*/
-.app.window-app.sheet.journal-sheet section.window-content section.journal-entry-pages hr {
+.app.window-app.sheet section.window-content section.journal-entry-pages hr {
     Background-image: URL(../../../systems/torgeternity/images/separator.webp);
     height: 3rem;
     width: auto;
@@ -142,7 +144,7 @@ form button {
 
 /*...................................................................*/
 /*h1 will become Torg-Style*/
-.app.window-app.sheet.journal-sheet section.window-content section.journal-entry-pages h1 {
+.app.window-app.sheet section.window-content section.journal-entry-pages h1 {
     Background-image: URL(../../../systems/torgeternity/images/tab-header.webp);
     background-repeat: no-repeat;
     background-size: 100% 100%;
@@ -156,7 +158,7 @@ form button {
 
 /*...................................................................*/
 /*The <h2> Header will become Torg-Style with grey outlines and centered align*/
-.app.window-app.sheet.journal-sheet section.window-content section.journal-entry-pages h2 {
+.app.window-app.sheet section.window-content section.journal-entry-pages h2 {
     text-align: center;
     font-size: 1.5rem;
     font-weight: bolder;
@@ -167,7 +169,7 @@ form button {
 }
 
 /*...................................................................*/
-.app.window-app.sheet.journal-sheet section.window-content section.journal-entry-pages h3 {
+.app.window-app.sheet section.window-content section.journal-entry-pages h3 {
     margin: 2px 0px 9px 0px;
     font-weight: bolder;
     text-transform: uppercase
@@ -175,7 +177,7 @@ form button {
 
 /*...................................................................*/
 /*There is still a headline, bolt white upper case with a small black outline. As this wasn't defined, it will be <h4> for not confusing with other headlines*/
-.app.window-app.sheet.journal-sheet section.window-content section.journal-entry-pages h4 {
+.app.window-app.sheet section.window-content section.journal-entry-pages h4 {
     text-align: center;
     font-size: 1.5rem;
     color: white;
@@ -189,7 +191,7 @@ form button {
 }
 
 /*In Cosm-Books, there is a headline similiar to h4 but with the bar that is used as background-image for the <hr>. Making this a class.*/
-.app.window-app.sheet.journal-sheet section.window-content section.journal-entry-pages h4.bar {
+.app.window-app.sheet section.window-content section.journal-entry-pages h4.bar {
     background-image: url(../images/separator.webp);
     background-position-y: -8px;
     background-repeat: no-repeat;
@@ -198,23 +200,23 @@ form button {
 
 /*...................................................................*/
 /*<img> comes with a border, what is never seen in TE*/
-.app.window-app.sheet.journal-sheet section.window-content section.journal-entry-pages img {
+.app.window-app.sheet section.window-content section.journal-entry-pages img {
     border-image: none;
     border: none;
 }
 
 /*...................................................................*/
 /*formatting tables*/
-.app.window-app.sheet.journal-sheet section.window-content section.journal-entry-pages table {
+.app.window-app.sheet section.window-content section.journal-entry-pages table {
     font-size: 0.875rem;
     background-color: transparent;
 }
 
-.journal-sheet .window-content .app.window-app.sheet.journal-sheet section.window-content section.journal-entry-pages tr:nth-child(even) {
+.window-content .app.window-app.sheet section.window-content section.journal-entry-pages tr:nth-child(even) {
     background-color: #F6E9D7;
 }
 
-.journal-sheet .window-content .app.window-app.sheet.journal-sheet section.window-content section.journal-entry-pages tr:nth-child(odd) {
+.window-content .app.window-app.sheet section.window-content section.journal-entry-pages tr:nth-child(odd) {
     background-color: transparent;
 }
 
@@ -257,14 +259,14 @@ a.inline-roll {
 }
 
 /*Coloring the symbols before the text (seems like they're ASCII-Code) and a little gap to the following text*/
-.app.window-app.sheet.journal-sheet section.window-content section.journal-entry-pages .fa-user:before,
-.app.window-app.sheet.journal-sheet section.window-content section.journal-entry-pages .fa-book-open:before,
-.app.window-app.sheet.journal-sheet section.window-content section.journal-entry-pages .fa-id-badge:before,
-.app.window-app.sheet.journal-sheet section.window-content section.journal-entry-pages .fa-suitcase:before,
-.app.window-app.sheet.journal-sheet section.window-content section.journal-entry-pages .fa-map:before,
-.app.window-app.sheet.journal-sheet section.window-content section.journal-entry-pages .fa-th-list:before,
-.app.window-app.sheet.journal-sheet section.window-content section.journal-entry-pages .fa-music:before,
-.app.window-app.sheet.journal-sheet section.window-content section.journal-entry-pages .fa-dice-d20:before {
+.app.window-app.sheet section.window-content section.journal-entry-pages .fa-user:before,
+.app.window-app.sheet section.window-content section.journal-entry-pages .fa-book-open:before,
+.app.window-app.sheet section.window-content section.journal-entry-pages .fa-id-badge:before,
+.app.window-app.sheet section.window-content section.journal-entry-pages .fa-suitcase:before,
+.app.window-app.sheet section.window-content section.journal-entry-pages .fa-map:before,
+.app.window-app.sheet section.window-content section.journal-entry-pages .fa-th-list:before,
+.app.window-app.sheet section.window-content section.journal-entry-pages .fa-music:before,
+.app.window-app.sheet section.window-content section.journal-entry-pages .fa-dice-d20:before {
     color: rgb(245, 245, 245);
     margin-right: 5px;
 }
@@ -450,7 +452,7 @@ Class-Syntax:
 class="splotch aysle/cyber/nile/or/panpa/thark left/right
 */
 
-.app.window-app.sheet.journal-sheet section.window-content section.journal-entry-pages .splotch {
+.app.window-app.sheet section.window-content section.journal-entry-pages .splotch {
     background-size: 100% 100%;
     background-repeat: no-repeat;
     background-position-x: center;
@@ -462,31 +464,31 @@ class="splotch aysle/cyber/nile/or/panpa/thark left/right
     background-image: url(../images/Splotch_Aysle.webp);
 }
 
-.app.window-app.sheet.journal-sheet section.window-content section.journal-entry-pages .splotch.aysle {
+.app.window-app.sheet section.window-content section.journal-entry-pages .splotch.aysle {
     background-image: url(../images/Splotch_Aysle.webp);
 }
 
-.app.window-app.sheet.journal-sheet section.window-content section.journal-entry-pages .splotch.cyber {
+.app.window-app.sheet section.window-content section.journal-entry-pages .splotch.cyber {
     background-image: url(../images/splotch_cyberpapacy.webp);
 }
 
-.app.window-app.sheet.journal-sheet section.window-content section.journal-entry-pages .splotch.nile {
+.app.window-app.sheet section.window-content section.journal-entry-pages .splotch.nile {
     background-image: url(../images/Splotch_Nile.webp);
 }
 
-.app.window-app.sheet.journal-sheet section.window-content section.journal-entry-pages .splotch.or {
+.app.window-app.sheet section.window-content section.journal-entry-pages .splotch.or {
     background-image: url(../images/Splotch_Orrorsh.webp);
 }
 
-.app.window-app.sheet.journal-sheet section.window-content section.journal-entry-pages .splotch.panpa {
+.app.window-app.sheet section.window-content section.journal-entry-pages .splotch.panpa {
     background-image: url(../images/Splotch_PanPacifica.webp);
 }
 
-.app.window-app.sheet.journal-sheet section.window-content section.journal-entry-pages .splotch.thark {
+.app.window-app.sheet section.window-content section.journal-entry-pages .splotch.thark {
     background-image: url(../images/Splotch_Tharkold.webp);
 }
 
-.app.window-app.sheet.journal-sheet section.window-content section.journal-entry-pages .splotch p {
+.app.window-app.sheet section.window-content section.journal-entry-pages .splotch p {
     text-align: left;
     font-size: 1rem;
     color: white;
@@ -500,29 +502,29 @@ class="splotch aysle/cyber/nile/or/panpa/thark left/right
     margin-left: 2.2rem;
 }
 
-.app.window-app.sheet.journal-sheet section.window-content section.journal-entry-pages div.splotch p:only-of-type {
+.app.window-app.sheet section.window-content section.journal-entry-pages div.splotch p:only-of-type {
     margin-top: 1.8em;
     margin-bottom: 1.8em;
     padding: inherit;
 }
 
-.app.window-app.sheet.journal-sheet section.window-content section.journal-entry-pages div.splotch p:first-of-type {
+.app.window-app.sheet section.window-content section.journal-entry-pages div.splotch p:first-of-type {
     margin-top: 1.8em;
     padding: inherit;
 }
 
-.app.window-app.sheet.journal-sheet section.window-content section.journal-entry-pages div.splotch p+p:last-of-type {
+.app.window-app.sheet section.window-content section.journal-entry-pages div.splotch p+p:last-of-type {
     margin-bottom: 1.8em;
     padding: inherit;
     text-indent: 0px;
 }
 
-.app.window-app.sheet.journal-sheet section.window-content section.journal-entry-pages .splotch.right {
+.app.window-app.sheet section.window-content section.journal-entry-pages .splotch.right {
     float: right;
     margin-left: 0.5rem;
 }
 
-.app.window-app.sheet.journal-sheet section.window-content section.journal-entry-pages .splotch.left {
+.app.window-app.sheet section.window-content section.journal-entry-pages .splotch.left {
     float: left;
     margin-right: 0.5rem;
     margin-left: unset;
@@ -553,47 +555,47 @@ class="splotch aysle/cyber/nile/or/panpa/thark left/right
     src: url("../fonts/gunplay_rg.ttf") format("ttf");
 }
 
-.app.window-app.sheet.journal-sheet section.window-content section.journal-entry-pages div.directive1 {
+.app.window-app.sheet section.window-content section.journal-entry-pages div.directive1 {
     background-image: url(../images/parchment1.webp);
     background-repeat: no-repeat;
     background-size: 100% 100%;
     padding: 3rem;
 }
 
-.app.window-app.sheet.journal-sheet section.window-content section.journal-entry-pages div.directive1 :is(p, h3, h4) {
+.app.window-app.sheet section.window-content section.journal-entry-pages div.directive1 :is(p, h3, h4) {
     font-family: "gunplay";
     transform: rotate(-3deg);
     text-indent: 0px;
 }
 
-.app.window-app.sheet.journal-sheet section.window-content section.journal-entry-pages div.directive1 h3 {
+.app.window-app.sheet section.window-content section.journal-entry-pages div.directive1 h3 {
     font-size: 21px;
 }
 
-.app.window-app.sheet.journal-sheet section.window-content section.journal-entry-pages div.directive2 {
+.app.window-app.sheet section.window-content section.journal-entry-pages div.directive2 {
     background-image: url(../images/parchment2.webp);
     background-repeat: no-repeat;
     background-size: 100% 100%;
     padding: 3rem;
 }
 
-.app.window-app.sheet.journal-sheet section.window-content section.journal-entry-pages div.directive2 :is(p, h3, h4) {
+.app.window-app.sheet section.window-content section.journal-entry-pages div.directive2 :is(p, h3, h4) {
     font-family: "gunplay";
     transform: rotate(2deg);
     text-indent: 0px;
 }
 
-.app.window-app.sheet.journal-sheet section.window-content section.journal-entry-pages div.directive2 h3 {
+.app.window-app.sheet section.window-content section.journal-entry-pages div.directive2 h3 {
     font-size: 21px;
 }
 
 /*...................................................................*/
 /*Multi-purpose classes*/
 
-.app.window-app.sheet.journal-sheet section.window-content section.journal-entry-pages .noindent {
+.app.window-app.sheet section.window-content section.journal-entry-pages .noindent {
     text-indent: 0px;
 }
 
-.app.window-app.sheet.journal-sheet section.window-content section.journal-entry-pages .noindent p+p {
+.app.window-app.sheet section.window-content section.journal-entry-pages .noindent p+p {
     text-indent: 0px;
 }

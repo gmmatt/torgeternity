@@ -79,11 +79,23 @@ export default function initTextEdidor() {
                         classes: "splotch thark",
                         wrapper: true
                     },
+                    {
+                        title: "directive (type 1)",
+                        block: "div",
+                        classes: "directive1",
+                        wrapper: true
+                    },
+                    {
+                        title: "directive (type 2)",
+                        block: "div",
+                        classes: "directive2",
+                        wrapper: true
+                    },
+
                 ]
             },
 
         ],
         style_formats_merge: true
     };
-
 };
