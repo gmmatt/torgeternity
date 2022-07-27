@@ -1820,6 +1820,7 @@ form.actor-sheet header input[name="name"] {
     text-transform: uppercase;
     font-weight: bold;
     width: 100%;
+    background: none;
 }
 
 .window-content .actor-sheet h1 input {

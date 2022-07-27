@@ -38,12 +38,6 @@ export default function initTextEdidor() {
                         wrapper: true
                     },
                     {
-                        title: "horizontal bar (separator)",
-                        block: "p",
-                        classes: "bar",
-                        wrapper: true
-                    },
-                    {
                         title: "Aysle splotch",
                         block: "div",
                         classes: "splotch aysle",

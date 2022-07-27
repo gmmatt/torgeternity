@@ -40,11 +40,13 @@ h4 {
     margin: 1rem 0px 0.7rem 0px;
 }
 
-p.bar {
+hr {
     background-image: url(../images/separator.webp);
-    background-position-y: -8px;
+    /* background-position-y: -8px; */
     background-repeat: no-repeat;
     background-size: auto;
+    min-height: 20px;
+    border: none;
 }
 
 blockquote {
