@@ -33,8 +33,10 @@ import createTorgShortcuts from './module/keybinding.js';
 import GMScreen from './module/GMScreen.js'
 import { setUpCardPiles } from './module/cards/setUpCardPiles.js';
 import { explode } from './module/explode.js';
-import { activateStandartScene } from './module/activateStandartScene.js'
-import { torgMigration } from "./module/migrations.js"
+import { activateStandartScene } from './module/activateStandartScene.js';
+import { torgMigration } from "./module/migrations.js";
+import initTextEdidor from './module/initTextEditor.js';
+
 
 
 Hooks.once("init", async function () {
@@ -50,47 +52,7 @@ Hooks.once("init", async function () {
         rollSkillMacro,
         viewMode: true
     };
-    CONFIG.TinyMCE = {
-        branding: false,
-        menubar: false,
-        statusbar: false,
-        content_css: ["/css/mce.css", "/systems/torgeternity/css/tinymce.css"],
-        plugins: "lists image table code save link",
-        toolbar: "styles bullist numlist image table hr link removeformat code save",
-        save_enablewhendirty: true,
-        table_default_styles: {},
-        style_formats: [
-            {
-                title: "Custom",
-                items: [
-                    {
-                        title: "Secret",
-                        block: "section",
-                        classes: "secret",
-                        wrapper: true
-                    }
-                ]
-            },
-            {
-                title: "Torg",
-                items: [
-                    {
-                        title: "Splotch",
-                        block: "section",
-                        classes: "splotch",
-                        wrapper: true
-                    },
-                    {
-                        title: "Sidenote",
-                        block: "section",
-                        classes: "sidenote",
-                        wrapper: true
-                    },
-                ]
-            }
-        ],
-        style_formats_merge: true
-    }
+    initTextEdidor();
     CONFIG.torgeternity = torgeternity;
     CONFIG.Item.documentClass = torgeternityItem;
     CONFIG.Actor.documentClass = torgeternityActor;
