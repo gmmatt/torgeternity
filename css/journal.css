@@ -23,10 +23,27 @@
     background-color: rgba(255, 255, 255, 0.25);
 }
 
-.app.window-app.sheet.journal-sheet section.window-content footer.sheet-footer {}
+/*preventing buttons to go under content*/
+.app.window-app.sheet.journal-sheet section.window-content footer.sheet-footer {
+    margin-top: 80px;
+}
+
+.app.window-app.sheet.journal-sheet nav.directory {
+    background: url(../images/journal-background.webp);
+    background-size: auto 100%;
+    box-shadow: -20px 0px 150px black inset,
+        30px 0px 150px black inset;
+    padding: 8%;
+}
+
+.journal-sheet nav .pages-list .directory-item.active {
+    border-color: #009fff;
+    box-shadow: 0px 5px 10px #009fff63 inset;
+}
 
 .window-app .window-content form button,
-.window-app .window-content form select {
+.window-app .window-content form select,
+.journal-sheet .directory .action-buttons button {
     text-shadow: black 1.3px 1.3px 0px,
         black 1.3px -1.3px 0px,
         black -1.3px 1.3px 0px,
@@ -35,6 +52,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position-x: center;
+    color: white
 }
 
 /*Fixing stylebleed*/
@@ -141,14 +159,18 @@ form button {
 .app.window-app.sheet.journal-sheet section.window-content section.journal-entry-pages h2 {
     text-align: center;
     font-size: 1.5rem;
-    text-shadow: 0px 0px 10px white;
+    font-weight: bolder;
+    text-shadow: 0px 0px 15px white;
     text-transform: uppercase;
     margin: 1rem 0px 0.7rem 0px;
+    border: none;
 }
 
 /*...................................................................*/
 .app.window-app.sheet.journal-sheet section.window-content section.journal-entry-pages h3 {
     margin: 2px 0px 9px 0px;
+    font-weight: bolder;
+    text-transform: uppercase
 }
 
 /*...................................................................*/
