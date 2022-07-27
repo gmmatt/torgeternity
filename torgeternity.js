@@ -75,11 +75,17 @@ Hooks.once("init", async function () {
                 title: "Torg",
                 items: [
                     {
-                        title: "Splah",
+                        title: "Splotch",
                         block: "section",
-                        classes: "secret",
+                        classes: "splotch",
                         wrapper: true
-                    }
+                    },
+                    {
+                        title: "Sidenote",
+                        block: "section",
+                        classes: "sidenote",
+                        wrapper: true
+                    },
                 ]
             }
         ],

@@ -1,3 +1,56 @@
+h1 {
+    Background-image: URL(../../../systems/torgeternity/images/tab-header.webp);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    overflow: hidden;
+    border: none;
+    margin: 1rem 0px 0.7rem 0px;
+    text-align: center;
+    color: white;
+    text-shadow: 0px 0px 15px black;
+}
+
 h2 {
-    text-align: end;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bolder;
+    text-shadow: 0px 0px 15px white;
+    text-transform: uppercase;
+    margin: 1rem 0px 0.7rem 0px;
+    border: none;
+}
+
+h3 {
+    margin: 2px 0px 9px 0px;
+    font-weight: bolder;
+    text-transform: uppercase
+}
+
+blockquote {
+    background-color: rgb(241, 221, 192);
+    margin: 16px 30px;
+    padding: 5px 10px;
+    font-size: 14px;
+    text-align: justify;
+    overflow: hidden;
+    border-left: none;
+    font-style: normal;
+}
+
+.splotch {
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    width: 50%;
+    display: inline-block;
+    margin-left: 25%;
+    min-height: 100px;
+    background-image: url(../images/Splotch_Aysle.webp);
+}
+
+.sidenote {
+    background-image: url(../images/mapDetailBack.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 10px;
 }
