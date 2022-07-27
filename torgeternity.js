@@ -37,7 +37,7 @@ import { activateStandartScene } from './module/activateStandartScene.js'
 import { torgMigration } from "./module/migrations.js"
 
 
-Hooks.once("init", async function() {
+Hooks.once("init", async function () {
     console.log("torgeternity | Initializing Torg Eternity System");
     //CONFIG.debug.hooks = true; //The Developer Mode module can do this for you without accidentally leaving hooks on for anyone working in your system
     //----helpers
@@ -50,7 +50,41 @@ Hooks.once("init", async function() {
         rollSkillMacro,
         viewMode: true
     };
-
+    CONFIG.TinyMCE = {
+        branding: false,
+        menubar: false,
+        statusbar: false,
+        content_css: ["/css/mce.css", "/systems/torgeternity/css/tinymce.css"],
+        plugins: "lists image table code save link",
+        toolbar: "styles bullist numlist image table hr link removeformat code save",
+        save_enablewhendirty: true,
+        table_default_styles: {},
+        style_formats: [
+            {
+                title: "Custom",
+                items: [
+                    {
+                        title: "Secret",
+                        block: "section",
+                        classes: "secret",
+                        wrapper: true
+                    }
+                ]
+            },
+            {
+                title: "Torg",
+                items: [
+                    {
+                        title: "Splah",
+                        block: "section",
+                        classes: "secret",
+                        wrapper: true
+                    }
+                ]
+            }
+        ],
+        style_formats_merge: true
+    }
     CONFIG.torgeternity = torgeternity;
     CONFIG.Item.documentClass = torgeternityItem;
     CONFIG.Actor.documentClass = torgeternityActor;
@@ -66,7 +100,7 @@ Hooks.once("init", async function() {
 
     //----scenes
     // CONFIG.Scene.sheetClass = torgeternitySceneConfig;
-    DocumentSheetConfig.registerSheet(Scene, 'torgeternity', torgeternitySceneConfig, {label: "Torg Eternity Scene Config", makeDefault: true});
+    DocumentSheetConfig.registerSheet(Scene, 'torgeternity', torgeternitySceneConfig, { label: "Torg Eternity Scene Config", makeDefault: true });
     CONFIG.ui.nav = torgeternityNav;
 
     //---custom user class
@@ -139,7 +173,7 @@ Hooks.once("init", async function() {
 
 });
 
-Hooks.once("setup", async function() {
+Hooks.once("setup", async function () {
 
     modifyTokenBars();
     //changing stutus marker 
@@ -159,11 +193,11 @@ Hooks.once("diceSoNiceReady", (dice3d) => {
 });
 
 //-------------once everything ready
-Hooks.on("ready", async function() {
+Hooks.on("ready", async function () {
 
 
     //migration script
-    if(game.user.isGM) torgMigration()
+    if (game.user.isGM) torgMigration()
 
 
 
@@ -221,7 +255,7 @@ Hooks.on("ready", async function() {
                 one: {
                     icon: `<i class="fas fa-check"></i>`,
                     label: game.i18n.localize("torgeternity.yesNo.true"),
-                    callback: async() => {
+                    callback: async () => {
                         await game.settings.set("torgeternity", "hideForeignCompendium", true);
                         window.location.reload();
                     }
@@ -261,12 +295,12 @@ Hooks.on("ready", async function() {
     //----pause image----
     //Hooks.on("renderPause", () => {
 
-        // Removing this because it doesn't appear to do anything any longer?
+    // Removing this because it doesn't appear to do anything any longer?
 
-        // let path = game.settings.get("torgeternity", "pauseMedia");
-        // let img = document.getElementById("pause").firstElementChild;
-        // path = "./" + path;
-        // img.style.content = `url(${path})`
+    // let path = game.settings.get("torgeternity", "pauseMedia");
+    // let img = document.getElementById("pause").firstElementChild;
+    // path = "./" + path;
+    // img.style.content = `url(${path})`
     //})
 
     //-------define a dialog for external links
@@ -341,13 +375,13 @@ Hooks.on("ready", async function() {
         }
     }
     let externalLinks = new Dialog(dialData, dialOption)
-        //----logo image
+    //----logo image
     var logo = document.getElementById("logo");
     logo.style.position = "absolute";
     logo.setAttribute("src", "/systems/torgeternity/images/vttLogo.webp");
     //----open links when click on logo
     logo.title = "external links"
-    logo.addEventListener("click", function() {
+    logo.addEventListener("click", function () {
         externalLinks.render(true)
     })
 
@@ -589,7 +623,7 @@ function rollItemMacro(itemName) {
 
             // Modify dnDecriptor if target exists
             if (Array.from(game.user.targets).length > 0) {
-            
+
                 switch (attackWith) {
                     case "fireCombat":
                     case "energyWeapons":
@@ -627,7 +661,7 @@ function rollItemMacro(itemName) {
                 default:
                     adjustedDamage = parseInt(weaponDamage)
             }
-                    
+
             var mTest = {
 
                 testType: "attack",
@@ -861,25 +895,25 @@ Hooks.on("renderActorSheet", (app, html, data) => {
 Hooks.on('updateActor', (actor, change, options, userId) => {
     //updating playerList with users character up-to-date data
     ui.players.render(true);
-    
-    if(actor.type === "stormknight"){
+
+    if (actor.type === "stormknight") {
         let hand = actor.getDefaultHand()
         //If there is no hand for that SK, and a GM is online, create one
-        if(!hand && game.userId === game.users.find(u=>u.isGM && u.active).id){
+        if (!hand && game.userId === game.users.find(u => u.isGM && u.active).id) {
             actor.createDefaultHand()
         }
         //If the update includes permissions, sync them to the hand
-        if(hand && change.ownership && game.userId === userId){
+        if (hand && change.ownership && game.userId === userId) {
             //DO NOT PUT ANYTHING ELSE IN THIS UPDATE! diff:false, recursive:false can easily nuke stuff
-            hand.update({ownership: actor.getHandOwnership()},{diff:false, recursive: false})
+            hand.update({ ownership: actor.getHandOwnership() }, { diff: false, recursive: false })
         }
     }
 });
 
 // by default creating a  hand for each stormknight
-Hooks.on("createActor", async(actor, options, userId) => {
+Hooks.on("createActor", async (actor, options, userId) => {
     //run by first active GM. Will be skipped if no GM is present, but that's the best we can do at the moment
-    if (actor.type === "stormknight" && game.userId === game.users.find(u=>u.isGM && u.active).id) { 
+    if (actor.type === "stormknight" && game.userId === game.users.find(u => u.isGM && u.active).id) {
         actor.createDefaultHand()
     }
 
