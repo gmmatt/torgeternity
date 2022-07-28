@@ -9,9 +9,10 @@
 
 .journal-sheet .window-content .editor {
     padding: 0%;
-    top: 12%;
-    height: 82%;
-    width: 91.5%;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    margin-left: 0;
 }
 
 .editor-content {
@@ -30,7 +31,11 @@
 
 /*preventing buttons to go under content*/
 .app.window-app.sheet.journal-sheet section.window-content footer.sheet-footer {
-    margin-top: 80px;
+    bottom: 0px;
+    position: absolute;
+    width: 80%;
+    left: 10%;
+
 }
 
 .app.window-app.sheet.journal-sheet nav.directory {
@@ -190,7 +195,9 @@ form button {
 .app.window-app.sheet section.window-content .editor h3 {
     margin: 2px 0px 9px 0px;
     font-weight: bolder;
-    text-transform: uppercase
+    text-transform: uppercase;
+    border: none;
+
 }
 
 /*...................................................................*/
@@ -207,6 +214,9 @@ form button {
         black -1.3px 1.3px 0px;
     text-transform: uppercase;
     margin: 1rem 0px 0.7rem 0px;
+    border: none;
+
+
 }
 
 /*separator*/

@@ -266,7 +266,7 @@ div.actor ::-webkit-scrollbar {
 }
 */
 .journal-sheet .window-content select {
-    position: absolute;
+    /* position: absolute; */
     top: 9%;
     margin-left: 4%;
 }
