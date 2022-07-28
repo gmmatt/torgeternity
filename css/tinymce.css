@@ -75,10 +75,11 @@ blockquote p+p {
     width: 50%;
     display: inline-block;
     margin-left: 25%;
+    text-align: center;
 }
 
 .splotch p {
-    text-align: left;
+    text-align: center;
     font-size: 1rem;
     color: white;
     font-family: Alaska;
