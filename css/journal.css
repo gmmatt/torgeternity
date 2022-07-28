@@ -15,6 +15,15 @@
     margin-left: 0;
 }
 
+.journal-sheet.journal-page-sheet .window-content form.editable {
+    font-family: Alaska;
+    background-image: url(../images/thunder.webp);
+    background-size: cover;
+    color: white;
+    overflow-y: scroll;
+
+}
+
 .editor-content {
     background-color: rgba(255, 247, 247, 0.25);
     padding-left: 10px;
