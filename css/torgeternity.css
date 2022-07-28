@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Martel:wght@400;800&family=Roboto:wght@300;400;500&display=swap");
+
 @font-face {
     font-family: "graveBolt";
     src: url("../fonts/GraveSideBB.ttf");
@@ -31,13 +32,18 @@
 
 /*Defining colors as variables, using it in an animation-keyframe*/
 :root {
-    --torgblue: rgb(65,90,155);
-    --torgred: rgb(150,0,0);
+    --torgblue: rgb(65, 90, 155);
+    --torgred: rgb(150, 0, 0);
 }
 
-@keyframes colorchange{
-    0%      {color: var(--torgblue);}
-    100%    {color: var(--torgred);}
+@keyframes colorchange {
+    0% {
+        color: var(--torgblue);
+    }
+
+    100% {
+        color: var(--torgred);
+    }
 }
 
 div.actor ::-webkit-scrollbar {
@@ -385,14 +391,17 @@ textarea:hover {
         transform: rotateZ(0deg);
         top: 5px;
     }
+
     50% {
         transform: rotateZ(180deg);
         top: -65px;
     }
+
     75% {
         transform: rotateZ(310deg);
         top: 20px;
     }
+
     100% {
         transform: rotateZ(360deg);
         top: 5px;
@@ -404,14 +413,17 @@ textarea:hover {
         transform: rotateZ(0deg);
         top: 5px;
     }
+
     50% {
         transform: rotateZ(180deg);
         top: -65px;
     }
+
     75% {
         transform: rotateZ(310deg);
         top: 20px;
     }
+
     100% {
         transform: rotateZ(360deg);
         top: 5px;
@@ -1380,6 +1392,7 @@ div.readme a.compendium {
     0% {
         margin-left: 100%;
     }
+
     100% {
         margin-left: 0%;
     }
@@ -1389,6 +1402,7 @@ div.readme a.compendium {
     0% {
         margin-left: 100%;
     }
+
     100% {
         margin-left: 0%;
     }
@@ -1508,6 +1522,7 @@ div.readme a.compendium {
     from {
         transform: scaleX(1.2) scaleY(1.2);
     }
+
     to {
         transform: scaleX(0.8) scaleY(0.8);
     }
@@ -1517,6 +1532,7 @@ div.readme a.compendium {
     from {
         transform: scaleX(1.2) scaleY(1.2);
     }
+
     to {
         transform: scaleX(0.8) scaleY(0.8);
     }
@@ -1566,14 +1582,14 @@ form.actor-sheet header input[name="name"] {
     color: #0e0909;
 }
 
-.activeDefense-roll{
+.activeDefense-roll {
     animation: none;
     color: black;
 }
 
-.activeDefense-roll-glow{
+.activeDefense-roll-glow {
     animation: colorchange 2s infinite alternate;
-    }
+}
 
 .inline-skill-item:after {
     content: ",";
@@ -2422,6 +2438,12 @@ form.actor-sheet header input[name="name"] {
 form.actor-sheet.threat img.profile-img {
     max-width: 64px;
     max-height: 64px;
+}
+
+form.actor-sheet.threat span.vital-box span.light {
+    font-family: "Signika";
+    font-size: 13px;
+    display: inline;
 }
 
 form.actor-sheet.threat input[type="checkbox"] {
