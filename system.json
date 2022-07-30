@@ -2,12 +2,18 @@
     "name": "torgeternity",
     "title": "Torg Eternity",
     "description": "Torg Eternity character sheet for Foundry VTT.",
-    "author": "Matt Ritchie",
+    "authors": [{
+        "name": "GM Matt",
+        "url": "https://www.youtube.com/c/GMMatt",
+        "discord": "Matt#1768"
+    }],
 
     "version": "2.5.1",
+    "compatibility": {
+        "minimum": 10,
+        "verified": "10.1"
+    },
 
-    "minimumCoreVersion": "9",
-    "compatibleCoreVersion": "9",
     "templateVersion": "4.4.0",
     "esmodules": [
         "torgeternity.js"
@@ -51,6 +57,14 @@
             "system": "torgeternity",
             "module": "torgeternity",
             "path": "packs/standardscene.db",
+            "entity": "Scene"
+        },
+        {
+            "name": "core-scenes-fr",
+            "label": "Scène standard (fr)",
+            "system": "torgeternity",
+            "module": "torgeternity",
+            "path": "packs/french/standardscene.db",
             "entity": "Scene"
         },
         {

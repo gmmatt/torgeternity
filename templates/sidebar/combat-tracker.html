@@ -1,4 +1,4 @@
-<section class="sidebar-tab tab flexcol" id="combat" data-tab="combat" style="height:auto">
+<section class="sidebar-tab tab flexcol combat-sidebar" id="combat" data-tab="combat">
     <header id="combat-round">
         {{#if user.isGM}}
 
@@ -27,7 +27,7 @@
         {{#if combat.data.flags.torgeternity.activeCard}}
         <img src="{{combat.data.flags.torgeternity.activeCard}}" style="object-fit:contain">
         {{else}}
-        <img src="systems/torgeternity/images/cards/drama-back.webp" style="object-fit:contain">
+        <img src="{{localize 'torgeternity.combat.dramaBack'}}" style="object-fit:contain">
         {{/if}}
         <!-- <img src="systems/torgeternity/images/cards/drama-back.jpg" id="active-drama-card" style="object-fit:contain"> -->
         <nav class="encounters flexrow">

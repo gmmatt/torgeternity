@@ -15,8 +15,8 @@ export default class TorgCombat extends Combat {
             }
 
             const activeStack = dramaActive;
-            if (activeStack.data.cards.document.availableCards.length > 0) {
-                await dramaActive.data.cards.document.availableCards[0].pass(dramaDiscard);
+            if (activeStack.data.cards.size > 0) {
+                await dramaActive.cards.contents[0].pass(dramaDiscard);
             }
             if (dramaDeck.availableCards.length > 0) {
                 dramaActive.draw(dramaDeck);
@@ -55,8 +55,8 @@ export default class TorgCombat extends Combat {
           let dramaActive = game.cards.get(game.settings.get("torgeternity", "deckSetting").dramaActive);
           const activeStack = dramaActive;
 
-            if (activeStack.data.cards.document.availableCards.length > 0) {
-                dramaActive.data.cards.document.availableCards[0].pass(dramaDiscard);
+            if (activeStack.data.cards.size > 0) {
+                dramaActive.cards.contents[0].pass(dramaDiscard);
             }
 
         }
@@ -86,9 +86,9 @@ export default class TorgCombat extends Combat {
           let dramaDiscard = game.cards.get(game.settings.get("torgeternity", "deckSetting").dramaDiscard);
           let dramaActive = game.cards.get(game.settings.get("torgeternity", "deckSetting").dramaActive);
           const activeStack = dramaActive;
-            if (activeStack.data.cards.document.availableCards.length > 0) {
-                const activeCard = activeStack.data.cards.document.availableCards[0];
-                const activeImage = activeCard.data.faces[0].img;
+            if (activeStack.data.cards.size > 0) {
+                const activeCard = activeStack.data.cards.contents[0];
+                const activeImage = activeCard.faces[0].img;
                 this.setFlag("torgeternity", "activeCard", activeImage)
                     //document.getElementById("active-drama-card").src = activeImage;
                 let x = 0;

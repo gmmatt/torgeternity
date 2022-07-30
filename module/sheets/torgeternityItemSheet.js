@@ -7,7 +7,7 @@ export default class torgeternityItemSheet extends ItemSheet {
     constructor(...args) {
         super(...args);
 
-        switch (this.object.data.type) {
+        switch (this.object.type) {
 
             case "firearm":
                 this.options.height = this.position.height = 710;
@@ -71,7 +71,7 @@ export default class torgeternityItemSheet extends ItemSheet {
 
 
     get template() {
-        return `systems/torgeternity/templates/sheets/${this.item.data.type}-sheet.html`;
+        return `systems/torgeternity/templates/sheets/${this.item.type}-sheet.html`;
     }
 
 
@@ -99,43 +99,43 @@ export default class torgeternityItemSheet extends ItemSheet {
         });
 
         html.find(".add-enhancement").click(ev => {
-            var currentShown = this.item.data.data.pulpPowers.enhancementNumber;
+            var currentShown = this.object.system.pulpPowers.enhancementNumber;
             if (currentShown < 15) {
                 var newShown = currentShown + 1;
             } else {
                 var newShown = currentShown;
             }
-            this.item.update({ 'data.pulpPowers.enhancementNumber': newShown })
+            this.item.update({ 'system.pulpPowers.enhancementNumber': newShown })
         })
 
         html.find(".remove-enhancement").click(ev => {
-            var currentShown = this.item.data.data.pulpPowers.enhancementNumber;
+            var currentShown = this.object.system.pulpPowers.enhancementNumber;
             if (0 < currentShown) {
                 var newShown = currentShown - 1;
             } else {
                 var newShown = currentShown;
             }
-            this.item.update({ 'data.pulpPowers.enhancementNumber': newShown })
+            this.item.update({ 'system.pulpPowers.enhancementNumber': newShown })
         })
 
         html.find(".add-limitation").click(ev => {
-            var currentShown = this.item.data.data.pulpPowers.limitationNumber;
+            var currentShown = this.object.system.pulpPowers.limitationNumber;
             if (currentShown < 10) {
                 var newShown = currentShown + 1;
             } else {
                 var newShown = currentShown;
             }
-            this.item.update({ 'data.pulpPowers.limitationNumber': newShown })
+            this.item.update({ 'system.pulpPowers.limitationNumber': newShown })
         })
 
         html.find(".remove-limitation").click(ev => {
-            var currentShown = this.item.data.data.pulpPowers.limitationNumber;
+            var currentShown = this.object.system.pulpPowers.limitationNumber;
             if (0 < currentShown) {
                 var newShown = currentShown - 1;
             } else {
                 var newShown = currentShown;
             }
-            this.item.update({ 'data.pulpPowers.limitationNumber': newShown })
+            this.item.update({ 'system.pulpPowers.limitationNumber': newShown })
         })
 
 

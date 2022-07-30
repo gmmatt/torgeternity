@@ -160,7 +160,6 @@
             "applySize": "Apply Size",
             "applyArmor": "Armor"
         },
-        
         "dnTypes": {
             "veryEasy": "Very Easy (6)",
             "easy": "Easy (8)",
@@ -195,7 +194,6 @@
             "targetAirVehicles": "Target air vehicles or Dexterity",
             "targetWaterVehicles": "Targer water vehicles or Dexterity"
         },
-
         "dnTypesBasic": {
             "veryEasy": "Very Easy (6)",
             "easy": "Easy (8)",
@@ -204,9 +202,8 @@
             "hard": "Hard (14)",
             "veryHard": "Very Hard (16)",
             "heroic": "Heroic (18)",
-            "nearImpossible": "Near Impossible (20)"         
+            "nearImpossible": "Near Impossible (20)"
         },
-
         "cosms": {
             "none": "(None)",
             "coreEarth": "Core Earth",
@@ -215,7 +212,7 @@
             "aysle": "Aysle",
             "cyberpapacy": "Cyberpapacy",
             "tharkold": "Tharkold",
-            "panPacifica": "Pan Pacifica",
+            "panPacifica": "Pan-Pacifica",
             "orrorsh": "Orrorsh",
             "other": "Other",
             "pure": "pure",
@@ -230,7 +227,7 @@
             "electricSamurai": "Electric Samurai",
             "elf": "Elf",
             "faith": "Faith",
-            "kiPowers": "Vitality",     
+            "kiPowers": "Vitality",
             "leadership": "Leadership",
             "light": "Light",
             "occult": "Occult",
@@ -255,7 +252,6 @@
             "cursed": "Cursed",
             "biotech": "Biotech",
             "powerSuit": "Power Suit"
-
         },
         "sheetLabels": {
             "editableTooltip": "expand the threat sheet to display editable fields",
@@ -402,7 +398,8 @@
         },
         "combat": {
             "nextKeep": "Next Round (Keep Current Card)",
-            "nextNew": "Next Round (New Card)"
+            "nextNew": "Next Round (New Card)",
+            "dramaBack": "systems/torgeternity/images/cards/drama-back.webp"
         },
         "itemSheetDescriptions": {
             "perk": "Perk",
@@ -643,7 +640,8 @@
             "spellRoll": "Spell Roll",
             "miracleRoll": "Miracle Roll",
             "psionicRoll": "Psionic Power Roll",
-            "bonusRoll": "Bonus Roll"
+            "bonusRoll": "Bonus Roll",
+            "toggleEquip": "Toggle Equip"
         },
         "possibilitiesReset": {
             "name": "Reset Storm Knight Possibilities",
@@ -656,7 +654,7 @@
             "livingLand": "Living Land Cosm Deck",
             "nileEmpire": "Nile Empire Cosm Deck",
             "orrorsh": "Orrorsh Cosm Deck",
-            "panPacifica": "Pan Pacifica Cosm Deck",
+            "panPacifica": "Pan-Pacifica Cosm Deck",
             "tharkold": "Tharkold Cosm Deck"
         },
         "cardTypes": {
@@ -669,8 +667,6 @@
             "dramaDiscard": "Drama Discard Pile",
             "destinyDiscard": "Destiny Discard Pile",
             "activeDrama": "Active Drama Card"
-
-
         },
         "scenes": {
             "reality": "Reality",
@@ -722,7 +718,6 @@
                 "name": "Hide foreign Compendiums",
                 "hint": "Select to hide all compendium in foreign language"
             },
-
             "deckSetting": {
                 "name": "Default card deck configuration",
                 "label": "Default card deck configuration",
@@ -739,7 +734,6 @@
             "autoDamages": {
                 "name": "Apply damages automatically",
                 "hint": "If checked, shocks and wounds would be automatically apply if player has a valid target token."
-
             }
         },
         "skillDialogs": {
@@ -768,6 +762,9 @@
             "noScreen": "No gm screen available",
             "noScreenMessage": "you don't have selected any gm screen. The gm screens are provided by the modules that you can find here: "
         },
+        "partySheet": {
+            "noCharacter": "This user doesn't own any actor"
+        },
         "packs": {
             "basicRules": "torgeternity.basic-rules",
             "decks": "torgeternity.core-card-set"
@@ -780,5 +777,4 @@
         "discard": "Discard",
         "display": "Show this card to players"
     }
-
 }

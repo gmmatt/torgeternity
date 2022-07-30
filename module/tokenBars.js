@@ -4,7 +4,7 @@ export function modifyTokenBars() {
         const val = Number(data.value);
         const pct = Math.clamped(val, 0, data.max) / data.max;
         let h = Math.max((canvas.dimensions.size / 12), 8);
-        if (this.data.height >= 2) h *= 1.6;  // Enlarge the bar for large tokens
+        if (this.height >= 2) h *= 1.6;  // Enlarge the bar for large tokens
         // Draw the bar
         let color = [0.8, (1 - pct), (0)];
         bar.clear()
@@ -24,9 +24,10 @@ export function modifyTokenBars() {
         let posY = number === 0 ? this.h - h : 0;
         bar.position.set(0, posY);
     }
+    
     Token.prototype._drawEffect=async function (src, i, bg, w, tint) {
         let tex = await loadTexture(src, {fallback: 'icons/svg/hazard.svg'});
-        let icon = this.hud.effects.addChild(new PIXI.Sprite(tex));
+        let icon = this.effects.addChild(new PIXI.Sprite(tex));
         icon.width = icon.height = w;
         const nr = Math.floor(this.data.height * 3);
         icon.x = Math.floor(i / nr) * w*-1;
@@ -35,12 +36,13 @@ export function modifyTokenBars() {
         bg.drawRoundedRect(icon.x + 1, icon.y + 1, w - 2, w - 2, 2);
       }
     
-    Token.prototype.drawEffects=async function () {
-        this.hud.effects.removeChildren().forEach(c => c.destroy());
-        const tokenEffects = this.data.effects;
-        const actorEffects = this.actor?.temporaryEffects || [];
+    
+      Token.prototype.drawEffects=async function () {
+      this.effects.removeChildren().forEach(c => c.destroy());
+      const tokenEffects = this.effects;
+      const actorEffects = this.actor?.temporaryEffects || [];
         let overlay = {
-          src: this.data.overlayEffect,
+          src: this.overlayEffect,
           tint: null
         };
     
@@ -48,7 +50,7 @@ export function modifyTokenBars() {
         if ( tokenEffects.length || actorEffects.length ) {
           const promises = [];
           let w = Math.round(canvas.dimensions.size / 2 / 3) * 2;
-          let bg = this.hud.effects.addChild(new PIXI.Graphics()).beginFill(0x000000, 0.40).lineStyle(1.0, 0x000000);
+          let bg = this.effects.addChild(new PIXI.Graphics()).beginFill(0x000000, 0.40).lineStyle(1.0, 0x000000);
           let i = 0;
     
           // Draw actor effects first
@@ -73,6 +75,7 @@ export function modifyTokenBars() {
     
         // Draw overlay effect
         return this._drawOverlay(overlay)
-      }
+    
+  }
     
 }

@@ -26,12 +26,12 @@ export default class torgeternityItem extends Item {
     prepareBaseData() {
 
         //Handle perk-related data
-        if (this.data._source.type === "perk") {
-            this.data.data.navStyle = "right:-210px;top:210px";
-            this.data.data.extendedNav = true
+        if (this._source.type === "perk") {
+            this.system.navStyle = "right:-210px;top:210px";
+            this.system.extendedNav = true
         } else {
-            this.data.data.navStyle = "right:-110px;top:115px";
-            this.data.data.extendedNav = false
+            this.system.navStyle = "right:-110px;top:115px";
+            this.system.extendedNav = false
         }
     }
 
@@ -108,16 +108,16 @@ export default class torgeternityItem extends Item {
         }
 
         // Calculate base damage
-        if (this.data.data.damageType == "flat") {
-            var baseDamage = this.data.data.damage;
-        } else if (this.data.data.damageType == "strengthPlus") {
-            var baseDamage = parseInt(this.actor.data.data.attributes.strength) + parseInt(this.data.data.damage)
+        if (this.system.damageType == "flat") {
+            var baseDamage = this.system.damage;
+        } else if (this.system.damageType == "strengthPlus") {
+            var baseDamage = parseInt(this.actor.system.attributes.strength) + parseInt(this.system.damage)
         } else {
-            var baseDamage = this.data.data.damage
+            var baseDamage = this.system.damage
         }
 
         // Retrieve the applicable skill value from the current actor
-        var skillToUse = this.actor.data.data.skills[this.data.data.attackWith];
+        var skillToUse = this.actor.system.skills[this.system.attackWith];
         var skillValue = skillToUse.value;
 
         // Generate final Roll Result
@@ -290,7 +290,7 @@ export default class torgeternityItem extends Item {
         }
 
         // Retrieve the applicable skill value from the current actor
-        var skillToUse = this.actor.data.data.skills[this.data.data.skill];
+        var skillToUse = this.actor.system.skills[this.system.skill];
         var skillValue = skillToUse.value;
 
         // Generate final Roll Result
@@ -309,7 +309,7 @@ export default class torgeternityItem extends Item {
             bonus: messageContent,
             skillValue: skillValue,
             result: rollResult,
-            baseDamage: this.data.data.damage
+            baseDamage: this.system.damage
         }
 
         // Send the chat

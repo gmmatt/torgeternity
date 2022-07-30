@@ -15,7 +15,7 @@ export default class torgeternityActorSheet extends ActorSheet {
     constructor(...args) {
         super(...args);
 
-        if (this.object.data.type === "threat") {
+        if (this.object.type === "threat") {
             this.options.width = this.position.width = 485;
             this.options.height = this.position.height = 350;
 
@@ -44,7 +44,7 @@ export default class torgeternityActorSheet extends ActorSheet {
     get template() {
 
         //modified path => one folder per type
-        return `systems/torgeternity/templates/actors/${this.actor.data.type}/main.hbs`;
+        return `systems/torgeternity/templates/actors/${this.actor.type}/main.hbs`;
 
     }
 
@@ -166,8 +166,8 @@ export default class torgeternityActorSheet extends ActorSheet {
     _interactionDragStart(evt) {
         this._onDragStart(evt);
         let skillNameKey = evt.currentTarget.attributes["data-name"].value;
-        let skill = this.actor.data.data.skills[skillNameKey];
-        let value = skill.value ? skill.value : skill.adds + this.actor.data.data.attributes[skill.baseAttribute];
+        let skill = this.actor.system.skills[skillNameKey];
+        let value = skill.value ? skill.value : skill.adds + this.actor.system.attributes[skill.baseAttribute];
         let skillAttrData = {
             type: "interaction",
             data: {
@@ -277,8 +277,8 @@ export default class torgeternityActorSheet extends ActorSheet {
 
         if (this.actor.isOwner) {
             html.find(".apply-fatigue").click(ev => {
-                let newShock = parseInt(this.actor.data.data.shock.value) + parseInt(ev.currentTarget.dataset.fatigue)
-                this.actor.update({ 'data.shock.value': newShock })
+                let newShock = parseInt(this.actor.system.shock.value) + parseInt(ev.currentTarget.dataset.fatigue)
+                this.actor.update({ 'system.shock.value': newShock })
             });
         }
 
@@ -352,9 +352,9 @@ export default class torgeternityActorSheet extends ActorSheet {
         let data = this.actor.data;
 
         let skill = event.currentTarget.dataset.skill
-        let skillObject = this.actor.data.data.skills[skill]
+        let skillObject = this.actor.system.skills[skill]
 
-        data.data.skills[skill].adds = event.currentTarget.value - this.actor.data.data.attributes[skillObject.baseAttribute];
+        system.skills[skill].adds = event.currentTarget.value - this.actor.system.attributes[skillObject.baseAttribute];
         this.actor.update(data);
     }
     async onOpenHand(event) {
@@ -382,7 +382,7 @@ export default class torgeternityActorSheet extends ActorSheet {
         
         let test = {
             testType: event.currentTarget.dataset.testtype,
-            actor: this.actor,
+            actor: this.actor.uuid,
             actorPic: this.actor.data.img,
             actorType: this.actor.data.type,
             isAttack: false,
@@ -427,7 +427,7 @@ export default class torgeternityActorSheet extends ActorSheet {
 
         let test = {
             testType: "interactionAttack",
-            actor: this.actor,
+            actor: this.actor.uuid,
             actorPic: this.actor.data.img,
             actorType: this.actor.data.type,
             isAttack: false,
@@ -454,7 +454,7 @@ export default class torgeternityActorSheet extends ActorSheet {
 
     _onSkillEditToggle(event) {
 
-        var toggleState = this.actor.data.data.editstate;
+        var toggleState = this.actor.system.editstate;
         event.preventDefault();
         if (toggleState === null) {
             this.actor.update({
@@ -487,7 +487,7 @@ export default class torgeternityActorSheet extends ActorSheet {
         let test = {
             testType: "activeDefense",
             activelyDefending: false,
-            actor: this.actor,
+            actor: this.actor.uuid,
             actorPic: this.actor.data.img,
             actorType: this.actor.data.type,
             isAttack: false,
@@ -516,9 +516,9 @@ export default class torgeternityActorSheet extends ActorSheet {
         let test = {
             testType: "activeDefense",
             activelyDefending: true,
-            actor: this.actor,
-            actorPic: this.actor.data.img,
-            actorType: this.actor.data.type,
+            actor: this.actor.uuid,
+            actorPic: this.actor.img,
+            actorType: this.actor.type,
             isAttack: false,
             skillName: "activeDefense",
             skillBaseAttribute: 0,
@@ -554,12 +554,12 @@ export default class torgeternityActorSheet extends ActorSheet {
     _onAttackRoll(event) {
         const itemID = event.currentTarget.closest(".item").dataset.itemId;
         const item = this.actor.items.get(itemID);
-        var attributes = this.actor.data.data.attributes
-        var weaponData = item.data.data;
+        var attributes = this.actor.system.attributes
+        var weaponData = item.system;
         var attackWith = weaponData.attackWith;
         var damageType = weaponData.damageType;
         var weaponDamage = weaponData.damage;
-        var skillData = this.actor.data.data.skills[weaponData.attackWith];
+        var skillData = this.actor.system.skills[weaponData.attackWith];
         var dnDescriptor = "standard";
         var attackType = event.currentTarget.getAttribute("data-attack-type");
         var adjustedDamage = 0;
@@ -606,7 +606,7 @@ export default class torgeternityActorSheet extends ActorSheet {
         
         let test = {
             testType: "attack",
-            actor: this.actor,
+            actor: this.actor.uuid,
             actorPic: this.actor.data.img,
             actorType: this.actor.data.type,
             attackType: attackType,
@@ -645,9 +645,9 @@ export default class torgeternityActorSheet extends ActorSheet {
     _onPowerRoll(event) {
         const itemID = event.currentTarget.closest(".item").dataset.itemId;
         const item = this.actor.items.get(itemID);
-        var powerData = item.data.data;
+        var powerData = item.system;
         var skillName = powerData.skill;
-        var skillData = this.actor.data.data.skills[skillName];
+        var skillData = this.actor.system.skills[skillName];
         var dnDescriptor = "standard";
         var isAttack = false;
         var applyArmor = true;
@@ -675,8 +675,8 @@ export default class torgeternityActorSheet extends ActorSheet {
         }
 
         // Set modifier for this power
-        if (item.data.data.modifier > 0 || item.data.data.modifier < 0) {
-            powerModifier = item.data.data.modifier
+        if (item.system.modifier > 0 || item.system.modifier < 0) {
+            powerModifier = item.system.modifier
         } else {
             powerModifier = 0
         }
@@ -690,7 +690,7 @@ export default class torgeternityActorSheet extends ActorSheet {
     
         let test = {
             testType: "power",
-            actor: this.actor,
+            actor: this.actor.uuid,
             actorPic: this.actor.data.img,
             actorType: this.actor.data.type,
             attackType: "power",
@@ -726,8 +726,8 @@ export default class torgeternityActorSheet extends ActorSheet {
 
 /*        const itemID = event.currentTarget.closest(".item").dataset.itemId;
         const item = this.actor.items.get(itemID);
-        var powerData = item.data.data;
-        var skillData = this.actor.data.data.skills[powerData.skill];
+        var powerData = item.system;
+        var skillData = this.actor.system.skills[powerData.skill];
 
         // Declare target variables
         var sizeModifier = 0;
@@ -781,25 +781,25 @@ export default class torgeternityActorSheet extends ActorSheet {
             } else {
                 var target = Array.from(game.user.targets)[0];
                 var targetType = target.actor.data.type;
-                var targetData = target.actor.data.data
+                var targetData = target.actor.system
 
 
                 // Set target size bonus
-                if (target.actor.data.data.details.sizeBonus === "tiny") {
+                if (target.actor.system.details.sizeBonus === "tiny") {
                     sizeModifier = -6;
-                } else if (target.actor.data.data.details.sizeBonus === "verySmall") {
+                } else if (target.actor.system.details.sizeBonus === "verySmall") {
                     sizeModifier = -4;
-                } else if (target.actor.data.data.details.sizeBonus === "small") {
+                } else if (target.actor.system.details.sizeBonus === "small") {
                     sizeModifier = -2;
-                } else if (target.actor.data.data.details.sizeBonus === "large") {
+                } else if (target.actor.system.details.sizeBonus === "large") {
                     sizeModifier = 2;
-                } else if (target.actor.data.data.details.sizeBonus === "veryLarge") {
+                } else if (target.actor.system.details.sizeBonus === "veryLarge") {
                     sizeModifier = 4;
                 } else {
                     sizeModifier = 0;
                 }
 
-                vulnerableModifier = target.actor.data.data.vulnerableModifier;
+                vulnerableModifier = target.actor.system.vulnerableModifier;
                 targetToughness = targetData.other.toughness;
                 targetArmor = targetData.other.armor;
                 
@@ -887,17 +887,17 @@ export default class torgeternityActorSheet extends ActorSheet {
             ap: powerData.ap,
             DN: 0,
             unskilledUse: event.currentTarget.dataset.unskilleduse,
-            strengthValue: this.actor.data.data.attributes.strength,
-            charismaValue: this.actor.data.data.attributes.charisma,
-            dexterityValue: this.actor.data.data.attributes.dexterity,
-            mindValue: this.actor.data.data.attributes.mind,
-            spiritValue: this.actor.data.data.attributes.spirit,
+            strengthValue: this.actor.system.attributes.strength,
+            charismaValue: this.actor.system.attributes.charisma,
+            dexterityValue: this.actor.system.attributes.dexterity,
+            mindValue: this.actor.system.attributes.mind,
+            spiritValue: this.actor.system.attributes.spirit,
             targetToughness: targetToughness,
             targetArmor: targetArmor,
             targetType: targetType,
-            woundModifier: parseInt(-(this.actor.data.data.wounds.value)),
-            stymiedModifier: parseInt(this.actor.data.data.stymiedModifier),
-            darknessModifier: parseInt(this.actor.data.data.darknessModifier),
+            woundModifier: parseInt(-(this.actor.system.wounds.value)),
+            stymiedModifier: parseInt(this.actor.system.stymiedModifier),
+            darknessModifier: parseInt(this.actor.system.darknessModifier),
             sizeModifier: 0,                                                       //Size modifiers not applied to Powers tests; must be manually applied
             vulnerableModifier: vulnerableModifier,
             vitalAreaDamageModifier: 0,
@@ -1124,8 +1124,8 @@ export default class torgeternityActorSheet extends ActorSheet {
     _onCardReserve(event) {
         const cardID = event.currentTarget.closest(".card").getAttribute("data-item-id");
         const card = this.actor.items.get(cardID);
-        if (card.data.data.reserved === false) {
-            card.data.data.reserved = true;
+        if (card.system.reserved === false) {
+            card.system.reserved = true;
             card.update({
                 "data.reserved": true
             });
@@ -1137,7 +1137,7 @@ export default class torgeternityActorSheet extends ActorSheet {
                 }
             });
         } else {
-            card.data.data.reserved = false;
+            card.system.reserved = false;
             card.update({
                 "data.reserved": false
             });
