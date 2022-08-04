@@ -521,6 +521,7 @@ a:hover {
 
 .directory .directory-header .header-search input {
     background: transparent;
+    color: rgba(245, 245, 245, 0.9);
 }
 
 .app option,
