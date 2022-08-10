@@ -236,6 +236,7 @@ div.actor ::-webkit-scrollbar {
     background-size: 100% 100%;
     color: black;
 }
+
 /* Commenting out - this is interfering with journal formatting under v10
 .journal-sheet .window-content button[name="submit"] {
     position: absolute;
@@ -256,6 +257,7 @@ div.actor ::-webkit-scrollbar {
     font-weight: bold;
     color: #000;
 }
+
 /* Commenting out - this is interfering with journal formatting under v10
 .journal-sheet .window-content input[type="text"] {
     position: absolute;
@@ -264,7 +266,7 @@ div.actor ::-webkit-scrollbar {
 }
 */
 .journal-sheet .window-content select {
-    position: absolute;
+    /* position: absolute; */
     top: 9%;
     margin-left: 4%;
 }
@@ -282,7 +284,7 @@ div.actor ::-webkit-scrollbar {
 }
 
 .journal-sheet .window-content .editor {
-    top: 15%;
+    top: 5%;
     margin-top: 2%;
     margin-left: 4%;
     width: 90%;
@@ -1819,6 +1821,7 @@ form.actor-sheet header input[name="name"] {
     text-transform: uppercase;
     font-weight: bold;
     width: 100%;
+    background: none;
 }
 
 .window-content .actor-sheet h1 input {
