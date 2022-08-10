@@ -2,12 +2,18 @@
     "name": "torgeternity",
     "title": "Torg Eternity",
     "description": "Torg Eternity character sheet for Foundry VTT.",
-    "author": "Matt Ritchie",
+    "authors": [{
+        "name": "GM Matt",
+        "url": "https://www.youtube.com/c/GMMatt",
+        "discord": "Matt#1768"
+    }],
 
     "version": "2.5.1",
+    "compatibility": {
+        "minimum": 10,
+        "verified": "10.1"
+    },
 
-    "minimumCoreVersion": "9",
-    "compatibleCoreVersion": "9",
     "templateVersion": "4.4.0",
     "esmodules": [
         "torgeternity.js"
@@ -89,6 +95,7 @@
             "name": "system-de-archetypen",
             "label": "Archetypen (de)",
             "path": "packs/deutsch/archetypen.db",
+            "system": "torgeternity",
             "module": "torgeternity",
             "entity": "Actor"
         },
@@ -96,6 +103,7 @@
             "name": "system-de-basisregeln",
             "label": "Basisregeln (de)",
             "path": "packs/deutsch/basisregeln.db",
+            "system": "torgeternity",
             "module": "torgeternity",
             "entity": "JournalEntry"
         },
@@ -111,6 +119,7 @@
             "name": "system-de-grundkarten",
             "label": "Dramadeck (de)",
             "path": "packs/deutsch/core-card-set-de.db",
+            "system": "torgeternity",
             "module": "torgeternity",
             "entity": "Cards"
         }
