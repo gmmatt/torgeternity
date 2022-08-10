@@ -21,10 +21,11 @@ export function modifyTokenBars() {
                                bar.drawRect(index*(this.w/data.max), 0, (this.w/data.max), h);
                 }
         // Set position
-        let posY = number === 0 ? this.h - h : 0;
+        let posY = number === 0 ? this.h : - h;
         bar.position.set(0, posY);
     }
     
+    /* Doesn't seem to be doing anything, and is crashing the canvas in v10 //
     Token.prototype._drawEffect=async function (src, i, bg, w, tint) {
         let tex = await loadTexture(src, {fallback: 'icons/svg/hazard.svg'});
         let icon = this.effects.addChild(new PIXI.Sprite(tex));
@@ -38,7 +39,7 @@ export function modifyTokenBars() {
     
     
       Token.prototype.drawEffects=async function () {
-      this.effects.removeChildren().forEach(c => c.destroy());
+      this.document.effects.removeChildren().forEach(c => c.destroy());
       const tokenEffects = this.effects;
       const actorEffects = this.actor?.temporaryEffects || [];
         let overlay = {
@@ -77,5 +78,5 @@ export function modifyTokenBars() {
         return this._drawOverlay(overlay)
     
   }
-    
+    */
 }
