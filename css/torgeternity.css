@@ -230,12 +230,7 @@ div.actor ::-webkit-scrollbar {
     box-shadow: 0px 0px 5px #4970fa;
 }
 
-.journal-sheet .window-content {
-    font-family: Palatino;
-    background-image: url(../images/box-bckg.webp);
-    background-size: 100% 100%;
-    color: black;
-}
+
 
 /* Commenting out - this is interfering with journal formatting under v10
 .journal-sheet .window-content button[name="submit"] {
@@ -292,68 +287,82 @@ div.actor ::-webkit-scrollbar {
     padding: 2%;
 }
 
-.journal-sheet .window-content .editor .editor-content h1 {
+
+/* All pasted into journal.css
+.sheet.journal-entry .journal-entry-page h1 {
     font-family: Alaska;
     text-transform: uppercase;
     text-align: center;
     color: white;
-    /*background-color: #0a0b3b;*/
+    background-color: #0a0b3b;
     border-bottom: none;
 }
 
-.journal-sheet .window-content .editor .editor-content h2 {
+.sheet.journal-entry .journal-entry-page h2 {
     font-family: Alaska;
     border-bottom: none;
-}
-
-.journal-sheet .window-content .editor .editor-content h3 {
-    font-family: Alaska;
-    font-weight: bold;
-}
-
-.journal-sheet .window-content .editor .editor-content th {
-    background-color: black;
-    color: white;
-}
-
-.editor .editor-content h2 {
     margin: 0px 0px 10px 0px;
 }
 
+.sheet.journal-entry .journal-entry-page h3 {
+    font-family: Alaska;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.sheet.journal-entry .journal-entry-page th {
+    background-color: black;
+    color: white;
+}*/
+
+/*
+.editor .editor-content h2 {
+    margin: 0px 0px 10px 0px;
+}*/
+
+/*
 .editor .editor-content h3 {
     font-size: 15px;
 }
 
-.editor .editor-content p {
+.sheet.journal-entry .journal-entry-page p {
     font-family: "Palatino Linotype";
     font-size: 14px;
-}
+}*/
 
-.editor .editor-content li {
+/*
+.sheet.journal-entry .journal-entry-page li {
     font-family: "Palatino Linotype";
     font-size: 14px;
-}
+} */  
 
-.journal-sheet .window-content .editor .editor-content tr:nth-child(even) {
+
+/*
+
+!!!!NO LONGER NEEDED BECAUSE OF REFORMATTING IN JOURNAL.CSS!!!!
+.sheet.journal-entry .journal-entry-page tr:nth-child(even) {
     background-color: #f3f0eb;
 }
 
-.journal-sheet .window-content .editor .editor-content tr:nth-child(odd) {
+.sheet.journal-entry .journal-entry-page tr:nth-child(odd) {
     background-color: #f5ead9;
-}
+}*/
 
-.journal-sheet .window-content .editor .editor-content table td {
+/*
+.sheet.journal-entry .journal-entry-page table td {
     border: 1px solid black;
     padding: 0px 3px 0px 3px;
-}
+}*/
 
-.journal-sheet .window-content .editor .editor-content table tr td:first-child {
+.sheet.journal-entry .journal-entry-page table tr td:first-child {
     border-left: 0;
 }
 
-.journal-sheet .window-content .editor .editor-content table tr td:last-child {
+.sheet.journal-entry .journal-entry-page table tr td:last-child {
     border-right: 0;
 }
+
+/*END OF JOURNAL CONTENT EDITING*/
 
 .window-app.image-popout .form-group.title {
     margin-top: 1%;

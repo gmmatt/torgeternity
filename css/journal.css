@@ -1,3 +1,13 @@
+@font-face {
+    font-family: "Alaska";
+    src: url("../fonts/Alaska Extrabold Bold.ttf");
+}
+
+@font-face {
+    font-family: "Palatino";
+    src: url("../fonts/palatino_linotype.ttf");
+}
+
 /*New Journal window styling, 2nd section for restyling the submit changes button*/
 .journal-sheet .window-content form.editable {
     background: url(../images/journal-background.webp);
@@ -5,6 +15,12 @@
     box-shadow: -20px 0px 150px black inset,
         30px 0px 150px black inset;
     padding: 8%;
+}
+/*Styling the actual journal window*/
+.sheet.journal-entry .journal-entry-content{
+    background: url(../images/journal-background.webp);
+    background-size: 100% 100%;
+    padding: 3% 4%;
 }
 
 .journal-sheet .window-content .editor {
@@ -22,6 +38,14 @@
     color: white;
     overflow-y: scroll;
 
+}
+.sheet.journal-entry .journal-entry-page {
+    font-family: Palatino;
+    background-color: rgba(255, 247, 247, 0.25);
+    /*background-image: url(../images/box-bckg.webp);
+    background-size: 100% 100%;*/
+    color: black;
+    padding: 0 5px;
 }
 
 .editor-content {
@@ -132,36 +156,36 @@ form button {
 
 /*...................................................................*/
 /*adjustments for <p>*/
-.app.window-app.sheet.journal-sheet section.window-content section.journal-entry-pages p,
-.app.window-app.sheet section.window-content .editor p {
+.sheet.journal-entry .journal-entry-page p {
     text-align: justify;
     padding-right: 10px;
-}
-
-.app.window-app.sheet.journal-sheet section.window-content section.journal-entry-pages p+p,
-.app.window-app.sheet section.window-content .editor p+p {
-    text-indent: 0.75rem;
+    font-family: "Palatino Linotype";
+    font-size: 14px;
     margin-bottom: 0.75rem;
 }
 
-.app.window-app.sheet.journal-sheet section.window-content section.journal-entry-pages p:first-of-type,
-.app.window-app.sheet section.window-content .editor p:first-of-type {
+.sheet.journal-entry .journal-entry-page p+p {
+    text-indent: 0.75rem;
+    /*margin-bottom: 0.75rem;*/
+}
+
+.sheet.journal-entry .journal-entry-page p:first-of-type {
     text-indent: 0;
 }
 
 /*...................................................................*/
 /*adjustments for ul & ol*/
-.app.window-app.sheet.journal-sheet section.window-content section.journal-entry-pages :is(ul, ol),
-.app.window-app.sheet section.window-content .editor :is(ul, ol) {
+.sheet.journal-entry .journal-entry-page :is(ul, ol) {
     text-align: justify;
     padding-right: 10px;
     list-style-position: inside;
+    font-family: "Palatino Linotype";
+    font-size: 14px;
 }
 
 /*...................................................................*/
 /*hr will become Torg-Style*/
-.app.window-app.sheet.journal-sheet section.window-content section.journal-entry-pages hr,
-.app.window-app.sheet section.window-content .editor hr {
+.sheet.journal-entry .journal-entry-page hr {
     Background-image: URL(../../../systems/torgeternity/images/separator.webp);
     height: 3rem;
     width: auto;
@@ -171,48 +195,53 @@ form button {
 }
 
 /*...................................................................*/
+/*general header formatting*/
+.sheet.journal-entry .journal-entry-page :is(h1, h2, h3, h4){
+    font-family: Alaska;
+    }
+
 /*h1 will become Torg-Style*/
-.app.window-app.sheet.journal-sheet section.window-content section.journal-entry-pages h1,
-.app.window-app.sheet section.window-content .editor h1 {
+.sheet.journal-entry .journal-entry-page h1 {
     Background-image: URL(../../../systems/torgeternity/images/tab-header.webp);
     background-repeat: no-repeat;
     background-size: 100% 100%;
     overflow: hidden;
     border: none;
     margin: 1rem 0px 0.7rem 0px;
-    text-align: center;
     color: white;
     text-transform: uppercase;
     line-height: 30px;
+    text-align: center;
 }
 
 /*...................................................................*/
 /*The <h2> Header will become Torg-Style with grey outlines and centered align*/
-.app.window-app.sheet.journal-sheet section.window-content section.journal-entry-pages h2,
-.app.window-app.sheet section.window-content .editor h2 {
+.sheet.journal-entry .journal-entry-page h2 {
+    font-family: Alaska;
     text-align: center;
     font-size: 1.5rem;
     font-weight: bolder;
-    text-shadow: 0px 0px 15px white;
+    text-shadow:    #878787 1.5px 1.5px 0px,
+                    #878787 1.5px -1.5px 0px,
+                    #878787 -1.5px 1.5px 0px,
+                    #878787 -1.5px -1.5px 0px;
     text-transform: uppercase;
     margin: 1rem 0px 0.7rem 0px;
     border: none;
 }
 
 /*...................................................................*/
-.app.window-app.sheet.journal-sheet section.window-content section.journal-entry-pages h3,
-.app.window-app.sheet section.window-content .editor h3 {
+.sheet.journal-entry .journal-entry-page h3 {
     margin: 2px 0px 9px 0px;
     font-weight: bolder;
-    text-transform: uppercase;
     border: none;
-
+    font-weight: bold;
+    font-size: 15px;
 }
 
 /*...................................................................*/
 /*There is still a headline, bolt white upper case with a small black outline. As this wasn't defined, it will be <h4> for not confusing with other headlines*/
-.app.window-app.sheet.journal-sheet section.window-content section.journal-entry-pages h4,
-.app.window-app.sheet section.window-content .editor h4 {
+.sheet.journal-entry .journal-entry-page h4 {
     text-align: center;
     font-size: 1.5rem;
     color: white;
@@ -224,13 +253,10 @@ form button {
     text-transform: uppercase;
     margin: 1rem 0px 0.7rem 0px;
     border: none;
-
-
 }
 
 /*separator*/
-.app.window-app.sheet.journal-sheet section.window-content section.journal-entry-pages hr,
-.app.window-app.sheet section.window-content .editor hr {
+.sheet.journal-entry .journal-entry-page hr {
     background-image: url(../images/separator.webp);
     /* background-position-y: -8px; */
     background-repeat: no-repeat;
@@ -241,27 +267,29 @@ form button {
 
 /*...................................................................*/
 /*<img> comes with a border, what is never seen in TE*/
-.app.window-app.sheet.journal-sheet section.window-content section.journal-entry-pages img,
-.app.window-app.sheet section.window-content .editor img {
+.sheet.journal-entry .journal-entry-page img {
     border-image: none;
     border: none;
 }
 
 /*...................................................................*/
 /*formatting tables*/
-.app.window-app.sheet.journal-sheet section.window-content section.journal-entry-pages table,
-.app.window-app.sheet section.window-content .editor table {
+
+.sheet.journal-entry .journal-entry-page th {
+    background-color: black;
+    color: white;
+}
+
+.sheet.journal-entry .journal-entry-page table {
     font-size: 0.875rem;
     background-color: transparent;
 }
 
-.journal-sheet .window-content .app.window-app.sheet.journal-sheet section.window-content section.journal-entry-pages tr:nth-child(even),
-.app.window-app.sheet section.window-content .editor tr:nth-child(even) {
+.sheet.journal-entry .journal-entry-page tr:nth-child(even) {
     background-color: #F6E9D7;
 }
 
-.journal-sheet .window-content .app.window-app.sheet.journal-sheet section.window-content section.journal-entry-pages tr:nth-child(odd),
-.app.window-app.sheet section.window-content .editor tr:nth-child(odd) {
+.sheet.journal-entry .journal-entry-page tr:nth-child(odd) {
     background-color: transparent;
 }
 
@@ -304,14 +332,16 @@ a.inline-roll {
 }
 
 /*Coloring the symbols before the text (seems like they're ASCII-Code) and a little gap to the following text*/
-.app.window-app.sheet.journal-sheet section.window-content section.journal-entry-pages .fa-user:before,
-.app.window-app.sheet.journal-sheet section.window-content section.journal-entry-pages .fa-book-open:before,
-.app.window-app.sheet.journal-sheet section.window-content section.journal-entry-pages .fa-id-badge:before,
-.app.window-app.sheet.journal-sheet section.window-content section.journal-entry-pages .fa-suitcase:before,
-.app.window-app.sheet.journal-sheet section.window-content section.journal-entry-pages .fa-map:before,
-.app.window-app.sheet.journal-sheet section.window-content section.journal-entry-pages .fa-th-list:before,
-.app.window-app.sheet.journal-sheet section.window-content section.journal-entry-pages .fa-music:before,
-.app.window-app.sheet.journal-sheet section.window-content section.journal-entry-pages .fa-dice-d20:before {
+/*.app.window-app.sheet.journal-sheet section.window-content section.journal-entry-pages .fa-user:before,*/
+.fa-user:before,
+.fa-book-open:before,
+.fa-id-badge:before,
+.fa-suitcase:before,
+.fa-map:before,
+.fa-th-list:before,
+.fa-cards:before,
+.fa-music:before,
+.fa-dice-d20:before {
     color: rgb(245, 245, 245);
     margin-right: 5px;
 }
@@ -456,20 +486,20 @@ div.subtitleleft img {
     padding: 10px;
 }
 
-.editor-content .sidenote :is(h2, h3, h4, ul, table) {
+.sheet.journal-entry .journal-entry-page .sidenote :is(h2, h3, h4, ul, table) {
     background-color: rgba(255, 247, 247, 0.5);
     margin: 0;
     padding: 10px;
 }
 
-.editor-content .sidenote p {
+.sheet.journal-entry .journal-entry-page .sidenote p {
     background-color: rgba(255, 247, 247, 0.5);
     margin: 0;
     padding-bottom: 8px;
     padding-left: 10px;
 }
 
-.sidenote ul {
+.sheet.journal-entry .journal-entry-page ul {
     list-style-position: inside;
     text-align: justify;
     padding-right: 10px;
@@ -576,6 +606,7 @@ div.splotch p+p:last-of-type {
 }
 
 /*...................................................................*/
+/*I was not sure if I can alter blockquote with that, but did so afterwards. Leaving this class because it is actually used in some sorcebooks. Maybe revising it in some time. */
 .exampletext {
     background-color: rgb(241, 221, 192);
     margin: 16px 30px;
