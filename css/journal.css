@@ -8,6 +8,11 @@
     src: url("../fonts/palatino_linotype.ttf");
 }
 
+:root {
+    --torgblue: rgb(65, 90, 155);
+    --torgred: rgb(150, 0, 0);
+}
+
 /*New Journal window styling, 2nd section for restyling the submit changes button*/
 .journal-sheet .window-content form.editable {
     background: url(../images/journal-background.webp);
@@ -54,13 +59,14 @@
     padding-top: 20px
 }
 
+/*
 .window-app .window-content input[type="text"],
 .window-app .window-content input[type="number"],
 .window-app .window-content input[type="password"],
 .window-app .window-content input[type="date"],
 .window-app .window-content input[type="time"] .editor {
     background-color: rgba(255, 255, 255, 0.25);
-}
+}*/
 
 /*preventing buttons to go under content*/
 .app.window-app.sheet.journal-sheet section.window-content footer.sheet-footer {
@@ -194,6 +200,25 @@ form button {
 }
 */
 /*...................................................................*/
+/*orange lines in the browser are not that cool with Torg colors*/
+.sheet.journal-entry .pages-list .directory-item.active:first-of-type{
+    border-color: var(--torgblue);
+}
+
+.sheet.journal-entry .pages-list .directory-item.active:last-of-type{
+    border-color: var(--torgblue);
+}
+
+.sheet.journal-entry .pages-list .directory-item:not(.active) + .active{
+    border-color: var(--torgblue)
+}
+
+.sheet.journal-entry .pages-list .directory-item.active + :not(.active){
+    border-color: var(--torgred);
+}
+
+
+/*...................................................................*/
 /*adjustments for <p>*/
 .sheet.journal-entry .journal-entry-page p {
     text-align: justify;
@@ -222,16 +247,6 @@ form button {
     font-size: 14px;
 }
 
-/*...................................................................*/
-/*hr will become Torg-Style*/
-.sheet.journal-entry .journal-entry-page hr {
-    Background-image: URL(../../../systems/torgeternity/images/separator.webp);
-    height: 3rem;
-    width: auto;
-    border: none;
-    transform: scaleY(0.5);
-    margin: -15px 10px -15px 0px;
-}
 
 /*...................................................................*/
 /*general header formatting*/
@@ -301,8 +316,13 @@ form button {
     background-repeat: no-repeat;
     background-size: auto;
     min-height: 20px;
+    height: 3rem;
+    width: auto;
     border: none;
+    transform: scaleY(0.5);
+    margin: -15px 10px -15px 0px;
 }
+
 
 /*...................................................................*/
 /*<img> comes with a border, what is never seen in TE*/
@@ -372,15 +392,15 @@ a.inline-roll {
 
 /*Coloring the symbols before the text (seems like they're ASCII-Code) and a little gap to the following text*/
 /*.app.window-app.sheet.journal-sheet section.window-content section.journal-entry-pages .fa-user:before,*/
-.fa-user:before,
-.fa-book-open:before,
-.fa-id-badge:before,
-.fa-suitcase:before,
-.fa-map:before,
-.fa-th-list:before,
-.fa-cards:before,
-.fa-music:before,
-.fa-dice-d20:before {
+.sheet.journal-entry .journal-entry-page .fa-user:before,
+.sheet.journal-entry .journal-entry-page .fa-book-open:before,
+.sheet.journal-entry .journal-entry-page .fa-id-badge:before,
+.sheet.journal-entry .journal-entry-page .fa-suitcase:before,
+.sheet.journal-entry .journal-entry-page .fa-map:before,
+.sheet.journal-entry .journal-entry-page .fa-th-list:before,
+.sheet.journal-entry .journal-entry-page .fa-cards:before,
+.sheet.journal-entry .journal-entry-page .fa-music:before,
+.sheet.journal-entry .journal-entry-page .fa-dice-d20:before {
     color: rgb(245, 245, 245);
     margin-right: 5px;
 }

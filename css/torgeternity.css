@@ -242,7 +242,7 @@ div.actor ::-webkit-scrollbar {
 */
 .journal-sheet .window-content input[type="text"],
 .journal-sheet .window-content select {
-    margin-top: 4%;
+    /*margin-top: 4%;*/
     margin-left: 5%;
     width: 90%;
     text-align: center;
