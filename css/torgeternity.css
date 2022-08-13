@@ -1808,6 +1808,7 @@ form.actor-sheet header input[name="name"] {
 .window-content .actor-sheet h3 {
     font-family: Alaska;
     text-transform: uppercase;
+    border:none;
 }
 
 .window-content .actor-sheet h2 {
@@ -2729,6 +2730,7 @@ form.actor-sheet.threat .tab[data-tab].active .editor {
     width: 300px;
     text-align: right;
     text-transform: uppercase;
+    border:none;
 }
 
 .item .window-content form.item-sheet .item-type span {
