@@ -7,10 +7,10 @@
                  /></h1>
     </header>
     
-    <nav class="sheet-tabs item-tabs tabs" data-group="primary" style="{{system.navStyle}}">
+    <nav class="sheet-tabs item-tabs tabs" data-group="primary" style="{{item.system.navStyle}}">
         <a class="item" data-tab="stats" >{{localize "torgeternity.sheetLabels.stats"}}</a>
-        <a class="item" data-tab="enhancements" style="font-size:10px" {{#unless system.extendedNav}}hidden{{/unless}}>{{localize "torgeternity.sheetLabels.enhancements"}}</a>
-        <a class="item" data-tab="limitations" {{#unless system.extendedNav}}hidden{{/unless}}>{{localize "torgeternity.sheetLabels.limitations"}}</a>
+        <a class="item" data-tab="enhancements" style="font-size:10px" {{#unless item.system.extendedNav}}hidden{{/unless}}>{{localize "torgeternity.sheetLabels.enhancements"}}</a>
+        <a class="item" data-tab="limitations" {{#unless item.system.extendedNav}}hidden{{/unless}}>{{localize "torgeternity.sheetLabels.limitations"}}</a>
         <a class="item" data-tab="effects">{{localize "torgeternity.sheetLabels.effects"}}</a>
     </nav>
 
@@ -60,7 +60,7 @@
             </div>
         </div>
         
-        <div class="tab enhancements" data-group="primary" data-tab="enhancements">
+        <div class="tab enhancements" data-group="primary" data-tab="enhancements"> 
 
             <div class="enhancements-section-heading">
                 <span class="enhancements-title">

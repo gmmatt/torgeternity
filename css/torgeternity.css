@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Martel:wght@400;800&family=Roboto:wght@300;400;500&display=swap");
+
 @font-face {
     font-family: "graveBolt";
     src: url("../fonts/GraveSideBB.ttf");
@@ -31,13 +32,18 @@
 
 /*Defining colors as variables, using it in an animation-keyframe*/
 :root {
-    --torgblue: rgb(65,90,155);
-    --torgred: rgb(150,0,0);
+    --torgblue: rgb(65, 90, 155);
+    --torgred: rgb(150, 0, 0);
 }
 
-@keyframes colorchange{
-    0%      {color: var(--torgblue);}
-    100%    {color: var(--torgred);}
+@keyframes colorchange {
+    0% {
+        color: var(--torgblue);
+    }
+
+    100% {
+        color: var(--torgred);
+    }
 }
 
 div.actor ::-webkit-scrollbar {
@@ -224,12 +230,8 @@ div.actor ::-webkit-scrollbar {
     box-shadow: 0px 0px 5px #4970fa;
 }
 
-.journal-sheet .window-content {
-    font-family: Palatino;
-    background-image: url(../images/box-bckg.webp);
-    background-size: 100% 100%;
-    color: black;
-}
+
+
 /* Commenting out - this is interfering with journal formatting under v10
 .journal-sheet .window-content button[name="submit"] {
     position: absolute;
@@ -240,7 +242,7 @@ div.actor ::-webkit-scrollbar {
 */
 .journal-sheet .window-content input[type="text"],
 .journal-sheet .window-content select {
-    margin-top: 4%;
+    /*margin-top: 4%;*/
     margin-left: 5%;
     width: 90%;
     text-align: center;
@@ -250,6 +252,7 @@ div.actor ::-webkit-scrollbar {
     font-weight: bold;
     color: #000;
 }
+
 /* Commenting out - this is interfering with journal formatting under v10
 .journal-sheet .window-content input[type="text"] {
     position: absolute;
@@ -258,7 +261,7 @@ div.actor ::-webkit-scrollbar {
 }
 */
 .journal-sheet .window-content select {
-    position: absolute;
+    /* position: absolute; */
     top: 9%;
     margin-left: 4%;
 }
@@ -276,7 +279,7 @@ div.actor ::-webkit-scrollbar {
 }
 
 .journal-sheet .window-content .editor {
-    top: 15%;
+    top: 5%;
     margin-top: 2%;
     margin-left: 4%;
     width: 90%;
@@ -284,68 +287,82 @@ div.actor ::-webkit-scrollbar {
     padding: 2%;
 }
 
-.journal-sheet .window-content .editor .editor-content h1 {
+
+/* All pasted into journal.css
+.sheet.journal-entry .journal-entry-page h1 {
     font-family: Alaska;
     text-transform: uppercase;
     text-align: center;
     color: white;
-    /*background-color: #0a0b3b;*/
+    background-color: #0a0b3b;
     border-bottom: none;
 }
 
-.journal-sheet .window-content .editor .editor-content h2 {
+.sheet.journal-entry .journal-entry-page h2 {
     font-family: Alaska;
     border-bottom: none;
-}
-
-.journal-sheet .window-content .editor .editor-content h3 {
-    font-family: Alaska;
-    font-weight: bold;
-}
-
-.journal-sheet .window-content .editor .editor-content th {
-    background-color: black;
-    color: white;
-}
-
-.editor .editor-content h2 {
     margin: 0px 0px 10px 0px;
 }
 
+.sheet.journal-entry .journal-entry-page h3 {
+    font-family: Alaska;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.sheet.journal-entry .journal-entry-page th {
+    background-color: black;
+    color: white;
+}*/
+
+/*
+.editor .editor-content h2 {
+    margin: 0px 0px 10px 0px;
+}*/
+
+/*
 .editor .editor-content h3 {
     font-size: 15px;
 }
 
-.editor .editor-content p {
+.sheet.journal-entry .journal-entry-page p {
     font-family: "Palatino Linotype";
     font-size: 14px;
-}
+}*/
 
-.editor .editor-content li {
+/*
+.sheet.journal-entry .journal-entry-page li {
     font-family: "Palatino Linotype";
     font-size: 14px;
-}
+} */  
 
-.journal-sheet .window-content .editor .editor-content tr:nth-child(even) {
+
+/*
+
+!!!!NO LONGER NEEDED BECAUSE OF REFORMATTING IN JOURNAL.CSS!!!!
+.sheet.journal-entry .journal-entry-page tr:nth-child(even) {
     background-color: #f3f0eb;
 }
 
-.journal-sheet .window-content .editor .editor-content tr:nth-child(odd) {
+.sheet.journal-entry .journal-entry-page tr:nth-child(odd) {
     background-color: #f5ead9;
-}
+}*/
 
-.journal-sheet .window-content .editor .editor-content table td {
+/*
+.sheet.journal-entry .journal-entry-page table td {
     border: 1px solid black;
     padding: 0px 3px 0px 3px;
-}
+}*/
 
-.journal-sheet .window-content .editor .editor-content table tr td:first-child {
+.sheet.journal-entry .journal-entry-page table tr td:first-child {
     border-left: 0;
 }
 
-.journal-sheet .window-content .editor .editor-content table tr td:last-child {
+.sheet.journal-entry .journal-entry-page table tr td:last-child {
     border-right: 0;
 }
+
+/*END OF JOURNAL CONTENT EDITING*/
 
 .window-app.image-popout .form-group.title {
     margin-top: 1%;
@@ -385,14 +402,17 @@ textarea:hover {
         transform: rotateZ(0deg);
         top: 5px;
     }
+
     50% {
         transform: rotateZ(180deg);
         top: -65px;
     }
+
     75% {
         transform: rotateZ(310deg);
         top: 20px;
     }
+
     100% {
         transform: rotateZ(360deg);
         top: 5px;
@@ -404,14 +424,17 @@ textarea:hover {
         transform: rotateZ(0deg);
         top: 5px;
     }
+
     50% {
         transform: rotateZ(180deg);
         top: -65px;
     }
+
     75% {
         transform: rotateZ(310deg);
         top: 20px;
     }
+
     100% {
         transform: rotateZ(360deg);
         top: 5px;
@@ -509,6 +532,7 @@ a:hover {
 
 .directory .directory-header .header-search input {
     background: transparent;
+    color: rgba(245, 245, 245, 0.9);
 }
 
 .app option,
@@ -1380,6 +1404,7 @@ div.readme a.compendium {
     0% {
         margin-left: 100%;
     }
+
     100% {
         margin-left: 0%;
     }
@@ -1389,6 +1414,7 @@ div.readme a.compendium {
     0% {
         margin-left: 100%;
     }
+
     100% {
         margin-left: 0%;
     }
@@ -1508,6 +1534,7 @@ div.readme a.compendium {
     from {
         transform: scaleX(1.2) scaleY(1.2);
     }
+
     to {
         transform: scaleX(0.8) scaleY(0.8);
     }
@@ -1517,6 +1544,7 @@ div.readme a.compendium {
     from {
         transform: scaleX(1.2) scaleY(1.2);
     }
+
     to {
         transform: scaleX(0.8) scaleY(0.8);
     }
@@ -1566,14 +1594,14 @@ form.actor-sheet header input[name="name"] {
     color: #0e0909;
 }
 
-.activeDefense-roll{
+.activeDefense-roll {
     animation: none;
     color: black;
 }
 
-.activeDefense-roll-glow{
+.activeDefense-roll-glow {
     animation: colorchange 2s infinite alternate;
-    }
+}
 
 .inline-skill-item:after {
     content: ",";
@@ -1780,6 +1808,7 @@ form.actor-sheet header input[name="name"] {
 .window-content .actor-sheet h3 {
     font-family: Alaska;
     text-transform: uppercase;
+    border:none;
 }
 
 .window-content .actor-sheet h2 {
@@ -1802,6 +1831,7 @@ form.actor-sheet header input[name="name"] {
     text-transform: uppercase;
     font-weight: bold;
     width: 100%;
+    background: none;
 }
 
 .window-content .actor-sheet h1 input {
@@ -2424,6 +2454,12 @@ form.actor-sheet.threat img.profile-img {
     max-height: 64px;
 }
 
+form.actor-sheet.threat span.vital-box span.light {
+    font-family: "Signika";
+    font-size: 13px;
+    display: inline;
+}
+
 form.actor-sheet.threat input[type="checkbox"] {
     opacity: 0.01;
     position: relative;
@@ -2694,6 +2730,7 @@ form.actor-sheet.threat .tab[data-tab].active .editor {
     width: 300px;
     text-align: right;
     text-transform: uppercase;
+    border:none;
 }
 
 .item .window-content form.item-sheet .item-type span {

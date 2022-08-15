@@ -1,51 +1,141 @@
+@font-face {
+    font-family: "Alaska";
+    src: url("../fonts/Alaska Extrabold Bold.ttf");
+}
+
+@font-face {
+    font-family: "Palatino";
+    src: url("../fonts/palatino_linotype.ttf");
+}
+
+:root {
+    --torgblue: rgb(65, 90, 155);
+    --torgred: rgb(150, 0, 0);
+}
+
 /*New Journal window styling, 2nd section for restyling the submit changes button*/
-.journal-sheet .window-content{
-    background-image: url(../images/journal-background.webp);
+.journal-sheet .window-content form.editable {
+    background: url(../images/journal-background.webp);
+    background-size: 100% 100%;
+    box-shadow: -20px 0px 150px black inset,
+        30px 0px 150px black inset;
+    padding: 8%;
 }
-.journal-sheet .window-content .editor{
-    padding:0%;
-    top:12%;
-    height: 82%;
-    width: 91.5%;
+/*Styling the actual journal window*/
+.sheet.journal-entry .journal-entry-content{
+    background: url(../images/journal-background.webp);
+    background-size: 100% 100%;
+    padding: 3% 4%;
 }
-.editor-content{
+
+.journal-sheet .window-content .editor {
+    padding: 0%;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    margin-left: 0;
+}
+
+.journal-sheet.journal-page-sheet .window-content form.editable {
+    font-family: Alaska;
+    background-image: url(../images/thunder.webp);
+    background-size: cover;
+    color: white;
+    overflow-y: scroll;
+
+}
+.sheet.journal-entry .journal-entry-page {
+    font-family: Palatino;
+    background-color: rgba(255, 247, 247, 0.25);
+    /*background-image: url(../images/box-bckg.webp);
+    background-size: 100% 100%;*/
+    color: black;
+    padding: 0 5px;
+}
+
+.editor-content {
     background-color: rgba(255, 247, 247, 0.25);
     padding-left: 10px;
+    padding-top: 20px
 }
-.window-app .window-content input[type="text"], .window-app .window-content input[type="number"], .window-app .window-content input[type="password"], .window-app .window-content input[type="date"], .window-app .window-content input[type="time"] .editor{
-    background-color: rgba(255,255,255, 0.25);
+
+/*
+.window-app .window-content input[type="text"],
+.window-app .window-content input[type="number"],
+.window-app .window-content input[type="password"],
+.window-app .window-content input[type="date"],
+.window-app .window-content input[type="time"] .editor {
+    background-color: rgba(255, 255, 255, 0.25);
+}*/
+
+/*preventing buttons to go under content*/
+.app.window-app.sheet.journal-sheet section.window-content footer.sheet-footer {
+    bottom: 0px;
+    position: absolute;
+    width: 80%;
+    left: 10%;
+
 }
-.window-app .window-content form button, .window-app .window-content form select {
-    text-shadow:    black    1.3px 1.3px 0px,
-                    black    1.3px -1.3px 0px,
-                    black    -1.3px 1.3px 0px,
-                    black    -1.3px 1.3px 0px;
-    background-image:url(../images/lightning_bar.webp);
+
+.app.window-app.sheet.journal-sheet nav.directory {
+    background: url(../images/journal-background.webp);
+    background-size: 100% 100%;
+    box-shadow: -20px 0px 150px black inset,
+        30px 0px 150px black inset;
+    padding: 8%;
+    text-shadow: -1px -1px 0 #000,
+        1px -1px 0 #000,
+        -1px 1px 0 #000,
+        1px 1px 0 #000,
+        0px 0px 15px black;
+    outline: black;
+}
+
+.journal-sheet nav .pages-list .directory-item.active {
+    border-color: #009fff;
+    box-shadow: 0px 5px 10px #009fff63 inset;
+}
+
+.window-app .window-content form button,
+.window-app .window-content form select,
+.journal-sheet .directory .action-buttons button {
+    text-shadow: black 1.3px 1.3px 0px,
+        black 1.3px -1.3px 0px,
+        black -1.3px 1.3px 0px,
+        black -1.3px 1.3px 0px;
+    background-image: url(../images/lightning_bar.webp);
     background-repeat: no-repeat;
-    background-size:cover;
+    background-size: cover;
     background-position-x: center;
+    color: white
 }
+
 /*Fixing stylebleed*/
 .item .window-content form.item-sheet .asside select {
     text-shadow: none;
     background: none;
 }
-.tox .tox-tbtn--bespoke .tox-tbtn__select-label{
+
+.tox .tox-tbtn--bespoke .tox-tbtn__select-label {
     text-shadow: none;
-    color:black;
+    color: black;
     background: none;
 }
-.window-app.actor .window-content form select{
-    text-shadow:none;
+
+.window-app.actor .window-content form select {
+    text-shadow: none;
     background: none;
 }
-body#tinymce.mce-content-body{
+
+body#tinymce.mce-content-body {
     background-color: rgba(255, 247, 247, 0.25);
     background: none;
 }
-.tox.tox-tinymce .tox-tbtn{
-    background:none
+
+.tox.tox-tinymce .tox-tbtn {
+    background: none
 }
+
 .tox.tox-tinymce .tox-edit-area__iframe {
     background-color: #ffffff7a;
 }
@@ -69,405 +159,537 @@ form button {
     border: 1px groove var(--color-border-light-highlight);
 }
 
+/*...................................................................*/
+/*Lightning in the new sidebar */
+.sheet.journal-entry .sidebar{
+    background-image:url(../images/CHHeader.webp);
+    background-repeat: no-repeat;
+    background-size:110%;
+}
+
+/*...................................................................*/
+/*New header in V10 becomes Torg-Style! */
+/* ATM commented out for purpose question
+
+.sheet.journal-entry .journal-entry-page header {
+    background-image:url(../images/CHHeader.webp);
+    background-size:100% 100%;
+    background-repeat: no-repeat;
+    float:left;
+    width:300px;
+    height:825px;
+    margin: 0 0.5em 0.5em 0;
+}
+
+.sheet.journal-entry .journal-entry-page header h1{
+    position:relative;
+    top:42.5%;
+    background-image:none;
+    text-align: center;
+    font-size: 2rem;
+    color: white;
+    font-family: Alaska;
+    text-shadow: black 1.3px 1.3px 0px,
+        black 1.3px -1.3px 0px,
+        black -1.3px 1.3px 0px,
+        black -1.3px 1.3px 0px;
+    text-transform: uppercase;
+    border: none;
+    transform: rotate(270deg);
+    
+}
+*/
+/*...................................................................*/
+/*orange lines in the browser are not that cool with Torg colors*/
+.sheet.journal-entry .pages-list .directory-item.active:first-of-type{
+    border-color: var(--torgblue);
+}
+
+.sheet.journal-entry .pages-list .directory-item.active:last-of-type{
+    border-color: var(--torgblue);
+}
+
+.sheet.journal-entry .pages-list .directory-item:not(.active) + .active{
+    border-color: var(--torgblue)
+}
+
+.sheet.journal-entry .pages-list .directory-item.active + :not(.active){
+    border-color: var(--torgred);
+}
+
 
 /*...................................................................*/
 /*adjustments for <p>*/
-Div.editor-content p{
-    text-align:justify;
+.sheet.journal-entry .journal-entry-page p {
+    text-align: justify;
     padding-right: 10px;
-    }
+    font-family: "Palatino Linotype";
+    font-size: 14px;
+    margin-bottom: 0.75rem;
+}
 
-    Div.editor-content p + p{
-        text-indent: 0.75rem;
-        margin-bottom: 0.75rem;
-        }
+.sheet.journal-entry .journal-entry-page p+p {
+    text-indent: 0.75rem;
+    /*margin-bottom: 0.75rem;*/
+}
 
-    Div.editor-content p:first-of-type{
-        text-indent:0;
-        }
+.sheet.journal-entry .journal-entry-page p:first-of-type {
+    text-indent: 0;
+}
+
 /*...................................................................*/
 /*adjustments for ul & ol*/
-Div.editor-content :is(ul, ol){
+.sheet.journal-entry .journal-entry-page :is(ul, ol) {
     text-align: justify;
     padding-right: 10px;
     list-style-position: inside;
+    font-family: "Palatino Linotype";
+    font-size: 14px;
 }
+
+
 /*...................................................................*/
-/*hr will become Torg-Style*/
-Div.editor-content hr {
-    Background-image: URL(../../../systems/torgeternity/images/separator.webp);
-    height:3rem;
-    width:auto;
-    border:none;
-    transform: scaleY(0.5);
-    margin: -15px 10px -15px 0px;
+/*general header formatting*/
+.sheet.journal-entry .journal-entry-page :is(h1, h2, h3, h4){
+    font-family: Alaska;
     }
-/*...................................................................*/
+
 /*h1 will become Torg-Style*/
-Div.editor-content h1{
+.sheet.journal-entry .journal-entry-page h1 {
     Background-image: URL(../../../systems/torgeternity/images/tab-header.webp);
     background-repeat: no-repeat;
-    background-size:100% 100%;
-    overflow:hidden;
-    border:none;
+    background-size: 100% 100%;
+    overflow: hidden;
+    border: none;
     margin: 1rem 0px 0.7rem 0px;
-    }
+    color: white;
+    text-transform: uppercase;
+    line-height: 30px;
+    text-align: center;
+}
+
 /*...................................................................*/
 /*The <h2> Header will become Torg-Style with grey outlines and centered align*/
-.editor .editor-content h2 {
+.sheet.journal-entry .journal-entry-page h2 {
+    font-family: Alaska;
     text-align: center;
     font-size: 1.5rem;
+    font-weight: bolder;
     text-shadow:    #878787 1.5px 1.5px 0px,
                     #878787 1.5px -1.5px 0px,
                     #878787 -1.5px 1.5px 0px,
                     #878787 -1.5px -1.5px 0px;
-    text-transform:uppercase;
+    text-transform: uppercase;
     margin: 1rem 0px 0.7rem 0px;
-    }
-/*...................................................................*/
-.editor .editor-content h3 {
-    margin: 2px 0px 9px 0px;
+    border: none;
 }
+
+/*...................................................................*/
+.sheet.journal-entry .journal-entry-page h3 {
+    margin: 2px 0px 9px 0px;
+    font-weight: bolder;
+    border: none;
+    font-weight: bold;
+    font-size: 15px;
+}
+
 /*...................................................................*/
 /*There is still a headline, bolt white upper case with a small black outline. As this wasn't defined, it will be <h4> for not confusing with other headlines*/
-Div.editor-content h4 {
+.sheet.journal-entry .journal-entry-page h4 {
     text-align: center;
     font-size: 1.5rem;
     color: white;
     font-family: Alaska;
-    text-shadow: black    1.3px 1.3px 0px,
-                 black    1.3px -1.3px 0px,
-                 black    -1.3px 1.3px 0px,
-                 black    -1.3px 1.3px 0px;
+    text-shadow: black 1.3px 1.3px 0px,
+        black 1.3px -1.3px 0px,
+        black -1.3px 1.3px 0px,
+        black -1.3px 1.3px 0px;
     text-transform: uppercase;
     margin: 1rem 0px 0.7rem 0px;
+    border: none;
 }
 
 /*In Cosm-Books, there is a headline similiar to h4 but with the bar that is used as background-image for the <hr>. Making this a class.*/
-Div.editor-content h4.bar{
+.sheet.journal-entry .journal-entry-page h4.bar{
     background-image: url(../images/separator.webp);
     background-position-y: -8px;
     background-repeat: no-repeat;
     background-size: auto;
 }
+
+/*separator*/
+.sheet.journal-entry .journal-entry-page hr {
+    background-image: url(../images/separator.webp);
+    /* background-position-y: -8px; */
+    background-repeat: no-repeat;
+    background-size: auto;
+    min-height: 20px;
+    height: 3rem;
+    width: auto;
+    border: none;
+    transform: scaleY(0.5);
+    margin: -15px 10px -15px 0px;
+}
+
+
 /*...................................................................*/
 /*<img> comes with a border, what is never seen in TE*/
-Div.editor-content img{
+.sheet.journal-entry .journal-entry-page img {
     border-image: none;
     border: none;
-    }
+}
+
 /*...................................................................*/
 /*formatting tables*/
-Div.editor-content table{
+
+.sheet.journal-entry .journal-entry-page th {
+    background-color: black;
+    color: white;
+}
+
+.sheet.journal-entry .journal-entry-page table {
     font-size: 0.875rem;
     background-color: transparent;
 }
 
-.journal-sheet .window-content .editor .editor-content tr:nth-child(even){
+.sheet.journal-entry .journal-entry-page tr:nth-child(even) {
     background-color: #F6E9D7;
 }
 
-.journal-sheet .window-content .editor .editor-content tr:nth-child(odd){
+.sheet.journal-entry .journal-entry-page tr:nth-child(odd) {
     background-color: transparent;
 }
+
 /*...................................................................*/
 /*Formatting of Blockcode Torg-Style*/
-blockquote{
-    background-color: rgb(241,221,192);
+blockquote {
+    background-color: rgb(241, 221, 192);
     margin: 16px 30px;
     padding: 5px 10px;
     font-size: 14px;
     text-align: justify;
-    overflow:hidden;
+    overflow: hidden;
     border-left: none;
-    font-style:normal;
+    font-style: normal;
 }
 
-    blockquote p:first-of-type{
-        text-indent: 0px;
-    }
+blockquote p:first-of-type {
+    text-indent: 0px;
+}
 
-    blockquote p + p{
-        text-indent: 0px;
-    }
+blockquote p+p {
+    text-indent: 0px;
+}
+
 /*...................................................................*/
 /*Inline links are pretty boring in standard-style, let's pimp'em!*/
-a.entity-link, a.content-link, a.inline-roll{
+a.entity-link,
+a.content-link,
+a.inline-roll {
     background-image: url(../images/lightning_bar.webp);
     background-repeat: repeat-x;
     background-size: auto 100%;
     color: white !important;
-    text-shadow: black    1.0px 1.0px 0px,
-    black    1.0px -1.0px 0px,
-    black    -1.0px 1.0px 0px,
-    black    -1.0px 1.0px 0px;
+    text-shadow: black 1.0px 1.0px 0px,
+        black 1.0px -1.0px 0px,
+        black -1.0px 1.0px 0px,
+        black -1.0px 1.0px 0px;
     font-size: 14px;
     text-indent: 0px;
 }
-    /*Coloring the symbols before the text (seems like they're ASCII-Code) and a little gap to the following text*/
-    div.editor-content .fa-user:before, div.editor-content .fa-book-open:before, div.editor-content .fa-id-badge:before, div.editor-content .fa-suitcase:before, div.editor-content .fa-map:before, div.editor-content .fa-th-list:before, div.editor-content .fa-music:before, div.editor-content .fa-dice-d20:before {
-        color: rgb(245, 245, 245);
-        margin-right: 5px;
-    }
-    
+
+/*Coloring the symbols before the text (seems like they're ASCII-Code) and a little gap to the following text*/
+/*.app.window-app.sheet.journal-sheet section.window-content section.journal-entry-pages .fa-user:before,*/
+.sheet.journal-entry .journal-entry-page .fa-user:before,
+.sheet.journal-entry .journal-entry-page .fa-book-open:before,
+.sheet.journal-entry .journal-entry-page .fa-id-badge:before,
+.sheet.journal-entry .journal-entry-page .fa-suitcase:before,
+.sheet.journal-entry .journal-entry-page .fa-map:before,
+.sheet.journal-entry .journal-entry-page .fa-th-list:before,
+.sheet.journal-entry .journal-entry-page .fa-cards:before,
+.sheet.journal-entry .journal-entry-page .fa-music:before,
+.sheet.journal-entry .journal-entry-page .fa-dice-d20:before {
+    color: rgb(245, 245, 245);
+    margin-right: 5px;
+}
+
 /*...................................................................*/
 /*Image-wraparound, image on left side*/
 
-.imgleft{
+.imgleft {
     float: left;
     margin-right: 0.5rem;
     width: 50%;
     height: 50%;
-    }
+}
 
-    .imgleft.shrink20p{
-        width: 20%;
-        height: 20%;
-    }
+.imgleft.shrink20p {
+    width: 20%;
+    height: 20%;
+}
 
-    .imgleft.shrink30p{
-        width: 30%;
-        height: 30%;
-    }
+.imgleft.shrink30p {
+    width: 30%;
+    height: 30%;
+}
 
 /*Image-wraparound, image on right side.*/
 
-.imgright{
+.imgright {
     float: right;
     margin-left: 0.5rem;
     width: 50%;
     height: 50%;
-    }
+}
 
-    .imgright.shrink20p{
-        width: 20%;
-        height: 20%;
-    }
-    
-    .imgright.shrink30p{
-        width: 30%;
-        height: 30%;
-    }
+.imgright.shrink20p {
+    width: 20%;
+    height: 20%;
+}
+
+.imgright.shrink30p {
+    width: 30%;
+    height: 30%;
+}
+
 /*...................................................................*/
 /*IMG underlines */
-div.subtitleright{
+div.subtitleright {
     position: relative;
     width: 30%;
     /*height: 30%;*/
     float: right;
-    margin-left:0.5rem;
+    margin-left: 0.5rem;
 }
 
-div.subtitleleft{
+div.subtitleleft {
     position: relative;
     width: 30%;
     /*height: 30%;*/
     float: left;
-    margin-right:0.5rem;
+    margin-right: 0.5rem;
 }
 
-    div.subtitleright p, div.subtitleleft p{
-        margin: 0.5rem;
-        bottom: auto;
-        left: auto;
-        text-align: center;
-        font-size: 1rem;
-        color: white;
-        font-family: Alaska;
-        text-shadow: black    1.3px 1.3px 0px,
-                     black    1.3px -1.3px 0px,
-                     black    -1.3px 1.3px 0px,
-                     black    -1.3px 1.3px 0px;
-        text-transform: uppercase;
-    }
-    div.subtitleright img, div.subtitleleft img{
-        width: 100%;
-    }
+div.subtitleright p,
+div.subtitleleft p {
+    margin: 0.5rem;
+    bottom: auto;
+    left: auto;
+    text-align: center;
+    font-size: 1rem;
+    color: white;
+    font-family: Alaska;
+    text-shadow: black 1.3px 1.3px 0px,
+        black 1.3px -1.3px 0px,
+        black -1.3px 1.3px 0px,
+        black -1.3px 1.3px 0px;
+    text-transform: uppercase;
+}
+
+div.subtitleright img,
+div.subtitleleft img {
+    width: 100%;
+}
 
 /*...................................................................*/
 /*Floating images that are center aligned*/
-.imgfloatmid{
+.imgfloatmid {
     display: block;
     margin: auto;
-    shape-outside:content-box;
+    shape-outside: content-box;
     shape-margin: 0.5rem;
-    width:50%;
-    height:50%;
+    width: 50%;
+    height: 50%;
 }
 
-    .imgfloatmid.shrink20p{
-        width:20%;
-        height:20%;
-    }
+.imgfloatmid.shrink20p {
+    width: 20%;
+    height: 20%;
+}
 
-    .imgfloatmid.shrink30p{
-        width:30%;
-        height:30%;
-    }
+.imgfloatmid.shrink30p {
+    width: 30%;
+    height: 30%;
+}
+
 /*...................................................................*/
 /*Use this class in the next <p> after layouting with classes .imgright and .imgleft*/
 .passagebreak {
     clear: both;
-    }
+}
+
 /*...................................................................*/
 /*Center images and scale them up to 100% to all sides*/
-.img-mid{
-    display: block; 
-    margin: auto; 
-    width: 100%; 
+.img-mid {
+    display: block;
+    margin: auto;
+    width: 100%;
     height: 100%;
     border: none;
-    }
+}
+
 /*...................................................................*/
-.charimg{
+.charimg {
     float: right;
     shape-margin: 0.5rem !important;
     shape-image-threshold: 0.1;
     max-width: 50% !important;
     max-height: 50% !important;
     margin-left: 0.5rem !important;
-    }
+}
+
 /*...................................................................*/
 /*A class for more line-height, because links in journals are often to close to another*/
-.moreheight{
+.moreheight {
     line-height: 1.5rem;
-    }
+}
+
 /*...................................................................*/
 /*use the background-image for sidenotes, heritage-class for white background*/
-.sidenote{
+.sidenote {
     background-image: url(../images/mapDetailBack.webp);
-    background-repeat:no-repeat;
+    background-repeat: no-repeat;
     background-size: cover;
     padding: 10px;
-    }
-.editor-content .sidenote :is(h2, h3, h4, ul, table){
-    background-color: rgba(255, 247, 247, 0.5);
-    margin:0;
-    padding:10px;
-    }
-    .editor-content .sidenote p{
-        background-color: rgba(255, 247, 247, 0.5);
-    margin:0;
-    padding-bottom:8px;
-    padding-left: 10px;
-    }
-    .sidenote ul{
-        list-style-position: inside;
-        text-align: justify;
-        padding-right: 10px;
-    }
-    .sidenote :first-of-type{
-        padding-top: 0;
-        }
+}
 
-.sidenote.left{
+.sheet.journal-entry .journal-entry-page .sidenote :is(h2, h3, h4, ul, table) {
+    background-color: rgba(255, 247, 247, 0.5);
+    margin: 0;
+    padding: 10px;
+}
+
+.sheet.journal-entry .journal-entry-page .sidenote p {
+    background-color: rgba(255, 247, 247, 0.5);
+    margin: 0;
+    padding-bottom: 8px;
+    padding-left: 10px;
+}
+
+.sheet.journal-entry .journal-entry-page ul {
+    list-style-position: inside;
+    text-align: justify;
+    padding-right: 10px;
+}
+
+.sidenote :first-of-type {
+    padding-top: 0;
+}
+
+.sidenote.left {
     float: left;
     width: 50%;
     margin-right: 0.5rem;
 }
 
-.sidenote.right{
+.sidenote.right {
     float: right;
     width: 50%;
     margin-left: 0.5rem;
 }
+
 /*...................................................................*/
 /*Splotches! All of them!
 Class-Syntax: 
 class="splotch aysle/cyber/nile/or/panpa/thark left/right
 */
 
-div.editor-content .splotch{
-    background-size:100% 100%;
+.splotch {
+    background-size: 100% 100%;
     background-repeat: no-repeat;
     background-position-x: center;
     width: 50%;
-    display:inline-block;
-    margin-left:25%;
-    min-height:100px;
+    display: inline-block;
+    margin-left: 25%;
+    /* padding-top: 30%; */
+    /* min-height: 100px; */
+    background-image: url(../images/Splotch_Aysle.webp);
 }
 
-div.editor-content .splotch.aysle{
-    background-image:url(../images/Splotch_Aysle.webp);
+.splotch.aysle {
+    background-image: url(../images/Splotch_Aysle.webp);
 }
 
-div.editor-content .splotch.cyber{
+.splotch.cyber {
     background-image: url(../images/splotch_cyberpapacy.webp);
 }
 
-div.editor-content .splotch.nile{
-    background-image:url(../images/Splotch_Nile.webp);
+.splotch.nile {
+    background-image: url(../images/Splotch_Nile.webp);
 }
 
-div.editor-content .splotch.or{
-    background-image:url(../images/Splotch_Orrorsh.webp);
+.splotch.or {
+    background-image: url(../images/Splotch_Orrorsh.webp);
 }
 
-div.editor-content .splotch.panpa{
-    background-image:url(../images/Splotch_PanPacifica.webp);
+.splotch.panpa {
+    background-image: url(../images/Splotch_PanPacifica.webp);
 }
 
-div.editor-content .splotch.thark{
-    background-image:url(../images/Splotch_Tharkold.webp);
+.splotch.thark {
+    background-image: url(../images/Splotch_Tharkold.webp);
 }
 
-div.editor-content .splotch p{
+.splotch p {
     text-align: left;
     font-size: 1rem;
     color: white;
     font-family: Alaska;
-    text-shadow: black    1.3px 1.3px 0px,
-                 black    1.3px -1.3px 0px,
-                 black    -1.3px 1.3px 0px,
-                 black    -1.3px 1.3px 0px;
+    text-shadow: black 1.3px 1.3px 0px,
+        black 1.3px -1.3px 0px,
+        black -1.3px 1.3px 0px,
+        black -1.3px 1.3px 0px;
     text-transform: uppercase;
     padding: 0 1em;
-    margin-left:2.2rem;
-    }
-
-div.editor-content div.splotch p:only-of-type{
-    margin-top: 1.8em;
-    margin-bottom: 1.8em;
-    padding:inherit;
-    }
-
-div.editor-content div.splotch p:first-of-type{
-    margin-top:1.8em;
-    padding:inherit;
-    }
-
-div.editor-content div.splotch p + p:last-of-type{
-    margin-bottom:1.8em;
-    padding:inherit;
-    text-indent:0px;
-    }
-
-div.editor-content .splotch.right{
-    float:right;
-    margin-left:0.5rem;
+    margin-left: 2.2rem;
 }
 
-div.editor-content .splotch.left{
-    float:left;
-    margin-right:0.5rem;
-    margin-left:unset;
+div.splotch p:only-of-type {
+    margin-top: 1.8em;
+    margin-bottom: 1.8em;
+    padding: inherit;
+}
+
+div.splotch p:first-of-type {
+    margin-top: 1.8em;
+    padding: inherit;
+}
+
+div.splotch p+p:last-of-type {
+    margin-bottom: 1.8em;
+    padding: inherit;
+    text-indent: 0px;
+}
+
+.splotch.right {
+    float: right;
+    margin-left: 0.5rem;
+}
+
+.splotch.left {
+    float: left;
+    margin-right: 0.5rem;
+    margin-left: unset;
 }
 
 /*...................................................................*/
-.exampletext{
-    background-color: rgb(241,221,192);
+/*I was not sure if I can alter blockquote with that, but did so afterwards. Leaving this class because it is actually used in some sorcebooks. Maybe revising it in some time. */
+.exampletext {
+    background-color: rgb(241, 221, 192);
     margin: 16px 30px;
     padding: 5px 10px;
     font-size: 14px;
     text-align: justify;
-    overflow:hidden;
+    overflow: hidden;
 }
-    .exampletext.exampletext p:first-of-type{
-        text-indent: 0px;
-    }
-    .exampletext.exampletext p + p{
-        text-indent: 0px;
-    }
+
+.exampletext.exampletext p:first-of-type {
+    text-indent: 0px;
+}
+
+.exampletext.exampletext p+p {
+    text-indent: 0px;
+}
 
 /*...................................................................*/
 /*Adventures often come with directives from Sebastian. This class is to bring them on the grafic parchments with the right font. Please use an h3 for the headline.*/
@@ -476,41 +698,47 @@ div.editor-content .splotch.left{
     src: url("../fonts/gunplay_rg.ttf") format("ttf");
 }
 
-Div.editor-content Div.directive1{
+div.directive1 {
     background-image: url(../images/parchment1.webp);
     background-repeat: no-repeat;
     background-size: 100% 100%;
     padding: 3rem;
-    }
-    Div.editor-content Div.directive1 :is(p,h3,h4){
-        font-family: "gunplay";
-        transform: rotate(-3deg);
-        text-indent: 0px;
-    }
-    Div.editor-content Div.directive1 h3{
-        font-size: 21px; 
-    }
+}
 
-Div.editor-content Div.directive2{
+div.directive1 :is(p, h3, h4) {
+    font-family: "gunplay";
+    transform: rotate(-3deg);
+    text-indent: 0px;
+}
+
+div.directive1 h3 {
+    font-size: 21px;
+}
+
+div.directive2 {
     background-image: url(../images/parchment2.webp);
     background-repeat: no-repeat;
     background-size: 100% 100%;
     padding: 3rem;
-    }
-    Div.editor-content Div.directive2 :is(p,h3,h4){
-        font-family: "gunplay";
-        transform: rotate(2deg);
-        text-indent: 0px;
-    }
-    Div.editor-content Div.directive2 h3{
-        font-size: 21px; 
-    }
+}
+
+div.directive2 :is(p, h3, h4) {
+    font-family: "gunplay";
+    transform: rotate(2deg);
+    text-indent: 0px;
+}
+
+div.directive2 h3 {
+    font-size: 21px;
+}
+
 /*...................................................................*/
 /*Multi-purpose classes*/
 
-Div.editor-content .noindent {
-    text-indent:0px;
+.sheet.journal-entry .journal-entry-page .noindent {
+    text-indent: 0px;
 }
-    div.editor-content .noindent p + p {
-        text-indent: 0px;
-    }
+
+.sheet.journal-entry .journal-entry-page .noindent p+p {
+    text-indent: 0px;
+}

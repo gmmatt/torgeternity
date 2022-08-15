@@ -21,61 +21,8 @@ export function modifyTokenBars() {
                                bar.drawRect(index*(this.w/data.max), 0, (this.w/data.max), h);
                 }
         // Set position
-        let posY = number === 0 ? this.h - h : 0;
+        let posY = number === 0 ? this.h : - h;
         bar.position.set(0, posY);
     }
-    
-    Token.prototype._drawEffect=async function (src, i, bg, w, tint) {
-        let tex = await loadTexture(src, {fallback: 'icons/svg/hazard.svg'});
-        let icon = this.effects.addChild(new PIXI.Sprite(tex));
-        icon.width = icon.height = w;
-        const nr = Math.floor(this.data.height * 3);
-        icon.x = Math.floor(i / nr) * w*-1;
-        icon.y = (i % nr) * w;
-        if ( tint ) icon.tint = tint;
-        bg.drawRoundedRect(icon.x + 1, icon.y + 1, w - 2, w - 2, 2);
-      }
-    
-    
-      Token.prototype.drawEffects=async function () {
-      this.effects.removeChildren().forEach(c => c.destroy());
-      const tokenEffects = this.effects;
-      const actorEffects = this.actor?.temporaryEffects || [];
-        let overlay = {
-          src: this.overlayEffect,
-          tint: null
-        };
-    
-        // Draw status effects
-        if ( tokenEffects.length || actorEffects.length ) {
-          const promises = [];
-          let w = Math.round(canvas.dimensions.size / 2 / 3) * 2;
-          let bg = this.effects.addChild(new PIXI.Graphics()).beginFill(0x000000, 0.40).lineStyle(1.0, 0x000000);
-          let i = 0;
-    
-          // Draw actor effects first
-          for ( let f of actorEffects ) {
-            if ( !f.data.icon ) continue;
-            const tint = f.data.tint ? foundry.utils.colorStringToHex(f.data.tint) : null;
-            if ( f.getFlag("core", "overlay") ) {
-              overlay = {src: f.data.icon, tint};
-              continue;
-            }
-            promises.push(this._drawEffect(f.data.icon, i, bg, w, tint));
-            i++;
-          }
-    
-          // Next draw token effects
-          for ( let f of tokenEffects ) {
-            promises.push(this._drawEffect(f, i, bg, w, null));
-            i++;
-          }
-          await Promise.all(promises);
-        }
-    
-        // Draw overlay effect
-        return this._drawOverlay(overlay)
-    
-  }
     
 }
