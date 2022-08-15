@@ -2775,7 +2775,10 @@ form.actor-sheet.threat .tab[data-tab].active .editor {
 .item .window-content form.item-sheet .asside select {
     color: black;
     text-align: center;
+    max-width: 150px;
 }
+
+
 
 .item .window-content form.item-sheet .main-content {
     grid-row: 1/4;
