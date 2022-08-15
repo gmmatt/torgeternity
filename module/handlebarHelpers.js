@@ -36,9 +36,8 @@ export function registerHelpers() {
     Handlebars.registerHelper("concatSpecialAbility", function (description) {
         // Removes <p> and </p> from the beginning and end of special ability descriptions so that they appear inline on threat sheet
         if (description.startsWith("<p>")) {
-            var updatedDescription;
-            var endPoint = description.length;
-            updatedDescription = description.substr(3, endPoint);
+
+            let updatedDescription = description.replace("<p>", "").replace("</p>", "")
             return updatedDescription;
         } else {
             return description;
@@ -52,7 +51,7 @@ export function registerHelpers() {
         for (i = 0; i < effects.length; i++) {
             if (effects[i].label === "ActiveDefense") {
                 return true;
-            }            
+            }
         };
         return false;
     });
@@ -62,7 +61,7 @@ export function registerHelpers() {
         if (data.testType === "activeDefense") {
             return true;
         }
-        return false;    
+        return false;
     });
 
     // Is at least one target available in this test?
@@ -72,7 +71,7 @@ export function registerHelpers() {
         } else {
             return false;
         }
-    
+
     });
 
     Handlebars.registerHelper('ifequal', function (a, b, options) {
