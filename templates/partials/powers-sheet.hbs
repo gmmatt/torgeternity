@@ -1,110 +1,130 @@
 <nav class="sheet-tabs item-tabs tabs" data-group="primary">
-    <a class="item" data-tab="stats" >{{localize "torgeternity.sheetLabels.stats"}}</a>
-    <a class="item" data-tab="effects">{{localize "torgeternity.sheetLabels.effects"}}</a>
+    <a class="item" data-tab="stats">{{localize
+        "torgeternity.sheetLabels.stats"}}</a>
+    <a class="item" data-tab="effects">{{localize
+        "torgeternity.sheetLabels.effects"}}</a>
 </nav>
 
-<section class="sheet-body"  >
+<section class="sheet-body">
 
     <div class="tab stats" data-group="primary" data-tab="stats">
 
-    <div class="sheet-content">
-        <div class="asside">
-            <p class="item-data-label">
-                {{localize "torgeternity.powers.axiom"}}
-            </p>
-            <input name="data.axiom" type="number" value="{{data.data.axiom}}" class="input-box" />
-            <p class="item-data-label">
-                {{localize "torgeternity.powers.skill"}}/{{localize "torgeternity.powers.skilllevel"}}
-            </p>
-            <select name="data.skill" class="input-box">
-                {{#select data.data.skill}}
-                {{#each config.powerSkills as |name type|}}
-                <option value="{{type}}">{{localize name}}</option>
-                {{/each}}
-                {{/select}}
-            </select>
-            <input name="data.skilllevel" type="number" value="{{data.data.skilllevel}}" class="input-box" />
-            <p class="item-data-label">
-                {{localize "torgeternity.powers.dn"}}
-            </p>
-            <select name="data.dn" class="input-box">
-                {{#select data.data.dn}}
-                {{#each config.dnTypes as |name type|}}
-                <option value="{{type}}">{{localize name}}</option>
-                {{/each}}
-                {{/select}}
-            </select>
-            <p class="item-data-label">
-                {{localize "torgeternity.powers.modifier"}}
-            </p>
-            <input name="data.modifier" type="number" value="{{data.data.modifier}}" class="input-box" />
-            <p class="item-data-label">
-                {{localize "torgeternity.powers.castingtime"}}
-            </p>
-            <input name="data.castingtime" type="text" value="{{data.data.castingtime}}" class="input-box" />
-            <p class="item-data-label">
-                {{localize "torgeternity.powers.range"}}
-            </p>
-            <input name="data.range" type="text" value="{{data.data.range}}" class="input-box" />
-            <p class="item-data-label">
-                {{localize "torgeternity.powers.duration"}}
-            </p>
-            <input name="data.duration" type="text" value="{{data.data.duration}}" class="input-box" />
-            <p class="item-data-label">
-                {{localize "torgeternity.powers.attack"}}?/{{localize "torgeternity.powers.damage"}}/{{localize "torgeternity.powers.ap"}}
-            </p>
-            <select name="data.isAttack" class="input-box-small" default="false">
-                {{#select data.data.isAttack}}
-                {{#each config.yesNo as |name type|}}
-                <option value="{{type}}">{{localize name}}</option>
-                {{/each}}
-                {{/select}}
-            </select>
-            <input name="data.damage" type="number" value="{{data.data.damage}}" class="input-box-small" />
-            <input name="data.ap" type="number" value="{{data.data.ap}}" class="input-box-small" />
-            <p class="item-data-label">
-                {{localize "torgeternity.powers.applySize"}}/{{localize "torgeternity.powers.applyArmor"}}
-            </p>
-            <select name="data.applySize" class="input-box-small" default="false">
-                {{#select data.data.applySize}}
-                {{#each config.yesNo as |name type|}}
-                <option value="{{type}}">{{localize name}}</option>
-                {{/each}}
-                {{/select}}
-            </select>
-            <select name="data.applyArmor" class="input-box-small" default="false">
-                {{#select data.data.applyArmor}}
-                {{#each config.yesNo as |name type|}}
-                <option value="{{type}}">{{localize name}}</option>
-                {{/each}}
-                {{/select}}
-            </select>
-        </div>
-        <div class="main-content">
-            <p class="item-data-label">
-                {{localize "torgeternity.gear.description"}}
-            </p>
-            <div name="data.description" class="item-description-textarea">
-                {{editor content=data.data.description target="data.description" button=true owner=owner editable=editable}}
+        <div class="sheet-content">
+            <div class="asside">
+                <p class="item-data-label">
+                    {{localize "torgeternity.powers.axiom"}}
+                </p>
+                <input name="data.axiom" type="number"
+                    value="{{data.data.axiom}}" class="input-box" />
+                <p class="item-data-label">
+                    {{localize "torgeternity.powers.skill"}}/{{localize
+                    "torgeternity.powers.skilllevel"}}
+                </p>
+                <select name="data.skill" class="input-box">
+                    {{#select data.data.skill}}
+                    {{#each config.powerSkills as |name type|}}
+                    <option value="{{type}}">{{localize name}}</option>
+                    {{/each}}
+                    {{/select}}
+                </select>
+                <input name="data.skilllevel" type="number"
+                    value="{{data.data.skilllevel}}" class="input-box" />
+                <p class="item-data-label">
+                    {{localize "torgeternity.powers.dn"}}
+                </p>
+                <select name="data.dn" class="input-box">
+                    {{#select data.data.dn}}
+                    {{#each config.dnTypes as |name type|}}
+                    <option value="{{type}}">{{localize name}}</option>
+                    {{/each}}
+                    {{/select}}
+                </select>
+                <p class="item-data-label">
+                    {{localize "torgeternity.powers.modifier"}}
+                </p>
+                <input name="data.modifier" type="number"
+                    value="{{data.data.modifier}}" class="input-box" />
+                <p class="item-data-label">
+                    {{localize "torgeternity.powers.castingtime"}}
+                </p>
+                <input name="data.castingtime" type="text"
+                    value="{{data.data.castingtime}}" class="input-box" />
+                <p class="item-data-label">
+                    {{localize "torgeternity.powers.range"}}
+                </p>
+                <input name="data.range" type="text" value="{{data.data.range}}"
+                    class="input-box" />
+                <p class="item-data-label">
+                    {{localize "torgeternity.powers.duration"}}
+                </p>
+                <input name="data.duration" type="text"
+                    value="{{data.data.duration}}" class="input-box" />
+                <p class="item-data-label">
+                    {{localize "torgeternity.powers.attack"}}? / {{localize
+                    "torgeternity.powers.damage"}} / {{localize
+                    "torgeternity.powers.ap"}}
+                </p>
+                <select name="data.isAttack" class="input-box-small"
+                    default="false">
+                    {{#select data.data.isAttack}}
+                    {{#each config.yesNo as |name type|}}
+                    <option value="{{type}}">{{localize name}}</option>
+                    {{/each}}
+                    {{/select}}
+                </select>
+                <input name="data.damage" type="number"
+                    value="{{data.data.damage}}" class="input-box-small" />
+                <input name="data.ap" type="number" value="{{data.data.ap}}"
+                    class="input-box-small" />
+                <p class="item-data-label">
+                    {{localize "torgeternity.powers.applySize"}} / {{localize
+                    "torgeternity.powers.applyArmor"}}
+                </p>
+                <select name="data.applySize" class="input-box-small"
+                    default="false">
+                    {{#select data.data.applySize}}
+                    {{#each config.yesNo as |name type|}}
+                    <option value="{{type}}">{{localize name}}</option>
+                    {{/each}}
+                    {{/select}}
+                </select>
+                <select name="data.applyArmor" class="input-box-small"
+                    default="false">
+                    {{#select data.data.applyArmor}}
+                    {{#each config.yesNo as |name type|}}
+                    <option value="{{type}}">{{localize name}}</option>
+                    {{/each}}
+                    {{/select}}
+                </select>
             </div>
-            <p class="item-data-label">
-                {{localize "torgeternity.sheetLabels.goodResult"}}
-            </p>
-            <div >
-                <textarea name="data.good" class="item-description-textarea" >{{data.data.good}}</textarea>
+            <div class="main-content">
+                <p class="item-data-label">
+                    {{localize "torgeternity.gear.description"}}
+                </p>
+                <div name="data.description" class="item-description-textarea">
+                    {{editor content=data.data.description
+                    target="data.description" button=true owner=owner
+                    editable=editable}}
+                </div>
+                <p class="item-data-label">
+                    {{localize "torgeternity.sheetLabels.goodResult"}}
+                </p>
+                <div>
+                    <textarea name="data.good" class="item-description-textarea">{{data.data.good}}</textarea>
+                </div>
+                <p class="item-data-label">
+                    {{localize "torgeternity.sheetLabels.outstandingResult"}}
+                </p>
+                <div>
+                    <textarea name="data.outstanding"
+                        class="item-description-textarea">{{data.data.outstanding}}</textarea>
+                </div>
             </div>
-            <p class="item-data-label">
-                {{localize "torgeternity.sheetLabels.outstandingResult"}}
-            </p>
-            <div >
-                <textarea name="data.outstanding" class="item-description-textarea" >{{data.data.outstanding}}</textarea>
-            </div>
-        </div> 
-                
-    </div>
-</div>
-<div class="tab effects" data-group="primary" data-tab="effects">
-    {{> "systems/torgeternity/templates/parts/active-effects.hbs"}}
-</div>
 
-</section>        
+        </div>
+    </div>
+    <div class="tab effects" data-group="primary" data-tab="effects">
+        {{> "systems/torgeternity/templates/parts/active-effects.hbs"}}
+    </div>
+
+</section>
