@@ -727,10 +727,10 @@ div.directive2 h3 {
 /*...................................................................*/
 /*Multi-purpose classes*/
 
-.noindent {
+.sheet.journal-entry .journal-entry-page .noindent {
     text-indent: 0px;
 }
 
-.noindent p+p {
+.sheet.journal-entry .journal-entry-page .noindent p+p {
     text-indent: 0px;
 }
