@@ -309,6 +309,14 @@ form button {
     border: none;
 }
 
+/*In Cosm-Books, there is a headline similiar to h4 but with the bar that is used as background-image for the <hr>. Making this a class.*/
+.sheet.journal-entry .journal-entry-page h4.bar{
+    background-image: url(../images/separator.webp);
+    background-position-y: -8px;
+    background-repeat: no-repeat;
+    background-size: auto;
+}
+
 /*separator*/
 .sheet.journal-entry .journal-entry-page hr {
     background-image: url(../images/separator.webp);
