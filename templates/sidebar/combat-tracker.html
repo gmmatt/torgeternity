@@ -73,7 +73,7 @@
         </nav>
     </header>
 
-    <ol id="combat-tracker" class="directory-list">
+    <ol id="combat-tracker" class="directory-list" style="flex:3">
         {{#each combat.turns as |turn id|}}
         <li class="combatant actor directory-item flexrow dispo{{turn.token.data.disposition}}
             {{#ifequal ../this.combat.current.turn id}} active{{/ifequal}}
