@@ -6,36 +6,46 @@
 			</b>
 			<span class="inline-skill-list">
 				<span>
-					<a class="skill-roll" data-testtype="attribute" data-baseattribute="charisma" data-adds="0"
-						data-value="{{actor.system.attributes.charisma}}" data-unskilleduse="1" data-name="charisma">
+					<a class="skill-roll" data-testtype="attribute"
+						data-baseattribute="charisma" data-adds="0"
+						data-value="{{actor.system.attributes.charisma}}" data-unskilleduse="1"
+						data-name="charisma">
 						{{localize "torgeternity.attributes.charisma"}}
 					</a>
 					{{actor.system.attributes.charisma}}, &nbsp;
 				</span>
 				<span>
-					<a class="skill-roll" data-testtype="attribute" data-baseattribute="dexterity" data-adds="0"
-						data-value="{{actor.system.attributes.dexterity}}" data-unskilleduse="1" data-name="dexterity">
+					<a class="skill-roll" data-testtype="attribute"
+						data-baseattribute="dexterity" data-adds="0"
+						data-value="{{actor.system.attributes.dexterity}}" data-unskilleduse="1"
+						data-name="dexterity">
 						{{localize "torgeternity.attributes.dexterity"}}
 					</a>
 					{{actor.system.attributes.dexterity}}, &nbsp;
 				</span>
 				<span>
-					<a class="skill-roll" data-testtype="attribute" data-baseattribute="mind" data-adds="0"
-						data-value="{{actor.system.attributes.mind}}" data-unskilleduse="1" data-name="mind">
+					<a class="skill-roll" data-testtype="attribute" data-baseattribute="mind"
+						data-adds="0"
+						data-value="{{actor.system.attributes.mind}}" data-unskilleduse="1"
+						data-name="mind">
 						{{localize "torgeternity.attributes.mind"}}
 					</a>
 					{{actor.system.attributes.mind}}, &nbsp;
 				</span>
 				<span>
-					<a class="skill-roll" data-testtype="attribute" data-baseattribute="spirit" data-adds="0"
-						data-value="{{actor.system.attributes.spirit}}" data-unskilleduse="1" data-name="spirit">
+					<a class="skill-roll" data-testtype="attribute" data-baseattribute="spirit"
+						data-adds="0"
+						data-value="{{actor.system.attributes.spirit}}" data-unskilleduse="1"
+						data-name="spirit">
 						{{localize "torgeternity.attributes.spirit"}}
 					</a>
 					{{actor.system.attributes.spirit}}, &nbsp;
 				</span>
 				<span>
-					<a class="skill-roll" data-testtype="attribute" data-baseattribute="strength" data-adds="0"
-						data-value="{{actor.system.attributes.strength}}" data-unskilleduse="1" data-name="strength">
+					<a class="skill-roll" data-testtype="attribute"
+						data-baseattribute="strength" data-adds="0"
+						data-value="{{actor.system.attributes.strength}}" data-unskilleduse="1"
+						data-name="strength">
 						{{localize "torgeternity.attributes.strength"}}
 					</a>
 					{{actor.system.attributes.strength}}, &nbsp;
@@ -49,7 +59,8 @@
 			{{#each actor.system.skills as |content name|}}
 			{{#if content.value}}
 			<span class="inline-skill-item">
-				<a class="skill-roll" data-testtype="skill" data-baseattribute="{{content.baseAttribute}}"
+				<a class="skill-roll" data-testtype="skill"
+					data-baseattribute="{{content.baseAttribute}}"
 					data-adds="{{content.adds}}" data-value="{{content.value}}"
 					data-unskilleduse="{{content.unskilledUse}}" data-name="{{name}}">
 					{{localize (concatSkillName name)}}
@@ -79,19 +90,23 @@
 		<b>{{localize "torgeternity.sheetLabels.equipment"}}:</b>&nbsp;
 		<span>
 			{{#each meleeweapons as |item id|}}
-			<a class="item-attackRoll inline-skill-item item" data-item-id="{{item._id}}">{{item.name}}</a>
+			<a class="item-attackRoll inline-skill-item item"
+				data-item-id="{{item._id}}">{{item.name}}</a>
 			{{/each}}
 
 			{{#each missileweapon as |item id|}}
-			<a class="item-attackRoll inline-skill-item item" data-item-id="{{item._id}}">{{item.name}}</a>
+			<a class="item-attackRoll inline-skill-item item"
+				data-item-id="{{item._id}}">{{item.name}}</a>
 			{{/each}}
 
 			{{#each firearm as |item id|}}
-			<a class="item-attackRoll inline-skill-item item" data-item-id="{{item._id}}">{{item.name}}</a>
+			<a class="item-attackRoll inline-skill-item item"
+				data-item-id="{{item._id}}">{{item.name}}</a>
 			{{/each}}
 
 			{{#each heavyweapon as |item id|}}
-			<a class="item-attackRoll inline-skill-item item" data-item-id="{{item._id}}">{{item.name}}</a>
+			<a class="item-attackRoll inline-skill-item item"
+				data-item-id="{{item._id}}">{{item.name}}</a>
 			{{/each}}
 
 			{{#each armor as |item id|}}
@@ -152,7 +167,6 @@
 		                <b>{{localize "torgeternity.stats.description"}}</b>
 		                {{{actor.system.details.description}}}
 		            </div> -->
-		</span>
 	</div>
 </div>
 <div class="threat-editor " id="threat-editor">
@@ -160,27 +174,32 @@
 	<div class="threat-edit attribut-list-edit">
 		<span>
 			<span>{{localize "torgeternity.attributes.charisma"}}</span>
-			<input name="data.attributes.charisma" type="number" value="{{actor.system.attributes.charisma}}" data="dtype="
+			<input name="data.attributes.charisma" type="number"
+				value="{{actor.system.attributes.charisma}}" data="dtype="
 				Number"" class="small-input" />,&nbsp;
 		</span>
 		<span>
 			<span>{{localize "torgeternity.attributes.dexterity"}}</span>
-			<input name="data.attributes.dexterity" type="number" value="{{actor.system.attributes.dexterity}}"
+			<input name="data.attributes.dexterity" type="number"
+				value="{{actor.system.attributes.dexterity}}"
 				data="dtype=" Number"" class="small-input" />,&nbsp;
 		</span>
 		<span>
 			<span>{{localize "torgeternity.attributes.mind"}}</span>
-			<input name="data.attributes.mind" type="number" value="{{actor.system.attributes.mind}}" data="dtype="
+			<input name="data.attributes.mind" type="number"
+				value="{{actor.system.attributes.mind}}" data="dtype="
 				Number"" class="small-input" />,&nbsp;
 		</span>
 		<span>
 			<span>{{localize "torgeternity.attributes.spirit"}}</span>
-			<input name="data.attributes.spirit" type="number" value="{{actor.system.attributes.spirit}}" data="dtype="
+			<input name="data.attributes.spirit" type="number"
+				value="{{actor.system.attributes.spirit}}" data="dtype="
 				Number"" class="small-input" />,&nbsp;
 		</span>
 		<span>
 			<span>{{localize "torgeternity.attributes.strength"}}</span>
-			<input name="data.attributes.strength" type="number" value="{{actor.system.attributes.strength}}" data="dtype="
+			<input name="data.attributes.strength" type="number"
+				value="{{actor.system.attributes.strength}}" data="dtype="
 				Number"" class="small-input" />
 		</span>
 
@@ -199,10 +218,11 @@
 					value="{{skill.value}}" data-dtype="Number" />
 
 				<a class="toggleFav {{#if skill.isFav}}checked
-						                        {{/if}}">
+					{{/if}}">
 					<i class="far fa-star"></i>
 				</a>
-				<input class="favCheck" type="checkbox" name="data.skills.{{key}}.isFav" {{checked skill.isFav}}
+				<input class="favCheck" type="checkbox" name="data.skills.{{key}}.isFav"
+					{{checked skill.isFav}}
 					data-dtype="Boolean" />
 			</span>
 		</div>
@@ -212,11 +232,14 @@
 
 	<div class="threat-edit">
 		{{localize "torgeternity.sheetLabels.move"}}:&nbsp;
-		<input name="data.other.move" class="small-input" type="number" value="{{actor.system.other.move}}"
+		<input name="data.other.move" class="small-input" type="number"
+			value="{{actor.system.other.move}}"
 			data-dtype="Number" />;&nbsp;
 		{{localize "torgeternity.sheetLabels.tough"}}:&nbsp;
-		<input name="data.other.toughness" class="small-input" type="number" value="{{actor.system.other.toughness}}"
-			data-dtype="Number" />&nbsp;/&nbsp;(<input name="data.other.armor" class="small-input" type="number"
+		<input name="data.other.toughness" class="small-input" type="number"
+			value="{{actor.system.other.toughness}}"
+			data-dtype="Number" />&nbsp;/&nbsp;(<input name="data.other.armor"
+			class="small-input" type="number"
 			value="{{actor.system.other.armor}}" data-dtype="Number" />)
 	</div>
 	<div class="threat-edit">
