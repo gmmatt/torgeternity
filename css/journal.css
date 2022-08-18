@@ -408,6 +408,9 @@ a.inline-roll {
 .sheet.journal-entry .journal-entry-page .fa-th-list:before,
 .sheet.journal-entry .journal-entry-page .fa-cards:before,
 .sheet.journal-entry .journal-entry-page .fa-music:before,
+.sheet.journal-entry .journal-entry-page .fa-file-alt:before,
+.sheet.journal-entry .journal-entry-page .fa-file-lines:before,
+.sheet.journal-entry .journal-entry-page .fa-file-text:before,
 .sheet.journal-entry .journal-entry-page .fa-dice-d20:before {
     color: rgb(245, 245, 245);
     margin-right: 5px;
