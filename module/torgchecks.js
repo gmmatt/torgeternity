@@ -429,14 +429,13 @@ export function renderSkillChat(test) {
     }
 
     // Choose Text to Display as Result
-    var actorID = test.actor;
-    console.log(actorID);
+    var myActor = fromUuidSync(test.actor);
     if ((test.rollTotal === 1) && !((test.testType === "activeDefenseUpdate") || (test.testType === "activeDefense"))) {   //Roll 1 and not defense = Mishape
         test.resultText = game.i18n.localize('torgeternity.chatText.check.result.mishape');
         test.actionTotalLabel = "display:none";
     // Create and Manage Active Effect if SK is Actively Defending (thanks Durak!)
     } else if (test.testType === "activeDefense") {                                                         //Click on defense
-        var oldAD = game.actors.get(actorID).effects.find(a => a.data.label === "ActiveDefense");      //Search for an ActiveDefense effect
+        var oldAD = myActor.effects.find(a => a.data.label === "ActiveDefense");      //Search for an ActiveDefense effect
         if (!oldAD) {                                                                                       //Create it if not present (if it exists, will be deleted farther)
             let NewActiveDefense = {
                 label : "ActiveDefense",                                                                    //Add an icon to remind the defense, bigger ? Change color of Defense ?
@@ -480,13 +479,13 @@ export function renderSkillChat(test) {
                     }],
                 disabled : false
             };
-            game.actors.get(actorID).createEmbeddedDocuments("ActiveEffect",[NewActiveDefense]);
+            fromUuidSync(test.actor).createEmbeddedDocuments("ActiveEffect",[NewActiveDefense]);
             test.testType = "activeDefenseUpdate";    
             test.resultText = "+ " + test.bonus;
             test.actionTotalLabel = "display:none";
         };
         if (oldAD) {                                                                                        //if present, reset by deleting
-            game.actors.get(actorID).data.effects.find(a => a.data.label === "ActiveDefense").delete();
+            fromUuidSync(test.actor).effects.find(a => a.data.label === "ActiveDefense").delete();
             ////
             let RAD = {                                                                                     //Simple chat message for information
                 speaker: ChatMessage.getSpeaker(),

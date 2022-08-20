@@ -2417,6 +2417,7 @@ form.actor-sheet header input[name="name"] {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    min-height:0em;
 }
 
 .window-content .actor-sheet .defense p span {
