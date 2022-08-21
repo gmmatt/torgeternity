@@ -11,25 +11,25 @@
         </tr>
     </table>
     <div class="item-description-chat" data-item-id="{{_id}}">
-        <div class="item-description-chat">{{{data.description}}}</div>
+        <div class="item-description-chat">{{{system.description}}}</div>
         <span style="font-weight:bold">{{localize "torgeternity.powers.good"}}:</span>
-        <div class="item-description-chat">{{data.good}}</div>
+        <div class="item-description-chat">{{system.good}}</div>
         <span style="font-weight:bold">{{localize "torgeternity.powers.outstanding"}}:</span>
-        <div class="item-description-chat">{{data.outstanding}}</div>
+        <div class="item-description-chat">{{system.outstanding}}</div>
         <div class="item-dropdown-extras">
-            {{localize "torgeternity.attributes.spirit"}} {{data.axiom}}
+            {{localize "torgeternity.attributes.spirit"}} {{system.axiom}}
         </div>
         <div class="item-dropdown-extras">
-            {{ localize (concatSkillName data.skill)}}
+            {{ localize (concatSkillName system.skill)}}
         </div>
         <div class="item-dropdown-extras">
-            {{data.castingtime}}
+            {{system.castingtime}}
         </div>
         <div class="item-dropdown-extras">
-            {{data.range}}
+            {{system.range}}
         </div>
         <div class="item-dropdown-extras">
-            {{data.duration}}
+            {{system.duration}}
         </div>
     </div>
 

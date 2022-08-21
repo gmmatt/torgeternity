@@ -37,13 +37,13 @@ export default class torgeternityItem extends Item {
 
     async roll() {
         let chatData = {
-            user: game.user.data._id,
+            user: game.user._id,
             speaker: ChatMessage.getSpeaker()
         };
 
         let cardData = {
-            ...this.data,
-            owner: this.actor.data._id
+            ...this,
+            owner: this.actor._id
         };
 
         chatData.content = await renderTemplate(this.chatTemplate[this.type], cardData);
