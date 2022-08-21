@@ -382,6 +382,7 @@ export default class torgeternityActorSheet extends ActorSheet {
         
         let test = {
             testType: event.currentTarget.dataset.testtype,
+            customSkill: event.currentTarget.dataset.customskill,
             actor: this.actor.uuid,
             actorPic: this.actor.data.img,
             actorType: this.actor.data.type,

@@ -11,9 +11,14 @@ export function renderSkillChat(test) {
                 test.chatTitle = game.i18n.localize(localId) + " " + game.i18n.localize('torgeternity.chatText.test');
                 break;
             case "skill":
-                var localId = "torgeternity.skills." + test.skillName;
-                test.chatTitle = game.i18n.localize(localId) + " " + game.i18n.localize('torgeternity.chatText.test');
-                break;
+                if (test.customSkill != "true") {
+                    var localId = "torgeternity.skills." + test.skillName;
+                    test.chatTitle = game.i18n.localize(localId) + " " + game.i18n.localize('torgeternity.chatText.test');
+                    break; 
+                } else {
+                    test.chatTitle = test.skillName
+                    break;        
+                }
             case "interactionAttack":
             case "attack":
                 var localId = "torgeternity.skills." + test.skillName;
@@ -188,7 +193,7 @@ export function renderSkillChat(test) {
     // Do we display the unskilled label for a Storm Knight?
     var unskilledTest = false;
     var myActor = test.actor.includes("Token") ? fromUuidSync(test.actor).actor : fromUuidSync(test.actor)
-    if (myActor.type === "stormknight" & test.testType != "attribute" & test.testType != "activeDefense") {
+    if (myActor.type === "stormknight" & test.testType != "attribute" & test.testType != "activeDefense" & test.customSkill != "true") {
         if (myActor.system.skills[test.skillName].adds === 0 | myActor.system.skills[test.skillName].adds === null) {
             unskilledTest = true;
         }
