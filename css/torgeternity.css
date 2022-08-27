@@ -364,6 +364,133 @@ div.actor ::-webkit-scrollbar {
 
 /*END OF JOURNAL CONTENT EDITING*/
 
+/*Begin of ProseMirror Editoring Style 2022-08-27 by Algor*/
+
+.prosemirror .editor-container .editor-content *{
+    color:black;
+    font-family: Palatino;
+}
+
+.prosemirror .editor-container .editor-content p{
+    text-align:justify;
+    font-size: 14px;
+}
+
+.prosemirror .editor-container .editor-content p+p{
+    text-indent:0.75rem;
+}
+
+.prosemirror .editor-container .editor-content p:first-of-type{
+    text-indent:0;
+}
+
+.prosemirror .editor-container .editor-content :is(ul,ol){
+    text-align: justify;
+    padding-right: 10px;
+    list-style-position: inside;
+    font-family: "Palatino Linotype";
+    font-size: 14px;
+}
+
+.prosemirror .editor-container .editor-content :is(h1,h2,h3,h4){
+    font-family: Alaska;
+}
+
+.prosemirror .editor-container .editor-content h1{
+    Background-image: URL(../../../systems/torgeternity/images/tab-header.webp);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    overflow: hidden;
+    border: none;
+    margin: 1rem 0px 0.7rem 0px;
+    color: white;
+    text-transform: uppercase;
+    line-height: 30px;
+    text-align: center;
+}
+
+.prosemirror .editor-container .editor-content h2{
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bolder;
+    text-shadow:    #878787 1.5px 1.5px 0px,
+                    #878787 1.5px -1.5px 0px,
+                    #878787 -1.5px 1.5px 0px,
+                    #878787 -1.5px -1.5px 0px;
+    text-transform: uppercase;
+    margin: 1rem 0px 0.7rem 0px;
+    border: none;
+}
+
+.prosemirror .editor-container .editor-content h3{
+    margin: 2px 0px 9px 0px;
+    font-weight: bolder;
+    border: none;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.prosemirror .editor-container .editor-content h4{
+    text-align: center;
+    font-size: 1.5rem;
+    color: white;
+    font-family: Alaska;
+    text-shadow: black 1.3px 1.3px 0px,
+        black 1.3px -1.3px 0px,
+        black -1.3px 1.3px 0px,
+        black -1.3px 1.3px 0px;
+    text-transform: uppercase;
+    margin: 1rem 0px 0.7rem 0px;
+    border: none;
+}
+
+.prosemirror .editor-container .editor-content hr{
+    background-image: url(../images/separator.webp);
+    /* background-position-y: -8px; */
+    background-repeat: no-repeat;
+    background-size: auto;
+    min-height: 20px;
+    height: 3rem;
+    width: auto;
+    border: none;
+    transform: scaleY(0.5);
+    margin: -15px 10px -15px 0px;
+}
+
+.prosemirror .editor-container .editor-content img {
+    border-image:none;
+    border:none;
+}
+
+.prosemirror .editor-container .editor-content th{
+    background-color: black;
+    color:white;
+}
+
+.prosemirror .editor-container .editor-content table {
+    font-size:0.875rem;
+    background-color: transparent;
+}
+
+.prosemirror .editor-container .editor-content tr:nth-child(even) {
+    background-color: #F6E9D7
+}
+
+.prosemirror .editor-container .editor-content tr:nth-child(odd){
+    background-color: transparent;
+}
+
+.prosemirror .editor-container .editor-content div.subtitleright p,
+.prosemirror .editor-container .editor-content div.subtitleleft p{
+    color: white;
+    text-shadow: black 1.3px 1.3px 0px,
+    black 1.3px -1.3px 0px,
+    black -1.3px 1.3px 0px,
+    black -1.3px 1.3px 0px;
+}
+
+/*End of ProseMirror Editoring Style*/
+
 .window-app.image-popout .form-group.title {
     margin-top: 1%;
 }
