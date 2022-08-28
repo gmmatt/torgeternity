@@ -8,6 +8,13 @@
 For manual installation, use the provided manifest URL in the "*Install System*" popup window 
 while managing game systems.
 
+v. 2.6.0
+- Our first release under Foundry, version 10!
+- A handful of updates, but most of the changes relate to v10
+  compability
+- You will get some v10 compatibility warnings in the console.
+  These will be resolved in the coming weeks.
+
 v. 2.5.1
 - Fixed issue with card images in system (thanks BadIdeasBureau!)
 - Updated archetypes (known issue: archetype powers still not updated
