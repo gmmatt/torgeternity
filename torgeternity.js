@@ -445,11 +445,11 @@ Hooks.on("getMonarchHandComponents", (hand, components) => {
 
 async function createTorgEternityMacro(data, slot) {
     if (data.type !== "Item" && data.type !== "skill" && data.type !== "interaction" && data.type !== "attribute") return;
-    if (!("data" in data))
-        return ui.notifications.warn(
-            game.i18n.localize('torgeternity.notifications.macroTypeWarning')
-        );
-    const objData = data.data;
+//    if (!("data" in data))
+//        return ui.notifications.warn(
+//            game.i18n.localize('torgeternity.notifications.macroTypeWarning')
+//        );
+    const objData = fromUuidSync(data.uuid);
     // Create the macro command
     let command = null;
     let macro = null;
@@ -503,7 +503,7 @@ async function createTorgEternityMacro(data, slot) {
     }
 
     macro = game.macros.find(
-        (m) => m.name === macroName && m.data.command === command
+        (m) => m.name === macroName && m.command === command
     );
     if (!macro) {
         // there is a difference between img: null or img: "" and not including img at all
@@ -559,7 +559,7 @@ function rollItemMacro(itemName) {
         );
 
     // Trigger the item roll
-    switch (item.data.type) {
+    switch (item.type) {
         case "customAttack":
         case "meleeweapon":
         case "missileweapon":
@@ -634,7 +634,7 @@ function rollItemMacro(itemName) {
 
                 testType: "attack",
                 type: "attack",
-                actor: actor,
+                actor: actor.uuid,
                 actorType: actor.data.type,
                 item: item,
                 attackType: attackType,
@@ -751,7 +751,7 @@ function rollSkillMacro(skillName, attributeName, isInteractionAttack) {
     // This code needs to be centrally located!!!
     let test = {
         testType: isAttributeTest ? "attribute" : "skill",
-        actor: actor,
+        actor: actor.uuid,
         actorPic: actor.data.img,
         actorType: actor.data.type,
         skillName: isAttributeTest ? attributeName : skillName,
