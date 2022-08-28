@@ -378,9 +378,10 @@ Hooks.on("ready", async function () {
 
 
 //moved out of the setup hook, because it had no need to be in there
-Hooks.on("hotbarDrop", (bar, data, slot) =>
+Hooks.on("hotbarDrop", (bar, data, slot) => {
     createTorgEternityMacro(data, slot)
-);
+    return false
+});
 
 /* -------------------------------------------- */
 /*  Hotbar Macros                               */
