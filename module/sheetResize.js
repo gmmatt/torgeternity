@@ -1,6 +1,6 @@
 export function sheetResize() {
     Hooks.on("rendertorgeternityActorSheet", async function(app, html, data) {
-        if (app.object.data.type === "stormknight") {
+        if (app.object.type === "stormknight") {
             let sheet = document.getElementById(app.id);
             var ro = new ResizeObserver(entries => {
                 for (let entry of entries) {
@@ -16,7 +16,7 @@ export function sheetResize() {
             });
             ro.observe(sheet);
         }
-        if (app.object.data.type === "threat") {
+        if (app.object.type === "threat") {
             let sheet = document.getElementById(app.id);
             var ro = new ResizeObserver(entries => {
                 for (let entry of entries) {

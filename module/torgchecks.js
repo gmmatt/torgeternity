@@ -1,380 +1,3 @@
-export async function SkillCheck(test) {
-    /*   {
-
-       testType = null,
-       skillName = null,
-       skillBaseAttribute = null,
-       skillAdds = null,
-       skillValue = null,
-       unskilledUse = null,
-       woundModifier = null,
-       stymiedModifier = null,
-       actor = null } = {}) {
-       let test = {
-          actor: actor.data._id,
-          actorPic: actor.data.img,
-          actorType: "stormknight",
-          skillName: skillName,
-          skillBaseAttribute: skillBaseAttribute,
-          skillAdds: skillAdds,
-          skillValue: skillValue,
-          unskilledUse: unskilledUse,
-          woundModifier: woundModifier,
-          stymiedModifier: stymiedModifier,
-          testType: testType,
-          possibilityTotal: 0,
-          upTotal: 0,
-          heroTotal: 0,
-          dramaTotal: 0,
-          cardsPlayed: 0,
-          sizeModifier: 0,
-          vulnerableModifier: 0
-       }; */
-
-    // What kind of actor is this?
-
-    /*   if (actor.data.type === "threat") {
-          test.actorType = "threat"
-       }; */
-
-    // Cannot Attempt Certain Tests Unskilled
-    if (test.skillValue === "-") {
-        let cantRollData = {
-            user: game.user.data._id,
-            speaker: ChatMessage.getSpeaker(),
-            owner: test.actor,
-        };
-
-        let templateData = {
-            message: test.skillName + " " + game.i18n.localize('torgeternity.chatText.check.cantUseUntrained'),
-            actorPic: test.actor.data.img
-        };
-
-        const templatePromise = renderTemplate("./systems/torgeternity/templates/partials/skill-error-card.hbs", templateData);
-
-        templatePromise.then(content => {
-            cantRollData.content = content;
-            ChatMessage.create(cantRollData);
-        })
-
-        return
-    }
-
-    // Roll as skilled or unskilled
-    let diceroll
-    if (test.previousBonus === true) {
-        //Don't roll anything
-        if (test.skillAdds > 0) {
-            test.unskilledLabel = "display:none"
-        }
-    } else if (test.testType === "skill") {
-        if (test.skillAdds > 0) {
-            if (test.disfavored === false) {
-                diceroll = new Roll('1d20x10x20').evaluate({ async: false });
-            } else {
-                diceroll = new Roll('1d20').evaluate({ async: false });
-            }
-            test.unskilledLabel = "display:none"
-        } else if (test.skillAdds === 0) {
-            if (test.disfavored === false) {
-                diceroll = new Roll('1d20x10').evaluate({ async: false });
-            } else {
-                diceroll = new Roll('1d20').evaluate({ async: false });
-            }
-            test.unskilledLabel = "display:block"
-            // Should trigger only if this is a threat and test.skilAdds therefore equals null   
-        } else {
-            if (test.disfavored === false) {
-                diceroll = new Roll('1d20x10').evaluate({ async: false });
-            } else {
-                diceroll = new Roll('1d20').evaluate({ async: false });
-            }
-            test.unskilledLabel = "display:none"
-        }
-    } else {
-        if (test.disfavored === false) {
-            diceroll = new Roll('1d20x10x20').evaluate({ async: false });
-        } else {
-            diceroll = new Roll('1d20').evaluate({ async: false });
-        }
-        test.unskilledLabel = "display:none"
-    }
-
-    //diceroll.toMessage();
-    if (test.previousBonus === true) {
-        test.diceroll = null;
-    } else {
-        test.diceroll = diceroll;
-        test.rollTotal = diceroll.total;
-    }
-
-    // Get Bonus and Roll Result
-
-    // Get modifiers
-    /* test.woundModifier = parseInt(-(actor.data.data.wounds.value))
-
-    if (actor.data.data.stymiedModifier === parseInt(-2)) {
-       test.stymiedModifier = -2
-    } else if (actor.data.data.stymiedModifier === -4) {
-       test.stymiedModifier = -4
-    } */
-
-    // Set Chat Title
-    test.chatTitle = test.skillName + " Test";
-
-    renderSkillChat(test, diceroll);
-}
-
-export function weaponAttack(test) {
-    /*   {
-       testType = null,
-       skillName = null,
-       skillBaseAttribute = null,
-       skillAdds = null,
-       skillValue = null,
-       unskilledUse = null,
-       strengthValue = null,
-       charismaValue = null,
-       dexterityValue = null,
-       mindValue = null,
-       spiritValue = null,
-       weaponName = null,
-       weaponDamageType = null,
-       weaponDamage = null,
-       actor = null,
-       item = null,
-       actorPic = null } = {}) {
-       let test = {
-          actor: actor.data._id,
-          item: item.data,
-          actorPic: actorPic,
-          actorType: "stormknight",
-          skillName: skillName,
-          skillBaseAttribute: skillBaseAttribute,
-          skillAdds: skillAdds,
-          skillValue: skillValue,
-          unskilledUse: unskilledUse,
-          strengthValue: strengthValue,
-          charismaValue: charismaValue,
-          dexterityValue: dexterityValue,
-          mindValue: mindValue,
-          spiritValue: spiritValue,
-          testType: "attack",
-          weaponName: weaponName,
-          weaponDamageType: weaponDamageType,
-          weaponDamage: weaponDamage,
-          possibilityTotal: 0,
-          upTotal: 0,
-          heroTotal: 0,
-          dramaTotal: 0,
-          cardsPlayed: 0,
-          sizeModifier: 0,
-          vulnerableModifier: 0
-       }; */
-
-    
-       /*
-    
-    // Calculate damage
-    if (test.weaponDamageType === "flat") {
-        test.damage = test.weaponDamage
-    } else if (test.weaponDamageType === "strengthPlus") {
-        test.damage = parseInt(test.strengthValue) + parseInt(test.weaponDamage) + parseInt(test.vitalAreaDamageModifier)
-    } else if (test.weaponDamageType === "charismaPlus") {
-        test.damage = parseInt(test.charismaValue) + parseInt(test.weaponDamage) + parseInt(test.vitalAreaDamageModifier)
-    } else if (test.weaponDamageType === "dexterityPlus") {
-        test.damage = parseInt(test.dexterityValue) + parseInt(test.weaponDamage) + parseInt(test.vitalAreaDamageModifier)
-    } else if (test.weaponDamageType === "mindPlus") {
-        test.damage = parseInt(test.mindValue) + parseInt(test.weaponDamage) + parseInt(test.vitalAreaDamageModifier)
-    } else if (test.weaponDamageType === "spiritPlus") {
-        test.damage = parseInt(test.spiritValue) + parseInt(test.weaponDamage) + parseInt(test.vitalAreaDamageModifier)
-    } else {
-        test.damage = parseInt(test.weaponDamage) + parseInt(test.vitalAreaDamageModifier)
-    }
-    */
-
-    // Roll as skilled or unskilled
-    let diceroll = ""
-    if (test.previousBonus === true) {
-        //Don't roll anything
-        if (test.skillAdds > 0) {
-            test.unskilledLabel = "display:none"
-        }
-    } else if (test.testType === "skill") {
-        if (test.skillAdds > 0) {
-            if (test.disfavored === false) {
-                diceroll = new Roll('1d20x10x20').evaluate({ async: false });
-            } else {
-                diceroll = new Roll('1d20').evaluate({ async: false });
-            }
-            test.unskilledLabel = "display:none"
-        } else if (test.skillAdds === 0) {
-            if (test.disfavored === false) {
-                diceroll = new Roll('1d20x10').evaluate({ async: false });
-            } else {
-                diceroll = new Roll('1d20').evaluate({ async: false });
-            }
-            test.unskilledLabel = "display:block"
-            // Should trigger only if this is a threat and test.skilAdds therefore equals null   
-        } else {
-            if (test.disfavored === false) {
-                diceroll = new Roll('1d20x10').evaluate({ async: false });
-            } else {
-                diceroll = new Roll('1d20').evaluate({ async: false });
-            }
-            test.unskilledLabel = "display:none"
-        }
-    } else {
-        if (test.disfavored === false) {
-            diceroll = new Roll('1d20x10x20').evaluate({ async: false });
-        } else {
-            diceroll = new Roll('1d20').evaluate({ async: false });
-        }
-        test.unskilledLabel = "display:none"
-    };
-
-    //diceroll.toMessage();
-    if (test.previousBonus === true) {
-        test.diceroll = null;
-    } else {
-        test.diceroll = diceroll;
-        test.rollTotal = diceroll.total;
-    }
-
-    // Set Chat Title
-    test.chatTitle = test.weaponName;
-
-    renderSkillChat(test, diceroll);
-
-}
-
-export function interactionAttack(test) {
-
-    // Roll as skilled or unskilled
-    let diceroll = ""
-    if (test.previousBonus === true) {
-        //Don't roll anything
-        if (test.skillAdds > 0) {
-            test.unskilledLabel = "display:none"
-        }
-    } else if (test.testType === "interactionAttack") {
-        if (test.skillAdds > 0) {
-            if (test.disfavored === false) {
-                diceroll = new Roll('1d20x10x20').evaluate({ async: false });
-            } else {
-                diceroll = new Roll('1d20').evaluate({ async: false });
-            }
-            test.unskilledLabel = "display:none"
-        } else if (test.skillAdds === 0) {
-            if (test.disfavored === false) {
-                diceroll = new Roll('1d20x10').evaluate({ async: false });
-            } else {
-                diceroll = new Roll('1d20').evaluate({ async: false });
-            }
-            test.unskilledLabel = "display:block"
-            // Should trigger only if this is a threat and test.skillAdds therefore equals null   
-        } else {
-            if (test.disfavored === false) {
-                diceroll = new Roll('1d20x10').evaluate({ async: false });
-            } else {
-                diceroll = new Roll('1d20').evaluate({ async: false });
-            }
-            test.unskilledLabel = "display:none"
-        }
-    } else {
-        if (test.disfavored === false) {
-            diceroll = new Roll('1d20x10x20').evaluate({ async: false });
-        } else {
-            diceroll = new Roll('1d20').evaluate({ async: false });
-        }
-        test.unskilledLabel = "display:none"
-    };
-
-    //diceroll.toMessage();
-    if (test.previousBonus === true) {
-        test.diceroll = null;
-    } else {
-        test.diceroll = diceroll;
-        test.rollTotal = diceroll.total;
-    }
-
-    // Set Chat Title
-    test.chatTitle = test.skillName + " " + game.i18n.localize("torgeternity.powers.attack");
-
-    renderSkillChat(test, diceroll);
-
-}
-
-
-export function powerRoll(test) {
-
-    var diceroll = "";
-
-    // Cannot Attempt Power Tests Unskilled
-    if (test.skillValue === "-") {
-        let cantRollData = {
-            user: game.user.data._id,
-            speaker: ChatMessage.getSpeaker(),
-            owner: test.actor,
-        };
-
-        let templateData = {
-            message: test.powerName + game.i18n.localize('torgeternity.chatText.check.cantUseSkillRecquired'),
-            actorPic: test.actor.data.img
-        };
-
-        const templatePromise = renderTemplate("./systems/torgeternity/templates/partials/skill-error-card.hbs", templateData);
-
-        templatePromise.then(content => {
-            cantRollData.content = content;
-            ChatMessage.create(cantRollData);
-        })
-
-        return
-    };
-
-
-
-    // Roll dice as skilled (assumes character would not have power unless skilled)
-    if (test.disfavored === false) {
-        diceroll = new Roll('1d20x10x20').evaluate({ async: false });
-    } else {
-        diceroll = new Roll('1d20').evaluate({ async: false });
-    }
-    test.unskilledLabel = "display:none"
-    //diceroll.toMessage();
-    test.diceroll = diceroll;
-
-    // Get Bonus and Roll Result
-    test.rollTotal = diceroll.total;
-
-    /* Get modifiers; only modify based on target if this is an attack
-    test.woundModifier = parseInt(-(test.actor.data.data.wounds.value))
-
-    if (actor.data.data.stymiedModifier === parseInt(-2)) {
-       test.stymiedModifier = -2
-    } else if (actor.data.data.stymiedModifier === -4) {
-       test.stymiedModifier = -4
-    } */
-
-    if (test.powerAttack === "true") {
-        if (Array.from(game.user.targets).length > 0) {
-            let target = Array.from(game.user.targets)[0];
-            if (target.actor.data.data.details.sizeBonus) {
-                test.sizeModifier = target.actor.data.data.details.sizeBonus;
-            };
-            test.vulnerableModifier = target.actor.data.data.vulnerableModifier
-        }
-    }
-
-    // Set Chat Title
-    test.chatTitle = test.powerName;
-
-    renderSkillChat(test, diceroll);
-
-}
-
-
 export function renderSkillChat(test) {
     var target = test.target;
 
@@ -388,9 +11,14 @@ export function renderSkillChat(test) {
                 test.chatTitle = game.i18n.localize(localId) + " " + game.i18n.localize('torgeternity.chatText.test');
                 break;
             case "skill":
-                var localId = "torgeternity.skills." + test.skillName;
-                test.chatTitle = game.i18n.localize(localId) + " " + game.i18n.localize('torgeternity.chatText.test');
-                break;
+                if (test.customSkill != "true") {
+                    var localId = "torgeternity.skills." + test.skillName;
+                    test.chatTitle = game.i18n.localize(localId) + " " + game.i18n.localize('torgeternity.chatText.test');
+                    break; 
+                } else {
+                    test.chatTitle = test.skillName
+                    break;        
+                }
             case "interactionAttack":
             case "attack":
                 var localId = "torgeternity.skills." + test.skillName;
@@ -564,8 +192,9 @@ export function renderSkillChat(test) {
 
     // Do we display the unskilled label for a Storm Knight?
     var unskilledTest = false;
-    if (test.actor.data.type === "stormknight" & test.testType != "attribute" & test.testType != "activeDefense") {
-        if (test.actor.data.data.skills[test.skillName].adds === 0 | test.actor.data.data.skills[test.skillName].adds === null) {
+    var myActor = test.actor.includes("Token") ? fromUuidSync(test.actor).actor : fromUuidSync(test.actor)
+    if (myActor.type === "stormknight" & test.testType != "attribute" & test.testType != "activeDefense" & test.customSkill != "true") {
+        if (myActor.system.skills[test.skillName].adds === 0 | myActor.system.skills[test.skillName].adds === null) {
             unskilledTest = true;
         }
     }
@@ -805,14 +434,13 @@ export function renderSkillChat(test) {
     }
 
     // Choose Text to Display as Result
-    var actorID = test.actor.data?._id || test.actor._id;
-    console.log(actorID);
+    var myActor = fromUuidSync(test.actor);
     if ((test.rollTotal === 1) && !((test.testType === "activeDefenseUpdate") || (test.testType === "activeDefense"))) {   //Roll 1 and not defense = Mishape
         test.resultText = game.i18n.localize('torgeternity.chatText.check.result.mishape');
         test.actionTotalLabel = "display:none";
     // Create and Manage Active Effect if SK is Actively Defending (thanks Durak!)
     } else if (test.testType === "activeDefense") {                                                         //Click on defense
-        var oldAD = game.actors.get(actorID).data.effects.find(a => a.data.label === "ActiveDefense");      //Search for an ActiveDefense effect
+        var oldAD = myActor.effects.find(a => a.data.label === "ActiveDefense");      //Search for an ActiveDefense effect
         if (!oldAD) {                                                                                       //Create it if not present (if it exists, will be deleted farther)
             let NewActiveDefense = {
                 label : "ActiveDefense",                                                                    //Add an icon to remind the defense, bigger ? Change color of Defense ?
@@ -856,13 +484,13 @@ export function renderSkillChat(test) {
                     }],
                 disabled : false
             };
-            game.actors.get(actorID).createEmbeddedDocuments("ActiveEffect",[NewActiveDefense]);
+            fromUuidSync(test.actor).createEmbeddedDocuments("ActiveEffect",[NewActiveDefense]);
             test.testType = "activeDefenseUpdate";    
             test.resultText = "+ " + test.bonus;
             test.actionTotalLabel = "display:none";
         };
         if (oldAD) {                                                                                        //if present, reset by deleting
-            game.actors.get(actorID).data.effects.find(a => a.data.label === "ActiveDefense").delete();
+            fromUuidSync(test.actor).effects.find(a => a.data.label === "ActiveDefense").delete();
             ////
             let RAD = {                                                                                     //Simple chat message for information
                 speaker: ChatMessage.getSpeaker(),

@@ -84,7 +84,7 @@ export default class deckSettingMenu extends FormApplication {
         let actor = game.actors.get(actorId);
         let hand = game.cards.get(handId);
 
-        let actorsPerm = actor.data.permission;
+        let actorsPerm = actor.ownership;
         // assigning same permissions from actor to hand
         hand.update({
             data: {

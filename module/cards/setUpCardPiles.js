@@ -55,7 +55,7 @@ export async function setUpCardPiles() {
             let cardData = {
                 name: game.i18n.localize("torgeternity.cardTypes."+discardKey),
                 type: "pile",
-                permission: { default: CONST.DOCUMENT_PERMISSION_LEVELS.OWNER },
+                ownership: { default: CONST.DOCUMENT_OWNERSHIP_LEVELS.OWNER },
                 folder: deckFolder.id
             }
             let discard = await Cards.create(cardData, { keepId: true, renderSheet: false });

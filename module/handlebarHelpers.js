@@ -36,9 +36,8 @@ export function registerHelpers() {
     Handlebars.registerHelper("concatSpecialAbility", function (description) {
         // Removes <p> and </p> from the beginning and end of special ability descriptions so that they appear inline on threat sheet
         if (description.startsWith("<p>")) {
-            var updatedDescription;
-            var endPoint = description.length;
-            updatedDescription = description.substr(3, endPoint);
+
+            let updatedDescription = description.replace("<p>", "").replace("</p>", "")
             return updatedDescription;
         } else {
             return description;
@@ -52,7 +51,7 @@ export function registerHelpers() {
         for (i = 0; i < effects.length; i++) {
             if (effects[i].label === "ActiveDefense") {
                 return true;
-            }            
+            }
         };
         return false;
     });
@@ -62,7 +61,7 @@ export function registerHelpers() {
         if (data.testType === "activeDefense") {
             return true;
         }
-        return false;    
+        return false;
     });
 
     // Is at least one target available in this test?
@@ -72,7 +71,7 @@ export function registerHelpers() {
         } else {
             return false;
         }
-    
+
     });
 
     Handlebars.registerHelper('ifequal', function (a, b, options) {
@@ -91,15 +90,15 @@ export function registerHelpers() {
         let actor = game.actors.get(actorId);
         if (actor.getDefaultHand()) {
             const stack = actor.getDefaultHand();
-            const hand = stack.data.cards
+            const hand = stack.cards
             var i = 0;
             var firstItemExists = false;
             for (i = 0; i < hand.size; i++) {
-                if (hand.document.availableCards[i].data.flags?.torgeternity?.pooled === true) {
+                if (hand.contents[i].flags?.torgeternity?.pooled === true) {
                     if (firstItemExists === true) {
-                        poolList += ", " + '<span class="pool-tooltip">' + hand.document.availableCards[i].data.name + "<span><img src='" + hand.document.availableCards[i].img + "'></span></span>";
+                        poolList += ", " + '<span class="pool-tooltip">' + hand.contents[i].name + "<span><img src='" + hand.contents[i].img + "'></span></span>";
                     } else {
-                        poolList = "<span class='pool-tooltip'>" + hand.document.availableCards[i].data.name + "<span><img src='" + hand.document.availableCards[i].img + "'></span></span>"
+                        poolList = "<span class='pool-tooltip'>" + hand.contents[i].name + "<span><img src='" + hand.contents[i].img + "'></span></span>"
                         //poolList = hand.document.availableCards[i].data.name;
                         firstItemExists = true;
                     }

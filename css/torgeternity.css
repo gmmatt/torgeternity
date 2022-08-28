@@ -230,23 +230,19 @@ div.actor ::-webkit-scrollbar {
     box-shadow: 0px 0px 5px #4970fa;
 }
 
-.journal-sheet .window-content {
-    font-family: Palatino;
-    background-image: url(../images/box-bckg.webp);
-    background-size: 100% 100%;
-    color: black;
-}
 
+
+/* Commenting out - this is interfering with journal formatting under v10
 .journal-sheet .window-content button[name="submit"] {
     position: absolute;
     bottom: 0px;
     left: -2px;
     background-color: rgba(0, 0, 0, 0.68);
 }
-
+*/
 .journal-sheet .window-content input[type="text"],
 .journal-sheet .window-content select {
-    margin-top: 4%;
+    /*margin-top: 4%;*/
     margin-left: 5%;
     width: 90%;
     text-align: center;
@@ -257,14 +253,15 @@ div.actor ::-webkit-scrollbar {
     color: #000;
 }
 
+/* Commenting out - this is interfering with journal formatting under v10
 .journal-sheet .window-content input[type="text"] {
     position: absolute;
     top: 3%;
     margin-left: 4%;
 }
-
+*/
 .journal-sheet .window-content select {
-    position: absolute;
+    /* position: absolute; */
     top: 9%;
     margin-left: 4%;
 }
@@ -282,7 +279,7 @@ div.actor ::-webkit-scrollbar {
 }
 
 .journal-sheet .window-content .editor {
-    top: 15%;
+    top: 5%;
     margin-top: 2%;
     margin-left: 4%;
     width: 90%;
@@ -290,68 +287,209 @@ div.actor ::-webkit-scrollbar {
     padding: 2%;
 }
 
-.journal-sheet .window-content .editor .editor-content h1 {
+
+/* All pasted into journal.css
+.sheet.journal-entry .journal-entry-page h1 {
     font-family: Alaska;
     text-transform: uppercase;
     text-align: center;
     color: white;
-    /*background-color: #0a0b3b;*/
+    background-color: #0a0b3b;
     border-bottom: none;
 }
 
-.journal-sheet .window-content .editor .editor-content h2 {
+.sheet.journal-entry .journal-entry-page h2 {
     font-family: Alaska;
     border-bottom: none;
-}
-
-.journal-sheet .window-content .editor .editor-content h3 {
-    font-family: Alaska;
-    font-weight: bold;
-}
-
-.journal-sheet .window-content .editor .editor-content th {
-    background-color: black;
-    color: white;
-}
-
-.editor .editor-content h2 {
     margin: 0px 0px 10px 0px;
 }
 
+.sheet.journal-entry .journal-entry-page h3 {
+    font-family: Alaska;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.sheet.journal-entry .journal-entry-page th {
+    background-color: black;
+    color: white;
+}*/
+
+/*
+.editor .editor-content h2 {
+    margin: 0px 0px 10px 0px;
+}*/
+
+/*
 .editor .editor-content h3 {
     font-size: 15px;
 }
 
-.editor .editor-content p {
+.sheet.journal-entry .journal-entry-page p {
     font-family: "Palatino Linotype";
     font-size: 14px;
-}
+}*/
 
-.editor .editor-content li {
+/*
+.sheet.journal-entry .journal-entry-page li {
     font-family: "Palatino Linotype";
     font-size: 14px;
-}
+} */  
 
-.journal-sheet .window-content .editor .editor-content tr:nth-child(even) {
+
+/*
+
+!!!!NO LONGER NEEDED BECAUSE OF REFORMATTING IN JOURNAL.CSS!!!!
+.sheet.journal-entry .journal-entry-page tr:nth-child(even) {
     background-color: #f3f0eb;
 }
 
-.journal-sheet .window-content .editor .editor-content tr:nth-child(odd) {
+.sheet.journal-entry .journal-entry-page tr:nth-child(odd) {
     background-color: #f5ead9;
-}
+}*/
 
-.journal-sheet .window-content .editor .editor-content table td {
+/*
+.sheet.journal-entry .journal-entry-page table td {
     border: 1px solid black;
     padding: 0px 3px 0px 3px;
-}
+}*/
 
-.journal-sheet .window-content .editor .editor-content table tr td:first-child {
+.sheet.journal-entry .journal-entry-page table tr td:first-child {
     border-left: 0;
 }
 
-.journal-sheet .window-content .editor .editor-content table tr td:last-child {
+.sheet.journal-entry .journal-entry-page table tr td:last-child {
     border-right: 0;
 }
+
+/*END OF JOURNAL CONTENT EDITING*/
+
+/*Begin of ProseMirror Editoring Style 2022-08-27 by Algor*/
+
+.prosemirror .editor-container .editor-content *{
+    color:black;
+    font-family: Palatino;
+}
+
+.prosemirror .editor-container .editor-content p{
+    text-align:justify;
+    font-size: 14px;
+}
+
+.prosemirror .editor-container .editor-content p+p{
+    text-indent:0.75rem;
+}
+
+.prosemirror .editor-container .editor-content p:first-of-type{
+    text-indent:0;
+}
+
+.prosemirror .editor-container .editor-content :is(ul,ol){
+    text-align: justify;
+    padding-right: 10px;
+    list-style-position: inside;
+    font-family: "Palatino Linotype";
+    font-size: 14px;
+}
+
+.prosemirror .editor-container .editor-content :is(h1,h2,h3,h4){
+    font-family: Alaska;
+}
+
+.prosemirror .editor-container .editor-content h1{
+    Background-image: URL(../../../systems/torgeternity/images/tab-header.webp);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    overflow: hidden;
+    border: none;
+    margin: 1rem 0px 0.7rem 0px;
+    color: white;
+    text-transform: uppercase;
+    line-height: 30px;
+    text-align: center;
+}
+
+.prosemirror .editor-container .editor-content h2{
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bolder;
+    text-shadow:    #878787 1.5px 1.5px 0px,
+                    #878787 1.5px -1.5px 0px,
+                    #878787 -1.5px 1.5px 0px,
+                    #878787 -1.5px -1.5px 0px;
+    text-transform: uppercase;
+    margin: 1rem 0px 0.7rem 0px;
+    border: none;
+}
+
+.prosemirror .editor-container .editor-content h3{
+    margin: 2px 0px 9px 0px;
+    font-weight: bolder;
+    border: none;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.prosemirror .editor-container .editor-content h4{
+    text-align: center;
+    font-size: 1.5rem;
+    color: white;
+    font-family: Alaska;
+    text-shadow: black 1.3px 1.3px 0px,
+        black 1.3px -1.3px 0px,
+        black -1.3px 1.3px 0px,
+        black -1.3px 1.3px 0px;
+    text-transform: uppercase;
+    margin: 1rem 0px 0.7rem 0px;
+    border: none;
+}
+
+.prosemirror .editor-container .editor-content hr{
+    background-image: url(../images/separator.webp);
+    /* background-position-y: -8px; */
+    background-repeat: no-repeat;
+    background-size: auto;
+    min-height: 20px;
+    height: 3rem;
+    width: auto;
+    border: none;
+    transform: scaleY(0.5);
+    margin: -15px 10px -15px 0px;
+}
+
+.prosemirror .editor-container .editor-content img {
+    border-image:none;
+    border:none;
+}
+
+.prosemirror .editor-container .editor-content th{
+    background-color: black;
+    color:white;
+}
+
+.prosemirror .editor-container .editor-content table {
+    font-size:0.875rem;
+    background-color: transparent;
+}
+
+.prosemirror .editor-container .editor-content tr:nth-child(even) {
+    background-color: #F6E9D7
+}
+
+.prosemirror .editor-container .editor-content tr:nth-child(odd){
+    background-color: transparent;
+}
+
+.prosemirror .editor-container .editor-content div.subtitleright p,
+.prosemirror .editor-container .editor-content div.subtitleleft p{
+    color: white;
+    text-shadow: black 1.3px 1.3px 0px,
+    black 1.3px -1.3px 0px,
+    black -1.3px 1.3px 0px,
+    black -1.3px 1.3px 0px;
+}
+
+/*End of ProseMirror Editoring Style*/
 
 .window-app.image-popout .form-group.title {
     margin-top: 1%;
@@ -1797,6 +1935,7 @@ form.actor-sheet header input[name="name"] {
 .window-content .actor-sheet h3 {
     font-family: Alaska;
     text-transform: uppercase;
+    border:none;
 }
 
 .window-content .actor-sheet h2 {
@@ -1819,6 +1958,7 @@ form.actor-sheet header input[name="name"] {
     text-transform: uppercase;
     font-weight: bold;
     width: 100%;
+    background: none;
 }
 
 .window-content .actor-sheet h1 input {
@@ -2404,6 +2544,7 @@ form.actor-sheet header input[name="name"] {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    min-height:0em;
 }
 
 .window-content .actor-sheet .defense p span {
@@ -2717,6 +2858,7 @@ form.actor-sheet.threat .tab[data-tab].active .editor {
     width: 300px;
     text-align: right;
     text-transform: uppercase;
+    border:none;
 }
 
 .item .window-content form.item-sheet .item-type span {
