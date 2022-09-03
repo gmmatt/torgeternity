@@ -8,10 +8,10 @@
         "discord": "Matt#1768"
     }],
 
-    "version": "2.6.0",
+    "version": "2.6.1",
     "compatibility": {
         "minimum": 10,
-        "verified": "10.1"
+        "verified": "10.284"
     },
 
     "templateVersion": "4.4.0",
