@@ -242,11 +242,15 @@ form button {
 .sheet.journal-entry .journal-entry-page :is(ul, ol) {
     text-align: justify;
     padding-right: 10px;
-    list-style-position: inside;
+    /*list-style-position: inside;*/
     font-family: "Palatino Linotype";
     font-size: 14px;
 }
 
+.sheet.journal-entry .journal-entry-page li+p::marker {
+    list-style-type: none;
+    list-style-position: unset;
+}
 
 /*...................................................................*/
 /*general header formatting*/
@@ -569,8 +573,8 @@ div.subtitleleft img {
     padding-left: 10px;
 }
 
-.sheet.journal-entry .journal-entry-page ul {
-    list-style-position: inside;
+.sheet.journal-entry .journal-entry-page .sidenote ul {
+    /*list-style-position: inside;*/
     text-align: justify;
     padding-right: 10px;
 }
