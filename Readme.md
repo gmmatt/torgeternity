@@ -8,6 +8,9 @@
 For manual installation, use the provided manifest URL in the "*Install System*" popup window 
 while managing game systems.
 
+v. 2.6.4
+- Fixed issue where scene backgrounds could not be created/changed
+
 v. 2.6.1, 2.6.2, and 2.63
 - Changed verified version to hopefully improve Forge compatibility
 - Changed "name" to "id" in manifest to improve Forge compatibility
