@@ -1,5 +1,5 @@
 {
-    "name": "torgeternity",
+    "id": "torgeternity",
     "title": "Torg Eternity",
     "description": "Torg Eternity character sheet for Foundry VTT.",
     "authors": [{
@@ -8,10 +8,10 @@
         "discord": "Matt#1768"
     }],
 
-    "version": "2.6.0",
+    "version": "2.6.3",
     "compatibility": {
         "minimum": 10,
-        "verified": "10.1"
+        "verified": "10.284"
     },
 
     "templateVersion": "4.4.0",
@@ -152,5 +152,5 @@
     "secondaryTokenAttribute": "shock",
     "url": "https://github.com/gmmatt/torgeternity",
     "manifest": "https://github.com/gmmatt/torgeternity/releases/latest/download/system.json",
-    "download": "https://github.com/gmmatt/torgeternity/releases/latest/download/torgeternity.zip"
+    "download": "https://github.com/gmmatt/torgeternity/releases/download/2.6.3/torgeternity.zip"
 }

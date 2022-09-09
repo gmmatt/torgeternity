@@ -8,6 +8,10 @@
 For manual installation, use the provided manifest URL in the "*Install System*" popup window 
 while managing game systems.
 
+v. 2.6.1, 2.6.2, and 2.63
+- Changed verified version to hopefully improve Forge compatibility
+- Changed "name" to "id" in manifest to improve Forge compatibility
+
 v. 2.6.0
 - Our first release under Foundry, version 10!
 - A handful of updates, but most of the changes relate to v10
