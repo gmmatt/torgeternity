@@ -11,7 +11,7 @@
     "version": "2.6.4",
     "compatibility": {
         "minimum": 10,
-        "verified": "10.284"
+        "verified": "10.285"
     },
 
     "templateVersion": "4.4.0",
