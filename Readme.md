@@ -12,7 +12,7 @@ v. 2.6.4
 - Fixed issue where scene backgrounds could not be created/changed
 - Fixed issue where enriched text does not appear in some item descriptions
 - Fixed issue where macros could not be dragged onto hotbar or rearranged
-- Known issue: Torg Eternity drag/drop macros from character sheet are
+- Note: Torg Eternity drag/drop macros from character sheet are
   temporarily disabled. 
 - Disabled custom player list extension until it can be updated for v10
 
