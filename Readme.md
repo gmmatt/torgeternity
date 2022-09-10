@@ -10,6 +10,7 @@ while managing game systems.
 
 v. 2.6.4
 - Fixed issue where scene backgrounds could not be created/changed
+- Fixed issue where enriched text does not appear in some item descriptions
 
 v. 2.6.1, 2.6.2, and 2.63
 - Changed verified version to hopefully improve Forge compatibility

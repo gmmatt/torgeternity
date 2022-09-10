@@ -75,12 +75,12 @@ export default class torgeternityItemSheet extends ItemSheet {
     }
 
 
-    getData() {
-        const data = super.getData();
+    async getData(options) {
+        const data = await super.getData(options);
 
         data.effects = prepareActiveEffectCategories(this.document.effects);
 
-        data.config = CONFIG.torgeternity;
+        data.description = await TextEditor.enrichHTML(this.object.system.description, {async:true});  
 
         return data;
     }
