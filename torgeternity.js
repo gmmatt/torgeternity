@@ -379,8 +379,8 @@ Hooks.on("ready", async function () {
 
 //moved out of the setup hook, because it had no need to be in there
 Hooks.on("hotbarDrop", (bar, data, slot) => {
-    createTorgEternityMacro(data, slot)
-    return false
+    // disabling for now until we can get createTorgEternityMacro working again
+    // createTorgEternityMacro(data, slot)
 });
 
 /* -------------------------------------------- */
@@ -450,7 +450,8 @@ async function createTorgEternityMacro(data, slot) {
 //        return ui.notifications.warn(
 //            game.i18n.localize('torgeternity.notifications.macroTypeWarning')
 //        );
-    const objData = fromUuidSync(data.uuid);
+    // const objData = fromUuidSync(data.uuid);
+    objData = data;
     // Create the macro command
     let command = null;
     let macro = null;

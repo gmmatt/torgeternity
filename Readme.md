@@ -11,6 +11,9 @@ while managing game systems.
 v. 2.6.4
 - Fixed issue where scene backgrounds could not be created/changed
 - Fixed issue where enriched text does not appear in some item descriptions
+- Fixed issue where macros could not be dragged onto hotbar or rearranged
+- Known issue: Torg Eternity drag/drop macros from character sheet are
+  temporarily disabled. 
 
 v. 2.6.1, 2.6.2, and 2.63
 - Changed verified version to hopefully improve Forge compatibility
