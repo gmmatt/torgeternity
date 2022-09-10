@@ -14,6 +14,7 @@ v. 2.6.4
 - Fixed issue where macros could not be dragged onto hotbar or rearranged
 - Known issue: Torg Eternity drag/drop macros from character sheet are
   temporarily disabled. 
+- Disabled custom player list extension until it can be updated for v10
 
 v. 2.6.1, 2.6.2, and 2.63
 - Changed verified version to hopefully improve Forge compatibility

@@ -11,7 +11,8 @@ import * as torgchecks from "./module/torgchecks.js";
 import torgeternityCombat from "./module/dramaticScene/torgeternityCombat.js";
 import torgeternityCombatTracker from "./module/dramaticScene/torgeternityCombatTracker.js";
 import { alphabSort } from "./module/AlphabeticalSort.js";
-import TorgeternityPlayerList from "./module/users/TorgeternityPlayerList.js";
+//Disabling Player List extension until it can be updated for version 10
+//import TorgeternityPlayerList from "./module/users/TorgeternityPlayerList.js";
 import torgeternitySceneConfig from "./module/torgeternitySceneConfig.js";
 import torgeternityNav from "./module/torgeternityNav.js";
 import { registerTorgSettings } from "./module/settings.js";
@@ -72,7 +73,8 @@ Hooks.once("init", async function () {
     CONFIG.ui.nav = torgeternityNav;
 
     //---custom user class
-    CONFIG.ui.players = TorgeternityPlayerList;
+    // Player list disabled for now
+    // CONFIG.ui.players = TorgeternityPlayerList;
 
     //---cards
     CONFIG.Cards.documentClass = torgeternityCards;
@@ -450,8 +452,7 @@ async function createTorgEternityMacro(data, slot) {
 //        return ui.notifications.warn(
 //            game.i18n.localize('torgeternity.notifications.macroTypeWarning')
 //        );
-    // const objData = fromUuidSync(data.uuid);
-    objData = data;
+    const objData = fromUuidSync(data.uuid);
     // Create the macro command
     let command = null;
     let macro = null;
