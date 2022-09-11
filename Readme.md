@@ -13,7 +13,7 @@ v. 2.6.4
 - Fixed issue where enriched text does not appear in some item descriptions
 - Fixed issue where macros could not be dragged onto hotbar or rearranged
 - Note: Torg Eternity drag/drop macros from character sheet are
-  temporarily disabled. 
+  disabled. We hope to restore them in the future. 
 - Disabled custom player list extension until it can be updated for v10
 
 v. 2.6.1, 2.6.2, and 2.63
