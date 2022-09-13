@@ -80,6 +80,8 @@ export default class torgeternityItemSheet extends ItemSheet {
 
         data.effects = prepareActiveEffectCategories(this.document.effects);
 
+        data.config = CONFIG.torgeternity;
+
         data.description = await TextEditor.enrichHTML(this.object.system.description, {async:true});  
 
         return data;

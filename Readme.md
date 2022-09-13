@@ -8,6 +8,9 @@
 For manual installation, use the provided manifest URL in the "*Install System*" popup window 
 while managing game systems.
 
+v. 2.6.5
+- Fixed issue in 2.6.4 where drop-downs did not work in item sheets
+
 v. 2.6.4
 - Fixed issue where scene backgrounds could not be created/changed
 - Fixed issue where enriched text does not appear in some item descriptions
