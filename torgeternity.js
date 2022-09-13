@@ -381,8 +381,12 @@ Hooks.on("ready", async function () {
 
 //moved out of the setup hook, because it had no need to be in there
 Hooks.on("hotbarDrop", (bar, data, slot) => {
-    // disabling for now until we can get createTorgEternityMacro working again
-    // createTorgEternityMacro(data, slot)
+    // return true means we are not handling this event, false means we did handle it
+    if (data.type !== "Item" && data.type !== "skill" && data.type !== "interaction" && data.type !== "attribute") 
+        return true;
+
+    createTorgEternityMacro(data, slot);
+    return false;
 });
 
 /* -------------------------------------------- */
@@ -447,12 +451,7 @@ Hooks.on("getMonarchHandComponents", (hand, components) => {
 });
 
 async function createTorgEternityMacro(data, slot) {
-    if (data.type !== "Item" && data.type !== "skill" && data.type !== "interaction" && data.type !== "attribute") return;
-//    if (!("data" in data))
-//        return ui.notifications.warn(
-//            game.i18n.localize('torgeternity.notifications.macroTypeWarning')
-//        );
-    const objData = fromUuidSync(data.uuid);
+    const objData = data.uuid ? fromUuidSync(data.uuid) : data.data;
     // Create the macro command
     let command = null;
     let macro = null;
