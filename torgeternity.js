@@ -450,7 +450,7 @@ async function createTorgEternityMacro(data, slot) {
 //        return ui.notifications.warn(
 //            game.i18n.localize('torgeternity.notifications.macroTypeWarning')
 //        );
-    const objData = fromUuidSync(data.uuid);
+    const objData = data.uuid ? fromUuidSync(data.uuid) : data.data;
     // Create the macro command
     let command = null;
     let macro = null;
