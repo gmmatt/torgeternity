@@ -540,7 +540,6 @@ async function createTorgEternityMacro(data, slot) {
     }
 
     game.user.assignHotbarMacro(macro, slot);
-    return false;
 }
 
 /**
