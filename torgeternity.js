@@ -567,6 +567,7 @@ function rollItemMacro(itemName) {
         case "firearm":
         case "energyweapon":
         case "heavyweapon":
+        case "specialability-rollable":
             // The following is copied/pasted/adjusted from _onAttackRoll in torgeternityActorSheet
             var weaponData = item.data.data;
             var attackWith = weaponData.attackWith;
@@ -667,6 +668,8 @@ function rollItemMacro(itemName) {
         case "psionicpower":
         case "miracle":
         case "spell":
+            // this will cause the power to be printed to the chat
+            return item.roll({ async: false });
             /* This part is not functional, kept for test purpose, replaced by the following "log" and "ui.notification"
                         var powerData = item.data.data;
                         var skillData = item.actor.data.data.skills[powerData.skill];
@@ -683,12 +686,13 @@ function rollItemMacro(itemName) {
                             powerDamage: powerData.damage,
                         });
             */
-            console.log("Same action for Psi/Miracles/Spells");
-            ui.notifications.info(game.i18n.localize('torgeternity.notifications.notImplemented'));
+            //console.log("Same action for Psi/Miracles/Spells");
+            //ui.notifications.info(game.i18n.localize('torgeternity.notifications.notImplemented'));
             break;
         default:
-            ui.notifications.info(game.i18n.localize('torgeternity.notifications.defaultAction'));
+            // this will cause the item to be printed to the chat
             return item.roll({ async: false });
+            //ui.notifications.info(game.i18n.localize('torgeternity.notifications.defaultAction'));
     }
 }
 
