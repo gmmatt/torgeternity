@@ -12,6 +12,8 @@ v. 2.6.5
 - Fixed issue in 2.6.4 where drop-downs did not work in item sheets
 - Fixed issue where chat message displaying item description was not
   working
+- Drag n Drop macros are back, baby! Many thanks to Spatula for helping us 
+  get them going again in v10!
 
 v. 2.6.4
 - Fixed issue where scene backgrounds could not be created/changed
