@@ -10,6 +10,8 @@ while managing game systems.
 
 v. 2.6.5
 - Fixed issue in 2.6.4 where drop-downs did not work in item sheets
+- Fixed issue where chat message displaying item description was not
+  working
 
 v. 2.6.4
 - Fixed issue where scene backgrounds could not be created/changed
