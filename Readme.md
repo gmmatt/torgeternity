@@ -8,6 +8,10 @@
 For manual installation, use the provided manifest URL in the "*Install System*" popup window 
 while managing game systems.
 
+v. 2.6.6
+- Fixed issue where Storm Knight attribute edits didn't stick
+- More chat and hotbar enhancements from Spatula!
+
 v. 2.6.5
 - Fixed issue in 2.6.4 where drop-downs did not work in item sheets
 - Fixed issue where chat message displaying item description was not
