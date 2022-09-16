@@ -9,20 +9,20 @@
     <p>
         <span class="vital-box">
             {{localize "torgeternity.sheetLabels.wounds"}}:
-            <input name="data.wounds.value" type="number" value="{{actor.system.wounds.value}}" data-dtype="Number"
+            <input name="system.wounds.value" type="number" value="{{actor.system.wounds.value}}" data-dtype="Number"
                 class="small-input" />
             /
-            <input name="data.wounds.max" type="number" value="{{actor.system.wounds.max}}" data-dtype="Number"
+            <input name="system.wounds.max" type="number" value="{{actor.system.wounds.max}}" data-dtype="Number"
                 class="small-input" />
         </span>
     </p>
     <p>
         <span class="vital-box">
             {{localize "torgeternity.sheetLabels.shock"}}:
-            <input name="data.shock.value" type="number" value="{{actor.system.shock.value}}" data-dtype="Number"
+            <input name="system.shock.value" type="number" value="{{actor.system.shock.value}}" data-dtype="Number"
                 class="small-input" />
             /
-            <input name="data.shock.max" type="number" value="{{actor.system.shock.max}}" data-dtype="Number"
+            <input name="system.shock.max" type="number" value="{{actor.system.shock.max}}" data-dtype="Number"
                 class="small-input" />
         </span>
     </p>
@@ -39,10 +39,10 @@
         <span class="vital-box">
             <a class="item-control possibility-roll" title="Possibility Roll">{{localize
                 "torgeternity.sheetLabels.possibilities"}}: </a>
-            <input name="data.other.possibilities" type="number" value="{{actor.system.other.possibilities}}"
+            <input name="system.other.possibilities" type="number" value="{{actor.system.other.possibilities}}"
                 data-dtype="Number" class="small-input" />
             {{localize "torgeternity.sheetLabels.possibilitypotential"}} :
-            <span class="light">{{data.data.details.possibilitypotential}}</span>
+            <span class="light">{{actor.system.details.possibilitypotential}}</span>
         </span>
 
 

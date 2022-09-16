@@ -214,14 +214,14 @@
 			<span style="position:relative">{{localize (concatSkillName key)}}
 			</span>
 			<span class="inputsFav">
-				<input name="data.skills.{{key}}.value" type="number" class="small-input"
+				<input name="system.skills.{{key}}.value" type="number" class="small-input"
 					value="{{skill.value}}" data-dtype="Number" />
 
 				<a class="toggleFav {{#if skill.isFav}}checked
 					{{/if}}">
 					<i class="far fa-star"></i>
 				</a>
-				<input class="favCheck" type="checkbox" name="data.skills.{{key}}.isFav"
+				<input class="favCheck" type="checkbox" name="system.skills.{{key}}.isFav"
 					{{checked skill.isFav}}
 					data-dtype="Boolean" />
 			</span>
@@ -232,24 +232,24 @@
 
 	<div class="threat-edit">
 		{{localize "torgeternity.sheetLabels.move"}}:&nbsp;
-		<input name="data.other.move" class="small-input" type="number"
+		<input name="system.other.move" class="small-input" type="number"
 			value="{{actor.system.other.move}}"
 			data-dtype="Number" />;&nbsp;
 		{{localize "torgeternity.sheetLabels.tough"}}:&nbsp;
-		<input name="data.other.toughness" class="small-input" type="number"
+		<input name="system.other.toughness" class="small-input" type="number"
 			value="{{actor.system.other.toughness}}"
-			data-dtype="Number" />&nbsp;/&nbsp;(<input name="data.other.armor"
+			data-dtype="Number" />&nbsp;/&nbsp;(<input name="system.other.armor"
 			class="small-input" type="number"
 			value="{{actor.system.other.armor}}" data-dtype="Number" />)
 	</div>
 	<div class="threat-edit">
 		{{localize "torgeternity.sheetLabels.possibilitypotential"}}:&nbsp;
-		<input name="data.details.possibilitypotential" class="text-input" type="text"
+		<input name="system.details.possibilitypotential" class="text-input" type="text"
 			value="{{actor.system.details.possibilitypotential}}" />
 	</div>
 	<div class="threat-edit">
 		{{localize "torgeternity.sheetLabels.size"}}: &nbsp;
-		<select name="data.details.sizeBonus" class="input-box">
+		<select name="system.details.sizeBonus" class="input-box">
 			{{#select actor.system.details.sizeBonus}}
 			{{#each config.sizes as |name type|}}
 			<option value="{{type}}">{{localize name}}</option>
