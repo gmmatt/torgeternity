@@ -8,6 +8,9 @@
 For manual installation, use the provided manifest URL in the "*Install System*" popup window 
 while managing game systems.
 
+v. 2.6.7
+- Fixed issue where some fields on threats could not be edited
+
 v. 2.6.6
 - Fixed issue where Storm Knight attribute edits didn't stick
 - More chat and hotbar enhancements from Spatula!
