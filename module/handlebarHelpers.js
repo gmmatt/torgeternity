@@ -1,7 +1,16 @@
 export function registerHelpers() {
 
+    Handlebars.registerHelper("concatPowerDN", function (dnValue) {
+        // some power DNs are part of a localization key, some are plain text
+        const dnStrings = ["veryEasy", "easy", "standard", "challenging", "hard", "veryHard", "heroic", "nearImpossible"];
+        if (dnStrings.includes(dnValue) || dnValue.startsWith("target")) {
+            return "torgeternity.dnTypes." + dnValue;
+        }
+        return dnValue;
+    });
+
     Handlebars.registerHelper("concatSkillValue", function (skillName) {
-        var skillValue = "{{data.skills." + skillName + ".value}}";
+        var skillValue = "{{system.skills." + skillName + ".value}}";
         return skillValue;
     });
 
