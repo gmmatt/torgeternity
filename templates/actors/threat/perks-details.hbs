@@ -30,7 +30,7 @@
 
 			<div class="item-detail">
 				<div class="item-dropdown-description">
-					{{{item.data.description}}}
+					{{{item.system.description}}}
 				</div>
 			</div>
 		</li>
@@ -60,7 +60,7 @@
 			</div>
 			<div class="item-detail">
 				<div class="item-dropdown-description">
-					{{{item.data.description}}}
+					{{{item.system.description}}}
 				</div>
 			</div>
 		</li>
@@ -91,16 +91,16 @@
 			</div>
 			<div class="item-detail">
 				<div class="item-dropdown-description">
-					{{{item.data.description}}}
+					{{{item.system.description}}}
 					<p></p>
 					<div class="item-dropdown-extras">
-					{{localize (concatPerkType item.data.category)}}
+					{{localize (concatPerkType item.system.category)}}
 					</div>
 					<div class="item-dropdown-extras">
-						{{item.data.cosm}}
+						{{item.system.cosm}}
 					</div>
 					<div class="item-dropdown-extras">
-						{{item.data.timestaken}}x
+						{{item.system.timestaken}}x
 					</div>
 				</div>
 			</div>
@@ -117,7 +117,7 @@
 				<img src="{{item.img}}" title="{{item.name}}" width="30" height="30"/>
 				<a class="item-name">{{item.name}}
 					({{localize "torgeternity.enhancements.enhances"}}
-					{{item.data.perk}})</a>
+					{{item.system.perk}})</a>
 				<div class="item-controls">
 					<a class="item-control item-tochat" title="{{localize 'torgeternity.iconeTitles.sendToChat'}}">
 						<i class="fas fa-comment"></i>
@@ -132,7 +132,7 @@
 			</div>
 			<div class="item-detail">
 				<div class="item-dropdown-description">
-					{{{item.data.description}}}
+					{{{item.system.description}}}
 				</div>
 			</div>
 		</li>
