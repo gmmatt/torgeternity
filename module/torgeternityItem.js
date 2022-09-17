@@ -1,5 +1,10 @@
 export default class torgeternityItem extends Item {
 
+    static equipProp = "system.equipped";
+    static equipClassProp = "system.equippedClass";
+    static cssEquipped = "item-equipped";
+    static cssUnequipped = "item-unequipped";
+
     chatTemplate = {
         "perk": "systems/torgeternity/templates/partials/perk-card.hbs",
         "attack": "systems/torgeternity/templates/partials/attack-card.hbs",
@@ -33,6 +38,47 @@ export default class torgeternityItem extends Item {
             this.system.navStyle = "right:-110px;top:115px";
             this.system.extendedNav = false
         }
+    }
+    
+    _onCreate(data, options, userId) {
+        super._onCreate(data, options, userId);
+       
+        if (this.parent !== null && this.system.hasOwnProperty("equipped")) {
+            // set the item to be equipped and un-equip other items of the same type
+            this.update({
+              [torgeternityItem.equipProp]: true,
+              [torgeternityItem.equipClassProp]: torgeternityItem.cssEquipped
+            });
+           
+            let actor = this.parent;
+            let item = this;
+            actor.items.forEach (function(otherItem, key) {
+                if (otherItem._id !== item._id && otherItem.system.equipped && otherItem.type === item.type) {
+                    torgeternityItem.toggleEquipState(otherItem, actor);
+                }
+            });
+        }
+    }
+
+    static toggleEquipState(item, actor) {
+        let equipped = !getProperty(item, torgeternityItem.equipProp);
+        let equipClass = equipped ? torgeternityItem.cssEquipped : torgeternityItem.cssUnequipped;
+       
+        // flip the flag/CSS class
+        item.update({
+          [torgeternityItem.equipProp]: equipped,
+          [torgeternityItem.equipClassProp]: equipClass
+        });
+        // enable/disable effects
+        let sourceOrigin = "Item." + item._id;
+        actor.effects.forEach (function(effect, key) {
+            if (effect.origin.endsWith(sourceOrigin)) {
+                effect.update({"disabled": !equipped});
+            }
+        });
+       
+        // return true if other items of same type need to be unequipped
+        return equipped;
     }
 
     async roll() {

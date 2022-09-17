@@ -10,6 +10,7 @@ import { testDialog } from "/systems/torgeternity/module/test-dialog.js";
 import { attackDialog } from "/systems/torgeternity/module/attack-dialog.js";
 import { interactionDialog } from "/systems/torgeternity/module/interaction-dialog.js";
 import { powerDialog } from "/systems/torgeternity/module/power-dialog.js";
+import torgeternityItem from "/systems/torgeternity/module/torgeternityItem.js";
 
 export default class torgeternityActorSheet extends ActorSheet {
     constructor(...args) {
@@ -384,8 +385,8 @@ export default class torgeternityActorSheet extends ActorSheet {
             testType: event.currentTarget.dataset.testtype,
             customSkill: event.currentTarget.dataset.customskill,
             actor: this.actor.uuid,
-            actorPic: this.actor.data.img,
-            actorType: this.actor.data.type,
+            actorPic: this.actor.system.img,
+            actorType: this.actor.system.type,
             isAttack: false,
             skillName: isAttributeTest ? attributeName : skillName,
             skillValue: skillValue,
@@ -429,8 +430,8 @@ export default class torgeternityActorSheet extends ActorSheet {
         let test = {
             testType: "interactionAttack",
             actor: this.actor.uuid,
-            actorPic: this.actor.data.img,
-            actorType: this.actor.data.type,
+            actorPic: this.actor.system.img,
+            actorType: this.actor.system.type,
             isAttack: false,
             interactionAttackType: event.currentTarget.getAttribute("data-attack-type"),
             skillName: event.currentTarget.getAttribute("data-name"),
@@ -459,11 +460,11 @@ export default class torgeternityActorSheet extends ActorSheet {
         event.preventDefault();
         if (toggleState === null) {
             this.actor.update({
-                "data.editstate": true
+                "system.editstate": true
             });
         } else {
             this.actor.update({
-                "data.editstate": null
+                "system.editstate": null
             });
         };
 
@@ -608,8 +609,8 @@ export default class torgeternityActorSheet extends ActorSheet {
         let test = {
             testType: "attack",
             actor: this.actor.uuid,
-            actorPic: this.actor.data.img,
-            actorType: this.actor.data.type,
+            actorPic: this.actor.system.img,
+            actorType: this.actor.system.type,
             attackType: attackType,
             isAttack: true,
             skillName: attackWith,
@@ -692,8 +693,8 @@ export default class torgeternityActorSheet extends ActorSheet {
         let test = {
             testType: "power",
             actor: this.actor.uuid,
-            actorPic: this.actor.data.img,
-            actorType: this.actor.data.type,
+            actorPic: this.actor.system.img,
+            actorType: this.actor.system.type,
             attackType: "power",
             powerName: item.name,
             powerModifier: powerModifier,
@@ -768,7 +769,7 @@ export default class torgeternityActorSheet extends ActorSheet {
 
                 var templateData = {
                     message: game.i18n.localize('torgeternity.chatText.check.needTarget'),
-                    actorPic: this.actor.data.img
+                    actorPic: this.actor.system.img
                 };
 
                 const templatePromise = renderTemplate("./systems/torgeternity/templates/partials/skill-error-card.hbs", templateData);
@@ -781,7 +782,7 @@ export default class torgeternityActorSheet extends ActorSheet {
                 return;
             } else {
                 var target = Array.from(game.user.targets)[0];
-                var targetType = target.actor.data.type;
+                var targetType = target.actor.system.type;
                 var targetData = target.actor.system
 
 
@@ -873,8 +874,8 @@ export default class torgeternityActorSheet extends ActorSheet {
         let test = {
             testType: "power",
             actor: this.actor,
-            actorPic: this.actor.data.img,
-            actorType: this.actor.data.type,
+            actorPic: this.actor.system.img,
+            actorType: this.actor.system.type,
             item: item,
             skillName: skillData.name,
             skillBaseAttribute: skillData.baseattribute,
@@ -882,7 +883,7 @@ export default class torgeternityActorSheet extends ActorSheet {
             skillValue: skillData.value,
             difficulty: powerData.dn,
             modifier: powerData.modifier,
-            powerName: item.data.name,
+            powerName: item.system.name,
             powerAttack: powerData.isAttack,
             damage: powerData.damage,
             ap: powerData.ap,
@@ -1085,25 +1086,21 @@ export default class torgeternityActorSheet extends ActorSheet {
         });
     }
 
-
-
     _onItemEquip(event) {
-        var actor = this.actor;
         const itemID = event.currentTarget.closest(".item").getAttribute("data-item-id");
-        const item = this.actor.items.get(itemID);
-        if (item.data.equipped === false) {
-            item.data.equipped = true;
-            item.update({
-                "data.equipped": true
-            })
-        } else {
-            item.data.equipped = false;
-            item.update({
-                "data.equipped": false
-            })
+        const item = this.actor.items.get(itemID);        
+        let doCheckOtherItems = torgeternityItem.toggleEquipState(item, this.actor);
+       
+        // for armor and shield, ensure there's only one equipped
+        if (doCheckOtherItems && item.system && item.system.hasOwnProperty("equipped")) {
+            let actor = this.actor;
+            actor.items.forEach (function(otherItem, key) {
+                if (otherItem._id !== item._id && otherItem.system.equipped && otherItem.type === item.type) {
+                    torgeternityItem.toggleEquipState(otherItem, actor);
+                }
+            });
         }
     }
-
 
     //------CARDS----
 
@@ -1226,7 +1223,7 @@ function checkUnskilled(skillValue, skillName, actor) {
 
         let templateData = {
             message: skillName + " " + game.i18n.localize('torgeternity.chatText.check.cantUseUntrained'),
-            actorPic: actor.data.img
+            actorPic: actor.system.img
         };
 
         const templatePromise = renderTemplate("./systems/torgeternity/templates/partials/skill-error-card.hbs", templateData);
