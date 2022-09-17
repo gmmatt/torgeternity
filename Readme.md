@@ -8,6 +8,10 @@
 For manual installation, use the provided manifest URL in the "*Install System*" popup window 
 while managing game systems.
 
+v. 2.6.8
+- Fixed issue causing buff effects on attributes to fail to 
+  reset on close.
+
 v. 2.6.7
 - Fixed issue where some fields on threats could not be edited
 
