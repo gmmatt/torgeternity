@@ -12,6 +12,12 @@ v. 2.6.8
 - Fixed issue causing buff effects on attributes to fail to 
   reset on close.
 - Fixed issue where threats could not be edited
+- Multiple updates to item and actor sheets to ensure compatibility
+  with version 10
+- Armor/shield equip/unequip icon on Gear page now turns associated
+  Effects on/off
+- Fixed issue where chat hyperlinks did not work when actively
+  defending
 
 v. 2.6.7
 - Fixed issue where some fields on threats could not be edited

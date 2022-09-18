@@ -193,7 +193,7 @@ export function renderSkillChat(test) {
     // Do we display the unskilled label for a Storm Knight?
     var unskilledTest = false;
     var myActor = test.actor.includes("Token") ? fromUuidSync(test.actor).actor : fromUuidSync(test.actor)
-    if (myActor.type === "stormknight" & test.testType != "attribute" & test.testType != "activeDefense" & test.customSkill != "true") {
+    if (myActor.type === "stormknight" & test.testType != "attribute" & test.testType != "activeDefense" & test.testType != "activeDefenseUpdate" & test.customSkill != "true") {
         if (myActor.system.skills[test.skillName].adds === 0 | myActor.system.skills[test.skillName].adds === null) {
             unskilledTest = true;
         }
@@ -502,16 +502,56 @@ export function renderSkillChat(test) {
         };
 
     } else if (test.testType === "activeDefenseUpdate") {                                                   //update bonus in case of bonus roll possibility / up
-        var oldAD = game.actors.get(actorID).data.effects.find(a => a.data.label === "ActiveDefense");
+        // Delete Existing Active Effects
+        fromUuidSync(test.actor).effects.find(a => a.data.label === "ActiveDefense").delete();
         if (test.bonus < 1) {
             test.bonus = 1
         };
         test.resultText = "+ " + test.bonus;
-        for (let t of oldAD.data.changes) {
-            t.update({"value" : test.bonus});
+        // Create new set of active effects
+        let NewActiveDefense = {
+            label : "ActiveDefense",                                                                    //Add an icon to remind the defense, bigger ? Change color of Defense ?
+            icon : "icons/equipment/shield/heater-crystal-blue.webp",                                   //To change I think, taken in Core, should have a dedicated file
+            duration : {"rounds" : 1},
+            changes : [{                                                                                //Modify all existing "basic" defense in block
+                    "key": "data.dodgeDefense",                                                         //Should need other work for defense vs powers
+                    "value": test.bonus,                                                                //that don't target xxDefense
+                    "priority": 20,                                                                     //Create a data.ADB that store the bonus ?
+                    "mode": 2
+                    },{
+                    "key": "data.intimidationDefense",
+                    "value": test.bonus,
+                    "priority": 20,
+                    "mode": 2
+                    },{
+                    "key": "data.maneuverDefense",
+                    "value": test.bonus,
+                    "priority": 20,
+                    "mode": 2
+                    },{
+                    "key": "data.meleeWeaponsDefense",
+                    "value": test.bonus,
+                    "priority": 20,
+                    "mode": 2
+                    },{
+                    "key": "data.tauntDefense",
+                    "value": test.bonus,
+                    "priority": 20,
+                    "mode": 2
+                    },{
+                    "key": "data.trickDefense",
+                    "value": test.bonus,
+                    "priority": 20,
+                    "mode": 2
+                    },{
+                    "key": "data.unarmedCombatDefense",
+                    "value": test.bonus,
+                    "priority": 20,
+                    "mode": 2
+                }],
+            disabled : false
         };
-        test.testType = "activeDefenseUpdate";
-        game.actors.get(actorID).data.effects.find(a => a.data.label === "ActiveDefense").update({"changes" : oldAD.data.changes});
+        fromUuidSync(test.actor).createEmbeddedDocuments("ActiveEffect",[NewActiveDefense]);
         } else {
         test.resultText = test.outcome
     }
@@ -565,21 +605,6 @@ export function renderSkillChat(test) {
         test.damageLabel = "display:none"
         test.damageSubLabel = "display:none"
     }
-
-    // Determine whether to display damage for power roll
-    // Pretty sure not needed
-    /*
-    if (test.testType === "power") {
-        if (test.powerAttack === "true") {
-            test.damageLabel = "display:"
-            test.damageSubLabel = "display:none";
-            test.damageDescription = test.damage + " Damage";
-        } else {
-            test.damageLabel = "display:none";
-            test.damageSubLabel = "display:none"
-        }
-    };
-    */
 
     // Remind Player to Check for Disconnect?
     if (test.rollTotal <= 4) {
@@ -645,7 +670,7 @@ export function renderSkillChat(test) {
     test.targets = ""
 
     let chatData = {
-        user: game.user.data._id,
+        user: game.user._id,
         speaker: ChatMessage.getSpeaker(),
         owner: test.actor,
     };

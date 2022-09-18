@@ -385,7 +385,7 @@ export default class torgeternityActorSheet extends ActorSheet {
             testType: event.currentTarget.dataset.testtype,
             customSkill: event.currentTarget.dataset.customskill,
             actor: this.actor.uuid,
-            actorPic: this.actor.system.img,
+            actorPic: this.actor.img,
             actorType: this.actor.system.type,
             isAttack: false,
             skillName: isAttributeTest ? attributeName : skillName,
@@ -430,7 +430,7 @@ export default class torgeternityActorSheet extends ActorSheet {
         let test = {
             testType: "interactionAttack",
             actor: this.actor.uuid,
-            actorPic: this.actor.system.img,
+            actorPic: this.actor.img,
             actorType: this.actor.system.type,
             isAttack: false,
             interactionAttackType: event.currentTarget.getAttribute("data-attack-type"),
@@ -609,7 +609,7 @@ export default class torgeternityActorSheet extends ActorSheet {
         let test = {
             testType: "attack",
             actor: this.actor.uuid,
-            actorPic: this.actor.system.img,
+            actorPic: this.actor.img,
             actorType: this.actor.system.type,
             attackType: attackType,
             isAttack: true,
@@ -693,7 +693,7 @@ export default class torgeternityActorSheet extends ActorSheet {
         let test = {
             testType: "power",
             actor: this.actor.uuid,
-            actorPic: this.actor.system.img,
+            actorPic: this.actor.img,
             actorType: this.actor.system.type,
             attackType: "power",
             powerName: item.name,
@@ -769,7 +769,7 @@ export default class torgeternityActorSheet extends ActorSheet {
 
                 var templateData = {
                     message: game.i18n.localize('torgeternity.chatText.check.needTarget'),
-                    actorPic: this.actor.system.img
+                    actorPic: this.actor.img
                 };
 
                 const templatePromise = renderTemplate("./systems/torgeternity/templates/partials/skill-error-card.hbs", templateData);
@@ -874,7 +874,7 @@ export default class torgeternityActorSheet extends ActorSheet {
         let test = {
             testType: "power",
             actor: this.actor,
-            actorPic: this.actor.system.img,
+            actorPic: this.actor.img,
             actorType: this.actor.system.type,
             item: item,
             skillName: skillData.name,
