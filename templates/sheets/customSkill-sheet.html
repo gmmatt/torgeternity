@@ -18,18 +18,18 @@
                     <p class="item-data-label">
                         {{localize "torgeternity.sheetLabels.skillAdds"}}
                     </p>
-                    <input name="data.adds" type="number" value="{{data.data.adds}}" class="input-box" />
+                    <input name="system.adds" type="number" value="{{item.system.adds}}" class="input-box" />
 
                     <p class="item-data-label">
                         {{localize "torgeternity.sheetLabels.skillValue"}}
                     </p>
-                    <input name="data.value" type="number" value="{{data.data.value}}" class="input-box" />
+                    <input name="system.value" type="number" value="{{item.system.value}}" class="input-box" />
 
                     <p class="item-data-label">
                         {{localize "torgeternity.sheetLabels.baseAttribute"}}
                     </p>
-                    <select name="data.baseAttribute" class="input-box">
-                        {{#select data.data.baseAttribute}}
+                    <select name="system.baseAttribute" class="input-box">
+                        {{#select item.system.baseAttribute}}
                         {{#each config.attributeTypes as |name type|}}
                         <option value="{{type}}">{{localize name}}</option>
                         {{/each}}
@@ -37,8 +37,8 @@
                     </select>
                 </div>
                 <div class="main-content">
-                    <div name="data.description" class="item-description-textarea">
-                        {{editor content=data.data.description target="data.description" button=true owner=owner editable=editable}}
+                    <div name="system.description" class="item-description-textarea">
+                        {{editor item.system.description target="system.description" button=true owner=owner editable=editable}}
                     </div>        
                 </div>
             </div>            

@@ -21,8 +21,8 @@
                     <p class="item-data-label">
                         {{localize "torgeternity.gear.cosm"}}
                     </p>
-                    <select name="data.cosm" class="input-box">
-                        {{#select data.data.cosm}}
+                    <select name="system.cosm" class="input-box">
+                        {{#select item.system.cosm}}
                         {{#each config.cosmTypes as |name type|}}
                         <option value="{{localize name}}">{{localize name}}</option>
                         {{/each}}
@@ -31,33 +31,33 @@
                     <p class="item-data-label">
                         {{localize "torgeternity.gear.techlevel"}}
                     </p>
-                    <input name="data.techlevel" type="number" value="{{data.data.techlevel}}" class="input-box" />
+                    <input name="system.techlevel" type="number" value="{{item.system.techlevel}}" class="input-box" />
                     <p class="item-data-label">
                         {{localize "torgeternity.gear.price"}}/{{localize "torgeternity.gear.value"}}
                     </p>
-                    <input name="data.price" type="text" value="{{data.data.price}}" class="input-box-small" />
-                    <input name="data.value" type="number" value="{{data.data.value}}" class="input-box-small" />
+                    <input name="system.price" type="text" value="{{item.system.price}}" class="input-box-small" />
+                    <input name="system.value" type="number" value="{{item.system.value}}" class="input-box-small" />
                     <p class="item-data-label">
                         {{localize "torgeternity.gear.topspeed"}}
                     </p>
-                    <input name="data.topspeed" type="text" value="{{data.data.topspeed}}" class="input-box" />
+                    <input name="system.topspeed" type="text" value="{{item.system.topspeed}}" class="input-box" />
                     <p class="item-data-label">
                         {{localize "torgeternity.gear.passengers"}}
                     </p>
-                    <input name="data.pass" type="number" value="{{data.data.pass}}" class="input-box" />
+                    <input name="system.pass" type="number" value="{{item.system.pass}}" class="input-box" />
                     <p class="item-data-label">
                         {{localize "torgeternity.gear.mr"}}
                     </p>
-                    <input name="data.mr" type="number" value="{{data.data.mr}}" class="input-box" />
+                    <input name="system.mr" type="number" value="{{item.system.mr}}" class="input-box" />
                     <p class="item-data-label">
                         {{localize "torgeternity.gear.wounds"}}/{{localize "torgeternity.gear.toughness"}}
                     </p>
-                    <input name="data.wounds" type="number" value="{{data.data.wounds}}" class="input-box-small" />
-                    <input name="data.tough" type="text" value="{{data.data.tough}}" class="input-box-small" />
+                    <input name="system.wounds" type="number" value="{{item.system.wounds}}" class="input-box-small" />
+                    <input name="system.tough" type="text" value="{{item.system.tough}}" class="input-box-small" />
                 </div>
                 <div class="main-content">
                     <div class="item-description-textarea" style="padding:0px 0px 0px 10px">
-                        {{editor content=data.data.description target="data.description" button=true owner=owner editable=editable}}
+                        {{editor item.system.description target="system.description" button=true owner=owner editable=editable}}
                     </div>
                 </div>
 

@@ -12,7 +12,7 @@
             </a>
         </span>
         <span class="skill-line skillAttr">
-            <select name="data.skills.{{name}}.baseAttribute" class="input-box">
+            <select name="system.skills.{{name}}.baseAttribute" class="input-box">
                 {{#select content.baseAttribute}}
                 {{#each attrTypes as |name type|}}
                 <option value="{{type}}">{{localize name}}</option>
@@ -21,7 +21,7 @@
             </select>
         </span>
         <span class="skillAdd">
-            <input name="data.skills.{{name}}.adds" type="number" value="{{content.adds}}" data-dtype="Number" />
+            <input name="system.skills.{{name}}.adds" type="number" value="{{content.adds}}" data-dtype="Number" />
         </span>
         <span class="skill-line">
             {{content.value}}
@@ -30,7 +30,7 @@
             <a class="toggleFav {{#if content.isFav}}checked{{/if}}">
                 <i class="far fa-star"></i>
             </a>
-            <input class="favCheck" type="checkbox" name="data.skills.{{name}}.isFav" {{checked content.isFav}}
+            <input class="favCheck" type="checkbox" name="system.skills.{{name}}.isFav" {{checked content.isFav}}
                 data-dtype="Boolean" />
         </span>
     </li>
@@ -54,14 +54,6 @@
         </span>
         <span class="skill-line">
             {{content.system.value}}
-        </span>
-        <span>
-            -
-            <!--<a class="toggleFav {{#if isFav}}checked{{/if}}">
-                <i class="far fa-star"></i>
-            </a>
-            <input class="favCheck" type="checkbox" name="customSkill.isFav" {{checked content.system.isFav}}
-                data-dtype="Boolean" /> -->
         </span>
     </li>
     {{/inline}}

@@ -73,25 +73,5 @@
         </a>
         <input name="system.attributes.strength" type="number" value="{{actor.system.attributes.strength}}" data=dtype="Number" />
     </li>
-
-
-    <!-- obsolete code: eventually needs to be deleted    
-    {{#each data.attributes as |attr key|}}
-    <li class="attribut-block">
-        <a class="skill-roll"
-            data-testType="attribute" 
-            data-value="{{attr}}" 
-            data-name="{{localize (concatAttributeName key)}}"
-            data-baseAttribute="{{data.attributes.charisma}}" 
-            data-adds="0"
-            data-value="{{data.attributes.charisma}}" 
-            data-unskilledUse="1"      
-            >
-            {{localize (concatAttributeName key) }}
-        </a>
-        <input name="data.attributes.{{key}}" type="number" value="{{attr}}" data=dtype="Number" />
-    </li>
-    {{/each}}
-    -->
     
 </ul>

@@ -19,8 +19,8 @@
                         <p class="item-data-label">
                                 {{localize "torgeternity.powers.skill"}}
                             </p>
-                            <select name="data.attackWith" class="input-box">
-                                {{#select data.data.attackWith}}
+                            <select name="system.attackWith" class="input-box">
+                                {{#select item.system.attackWith}}
                                 {{#each config.skills as |name type|}}
                                 <option value="{{type}}">{{localize name}}</option>
                                 {{/each}}
@@ -29,19 +29,19 @@
                             <p class="item-data-label">
                                 {{localize "torgeternity.powers.damage"}}
                             </p>
-                            <input name="data.damage" type="number" value="{{data.data.damage}}" class="input-box" />
+                            <input name="system.damage" type="number" value="{{item.system.damage}}" class="input-box" />
                             <p class="item-data-label">
                                 {{localize "torgeternity.powers.ap"}}
                             </p>
-                            <input name="data.ap" type="number" value="{{data.data.ap}}" class="input-box" />
+                            <input name="system.ap" type="number" value="{{item.system.ap}}" class="input-box" />
                         </div>
                         <div class="main-content">
                             <p class="item-data-label">
                                 {{localize "torgeternity.gear.chatNote"}}
-                                <input name="data.chatNote" type="text" value="{{data.data.chatNote}}" class="input-box" />
+                                <input name="system.chatNote" type="text" value="{{item.system.chatNote}}" class="input-box" />
                             </p>    
-                            <div name="data.description" class="item-description-textarea">
-                                {{editor content=data.data.description target="data.description" button=true owner=owner editable=editable}}
+                            <div name="system.description" class="item-description-textarea">
+                                {{editor item.system.description target="system.description" button=true owner=owner editable=editable}}
                             </div>
                         </div> 
             </div>
