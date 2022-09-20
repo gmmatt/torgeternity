@@ -33,7 +33,7 @@
             "system": "torgeternity",
             "module": "torgeternity",
             "path": "packs/archetypes.db",
-            "entity": "Actor"
+            "type": "Actor"
         },
         {
             "name": "basic-rules",
@@ -41,7 +41,7 @@
             "system": "torgeternity",
             "module": "torgeternity",
             "path": "packs/basic-rules.db",
-            "entity": "JournalEntry"
+            "type": "JournalEntry"
         },
         {
             "name": "core-card-set",
@@ -49,7 +49,7 @@
             "system": "torgeternity",
             "module": "torgeternity",
             "path": "packs/core-card-set.db",
-            "entity": "Cards"
+            "type": "Cards"
         },
         {
             "name": "core-scenes",
@@ -57,7 +57,7 @@
             "system": "torgeternity",
             "module": "torgeternity",
             "path": "packs/standardscene.db",
-            "entity": "Scene"
+            "type": "Scene"
         },
         {
             "name": "core-scenes-fr",
@@ -65,7 +65,7 @@
             "system": "torgeternity",
             "module": "torgeternity",
             "path": "packs/french/standardscene.db",
-            "entity": "Scene"
+            "type": "Scene"
         },
         {
             "name": "archetypes-fr",
@@ -73,7 +73,7 @@
             "system": "torgeternity",
             "module": "torgeternity",
             "path": "packs/french/archetypes.db",
-            "entity": "Actor"
+            "type": "Actor"
         },
         {
             "name": "basic-rules-fr",
@@ -81,7 +81,7 @@
             "system": "torgeternity",
             "module": "torgeternity",
             "path": "packs/french/basic-rules.db",
-            "entity": "JournalEntry"
+            "type": "JournalEntry"
         },
         {
             "name": "core-card-set-fr",
@@ -89,7 +89,7 @@
             "system": "torgeternity",
             "module": "torgeternity",
             "path": "packs/french/core-card-set.db",
-            "entity": "Cards"
+            "type": "Cards"
         },
         {
             "name": "system-de-archetypen",
@@ -97,7 +97,7 @@
             "path": "packs/deutsch/archetypen.db",
             "system": "torgeternity",
             "module": "torgeternity",
-            "entity": "Actor"
+            "type": "Actor"
         },
         {
             "name": "system-de-basisregeln",
@@ -105,7 +105,7 @@
             "path": "packs/deutsch/basisregeln.db",
             "system": "torgeternity",
             "module": "torgeternity",
-            "entity": "JournalEntry"
+            "type": "JournalEntry"
         },
         {
             "name": "core-de-scenes",
@@ -113,7 +113,7 @@
             "system": "torgeternity",
             "module": "torgeternity",
             "path": "packs/deutsch/standardszene.db",
-            "entity": "Scene"
+            "type": "Scene"
         },
         {
             "name": "system-de-grundkarten",
@@ -121,7 +121,7 @@
             "path": "packs/deutsch/core-card-set-de.db",
             "system": "torgeternity",
             "module": "torgeternity",
-            "entity": "Cards"
+            "type": "Cards"
         }
     ],
     "languages": [{
