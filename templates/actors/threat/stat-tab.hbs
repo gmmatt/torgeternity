@@ -90,43 +90,39 @@
 		<b>{{localize "torgeternity.sheetLabels.equipment"}}:</b>&nbsp;
 		<span>
 			{{#each meleeweapons as |item id|}}
-			<a class="item-attackRoll inline-skill-item item"
-				data-item-id="{{item._id}}">{{item.name}}</a>
+			<a class="item-attackRoll inline-skill-item item" data-item-id="{{item._id}}">{{item.name}}</a>
 			{{/each}}
 
 			{{#each missileweapon as |item id|}}
-			<a class="item-attackRoll inline-skill-item item"
-				data-item-id="{{item._id}}">{{item.name}}</a>
+			<a class="item-attackRoll inline-skill-item item" data-item-id="{{item._id}}">{{item.name}}</a>
 			{{/each}}
 
 			{{#each firearm as |item id|}}
-			<a class="item-attackRoll inline-skill-item item"
-				data-item-id="{{item._id}}">{{item.name}}</a>
+			<a class="item-attackRoll inline-skill-item item" data-item-id="{{item._id}}">{{item.name}}</a>
 			{{/each}}
 
 			{{#each heavyweapon as |item id|}}
-			<a class="item-attackRoll inline-skill-item item"
-				data-item-id="{{item._id}}">{{item.name}}</a>
+			<a class="item-attackRoll inline-skill-item item" data-item-id="{{item._id}}">{{item.name}}</a>
 			{{/each}}
 
 			{{#each armor as |item id|}}
-			<span class="inline-skill-item">{{item.name}}</span>
+			<a class="inline-skill-item item" data-item-id="{{item._id}}">{{item.name}}</a>
 			{{/each}}
 
 			{{#each shield as |item id|}}
-			<span class="inline-skill-item">{{item.name}}</span>
+			<a class="inline-skill-item item" data-item-id="{{item._id}}">{{item.name}}</a>
 			{{/each}}
 
 			{{#each gear as |item id|}}
-			<span class="inline-skill-item">{{item.name}}</span>
+			<a class="inline-skill-item item" data-item-id="{{item._id}}">{{item.name}}</a>
 			{{/each}}
 
 			{{#each implant as |item id|}}
-			<span class="inline-skill-item">{{item.name}}</span>
+			<a class="inline-skill-item item" data-item-id="{{item._id}}">{{item.name}}</a>
 			{{/each}}
 
 			{{#each eternityshard as |item id|}}
-			<span class="inline-skill-item">{{item.name}}</span>
+			<a class="inline-skill-item item" data-item-id="{{item._id}}">{{item.name}}</a>
 			{{/each}}
 		</span>
 
@@ -134,7 +130,7 @@
 			<b>{{localize "torgeternity.sheetLabels.perks"}}</b>:&nbsp;
 			<span>
 				{{#each perk as |item id|}}
-				<span class="inline-skill-item">{{item.name}}</span>
+				<a class="inline-skill-item item" data-item-id="{{item._id}}">{{item.name}}</a>
 				{{/each}}
 			</span>
 		</div>
@@ -155,7 +151,9 @@
 
 				{{#each specialability as |item id|}}
 				<li>
-					<b>{{item.name}}</b>
+					<b>
+                        <a class="item" data-item-id="{{item._id}}">{{item.name}}</a>
+                    </b>
 					.&nbsp;
 					{{{concatSpecialAbility item.system.description}}}
 				</li>

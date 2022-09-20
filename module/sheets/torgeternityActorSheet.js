@@ -18,7 +18,7 @@ export default class torgeternityActorSheet extends ActorSheet {
 
         if (this.object.type === "threat") {
             this.options.width = this.position.width = 485;
-            this.options.height = this.position.height = 350;
+            this.options.height = this.position.height = 425;
 
         }
 
@@ -210,6 +210,15 @@ export default class torgeternityActorSheet extends ActorSheet {
                 a.setAttribute("draggable", true);
                 a.addEventListener("dragstart", handler, false);
             });
+            // listeners for items on front page of threat sheet
+            if (this.object.type === "threat") {
+                handler = ev => this._onDragStart(ev);
+                html.find('a.item').each((i, a) => {
+                    // Add draggable attribute and dragstart listener.
+                    a.setAttribute("draggable", true);
+                    a.addEventListener("dragstart", handler, false);
+                });
+            }
         }
 
         if (this.actor.isOwner) {
