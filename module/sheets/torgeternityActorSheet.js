@@ -1085,7 +1085,7 @@ export default class torgeternityActorSheet extends ActorSheet {
     _onCreateSa(event) {
         event.preventDefault();
         let itemData = {
-            name: "Name",
+            name: game.i18n.localize("torgeternity.itemSheetDescriptions.specialability"),
             type: "specialability"
         };
         return this.actor.createEmbeddedDocuments("Item", [itemData], {
@@ -1096,7 +1096,7 @@ export default class torgeternityActorSheet extends ActorSheet {
     _onCreateSaR(event) {
         event.preventDefault();
         let itemData = {
-            name: "Name",
+            name: game.i18n.localize("torgeternity.itemSheetDescriptions.specialabilityRollable"),
             type: "specialability-rollable"
         };
         return this.actor.createEmbeddedDocuments("Item", [itemData], {
