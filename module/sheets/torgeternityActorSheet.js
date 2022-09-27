@@ -54,70 +54,70 @@ export default class torgeternityActorSheet extends ActorSheet {
         const data = super.getData();
         var firstItem = 0
 
-        data.meleeweapons = data.items.filter(function(item) {
+        data.meleeweapons = data.items.filter(function (item) {
             return item.type == "meleeweapon"
         });
-        data.customAttack = data.items.filter(function(item) {
+        data.customAttack = data.items.filter(function (item) {
             return item.type == "customAttack"
         });
-        data.customSkill = data.items.filter(function(item) {
+        data.customSkill = data.items.filter(function (item) {
             return item.type == "customSkill"
         });
-        data.gear = data.items.filter(function(item) {
+        data.gear = data.items.filter(function (item) {
             return item.type == "gear"
         });
-        data.eternityshard = data.items.filter(function(item) {
+        data.eternityshard = data.items.filter(function (item) {
             return item.type == "eternityshard"
         });
-        data.armor = data.items.filter(function(item) {
+        data.armor = data.items.filter(function (item) {
             return item.type == "armor"
         });
-        data.shield = data.items.filter(function(item) {
+        data.shield = data.items.filter(function (item) {
             return item.type == "shield"
         });
-        data.missileweapon = data.items.filter(function(item) {
+        data.missileweapon = data.items.filter(function (item) {
             return item.type == "missileweapon"
         });
-        data.firearm = data.items.filter(function(item) {
+        data.firearm = data.items.filter(function (item) {
             return item.type == "firearm"
         });
-        data.implant = data.items.filter(function(item) {
+        data.implant = data.items.filter(function (item) {
             return item.type == "implant"
         });
-        data.heavyweapon = data.items.filter(function(item) {
+        data.heavyweapon = data.items.filter(function (item) {
             return item.type == "heavyweapon"
         });
-        data.vehicle = data.items.filter(function(item) {
+        data.vehicle = data.items.filter(function (item) {
             return item.type == "vehicle"
         });
-        data.perk = data.items.filter(function(item) {
+        data.perk = data.items.filter(function (item) {
             return item.type == "perk"
         });
-        data.spell = data.items.filter(function(item) {
+        data.spell = data.items.filter(function (item) {
             return item.type == "spell"
         });
-        data.miracle = data.items.filter(function(item) {
+        data.miracle = data.items.filter(function (item) {
             return item.type == "miracle"
         });
-        data.psionicpower = data.items.filter(function(item) {
+        data.psionicpower = data.items.filter(function (item) {
             return item.type == "psionicpower"
         });
-        data.specialability = data.items.filter(function(item) {
+        data.specialability = data.items.filter(function (item) {
             return item.type == "specialability"
         });
-        data.specialabilityRollable = data.items.filter(function(item) {
+        data.specialabilityRollable = data.items.filter(function (item) {
             return item.type == "specialability-rollable"
         });
-        data.enhancement = data.items.filter(function(item) {
+        data.enhancement = data.items.filter(function (item) {
             return item.type == "enhancement"
         });
-        data.dramaCard = data.items.filter(function(item) {
+        data.dramaCard = data.items.filter(function (item) {
             return item.type == "dramaCard"
         });
-        data.destinyCard = data.items.filter(function(item) {
+        data.destinyCard = data.items.filter(function (item) {
             return item.type == "destinyCard"
         });
-        data.cosmCard = data.items.filter(function(item) {
+        data.cosmCard = data.items.filter(function (item) {
             return item.type == "cosmCard"
         });
 
@@ -184,42 +184,51 @@ export default class torgeternityActorSheet extends ActorSheet {
     }
 
     activateListeners(html) {
+        //localizing hardcoded possibility potential value
+        console.log(this.actor);
+        if (this.actor.type === "threat" && this.actor.system.details.possibilitypotential === "(none)") {
+            this.actor.update({
+                "system.details.possibilitypotential": game.i18n.localize("torgeternity.sheetLabels.none")
+            })
+        }
 
-        //Owner-only Listeners
-        if (this.actor.isOwner) {
-            let handler = ev => this._onDragStart(ev);
-            // Find all items on the character sheet.
-            html.find('a.item-name').each((i, a) => {
-                // Ignore for the header row.
-                if (a.classList.contains("item-header")) return;
-                // Add draggable attribute and dragstart listener.
-                a.setAttribute("draggable", true);
-                a.addEventListener("dragstart", handler, false);
-            });
-            // Find all attributes on the character sheet.
-            handler = ev => this._skillAttrDragStart(ev);
-            html.find('a.skill-roll').each((i, a) => {
-                // Add draggable attribute and dragstart listener.
-                a.setAttribute("draggable", true);
-                a.addEventListener("dragstart", handler, false);
-            });
-            // Find all interactions on the character sheet.
-            handler = ev => this._interactionDragStart(ev);
-            html.find('a.interaction-attack').each((i, a) => {
-                // Add draggable attribute and dragstart listener.
-                a.setAttribute("draggable", true);
-                a.addEventListener("dragstart", handler, false);
-            });
-            // listeners for items on front page of threat sheet
-            if (this.object.type === "threat") {
-                handler = ev => this._onDragStart(ev);
-                html.find('a.item').each((i, a) => {
+
+        if (this.actor.isOwner)
+            //Owner-only Listeners
+            if (this.actor.isOwner) {
+                let handler = ev => this._onDragStart(ev);
+                // Find all items on the character sheet.
+                html.find('a.item-name').each((i, a) => {
+                    // Ignore for the header row.
+                    if (a.classList.contains("item-header")) return;
                     // Add draggable attribute and dragstart listener.
                     a.setAttribute("draggable", true);
                     a.addEventListener("dragstart", handler, false);
                 });
+                // Find all attributes on the character sheet.
+                handler = ev => this._skillAttrDragStart(ev);
+                html.find('a.skill-roll').each((i, a) => {
+                    // Add draggable attribute and dragstart listener.
+                    a.setAttribute("draggable", true);
+                    a.addEventListener("dragstart", handler, false);
+                });
+                // Find all interactions on the character sheet.
+                handler = ev => this._interactionDragStart(ev);
+                html.find('a.interaction-attack').each((i, a) => {
+                    // Add draggable attribute and dragstart listener.
+                    a.setAttribute("draggable", true);
+                    a.addEventListener("dragstart", handler, false);
+                });
+                // listeners for items on front page of threat sheet
+                if (this.object.type === "threat") {
+                    handler = ev => this._onDragStart(ev);
+                    html.find('a.item').each((i, a) => {
+                        // Add draggable attribute and dragstart listener.
+                        a.setAttribute("draggable", true);
+                        a.addEventListener("dragstart", handler, false);
+                    });
+                }
             }
-        }
 
         if (this.actor.isOwner) {
             html.find(".skill-roll").click(this._onSkillRoll.bind(this));
@@ -384,12 +393,12 @@ export default class torgeternityActorSheet extends ActorSheet {
         const attributeName = event.currentTarget.dataset.baseattribute;
         const isAttributeTest = (event.currentTarget.dataset.testtype === "attribute");
         var skillValue = event.currentTarget.dataset.value;
-        
+
         // Before calculating roll, check to see if it can be attempted unskilled; exit test if actor doesn't have required skill
         if (checkUnskilled(skillValue, skillName, this.actor)) {
             return;
-        }      
-        
+        }
+
         let test = {
             testType: event.currentTarget.dataset.testtype,
             customSkill: event.currentTarget.dataset.customskill,
@@ -400,7 +409,7 @@ export default class torgeternityActorSheet extends ActorSheet {
             skillName: isAttributeTest ? attributeName : skillName,
             skillValue: skillValue,
             targets: Array.from(game.user.targets),
-            applySize: false, 
+            applySize: false,
             DNDescriptor: "standard",
             attackOptions: false,
             rollTotal: 0 // A zero indicates that a rollTotal needs to be generated when renderSkillChat is called //
@@ -576,7 +585,7 @@ export default class torgeternityActorSheet extends ActorSheet {
         var adjustedDamage = 0;
 
         if (Array.from(game.user.targets).length > 0) {
-            
+
             switch (attackWith) {
                 case "fireCombat":
                 case "energyWeapons":
@@ -590,7 +599,7 @@ export default class torgeternityActorSheet extends ActorSheet {
         } else {
             dnDescriptor = "standard"
         }
-    
+
         // Calculate damage caused by this weapon
         switch (damageType) {
             case "flat":
@@ -614,7 +623,7 @@ export default class torgeternityActorSheet extends ActorSheet {
             default:
                 adjustedDamage = parseInt(weaponDamage)
         }
-        
+
         let test = {
             testType: "attack",
             actor: this.actor.uuid,
@@ -643,7 +652,7 @@ export default class torgeternityActorSheet extends ActorSheet {
 
         let dialog = new testDialog(test);
         dialog.render(true);
-        
+
     };
 
     _onBonusRoll(event) {
@@ -665,7 +674,7 @@ export default class torgeternityActorSheet extends ActorSheet {
         var applySize = true;
         var powerModifier = 0;
 
-        
+
         // Convert yes/no options from sheet into boolean values (or else renderSkillChat gets confused)
         if (powerData.isAttack == "true") {
             isAttack = true
@@ -691,14 +700,14 @@ export default class torgeternityActorSheet extends ActorSheet {
         } else {
             powerModifier = 0
         }
-        
+
         // Set difficulty descriptor based on presense of target
         if (Array.from(game.user.targets).length > 0) {
             dnDescriptor = powerData.dn;
         } else {
             dnDescriptor = "standard"
         }
-    
+
         let test = {
             testType: "power",
             actor: this.actor.uuid,
@@ -735,342 +744,342 @@ export default class torgeternityActorSheet extends ActorSheet {
 
 
 
-/*        const itemID = event.currentTarget.closest(".item").dataset.itemId;
-        const item = this.actor.items.get(itemID);
-        var powerData = item.system;
-        var skillData = this.actor.system.skills[powerData.skill];
-
-        // Declare target variables
-        var sizeModifier = 0;
-        var vulnerableModifier = 0;
-        var targetToughness = 0;
-        var targetArmor = 0;
-        var targetCharisma = 0;
-        var targetDexterity = 0;
-        var targetMind = 0;
-        var targetSpirit = 0;
-        var targetStrength = 0;
-        var targetAlteration = 0;
-        var targetConjuration = 0;
-        var targetDivination = 0;
-        var targetDodge = 0;
-        var targetFaith = 0;
-        var targetIntimidation = 0;
-        var targetKinesis = 0;
-        var targetManeuver = 0;
-        var targetMeleeWeapons = 0;
-        var targetPrecognition = 0;
-        var targetStealth = 0;
-        var targetTaunt = 0;
-        var targetTrick = 0;
-        var targetUnarmedCombat = 0;
-        var targetWillpower = 0;
-
-
-        // Exit if no target or get target data
-        if (event.shiftKey) {
-            if (Array.from(game.user.targets).length === 0) {
-                var needTargetData = {
-                    user: game.user.data._id,
-                    speaker: ChatMessage.getSpeaker(),
-                    owner: this.actor,
+        /*        const itemID = event.currentTarget.closest(".item").dataset.itemId;
+                const item = this.actor.items.get(itemID);
+                var powerData = item.system;
+                var skillData = this.actor.system.skills[powerData.skill];
+        
+                // Declare target variables
+                var sizeModifier = 0;
+                var vulnerableModifier = 0;
+                var targetToughness = 0;
+                var targetArmor = 0;
+                var targetCharisma = 0;
+                var targetDexterity = 0;
+                var targetMind = 0;
+                var targetSpirit = 0;
+                var targetStrength = 0;
+                var targetAlteration = 0;
+                var targetConjuration = 0;
+                var targetDivination = 0;
+                var targetDodge = 0;
+                var targetFaith = 0;
+                var targetIntimidation = 0;
+                var targetKinesis = 0;
+                var targetManeuver = 0;
+                var targetMeleeWeapons = 0;
+                var targetPrecognition = 0;
+                var targetStealth = 0;
+                var targetTaunt = 0;
+                var targetTrick = 0;
+                var targetUnarmedCombat = 0;
+                var targetWillpower = 0;
+        
+        
+                // Exit if no target or get target data
+                if (event.shiftKey) {
+                    if (Array.from(game.user.targets).length === 0) {
+                        var needTargetData = {
+                            user: game.user.data._id,
+                            speaker: ChatMessage.getSpeaker(),
+                            owner: this.actor,
+                        };
+        
+                        var templateData = {
+                            message: game.i18n.localize('torgeternity.chatText.check.needTarget'),
+                            actorPic: this.actor.img
+                        };
+        
+                        const templatePromise = renderTemplate("./systems/torgeternity/templates/partials/skill-error-card.hbs", templateData);
+        
+                        templatePromise.then(content => {
+                            needTargetData.content = content;
+                            ChatMessage.create(needTargetData);
+                        })
+        
+                        return;
+                    } else {
+                        var target = Array.from(game.user.targets)[0];
+                        var targetType = target.actor.system.type;
+                        var targetData = target.actor.system
+        
+        
+                        // Set target size bonus
+                        if (target.actor.system.details.sizeBonus === "tiny") {
+                            sizeModifier = -6;
+                        } else if (target.actor.system.details.sizeBonus === "verySmall") {
+                            sizeModifier = -4;
+                        } else if (target.actor.system.details.sizeBonus === "small") {
+                            sizeModifier = -2;
+                        } else if (target.actor.system.details.sizeBonus === "large") {
+                            sizeModifier = 2;
+                        } else if (target.actor.system.details.sizeBonus === "veryLarge") {
+                            sizeModifier = 4;
+                        } else {
+                            sizeModifier = 0;
+                        }
+        
+                        vulnerableModifier = target.actor.system.vulnerableModifier;
+                        targetToughness = targetData.other.toughness;
+                        targetArmor = targetData.other.armor;
+                        
+                        targetCharisma = targetData.attributes.charisma;
+                        targetDexterity = targetData.attributes.dexterity;
+                        targetMind = targetData.attributes.mind;
+                        targetSpirit = targetData.attributes.spirit;
+                        targetStrength = targetData.attributes.strength;
+        
+                        // Set defensive values that are already calculated
+                        targetDodge = targetData.dodgeDefense;
+                        targetIntimidation = targetData.intimidationDefense;
+                        targetTaunt = targetData.tauntDefense;
+                        targetTrick = targetData.trickDefense;
+                        targetUnarmedCombat = targetData.unarmedCombatDefense;
+                        targetMeleeWeapons = targetData.meleeWeaponsDefense;
+                        targetManeuver = targetData.maneuverDefense;
+        
+                        // Set other defensive values
+                        if (targetData.skills.alteration.value === null) {
+                            targetAlteration = targetMind;
+                        } else {
+                            targetAlteration = targetData.skills.alteration.value;
+                        }
+        
+                        if (targetData.skills.conjuration.value === null) {
+                            targetConjuration = targetSpirit;
+                        } else {
+                            targetConjuration = targetData.skills.conjuration.value;
+                        }
+        
+                        if (targetData.skills.divination.value === null) {
+                            targetDivination = targetMind;
+                        } else {
+                            targetDivination = targetData.skills.divination.value;
+                        }
+        
+                        if (targetData.skills.faith.value === null) {
+                            targetFaith = targetSpirit;
+                        } else {
+                            targetFaith = targetData.skills.faith.value;
+                        }
+        
+                        if (targetData.skills.kinesis.value === null) {
+                            targetKinesis = targetSpirit;
+                        } else {
+                            targetKinesis = targetData.skills.kinesis.value;
+                        }
+        
+                        if (targetData.skills.precognition.value === null) {
+                            targetPrecognition = targetMind;
+                        } else {
+                            targetPrecognition = targetData.skills.precognition.value;
+                        }
+        
+                        if (targetData.skills.stealth.value === null) {
+                            targetStealth = targetDexterity;
+                        } else {
+                            targetStealth = targetData.skills.stealth.value;
+                        }
+        
+                        if (targetData.skills.willpower.value === null) {
+                            targetWillpower = targetSpirit;
+                        } else {
+                            targetWillpower = targetData.skills.willpower.value;
+                        }
+        
+                    }
                 };
-
-                var templateData = {
-                    message: game.i18n.localize('torgeternity.chatText.check.needTarget'),
-                    actorPic: this.actor.img
-                };
-
-                const templatePromise = renderTemplate("./systems/torgeternity/templates/partials/skill-error-card.hbs", templateData);
-
-                templatePromise.then(content => {
-                    needTargetData.content = content;
-                    ChatMessage.create(needTargetData);
-                })
-
-                return;
-            } else {
-                var target = Array.from(game.user.targets)[0];
-                var targetType = target.actor.system.type;
-                var targetData = target.actor.system
-
-
-                // Set target size bonus
-                if (target.actor.system.details.sizeBonus === "tiny") {
-                    sizeModifier = -6;
-                } else if (target.actor.system.details.sizeBonus === "verySmall") {
-                    sizeModifier = -4;
-                } else if (target.actor.system.details.sizeBonus === "small") {
-                    sizeModifier = -2;
-                } else if (target.actor.system.details.sizeBonus === "large") {
-                    sizeModifier = 2;
-                } else if (target.actor.system.details.sizeBonus === "veryLarge") {
-                    sizeModifier = 4;
-                } else {
-                    sizeModifier = 0;
+                let test = {
+                    testType: "power",
+                    actor: this.actor,
+                    actorPic: this.actor.img,
+                    actorType: this.actor.system.type,
+                    item: item,
+                    skillName: skillData.name,
+                    skillBaseAttribute: skillData.baseattribute,
+                    skillAdds: skillData.adds,
+                    skillValue: skillData.value,
+                    difficulty: powerData.dn,
+                    modifier: powerData.modifier,
+                    powerName: item.system.name,
+                    powerAttack: powerData.isAttack,
+                    damage: powerData.damage,
+                    ap: powerData.ap,
+                    DN: 0,
+                    unskilledUse: event.currentTarget.dataset.unskilleduse,
+                    strengthValue: this.actor.system.attributes.strength,
+                    charismaValue: this.actor.system.attributes.charisma,
+                    dexterityValue: this.actor.system.attributes.dexterity,
+                    mindValue: this.actor.system.attributes.mind,
+                    spiritValue: this.actor.system.attributes.spirit,
+                    targetToughness: targetToughness,
+                    targetArmor: targetArmor,
+                    targetType: targetType,
+                    woundModifier: parseInt(-(this.actor.system.wounds.value)),
+                    stymiedModifier: parseInt(this.actor.system.stymiedModifier),
+                    darknessModifier: parseInt(this.actor.system.darknessModifier),
+                    sizeModifier: 0,                                                       //Size modifiers not applied to Powers tests; must be manually applied
+                    vulnerableModifier: vulnerableModifier,
+                    vitalAreaDamageModifier: 0,
+                    type: event.currentTarget.dataset.testtype,
+                    possibilityTotal: 0,
+                    upTotal: 0,
+                    heroTotal: 0,
+                    dramaTotal: 0,
+                    cardsPlayed: 0,
+                    sizeModifier: 0,
+                    vulnerableModifier: 0,
+                    disfavored: false,
+        
+                    targetCharisma: targetCharisma,
+                    targetDexterity: targetDexterity,
+                    targetMind: targetMind,
+                    targetSpirit: targetSpirit,
+                    targetStrength: targetStrength,
+                    targetAlteration: targetAlteration,
+                    targetConjuration: targetConjuration,
+                    targetDivination: targetDivination,
+                    targetDodge: targetDodge,
+                    targetFaith: targetFaith,
+                    targetIntimidation: targetIntimidation,
+                    targetKinesis: targetKinesis,
+                    targetManeuver: targetManeuver,
+                    targetMeleeWeapons: targetMeleeWeapons,
+                    targetPrecognition: targetPrecognition,
+                    targetStealth: targetStealth,
+                    targetTaunt: targetTaunt,
+                    targetTrick: targetTrick,
+                    targetUnarmedCombat: targetUnarmedCombat,
+                    targetWillpower: targetWillpower,
+        
+                    dnVeryEasy: false,
+                    dnEasy: false,
+                    dnStandard: false,
+                    dnChallenging: false,
+                    dnHard: false,
+                    dnVeryHard: false,
+                    dnHeroic: false,
+                    dnNearImpossible: false,
+                    dnTargetCharisma: false,
+                    dnTargetDexterity: false,
+                    dnTargetMind: false,
+                    dnTargetSpirit: false,
+                    dnTargetStrength: false,
+                    dnTargetAlteration: false,
+                    dnTargetConjuration: false,
+                    dnTargetDivination: false,
+                    dnTargetDodge: false,
+                    dnTargetFaith: false,
+                    dnTargetIntimidation: false,
+                    dnTargetKinesis: false,
+                    dnTargetManeuver: false,
+                    dnTargetMeleeWeapons: false,
+                    dnTargetPrecognition: false,
+                    dnTargetStealth: false,
+                    dnTargetTaunt: false,
+                    dnTargetTrick: false,
+                    dnTargetUnarmedCombat: false,
+                    dnTargetWillpower: false
+        
                 }
-
-                vulnerableModifier = target.actor.system.vulnerableModifier;
-                targetToughness = targetData.other.toughness;
-                targetArmor = targetData.other.armor;
-                
-                targetCharisma = targetData.attributes.charisma;
-                targetDexterity = targetData.attributes.dexterity;
-                targetMind = targetData.attributes.mind;
-                targetSpirit = targetData.attributes.spirit;
-                targetStrength = targetData.attributes.strength;
-
-                // Set defensive values that are already calculated
-                targetDodge = targetData.dodgeDefense;
-                targetIntimidation = targetData.intimidationDefense;
-                targetTaunt = targetData.tauntDefense;
-                targetTrick = targetData.trickDefense;
-                targetUnarmedCombat = targetData.unarmedCombatDefense;
-                targetMeleeWeapons = targetData.meleeWeaponsDefense;
-                targetManeuver = targetData.maneuverDefense;
-
-                // Set other defensive values
-                if (targetData.skills.alteration.value === null) {
-                    targetAlteration = targetMind;
-                } else {
-                    targetAlteration = targetData.skills.alteration.value;
+        
+                // Set dn for selector
+                switch(test.difficulty) {
+                    case "veryEasy":
+                        test.dnVeryEasy = true;
+                        break;
+                    case "easy":
+                        test.dnEasy = true;
+                        break;
+                    case "standard":
+                        test.dnStandard = true;
+                        break;
+                    case "challenging":
+                        test.dnChallenging = true;
+                        break;
+                    case "hard":
+                        test.dnHard = true;
+                        break;
+                    case "veryHard":
+                        test.dnVeryHard = true;
+                        break;
+                    case "heroic":
+                        test.dnHeroic = true;
+                        break;
+                    case "nearImpossible":
+                        test.dnNearImpossible = true;
+                        break;
+                    case "targetCharisma":
+                        test.dnTargetCharisma = true;
+                        break;
+                    case "targetDexterity":
+                        test.dnTargetDexterity = true;
+                        break;
+                    case "targetMind":
+                        test.dnTargetMind = true;
+                        break;
+                    case "targetSpirit":
+                        test.dnTargetSpirit = true;
+                        break;
+                    case "targetStrength":
+                        test.dnTargetStrength = true;
+                        break;
+                    case "targetAlteration":
+                        test.dnTargetAlteration = true;
+                        break;
+                    case "targetConjuration":
+                        test.dnTargetConjuration = true;
+                        break;
+                    case "targetDivination":
+                        test.dnTargetDivination = true;
+                        break;
+                    case "targetDodge":
+                        test.dnTargetDodge = true;
+                        break;
+                    case "targetFaith":
+                        test.dnTargetFaith = true;
+                        break;
+                    case "targetIntimidation":
+                        test.dnTargetIntimidation = true;
+                        break;
+                    case "targetKinesis":
+                        test.dnTargetKinesis = true;
+                        break;
+                    case "targetManeuver":
+                        test.dnTargetManeuver = true;
+                        break;
+                    case "targetMeleeWeapons":
+                        test.dnTargetMeleeWeapons = true;
+                        break;
+                    case "targetPrecognition":
+                        test.dnTargetPrecognition = true;
+                        break;
+                    case "targetStealth":
+                        test.dnTargetStealth = true;
+                        break;
+                    case "targetTaunt":
+                        test.dnTargetTaunt = true;
+                        break;
+                    case "targetTrick":
+                        test.dnTargetTrick = true;
+                        break;
+                    case "targetUnarmedCombat":
+                        test.dnTargetUnarmedCombat = true;
+                        break;
+                    case "targetWillpower":
+                        test.dnTargetWillpower = true;
+                        break;
+                    default:
+                        test.dnTargetStandard = true;
                 }
-
-                if (targetData.skills.conjuration.value === null) {
-                    targetConjuration = targetSpirit;
+        
+                if (event.shiftKey) {
+                    let testDialog = new powerDialog(test);
+                    testDialog.render(true);
                 } else {
-                    targetConjuration = targetData.skills.conjuration.value;
+                    torgchecks.powerRoll(test);
                 }
-
-                if (targetData.skills.divination.value === null) {
-                    targetDivination = targetMind;
-                } else {
-                    targetDivination = targetData.skills.divination.value;
-                }
-
-                if (targetData.skills.faith.value === null) {
-                    targetFaith = targetSpirit;
-                } else {
-                    targetFaith = targetData.skills.faith.value;
-                }
-
-                if (targetData.skills.kinesis.value === null) {
-                    targetKinesis = targetSpirit;
-                } else {
-                    targetKinesis = targetData.skills.kinesis.value;
-                }
-
-                if (targetData.skills.precognition.value === null) {
-                    targetPrecognition = targetMind;
-                } else {
-                    targetPrecognition = targetData.skills.precognition.value;
-                }
-
-                if (targetData.skills.stealth.value === null) {
-                    targetStealth = targetDexterity;
-                } else {
-                    targetStealth = targetData.skills.stealth.value;
-                }
-
-                if (targetData.skills.willpower.value === null) {
-                    targetWillpower = targetSpirit;
-                } else {
-                    targetWillpower = targetData.skills.willpower.value;
-                }
-
-            }
-        };
-        let test = {
-            testType: "power",
-            actor: this.actor,
-            actorPic: this.actor.img,
-            actorType: this.actor.system.type,
-            item: item,
-            skillName: skillData.name,
-            skillBaseAttribute: skillData.baseattribute,
-            skillAdds: skillData.adds,
-            skillValue: skillData.value,
-            difficulty: powerData.dn,
-            modifier: powerData.modifier,
-            powerName: item.system.name,
-            powerAttack: powerData.isAttack,
-            damage: powerData.damage,
-            ap: powerData.ap,
-            DN: 0,
-            unskilledUse: event.currentTarget.dataset.unskilleduse,
-            strengthValue: this.actor.system.attributes.strength,
-            charismaValue: this.actor.system.attributes.charisma,
-            dexterityValue: this.actor.system.attributes.dexterity,
-            mindValue: this.actor.system.attributes.mind,
-            spiritValue: this.actor.system.attributes.spirit,
-            targetToughness: targetToughness,
-            targetArmor: targetArmor,
-            targetType: targetType,
-            woundModifier: parseInt(-(this.actor.system.wounds.value)),
-            stymiedModifier: parseInt(this.actor.system.stymiedModifier),
-            darknessModifier: parseInt(this.actor.system.darknessModifier),
-            sizeModifier: 0,                                                       //Size modifiers not applied to Powers tests; must be manually applied
-            vulnerableModifier: vulnerableModifier,
-            vitalAreaDamageModifier: 0,
-            type: event.currentTarget.dataset.testtype,
-            possibilityTotal: 0,
-            upTotal: 0,
-            heroTotal: 0,
-            dramaTotal: 0,
-            cardsPlayed: 0,
-            sizeModifier: 0,
-            vulnerableModifier: 0,
-            disfavored: false,
-
-            targetCharisma: targetCharisma,
-            targetDexterity: targetDexterity,
-            targetMind: targetMind,
-            targetSpirit: targetSpirit,
-            targetStrength: targetStrength,
-            targetAlteration: targetAlteration,
-            targetConjuration: targetConjuration,
-            targetDivination: targetDivination,
-            targetDodge: targetDodge,
-            targetFaith: targetFaith,
-            targetIntimidation: targetIntimidation,
-            targetKinesis: targetKinesis,
-            targetManeuver: targetManeuver,
-            targetMeleeWeapons: targetMeleeWeapons,
-            targetPrecognition: targetPrecognition,
-            targetStealth: targetStealth,
-            targetTaunt: targetTaunt,
-            targetTrick: targetTrick,
-            targetUnarmedCombat: targetUnarmedCombat,
-            targetWillpower: targetWillpower,
-
-            dnVeryEasy: false,
-            dnEasy: false,
-            dnStandard: false,
-            dnChallenging: false,
-            dnHard: false,
-            dnVeryHard: false,
-            dnHeroic: false,
-            dnNearImpossible: false,
-            dnTargetCharisma: false,
-            dnTargetDexterity: false,
-            dnTargetMind: false,
-            dnTargetSpirit: false,
-            dnTargetStrength: false,
-            dnTargetAlteration: false,
-            dnTargetConjuration: false,
-            dnTargetDivination: false,
-            dnTargetDodge: false,
-            dnTargetFaith: false,
-            dnTargetIntimidation: false,
-            dnTargetKinesis: false,
-            dnTargetManeuver: false,
-            dnTargetMeleeWeapons: false,
-            dnTargetPrecognition: false,
-            dnTargetStealth: false,
-            dnTargetTaunt: false,
-            dnTargetTrick: false,
-            dnTargetUnarmedCombat: false,
-            dnTargetWillpower: false
-
-        }
-
-        // Set dn for selector
-        switch(test.difficulty) {
-            case "veryEasy":
-                test.dnVeryEasy = true;
-                break;
-            case "easy":
-                test.dnEasy = true;
-                break;
-            case "standard":
-                test.dnStandard = true;
-                break;
-            case "challenging":
-                test.dnChallenging = true;
-                break;
-            case "hard":
-                test.dnHard = true;
-                break;
-            case "veryHard":
-                test.dnVeryHard = true;
-                break;
-            case "heroic":
-                test.dnHeroic = true;
-                break;
-            case "nearImpossible":
-                test.dnNearImpossible = true;
-                break;
-            case "targetCharisma":
-                test.dnTargetCharisma = true;
-                break;
-            case "targetDexterity":
-                test.dnTargetDexterity = true;
-                break;
-            case "targetMind":
-                test.dnTargetMind = true;
-                break;
-            case "targetSpirit":
-                test.dnTargetSpirit = true;
-                break;
-            case "targetStrength":
-                test.dnTargetStrength = true;
-                break;
-            case "targetAlteration":
-                test.dnTargetAlteration = true;
-                break;
-            case "targetConjuration":
-                test.dnTargetConjuration = true;
-                break;
-            case "targetDivination":
-                test.dnTargetDivination = true;
-                break;
-            case "targetDodge":
-                test.dnTargetDodge = true;
-                break;
-            case "targetFaith":
-                test.dnTargetFaith = true;
-                break;
-            case "targetIntimidation":
-                test.dnTargetIntimidation = true;
-                break;
-            case "targetKinesis":
-                test.dnTargetKinesis = true;
-                break;
-            case "targetManeuver":
-                test.dnTargetManeuver = true;
-                break;
-            case "targetMeleeWeapons":
-                test.dnTargetMeleeWeapons = true;
-                break;
-            case "targetPrecognition":
-                test.dnTargetPrecognition = true;
-                break;
-            case "targetStealth":
-                test.dnTargetStealth = true;
-                break;
-            case "targetTaunt":
-                test.dnTargetTaunt = true;
-                break;
-            case "targetTrick":
-                test.dnTargetTrick = true;
-                break;
-            case "targetUnarmedCombat":
-                test.dnTargetUnarmedCombat = true;
-                break;
-            case "targetWillpower":
-                test.dnTargetWillpower = true;
-                break;
-            default:
-                test.dnTargetStandard = true;
-        }
-
-        if (event.shiftKey) {
-            let testDialog = new powerDialog(test);
-            testDialog.render(true);
-        } else {
-            torgchecks.powerRoll(test);
-        }
-    */
+            */
     }
 
     _onCreateSa(event) {
@@ -1097,13 +1106,13 @@ export default class torgeternityActorSheet extends ActorSheet {
 
     _onItemEquip(event) {
         const itemID = event.currentTarget.closest(".item").getAttribute("data-item-id");
-        const item = this.actor.items.get(itemID);        
+        const item = this.actor.items.get(itemID);
         let doCheckOtherItems = torgeternityItem.toggleEquipState(item, this.actor);
-       
+
         // for armor and shield, ensure there's only one equipped
         if (doCheckOtherItems && item.system && item.system.hasOwnProperty("equipped")) {
             let actor = this.actor;
-            actor.items.forEach (function(otherItem, key) {
+            actor.items.forEach(function (otherItem, key) {
                 if (otherItem._id !== item._id && otherItem.system.equipped && otherItem.type === item.type) {
                     torgeternityItem.toggleEquipState(otherItem, actor);
                 }
@@ -1219,7 +1228,7 @@ export default class torgeternityActorSheet extends ActorSheet {
 
     }
 
-    
+
 }
 
 function checkUnskilled(skillValue, skillName, actor) {
