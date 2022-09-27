@@ -186,7 +186,7 @@ export default class torgeternityActorSheet extends ActorSheet {
     activateListeners(html) {
         //localizing hardcoded possibility potential value
         console.log(this.actor);
-        if (this.actor.type === "threat" && this.actor.system.details.possibilitypotential === "(none)") {
+        if (game.settings.get("core", "language") != "en" && this.actor.type === "threat" && this.actor.system.details.possibilitypotential === "(none)") {
             this.actor.update({
                 "system.details.possibilitypotential": game.i18n.localize("torgeternity.sheetLabels.none")
             })
