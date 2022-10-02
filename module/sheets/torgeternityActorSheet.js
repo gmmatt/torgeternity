@@ -50,8 +50,8 @@ export default class torgeternityActorSheet extends ActorSheet {
     }
 
 
-    getData() {
-        const data = super.getData();
+    async getData(options) {
+        const data = super.getData(options);
         var firstItem = 0
 
         data.meleeweapons = data.items.filter(function (item) {
@@ -121,6 +121,15 @@ export default class torgeternityActorSheet extends ActorSheet {
             return item.type == "cosmCard"
         });
 
+        // Enrich Text Editors
+        switch(this.object.type) {
+            case "stormknight":
+                data.enrichedBackground = await TextEditor.enrichHTML(this.object.system.details.background, {async: true});
+                break;
+            case "threat":
+                data.enrichedDetails = await TextEditor.enrichHTML(this.object.system.details.description, {async: true});
+                break;
+         }
 
         /* if (this.actor.data.data.editstate === undefined) {
             this.actor.data.data.editstate = "none";
