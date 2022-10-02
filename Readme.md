@@ -8,6 +8,12 @@
 For manual installation, use the provided manifest URL in the "*Install System*" popup window 
 while managing game systems.
 
+v. 2.6.9
+- Fixed issue where tooltips for cards in chat were broken
+- Multiple localization improvements
+- Drag n Drop Macros for Threats (Thanks Spatula!)
+- Enriched text now available on all items and actors
+
 v. 2.6.8
 - Fixed issue causing buff effects on attributes to fail to 
   reset on close.
