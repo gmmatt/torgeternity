@@ -2,18 +2,18 @@
     "id": "torgeternity",
     "title": "Torg Eternity",
     "description": "Torg Eternity character sheet for Foundry VTT.",
-    "authors": [{
-        "name": "GM Matt",
-        "url": "https://www.youtube.com/c/GMMatt",
-        "discord": "Matt#1768"
-    }],
-
+    "authors": [
+        {
+            "name": "GM Matt",
+            "url": "https://www.youtube.com/c/GMMatt",
+            "discord": "Matt#1768"
+        }
+    ],
     "version": "2.6.9",
     "compatibility": {
         "minimum": 10,
         "verified": "10.286"
     },
-
     "templateVersion": "4.4.0",
     "esmodules": [
         "torgeternity.js"
@@ -26,8 +26,9 @@
         "./css/journal.css",
         "./css/cards.css"
     ],
-    "background": "images/splash.webp",
-    "packs": [{
+    "background": "systems/torgeternity/images/splash.webp",
+    "packs": [
+        {
             "name": "archetypes",
             "label": "Archetypes (en)",
             "system": "torgeternity",
@@ -124,7 +125,8 @@
             "type": "Cards"
         }
     ],
-    "languages": [{
+    "languages": [
+        {
             "lang": "en",
             "name": "English",
             "path": "lang/en.json"
