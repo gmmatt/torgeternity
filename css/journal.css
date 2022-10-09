@@ -225,7 +225,7 @@ form button {
     padding-right: 10px;
     font-family: "Palatino Linotype";
     font-size: 14px;
-    margin-bottom: 0.75rem;
+    margin: 0.5em 0;
 }
 
 .sheet.journal-entry .journal-entry-page p+p {
@@ -235,6 +235,10 @@ form button {
 
 .sheet.journal-entry .journal-entry-page p:first-of-type {
     text-indent: 0;
+}
+
+.sheet.journal-entry .journal-entry-page h3 ~ p {
+    margin-top:0;
 }
 
 /*...................................................................*/
@@ -290,7 +294,7 @@ form button {
 
 /*...................................................................*/
 .sheet.journal-entry .journal-entry-page h3 {
-    margin: 2px 0px 9px 0px;
+    margin: 2px 0px 0px 0px;
     font-weight: bolder;
     border: none;
     font-weight: bold;
