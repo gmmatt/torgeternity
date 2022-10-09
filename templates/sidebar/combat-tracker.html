@@ -24,8 +24,8 @@
         </nav>
         {{/if}}
 
-        {{#if combat.data.flags.torgeternity.activeCard}}
-        <img src="{{combat.data.flags.torgeternity.activeCard}}" style="object-fit:contain">
+        {{#if combat.flags.torgeternity.activeCard}}
+        <img src="{{combat.flags.torgeternity.activeCard}}" style="object-fit:contain">
         {{else}}
         <img src="{{localize 'torgeternity.combat.dramaBack'}}" style="object-fit:contain">
         {{/if}}
@@ -42,21 +42,21 @@
             <a class="dsr-counter" {{#unless turns}}disabled{{/unless}}>
                 <span class="dsr-token">
                     <span class="dsr-step">
-                        {{#if combat.data.flags.torgeternity.dsrStage}}
+                        {{#if combat.flags.torgeternity.dsrStage}}
                         {{localize "torgeternity.tokens.step"}}
                         {{else}}
                         {{localize "torgeternity.tokens.noDSR"}}
                         {{/if}}
                     </span>
                     <span class="dsr-step-number">
-                        {{#if combat.data.flags.torgeternity.dsrStage}}
-                        &nbsp;{{combat.data.flags.torgeternity.dsrStage}}
+                        {{#if combat.flags.torgeternity.dsrStage}}
+                        &nbsp;{{combat.flags.torgeternity.dsrStage}}
                         {{/if}}
                     </span>
                 </span>
             </a>
-            {{#if combatCount}} {{#if combat.data.round}}
-            <h3>{{localize 'COMBAT.Round'}} {{combat.data.round}}</h3>
+            {{#if combatCount}} {{#if combat.round}}
+            <h3>{{localize 'COMBAT.Round'}} {{combat.round}}</h3>
             {{else}}
             <h3>{{localize 'COMBAT.NotStarted'}}</h3>
             {{/if}} {{else}}
@@ -75,7 +75,7 @@
 
     <ol id="combat-tracker" class="directory-list" style="flex:3">
         {{#each combat.turns as |turn id|}}
-        <li class="combatant actor directory-item flexrow dispo{{turn.token.data.disposition}}
+        <li class="combatant actor directory-item flexrow dispo{{turn.token.disposition}}
             {{#ifequal ../this.combat.current.turn id}} active{{/ifequal}}
             " data-combatant-id="{{turn.id}}">
             <!--
@@ -90,16 +90,9 @@
                     <div class="combatant-controls flexrow">
                         {{#if ../user.isGM}}
                         <a class="has-played" style="margin: 0px 5px 0px 0px"
-                            title="Check when character's turn is complete"><i {{#if turn.data.flags.world.turnTaken}}
+                            title="Check when character's turn is complete"><i {{#if turn.flags.world.turnTaken}}
                                 class="fas fa-check" style="color:green" {{else}} class="fas fa-check"
                                 style="color:gray" {{/if}}></i></a>
-                        <!--                        <a
-                            class="combatant-control {{#if turn.hidden}}active{{/if}}"
-                            title="{{localize 'COMBAT.ToggleVis'}}"
-                            data-control="toggleHidden"
-                        >
-                            <i class="fas fa-eye-slash"></i></a>
--->
                         <a class="combatant-control {{#if turn.defeated}}active{{/if}}"
                             title="{{localize 'COMBAT.ToggleDead'}}" data-control="toggleDefeated">
                             <i class="fas fa-skull"></i></a>
@@ -108,15 +101,15 @@
                         <a class="player-dsr-counter" {{#unless turns}}disabled{{/unless}}>
                             <span class="player-dsr-token">
                                 <span class="dsr-step">
-                                    {{#if data.flags.torgeternity.dsrStage}}
+                                    {{#if flags.torgeternity.dsrStage}}
                                     {{localize "torgeternity.tokens.step"}}
                                     {{else}}
                                     {{localize "torgeternity.tokens.noDSR"}}
                                     {{/if}}
                                 </span>
                                 <span class="dsr-step-number">
-                                    {{#if data.flags.torgeternity.dsrStage}}
-                                    &nbsp;{{data.flags.torgeternity.dsrStage}}
+                                    {{#if flags.torgeternity.dsrStage}}
+                                    &nbsp;{{flags.torgeternity.dsrStage}}
                                     {{/if}}
                                 </span>
                             </span>
@@ -153,19 +146,6 @@
 
     <nav id="combat-controls" class="directory-footer flexrow">
         {{#if hasCombat}} {{#if user.isGM}} {{#if round}}
-        <!--
-        <a
-            class="combat-control"
-            title="{{localize 'COMBAT.RoundPrev'}}"
-            data-control="previousRound"
-        ><i class="fas fa-step-backward"></i></a>
-
-        <a
-            class="combat-control"
-            title="{{localize 'COMBAT.TurnPrev'}}"
-            data-control="previousTurn"
-        ><i class="fas fa-arrow-left"></i></a>
--->
         <a class="combat-control" title="{{localize 'torgeternity.combat.nextNew'}}" data-control="nextRound"><i
                 class="fas fa-step-forward"></i> {{localize "torgeternity.sheetLabels.new"}}</a>
 
@@ -174,13 +154,6 @@
 
         <a class="combat-control" title="{{localize 'COMBAT.End'}}" data-control="endCombat"><i class="fas fa-stop"></i>
             {{localize "torgeternity.sheetLabels.end"}}</a>
-        <!--
-        <a
-            class="combat-control"
-            title="{{localize 'COMBAT.TurnNext'}}"
-            data-control="nextTurn"
-        ><i class="fas fa-arrow-right"></i></a>
--->
         {{else}}
         <a class="combat-control center" title="{{localize 'COMBAT.Begin'}}" data-control="startCombat">{{localize
             'COMBAT.Begin'}}</a> {{/if}} {{else if control}}
