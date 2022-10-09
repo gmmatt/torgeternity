@@ -402,7 +402,7 @@ div.actor ::-webkit-scrollbar {
 }
 
 /*End of ProseMirror Editoring Style*/
-
+/*------------------------------------------*/
 /*Begin of designing Prosemirror Editor itself, Algor 2022/10/09*/
 .sheet.journal-entry-page .journal-header{
     margin: 0 1rem;
@@ -417,8 +417,45 @@ padding:0.5rem;
     margin:0.5rem;
 }
 
-/*End of editing Prosemirror Editor*/
+/*Editing Dropdown buttons' background for healthy eyes*/
+.prosemirror menu .pm-dropdown ul
+{
+    background-color:var(--torgblue);
+    
+    /*Either*/
+    background-image:url(../images/lightning_bar.webp);
 
+    /*OR
+    background-image: url(../images/thunder.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    */
+}
+.prosemirror.menu-dialog form{
+    background-color:var(--torgblue);
+    background-image:url(../images/lightning_bar.webp);
+    color:white;
+
+}
+
+.prosemirror.menu-dialog form button{
+    color:white;
+    background-color:rgba(0, 0, 0, 0.68);
+}
+
+form .form-group .form-fields > *{
+    background-color:rgba(128, 128, 128, 0.301);
+    color:white;
+}
+
+/*HTML Sourcecode editor needs a background for better reading*/
+
+.prosemirror.editing-source textarea{
+    background-color:rgba(255, 247, 247, 0.25)
+}
+
+/*End of editing Prosemirror Editor*/
+/*------------------------------------------*/
 .window-app.image-popout .form-group.title {
     margin-top: 1%;
 }
