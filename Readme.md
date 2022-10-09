@@ -8,6 +8,9 @@
 For manual installation, use the provided manifest URL in the "*Install System*" popup window 
 while managing game systems.
 
+v. 2.7.0
+- Fixed multiple compatibility warnings
+
 v. 2.6.9
 - Fixed issue where tooltips for cards in chat were broken
 - Multiple localization improvements
