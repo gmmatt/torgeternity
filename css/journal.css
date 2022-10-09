@@ -19,7 +19,7 @@
     background-size: 100% 100%;
     box-shadow: -20px 0px 150px black inset,
         30px 0px 150px black inset;
-    padding: 8%;
+    padding: 4% 4% 0% 4%;  
 }
 /*Styling the actual journal window*/
 .sheet.journal-entry .journal-entry-content{
@@ -477,8 +477,8 @@ div.subtitleleft {
     margin-right: 0.5rem;
 }
 
-div.subtitleright p,
-div.subtitleleft p {
+.sheet.journal-entry .journal-entry-page div.subtitleright p,
+.sheet.journal-entry .journal-entry-page div.subtitleleft p {
     margin: 0.5rem;
     bottom: auto;
     left: auto;
