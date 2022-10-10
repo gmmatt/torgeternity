@@ -382,7 +382,7 @@ Hooks.on("ready", async function () {
 //moved out of the setup hook, because it had no need to be in there
 Hooks.on("hotbarDrop", (bar, data, slot) => {
     // return true means we are not handling this event, false means we did handle it
-    if (data.type !== "Item" && data.type !== "skill" && data.type !== "interaction" && data.type !== "attribute") 
+    if (data.type !== "Item" && data.type !== "skill" && data.type !== "interaction" && data.type !== "attribute")
         return true;
 
     createTorgEternityMacro(data, slot);
@@ -692,7 +692,7 @@ function rollItemMacro(itemName) {
         default:
             // this will cause the item to be printed to the chat
             return item.roll({ async: false });
-            //ui.notifications.info(game.i18n.localize('torgeternity.notifications.defaultAction'));
+        //ui.notifications.info(game.i18n.localize('torgeternity.notifications.defaultAction'));
     }
 }
 
@@ -821,9 +821,9 @@ Hooks.on("renderCombatTracker", (combatTracker) => {
     }
 })
 
-Hooks.on("renderCompendiumDirectory", (app, html, data) => {
+Hooks.on("changeSidebarTab", (tabDirectory) => {
     if (game.settings.get("torgeternity", "hideForeignCompendium") == true) {
-        hideCompendium(game.settings.get("core", "language"), html)
+        hideCompendium(game.settings.get("core", "language"), tabDirectory)
 
     }
 })
