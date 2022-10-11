@@ -439,49 +439,59 @@ export function renderSkillChat(test) {
         test.resultText = game.i18n.localize('torgeternity.chatText.check.result.mishape');
         test.actionTotalLabel = "display:none";
     // Create and Manage Active Effect if SK is Actively Defending (thanks Durak!)
-    } else if (test.testType === "activeDefense") {                                                         //Click on defense
-        var oldAD = myActor.effects.find(a => a.data.label === "ActiveDefense");      //Search for an ActiveDefense effect
+    } else if (test.testType === "activeDefense") {                              //Click on defense
+        var oldAD = myActor.effects.find(a => a.label === "ActiveDefense");      //Search for an ActiveDefense effect
+        var shieldOn = myActor.items.filter(it => (it.type === "shield" && it.system.equipped));  //Search for an equipped shield (an array)
+        var shieldBonus = 0;                                                                      //set the shieldBonus to 0 then check if the actor is Vulnerable, if true, shield bonus stay 0
+        if (!(myActor.effects.find(a => a.label === game.i18n.localize('torgeternity.statusEffects.vulnerable'))) && !(myActor.effects.find(a => a.label === game.i18n.localize('torgeternity.statusEffects.veryVulnerable')))) {
+            shieldBonus += shieldOn[0]?.system?.bonus || 0;
+        };
         if (!oldAD) {                                                                                       //Create it if not present (if it exists, will be deleted farther)
             let NewActiveDefense = {
                 label : "ActiveDefense",                                                                    //Add an icon to remind the defense, bigger ? Change color of Defense ?
                 icon : "icons/equipment/shield/heater-crystal-blue.webp",                                   //To change I think, taken in Core, should have a dedicated file
                 duration : {"rounds" : 1},
                 changes : [{                                                                                //Modify all existing "basic" defense in block
-                        "key": "data.dodgeDefense",                                                         //Should need other work for defense vs powers
+                        "key": "system.dodgeDefense",                                                         //Should need other work for defense vs powers
                         "value": test.bonus,                                                                //that don't target xxDefense
                         "priority": 20,                                                                     //Create a data.ADB that store the bonus ?
                         "mode": 2
                         },{
-                        "key": "data.intimidationDefense",
+                        "key": "system.intimidationDefense",
                         "value": test.bonus,
                         "priority": 20,
                         "mode": 2
                         },{
-                        "key": "data.maneuverDefense",
+                        "key": "system.maneuverDefense",
                         "value": test.bonus,
                         "priority": 20,
                         "mode": 2
                         },{
-                        "key": "data.meleeWeaponsDefense",
+                        "key": "system.meleeWeaponsDefense",
                         "value": test.bonus,
                         "priority": 20,
                         "mode": 2
                         },{
-                        "key": "data.tauntDefense",
+                        "key": "system.tauntDefense",
                         "value": test.bonus,
                         "priority": 20,
                         "mode": 2
                         },{
-                        "key": "data.trickDefense",
+                        "key": "system.trickDefense",
                         "value": test.bonus,
                         "priority": 20,
                         "mode": 2
                         },{
-                        "key": "data.unarmedCombatDefense",
+                        "key": "system.unarmedCombatDefense",
                         "value": test.bonus,
                         "priority": 20,
                         "mode": 2
-                    }],
+                        },{
+                        "key": "system.other.toughness",
+                        "value": shieldBonus,
+                        "priority": 20,
+                        "mode": 2
+                        }],
                 disabled : false
             };
             fromUuidSync(test.actor).createEmbeddedDocuments("ActiveEffect",[NewActiveDefense]);
@@ -490,7 +500,7 @@ export function renderSkillChat(test) {
             test.actionTotalLabel = "display:none";
         };
         if (oldAD) {                                                                                        //if present, reset by deleting
-            fromUuidSync(test.actor).effects.find(a => a.data.label === "ActiveDefense").delete();
+            fromUuidSync(test.actor).effects.find(a => a.label === "ActiveDefense").delete();
             ////
             let RAD = {                                                                                     //Simple chat message for information
                 speaker: ChatMessage.getSpeaker(),
@@ -503,52 +513,63 @@ export function renderSkillChat(test) {
 
     } else if (test.testType === "activeDefenseUpdate") {                                                   //update bonus in case of bonus roll possibility / up
         // Delete Existing Active Effects
-        fromUuidSync(test.actor).effects.find(a => a.data.label === "ActiveDefense").delete();
+        fromUuidSync(test.actor).effects.find(a => a.label === "ActiveDefense").delete();
         if (test.bonus < 1) {
             test.bonus = 1
         };
         test.resultText = "+ " + test.bonus;
         // Create new set of active effects
+        var shieldOn = myActor.items.filter(it => (it.type === "shield" && it.system.equipped));  //Search for an equipped shield (an array)
+        var shieldBonus = 0;
+        if (!(myActor.effects.find(a => a.label === game.i18n.localize('torgeternity.statusEffects.vulnerable'))) && !(myActor.effects.find(a => a.label === game.i18n.localize('torgeternity.statusEffects.veryVulnerable')))) {
+            shieldBonus += shieldOn[0]?.system?.bonus || 0;
+        };
         let NewActiveDefense = {
             label : "ActiveDefense",                                                                    //Add an icon to remind the defense, bigger ? Change color of Defense ?
             icon : "icons/equipment/shield/heater-crystal-blue.webp",                                   //To change I think, taken in Core, should have a dedicated file
             duration : {"rounds" : 1},
             changes : [{                                                                                //Modify all existing "basic" defense in block
-                    "key": "data.dodgeDefense",                                                         //Should need other work for defense vs powers
+                    "key": "system.dodgeDefense",                                                         //Should need other work for defense vs powers
                     "value": test.bonus,                                                                //that don't target xxDefense
                     "priority": 20,                                                                     //Create a data.ADB that store the bonus ?
                     "mode": 2
                     },{
-                    "key": "data.intimidationDefense",
+                    "key": "system.intimidationDefense",
                     "value": test.bonus,
                     "priority": 20,
                     "mode": 2
                     },{
-                    "key": "data.maneuverDefense",
+                    "key": "system.maneuverDefense",
                     "value": test.bonus,
                     "priority": 20,
                     "mode": 2
                     },{
-                    "key": "data.meleeWeaponsDefense",
+                    "key": "system.meleeWeaponsDefense",
                     "value": test.bonus,
                     "priority": 20,
                     "mode": 2
                     },{
-                    "key": "data.tauntDefense",
+                    "key": "system.tauntDefense",
                     "value": test.bonus,
                     "priority": 20,
                     "mode": 2
                     },{
-                    "key": "data.trickDefense",
+                    "key": "system.trickDefense",
                     "value": test.bonus,
                     "priority": 20,
                     "mode": 2
                     },{
-                    "key": "data.unarmedCombatDefense",
+                    "key": "system.unarmedCombatDefense",
                     "value": test.bonus,
                     "priority": 20,
                     "mode": 2
-                }],
+                    },{
+                    "key": "system.other.toughness",
+                    "value": shieldBonus,
+                    "priority": 20,
+                    "mode": 2
+                    }
+                ],
             disabled : false
         };
         fromUuidSync(test.actor).createEmbeddedDocuments("ActiveEffect",[NewActiveDefense]);
@@ -786,19 +807,19 @@ export async function applyDamages(damageObject) {
     //checking if user has target
     if (targetToken) {
         //computing new values
-        let newShock = targetToken.actor.data.data.shock.value + damageObject.shocks;
-        let newWound = targetToken.actor.data.data.wounds.value + damageObject.wounds;
+        let newShock = targetToken.actor.system.shock.value + damageObject.shocks;
+        let newWound = targetToken.actor.system.wounds.value + damageObject.wounds;
         //updating the target token's  actor
         await targetToken.actor.update({
             "data.shock.value": newShock,
             "data.wounds.value": newWound,
         });
         //too many shocks => apply KO/
-        if (newShock >= targetToken.actor.data.data.shock.max) {
+        if (newShock >= targetToken.actor.system.shock.max) {
             //TODO : apply KO status
         }
         //too many wounds => apply defeat
-        if (newWound > targetToken.actor.data.data.wounds.max) {
+        if (newWound > targetToken.actor.system.wounds.max) {
             //TODO : test defeat apply defeat
         }
 
