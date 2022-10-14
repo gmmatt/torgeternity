@@ -360,12 +360,14 @@ form button {
 }
 
 /*Prevent a linebreak after h6 with "pinline" class*/
-.sheet.journal-entry .journal-entry-page div.pinline > :is(h6,p){
+.sheet.journal-entry .journal-entry-page div.pinline > section > :is(h6,p),
+.prosemirror .editor-container .editor-content div.pinline > section > :is(h6,p){
     display: inline;
     break-after: avoid;
     break-inside: avoid;
 }
-.sheet.journal-entry .journal-entry-page div.pinline{
+.sheet.journal-entry .journal-entry-page div.pinline,
+.prosemirror .editor-container .editor-content div.pinline{
     margin-bottom: 7px;
 }
 /*Place a space between h6 and p*/
@@ -375,21 +377,18 @@ form button {
 
 /*New class "un-list" for faking <ul>s inside this construct*/
 .sheet.journal-entry .journal-entry-page div.pinline.un-list{
-    padding-left: 21px;
-    padding-right: 10px;
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 21px;
 }
-/*
-.sheet.journal-entry .journal-entry-page div.pinline.un-list::before{
-    content: '\2022';
-    padding-right:10px;
-}*/
-
-.sheet.journal-entry .journal-entry-page div.pinline.un-list::marker{
-    list-style: disc outside;
-    /*content: '\2022';*/
-    padding-right:10px;
+.sheet.journal-entry .journal-entry-page div.pinline.un-list > section{
+    display: list-item;
+    text-align: -webkit-match-parent;
 }
-
 /*...................................................................*/
 /*<img> comes with a border, what is never seen in TE*/
 .sheet.journal-entry .journal-entry-page img {
