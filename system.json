@@ -9,10 +9,10 @@
             "discord": "Matt#1768"
         }
     ],
-    "version": "2.7.0",
+    "version": "2.7.1",
     "compatibility": {
         "minimum": 10,
-        "verified": "10.287"
+        "verified": "10.288"
     },
     "templateVersion": "4.4.0",
     "esmodules": [

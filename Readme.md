@@ -8,6 +8,10 @@
 For manual installation, use the provided manifest URL in the "*Install System*" popup window 
 while managing game systems.
 
+v. 2.7.1
+- Fixed issue where foreign compendiums would not hide when
+  using the Compendium Folders module
+  
 v. 2.7.0
 - Fixed multiple compatibility warnings
 
