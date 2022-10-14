@@ -197,8 +197,7 @@ form button {
     border: none;
     transform: rotate(270deg);
     
-}
-*/
+}*/
 /*...................................................................*/
 /*orange lines in the browser are not that cool with Torg colors*/
 .sheet.journal-entry .pages-list .directory-item.active:first-of-type{
@@ -339,6 +338,57 @@ form button {
     margin: -15px 10px -15px 0px;
 }
 
+
+/*...................................................................*/
+/*Introduced h6 as a format for using anchors (kinda deepfaking paragraphs for anchor-links), basically styled like normal p but strong (what's styles' default)*/
+.sheet.journal-entry .journal-entry-page h6,
+.prosemirror .editor-container .editor-content h6{
+    font-family: Palatino;
+    padding: 0;
+    margin: 0;
+    font-size: 14px;
+}
+
+/*Some margin adjustments*/
+.sheet.journal-entry .journal-entry-page h6:not(:first-child),
+.prosemirror .editor-container .editor-content h6:not(:first-child){
+    margin-top: 0;
+}
+.sheet.journal-entry .journal-entry-page h6:first-child,
+.prosemirror .editor-container .editor-content h6:first-child{
+    margin: 0.5em 0;
+}
+
+/*Prevent a linebreak after h6 with "pinline" class*/
+.sheet.journal-entry .journal-entry-page div.pinline > :is(h6,p){
+    display: inline;
+    break-after: avoid;
+    break-inside: avoid;
+}
+.sheet.journal-entry .journal-entry-page div.pinline{
+    margin-bottom: 7px;
+}
+/*Place a space between h6 and p*/
+.sheet.journal-entry .journal-entry-page div.pinline h6::after{
+    content: " ";
+}
+
+/*New class "un-list" for faking <ul>s inside this construct*/
+.sheet.journal-entry .journal-entry-page div.pinline.un-list{
+    padding-left: 21px;
+    padding-right: 10px;
+}
+/*
+.sheet.journal-entry .journal-entry-page div.pinline.un-list::before{
+    content: '\2022';
+    padding-right:10px;
+}*/
+
+.sheet.journal-entry .journal-entry-page div.pinline.un-list::marker{
+    list-style: disc outside;
+    /*content: '\2022';*/
+    padding-right:10px;
+}
 
 /*...................................................................*/
 /*<img> comes with a border, what is never seen in TE*/
