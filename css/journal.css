@@ -361,7 +361,9 @@ form button {
 
 /*Prevent a linebreak after h6 with "pinline" class*/
 .sheet.journal-entry .journal-entry-page div.pinline > section > :is(h6,p),
-.prosemirror .editor-container .editor-content div.pinline > section > :is(h6,p){
+.sheet.journal-entry .journal-entry-page div.pinline > :is(h6,p),
+.prosemirror .editor-container .editor-content div.pinline > section > :is(h6,p),
+.prosemirror .editor-container .editor-content div.pinline > :is(h6,p){
     display: inline;
     break-after: avoid;
     break-inside: avoid;
