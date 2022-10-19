@@ -2,7 +2,8 @@
     "Actor": {
         "types": [
             "stormknight",
-            "threat"
+            "threat",
+            "vehicle"
         ],
         "templates": {
             "commonStats": {
@@ -385,6 +386,20 @@
                 "sizeBonus": "normal"
             },
             "editstate": "none"
+        },
+        "vehicle": {
+            "topSpeed": "",
+            "passengers": 1,
+            "maneuver": -1,
+            "wounds": {
+                "max": 3,
+                "current": 0
+            },
+            "toughness": "",
+            "operator": {
+                "name": "",
+                "skillValue": ""
+            }
         }
 
     },
@@ -408,7 +423,8 @@
             "spell",
             "miracle",
             "psionicpower",
-            "customSkill"
+            "customSkill",
+            "vehicleAddOn"
 
         ],
         "templates": {
@@ -552,7 +568,11 @@
             },
             "range": "",
             "notes": "",
-            "chatNote": ""
+            "chatNote": "",
+            "gunner": {
+                "name": "",
+                "skillValue": ""
+            }
         },
         "vehicle": {
             "templates": [
@@ -693,6 +713,10 @@
             "description": "",
             "baseAttribute": "strength",
             "isFav": ""
+        },
+        "vehicleAddOn": {
+            "name": "",
+            "description": ""
         }
 
     },

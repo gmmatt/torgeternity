@@ -422,7 +422,8 @@
             "specialabilityRollable": "Special Ability Rollable",
             "other": "General Gear",
             "customAttack": "Custom Attack",
-            "customSkill": "Custom Skill"
+            "customSkill": "Custom Skill",
+            "vehicleAddOn": "Vehicle Add-On"
         },
         "attackTypes": {
             "unarmedCombat": "Unarmed Combat",

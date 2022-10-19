@@ -85,7 +85,8 @@ Hooks.once("init", async function () {
     //---localizing entities labels
     CONFIG.Actor.typeLabels = {
         stormknight: game.i18n.localize("torgeternity.sheetLabels.stormknight"),
-        threat: game.i18n.localize("torgeternity.sheetLabels.threat")
+        threat: game.i18n.localize("torgeternity.sheetLabels.threat"),
+        vehicle: game.i18n.localize("torgeternity.sheetLabels.vehicle")
     }
     CONFIG.Item.typeLabels = {
 
@@ -107,7 +108,8 @@ Hooks.once("init", async function () {
         "spell": game.i18n.localize("torgeternity.itemSheetDescriptions.spell"),
         "miracle": game.i18n.localize("torgeternity.itemSheetDescriptions.miracle"),
         "psionicpower": game.i18n.localize("torgeternity.itemSheetDescriptions.psionicpower"),
-        "customSkill": game.i18n.localize("torgeternity.itemSheetDescriptions.customSkill")
+        "customSkill": game.i18n.localize("torgeternity.itemSheetDescriptions.customSkill"),
+        "vehicleAddOn": game.i18n.localize("torgeternity.itemSheetDescriptions.vehicleAddOn")
 
     }
 

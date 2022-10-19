@@ -30,6 +30,9 @@ export const preloadTemplates = async function () {
         "systems/torgeternity/templates/actors/threat/gears.hbs",
         "systems/torgeternity/templates/actors/threat/powers.hbs",
 
+        // ACTOR - vehicles
+        "systems/torgeternity/templates/actors/vehicle/main.hbs",
+
       // Test Dialogs
       "systems/torgeternity/templates/testDialogs/attack-difficulty.hbs",
       "systems/torgeternity/templates/testDialogs/difficulty-selector.hbs",
@@ -67,7 +70,6 @@ export const preloadTemplates = async function () {
         "systems/torgeternity/templates/partials/spell-card.hbs",
         "systems/torgeternity/templates/partials/up-card.hbs",
         "systems/torgeternity/templates/partials/vehicle-card.hbs",
-
         // Powers
         "systems/torgeternity/templates/partials/powers-sheet.hbs",
 
@@ -76,10 +78,6 @@ export const preloadTemplates = async function () {
 
 
 
-/*          //cards
-        "systems/torgeternity/templates/cards/actionCard.hbs",
-        "systems/torgeternity/templates/cards/hand.hbs",
-*/
     ];
 
     // Load the template parts

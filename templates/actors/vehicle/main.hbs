@@ -1,0 +1,29 @@
+<form class="actor-sheet {{cssClass}}" autocomplete="off">
+    <h3 class="actor-type">
+        <span>
+            {{localize "torgeternity.sheetLabels.vehicle"}}
+        </span>
+    </h3>
+
+    <nav class="sheet-tabs tabs" data-group="primary">
+        <a class="item" data-tab="stats">{{localize "torgeternity.sheetLabels.stats"}}</a>
+        <a class="effects" data-tab="effects">{{localize "torgeternity.sheetLabels.effects"}}</a>
+    </nav>
+
+    <section class="sheet-body">
+        <div class="tab stats" data-group="primary" data-tab="stats">
+            <div>
+                <h1>
+                    <input name="name" type="text" value="{{actor.name}}" placeholder="Name"/>
+                </h1>
+            </div>
+        </div>
+
+        <div class="tab effects" data-group="primary" data-tab="effects">
+            <div class="effects block">
+                {{> "systems/torgeternity/templates/parts/active-effects.hbs"}}
+            </div>
+        </div>
+
+    </section>
+</form>
