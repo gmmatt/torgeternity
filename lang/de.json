@@ -398,7 +398,7 @@
         },
         "combat": {
             "nextKeep": "Neue Runde (aktuelle Karte behalten)",
-            "nextNew": "neue Runde (neue Aktionskarte)",
+            "nextNew": "neue Runde (neue Dramakarte)",
             "dramaBack": "systems/torgeternity/images/cards/drama-back.webp"
         },
         "itemSheetDescriptions": {
