@@ -192,7 +192,7 @@
             "targetWillpowerMind": "Target willpower or Mind",
             "targetLandVehicles": "Target land vehicles or Dexterity",
             "targetAirVehicles": "Target air vehicles or Dexterity",
-            "targetWaterVehicles": "Targer water vehicles or Dexterity"
+            "targetWaterVehicles": "Target water vehicles or Dexterity"
         },
         "dnTypesBasic": {
             "veryEasy": "Very Easy (6)",
