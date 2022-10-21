@@ -160,7 +160,6 @@
             "applySize": "Anwenden: Größe",
             "applyArmor": "Rüstung"
         },
-
         "dnTypes": {
             "veryEasy": "Sehr einfach (6)",
             "easy": "Einfach (8)",
@@ -189,9 +188,12 @@
             "targetDivination": "Wahrsagung des Ziels",
             "targetKinesis": "Kinese  des Ziels",
             "targetPrecognition": "Präkognition des Ziels",
-            "targetStealth": "Heimlichkeit des Ziels"
+            "targetStealth": "Heimlichkeit des Ziels",
+            "targetWillpowerMind": "Willenskraft oder Verstand des Ziels",
+            "targetLandVehicles": "Landfahrzeuge oder Geschicklichkeit des Ziels",
+            "targetAirVehicles": "Luftfahrzeuge oder Geschicklichkeit des Ziels",
+            "targetWaterVehicles": "Wasserfahrzeuge oder Geschicklichkeit des Ziels"
         },
-
         "dnTypesBasic": {
             "veryEasy": "Sehr einfach (6)",
             "easy": "Einfach (8)",
@@ -202,7 +204,6 @@
             "heroic": "Heldenhaft (18)",
             "nearImpossible": "Fast unmöglich (20)"         
         },
-
         "cosms": {
             "none": "(Keins)",
             "coreEarth": "Zentralerde",
@@ -247,7 +248,10 @@
             "depravity": "Verderbtheit",
             "theRace": "Das Volk",
             "corruption": "Korruption",
-            "hope": "Hoffnung"
+            "hope": "Hoffnung",
+            "cursed": "Verflucht",
+            "biotech": "Biotech",
+            "powerSuit": "Power Suit"
         },
         "sheetLabels": {
             "editableTooltip": "Vergrößere den Charakterbogen, um editierbare Werte anzuzeigen",
@@ -389,11 +393,13 @@
             "combatSkills": "Kampf",
             "interactionSkills": "Interaktion",
             "otherSkills": "Andere",
-            "targetDefense": "Verteidigung des Ziels"
+            "targetDefense": "Verteidigung des Ziels",
+            "defensesTip": "Klicke, um eine aktive Verteidigung durchzuführen"
         },
         "combat": {
             "nextKeep": "Neue Runde (aktuelle Karte behalten)",
-            "nextNew": "neue Runde (neue Aktionskarte)"
+            "nextNew": "neue Runde (neue Dramakarte)",
+            "dramaBack": "systems/torgeternity/images/cards/drama-back.webp"
         },
         "itemSheetDescriptions": {
             "perk": "Vorzug",
@@ -554,7 +560,8 @@
                     "allOutAttack": "Rücksichtsloser Angriff",
                     "gezielterSchuss": "Zielen (+4)",
                     "blindFire": "Blindes Feuern (-6)",
-                    "targetConcealment": "Deckungsschutz"
+                    "targetConcealment": "Deckungsschutz",
+                    "powerModifier": "Modifikator von Kräften"
                 },
             "result": {
                 "result": "Ergebnis",
@@ -569,7 +576,8 @@
                 "damage": "Schaden",
                 "toughness": "Robustheit",
                 "noDamage": "Kein Schaden",
-                "attackMissed": "Angriff verfehlt"
+                "attackMissed": "Angriff verfehlt",
+                "resetDefense": "Nicht mehr länger in aktiver Verteidigung."
             }
         },
         "playsCard": "Spielt aus:",
@@ -632,11 +640,12 @@
             "spellRoll": "Zauberwurf",
             "miracleRoll": "Wunder-wurf",
             "psionicRoll": "Psionischer Wurf",
-            "bonusRoll": "Bonuswürfel"
+            "bonusRoll": "Bonuswürfel",
+            "toggleEquip": "Ausgerüstet?"
         },
         "possibilitiesReset": {
-            "name": "Reset Stormknight possibilities",
-            "hint": "Wie viele Möglichkeiten sollten die StormKnights erhalten?"
+            "name": "Setze Möglichkeiten zurück",
+            "hint": "Auf welche Summe sollen die Möglichkeiten zurück gesetzt werden?"
         },
         "cosmDecks": {
             "coreEarth": "Zentralerde Cosm-Deck",
@@ -658,8 +667,6 @@
             "dramaDiscard": "Ablagestapel Dramakarten",
             "destinyDiscard": "Ablagestapel Schicksalskarten",
             "activeDrama": "Aktive Dramakarte"
-        
-        
         },
         "scenes": {
             "reality": "Realität",
@@ -711,7 +718,6 @@
                 "name": "Anderssprachige Kompendien ausblenden",
                 "hint": "Auswählen, um anderssprachige Kompendien auszublenden (funktioniert nicht mit Modul \"Compendium Folders\""
             },
-
             "deckSetting": {
                 "name": "Standard-Deckkonfiguration",
                 "label": "Standard-Kartenpack-Konfiguration",
@@ -728,7 +734,6 @@
             "autoDamages": {
                 "name": "Schaden automatisch anwenden (BETA!)",
                 "hint": "Wenn angehakt, werden Schock und Wunden automatisch auf das Ziel angewendet werden."
-
             }            
     },
     "skillDialogs": {
@@ -756,6 +761,9 @@
         "toggle": "SL-Schirm an-/ ausschalten",
         "noScreen": "Kein SL-Schirm verfügbar",
         "noScreenMessage": "Du hast keinen SL-Schirm ausgewählt. SL-Schirme werden von Premium-Modulen unterstützt, die du hier findest:"
+    },
+    "partySheet": {
+        "noCharacter": "Dieser Spieler hat keinen zugeteilten Charakter"
     },
     "packs": {
         "basicRules" : "torgeternity.system-de-basisregeln",

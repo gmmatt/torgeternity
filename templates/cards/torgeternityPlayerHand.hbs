@@ -40,13 +40,13 @@
 					<img class="card-face" src="{{card.img}}" alt="{{card.name}}" height="48">
 					<span><img src="{{card.img}}"></span>
 				</span>
-				<h4 class="card-name">{{card.data.name}}</h4>
-				{{#if card.showFace}}
+				<h4 class="card-name">{{card.name}}</h4>
+				<!-- {{#if card.showFace}} -->
 				<span class="card-type">{{localize (concatCardType card.type)}}</span>
 				{{#ifequal card.type "destiny"}}
 				<span class="card-pooled">
 					<input name="data.flags.torgeternity.pooled" class="toggle" data-action="poolToggle" type="checkbox"
-						id="pooled" {{checked card.data.flags.torgeternity.pooled}}>
+						id="pooled" {{checked card.flags.torgeternity.pooled}}>
 				</span>
 				{{else}}
 				<span class="card-pooled"></span>
@@ -70,7 +70,7 @@
 						<i class="fas fa-inbox" style="color:white"></i>
 					</a>
 				</div>
-				{{/if}}
+				<!-- {{/if}} -->
 			</li>
 			{{else}}
 			<li>
