@@ -108,10 +108,10 @@
             "ammo": "Ammo",
             "attackWith": "Attack With",
             "topspeed": "Top Speed",
-            "passengers": "Pass",
-            "mr": "MR",
-            "wounds": "Wnds",
-            "toughness": "Tough",
+            "passengers": "Passengers",
+            "mr": "Maneuver",
+            "wounds": "Wounds",
+            "toughness": "Toughness",
             "possibilities": "Possibilities",
             "poss": "Poss",
             "tappingDifficulty": "Tapping Difficulty",
@@ -769,6 +769,11 @@
         "packs": {
             "basicRules": "torgeternity.basic-rules",
             "decks": "torgeternity.core-card-set"
+        },
+        "speeds": {
+            "fast": "Fast",
+            "veryFast": "Very Fast",
+            "ultraFast": "Ultra Fast"
         }
     },
     "CARD": {

@@ -5,18 +5,145 @@
         </span>
     </h3>
 
-    <nav class="sheet-tabs tabs" data-group="primary">
+    <header class="sheet-header-vehicle">
+        <span><img src="{{actor.img}}" data-edit="img" title="{{actor.name}}" /></span>
+        <span class="sheet-heading-vehicle"><input name="name" type="text" value="{{actor.name}}" placeholder="Vehicle Name"/></span>
+    </header>
+
+
+    <nav class="sheet-tabs tabs vehicle" data-group="primary">
         <a class="item" data-tab="stats">{{localize "torgeternity.sheetLabels.stats"}}</a>
-        <a class="effects" data-tab="effects">{{localize "torgeternity.sheetLabels.effects"}}</a>
+        <a class="item" data-tab="effects">{{localize "torgeternity.sheetLabels.effects"}}</a>
     </nav>
 
     <section class="sheet-body">
-        <div class="tab stats" data-group="primary" data-tab="stats">
+        <div class="vehicle-tab" data-group="primary" data-tab="stats">
+
             <div>
-                <h1>
-                    <input name="name" type="text" value="{{actor.name}}" placeholder="Name"/>
-                </h1>
+                <table>
+                    <tr>
+                        <th>
+                            <a class="attribut-block">
+                                {{localize "torgeternity.gear.techlevel"}}
+                            </a>
+                        </th>
+                        <th>
+                            <a class="attribut-block">
+                                {{localize "torgeternity.gear.topspeed"}}
+                            </a> 
+                        </th>
+                        <th>
+                            <a class="attribut-block">
+                                {{localize "torgeternity.gear.passengers"}}
+                            </a>
+                        </th>
+                        <th>
+                            <a class="attribut-block">
+                                {{localize "torgeternity.gear.mr"}}
+                            </a>
+                        </th>
+                        <th>
+                            <a class="attribut-block">
+                                {{localize "torgeternity.gear.wounds"}}
+                            </a>
+                        </th>
+                        <th>
+                            <a class="attribut-block">
+                                {{localize "torgeternity.gear.toughness"}}
+                            </a>
+                        </th>
+                        <th>
+                            <a class="attribut-block">
+                                {{localize "torgeternity.gear.price"}}
+                            </a>
+                        </th>
+                    </tr>
+                    <tr>
+                        <td class="vehicle-stat">
+                            <input name="system.axioms.tech" type="number" value="{{actor.system.axioms.tech}}" data-dtype="Number">                            
+                        </td>
+                        <td class="vehicle-stat">
+                            <input name="system.topSpeed.kph" type="number" value="{{actor.system.topSpeed.kph}}" data-dtype="Number">
+                            (
+                            {{actor.system.topSpeed.value}}
+                            )
+                            {{#ifequal actor.system.topSpeed.penalty "-2"}}
+                                {{localize "torgeternity.speeds.fast"}}
+                            {{/ifequal}}
+                            {{#ifequal actor.system.topSpeed.penalty "-4"}}
+                                {{localize "torgeternity.speeds.veryFast"}}
+                            {{/ifequal}}
+                            {{#ifequal actor.system.topSpeed.penalty "-6"}}
+                                {{localize "torgeternity.speeds.ultraFast"}}
+                            {{/ifequal}}
+                        </td>
+                        <td class="vehicle-stat">
+                            <input name="system.passengers" type="number" value="{{actor.system.passengers}}" data-dtype="Number">
+                        </td>
+                        <td class="vehicle-stat">
+                            <input name="system.maneuver" type="number" value="{{actor.system.maneuver}}" data-dtype="Number">
+                        </td>
+                        <td class="vehicle-stat">
+                            <input name="system.wounds.current" type="number" value="{{actor.system.wounds.current}}" data-dtype="Number">
+                            /
+                            <input name="system.wounds.max" type="number" value="{{actor.system.wounds.max}}" data-dtye="Number">
+                        </td>
+                        <td class="vehicle-stat">
+                            <input name="system.toughness" type="number" value="{{actor.system.toughness}}" data-dtype="Number">
+                        </td>
+                        <td class="vehicle-stat">
+                            <input name="system.price.dollars" type="number" value="{{actor.system.price.dollars}}" data-dtype="Number">
+                            (
+                            {{actor.system.price.value}}    
+                            )   
+                        </td>
+                    </tr>
+                </table>
             </div>
+            <h2>Operator</h2>
+            <table>
+                <tr>
+                    <th>
+                        Name
+                    </th>
+                    <th>
+                        Skill Value
+                    </th>
+                    <th>
+                        Maneuver
+                    </th>
+                </tr>
+                <tr>
+                    <td class="operator-name">
+                        <input name="system.operator.name" type="text" value="{{actor.system.operator.name}}" data-dtype="Text">                            
+                    </td>
+                    <td class="operator-skill">
+                        <input name="system.operator.skillValue" type="number" value="{{actor.system.operator.skillValue}}" data-dtype="Number">                            
+                    </td>
+                </tr>
+            </table>
+            <h2>Weapons</h2>
+            <div class="item-list">
+                {{#each heavyweapon as |item id|}}
+                    <li class="item" style="display:flex" data-item-id="{{item._id}}">
+                        <div><img src="{{item.img}}" title="{{item.name}}"/></div>
+                        <span class="item-name">{{item.name}}</span>
+                        <div class="item-controls">
+                            <a class="item-control item-tochat" title="{{localize 'torgeternity.iconeTitles.sendToChat'}}">
+                                <i class="fas fa-comment"></i>
+                            </a>
+                            <a class="item-control item-edit" title="{{localize 'torgeternity.iconeTitles.edit'}}">
+                                <i class="fas fa-edit"></i>
+                            </a>
+                            <a class="item-control item-delete" title="{{localize 'torgeternity.iconeTitles.delete'}}">
+                                <i class="fas fa-trash"></i>
+                            </a>
+                        </div>
+
+                    </li>
+                {{/each}}
+            </div>
+            <h2>Add-Ons</h2>
         </div>
 
         <div class="tab effects" data-group="primary" data-tab="effects">

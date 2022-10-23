@@ -1798,6 +1798,28 @@ form.actor-sheet header input[name="name"] {
     top: 310px;
 }
 
+.window-content .actor-sheet nav.tabs.vehicle {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    border: none;
+    position: absolute;
+    transform: rotateZ(90deg);
+    font-family: Alaska;
+    font-size: 13px;
+    text-transform: capitalize;
+    right: -110px;
+    top: 110px;
+}
+
+.vehicle-tab[data-tab] {
+    display:none;
+}
+
+.vehicle-tab[data-tab].active {
+    display:block;
+}
+
 .tabsOff .window-content .actor-sheet nav.tabs {
     display: none
 }
@@ -3321,6 +3343,14 @@ form.actor-sheet.threat .tab[data-tab].active .editor {
     font-size: 10px;
 }
 
+.sheet-heading-vehicle input {
+    height: 48px;
+    line-height: 48px;
+    margin: 8px 2%;
+    width: 96%;
+}
+
+
 #gm-screen {
     position: absolute;
     width: 120%;
@@ -3387,4 +3417,28 @@ form.actor-sheet.threat .tab[data-tab].active .editor {
 
 #gm-screen.focus-right {
     transform: scale(2) translateX(-33%) translateY(25%);
+}
+
+.vehicle-stat {
+    text-align: center;
+}
+
+.vehicle-stat input {
+    width: 50px !important;
+}
+
+.operator-name {
+    text-align: center;
+}
+
+.operator-name input {
+    width: 200px !important;
+}
+
+.operator-skill {
+    text-align: center;
+}
+
+.operator-skill input {
+    width: 50px !important;
 }

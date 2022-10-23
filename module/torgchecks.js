@@ -807,3 +807,72 @@ export async function applyDamages(damageObject) {
     }
 
 }
+/**
+ * Return the Torg value for a given number
+ * This could probably be simplified by using the formula for the famous Torg algorhythm
+ */
+ export function getTorgValue(myNumber) {
+    let myValue = 0
+        if (myNumber <= 1) {
+            myValue = 0;
+        } else if (myNumber==2){
+            myValue = 1;
+        } else if (myNumber==3){
+            myValue = 2;
+        } else if (myNumber < 6){
+            myValue=3;
+        } else if (myNumber < 10){
+            myValue=4;
+        } else if (myNumber <15){
+            myValue=5;
+        } else if (myNumber <25){
+            myValue=6;
+        } else if (myNumber <40){
+            myValue=7;
+        } else if (myNumber <60){
+            myValue=8;
+        } else if (myNumber <100){
+            myValue=9;
+        } else if (myNumber <150){
+            myValue=10;
+        } else if (myNumber <250){
+            myValue=11
+        } else if (myNumber <400){
+            myValue=12;
+        } else if (myNumber <600){
+            myValue=13;
+        } else if (myNumber <1000){
+            myValue=14;
+        } else if (myNumber <1500){
+            myValue=15;
+        } else if (myNumber<2500){
+            myValue=16;
+        } else if (myNumber<4000){
+            myValue=17;
+        } else if (myNumber<6000){
+            myValue=18;
+        } else if (myNumber<10000){
+            myValue=19;
+        } else if (myNumber<15000){
+            myValue=20;
+        } else if (myNumber<25000){
+            myValue=21;
+        } else if (myNumber<40000){
+            myValue=22;
+        } else if (myNumber<60000){
+            myValue=23;
+        } else if (myNumber<100000){
+            myValue=24;
+        } else if (myNumber<150000){
+            myValue=25;
+        } else if (myNumber<250000){
+            myValue=26;
+        } else if (myNumber<400000){
+            myValue=27;
+        } else if (myNumber<600000){
+            myValue=28;
+        } else if (myNumber<1000000){
+            myValue=29;            
+        }   
+    return myValue
+}

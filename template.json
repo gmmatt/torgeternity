@@ -388,14 +388,25 @@
             "editstate": "none"
         },
         "vehicle": {
-            "topSpeed": "",
+            "axioms": {
+                "magic": 0,
+                "social": 0,
+                "spirit": 0,
+                "tech": 10
+            },
+            "topSpeed": {
+                "kph": 100
+            },
             "passengers": 1,
             "maneuver": -1,
             "wounds": {
                 "max": 3,
                 "current": 0
             },
-            "toughness": "",
+            "toughness": 5,
+            "price": {
+                "dollars": 100
+            },
             "operator": {
                 "name": "",
                 "skillValue": ""

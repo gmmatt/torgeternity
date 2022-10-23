@@ -1,14 +1,62 @@
+import {getTorgValue} from "./torgchecks.js";
+
 export default class torgeternityActor extends Actor {
 
 
 
     prepareBaseData() {
 
-        //Set base fatigue to 2
-        this.system.other.fatigue = 2;
+        //Set Values for All Characters
 
-        var skillset = this.system.skills;
+        if(this._source.type === "stormknight" | this._source.type === "treat") {
+            // Base Fatigue
+            this.system.other.fatigue = 2;
+            // Skillsets
+            var skillset = this.system.skills;
+            // Set Defensive Values
+            if (skillset.dodge.value) {
+                this.system.dodgeDefense = this.system.skills.dodge.value;
+            } else {
+                this.system.dodgeDefense = this.system.attributes.dexterity
+            };
 
+            if (skillset.meleeWeapons.value) {
+                this.system.meleeWeaponsDefense = this.system.skills.meleeWeapons.value;
+            } else {
+                this.system.meleeWeaponsDefense = this.system.attributes.dexterity
+            };
+
+            if (skillset.unarmedCombat.value) {
+                this.system.unarmedCombatDefense = this.system.skills.unarmedCombat.value;
+            } else {
+                this.system.unarmedCombatDefense = this.system.attributes.dexterity
+            };
+
+            if (skillset.intimidation.value) {
+                this.system.intimidationDefense = this.system.skills.intimidation.value;
+            } else {
+                this.system.intimidationDefense = this.system.attributes.spirit
+            };
+
+            if (skillset.maneuver.value) {
+                this.system.maneuverDefense = this.system.skills.maneuver.value;
+            } else {
+                this.system.maneuverDefense = this.system.attributes.dexterity
+            };
+
+            if (skillset.taunt.value) {
+                this.system.tauntDefense = this.system.skills.taunt.value;
+            } else {
+                this.system.tauntDefense = this.system.attributes.charisma
+            };
+
+            if (skillset.trick.value) {
+                this.system.trickDefense = this.system.skills.trick.value;
+            } else {
+                this.system.trickDefense = this.system.attributes.mind
+            };
+        }
+    
         // Derive Skill values for Storm Knights
         //
         // NOTE: Threat skill values are created directly by user, but SK skill values are derived based on attribute + adds.
@@ -27,50 +75,7 @@ export default class torgeternityActor extends Actor {
             }
         }
 
-
-        // Set Defensive Values
-        if (skillset.dodge.value) {
-            this.system.dodgeDefense = this.system.skills.dodge.value;
-        } else {
-            this.system.dodgeDefense = this.system.attributes.dexterity
-        };
-
-        if (skillset.meleeWeapons.value) {
-            this.system.meleeWeaponsDefense = this.system.skills.meleeWeapons.value;
-        } else {
-            this.system.meleeWeaponsDefense = this.system.attributes.dexterity
-        };
-
-        if (skillset.unarmedCombat.value) {
-            this.system.unarmedCombatDefense = this.system.skills.unarmedCombat.value;
-        } else {
-            this.system.unarmedCombatDefense = this.system.attributes.dexterity
-        };
-
-        if (skillset.intimidation.value) {
-            this.system.intimidationDefense = this.system.skills.intimidation.value;
-        } else {
-            this.system.intimidationDefense = this.system.attributes.spirit
-        };
-
-        if (skillset.maneuver.value) {
-            this.system.maneuverDefense = this.system.skills.maneuver.value;
-        } else {
-            this.system.maneuverDefense = this.system.attributes.dexterity
-        };
-
-        if (skillset.taunt.value) {
-            this.system.tauntDefense = this.system.skills.taunt.value;
-        } else {
-            this.system.tauntDefense = this.system.attributes.charisma
-        };
-
-        if (skillset.trick.value) {
-            this.system.trickDefense = this.system.skills.trick.value;
-        } else {
-            this.system.trickDefense = this.system.attributes.mind
-        };
-
+        // Other derived attributes for Storm Knights
         if (this._source.type === "stormknight") {
             mergeObject(this.prototypeToken, {
 
@@ -198,12 +203,23 @@ export default class torgeternityActor extends Actor {
 
         };
 
-        /*
-        //Set unknown edit states to none
-        if (this.system.editstate === undefined) {
-            this.system.editstate = "inline";
-        };  */
-
+        //Set values and speed penalties for vehicles
+        if (this._source.type === "vehicle") {
+            this.system.price.value = getTorgValue(this.system.price.dollars)
+            let speedValue = getTorgValue(this.system.topSpeed.kph)
+            this.system.topSpeed.value = speedValue
+            let speedPenalty = 0
+            if (speedValue < 11) {
+                speedPenalty=0;
+            } else if (speedValue < 15) {
+                speedPenalty=-2;
+            } else if (speedValue < 17) {
+                speedPenalty=-4;
+            } else {
+                speedPenalty=-6
+            }
+            this.system.topSpeed.penalty = speedPenalty;
+        }
     }
 
     applyActiveEffects() {

@@ -129,7 +129,8 @@ export default class torgeternityActorSheet extends ActorSheet {
             case "threat":
                 data.enrichedDetails = await TextEditor.enrichHTML(this.object.system.details.description, {async: true});
                 break;
-         }
+         };
+
 
         /* if (this.actor.data.data.editstate === undefined) {
             this.actor.data.data.editstate = "none";

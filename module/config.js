@@ -253,7 +253,14 @@ torgeternity.sizes = {
     veryLarge: "torgeternity.sizes.veryLarge"
 }
 
-torgeternity.statusEffects = [{
+torgeternity.speeds = {
+    fast: "torgeternity.speeds.fast",
+    veryFast: "torgeternity.speeds.veryFast",
+    ultraFast: "torgeternity.speeds.ultraFast"
+}
+
+{torgeternity.statusEffects = [
+{
     icon: 'systems/torgeternity/images/status-markers/stymied.webp',
     id: 'stymied',
     label: 'torgeternity.statusEffects.stymied',
@@ -261,6 +268,7 @@ torgeternity.statusEffects = [{
 },
 
 {
+
     icon: 'systems/torgeternity/images/status-markers/very-stymied.webp',
     id: 'veryStymied',
     label: 'torgeternity.statusEffects.veryStymied',
@@ -365,4 +373,4 @@ torgeternity.statusEffects = [{
 
     //TODO : create KO and defeat status
 
-]
+]}
