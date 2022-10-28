@@ -145,6 +145,58 @@ div.actor ::-webkit-scrollbar {
     color: black;
 }
 
+/*                          */
+/* --------Vehicles-------- */
+/*                          */
+
+.window-content .actor-sheet nav.tabs.vehicle {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    border: none;
+    position: absolute;
+    transform: rotateZ(90deg);
+    font-family: Alaska;
+    font-size: 13px;
+    text-transform: capitalize;
+    right: -110px;
+    top: 110px;
+}
+
+.vehicle-tab[data-tab] {
+    display:none;
+}
+
+.vehicle-tab[data-tab].active {
+    display:block;
+}
+
+form.actor-sheet header.sheet-header-vehicle {
+    display: flex;
+    
+}
+
+.vehicle-header-image {
+    flex-grow: 1;
+}
+
+.vehicle-header-name {
+    align-self:center;
+    flex-grow:5;
+}
+
+.vehicle-header-type {
+    padding: 22px;
+    flex-grow:2;
+}
+
+
+
+
+/*                              */
+/* --------End Vehicles-------- */
+/*                              */
+
 .window-app .window-content {
     font-family: Alaska;
     background-image: url(../images/thunder.webp);
@@ -1798,57 +1850,6 @@ form.actor-sheet header input[name="name"] {
     top: 310px;
 }
 
-/*                          */
-/* --------Vehicles-------- */
-/*                          */
-
-.window-content .actor-sheet nav.tabs.vehicle {
-    display: flex;
-    flex-direction: row;
-    text-align: center;
-    border: none;
-    position: absolute;
-    transform: rotateZ(90deg);
-    font-family: Alaska;
-    font-size: 13px;
-    text-transform: capitalize;
-    right: -110px;
-    top: 110px;
-}
-
-.vehicle-tab[data-tab] {
-    display:none;
-}
-
-.vehicle-tab[data-tab].active {
-    display:block;
-}
-
-form.actor-sheet header.sheet-header-vehicle {
-    display: flex;
-    
-}
-
-.vehicle-header-image {
-    flex-grow: 1;
-}
-
-.vehicle-header-name {
-    align-self:center;
-    flex-grow:5;
-}
-
-.vehicle-header-type {
-    padding: 22px;
-    flex-grow:2;
-}
-
-
-
-
-/*                              */
-/* --------End Vehicles-------- */
-/*                              */
 
 .tabsOff .window-content .actor-sheet nav.tabs {
     display: none
