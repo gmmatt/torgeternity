@@ -206,7 +206,7 @@ export default class torgeternityActor extends Actor {
         //Set values and speed penalties for vehicles
         if (this._source.type === "vehicle") {
             this.system.price.value = getTorgValue(this.system.price.dollars)
-            let speedValue = getTorgValue(this.system.topSpeed.kph)
+            let speedValue = parseInt(getTorgValue(this.system.topSpeed.kph) + 2)
             this.system.topSpeed.value = speedValue
             let speedPenalty = 0
             if (speedValue < 11) {

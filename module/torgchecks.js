@@ -845,34 +845,36 @@ export async function applyDamages(damageObject) {
             myValue=14;
         } else if (myNumber <1500){
             myValue=15;
-        } else if (myNumber<2500){
+        } else if (myNumber <2500){
             myValue=16;
-        } else if (myNumber<4000){
+        } else if (myNumber <4000){
             myValue=17;
-        } else if (myNumber<6000){
+        } else if (myNumber <6000){
             myValue=18;
-        } else if (myNumber<10000){
+        } else if (myNumber <10000){
             myValue=19;
-        } else if (myNumber<15000){
+        } else if (myNumber <15000){
             myValue=20;
-        } else if (myNumber<25000){
+        } else if (myNumber <25000){
             myValue=21;
-        } else if (myNumber<40000){
+        } else if (myNumber <40000){
             myValue=22;
-        } else if (myNumber<60000){
+        } else if (myNumber <60000){
             myValue=23;
-        } else if (myNumber<100000){
+        } else if (myNumber <100000){
             myValue=24;
-        } else if (myNumber<150000){
+        } else if (myNumber <150000){
             myValue=25;
-        } else if (myNumber<250000){
+        } else if (myNumber <250000){
             myValue=26;
-        } else if (myNumber<400000){
+        } else if (myNumber <400000){
             myValue=27;
-        } else if (myNumber<600000){
+        } else if (myNumber <600000){
             myValue=28;
-        } else if (myNumber<1000000){
+        } else if (myNumber <1000000){
             myValue=29;            
-        }   
+        } else if (myNumber <1500000) {
+            myValue=30;
+        }
     return myValue
 }
