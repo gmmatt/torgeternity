@@ -5,16 +5,16 @@
         </span>
     </h3>
 
-    <header class="sheet-header-vehicle">
-        <span><img src="{{actor.img}}" data-edit="img" title="{{actor.name}}" /></span>
-        <span class="sheet-heading-vehicle"><input name="name" type="text" value="{{actor.name}}" placeholder="Vehicle Name"/></span>
-    </header>
-
-
     <nav class="sheet-tabs tabs vehicle" data-group="primary">
         <a class="item" data-tab="stats">{{localize "torgeternity.sheetLabels.stats"}}</a>
         <a class="item" data-tab="effects">{{localize "torgeternity.sheetLabels.effects"}}</a>
     </nav>
+
+    <header class="sheet-header-vehicle">
+        <div class="vehicle-header-image"><img src="{{actor.img}}" data-edit="img" title="{{actor.name}}" /></div>
+        <div class="vehicle-header-name"><input name="name" type="text" value="{{actor.name}}" placeholder="Vehicle Name"/></div>
+        <div class="vehicle-header-type">Type: </div>
+    </header>
 
     <section class="sheet-body">
         <div class="vehicle-tab" data-group="primary" data-tab="stats">
