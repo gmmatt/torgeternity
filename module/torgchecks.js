@@ -875,6 +875,64 @@ export async function applyDamages(damageObject) {
             myValue=29;            
         } else if (myNumber <1500000) {
             myValue=30;
+        } else if (myNumber <2500000) {
+            myValue=31;
+        } else if (myNumber <4000000) {
+            myValue=32;
+        } else if (myNumber <6000000) {
+            myValue=33;
+        } else if (myNumber <10000000) {
+            myValue=34;
+        } else if (myNumber <15000000) {
+            myValue=35;
+        } else if (myNumber <25000000) {
+            myValue=36;
+        } else if (myNumber <40000000) {
+            myValue=37;
+        } else if (myNumber <60000000) {
+            myValue=38;
+        } else if (myNumber <100000000) {
+            myValue=39;
+        } else if (myNumber <150000000) {
+            myValue=40;
+        } else if (myNumber <250000000) {
+            myValue=41;
+        } else if (myNumber <400000000) {
+            myValue=42;
+        } else if (myNumber <600000000) {
+            myValue=43;
+        } else if (myNumber <1000000000) {
+            myValue=44;
+        } else if (myNumber <1500000000) {
+            myValue=45;
+        } else if (myNumber <2500000000) {
+            myValue=46;
+        } else if (myNumber <4000000000) {
+            myValue=47;
+        } else if (myNumber <6000000000) {
+            myValue=48;
+        } else if (myNumber <10000000000) {
+            myValue=49;
+        } else if (myNumber <15000000000) {
+            myValue=50;
+        } else if (myNumber <25000000000) {
+            myValue=51;
+        } else if (myNumber <40000000000) {
+            myValue=52;
+        } else if (myNumber <60000000000) {
+            myValue=53;
+        } else if (myNumber <100000000000) {
+            myValue=54;
+        } else if (myNumber <150000000000) {
+            myValue=55;
+        } else if (myNumber <250000000000) {
+            myValue=56;
+        } else if (myNumber <400000000000) {
+            myValue=57;             
+        } else if (myNumber <600000000000) {
+            myValue=58;
+        } else {
+            myValue=59;
         }
     return myValue
 }
