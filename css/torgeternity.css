@@ -173,19 +173,31 @@ div.actor ::-webkit-scrollbar {
 
 form.actor-sheet header.sheet-header-vehicle {
     display: flex;
+    justify-content: center;
+    align-items: center;
     
 }
 
-.vehicle-header-image {
+.window-content .actor-sheet .vehicle-header-image {
     flex-grow: 1;
 }
 
-.vehicle-header-name {
+.window-content .actor-sheet .vehicle-header-name {
     align-self:center;
     flex-grow:5;
 }
 
-.vehicle-header-type {
+.window-content .actor-sheet .vehicle-header-name input[name="name"] {
+    width: 100%;
+    text-transform: uppercase;
+    text-shadow: 0px-2px 10px #0e0909;
+    font-family: Alaska;
+    font-size: 24px;
+    text-align: center;
+    color: #0e0909;
+}
+
+.window-content .actor-sheet .vehicle-header-type {
     padding: 22px;
     flex-grow:2;
 }
