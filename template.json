@@ -405,6 +405,7 @@
                 "current": 0
             },
             "toughness": 5,
+            "armor": 0,
             "price": {
                 "dollars": 100,
                 "magnitude": "-"

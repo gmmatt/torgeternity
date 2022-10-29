@@ -112,6 +112,7 @@
             "mr": "Maneuver",
             "wounds": "Wounds",
             "toughness": "Toughness",
+            "armor": "Armor",
             "possibilities": "Possibilities",
             "poss": "Poss",
             "tappingDifficulty": "Tapping Difficulty",

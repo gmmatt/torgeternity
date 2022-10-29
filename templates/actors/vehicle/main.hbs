@@ -22,15 +22,19 @@
                     {{/each}}
                 {{/select}}
             </select>
+            Wounds:
+            <input name="system.wounds.current" type="number" value="{{actor.system.wounds.current}}" data-dtype="Number">
+            /
+            <input name="system.wounds.max" type="number" value="{{actor.system.wounds.max}}" data-dtye="Number">
 
         </div>
     </header>
 
     <section class="sheet-body">
         <div class="vehicle-tab" data-group="primary" data-tab="stats">
-
+            
             <div>
-                <table>
+                <table class="groove-borders">
                     <tr>
                         <th>
                             <a class="attribut-block">
@@ -54,12 +58,12 @@
                         </th>
                         <th>
                             <a class="attribut-block">
-                                {{localize "torgeternity.gear.wounds"}}
+                                {{localize "torgeternity.gear.toughness"}}
                             </a>
                         </th>
                         <th>
                             <a class="attribut-block">
-                                {{localize "torgeternity.gear.toughness"}}
+                                {{localize "torgeternity.gear.armor"}}
                             </a>
                         </th>
                         <th>
@@ -94,12 +98,10 @@
                             <input name="system.maneuver" type="number" value="{{actor.system.maneuver}}" data-dtype="Number">
                         </td>
                         <td class="vehicle-stat">
-                            <input name="system.wounds.current" type="number" value="{{actor.system.wounds.current}}" data-dtype="Number">
-                            /
-                            <input name="system.wounds.max" type="number" value="{{actor.system.wounds.max}}" data-dtye="Number">
+                            <input name="system.toughness" type="number" value="{{actor.system.toughness}}" data-dtype="Number">                            
                         </td>
                         <td class="vehicle-stat">
-                            <input name="system.toughness" type="number" value="{{actor.system.toughness}}" data-dtype="Number">
+                            <input name="system.armor" type="number" value="{{actor.system.armor}}" data-dtype="Number">
                         </td>
                         <td class="vehicle-stat">
                             <input name="system.price.dollars" type="number" value="{{actor.system.price.dollars}}" data-dtype="Number">
@@ -118,25 +120,16 @@
                 </table>
             </div>
             <h2>Operator</h2>
-            <table>
+            <table class="groove-borders left-align">
                 <tr>
                     <th>
-                        Name
-                    </th>
-                    <th>
-                        Skill Value
-                    </th>
-                    <th>
-                        Maneuver
-                    </th>
-                </tr>
-                <tr>
-                    <td class="operator-name">
-                        <input name="system.operator.name" type="text" value="{{actor.system.operator.name}}" data-dtype="Text">                            
-                    </td>
-                    <td class="operator-skill">
-                        <input name="system.operator.skillValue" type="number" value="{{actor.system.operator.skillValue}}" data-dtype="Number">                            
-                    </td>
+                        Name <input name="system.operator.name" class="long-text" type="text" value="{{actor.system.operator.name}}" data-dtype="Text">                            
+                        Skill <input name="system.operator.skillValue" type="number" value="{{actor.system.operator.skillValue}}" data-dtype="Number">
+                        Defense {{actor.system.defense}}
+                        <button class="operator-button"><i class="fas fa-dice-d20"></i>Chase</button>
+                        <button class="operator-button"><i class="fas fa-dice-d20"></i>Maneuver</button>
+                        <button class="operator-button"><i class="fas fa-dice-d20"></i>Collison</button>
+                   </th>
                 </tr>
             </table>
             <h2>Weapons</h2>

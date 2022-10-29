@@ -203,7 +203,7 @@ export default class torgeternityActor extends Actor {
 
         };
 
-        //Set values and speed penalties for vehicles
+        //Set derived values for vehicles
         if (this._source.type === "vehicle") {
             var convertedPrice = 0;
             switch (this.system.price.magnitude) {
@@ -233,6 +233,7 @@ export default class torgeternityActor extends Actor {
                 speedPenalty=-6
             }
             this.system.topSpeed.penalty = speedPenalty;
+            this.system.defense = parseInt(-this.system.topSpeed.penalty + this.system.operator.skillValue)
         }
     }
 

@@ -202,7 +202,32 @@ form.actor-sheet header.sheet-header-vehicle {
     flex-grow:2;
 }
 
+.groove-borders {
+    border:2px groove #eeede0;
+    border-radius: 4px;
+    border-collapse: separate;
+}
 
+.left-align {
+    text-align: left;
+}
+
+.window-content .actor-sheet input.long-text {
+    width: 200px;   
+}
+
+.window-app .window-content .actor-sheet button.operator-button {
+    border: 1px;
+    border-radius: 4px;
+    text-align: center;
+    display: inline-block;
+    font-size: 12px;
+    margin: 4px 2px;
+    color: black;
+    text-shadow: none;
+    background-image: none;
+    width: 100px;
+}
 
 
 /*                              */
