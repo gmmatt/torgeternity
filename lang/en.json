@@ -774,6 +774,11 @@
             "fast": "Fast",
             "veryFast": "Very Fast",
             "ultraFast": "Ultra Fast"
+        },
+        "vehicleTypes": {
+            "land": "Land",
+            "water": "Water",
+            "air": "Air"
         }
     },
     "CARD": {

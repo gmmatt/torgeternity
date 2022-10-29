@@ -259,6 +259,12 @@ torgeternity.speeds = {
     ultraFast: "torgeternity.speeds.ultraFast"
 }
 
+torgeternity.vehicleTypes = {
+    land: "torgeternity.vehicleTypes.land",
+    water: "torgeternity.vehicleTypes.water",
+    air: "torgeternity.vehicleTypes.air"
+}
+
 {torgeternity.statusEffects = [
 {
     icon: 'systems/torgeternity/images/status-markers/stymied.webp',
