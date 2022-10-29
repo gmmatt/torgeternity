@@ -103,6 +103,13 @@
                         </td>
                         <td class="vehicle-stat">
                             <input name="system.price.dollars" type="number" value="{{actor.system.price.dollars}}" data-dtype="Number">
+                            <select name="system.price.magnitude" class="input-box">
+                                {{#select actor.system.price.magnitude}}
+                                    {{#each config.magnitudes as |name type|}}
+                                        <option value="{{type}}">{{localize name}}</option>
+                                    {{/each}}
+                                {{/select}}
+                            </select>
                             (
                             {{actor.system.price.value}}    
                             )   

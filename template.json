@@ -406,7 +406,8 @@
             },
             "toughness": 5,
             "price": {
-                "dollars": 100
+                "dollars": 100,
+                "magnitude": "-"
             },
             "operator": {
                 "name": "",

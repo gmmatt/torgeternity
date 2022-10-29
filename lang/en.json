@@ -779,6 +779,13 @@
             "land": "Land",
             "water": "Water",
             "air": "Air"
+        },
+
+        "magnitudes": {
+            "ones": "-",              
+            "thousands": "K",
+            "millions": "M",
+            "billions": "B"
         }
     },
     "CARD": {

@@ -265,6 +265,13 @@ torgeternity.vehicleTypes = {
     air: "torgeternity.vehicleTypes.air"
 }
 
+torgeternity.magnitudes = {
+    ones: "torgeternity.magnitudes.ones",
+    thousands: "torgeternity.magnitudes.thousands",
+    millions: "torgeternity.magnitudes.millions",
+    billions: "torgeternity.magnitudes.billions"
+}
+
 {torgeternity.statusEffects = [
 {
     icon: 'systems/torgeternity/images/status-markers/stymied.webp',

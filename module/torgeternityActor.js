@@ -205,7 +205,21 @@ export default class torgeternityActor extends Actor {
 
         //Set values and speed penalties for vehicles
         if (this._source.type === "vehicle") {
-            this.system.price.value = getTorgValue(this.system.price.dollars)
+            var convertedPrice = 0;
+            switch (this.system.price.magnitude) {
+                case "ones":
+                    convertedPrice = this.system.price.dollars;
+                    break;
+                case "thousands":
+                    convertedPrice = parseInt(this.system.price.dollars * 1000);
+                    break;
+                case "millions":
+                    convertedPrice = parseInt(this.system.price.dollars * 1000000);
+                    break;
+                case "billions":
+                    convertedPrice = parseInt(this.system.price.dollars * 1000000000);
+            }
+            this.system.price.value = getTorgValue(convertedPrice)
             let speedValue = parseInt(getTorgValue(this.system.topSpeed.kph) + 2)
             this.system.topSpeed.value = speedValue
             let speedPenalty = 0
