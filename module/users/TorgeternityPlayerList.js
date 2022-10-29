@@ -7,11 +7,20 @@ export default class TorgeternityPlayerList extends PlayerList {
     get template() {
         return "systems/torgeternity/templates/playerList/playerList.hbs";
     }
-    getData() {
+    async getData() {
         let data = super.getData();
         data.self = game.user;
         let GM = game.users.find(user => user.isGM)
-        data.GMpossibilities = GM.getFlag('torgeternity', 'GMpossibilities')
+        data.GMpossibilities = GM.getFlag('torgeternity', 'GMpossibilities');
+        for (let user of data.users) {
+            if (user.character) {
+                let userActor = await game.actors.get(user.character);
+                user.characterPossibilities = userActor.system.other.posibilities
+            } else {
+                user.characterPosibilities = 0
+            }
+
+        }
         return data
     }
     activateListeners(html) {
@@ -36,38 +45,39 @@ export default class TorgeternityPlayerList extends PlayerList {
 
 
     async addPossibility(ev) {
-        if (ev.currentTarget.getAttribute("data-targetId") === "GMpossibilities") {
+        if (ev.currentTarget.dataset.targetId === "GMpossibilities") {
             let GM = game.users.find(user => user.isGM)
             let newVal = (GM.getFlag('torgeternity', 'GMpossibilities')) + 1;
             GM.setFlag('torgeternity', 'GMpossibilities', newVal);
             ui.players.render(true);
 
         } else {
-            let targetActor = game.actors.get(ev.currentTarget.getAttribute("data-targetId"));
+            console.log()
+            let targetActor = game.actors.get(ev.currentTarget.dataset.targetId);
             await targetActor.update({
                 _id: targetActor.data._id,
-                data: {
+                system: {
                     other: {
-                        posibilities: (targetActor.data.data.other.posibilities) + 1
+                        posibilities: (targetActor.system.other.posibilities) + 1
                     }
                 },
             });
         }
     };
     async minusPossibility(ev) {
-        if (ev.currentTarget.getAttribute("data-targetId") === "GMpossibilities") {
+        if (ev.currentTarget.dataset.targetId === "GMpossibilities") {
             let GM = game.users.find(user => user.isGM)
             let newVal = (GM.getFlag('torgeternity', 'GMpossibilities')) - 1;
             GM.setFlag('torgeternity', 'GMpossibilities', newVal);
             ui.players.render(true);
 
         } else {
-            let targetActor = game.actors.get(ev.currentTarget.getAttribute("data-targetId"));
+            let targetActor = game.actors.get(ev.currentTarget.dataset.targetId);
             await targetActor.update({
                 _id: targetActor.data._id,
-                data: {
+                system: {
                     other: {
-                        posibilities: (targetActor.data.data.other.posibilities) - 1
+                        posibilities: (targetActor.system.other.posibilities) - 1
                     }
                 },
 
