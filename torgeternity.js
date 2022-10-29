@@ -12,7 +12,7 @@ import torgeternityCombat from "./module/dramaticScene/torgeternityCombat.js";
 import torgeternityCombatTracker from "./module/dramaticScene/torgeternityCombatTracker.js";
 import { alphabSort } from "./module/AlphabeticalSort.js";
 //Disabling Player List extension until it can be updated for version 10
-//import TorgeternityPlayerList from "./module/users/TorgeternityPlayerList.js";
+import TorgeternityPlayerList from "./module/users/TorgeternityPlayerList.js";
 import torgeternitySceneConfig from "./module/torgeternitySceneConfig.js";
 import torgeternityNav from "./module/torgeternityNav.js";
 import { registerTorgSettings } from "./module/settings.js";
@@ -74,7 +74,7 @@ Hooks.once("init", async function () {
 
     //---custom user class
     // Player list disabled for now
-    // CONFIG.ui.players = TorgeternityPlayerList;
+    CONFIG.ui.players = TorgeternityPlayerList;
 
     //---cards
     CONFIG.Cards.documentClass = torgeternityCards;
@@ -889,7 +889,7 @@ Hooks.on('updateActor', (actor, change, options, userId) => {
 Hooks.on("createActor", async (actor, options, userId) => {
     //run by first active GM. Will be skipped if no GM is present, but that's the best we can do at the moment
     if (actor.type === "stormknight" && game.userId === game.users.find(u => u.isGM && u.active).id) {
-        actor.createDefaultHand()
+        await actor.createDefaultHand()
     }
 
 })

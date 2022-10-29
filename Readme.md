@@ -11,6 +11,9 @@ while managing game systems.
 v. 2.7.1
 - Fixed issue where foreign compendiums would not hide when
   using the Compendium Folders module
+- More automation for shield users - toughness bonus now
+  automatically increased when actively defending (thanks Durak!)
+- The player sheet is back! (Thanks, Rwan!)
   
 v. 2.7.0
 - Fixed multiple compatibility warnings
