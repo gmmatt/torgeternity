@@ -394,6 +394,7 @@
                 "spirit": 0,
                 "tech": 10
             },
+            "type": "land",
             "topSpeed": {
                 "kph": 100
             },
