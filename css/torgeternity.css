@@ -159,8 +159,31 @@ div.actor ::-webkit-scrollbar {
     font-family: Alaska;
     font-size: 13px;
     text-transform: capitalize;
-    right: -110px;
-    top: 110px;
+    right: -158px;
+    top: 158px;
+}
+
+.window-content .actor-sheet .vehicle-description .editor {
+    grid-column: 1/9;
+    grid-row: 1/9;
+    background: url(../images/bckg-hex.webp);
+    background-size: 100% 90%;
+    background-repeat:no-repeat;
+    min-height: 200px;
+    min-width: 150px;
+    padding: 15% 10% 10% 10%;
+}
+
+.window-content .actor-sheet .vehicle-description .list-section-heading {
+    grid-column: 1/9;
+    grid-row: 1/2;
+    align-items: center;
+}
+
+.sheet .vehicle-description .editor-content {
+    height: 90%;
+    overflow-y: auto;
+    word-break: break-word;
 }
 
 .vehicle-tab[data-tab] {

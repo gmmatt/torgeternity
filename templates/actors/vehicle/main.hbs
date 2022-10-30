@@ -8,6 +8,7 @@
     <nav class="sheet-tabs tabs vehicle" data-group="primary">
         <a class="item" data-tab="stats">{{localize "torgeternity.sheetLabels.stats"}}</a>
         <a class="item" data-tab="effects">{{localize "torgeternity.sheetLabels.effects"}}</a>
+        <a class="item" data-tab="description">{{localize "torgeternity.sheetLabels.description"}}</a>
     </nav>
 
     <header class="sheet-header-vehicle">
@@ -161,6 +162,16 @@
                 {{> "systems/torgeternity/templates/parts/active-effects.hbs"}}
             </div>
         </div>
+
+        <div class="tab vehicle-description" data-group="primary" data-tab="description">
+
+            <h1 class="list-section-heading" style="color:white">
+                {{localize "torgeternity.sheetLabels.description"}}
+            </h1>
+            {{editor enrichedDescription target="system.description" button=true owner=owner editable=editable}}
+
+        </div>
+
 
     </section>
 </form>
