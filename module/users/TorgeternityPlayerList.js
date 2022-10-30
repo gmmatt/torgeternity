@@ -110,11 +110,11 @@ export default class TorgeternityPlayerList extends PlayerList {
 
                         game.users.forEach(user => {
                             if (user.character) {
-                                let target = game.actors.get(user.character.data._id);
+                                let target = game.actors.get(user.character.id);
                                 let newVal = parseInt(document.getElementById('possibilitiesValue').value)
                                 target.update({
-                                    _id: target.data._id,
-                                    data: {
+                                    id: target.id,
+                                    system: {
                                         other: {
                                             posibilities: newVal
                                         }
