@@ -135,11 +135,46 @@
             </table>
             <h2>Weapons</h2>
             <div class="item-list">
+                <li class="vehicle-weapon-header">
+                    <div class="image-header">
+
+                    </div>
+                    <div class="name-header">
+                        Name
+                    </div>
+                    <div class="gunner-header">
+                        Gunner
+                    </div>
+                    <div class="skill-header">
+                        Skill
+                    </div>
+                    <div class="range-header">
+                        Range
+                    </div>
+                    <div class="damage-header">
+                        Dmg (AP)
+                    </div>
+                    <div class="controls-header">
+
+                    </div>
+                </li>
                 {{#each heavyweapon as |item id|}}
-                    <li class="item" style="display:flex" data-item-id="{{item._id}}">
-                        <div><img src="{{item.img}}" title="{{item.name}}"/></div>
-                        <span class="item-name">{{item.name}}</span>
-                        <div class="item-controls">
+                    <li class="vehicle-weapon-list" data-item-id="{{item._id}}">
+                        <div class="vehicle-image"><img src="{{item.img}}" title="{{item.name}}"/></div>
+                        <div class="name">{{item.name}}</div>
+                        <div class="gunner">
+
+                        </div>
+                        <div class="skill">
+
+                        </div>
+                        <div class="range">
+
+                        </div>
+                        <div class="damage">
+
+                        </div>
+                        <div class="controls">
                             <a class="item-control item-tochat" title="{{localize 'torgeternity.iconeTitles.sendToChat'}}">
                                 <i class="fas fa-comment"></i>
                             </a>
@@ -150,7 +185,6 @@
                                 <i class="fas fa-trash"></i>
                             </a>
                         </div>
-
                     </li>
                 {{/each}}
             </div>

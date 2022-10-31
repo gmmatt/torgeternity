@@ -252,6 +252,78 @@ form.actor-sheet header.sheet-header-vehicle {
     width: 100px;
 }
 
+.window-content .actor-sheet li.vehicle-weapon-header {
+    display: flex;
+}
+
+.window-content .actor-sheet li.vehicle-weapon-header .image-header {
+    flex: 0 30px;
+}
+
+.window-content .actor-sheet li.vehicle-weapon-header div.name-header {
+    flex: 2;
+    text-align:center;
+}
+
+.window-content .actor-sheet li.vehicle-weapon-header .gunner-header {
+    flex: 2;
+    text-align:center;
+}
+
+.window-content .actor-sheet li.vehicle-weapon-header .skill-header {
+    flex: 1;
+    text-align:center;
+}
+
+.window-content .actor-sheet li.vehicle-weapon-header .range-header {
+    text-align:center;
+    flex: 1;
+}
+
+.window-content .actor-sheet li.vehicle-weapon-header .damage-header {
+    flex: 1;
+    text-align:center;
+}
+
+.window-content .actor-sheet li.vehicle-weapon-header .controls-header {
+    flex: 1;
+    text-align:center;
+}
+
+.window-content .actor-sheet li.vehicle-weapon-list {
+    display: flex;
+}
+
+.window-content .actor-sheet li.vehicle-weapon-list .vehicle-image {
+    flex: 0 30px;
+}
+
+.window-content .actor-sheet li.vehicle-weapon-list .name {
+    flex: 2;
+}
+
+.window-content .actor-sheet li.vehicle-weapon-list .gunner {
+    flex: 2;
+}
+
+.window-content .actor-sheet li.vehicle-weapon-list .skill {
+    flex: 1;
+}
+
+.window-content .actor-sheet li.vehicle-weapon-list .range {
+    flex: 1;
+}
+
+.window-content .actor-sheet li.vehicle-weapon-list .damage {
+    flex: 1;
+}
+
+.window-content .actor-sheet li.vehicle-weapon-list .controls {
+    flex: 1;
+    text-align:center;
+}
+
+
 
 /*                              */
 /* --------End Vehicles-------- */
