@@ -1571,8 +1571,8 @@ div.readme a.compendium {
 .chat-message .skill-roll-result {
     text-align: center;
     font-size: 24px;
-    font-family: "Palatino Linotype";
-    font-weight: bold;
+    font-family: "Alaska";
+    /*font-weight: bold; no longer needed as Alaska is standard bold*/
     padding: 3px 0px 0px 0px;
     margin: 0px;
 }
@@ -1580,7 +1580,7 @@ div.readme a.compendium {
 .chat-message .skill-roll-action-label {
     text-align: center;
     font-family: "Palatino Linotype";
-    font-size: 12px;
+    font-size: 14px;
     padding: 0px;
     margin: 0px;
 }
@@ -2978,7 +2978,7 @@ form.actor-sheet.threat .tab[data-tab].active .editor {
 
 .item .window-content form.item-sheet .item-description-textarea {
     font-family: "Palatino Linotype";
-    font-size: 12px;
+    font-size: 14px;
     border-radius: 15px;
     resize: none;
     padding: 5px 5px;
@@ -3006,7 +3006,7 @@ form.actor-sheet.threat .tab[data-tab].active .editor {
     border-left: 1px solid #c9c7b8;
     border-right: 1px solid #c9c7b8;
     font-family: "Signika";
-    font-size: 12px;
+    font-size: 14px;
     color: black;
 }
 
@@ -3030,7 +3030,7 @@ form.actor-sheet.threat .tab[data-tab].active .editor {
     text-align: center;
     border-left: 1px solid #c9c7b8;
     border-right: 1px solid #c9c7b8;
-    font-size: 12px;
+    font-size: 14px;
     font-family: "Signika";
     width: 25%;
 }
