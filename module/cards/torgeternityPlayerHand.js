@@ -84,12 +84,11 @@ export default class torgeternityPlayerHand extends CardsHand {
                     const card = destinyDeck.cards.get(firstCardKey);
                     card.toMessage({ content: `<div class="card-draw flexrow"><span class="card-chat-tooltip"><img class="card-face" src="${destinyDeck.img}"/><span><img src="${destinyDeck.img}"></span></span><h4 class="card-name">${game.i18n.localize("torgeternity.chatText.drawsCard")} ${destinyDeck.name}.</h4></div>` });
                 }
-                return this.object.draw(destinyDeck, 1, {face:1});
+                return this.object.draw(destinyDeck, 1, { face: 1 });
             case "drawCosm":
                 this.drawCosmDialog();
                 return;
             case "pass":
-                await card.setFlag("torgeternity", "pooled", false);
                 await this.playerPassDialog(card);
                 // await game.combats.apps[0].viewed.resetAll();
                 return;
@@ -198,7 +197,7 @@ export default class torgeternityPlayerHand extends CardsHand {
                     const card = cosmDeck.cards.get(firstCardKey);
                     card.toMessage({ content: `<div class="card-draw flexrow"><span class="card-chat-tooltip"><img class="card-face" src="${cosmDeck.img}"/><span><img src="${cosmDeck.img}"></span></span><h4 class="card-name">${game.i18n.localize("torgeternity.chatText.drawsCard")} ${cosmDeck.name}.</h4></div>` });
                 }
-                return this.object.draw(cosmDeck,1,{face:1}).catch(err => {
+                return this.object.draw(cosmDeck, 1, { face: 1 }).catch(err => {
                     ui.notifications.error(err.message);
                     return this;
                 });
