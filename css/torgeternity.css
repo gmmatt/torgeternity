@@ -145,9 +145,9 @@ div.actor ::-webkit-scrollbar {
     color: black;
 }
 
-/*                          */
-/* --------Vehicles-------- */
-/*                          */
+/*                                      */
+/* --------Actor/Vehicles Sheet-------- */
+/*                                      */
 
 .window-content .actor-sheet nav.tabs.vehicle {
     display: flex;
@@ -277,7 +277,7 @@ form.actor-sheet header.sheet-header-vehicle {
 
 .window-content .actor-sheet li.vehicle-weapon-header .range-header {
     text-align:center;
-    flex: 1;
+    flex: 2;
 }
 
 .window-content .actor-sheet li.vehicle-weapon-header .damage-header {
@@ -292,6 +292,16 @@ form.actor-sheet header.sheet-header-vehicle {
 
 .window-content .actor-sheet li.vehicle-weapon-list {
     display: flex;
+    align-items:center;
+}
+
+.window-content .actor-sheet li.vehicle-weapon-header .name-header,
+.window-content .actor-sheet li.vehicle-weapon-header .gunner-header,
+.window-content .actor-sheet li.vehicle-weapon-header .skill-header,
+.window-content .actor-sheet li.vehicle-weapon-header .range-header,
+.window-content .actor-sheet li.vehicle-weapon-header .damage-header,
+.window-content .actor-sheet li.vehicle-weapon-header .controls-header {
+    
 }
 
 .window-content .actor-sheet li.vehicle-weapon-list .vehicle-image {
@@ -300,22 +310,38 @@ form.actor-sheet header.sheet-header-vehicle {
 
 .window-content .actor-sheet li.vehicle-weapon-list .name {
     flex: 2;
+    font-family: "Signika";
+    font-size: 12px;
+    text-align: center;
 }
 
 .window-content .actor-sheet li.vehicle-weapon-list .gunner {
     flex: 2;
+    font-family: "Signika";
+    font-size: 12px;
+    text-align: center;
 }
 
 .window-content .actor-sheet li.vehicle-weapon-list .skill {
     flex: 1;
+    font-family: "Signika";
+    font-size: 12px;
+    text-align: center;
+    flex: 1;
 }
 
 .window-content .actor-sheet li.vehicle-weapon-list .range {
-    flex: 1;
+    flex: 2;
+    font-family: "Signika";
+    font-size: 12px;
+    text-align: center;
 }
 
 .window-content .actor-sheet li.vehicle-weapon-list .damage {
     flex: 1;
+    font-family: "Signika";
+    font-size: 12px;
+    text-align: center;
 }
 
 .window-content .actor-sheet li.vehicle-weapon-list .controls {
@@ -323,11 +349,37 @@ form.actor-sheet header.sheet-header-vehicle {
     text-align:center;
 }
 
+/*                          */
+/* --------Heavy Weapon Sheet Footer-------- */
+/*                          */
+
+.item .window-content form.item-sheet .heavy-weapon-footer {
+    display: flex;
+    grid-column: 2 / span 3;
+    margin:auto;
+}
+
+.item .window-content form.item-sheet .heavy-weapon-footer p {
+    font-family: Alaska;
+    font-size: 12px;
+}
+
+.item .window-content form.item-sheet .heavy-weapon-footer .heavy-weapon-gunners .gunner-input {
+    width: 125px;
+    font-family: Signika;
+    font-size: 13px;
+}
+
+.item .window-content form.item-sheet .heavy-weapon-footer .heavy-weapon-gunners .gunner-skill {
+    width: 35px;
+    font-family: Signika;
+    font-size: 13px;
+    text-align: center;
+}
 
 
-/*                              */
-/* --------End Vehicles-------- */
-/*                              */
+
+
 
 .window-app .window-content {
     font-family: Alaska;

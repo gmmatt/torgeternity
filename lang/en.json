@@ -122,7 +122,9 @@
             "restrictions": "Restrictions",
             "minStrength": "Min Str",
             "ap": "AP",
-            "chatNote": "Chat Note"
+            "chatNote": "Chat Note",
+            "gunner": "Gunner",
+            "skill": "Skill"
         },
         "stats": {
             "wounds": "Wounds",

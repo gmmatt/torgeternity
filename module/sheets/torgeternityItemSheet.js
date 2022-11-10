@@ -13,7 +13,7 @@ export default class torgeternityItemSheet extends ItemSheet {
                 this.options.height = this.position.height = 710;
                 break;
             case "heavyweapon":
-                this.options.height = this.position.height = 710;
+                this.options.height = this.position.height = 730;
                 break;
             case "meleeweapon":
                 this.options.height = this.position.height = 675;
