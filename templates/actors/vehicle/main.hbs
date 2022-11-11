@@ -175,7 +175,7 @@
                             {{item.system.damage}}  ( {{item.system.ap}} )
                         </div>
                         <div class="controls">
-                            <a class="item-control item-attackRoll" title="{{localize 'torgeternity.iconeTitles.attackRoll'}}"">
+                            <a class="item-control item-attackRoll" title="{{localize 'torgeternity.iconeTitles.attackRoll'}}">
                                 <i class="fas fa-dice-d20"></i>
                             </a>
                             <a class="item-control item-edit" title="{{localize 'torgeternity.iconeTitles.edit'}}">
@@ -189,6 +189,46 @@
                 {{/each}}
             </div>
             <h2>Add-Ons</h2>
+            <div class="item-list">
+                <li class="add-on-header">
+                    <div class="image-header">
+
+                    </div>
+                    <div class="name-header">
+                        Name
+                    </div>
+                    <div class="description-header">
+                        Description
+                    </div>
+                    <div class="controls-header">
+
+                    </div>
+                </li>
+                {{#each vehicleAddOn as |item id|}}
+                    <li class="item vehicle-add-on-list" data-item-id="{{item._id}}">
+                        <div class="add-on-image">
+                            <img src="{{item.img}}" title="{{item.name}}"/>
+                        </div>
+                        <div class="add-on-name">
+                            {{item.name}}
+                        </div>
+                        <div class="add-on-description">
+                            {{item.system.short-description}}
+                        </div>
+                        <div class="controls">
+                            <a class="item-control item-tochat" title="{{localize 'torgeternity.iconeTitles.sendToChat'}}">
+                                <i class="fas fa-comment"></i>
+                            </a>
+                            <a class="item-control item-edit" title="{{localize 'torgeternity.iconeTitles.edit'}}">
+                                <i class="fas fa-edit"></i>
+                            </a>
+                            <a class="item-control item-delete" title="{{localize 'torgeternity.iconeTitles.delete'}}">
+                                <i class="fas fa-trash"></i>
+                            </a>
+                        </div>
+                    </li>
+                {{/each}}
+            </div>
         </div>
 
         <div class="tab effects" data-group="primary" data-tab="effects">

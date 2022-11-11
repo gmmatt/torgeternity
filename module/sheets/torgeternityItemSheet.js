@@ -44,6 +44,10 @@ export default class torgeternityItemSheet extends ItemSheet {
             case "customAttack":
                 this.options.height = this.position.height = 675;
                 break;
+            case "vehicleAddOn":
+                this.options.height = this.position.height = 620;
+                this.options.width = this.position.width = 465;
+                break;
             default:
                 this.options.height = this.position.height = 560;
         }

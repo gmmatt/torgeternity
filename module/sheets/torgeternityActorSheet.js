@@ -120,6 +120,9 @@ export default class torgeternityActorSheet extends ActorSheet {
         data.cosmCard = data.items.filter(function (item) {
             return item.type == "cosmCard"
         });
+        data.vehicleAddOn = data.items.filter(function (item) {
+            return item.type == "vehicleAddOn"
+        });
 
         // Enrich Text Editors
         switch(this.object.type) {

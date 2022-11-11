@@ -14,8 +14,12 @@
     <section class="sheet-body">
         <div class="tab stats" data-group="primary" data-tab="stats">
             <div class="main-content">
-                <div class="sheet-content">
+            <div class="sheet-content">
                     <div class="item-description-textarea">
+                        <p class="item-data-label">
+                            {{localize "torgeternity.gear.short-description"}}&nbsp;
+                            <input name="system.short-description" type="text" value="{{item.system.short-description}}" class="input-box" />
+                        </p>
                         {{editor description target="system.description" button=true owner=owner editable=editable}}
                     </div>
                 </div>

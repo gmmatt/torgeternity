@@ -252,16 +252,24 @@ form.actor-sheet header.sheet-header-vehicle {
     width: 100px;
 }
 
-.window-content .actor-sheet li.vehicle-weapon-header {
+.window-content .actor-sheet li.vehicle-weapon-header,
+.window-content .actor-sheet li.add-on-header {
     display: flex;
 }
 
-.window-content .actor-sheet li.vehicle-weapon-header .image-header {
+.window-content .actor-sheet li.vehicle-weapon-header .image-header,
+.window-content .actor-sheet li.add-on-header .image-header {
     flex: 0 30px;
 }
 
-.window-content .actor-sheet li.vehicle-weapon-header div.name-header {
+.window-content .actor-sheet li.vehicle-weapon-header div.name-header,
+.window-content .actor-sheet li.add-on-header .name-header {
     flex: 2;
+    text-align:center;
+}
+
+.window-content .actor-sheet li.add-on-header .description-header {
+    flex: 6;
     text-align:center;
 }
 
@@ -285,12 +293,14 @@ form.actor-sheet header.sheet-header-vehicle {
     text-align:center;
 }
 
-.window-content .actor-sheet li.vehicle-weapon-header .controls-header {
+.window-content .actor-sheet li.vehicle-weapon-header .controls-header,
+.window-content .actor-sheet li.add-on-header .controls-header {
     flex: 1;
     text-align:center;
 }
 
-.window-content .actor-sheet li.vehicle-weapon-list {
+.window-content .actor-sheet li.vehicle-weapon-list,
+.window-content .actor-sheet li.vehicle-add-on-list {
     display: flex;
     align-items:center;
 }
@@ -304,12 +314,21 @@ form.actor-sheet header.sheet-header-vehicle {
     
 }
 
-.window-content .actor-sheet li.vehicle-weapon-list .vehicle-image {
+.window-content .actor-sheet li.vehicle-weapon-list .vehicle-image,
+.window-content .actor-sheet li.vehicle-add-on-list .add-on-image {
     flex: 0 30px;
 }
 
-.window-content .actor-sheet li.vehicle-weapon-list .name {
+.window-content .actor-sheet li.vehicle-weapon-list .name,
+.window-content .actor-sheet li.vehicle-add-on-list .add-on-name {
     flex: 2;
+    font-family: "Signika";
+    font-size: 12px;
+    text-align: center;
+}
+
+.window-content .actor-sheet li.vehicle-add-on-list .add-on-description {
+    flex: 6;
     font-family: "Signika";
     font-size: 12px;
     text-align: center;
@@ -344,7 +363,8 @@ form.actor-sheet header.sheet-header-vehicle {
     text-align: center;
 }
 
-.window-content .actor-sheet li.vehicle-weapon-list .controls {
+.window-content .actor-sheet li.vehicle-weapon-list .controls,
+.window-content .actor-sheet li.vehicle-add-on-list .controls {
     flex: 1;
     text-align:center;
 }

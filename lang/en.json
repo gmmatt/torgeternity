@@ -124,7 +124,8 @@
             "ap": "AP",
             "chatNote": "Chat Note",
             "gunner": "Gunner",
-            "skill": "Skill"
+            "skill": "Skill",
+            "short-description": "Short Description"
         },
         "stats": {
             "wounds": "Wounds",

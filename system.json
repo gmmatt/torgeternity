@@ -14,7 +14,7 @@
         "minimum": 10,
         "verified": "10.288"
     },
-    "templateVersion": "4.5.2",
+    "templateVersion": "4.5.3",
     "esmodules": [
         "torgeternity.js"
     ],
