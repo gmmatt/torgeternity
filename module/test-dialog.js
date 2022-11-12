@@ -33,6 +33,23 @@ export class testDialog extends FormApplication {
         data.test.sizeModifier = 0;
         data.test.vulnerableModifier = 0;
 
+        // Set Modifiers for Vehicles
+        if (this.test.testType === "chase") {
+            if (this.test.vehicleSpeed < 11) {
+                data.test.speedModifier = 0
+            } else if (this.test.vehicleSpeed < 15) {
+                data.test.speedModifier = 2
+            } else if (this.test.vehicleSpeed < 17) {
+                data.test.speedModifier = 4
+            } else {
+                data.test.speedModifier = 6
+            }
+            // maneuverModifier already set in torgeternityActorSheet
+        } else {
+            data.test.speedModifier = 0;
+            data.test.maneuverModifier = 0;
+        }
+
         //
         // ***Set Target Data***
         // Transfer data here because passing the entire target to a chat message tends to degrade the data

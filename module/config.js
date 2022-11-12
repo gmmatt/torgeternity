@@ -121,7 +121,9 @@ torgeternity.dnTypes = {
     targetWillpowerMind: "torgeternity.dnTypes.targetWillpowerMind",
     targetLandVehicles: "torgeternity.dnTypes.targetLandVehicles",
     targetWaterVehicles: "torgeternity.dnTypes.targetWaterVehicles",
-    targetAirVehicles: "torgeternity.dnTypes.targetAirVehicles"
+    targetAirVehicles: "torgeternity.dnTypes.targetAirVehicles",
+    highestSpeed: "torgeternity.dnTypes.highestSpeed",
+    targetOperatorSkill: "torgeternity.dnTypes.targetOperatorSkill"
 
 }
 
@@ -133,7 +135,8 @@ torgeternity.dnTypesBasic = {
     hard: "torgeternity.dnTypes.hard",
     veryHard: "torgeternity.dnTypes.veryHard",
     heroic: "torgeternity.dnTypes.heroic",
-    nearImpossible: "torgeternity.dnTypes.nearImpossible"
+    nearImpossible: "torgeternity.dnTypes.nearImpossible",
+    highestSpeed: "torgeternity.dnTypes.highestSpeed"
 }
 
 

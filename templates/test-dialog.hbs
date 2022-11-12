@@ -83,6 +83,12 @@
 							{{#if test.vulnerableModifier}}
 								{{localize "torgeternity.statusEffects.targetVulnerability"}}: +{{test.vulnerableModifier}}<br>
 							{{/if}}
+                            {{#if test.speedModifier}}
+                                {{localize "torgeternity.stats.speedModifier"}}: {{test.speedModifier}}<br>
+                            {{/if}}
+                            {{#if test.maneuverModifier}}
+                                {{localize "torgeternity.stats.maneuverModifier"}}: {{test.maneuverModifier}}<br>
+                            {{/if}}
                     </div>
                 </fieldset>
             </td>

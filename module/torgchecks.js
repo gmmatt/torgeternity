@@ -30,6 +30,8 @@ export function renderSkillChat(test) {
             case "power":
                 test.chatTitle = test.powerName + " " + game.i18n.localize('torgeternity.chatText.test');
                 break;
+            case "chase":
+                test.chatTitle = game.i18n.localize("torgeternity.sheetLabels.chatText.chase");
             default:
                 test.chatTitle = test.skillName + " " + game.i18n.localize('torgeternity.chatText.test');
         }
@@ -183,6 +185,26 @@ export function renderSkillChat(test) {
             } else {
                 test.DN = target.attributes.dexterity
             }
+            break;
+        case "highestSpeed":
+            // Find the fastest participant in the active combat
+            const combatants = game.combats.active.turns;
+            const combatantCount = game.combats.active.turns.length;
+            var combatantRun = 0;
+            var combatantSpeed = 0;
+            var highestSpeed = 0;
+            for (let i=0; i < combatantCount; i++) {
+                if (combatants[i].actor.type === "vehicle") {
+                    combatantSpeed = combatants[i].actor.system.topSpeed.value;
+                } else {
+                    combatantRun = combatants[i].actor.system.other.run;
+                    combatantSpeed = getTorgValue(combatantRun);
+                }
+                if (combatantSpeed > highestSpeed) {
+                    highestSpeed = combatantSpeed
+                }
+            }
+            test.DN = highestSpeed;
             break;
         default:
             test.DN = 10
@@ -391,6 +413,20 @@ export function renderSkillChat(test) {
             test.displayModifiers === true;
             test.modifiers += parseInt(test.powerModifier)
             test.modifierText += game.i18n.localize('torgeternity.chatText.check.modifier.powerModifier') + " " + test.powerModifier + "\n"
+        }
+    }
+
+    // Apply vehicle-related modifiers
+    if (test.testType === "chase") {
+        if (test.speedModifier > 0) {
+            test.displayModifiers === true;
+            test.modifiers += parseInt(test.speedModifier);
+            test.modifierText += game.i18n.localize('torgeternity.stats.speedModifier') + " " + test.speedModifier + "\n"
+        }
+        if (test.maneuverModifier > 0 || test.maneuverModifier < 0) {
+            test.displayModifiers === true;
+            test.modifiers += parseInt(test.maneuverModifier);
+            test.modifierText += game.i18n.localize('torgeternity.stats.maneuverModifier') + " " + test.maneuverModifier + "\n"
         }
     }
 
@@ -635,7 +671,7 @@ export function renderSkillChat(test) {
     }
 
     // Label as Skill vs Attribute Test and turn on BD option if needed
-    if (test.testType === "skill" || test.testType === "interactionAttack") {
+    if (test.testType === "skill" || test.testType === "interactionAttack" || test.testType === "chase") {
         test.typeLabel = `${game.i18n.localize("torgeternity.chatText.skillTestLabel")}`,
             test.bdStyle = "display:none"
     } else if (test.testType === "attack") {
@@ -643,7 +679,7 @@ export function renderSkillChat(test) {
     } else if (test.testType === "power") {
         test.typeLabel = `${game.i18n.localize("torgeternity.chatText.skillTestLabel")}`;
         if (test.isAttack === true) {
-            test.bdStyle = "display:"
+            test.bdStyle = "display:" 
         } else {
             test.bdStyle = "display:none"
         }

@@ -310,6 +310,10 @@ export default class torgeternityActorSheet extends ActorSheet {
         }
 
         if (this.actor.isOwner) {
+            html.find(".chase-roll").click(this._onChaseRoll.bind(this));
+        }
+
+        if (this.actor.isOwner) {
             html.find(".apply-fatigue").click(ev => {
                 let newShock = parseInt(this.actor.system.shock.value) + parseInt(ev.currentTarget.dataset.fatigue)
                 this.actor.update({ 'system.shock.value': newShock })
@@ -428,6 +432,31 @@ export default class torgeternityActorSheet extends ActorSheet {
             DNDescriptor: "standard",
             attackOptions: false,
             rollTotal: 0 // A zero indicates that a rollTotal needs to be generated when renderSkillChat is called //
+        }
+
+        let dialog = new testDialog(test);
+        dialog.render(true);
+
+    }
+
+    async _onChaseRoll(event) {
+
+        let test = {
+            testType: "chase",
+            customSkill: "false",
+            actor: this.actor.uuid,
+            actorPic: this.actor.img,
+            actorType: "vehicle",
+            isAttack: false,
+            skillName: "Vehicle Chase",
+            skillValue: event.currentTarget.dataset.skillValue,
+            targets: Array.from(game.user.targets),
+            applySize: false,
+            DNDescriptor: "highestSpeed",
+            attackOptions: false,
+            rollTotal: 0,
+            vehicleSpeed: event.currentTarget.dataset.speed,
+            maneuverModifier: event.currentTarget.dataset.maneuver
         }
 
         let dialog = new testDialog(test);

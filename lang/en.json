@@ -131,7 +131,9 @@
             "wounds": "Wounds",
             "shock": "Shock",
             "possibilities": "Possibilities",
-            "description": "Description"
+            "description": "Description",
+            "speedModifier": "Vehicle Speed Modifier",
+            "maneuverModifier": "Vehicle Maneuver Modifier"
         },
         "perks": {
             "category": "Category",
@@ -196,7 +198,9 @@
             "targetWillpowerMind": "Target willpower or Mind",
             "targetLandVehicles": "Target land vehicles or Dexterity",
             "targetAirVehicles": "Target air vehicles or Dexterity",
-            "targetWaterVehicles": "Target water vehicles or Dexterity"
+            "targetWaterVehicles": "Target water vehicles or Dexterity",
+            "highestSpeed": "Fastest Participant in Combat Tracker",
+            "targetOperatorSkill": "Target Vehicle Operator Skill"
         },
         "dnTypesBasic": {
             "veryEasy": "Very Easy (6)",
@@ -398,7 +402,21 @@
             "interactionSkills": "Interaction",
             "otherSkills": "Other",
             "targetDefense": "Target Defense",
-            "defensesTip": "Click to roll for/disable active defenses"
+            "defensesTip": "Click to roll for/disable active defenses",
+            "name": "Name",
+            "type": "Type",
+            "operator": "Operator",
+            "skill": "Skill",
+            "defense": "Defense",
+            "chase": "Chase",
+            "stunt": "Stunt",
+            "collision": "Collision",
+            "gunner": "Gunner",
+            "range": "Range",
+            "damageAP": "Dmg (AP)",
+            "addOns": "Add-Ons"
+            
+
         },
         "combat": {
             "nextKeep": "Next Round (Keep Current Card)",
@@ -530,6 +548,7 @@
             "actionTotal": "Action Total",
             "skillTestLabel": "Skill Value",
             "attributeTestLabel": "Attribute",
+            "chase": "Chase Test",
             "dieTotal": "Die Total",
             "unskilled": "Unskilled",
             "possibleDisconnect": "Possible Disconnect",
