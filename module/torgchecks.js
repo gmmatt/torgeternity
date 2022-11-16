@@ -32,6 +32,8 @@ export function renderSkillChat(test) {
                 break;
             case "chase":
                 test.chatTitle = game.i18n.localize("torgeternity.sheetLabels.chatText.chase");
+            case "stunt":
+                test.chatTitle = game.i18n.localize("torgeternity.sheetLabels.chatText.stunt");
             default:
                 test.chatTitle = test.skillName + " " + game.i18n.localize('torgeternity.chatText.test');
         }
@@ -205,6 +207,9 @@ export function renderSkillChat(test) {
                 }
             }
             test.DN = highestSpeed;
+            break;
+        case "targetVehicleDefense":
+            test.DN = target.defenses.vehicle;
             break;
         default:
             test.DN = 10
@@ -417,7 +422,7 @@ export function renderSkillChat(test) {
     }
 
     // Apply vehicle-related modifiers
-    if (test.testType === "chase") {
+    if (test.testType === "chase" || test.testType === "stunt") {
         if (test.speedModifier > 0) {
             test.displayModifiers === true;
             test.modifiers += parseInt(test.speedModifier);
@@ -671,7 +676,7 @@ export function renderSkillChat(test) {
     }
 
     // Label as Skill vs Attribute Test and turn on BD option if needed
-    if (test.testType === "skill" || test.testType === "interactionAttack" || test.testType === "chase") {
+    if (test.testType === "skill" || test.testType === "interactionAttack" || test.testType === "chase" || test.testType === "stunt") {
         test.typeLabel = `${game.i18n.localize("torgeternity.chatText.skillTestLabel")}`,
             test.bdStyle = "display:none"
     } else if (test.testType === "attack") {

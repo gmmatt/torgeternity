@@ -314,6 +314,10 @@ export default class torgeternityActorSheet extends ActorSheet {
         }
 
         if (this.actor.isOwner) {
+            html.find(".stunt-roll").click(this._onStuntRoll.bind(this));
+        }
+
+        if (this.actor.isOwner) {
             html.find(".apply-fatigue").click(ev => {
                 let newShock = parseInt(this.actor.system.shock.value) + parseInt(ev.currentTarget.dataset.fatigue)
                 this.actor.update({ 'system.shock.value': newShock })
@@ -463,6 +467,40 @@ export default class torgeternityActorSheet extends ActorSheet {
         dialog.render(true);
 
     }
+
+    async _onStuntRoll(event) {
+
+        var dnDescriptor = "standard";
+
+        if (Array.from(game.user.targets).length > 0) {
+            var target = Array.from(game.user.targets)[0].actor;
+            if (target.type === "vehicle") {
+                dnDescriptor = "targetVehicleDefense"
+            }
+        }
+        let test = {
+            testType: "stunt",
+            customSkill: "false",
+            actor: this.actor.uuid,
+            actorPic: this.actor.img,
+            actorType: "vehicle",
+            isAttack: false,
+            skillName: "Vehicle Stunt",
+            skillValue: event.currentTarget.dataset.skillValue,
+            targets: Array.from(game.user.targets),
+            applySize: false,
+            DNDescriptor: dnDescriptor,
+            attackOptions: false,
+            rollTotal: 0,
+            vehicleSpeed: event.currentTarget.dataset.speed,
+            maneuverModifier: event.currentTarget.dataset.maneuver
+        }
+
+        let dialog = new testDialog(test);
+        dialog.render(true);
+
+    }
+
 
     _onInteractionAttack(event) {
         var dnDescriptor = "standard";

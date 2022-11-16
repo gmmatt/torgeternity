@@ -239,9 +239,8 @@ form.actor-sheet header.sheet-header-vehicle {
     width: 200px;   
 }
 
-.window-app .window-content .actor-sheet button.operator-button,
 .window-app .window-content .actor-sheet button.chase-roll,
-.window-app .window-content .actor-sheet button.maneuver-roll,
+.window-app .window-content .actor-sheet button.stunt-roll,
 .window-app .window-content .actor-sheet button.collision-roll {
     border: 1px;
     border-radius: 4px;

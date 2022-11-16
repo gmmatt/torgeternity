@@ -133,8 +133,13 @@
                                 <i class="fas fa-dice-d20"></i>
                             {{localize "torgeternity.sheetLabels.chase"}}
                         </button>
-                        <button class="operator-button"><i class="fas fa-dice-d20"></i>{{localize "torgeternity.sheetLabels.stunt"}}</button>
-                        <button class="operator-button"><i class="fas fa-dice-d20"></i>{{localize "torgeternity.sheetLabels.collision"}}</button>
+                        <button class="stunt-roll" data-skill-value = "{{actor.system.operator.skillValue}}"
+                            data-speed = "{{actor.system.topSpeed.value}}" 
+                            data-maneuver = "{{actor.system.maneuver}}">
+                                <i class="fas fa-dice-d20"></i>
+                            {{localize "torgeternity.sheetLabels.stunt"}}
+                        </button>
+                        <button class="collision-roll"><i class="fas fa-dice-d20"></i>{{localize "torgeternity.sheetLabels.collision"}}</button>
                    </th>
                 </tr>
             </table>

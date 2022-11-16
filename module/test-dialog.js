@@ -45,6 +45,8 @@ export class testDialog extends FormApplication {
                 data.test.speedModifier = 6
             }
             // maneuverModifier already set in torgeternityActorSheet
+        } else if (this.test.testType === "stunt") {
+            // Do Nothing - this leaves maneuverModifier in place
         } else {
             data.test.speedModifier = 0;
             data.test.maneuverModifier = 0;
@@ -58,50 +60,61 @@ export class testDialog extends FormApplication {
             // Identify the first target
             var target = Array.from(data.test.targets)[0].actor;
 
-            data.test.target = {
-                present: true,
-                type: target.data.type,
-                skills: target.data.data.skills,
-                attributes:target.data.data.attributes,
-                toughness: target.data.data.other.toughness,
-                armor: target.data.data.other.armor,
-                defenses: {
-                    dodge: target.data.data.dodgeDefense,
-                    unarmedCombat: target.data.data.unarmedCombatDefense,
-                    meleeWeapons: target.data.data.meleeWeaponsDefense,
-                    intimidation: target.data.data.intimidationDefense,
-                    maneuver: target.data.data.maneuverDefense,
-                    taunt: target.data.data.tauntDefense,
-                    trick:target.data.data.trickDefense
+            // Set vehicle defense if needed
+            if (target.type === "vehicle") {
+                data.test.target = {
+                    defenses: {
+                        vehicle: target.system.defense
+                    }
+                } 
+            } else {
+                data.test.target = {
+                    present: true,
+                    type: target.data.type,
+                    skills: target.data.data.skills,
+                    attributes:target.data.data.attributes,
+                    toughness: target.data.data.other.toughness,
+                    armor: target.data.data.other.armor,
+                    defenses: {
+                        dodge: target.data.data.dodgeDefense,
+                        unarmedCombat: target.data.data.unarmedCombatDefense,
+                        meleeWeapons: target.data.data.meleeWeaponsDefense,
+                        intimidation: target.data.data.intimidationDefense,
+                        maneuver: target.data.data.maneuverDefense,
+                        taunt: target.data.data.tauntDefense,
+                        trick:target.data.data.trickDefense
+                    }
                 }
-            }
-            if (this.test.applySize == true) {
-                var sizeBonus = target.data.data.details.sizeBonus;
-                switch (sizeBonus) {
-                    case "normal":
-                        data.test.sizeModifier = 0
-                        break;
-                    case "tiny":
-                        data.test.sizeModifier = -6;
-                        break;
-                    case "verySmall":
-                        data.test.sizeModifier = -4;
-                        break;
-                    case "small":
-                        data.test.sizeModifier = -2;
-                        break;
-                    case "large":
-                        data.test.sizeModifier = 2;
-                        break;
-                    case "veryLarge":
-                        data.test.sizeModifier = 4;
-                        break;
-                    default:
-                        data.test.sizeModifier = 0;
-                }
-            }
 
-            data.test.vulnerableModifier = target.data.data.vulnerableModifier;
+
+                if (this.test.applySize == true) {
+                    var sizeBonus = target.data.data.details.sizeBonus;
+                    switch (sizeBonus) {
+                        case "normal":
+                            data.test.sizeModifier = 0
+                            break;
+                        case "tiny":
+                            data.test.sizeModifier = -6;
+                            break;
+                        case "verySmall":
+                            data.test.sizeModifier = -4;
+                            break;
+                        case "small":
+                            data.test.sizeModifier = -2;
+                            break;
+                        case "large":
+                            data.test.sizeModifier = 2;
+                            break;
+                        case "veryLarge":
+                            data.test.sizeModifier = 4;
+                            break;
+                        default:
+                            data.test.sizeModifier = 0;
+                    }
+                }
+
+                data.test.vulnerableModifier = target.data.data.vulnerableModifier;
+        }
 
         } else {
             data.test.target = {

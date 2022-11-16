@@ -200,7 +200,7 @@
             "targetAirVehicles": "Target air vehicles or Dexterity",
             "targetWaterVehicles": "Target water vehicles or Dexterity",
             "highestSpeed": "Fastest Participant in Combat Tracker",
-            "targetOperatorSkill": "Target Vehicle Operator Skill"
+            "targetVehicleDefense": "Target Vehicle Defense"
         },
         "dnTypesBasic": {
             "veryEasy": "Very Easy (6)",
@@ -549,6 +549,7 @@
             "skillTestLabel": "Skill Value",
             "attributeTestLabel": "Attribute",
             "chase": "Chase Test",
+            "stunt": "Stunt Test",
             "dieTotal": "Die Total",
             "unskilled": "Unskilled",
             "possibleDisconnect": "Possible Disconnect",

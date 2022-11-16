@@ -123,7 +123,7 @@ torgeternity.dnTypes = {
     targetWaterVehicles: "torgeternity.dnTypes.targetWaterVehicles",
     targetAirVehicles: "torgeternity.dnTypes.targetAirVehicles",
     highestSpeed: "torgeternity.dnTypes.highestSpeed",
-    targetOperatorSkill: "torgeternity.dnTypes.targetOperatorSkill"
+    targetVehicleDefense: "torgeternity.dnTypes.targetVehicleDefense"
 
 }
 
