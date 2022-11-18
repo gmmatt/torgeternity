@@ -8,6 +8,12 @@
 For manual installation, use the provided manifest URL in the "*Install System*" popup window 
 while managing game systems.
 
+v. 2.7.2
+- Fixed issue involving resetting possibilities in player list
+- Formatting updates test chat output
+- Cards should now remain pooled when passed to other players
+- Additional options for hiding official compendiums
+
 v. 2.7.1
 - Fixed issue where foreign compendiums would not hide when
   using the Compendium Folders module
