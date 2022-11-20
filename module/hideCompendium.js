@@ -15,8 +15,9 @@ export function hideCompendium(defaultLang, tabDirectory) {
                 break;
             case "fr":
                 hiddingKeys = ["(en)", "(de)"]
-
                 break;
+            default:
+                hiddingKeys = ["(en)", "(de)", "(fr)"]
 
         }
 

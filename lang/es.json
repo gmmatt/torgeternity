@@ -1,5 +1,5 @@
 {
-    "torgeternity":{
+    "torgeternity": {
         "attributes": {
             "charisma": "Carisma",
             "dexterity": "Destreza",
@@ -91,10 +91,10 @@
             "watervehicles": "vehículos acuáticos",
             "willpower": "fuerza voluntad"
         },
-        "gear":{
-            "description":"Descripción",
+        "gear": {
+            "description": "Descripción",
             "techlevel": "Nivel Tec.",
-			"tl": "NT",
+            "tl": "NT",
             "price": "Precio",
             "value": "Valor",
             "damageType": "Tipo Daño",
@@ -113,33 +113,33 @@
             "wounds": "Heridas",
             "toughness": "Resistencia",
             "possibilities": "Posibilidad",
-			"poss": "Pos.",
+            "poss": "Pos.",
             "tappingDifficulty": "Golpe Dificultad",
-			"tappingDifficultyAbbr": "Golp",
+            "tappingDifficultyAbbr": "Golp",
             "purpose": "Propósito",
             "powers": "Poderes",
             "restrictions": "Restricciones",
-			"minStrength": "FUE Min",
-			"ap": "PA",
-			"chatNote": "Nota en Chat"
+            "minStrength": "FUE Min",
+            "ap": "PA",
+            "chatNote": "Nota en Chat"
         },
-        "stats":{
+        "stats": {
             "wounds": "Heridas",
             "shock": "Shock",
             "possibilities": "Posibilidad",
-			"description": "Descripción"
+            "description": "Descripción"
         },
-        "perks":{
+        "perks": {
             "category": "Categoria",
             "cosm": "Cosmos",
             "prerequisites": "Prerrequisitos",
             "timestaken": "Nivel",
             "description": "Descripción"
         },
-        "enhancements":{
+        "enhancements": {
             "perk": "Don",
             "description": "Descripción",
-			"enhances": "Mejora"
+            "enhances": "Mejora"
         },
         "powers": {
             "axiom": "Axioma",
@@ -153,8 +153,8 @@
             "description": "Descripción",
             "good": "Buen Resultado",
             "outstanding": "Resultado Espectacular",
-			"attack": "Ataque",
-			"ap": "PA"
+            "attack": "Ataque",
+            "ap": "PA"
         },
         "cosms": {
             "none": "(Ninguno)",
@@ -189,11 +189,11 @@
             "psionics": "Psiónica",
             "pulpPowers": "Poderes Pulp",
             "reality": "Realidad",
-            "savagery":"Barbarie",
+            "savagery": "Barbarie",
             "social": "Social",
             "spellcraft": "Conjuros",
-			"racial": "Racial",
-			"hacker": "Hacker",
+            "racial": "Racial",
+            "hacker": "Hacker",
             "human": "Humano",
             "abomination": "Abominación",
             "aspirant": "Aspirante",
@@ -203,27 +203,27 @@
             "hope": "Esperanza"
         },
         "sheetLabels": {
-			"stormknight":"CaballeroTormenta",
-			"stats": "Atributos",
+            "stormknight": "CaballeroTormenta",
+            "stats": "Atributos",
             "perks": "Dones",
-			"perksAbilities": "Dones/Habil.",
-			"gear": "Equipo",
+            "perksAbilities": "Dones/Habil.",
+            "gear": "Equipo",
             "powers": "Poderes",
-			"effects": "Efectos",
+            "effects": "Efectos",
             "background": "Trasfondo",
-			"backgroundDescription": "Trasfondo",
+            "backgroundDescription": "Trasfondo",
             "backgroundAndNotes": "Trasfondo y Notas",
             "enhancements": "Mejoras",
             "generalGear": "Equipo",
             "armor": "Armadura",
-			"shield": "Escudo",
+            "shield": "Escudo",
             "shields": "Escudos",
             "meleeWeapons": "Armas CC",
             "missileWeapons": "Armas Proyectil",
             "firearms": "Armas Fuego",
             "implants": "Implantes",
             "heavyWeapons": "Armas Pesadas",
-			"explosives": "Explosivos",
+            "explosives": "Explosivos",
             "vehicles": "Vehículos",
             "spells": "Conjuros",
             "miracles": "Milagros",
@@ -231,20 +231,20 @@
             "specialAbility": "Habilidades Especiales",
             "threat": "Amenaza",
             "skills": "Habilidades",
-			"favored":"Preferente",
+            "favored": "Preferente",
             "possibilitypotential": "Posibilidad (Potencial)",
             "size": "Tamaño",
             "possibilities": "Posibilidades",
-			"up": "Aumento",
+            "up": "Aumento",
             "equipment": "Equipo",
             "specialabilities": "Habilidades Especiales",
-			"wounds": "Heridas",
+            "wounds": "Heridas",
             "shock": "Shock",
             "attributes": "Atributos",
             "move": "Movimiento",
             "run": "Carrera",
             "toughness": "Resistencia",
-			"tough": "Res.",
+            "tough": "Res.",
             "magic": "Mágico",
             "social": "Social",
             "spirit": "Espiritual",
@@ -253,7 +253,7 @@
             "adds": "Adición",
             "total": "Total",
             "defenses": "Defensa",
-			"activeDefense": "Defensa Activa",
+            "activeDefense": "Defensa Activa",
             "melee": "Cuerpo a Cuerpo",
             "unarmed": "Sin Armas",
             "xp": "PX",
@@ -262,12 +262,12 @@
             "clearance": "Nivel",
             "race": "Raza",
             "weapons": "Armas",
-			"attacks": "Ataques",
+            "attacks": "Ataques",
             "armorAndShields": "Armadura y Escudo",
             "other": "Otro",
             "spell": "Conjuro",
             "miracle": "Milagro",
-			"psionic": "Psiónica",
+            "psionic": "Psiónica",
             "psionicPower": "Poder Psiónico",
             "abilities": "Habilidades",
             "implant": "Implante",
@@ -277,7 +277,7 @@
             "details": "Detalles",
             "goodResult": "Buen Resultado",
             "outstandingResult": "Espectacular Resultado",
-			"effectCreate": "Crear Efecto",
+            "effectCreate": "Crear Efecto",
             "add": "Adición",
             "derivedValues": "Valor Resultado",
             "tempEffects": "Efecto Temporal",
@@ -337,7 +337,6 @@
             "pool": "reserva",
             "skillRollHint": "Clic Izq. tirada avanzada",
             "toggleSkillDisplay": "Clic cambia listado Habilidad"
-			
         },
         "combat": {
             "nextKeep": "Sigu. Turno (Mantener Carta)",
@@ -355,13 +354,13 @@
             "firearm": "Arma Fuego",
             "implant": "Implante",
             "heavyWeapon": "Arma Pesada",
-			"explosive": "Explosivos",
+            "explosive": "Explosivos",
             "vehicle": "Vehículo",
             "spell": "Conjuro",
             "miracle": "Milagro",
             "psionicpower": "Poder Psiónico",
             "specialability": "Habilidad Especial",
-			"other": "Equipo General",
+            "other": "Equipo General",
             "customAttack": "Ataque Personalizado",
             "customSkill": "Hab. Personalizada"
         },
@@ -372,7 +371,7 @@
             "fireCombat": "Arma Fuego",
             "energyWeapons": "Arma Energía",
             "heavyWeapons": "Arna Pesada"
-         },
+        },
         "powerSkills": {
             "alteration": "Alteración",
             "apportation": "Aportación",
@@ -385,7 +384,7 @@
         },
         "damageTypes": {
             "flat": "Fijo",
-			"strengthPlus": "Fuerza +",
+            "strengthPlus": "Fuerza +",
             "charismaPlus": "Carisma +",
             "dexterityPlus": "Destreza +",
             "mindPlus": "Mente +",
@@ -403,10 +402,10 @@
             "dwarf": "Enano",
             "edeinos": "Edeino",
             "elf": "Elfo",
-			"aspirants": "Aspirantes",
+            "aspirants": "Aspirantes",
             "theRace": "La Raza",
             "other": "Otra"
-		},
+        },
         "stymiedStates": {
             "none": "No Impedido",
             "stymied": "Impedido",
@@ -440,7 +439,7 @@
             "unconscious": "Noqueado",
             "blind": "Cegado"
         },
-		"yesNo": {
+        "yesNo": {
             "true": "Si",
             "false": "No"
         },
@@ -451,7 +450,6 @@
             "apply": "Aplicar",
             "OK": "OK",
             "dontShow": "No mostrar"
-
         },
         "chatText": {
             "possibility": "POSIB",
@@ -474,8 +472,8 @@
             "modifiers": "Modificadores",
             "attack": "Ataque",
             "baseDamage": "Daño Base",
-			"value": "Valor",
-			"notes": "Notas",
+            "value": "Valor",
+            "notes": "Notas",
             "check": {
                 "needTarget": "No se puede realizar una tirada avanzada sin objetivo. Selecciona objetivo y prueba de nuevo.",
                 "cantUseUntrained": " no se puede utilizar sin entrenar (mínimo 1 adición).",
@@ -515,7 +513,6 @@
                 }
             }
         },
-        
         "sizes": {
             "tiny": "Diminuto",
             "verySmall": "Muy Pequeño",
@@ -524,7 +521,6 @@
             "large": "Grande",
             "veryLarge": "Muy Grande"
         },
-        
         "dialogPrompts": {
             "showToPlayers": "Mostrar carta a Todos",
             "playerPassTitle": "Intercambiar con Jugador",
@@ -545,8 +541,8 @@
         },
         "dialogWindow": {
             "hideForeignCompendium": {
-                "title": "¿Esconder Compendiums Alemán?",
-                "content": "El sistema incluye compendiums en Inglés y Alemán. ¿Quieres esconder los compendiums en idioma Alemán?"
+                "title": "ocultar compendios de lenguas extranjeras?",
+                "content": "Oculta los compendios oficiales que no están en su idioma."
             },
             "externalLinks": {
                 "title": "Enlaces",
@@ -558,7 +554,6 @@
             "itemDeletion": {
                 "title": "Confirma Borrar",
                 "content": "¿Estás seguro que quieres borrar esto? Será eliminado permanentemente de la hoja."
-
             }
         },
         "iconeTitles": {
@@ -578,7 +573,6 @@
             "name": "Reinicio posibilidades Caballeros",
             "hint": "¿Cuántas posibilidades deben recibir los Caballeros?"
         },
-
         "cosmDecks": {
             "coreEarth": "Mazo Cosmos Tierra Base",
             "aysle": "Mazo Cosmos Aysle",
@@ -589,38 +583,32 @@
             "panPacifica": "Mazo Cosmos Pan Pacífica",
             "tharkold": "Mazo Cosmos Tharkold"
         },
-
         "cardTypes": {
             "destiny": "Destino",
             "drama": "Drama",
             "cosm": "Cosmos",
             "hand": "Mano"
         },
-
         "scenes": {
             "reality": "Realidad",
             "realityHint": "Configura Realidad",
-			"HeaderDetailsHint": "Configura Detalles",
-			"HeaderGridHint": "Configura Dimensión Rejilla.",
-			"HeaderVisionHint": "Configura Opciones Visión e Iluminación.",
-			"HeaderAmbienceHint": "Configura Otras Opciones Ambientales."
+            "HeaderDetailsHint": "Configura Detalles",
+            "HeaderGridHint": "Configura Dimensión Rejilla.",
+            "HeaderVisionHint": "Configura Opciones Visión e Iluminación.",
+            "HeaderAmbienceHint": "Configura Otras Opciones Ambientales."
         },
-
         "tokens": {
-
             "noDSR": "RDH",
             "step": "Paso",
             "a": " A",
             "b": " B",
             "c": " C",
             "d": " D"
-
         },
         "poolToggle": {
             "inPool": "Carta en reserva",
             "toogle": "Marcar reserva"
         },
-
         "monarch": {
             "play": "Jugar carta",
             "broadcast": "Mostrar carta a todos",
@@ -648,14 +636,11 @@
                 "hint": "Permite seleccionar una pantalla para el DJ de los módulos activos de TORG. Si se selecciona un módulo que no esta instalado la función no funcionará correctamente. AVISO: Es necesario refrescar el navegador (F5) depués del cambio."
             },
             "hideForeignCompendium": {
-                "name": "Esconder Compendiums Alemán",
-                "hint": "Selecciona para esconder todos los compendiums en idioma alemán."
-
+                "name": "ocultar compendios de lenguas extranjeras?",
+                "hint": "Oculta los compendios oficiales que no están en su idioma."
             }
         }
     },
-
-
     "CARD": {
         "TypeCosm": "Cosmos",
         "TypeDestiny": "Destino",
@@ -663,5 +648,4 @@
         "discard": "Descarte",
         "display": "Mostrar carta jugadores"
     }
-    
 }
