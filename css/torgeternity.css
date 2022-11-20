@@ -241,7 +241,8 @@ form.actor-sheet header.sheet-header-vehicle {
 
 .window-app .window-content .actor-sheet button.chase-roll,
 .window-app .window-content .actor-sheet button.stunt-roll,
-.window-app .window-content .actor-sheet button.collision-roll {
+.window-app .window-content .actor-sheet button.collision-roll,
+.window-app .window-content .actor-sheet button.base-roll {
     border: 1px;
     border-radius: 4px;
     text-align: center;

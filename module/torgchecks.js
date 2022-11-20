@@ -31,9 +31,14 @@ export function renderSkillChat(test) {
                 test.chatTitle = test.powerName + " " + game.i18n.localize('torgeternity.chatText.test');
                 break;
             case "chase":
-                test.chatTitle = game.i18n.localize("torgeternity.sheetLabels.chatText.chase");
+                test.chatTitle = game.i18n.localize("torgeternity.chatText.chase");
+                break;
             case "stunt":
-                test.chatTitle = game.i18n.localize("torgeternity.sheetLabels.chatText.stunt");
+                test.chatTitle = game.i18n.localize("torgeternity.chatText.stunt");
+                break;
+            case "vehicleBase":
+                test.chatTitle = game.i18n.localize("torgeternity.chatText.vehicleBase");
+                break;
             default:
                 test.chatTitle = test.skillName + " " + game.i18n.localize('torgeternity.chatText.test');
         }
@@ -422,16 +427,19 @@ export function renderSkillChat(test) {
     }
 
     // Apply vehicle-related modifiers
-    if (test.testType === "chase" || test.testType === "stunt") {
-        if (test.speedModifier > 0) {
-            test.displayModifiers === true;
-            test.modifiers += parseInt(test.speedModifier);
-            test.modifierText += game.i18n.localize('torgeternity.stats.speedModifier') + " " + test.speedModifier + "\n"
-        }
+    if (test.testType === "chase" || test.testType === "stunt" || test.testType === "vehicleBase") {
         if (test.maneuverModifier > 0 || test.maneuverModifier < 0) {
             test.displayModifiers === true;
             test.modifiers += parseInt(test.maneuverModifier);
             test.modifierText += game.i18n.localize('torgeternity.stats.maneuverModifier') + " " + test.maneuverModifier + "\n"
+        }
+    }
+
+    if (test.testType === "chase") {
+        if (test.speedModifier > 0) {
+            test.displayModifiers === true;
+            test.modifiers += parseInt(test.speedModifier);
+            test.modifierText += game.i18n.localize('torgeternity.stats.speedModifier') + " " + test.speedModifier + "\n"
         }
     }
 
@@ -676,7 +684,7 @@ export function renderSkillChat(test) {
     }
 
     // Label as Skill vs Attribute Test and turn on BD option if needed
-    if (test.testType === "skill" || test.testType === "interactionAttack" || test.testType === "chase" || test.testType === "stunt") {
+    if (test.testType === "skill" || test.testType === "interactionAttack" || test.testType === "chase" || test.testType === "stunt" || test.testType === "vehicleBase") {
         test.typeLabel = `${game.i18n.localize("torgeternity.chatText.skillTestLabel")}`,
             test.bdStyle = "display:none"
     } else if (test.testType === "attack") {

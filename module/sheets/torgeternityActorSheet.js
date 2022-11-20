@@ -318,6 +318,10 @@ export default class torgeternityActorSheet extends ActorSheet {
         }
 
         if (this.actor.isOwner) {
+            html.find(".base-roll").click(this._onBaseRoll.bind(this))
+        }
+
+        if (this.actor.isOwner) {
             html.find(".apply-fatigue").click(ev => {
                 let newShock = parseInt(this.actor.system.shock.value) + parseInt(ev.currentTarget.dataset.fatigue)
                 this.actor.update({ 'system.shock.value': newShock })
@@ -466,6 +470,31 @@ export default class torgeternityActorSheet extends ActorSheet {
         let dialog = new testDialog(test);
         dialog.render(true);
 
+    }
+
+    async _onBaseRoll(event) {
+
+        let test = {
+            testType: "vehicleBase",
+            customSkill: "false",
+            actor: this.actor.uuid,
+            actorPic: this.actor.img,
+            actorType: "vehicle",
+            isAttack: false,
+            skillName: "Vehicle Operation",
+            skillValue: event.currentTarget.dataset.skillValue,
+            targets: Array.from(game.user.targets),
+            applySize: false,
+            DNDescriptor: "standard",
+            attackOptions: false,
+            rollTotal: 0,
+            vehicleSpeed: event.currentTarget.dataset.speed,
+            maneuverModifier: event.currentTarget.dataset.maneuver
+        }
+
+        let dialog = new testDialog(test);
+        dialog.render(true);
+        
     }
 
     async _onStuntRoll(event) {
