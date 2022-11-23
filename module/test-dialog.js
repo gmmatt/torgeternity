@@ -63,9 +63,13 @@ export class testDialog extends FormApplication {
             // Set vehicle defense if needed
             if (target.type === "vehicle") {
                 data.test.target = {
+                    present: true,
+                    type: "vehicle",
                     defenses: {
                         vehicle: target.system.defense
-                    }
+                    },
+                    toughness: target.system.toughness,
+                    armor: target.system.armor
                 } 
             } else {
                 data.test.target = {

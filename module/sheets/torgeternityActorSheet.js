@@ -685,27 +685,39 @@ export default class torgeternityActorSheet extends ActorSheet {
     _onAttackRoll(event) {
         const itemID = event.currentTarget.closest(".item").dataset.itemId;
         const item = this.actor.items.get(itemID);
-        var attributes = this.actor.system.attributes
+        var attributes
         var weaponData = item.system;
         var attackWith = weaponData.attackWith;
         var damageType = weaponData.damageType;
         var weaponDamage = weaponData.damage;
-        var skillData = this.actor.system.skills[weaponData.attackWith];
+        var skillValue;
+        if (this.actor.type === "vehicle") {
+            skillValue = item.system.gunner.skillValue;
+            attributes = 0
+        } else {
+            var skillData = this.actor.system.skills[weaponData.attackWith];
+            skillValue = skillData.value;
+            attributes = this.actor.system.attributes
+        }
         var dnDescriptor = "standard";
         var attackType = event.currentTarget.getAttribute("data-attack-type");
         var adjustedDamage = 0;
 
         if (Array.from(game.user.targets).length > 0) {
-
-            switch (attackWith) {
-                case "fireCombat":
-                case "energyWeapons":
-                case "heavyWeapons":
-                case "missileWeapons":
-                    dnDescriptor = "targetDodge";
-                    break;
-                default:
-                    dnDescriptor = "targetMeleeWeapons"
+            var target = Array.from(game.user.targets)[0].actor;
+            if (target.type === "vehicle") {
+                dnDescriptor = "targetVehicleDefense"
+            } else {
+                switch (attackWith) {
+                    case "fireCombat":
+                    case "energyWeapons":
+                    case "heavyWeapons":
+                    case "missileWeapons":
+                        dnDescriptor = "targetDodge";
+                        break;
+                    default:
+                        dnDescriptor = "targetMeleeWeapons"
+                }
             }
         } else {
             dnDescriptor = "standard"
@@ -743,9 +755,7 @@ export default class torgeternityActorSheet extends ActorSheet {
             attackType: attackType,
             isAttack: true,
             skillName: attackWith,
-            skillBaseAttribute: game.i18n.localize("torgeternity.skills." + event.currentTarget.getAttribute("data-base-attribute")),
-            skillAdds: skillData.adds,
-            skillValue: skillData.value,
+            skillValue: skillValue,
             unskilledUse: true,
             damage: adjustedDamage,
             weaponAP: weaponData.ap,
