@@ -8,6 +8,9 @@
 For manual installation, use the provided manifest URL in the "*Install System*" popup window 
 while managing game systems.
 
+v. 2.8.0
+- Added new actor template for vehicles
+
 v. 2.7.2
 - Fixed issue involving resetting possibilities in player list
 - Formatting updates test chat output
