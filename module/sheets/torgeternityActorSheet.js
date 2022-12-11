@@ -449,6 +449,11 @@ export default class torgeternityActorSheet extends ActorSheet {
 
     async _onChaseRoll(event) {
 
+        if (!game.combats.active) {
+            ui.notifications.info(game.i18n.localize('torgeternity.chatText.check.noTracker'));
+            return;
+        }
+        
         let test = {
             testType: "chase",
             customSkill: "false",

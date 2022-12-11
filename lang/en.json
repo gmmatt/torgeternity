@@ -563,6 +563,7 @@
             "value": "Value",
             "notes": "Notes",
             "check": {
+                "noTracker": "Cannot use chase button unless there is an active combat in the combat tracker.",
                 "testUnsuccessfull": "Test unsuccessfull",
                 "needTarget": "Cannot attempt enhanced attack test without a target. Select a target and try again.",
                 "interactionNeedTarget": "Cannot attempt interaction attack test without a target. Select a target and try again.",
