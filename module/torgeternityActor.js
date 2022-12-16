@@ -7,12 +7,32 @@ export default class torgeternityActor extends Actor {
     prepareBaseData() {
 
         //Set Values for All Characters
-
-        if(this._source.type === "stormknight" | this._source.type === "treat") {
+        
+        // Skillsets
+        var skillset = this.system.skills;
+        
+        // Derive Skill values for Storm Knights
+        //
+        // NOTE: Threat skill values are created directly by user, but SK skill values are derived based on attribute + adds.
+        //       
+        if(this._source.type === "stormknight"){
+            for (let [name, skill] of Object.entries(skillset)) {
+                if (skill.adds === null) {
+                    if (skill.unskilledUse === 1) {
+                        skill.value = parseInt(this.system.attributes[skill.baseAttribute]);
+                    } else {
+                        skill.value = "-"
+                    }
+                } else {
+                    skill.value = parseInt(skill.adds) + parseInt(this.system.attributes[skill.baseAttribute]);
+                }
+            }
+        }
+        
+        if(this._source.type === "stormknight" | this._source.type === "threat") {
             // Base Fatigue
             this.system.other.fatigue = 2;
-            // Skillsets
-            var skillset = this.system.skills;
+            
             // Set Defensive Values
             if (skillset.dodge.value) {
                 this.system.dodgeDefense = this.system.skills.dodge.value;
@@ -57,24 +77,6 @@ export default class torgeternityActor extends Actor {
             };
         }
     
-        // Derive Skill values for Storm Knights
-        //
-        // NOTE: Threat skill values are created directly by user, but SK skill values are derived based on attribute + adds.
-        //       
-        if(this._source.type === "stormknight"){
-            for (let [name, skill] of Object.entries(skillset)) {
-                if (skill.adds === null) {
-                    if (skill.unskilledUse === 1) {
-                        skill.value = parseInt(this.system.attributes[skill.baseAttribute]);
-                    } else {
-                        skill.value = "-"
-                    }
-                } else {
-                    skill.value = parseInt(skill.adds) + parseInt(this.system.attributes[skill.baseAttribute]);
-                }
-            }
-        }
-
         // Other derived attributes for Storm Knights
         if (this._source.type === "stormknight") {
             mergeObject(this.prototypeToken, {
