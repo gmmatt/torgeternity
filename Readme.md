@@ -8,6 +8,9 @@
 For manual installation, use the provided manifest URL in the "*Install System*" popup window 
 while managing game systems.
 
+v. 2.8.1
+- Fixed issue involving inability to target threat skills
+
 v. 2.8.0
 - Added new actor template for vehicles
 

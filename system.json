@@ -9,7 +9,7 @@
             "discord": "Matt#1768"
         }
     ],
-    "version": "2.8.0",
+    "version": "2.8.1",
     "compatibility": {
         "minimum": 10,
         "verified": "10.291"
@@ -154,5 +154,5 @@
     "secondaryTokenAttribute": "shock",
     "url": "https://github.com/gmmatt/torgeternity",
     "manifest": "https://github.com/gmmatt/torgeternity/releases/latest/download/system.json",
-    "download": "https://github.com/gmmatt/torgeternity/releases/download/2.8.0/torgeternity.zip"
+    "download": "https://github.com/gmmatt/torgeternity/releases/download/2.8.1/torgeternity.zip"
 }
