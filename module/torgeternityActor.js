@@ -120,7 +120,7 @@ export default class torgeternityActor extends Actor {
                     this.system.axioms.tech = 14;
                     break;
                 case "cyberpapacy":
-                    this.system.axioms.magic = 15;
+                    this.system.axioms.magic = 14;
                     this.system.axioms.social = 18;
                     this.system.axioms.spirit = 16;
                     this.system.axioms.tech = 26;
