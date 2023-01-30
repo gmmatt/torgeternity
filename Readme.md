@@ -8,6 +8,12 @@
 For manual installation, use the provided manifest URL in the "*Install System*" popup window 
 while managing game systems.
 
+v. 2.8.2
+- Updated Destiny Card 42 (EN) so that it is correctly named
+- Updated magic axiom for Cyberpapacy characters from 15 to 14
+- Corrected an alignment issue for custom skills
+- Added warning re automatic damage feature not correctly applying subsequent BD rolls
+
 v. 2.8.1
 - Fixed issue involving inability to target threat skills
 
