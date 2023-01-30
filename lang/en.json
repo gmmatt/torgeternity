@@ -761,7 +761,7 @@
             },
             "autoDamages": {
                 "name": "Apply damages automatically",
-                "hint": "If checked, shocks and wounds would be automatically apply if player has a valid target token."
+                "hint": "If checked, shocks and wounds would be automatically apply if player has a valid target token. WARNING: This feature only works correctly with initial damage rolls. It will not correctly record subsequent bonus die rolls. Use with caution."
             }
         },
         "skillDialogs": {
