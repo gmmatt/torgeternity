@@ -74,25 +74,25 @@ export class testDialog extends FormApplication {
             } else {
                 data.test.target = {
                     present: true,
-                    type: target.data.type,
-                    skills: target.data.data.skills,
-                    attributes:target.data.data.attributes,
-                    toughness: target.data.data.other.toughness,
-                    armor: target.data.data.other.armor,
+                    type: target.type,
+                    skills: target.system.skills,
+                    attributes:target.system.attributes,
+                    toughness: target.system.other.toughness,
+                    armor: target.system.other.armor,
                     defenses: {
-                        dodge: target.data.data.dodgeDefense,
-                        unarmedCombat: target.data.data.unarmedCombatDefense,
-                        meleeWeapons: target.data.data.meleeWeaponsDefense,
-                        intimidation: target.data.data.intimidationDefense,
-                        maneuver: target.data.data.maneuverDefense,
-                        taunt: target.data.data.tauntDefense,
-                        trick:target.data.data.trickDefense
+                        dodge: target.system.dodgeDefense,
+                        unarmedCombat: target.system.unarmedCombatDefense,
+                        meleeWeapons: target.system.meleeWeaponsDefense,
+                        intimidation: target.system.intimidationDefense,
+                        maneuver: target.system.maneuverDefense,
+                        taunt: target.system.tauntDefense,
+                        trick:target.system.trickDefense
                     }
                 }
 
 
                 if (this.test.applySize == true) {
-                    var sizeBonus = target.data.data.details.sizeBonus;
+                    var sizeBonus = target.system.details.sizeBonus;
                     switch (sizeBonus) {
                         case "normal":
                             data.test.sizeModifier = 0
@@ -117,7 +117,7 @@ export class testDialog extends FormApplication {
                     }
                 }
 
-                data.test.vulnerableModifier = target.data.data.vulnerableModifier;
+                data.test.vulnerableModifier = target.system.vulnerableModifier;
         }
 
         } else {
