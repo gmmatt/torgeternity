@@ -28,7 +28,7 @@
 		<ol class="cards destinyCards">
 			{{#each cards as |card|}}
 			{{#ifequal card.type "destiny"}}
-			<li class="card flexrow {{#if card.data.flags.torgeternity.pooled}}pooled{{/if}}"
+			<li class="card flexrow {{#if card.flags.torgeternity.pooled}}pooled{{/if}}"
 				data-card-id="{{card.id}}">
 				<img class="card-face" src="{{card.img}}" alt="{{card.name}}" height="48">
 
@@ -64,7 +64,7 @@
 							{{localize "torgeternity.dialogPrompts.cardPooled"}}
 						</h5>
 						<input name="data.flags.torgeternity.pooled" class="toggle" data-action="poolToggle"
-							type="checkbox" id="pooled" {{checked card.data.flags.torgeternity.pooled}}>
+							type="checkbox" id="pooled" {{checked card.flags.torgeternity.pooled}}>
 					</span>
 				</div>
 			</li>
