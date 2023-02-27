@@ -798,9 +798,9 @@
         "decks" : "torgeternity.system-de-grundkarten"
     },
     "speeds": {
-        "fast": "Fast",
-        "veryFast": "Very Fast",
-        "ultraFast": "Ultra Fast"
+        "fast": "Schnell",
+        "veryFast": "Superschnell",
+        "ultraFast": "Ultraschnell"
     },
     "vehicleTypes": {
         "land": "Land",
