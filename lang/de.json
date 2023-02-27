@@ -112,22 +112,28 @@
             "mr": "MF",
             "wounds": "Wunden",
             "toughness": "Robustheit",
+            "armor": "Rüstung",
             "possibilities": "Möglichkeiten",
-            "poss": "Mög",
+            "poss": "Mögl.",
             "tappingDifficulty": "Anwendungs-Mindestwurf",
-            "tappingDifficultyAbbr": "Anw",
+            "tappingDifficultyAbbr": "AnwMW",
             "purpose": "Zweck",
             "powers": "Kräfte",
             "restrictions": "Einschränkungen",
             "minStrength": "Min Stä",
             "ap": "PB",
-            "chatNote": "In den Chat"
+            "chatNote": "In den Chat",
+            "gunner": "Schütze",
+            "skill": "Fertigkeit",
+            "short-description": "Kurzbeschreibung"
         },
         "stats": {
             "wounds": "Wunden",
             "shock": "Schock",
             "possibilities": "Möglichkeiten",
-            "description": "Beschreibung"
+            "description": "Beschreibung",
+            "speedModifier": "Geschwindigkeitsmodifikator",
+            "maneuverModifier": "Manövrierfähigkeitsmodifikator"
         },
         "perks": {
             "category": "Gruppe",
@@ -192,7 +198,9 @@
             "targetWillpowerMind": "Willenskraft oder Verstand des Ziels",
             "targetLandVehicles": "Landfahrzeuge oder Geschicklichkeit des Ziels",
             "targetAirVehicles": "Luftfahrzeuge oder Geschicklichkeit des Ziels",
-            "targetWaterVehicles": "Wasserfahrzeuge oder Geschicklichkeit des Ziels"
+            "targetWaterVehicles": "Wasserfahrzeuge oder Geschicklichkeit des Ziels",
+            "highestSpeed": "Schnellster Gegner in der Begegnung",
+            "targetVehicleDefense": "Verteidigung des Zielfahrzeuges"
         },
         "dnTypesBasic": {
             "veryEasy": "Sehr einfach (6)",
@@ -394,7 +402,22 @@
             "interactionSkills": "Interaktion",
             "otherSkills": "Andere",
             "targetDefense": "Verteidigung des Ziels",
-            "defensesTip": "Klicke, um eine aktive Verteidigung durchzuführen"
+            "defensesTip": "Klicke, um eine aktive Verteidigung durchzuführen",
+            "name": "Name",
+            "type": "Typ",
+            "operator": "Fahrzeugpilot:in",
+            "skill": "Fertigkeit",
+            "defense": "Verteidigung",
+            "chase": "Verfolgung",
+            "stunt": "Stunt",
+            "collision": "Kollision",
+            "baseRoll": "Basisprobe",
+            "gunner": "Schütze",
+            "range": "Reichweite",
+            "damageAP": "Schaden (PB)",
+            "addOns": "Add-Ons"
+
+
         },
         "combat": {
             "nextKeep": "Neue Runde (aktuelle Karte behalten)",
@@ -422,7 +445,8 @@
             "specialabilityRollable": "Spezialfähigkeit (würfelbar)",
             "other": "Allgemeine Ausrüstung",
             "customAttack": "Individueller Angriff",
-            "customSkill": "Eigene Fertigkeit"
+            "customSkill": "Eigene Fertigkeit",
+            "vehicleAddOn": "Fahrzeuge-Add-On"
         },
         "attackTypes": {
             "unarmedCombat": "Waffenloser Kampf",
@@ -525,6 +549,9 @@
             "actionTotal": "Probenergebnis",
             "skillTestLabel": "Fertigkeitswert",
             "attributeTestLabel": "Attribut",
+            "chase": "Verfolgungsjagd-Probe",
+            "stunt": "Stunt-Probe",
+            "vehicleBase": "Fahrzeugprobe",
             "dieTotal": "Würfelergebnis",
             "unskilled": "ungelernt",
             "possibleDisconnect": "Mögliche Abkopplung",
@@ -536,6 +563,7 @@
             "value": "Wert",
             "notes": "Notizen",
             "check": {
+                "noTracker": "Der Verfolgungsjagd-Button kann so lange nicht verwendet werden, bis es einen aktiven Kampf im Begegnungsstracker gibt.",
                 "testUnsuccessfull": "Probe nicht erfolgreich",
                 "needTarget": "Der ausgeweitete Angriffswurf kann ohne Ziel nicht durchgeführt werden. Wähle ein Ziel und versuche es erneut.",
                 "interactionNeedTarget": "Der Interaktionsangriff kann ohne ausgewähltes Ziel nicht durchgeführt werden. Bitte Ziel auswählen und nochmal versuchen.",
@@ -768,7 +796,24 @@
     "packs": {
         "basicRules" : "torgeternity.system-de-basisregeln",
         "decks" : "torgeternity.system-de-grundkarten"
-    }    
+    },
+    "speeds": {
+        "fast": "Fast",
+        "veryFast": "Very Fast",
+        "ultraFast": "Ultra Fast"
+    },
+    "vehicleTypes": {
+        "land": "Land",
+        "water": "Wasser",
+        "air": "Luft"
+    },
+
+    "magnitudes": {
+        "ones": "-",              
+        "thousands": "K",
+        "millions": "M",
+        "billions": "B"
+    }
     },
     "CARD": {
         "TypeCosm": "Cosm",
@@ -777,5 +822,4 @@
         "discard": "Wegwerfen",
         "display": "Zeige diese Karte den anderen Spielern"
     }
-
 }
