@@ -123,28 +123,27 @@
             <h2>{{localize "torgeternity.sheetLabels.operator"}}</h2>
             <table class="groove-borders left-align">
                 <tr>
-                    <th>
-                        {{localize "torgeternity.sheetLabels.name"}} <input name="system.operator.name" class="long-text" type="text" value="{{actor.system.operator.name}}" data-dtype="Text">                            
-                        {{localize "torgeternity.sheetLabels.skill"}} <input name="system.operator.skillValue" type="number" value="{{actor.system.operator.skillValue}}" data-dtype="Number">
-                        {{localize "torgeternity.sheetLabels.defense"}} {{actor.system.defense}}
-                        <button class="base-roll" data-skill-value = "{{actor.system.operator.skillValue}}"
+                    <th>{{localize "torgeternity.sheetLabels.name"}} <input name="system.operator.name" class="long-text" type="text" value="{{actor.system.operator.name}}" data-dtype="Text"></th>
+                        <th>{{localize "torgeternity.sheetLabels.skill"}} <input name="system.operator.skillValue" type="number" value="{{actor.system.operator.skillValue}}" data-dtype="Number"></th>
+                        <th>{{localize "torgeternity.sheetLabels.defense"}} {{actor.system.defense}}</th>
+                        <th><button class="base-roll" data-skill-value = "{{actor.system.operator.skillValue}}"
                             data-speed = "{{actor.system.topSpeed.value}}"
                             data-maneuver = "{{actor.system.maneuver}}">
                                 <i class="fas fa-dice-d20"></i>
                             {{localize "torgeternity.sheetLabels.baseRoll"}}
-                        </button>
-                        <button class="chase-roll" data-skill-value = "{{actor.system.operator.skillValue}}" 
+                        </button></th>
+                        <th><button class="chase-roll" data-skill-value = "{{actor.system.operator.skillValue}}" 
                             data-speed = "{{actor.system.topSpeed.value}}" 
                             data-maneuver = "{{actor.system.maneuver}}">
                                 <i class="fas fa-dice-d20"></i>
                             {{localize "torgeternity.sheetLabels.chase"}}
-                        </button>
-                        <button class="stunt-roll" data-skill-value = "{{actor.system.operator.skillValue}}"
+                        </button></th>
+                        <th><button class="stunt-roll" data-skill-value = "{{actor.system.operator.skillValue}}"
                             data-speed = "{{actor.system.topSpeed.value}}" 
                             data-maneuver = "{{actor.system.maneuver}}">
                                 <i class="fas fa-dice-d20"></i>
                             {{localize "torgeternity.sheetLabels.stunt"}}
-                        </button>
+                        </button></th>
                    </th>
                 </tr>
             </table>
