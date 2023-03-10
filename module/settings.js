@@ -130,6 +130,15 @@ export function registerTorgSettings() {
         default: false
     });
 
+    game.settings.register("torgeternity", "playerHandBottom", {
+        name: "torgeternity.settingMenu.playerHandBottom.name",
+        hint: "torgeternity.settingMenu.playerHandBottom.hint",
+        scope: 'world',
+        config: true,
+        type: Boolean,
+        default: false,
+    });
+
     game.settings.register("torgeternity", "migrationVersion", {
         scope: "world",
         config: false,

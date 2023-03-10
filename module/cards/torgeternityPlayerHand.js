@@ -3,11 +3,21 @@ import { torgeternity } from "/systems/torgeternity/module/config.js";
 export default class torgeternityPlayerHand extends CardsHand {
 
     static get defaultOptions() {
+        var windowTop
+        var windowLeft
+        if (game.settings.get("torgeternity", "playerHandBottom") === true) {
+            windowTop = parseInt(canvas.screenDimensions[1] - 350)
+            windowLeft = parseInt(canvas.screenDimensions[0] - 1250)
+        } else {
+            windowTop = 150
+            windowLeft = ""
+        }
         return foundry.utils.mergeObject(super.defaultOptions, {
             classes: ["torgeternity", "sheet", "cardsHand", "cards-config"],
             width: 800,
-            top: 150,
-            resizable: true,
+            top: windowTop,
+            left: windowLeft,
+            resizable: false,
         })
     }
 
@@ -222,12 +232,16 @@ export default class torgeternityPlayerHand extends CardsHand {
         if (card.classList.contains("focusedCard")) {
             card.setAttribute("data-rot", card.style.transform)
             let correction = parseInt(card.parentElement.style.transform.replace("rotateZ(", "").replace(")deg", "")) * -1;
-            card.style.transform = `rotateZ(${correction}deg)`
-
+            if (game.settings.get("torgeternity", "playerHandBottom") === true) {
+                card.style.transform = `rotateZ(${correction}deg) translateY(-700px)`
+            } else {
+                card.style.transform = `rotateZ(${correction}deg)`
+            }
         } else {
             card.style.transform = card.getAttribute("data-rot")
         }
     }
+
     toggleRender() {
         if (this.rendered) {
             if (this._minimized) return this.maximize();

@@ -762,6 +762,10 @@
             "autoDamages": {
                 "name": "Apply damages automatically",
                 "hint": "If checked, shocks and wounds would be automatically apply if player has a valid target token. WARNING: This feature only works correctly with initial damage rolls. It will not correctly record subsequent bonus die rolls. Use with caution."
+            },
+            "playerHandBottom": {
+                "name": "Player Hand Bottom Display",
+                "hint": "Player hands open at the bottom right of the screen, and cards will appear above the player hand window. Requires screen refresh (F5) to take effect."
             }
         },
         "skillDialogs": {
