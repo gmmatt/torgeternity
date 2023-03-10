@@ -8,6 +8,10 @@
 For manual installation, use the provided manifest URL in the "*Install System*" popup window 
 while managing game systems.
 
+v. 2.8.3
+- An option now allows player hands to open at the bottom/right of the screen.
+  When this option is checked, cards appear above the player hand window.
+
 v. 2.8.2
 - Updated Destiny Card 42 (EN) so that it is correctly named
 - Updated magic axiom for Cyberpapacy characters from 15 to 14
