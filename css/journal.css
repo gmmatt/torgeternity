@@ -418,7 +418,9 @@ form button {
 .sheet.journal-entry .journal-entry-page tr:nth-child(odd) {
     background-color: transparent;
 }
-
+.sheet.journal-entry .journal-entry-page td{
+    padding: 0.25em 0;
+}
 /*...................................................................*/
 /*Formatting of Blockcode Torg-Style*/
 blockquote {
