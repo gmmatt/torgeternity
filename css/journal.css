@@ -419,7 +419,7 @@ form button {
     background-color: transparent;
 }
 .sheet.journal-entry .journal-entry-page td{
-    padding: 0.25em 0;
+    padding: 0.25em;
 }
 /*...................................................................*/
 /*Formatting of Blockcode Torg-Style*/
