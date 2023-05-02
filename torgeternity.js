@@ -717,7 +717,7 @@ function rollItemMacro(itemName) {
                 testType: "power",
                 actor: actor.uuid,
                 actorPic: actor.img,
-                actorType: actor.system.type,
+                actorType: actor.type,
                 attackType: "power",
                 powerName: item.name,
                 powerModifier: powerModifier,
