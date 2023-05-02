@@ -558,7 +558,7 @@ function rollItemMacro(itemName) {
     const item = actor ? actor.items.find((i) => i.name === itemName) : null;
     if (!item)
         return ui.notifications.warn(
-            game.i18n.localize('torgeternity.notifications.noItemNamed') + item.name
+            game.i18n.localize('torgeternity.notifications.noItemNamed') + itemName
         );
 
     // Trigger the item roll
