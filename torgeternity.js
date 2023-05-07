@@ -670,6 +670,79 @@ function rollItemMacro(itemName) {
         case "psionicpower":
         case "miracle":
         case "spell":
+            var powerData = item.system;
+            var skillName = powerData.skill;
+            var skillData = actor.system.skills[skillName];
+            var dnDescriptor = "standard";
+            var isAttack = false;
+            var applyArmor = true;
+            var applySize = true;
+            var powerModifier = 0;
+    
+    
+            // Convert yes/no options from sheet into boolean values (or else renderSkillChat gets confused)
+            if (powerData.isAttack == "true") {
+                isAttack = true
+            } else {
+                isAttack = false
+            }
+    
+            if (powerData.applyArmor == "true") {
+                applyArmor = true;
+            } else {
+                applyArmor = false;
+            }
+    
+            if (powerData.applySize == "true") {
+                applySize = true;
+            } else {
+                applySize = false;
+            }
+    
+            // Set modifier for this power
+            if (item.system.modifier > 0 || item.system.modifier < 0) {
+                powerModifier = item.system.modifier
+            } else {
+                powerModifier = 0
+            }
+    
+            // Set difficulty descriptor based on presense of target
+            if (Array.from(game.user.targets).length > 0) {
+                dnDescriptor = powerData.dn;
+            } else {
+                dnDescriptor = "standard"
+            }
+    
+            let test = {
+                testType: "power",
+                actor: actor.uuid,
+                actorPic: actor.img,
+                actorType: actor.type,
+                attackType: "power",
+                powerName: item.name,
+                powerModifier: powerModifier,
+                isAttack: isAttack,
+                skillName: skillName,
+                skillBaseAttribute: game.i18n.localize("torgeternity.skills." + skillData.baseAttribute),
+                skillAdds: skillData.adds,
+                skillValue: skillData.value,
+                unskilledUse: false,
+                damage: powerData.damage,
+                weaponAP: powerData.ap,
+                applyArmor: applyArmor,
+                darknessModifier: 0,
+                DNDescriptor: dnDescriptor,
+                type: "power",
+                targets: Array.from(game.user.targets),
+                applySize: applySize,
+                attackOptions: true,
+                rollTotal: 0
+            }
+    
+    
+            let pdialog = new testDialog(test);
+            pdialog.render(true);
+            /*
             // this will cause the power to be printed to the chat
             return item.roll({ async: false });
             /* This part is not functional, kept for test purpose, replaced by the following "log" and "ui.notification"
