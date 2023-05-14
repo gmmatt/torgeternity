@@ -966,3 +966,15 @@ Hooks.on("createActor", async (actor, options, userId) => {
     }
 
 })
+
+// un-pool cards of SK when the GM ends the combat encounter
+Hooks.on("deleteCombat", async (combat, dataUpdate) => {
+    var listCombatants = [];
+    var listHandsReset =[];
+    //listing of actors in the closing combat
+    combat.combatants.forEach(fighter => listCombatants.push(fighter.actorId));
+    //listing of hands' actors in closing combat
+    listCombatants.forEach(i => listHandsReset.push(game.actors.get(i).getDefaultHand()));
+    //delete the flag that give the pooled condition in each card of each hand
+    listHandsReset.forEach(hand => hand.cards.forEach(card => card.unsetFlag("torgeternity", "pooled")));
+})
