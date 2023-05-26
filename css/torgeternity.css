@@ -308,14 +308,7 @@ form.actor-sheet header.sheet-header-vehicle {
     align-items:center;
 }
 
-.window-content .actor-sheet li.vehicle-weapon-header .name-header,
-.window-content .actor-sheet li.vehicle-weapon-header .gunner-header,
-.window-content .actor-sheet li.vehicle-weapon-header .skill-header,
-.window-content .actor-sheet li.vehicle-weapon-header .range-header,
-.window-content .actor-sheet li.vehicle-weapon-header .damage-header,
-.window-content .actor-sheet li.vehicle-weapon-header .controls-header {
-    
-}
+
 
 .window-content .actor-sheet li.vehicle-weapon-list .vehicle-image,
 .window-content .actor-sheet li.vehicle-add-on-list .add-on-image {
