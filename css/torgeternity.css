@@ -191,7 +191,7 @@ div.actor ::-webkit-scrollbar {
 }
 
 .vehicle-tab[data-tab].active {
-    display:block;
+    display:block !important;
 }
 
 form.actor-sheet header.sheet-header-vehicle {
