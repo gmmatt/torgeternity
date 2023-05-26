@@ -8,6 +8,21 @@
 For manual installation, use the provided manifest URL in the "*Install System*" popup window 
 while managing game systems.
 
+v. 2.9.0
+- Version 11 compatibility!
+- Fixed display issue on vehicles in version 11 (many thanks to @mxzf on the Foundry Discord
+  for assistance with this issue, as well as the scene navigation issue)
+- Update scene navigation for version 11
+- Migrate system databases to v11
+- Repaired Destiny Card 42 (en)
+- Updated magic axiom for new Cyberpapacy characters (15 to 14)
+- Updated alignment issue for custom skills
+- Add warning for users of automatic damage feature
+- Eliminate obsolete compatibility warnings
+- Updates to de.json (thanks Algor!)
+- Update pilot section (Algor)
+- Updates to journal (Algor)
+
 v. 2.8.3
 - An option now allows player hands to open at the bottom/right of the screen.
   When this option is checked, cards appear above the player hand window.
