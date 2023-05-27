@@ -1,0 +1,8 @@
+2023/05/27-09:40:07.286 1124 Recovering log #7
+2023/05/27-09:40:07.292 1124 Delete type=0 #7
+2023/05/27-09:40:07.293 1124 Delete type=3 #6
+2023/05/27-09:40:19.870 386c Level-0 table #11: started
+2023/05/27-09:40:19.870 386c Level-0 table #11: 0 bytes OK
+2023/05/27-09:40:19.871 386c Delete type=0 #9
+2023/05/27-09:40:19.872 386c Manual compaction at level-0 from '!cards!9isgXoIiiGWQHBx0' @ 72057594037927935 : 1 .. '!cards.cards!xaEDfI4ufJ2Z9Mli.zIFI7RtvNZjIDZ5l' @ 0 : 0; will stop at (end)
+2023/05/27-09:40:19.872 386c Manual compaction at level-1 from '!cards!9isgXoIiiGWQHBx0' @ 72057594037927935 : 1 .. '!cards.cards!xaEDfI4ufJ2Z9Mli.zIFI7RtvNZjIDZ5l' @ 0 : 0; will stop at (end)
