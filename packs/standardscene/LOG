@@ -1,5 +1,5 @@
-2023/05/26-16:35:40.587 4b1c Delete type=3 #1
-2023/05/26-16:37:13.934 75d0 Level-0 table #5: started
-2023/05/26-16:37:13.937 75d0 Level-0 table #5: 89688 bytes OK
-2023/05/26-16:37:13.938 75d0 Delete type=0 #3
-2023/05/26-16:37:13.938 75d0 Manual compaction at level-0 from '!scenes!LxFt3CsDFSCSkASP' @ 72057594037927935 : 1 .. '!scenes!LxFt3CsDFSCSkASP' @ 0 : 0; will stop at (end)
+2023/05/26-20:56:27.612 39e8 Delete type=3 #1
+2023/05/26-21:06:09.366 6778 Level-0 table #5: started
+2023/05/26-21:06:09.369 6778 Level-0 table #5: 89688 bytes OK
+2023/05/26-21:06:09.371 6778 Delete type=0 #3
+2023/05/26-21:06:09.371 6778 Manual compaction at level-0 from '!scenes!LxFt3CsDFSCSkASP' @ 72057594037927935 : 1 .. '!scenes!LxFt3CsDFSCSkASP' @ 0 : 0; will stop at (end)

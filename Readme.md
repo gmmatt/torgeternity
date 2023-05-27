@@ -10,9 +10,9 @@ while managing game systems.
 
 v. 2.9.0
 - Version 11 compatibility!
-- Fixed display issue on vehicles in version 11 (many thanks to @mxzf on the Foundry Discord
-  for assistance with this issue, as well as the scene navigation issue)
-- Update scene navigation for version 11
+- Fixed display issue on vehicles in version 11 
+- Update scene navigation for version 11 (many thanks to @mxzf on the Foundry Discord
+  for assistance with this issue, as well as the system migration issue)
 - Migrate system databases to v11
 - Repaired Destiny Card 42 (en)
 - Updated magic axiom for new Cyberpapacy characters (15 to 14)
