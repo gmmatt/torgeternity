@@ -1,3 +1,5 @@
-2023/05/26-21:12:22.268 4efc Recovering log #4
-2023/05/26-21:12:22.273 4efc Delete type=0 #4
-2023/05/26-21:12:22.273 4efc Delete type=3 #2
+2023/05/27-08:57:21.405 1e3c Delete type=3 #1
+2023/05/27-08:59:06.222 6420 Level-0 table #5: started
+2023/05/27-08:59:06.225 6420 Level-0 table #5: 89688 bytes OK
+2023/05/27-08:59:06.227 6420 Delete type=0 #3
+2023/05/27-08:59:06.237 6420 Manual compaction at level-0 from '!scenes!LxFt3CsDFSCSkASP' @ 72057594037927935 : 1 .. '!scenes!LxFt3CsDFSCSkASP' @ 0 : 0; will stop at (end)

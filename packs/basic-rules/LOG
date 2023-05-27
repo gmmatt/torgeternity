@@ -1,3 +1,5 @@
-2023/05/26-21:12:22.258 4efc Recovering log #4
-2023/05/26-21:12:22.263 4efc Delete type=0 #4
-2023/05/26-21:12:22.263 4efc Delete type=3 #2
+2023/05/27-08:57:21.346 642c Delete type=3 #1
+2023/05/27-08:59:06.216 6420 Level-0 table #5: started
+2023/05/27-08:59:06.220 6420 Level-0 table #5: 66396 bytes OK
+2023/05/27-08:59:06.222 6420 Delete type=0 #3
+2023/05/27-08:59:06.231 6420 Manual compaction at level-0 from '!journal!4hN0xAsql86XWwEY' @ 72057594037927935 : 1 .. '!journal!zvyB2kHSc32CwhIR' @ 0 : 0; will stop at (end)

@@ -1,3 +1,5 @@
-2023/05/26-21:12:22.287 39e8 Recovering log #4
-2023/05/26-21:12:22.292 39e8 Delete type=0 #4
-2023/05/26-21:12:22.292 39e8 Delete type=3 #2
+2023/05/27-08:57:21.521 2110 Delete type=3 #1
+2023/05/27-08:59:06.250 6420 Level-0 table #5: started
+2023/05/27-08:59:06.253 6420 Level-0 table #5: 26003 bytes OK
+2023/05/27-08:59:06.254 6420 Delete type=0 #3
+2023/05/27-08:59:06.261 6420 Manual compaction at level-0 from '!cards!08JHFiMFJy4yssmg' @ 72057594037927935 : 1 .. '!cards.cards!zt7zadfXvHzLp4Xd.puq9ubQi0P1XzFdT' @ 0 : 0; will stop at (end)
