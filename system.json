@@ -125,6 +125,46 @@
             "type": "Cards"
         }
     ],
+  "packFolders": [{
+            "name": "Journals",
+            "sorting": "m",
+            "color": "#415a9b",
+            "packs": [
+              "basic-rules",
+              "system-de-basisregeln",
+              "basic-rules-fr"
+            ]
+          },
+          {
+            "name": "Card Decks",
+            "sorting": "m",
+            "color": "#415a9b",
+            "packs": [
+              "core-card-set",
+              "system-de-grundkarten",
+              "core-card-set-fr"
+            ]
+          },
+          {
+            "name": "Actors",
+            "sorting": "m",
+            "color": "#415a9b",
+            "packs": [
+              "archetypes",
+              "system-de-archetypen",
+            "archetypes-fr"
+            ]
+          },
+          {
+            "name": "Scenes",
+            "sorting": "m",
+            "color": "#415a9b",
+            "packs": [
+              "core-scenes",
+              "core-de-scenes",
+              "core-scenes-fr"
+            ]
+          }],
     "languages": [
         {
             "lang": "en",
