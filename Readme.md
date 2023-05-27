@@ -8,8 +8,9 @@
 For manual installation, use the provided manifest URL in the "*Install System*" popup window 
 while managing game systems.
 
-v. 2.9.0
+v. 2.9.1
 - Version 11 compatibility!
+- Fixed problem in 2.9.0 with database compatibility
 - Fixed display issue on vehicles in version 11 
 - Update scene navigation for version 11 (many thanks to @mxzf on the Foundry Discord
   for assistance with this issue, as well as the system migration issue)
