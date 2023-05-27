@@ -1,5 +1,0 @@
-2023/05/27-09:08:09.438 1f1c Delete type=3 #1
-2023/05/27-09:08:43.126 17a0 Level-0 table #5: started
-2023/05/27-09:08:43.130 17a0 Level-0 table #5: 89690 bytes OK
-2023/05/27-09:08:43.131 17a0 Delete type=0 #3
-2023/05/27-09:08:43.138 17a0 Manual compaction at level-0 from '!scenes!LxFt3CsDFSCSkASP' @ 72057594037927935 : 1 .. '!scenes!LxFt3CsDFSCSkASP' @ 0 : 0; will stop at (end)
