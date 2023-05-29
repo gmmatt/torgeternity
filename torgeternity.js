@@ -28,7 +28,7 @@ import { torgeternityCards } from "./module/cards/torgeternityCards.js";
 import { attackDialog } from "/systems/torgeternity/module/attack-dialog.js"; //Added
 import { testDialog } from "/systems/torgeternity/module/test-dialog.js";
 import { interactionDialog } from "/systems/torgeternity/module/interaction-dialog.js";
-// import { hideCompendium } from './module/hideCompendium.js';
+import { hideCompendium } from './module/hideCompendium.js';
 import initTorgControlButtons from './module/controlButtons.js';
 import createTorgShortcuts from './module/keybinding.js';
 import GMScreen from './module/GMScreen.js'

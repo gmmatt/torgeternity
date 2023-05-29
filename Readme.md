@@ -8,6 +8,9 @@
 For manual installation, use the provided manifest URL in the "*Install System*" popup window 
 while managing game systems.
 
+v. 2.9.2
+- Fixed issue where "Hide Foreign Compendium" setting was broken (thanks for the help Durak!)
+
 v. 2.9.1
 - Version 11 compatibility!
 - Fixed problem in 2.9.0 with database compatibility
