@@ -26,7 +26,7 @@ export class testDialog extends FormApplication {
         data.config = CONFIG.torgeternity;
 
         // Set Modifiers from Actor Wounds and Status Effects
-        let myActor = this.test.actor.includes("Token") ? fromUuidSync(this.test.actor).actor : fromUuidSync(this.test.actor) 
+        let myActor = this.test.actor.includes("Token") ? fromUuidSync(this.test.actor) : fromUuidSync(this.test.actor) 
         data.test.woundModifier = parseInt(-(myActor.system.wounds.value));
         data.test.stymiedModifier = parseInt(myActor.system.stymiedModifier);
         data.test.darknessModifier = parseInt(myActor.system.darknessModifier);
