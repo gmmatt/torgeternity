@@ -8,6 +8,9 @@
 For manual installation, use the provided manifest URL in the "*Install System*" popup window 
 while managing game systems.
 
+v. 2.9.3
+- Fixed issue where skills and attacks couldn't be rolled from unlinked tokens in v11
+
 v. 2.9.2
 - Fixed issue where "Hide Foreign Compendium" setting was broken (thanks for the help Durak!)
 
