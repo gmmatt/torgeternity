@@ -38,20 +38,6 @@ export function registerTorgSettings() {
         });
 
         */
-    //animated chat messages
-
-    game.settings.register("torgeternity", "animatedChat", {
-        // game.setting.register("NameOfTheModule", "VariableName",
-        name: "torgeternity.settingMenu.animatedChat.name", // Register a module setting with checkbox
-        hint: "torgeternity.settingMenu.animatedChat.hint", // Description of the settings
-        scope: "world", // This specifies a client-stored setting
-        config: true, // This specifies that the setting appears in the configuration view
-        type: Boolean,
-        default: true, // The default value for the setting
-        onChange: () => window.location.reload()
-    });
-
-
     //GM Screen
     game.settings.register("torgeternity", "gmScreen", {
         name: "torgeternity.settingMenu.gmScreen.name", // Register a module setting with checkbox

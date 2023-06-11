@@ -904,35 +904,6 @@ Hooks.on("changeSidebarTab", (tabDirectory) => {
 })
 
 
-Hooks.on("renderChatLog", (app, html, data) => {
-    //----chat messages listeners
-    Chat.addChatListeners(html);
-
-    //-----toggle animation on chat message
-
-    if (game.settings.get("torgeternity", "animatedChat") == false) {
-        let messFlips = html.find("li.flip-card");
-        for (let mes of messFlips) {
-            mes.classList.remove("flip-card");
-        }
-    }
-    if (game.settings.get("torgeternity", "animatedChat") == true) {
-        let messFlips = html.find("li.chat-message");
-        for (let mes of messFlips) {
-            mes.classList.add("flip-card");
-        }
-    }
-});
-
-
-Hooks.on("renderChatMessage", (mess, html, data) => {
-    if (game.settings.get("torgeternity", "animatedChat") == true) {
-        html[0].classList.add("flip-card");
-    }
-});
-
-
-
 //----alphabetic sorting in character sheets
 Hooks.on("renderActorSheet", (app, html, data) => {
 

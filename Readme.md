@@ -13,6 +13,8 @@ v. 2.9.3
 - Cards are removed from player pools when GM ends combat encounter
 - Fixed issue where Torg icon was not aligning in left custom menu
 - Many thanks to Durak who was mostly responsible for the changes in this patch!
+- Removed option for animated chat cards - it was causing formatting issues in some system
+  installations.
 
 v. 2.9.2
 - Fixed issue where "Hide Foreign Compendium" setting was broken (thanks for the help Durak!)

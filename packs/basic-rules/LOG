@@ -1,8 +1,8 @@
-2023/06/11-12:04:59.826 44c0 Recovering log #8
-2023/06/11-12:04:59.832 44c0 Delete type=0 #8
-2023/06/11-12:04:59.832 44c0 Delete type=3 #6
-2023/06/11-12:08:19.215 4618 Level-0 table #13: started
-2023/06/11-12:08:19.215 4618 Level-0 table #13: 0 bytes OK
-2023/06/11-12:08:19.216 4618 Delete type=0 #11
-2023/06/11-12:08:19.221 4618 Manual compaction at level-0 from '!journal!4hN0xAsql86XWwEY' @ 72057594037927935 : 1 .. '!journal!zvyB2kHSc32CwhIR' @ 0 : 0; will stop at (end)
-2023/06/11-12:08:19.221 4618 Manual compaction at level-1 from '!journal!4hN0xAsql86XWwEY' @ 72057594037927935 : 1 .. '!journal!zvyB2kHSc32CwhIR' @ 0 : 0; will stop at (end)
+2023/06/11-15:17:17.806 2a68 Recovering log #34
+2023/06/11-15:17:17.811 2a68 Delete type=0 #34
+2023/06/11-15:17:17.811 2a68 Delete type=3 #32
+2023/06/11-15:19:45.857 2540 Level-0 table #39: started
+2023/06/11-15:19:45.857 2540 Level-0 table #39: 0 bytes OK
+2023/06/11-15:19:45.859 2540 Delete type=0 #37
+2023/06/11-15:19:45.861 2540 Manual compaction at level-0 from '!journal!4hN0xAsql86XWwEY' @ 72057594037927935 : 1 .. '!journal!zvyB2kHSc32CwhIR' @ 0 : 0; will stop at (end)
+2023/06/11-15:19:45.861 2540 Manual compaction at level-1 from '!journal!4hN0xAsql86XWwEY' @ 72057594037927935 : 1 .. '!journal!zvyB2kHSc32CwhIR' @ 0 : 0; will stop at (end)
