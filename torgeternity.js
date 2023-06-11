@@ -944,8 +944,10 @@ Hooks.on("deleteCombat", async (combat, dataUpdate) => {
     var listHandsReset =[];
     //listing of actors in the closing combat
     combat.combatants.forEach(fighter => listCombatants.push(fighter.actorId));
+    //listing of actors in the closing combat
+    combat.combatants.filter(sk => sk.actor.type === "stormknight").forEach(fighter => listCombatants.push(fighter.actorId));
     //listing of hands' actors in closing combat
-    listCombatants.forEach(i => listHandsReset.push(game.actors.get(i).getDefaultHand()));
+    listCombatants.forEach(i => {if (!!game.actors.get(i).getDefaultHand()) {listHandsReset.push(game.actors.get(i).getDefaultHand())}});
     //delete the flag that give the pooled condition in each card of each hand
     listHandsReset.forEach(hand => hand.cards.forEach(card => card.unsetFlag("torgeternity", "pooled")));
 })
