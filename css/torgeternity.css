@@ -990,7 +990,6 @@ i.torg {
     background-repeat: no-repeat;
     display: flex;
     position: relative;
-    left: -25%;
     filter: grayscale(1);
     transition: 0.3s;
 }
