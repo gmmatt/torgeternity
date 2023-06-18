@@ -28,7 +28,7 @@ import { torgeternityCards } from "./module/cards/torgeternityCards.js";
 import { attackDialog } from "/systems/torgeternity/module/attack-dialog.js"; //Added
 import { testDialog } from "/systems/torgeternity/module/test-dialog.js";
 import { interactionDialog } from "/systems/torgeternity/module/interaction-dialog.js";
-// import { hideCompendium } from './module/hideCompendium.js';
+import { hideCompendium } from './module/hideCompendium.js';
 import initTorgControlButtons from './module/controlButtons.js';
 import createTorgShortcuts from './module/keybinding.js';
 import GMScreen from './module/GMScreen.js'
@@ -363,16 +363,16 @@ Hooks.on("ready", async function () {
 
     /*
   //-----applying players card ui:
-  if (game.user.data.role == false || game.user.data.role != 4) {
-    let user=game.users.get(game.user.data._id)
+  if (game.user.role == false || game.user.role != 4) {
+    let user=game.users.get(game.user._id)
     
     ui.HandedCards = new HandedCardsApp();
     ui.HandedCards.render(true);
   };
   //-----applying GM card ui:
-  if (game.user.data.role == 4 || game.user.data.role == 3) {
+  if (game.user.role == 4 || game.user.role == 3) {
     //init cards GM Decks
-    let user=game.users.get(game.user.data._id)
+    let user=game.users.get(game.user._id)
    
     ui.GMDecks = new GMDecksApp();
     ui.GMDecks.render(true);
@@ -410,7 +410,7 @@ Hooks.on("getMonarchHandComponents", (hand, components) => {
         color: "#FFFFFF",
         onclick: (event, card) => {
             card.setFlag("torgeternity", "pooled", false);
-            if (card.data.type == "destiny") {
+            if (card.type == "destiny") {
                 card.pass(game.cards.get(game.settings.get("torgeternity", "deckSetting").destinyDiscard));
             } else {
                 card.pass(game.cards.get(game.settings.get("torgeternity", "deckSetting").cosmDiscard));
@@ -435,7 +435,7 @@ Hooks.on("getMonarchHandComponents", (hand, components) => {
         color: "#FFFFFF",
         onclick: (event, card) => {
             card.setFlag("torgeternity", "pooled", false);
-            if (card.data.type == "destiny") {
+            if (card.type == "destiny") {
                 card.pass(game.cards.get(game.settings.get("torgeternity", "deckSetting").destinyDiscard));
             } else {
                 card.pass(game.cards.get(game.settings.get("torgeternity", "deckSetting").cosmDiscard));
@@ -571,9 +571,9 @@ function rollItemMacro(itemName) {
         case "heavyweapon":
         case "specialability-rollable":
             // The following is copied/pasted/adjusted from _onAttackRoll in torgeternityActorSheet
-            var weaponData = item.data.data;
+            var weaponData = item.system;
             var attackWith = weaponData.attackWith;
-            var skillData = actor.data.data.skills[weaponData.attackWith];
+            var skillData = actor.system.skills[weaponData.attackWith];
             var sizeModifier = 0;
             var vulnerableModifier = 0;
             var targetToughness = 0;
@@ -590,7 +590,7 @@ function rollItemMacro(itemName) {
             var damageType = weaponData.damageType;
             var adjustedDamage;
             var weaponDamage = weaponData.damage;
-            var attributes = actor.data.data.attributes;
+            var attributes = actor.system.attributes;
             var attackType = weaponData.damageType;
 
             // Modify dnDecriptor if target exists
@@ -639,11 +639,11 @@ function rollItemMacro(itemName) {
                 testType: "attack",
                 type: "attack",
                 actor: actor.uuid,
-                actorType: actor.data.type,
+                actorType: actor.type,
                 item: item,
                 attackType: attackType,
                 isAttack: true,
-                actorPic: actor.data.img,
+                actorPic: actor.img,
                 skillName: weaponData.attackWith,
                 skillBaseAttribute: skillData.baseAttribute,
                 skillValue: skillData.value,
@@ -651,7 +651,7 @@ function rollItemMacro(itemName) {
                 unskilledUse: true,
                 rollTotal: 0,
                 DNDescriptor: dnDescriptor,
-                weaponName: item.data.name,
+                weaponName: item.name,
                 weaponDamageType: weaponData.damageType,
                 weaponDamage: weaponData.damage,
                 damage: adjustedDamage,
@@ -746,17 +746,17 @@ function rollItemMacro(itemName) {
             // this will cause the power to be printed to the chat
             return item.roll({ async: false });
             /* This part is not functional, kept for test purpose, replaced by the following "log" and "ui.notification"
-                        var powerData = item.data.data;
-                        var skillData = item.actor.data.data.skills[powerData.skill];
+                        var powerData = item.system;
+                        var skillData = item.actor.system.skills[powerData.skill];
                         console.log(powerData, skillData);
                         torgchecks.powerRoll({
                             actor: item.actor,
                             item: item,
-                            actorPic: item.actor.data.img,
+                            actorPic: item.actor.img,
                             skillName: powerData.skill,
                             skillBaseAttribute: skillData.baseAttribute,
                             skillValue: skillData.value,
-                            powerName: item.data.name,
+                            powerName: item.name,
                             powerAttack: powerData.isAttack,
                             powerDamage: powerData.damage,
                         });
@@ -789,7 +789,7 @@ function rollSkillMacro(skillName, attributeName, isInteractionAttack) {
     if (!isAttributeTest) {
         const skillNameKey = skillName; // skillName required to be internal value
         // would be nice to use display value as an input instead but we can't translate from i18n to internal values
-        skill = actor && Object.keys(actor.data.data.skills).includes(skillNameKey) ? actor.data.data.skills[skillNameKey] : null;
+        skill = actor && Object.keys(actor.system.skills).includes(skillNameKey) ? actor.system.skills[skillNameKey] : null;
         if (!skill)
             return ui.notifications.warn(
                 game.i18n.localize('torgeternity.notifications.noSkillNamed') + skillName
@@ -797,7 +797,7 @@ function rollSkillMacro(skillName, attributeName, isInteractionAttack) {
     }
 
     const attributeNameKey = attributeName.toLowerCase();
-    const attribute = actor && Object.keys(actor.data.data.attributes).includes(attributeNameKey) ? actor.data.data.attributes[attributeNameKey] : null;
+    const attribute = actor && Object.keys(actor.system.attributes).includes(attributeNameKey) ? actor.system.attributes[attributeNameKey] : null;
     if (!attribute)
         return ui.notifications.warn(
             game.i18n.localize('torgeternity.notifications.noItemNamed')
@@ -822,7 +822,7 @@ function rollSkillMacro(skillName, attributeName, isInteractionAttack) {
         if (actor.type === "stormknight") {
             skillValue += skill.adds;
         } else if (actor.type == "threat") {
-            const otherAttribute = actor.data.data.attributes[skill.baseAttribute];
+            const otherAttribute = actor.system.attributes[skill.baseAttribute];
             skillValue = skill.value - otherAttribute + attribute;
         }
     }
@@ -832,8 +832,8 @@ function rollSkillMacro(skillName, attributeName, isInteractionAttack) {
     let test = {
         testType: isAttributeTest ? "attribute" : "skill",
         actor: actor.uuid,
-        actorPic: actor.data.img,
-        actorType: actor.data.type,
+        actorPic: actor.img,
+        actorType: actor.type,
         skillName: isAttributeTest ? attributeName : skillName,
         skillBaseAttribute: game.i18n.localize("torgeternity.attributes." + attributeName),
         skillAdds: skill.adds,
@@ -845,9 +845,9 @@ function rollSkillMacro(skillName, attributeName, isInteractionAttack) {
         attackOptions: false,
         rollTotal: 0,
         unskilledUse: skill.unskilledUse,
-        woundModifier: parseInt(-(actor.data.data.wounds.value)),
-        stymiedModifier: parseInt(actor.data.data.stymiedModifier),
-        darknessModifier: 0, //parseInt(actor.data.data.darknessModifier),
+        woundModifier: parseInt(-(actor.system.wounds.value)),
+        stymiedModifier: parseInt(actor.system.stymiedModifier),
+        darknessModifier: 0, //parseInt(actor.system.darknessModifier),
         type: "skill"
     };
     if (isInteractionAttack) {
@@ -904,35 +904,6 @@ Hooks.on("changeSidebarTab", (tabDirectory) => {
 })
 
 
-Hooks.on("renderChatLog", (app, html, data) => {
-    //----chat messages listeners
-    Chat.addChatListeners(html);
-
-    //-----toggle animation on chat message
-
-    if (game.settings.get("torgeternity", "animatedChat") == false) {
-        let messFlips = html.find("li.flip-card");
-        for (let mes of messFlips) {
-            mes.classList.remove("flip-card");
-        }
-    }
-    if (game.settings.get("torgeternity", "animatedChat") == true) {
-        let messFlips = html.find("li.chat-message");
-        for (let mes of messFlips) {
-            mes.classList.add("flip-card");
-        }
-    }
-});
-
-
-Hooks.on("renderChatMessage", (mess, html, data) => {
-    if (game.settings.get("torgeternity", "animatedChat") == true) {
-        html[0].classList.add("flip-card");
-    }
-});
-
-
-
 //----alphabetic sorting in character sheets
 Hooks.on("renderActorSheet", (app, html, data) => {
 
@@ -973,8 +944,15 @@ Hooks.on("deleteCombat", async (combat, dataUpdate) => {
     var listHandsReset =[];
     //listing of actors in the closing combat
     combat.combatants.forEach(fighter => listCombatants.push(fighter.actorId));
+    //listing of actors in the closing combat
+    combat.combatants.filter(sk => sk.actor.type === "stormknight").forEach(fighter => listCombatants.push(fighter.actorId));
     //listing of hands' actors in closing combat
-    listCombatants.forEach(i => listHandsReset.push(game.actors.get(i).getDefaultHand()));
+    listCombatants.forEach(i => {if (!!game.actors.get(i).getDefaultHand()) {listHandsReset.push(game.actors.get(i).getDefaultHand())}});
     //delete the flag that give the pooled condition in each card of each hand
     listHandsReset.forEach(hand => hand.cards.forEach(card => card.unsetFlag("torgeternity", "pooled")));
 })
+
+Hooks.on("renderChatLog", (app, html, data) => {
+    //----chat messages listeners
+    Chat.addChatListeners(html);
+});

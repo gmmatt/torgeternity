@@ -990,7 +990,6 @@ i.torg {
     background-repeat: no-repeat;
     display: flex;
     position: relative;
-    left: -25%;
     filter: grayscale(1);
     transition: 0.3s;
 }
@@ -1089,7 +1088,7 @@ nav#controls ol .torgHand:before {
     background-image: url(../images/thunder.webp);
     z-index: 20;
     background-size: 100% 100%;
-    width: 380px;
+    width: 380px; 
     height: 100%;
     border: none;
 }

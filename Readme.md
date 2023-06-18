@@ -8,6 +8,17 @@
 For manual installation, use the provided manifest URL in the "*Install System*" popup window 
 while managing game systems.
 
+v. 2.9.3
+- Fixed issue where skills and attacks couldn't be rolled from unlinked tokens in v11
+- Cards are removed from player pools when GM ends combat encounter
+- Fixed issue where Torg icon was not aligning in left custom menu
+- Many thanks to Durak who was mostly responsible for the changes in this patch!
+- Removed option for animated chat cards - it was causing formatting issues in some system
+  installations.
+
+v. 2.9.2
+- Fixed issue where "Hide Foreign Compendium" setting was broken (thanks for the help Durak!)
+
 v. 2.9.1
 - Version 11 compatibility!
 - Fixed problem in 2.9.0 with database compatibility
