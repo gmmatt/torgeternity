@@ -658,16 +658,13 @@ Class-Syntax:
 class="splotch aysle/cyber/nile/or/panpa/thark left/right
 */
 
-.splotch {
+.sheet.journal-entry .journal-entry-page div.splotch{
     background-size: 100% 100%;
     background-repeat: no-repeat;
     background-position-x: center;
     width: 50%;
     display: inline-block;
-    margin-left: 25%;
-    /* padding-top: 30%; */
-    /* min-height: 100px; */
-    background-image: url(../images/Splotch_Aysle.webp);
+    margin-left: 25%;    
 }
 
 .splotch.aysle {
