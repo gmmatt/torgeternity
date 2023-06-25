@@ -628,12 +628,14 @@ div.subtitleleft img {
     margin: 0;
     padding-bottom: 8px;
     padding-left: 10px;
+    text-indent: 0;
 }
 
 .sheet.journal-entry .journal-entry-page .sidenote ul {
     /*list-style-position: inside;*/
     text-align: justify;
     padding-right: 10px;
+    text-indent: 0;
 }
 
 .sidenote :first-of-type {
