@@ -4,9 +4,8 @@ export default class torgeternityActor extends Actor {
 
 
 
-    prepareBaseData() {
-
-        //Set Values for All Characters
+    prepareData() {
+        super.prepareData();
         
         // Skillsets
         var skillset = this.system.skills;
@@ -28,6 +27,19 @@ export default class torgeternityActor extends Actor {
                 }
             }
         }
+    }
+
+    prepareBaseData(){
+
+        //Set Values for All Characters
+        
+        // Skillsets
+        var skillset = this.system.skills;
+        // Derive Skill values for Storm Knights
+        //
+        // NOTE: Threat skill values are created directly by user, but SK skill values are derived based on attribute + adds.
+        //       
+        
         
         if(this._source.type === "stormknight" | this._source.type === "threat") {
             // Base Fatigue
@@ -238,6 +250,7 @@ export default class torgeternityActor extends Actor {
             this.system.defense = parseInt(-this.system.topSpeed.penalty + this.system.operator.skillValue)
         }
     }
+
 
     applyActiveEffects() {
         super.applyActiveEffects();
