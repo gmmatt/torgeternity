@@ -58,7 +58,7 @@ export function registerHelpers() {
         var i;
         const effects = data.effects;
         for (i = 0; i < effects.length; i++) {
-            if (effects[i].label === "ActiveDefense") {
+            if (effects[i].name === "ActiveDefense") {
                 return true;
             }
         };
