@@ -258,25 +258,23 @@ export default class torgeternityActor extends Actor {
         var i;
         const effects = this.effects;
         for (i = 0; i < effects.contents.length; i++) {
-            if (effects.contents[i].flags.hasOwnProperty("core")) {
-                if (effects.contents[i].flags.core.statusId === "stymied") {
+                if (effects.contents[i].name === game.i18n.localize(`torgeternity.statusEffects.stymied`)) {
                     this.system.stymiedModifier = -2;
-                } else if (effects.contents[i].flags.core.statusId === "veryStymied") {
+                } else if (effects.contents[i].name === game.i18n.localize(`torgeternity.statusEffects.veryStymied`)) {
                     this.system.stymiedModifier = -4;
                 }
-                if (effects.contents[i].flags.core.statusId === "vulnerable") {
+                if (effects.contents[i].name === game.i18n.localize(`torgeternity.statusEffects.vulnerable`)) {
                     this.system.vulnerableModifier = 2;
-                } else if (effects.contents[i].flags.core.statusId === "veryVulnerable") {
+                } else if (effects.contents[i].name === game.i18n.localize(`torgeternity.statusEffects.veryVulnerable`)) {
                     this.system.vulnerableModifier = 4
                 }
-                if (effects.contents[i].flags.core.statusId === "dim") {
+                if (effects.contents[i].name === game.i18n.localize(`torgeternity.statusEffects.dim`)) {
                     this.system.darknessModifier = -2
-                } else if (effects.contents[i].flags.core.statusId === "dark") {
+                } else if (effects.contents[i].name === game.i18n.localize(`torgeternity.statusEffects.dark`)) {
                     this.system.darknessModifier = -4
-                } else if (effects.contents[i].flags.core.statusId === "pitchBlack") {
+                } else if (effects.contents[i].name === game.i18n.localize(`torgeternity.statusEffects.pitchBlack`)) {
                     this.system.darknessModifier = -6
                 }
-            }
         }
     }
 

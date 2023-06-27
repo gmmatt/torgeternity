@@ -280,7 +280,7 @@ torgeternity.magnitudes = {
     icon: 'systems/torgeternity/images/status-markers/stymied.webp',
     id: 'stymied',
     label: 'torgeternity.statusEffects.stymied',
-    name: 'stymied'
+    name: 'torgeternity.statusEffects.stymied'
 },
 
 {
@@ -288,103 +288,119 @@ torgeternity.magnitudes = {
     icon: 'systems/torgeternity/images/status-markers/very-stymied.webp',
     id: 'veryStymied',
     label: 'torgeternity.statusEffects.veryStymied',
-    name: 'veryStymied'
+    name: 'torgeternity.statusEffects.veryStymied'
 },
 
 {
     icon: 'systems/torgeternity/images/status-markers/vulnerable.webp',
     id: 'vulnerable',
-    label: 'torgeternity.statusEffects.vulnerable'
+    label: 'torgeternity.statusEffects.vulnerable',
+    name: 'torgeternity.statusEffects.vulnerable'
 },
 
 {
     icon: 'systems/torgeternity/images/status-markers/very-vulnerable.webp',
     id: 'veryVulnerable',
-    label: 'torgeternity.statusEffects.veryVulnerable'
+    label: 'torgeternity.statusEffects.veryVulnerable',
+    name: 'torgeternity.statusEffects.veryVulnerable'
 },
 
 {
     icon: 'systems/torgeternity/images/status-markers/disconnected.webp',
     id: 'disconnected',
-    label: 'torgeternity.statusEffects.disconnected'
+    label: 'torgeternity.statusEffects.disconnected',
+    name: 'torgeternity.statusEffects.disconnected'
 },
 
 {
     icon: 'systems/torgeternity/images/status-markers/aiming.webp',
     id: 'aiming',
-    label: 'torgeternity.statusEffects.aiming'
+    label: 'torgeternity.statusEffects.aiming',
+    name: 'torgeternity.statusEffects.aiming'
 },
 
 {
     icon: 'systems/torgeternity/images/status-markers/malfunction.webp',
     id: 'malfunction',
-    label: 'torgeternity.statusEffects.malfunction'
+    label: 'torgeternity.statusEffects.malfunction',
+    name: 'torgeternity.statusEffects.malfunction'
 },
 
 {
     icon: 'systems/torgeternity/images/status-markers/concentrating.webp',
     id: 'concentrating',
-    label: 'torgeternity.statusEffects.concentrating'
+    label: 'torgeternity.statusEffects.concentrating',
+    name: 'torgeternity.statusEffects.concentrating'
 },
 
 {
     icon: 'systems/torgeternity/images/status-markers/restrained.webp',
     id: 'restrained',
-    label: 'torgeternity.statusEffects.restrained'
+    label: 'torgeternity.statusEffects.restrained',
+    name: 'torgeternity.statusEffects.restrained'
 },
 
 {
     icon: 'systems/torgeternity/images/status-markers/dark-2.png',
     id: 'dim',
-    label: 'torgeternity.statusEffects.dim'
+    label: 'torgeternity.statusEffects.dim',
+    name: 'torgeternity.statusEffects.dim'
 },
 
 {
     icon: 'systems/torgeternity/images/status-markers/dark-4.png',
     id: 'dark',
-    label: 'torgeternity.statusEffects.dark'
+    label: 'torgeternity.statusEffects.dark',
+    name: 'torgeternity.statusEffects.dark'
 },
 
 {
     icon: 'systems/torgeternity/images/status-markers/dark-6.png',
     id: 'pitchBlack',
-    label: 'torgeternity.statusEffects.pitchBlack'
+    label: 'torgeternity.statusEffects.pitchBlack',
+    name: 'torgeternity.statusEffects.pitchBlack'
 },
 
 {
     icon: 'systems/torgeternity/images/status-markers/waiting.png',
     id: 'waiting',
-    label: 'torgeternity.statusEffects.waiting'
+    label: 'torgeternity.statusEffects.waiting',
+    name: 'torgeternity.statusEffects.waiting'
 },
 
 {
     icon: 'icons/svg/skull.svg',
     id: 'dead',
-    label: 'torgeternity.statusEffects.dead'
+    label: 'torgeternity.statusEffects.dead',
+    name: 'torgeternity.statusEffects.dead'
 },
 
 {
     icon: 'icons/svg/falling.svg',
     id: 'prone',
-    label: 'torgeternity.statusEffects.prone'
+    label: 'torgeternity.statusEffects.prone',
+    name: 'torgeternity.statusEffects.prone'
 },
 
 {
     icon: 'icons/svg/paralysis.svg',
     id: 'incapacitated',
-    label: 'torgeternity.statusEffects.incapacitated'
+    label: 'torgeternity.statusEffects.incapacitated',
+    name: 'torgeternity.statusEffects.incapacitated'
 },
 
 {
     icon: 'icons/svg/unconscious.svg',
     id: 'unconscious',
-    label: 'torgeternity.statusEffects.unconscious'
+    label: 'torgeternity.statusEffects.unconscious',
+    name: 'torgeternity.statusEffects.unconscious'
 },
 
 {
     icon: 'icons/svg/blind.svg',
     id: 'blind',
-    label: 'torgeternity.statusEffects.blind'
+    label: 'torgeternity.statusEffects.blind',
+    name: 'torgeternity.statusEffects.blind'
 }
 
     //TODO : create KO and defeat status

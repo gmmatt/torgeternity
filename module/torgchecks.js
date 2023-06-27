@@ -489,10 +489,10 @@ export function renderSkillChat(test) {
         test.actionTotalLabel = "display:none";
     // Create and Manage Active Effect if SK is Actively Defending (thanks Durak!)
     } else if (test.testType === "activeDefense") {                              //Click on defense
-        var oldAD = myActor.effects.find(a => a.label === "ActiveDefense");      //Search for an ActiveDefense effect
+        var oldAD = myActor.effects.find(a => a.name === "ActiveDefense");      //Search for an ActiveDefense effect
         var shieldOn = myActor.items.filter(it => (it.type === "shield" && it.system.equipped));  //Search for an equipped shield (an array)
         var shieldBonus = 0;                                                                      //set the shieldBonus to 0 then check if the actor is Vulnerable, if true, shield bonus stay 0
-        if (!(myActor.effects.find(a => a.label === game.i18n.localize('torgeternity.statusEffects.vulnerable'))) && !(myActor.effects.find(a => a.label === game.i18n.localize('torgeternity.statusEffects.veryVulnerable')))) {
+        if (!(myActor.effects.find(a => a.name === game.i18n.localize('torgeternity.statusEffects.vulnerable'))) && !(myActor.effects.find(a => a.name === game.i18n.localize('torgeternity.statusEffects.veryVulnerable')))) {
             shieldBonus += shieldOn[0]?.system?.bonus || 0;
         };
         if (!oldAD) {                                                                                       //Create it if not present (if it exists, will be deleted farther)
@@ -549,7 +549,7 @@ export function renderSkillChat(test) {
             test.actionTotalLabel = "display:none";
         };
         if (oldAD) {                                                                                        //if present, reset by deleting
-            fromUuidSync(test.actor).effects.find(a => a.label === "ActiveDefense").delete();
+            fromUuidSync(test.actor).effects.find(a => a.name === "ActiveDefense").delete();
             ////
             let RAD = {                                                                                     //Simple chat message for information
                 speaker: ChatMessage.getSpeaker(),
@@ -562,7 +562,7 @@ export function renderSkillChat(test) {
 
     } else if (test.testType === "activeDefenseUpdate") {                                                   //update bonus in case of bonus roll possibility / up
         // Delete Existing Active Effects
-        fromUuidSync(test.actor).effects.find(a => a.label === "ActiveDefense").delete();
+        fromUuidSync(test.actor).effects.find(a => a.name === "ActiveDefense").delete();
         if (test.bonus < 1) {
             test.bonus = 1
         };
@@ -570,7 +570,7 @@ export function renderSkillChat(test) {
         // Create new set of active effects
         var shieldOn = myActor.items.filter(it => (it.type === "shield" && it.system.equipped));  //Search for an equipped shield (an array)
         var shieldBonus = 0;
-        if (!(myActor.effects.find(a => a.label === game.i18n.localize('torgeternity.statusEffects.vulnerable'))) && !(myActor.effects.find(a => a.label === game.i18n.localize('torgeternity.statusEffects.veryVulnerable')))) {
+        if (!(myActor.effects.find(a => a.name === game.i18n.localize('torgeternity.statusEffects.vulnerable'))) && !(myActor.effects.find(a => a.name === game.i18n.localize('torgeternity.statusEffects.veryVulnerable')))) {
             shieldBonus += shieldOn[0]?.system?.bonus || 0;
         };
         let NewActiveDefense = {
