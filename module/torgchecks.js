@@ -497,7 +497,7 @@ export function renderSkillChat(test) {
         };
         if (!oldAD) {                                                                                       //Create it if not present (if it exists, will be deleted farther)
             let NewActiveDefense = {
-                label : "ActiveDefense",                                                                    //Add an icon to remind the defense, bigger ? Change color of Defense ?
+                name : "ActiveDefense",                                                                    //Add an icon to remind the defense, bigger ? Change color of Defense ?
                 icon : "icons/equipment/shield/heater-crystal-blue.webp",                                   //To change I think, taken in Core, should have a dedicated file
                 duration : {"rounds" : 1},
                 changes : [{                                                                                //Modify all existing "basic" defense in block
@@ -574,7 +574,7 @@ export function renderSkillChat(test) {
             shieldBonus += shieldOn[0]?.system?.bonus || 0;
         };
         let NewActiveDefense = {
-            label : "ActiveDefense",                                                                    //Add an icon to remind the defense, bigger ? Change color of Defense ?
+            name : "ActiveDefense",                                                                    //Add an icon to remind the defense, bigger ? Change color of Defense ?
             icon : "icons/equipment/shield/heater-crystal-blue.webp",                                   //To change I think, taken in Core, should have a dedicated file
             duration : {"rounds" : 1},
             changes : [{                                                                                //Modify all existing "basic" defense in block
