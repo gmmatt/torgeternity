@@ -2,12 +2,9 @@ import {getTorgValue} from "./torgchecks.js";
 
 export default class torgeternityActor extends Actor {
 
+    prepareData() {
+        super.prepareData();
 
-
-    prepareBaseData() {
-
-        //Set Values for All Characters
-        
         // Skillsets
         var skillset = this.system.skills;
         
@@ -27,55 +24,58 @@ export default class torgeternityActor extends Actor {
                     skill.value = parseInt(skill.adds) + parseInt(this.system.attributes[skill.baseAttribute]);
                 }
             }
-        }
-        
+        };
         if(this._source.type === "stormknight" | this._source.type === "threat") {
-            // Base Fatigue
-            this.system.other.fatigue = 2;
             
             // Set Defensive Values
             if (skillset.dodge.value) {
-                this.system.dodgeDefense = this.system.skills.dodge.value;
+                this.system.dodgeDefense = this.system.skills.dodge.value + (this.system?.dodgeDefenseMod | 0);
             } else {
-                this.system.dodgeDefense = this.system.attributes.dexterity
+                this.system.dodgeDefense = this.system.attributes.dexterity + (this.system?.dodgeDefenseMod | 0)
             };
 
             if (skillset.meleeWeapons.value) {
-                this.system.meleeWeaponsDefense = this.system.skills.meleeWeapons.value;
+                this.system.meleeWeaponsDefense = this.system.skills.meleeWeapons.value + (this.system?.meleeWeaponsDefenseMod | 0);
             } else {
-                this.system.meleeWeaponsDefense = this.system.attributes.dexterity
+                this.system.meleeWeaponsDefense = this.system.attributes.dexterity + (this.system?.meleeWeaponsDefenseMod | 0)
             };
 
             if (skillset.unarmedCombat.value) {
-                this.system.unarmedCombatDefense = this.system.skills.unarmedCombat.value;
+                this.system.unarmedCombatDefense = this.system.skills.unarmedCombat.value + (this.system?.unarmedCombatDefenseMod | 0);
             } else {
-                this.system.unarmedCombatDefense = this.system.attributes.dexterity
+                this.system.unarmedCombatDefense = this.system.attributes.dexterity + (this.system?.unarmedCombatDefenseMod | 0)
             };
 
             if (skillset.intimidation.value) {
-                this.system.intimidationDefense = this.system.skills.intimidation.value;
+                this.system.intimidationDefense = this.system.skills.intimidation.value + (this.system?.intimidationDefenseMod | 0);
             } else {
-                this.system.intimidationDefense = this.system.attributes.spirit
+                this.system.intimidationDefense = this.system.attributes.spirit + (this.system?.intimidationDefenseMod | 0)
             };
 
             if (skillset.maneuver.value) {
-                this.system.maneuverDefense = this.system.skills.maneuver.value;
+                this.system.maneuverDefense = this.system.skills.maneuver.value + (this.system?.maneuverDefenseMod | 0);
             } else {
-                this.system.maneuverDefense = this.system.attributes.dexterity
+                this.system.maneuverDefense = this.system.attributes.dexterity + (this.system?.maneuverDefenseMod | 0)
             };
 
             if (skillset.taunt.value) {
-                this.system.tauntDefense = this.system.skills.taunt.value;
+                this.system.tauntDefense = this.system.skills.taunt.value + (this.system?.tauntDefenseMod | 0);
             } else {
-                this.system.tauntDefense = this.system.attributes.charisma
+                this.system.tauntDefense = this.system.attributes.charisma + (this.system?.tauntDefenseMod | 0)
             };
 
             if (skillset.trick.value) {
-                this.system.trickDefense = this.system.skills.trick.value;
+                this.system.trickDefense = this.system.skills.trick.value + (this.system?.trickDefenseMod | 0);
             } else {
-                this.system.trickDefense = this.system.attributes.mind
+                this.system.trickDefense = this.system.attributes.mind + (this.system?.trickDefenseMod | 0)
             };
         }
+    }
+
+    prepareBaseData() {
+        
+        // Base Fatigue
+        this.system.other.fatigue = 2;
     
         // Other derived attributes for Storm Knights
         if (this._source.type === "stormknight") {
