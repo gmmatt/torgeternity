@@ -1,0 +1,72 @@
+<div>
+    <form>
+    <table>
+        <tr>
+            <td>
+                <table>
+                    <tr>
+                        <td>
+                            {{> "systems/torgeternity/templates/testDialogs/difficulty-selector.hbs"}}
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <table>
+                    <tr>
+                        <td>
+                            {{> "systems/torgeternity/templates/testDialogs/movement-penalty-selector.hbs"}}
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                {{> "systems/torgeternity/templates/testDialogs/multi-action-selector.hbs"}}
+            </td>
+        </tr>
+        <tr>
+            <td>
+                {{> "systems/torgeternity/templates/testDialogs/multi-target-selector.hbs"}}
+            </td>
+        </tr>
+        <tr>
+            <td>
+                {{> "systems/torgeternity/templates/testDialogs/modifiers-table.hbs"}}
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <fieldset>
+                    <legend>{{localize "torgeternity.sheetLabels.statusEffects"}}</legend>
+                    <div class="skill-check-dialog-status-effects">
+							{{#if test.stymiedModifier}}
+								{{localize "torgeternity.statusEffects.stymied"}}:
+								{{test.stymiedModifier}}<br>
+							{{/if}}
+							{{#if test.darknessModifier}}
+								{{localize "torgeternity.statusEffects.darkness"}}:
+								{{test.darknessModifier}}<br>
+							{{/if}}
+							{{#if test.woundModifier}}
+								{{localize "torgeternity.stats.wounds"}}:
+								{{test.woundModifier}}
+								<br>
+							{{/if}}
+							{{#if test.sizeModifier}}
+								{{localize "torgeternity.statusEffects.targetSize"}}: +{{test.sizeModifier}}
+								<br>
+							{{/if}}
+							{{#if test.vulnerableModifier}}
+								{{localize "torgeternity.statusEffects.targetVulnerability"}}: +{{test.vulnerableModifier}}<br>
+							{{/if}}
+                    </div>
+                </fieldset>
+            </td>
+    </table>
+    </form>
+    <button class="update-roll-button"><i class="fas fa-redo"></i>{{localize "torgeternity.sheetLabels.update"}}</button>
+</div>
