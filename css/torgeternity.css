@@ -308,7 +308,14 @@ form.actor-sheet header.sheet-header-vehicle {
     align-items:center;
 }
 
-
+.window-content .actor-sheet li.vehicle-weapon-header .name-header,
+.window-content .actor-sheet li.vehicle-weapon-header .gunner-header,
+.window-content .actor-sheet li.vehicle-weapon-header .skill-header,
+.window-content .actor-sheet li.vehicle-weapon-header .range-header,
+.window-content .actor-sheet li.vehicle-weapon-header .damage-header,
+.window-content .actor-sheet li.vehicle-weapon-header .controls-header {
+    
+}
 
 .window-content .actor-sheet li.vehicle-weapon-list .vehicle-image,
 .window-content .actor-sheet li.vehicle-add-on-list .add-on-image {
@@ -990,6 +997,7 @@ i.torg {
     background-repeat: no-repeat;
     display: flex;
     position: relative;
+    left: -25%;
     filter: grayscale(1);
     transition: 0.3s;
 }
@@ -1088,7 +1096,7 @@ nav#controls ol .torgHand:before {
     background-image: url(../images/thunder.webp);
     z-index: 20;
     background-size: 100% 100%;
-    width: 380px; 
+    width: 380px;
     height: 100%;
     border: none;
 }
@@ -2445,14 +2453,16 @@ form.actor-sheet header input[name="name"] {
     cursor: pointer;
 }
 
-.window-content .actor-sheet .skills ul li a.toggleFav {
+.window-content .actor-sheet .skills ul li a.toggleFav,
+.window-content .actor-sheet .skills ul li a.toggleDefenseOnly {
     color: grey;
     position: relative;
     font-size: 10px;
     top: -4px;
 }
 
-.window-content .actor-sheet .skills ul li a.toggleFav.checked {
+.window-content .actor-sheet .skills ul li a.toggleFav.checked,
+.window-content .actor-sheet .skills ul li a.toggleDefenseOnly.checked {
     font-size: 15px;
     color: rgba(8, 83, 8, 0.794);
     -webkit-animation-duration: 0.3s;
@@ -2508,7 +2518,7 @@ form.actor-sheet header input[name="name"] {
 }
 
 .window-content .actor-sheet .perks-list .item-list li,
-.window-content .actor-sheet .weapons-list .item-list li {
+.window-content .actor-sheet .weapons-list .item-list li  {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -2796,11 +2806,6 @@ form.actor-sheet header input[name="name"] {
     flex-direction: row;
 }
 
-form.actor-sheet.threat img.profile-img {
-    max-width: 64px;
-    max-height: 64px;
-}
-
 form.actor-sheet.threat span.vital-box span.light {
     font-family: "Signika";
     font-size: 13px;
@@ -2816,14 +2821,16 @@ form.actor-sheet.threat input[type="checkbox"] {
     width: 10px;
 }
 
-form.actor-sheet.threat a.toggleFav {
+form.actor-sheet.threat a.toggleFav,
+form.actor-sheet.threat a.toggleDefenseOnly {
     color: grey;
     position: relative;
     font-size: 10px;
     left: 5px;
 }
 
-form.actor-sheet.threat a.toggleFav.checked {
+form.actor-sheet.threat a.toggleFav.checked,
+form.actor-sheet.threat a.toggleDefenseOnly.checked {
     color: rgba(8, 83, 8, 0.794);
     text-shadow: 0px 0px 3px green;
 }
@@ -2862,7 +2869,8 @@ form.actor-sheet.threat div.skill-list-edit .skill-element-edit span.inputsFav {
 }
 
 form.actor-sheet.threat div.skill-list-edit .skill-element-edit span.inputsFav input[type="checkbox"],
-form.actor-sheet.threat div.skill-list-edit .skill-element-edit span.inputsFav a.toggleFav {
+form.actor-sheet.threat div.skill-list-edit .skill-element-edit span.inputsFav a.toggleFav,
+form.actor-sheet.threat div.skill-list-edit .skill-element-edit span.inputDefenseOnly a.toggleDefenseOnly {
     position: absolute;
     left: 19px;
     max-width: 30px;
@@ -3673,4 +3681,134 @@ form.actor-sheet.threat .tab[data-tab].active .editor {
 
 .operator-skill input {
     width: 50px !important;
+}
+
+/* 
+ Threat Sheet Update
+*/
+
+.window-content .actor-sheet .threat-sheet {
+    display:inline-flex;
+}
+
+.window-content .actor-sheet .threat-sidebar {
+    width: 150px;
+}
+.window-content .actor-sheet .threat-sidebar .threat-avatar img {
+    border:groove;
+    border-width: 10px;
+    border-color:grey;
+    border-radius:10px;
+}
+
+.window-content .actor-sheet .threat-sidebar .sidebar-stats {
+    border: solid;
+    border-width: 2px;
+    border-color: black;
+    border-radius: 3px;
+    width: 150px;
+    background-color: lightgray;
+}
+
+.window-content .actor-sheet .threat-sidebar input {
+    background-color:lightgray;
+    font-weight: bold;
+    font-family:Signika;
+    font-size:13px;
+}
+
+.threat-avatar img {
+    width: 150px;
+    height: 150px;
+}
+
+form.actor-sheet.threat img.profile-img {
+    max-width: 150px;
+    max-height: 150px;
+}
+
+.window-content .actor-sheet .threat-sidebar .sidebar-statline {
+    font-family: Signika;
+    font-size: 13px;
+    font-weight:bold;
+    border:none;
+    margin: 5px 5px 5px 5px;
+    height:20px;
+}
+
+.window-content .actor-sheet .threat-sidebar .sidebar-statline .sidebar-statline-left {
+    padding:3px 0;
+}
+
+.window-content .actor-sheet .threat-sidebar .sidebar-heading {
+    font-family: Signika;
+    font-size: 13px;
+    font-weight:bold;
+    text-transform:uppercase;
+    text-align:center;
+}
+
+
+.window-content .actor-sheet .threat-sidebar .sidebar-statline .sidebar-statline-right {
+    float: right;
+}
+
+.window-content .actor-sheet .threat-sidebar img {
+    max-width:150px;
+    border:none;
+    max-height:400px;
+    width:100%;
+}
+
+.window-content .actor-sheet .threat-sheet input[name="name"] {
+    width:90%;
+    height:20px;
+    font-size:30px;
+    font-weight: bold;
+    padding-top:5px;
+    margin-bottom:0px;
+}
+
+.window-content .actor-sheet .threat-sheet .section-bar {
+    border: 1px black solid;
+    background-color: rgb(28, 28, 179);
+    color:white;
+    height: 15px;
+    width:100%;
+    text-align: left;
+    font-family: "Signika";
+    font-size: 13px;
+    font-weight:bold;
+}
+
+.window-content .actor-sheet .threat-sheet .threat-section-attributes {
+    display:block;
+    text-align: center;
+    font-weight: bold;
+}
+
+.window-content .actor-sheet .threat-sheet .sheet-body h1 {
+    margin-bottom:0px;
+}
+
+.window-content .actor-sheet .threat-sheet .sub-header {
+    display:flex;
+    align-content: center;
+    justify-content: center
+}
+
+.window-content .actor-sheet .threat-sheet .sub-header span {
+    margin-top: 0px;
+    margin-bottom: 10px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.window-content .actor-sheet .threat-sheet .sub-header input[type="text"] {
+    border:none;
+    width: 50px;
+}
+
+.window-content .actor-sheet .threat-sheet .defenseCheck {
+    opacity: 1;
 }

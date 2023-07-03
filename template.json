@@ -8,7 +8,7 @@
         "templates": {
             "commonStats": {
                 "shock": {
-                    "max": 5,
+                    "max": 8,
                     "value": 0
                 },
                 "wounds": {
@@ -23,9 +23,9 @@
                     "strength": 8
                 },
                 "other": {
-                    "move": 5,
-                    "run": 5,
-                    "toughness": 5,
+                    "move": 8,
+                    "run": 24,
+                    "toughness": 8,
                     "armor": 0,
                     "cosm": "",
                     "possibilities": 0
@@ -34,7 +34,7 @@
                     "airVehicles": {
                         "baseAttribute": "dexterity",
                         "adds": "",
-                        "value": 0,
+                        "value": "",
                         "isFav": false,
                         "groupName": "other",
                         "unskilledUse": 0
@@ -42,7 +42,7 @@
                     "alteration": {
                         "baseAttribute": "mind",
                         "adds": "",
-                        "value": 0,
+                        "value": "",
                         "isFav": false,
                         "groupName": "other",
                         "unskilledUse": 0
@@ -50,7 +50,7 @@
                     "apportation": {
                         "baseAttribute": "spirit",
                         "adds": "",
-                        "value": 0,
+                        "value": "",
                         "isFav": false,
                         "groupName": "other",
                         "unskilledUse": 0
@@ -58,7 +58,7 @@
                     "beastRiding": {
                         "baseAttribute": "dexterity",
                         "adds": "",
-                        "value": 0,
+                        "value": "",
                         "isFav": false,
                         "groupName": "other",
                         "unskilledUse": 1
@@ -66,7 +66,7 @@
                     "computers": {
                         "baseAttribute": "mind",
                         "adds": "",
-                        "value": 0,
+                        "value": "",
                         "isFav": false,
                         "groupName": "other",
                         "unskilledUse": 1
@@ -74,7 +74,7 @@
                     "conjuration": {
                         "baseAttribute": "spirit",
                         "adds": "",
-                        "value": 0,
+                        "value": "",
                         "isFav": false,
                         "groupName": "other",
                         "unskilledUse": 0
@@ -82,7 +82,7 @@
                     "divination": {
                         "baseAttribute": "mind",
                         "adds": "",
-                        "value": 0,
+                        "value": "",
                         "isFav": false,
                         "groupName": "other",
                         "unskilledUse": 0
@@ -90,7 +90,7 @@
                     "dodge": {
                         "baseAttribute": "dexterity",
                         "adds": "",
-                        "value": 0,
+                        "value": "",
                         "isFav": false,
                         "groupName": "other",
                         "unskilledUse": 1
@@ -98,7 +98,7 @@
                     "energyWeapons": {
                         "baseAttribute": "dexterity",
                         "adds": "",
-                        "value": 0,
+                        "value": "",
                         "isFav": false,
                         "groupName": "combat",
                         "unskilledUse": 1
@@ -106,7 +106,7 @@
                     "evidenceAnalysis": {
                         "baseAttribute": "mind",
                         "adds": "",
-                        "value": 0,
+                        "value": "",
                         "isFav": false,
                         "groupName": "other",
                         "unskilledUse": 1
@@ -114,7 +114,7 @@
                     "faith": {
                         "baseAttribute": "spirit",
                         "adds": "",
-                        "value": 0,
+                        "value": "",
                         "isFav": false,
                         "groupName": "other",
                         "unskilledUse": 1
@@ -122,7 +122,7 @@
                     "find": {
                         "baseAttribute": "mind",
                         "adds": "",
-                        "value": 0,
+                        "value": "",
                         "isFav": false,
                         "groupName": "other",
                         "unskilledUse": 1
@@ -130,7 +130,7 @@
                     "fireCombat": {
                         "baseAttribute": "dexterity",
                         "adds": "",
-                        "value": 0,
+                        "value": "",
                         "isFav": false,
                         "groupName": "combat",
                         "unskilledUse": 1
@@ -138,7 +138,7 @@
                     "firstAid": {
                         "baseAttribute": "mind",
                         "adds": "",
-                        "value": 0,
+                        "value": "",
                         "isFav": false,
                         "groupName": "other",
                         "unskilledUse": 1
@@ -146,7 +146,7 @@
                     "heavyWeapons": {
                         "baseAttribute": "dexterity",
                         "adds": "",
-                        "value": 0,
+                        "value": "",
                         "isFav": false,
                         "groupName": "other",
                         "unskilledUse": 1
@@ -154,7 +154,7 @@
                     "intimidation": {
                         "baseAttribute": "spirit",
                         "adds": "",
-                        "value": 0,
+                        "value": "",
                         "isFav": false,
                         "groupName": "interaction",
                         "unskilledUse": 1
@@ -162,7 +162,7 @@
                     "kinesis": {
                         "baseAttribute": "spirit",
                         "adds": "",
-                        "value": 0,
+                        "value": "",
                         "isFav": false,
                         "groupName": "other",
                         "unskilledUse": 0
@@ -170,7 +170,7 @@
                     "landVehicles": {
                         "baseAttribute": "dexterity",
                         "adds": "",
-                        "value": 0,
+                        "value": "",
                         "isFav": false,
                         "groupName": "other",
                         "unskilledUse": 1
@@ -178,7 +178,7 @@
                     "language": {
                         "baseAttribute": "mind",
                         "adds": "",
-                        "value": 0,
+                        "value": "",
                         "isFav": false,
                         "groupName": "other",
                         "unskilledUse": 0
@@ -186,7 +186,7 @@
                     "lockpicking": {
                         "baseAttribute": "dexterity",
                         "adds": "",
-                        "value": 0,
+                        "value": "",
                         "isFav": false,
                         "groupName": "other",
                         "unskilledUse": 0
@@ -194,7 +194,7 @@
                     "maneuver": {
                         "baseAttribute": "dexterity",
                         "adds": "",
-                        "value": 0,
+                        "value": "",
                         "isFav": false,
                         "groupName": "interaction",
                         "unskilledUse": 1
@@ -202,7 +202,7 @@
                     "medicine": {
                         "baseAttribute": "mind",
                         "adds": "",
-                        "value": 0,
+                        "value": "",
                         "isFav": false,
                         "groupName": "other",
                         "unskilledUse": 0
@@ -210,7 +210,7 @@
                     "meleeWeapons": {
                         "baseAttribute": "dexterity",
                         "adds": "",
-                        "value": 0,
+                        "value": "",
                         "isFav": false,
                         "groupName": "combat",
                         "unskilledUse": 1
@@ -218,7 +218,7 @@
                     "missileWeapons": {
                         "baseAttribute": "dexterity",
                         "adds": "",
-                        "value": 0,
+                        "value": "",
                         "isFav": false,
                         "groupName": "combat",
                         "unskilledUse": 1
@@ -226,7 +226,7 @@
                     "persuasion": {
                         "baseAttribute": "charisma",
                         "adds": "",
-                        "value": 0,
+                        "value": "",
                         "isFav": false,
                         "groupName": "other",
                         "unskilledUse": 1
@@ -234,7 +234,7 @@
                     "precognition": {
                         "baseAttribute": "mind",
                         "adds": "",
-                        "value": 0,
+                        "value": "",
                         "isFav": false,
                         "groupName": "other",
                         "unskilledUse": 0
@@ -242,7 +242,7 @@
                     "profession": {
                         "baseAttribute": "mind",
                         "adds": "",
-                        "value": 0,
+                        "value": "",
                         "isFav": false,
                         "groupName": "other",
                         "unskilledUse": 1
@@ -250,7 +250,7 @@
                     "reality": {
                         "baseAttribute": "spirit",
                         "adds": "",
-                        "value": 0,
+                        "value": "",
                         "isFav": false,
                         "groupName": "other",
                         "unskilledUse": 0
@@ -258,7 +258,7 @@
                     "scholar": {
                         "baseAttribute": "mind",
                         "adds": "",
-                        "value": 0,
+                        "value": "",
                         "isFav": false,
                         "groupName": "other",
                         "unskilledUse": 1
@@ -266,7 +266,7 @@
                     "science": {
                         "baseAttribute": "mind",
                         "adds": "",
-                        "value": 0,
+                        "value": "",
                         "isFav": false,
                         "groupName": "other",
                         "unskilledUse": 1
@@ -274,7 +274,7 @@
                     "stealth": {
                         "baseAttribute": "dexterity",
                         "adds": "",
-                        "value": 0,
+                        "value": "",
                         "isFav": false,
                         "groupName": "other",
                         "unskilledUse": 1
@@ -282,7 +282,7 @@
                     "streetwise": {
                         "baseAttribute": "charisma",
                         "adds": "",
-                        "value": 0,
+                        "value": "",
                         "isFav": false,
                         "groupName": "other",
                         "unskilledUse": 1
@@ -290,7 +290,7 @@
                     "survival": {
                         "baseAttribute": "mind",
                         "adds": "",
-                        "value": 0,
+                        "value": "",
                         "isFav": false,
                         "groupName": "other",
                         "unskilledUse": 1
@@ -298,7 +298,7 @@
                     "taunt": {
                         "baseAttribute": "charisma",
                         "adds": "",
-                        "value": 0,
+                        "value": "",
                         "isFav": false,
                         "groupName": "interaction",
                         "unskilledUse": 1
@@ -306,7 +306,7 @@
                     "telepathy": {
                         "baseAttribute": "charisma",
                         "adds": "",
-                        "value": 0,
+                        "value": "",
                         "isFav": false,
                         "groupName": "other",
                         "unskilledUse": 0
@@ -314,7 +314,7 @@
                     "tracking": {
                         "baseAttribute": "mind",
                         "adds": "",
-                        "value": 0,
+                        "value": "",
                         "isFav": false,
                         "groupName": "other",
                         "unskilledUse": 1
@@ -322,7 +322,7 @@
                     "trick": {
                         "baseAttribute": "mind",
                         "adds": "",
-                        "value": 0,
+                        "value": "",
                         "isFav": false,
                         "groupName": "interaction",
                         "unskilledUse": 1
@@ -330,7 +330,7 @@
                     "unarmedCombat": {
                         "baseAttribute": "dexterity",
                         "adds": "",
-                        "value": 0,
+                        "value": "",
                         "isFav": false,
                         "groupName": "combat",
                         "unskilledUse": 1
@@ -338,7 +338,7 @@
                     "waterVehicles": {
                         "baseAttribute": "dexterity",
                         "adds": "",
-                        "value": 0,
+                        "value": "",
                         "isFav": false,
                         "groupName": "other",
                         "unskilledUse": 1
@@ -346,7 +346,7 @@
                     "willpower": {
                         "baseAttribute": "spirit",
                         "adds": "",
-                        "value": 0,
+                        "value": "",
                         "isFav": false,
                         "groupName": "other",
                         "unskilledUse": 1
