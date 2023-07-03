@@ -3,9 +3,6 @@
     <!-- type -->
     <h3 class="actor-type"><span>{{localize "torgeternity.sheetLabels.threat"}}</span></h3>
     <!-- header -->
-    <header class="sheet-header threat block">
-        {{> "systems/torgeternity/templates/actors/threat/header.hbs"}}
-    </header>
     {{!-- Sheet Tab Navigation --}}
     <nav class="sheet-tabs tabs" data-group="primary">
         <a class="item" data-tab="stats">{{localize "torgeternity.sheetLabels.stats"}}</a>
@@ -15,40 +12,73 @@
         <a class="item" data-tab="effects">{{localize "torgeternity.sheetLabels.effects"}}</a>
         <a class="item" data-tab="background">{{localize "torgeternity.sheetLabels.notes"}}</a>
     </nav>
-
-    <section class="sheet-body sheet-content">
-
-        <div class="tab threat-block-tab stats" data-group="primary" data-tab="stats">
-            {{> "systems/torgeternity/templates/actors/threat/stat-tab.hbs"}}
+       
+    <div class="threat-sheet">
+        <div class="threat-sidebar">
+            {{> "systems/torgeternity/templates/actors/threat/sidebar.hbs"}}
         </div>
 
-        <div class="tab perks perks-list" data-group="primary" data-tab="perks">
-            {{> "systems/torgeternity/templates/actors/threat/perks-details.hbs"}}
-        </div>
 
-        <div class="tab gear" data-group="primary" data-tab="gear">
-            {{> "systems/torgeternity/templates/actors/threat/gears.hbs"}}
-        </div>
-
-        <div class="tab powers" data-group="primary" data-tab="powers">
-            {{> "systems/torgeternity/templates/actors/threat/powers.hbs"}}
-        </div>
-
-        <div class="tab effects" data-group="primary" data-tab="effects">
-            <div class="effects block">
-                {{> "systems/torgeternity/templates/parts/active-effects.hbs"}}
+        <section class="sheet-body sheet-content">
+            <h1><input name="name" type="text" value="{{actor.name}}" placeholder="Threat Name" /></h1><br>
+            <div class="sub-header">
+                <span class="threat-edit">
+                    <select name="system.details.sizeBonus" class="input-box">
+                        {{#select actor.system.details.sizeBonus}}
+                        {{#each config.sizes as |name type|}}
+                        <option value="{{type}}">{{localize name}}</option>
+                        {{/each}}
+                        {{/select}}
+                    </select>
+                </span>
+                <span class="threat-edit">
+                    <select name="system.details.clearance" class="input-box">
+                        {{#select actor.system.details.clearance}}
+                        {{#each config.clearances as |name type|}}
+                        <option value="{{type}}">{{localize name}}</option>
+                        {{/each}}
+                        {{/select}}
+                    </select>                    
+                </span>
+                <span class="threat-edit">
+                    {{localize "torgeternity.stats.possibilities"}}:&nbsp;
+                    <input name="system.details.possibilitypotential" class="text-input" type="text"
+                        value="{{actor.system.details.possibilitypotential}}" />
+	            </span>
             </div>
-        </div>
+
+            <div class="tab threat-block-tab stats" data-group="primary" data-tab="stats">
+                {{> "systems/torgeternity/templates/actors/threat/stat-tab.hbs"}}
+            </div>
+
+            <div class="tab perks perks-list" data-group="primary" data-tab="perks">
+                {{> "systems/torgeternity/templates/actors/threat/perks-details.hbs"}}
+            </div>
+
+            <div class="tab gear" data-group="primary" data-tab="gear">
+                {{> "systems/torgeternity/templates/actors/threat/gears.hbs"}}
+            </div>
+
+            <div class="tab powers" data-group="primary" data-tab="powers">
+                {{> "systems/torgeternity/templates/actors/threat/powers.hbs"}}
+            </div>
+
+            <div class="tab effects" data-group="primary" data-tab="effects">
+                <div class="effects block">
+                    {{> "systems/torgeternity/templates/parts/active-effects.hbs"}}
+                </div>
+            </div>
 
 
-        <div class="tab background block" data-group="primary" data-tab="background">
-            <h1 class="list-section-heading">{{localize "torgeternity.sheetLabels.backgroundAndNotes"}}</h1>
-            <div>
-                {{editor enrichedDetails target="system.details.description" button=true editable=editable}}</div>
-        </div>
+            <div class="tab background block" data-group="primary" data-tab="background">
+                <h1 class="list-section-heading">{{localize "torgeternity.sheetLabels.backgroundAndNotes"}}</h1>
+                <div>
+                    {{editor enrichedDetails target="system.details.description" button=true editable=editable}}</div>
+            </div>
 
 
-    </section>
+        </section>
+    </div>
 
     <h5 class="editable-tooltip">{{localize "torgeternity.sheetLabels.editableTooltip"}}
         <i class="fas fa-chevron-double-down"></i>

@@ -1,10 +1,13 @@
 <h2>
 	{{localize "torgeternity.sheetLabels.attacks"}}
 </h2>
-<h3>
-	{{localize "torgeternity.sheetLabels.interactionAttacks"}}
-</h3>
 <div class="interaction-attack-list">
+	<a class="unarmed-attack" data-name="unarmedCombat" data-base-attribute="dexterity"
+		data-adds="{{actor.system.skills.unarmedCombat.adds}}" data-skill-value="{{actor.system.skills.unarmedCombat.value}}"
+		data-attack-type="unarmed" data-damage="{{actor.system.unarmedDamage}}">
+		{{localize "torgeternity.sheetLabels.unarmed"}}
+	</a>
+	&bull;
 	<a class="interaction-attack" data-name="intimidation" data-base-attribute="spirit"
 		data-adds="{{actor.system.skills.intimidation.adds}}" data-skill-value="{{actor.system.skills.intimidation.value}}"
 		data-attack-type="intimidation">

@@ -497,41 +497,41 @@ export function renderSkillChat(test) {
         };
         if (!oldAD) {                                                                                       //Create it if not present (if it exists, will be deleted farther)
             let NewActiveDefense = {
-                label : "ActiveDefense",                                                                    //Add an icon to remind the defense, bigger ? Change color of Defense ?
+                name : "ActiveDefense",                                                                    //Add an icon to remind the defense, bigger ? Change color of Defense ?
                 icon : "icons/equipment/shield/heater-crystal-blue.webp",                                   //To change I think, taken in Core, should have a dedicated file
                 duration : {"rounds" : 1},
                 changes : [{                                                                                //Modify all existing "basic" defense in block
-                        "key": "system.dodgeDefense",                                                         //Should need other work for defense vs powers
+                        "key": "system.dodgeDefenseMod",                                                         //Should need other work for defense vs powers
                         "value": test.bonus,                                                                //that don't target xxDefense
                         "priority": 20,                                                                     //Create a data.ADB that store the bonus ?
                         "mode": 2
                         },{
-                        "key": "system.intimidationDefense",
+                        "key": "system.intimidationDefenseMod",
                         "value": test.bonus,
                         "priority": 20,
                         "mode": 2
                         },{
-                        "key": "system.maneuverDefense",
+                        "key": "system.maneuverDefenseMod",
                         "value": test.bonus,
                         "priority": 20,
                         "mode": 2
                         },{
-                        "key": "system.meleeWeaponsDefense",
+                        "key": "system.meleeWeaponsDefenseMod",
                         "value": test.bonus,
                         "priority": 20,
                         "mode": 2
                         },{
-                        "key": "system.tauntDefense",
+                        "key": "system.tauntDefenseMod",
                         "value": test.bonus,
                         "priority": 20,
                         "mode": 2
                         },{
-                        "key": "system.trickDefense",
+                        "key": "system.trickDefenseMod",
                         "value": test.bonus,
                         "priority": 20,
                         "mode": 2
                         },{
-                        "key": "system.unarmedCombatDefense",
+                        "key": "system.unarmedCombatDefenseMod",
                         "value": test.bonus,
                         "priority": 20,
                         "mode": 2
@@ -574,41 +574,41 @@ export function renderSkillChat(test) {
             shieldBonus += shieldOn[0]?.system?.bonus || 0;
         };
         let NewActiveDefense = {
-            label : "ActiveDefense",                                                                    //Add an icon to remind the defense, bigger ? Change color of Defense ?
+            name : "ActiveDefense",                                                                    //Add an icon to remind the defense, bigger ? Change color of Defense ?
             icon : "icons/equipment/shield/heater-crystal-blue.webp",                                   //To change I think, taken in Core, should have a dedicated file
             duration : {"rounds" : 1},
             changes : [{                                                                                //Modify all existing "basic" defense in block
-                    "key": "system.dodgeDefense",                                                         //Should need other work for defense vs powers
+                    "key": "system.dodgeDefenseMod",                                                         //Should need other work for defense vs powers
                     "value": test.bonus,                                                                //that don't target xxDefense
                     "priority": 20,                                                                     //Create a data.ADB that store the bonus ?
                     "mode": 2
                     },{
-                    "key": "system.intimidationDefense",
+                    "key": "system.intimidationDefenseMod",
                     "value": test.bonus,
                     "priority": 20,
                     "mode": 2
                     },{
-                    "key": "system.maneuverDefense",
+                    "key": "system.maneuverDefenseMod",
                     "value": test.bonus,
                     "priority": 20,
                     "mode": 2
                     },{
-                    "key": "system.meleeWeaponsDefense",
+                    "key": "system.meleeWeaponsDefenseMod",
                     "value": test.bonus,
                     "priority": 20,
                     "mode": 2
                     },{
-                    "key": "system.tauntDefense",
+                    "key": "system.tauntDefenseMod",
                     "value": test.bonus,
                     "priority": 20,
                     "mode": 2
                     },{
-                    "key": "system.trickDefense",
+                    "key": "system.trickDefenseMod",
                     "value": test.bonus,
                     "priority": 20,
                     "mode": 2
                     },{
-                    "key": "system.unarmedCombatDefense",
+                    "key": "system.unarmedCombatDefenseMod",
                     "value": test.bonus,
                     "priority": 20,
                     "mode": 2
