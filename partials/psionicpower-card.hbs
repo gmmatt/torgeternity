@@ -1,0 +1,36 @@
+<div class="psionicpower-border sheet-card {{system.type}}" data-type="{{system.type}}"
+    style="background-image: url('systems/torgeternity/images/bgparch.webp')">
+    <table style="border:none;background-color:transparent">
+        <tr style="border:none">
+            <td>
+                <img class="perk-icon" src="{{img}}" title="{{name}}" style="width:50px;height:50px" />
+            </td>
+            <td class="chat-title">
+                {{name}}
+            </td>
+        </tr>
+    </table>
+    <div class="item-description-chat" data-item-id="{{_id}}">
+        <div><span style="font-weight:bold">{{localize "torgeternity.powers.axiom"}}:</span>
+        <span class="item-dropdown-extras">{{localize "torgeternity.sheetLabels.social"}} {{system.axiom}}</span></div>
+        <div><span style="font-weight:bold">{{localize "torgeternity.powers.skilllevel"}}:</span>
+        <span class="item-dropdown-extras">{{localize (concatSkillName system.skill)}} {{system.skilllevel}}</span></div>
+        <div><span style="font-weight:bold">{{localize "torgeternity.powers.castingtime"}}:</span>
+        <span class="item-dropdown-extras">{{system.castingtime}}</span></div>
+        <div><span style="font-weight:bold">{{localize "torgeternity.powers.dn"}}:</span>
+        <span class="item-dropdown-extras">{{localize (concatPowerDN system.dn)}}</span></div>
+        <div><span style="font-weight:bold">{{localize "torgeternity.powers.range"}}:</span>
+        <span class="item-dropdown-extras">{{system.range}}</span></div>
+        <div><span style="font-weight:bold">{{localize "torgeternity.powers.duration"}}:</span>
+        <span class="item-dropdown-extras">{{system.duration}}</span></div>
+        <br />
+        <div class="item-description-chat">{{{system.description}}}</div>
+        <br />
+        <div><span style="font-weight:bold">{{localize "torgeternity.powers.good"}}:</span>
+        <span class="item-description-chat">{{system.good}}</span></div>
+        <div><span style="font-weight:bold">{{localize "torgeternity.powers.outstanding"}}:</span>
+        <span class="item-description-chat">{{system.outstanding}}</span></div>
+    </div>
+
+
+</div>

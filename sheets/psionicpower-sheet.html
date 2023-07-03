@@ -1,0 +1,11 @@
+<form class="{{cssClass}} item-sheet" autocomplete="off">
+    <h3 class="item-type"><span>{{localize "torgeternity.itemSheetDescriptions.psionicpower"}}</span></h3>
+
+    <header class="sheet-header">
+        <img src="{{item.img}}" data-edit="img" title="{{item.name}}"/>
+        <h1><input name="name" type="text" value="{{item.name}}" placeholder="Psionic Power Name" /></h1>
+    </header>
+
+    {{> "systems/torgeternity/templates/partials/powers-sheet.hbs"}}
+
+</form>

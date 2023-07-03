@@ -1,0 +1,40 @@
+<form class="{{cssClass}} item-sheet" autocomplete="off" height=400>
+    <h3 class="item-type"><span>{{localize "torgeternity.itemSheetDescriptions.enhancement"}}</span></h3>
+
+    <header class="sheet-header">
+        <img src="{{item.img}}" data-edit="img" title="{{item.name}}"  />
+        <h1><input name="name" type="text" value="{{item.name}}" placeholder="Enhancement Name" /></h1>
+    </header>
+
+    <nav class="sheet-tabs item-tabs tabs" data-group="primary">
+        <a class="item" data-tab="stats" >{{localize "torgeternity.sheetLabels.stats"}}</a>
+        <a class="item" data-tab="effects">{{localize "torgeternity.sheetLabels.effects"}}</a>
+    </nav>
+
+    <section class="sheet-body" >
+
+        <div class="tab stats" data-group="primary" data-tab="stats">
+
+
+            <div class="sheet-content">
+                <div class="asside">
+                    <p class="item-data-label">
+                        {{localize "torgeternity.enhancements.perk"}}
+                    </p>
+                    <input name="system.perk" type="text" value="{{item.system.perk}}" class="input-box" />
+                </div>
+                <div class="main-content">
+                    <!-- right column -->
+                    <div class="item-description-textarea">
+                        {{editor description target="system.description" button=true owner=owner editable=editable}}
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="tab effects" data-group="primary" data-tab="effects">
+            {{> "systems/torgeternity/templates/parts/active-effects.hbs"}}
+        </div>
+
+    </section>
+</form>

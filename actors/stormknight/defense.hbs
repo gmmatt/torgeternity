@@ -1,0 +1,33 @@
+<h2>
+    <a class="{{#if (detectActiveDefense data)}}activeDefense-roll-glow{{else}}activeDefense-roll{{/if}}" title="{{localize "torgeternity.sheetLabels.defensesTip"}}">{{localize "torgeternity.sheetLabels.defenses"}}</a>
+</h2>
+<div class="stats-div">
+    <p>
+        <span class="main-label">{{localize "torgeternity.skills.dodge"}}</span>
+        <span class="main-label">{{actor.system.dodgeDefense}}</span>
+    </p>
+    <p>
+        <span class="main-label">{{localize "torgeternity.skills.meleeWeapons"}}</span>
+        <span class="main-label">{{actor.system.meleeWeaponsDefense}}</span>
+    </p>
+    <p>
+        <span class="main-label">{{localize "torgeternity.skills.unarmedCombat"}}</span>
+        <span class="main-label">{{actor.system.unarmedCombatDefense}}</span>
+    </p>
+    <p>
+        <span class="main-label">{{localize "torgeternity.skills.intimidation"}}</span>
+        <span class="main-label">{{actor.system.intimidationDefense}}</span>
+    </p>
+    <p>
+        <span class="main-label">{{localize "torgeternity.skills.maneuver"}}</span>
+        <span class="main-label">{{actor.system.maneuverDefense}}</span>
+    </p>
+    <p>
+        <span class="main-label">{{localize "torgeternity.skills.taunt"}}</span>
+        <span class="main-label">{{actor.system.tauntDefense}}</span>
+    </p>
+    <p>
+        <span class="main-label">{{localize "torgeternity.skills.trick"}}</span>
+        <span class="main-label">{{actor.system.trickDefense}}</span>
+    </p>
+</div>

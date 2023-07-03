@@ -1,0 +1,67 @@
+<div>
+	<h1>
+		<input name="name" type="text" value="{{actor.name}}" placeholder="Name"/></h1>
+	<p><img src="systems/torgeternity/images/te-logo.webp" title="TE Logo"/></p>
+	<img class="open-hand" src="systems/torgeternity/images/icons/cardhand.webp" title="{{localize "torgeternity.dialogPrompts.openHand"}}">
+</div>
+<div>
+	<p>
+
+		<span>{{localize "torgeternity.sheetLabels.race"}}</span>
+		<select name="system.details.race" class="input-box">
+			{{#select actor.system.details.race}}
+				{{#each config.races as |name type|}}
+					<option value="{{type}}">{{localize name}}</option>
+				{{/each}}
+			{{/select}}
+		</select>
+
+		<span>{{localize "torgeternity.gear.cosm"}}</span>
+		<select name="system.other.cosm" class="input-box">
+			{{#select actor.system.other.cosm}}
+				{{#each config.cosmTypes as |name type|}}
+					<option value="{{type}}">{{localize name}}</option>
+				{{/each}}
+			{{/select}}
+		</select>
+
+	</p>
+	<p>
+		<span class="main-label">{{localize "torgeternity.sheetLabels.magic"}}</span>
+		<input
+		name="system.axioms.magic" type="number" value="{{actor.system.axioms.magic}}" data-dtype="Number" class="small-input"/>
+	<!--        <span class="axioms">{{actor.system.axioms.magic}}</span> -->
+	</p>
+	<p>
+		<span class="main-label">{{localize "torgeternity.sheetLabels.social"}}</span>
+		<input name="system.axioms.social" type="number" value="{{actor.system.axioms.social}}" data-dtype="Number" class="small-input"/>
+	</p>
+	<p>
+		<span class="main-label">{{localize "torgeternity.sheetLabels.spirit"}}</span>
+		<input name="system.axioms.spirit" type="number" value="{{actor.system.axioms.spirit}}" data-dtype="Number" class="small-input"/>
+	</p>
+	<p>
+		<span class="main-label">{{localize "torgeternity.sheetLabels.tech"}}</span>
+		<input name="system.axioms.tech" type="number" value="{{actor.system.axioms.tech}}" data-dtype="Number" class="small-input"/>
+	</p>
+	<p>
+		<span class="vital-box">
+			{{localize "torgeternity.sheetLabels.wounds"}}:</span>
+		<input name="system.wounds.value" type="number" value="{{actor.system.wounds.value}}" data-dtype="Number" class="small-input"/>
+		/
+		<input name="system.wounds.max" type="number" value="{{actor.system.wounds.max}}" data-dtype="Number" class="small-input" disabled/>
+
+	</p>
+	<p>
+		<span class="vital-box">
+			{{localize "torgeternity.sheetLabels.shock"}}:</span>
+		<input name="system.shock.value" type="number" value="{{actor.system.shock.value}}" data-dtype="Number" class="small-input"/>
+		/
+		<input name="system.shock.max" type="number" value="{{actor.system.shock.max}}" data-dtype="Number" class="small-input" disabled/>
+
+	</p>
+	<p class="attribut-block">
+		<span class="other-label" data-skill-value="{{system.other.posibilities}}" data-skill-name="{{system.other.posibilities}}">{{localize "torgeternity.sheetLabels.possibilities"}}</span>
+		<input name="system.other.posibilities" type="number" value="{{actor.system.other.posibilities}}" data="dtype=" number""/>
+	</p>
+</div>

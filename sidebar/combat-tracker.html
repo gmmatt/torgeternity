@@ -1,0 +1,167 @@
+<section class="sidebar-tab tab flexcol combat-sidebar" id="combat" data-tab="combat">
+    <header id="combat-round">
+        {{#if user.isGM}}
+
+        <nav class="encounters flexrow">
+            <a class="combat-create" title="{{localize 'COMBAT.Create'}}">
+                <i class="fas fa-plus"></i>
+            </a>
+            {{#if combatCount}}
+            <a class="combat-cycle" title="{{localize 'COMBAT.EncounterPrevious'}}" {{#if
+                previousId}}data-combat-id="{{previousId}}" {{else}}disabled{{/if}}>
+                <i class="fas fa-caret-left"></i>
+            </a>
+            <h4 class="encounter">{{localize "COMBAT.Encounter"}} {{currentIndex}} / {{combatCount}}</h4>
+            <a class="combat-cycle" title="{{localize 'COMBAT.EncounterNext'}}" {{#if
+                nextId}}data-combat-id="{{nextId}}" {{else}}disabled{{/if}}>
+                <i class="fas fa-caret-right"></i>
+            </a>
+            {{/if}}
+            <a class="combat-control" title="{{localize 'COMBAT.Delete'}}" data-control="endCombat" {{#unless
+                combatCount}}disabled{{/unless}}>
+                <i class="fas fa-trash"></i>
+            </a>
+        </nav>
+        {{/if}}
+
+        {{#if combat.flags.torgeternity.activeCard}}
+        <img src="{{combat.flags.torgeternity.activeCard}}" style="object-fit:contain">
+        {{else}}
+        <img src="{{localize 'torgeternity.combat.dramaBack'}}" style="object-fit:contain">
+        {{/if}}
+        <!-- <img src="systems/torgeternity/images/cards/drama-back.jpg" id="active-drama-card" style="object-fit:contain"> -->
+        <nav class="encounters flexrow">
+            {{#if user.isGM}}
+            <a class="heros-first" title="heros first" {{#unless turns}}disabled{{/unless}}>
+                <i class="fas fa-users" style="color:rgb(132, 132, 255)"></i>
+            </a>
+            <a class="vilains-first" title="vilains first" {{#unless turns}}disabled{{/unless}}>
+                <i class="fas fa-users" style="color:rgb(253, 148, 148)"></i>
+            </a>
+            {{/if}}
+            <a class="dsr-counter" {{#unless turns}}disabled{{/unless}}>
+                <span class="dsr-token">
+                    <span class="dsr-step">
+                        {{#if combat.flags.torgeternity.dsrStage}}
+                        {{localize "torgeternity.tokens.step"}}
+                        {{else}}
+                        {{localize "torgeternity.tokens.noDSR"}}
+                        {{/if}}
+                    </span>
+                    <span class="dsr-step-number">
+                        {{#if combat.flags.torgeternity.dsrStage}}
+                        &nbsp;{{combat.flags.torgeternity.dsrStage}}
+                        {{/if}}
+                    </span>
+                </span>
+            </a>
+            {{#if combatCount}} {{#if combat.round}}
+            <h3>{{localize 'COMBAT.Round'}} {{combat.round}}</h3>
+            {{else}}
+            <h3>{{localize 'COMBAT.NotStarted'}}</h3>
+            {{/if}} {{else}}
+            <h3>{{localize "COMBAT.None"}}</h3>
+            {{/if}} {{#if @root.user.isGM}}
+            <a class="combat-control" title="{{localize 'COMBAT.InitiativeReset'}}" data-control="resetAll" {{#unless
+                hasCombat}}disabled{{/unless}}>
+                <i class="fas fa-undo"></i>
+            </a>
+            <a class="combat-settings" title="{{localize 'COMBAT.Settings'}}" data-control="trackerSettings">
+                <i class="fas fa-cog"></i>
+            </a>
+            {{/if}}
+        </nav>
+    </header>
+
+    <ol id="combat-tracker" class="directory-list" style="flex:3">
+        {{#each combat.turns as |turn id|}}
+        <li class="combatant actor directory-item flexrow dispo{{turn.token.disposition}}
+            {{#ifequal ../this.combat.current.turn id}} active{{/ifequal}}
+            " data-combatant-id="{{turn.id}}">
+            <!--
+            <div class="token-initiative">
+                <span>{{turn.initiative}}</span>
+            </div>
+        -->
+            <div class="flexrow">
+                <img class="token-image" data-src="{{turn.img}}" title="{{turn.name}}" />
+                <div class="token-name flexcol">
+                    <h4 style="color:white">{{turn.name}}</h4>
+                    <div class="combatant-controls flexrow">
+                        {{#if ../user.isGM}}
+                        <a class="has-played" style="margin: 0px 5px 0px 0px"
+                            title="Check when character's turn is complete"><i {{#if turn.flags.world.turnTaken}}
+                                class="fas fa-check" style="color:green" {{else}} class="fas fa-check"
+                                style="color:gray" {{/if}}></i></a>
+                        <a class="combatant-control {{#if turn.defeated}}active{{/if}}"
+                            title="{{localize 'COMBAT.ToggleDead'}}" data-control="toggleDefeated">
+                            <i class="fas fa-skull"></i></a>
+                        {{/if}}
+
+                        <a class="player-dsr-counter" {{#unless turns}}disabled{{/unless}}>
+                            <span class="player-dsr-token">
+                                <span class="dsr-step">
+                                    {{#if flags.torgeternity.dsrStage}}
+                                    {{localize "torgeternity.tokens.step"}}
+                                    {{else}}
+                                    {{localize "torgeternity.tokens.noDSR"}}
+                                    {{/if}}
+                                </span>
+                                <span class="dsr-step-number">
+                                    {{#if flags.torgeternity.dsrStage}}
+                                    &nbsp;{{flags.torgeternity.dsrStage}}
+                                    {{/if}}
+                                </span>
+                            </span>
+                        </a>
+
+                        <div class="token-effects">
+                            {{#each turn.effects}}
+                            <img class="token-effect" src="{{this}}" /> {{/each}}
+                        </div>
+                    </div>
+                    {{#ifequal turn.actor.type "stormknight"}}
+                    <ul style="margin: 0 0 0.5em 0">
+                        {{localize "torgeternity.sheetLabels.pool"}}:
+                        <span class="pool-list">{{{poolList turn.actor.id}}}</span>
+
+                    </ul>
+                    {{/ifequal}}
+                </div>
+
+            </div>
+
+            <!--
+            {{#if ../user.isGM}}
+            <a class="init-up"><i class="fas fa-arrow-up"></i></a>
+            <a class="init-down"><i class="fas fa-arrow-down"></i></a> 
+            {{/if}}
+-->
+
+        </li>
+
+
+        {{/each}}
+    </ol>
+
+    <nav id="combat-controls" class="directory-footer flexrow">
+        {{#if hasCombat}} {{#if user.isGM}} {{#if round}}
+        <a class="combat-control" title="{{localize 'torgeternity.combat.nextNew'}}" data-control="nextRound"><i
+                class="fas fa-step-forward"></i> {{localize "torgeternity.sheetLabels.new"}}</a>
+
+        <a class="combat-control" title="{{localize 'torgeternity.combat.nextKeep'}}" data-control="nextRoundKeep"><i
+                class="fas fa-step-forward"></i> {{localize "torgeternity.sheetLabels.keep"}}</a>
+
+        <a class="combat-control" title="{{localize 'COMBAT.End'}}" data-control="endCombat"><i class="fas fa-stop"></i>
+            {{localize "torgeternity.sheetLabels.end"}}</a>
+        {{else}}
+        <a class="combat-control center" title="{{localize 'COMBAT.Begin'}}" data-control="startCombat">{{localize
+            'COMBAT.Begin'}}</a> {{/if}} {{else if control}}
+        <a class="combat-control" title="{{localize 'COMBAT.TurnPrev'}}" data-control="previousTurn"><i
+                class="fas fa-arrow-left"></i></a>
+        <a class="combat-control center" title="{{localize 'COMBAT.TurnEnd'}}" data-control="nextTurn">{{localize
+            'COMBAT.TurnEnd'}}</a>
+        <a class="combat-control" title="{{localize 'COMBAT.TurnNext'}}" data-control="nextTurn"><i
+                class="fas fa-arrow-right"></i></a> {{/if}} {{/if}}
+    </nav>
+</section>
