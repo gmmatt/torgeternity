@@ -88,6 +88,16 @@ export function registerHelpers() {
         return options.inverse(this);
     });
 
+    Handlebars.registerHelper('iffalse', function (a, options) {
+        if (a == "false" | a == false) {
+            return options.fn(this);
+        } else {
+            return options.inverse(this);
+        }
+
+    })
+
+
     Handlebars.registerHelper('ifnotequal', function (a, b, options) {
         if (a != b) { return options.fn(this); }
         return options.inverse(this);

@@ -13,10 +13,6 @@ export default class torgeternityActor extends Actor {
         // NOTE: Threat skill values are created directly by user, but SK skill values are derived based on attribute + adds.
         //
 
-        //Set base move and run
-        this.system.other.move = this.system.attributes.dexterity;
-        this.system.other.run = parseInt(this.system.attributes.dexterity) * 3;
-        
         if(this._source.type === "stormknight"){
             for (let [name, skill] of Object.entries(skillset)) {
                 if (skill.adds === null) {
@@ -79,8 +75,15 @@ export default class torgeternityActor extends Actor {
 
     prepareBaseData() {
         
-        // Base Fatigue
+        if(this._source.type === "stormknight" | this._source.type === "threat") {
+            // Base Fatigue
         this.system.other.fatigue = 2;
+        //Set base move and run
+        this.system.other.move = this.system.attributes.dexterity;
+        this.system.other.run = parseInt(this.system.attributes.dexterity) * 3;
+        //Set base unarmedDamage
+        this.system.unarmedDamage = this.system.attributes.strength;
+        }
     
         // Other derived attributes for Storm Knights
         if (this._source.type === "stormknight") {

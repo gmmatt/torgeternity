@@ -17,8 +17,8 @@ export default class torgeternityActorSheet extends ActorSheet {
         super(...args);
 
         if (this.object.type === "threat") {
-            this.options.width = this.position.width = 485;
-            this.options.height = this.position.height = 425;
+            this.options.width = this.position.width = 645;
+            this.options.height = this.position.height = 645;
 
         }
 
@@ -274,6 +274,10 @@ export default class torgeternityActorSheet extends ActorSheet {
         }
 
         if (this.actor.isOwner) {
+            html.find(".unarmed-attack").click(this._onUnarmedAttack.bind(this));
+        }
+
+        if (this.actor.isOwner) {
             html.find(".item-bonusRoll").click(this._onBonusRoll.bind(this));
         }
 
@@ -373,6 +377,7 @@ export default class torgeternityActorSheet extends ActorSheet {
                 }
             }).render(true);
         });
+
         // Toggle Item Detail Visibility
         html.find('.item-name').click(ev => {
             let section = ev.currentTarget.closest(".item");
@@ -387,11 +392,14 @@ export default class torgeternityActorSheet extends ActorSheet {
             }
         });
 
+        // Toggle Skill Edit Visibility
+        // html.find('.skill-list-edit').click(ev => {
+        //    let detail = 
+        //});
+
         //compute adds from total for threats
         if (this.actor.type == "threat") {
             html.find('.threat-skill-total').change(this.setThreatAdds.bind(this));
-
-
         }
     }
     async setThreatAdds(event) {
@@ -588,11 +596,53 @@ export default class torgeternityActorSheet extends ActorSheet {
 
     }
 
+    _onUnarmedAttack(event) {
+        var dnDescriptor = "standard";
+        if (Array.from(game.user.targets).length > 0) {
+            var target = Array.from(game.user.targets)[0].actor;
+            if (target.type === "vehicle") {
+                dnDescriptor = "targetVehicleDefense"
+            } else {
+                dnDescriptor = "targetMeleeWeapons"
+            }
+        } else {
+            dnDescriptor = "standard"
+        }
+
+        let test = {
+            testType: "attack",
+            actor: this.actor.uuid,
+            actorPic: this.actor.img,
+            actorType: this.actor.system.type,
+            attackType: "unarmedCombat",
+            isAttack: true,
+            skillName: "unarmedCombat",
+            skillValue: event.currentTarget.getAttribute("data-skill-value"),
+            unskilledUse: true,
+            damage: event.currentTarget.getAttribute("data-damage"),
+            weaponAP: 0,
+            applyArmor: true,
+            darknessModifier: 0,
+            DNDescriptor: dnDescriptor,
+            type: "attack",
+            targets: Array.from(game.user.targets),
+            applySize: true,
+            attackOptions: true,
+            rollTotal: 0,
+            chatNote: ""
+        }
+
+
+        let dialog = new testDialog(test);
+        dialog.render(true);
+
+    }
+
     _onSkillEditToggle(event) {
 
         var toggleState = this.actor.system.editstate;
         event.preventDefault();
-        if (toggleState === null) {
+        if (toggleState === null | toggleState === "none") {
             this.actor.update({
                 "system.editstate": true
             });

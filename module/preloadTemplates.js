@@ -29,6 +29,7 @@ export const preloadTemplates = async function () {
         "systems/torgeternity/templates/actors/threat/perks-details.hbs",
         "systems/torgeternity/templates/actors/threat/gears.hbs",
         "systems/torgeternity/templates/actors/threat/powers.hbs",
+        "systems/torgeternity/templates/actors/threat/sidebar.hbs",
 
         // ACTOR - vehicles
         "systems/torgeternity/templates/actors/vehicle/main.hbs",
