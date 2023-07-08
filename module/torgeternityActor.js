@@ -70,17 +70,29 @@ export default class torgeternityActor extends Actor {
             } else {
                 this.system.trickDefense = this.system.attributes.mind + (this.system?.trickDefenseMod | 0)
             };
+        };
+        if (this._source.type === "vehicle") {
+            let speedValue = parseInt(getTorgValue(this.system.topSpeed.kph) + 2)
+            this.system.topSpeed.value = speedValue
+            let speedPenalty = 0
+            if (speedValue < 11) {
+                speedPenalty=0;
+            } else if (speedValue < 15) {
+                speedPenalty=-2;
+            } else if (speedValue < 17) {
+                speedPenalty=-4;
+            } else {
+                speedPenalty=-6
+            }
+            this.system.topSpeed.penalty = speedPenalty;
+            this.system.defense = parseInt(-this.system.topSpeed.penalty + this.system.operator.skillValue)
         }
     }
 
     prepareBaseData() {
-        
+
         if(this._source.type === "stormknight" | this._source.type === "threat") {
-            // Base Fatigue
-        this.system.other.fatigue = 2;
-        //Set base move and run
-        this.system.other.move = this.system.attributes.dexterity;
-        this.system.other.run = parseInt(this.system.attributes.dexterity) * 3;
+
         //Set base unarmedDamage
         this.system.unarmedDamage = this.system.attributes.strength;
         }
@@ -104,6 +116,12 @@ export default class torgeternityActor extends Actor {
 
             //Set base toughness
             this.system.other.toughness = parseInt(this.system.attributes.strength) + parseInt(this.system.other.armor);
+            
+            // Base Fatigue
+            this.system.other.fatigue = 2;
+            //Set base move and run
+            this.system.other.move = this.system.attributes.dexterity;
+            this.system.other.run = parseInt(this.system.attributes.dexterity) * 3;
 
             //Set axioms based on home reality
             let magicAxiom = this.system.axioms.magic;
@@ -225,21 +243,8 @@ export default class torgeternityActor extends Actor {
                 case "billions":
                     convertedPrice = parseInt(this.system.price.dollars * 1000000000);
             }
+
             this.system.price.value = getTorgValue(convertedPrice)
-            let speedValue = parseInt(getTorgValue(this.system.topSpeed.kph) + 2)
-            this.system.topSpeed.value = speedValue
-            let speedPenalty = 0
-            if (speedValue < 11) {
-                speedPenalty=0;
-            } else if (speedValue < 15) {
-                speedPenalty=-2;
-            } else if (speedValue < 17) {
-                speedPenalty=-4;
-            } else {
-                speedPenalty=-6
-            }
-            this.system.topSpeed.penalty = speedPenalty;
-            this.system.defense = parseInt(-this.system.topSpeed.penalty + this.system.operator.skillValue)
         }
     }
 
