@@ -70,6 +70,11 @@ export default class torgeternityActor extends Actor {
             } else {
                 this.system.trickDefense = this.system.attributes.mind + (this.system?.trickDefenseMod | 0)
             };
+            // Base Fatigue
+            this.system.other.fatigue = 2;
+            //Set base move and run
+            this.system.other.move = this.system.attributes.dexterity;
+            this.system.other.run = parseInt(this.system.attributes.dexterity) * 3;
         };
         if (this._source.type === "vehicle") {
             let speedValue = parseInt(getTorgValue(this.system.topSpeed.kph) + 2)
@@ -117,12 +122,6 @@ export default class torgeternityActor extends Actor {
             //Set base toughness
             this.system.other.toughness = parseInt(this.system.attributes.strength) + parseInt(this.system.other.armor);
             
-            // Base Fatigue
-            this.system.other.fatigue = 2;
-            //Set base move and run
-            this.system.other.move = this.system.attributes.dexterity;
-            this.system.other.run = parseInt(this.system.attributes.dexterity) * 3;
-
             //Set axioms based on home reality
             let magicAxiom = this.system.axioms.magic;
             let socialAxiom = this.system.axioms.social;
@@ -253,8 +252,15 @@ export default class torgeternityActor extends Actor {
 
         var i;
         const effects = this.effects;
-        for (i = 0; i < effects.contents.length; i++) {
-                if (effects.contents[i].name === game.i18n.localize(`torgeternity.statusEffects.stymied`)) {
+        if (effects.contents.find(ef => ef.name === game.i18n.localize(`torgeternity.statusEffects.stymied`))) {this.system.stymiedModifier = -2;};
+        if (effects.contents.find(ef => ef.name === game.i18n.localize(`torgeternity.statusEffects.veryStymied`))) {this.system.stymiedModifier = -4;};
+        if (effects.contents.find(ef => ef.name === game.i18n.localize(`torgeternity.statusEffects.vulnerable`))) {this.system.vulnerableModifier = 2;};
+        if (effects.contents.find(ef => ef.name === game.i18n.localize(`torgeternity.statusEffects.veryVulnerable`))) {this.system.vulnerableModifier = 4;};
+        if (effects.contents.find(ef => ef.name === game.i18n.localize(`torgeternity.statusEffects.dim`))) {this.system.darknessModifier = -2;};
+        if (effects.contents.find(ef => ef.name === game.i18n.localize(`torgeternity.statusEffects.dark`))) {this.system.darknessModifier = -4;};
+        if (effects.contents.find(ef => ef.name === game.i18n.localize(`torgeternity.statusEffects.pitchBlack`))) {this.system.darknessModifier = -6;}
+        /*for (i = 0; i < effects.contents.length; i++) {
+                /*if (effects.contents[i].name === game.i18n.localize(`torgeternity.statusEffects.stymied`)) {
                     this.system.stymiedModifier = -2;
                 } else if (effects.contents[i].name === game.i18n.localize(`torgeternity.statusEffects.veryStymied`)) {
                     this.system.stymiedModifier = -4;
@@ -271,7 +277,7 @@ export default class torgeternityActor extends Actor {
                 } else if (effects.contents[i].name === game.i18n.localize(`torgeternity.statusEffects.pitchBlack`)) {
                     this.system.darknessModifier = -6
                 }
-        }
+        }*/
     }
 
     //adding a method to get defauld stormknight cardhand
