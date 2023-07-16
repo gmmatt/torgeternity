@@ -8,6 +8,14 @@
 For manual installation, use the provided manifest URL in the "*Install System*" popup window 
 while managing game systems.
 
+v. 3.0.0
+ - New NPC sheet!
+ - You can now use interaction attacks from NPC sheet
+ - You can specify interaction skills as defensive only
+ - To edit, hit the edit button the Skills section
+ - Fixed problem with stymied and vulnerable conditions not applying (thanks Durak!)
+ - Effects applying to attributes now alter corresponding skills as well (thanks again Durak!) 
+
 v. 2.9.3
 - Fixed issue where skills and attacks couldn't be rolled from unlinked tokens in v11
 - Cards are removed from player pools when GM ends combat encounter

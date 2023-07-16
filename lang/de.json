@@ -762,11 +762,7 @@
             "autoDamages": {
                 "name": "Schaden automatisch anwenden (BETA!)",
                 "hint": "Wenn angehakt, werden Schock und Wunden automatisch auf das Ziel angewendet werden."
-            },
-            "playerHandBottom": {
-                "name": "Spielerkarten am unteren Rand anzeigen",
-                "hint": "Spielerkartenhände öffnen sich am unteren rechten Rand und die Karten erscheinen überhalb des Spielerfensters. Benötigt einen Refresh (F5)."
-            }        
+            }            
     },
     "skillDialogs": {
         "disfavored": "Benachteiligt",

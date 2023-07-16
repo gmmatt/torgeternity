@@ -2,19 +2,17 @@ import {getTorgValue} from "./torgchecks.js";
 
 export default class torgeternityActor extends Actor {
 
+    prepareData() {
+        super.prepareData();
 
-
-    prepareBaseData() {
-
-        //Set Values for All Characters
-        
         // Skillsets
         var skillset = this.system.skills;
         
         // Derive Skill values for Storm Knights
         //
         // NOTE: Threat skill values are created directly by user, but SK skill values are derived based on attribute + adds.
-        //       
+        //
+
         if(this._source.type === "stormknight"){
             for (let [name, skill] of Object.entries(skillset)) {
                 if (skill.adds === null) {
@@ -27,54 +25,81 @@ export default class torgeternityActor extends Actor {
                     skill.value = parseInt(skill.adds) + parseInt(this.system.attributes[skill.baseAttribute]);
                 }
             }
-        }
-        
+        };
         if(this._source.type === "stormknight" | this._source.type === "threat") {
-            // Base Fatigue
-            this.system.other.fatigue = 2;
             
             // Set Defensive Values
             if (skillset.dodge.value) {
-                this.system.dodgeDefense = this.system.skills.dodge.value;
+                this.system.dodgeDefense = this.system.skills.dodge.value + (this.system?.dodgeDefenseMod | 0);
             } else {
-                this.system.dodgeDefense = this.system.attributes.dexterity
+                this.system.dodgeDefense = this.system.attributes.dexterity + (this.system?.dodgeDefenseMod | 0)
             };
 
             if (skillset.meleeWeapons.value) {
-                this.system.meleeWeaponsDefense = this.system.skills.meleeWeapons.value;
+                this.system.meleeWeaponsDefense = this.system.skills.meleeWeapons.value + (this.system?.meleeWeaponsDefenseMod | 0);
             } else {
-                this.system.meleeWeaponsDefense = this.system.attributes.dexterity
+                this.system.meleeWeaponsDefense = this.system.attributes.dexterity + (this.system?.meleeWeaponsDefenseMod | 0)
             };
 
             if (skillset.unarmedCombat.value) {
-                this.system.unarmedCombatDefense = this.system.skills.unarmedCombat.value;
+                this.system.unarmedCombatDefense = this.system.skills.unarmedCombat.value + (this.system?.unarmedCombatDefenseMod | 0);
             } else {
-                this.system.unarmedCombatDefense = this.system.attributes.dexterity
+                this.system.unarmedCombatDefense = this.system.attributes.dexterity + (this.system?.unarmedCombatDefenseMod | 0)
             };
 
             if (skillset.intimidation.value) {
-                this.system.intimidationDefense = this.system.skills.intimidation.value;
+                this.system.intimidationDefense = this.system.skills.intimidation.value + (this.system?.intimidationDefenseMod | 0);
             } else {
-                this.system.intimidationDefense = this.system.attributes.spirit
+                this.system.intimidationDefense = this.system.attributes.spirit + (this.system?.intimidationDefenseMod | 0)
             };
 
             if (skillset.maneuver.value) {
-                this.system.maneuverDefense = this.system.skills.maneuver.value;
+                this.system.maneuverDefense = this.system.skills.maneuver.value + (this.system?.maneuverDefenseMod | 0);
             } else {
-                this.system.maneuverDefense = this.system.attributes.dexterity
+                this.system.maneuverDefense = this.system.attributes.dexterity + (this.system?.maneuverDefenseMod | 0)
             };
 
             if (skillset.taunt.value) {
-                this.system.tauntDefense = this.system.skills.taunt.value;
+                this.system.tauntDefense = this.system.skills.taunt.value + (this.system?.tauntDefenseMod | 0);
             } else {
-                this.system.tauntDefense = this.system.attributes.charisma
+                this.system.tauntDefense = this.system.attributes.charisma + (this.system?.tauntDefenseMod | 0)
             };
 
             if (skillset.trick.value) {
-                this.system.trickDefense = this.system.skills.trick.value;
+                this.system.trickDefense = this.system.skills.trick.value + (this.system?.trickDefenseMod | 0);
             } else {
-                this.system.trickDefense = this.system.attributes.mind
+                this.system.trickDefense = this.system.attributes.mind + (this.system?.trickDefenseMod | 0)
             };
+            // Base Fatigue
+            this.system.other.fatigue = 2;
+            //Set base move and run
+            this.system.other.move = this.system.attributes.dexterity;
+            this.system.other.run = parseInt(this.system.attributes.dexterity) * 3;
+        };
+        if (this._source.type === "vehicle") {
+            let speedValue = parseInt(getTorgValue(this.system.topSpeed.kph) + 2)
+            this.system.topSpeed.value = speedValue
+            let speedPenalty = 0
+            if (speedValue < 11) {
+                speedPenalty=0;
+            } else if (speedValue < 15) {
+                speedPenalty=-2;
+            } else if (speedValue < 17) {
+                speedPenalty=-4;
+            } else {
+                speedPenalty=-6
+            }
+            this.system.topSpeed.penalty = speedPenalty;
+            this.system.defense = parseInt(-this.system.topSpeed.penalty + this.system.operator.skillValue)
+        }
+    }
+
+    prepareBaseData() {
+
+        if(this._source.type === "stormknight" | this._source.type === "threat") {
+
+        //Set base unarmedDamage
+        this.system.unarmedDamage = this.system.attributes.strength;
         }
     
         // Other derived attributes for Storm Knights
@@ -91,16 +116,12 @@ export default class torgeternityActor extends Actor {
             //Set base shock to Spirit
             this.system.shock.max = this.system.attributes.spirit;
 
-            //Set base move and run
-            this.system.other.move = this.system.attributes.dexterity;
-            this.system.other.run = parseInt(this.system.attributes.dexterity) * 3;
-
             //Set base armor to zero
             this.system.other.armor = 0;
 
             //Set base toughness
             this.system.other.toughness = parseInt(this.system.attributes.strength) + parseInt(this.system.other.armor);
-
+            
             //Set axioms based on home reality
             let magicAxiom = this.system.axioms.magic;
             let socialAxiom = this.system.axioms.social;
@@ -221,21 +242,8 @@ export default class torgeternityActor extends Actor {
                 case "billions":
                     convertedPrice = parseInt(this.system.price.dollars * 1000000000);
             }
+
             this.system.price.value = getTorgValue(convertedPrice)
-            let speedValue = parseInt(getTorgValue(this.system.topSpeed.kph) + 2)
-            this.system.topSpeed.value = speedValue
-            let speedPenalty = 0
-            if (speedValue < 11) {
-                speedPenalty=0;
-            } else if (speedValue < 15) {
-                speedPenalty=-2;
-            } else if (speedValue < 17) {
-                speedPenalty=-4;
-            } else {
-                speedPenalty=-6
-            }
-            this.system.topSpeed.penalty = speedPenalty;
-            this.system.defense = parseInt(-this.system.topSpeed.penalty + this.system.operator.skillValue)
         }
     }
 
@@ -244,27 +252,32 @@ export default class torgeternityActor extends Actor {
 
         var i;
         const effects = this.effects;
-        for (i = 0; i < effects.contents.length; i++) {
-            if (effects.contents[i].flags.hasOwnProperty("core")) {
-                if (effects.contents[i].flags.core.statusId === "stymied") {
+        if (effects.contents.find(ef => ef.name === game.i18n.localize(`torgeternity.statusEffects.stymied`))) {this.system.stymiedModifier = -2;};
+        if (effects.contents.find(ef => ef.name === game.i18n.localize(`torgeternity.statusEffects.veryStymied`))) {this.system.stymiedModifier = -4;};
+        if (effects.contents.find(ef => ef.name === game.i18n.localize(`torgeternity.statusEffects.vulnerable`))) {this.system.vulnerableModifier = 2;};
+        if (effects.contents.find(ef => ef.name === game.i18n.localize(`torgeternity.statusEffects.veryVulnerable`))) {this.system.vulnerableModifier = 4;};
+        if (effects.contents.find(ef => ef.name === game.i18n.localize(`torgeternity.statusEffects.dim`))) {this.system.darknessModifier = -2;};
+        if (effects.contents.find(ef => ef.name === game.i18n.localize(`torgeternity.statusEffects.dark`))) {this.system.darknessModifier = -4;};
+        if (effects.contents.find(ef => ef.name === game.i18n.localize(`torgeternity.statusEffects.pitchBlack`))) {this.system.darknessModifier = -6;}
+        /*for (i = 0; i < effects.contents.length; i++) {
+                /*if (effects.contents[i].name === game.i18n.localize(`torgeternity.statusEffects.stymied`)) {
                     this.system.stymiedModifier = -2;
-                } else if (effects.contents[i].flags.core.statusId === "veryStymied") {
+                } else if (effects.contents[i].name === game.i18n.localize(`torgeternity.statusEffects.veryStymied`)) {
                     this.system.stymiedModifier = -4;
                 }
-                if (effects.contents[i].flags.core.statusId === "vulnerable") {
+                if (effects.contents[i].name === game.i18n.localize(`torgeternity.statusEffects.vulnerable`)) {
                     this.system.vulnerableModifier = 2;
-                } else if (effects.contents[i].flags.core.statusId === "veryVulnerable") {
+                } else if (effects.contents[i].name === game.i18n.localize(`torgeternity.statusEffects.veryVulnerable`)) {
                     this.system.vulnerableModifier = 4
                 }
-                if (effects.contents[i].flags.core.statusId === "dim") {
+                if (effects.contents[i].name === game.i18n.localize(`torgeternity.statusEffects.dim`)) {
                     this.system.darknessModifier = -2
-                } else if (effects.contents[i].flags.core.statusId === "dark") {
+                } else if (effects.contents[i].name === game.i18n.localize(`torgeternity.statusEffects.dark`)) {
                     this.system.darknessModifier = -4
-                } else if (effects.contents[i].flags.core.statusId === "pitchBlack") {
+                } else if (effects.contents[i].name === game.i18n.localize(`torgeternity.statusEffects.pitchBlack`)) {
                     this.system.darknessModifier = -6
                 }
-            }
-        }
+        }*/
     }
 
     //adding a method to get defauld stormknight cardhand

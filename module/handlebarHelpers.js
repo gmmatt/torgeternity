@@ -58,7 +58,7 @@ export function registerHelpers() {
         var i;
         const effects = data.effects;
         for (i = 0; i < effects.length; i++) {
-            if (effects[i].label === "ActiveDefense") {
+            if (effects[i].name === "ActiveDefense") {
                 return true;
             }
         };
@@ -87,6 +87,16 @@ export function registerHelpers() {
         if (a == b) { return options.fn(this); }
         return options.inverse(this);
     });
+
+    Handlebars.registerHelper('iffalse', function (a, options) {
+        if (a == "false" | a == false) {
+            return options.fn(this);
+        } else {
+            return options.inverse(this);
+        }
+
+    })
+
 
     Handlebars.registerHelper('ifnotequal', function (a, b, options) {
         if (a != b) { return options.fn(this); }

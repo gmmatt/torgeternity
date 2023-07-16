@@ -489,49 +489,49 @@ export function renderSkillChat(test) {
         test.actionTotalLabel = "display:none";
     // Create and Manage Active Effect if SK is Actively Defending (thanks Durak!)
     } else if (test.testType === "activeDefense") {                              //Click on defense
-        var oldAD = myActor.effects.find(a => a.label === "ActiveDefense");      //Search for an ActiveDefense effect
+        var oldAD = myActor.effects.find(a => a.name === "ActiveDefense");      //Search for an ActiveDefense effect
         var shieldOn = myActor.items.filter(it => (it.type === "shield" && it.system.equipped));  //Search for an equipped shield (an array)
         var shieldBonus = 0;                                                                      //set the shieldBonus to 0 then check if the actor is Vulnerable, if true, shield bonus stay 0
-        if (!(myActor.effects.find(a => a.label === game.i18n.localize('torgeternity.statusEffects.vulnerable'))) && !(myActor.effects.find(a => a.label === game.i18n.localize('torgeternity.statusEffects.veryVulnerable')))) {
+        if (!(myActor.effects.find(a => a.name === game.i18n.localize('torgeternity.statusEffects.vulnerable'))) && !(myActor.effects.find(a => a.name === game.i18n.localize('torgeternity.statusEffects.veryVulnerable')))) {
             shieldBonus += shieldOn[0]?.system?.bonus || 0;
         };
         if (!oldAD) {                                                                                       //Create it if not present (if it exists, will be deleted farther)
             let NewActiveDefense = {
-                label : "ActiveDefense",                                                                    //Add an icon to remind the defense, bigger ? Change color of Defense ?
+                name : "ActiveDefense",                                                                    //Add an icon to remind the defense, bigger ? Change color of Defense ?
                 icon : "icons/equipment/shield/heater-crystal-blue.webp",                                   //To change I think, taken in Core, should have a dedicated file
                 duration : {"rounds" : 1},
                 changes : [{                                                                                //Modify all existing "basic" defense in block
-                        "key": "system.dodgeDefense",                                                         //Should need other work for defense vs powers
+                        "key": "system.dodgeDefenseMod",                                                         //Should need other work for defense vs powers
                         "value": test.bonus,                                                                //that don't target xxDefense
                         "priority": 20,                                                                     //Create a data.ADB that store the bonus ?
                         "mode": 2
                         },{
-                        "key": "system.intimidationDefense",
+                        "key": "system.intimidationDefenseMod",
                         "value": test.bonus,
                         "priority": 20,
                         "mode": 2
                         },{
-                        "key": "system.maneuverDefense",
+                        "key": "system.maneuverDefenseMod",
                         "value": test.bonus,
                         "priority": 20,
                         "mode": 2
                         },{
-                        "key": "system.meleeWeaponsDefense",
+                        "key": "system.meleeWeaponsDefenseMod",
                         "value": test.bonus,
                         "priority": 20,
                         "mode": 2
                         },{
-                        "key": "system.tauntDefense",
+                        "key": "system.tauntDefenseMod",
                         "value": test.bonus,
                         "priority": 20,
                         "mode": 2
                         },{
-                        "key": "system.trickDefense",
+                        "key": "system.trickDefenseMod",
                         "value": test.bonus,
                         "priority": 20,
                         "mode": 2
                         },{
-                        "key": "system.unarmedCombatDefense",
+                        "key": "system.unarmedCombatDefenseMod",
                         "value": test.bonus,
                         "priority": 20,
                         "mode": 2
@@ -549,7 +549,7 @@ export function renderSkillChat(test) {
             test.actionTotalLabel = "display:none";
         };
         if (oldAD) {                                                                                        //if present, reset by deleting
-            fromUuidSync(test.actor).effects.find(a => a.label === "ActiveDefense").delete();
+            fromUuidSync(test.actor).effects.find(a => a.name === "ActiveDefense").delete();
             ////
             let RAD = {                                                                                     //Simple chat message for information
                 speaker: ChatMessage.getSpeaker(),
@@ -562,7 +562,7 @@ export function renderSkillChat(test) {
 
     } else if (test.testType === "activeDefenseUpdate") {                                                   //update bonus in case of bonus roll possibility / up
         // Delete Existing Active Effects
-        fromUuidSync(test.actor).effects.find(a => a.label === "ActiveDefense").delete();
+        fromUuidSync(test.actor).effects.find(a => a.name === "ActiveDefense").delete();
         if (test.bonus < 1) {
             test.bonus = 1
         };
@@ -570,45 +570,45 @@ export function renderSkillChat(test) {
         // Create new set of active effects
         var shieldOn = myActor.items.filter(it => (it.type === "shield" && it.system.equipped));  //Search for an equipped shield (an array)
         var shieldBonus = 0;
-        if (!(myActor.effects.find(a => a.label === game.i18n.localize('torgeternity.statusEffects.vulnerable'))) && !(myActor.effects.find(a => a.label === game.i18n.localize('torgeternity.statusEffects.veryVulnerable')))) {
+        if (!(myActor.effects.find(a => a.name === game.i18n.localize('torgeternity.statusEffects.vulnerable'))) && !(myActor.effects.find(a => a.name === game.i18n.localize('torgeternity.statusEffects.veryVulnerable')))) {
             shieldBonus += shieldOn[0]?.system?.bonus || 0;
         };
         let NewActiveDefense = {
-            label : "ActiveDefense",                                                                    //Add an icon to remind the defense, bigger ? Change color of Defense ?
+            name : "ActiveDefense",                                                                    //Add an icon to remind the defense, bigger ? Change color of Defense ?
             icon : "icons/equipment/shield/heater-crystal-blue.webp",                                   //To change I think, taken in Core, should have a dedicated file
             duration : {"rounds" : 1},
             changes : [{                                                                                //Modify all existing "basic" defense in block
-                    "key": "system.dodgeDefense",                                                         //Should need other work for defense vs powers
+                    "key": "system.dodgeDefenseMod",                                                         //Should need other work for defense vs powers
                     "value": test.bonus,                                                                //that don't target xxDefense
                     "priority": 20,                                                                     //Create a data.ADB that store the bonus ?
                     "mode": 2
                     },{
-                    "key": "system.intimidationDefense",
+                    "key": "system.intimidationDefenseMod",
                     "value": test.bonus,
                     "priority": 20,
                     "mode": 2
                     },{
-                    "key": "system.maneuverDefense",
+                    "key": "system.maneuverDefenseMod",
                     "value": test.bonus,
                     "priority": 20,
                     "mode": 2
                     },{
-                    "key": "system.meleeWeaponsDefense",
+                    "key": "system.meleeWeaponsDefenseMod",
                     "value": test.bonus,
                     "priority": 20,
                     "mode": 2
                     },{
-                    "key": "system.tauntDefense",
+                    "key": "system.tauntDefenseMod",
                     "value": test.bonus,
                     "priority": 20,
                     "mode": 2
                     },{
-                    "key": "system.trickDefense",
+                    "key": "system.trickDefenseMod",
                     "value": test.bonus,
                     "priority": 20,
                     "mode": 2
                     },{
-                    "key": "system.unarmedCombatDefense",
+                    "key": "system.unarmedCombatDefenseMod",
                     "value": test.bonus,
                     "priority": 20,
                     "mode": 2
