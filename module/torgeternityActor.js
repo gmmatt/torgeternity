@@ -25,6 +25,11 @@ export default class torgeternityActor extends Actor {
                     skill.value = parseInt(skill.adds) + parseInt(this.system.attributes[skill.baseAttribute]);
                 }
             }
+
+            //Set base move and run after effects, only SK
+            this.system.other.move = this.system.attributes.dexterity;
+            this.system.other.run = parseInt(this.system.attributes.dexterity) * 3;
+
         };
         if(this._source.type === "stormknight" | this._source.type === "threat") {
             
@@ -70,11 +75,6 @@ export default class torgeternityActor extends Actor {
             } else {
                 this.system.trickDefense = this.system.attributes.mind + (this.system?.trickDefenseMod | 0)
             };
-            // Base Fatigue
-            this.system.other.fatigue = 2;
-            //Set base move and run
-            this.system.other.move = this.system.attributes.dexterity;
-            this.system.other.run = parseInt(this.system.attributes.dexterity) * 3;
         };
         if (this._source.type === "vehicle") {
             let speedValue = parseInt(getTorgValue(this.system.topSpeed.kph) + 2)
@@ -85,7 +85,7 @@ export default class torgeternityActor extends Actor {
             } else if (speedValue < 15) {
                 speedPenalty=-2;
             } else if (speedValue < 17) {
-                speedPenalty=-4;
+               speedPenalty=-4;
             } else {
                 speedPenalty=-6
             }
@@ -100,6 +100,8 @@ export default class torgeternityActor extends Actor {
 
         //Set base unarmedDamage
         this.system.unarmedDamage = this.system.attributes.strength;
+        // Base Fatigue
+        this.system.other.fatigue = 2;
         }
     
         // Other derived attributes for Storm Knights
