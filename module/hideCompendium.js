@@ -5,6 +5,7 @@ export function hideCompendium(defaultLang, tabDirectory) {
 
         switch (defaultLang) {
             case "en":
+            case "es":
                 hiddingKeys = ["(fr)", "(de)"]
                 break;
             case "de":
