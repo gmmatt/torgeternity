@@ -8,6 +8,11 @@
 For manual installation, use the provided manifest URL in the "*Install System*" popup window 
 while managing game systems.
 
+v. 3.0.1
+ - Update internal databases
+ - Add ES functionality to hide compendiums option - now ES hides DE and FR compendiums,
+   but EN is still available
+   
 v. 3.0.0
  - New NPC sheet!
  - You can now use interaction attacks from NPC sheet
