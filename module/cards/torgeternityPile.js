@@ -113,7 +113,7 @@ export default class torgeternityPile extends CardsPile {
             content: html,
             callback: html => {
                 const form = html.querySelector("form.cards-dialog");
-                const fd = new FormDataExtended(form).toObject();
+                const fd = new FormDataExtended(form).object;
                 const to = game.cards.get(fd.to);
                 const options = { how: fd.how, updateData: fd.down ? { face: null } : {} };
                 return this.deal([to], fd.number, options).catch(err => {

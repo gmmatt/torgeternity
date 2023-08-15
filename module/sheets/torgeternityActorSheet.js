@@ -7,9 +7,6 @@ import {
     prepareActiveEffectCategories
 } from "/systems/torgeternity/module/effects.js";
 import { testDialog } from "/systems/torgeternity/module/test-dialog.js";
-import { attackDialog } from "/systems/torgeternity/module/attack-dialog.js";
-import { interactionDialog } from "/systems/torgeternity/module/interaction-dialog.js";
-import { powerDialog } from "/systems/torgeternity/module/power-dialog.js";
 import torgeternityItem from "/systems/torgeternity/module/torgeternityItem.js";
 
 export default class torgeternityActorSheet extends ActorSheet {
@@ -137,8 +134,8 @@ export default class torgeternityActorSheet extends ActorSheet {
          };
 
 
-        /* if (this.actor.data.data.editstate === undefined) {
-            this.actor.data.data.editstate = "none";
+        /* if (this.actor.system.editstate === undefined) {
+            this.actor.system.editstate = "none";
         }; */
 
         data.effects = prepareActiveEffectCategories(this.document.effects);
@@ -441,12 +438,14 @@ export default class torgeternityActorSheet extends ActorSheet {
             actorPic: this.actor.img,
             actorType: this.actor.system.type,
             isAttack: false,
+            isFav: this.actor.system.skills[skillName]?.isFav || this.actor.system.attributes[skillName+"IsFav"] || false,
             skillName: isAttributeTest ? attributeName : skillName,
             skillValue: skillValue,
             targets: Array.from(game.user.targets),
             applySize: false,
             DNDescriptor: "standard",
             attackOptions: false,
+            chatNote: "",
             rollTotal: 0 // A zero indicates that a rollTotal needs to be generated when renderSkillChat is called //
         }
 
@@ -476,6 +475,7 @@ export default class torgeternityActorSheet extends ActorSheet {
             DNDescriptor: "highestSpeed",
             attackOptions: false,
             rollTotal: 0,
+            chatNote: "",
             vehicleSpeed: event.currentTarget.dataset.speed,
             maneuverModifier: event.currentTarget.dataset.maneuver
         }
@@ -501,6 +501,7 @@ export default class torgeternityActorSheet extends ActorSheet {
             DNDescriptor: "standard",
             attackOptions: false,
             rollTotal: 0,
+            chatNote: "",
             vehicleSpeed: event.currentTarget.dataset.speed,
             maneuverModifier: event.currentTarget.dataset.maneuver
         }
@@ -534,6 +535,7 @@ export default class torgeternityActorSheet extends ActorSheet {
             DNDescriptor: dnDescriptor,
             attackOptions: false,
             rollTotal: 0,
+            chatNote: "",
             vehicleSpeed: event.currentTarget.dataset.speed,
             maneuverModifier: event.currentTarget.dataset.maneuver
         }
@@ -580,6 +582,7 @@ export default class torgeternityActorSheet extends ActorSheet {
             skillBaseAttribute: game.i18n.localize("torgeternity.skills." + event.currentTarget.getAttribute("data-base-attribute")),
             skillAdds: event.currentTarget.getAttribute("data-adds"),
             skillValue: event.currentTarget.getAttribute("data-skill-value"),
+            isFav: this.actor.system.skills[attackType].isFav,
             unskilledUse: true,
             darknessModifier: 0,
             DNDescriptor: dnDescriptor,
@@ -587,7 +590,9 @@ export default class torgeternityActorSheet extends ActorSheet {
             targets: Array.from(game.user.targets),
             applySize: false,
             attackOptions: false,
-            rollTotal: 0
+            rollTotal: 0,
+            chatNote: "",
+            movementModifier : 0
         }
 
 
@@ -618,6 +623,7 @@ export default class torgeternityActorSheet extends ActorSheet {
             isAttack: true,
             skillName: "unarmedCombat",
             skillValue: event.currentTarget.getAttribute("data-skill-value"),
+            isFav: this.actor.system.skills.unarmedCombat.isFav,
             unskilledUse: true,
             damage: event.currentTarget.getAttribute("data-damage"),
             weaponAP: 0,
@@ -688,7 +694,9 @@ export default class torgeternityActorSheet extends ActorSheet {
             targets: Array.from(game.user.targets),
             applySize: false,
             attackOptions: false,
-            rollTotal: 0
+            chatNote: "",
+            rollTotal: 0,
+            movementModifier : 0
         }
 
 
@@ -809,6 +817,7 @@ export default class torgeternityActorSheet extends ActorSheet {
             actorType: this.actor.system.type,
             attackType: attackType,
             isAttack: true,
+            isFav: skillData.isFav,
             skillName: attackWith,
             skillValue: skillValue,
             unskilledUse: true,
@@ -822,7 +831,8 @@ export default class torgeternityActorSheet extends ActorSheet {
             applySize: true,
             attackOptions: true,
             rollTotal: 0,
-            chatNote: weaponData.chatNote
+            chatNote: weaponData.chatNote,
+            movementModifier : 0
         }
 
 
@@ -893,6 +903,7 @@ export default class torgeternityActorSheet extends ActorSheet {
             powerName: item.name,
             powerModifier: powerModifier,
             isAttack: isAttack,
+            isFav: skillData.isFav,
             skillName: skillName,
             skillBaseAttribute: game.i18n.localize("torgeternity.skills." + event.currentTarget.getAttribute("data-base-attribute")),
             skillAdds: skillData.adds,
@@ -904,10 +915,12 @@ export default class torgeternityActorSheet extends ActorSheet {
             darknessModifier: 0,
             DNDescriptor: dnDescriptor,
             type: "power",
+            chatNote: "",
             targets: Array.from(game.user.targets),
             applySize: applySize,
             attackOptions: true,
-            rollTotal: 0
+            rollTotal: 0,
+            movementModifier : 0
         }
 
 
@@ -956,7 +969,7 @@ export default class torgeternityActorSheet extends ActorSheet {
                 if (event.shiftKey) {
                     if (Array.from(game.user.targets).length === 0) {
                         var needTargetData = {
-                            user: game.user.data._id,
+                            user: game.user._id,
                             speaker: ChatMessage.getSpeaker(),
                             owner: this.actor,
                         };
@@ -1324,7 +1337,7 @@ export default class torgeternityActorSheet extends ActorSheet {
             game.socket.emit("system.torgeternity", {
                 msg: "cardReserved",
                 data: {
-                    player: game.user.data._id,
+                    player: game.user._id,
                     card: card
                 }
             });
@@ -1336,7 +1349,7 @@ export default class torgeternityActorSheet extends ActorSheet {
             game.socket.emit("system.torgeternity", {
                 msg: "cardReserved",
                 data: {
-                    player: game.user.data._id,
+                    player: game.user._id,
                     card: card
                 }
             });
@@ -1382,12 +1395,12 @@ export default class torgeternityActorSheet extends ActorSheet {
             game.socket.emit("system.torgeternity", {
                 msg: "cardPlayed",
                 data: {
-                    player: game.user.data._id,
+                    player: game.user._id,
                     card: card
                 }
             });
         } else {
-            if (!card.data.data.reserved) {
+            if (!card.system.reserved) {
                 ui.notifications.warn(game.i18n.localize('torgeternity.notifications.onlyReservedCard'));
             } else {
                 card.roll();
@@ -1395,7 +1408,7 @@ export default class torgeternityActorSheet extends ActorSheet {
                 game.socket.emit("system.torgeternity", {
                     msg: "cardPlayed",
                     data: {
-                        player: game.user.data._id,
+                        player: game.user._id,
                         card: card
                     }
                 });
@@ -1407,10 +1420,10 @@ export default class torgeternityActorSheet extends ActorSheet {
 
 }
 
-function checkUnskilled(skillValue, skillName, actor) {
+export function checkUnskilled(skillValue, skillName, actor) {
     if (skillValue === "-") {
         let cantRollData = {
-            user: game.user.data._id,
+            user: game.user._id,
             speaker: ChatMessage.getSpeaker(),
             owner: actor,
         };
