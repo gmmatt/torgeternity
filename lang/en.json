@@ -545,6 +545,7 @@
             "bonusCard": "+3 Card",
             "bonusDamage": "Bonus Damage",
             "up": "Up",
+            "favored": "Favored",
             "bonusDice": "BD",
             "actionTotal": "Action Total",
             "skillTestLabel": "Skill Value",
@@ -818,12 +819,5 @@
             "millions": "M",
             "billions": "B"
         }
-    },
-    "CARD": {
-        "TypeCosm": "Cosm",
-        "TypeDestiny": "Destiny",
-        "TypeDrama": "Drama",
-        "discard": "Discard",
-        "display": "Show this card to players"
     }
 }
