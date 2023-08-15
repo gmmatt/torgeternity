@@ -62,7 +62,7 @@ export default class  torgeternityCardConfig extends CardConfig {
       // Handle the control action
       switch ( button.dataset.action ) {
         case "addFace":
-          faces = this.object.data.faces.map(f => f.toObject()).concat([{}]);
+          faces = this.object.data.faces.map(f => f.object).concat([{}]);
           return this.object.update({faces});
         case "deleteFace":
           return Dialog.confirm({
