@@ -26,7 +26,7 @@
 		{{log user}}
 		<li class="player {{#if user.isGM}}gm{{/if}} " data-user-id="{{user._id}}">
 			<span class="player-active {{#if user.active}}active{{else}}inactive{{/if}}"
-				style="background: {{user.color}}; border: 1px solid {{user.border}}"></span>
+				style="background: {{user.color}}; border: 1px solid {{user.color}}"></span>
 			<span class="player-name {{#if user.isSelf}}self{{/if}}">
 				{{user.name}}
 				{{#if user.isGM}}
