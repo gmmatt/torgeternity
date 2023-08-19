@@ -42,9 +42,9 @@ export default class  torgeternityCardConfig extends CardConfig {
 
     get template() {
         
-      if (this.object.data.type === "destiny") {  
+      if (this.object.type === "destiny") {  
         return "systems/torgeternity/templates/cards/torgeternityDestiny.hbs";
-      } else if (this.object.data.type === "cosm") {
+      } else if (this.object.type === "cosm") {
         return "systems/torgeternity/templates/cards/torgeternityCosm.hbs"
       } else {
         return "systems/torgeternity/templates/cards/torgeternityDrama.hbs"
