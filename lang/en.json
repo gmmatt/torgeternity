@@ -819,5 +819,12 @@
             "millions": "M",
             "billions": "B"
         }
+    },
+    "CARD": {
+        "TypeCosm": "Cosm",
+        "TypeDestiny": "Destiny",
+        "TypeDrama": "Drama",
+        "discard": "Discard",
+        "display": "Show this card to players"
     }
 }
