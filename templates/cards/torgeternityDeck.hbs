@@ -65,10 +65,10 @@
                     <img class="card-face" src="{{card.img}}" alt="{{card.name}}" height="48">
                     <span><img src="{{card.img}}"></span>    
                 </span>
-                <h4 class="card-name">{{card.data.name}}</h4>
+                <h4 class="card-name">{{card.name}}</h4>
                 <span class="card-type">{{localize (concatCardType card.type)}}</span>
                 <div class="card-drawn">
-                    <input type="checkbox" class="card-value" {{checked card.data.drawn}} disabled>
+                    <input type="checkbox" class="card-value" {{checked card.drawn}} disabled>
                 </div>
                 <div class="card-controls">
                     <a class="card-control" title="{{localize 'CARD.Edit'}}" data-action="edit"><i class="fas fa-edit"></i></a>
