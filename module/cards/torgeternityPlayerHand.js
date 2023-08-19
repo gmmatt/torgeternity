@@ -160,9 +160,16 @@ export default class torgeternityPlayerHand extends CardsHand {
     }
 
 
-    async playerPassDialog(card) {
-        const cards = game.cards.filter(c => (c !== this) && (c.type !== "deck") && c.testUserPermission(game.user, "LIMITED"));
-        if (!cards.length) return ui.notifications.warn(game.i18n.localize('torgeternity.notifications.noHand'), { localize: true });
+    async playerPassDialog(card) {        
+        
+        // only hands of connected characters will be shown
+        var activeHand = [];
+        var activePlayers = game.users.filter(u => (u.active & !u.isGM & !u.isSelf));
+        activePlayers.forEach(h => activeHand.push(h.character.getDefaultHand()));
+        var cards;
+        if (game.user.isGM) {cards = game.cards.filter(c => (c !== this) && (c.type !== "deck") && c.testUserPermission(game.user, "LIMITED"))}
+        else {cards = activeHand.filter(c => (c.type !== "deck") && c.testUserPermission(game.user, "LIMITED"))}
+        if (!cards.length) return ui.notifications.warn(game.i18n.localize('torgeternity.notifications.noHands'), { localize: true });
 
         // Construct the dialog HTML
         const html = await renderTemplate("systems/torgeternity/templates/cards/playerPassDialog.hbs", {
@@ -176,7 +183,7 @@ export default class torgeternityPlayerHand extends CardsHand {
             content: html,
             callback: html => {
                 const form = html.querySelector("form.cards-dialog");
-                const fd = new FormDataExtended(form).toObject();
+                const fd = new FormDataExtended(form).object;
                 const to = game.cards.get(fd.to);
                 const toName = to.name;
                 card.toMessage({ content: `<div class="card-draw flexrow"><span class="card-chat-tooltip"><img class="card-face" src="${card.img}"/><span><img src="${card.img}"></span></span><h4 class="card-name">${game.i18n.localize("torgeternity.chatText.passesCard1")} ${card.name} ${game.i18n.localize("torgeternity.chatText.passesCard2")} ${toName}.</h4></div>` });
@@ -200,7 +207,7 @@ export default class torgeternityPlayerHand extends CardsHand {
             content: html,
             callback: html => {
                 const form = html[0].querySelector("form.cosm-dialog");
-                const fd = new FormDataExtended(form).toObject();
+                const fd = new FormDataExtended(form).object;
                 const cosmDeck = game.cards.get(fd.from);
                 if (cosmDeck.cards.size) {
                     const [firstCardKey] = cosmDeck.cards.keys(); // need to grab a card to get toMessage access

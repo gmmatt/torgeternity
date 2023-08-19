@@ -545,6 +545,7 @@
             "bonusCard": "+3 Card",
             "bonusDamage": "Bonus Damage",
             "up": "Up",
+            "favored": "Favored",
             "bonusDice": "BD",
             "actionTotal": "Action Total",
             "skillTestLabel": "Skill Value",

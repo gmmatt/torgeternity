@@ -42,9 +42,9 @@ export default class  torgeternityCardConfig extends CardConfig {
 
     get template() {
         
-      if (this.object.data.type === "destiny") {  
+      if (this.object.type === "destiny") {  
         return "systems/torgeternity/templates/cards/torgeternityDestiny.hbs";
-      } else if (this.object.data.type === "cosm") {
+      } else if (this.object.type === "cosm") {
         return "systems/torgeternity/templates/cards/torgeternityCosm.hbs"
       } else {
         return "systems/torgeternity/templates/cards/torgeternityDrama.hbs"
@@ -62,7 +62,7 @@ export default class  torgeternityCardConfig extends CardConfig {
       // Handle the control action
       switch ( button.dataset.action ) {
         case "addFace":
-          faces = this.object.data.faces.map(f => f.toObject()).concat([{}]);
+          faces = this.object.data.faces.map(f => f.object).concat([{}]);
           return this.object.update({faces});
         case "deleteFace":
           return Dialog.confirm({
