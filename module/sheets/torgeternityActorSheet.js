@@ -1389,7 +1389,7 @@ export default class torgeternityActorSheet extends ActorSheet {
 
         const cardID = event.currentTarget.closest(".card").getAttribute("data-item-id");
         const card = this.actor.items.get(cardID);
-        if (game.combat === null || card.data.type == "cosm") {
+        if (game.combat === null || card.type == "cosm") {
             card.roll();
             this.actor.deleteOwnedItem(cardID);
             game.socket.emit("system.torgeternity", {
