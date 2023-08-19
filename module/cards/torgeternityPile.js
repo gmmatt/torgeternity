@@ -32,7 +32,7 @@ export default class torgeternityPile extends CardsPile {
                 card.setFlag("torgeternity", "pooled", false)
                 card.pass(game.cards.get(game.settings.get("torgeternity", "deckSetting").destinyDiscard));
                 card.toMessage({
-                    content: `<div class="card-draw flexrow"><img class="card-face" src="${card.img}"/><h4 class="card-name">${game.i18n.localize("torgeternity.chatText.playsCard")} ${card.data.name}</h4>
+                    content: `<div class="card-draw flexrow"><img class="card-face" src="${card.img}"/><h4 class="card-name">${game.i18n.localize("torgeternity.chatText.playsCard")} ${card.name}</h4>
             </div>` })
                 return;
             case "view":
@@ -45,14 +45,14 @@ export default class torgeternityPile extends CardsPile {
             case "discard":
                 card.setFlag("torgeternity", "pooled", false);
                 card.pass(game.cards.get(game.settings.get("torgeternity", "deckSetting").destinyDiscard));
-                card.toMessage({ content: `<div class="card-draw flexrow"><img class="card-face" src="${card.img}"/><h4 class="card-name">${game.i18n.localize("torgeternity.chatText.discardsCard")} ${card.data.name}</h4></div>` });
+                card.toMessage({ content: `<div class="card-draw flexrow"><img class="card-face" src="${card.img}"/><h4 class="card-name">${game.i18n.localize("torgeternity.chatText.discardsCard")} ${card.name}</h4></div>` });
                 return;
             case "drawDestiny":
                 let destinyDeck = game.cards.get(game.settings.get("torgeternity", "deckSetting").destinyDeck);
-                if (destinyDeck.data.cards.size) {
-                    const [firstCardKey] = destinyDeck.data.cards.keys(); // need to grab a card to get toMessage access
-                    const card = destinyDeck.data.cards.get(firstCardKey);
-                    card.toMessage({ content: `<div class="card-draw flexrow"><span class="card-chat-tooltip"><img class="card-face" src="${destinyDeck.data.img}"/><span><img src="${destinyDeck.data.img}"></span></span><h4 class="card-name">${game.i18n.localize("torgeternity.chatText.drawsCard")} ${destinyDeck.data.name}.</h4></div>` });
+                if (destinyDeck.cards.size) {
+                    const [firstCardKey] = destinyDeck.cards.keys(); // need to grab a card to get toMessage access
+                    const card = destinyDeck.cards.get(firstCardKey);
+                    card.toMessage({ content: `<div class="card-draw flexrow"><span class="card-chat-tooltip"><img class="card-face" src="${destinyDeck.img}"/><span><img src="${destinyDeck.img}"></span></span><h4 class="card-name">${game.i18n.localize("torgeternity.chatText.drawsCard")} ${destinyDeck.name}.</h4></div>` });
                 }
                 return this.object.draw(destinyDeck);
             case "drawCosm":
@@ -80,12 +80,12 @@ export default class torgeternityPile extends CardsPile {
                 this._sortStandard = !this._sortStandard;
                 return this.render();
             case "nextFace":
-                return card.update({ face: card.data.face === null ? 0 : card.data.face + 1 });
+                return card.update({ face: card.face === null ? 0 : card.face + 1 });
             case "prevFace":
-                return card.update({ face: card.data.face === 0 ? null : card.data.face - 1 });
+                return card.update({ face: card.face === 0 ? null : card.face - 1 });
             case "return":
-                for (let i = 0; i < this.object.data.cards.size; i++) {
-                    this.object.data.cards.contents[i].recall()
+                for (let i = 0; i < this.object.cards.size; i++) {
+                    this.object.cards.contents[i].recall()
                 }
         }
 
