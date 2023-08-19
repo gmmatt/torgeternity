@@ -55,7 +55,7 @@ export default class TorgeternityPlayerList extends PlayerList {
             console.log()
             let targetActor = game.actors.get(ev.currentTarget.dataset.targetId);
             await targetActor.update({
-                _id: targetActor.data._id,
+                _id: targetActor._id,
                 system: {
                     other: {
                         posibilities: (targetActor.system.other.posibilities) + 1
@@ -74,7 +74,7 @@ export default class TorgeternityPlayerList extends PlayerList {
         } else {
             let targetActor = game.actors.get(ev.currentTarget.dataset.targetId);
             await targetActor.update({
-                _id: targetActor.data._id,
+                _id: targetActor._id,
                 system: {
                     other: {
                         posibilities: (targetActor.system.other.posibilities) - 1
