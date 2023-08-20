@@ -30,7 +30,7 @@ export function renderSkillChat(test) {
                 test.chatTitle = game.i18n.localize(localId) + " " + game.i18n.localize("torgeternity.chatText.attack");
                 break;
             case "soak":
-                test.chatTitle =  "Reality soaking";
+                test.chatTitle =  game.i18n.localize("torgeternity.sheetLabels.soakRoll")
                 break;
             case "activeDefense":
                 test.chatTitle = game.i18n.localize("torgeternity.sheetLabels.activeDefense");
@@ -258,7 +258,7 @@ export function renderSkillChat(test) {
         if (test.isFav && test.disfavored) {
             test.isFav = false;
             test.disfavored = false;
-            test.chatNote += "Favored & disfavored cancel each other. ";
+            test.chatNote += game.i18n.localize("torgeternity.sheetLabels.favDis")
         }
         console.log(test.isFav);
         console.log(test.disfavored);
@@ -269,7 +269,7 @@ export function renderSkillChat(test) {
             test.rollTotal = test.diceroll.dice[0].results[0].result;
             if (test.diceroll.dice[0].results.length >1) {
                 test.disfavored = false;
-                test.chatNote += "First explosion cancelled, but no more disfavored. ";
+                test.chatNote += game.i18n.localize("torgeternity.sheetLabels.explosionCancelled");
             }
         } else test.rollTotal = test.diceroll.total;
     }
@@ -522,16 +522,16 @@ export function renderSkillChat(test) {
         test.isFavStyle = "display:none";
         test.bdStyle = "display:none";
         test.plus3Style = "display:none";
-        if (test.testType === "soak") test.chatNote = `You will soak nothing.`;
+        if (test.testType === "soak") test.chatNote = game.i18n.localize("torgeternity.sheetLabels.soakNull")
     } else if (test.testType === "soak") {
 
         test.resultText = test.outcome;
     if (test.soakWounds > 0) {
-        test.chatNote = `You will soak  ${test.soakWounds} wounds and all shocks.`
+        test.chatNote = `${test.soakWounds}`+ game.i18n.localize("torgeternity.sheetLabels.soakValue")
     } else if (test.soakWounds === "all") {
-        test.chatNote = `You will soak all wounds and shocks.`
+        test.chatNote = game.i18n.localize("torgeternity.sheetLabels.soakAll")
     } else {
-        test.chatNote = `You will soak nothing.`
+        test.chatNote = game.i18n.localize("torgeternity.sheetLabels.soakNull")
     }
     // Create and Manage Active Effect if SK is Actively Defending (thanks Durak!)
     } else if (test.testType === "activeDefense") {                              //Click on defense
