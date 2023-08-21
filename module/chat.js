@@ -65,7 +65,7 @@ function onPossibility(event) {
     if (test.disfavored) {
         test.possibilityTotal = 0.1;
         test.disfavored = false;
-        test.chatNote += "You were disfavored, first bonus die has been cancelled. ";
+        test.chatNote += game.i18n.localize("torgeternity.sheetLabels.explosionCancelled");
     } else {test.possibilityTotal = Math.max(10,diceroll.total,test.possibilityTotal)};
     test.diceroll = diceroll
 
@@ -88,7 +88,7 @@ function onUp(event) {
     if (test.disfavored) {
         test.upTotal = 0.1;
         test.disfavored = false;
-        test.chatNote += "You were disfavored, first bonus die has been cancelled. ";
+        test.chatNote += game.i18n.localize("torgeternity.sheetLabels.explosionCancelled");
     } else {test.upTotal = diceroll.total};
     test.diceroll = diceroll;
 
@@ -113,7 +113,7 @@ function onHero(event) {
     if (test.disfavored) {
         test.heroTotal = 0.1;
         test.disfavored = false;
-        test.chatNote += "You were disfavored, first bonus die has been cancelled. ";
+        test.chatNote += game.i18n.localize("torgeternity.sheetLabels.explosionCancelled");
     } else if (diceroll.total < 10) {
         test.heroTotal = 10
     } else {test.heroTotal = diceroll.total};
@@ -140,7 +140,7 @@ function onDrama(event) {
     if (test.disfavored) {
         test.dramaTotal = 0.1;
         test.disfavored = false;
-        test.chatNote += "You were disfavored, first bonus die has been cancelled. ";
+        test.chatNote += game.i18n.localize("torgeternity.sheetLabels.explosionCancelled");
     } else if (diceroll.total < 10) {
         test.dramaTotal = 10
     } else {test.dramaTotal = diceroll.total};
@@ -208,7 +208,7 @@ function onModifier(event) {
 async function applyDam(event) {
     const parentMessageId = event.currentTarget.closest(".chat-message").dataset.messageId;
     var parentMessage = game.messages.find( ({id}) => id === parentMessageId);
-    if (!game.user.isGM) {return};
+    //if (!game.user.isGM) {return};
     var test = parentMessage.getFlag("torgeternity", "test");
     let dama = test.damage;
     let toug = test.targetAdjustedToughness;
@@ -227,7 +227,7 @@ async function soakDam(event) {
 async function adjustDam(event) {
     const parentMessageId = event.currentTarget.closest(".chat-message").dataset.messageId;
     var parentMessage = game.messages.find( ({id}) => id === parentMessageId);
-    if (!game.user.isGM) {return};
+    //if (!game.user.isGM) {return};
     var test = parentMessage.getFlag("torgeternity", "test");
     let dama = test.damage;
     let toug = test.targetAdjustedToughness;
@@ -236,19 +236,19 @@ async function adjustDam(event) {
     var oldWounds = newDamages.wounds;
     var oldShocks = newDamages.shocks;
     var newWounds, newShocks
-    const content = `<p>You can modify the damages here</p> <hr>
+    const content = `<p>${game.i18n.localize("torgeternity.sheetLabels.modifyDamage")}</p> <hr>
     <form>
-    <div class="form-group"><label for="nw">New Wounds</label>
+    <div class="form-group"><label for="nw">${game.i18n.localize("torgeternity.sheetLabels.modifyWounds")}</label>
     <div class="form-fields"><input type="number" id="nw" value=${oldWounds}></input></div></div>
-    <div class="form-group"><label for="ns">New Shocks</label>
+    <div class="form-group"><label for="ns">${game.i18n.localize("torgeternity.sheetLabels.modifyShocks")}</label>
     <div class="form-fields"><input type="number" id="ns" value=${oldShocks}></input></div></div>
     </form>`;
     await new Dialog({
     content,
-    title: "Choose damages inflicted",
+    title: game.i18n.localize("torgeternity.sheetLabels.chooseDamage"),
     buttons: {go: {
         icon: `<i class="fas fa-check"></i>`,
-        label: "Confirm",
+        label: game.i18n.localize("torgeternity.submit.apply"),
         callback: async (html) => {
         newWounds = Number(html[0].querySelector("input[id=nw]").value);
         newShocks = Number(html[0].querySelector("input[id=ns]").value);
