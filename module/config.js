@@ -341,28 +341,28 @@ torgeternity.magnitudes = {
 },
 
 {
-    icon: 'systems/torgeternity/images/status-markers/dark-2.png',
+    icon: 'systems/torgeternity/images/status-markers/dark-2.webp',
     id: 'dim',
     label: 'torgeternity.statusEffects.dim',
     name: 'torgeternity.statusEffects.dim'
 },
 
 {
-    icon: 'systems/torgeternity/images/status-markers/dark-4.png',
+    icon: 'systems/torgeternity/images/status-markers/dark-4.webp',
     id: 'dark',
     label: 'torgeternity.statusEffects.dark',
     name: 'torgeternity.statusEffects.dark'
 },
 
 {
-    icon: 'systems/torgeternity/images/status-markers/dark-6.png',
+    icon: 'systems/torgeternity/images/status-markers/dark-6.webp',
     id: 'pitchBlack',
     label: 'torgeternity.statusEffects.pitchBlack',
     name: 'torgeternity.statusEffects.pitchBlack'
 },
 
 {
-    icon: 'systems/torgeternity/images/status-markers/waiting.png',
+    icon: 'systems/torgeternity/images/status-markers/waiting.webp',
     id: 'waiting',
     label: 'torgeternity.statusEffects.waiting',
     name: 'torgeternity.statusEffects.waiting'
