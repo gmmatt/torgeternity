@@ -913,7 +913,7 @@ export async function applyDamages(damageObject) {
             "data.shock.value": newShock,
             "data.wounds.value": newWound,
         });
-        // too many wounds => apply defeat ? Ko ?
+        //too many wounds => apply defeat ? Ko ?
         if (newWound > targetToken.actor.system.wounds.max) {
             if (!targetToken.actor.statuses.find(d=>d==='dead')) {
                 const eff = CONFIG.statusEffects.find(e => e.id === "dead");
