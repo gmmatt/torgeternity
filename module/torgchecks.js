@@ -913,13 +913,20 @@ export async function applyDamages(damageObject) {
             "data.shock.value": newShock,
             "data.wounds.value": newWound,
         });
-        //too many shocks => apply KO/
         if (newShock >= targetToken.actor.system.shock.max) {
             //TODO : apply KO status
+            if (!targetToken.actor.statuses.find(d=>d==='unconscious')) {
+                const eff = CONFIG.statusEffects.find(e => e.id === "unconscious");
+                await targetToken.toggleEffect(eff, {"active": true, "overlay": true});
+            }
+            //targetToken.
         }
-        //too many wounds => apply defeat
+        //too many wounds => apply defeat ? Ko ?
         if (newWound > targetToken.actor.system.wounds.max) {
-            //TODO : test defeat apply defeat
+            if (!targetToken.actor.statuses.find(d=>d==='dead')) {
+                const eff = CONFIG.statusEffects.find(e => e.id === "dead");
+                await targetToken.toggleEffect(eff, {"active": true, "overlay": true});
+            }
         }
 
     } else {
