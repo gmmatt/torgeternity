@@ -913,14 +913,6 @@ export async function applyDamages(damageObject) {
             "data.shock.value": newShock,
             "data.wounds.value": newWound,
         });
-        if (newShock >= targetToken.actor.system.shock.max) {
-            //TODO : apply KO status
-            if (!targetToken.actor.statuses.find(d=>d==='unconscious')) {
-                const eff = CONFIG.statusEffects.find(e => e.id === "unconscious");
-                await targetToken.toggleEffect(eff, {"active": true, "overlay": true});
-            }
-            //targetToken.
-        }
         //too many wounds => apply defeat ? Ko ?
         if (newWound > targetToken.actor.system.wounds.max) {
             if (!targetToken.actor.statuses.find(d=>d==='dead')) {
@@ -928,7 +920,15 @@ export async function applyDamages(damageObject) {
                 await targetToken.toggleEffect(eff, {"active": true, "overlay": true});
             }
         }
-
+        // too many shocks, apply KO if not dead
+        if (newShock >= targetToken.actor.system.shock.max) {
+            if (!targetToken.actor.statuses.find(d=>d==='unconscious')) {
+                if (!targetToken.actor.statuses.find(d=>d==='dead')) {
+                    const eff = CONFIG.statusEffects.find(e => e.id === "unconscious");
+                    await targetToken.toggleEffect(eff, {"active": true, "overlay": true});
+                }
+            }
+        }
     } else {
         ui.notifications.warn(game.i18n.localize("torgeternity.notifications.noTarget"))
     }
