@@ -1,5 +1,10 @@
+
+import {testDialog} from "/systems/torgeternity/module/test-dialog.js";
+import {checkUnskilled} from "/systems/torgeternity/module/sheets/torgeternityActorSheet.js";
+
 export function renderSkillChat(test) {
     var target = test.target;
+    console.log(test);
 
     //
     // Check to see if we already have a chat title from a chat card roll. If not, Set title for Chat Message in test.chatTitle //
@@ -23,6 +28,9 @@ export function renderSkillChat(test) {
             case "attack":
                 var localId = "torgeternity.skills." + test.skillName;
                 test.chatTitle = game.i18n.localize(localId) + " " + game.i18n.localize("torgeternity.chatText.attack");
+                break;
+            case "soak":
+                test.chatTitle =  game.i18n.localize("torgeternity.sheetLabels.soakRoll")
                 break;
             case "activeDefense":
                 test.chatTitle = game.i18n.localize("torgeternity.sheetLabels.activeDefense");
@@ -241,13 +249,29 @@ export function renderSkillChat(test) {
     if (test.rollTotal === 0 & test.previousBonus === false) {
         // Generate dice roll
         var dice = "1d20x10x20"
-        if (test.disfavored === true) {
-            dice = "1d20"
-        } else if (unskilledTest === true) {
+        if (unskilledTest === true) {
             dice = "1d20x10"
         }
         test.diceroll = new Roll(dice).evaluate({ async: false });
-        test.rollTotal = test.diceroll.total;
+        console.log(test.isFav);
+        console.log(test.disfavored);
+        if (test.isFav && test.disfavored) {
+            test.isFav = false;
+            test.disfavored = false;
+            test.chatNote += game.i18n.localize("torgeternity.sheetLabels.favDis")
+        }
+        console.log(test.isFav);
+        console.log(test.disfavored);
+        if (!test.isFav) {
+            test.isFavStyle = "pointer-events:none;color:gray;display:none";
+        }
+        if (test.disfavored) {
+            test.rollTotal = test.diceroll.dice[0].results[0].result;
+            if (test.diceroll.dice[0].results.length >1) {
+                test.disfavored = false;
+                test.chatNote += game.i18n.localize("torgeternity.sheetLabels.explosionCancelled");
+            }
+        } else test.rollTotal = test.diceroll.total;
     }
 
     //
@@ -467,12 +491,16 @@ export function renderSkillChat(test) {
     test.actionTotalContent = game.i18n.localize('torgeternity.chatText.check.result.actionTotal') + " " + test.rollResult + " vs. " + test.DN + " " + game.i18n.localize(dnLabel);
     if (testDifference < 0) {
         test.outcome = game.i18n.localize('torgeternity.chatText.check.result.failure');
+        test.soakWounds = 0;
     } else if (testDifference > 9) {
         test.outcome = game.i18n.localize('torgeternity.chatText.check.result.outstandingSuccess');
+        test.soakWounds = "all";
     } else if (testDifference > 4) {
         test.outcome = game.i18n.localize('torgeternity.chatText.check.result.goodSuccess');
+        test.soakWounds = 2;
     } else {
         test.outcome = game.i18n.localize('torgeternity.chatText.check.result.standartSuccess');
+        test.soakWounds = 1;
     }
 
     // Turn on + sign for modifiers?
@@ -487,6 +515,24 @@ export function renderSkillChat(test) {
     if ((test.rollTotal === 1) && !((test.testType === "activeDefenseUpdate") || (test.testType === "activeDefense"))) {   //Roll 1 and not defense = Mishape
         test.resultText = game.i18n.localize('torgeternity.chatText.check.result.mishape');
         test.actionTotalLabel = "display:none";
+        test.possibilityStyle = "display:none";
+        test.upStyle = "display:none";
+        test.dramaStyle = "display:none";
+        test.heroStyle = "display:none";
+        test.isFavStyle = "display:none";
+        test.bdStyle = "display:none";
+        test.plus3Style = "display:none";
+        if (test.testType === "soak") test.chatNote = game.i18n.localize("torgeternity.sheetLabels.soakNull")
+    } else if (test.testType === "soak") {
+
+        test.resultText = test.outcome;
+    if (test.soakWounds > 0) {
+        test.chatNote = `${test.soakWounds}`+ game.i18n.localize("torgeternity.sheetLabels.soakValue")
+    } else if (test.soakWounds === "all") {
+        test.chatNote = game.i18n.localize("torgeternity.sheetLabels.soakAll")
+    } else {
+        test.chatNote = game.i18n.localize("torgeternity.sheetLabels.soakNull")
+    }
     // Create and Manage Active Effect if SK is Actively Defending (thanks Durak!)
     } else if (test.testType === "activeDefense") {                              //Click on defense
         var oldAD = myActor.effects.find(a => a.name === "ActiveDefense");      //Search for an ActiveDefense effect
@@ -656,14 +702,16 @@ export function renderSkillChat(test) {
             // Generate damage description and damage sublabel 
             if (test.resultText === game.i18n.localize('torgeternity.chatText.check.result.failure') || test.resultText === game.i18n.localize('torgeternity.chatText.check.result.mishape')) {
                 test.damageDescription = game.i18n.localize('torgeternity.chatText.check.result.noDamage');;
+                test.applyDamLabel = "display:none";
                 test.damageSubDescription = game.i18n.localize('torgeternity.chatText.check.result.attackMissed');;
             } else {
+                test.applyDamLabel = "display:inline";
                 test.damageDescription = torgDamage(adjustedDamage, test.targetAdjustedToughness).label
                 test.damageSubDescription = game.i18n.localize('torgeternity.chatText.check.result.damage') + " " + adjustedDamage + " vs. " + test.targetAdjustedToughness + " " + game.i18n.localize('torgeternity.chatText.check.result.toughness');
                 //if auto apply damages == true in settings
-                if (game.settings.get("torgeternity", "autoDamages")) {
+                /*if (game.settings.get("torgeternity", "autoDamages")) {
                     applyDamages(torgDamage(adjustedDamage, test.targetAdjustedToughness))
-                }
+                }*/
 
             }
         } else {
@@ -755,9 +803,11 @@ export function renderSkillChat(test) {
         if (test.diceroll != null) {
             messageData.flavor = content;
             test.diceroll.toMessage(messageData);
+            if (test.parentId) {game.messages.get(test.parentId).delete()};
         } else {
             messageData.content = content;
             ChatMessage.create(messageData);
+            if (test.parentId) {game.messages.get(test.parentId).delete()};
         };
     });
 
@@ -877,6 +927,41 @@ export async function applyDamages(damageObject) {
     }
 
 }
+
+export async function soakDamages(soaker) {
+    const skillName = "reality";
+    const attributeName = "spirit";
+    const isAttributeTest = false;
+    var skillValue = soaker.system.skills[skillName].value;
+
+    // Before calculating roll, check to see if it can be attempted unskilled; exit test if actor doesn't have required skill
+    if (checkUnskilled(skillValue, skillName, soaker)) {
+        return;
+    }
+
+    let test = {
+        testType: "soak",
+        actor: soaker.uuid,
+        actorPic: soaker.img,
+        actorType: soaker.system.type,
+        isAttack: false,
+        isFav: soaker.system.skills[skillName]?.isFav || soaker.system.attributes[skillName+"IsFav"] || false,
+        skillName: isAttributeTest ? attributeName : skillName,
+        skillValue: skillValue,
+        targets: Array.from(game.user.targets),
+        applySize: false,
+        DNDescriptor: "standard",
+        attackOptions: false,
+        chatNote: "",
+        rollTotal: 0 // A zero indicates that a rollTotal needs to be generated when renderSkillChat is called //
+    }
+
+    let dialog = new testDialog(test);
+    dialog.render(true);
+    //do reality roll
+}
+
+
 /**
  * Return the Torg value for a given number
  * This could probably be simplified by using the formula for the famous Torg algorhythm

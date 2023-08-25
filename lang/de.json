@@ -262,6 +262,20 @@
             "powerSuit": "Power Suit"
         },
         "sheetLabels": {
+            "applyDamage":"Schaden anwenden",
+            "applyDamageTooltip": "Linksclick zum anwenden, Rechtsklick zum modifizieren.",
+            "soakDamage": "Schaden wegstecken",
+            "soakDamageTooltip": "Generiert einen Realitäts-Check und gibt die Schadensreduzierung aus.",
+            "explosionCancelled": "Du bist benachteiligt, der erste Bonuswürfel wurde nicht angerechnet, bist aber nicht länger benachteiligt. ",
+            "modifyDamage": "Du kannst hier den Schaden anpassen.",
+            "modifyWounds": "Neue Wunden",
+            "modifyShocks": "Neuer Schock",
+            "chooseDamage": "Wähle den anzuwendenden Schaden.",
+            "favDis": "Bevorzugt & benachteiligt heben sich gegeneinander auf.",
+            "soakRoll": "Wegstecken",
+            "soakNull": "Du steckst nichts weg.",
+            "soakValue": " Wunden und allen Schock weggesteckt.",
+            "soakAll": "Du steckst alle Wunden und Schock weg.",
             "editableTooltip": "Vergrößere den Charakterbogen, um editierbare Werte anzuzeigen",
             "stormknight": "Storm Knight",
             "stats": "Werte",
@@ -545,6 +559,7 @@
             "bonusCard": "+3 Karte",
             "bonusDamage": "Bonus Schaden",
             "up": "Oberhand",
+            "favored": "Begünstigt",
             "bonusDice": "BW",
             "actionTotal": "Probenergebnis",
             "skillTestLabel": "Fertigkeitswert",
@@ -586,7 +601,7 @@
                     "longBurst": "Langer Feuerstoß (+4)",
                     "heavyBurst": "Schwerer Feuerstoß (+6)",
                     "allOutAttack": "Rücksichtsloser Angriff",
-                    "gezielterSchuss": "Zielen (+4)",
+                    "aimedShot": "Zielen (+4)",
                     "blindFire": "Blindes Feuern (-6)",
                     "targetConcealment": "Deckungsschutz",
                     "powerModifier": "Modifikator von Kräften"
@@ -762,6 +777,10 @@
             "autoDamages": {
                 "name": "Schaden automatisch anwenden (BETA!)",
                 "hint": "Wenn angehakt, werden Schock und Wunden automatisch auf das Ziel angewendet werden."
+            },
+            "playerHandBottom": {
+                "name": "Anzeige der Spielerhand am unteren Bildschirmrand",
+                "hint": "Player hands open at the bottom right of the screen, and cards will appear above the player hand window. Requires screen refresh (F5) to take effect."
             }            
     },
     "skillDialogs": {

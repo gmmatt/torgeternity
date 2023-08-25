@@ -22,6 +22,10 @@
         </p>
         <p class="skill-roll-action-label" style="{{damageSubLabel}}">
             {{damageSubDescription}}
+            <br>
+            <a class="applyDam" style="{{applyDamLabel}}" title="{{localize 'torgeternity.sheetLabels.applyDamageTooltip'}}">{{localize 'torgeternity.sheetLabels.applyDamage'}}</a>
+            <span style="{{applyDamLabel}}">&nbsp;&bull;&nbsp;</span>
+            <a class="soakDam" style="{{applyDamLabel}}" title="{{localize 'torgeternity.sheetLabels.soakDamageTooltip'}}">{{localize 'torgeternity.sheetLabels.soakDamage'}}</a>
         </p>
         <table class="skill-roll-table">
             <tr>
@@ -81,6 +85,12 @@
         </table>
 
         <div class="skill-roll-menu">
+            <a class="roll-fav" 
+                style="{{isFavStyle}}"
+            >
+            {{localize 'torgeternity.chatText.favored'}}
+            </a>
+            <span style="{{isFavStyle}}">&nbsp;&bull;&nbsp;</span>
             <a class="roll-possibility" 
                 style="{{possibilityStyle}}"
                 data-actor="{{actor}}" 

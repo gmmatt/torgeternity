@@ -7,12 +7,16 @@
             "name": "GM Matt",
             "url": "https://www.youtube.com/c/GMMatt",
             "discord": "Matt#1768"
+        },
+        {
+          "name": "Algor",
+          "discord": "algor84"
         }
     ],
-    "version": "3.0.0",
+    "version": "3.1.0",
     "compatibility": {
         "minimum": 11,
-        "verified": "11.305"
+        "verified": "11"
     },
     "templateVersion": "4.5.3",
     "esmodules": [
@@ -270,5 +274,5 @@
     "secondaryTokenAttribute": "shock",
     "url": "https://github.com/gmmatt/torgeternity",
     "manifest": "https://github.com/gmmatt/torgeternity/releases/latest/download/system.json",
-    "download": "https://github.com/gmmatt/torgeternity/releases/download/3.0.0/torgeternity.zip"
+    "download": "https://github.com/gmmatt/torgeternity/releases/download/3.0.1/torgeternity.zip"
 }

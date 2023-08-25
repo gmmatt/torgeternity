@@ -643,6 +643,7 @@ function rollItemMacro(itemName) {
                 item: item,
                 attackType: attackType,
                 isAttack: true,
+                isFav : skillData.isFav,
                 actorPic: actor.img,
                 skillName: weaponData.attackWith,
                 skillBaseAttribute: skillData.baseAttribute,
@@ -661,7 +662,8 @@ function rollItemMacro(itemName) {
                 applySize: true,
                 attackOptions: true,
                 darknessModifier: 0,
-                chatNote: weaponData.chatNote
+                chatNote: weaponData.chatNote,
+                movementModifier : 0
             }
 
             let dialog = new testDialog(mTest);
@@ -808,7 +810,7 @@ function rollSkillMacro(skillName, attributeName, isInteractionAttack) {
             baseAttribute: attributeName,
             adds: 0,
             value: attribute,
-            isFav: false,
+            isFav: actor.system.attributes[attributeNameKey+"IsFav"],
             groupName: "other",
             unskilledUse: 1
         };
@@ -839,16 +841,19 @@ function rollSkillMacro(skillName, attributeName, isInteractionAttack) {
         skillAdds: skill.adds,
         skillValue: skillValue,
         isAttack: false,
+        isFav : skill.isFav,
         targets: Array.from(game.user.targets),
         applySize: false,
         DNDescriptor: "standard",
         attackOptions: false,
         rollTotal: 0,
         unskilledUse: skill.unskilledUse,
+        chatNote: "",
         woundModifier: parseInt(-(actor.system.wounds.value)),
         stymiedModifier: parseInt(actor.system.stymiedModifier),
         darknessModifier: 0, //parseInt(actor.system.darknessModifier),
-        type: "skill"
+        type: "skill",
+        movementModifier : 0
     };
     if (isInteractionAttack) {
         test["type"] = "interactionAttack";
