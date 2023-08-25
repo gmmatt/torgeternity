@@ -1,0 +1,8 @@
+2023/08/25-20:17:02.854 3808 Recovering log #42
+2023/08/25-20:17:02.947 3808 Delete type=0 #42
+2023/08/25-20:17:02.947 3808 Delete type=3 #40
+2023/08/25-20:17:24.450 cdc Level-0 table #47: started
+2023/08/25-20:17:24.450 cdc Level-0 table #47: 0 bytes OK
+2023/08/25-20:17:24.495 cdc Delete type=0 #45
+2023/08/25-20:17:24.547 cdc Manual compaction at level-0 from '!cards!08JHFiMFJy4yssmg' @ 72057594037927935 : 1 .. '!cards.cards!zt7zadfXvHzLp4Xd.puq9ubQi0P1XzFdT' @ 0 : 0; will stop at (end)
+2023/08/25-20:17:24.547 cdc Manual compaction at level-1 from '!cards!08JHFiMFJy4yssmg' @ 72057594037927935 : 1 .. '!cards.cards!zt7zadfXvHzLp4Xd.puq9ubQi0P1XzFdT' @ 0 : 0; will stop at (end)
