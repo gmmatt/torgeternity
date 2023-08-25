@@ -559,7 +559,7 @@
             "bonusCard": "+3 Karte",
             "bonusDamage": "Bonus Schaden",
             "up": "Oberhand",
-            "favored": "Begünstigt",
+            "favored": "Bevorzugt",
             "bonusDice": "BW",
             "actionTotal": "Probenergebnis",
             "skillTestLabel": "Fertigkeitswert",
@@ -606,29 +606,29 @@
                     "targetConcealment": "Deckungsschutz",
                     "powerModifier": "Modifikator von Kräften"
                 },
-            "result": {
-                "result": "Ergebnis",
-                "previous": "Summe des vorangegangenen Wurfs",
-                "new": "Neue Summe",
-                "actionTotal": "Aktion insgesamt",
-                "failure": "Fehlschlag",
-                "outstandingSuccess": "Hervorragender Erfolg",
-                "goodSuccess": "Guter Erfolg",
-                "standartSuccess": "Standarderfolg",
-                "mishape": "Patzer",
-                "damage": "Schaden",
-                "toughness": "Robustheit",
-                "noDamage": "Kein Schaden",
-                "attackMissed": "Angriff verfehlt",
-                "resetDefense": "Nicht mehr länger in aktiver Verteidigung."
-            }
-        },
-        "playsCard": "Spielt aus:",
-        "discardsCard": "Wirft weg:",
-        "drawsCard": "Zieht vom",
-        "passesCard1": "Gibt",
-        "passesCard2": "an"
-        },
+                "result": {
+                    "result": "Ergebnis",
+                    "previous": "Summe des vorangegangenen Wurfs",
+                    "new": "Neue Summe",
+                    "actionTotal": "Aktion insgesamt",
+                    "failure": "Fehlschlag",
+                    "outstandingSuccess": "Hervorragender Erfolg",
+                    "goodSuccess": "Guter Erfolg",
+                    "standartSuccess": "Standarderfolg",
+                    "mishape": "Patzer",
+                    "damage": "Schaden",
+                    "toughness": "Robustheit",
+                    "noDamage": "Kein Schaden",
+                    "attackMissed": "Angriff verfehlt",
+                    "resetDefense": "Nicht mehr länger in aktiver Verteidigung."
+                }
+            },
+            "playsCard": "Spielt aus:",
+            "discardsCard": "Wirft weg:",
+            "drawsCard": "Zieht vom",
+            "passesCard1": "Gibt",
+            "passesCard2": "an"
+            },
         "sizes": {
             "tiny": "Winzig",
             "verySmall": "Sehr klein",
@@ -777,58 +777,62 @@
             "autoDamages": {
                 "name": "Schaden automatisch anwenden (BETA!)",
                 "hint": "Wenn angehakt, werden Schock und Wunden automatisch auf das Ziel angewendet werden."
-            }            
-    },
-    "skillDialogs": {
-        "disfavored": "Benachteiligt",
-        "disfavoredTip": "Anhaken, wenn der Wurf benachteiligt ist. Der Würfelwurf wird dann nicht auf einer 10 oder 20 explodieren." 
-    },
-    "notifications": {
-        "macroTypeWarning": "Du kannst nur Makro-Buttons für Items/Attribute/Fertigkeiten kreieren, die dir gehören.",
-        "openIssue": "Dein Browser wird einen neuen Tab öffnen, um diese Aufgabe durchzuführen.",
-        "openUlisses": "Dein Browser wird einen neuen Tab öffnen und dich auf die Ulisses-Webseite weiterleiten.",
-        "openDiscord": "Dein Browser wird einen neuen Tab öffnen, der dich zum Discord-Server weiterleitet.",
-        "noItemNamed": "Dein Kontrollierter Charakter hat keinen Gegenstand der heißt: ",
-        "noSkillNamed": "Dein Kontrollierter Charakter hat keine Fertigkeit, die heißt: ",
-        "noAttrNamed": "Dein Kontrollierter Charakter hat kein Attribut, das heißt: ",
-        "notImplemented": "Aktuell noch nicht implementiert",
-        "defaultAction": "Standardaktion, Ausrüstung z. Bsp.",
-        "noHands": "Keine Kartenhand verfügbar!",
-        "dramaDeckEmpty": "Das Dramadeck ist aufgebraucht. Bitte das Dramadeck zurücksetzen.",
-        "onlyReservedCard": "Bitte nur Karten aus dem Aktionenpool spielen.",
-        "noActiveEffectInOwnedItem": "Das Ändern von aktiven Effekten innerhalb eines Items mit Besitzrechten ist zur Zeit noch nicht implementiert.",
-        "noTarget": "Kein valides Token im Ziel"
-    },
-    "gmScreen": {
-        "title": "SL-Schirm",
-        "toggle": "SL-Schirm an-/ ausschalten",
-        "noScreen": "Kein SL-Schirm verfügbar",
-        "noScreenMessage": "Du hast keinen SL-Schirm ausgewählt. SL-Schirme werden von Premium-Modulen unterstützt, die du hier findest:"
-    },
-    "partySheet": {
-        "noCharacter": "Dieser Spieler hat keinen zugeteilten Charakter"
-    },
-    "packs": {
-        "basicRules" : "torgeternity.system-de-basisregeln",
-        "decks" : "torgeternity.system-de-grundkarten"
-    },
-    "speeds": {
-        "fast": "Schnell",
-        "veryFast": "Superschnell",
-        "ultraFast": "Ultraschnell"
-    },
-    "vehicleTypes": {
-        "land": "Land",
-        "water": "Wasser",
-        "air": "Luft"
-    },
+            },
+            "playerHandBottom": {
+                "name": "Player Hand Bottom Display",
+                "hint": "Player hands open at the bottom right of the screen, and cards will appear above the player hand window. Requires screen refresh (F5) to take effect."
+            }
+        },
+        "skillDialogs": {
+            "disfavored": "Benachteiligt",
+            "disfavoredTip": "Anhaken, wenn der Wurf benachteiligt ist. Der Würfelwurf wird dann nicht auf einer 10 oder 20 explodieren." 
+        },
+        "notifications": {
+            "macroTypeWarning": "Du kannst nur Makro-Buttons für Items/Attribute/Fertigkeiten kreieren, die dir gehören.",
+            "openIssue": "Dein Browser wird einen neuen Tab öffnen, um diese Aufgabe durchzuführen.",
+            "openUlisses": "Dein Browser wird einen neuen Tab öffnen und dich auf die Ulisses-Webseite weiterleiten.",
+            "openDiscord": "Dein Browser wird einen neuen Tab öffnen, der dich zum Discord-Server weiterleitet.",
+            "noItemNamed": "Dein Kontrollierter Charakter hat keinen Gegenstand der heißt: ",
+            "noSkillNamed": "Dein Kontrollierter Charakter hat keine Fertigkeit, die heißt: ",
+            "noAttrNamed": "Dein Kontrollierter Charakter hat kein Attribut, das heißt: ",
+            "notImplemented": "Aktuell noch nicht implementiert",
+            "defaultAction": "Standardaktion, Ausrüstung z. Bsp.",
+            "noHands": "Keine Kartenhand verfügbar!",
+            "dramaDeckEmpty": "Das Dramadeck ist aufgebraucht. Bitte das Dramadeck zurücksetzen.",
+            "onlyReservedCard": "Bitte nur Karten aus dem Aktionenpool spielen.",
+            "noActiveEffectInOwnedItem": "Das Ändern von aktiven Effekten innerhalb eines Items mit Besitzrechten ist zur Zeit noch nicht implementiert.",
+            "noTarget": "Kein valides Token im Ziel"
+        },
+        "gmScreen": {
+            "title": "SL-Schirm",
+            "toggle": "SL-Schirm an-/ ausschalten",
+            "noScreen": "Kein SL-Schirm verfügbar",
+            "noScreenMessage": "Du hast keinen SL-Schirm ausgewählt. SL-Schirme werden von Premium-Modulen unterstützt, die du hier findest:"
+        },
+        "partySheet": {
+            "noCharacter": "Dieser Spieler hat keinen zugeteilten Charakter"
+        },
+        "packs": {
+            "basicRules" : "torgeternity.system-de-basisregeln",
+            "decks" : "torgeternity.system-de-grundkarten"
+        },
+        "speeds": {
+            "fast": "Schnell",
+            "veryFast": "Superschnell",
+            "ultraFast": "Ultraschnell"
+        },
+        "vehicleTypes": {
+            "land": "Land",
+            "water": "Wasser",
+            "air": "Luft"
+        },
 
-    "magnitudes": {
-        "ones": "-",              
-        "thousands": "K",
-        "millions": "M",
-        "billions": "B"
-    }
+        "magnitudes": {
+            "ones": "-",              
+            "thousands": "K",
+            "millions": "M",
+            "billions": "B"
+        }
     },
     "CARD": {
         "TypeCosm": "Cosm",

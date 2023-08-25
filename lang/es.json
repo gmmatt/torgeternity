@@ -112,6 +112,7 @@
             "mr": "VM",
             "wounds": "Heridas",
             "toughness": "Resistencia",
+            "armor": "Armor",
             "possibilities": "Posibilidad",
             "poss": "Pos.",
             "tappingDifficulty": "Golpe Dificultad",
@@ -121,13 +122,18 @@
             "restrictions": "Restricciones",
             "minStrength": "FUE Min",
             "ap": "PA",
-            "chatNote": "Nota en Chat"
+            "chatNote": "Nota en Chat",
+            "gunner": "Gunner",
+            "skill": "Skill",
+            "short-description": "Short Description"
         },
         "stats": {
             "wounds": "Heridas",
             "shock": "Shock",
             "possibilities": "Posibilidad",
-            "description": "Descripción"
+            "description": "Descripción",
+            "speedModifier": "Vehicle Speed Modifier",
+            "maneuverModifier": "Vehicle Maneuver Modifier"
         },
         "perks": {
             "category": "Categoria",
@@ -147,6 +153,7 @@
             "skilllevel": "Valor Min. Habilidad",
             "castingtime": "Tiempo Lanz.",
             "dn": "ND",
+            "modifier": "Modifier",
             "range": "Alcance",
             "duration": "Duración",
             "damage": "Daño (si aplica)",
@@ -154,7 +161,56 @@
             "good": "Buen Resultado",
             "outstanding": "Resultado Espectacular",
             "attack": "Ataque",
-            "ap": "PA"
+            "ap": "PA",
+            "dnType": "DN Type",
+            "applySize": "Apply Size",
+            "applyArmor": "Armor"
+        },
+        "dnTypes": {
+            "veryEasy": "Very Easy (6)",
+            "easy": "Easy (8)",
+            "standard": "Standard (10)",
+            "challenging": "Challenging (12)",
+            "hard": "Hard (14)",
+            "veryHard": "Very Hard (16)",
+            "heroic": "Heroic (18)",
+            "nearImpossible": "Near Impossible (20)",
+            "targetDodge": "Target dodge or Dexterity",
+            "targetMeleeWeapons": "Target melee weapons or Dexterity",
+            "targetUnarmedCombat": "Target unarmed combat or Dexterity",
+            "targetIntimidation": "Target intimidation or Spirit",
+            "targetManeuver": "Target maneuver or Dexterity",
+            "targetTaunt": "Target taunt or Charisma",
+            "targetTrick": "Target trick or Mind",
+            "targetWillpower": "Target willpower or Spirit",
+            "targetFaith": "Target faith or Spirit",
+            "targetCharisma": "Target Charisma",
+            "targetDexterity": "Target Dexterity",
+            "targetMind": "Target Mind",
+            "targetSpirit": "Target Spirit",
+            "targetStrength": "Target Strength",
+            "targetAlteration": "Target Alteration",
+            "targetConjuration": "Target Conjuration",
+            "targetDivination": "Target Divination",
+            "targetKinesis": "Target Kinesis",
+            "targetPrecognition": "Target Precognition",
+            "targetStealth": "Target stealth or Dexterity",
+            "targetWillpowerMind": "Target willpower or Mind",
+            "targetLandVehicles": "Target land vehicles or Dexterity",
+            "targetAirVehicles": "Target air vehicles or Dexterity",
+            "targetWaterVehicles": "Target water vehicles or Dexterity",
+            "highestSpeed": "Fastest Participant in Combat Tracker",
+            "targetVehicleDefense": "Target Vehicle Defense"
+        },
+        "dnTypesBasic": {
+            "veryEasy": "Very Easy (6)",
+            "easy": "Easy (8)",
+            "standard": "Standard (10)",
+            "challenging": "Challenging (12)",
+            "hard": "Hard (14)",
+            "veryHard": "Very Hard (16)",
+            "heroic": "Heroic (18)",
+            "nearImpossible": "Near Impossible (20)"
         },
         "cosms": {
             "none": "(Ninguno)",
@@ -200,7 +256,10 @@
             "depravity": "Depravación",
             "theRace": "La Raza",
             "corruption": "Corrupción",
-            "hope": "Esperanza"
+            "hope": "Esperanza",
+            "cursed": "Cursed",
+            "biotech": "Biotech",
+            "powerSuit": "Power Suit"
         },
         "sheetLabels": {
             "applyDamage":"Apply damages",
@@ -272,6 +331,7 @@
             "melee": "Cuerpo a Cuerpo",
             "unarmed": "Sin Armas",
             "xp": "PX",
+            "xpOnlyGM": "only GM can fill",
             "unspent": "Libres",
             "earned": "Ganados",
             "clearance": "Nivel",
@@ -351,11 +411,32 @@
             "titleDescription": "Título/Descripción",
             "pool": "reserva",
             "skillRollHint": "Clic Izq. tirada avanzada",
-            "toggleSkillDisplay": "Clic cambia listado Habilidad"
+            "toggleSkillDisplay": "Clic cambia listado Habilidad",
+            "combatSkills": "Combat",
+            "interactionSkills": "Interaction",
+            "otherSkills": "Other",
+            "targetDefense": "Target Defense",
+            "defensesTip": "Click to roll for/disable active defenses",
+            "name": "Name",
+            "type": "Type",
+            "operator": "Operator",
+            "skill": "Skill",
+            "defense": "Defense",
+            "chase": "Chase",
+            "stunt": "Stunt",
+            "collision": "Collision",
+            "baseRoll": "Roll",
+            "gunner": "Gunner",
+            "range": "Range",
+            "damageAP": "Dmg (AP)",
+            "addOns": "Add-Ons"
+            
+
         },
         "combat": {
             "nextKeep": "Sigu. Turno (Mantener Carta)",
-            "nextNew": "Sigu. Turno (Nueva Carta)"
+            "nextNew": "Sigu. Turno (Nueva Carta)",
+            "dramaBack": "systems/torgeternity/images/cards/drama-back.webp"
         },
         "itemSheetDescriptions": {
             "perk": "Dones",
@@ -375,9 +456,11 @@
             "miracle": "Milagro",
             "psionicpower": "Poder Psiónico",
             "specialability": "Habilidad Especial",
+            "specialabilityRollable": "Special Ability Rollable",
             "other": "Equipo General",
             "customAttack": "Ataque Personalizado",
-            "customSkill": "Hab. Personalizada"
+            "customSkill": "Hab. Personalizada",
+            "vehicleAddOn": "Vehicle Add-On"
         },
         "attackTypes": {
             "unarmedCombat": "Combate Desarmado",
@@ -468,6 +551,7 @@
         },
         "chatText": {
             "possibility": "POSIB",
+            "test": "Test",
             "hero": "HÉROE",
             "heroCard": "Carta Héroe",
             "drama": "DRAMA",
@@ -475,10 +559,14 @@
             "bonusCard": "CAR+3",
             "bonusDamage": "Daño Adicional",
             "up": "AUMEN",
+            "favored": "Favored",
             "bonusDice": "DB",
             "actionTotal": "TOTAL",
             "skillTestLabel": "Valor Habilidad",
             "attributeTestLabel": "Atributo",
+            "chase": "Chase Test",
+            "stunt": "Stunt Test",
+            "vehicleBase": "Vehicle Operation Test",
             "dieTotal": "DADOS:",
             "unskilled": "Sin Entrenar",
             "possibleDisconnect": "¡POSIBLE DESCONEXIÓN!",
@@ -490,7 +578,10 @@
             "value": "Valor",
             "notes": "Notas",
             "check": {
+                "noTracker": "Cannot use chase button unless there is an active combat in the combat tracker.",
+                "testUnsuccessfull": "Test unsuccessfull",
                 "needTarget": "No se puede realizar una tirada avanzada sin objetivo. Selecciona objetivo y prueba de nuevo.",
+                "interactionNeedTarget": "Cannot attempt interaction attack test without a target. Select a target and try again.",
                 "cantUseUntrained": " no se puede utilizar sin entrenar (mínimo 1 adición).",
                 "cantUseSkillRecquired": " no se puede utilizar sin 1 adición en la habilidad requerida.",
                 "modifier": {
@@ -512,9 +603,13 @@
                     "allOutAttack": "Ataque Total",
                     "aimedShot": "Tiro Apuntado (+4)",
                     "blindFire": "Tiro a Ciegas (-6)",
-                    "targetConcealment": "Cobertura Objetivo"
+                    "targetConcealment": "Cobertura Objetivo",
+                    "powerModifier": "Modifier from Power"
                 },
                 "result": {
+                    "result": "result",
+                    "previous": "Previous roll total",
+                    "new": "New Roll Total",
                     "actionTotal": "TOTAL",
                     "failure": "Fallo",
                     "outstandingSuccess": "Éxito Espectacular",
@@ -524,9 +619,15 @@
                     "damage": "Daño",
                     "toughness": " Resistencia",
                     "noDamage": "Sin Daño",
-                    "attackMissed": "Ataque Falla"
+                    "attackMissed": "Ataque Falla",
+                    "resetDefense": "No longer actively defending."
                 }
-            }
+            },
+            "playsCard": "Plays",
+            "discardsCard": "Discards",
+            "drawsCard": "Draws from the",
+            "passesCard1": "Passes",
+            "passesCard2": "to"
         },
         "sizes": {
             "tiny": "Diminuto",
@@ -582,7 +683,8 @@
             "spellRoll": "Tirar Conjuro",
             "miracleRoll": "Tirar Milagro",
             "psionicRoll": "Tirar poder Psiónico",
-            "bonusRoll": "Tirar Bonus"
+            "bonusRoll": "Tirar Bonus",
+            "toggleEquip": "Toggle Equip"
         },
         "possibilitiesReset": {
             "name": "Reinicio posibilidades Caballeros",
@@ -602,7 +704,12 @@
             "destiny": "Destino",
             "drama": "Drama",
             "cosm": "Cosmos",
-            "hand": "Mano"
+            "hand": "Mano",
+            "discardPile": "Discard Pile",
+            "cosmDiscard": "Cosm Discard Pile",
+            "dramaDiscard": "Drama Discard Pile",
+            "destinyDiscard": "Destiny Discard Pile",
+            "activeDrama": "Active Drama Card"
         },
         "scenes": {
             "reality": "Realidad",
@@ -651,9 +758,80 @@
                 "hint": "Permite seleccionar una pantalla para el DJ de los módulos activos de TORG. Si se selecciona un módulo que no esta instalado la función no funcionará correctamente. AVISO: Es necesario refrescar el navegador (F5) depués del cambio."
             },
             "hideForeignCompendium": {
-                "name": "ocultar compendios de lenguas extranjeras?",
-                "hint": "Oculta los compendios oficiales que no están en su idioma."
+                "name": "Hide foreign Compendiums",
+                "hint": "Select to hide all compendium in foreign language"
+            },
+            "deckSetting": {
+                "name": "Default card deck configuration",
+                "label": "Default card deck configuration",
+                "hint": "Configure the names that are used for your card decks and discard piles."
+            },
+            "defaultUserHand": {
+                "name": "Default user cards hand name",
+                "hint": "Hand name for this user."
+            },
+            "disableXP": {
+                "name": "Disabling the XP input for players",
+                "hint": "If checked, only GM should be able to fill XP in character sheet."
+            },
+            "autoDamages": {
+                "name": "Apply damages automatically",
+                "hint": "If checked, shocks and wounds would be automatically apply if player has a valid target token. WARNING: This feature only works correctly with initial damage rolls. It will not correctly record subsequent bonus die rolls. Use with caution."
+            },
+            "playerHandBottom": {
+                "name": "Player Hand Bottom Display",
+                "hint": "Player hands open at the bottom right of the screen, and cards will appear above the player hand window. Requires screen refresh (F5) to take effect."
             }
+        },
+        "skillDialogs": {
+            "disfavored": "Disfavored",
+            "disfavoredTip": "Check if this test is disfavored. The die roll will not explode on a 10 or 20."
+        },
+        "notifications": {
+            "macroTypeWarning": "You can only create macro buttons for owned Items and Attributes/Skills",
+            "openIssue": "Your browser will open a new page to complete an issue",
+            "openUlisses": "Your browser will open a new tab to join Ulisses website",
+            "openDiscord": "Your browser will open a new page to join us on our discord server ",
+            "noItemNamed": "Your controlled Actor does not have an item named ",
+            "noSkillNamed": "Your controlled Actor does not have a skill named ",
+            "noAttrNamed": "Your controlled Actor does not have an attribute named ",
+            "notImplemented": "Not implemented at this moment",
+            "defaultAction": "Default action, Gear for example",
+            "noHands": "No hands available!",
+            "dramaDeckEmpty": "The Drama Deck is empty. Reset the Drama Deck to continue.",
+            "onlyReservedCard": "Please play a reserved card while playing a dramatic scene",
+            "noActiveEffectInOwnedItem": "Managing Active Effects within an Owned Item is not currently supported and will be added in a subsequent update.",
+            "noTarget": "No valid Target Token"
+        },
+        "gmScreen": {
+            "title": "GM screen",
+            "toggle": "Toggle the GM screen",
+            "noScreen": "No gm screen available",
+            "noScreenMessage": "you don't have selected any gm screen. The gm screens are provided by the modules that you can find here: "
+        },
+        "partySheet": {
+            "noCharacter": "This user doesn't own any actor"
+        },
+        "packs": {
+            "basicRules": "torgeternity.basic-rules",
+            "decks": "torgeternity.core-card-set"
+        },
+        "speeds": {
+            "fast": "Fast",
+            "veryFast": "Very Fast",
+            "ultraFast": "Ultra Fast"
+        },
+        "vehicleTypes": {
+            "land": "Land",
+            "water": "Water",
+            "air": "Air"
+        },
+
+        "magnitudes": {
+            "ones": "-",              
+            "thousands": "K",
+            "millions": "M",
+            "billions": "B"
         }
     },
     "CARD": {
