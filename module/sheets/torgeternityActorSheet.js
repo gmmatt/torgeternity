@@ -822,7 +822,7 @@ export default class torgeternityActorSheet extends ActorSheet {
             isAttack: true,
             isFav: skillData.isFav,
             skillName: attackWith,
-            skillValue: skillValue,
+            skillValue: Math.max(skillValue, attributes[skillData.baseAttribute]),
             unskilledUse: true,
             damage: adjustedDamage,
             weaponAP: weaponData.ap,
