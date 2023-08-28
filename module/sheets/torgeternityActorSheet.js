@@ -622,7 +622,7 @@ export default class torgeternityActorSheet extends ActorSheet {
             attackType: "unarmedCombat",
             isAttack: true,
             skillName: "unarmedCombat",
-            skillValue: event.currentTarget.getAttribute("data-skill-value"),
+            skillValue: Math.max(this.actor.system.attributes.dexterity, event.currentTarget.getAttribute("data-skill-value")),
             isFav: this.actor.system.skills.unarmedCombat.isFav,
             unskilledUse: true,
             damage: event.currentTarget.getAttribute("data-damage"),
@@ -761,7 +761,10 @@ export default class torgeternityActorSheet extends ActorSheet {
             var skillData = this.actor.system.skills[weaponData.attackWith];
             skillValue = skillData.value;
             attributes = this.actor.system.attributes
-        }
+        };
+
+        if (checkUnskilled(skillValue, attackWith, this.actor)) return;
+
         var dnDescriptor = "standard";
         var attackType = event.currentTarget.getAttribute("data-attack-type");
         var adjustedDamage = 0;
@@ -892,7 +895,9 @@ export default class torgeternityActorSheet extends ActorSheet {
             dnDescriptor = powerData.dn;
         } else {
             dnDescriptor = "standard"
-        }
+        };
+
+        if (checkUnskilled(skillData.value, skillName, this.actor)) return;
 
         let test = {
             testType: "power",
@@ -907,7 +912,7 @@ export default class torgeternityActorSheet extends ActorSheet {
             skillName: skillName,
             skillBaseAttribute: game.i18n.localize("torgeternity.skills." + event.currentTarget.getAttribute("data-base-attribute")),
             skillAdds: skillData.adds,
-            skillValue: skillData.value,
+            skillValue: Math.max(skillData.value, this.actor.system.attributes[skillData.baseAttribute]),
             unskilledUse: false,
             damage: powerData.damage,
             weaponAP: powerData.ap,
