@@ -262,20 +262,20 @@
             "powerSuit": "Power Suit"
         },
         "sheetLabels": {
-            "applyDamage":"Apply damages",
-            "applyDamageTooltip": "Right-click to modify applied damages, Left-click to apply.",
-            "soakDamage": "Soak damages",
-            "soakDamageTooltip": "Generate a Reality skill roll, and gives the damages reduction.",
-            "explosionCancelled": "You were disfavored, first bonus die has been cancelled, but you're no more disfavored. ",
-            "modifyDamage": "You can modify the damages here.",
-            "modifyWounds": "New Wounds",
-            "modifyShocks": "New Shocks",
-            "chooseDamage": "Choose damages inflicted.",
-            "favDis": "Favored & disfavored cancel each other.",
-            "soakRoll": "Reality soaking",
-            "soakNull": "You will soak nothing.",
-            "soakValue": " wounds soaked, and all shocks.",
-            "soakAll": "You will soak all wounds and shocks.",
+            "applyDamage":"Schaden anwenden",
+            "applyDamageTooltip": "Linksclick zum anwenden, Rechtsklick zum modifizieren.",
+            "soakDamage": "Schaden wegstecken",
+            "soakDamageTooltip": "Generiert einen Realitäts-Check und gibt die Schadensreduzierung aus.",
+            "explosionCancelled": "Du bist benachteiligt, der erste Bonuswürfel wurde nicht angerechnet, bist aber nicht länger benachteiligt. ",
+            "modifyDamage": "Du kannst hier den Schaden anpassen.",
+            "modifyWounds": "Neue Wunden",
+            "modifyShocks": "Neuer Schock",
+            "chooseDamage": "Wähle den anzuwendenden Schaden.",
+            "favDis": "Bevorzugt & benachteiligt heben sich gegeneinander auf.",
+            "soakRoll": "Wegstecken",
+            "soakNull": "Du steckst nichts weg.",
+            "soakValue": " Wunden und allen Schock weggesteckt.",
+            "soakAll": "Du steckst alle Wunden und Schock weg.",
             "editableTooltip": "Vergrößere den Charakterbogen, um editierbare Werte anzuzeigen",
             "stormknight": "Storm Knight",
             "stats": "Werte",
@@ -559,7 +559,7 @@
             "bonusCard": "+3 Karte",
             "bonusDamage": "Bonus Schaden",
             "up": "Oberhand",
-            "favored": "Bevorzugt",
+            "favored": "Begünstigt",
             "bonusDice": "BW",
             "actionTotal": "Probenergebnis",
             "skillTestLabel": "Fertigkeitswert",
@@ -779,7 +779,7 @@
                 "hint": "Wenn angehakt, werden Schock und Wunden automatisch auf das Ziel angewendet werden."
             },
             "playerHandBottom": {
-                "name": "Player Hand Bottom Display",
+                "name": "Anzeige der Spielerhand am unteren Bildschirmrand",
                 "hint": "Player hands open at the bottom right of the screen, and cards will appear above the player hand window. Requires screen refresh (F5) to take effect."
             }
         },
@@ -826,7 +826,6 @@
             "water": "Wasser",
             "air": "Luft"
         },
-
         "magnitudes": {
             "ones": "-",              
             "thousands": "K",
