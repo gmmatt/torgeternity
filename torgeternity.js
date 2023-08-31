@@ -945,6 +945,7 @@ Hooks.on("createActor", async (actor, options, userId) => {
 
 // un-pool cards of SK when the GM ends the combat encounter
 Hooks.on("deleteCombat", async (combat, dataUpdate) => {
+    if (!game.user.isGM) return;
     var listCombatants = [];
     var listHandsReset =[];
     //listing of actors in the closing combat
