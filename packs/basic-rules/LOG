@@ -1,8 +1,8 @@
-2023/08/25-20:17:02.594 3810 Recovering log #42
-2023/08/25-20:17:02.674 3810 Delete type=0 #42
-2023/08/25-20:17:02.674 3810 Delete type=3 #40
-2023/08/25-20:17:24.320 cdc Level-0 table #47: started
-2023/08/25-20:17:24.320 cdc Level-0 table #47: 0 bytes OK
-2023/08/25-20:17:24.363 cdc Delete type=0 #45
-2023/08/25-20:17:24.412 cdc Manual compaction at level-0 from '!journal!4hN0xAsql86XWwEY' @ 72057594037927935 : 1 .. '!journal!zvyB2kHSc32CwhIR' @ 0 : 0; will stop at (end)
-2023/08/25-20:17:24.429 cdc Manual compaction at level-1 from '!journal!4hN0xAsql86XWwEY' @ 72057594037927935 : 1 .. '!journal!zvyB2kHSc32CwhIR' @ 0 : 0; will stop at (end)
+2023/09/04-20:07:42.125 6500 Recovering log #57
+2023/09/04-20:07:42.130 6500 Level-0 table #59: started
+2023/09/04-20:07:42.139 6500 Level-0 table #59: 1368283 bytes OK
+2023/09/04-20:07:42.143 6500 Delete type=0 #57
+2023/09/04-20:07:42.143 6500 Delete type=3 #56
+2023/09/04-21:19:56.149 2498 Level-0 table #62: started
+2023/09/04-21:19:56.164 2498 Level-0 table #62: 2170181 bytes OK
+2023/09/04-21:19:56.166 2498 Delete type=0 #60
