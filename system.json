@@ -49,6 +49,14 @@
             "type": "JournalEntry"
         },
         {
+            "name": "handouts",
+            "label": "Handouts (en)",
+            "system": "torgeternity",
+            "module": "torgeternity",
+            "path": "packs/handouts.db",
+            "type": "JournalEntry"
+        },
+        {
             "name": "core-card-set",
             "label": "Core Card Set (en)",
             "system": "torgeternity",
@@ -58,7 +66,7 @@
         },
         {
             "name": "core-scenes",
-            "label": "Standardscene (en)",
+            "label": "Main Scene (en)",
             "system": "torgeternity",
             "module": "torgeternity",
             "path": "packs/standardscene.db",
@@ -142,7 +150,8 @@
             "sorting": "m",
             "color": "#415a9b",
             "packs": [
-              "basic-rules"
+              "basic-rules",
+              "handouts"
             ]
           },
           {
