@@ -26,8 +26,14 @@ export class testDialog extends FormApplication {
         data.config = CONFIG.torgeternity;
 
         // Set Modifiers from Actor Wounds and Status Effects
-        let myActor = this.test.actor.includes("Token") ? fromUuidSync(this.test.actor) : fromUuidSync(this.test.actor) 
-        data.test.woundModifier = parseInt(-(myActor.system.wounds.value));
+        let myActor = this.test.actor.includes("Token") ? fromUuidSync(this.test.actor) : fromUuidSync(this.test.actor); 
+        console.log(parseInt(myActor.system.wounds.value));
+        if (parseInt(myActor.system.wounds.value) <= 3){ //The wound penalties are never more than -3, regardless on how many wounds a token can suffer / have. CrB p. 117
+            data.test.woundModifier = parseInt(-(myActor.system.wounds.value));    
+        } else {
+            data.test.woundModifier = -3;
+        }
+
         data.test.stymiedModifier = parseInt(myActor.system.stymiedModifier);
         data.test.darknessModifier = parseInt(myActor.system.darknessModifier);
         data.test.sizeModifier = 0;
