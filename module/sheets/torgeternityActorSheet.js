@@ -608,7 +608,7 @@ export default class torgeternityActorSheet extends ActorSheet {
             if (target.type === "vehicle") {
                 dnDescriptor = "targetVehicleDefense"
             } else {
-                dnDescriptor = "targetMeleeWeapons"
+                target.items.filter( it => it.type === "meleeweapon").filter(it => it.system.equipped).length !== 0 ? dnDescriptor = "targetMeleeWeapons" : dnDescriptor = "targetUnarmedCombat";
             }
         } else {
             dnDescriptor = "standard"
@@ -775,6 +775,10 @@ export default class torgeternityActorSheet extends ActorSheet {
                 dnDescriptor = "targetVehicleDefense"
             } else {
                 switch (attackWith) {
+                    case "meleeWeapons":
+                    case "unarmedCombat":
+                        target.items.filter( it => it.type === "meleeweapon").filter(it => it.system.equipped).length === 0 ? dnDescriptor = "targetUnarmedCombat" : dnDescriptor = "targetMeleeWeapons";
+                        break;
                     case "fireCombat":
                     case "energyWeapons":
                     case "heavyWeapons":
