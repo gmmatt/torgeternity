@@ -597,6 +597,10 @@ function rollItemMacro(itemName) {
             if (Array.from(game.user.targets).length > 0) {
 
                 switch (attackWith) {
+                    case "meleeWeapons":
+                    case "unarmedCombat":
+                        target.items.filter( it => it.type === "meleeweapon").filter(it => it.system.equipped).length === 0 ? dnDescriptor = "targetUnarmedCombat" : dnDescriptor = "targetMeleeWeapons";
+                        break;
                     case "fireCombat":
                     case "energyWeapons":
                     case "heavyWeapons":
