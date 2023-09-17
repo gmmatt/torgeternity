@@ -112,6 +112,7 @@
             "mr": "MA",
             "wounds": "Bles",
             "toughness": "Résist",
+            "armor": "Armor",
             "possibilities": "Possibilités",
             "poss": "Poss",
             "tappingDifficulty": "Difficulté d'activation",
@@ -121,13 +122,18 @@
             "restrictions": "Restrictions",
             "minStrength": "Force min",
             "ap": "PA",
-            "chatNote": "Note"
+            "chatNote": "Note",
+            "gunner": "Opérateur",
+            "skill": "Compétence",
+            "short-description": "Description Courte"
         },
         "stats": {
             "wounds": "Blessures",
             "shock": "Chocs",
             "possibilities": "Possibilités",
-            "description": "Description"
+            "description": "Description",
+            "speedModifier": "Modificateur de vitesse",
+            "maneuverModifier": "Modificateur de Manoeuvrabilité"
         },
         "perks": {
             "category": "Catégorie",
@@ -192,7 +198,9 @@
             "targetWillpowerMind": "Volonté ou Raison de la cible",
             "targetLandVehicles": "Véhicules terrestres ou Dextérité de la cible",
             "targetAirVehicles": "Véhicules aériens ou Dextérité de la cible",
-            "targetWaterVehicles": "Véhicules aquatiques ou Dextérité de la cible"
+            "targetWaterVehicles": "Véhicules aquatiques ou Dextérité de la cible",
+            "highestSpeed": "Plus rapide participant du combat",
+            "targetVehicleDefense": "Défense du véhicule ciblé"
         },
         "dnTypesBasic": {
             "veryEasy": "Très facile  (6)",
@@ -408,7 +416,22 @@
             "interactionSkills": "Interactions",
             "otherSkills": "Autres",
             "targetDefense": "Défense de la cible",
-            "defensesTip": "Cliquer pour faire un jet de défense active ou pour désactiver"
+            "defensesTip": "Cliquer pour faire un jet de défense active ou pour désactiver",
+            "name": "Nom",
+            "type": "Type",
+            "operator": "Opérateur",
+            "skill": "Compétence",
+            "defense": "Défense",
+            "chase": "Poursuite",
+            "stunt": "Conduite sportive",
+            "collision": "Collision",
+            "baseRoll": "Lancer",
+            "gunner": "Artilleur",
+            "range": "Range",
+            "damageAP": "Dmg (AP)",
+            "addOns": "Add-Ons"
+            
+
         },
         "combat": {
             "nextKeep": "Nouveau round (garder la carte actuelle)",
@@ -436,7 +459,8 @@
             "specialabilityRollable": "Capacité spéciale avec jet",
             "other": "Équipement général",
             "customAttack": "Attaque personnalisée",
-            "customSkill": "Compétence personnalisée"
+            "customSkill": "Compétence personnalisée",
+            "vehicleAddOn": "Accessoire de véhicule"
         },
         "attackTypes": {
             "unarmedCombat": "Combat à mains nues",
@@ -535,10 +559,14 @@
             "bonusCard": "Carte +3",
             "bonusDamage": "Bonus aux dommages",
             "up": "Un de plus !",
+            "favored": "Favorisé",
             "bonusDice": "DB",
             "actionTotal": "Total d'action",
             "skillTestLabel": "Valeur de compétence",
             "attributeTestLabel": "Valeur d'attribut",
+            "chase": "Test de poursuite",
+            "stunt": "Test de conduite sportive",
+            "vehicleBase": "Test d'Opérateur",
             "dieTotal": "Total du dé",
             "unskilled": "Incompétent",
             "possibleDisconnect": "Déconnexion possible",
@@ -550,6 +578,7 @@
             "value": "Valeur",
             "notes": "Notes",
             "check": {
+                "noTracker": "Pas de jet de poursuite à moins d'un combat actif.",
                 "testUnsuccessfull": "Le jet n'a pas réussi",
                 "needTarget": "Impossible d’effectuer un jet avancé sans cible. Ciblez un token puis réessayez.",
                 "interactionNeedTarget": "Impossible d’effectuer une attaque d'interaction sans cible. Ciblez un token puis réessayez.",
@@ -748,6 +777,10 @@
             "autoDamages": {
                 "name": "Application des dommages automatiques",
                 "hint": "Si coché, les chocs et les blessures seront automatiquement appliqués si le joueur a un token cible valide."
+            },
+            "playerHandBottom": {
+                "name": "Affichage haute de la main",
+                "hint": "La main du joueur s'ouvre en bas à droite, et les cartes apparaitrons au dessus de la fenêtre. Nécessite un rechargement(F5) pour être effectif."
             }
         },
         "skillDialogs": {
@@ -782,6 +815,23 @@
         "packs": {
             "basicRules": "torgeternity.basic-rules-fr",
             "decks": "torgeternity.core-card-set-fr"
+        },
+        "speeds": {
+            "fast": "Rapide",
+            "veryFast": "Très Rapide",
+            "ultraFast": "Ultra Rapide"
+        },
+        "vehicleTypes": {
+            "land": "Terrestre",
+            "water": "Aquatique",
+            "air": "Aérien"
+        },
+
+        "magnitudes": {
+            "ones": "-",              
+            "thousands": "K",
+            "millions": "M",
+            "billions": "B"
         }
     },
     "CARD": {

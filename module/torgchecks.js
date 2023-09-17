@@ -913,15 +913,22 @@ export async function applyDamages(damageObject) {
             "data.shock.value": newShock,
             "data.wounds.value": newWound,
         });
-        //too many shocks => apply KO/
-        if (newShock >= targetToken.actor.system.shock.max) {
-            //TODO : apply KO status
-        }
-        //too many wounds => apply defeat
+        //too many wounds => apply defeat ? Ko ?
         if (newWound > targetToken.actor.system.wounds.max) {
-            //TODO : test defeat apply defeat
+            if (!targetToken.actor.statuses.find(d=>d==='dead')) {
+                const eff = CONFIG.statusEffects.find(e => e.id === "dead");
+                await targetToken.toggleEffect(eff, {"active": true, "overlay": true});
+            }
         }
-
+        // too many shocks, apply KO if not dead
+        if (newShock >= targetToken.actor.system.shock.max) {
+            if (!targetToken.actor.statuses.find(d=>d==='unconscious')) {
+                if (!targetToken.actor.statuses.find(d=>d==='dead')) {
+                    const eff = CONFIG.statusEffects.find(e => e.id === "unconscious");
+                    await targetToken.toggleEffect(eff, {"active": true, "overlay": true});
+                }
+            }
+        }
     } else {
         ui.notifications.warn(game.i18n.localize("torgeternity.notifications.noTarget"))
     }
