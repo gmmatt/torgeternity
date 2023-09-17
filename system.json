@@ -13,7 +13,7 @@
           "discord": "algor84"
         }
     ],
-    "version": "3.1.0",
+    "version": "3.1.1",
     "compatibility": {
         "minimum": 11,
         "verified": "11"
@@ -49,6 +49,14 @@
             "type": "JournalEntry"
         },
         {
+            "name": "handouts",
+            "label": "Handouts (en)",
+            "system": "torgeternity",
+            "module": "torgeternity",
+            "path": "packs/handouts.db",
+            "type": "JournalEntry"
+        },
+        {
             "name": "core-card-set",
             "label": "Core Card Set (en)",
             "system": "torgeternity",
@@ -58,7 +66,7 @@
         },
         {
             "name": "core-scenes",
-            "label": "Standardscene (en)",
+            "label": "Main Scene (en)",
             "system": "torgeternity",
             "module": "torgeternity",
             "path": "packs/standardscene.db",
@@ -113,6 +121,14 @@
             "type": "JournalEntry"
         },
         {
+            "name": "system-de-handouts",
+            "label": "Handouts (de)",
+            "system": "torgeternity",
+            "module": "torgeternity",
+            "path": "packs/deutsch/handouts-de.db",
+            "type": "JournalEntry"
+        },
+        {
             "name": "core-de-scenes",
             "label": "Standardszene (de)",
             "system": "torgeternity",
@@ -142,7 +158,8 @@
             "sorting": "m",
             "color": "#415a9b",
             "packs": [
-              "basic-rules"
+              "basic-rules",
+              "handouts"
             ]
           },
           {
@@ -179,7 +196,8 @@
             "sorting": "m",
             "color": "#415a9b",
             "packs": [
-              "system-de-basisregeln"
+              "system-de-basisregeln",
+              "system-de-handouts"
             ]
           },
           {
@@ -274,5 +292,5 @@
     "secondaryTokenAttribute": "shock",
     "url": "https://github.com/gmmatt/torgeternity",
     "manifest": "https://github.com/gmmatt/torgeternity/releases/latest/download/system.json",
-    "download": "https://github.com/gmmatt/torgeternity/releases/download/3.0.1/torgeternity.zip"
+    "download": "https://github.com/gmmatt/torgeternity/releases/download/3.1.1/torgeternity.zip"
 }

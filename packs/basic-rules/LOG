@@ -1,8 +1,5 @@
-2023/06/11-15:21:41.684 6d48 Recovering log #38
-2023/06/11-15:21:41.690 6d48 Delete type=0 #38
-2023/06/11-15:21:41.690 6d48 Delete type=3 #36
-2023/06/11-15:37:56.621 2540 Level-0 table #43: started
-2023/06/11-15:37:56.621 2540 Level-0 table #43: 0 bytes OK
-2023/06/11-15:37:56.623 2540 Delete type=0 #41
-2023/06/11-15:37:56.627 2540 Manual compaction at level-0 from '!journal!4hN0xAsql86XWwEY' @ 72057594037927935 : 1 .. '!journal!zvyB2kHSc32CwhIR' @ 0 : 0; will stop at (end)
-2023/06/11-15:37:56.627 2540 Manual compaction at level-1 from '!journal!4hN0xAsql86XWwEY' @ 72057594037927935 : 1 .. '!journal!zvyB2kHSc32CwhIR' @ 0 : 0; will stop at (end)
+2023/09/16-18:44:09.721 3594 Recovering log #113
+2023/09/16-18:44:09.721 3594 Level-0 table #115: started
+2023/09/16-18:44:09.726 3594 Level-0 table #115: 61185 bytes OK
+2023/09/16-18:44:09.730 3594 Delete type=0 #113
+2023/09/16-18:44:09.730 3594 Delete type=3 #112

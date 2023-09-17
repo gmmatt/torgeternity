@@ -8,8 +8,12 @@
 For manual installation, use the provided manifest URL in the "*Install System*" popup window 
 while managing game systems.
 
+v. 3.1.1
+ - Fixed broken compendiums after merge / release
+
 v. 3.1.0
  - Included a new damage handling on chatcards (thanks to Durak)
+ - More localisation
 
 v. 3.0.1
  - Update internal databases
