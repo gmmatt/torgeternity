@@ -1,8 +1,27 @@
-2023/06/11-15:21:41.724 2a68 Recovering log #38
-2023/06/11-15:21:41.729 2a68 Delete type=0 #38
-2023/06/11-15:21:41.730 2a68 Delete type=3 #36
-2023/06/11-15:37:56.639 2540 Level-0 table #43: started
-2023/06/11-15:37:56.639 2540 Level-0 table #43: 0 bytes OK
-2023/06/11-15:37:56.640 2540 Delete type=0 #41
-2023/06/11-15:37:56.643 2540 Manual compaction at level-0 from '!journal!0U8AlFlK1sh2gVKF' @ 72057594037927935 : 1 .. '!journal!zh0rwbo8346nWD4o' @ 0 : 0; will stop at (end)
-2023/06/11-15:37:56.643 2540 Manual compaction at level-1 from '!journal!0U8AlFlK1sh2gVKF' @ 72057594037927935 : 1 .. '!journal!zh0rwbo8346nWD4o' @ 0 : 0; will stop at (end)
+2023/09/16-18:44:09.770 39f8 Recovering log #99
+2023/09/16-18:44:09.774 39f8 Delete type=0 #99
+2023/09/16-18:44:09.774 39f8 Delete type=3 #98
+2023/09/16-19:46:53.122 61e8 Level-0 table #103: started
+2023/09/16-19:46:53.141 61e8 Level-0 table #103: 2221332 bytes OK
+2023/09/16-19:46:53.144 61e8 Delete type=0 #101
+2023/09/16-20:24:11.195 61e8 Level-0 table #105: started
+2023/09/16-20:24:11.213 61e8 Level-0 table #105: 2210998 bytes OK
+2023/09/16-20:24:11.216 61e8 Delete type=0 #102
+2023/09/16-20:52:11.198 61e8 Level-0 table #107: started
+2023/09/16-20:52:11.212 61e8 Level-0 table #107: 2219089 bytes OK
+2023/09/16-20:52:11.215 61e8 Delete type=0 #104
+2023/09/16-21:23:11.215 61e8 Level-0 table #109: started
+2023/09/16-21:23:11.232 61e8 Level-0 table #109: 2258521 bytes OK
+2023/09/16-21:23:11.235 61e8 Delete type=0 #106
+2023/09/16-21:51:11.225 61e8 Level-0 table #111: started
+2023/09/16-21:51:11.241 61e8 Level-0 table #111: 2178923 bytes OK
+2023/09/16-21:51:11.244 61e8 Delete type=0 #108
+2023/09/16-21:51:11.244 61e8 Compacting 4@0 + 1@1 files
+2023/09/16-21:51:11.262 61e8 Generated table #112@0: 37 keys, 81837 bytes
+2023/09/16-21:51:11.262 61e8 Compacted 4@0 + 1@1 files => 81837 bytes
+2023/09/16-21:51:11.263 61e8 compacted to: files[ 0 1 1 0 0 0 0 ]
+2023/09/16-21:51:11.263 61e8 Delete type=2 #103
+2023/09/16-21:51:11.263 61e8 Delete type=2 #105
+2023/09/16-21:51:11.263 61e8 Delete type=2 #107
+2023/09/16-21:51:11.263 61e8 Delete type=2 #109
+2023/09/16-21:51:11.265 61e8 Delete type=2 #111

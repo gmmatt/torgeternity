@@ -73,8 +73,10 @@ export default class torgeternityItem extends Item {
         // enable/disable effects
         let sourceOrigin = "Item." + item._id;
         actor.effects.forEach (function(effect, key) {
-            if (effect.origin.endsWith(sourceOrigin)) {
+            if (!!effect.origin) {
+                if (effect.origin.endsWith(sourceOrigin)) {
                 effect.update({"disabled": !equipped});
+                }
             }
         });
        
