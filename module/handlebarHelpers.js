@@ -1,3 +1,5 @@
+import {torgeternity} from "./config.js";
+
 export function registerHelpers() {
 
     Handlebars.registerHelper("concatPowerDN", function (dnValue) {
@@ -156,4 +158,8 @@ export function registerHelpers() {
     Handlebars.registerHelper("log", function (message) {
         console.log(message);
     })
+
+    Handlebars.registerHelper("cosmList", function () {
+        return torgeternity.cosmTypes;
+    });
 }
