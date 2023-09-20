@@ -8,6 +8,9 @@
 For manual installation, use the provided manifest URL in the "*Install System*" popup window 
 while managing game systems.
 
+v.
+ - New splash
+
 v. 3.1.2
  - Fixed a bug where wounds gave negative modificators in their amount, though it can't be more as -3
  - Gave the journal compendiums some rethinking.

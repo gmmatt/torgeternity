@@ -30,7 +30,7 @@
         "./css/journal.css",
         "./css/cards.css"
     ],
-    "background": "systems/torgeternity/images/splash.webp",
+    "background": "systems/torgeternity/images/splash_new.webp",
     "packs": [
         {
             "name": "archetypes",
