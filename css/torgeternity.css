@@ -2443,6 +2443,7 @@ form.actor-sheet header input[name="name"] {
     align-items: center;
     border-bottom: 1px solid grey;
     position: relative;
+    min-height: 25px;
 }
 
 .window-content .actor-sheet .skills ul li input[type="checkbox"] {
