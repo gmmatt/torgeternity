@@ -27,9 +27,11 @@ export class testDialog extends FormApplication {
 
         // Set Modifiers from Actor Wounds and Status Effects
         let myActor = this.test.actor.includes("Token") ? fromUuidSync(this.test.actor) : fromUuidSync(this.test.actor); 
-        console.log(parseInt(myActor.system.wounds.value));
+        
         if (parseInt(myActor.system.wounds.value) <= 3){ //The wound penalties are never more than -3, regardless on how many wounds a token can suffer / have. CrB p. 117
             data.test.woundModifier = parseInt(-(myActor.system.wounds.value));    
+        } else if ((myActor.system.wounds.value == null) || isNaN(parseInt(myActor.system.wounds.value))) { //currentWounds could be empty or a char/string. Users... You know?!
+            data.test.woundModifier = 0;
         } else {
             data.test.woundModifier = -3;
         }
