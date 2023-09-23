@@ -4,7 +4,7 @@ torgeternity.supportedLanguages = [
     "en", "fr", "de"
 ];
 torgeternity.availableScreens = {
-    'none': "none",
+    'none': "None",
 }
 
 torgeternity.welcomeMessage = "";
