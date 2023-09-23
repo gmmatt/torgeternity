@@ -8,7 +8,7 @@
 For manual installation, use the provided manifest URL in the "*Install System*" popup window 
 while managing game systems.
 
-v.
+v. 3.1.3
  * Bug Squashing:
    * If the current wounds value is empty, it needs to be checked as well, setting the modifier to 0 (#280)
    * Getting power's DN from the item DN combobox if there's no target selected (#82)
