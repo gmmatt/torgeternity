@@ -9,6 +9,10 @@ For manual installation, use the provided manifest URL in the "*Install System*"
 while managing game systems.
 
 v.
+ - Bug Squashing:
+ -- If the current wounds value is empty, it needs to be checked as well, setting the modifier to 0
+ -- Getting power's DN from the item DN combobox if there's no target selected
+ - Setting Skill list entries to a min-height of 25px (necessary for custom skills)
  - New splash
 
 v. 3.1.2
