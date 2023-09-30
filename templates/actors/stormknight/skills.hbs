@@ -42,7 +42,7 @@
         <span>
             <a class="skill-roll" data-testtype="skill" data-customskill="true" data-baseattribute="{{content.system.baseAttribute}}"
                 data-adds="{{content.system.adds}}" data-value="{{content.system.value}}" data-unskilleduse="0"
-                data-name="{{content.name}}">
+                data-name="{{content.name}}" data-isfav="{{content.system.isFav}}" >
                 {{content.name}}
             </a>
         </span>
@@ -56,7 +56,11 @@
             {{content.system.value}}
         </span>
         <span>
-            
+            <a class="toggleFav {{#if content.system.isFav}}checked{{/if}}">
+                <i class="far fa-star"></i>
+            </a>
+            <input class="favCheck" type="checkbox" name="content.system.isFav" {{checked content.system.isFav}}
+                data-dtype="Boolean" />
         </span>
     </li>
     {{/inline}}
