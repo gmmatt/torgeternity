@@ -35,6 +35,11 @@
                         {{/each}}
                         {{/select}}
                     </select>
+
+                    <p class="item-data-label">
+                        {{localize "torgeternity.sheetLabels.favored"}}
+                    </p>
+                        <input type="checkbox" name="system.isFav" {{checked item.system.isFav}} title="Favored or not"/>
                 </div>
                 <div class="main-content">
                     <div name="system.description" class="item-description-textarea">
