@@ -45,11 +45,40 @@ function onFavored(event) {
     renderSkillChat(test);
 }
 
-function onPossibility(event) {
+async function onPossibility(event) {
     const parentMessageId = event.currentTarget.closest(".chat-message").dataset.messageId;
     var parentMessage = game.messages.find( ({id}) => id === parentMessageId);
     if (!(parentMessage.user.id === game.user.id) && !game.user.isGM) {return};
     var test = parentMessage.getFlag("torgeternity", "test");
+    
+    // check for actor possibility
+    var possPool = fromUuidSync(test.actor).system.other.posibilities;
+    // 0 => if GM ask for confirm, or return message "no poss"
+    if ((possPool <= 0 & !game.user.isGM)) {
+        ui.notifications.warn("No possibility !");
+        return
+    };
+
+    // 1=> pop up warning, confirm "spend last poss?"
+    if (possPool === 1) {
+        const confirm = await Dialog.confirm({
+            title: "Last possibility !",
+            content: `<h4>This is your last possibility, do you confirm ?<br>Are You Sure</h4>`
+        });
+        if (!confirm) return;
+        test.chatNote += " Last Possibility spent !";
+    } else //GM can grant an on the fly possibilty if he does the roll
+    if (possPool === 0 & game.user.isGM) {
+        const confirm = await Dialog.confirm({
+            title: "No possibility !",
+            content: `<h4> This actor has no possibility, do you confirm ?<br>Are You Sure</h4>`
+        });
+        if (!confirm) return;
+        possPool += 1;
+        test.chatNote += " The GM grants you a possibility !";
+    };
+
+    await fromUuidSync(test.actor).update({"system.other.posibilities": possPool-1});
     test.parentId = parentMessageId;
     parentMessage.setFlag("torgeternity", "test");
     test.isFavStyle = "pointer-events:none;color:gray;display:none";
@@ -61,6 +90,15 @@ function onPossibility(event) {
     } else {
         test.chatTitle += "*";
     }
+
+    // check for Nile/Other/none cosm
+    // if no, possibility style to grey
+    const currentCosms = [canvas.scene.getFlag("torgeternity", "cosm"), canvas.scene.getFlag("torgeternity", "cosm2")];
+    const twoPossCosm = Object.keys(CONFIG.torgeternity.actionLawCosms);
+    if (!(twoPossCosm.includes(currentCosms[0]) || twoPossCosm.includes(currentCosms[1]) || currentCosms[0]==='none' || currentCosms[0]===undefined)) {
+        test.possibilityStyle = "pointer-events:none;color:gray";
+    }
+
     var diceroll = new Roll('1d20x10x20').evaluate({ async: false });
     if (test.disfavored) {
         test.possibilityTotal = 0.1;
@@ -70,6 +108,8 @@ function onPossibility(event) {
     test.diceroll = diceroll
 
     test.unskilledLabel = "display:none";
+    // add chat note "poss spent"
+    test.chatNote += " Possibility spent.";
 
     renderSkillChat(test);
 }
@@ -220,7 +260,33 @@ async function soakDam(event) {
     var parentMessage = game.messages.find( ({id}) => id === parentMessageId);
     //if (!(parentMessage.user.id === game.user.id) && !game.user.isGM) {return};
     var soaker = game.user.character ??  Array.from(game.user.targets)[0].actor;
-    console.log(soaker);
+    /////
+    var possPool = soaker.system.other.posibilities;
+    // 0 => if GM ask for confirm, or return message "no poss"
+    if ((possPool <= 0 & !game.user.isGM)) {
+        ui.notifications.warn(" No possibility !");
+        return
+    };
+
+    // 1=> pop up warning, confirm "spend last poss?"
+    if (possPool === 1) {
+        const confirm = await Dialog.confirm({
+            title: "Last possibility !",
+            content: `<h4>This is your last possibility, do you confirm ?<br>Are You Sure</h4>`
+        });
+        if (!confirm) return;
+    } else //GM can grant an on the fly possibilty if he does the roll
+    if (possPool === 0 & game.user.isGM) {
+        const confirm = await Dialog.confirm({
+            title: "No possibility !",
+            content: `<h4> This actor has no possibility, do you confirm ?<br>Are You Sure</h4>`
+        });
+        if (!confirm) return;
+        ui.notifications.warn(" You grant a possibility !");
+        possPool += 1;
+    };
+
+    await soaker.update({"system.other.posibilities": possPool-1});
     soakDamages(soaker);
 }
 
