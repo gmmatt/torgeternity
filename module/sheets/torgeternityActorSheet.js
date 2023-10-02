@@ -425,6 +425,11 @@ export default class torgeternityActorSheet extends ActorSheet {
         const attributeName = event.currentTarget.dataset.baseattribute;
         const isAttributeTest = (event.currentTarget.dataset.testtype === "attribute");
         var skillValue = event.currentTarget.dataset.value;
+        var isFav;
+        if (event.currentTarget.dataset.isfav === "true") {
+            isFav=true
+        } else {isFav=false
+        }
 
         // Before calculating roll, check to see if it can be attempted unskilled; exit test if actor doesn't have required skill
         if (checkUnskilled(skillValue, skillName, this.actor)) {
@@ -438,7 +443,7 @@ export default class torgeternityActorSheet extends ActorSheet {
             actorPic: this.actor.img,
             actorType: this.actor.system.type,
             isAttack: false,
-            isFav: this.actor.system.skills[skillName]?.isFav || this.actor.system.attributes[skillName+"IsFav"] || false,
+            isFav: this.actor.system.skills[skillName]?.isFav || this.actor.system.attributes?.[skillName+"IsFav"] || isFav,
             skillName: isAttributeTest ? attributeName : skillName,
             skillValue: skillValue,
             targets: Array.from(game.user.targets),
@@ -604,11 +609,11 @@ export default class torgeternityActorSheet extends ActorSheet {
     _onUnarmedAttack(event) {
         var dnDescriptor = "standard";
         if (Array.from(game.user.targets).length > 0) {
-            var target = Array.from(game.user.targets)[0].actor;
-            if (target.type === "vehicle") {
+            var firstTarget = Array.from(game.user.targets)[0].actor;
+            if (firstTarget.type === "vehicle") {
                 dnDescriptor = "targetVehicleDefense"
             } else {
-                target.items.filter( it => it.type === "meleeweapon").filter(it => it.system.equipped).length !== 0 ? dnDescriptor = "targetMeleeWeapons" : dnDescriptor = "targetUnarmedCombat";
+                firstTarget.items.filter( it => it.type === "meleeweapon").filter(it => it.system.equipped).length !== 0 ? dnDescriptor = "targetMeleeWeapons" : dnDescriptor = "targetUnarmedCombat";
             }
         } else {
             dnDescriptor = "standard"
@@ -770,14 +775,14 @@ export default class torgeternityActorSheet extends ActorSheet {
         var adjustedDamage = 0;
 
         if (Array.from(game.user.targets).length > 0) {
-            var target = Array.from(game.user.targets)[0].actor;
-            if (target.type === "vehicle") {
+            var firstTarget = Array.from(game.user.targets)[0].actor;
+            if (firstTarget.type === "vehicle") {
                 dnDescriptor = "targetVehicleDefense"
             } else {
                 switch (attackWith) {
                     case "meleeWeapons":
                     case "unarmedCombat":
-                        target.items.filter( it => it.type === "meleeweapon").filter(it => it.system.equipped).length === 0 ? dnDescriptor = "targetUnarmedCombat" : dnDescriptor = "targetMeleeWeapons";
+                        firstTarget.items.filter( it => it.type === "meleeweapon").filter(it => it.system.equipped).length === 0 ? dnDescriptor = "targetUnarmedCombat" : dnDescriptor = "targetMeleeWeapons";
                         break;
                     case "fireCombat":
                     case "energyWeapons":
