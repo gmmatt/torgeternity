@@ -861,7 +861,8 @@ export default class torgeternityActorSheet extends ActorSheet {
         var powerData = item.system;
         var skillName = powerData.skill;
         var skillData = this.actor.system.skills[skillName];
-        var dnDescriptor = "standard";
+        //var dnDescriptor = "standard";
+        var dnDescriptor = powerData.dn;
         var isAttack = false;
         var applyArmor = true;
         var applySize = true;
@@ -897,9 +898,9 @@ export default class torgeternityActorSheet extends ActorSheet {
         // Set difficulty descriptor based on presense of target
         if (Array.from(game.user.targets).length > 0) {
             dnDescriptor = powerData.dn;
-        } else {
-            dnDescriptor = "standard"
-        };
+        } // else { //Commented out, because the dnDescriptor is derived by the incoming powerdata and should not be overwritten if it is not an attack
+            /*dnDescriptor = "standard"
+        };*/ 
 
         if (checkUnskilled(skillData.value, skillName, this.actor)) return;
 

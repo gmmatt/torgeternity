@@ -308,14 +308,14 @@ form.actor-sheet header.sheet-header-vehicle {
     align-items:center;
 }
 
-.window-content .actor-sheet li.vehicle-weapon-header .name-header,
+/*.window-content .actor-sheet li.vehicle-weapon-header .name-header,
 .window-content .actor-sheet li.vehicle-weapon-header .gunner-header,
 .window-content .actor-sheet li.vehicle-weapon-header .skill-header,
 .window-content .actor-sheet li.vehicle-weapon-header .range-header,
 .window-content .actor-sheet li.vehicle-weapon-header .damage-header,
 .window-content .actor-sheet li.vehicle-weapon-header .controls-header {
     
-}
+}*/
 
 .window-content .actor-sheet li.vehicle-weapon-list .vehicle-image,
 .window-content .actor-sheet li.vehicle-add-on-list .add-on-image {
@@ -1099,6 +1099,9 @@ nav#controls ol .torgHand:before {
     height: 100%;
     border: none;
 }
+.tab[data-tab].active.flexrow, .tab[data-tab].active.flexcol {
+    overflow-y: scroll;
+}
 
 #sidebar #sidebar-tabs {
     flex: 0 0 32px;
@@ -1670,6 +1673,7 @@ nav#controls,
 #combat ol li.combatant .token-image {
     max-width: 54px;
     max-height: 54px;
+    border:none;
 }
 
 #combat ol li.combatant.dispo1 {
@@ -1709,6 +1713,15 @@ nav#controls,
 #combat ol a.init-down:hover {
     text-shadow: 0px 0px 5px #c8cf00;
     color: #f8f83c;
+}
+
+.combat-sidebar #combat-tracker{
+    overflow-y: scroll;
+    flex: 2 !important;
+}
+
+#combat-controls{
+    max-height: 5%;
 }
 
 #party-sheet h1,
@@ -2443,6 +2456,7 @@ form.actor-sheet header input[name="name"] {
     align-items: center;
     border-bottom: 1px solid grey;
     position: relative;
+    min-height: 25px;
 }
 
 .window-content .actor-sheet .skills ul li input[type="checkbox"] {
