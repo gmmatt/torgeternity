@@ -25,10 +25,10 @@
 		<div class="form-group cosm-primary">
 			<select name="flags.torgeternity.cosm" class="cosm" data-dtype="String">
 				{{#select data.flags.torgeternity.cosm}}
-					{{#each (cosmList) as |cosm name|}}
-						<option value="{{name}}">{{localize cosm}}</option>
-					{{/each}}
-				{{/select}}
+                	{{#each (cosmList) as |cosm name|}}
+                        <option value="{{name}}">{{localize cosm}}</option>
+                    {{/each}}
+                {{/select}}
 			</select>
 
 			<select name="flags.torgeternity.zone" class="zone-type" data-dtype="String">
@@ -44,11 +44,11 @@
 			<div class="form-group cosm-secondary">
 				<label>{{localize "torgeternity.sheetLabels.secondaryCosm"}}</label>
 				<select name="flags.torgeternity.cosm2" class="cosm-secondary" data-dtype="String">
-					{{#select data.flags.torgeternity.cosm2}}2
-					{{#each (cosmList) as |cosm2 name2|}}
-						<option value="{{name2}}">{{localize cosm2}}</option>
-					{{/each}}
-					{{/select}}
+				{{#select data.flags.torgeternity.cosm2}}
+                	{{#each (cosmList) as |cosm2 name2|}}
+                        <option value="{{name2}}">{{localize cosm2}}</option>
+                	{{/each}}
+                {{/select}}
 				</select>
 
 			</div>

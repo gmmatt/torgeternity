@@ -1592,13 +1592,13 @@ german tent cards images
     position: relative;
 }
 
-#players ol li.player span.posibilities {
+#players ol li.player span.possibilities {
     margin-left: 0.5em;
     position: absolute;
     right: 4px;
 }
 
-#players ol li.player span.posibilities .possValue {
+#players ol li.player span.possibilities .possValue {
     display: inline-block;
     width: 2em;
     height: 2em;
@@ -1608,13 +1608,13 @@ german tent cards images
     text-align: center;
 }
 
-#players ol li.player span.posibilities .possAdd,
-#players ol li.player span.posibilities .possMinus {
+#players ol li.player span.possibilities .possAdd,
+#players ol li.player span.possibilities .possMinus {
     display: none;
 }
 
-#players ol li.player span.posibilities:hover .possAdd,
-#players ol li.player span.posibilities:hover .possMinus {
+#players ol li.player span.possibilities:hover .possAdd,
+#players ol li.player span.possibilities:hover .possMinus {
     display: inline;
 }
 

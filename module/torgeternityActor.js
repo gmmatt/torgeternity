@@ -84,11 +84,16 @@ export default class torgeternityActor extends Actor {
                     this.system.axioms.tech = 25;
                     break;
                 case "other":
-                default:
                     this.system.axioms.magic = magicAxiom;
                     this.system.axioms.social = socialAxiom;
                     this.system.axioms.spirit = spiritAxiom;
                     this.system.axioms.tech = techAxiom;
+                    break;
+                default:
+                    this.system.axioms.magic = "";
+                    this.system.axioms.social = "";
+                    this.system.axioms.spirit = "";
+                    this.system.axioms.tech = "";
                     break;
             }
 

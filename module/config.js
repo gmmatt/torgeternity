@@ -53,6 +53,7 @@ torgeternity.cosmTypes = {
     orrorsh: "torgeternity.cosms.orrorsh",
     other: "torgeternity.cosms.other"
 }
+
 torgeternity.actionLawCosms = {
     nileEmpire: "torgeternity.cosms.nileEmpire",
     other: "torgeternity.cosms.other"

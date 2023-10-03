@@ -52,7 +52,7 @@ async function onPossibility(event) {
     var test = parentMessage.getFlag("torgeternity", "test");
     
     // check for actor possibility
-    var possPool = fromUuidSync(test.actor).system.other.posibilities;
+    var possPool = fromUuidSync(test.actor).system.other.possibilities;
     // 0 => if GM ask for confirm, or return message "no poss"
     if ((possPool <= 0 & !game.user.isGM)) {
         ui.notifications.warn("No possibility !");
@@ -78,7 +78,7 @@ async function onPossibility(event) {
         test.chatNote += " The GM grants you a possibility !";
     };
 
-    await fromUuidSync(test.actor).update({"system.other.posibilities": possPool-1});
+    await fromUuidSync(test.actor).update({"system.other.possibilities": possPool-1});
     test.parentId = parentMessageId;
     parentMessage.setFlag("torgeternity", "test");
     test.isFavStyle = "pointer-events:none;color:gray;display:none";
@@ -261,7 +261,7 @@ async function soakDam(event) {
     //if (!(parentMessage.user.id === game.user.id) && !game.user.isGM) {return};
     var soaker = game.user.character ??  Array.from(game.user.targets)[0].actor;
     /////
-    var possPool = soaker.system.other.posibilities;
+    var possPool = soaker.system.other.possibilities;
     // 0 => if GM ask for confirm, or return message "no poss"
     if ((possPool <= 0 & !game.user.isGM)) {
         ui.notifications.warn(" No possibility !");
@@ -286,7 +286,7 @@ async function soakDam(event) {
         possPool += 1;
     };
 
-    await soaker.update({"system.other.posibilities": possPool-1});
+    await soaker.update({"system.other.possibilities": possPool-1});
     soakDamages(soaker);
 }
 

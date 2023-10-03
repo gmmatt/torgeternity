@@ -158,7 +158,6 @@ export function registerHelpers() {
     Handlebars.registerHelper("log", function (message) {
         console.log(message);
     })
-
     Handlebars.registerHelper("cosmList", function () {
         return torgeternity.cosmTypes;
     });

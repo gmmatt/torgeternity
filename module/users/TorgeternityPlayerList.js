@@ -1,4 +1,5 @@
-import PartySheet from "./partySheet.js"
+import PartySheet from "./partySheet.js";
+import PartySheetActive from "./partySheetActive.js"
 export default class TorgeternityPlayerList extends PlayerList {
 
 
@@ -15,9 +16,9 @@ export default class TorgeternityPlayerList extends PlayerList {
         for (let user of data.users) {
             if (user.character) {
                 let userActor = await game.actors.get(user.character);
-                user.characterPossibilities = userActor.system.other.posibilities
+                user.characterPossibilities = userActor.system.other.possibilities
             } else {
-                user.characterPosibilities = 0
+                user.characterPossibilities = 0
             }
 
         }
@@ -26,7 +27,6 @@ export default class TorgeternityPlayerList extends PlayerList {
     activateListeners(html) {
         super.activateListeners(html);
         html.find(".players-popout").click(this.renderPopout.bind(this));
-
         html.find('em.possAdd').click(this.addPossibility.bind(this));
         html.find('em.possMinus').click(this.minusPossibility.bind(this));
         html.find('i.possReset').click(this.resetPossibilities.bind(this));
@@ -39,8 +39,21 @@ export default class TorgeternityPlayerList extends PlayerList {
         return party;
     }
 
-    renderPopout() {
-        this.createPopout().render(true);
+    createPopoutActive() {
+        let party = new PartySheetActive
+
+        return party;
+    }
+    async renderPopout() {
+        const all = await Dialog.confirm({
+            title:"Open party sheet",
+            content:"<h3>If you choose YES, it will open with all characters.<br>If you choose NO, it'll open only active characters.</h3>"
+        });
+        if (all){
+            this.createPopout().render(true)
+        } else {
+            this.createPopoutActive().render(true)
+        };
     }
 
 
@@ -58,7 +71,7 @@ export default class TorgeternityPlayerList extends PlayerList {
                 _id: targetActor._id,
                 system: {
                     other: {
-                        posibilities: (targetActor.system.other.posibilities) + 1
+                        possibilities: (targetActor.system.other.possibilities) + 1
                     }
                 },
             });
@@ -77,7 +90,7 @@ export default class TorgeternityPlayerList extends PlayerList {
                 _id: targetActor._id,
                 system: {
                     other: {
-                        posibilities: (targetActor.system.other.posibilities) - 1
+                        possibilities: (targetActor.system.other.possibilities) - 1
                     }
                 },
 
@@ -116,7 +129,7 @@ export default class TorgeternityPlayerList extends PlayerList {
                                     id: target.id,
                                     system: {
                                         other: {
-                                            posibilities: newVal
+                                            possibilities: newVal
                                         }
                                     },
                                 })
