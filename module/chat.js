@@ -71,7 +71,7 @@ async function onPossibility(event) {
     if (possPool === 0 & game.user.isGM) {
         const confirm = await Dialog.confirm({
             title: game.i18n.localize("torgeternity.sheetLabels.noPoss"),
-            content: game.i18n.localize("torgeternity.sheetLabels.noPoss")
+            content: game.i18n.localize("torgeternity.sheetLabels.noPossFree")
         });
         if (!confirm) return;
         possPool += 1;
