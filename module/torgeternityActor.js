@@ -192,7 +192,7 @@ export default class torgeternityActor extends Actor {
         
         if(this._source.type === "stormknight" | this._source.type === "threat") {
             //Set base unarmedDamage from interaction
-            this.system.unarmedDamage = this.system.attributes.strength;
+            this.system.unarmedDamage = this.system.attributes.strength + (this.system?.unarmedDamageMod | 0);
             
             // Set Defensive Values based on modified attributes
             if (skillset.dodge.value) {

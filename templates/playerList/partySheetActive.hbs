@@ -1,0 +1,146 @@
+<div class="flexrow">
+
+	{{#each users as |user key|}}
+	{{#if user.active}}
+	{{#unless user.isGM}}
+	<div>
+		<h2>{{user.name}}</h2>
+
+
+		{{#if user.character }}
+
+		<h3 class="actorName" data-actorID="{{user.character._id}}"><a>{{user.character.name}}</a></h3>
+		<div class="flexrow">
+			<div>
+				<p>
+					<span>{{localize "torgeternity.sheetLabels.wounds"}} : </span>
+				</p>
+				<p>
+					<span>{{user.character.system.wounds.value}} / </span>
+					<span>{{user.character.system.wounds.max}} </span>
+				</p>
+			</div>
+			<div>
+				<p>
+					<span>{{localize "torgeternity.sheetLabels.shock"}} : </span>
+				</p>
+				<p>
+					<span>{{user.character.system.shock.value}} / </span>
+					<span>{{user.character.system.shock.max}} </span>
+				</div>
+				<div>
+					<p>
+						<span>{{localize "torgeternity.sheetLabels.possibilities"}}</span>
+					</p>
+					<p>
+						<span>{{user.character.system.other.possibilities}} </span>
+					</p>
+				</div>
+			</div>
+			<div>
+				<h4>
+					{{localize "torgeternity.sheetLabels.defenses"}}
+				</h4>
+				<p>
+					<span>{{localize "torgeternity.skills.dodge"}} : </span>
+					<span>{{user.character.system.dodgeDefense}}</span>
+				</p>
+				<p>
+					<span>{{localize "torgeternity.skills.meleeWeapons"}} : </span>
+					<span>{{user.character.system.meleeWeaponsDefense}}</span>
+				</p>
+				<p>
+					<span>{{localize "torgeternity.skills.unarmedCombat"}} : </span>
+					<span>{{user.character.system.unarmedCombatDefense}}</span>
+				</p>
+				<p>
+					<span>{{localize "torgeternity.skills.intimidation"}} : </span>
+					<span>{{user.character.system.intimidationDefense}}</span>
+				</p>
+				<p>
+					<span>{{localize "torgeternity.skills.maneuver"}} : </span>
+					<span>{{user.character.system.maneuverDefense}}</span>
+				</p>
+				<p>
+					<span>{{localize "torgeternity.skills.taunt"}} : </span>
+					<span>{{user.character.system.tauntDefense}}</span>
+				</p>
+				<p>
+					<span>{{localize "torgeternity.skills.trick"}}: </span>
+					<span>{{user.character.system.trickDefense}}</span>
+				</p>
+
+
+			</div>
+			<div class="flexrow">
+				{{#if user.character.system.vulnerableModifier}}
+				<p>{{localize "torgeternity.vulnerableStates.vulnerable"}} :
+					{{user.character.system.vulnerableModifier}}
+				</p>
+				{{/if}}
+				{{#if user.character.system.stymiedModifier}}
+				<p>{{localize "torgeternity.stymiedStates.stymied"}} :
+					{{user.character.system.stymiedModifier}}</p>
+				{{/if}}
+			</div>
+			<div class="flexrow">
+				<div>
+					<h4>{{localize "torgeternity.sheetLabels.attributes"}}</h4>
+
+					<ul>
+						{{#each user.character.system.attributes as |attr key|}}
+						<li class="attribut-block">
+							<span>
+								{{localize (concatAttributeName key) }}
+							</span>
+							<span> : {{attr}}</span>
+						</li>
+						{{/each}}
+					</ul>
+					<h4>{{localize "torgeternity.sheetLabels.skills"}}</h4>
+
+					<ul>
+						{{#each user.character.system.skills as |skill key|}}
+						{{#if skill.adds}}
+
+						<li class="attribut-block">
+							<span>
+
+								{{localize (concatSkillName key) }}
+							</span>
+							<span> : {{skill.value}}</span>
+							{{#if skill.isFav}}
+							<i class="far fa-star"></i>
+							{{/if}}
+						</li>
+						{{/if}}
+						{{/each}}
+					</ul>
+				</div>
+				<div>
+					<h4>items</h4>
+
+
+					<ul>{{#each user.character.items as |item key|}}
+						<li>
+
+							<span><a class="item-link" data-actorID="{{../this.character._id}}"
+									data-itemID="{{item._id}}">{{item.name}}</a>
+								-<em>{{item.type}}</em></span>
+						</li>{{/each}}
+					</ul>
+
+
+
+				</div>
+				{{/if}}
+				{{#unless user.character}}
+				{{localize 'torgeternity.partySheet.noCharacter'}}
+				{{/unless}}
+			</div>
+
+		</div>
+		{{/unless}}
+		{{/if}}
+		{{/each}}
+	</div>

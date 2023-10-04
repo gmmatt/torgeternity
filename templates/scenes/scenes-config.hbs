@@ -25,17 +25,10 @@
 		<div class="form-group cosm-primary">
 			<select name="flags.torgeternity.cosm" class="cosm" data-dtype="String">
 				{{#select data.flags.torgeternity.cosm}}
-					<option value="none">{{localize "torgeternity.cosms.none"}}</option>
-					<option value="coreEarth">{{localize "torgeternity.cosms.coreEarth"}}</option>
-					<option value="livingLand">{{localize "torgeternity.cosms.livingLand"}}</option>
-					<option value="nileEmpire">{{localize "torgeternity.cosms.nileEmpire"}}</option>
-					<option value="aysle">{{localize "torgeternity.cosms.aysle"}}</option>
-					<option value="cyberpapacy">{{localize "torgeternity.cosms.cyberpapacy"}}</option>
-					<option value="tharkold">{{localize "torgeternity.cosms.tharkold"}}</option>
-					<option value="panPacifica">{{localize "torgeternity.cosms.panPacifica"}}</option>
-					<option value="orrorsh">{{localize "torgeternity.cosms.orrorsh"}}</option>
-					<option value="tharkold">{{localize "torgeternity.cosms.tharkold"}}</option>
-				{{/select}}
+                	{{#each (cosmList) as |cosm name|}}
+                        <option value="{{name}}">{{localize cosm}}</option>
+                    {{/each}}
+                {{/select}}
 			</select>
 
 			<select name="flags.torgeternity.zone" class="zone-type" data-dtype="String">
@@ -51,18 +44,11 @@
 			<div class="form-group cosm-secondary">
 				<label>{{localize "torgeternity.sheetLabels.secondaryCosm"}}</label>
 				<select name="flags.torgeternity.cosm2" class="cosm-secondary" data-dtype="String">
-					{{#select data.flags.torgeternity.cosm2}}
-						<option value="none">{{localize "torgeternity.cosms.none"}}</option>
-						<option value="coreEarth">{{localize "torgeternity.cosms.coreEarth"}}</option>
-						<option value="livingLand">{{localize "torgeternity.cosms.livingLand"}}</option>
-						<option value="nileEmpire">{{localize "torgeternity.cosms.nileEmpire"}}</option>
-						<option value="aysle">{{localize "torgeternity.cosms.aysle"}}</option>
-						<option value="cyberpapacy">{{localize "torgeternity.cosms.cyberpapacy"}}</option>
-						<option value="tharkold">{{localize "torgeternity.cosms.tharkold"}}</option>
-						<option value="panPacifica">{{localize "torgeternity.cosms.panPacifica"}}</option>
-						<option value="orrorsh">{{localize "torgeternity.cosms.orrorsh"}}</option>
-						<option value="tharkold">{{localize "torgeternity.cosms.tharkold"}}</option>
-					{{/select}}
+				{{#select data.flags.torgeternity.cosm2}}
+                	{{#each (cosmList) as |cosm2 name2|}}
+                        <option value="{{name2}}">{{localize cosm2}}</option>
+                	{{/each}}
+                {{/select}}
 				</select>
 
 			</div>

@@ -595,8 +595,13 @@ function rollItemMacro(itemName) {
 
             // Modify dnDecriptor if target exists
             if (Array.from(game.user.targets).length > 0) {
+                var firstTarget = Array.from(game.user.targets)[0].actor;
 
                 switch (attackWith) {
+                    case "meleeWeapons":
+                    case "unarmedCombat":
+                        firstTarget.items.filter( it => it.type === "meleeweapon").filter(it => it.system.equipped).length === 0 ? dnDescriptor = "targetUnarmedCombat" : dnDescriptor = "targetMeleeWeapons";
+                        break;
                     case "fireCombat":
                     case "energyWeapons":
                     case "heavyWeapons":

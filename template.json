@@ -529,7 +529,9 @@
             "ap": 0,
             "bonus": 2,
             "notes": "",
-            "chatNote": ""
+            "chatNote": "",
+            "equipped": false,
+            "equippedClass": ".item-unequipped"
         },
         "missileweapon": {
             "templates": [
@@ -546,7 +548,9 @@
             "minStrength": "",
             "range": "",
             "notes": "",
-            "chatNote": ""
+            "chatNote": "",
+            "equipped": false,
+            "equippedClass": ".item-unequipped"
         },
         "firearm": {
             "templates": [
@@ -562,7 +566,9 @@
             },
             "range": "",
             "notes": "",
-            "chatNote": ""
+            "chatNote": "",
+            "equipped": false,
+            "equippedClass": ".item-unequipped"
         },
         "implant": {
             "templates": [
@@ -587,7 +593,9 @@
             "gunner": {
                 "name": "",
                 "skillValue": ""
-            }
+            },
+            "equipped": false,
+            "equippedClass": ".item-unequipped"
         },
         "vehicle": {
             "templates": [
