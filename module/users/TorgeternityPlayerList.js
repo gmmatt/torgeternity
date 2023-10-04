@@ -46,8 +46,8 @@ export default class TorgeternityPlayerList extends PlayerList {
     }
     async renderPopout() {
         const all = await Dialog.confirm({
-            title:"Open party sheet",
-            content:"<h3>If you choose YES, it will open with all characters.<br>If you choose NO, it'll open only active characters.</h3>"
+            title:`${game.i18n.localize("torgeternity.partySheet.openParty")}`,
+            content:`${game.i18n.localize("torgeternity.partySheet.chooseParty")}`
         });
         if (all){
             this.createPopout().render(true)

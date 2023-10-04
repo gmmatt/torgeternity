@@ -521,16 +521,16 @@ export function renderSkillChat(test) {
         test.isFavStyle = "display:none";
         test.bdStyle = "display:none";
         test.plus3Style = "display:none";
-        if (test.testType === "soak") test.chatNote = game.i18n.localize("torgeternity.sheetLabels.soakNull")+" Possibility spent.";
+        if (test.testType === "soak") test.chatNote = game.i18n.localize("torgeternity.sheetLabels.soakNull")+game.i18n.localize("torgeternity.sheetLabels.possSpent");
     } else if (test.testType === "soak") {
 
         test.resultText = test.outcome;
     if (test.soakWounds > 0) {
-        test.chatNote = `${test.soakWounds}`+ game.i18n.localize("torgeternity.sheetLabels.soakValue")+" Possibility spent.";
+        test.chatNote = `${test.soakWounds}`+ game.i18n.localize("torgeternity.sheetLabels.soakValue")+game.i18n.localize("torgeternity.sheetLabels.possSpent");
     } else if (test.soakWounds === "all") {
-        test.chatNote = game.i18n.localize("torgeternity.sheetLabels.soakAll")+" Possibility spent.";
+        test.chatNote = game.i18n.localize("torgeternity.sheetLabels.soakAll")+game.i18n.localize("torgeternity.sheetLabels.possSpent");
     } else {
-        test.chatNote = game.i18n.localize("torgeternity.sheetLabels.soakNull")+" Possibility spent.";
+        test.chatNote = game.i18n.localize("torgeternity.sheetLabels.soakNull")+game.i18n.localize("torgeternity.sheetLabels.possSpent");
     }
     // Create and Manage Active Effect if SK is Actively Defending (thanks Durak!)
     } else if (test.testType === "activeDefense") {                              //Click on defense

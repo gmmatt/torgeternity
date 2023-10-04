@@ -55,27 +55,27 @@ async function onPossibility(event) {
     var possPool = fromUuidSync(test.actor).system.other.possibilities;
     // 0 => if GM ask for confirm, or return message "no poss"
     if ((possPool <= 0 & !game.user.isGM)) {
-        ui.notifications.warn("No possibility !");
+        ui.notifications.warn(game.i18n.localize("torgeternity.sheetLabels.noPoss"));
         return
     };
 
     // 1=> pop up warning, confirm "spend last poss?"
     if (possPool === 1) {
         const confirm = await Dialog.confirm({
-            title: "Last possibility !",
-            content: `<h4>This is your last possibility, do you confirm ?<br>Are You Sure</h4>`
+            title: game.i18n.localize("torgeternity.sheetLabels.lastPoss"),
+            content: game.i18n.localize("torgeternity.sheetLabels.lastPossMess")
         });
         if (!confirm) return;
-        test.chatNote += " Last Possibility spent !";
+        test.chatNote += game.i18n.localize("torgeternity.sheetLabels.lastSpent");
     } else //GM can grant an on the fly possibilty if he does the roll
     if (possPool === 0 & game.user.isGM) {
         const confirm = await Dialog.confirm({
-            title: "No possibility !",
-            content: `<h4> This actor has no possibility, do you confirm ?<br>Are You Sure</h4>`
+            title: game.i18n.localize("torgeternity.sheetLabels.noPoss"),
+            content: game.i18n.localize("torgeternity.sheetLabels.noPoss")
         });
         if (!confirm) return;
         possPool += 1;
-        test.chatNote += " The GM grants you a possibility !";
+        test.chatNote += game.i18n.localize("torgeternity.sheetLabels.freePoss");
     };
 
     await fromUuidSync(test.actor).update({"system.other.possibilities": possPool-1});
@@ -109,7 +109,7 @@ async function onPossibility(event) {
 
     test.unskilledLabel = "display:none";
     // add chat note "poss spent"
-    test.chatNote += " Possibility spent.";
+    test.chatNote += game.i18n.localize("torgeternity.sheetLabels.possSpent");
 
     renderSkillChat(test);
 }

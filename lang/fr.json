@@ -429,7 +429,14 @@
             "gunner": "Artilleur",
             "range": "Range",
             "damageAP": "Dmg (AP)",
-            "addOns": "Add-Ons"
+            "addOns": "Add-Ons",
+            "customSkill": "Les compétences personnalisées sont modifiables dans l'onglet Atouts",
+            "possSpent": " Possibilité dépensée.",
+            "noPoss": " Pas de Possibilité!",
+            "lastPoss": " Dernière Possibilité!",
+            "lastPossMess": "<h3> Ultime possiblité , confirmez !<br>Etes-vous certain ?</h3>",
+            "lastSpent": " Dernière possibilité dépensée!.",
+            "freePoss": " Le GM offre une possibilité!"
             
 
         },
@@ -810,7 +817,9 @@
             "noScreenMessage": "Vous n'avez sélectionné aucun écran. Les écrans sont disponibles dans les modules pour Torg Eternity disponibles ici : "
         },
         "partySheet": {
-            "noCharacter": "Cet utilisateur ne possède pas de personnage"
+            "noCharacter": "Cet utilisateur ne possède pas de personnage",
+            "openParty": "Choisir qui afficher",
+            "chooseParty":"<h3>Choisir OUI afiche TOUS les acteurs.<br>Choisir NON n'affiche que les actifs.</h3>"
         },
         "packs": {
             "basicRules": "torgeternity.basic-rules-fr",

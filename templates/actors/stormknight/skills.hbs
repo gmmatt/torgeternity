@@ -38,7 +38,7 @@
 
     {{#*inline "customSkillRow" content name}}
     {{log "Name " name}}
-    <li title="Custom skills can be edited in the Perks tab">
+    <li title="{{localize 'torgeternity.sheetLabels.customSkill'}}">
         <span>
             <a class="skill-roll" data-testtype="skill" data-customskill="true" data-baseattribute="{{content.system.baseAttribute}}"
                 data-adds="{{content.system.adds}}" data-value="{{content.system.value}}" data-unskilleduse="0"
