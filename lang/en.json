@@ -429,7 +429,15 @@
             "gunner": "Gunner",
             "range": "Range",
             "damageAP": "Dmg (AP)",
-            "addOns": "Add-Ons"
+            "addOns": "Add-Ons",
+            "customSkill": "Custom skills can be edited in the Perks tab",
+            "possSpent": " Possibility spent.",
+            "noPoss": " No Possibility!",
+            "lastPoss": " Last Possibility!",
+            "lastPossMess": "<h3> This is your last possibility, do you confirm ?<br>Are You sure ?</h3>",
+            "lastSpent": " Last possibility spent!",
+            "freePoss": " GM grants a possibility!",
+            "noPossFree": "No possibility !<br>Do you confirm the gift ?"
             
 
         },
@@ -810,7 +818,9 @@
             "noScreenMessage": "you don't have selected any gm screen. The gm screens are provided by the modules that you can find here: "
         },
         "partySheet": {
-            "noCharacter": "This user doesn't own any actor"
+            "noCharacter": "This user doesn't own any actor",
+            "openParty": "Choose the party sheet",
+            "chooseParty":"<h3>If you choose YES, it will open with all characters.<br>If you choose NO, it'll open only active characters.</h3>"
         },
         "packs": {
             "basicRules": "torgeternity.basic-rules",

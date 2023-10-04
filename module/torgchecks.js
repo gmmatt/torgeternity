@@ -4,7 +4,6 @@ import {checkUnskilled} from "/systems/torgeternity/module/sheets/torgeternityAc
 
 export function renderSkillChat(test) {
     var target = test.target;
-    console.log(test);
 
     //
     // Check to see if we already have a chat title from a chat card roll. If not, Set title for Chat Message in test.chatTitle //
@@ -13,42 +12,42 @@ export function renderSkillChat(test) {
         switch (test.testType) {
             case "attribute":
                 var localId = "torgeternity.attributes." + test.skillName;
-                test.chatTitle = game.i18n.localize(localId) + " " + game.i18n.localize('torgeternity.chatText.test');
+                test.chatTitle = game.i18n.localize(localId) + " " + game.i18n.localize('torgeternity.chatText.test') + " ";
                 break;
             case "skill":
                 if (test.customSkill != "true") {
                     var localId = "torgeternity.skills." + test.skillName;
-                    test.chatTitle = game.i18n.localize(localId) + " " + game.i18n.localize('torgeternity.chatText.test');
+                    test.chatTitle = game.i18n.localize(localId) + " " + game.i18n.localize('torgeternity.chatText.test') + " ";
                     break; 
                 } else {
-                    test.chatTitle = test.skillName
+                    test.chatTitle = test.skillName + " ";
                     break;        
                 }
             case "interactionAttack":
             case "attack":
                 var localId = "torgeternity.skills." + test.skillName;
-                test.chatTitle = game.i18n.localize(localId) + " " + game.i18n.localize("torgeternity.chatText.attack");
+                test.chatTitle = game.i18n.localize(localId) + " " + game.i18n.localize("torgeternity.chatText.attack") + " ";
                 break;
             case "soak":
-                test.chatTitle =  game.i18n.localize("torgeternity.sheetLabels.soakRoll")
+                test.chatTitle = game.i18n.localize("torgeternity.sheetLabels.soakRoll") + " ";
                 break;
             case "activeDefense":
-                test.chatTitle = game.i18n.localize("torgeternity.sheetLabels.activeDefense");
+                test.chatTitle = game.i18n.localize("torgeternity.sheetLabels.activeDefense") + " ";
                 break;
             case "power":
-                test.chatTitle = test.powerName + " " + game.i18n.localize('torgeternity.chatText.test');
+                test.chatTitle = test.powerName + " " + game.i18n.localize('torgeternity.chatText.test') + " ";
                 break;
             case "chase":
-                test.chatTitle = game.i18n.localize("torgeternity.chatText.chase");
+                test.chatTitle = game.i18n.localize("torgeternity.chatText.chase") + " ";
                 break;
             case "stunt":
-                test.chatTitle = game.i18n.localize("torgeternity.chatText.stunt");
+                test.chatTitle = game.i18n.localize("torgeternity.chatText.stunt") + " ";
                 break;
             case "vehicleBase":
-                test.chatTitle = game.i18n.localize("torgeternity.chatText.vehicleBase");
+                test.chatTitle = game.i18n.localize("torgeternity.chatText.vehicleBase") + " ";
                 break;
             default:
-                test.chatTitle = test.skillName + " " + game.i18n.localize('torgeternity.chatText.test');
+                test.chatTitle = test.skillName + " " + game.i18n.localize('torgeternity.chatText.test') + " ";
         }
     }
 
@@ -522,16 +521,16 @@ export function renderSkillChat(test) {
         test.isFavStyle = "display:none";
         test.bdStyle = "display:none";
         test.plus3Style = "display:none";
-        if (test.testType === "soak") test.chatNote = game.i18n.localize("torgeternity.sheetLabels.soakNull")
+        if (test.testType === "soak") test.chatNote = game.i18n.localize("torgeternity.sheetLabels.soakNull")+game.i18n.localize("torgeternity.sheetLabels.possSpent");
     } else if (test.testType === "soak") {
 
         test.resultText = test.outcome;
     if (test.soakWounds > 0) {
-        test.chatNote = `${test.soakWounds}`+ game.i18n.localize("torgeternity.sheetLabels.soakValue")
+        test.chatNote = `${test.soakWounds}`+ game.i18n.localize("torgeternity.sheetLabels.soakValue")+game.i18n.localize("torgeternity.sheetLabels.possSpent");
     } else if (test.soakWounds === "all") {
-        test.chatNote = game.i18n.localize("torgeternity.sheetLabels.soakAll")
+        test.chatNote = game.i18n.localize("torgeternity.sheetLabels.soakAll")+game.i18n.localize("torgeternity.sheetLabels.possSpent");
     } else {
-        test.chatNote = game.i18n.localize("torgeternity.sheetLabels.soakNull")
+        test.chatNote = game.i18n.localize("torgeternity.sheetLabels.soakNull")+game.i18n.localize("torgeternity.sheetLabels.possSpent");
     }
     // Create and Manage Active Effect if SK is Actively Defending (thanks Durak!)
     } else if (test.testType === "activeDefense") {                              //Click on defense

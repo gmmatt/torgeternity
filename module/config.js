@@ -54,6 +54,11 @@ torgeternity.cosmTypes = {
     other: "torgeternity.cosms.other"
 }
 
+torgeternity.actionLawCosms = {
+    nileEmpire: "torgeternity.cosms.nileEmpire",
+    other: "torgeternity.cosms.other"
+}
+
 torgeternity.perkTypes = {
     cyberware: "torgeternity.perkTypes.cyberware",
     darkness: "torgeternity.perkTypes.darkness",
