@@ -8,6 +8,21 @@
 For manual installation, use the provided manifest URL in the "*Install System*" popup window 
 while managing game systems.
 
+v. 3.2.0
+ * A new Wiki with data elements is found [here](https://github.com/gmmatt/torgeternity/wiki/SK-Data-elements-after-3.0.4)
+ * Possibility handling!
+   * When "Possibility" is clicked on the chat card, the amount now is substracted from the aproprieate character
+   * A possibility now is removed on a soak roll
+   * If you are about to spend your last possibility, you're asked if you're really sure about that. At last, you could need it otherwise...
+   * A warning is now produced, if there are no possibilities left
+   * However, if a GM wants to grand you a possibility (there are moments, when heroes are needed!), the GM can click on "Possibility" on your chat card to produce a possibility roll
+ * The law of action!
+   * If on a scene are the cosms "None", "Other" or "Nile Empire" set, the mechanics for the law of action are principle possible to trigger. This means that you can click on "Possibility" twice, and the best result is chosen.
+     We decided to take the "None" and "Other" cosm choice to be placed in this mechanics as well for GMs who are more playing a theatre of mind or don't want to configure cosms on their scenes.
+ * CusomSkills are now "favorable".
+ * Default defence detection now takes place, so by attacking with Melee or Unarmed, the default defence will search for a melee weapon equipped by the defender. If there is none, well, it's up to unarmed!
+ * The party sheet can now be opened in 2 modes: Either you'll be shown all your players, or just these who are online. You'll be asked for a "yes" or "no" decission.
+
 v. 3.1.3
  * Bug Squashing:
    * If the current wounds value is empty, it needs to be checked as well, setting the modifier to 0 (#280)
