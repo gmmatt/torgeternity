@@ -56,6 +56,7 @@ async function onPossibility(event) {
     // 0 => if GM ask for confirm, or return message "no poss"
     if ((possPool <= 0 & !game.user.isGM)) {
         ui.notifications.warn(game.i18n.localize("torgeternity.sheetLabels.noPoss"));
+
         return
     };
 
