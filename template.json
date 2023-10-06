@@ -28,7 +28,7 @@
                     "toughness": 8,
                     "armor": 0,
                     "cosm": "",
-                    "possibilities": 0
+                    "possibilities": false
                 },
                 "skills": {
                     "airVehicles": {

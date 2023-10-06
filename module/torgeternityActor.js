@@ -10,6 +10,8 @@ export default class torgeternityActor extends Actor {
         if(this._source.type === "stormknight" | this._source.type === "threat") {
             // Base Fatigue
             this.system.other.fatigue = 2;
+
+            if (!this.system.other.possibilities) this.system.other.possibilities = 0;
         }
     
         // Other derived attributes for Storm Knights
@@ -29,7 +31,7 @@ export default class torgeternityActor extends Actor {
             //Set base toughness
             this.system.other.toughness = parseInt(this.system.attributes.strength) + parseInt(this.system.other.armor);
             //Set Possiblities to 3, as this is most likely the value a Storm Knight starts with
-            this.system.other.possibilities = 3;
+            if (!this.system.other.possibilities) this.system.other.possibilities = 3;
 
             //Set axioms based on home reality
             let magicAxiom = this.system.axioms.magic;
