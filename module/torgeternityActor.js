@@ -28,6 +28,8 @@ export default class torgeternityActor extends Actor {
             this.system.other.armor = 0;
             //Set base toughness
             this.system.other.toughness = parseInt(this.system.attributes.strength) + parseInt(this.system.other.armor);
+            //Set Possiblities to 3, as this is most likely the value a Storm Knight starts with
+            this.system.other.possibilities = 3;
 
             //Set axioms based on home reality
             let magicAxiom = this.system.axioms.magic;
@@ -245,7 +247,7 @@ export default class torgeternityActor extends Actor {
                 actorLink: true,
                 disposition: 1
             }, { overwrite: true });
-
+         
             //Set base move and run
             this.system.other.move = this.system.attributes.dexterity;
             this.system.other.run = parseInt(this.system.attributes.dexterity) * 3;
