@@ -88,16 +88,11 @@ export default class torgeternityActor extends Actor {
                     this.system.axioms.tech = 25;
                     break;
                 case "other":
+                default:
                     this.system.axioms.magic = magicAxiom;
                     this.system.axioms.social = socialAxiom;
                     this.system.axioms.spirit = spiritAxiom;
                     this.system.axioms.tech = techAxiom;
-                    break;
-                default:
-                    this.system.axioms.magic = "";
-                    this.system.axioms.social = "";
-                    this.system.axioms.spirit = "";
-                    this.system.axioms.tech = "";
                     break;
             }
 
@@ -182,11 +177,12 @@ export default class torgeternityActor extends Actor {
         //       
         if(this._source.type === "stormknight"){
             for (let [name, skill] of Object.entries(skillset)) {
-                if (skill.adds === null) {
+                if (this._source.system.skills[name].adds === null) {
                     if (skill.unskilledUse === 1) {
-                        skill.value = parseInt(this.system.attributes[skill.baseAttribute]);
+                        skill.value = parseInt(this.system.attributes[skill.baseAttribute])+(skill.adds ? parseInt(skill.adds) : 0);
                     } else {
-                        skill.value = "-"
+                        skill.value = "-";
+                        skill.adds = null;
                     }
                 } else {
                     skill.value = parseInt(skill.adds) + parseInt(this.system.attributes[skill.baseAttribute]);
