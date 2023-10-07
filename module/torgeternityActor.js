@@ -249,6 +249,33 @@ export default class torgeternityActor extends Actor {
             //Set base move and run
             this.system.other.move = this.system.attributes.dexterity;
             this.system.other.run = parseInt(this.system.attributes.dexterity) * 3;
+            //
+            //Apply the moveMod effect
+            const listChanges = [];
+            var computeMove = this.system.other.move;
+            this.appliedEffects.forEach(ef=>ef.changes.forEach(k=> {if (k.key==='system.other.moveMod') listChanges.push(k)}));
+                // Modify +/-
+                listChanges.filter(ef=>ef.mode===2).forEach(ef => {
+                    computeMove += parseInt(ef.value);
+                });
+                // Modify x
+                listChanges.filter(ef=>ef.mode===1).forEach(ef => {
+                    computeMove = computeMove*parseInt(ef.value);
+                });
+                // Modify minimum
+                listChanges.filter(ef=>ef.mode===4).forEach(ef => {
+                    computeMove = Math.max(computeMove , parseInt(ef.value));
+                });
+                // Modify maximum
+                listChanges.filter(ef=>ef.mode===3).forEach(ef => {
+                    computeMove = Math.min(computeMove , parseInt(ef.value));
+                });
+                // Modify Fixed
+                listChanges.filter(ef=>ef.mode===5).forEach(ef => {
+                    computeMove = parseInt(ef.value);
+                });
+            this.system.other.move = computeMove;
+            //
         };
     }
 
