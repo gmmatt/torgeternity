@@ -276,6 +276,32 @@ export default class torgeternityActor extends Actor {
                 });
             this.system.other.move = computeMove;
             //
+            //Apply the runMod effect
+            const listRun = [];
+            var computeRun = this.system.other.run;
+            this.appliedEffects.forEach(ef=>ef.changes.forEach(k=> {if (k.key==='system.other.runMod') listRun.push(k)}));
+                // Modify +/-
+                listRun.filter(ef=>ef.mode===2).forEach(ef => {
+                    computeRun += parseInt(ef.value);
+                });
+                // Modify x
+                listRun.filter(ef=>ef.mode===1).forEach(ef => {
+                    computeRun = computeRun*parseInt(ef.value);
+                });
+                // Modify minimum
+                listRun.filter(ef=>ef.mode===4).forEach(ef => {
+                    computeRun = Math.max(computeRun , parseInt(ef.value));
+                });
+                // Modify maximum
+                listRun.filter(ef=>ef.mode===3).forEach(ef => {
+                    computeRun = Math.min(computeRun , parseInt(ef.value));
+                });
+                // Modify Fixed
+                listRun.filter(ef=>ef.mode===5).forEach(ef => {
+                    computeRun = parseInt(ef.value);
+                });
+            this.system.other.run = computeRun;
+            //
         };
     }
 
