@@ -53,10 +53,6 @@ torgeternity.cosmTypes = {
     orrorsh: "torgeternity.cosms.orrorsh",
     other: "torgeternity.cosms.other"
 }
-torgeternity.actionLawCosms = {
-    nileEmpire: "torgeternity.cosms.nileEmpire",
-    other: "torgeternity.cosms.other"
-}
 
 torgeternity.actionLawCosms = {
     nileEmpire: "torgeternity.cosms.nileEmpire",
@@ -184,6 +180,13 @@ torgeternity.clearances = {
     gamma: "torgeternity.clearances.gamma",
     delta: "torgeternity.clearances.delta",
     omega: "torgeternity.clearances.omega"
+}
+
+torgeternity.threatPossibility = {
+    never: "torgeternity.threatPossibility.never",
+    rare: "torgeternity.threatPossibility.rare",
+    common: "torgeternity.threatPossibility.common",
+    unique: "torgeternity.threatPossibility.unique"
 }
 
 torgeternity.races = {

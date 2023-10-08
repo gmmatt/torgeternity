@@ -645,6 +645,12 @@
             "large": "Grande",
             "veryLarge": "Muy Grande"
         },
+        "threatPossibility": {
+            "never": "Never",
+            "rare": "Rare",
+            "common": "Common",
+            "unique": "Unique"
+        },
         "dialogPrompts": {
             "showToPlayers": "Mostrar carta a Todos",
             "playerPassTitle": "Intercambiar con Jugador",

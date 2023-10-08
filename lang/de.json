@@ -645,6 +645,12 @@
             "large": "Groß",
             "veryLarge": "Sehr groß"
         },
+        "threatPossibility": {
+            "never": "Never",
+            "rare": "Rare",
+            "common": "Common",
+            "unique": "Unique"
+        },
         "dialogPrompts": {
             "showToPlayers": "Karte allen Spielern zeigen",
             "playerPassTitle": "An Spieler weitergeben",

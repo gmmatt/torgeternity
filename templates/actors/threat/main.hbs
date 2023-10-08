@@ -42,8 +42,13 @@
                 </span>
                 <span class="threat-edit">
                     {{localize "torgeternity.stats.possibilities"}}:&nbsp;
-                    <input name="system.details.possibilitypotential" class="text-input" type="text"
-                        value="{{actor.system.details.possibilitypotential}}" />
+                    <select name="system.details.possibilitypotential" class="input-box">
+                        {{#select actor.system.details.possibilitypotential}}
+                        {{#each config.threatPossibility as |name type|}}
+                        <option value="{{type}}">{{localize name}}</option>
+                        {{/each}}
+                        {{/select}}
+                    </select>
 	            </span>
             </div>
 
