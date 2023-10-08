@@ -165,6 +165,9 @@
 			<div class="form-fields">
 				<label class="grid-label">{{localize "Width"}}</label>
 				<input type="number" name="width" placeholder="{{localize 'SCENES.Pixels'}}" value="{{data.width}}"/>
+				<button type="button" class="dimension-link" data-tooltip="Scene dimensions are currently linked, changing one will change the other to maintain aspect ratio. click to unlink">
+					<i class="fas fa-link-simple"></i>
+				</button>
 				<label class="grid-label">{{localize "Height"}}</label>
 				<input type="number" name="height" placeholder="{{localize 'SCENES.Pixels'}}" value="{{data.height}}"/>
 			</div>
