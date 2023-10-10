@@ -76,10 +76,10 @@ export async function setUpCardPiles() {
     }
 
     // Add journal entry with instructions relating to cards depending on language
-    if(!game.journal.find(journal => journal.data.flags?.torgeternity?.usage === "manageCards")){//if the card management journal doesn't exist
+    /*if(!game.journal.find(journal => journal.data.flags?.torgeternity?.usage === "manageCards")){//if the card management journal doesn't exist
         let journalId = journalIndex.find(journal => journal.flags?.torgeternity?.usage === "manageCards")._id
         await game.journal.importFromCompendium(basicRulesPack, journalId)
-    }
+    }*/
 
 
 
