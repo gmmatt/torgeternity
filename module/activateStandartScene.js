@@ -17,7 +17,7 @@ export async function activateStandartScene() {
 
         default:
             pack = game.packs.get("torgeternity.core-scenes");
-            sceneId = pack.index.getName("Standardscene")._id;
+            sceneId = pack.index.getName("Main scene")._id;
             scene = game.scenes.importFromCompendium(pack, sceneId).then(s => { s.activate() });
             break;
     }

@@ -10,6 +10,8 @@ export default class torgeternityActor extends Actor {
         if(this._source.type === "stormknight" | this._source.type === "threat") {
             // Base Fatigue
             this.system.other.fatigue = 2;
+
+            if (!this.system.other.possibilities) this.system.other.possibilities = 0;
         }
     
         // Other derived attributes for Storm Knights
@@ -28,6 +30,8 @@ export default class torgeternityActor extends Actor {
             this.system.other.armor = 0;
             //Set base toughness
             this.system.other.toughness = parseInt(this.system.attributes.strength) + parseInt(this.system.other.armor);
+            //Set Possiblities to 3, as this is most likely the value a Storm Knight starts with
+            if (!this.system.other.possibilities) this.system.other.possibilities = 3;
 
             //Set axioms based on home reality
             let magicAxiom = this.system.axioms.magic;
@@ -84,16 +88,11 @@ export default class torgeternityActor extends Actor {
                     this.system.axioms.tech = 25;
                     break;
                 case "other":
+                default:
                     this.system.axioms.magic = magicAxiom;
                     this.system.axioms.social = socialAxiom;
                     this.system.axioms.spirit = spiritAxiom;
                     this.system.axioms.tech = techAxiom;
-                    break;
-                default:
-                    this.system.axioms.magic = "";
-                    this.system.axioms.social = "";
-                    this.system.axioms.spirit = "";
-                    this.system.axioms.tech = "";
                     break;
             }
 
@@ -178,11 +177,12 @@ export default class torgeternityActor extends Actor {
         //       
         if(this._source.type === "stormknight"){
             for (let [name, skill] of Object.entries(skillset)) {
-                if (skill.adds === null) {
+                if (this._source.system.skills[name].adds === null) {
                     if (skill.unskilledUse === 1) {
-                        skill.value = parseInt(this.system.attributes[skill.baseAttribute]);
+                        skill.value = parseInt(this.system.attributes[skill.baseAttribute])+(skill.adds ? parseInt(skill.adds) : 0);
                     } else {
-                        skill.value = "-"
+                        skill.value = "-";
+                        skill.adds = null;
                     }
                 } else {
                     skill.value = parseInt(skill.adds) + parseInt(this.system.attributes[skill.baseAttribute]);
@@ -245,10 +245,63 @@ export default class torgeternityActor extends Actor {
                 actorLink: true,
                 disposition: 1
             }, { overwrite: true });
-
+         
             //Set base move and run
             this.system.other.move = this.system.attributes.dexterity;
             this.system.other.run = parseInt(this.system.attributes.dexterity) * 3;
+            //
+            //Apply the moveMod effect
+            const listChanges = [];
+            var computeMove = this.system.other.move;
+            this.appliedEffects.forEach(ef=>ef.changes.forEach(k=> {if (k.key==='system.other.moveMod') listChanges.push(k)}));
+                // Modify +/-
+                listChanges.filter(ef=>ef.mode===2).forEach(ef => {
+                    computeMove += parseInt(ef.value);
+                });
+                // Modify x
+                listChanges.filter(ef=>ef.mode===1).forEach(ef => {
+                    computeMove = computeMove*parseInt(ef.value);
+                });
+                // Modify minimum
+                listChanges.filter(ef=>ef.mode===4).forEach(ef => {
+                    computeMove = Math.max(computeMove , parseInt(ef.value));
+                });
+                // Modify maximum
+                listChanges.filter(ef=>ef.mode===3).forEach(ef => {
+                    computeMove = Math.min(computeMove , parseInt(ef.value));
+                });
+                // Modify Fixed
+                listChanges.filter(ef=>ef.mode===5).forEach(ef => {
+                    computeMove = parseInt(ef.value);
+                });
+            this.system.other.move = computeMove;
+            //
+            //Apply the runMod effect
+            const listRun = [];
+            var computeRun = this.system.other.run;
+            this.appliedEffects.forEach(ef=>ef.changes.forEach(k=> {if (k.key==='system.other.runMod') listRun.push(k)}));
+                // Modify +/-
+                listRun.filter(ef=>ef.mode===2).forEach(ef => {
+                    computeRun += parseInt(ef.value);
+                });
+                // Modify x
+                listRun.filter(ef=>ef.mode===1).forEach(ef => {
+                    computeRun = computeRun*parseInt(ef.value);
+                });
+                // Modify minimum
+                listRun.filter(ef=>ef.mode===4).forEach(ef => {
+                    computeRun = Math.max(computeRun , parseInt(ef.value));
+                });
+                // Modify maximum
+                listRun.filter(ef=>ef.mode===3).forEach(ef => {
+                    computeRun = Math.min(computeRun , parseInt(ef.value));
+                });
+                // Modify Fixed
+                listRun.filter(ef=>ef.mode===5).forEach(ef => {
+                    computeRun = parseInt(ef.value);
+                });
+            this.system.other.run = computeRun;
+            //
         };
     }
 
