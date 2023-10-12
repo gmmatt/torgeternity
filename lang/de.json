@@ -646,10 +646,10 @@
             "veryLarge": "Sehr groß"
         },
         "threatPossibility": {
-            "never": "Nie",
-            "rare": "Selten",
-            "common": "Üblich",
-            "unique": "Speziell"
+            "never": "Never",
+            "rare": "Rare",
+            "common": "Common",
+            "unique": "Unique"
         },
         "dialogPrompts": {
             "showToPlayers": "Karte allen Spielern zeigen",
