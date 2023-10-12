@@ -8,6 +8,11 @@
 For manual installation, use the provided manifest URL in the "*Install System*" popup window 
 while managing game systems.
 
+v. 3.2.1
+ * introducing system.other.moveMod and system.other.runMod as new Dataelements for active effects on move and run (check out the [wiki](https://github.com/gmmatt/torgeternity/wiki/SK-Data-elements-after-3.0.4) as well)
+ * Fixing vehicles for possibility spendage (the one who clicked is the one who pays ;) )
+ * Scene configuration is up to date with all the elements you know from other systems
+
 v. 3.2.0
  * A new Wiki with data elements is found [here](https://github.com/gmmatt/torgeternity/wiki/SK-Data-elements-after-3.0.4)
  * Possibility handling!
