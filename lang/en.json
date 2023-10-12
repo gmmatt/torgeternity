@@ -645,12 +645,6 @@
             "large": "Large",
             "veryLarge": "Very Large"
         },
-        "threatPossibility": {
-            "never": "Never",
-            "rare": "Rare",
-            "common": "Common",
-            "unique": "Unique"
-        },
         "dialogPrompts": {
             "showToPlayers": "Show to All players",
             "playerPassTitle": "Pass to Player",
