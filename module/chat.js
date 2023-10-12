@@ -52,7 +52,15 @@ async function onPossibility(event) {
     var test = parentMessage.getFlag("torgeternity", "test");
     
     // check for actor possibility
-    var possPool = fromUuidSync(test.actor).system.other.possibilities;
+    //If vehicle roll, search for a character from the user
+    var possOwner = test.actorType==="vehicle" ? game.user.character?.uuid : test.actor;
+    var possPool;
+    // If no valid possOwner, take possibilities from the GM
+    if (!!possOwner) {
+        possPool = fromUuidSync(possOwner).system.other.possibilities;
+    } else {
+        possPool = game.user.isGM ? game.user.getFlag("torgeternity","GMpossibilities") : 0;
+    };
     // 0 => if GM ask for confirm, or return message "no poss"
     if ((possPool <= 0 & !game.user.isGM)) {
         ui.notifications.warn(game.i18n.localize("torgeternity.sheetLabels.noPoss"));
@@ -78,8 +86,12 @@ async function onPossibility(event) {
         possPool += 1;
         test.chatNote += game.i18n.localize("torgeternity.sheetLabels.freePoss");
     };
-
-    await fromUuidSync(test.actor).update({"system.other.possibilities": possPool-1});
+    if (!!possOwner){
+        await fromUuidSync(possOwner).update({"system.other.possibilities": possPool-1});
+    } else {
+        game.user.isGM ? game.user.setFlag("torgeternity","GMpossibilities", possPool-1) : {};
+    }
+    
     test.parentId = parentMessageId;
     parentMessage.setFlag("torgeternity", "test");
     test.isFavStyle = "pointer-events:none;color:gray;display:none";
