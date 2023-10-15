@@ -1,5 +1,23 @@
-2023/09/16-16:04:33.606 55e4 Recovering log #101
-2023/09/16-16:04:33.606 55e4 Level-0 table #104: started
-2023/09/16-16:04:33.610 55e4 Level-0 table #104: 207224 bytes OK
-2023/09/16-16:04:33.612 55e4 Delete type=0 #101
-2023/09/16-16:04:33.612 55e4 Delete type=3 #99
+2023/10/15-08:20:09.814 f38 Recovering log #107
+2023/10/15-08:20:09.815 f38 Level-0 table #110: started
+2023/10/15-08:20:09.846 f38 Level-0 table #110: 12339 bytes OK
+2023/10/15-08:20:09.887 f38 Delete type=0 #107
+2023/10/15-08:20:09.887 f38 Delete type=3 #106
+2023/10/15-08:27:31.697 6440 Level-0 table #113: started
+2023/10/15-08:27:31.698 6440 Level-0 table #113: 0 bytes OK
+2023/10/15-08:27:31.722 6440 Delete type=0 #111
+2023/10/15-08:27:31.856 6440 Manual compaction at level-0 from '!actors!4maHTlnkLTHmuYpB' @ 72057594037927935 : 1 .. '!actors.items.effects!wOWoLWP2MiJsQ1Vr.jqiacNIAfU9kIrUI.oPRw0RQVk9rYL9az' @ 0 : 0; will stop at '!actors!SVU3O0osXn4bPoTn' @ 1885 : 1
+2023/10/15-08:27:31.856 6440 Compacting 1@0 + 0@1 files
+2023/10/15-08:27:31.883 6440 Generated table #114@0: 2 keys, 5006 bytes
+2023/10/15-08:27:31.883 6440 Compacted 1@0 + 0@1 files => 5006 bytes
+2023/10/15-08:27:31.922 6440 compacted to: files[ 0 1 1 0 0 0 0 ]
+2023/10/15-08:27:31.922 6440 Delete type=2 #110
+2023/10/15-08:27:32.021 6440 Manual compaction at level-0 from '!actors!SVU3O0osXn4bPoTn' @ 1885 : 1 .. '!actors.items.effects!wOWoLWP2MiJsQ1Vr.jqiacNIAfU9kIrUI.oPRw0RQVk9rYL9az' @ 0 : 0; will stop at (end)
+2023/10/15-08:27:32.079 6440 Manual compaction at level-1 from '!actors!4maHTlnkLTHmuYpB' @ 72057594037927935 : 1 .. '!actors.items.effects!wOWoLWP2MiJsQ1Vr.jqiacNIAfU9kIrUI.oPRw0RQVk9rYL9az' @ 0 : 0; will stop at '!actors!SVU3O0osXn4bPoTn' @ 1886 : 1
+2023/10/15-08:27:32.079 6440 Compacting 1@1 + 1@2 files
+2023/10/15-08:27:32.142 6440 Generated table #115@1: 372 keys, 238166 bytes
+2023/10/15-08:27:32.142 6440 Compacted 1@1 + 1@2 files => 238166 bytes
+2023/10/15-08:27:32.173 6440 compacted to: files[ 0 0 1 0 0 0 0 ]
+2023/10/15-08:27:32.173 6440 Delete type=2 #108
+2023/10/15-08:27:32.173 6440 Delete type=2 #114
+2023/10/15-08:27:32.256 6440 Manual compaction at level-1 from '!actors!SVU3O0osXn4bPoTn' @ 1886 : 1 .. '!actors.items.effects!wOWoLWP2MiJsQ1Vr.jqiacNIAfU9kIrUI.oPRw0RQVk9rYL9az' @ 0 : 0; will stop at (end)
