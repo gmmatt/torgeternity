@@ -444,7 +444,8 @@
         "combat": {
             "nextKeep": "Sigu. Turno (Mantener Carta)",
             "nextNew": "Sigu. Turno (Nueva Carta)",
-            "dramaBack": "systems/torgeternity/images/cards/drama-back.webp"
+            "dramaBack": "systems/torgeternity/images/cards/drama-back.webp",
+            "endMyTurn": "Done"
         },
         "itemSheetDescriptions": {
             "perk": "Dones",

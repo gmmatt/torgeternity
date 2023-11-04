@@ -156,11 +156,9 @@
             {{localize "torgeternity.sheetLabels.end"}}</a>
         {{else}}
         <a class="combat-control center" title="{{localize 'COMBAT.Begin'}}" data-control="startCombat">{{localize
-            'COMBAT.Begin'}}</a> {{/if}} {{else if control}}
-        <a class="combat-control" title="{{localize 'COMBAT.TurnPrev'}}" data-control="previousTurn"><i class="fas fa-arrow-left"></i></a>
-        <a class="combat-control center" title="{{localize 'COMBAT.TurnEnd'}}" data-control="nextTurn">{{localize
-            'COMBAT.TurnEnd'}}</a>
-        <a class="combat-control" title="{{localize 'COMBAT.TurnNext'}}" data-control="nextTurn"><i
-                class="fas fa-arrow-right"></i></a> {{/if}} {{/if}}
+            'COMBAT.Begin'}}</a> {{/if}} {{else}}
+            {{log this}}
+            <a class="combat-finish center" {{#if (hasfinish this)}} style="display:none" {{/if}} title="{{localize 'torgeternity.combat.endMyTurn'}}"> {{localize "torgeternity.combat.endMyTurn"}} 
+            </a>{{/if}} {{/if}}
     </nav>
 </section>
