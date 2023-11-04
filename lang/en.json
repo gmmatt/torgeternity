@@ -444,7 +444,8 @@
         "combat": {
             "nextKeep": "Next Round (Keep Current Card)",
             "nextNew": "Next Round (New Card)",
-            "dramaBack": "systems/torgeternity/images/cards/drama-back.webp"
+            "dramaBack": "systems/torgeternity/images/cards/drama-back.webp",
+            "endMyTurn": "Done"
         },
         "itemSheetDescriptions": {
             "perk": "Perk",
