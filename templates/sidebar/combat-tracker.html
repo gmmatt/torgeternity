@@ -157,8 +157,8 @@
         {{else}}
         <a class="combat-control center" title="{{localize 'COMBAT.Begin'}}" data-control="startCombat">{{localize
             'COMBAT.Begin'}}</a> {{/if}} {{else}}
-            {{log this}}
+            {{#if round}}
             <a class="combat-finish center" {{#if (hasfinish this)}} style="display:none" {{/if}} title="{{localize 'torgeternity.combat.endMyTurn'}}"> {{localize "torgeternity.combat.endMyTurn"}} 
-            </a>{{/if}} {{/if}}
+            </a>{{/if}} {{/if}} {{/if}}
     </nav>
 </section>
