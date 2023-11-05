@@ -444,7 +444,8 @@
         "combat": {
             "nextKeep": "Nouveau round (garder la carte actuelle)",
             "nextNew": "Nouveau round (nouvelle carte Action)",
-            "dramaBack": "systems/torgeternity/images/cards/drama-back-fr.webp"
+            "dramaBack": "systems/torgeternity/images/cards/drama-back-fr.webp",
+            "endMyTurn": "Terminé"
         },
         "itemSheetDescriptions": {
             "perk": "Atout",
