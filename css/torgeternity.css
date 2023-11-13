@@ -830,7 +830,8 @@ button:focus {
     box-shadow: 0 0 10px #3bb3b3;
 }
 
-a:hover {
+a:hover,
+span.open-poss:hover {
     text-shadow: 0 0 10px #3bb3b3;
 }
 
