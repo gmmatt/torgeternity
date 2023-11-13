@@ -79,8 +79,8 @@
 
     <hr>
 
-    <div class="sidebar-heading">
-        <i class="fas fa-shield"></i>        
+    <div class="sidebar-heading {{#if (detectActiveDefense data)}}activeDefense-roll-glow{{else}}activeDefense-roll{{/if}}">
+        <i class="fas fa-shield" ></i>
         {{localize "torgeternity.sheetLabels.defenses"}}
     </div>
 
