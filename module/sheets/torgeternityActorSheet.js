@@ -8,6 +8,7 @@ import {
 } from "/systems/torgeternity/module/effects.js";
 import { testDialog } from "/systems/torgeternity/module/test-dialog.js";
 import torgeternityItem from "/systems/torgeternity/module/torgeternityItem.js";
+import {possibilityByCosm} from "/systems/torgeternity/module/possibilityByCosm.js";
 
 export default class torgeternityActorSheet extends ActorSheet {
     constructor(...args) {
@@ -337,7 +338,7 @@ export default class torgeternityActorSheet extends ActorSheet {
         // Open Cards Hand
 
         html.find('.open-hand').click(this.onOpenHand.bind(this));
-
+        html.find('.open-poss').click(this.onCosmPoss.bind(this));
 
 
         // Update Inventory Item
@@ -420,6 +421,18 @@ export default class torgeternityActorSheet extends ActorSheet {
         }
 
     }
+
+    async onCosmPoss(event) {
+        let actor = this.object;
+        console.log(ui.windows);
+        console.log(Object.values(ui.windows));
+        if ((Object.values(ui.windows).some(w => w.title === "possibilityByCosm"))) {
+        } else {
+        let windo = new possibilityByCosm(actor);
+        windo.render(true);
+        }
+    }
+    
     async _onSkillRoll(event) {
         const skillName = event.currentTarget.dataset.name;
         const attributeName = event.currentTarget.dataset.baseattribute;

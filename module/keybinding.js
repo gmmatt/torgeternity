@@ -1,3 +1,5 @@
+
+import {possibilityByCosm} from "/systems/torgeternity/module/possibilityByCosm.js";
 import GMScreen from './GMScreen.js';
 export default function createTorgShortcuts() {
     //creating keyboard shortcuts
@@ -20,6 +22,22 @@ export default function createTorgShortcuts() {
         onDown: (context) => {
             if (game.user.isGM) {
                 ui.GMScreen.toggleRender()
+            }
+        }
+    });
+    game.keybindings.register('torgeternity', 'openCosmPoss', {
+        name: "Possibility by cosm",//game.i18n.localize("torgeternity.gmScreen.toggle"),
+        editable: [{
+            key: "KeyP",
+        }],
+        onDown: (context) => {
+            if (game.user.character) {
+                if ((Object.values(ui.windows).some(w => w.title === "possibilityByCosm"))) {
+                    return
+                };
+                let windo = new possibilityByCosm(game.user.character);
+                windo.render(true);
+                console.log("do open cosm poss");
             }
         }
     });
