@@ -421,8 +421,11 @@ export default class torgeternityActorSheet extends ActorSheet {
         }
 
     }
+    
     async onCosmPoss(event) {
-        let windo = new possibilityByCosm(this);
+        let actor = this.object;
+        console.log(actor);
+        let windo = new possibilityByCosm(actor);
         windo.render(true);
     }
     

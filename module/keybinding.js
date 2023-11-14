@@ -32,7 +32,7 @@ export default function createTorgShortcuts() {
         }],
         onDown: (context) => {
             if (game.user.character) {
-                let windo = new possibilityByCosm(game.user.character.sheet);
+                let windo = new possibilityByCosm(game.user.character);
                 windo.render(true);
                 console.log("do open cosm poss");
             }

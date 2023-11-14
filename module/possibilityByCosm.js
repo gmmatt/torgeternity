@@ -10,10 +10,11 @@ export class possibilityByCosm extends FormApplication {
         return options
     }
 
-    constructor(poss){
-        console.log(poss);
+    constructor(actor){
+        console.log(actor);
         super();
-        this.poss = poss
+        this.actorPoss = actor.getFlag("torgeternity", "possibilityByCosm");
+        this.actor = actor;
     }
 
     get template() {
@@ -26,7 +27,7 @@ export class possibilityByCosm extends FormApplication {
     async getData() {
         const data = super.getData();
         console.log(data);//
-        data.poss = this.poss;
+        data.actorPoss = this.actorPoss;
         console.log(data);//
 
         return data;
@@ -42,35 +43,28 @@ export class possibilityByCosm extends FormApplication {
 
     async onSave(event) {
         console.log(this);
-        let ayslePoss = document.getElementById("ayslePoss").value;
-        let cyberpapacyPoss = document.getElementById("cyberpapacyPoss").value;
-        let coreEarthPoss = document.getElementById("coreEarthPoss").value;
-        let livingLandPoss = document.getElementById("livingLandPoss").value;
-        let nileEmpirePoss = document.getElementById("nileEmpirePoss").value;
-        let orrorshPoss = document.getElementById("orrorshPoss").value;
-        let panPacificaPoss = document.getElementById("panPacificaPoss").value;
-        let tharkoldPoss = document.getElementById("tharkoldPoss").value;
-        let otherPoss = document.getElementById("otherPoss").value;
-        let acto = this.poss.object;
-        console.log(acto);
-        await acto.update({
-            system: {
-                other: {
-                    possibilitiesByCosm:{
-                        ayslePoss:ayslePoss,
-                        cyberpapacyPoss:cyberpapacyPoss,
-                        coreEarthPoss:coreEarthPoss,
-                        livingLandPoss:livingLandPoss,
-                        nileEmpirePoss:nileEmpirePoss,
-                        orrorshPoss:orrorshPoss,
-                        panPacificaPoss:panPacificaPoss,
-                        tharkoldPoss:tharkoldPoss,
-                        otherPoss:otherPoss
-                    }
-                }
-            }
-        });
-        console.log(this.poss);
+        let ayslePoss = parseInt(document.getElementById("ayslePoss").value);
+        let cyberpapacyPoss = parseInt(document.getElementById("cyberpapacyPoss").value);
+        let coreEarthPoss = parseInt(document.getElementById("coreEarthPoss").value);
+        let livingLandPoss = parseInt(document.getElementById("livingLandPoss").value);
+        let nileEmpirePoss = parseInt(document.getElementById("nileEmpirePoss").value);
+        let orrorshPoss = parseInt(document.getElementById("orrorshPoss").value);
+        let panPacificaPoss = parseInt(document.getElementById("panPacificaPoss").value);
+        let tharkoldPoss = parseInt(document.getElementById("tharkoldPoss").value);
+        let otherPoss = parseInt(document.getElementById("otherPoss").value);
+        let acto = this.actor;
+        let possibilityByCosm = {
+            ayslePoss:ayslePoss,
+            cyberpapacyPoss:cyberpapacyPoss,
+            coreEarthPoss:coreEarthPoss,
+            livingLandPoss:livingLandPoss,
+            nileEmpirePoss:nileEmpirePoss,
+            orrorshPoss:orrorshPoss,
+            panPacificaPoss:panPacificaPoss,
+            tharkoldPoss:tharkoldPoss,
+            otherPoss:otherPoss
+        }
+        await acto.setFlag("torgeternity","possibilityByCosm", possibilityByCosm)
         this.close();
     }
 }
