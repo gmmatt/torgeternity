@@ -963,6 +963,12 @@ Hooks.on("deleteCombat", async (combat, dataUpdate) => {
     listHandsReset.forEach(hand => hand.cards.forEach(card => card.unsetFlag("torgeternity", "pooled")));
 })
 
+Hooks.on("deleteActor", async (actor, data1, data2) => {
+    if (!game.user.isGM) return;
+    actor.getDefaultHand().delete();
+})
+
+
 Hooks.on("renderChatLog", (app, html, data) => {
     //----chat messages listeners
     Chat.addChatListeners(html);
