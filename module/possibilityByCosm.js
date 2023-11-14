@@ -1,11 +1,12 @@
 export class possibilityByCosm extends FormApplication {
 
     static get defaultOptions(){
+        console.log(ui.windows);
         const options = super.defaultOptions;
         options.template = "systems/torgeternity/templates/possibilityByCosm.hbs";
         options.width = "auto";
         options.height = "auto";
-        options.title = game.user.name;
+        options.title = "possibilityByCosm";
         options.resizeable = false;
         return options
     }
