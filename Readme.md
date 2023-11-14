@@ -8,6 +8,9 @@
 For manual installation, use the provided manifest URL in the "*Install System*" popup window 
 while managing game systems.
 
+v. 3.3.0
+ * The combat tracker now behaves like it should for TE: All players now have the "Done" button displayed. If a player clicks it, the GM's combat tracker will be updated with a checked checkmark at the apropriate character. However, to end the round is totally up to the GM.
+
 v. 3.2.2
  * Fixing a bug, that set the possibilities automatically on 3 when 0 is reached.
 
