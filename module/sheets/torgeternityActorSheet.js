@@ -424,13 +424,11 @@ export default class torgeternityActorSheet extends ActorSheet {
 
     async onCosmPoss(event) {
         let actor = this.object;
-        console.log(ui.windows);
-        console.log(Object.values(ui.windows));
-        if ((Object.values(ui.windows).some(w => w.title === game.i18n.localize("torgeternity.sheetLabels.possibilityByCosm")))) {
-        } else {
-        let windo = new possibilityByCosm(actor);
+        let windo = (Object.values(ui.windows).find(w => w.title === game.i18n.localize("torgeternity.sheetLabels.possibilityByCosm")))
+        if (!windo) {
+            windo = new possibilityByCosm(actor);
+        };
         windo.render(true);
-        }
     }
     
     async _onSkillRoll(event) {

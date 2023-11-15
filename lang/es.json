@@ -222,6 +222,14 @@
             "tharkhold": "Tharkold",
             "panPacifica": "Pan-Pacifica",
             "orrorsh": "Orrorsh",
+            "coreEarthPoss": "Core Earth",
+            "livingLandPoss": "Living Land",
+            "nileEmpirePoss": "Nile Empire",
+            "ayslePoss": "Aysle",
+            "cyberpapacyPoss": "Cyberpapacy",
+            "tharkoldPoss": "Tharkold",
+            "panPacificaPoss": "Pan-Pacifica",
+            "orrorshPoss": "Orrorsh",
             "other": "Otro",
             "pure": "puro",
             "mixed": "mixto",
@@ -259,7 +267,9 @@
             "hope": "Esperanza",
             "cursed": "Cursed",
             "biotech": "Biotech",
-            "powerSuit": "Power Suit"
+            "powerSuit": "Power Suit",
+            "invasion": "Invasion",
+            "stalenger": "Stalenger"
         },
         "sheetLabels": {
             "applyDamage":"Apply damages",

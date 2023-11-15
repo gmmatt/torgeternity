@@ -32,12 +32,13 @@ export default function createTorgShortcuts() {
         }],
         onDown: (context) => {
             if (game.user.character) {
-                if ((Object.values(ui.windows).some(w => w.title === game.i18n.localize("torgeternity.sheetLabels.possibilityByCosm")))) {
+                let windo = (Object.values(ui.windows).find(w => w.title === game.i18n.localize("torgeternity.sheetLabels.possibilityByCosm")));
+                if (windo) {
+                    windo.close();
                     return
                 };
-                let windo = new possibilityByCosm(game.user.character);
+                windo = new possibilityByCosm(game.user.character);
                 windo.render(true);
-                console.log("do open cosm poss");
             }
         }
     });

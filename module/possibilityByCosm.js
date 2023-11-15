@@ -12,7 +12,6 @@ export class possibilityByCosm extends FormApplication {
     }
 
     constructor(actor){
-        console.log(actor);
         super();
         this.actorPoss = actor.getFlag("torgeternity", "possibilityByCosm");
         this.actor = actor;
@@ -27,9 +26,8 @@ export class possibilityByCosm extends FormApplication {
 
     async getData() {
         const data = super.getData();
-        console.log(data);//
         data.actorPoss = this.actorPoss;
-        console.log(data);//
+        data.actor = this.actor;
 
         return data;
         
@@ -43,7 +41,6 @@ export class possibilityByCosm extends FormApplication {
     }
 
     async onSave(event) {
-        console.log(this);
         let ayslePoss = parseInt(document.getElementById("ayslePoss").value);
         let cyberpapacyPoss = parseInt(document.getElementById("cyberpapacyPoss").value);
         let coreEarthPoss = parseInt(document.getElementById("coreEarthPoss").value);
@@ -65,7 +62,8 @@ export class possibilityByCosm extends FormApplication {
             tharkoldPoss:tharkoldPoss,
             otherPoss:otherPoss
         }
-        await acto.setFlag("torgeternity","possibilityByCosm", possibilityByCosm)
+        await acto.setFlag("torgeternity","possibilityByCosm", possibilityByCosm);
+        await acto.update({system:{other:{possibilities: coreEarthPoss}}});
         this.close();
     }
 }
