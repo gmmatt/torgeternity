@@ -6,7 +6,7 @@ export class possibilityByCosm extends FormApplication {
         options.template = "systems/torgeternity/templates/possibilityByCosm.hbs";
         options.width = "auto";
         options.height = "auto";
-        options.title = "possibilityByCosm";
+        options.title = game.i18n.localize("torgeternity.sheetLabels.possibilityByCosm");
         options.resizeable = false;
         return options
     }

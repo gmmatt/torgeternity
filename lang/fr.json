@@ -437,8 +437,8 @@
             "lastPossMess": "<h3> Ultime possiblité , confirmez !<br>Etes-vous certain ?</h3>",
             "lastSpent": " Dernière possibilité dépensée!.",
             "freePoss": " Le GM offre une possibilité!",
-            "noPossFree": "Pas de possibilité !<br>Confirmez le don ?"
-            
+            "noPossFree": "Pas de possibilité !<br>Confirmez le don ?",
+            "possibilityByCosm": "Possibilités de Cosm"
 
         },
         "combat": {

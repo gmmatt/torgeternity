@@ -437,8 +437,8 @@
             "lastPossMess": "<h3> This is your last possibility, do you confirm ?<br>Are You sure ?</h3>",
             "lastSpent": " Last possibility spent!",
             "freePoss": " GM grants a possibility!",
-            "noPossFree": "No possibility !<br>Do you confirm the gift ?"
-            
+            "noPossFree": "No possibility !<br>Do you confirm the gift ?",
+            "possibilityByCosm": "Cosms possibilities"
 
         },
         "combat": {

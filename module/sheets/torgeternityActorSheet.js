@@ -426,7 +426,7 @@ export default class torgeternityActorSheet extends ActorSheet {
         let actor = this.object;
         console.log(ui.windows);
         console.log(Object.values(ui.windows));
-        if ((Object.values(ui.windows).some(w => w.title === "possibilityByCosm"))) {
+        if ((Object.values(ui.windows).some(w => w.title === game.i18n.localize("torgeternity.sheetLabels.possibilityByCosm")))) {
         } else {
         let windo = new possibilityByCosm(actor);
         windo.render(true);

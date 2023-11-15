@@ -32,7 +32,7 @@ export default function createTorgShortcuts() {
         }],
         onDown: (context) => {
             if (game.user.character) {
-                if ((Object.values(ui.windows).some(w => w.title === "possibilityByCosm"))) {
+                if ((Object.values(ui.windows).some(w => w.title === game.i18n.localize("torgeternity.sheetLabels.possibilityByCosm")))) {
                     return
                 };
                 let windo = new possibilityByCosm(game.user.character);

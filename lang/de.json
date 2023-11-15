@@ -437,8 +437,8 @@
             "lastPossMess": "<h3>Dies ist deine letzte Möglichkeit, willst du sie wirklich ausgeben?<br>Are You sure ?</h3>",
             "lastSpent": "Letzte Möglichkeit ausgegeben!",
             "freePoss": "SL schenkt dir eine Möglichkeit!",
-            "noPossFree": "Keine Möglichkeit!<br>Möchtest du eine Möglichkeit schenken?"
-
+            "noPossFree": "Keine Möglichkeit!<br>Möchtest du eine Möglichkeit schenken?",
+            "possibilityByCosm": "Cosms possibilities"
 
         },
         "combat": {
