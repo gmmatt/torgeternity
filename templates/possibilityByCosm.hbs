@@ -1,60 +1,52 @@
 <div>
     <form>
-        <td>
-            <table>
-                <tr>
-                    <td>{{localize "torgeternity.cosms.aysle"}}<br>{{log this}}
+        <div style="display:grid; grid-template-columns: auto auto auto; grid-template-rows:auto auto auto; grid-gap: 1.5em;text-align:center; text-wrap: wrap; align-items:center; justify-items: center;">
+                    <div>{{localize "torgeternity.cosms.aysle"}}<br>{{log this}}
                         <img src="systems\torgeternity\images\cosm-icons\aysle.webp" style="border:none; height:80px; width:80px{{#if this.actorPoss.ayslePoss}}{{else}};filter:grayscale(1){{/if}}"><br>
                         <input style="text-align:center;width:80px;background:rgb(200,200,200)" id="ayslePoss" type="number"
                         value="{{this.actorPoss.ayslePoss}}" data-dtype="Number"/>
-                    </td>
-                    <td>{{localize "torgeternity.cosms.coreEarth"}}<br>
+                    </div>
+                    <div>{{localize "torgeternity.cosms.coreEarth"}}<br>
                         <img src="systems\torgeternity\images\cosm-icons\coreEarth.webp" style="border:none; height:80px; width:80px{{#if this.actorPoss.coreEarthPoss}}{{else}};filter:grayscale(1){{/if}}"><br>
                         <input style="text-align:center;width:80px;background:rgb(200,200,200)" id="coreEarthPoss" type="number"
                         value="{{this.actorPoss.coreEarthPoss}}" data-dtype="Number"/>
-                    </td>
-                    <td>{{localize "torgeternity.cosms.cyberpapacy"}}<br>
+                    </div>
+                    <div>{{localize "torgeternity.cosms.cyberpapacy"}}<br>
                         <img src="systems\torgeternity\images\cosm-icons\cyberpapacy.webp" style="border:none; height:80px; width:80px{{#if this.actorPoss.cyberpapacyPoss}}{{else}};filter:grayscale(1){{/if}}"><br>
                         <input style="text-align:center;width:80px;background:rgb(200,200,200)" id="cyberpapacyPoss" type="number"
                         value="{{this.actorPoss.cyberpapacyPoss}}" data-dtype="Number"/>
-                    </td>
-                </tr>
-                <tr>
-                    <td>{{localize "torgeternity.cosms.livingLand"}}<br>
+                    </div>
+                    <div>{{localize "torgeternity.cosms.livingLand"}}<br>
                         <img src="systems\torgeternity\images\cosm-icons\livingLand.webp" style="border:none; height:80px; width:80px{{#if this.actorPoss.livingLandPoss}}{{else}};filter:grayscale(1){{/if}}"><br>
                         <input style="text-align:center;width:80px;background:rgb(200,200,200)" id="livingLandPoss" type="number"
                         value="{{this.actorPoss.livingLandPoss}}" data-dtype="Number"/>
-                    </td>
-                    <td>{{localize "torgeternity.cosms.nileEmpire"}}<br>
+                    </div>
+                    <div>{{localize "torgeternity.cosms.nileEmpire"}}<br>
                         <img src="systems\torgeternity\images\cosm-icons\nileEmpire.webp" style="border:none; height:80px; width:80px{{#if this.actorPoss.nileEmpirePoss}}{{else}};filter:grayscale(1){{/if}}"><br>
                         <input style="text-align:center;width:80px;background:rgb(200,200,200)" id="nileEmpirePoss" type="number"
                         value="{{this.actorPoss.nileEmpirePoss}}" data-dtype="Number"/>
-                    </td>
-                    <td>{{localize "torgeternity.cosms.orrorsh"}}<br>
+                    </div>
+                    <div>{{localize "torgeternity.cosms.orrorsh"}}<br>
                         <img src="systems\torgeternity\images\cosm-icons\orrorsh.webp" style="border:none; height:80px; width:80px{{#if this.actorPoss.orrorshPoss}}{{else}};filter:grayscale(1){{/if}}"><br>
                         <input style="text-align:center;width:80px;background:rgb(200,200,200)" id="orrorshPoss" type="number"
                         value="{{this.actorPoss.orrorshPoss}}" data-dtype="Number"/>
-                    </td>
-                </tr>
-                <tr>
-                    <td>{{localize "torgeternity.cosms.panPacifica"}}<br>
+                    </div>
+                    <div>{{localize "torgeternity.cosms.panPacifica"}}<br>
                         <img src="systems\torgeternity\images\cosm-icons\panPacifica.webp" style="border:none; height:80px; width:80px{{#if this.actorPoss.panPacificaPoss}}{{else}};filter:grayscale(1){{/if}}"><br>
                         <input style="text-align:center;width:80px;background:rgb(200,200,200)" id="panPacificaPoss" type="number"
                         value="{{this.actorPoss.panPacificaPoss}}" data-dtype="Number"/>
-                    </td>
-                    <td>{{localize "torgeternity.cosms.tharkold"}}<br>
+                    </div>
+                    <div>{{localize "torgeternity.cosms.tharkold"}}<br>
                         <img src="systems\torgeternity\images\cosm-icons\tharkold.webp" style="border:none; height:80px; width:80px{{#if this.actorPoss.tharkoldPoss}}{{else}};filter:grayscale(1){{/if}}"><br>
                         <input style="text-align:center;width:80px;background:rgb(200,200,200)" id="tharkoldPoss" type="number"
                         value="{{this.actorPoss.tharkoldPoss}}" data-dtype="Number"/>
-                    </td>
-                    <td>{{localize "torgeternity.cosms.other"}}<br>
+                    </div>
+                    <div>{{localize "torgeternity.cosms.other"}}<br>
                         <img src="systems\torgeternity\images\icons\perk.webp" alt="Other" style="border:none; height:80px; width:80px{{#if this.actorPoss.otherPoss}}{{else}};filter:grayscale(1){{/if}}"><br>
                         <input style="text-align:center;width:80px;background:rgb(200,200,200)" id="otherPoss" type="number"
                         value="{{this.actorPoss.otherPoss}}" data-dtype="Number"/>
-                    </td>
-                </tr>
-            </table>
-        </td>
+                    </div>
+     </div>
     </form>
-    <button class="save-button">{{localize "CARDS.Save"}}</button>
+    <button style="margin-top:2em; font-weight:bold; background-image: url(../images/bg-sheet.webp)" class="save-button">{{localize "CARDS.Save"}}</button>
 </div>
