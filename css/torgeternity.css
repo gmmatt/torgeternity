@@ -1963,6 +1963,11 @@ form.actor-sheet header input[name="name"] {
     color: black;
 }
 
+.activeDefense-roll:hover{
+    cursor: pointer;
+    text-shadow: 0 0 15px rgb(28, 28, 179);
+}
+
 .activeDefense-roll-glow {
     animation: colorchange 2s infinite alternate;
 }
