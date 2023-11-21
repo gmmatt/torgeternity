@@ -1637,6 +1637,12 @@ german tent cards images
     width:80px;
 }
 
+.possibilitiesByCosmWindow.inputField{
+    text-align:center;
+    width:80px;
+    background:rgb(200,200,200);
+}
+
 #players ol li.player .player-active {
     flex: 0 0 15px;
     height: 15px;
