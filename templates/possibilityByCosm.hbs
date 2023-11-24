@@ -2,7 +2,7 @@
     <form>
         <div style="display:grid; grid-template-columns: auto auto auto; grid-template-rows:auto auto auto; grid-column-gap: 1.5em;grid-row-gap:2em;text-align:center; text-wrap: wrap; align-items:center; justify-items: center;">
 
-            <div class="possibilitiesByCosmWindow eachDiversion"
+            <div class="possibilitiesByCosmWindow eachDiversion {{#if this.actorPoss.ayslePoss}}{{else}}hide{{/if}}"
                 title="{{localize "torgeternity.cosms.aysle"}}"> 
                 <a class="content-link"
                     data-uuid="{{localize "torgeternity.cosms.ayslePossLink"}}"
@@ -12,20 +12,20 @@
                 <object data="modules\te008-aysle\images\journal\aysle-possy.webp"
                     type="image/webp" 
                     class="possibilitiesByCosmWindow imagesShown" 
-                    style="{{#if this.actorPoss.ayslePoss}}{{else}};filter:grayscale(1){{/if}}">
+                    style="{{#if this.actorPoss.ayslePoss}};filter:grayscale(0){{/if}}">
                 <img src="systems\torgeternity\images\cosm-icons\aysle.webp" 
                     class="possibilitiesByCosmWindow imagesShown"
                     title="No Module"
-                    style="{{#if this.actorPoss.ayslePoss}}{{else}};filter:grayscale(1){{/if}}">
+                    style="{{#if this.actorPoss.ayslePoss}};filter:grayscale(0){{/if}}">
                 </object>
                 <input class="possibilitiesByCosmWindow inputField" 
                     id="ayslePoss" 
                     type="number"
                     value="{{this.actorPoss.ayslePoss}}" 
-                    data-dtype="Number"/>
+                    data-dtype="Number">
             </div>
 
-            <div class="possibilitiesByCosmWindow eachDiversion" 
+            <div class="possibilitiesByCosmWindow eachDiversion {{#if this.actor.system.other.possibilities}}{{else}}hide{{/if}}"
                 title="{{localize "torgeternity.cosms.coreEarth"}}"> 
                 <a class="content-link" 
                     data-uuid="{{localize "torgeternity.cosms.coreEarthPossLink"}}" 
@@ -33,16 +33,15 @@
                     {{localize "torgeternity.cosms.coreEarth"}}
                 </a>
                 <img src="systems\torgeternity\images\possytoken.webp"
-                    class="possibilitiesByCosmWindow imagesShown" 
-                    style="{{#if this.actor.system.other.possibilities}}{{else}};filter:grayscale(1){{/if}}">
+                    class="possibilitiesByCosmWindow imagesShown">
                 <input class="possibilitiesByCosmWindow inputField"
                     id="coreEarthPoss" 
                     type="number"
                     value="{{this.actor.system.other.possibilities}}" 
-                    data-dtype="Number"/>
+                    data-dtype="Number">
             </div>
 
-            <div class="possibilitiesByCosmWindow eachDiversion" 
+            <div class="possibilitiesByCosmWindow eachDiversion {{#if this.actorPoss.cyberpapacyPoss}}{{else}}hide{{/if}}"
                 title="{{localize "torgeternity.cosms.cyberpapacy"}}"> 
                 <a class="content-link" 
                     data-uuid="{{localize "torgeternity.cosms.cyberpapacyPossLink"}}" 
@@ -51,21 +50,19 @@
                 </a>
                 <object data="modules\te010-cyberpapacy\images\journal\possi.webp" 
                     type="image/webp" 
-                    class="possibilitiesByCosmWindow imagesShown" 
-                    style="{{#if this.actorPoss.cyberpapacyPoss}}{{else}};filter:grayscale(1){{/if}}">
+                    class="possibilitiesByCosmWindow imagesShown">
                 <img src="systems\torgeternity\images\cosm-icons\cyberpapacy.webp" 
                     class="possibilitiesByCosmWindow imagesShown"
-                    title="No Module"
-                    style="{{#if this.actorPoss.cyberpapacyPoss}}{{else}};filter:grayscale(1){{/if}}">
+                    title="No Module">
                 </object>
                 <input class="possibilitiesByCosmWindow inputField"
                     id="cyberpapacyPoss" 
                     type="number"
                     value="{{this.actorPoss.cyberpapacyPoss}}" 
-                    data-dtype="Number"/>
+                    data-dtype="Number">
             </div>
 
-            <div class="possibilitiesByCosmWindow eachDiversion" 
+            <div class="possibilitiesByCosmWindow eachDiversion {{#if this.actorPoss.livingLandPoss}}{{else}}hide{{/if}}"
                 title="{{localize "torgeternity.cosms.livingLand"}}"> 
                 <a class="content-link" 
                     data-uuid="{{localize "torgeternity.cosms.livingLandPossLink"}}" 
@@ -74,21 +71,19 @@
                 </a>
                 <object data="modules\te004-living-land\images\journal-graphics\ll-possy.webp" 
                     type="image/webp" 
-                    class="possibilitiesByCosmWindow imagesShown" 
-                    style="{{#if this.actorPoss.livingLandPoss}}{{else}};filter:grayscale(1){{/if}}">
+                    class="possibilitiesByCosmWindow imagesShown">
                 <img src="systems\torgeternity\images\cosm-icons\livingLand.webp" 
                     class="possibilitiesByCosmWindow imagesShown"
-                    title="No Module"
-                    style="{{#if this.actorPoss.livingLandPoss}}{{else}};filter:grayscale(1){{/if}}">
+                    title="No Module">
                 </object>
                 <input class="possibilitiesByCosmWindow inputField"
                     id="livingLandPoss" 
                     type="number"
                     value="{{this.actorPoss.livingLandPoss}}" 
-                    data-dtype="Number"/>
+                    data-dtype="Number">
             </div>
 
-            <div class="possibilitiesByCosmWindow eachDiversion" 
+            <div class="possibilitiesByCosmWindow eachDiversion {{#if this.actorPoss.nileEmpirePoss}}{{else}}hide{{/if}}"
                 title="{{localize "torgeternity.cosms.nileEmpire"}}"> 
                 <a class="content-link" 
                     data-uuid="{{localize "torgeternity.cosms.nileEmpirePossLink"}}" 
@@ -97,21 +92,19 @@
                 </a>
                 <object data="modules\te006-nile-empire\images\journal-grafics\possibility-token-NE.webp" 
                     type="image/webp" 
-                    class="possibilitiesByCosmWindow imagesShown" 
-                    style="{{#if this.actorPoss.nileEmpirePoss}}{{else}};filter:grayscale(1){{/if}}">
+                    class="possibilitiesByCosmWindow imagesShown">
                 <img src="systems\torgeternity\images\cosm-icons\nileEmpire.webp" 
                     class="possibilitiesByCosmWindow imagesShown"
-                    title="No Module"
-                    style="{{#if this.actorPoss.nileEmpirePoss}}{{else}};filter:grayscale(1){{/if}}">
+                    title="No Module">
                 </object>
                 <input class="possibilitiesByCosmWindow inputField" 
                 id="nileEmpirePoss" 
                 type="number"
                 value="{{this.actorPoss.nileEmpirePoss}}" 
-                data-dtype="Number"/>
+                data-dtype="Number">
             </div>
 
-            <div class="possibilitiesByCosmWindow eachDiversion" 
+            <div class="possibilitiesByCosmWindow eachDiversion {{#if this.actorPoss.orrorshPoss}}{{else}}hide{{/if}}"
                 title="{{localize "torgeternity.cosms.orrorsh"}}"> 
                 <a class="content-link" 
                     data-uuid="{{localize "torgeternity.cosms.orrorshPossLink"}}" 
@@ -120,21 +113,19 @@
                 </a>
                 <object data="modules\te014-orrorsh\images\journal\07.webp" 
                     type="image/webp" 
-                    class="possibilitiesByCosmWindow imagesShown" 
-                    style="{{#if this.actorPoss.orrorshPoss}}{{else}};filter:grayscale(1){{/if}}">
+                    class="possibilitiesByCosmWindow imagesShown">
                 <img src="systems\torgeternity\images\cosm-icons\orrorsh.webp" 
                     class="possibilitiesByCosmWindow imagesShown"
-                    title="No Module"
-                    style="{{#if this.actorPoss.orrorshPoss}}{{else}};filter:grayscale(1){{/if}}">
+                    title="No Module">
                 </object>
                 <input class="possibilitiesByCosmWindow inputField"
                     id="orrorshPoss" 
                     type="number"
                     value="{{this.actorPoss.orrorshPoss}}" 
-                    data-dtype="Number"/>
+                    data-dtype="Number">
             </div>
 
-            <div class="possibilitiesByCosmWindow eachDiversion" 
+            <div class="possibilitiesByCosmWindow eachDiversion {{#if this.actorPoss.panPacificaPoss}}{{else}}hide{{/if}}"
                 title="{{localize "torgeternity.cosms.panPacifica"}}"> 
                 <a class="content-link" 
                     data-uuid="{{localize "torgeternity.cosms.panPacificaPossLink"}}" 
@@ -143,21 +134,19 @@
                 </a>
                 <object data="modules\te016-pan-pacifica\images\journal\pan-pacifica_possibility.webp" 
                     type="image/webp" 
-                    class="possibilitiesByCosmWindow imagesShown" 
-                    style="{{#if this.actorPoss.panPacificaPoss}}{{else}};filter:grayscale(1){{/if}}">
+                    class="possibilitiesByCosmWindow imagesShown">
                 <img src="systems\torgeternity\images\cosm-icons\panPacifica.webp" 
                     class="possibilitiesByCosmWindow imagesShown"
-                    title="No Module"
-                    style="{{#if this.actorPoss.panPacificaPoss}}{{else}};filter:grayscale(1){{/if}}">
-                </object>
+                    title="No Module">
+                    </object>
                 <input class="possibilitiesByCosmWindow inputField"
                     id="panPacificaPoss" 
                     type="number"
                     value="{{this.actorPoss.panPacificaPoss}}" 
-                    data-dtype="Number"/>
+                    data-dtype="Number">
             </div>
 
-            <div class="possibilitiesByCosmWindow eachDiversion" 
+            <div class="possibilitiesByCosmWindow eachDiversion {{#if this.actorPoss.tharkoldPoss}}{{else}}hide{{/if}}"
                 title="{{localize "torgeternity.cosms.tharkold"}}"> 
                 <a class="content-link" 
                     data-uuid="{{localize "torgeternity.cosms.tharkoldPossLink"}}" 
@@ -166,37 +155,34 @@
                 </a>
                 <object data="modules\te012-tharkold\images\journal\tharkold_possibility.webp" 
                 type="image/webp" 
-                class="possibilitiesByCosmWindow imagesShown" 
-                style="{{#if this.actorPoss.tharkoldPoss}}{{else}};filter:grayscale(1){{/if}}">
+                class="possibilitiesByCosmWindow imagesShown">
                 <img src="systems\torgeternity\images\cosm-icons\tharkold.webp" 
                     class="possibilitiesByCosmWindow imagesShown" 
-                    title="No Module"
-                    style="{{#if this.actorPoss.tharkoldPoss}}{{else}};filter:grayscale(1){{/if}}">
+                    title="No Module">
                 </object>
                 <input class="possibilitiesByCosmWindow inputField"
                     id="tharkoldPoss" 
                     type="number" 
                     value="{{this.actorPoss.tharkoldPoss}}" 
-                    data-dtype="Number"/>
+                    data-dtype="Number">
             </div>
 
-            <div class="possibilitiesByCosmWindow eachDiversion" 
+            <div class="possibilitiesByCosmWindow eachDiversion {{#if this.actorPoss.otherPoss}}{{else}}hide{{/if}}"
                 title="{{localize "torgeternity.cosms.otherPoss"}}"> 
-                <p class="content-link" 
+                <a class="content-link" 
                     style="margin:0rem" 
                     data-uuid="{{localize "torgeternity.cosms.otherPossLink"}}" 
                     data-hash="{{localize "torgeternity.cosms.otherPossLink2"}}">
                     {{localize "torgeternity.cosms.other"}}
-                </p>
+                </a>
                 <img src="systems\torgeternity\images\icons\perk.webp" 
                     alt="Other" 
-                    class="possibilitiesByCosmWindow imagesShown" 
-                    style="margin-top:0.7em;{{#if this.actorPoss.otherPoss}}{{else}};filter:grayscale(1){{/if}}">
+                    class="possibilitiesByCosmWindow imagesShown">
                 <input class="possibilitiesByCosmWindow inputField"
                     id="otherPoss" 
                     type="number" 
                     value="{{this.actorPoss.otherPoss}}" 
-                    data-dtype="Number"/>
+                    data-dtype="Number">
             </div>
         </div>
     </form>

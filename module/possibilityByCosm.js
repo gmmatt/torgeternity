@@ -1,14 +1,13 @@
-export class possibilityByCosm extends FormApplication {
+export class possibilityByCosm extends Application {
 
     static get defaultOptions(){
-        console.log(ui.windows);
-        const options = super.defaultOptions;
-        options.template = "systems/torgeternity/templates/possibilityByCosm.hbs";
-        options.width = "auto";
-        options.height = "auto";
-        options.title = game.i18n.localize("torgeternity.sheetLabels.possibilityByCosm");
-        options.resizeable = false;
-        return options
+        return mergeObject(super.defaultOptions, {
+            template: "systems/torgeternity/templates/possibilityByCosm.hbs",
+            width: "auto",
+            height: "auto",
+            title: game.i18n.localize("torgeternity.sheetLabels.possibilityByCosm"),
+            resizeable: false
+        });
     }
 
     constructor(actor){
@@ -17,27 +16,57 @@ export class possibilityByCosm extends FormApplication {
         this.actor = actor;
     }
 
-    get template() {
-
-        //modified path => one folder per type
-        return `systems/torgeternity/templates/possibilityByCosm.hbs`;
-
+    static async create(actor){
+        new possibilityByCosm(actor).render(true);
     }
 
-    async getData() {
+    async getData() {//return mergeObject(await super.getData(), this.parameters)
         const data = super.getData();
-        data.actorPoss = this.actorPoss;
-        data.actor = this.actor;
-
+        data.actor = this.actor;        
+        data.actorPoss = this.actor.getFlag("torgeternity", "possibilityByCosm");;
         return data;
         
         }
 
     activateListeners(html) {
-
-        html.find(".save-button").click(this.onSave.bind(this));
-
         super.activateListeners(html);
+        html.find(".save-button").click(this.onSave.bind(this));
+        html.find(".inputField").change(this.modifyPoss.bind(this));
+        
+    }
+
+    async modifyPoss(event) {
+        var compendiumLink = event.target.parentNode.childNodes[0].nextSibling.dataset.uuid;
+        try {var tes = await fromUuidSync(compendiumLink);
+            if (!tes) ui.notifications.warn("Module not present");
+        }
+        catch {err =>{return}};
+        
+        let ayslePoss = parseInt(document.getElementById("ayslePoss").value);
+        let cyberpapacyPoss = parseInt(document.getElementById("cyberpapacyPoss").value);
+        let coreEarthPoss = parseInt(document.getElementById("coreEarthPoss").value);
+        let livingLandPoss = parseInt(document.getElementById("livingLandPoss").value);
+        let nileEmpirePoss = parseInt(document.getElementById("nileEmpirePoss").value);
+        let orrorshPoss = parseInt(document.getElementById("orrorshPoss").value);
+        let panPacificaPoss = parseInt(document.getElementById("panPacificaPoss").value);
+        let tharkoldPoss = parseInt(document.getElementById("tharkoldPoss").value);
+        let otherPoss = parseInt(document.getElementById("otherPoss").value);
+        let acto = this.actor;
+        let possibilityByCosm = {
+            ayslePoss:ayslePoss,
+            cyberpapacyPoss:cyberpapacyPoss,
+            coreEarthPoss:coreEarthPoss,
+            livingLandPoss:livingLandPoss,
+            nileEmpirePoss:nileEmpirePoss,
+            orrorshPoss:orrorshPoss,
+            panPacificaPoss:panPacificaPoss,
+            tharkoldPoss:tharkoldPoss,
+            otherPoss:otherPoss
+        }
+        await acto.setFlag("torgeternity","possibilityByCosm", possibilityByCosm);
+        await acto.update({system:{other:{possibilities: coreEarthPoss}}});
+        console.log(possibilityByCosm);
+        await this._render();
     }
 
     async onSave(event) {
@@ -65,5 +94,6 @@ export class possibilityByCosm extends FormApplication {
         await acto.setFlag("torgeternity","possibilityByCosm", possibilityByCosm);
         await acto.update({system:{other:{possibilities: coreEarthPoss}}});
         this.close();
+
     }
 }
