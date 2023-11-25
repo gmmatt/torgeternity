@@ -1631,25 +1631,7 @@ german tent cards images
 }
 
 .possibilitiesByCosmWindow.eachDiversion.hide{
-    max-height:142px; 
-    display:grid; 
-    grid-template-columns:auto; 
-    grid-template-rows:auto auto auto; 
-    grid-row-gap: 0.25rem;
-    align-items: center;
-    justify-items: center;
-    filter: grayscale(1);
-}
-
-.possibilitiesByCosmWindow.eachDiversion:focus-within {
-    max-height:142px; 
-    display:grid; 
-    grid-template-columns:auto; 
-    grid-template-rows:auto auto auto; 
-    grid-row-gap: 0.25rem;
-    align-items: center;
-    justify-items: center;
-    filter: grayscale(0);
+       filter: grayscale(1);
 }
 
 .possibilitiesByCosmWindow.imagesShown{
