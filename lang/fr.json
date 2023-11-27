@@ -829,7 +829,8 @@
             "dramaDeckEmpty": "Le paquet de cartes Action est vide. Réinitialisez-le.",
             "onlyReservedCard": "Vous ne pouvez jouer que les cartes en réserve durant une scène dramatique.",
             "noActiveEffectInOwnedItem": "Configurer les effets actifs à l'intérieur des objets possédés n'est pas encore possible.",
-            "noTarget": "Pas de token cible valide."
+            "noTarget": "Pas de token cible valide.",
+            "moduleNotActive": "Description disponible dans le module correspondant."
         },
         "gmScreen": {
             "title": "Écran du meneur",

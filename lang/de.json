@@ -829,7 +829,8 @@
             "dramaDeckEmpty": "Das Dramadeck ist aufgebraucht. Bitte das Dramadeck zurücksetzen.",
             "onlyReservedCard": "Bitte nur Karten aus dem Aktionenpool spielen.",
             "noActiveEffectInOwnedItem": "Das Ändern von aktiven Effekten innerhalb eines Items mit Besitzrechten ist zur Zeit noch nicht implementiert.",
-            "noTarget": "Kein valides Token im Ziel"
+            "noTarget": "Kein valides Token im Ziel",
+            "moduleNotActive": "Activate the module to see desscription."
         },
         "gmScreen": {
             "title": "SL-Schirm",

@@ -32,16 +32,19 @@ export class possibilityByCosm extends Application {
         super.activateListeners(html);
         html.find(".save-button").click(this.onSave.bind(this));
         html.find(".inputField").change(this.modifyPoss.bind(this));
+        html.find(".content-link").click(this.testActiveModule.bind(this));
         
     }
 
-    async modifyPoss(event) {
-        var compendiumLink = event.target.parentNode.childNodes[0].nextSibling.dataset.uuid;
+    async testActiveModule(event) {
+        var compendiumLink = event.target.dataset.uuid;
         try {var tes = await fromUuidSync(compendiumLink);
-            if (!tes) ui.notifications.warn("Module not present");
+            if (!tes) ui.notifications.warn(game.i18n.localize("torgeternity.notifications.moduleNotActive"));
         }
         catch {err =>{return}};
-        
+    }
+
+    async modifyPoss(event) {
         let ayslePoss = parseInt(document.getElementById("ayslePoss").value);
         let cyberpapacyPoss = parseInt(document.getElementById("cyberpapacyPoss").value);
         let coreEarthPoss = parseInt(document.getElementById("coreEarthPoss").value);
