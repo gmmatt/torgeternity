@@ -37,8 +37,7 @@ export default function createTorgShortcuts() {
                     windo.close();
                     return
                 };
-                windo = new possibilityByCosm(game.user.character);
-                windo.render(true);
+                possibilityByCosm.create(game.user.character);
             }
         }
     });
