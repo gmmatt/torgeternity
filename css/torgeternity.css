@@ -830,8 +830,10 @@ button:focus {
     box-shadow: 0 0 10px #3bb3b3;
 }
 
-a:hover {
+a:hover,
+span.open-poss:hover {
     text-shadow: 0 0 10px #3bb3b3;
+    cursor: pointer;
 }
 
 .app,
@@ -1618,6 +1620,33 @@ german tent cards images
     display: inline;
 }
 
+.possibilitiesByCosmWindow.eachDiversion{
+    max-height:142px; 
+    display:grid; 
+    grid-template-columns:auto; 
+    grid-template-rows:auto auto auto; 
+    grid-row-gap: 0.25rem;
+    align-items: center;
+    justify-items: center;
+}
+
+.possibilitiesByCosmWindow.eachDiversion.hide{
+       filter: grayscale(1);
+}
+
+.possibilitiesByCosmWindow.imagesShown{
+    margin-bottom: 0.5rem;
+    border:none; 
+    height:80px; 
+    width:80px;
+}
+
+.possibilitiesByCosmWindow.inputField{
+    text-align:center;
+    width:80px;
+    background:rgb(200,200,200);
+}
+
 #players ol li.player .player-active {
     flex: 0 0 15px;
     height: 15px;
@@ -1960,6 +1989,11 @@ form.actor-sheet header input[name="name"] {
 .activeDefense-roll {
     animation: none;
     color: black;
+}
+
+.activeDefense-roll:hover{
+    cursor: pointer;
+    text-shadow: 0 0 15px rgb(28, 28, 179);
 }
 
 .activeDefense-roll-glow {

@@ -95,7 +95,9 @@ torgeternity.perkTypes = {
     hope: "torgeternity.perkTypes.hope",
     cursed: "torgeternity.perkTypes.cursed",
     biotech: "torgeternity.perkTypes.biotech",
-    powerSuit: "torgeternity.perkTypes.powerSuit"
+    powerSuit: "torgeternity.perkTypes.powerSuit",
+    invasion: "torgeternity.perkTypes.invasion",
+    stalenger: "torgeternity.perkTypes.stalenger"
 }
 
 torgeternity.dnTypes = {
