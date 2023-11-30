@@ -11,9 +11,7 @@ while managing game systems.
 v. 3.3.0
  * If a Storm Knight is deleted, the appropriate hand will be deleted as well.
  * The combat tracker now behaves like it should for TE: All players now have the "Done" button displayed. If a player clicks it, the GM's combat tracker will be updated with a checked checkmark at the apropriate character. However, to end the round is totally up to the GM.
- * New possibilities by cosm window! Click on "Possibilities" on your character sheet, a new window will open to help keeping you track of cosm-specific possibilities. Players can hit the key "P", as this bound for opening this window as well.
-   If the apropriate premium module is active, clicking the title of the cosm-possibility will open the journal entry for quick rule reference.
-   **PLEASE NOTE:** This won't have any impact on the system's behaviour, it's just for your convenience for accounting purposses.
+ * New possibilities by cosm window! Click on "Possibilities" on your character sheet, a new window will open to help keeping you track of cosm-specific possibilities. Players can hit the key "P", as this bound for opening this window as well.  If the apropriate premium module is active, clicking the title of the cosm-possibility will open the journal entry for quick rule reference.  **PLEASE NOTE:** This won't have any impact on the system's behaviour, it's just for your convenience for accounting purposses.
  * The skill "Missile Weapon" is now correctly ordered in the combat section.
  * Storm Knights can actively defense- so why can't threats? Now, threats as well can defend themself actively.
 
