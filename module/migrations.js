@@ -77,6 +77,26 @@ export async function torgMigration(){
         }
         if(needsFix) await migrateImagestoWebp({system: true, modules: false})
     }
+
+    //migrations up to 3.3.0
+    if (isNewerVersion("3.3.0", migrationVersion)) {
+        // code to migrate heavy weapon groupName
+        game.actors.forEach(async act => {
+            if (act.system.skills.missileWeapons.groupName != "combat") {
+                await act.update({ "system.skills.missileWeapons.groupName": "combat" })
+                ui.notifications.info(act.name + " missile : migrated")
+            }
+
+        });
+        game.actors.forEach(async act => {
+            if (act.system.skills.heavyWeapons.groupName != "combat") {
+                await act.update({ "system.skills.heavyWeapons.groupName": "combat" })
+                ui.notifications.info(act.name + "heavy : migrated")
+            }
+
+        })
+    }
+
     /*************************************************************
     New migrations go here.
 
