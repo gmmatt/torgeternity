@@ -222,8 +222,25 @@
             "tharkold": "Tharkold",
             "panPacifica": "Pan-Pacifica",
             "orrorsh": "Orrorsh",
+            "coreEarthPossLink": "Compendium.torgeternity.system-de-basisregeln.JournalEntry.ePJekdztsz1JPoT9.JournalEntryPage.v46rtTLn1xMuJBSz",
+            "coreEarthPossLink2": "möglichkeitsenergie",
+            "livingLandPossLink": "Compendium.te004-living-land.lebendes-land-notizbuch.JournalEntry.rArdHHvvlKUJ276L.JournalEntryPage.CobHOqQyoBO3lzTn",
+            "livingLandPossLink2": "möglichkeitsenergie-des-lebenden-landes",
+            "nileEmpirePossLink": "Compendium.te006-nile-empire.nil-imperium-notizbuch.JournalEntry.sp30mLWmoTYkFRGV.JournalEntryPage.ntjR3pMnjZQX4PAz",
+            "nileEmpirePossLink2": "möglichkeitsenergie-des-nil-imperiums",
+            "ayslePossLink": "Compendium.te008-aysle.aysle-journale.JournalEntry.gaMFES9t60u46YtS.JournalEntryPage.g26VBpUgtckMnyc1",
+            "ayslePossLink2": "möglichkeitsenergie-aysles",
+            "cyberpapacyPossLink": "Compendium.te010-cyberpapacy.cyberpontifikat-journale.JournalEntry.8VMtcTXAx7spzhYE.JournalEntryPage.Mj7D3PZNifQDQ5WA",
+            "cyberpapacyPossLink2": "möglichkeitsenergie-des-cyberpontifikats",
+            "tharkoldPossLink": "Compendium.te012-tharkold.tharkold-notiz.JournalEntry.CKrXJOxwDO5Ik3CK.JournalEntryPage.CMSpw9CmIYRhSjaB",
+            "tharkoldPossLink2": "möglichkeitsenergie-tharkolds",
+            "panPacificaPossLink": "Compendium.te016-pan-pacifica.pan-pacifica-journals.JournalEntry.djoNGjsSOk7CsnQh.JournalEntryPage.VB1wEM80BtkrkFBf",
+            "panPacificaPossLink2": "pan-pacifica-possibility-energy",
+            "orrorshPossLink": "Compendium.te014-orrorsh.orrorsh-notiz.JournalEntry.H2mGtpAJfQvzqGho.JournalEntryPage.VB1wEM80BtkrkFBf",
+            "orrorshPossLink2":"möglichkeitsenergie-von-orrorsh",
             "other": "Andere",
-            "pure": "pure",
+            "otherPoss":"Frag deinen Spielleiter",
+            "pure": "pur",
             "mixed": "gemischt",
             "dominant": "dominant"
         },
@@ -259,7 +276,9 @@
             "hope": "Hoffnung",
             "cursed": "Verflucht",
             "biotech": "Biotech",
-            "powerSuit": "Power Suit"
+            "powerSuit": "Power Suit",
+            "invasion": "Invasion",
+            "stalenger": "Stalenger"
         },
         "sheetLabels": {
             "applyDamage":"Schaden anwenden",
@@ -437,14 +456,15 @@
             "lastPossMess": "<h3>Dies ist deine letzte Möglichkeit, willst du sie wirklich ausgeben?<br>Are You sure ?</h3>",
             "lastSpent": "Letzte Möglichkeit ausgegeben!",
             "freePoss": "SL schenkt dir eine Möglichkeit!",
-            "noPossFree": "Keine Möglichkeit!<br>Möchtest du eine Möglichkeit schenken?"
-
+            "noPossFree": "Keine Möglichkeit!<br>Möchtest du eine Möglichkeit schenken?",
+            "possibilityByCosm": "Möglichkeiten nach Cosm"
 
         },
         "combat": {
             "nextKeep": "Neue Runde (aktuelle Karte behalten)",
             "nextNew": "neue Runde (neue Dramakarte)",
-            "dramaBack": "systems/torgeternity/images/cards/drama-back.webp"
+            "dramaBack": "systems/torgeternity/images/cards/drama-back.webp",
+            "endMyTurn": "Zug beenden"
         },
         "itemSheetDescriptions": {
             "perk": "Vorzug",
@@ -809,7 +829,8 @@
             "dramaDeckEmpty": "Das Dramadeck ist aufgebraucht. Bitte das Dramadeck zurücksetzen.",
             "onlyReservedCard": "Bitte nur Karten aus dem Aktionenpool spielen.",
             "noActiveEffectInOwnedItem": "Das Ändern von aktiven Effekten innerhalb eines Items mit Besitzrechten ist zur Zeit noch nicht implementiert.",
-            "noTarget": "Kein valides Token im Ziel"
+            "noTarget": "Kein valides Token im Ziel",
+            "moduleNotActive": "Activate the module to see desscription."
         },
         "gmScreen": {
             "title": "SL-Schirm",

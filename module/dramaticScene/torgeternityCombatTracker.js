@@ -13,6 +13,7 @@ export default class torgeternityCombatTracker extends CombatTracker {
         html.find("a.has-played").click(this._hasPlayed.bind(this));
         html.find("a.dsr-counter").click(this._dsrCounter.bind(this));
         html.find("a.player-dsr-counter").click(this._playerDsrCounter.bind(this));
+        html.find("a.combat-finish.center").click(this._hasFinished.bind(this));
         // html.find(".fa-check-circle").click(this._toggleCheck.bind(this));
     }
 
@@ -22,6 +23,10 @@ export default class torgeternityCombatTracker extends CombatTracker {
         ev.currentTarget.classList.toggle("far");
         ev.currentTarget.classList.toggle("playedOK");
 
+    }
+
+    async _hasFinished(ev) {
+        this.viewed.combatants.find(c => c.actorId === game.user.character.id).setFlag("world", "turnTaken", true);
     }
 
     async _hasPlayed(ev) {
