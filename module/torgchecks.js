@@ -316,6 +316,9 @@ export function renderSkillChat(test) {
     test.displayModifiers = true;
     test.modifiers = 0;
     test.modifierText = "";
+    if (test.testTtype === "soak") {
+        test.vulnerableModifier = 0;
+    };
 
     if (test.woundModifier < 0) {
         test.displayModifiers = true;
@@ -920,7 +923,7 @@ export async function applyDamages(damageObject) {
             }
         }
         // too many shocks, apply KO if not dead
-        if (newShock >= targetToken.actor.system.shock.max) {
+        if (newShock > targetToken.actor.system.shock.max) {
             if (!targetToken.actor.statuses.find(d=>d==='unconscious')) {
                 if (!targetToken.actor.statuses.find(d=>d==='dead')) {
                     const eff = CONFIG.statusEffects.find(e => e.id === "unconscious");

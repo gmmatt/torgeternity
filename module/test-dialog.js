@@ -64,7 +64,7 @@ export class testDialog extends FormApplication {
         // ***Set Target Data***
         // Transfer data here because passing the entire target to a chat message tends to degrade the data
         //       
-        if (data.test.targets.length > 0) {
+        if (data.test.targets.length > 0 & data.test.testType!== "soak") {
             // Identify the first target
             var target = Array.from(data.test.targets)[0].actor;
 
