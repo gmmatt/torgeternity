@@ -58,7 +58,7 @@ export function alphabSort(html, data) {
     }
     if (data.actor.type === "threat") {
 
-        let inlineSkillLists = document.getElementsByClassName("inline-skill-list");
+        let inlineSkillLists = html[0].getElementsByClassName("inline-skill-list");
         for (let list of inlineSkillLists) {
             const spans = list.childNodes;
             let complist = [];
@@ -80,7 +80,7 @@ export function alphabSort(html, data) {
             }
         }
 
-        let SkillListEdit = document.getElementsByClassName("skill-list-edit");
+        let SkillListEdit = html[0].getElementsByClassName("skill-list-edit");
         for (let list of SkillListEdit) {
             const divs = list.childNodes;
             let complist = [];
@@ -101,7 +101,7 @@ export function alphabSort(html, data) {
                 }
             }
         }
-        let AttListEdit = document.getElementsByClassName("attribut-list-edit");
+        let AttListEdit = html[0].getElementsByClassName("attribut-list-edit");
         for (let list of AttListEdit) {
             const spans = list.childNodes;
             let complist = [];
