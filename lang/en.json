@@ -281,6 +281,10 @@
             "stalenger": "Stalenger"
         },
         "sheetLabels": {
+            "applyStymied":"Apply Stymied",
+            "applyStymiedTooltip": "Click to apply Stymied. Or Very Stymied if already Stymied.",
+            "applyVulnerable":"Apply Vulnerable",
+            "applyVulnerableTooltip": "Click to apply Vulnerable. Or Very Vulnerable if already Vulnerable.",
             "applyDamage":"Apply damages",
             "applyDamageTooltip": "Right-click to modify applied damages, Left-click to apply.",
             "soakDamage": "Soak damages",
@@ -813,7 +817,9 @@
         },
         "skillDialogs": {
             "disfavored": "Disfavored",
-            "disfavoredTip": "Check if this test is disfavored. The die roll will not explode on a 10 or 20."
+            "disfavoredTip": "Check if this test is disfavored. The die roll will not explode on a 10 or 20.",
+            "favored": "Favored",
+            "favoredTip": "Check if this test is favored for some unexpected reason."
         },
         "notifications": {
             "macroTypeWarning": "You can only create macro buttons for owned Items and Attributes/Skills",

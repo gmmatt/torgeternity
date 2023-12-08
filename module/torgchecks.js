@@ -252,15 +252,15 @@ export function renderSkillChat(test) {
             dice = "1d20x10"
         }
         test.diceroll = new Roll(dice).evaluate({ async: false });
-        console.log(test.isFav);
-        console.log(test.disfavored);
+        //console.log(test.isFav);
+        //console.log(test.disfavored);
         if (test.isFav && test.disfavored) {
             test.isFav = false;
             test.disfavored = false;
             test.chatNote += game.i18n.localize("torgeternity.sheetLabels.favDis")
         }
-        console.log(test.isFav);
-        console.log(test.disfavored);
+        //console.log(test.isFav);
+        //console.log(test.disfavored);
         if (!test.isFav) {
             test.isFavStyle = "pointer-events:none;color:gray;display:none";
         }

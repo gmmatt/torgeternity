@@ -161,6 +161,11 @@ export class testDialog extends FormApplication {
             this.test.disfavored = false
         }
 
+        // Check for favored and flag if needed
+        if (document.getElementById("favored").checked) {
+            this.test.isFav = true
+        }
+
         // Add bonus, if needed
         if (document.getElementById("previous-bonus").checked) {
             this.test.previousBonus = true
