@@ -299,8 +299,8 @@ async function soakDam(event) {
         possPool += 1;
     };
 
-    await soaker.update({"system.other.possibilities": possPool-1});
     soakDamages(soaker);
+    await soaker.update({"system.other.possibilities": possPool-1});
 }
 
 async function adjustDam(event) {

@@ -941,7 +941,7 @@ export async function soakDamages(soaker) {
     const skillName = "reality";
     const attributeName = "spirit";
     const isAttributeTest = false;
-    var skillValue = soaker.system.skills[skillName].value;
+    var skillValue = soaker.system.skills[skillName]?.value || "-";
 
     // Before calculating roll, check to see if it can be attempted unskilled; exit test if actor doesn't have required skill
     if (checkUnskilled(skillValue, skillName, soaker)) {
