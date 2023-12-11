@@ -64,7 +64,7 @@ export class testDialog extends FormApplication {
         // ***Set Target Data***
         // Transfer data here because passing the entire target to a chat message tends to degrade the data
         //       
-        if (data.test.targets.length > 0) {
+        if (data.test.targets.length > 0 & data.test.testType!== "soak") {
             // Identify the first target
             var target = Array.from(data.test.targets)[0].actor;
 
@@ -159,6 +159,11 @@ export class testDialog extends FormApplication {
             this.test.disfavored = true
         } else {
             this.test.disfavored = false
+        }
+
+        // Check for favored and flag if needed
+        if (document.getElementById("favored").checked) {
+            this.test.isFav = true
         }
 
         // Add bonus, if needed

@@ -252,15 +252,15 @@ export function renderSkillChat(test) {
             dice = "1d20x10"
         }
         test.diceroll = new Roll(dice).evaluate({ async: false });
-        console.log(test.isFav);
-        console.log(test.disfavored);
+        //console.log(test.isFav);
+        //console.log(test.disfavored);
         if (test.isFav && test.disfavored) {
             test.isFav = false;
             test.disfavored = false;
             test.chatNote += game.i18n.localize("torgeternity.sheetLabels.favDis")
         }
-        console.log(test.isFav);
-        console.log(test.disfavored);
+        //console.log(test.isFav);
+        //console.log(test.disfavored);
         if (!test.isFav) {
             test.isFavStyle = "pointer-events:none;color:gray;display:none";
         }
@@ -316,6 +316,9 @@ export function renderSkillChat(test) {
     test.displayModifiers = true;
     test.modifiers = 0;
     test.modifierText = "";
+    if (test.testTtype === "soak") {
+        test.vulnerableModifier = 0;
+    };
 
     if (test.woundModifier < 0) {
         test.displayModifiers = true;
@@ -920,7 +923,7 @@ export async function applyDamages(damageObject) {
             }
         }
         // too many shocks, apply KO if not dead
-        if (newShock >= targetToken.actor.system.shock.max) {
+        if (newShock > targetToken.actor.system.shock.max) {
             if (!targetToken.actor.statuses.find(d=>d==='unconscious')) {
                 if (!targetToken.actor.statuses.find(d=>d==='dead')) {
                     const eff = CONFIG.statusEffects.find(e => e.id === "unconscious");
@@ -938,7 +941,7 @@ export async function soakDamages(soaker) {
     const skillName = "reality";
     const attributeName = "spirit";
     const isAttributeTest = false;
-    var skillValue = soaker.system.skills[skillName].value;
+    var skillValue = soaker.system.skills[skillName]?.value || "-";
 
     // Before calculating roll, check to see if it can be attempted unskilled; exit test if actor doesn't have required skill
     if (checkUnskilled(skillValue, skillName, soaker)) {

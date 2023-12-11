@@ -281,6 +281,10 @@
             "stalenger": "Stalenger"
         },
         "sheetLabels": {
+            "applyStymied":"Appliquer Déstabilisé",
+            "applyStymiedTooltip": "Applique Déstabilisé, ou Très Déstabilisé si déjà Déstabilisé.",
+            "applyVulnerable":"Appliquer Vulnérable",
+            "applyVulnerableTooltip": "Applique Vulnérable, ou Très Vulnérable si déjà Vulnérable.",
             "applyDamage":"Appliquer dommages",
             "applyDamageTooltip": "ClickDroit pour ajuster les dommages, ClickGauche pour les appliquer.",
             "soakDamage": "Annulation dommages",
@@ -813,7 +817,9 @@
         },
         "skillDialogs": {
             "disfavored": "Défavorisé",
-            "disfavoredTip": "Cochez si le test est défavorisé. Le dé n'explosera sur les 10 et 20"
+            "disfavoredTip": "Cochez si le test est défavorisé. Le dé n'explosera sur les 10 et 20",
+            "favored": "Favorisé",
+            "favoredTip": "Cochez si le test est favorisé pour une raison ponctuelle."
         },
         "notifications": {
             "macroTypeWarning": "Vous ne pouvez créer des macros que pour vos objets, attributs ou compétences",

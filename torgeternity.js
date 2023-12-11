@@ -610,6 +610,9 @@ function rollItemMacro(itemName) {
                         break;
                     default:
                         dnDescriptor = "targetMeleeWeapons"
+                };
+                if (firstTarget.type === "vehicle") {
+                    dnDescriptor = "targetVehicleDefense"
                 }
             } else {
                 dnDescriptor = "standard"

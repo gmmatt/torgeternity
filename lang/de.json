@@ -281,6 +281,10 @@
             "stalenger": "Stalenger"
         },
         "sheetLabels": {
+            "applyStymied":"Apply Stymied",
+            "applyStymiedTooltip": "Click to apply Stymied. Or Very Stymied if already Stymied.",
+            "applyVulnerable":"Apply Vulnerable",
+            "applyVulnerableTooltip": "Click to apply Vulnerable. Or Very Vulnerable if already Vulnerable.",
             "applyDamage":"Schaden anwenden",
             "applyDamageTooltip": "Linksclick zum anwenden, Rechtsklick zum modifizieren.",
             "soakDamage": "Schaden wegstecken",
@@ -813,7 +817,9 @@
         },
         "skillDialogs": {
             "disfavored": "Benachteiligt",
-            "disfavoredTip": "Anhaken, wenn der Wurf benachteiligt ist. Der Würfelwurf wird dann nicht auf einer 10 oder 20 explodieren." 
+            "disfavoredTip": "Anhaken, wenn der Wurf benachteiligt ist. Der Würfelwurf wird dann nicht auf einer 10 oder 20 explodieren.",
+            "favored": "Begünstigt",
+            "favoredTip": "Setze hier einen Haken, sofern die Probe aus welchen Gründen auch immer im Nachhinein begünstigt wird." 
         },
         "notifications": {
             "macroTypeWarning": "Du kannst nur Makro-Buttons für Items/Attribute/Fertigkeiten kreieren, die dir gehören.",
