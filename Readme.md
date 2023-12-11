@@ -8,6 +8,13 @@
 For manual installation, use the provided manifest URL in the "*Install System*" popup window 
 while managing game systems.
 
+v. 3.3.1
+ * Vehicle defenses are now correct
+ * Vehicle weapons can be used again
+ * Being vulnerable now giving no longer bonuses for soak tests
+ * Skills on threats are no longer disordered after changing a value
+ * 
+
 v. 3.3.0
  * If a Storm Knight is deleted, the appropriate hand will be deleted as well.
  * The combat tracker now behaves like it should for TE: All players now have the "Done" button displayed. If a player clicks it, the GM's combat tracker will be updated with a checked checkmark at the apropriate character. However, to end the round is totally up to the GM.
