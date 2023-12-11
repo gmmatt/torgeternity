@@ -818,8 +818,8 @@
         "skillDialogs": {
             "disfavored": "Benachteiligt",
             "disfavoredTip": "Anhaken, wenn der Wurf benachteiligt ist. Der Würfelwurf wird dann nicht auf einer 10 oder 20 explodieren.",
-            "favored": "Favored",
-            "favoredTip": "Check if this test is favored for some unexpected reason." 
+            "favored": "Begünstigt",
+            "favoredTip": "Setze hier einen Haken, sofern die Probe aus welchen Gründen auch immer im Nachhinein begünstigt wird." 
         },
         "notifications": {
             "macroTypeWarning": "Du kannst nur Makro-Buttons für Items/Attribute/Fertigkeiten kreieren, die dir gehören.",
