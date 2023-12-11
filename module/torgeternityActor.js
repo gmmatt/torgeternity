@@ -161,8 +161,9 @@ export default class torgeternityActor extends Actor {
                 speedPenalty=-6
             }
             this.system.topSpeed.penalty = speedPenalty;
-            this.system.defense = parseInt(-this.system.topSpeed.penalty + this.system.operator.skillValue+this.system.maneuver);
-        }
+            
+            this.system.defense = parseInt(this.system.operator.skillValue + this.system.maneuver);
+            }
     }
 
     prepareDerivedData() {
