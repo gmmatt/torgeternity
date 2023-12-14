@@ -234,7 +234,7 @@ function onBd(event) {
     parentMessage.setFlag("torgeternity", "test");
     test.isFavStyle = "pointer-events:none;color:gray;display:none";
 
-    var finalValue = torgBD();
+    var finalValue = torgBD(test.trademark);
     
     var newDamage = parseInt(test.damage) + parseInt(finalValue.total);
     test.damage = newDamage;

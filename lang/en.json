@@ -281,6 +281,8 @@
             "stalenger": "Stalenger"
         },
         "sheetLabels": {
+            "trademarkHint": "Trademark Weapon Perk for the used weapon",
+            "trademark": "Trademark Weapon",
             "applyStymied":"Apply Stymied",
             "applyStymiedTooltip": "Click to apply Stymied. Or Very Stymied if already Stymied.",
             "applyVulnerable":"Apply Vulnerable",

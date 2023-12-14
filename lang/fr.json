@@ -281,6 +281,8 @@
             "stalenger": "Stalenger"
         },
         "sheetLabels": {
+            "trademarkHint": "Trademark Weapon Perk pour l'arme utilisée",
+            "trademark": "Arme de prédilection",
             "applyStymied":"Appliquer Déstabilisé",
             "applyStymiedTooltip": "Applique Déstabilisé, ou Très Déstabilisé si déjà Déstabilisé.",
             "applyVulnerable":"Appliquer Vulnérable",

@@ -853,9 +853,13 @@ export function torgBonus(rollTotal) {
 
 }
 
-export function torgBD() {
+export function torgBD(isTrademark) {
     let diceroll;
-    diceroll = new Roll('1d6x6max5').evaluate({ async: false });
+    if (isTrademark) {
+        diceroll = new Roll('1d6rr1x6max5').evaluate({ async: false });
+    } else {
+        diceroll = new Roll('1d6x6max5').evaluate({ async: false });
+    }
 
     return diceroll
 }
