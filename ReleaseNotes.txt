@@ -4,7 +4,8 @@ Release System
 1.1 as you are in the system.json file, you need to change the folder to the appropriate version number in the "download" object
 2. Make sure readme is up to date.
 3. Check if foundry loads
-4. Create a torgeternity.zip file, EXCLUDING: 
+4. Close Foundry, if necessary reverse pack changes
+5. Create a torgeternity.zip file, EXCLUDING: 
 - .lock file
 - .git folder
 - .vscode folder
@@ -12,11 +13,11 @@ Release System
 - .gitignore file
 - merge-upstream file
 
-5. Go to github, click on "Releases"
-5.1 "Draft new release" Button
-5.2 Choose a tag exactly like the version number, example: "3.1.4"
-5.3 Add a description (copy & paste the readme snippet for that version)
-5.4 Add the zip file and the system.json file
+6. Go to github, click on "Releases"
+6.1 "Draft new release" Button
+6.2 Choose a tag exactly like the version number, example: "3.1.4"
+6.3 Add a description (copy & paste the readme snippet for that version)
+6.4 Add the zip file and the system.json file
 
 
 Release Module
