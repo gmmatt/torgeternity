@@ -13,7 +13,8 @@ v. 3.3.1
 - Vehicle weapons can be used again
 - Being vulnerable now giving no longer bonuses for soak tests
 - Skills on threats are no longer disordered after changing a value
--
+- On automatic damage appliance, shock must exceed the character's shock maximum to set him KO (prevously it was on point).
+- New option on attack dialogue for trademark weapon's mechanic.
 
 v. 3.3.0
 
