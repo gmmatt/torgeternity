@@ -1,59 +1,46 @@
 <form class="{{cssClass}} item-sheet" autocomplete="off">
-    <h3 class="item-type"><span>{{localize "torgeternity.itemSheetDescriptions.implant"}}</span></h3>
+  <h3 class="item-type"><span>{{localize "torgeternity.itemSheetDescriptions.implant"}}</span></h3>
 
-    <header class="sheet-header">
-        <img src="{{item.img}}" data-edit="img" title="{{item.name}}"  />
-        <h1><input name="name" type="text" value="{{item.name}}" placeholder="implant Name"
-                 />
-        </h1>
-    </header>
+  <header class="sheet-header">
+    <img src="{{item.img}}" data-edit="img" title="{{item.name}}" />
+    <h1><input name="name" type="text" value="{{item.name}}" placeholder="implant Name" /></h1>
+  </header>
 
-    <nav class="sheet-tabs item-tabs tabs" data-group="primary">
-        <a class="item" data-tab="stats" >{{localize "torgeternity.sheetLabels.stats"}}</a>
-        <a class="item" data-tab="effects">{{localize "torgeternity.sheetLabels.effects"}}</a>
-    </nav>
+  <nav class="sheet-tabs item-tabs tabs" data-group="primary">
+    <a class="item" data-tab="stats">{{localize "torgeternity.sheetLabels.stats"}}</a>
+    <a class="item" data-tab="effects">{{localize "torgeternity.sheetLabels.effects"}}</a>
+  </nav>
 
-    <section class="sheet-body" >
-
-        <div class="tab stats" data-group="primary" data-tab="stats">
-
-            <div class="sheet-content">
-                <div class="asside">
-                    <p class="item-data-label">
-                        {{localize "torgeternity.gear.cosm"}}
-                    </p>
-                    <select name="system.cosm" class="input-box">
-                        {{#select item.system.cosm}}
-                        {{#each config.cosmTypes as |name type|}}
-                        <option value="{{localize name}}">{{localize name}}</option>
-                        {{/each}}
-                        {{/select}}
-                    </select>
-                    <p class="item-data-label">
-                        {{localize "torgeternity.gear.techlevel"}}
-                    </p>
-                    <input name="system.techlevel" type="number" value="{{item.system.techlevel}}" class="input-box" />
-                    <p class="item-data-label">
-                        {{localize "torgeternity.gear.price"}}/{{torgeternity.gear.value}}
-                    </p>
-                    <input name="system.price" type="text" value="{{item.system.price}}" class="input-box-small" />
-                    <input name="system.value" type="number" value="{{item.system.value}}" class="input-box-small" />
-                </div>
-                <div class="main-content">
-                    <!-- right column -->
-                    <p class="item-data-label">
-                        {{localize "torgeternity.gear.notes"}}&nbsp;
-                        <input name="system.notes" type="text" value="{{item.system.notes}}" class="input-box" />
-                    </p>
-                    <div name="description" class="item-description-textarea">
-                        {{editor description target="system.description" button=true owner=owner editable=editable}}
-                    </div>
-                </div>
-            </div>
+  <section class="sheet-body">
+    <div class="tab stats" data-group="primary" data-tab="stats">
+      <div class="sheet-content">
+        <div class="asside">
+          <p class="item-data-label">{{localize "torgeternity.gear.cosm"}}</p>
+          <select name="system.cosm" class="input-box">
+            {{#select item.system.cosm}} {{#each config.cosmTypes as |name type|}}
+            <option value="{{localize name}}">{{localize name}}</option>
+            {{/each}} {{/select}}
+          </select>
+          <p class="item-data-label">{{localize "torgeternity.gear.techlevel"}}</p>
+          <input name="system.techlevel" type="number" value="{{item.system.techlevel}}" class="input-box" />
+          <p class="item-data-label">{{localize "torgeternity.gear.price"}}/{{torgeternity.gear.value}}</p>
+          <input name="system.price" type="text" value="{{item.system.price}}" class="input-box-small" />
+          <input name="system.value" type="number" value="{{item.system.value}}" class="input-box-small" />
         </div>
-        <div class="tab effects" data-group="primary" data-tab="effects">
-            {{> "systems/torgeternity/templates/parts/active-effects.hbs"}}
+        <div class="main-content">
+          <!-- right column -->
+          <p class="item-data-label">
+            {{localize "torgeternity.gear.notes"}}&nbsp;
+            <input name="system.notes" type="text" value="{{item.system.notes}}" class="input-box" />
+          </p>
+          <div name="description" class="item-description-textarea">
+            {{editor description target="system.description" button=true owner=owner editable=editable}}
+          </div>
         </div>
-
-    </section>
+      </div>
+    </div>
+    <div class="tab effects" data-group="primary" data-tab="effects">
+      {{> "systems/torgeternity/templates/parts/active-effects.hbs"}}
+    </div>
+  </section>
 </form>

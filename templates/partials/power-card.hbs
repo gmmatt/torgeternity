@@ -1,19 +1,22 @@
-<div class="spell-card sheet-card" data-type="{{data.type}}"
-    style="background-image: url('systems/torgeternity/images/bgparch.webp')">
-    <table style="border:none;background-color:transparent">
-        <tr style="border:none">
-            <td>
-                <img class="actor-icon" src="{{img}}" title="{{name}}" style="width:50px;height:50px" />
-            </td>
-            <td class="chat-title" style="font-size:28px">
-                {{name}}
-            </td>
-        </tr>
-    </table>
-    <div class="chat-text">
-        <p>{{localize "torgeternity.sheetLabels.skillValue"}}: {{skillValue}}</p>
-        <p>{{bonus}}</p>
-        <p>{{localize "torgeternity.chatText.result.result"}}: {{result}}</p>
-        <p>{{localize "torgeternity.powers.damage"}}: {{baseDamage}}</p>
-    </div>
+<div
+  class="spell-card sheet-card"
+  data-type="{{data.type}}"
+  style="background-image: url('systems/torgeternity/images/bgparch.webp')"
+>
+  <table style="border:none;background-color:transparent">
+    <tr style="border:none">
+      <td>
+        <img class="actor-icon" src="{{img}}" title="{{name}}" style="width:50px;height:50px" />
+      </td>
+      <td class="chat-title" style="font-size:28px">
+        {{name}}
+      </td>
+    </tr>
+  </table>
+  <div class="chat-text">
+    <p>{{localize "torgeternity.sheetLabels.skillValue"}}: {{skillValue}}</p>
+    <p>{{bonus}}</p>
+    <p>{{localize "torgeternity.chatText.result.result"}}: {{result}}</p>
+    <p>{{localize "torgeternity.powers.damage"}}: {{baseDamage}}</p>
+  </div>
 </div>

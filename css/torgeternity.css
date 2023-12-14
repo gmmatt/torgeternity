@@ -1,148 +1,146 @@
 @import url("https://fonts.googleapis.com/css2?family=Martel:wght@400;800&family=Roboto:wght@300;400;500&display=swap");
 
 @font-face {
-    font-family: "graveBolt";
-    src: url("../fonts/GraveSideBB.ttf");
+  font-family: "graveBolt";
+  src: url("../fonts/GraveSideBB.ttf");
 }
 
 @font-face {
-    font-family: "Alaska";
-    src: url("../fonts/Alaska Extrabold Bold.ttf");
+  font-family: "Alaska";
+  src: url("../fonts/Alaska Extrabold Bold.ttf");
 }
 
 @font-face {
-    font-family: "OptiBold";
-    src: url("../fonts/OPTITriplettBoldAgency.otf");
+  font-family: "OptiBold";
+  src: url("../fonts/OPTITriplettBoldAgency.otf");
 }
 
 @font-face {
-    font-family: "OptiLight";
-    src: url("../fonts/OPTITriplettLight-Agency.otf");
+  font-family: "OptiLight";
+  src: url("../fonts/OPTITriplettLight-Agency.otf");
 }
 
 @font-face {
-    font-family: "Friz";
-    src: url("../fonts/Friz Quadrata TT Regular.ttf");
+  font-family: "Friz";
+  src: url("../fonts/Friz Quadrata TT Regular.ttf");
 }
 
 @font-face {
-    font-family: "Palatino";
-    src: url("../fonts/palatino_linotype.ttf");
+  font-family: "Palatino";
+  src: url("../fonts/palatino_linotype.ttf");
 }
 
 /*Defining colors as variables, using it in an animation-keyframe*/
 :root {
-    --torgblue: rgb(65, 90, 155);
-    --torgred: rgb(150, 0, 0);
+  --torgblue: rgb(65, 90, 155);
+  --torgred: rgb(150, 0, 0);
 }
 
 @keyframes colorchange {
-    0% {
-        color: var(--torgblue);
-    }
+  0% {
+    color: var(--torgblue);
+  }
 
-    100% {
-        color: var(--torgred);
-    }
+  100% {
+    color: var(--torgred);
+  }
 }
 
 div.actor ::-webkit-scrollbar {
-    background: transparent none;
+  background: transparent none;
 }
 
 div.actor ::-webkit-scrollbar {
-    width: 0px;
-    height: 0px;
+  width: 0px;
+  height: 0px;
 }
-
 
 /* Global styles */
 
 .grid,
 .grid-2col {
-    display: grid;
-    grid-column: span 2 / span 2;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 10px;
-    margin: 10px 0;
-    padding: 0;
+  display: grid;
+  grid-column: span 2 / span 2;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  margin: 10px 0;
+  padding: 0;
 }
 
 .grid-3col {
-    grid-column: span 3 / span 3;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-column: span 3 / span 3;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
 .grid-4col {
-    grid-column: span 4 / span 4;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-column: span 4 / span 4;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
 .grid-5col {
-    grid-column: span 5 / span 5;
-    grid-template-columns: repeat(5, minmax(0, 1fr));
+  grid-column: span 5 / span 5;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
 }
 
 .grid-6col {
-    grid-column: span 5 / span 5;
-    grid-template-columns: repeat(5, minmax(0, 1fr));
+  grid-column: span 5 / span 5;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
 }
 
 .grid-7col {
-    grid-column: span 7 / span 7;
-    grid-template-columns: repeat(7, minmax(0, 1fr));
+  grid-column: span 7 / span 7;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
 }
 
 .grid-8col {
-    grid-column: span 8 / span 8;
-    grid-template-columns: repeat(8, minmax(0, 1fr));
+  grid-column: span 8 / span 8;
+  grid-template-columns: repeat(8, minmax(0, 1fr));
 }
 
 .grid-9col {
-    grid-column: span 9 / span 9;
-    grid-template-columns: repeat(9, minmax(0, 1fr));
+  grid-column: span 9 / span 9;
+  grid-template-columns: repeat(9, minmax(0, 1fr));
 }
 
 .grid-10col {
-    grid-column: span 10 / span 10;
-    grid-template-columns: repeat(10, minmax(0, 1fr));
+  grid-column: span 10 / span 10;
+  grid-template-columns: repeat(10, minmax(0, 1fr));
 }
 
 .grid-11col {
-    grid-column: span 11 / span 11;
-    grid-template-columns: repeat(11, minmax(0, 1fr));
+  grid-column: span 11 / span 11;
+  grid-template-columns: repeat(11, minmax(0, 1fr));
 }
 
 .grid-12col {
-    grid-column: span 12 / span 12;
-    grid-template-columns: repeat(12, minmax(0, 1fr));
+  grid-column: span 12 / span 12;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
 }
 
 .flex-center,
 .flex-left,
 .flex-right {
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 5px;
-    border: 1px solid #999;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 5px;
+  border: 1px solid #999;
 }
 
 .flex-left {
-    justify-content: flex-start;
-    text-align: left;
+  justify-content: flex-start;
+  text-align: left;
 }
 
 .flex-right {
-    justify-content: flex-end;
-    text-align: right;
+  justify-content: flex-end;
+  text-align: right;
 }
-
 
 /* foundry parts */
 
 #modalIO {
-    color: black;
+  color: black;
 }
 
 /*                                      */
@@ -150,162 +148,161 @@ div.actor ::-webkit-scrollbar {
 /*                                      */
 
 .window-content .actor-sheet nav.tabs.vehicle {
-    display: flex;
-    flex-direction: row;
-    text-align: center;
-    border: none;
-    position: absolute;
-    transform: rotateZ(90deg);
-    font-family: Alaska;
-    font-size: 13px;
-    text-transform: capitalize;
-    right: -158px;
-    top: 158px;
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  border: none;
+  position: absolute;
+  transform: rotateZ(90deg);
+  font-family: Alaska;
+  font-size: 13px;
+  text-transform: capitalize;
+  right: -158px;
+  top: 158px;
 }
 
 .window-content .actor-sheet .vehicle-description .editor {
-    grid-column: 1/9;
-    grid-row: 1/9;
-    background: url(../images/bckg-hex.webp);
-    background-size: 100% 90%;
-    background-repeat:no-repeat;
-    min-height: 200px;
-    min-width: 150px;
-    padding: 15% 10% 10% 10%;
+  grid-column: 1/9;
+  grid-row: 1/9;
+  background: url(../images/bckg-hex.webp);
+  background-size: 100% 90%;
+  background-repeat: no-repeat;
+  min-height: 200px;
+  min-width: 150px;
+  padding: 15% 10% 10% 10%;
 }
 
 .window-content .actor-sheet .vehicle-description .list-section-heading {
-    grid-column: 1/9;
-    grid-row: 1/2;
-    align-items: center;
+  grid-column: 1/9;
+  grid-row: 1/2;
+  align-items: center;
 }
 
 .sheet .vehicle-description .editor-content {
-    height: 90%;
-    overflow-y: auto;
-    word-break: break-word;
+  height: 90%;
+  overflow-y: auto;
+  word-break: break-word;
 }
 
 .vehicle-tab[data-tab] {
-    display:none;
+  display: none;
 }
 
 .vehicle-tab[data-tab].active {
-    display:block !important;
+  display: block !important;
 }
 
 form.actor-sheet header.sheet-header-vehicle {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .window-content .actor-sheet .vehicle-header-image {
-    flex-grow: 1;
+  flex-grow: 1;
 }
 
 .window-content .actor-sheet .vehicle-header-name {
-    align-self:center;
-    flex-grow:5;
+  align-self: center;
+  flex-grow: 5;
 }
 
 .window-content .actor-sheet .vehicle-header-name input[name="name"] {
-    width: 100%;
-    text-transform: uppercase;
-    text-shadow: 0px-2px 10px #0e0909;
-    font-family: Alaska;
-    font-size: 24px;
-    text-align: center;
-    color: #0e0909;
+  width: 100%;
+  text-transform: uppercase;
+  text-shadow: 0px-2px 10px #0e0909;
+  font-family: Alaska;
+  font-size: 24px;
+  text-align: center;
+  color: #0e0909;
 }
 
 .window-content .actor-sheet .vehicle-header-type {
-    padding: 22px;
-    flex-grow:2;
+  padding: 22px;
+  flex-grow: 2;
 }
 
 .groove-borders {
-    border:2px groove #eeede0;
-    border-radius: 4px;
-    border-collapse: separate;
+  border: 2px groove #eeede0;
+  border-radius: 4px;
+  border-collapse: separate;
 }
 
 .left-align {
-    text-align: left;
+  text-align: left;
 }
 
 .window-content .actor-sheet input.long-text {
-    width: 200px;   
+  width: 200px;
 }
 
 .window-app .window-content .actor-sheet button.chase-roll,
 .window-app .window-content .actor-sheet button.stunt-roll,
 .window-app .window-content .actor-sheet button.collision-roll,
 .window-app .window-content .actor-sheet button.base-roll {
-    border: 1px;
-    border-radius: 4px;
-    text-align: center;
-    display: inline-block;
-    font-size: 12px;
-    margin: 4px 2px;
-    color: black;
-    text-shadow: none;
-    background-image: none;
-    width: 100px;
+  border: 1px;
+  border-radius: 4px;
+  text-align: center;
+  display: inline-block;
+  font-size: 12px;
+  margin: 4px 2px;
+  color: black;
+  text-shadow: none;
+  background-image: none;
+  width: 100px;
 }
 
 .window-content .actor-sheet li.vehicle-weapon-header,
 .window-content .actor-sheet li.add-on-header {
-    display: flex;
+  display: flex;
 }
 
 .window-content .actor-sheet li.vehicle-weapon-header .image-header,
 .window-content .actor-sheet li.add-on-header .image-header {
-    flex: 0 30px;
+  flex: 0 30px;
 }
 
 .window-content .actor-sheet li.vehicle-weapon-header div.name-header,
 .window-content .actor-sheet li.add-on-header .name-header {
-    flex: 2;
-    text-align:center;
+  flex: 2;
+  text-align: center;
 }
 
 .window-content .actor-sheet li.add-on-header .description-header {
-    flex: 6;
-    text-align:center;
+  flex: 6;
+  text-align: center;
 }
 
 .window-content .actor-sheet li.vehicle-weapon-header .gunner-header {
-    flex: 2;
-    text-align:center;
+  flex: 2;
+  text-align: center;
 }
 
 .window-content .actor-sheet li.vehicle-weapon-header .skill-header {
-    flex: 1;
-    text-align:center;
+  flex: 1;
+  text-align: center;
 }
 
 .window-content .actor-sheet li.vehicle-weapon-header .range-header {
-    text-align:center;
-    flex: 2;
+  text-align: center;
+  flex: 2;
 }
 
 .window-content .actor-sheet li.vehicle-weapon-header .damage-header {
-    flex: 1;
-    text-align:center;
+  flex: 1;
+  text-align: center;
 }
 
 .window-content .actor-sheet li.vehicle-weapon-header .controls-header,
 .window-content .actor-sheet li.add-on-header .controls-header {
-    flex: 1;
-    text-align:center;
+  flex: 1;
+  text-align: center;
 }
 
 .window-content .actor-sheet li.vehicle-weapon-list,
 .window-content .actor-sheet li.vehicle-add-on-list {
-    display: flex;
-    align-items:center;
+  display: flex;
+  align-items: center;
 }
 
 /*.window-content .actor-sheet li.vehicle-weapon-header .name-header,
@@ -319,57 +316,57 @@ form.actor-sheet header.sheet-header-vehicle {
 
 .window-content .actor-sheet li.vehicle-weapon-list .vehicle-image,
 .window-content .actor-sheet li.vehicle-add-on-list .add-on-image {
-    flex: 0 30px;
+  flex: 0 30px;
 }
 
 .window-content .actor-sheet li.vehicle-weapon-list .name,
 .window-content .actor-sheet li.vehicle-add-on-list .add-on-name {
-    flex: 2;
-    font-family: "Signika";
-    font-size: 12px;
-    text-align: center;
+  flex: 2;
+  font-family: "Signika";
+  font-size: 12px;
+  text-align: center;
 }
 
 .window-content .actor-sheet li.vehicle-add-on-list .add-on-description {
-    flex: 6;
-    font-family: "Signika";
-    font-size: 12px;
-    text-align: center;
+  flex: 6;
+  font-family: "Signika";
+  font-size: 12px;
+  text-align: center;
 }
 
 .window-content .actor-sheet li.vehicle-weapon-list .gunner {
-    flex: 2;
-    font-family: "Signika";
-    font-size: 12px;
-    text-align: center;
+  flex: 2;
+  font-family: "Signika";
+  font-size: 12px;
+  text-align: center;
 }
 
 .window-content .actor-sheet li.vehicle-weapon-list .skill {
-    flex: 1;
-    font-family: "Signika";
-    font-size: 12px;
-    text-align: center;
-    flex: 1;
+  flex: 1;
+  font-family: "Signika";
+  font-size: 12px;
+  text-align: center;
+  flex: 1;
 }
 
 .window-content .actor-sheet li.vehicle-weapon-list .range {
-    flex: 2;
-    font-family: "Signika";
-    font-size: 12px;
-    text-align: center;
+  flex: 2;
+  font-family: "Signika";
+  font-size: 12px;
+  text-align: center;
 }
 
 .window-content .actor-sheet li.vehicle-weapon-list .damage {
-    flex: 1;
-    font-family: "Signika";
-    font-size: 12px;
-    text-align: center;
+  flex: 1;
+  font-family: "Signika";
+  font-size: 12px;
+  text-align: center;
 }
 
 .window-content .actor-sheet li.vehicle-weapon-list .controls,
 .window-content .actor-sheet li.vehicle-add-on-list .controls {
-    flex: 1;
-    text-align:center;
+  flex: 1;
+  text-align: center;
 }
 
 /*                          */
@@ -377,46 +374,42 @@ form.actor-sheet header.sheet-header-vehicle {
 /*                          */
 
 .item .window-content form.item-sheet .heavy-weapon-footer {
-    display: flex;
-    grid-column: 2 / span 3;
-    margin:auto;
+  display: flex;
+  grid-column: 2 / span 3;
+  margin: auto;
 }
 
 .item .window-content form.item-sheet .heavy-weapon-footer p {
-    font-family: Alaska;
-    font-size: 12px;
+  font-family: Alaska;
+  font-size: 12px;
 }
 
 .item .window-content form.item-sheet .heavy-weapon-footer .heavy-weapon-gunners .gunner-input {
-    width: 125px;
-    font-family: Signika;
-    font-size: 13px;
+  width: 125px;
+  font-family: Signika;
+  font-size: 13px;
 }
 
 .item .window-content form.item-sheet .heavy-weapon-footer .heavy-weapon-gunners .gunner-skill {
-    width: 35px;
-    font-family: Signika;
-    font-size: 13px;
-    text-align: center;
+  width: 35px;
+  font-family: Signika;
+  font-size: 13px;
+  text-align: center;
 }
 
-
-
-
-
 .window-app .window-content {
-    font-family: Alaska;
-    background-image: url(../images/thunder.webp);
-    background-size: cover;
-    color: white;
+  font-family: Alaska;
+  background-image: url(../images/thunder.webp);
+  background-size: cover;
+  color: white;
 }
 
 .window-app .window-content .form-header {
-    color: white;
+  color: white;
 }
 
 .window-app .window-content div.form-group input {
-    color: white;
+  color: white;
 }
 
 .window-app .window-content input[type="text"],
@@ -424,85 +417,85 @@ form.actor-sheet header.sheet-header-vehicle {
 .window-app .window-content input[type="password"],
 .window-app .window-content input[type="date"],
 .window-app .window-content input[type="time"] .editor {
-    background-color: rgba(255, 255, 255, 0.39);
-    /*color:white;*/
+  background-color: rgba(255, 255, 255, 0.39);
+  /*color:white;*/
 }
 
 .window-app .window-content input::-moz-placeholder {
-    background-color: rgba(0, 0, 0, 0);
+  background-color: rgba(0, 0, 0, 0);
 }
 
 .window-app .window-content input:-ms-input-placeholder {
-    background-color: rgba(0, 0, 0, 0);
+  background-color: rgba(0, 0, 0, 0);
 }
 
 .window-app .window-content input::placeholder {
-    background-color: rgba(0, 0, 0, 0);
+  background-color: rgba(0, 0, 0, 0);
 }
 
 .window-app .window-content .rollable:hover,
 .window-app .window-content .rollable:focus {
-    color: #000;
-    text-shadow: 0 0 10px white;
-    cursor: pointer;
+  color: #000;
+  text-shadow: 0 0 10px white;
+  cursor: pointer;
 }
 
 .window-app .window-content form .notes,
 .window-app .window-content form .hint {
-    color: #b1afaf;
-    font-family: Palatino;
-    font-size: 14px;
+  color: #b1afaf;
+  font-family: Palatino;
+  font-size: 14px;
 }
 
 .window-app .window-content form button,
 .window-app .window-content form select {
-    color: rgb(233, 233, 233);
-    cursor: pointer;
+  color: rgb(233, 233, 233);
+  cursor: pointer;
 }
 
 .window-app.actor .window-content form select {
-    color: black;
+  color: black;
 }
 
 .window-app .window-content form button[disabled] {
-    color: gray;
-    border: 1px solid red;
-    cursor: not-allowed
+  color: gray;
+  border: 1px solid red;
+  cursor: not-allowed;
 }
 
 .window-app .window-content form select option {
-    color: white;
+  color: white;
 }
 
 .window-app .window-content form select option.disabled {
-    color: rgb(156, 100, 100);
-    background-color: rgb(83, 77, 77);
+  color: rgb(156, 100, 100);
+  background-color: rgb(83, 77, 77);
 }
 
 .window-app .window-content form select.doubled {
-    background-color: rgb(238, 148, 148);
-    color: black;
-    border: 1px solid red
+  background-color: rgb(238, 148, 148);
+  color: black;
+  border: 1px solid red;
 }
 
 .window-app .window-content form button:hover {
-    box-shadow: 0px 0px 5px #4970fa;
+  box-shadow: 0px 0px 5px #4970fa;
 }
 
 .journal-sheet .window-content input[type="text"],
 .journal-sheet .window-content select {
-    width: 100%;
-    text-align: center;
-    border: none;
-    text-transform: uppercase;
-    font-family: Alaska;
-    font-weight: bold;
-    color: #000;
+  width: 100%;
+  text-align: center;
+  border: none;
+  text-transform: uppercase;
+  font-family: Alaska;
+  font-weight: bold;
+  color: #000;
 }
 
 .journal-sheet .window-content select {
-    top: 9%;
-    margin-left: 4%;
+  top: 9%;
+  margin-left: 4%;
 }
 
 .journal-sheet .window-content input[type="text"]:hover,
@@ -514,299 +507,288 @@ form.actor-sheet header.sheet-header-vehicle {
 .journal-sheet .window-content .editor:hover,
 .journal-sheet .window-content .editor:focus,
 .journal-sheet .window-content .editor:active {
-    box-shadow: 0 0 15px #053075;
+  box-shadow: 0 0 15px #053075;
 }
 
 .journal-sheet .window-content .editor {
-    top: 5%;
-    margin-top: 2%;
-    margin-left: 4%;
-    width: 90%;
-    height: 80%;
-    padding: 2%;
+  top: 5%;
+  margin-top: 2%;
+  margin-left: 4%;
+  width: 90%;
+  height: 80%;
+  padding: 2%;
 }
 
 .sheet.journal-entry .journal-entry-page table tr td:first-child {
-    border-left: 0;
+  border-left: 0;
 }
 
 .sheet.journal-entry .journal-entry-page table tr td:last-child {
-    border-right: 0;
+  border-right: 0;
 }
 
 /*END OF JOURNAL CONTENT EDITING*/
 
 /*Begin of ProseMirror Editoring Style 2022-08-27 by Algor*/
 
-.prosemirror .editor-container .editor-content *{
-    color:black;
-    font-family: Palatino;
+.prosemirror .editor-container .editor-content * {
+  color: black;
+  font-family: Palatino;
 }
 
-.prosemirror .editor-container .editor-content p{
-    text-align:justify;
-    font-size: 14px;
+.prosemirror .editor-container .editor-content p {
+  text-align: justify;
+  font-size: 14px;
 }
 
-.prosemirror .editor-container .editor-content p+p{
-    text-indent:0.75rem;
+.prosemirror .editor-container .editor-content p + p {
+  text-indent: 0.75rem;
 }
 
-.prosemirror .editor-container .editor-content p:first-of-type{
-    text-indent:0;
+.prosemirror .editor-container .editor-content p:first-of-type {
+  text-indent: 0;
 }
 
-.prosemirror .editor-container .editor-content :is(ul,ol){
-    text-align: justify;
-    padding-right: 10px;
-    list-style-position: inside;
-    font-family: "Palatino Linotype";
-    font-size: 14px;
+.prosemirror .editor-container .editor-content :is(ul, ol) {
+  text-align: justify;
+  padding-right: 10px;
+  list-style-position: inside;
+  font-family: "Palatino Linotype";
+  font-size: 14px;
 }
 
-.prosemirror .editor-container .editor-content :is(h1,h2,h3,h4){
-    font-family: Alaska;
+.prosemirror .editor-container .editor-content :is(h1, h2, h3, h4) {
+  font-family: Alaska;
 }
 
-.prosemirror .editor-container .editor-content h1{
-    Background-image: URL(../../../systems/torgeternity/images/tab-header.webp);
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    overflow: hidden;
-    border: none;
-    margin: 1rem 0px 0.7rem 0px;
-    color: white;
-    text-transform: uppercase;
-    line-height: 30px;
-    text-align: center;
+.prosemirror .editor-container .editor-content h1 {
+  background-image: URL(../../../systems/torgeternity/images/tab-header.webp);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  overflow: hidden;
+  border: none;
+  margin: 1rem 0px 0.7rem 0px;
+  color: white;
+  text-transform: uppercase;
+  line-height: 30px;
+  text-align: center;
 }
 
-.prosemirror .editor-container .editor-content h2{
-    text-align: center;
-    font-size: 1.5rem;
-    font-weight: bolder;
-    text-shadow:    #878787 1.5px 1.5px 0px,
-                    #878787 1.5px -1.5px 0px,
-                    #878787 -1.5px 1.5px 0px,
-                    #878787 -1.5px -1.5px 0px;
-    text-transform: uppercase;
-    margin: 1rem 0px 0.7rem 0px;
-    border: none;
+.prosemirror .editor-container .editor-content h2 {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bolder;
+  text-shadow: #878787 1.5px 1.5px 0px, #878787 1.5px -1.5px 0px, #878787 -1.5px 1.5px 0px, #878787 -1.5px -1.5px 0px;
+  text-transform: uppercase;
+  margin: 1rem 0px 0.7rem 0px;
+  border: none;
 }
 
-.prosemirror .editor-container .editor-content h3{
-    margin: 2px 0px 9px 0px;
-    font-weight: bolder;
-    border: none;
-    font-weight: bold;
-    font-size: 15px;
+.prosemirror .editor-container .editor-content h3 {
+  margin: 2px 0px 9px 0px;
+  font-weight: bolder;
+  border: none;
+  font-weight: bold;
+  font-size: 15px;
 }
 
-.prosemirror .editor-container .editor-content h4{
-    text-align: center;
-    font-size: 1.5rem;
-    color: white;
-    font-family: Alaska;
-    text-shadow: black 1.3px 1.3px 0px,
-        black 1.3px -1.3px 0px,
-        black -1.3px 1.3px 0px,
-        black -1.3px 1.3px 0px;
-    text-transform: uppercase;
-    margin: 1rem 0px 0.7rem 0px;
-    border: none;
+.prosemirror .editor-container .editor-content h4 {
+  text-align: center;
+  font-size: 1.5rem;
+  color: white;
+  font-family: Alaska;
+  text-shadow: black 1.3px 1.3px 0px, black 1.3px -1.3px 0px, black -1.3px 1.3px 0px, black -1.3px 1.3px 0px;
+  text-transform: uppercase;
+  margin: 1rem 0px 0.7rem 0px;
+  border: none;
 }
 
-.prosemirror .editor-container .editor-content hr{
-    background-image: url(../images/separator.webp);
-    background-repeat: no-repeat;
-    background-size: auto;
-    min-height: 20px;
-    height: 3rem;
-    width: auto;
-    border: none;
-    transform: scaleY(0.5);
-    margin: -15px 10px -15px 0px;
+.prosemirror .editor-container .editor-content hr {
+  background-image: url(../images/separator.webp);
+  background-repeat: no-repeat;
+  background-size: auto;
+  min-height: 20px;
+  height: 3rem;
+  width: auto;
+  border: none;
+  transform: scaleY(0.5);
+  margin: -15px 10px -15px 0px;
 }
 
 .prosemirror .editor-container .editor-content img {
-    border-image:none;
-    border:none;
+  border-image: none;
+  border: none;
 }
 
-.prosemirror .editor-container .editor-content th{
-    background-color: black;
-    color:white;
+.prosemirror .editor-container .editor-content th {
+  background-color: black;
+  color: white;
 }
 
 .prosemirror .editor-container .editor-content table {
-    font-size:0.875rem;
-    background-color: transparent;
+  font-size: 0.875rem;
+  background-color: transparent;
 }
 
 .prosemirror .editor-container .editor-content tr:nth-child(even) {
-    background-color: #F6E9D7
+  background-color: #f6e9d7;
 }
 
-.prosemirror .editor-container .editor-content tr:nth-child(odd){
-    background-color: transparent;
+.prosemirror .editor-container .editor-content tr:nth-child(odd) {
+  background-color: transparent;
 }
 
 .prosemirror .editor-container .editor-content div.subtitleright p,
-.prosemirror .editor-container .editor-content div.subtitleleft p{
-    color: white;
-    text-shadow: black 1.3px 1.3px 0px,
-    black 1.3px -1.3px 0px,
-    black -1.3px 1.3px 0px,
-    black -1.3px 1.3px 0px;
+.prosemirror .editor-container .editor-content div.subtitleleft p {
+  color: white;
+  text-shadow: black 1.3px 1.3px 0px, black 1.3px -1.3px 0px, black -1.3px 1.3px 0px, black -1.3px 1.3px 0px;
 }
 
 /*End of ProseMirror Editoring Style*/
 /*------------------------------------------*/
 /*Begin of designing Prosemirror Editor itself, Algor 2022/10/09*/
-.sheet.journal-entry-page .journal-header{
-    margin: 0 1rem;
+.sheet.journal-entry-page .journal-header {
+  margin: 0 1rem;
 }
 
 .prosemirror .editor-container .editor-content {
-bottom:6px;
-padding:0.5rem;
+  bottom: 6px;
+  padding: 0.5rem;
 }
 
-.prosemirror .editor-container{
-    margin:0.5rem;
+.prosemirror .editor-container {
+  margin: 0.5rem;
 }
 
 /*Editing Dropdown buttons' background for healthy eyes*/
-.prosemirror menu .pm-dropdown ul
-{
-    background-color:var(--torgblue);
-    
-    /*Either*/
-    background-image:url(../images/lightning_bar.webp);
+.prosemirror menu .pm-dropdown ul {
+  background-color: var(--torgblue);
 
-    /*OR
+  /*Either*/
+  background-image: url(../images/lightning_bar.webp);
+
+  /*OR
     background-image: url(../images/thunder.webp);
     background-repeat: no-repeat;
     background-size: cover;
     */
 }
-.prosemirror.menu-dialog form{
-    background-color:var(--torgblue);
-    background-image:url(../images/lightning_bar.webp);
-    color:white;
-
+.prosemirror.menu-dialog form {
+  background-color: var(--torgblue);
+  background-image: url(../images/lightning_bar.webp);
+  color: white;
 }
 
-.prosemirror.menu-dialog form button{
-    color:white;
-    background-color:rgba(0, 0, 0, 0.68);
+.prosemirror.menu-dialog form button {
+  color: white;
+  background-color: rgba(0, 0, 0, 0.68);
 }
 
-form .form-group .form-fields > *{
-    background-color:rgba(128, 128, 128, 0.301);
-    color:white;
+form .form-group .form-fields > * {
+  background-color: rgba(128, 128, 128, 0.301);
+  color: white;
 }
 
 /*HTML Sourcecode editor needs a background for better reading*/
 
-.prosemirror.editing-source textarea{
-    background-color:rgba(255, 247, 247, 0.25)
+.prosemirror.editing-source textarea {
+  background-color: rgba(255, 247, 247, 0.25);
 }
 
 /*End of editing Prosemirror Editor*/
 /*------------------------------------------*/
 .window-app.image-popout .form-group.title {
-    margin-top: 1%;
+  margin-top: 1%;
 }
 
 .window-app.image-popout .form-group.title input {
-    height: 32px;
-    text-align: center;
-    margin-top: 0%;
+  height: 32px;
+  text-align: center;
+  margin-top: 0%;
 }
 
 textarea {
-    background-color: rgba(90, 157, 163, 0.493);
+  background-color: rgba(90, 157, 163, 0.493);
 }
 
 textarea:focus,
 textarea:hover {
-    background-color: rgba(90, 157, 163, 0.65);
-    outline: 1px solid #222378;
-    box-shadow: 0 0 10px #008cff7a;
+  background-color: rgba(90, 157, 163, 0.65);
+  outline: 1px solid #222378;
+  box-shadow: 0 0 10px #008cff7a;
 }
 
 #module-management {
-    color: white;
+  color: white;
 }
 
 #module-management input {
-    color: lightgray;
+  color: lightgray;
 }
 
 #module-management .package-list .package-title {
-    color: #c6e2fa;
+  color: #c6e2fa;
 }
 
 @-webkit-keyframes rotateblur {
-    0% {
-        transform: rotateZ(0deg);
-        top: 5px;
-    }
+  0% {
+    transform: rotateZ(0deg);
+    top: 5px;
+  }
 
-    50% {
-        transform: rotateZ(180deg);
-        top: -65px;
-    }
+  50% {
+    transform: rotateZ(180deg);
+    top: -65px;
+  }
 
-    75% {
-        transform: rotateZ(310deg);
-        top: 20px;
-    }
+  75% {
+    transform: rotateZ(310deg);
+    top: 20px;
+  }
 
-    100% {
-        transform: rotateZ(360deg);
-        top: 5px;
-    }
+  100% {
+    transform: rotateZ(360deg);
+    top: 5px;
+  }
 }
 
 @keyframes rotateblur {
-    0% {
-        transform: rotateZ(0deg);
-        top: 5px;
-    }
+  0% {
+    transform: rotateZ(0deg);
+    top: 5px;
+  }
 
-    50% {
-        transform: rotateZ(180deg);
-        top: -65px;
-    }
+  50% {
+    transform: rotateZ(180deg);
+    top: -65px;
+  }
 
-    75% {
-        transform: rotateZ(310deg);
-        top: 20px;
-    }
+  75% {
+    transform: rotateZ(310deg);
+    top: 20px;
+  }
 
-    100% {
-        transform: rotateZ(360deg);
-        top: 5px;
-    }
+  100% {
+    transform: rotateZ(360deg);
+    top: 5px;
+  }
 }
 
 body {
-    font-family: Alaska;
-    font-size: 12px;
+  font-family: Alaska;
+  font-size: 12px;
 }
 
 body * {
-    scrollbar-color: #227878 #2e2e2e94;
-    scrollbar-width: thin;
+  scrollbar-color: #227878 #2e2e2e94;
+  scrollbar-width: thin;
 }
 
 body * ::-webkit-scrollbar-thumb {
-    outline: none;
-    border-radius: 3px;
-    background: #227878;
-    border: 1px solid #2e2e2e94;
+  outline: none;
+  border-radius: 3px;
+  background: #227878;
+  border: 1px solid #2e2e2e94;
 }
 
 input[type="text"],
@@ -817,213 +799,212 @@ input[type="time"],
 select,
 option,
 textarea {
-    font-family: "Signika";
-    font-size: 13px;
+  font-family: "Signika";
+  font-size: 13px;
 }
 
 button {
-    font-family: "Palatino Linotype";
+  font-family: "Palatino Linotype";
 }
 
 button:hover,
 button:focus {
-    box-shadow: 0 0 10px #3bb3b3;
+  box-shadow: 0 0 10px #3bb3b3;
 }
 
 a:hover,
 span.open-poss:hover {
-    text-shadow: 0 0 10px #3bb3b3;
-    cursor: pointer;
+  text-shadow: 0 0 10px #3bb3b3;
+  cursor: pointer;
 }
 
 .app,
 .window-app {
-    border-radius: 5px;
-    box-shadow: 0 0 15px #122529;
-    padding-bottom: 0.5em;
-    color: #707070;
-    z-index: 30;
+  border-radius: 5px;
+  box-shadow: 0 0 15px #122529;
+  padding-bottom: 0.5em;
+  color: #707070;
+  z-index: 30;
 }
 
 .app a.entity-link,
 .window-app a.entity-link {
-    color: black;
+  color: black;
 }
 
 .app input[type="text"]::-moz-placeholder,
 .app input[type="number"]::-moz-placeholder,
 .window-app input[type="text"]::-moz-placeholder,
 .window-app input[type="number"]::-moz-placeholder {
-    /*color: rgba(0, 0, 0, 0.472);*/
-    color: rgba(245, 245, 245, 0.9);
-    background-color: transparent;
-    text-shadow: 0px 0px 10px black;
+  /*color: rgba(0, 0, 0, 0.472);*/
+  color: rgba(245, 245, 245, 0.9);
+  background-color: transparent;
+  text-shadow: 0px 0px 10px black;
 }
 
 .app input[type="text"]:-ms-input-placeholder,
 .app input[type="number"]:-ms-input-placeholder,
 .window-app input[type="text"]:-ms-input-placeholder,
 .window-app input[type="number"]:-ms-input-placeholder {
-    /*color: rgba(0, 0, 0, 0.472);*/
-    color: rgba(245, 245, 245, 0.9);
-    background-color: transparent;
-    text-shadow: 0px 0px 10px black;
+  /*color: rgba(0, 0, 0, 0.472);*/
+  color: rgba(245, 245, 245, 0.9);
+  background-color: transparent;
+  text-shadow: 0px 0px 10px black;
 }
 
 .app input[type="text"]::placeholder,
 .app input[type="number"]::placeholder,
 .window-app input[type="text"]::placeholder,
 .window-app input[type="number"]::placeholder {
-    /*color: rgba(0, 0, 0, 0.472);*/
-    color: rgba(245, 245, 245, 0.9);
-    background-color: transparent;
-    text-shadow: 0px 0px 10px black;
+  /*color: rgba(0, 0, 0, 0.472);*/
+  color: rgba(245, 245, 245, 0.9);
+  background-color: transparent;
+  text-shadow: 0px 0px 10px black;
 }
-
 
 /*search-fields on items*/
 
 .directory .directory-header .header-search input {
-    background: transparent;
-    color: rgba(245, 245, 245, 0.9);
+  background: transparent;
+  color: rgba(245, 245, 245, 0.9);
 }
 
 .app option,
 .window-app option {
-    background: grey;
+  background: grey;
 }
 
 .app optgroup,
 .window-app optgroup {
-    background: #444242;
+  background: #444242;
 }
 
 .app textarea,
 .window-app textarea {
-    color: black;
+  color: black;
 }
 
 .app div.form-group,
 .window-app div.form-group {
-    margin: 10px;
-    padding-bottom: 5px;
-    border-bottom: 2px solid #777777;
+  margin: 10px;
+  padding-bottom: 5px;
+  border-bottom: 2px solid #777777;
 }
 
 .app {
-    color: white;
+  color: white;
 }
 
 form input {
-    color: white;
+  color: white;
 }
 
 #mgme_question,
 #mgme_re_question {
-    color: black;
+  color: black;
 }
 
 .window-app .window-resizable-handle {
-    width: 30px;
-    height: 30px;
-    position: absolute;
-    bottom: -10px;
-    right: -10px;
-    background: url(../images/resizerRound.webp);
-    background-size: 115% 115%;
-    background-position: center;
-    padding: 2px;
-    border: none;
-    z-index: -1;
-    border-radius: 50%;
-    box-shadow: 0px 0px 5px blue;
-    transition: all 500ms cubic-bezier(0.42, 0, 0.58, 1) 10ms;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  bottom: -10px;
+  right: -10px;
+  background: url(../images/resizerRound.webp);
+  background-size: 115% 115%;
+  background-position: center;
+  padding: 2px;
+  border: none;
+  z-index: -1;
+  border-radius: 50%;
+  box-shadow: 0px 0px 5px blue;
+  transition: all 500ms cubic-bezier(0.42, 0, 0.58, 1) 10ms;
 }
 
 .window-app .window-resizable-handle:hover {
-    z-index: +1;
+  z-index: +1;
 }
 
 .window-app .window-resizable-handle i.fas {
-    transition: all 500ms cubic-bezier(0.42, 0, 0.58, 1) 10ms;
-    transform: rotate(45deg);
-    top: 25%;
-    left: 25%;
-    position: absolute;
-    color: rgba(255, 255, 255, 0);
-    text-shadow: 0px 0px 30px rgba(255, 255, 255, 0);
+  transition: all 500ms cubic-bezier(0.42, 0, 0.58, 1) 10ms;
+  transform: rotate(45deg);
+  top: 25%;
+  left: 25%;
+  position: absolute;
+  color: rgba(255, 255, 255, 0);
+  text-shadow: 0px 0px 30px rgba(255, 255, 255, 0);
 }
 
 .window-app .window-resizable-handle i.fas:hover {
-    transform: rotate(45deg) scaleX(1.6);
-    color: #ffffff;
-    -webkit-text-fill-color: white;
-    /* Will override color (regardless of order) */
-    -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: black;
+  transform: rotate(45deg) scaleX(1.6);
+  color: #ffffff;
+  -webkit-text-fill-color: white;
+  /* Will override color (regardless of order) */
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
 }
 
 .window-app .window-resizable-handle:active {
-    box-shadow: 0px 0px 30px blue;
+  box-shadow: 0px 0px 30px blue;
 }
 
 .window-app .window-header {
-    background: url(../images/tab-header.webp);
-    background-size: 100% 100%;
-    font-family: Alaska;
-    font-weight: bold;
-    color: white;
-    transform: scaleX(1.06);
-    padding-left: 5%;
-    padding-right: 5%;
-    border: none;
-    box-shadow: 0px 15px 30px #00000061;
-    z-index: 100;
+  background: url(../images/tab-header.webp);
+  background-size: 100% 100%;
+  font-family: Alaska;
+  font-weight: bold;
+  color: white;
+  transform: scaleX(1.06);
+  padding-left: 5%;
+  padding-right: 5%;
+  border: none;
+  box-shadow: 0px 15px 30px #00000061;
+  z-index: 100;
 }
 
 #pause img {
-    content: url(../images/pause.webp);
-    height: 130px;
-    width: 130px;
-    top: -0px;
-    left: calc(50% - 65px);
-    opacity: 0.7;
+  content: url(../images/pause.webp);
+  height: 130px;
+  width: 130px;
+  top: -0px;
+  left: calc(50% - 65px);
+  opacity: 0.7;
 }
 
 i.torg {
-    width: 56px;
-    height: 30px;
-    background-image: url(../images/te-logo.webp);
-    background-size: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-    display: flex;
-    position: relative;
-    filter: grayscale(1);
-    transition: 0.3s;
+  width: 56px;
+  height: 30px;
+  background-image: url(../images/te-logo.webp);
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  position: relative;
+  filter: grayscale(1);
+  transition: 0.3s;
 }
 
 li.scene-control.active i.torg,
 i.torg:hover {
-    filter: grayscale(0);
+  filter: grayscale(0);
 }
 
 nav#controls {
-    position: relative;
-    top: 6vh
+  position: relative;
+  top: 6vh;
 }
 
 nav#controls ol .scene-control,
 nav#controls ol .control-tool,
 nav#controls ol .scene-control:hover,
 nav#controls ol .control-tool:hover {
-    transition: all 250ms cubic-bezier(0.42, 0, 0.58, 1) 10ms;
-    background: url(../images/resizerRound.webp);
-    background-size: 100% 100%;
-    color: #6b6b6b;
-    border: none;
-    border-radius: 50% 50%;
-    box-shadow: 0px 0px 15px black inset;
+  transition: all 250ms cubic-bezier(0.42, 0, 0.58, 1) 10ms;
+  background: url(../images/resizerRound.webp);
+  background-size: 100% 100%;
+  color: #6b6b6b;
+  border: none;
+  border-radius: 50% 50%;
+  box-shadow: 0px 0px 15px black inset;
 }
 
 nav#controls ol .scene-control i.fa,
@@ -1034,8 +1015,8 @@ nav#controls ol .scene-control:hover i.fa,
 nav#controls ol .scene-control:hover i.fas,
 nav#controls ol .control-tool:hover i.fa,
 nav#controls ol .control-tool:hover i.fas {
-    font-weight: 600;
-    font-size: 16px;
+  font-weight: 600;
+  font-size: 16px;
 }
 
 nav#controls ol .scene-control i.fa::before,
@@ -1046,201 +1027,201 @@ nav#controls ol .scene-control:hover i.fa::before,
 nav#controls ol .scene-control:hover i.fas:before,
 nav#controls ol .control-tool:hover i.fa::before,
 nav#controls ol .control-tool:hover i.fas:before {
-    position: relative;
-    top: -2px;
+  position: relative;
+  top: -2px;
 }
 
 nav#controls ol .control-tool.toggle {
-    border: 1px solid #000000;
-    filter: grayscale(1);
+  border: 1px solid #000000;
+  filter: grayscale(1);
 }
 
 nav#controls ol .control-tool.toggle.active {
-    border: 1px solid #ffffff;
-    filter: grayscale(0);
-    opacity: 1;
-    background: url(../images/resizerRound.webp);
-    background-size: 100% 100%;
+  border: 1px solid #ffffff;
+  filter: grayscale(0);
+  opacity: 1;
+  background: url(../images/resizerRound.webp);
+  background-size: 100% 100%;
 }
 
 nav#controls ol .scene-control.active,
 nav#controls ol .control-tool.active,
 nav#controls ol .scene-control:hover,
 nav#controls ol .control-tool:hover {
-    color: white;
-    text-shadow: black 0px 0px 15px;
-    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.678) inset;
-    border: none;
+  color: white;
+  text-shadow: black 0px 0px 15px;
+  box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.678) inset;
+  border: none;
 }
 
 nav#controls ol .torgHand {
-    position: relative;
-    width: 100%;
-    height: 25px;
+  position: relative;
+  width: 100%;
+  height: 25px;
 }
 
 nav#controls ol .torgHand:before {
-    content: '';
-    background-image: url(../images/icons/cardhand.webp);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: -5px;
+  content: "";
+  background-image: url(../images/icons/cardhand.webp);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: -5px;
 }
 
 #sidebar {
-    color: white;
-    background-image: url(../images/thunder.webp);
-    z-index: 20;
-    background-size: 100% 100%;
-    width: 380px;
-    height: 100%;
-    border: none;
+  color: white;
+  background-image: url(../images/thunder.webp);
+  z-index: 20;
+  background-size: 100% 100%;
+  width: 380px;
+  height: 100%;
+  border: none;
 }
-.tab[data-tab].active.flexrow, .tab[data-tab].active.flexcol {
-    overflow-y: scroll;
+.tab[data-tab].active.flexrow,
+.tab[data-tab].active.flexcol {
+  overflow-y: scroll;
 }
 
 #sidebar #sidebar-tabs {
-    flex: 0 0 32px;
-    box-sizing: border-box;
-    margin: 0 0 5px;
-    border-bottom: 1px solid #2c6d6d;
-    box-shadow: 0 0 10px #227878;
+  flex: 0 0 32px;
+  box-sizing: border-box;
+  margin: 0 0 5px;
+  border-bottom: 1px solid #2c6d6d;
+  box-shadow: 0 0 10px #227878;
 }
 
-#sidebar #sidebar-tabs>.item.active {
-    color: #fff;
-    border: 1px solid #154949;
-    border-bottom: none;
-    box-shadow: 0 0 6px inset #154949;
+#sidebar #sidebar-tabs > .item.active {
+  color: #fff;
+  border: 1px solid #154949;
+  border-bottom: none;
+  box-shadow: 0 0 6px inset #154949;
 }
 
 #sidebar .tabs .item.active {
-    text-shadow: 0 0 10px #154949;
+  text-shadow: 0 0 10px #154949;
 }
 
 #sidebar a:hover {
-    text-shadow: 0 0 10px #001aff;
+  text-shadow: 0 0 10px #001aff;
 }
 
 #sidebar textarea#chat-message {
-    color: black;
+  color: black;
 }
 
 #hotbar {
-    width: 630px;
+  width: 630px;
 }
 
 #hotbar .bar-controls {
-    flex: 0 0 55px;
-    flex-direction: column;
-    justify-content: space-around;
-    padding-top: 15px;
-    padding-bottom: 15px;
-    height: 120%;
-    margin: 0 2px;
-    text-align: center;
-    background: url(../images/resizerRound.webp);
-    -webkit-text-fill-color: white;
-    -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: black;
-    background-size: 100% 100%;
-    background-position: center;
-    border: none;
-    box-shadow: none;
-    border-radius: 40%;
-    font-weight: bolder;
+  flex: 0 0 55px;
+  flex-direction: column;
+  justify-content: space-around;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  height: 120%;
+  margin: 0 2px;
+  text-align: center;
+  background: url(../images/resizerRound.webp);
+  -webkit-text-fill-color: white;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+  background-size: 100% 100%;
+  background-position: center;
+  border: none;
+  box-shadow: none;
+  border-radius: 40%;
+  font-weight: bolder;
 }
 
 #hotbar .bar-controls a,
 #hotbar .bar-controls a.page-control,
 #hotbar .bar-controls span.page-number {
-    transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1) 10ms;
-    display: block;
-    line-height: 5px;
-    font-size: 20px;
+  transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1) 10ms;
+  display: block;
+  line-height: 5px;
+  font-size: 20px;
 }
 
 #hotbar .bar-controls a:hover {
-    transform: scale(1.8);
+  transform: scale(1.8);
 }
 
 #hotbar #action-bar ol#macro-list {
-    border: none;
+  border: none;
 }
 
 #hotbar #action-bar ol#macro-list li.macro {
-    position: relative;
-    flex: 0 0 50px;
-    height: 50px;
-    background: url(../images/backg-page.webp);
-    border-radius: 25%;
-    box-shadow: 0 0 5px #000 inset;
-    cursor: pointer;
-    border-radius: 0% 0% 75%;
+  position: relative;
+  flex: 0 0 50px;
+  height: 50px;
+  background: url(../images/backg-page.webp);
+  border-radius: 25%;
+  box-shadow: 0 0 5px #000 inset;
+  cursor: pointer;
+  border-radius: 0% 0% 75%;
 }
 
 #hotbar #action-bar ol#macro-list li.macro.active {
-    border-radius: 10%;
+  border-radius: 10%;
 }
 
 #hotbar #action-bar ol#macro-list li.macro:hover {
-    box-shadow: 0 0 10px #004777 inset;
+  box-shadow: 0 0 10px #004777 inset;
 }
 
 #navigation #nav-toggle {
-    flex: 0 0 50px;
-    height: 50px;
-    background: url(../images/resizerRound.webp);
-    background-size: 100% 100%;
-    text-align: center;
-    text-shadow: 0 0 10px #db0303;
-    border: none;
-    color: white;
-    padding-top: 10px;
-    font-size: 30px;
+  flex: 0 0 50px;
+  height: 50px;
+  background: url(../images/resizerRound.webp);
+  background-size: 100% 100%;
+  text-align: center;
+  text-shadow: 0 0 10px #db0303;
+  border: none;
+  color: white;
+  padding-top: 10px;
+  font-size: 30px;
 }
 
 #navigation div.cosm-card,
 #navigation div.cosm-card.cosm2 {
-    position: fixed;
-    top: -50%;
-    left: 30%;
-    width: 600px;
-    height: 400px;
-    transform-origin: 0% 0%;
-    opacity: 0;
-    z-index: 200;
-    transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1) 10ms;
+  position: fixed;
+  top: -50%;
+  left: 30%;
+  width: 600px;
+  height: 400px;
+  transform-origin: 0% 0%;
+  opacity: 0;
+  z-index: 200;
+  transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1) 10ms;
 }
 
 #navigation div.cosm-icone:hover div.cosm-card {
-    top: 0%;
-    width: 600px;
-    height: 400px;
-    transform: scale(1);
-    transform-origin: 0% 0%;
-    opacity: 1;
-    z-index: +1;
+  top: 0%;
+  width: 600px;
+  height: 400px;
+  transform: scale(1);
+  transform-origin: 0% 0%;
+  opacity: 1;
+  z-index: +1;
 }
 
 #navigation div.cosm-icone.dominant2ndCosm .cosm-card {
-    filter: grayscale(1)
+  filter: grayscale(1);
 }
 
 #navigation div.cosm-icone:hover div.fr.cosm-card {
-    transform: scale(1);
+  transform: scale(1);
 }
 
 #navigation div.cosm-icone:hover div.de.cosm-card {
-    transform: scale(1, 0.85);
+  transform: scale(1, 0.85);
 }
-
 
 /*-------------------------
 -----------------------------
@@ -1249,45 +1230,44 @@ Base english tent cards images
 --------------------------*/
 
 #navigation .cosm-card.coreEarth {
-    background: url(../images/cosm-cards/coreEarth.webp);
-    background-size: 100% 100%;
+  background: url(../images/cosm-cards/coreEarth.webp);
+  background-size: 100% 100%;
 }
 
 #navigation .cosm-card.livingLand {
-    background: url(../images/cosm-cards/livingLand.webp);
-    background-size: 100% 100%;
+  background: url(../images/cosm-cards/livingLand.webp);
+  background-size: 100% 100%;
 }
 
 #navigation .cosm-card.nileEmpire {
-    background: url(../images/cosm-cards/nileEmpire.webp);
-    background-size: 100% 100%;
+  background: url(../images/cosm-cards/nileEmpire.webp);
+  background-size: 100% 100%;
 }
 
 #navigation .cosm-card.aysle {
-    background: url(../images/cosm-cards/aysle.webp);
-    background-size: 100% 100%;
+  background: url(../images/cosm-cards/aysle.webp);
+  background-size: 100% 100%;
 }
 
 #navigation .cosm-card.cyberpapacy {
-    background: url(../images/cosm-cards/cyberpapacy.webp);
-    background-size: 100% 100%;
+  background: url(../images/cosm-cards/cyberpapacy.webp);
+  background-size: 100% 100%;
 }
 
 #navigation .cosm-card.panPacifica {
-    background: url(../images/cosm-cards/panPacifica.webp);
-    background-size: 100% 100%;
+  background: url(../images/cosm-cards/panPacifica.webp);
+  background-size: 100% 100%;
 }
 
 #navigation .cosm-card.orrorsh {
-    background: url(../images/cosm-cards/orrorsh.webp);
-    background-size: 100% 100%;
+  background: url(../images/cosm-cards/orrorsh.webp);
+  background-size: 100% 100%;
 }
 
 #navigation .cosm-card.tharkold {
-    background: url(../images/cosm-cards/tharkold.webp);
-    background-size: 100% 100%;
+  background: url(../images/cosm-cards/tharkold.webp);
+  background-size: 100% 100%;
 }
-
 
 /*-------------------------
 -----------------------------
@@ -1296,45 +1276,44 @@ french tent cards images
 --------------------------*/
 
 #navigation .fr.cosm-card.coreEarth {
-    background: url(../images/cosm-cards/fr/coreEarth.webp);
-    background-size: 100% 100%;
+  background: url(../images/cosm-cards/fr/coreEarth.webp);
+  background-size: 100% 100%;
 }
 
 #navigation .fr.cosm-card.livingLand {
-    background: url(../images/cosm-cards/fr/livingLand.webp);
-    background-size: 100% 100%;
+  background: url(../images/cosm-cards/fr/livingLand.webp);
+  background-size: 100% 100%;
 }
 
 #navigation .fr.cosm-card.nileEmpire {
-    background: url(../images/cosm-cards/fr/nileEmpire.webp);
-    background-size: 100% 100%;
+  background: url(../images/cosm-cards/fr/nileEmpire.webp);
+  background-size: 100% 100%;
 }
 
 #navigation .fr.cosm-card.aysle {
-    background: url(../images/cosm-cards/fr/aysle.webp);
-    background-size: 100% 100%;
+  background: url(../images/cosm-cards/fr/aysle.webp);
+  background-size: 100% 100%;
 }
 
 #navigation .fr.cosm-card.cyberpapacy {
-    background: url(../images/cosm-cards/fr/cyberpapacy.webp);
-    background-size: 100% 100%;
+  background: url(../images/cosm-cards/fr/cyberpapacy.webp);
+  background-size: 100% 100%;
 }
 
 #navigation .fr.cosm-card.panPacifica {
-    background: url(../images/cosm-cards/fr/panPacifica.webp);
-    background-size: 100% 100%;
+  background: url(../images/cosm-cards/fr/panPacifica.webp);
+  background-size: 100% 100%;
 }
 
 #navigation .fr.cosm-card.orrorsh {
-    background: url(../images/cosm-cards/fr/orrorsh.webp);
-    background-size: 100% 100%;
+  background: url(../images/cosm-cards/fr/orrorsh.webp);
+  background-size: 100% 100%;
 }
 
 #navigation .fr.cosm-card.tharkold {
-    background: url(../images/cosm-cards/fr/tharkold.webp);
-    background-size: 100% 100%;
+  background: url(../images/cosm-cards/fr/tharkold.webp);
+  background-size: 100% 100%;
 }
-
 
 /*-------------------------
 -----------------------------
@@ -1343,45 +1322,44 @@ spanish tent cards images
 --------------------------*/
 
 #navigation .es.cosm-card.coreEarth {
-    background: url(../images/cosm-cards/es/coreEarth.webp);
-    background-size: 100% 100%;
+  background: url(../images/cosm-cards/es/coreEarth.webp);
+  background-size: 100% 100%;
 }
 
 #navigation .es.cosm-card.livingLand {
-    background: url(../images/cosm-cards/es/livingLand.webp);
-    background-size: 100% 100%;
+  background: url(../images/cosm-cards/es/livingLand.webp);
+  background-size: 100% 100%;
 }
 
 #navigation .es.cosm-card.nileEmpire {
-    background: url(../images/cosm-cards/es/nileEmpire.webp);
-    background-size: 100% 100%;
+  background: url(../images/cosm-cards/es/nileEmpire.webp);
+  background-size: 100% 100%;
 }
 
 #navigation .es.cosm-card.aysle {
-    background: url(../images/cosm-cards/es/aysle.webp);
-    background-size: 100% 100%;
+  background: url(../images/cosm-cards/es/aysle.webp);
+  background-size: 100% 100%;
 }
 
 #navigation .es.cosm-card.cyberpapacy {
-    background: url(../images/cosm-cards/es/cyberpapacy.webp);
-    background-size: 100% 100%;
+  background: url(../images/cosm-cards/es/cyberpapacy.webp);
+  background-size: 100% 100%;
 }
 
 #navigation .es.cosm-card.panPacifica {
-    background: url(../images/cosm-cards/es/panPacifica.webp);
-    background-size: 100% 100%;
+  background: url(../images/cosm-cards/es/panPacifica.webp);
+  background-size: 100% 100%;
 }
 
 #navigation .es.cosm-card.orrorsh {
-    background: url(../images/cosm-cards/es/orrorsh.webp);
-    background-size: 100% 100%;
+  background: url(../images/cosm-cards/es/orrorsh.webp);
+  background-size: 100% 100%;
 }
 
 #navigation .es.cosm-card.tharkold {
-    background: url(../images/cosm-cards/es/tharkold.webp);
-    background-size: 100% 100%;
+  background: url(../images/cosm-cards/es/tharkold.webp);
+  background-size: 100% 100%;
 }
-
 
 /*-------------------------
 -----------------------------
@@ -1390,296 +1368,296 @@ german tent cards images
 --------------------------*/
 
 #navigation .de.cosm-card.coreEarth {
-    background: url(../images/deutsch/cosm-tabletents/ZentralErde.webp);
-    background-size: 100% 100%;
+  background: url(../images/deutsch/cosm-tabletents/ZentralErde.webp);
+  background-size: 100% 100%;
 }
 
 #navigation .de.cosm-card.livingLand {
-    background: url(../images/deutsch/cosm-tabletents/LebendesLand.webp);
-    background-size: 100% 100%;
+  background: url(../images/deutsch/cosm-tabletents/LebendesLand.webp);
+  background-size: 100% 100%;
 }
 
 #navigation .de.cosm-card.nileEmpire {
-    background: url(../images/deutsch/cosm-tabletents/Nil-Imperium.webp);
-    background-size: 100% 100%;
+  background: url(../images/deutsch/cosm-tabletents/Nil-Imperium.webp);
+  background-size: 100% 100%;
 }
 
 #navigation .de.cosm-card.aysle {
-    background: url(../images/deutsch/cosm-tabletents/Aysle.webp);
-    background-size: 100% 100%;
+  background: url(../images/deutsch/cosm-tabletents/Aysle.webp);
+  background-size: 100% 100%;
 }
 
 #navigation .de.cosm-card.cyberpapacy {
-    background: url(../images/deutsch/cosm-tabletents/Cyberpontifikat.webp);
-    background-size: 100% 100%;
+  background: url(../images/deutsch/cosm-tabletents/Cyberpontifikat.webp);
+  background-size: 100% 100%;
 }
 
 #navigation .de.cosm-card.panPacifica {
-    background: url(../images/deutsch/cosm-tabletents/Pan-Pacifica.webp);
-    background-size: 100% 100%;
+  background: url(../images/deutsch/cosm-tabletents/Pan-Pacifica.webp);
+  background-size: 100% 100%;
 }
 
 #navigation .de.cosm-card.orrorsh {
-    background: url(../images/deutsch/cosm-tabletents/Orrorsh.webp);
-    background-size: 100% 100%;
+  background: url(../images/deutsch/cosm-tabletents/Orrorsh.webp);
+  background-size: 100% 100%;
 }
 
 #navigation .de.cosm-card.tharkold {
-    background: url(../images/deutsch/cosm-tabletents/Tharkold.webp);
-    background-size: 100% 100%;
+  background: url(../images/deutsch/cosm-tabletents/Tharkold.webp);
+  background-size: 100% 100%;
 }
 
 #navigation a.scene-name {
-    font-family: "Alaska";
-    text-transform: uppercase;
-    border: none;
-    margin-left: 10px;
+  font-family: "Alaska";
+  text-transform: uppercase;
+  border: none;
+  margin-left: 10px;
 }
 
 #navigation a.scene-name .cosm-icone {
-    min-width: 28px;
-    min-height: 28px;
-    display: inline-block;
-    position: relative;
+  min-width: 28px;
+  min-height: 28px;
+  display: inline-block;
+  position: relative;
 }
 
 #navigation a.scene-name .cosm-icone.coreEarth {
-    background: url(../images/cosm-icons/coreEarth.webp);
-    background-size: 100% 100%;
+  background: url(../images/cosm-icons/coreEarth.webp);
+  background-size: 100% 100%;
 }
 
 #navigation a.scene-name .cosm-icone.livingLand {
-    background: url(../images/cosm-icons/livingLand.webp);
-    background-size: 100% 100%;
+  background: url(../images/cosm-icons/livingLand.webp);
+  background-size: 100% 100%;
 }
 
 #navigation a.scene-name .cosm-icone.nileEmpire {
-    background: url(../images/cosm-icons/nileEmpire.webp);
-    background-size: 100% 100%;
+  background: url(../images/cosm-icons/nileEmpire.webp);
+  background-size: 100% 100%;
 }
 
 #navigation a.scene-name .cosm-icone.aysle {
-    background: url(../images/cosm-icons/aysle.webp);
-    background-size: 100% 100%;
+  background: url(../images/cosm-icons/aysle.webp);
+  background-size: 100% 100%;
 }
 
 #navigation a.scene-name .cosm-icone.cyberpapacy {
-    background: url(../images/cosm-icons/cyberpapacy.webp);
-    background-size: 100% 100%;
+  background: url(../images/cosm-icons/cyberpapacy.webp);
+  background-size: 100% 100%;
 }
 
 #navigation a.scene-name .cosm-icone.tharkold {
-    background: url(../images/cosm-icons/tharkold.webp);
-    background-size: 100% 100%;
+  background: url(../images/cosm-icons/tharkold.webp);
+  background-size: 100% 100%;
 }
 
 #navigation a.scene-name .cosm-icone.panPacifica {
-    background: url(../images/cosm-icons/panPacifica.webp);
-    background-size: 100% 100%;
+  background: url(../images/cosm-icons/panPacifica.webp);
+  background-size: 100% 100%;
 }
 
 #navigation a.scene-name .cosm-icone.orrorsh {
-    background: url(../images/cosm-icons/orrorsh.webp);
-    background-size: 100% 100%;
+  background: url(../images/cosm-icons/orrorsh.webp);
+  background-size: 100% 100%;
 }
 
 #navigation #scene-list .scene,
 #navigation #scene-list .scene.context {
-    text-align: justify;
-    background: url(../images/scene.webp);
-    background-size: 100% 100%;
-    padding-left: 10px;
-    padding-right: 10px;
-    min-height: 40px;
-    min-width: 70px;
-    border: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: none;
-    color: #a0a0a0;
-    text-shadow: 0px 0px 3px black;
+  text-align: justify;
+  background: url(../images/scene.webp);
+  background-size: 100% 100%;
+  padding-left: 10px;
+  padding-right: 10px;
+  min-height: 40px;
+  min-width: 70px;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: none;
+  color: #a0a0a0;
+  text-shadow: 0px 0px 3px black;
 }
 
 #navigation #scene-list .scene.gm {
-    background: url(../images/scene-gm.webp);
-    background-size: 100% 100%;
-    border: none;
-    box-shadow: none;
+  background: url(../images/scene-gm.webp);
+  background-size: 100% 100%;
+  border: none;
+  box-shadow: none;
 }
 
 #navigation #scene-list .scene.active {
-    background: url(../images/scene-active.webp);
-    background-size: 100% 100%;
-    border: none;
-    box-shadow: none;
+  background: url(../images/scene-active.webp);
+  background-size: 100% 100%;
+  border: none;
+  box-shadow: none;
 }
 
 #navigation #scene-list .scene.view {
-    background: url(../images/scene-view.webp);
-    background-size: 100% 100%;
-    border: none;
-    box-shadow: none;
+  background: url(../images/scene-view.webp);
+  background-size: 100% 100%;
+  border: none;
+  box-shadow: none;
 }
 
 .dialog-button {
-    color: white;
+  color: white;
 }
 
 #players-popout div.app {
-    top: 0%;
-    width: 100%;
-    z-index: auto;
-    background-size: cover;
-    line-height: 25px;
+  top: 0%;
+  width: 100%;
+  z-index: auto;
+  background-size: cover;
+  line-height: 25px;
 }
 
 #players {
-    background-image: url(../images/thunder.webp);
-    background-position: center;
-    bottom: 0px;
-    left: 0px;
-    width: 220px;
-    margin: 0;
-    border: none;
-    min-width: 200px;
-    min-height: 20px;
-    box-shadow: none;
-    padding: 0% 0% 0% 0%;
-    color: white;
+  background-image: url(../images/thunder.webp);
+  background-position: center;
+  bottom: 0px;
+  left: 0px;
+  width: 220px;
+  margin: 0;
+  border: none;
+  min-width: 200px;
+  min-height: 20px;
+  box-shadow: none;
+  padding: 0% 0% 0% 0%;
+  color: white;
 }
 
 #players .players-popout {
-    color: white;
-    font-size: larger;
-    position: relative;
-    top: -25px;
-    z-index: +1;
-    left: 15px;
+  color: white;
+  font-size: larger;
+  position: relative;
+  top: -25px;
+  z-index: +1;
+  left: 15px;
 }
 
 #players .possReset {
-    position: relative;
-    left: 40%;
-    top: -25px;
+  position: relative;
+  left: 40%;
+  top: -25px;
 }
 
 #players h3 {
-    text-shadow: 0px 3px 10px #8181cc;
-    padding: 4px;
-    border: none;
-    box-shadow: 0px 5px 15px rgba(255, 255, 255, 0.459);
-    text-align: center;
-    color: white;
-    position: relative;
+  text-shadow: 0px 3px 10px #8181cc;
+  padding: 4px;
+  border: none;
+  box-shadow: 0px 5px 15px rgba(255, 255, 255, 0.459);
+  text-align: center;
+  color: white;
+  position: relative;
 }
 
 #players h3 .players-mode {
-    color: white;
+  color: white;
 }
 
 #players ol {
-    list-style: none;
-    margin: 0 0 4px;
-    padding: 0;
-    display: flex;
-    justify-content: space-around;
-    flex-direction: column;
-    /* justify-items: flex-end; */
+  list-style: none;
+  margin: 0 0 4px;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  /* justify-items: flex-end; */
 }
 
 #players ol li.player {
-    line-height: 25px;
-    padding: 1px 8px;
-    position: relative;
+  line-height: 25px;
+  padding: 1px 8px;
+  position: relative;
 }
 
 #players ol li.player span.possibilities {
-    margin-left: 0.5em;
-    position: absolute;
-    right: 4px;
+  margin-left: 0.5em;
+  position: absolute;
+  right: 4px;
 }
 
 #players ol li.player span.possibilities .possValue {
-    display: inline-block;
-    width: 2em;
-    height: 2em;
-    background: rgba(13, 94, 119, 0.226);
-    border: 1px solid white;
-    border-radius: 50%;
-    text-align: center;
+  display: inline-block;
+  width: 2em;
+  height: 2em;
+  background: rgba(13, 94, 119, 0.226);
+  border: 1px solid white;
+  border-radius: 50%;
+  text-align: center;
 }
 
 #players ol li.player span.possibilities .possAdd,
 #players ol li.player span.possibilities .possMinus {
-    display: none;
+  display: none;
 }
 
 #players ol li.player span.possibilities:hover .possAdd,
 #players ol li.player span.possibilities:hover .possMinus {
-    display: inline;
+  display: inline;
 }
 
-.possibilitiesByCosmWindow.eachDiversion{
-    max-height:142px; 
-    display:grid; 
-    grid-template-columns:auto; 
-    grid-template-rows:auto auto auto; 
-    grid-row-gap: 0.25rem;
-    align-items: center;
-    justify-items: center;
+.possibilitiesByCosmWindow.eachDiversion {
+  max-height: 142px;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto auto auto;
+  grid-row-gap: 0.25rem;
+  align-items: center;
+  justify-items: center;
 }
 
-.possibilitiesByCosmWindow.eachDiversion.hide{
-       filter: grayscale(1);
+.possibilitiesByCosmWindow.eachDiversion.hide {
+  filter: grayscale(1);
 }
 
-.possibilitiesByCosmWindow.imagesShown{
-    margin-bottom: 0.5rem;
-    border:none; 
-    height:80px; 
-    width:80px;
+.possibilitiesByCosmWindow.imagesShown {
+  margin-bottom: 0.5rem;
+  border: none;
+  height: 80px;
+  width: 80px;
 }
 
-.possibilitiesByCosmWindow.inputField{
-    text-align:center;
-    width:80px;
-    background:rgb(200,200,200);
+.possibilitiesByCosmWindow.inputField {
+  text-align: center;
+  width: 80px;
+  background: rgb(200, 200, 200);
 }
 
 #players ol li.player .player-active {
-    flex: 0 0 15px;
-    height: 15px;
-    border: 1px solid #000;
-    border-radius: 50%;
-    margin: 5px 5px 0 0;
-    background-size: cover;
+  flex: 0 0 15px;
+  height: 15px;
+  border: 1px solid #000;
+  border-radius: 50%;
+  margin: 5px 5px 0 0;
+  background-size: cover;
 }
 
 #players ol li.player .player-name {
-    text-shadow: 0px 3px 10px #8181cc;
-    color: white;
-    overflow: hidden;
-    white-space: unset;
-    word-break: unset;
+  text-shadow: 0px 3px 10px #8181cc;
+  color: white;
+  overflow: hidden;
+  white-space: unset;
+  word-break: unset;
 }
 
 #players ol li.player .player-name.self {
-    text-decoration: underline;
-    color: #f6f6f6;
+  text-decoration: underline;
+  color: #f6f6f6;
 }
 
 #players::after {
-    background: url(../images/separatorRound.webp);
-    width: 230px;
-    height: 35px;
-    content: "";
+  background: url(../images/separatorRound.webp);
+  width: 230px;
+  height: 35px;
+  content: "";
 }
 
 #player-config label {
-    color: lightblue;
-    font-weight: normal;
-    font-size: 12px;
+  color: lightblue;
+  font-weight: normal;
+  font-size: 12px;
 }
 
 nav#controls,
@@ -1688,721 +1666,719 @@ nav#controls,
 #sidebar,
 #hotbar,
 #players {
-    transition: all 500ms cubic-bezier(0.42, 0, 0.58, 1) 10ms;
+  transition: all 500ms cubic-bezier(0.42, 0, 0.58, 1) 10ms;
 }
 
 #combat .combatant-init {
-    color: white;
+  color: white;
 }
 
 #combat ol li.combatant {
-    border-left: 5px solid black;
+  border-left: 5px solid black;
 }
 
 #combat ol li.combatant .token-image {
-    max-width: 54px;
-    max-height: 54px;
-    border:none;
+  max-width: 54px;
+  max-height: 54px;
+  border: none;
 }
 
 #combat ol li.combatant.dispo1 {
-    background-color: rgba(15, 47, 189, 0.212);
+  background-color: rgba(15, 47, 189, 0.212);
 }
 
 #combat ol li.combatant.dispo-1 {
-    background-color: rgba(143, 1, 1, 0.28);
+  background-color: rgba(143, 1, 1, 0.28);
 }
 
 #combat ol li.combatant.dispo0 {
-    background-color: rgba(141, 143, 1, 0.28);
+  background-color: rgba(141, 143, 1, 0.28);
 }
 
 #combat ol li.combatant.active {
-    border-left: 8px solid rgba(255, 255, 0, 0.836);
+  border-left: 8px solid rgba(255, 255, 0, 0.836);
 }
 
 #combat ol a.has-played {
-    color: rgba(238, 238, 238, 0.739);
-    text-shadow: 0px 0px 6px black;
-    max-width: 5%;
-    align-self: center;
+  color: rgba(238, 238, 238, 0.739);
+  text-shadow: 0px 0px 6px black;
+  max-width: 5%;
+  align-self: center;
 }
 
 #combat ol a.has-played .playedOK {
-    color: #62ff00;
-    text-shadow: 0px 0px 6px black;
+  color: #62ff00;
+  text-shadow: 0px 0px 6px black;
 }
 
 #combat ol a.init-up,
 #combat ol a.init-down {
-    max-width: 5%;
+  max-width: 5%;
 }
 
 #combat ol a.init-up:hover,
 #combat ol a.init-down:hover {
-    text-shadow: 0px 0px 5px #c8cf00;
-    color: #f8f83c;
+  text-shadow: 0px 0px 5px #c8cf00;
+  color: #f8f83c;
 }
 
-.combat-sidebar #combat-tracker{
-    overflow-y: scroll;
-    flex: 2 !important;
+.combat-sidebar #combat-tracker {
+  overflow-y: scroll;
+  flex: 2 !important;
 }
 
-#combat-controls{
-    max-height: 5%;
+#combat-controls {
+  max-height: 5%;
 }
 
 #party-sheet h1,
 #party-sheet h2,
 #party-sheet h3,
 #party-sheet h4 {
-    text-align: center;
+  text-align: center;
 }
 
 #party-sheet h2 {
-    border-bottom: 2px solid #419c9c;
+  border-bottom: 2px solid #419c9c;
 }
 
 #party-sheet h3 {
-    border-bottom: 2px solid #215050;
+  border-bottom: 2px solid #215050;
 }
 
 #party-sheet h4 {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 #party-sheet .flexrow {
-    margin: 4px;
+  margin: 4px;
 }
 
 #party-sheet .flexrow div {
-    border: 1px solid rgba(128, 128, 128, 0.301);
-    padding: 2px;
-    box-shadow: 0px 0px 0px rgba(87, 87, 87, 0.301) inset;
-    transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1) 10ms;
+  border: 1px solid rgba(128, 128, 128, 0.301);
+  padding: 2px;
+  box-shadow: 0px 0px 0px rgba(87, 87, 87, 0.301) inset;
+  transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1) 10ms;
 }
 
 #party-sheet .flexrow div div:hover {
-    box-shadow: 0px 0px 35px #5a5a5a inset;
+  box-shadow: 0px 0px 35px #5a5a5a inset;
 }
 
 div.readme a.compendium {
-    text-decoration: underline;
-    color: #419c9c;
+  text-decoration: underline;
+  color: #419c9c;
 }
 
 @-webkit-keyframes flip {
-    0% {
-        margin-left: 100%;
-    }
+  0% {
+    margin-left: 100%;
+  }
 
-    100% {
-        margin-left: 0%;
-    }
+  100% {
+    margin-left: 0%;
+  }
 }
 
 @keyframes flip {
-    0% {
-        margin-left: 100%;
-    }
+  0% {
+    margin-left: 100%;
+  }
 
-    100% {
-        margin-left: 0%;
-    }
+  100% {
+    margin-left: 0%;
+  }
 }
 
 .chat-message.flip-card {
-    -webkit-animation: flip 0.2s linear both;
-    animation: flip 0.2s linear both;
+  -webkit-animation: flip 0.2s linear both;
+  animation: flip 0.2s linear both;
 }
 
 .chat-message {
-    margin: 5px;
-    color: black;
-    background: url("../images/bgparch.webp");
-    background-color: rgba(255, 255, 255, 0.575);
+  margin: 5px;
+  color: black;
+  background: url("../images/bgparch.webp");
+  background-color: rgba(255, 255, 255, 0.575);
 }
 
 .chat-message .message-header .flavor-text {
-    font-size: unset;
+  font-size: unset;
 }
 
 .chat-message table td {
-    padding: 0px 0px;
+  padding: 0px 0px;
 }
 
 .chat-message .item-description-chat {
-    font-family: Palatino;
+  font-family: Palatino;
 }
 
 .chat-message .chat-title {
-    font-family: Alaska;
-    font-size: 18px;
+  font-family: Alaska;
+  font-size: 18px;
 }
 
 .chat-message .skill-chat-title {
-    font-size: 20px;
-    padding: 0px;
-    margin: 0px;
-    text-align: center;
-    font-family: Alaska;
+  font-size: 20px;
+  padding: 0px;
+  margin: 0px;
+  text-align: center;
+  font-family: Alaska;
 }
 
 .chat-message .skill-unskilled-label {
-    font-size: 12px;
-    text-align: center;
-    padding: 0px;
-    margin: 0px;
-    font-family: "Palatino Linotype";
-    width: 100%;
+  font-size: 12px;
+  text-align: center;
+  padding: 0px;
+  margin: 0px;
+  font-family: "Palatino Linotype";
+  width: 100%;
 }
 
 .chat-message .skill-roll-disconnect-label {
-    font-size: 12px;
-    text-align: center;
-    padding: 0px;
-    margin: 0px;
-    font-family: "Palatino Linotype";
-    width: 100%;
-    font-style: italic;
+  font-size: 12px;
+  text-align: center;
+  padding: 0px;
+  margin: 0px;
+  font-family: "Palatino Linotype";
+  width: 100%;
+  font-style: italic;
 }
 
 .chat-message .skill-roll-result {
-    text-align: center;
-    font-size: 24px;
-    font-family: "Alaska";
-    /*font-weight: bold; no longer needed as Alaska is standard bold*/
-    padding: 3px 0px 0px 0px;
-    margin: 0px;
+  text-align: center;
+  font-size: 24px;
+  font-family: "Alaska";
+  /*font-weight: bold; no longer needed as Alaska is standard bold*/
+  padding: 3px 0px 0px 0px;
+  margin: 0px;
 }
 
 .chat-message .skill-roll-action-label {
-    text-align: center;
-    font-family: "Palatino Linotype";
-    font-size: 14px;
-    padding: 0px;
-    margin: 0px;
+  text-align: center;
+  font-family: "Palatino Linotype";
+  font-size: 14px;
+  padding: 0px;
+  margin: 0px;
 }
 
 .chat-message .skill-roll-table {
-    padding-bottom: 5px;
-    font-family: "Palatino Linotype";
-    margin-bottom: 5px;
+  padding-bottom: 5px;
+  font-family: "Palatino Linotype";
+  margin-bottom: 5px;
 }
 
 .chat-message .skill-roll-table-1 {
-    width: 40%;
-    font-family: "Palatino Linotype";
-    border: 1px solid black;
+  width: 40%;
+  font-family: "Palatino Linotype";
+  border: 1px solid black;
 }
 
 .chat-message .skill-roll-table-2 {
-    width: 60%;
-    background: #e8b017;
-    padding-left: 5px;
-    font-family: "Palatino Linotype";
-    border: 1px solid black;
+  width: 60%;
+  background: #e8b017;
+  padding-left: 5px;
+  font-family: "Palatino Linotype";
+  border: 1px solid black;
 }
 
 .chat-message .skill-roll-menu {
-    font-family: "Palatino Linotype";
-    font-size: 11px;
-    text-align: center;
+  font-family: "Palatino Linotype";
+  font-size: 11px;
+  text-align: center;
 }
 
 .chat-message .skill-roll-damage-label {
-    font-family: "Palatino Linotype";
-    font-size: 18px;
-    font-weight: bold;
-    text-align: center;
-    margin: 0.5em 0 0 0;
+  font-family: "Palatino Linotype";
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  margin: 0.5em 0 0 0;
 }
-
 
 /* Styles limited to torg sheets */
 
 @-webkit-keyframes roll {
-    from {
-        transform: scaleX(1.2) scaleY(1.2);
-    }
+  from {
+    transform: scaleX(1.2) scaleY(1.2);
+  }
 
-    to {
-        transform: scaleX(0.8) scaleY(0.8);
-    }
+  to {
+    transform: scaleX(0.8) scaleY(0.8);
+  }
 }
 
 @keyframes roll {
-    from {
-        transform: scaleX(1.2) scaleY(1.2);
-    }
+  from {
+    transform: scaleX(1.2) scaleY(1.2);
+  }
 
-    to {
-        transform: scaleX(0.8) scaleY(0.8);
-    }
+  to {
+    transform: scaleX(0.8) scaleY(0.8);
+  }
 }
 
 .torgeternity.actor {
-    min-width: 450px;
+  min-width: 450px;
 }
 
 .torgeternity.actor .window-content {
-    background-image: url(../images/bg-sheet.webp);
-    background-size: cover;
-    font-family: Palatino;
-    font-size: 12px;
+  background-image: url(../images/bg-sheet.webp);
+  background-size: cover;
+  font-family: Palatino;
+  font-size: 12px;
 }
 
 form.actor-sheet .actor-type {
-    background: url(../images/separatorRound.webp);
-    position: absolute;
-    transform: rotateZ(-90deg);
-    left: -150px;
-    top: 180px;
-    width: 300px;
-    text-align: right;
-    text-transform: uppercase;
+  background: url(../images/separatorRound.webp);
+  position: absolute;
+  transform: rotateZ(-90deg);
+  left: -150px;
+  top: 180px;
+  width: 300px;
+  text-align: right;
+  text-transform: uppercase;
 }
 
 form.actor-sheet .actor-type span {
-    background: url(../images/type_back.webp);
-    color: black;
-    text-shadow: 0px 0px 2px black;
-    background-size: 100% 100%;
-    padding: 3px 20px;
+  background: url(../images/type_back.webp);
+  color: black;
+  text-shadow: 0px 0px 2px black;
+  background-size: 100% 100%;
+  padding: 3px 20px;
 }
 
 form.actor-sheet header {
-    display: inline;
-    margin-top: 15px;
+  display: inline;
+  margin-top: 15px;
 }
 
 form.actor-sheet header input[name="name"] {
-    border: none;
-    text-transform: uppercase;
-    text-shadow: 0px -2px 7px #0e0909;
-    font-family: Alaska;
-    text-align: center;
-    color: #0e0909;
+  border: none;
+  text-transform: uppercase;
+  text-shadow: 0px -2px 7px #0e0909;
+  font-family: Alaska;
+  text-align: center;
+  color: #0e0909;
 }
 
 .activeDefense-roll {
-    animation: none;
-    color: black;
+  animation: none;
+  color: black;
 }
 
-.activeDefense-roll:hover{
-    cursor: pointer;
-    text-shadow: 0 0 15px rgb(28, 28, 179);
+.activeDefense-roll:hover {
+  cursor: pointer;
+  text-shadow: 0 0 15px rgb(28, 28, 179);
 }
 
 .activeDefense-roll-glow {
-    animation: colorchange 2s infinite alternate;
+  animation: colorchange 2s infinite alternate;
 }
 
 .inline-skill-item:after {
-    content: ",";
-    position: relative;
-    left: -2px;
-    margin-right: 2px;
+  content: ",";
+  position: relative;
+  left: -2px;
+  margin-right: 2px;
 }
 
 .inline-skill-item:last-child:after {
-    content: "";
+  content: "";
 }
 
 .window-content .actor-sheet {
-    color: black;
-    font-family: "Alaska";
-    font-size: 13px;
-    line-height: 14px;
+  color: black;
+  font-family: "Alaska";
+  font-size: 13px;
+  line-height: 14px;
 }
 
 .threat-edit {
-    font-family: Arial;
+  font-family: Arial;
 }
 
 .window-content .actor-sheet .threat-stat-line {
-    flex: none;
+  flex: none;
 }
 
 .tabsOn .window-content .actor-sheet h5.editable-tooltip {
-    display: none
+  display: none;
 }
 
 .window-content .actor-sheet h5.editable-tooltip {
-    margin: 0px;
-    width: 100%;
-    text-align: right;
-    padding: 0px;
-    position: absolute;
-    bottom: 5px;
-    right: 5px;
-    text-shadow: 0px 0px 3px rgb(255 74 74);
-    font-size: 0.8em;
-    box-shadow: 0px 0px 3px gray inset;
+  margin: 0px;
+  width: 100%;
+  text-align: right;
+  padding: 0px;
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  text-shadow: 0px 0px 3px rgb(255 74 74);
+  font-size: 0.8em;
+  box-shadow: 0px 0px 3px gray inset;
 }
 
 .window-content .actor-sheet section.sheet-body {
-    height: 100%;
+  height: 100%;
 }
 
 .window-content .list-section-heading {
-    height: 40px;
-    font-size: 2em;
-    text-align: center;
-    background-image: url(../images/separator.webp);
-    background-size: cover;
-    background-position: center;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  height: 40px;
+  font-size: 2em;
+  text-align: center;
+  background-image: url(../images/separator.webp);
+  background-size: cover;
+  background-position: center;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .window-content .actor-sheet .tab[data-tab].active {
-    display: grid;
-    grid-template-columns: repeat(8, 1fr);
-    grid-template-rows: repeat(6, minmax(100px, min-content));
-    grid-gap: 0px 5px;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(6, minmax(100px, min-content));
+  grid-gap: 0px 5px;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
 }
 
 .window-content .actor-sheet .tab.threat-block-tab[data-tab].active {
-    display: inline;
+  display: inline;
 }
 
 .window-content .actor-sheet .block {
-    border: solid 4px;
-    -o-border-image: url(../images/separator.webp);
-    border-image: url(../images/separator.webp);
-    border-image-slice: 50;
-    box-shadow: 2px 2px 15px #9e9686;
-    transition: all 0.3s cubic-bezier(0.6, -0.07, 0.56, 1.52) 0.2s;
-    overflow: scroll;
-    padding: 0px;
+  border: solid 4px;
+  -o-border-image: url(../images/separator.webp);
+  border-image: url(../images/separator.webp);
+  border-image-slice: 50;
+  box-shadow: 2px 2px 15px #9e9686;
+  transition: all 0.3s cubic-bezier(0.6, -0.07, 0.56, 1.52) 0.2s;
+  overflow: scroll;
+  padding: 0px;
 }
 
 .window-content .actor-sheet div.block:hover {
-    box-shadow: 2px 2px 15px black;
+  box-shadow: 2px 2px 15px black;
 }
 
 .window-content .actor-sheet nav.tabs {
-    display: flex;
-    flex-direction: row;
-    text-align: center;
-    border: none;
-    position: absolute;
-    transform: rotateZ(90deg);
-    font-family: Alaska;
-    font-size: 13px;
-    text-transform: capitalize;
-    right: -310px;
-    top: 310px;
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  border: none;
+  position: absolute;
+  transform: rotateZ(90deg);
+  font-family: Alaska;
+  font-size: 13px;
+  text-transform: capitalize;
+  right: -310px;
+  top: 310px;
 }
 
-
 .tabsOff .window-content .actor-sheet nav.tabs {
-    display: none
+  display: none;
 }
 
 .tabsOff .window-content .actor-sheet #threat-editor {
-    display: none;
+  display: none;
 }
 
 .window-content .actor-sheet nav.tabs a.item {
-    min-width: 100px;
-    transition: all 0.1s cubic-bezier(1, 0, 0, 1) 0.1s;
-    color: white;
-    background-image: url(../images/tab_back.webp);
-    background-size: 100% 100%;
-    padding: 8px 1px;
+  min-width: 100px;
+  transition: all 0.1s cubic-bezier(1, 0, 0, 1) 0.1s;
+  color: white;
+  background-image: url(../images/tab_back.webp);
+  background-size: 100% 100%;
+  padding: 8px 1px;
 }
 
 .window-content .actor-sheet nav.tabs a.item:hover,
 .window-content .actor-sheet nav.tabs a.item:active {
-    text-transform: uppercase;
-    transform: scaleX(1.1) scaleY(1.3) scaleZ(1.2);
-    text-shadow: 0 0 10px #10813f;
-    color: #e5ecec;
-    z-index: 0;
+  text-transform: uppercase;
+  transform: scaleX(1.1) scaleY(1.3) scaleZ(1.2);
+  text-shadow: 0 0 10px #10813f;
+  color: #e5ecec;
+  z-index: 0;
 }
 
 .window-content .actor-sheet nav.tabs a.item.active {
-    background-image: url(../images/active_tab_back.webp);
-    text-transform: uppercase;
+  background-image: url(../images/active_tab_back.webp);
+  text-transform: uppercase;
 }
 
 .window-content .actor-sheet input {
-    width: 30px;
-    height: 20px;
-    text-align: center;
+  width: 30px;
+  height: 20px;
+  text-align: center;
 }
 
 .window-content .actor-sheet input[type="number"],
 .window-content .actor-sheet input[type="text"] {
-    font-family: Arial;
-    font-size: 12px;
+  font-family: Arial;
+  font-size: 12px;
 }
 
 .window-content .actor-sheet input[name="name"] {
-    color: #212341;
-    min-width: 150px;
-    min-height: 45px;
-    border-radius: 25%;
-    background-color: #fbfbfb49;
+  color: #212341;
+  min-width: 150px;
+  min-height: 45px;
+  border-radius: 25%;
+  background-color: #fbfbfb49;
 }
 
 .window-content .actor-sheet input[type="text"]:hover,
 .window-content .actor-sheet input[type="number"]:hover,
 .window-content .actor-sheet input[type="text"]:focus,
 .window-content .actor-sheet input[type="number"]:focus {
-    box-shadow: 0 0 15px #778ba2 inset;
+  box-shadow: 0 0 15px #778ba2 inset;
 }
 
 .window-content .actor-sheet input[type="text"]::-moz-placeholder,
 .window-content .actor-sheet input[type="number"]::-moz-placeholder {
-    /*color: #293131;*/
-    color: rgba(245, 245, 245, 0.9);
-    background-color: transparent;
-    text-shadow: 0px 0px 10px black;
+  /*color: #293131;*/
+  color: rgba(245, 245, 245, 0.9);
+  background-color: transparent;
+  text-shadow: 0px 0px 10px black;
 }
 
 .window-content .actor-sheet input[type="text"]:-ms-input-placeholder,
 .window-content .actor-sheet input[type="number"]:-ms-input-placeholder {
-    /*color: #293131;*/
-    color: rgba(245, 245, 245, 0.9);
-    background-color: transparent;
-    text-shadow: 0px 0px 10px black;
+  /*color: #293131;*/
+  color: rgba(245, 245, 245, 0.9);
+  background-color: transparent;
+  text-shadow: 0px 0px 10px black;
 }
 
 .window-content .actor-sheet input[type="text"]::placeholder,
 .window-content .actor-sheet input[type="number"]::placeholder {
-    /*color: #293131;*/
-    color: rgba(245, 245, 245, 0.9);
-    background-color: transparent;
-    text-shadow: 0px 0px 10px black;
+  /*color: #293131;*/
+  color: rgba(245, 245, 245, 0.9);
+  background-color: transparent;
+  text-shadow: 0px 0px 10px black;
 }
 
 .window-content .actor-sheet input.small-input {
-    min-width: 5px;
-    border: none;
-    width: 20px;
+  min-width: 5px;
+  border: none;
+  width: 20px;
 }
 
 .window-content .actor-sheet img {
-    border: none;
-    flex: 0 0 60px;
-    height: auto;
-    max-height: 120px;
-    max-width: 120px;
-    width: 80%;
-    margin-left: auto;
-    margin-right: auto;
+  border: none;
+  flex: 0 0 60px;
+  height: auto;
+  max-height: 120px;
+  max-width: 120px;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .window-content .actor-sheet h3 {
-    font-family: Alaska;
-    text-transform: uppercase;
-    border:none;
+  font-family: Alaska;
+  text-transform: uppercase;
+  border: none;
 }
 
 .window-content .actor-sheet h2 {
-    color: black;
-    border: none;
-    text-align: center;
-    font-family: Alaska;
-    text-shadow: 0px 0px 15px black;
-    text-transform: uppercase;
-    font-weight: bold;
-    margin: 15px 0px 15px 0px;
+  color: black;
+  border: none;
+  text-align: center;
+  font-family: Alaska;
+  text-shadow: 0px 0px 15px black;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin: 15px 0px 15px 0px;
 }
 
 .window-content .actor-sheet h1 {
-    color: black;
-    border: none;
-    text-align: center;
-    font-family: Alaska;
-    text-shadow: 0px 0px 15px black;
-    text-transform: uppercase;
-    font-weight: bold;
-    width: 100%;
-    background: none;
+  color: black;
+  border: none;
+  text-align: center;
+  font-family: Alaska;
+  text-shadow: 0px 0px 15px black;
+  text-transform: uppercase;
+  font-weight: bold;
+  width: 100%;
+  background: none;
 }
 
 .window-content .actor-sheet h1 input {
-    color: white;
-    border: none;
-    text-align: center;
-    font-family: Alaska;
-    text-shadow: 0px 0px 5px black;
-    text-transform: uppercase;
+  color: white;
+  border: none;
+  text-align: center;
+  font-family: Alaska;
+  text-shadow: 0px 0px 5px black;
+  text-transform: uppercase;
 }
 
 .window-content .actor-sheet .dark {
-    background-color: rgba(0, 0, 0, 0.561);
-    color: white;
+  background-color: rgba(0, 0, 0, 0.561);
+  color: white;
 }
 
 .window-content .actor-sheet a.skill-roll:hover,
 .window-content .actor-sheet a.skill-roll:active {
-    text-shadow: 0px 0px 10px #474a68;
+  text-shadow: 0px 0px 10px #474a68;
 }
 
 .window-content .actor-sheet .item-name {
-    margin-right: 10px;
+  margin-right: 10px;
 }
 
 .window-content .actor-sheet ol.item-list {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .window-content .actor-sheet ol.item-list img {
-    max-width: 60px;
-    max-height: 60px;
+  max-width: 60px;
+  max-height: 60px;
 }
 
 .window-content .actor-sheet ol.item-list li {
-    margin: 5px;
-    padding-bottom: 5px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    border-top: 1px solid black;
+  margin: 5px;
+  padding-bottom: 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-top: 1px solid black;
 }
 
 .window-content .actor-sheet ol.item-list li .fle div {
-    margin-right: 15px;
+  margin-right: 15px;
 }
 
 .window-content .actor-sheet .char_image {
-    border: solid 5px;
-    -o-border-image: url(../images/separator.webp) 100 round;
-    border-image: url(../images/separator.webp) 100 round;
-    grid-column: 5/7;
-    grid-row: 3/4;
-    transition: all 0.6s cubic-bezier(1, 0, 0, 1) 0.1s;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    max-height: 130px;
+  border: solid 5px;
+  -o-border-image: url(../images/separator.webp) 100 round;
+  border-image: url(../images/separator.webp) 100 round;
+  grid-column: 5/7;
+  grid-row: 3/4;
+  transition: all 0.6s cubic-bezier(1, 0, 0, 1) 0.1s;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  max-height: 130px;
 }
 
 .window-content .actor-sheet .char_image:hover {
-    transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 .window-content .actor-sheet .sheet-header {
-    grid-column: 1/9;
-    grid-row: 1/2;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+  grid-column: 1/9;
+  grid-row: 1/2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .window-content .actor-sheet .sheet-header .threatHeader {
-    min-width: max-content;
+  min-width: max-content;
 }
 
 .window-content .actor-sheet .sheet-header img {
-    max-width: 250px;
-    max-height: 200px;
+  max-width: 250px;
+  max-height: 200px;
 }
 
 .window-content .actor-sheet .sheet-header img.open-hand {
-    max-height: 64px;
-    width: auto;
-    transition: 0.2s;
-    transform: rotate(0deg) scale(1);
+  max-height: 64px;
+  width: auto;
+  transition: 0.2s;
+  transform: rotate(0deg) scale(1);
 }
 
 .window-content .actor-sheet .sheet-header img.open-hand:hover {
-    transform: rotate(5deg) scale(1.2);
+  transform: rotate(5deg) scale(1.2);
 }
 
 .window-content .actor-sheet .sheet-header .axioms {
-    background: url(../images/roundBack.webp);
-    background-size: cover;
-    width: 40px;
-    height: 40px;
-    padding-top: 11px;
+  background: url(../images/roundBack.webp);
+  background-size: cover;
+  width: 40px;
+  height: 40px;
+  padding-top: 11px;
 }
 
 .window-content .actor-sheet .sheet-header p {
-    text-align: center;
-    flex-direction: row;
+  text-align: center;
+  flex-direction: row;
 }
 
 .window-content .actor-sheet .sheet-header p span {
-    display: block;
+  display: block;
 }
 
 .window-content .actor-sheet select {
-    color: black;
-    border: none;
-    border-bottom: 1px solid grey;
-    max-height: 20px;
-    font-size: 13px;
-    font-family: Signika;
+  color: black;
+  border: none;
+  border-bottom: 1px solid grey;
+  max-height: 20px;
+  font-size: 13px;
+  font-family: Signika;
 }
 
 .window-content .actor-sheet select:active,
 .window-content .actor-sheet select:focus {
-    box-shadow: 0 0 5px #0062ff;
+  box-shadow: 0 0 5px #0062ff;
 }
 
 .window-content .actor-sheet .sheet-header div {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin-right: 5px;
-    align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-right: 5px;
+  align-items: center;
 }
 
 .window-content .actor-sheet .sheet-header input[type="number"] {
-    border: none;
-    text-align: center;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background: url(../images/roundBack.webp);
-    background-size: cover;
-    font-family: Signika;
-    font-size: 15px;
-    color: black;
+  border: none;
+  text-align: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: url(../images/roundBack.webp);
+  background-size: cover;
+  font-family: Signika;
+  font-size: 15px;
+  color: black;
 }
 
 .window-content .actor-sheet .sheet-header h1 {
-    width: 100%;
+  width: 100%;
 }
 
 .window-content .actor-sheet .sheet-header h1 input[name="name"] {
-    border: none;
-    text-transform: uppercase;
-    text-shadow: 0px -2px 10px #0e0909;
-    font-family: Alaska;
-    font-size: 24px;
-    text-align: center;
-    color: #0e0909;
-    width: 100%;
+  border: none;
+  text-transform: uppercase;
+  text-shadow: 0px -2px 10px #0e0909;
+  font-family: Alaska;
+  font-size: 24px;
+  text-align: center;
+  color: #0e0909;
+  width: 100%;
 }
 
 .window-content .actor-sheet .sheet-header.threat {
-    flex: none;
+  flex: none;
 }
 
 .window-content .actor-sheet .attributes {
-    grid-column: 1/5;
-    grid-row: 2/3;
+  grid-column: 1/5;
+  grid-row: 2/3;
 }
 
 .window-content .actor-sheet .others {
-    grid-column: 5/9;
-    grid-row: 2/3;
+  grid-column: 5/9;
+  grid-row: 2/3;
 }
 
 .window-content .actor-sheet .attributes ul,
@@ -2411,10 +2387,10 @@ form.actor-sheet header input[name="name"] {
 .window-content .actor-sheet .others ol,
 .window-content .actor-sheet .weapons ul,
 .window-content .actor-sheet .weapons ol {
-    font-family: "Alaska";
-    font-size: 13px;
-    display: flex;
-    justify-content: space-around;
+  font-family: "Alaska";
+  font-size: 13px;
+  display: flex;
+  justify-content: space-around;
 }
 
 .window-content .actor-sheet .attributes ul li.attribut-block,
@@ -2423,10 +2399,10 @@ form.actor-sheet header input[name="name"] {
 .window-content .actor-sheet .others ol li.attribut-block,
 .window-content .actor-sheet .weapons ul li.attribut-block,
 .window-content .actor-sheet .weapons ol li.attribut-block {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .window-content .actor-sheet .attributes ul li.attribut-block input[type="number"],
@@ -2435,14 +2411,14 @@ form.actor-sheet header input[name="name"] {
 .window-content .actor-sheet .others ol li.attribut-block input[type="number"],
 .window-content .actor-sheet .weapons ul li.attribut-block input[type="number"],
 .window-content .actor-sheet .weapons ol li.attribut-block input[type="number"] {
-    border: none;
-    text-align: center;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background: url(../images/roundBack.webp);
-    background-size: cover;
-    color: black;
+  border: none;
+  text-align: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: url(../images/roundBack.webp);
+  background-size: cover;
+  color: black;
 }
 
 .window-content .actor-sheet .attributes ul li.attribut-block a,
@@ -2451,519 +2427,519 @@ form.actor-sheet header input[name="name"] {
 .window-content .actor-sheet .others ol li.attribut-block a,
 .window-content .actor-sheet .weapons ul li.attribut-block a,
 .window-content .actor-sheet .weapons ol li.attribut-block a {
-    text-align: center;
+  text-align: center;
 }
 
 .window-content .actor-sheet .skills {
-    grid-column: 1/5;
-    grid-row: 3/span 7;
-    overflow: scroll;
-    max-height: 100%;
+  grid-column: 1/5;
+  grid-row: 3 / span 7;
+  overflow: scroll;
+  max-height: 100%;
 }
 
 .window-content .actor-sheet .skills select {
-    color: black;
-    border: none;
-    border-bottom: 1px solid grey;
-    max-height: 20px;
-    font-size: 13px;
-    font-family: Signika;
+  color: black;
+  border: none;
+  border-bottom: 1px solid grey;
+  max-height: 20px;
+  font-size: 13px;
+  font-family: Signika;
 }
 
 .window-content .actor-sheet .skills select:active,
 .window-content .actor-sheet .skills select:focus {
-    box-shadow: 0 0 5px #0062ff;
+  box-shadow: 0 0 5px #0062ff;
 }
 
 .window-content .actor-sheet .skills ul {
-    font-family: Signika;
-    font-size: 13px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+  font-family: Signika;
+  font-size: 13px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 
 .window-content .actor-sheet .skills ul li {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    border-bottom: 1px solid grey;
-    position: relative;
-    min-height: 25px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  border-bottom: 1px solid grey;
+  position: relative;
+  min-height: 25px;
 }
 
 .window-content .actor-sheet .skills ul li input[type="checkbox"] {
-    opacity: 0.01;
-    position: relative;
-    left: -25px;
-    cursor: pointer;
+  opacity: 0.01;
+  position: relative;
+  left: -25px;
+  cursor: pointer;
 }
 
 .window-content .actor-sheet .skills ul li a.toggleFav,
 .window-content .actor-sheet .skills ul li a.toggleDefenseOnly {
-    color: grey;
-    position: relative;
-    font-size: 10px;
-    top: -4px;
+  color: grey;
+  position: relative;
+  font-size: 10px;
+  top: -4px;
 }
 
 .window-content .actor-sheet .skills ul li a.toggleFav.checked,
 .window-content .actor-sheet .skills ul li a.toggleDefenseOnly.checked {
-    font-size: 15px;
-    color: rgba(8, 83, 8, 0.794);
-    -webkit-animation-duration: 0.3s;
-    animation-duration: 0.3s;
-    -webkit-animation-name: roll;
-    animation-name: roll;
-    text-shadow: 0px 0px 3px green;
+  font-size: 15px;
+  color: rgba(8, 83, 8, 0.794);
+  -webkit-animation-duration: 0.3s;
+  animation-duration: 0.3s;
+  -webkit-animation-name: roll;
+  animation-name: roll;
+  text-shadow: 0px 0px 3px green;
 }
 
 .window-content .actor-sheet .skills ul li input {
-    border: none;
-    text-align: center;
-    width: 18px;
-    height: 18px;
+  border: none;
+  text-align: center;
+  width: 18px;
+  height: 18px;
 }
 
 .window-content .actor-sheet .skills ul li span {
-    width: 90%;
-    text-align: center;
+  width: 90%;
+  text-align: center;
 }
 
 .window-content .actor-sheet .skills ul li a {
-    margin-left: auto;
-    text-align: center;
+  margin-left: auto;
+  text-align: center;
 }
 
 .window-content .actor-sheet .perks-list {
-    grid-column: 5/9;
-    grid-row: 6/7;
-    font-family: "Signika";
-    font-size: 13px;
+  grid-column: 5/9;
+  grid-row: 6/7;
+  font-family: "Signika";
+  font-size: 13px;
 }
 
 .window-content .actor-sheet .weapons-list {
-    grid-column: 5/9;
-    grid-row: 5/6;
+  grid-column: 5/9;
+  grid-row: 5/6;
 }
 
 .window-content .actor-sheet .perks-list h2,
 .window-content .actor-sheet .perks-list h3,
 .window-content .actor-sheet .weapons-list h2,
 .window-content .actor-sheet .weapons-list h3 {
-    margin-bottom: 8px;
+  margin-bottom: 8px;
 }
 
 .window-content .actor-sheet .weapons-list h2 {
-    font-size: 19.5px;
+  font-size: 19.5px;
 }
 
 .window-content .actor-sheet .weapons-list h3 {
-    font-family: "Modesto Condensed";
-    font-size: 20px;
+  font-family: "Modesto Condensed";
+  font-size: 20px;
 }
 
 .window-content .actor-sheet .perks-list .item-list li,
-.window-content .actor-sheet .weapons-list .item-list li  {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    border-top: 1px solid;
-    font-family: "Signika";
-    font-size: 13px;
-    margin: 1px;
-    padding: 1px;
+.window-content .actor-sheet .weapons-list .item-list li {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-top: 1px solid;
+  font-family: "Signika";
+  font-size: 13px;
+  margin: 1px;
+  padding: 1px;
 }
 
 .window-content .actor-sheet .perks-list .item-list li .item-name,
 .window-content .actor-sheet .weapons-list .item-list li .item-name {
-    padding-top: 5px;
-    max-width: 150px;
+  padding-top: 5px;
+  max-width: 150px;
 }
 
 .window-content .actor-sheet .perks-list .item-list li img,
 .window-content .actor-sheet .weapons-list .item-list li img {
-    max-width: 30px;
-    max-height: 30px;
+  max-width: 30px;
+  max-height: 30px;
 }
 
 .window-content .actor-sheet .perks-details,
 .window-content .actor-sheet .gear,
 .window-content .actor-sheet .powers {
-    grid-column: 1/9;
-    grid-row: 1/9;
+  grid-column: 1/9;
+  grid-row: 1/9;
 }
 
 .window-content .actor-sheet .perks-details h2,
 .window-content .actor-sheet .gear h2,
 .window-content .actor-sheet .powers h2 {
-    text-align: left;
-    background: #37465438;
+  text-align: left;
+  background: #37465438;
 }
 
 .window-content .actor-sheet .perks-details ol,
 .window-content .actor-sheet .gear ol,
 .window-content .actor-sheet .powers ol {
-    font-family: "Signika";
-    font-size: 13px;
+  font-family: "Signika";
+  font-size: 13px;
 }
 
 .window-content .actor-sheet .perks-details ol li,
 .window-content .actor-sheet .gear ol li,
 .window-content .actor-sheet .powers ol li {
-    position: relative;
-    display: flex;
-    flex-direction: column;
+  position: relative;
+  display: flex;
+  flex-direction: column;
 }
 
 .window-content .actor-sheet .perks-details ol li .item-name,
 .window-content .actor-sheet .gear ol li .item-name,
 .window-content .actor-sheet .powers ol li .item-name {
-    text-align: center;
+  text-align: center;
 }
 
 .window-content .actor-sheet .perks-details ol li img,
 .window-content .actor-sheet .gear ol li img,
 .window-content .actor-sheet .powers ol li img {
-    margin: 5px;
+  margin: 5px;
 }
 
 .window-content .actor-sheet .perks-details ol li .item-detail,
 .window-content .actor-sheet .gear ol li .item-detail,
 .window-content .actor-sheet .powers ol li .item-detail {
-    overflow: scroll;
-    position: relative;
-    z-index: 1000;
-    max-height: 0px;
+  overflow: scroll;
+  position: relative;
+  z-index: 1000;
+  max-height: 0px;
 }
 
 .window-content .actor-sheet .perks-details ol li .item-controls,
 .window-content .actor-sheet .gear ol li .item-controls,
 .window-content .actor-sheet .powers ol li .item-controls {
-    justify-content: end;
+  justify-content: end;
 }
 
 .window-content .actor-sheet .perks-details ol li .item-controls a.item-control,
 .window-content .actor-sheet .gear ol li .item-controls a.item-control,
 .window-content .actor-sheet .powers ol li .item-controls a.item-control {
-    float: right;
-    margin-right: 10px;
+  float: right;
+  margin-right: 10px;
 }
 
 .window-content .actor-sheet .perks-details ol li .item-controls a.item-equip.item-equipped,
 .window-content .actor-sheet .gear ol li .item-controls a.item-equip.item-equipped,
 .window-content .actor-sheet .powers ol li .item-controls a.item-equip.item-equipped {
-    color: #0000af;
-    text-shadow: 0px 0px 5px #0011ff;
+  color: #0000af;
+  text-shadow: 0px 0px 5px #0011ff;
 }
 
 .window-content .actor-sheet .perks-details ol li .item-controls a.item-equip.item-unequipped,
 .window-content .actor-sheet .gear ol li .item-controls a.item-equip.item-unequipped,
 .window-content .actor-sheet .powers ol li .item-controls a.item-equip.item-unequipped {
-    color: #1f0101;
-    text-shadow: 0px 0px 5px #f80202;
+  color: #1f0101;
+  text-shadow: 0px 0px 5px #f80202;
 }
 
 .window-content .actor-sheet .perks-details ol li .item-dropdown-extras,
 .window-content .actor-sheet .gear ol li .item-dropdown-extras,
 .window-content .actor-sheet .powers ol li .item-dropdown-extras {
-    font-style: italic;
-    border: 1px solid grey;
-    text-align: center;
-    background-color: #9e96868e;
+  font-style: italic;
+  border: 1px solid grey;
+  text-align: center;
+  background-color: #9e96868e;
 }
 
 .window-content .actor-sheet .background .list-section-heading {
-    grid-column: 1/9;
-    grid-row: 1/2;
-    align-items: center;
+  grid-column: 1/9;
+  grid-row: 1/2;
+  align-items: center;
 }
 
 .window-content .actor-sheet .background .editor {
-    grid-column: 1/9;
-    grid-row: 1/9;
-    background: url(../images/bckg-hex.webp);
-    background-size: 100% 100%;
-    min-height: 200px;
-    min-width: 150px;
-    padding: 15% 10% 10% 10%;
-    font-family: Palatino;
-    font-size:14px;
+  grid-column: 1/9;
+  grid-row: 1/9;
+  background: url(../images/bckg-hex.webp);
+  background-size: 100% 100%;
+  min-height: 200px;
+  min-width: 150px;
+  padding: 15% 10% 10% 10%;
+  font-family: Palatino;
+  font-size: 14px;
 }
 
 .window-content .actor-sheet .perks {
-    grid-column: 1/9;
-    grid-row: 1/9;
+  grid-column: 1/9;
+  grid-row: 1/9;
 }
 
 .window-content .actor-sheet .spells {
-    grid-column: 5/9;
-    grid-row: 1/4;
+  grid-column: 5/9;
+  grid-row: 1/4;
 }
 
 .window-content .actor-sheet .miracles {
-    grid-column: 1/5;
-    grid-row: 4/9;
+  grid-column: 1/5;
+  grid-row: 4/9;
 }
 
 .window-content .actor-sheet .psionic {
-    grid-column: 5/9;
-    grid-row: 4/9;
+  grid-column: 5/9;
+  grid-row: 4/9;
 }
 
 .window-content .actor-sheet .effects {
-    grid-column: 1/9;
-    grid-row: 1/5;
+  grid-column: 1/9;
+  grid-row: 1/5;
 }
 
 .window-content .actor-sheet .effects .item-list {
-    padding: 0px;
+  padding: 0px;
 }
 
 .window-content .actor-sheet .effects .effects-list {
-    padding: 0px;
+  padding: 0px;
 }
 
 .window-content .actor-sheet .effects .effects-heading {
-    color: white;
-    background-color: black;
-    margin: 2px 0;
-    align-items: center;
-    font-weight: bold;
-    font-family: "Palatino Linotype";
+  color: white;
+  background-color: black;
+  margin: 2px 0;
+  align-items: center;
+  font-weight: bold;
+  font-family: "Palatino Linotype";
 }
 
 .window-content .actor-sheet .effects .effects-item {
-    text-align: center;
-    border-left: 1px solid #c9c7b8;
-    border-right: 1px solid #c9c7b8;
-    font-size: 12px;
-    color: black;
+  text-align: center;
+  border-left: 1px solid #c9c7b8;
+  border-right: 1px solid #c9c7b8;
+  font-size: 12px;
+  color: black;
 }
 
 .window-content .actor-sheet .effects .effect-name {
-    white-space: nowrap;
-    overflow-x: hidden;
-    text-align: left;
-    font-family: "Signika";
-    font-size: 13px;
-    padding: 0px 0px 0px 10px;
-    width: 25%;
+  white-space: nowrap;
+  overflow-x: hidden;
+  text-align: left;
+  font-family: "Signika";
+  font-size: 13px;
+  padding: 0px 0px 0px 10px;
+  width: 25%;
 }
 
 .window-content .actor-sheet .effects .effect-section-title {
-    width: 25%;
-    padding: 0px 0px 0px 10px;
+  width: 25%;
+  padding: 0px 0px 0px 10px;
 }
 
 .window-content .actor-sheet .effects .effect-source,
 .window-content .actor-sheet .effects .effect-duration,
 .window-content .actor-sheet .effects .effect-controls {
-    text-align: center;
-    border-left: 1px solid #c9c7b8;
-    border-right: 1px solid #c9c7b8;
-    font-size: 12px;
-    font-family: "Signika";
-    width: 25%;
+  text-align: center;
+  border-left: 1px solid #c9c7b8;
+  border-right: 1px solid #c9c7b8;
+  font-size: 12px;
+  font-family: "Signika";
+  width: 25%;
 }
 
 .window-content .actor-sheet .effects .effect-controls {
-    border: none;
-    flex: 1;
+  border: none;
+  flex: 1;
 }
 
 .window-content .actor-sheet .effects .effect-item-image {
-    flex: 0 0 30px;
-    height: 30px;
-    background-size: 30px;
-    border: none;
-    margin-right: 5px;
+  flex: 0 0 30px;
+  height: 30px;
+  background-size: 30px;
+  border: none;
+  margin-right: 5px;
 }
 
 .window-content .actor-sheet .effects .effect-toggle,
 .window-content .actor-sheet .effects .effect-edit,
 .window-content .actor-sheet .effects .effect-delete {
-    padding: 5px;
+  padding: 5px;
 }
 
 .window-content .actor-sheet .xp {
-    grid-column: 5/9;
-    grid-row: 4/5;
-    flex-direction: row;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    max-height: 130px;
+  grid-column: 5/9;
+  grid-row: 4/5;
+  flex-direction: row;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  max-height: 130px;
 }
 
 .window-content .actor-sheet .xp input {
-    background: url(../images/roundBack.webp);
-    background-size: cover;
-    width: 50px;
-    height: 50px;
-    border: none;
-    border-radius: 50%;
-    color: black;
+  background: url(../images/roundBack.webp);
+  background-size: cover;
+  width: 50px;
+  height: 50px;
+  border: none;
+  border-radius: 50%;
+  color: black;
 }
 
 .window-content .actor-sheet .defense {
-    line-height: 0.4em;
-    padding-top: 10px;
-    grid-column: 7/9;
-    grid-row: 3/4;
-    font-size: 0.9em;
-    max-height: 130px;
+  line-height: 0.4em;
+  padding-top: 10px;
+  grid-column: 7/9;
+  grid-row: 3/4;
+  font-size: 0.9em;
+  max-height: 130px;
 }
 
 .window-content .actor-sheet .defense p {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    min-height:0em;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  min-height: 0em;
 }
 
 .window-content .actor-sheet .defense p span {
-    display: block;
+  display: block;
 }
 
 .window-content .actor-sheet .defense h3.vital-box {
-    justify-content: space-between;
-    display: flex;
+  justify-content: space-between;
+  display: flex;
 }
 
 .window-content .actor-sheet .defense input {
-    width: 25%;
+  width: 25%;
 }
 
 .window-content .actor-sheet .threat-editor {
-    grid-column: 1/9;
-    grid-row: 2/5;
-    flex-direction: row;
+  grid-column: 1/9;
+  grid-row: 2/5;
+  flex-direction: row;
 }
 
 .window-content .actor-sheet .threat-editor .threat-edit {
-    flex-direction: column;
-    font-family: Arial;
-    margin-top: 5px;
+  flex-direction: column;
+  font-family: Arial;
+  margin-top: 5px;
 }
 
 .window-content .actor-sheet .stat-block {
-    grid-column: 1/9;
-    flex-direction: row;
+  grid-column: 1/9;
+  flex-direction: row;
 }
 
 form.actor-sheet.threat span.vital-box span.light {
-    font-family: "Signika";
-    font-size: 13px;
-    display: inline;
+  font-family: "Signika";
+  font-size: 13px;
+  display: inline;
 }
 
 form.actor-sheet.threat input[type="checkbox"] {
-    opacity: 0.01;
-    position: relative;
-    cursor: pointer;
-    top: 5px;
-    left: -3px;
-    width: 10px;
+  opacity: 0.01;
+  position: relative;
+  cursor: pointer;
+  top: 5px;
+  left: -3px;
+  width: 10px;
 }
 
 form.actor-sheet.threat a.toggleFav,
 form.actor-sheet.threat a.toggleDefenseOnly {
-    color: grey;
-    position: relative;
-    font-size: 10px;
-    left: 5px;
+  color: grey;
+  position: relative;
+  font-size: 10px;
+  left: 5px;
 }
 
 form.actor-sheet.threat a.toggleFav.checked,
 form.actor-sheet.threat a.toggleDefenseOnly.checked {
-    color: rgba(8, 83, 8, 0.794);
-    text-shadow: 0px 0px 3px green;
+  color: rgba(8, 83, 8, 0.794);
+  text-shadow: 0px 0px 3px green;
 }
 
 form.actor-sheet.threat span.inputsFav {
-    display: inline-block;
-    max-width: 100px;
+  display: inline-block;
+  max-width: 100px;
 }
 
 form.actor-sheet.threat div.skill-list-edit {
-    display: grid;
-    justify-items: flex-end;
-    justify-content: center;
-    align-items: center;
-    grid-template-columns: repeat(3, 1fr);
+  display: grid;
+  justify-items: flex-end;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: repeat(3, 1fr);
 }
 
 form.actor-sheet.threat div.skill-list-edit .skill-element-edit {
-    display: flex;
-    padding-right: 5px;
-    align-items: center;
-    flex-direction: row;
-    border-bottom: 1px solid lightgray;
+  display: flex;
+  padding-right: 5px;
+  align-items: center;
+  flex-direction: row;
+  border-bottom: 1px solid lightgray;
 }
 
 form.actor-sheet.threat div.skill-list-edit .skill-element-edit span {
-    text-align: end;
-    font-family: Arial;
-    margin-right: 15px;
+  text-align: end;
+  font-family: Arial;
+  margin-right: 15px;
 }
 
 form.actor-sheet.threat div.skill-list-edit .skill-element-edit span.inputsFav {
-    position: relative;
-    position: relative;
-    margin-left: 5px;
+  position: relative;
+  position: relative;
+  margin-left: 5px;
 }
 
 form.actor-sheet.threat div.skill-list-edit .skill-element-edit span.inputsFav input[type="checkbox"],
 form.actor-sheet.threat div.skill-list-edit .skill-element-edit span.inputsFav a.toggleFav,
 form.actor-sheet.threat div.skill-list-edit .skill-element-edit span.inputDefenseOnly a.toggleDefenseOnly {
-    position: absolute;
-    left: 19px;
-    max-width: 30px;
-    top: 3px;
-    width: 10px;
-    margin: 0px;
-    background: white;
+  position: absolute;
+  left: 19px;
+  max-width: 30px;
+  top: 3px;
+  width: 10px;
+  margin: 0px;
+  background: white;
 }
 
 form.actor-sheet.threat td {
-    position: relative;
-    line-height: 1.8;
+  position: relative;
+  line-height: 1.8;
 }
 
 form.actor-sheet.threat td input {
-    right: 2px;
-    position: absolute;
+  right: 2px;
+  position: absolute;
 }
 
 form.actor-sheet.threat .threat-edit input[type="text"] {
-    width: 100px;
+  width: 100px;
 }
 
 form.actor-sheet.threat .sheet-header {
-    flex-direction: row;
+  flex-direction: row;
 }
 
 form.actor-sheet.threat .threat-edit {
-    vertical-align: top;
+  vertical-align: top;
 }
 
 form.actor-sheet.threat .tab[data-tab].active {
-    display: block;
+  display: block;
 }
 
 form.actor-sheet.threat .tab[data-tab].active .list-section-heading {
-    height: 40px;
-    font-size: 18px;
-    text-align: center;
-    background-image: url(../images/separator.webp);
-    background-size: cover;
-    background-position: center;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  height: 40px;
+  font-size: 18px;
+  text-align: center;
+  background-image: url(../images/separator.webp);
+  background-size: cover;
+  background-position: center;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 form.actor-sheet.threat .tab[data-tab].active .list-section-heading .item-create-rsa,
@@ -2972,278 +2948,276 @@ form.actor-sheet.threat .tab[data-tab].active .list-section-heading .item-create
 .remove-enhancement,
 .add-limitation,
 .remove-limitation {
-    padding: 0px 5px 0px 5px;
-    float: right;
+  padding: 0px 5px 0px 5px;
+  float: right;
 }
 
 form.actor-sheet.threat .tab[data-tab].active ol.item-list {
-    padding: 0px;
+  padding: 0px;
 }
 
 form.actor-sheet.threat .tab[data-tab].active ol.item-list li {
-    display: block;
-    overflow: hidden;
-    padding-bottom: 0px;
+  display: block;
+  overflow: hidden;
+  padding-bottom: 0px;
 }
 
 form.actor-sheet.threat .tab[data-tab].active ol.item-list li .item .effects .effects-item .flexrow {
-    display: flex;
+  display: flex;
 }
 
 form.actor-sheet.threat .tab[data-tab].active ol.item-list li img {
-    height: 30px;
-    width: 30px;
-    max-width: 30px;
+  height: 30px;
+  width: 30px;
+  max-width: 30px;
 }
 
 form.actor-sheet.threat .tab[data-tab].active ol.item-list li .block {
-    border: 1px 0px 0px 0px black;
-    box-shadow: none;
+  border: 1px 0px 0px 0px black;
+  box-shadow: none;
 }
 
 form.actor-sheet.threat .tab[data-tab].active ol.item-list li .item-name {
-    text-align: center;
-    font-size: 13px;
-    display: inline;
-    max-width: 500px;
+  text-align: center;
+  font-size: 13px;
+  display: inline;
+  max-width: 500px;
 }
 
 form.actor-sheet.threat .tab[data-tab].active ol.item-list li .item-controls {
-    justify-content: end;
-    max-width: 80px;
-    display: inline;
+  justify-content: end;
+  max-width: 80px;
+  display: inline;
 }
 
 form.actor-sheet.threat .tab[data-tab].active ol.item-list li .item-controls .item-control {
-    margin-right: 5px;
+  margin-right: 5px;
 }
 
 form.actor-sheet.threat .tab[data-tab].active ol.item-list li .item-detail {
-    max-height: 0px;
+  max-height: 0px;
 }
 
 form.actor-sheet.threat .tab[data-tab].active ol.item-list li .item-detail .item-dropdown-description {
-    max-height: inherit;
+  max-height: inherit;
 }
 
 form.actor-sheet.threat .tab[data-tab].active ol.item-list li .item-detail .item-dropdown-extras {
-    font-style: italic;
-    border: 1px solid grey;
-    text-align: center;
-    background-color: #9e96868e;
+  font-style: italic;
+  border: 1px solid grey;
+  text-align: center;
+  background-color: #9e96868e;
 }
 
 form.actor-sheet.threat .tab[data-tab].active .editor {
-    width: 400px;
-    height: 400px;
-    background: url(../images/bckg-hex.webp);
-    background-size: 110% 110%;
-    padding: 20px;
-    background-position: center;
+  width: 400px;
+  height: 400px;
+  background: url(../images/bckg-hex.webp);
+  background-size: 110% 110%;
+  padding: 20px;
+  background-position: center;
 }
 
 .compact .window-content {
-    padding: 1px;
+  padding: 1px;
 }
 
 .compact form.actor-sheet .block {
-    border: none;
-    margin: 0px;
-    padding: 2px;
+  border: none;
+  margin: 0px;
+  padding: 2px;
 }
 
 .compact form.actor-sheet nav.sheet-tabs {
-    transform: rotateZ(90deg) scale(0.7);
+  transform: rotateZ(90deg) scale(0.7);
 }
 
 .compact form.actor-sheet .tab[data-tab].active {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .compact form.actor-sheet .tab[data-tab].active .sheet-header p {
-    display: none;
+  display: none;
 }
 
 .compact form.actor-sheet .tab[data-tab].active .sheet-header div:last-child {
-    display: none;
+  display: none;
 }
 
 .compact form.actor-sheet .tab[data-tab].active .attributes input,
 .compact form.actor-sheet .tab[data-tab].active .others input {
-    background: none;
-    height: 20px;
+  background: none;
+  height: 20px;
 }
 
 .compact form.actor-sheet .tab[data-tab].active .skills .skillAttr,
 .compact form.actor-sheet .tab[data-tab].active .skills .skillAdd {
-    display: none;
+  display: none;
 }
 
 .compact form.actor-sheet .tab[data-tab].active .char_image,
 .compact form.actor-sheet .tab[data-tab].active .xp,
 .compact form.actor-sheet .tab[data-tab].active .defense {
-    display: none;
+  display: none;
 }
 
 .compact form.actor-sheet .tab[data-tab].active .perks-list h3,
 .compact form.actor-sheet .tab[data-tab].active .weapons-list h3 {
-    display: none;
+  display: none;
 }
 
 .compact form.actor-sheet .tab[data-tab].active .perks-list img,
 .compact form.actor-sheet .tab[data-tab].active .weapons-list img {
-    display: none;
+  display: none;
 }
 
 .compact form.actor-sheet .tab[data-tab].active .perks-list li,
 .compact form.actor-sheet .tab[data-tab].active .weapons-list li {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 .compact form.actor-sheet .tab[data-tab].active .background h1 {
-    display: none;
+  display: none;
 }
 
 .compact form.actor-sheet .tab[data-tab].active .background .editor {
-    height: 100%;
+  height: 100%;
 }
 
 .item .window-content {
-    padding: 0px;
+  padding: 0px;
 }
 
 .item .window-content form.item-sheet {
-    padding: 10px;
-    background-image: url(../images/bg-sheet.webp);
-    background-size: cover;
-    font-family: Palatino;
-    font-size: 0.9em;
+  padding: 10px;
+  background-image: url(../images/bg-sheet.webp);
+  background-size: cover;
+  font-family: Palatino;
+  font-size: 0.9em;
 }
 
 .item .window-content form.item-sheet .item-type {
-    background: url(../images/separatorRound.webp);
-    position: absolute;
-    transform: rotateZ(-90deg);
-    left: -150px;
-    top: 180px;
-    width: 300px;
-    text-align: right;
-    text-transform: uppercase;
-    border:none;
+  background: url(../images/separatorRound.webp);
+  position: absolute;
+  transform: rotateZ(-90deg);
+  left: -150px;
+  top: 180px;
+  width: 300px;
+  text-align: right;
+  text-transform: uppercase;
+  border: none;
 }
 
 .item .window-content form.item-sheet .item-type span {
-    background: url(../images/type_back.webp);
-    color: black;
-    text-shadow: 0px 0px 2px black;
-    background-size: 100% 100%;
-    padding: 3px 20px;
+  background: url(../images/type_back.webp);
+  color: black;
+  text-shadow: 0px 0px 2px black;
+  background-size: 100% 100%;
+  padding: 3px 20px;
 }
 
 .item .window-content form.item-sheet header {
-    margin-top: 15px;
+  margin-top: 15px;
 }
 
 .item .window-content form.item-sheet header input[name="name"] {
-    border: none;
-    text-transform: uppercase;
-    text-shadow: 0px -2px 10px #0e0909;
-    font-family: Alaska;
-    font-size: 20px;
-    text-align: center;
-    color: black;
+  border: none;
+  text-transform: uppercase;
+  text-shadow: 0px -2px 10px #0e0909;
+  font-family: Alaska;
+  font-size: 20px;
+  text-align: center;
+  color: black;
 }
 
 .item .window-content form.item-sheet .sheet-content {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    margin: 15px;
-    color: black;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  margin: 15px;
+  color: black;
 }
 
 .item .window-content form.item-sheet .asside {
-    grid-row: 1/4;
-    grid-column: 1/2;
-    text-align: center;
+  grid-row: 1/4;
+  grid-column: 1/2;
+  text-align: center;
 }
 
 .item .window-content form.item-sheet .asside input[type="number"] {
-    border: none;
-    text-align: center;
-    width: 40px;
-    height: 40px;
-    border-radius: 15px;
-    background: url(../images/roundBack.webp);
-    background-size: cover;
-    color: black;
+  border: none;
+  text-align: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 15px;
+  background: url(../images/roundBack.webp);
+  background-size: cover;
+  color: black;
 }
 
 .item .window-content form.item-sheet .asside input[name="data.price"],
 .item .window-content form.item-sheet .asside input[name="data.tough"] {
-    width: 50px;
-    color: black;
+  width: 50px;
+  color: black;
 }
 
 .item .window-content form.item-sheet .asside select {
-    color: black;
-    text-align: center;
-    max-width: 150px;
+  color: black;
+  text-align: center;
+  max-width: 150px;
 }
 
-
-
 .item .window-content form.item-sheet .main-content {
-    grid-row: 1/4;
-    grid-column: 2/5;
+  grid-row: 1/4;
+  grid-column: 2/5;
 }
 
 .item .window-content form.item-sheet .editor {
-    width: 400px;
-    height: 400px;
-    background: url(../images/bckg-hex.webp);
-    background-size: 110% 110%;
-    padding: 20px;
-    background-position: center;
+  width: 400px;
+  height: 400px;
+  background: url(../images/bckg-hex.webp);
+  background-size: 110% 110%;
+  padding: 20px;
+  background-position: center;
 }
 
 .item .window-content form.item-sheet nav.tabs {
-    display: flex;
-    flex-direction: row;
-    text-align: center;
-    border: none;
-    position: absolute;
-    transform: rotateZ(90deg);
-    font-family: Alaska;
-    text-transform: capitalize;
-    right: -110px;
-    top: 115px;
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  border: none;
+  position: absolute;
+  transform: rotateZ(90deg);
+  font-family: Alaska;
+  text-transform: capitalize;
+  right: -110px;
+  top: 115px;
 }
 
 .item .window-content form.item-sheet nav.tabs a.item {
-    min-width: 100px;
-    transition: all 0.1s cubic-bezier(1, 0, 0, 1) 0.1s;
-    color: white;
-    background-image: url(../images/tab_back.webp);
-    background-size: 100% 100%;
-    padding: 8px 1px;
+  min-width: 100px;
+  transition: all 0.1s cubic-bezier(1, 0, 0, 1) 0.1s;
+  color: white;
+  background-image: url(../images/tab_back.webp);
+  background-size: 100% 100%;
+  padding: 8px 1px;
 }
 
 .item .window-content form.item-sheet nav.tabs a.item:hover,
 .item .window-content form.item-sheet nav.tabs a.item:active {
-    text-transform: uppercase;
-    transform: scaleX(1.1) scaleY(1.3) scaleZ(1.2);
-    text-shadow: 0 0 10px #10813f;
-    color: #e5ecec;
-    z-index: 0;
+  text-transform: uppercase;
+  transform: scaleX(1.1) scaleY(1.3) scaleZ(1.2);
+  text-shadow: 0 0 10px #10813f;
+  color: #e5ecec;
+  z-index: 0;
 }
 
 .item .window-content form.item-sheet nav.tabs a.item.active {
-    background-image: url(../images/active_tab_back.webp);
-    text-transform: uppercase;
+  background-image: url(../images/active_tab_back.webp);
+  text-transform: uppercase;
 }
 
 .item .window-content form.item-sheet select:hover,
@@ -3252,482 +3226,481 @@ form.actor-sheet.threat .tab[data-tab].active .editor {
 .item .window-content form.item-sheet input[type="number"]:hover,
 .item .window-content form.item-sheet input[type="text"]:focus,
 .item .window-content form.item-sheet input[type="number"]:focus {
-    box-shadow: 0 0 10px #4f523c inset;
+  box-shadow: 0 0 10px #4f523c inset;
 }
 
 .item .window-content form.item-sheet input[type="text"]::-moz-placeholder,
 .item .window-content form.item-sheet input[type="number"]::-moz-placeholder {
-    /*color: #161a1a;*/
-    color: rgba(245, 245, 245, 0.9);
-    background-color: transparent;
-    text-shadow: 0px 0px 10px black;
+  /*color: #161a1a;*/
+  color: rgba(245, 245, 245, 0.9);
+  background-color: transparent;
+  text-shadow: 0px 0px 10px black;
 }
 
 .item .window-content form.item-sheet input[type="text"]:-ms-input-placeholder,
 .item .window-content form.item-sheet input[type="number"]:-ms-input-placeholder {
-    /*color: #161a1a;*/
-    color: rgba(245, 245, 245, 0.9);
-    background-color: transparent;
-    text-shadow: 0px 0px 10px black;
+  /*color: #161a1a;*/
+  color: rgba(245, 245, 245, 0.9);
+  background-color: transparent;
+  text-shadow: 0px 0px 10px black;
 }
 
 .item .window-content form.item-sheet input[type="text"]::placeholder,
 .item .window-content form.item-sheet input[type="number"]::placeholder {
-    /*color: #161a1a;*/
-    color: rgba(245, 245, 245, 0.9);
-    background-color: transparent;
-    text-shadow: 0px 0px 10px black;
+  /*color: #161a1a;*/
+  color: rgba(245, 245, 245, 0.9);
+  background-color: transparent;
+  text-shadow: 0px 0px 10px black;
 }
 
 .item .window-content form.item-sheet .item-data-label {
-    text-align: center;
-    font-family: "Alaska";
-    font-size: 14px;
+  text-align: center;
+  font-family: "Alaska";
+  font-size: 14px;
 }
 
 .item .window-content form.item-sheet .item-description-textarea {
-    font-family: "Palatino Linotype";
-    font-size: 14px;
-    border-radius: 15px;
-    resize: none;
-    padding: 5px 5px;
+  font-family: "Palatino Linotype";
+  font-size: 14px;
+  border-radius: 15px;
+  resize: none;
+  padding: 5px 5px;
 }
 
 .item .window-content form.item-sheet .effects .item-list {
-    padding: 0px;
+  padding: 0px;
 }
 
 .item .window-content form.item-sheet .effects .effects-list {
-    padding: 0px;
+  padding: 0px;
 }
 
 .item .window-content form.item-sheet .effects .effects-heading {
-    color: white;
-    background-color: black;
-    margin: 2px 0;
-    align-items: center;
-    font-weight: bold;
-    font-family: "Palatino Linotype";
+  color: white;
+  background-color: black;
+  margin: 2px 0;
+  align-items: center;
+  font-weight: bold;
+  font-family: "Palatino Linotype";
 }
 
 .item .window-content form.item-sheet .effects .effects-item {
-    text-align: center;
-    border-left: 1px solid #c9c7b8;
-    border-right: 1px solid #c9c7b8;
-    font-family: "Signika";
-    font-size: 14px;
-    color: black;
+  text-align: center;
+  border-left: 1px solid #c9c7b8;
+  border-right: 1px solid #c9c7b8;
+  font-family: "Signika";
+  font-size: 14px;
+  color: black;
 }
 
 .item .window-content form.item-sheet .effects .effect-name {
-    white-space: nowrap;
-    overflow-x: hidden;
-    text-align: left;
-    font-family: "Signika";
-    padding: 0px 0px 0px 10px;
-    width: 25%;
+  white-space: nowrap;
+  overflow-x: hidden;
+  text-align: left;
+  font-family: "Signika";
+  padding: 0px 0px 0px 10px;
+  width: 25%;
 }
 
 .item .window-content form.item-sheet .effects .effect-section-title {
-    width: 25%;
-    padding: 0px 0px 0px 10px;
+  width: 25%;
+  padding: 0px 0px 0px 10px;
 }
 
 .item .window-content form.item-sheet .effects .effect-source,
 .item .window-content form.item-sheet .effects .effect-duration,
 .item .window-content form.item-sheet .effects .effect-controls {
-    text-align: center;
-    border-left: 1px solid #c9c7b8;
-    border-right: 1px solid #c9c7b8;
-    font-size: 14px;
-    font-family: "Signika";
-    width: 25%;
+  text-align: center;
+  border-left: 1px solid #c9c7b8;
+  border-right: 1px solid #c9c7b8;
+  font-size: 14px;
+  font-family: "Signika";
+  width: 25%;
 }
 
 .item .window-content form.item-sheet .effects .effect-controls {
-    border: none;
-    flex: 1;
+  border: none;
+  flex: 1;
 }
 
 .item .window-content form.item-sheet .effects .effect-item-image {
-    flex: 0 0 30px;
-    height: 30px;
-    background-size: 30px;
-    border: none;
-    margin-right: 5px;
+  flex: 0 0 30px;
+  height: 30px;
+  background-size: 30px;
+  border: none;
+  margin-right: 5px;
 }
 
 .item .window-content form.item-sheet .effects .effect-toggle,
 .item .window-content form.item-sheet .effects .effect-edit,
 .item .window-content form.item-sheet .effects .effect-delete {
-    padding: 5px;
+  padding: 5px;
 }
 
 .threat-block {
-    font-family: "Signika";
-    font-size: 13px;
+  font-family: "Signika";
+  font-size: 13px;
 }
 
 .directory-item {
-    font-family: Palatino;
-    font-size: 15px;
-    font-weight: bold;
+  font-family: Palatino;
+  font-size: 15px;
+  font-weight: bold;
 }
 
 .skill-check-dialog-status-effects {
-    font-family: Palatino;
-    font-size: 13px;
+  font-family: Palatino;
+  font-size: 13px;
 }
 
 .skill-check-options {
-    font-family: Palatino;
-    font-size: 13px;
+  font-family: Palatino;
+  font-size: 13px;
 }
 
 .torg-cards-action-icons fas-fa:before {
-    color: white;
+  color: white;
 }
 
 .torg-card-controls {
-    flex: 1 0 64px;
-    text-align: right;
-    padding-right: 4px;
+  flex: 1 0 64px;
+  text-align: right;
+  padding-right: 4px;
 }
 
 .card-tooltip {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 .card-tooltip span {
-    display: none;
-    -moz-border-radius: 6px;
-    -webkit-border-radius: 6px;
-    border-radius: 6px;
-    color: black;
-    background: white
+  display: none;
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+  border-radius: 6px;
+  color: black;
+  background: white;
 }
 
 .card-tooltip span img {
-    float: left;
-    margin: 0px 8px 8px 0;
+  float: left;
+  margin: 0px 8px 8px 0;
 }
 
 .card-tooltip:hover span {
-    display: block;
-    position: absolute;
-    top: 10px;
-    left: 120px;
-    z-index: 1000;
-    max-width: 320px;
-    min-height: 128px;
-    border: 1px solid black;
-    margin-top: 5px;
-    margin-left: 5px;
-    overflow: hidden;
-    padding: 8px;
+  display: block;
+  position: absolute;
+  top: 10px;
+  left: 120px;
+  z-index: 1000;
+  max-width: 320px;
+  min-height: 128px;
+  border: 1px solid black;
+  margin-top: 5px;
+  margin-left: 5px;
+  overflow: hidden;
+  padding: 8px;
 }
 
 .pool-tooltip {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 .pool-tooltip span {
-    display: none;
-    -moz-border-radius: 6px;
-    -webkit-border-radius: 6px;
-    border-radius: 6px;
-    color: black;
-    background: white
+  display: none;
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+  border-radius: 6px;
+  color: black;
+  background: white;
 }
 
 .pool-tooltip span img {
-    float: left;
-    margin: 0px 8px 8px 0;
+  float: left;
+  margin: 0px 8px 8px 0;
 }
 
 .pool-tooltip:hover span {
-    display: block;
-    position: absolute;
-    top: 30px;
-    right: 30px;
-    z-index: 0;
-    max-width: 246px;
-    min-height: 99px;
-    border: 1px solid black;
-    margin-top: 2px;
-    margin-left: 2px;
-    overflow: hidden;
-    padding: 8px;
+  display: block;
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  z-index: 0;
+  max-width: 246px;
+  min-height: 99px;
+  border: 1px solid black;
+  margin-top: 2px;
+  margin-left: 2px;
+  overflow: hidden;
+  padding: 8px;
 }
 
 .card-chat-tooltip {
-    text-decoration: none;
-    flex: none;
+  text-decoration: none;
+  flex: none;
 }
 
 .card-chat-tooltip span {
-    display: none;
-    -moz-border-radius: 6px;
-    -webkit-border-radius: 6px;
-    border-radius: 6px;
-    color: black;
-    background: white
+  display: none;
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+  border-radius: 6px;
+  color: black;
+  background: white;
 }
 
 .card-chat-tooltip span img {
-    float: left;
-    margin: 0px 8px 8px 0;
+  float: left;
+  margin: 0px 8px 8px 0;
 }
 
 .card-chat-tooltip:hover span {
-    display: block;
-    position: absolute;
-    top: 100px;
-    right: 100px;
-    z-index: 0;
-    max-width: 320px;
-    min-height: 128px;
-    border: 1px solid black;
-    margin-top: 5px;
-    margin-left: 5px;
-    overflow: visible;
-    padding: 8px;
+  display: block;
+  position: absolute;
+  top: 100px;
+  right: 100px;
+  z-index: 0;
+  max-width: 320px;
+  min-height: 128px;
+  border: 1px solid black;
+  margin-top: 5px;
+  margin-left: 5px;
+  overflow: visible;
+  padding: 8px;
 }
 
 .open-hand {
-    width: 150px;
-    color: black !important;
+  width: 150px;
+  color: black !important;
 }
 
 .card-faces {
-    flex-basis: 20px;
-    flex-grow: .1;
-    flex-shrink: 2;
-    margin: 0.5em 0;
-    padding: 0 0 0 1.5em;
+  flex-basis: 20px;
+  flex-grow: 0.1;
+  flex-shrink: 2;
+  margin: 0.5em 0;
+  padding: 0 0 0 1.5em;
 }
 
 .pool-list {
-    font-family: Palatino;
-    font-size: 12px;
+  font-family: Palatino;
+  font-size: 12px;
 }
 
 .chat-message .card-draw .card-name {
-    line-height: 20px;
+  line-height: 20px;
 }
 
 .interaction-attack-list {
-    margin: 10px;
-    text-align: center
+  margin: 10px;
+  text-align: center;
 }
 
 .app.sidebar-popout {
-    height: auto !important;
-    max-height: 90%
+  height: auto !important;
+  max-height: 90%;
 }
 
 .dsr-token {
-    font-family: Palatino;
-    font-size: 14px;
-    font-weight: bold;
-    border: 2px solid black;
-    background-color: beige;
-    outline-color: black;
-    display: inline-block;
-    border-radius: 10px;
-    padding: 0px 5px 0px 5px;
-    width: 65px;
+  font-family: Palatino;
+  font-size: 14px;
+  font-weight: bold;
+  border: 2px solid black;
+  background-color: beige;
+  outline-color: black;
+  display: inline-block;
+  border-radius: 10px;
+  padding: 0px 5px 0px 5px;
+  width: 65px;
 }
 
 .player-dsr-token {
-    font-family: Palatino;
-    font-size: 10px;
-    font-weight: bold;
-    border: 2px solid black;
-    background-color: beige;
-    outline-color: black;
-    display: inline-block;
-    border-radius: 10px;
-    padding: 0px 5px 0px 5px;
-    width: 50px;
-    text-shadow: none;
+  font-family: Palatino;
+  font-size: 10px;
+  font-weight: bold;
+  border: 2px solid black;
+  background-color: beige;
+  outline-color: black;
+  display: inline-block;
+  border-radius: 10px;
+  padding: 0px 5px 0px 5px;
+  width: 50px;
+  text-shadow: none;
 }
 
 .dsr-step {
-    color: black;
-    display: inline;
-    text-align: center;
+  color: black;
+  display: inline;
+  text-align: center;
 }
 
 .dsr-step-number {
-    color: red;
-    display: inline;
-    text-align: center
+  color: red;
+  display: inline;
+  text-align: center;
 }
 
 .item-sheet .item-list {
-    list-style: none;
-    padding: 0 0 0 0;
+  list-style: none;
+  padding: 0 0 0 0;
 }
 
 .enhancement-check {
-    flex: 10%;
-    color: black;
-    font-family: Alaska;
-    font-size: 12px;
+  flex: 10%;
+  color: black;
+  font-family: Alaska;
+  font-size: 12px;
 }
 
 .enhancement-content {
-    flex: 90%;
-    color: black;
-    font-family: Alaska;
-    font-size: 12px;
+  flex: 90%;
+  color: black;
+  font-family: Alaska;
+  font-size: 12px;
 }
 
 .available-enhancement-input {
-    width: 25px !important;
+  width: 25px !important;
 }
 
 .available-enhancement {
-    color: black;
-    text-align: center;
+  color: black;
+  text-align: center;
 }
 
 .pulp-description {
-    background-color: rgba(255, 255, 255, 0.39);
-    color: var(--color-text-dark-primary) !important;
-    border: 1px solid var(--color-border-light-tertiary)
+  background-color: rgba(255, 255, 255, 0.39);
+  color: var(--color-text-dark-primary) !important;
+  border: 1px solid var(--color-border-light-tertiary);
 }
 
 .pulp-description:hover,
 .pulp-description:focus {
-    box-shadow: 0 0 15px #4f523c inset;
-    background-color: rgba(255, 255, 255, 0.39)
+  box-shadow: 0 0 15px #4f523c inset;
+  background-color: rgba(255, 255, 255, 0.39);
 }
 
 .enhancements-section-heading {
-    height: 40px;
-    font-size: 18px;
-    text-align: center;
-    background-image: url(../images/separator.webp);
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    color: white;
-    justify-content: center;
-    align-items: center;
-    position: relative;
+  height: 40px;
+  font-size: 18px;
+  text-align: center;
+  background-image: url(../images/separator.webp);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  color: white;
+  justify-content: center;
+  align-items: center;
+  position: relative;
 }
 
 .enhancements-title {
-    vertical-align: middle;
-    font-size: 18px;
+  vertical-align: middle;
+  font-size: 18px;
 }
 
 .enhancements-controls {
-    position: absolute;
-    right: 0;
-    font-size: 10px;
+  position: absolute;
+  right: 0;
+  font-size: 10px;
 }
 
 .sheet-heading-vehicle input {
-    height: 48px;
-    line-height: 48px;
-    margin: 8px 2%;
-    width: 96%;
+  height: 48px;
+  line-height: 48px;
+  margin: 8px 2%;
+  width: 96%;
 }
-
 
 #gm-screen {
-    position: absolute;
-    width: 120%;
-    height: 85%;
-    margin-left: -10%;
-    z-index: 1000;
-    transform: translateX(-0%) rotateX(15deg) scale (1);
-    transition: all 500ms cubic-bezier(0.42, 0, 0.58, 1) 10ms;
+  position: absolute;
+  width: 120%;
+  height: 85%;
+  margin-left: -10%;
+  z-index: 1000;
+  transform: translateX(-0%) rotateX(15deg) scale (1);
+  transition: all 500ms cubic-bezier(0.42, 0, 0.58, 1) 10ms;
 }
 
-#gm-screen>div {
-    width: 33%;
-    height: 100%;
-    background-size: 300% 100%;
-    box-shadow: 0px 15px 40px black;
-    transition: all 500ms cubic-bezier(0.42, 0, 0.58, 1) 10ms;
+#gm-screen > div {
+  width: 33%;
+  height: 100%;
+  background-size: 300% 100%;
+  box-shadow: 0px 15px 40px black;
+  transition: all 500ms cubic-bezier(0.42, 0, 0.58, 1) 10ms;
 }
 
-#gm-screen>#left-panel {
-    position: absolute;
-    left: 0%;
-    top: 0%;
-    transform: rotateY(10deg);
-    transform-origin: 100% 0% 0;
+#gm-screen > #left-panel {
+  position: absolute;
+  left: 0%;
+  top: 0%;
+  transform: rotateY(10deg);
+  transform-origin: 100% 0% 0;
 }
 
-#gm-screen>#center-panel {
-    position: absolute;
-    left: 33%;
-    top: 0%;
-    transform: rotate3d(1, 15, -1, 0deg);
-    background-position-x: 50%;
-    z-index: -1;
+#gm-screen > #center-panel {
+  position: absolute;
+  left: 33%;
+  top: 0%;
+  transform: rotate3d(1, 15, -1, 0deg);
+  background-position-x: 50%;
+  z-index: -1;
 }
 
-#gm-screen>#right-panel {
-    position: absolute;
-    left: 66%;
-    top: 0%;
-    background-position-x: 100%;
-    transform: rotateY(-10deg);
-    transform-origin: 0% 0% 0;
+#gm-screen > #right-panel {
+  position: absolute;
+  left: 66%;
+  top: 0%;
+  background-position-x: 100%;
+  transform: rotateY(-10deg);
+  transform-origin: 0% 0% 0;
 }
 
 #gm-screen.hidden {
-    top: 105%;
+  top: 105%;
 }
 
-#gm-screen.hidden>#left-panel {
-    transform: rotateY(90deg);
+#gm-screen.hidden > #left-panel {
+  transform: rotateY(90deg);
 }
 
-#gm-screen.hidden>#right-panel {
-    transform: rotateY(-90deg);
+#gm-screen.hidden > #right-panel {
+  transform: rotateY(-90deg);
 }
 
 #gm-screen.focus-left {
-    transform: scale(2) translateX(33%) translateY(25%);
+  transform: scale(2) translateX(33%) translateY(25%);
 }
 
 #gm-screen.focus-center {
-    transform: scale(2) translateY(25%);
+  transform: scale(2) translateY(25%);
 }
 
 #gm-screen.focus-right {
-    transform: scale(2) translateX(-33%) translateY(25%);
+  transform: scale(2) translateX(-33%) translateY(25%);
 }
 
 .vehicle-stat {
-    text-align: center;
+  text-align: center;
 }
 
 .vehicle-stat input {
-    width: 50px !important;
+  width: 50px !important;
 }
 
 .operator-name {
-    text-align: center;
+  text-align: center;
 }
 
 .operator-name input {
-    width: 200px !important;
+  width: 200px !important;
 }
 
 .operator-skill {
-    text-align: center;
+  text-align: center;
 }
 
 .operator-skill input {
-    width: 50px !important;
+  width: 50px !important;
 }
 
 /* 
@@ -3735,127 +3708,126 @@ form.actor-sheet.threat .tab[data-tab].active .editor {
 */
 
 .window-content .actor-sheet .threat-sheet {
-    display:inline-flex;
+  display: inline-flex;
 }
 
 .window-content .actor-sheet .threat-sidebar {
-    width: 150px;
+  width: 150px;
 }
 .window-content .actor-sheet .threat-sidebar .threat-avatar img {
-    border:groove;
-    border-width: 10px;
-    border-color:grey;
-    border-radius:10px;
+  border: groove;
+  border-width: 10px;
+  border-color: grey;
+  border-radius: 10px;
 }
 
 .window-content .actor-sheet .threat-sidebar .sidebar-stats {
-    border: solid;
-    border-width: 2px;
-    border-color: black;
-    border-radius: 3px;
-    width: 150px;
-    background-color: lightgray;
+  border: solid;
+  border-width: 2px;
+  border-color: black;
+  border-radius: 3px;
+  width: 150px;
+  background-color: lightgray;
 }
 
 .window-content .actor-sheet .threat-sidebar input {
-    background-color:lightgray;
-    font-weight: bold;
-    font-family:Signika;
-    font-size:13px;
+  background-color: lightgray;
+  font-weight: bold;
+  font-family: Signika;
+  font-size: 13px;
 }
 
 .threat-avatar img {
-    width: 150px;
-    height: 150px;
+  width: 150px;
+  height: 150px;
 }
 
 form.actor-sheet.threat img.profile-img {
-    max-width: 150px;
-    max-height: 150px;
+  max-width: 150px;
+  max-height: 150px;
 }
 
 .window-content .actor-sheet .threat-sidebar .sidebar-statline {
-    font-family: Signika;
-    font-size: 13px;
-    font-weight:bold;
-    border:none;
-    margin: 5px 5px 5px 5px;
-    height:20px;
+  font-family: Signika;
+  font-size: 13px;
+  font-weight: bold;
+  border: none;
+  margin: 5px 5px 5px 5px;
+  height: 20px;
 }
 
 .window-content .actor-sheet .threat-sidebar .sidebar-statline .sidebar-statline-left {
-    padding:3px 0;
+  padding: 3px 0;
 }
 
 .window-content .actor-sheet .threat-sidebar .sidebar-heading {
-    font-family: Signika;
-    font-size: 13px;
-    font-weight:bold;
-    text-transform:uppercase;
-    text-align:center;
+  font-family: Signika;
+  font-size: 13px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
 }
 
-
 .window-content .actor-sheet .threat-sidebar .sidebar-statline .sidebar-statline-right {
-    float: right;
+  float: right;
 }
 
 .window-content .actor-sheet .threat-sidebar img {
-    max-width:150px;
-    border:none;
-    max-height:400px;
-    width:100%;
+  max-width: 150px;
+  border: none;
+  max-height: 400px;
+  width: 100%;
 }
 
 .window-content .actor-sheet .threat-sheet input[name="name"] {
-    width:90%;
-    height:20px;
-    font-size:30px;
-    font-weight: bold;
-    padding-top:5px;
-    margin-bottom:0px;
+  width: 90%;
+  height: 20px;
+  font-size: 30px;
+  font-weight: bold;
+  padding-top: 5px;
+  margin-bottom: 0px;
 }
 
 .window-content .actor-sheet .threat-sheet .section-bar {
-    border: 1px black solid;
-    background-color: rgb(28, 28, 179);
-    color:white;
-    height: 15px;
-    width:100%;
-    text-align: left;
-    font-family: "Signika";
-    font-size: 13px;
-    font-weight:bold;
+  border: 1px black solid;
+  background-color: rgb(28, 28, 179);
+  color: white;
+  height: 15px;
+  width: 100%;
+  text-align: left;
+  font-family: "Signika";
+  font-size: 13px;
+  font-weight: bold;
 }
 
 .window-content .actor-sheet .threat-sheet .threat-section-attributes {
-    display:block;
-    text-align: center;
-    font-weight: bold;
+  display: block;
+  text-align: center;
+  font-weight: bold;
 }
 
 .window-content .actor-sheet .threat-sheet .sheet-body h1 {
-    margin-bottom:0px;
+  margin-bottom: 0px;
 }
 
 .window-content .actor-sheet .threat-sheet .sub-header {
-    display:flex;
-    align-content: center;
-    justify-content: center
+  display: flex;
+  align-content: center;
+  justify-content: center;
 }
 
 .window-content .actor-sheet .threat-sheet .sub-header span {
-    margin-top: 0px;
-    margin-bottom: 10px;
-    margin-left: 15px;
-    margin-right: 15px;
+  margin-top: 0px;
+  margin-bottom: 10px;
+  margin-left: 15px;
+  margin-right: 15px;
 }
 
 .window-content .actor-sheet .threat-sheet .sub-header input[type="text"] {
-    border:none;
-    width: 50px;
+  border: none;
+  width: 50px;
 }
 
 .window-content .actor-sheet .threat-sheet .defenseCheck {
-    opacity: 1;
+  opacity: 1;
 }

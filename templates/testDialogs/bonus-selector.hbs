@@ -1,10 +1,24 @@
 <fieldset>
-    <legend title="Choose whether to (1) roll for a bonus number or (2) input a previously generated bonus when attempting a multi-action.">Bonus</legend>
-    <span class="skill-check-options">
-        <input type="radio" id="roll" name="bonus" value=0 checked>
-        <label for="roll">{{localize "torgeternity.sheetLabels.roll"}}</label>
-        <input type="radio" id="previous-bonus" title="When engaged in multi-actions, check this box to input the bonus number from a previous test." name="bonus" value=1>
-        <label for="input">{{localize "torgeternity.sheetLabels.inputExisting"}}</label>
-        <input type="number" id="bonus-text" title="Input BONUS NUMBER from previous test, not die total." value=0 style="width:3em">
-    </span>
+  <legend
+    title="Choose whether to (1) roll for a bonus number or (2) input a previously generated bonus when attempting a multi-action."
+  >Bonus</legend>
+  <span class="skill-check-options">
+    <input type="radio" id="roll" name="bonus" value="0" checked />
+    <label for="roll">{{localize "torgeternity.sheetLabels.roll"}}</label>
+    <input
+      type="radio"
+      id="previous-bonus"
+      title="When engaged in multi-actions, check this box to input the bonus number from a previous test."
+      name="bonus"
+      value="1"
+    />
+    <label for="input">{{localize "torgeternity.sheetLabels.inputExisting"}}</label>
+    <input
+      type="number"
+      id="bonus-text"
+      title="Input BONUS NUMBER from previous test, not die total."
+      value="0"
+      style="width:3em"
+    />
+  </span>
 </fieldset>
