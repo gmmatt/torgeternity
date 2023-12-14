@@ -131,6 +131,13 @@ export class attackUpdate extends FormApplication {
             this.test.blindFireModifier = 0
         }
 
+        // Add Trademark Weapon
+        if (document.getElementById("trademark-weapon").checked) {
+            this.test.trademark = true;
+        } else {
+            this.test.trademark = false;
+        }
+
         // Add Concealment Modifier
         if (document.getElementById("concealment-none").checked) {
             this.test.concealmentModifier = 0

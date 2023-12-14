@@ -180,7 +180,7 @@ export default class torgeternityItem extends Item {
 
         let cardData = {
             ...this.data,
-            owner: this.actor.data._id,
+            owner: this.actor.id,
             bonus: messageContent,
             skillValue: skillValue,
             result: rollResult,
@@ -190,6 +190,7 @@ export default class torgeternityItem extends Item {
         // Send the chat
         chatData.content = await renderTemplate(this.chatTemplate["attack"], cardData);
 
+        chatData.speaker.actor = this.actor.id;
         chatData.weaponAttack = true;
 
         return ChatMessage.create(chatData);
