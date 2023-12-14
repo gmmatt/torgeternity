@@ -1,20 +1,25 @@
 // Import utilities.
-@import "utils/typography";
-@import "utils/colors";
-@import "utils/mixins";
-@import "utils/variables";
-@import "utils/scroll";
+@import 'utils/typography';
+@import 'utils/colors';
+@import 'utils/mixins';
+@import 'utils/variables';
+@import 'utils/scroll';
+
+
 
 /* Global styles */
-@import "global/grid";
-@import "global/flex";
+@import 'global/grid';
+@import 'global/flex';
 
 /* foundry parts */
-@import "app/window_apps";
-@import "app/ui";
-@import "app/chat";
-@import "app/cards";
+@import 'app/window_apps';
+@import 'app/ui';
+@import 'app/chat';
+@import 'app/cards';
+
 
 /* Styles limited to torg sheets */
-@import "sheet/actor";
-@import "sheet/item";
+@import 'sheet/actor';
+@import 'sheet/item';
+
+

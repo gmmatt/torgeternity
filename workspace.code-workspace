@@ -1,11 +1,25 @@
 {
-  "folders": [
-    {
-      "path": "."
-    },
-    {
-      "path": "../../../../Files/resources/app"
-    }
-  ],
-  "settings": {}
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "..\\..\\modules\\te004-living-land"
+		},
+		{
+			"path": "..\\..\\modules\\te006-nile-empire"
+		},
+		{
+			"name": "te001-core-rulebook",
+			"path": "..\\..\\modules\\te001-core-rulebook"
+		},
+		{
+			"name": "te008-aysle",
+			"path": "..\\..\\modules\\te008-aysle"
+		},
+		{
+			"path": "..\\..\\..\\..\\..\\..\\..\\..\\Program Files\\Foundry Virtual Tabletop"
+		}
+	],
+	"settings": {}
 }

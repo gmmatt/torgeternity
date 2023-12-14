@@ -5,15 +5,13 @@ export function onManageActiveEffect(event, owner) {
   const effect = li.dataset.effectId ? owner.effects.get(li.dataset.effectId) : null;
   switch (a.dataset.action) {
     case "create":
-      return owner.createEmbeddedDocuments("ActiveEffect", [
-        {
-          label: "New Effect",
-          icon: "icons/svg/aura.svg",
-          origin: owner.uuid,
-          "duration.rounds": li.dataset.effectType === "temporary" ? 1 : undefined,
-          disabled: li.dataset.effectType === "inactive",
-        },
-      ]);
+      return owner.createEmbeddedDocuments("ActiveEffect", [{
+        label: "New Effect",
+        icon: "icons/svg/aura.svg",
+        origin: owner.uuid,
+        "duration.rounds": li.dataset.effectType === "temporary" ? 1 : undefined,
+        disabled: li.dataset.effectType === "inactive"
+      }]);
     case "edit":
       return effect.sheet.render(true);
     case "delete":
@@ -23,25 +21,26 @@ export function onManageActiveEffect(event, owner) {
   }
 }
 
+
 export function prepareActiveEffectCategories(effects) {
   // Define effect header categories
   const categories = {
     temporary: {
       type: "temporary",
       label: `${game.i18n.localize("torgeternity.sheetLabels.tempEffects")}`,
-      effects: [],
+      effects: []
     },
     passive: {
       type: "passive",
       label: `${game.i18n.localize("torgeternity.sheetLabels.passiveEffects")}`,
-      effects: [],
+      effects: []
     },
     inactive: {
       type: "inactive",
       label: `${game.i18n.localize("torgeternity.sheetLabels.inactiveEffects")}`,
 
-      effects: [],
-    },
+      effects: []
+    }
   };
 
   // Iterate over active effects, classifying them into categories

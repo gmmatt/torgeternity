@@ -1,60 +1,34 @@
 <h2>{{localize "torgeternity.sheetLabels.derivedValues"}}</h2>
 
 <ul>
-  <li class="attribut-block">
-    <span
-      class="other-label"
-      data-skill-value="{{actor.system.other.move}}"
-      data-skill-name="{{data.other.move}}"
-    >{{localize "torgeternity.sheetLabels.move"}}</span>
-    <input name="system.other.move" type="number" value="{{actor.system.other.move}}" data='dtype="Number"' disabled />
-  </li>
-  <li class="attribut-block">
-    <span
-      class="other-label"
-      data-skill-value="{{actor.system.other.run}}"
-      data-skill-name="{{data.other.run}}"
-    >{{localize "torgeternity.sheetLabels.run"}}</span>
-    <input name="system.other.run" type="number" value="{{actor.system.other.run}}" data='dtype="Number"' disabled />
-  </li>
+    <li class="attribut-block">
+        <span class="other-label" data-skill-value="{{actor.system.other.move}}"
+            data-skill-name="{{data.other.move}}">{{localize "torgeternity.sheetLabels.move"}}</span>
+        <input name="system.other.move" type="number" value="{{actor.system.other.move}}" data=dtype="Number" disabled />
+    </li>
+    <li class="attribut-block">
+        <span class="other-label" data-skill-value="{{actor.system.other.run}}"
+            data-skill-name="{{data.other.run}}">{{localize "torgeternity.sheetLabels.run"}}</span>
+        <input name="system.other.run" type="number" value="{{actor.system.other.run}}" data=dtype="Number" disabled />
+    </li>
 
-  <li class="attribut-block">
-    <span
-      class="other-label"
-      data-skill-value="{{actor.system.other.toughness}}"
-      data-skill-name="{{data.other.toughness}}"
-    >{{localize "torgeternity.sheetLabels.toughness"}}</span>
-    <input
-      name="system.other.toughness"
-      type="number"
-      value="{{actor.system.other.toughness}}"
-      data='dtype="Number"'
-      disabled
-    />
-  </li>
+    <li class="attribut-block">
+        <span class="other-label" data-skill-value="{{actor.system.other.toughness}}"
+            data-skill-name="{{data.other.toughness}}">{{localize "torgeternity.sheetLabels.toughness"}}</span>
+        <input name="system.other.toughness" type="number" value="{{actor.system.other.toughness}}" data=dtype="Number"
+            disabled />
+    </li>
 
-  <li class="attribut-block">
-    <span
-      class="other-label"
-      data-skill-value="{{actor.system.other.armor}}"
-      data-skill-name="{{data.other.armor}}"
-    >{{localize "torgeternity.sheetLabels.armor"}}</span>
-    <input
-      name="system.other.armor"
-      type="number"
-      value="{{actor.system.other.armor}}"
-      data='dtype="Number"'
-      disabled
-    />
-  </li>
+    <li class="attribut-block">
+        <span class="other-label" data-skill-value="{{actor.system.other.armor}}"
+            data-skill-name="{{data.other.armor}}">{{localize "torgeternity.sheetLabels.armor"}}</span>
+        <input name="system.other.armor" type="number" value="{{actor.system.other.armor}}" data=dtype="Number" disabled />
+    </li>
 
-  <li class="attribut-block">
-    <a
-      class="attribut-block apply-fatigue"
-      data-fatigue={{actor.system.other.fatigue}}
-      title="Click to apply fatigue"
-    >{{localize "torgeternity.sheetLabels.fatigue"}}</a>
-    <input name="system.fatigue" type="number" value="{{actor.system.other.fatigue}}" data-dtype="Number" disabled />
-  </li>
+    <li class="attribut-block">
+        <a class="attribut-block apply-fatigue" data-fatigue={{actor.system.other.fatigue}}
+            title="Click to apply fatigue">{{localize "torgeternity.sheetLabels.fatigue"}}</a>
+        <input name="system.fatigue" type="number" value="{{actor.system.other.fatigue}}" data-dtype="Number" disabled />
+    </li>
 
 </ul>

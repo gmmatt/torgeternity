@@ -1,15 +1,16 @@
-#modalIO {
-  color: black;
+
+#modalIO{
+    color:black
 }
 
 .window-app .window-content {
-  .form-header {
-    color: white;
-  }
-  div.form-group {
-    input {
-      color: white;
+    .form-header{
+        color:white
     }
+  div.form-group {
+      input {
+          color: white
+      }
   }
 
   input[type="text"],
@@ -17,12 +18,15 @@
   input[type="password"],
   input[type="date"],
   input[type="time"] .editor {
-    background-color: rgba(255, 255, 255, 0.39);
+      background-color: rgba(255, 255, 255, 0.39);
   }
 
+  ;
+
   input::placeholder {
-    background-color: rgba(0, 0, 0, 0);
+      background-color: rgba(0, 0, 0, 0);
   }
+
 
   font-family: OptiLight;
 
@@ -31,32 +35,35 @@
   color: rgb(255, 255, 255);
 
   .rollable {
-    &:hover,
-    &:focus {
-      color: #000;
-      text-shadow: 0 0 10px white;
-      cursor: pointer;
-    }
+
+      &:hover,
+      &:focus {
+          color: #000;
+          text-shadow: 0 0 10px white;
+          cursor: pointer;
+      }
   }
 
   form {
-    .notes,
-    .hint {
-      color: rgb(177, 175, 175);
-    }
 
-    button,
-    select {
-      color: grey;
-
-      option {
-        color: white;
+      .notes,
+      .hint {
+          color: rgb(177, 175, 175);
       }
-    }
 
-    button:hover {
-      box-shadow: 0px 0px 5px rgb(73, 112, 250);
-    }
+      button,
+      select {
+          color: grey;
+
+          option {
+              color: white
+          }
+      }
+
+      button:hover {
+          box-shadow: 0px 0px 5px rgb(73, 112, 250);
+      }
+
   }
 }
 
@@ -65,34 +72,38 @@
   background-image: url(../images/box-bckg.webp);
   background-size: 100% 100%;
   color: black;
-  button[name="submit"] {
+button[name="submit"]{
     position: absolute;
     bottom: 0px;
     left: -2px;
     background-color: rgba(0, 0, 0, 0.68);
-  }
+
+}
   input[type="text"],
   select {
-    margin-top: 4%;
-    margin-left: 5%;
-    width: 90%;
-    text-align: center;
-    border: none;
-    text-transform: uppercase;
-    font-family: Alaska;
-    font-weight: bold;
-    color: #000;
+      margin-top: 4%;
+      margin-left: 5%;
+      width: 90%;
+      text-align: center;
+      border: none;
+      text-transform: uppercase;
+      font-family: Alaska;
+      font-weight: bold;
+      color: #000
   }
-  input[type="text"] {
-    position: absolute;
-    top: 3%;
-    margin-left: 4%;
+  input[type="text"]{
+      position: absolute;
+      top: 3%;
+      margin-left: 4%;
+
   }
   select {
     position: absolute;
     top: 9%;
     margin-left: 4%;
-  }
+}
+
+  ;
 
   input[type="text"]:hover,
   select:hover,
@@ -103,7 +114,7 @@
   .editor:hover,
   .editor:focus,
   .editor:active {
-    box-shadow: 0 0 15px rgb(5, 48, 117);
+      box-shadow: 0 0 15px rgb(5, 48, 117);
   }
 
   .editor {
@@ -113,66 +124,66 @@
     width: 90%;
     height: 80%;
     padding: 2%;
-  }
+}
 
   .editor .editor-content {
-    h1 {
-      font-family: Alaska;
-      text-transform: uppercase;
-      text-align: center;
-      color: white;
-      background-color: #0a0b3b;
-      border-bottom: none;
-    }
+      h1 {
+          font-family:Alaska;
+          text-transform:uppercase;
+          text-align:center;
+          color:white;
+          background-color:#0a0b3b;
+          border-bottom:none;
+      }
 
-    h2 {
-      font-family: Alaska;
-      border-bottom: none;
-    }
+      h2 {
+          font-family:Alaska;
+          border-bottom:none;
+      }
 
-    h3 {
-      font-family: Alaska;
-      font-weight: bold;
-    }
+      h3 {
+          font-family:Alaska;
+          font-weight:bold;
+      }
 
-    th {
-      background-color: black;
-      color: white;
-    }
+      th {
+          background-color:black;
+          color:white
+      }
 
-    tr:nth-child(even) {
-      background-color: #f3f0eb;
-    }
+      tr:nth-child(even) {
+        background-color:#f3f0eb
+      }
 
-    tr:nth-child(odd) {
-      background-color: #f5ead9;
-    }
+      tr:nth-child(odd) {
+        background-color:#f5ead9
+      }
 
-    table td {
-      border: 1px solid black;
-      padding: 0px 3px 0px 3px;
-    }
+      table td {
+          border: 1px solid black;
+          padding: 0px 3px 0px 3px;
+      }
 
-    table tr td:first-child {
-      border-left: 0;
-    }
+      table tr td:first-child {
+          border-left: 0;
+      }
 
-    table tr td:last-child {
-      border-right: 0;
-    }
+      table tr td:last-child {
+          border-right:0;
+      }
   }
 }
 
-.window-app.image-popout {
-  .form-group.title {
-    margin-top: 1%;
-    input {
-      height: 32px;
-      text-align: center;
-      margin-top: 0%;
-    }
-  }
-}
+.window-app.image-popout{
+  .form-group.title { 
+      margin-top: 1%;
+      input {
+  height: 32px;
+  text-align: center;
+  margin-top:0%
+ 
+}}
+} 
 
 textarea {
   background-color: rgba(90, 157, 163, 0.493);
@@ -185,16 +196,18 @@ textarea:hover {
   box-shadow: 0 0 10px #008cff7a;
 }
 
+
 #module-management {
   color: white;
 
   input {
-    color: lightgray;
+      color: lightgray
   }
 
   .package-list {
-    .package-title {
-      color: rgb(198, 226, 250);
-    }
+      .package-title {
+          color: rgb(198, 226, 250);
+
+      }
   }
 }

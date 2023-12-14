@@ -1,165 +1,165 @@
 @keyframes pooledCardShadow {
-  0% {
-    box-shadow: 0px 0px 3px green;
-  }
-  50% {
-    box-shadow: 0px -0px 15px rgb(148, 255, 184);
-  }
-  100% {
-    box-shadow: 0px 0px 3px green;
-  }
+    0% {
+        box-shadow: 0px 0px 3px green
+    }
+    50% {
+        box-shadow: 0px -0px 15px rgb(148, 255, 184)
+    }
+    100% {
+        box-shadow: 0px 0px 3px green
+    }
 }
 
 @keyframes focusedCard {
-  from {
-    position: absolute;
-    transform-origin: 50% 150% 0;
-  }
-  to {
-    transform: scale(2);
-    top: -300px;
-    width: 200px;
-    height: 250px;
-    transform-origin: 50% 50% 0;
-    left: -50px;
-    transform: rotateZ(0deg);
-  }
+    from {
+        position: absolute;
+        transform-origin: 50% 150% 0;
+    }
+    to {
+        transform: scale(2);
+        top: -300px;
+        width: 200px;
+        height: 250px;
+        transform-origin: 50% 50% 0;
+        left: -50px;
+        transform: rotateZ(0deg);
+    }
 }
 
 .app.torgeternity.cardsHand .window-content {
-  overflow: visible;
-  background-position: center;
+    overflow: visible;
+    background-position: center;
 }
 
 #handedCards {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  position: relative;
-  margin-top: 20px;
-  right: 0%;
-  top: 0;
-  width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: relative;
+    margin-top: 20px;
+    right: 0%;
+    top: 0;
+    width: 100%;
 }
 
 #handedCards h2 {
-  text-align: center;
-  color: white;
-  margin-top: 5px;
+    text-align: center;
+    color: white;
+    margin-top: 5px;
 }
 
 #handedCards .destinyCards,
 #handedCards .cosmCards {
-  transition: all 0.3s cubic-bezier(0.6, -0.07, 0.56, 1.52) 0.2s;
-  justify-content: space-between;
-  height: 200px;
-  width: 138px;
-  position: relative;
-  overflow: visible;
+    transition: all 0.3s cubic-bezier(0.6, -0.07, 0.56, 1.52) 0.2s;
+    justify-content: space-between;
+    height: 200px;
+    width: 138px;
+    position: relative;
+    overflow: visible
 }
 
 #handedCards .destinyCards li.card,
 #handedCards .cosmCards li.card {
-  transition: all 0.7s;
-  box-shadow: 1px 1px 20px 5px #111111;
-  position: absolute;
-  transform-origin: 50% 200% 0;
-  transform: rotateZ(-5deg);
-  top: 0;
-  width: 100%;
-  height: 100%;
-  list-style: none;
+    transition: all 0.7s;
+    box-shadow: 1px 1px 20px 5px #111111;
+    position: absolute;
+    transform-origin: 50% 200% 0;
+    transform: rotateZ( -5deg);
+    top: 0;
+    width: 100%;
+    height: 100%;
+    list-style: none;
 }
 
 #handedCards .destinyCards li.focusedCard,
 #handedCards .cosmCards li.focusedCard {
-  z-index: 400;
-  transform: scale(2);
-  width: 300%;
-  height: 300%;
-  transform-origin: 50% 50% 0;
+    z-index: 400;
+    transform: scale(2);
+    width: 300%;
+    height: 300%;
+    transform-origin: 50% 50% 0;
 }
 
 #handedCards .destinyCards li.card:hover,
 #handedCards .cosmCards li.card:hover {
-  z-index: 302;
-  box-shadow: 1px 1px 20px 5px #3a3a3a;
+    z-index: 302;
+    box-shadow: 1px 1px 20px 5px #3a3a3a;
 }
 
 #handedCards .destinyCards li.card img.card-face,
 #handedCards .cosmCards li.card img.card-face {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
 
 #handedCards li.card div.torg-card-controls {
-  opacity: 0;
-  color: white;
-  background-color: #2c7dc3;
-  justify-content: space-around;
-  border-radius: 15% 0% 0% 15%;
-  height: 100%;
-  position: absolute;
-  left: -0px;
-  transition: 0.5s;
-  font-size: 1em;
-  width: 0px;
-  height: 0;
-  display: flex;
+    opacity: 0;
+    color: white;
+    background-color: #2c7dc3;
+    justify-content: space-around;
+    border-radius: 15% 0% 0% 15%;
+    height: 100%;
+    position: absolute;
+    left: -0px;
+    transition: 0.5s;
+    font-size: 1em;
+    width: 0px;
+    height: 0;
+    display: flex;
 }
 
-#handedCards li.card div.torg-card-controls > * {
-  height: 0;
+#handedCards li.card div.torg-card-controls>* {
+    height: 0;
 }
 
 #handedCards li.card div.torg-card-controls i {
-  font-size: 1em;
-  transition: 0.5s;
+    font-size: 1em;
+    transition: 0.5s
 }
 
 #handedCards li.card.focusedCard div.torg-card-controls i {
-  font-size: 2em;
+    font-size: 2em;
 }
 
 #handedCards li.card.focusedCard div.torg-card-controls {
-  opacity: 1;
-  width: 47px;
-  left: -47px;
-  height: 100%;
+    opacity: 1;
+    width: 47px;
+    left: -47px;
+    height: 100%
 }
 
 li.card.pooled {
-  animation: pooledCardShadow 3s infinite;
+    animation: pooledCardShadow 3s infinite;
 }
 
 #handedCards .destinyCards li.card.pooled:not(.focusedCard),
 #handedCards .cosmCards li.card.pooled:not(.focusedCard) {
-  border: 2px solid green;
-  top: -30%;
+    border: 2px solid green;
+    top: -30%
 }
 
 .areaTitles {
-  text-align: center;
-  border-bottom: 3px solid #2c7dc3;
+    text-align: center;
+    border-bottom: 3px solid #2c7dc3
 }
 
-#handedCards + .sheet-footer {
-  border: 2px solid green;
-  top: -30%;
+#handedCards+.sheet-footer {
+    border: 2px solid green;
+    top: -30%;
 }
 
 .verticalRot {
-  transform: rotate(-90deg);
-  position: absolute;
-  bottom: 0;
+    transform: rotate( -90deg);
+    position: absolute;
+    bottom: 0;
 }
 
 span.handdesign {
-  left: 40%;
-  position: absolute;
-  top: 0px;
-  z-index: 300;
+    left: 40%;
+    position: absolute;
+    top: 0px;
+    z-index: 300;
 }

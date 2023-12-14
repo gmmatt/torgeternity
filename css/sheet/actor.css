@@ -198,14 +198,12 @@ form.actor-sheet header input[name="name"] {
   box-shadow: 0 0 15px #778ba2 inset;
 }
 
-.window-content .actor-sheet input[type="text"]::-moz-placeholder,
-.window-content .actor-sheet input[type="number"]::-moz-placeholder {
+.window-content .actor-sheet input[type="text"]::-moz-placeholder, .window-content .actor-sheet input[type="number"]::-moz-placeholder {
   color: #293131;
   text-shadow: 0px 0px 10px black;
 }
 
-.window-content .actor-sheet input[type="text"]:-ms-input-placeholder,
-.window-content .actor-sheet input[type="number"]:-ms-input-placeholder {
+.window-content .actor-sheet input[type="text"]:-ms-input-placeholder, .window-content .actor-sheet input[type="number"]:-ms-input-placeholder {
   color: #293131;
   text-shadow: 0px 0px 10px black;
 }

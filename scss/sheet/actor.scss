@@ -6,6 +6,7 @@
     transform: scaleX(1.2) scaleY(1.2);
   }
 
+
   to {
     -webkit-transform: scaleX(0.8) scaleY(0.8);
     transform: scaleX(0.8) scaleY(0.8);
@@ -57,11 +58,14 @@ form.actor-sheet {
   }
 }
 
+
 .inline-skill-item:after {
   content: ",";
-  position: relative;
-  left: -2px;
-  margin-right: 2px;
+  position:relative;
+  left:-2px;
+  margin-right: 2px
+
+
 }
 
 .inline-skill-item:last-child:after {
@@ -814,14 +818,14 @@ form.actor-sheet.threat {
       display: flex;
       padding-right: 5px;
       align-items: center;
-      span {
+      span{
         text-align: end;
       }
 
       span.inputsFav {
         position: relative;
         position: relative;
-        margin-left: 5px;
+    margin-left: 5px;
         input[type="checkbox"],
         a.toggleFav {
           position: absolute;
@@ -891,7 +895,7 @@ form.actor-sheet.threat {
         padding-bottom: 0px;
 
         .item .effects .effects-item .flexrow {
-          display: flex;
+          display:flex
         }
 
         img {

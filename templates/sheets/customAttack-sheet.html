@@ -1,54 +1,69 @@
-<form class="{{cssClass}} item-sheet" autocomplete="off" height="400">
-  <h3 class="item-type"><span>{{localize "torgeternity.itemSheetDescriptions.customAttack"}}</span></h3>
+<form class="{{cssClass}} item-sheet" autocomplete="off" height=400>
+    <h3 class="item-type"><span>{{localize "torgeternity.itemSheetDescriptions.customAttack"}}</span></h3>
 
-  <header class="sheet-header">
-    <img src="{{item.img}}" data-edit="img" title="{{item.name}}" />
-    <h1><input name="name" type="text" value="{{item.name}}" placeholder="Custom Attack Name" /></h1>
-  </header>
+    <header class="sheet-header">
+        <img src="{{item.img}}" data-edit="img" title="{{item.name}}" />
+        <h1><input name="name" type="text" value="{{item.name}}" placeholder="Custom Attack Name" /></h1>
+    </header>
 
-  <nav class="sheet-tabs item-tabs tabs" data-group="primary">
-    <a class="item" data-tab="stats">{{localize "torgeternity.sheetLabels.stats"}}</a>
-    <a class="item" data-tab="effects">{{localize "torgeternity.sheetLabels.effects"}}</a>
-  </nav>
+    <nav class="sheet-tabs item-tabs tabs" data-group="primary">
+        <a class="item" data-tab="stats" >{{localize "torgeternity.sheetLabels.stats"}}</a>
+        <a class="item" data-tab="effects">{{localize "torgeternity.sheetLabels.effects"}}</a>
+    </nav>
 
-  <section class="sheet-body">
-    <div class="tab stats" data-group="primary" data-tab="stats">
-      <div class="sheet-content">
-        <div class="asside">
-          <p class="item-data-label">{{localize "torgeternity.powers.skill"}}</p>
-          <select name="system.attackWith" class="input-box">
-            {{#select item.system.attackWith}} {{#each config.skills as |name type|}}
-            <option value="{{type}}">{{localize name}}</option>
-            {{/each}} {{/select}}
-          </select>
-          <p class="item-data-label">{{localize "torgeternity.gear.damageType"}}</p>
-          <select name="system.damageType" class="input-box">
-            {{#select item.system.damageType}} {{#each config.damageTypes as |name type|}}
-            <option value="{{type}}">{{localize name}}</option>
-            {{/each}} {{/select}}
-          </select>
-          <p class="item-data-label">{{localize "torgeternity.gear.damage"}}</p>
-          <input name="system.damage" type="number" value="{{item.system.damage}}" class="input-box" />
-          <p class="item-data-label">{{localize "torgeternity.gear.ap"}}</p>
-          <input name="system.ap" type="number" value="{{item.system.ap}}" class="input-box" />
+    <section class="sheet-body"  >
+
+        <div class="tab stats" data-group="primary" data-tab="stats">
+
+            <div class="sheet-content">
+                <div class="asside">
+                    <p class="item-data-label">
+                        {{localize "torgeternity.powers.skill"}}
+                    </p>
+                    <select name="system.attackWith" class="input-box">
+                        {{#select item.system.attackWith}}
+                        {{#each config.skills as |name type|}}
+                        <option value="{{type}}">{{localize name}}</option>
+                        {{/each}}
+                        {{/select}}
+                    </select>
+                <p class="item-data-label">
+                        {{localize "torgeternity.gear.damageType"}}
+                    </p>
+                    <select name="system.damageType" class="input-box">
+                        {{#select item.system.damageType}}
+                        {{#each config.damageTypes as |name type|}}
+                        <option value="{{type}}">{{localize name}}</option>
+                        {{/each}}
+                        {{/select}}
+                    </select>
+                    <p class="item-data-label">
+                        {{localize "torgeternity.gear.damage"}}
+                    </p>
+                    <input name="system.damage" type="number" value="{{item.system.damage}}" class="input-box" />
+                    <p class="item-data-label">
+                        {{localize "torgeternity.gear.ap"}}
+                    </p>
+                    <input name="system.ap" type="number" value="{{item.system.ap}}" class="input-box" />
+                </div>
+                    <div class="main-content">
+                        <p class="item-data-label">
+                            {{localize "torgeternity.gear.notes"}}&nbsp;
+                            <input name="system.notes" type="text" value="{{item.system.notes}}" class="input-box" />
+                        </p>
+                        <p class="item-data-label">
+                            {{localize "torgeternity.gear.chatNote"}}
+                            <input name="system.chatNote" type="text" value="{{item.system.chatNote}}" class="input-box" />
+                        </p>
+                        <div name="system.description" class="item-description-textarea">
+                        {{editor description target="system.description" button=true owner=owner editable=editable}}
+                        </div>
+                    </div> 
+            </div>
         </div>
-        <div class="main-content">
-          <p class="item-data-label">
-            {{localize "torgeternity.gear.notes"}}&nbsp;
-            <input name="system.notes" type="text" value="{{item.system.notes}}" class="input-box" />
-          </p>
-          <p class="item-data-label">
-            {{localize "torgeternity.gear.chatNote"}}
-            <input name="system.chatNote" type="text" value="{{item.system.chatNote}}" class="input-box" />
-          </p>
-          <div name="system.description" class="item-description-textarea">
-            {{editor description target="system.description" button=true owner=owner editable=editable}}
-          </div>
+        <div class="tab effects" data-group="primary" data-tab="effects">
+            {{> "systems/torgeternity/templates/parts/active-effects.hbs"}}
         </div>
-      </div>
-    </div>
-    <div class="tab effects" data-group="primary" data-tab="effects">
-      {{> "systems/torgeternity/templates/parts/active-effects.hbs"}}
-    </div>
-  </section>
+    
+    </section>        
 </form>

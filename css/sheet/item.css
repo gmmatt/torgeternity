@@ -133,14 +133,12 @@
   box-shadow: 0 0 10px #4f523c inset;
 }
 
-.item .window-content form.item-sheet input[type="text"]::-moz-placeholder,
-.item .window-content form.item-sheet input[type="number"]::-moz-placeholder {
+.item .window-content form.item-sheet input[type="text"]::-moz-placeholder, .item .window-content form.item-sheet input[type="number"]::-moz-placeholder {
   color: #161a1a;
   text-shadow: 0px 0px 10px black;
 }
 
-.item .window-content form.item-sheet input[type="text"]:-ms-input-placeholder,
-.item .window-content form.item-sheet input[type="number"]:-ms-input-placeholder {
+.item .window-content form.item-sheet input[type="text"]:-ms-input-placeholder, .item .window-content form.item-sheet input[type="number"]:-ms-input-placeholder {
   color: #161a1a;
   text-shadow: 0px 0px 10px black;
 }
