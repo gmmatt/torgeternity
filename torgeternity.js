@@ -33,7 +33,7 @@ import initTorgControlButtons from "./module/controlButtons.js";
 import createTorgShortcuts from "./module/keybinding.js";
 import GMScreen from "./module/GMScreen.js";
 import { setUpCardPiles } from "./module/cards/setUpCardPiles.js";
-import { explode } from "./module/explode.js";
+import { explode, reroll } from "./module/explode.js";
 import { activateStandartScene } from "./module/activateStandartScene.js";
 import { torgMigration } from "./module/migrations.js";
 import initTextEdidor from "./module/initTextEditor.js";
@@ -180,6 +180,7 @@ Hooks.on("ready", async function () {
 
   //modifying explosion methode for dices
   Die.prototype.explode = explode;
+  Die.prototype.reroll = reroll;
 
   //adding gmScreen to UI
   ui.GMScreen = new GMScreen();
