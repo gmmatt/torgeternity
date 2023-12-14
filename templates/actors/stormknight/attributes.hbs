@@ -1,77 +1,102 @@
 <h2>{{localize "torgeternity.sheetLabels.attributes"}}</h2>
 <ul class="attribut-list">
 
-    <!-- iterate each attribute individually to avoid a problem with data structures in sheets created under early versions of system -->
-    {{log this}}
-    <li class="attribut-block">
-        <a class="skill-roll"
-            data-testType="attribute" 
-            data-value="{{actor.system.attributes.charisma}}" 
-            data-name="charisma"
-            data-baseAttribute="charisma" 
-            data-adds="0"
-            data-unskilledUse="1"      
-            >
-            {{localize "torgeternity.attributes.charisma"}}
-        </a>
-        <input name="system.attributes.charisma" type="number" value="{{actor.system.attributes.charisma}}" data=dtype="Number" />
-    </li>
-    
-        <li class="attribut-block">
-        <a class="skill-roll"
-            data-testType="attribute" 
-            data-value="{{actor.system.attributes.dexterity}}" 
-            data-name="dexterity"
-            data-baseAttribute="dexterity" 
-            data-adds="0"
-            data-unskilledUse="1"      
-            >
-            {{localize "torgeternity.attributes.dexterity"}}
-        </a>
-        <input name="system.attributes.dexterity" type="number" value="{{actor.system.attributes.dexterity}}" data-dtype="Number" />
-        {{log actor.system.attributes.dexterity}}
-    </li>
+  <!-- iterate each attribute individually to avoid a problem with data structures in sheets created under early versions of system -->
+  {{log this}}
+  <li class="attribut-block">
+    <a
+      class="skill-roll"
+      data-testType="attribute"
+      data-value="{{actor.system.attributes.charisma}}"
+      data-name="charisma"
+      data-baseAttribute="charisma"
+      data-adds="0"
+      data-unskilledUse="1"
+    >
+      {{localize "torgeternity.attributes.charisma"}}
+    </a>
+    <input
+      name="system.attributes.charisma"
+      type="number"
+      value="{{actor.system.attributes.charisma}}"
+      data='dtype="Number"'
+    />
+  </li>
 
-    <li class="attribut-block">
-        <a class="skill-roll"
-            data-testType="attribute" 
-            data-value="{{actor.system.attributes.mind}}" 
-            data-name="mind"
-            data-baseAttribute="mind" 
-            data-adds="0"
-            data-unskilledUse="1"      
-            >
-            {{localize "torgeternity.attributes.mind"}}
-        </a>
-        <input name="system.attributes.mind" type="number" value="{{actor.system.attributes.mind}}" data=dtype="Number" />
-    </li>
+  <li class="attribut-block">
+    <a
+      class="skill-roll"
+      data-testType="attribute"
+      data-value="{{actor.system.attributes.dexterity}}"
+      data-name="dexterity"
+      data-baseAttribute="dexterity"
+      data-adds="0"
+      data-unskilledUse="1"
+    >
+      {{localize "torgeternity.attributes.dexterity"}}
+    </a>
+    <input
+      name="system.attributes.dexterity"
+      type="number"
+      value="{{actor.system.attributes.dexterity}}"
+      data-dtype="Number"
+    />
+    {{log actor.system.attributes.dexterity}}
+  </li>
 
-    <li class="attribut-block">
-        <a class="skill-roll"
-            data-testType="attribute" 
-            data-value="{{actor.system.attributes.spirit}}" 
-            data-name="spirit"
-            data-baseAttribute="spirit" 
-            data-adds="0"
-            data-unskilledUse="1"      
-            >
-            {{localize "torgeternity.attributes.spirit"}}
-        </a>
-        <input name="system.attributes.spirit" type="number" value="{{actor.system.attributes.spirit}}" data=dtype="Number" />
-    </li>
+  <li class="attribut-block">
+    <a
+      class="skill-roll"
+      data-testType="attribute"
+      data-value="{{actor.system.attributes.mind}}"
+      data-name="mind"
+      data-baseAttribute="mind"
+      data-adds="0"
+      data-unskilledUse="1"
+    >
+      {{localize "torgeternity.attributes.mind"}}
+    </a>
+    <input name="system.attributes.mind" type="number" value="{{actor.system.attributes.mind}}" data='dtype="Number"' />
+  </li>
 
-    <li class="attribut-block">
-        <a class="skill-roll"
-            data-testType="attribute" 
-            data-value="{{actor.system.attributes.strength}}" 
-            data-name="strength"
-            data-baseAttribute="strength" 
-            data-adds="0"
-            data-unskilledUse="1"      
-            >
-            {{localize "torgeternity.attributes.strength"}}
-        </a>
-        <input name="system.attributes.strength" type="number" value="{{actor.system.attributes.strength}}" data=dtype="Number" />
-    </li>
-    
+  <li class="attribut-block">
+    <a
+      class="skill-roll"
+      data-testType="attribute"
+      data-value="{{actor.system.attributes.spirit}}"
+      data-name="spirit"
+      data-baseAttribute="spirit"
+      data-adds="0"
+      data-unskilledUse="1"
+    >
+      {{localize "torgeternity.attributes.spirit"}}
+    </a>
+    <input
+      name="system.attributes.spirit"
+      type="number"
+      value="{{actor.system.attributes.spirit}}"
+      data='dtype="Number"'
+    />
+  </li>
+
+  <li class="attribut-block">
+    <a
+      class="skill-roll"
+      data-testType="attribute"
+      data-value="{{actor.system.attributes.strength}}"
+      data-name="strength"
+      data-baseAttribute="strength"
+      data-adds="0"
+      data-unskilledUse="1"
+    >
+      {{localize "torgeternity.attributes.strength"}}
+    </a>
+    <input
+      name="system.attributes.strength"
+      type="number"
+      value="{{actor.system.attributes.strength}}"
+      data='dtype="Number"'
+    />
+  </li>
+
 </ul>

@@ -1,48 +1,33 @@
 @font-face {
-    font-family: "graveBolt";
-    src: url("../fonts/GraveSideBB.ttf"),
+  font-family: "graveBolt";
+  src: url("../fonts/GraveSideBB.ttf");
 }
-
-;
 
 @font-face {
-    font-family: "Alaska";
-    src: url("../fonts/Alaska Extrabold Bold.ttf"),
+  font-family: "Alaska";
+  src: url("../fonts/Alaska Extrabold Bold.ttf");
 }
-
-;
-@font-face {
-    font-family: "OptiBold";
-    src: url("../fonts/OPTITriplettBoldAgency.otf"),
-}
-
-;
-@font-face {
-    font-family: "OptiLight";
-    src: url("../fonts/OPTITriplettLight-Agency.otf"),
-}
-
-;
 
 @font-face {
-    font-family: "Friz";
-    src: url("../fonts/Friz Quadrata TT Regular.ttf"),
+  font-family: "OptiBold";
+  src: url("../fonts/OPTITriplettBoldAgency.otf");
 }
-
-;
 
 @font-face {
-    font-family: "Palatino";
-    src: url("../fonts/palatino_linotype.ttf"),
+  font-family: "OptiLight";
+  src: url("../fonts/OPTITriplettLight-Agency.otf");
 }
 
+@font-face {
+  font-family: "Friz";
+  src: url("../fonts/Friz Quadrata TT Regular.ttf");
+}
 
+@font-face {
+  font-family: "Palatino";
+  src: url("../fonts/palatino_linotype.ttf");
+}
 
-
-
-
-
-
-$font-primary:'Palatino';
-$font-secondary:'Friz';
-$font-bold: 'Alaska';
+$font-primary: "Palatino";
+$font-secondary: "Friz";
+$font-bold: "Alaska";

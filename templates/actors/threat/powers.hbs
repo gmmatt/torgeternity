@@ -1,149 +1,149 @@
 <ol class="item-list">
-	{{#each spell as |item id|}}
-		<li class="item" data-item-id="{{item._id}}">
-			<div class="item-row flexrow">
-				<img src="{{item.img}}" title="{{item.name}}" width="30" height="30"/>
-				<a class="item-name">{{item.name}}
-					({{localize "torgeternity.sheetLabels.spell"}})</a>
-				<div class="item-controls">
-					<a class="item-control item-powerRoll" title="{{localize 'torgeternity.iconeTitles.spellRoll'}}">
-						<i class="fas fa-dice-d20"></i>
-					</a>
-					<a class="item-control item-bonusRoll" title="{{localize 'torgeternity.iconeTitles.bonusRoll'}}">
-						<i class="fas fa-dice-d6"></i>
-					</a>
-					<a class="item-control item-tochat" title="{{localize 'torgeternity.iconeTitles.sendToChat'}}">
-						<i class="fas fa-comment"></i>
-					</a>
-					<a class="item-control item-edit" title="{{localize 'torgeternity.iconeTitles.edit'}}">
-						<i class="fas fa-edit"></i>
-					</a>
-					<a class="item-control item-delete" title="{{localize 'torgeternity.iconeTitles.delete'}}">
-						<i class="fas fa-trash"></i>
-					</a>
-				</div>
-			</div>
-			<div class="item-detail">
-				<div class="item-dropdown-description">
-					{{{item.system.description}}}
-					<p></p>
-					<div class="item-dropdown-extras">
-						{{item.system.skill}}
-					</div>
-					<div class="item-dropdown-extras">
-						{{item.system.dn}}
-					</div>
-					<div class="item-dropdown-extras">
-						{{item.system.castingtime}}
-					</div>
-					<div class="item-dropdown-extras">
-						{{item.system.range}}
-					</div>
-					<div class="item-dropdown-extras">
-						{{item.system.duration}}
-					</div>
-				</div>
-			</div>
-		</li>
-	{{/each}}
+  {{#each spell as |item id|}}
+    <li class="item" data-item-id="{{item._id}}">
+      <div class="item-row flexrow">
+        <img src="{{item.img}}" title="{{item.name}}" width="30" height="30" />
+        <a class="item-name">{{item.name}}
+          ({{localize "torgeternity.sheetLabels.spell"}})</a>
+        <div class="item-controls">
+          <a class="item-control item-powerRoll" title="{{localize 'torgeternity.iconeTitles.spellRoll'}}">
+            <i class="fas fa-dice-d20"></i>
+          </a>
+          <a class="item-control item-bonusRoll" title="{{localize 'torgeternity.iconeTitles.bonusRoll'}}">
+            <i class="fas fa-dice-d6"></i>
+          </a>
+          <a class="item-control item-tochat" title="{{localize 'torgeternity.iconeTitles.sendToChat'}}">
+            <i class="fas fa-comment"></i>
+          </a>
+          <a class="item-control item-edit" title="{{localize 'torgeternity.iconeTitles.edit'}}">
+            <i class="fas fa-edit"></i>
+          </a>
+          <a class="item-control item-delete" title="{{localize 'torgeternity.iconeTitles.delete'}}">
+            <i class="fas fa-trash"></i>
+          </a>
+        </div>
+      </div>
+      <div class="item-detail">
+        <div class="item-dropdown-description">
+          {{{item.system.description}}}
+          <p></p>
+          <div class="item-dropdown-extras">
+            {{item.system.skill}}
+          </div>
+          <div class="item-dropdown-extras">
+            {{item.system.dn}}
+          </div>
+          <div class="item-dropdown-extras">
+            {{item.system.castingtime}}
+          </div>
+          <div class="item-dropdown-extras">
+            {{item.system.range}}
+          </div>
+          <div class="item-dropdown-extras">
+            {{item.system.duration}}
+          </div>
+        </div>
+      </div>
+    </li>
+  {{/each}}
 </ol>
 
 <ol class="item-list">
-	{{#each miracle as |item id|}}
-		<li class="item" data-item-id="{{item._id}}">
-			<div class="item-row flexrow">
-				<img src="{{item.img}}" title="{{item.name}}" width="30" height="30"/>
-				<a class="item-name">{{item.name}}
-					({{localize "torgeternity.sheetLabels.miracle"}})</a>
-				<div class="item-controls">
-					<a class="item-control item-powerRoll" title="{{localize 'torgeternity.iconeTitles.miracleRoll'}}">
-						<i class="fas fa-dice-d20"></i>
-					</a>
-					<a class="item-control item-bonusRoll" title="{{localize 'torgeternity.iconeTitles.bonusRoll'}}">
-						<i class="fas fa-dice-d6"></i>
-					</a>
-					<a class="item-control item-tochat" title="{{localize 'torgeternity.iconeTitles.sendToChat'}}">
-						<i class="fas fa-comment"></i>
-					</a>
-					<a class="item-control item-edit" title="{{localize 'torgeternity.iconeTitles.edit'}}">
-						<i class="fas fa-edit"></i>
-					</a>
-					<a class="item-control item-delete" title="{{localize 'torgeternity.iconeTitles.delete'}}">
-						<i class="fas fa-trash"></i>
-					</a>
-				</div>
-			</div>
-			<div class="item-detail">
-				<div class="item-dropdown-description">
-					{{{item.system.description}}}
-					<p></p>
-					<div class="item-dropdown-extras">
-						{{item.system.skill}}
-					</div>
-					<div class="item-dropdown-extras">
-						{{item.system.dn}}
-					</div>
-					<div class="item-dropdown-extras">
-						{{item.system.castingtime}}
-					</div>
-					<div class="item-dropdown-extras">
-						{{item.system.range}}
-					</div>
-					<div class="item-dropdown-extras">
-						{{item.system.duration}}
-					</div>
-				</div>
-			</div>
-		</li>
-	{{/each}}
+  {{#each miracle as |item id|}}
+    <li class="item" data-item-id="{{item._id}}">
+      <div class="item-row flexrow">
+        <img src="{{item.img}}" title="{{item.name}}" width="30" height="30" />
+        <a class="item-name">{{item.name}}
+          ({{localize "torgeternity.sheetLabels.miracle"}})</a>
+        <div class="item-controls">
+          <a class="item-control item-powerRoll" title="{{localize 'torgeternity.iconeTitles.miracleRoll'}}">
+            <i class="fas fa-dice-d20"></i>
+          </a>
+          <a class="item-control item-bonusRoll" title="{{localize 'torgeternity.iconeTitles.bonusRoll'}}">
+            <i class="fas fa-dice-d6"></i>
+          </a>
+          <a class="item-control item-tochat" title="{{localize 'torgeternity.iconeTitles.sendToChat'}}">
+            <i class="fas fa-comment"></i>
+          </a>
+          <a class="item-control item-edit" title="{{localize 'torgeternity.iconeTitles.edit'}}">
+            <i class="fas fa-edit"></i>
+          </a>
+          <a class="item-control item-delete" title="{{localize 'torgeternity.iconeTitles.delete'}}">
+            <i class="fas fa-trash"></i>
+          </a>
+        </div>
+      </div>
+      <div class="item-detail">
+        <div class="item-dropdown-description">
+          {{{item.system.description}}}
+          <p></p>
+          <div class="item-dropdown-extras">
+            {{item.system.skill}}
+          </div>
+          <div class="item-dropdown-extras">
+            {{item.system.dn}}
+          </div>
+          <div class="item-dropdown-extras">
+            {{item.system.castingtime}}
+          </div>
+          <div class="item-dropdown-extras">
+            {{item.system.range}}
+          </div>
+          <div class="item-dropdown-extras">
+            {{item.system.duration}}
+          </div>
+        </div>
+      </div>
+    </li>
+  {{/each}}
 </ol>
 
 <ol class="item-list">
-	{{#each psionicpower as |item id|}}
-		<li class="item" data-item-id="{{item._id}}">
-			<div class="item-row flexrow">
-				<img src="{{item.img}}" title="{{item.name}}" width="30" height="30"/>
-				<a class="item-name">{{item.name}}
-					({{localize "torgeternity.sheetLabels.psionic"}})</a>
-				<div class="item-controls">
-					<a class="item-control item-powerRoll" title="{{localize 'torgeternity.iconeTitles.miracleRoll'}}">
-						<i class="fas fa-dice-d20"></i>
-					</a>
-					<a class="item-control item-bonusRoll" title="{{localize 'torgeternity.iconeTitles.bonusRoll'}}">
-						<i class="fas fa-dice-d6"></i>
-					</a>
-					<a class="item-control item-tochat" title="{{localize 'torgeternity.iconeTitles.sendToChat'}}">
-						<i class="fas fa-comment"></i>
-					</a>
-					<a class="item-control item-edit" title="{{localize 'torgeternity.iconeTitles.edit'}}">
-						<i class="fas fa-edit"></i>
-					</a>
-					<a class="item-control item-delete" title="{{localize 'torgeternity.iconeTitles.delete'}}">
-						<i class="fas fa-trash"></i>
-					</a>
-				</div>
-			</div>
-			<div class="item-detail">
-				<div class="item-dropdown-description">
-					{{{item.system.description}}}
-					<p></p>
-					<div class="item-dropdown-extras">
-						{{item.system.skill}}
-					</div>
-					<div class="item-dropdown-extras">
-						{{item.system.dn}}
-					</div>
-					<div class="item-dropdown-extras">
-						{{item.system.castingtime}}
-					</div>
-					<div class="item-dropdown-extras">
-						{{item.system.range}}
-					</div>
-					<div class="item-dropdown-extras">
-						{{item.system.duration}}
-					</div>
-				</div>
-			</div>
-		</li>
-	{{/each}}
+  {{#each psionicpower as |item id|}}
+    <li class="item" data-item-id="{{item._id}}">
+      <div class="item-row flexrow">
+        <img src="{{item.img}}" title="{{item.name}}" width="30" height="30" />
+        <a class="item-name">{{item.name}}
+          ({{localize "torgeternity.sheetLabels.psionic"}})</a>
+        <div class="item-controls">
+          <a class="item-control item-powerRoll" title="{{localize 'torgeternity.iconeTitles.miracleRoll'}}">
+            <i class="fas fa-dice-d20"></i>
+          </a>
+          <a class="item-control item-bonusRoll" title="{{localize 'torgeternity.iconeTitles.bonusRoll'}}">
+            <i class="fas fa-dice-d6"></i>
+          </a>
+          <a class="item-control item-tochat" title="{{localize 'torgeternity.iconeTitles.sendToChat'}}">
+            <i class="fas fa-comment"></i>
+          </a>
+          <a class="item-control item-edit" title="{{localize 'torgeternity.iconeTitles.edit'}}">
+            <i class="fas fa-edit"></i>
+          </a>
+          <a class="item-control item-delete" title="{{localize 'torgeternity.iconeTitles.delete'}}">
+            <i class="fas fa-trash"></i>
+          </a>
+        </div>
+      </div>
+      <div class="item-detail">
+        <div class="item-dropdown-description">
+          {{{item.system.description}}}
+          <p></p>
+          <div class="item-dropdown-extras">
+            {{item.system.skill}}
+          </div>
+          <div class="item-dropdown-extras">
+            {{item.system.dn}}
+          </div>
+          <div class="item-dropdown-extras">
+            {{item.system.castingtime}}
+          </div>
+          <div class="item-dropdown-extras">
+            {{item.system.range}}
+          </div>
+          <div class="item-dropdown-extras">
+            {{item.system.duration}}
+          </div>
+        </div>
+      </div>
+    </li>
+  {{/each}}
 </ol>
