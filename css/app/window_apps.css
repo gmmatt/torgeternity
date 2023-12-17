@@ -29,7 +29,8 @@
   background-color: rgba(0, 0, 0, 0);
 }
 
-.window-app .window-content .rollable:hover, .window-app .window-content .rollable:focus {
+.window-app .window-content .rollable:hover,
+.window-app .window-content .rollable:focus {
   color: #000;
   text-shadow: 0 0 10px white;
   cursor: pointer;
