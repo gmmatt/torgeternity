@@ -3473,6 +3473,11 @@ form.actor-sheet.threat .tab[data-tab].active .editor {
   color: black !important;
 }
 
+.actor-icon {
+  width: 50px;
+  aspect-ratio: 1/1;
+}
+
 .card-faces {
   flex-basis: 20px;
   flex-grow: 0.1;
