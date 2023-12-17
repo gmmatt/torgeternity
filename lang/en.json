@@ -368,7 +368,8 @@
       "onlyReservedCard": "Please play a reserved card while playing a dramatic scene",
       "openDiscord": "Your browser will open a new page to join us on our discord server ",
       "openIssue": "Your browser will open a new page to complete an issue",
-      "openUlisses": "Your browser will open a new tab to join Ulisses website"
+      "openUlisses": "Your browser will open a new tab to join Ulisses website",
+      "failureBDResolution": "The system failed to resolute the BD"
     },
     "packs": {
       "basicRules": "torgeternity.basic-rules",
