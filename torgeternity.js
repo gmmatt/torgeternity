@@ -262,11 +262,13 @@ Hooks.on("ready", async function () {
         }
       */
   //----setup cards if needed
-
   if (game.settings.get("torgeternity", "setUpCards") === true && game.user.isGM) {
-    setUpCardPiles();
-  }
-
+    await setUpCardPiles();
+  };
+  
+  //----reset cards to initial face      
+  if (game.user.isGM) Array.from(game.cards).forEach(d => Array.from(d.cards).forEach(c => c.update({ "face": 0 })));
+  
   // activation of standart scene
   if (game.scenes.size < 1) {
     activateStandartScene();
