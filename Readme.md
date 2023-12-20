@@ -16,6 +16,7 @@ v. 3.4.0
 - On automatic damage appliance, shock must exceed the character's shock maximum to set him KO (prevously it was on point).
 - The amount of rolled BDs will now be shown as a figure
 - Actor portraits preserve their quadratic ratio if more text is added to the chat card
+- As soon as a GM starts a world, all cards in stacks and hands will turn automatically to face up. This will prevent problems in card handling.
 - **HIGHLIGHT:** New option on attack dialogue for trademark weapon's mechanic.
 
 v. 3.3.0
