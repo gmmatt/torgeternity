@@ -13,7 +13,7 @@
       "discord": "algor84"
     }
   ],
-  "version": "3.3.0",
+  "version": "3.4.0",
   "compatibility": {
     "minimum": 11,
     "verified": "11"
@@ -268,5 +268,5 @@
   "secondaryTokenAttribute": "shock",
   "url": "https://github.com/gmmatt/torgeternity",
   "manifest": "https://github.com/gmmatt/torgeternity/releases/latest/download/system.json",
-  "download": "https://github.com/gmmatt/torgeternity/releases/download/3.3.0/torgeternity.zip"
+  "download": "https://github.com/gmmatt/torgeternity/releases/download/3.4.0/torgeternity.zip"
 }
