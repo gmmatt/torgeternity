@@ -693,6 +693,8 @@
       "total": "Gesamt",
       "tough": "Robust",
       "toughness": "Robustheit",
+      "trademark": "Lieblingswaffe",
+      "trademarkHint": "Lieblingswaffe-Vorzug für die verwendete Waffe",
       "type": "Typ",
       "unarmed": "Unbewaffnet",
       "unspent": "nicht ausgegeben",
