@@ -1,296 +1,272 @@
 {
-    "id": "torgeternity",
-    "title": "Torg Eternity",
-    "description": "Torg Eternity character sheet for Foundry VTT.",
-    "authors": [
-        {
-            "name": "GM Matt",
-            "url": "https://www.youtube.com/c/GMMatt",
-            "discord": "Matt#1768"
-        },
-        {
-          "name": "Algor",
-          "discord": "algor84"
-        }
-    ],
-    "version": "3.3.0",
-    "compatibility": {
-        "minimum": 11,
-        "verified": "11"
+  "id": "torgeternity",
+  "title": "Torg Eternity",
+  "description": "Torg Eternity character sheet for Foundry VTT.",
+  "authors": [
+    {
+      "name": "GM Matt",
+      "url": "https://www.youtube.com/c/GMMatt",
+      "discord": "Matt#1768"
     },
-    "templateVersion": "4.5.3",
-    "esmodules": [
-        "torgeternity.js"
-    ],
-    "scripts": [
-        "./module/lib/setting-extender.js"
-    ],
-    "styles": [
-        "./css/torgeternity.css",
-        "./css/journal.css",
-        "./css/cards.css"
-    ],
-    "background": "systems/torgeternity/images/splash_new.webp",
-    "packs": [
+    {
+      "name": "Algor",
+      "discord": "algor84"
+    }
+  ],
+  "version": "3.4.0",
+  "compatibility": {
+    "minimum": 11,
+    "verified": "11"
+  },
+  "templateVersion": "4.5.3",
+  "esmodules": ["torgeternity.js"],
+  "scripts": ["./module/lib/setting-extender.js"],
+  "styles": ["./css/torgeternity.css", "./css/journal.css", "./css/cards.css"],
+  "background": "systems/torgeternity/images/splash_new.webp",
+  "packs": [
+    {
+      "name": "archetypes",
+      "label": "Archetypes (en)",
+      "system": "torgeternity",
+      "module": "torgeternity",
+      "path": "packs/archetypes.db",
+      "type": "Actor"
+    },
+    {
+      "name": "basic-rules",
+      "label": "Basic Rules (en)",
+      "system": "torgeternity",
+      "module": "torgeternity",
+      "path": "packs/basic-rules.db",
+      "type": "JournalEntry"
+    },
+    {
+      "name": "handouts",
+      "label": "Handouts (en)",
+      "system": "torgeternity",
+      "module": "torgeternity",
+      "path": "packs/handouts.db",
+      "type": "JournalEntry"
+    },
+    {
+      "name": "core-card-set",
+      "label": "Core Card Set (en)",
+      "system": "torgeternity",
+      "module": "torgeternity",
+      "path": "packs/core-card-set.db",
+      "type": "Cards"
+    },
+    {
+      "name": "core-scenes",
+      "label": "Main Scene (en)",
+      "system": "torgeternity",
+      "module": "torgeternity",
+      "path": "packs/standardscene.db",
+      "type": "Scene"
+    },
+    {
+      "name": "core-scenes-fr",
+      "label": "Scène standard (fr)",
+      "system": "torgeternity",
+      "module": "torgeternity",
+      "path": "packs/french/standardscene.db",
+      "type": "Scene"
+    },
+    {
+      "name": "archetypes-fr",
+      "label": "Archetypes (fr)",
+      "system": "torgeternity",
+      "module": "torgeternity",
+      "path": "packs/french/archetypes.db",
+      "type": "Actor"
+    },
+    {
+      "name": "basic-rules-fr",
+      "label": "regles basiques (fr)",
+      "system": "torgeternity",
+      "module": "torgeternity",
+      "path": "packs/french/basic-rules.db",
+      "type": "JournalEntry"
+    },
+    {
+      "name": "core-card-set-fr",
+      "label": "paquets de cartes de base (fr)",
+      "system": "torgeternity",
+      "module": "torgeternity",
+      "path": "packs/french/core-card-set.db",
+      "type": "Cards"
+    },
+    {
+      "name": "system-de-archetypen",
+      "label": "Archetypen (de)",
+      "path": "packs/deutsch/archetypen.db",
+      "system": "torgeternity",
+      "module": "torgeternity",
+      "type": "Actor"
+    },
+    {
+      "name": "system-de-basisregeln",
+      "label": "Basisregeln (de)",
+      "path": "packs/deutsch/basisregeln.db",
+      "system": "torgeternity",
+      "module": "torgeternity",
+      "type": "JournalEntry"
+    },
+    {
+      "name": "system-de-handouts",
+      "label": "Handouts (de)",
+      "system": "torgeternity",
+      "module": "torgeternity",
+      "path": "packs/deutsch/handouts-de.db",
+      "type": "JournalEntry"
+    },
+    {
+      "name": "core-de-scenes",
+      "label": "Standardszene (de)",
+      "system": "torgeternity",
+      "module": "torgeternity",
+      "path": "packs/deutsch/standardszene.db",
+      "type": "Scene"
+    },
+    {
+      "name": "system-de-grundkarten",
+      "label": "Dramadeck (de)",
+      "path": "packs/deutsch/core-card-set-de.db",
+      "system": "torgeternity",
+      "module": "torgeternity",
+      "type": "Cards"
+    }
+  ],
+  "packFolders": [
+    {
+      "name": "TORG Eternity - System",
+      "sorting": "m",
+      "color": "#415a9b",
+      "folders": [
         {
-            "name": "archetypes",
-            "label": "Archetypes (en)",
-            "system": "torgeternity",
-            "module": "torgeternity",
-            "path": "packs/archetypes.db",
-            "type": "Actor"
-        },
-        {
-            "name": "basic-rules",
-            "label": "Basic Rules (en)",
-            "system": "torgeternity",
-            "module": "torgeternity",
-            "path": "packs/basic-rules.db",
-            "type": "JournalEntry"
-        },
-        {
-            "name": "handouts",
-            "label": "Handouts (en)",
-            "system": "torgeternity",
-            "module": "torgeternity",
-            "path": "packs/handouts.db",
-            "type": "JournalEntry"
-        },
-        {
-            "name": "core-card-set",
-            "label": "Core Card Set (en)",
-            "system": "torgeternity",
-            "module": "torgeternity",
-            "path": "packs/core-card-set.db",
-            "type": "Cards"
-        },
-        {
-            "name": "core-scenes",
-            "label": "Main Scene (en)",
-            "system": "torgeternity",
-            "module": "torgeternity",
-            "path": "packs/standardscene.db",
-            "type": "Scene"
-        },
-        {
-            "name": "core-scenes-fr",
-            "label": "Scène standard (fr)",
-            "system": "torgeternity",
-            "module": "torgeternity",
-            "path": "packs/french/standardscene.db",
-            "type": "Scene"
-        },
-        {
-            "name": "archetypes-fr",
-            "label": "Archetypes (fr)",
-            "system": "torgeternity",
-            "module": "torgeternity",
-            "path": "packs/french/archetypes.db",
-            "type": "Actor"
-        },
-        {
-            "name": "basic-rules-fr",
-            "label": "regles basiques (fr)",
-            "system": "torgeternity",
-            "module": "torgeternity",
-            "path": "packs/french/basic-rules.db",
-            "type": "JournalEntry"
-        },
-        {
-            "name": "core-card-set-fr",
-            "label": "paquets de cartes de base (fr)",
-            "system": "torgeternity",
-            "module": "torgeternity",
-            "path": "packs/french/core-card-set.db",
-            "type": "Cards"
-        },
-        {
-            "name": "system-de-archetypen",
-            "label": "Archetypen (de)",
-            "path": "packs/deutsch/archetypen.db",
-            "system": "torgeternity",
-            "module": "torgeternity",
-            "type": "Actor"
-        },
-        {
-            "name": "system-de-basisregeln",
-            "label": "Basisregeln (de)",
-            "path": "packs/deutsch/basisregeln.db",
-            "system": "torgeternity",
-            "module": "torgeternity",
-            "type": "JournalEntry"
-        },
-        {
-            "name": "system-de-handouts",
-            "label": "Handouts (de)",
-            "system": "torgeternity",
-            "module": "torgeternity",
-            "path": "packs/deutsch/handouts-de.db",
-            "type": "JournalEntry"
-        },
-        {
-            "name": "core-de-scenes",
-            "label": "Standardszene (de)",
-            "system": "torgeternity",
-            "module": "torgeternity",
-            "path": "packs/deutsch/standardszene.db",
-            "type": "Scene"
-        },
-        {
-            "name": "system-de-grundkarten",
-            "label": "Dramadeck (de)",
-            "path": "packs/deutsch/core-card-set-de.db",
-            "system": "torgeternity",
-            "module": "torgeternity",
-            "type": "Cards"
-        }
-    ],
-  "packFolders": [{
-        "name": "TORG Eternity - System",
-        "sorting": "m",
-        "color": "#415a9b",
-        "folders": [{
           "name": "English",
           "sorting": "m",
           "color": "#960000",
-          "folders": [{
-            "name": "Journals",
-            "sorting": "m",
-            "color": "#415a9b",
-            "packs": [
-              "basic-rules",
-              "handouts"
-            ]
-          },
-          {
-            "name": "Card Decks",
-            "sorting": "m",
-            "color": "#415a9b",
-            "packs": [
-              "core-card-set"
-            ]
-          },
-          {
-            "name": "Actors",
-            "sorting": "m",
-            "color": "#415a9b",
-            "packs": [
-              "archetypes"
-            ]
-          },
-          {
-            "name": "Scenes",
-            "sorting": "m",
-            "color": "#415a9b",
-            "packs": [
-              "core-scenes"
-            ]
-          }]
+          "folders": [
+            {
+              "name": "Journals",
+              "sorting": "m",
+              "color": "#415a9b",
+              "packs": ["basic-rules", "handouts"]
+            },
+            {
+              "name": "Card Decks",
+              "sorting": "m",
+              "color": "#415a9b",
+              "packs": ["core-card-set"]
+            },
+            {
+              "name": "Actors",
+              "sorting": "m",
+              "color": "#415a9b",
+              "packs": ["archetypes"]
+            },
+            {
+              "name": "Scenes",
+              "sorting": "m",
+              "color": "#415a9b",
+              "packs": ["core-scenes"]
+            }
+          ]
         },
         {
           "name": "Deutsch",
           "sorting": "m",
           "color": "#960000",
-          "folders": [{
-            "name": "Journale",
-            "sorting": "m",
-            "color": "#415a9b",
-            "packs": [
-              "system-de-basisregeln",
-              "system-de-handouts"
-            ]
-          },
-          {
-            "name": "Kartendecks",
-            "sorting": "m",
-            "color": "#415a9b",
-            "packs": [
-              "system-de-grundkarten"
-            ]
-          },
-          {
-            "name": "Akteure",
-            "sorting": "m",
-            "color": "#415a9b",
-            "packs": [
-              "system-de-archetypen"
-            ]
-          },
-          {
-            "name": "Szenen",
-            "sorting": "m",
-            "color": "#415a9b",
-            "packs": [
-              "core-de-scenes"
-            ]
-          }]
+          "folders": [
+            {
+              "name": "Journale",
+              "sorting": "m",
+              "color": "#415a9b",
+              "packs": ["system-de-basisregeln", "system-de-handouts"]
+            },
+            {
+              "name": "Kartendecks",
+              "sorting": "m",
+              "color": "#415a9b",
+              "packs": ["system-de-grundkarten"]
+            },
+            {
+              "name": "Akteure",
+              "sorting": "m",
+              "color": "#415a9b",
+              "packs": ["system-de-archetypen"]
+            },
+            {
+              "name": "Szenen",
+              "sorting": "m",
+              "color": "#415a9b",
+              "packs": ["core-de-scenes"]
+            }
+          ]
         },
         {
           "name": "Français",
           "sorting": "m",
           "color": "#960000",
-          "folders": [{
-            "name": "Journals",
-            "sorting": "m",
-            "color": "#415a9b",
-            "packs": [
-              "basic-rules-fr"
-            ]
-          },
-          {
-            "name": "Card Decks",
-            "sorting": "m",
-            "color": "#415a9b",
-            "packs": [
-            "core-card-set-fr"
-            ]
-          },
-          {
-            "name": "Actors",
-            "sorting": "m",
-            "color": "#415a9b",
-            "packs": [
-            "archetypes-fr"
-            ]
-          },
-          {
-            "name": "Scenes",
-            "sorting": "m",
-            "color": "#415a9b",
-            "packs": [
-              "core-scenes-fr"
-            ]
-          }]
-        }]
-      }],
-    "languages": [
-        {
-            "lang": "en",
-            "name": "English",
-            "path": "lang/en.json"
-        },
-        {
-            "lang": "fr",
-            "name": "Francais",
-            "path": "lang/fr.json"
-        },
-        {
-            "lang": "es",
-            "name": "Español",
-            "path": "lang/es.json"
-        },
-        {
-            "lang": "de",
-            "name": "German",
-            "path": "lang/de.json"
+          "folders": [
+            {
+              "name": "Journals",
+              "sorting": "m",
+              "color": "#415a9b",
+              "packs": ["basic-rules-fr"]
+            },
+            {
+              "name": "Card Decks",
+              "sorting": "m",
+              "color": "#415a9b",
+              "packs": ["core-card-set-fr"]
+            },
+            {
+              "name": "Actors",
+              "sorting": "m",
+              "color": "#415a9b",
+              "packs": ["archetypes-fr"]
+            },
+            {
+              "name": "Scenes",
+              "sorting": "m",
+              "color": "#415a9b",
+              "packs": ["core-scenes-fr"]
+            }
+          ]
         }
-    ],
-    "socket": true,
-    "gridDistance": 1,
-    "gridUnits": "m",
-    "primaryTokenAttribute": "wounds",
-    "secondaryTokenAttribute": "shock",
-    "url": "https://github.com/gmmatt/torgeternity",
-    "manifest": "https://github.com/gmmatt/torgeternity/releases/latest/download/system.json",
-    "download": "https://github.com/gmmatt/torgeternity/releases/download/3.3.0/torgeternity.zip"
+      ]
+    }
+  ],
+  "languages": [
+    {
+      "lang": "en",
+      "name": "English",
+      "path": "lang/en.json"
+    },
+    {
+      "lang": "fr",
+      "name": "Francais",
+      "path": "lang/fr.json"
+    },
+    {
+      "lang": "es",
+      "name": "Español",
+      "path": "lang/es.json"
+    },
+    {
+      "lang": "de",
+      "name": "German",
+      "path": "lang/de.json"
+    }
+  ],
+  "socket": true,
+  "gridDistance": 1,
+  "gridUnits": "m",
+  "primaryTokenAttribute": "wounds",
+  "secondaryTokenAttribute": "shock",
+  "url": "https://github.com/gmmatt/torgeternity",
+  "manifest": "https://github.com/gmmatt/torgeternity/releases/latest/download/system.json",
+  "download": "https://github.com/gmmatt/torgeternity/releases/download/3.4.0/torgeternity.zip"
 }

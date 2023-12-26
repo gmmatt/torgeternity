@@ -1,18 +1,21 @@
-<div class="possibility-card sheet-card" data-type="{{data.type}}"
-    style="background-image: url('systems/torgeternity/images/bgparch.webp')">
-    <table style="border:none;background-color:transparent">
-        <tr style="border:none">
-            <td>
-                <img class="actor-icon" src="{{actorPic}}" title="{{name}}" style="width:50px;height:50px" />
-            </td>
-            <td class="chat-title" style="font-size:20px">
-                {{localize 'torgeternity.chatText.possibility'}}
-            </td>
-        </tr>
-    </table>
-    <div class="chat-text">
-        <p style="font-size:24px;font-weight:bold;text-align:center">{{newbonus}}</p>
-        <p>{{localize "torgeternity.chatText.check.result.previous"}} : {{previousroll}}</p>
-        <p>{{localize "torgeternity.chatText.check.result.new"}} : {{newtotal}}</p>
-    </div>
+<div
+  class="possibility-card sheet-card"
+  data-type="{{data.type}}"
+  style="background-image: url('systems/torgeternity/images/bgparch.webp')"
+>
+  <table style="border:none;background-color:transparent">
+    <tr style="border:none">
+      <td>
+        <img class="actor-icon" src="{{actorPic}}" title="{{name}}"/>
+      </td>
+      <td class="chat-title" style="font-size:20px">
+        {{localize "torgeternity.chatText.possibility"}}
+      </td>
+    </tr>
+  </table>
+  <div class="chat-text">
+    <p style="font-size:24px;font-weight:bold;text-align:center">{{newbonus}}</p>
+    <p>{{localize "torgeternity.chatText.check.result.previous"}} : {{previousroll}}</p>
+    <p>{{localize "torgeternity.chatText.check.result.new"}} : {{newtotal}}</p>
+  </div>
 </div>

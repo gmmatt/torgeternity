@@ -1,37 +1,43 @@
-<div class="generalGear-border sheet-card {{data.type}}" data-type="{{data.type}}"
-    style="background-image: url('systems/torgeternity/images/bgparch.webp')">
-    <table style="border:none;background-color:transparent">
-        <tr style="border:none">
-            <td>
-                <img class="perk-icon" src="{{img}}" title="{{name}}" style="width:50px;height:50px" />
-            </td>
-            <td class="chat-title">
-                {{name}}
-            </td>
-        </tr>
-    </table>
-    <div class="item-description-chat" data-item-id="{{_id}}">
-        <div class="item-description-chat">{{{system.description}}}</div>
-        <div class="item-dropdown-extras">
-            {{system.cosm}}
-        </div>
-        <div class="item-dropdown-extras">
-            {{system.price}} ({{system.value}})
-        </div>
-        <div class="item-dropdown-extras">
-            {{localize "torgeternity.gear.techlevel"}} : {{system.techlevel}}
-        </div>
-        <div class="item-dropdown-extras">
-            {{system.topspeed}}
-        </div>
-        <div class="item-dropdown-extras">
-            {{localize "torgeternity.skills.maneuver"}} {{system.mr}}
-        </div>
-        <div class="item-dropdown-extras">
-            {{system.wounds}}/{{system.tough}}
-        </div>
-
+<div
+  class="generalGear-border sheet-card {{data.type}}"
+  data-type="{{data.type}}"
+  style="background-image: url('systems/torgeternity/images/bgparch.webp')"
+>
+  <table style="border:none;background-color:transparent">
+    <tr style="border:none">
+      <td>
+        <img class="perk-icon" src="{{img}}" title="{{name}}" style="width:50px;height:50px" />
+      </td>
+      <td class="chat-title">
+        {{name}}
+      </td>
+    </tr>
+  </table>
+  <div class="item-description-chat" data-item-id="{{_id}}">
+    <div class="item-description-chat">{{{system.description}}}</div>
+    <div class="item-dropdown-extras">
+      {{system.cosm}}
+    </div>
+    <div class="item-dropdown-extras">
+      {{system.price}}
+      ({{system.value}})
+    </div>
+    <div class="item-dropdown-extras">
+      {{localize "torgeternity.gear.techlevel"}}
+      :
+      {{system.techlevel}}
+    </div>
+    <div class="item-dropdown-extras">
+      {{system.topspeed}}
+    </div>
+    <div class="item-dropdown-extras">
+      {{localize "torgeternity.skills.maneuver"}}
+      {{system.mr}}
+    </div>
+    <div class="item-dropdown-extras">
+      {{system.wounds}}/{{system.tough}}
     </div>
 
+  </div>
 
 </div>

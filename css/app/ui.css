@@ -81,12 +81,18 @@ a:hover {
   z-index: 30;
 }
 
-.app input[type="text"]::-moz-placeholder, .app input[type="number"]::-moz-placeholder, .window-app input[type="text"]::-moz-placeholder, .window-app input[type="number"]::-moz-placeholder {
+.app input[type="text"]::-moz-placeholder,
+.app input[type="number"]::-moz-placeholder,
+.window-app input[type="text"]::-moz-placeholder,
+.window-app input[type="number"]::-moz-placeholder {
   color: rgba(0, 0, 0, 0.472);
   text-shadow: 0px 0px 10px black;
 }
 
-.app input[type="text"]:-ms-input-placeholder, .app input[type="number"]:-ms-input-placeholder, .window-app input[type="text"]:-ms-input-placeholder, .window-app input[type="number"]:-ms-input-placeholder {
+.app input[type="text"]:-ms-input-placeholder,
+.app input[type="number"]:-ms-input-placeholder,
+.window-app input[type="text"]:-ms-input-placeholder,
+.window-app input[type="number"]:-ms-input-placeholder {
   color: rgba(0, 0, 0, 0.472);
   text-shadow: 0px 0px 10px black;
 }
@@ -181,8 +187,8 @@ a:hover {
   top: -0px;
   left: calc(50% - 65px);
   opacity: 0.7;
-  -webkit-animation: rotateblur  3s linear infinite;
-  animation: rotateblur  3s linear infinite;
+  -webkit-animation: rotateblur 3s linear infinite;
+  animation: rotateblur 3s linear infinite;
 }
 
 #controls .scene-control,
