@@ -15,18 +15,16 @@
     </table>
     <div class="chat-text" style="padding:0px">
         <p class="skill-roll-result">{{resultText}}</p>
-        <p class="skill-roll-action-label" style="{{actionTotalLabel}}">{{actionTotalContent}}</p>
-        <p class="skill-roll-disconnect-label" style="{{disconnectLabel}}">{{localize 'torgeternity.chatText.possibleDisconnect'}}</p>
-        <p class="skill-roll-damage-label" style="{{damageLabel}}">
-            {{damageDescription}}
-        </p>
-        <p class="skill-roll-action-label" style="{{damageSubLabel}}">
-            {{damageSubDescription}}
-            <br>
+        <p class="skill-roll-disconnect-label" style="{{disconnectLabel}}">{{localize 'torgeternity.chatText.possibleDisconnect'}}, {{localize 'torgeternity.chatText.rolled'}} {{combinedRollTotal}}</p>
+        <p class="skill-roll-damage-label" style="{{damageLabel}}">{{damageDescription}}</p>
+        <p style="display: flex; align-items: center;justify-content: center">
             <a class="applyDam" style="{{applyDamLabel}}" title="{{localize 'torgeternity.sheetLabels.applyDamageTooltip'}}">{{localize 'torgeternity.sheetLabels.applyDamage'}}</a>
             <span style="{{applyDamLabel}}">&nbsp;&bull;&nbsp;</span>
             <a class="soakDam" style="{{applyDamLabel}}" title="{{localize 'torgeternity.sheetLabels.soakDamageTooltip'}}">{{localize 'torgeternity.sheetLabels.soakDamage'}}</a>
         </p>
+        <details><summary>{{localize "torgeternity.chatText.showDetails"}}</summary>
+        <p class="skill-roll-action-label" style="{{actionTotalLabel}}">{{actionTotalContent}}</p>
+        <p class="skill-roll-action-label" style="{{damageSubLabel}}">{{damageSubDescription}}</p>
         <table class="skill-roll-table">
             <tr>
                 <td class="skill-roll-table-1">
@@ -83,7 +81,7 @@
             </tr>
 
         </table>
-
+        </details>
         <div class="skill-roll-menu">
             <a class="roll-fav" 
                 style="{{isFavStyle}}"
