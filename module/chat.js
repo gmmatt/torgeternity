@@ -21,6 +21,21 @@ export function addChatListeners(html) {
   html.on("click", "a.applyDam", applyDam);
   html.on("contextmenu", "a.applyDam", adjustDam);
   html.on("click", "a.soakDam", soakDam);
+  html.on("click", "details.skillcardDetailsELement", onDetails)
+}
+
+function onDetails(event) {
+  const parentMessageId = event.currentTarget.closest(".chat-message").dataset.messageId;
+  var parentMessage = game.messages.find(({ id }) => id === parentMessageId);
+
+  let detailElement = parentMessage.find("skillcardDetailsElement");
+  let summaryElement = parentMessage.find("skillcardSummaryElement");
+
+  if (detailElement.open === false) {
+  summaryElement.innerhtml = game.i18n.localize("torgeternity.chatText.showDetails")
+  } else {
+  summaryElement.innerhtml = game.i18n.localize("torgeternity.chatText.hideDetails")
+  }
 }
 
 function onFavored(event) {
