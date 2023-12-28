@@ -1897,6 +1897,13 @@ div.readme a.compendium {
   margin: 0.5em 0 0 0;
 }
 
+.chat-message .applySoakDam {
+  border: black 1px solid;
+  border-radius: 1rem;
+  text-align: center;
+  padding: 3px;
+}
+
 /* Styles limited to torg sheets */
 
 @-webkit-keyframes roll {
