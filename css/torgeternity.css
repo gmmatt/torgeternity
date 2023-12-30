@@ -1887,6 +1887,7 @@ div.readme a.compendium {
   font-family: "Palatino Linotype";
   font-size: 11px;
   text-align: center;
+  margin: 7px 0;
 }
 
 .chat-message .skill-roll-damage-label {
@@ -1897,11 +1898,18 @@ div.readme a.compendium {
   margin: 0.5em 0 0 0;
 }
 
-.chat-message .applySoakDam {
+.chat-message .applySoakDam, .roll-fav, .roll-possibility, .roll-up, .roll-hero, .roll-drama, .add-plus3, .add-bd {
   border: black 1px solid;
   border-radius: 1rem;
   text-align: center;
   padding: 3px;
+  background-color: rgba(40, 1, 1, 0.1);
+  color:  black;
+  font-weight: bold;
+}
+
+.chat-message .card-draw .card-name {
+  line-height: 20px;
 }
 
 /* Styles limited to torg sheets */
@@ -3496,10 +3504,6 @@ form.actor-sheet.threat .tab[data-tab].active .editor {
 .pool-list {
   font-family: Palatino;
   font-size: 12px;
-}
-
-.chat-message .card-draw .card-name {
-  line-height: 20px;
 }
 
 .interaction-attack-list {
