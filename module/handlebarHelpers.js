@@ -172,7 +172,13 @@ export function registerHelpers() {
     return torgeternity.cosmTypes;
   });
   Handlebars.registerHelper("hasfinish", function (that) {
-    var finished = that.combat.combatants.find((c) => c.actorId === game.user.character.id).flags.world.turnTaken;
+    var finished;
+    try {
+      finished = that.combat.combatants.find((c) => c.actorId === game.user.character.id).flags.world.turnTaken;
+    }
+    catch (e) {
+      finished = true
+    };
     return finished;
   });
 }
