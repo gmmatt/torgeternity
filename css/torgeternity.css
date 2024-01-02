@@ -1898,18 +1898,33 @@ div.readme a.compendium {
   margin: 0.5em 0 0 0;
 }
 
-.chat-message .applySoakDam, .roll-fav, .roll-possibility, .roll-up, .roll-hero, .roll-drama, .add-plus3, .add-bd {
+.chat-message .applySoakDam,
+.chat-message .roll-fav,
+.chat-message .roll-possibility,
+.chat-message .roll-up,
+.chat-message .roll-hero,
+.chat-message .roll-drama,
+.chat-message .add-plus3,
+.chat-message .add-bd {
   border: black 1px solid;
   border-radius: 1rem;
   text-align: center;
   padding: 3px;
   background-color: rgba(40, 1, 1, 0.1);
-  color:  black;
+  color: black;
   font-weight: bold;
 }
 
 .chat-message .card-draw .card-name {
   line-height: 20px;
+}
+
+.chat-message details.chatCardDetailsELement[open] summary::before {
+  content: attr(data-open);
+}
+
+.chat-message details.chatCardDetailsELement:not([open]) summary::before {
+  content: attr(data-close);
 }
 
 /* Styles limited to torg sheets */
