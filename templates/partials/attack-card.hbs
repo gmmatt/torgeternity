@@ -3,19 +3,24 @@
   data-type="{{data.type}}"
   style="background-image: url('systems/torgeternity/images/bgparch.webp')"
 >
-<details><summary>{{localize "torgeternity.chatText.showDetails"}}</summary>
-  <table style="border:none;background-color:transparent">
-    <tr style="border:none">
-      <td>
-        <img class="actor-icon" src="{{img}}" title="{{name}}"/>
-      </td>
-      <td class="chat-title" style="font-size:20px">
-        {{localize "torgeternity.chatText.attack"}}
-        ({{name}})
-      </td>
-    </tr>
-  </table>
-</details>
+  <details class="chat-message chatCardDetailsELement">
+    <summary
+      class="skillcardSummaryElement"
+      data-open="{{localize 'torgeternity.chatText.hideDetails'}}"
+      data-close="{{localize 'torgeternity.chatText.showDetails'}}"
+    ></summary>
+    <table style="border:none;background-color:transparent">
+      <tr style="border:none">
+        <td>
+          <img class="actor-icon" src="{{img}}" title="{{name}}" />
+        </td>
+        <td class="chat-title" style="font-size:20px">
+          {{localize "torgeternity.chatText.attack"}}
+          ({{name}})
+        </td>
+      </tr>
+    </table>
+  </details>
   <div class="chat-text">
     <p style="font-size:24px;font-weight:bold;text-align:center">{{result}}</p>
     <p style="font-size:18px;font-weight:bold;text-align:center">({{baseDamage}}
