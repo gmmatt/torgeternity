@@ -548,7 +548,8 @@ export function renderSkillChat(test) {
   if (test.rollTotal === 1 && !(test.testType === "activeDefenseUpdate" || test.testType === "activeDefense")) {
     //Roll 1 and not defense = Mishape
     test.resultText = game.i18n.localize("torgeternity.chatText.check.result.mishape");
-    test.outcomeColor = "color: violet"
+    test.outcomeColor = "color: purple";
+    test.resultTextColor = "color: purple";
     test.actionTotalLabel = "display:none";
     test.possibilityStyle = "display:none";
     test.upStyle = "display:none";
@@ -748,6 +749,7 @@ export function renderSkillChat(test) {
     fromUuidSync(test.actor).createEmbeddedDocuments("ActiveEffect", [NewActiveDefense]);
   } else {
     test.resultText = test.outcome;
+    test.resultTextColor = test.outcomeColor;
   }
 
   // If an attack, calculate and display damage
