@@ -520,15 +520,19 @@ export function renderSkillChat(test) {
     game.i18n.localize(dnLabel);
   if (testDifference < 0) {
     test.outcome = game.i18n.localize("torgeternity.chatText.check.result.failure");
+    test.outcomeColor = "color: red"
     test.soakWounds = 0;
   } else if (testDifference > 9) {
     test.outcome = game.i18n.localize("torgeternity.chatText.check.result.outstandingSuccess");
+    test.outcomeColor = "color: green"
     test.soakWounds = "all";
   } else if (testDifference > 4) {
     test.outcome = game.i18n.localize("torgeternity.chatText.check.result.goodSuccess");
+    test.outcomeColor = "color: green"
     test.soakWounds = 2;
   } else {
     test.outcome = game.i18n.localize("torgeternity.chatText.check.result.standartSuccess");
+    test.outcomeColor = "color: green"
     test.soakWounds = 1;
   }
 
@@ -544,6 +548,7 @@ export function renderSkillChat(test) {
   if (test.rollTotal === 1 && !(test.testType === "activeDefenseUpdate" || test.testType === "activeDefense")) {
     //Roll 1 and not defense = Mishape
     test.resultText = game.i18n.localize("torgeternity.chatText.check.result.mishape");
+    test.outcomeColor = "color: violet"
     test.actionTotalLabel = "display:none";
     test.possibilityStyle = "display:none";
     test.upStyle = "display:none";
@@ -558,6 +563,7 @@ export function renderSkillChat(test) {
         game.i18n.localize("torgeternity.sheetLabels.possSpent");
   } else if (test.testType === "soak") {
     test.resultText = test.outcome;
+    test.resultTextColor = test.outcomeColor;
     if (test.soakWounds > 0) {
       test.chatNote =
         `${test.soakWounds}` +
