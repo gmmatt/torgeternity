@@ -59,6 +59,19 @@ export function registerTorgSettings() {
     default: false,
     onChange: () => window.location.reload(),
   });
+
+  /*//Show always details in Chatcards or keep it tugged in
+  game.settings.register("torgeternity", "showCheckDetails", {
+    name: "torgeternity.settingMenu.showCheckDetails.name",
+    hint: "torgeternity.settingMenu.showCheckDetails.hint",
+    scope: "world",
+    config: true,
+    requiresReload: true,    
+    type: Boolean,
+    default: false,    
+    onChange: () => window.location.reload(),
+  });*/
+
   game.settings.register("torgeternity", "autoDamages", {
     name: "torgeternity.settingMenu.autoDamages.name", // Register a module setting with checkbox
     hint: "torgeternity.settingMenu.autoDamages.hint", // Description of the settings
@@ -136,5 +149,5 @@ export function registerTorgSettings() {
     config: false,
     type: Boolean,
     default: false,
-  });
+  });  
 }

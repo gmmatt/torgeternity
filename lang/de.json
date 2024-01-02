@@ -525,8 +525,12 @@
       "welcome": {
         "hint": "Wenn ausgewählt, erscheint beim Laden die Willkommensnachricht",
         "name": "Willkommensnachricht anzeigen"
+      },
+      "showCheckDetails": {
+        "hint": "Wenn dies angehakt ist, werden die Details eines Wurfs immer angezeigt.",
+        "name": "Zeige immer die Details eines Wurfs"
       }
-    },
+    },    
     "sheetLabels": {
       "abilities": "Fähigkeiten",
       "actions": "Aktionen",
