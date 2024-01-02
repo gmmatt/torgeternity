@@ -98,6 +98,7 @@
       "favored": "Favored",
       "hero": "Hero",
       "heroCard": "Hero Card",
+      "hideDetails": "Hide Details",
       "modifiers": "Modifiers",
       "notes": "Notes",
       "passesCard1": "Passes",
@@ -105,6 +106,8 @@
       "playsCard": "Plays",
       "possibility": "Possibility",
       "possibleDisconnect": "Possible Disconnect",
+      "rolled": "rolled",
+      "showDetails": "Show Details",
       "skillTestLabel": "Skill Value",
       "stunt": "Stunt Test",
       "test": "Test",
@@ -522,6 +525,10 @@
       "welcome": {
         "hint": "If checked, the welcome message will pop up after your world loads.",
         "name": "Display the Welcome Message"
+      },
+      "showCheckDetails": {
+        "hint": "If checked, the details of checks will always be shown.",
+        "name": "Show Details in checks"
       }
     },
     "sheetLabels": {

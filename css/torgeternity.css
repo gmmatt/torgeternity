@@ -1887,6 +1887,7 @@ div.readme a.compendium {
   font-family: "Palatino Linotype";
   font-size: 11px;
   text-align: center;
+  margin: 7px 0;
 }
 
 .chat-message .skill-roll-damage-label {
@@ -1895,6 +1896,36 @@ div.readme a.compendium {
   font-weight: bold;
   text-align: center;
   margin: 0.5em 0 0 0;
+}
+
+.applyDam,
+.soakDam,
+.chat-message .roll-fav,
+.chat-message .roll-possibility,
+.chat-message .roll-up,
+.chat-message .roll-hero,
+.chat-message .roll-drama,
+.chat-message .add-plus3,
+.chat-message .add-bd {
+  border: black 1px solid;
+  border-radius: 1rem;
+  text-align: center;
+  padding: 3px;
+  background-color: rgba(40, 1, 1, 0.1);
+  color: black;
+  font-weight: bold;
+}
+
+.chat-message .card-draw .card-name {
+  line-height: 20px;
+}
+
+.chat-message details.chatCardDetailsELement[open] summary::before {
+  content: attr(data-open);
+}
+
+.chat-message details.chatCardDetailsELement:not([open]) summary::before {
+  content: attr(data-close);
 }
 
 /* Styles limited to torg sheets */
@@ -3489,10 +3520,6 @@ form.actor-sheet.threat .tab[data-tab].active .editor {
 .pool-list {
   font-family: Palatino;
   font-size: 12px;
-}
-
-.chat-message .card-draw .card-name {
-  line-height: 20px;
 }
 
 .interaction-attack-list {
