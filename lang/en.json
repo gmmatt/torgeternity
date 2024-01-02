@@ -525,6 +525,10 @@
       "welcome": {
         "hint": "If checked, the welcome message will pop up after your world loads.",
         "name": "Display the Welcome Message"
+      },
+      "showCheckDetails": {
+        "hint": "If checked, the details of checks will always be shown.",
+        "name": "Show Details in checks"
       }
     },
     "sheetLabels": {
