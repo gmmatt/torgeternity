@@ -7,6 +7,10 @@
 For manual installation, use the provided manifest URL in the "_Install System_" popup window while managing game
 systems.
 
+v. 3.4.1
+- Drama cards now will be shown although no combatants are joint in the combat tracker (aids simple DSR mechanics)
+- Chat cards are reworked and finer- we heared you :)
+
 v. 3.4.0
 
 - Vehicle defenses are now correct
