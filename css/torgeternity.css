@@ -1898,7 +1898,8 @@ div.readme a.compendium {
   margin: 0.5em 0 0 0;
 }
 
-.chat-message .applySoakDam,
+.applyDam,
+.soakDam,
 .chat-message .roll-fav,
 .chat-message .roll-possibility,
 .chat-message .roll-up,
