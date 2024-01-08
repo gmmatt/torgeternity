@@ -1802,8 +1802,31 @@ div.readme a.compendium {
   background-color: rgba(255, 255, 255, 0.575);
 }
 
+.chat-message .torgeternity-message-header {
+   display: grid;
+   grid-template-columns: 1fr 3fr;
+   grid-template-rows: 2fr;
+   border: none;
+}
+
 .chat-message .message-header .flavor-text {
   font-size: unset;
+}
+
+.message-header .torgeternity-actor-icon {
+  max-width: 50px;
+  grid-column: 1 / 1;
+  grid-row: 1 / 2;
+  aspect-ratio: 1/1;
+  border: none;
+}
+
+.message-header .torgeternity-skill-description {
+  width: 100%;
+  grid-column: 2 / 4;
+  /*grid-row: 1 / 2;*/
+  justify-content: center;
+  align-items: center;
 }
 
 .chat-message table td {
@@ -1827,13 +1850,22 @@ div.readme a.compendium {
   font-family: Alaska;
 }
 
+p.skill-chat-title.unskilled {
+  grid-row: 1/1;  
+}
+
+p.skill-chat-title.skilled {
+  grid-row: span 2;
+}
+
 .chat-message .skill-unskilled-label {
   font-size: 12px;
   text-align: center;
   padding: 0px;
   margin: 0px;
   font-family: "Palatino Linotype";
-  width: 100%;
+  /*width: 100%;*/
+  grid-row: 2/2;
 }
 
 .chat-message .skill-roll-disconnect-label {
@@ -3502,11 +3534,6 @@ form.actor-sheet.threat .tab[data-tab].active .editor {
 .open-hand {
   width: 150px;
   color: black !important;
-}
-
-.actor-icon {
-  width: 50px;
-  aspect-ratio: 1/1;
 }
 
 .card-faces {

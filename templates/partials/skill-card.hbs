@@ -3,20 +3,19 @@
   data-type="{{data.type}}"
   style="background-image: url('systems/torgeternity/images/bgparch.webp')"
 >
-  <table style="border:none;background-color:transparent;margin:2px 0px 0px 0px">
-    <tr style="border:none">
-      <td>
-        <img class="actor-icon" src="{{actorPic}}" title="{{name}}" />
-        {{log data}}
-      </td>
-      <td>
-        <div width="100%">
-          <p class="skill-chat-title">{{chatTitle}}</p>
+  <div class="chat-message torgeternity-message-header">
+      <img class="message-header torgeternity-actor-icon" src="{{actorPic}}" title="{{name}}" />
+      {{log data}}
+
+      <div  class="message-header torgeternity-skill-description">
+          {{#if unskilledTest}}
+          <p class="skill-chat-title unskilled">{{chatTitle}}</p>
           <p class="skill-unskilled-label" style="{{unskilledLabel}}">{{localize "torgeternity.chatText.unskilled"}}</p>
-        </div>
-      </td>
-    </tr>
-  </table>
+          {{else}}    
+          <p class="skill-chat-title skilled">{{chatTitle}}</p>
+          {{/if}}
+      </div>
+  </div>
   
   <div class="chat-text" style="padding:0px">
     <p class="skill-roll-result" style="{{resultTextColor}}">{{resultText}}</p>

@@ -277,7 +277,7 @@ export function renderSkillChat(test) {
       }
     } else test.rollTotal = test.diceroll.total;
   }
-
+  test.unskilledTest = unskilledTest;
   //
   // Get current bonus and make + label visible if number is positive
   //
