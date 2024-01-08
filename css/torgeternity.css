@@ -1827,6 +1827,8 @@ div.readme a.compendium {
   /*grid-row: 1 / 2;*/
   justify-content: center;
   align-items: center;
+  text-align: center;
+  display: grid;
 }
 
 .chat-message table td {
@@ -1855,6 +1857,8 @@ p.skill-chat-title.unskilled {
 }
 
 p.skill-chat-title.skilled {
+  justify-content: center;
+  align-items: center;
   grid-row: span 2;
 }
 
