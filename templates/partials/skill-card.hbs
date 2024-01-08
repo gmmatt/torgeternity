@@ -25,7 +25,7 @@
       {{localize "torgeternity.chatText.rolled"}}
       {{combinedRollTotal}}</p>
     <p class="skill-roll-damage-label" style="{{damageLabel}}">{{damageDescription}}</p>
-    {{#if isAttack}}
+    {{#if target.present}}{{#if isAttack}}
     <p style="display: flex; align-items: center;justify-content: center">
       <a
         class="applyDam"
@@ -39,7 +39,7 @@
         title="{{localize 'torgeternity.sheetLabels.soakDamageTooltip'}}"
       >{{localize "torgeternity.sheetLabels.soakDamage"}}</a>
     </p>
-    {{/if}}
+    {{/if}}{{/if}}
     <details class="chat-message chatCardDetailsELement"><summary
         class="skillcardSummaryElement"
         data-open="{{localize 'torgeternity.chatText.hideDetails'}}"
