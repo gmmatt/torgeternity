@@ -34,6 +34,7 @@
 :root {
   --torgblue: rgb(65, 90, 155);
   --torgred: rgb(150, 0, 0);
+  --sidebar-width: 380px; /*formally this was defined in #sidebar{width:380px}, but we need to alter the foundry style.css variable to affect on things like the new "to bottom" Button*/
 }
 
 @keyframes colorchange {
@@ -1078,7 +1079,6 @@ nav#controls ol .torgHand:before {
   background-image: url(../images/thunder.webp);
   z-index: 20;
   background-size: 100% 100%;
-  width: 380px;
   height: 100%;
   border: none;
 }
