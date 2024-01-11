@@ -5,7 +5,8 @@ import { checkUnskilled } from "/systems/torgeternity/module/sheets/torgeternity
 export async function renderSkillChat(test) {
   if (test?.targetAll.length != 0) { }
   else test.targetAll = [test.target];
-  game.dice3d.messageHookDisabled = true;
+  try { game.dice3d.messageHookDisabled = true; }
+  catch (e) { };
   test.applyDebuffLabel = "display:none";
   test.applyDamLabel = "display:none";
   for (var i = 0; i < test.targetAll.length; i++) {
@@ -927,8 +928,11 @@ export async function renderSkillChat(test) {
   };
   await game.user.updateTokenTargets();
   await game.user.broadcastActivity({ targets: [] });
-  await game.dice3d.showForRoll(test.diceroll);
-  game.dice3d.messageHookDisabled = false;
+  try {
+    await game.dice3d.showForRoll(test.diceroll);
+    game.dice3d.messageHookDisabled = false;
+  }
+  catch (e) { };
 }
 
 export function torgBonus(rollTotal) {
