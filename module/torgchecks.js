@@ -5,13 +5,15 @@ import { checkUnskilled } from "/systems/torgeternity/module/sheets/torgeternity
 export async function renderSkillChat(test) {
   if (test?.targetAll.length != 0) { }
   else test.targetAll = [test.target];
+  game.dice3d.messageHookDisabled = true;
+  test.applyDebuffLabel = "display:none";
+  test.applyDamLabel = "display:none";
   for (var i = 0; i < test.targetAll.length; i++) {
     var target = test.targetAll[i];
     test.target = target;
     test.sizeModifier = test.sizeModifierAll[i];
     test.vulnerableModifier = test.vulnerableModifierAll[i];
     var currentTarget = target;
-    test.applyDebuffLabel = "display:none";
 
 
     //
@@ -897,7 +899,7 @@ export async function renderSkillChat(test) {
     }
 
     // Cannot pass target array to chat because Bad Things happen when I try it, so we have to clear it out here
-    test.targets = ""
+    test.targets = "";
 
     let chatData = {
       user: game.user._id,
@@ -909,7 +911,7 @@ export async function renderSkillChat(test) {
 
     const templatePromise = renderTemplate("./systems/torgeternity/templates/partials/skill-card.hbs", test)
 
-    const messageData = { ...chatData, flags: { torgeternity: { test, currentTarget } } }
+    const messageData = { ...chatData, flags: { torgeternity: { test, currentTarget } } };
 
     await templatePromise.then(content => {
       if (test.diceroll != null) {
@@ -922,11 +924,11 @@ export async function renderSkillChat(test) {
         //if (test.parentId) {game.messages.get(test.parentId).delete()};
       };
     });
-    game.dice3d.messageHookDisabled = true;
   };
   await game.user.updateTokenTargets();
   await game.user.broadcastActivity({ targets: [] });
-  //game.dice3d.messageHookDisabled = false;
+  await game.dice3d.showForRoll(test.diceroll);
+  game.dice3d.messageHookDisabled = false;
 }
 
 export function torgBonus(rollTotal) {
