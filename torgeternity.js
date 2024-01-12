@@ -25,9 +25,7 @@ import torgeternityPile from "./module/cards/torgeternityPile.js";
 import torgeternityDeck from "./module/cards/torgeternityDeck.js";
 import torgeternityCardConfig from "./module/cards/torgeternityCardConfig.js";
 import { torgeternityCards } from "./module/cards/torgeternityCards.js";
-import { attackDialog } from "/systems/torgeternity/module/attack-dialog.js"; //Added
 import { testDialog } from "/systems/torgeternity/module/test-dialog.js";
-import { interactionDialog } from "/systems/torgeternity/module/interaction-dialog.js";
 import { hideCompendium } from "./module/hideCompendium.js";
 import initTorgControlButtons from "./module/controlButtons.js";
 import createTorgShortcuts from "./module/keybinding.js";
@@ -265,10 +263,10 @@ Hooks.on("ready", async function () {
   if (game.settings.get("torgeternity", "setUpCards") === true && game.user.isGM) {
     await setUpCardPiles();
   };
-  
+
   //----reset cards to initial face      
   if (game.user.isGM) Array.from(game.cards).forEach(d => Array.from(d.cards).forEach(c => c.update({ "face": 0 })));
-  
+
   // activation of standart scene
   if (game.scenes.size < 1) {
     activateStandartScene();
@@ -592,7 +590,8 @@ function rollItemMacro(itemName) {
 
       // Modify dnDecriptor if target exists
       if (Array.from(game.user.targets).length > 0) {
-        var firstTarget = Array.from(game.user.targets)[0].actor;
+        var firstTarget = Array.from(game.user.targets).find(t => t.actor.type !== "vehicle")?.actor;
+        if (!firstTarget) firstTarget = Array.from(game.user.targets)[0].actor;
 
         switch (attackWith) {
           case "meleeWeapons":
@@ -649,7 +648,7 @@ function rollItemMacro(itemName) {
         item: item,
         attackType: attackType,
         isAttack: true,
-        amountBD : 0,
+        amountBD: 0,
         isFav: skillData.isFav,
         actorPic: actor.img,
         skillName: weaponData.attackWith,
@@ -730,7 +729,7 @@ function rollItemMacro(itemName) {
         powerName: item.name,
         powerModifier: powerModifier,
         isAttack: isAttack,
-        amountBD : 0,
+        amountBD: 0,
         skillName: skillName,
         skillBaseAttribute: game.i18n.localize("torgeternity.skills." + skillData.baseAttribute),
         skillAdds: skillData.adds,
@@ -746,6 +745,7 @@ function rollItemMacro(itemName) {
         applySize: applySize,
         attackOptions: true,
         rollTotal: 0,
+        chatNote: "",
       };
 
       let pdialog = new testDialog(test);
@@ -795,7 +795,7 @@ function rollSkillMacro(skillName, attributeName, isInteractionAttack) {
   const isAttributeTest = skillName === attributeName;
   let skill = null;
   if (!isAttributeTest) {
-    const skillNameKey = skillName; // skillName required to be internal value
+    const skillNameKey = skillName.toLowerCase(); // skillName required to be internal value
     // would be nice to use display value as an input instead but we can't translate from i18n to internal values
     skill = actor && Object.keys(actor.system.skills).includes(skillNameKey) ? actor.system.skills[skillNameKey] : null;
     if (!skill) return ui.notifications.warn(game.i18n.localize("torgeternity.notifications.noSkillNamed") + skillName);
@@ -810,7 +810,7 @@ function rollSkillMacro(skillName, attributeName, isInteractionAttack) {
   if (isAttributeTest) {
     // dummy skill object since there's no actual skill in this case
     skill = {
-      baseAttribute: attributeName,
+      baseAttribute: attributeNameKey,
       adds: 0,
       value: attribute,
       isFav: actor.system.attributes[attributeNameKey + "IsFav"],
@@ -828,7 +828,7 @@ function rollSkillMacro(skillName, attributeName, isInteractionAttack) {
       skillValue += skill.adds;
     } else if (actor.type == "threat") {
       const otherAttribute = actor.system.attributes[skill.baseAttribute];
-      skillValue = skill.value - otherAttribute + attribute;
+      skillValue = Math.max(skill.value, otherAttribute);
     }
   }
   // Trigger the skill roll

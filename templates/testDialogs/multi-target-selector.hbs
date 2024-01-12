@@ -4,15 +4,20 @@
     {{localize "torgeternity.sheetLabels.targets"}}:
     <input type="radio" id="targets1-radio" name="multiTarget" value="0" checked />
     <label for="1">1</label>
-    <input type="radio" id="targets2-radio" name="multiTarget" value="-2" />
+    <input type="radio" id="targets2-radio" name="multiTarget" value="-2" {{#ifequal test.targets.length "2" }} checked
+      {{/ifequal}} />
     <label for="2">2 (-2)</label>
-    <input type="radio" id="targets3-radio" name="multiTarget" value="-4" />
+    <input type="radio" id="targets3-radio" name="multiTarget" value="-4" {{#ifequal test.targets.length "3" }} checked
+      {{/ifequal}} />
     <label for="3">3 (-4)</label>
-    <input type="radio" id="targets4-radio" name="multiTarget" value="-6" />
+    <input type="radio" id="targets4-radio" name="multiTarget" value="-6" {{#ifequal test.targets.length "4" }} checked
+      {{/ifequal}} />
     <label for="4">4 (-6)</label>
-    <input type="radio" id="targets5-radio" name="multiTarget" value="-8" />
+    <input type="radio" id="targets5-radio" name="multiTarget" value="-8" {{#ifequal test.targets.length "5" }} checked
+      {{/ifequal}} />
     <label for="4">5 (-8)</label>
-    <input type="radio" id="targets6-radio" name="multiTarget" value="-10" />
+    <input type="radio" id="targets6-radio" name="multiTarget" value="-10" {{#ifequal test.targets.length "6" }} checked
+      {{/ifequal}} />
     <label for="4">6 (-10)</label>
   </span>
 </fieldset>
