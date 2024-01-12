@@ -520,19 +520,35 @@ export function renderSkillChat(test) {
     game.i18n.localize(dnLabel);
   if (testDifference < 0) {
     test.outcome = game.i18n.localize("torgeternity.chatText.check.result.failure");
-    test.outcomeColor = "color: red"
+    if (game.settings.get("torgeternity", "useColorBlindnessColors")) {
+      test.outcomeColor = "color: rgb(231,96,102)"  
+    } else {
+      test.outcomeColor = "color: red"
+    }
     test.soakWounds = 0;
   } else if (testDifference > 9) {
     test.outcome = game.i18n.localize("torgeternity.chatText.check.result.outstandingSuccess");
-    test.outcomeColor = "color: green"
+    if (game.settings.get("torgeternity", "useColorBlindnessColors")) {
+      test.outcomeColor = "color: rgb(44, 179, 44)"  
+    } else {
+      test.outcomeColor = "color: green"
+    }
     test.soakWounds = "all";
   } else if (testDifference > 4) {
     test.outcome = game.i18n.localize("torgeternity.chatText.check.result.goodSuccess");
-    test.outcomeColor = "color: green"
+    if (game.settings.get("torgeternity", "useColorBlindnessColors")) {
+      test.outcomeColor = "color: rgb(44, 179, 44)"  
+    } else {
+      test.outcomeColor = "color: green"
+    }
     test.soakWounds = 2;
   } else {
     test.outcome = game.i18n.localize("torgeternity.chatText.check.result.standartSuccess");
-    test.outcomeColor = "color: green"
+    if (game.settings.get("torgeternity", "useColorBlindnessColors")) {
+      test.outcomeColor = "color: rgb(44, 179, 44)"  
+    } else {
+      test.outcomeColor = "color: green"
+    }
     test.soakWounds = 1;
   }
 
