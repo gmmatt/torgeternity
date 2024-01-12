@@ -32,6 +32,7 @@
 
 /*Defining colors as variables, using it in an animation-keyframe*/
 :root {
+  --table2nd: #f6e9d7; /*standard-backgroundcolor for tables in every 2nd row, others are transparent*/
   --torgblue: rgb(65, 90, 155);
   --torgred: rgb(150, 0, 0);
   --sidebar-width: 380px; /*formally this was defined in #sidebar{width:380px}, but we need to alter the foundry style.css variable to affect on things like the new "to bottom" Button*/
@@ -1799,8 +1800,14 @@ div.readme a.compendium {
   margin: 5px;
   color: black;
   background: url("../images/bgparch.webp");
-  background-color: rgba(255, 255, 255, 0.575);
+  background-color: rgba(255, 247, 247, 0.25);
 }
+
+/*
+testing, just testing
+.dice-roll {
+  display:none;
+}*/
 
 .chat-message .torgeternity-message-header {
    display: grid;
@@ -1903,8 +1910,31 @@ p.skill-chat-title.skilled {
   padding-bottom: 5px;
   font-family: "Palatino Linotype";
   margin-bottom: 5px;
+  table-layout: fixed;
+  background-color: rgba(255, 247, 247, 0.25);
 }
 
+.chat-message .skill-roll-table tr:nth-child(odd) {
+  background-color: transparent;
+}
+
+.chat-message .skill-roll-table tr:nth-child(even) {
+  background-color: var(--table2nd);
+}
+
+.chat-message .skill-roll-table td {
+  padding-left: 3px;
+  border: solid black 1px;
+}
+
+.chat-message .skill-roll-table td:nth-child(odd) {
+  width: 40%;
+}
+
+.chat-message .skill-roll-table td:nth-child(even) {
+  width: 60%;
+}
+/*
 .chat-message .skill-roll-table-1 {
   width: 40%;
   font-family: "Palatino Linotype";
@@ -1918,6 +1948,7 @@ p.skill-chat-title.skilled {
   font-family: "Palatino Linotype";
   border: 1px solid black;
 }
+*/
 
 .chat-message .skill-roll-menu {
   font-family: "Palatino Linotype";
