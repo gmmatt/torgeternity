@@ -1803,8 +1803,7 @@ div.readme a.compendium {
   background-color: rgba(255, 247, 247, 0.25);
 }
 
-/*
-testing, just testing
+/*testing, just testing
 .dice-roll {
   display:none;
 }*/
@@ -1896,6 +1895,7 @@ p.skill-chat-title.skilled {
   /*font-weight: bold; no longer needed as Alaska is standard bold*/
   padding: 3px 0px 0px 0px;
   margin: 0px;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000, 0px 0px 15px black;
 }
 
 .chat-message .skill-roll-action-label {

@@ -520,11 +520,12 @@ export function renderSkillChat(test) {
     game.i18n.localize(dnLabel);
   if (testDifference < 0) {
     test.outcome = game.i18n.localize("torgeternity.chatText.check.result.failure");
-    if (game.settings.get("torgeternity", "useColorBlindnessColors")) {
+    test.outcomeColor = "color: red"
+    /*if (game.settings.get("torgeternity", "useColorBlindnessColors")) {
       test.outcomeColor = "color: rgb(231,96,102)"  
     } else {
       test.outcomeColor = "color: red"
-    }
+    }*/
     test.soakWounds = 0;
   } else if (testDifference > 9) {
     test.outcome = game.i18n.localize("torgeternity.chatText.check.result.outstandingSuccess");
