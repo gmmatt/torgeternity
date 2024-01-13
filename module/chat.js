@@ -4,31 +4,35 @@ import { torgDamage } from "./torgchecks.js";
 import { applyDamages } from "./torgchecks.js";
 import { soakDamages } from "./torgchecks.js";
 import { testDialog } from "/systems/torgeternity/module/test-dialog.js";
-import { skillUpdate } from "/systems/torgeternity/module/skill-update.js";
-import { attackUpdate } from "/systems/torgeternity/module/attack-update.js";
-import { interactionUpdate } from "/systems/torgeternity/module/interaction-update.js";
 import { testUpdate } from "/systems/torgeternity/module/test-update.js";
 
 export function addChatListeners(html) {
-  html.on("click", "a.roll-fav", onFavored);
-  html.on("click", "a.roll-possibility", onPossibility);
-  html.on("click", "a.roll-up", onUp);
-  html.on("click", "a.roll-hero", onHero);
-  html.on("click", "a.roll-drama", onDrama);
-  html.on("click", "a.add-plus3", onPlus3);
-  html.on("click", "a.add-bd", onBd);
-  html.on("click", "a.modifier-label", onModifier);
-  html.on("click", "a.applyDam", applyDam);
-  html.on("contextmenu", "a.applyDam", adjustDam);
-  html.on("click", "a.soakDam", soakDam);
+  html.on('click', 'a.roll-fav', onFavored);
+  html.on('click', 'a.roll-possibility', onPossibility);
+  html.on('click', 'a.roll-up', onUp);
+  html.on('click', 'a.roll-hero', onHero);
+  html.on('click', 'a.roll-drama', onDrama);
+  html.on('click', 'a.add-plus3', onPlus3);
+  html.on('click', 'a.add-bd', onBd);
+  html.on('click', 'a.modifier-label', onModifier);
+  html.on("click", 'a.applyDam', applyDam);
+  html.on("contextmenu", 'a.applyDam', adjustDam);
+  html.on("click", 'a.soakDam', soakDam);
+  html.on("click", 'a.applyStymied', applyStym);
+  html.on("click", 'a.applyVulnerable', applyVul)
+}
+
+async function parentDeleteByTime(oldMsg) {
+  const parentMessagesIds = [];
+  game.messages.filter(id => Math.abs(id.timestamp - oldMsg.timestamp) < 500).forEach(m => parentMessagesIds.push(m.id));
+  console.log(parentMessagesIds);
+  parentMessagesIds.forEach(id => game.messages.get(id).delete());
 }
 
 function onFavored(event) {
   const parentMessageId = event.currentTarget.closest(".chat-message").dataset.messageId;
   var parentMessage = game.messages.find(({ id }) => id === parentMessageId);
-  if (!(parentMessage.user.id === game.user.id) && !game.user.isGM) {
-    return;
-  }
+  if (!(parentMessage.user.id === game.user.id) && !game.user.isGM) { return };
   var test = parentMessage.getFlag("torgeternity", "test");
   test.parentId = parentMessageId;
   parentMessage.setFlag("torgeternity", "test");
@@ -36,7 +40,7 @@ function onFavored(event) {
   //reRoll because favored
   test.isFavStyle = "pointer-events:none;color:gray;display:none";
 
-  var diceroll = new Roll("1d20x10x20").evaluate({ async: false });
+  var diceroll = new Roll('1d20x10x20').evaluate({ async: false });
   test.diceroll = diceroll;
   test.rollTotal = Math.max(test.diceroll.total, 1.1);
   test.isFav = false;
@@ -44,6 +48,7 @@ function onFavored(event) {
   test.unskilledLabel = "display:none";
 
   renderSkillChat(test);
+  parentDeleteByTime(parentMessage);
 }
 
 async function onPossibility(event) {
@@ -122,7 +127,7 @@ async function onPossibility(event) {
     test.possibilityStyle = "pointer-events:none;color:gray";
   }
 
-  var diceroll = new Roll("1d20x10x20").evaluate({ async: false });
+  var diceroll = new Roll('1d20x10x20').evaluate({ async: false });
   if (test.disfavored) {
     test.possibilityTotal = 0.1;
     test.disfavored = false;
@@ -137,6 +142,7 @@ async function onPossibility(event) {
   test.chatNote += game.i18n.localize("torgeternity.sheetLabels.possSpent");
 
   renderSkillChat(test);
+  parentDeleteByTime(parentMessage);
 }
 
 function onUp(event) {
@@ -146,12 +152,11 @@ function onUp(event) {
     return;
   }
   var test = parentMessage.getFlag("torgeternity", "test");
-  test.parentId = parentMessageId;
   parentMessage.setFlag("torgeternity", "test");
   test.isFavStyle = "pointer-events:none;color:gray;display:none";
 
   //Roll for Up
-  var diceroll = new Roll("1d20x10x20").evaluate({ async: false });
+  var diceroll = new Roll('1d20x10x20').evaluate({ async: false });
   if (test.disfavored) {
     test.upTotal = 0.1;
     test.disfavored = false;
@@ -165,6 +170,7 @@ function onUp(event) {
   test.unskilledLabel = "display:none";
 
   renderSkillChat(test);
+  parentDeleteByTime(parentMessage);
 }
 
 function onHero(event) {
@@ -179,7 +185,7 @@ function onHero(event) {
   test.isFavStyle = "pointer-events:none;color:gray;display:none";
 
   //Roll for Possibility
-  var diceroll = new Roll("1d20x10x20").evaluate({ async: false });
+  var diceroll = new Roll('1d20x10x20').evaluate({ async: false });
   if (test.disfavored) {
     test.heroTotal = 0.1;
     test.disfavored = false;
@@ -195,6 +201,7 @@ function onHero(event) {
   test.unskilledLabel = "display:none";
 
   renderSkillChat(test);
+  parentDeleteByTime(parentMessage);
 }
 
 function onDrama(event) {
@@ -204,12 +211,11 @@ function onDrama(event) {
     return;
   }
   var test = parentMessage.getFlag("torgeternity", "test");
-  test.parentId = parentMessageId;
   parentMessage.setFlag("torgeternity", "test");
   test.isFavStyle = "pointer-events:none;color:gray;display:none";
 
   //Increase cards played by 1
-  var diceroll = new Roll("1d20x10x20").evaluate({ async: false });
+  var diceroll = new Roll('1d20x10x20').evaluate({ async: false });
   if (test.disfavored) {
     test.dramaTotal = 0.1;
     test.disfavored = false;
@@ -225,6 +231,7 @@ function onDrama(event) {
   test.unskilledLabel = "display:none";
 
   renderSkillChat(test);
+  parentDeleteByTime(parentMessage);
 }
 
 function onPlus3(event) {
@@ -234,7 +241,6 @@ function onPlus3(event) {
     return;
   }
   var test = parentMessage.getFlag("torgeternity", "test");
-  test.parentId = parentMessageId;
   parentMessage.setFlag("torgeternity", "test");
   test.isFavStyle = "pointer-events:none;color:gray;display:none";
 
@@ -247,6 +253,7 @@ function onPlus3(event) {
   test.unskilledLabel = "display:none";
 
   renderSkillChat(test);
+  parentDeleteByTime(parentMessage);
 }
 
 function onBd(event) {
@@ -254,10 +261,20 @@ function onBd(event) {
   var parentMessage = game.messages.find(({ id }) => id === parentMessageId);
   if (!(parentMessage.user.id === game.user.id) && !game.user.isGM) {
     return;
-  }
+  };
+  var currentTarget = parentMessage.getFlag("torgeternity", "currentTarget");
   var test = parentMessage.getFlag("torgeternity", "test");
-  test.parentId = parentMessageId;
+  test.targetAll = [currentTarget];
+  test.sizeModifierAll = [test.sizeModifier];
+  test.vulnerableModifierAll = [test.vulnerableModifier];
+  test.possibilityStyle = "display:none";
+  test.upStyle = "display:none";
+  test.dramaStyle = "display:none";
+  test.heroStyle = "display:none";
+  test.isFavStyle = "display:none";
+  test.plus3Style = "display:none";
   parentMessage.setFlag("torgeternity", "test");
+  parentMessage.setFlag("torgeternity", "currentTarget");
   test.isFavStyle = "pointer-events:none;color:gray;display:none";
 
   var finalValue = torgBD(test.trademark);
@@ -268,16 +285,16 @@ function onBd(event) {
 
   test.amountBD += 1;
   if (test.amountBD === 1) {
-    test.chatTitle += `+${test.amountBD} ` + game.i18n.localize("torgeternity.chatText.bonusDice");
+    test.chatTitle += ` +${test.amountBD}` + game.i18n.localize("torgeternity.chatText.bonusDice");
   } else if (test.amountBD > 1) {
     test.chatTitle = test.chatTitle.replace((test.amountBD - 1).toString(), test.amountBD.toString());
   } else {
     ui.notifications.info(game.i18n.localize("torgeternity.notifications.failureBDResolution"));
   }
-
   test.unskilledLabel = "display:none";
 
   renderSkillChat(test);
+  game.messages.get(parentMessageId).delete();
 }
 
 function onModifier(event) {
@@ -297,16 +314,27 @@ async function applyDam(event) {
   var parentMessage = game.messages.find(({ id }) => id === parentMessageId);
   //if (!game.user.isGM) {return};
   var test = parentMessage.getFlag("torgeternity", "test");
+  let targetid = test.target.id;
+  let targetuuid = test.target.uuid;
+  console.log(targetuuid);
   let dama = test.damage;
   let toug = test.targetAdjustedToughness;
-  applyDamages(torgDamage(dama, toug)); //Need to keep target from test
+  applyDamages(torgDamage(dama, toug), targetuuid); //Need to keep target from test
 }
 
 async function soakDam(event) {
   const parentMessageId = event.currentTarget.closest(".chat-message").dataset.messageId;
   var parentMessage = game.messages.find(({ id }) => id === parentMessageId);
-  //if (!(parentMessage.user.id === game.user.id) && !game.user.isGM) {return};
-  var soaker = game.user.character ?? Array.from(game.user.targets)[0].actor;
+  var test = parentMessage.getFlag("torgeternity", "test");
+  let targetid = test.target.id;
+  let targetuuid = test.target.uuid;
+  console.log(game.user?.character?.id);
+  console.log(targetid);
+  console.log(targetuuid);
+  console.log(test);
+
+  if (!(targetid === game.user?.character?.id) && !game.user.isGM) { return };
+  var soaker = fromUuidSync(targetuuid).actor;//game.actors.get(targetid) ?? game.user.character) ?? Array.from(game.user.targets)[0].actor;
   /////
   var possPool = soaker.system.other.possibilities;
   // 0 => if GM ask for confirm, or return message "no poss"
@@ -342,6 +370,8 @@ async function adjustDam(event) {
   var parentMessage = game.messages.find(({ id }) => id === parentMessageId);
   //if (!game.user.isGM) {return};
   var test = parentMessage.getFlag("torgeternity", "test");
+  let targetid = test.target.id;
+  let targetuuid = test.target.uuid;
   let dama = test.damage;
   let toug = test.targetAdjustedToughness;
   console.log(torgDamage(dama, toug));
@@ -371,10 +401,51 @@ async function adjustDam(event) {
           newDamages.wounds = newWounds;
           newDamages.shocks = newShocks;
           console.log(newDamages);
-          applyDamages(newDamages);
+          applyDamages(newDamages, targetuuid);
         },
       },
     },
     default: "go",
   }).render(true);
+}
+
+async function applyStym(event) {
+  const parentMessageId = event.currentTarget.closest(".chat-message").dataset.messageId;
+  var parentMessage = game.messages.find(({ id }) => id === parentMessageId);
+  var test = parentMessage.getFlag("torgeternity", "test");
+  let targetuuid = test.target.uuid;
+  let targetToken = canvas.tokens.placeables.find(tok => tok.document.uuid.includes(targetuuid));
+  //apply Stymied, or veryStymied
+  var eff;
+  var oldEff;
+  if (targetToken.actor.statuses.find(d => d === 'veryStymied')) {
+  } else if (targetToken.actor.statuses.find(d => d === 'stymied')) {
+    oldEff = CONFIG.statusEffects.find(e => e.id === "stymied");
+    eff = CONFIG.statusEffects.find(e => e.id === "veryStymied");
+  } else {
+    eff = CONFIG.statusEffects.find(e => e.id === "stymied");
+  };
+  if (eff) await targetToken.toggleEffect(eff, { "active": true });
+  if (oldEff) await targetToken.toggleEffect(oldEff, { "active": false });
+}
+
+async function applyVul(event) {
+  const parentMessageId = event.currentTarget.closest(".chat-message").dataset.messageId;
+  var parentMessage = game.messages.find(({ id }) => id === parentMessageId);
+  var test = parentMessage.getFlag("torgeternity", "test");
+  let targetid = test.target.id;
+  let targetuuid = test.target.uuid;
+  let targetToken = canvas.tokens.placeables.find(tok => targetuuid.includes(tok.document.uuid));
+  //apply Vulnerable, or veryVulnerable
+  var eff;
+  var oldEff;
+  if (targetToken.actor.statuses.find(d => d === 'veryVulnerable')) {
+  } else if (targetToken.actor.statuses.find(d => d === 'vulnerable')) {
+    oldEff = CONFIG.statusEffects.find(e => e.id === "vulnerable");
+    eff = CONFIG.statusEffects.find(e => e.id === "veryVulnerable");
+  } else {
+    eff = CONFIG.statusEffects.find(e => e.id === "vulnerable");
+  };
+  if (eff) await targetToken.toggleEffect(eff, { "active": true });
+  if (oldEff) await targetToken.toggleEffect(oldEff, { "active": false });
 }
