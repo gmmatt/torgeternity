@@ -6,7 +6,7 @@
 <!--<div style="background-color: rgba(255,247,247,0.25);margin: 2rem;">-->
   <div class="chat-message torgeternity-message-header">
       <img class="message-header torgeternity-actor-icon" src="{{actorPic}}" title="{{name}}" />
-      {{log this}}
+      {{log data}}
 
       <div  class="message-header torgeternity-skill-description">
           {{#if unskilledTest}}
@@ -16,10 +16,6 @@
           <p class="skill-chat-title skilled">{{chatTitle}}</p>
           {{/if}}
       </div>
-      
-      {{#if target.present}}
-        <img class="message-header torgeternity-actor-icon" src="{{target.targetPic}}" title="{{target.targetName}}" />
-      {{/if}}
   </div>
   
   <div class="chat-text" style="padding:0px">
@@ -43,13 +39,6 @@
         style="{{applyDamLabel}}"
         title="{{localize 'torgeternity.sheetLabels.soakDamageTooltip'}}"
       >{{localize "torgeternity.sheetLabels.soakDamage"}}</a>
-      <a class="applyStymied" style="{{applyDebuffLabel}}"
-        title="{{localize 'torgeternity.sheetLabels.applyStymiedTooltip'}}">{{localize
-        'torgeternity.sheetLabels.applyStymied'}}</a>
-      <span style="{{applyDebuffLabel}}">&nbsp;&bull;&nbsp;</span>
-      <a class="applyVulnerable" style="{{applyDebuffLabel}}"
-        title="{{localize 'torgeternity.sheetLabels.applyVulnerableTooltip'}}">{{localize
-        'torgeternity.sheetLabels.applyVulnerable'}}</a>
     </p>
     <!--{{/if}}{{/if}}-->
     <details class="chat-message chatCardDetailsELement"><summary
@@ -144,21 +133,178 @@
       </div>-->
     </details>
     <div class="skill-roll-menu">
-      <a class="roll-fav" style="{{isFavStyle}}">{{localize "torgeternity.chatText.favored"}}</a>
-      <span style="{{isFavStyle}}">&bull;</span>
-      <a class="roll-possibility" style="{{possibilityStyle}}">{{localize "torgeternity.chatText.possibility"}}</a>
-      <span style="{{possibilityStyle}}">&bull;</span>
-      <a class="roll-up" style="{{upStyle}}">{{localize "torgeternity.chatText.up"}}</a>
-      <span style="{{upStyle}}">&bull;</span>
-      <a class="roll-hero" style="{{heroStyle}}">{{localize "torgeternity.chatText.hero"}}</a>
-      <span style="{{heroStyle}}">&bull;</span>
-      <a class="roll-drama" style="{{dramaStyle}}">{{localize "torgeternity.chatText.drama"}}</a>
-      <span style="{{dramaStyle}}">&bull;</span>
-      <a class="add-plus3" style="{{plus3Style}}">{{localize "torgeternity.chatText.bonusCard"}}</a>
-      <span style="{{plus3Style}}">&bull;</span>
-      <a class="add-bd" style="{{bdStyle}}">{{localize "torgeternity.chatText.bonusDice"}}</a>
+      <a class="roll-fav" style="{{isFavStyle}}">
+        {{localize "torgeternity.chatText.favored"}}
+      </a>
+      <span style="{{isFavStyle}}">&nbsp;&bull;&nbsp;</span>
+      <a
+        class="roll-possibility"
+        style="{{possibilityStyle}}"
+        data-actor="{{actor}}"
+        data-actor-pic="{{actorPic}}"
+        data-actor-type="{{actorType}}"
+        data-skill-name="{{skillName}}"
+        data-skill-value="{{skillValue}}"
+        data-test-type="{{testType}}"
+        data-unskilled-use="{{unskilledUse}}"
+        data-skill-adds="{{skillAdds}}"
+        data-skill-base-attribute="{{skillBaseAttribute}}"
+        data-roll-total="{{rollTotal}}"
+        data-wound-modifier="{{woundModifier}}"
+        data-size-modifier="{{sizeModifier}}"
+        data-vulnerable-modifier="{{vulnerableModifier}}"
+        data-stymied-modifier="{{stymiedModifier}}"
+        data-possibility-total="{{possibilityTotal}}"
+        data-up-total="{{upTotal}}"
+        data-hero-total="{{heroTotal}}"
+        data-drama-total="{{dramaTotal}}"
+        data-cards-played="{{cardsPlayed}}"
+        data-damage="{{damage}}"
+        data-power-attack="{{powerAttack}}"
+      >
+        {{localize "torgeternity.chatText.possibility"}}
+      </a>
+      &nbsp;&bull;&nbsp;
+      <a
+        class="roll-up"
+        style="{{upStyle}}"
+        data-actor="{{actor}}"
+        data-actor-pic="{{actorPic}}"
+        data-actor-type="{{actorType}}"
+        data-skill-name="{{skillName}}"
+        data-skill-value="{{skillValue}}"
+        data-test-type="{{testType}}"
+        data-unskilled-use="{{unskilledUse}}"
+        data-skill-adds="{{skillAdds}}"
+        data-skill-base-attribute="{{skillBaseAttribute}}"
+        data-roll-total="{{rollTotal}}"
+        data-wound-modifier="{{woundModifier}}"
+        data-stymied-modifier="{{stymiedModifier}}"
+        data-size-modifier="{{sizeModifier}}"
+        data-vulnerable-modifier="{{vulnerableModifier}}"
+        data-possibility-total="{{possibilityTotal}}"
+        data-up-total="{{upTotal}}"
+        data-hero-total="{{heroTotal}}"
+        data-drama-total="{{dramaTotal}}"
+        data-cards-played="{{cardsPlayed}}"
+        data-damage="{{damage}}"
+        data-power-attack="{{powerAttack}}"
+      >
+        {{localize "torgeternity.chatText.up"}}
+      </a>
+      <span style="{{heroStyle}}">&nbsp;&bull;&nbsp;</span>
+      <a
+        class="roll-hero"
+        style="{{heroStyle}}"
+        data-actor="{{actor}}"
+        data-actor-pic="{{actorPic}}"
+        data-actor-type="{{actorType}}"
+        data-skill-name="{{skillName}}"
+        data-skill-value="{{skillValue}}"
+        data-test-type="{{testType}}"
+        data-unskilled-use="{{unskilledUse}}"
+        data-skill-adds="{{skillAdds}}"
+        data-skill-base-attribute="{{skillBaseAttribute}}"
+        data-roll-total="{{rollTotal}}"
+        data-wound-modifier="{{woundModifier}}"
+        data-stymied-modifier="{{stymiedModifier}}"
+        data-size-modifier="{{sizeModifier}}"
+        data-vulnerable-modifier="{{vulnerableModifier}}"
+        data-possibility-total="{{possibilityTotal}}"
+        data-up-total="{{upTotal}}"
+        data-hero-total="{{heroTotal}}"
+        data-drama-total="{{dramaTotal}}"
+        data-cards-played="{{cardsPlayed}}"
+        data-damage="{{damage}}"
+        data-power-attack="{{powerAttack}}"
+      >
+        {{localize "torgeternity.chatText.hero"}}
+      </a>
+      <span style="{{heroStyle}}">&nbsp;&bull;&nbsp;</span>
+      <a
+        class="roll-drama"
+        style="{{dramaStyle}}"
+        data-actor="{{actor}}"
+        data-actor-pic="{{actorPic}}"
+        data-actor-type="{{actorType}}"
+        data-skill-name="{{skillName}}"
+        data-skill-value="{{skillValue}}"
+        data-test-type="{{testType}}"
+        data-unskilled-use="{{unskilledUse}}"
+        data-skill-adds="{{skillAdds}}"
+        data-skill-base-attribute="{{skillBaseAttribute}}"
+        data-roll-total="{{rollTotal}}"
+        data-wound-modifier="{{woundModifier}}"
+        data-stymied-modifier="{{stymiedModifier}}"
+        data-size-modifier="{{sizeModifier}}"
+        data-vulnerable-modifier="{{vulnerableModifier}}"
+        data-possibility-total="{{possibilityTotal}}"
+        data-up-total="{{upTotal}}"
+        data-hero-total="{{heroTotal}}"
+        data-drama-total="{{dramaTotal}}"
+        data-cards-played="{{cardsPlayed}}"
+        data-damage="{{damage}}"
+        data-power-attack="{{powerAttack}}"
+      >
+        {{localize "torgeternity.chatText.drama"}}
+      </a>
+      <span style="{{dramaStyle}}">&nbsp;&bull;&nbsp;</span>
+      <a
+        class="add-plus3"
+        style="{{plus3Style}}"
+        data-actor="{{actor}}"
+        data-actor-pic="{{actorPic}}"
+        data-actor-type="{{actorType}}"
+        data-skill-name="{{skillName}}"
+        data-skill-value="{{skillValue}}"
+        data-test-type="{{testType}}"
+        data-unskilled-use="{{unskilledUse}}"
+        data-skill-adds="{{skillAdds}}"
+        data-skill-base-attribute="{{skillBaseAttribute}}"
+        data-roll-total="{{rollTotal}}"
+        data-wound-modifier="{{woundModifier}}"
+        data-stymied-modifier="{{stymiedModifier}}"
+        data-size-modifier="{{sizeModifier}}"
+        data-vulnerable-modifier="{{vulnerableModifier}}"
+        data-possibility-total="{{possibilityTotal}}"
+        data-up-total="{{upTotal}}"
+        data-hero-total="{{heroTotal}}"
+        data-drama-total="{{dramaTotal}}"
+        data-cards-played="{{cardsPlayed}}"
+        data-damage="{{damage}}"
+        data-power-attack="{{powerAttack}}"
+      >
+        {{localize "torgeternity.chatText.bonusCard"}}
+      </a>
+      <span style="{{bdStyle}}">&nbsp;&bull;&nbsp;</span>
+      <a
+        class="add-bd"
+        style="{{bdStyle}}"
+        data-actor="{{actor}}"
+        data-actor-pic="{{actorPic}}"
+        data-actor-type="{{actorType}}"
+        data-skill-name="{{skillName}}"
+        data-skill-value="{{skillValue}}"
+        data-test-type="{{testType}}"
+        data-unskilled-use="{{unskilledUse}}"
+        data-skill-adds="{{skillAdds}}"
+        data-skill-base-attribute="{{skillBaseAttribute}}"
+        data-roll-total="{{rollTotal}}"
+        data-wound-modifier="{{woundModifier}}"
+        data-stymied-modifier="{{stymiedModifier}}"
+        data-size-modifier="{{sizeModifier}}"
+        data-vulnerable-modifier="{{vulnerableModifier}}"
+        data-possibility-total="{{possibilityTotal}}"
+        data-up-total="{{upTotal}}"
+        data-hero-total="{{heroTotal}}"
+        data-drama-total="{{dramaTotal}}"
+        data-cards-played="{{cardsPlayed}}"
+        data-damage="{{damage}}"
+        data-power-attack="{{powerAttack}}"
+      >
+        {{localize "torgeternity.chatText.bonusDice"}}
+      </a>
     </div>
   </div>
 <!--</div>-->
 </div>
-

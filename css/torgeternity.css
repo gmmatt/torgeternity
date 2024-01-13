@@ -1952,7 +1952,7 @@ p.skill-chat-title.skilled {
 
 .chat-message .skill-roll-menu {
   font-family: "Palatino Linotype";
-  font-size: 10px;
+  font-size: 11px;
   text-align: center;
   margin: 7px 0;
 }
@@ -1967,8 +1967,6 @@ p.skill-chat-title.skilled {
 
 .applyDam,
 .soakDam,
-.applyStymied,
-.applyVulnerable,
 .chat-message .roll-fav,
 .chat-message .roll-possibility,
 .chat-message .roll-up,
@@ -1979,7 +1977,7 @@ p.skill-chat-title.skilled {
   border: black 1px solid;
   border-radius: 1rem;
   text-align: center;
-  padding: 1px;
+  padding: 3px;
   background-color: rgba(40, 1, 1, 0.1);
   color: black;
   font-weight: bold;

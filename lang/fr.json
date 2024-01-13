@@ -98,7 +98,6 @@
       "favored": "Favorisé",
       "hero": "Héros",
       "heroCard": "Carte Héros",
-      "hideDetails": "Cacher détails",
       "modifiers": "Modificateurs",
       "notes": "Notes",
       "passesCard1": "Passe",
@@ -106,8 +105,6 @@
       "playsCard": "Jouer",
       "possibility": "Possibilité",
       "possibleDisconnect": "Déconnexion possible",
-      "rolled": "jet",
-      "showDetails": "Afficher détails",
       "skillTestLabel": "Valeur de compétence",
       "stunt": "Test de conduite sportive",
       "test": "Test",
@@ -524,10 +521,6 @@
       "welcome": {
         "hint": "Si sélectionné, le message de bienvenue apparaîtra au chargement",
         "name": "Afficher le message de bienvenue"
-      },
-      "showCheckDetails": {
-        "hint": "Si coché, les détails des tests seront affichés par défaut.",
-        "name": "Montrer les détails des tests"
       }
     },
     "sheetLabels": {
