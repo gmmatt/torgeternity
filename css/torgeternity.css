@@ -1813,6 +1813,7 @@ div.readme a.compendium {
    grid-template-columns: 1fr 3fr;
    grid-template-rows: 2fr;
    border: none;
+   background: transparent;   
 }
 
 .chat-message .message-header .flavor-text {
@@ -1985,6 +1986,10 @@ p.skill-chat-title.skilled {
 
 .chat-message .card-draw .card-name {
   line-height: 20px;
+}
+
+.chat-message details.chatCardDetailsELement {
+  background: transparent;
 }
 
 .chat-message details.chatCardDetailsELement[open] summary::before {
