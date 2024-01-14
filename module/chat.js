@@ -3,6 +3,8 @@ import { torgBD } from "./torgchecks.js";
 import { torgDamage } from "./torgchecks.js";
 import { applyDamages } from "./torgchecks.js";
 import { soakDamages } from "./torgchecks.js";
+import { applyStymiedState } from "./torgchecks.js";
+import { applyVulnerableState } from "./torgchecks.js";
 import { testDialog } from "/systems/torgeternity/module/test-dialog.js";
 import { testUpdate } from "/systems/torgeternity/module/test-update.js";
 
@@ -315,7 +317,7 @@ async function applyDam(event) {
   //if (!game.user.isGM) {return};
   var test = parentMessage.getFlag("torgeternity", "test");
   let targetid = test.target.id;
-  let targetuuid = test.target.uuid;
+  let targetuuid = parentMessage.getFlag("torgeternity", "currentTarget").uuid;
   console.log(targetuuid);
   let dama = test.damage;
   let toug = test.targetAdjustedToughness;
@@ -327,7 +329,7 @@ async function soakDam(event) {
   var parentMessage = game.messages.find(({ id }) => id === parentMessageId);
   var test = parentMessage.getFlag("torgeternity", "test");
   let targetid = test.target.id;
-  let targetuuid = test.target.uuid;
+  let targetuuid = parentMessage.getFlag("torgeternity", "currentTarget").uuid;
   console.log(game.user?.character?.id);
   console.log(targetid);
   console.log(targetuuid);
@@ -371,7 +373,7 @@ async function adjustDam(event) {
   //if (!game.user.isGM) {return};
   var test = parentMessage.getFlag("torgeternity", "test");
   let targetid = test.target.id;
-  let targetuuid = test.target.uuid;
+  let targetuuid = parentMessage.getFlag("torgeternity", "currentTarget").uuid;
   let dama = test.damage;
   let toug = test.targetAdjustedToughness;
   console.log(torgDamage(dama, toug));
@@ -413,20 +415,8 @@ async function applyStym(event) {
   const parentMessageId = event.currentTarget.closest(".chat-message").dataset.messageId;
   var parentMessage = game.messages.find(({ id }) => id === parentMessageId);
   var test = parentMessage.getFlag("torgeternity", "test");
-  let targetuuid = test.target.uuid;
-  let targetToken = canvas.tokens.placeables.find(tok => tok.document.uuid.includes(targetuuid));
-  //apply Stymied, or veryStymied
-  var eff;
-  var oldEff;
-  if (targetToken.actor.statuses.find(d => d === 'veryStymied')) {
-  } else if (targetToken.actor.statuses.find(d => d === 'stymied')) {
-    oldEff = CONFIG.statusEffects.find(e => e.id === "stymied");
-    eff = CONFIG.statusEffects.find(e => e.id === "veryStymied");
-  } else {
-    eff = CONFIG.statusEffects.find(e => e.id === "stymied");
-  };
-  if (eff) await targetToken.toggleEffect(eff, { "active": true });
-  if (oldEff) await targetToken.toggleEffect(oldEff, { "active": false });
+  let targetuuid = parentMessage.getFlag("torgeternity", "currentTarget").uuid;
+  await applyStymiedState(targetuuid);
 }
 
 async function applyVul(event) {
@@ -434,18 +424,6 @@ async function applyVul(event) {
   var parentMessage = game.messages.find(({ id }) => id === parentMessageId);
   var test = parentMessage.getFlag("torgeternity", "test");
   let targetid = test.target.id;
-  let targetuuid = test.target.uuid;
-  let targetToken = canvas.tokens.placeables.find(tok => targetuuid.includes(tok.document.uuid));
-  //apply Vulnerable, or veryVulnerable
-  var eff;
-  var oldEff;
-  if (targetToken.actor.statuses.find(d => d === 'veryVulnerable')) {
-  } else if (targetToken.actor.statuses.find(d => d === 'vulnerable')) {
-    oldEff = CONFIG.statusEffects.find(e => e.id === "vulnerable");
-    eff = CONFIG.statusEffects.find(e => e.id === "veryVulnerable");
-  } else {
-    eff = CONFIG.statusEffects.find(e => e.id === "vulnerable");
-  };
-  if (eff) await targetToken.toggleEffect(eff, { "active": true });
-  if (oldEff) await targetToken.toggleEffect(oldEff, { "active": false });
+  let targetuuid = parentMessage.getFlag("torgeternity", "currentTarget").uuid;
+  await applyVulnerableState(targetuuid);
 }

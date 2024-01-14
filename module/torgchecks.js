@@ -5,6 +5,7 @@ import { checkUnskilled } from "/systems/torgeternity/module/sheets/torgeternity
 export async function renderSkillChat(test) {
   if (test?.targetAll.length != 0) { }
   else test.targetAll = [test.target];
+  //disable DSN (if used) for 'every' message (want to show only one dice despite many targets)
   try { game.dice3d.messageHookDisabled = true; }
   catch (e) { };
   test.applyDebuffLabel = "display:none";
@@ -265,8 +266,6 @@ export async function renderSkillChat(test) {
     }
 
     // Generate roll, if needed
-    console.log(test.rollTotal);
-    console.log(test.diceroll?.total);
     if ((test.rollTotal === 0) & (test.previousBonus === false)) {
       // Generate dice roll
       var dice = "1d20x10x20";
@@ -282,9 +281,9 @@ export async function renderSkillChat(test) {
       if (!test.isFav) {
         test.isFavStyle = "pointer-events:none;color:gray;display:none";
       }
-      if (test.disfavored) {
+      if (test.disfavored) {//even if explosion occured, we keep first die
         test.rollTotal = test.diceroll.dice[0].results[0].result;
-        if (test.diceroll.dice[0].results.length > 1) {
+        if (test.diceroll.dice[0].results.length > 1) {//=> explosion occured, so remove disfavored
           test.disfavored = false;
           test.chatNote += game.i18n.localize("torgeternity.sheetLabels.explosionCancelled");
         }
@@ -915,19 +914,24 @@ export async function renderSkillChat(test) {
     const messageData = { ...chatData, flags: { torgeternity: { test, currentTarget } } };
 
     await templatePromise.then(content => {
-      if (test.diceroll != null) {
-        messageData.flavor = content;
-        test.diceroll.toMessage(messageData);
-        //if (test.parentId) {game.messages.get(test.parentId).delete()};
-      } else {
-        messageData.content = content;
-        ChatMessage.create(messageData);
-        //if (test.parentId) {game.messages.get(test.parentId).delete()};
-      };
+      //the 'toMessage(..)' shows the dice formula and result
+      //to see them, just remove comments between there
+      //
+      /*if (test.diceroll != null) {                //
+        messageData.flavor = content;               //
+        test.diceroll.toMessage(messageData);       //
+      } else {*/                                    //
+      messageData.content = content;                //
+      ChatMessage.create(messageData);              //
+      /*};*/                                        //and there
     });
   };
+
+  //reset tokens targeted, they are printed in the chatCard
   await game.user.updateTokenTargets();
   await game.user.broadcastActivity({ targets: [] });
+
+  //roll Dice once, and handle the error if DSN is not installed
   try {
     await game.dice3d.showForRoll(test.diceroll);
     game.dice3d.messageHookDisabled = false;
@@ -1084,6 +1088,7 @@ export async function soakDamages(soaker) {
     testType: "soak",
     actor: soaker.uuid,
     actorPic: soaker.img,
+    actorName: soaker.name,
     actorType: soaker.system.type,
     isAttack: false,
     isFav: soaker.system.skills[skillName]?.isFav || soaker.system.attributes[skillName + "IsFav"] || false,
@@ -1100,6 +1105,38 @@ export async function soakDamages(soaker) {
   let dialog = new testDialog(test);
   dialog.render(true);
   //do reality roll
+}
+
+export async function applyStymiedState(targetuuid) {
+  let targetToken = canvas.tokens.placeables.find(tok => tok.document.uuid.includes(targetuuid));
+  //apply Stymied, or veryStymied
+  var eff;
+  var oldEff;
+  if (targetToken.actor.statuses.find(d => d === 'veryStymied')) {
+  } else if (targetToken.actor.statuses.find(d => d === 'stymied')) {
+    oldEff = CONFIG.statusEffects.find(e => e.id === "stymied");
+    eff = CONFIG.statusEffects.find(e => e.id === "veryStymied");
+  } else {
+    eff = CONFIG.statusEffects.find(e => e.id === "stymied");
+  };
+  if (eff) await targetToken.toggleEffect(eff, { "active": true });
+  if (oldEff) await targetToken.toggleEffect(oldEff, { "active": false });
+}
+
+export async function applyVulnerableState(targetuuid) {
+  let targetToken = canvas.tokens.placeables.find(tok => targetuuid.includes(tok.document.uuid));
+  //apply Vulnerable, or veryVulnerable
+  var eff;
+  var oldEff;
+  if (targetToken.actor.statuses.find(d => d === 'veryVulnerable')) {
+  } else if (targetToken.actor.statuses.find(d => d === 'vulnerable')) {
+    oldEff = CONFIG.statusEffects.find(e => e.id === "vulnerable");
+    eff = CONFIG.statusEffects.find(e => e.id === "veryVulnerable");
+  } else {
+    eff = CONFIG.statusEffects.find(e => e.id === "vulnerable");
+  };
+  if (eff) await targetToken.toggleEffect(eff, { "active": true });
+  if (oldEff) await targetToken.toggleEffect(oldEff, { "active": false });
 }
 
 /**
