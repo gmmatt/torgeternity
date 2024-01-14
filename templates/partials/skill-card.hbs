@@ -1,7 +1,6 @@
 <div
   class="skill-card sheet-card"
-  data-type="{{data.type}}"
-  style="background-image: url('systems/torgeternity/images/bgparch.webp')"
+  data-type="{{data.type}}"  
 >
 <!--<div style="background-color: rgba(255,247,247,0.25);margin: 2rem;">-->
   <div class="chat-message torgeternity-message-header">
@@ -26,7 +25,7 @@
       {{localize "torgeternity.chatText.rolled"}}
       {{combinedRollTotal}}</p>
     <p class="skill-roll-damage-label" style="{{damageLabel}}">{{damageDescription}}</p>
-    <!--{{#if target.present}}{{#if isAttack}}-->
+    {{#if isAttack}} {{#if target.present}}
     <p style="display: flex; align-items: center;justify-content: center">
       <a
         class="applyDam"
@@ -40,7 +39,7 @@
         title="{{localize 'torgeternity.sheetLabels.soakDamageTooltip'}}"
       >{{localize "torgeternity.sheetLabels.soakDamage"}}</a>
     </p>
-    <!--{{/if}}{{/if}}-->
+    {{/if}}{{/if}}
     <details class="chat-message chatCardDetailsELement"><summary
         class="skillcardSummaryElement"
         data-open="{{localize 'torgeternity.chatText.hideDetails'}}"
@@ -83,9 +82,12 @@
           </td>
           <td>
 
-            <div title="{{modifierText}}" style="display:block"><span
+            <div title="{{modifierText}}" style="display:block">
+              <span
                 style="{{modifierPlusLabel}}"
-              >+</span>{{modifiers}}</div>
+              >
+              +
+              </span>{{modifiers}}</div>
           </td>
         </tr>
 
