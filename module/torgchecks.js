@@ -900,6 +900,8 @@ export async function renderSkillChat(test) {
 
     // Cannot pass target array to chat because Bad Things happen when I try it, so we have to clear it out here
     test.targets = "";
+    // record adjustedToughness for each flagged target
+    currentTarget.targetAdjustedToughness = test.targetAdjustedToughness;
 
     let chatData = {
       user: game.user._id,

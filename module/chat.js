@@ -316,12 +316,11 @@ async function applyDam(event) {
   var parentMessage = game.messages.find(({ id }) => id === parentMessageId);
   //if (!game.user.isGM) {return};
   var test = parentMessage.getFlag("torgeternity", "test");
-  let targetid = test.target.id;
-  let targetuuid = parentMessage.getFlag("torgeternity", "currentTarget").uuid;
-  console.log(targetuuid);
+  let currentTarget = parentMessage.getFlag("torgeternity", "currentTarget");
+  let targetuuid = currentTarget.uuid;
   let dama = test.damage;
-  let toug = test.targetAdjustedToughness;
-  applyDamages(torgDamage(dama, toug), targetuuid); //Need to keep target from test
+  let toug = currentTarget.targetAdjustedToughness;
+  await applyDamages(torgDamage(dama, toug), targetuuid); //Need to keep target from test
 }
 
 async function soakDam(event) {
@@ -329,7 +328,8 @@ async function soakDam(event) {
   var parentMessage = game.messages.find(({ id }) => id === parentMessageId);
   var test = parentMessage.getFlag("torgeternity", "test");
   let targetid = test.target.id;
-  let targetuuid = parentMessage.getFlag("torgeternity", "currentTarget").uuid;
+  let currentTarget = parentMessage.getFlag("torgeternity", "currentTarget");
+  let targetuuid = currentTarget.uuid;
   console.log(game.user?.character?.id);
   console.log(targetid);
   console.log(targetuuid);
