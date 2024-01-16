@@ -890,10 +890,10 @@ export async function renderSkillChat(test) {
     }
 
     if (test.testType === 'interactionAttack') {
-      if (testDifference >= 0) {
+      if ((test.rollResult - test.DN) >= 0) {
         test.damageSubLabel = "display:block";
         test.applyDamLabel = "display:none";
-        test.applyDebuffLabel = "display:inline";
+        if (test.target.present) test.applyDebuffLabel = "display:inline";
         //test.damageSubDescription = "Apply debuff";//game.i18n.localize('torgeternity.chatText.check.result.damage')
       }
     }
