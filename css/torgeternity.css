@@ -3878,7 +3878,7 @@ form.actor-sheet.threat img.profile-img {
 }
 
 .window-content .actor-sheet .threat-sheet input[name="name"] {
-  width: 90%;
+  width: 100%;
   height: 20px;
   font-size: 30px;
   font-weight: bold;
