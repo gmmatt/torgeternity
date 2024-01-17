@@ -920,7 +920,7 @@ export function renderSkillChat(test) {
         game.messages.get(test.parentId).delete();
       }
     } else {
-      messageData.content = content;
+      messageData.flavor = content;
       ChatMessage.create(messageData);
       if (test.parentId) {
         game.messages.get(test.parentId).delete();
