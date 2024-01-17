@@ -485,6 +485,10 @@
         "hint": "Wenn ausgewählt, wird die Einblendung der Chatkarten animiert.",
         "name": "Animation der Chatkarten"
       },
+      "useColorBlindnessColors": {
+        "hint": "Wenn angehakt, werden Achromatismus- freundliche (AKA Farbblindheit) rote und grüne Farben genutzt.",
+        "name": "Farben für Achromatismus (rot-grün-Schwäche)"
+      },
       "autoDamages": {
         "hint": "Wenn angehakt, werden Schock und Wunden automatisch auf das Ziel angewendet werden.",
         "name": "Schaden automatisch anwenden (BETA!)"

@@ -72,6 +72,15 @@ export function registerTorgSettings() {
     onChange: () => window.location.reload(),
   });*/
 
+  game.settings.register("torgeternity", "useColorBlindnessColors", {
+    name: "torgeternity.settingMenu.useColorBlindnessColors.name",
+    hint: "torgeternity.settingMenu.useColorBlindnessColors.hint",
+    scope: "world",
+    config: true,
+    type: Boolean,
+    default: false
+  })
+
   game.settings.register("torgeternity", "autoDamages", {
     name: "torgeternity.settingMenu.autoDamages.name", // Register a module setting with checkbox
     hint: "torgeternity.settingMenu.autoDamages.hint", // Description of the settings

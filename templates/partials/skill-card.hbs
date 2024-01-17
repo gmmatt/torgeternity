@@ -1,22 +1,22 @@
 <div
   class="skill-card sheet-card"
-  data-type="{{data.type}}"
-  style="background-image: url('systems/torgeternity/images/bgparch.webp')"
+  data-type="{{data.type}}"  
 >
-  <table style="border:none;background-color:transparent;margin:2px 0px 0px 0px">
-    <tr style="border:none">
-      <td>
-        <img class="actor-icon" src="{{actorPic}}" title="{{name}}" />
-        {{log data}}
-      </td>
-      <td>
-        <div width="100%">
-          <p class="skill-chat-title">{{chatTitle}}</p>
+<!--<div style="background-color: rgba(255,247,247,0.25);margin: 2rem;">-->
+  <div class="chat-message torgeternity-message-header">
+      <img class="message-header torgeternity-actor-icon" src="{{actorPic}}" title="{{name}}" />
+      {{log data}}
+
+      <div  class="message-header torgeternity-skill-description">
+          {{#if unskilledTest}}
+          <p class="skill-chat-title unskilled">{{chatTitle}}</p>
           <p class="skill-unskilled-label" style="{{unskilledLabel}}">{{localize "torgeternity.chatText.unskilled"}}</p>
-        </div>
-      </td>
-    </tr>
-  </table>
+          {{else}}    
+          <p class="skill-chat-title skilled">{{chatTitle}}</p>
+          {{/if}}
+      </div>
+  </div>
+  
   <div class="chat-text" style="padding:0px">
     <p class="skill-roll-result" style="{{resultTextColor}}">{{resultText}}</p>
     <p class="skill-roll-disconnect-label" style="{{disconnectLabel}}">{{localize
@@ -25,6 +25,7 @@
       {{localize "torgeternity.chatText.rolled"}}
       {{combinedRollTotal}}</p>
     <p class="skill-roll-damage-label" style="{{damageLabel}}">{{damageDescription}}</p>
+    {{#if isAttack}} {{#if target.present}}
     <p style="display: flex; align-items: center;justify-content: center">
       <a
         class="applyDam"
@@ -38,6 +39,7 @@
         title="{{localize 'torgeternity.sheetLabels.soakDamageTooltip'}}"
       >{{localize "torgeternity.sheetLabels.soakDamage"}}</a>
     </p>
+    {{/if}}{{/if}}
     <details class="chat-message chatCardDetailsELement"><summary
         class="skillcardSummaryElement"
         data-open="{{localize 'torgeternity.chatText.hideDetails'}}"
@@ -47,62 +49,65 @@
       <p class="skill-roll-action-label" style="{{damageSubLabel}}">{{damageSubDescription}}</p>
       <table class="skill-roll-table">
         <tr>
-          <td class="skill-roll-table-1">
+          <td>
             {{typeLabel}}:
           </td>
-          <td class="skill-roll-table-2">
+          <td>
             {{skillValue}}
           </td>
         </tr>
 
-        <tr style="border:1px solid black">
-          <td style="background:white">
-            {{localize "torgeternity.chatText.dieTotal"}}
-            {{combinedRollTotal}}
+        <tr>
+          <td>
+            {{localize "torgeternity.chatText.dieTotal"}}:
+            
           </td>
-          <td style="background:white">
+          <td>
+            {{combinedRollTotal}}
           </td>
         </tr>
 
         <tr>
-          <td class="skill-roll-table-1">
+          <td>
             {{localize "torgeternity.chatText.bonus"}}:
           </td>
-          <td class="skill-roll-table-2">
+          <td>
             <div><span style="{{bonusPlusLabel}}">+</span>{{bonus}}</div>
           </td>
         </tr>
 
         <tr style="{{modifierLabel}}">
-          <td class="skill-roll-table-1">
+          <td>
             <a class="modifier-label">{{localize "torgeternity.chatText.modifiers"}}</a>:
           </td>
-          <td class="skill-roll-table-2">
+          <td>
 
-            <div title="{{modifierText}}" style="display:block"><span
+            <div title="{{modifierText}}" style="display:block">
+              <span
                 style="{{modifierPlusLabel}}"
-              >+</span>{{modifiers}}</div>
+              >
+              +
+              </span>{{modifiers}}</div>
           </td>
         </tr>
 
         <tr style="{{cardsPlayedLabel}}">
-          <td class="skill-roll-table-1">
+          <td>
             {{localize "torgeternity.chatText.bonusCard"}}:
           </td>
-          <td class="skill-roll-table-2">
+          <td>
             <div>{{cardsPlayed}}</div>
           </td>
         </tr>
 
         <tr style="{{notesLabel}}">
-          <td class="skill-roll-table-1">
+          <td>
             {{localize "torgeternity.chatText.notes"}}:
           </td>
-          <td class="skill-roll-table-2">
+          <td>
             <div>{{chatNote}}</div>
           </td>
         </tr>
-
       </table>
     </details>
     <div class="skill-roll-menu">
@@ -279,4 +284,5 @@
       </a>
     </div>
   </div>
+<!--</div>-->
 </div>

@@ -485,6 +485,10 @@
         "hint": "If checked, enable chat card animations. Changing this setting will reload the app",
         "name": "Chat Card Animation"
       },
+      "useColorBlindnessColors": {
+        "hint": "If activated, the game uses daltonistism friendly red and green colors.",
+        "name": "Use daltonism (colorblind)- friendly colors"
+      },
       "autoDamages": {
         "hint": "If checked, shocks and wounds would be automatically apply if player has a valid target token. WARNING: This feature only works correctly with initial damage rolls. It will not correctly record subsequent bonus die rolls. Use with caution.",
         "name": "Apply damages automatically"
