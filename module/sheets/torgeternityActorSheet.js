@@ -10,7 +10,7 @@ export default class torgeternityActorSheet extends ActorSheet {
     super(...args);
 
     if (this.object.type === "threat") {
-      this.options.width = this.position.width = 645;
+      this.options.width = this.position.width = 690;
       this.options.height = this.position.height = 645;
     }
 
