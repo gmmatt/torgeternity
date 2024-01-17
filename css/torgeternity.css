@@ -1895,8 +1895,7 @@ p.skill-chat-title.skilled {
   font-family: "Alaska";
   /*font-weight: bold; no longer needed as Alaska is standard bold*/
   padding: 3px 0px 0px 0px;
-  margin: 0px;
-  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000, 0px 0px 15px black;
+  margin: 0px;  
 }
 
 .chat-message .skill-roll-action-label {

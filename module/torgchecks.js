@@ -520,35 +520,35 @@ export function renderSkillChat(test) {
     game.i18n.localize(dnLabel);
   if (testDifference < 0) {
     test.outcome = game.i18n.localize("torgeternity.chatText.check.result.failure");
-    test.outcomeColor = "color: red"
-    /*if (game.settings.get("torgeternity", "useColorBlindnessColors")) {
-      test.outcomeColor = "color: rgb(231,96,102)"  
+    //test.outcomeColor = "color: red"
+    if (game.settings.get("torgeternity", "useColorBlindnessColors")) {
+      test.outcomeColor = "color: red";
     } else {
-      test.outcomeColor = "color: red"
-    }*/
+      test.outcomeColor = "color: red;text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000, 0px 0px 15px black;";
+    }
     test.soakWounds = 0;
   } else if (testDifference > 9) {
     test.outcome = game.i18n.localize("torgeternity.chatText.check.result.outstandingSuccess");
     if (game.settings.get("torgeternity", "useColorBlindnessColors")) {
-      test.outcomeColor = "color: rgb(44, 179, 44)"  
+      test.outcomeColor = "color: rgb(44, 179, 44)";
     } else {
-      test.outcomeColor = "color: green"
+      test.outcomeColor = "color: green;text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000, 0px 0px 15px black;";
     }
     test.soakWounds = "all";
   } else if (testDifference > 4) {
     test.outcome = game.i18n.localize("torgeternity.chatText.check.result.goodSuccess");
     if (game.settings.get("torgeternity", "useColorBlindnessColors")) {
-      test.outcomeColor = "color: rgb(44, 179, 44)"  
+      test.outcomeColor = "color: rgb(44, 179, 44)";
     } else {
-      test.outcomeColor = "color: green"
+      test.outcomeColor = "color: green;text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000, 0px 0px 15px black;";
     }
     test.soakWounds = 2;
   } else {
     test.outcome = game.i18n.localize("torgeternity.chatText.check.result.standartSuccess");
     if (game.settings.get("torgeternity", "useColorBlindnessColors")) {
-      test.outcomeColor = "color: rgb(44, 179, 44)"  
+      test.outcomeColor = "color: rgb(44, 179, 44)";
     } else {
-      test.outcomeColor = "color: green"
+      test.outcomeColor = "color: green;text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000, 0px 0px 15px black;";
     }
     test.soakWounds = 1;
   }
@@ -565,8 +565,13 @@ export function renderSkillChat(test) {
   if (test.rollTotal === 1 && !(test.testType === "activeDefenseUpdate" || test.testType === "activeDefense")) {
     //Roll 1 and not defense = Mishape
     test.resultText = game.i18n.localize("torgeternity.chatText.check.result.mishape");
+    
     test.outcomeColor = "color: purple";
     test.resultTextColor = "color: purple";
+    if (!game.settings.get("torgeternity", "useColorBlindnessColors")) {
+      test.outcomeColor += ";text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000, 0px 0px 15px black;";
+      test.resultTextColor += ";text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000, 0px 0px 15px black;";
+    }
     test.actionTotalLabel = "display:none";
     test.possibilityStyle = "display:none";
     test.upStyle = "display:none";
