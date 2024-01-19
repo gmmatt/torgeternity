@@ -50,11 +50,9 @@
         title="{{localize 'torgeternity.sheetLabels.applyVulnerableTooltip'}}">{{localize
         'torgeternity.sheetLabels.applyVulnerable'}}</a>
     </p>
-    <details class="chat-message chatCardDetailsELement"><summary
-        class="skillcardSummaryElement"
-        data-open="{{localize 'torgeternity.chatText.hideDetails'}}"
-        data-close="{{localize 'torgeternity.chatText.showDetails'}}"
-      ></summary>
+    <details class="chat-message chatCardDetailsELement">
+      <summary class="skillcardSummaryElement" data-open="{{localize 'torgeternity.chatText.hideDetails'}}"
+        data-close="Total Dice {{combinedRollTotal}} ({{localize 'torgeternity.chatText.showDetails'}})"></summary>
       <p class="skill-roll-action-label" style="{{actionTotalLabel}}">{{actionTotalContent}}</p>
       <p class="skill-roll-action-label" style="{{damageSubLabel}}">{{damageSubDescription}}</p>
       <table class="skill-roll-table">
