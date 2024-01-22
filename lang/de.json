@@ -359,6 +359,7 @@
     "notifications": {
       "defaultAction": "Standardaktion, Ausrüstung z. Bsp.",
       "dramaDeckEmpty": "Das Dramadeck ist aufgebraucht. Bitte das Dramadeck zurücksetzen.",
+      "failureBDResolution": "Das System konnte die BW nicht berechnen.",
       "macroTypeWarning": "Du kannst nur Makro-Buttons für Items/Attribute/Fertigkeiten kreieren, die dir gehören.",
       "moduleNotActive": "Activate the module to see desscription.",
       "noActiveEffectInOwnedItem": "Das Ändern von aktiven Effekten innerhalb eines Items mit Besitzrechten ist zur Zeit noch nicht implementiert.",
@@ -371,8 +372,7 @@
       "onlyReservedCard": "Bitte nur Karten aus dem Aktionenpool spielen.",
       "openDiscord": "Dein Browser wird einen neuen Tab öffnen, der dich zum Discord-Server weiterleitet.",
       "openIssue": "Dein Browser wird einen neuen Tab öffnen, um diese Aufgabe durchzuführen.",
-      "openUlisses": "Dein Browser wird einen neuen Tab öffnen und dich auf die Ulisses-Webseite weiterleiten.",
-      "failureBDResolution": "Das System konnte die BW nicht berechnen."
+      "openUlisses": "Dein Browser wird einen neuen Tab öffnen und dich auf die Ulisses-Webseite weiterleiten."
     },
     "packs": {
       "basicRules": "torgeternity.system-de-basisregeln",
@@ -522,13 +522,13 @@
         "hint": "Wenn ausgewählt, wird das System alle Kartendecks beim Start der Welt zurücksetzen. Du musst deinen Browser refreshen (F5), damit diese Änderung sofort greift.",
         "name": "Kartenpakete installieren"
       },
-      "welcome": {
-        "hint": "Wenn ausgewählt, erscheint beim Laden die Willkommensnachricht",
-        "name": "Willkommensnachricht anzeigen"
-      },
       "showCheckDetails": {
         "hint": "Wenn dies angehakt ist, werden die Details eines Wurfs immer angezeigt.",
         "name": "Zeige immer die Details eines Wurfs"
+      },
+      "welcome": {
+        "hint": "Wenn ausgewählt, erscheint beim Laden die Willkommensnachricht",
+        "name": "Willkommensnachricht anzeigen"
       }
     },
     "sheetLabels": {
@@ -814,76 +814,76 @@
       "waterVehicles": "Wasserfahrzeuge",
       "willpower": "Willenskraft"
     },
+    "speeds": {
+      "fast": "Schnell",
+      "ultraFast": "Ultraschnell",
+      "veryFast": "Superschnell"
+    },
     "stats": {
-      "wounds": "Wunden",
-      "shock": "Schock",
-      "possibilities": "Möglichkeiten",
       "description": "Beschreibung",
+      "maneuverModifier": "Manövrierfähigkeitsmodifikator",
+      "possibilities": "Möglichkeiten",
+      "shock": "Schock",
       "speedModifier": "Geschwindigkeitsmodifikator",
-      "maneuverModifier": "Manövrierfähigkeitsmodifikator"
+      "wounds": "Wunden"
+    },
+    "statusEffects": {
+      "aiming": "Zielt",
+      "blind": "Blind",
+      "concentrating": "Konzentriert",
+      "dark": "Dunkel",
+      "darkness": "Dunkelheit",
+      "dead": "Tod",
+      "dim": "Dämmrig",
+      "disconnected": "Entkoppelt",
+      "incapacitated": "Bewegungsunfähig",
+      "malfunction": "Fehlfunktion",
+      "pitchBlack": "Pechschwarze Dunkelheit",
+      "prone": "Anfällig",
+      "restrained": "Festgehalten",
+      "stymied": "Angeschlagen",
+      "targetSize": "Zielgröße",
+      "targetVulnerability": "Schwachstelle",
+      "unconscious": "K.O.",
+      "veryStymied": "Sehr Angeschlagen",
+      "veryVulnerable": "Sehr Verwundbar",
+      "vulnerable": "Verwundbar",
+      "waiting": "Warten"
     },
     "stymiedStates": {
       "none": "Nicht Angeschlagen",
       "stymied": "Angeschlagen",
       "veryStymied": "Sehr Angeschlagen"
     },
-    "vulnerableStates": {
-      "none": "Nicht Verwundbar",
-      "vulnerable": "Verwundbar",
-      "veryVulnerable": "Sehr Verwundbar"
-    },
-    "statusEffects": {
-      "stymied": "Angeschlagen",
-      "veryStymied": "Sehr Angeschlagen",
-      "vulnerable": "Verwundbar",
-      "veryVulnerable": "Sehr Verwundbar",
-      "aiming": "Zielt",
-      "concentrating": "Konzentriert",
-      "disconnected": "Entkoppelt",
-      "malfunction": "Fehlfunktion",
-      "restrained": "Festgehalten",
-      "dim": "Dämmrig",
-      "dark": "Dunkel",
-      "pitchBlack": "Pechschwarze Dunkelheit",
-      "waiting": "Warten",
-      "darkness": "Dunkelheit",
-      "targetSize": "Zielgröße",
-      "targetVulnerability": "Schwachstelle",
-      "dead": "Tod",
-      "prone": "Anfällig",
-      "incapacitated": "Bewegungsunfähig",
-      "unconscious": "K.O.",
-      "blind": "Blind"
-    },
-    "yesNo": {
-      "true": "Ja",
-      "false": "Nein"
-    },
     "submit": {
-      "true": "Ja",
-      "false": "Nein",
-      "cancel": "Abbrechen",
       "apply": "Anwenden",
+      "cancel": "Abbrechen",
+      "dontShow": "Nicht mehr anzeigen",
+      "false": "Nein",
       "OK": "OK",
-      "dontShow": "Nicht mehr anzeigen"
+      "true": "Ja"
     },
     "tokens": {
-      "noDSR": "Keine DPA",
-      "step": "Schritt",
       "a": " A",
       "b": " B",
       "c": " C",
-      "d": " D"
-    },
-    "speeds": {
-      "fast": "Schnell",
-      "veryFast": "Superschnell",
-      "ultraFast": "Ultraschnell"
+      "d": " D",
+      "noDSR": "Keine DPA",
+      "step": "Schritt"
     },
     "vehicleTypes": {
+      "air": "Luft",
       "land": "Land",
-      "water": "Wasser",
-      "air": "Luft"
+      "water": "Wasser"
+    },
+    "vulnerableStates": {
+      "none": "Nicht Verwundbar",
+      "veryVulnerable": "Sehr Verwundbar",
+      "vulnerable": "Verwundbar"
+    },
+    "yesNo": {
+      "false": "Nein",
+      "true": "Ja"
     }
   }
 }
