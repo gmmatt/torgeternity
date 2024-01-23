@@ -266,7 +266,7 @@ Hooks.on("ready", async function () {
 
   //----reset cards to initial face      
   if (game.user.isGM) Array.from(game.cards).forEach(d => Array.from(d.cards).forEach(c => c.update({ "face": 0 })));
-
+  
   // activation of standart scene
   if (game.scenes.size < 1) {
     activateStandartScene();

@@ -289,7 +289,7 @@ export async function renderSkillChat(test) {
         }
       } else test.rollTotal = test.diceroll.total;
     }
-
+  test.unskilledTest = unskilledTest;
     //
     // Get current bonus and make + label visible if number is positive
     //
@@ -319,6 +319,7 @@ export async function renderSkillChat(test) {
     } else {
       test.combinedRollTotal = "-";
     }
+
 
     // Raise bonus to 1 if actively defending
     if (test.testType === "activeDefense" || test.testType === "activeDefenseUpdate") {
@@ -507,46 +508,63 @@ export async function renderSkillChat(test) {
       test.modifierLabel = "display:none";
     }
 
-    // Add +3 cards to bonus
-    // Initialize cardsPlayed if null
-    if (!test.cardsPlayed) {
-      test.cardsPlayed = 0;
-    }
-    const tempBonus = parseInt(test.bonus);
-    test.bonus = parseInt(tempBonus) + parseInt(test.cardsPlayed) * 3;
+  // Add +3 cards to bonus
+  // Initialize cardsPlayed if null
+  if (!test.cardsPlayed) {
+    test.cardsPlayed = 0;
+  }
+  const tempBonus = parseInt(test.bonus);
+  test.bonus = parseInt(tempBonus) + parseInt(test.cardsPlayed) * 3;
 
-    test.rollResult = parseInt(parseInt(test.skillValue) + parseInt(test.bonus) + parseInt(test.modifiers));
+  test.rollResult = parseInt(parseInt(test.skillValue) + parseInt(test.bonus) + parseInt(test.modifiers));
 
-    // Determine Outcome
-    test.outcome = null;
-    test.actionTotalContent = game.i18n.localize("torgeternity.chatText.check.result.actionTotal");
-    const testDifference = test.rollResult - test.DN;
-    const dnLabel = "torgeternity.dnTypes." + test.DNDescriptor;
-    test.actionTotalContent =
-      game.i18n.localize("torgeternity.chatText.check.result.actionTotal") +
-      " " +
-      test.rollResult +
-      " vs. " +
-      test.DN +
-      " " +
-      game.i18n.localize(dnLabel);
-    if (testDifference < 0) {
-      test.outcome = game.i18n.localize("torgeternity.chatText.check.result.failure");
-      test.outcomeColor = "color: red"
-      test.soakWounds = 0;
-    } else if (testDifference > 9) {
-      test.outcome = game.i18n.localize("torgeternity.chatText.check.result.outstandingSuccess");
-      test.outcomeColor = "color: green"
-      test.soakWounds = "all";
-    } else if (testDifference > 4) {
-      test.outcome = game.i18n.localize("torgeternity.chatText.check.result.goodSuccess");
-      test.outcomeColor = "color: green"
-      test.soakWounds = 2;
+  // Determine Outcome
+  test.outcome = null;
+  test.actionTotalContent = game.i18n.localize("torgeternity.chatText.check.result.actionTotal");
+  const testDifference = test.rollResult - test.DN;
+  const dnLabel = "torgeternity.dnTypes." + test.DNDescriptor;
+  test.actionTotalContent =
+    game.i18n.localize("torgeternity.chatText.check.result.actionTotal") +
+    " " +
+    test.rollResult +
+    " vs. " +
+    test.DN +
+    " " +
+    game.i18n.localize(dnLabel);
+  if (testDifference < 0) {
+    test.outcome = game.i18n.localize("torgeternity.chatText.check.result.failure");
+    //test.outcomeColor = "color: red"
+    if (game.settings.get("torgeternity", "useColorBlindnessColors")) {
+      test.outcomeColor = "color: red";
     } else {
-      test.outcome = game.i18n.localize("torgeternity.chatText.check.result.standartSuccess");
-      test.outcomeColor = "color: green"
-      test.soakWounds = 1;
+      test.outcomeColor = "color: red;text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000, 0px 0px 15px black;";
     }
+    test.soakWounds = 0;
+  } else if (testDifference > 9) {
+    test.outcome = game.i18n.localize("torgeternity.chatText.check.result.outstandingSuccess");
+    if (game.settings.get("torgeternity", "useColorBlindnessColors")) {
+      test.outcomeColor = "color: rgb(44, 179, 44)";
+    } else {
+      test.outcomeColor = "color: green;text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000, 0px 0px 15px black;";
+    }
+    test.soakWounds = "all";
+  } else if (testDifference > 4) {
+    test.outcome = game.i18n.localize("torgeternity.chatText.check.result.goodSuccess");
+    if (game.settings.get("torgeternity", "useColorBlindnessColors")) {
+      test.outcomeColor = "color: rgb(44, 179, 44)";
+    } else {
+      test.outcomeColor = "color: green;text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000, 0px 0px 15px black;";
+    }
+    test.soakWounds = 2;
+  } else {
+    test.outcome = game.i18n.localize("torgeternity.chatText.check.result.standartSuccess");
+    if (game.settings.get("torgeternity", "useColorBlindnessColors")) {
+      test.outcomeColor = "color: rgb(44, 179, 44)";
+    } else {
+      test.outcomeColor = "color: green;text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000, 0px 0px 15px black;";
+    }
+    test.soakWounds = 1;
+  }
 
     // Turn on + sign for modifiers?
     if (test.modifiers >= 1) {
@@ -562,6 +580,10 @@ export async function renderSkillChat(test) {
       test.resultText = game.i18n.localize("torgeternity.chatText.check.result.mishape");
       test.outcomeColor = "color: purple";
       test.resultTextColor = "color: purple";
+      if (!game.settings.get("torgeternity", "useColorBlindnessColors")) {
+        test.outcomeColor += ";text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000, 0px 0px 15px black;";
+        test.resultTextColor += ";text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000, 0px 0px 15px black;";
+      }
       test.actionTotalLabel = "display:none";
       test.possibilityStyle = "display:none";
       test.upStyle = "display:none";
@@ -765,7 +787,6 @@ export async function renderSkillChat(test) {
       test.resultText = test.outcome;
       test.resultTextColor = test.outcomeColor;
     }
-
     // If an attack, calculate and display damage
     if (test.isAttack === true) {
       test.damageLabel = "display: block";
@@ -941,6 +962,7 @@ export async function renderSkillChat(test) {
     game.dice3d.messageHookDisabled = false;
   }
   catch (e) { };
+
 }
 
 export function torgBonus(rollTotal) {

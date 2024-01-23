@@ -372,7 +372,8 @@
       "onlyReservedCard": "Bitte nur Karten aus dem Aktionenpool spielen.",
       "openDiscord": "Dein Browser wird einen neuen Tab öffnen, der dich zum Discord-Server weiterleitet.",
       "openIssue": "Dein Browser wird einen neuen Tab öffnen, um diese Aufgabe durchzuführen.",
-      "openUlisses": "Dein Browser wird einen neuen Tab öffnen und dich auf die Ulisses-Webseite weiterleiten."
+      "openUlisses": "Dein Browser wird einen neuen Tab öffnen und dich auf die Ulisses-Webseite weiterleiten.",
+      "failureBDResolution": "Das System konnte die BW nicht berechnen."
     },
     "packs": {
       "basicRules": "torgeternity.system-de-basisregeln",
@@ -485,6 +486,10 @@
         "hint": "Wenn ausgewählt, wird die Einblendung der Chatkarten animiert.",
         "name": "Animation der Chatkarten"
       },
+      "useColorBlindnessColors": {
+        "hint": "Wenn angehakt, werden Achromatismus- freundliche (AKA Farbblindheit) rote und grüne Farben genutzt.",
+        "name": "Farben für Achromatismus (rot-grün-Schwäche)"
+      },
       "autoDamages": {
         "hint": "Wenn angehakt, werden Schock und Wunden automatisch auf das Ziel angewendet werden.",
         "name": "Schaden automatisch anwenden (BETA!)"
@@ -529,8 +534,12 @@
       "welcome": {
         "hint": "Wenn ausgewählt, erscheint beim Laden die Willkommensnachricht",
         "name": "Willkommensnachricht anzeigen"
+      },
+      "showCheckDetails": {
+        "hint": "Wenn dies angehakt ist, werden die Details eines Wurfs immer angezeigt.",
+        "name": "Zeige immer die Details eines Wurfs"
       }
-    },
+    },    
     "sheetLabels": {
       "abilities": "Fähigkeiten",
       "actions": "Aktionen",
