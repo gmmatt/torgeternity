@@ -1972,7 +1972,7 @@ p.skill-chat-title.skilled {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
 }
 
 /*.chat-message.skill-roll-menu > a {
