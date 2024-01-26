@@ -1809,11 +1809,15 @@ div.readme a.compendium {
 }*/
 
 .chat-message .torgeternity-message-header {
-   display: grid;
-   grid-template-columns: 1fr 3fr 1fr;
-   grid-template-rows: 2fr;
-   border: none;
-   background: transparent;   
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  grid-template-rows: 2fr;
+  border: none;
+  background: transparent;   
+}
+
+.chat-message.torgeternity-message-header img {
+  border:none;
 }
 
 .chat-message .message-header .flavor-text {
@@ -1828,9 +1832,9 @@ div.readme a.compendium {
   border: none;
 }
 
-.message-header .torgeternity-skill-description {
+.torgeternity-skill-description {
   width: 100%;
-  grid-column: 2 / 4;
+  /*grid-column: 2 / 4;*/
   /*grid-row: 1 / 2;*/
   justify-content: center;
   align-items: center;
@@ -1857,6 +1861,7 @@ div.readme a.compendium {
 .chat-message .chat-title {
   font-family: Alaska;
   font-size: 18px;
+  display:flex;
 }
 
 .chat-message .skill-chat-title {
@@ -1875,6 +1880,7 @@ p.skill-chat-title.skilled {
   justify-content: center;
   align-items: center;
   grid-row: span 2;
+  display:grid;
 }
 
 .chat-message .skill-unskilled-label {
@@ -1960,10 +1966,19 @@ p.skill-chat-title.skilled {
 
 .chat-message .skill-roll-menu {
   font-family: "Palatino Linotype";
-  font-size: 10px;
+  font-size: 8px;
   text-align: center;
-  margin: 7px 0;
+  margin: 12px 0 7px 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 }
+
+/*.chat-message.skill-roll-menu > a {
+  display:flex;
+
+}*/
 
 .chat-message .skill-roll-damage-label {
   font-family: "Palatino Linotype";
@@ -1987,8 +2002,8 @@ p.skill-chat-title.skilled {
   border: black 1px solid;
   border-radius: 1rem;
   text-align: center;
-
-  padding: 1px;
+  font-size: 12px;
+  padding: 4px;
   background-color: rgba(40, 1, 1, 0.1);
   color: black;
   font-weight: bold;
