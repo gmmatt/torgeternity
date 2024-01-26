@@ -290,6 +290,19 @@ export async function renderSkillChat(test) {
       } else test.rollTotal = test.diceroll.total;
     }
   test.unskilledTest = unskilledTest;
+
+    //Add the dices list in test
+    if (i === 0) {                    //add the dices only once, not for each target
+      if (test.diceroll) {            //to avoid errors if +3 cards
+        if (test.diceList) {          //if the array exists, concat the new dices
+          test.diceList = test.diceList.concat(test.diceroll.dice[0].values);
+        } else {                      //initialize it if not
+          test.diceList = test.diceroll.dice[0].values;
+        }
+      }
+
+    }
+
     //
     // Get current bonus and make + label visible if number is positive
     //
