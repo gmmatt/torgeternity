@@ -359,6 +359,7 @@
     "notifications": {
       "defaultAction": "Standardaktion, Ausrüstung z. Bsp.",
       "dramaDeckEmpty": "Das Dramadeck ist aufgebraucht. Bitte das Dramadeck zurücksetzen.",
+      "failureBDResolution": "Das System konnte die BW nicht berechnen.",
       "macroTypeWarning": "Du kannst nur Makro-Buttons für Items/Attribute/Fertigkeiten kreieren, die dir gehören.",
       "moduleNotActive": "Activate the module to see desscription.",
       "noActiveEffectInOwnedItem": "Das Ändern von aktiven Effekten innerhalb eines Items mit Besitzrechten ist zur Zeit noch nicht implementiert.",
@@ -525,6 +526,10 @@
       "setupCards": {
         "hint": "Wenn ausgewählt, wird das System alle Kartendecks beim Start der Welt zurücksetzen. Du musst deinen Browser refreshen (F5), damit diese Änderung sofort greift.",
         "name": "Kartenpakete installieren"
+      },
+      "showCheckDetails": {
+        "hint": "Wenn dies angehakt ist, werden die Details eines Wurfs immer angezeigt.",
+        "name": "Zeige immer die Details eines Wurfs"
       },
       "welcome": {
         "hint": "Wenn ausgewählt, erscheint beim Laden die Willkommensnachricht",

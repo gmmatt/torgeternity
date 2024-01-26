@@ -41,6 +41,11 @@ export class testDialog extends FormApplication {
     data.test.darknessModifier = parseInt(myActor.system.darknessModifier);
     data.test.sizeModifier = 0;
     data.test.vulnerableModifier = 0;
+    data.test.sizeModifierAll = [];
+    data.test.vulnerableModifierAll = [];
+    data.test.targetAll = [];
+    data.test.targetsAllID = [];
+
 
     // Set Modifiers for Vehicles
     if (this.test.testType === "chase") {
@@ -64,42 +69,65 @@ export class testDialog extends FormApplication {
     //
     // ***Set Target Data***
     // Transfer data here because passing the entire target to a chat message tends to degrade the data
-    //
-    if ((data.test.targets.length > 0) & (data.test.testType !== "soak")) {
+    //       
+    const allID = [];
+    const allUUID = [];
+    if (data.test.targets.length > 0 & data.test.testType !== "soak") {
       // Identify the first target
-      var target = Array.from(data.test.targets)[0].actor;
-
-      // Set vehicle defense if needed
-      if (target.type === "vehicle") {
-        data.test.target = {
-          present: true,
-          type: "vehicle",
-          defenses: {
-            vehicle: target.system.defense,
-          },
-          toughness: target.system.toughness,
-          armor: target.system.armor,
+      //var target = Array.from(data.test.targets)[0].actor;
+      data.test.targets.forEach(t => { allID.push(t.actor.id); allUUID.push(t.document.uuid) });
+      data.test.targetsAllID = allID;
+      data.test.targetsAllUUID = allUUID;
+      data.test.targets.forEach(t => {
+        var target = t.actor;
+        console.log(t);
+        // Set vehicle defense if needed
+        if (target.type === "vehicle") {
+          data.test.targetAll.push({
+            present: true,
+            type: "vehicle",
+            id: target.id,
+            uuid: t.document.uuid,
+            targetPic: target.img,
+            targetName: target.name,
+            defenses: {
+              vehicle: target.system.defense,
+              dodge: target.system.defense,
+              unarmedCombat: target.system.defense,
+              meleeWeapons: target.system.defense,
+              intimidation: target.system.defense,
+              maneuver: target.system.defense,
+              taunt: target.system.defense,
+              trick: target.system.defense
+            },
+            toughness: target.system.toughness,
+            armor: target.system.armor
+          });
+        } else {
+          data.test.targetAll.push({
+            present: true,
+            type: target.type,
+            id: target.id,
+            uuid: t.document.uuid,
+            targetPic: target.img,
+            targetName: target.name,
+            skills: target.system.skills,
+            attributes: target.system.attributes,
+            toughness: target.system.other.toughness,
+            armor: target.system.other.armor,
+            defenses: {
+              dodge: target.system.dodgeDefense,
+              unarmedCombat: target.system.unarmedCombatDefense,
+              meleeWeapons: target.system.meleeWeaponsDefense,
+              intimidation: target.system.intimidationDefense,
+              maneuver: target.system.maneuverDefense,
+              taunt: target.system.tauntDefense,
+              trick: target.system.trickDefense,
+            },
+          });
+          data.test.vulnerableModifierAll.push(target.system.vulnerableModifier);
         };
-      } else {
-        data.test.target = {
-          present: true,
-          type: target.type,
-          skills: target.system.skills,
-          attributes: target.system.attributes,
-          toughness: target.system.other.toughness,
-          armor: target.system.other.armor,
-          defenses: {
-            dodge: target.system.dodgeDefense,
-            unarmedCombat: target.system.unarmedCombatDefense,
-            meleeWeapons: target.system.meleeWeaponsDefense,
-            intimidation: target.system.intimidationDefense,
-            maneuver: target.system.maneuverDefense,
-            taunt: target.system.tauntDefense,
-            trick: target.system.trickDefense,
-          },
-        };
-
-        if (this.test.applySize == true) {
+        if (this.test.applySize == true & target.type !== "vehicle") {
           var sizeBonus = target.system.details.sizeBonus;
           switch (sizeBonus) {
             case "normal":
@@ -124,9 +152,7 @@ export class testDialog extends FormApplication {
               data.test.sizeModifier = 0;
           }
         }
-
-        data.test.vulnerableModifier = target.system.vulnerableModifier;
-      }
+      });
     } else {
       data.test.target = {
         present: false,

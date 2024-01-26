@@ -1810,7 +1810,7 @@ div.readme a.compendium {
 
 .chat-message .torgeternity-message-header {
    display: grid;
-   grid-template-columns: 1fr 3fr;
+   grid-template-columns: 1fr 3fr 1fr;
    grid-template-rows: 2fr;
    border: none;
    background: transparent;   
@@ -1836,6 +1836,14 @@ div.readme a.compendium {
   align-items: center;
   text-align: center;
   display: grid;
+}
+
+.message-header .torgeternity-target-icon {
+  max-width: 50px;
+  grid-column: 5 / 5;
+  grid-row: 1 / 2;
+  aspect-ratio: 1/1;
+  border: none;
 }
 
 .chat-message table td {
@@ -1952,7 +1960,7 @@ p.skill-chat-title.skilled {
 
 .chat-message .skill-roll-menu {
   font-family: "Palatino Linotype";
-  font-size: 11px;
+  font-size: 10px;
   text-align: center;
   margin: 7px 0;
 }
@@ -1967,6 +1975,8 @@ p.skill-chat-title.skilled {
 
 .applyDam,
 .soakDam,
+.applyStymied,
+.applyVulnerable,
 .chat-message .roll-fav,
 .chat-message .roll-possibility,
 .chat-message .roll-up,
@@ -1977,7 +1987,8 @@ p.skill-chat-title.skilled {
   border: black 1px solid;
   border-radius: 1rem;
   text-align: center;
-  padding: 3px;
+
+  padding: 1px;
   background-color: rgba(40, 1, 1, 0.1);
   color: black;
   font-weight: bold;
@@ -3573,6 +3584,11 @@ form.actor-sheet.threat .tab[data-tab].active .editor {
 .open-hand {
   width: 150px;
   color: black !important;
+}
+
+.actor-icon {
+  width: 50px;
+  aspect-ratio: 1/1;
 }
 
 .card-faces {
