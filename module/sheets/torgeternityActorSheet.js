@@ -992,7 +992,7 @@ export function checkUnskilled(skillValue, skillName, actor) {
     };
 
     let templateData = {
-      message: skillName + " " + game.i18n.localize("torgeternity.chatText.check.cantUseUntrained"),
+      message: game.i18n.localize("torgeternity.skills."+skillName) + " " + game.i18n.localize("torgeternity.chatText.check.cantUseUntrained"),
       actorPic: actor.img,
       actorName: actor.name,
     };
