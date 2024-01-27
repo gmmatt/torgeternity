@@ -372,8 +372,7 @@
       "onlyReservedCard": "Bitte nur Karten aus dem Aktionenpool spielen.",
       "openDiscord": "Dein Browser wird einen neuen Tab öffnen, der dich zum Discord-Server weiterleitet.",
       "openIssue": "Dein Browser wird einen neuen Tab öffnen, um diese Aufgabe durchzuführen.",
-      "openUlisses": "Dein Browser wird einen neuen Tab öffnen und dich auf die Ulisses-Webseite weiterleiten.",
-      "failureBDResolution": "Das System konnte die BW nicht berechnen."
+      "openUlisses": "Dein Browser wird einen neuen Tab öffnen und dich auf die Ulisses-Webseite weiterleiten."      
     },
     "packs": {
       "basicRules": "torgeternity.system-de-basisregeln",
@@ -534,11 +533,7 @@
       "welcome": {
         "hint": "Wenn ausgewählt, erscheint beim Laden die Willkommensnachricht",
         "name": "Willkommensnachricht anzeigen"
-      },
-      "showCheckDetails": {
-        "hint": "Wenn dies angehakt ist, werden die Details eines Wurfs immer angezeigt.",
-        "name": "Zeige immer die Details eines Wurfs"
-      }
+      }      
     },    
     "sheetLabels": {
       "abilities": "Fähigkeiten",
