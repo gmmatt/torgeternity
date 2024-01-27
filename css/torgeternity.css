@@ -1907,7 +1907,6 @@ p.skill-chat-title.skilled {
   text-align: center;
   font-size: 24px;
   font-family: "Alaska";
-  /*font-weight: bold; no longer needed as Alaska is standard bold*/
   padding: 3px 0px 0px 0px;
   margin: 0px;  
 }
@@ -1948,21 +1947,6 @@ p.skill-chat-title.skilled {
 .chat-message .skill-roll-table td:nth-child(even) {
   width: 60%;
 }
-/*
-.chat-message .skill-roll-table-1 {
-  width: 40%;
-  font-family: "Palatino Linotype";
-  border: 1px solid black;
-}
-
-.chat-message .skill-roll-table-2 {
-  width: 60%;
-  background: #e8b017;
-  padding-left: 5px;
-  font-family: "Palatino Linotype";
-  border: 1px solid black;
-}
-*/
 
 .chat-message .skill-roll-menu {
   font-family: "Palatino Linotype";
@@ -1975,10 +1959,16 @@ p.skill-chat-title.skilled {
   justify-content: space-evenly;
 }
 
-/*.chat-message.skill-roll-menu > a {
+.dice-tooltip .dice-rolls {
   display:flex;
+  flex-direction: row;
+  justify-content: center;
+  text-shadow: 0px 0px 2px grey;
+}
 
-}*/
+.dice-tooltip .dice-rolls .roll.d20 {
+  background-image: url(../images/Torgd20.svg);  
+}
 
 .chat-message .skill-roll-damage-label {
   font-family: "Palatino Linotype";
@@ -2079,7 +2069,7 @@ form.actor-sheet .actor-type span {
 
 form.actor-sheet header {
   display: inline;
-  margin-top: 15px;
+  margin-top: 15px;  
 }
 
 form.actor-sheet header input[name="name"] {
