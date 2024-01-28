@@ -1800,6 +1800,7 @@ div.readme a.compendium {
   margin: 5px;
   color: black;
   background: url("../images/bgparch.webp");
+  background-size: cover;
   background-color: rgba(255, 247, 247, 0.25);
 }
 
