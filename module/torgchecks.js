@@ -470,7 +470,7 @@ export async function renderSkillChat(test) {
 
       //if it's an all-out-attack, apply very vulnerable to attacker
       let ownToken = canvas.tokens.placeables.find(tok => test.actor.includes(tok.document.actor.uuid));
-      if (!!ownToken) {
+      if (!!ownToken & i === 0) {
         if (!ownToken.actor.statuses.find((d) => d === "veryVulnerable")) {
           if (ownToken.actor.statuses.find((d) => d === "vulnerable")) { //take away vulnerable effect
             const ef = CONFIG.statusEffects.find((e) => e.id === "vulnerable");
