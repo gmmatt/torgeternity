@@ -1,256 +1,126 @@
-<div class="skill-card sheet-card" data-type="{{data.type}}" style="background-image: url('systems/torgeternity/images/bgparch.webp')">
-    <table style="border:none;background-color:transparent;margin:2px 0px 0px 0px">
-    <tr style="border:none">
-        <td>
-            <img class="actor-icon" src="{{actorPic}}" title="{{name}}"/>
-            {{log data}}
-        </td>
-        <td>
-            <div width=100%>
-                <p class="skill-chat-title">{{chatTitle}}</p>
-                <p class="skill-unskilled-label" style="{{unskilledLabel}}">{{localize 'torgeternity.chatText.unskilled'}}</div>
+<div class="skill-card sheet-card" data-type="{{data.type}}">
+  <div class="chat-message torgeternity-message-header">
+    <img class="message-header torgeternity-actor-icon" src="{{actorPic}}" title="{{actorName}}" />
+    {{log this}}
+
+      <div  class="message-header torgeternity-skill-description">
+          {{#if unskilledTest}}
+          <p class="skill-chat-title unskilled">{{chatTitle}}</p>
+          <p class="skill-unskilled-label" style="{{unskilledLabel}}">{{localize "torgeternity.chatText.unskilled"}}</p>
+          {{else}}    
+          <p class="skill-chat-title skilled">{{chatTitle}}</p>
+          {{/if}}
+      </div>
+      
+      {{#if target.present}}
+      <img class="message-header torgeternity-target-icon" src="{{target.targetPic}}" title="{{target.targetName}}" />
+      {{/if}}
+    </div>    
+  <div class="chat-text" style="padding:0px">
+    <p class="skill-roll-result" style="{{resultTextColor}}">
+    {{resultText}}</p>
+    <p class="skill-roll-disconnect-label" style="{{disconnectLabel}}">
+      {{localize "torgeternity.chatText.possibleDisconnect"}},{{localize "torgeternity.chatText.rolled"}}
+      {{diceList.[0]}}</p>
+    <p class="skill-roll-damage-label" style="{{damageLabel}}">
+    {{damageDescription}}</p>
+    <p class="applyButtons">
+      <a class="applyDam" style="{{applyDamLabel}}" title="{{localize 'torgeternity.sheetLabels.applyDamageTooltip'}}">
+      {{localize "torgeternity.sheetLabels.applyDamage"}}</a>
+      <!--<span style="{{applyDamLabel}}">&nbsp;&bull;&nbsp;</span>-->
+      <a class="soakDam" style="{{applyDamLabel}}" title="{{localize 'torgeternity.sheetLabels.soakDamageTooltip'}}">
+      {{localize "torgeternity.sheetLabels.soakDamage"}}</a>
+      <a class="applyStymied" style="{{applyDebuffLabel}}" title="{{localize 'torgeternity.sheetLabels.applyStymiedTooltip'}}">
+      {{localize 'torgeternity.sheetLabels.applyStymied'}}</a>
+      <!--<span style="{{applyDebuffLabel}}">&nbsp;&bull;&nbsp;</span>-->
+      <a class="applyVulnerable" style="{{applyDebuffLabel}}" title="{{localize 'torgeternity.sheetLabels.applyVulnerableTooltip'}}">
+      {{localize 'torgeternity.sheetLabels.applyVulnerable'}}</a>
+    </p>    
+    <details class="chat-message chatCardDetailsELement">
+    <summary class="skillcardSummaryElement"
+        data-open="{{localize 'torgeternity.chatText.hideDetails'}}"
+        data-close="{{localize 'torgeternity.chatText.showDetails'}}"
+    >
+    <p class="skill-roll-action-label">{{localize 'torgeternity.chatText.check.result.diceTotal'}} {{combinedRollTotal}}</p>
+    <p class="skill-roll-action-label" style="{{actionTotalLabel}}">{{actionTotalContent}}</p>
+    </summary>         
+      <p class="skill-roll-action-label" style="{{damageSubLabel}}">{{damageSubDescription}}</p>
+      <table class="skill-roll-table">
+        <tr>
+          <td>{{typeLabel}}:</td>
+          <td>{{skillValue}}</td>
+        </tr>
+        <tr style="border:1px solid black">
+          <td>{{localize "torgeternity.chatText.dieTotal"}}</td>
+          <td>{{combinedRollTotal}}</td>
+        </tr>
+        <tr>
+          <td>{{localize "torgeternity.chatText.bonus"}}:</td>
+          <td> <div><span style="{{bonusPlusLabel}}">+</span>{{bonus}}</div> </td>
+        </tr>
+        <tr style="{{modifierLabel}}">
+          <td>
+            <a class="modifier-label">{{localize "torgeternity.chatText.modifiers"}}</a>:
+          </td>
+          <td>
+            <div title="{{modifierText}}" style="display:block"><span style="{{modifierPlusLabel}}">+</span>{{modifiers}}</div>
+          </td>
+        </tr>
+        <tr style="{{cardsPlayedLabel}}">
+          <td>
+            {{localize "torgeternity.chatText.bonusCard"}}:
+          </td>
+          <td>
+            <div>{{cardsPlayed}}</div>
+          </td>
+        </tr>
+
+        <tr style="{{notesLabel}}">
+          <td>
+            {{localize "torgeternity.chatText.notes"}}:
+          </td>
+          <td>
+            <div>{{chatNote}}</div>
+          </td>
+        </tr>
+      </table>      
+         <!-- full copy from core, d20 fixed for diceform, handle explosion skin or not with ifequal tests -->
+      <div class="message-content">
+        <div class="dice-roll">
+          <div class="dice-result">
+            <div class="dice-tooltip expanded" style="display: block;">
+              <section class="tooltip-part">
+                <div class="dice">
+                  <ol class="dice-rolls">
+                    {{#each diceList}} <!-- Array created in torgcheck -->
+                    <li
+                      class="roll die d20 {{#ifequal this 20}}exploded{{/ifequal}} {{#ifequal this 10}}exploded{{/ifequal}}"
+                      {{#if (getOptionBoolean "useRenderedTorgDice")}}style="background-image: url(systems/torgeternity/images/Torgd20.svg);" {{/if}}>
+                      {{this}}</li>
+                    {{/each}}
+                  </ol>
+                </div>
+              </section>
             </div>
-        </td>
-    </tr>
-    </table>
-    <div class="chat-text" style="padding:0px">
-        <p class="skill-roll-result">{{resultText}}</p>
-        <p class="skill-roll-action-label" style="{{actionTotalLabel}}">{{actionTotalContent}}</p>
-        <p class="skill-roll-disconnect-label" style="{{disconnectLabel}}">{{localize 'torgeternity.chatText.possibleDisconnect'}}</p>
-        <p class="skill-roll-damage-label" style="{{damageLabel}}">
-            {{damageDescription}}
-        </p>
-        <p class="skill-roll-action-label" style="{{damageSubLabel}}">
-            {{damageSubDescription}}
-            <br>
-            <a class="applyDam" style="{{applyDamLabel}}" title="{{localize 'torgeternity.sheetLabels.applyDamageTooltip'}}">{{localize 'torgeternity.sheetLabels.applyDamage'}}</a>
-            <span style="{{applyDamLabel}}">&nbsp;&bull;&nbsp;</span>
-            <a class="soakDam" style="{{applyDamLabel}}" title="{{localize 'torgeternity.sheetLabels.soakDamageTooltip'}}">{{localize 'torgeternity.sheetLabels.soakDamage'}}</a>
-        </p>
-        <table class="skill-roll-table">
-            <tr>
-                <td class="skill-roll-table-1">
-                    {{typeLabel}}:
-                </td>
-                <td class="skill-roll-table-2">
-                    {{skillValue}}
-                </td>
-            </tr>
-
-            <tr style="border:1px solid black">
-                <td style="background:white">
-                    {{localize 'torgeternity.chatText.dieTotal'}} {{combinedRollTotal}}
-                </td>
-                <td style="background:white">
-                </td>
-            </tr>
-
-            <tr>
-                <td class="skill-roll-table-1">
-                    {{localize 'torgeternity.chatText.bonus'}}:
-                </td>
-                <td class="skill-roll-table-2">
-                    <div><span style="{{bonusPlusLabel}}">+</span>{{bonus}}</div>
-                </td>
-            </tr>
-
-            <tr style="{{modifierLabel}}">
-                <td class="skill-roll-table-1">
-                    <a class="modifier-label">{{localize 'torgeternity.chatText.modifiers'}}</a>:
-                </td>
-                <td class="skill-roll-table-2">
-                    
-                    <div title="{{modifierText}}" style="display:block"><span style="{{modifierPlusLabel}}">+</span>{{modifiers}}</div>
-                </td>
-            </tr>
-
-            <tr style="{{cardsPlayedLabel}}">
-                <td class="skill-roll-table-1">
-                    {{localize 'torgeternity.chatText.bonusCard'}}:
-                </td>
-                <td class="skill-roll-table-2">
-                    <div>{{cardsPlayed}}</div>
-                </td>
-            </tr>
-
-            <tr style="{{notesLabel}}">
-                <td class="skill-roll-table-1">
-                    {{localize "torgeternity.chatText.notes"}}:
-                </td>
-                <td class="skill-roll-table-2">
-                    <div>{{chatNote}}</div>
-                </td>
-            </tr>
-
-        </table>
-
-        <div class="skill-roll-menu">
-            <a class="roll-fav" 
-                style="{{isFavStyle}}"
-            >
-            {{localize 'torgeternity.chatText.favored'}}
-            </a>
-            <span style="{{isFavStyle}}">&nbsp;&bull;&nbsp;</span>
-            <a class="roll-possibility" 
-                style="{{possibilityStyle}}"
-                data-actor="{{actor}}" 
-                data-actor-pic="{{actorPic}}" 
-                data-actor-type="{{actorType}}"
-                data-skill-name="{{skillName}}" 
-                data-skill-value="{{skillValue}}" 
-                data-test-type="{{testType}}" 
-                data-unskilled-use="{{unskilledUse}}" 
-                data-skill-adds="{{skillAdds}}" 
-                data-skill-base-attribute="{{skillBaseAttribute}}"
-                data-roll-total="{{rollTotal}}"
-                data-wound-modifier="{{woundModifier}}"
-                data-size-modifier="{{sizeModifier}}"
-                data-vulnerable-modifier="{{vulnerableModifier}}"
-                data-stymied-modifier="{{stymiedModifier}}"
-                data-possibility-total="{{possibilityTotal}}"
-                data-up-total="{{upTotal}}"
-                data-hero-total = "{{heroTotal}}"
-                data-drama-total = "{{dramaTotal}}"
-                data-cards-played = "{{cardsPlayed}}"
-                data-damage = "{{damage}}"
-                data-power-attack="{{powerAttack}}"
-            >
-            {{localize 'torgeternity.chatText.possibility'}}
-            </a>
-            &nbsp;&bull;&nbsp;
-            <a class="roll-up"
-                style="{{upStyle}}"
-                data-actor="{{actor}}" 
-                data-actor-pic="{{actorPic}}" 
-                data-actor-type="{{actorType}}"
-                data-skill-name="{{skillName}}" 
-                data-skill-value="{{skillValue}}" 
-                data-test-type="{{testType}}" 
-                data-unskilled-use="{{unskilledUse}}" 
-                data-skill-adds="{{skillAdds}}" 
-                data-skill-base-attribute="{{skillBaseAttribute}}"
-                data-roll-total="{{rollTotal}}"
-                data-wound-modifier="{{woundModifier}}"
-                data-stymied-modifier="{{stymiedModifier}}"
-                data-size-modifier="{{sizeModifier}}"
-                data-vulnerable-modifier="{{vulnerableModifier}}"
-                data-possibility-total="{{possibilityTotal}}"
-                data-up-total="{{upTotal}}"
-                data-hero-total = "{{heroTotal}}"
-                data-drama-total = "{{dramaTotal}}"
-                data-cards-played = "{{cardsPlayed}}"
-                data-damage = "{{damage}}"
-                data-power-attack="{{powerAttack}}"            
-            >
-            {{localize 'torgeternity.chatText.up'}}
-            </a>
-            <span style="{{heroStyle}}">&nbsp;&bull;&nbsp;</span>
-            <a class="roll-hero"
-                style="{{heroStyle}}"
-                data-actor="{{actor}}" 
-                data-actor-pic="{{actorPic}}" 
-                data-actor-type="{{actorType}}"
-                data-skill-name="{{skillName}}" 
-                data-skill-value="{{skillValue}}" 
-                data-test-type="{{testType}}" 
-                data-unskilled-use="{{unskilledUse}}" 
-                data-skill-adds="{{skillAdds}}" 
-                data-skill-base-attribute="{{skillBaseAttribute}}"
-                data-roll-total="{{rollTotal}}"
-                data-wound-modifier="{{woundModifier}}"
-                data-stymied-modifier="{{stymiedModifier}}"
-                data-size-modifier="{{sizeModifier}}"
-                data-vulnerable-modifier="{{vulnerableModifier}}"
-                data-possibility-total="{{possibilityTotal}}"
-                data-up-total="{{upTotal}}"
-                data-hero-total = "{{heroTotal}}"
-                data-drama-total = "{{dramaTotal}}"
-                data-cards-played = "{{cardsPlayed}}"
-                data-damage = "{{damage}}"
-                data-power-attack="{{powerAttack}}"
-             >
-             {{localize 'torgeternity.chatText.hero'}}
-             </a>
-            <span style="{{heroStyle}}">&nbsp;&bull;&nbsp;</span>
-            <a class="roll-drama"
-                style="{{dramaStyle}}"
-                data-actor="{{actor}}" 
-                data-actor-pic="{{actorPic}}" 
-                data-actor-type="{{actorType}}"
-                data-skill-name="{{skillName}}" 
-                data-skill-value="{{skillValue}}" 
-                data-test-type="{{testType}}" 
-                data-unskilled-use="{{unskilledUse}}" 
-                data-skill-adds="{{skillAdds}}" 
-                data-skill-base-attribute="{{skillBaseAttribute}}"
-                data-roll-total="{{rollTotal}}"
-                data-wound-modifier="{{woundModifier}}"
-                data-stymied-modifier="{{stymiedModifier}}"
-                data-size-modifier="{{sizeModifier}}"
-                data-vulnerable-modifier="{{vulnerableModifier}}"
-                data-possibility-total="{{possibilityTotal}}"
-                data-up-total="{{upTotal}}"
-                data-hero-total = "{{heroTotal}}"
-                data-drama-total = "{{dramaTotal}}"
-                data-cards-played = "{{cardsPlayed}}"
-                data-damage = "{{damage}}"
-                data-power-attack = "{{powerAttack}}"            
-            >
-            {{localize 'torgeternity.chatText.drama'}}
-            </a>
-            <span style="{{dramaStyle}}">&nbsp;&bull;&nbsp;</span>
-            <a class="add-plus3"
-                style="{{plus3Style}}"
-                data-actor="{{actor}}" 
-                data-actor-pic="{{actorPic}}" 
-                data-actor-type="{{actorType}}"
-                data-skill-name="{{skillName}}" 
-                data-skill-value="{{skillValue}}" 
-                data-test-type="{{testType}}" 
-                data-unskilled-use="{{unskilledUse}}" 
-                data-skill-adds="{{skillAdds}}" 
-                data-skill-base-attribute="{{skillBaseAttribute}}"
-                data-roll-total="{{rollTotal}}"
-                data-wound-modifier="{{woundModifier}}"
-                data-stymied-modifier="{{stymiedModifier}}"
-                data-size-modifier="{{sizeModifier}}"
-                data-vulnerable-modifier="{{vulnerableModifier}}"
-                data-possibility-total="{{possibilityTotal}}"
-                data-up-total="{{upTotal}}"
-                data-hero-total = "{{heroTotal}}"
-                data-drama-total = "{{dramaTotal}}"
-                data-cards-played = "{{cardsPlayed}}"
-                data-damage = "{{damage}}"            
-                data-power-attack = "{{powerAttack}}"            
-            >
-            {{localize 'torgeternity.chatText.bonusCard'}}
-            </a>
-            <span style="{{bdStyle}}">&nbsp;&bull;&nbsp;</span>
-            <a class="add-bd"
-                style="{{bdStyle}}"
-                data-actor="{{actor}}" 
-                data-actor-pic="{{actorPic}}" 
-                data-actor-type="{{actorType}}"
-                data-skill-name="{{skillName}}" 
-                data-skill-value="{{skillValue}}" 
-                data-test-type="{{testType}}" 
-                data-unskilled-use="{{unskilledUse}}" 
-                data-skill-adds="{{skillAdds}}" 
-                data-skill-base-attribute="{{skillBaseAttribute}}"
-                data-roll-total="{{rollTotal}}"
-                data-wound-modifier="{{woundModifier}}"
-                data-stymied-modifier="{{stymiedModifier}}"
-                data-size-modifier="{{sizeModifier}}"
-                data-vulnerable-modifier="{{vulnerableModifier}}"
-                data-possibility-total="{{possibilityTotal}}"
-                data-up-total="{{upTotal}}"
-                data-hero-total = "{{heroTotal}}"
-                data-drama-total = "{{dramaTotal}}"
-                data-cards-played = "{{cardsPlayed}}"
-                data-damage = "{{damage}}"
-                data-power-attack = "{{powerAttack}}"                        >
-                {{localize 'torgeternity.chatText.bonusDice'}}
-            </a>
+          </div>
         </div>
+      </div>
+    </details>
+    
+    <div class="skill-roll-menu">
+      <a class="roll-fav" style="{{isFavStyle}}">{{localize "torgeternity.chatText.favored"}}</a>
+      <!--<span style="{{isFavStyle}}">&bull;</span>-->
+      <a class="roll-possibility" style="{{possibilityStyle}}">{{localize "torgeternity.chatText.possibility"}}</a>
+      <!--<span style="{{possibilityStyle}}">&bull;</span>-->
+      <a class="roll-up" style="{{upStyle}}">{{localize "torgeternity.chatText.up"}}</a>
+      <!--<span style="{{upStyle}}">&bull;</span>-->
+      <a class="roll-hero" style="{{heroStyle}}">{{localize "torgeternity.chatText.hero"}}</a>
+      <!--<span style="{{heroStyle}}">&bull;</span>-->
+      <a class="roll-drama" style="{{dramaStyle}}">{{localize "torgeternity.chatText.drama"}}</a>
+      <!--<span style="{{dramaStyle}}">&bull;</span>-->
+      <a class="add-plus3" style="{{plus3Style}}">{{localize "torgeternity.chatText.bonusCard"}}</a>
+      <!--{{#if isAttack}}<span style="{{plus3Style}}">&bull;</span>{{/if}}-->
+      <a class="add-bd" style="{{bdStyle}}">{{localize "torgeternity.chatText.bonusDice"}}</a>
     </div>
+  </div>
 </div>

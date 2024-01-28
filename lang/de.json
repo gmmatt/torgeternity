@@ -74,6 +74,7 @@
         "result": {
           "actionTotal": "Aktion insgesamt",
           "attackMissed": "Angriff verfehlt",
+          "diceTotal": "Würfelergebnis",
           "damage": "Schaden",
           "failure": "Fehlschlag",
           "goodSuccess": "Guter Erfolg",
@@ -98,6 +99,7 @@
       "favored": "Begünstigt",
       "hero": "Held",
       "heroCard": "Heldenhaft-Karte",
+      "hideDetails": "Verstecke Details",
       "modifiers": "Modifikator",
       "notes": "Notizen",
       "passesCard1": "Gibt",
@@ -105,6 +107,8 @@
       "playsCard": "Spielt aus:",
       "possibility": "Möglichkeit",
       "possibleDisconnect": "Mögliche Abkopplung",
+      "rolled": "rolled",
+      "showDetails": "Zeige Details",
       "skillTestLabel": "Fertigkeitswert",
       "stunt": "Stunt-Probe",
       "test": "Probe",
@@ -356,6 +360,7 @@
     "notifications": {
       "defaultAction": "Standardaktion, Ausrüstung z. Bsp.",
       "dramaDeckEmpty": "Das Dramadeck ist aufgebraucht. Bitte das Dramadeck zurücksetzen.",
+      "failureBDResolution": "Das System konnte die BW nicht berechnen.",
       "macroTypeWarning": "Du kannst nur Makro-Buttons für Items/Attribute/Fertigkeiten kreieren, die dir gehören.",
       "moduleNotActive": "Activate the module to see desscription.",
       "noActiveEffectInOwnedItem": "Das Ändern von aktiven Effekten innerhalb eines Items mit Besitzrechten ist zur Zeit noch nicht implementiert.",
@@ -368,8 +373,7 @@
       "onlyReservedCard": "Bitte nur Karten aus dem Aktionenpool spielen.",
       "openDiscord": "Dein Browser wird einen neuen Tab öffnen, der dich zum Discord-Server weiterleitet.",
       "openIssue": "Dein Browser wird einen neuen Tab öffnen, um diese Aufgabe durchzuführen.",
-      "openUlisses": "Dein Browser wird einen neuen Tab öffnen und dich auf die Ulisses-Webseite weiterleiten.",
-      "failureBDResolution": "Das System konnte die BW nicht berechnen."
+      "openUlisses": "Dein Browser wird einen neuen Tab öffnen und dich auf die Ulisses-Webseite weiterleiten."      
     },
     "packs": {
       "basicRules": "torgeternity.system-de-basisregeln",
@@ -482,6 +486,14 @@
         "hint": "Wenn ausgewählt, wird die Einblendung der Chatkarten animiert.",
         "name": "Animation der Chatkarten"
       },
+      "useColorBlindnessColors": {
+        "hint": "Wenn angehakt, werden Achromatismus- freundliche (AKA Farbblindheit) rote und grüne Farben genutzt.",
+        "name": "Farben für Achromatismus (rot-grün-Schwäche)"
+      },
+      "useRenderedTorgDice": {
+        "hint": "Wenn angehakt, bekommen die Würfel in Chat-Karten einen Torg-Anstrich. Wenn nicht, sind diese standard-grau.",
+        "name": "Zeige Torg-Würfel in Chatkarten"
+      },
       "autoDamages": {
         "hint": "Wenn angehakt, werden Schock und Wunden automatisch auf das Ziel angewendet werden.",
         "name": "Schaden automatisch anwenden (BETA!)"
@@ -519,11 +531,15 @@
         "hint": "Wenn ausgewählt, wird das System alle Kartendecks beim Start der Welt zurücksetzen. Du musst deinen Browser refreshen (F5), damit diese Änderung sofort greift.",
         "name": "Kartenpakete installieren"
       },
+      "showCheckDetails": {
+        "hint": "Wenn dies angehakt ist, werden die Details eines Wurfs immer angezeigt.",
+        "name": "Zeige immer die Details eines Wurfs"
+      },
       "welcome": {
         "hint": "Wenn ausgewählt, erscheint beim Laden die Willkommensnachricht",
         "name": "Willkommensnachricht anzeigen"
-      }
-    },
+      }      
+    },    
     "sheetLabels": {
       "abilities": "Fähigkeiten",
       "actions": "Aktionen",
@@ -535,10 +551,10 @@
       "allOut": "Rücksichtsloser Angriff",
       "applyDamage": "Schaden anwenden",
       "applyDamageTooltip": "Linksclick zum anwenden, Rechtsklick zum modifizieren.",
-      "applyStymied": "Apply Stymied",
-      "applyStymiedTooltip": "Click to apply Stymied. Or Very Stymied if already Stymied.",
-      "applyVulnerable": "Apply Vulnerable",
-      "applyVulnerableTooltip": "Click to apply Vulnerable. Or Very Vulnerable if already Vulnerable.",
+      "applyStymied": "Angeschlagen anwenden",
+      "applyStymiedTooltip": "Klicke, um den Status \"Angeschlagen\" anzuwenden. Mit einem zweiten Klick weiter zu \"Sehr Angeschlagen\".",
+      "applyVulnerable": "Verwundbar anwenden",
+      "applyVulnerableTooltip": "Klicke, um den Status \"Verwundbar\" anzuwenden. Mit einem zweiten Klick weiter zu \"Sehr Verwundbar\".",
       "armor": "Rüstung",
       "armorAndShields": "Rüstung und Schilde",
       "attackOptions": "Angriffsoptionen",

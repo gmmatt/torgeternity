@@ -98,6 +98,7 @@
       "favored": "Favorisé",
       "hero": "Héros",
       "heroCard": "Carte Héros",
+      "hideDetails": "Cacher détails",
       "modifiers": "Modificateurs",
       "notes": "Notes",
       "passesCard1": "Passe",
@@ -105,6 +106,8 @@
       "playsCard": "Jouer",
       "possibility": "Possibilité",
       "possibleDisconnect": "Déconnexion possible",
+      "rolled": "jet",
+      "showDetails": "Afficher détails",
       "skillTestLabel": "Valeur de compétence",
       "stunt": "Test de conduite sportive",
       "test": "Test",
@@ -368,7 +371,8 @@
       "onlyReservedCard": "Vous ne pouvez jouer que les cartes en réserve durant une scène dramatique.",
       "openDiscord": "Votre navigateur va ouvrir un onglet pour rejoindre Discord.",
       "openIssue": "Votre navigateur va ouvrir un onglet pour signaler un problème.",
-      "openUlisses": "Votre navigateur va ouvrir le site d’Ulisses Spiele."
+      "openUlisses": "Votre navigateur va ouvrir le site d’Ulisses Spiele.",
+      "failureBDResolution": "Echec de résolution avec le BD"
     },
     "packs": {
       "basicRules": "torgeternity.basic-rules-fr",
@@ -481,9 +485,21 @@
         "hint": "Si sélectionné, les messages de la discussion apparaîtront avec une animation. Changer ce paramètre rafraîchira le navigateur ou l'application.",
         "name": "Animation des messages de la discussion"
       },
+      "useColorBlindnessColors": {
+        "hint": "Si sélectionné, le système utilise des couleurs rouge et verte plus adaptées à des personnes atteinte de daltonisme.",
+        "name": "Utilise des couleurs plus adaptées au daltonisme"
+      },
       "autoDamages": {
         "hint": "Si coché, les chocs et les blessures seront automatiquement appliqués si le joueur a un token cible valide.",
         "name": "Application des dommages automatiques"
+      },
+      "useColorBlindnessColors": {
+        "hint": "If activated, the game uses daltonistism friendly red and green colors.",
+        "name": "Use daltonism (colorblind)- friendly colors"
+      },
+      "useRenderedTorgDice": {
+        "hint": "If activated, the Dice in Chat-Cards will be Torgish. If disabled, they're standard-foundry-grey.",
+        "name": "Show Torg-Dice in chatcards"
       },
       "deckSetting": {
         "hint": "Configuration des paquets où piochés les différents type de cartes, ainsi que leurs défausses.",
@@ -521,6 +537,10 @@
       "welcome": {
         "hint": "Si sélectionné, le message de bienvenue apparaîtra au chargement",
         "name": "Afficher le message de bienvenue"
+      },
+      "showCheckDetails": {
+        "hint": "Si coché, les détails des tests seront affichés par défaut.",
+        "name": "Montrer les détails des tests"
       }
     },
     "sheetLabels": {

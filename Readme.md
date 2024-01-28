@@ -7,6 +7,17 @@
 For manual installation, use the provided manifest URL in the "_Install System_" popup window while managing game
 systems.
 
+v. 3.5.0
+
+- Drama cards now will be shown although no combatants are joint in the combat tracker (aids simple DSR mechanics).
+- Multi-Targeting now has it's own technique: You'll get a seperate chat card for each target. These will be updated if you'll apply a possibility/drama/herocard and so on. BDs have to be rolled for each target though.
+- After an interaction-attack, it will now be possible to apply stymied / vulnerable directly by the chat card. Please click the button twice if the status is "very..."
+- Damage and (the new) effects will now be applied to the appropriate token, even if not (any more) targeted.
+- Speaking about chat cards, we heared you! They're much prettier now.
+  - There is an option to toggle the color of the result in chat-cards for colorblind people. These alternative colors were tested with someone who has a red-green-weakness.
+  - Please be aware of the option toggling Torg-Like dice in chat cards (or keep 'em grey like they are on standard).
+- Attacker will now get the "Very vulnerable" status if an all-out attack is done.
+
 v. 3.4.0
 
 - Vehicle defenses are now correct

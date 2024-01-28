@@ -286,6 +286,7 @@ torgeternity.magnitudes = {
       id: "stymied",
       label: "torgeternity.statusEffects.stymied",
       name: "torgeternity.statusEffects.stymied",
+      duration: { rounds: 1, turns: 1 }
     },
 
     {
@@ -293,6 +294,7 @@ torgeternity.magnitudes = {
       id: "veryStymied",
       label: "torgeternity.statusEffects.veryStymied",
       name: "torgeternity.statusEffects.veryStymied",
+      duration: { rounds: 1, turns: 1 }
     },
 
     {
@@ -300,6 +302,7 @@ torgeternity.magnitudes = {
       id: "vulnerable",
       label: "torgeternity.statusEffects.vulnerable",
       name: "torgeternity.statusEffects.vulnerable",
+      duration: { rounds: 1, turns: 1 }
     },
 
     {
@@ -307,6 +310,7 @@ torgeternity.magnitudes = {
       id: "veryVulnerable",
       label: "torgeternity.statusEffects.veryVulnerable",
       name: "torgeternity.statusEffects.veryVulnerable",
+      duration: { rounds: 1, turns: 1 }
     },
 
     {
