@@ -1952,11 +1952,13 @@ p.skill-chat-title.skilled {
   font-family: "Palatino Linotype";
   font-size: 8px;
   text-align: center;
-  margin: 12px 0 7px 0;
+  margin: 12px 0 0 0;
   display: flex;
   flex-direction: row;
+  flex-flow: wrap;
   align-items: center;
   justify-content: space-evenly;
+  font-size: 12px;
 }
 
 .dice-tooltip .dice-rolls {
@@ -1991,13 +1993,26 @@ p.skill-chat-title.skilled {
 .chat-message .add-bd {
   border: black 1px solid;
   border-radius: 1rem;
-  text-align: center;
-  font-size: 12px;
+  text-align: center;  
   padding: 4px;
   background-color: rgba(40, 1, 1, 0.1);
   color: black;
   font-weight: bold;
+  white-space: nowrap;
+  margin-bottom: 7px;
 }
+
+/*@media screen and (width > 344px) {
+.chat-message .roll-fav,
+.chat-message .roll-possibility,
+.chat-message .roll-up,
+.chat-message .roll-hero,
+.chat-message .roll-drama,
+.chat-message .add-plus3,
+.chat-message .add-bd {
+    font-size: 8px; 
+  }
+}*/
 
 .chat-message .card-draw .card-name {
   line-height: 20px;
