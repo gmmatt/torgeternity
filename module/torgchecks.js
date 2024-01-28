@@ -467,6 +467,18 @@ export async function renderSkillChat(test) {
     if (test.allOutModifier > 0) {
       test.modifiers += 4;
       test.modifierText += game.i18n.localize("torgeternity.chatText.check.modifier.allOutAttack") + "\n";
+
+      //if it's an all-out-attack, apply very vulnerable to attacker
+      let ownToken = canvas.tokens.placeables.find(tok => test.actor.includes(tok.document.actor.uuid));
+      if (!ownToken.actor.statuses.find((d) => d === "veryVulnerable")) {
+        if (ownToken.actor.statuses.find((d) => d === "vulnerable")) { //take away vulnerable effect
+          const ef = CONFIG.statusEffects.find((e) => e.id === "vulnerable");
+          await ownToken.toggleEffect(ef, { active: false });
+        }
+        const eff = CONFIG.statusEffects.find((e) => e.id === "veryVulnerable");
+        ownToken.toggleEffect(eff, { active: true });
+      }
+
     }
 
     if (test.aimedModifier > 0) {
@@ -1088,8 +1100,8 @@ export async function applyDamages(damageObject, targetuuid) {
     let newWound = targetToken.actor.system.wounds.value + damageObject.wounds;
     //updating the target token's  actor
     await targetToken.actor.update({
-      "data.shock.value": newShock,
-      "data.wounds.value": newWound,
+      "system.shock.value": newShock,
+      "system.wounds.value": newWound,
     });
     //too many wounds => apply defeat ? Ko ?
     if (newWound > targetToken.actor.system.wounds.max) {

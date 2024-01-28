@@ -371,7 +371,8 @@
       "onlyReservedCard": "Please play a reserved card while playing a dramatic scene",
       "openDiscord": "Your browser will open a new page to join us on our discord server ",
       "openIssue": "Your browser will open a new page to complete an issue",
-      "openUlisses": "Your browser will open a new tab to join Ulisses website"
+      "openUlisses": "Your browser will open a new tab to join Ulisses website",
+      "failureBDResolution": "The system failed to resolute the BD"
     },
     "packs": {
       "basicRules": "torgeternity.basic-rules",
@@ -483,6 +484,10 @@
       "animatedChat": {
         "hint": "Activo: se muestra un efecto de animación en las tarjetas del chat. AVISO: Esto fuerza que la aplicación se vuelva a cargar.",
         "name": "Animación Tarjetas del Chat"
+      },
+      "useColorBlindnessColors": {
+        "hint": "If activated, the game uses daltonistism friendly red and green colors.",
+        "name": "Use daltonism (colorblind)- friendly colors"
       },
       "autoDamages": {
         "hint": "If checked, shocks and wounds would be automatically apply if player has a valid target token. WARNING: This feature only works correctly with initial damage rolls. It will not correctly record subsequent bonus die rolls. Use with caution.",
@@ -699,6 +704,8 @@
       "total": "Total",
       "tough": "Res.",
       "toughness": "Resistencia",
+      "trademark": "Trademark Weapon",
+      "trademarkHint": "Trademark Weapon Perk for the used weapon",
       "type": "Type",
       "unarmed": "Sin Armas",
       "unspent": "Libres",
