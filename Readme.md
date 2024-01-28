@@ -15,6 +15,7 @@ v. 3.5.0
 - Damage and (the new) effects will now be applied to the appropriate token, even if not (any more) targeted.
 - Speaking about chat cards, we heared you! They're much prettier now.
   - There is an option to toggle the color of the result in chat-cards for colorblind people. These alternative colors were tested with someone who has a red-green-weakness.
+  - Please be aware of the option toggling Torg-Like dice in chat cards (or keep 'em grey like they are on standard)
 
 v. 3.4.0
 
