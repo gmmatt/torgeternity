@@ -35,14 +35,16 @@
       <a class="applyVulnerable" style="{{applyDebuffLabel}}" title="{{localize 'torgeternity.sheetLabels.applyVulnerableTooltip'}}">
       {{localize 'torgeternity.sheetLabels.applyVulnerable'}}</a>
     </p>
+
+    
     <details class="chat-message chatCardDetailsELement">
     <summary class="skillcardSummaryElement"
         data-open="{{localize 'torgeternity.chatText.hideDetails'}}"
-        data-close="Total Dice {{combinedRollTotal}} ({{localize 'torgeternity.chatText.showDetails'}})"
-    ></summary>
-
-   
-      <p class="skill-roll-action-label" style="{{actionTotalLabel}}">{{actionTotalContent}}</p>
+        data-close="{{localize 'torgeternity.chatText.showDetails'}}"
+    >
+    <p class="skill-roll-action-label">{{localize 'torgeternity.chatText.check.result.diceTotal'}} {{combinedRollTotal}}</p>
+    <p class="skill-roll-action-label" style="{{actionTotalLabel}}">{{actionTotalContent}}</p>
+    </summary>         
       <p class="skill-roll-action-label" style="{{damageSubLabel}}">{{damageSubDescription}}</p>
       <table class="skill-roll-table">
         <tr>
@@ -93,7 +95,8 @@
                   <ol class="dice-rolls">
                     {{#each diceList}} <!-- Array created in torgcheck -->
                     <li
-                      class="roll die d20 {{#ifequal this 20}}exploded{{/ifequal}} {{#ifequal this 10}}exploded{{/ifequal}}">
+                      class="roll die d20 {{#ifequal this 20}}exploded{{/ifequal}} {{#ifequal this 10}}exploded{{/ifequal}}"
+                      {{#if (getOptionBoolean "useRenderedTorgDice")}}style="background-image: url(systems/torgeternity/images/Torgd20.svg);" {{/if}}>
                       {{this}}</li>
                     {{/each}}
                   </ol>

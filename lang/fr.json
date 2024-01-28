@@ -488,6 +488,14 @@
         "hint": "Si coché, les chocs et les blessures seront automatiquement appliqués si le joueur a un token cible valide.",
         "name": "Application des dommages automatiques"
       },
+      "useColorBlindnessColors": {
+        "hint": "If activated, the game uses daltonistism friendly red and green colors.",
+        "name": "Use daltonism (colorblind)- friendly colors"
+      },
+      "useRenderedTorgDice": {
+        "hint": "If activated, the Dice in Chat-Cards will be Torgish. If disabled, they're standard-foundry-grey.",
+        "name": "Show Torg-Dice in chatcards"
+      },
       "deckSetting": {
         "hint": "Configuration des paquets où piochés les différents type de cartes, ainsi que leurs défausses.",
         "label": "Configuration des paquets de cartes par défaut",

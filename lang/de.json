@@ -74,6 +74,7 @@
         "result": {
           "actionTotal": "Aktion insgesamt",
           "attackMissed": "Angriff verfehlt",
+          "diceTotal": "Würfelergebnis",
           "damage": "Schaden",
           "failure": "Fehlschlag",
           "goodSuccess": "Guter Erfolg",
@@ -488,6 +489,10 @@
       "useColorBlindnessColors": {
         "hint": "Wenn angehakt, werden Achromatismus- freundliche (AKA Farbblindheit) rote und grüne Farben genutzt.",
         "name": "Farben für Achromatismus (rot-grün-Schwäche)"
+      },
+      "useRenderedTorgDice": {
+        "hint": "Wenn angehakt, bekommen die Würfel in Chat-Karten einen Torg-Anstrich. Wenn nicht, sind diese standard-grau.",
+        "name": "Zeige Torg-Würfel in Chatkarten"
       },
       "autoDamages": {
         "hint": "Wenn angehakt, werden Schock und Wunden automatisch auf das Ziel angewendet werden.",

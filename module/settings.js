@@ -75,11 +75,20 @@ export function registerTorgSettings() {
   game.settings.register("torgeternity", "useColorBlindnessColors", {
     name: "torgeternity.settingMenu.useColorBlindnessColors.name",
     hint: "torgeternity.settingMenu.useColorBlindnessColors.hint",
-    scope: "world",
+    scope: "client",
     config: true,
     type: Boolean,
     default: false
   })
+
+  game.settings.register("torgeternity", "useRenderedTorgDice", {
+    name: "torgeternity.settingMenu.useRenderedTorgDice.name",
+    hint: "torgeternity.settingMenu.useRenderedTorgDice.hint",
+    scope: "client",
+    config: true,
+    type: Boolean,
+    default: true
+  });
 
   game.settings.register("torgeternity", "autoDamages", {
     name: "torgeternity.settingMenu.autoDamages.name", // Register a module setting with checkbox

@@ -1966,9 +1966,9 @@ p.skill-chat-title.skilled {
   text-shadow: 0px 0px 2px grey;
 }
 
-.dice-tooltip .dice-rolls .roll.d20 {
+/*.dice-tooltip .dice-rolls .roll.d20 {
   background-image: url(../images/Torgd20.svg);  
-}
+}*/
 
 .chat-message .skill-roll-damage-label {
   font-family: "Palatino Linotype";
