@@ -177,8 +177,10 @@ export default class torgeternityActor extends Actor {
     // Derive Skill values for Storm Knights
     //
     // NOTE: Threat skill values are created directly by user, but SK skill values are derived based on attribute + adds.
-    //
-    if (this._source.type === "stormknight") {
+    // NOTE bis, with setThreatAdds() doing his job, skill.value can be used for both,
+    // with possibility to use same path for effects => system.skills.xxx.adds
+
+    if ((this._source.type === "stormknight") | (this._source.type === "threat")) {
       for (let [name, skill] of Object.entries(skillset)) {
         if (this._source.system.skills[name].adds === null) {
           if (skill.unskilledUse === 1) {
