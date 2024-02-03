@@ -423,6 +423,10 @@ blockquote p + p {
   text-indent: 0px;
 }
 
+blockquote em {
+  font-style:italic;
+}
+
 /*...................................................................*/
 /*Inline links are pretty boring in standard-style, let's pimp'em!*/
 a.entity-link,
