@@ -984,7 +984,7 @@ export async function renderSkillChat(test) {
 
   //roll Dice once, and handle the error if DSN is not installed
   try {
-    await game.dice3d.showForRoll(test.diceroll);
+    await game.dice3d.showForRoll(test.diceroll, game.user, true);
     game.dice3d.messageHookDisabled = false;
   }
   catch (e) { };
