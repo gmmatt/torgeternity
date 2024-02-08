@@ -387,18 +387,17 @@ export default class torgeternityActorSheet extends ActorSheet {
 
     //compute adds from total for threats
     if (this.actor.type == "threat") {
-      html.find(".threat-skill-total").change(this.setThreatAdds.bind(this));
+      html.find(".skill-element-edit .inputsFav").change(this.setThreatAdds.bind(this));
     }
   }
   async setThreatAdds(event) {
-    let data = this.actor.data;
-
-    let skill = event.currentTarget.dataset.skill;
+    let data = this.actor.system;
+    let skill = event.target.dataset.skill;
     let skillObject = this.actor.system.skills[skill];
-
-    system.skills[skill].adds = event.currentTarget.value - this.actor.system.attributes[skillObject.baseAttribute];
-    this.actor.update(data);
+    var computedAdds = event.target.value - this.actor.system.attributes[skillObject.baseAttribute];
+    await this.actor.update({ [`system.skills.${skill}.adds`]: computedAdds });
   }
+
   async onOpenHand(event) {
     let characterHand = this.object.getDefaultHand();
     // if default hand => render it
