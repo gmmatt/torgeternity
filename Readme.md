@@ -7,6 +7,11 @@
 For manual installation, use the provided manifest URL in the "_Install System_" popup window while managing game
 systems.
 
+v. 3.5.1
+- Resolved a bug where dice-so-nice-rendered dices were only shown to the player- now everyone sees them
+- Resolved a bug, where active effects were not correctly applied to threats
+- Since the last Google Chrome-Update, scrollbars were shown inside Actor SKs boxes. 
+
 v. 3.5.0
 
 - Drama cards now will be shown although no combatants are joint in the combat tracker (aids simple DSR mechanics).
