@@ -2198,7 +2198,7 @@ form.actor-sheet header input[name="name"] {
   border-image-slice: 50;
   box-shadow: 2px 2px 15px #9e9686;
   transition: all 0.3s cubic-bezier(0.6, -0.07, 0.56, 1.52) 0.2s;
-  overflow: scroll;
+  overflow: auto;
   padding: 0px;
 }
 
@@ -2573,7 +2573,7 @@ form.actor-sheet header input[name="name"] {
 .window-content .actor-sheet .skills {
   grid-column: 1/5;
   grid-row: 3 / span 7;
-  overflow: scroll;
+  overflow: inherit;
   max-height: 100%;
 }
 
@@ -2597,6 +2597,7 @@ form.actor-sheet header input[name="name"] {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  padding:0;
 }
 
 .window-content .actor-sheet .skills ul li {
