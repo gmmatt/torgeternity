@@ -2312,8 +2312,8 @@ form.actor-sheet header input[name="name"] {
   border: none;
   flex: 0 0 60px;
   height: auto;
-  max-height: 120px;
-  max-width: 120px;
+ /* max-height: 120px;
+  max-width: 120px;*/
   width: 80%;
   margin-left: auto;
   margin-right: auto;
@@ -3877,6 +3877,16 @@ form.actor-sheet.threat .tab[data-tab].active .editor {
   font-weight: bold;
   font-family: Signika;
   font-size: 13px;
+}
+
+form.actor-sheet img.profile-img{
+  max-height: 120px;
+  max-width: 120px;
+}
+
+form.actor-sheet .vehicle-header-image img{
+  max-height: 120px;
+  max-width: 120px;
 }
 
 .threat-avatar img {
