@@ -238,6 +238,10 @@ export default class torgeternityActorSheet extends ActorSheet {
       html.find(".skill-roll").click(this._onSkillRoll.bind(this));
     }
 
+    if (this.actor.isOwner) {// New for skills rolls without values
+      html.find(".skill-element-roll").click(this._onSkillElementRoll.bind(this));
+    }
+
     if (this.actor.isOwner) {
       html.find(".skill-edit-toggle").click(this._onSkillEditToggle.bind(this));
     }
@@ -391,11 +395,15 @@ export default class torgeternityActorSheet extends ActorSheet {
     }
   }
   async setThreatAdds(event) {
-    let data = this.actor.system;
     let skill = event.target.dataset.skill;
-    let skillObject = this.actor.system.skills[skill];
-    var computedAdds = event.target.value - this.actor.system.attributes[skillObject.baseAttribute];
-    await this.actor.update({ [`system.skills.${skill}.adds`]: computedAdds });
+    if (event.target.value === "0") {//reset the 'skill object' to hide any value (the zero)
+      await this.actor.update({ [`system.skills.${skill}.adds`]: "" });
+      await this.actor.update({ [`system.skills.${skill}.value`]: "" });
+    } else {
+      let skillObject = this.actor.system.skills[skill];
+      var computedAdds = event.target?.value - this.actor.system.attributes[skillObject?.baseAttribute];
+      await this.actor.update({ [`system.skills.${skill}.adds`]: computedAdds });
+    }
   }
 
   async onOpenHand(event) {
@@ -445,6 +453,51 @@ export default class torgeternityActorSheet extends ActorSheet {
       isAttack: false,
       isFav: this.actor.system.skills[skillName]?.isFav || this.actor.system.attributes?.[skillName + "IsFav"] || isFav,
       skillName: isAttributeTest ? attributeName : skillName,
+      skillValue: skillValue,
+      targets: Array.from(game.user.targets),
+      applySize: false,
+      DNDescriptor: "standard",
+      attackOptions: false,
+      chatNote: "",
+      rollTotal: 0, // A zero indicates that a rollTotal needs to be generated when renderSkillChat is called //
+    };
+
+    let dialog = new testDialog(test);
+    dialog.render(true);
+  }
+
+  // Adapted from above, with event targetting in edit skills list
+  async _onSkillElementRoll(event) {
+    const skillName = event.currentTarget.dataset.name;
+    const attributeName = event.currentTarget.dataset.baseattribute;
+    const isUnskilledTest = event.currentTarget.dataset.unskilleduse === "0";
+    if (event.currentTarget.dataset.value === "NaN") {
+      var skillValue = isUnskilledTest ? "-" : this.actor.system.attributes[attributeName];
+    } else {
+      var skillValue = event.currentTarget.dataset.value;
+    };
+    var isFav;
+    if (event.currentTarget.dataset.isfav === "true") {
+      isFav = true;
+    } else {
+      isFav = false;
+    }
+
+    // Before calculating roll, check to see if it can be attempted unskilled; exit test if actor doesn't have required skill
+    if (checkUnskilled(skillValue, skillName, this.actor)) {
+      return;
+    }
+
+    let test = {
+      testType: event.currentTarget.dataset.testtype,
+      customSkill: event.currentTarget.dataset.customskill,
+      actor: this.actor.uuid,
+      actorPic: this.actor.img,
+      actorName: this.actor.name,
+      actorType: this.actor.type,
+      isAttack: false,
+      isFav: this.actor.system.skills[skillName]?.isFav || this.actor.system.attributes?.[skillName + "IsFav"] || isFav,
+      skillName: skillName,
       skillValue: skillValue,
       targets: Array.from(game.user.targets),
       applySize: false,
@@ -616,6 +669,13 @@ export default class torgeternityActorSheet extends ActorSheet {
     } else {
       dnDescriptor = "standard";
     }
+    var skillValue = event.currentTarget.getAttribute("data-skill-value")
+
+    if (isNaN(skillValue)) {
+      skillValue = this.actor.system.attributes.dexterity
+    } else {
+      skillValue = event.currentTarget.getAttribute("data-skill-value");
+    }
 
     let test = {
       testType: "attack",
@@ -627,10 +687,7 @@ export default class torgeternityActorSheet extends ActorSheet {
       attackType: "unarmedCombat",
       isAttack: true,
       skillName: "unarmedCombat",
-      skillValue: Math.max(
-        this.actor.system.attributes.dexterity,
-        event.currentTarget.getAttribute("data-skill-value")
-      ),
+      skillValue: skillValue,
       isFav: this.actor.system.skills.unarmedCombat.isFav,
       unskilledUse: true,
       damage: event.currentTarget.getAttribute("data-damage"),
@@ -759,6 +816,10 @@ export default class torgeternityActorSheet extends ActorSheet {
       var skillData = this.actor.system.skills[weaponData.attackWith];
       skillValue = skillData.value;
       attributes = this.actor.system.attributes;
+    };
+
+    if (isNaN(skillValue)) {
+      skillValue = skillData.unskilledUse ? attributes[skillData.baseAttribute] : "-";
     }
 
     if (checkUnskilled(skillValue, attackWith, this.actor)) return;
@@ -991,7 +1052,7 @@ export function checkUnskilled(skillValue, skillName, actor) {
     };
 
     let templateData = {
-      message: game.i18n.localize("torgeternity.skills."+skillName) + " " + game.i18n.localize("torgeternity.chatText.check.cantUseUntrained"),
+      message: game.i18n.localize("torgeternity.skills." + skillName) + " " + game.i18n.localize("torgeternity.chatText.check.cantUseUntrained"),
       actorPic: actor.img,
       actorName: actor.name,
     };
