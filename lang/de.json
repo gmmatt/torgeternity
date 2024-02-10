@@ -300,7 +300,8 @@
       "topspeed": "Höchstgeschwindigkeit",
       "toughness": "Robustheit",
       "value": "Wert",
-      "wounds": "Wunden"
+      "wounds": "Wunden",
+      "maxStr": "Max Stä"
     },
     "gmScreen": {
       "noScreen": "Kein SL-Schirm verfügbar",

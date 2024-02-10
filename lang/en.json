@@ -300,7 +300,8 @@
       "topspeed": "Top Speed",
       "toughness": "Toughness",
       "value": "Value",
-      "wounds": "Wounds"
+      "wounds": "Wounds",
+      "maxStr": "Max Str"
     },
     "gmScreen": {
       "noScreen": "No gm screen available",

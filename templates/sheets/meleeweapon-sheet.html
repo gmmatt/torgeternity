@@ -26,6 +26,10 @@
           <p class="item-data-label">{{localize "torgeternity.gear.price"}}/Value</p>
           <input name="system.price" type="text" value="{{item.system.price}}" class="input-box-small" />
           <input name="system.value" type="number" value="{{item.system.value}}" class="input-box-small" />
+          <p class="item-data-label">{{localize "torgeternity.gear.maxDex"}}</p>
+          <input name="system.value" type="number" value="{{item.system.maxDex}}" class="input-box-small"/>
+          <p class="item-data-label">{{localize "torgeternity.gear.maxStr"}}</p>
+          <input name="system.value" type="number" value="{{item.system.maxStr}}" class="input-box-small"/>
           <p class="item-data-label">{{localize "torgeternity.gear.damageType"}}</p>
           <select name="system.damageType" class="input-box">
             {{#select item.system.damageType}} {{#each config.damageTypes as |name type|}}

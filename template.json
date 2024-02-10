@@ -517,6 +517,8 @@
       "bonus": 2,
       "chatNote": "",
       "damage": 0,
+      "maxDex": 0,
+      "maxStr": 0,
       "damageType": 0,
       "equipped": false,
       "equippedClass": ".item-unequipped",
