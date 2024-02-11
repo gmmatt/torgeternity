@@ -249,7 +249,7 @@ export default class torgeternityActor extends Actor {
     }
 
     // Other derived attributes for Storm Knights
-    if (this._source.type === "stormknight") {
+    if (this._source.type === "stormknight" | this._source.type === "threat") {
       mergeObject(
         this.prototypeToken,
         {
@@ -271,17 +271,17 @@ export default class torgeternityActor extends Actor {
           if (k.key === "system.other.moveMod") listChanges.push(k);
         })
       );
-      // Modify +/-
-      listChanges
-        .filter((ef) => ef.mode === 2)
-        .forEach((ef) => {
-          computeMove += parseInt(ef.value);
-        });
       // Modify x
       listChanges
         .filter((ef) => ef.mode === 1)
         .forEach((ef) => {
           computeMove = computeMove * parseInt(ef.value);
+        });
+      // Modify +/-
+      listChanges
+        .filter((ef) => ef.mode === 2)
+        .forEach((ef) => {
+          computeMove += parseInt(ef.value);
         });
       // Modify minimum
       listChanges
@@ -311,17 +311,17 @@ export default class torgeternityActor extends Actor {
           if (k.key === "system.other.runMod") listRun.push(k);
         })
       );
-      // Modify +/-
-      listRun
-        .filter((ef) => ef.mode === 2)
-        .forEach((ef) => {
-          computeRun += parseInt(ef.value);
-        });
       // Modify x
       listRun
         .filter((ef) => ef.mode === 1)
         .forEach((ef) => {
           computeRun = computeRun * parseInt(ef.value);
+        });
+      // Modify +/-
+      listRun
+        .filter((ef) => ef.mode === 2)
+        .forEach((ef) => {
+          computeRun += parseInt(ef.value);
         });
       // Modify minimum
       listRun
