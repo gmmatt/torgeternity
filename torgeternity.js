@@ -974,3 +974,61 @@ Hooks.on("renderChatLog", (app, html, data) => {
   //----chat messages listeners
   Chat.addChatListeners(html);
 });
+
+Hooks.on("applyActiveEffect", async (actor, change, current, delta, changes) => {
+  if (game.user.isGM) {
+    await actor.setFlag("torgeternity", "dexLimit", true);//an idea I keep there, useless
+    var custom = change.value.split(/\s+/);//should be strength, need other code and test with other attributes
+    var sourceObject = actor.items.find(it => it.uuid === change.effect.origin);
+    var neoRequired = sourceObject.system?.minStrength | 0;
+    var neo = Math.max(actor?.overrides?.system?.attributes?.[custom[0]] | 0, actor.system.attributes[custom[0]]) - neoRequired;
+    if (neo < 0) {
+      if (!actor.effects.find(ef => ef.name === "Malus")) {
+        let StrengthDebuff = {
+          name: "Malus",
+          icon: "icons/svg/door-locked-outline.svg",
+          tint: "#ff0000",
+          duration: { rounds: 100 },
+          origin: change.effect.origin,
+          changes: [
+            {
+              key: change.key,
+              mode: 2,
+              priority: change.priority + 90,
+              value: Math.min(neo, 0)
+            },
+          ]
+        };
+        await actor.createEmbeddedDocuments("ActiveEffect", [StrengthDebuff])
+      }
+    }
+  }
+});
+
+Hooks.on("preCreateActiveEffect", async (effect, changes, data, id) => {
+  console.log("Effacé dans le preCreateActiveEffect");
+  //if (game.user.isGM) {
+  var malus = effect.parent.effects.find(ef => ef.name === "Malus");
+  if (malus) {
+    try {
+      malus.delete();
+    }
+    catch (e) {
+    }
+  };
+  //}
+});
+
+Hooks.on("deleteActiveEffect", async (effect, changes, data, id) => {
+  var lim = effect.parent.getFlag("torgeternity", "dexLimit");//not used
+  console.log(lim);
+  if (game.user.isGM) {
+    var malus = effect.parent.effects.find(ef => ef.name === "Malus");
+    try {
+      malus.delete();
+      console.log("Effacé dans le deleteActiveEffect");
+    }
+    catch (e) {
+    }
+  }
+});

@@ -343,6 +343,17 @@ export default class torgeternityActor extends Actor {
         });
       this.system.other.run = computeRun;
       //
+    };
+    if (game.user.isGM) {
+      var malus = this.effects.find(ef => ef.name === "Malus");
+      if (malus?.disabled) {
+        try {
+          malus.delete();
+          console.log("Effacé dans l'actor");
+        }
+        catch (e) {
+        }
+      };
     }
   }
 
