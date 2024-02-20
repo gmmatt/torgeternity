@@ -3240,6 +3240,10 @@ form.actor-sheet.threat .tab[data-tab].active .editor {
   font-size: 0.9em;
 }
 
+.item-sheet > .sheet-header img {
+  border:none;
+}
+
 .item .window-content form.item-sheet .item-type {
   background: url(../images/separatorRound.webp);
   position: absolute;

@@ -215,9 +215,8 @@ form button {
   margin: 0.5em 0;
 }
 
-.sheet.journal-entry .journal-entry-page p + p {
+.sheet.journal-entry .journal-entry-page :is(p,blockquote) + p {
   text-indent: 0.75rem;
-  /*margin-bottom: 0.75rem;*/
 }
 
 .sheet.journal-entry .journal-entry-page p:first-of-type {
@@ -410,7 +409,7 @@ blockquote {
   padding: 5px 10px;
   font-size: 14px;
   text-align: justify;
-  overflow: hidden;
+  overflow: inherit;
   border-left: none;
   font-style: normal;
 }
