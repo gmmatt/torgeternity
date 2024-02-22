@@ -12,7 +12,11 @@ export default class torgeternityActor extends Actor {
       if (this.system.other.possibilities === false) {
         //Set Possiblities to 3, as this is most likely the value a Storm Knight starts with
         if (this._source.type === "stormknight") this.system.other.possibilities = 3;
-        else this.system.other.possibilities = 0;
+        else {
+          this.system.other.possibilities = 0;
+          this.update({ "prototypeToken.texture.src": "systems/torgeternity/images/icons/threat-token.webp", img: "systems/torgeternity/images/icons/threat.webp" });
+
+        }
       }
     }
 
@@ -135,6 +139,9 @@ export default class torgeternityActor extends Actor {
 
     //Set derived values for vehicles
     if (this._source.type === "vehicle") {
+      if (this.img.includes("mystery-man")) {
+        this.update({ "prototypeToken.texture.src": "systems/torgeternity/images/icons/vehicle-Token.webp", img: "systems/torgeternity/images/icons/vehicle.webp" });
+      }
       var convertedPrice = 0;
       switch (this.system.price.magnitude) {
         case "ones":
