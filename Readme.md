@@ -10,7 +10,9 @@ systems.
 v. 3.5.1
 - Resolved a bug where dice-so-nice-rendered dices were only shown to the player- now everyone sees them
 - Resolved a bug, where active effects were not correctly applied to threats
-- Since the last Google Chrome-Update, scrollbars were shown inside Actor SKs boxes. 
+- Since the last Google Chrome-Update, scrollbars were shown inside Actor SKs boxes.
+- Styling-Issues solved
+- By creating an item and threat, it will have the proper default image (and token)
 
 v. 3.5.0
 
