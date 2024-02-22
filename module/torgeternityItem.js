@@ -40,6 +40,66 @@ export default class torgeternityItem extends Item {
 
   _onCreate(data, options, userId) {
     super._onCreate(data, options, userId);
+    var image;
+    switch (data.type) {
+      case "gear":
+        image = "gear-icon.webp";
+        break;
+      case "eternityshard":
+        image = "eternityshard.webp";
+        break;
+      case "armor":
+        image = "armor-icon.webp";
+        break;
+      case "shield":
+        image = "shield.webp";
+        break;
+      case "meleeweapon":
+        image = "meleeweapon.webp";
+        break;
+      case "missileweapon":
+        image = "missileweapon.webp";
+        break;
+      case "firearm":
+        image = "firearm.webp";
+        break;
+      case "implant":
+        image = "implant.webp";
+        break;
+      case "heavyweapon":
+        image = "heavyweapon.webp";
+        break;
+      case "vehicle":
+        image = "vehicle.webp";
+        break;
+      case "perk":
+        image = "perk.webp";
+        break;
+      case "enhancement":
+        image = "enhancement.webp";
+        break;
+      case "specialability":
+        image = "specialability.webp";
+        break;
+      case "specialability-rollable":
+        image = "specialability-rollable.webp";
+        break;
+      case "spell":
+        image = "spell.webp";
+        break;
+      case "miracle":
+        image = "miracle.webp";
+        break;
+      case "psionicpower":
+        image = "psionicpower.webp";
+        break;
+      case "customSkill":
+      case "vehicleAddon":
+      case "customAttack":
+      default:
+        ;
+    }
+    if (image) this.update({ img: "systems/torgeternity/images/icons/" + image });
 
     if (this.parent !== null && this.system.hasOwnProperty("equipped")) {
       // set the item to be equipped and un-equip other items of the same type
