@@ -2061,6 +2061,7 @@ p.skill-chat-title.skilled {
 
 .torgeternity.actor {
   min-width: 450px;
+  min-height: 636px;
 }
 
 .torgeternity.actor .window-content {
