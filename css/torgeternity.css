@@ -3886,8 +3886,8 @@ form.actor-sheet.threat .tab[data-tab].active .editor {
 }
 
 form.actor-sheet img.profile-img{
-  max-height: 120px;
-  max-width: 120px;
+  height:100%;
+  width:unset;
 }
 
 form.actor-sheet .vehicle-header-image img{
