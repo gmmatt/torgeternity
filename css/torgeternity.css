@@ -3888,6 +3888,9 @@ form.actor-sheet.threat .tab[data-tab].active .editor {
 form.actor-sheet img.profile-img{
   height:100%;
   width:unset;
+  object-fit:cover;
+  object-position: 50% 0;
+  aspect-ratio: 1/1;
 }
 
 form.actor-sheet .vehicle-header-image img{
