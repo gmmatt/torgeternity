@@ -2061,6 +2061,7 @@ p.skill-chat-title.skilled {
 
 .torgeternity.actor {
   min-width: 450px;
+  min-height: 636px;
 }
 
 .torgeternity.actor .window-content {
@@ -2162,6 +2163,7 @@ form.actor-sheet header input[name="name"] {
 
 .window-content .actor-sheet section.sheet-body {
   height: 100%;
+  width: 100%;
 }
 
 .window-content .list-section-heading {
@@ -3884,8 +3886,11 @@ form.actor-sheet.threat .tab[data-tab].active .editor {
 }
 
 form.actor-sheet img.profile-img{
-  max-height: 120px;
-  max-width: 120px;
+  height:100%;
+  width:unset;
+  object-fit:cover;
+  object-position: 50% 0;
+  aspect-ratio: 1/1;
 }
 
 form.actor-sheet .vehicle-header-image img{
