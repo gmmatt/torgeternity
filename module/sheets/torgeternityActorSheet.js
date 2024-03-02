@@ -400,9 +400,11 @@ export default class torgeternityActorSheet extends ActorSheet {
       await this.actor.update({ [`system.skills.${skill}.adds`]: "" });
       await this.actor.update({ [`system.skills.${skill}.value`]: "" });
     } else {
-      let skillObject = this.actor.system.skills[skill];
-      var computedAdds = event.target?.value - this.actor.system.attributes[skillObject?.baseAttribute];
-      await this.actor.update({ [`system.skills.${skill}.adds`]: computedAdds });
+      if (!!skill) {
+        let skillObject = this.actor.system.skills[skill];
+        var computedAdds = event.target?.value - this.actor.system.attributes[skillObject?.baseAttribute];
+        await this.actor.update({ [`system.skills.${skill}.adds`]: computedAdds });
+      }
     }
   }
 
