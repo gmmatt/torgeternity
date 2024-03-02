@@ -13,6 +13,7 @@ v. 3.5.1
 - Since the last Google Chrome-Update, scrollbars were shown inside Actor SKs boxes.
 - Styling-Issues solved
 - By creating an item and threat, it will have the proper default image (and token)
+- Threats can now roll skills unskilled
 
 v. 3.5.0
 
