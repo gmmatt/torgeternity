@@ -893,6 +893,13 @@
     "yesNo": {
       "false": "No",
       "true": "Yes"
+    },
+    "macros": {
+      "commonMacroNoTokensSelected": "There were no tokens selected. The macro cannot compute.",
+      "commonMacroNoValue": "No value entered. The macro cannot compute.",
+      "bonusDieMacroTitle": "Macro for Bonus-Dice",
+      "bonusDieMacroContent": "How many bonus-di(c)e do you want to throw?",
+      "bonusDieMacroErrorIntegerValue": "The entered value in the dialog was not a number or a float / decimal. Please enter an integer."
     }
   }
 }
