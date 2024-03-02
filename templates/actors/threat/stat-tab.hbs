@@ -372,7 +372,9 @@
 			<div class="skill-list-edit">
 				{{#each actor.system.skills as |skill key|}}
 				<div class="skill-element-edit">
-					<span style="position:relative">{{localize (concatSkillName key)}}
+					<span style="position:relative" class="skill-element-roll" data-testtype="skill"
+						data-baseattribute="{{skill.baseAttribute}}" data-adds="{{skill.adds}}" data-value="{{skill.value}}"
+						data-unskilleduse="{{skill.unskilledUse}}" data-name="{{key}}">{{localize (concatSkillName key)}}
 					</span>
 					<span class="inputsFav">
 						<input name="system.skills.{{key}}.value" data-skill="{{key}}" type="number" class="small-input"
