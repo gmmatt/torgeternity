@@ -127,7 +127,7 @@ export class testDialog extends FormApplication {
           });
           data.test.vulnerableModifierAll.push(target.system.vulnerableModifier);
         };
-        if (this.test.applySize == true & target.type !== "vehicle") {
+        if (this.test.applySize == true) {
           var sizeBonus = target.system.details.sizeBonus;
           switch (sizeBonus) {
             case "normal":
@@ -151,6 +151,7 @@ export class testDialog extends FormApplication {
             default:
               data.test.sizeModifier = 0;
           }
+          data.test.sizeModifierAll.push(data.test.sizeModifier);
         }
       });
     } else {
