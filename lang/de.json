@@ -897,6 +897,7 @@
     "macros": {
       "commonMacroNoTokensSelected": "Es wurden keine Token ausgewählt. Das Makro kann nicht ausgeführt werden.",
       "commonMacroNoValue": "Es wurde kein Wert eingegeben. Das Makro kann nicht ausgeführt werden.",
+      "commonMacroOnlyByGM": "Dieses Makro kann nur von Spielleitern ausgeführt werden!",
       "bonusDieMacroTitle": "Makro für Bonuswürfel",
       "bonusDieMacroContent": "Wieviele Bonuswürfel sollen denn geworfen werden?",
       "bonusDieMacroErrorIntegerValue": "Die Eingabe war keine Ganzzahl. Bitte gebe eine Ganzzahl ein."
