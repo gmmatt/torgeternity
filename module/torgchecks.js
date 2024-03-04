@@ -330,6 +330,7 @@ export async function renderSkillChat(test) {
     if (test.previousBonus != true) {
       test.bonus = torgBonus(test.combinedRollTotal);
     } else {
+      test.rollTotal = undefined;
       test.combinedRollTotal = "-";
     }
 
@@ -876,7 +877,7 @@ export async function renderSkillChat(test) {
     }
 
     // Remind Player to Check for Disconnect?
-    if (test.rollTotal <= 4) {
+    if (test.rollTotal <= 4 && test.rollTotal != undefined) {
       test.disconnectLabel = "display:block";
     } else {
       test.disconnectLabel = "display:none";
