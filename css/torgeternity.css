@@ -196,8 +196,9 @@ div.actor ::-webkit-scrollbar {
 
 form.actor-sheet header.sheet-header-vehicle {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: space-around;
+  align-items: baseline;
+  flex-wrap: nowrap;
 }
 
 .window-content .actor-sheet .vehicle-header-image {
@@ -219,9 +220,13 @@ form.actor-sheet header.sheet-header-vehicle {
   color: #0e0909;
 }
 
-.window-content .actor-sheet .vehicle-header-type {
-  padding: 22px;
-  flex-grow: 2;
+.window-content .actor-sheet header.vehicle-stats div{
+  display:flex; 
+  align-items:baseline;
+}
+
+.window-content .actor-sheet header.vehicle-stats div > p{
+  margin-right: 1rem;
 }
 
 .groove-borders {
