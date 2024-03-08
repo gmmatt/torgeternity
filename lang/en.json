@@ -834,7 +834,8 @@
       "possibilities": "Possibilities",
       "shock": "Shock",
       "speedModifier": "Vehicle Speed Modifier",
-      "wounds": "Wounds"
+      "wounds": "Wounds",
+      "axioms": "Axioms"
     },
     "statusEffects": {
       "aiming": "Aiming",

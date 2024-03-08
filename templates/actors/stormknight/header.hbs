@@ -1,16 +1,20 @@
-<div>
-  <h1>
-    <input name="name" type="text" value="{{actor.name}}" placeholder="Name" />
-  </h1>
-  <p><img src="systems/torgeternity/images/te-logo.webp" title="TE Logo" /></p>
-  <img class="open-hand" src="systems/torgeternity/images/icons/cardhand.webp" title="{{localize "
-    torgeternity.dialogPrompts.openHand"}}">
-</div>
-<div>
-  <p>
+<div class="sksheet header totalbox">
+    
+  <h1 class="sksheet header nameinput"><input name="name" type="text" value="{{actor.name}}" placeholder="Name" /></h1>
+  <img class="open-hand" src="systems/torgeternity/images/icons/cardhand.webp" title="{{localize "torgeternity.dialogPrompts.openHand"}}">
+  
+  <div class="sksheet header CRSbox">
+    <span>{{localize "torgeternity.gear.cosm"}}</span>
+    <select style="width:100%" name="system.other.cosm" class="input-box">
+      {{#select actor.system.other.cosm}}
+      {{#each config.cosmTypes as |name type|}}
+      <option value="{{type}}">{{localize name}}</option>
+      {{/each}}
+      {{/select}}
+    </select>
 
     <span>{{localize "torgeternity.sheetLabels.race"}}</span>
-    <select name="system.details.race" class="input-box">
+    <select style="width:100%" name="system.details.race" class="input-box">
       {{#select actor.system.details.race}}
       {{#each config.races as |name type|}}
       <option value="{{type}}">{{localize name}}</option>
@@ -19,69 +23,44 @@
     </select>
 
     <span>{{localize "torgeternity.sheetLabels.size"}}</span>
-    <select name="system.details.sizeBonus" class="input-box">
+    <select style="width:100%" name="system.details.sizeBonus" class="input-box">
       {{#select actor.system.details.sizeBonus}}
       {{#each config.sizes as |name type|}}
       <option value="{{type}}">{{localize name}}</option>
       {{/each}}
       {{/select}}
     </select>
-
-    <span>{{localize "torgeternity.gear.cosm"}}</span>
-    <select name="system.other.cosm" class="input-box">
-      {{#select actor.system.other.cosm}}
-      {{#each config.cosmTypes as |name type|}}
-      <option value="{{type}}">{{localize name}}</option>
-      {{/each}}
-      {{/select}}
-    </select>
-
-  </p>
-  <p>
+  </div>
+  
+  <h2 class="sksheet header axiomsboxheadline">{{localize "torgeternity.stats.axioms"}}</h2>
+  <div class="sksheet header axiomsbox">
     <span class="main-label">{{localize "torgeternity.sheetLabels.magic"}}</span>
-    <input name="system.axioms.magic" type="number" value="{{actor.system.axioms.magic}}" data-dtype="Number"
-      class="small-input" />
-    <!--        <span class="axioms">{{actor.system.axioms.magic}}</span> -->
-  </p>
-  <p>
+    <input name="system.axioms.magic" type="number" value="{{actor.system.axioms.magic}}" data-dtype="Number" class="small-input" />
     <span class="main-label">{{localize "torgeternity.sheetLabels.social"}}</span>
-    <input name="system.axioms.social" type="number" value="{{actor.system.axioms.social}}" data-dtype="Number"
-      class="small-input" />
-  </p>
-  <p>
+    <input name="system.axioms.social" type="number" value="{{actor.system.axioms.social}}" data-dtype="Number" class="small-input" />
     <span class="main-label">{{localize "torgeternity.sheetLabels.spirit"}}</span>
-    <input name="system.axioms.spirit" type="number" value="{{actor.system.axioms.spirit}}" data-dtype="Number"
-      class="small-input" />
-  </p>
-  <p>
+    <input name="system.axioms.spirit" type="number" value="{{actor.system.axioms.spirit}}" data-dtype="Number" class="small-input" />
     <span class="main-label">{{localize "torgeternity.sheetLabels.tech"}}</span>
-    <input name="system.axioms.tech" type="number" value="{{actor.system.axioms.tech}}" data-dtype="Number"
-      class="small-input" />
-  </p>
-  <p>
-    <span class="vital-box">
-      {{localize "torgeternity.sheetLabels.wounds"}}:</span>
-    <input name="system.wounds.value" type="number" value="{{actor.system.wounds.value}}" data-dtype="Number"
-      class="small-input" />
-    /
-    <input name="system.wounds.max" type="number" value="{{actor.system.wounds.max}}" data-dtype="Number"
-      class="small-input" disabled />
+    <input name="system.axioms.tech" type="number" value="{{actor.system.axioms.tech}}" data-dtype="Number" class="small-input" />
+  </div>
 
-  </p>
-  <p>
-    <span class="vital-box">
-      {{localize "torgeternity.sheetLabels.shock"}}:</span>
-    <input name="system.shock.value" type="number" value="{{actor.system.shock.value}}" data-dtype="Number"
-      class="small-input" />
+  <h2 class="sksheet header woundsheadline">{{localize "torgeternity.sheetLabels.wounds"}}</h2>
+  <div class="sksheet header woundsbox">
+    <input name="system.wounds.value" type="number" value="{{actor.system.wounds.value}}" data-dtype="Number" class="small-input" />
     /
-    <input name="system.shock.max" type="number" value="{{actor.system.shock.max}}" data-dtype="Number"
-      class="small-input" disabled />
+    <input name="system.wounds.max" type="number" value="{{actor.system.wounds.max}}" data-dtype="Number" class="small-input" disabled />
+  </div>
+  
+  <h2 class="sksheet header shockheadline">{{localize "torgeternity.sheetLabels.shock"}}</h2>
+  <div class="sksheet header shockbox">
+    <input name="system.shock.value" type="number" value="{{actor.system.shock.value}}" data-dtype="Number" class="small-input" />
+    /
+    <input name="system.shock.max" type="number" value="{{actor.system.shock.max}}" data-dtype="Number" class="small-input" disabled />
+  </div>
 
-  </p>
-  <p class="attribut-block">
-    <span class="other-label open-poss" data-skill-value="{{system.other.possibilities}}"
-      data-skill-name="{{system.other.possibilities}}">{{localize "torgeternity.sheetLabels.possibilities"}}</span>
-    <input name="system.other.possibilities" type="number" value="{{actor.system.other.possibilities}}" data="dtype="
-      number"" />
-  </p>
+  <h2 class="sksheet header possyheadline">{{localize "torgeternity.sheetLabels.possibilities"}}</h2>
+  <div class="sksheet header possybox">
+    <input name="system.other.possibilities" type="number" value="{{actor.system.other.possibilities}}" data-dtype="number" />
+  </div>
+   
 </div>
