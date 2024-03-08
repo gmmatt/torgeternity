@@ -196,8 +196,9 @@ div.actor ::-webkit-scrollbar {
 
 form.actor-sheet header.sheet-header-vehicle {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: space-around;
+  align-items: baseline;
+  flex-wrap: nowrap;
 }
 
 .window-content .actor-sheet .vehicle-header-image {
@@ -219,9 +220,13 @@ form.actor-sheet header.sheet-header-vehicle {
   color: #0e0909;
 }
 
-.window-content .actor-sheet .vehicle-header-type {
-  padding: 22px;
-  flex-grow: 2;
+.window-content .actor-sheet header.vehicle-stats div{
+  display:flex; 
+  align-items:baseline;
+}
+
+.window-content .actor-sheet header.vehicle-stats div > p{
+  margin-right: 1rem;
 }
 
 .groove-borders {
@@ -2208,6 +2213,110 @@ form.actor-sheet header input[name="name"] {
   box-shadow: 2px 2px 15px black;
 }
 
+.window-content .actor-sheet .sksheet.header.totalbox {
+  display:grid;
+  grid-template-rows:repeat(3,auto); 
+  grid-template-columns:repeat(7,1fr);
+  white-space:nowrap;
+  gap:10px;
+  margin-bottom: 1em;
+
+  position:relative;
+}
+
+.window-content .actor-sheet .sksheet.header.totalbox:before {
+  content: ' ';
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.2;
+  background-image: url("../images/TORG_Logo.webp");
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+  background-size: contain;
+}
+
+.window-content .actor-sheet .sksheet.header.totalbox > * {
+  position:relative;
+}
+
+.window-content .actor-sheet .sksheet.header.totalbox > h2 {
+  margin:unset;
+  margin-top: 0.5rem;
+  font-size:14px;
+}
+
+.window-content .actor-sheet .sksheet.header.nameinput {
+  grid-row:1/2;
+  grid-column:2/7;
+  margin:unset;
+}
+
+.window-content .actor-sheet .sksheet.header.torglogo {
+  grid-row:1/2;
+  grid-column:5/7;
+}
+
+.window-content .actor-sheet .sksheet.header.CRSbox  {
+  grid-row: 1/4;
+  grid-column: 1/2;
+  
+  display: flex; 
+  flex-direction: column; 
+  justify-content: space-evenly;  
+  align-items:center;
+  margin:unset;
+  row-gap:3px;
+}
+
+.window-content .actor-sheet .sksheet.header.axiomsboxheadline {
+  grid-row: 2/3;
+  grid-column: 2/5;  
+}
+
+.window-content .actor-sheet .sksheet.header.axiomsbox {
+  grid-row: 3/4;
+  grid-column: 2/5;
+  display:flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.window-content .actor-sheet .sksheet.header.woundsheadline {
+  grid-row: 2/3;
+  grid-column: 5/6;
+}
+
+.window-content .actor-sheet .sksheet.header.woundsbox {
+  grid-row: 3/4;
+  grid-column:5/6;
+}
+
+.window-content .actor-sheet .sksheet.header.shockheadline {
+  grid-row: 2/3;
+  grid-column: 6/7;
+}
+
+.window-content .actor-sheet .sksheet.header.shockbox {
+  grid-row: 3/4;
+  grid-column:6/7;
+}
+
+.window-content .actor-sheet .sksheet.header.possyheadline {
+  grid-row: 2/3;
+  grid-column: 7/8;
+}
+
+.window-content .actor-sheet .sksheet.header.possybox {
+  grid-row: 3/4;
+  grid-column:7/8;
+  align-content: center;
+  justify-content: center;
+}
+
 .window-content .actor-sheet nav.tabs {
   display: flex;
   flex-direction: row;
@@ -2436,6 +2545,8 @@ form.actor-sheet header input[name="name"] {
   width: auto;
   transition: 0.2s;
   transform: rotate(0deg) scale(1);
+  grid-row:1/2;
+  grid-column:7/8;
 }
 
 .window-content .actor-sheet .sheet-header img.open-hand:hover {
@@ -2476,8 +2587,7 @@ form.actor-sheet header input[name="name"] {
 .window-content .actor-sheet .sheet-header div {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  margin-right: 5px;
+  justify-content: space-between;  
   align-items: center;
 }
 

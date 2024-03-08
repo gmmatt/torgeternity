@@ -377,8 +377,8 @@
 						data-unskilleduse="{{skill.unskilledUse}}" data-name="{{key}}">{{localize (concatSkillName key)}}
 					</span>
 					<span class="inputsFav">
-						<input name="system.skills.{{key}}.value" data-skill="{{key}}" type="number" class="small-input"
-							value="{{skill.value}}" data-dtype="Number" />
+						<input name="system.skills.{{key}}.value" data-skill="{{key}}" type="number" class="small-input" {{#isNaN
+							skill.value}} value="" {{else}} value="{{skill.value}}" {{/isNaN}} />
 
 						<a class="toggleFav {{#if skill.isFav}}checked
 							{{/if}}">

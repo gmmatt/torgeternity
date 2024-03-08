@@ -10,11 +10,14 @@
       "details": {
         "background": "",
         "clearance": "",
-        "race": ""
+        "race": "",
+        "sizeBonus": "normal"
       },
       "editstate": true,
       "fatigue": "1",
-      "templates": ["commonStats"],
+      "templates": [
+        "commonStats"
+      ],
       "xp": {
         "earned": 0,
         "unspent": 0
@@ -376,10 +379,19 @@
         "sizeBonus": "normal"
       },
       "editstate": "none",
-      "templates": ["commonStats"]
+      "templates": [
+        "commonStats"
+      ]
     },
-    "types": ["stormknight", "threat", "vehicle"],
+    "types": [
+      "stormknight",
+      "threat",
+      "vehicle"
+    ],
     "vehicle": {
+      "details": {
+        "sizeBonus": "normal"
+      },
       "armor": 0,
       "axioms": {
         "magic": 0,
@@ -431,7 +443,11 @@
       "villainsConditionsStandard": ""
     },
     "templates": {},
-    "types": ["destiny", "cosm", "drama"]
+    "types": [
+      "destiny",
+      "cosm",
+      "drama"
+    ]
   },
   "Item": {
     "armor": {
@@ -441,7 +457,9 @@
       "maxDex": 12,
       "minStrength": "",
       "notes": "",
-      "templates": ["general"]
+      "templates": [
+        "general"
+      ]
     },
     "customAttack": {
       "ap": 0,
@@ -483,10 +501,14 @@
       "equippedClass": ".item-unequipped",
       "notes": "",
       "range": "",
-      "templates": ["general"]
+      "templates": [
+        "general"
+      ]
     },
     "gear": {
-      "templates": ["general"]
+      "templates": [
+        "general"
+      ]
     },
     "heavyweapon": {
       "ammo": {
@@ -505,11 +527,15 @@
       },
       "notes": "",
       "range": "",
-      "templates": ["general"]
+      "templates": [
+        "general"
+      ]
     },
     "implant": {
       "notes": "",
-      "templates": ["general"]
+      "templates": [
+        "general"
+      ]
     },
     "meleeweapon": {
       "ap": 0,
@@ -521,10 +547,14 @@
       "equipped": false,
       "equippedClass": ".item-unequipped",
       "notes": "",
-      "templates": ["general"]
+      "templates": [
+        "general"
+      ]
     },
     "miracle": {
-      "templates": ["power"]
+      "templates": [
+        "power"
+      ]
     },
     "missileweapon": {
       "ammo": {
@@ -541,7 +571,9 @@
       "minStrength": "",
       "notes": "",
       "range": "",
-      "templates": ["general"]
+      "templates": [
+        "general"
+      ]
     },
     "perk": {
       "category": "",
@@ -640,7 +672,9 @@
       "timestaken": ""
     },
     "psionicpower": {
-      "templates": ["power"]
+      "templates": [
+        "power"
+      ]
     },
     "shield": {
       "bonus": 1,
@@ -648,7 +682,9 @@
       "equippedClass": ".item-unequipped",
       "minStrength": "",
       "notes": "",
-      "templates": ["general"]
+      "templates": [
+        "general"
+      ]
     },
     "specialability": {
       "description": ""
@@ -661,7 +697,9 @@
       "description": ""
     },
     "spell": {
-      "templates": ["power"]
+      "templates": [
+        "power"
+      ]
     },
     "templates": {
       "general": {
@@ -717,7 +755,9 @@
     "vehicle": {
       "mr": -1,
       "pass": 1,
-      "templates": ["general"],
+      "templates": [
+        "general"
+      ],
       "topspeed": "",
       "tough": "",
       "wounds": 3

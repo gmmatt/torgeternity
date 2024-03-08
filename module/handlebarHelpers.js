@@ -104,6 +104,13 @@ export function registerHelpers() {
     return options.inverse(this);
   });
 
+  Handlebars.registerHelper("isNaN", function (a, options) {
+    if (isNaN(a)) {
+      return options.fn(this);
+    }
+    return options.inverse(this);
+  });
+
   Handlebars.registerHelper("poolList", function (actorId) {
     var testVariable = actorId;
     var poolList = "";

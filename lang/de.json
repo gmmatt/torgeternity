@@ -691,7 +691,7 @@
       "specialAbility": "Spezielle Fähigkeit",
       "spell": "Zauber",
       "spells": "Zauber",
-      "spirit": "Spiritualität",
+      "spirit": "Spirit.",
       "stats": "Werte",
       "statusEffects": "Statuseffekte",
       "stormknight": "Storm Knight",
@@ -834,7 +834,8 @@
       "possibilities": "Möglichkeiten",
       "shock": "Schock",
       "speedModifier": "Geschwindigkeitsmodifikator",
-      "wounds": "Wunden"
+      "wounds": "Wunden",
+      "axioms": "Axiome"
     },
     "statusEffects": {
       "aiming": "Zielt",
