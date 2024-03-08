@@ -12,7 +12,11 @@ export default class torgeternityActor extends Actor {
       if (this.system.other.possibilities === false) {
         //Set Possiblities to 3, as this is most likely the value a Storm Knight starts with
         if (this._source.type === "stormknight") this.system.other.possibilities = 3;
-        else this.system.other.possibilities = 0;
+        else {
+          this.system.other.possibilities = 0;
+          this.update({ "prototypeToken.texture.src": "systems/torgeternity/images/icons/threat-token.webp", img: "systems/torgeternity/images/icons/threat.webp" });
+
+        }
       }
     }
 
@@ -135,6 +139,9 @@ export default class torgeternityActor extends Actor {
 
     //Set derived values for vehicles
     if (this._source.type === "vehicle") {
+      if (this.img.includes("mystery-man")) {
+        this.update({ "prototypeToken.texture.src": "systems/torgeternity/images/icons/vehicle-Token.webp", img: "systems/torgeternity/images/icons/vehicle.webp" });
+      }
       var convertedPrice = 0;
       switch (this.system.price.magnitude) {
         case "ones":
@@ -177,8 +184,10 @@ export default class torgeternityActor extends Actor {
     // Derive Skill values for Storm Knights
     //
     // NOTE: Threat skill values are created directly by user, but SK skill values are derived based on attribute + adds.
-    //
-    if (this._source.type === "stormknight") {
+    // NOTE bis, with setThreatAdds() doing his job, skill.value can be used for both,
+    // with possibility to use same path for effects => system.skills.xxx.adds
+
+    if ((this._source.type === "stormknight") | (this._source.type === "threat")) {
       for (let [name, skill] of Object.entries(skillset)) {
         if (this._source.system.skills[name].adds === null) {
           if (skill.unskilledUse === 1) {
@@ -247,7 +256,7 @@ export default class torgeternityActor extends Actor {
     }
 
     // Other derived attributes for Storm Knights
-    if (this._source.type === "stormknight") {
+    if (this._source.type === "stormknight" | this._source.type === "threat") {
       mergeObject(
         this.prototypeToken,
         {
@@ -269,17 +278,17 @@ export default class torgeternityActor extends Actor {
           if (k.key === "system.other.moveMod") listChanges.push(k);
         })
       );
-      // Modify +/-
-      listChanges
-        .filter((ef) => ef.mode === 2)
-        .forEach((ef) => {
-          computeMove += parseInt(ef.value);
-        });
       // Modify x
       listChanges
         .filter((ef) => ef.mode === 1)
         .forEach((ef) => {
           computeMove = computeMove * parseInt(ef.value);
+        });
+      // Modify +/-
+      listChanges
+        .filter((ef) => ef.mode === 2)
+        .forEach((ef) => {
+          computeMove += parseInt(ef.value);
         });
       // Modify minimum
       listChanges
@@ -309,17 +318,17 @@ export default class torgeternityActor extends Actor {
           if (k.key === "system.other.runMod") listRun.push(k);
         })
       );
-      // Modify +/-
-      listRun
-        .filter((ef) => ef.mode === 2)
-        .forEach((ef) => {
-          computeRun += parseInt(ef.value);
-        });
       // Modify x
       listRun
         .filter((ef) => ef.mode === 1)
         .forEach((ef) => {
           computeRun = computeRun * parseInt(ef.value);
+        });
+      // Modify +/-
+      listRun
+        .filter((ef) => ef.mode === 2)
+        .forEach((ef) => {
+          computeRun += parseInt(ef.value);
         });
       // Modify minimum
       listRun
@@ -341,6 +350,17 @@ export default class torgeternityActor extends Actor {
         });
       this.system.other.run = computeRun;
       //
+    };
+    if (game.user.isGM) {
+      var malus = this.effects.find(ef => ef.name === "Malus");
+      if (malus?.disabled) {
+        try {
+          malus.delete();
+          console.log("Effacé dans l'actor");
+        }
+        catch (e) {
+        }
+      };
     }
   }
 

@@ -7,6 +7,15 @@
 For manual installation, use the provided manifest URL in the "_Install System_" popup window while managing game
 systems.
 
+v. 3.6.0
+- Resolved a bug where dice-so-nice-rendered dices were only shown to the player- now everyone sees them
+- Resolved a bug, where active effects were not correctly applied to threats
+- Since the last Google Chrome-Update, scrollbars were shown inside Actor SKs boxes.
+- Styling-Issues solved
+- By creating an item and threat, it will have the proper default image (and token)
+- Threats can now roll skills unskilled
+- Storm Knights and vehicles now have a possibility to change the size
+
 v. 3.5.0
 
 - Drama cards now will be shown although no combatants are joint in the combat tracker (aids simple DSR mechanics).
