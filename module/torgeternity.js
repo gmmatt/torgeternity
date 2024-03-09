@@ -26,7 +26,7 @@ import torgeternityCardConfig from "./cards/torgeternityCardConfig.js";
 import { torgeternityCards } from "./cards/torgeternityCards.js";
 import { TestDialog } from "/systems/torgeternity/module/test-dialog.js";
 import { hideCompendium } from "./hideCompendium.js";
-import initTorgControlButtons from "./module/controlButtons.js";
+import initTorgControlButtons from "./controlButtons.js";
 import createTorgShortcuts from "./keybinding.js";
 import GMScreen from "./GMScreen.js";
 import { setUpCardPiles } from "./cards/setUpCardPiles.js";
