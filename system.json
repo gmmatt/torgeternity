@@ -1,7 +1,7 @@
 {
   "id": "torgeternity",
   "title": "Torg Eternity",
-  "description": "Torg Eternity character sheet for Foundry VTT.",
+  "description": "Torg Eternity System for Foundry VTT",
   "authors": [
     {
       "name": "GM Matt",
@@ -18,7 +18,7 @@
   "version": "3.6.0",
   "compatibility": {
     "minimum": "11",
-    "verified": "11.306"
+    "verified": "11.315"
   },
   "esmodules": [
     "torgeternity.js"
