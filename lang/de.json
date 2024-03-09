@@ -213,6 +213,10 @@
       "itemDeletion": {
         "content": "Bist du sicher, dass du das löschen willst? Es wird dauerhaft aus deinem Blatt entfernt.",
         "title": "Wirklich löschen?"
+      },
+      "buttons": {
+        "execute": "Ausführen",
+        "ok": "OK"
       }
     },
     "dnTypes": {
@@ -902,11 +906,13 @@
       "fatigueMacroDealtDamage": "Folgenden Charakteren wurden Schock zugefügt:",
       "fatigueMacroCharKO": " ist damit K.O.!",
       "reviveMacroChatHeadline": "Schock-Erholung!",
+      "reviveMacroWindowLabel1": "Wie viel Schock soll zurückgewonnen werden?",
       "fatigueMacroCharAlreadyKO": " ist bereits K.O.! Mehr Schock geht nicht.",
       "reviveMacroFirst": "Die folgenden Charaktere erholen sich vom Schock: ",      
       "reviveMacroAlreadyFull": " ist bereits wohlauf und hat keinen Schock!",
       "reviveMacroCharRevived": " ist vollständig wiederhergestellt.",
       "reviveMacroCharDeKOed": "Der K.O. Status wurde aufgehoben für ", 
+      "reviveMacroWholeRevive": "Allen Schock erholen?",
       "clearStatusEffectsHeadline": "Für folgende Charaktere wurden Stati aufgehoben:",
       "clearStatusEffectsNothingFound": "Es wurden keine Stati für die markierten Token gefunden.",
       "clearStatusEffectsliftetFrom": "Von",

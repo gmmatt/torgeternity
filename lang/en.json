@@ -213,6 +213,10 @@
       "itemDeletion": {
         "content": "Are you sure you want to delete this? It will be permanently removed from the sheet.",
         "title": "Confirm Deletion"
+      },
+      "buttons": {
+        "execute": "Execute",
+        "ok": "OK"
       }
     },
     "dnTypes": {
@@ -903,10 +907,12 @@
       "fatigueMacroCharKO": " is therefore K.O.!",
       "fatigueMacroCharAlreadyKO": " is already K.O.! There is no more shock to add.",
       "reviveMacroChatHeadline": "Shock recovery!",      
+      "reviveMacroWindowLabel1": "How much shock should be recovered?",
       "reviveMacroFirst": "The following characters are revived from shock: ",
       "reviveMacroAlreadyFull": " is already recovered and has no shock.",
       "reviveMacroCharRevived": " is fully revived.",
       "reviveMacroCharDeKOed": "Liftet K.O. status from ", 
+      "reviveMacroWholeRevive": "Revive all shock?",
       "clearStatusEffectsHeadline": "Lifting status effects from the following characters:",
       "clearStatusEffectsNothingFound": "No status effects found for marked characters.",
       "clearStatusEffectsliftetFrom": "From",
