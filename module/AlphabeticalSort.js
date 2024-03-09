@@ -1,21 +1,26 @@
-//------------remettre les compétence en ordre alphabétique
+// ------------remettre les compétence en ordre alphabétique
 function strNoAccent(a) {
-  var b = "áàâäãåçéèêëíïîìñóòôöõúùûüýÁÀÂÄÃÅÇÉÈÊËÍÏÎÌÑÓÒÔÖÕÚÙÛÜÝ",
-    c = "aaaaaaceeeeiiiinooooouuuuyAAAAAACEEEEIIIINOOOOOUUUUY",
-    d = "";
-  for (var i = 0, j = a.length; i < j; i++) {
-    var e = a.substr(i, 1);
+  const b = "áàâäãåçéèêëíïîìñóòôöõúùûüýÁÀÂÄÃÅÇÉÈÊËÍÏÎÌÑÓÒÔÖÕÚÙÛÜÝ";
+  const c = "aaaaaaceeeeiiiinooooouuuuyAAAAAACEEEEIIIINOOOOOUUUUY";
+  let d = "";
+  for (let i = 0, j = a.length; i < j; i++) {
+    const e = a.substr(i, 1);
     d += b.indexOf(e) !== -1 ? c.substr(b.indexOf(e), 1) : e;
   }
   return d;
 }
+/**
+ *
+ * @param html
+ * @param data
+ */
 export function alphabSort(html, data) {
   if (data.actor.type === "stormknight") {
-    let skillLists = document.getElementsByClassName("skill-list");
-    for (let list of skillLists) {
+    const skillLists = document.getElementsByClassName("skill-list");
+    for (const list of skillLists) {
       const li = list.childNodes;
-      let complist = [];
-      for (let sk of li) {
+      const complist = [];
+      for (const sk of li) {
         if (sk.tagName == "LI") {
           complist.push(sk);
         }
@@ -28,15 +33,15 @@ export function alphabSort(html, data) {
             : -1;
         }
       });
-      for (let sk of complist) {
+      for (const sk of complist) {
         list.appendChild(sk);
       }
     }
-    let attList = document.getElementsByClassName("attribut-list");
-    for (let list of attList) {
+    const attList = document.getElementsByClassName("attribut-list");
+    for (const list of attList) {
       const li = list.childNodes;
-      let complist = [];
-      for (let sk of li) {
+      const complist = [];
+      for (const sk of li) {
         if (sk.tagName == "LI") {
           complist.push(sk);
         }
@@ -46,17 +51,17 @@ export function alphabSort(html, data) {
           return strNoAccent(a.firstElementChild.innerHTML) > strNoAccent(b.firstElementChild.innerHTML) ? 1 : -1;
         }
       });
-      for (let sk of complist) {
+      for (const sk of complist) {
         list.appendChild(sk);
       }
     }
   }
   if (data.actor.type === "threat") {
-    let inlineSkillLists = html[0].getElementsByClassName("inline-skill-list");
-    for (let list of inlineSkillLists) {
+    const inlineSkillLists = html[0].getElementsByClassName("inline-skill-list");
+    for (const list of inlineSkillLists) {
       const spans = list.childNodes;
-      let complist = [];
-      for (let sk of spans) {
+      const complist = [];
+      for (const sk of spans) {
         if (sk.tagName == "SPAN") {
           complist.push(sk);
         }
@@ -66,17 +71,17 @@ export function alphabSort(html, data) {
             return strNoAccent(a.firstElementChild.innerText) > strNoAccent(b.firstElementChild.innerText) ? 1 : -1;
           }
         });
-        for (let sk of complist) {
+        for (const sk of complist) {
           list.appendChild(sk);
         }
       }
     }
 
-    let SkillListEdit = html[0].getElementsByClassName("skill-list-edit");
-    for (let list of SkillListEdit) {
+    const SkillListEdit = html[0].getElementsByClassName("skill-list-edit");
+    for (const list of SkillListEdit) {
       const divs = list.childNodes;
-      let complist = [];
-      for (let sk of divs) {
+      const complist = [];
+      for (const sk of divs) {
         if (sk.tagName == "DIV") {
           complist.push(sk);
         }
@@ -86,16 +91,16 @@ export function alphabSort(html, data) {
             return strNoAccent(a.firstElementChild.innerText) > strNoAccent(b.firstElementChild.innerText) ? 1 : -1;
           }
         });
-        for (let sk of complist) {
+        for (const sk of complist) {
           list.appendChild(sk);
         }
       }
     }
-    let AttListEdit = html[0].getElementsByClassName("attribut-list-edit");
-    for (let list of AttListEdit) {
+    const AttListEdit = html[0].getElementsByClassName("attribut-list-edit");
+    for (const list of AttListEdit) {
       const spans = list.childNodes;
-      let complist = [];
-      for (let sk of spans) {
+      const complist = [];
+      for (const sk of spans) {
         if (sk.tagName == "SPAN") {
           complist.push(sk);
         }
@@ -105,7 +110,7 @@ export function alphabSort(html, data) {
             return strNoAccent(a.firstElementChild.innerText) > strNoAccent(b.firstElementChild.innerText) ? 1 : -1;
           }
         });
-        for (let sk of complist) {
+        for (const sk of complist) {
           list.appendChild(sk);
         }
       }

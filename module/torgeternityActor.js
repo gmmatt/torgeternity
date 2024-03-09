@@ -1,21 +1,29 @@
 import { getTorgValue } from "./torgchecks.js";
 
+/**
+ *
+ */
 export default class torgeternityActor extends Actor {
+  /**
+   *
+   */
   prepareBaseData() {
-    //Here Effects are not yet applied
-    //Set Values for All Characters
+    // Here Effects are not yet applied
+    // Set Values for All Characters
 
     if ((this._source.type === "stormknight") | (this._source.type === "threat")) {
       // Base Fatigue
       this.system.other.fatigue = 2;
 
       if (this.system.other.possibilities === false) {
-        //Set Possiblities to 3, as this is most likely the value a Storm Knight starts with
+        // Set Possiblities to 3, as this is most likely the value a Storm Knight starts with
         if (this._source.type === "stormknight") this.system.other.possibilities = 3;
         else {
           this.system.other.possibilities = 0;
-          this.update({ "prototypeToken.texture.src": "systems/torgeternity/images/icons/threat-token.webp", img: "systems/torgeternity/images/icons/threat.webp" });
-
+          this.update({
+            "prototypeToken.texture.src": "systems/torgeternity/images/icons/threat-token.webp",
+            img: "systems/torgeternity/images/icons/threat.webp",
+          });
         }
       }
     }
@@ -33,18 +41,18 @@ export default class torgeternityActor extends Actor {
 
       // Set base wounds to 3
       this.system.wounds.max = 3;
-      //Set base shock to Spirit
+      // Set base shock to Spirit
       this.system.shock.max = this.system.attributes.spirit;
-      //Set base armor to zero
+      // Set base armor to zero
       this.system.other.armor = 0;
-      //Set base toughness
+      // Set base toughness
       this.system.other.toughness = parseInt(this.system.attributes.strength) + parseInt(this.system.other.armor);
 
-      //Set axioms based on home reality
-      let magicAxiom = this.system.axioms.magic;
-      let socialAxiom = this.system.axioms.social;
-      let spiritAxiom = this.system.axioms.spirit;
-      let techAxiom = this.system.axioms.tech;
+      // Set axioms based on home reality
+      const magicAxiom = this.system.axioms.magic;
+      const socialAxiom = this.system.axioms.social;
+      const spiritAxiom = this.system.axioms.spirit;
+      const techAxiom = this.system.axioms.tech;
       switch (this.system.other.cosm) {
         case "coreEarth":
           this.system.axioms.magic = 9;
@@ -103,7 +111,7 @@ export default class torgeternityActor extends Actor {
           break;
       }
 
-      //Set clearance level
+      // Set clearance level
       if (this.system.xp.earned < 50) {
         this.system.details.clearance = "alpha";
       } else if (this.system.xp.earned < 200) {
@@ -116,10 +124,10 @@ export default class torgeternityActor extends Actor {
         this.system.details.clearance = "omega";
       }
 
-      //Set armor and shield toggle states
-      var i;
+      // Set armor and shield toggle states
+      let i;
       for (i = 0; i < this.items.length; i++) {
-        var item = this.items[i];
+        const item = this.items[i];
         if (item.type === "shield") {
           if (item.system.equipped === true) {
             this.items[i].system.equippedClass = "item-equipped";
@@ -137,12 +145,15 @@ export default class torgeternityActor extends Actor {
       }
     }
 
-    //Set derived values for vehicles
+    // Set derived values for vehicles
     if (this._source.type === "vehicle") {
       if (this.img.includes("mystery-man")) {
-        this.update({ "prototypeToken.texture.src": "systems/torgeternity/images/icons/vehicle-Token.webp", img: "systems/torgeternity/images/icons/vehicle.webp" });
+        this.update({
+          "prototypeToken.texture.src": "systems/torgeternity/images/icons/vehicle-Token.webp",
+          img: "systems/torgeternity/images/icons/vehicle.webp",
+        });
       }
-      var convertedPrice = 0;
+      let convertedPrice = 0;
       switch (this.system.price.magnitude) {
         case "ones":
           convertedPrice = this.system.price.dollars;
@@ -157,7 +168,7 @@ export default class torgeternityActor extends Actor {
           convertedPrice = parseInt(this.system.price.dollars * 1000000000);
       }
       this.system.price.value = getTorgValue(convertedPrice);
-      let speedValue = parseInt(getTorgValue(this.system.topSpeed.kph) + 2);
+      const speedValue = parseInt(getTorgValue(this.system.topSpeed.kph) + 2);
       this.system.topSpeed.value = speedValue;
       let speedPenalty = 0;
       if (speedValue < 11) {
@@ -175,11 +186,14 @@ export default class torgeternityActor extends Actor {
     }
   }
 
+  /**
+   *
+   */
   prepareDerivedData() {
-    //Here Effects are applied, whatever follow cannot be directly affected by Effects
+    // Here Effects are applied, whatever follow cannot be directly affected by Effects
 
     // Skillsets
-    var skillset = this.system.skills;
+    const skillset = this.system.skills;
 
     // Derive Skill values for Storm Knights
     //
@@ -188,7 +202,7 @@ export default class torgeternityActor extends Actor {
     // with possibility to use same path for effects => system.skills.xxx.adds
 
     if ((this._source.type === "stormknight") | (this._source.type === "threat")) {
-      for (let [name, skill] of Object.entries(skillset)) {
+      for (const [name, skill] of Object.entries(skillset)) {
         if (this._source.system.skills[name].adds === null) {
           if (skill.unskilledUse === 1) {
             skill.value =
@@ -204,7 +218,7 @@ export default class torgeternityActor extends Actor {
     }
 
     if ((this._source.type === "stormknight") | (this._source.type === "threat")) {
-      //Set base unarmedDamage from interaction
+      // Set base unarmedDamage from interaction
       this.system.unarmedDamage = this.system.attributes.strength + (this.system?.unarmedDamageMod | 0);
 
       // Set Defensive Values based on modified attributes
@@ -256,7 +270,7 @@ export default class torgeternityActor extends Actor {
     }
 
     // Other derived attributes for Storm Knights
-    if (this._source.type === "stormknight" | this._source.type === "threat") {
+    if ((this._source.type === "stormknight") | (this._source.type === "threat")) {
       mergeObject(
         this.prototypeToken,
         {
@@ -266,13 +280,13 @@ export default class torgeternityActor extends Actor {
         { overwrite: true }
       );
 
-      //Set base move and run
+      // Set base move and run
       this.system.other.move = this.system.attributes.dexterity;
       this.system.other.run = parseInt(this.system.attributes.dexterity) * 3;
       //
-      //Apply the moveMod effect
+      // Apply the moveMod effect
       const listChanges = [];
-      var computeMove = this.system.other.move;
+      let computeMove = this.system.other.move;
       this.appliedEffects.forEach((ef) =>
         ef.changes.forEach((k) => {
           if (k.key === "system.other.moveMod") listChanges.push(k);
@@ -310,9 +324,9 @@ export default class torgeternityActor extends Actor {
         });
       this.system.other.move = computeMove;
       //
-      //Apply the runMod effect
+      // Apply the runMod effect
       const listRun = [];
-      var computeRun = this.system.other.run;
+      let computeRun = this.system.other.run;
       this.appliedEffects.forEach((ef) =>
         ef.changes.forEach((k) => {
           if (k.key === "system.other.runMod") listRun.push(k);
@@ -350,20 +364,21 @@ export default class torgeternityActor extends Actor {
         });
       this.system.other.run = computeRun;
       //
-    };
+    }
     if (game.user.isGM) {
-      var malus = this.effects.find(ef => ef.name === "Malus");
+      const malus = this.effects.find((ef) => ef.name === "Malus");
       if (malus?.disabled) {
         try {
           malus.delete();
           console.log("Effacé dans l'actor");
-        }
-        catch (e) {
-        }
-      };
+        } catch (e) {}
+      }
     }
   }
 
+  /**
+   *
+   */
   applyActiveEffects() {
     super.applyActiveEffects();
 
@@ -390,7 +405,10 @@ export default class torgeternityActor extends Actor {
     } else this.system.darknessModifier = 0;
   }
 
-  //adding a method to get defauld stormknight cardhand
+  // adding a method to get defauld stormknight cardhand
+  /**
+   *
+   */
   getDefaultHand() {
     if (game.settings.get("torgeternity", "deckSetting").stormknights.hasOwnProperty(this.id)) {
       return game.cards.get(game.settings.get("torgeternity", "deckSetting").stormknights[this.id]);
@@ -401,37 +419,43 @@ export default class torgeternityActor extends Actor {
     }
   }
 
+  /**
+   *
+   */
   async createDefaultHand() {
     // creating a card hand then render it
-    let cardData = {
+    const cardData = {
       name: this.name,
       type: "hand",
       ownership: this.getHandOwnership(),
     };
-    let characterHand = await Cards.create(cardData);
+    const characterHand = await Cards.create(cardData);
 
     // getting ids of actor and card hand
-    let actorId = this.id;
-    let handId = characterHand.id;
+    const actorId = this.id;
+    const handId = characterHand.id;
 
     // storing ids in game.settings
-    let settingData = game.settings.get("torgeternity", "deckSetting");
+    const settingData = game.settings.get("torgeternity", "deckSetting");
     settingData.stormknights[actorId] = handId;
     game.settings.set("torgeternity", "deckSetting", settingData);
 
-    //return the hand
+    // return the hand
     return characterHand;
   }
 
-  //return a permission update object for use with the corresponding hand - which has the same owners as the SK, the default as observer, and deletes other permissions
+  // return a permission update object for use with the corresponding hand - which has the same owners as the SK, the default as observer, and deletes other permissions
+  /**
+   *
+   */
   getHandOwnership() {
-    let handOwnership = duplicate(this.ownership);
-    for (let key of Object.keys(handOwnership)) {
-      //remove any permissions that are not owner
+    const handOwnership = duplicate(this.ownership);
+    for (const key of Object.keys(handOwnership)) {
+      // remove any permissions that are not owner
       if (handOwnership[key] < CONST.DOCUMENT_OWNERSHIP_LEVELS.OWNER) {
         delete handOwnership[key];
       }
-      //set default permission to observer
+      // set default permission to observer
       handOwnership.default = CONST.DOCUMENT_OWNERSHIP_LEVELS.OBSERVER;
     }
     return handOwnership;

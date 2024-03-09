@@ -1,7 +1,10 @@
 import deckSettingMenu from "./cards/cardSettingMenu.js";
 
+/**
+ *
+ */
 export function registerTorgSettings() {
-  //--------welcome message
+  // --------welcome message
 
   game.settings.register("torgeternity", "welcomeMessage", {
     // game.setting.register("NameOfTheModule", "VariableName",
@@ -13,7 +16,7 @@ export function registerTorgSettings() {
     default: true, // The default value for the setting
   });
 
-  //---------Set up Cards
+  // ---------Set up Cards
   game.settings.register("torgeternity", "setUpCards", {
     name: "torgeternity.settingMenu.setupCards.name", // Register a module setting with checkbox
     hint: "torgeternity.settingMenu.setupCards.hint", // Description of the settings
@@ -38,7 +41,7 @@ export function registerTorgSettings() {
         });
 
         */
-  //GM Screen
+  // GM Screen
   game.settings.register("torgeternity", "gmScreen", {
     name: "torgeternity.settingMenu.gmScreen.name", // Register a module setting with checkbox
     hint: "torgeternity.settingMenu.gmScreen.hint", // Description of the settings
@@ -49,7 +52,7 @@ export function registerTorgSettings() {
     default: "none",
   });
 
-  //Hide Compendiums
+  // Hide Compendiums
   game.settings.register("torgeternity", "hideForeignCompendium", {
     name: "torgeternity.settingMenu.hideForeignCompendium.name", // Register a module setting with checkbox
     hint: "torgeternity.settingMenu.hideForeignCompendium.hint", // Description of the settings
@@ -60,7 +63,7 @@ export function registerTorgSettings() {
     onChange: () => window.location.reload(),
   });
 
-  /*//Show always details in Chatcards or keep it tugged in
+  /* //Show always details in Chatcards or keep it tugged in
   game.settings.register("torgeternity", "showCheckDetails", {
     name: "torgeternity.settingMenu.showCheckDetails.name",
     hint: "torgeternity.settingMenu.showCheckDetails.hint",
@@ -78,8 +81,8 @@ export function registerTorgSettings() {
     scope: "client",
     config: true,
     type: Boolean,
-    default: false
-  })
+    default: false,
+  });
 
   game.settings.register("torgeternity", "useRenderedTorgDice", {
     name: "torgeternity.settingMenu.useRenderedTorgDice.name",
@@ -87,7 +90,7 @@ export function registerTorgSettings() {
     scope: "client",
     config: true,
     type: Boolean,
-    default: true
+    default: true,
   });
 
   game.settings.register("torgeternity", "autoDamages", {
@@ -135,7 +138,7 @@ export function registerTorgSettings() {
   });
 
   // disabling the clearance and XP for players
-  //---------Set up Cards
+  // ---------Set up Cards
   game.settings.register("torgeternity", "disableXP", {
     name: "torgeternity.settingMenu.disableXP.name", // Register a module setting with checkbox
     hint: "torgeternity.settingMenu.disableXP.hint", // Description of the settings
@@ -161,11 +164,11 @@ export function registerTorgSettings() {
     default: "1.0.0",
   });
 
-  //Hidden setting to determine whether module image updates are needed after migrating system images on intial update
+  // Hidden setting to determine whether module image updates are needed after migrating system images on intial update
   game.settings.register("torgeternity", "moduleImageUpdate", {
     scope: "world",
     config: false,
     type: Boolean,
     default: false,
-  });  
+  });
 }

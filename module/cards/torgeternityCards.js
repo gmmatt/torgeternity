@@ -1,4 +1,13 @@
+/**
+ *
+ */
 export class torgeternityCards extends Cards {
+  /**
+   *
+   * @param source
+   * @param action
+   * @param context
+   */
   _postChatNotification(source, action, context) {
     /* 
         return ChatMessage.create ({        

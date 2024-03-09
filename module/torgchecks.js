@@ -1,22 +1,25 @@
-
-import { testDialog } from "/systems/torgeternity/module/test-dialog.js";
+import { TestDialog } from "/systems/torgeternity/module/test-dialog.js";
 import { checkUnskilled } from "/systems/torgeternity/module/sheets/torgeternityActorSheet.js";
 
+/**
+ *
+ * @param test
+ */
 export async function renderSkillChat(test) {
-  if (test?.targetAll.length != 0) { }
-  else test.targetAll = [test.target];
-  //disable DSN (if used) for 'every' message (want to show only one dice despite many targets)
-  try { game.dice3d.messageHookDisabled = true; }
-  catch (e) { };
+  if (test?.targetAll.length != 0) {
+  } else test.targetAll = [test.target];
+  // disable DSN (if used) for 'every' message (want to show only one dice despite many targets)
+  try {
+    game.dice3d.messageHookDisabled = true;
+  } catch (e) {}
   test.applyDebuffLabel = "display:none";
   test.applyDamLabel = "display:none";
-  for (var i = 0; i < test.targetAll.length; i++) {
-    var target = test.targetAll[i];
+  for (let i = 0; i < test.targetAll.length; i++) {
+    const target = test.targetAll[i];
     test.target = target;
     test.sizeModifier = test.sizeModifierAll[i];
     test.vulnerableModifier = test.vulnerableModifierAll[i];
-    var currentTarget = target;
-
+    const currentTarget = target;
 
     //
     // Check to see if we already have a chat title from a chat card roll. If not, Set title for Chat Message in test.chatTitle //
@@ -24,13 +27,19 @@ export async function renderSkillChat(test) {
     if (!test.chatTitle) {
       switch (test.testType) {
         case "attribute":
-          var localId = "torgeternity.attributes." + test.skillName;
-          test.chatTitle = game.i18n.localize(localId) + " " + game.i18n.localize('torgeternity.chatText.test') + " ";
+          test.chatTitle =
+            game.i18n.localize("torgeternity.attributes." + test.skillName) +
+            " " +
+            game.i18n.localize("torgeternity.chatText.test") +
+            " ";
           break;
         case "skill":
           if (test.customSkill != "true") {
-            var localId = "torgeternity.skills." + test.skillName;
-            test.chatTitle = game.i18n.localize(localId) + " " + game.i18n.localize('torgeternity.chatText.test') + " ";
+            test.chatTitle =
+              game.i18n.localize("torgeternity.skills." + test.skillName) +
+              " " +
+              game.i18n.localize("torgeternity.chatText.test") +
+              " ";
             break;
           } else {
             test.chatTitle = test.skillName + " ";
@@ -38,8 +47,11 @@ export async function renderSkillChat(test) {
           }
         case "interactionAttack":
         case "attack":
-          var localId = "torgeternity.skills." + test.skillName;
-          test.chatTitle = game.i18n.localize(localId) + " " + game.i18n.localize("torgeternity.chatText.attack") + " ";
+          test.chatTitle =
+            game.i18n.localize("torgeternity.skills." + test.skillName) +
+            " " +
+            game.i18n.localize("torgeternity.chatText.attack") +
+            " ";
           break;
         case "soak":
           test.chatTitle = game.i18n.localize("torgeternity.sheetLabels.soakRoll") + " ";
@@ -48,7 +60,7 @@ export async function renderSkillChat(test) {
           test.chatTitle = game.i18n.localize("torgeternity.sheetLabels.activeDefense") + " ";
           break;
         case "power":
-          test.chatTitle = test.powerName + " " + game.i18n.localize('torgeternity.chatText.test') + " ";
+          test.chatTitle = test.powerName + " " + game.i18n.localize("torgeternity.chatText.test") + " ";
           break;
         case "chase":
           test.chatTitle = game.i18n.localize("torgeternity.chatText.chase") + " ";
@@ -60,7 +72,7 @@ export async function renderSkillChat(test) {
           test.chatTitle = game.i18n.localize("torgeternity.chatText.vehicleBase") + " ";
           break;
         default:
-          test.chatTitle = test.skillName + " " + game.i18n.localize('torgeternity.chatText.test') + " ";
+          test.chatTitle = test.skillName + " " + game.i18n.localize("torgeternity.chatText.test") + " ";
       }
     }
 
@@ -119,14 +131,14 @@ export async function renderSkillChat(test) {
         if (target.skills.conjuration.value && target.skills.conjuration.value != "-") {
           test.DN = target.skills.conjuration.value;
         } else {
-          test.DN = target.attributes.spirit
+          test.DN = target.attributes.spirit;
         }
         break;
       case "targetDivination":
         if (target.skills.divination.value && target.skills.divination.value != "-") {
           test.DN = target.skills.divination.value;
         } else {
-          test.DN = target.attributes.mind
+          test.DN = target.attributes.mind;
         }
         break;
       case "targetDodge":
@@ -144,10 +156,10 @@ export async function renderSkillChat(test) {
         break;
       case "targetKinesis":
         if (target.skills.kinesis.value && target.skills.kinesis.value != "-") {
-          test.DN = target.skills.kinesis.value
+          test.DN = target.skills.kinesis.value;
         } else {
-          test.DN = target.attributes.spirit
-        };
+          test.DN = target.attributes.spirit;
+        }
         break;
       case "targetManeuver":
         test.DN = target.defenses.maneuver;
@@ -157,16 +169,16 @@ export async function renderSkillChat(test) {
         break;
       case "targetPrecognition":
         if (target.skills.precognition.value && target.skills.precognition.value != "-") {
-          test.DN = target.skills.precognition.value
+          test.DN = target.skills.precognition.value;
         } else {
-          test.DN = target.attributes.mind
+          test.DN = target.attributes.mind;
         }
         break;
       case "targetStealth":
         if (target.skills.stealth.value) {
-          test.DN = target.skills.stealth.value
+          test.DN = target.skills.stealth.value;
         } else {
-          test.DN = target.attributes.dexterity
+          test.DN = target.attributes.dexterity;
         }
         break;
       case "targetTaunt":
@@ -180,46 +192,46 @@ export async function renderSkillChat(test) {
         break;
       case "targetWillpower":
         if (target.skills.willpower.value) {
-          test.DN = target.skills.willpower.value
+          test.DN = target.skills.willpower.value;
         } else {
-          test.DN = target.attributes.spirit
+          test.DN = target.attributes.spirit;
         }
         break;
       case "targetWillpowerMind":
         if (target.skills.willpower.value) {
-          test.DN = target.skills.willpower.value - target.attributes.spirit + target.attributes.mind
+          test.DN = target.skills.willpower.value - target.attributes.spirit + target.attributes.mind;
         } else {
-          test.DN = target.attributes.mind
+          test.DN = target.attributes.mind;
         }
         break;
       case "targetLandVehicles":
         if (target.skills.landVehicles.value) {
-          test.DN = target.skills.landVehicles.value
+          test.DN = target.skills.landVehicles.value;
         } else {
-          test.DN = target.attributes.dexterity
+          test.DN = target.attributes.dexterity;
         }
         break;
       case "targetAirVehicles":
         if (target.skills.airVehicles.value) {
-          test.DN = target.skills.airVehicles.value
+          test.DN = target.skills.airVehicles.value;
         } else {
-          test.DN = target.attributes.dexterity
+          test.DN = target.attributes.dexterity;
         }
         break;
       case "targetWaterVehicles":
         if (target.skills.waterVehicles.value) {
-          test.DN = target.skills.waterVehicles.value
+          test.DN = target.skills.waterVehicles.value;
         } else {
-          test.DN = target.attributes.dexterity
+          test.DN = target.attributes.dexterity;
         }
         break;
       case "highestSpeed":
         // Find the fastest participant in the active combat
         const combatants = game.combats.active.turns;
         const combatantCount = game.combats.active.turns.length;
-        var combatantRun = 0;
-        var combatantSpeed = 0;
-        var highestSpeed = 0;
+        const combatantRun = 0;
+        const combatantSpeed = 0;
+        const highestSpeed = 0;
         for (let i = 0; i < combatantCount; i++) {
           if (combatants[i].actor.type === "vehicle") {
             combatantSpeed = combatants[i].actor.system.topSpeed.value;
@@ -228,7 +240,7 @@ export async function renderSkillChat(test) {
             combatantSpeed = getTorgValue(combatantRun);
           }
           if (combatantSpeed > highestSpeed) {
-            highestSpeed = combatantSpeed
+            highestSpeed = combatantSpeed;
           }
         }
         test.DN = highestSpeed;
@@ -237,24 +249,26 @@ export async function renderSkillChat(test) {
         test.DN = target.defenses.vehicle;
         break;
       default:
-        test.DN = 10
+        test.DN = 10;
     }
-
 
     //
     // -----------------------Determine Bonus---------------------------- //
 
     // Do we display the unskilled label for a Storm Knight?
-    var unskilledTest = false;
-    var myActor = test.actor.includes("Token") ? fromUuidSync(test.actor) : fromUuidSync(test.actor);
+    let unskilledTest = false;
+    const testActor = test.actor.includes("Token") ? fromUuidSync(test.actor) : fromUuidSync(test.actor);
     if (
-      (myActor.type === "stormknight") &
+      (testActor.type === "stormknight") &
       (test.testType != "attribute") &
       (test.testType != "activeDefense") &
       (test.testType != "activeDefenseUpdate") &
       (test.customSkill != "true")
     ) {
-      if ((myActor.system.skills[test.skillName].adds === 0) | (myActor.system.skills[test.skillName].adds === null)) {
+      if (
+        (testActor.system.skills[test.skillName].adds === 0) |
+        (testActor.system.skills[test.skillName].adds === null)
+      ) {
         unskilledTest = true;
       }
     }
@@ -268,7 +282,7 @@ export async function renderSkillChat(test) {
     // Generate roll, if needed
     if ((test.rollTotal === 0) & (test.previousBonus === false)) {
       // Generate dice roll
-      var dice = "1d20x10x20";
+      let dice = "1d20x10x20";
       if (unskilledTest === true) {
         dice = "1d20x10";
       }
@@ -281,26 +295,31 @@ export async function renderSkillChat(test) {
       if (!test.isFav) {
         test.isFavStyle = "pointer-events:none;color:gray;display:none";
       }
-      if (test.disfavored) {//even if explosion occured, we keep first die
+      if (test.disfavored) {
+        // even if explosion occured, we keep first die
         test.rollTotal = test.diceroll.dice[0].results[0].result;
-        if (test.diceroll.dice[0].results.length > 1) {//=> explosion occured, so remove disfavored
+        if (test.diceroll.dice[0].results.length > 1) {
+          // => explosion occured, so remove disfavored
           test.disfavored = false;
           test.chatNote += game.i18n.localize("torgeternity.sheetLabels.explosionCancelled");
         }
       } else test.rollTotal = test.diceroll.total;
     }
-  test.unskilledTest = unskilledTest;
+    test.unskilledTest = unskilledTest;
 
-    //Add the dices list in test
-    if (i === 0) {                    //add the dices only once, not for each target
-      if (test.diceroll) {            //to avoid errors if +3 cards
-        if (test.diceList) {          //if the array exists, concat the new dices
+    // Add the dices list in test
+    if (i === 0) {
+      // add the dices only once, not for each target
+      if (test.diceroll) {
+        // to avoid errors if +3 cards
+        if (test.diceList) {
+          // if the array exists, concat the new dices
           test.diceList = test.diceList.concat(test.diceroll.dice[0].values);
-        } else {                      //initialize it if not
+        } else {
+          // initialize it if not
           test.diceList = test.diceroll.dice[0].values;
         }
       }
-
     }
 
     //
@@ -333,7 +352,6 @@ export async function renderSkillChat(test) {
       test.rollTotal = undefined;
       test.combinedRollTotal = "-";
     }
-
 
     // Raise bonus to 1 if actively defending
     if (test.testType === "activeDefense" || test.testType === "activeDefenseUpdate") {
@@ -469,11 +487,12 @@ export async function renderSkillChat(test) {
       test.modifiers += 4;
       test.modifierText += game.i18n.localize("torgeternity.chatText.check.modifier.allOutAttack") + "\n";
 
-      //if it's an all-out-attack, apply very vulnerable to attacker
-      let ownToken = canvas.tokens.placeables.find(tok => test.actor.includes(tok.document.actor.uuid));
-      if (!!ownToken & i === 0) {
+      // if it's an all-out-attack, apply very vulnerable to attacker
+      const ownToken = canvas.tokens.placeables.find((tok) => test.actor.includes(tok.document.actor.uuid));
+      if (!!ownToken & (i === 0)) {
         if (!ownToken.actor.statuses.find((d) => d === "veryVulnerable")) {
-          if (ownToken.actor.statuses.find((d) => d === "vulnerable")) { //take away vulnerable effect
+          if (ownToken.actor.statuses.find((d) => d === "vulnerable")) {
+            // take away vulnerable effect
             const ef = CONFIG.statusEffects.find((e) => e.id === "vulnerable");
             await ownToken.toggleEffect(ef, { active: false });
           }
@@ -535,63 +554,67 @@ export async function renderSkillChat(test) {
       test.modifierLabel = "display:none";
     }
 
-  // Add +3 cards to bonus
-  // Initialize cardsPlayed if null
-  if (!test.cardsPlayed) {
-    test.cardsPlayed = 0;
-  }
-  const tempBonus = parseInt(test.bonus);
-  test.bonus = parseInt(tempBonus) + parseInt(test.cardsPlayed) * 3;
+    // Add +3 cards to bonus
+    // Initialize cardsPlayed if null
+    if (!test.cardsPlayed) {
+      test.cardsPlayed = 0;
+    }
+    const tempBonus = parseInt(test.bonus);
+    test.bonus = parseInt(tempBonus) + parseInt(test.cardsPlayed) * 3;
 
-  test.rollResult = parseInt(parseInt(test.skillValue) + parseInt(test.bonus) + parseInt(test.modifiers));
+    test.rollResult = parseInt(parseInt(test.skillValue) + parseInt(test.bonus) + parseInt(test.modifiers));
 
-  // Determine Outcome
-  test.outcome = null;
-  test.actionTotalContent = game.i18n.localize("torgeternity.chatText.check.result.actionTotal");
-  const testDifference = test.rollResult - test.DN;
-  const dnLabel = "torgeternity.dnTypes." + test.DNDescriptor;
-  test.actionTotalContent =
-    game.i18n.localize("torgeternity.chatText.check.result.actionTotal") +
-    " " +
-    test.rollResult +
-    " vs. " +
-    test.DN +
-    " " +
-    game.i18n.localize(dnLabel);
-  if (testDifference < 0) {
-    test.outcome = game.i18n.localize("torgeternity.chatText.check.result.failure");
-    //test.outcomeColor = "color: red"
-    if (game.settings.get("torgeternity", "useColorBlindnessColors")) {
-      test.outcomeColor = "color: red";
+    // Determine Outcome
+    test.outcome = null;
+    test.actionTotalContent = game.i18n.localize("torgeternity.chatText.check.result.actionTotal");
+    const testDifference = test.rollResult - test.DN;
+    const dnLabel = "torgeternity.dnTypes." + test.DNDescriptor;
+    test.actionTotalContent =
+      game.i18n.localize("torgeternity.chatText.check.result.actionTotal") +
+      " " +
+      test.rollResult +
+      " vs. " +
+      test.DN +
+      " " +
+      game.i18n.localize(dnLabel);
+    if (testDifference < 0) {
+      test.outcome = game.i18n.localize("torgeternity.chatText.check.result.failure");
+      // test.outcomeColor = "color: red"
+      if (game.settings.get("torgeternity", "useColorBlindnessColors")) {
+        test.outcomeColor = "color: red";
+      } else {
+        test.outcomeColor =
+          "color: red;text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000, 0px 0px 15px black;";
+      }
+      test.soakWounds = 0;
+    } else if (testDifference > 9) {
+      test.outcome = game.i18n.localize("torgeternity.chatText.check.result.outstandingSuccess");
+      if (game.settings.get("torgeternity", "useColorBlindnessColors")) {
+        test.outcomeColor = "color: rgb(44, 179, 44)";
+      } else {
+        test.outcomeColor =
+          "color: green;text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000, 0px 0px 15px black;";
+      }
+      test.soakWounds = "all";
+    } else if (testDifference > 4) {
+      test.outcome = game.i18n.localize("torgeternity.chatText.check.result.goodSuccess");
+      if (game.settings.get("torgeternity", "useColorBlindnessColors")) {
+        test.outcomeColor = "color: rgb(44, 179, 44)";
+      } else {
+        test.outcomeColor =
+          "color: green;text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000, 0px 0px 15px black;";
+      }
+      test.soakWounds = 2;
     } else {
-      test.outcomeColor = "color: red;text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000, 0px 0px 15px black;";
+      test.outcome = game.i18n.localize("torgeternity.chatText.check.result.standartSuccess");
+      if (game.settings.get("torgeternity", "useColorBlindnessColors")) {
+        test.outcomeColor = "color: rgb(44, 179, 44)";
+      } else {
+        test.outcomeColor =
+          "color: green;text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000, 0px 0px 15px black;";
+      }
+      test.soakWounds = 1;
     }
-    test.soakWounds = 0;
-  } else if (testDifference > 9) {
-    test.outcome = game.i18n.localize("torgeternity.chatText.check.result.outstandingSuccess");
-    if (game.settings.get("torgeternity", "useColorBlindnessColors")) {
-      test.outcomeColor = "color: rgb(44, 179, 44)";
-    } else {
-      test.outcomeColor = "color: green;text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000, 0px 0px 15px black;";
-    }
-    test.soakWounds = "all";
-  } else if (testDifference > 4) {
-    test.outcome = game.i18n.localize("torgeternity.chatText.check.result.goodSuccess");
-    if (game.settings.get("torgeternity", "useColorBlindnessColors")) {
-      test.outcomeColor = "color: rgb(44, 179, 44)";
-    } else {
-      test.outcomeColor = "color: green;text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000, 0px 0px 15px black;";
-    }
-    test.soakWounds = 2;
-  } else {
-    test.outcome = game.i18n.localize("torgeternity.chatText.check.result.standartSuccess");
-    if (game.settings.get("torgeternity", "useColorBlindnessColors")) {
-      test.outcomeColor = "color: rgb(44, 179, 44)";
-    } else {
-      test.outcomeColor = "color: green;text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000, 0px 0px 15px black;";
-    }
-    test.soakWounds = 1;
-  }
 
     // Turn on + sign for modifiers?
     if (test.modifiers >= 1) {
@@ -601,15 +624,17 @@ export async function renderSkillChat(test) {
     }
 
     // Choose Text to Display as Result
-    var myActor = fromUuidSync(test.actor);
+    const myActor = fromUuidSync(test.actor);
     if (test.rollTotal === 1 && !(test.testType === "activeDefenseUpdate" || test.testType === "activeDefense")) {
-      //Roll 1 and not defense = Mishape
+      // Roll 1 and not defense = Mishape
       test.resultText = game.i18n.localize("torgeternity.chatText.check.result.mishape");
       test.outcomeColor = "color: purple";
       test.resultTextColor = "color: purple";
       if (!game.settings.get("torgeternity", "useColorBlindnessColors")) {
-        test.outcomeColor += ";text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000, 0px 0px 15px black;";
-        test.resultTextColor += ";text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000, 0px 0px 15px black;";
+        test.outcomeColor +=
+          ";text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000, 0px 0px 15px black;";
+        test.resultTextColor +=
+          ";text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000, 0px 0px 15px black;";
       }
       test.actionTotalLabel = "display:none";
       test.possibilityStyle = "display:none";
@@ -644,10 +669,10 @@ export async function renderSkillChat(test) {
       }
       // Create and Manage Active Effect if SK is Actively Defending (thanks Durak!)
     } else if (test.testType === "activeDefense") {
-      //Click on defense
-      var oldAD = myActor.effects.find((a) => a.name === "ActiveDefense"); //Search for an ActiveDefense effect
-      var shieldOn = myActor.items.filter((it) => it.type === "shield" && it.system.equipped); //Search for an equipped shield (an array)
-      var shieldBonus = 0; //set the shieldBonus to 0 then check if the actor is Vulnerable, if true, shield bonus stay 0
+      // Click on defense
+      const oldAD = myActor.effects.find((a) => a.name === "ActiveDefense"); // Search for an ActiveDefense effect
+      const shieldOn = myActor.items.filter((it) => it.type === "shield" && it.system.equipped); // Search for an equipped shield (an array)
+      const shieldBonus = 0; // set the shieldBonus to 0 then check if the actor is Vulnerable, if true, shield bonus stay 0
       if (
         !myActor.effects.find((a) => a.name === game.i18n.localize("torgeternity.statusEffects.vulnerable")) &&
         !myActor.effects.find((a) => a.name === game.i18n.localize("torgeternity.statusEffects.veryVulnerable"))
@@ -655,17 +680,17 @@ export async function renderSkillChat(test) {
         shieldBonus += shieldOn[0]?.system?.bonus || 0;
       }
       if (!oldAD) {
-        //Create it if not present (if it exists, will be deleted farther)
-        let NewActiveDefense = {
-          name: "ActiveDefense", //Add an icon to remind the defense, bigger ? Change color of Defense ?
-          icon: "icons/equipment/shield/heater-crystal-blue.webp", //To change I think, taken in Core, should have a dedicated file
+        // Create it if not present (if it exists, will be deleted farther)
+        const NewActiveDefense = {
+          name: "ActiveDefense", // Add an icon to remind the defense, bigger ? Change color of Defense ?
+          icon: "icons/equipment/shield/heater-crystal-blue.webp", // To change I think, taken in Core, should have a dedicated file
           duration: { rounds: 1 },
           changes: [
             {
-              //Modify all existing "basic" defense in block
-              key: "system.dodgeDefenseMod", //Should need other work for defense vs powers
-              value: test.bonus, //that don't target xxDefense
-              priority: 20, //Create a data.ADB that store the bonus ?
+              // Modify all existing "basic" defense in block
+              key: "system.dodgeDefenseMod", // Should need other work for defense vs powers
+              value: test.bonus, // that don't target xxDefense
+              priority: 20, // Create a data.ADB that store the bonus ?
               mode: 2,
             },
             {
@@ -719,22 +744,22 @@ export async function renderSkillChat(test) {
         test.actionTotalLabel = "display:none";
       }
       if (oldAD) {
-        //if present, reset by deleting
+        // if present, reset by deleting
         fromUuidSync(test.actor)
           .effects.find((a) => a.name === "ActiveDefense")
           .delete();
-        ////
-        let RAD = {
-          //Simple chat message for information
+        // //
+        const RAD = {
+          // Simple chat message for information
           speaker: ChatMessage.getSpeaker(),
-          content: game.i18n.localize("torgeternity.chatText.check.result.resetDefense"), //Need to be implemented if incorporated
+          content: game.i18n.localize("torgeternity.chatText.check.result.resetDefense"), // Need to be implemented if incorporated
         };
         ChatMessage.create(RAD);
         return;
-        ///
+        // /
       }
     } else if (test.testType === "activeDefenseUpdate") {
-      //update bonus in case of bonus roll possibility / up
+      // update bonus in case of bonus roll possibility / up
       // Delete Existing Active Effects
       fromUuidSync(test.actor)
         .effects.find((a) => a.name === "ActiveDefense")
@@ -744,24 +769,24 @@ export async function renderSkillChat(test) {
       }
       test.resultText = "+ " + test.bonus;
       // Create new set of active effects
-      var shieldOn = myActor.items.filter((it) => it.type === "shield" && it.system.equipped); //Search for an equipped shield (an array)
-      var shieldBonus = 0;
+      const shieldOn = myActor.items.filter((it) => it.type === "shield" && it.system.equipped); // Search for an equipped shield (an array)
+      const shieldBonus = 0;
       if (
         !myActor.effects.find((a) => a.name === game.i18n.localize("torgeternity.statusEffects.vulnerable")) &&
         !myActor.effects.find((a) => a.name === game.i18n.localize("torgeternity.statusEffects.veryVulnerable"))
       ) {
         shieldBonus += shieldOn[0]?.system?.bonus || 0;
       }
-      let NewActiveDefense = {
-        name: "ActiveDefense", //Add an icon to remind the defense, bigger ? Change color of Defense ?
-        icon: "icons/equipment/shield/heater-crystal-blue.webp", //To change I think, taken in Core, should have a dedicated file
+      const NewActiveDefense = {
+        name: "ActiveDefense", // Add an icon to remind the defense, bigger ? Change color of Defense ?
+        icon: "icons/equipment/shield/heater-crystal-blue.webp", // To change I think, taken in Core, should have a dedicated file
         duration: { rounds: 1 },
         changes: [
           {
-            //Modify all existing "basic" defense in block
-            key: "system.dodgeDefenseMod", //Should need other work for defense vs powers
-            value: test.bonus, //that don't target xxDefense
-            priority: 20, //Create a data.ADB that store the bonus ?
+            // Modify all existing "basic" defense in block
+            key: "system.dodgeDefenseMod", // Should need other work for defense vs powers
+            value: test.bonus, // that don't target xxDefense
+            priority: 20, // Create a data.ADB that store the bonus ?
             mode: 2,
           },
           {
@@ -818,11 +843,11 @@ export async function renderSkillChat(test) {
     if (test.isAttack === true) {
       test.damageLabel = "display: block";
       // Add damage modifier for vital area hits, if necessary
-      var adjustedDamage = test.damage;
+      let adjustedDamage = test.damage;
       if (test.vitalAreaDamageModifier) {
         adjustedDamage = test.damage + test.vitalAreaDamageModifier;
       }
-      //Check for whether a target is present & turn on display of damage sub-label
+      // Check for whether a target is present & turn on display of damage sub-label
       if (test.target.present === true) {
         test.damageSubLabel = "display:block";
         // If armor and cover can assist, adjust toughness based on AP effects and cover modifier
@@ -861,8 +886,8 @@ export async function renderSkillChat(test) {
             test.targetAdjustedToughness +
             " " +
             game.i18n.localize("torgeternity.chatText.check.result.toughness");
-          //if auto apply damages == true in settings
-          /*if (game.settings.get("torgeternity", "autoDamages")) {
+          // if auto apply damages == true in settings
+          /* if (game.settings.get("torgeternity", "autoDamages")) {
                       applyDamages(torgDamage(adjustedDamage, test.targetAdjustedToughness))
                   }*/
         }
@@ -891,7 +916,8 @@ export async function renderSkillChat(test) {
       test.testType === "stunt" ||
       test.testType === "vehicleBase"
     ) {
-      (test.typeLabel = `${game.i18n.localize("torgeternity.chatText.skillTestLabel")}`), (test.bdStyle = "display:none");
+      (test.typeLabel = `${game.i18n.localize("torgeternity.chatText.skillTestLabel")}`),
+        (test.bdStyle = "display:none");
     } else if (test.testType === "attack") {
       test.typeLabel = `${game.i18n.localize("torgeternity.chatText.skillTestLabel")}`;
     } else if (test.testType === "power") {
@@ -937,14 +963,14 @@ export async function renderSkillChat(test) {
       test.notesLabel = "display:";
     }
 
-    if (test.testType === 'interactionAttack') {
-      if ((test.rollResult - test.DN) >= 0) {
+    if (test.testType === "interactionAttack") {
+      if (test.rollResult - test.DN >= 0) {
         test.damageSubLabel = "display:block";
         test.applyDamLabel = "display:none";
         if (test.target.present) test.applyDebuffLabel = "display:inline";
       } else {
         test.applyDebuffLabel = "display:none";
-        //test.damageSubDescription = "Apply debuff";//game.i18n.localize('torgeternity.chatText.check.result.damage')
+        // test.damageSubDescription = "Apply debuff";//game.i18n.localize('torgeternity.chatText.check.result.damage')
       }
     }
 
@@ -953,7 +979,7 @@ export async function renderSkillChat(test) {
     // record adjustedToughness for each flagged target
     currentTarget.targetAdjustedToughness = test.targetAdjustedToughness;
 
-    let chatData = {
+    const chatData = {
       user: game.user._id,
       speaker: ChatMessage.getSpeaker(),
       owner: test.actor,
@@ -961,37 +987,39 @@ export async function renderSkillChat(test) {
     chatData.speaker.actor = test.actor.id;
     chatData.speaker.alias = test.actor.name;
 
-    const templatePromise = renderTemplate("./systems/torgeternity/templates/partials/skill-card.hbs", test)
+    const templatePromise = renderTemplate("./systems/torgeternity/templates/partials/skill-card.hbs", test);
 
     const messageData = { ...chatData, flags: { torgeternity: { test, currentTarget } } };
 
-    await templatePromise.then(content => {
-      //the 'toMessage(..)' shows the dice formula and result
-      //to see them, just remove comments between there
+    await templatePromise.then((content) => {
+      // the 'toMessage(..)' shows the dice formula and result
+      // to see them, just remove comments between there
       //
-      /*if (test.diceroll != null) {                //
+      /* if (test.diceroll != null) {                //
         messageData.flavor = content;               //
         test.diceroll.toMessage(messageData);       //
-      } else {*/                                    //
-      messageData.content = content;                //
-      ChatMessage.create(messageData);              //
-      /*};*/                                        //and there
+      } else {*/ //
+      messageData.content = content; //
+      ChatMessage.create(messageData); //
+      /* };*/ // and there
     });
-  };
+  }
 
-  //reset tokens targeted, they are printed in the chatCard
+  // reset tokens targeted, they are printed in the chatCard
   await game.user.updateTokenTargets();
   await game.user.broadcastActivity({ targets: [] });
 
-  //roll Dice once, and handle the error if DSN is not installed
+  // roll Dice once, and handle the error if DSN is not installed
   try {
     await game.dice3d.showForRoll(test.diceroll, game.user, true);
     game.dice3d.messageHookDisabled = false;
-  }
-  catch (e) { };
-
+  } catch (e) {}
 }
 
+/**
+ *
+ * @param rollTotal
+ */
 export function torgBonus(rollTotal) {
   let bonus;
   if (rollTotal == 1) {
@@ -1028,6 +1056,10 @@ export function torgBonus(rollTotal) {
   return bonus;
 }
 
+/**
+ *
+ * @param isTrademark
+ */
 export function torgBD(isTrademark) {
   let diceroll;
   if (isTrademark) {
@@ -1039,6 +1071,11 @@ export function torgBD(isTrademark) {
   return diceroll;
 }
 
+/**
+ *
+ * @param damage
+ * @param toughness
+ */
 export function torgDamage(damage, toughness) {
   const damageDiff = parseInt(damage) - parseInt(toughness);
   let damages = {
@@ -1092,20 +1129,24 @@ export function torgDamage(damage, toughness) {
   }
   return damages;
 }
+/**
+ *
+ * @param damageObject
+ * @param targetuuid
+ */
 export async function applyDamages(damageObject, targetuuid) {
-  let vraicible = fromUuidSync(targetuuid);
-  let targetToken = canvas.tokens.placeables.find(tok => targetuuid.includes(tok.document.uuid));//find(tok=> tok.actor.id === targetuuid);
-  //checking if user has target
+  const targetToken = canvas.tokens.placeables.find((tok) => targetuuid.includes(tok.document.uuid)); // find(tok=> tok.actor.id === targetuuid);
+  // checking if user has target
   if (targetToken) {
-    //computing new values
-    let newShock = targetToken.actor.system.shock.value + damageObject.shocks;
-    let newWound = targetToken.actor.system.wounds.value + damageObject.wounds;
-    //updating the target token's  actor
+    // computing new values
+    const newShock = targetToken.actor.system.shock.value + damageObject.shocks;
+    const newWound = targetToken.actor.system.wounds.value + damageObject.wounds;
+    // updating the target token's  actor
     await targetToken.actor.update({
       "system.shock.value": newShock,
       "system.wounds.value": newWound,
     });
-    //too many wounds => apply defeat ? Ko ?
+    // too many wounds => apply defeat ? Ko ?
     if (newWound > targetToken.actor.system.wounds.max) {
       if (!targetToken.actor.statuses.find((d) => d === "dead")) {
         const eff = CONFIG.statusEffects.find((e) => e.id === "dead");
@@ -1126,18 +1167,22 @@ export async function applyDamages(damageObject, targetuuid) {
   }
 }
 
+/**
+ *
+ * @param soaker
+ */
 export async function soakDamages(soaker) {
   const skillName = "reality";
   const attributeName = "spirit";
   const isAttributeTest = false;
-  var skillValue = soaker.system.skills[skillName]?.value || "-";
+  const skillValue = soaker.system.skills[skillName]?.value || "-";
 
   // Before calculating roll, check to see if it can be attempted unskilled; exit test if actor doesn't have required skill
   if (checkUnskilled(skillValue, skillName, soaker)) {
     return;
   }
 
-  let test = {
+  const test = {
     testType: "soak",
     actor: soaker.uuid,
     actorPic: soaker.img,
@@ -1155,46 +1200,56 @@ export async function soakDamages(soaker) {
     rollTotal: 0, // A zero indicates that a rollTotal needs to be generated when renderSkillChat is called //
   };
 
-  let dialog = new testDialog(test);
+  const dialog = new TestDialog(test);
   dialog.render(true);
-  //do reality roll
+  // do reality roll
 }
 
+/**
+ *
+ * @param targetuuid
+ */
 export async function applyStymiedState(targetuuid) {
-  let targetToken = canvas.tokens.placeables.find(tok => tok.document.uuid.includes(targetuuid));
-  //apply Stymied, or veryStymied
-  var eff;
-  var oldEff;
-  if (targetToken.actor.statuses.find(d => d === 'veryStymied')) {
-  } else if (targetToken.actor.statuses.find(d => d === 'stymied')) {
-    oldEff = CONFIG.statusEffects.find(e => e.id === "stymied");
-    eff = CONFIG.statusEffects.find(e => e.id === "veryStymied");
+  const targetToken = canvas.tokens.placeables.find((tok) => tok.document.uuid.includes(targetuuid));
+  // apply Stymied, or veryStymied
+  let eff;
+  let oldEff;
+  if (targetToken.actor.statuses.find((d) => d === "veryStymied")) {
+  } else if (targetToken.actor.statuses.find((d) => d === "stymied")) {
+    oldEff = CONFIG.statusEffects.find((e) => e.id === "stymied");
+    eff = CONFIG.statusEffects.find((e) => e.id === "veryStymied");
   } else {
-    eff = CONFIG.statusEffects.find(e => e.id === "stymied");
-  };
-  if (eff) await targetToken.toggleEffect(eff, { "active": true });
-  if (oldEff) await targetToken.toggleEffect(oldEff, { "active": false });
+    eff = CONFIG.statusEffects.find((e) => e.id === "stymied");
+  }
+  if (eff) await targetToken.toggleEffect(eff, { active: true });
+  if (oldEff) await targetToken.toggleEffect(oldEff, { active: false });
 }
 
+/**
+ *
+ * @param targetuuid
+ */
 export async function applyVulnerableState(targetuuid) {
-  let targetToken = canvas.tokens.placeables.find(tok => targetuuid.includes(tok.document.uuid));
-  //apply Vulnerable, or veryVulnerable
-  var eff;
-  var oldEff;
-  if (targetToken.actor.statuses.find(d => d === 'veryVulnerable')) {
-  } else if (targetToken.actor.statuses.find(d => d === 'vulnerable')) {
-    oldEff = CONFIG.statusEffects.find(e => e.id === "vulnerable");
-    eff = CONFIG.statusEffects.find(e => e.id === "veryVulnerable");
+  const targetToken = canvas.tokens.placeables.find((tok) => targetuuid.includes(tok.document.uuid));
+  // apply Vulnerable, or veryVulnerable
+  let eff;
+  let oldEff;
+  if (targetToken.actor.statuses.find((d) => d === "veryVulnerable")) {
+  } else if (targetToken.actor.statuses.find((d) => d === "vulnerable")) {
+    oldEff = CONFIG.statusEffects.find((e) => e.id === "vulnerable");
+    eff = CONFIG.statusEffects.find((e) => e.id === "veryVulnerable");
   } else {
-    eff = CONFIG.statusEffects.find(e => e.id === "vulnerable");
-  };
-  if (eff) await targetToken.toggleEffect(eff, { "active": true });
-  if (oldEff) await targetToken.toggleEffect(oldEff, { "active": false });
+    eff = CONFIG.statusEffects.find((e) => e.id === "vulnerable");
+  }
+  if (eff) await targetToken.toggleEffect(eff, { active: true });
+  if (oldEff) await targetToken.toggleEffect(oldEff, { active: false });
 }
 
 /**
  * Return the Torg value for a given number
  * This could probably be simplified by using the formula for the famous Torg algorhythm
+ *
+ * @param myNumber
  */
 export function getTorgValue(myNumber) {
   let myValue = 0;

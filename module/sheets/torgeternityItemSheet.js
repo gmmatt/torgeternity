@@ -1,6 +1,13 @@
 import { onManageActiveEffect, prepareActiveEffectCategories } from "/systems/torgeternity/module/effects.js";
 
+/**
+ *
+ */
 export default class torgeternityItemSheet extends ItemSheet {
+  /**
+   *
+   * @param {...any} args
+   */
   constructor(...args) {
     super(...args);
 
@@ -49,6 +56,9 @@ export default class torgeternityItemSheet extends ItemSheet {
     }
   }
 
+  /**
+   *
+   */
   static get defaultOptions() {
     return mergeObject(super.defaultOptions, {
       width: 530,
@@ -71,10 +81,17 @@ export default class torgeternityItemSheet extends ItemSheet {
     });
   }
 
+  /**
+   *
+   */
   get template() {
     return `systems/torgeternity/templates/sheets/${this.item.type}-sheet.html`;
   }
 
+  /**
+   *
+   * @param options
+   */
   async getData(options) {
     const data = await super.getData(options);
 
@@ -87,6 +104,10 @@ export default class torgeternityItemSheet extends ItemSheet {
     return data;
   }
 
+  /**
+   *
+   * @param html
+   */
   activateListeners(html) {
     super.activateListeners(html);
     html.find(".effect-control").click((ev) => {
@@ -102,42 +123,26 @@ export default class torgeternityItemSheet extends ItemSheet {
     });
 
     html.find(".add-enhancement").click((ev) => {
-      var currentShown = this.object.system.pulpPowers.enhancementNumber;
-      if (currentShown < 15) {
-        var newShown = currentShown + 1;
-      } else {
-        var newShown = currentShown;
-      }
+      const currentShown = this.object.system.pulpPowers.enhancementNumber;
+      const newShown = currentShown < 15 ? currentShown + 1 : currentShown;
       this.item.update({ "system.pulpPowers.enhancementNumber": newShown });
     });
 
     html.find(".remove-enhancement").click((ev) => {
-      var currentShown = this.object.system.pulpPowers.enhancementNumber;
-      if (0 < currentShown) {
-        var newShown = currentShown - 1;
-      } else {
-        var newShown = currentShown;
-      }
+      const currentShown = this.object.system.pulpPowers.enhancementNumber;
+      const newShown = 0 < currentShown ? currentShown - 1 : currentShown;
       this.item.update({ "system.pulpPowers.enhancementNumber": newShown });
     });
 
     html.find(".add-limitation").click((ev) => {
-      var currentShown = this.object.system.pulpPowers.limitationNumber;
-      if (currentShown < 10) {
-        var newShown = currentShown + 1;
-      } else {
-        var newShown = currentShown;
-      }
+      const currentShown = this.object.system.pulpPowers.limitationNumber;
+      const newShown = currentShown < 10 ? currentShown + 1 : currentShown;
       this.item.update({ "system.pulpPowers.limitationNumber": newShown });
     });
 
     html.find(".remove-limitation").click((ev) => {
-      var currentShown = this.object.system.pulpPowers.limitationNumber;
-      if (0 < currentShown) {
-        var newShown = currentShown - 1;
-      } else {
-        var newShown = currentShown;
-      }
+      const currentShown = this.object.system.pulpPowers.limitationNumber;
+      const newShown = 0 < currentShown ? currentShown - 1 : currentShown;
       this.item.update({ "system.pulpPowers.limitationNumber": newShown });
     });
   }

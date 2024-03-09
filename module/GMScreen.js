@@ -1,4 +1,10 @@
+/**
+ *
+ */
 export default class GMScreen extends Application {
+  /**
+   *
+   */
   static get defaultOptions() {
     const options = super.defaultOptions;
     options.template = "systems/torgeternity/templates/gmscreen/screen.html";
@@ -11,15 +17,23 @@ export default class GMScreen extends Application {
     return options;
   }
 
+  /**
+   *
+   * @param html
+   */
   activateListeners(html) {
     super.activateListeners(html);
 
     html.find(".screen-panel").click(this.clickPanel.bind(this));
   }
+  /**
+   *
+   * @param evt
+   */
   clickPanel(evt) {
     let cl;
 
-    let GMScreen = this.element.find("#gm-screen")[0];
+    const GMScreen = this.element.find("#gm-screen")[0];
     switch (evt.currentTarget.id) {
       case "right-panel":
         cl = "focus-right";
@@ -36,9 +50,12 @@ export default class GMScreen extends Application {
     }
     GMScreen.classList.toggle(cl);
   }
+  /**
+   *
+   */
   getData() {
-    let data = super.getData();
-    let path = game.settings.get("torgeternity", "gmScreen");
+    const data = super.getData();
+    const path = game.settings.get("torgeternity", "gmScreen");
     let lang = game.settings.get("core", "language");
 
     // setting english as default
@@ -53,6 +70,9 @@ export default class GMScreen extends Application {
     }
     return data;
   }
+  /**
+   *
+   */
   toggleRender() {
     if (this.rendered) {
       if (this._minimized) return this.maximize();
