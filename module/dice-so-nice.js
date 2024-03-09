@@ -1,3 +1,7 @@
+/**
+ *
+ * @param dice3d
+ */
 export function registerDiceSoNice(dice3d) {
   dice3d.addSystem({ id: "torgeternity", name: "Torg Eternity" }, "preferred"),
     dice3d.addDicePreset({

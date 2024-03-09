@@ -1,6 +1,11 @@
+/**
+ *
+ * @param defaultLang
+ * @param tabDirectory
+ */
 export function hideCompendium(defaultLang, tabDirectory) {
   if (tabDirectory.tabName == "compendium") {
-    let comps = tabDirectory.element[0].getElementsByClassName("directory-item");
+    const comps = tabDirectory.element[0].getElementsByClassName("directory-item");
     let hiddingKeys = [];
 
     switch (defaultLang) {
@@ -19,9 +24,9 @@ export function hideCompendium(defaultLang, tabDirectory) {
         hiddingKeys = ["(en)", "(de)", "(fr)"];
     }
 
-    for (let key of hiddingKeys) {
-      for (let comp of comps) {
-        let indexForeign = comp.innerText.indexOf(key);
+    for (const key of hiddingKeys) {
+      for (const comp of comps) {
+        const indexForeign = comp.innerText.indexOf(key);
         if (indexForeign !== -1) {
           comp.style.display = "none";
         }

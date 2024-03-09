@@ -1,3 +1,6 @@
+/**
+ *
+ */
 export default class torgeternityItem extends Item {
   static equipProp = "system.equipped";
   static equipClassProp = "system.equippedClass";
@@ -27,8 +30,11 @@ export default class torgeternityItem extends Item {
     vehicleAddOn: "systems/torgeternity/templates/partials/vehicleAddOn-card.hbs",
   };
 
+  /**
+   *
+   */
   prepareBaseData() {
-    //Handle perk-related data
+    // Handle perk-related data
     if (this._source.type === "perk") {
       this.system.navStyle = "right:-210px;top:210px";
       this.system.extendedNav = true;
@@ -38,9 +44,15 @@ export default class torgeternityItem extends Item {
     }
   }
 
+  /**
+   *
+   * @param data
+   * @param options
+   * @param userId
+   */
   _onCreate(data, options, userId) {
     super._onCreate(data, options, userId);
-    var image;
+    let image;
     switch (data.type) {
       case "gear":
         image = "gear-icon.webp";
@@ -97,7 +109,6 @@ export default class torgeternityItem extends Item {
       case "vehicleAddon":
       case "customAttack":
       default:
-        ;
     }
     if (image) this.update({ img: "systems/torgeternity/images/icons/" + image });
 
@@ -108,8 +119,8 @@ export default class torgeternityItem extends Item {
         [torgeternityItem.equipClassProp]: torgeternityItem.cssEquipped,
       });
 
-      let actor = this.parent;
-      let item = this;
+      const actor = this.parent;
+      const item = this;
       actor.items.forEach(function (otherItem, key) {
         if (otherItem._id !== item._id && otherItem.system.equipped && otherItem.type === item.type) {
           torgeternityItem.toggleEquipState(otherItem, actor);
@@ -118,9 +129,14 @@ export default class torgeternityItem extends Item {
     }
   }
 
+  /**
+   *
+   * @param item
+   * @param actor
+   */
   static toggleEquipState(item, actor) {
-    let equipped = !getProperty(item, torgeternityItem.equipProp);
-    let equipClass = equipped ? torgeternityItem.cssEquipped : torgeternityItem.cssUnequipped;
+    const equipped = !getProperty(item, torgeternityItem.equipProp);
+    const equipClass = equipped ? torgeternityItem.cssEquipped : torgeternityItem.cssUnequipped;
 
     // flip the flag/CSS class
     item.update({
@@ -128,7 +144,7 @@ export default class torgeternityItem extends Item {
       [torgeternityItem.equipClassProp]: equipClass,
     });
     // enable/disable effects
-    let sourceOrigin = "Item." + item._id;
+    const sourceOrigin = "Item." + item._id;
     actor.effects.forEach(function (effect, key) {
       if (!!effect.origin) {
         if (effect.origin.endsWith(sourceOrigin)) {
@@ -141,13 +157,16 @@ export default class torgeternityItem extends Item {
     return equipped;
   }
 
+  /**
+   *
+   */
   async roll() {
-    let chatData = {
+    const chatData = {
       user: game.user._id,
       speaker: ChatMessage.getSpeaker(),
     };
 
-    let cardData = {
+    const cardData = {
       ...this,
       owner: this.actor._id,
     };
@@ -157,85 +176,53 @@ export default class torgeternityItem extends Item {
     return ChatMessage.create(chatData);
   }
 
+  /**
+   *
+   */
   async weaponAttack() {
     // Roll those dice!
-    let dicerollint = new Roll("1d20x10x20").roll({ async: false });
+    const dicerollint = new Roll("1d20x10x20").roll({ async: false });
     dicerollint.toMessage();
-    let diceroll = dicerollint.total;
+    const diceroll = dicerollint.total;
 
     // get Bonus number
-    if (diceroll == 1) {
-      var messageContent = `Failure (Check for Mishap)`;
-      var bonus = -10;
-    } else if (diceroll == 2) {
-      var messageContent = "Bonus: -8 (Disconnect if 4 Case)";
-      var bonus = -8;
-    } else if (diceroll <= 4) {
-      var messageContent = "Bonus: -6 (Disconnect if 4 Case)";
-      var bonus = -6;
-    } else if (diceroll <= 6) {
-      var messageContent = "Bonus: -4";
-      var bonus = -4;
-    } else if (diceroll <= 8) {
-      var messageContent = "Bonus: -2";
-      var bonus = -2;
-    } else if (diceroll <= 10) {
-      var messageContent = "Bonus: -1";
-      var bonus = -1;
-    } else if (diceroll <= 12) {
-      var messageContent = "Bonus: +0";
-      var bonus = 0;
-    } else if (diceroll <= 14) {
-      var messageContent = "Bonus +1";
-      var bonus = 1;
-    } else if (diceroll == 15) {
-      var messageContent = "Bonus +2";
-      var bonus = 2;
-    } else if (diceroll == 16) {
-      var messageContent = "Bonus: +3";
-      var bonus = 3;
-    } else if (diceroll == 17) {
-      var messageContent = "Bonus: +4";
-      var bonus = 4;
-    } else if (diceroll == 18) {
-      var messageContent = "Bonus: +5";
-      var bonus = 5;
-    } else if (diceroll == 19) {
-      var messageContent = "Bonus: +6";
-      var bonus = 6;
-    } else if (diceroll == 20) {
-      var messageContent = "Bonus: +7";
-      var bonus = 7;
-    } else if (diceroll >= 21) {
-      var bonus = 7 + Math.ceil((diceroll - 20) / 5);
-      var messageContent = `Bonus:` + bonus;
-    }
+    const bonus =
+      diceroll === 1
+        ? -10
+        : diceroll <= 8
+        ? Math.ceil(diceroll / 2 - 5) * 2
+        : diceroll <= 14
+        ? Math.ceil(diceroll / 2 - 6)
+        : diceroll <= 20
+        ? diceroll - 13
+        : 7 + Math.ceil((diceroll - 20) / 5);
 
-    // Calculate base damage
-    if (this.system.damageType == "flat") {
-      var baseDamage = this.system.damage;
-    } else if (this.system.damageType == "strengthPlus") {
-      var baseDamage = parseInt(this.actor.system.attributes.strength) + parseInt(this.system.damage);
-    } else {
-      var baseDamage = this.system.damage;
-    }
+    const messageContent =
+      diceroll > 4
+        ? `Bonus: ${bonus >= 0 ? "+" : "-"}${bonus}`
+        : (diceroll = 1 ? "Failure (Check for Mishap)" : `Bonus: -${bonus} (Disconnect if 4 Case)`);
+
+    const baseDamage =
+      this.system.damageType == "strengthPlus"
+        ? parseInt(this.actor.system.attributes.strength) + parseInt(this.system.damage)
+        : this.system.damage;
 
     // Retrieve the applicable skill value from the current actor
-    var skillToUse = this.actor.system.skills[this.system.attackWith];
-    var skillValue = skillToUse.value;
+    const skillToUse = this.actor.system.skills[this.system.attackWith];
+    const skillValue = skillToUse.value;
 
     // Generate final Roll Result
-    var rollResult = parseInt(skillValue) + parseInt(bonus);
+    const rollResult = parseInt(skillValue) + parseInt(bonus);
 
     // Put together Chat Data
-    let chatData = {
+    const chatData = {
       user: game.user.data._id,
       speaker: ChatMessage.getSpeaker(),
     };
 
     // Assemble information needed by attack card
 
-    let cardData = {
+    const cardData = {
       ...this.data,
       owner: this.actor.id,
       bonus: messageContent,
@@ -253,11 +240,13 @@ export default class torgeternityItem extends Item {
     return ChatMessage.create(chatData);
   }
 
+  /**
+   *
+   */
   async bonus() {
-    var rollResult;
-    rollResult = new Roll("1d6x6max5").roll({ async: false });
+    const rollResult = new Roll("1d6x6max5").roll({ async: false });
 
-    let chatData = {
+    const chatData = {
       type: CONST.CHAT_MESSAGE_TYPES.ROLL,
       user: game.user.data._id,
       roll: rollResult,
@@ -269,145 +258,46 @@ export default class torgeternityItem extends Item {
     return ChatMessage.create(chatData);
   }
 
-  // Old Bonus Code
-  /*
-    async bonus() {
-       var rollResult, dieValue, finalValue, totalDice, lastDie, lastDieImage, explosions, hideBonusFlag;
-       rollResult = new Roll('1d6').roll().total;
-       if (rollResult == 6) {
-          dieValue = 5;
-       } else if (rollResult <= 5) {
-          dieValue = rollResult
-       }
-       finalValue = dieValue
-       lastDie = dieValue
-       totalDice = 1
-       while (rollResult == 6) {
-          totalDice += 1
-          rollResult = new Roll('1d6').roll().total;
-          dieValue = rollResult
-          if (rollResult == 6) {
-             dieValue = 5;
-          }
-          lastDie = rollResult
-          finalValue += parseInt(dieValue)
-       }
-
-       // Set number of explosions and flag for displaying infinity symbol
-       hideBonusFlag = ""
-       explosions = parseInt(totalDice) - 1
-       if (explosions == 0) {
-          hideBonusFlag = "display:none";
-       }
-
-       // Prepare image for last die
-       if (lastDie == 1) {
-          lastDieImage = "/systems/torgeternity/images/bonus-1.webp";}
-       else if (lastDie == 2) {
-          lastDieImage = "/systems/torgeternity/images/bonus-2.webp";}
-       else if (lastDie == 3) {
-          lastDieImage = "/systems/torgeternity/images/bonus-3.webp";}
-       else if (lastDie == 4) {
-          lastDieImage = "/systems/torgeternity/images/bonus-4.webp";}
-       else if (lastDie == 5) {
-          lastDieImage = "/systems/torgeternity/images/bonus-5.webp";}
-
-       // Put together Chat Data
-       let chatData = {
-          user: game.user.data._id,
-          speaker: ChatMessage.getSpeaker(),
-       };
-
-       // Assemble information needed by attack card
-       let cardData = {
-          ...this.data,
-          owner: this.actor.data._id,
-          totalDice: totalDice,
-          explosions: explosions,
-          hideBonusFlag: hideBonusFlag,
-          lastDie: lastDie,
-          lastDieImage: lastDieImage,
-          finalValue: finalValue
-       }
-
-       // Send the chat
-       chatData.content = await renderTemplate(this.chatTemplate["bonus"], cardData);
-
-       chatData.bonus = true;
-
-       return ChatMessage.create(chatData);
-
-    } */
-
+  /**
+   *
+   */
   async power() {
     // Roll those dice!
-    let dicerollint = new Roll("1d20x10x20").roll({ async: false });
+    const dicerollint = new Roll("1d20x10x20").roll({ async: false });
     dicerollint.toMessage();
-    let diceroll = dicerollint.total;
+    const diceroll = dicerollint.total;
 
-    // get Bonus number
-    if (diceroll == 1) {
-      var messageContent = `Failure (Check for Mishap)`;
-      var bonus = -10;
-    } else if (diceroll == 2) {
-      var messageContent = "Bonus: -8 (Disconnect if 4 Case)";
-      var bonus = -8;
-    } else if (diceroll <= 4) {
-      var messageContent = "Bonus: -6 (Disconnect if 4 Case)";
-      var bonus = -6;
-    } else if (diceroll <= 6) {
-      var messageContent = "Bonus: -4";
-      var bonus = -4;
-    } else if (diceroll <= 8) {
-      var messageContent = "Bonus: -2";
-      var bonus = -2;
-    } else if (diceroll <= 10) {
-      var messageContent = "Bonus: -1";
-      var bonus = -1;
-    } else if (diceroll <= 12) {
-      var messageContent = "Bonus: +0";
-      var bonus = 0;
-    } else if (diceroll <= 14) {
-      var messageContent = "Bonus +1";
-      var bonus = 1;
-    } else if (diceroll == 15) {
-      var messageContent = "Bonus +2";
-      var bonus = 2;
-    } else if (diceroll == 16) {
-      var messageContent = "Bonus: +3";
-      var bonus = 3;
-    } else if (diceroll == 17) {
-      var messageContent = "Bonus: +4";
-      var bonus = 4;
-    } else if (diceroll == 18) {
-      var messageContent = "Bonus: +5";
-      var bonus = 5;
-    } else if (diceroll == 19) {
-      var messageContent = "Bonus: +6";
-      var bonus = 6;
-    } else if (diceroll == 20) {
-      var messageContent = "Bonus: +7";
-      var bonus = 7;
-    } else if (diceroll >= 21) {
-      var bonus = 7 + Math.ceil((diceroll - 20) / 5);
-      var messageContent = `Bonus:` + bonus;
-    }
+    const bonus =
+      diceroll === 1
+        ? -10
+        : diceroll <= 8
+        ? Math.ceil(diceroll / 2 - 5) * 2
+        : diceroll <= 14
+        ? Math.ceil(diceroll / 2 - 6)
+        : diceroll <= 20
+        ? diceroll - 13
+        : 7 + Math.ceil((diceroll - 20) / 5);
+
+    const messageContent =
+      diceroll > 4
+        ? `Bonus: ${bonus >= 0 ? "+" : "-"}${bonus}`
+        : (diceroll = 1 ? "Failure (Check for Mishap)" : `Bonus: -${bonus} (Disconnect if 4 Case)`);
 
     // Retrieve the applicable skill value from the current actor
-    var skillToUse = this.actor.system.skills[this.system.skill];
-    var skillValue = skillToUse.value;
+    const skillToUse = this.actor.system.skills[this.system.skill];
+    const skillValue = skillToUse.value;
 
     // Generate final Roll Result
-    var rollResult = parseInt(skillValue) + parseInt(bonus);
+    const rollResult = parseInt(skillValue) + parseInt(bonus);
 
     // Put together Chat Data
-    let chatData = {
+    const chatData = {
       user: game.user.data._id,
       speaker: ChatMessage.getSpeaker(),
     };
 
     // Assemble information needed by attack card
-    let cardData = {
+    const cardData = {
       ...this.data,
       owner: this.actor.data._id,
       bonus: messageContent,

@@ -1,7 +1,10 @@
 import { torgeternity } from "./config.js";
+/**
+ *
+ */
 export function toggleViewMode() {
-  let view = torgeternity.viewMode;
-  let board = document.getElementById("board");
+  const view = torgeternity.viewMode;
+  const board = document.getElementById("board");
   board.addEventListener("auxclick", function (e) {
     if (e.button == 1) {
       if (view.UI == true) {

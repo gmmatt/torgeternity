@@ -1,7 +1,8 @@
 /**
  * Define a set of template paths to pre-load
  * Pre-loaded templates are compiled and cached for fast access when rendering
- * @return {Promise}
+ *
+ * @returns {Promise}
  */
 export const preloadTemplates = async function () {
   // Define template paths to load
@@ -45,10 +46,10 @@ export const preloadTemplates = async function () {
     "systems/torgeternity/templates/testDialogs/attack-options.hbs",
     "systems/torgeternity/templates/testDialogs/target-options.hbs",
 
-    //active effect part:
+    // active effect part:
     "systems/torgeternity/templates/parts/active-effects.hbs",
 
-    //chatCards
+    // chatCards
     "systems/torgeternity/templates/partials/activeDefense-card.hbs",
     "systems/torgeternity/templates/partials/armor-card.hbs",
     "systems/torgeternity/templates/partials/attack-card.hbs",

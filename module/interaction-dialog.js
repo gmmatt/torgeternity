@@ -1,6 +1,12 @@
 import * as torgchecks from "/systems/torgeternity/module/torgchecks.js";
 
+/**
+ *
+ */
 export class interactionDialog extends FormApplication {
+  /**
+   *
+   */
   static get defaultOptions() {
     const options = super.defaultOptions;
     options.template = "systems/torgeternity/templates/interaction-test.hbs";
@@ -11,11 +17,18 @@ export class interactionDialog extends FormApplication {
     return options;
   }
 
+  /**
+   *
+   * @param test
+   */
   constructor(test) {
     super();
     this.test = test;
   }
 
+  /**
+   *
+   */
   getData() {
     const data = super.getData();
 
@@ -24,12 +37,21 @@ export class interactionDialog extends FormApplication {
     return data;
   }
 
+  /**
+   *
+   * @param html
+   */
   activateListeners(html) {
     html.find(".attack-roll-button").click(this._onAttack.bind(this));
 
     super.activateListeners(html);
   }
 
+  /**
+   *
+   * @param event
+   * @param html
+   */
   _onAttack(event, html) {
     // Add DN
     this.test.isDN = true;
@@ -111,7 +133,6 @@ export class interactionDialog extends FormApplication {
       this.test.isOther3 = false;
     }
 
-    var x = event;
     torgchecks.interactionAttack(this.test);
     this.close();
   }

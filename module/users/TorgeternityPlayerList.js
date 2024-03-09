@@ -1,17 +1,26 @@
 import PartySheet from "./partySheet.js";
 import PartySheetActive from "./partySheetActive.js";
+/**
+ *
+ */
 export default class TorgeternityPlayerList extends PlayerList {
+  /**
+   *
+   */
   get template() {
     return "systems/torgeternity/templates/playerList/playerList.hbs";
   }
+  /**
+   *
+   */
   async getData() {
-    let data = super.getData();
+    const data = super.getData();
     data.self = game.user;
-    let GM = game.users.find((user) => user.isGM);
+    const GM = game.users.find((user) => user.isGM);
     data.GMpossibilities = GM.getFlag("torgeternity", "GMpossibilities");
-    for (let user of data.users) {
+    for (const user of data.users) {
       if (user.character) {
-        let userActor = await game.actors.get(user.character);
+        const userActor = await game.actors.get(user.character);
         user.characterPossibilities = userActor.system.other.possibilities;
       } else {
         user.characterPossibilities = 0;
@@ -19,6 +28,10 @@ export default class TorgeternityPlayerList extends PlayerList {
     }
     return data;
   }
+  /**
+   *
+   * @param html
+   */
   activateListeners(html) {
     super.activateListeners(html);
     html.find(".players-popout").click(this.renderPopout.bind(this));
@@ -27,17 +40,26 @@ export default class TorgeternityPlayerList extends PlayerList {
     html.find("i.possReset").click(this.resetPossibilities.bind(this));
   }
 
+  /**
+   *
+   */
   createPopout() {
-    let party = new PartySheet();
+    const party = new PartySheet();
 
     return party;
   }
 
+  /**
+   *
+   */
   createPopoutActive() {
-    let party = new PartySheetActive();
+    const party = new PartySheetActive();
 
     return party;
   }
+  /**
+   *
+   */
   async renderPopout() {
     const all = await Dialog.confirm({
       title: `${game.i18n.localize("torgeternity.partySheet.openParty")}`,
@@ -50,15 +72,19 @@ export default class TorgeternityPlayerList extends PlayerList {
     }
   }
 
+  /**
+   *
+   * @param ev
+   */
   async addPossibility(ev) {
     if (ev.currentTarget.dataset.targetId === "GMpossibilities") {
-      let GM = game.users.find((user) => user.isGM);
-      let newVal = GM.getFlag("torgeternity", "GMpossibilities") + 1;
+      const GM = game.users.find((user) => user.isGM);
+      const newVal = GM.getFlag("torgeternity", "GMpossibilities") + 1;
       GM.setFlag("torgeternity", "GMpossibilities", newVal);
       ui.players.render(true);
     } else {
       console.log();
-      let targetActor = game.actors.get(ev.currentTarget.dataset.targetId);
+      const targetActor = game.actors.get(ev.currentTarget.dataset.targetId);
       await targetActor.update({
         _id: targetActor._id,
         system: {
@@ -69,14 +95,18 @@ export default class TorgeternityPlayerList extends PlayerList {
       });
     }
   }
+  /**
+   *
+   * @param ev
+   */
   async minusPossibility(ev) {
     if (ev.currentTarget.dataset.targetId === "GMpossibilities") {
-      let GM = game.users.find((user) => user.isGM);
-      let newVal = GM.getFlag("torgeternity", "GMpossibilities") - 1;
+      const GM = game.users.find((user) => user.isGM);
+      const newVal = GM.getFlag("torgeternity", "GMpossibilities") - 1;
       GM.setFlag("torgeternity", "GMpossibilities", newVal);
       ui.players.render(true);
     } else {
-      let targetActor = game.actors.get(ev.currentTarget.dataset.targetId);
+      const targetActor = game.actors.get(ev.currentTarget.dataset.targetId);
       await targetActor.update({
         _id: targetActor._id,
         system: {
@@ -88,8 +118,12 @@ export default class TorgeternityPlayerList extends PlayerList {
     }
   }
 
+  /**
+   *
+   * @param ev
+   */
   resetPossibilities(ev) {
-    let possibilitiesDial = new Dialog({
+    const possibilitiesDial = new Dialog({
       title: `${game.i18n.localize("torgeternity.possibilitiesReset.name")}`,
       content: `
         
@@ -108,8 +142,8 @@ export default class TorgeternityPlayerList extends PlayerList {
           callback: (html) => {
             game.users.forEach((user) => {
               if (user.character) {
-                let target = game.actors.get(user.character.id);
-                let newVal = parseInt(document.getElementById("possibilitiesValue").value);
+                const target = game.actors.get(user.character.id);
+                const newVal = parseInt(document.getElementById("possibilitiesValue").value);
                 target.update({
                   id: target.id,
                   system: {

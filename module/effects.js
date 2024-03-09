@@ -1,3 +1,8 @@
+/**
+ *
+ * @param event
+ * @param owner
+ */
 export function onManageActiveEffect(event, owner) {
   event.preventDefault();
   const a = event.currentTarget;
@@ -23,6 +28,10 @@ export function onManageActiveEffect(event, owner) {
   }
 }
 
+/**
+ *
+ * @param effects
+ */
 export function prepareActiveEffectCategories(effects) {
   // Define effect header categories
   const categories = {
@@ -45,8 +54,8 @@ export function prepareActiveEffectCategories(effects) {
   };
 
   // Iterate over active effects, classifying them into categories
-  for (let e of effects) {
-    //e._getSourceName(); // Trigger a lookup for the source name
+  for (const e of effects) {
+    // e._getSourceName(); // Trigger a lookup for the source name
     if (e.disabled) categories.inactive.effects.push(e);
     else if (e.isTemporary) categories.temporary.effects.push(e);
     else categories.passive.effects.push(e);

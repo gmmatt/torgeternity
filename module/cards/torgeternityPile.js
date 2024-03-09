@@ -1,7 +1,10 @@
-import TorgCombat from "../dramaticScene/torgeternityCombat.js";
-import { torgeternity } from "/systems/torgeternity/module/config.js";
-
+/**
+ *
+ */
 export default class torgeternityPile extends CardsPile {
+  /**
+   *
+   */
   static get defaultOptions() {
     return foundry.utils.mergeObject(super.defaultOptions, {
       classes: ["torgeternity", "sheet", "cardsPile", "cards-config"],
@@ -9,10 +12,17 @@ export default class torgeternityPile extends CardsPile {
     });
   }
 
+  /**
+   *
+   */
   get template() {
     return "systems/torgeternity/templates/cards/torgeternityPile.hbs";
   }
 
+  /**
+   *
+   * @param event
+   */
   async _onCardControl(event) {
     // Shamelessly stolen from core software
     const button = event.currentTarget;
@@ -39,7 +49,7 @@ export default class torgeternityPile extends CardsPile {
         new ImagePopout(card.img, { title: card.name }).render(true, { width: 425, height: 650 });
         return;
       case "display":
-        let x = new ImagePopout(card.img, { title: card.name }).render(true, { width: 425, height: 650 });
+        const x = new ImagePopout(card.img, { title: card.name }).render(true, { width: 425, height: 650 });
         x.shareImage();
         return;
       case "discard":
@@ -54,7 +64,7 @@ export default class torgeternityPile extends CardsPile {
         });
         return;
       case "drawDestiny":
-        let destinyDeck = game.cards.get(game.settings.get("torgeternity", "deckSetting").destinyDeck);
+        const destinyDeck = game.cards.get(game.settings.get("torgeternity", "deckSetting").destinyDeck);
         if (destinyDeck.cards.size) {
           const [firstCardKey] = destinyDeck.cards.keys(); // need to grab a card to get toMessage access
           const card = destinyDeck.cards.get(firstCardKey);
@@ -102,6 +112,9 @@ export default class torgeternityPile extends CardsPile {
     }
   }
 
+  /**
+   *
+   */
   async passDialog() {
     const cards = game.cards.filter(
       (c) => c !== this && c.type !== "deck" && c.testUserPermission(game.user, "LIMITED")

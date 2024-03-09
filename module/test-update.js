@@ -1,6 +1,12 @@
 import * as torgchecks from "/systems/torgeternity/module/torgchecks.js";
 
-export class testUpdate extends FormApplication {
+/**
+ *
+ */
+export class TestUpdate extends FormApplication {
+  /**
+   *
+   */
   static get defaultOptions() {
     const options = super.defaultOptions;
     options.template = "systems/torgeternity/templates/test-update.hbs";
@@ -11,11 +17,18 @@ export class testUpdate extends FormApplication {
     return options;
   }
 
+  /**
+   *
+   * @param test
+   */
   constructor(test) {
     super();
     this.test = test;
   }
 
+  /**
+   *
+   */
   getData() {
     const data = super.getData();
 
@@ -26,12 +39,21 @@ export class testUpdate extends FormApplication {
     return data;
   }
 
+  /**
+   *
+   * @param html
+   */
   activateListeners(html) {
     html.find(".update-roll-button").click(this._onModify.bind(this));
 
     super.activateListeners(html);
   }
 
+  /**
+   *
+   * @param event
+   * @param html
+   */
   _onModify(event, html) {
     // Set DN Descriptor
     this.test.DNDescriptor = document.getElementById("difficulty").value;
@@ -97,8 +119,6 @@ export class testUpdate extends FormApplication {
     }
 
     this.test.diceroll = null;
-
-    var x = event;
 
     torgchecks.renderSkillChat(this.test);
     this.close();

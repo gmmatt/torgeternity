@@ -1,6 +1,12 @@
 import * as torgchecks from "/systems/torgeternity/module/torgchecks.js";
 
+/**
+ *
+ */
 export class skillUpdate extends FormApplication {
+  /**
+   *
+   */
   static get defaultOptions() {
     const options = super.defaultOptions;
     options.template = "systems/torgeternity/templates/skill-check-update.hbs";
@@ -11,11 +17,18 @@ export class skillUpdate extends FormApplication {
     return options;
   }
 
+  /**
+   *
+   * @param test
+   */
   constructor(test) {
     super();
     this.test = test;
   }
 
+  /**
+   *
+   */
   getData() {
     const data = super.getData();
 
@@ -24,12 +37,21 @@ export class skillUpdate extends FormApplication {
     return data;
   }
 
+  /**
+   *
+   * @param html
+   */
   activateListeners(html) {
     html.find(".skill-update-button").click(this._onUpdate.bind(this));
 
     super.activateListeners(html);
   }
 
+  /**
+   *
+   * @param event
+   * @param html
+   */
   _onUpdate(event, html) {
     // Add DN
     this.test.isDN = true;

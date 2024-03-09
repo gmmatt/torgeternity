@@ -1,6 +1,12 @@
 import * as torgchecks from "/systems/torgeternity/module/torgchecks.js";
 
+/**
+ *
+ */
 export class powerDialog extends FormApplication {
+  /**
+   *
+   */
   static get defaultOptions() {
     const options = super.defaultOptions;
     options.template = "systems/torgeternity/templates/power-test.hbs";
@@ -11,11 +17,18 @@ export class powerDialog extends FormApplication {
     return options;
   }
 
+  /**
+   *
+   * @param test
+   */
   constructor(test) {
     super();
     this.test = test;
   }
 
+  /**
+   *
+   */
   getData() {
     const data = super.getData();
 
@@ -24,18 +37,27 @@ export class powerDialog extends FormApplication {
     return data;
   }
 
+  /**
+   *
+   * @param html
+   */
   activateListeners(html) {
     html.find(".attack-roll-button").click(this._onRoll.bind(this));
 
     super.activateListeners(html);
   }
 
+  /**
+   *
+   * @param event
+   * @param html
+   */
   _onRoll(event, html) {
     // Add DN based on selected difficulty
     this.test.isDN = true;
 
-    var select = document.getElementById("difficulty");
-    var value = select.options[select.selectedIndex].value;
+    const select = document.getElementById("difficulty");
+    const value = select.options[select.selectedIndex].value;
 
     this.test.DN = parseInt(value);
 
@@ -88,7 +110,7 @@ export class powerDialog extends FormApplication {
       this.test.targetsModifier = -10;
     }
 
-    //Add Called Shot Modifier
+    // Add Called Shot Modifier
     if (document.getElementById("called-shot-none").checked) {
       this.test.calledShotModifier = 0;
     } else if (document.getElementById("called-shot-2").checked) {
@@ -151,7 +173,6 @@ export class powerDialog extends FormApplication {
       this.test.isOther3 = false;
     }
 
-    var x = event;
     torgchecks.powerRoll(this.test);
     this.close();
   }
