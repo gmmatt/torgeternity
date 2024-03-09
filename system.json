@@ -34,6 +34,18 @@
   "background": "systems/torgeternity/images/splash_new.webp",
   "packs": [
     {
+      "name": "macros",
+      "label": "Macros",
+      "system": "torgeternity",
+      "path": "packs/macros",
+      "type": "Macro",
+      "ownership": {
+        "PLAYER": "NONE",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
+    },
+    {
       "name": "archetypes",
       "label": "Archetypes (en)",
       "system": "torgeternity",
@@ -343,7 +355,7 @@
           "packs": []
         }
       ],
-      "packs": []
+      "packs": ["macros"]
     }
   ],
   "languages": [
