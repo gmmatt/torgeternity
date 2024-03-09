@@ -2,9 +2,7 @@
  *
  */
 export default class torgeternityCardConfig extends CardConfig {
-  /**
-   *
-   */
+  /** @inheritdoc */
   static get defaultOptions() {
     return foundry.utils.mergeObject(super.defaultOptions, {
       classes: ["torgeternity", "sheet", "card-config"],
@@ -41,9 +39,7 @@ export default class torgeternityCardConfig extends CardConfig {
     return submitData;
   }
 
-  /**
-   *
-   */
+  /** @inheritdoc */
   get template() {
     if (this.object.type === "destiny") {
       return "systems/torgeternity/templates/cards/torgeternityDestiny.hbs";
@@ -56,7 +52,7 @@ export default class torgeternityCardConfig extends CardConfig {
 
   /**
    *
-   * @param event
+   * @param {Event} event The event object.
    */
   async _onFaceControl(event) {
     const button = event.currentTarget;

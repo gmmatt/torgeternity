@@ -4,7 +4,7 @@
 export default class DeckSettingMenu extends FormApplication {
   /**
    *
-   * @param settings
+   * @param {object} settings - The settings object.
    */
   constructor(settings) {
     super();
@@ -13,6 +13,7 @@ export default class DeckSettingMenu extends FormApplication {
   }
   /**
    *
+   * @returns {object} The default options for the setting menu.
    */
   static get defaultOptions() {
     const options = super.defaultOptions;
@@ -27,6 +28,7 @@ export default class DeckSettingMenu extends FormApplication {
 
   /**
    *
+   * @returns {object} The data for the setting menu sheet.
    */
   getData() {
     const data = {
@@ -45,7 +47,7 @@ export default class DeckSettingMenu extends FormApplication {
 
   /**
    *
-   * @param html
+   * @param {HTMLElement} html the html element of the setting menu sheet.
    */
   async activateListeners(html) {
     // checking if doubled values
@@ -67,8 +69,8 @@ export default class DeckSettingMenu extends FormApplication {
   }
   /**
    *
-   * @param event
-   * @param formData
+   * @param {Event} event The event object.
+   * @param {object} formData The form data compiled by foundry.
    */
   _updateObject(event, formData) {
     const data = expandObject(formData);
@@ -76,7 +78,7 @@ export default class DeckSettingMenu extends FormApplication {
   }
   /**
    *
-   * @param event
+   * @param {Event} event The event object.
    */
   onCreateCards(event) {
     event.preventDefault();
@@ -84,8 +86,8 @@ export default class DeckSettingMenu extends FormApplication {
   }
   /**
    *
-   * @param html
-   * @param event
+   * @param {HTMLElement} html The html element of the setting menu sheet.
+   * @param {Event} event The event object.
    */
   onChangeDeck(html, event) {
     // getting selected value
@@ -108,8 +110,8 @@ export default class DeckSettingMenu extends FormApplication {
   }
   /**
    *
-   * @param html
-   * @param event
+   * @param {HTMLElement} html The html element of the setting menu sheet.
+   * @param {Event} event The event object.
    */
   onChangeHand(html, event) {
     const actorId = event.currentTarget.getAttribute("name").replace("stormknights.", "");

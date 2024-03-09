@@ -4,6 +4,7 @@
 export default class torgeternityPile extends CardsPile {
   /**
    *
+   * @returns {object} The default options for the torgeternityPile class.
    */
   static get defaultOptions() {
     return foundry.utils.mergeObject(super.defaultOptions, {
@@ -14,6 +15,7 @@ export default class torgeternityPile extends CardsPile {
 
   /**
    *
+   * @returns {string} The template path for the torgeternityPile class.
    */
   get template() {
     return "systems/torgeternity/templates/cards/torgeternityPile.hbs";
@@ -21,7 +23,7 @@ export default class torgeternityPile extends CardsPile {
 
   /**
    *
-   * @param event
+   * @param {Event} event The event object.
    */
   async _onCardControl(event) {
     // Shamelessly stolen from core software
