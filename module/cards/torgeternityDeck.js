@@ -23,7 +23,7 @@ export default class torgeternityDeck extends CardsPile {
 
   /**
    *
-   * @param event
+   * @param {Event} event The event object.
    */
   async _onCardControl(event) {
     // Shamelessly stolen from core software

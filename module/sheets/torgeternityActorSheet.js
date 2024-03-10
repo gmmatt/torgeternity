@@ -2,7 +2,7 @@ import * as torgchecks from "../torgchecks.js";
 import { onManageActiveEffect, prepareActiveEffectCategories } from "/systems/torgeternity/module/effects.js";
 import { TestDialog } from "/systems/torgeternity/module/test-dialog.js";
 import torgeternityItem from "/systems/torgeternity/module/torgeternityItem.js";
-import { possibilityByCosm } from "/systems/torgeternity/module/possibilityByCosm.js";
+import { PossibilityByCosm } from "/systems/torgeternity/module/possibilityByCosm.js";
 
 /**
  *
@@ -461,7 +461,7 @@ export default class torgeternityActorSheet extends ActorSheet {
       (w) => w.title === game.i18n.localize("torgeternity.sheetLabels.possibilityByCosm")
     );
     if (!windo) {
-      possibilityByCosm.create(actor);
+      PossibilityByCosm.create(actor);
     }
   }
 

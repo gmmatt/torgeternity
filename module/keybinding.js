@@ -1,4 +1,4 @@
-import { possibilityByCosm } from "/systems/torgeternity/module/possibilityByCosm.js";
+import { PossibilityByCosm } from "/systems/torgeternity/module/possibilityByCosm.js";
 /**
  *
  */
@@ -46,7 +46,7 @@ export default function createTorgShortcuts() {
           windo.close();
           return;
         }
-        possibilityByCosm.create(game.user.character);
+        PossibilityByCosm.create(game.user.character);
       }
     },
   });
