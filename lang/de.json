@@ -921,7 +921,10 @@
       "clearStatusEffectsliftetStatusOf": "wurde folgender Status aufgehoben:",
       "bonusDieMacroTitle": "Makro für Bonuswürfel",
       "bonusDieMacroContent": "Wieviele Bonuswürfel sollen denn geworfen werden?",
-      "bonusDieMacroErrorIntegerValue": "Die Eingabe war keine Ganzzahl. Bitte gebe eine Ganzzahl ein."
+      "bonusDieMacroErrorIntegerValue": "Die Eingabe war keine Ganzzahl. Bitte gebe eine Ganzzahl ein.",
+      "bonusDieMacroResult1": "Du hast gewürfelt:",
+      "bonusDieMacroResult2": "mit einem Ergebnis von",
+      "bonusDieMacroNoTokenTargeted": "Es wurden keine Token ins Ziel genommen."      
     }
   }
 }

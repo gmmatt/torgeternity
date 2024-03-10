@@ -921,7 +921,10 @@
       "clearStatusEffectsliftetStatusOf": "the status of",
       "bonusDieMacroTitle": "Macro for Bonus-Dice",
       "bonusDieMacroContent": "How many bonus-di(c)e do you want to throw?",
-      "bonusDieMacroErrorIntegerValue": "The entered value in the dialog was not a number or a float / decimal. Please enter an integer."
+      "bonusDieMacroErrorIntegerValue": "The entered value in the dialog was not a number or a float / decimal. Please enter an integer.",
+      "bonusDieMacroResult1": "You have rolled",
+      "bonusDieMacroResult2": "with a result of",
+      "bonusDieMacroNoTokenTargeted": "There were no tokens targeted."
     }
   }
 }

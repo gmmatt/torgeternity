@@ -35,6 +35,7 @@ import { explode, reroll } from "./module/explode.js";
 import { activateStandartScene } from "./module/activateStandartScene.js";
 import { torgMigration } from "./module/migrations.js";
 import initTextEdidor from "./module/initTextEditor.js";
+import { torgeternityMacros } from "./module/macros.js"; 
 
 Hooks.once("init", async function () {
   console.log("torgeternity | Initializing Torg Eternity System");
@@ -46,8 +47,9 @@ Hooks.once("init", async function () {
   game.torgeternity = {
     rollItemMacro,
     rollSkillMacro,
-    viewMode: true,
-  };
+    viewMode: true, 
+    macros: new torgeternityMacros(),   
+  };  
   initTextEdidor();
   CONFIG.torgeternity = torgeternity;
   CONFIG.Item.documentClass = torgeternityItem;

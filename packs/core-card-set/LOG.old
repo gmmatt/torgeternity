@@ -1,8 +1,8 @@
-2024/03/09-09:51:37.964 6f24 Recovering log #112
-2024/03/09-09:51:37.995 6f24 Delete type=0 #112
-2024/03/09-09:51:37.995 6f24 Delete type=3 #110
-2024/03/09-10:01:15.671 2e44 Level-0 table #117: started
-2024/03/09-10:01:15.671 2e44 Level-0 table #117: 0 bytes OK
-2024/03/09-10:01:15.712 2e44 Delete type=0 #115
-2024/03/09-10:01:15.787 2e44 Manual compaction at level-0 from '!cards!9SgkBX6SsRmbY75i' @ 72057594037927935 : 1 .. '!cards.cards!wC9PKdHJuhDjCwyV.zHzn8MqbEo0nIqrZ' @ 0 : 0; will stop at (end)
-2024/03/09-10:01:15.787 2e44 Manual compaction at level-1 from '!cards!9SgkBX6SsRmbY75i' @ 72057594037927935 : 1 .. '!cards.cards!wC9PKdHJuhDjCwyV.zHzn8MqbEo0nIqrZ' @ 0 : 0; will stop at (end)
+2024/03/10-07:21:55.921 2ec4 Recovering log #116
+2024/03/10-07:21:55.954 2ec4 Delete type=0 #116
+2024/03/10-07:21:55.954 2ec4 Delete type=3 #114
+2024/03/10-10:33:29.194 11fc Level-0 table #121: started
+2024/03/10-10:33:29.194 11fc Level-0 table #121: 0 bytes OK
+2024/03/10-10:33:29.210 11fc Delete type=0 #119
+2024/03/10-10:33:29.227 11fc Manual compaction at level-0 from '!cards!9SgkBX6SsRmbY75i' @ 72057594037927935 : 1 .. '!cards.cards!wC9PKdHJuhDjCwyV.zHzn8MqbEo0nIqrZ' @ 0 : 0; will stop at (end)
+2024/03/10-10:33:29.243 11fc Manual compaction at level-1 from '!cards!9SgkBX6SsRmbY75i' @ 72057594037927935 : 1 .. '!cards.cards!wC9PKdHJuhDjCwyV.zHzn8MqbEo0nIqrZ' @ 0 : 0; will stop at (end)
