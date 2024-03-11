@@ -1,10 +1,14 @@
+/**
+ *
+ */
 export async function activateStandartScene() {
-  let pack, sceneId, scene;
+  let pack;
+  let sceneId;
   switch (game.settings.get("core", "language")) {
     case "fr":
       pack = game.packs.get("torgeternity.core-scenes-fr");
       sceneId = pack.index.getName("Scène standard")._id;
-      scene = game.scenes.importFromCompendium(pack, sceneId).then((s) => {
+      game.scenes.importFromCompendium(pack, sceneId).then((s) => {
         s.activate();
       });
 
@@ -13,7 +17,7 @@ export async function activateStandartScene() {
     case "de":
       pack = game.packs.get("torgeternity.core-de-scenes");
       sceneId = pack.index.getName("Standardszene")._id;
-      scene = game.scenes.importFromCompendium(pack, sceneId).then((s) => {
+      game.scenes.importFromCompendium(pack, sceneId).then((s) => {
         s.activate();
       });
       break;
@@ -21,7 +25,7 @@ export async function activateStandartScene() {
     default:
       pack = game.packs.get("torgeternity.core-scenes");
       sceneId = pack.index.getName("Main scene")._id;
-      scene = game.scenes.importFromCompendium(pack, sceneId).then((s) => {
+      game.scenes.importFromCompendium(pack, sceneId).then((s) => {
         s.activate();
       });
       break;

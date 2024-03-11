@@ -1,9 +1,12 @@
+/**
+ *
+ */
 export function sheetResize() {
   Hooks.on("rendertorgeternityActorSheet", async function (app, html, data) {
     if (app.object.type === "stormknight") {
-      let sheet = document.getElementById(app.id);
-      var ro = new ResizeObserver((entries) => {
-        for (let entry of entries) {
+      const sheet = document.getElementById(app.id);
+      const ro = new ResizeObserver((entries) => {
+        for (const entry of entries) {
           const cr = entry.contentRect;
 
           if (cr.width < 510 || cr.height < 650) {
@@ -16,9 +19,9 @@ export function sheetResize() {
       ro.observe(sheet);
     }
     if (app.object.type === "threat") {
-      let sheet = document.getElementById(app.id);
-      var ro = new ResizeObserver((entries) => {
-        for (let entry of entries) {
+      const sheet = document.getElementById(app.id);
+      const ro = new ResizeObserver((entries) => {
+        for (const entry of entries) {
           const cr = entry.contentRect;
 
           if (cr.height < 630) {

@@ -1,6 +1,11 @@
-node_modules
-.gitconfig
-.gitconfig
-jsconfig.json
-.code-workspace
-torgeternity.lock
+# Dependency directories
+node_modules/
+
+# FVTT Lock Files
+*.lock
+
+# Logs
+npm-debug.log*
+
+# Stores VSCode versions used for testing VSCode extensions
+.vscode-test

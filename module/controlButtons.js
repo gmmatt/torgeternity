@@ -1,23 +1,17 @@
-import GMScreen from "./GMScreen.js";
-import deckSettingMenu from "./cards/cardSettingMenu.js";
+import DeckSettingMenu from "./cards/cardSettingMenu.js";
 
+/**
+ *
+ */
 export default function initTorgControlButtons() {
-  //adding layer control for Torg entities
-  class torgLayer extends CanvasLayer {
-    static get layerOptions() {
-      return foundry.utils.mergeObject(super.layerOptions, {
-        name: "Torg",
-        canDragCreate: false,
-        controllableObjects: true,
-        rotatableObjects: true,
-        zIndex: 666,
-      });
-    }
-  }
+  // adding layer control for Torg entities
+  /**
+   *
+   */
   CONFIG.Canvas.layers.torgeternity = { layerClass: ControlsLayer, group: "primary" };
 
   Hooks.on("getSceneControlButtons", (btns) => {
-    let menu = [
+    const menu = [
       {
         name: game.i18n.localize("CARDS.TypeHand"),
         title: game.i18n.localize("CARDS.TypeHand"),
@@ -50,7 +44,7 @@ export default function initTorgControlButtons() {
           icon: "fa fa-cog",
           button: true,
           onClick: () => {
-            new deckSettingMenu().render(true);
+            new DeckSettingMenu().render(true);
           },
         }
       );

@@ -1,6 +1,12 @@
 import * as torgchecks from "/systems/torgeternity/module/torgchecks.js";
 
+/**
+ *
+ */
 export class attackDialog extends FormApplication {
+  /**
+   * @returns {object} The default options for the attack dialog.
+   */
   static get defaultOptions() {
     const options = super.defaultOptions;
     options.template = "systems/torgeternity/templates/attack-test.hbs";
@@ -11,11 +17,13 @@ export class attackDialog extends FormApplication {
     return options;
   }
 
-  constructor(test) {
-    super();
-    this.test = test;
-  }
-
+  /**
+   *
+   * @param test
+   */
+  /**
+   * @returns {object} The data for the attack dialog.
+   */
   getData() {
     const data = super.getData();
 
@@ -24,12 +32,21 @@ export class attackDialog extends FormApplication {
     return data;
   }
 
+  /**
+   *
+   * @param {HTMLElement} html - The HTML element of the full dialog.
+   */
   activateListeners(html) {
     html.find(".attack-roll-button").click(this._onAttack.bind(this));
 
     super.activateListeners(html);
   }
 
+  /**
+   *
+   * @param event
+   * @param html
+   */
   _onAttack(event, html) {
     // Add DN based on selected target attribute
     this.test.isDN = true;
@@ -92,7 +109,7 @@ export class attackDialog extends FormApplication {
       this.test.targetsModifier = -10;
     }
 
-    //Add Called Shot Modifier
+    // Add Called Shot Modifier
     if (document.getElementById("called-shot-none").checked) {
       this.test.calledShotModifier = 0;
     } else if (document.getElementById("called-shot-2").checked) {
@@ -194,7 +211,6 @@ export class attackDialog extends FormApplication {
       this.test.isOther3 = false;
     }
 
-    var x = event;
     torgchecks.weaponAttack(this.test);
     this.close();
   }

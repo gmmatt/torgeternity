@@ -1,6 +1,12 @@
 import * as torgchecks from "/systems/torgeternity/module/torgchecks.js";
 
+/**
+ *
+ */
 export class attackUpdate extends FormApplication {
+  /**
+   *
+   */
   static get defaultOptions() {
     const options = super.defaultOptions;
     options.template = "systems/torgeternity/templates/attack-test-update.hbs";
@@ -11,11 +17,18 @@ export class attackUpdate extends FormApplication {
     return options;
   }
 
+  /**
+   *
+   * @param test
+   */
   constructor(test) {
     super();
     this.test = test;
   }
 
+  /**
+   *
+   */
   getData() {
     const data = super.getData();
 
@@ -24,12 +37,21 @@ export class attackUpdate extends FormApplication {
     return data;
   }
 
+  /**
+   *
+   * @param html
+   */
   activateListeners(html) {
     html.find(".update-roll-button").click(this._onModify.bind(this));
 
     super.activateListeners(html);
   }
 
+  /**
+   *
+   * @param event
+   * @param html
+   */
   _onModify(event, html) {
     // Add DN based on selected target attribute
     this.test.isDN = true;
@@ -76,7 +98,7 @@ export class attackUpdate extends FormApplication {
       this.test.targetsModifier = -10;
     }
 
-    //Add Called Shot Modifier
+    // Add Called Shot Modifier
     if (document.getElementById("called-shot-none").checked) {
       this.test.calledShotModifier = 0;
     } else if (document.getElementById("called-shot-2").checked) {
@@ -180,7 +202,6 @@ export class attackUpdate extends FormApplication {
 
     this.test.diceroll = null;
 
-    var x = event;
     torgchecks.renderSkillChat(this.test);
     this.close();
   }
