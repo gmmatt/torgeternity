@@ -24,7 +24,7 @@ import torgeternityPile from "./cards/torgeternityPile.js";
 import torgeternityDeck from "./cards/torgeternityDeck.js";
 import torgeternityCardConfig from "./cards/torgeternityCardConfig.js";
 import { torgeternityCards } from "./cards/torgeternityCards.js";
-import { TestDialog } from "/systems/torgeternity/module/test-dialog.js";
+import { testDialog } from "/systems/torgeternity/module/test-dialog.js";
 import { hideCompendium } from "./hideCompendium.js";
 import initTorgControlButtons from "./controlButtons.js";
 import createTorgShortcuts from "./keybinding.js";
@@ -34,6 +34,7 @@ import { explode, reroll } from "./explode.js";
 import { activateStandartScene } from "./activateStandartScene.js";
 import { torgMigration } from "./migrations.js";
 import initTextEdidor from "./initTextEditor.js";
+import { TorgeternityMacros } from "./macros.js";
 
 Hooks.once("init", async function () {
   console.log("torgeternity | Initializing Torg Eternity System");
@@ -46,6 +47,7 @@ Hooks.once("init", async function () {
     rollItemMacro,
     rollSkillMacro,
     viewMode: true,
+    macros: new TorgeternityMacros(),
   };
   initTextEdidor();
   CONFIG.torgeternity = torgeternity;

@@ -3,7 +3,7 @@ import * as torgchecks from "/systems/torgeternity/module/torgchecks.js";
 /**
  *
  */
-export class torgeternityMacros {
+export class TorgeternityMacros {
   /**
    *
    */
