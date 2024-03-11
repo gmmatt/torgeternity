@@ -3,6 +3,13 @@ initialy created by BadIdeasBureau in his module "chain-reaction" : https://gith
 thanks to him for letting us using his code
 */
 
+/**
+ *
+ * @param modifier
+ * @param root0
+ * @param root0.recursive
+ * @this Die
+ */
 export function explode(modifier, { recursive = true } = {}) {
   if (!this.explosions) this.explosions = [];
 
@@ -24,21 +31,21 @@ export function explode(modifier, { recursive = true } = {}) {
   if (recursive) {
     max = Number.isNumeric(max) ? parseInt(max) : null;
   } else {
-    max = 1; //handling the xo operator here passes down the chain nicer, and appears to be equivalent to current behaviour
+    max = 1; // handling the xo operator here passes down the chain nicer, and appears to be equivalent to current behaviour
   }
-  let comparisons = { max, comparison, target };
+  const comparisons = { max, comparison, target };
   this.explosions.push({ comparisons, checked: 0, type: "explosion" });
   // Recursively explode until there are no remaining results to explode
   let checked = 0;
   while (checked < this.results.length) {
-    let r = this.results[checked];
+    const r = this.results[checked];
     checked++;
     if (!r.active) continue;
 
     // Determine whether to explode the result and roll again!
-    for (let explosion of this.explosions) {
+    for (const explosion of this.explosions) {
       if (explosion.checked >= checked) continue;
-      let { max, comparison, target } = explosion.comparisons;
+      const { max, comparison, target } = explosion.comparisons;
       explosion.checked++;
 
       if (max !== null && max <= 0) continue;
@@ -59,6 +66,13 @@ export function explode(modifier, { recursive = true } = {}) {
   }
 }
 
+/**
+ *
+ * @param modifier
+ * @param root0
+ * @param root0.recursive
+ * @this Die
+ */
 export function reroll(modifier, { recursive = false } = {}) {
   if (!this.explosions) this.explosions = [];
 
@@ -80,15 +94,15 @@ export function reroll(modifier, { recursive = false } = {}) {
   if (recursive) {
     max = Number.isNumeric(max) ? parseInt(max) : null;
   } else {
-    max = 1; //handling the r operator here passes down the chain nicer, and appears to be equivalent to current behaviour
+    max = 1; // handling the r operator here passes down the chain nicer, and appears to be equivalent to current behaviour
   }
-  let comparisons = { max, comparison, target };
+  const comparisons = { max, comparison, target };
   this.explosions.push({ comparisons, checked: 0, type: "reroll" });
 
   // Recursively reroll until there are no remaining results to reroll
   let checked = 0;
   while (checked < this.results.length) {
-    let r = this.results[checked];
+    const r = this.results[checked];
     checked++;
     if (!r.active) continue;
 

@@ -1,28 +1,46 @@
+/**
+ *
+ */
 export default class torgeternitySceneConfig extends SceneConfig {
+  /**
+   *
+   */
   get template() {
-    //modified path => one folder per type
+    // modified path => one folder per type
     return `systems/torgeternity/templates/scenes/scenes-config.hbs`;
   }
+  /**
+   *
+   * @param html
+   */
   activateListeners(html) {
     super.activateListeners(html);
 
-    let selCosm = html.find("select.cosm")[0];
+    const selCosm = html.find("select.cosm")[0];
     selCosm.addEventListener("change", this._onChangeCosm.bind(this));
-    let selZone = html.find("select.zone-type")[0];
+    const selZone = html.find("select.zone-type")[0];
     selZone.addEventListener("change", this._onChangeZone.bind(this));
 
-    let selCosm2 = html.find("select.cosm-secondary")[0];
+    const selCosm2 = html.find("select.cosm-secondary")[0];
     if (selCosm2) {
       selCosm2.addEventListener("change", this._onChangeCosm2.bind(this));
     }
   }
 
+  /**
+   *
+   * @param ev
+   */
   _onChangeCosm(ev) {
-    let cosm = ev.currentTarget.options[ev.currentTarget.selectedIndex].value;
+    const cosm = ev.currentTarget.options[ev.currentTarget.selectedIndex].value;
     this.document.setFlag("torgeternity", "cosm", cosm);
   }
+  /**
+   *
+   * @param ev
+   */
   _onChangeZone(ev) {
-    let zone = ev.currentTarget.options[ev.currentTarget.selectedIndex].value;
+    const zone = ev.currentTarget.options[ev.currentTarget.selectedIndex].value;
     this.document.setFlag("torgeternity", "zone", zone);
     if (zone === "mixed" || zone === "dominant") {
       this.document.setFlag("torgeternity", "displayCosm2", true);
@@ -35,8 +53,12 @@ export default class torgeternitySceneConfig extends SceneConfig {
       this.document.setFlag("torgeternity", "isMixed", false);
     }
   }
+  /**
+   *
+   * @param ev
+   */
   _onChangeCosm2(ev) {
-    let cosm = ev.currentTarget.options[ev.currentTarget.selectedIndex].value;
+    const cosm = ev.currentTarget.options[ev.currentTarget.selectedIndex].value;
     this.document.setFlag("torgeternity", "cosm2", cosm);
   }
 }

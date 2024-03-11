@@ -1,3 +1,6 @@
+/**
+ *
+ */
 export default function initTextEdidor() {
   CONFIG.TinyMCE = {
     branding: false,

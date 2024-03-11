@@ -1,7 +1,7 @@
 {
   "id": "torgeternity",
   "title": "Torg Eternity",
-  "description": "Torg Eternity character sheet for Foundry VTT.",
+  "description": "Torg Eternity System for Foundry VTT",
   "authors": [
     {
       "name": "GM Matt",
@@ -18,19 +18,11 @@
   "version": "3.6.0",
   "compatibility": {
     "minimum": "11",
-    "verified": "11.306"
+    "verified": "11.315"
   },
-  "esmodules": [
-    "torgeternity.js"
-  ],
-  "scripts": [
-    "module/lib/setting-extender.js"
-  ],
-  "styles": [
-    "css/torgeternity.css",
-    "css/journal.css",
-    "css/cards.css"
-  ],
+  "esmodules": ["module/torgeternity.js"],
+  "scripts": ["module/lib/setting-extender.js"],
+  "styles": ["css/torgeternity.css", "css/journal.css", "css/cards.css"],
   "background": "systems/torgeternity/images/splash_new.webp",
   "packs": [
     {
@@ -229,37 +221,28 @@
               "name": "Journals",
               "sorting": "m",
               "color": "#415a9b",
-              "packs": [
-                "basic-rules",
-                "handouts"
-              ],
+              "packs": ["basic-rules", "handouts"],
               "folders": []
             },
             {
               "name": "Card Decks",
               "sorting": "m",
               "color": "#415a9b",
-              "packs": [
-                "core-card-set"
-              ],
+              "packs": ["core-card-set"],
               "folders": []
             },
             {
               "name": "Actors",
               "sorting": "m",
               "color": "#415a9b",
-              "packs": [
-                "archetypes"
-              ],
+              "packs": ["archetypes"],
               "folders": []
             },
             {
               "name": "Scenes",
               "sorting": "m",
               "color": "#415a9b",
-              "packs": [
-                "core-scenes"
-              ],
+              "packs": ["core-scenes"],
               "folders": []
             }
           ],
@@ -274,37 +257,28 @@
               "name": "Journale",
               "sorting": "m",
               "color": "#415a9b",
-              "packs": [
-                "system-de-basisregeln",
-                "system-de-handouts"
-              ],
+              "packs": ["system-de-basisregeln", "system-de-handouts"],
               "folders": []
             },
             {
               "name": "Kartendecks",
               "sorting": "m",
               "color": "#415a9b",
-              "packs": [
-                "system-de-grundkarten"
-              ],
+              "packs": ["system-de-grundkarten"],
               "folders": []
             },
             {
               "name": "Akteure",
               "sorting": "m",
               "color": "#415a9b",
-              "packs": [
-                "system-de-archetypen"
-              ],
+              "packs": ["system-de-archetypen"],
               "folders": []
             },
             {
               "name": "Szenen",
               "sorting": "m",
               "color": "#415a9b",
-              "packs": [
-                "core-de-scenes"
-              ],
+              "packs": ["core-de-scenes"],
               "folders": []
             }
           ],
@@ -319,36 +293,28 @@
               "name": "Journals",
               "sorting": "m",
               "color": "#415a9b",
-              "packs": [
-                "basic-rules-fr"
-              ],
+              "packs": ["basic-rules-fr"],
               "folders": []
             },
             {
               "name": "Card Decks",
               "sorting": "m",
               "color": "#415a9b",
-              "packs": [
-                "core-card-set-fr"
-              ],
+              "packs": ["core-card-set-fr"],
               "folders": []
             },
             {
               "name": "Actors",
               "sorting": "m",
               "color": "#415a9b",
-              "packs": [
-                "archetypes-fr"
-              ],
+              "packs": ["archetypes-fr"],
               "folders": []
             },
             {
               "name": "Scenes",
               "sorting": "m",
               "color": "#415a9b",
-              "packs": [
-                "core-scenes-fr"
-              ],
+              "packs": ["core-scenes-fr"],
               "folders": []
             }
           ],

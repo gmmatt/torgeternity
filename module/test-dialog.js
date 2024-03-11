@@ -1,7 +1,12 @@
 import * as torgchecks from "/systems/torgeternity/module/torgchecks.js";
-import { torgeternity } from "/systems/torgeternity/module/config.js";
 
-export class testDialog extends FormApplication {
+/**
+ *
+ */
+export class TestDialog extends FormApplication {
+  /**
+   *
+   */
   static get defaultOptions() {
     const options = super.defaultOptions;
     options.template = "systems/torgeternity/templates/test-dialog.hbs";
@@ -12,11 +17,18 @@ export class testDialog extends FormApplication {
     return options;
   }
 
+  /**
+   *
+   * @param test
+   */
   constructor(test) {
     super();
     this.test = test;
   }
 
+  /**
+   *
+   */
   getData() {
     const data = super.getData();
 
@@ -25,13 +37,13 @@ export class testDialog extends FormApplication {
     data.config = CONFIG.torgeternity;
 
     // Set Modifiers from Actor Wounds and Status Effects
-    let myActor = this.test.actor.includes("Token") ? fromUuidSync(this.test.actor) : fromUuidSync(this.test.actor);
+    const myActor = this.test.actor.includes("Token") ? fromUuidSync(this.test.actor) : fromUuidSync(this.test.actor);
 
     if (parseInt(myActor.system.wounds.value) <= 3) {
-      //The wound penalties are never more than -3, regardless on how many wounds a token can suffer / have. CrB p. 117
+      // The wound penalties are never more than -3, regardless on how many wounds a token can suffer / have. CrB p. 117
       data.test.woundModifier = parseInt(-myActor.system.wounds.value);
     } else if (myActor.system.wounds.value == null || isNaN(parseInt(myActor.system.wounds.value))) {
-      //currentWounds could be empty or a char/string. Users... You know?!
+      // currentWounds could be empty or a char/string. Users... You know?!
       data.test.woundModifier = 0;
     } else {
       data.test.woundModifier = -3;
@@ -45,7 +57,6 @@ export class testDialog extends FormApplication {
     data.test.vulnerableModifierAll = [];
     data.test.targetAll = [];
     data.test.targetsAllID = [];
-
 
     // Set Modifiers for Vehicles
     if (this.test.testType === "chase") {
@@ -69,17 +80,20 @@ export class testDialog extends FormApplication {
     //
     // ***Set Target Data***
     // Transfer data here because passing the entire target to a chat message tends to degrade the data
-    //       
+    //
     const allID = [];
     const allUUID = [];
-    if (data.test.targets.length > 0 & data.test.testType !== "soak") {
+    if ((data.test.targets.length > 0) & (data.test.testType !== "soak")) {
       // Identify the first target
-      //var target = Array.from(data.test.targets)[0].actor;
-      data.test.targets.forEach(t => { allID.push(t.actor.id); allUUID.push(t.document.uuid) });
+      // var target = Array.from(data.test.targets)[0].actor;
+      data.test.targets.forEach((t) => {
+        allID.push(t.actor.id);
+        allUUID.push(t.document.uuid);
+      });
       data.test.targetsAllID = allID;
       data.test.targetsAllUUID = allUUID;
-      data.test.targets.forEach(t => {
-        var target = t.actor;
+      data.test.targets.forEach((t) => {
+        const target = t.actor;
         console.log(t);
         // Set vehicle defense if needed
         if (target.type === "vehicle") {
@@ -98,10 +112,10 @@ export class testDialog extends FormApplication {
               intimidation: target.system.defense,
               maneuver: target.system.defense,
               taunt: target.system.defense,
-              trick: target.system.defense
+              trick: target.system.defense,
             },
             toughness: target.system.toughness,
-            armor: target.system.armor
+            armor: target.system.armor,
           });
         } else {
           data.test.targetAll.push({
@@ -126,9 +140,9 @@ export class testDialog extends FormApplication {
             },
           });
           data.test.vulnerableModifierAll.push(target.system.vulnerableModifier);
-        };
+        }
         if (this.test.applySize == true) {
-          var sizeBonus = target.system.details.sizeBonus;
+          const sizeBonus = target.system.details.sizeBonus;
           switch (sizeBonus) {
             case "normal":
               data.test.sizeModifier = 0;
@@ -163,12 +177,21 @@ export class testDialog extends FormApplication {
     return data;
   }
 
+  /**
+   *
+   * @param html
+   */
   activateListeners(html) {
     html.find(".skill-roll-button").click(this._onRoll.bind(this));
 
     super.activateListeners(html);
   }
 
+  /**
+   *
+   * @param event
+   * @param html
+   */
   _onRoll(event, html) {
     // Set DN Descriptor unless actively defending (in which case no DN, but we set to standard to avoid problems down the line)
     if (this.test.testType != "activeDefense") {
@@ -235,7 +258,7 @@ export class testDialog extends FormApplication {
     // Add attack and target options if needed
     //
     if (this.test.attackOptions === true) {
-      //Add Called Shot Modifier
+      // Add Called Shot Modifier
       if (document.getElementById("called-shot-none").checked) {
         this.test.calledShotModifier = 0;
       } else if (document.getElementById("called-shot-2").checked) {
@@ -337,8 +360,6 @@ export class testDialog extends FormApplication {
     } else {
       this.test.isOther3 = false;
     }
-
-    var x = event;
 
     torgchecks.renderSkillChat(this.test);
     this.close();

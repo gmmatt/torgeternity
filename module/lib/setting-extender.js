@@ -15,39 +15,6 @@
 
   // Definitions
 
-  /**
-   * Collection of utility methods whose only purpose it is to maintain backwards compatibility.
-   */
-  class Compatibility {
-    /**
-     * Compatibility for getting the modules list from SettingsConfig
-     *
-     * @param data SettingsConfig.getData() object
-     * @returns data.settings.modules or data.modules
-     */
-    static getSettingsConfigModules(data) {
-      const below_0_5_3 = data.settings && data.settings.modules;
-      const between_0_5_3_and_0_6_0 = data.modules;
-      const above_0_6_1 = data.data && data.data.modules;
-      return above_0_6_1 || between_0_5_3_and_0_6_0 || below_0_5_3;
-    }
-
-    /**
-     * Compatibility for <0.5.3
-     *
-     * @param key the key of the game setting
-     * @returns the game setting object
-     */
-    static getGameSettting(key) {
-      const settings = game.settings.settings;
-      if (settings instanceof Map) {
-        return settings.get(key);
-      } else {
-        return settings[key];
-      }
-    }
-  }
-
   function registerSettingsTypes() {
     if (window.Azzu.SettingsTypes) {
       return;
@@ -381,7 +348,7 @@
     }
 
     activateListeners($html) {
-      let extraTypes = window.Azzu.SettingsTypes;
+      const extraTypes = window.Azzu.SettingsTypes;
       // before super.activateListeners as FormApplication.activateListeners
       // initialises FilePickers
       Object.values(extraTypes).forEach((type) => type._init && type._init($html));
