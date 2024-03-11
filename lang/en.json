@@ -926,7 +926,7 @@
       "bonusDieMacroResult2": "with a result of",
       "bonusDieMacroResult3": "The token with the name",
       "bonusDieMacroResult4": "receives a damage of",
-      "bonusDieMacroResultNoDamage": "receives no Damage at all.",
+      "bonusDieMacroResultNoDamage": "receives no Damage at all",
       "bonusDieMacroNoTokenTargeted": "There were no tokens targeted."
     }
   }
