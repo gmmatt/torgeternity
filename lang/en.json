@@ -924,6 +924,9 @@
       "bonusDieMacroErrorIntegerValue": "The entered value in the dialog was not a number or a float / decimal. Please enter an integer.",
       "bonusDieMacroResult1": "You have rolled",
       "bonusDieMacroResult2": "with a result of",
+      "bonusDieMacroResult3": "The token with the name",
+      "bonusDieMacroResult4": "receives a damage of",
+ 
       "bonusDieMacroNoTokenTargeted": "There were no tokens targeted."
     }
   }

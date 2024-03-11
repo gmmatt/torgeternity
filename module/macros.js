@@ -1,3 +1,5 @@
+import * as torgchecks from "/systems/torgeternity/module/torgchecks.js";
+
 export class torgeternityMacros {
     async ClearStatusEffects(){
         try {
@@ -85,7 +87,7 @@ export class torgeternityMacros {
         
         ChatMessage.create({content: chatOutput});
     }
-
+//#region Revive Shock
     async ReviveShock(){
         const windowContent = `
             <form style="margin-bottom: 1rem; display:grid; grid-template-rows: repeat(2,auto); grid-template-columns: repeat(2,auto); align-items: center; gap:6px;">
@@ -103,7 +105,7 @@ export class torgeternityMacros {
                 {
                 buttonExecute: {
                     label: game.i18n.localize('torgeternity.dialogWindow.buttons.execute'),
-                    callback: _processReviveShock
+                    callback: game.torgeternity.macros._processReviveShock
                     }
                 }
             }
@@ -165,7 +167,8 @@ export class torgeternityMacros {
             ui.notifications.error(e.message);
         }
     }
-
+//#endregion
+//#region Roll BDs
     async RollBDs(){
         const windowContent = `
             <form style="margin-bottom: 1rem;display:flex;flex-direction:row;gap-column: 5px;">
@@ -180,7 +183,7 @@ export class torgeternityMacros {
             buttons: {
                 buttonRoll: {
                     label: game.i18n.localize('torgeternity.sheetLabels.roll')+ "!",
-                    callback: _rollItBDs
+                    callback: game.torgeternity.macros._rollItBDs
                     }
                 }
             }
@@ -189,43 +192,41 @@ export class torgeternityMacros {
 
     async _rollItBDs(html) {
         try {
-            console.log(typeof html);
-            console.log(html);
-        
             const formElement = html[0].querySelector('form');
             const formData = new FormDataExtended(formElement);
-            console.log(formData);
             const diceAmount = parseInt(formData.object.inputValue);
-            console.log(diceAmount);
+            
             if (isNaN(diceAmount)) {
                 ui.notifications.error(game.i18n.localize('torgeternity.macros.commonMacroNoValue'));
                 return;
             }
            
             const diceroll = await new Roll(`${diceAmount}d6x6max5`).evaluate({async: true});    
-            console.log(diceroll);
+            
             try {await game.dice3d.showForRoll(diceroll);}catch{} //if dice so nice is not active, this will be an exception, but with a void catch statement
-            
-            let resultTotal = 0;
-            
-            for (result of diceroll.terms[0].results) {
-                resultTotal += result.result;
-            }
             
             let chatOutput = `<p>${game.i18n.localize("torgeternity.macros.bonusDieMacroResult1")} ${diceAmount} ${game.i18n.localize("torgeternity.chatText.bonusDice")} ${game.i18n.localize("torgeternity.macros.bonusDieMacroResult2")} ${diceroll.total}.</p>`
             
-            let targetedTokens = game.user.targets;
+            let targetedTokens = Array.from(game.user.targets);
             console.log(targetedTokens);
+            console.log(targetedTokens.length);
             if (targetedTokens.size === 0){
                 chatOutput += `<p>${game.i18n.localize("torgeternity.macros.bonusDieMacroNoTokenTargeted")}</p>`
                 console.log("No targets, creating chat Message, leaving Macro.");
                 ChatMessage.create({"content": chatOutput});
                 return;
             }
-            
+            chatOutput += `<ul>`;
+            for (const token of targetedTokens) {
+                let tokenDamage = torgchecks.torgDamage(diceroll.total, token.actor.system.other.toughness);
+                chatOutput += `<li>${game.i18n.localize("torgeternity.macros.bonusDieMacroResult3")} ${token.document.name} ${game.i18n.localize("torgeternity.macros.bonusDieMacroResult4")} ${tokenDamage.label}.</li>`;                
+            }
+            chatOutput += "</ul>";
+
+            ChatMessage.create({"content": chatOutput});
             } catch (e) {
                 ui.notifications.error(e.message);
             }
     }
-
+//#endregion
 }
