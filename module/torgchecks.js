@@ -672,7 +672,7 @@ export async function renderSkillChat(test) {
       // Click on defense
       const oldAD = myActor.effects.find((a) => a.name === "ActiveDefense"); // Search for an ActiveDefense effect
       const shieldOn = myActor.items.filter((it) => it.type === "shield" && it.system.equipped); // Search for an equipped shield (an array)
-      const shieldBonus = 0; // set the shieldBonus to 0 then check if the actor is Vulnerable, if true, shield bonus stay 0
+      let shieldBonus = 0; // set the shieldBonus to 0 then check if the actor is Vulnerable, if true, shield bonus stay 0
       if (
         !myActor.effects.find((a) => a.name === game.i18n.localize("torgeternity.statusEffects.vulnerable")) &&
         !myActor.effects.find((a) => a.name === game.i18n.localize("torgeternity.statusEffects.veryVulnerable"))
@@ -770,7 +770,7 @@ export async function renderSkillChat(test) {
       test.resultText = "+ " + test.bonus;
       // Create new set of active effects
       const shieldOn = myActor.items.filter((it) => it.type === "shield" && it.system.equipped); // Search for an equipped shield (an array)
-      const shieldBonus = 0;
+      let shieldBonus = 0;
       if (
         !myActor.effects.find((a) => a.name === game.i18n.localize("torgeternity.statusEffects.vulnerable")) &&
         !myActor.effects.find((a) => a.name === game.i18n.localize("torgeternity.statusEffects.veryVulnerable"))
