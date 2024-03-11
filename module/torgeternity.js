@@ -24,7 +24,7 @@ import torgeternityPile from "./cards/torgeternityPile.js";
 import torgeternityDeck from "./cards/torgeternityDeck.js";
 import torgeternityCardConfig from "./cards/torgeternityCardConfig.js";
 import { torgeternityCards } from "./cards/torgeternityCards.js";
-import { testDialog } from "/systems/torgeternity/module/test-dialog.js";
+import { TestDialog } from "/systems/torgeternity/module/test-dialog.js";
 import { hideCompendium } from "./hideCompendium.js";
 import initTorgControlButtons from "./controlButtons.js";
 import createTorgShortcuts from "./keybinding.js";
