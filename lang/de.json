@@ -926,6 +926,7 @@
       "bonusDieMacroResult2": "mit einem Ergebnis von",
       "bonusDieMacroResult3": "Der Token mit dem Namen",
       "bonusDieMacroResult4": "erhält einen Schaden von",
+      "bonusDieMacroResultNoDamage": "erhält keinen Schaden",
       "bonusDieMacroNoTokenTargeted": "Es wurden keine Token ins Ziel genommen."      
     }
   }
