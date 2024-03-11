@@ -1,3 +1,5 @@
+import { ChatMessageTorg } from "./chat/document.js";
+
 /**
  *
  */
@@ -161,19 +163,20 @@ export default class torgeternityItem extends Item {
    *
    */
   async roll() {
-    const chatData = {
-      user: game.user._id,
-      speaker: ChatMessage.getSpeaker(),
-    };
-
     const cardData = {
       ...this,
       owner: this.actor._id,
     };
+    const chatData = {
+      user: game.user._id,
+      speaker: ChatMessage.getSpeaker(),
+      flags: {
+        data: cardData,
+        template: this.chatTemplate[this.type],
+      },
+    };
 
-    chatData.content = await renderTemplate(this.chatTemplate[this.type], cardData);
-
-    return ChatMessage.create(chatData);
+    return ChatMessageTorg.create(chatData);
   }
 
   /**
@@ -214,14 +217,7 @@ export default class torgeternityItem extends Item {
     // Generate final Roll Result
     const rollResult = parseInt(skillValue) + parseInt(bonus);
 
-    // Put together Chat Data
-    const chatData = {
-      user: game.user.data._id,
-      speaker: ChatMessage.getSpeaker(),
-    };
-
     // Assemble information needed by attack card
-
     const cardData = {
       ...this.data,
       owner: this.actor.id,
@@ -231,13 +227,20 @@ export default class torgeternityItem extends Item {
       baseDamage: baseDamage,
     };
 
-    // Send the chat
-    chatData.content = await renderTemplate(this.chatTemplate["attack"], cardData);
+    // Put together Chat Data
+    const chatData = {
+      user: game.user.data._id,
+      speaker: ChatMessage.getSpeaker(),
+      flags: {
+        data: cardData,
+        template: this.chatTemplate["attack"],
+      },
+    };
 
     chatData.speaker.actor = this.actor.id;
     chatData.weaponAttack = true;
 
-    return ChatMessage.create(chatData);
+    return ChatMessageTorg.create(chatData);
   }
 
   /**
@@ -290,12 +293,6 @@ export default class torgeternityItem extends Item {
     // Generate final Roll Result
     const rollResult = parseInt(skillValue) + parseInt(bonus);
 
-    // Put together Chat Data
-    const chatData = {
-      user: game.user.data._id,
-      speaker: ChatMessage.getSpeaker(),
-    };
-
     // Assemble information needed by attack card
     const cardData = {
       ...this.data,
@@ -306,11 +303,18 @@ export default class torgeternityItem extends Item {
       baseDamage: this.system.damage,
     };
 
-    // Send the chat
-    chatData.content = await renderTemplate(this.chatTemplate["power"], cardData);
+    // Put together Chat Data
+    const chatData = {
+      user: game.user.data._id,
+      speaker: ChatMessage.getSpeaker(),
+      flags: {
+        data: cardData,
+        template: this.chatTemplate["power"],
+      },
+    };
 
     chatData.power = true;
 
-    return ChatMessage.create(chatData);
+    return ChatMessageTorg.create(chatData);
   }
 }
