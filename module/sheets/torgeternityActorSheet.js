@@ -891,11 +891,12 @@ export default class torgeternityActorSheet extends ActorSheet {
     const damageType = weaponData.damageType;
     const weaponDamage = weaponData.damage;
     let skillValue;
+    let skillData;
     if (this.actor.type === "vehicle") {
       skillValue = item.system.gunner.skillValue;
       attributes = 0;
     } else {
-      const skillData = this.actor.system.skills[weaponData.attackWith];
+      skillData = this.actor.system.skills[weaponData.attackWith];
       skillValue = skillData.value;
       attributes = this.actor.system.attributes;
       if (isNaN(skillValue)) {
