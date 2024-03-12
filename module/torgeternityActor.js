@@ -203,7 +203,7 @@ export default class torgeternityActor extends Actor {
 
     if ((this._source.type === "stormknight") | (this._source.type === "threat")) {
       for (const [name, skill] of Object.entries(skillset)) {
-        if (!this._source.system.skills[name].adds) {
+        if (this._source.system.skills[name].adds === null) {
           if (skill.unskilledUse === 1) {
             skill.value =
               parseInt(this.system.attributes[skill.baseAttribute]) + (skill.adds ? parseInt(skill.adds) : 0);
@@ -213,6 +213,9 @@ export default class torgeternityActor extends Actor {
           }
         } else {
           skill.value = parseInt(skill.adds) + parseInt(this.system.attributes[skill.baseAttribute]);
+          if (isNaN(skill.value)) {
+            skill.value = "";
+          }
         }
       }
     }
