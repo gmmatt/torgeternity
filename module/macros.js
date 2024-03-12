@@ -4,23 +4,6 @@ import * as torgchecks from "./torgchecks.js";
  *
  */
 export class TorgeternityMacros {
-  // #region common
-  /**
-   *
-   * @param html
-   * @param func
-   */
-  onRenderKeyEnter(html, func) {
-    const picker = html[0];
-    picker.addEventListener("keypress", (event) => {
-      if (event.key === "Enter") {
-        event.preventDefault();
-        func();
-      }
-    });
-  }
-
-  // #endregion
   /**
    *
    */
@@ -155,6 +138,7 @@ export class TorgeternityMacros {
           callback: game.torgeternity.macros._processReviveShock,
         },
       },
+      default: buttonExecute
     }).render(true);
   }
 
@@ -266,10 +250,8 @@ export class TorgeternityMacros {
 
       const diceroll = await new Roll(`${diceAmount}d6x6max5`).evaluate({ async: true });
 
-      try {
-        await game.dice3d.showForRoll(diceroll);
-      } catch {} // if dice so nice is not active, this will be an exception, but with a void catch statement
-
+      await game.dice3d?.showForRoll(diceroll);
+      
       let chatOutput = `<p>${game.i18n.localize(
         "torgeternity.macros.bonusDieMacroResult1"
       )} ${diceAmount} ${game.i18n.localize("torgeternity.chatText.bonusDice")} ${game.i18n.localize(
