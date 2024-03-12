@@ -229,16 +229,6 @@ export class TorgeternityMacros {
    *
    */
   async rollBDs() {
-    function onRender(html) {
-      const picker = html[0];
-      picker.addEventListener("keypress", (event) => {
-        if (event.key === "Enter") {
-          event.preventDefault();
-          _rollItBDs();
-        }
-      });
-    }
-
     const windowContent = `
             <form style="margin-bottom: 1rem;display:flex;flex-direction:row;gap: 9px;align-items:center">
                 <label for="inputValue">${game.i18n.localize("torgeternity.macros.bonusDieMacroContent")}</label>
@@ -255,7 +245,7 @@ export class TorgeternityMacros {
           callback: game.torgeternity.macros._rollItBDs,
         },
       },
-      render: onRender,
+      default: "buttonRoll",
     }).render(true);
   }
 
