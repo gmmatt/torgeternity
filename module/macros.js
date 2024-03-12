@@ -4,10 +4,22 @@ import * as torgchecks from "/systems/torgeternity/module/torgchecks.js";
  *
  */
 export class TorgeternityMacros {
+  //#region common
+  onRenderKeyEnter(html,func){
+    const picker = html[0];
+    picker.addEventListener("keypress", (event) => {
+        if(event.key === "Enter"){ 
+        event.preventDefault();
+        func();
+        }
+    })
+}
+
+//#endregion
   /**
    *
    */
-  async ClearStatusEffects() {
+  async clearStatusEffects() {
     try {
       const tokens = canvas.tokens.controlled;
       if (!game.user.isGM) {
@@ -58,7 +70,7 @@ export class TorgeternityMacros {
   /**
    *
    */
-  async ApplyFatigue() {
+  async applyFatigue() {
     const tokens = canvas.tokens.controlled;
 
     if (tokens.length === 0) {
@@ -118,7 +130,7 @@ export class TorgeternityMacros {
   /**
    *
    */
-  async ReviveShock() {
+  async reviveShock() {
     const windowContent = `
             <form style="margin-bottom: 1rem; display:grid; grid-template-rows: repeat(2,auto); grid-template-columns: repeat(2,auto); align-items: center; gap:6px;">
                 <label for="inputValue">${game.i18n.localize("torgeternity.macros.reviveMacroWindowLabel1")}</label>
@@ -211,11 +223,21 @@ export class TorgeternityMacros {
   /**
    *
    */
-  async RollBDs() {
+  async rollBDs() {
+    function onRender(html){
+      const picker = html[0];
+      picker.addEventListener("keypress", (event) => {
+        if (event.key === "Enter"){
+          event.preventDefault();
+          _rollItBDs();
+        }
+      });
+  }
+
     const windowContent = `
-            <form style="margin-bottom: 1rem;display:flex;flex-direction:row;gap-column: 5px;">
+            <form style="margin-bottom: 1rem;display:flex;flex-direction:row;gap: 9px;align-items:center">
                 <label for="inputValue">${game.i18n.localize("torgeternity.macros.bonusDieMacroContent")}</label>
-                <input type="number" min="1" step="1" name="inputValue" id="inputValue">
+                <input style="width:25%;" type="number" min="1" step="1" name="inputValue" id="inputValue">
             </form>
         `;
 
@@ -228,6 +250,7 @@ export class TorgeternityMacros {
           callback: game.torgeternity.macros._rollItBDs,
         },
       },
+      render: onRender
     }).render(true);
   }
 
@@ -270,9 +293,15 @@ export class TorgeternityMacros {
       chatOutput += `<ul>`;
       for (const token of targetedTokens) {
         const tokenDamage = torgchecks.torgDamage(diceroll.total, token.actor.system.other.toughness);
+        if (tokenDamage.shocks > 0) {
         chatOutput += `<li>${game.i18n.localize("torgeternity.macros.bonusDieMacroResult3")} ${
           token.document.name
         } ${game.i18n.localize("torgeternity.macros.bonusDieMacroResult4")} ${tokenDamage.label}.</li>`;
+        } else {
+          chatOutput += `<li>${game.i18n.localize("torgeternity.macros.bonusDieMacroResult3")} ${
+            token.document.name
+          } ${game.i18n.localize("torgeternity.macros.bonusDieMacroResultNoDamage")}.</li>`;
+        }
       }
       chatOutput += "</ul>";
 
