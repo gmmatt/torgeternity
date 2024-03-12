@@ -1,8 +1,5 @@
-2024/03/10-07:21:56.072 5380 Recovering log #116
-2024/03/10-07:21:56.105 5380 Delete type=0 #116
-2024/03/10-07:21:56.105 5380 Delete type=3 #114
-2024/03/10-10:33:29.227 11fc Level-0 table #121: started
-2024/03/10-10:33:29.227 11fc Level-0 table #121: 0 bytes OK
-2024/03/10-10:33:29.243 11fc Delete type=0 #119
-2024/03/10-10:33:29.244 11fc Manual compaction at level-0 from '!actors!0ScjEZmA3HcIcn4g' @ 72057594037927935 : 1 .. '!actors.items.effects!ys0MhNx2uIG2ORAD.rQ7DWxblZWWkGToo.ZG2C28w8MthXs0or' @ 0 : 0; will stop at (end)
-2024/03/10-10:33:29.244 11fc Manual compaction at level-1 from '!actors!0ScjEZmA3HcIcn4g' @ 72057594037927935 : 1 .. '!actors.items.effects!ys0MhNx2uIG2ORAD.rQ7DWxblZWWkGToo.ZG2C28w8MthXs0or' @ 0 : 0; will stop at (end)
+2024/03/12-14:06:01.902 726c Log #123: 0 ops saved to Table #124 OK
+2024/03/12-14:06:01.903 726c Archiving D:\Foundry\UserData\Data\systems\torgeternity\packs\french\archetypes/000123.log: OK
+2024/03/12-14:06:01.904 726c Table #5: 237 entries OK
+2024/03/12-14:06:01.928 726c Archiving D:\Foundry\UserData\Data\systems\torgeternity\packs\french\archetypes/MANIFEST-000122: OK
+2024/03/12-14:06:01.946 726c **** Repaired leveldb D:\Foundry\UserData\Data\systems\torgeternity\packs\french\archetypes; recovered 1 files; 175678 bytes. Some data may have been lost. ****

@@ -1,8 +1,5 @@
-2024/03/10-07:21:56.416 c18 Recovering log #116
-2024/03/10-07:21:56.479 c18 Delete type=0 #116
-2024/03/10-07:21:56.479 c18 Delete type=3 #114
-2024/03/10-10:33:29.527 11fc Level-0 table #121: started
-2024/03/10-10:33:29.527 11fc Level-0 table #121: 0 bytes OK
-2024/03/10-10:33:29.551 11fc Delete type=0 #119
-2024/03/10-10:33:29.575 11fc Manual compaction at level-0 from '!scenes!nGb3YPFMhvhcL1Xs' @ 72057594037927935 : 1 .. '!scenes!nGb3YPFMhvhcL1Xs' @ 0 : 0; will stop at (end)
-2024/03/10-10:33:29.575 11fc Manual compaction at level-1 from '!scenes!nGb3YPFMhvhcL1Xs' @ 72057594037927935 : 1 .. '!scenes!nGb3YPFMhvhcL1Xs' @ 0 : 0; will stop at (end)
+2024/03/12-14:06:02.499 17ec Log #123: 0 ops saved to Table #124 OK
+2024/03/12-14:06:02.499 17ec Archiving D:\Foundry\UserData\Data\systems\torgeternity\packs\deutsch\standardszene/000123.log: OK
+2024/03/12-14:06:02.499 17ec Table #5: 1 entries OK
+2024/03/12-14:06:02.520 17ec Archiving D:\Foundry\UserData\Data\systems\torgeternity\packs\deutsch\standardszene/MANIFEST-000122: OK
+2024/03/12-14:06:02.547 17ec **** Repaired leveldb D:\Foundry\UserData\Data\systems\torgeternity\packs\deutsch\standardszene; recovered 1 files; 89688 bytes. Some data may have been lost. ****

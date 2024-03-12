@@ -1,8 +1,5 @@
-2024/03/10-07:21:55.921 2ec4 Recovering log #116
-2024/03/10-07:21:55.954 2ec4 Delete type=0 #116
-2024/03/10-07:21:55.954 2ec4 Delete type=3 #114
-2024/03/10-10:33:29.194 11fc Level-0 table #121: started
-2024/03/10-10:33:29.194 11fc Level-0 table #121: 0 bytes OK
-2024/03/10-10:33:29.210 11fc Delete type=0 #119
-2024/03/10-10:33:29.227 11fc Manual compaction at level-0 from '!cards!9SgkBX6SsRmbY75i' @ 72057594037927935 : 1 .. '!cards.cards!wC9PKdHJuhDjCwyV.zHzn8MqbEo0nIqrZ' @ 0 : 0; will stop at (end)
-2024/03/10-10:33:29.243 11fc Manual compaction at level-1 from '!cards!9SgkBX6SsRmbY75i' @ 72057594037927935 : 1 .. '!cards.cards!wC9PKdHJuhDjCwyV.zHzn8MqbEo0nIqrZ' @ 0 : 0; will stop at (end)
+2024/03/12-14:06:01.626 1b3c Log #123: 0 ops saved to Table #124 OK
+2024/03/12-14:06:01.627 1b3c Archiving D:\Foundry\UserData\Data\systems\torgeternity\packs\core-card-set/000123.log: OK
+2024/03/12-14:06:01.627 1b3c Table #5: 190 entries OK
+2024/03/12-14:06:01.653 1b3c Archiving D:\Foundry\UserData\Data\systems\torgeternity\packs\core-card-set/MANIFEST-000122: OK
+2024/03/12-14:06:01.681 1b3c **** Repaired leveldb D:\Foundry\UserData\Data\systems\torgeternity\packs\core-card-set; recovered 1 files; 24969 bytes. Some data may have been lost. ****
