@@ -4,7 +4,12 @@ import * as torgchecks from "./torgchecks.js";
  *
  */
 export class TorgeternityMacros {
-  //#region common
+  // #region common
+  /**
+   *
+   * @param html
+   * @param func
+   */
   onRenderKeyEnter(html, func) {
     const picker = html[0];
     picker.addEventListener("keypress", (event) => {
@@ -15,7 +20,7 @@ export class TorgeternityMacros {
     });
   }
 
-  //#endregion
+  // #endregion
   /**
    *
    */
