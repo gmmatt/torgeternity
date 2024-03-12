@@ -5,7 +5,9 @@
   "main": "system.json",
   "license": "MIT",
   "author": "GM_Matt, Orome, Rwan, Durak, Algor",
-  "dependencies": {
+  "dependencies": {},
+  "devDependencies": {
+    "@foundryvtt/foundryvtt-cli": "^1.0.0-rc.4",
     "@babel/eslint-parser": "^7.19.1",
     "@babel/plugin-syntax-import-assertions": "^7.20.0",
     "eslint": "^8.34.0",
@@ -16,7 +18,10 @@
     "prettier": "^2.8.4",
     "sass": "^1.58.3"
   },
-  "scripts": {},
+  "scripts": {
+    "build": "node ./tools/pullYMLtoLDB.mjs",
+    "extract": "node ./tools/pushLDBtoYML.mjs"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/gmmatt/torgeternity.git"
