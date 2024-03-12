@@ -1,5 +1,6 @@
 import { TestDialog } from "/systems/torgeternity/module/test-dialog.js";
 import { checkUnskilled } from "/systems/torgeternity/module/sheets/torgeternityActorSheet.js";
+import { ChatMessageTorg } from "./chat/document.js";
 
 /**
  *
@@ -987,22 +988,15 @@ export async function renderSkillChat(test) {
     chatData.speaker.actor = test.actor.id;
     chatData.speaker.alias = test.actor.name;
 
-    const templatePromise = renderTemplate("./systems/torgeternity/templates/partials/skill-card.hbs", test);
+    const messageData = {
+      ...chatData,
+      flags: {
+        torgeternity: { test, currentTarget },
+        template: "./systems/torgeternity/templates/partials/skill-card.hbs",
+      },
+    };
 
-    const messageData = { ...chatData, flags: { torgeternity: { test, currentTarget } } };
-
-    await templatePromise.then((content) => {
-      // the 'toMessage(..)' shows the dice formula and result
-      // to see them, just remove comments between there
-      //
-      /* if (test.diceroll != null) {                //
-        messageData.flavor = content;               //
-        test.diceroll.toMessage(messageData);       //
-      } else {*/ //
-      messageData.content = content; //
-      ChatMessage.create(messageData); //
-      /* };*/ // and there
-    });
+    ChatMessageTorg.create(messageData);
   }
 
   // reset tokens targeted, they are printed in the chatCard

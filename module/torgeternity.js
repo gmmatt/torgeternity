@@ -35,6 +35,7 @@ import { activateStandartScene } from "./activateStandartScene.js";
 import { torgMigration } from "./migrations.js";
 import initTextEdidor from "./initTextEditor.js";
 import { TorgeternityMacros } from "./macros.js";
+import { ChatMessageTorg } from "./chat/document.js";
 
 Hooks.once("init", async function () {
   console.log("torgeternity | Initializing Torg Eternity System");
@@ -61,6 +62,7 @@ Hooks.once("init", async function () {
   CONFIG.Combat.documentClass = torgeternityCombat;
   CONFIG.ui.combat = torgeternityCombatTracker;
   CONFIG.Combatant.documentClass = torgCombatant;
+  CONFIG.ChatMessage.documentClass = ChatMessageTorg;
 
   // ----scenes
   // CONFIG.Scene.sheetClass = torgeternitySceneConfig;
