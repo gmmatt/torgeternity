@@ -1,8 +1,5 @@
-2024/03/10-07:21:56.112 2ec4 Recovering log #116
-2024/03/10-07:21:56.164 2ec4 Delete type=0 #116
-2024/03/10-07:21:56.164 2ec4 Delete type=3 #114
-2024/03/10-10:33:29.266 11fc Level-0 table #121: started
-2024/03/10-10:33:29.266 11fc Level-0 table #121: 0 bytes OK
-2024/03/10-10:33:29.327 11fc Delete type=0 #119
-2024/03/10-10:33:29.393 11fc Manual compaction at level-0 from '!journal!13SHkU9JCei37ioP' @ 72057594037927935 : 1 .. '!journal!xvfgaYujZOdiScLS' @ 0 : 0; will stop at (end)
-2024/03/10-10:33:29.393 11fc Manual compaction at level-1 from '!journal!13SHkU9JCei37ioP' @ 72057594037927935 : 1 .. '!journal!xvfgaYujZOdiScLS' @ 0 : 0; will stop at (end)
+2024/03/12-14:06:01.986 17ec Log #123: 0 ops saved to Table #124 OK
+2024/03/12-14:06:01.986 17ec Archiving D:\Foundry\UserData\Data\systems\torgeternity\packs\french\basic-rules/000123.log: OK
+2024/03/12-14:06:01.986 17ec Table #5: 29 entries OK
+2024/03/12-14:06:02.011 17ec Archiving D:\Foundry\UserData\Data\systems\torgeternity\packs\french\basic-rules/MANIFEST-000122: OK
+2024/03/12-14:06:02.030 17ec **** Repaired leveldb D:\Foundry\UserData\Data\systems\torgeternity\packs\french\basic-rules; recovered 1 files; 42796 bytes. Some data may have been lost. ****

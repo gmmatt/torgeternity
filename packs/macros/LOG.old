@@ -1,8 +1,7 @@
-2024/03/10-07:21:55.698 c18 Recovering log #4
-2024/03/10-07:21:55.754 c18 Delete type=0 #4
-2024/03/10-07:21:55.754 c18 Delete type=3 #2
-2024/03/10-10:33:29.027 11fc Level-0 table #9: started
-2024/03/10-10:33:29.052 11fc Level-0 table #9: 2328 bytes OK
-2024/03/10-10:33:29.076 11fc Delete type=0 #7
-2024/03/10-10:33:29.093 11fc Manual compaction at level-0 from '!macros!CdoBiDgMPiRHfsIK' @ 72057594037927935 : 1 .. '!macros!SlWabYnetOmw71c8' @ 0 : 0; will stop at (end)
-2024/03/10-10:33:29.168 11fc Manual compaction at level-1 from '!macros!CdoBiDgMPiRHfsIK' @ 72057594037927935 : 1 .. '!macros!SlWabYnetOmw71c8' @ 0 : 0; will stop at (end)
+2024/03/12-14:06:01.251 17ec Log #11: 5 ops saved to Table #12 OK
+2024/03/12-14:06:01.251 17ec Archiving D:\Foundry\UserData\Data\systems\torgeternity\packs\macros/000011.log: OK
+2024/03/12-14:06:01.251 17ec Table #5: 4 entries OK
+2024/03/12-14:06:01.251 17ec Table #9: 1 entries OK
+2024/03/12-14:06:01.251 17ec Table #12: 5 entries OK
+2024/03/12-14:06:01.287 17ec Archiving D:\Foundry\UserData\Data\systems\torgeternity\packs\macros/MANIFEST-000010: OK
+2024/03/12-14:06:01.304 17ec **** Repaired leveldb D:\Foundry\UserData\Data\systems\torgeternity\packs\macros; recovered 3 files; 5947 bytes. Some data may have been lost. ****
