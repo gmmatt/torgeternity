@@ -406,6 +406,11 @@
               >
                 {{localize (concatSkillName name)}}
               </a>
+              {{#if content.isFav}}
+                <a class="toggleFav checked">
+                  <i class="far fa-star"></i>
+                </a>
+              {{/if}}
               &nbsp;{{content.value}}
             </span>
 
