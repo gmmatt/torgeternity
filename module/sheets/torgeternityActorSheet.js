@@ -428,7 +428,7 @@ export default class torgeternityActorSheet extends ActorSheet {
       await this.actor.update({
         [`system.skills.${skill}.adds`]: "",
         [`system.skills.${skill}.value`]: "",
-        [`system.skills.${skill}.isFav`]: false,
+        [`system.skills.${skill}.isThreatSkill`]: false,
       });
     } else {
       if (!!skill) {
@@ -436,7 +436,7 @@ export default class torgeternityActorSheet extends ActorSheet {
         const computedAdds = event.target?.value - this.actor.system.attributes[skillObject?.baseAttribute];
         await this.actor.update({
           [`system.skills.${skill}.adds`]: computedAdds,
-          [`system.skills.${skill}.isFav`]: true,
+          [`system.skills.${skill}.isThreatSkill`]: true,
         });
       }
     }

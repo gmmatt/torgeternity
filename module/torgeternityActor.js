@@ -211,7 +211,11 @@ export default class torgeternityActor extends Actor {
         }
       }
     }
-
+    if (this.type === "threat") {
+      for (const skill of Object.values(skillset)) {
+        skill.isThreatSkill = skill.isThreatSkill || !!skill.adds;
+      }
+    }
     if ((this._source.type === "stormknight") | (this._source.type === "threat")) {
       // Set base unarmedDamage from interaction
       this.system.unarmedDamage = this.system.attributes.strength + (this.system?.unarmedDamageMod | 0);
