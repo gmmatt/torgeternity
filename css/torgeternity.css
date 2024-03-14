@@ -3875,7 +3875,7 @@ form.actor-sheet.threat .tab[data-tab].active .editor {
   height: 85%;
   margin-left: -10%;
   z-index: 1000;
-  transform: translateX(-0%) rotateX(15deg) scale (1);
+  transform: rotateX(15deg);
   transition: all 500ms cubic-bezier(0.42, 0, 0.58, 1) 10ms;
 }
 
