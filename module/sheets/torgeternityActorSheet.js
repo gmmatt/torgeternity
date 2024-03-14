@@ -213,7 +213,6 @@ export default class torgeternityActorSheet extends ActorSheet {
    */
   activateListeners(html) {
     // localizing hardcoded possibility potential value
-    console.log(this.actor);
     if (
       game.settings.get("core", "language") != "en" &&
       this.actor.type === "threat" &&
@@ -424,15 +423,21 @@ export default class torgeternityActorSheet extends ActorSheet {
    */
   async setThreatAdds(event) {
     const skill = event.target.dataset.skill;
-    if (event.target.value === "0") {
+    if (["0", ""].includes(event.target.value)) {
       // reset the 'skill object' to hide any value (the zero)
-      await this.actor.update({ [`system.skills.${skill}.adds`]: "" });
-      await this.actor.update({ [`system.skills.${skill}.value`]: "" });
+      await this.actor.update({
+        [`system.skills.${skill}.adds`]: "",
+        [`system.skills.${skill}.value`]: "",
+        [`system.skills.${skill}.isFav`]: false,
+      });
     } else {
       if (!!skill) {
         const skillObject = this.actor.system.skills[skill];
         const computedAdds = event.target?.value - this.actor.system.attributes[skillObject?.baseAttribute];
-        await this.actor.update({ [`system.skills.${skill}.adds`]: computedAdds });
+        await this.actor.update({
+          [`system.skills.${skill}.adds`]: computedAdds,
+          [`system.skills.${skill}.isFav`]: true,
+        });
       }
     }
   }

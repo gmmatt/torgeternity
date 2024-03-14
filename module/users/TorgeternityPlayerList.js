@@ -83,7 +83,6 @@ export default class TorgeternityPlayerList extends PlayerList {
       GM.setFlag("torgeternity", "GMpossibilities", newVal);
       ui.players.render(true);
     } else {
-      console.log();
       const targetActor = game.actors.get(ev.currentTarget.dataset.targetId);
       await targetActor.update({
         _id: targetActor._id,

@@ -393,7 +393,7 @@
     <div class="threat-block">
       <span class="inline-skill-list">
         {{#each actor.system.skills as |content name|}}
-          {{#if content.value}}
+          {{#if content.isFav}}
             <span class="inline-skill-item">
               <a
                 class="skill-roll"
@@ -406,11 +406,6 @@
               >
                 {{localize (concatSkillName name)}}
               </a>
-              {{#if content.isFav}}
-                <a class="toggleFav checked">
-                  <i class="far fa-star"></i>
-                </a>
-              {{/if}}
               &nbsp;{{content.value}}
             </span>
 
@@ -442,6 +437,7 @@
                   type="number"
                   class="small-input"
                   value="{{skill.value}}"
+                  placeholder="-"
                 />
 
                 <a class="toggleFav {{checked skill.isFav}}">

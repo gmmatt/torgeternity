@@ -5,17 +5,17 @@ import * as torgchecks from "/systems/torgeternity/module/torgchecks.js";
  */
 export class TorgeternityMacros {
   //#region common
-  onRenderKeyEnter(html,func){
+  onRenderKeyEnter(html, func) {
     const picker = html[0];
     picker.addEventListener("keypress", (event) => {
-        if(event.key === "Enter"){ 
+      if (event.key === "Enter") {
         event.preventDefault();
         func();
-        }
-    })
-}
+      }
+    });
+  }
 
-//#endregion
+  //#endregion
   /**
    *
    */
@@ -224,15 +224,15 @@ export class TorgeternityMacros {
    *
    */
   async rollBDs() {
-    function onRender(html){
+    function onRender(html) {
       const picker = html[0];
       picker.addEventListener("keypress", (event) => {
-        if (event.key === "Enter"){
+        if (event.key === "Enter") {
           event.preventDefault();
           _rollItBDs();
         }
       });
-  }
+    }
 
     const windowContent = `
             <form style="margin-bottom: 1rem;display:flex;flex-direction:row;gap: 9px;align-items:center">
@@ -250,7 +250,7 @@ export class TorgeternityMacros {
           callback: game.torgeternity.macros._rollItBDs,
         },
       },
-      render: onRender
+      render: onRender,
     }).render(true);
   }
 
@@ -294,9 +294,9 @@ export class TorgeternityMacros {
       for (const token of targetedTokens) {
         const tokenDamage = torgchecks.torgDamage(diceroll.total, token.actor.system.other.toughness);
         if (tokenDamage.shocks > 0) {
-        chatOutput += `<li>${game.i18n.localize("torgeternity.macros.bonusDieMacroResult3")} ${
-          token.document.name
-        } ${game.i18n.localize("torgeternity.macros.bonusDieMacroResult4")} ${tokenDamage.label}.</li>`;
+          chatOutput += `<li>${game.i18n.localize("torgeternity.macros.bonusDieMacroResult3")} ${
+            token.document.name
+          } ${game.i18n.localize("torgeternity.macros.bonusDieMacroResult4")} ${tokenDamage.label}.</li>`;
         } else {
           chatOutput += `<li>${game.i18n.localize("torgeternity.macros.bonusDieMacroResult3")} ${
             token.document.name

@@ -255,13 +255,7 @@ Hooks.on("ready", async function () {
     );
     d.render(true);
   }
-  /*
-        for (let [k, v] of game.settings.settings.entries()) {
-            if (k == "torgeternity.deckSetting") {
-                console.log('______________________ok', { v })
-            }
-        }
-      */
+
   // ----setup cards if needed
   if (game.settings.get("torgeternity", "setUpCards") === true && game.user.isGM) {
     await setUpCardPiles();
@@ -1004,20 +998,18 @@ Hooks.on("applyActiveEffect", async (actor, change, current, delta, changes) => 
 });
 
 Hooks.on("preCreateActiveEffect", async (effect, changes, data, id) => {
-  console.log("Effacé dans le preCreateActiveEffect");
   // if (game.user.isGM) {
   const malus = effect.parent.effects.find((ef) => ef.name === "Malus");
   if (malus) {
     try {
       malus.delete();
+      console.log("Effacé dans le preCreateActiveEffect");
     } catch (e) {}
   }
   // }
 });
 
 Hooks.on("deleteActiveEffect", async (effect, changes, data, id) => {
-  const lim = effect.parent.getFlag("torgeternity", "dexLimit"); // not used
-  console.log(lim);
   if (game.user.isGM) {
     const malus = effect.parent.effects.find((ef) => ef.name === "Malus");
     try {

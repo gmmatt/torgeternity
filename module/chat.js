@@ -32,7 +32,6 @@ async function parentDeleteByTime(oldMsg) {
   game.messages
     .filter((id) => Math.abs(id.timestamp - oldMsg.timestamp) < 500)
     .forEach((m) => parentMessagesIds.push(m.id));
-  console.log(parentMessagesIds);
   parentMessagesIds.forEach((id) => game.messages.get(id).delete());
 }
 
@@ -338,10 +337,6 @@ async function soakDam(event) {
   const targetid = test.target.id;
   const currentTarget = parentMessage.getFlag("torgeternity", "currentTarget");
   const targetuuid = currentTarget.uuid;
-  console.log(game.user?.character?.id);
-  console.log(targetid);
-  console.log(targetuuid);
-  console.log(test);
 
   if (!(targetid === game.user?.character?.id) && !game.user.isGM) {
     return;
@@ -385,7 +380,6 @@ async function adjustDam(event) {
   const targetuuid = parentMessage.getFlag("torgeternity", "currentTarget").uuid;
   const dama = test.damage;
   const toug = test.targetAdjustedToughness;
-  console.log(torgDamage(dama, toug));
   const newDamages = torgDamage(dama, toug);
   const oldWounds = newDamages.wounds;
   const oldShocks = newDamages.shocks;
@@ -409,10 +403,8 @@ async function adjustDam(event) {
           newWounds = Number(html[0].querySelector("input[id=nw]").value);
           newShocks = Number(html[0].querySelector("input[id=ns]").value);
           // do calculation here to get x and y, then do following function:
-          console.log(newWounds + " " + newShocks);
           newDamages.wounds = newWounds;
           newDamages.shocks = newShocks;
-          console.log(newDamages);
           applyDamages(newDamages, targetuuid);
         },
       },

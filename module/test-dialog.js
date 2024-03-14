@@ -94,7 +94,6 @@ export class TestDialog extends FormApplication {
       data.test.targetsAllUUID = allUUID;
       data.test.targets.forEach((t) => {
         const target = t.actor;
-        console.log(t);
         // Set vehicle defense if needed
         if (target.type === "vehicle") {
           data.test.targetAll.push({
