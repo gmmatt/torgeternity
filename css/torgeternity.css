@@ -2448,6 +2448,11 @@ form.actor-sheet header input[name="name"] {
   text-shadow: 0px 0px 10px #474a68;
 }
 
+.window-content .actor-sheet a.skill-list:hover,
+.window-content .actor-sheet a.skill-list:active {
+  text-shadow: 0px 0px 10px #474a68;
+}
+
 .window-content .actor-sheet .item-name {
   margin-right: 10px;
 }

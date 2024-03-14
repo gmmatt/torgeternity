@@ -265,6 +265,10 @@ export default class torgeternityActorSheet extends ActorSheet {
     }
 
     if (this.actor.isOwner) {
+      html.find(".skill-list").click(this._onSkillList.bind(this));
+    }
+
+    if (this.actor.isOwner) {
       // New for skills rolls without values
       html.find(".skill-element-roll").click(this._onSkillElementRoll.bind(this));
     }
@@ -468,6 +472,20 @@ export default class torgeternityActorSheet extends ActorSheet {
     if (!windo) {
       PossibilityByCosm.create(actor);
     }
+  }
+
+  /**
+   *
+   * @param event
+   */
+  async _onSkillList(event) {
+    const skillName = event.currentTarget.dataset.name;
+    const isThreatSkill = this.actor.system.skills[skillName].isThreatSkill;
+    const update = { [`system.skills.${skillName}.isThreatSkill`]: !isThreatSkill };
+    if (isThreatSkill) {
+      update[`system.skills.${skillName}.adds`] = "";
+    }
+    await this.actor.update(update);
   }
 
   /**
