@@ -1172,7 +1172,7 @@ export default class torgeternityActorSheet extends ActorSheet {
  * @param actor
  */
 export function checkUnskilled(skillValue, skillName, actor) {
-  if (skillValue === "-") {
+  if (!skillValue) {
     const cantRollData = {
       user: game.user._id,
       speaker: ChatMessage.getSpeaker(),
