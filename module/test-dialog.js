@@ -28,7 +28,7 @@ export class TestDialog extends FormApplication {
    * @returns {Promise<ChatMessageTorg|undefined>} The ChatMessage of the Roll
    */
   static asPromise(test, options) {
-    return new Promise((resolve) => new ChoiceDialog(test, resolve, options));
+    return new Promise((resolve) => new TestDialog(test, resolve, options));
   }
 
   /**
