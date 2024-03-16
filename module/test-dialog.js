@@ -1,9 +1,13 @@
-import * as torgchecks from "/systems/torgeternity/module/torgchecks.js";
+import { ChatMessageTorg } from "./chat/document.js";
+import * as torgchecks from "./torgchecks.js";
 
 /**
  *
  */
 export class TestDialog extends FormApplication {
+  #callback;
+  testMessage;
+
   /**
    *
    */
@@ -19,11 +23,25 @@ export class TestDialog extends FormApplication {
 
   /**
    *
-   * @param test
+   * @param {object} test the test object
+   * @param {object} options Foundry base options for the Application
+   * @returns {Promise<ChatMessageTorg|undefined>} The ChatMessage of the Roll
    */
-  constructor(test) {
-    super();
+  static asPromise(test, options) {
+    return new Promise((resolve) => new ChoiceDialog(test, resolve, options));
+  }
+
+  /**
+   *
+   * @param {object} test The test object
+   * @param {Function} resolve ChatMessage of the Roll
+   * @param {object} options Foundry base options for the Application
+   */
+  constructor(test, resolve, options = {}) {
+    super(options);
     this.test = test;
+    this.#callback = resolve;
+    this.render(true);
   }
 
   /**
@@ -362,6 +380,7 @@ export class TestDialog extends FormApplication {
     }
 
     torgchecks.renderSkillChat(this.test);
+    this.#callback(game.messages.contents.at(-1));
     this.close();
   }
 }

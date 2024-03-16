@@ -1,4 +1,4 @@
-import { PossibilityByCosm } from "/systems/torgeternity/module/possibilityByCosm.js";
+import { PossibilityByCosm } from "./possibilityByCosm.js";
 /**
  *
  */

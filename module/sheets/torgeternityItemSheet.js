@@ -1,4 +1,4 @@
-import { onManageActiveEffect, prepareActiveEffectCategories } from "/systems/torgeternity/module/effects.js";
+import { onManageActiveEffect, prepareActiveEffectCategories } from "../effects.js";
 
 /**
  *

@@ -5,7 +5,7 @@ import { applyDamages } from "./torgchecks.js";
 import { soakDamages } from "./torgchecks.js";
 import { applyStymiedState } from "./torgchecks.js";
 import { applyVulnerableState } from "./torgchecks.js";
-import { TestUpdate } from "/systems/torgeternity/module/test-update.js";
+import { TestUpdate } from "./test-update.js";
 
 /**
  *

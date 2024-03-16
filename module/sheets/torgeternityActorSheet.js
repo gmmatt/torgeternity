@@ -1,8 +1,8 @@
 import * as torgchecks from "../torgchecks.js";
-import { onManageActiveEffect, prepareActiveEffectCategories } from "/systems/torgeternity/module/effects.js";
-import { TestDialog } from "/systems/torgeternity/module/test-dialog.js";
-import torgeternityItem from "/systems/torgeternity/module/torgeternityItem.js";
-import { PossibilityByCosm } from "/systems/torgeternity/module/possibilityByCosm.js";
+import { onManageActiveEffect, prepareActiveEffectCategories } from "../effects.js";
+import { TestDialog } from "../test-dialog.js";
+import torgeternityItem from "../torgeternityItem.js";
+import { PossibilityByCosm } from "../possibilityByCosm.js";
 
 /**
  *
@@ -505,8 +505,7 @@ export default class torgeternityActorSheet extends ActorSheet {
       rollTotal: 0, // A zero indicates that a rollTotal needs to be generated when renderSkillChat is called //
     };
 
-    const dialog = new TestDialog(test);
-    dialog.render(true);
+    new TestDialog(test);
   }
 
   // Adapted from above, with event targetting in edit skills list
@@ -555,8 +554,7 @@ export default class torgeternityActorSheet extends ActorSheet {
       rollTotal: 0, // A zero indicates that a rollTotal needs to be generated when renderSkillChat is called //
     };
 
-    const dialog = new TestDialog(test);
-    dialog.render(true);
+    new TestDialog(test);
   }
 
   /**
@@ -589,8 +587,7 @@ export default class torgeternityActorSheet extends ActorSheet {
       maneuverModifier: event.currentTarget.dataset.maneuver,
     };
 
-    const dialog = new TestDialog(test);
-    dialog.render(true);
+    new TestDialog(test);
   }
 
   /**
@@ -618,8 +615,7 @@ export default class torgeternityActorSheet extends ActorSheet {
       maneuverModifier: event.currentTarget.dataset.maneuver,
     };
 
-    const dialog = new TestDialog(test);
-    dialog.render(true);
+    new TestDialog(test);
   }
 
   /**
@@ -655,8 +651,7 @@ export default class torgeternityActorSheet extends ActorSheet {
       maneuverModifier: event.currentTarget.dataset.maneuver,
     };
 
-    const dialog = new TestDialog(test);
-    dialog.render(true);
+    new TestDialog(test);
   }
 
   /**
@@ -714,8 +709,7 @@ export default class torgeternityActorSheet extends ActorSheet {
       movementModifier: 0,
     };
 
-    const dialog = new TestDialog(test);
-    dialog.render(true);
+    new TestDialog(test);
   }
 
   /**
@@ -771,8 +765,7 @@ export default class torgeternityActorSheet extends ActorSheet {
       chatNote: "",
     };
 
-    const dialog = new TestDialog(test);
-    dialog.render(true);
+    new TestDialog(test);
   }
 
   /**
@@ -827,8 +820,7 @@ export default class torgeternityActorSheet extends ActorSheet {
       sizeModifierAll: [0],
     };
 
-    const dialog = new TestDialog(test);
-    dialog.render(true);
+    new TestDialog(test);
   }
 
   /**
@@ -988,8 +980,7 @@ export default class torgeternityActorSheet extends ActorSheet {
       movementModifier: 0,
     };
 
-    const dialog = new TestDialog(test);
-    dialog.render(true);
+    new TestDialog(test);
   }
 
   /**
@@ -1087,8 +1078,7 @@ export default class torgeternityActorSheet extends ActorSheet {
       movementModifier: 0,
     };
 
-    const dialog = new TestDialog(test);
-    dialog.render(true);
+    new TestDialog(test);
   }
 
   /**

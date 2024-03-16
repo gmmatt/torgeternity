@@ -1,4 +1,4 @@
-import * as torgchecks from "/systems/torgeternity/module/torgchecks.js";
+import * as torgchecks from "./torgchecks.js";
 
 /**
  *

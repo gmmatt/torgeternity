@@ -24,7 +24,7 @@ import torgeternityPile from "./cards/torgeternityPile.js";
 import torgeternityDeck from "./cards/torgeternityDeck.js";
 import torgeternityCardConfig from "./cards/torgeternityCardConfig.js";
 import { torgeternityCards } from "./cards/torgeternityCards.js";
-import { TestDialog } from "/systems/torgeternity/module/test-dialog.js";
+import { TestDialog } from "./test-dialog.js";
 import { hideCompendium } from "./hideCompendium.js";
 import initTorgControlButtons from "./controlButtons.js";
 import createTorgShortcuts from "./keybinding.js";
@@ -666,8 +666,7 @@ function rollItemMacro(itemName) {
           movementModifier: 0,
         };
 
-        const dialog = new TestDialog(mTest);
-        dialog.render(true);
+        new TestDialog(mTest);
       }
       break;
     case "psionicpower":
@@ -745,8 +744,7 @@ function rollItemMacro(itemName) {
           chatNote: "",
         };
 
-        const pdialog = new TestDialog(test);
-        pdialog.render(true);
+        new TestDialog(test);
         /*
             // this will cause the power to be printed to the chat
             return item.roll({ async: false });
@@ -892,8 +890,7 @@ function rollSkillMacro(skillName, attributeName, isInteractionAttack) {
     test.unskilledUse = true;
   }
 
-  const dialog = new TestDialog(test);
-  dialog.render(true);
+  new TestDialog(test);
 }
 
 Hooks.on("renderCombatTracker", (combatTracker) => {

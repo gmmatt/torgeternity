@@ -1,5 +1,5 @@
-import { TestDialog } from "/systems/torgeternity/module/test-dialog.js";
-import { checkUnskilled } from "/systems/torgeternity/module/sheets/torgeternityActorSheet.js";
+import { TestDialog } from "./test-dialog.js";
+import { checkUnskilled } from "./sheets/torgeternityActorSheet.js";
 import { ChatMessageTorg } from "./chat/document.js";
 
 /**
@@ -755,7 +755,7 @@ export async function renderSkillChat(test) {
           speaker: ChatMessage.getSpeaker(),
           content: game.i18n.localize("torgeternity.chatText.check.result.resetDefense"), // Need to be implemented if incorporated
         };
-        ChatMessage.create(RAD);
+        await ChatMessage.create(RAD);
         return;
         // /
       }
@@ -996,7 +996,7 @@ export async function renderSkillChat(test) {
       },
     };
 
-    ChatMessageTorg.create(messageData);
+    await ChatMessageTorg.create(messageData);
   }
 
   // reset tokens targeted, they are printed in the chatCard
@@ -1194,8 +1194,7 @@ export async function soakDamages(soaker) {
     rollTotal: 0, // A zero indicates that a rollTotal needs to be generated when renderSkillChat is called //
   };
 
-  const dialog = new TestDialog(test);
-  dialog.render(true);
+  new TestDialog(test);
   // do reality roll
 }
 
