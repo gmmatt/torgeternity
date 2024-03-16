@@ -5,7 +5,6 @@ import * as torgchecks from "./torgchecks.js";
  *
  */
 export class TestDialog extends FormApplication {
-  #callback;
   testMessage;
 
   /**
@@ -40,7 +39,7 @@ export class TestDialog extends FormApplication {
   constructor(test, resolve, options = {}) {
     super(options);
     this.test = test;
-    this.#callback = resolve;
+    this.callback = resolve;
     this.render(true);
   }
 
@@ -379,8 +378,10 @@ export class TestDialog extends FormApplication {
       this.test.isOther3 = false;
     }
 
-    torgchecks.renderSkillChat(this.test);
-    this.#callback(game.messages.contents.at(-1));
+    const message = torgchecks.renderSkillChat(this.test);
+    if (message && this.callback) {
+      this.callback(message);
+    }
     this.close();
   }
 }

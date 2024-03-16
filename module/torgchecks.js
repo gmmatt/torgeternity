@@ -996,7 +996,8 @@ export async function renderSkillChat(test) {
       },
     };
 
-    await ChatMessageTorg.create(messageData);
+    const message = await ChatMessageTorg.create(messageData);
+    return message;
   }
 
   // reset tokens targeted, they are printed in the chatCard
