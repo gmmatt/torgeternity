@@ -1,4 +1,5 @@
-import * as torgchecks from "./torgchecks.js";
+import * as torgchecks from "/systems/torgeternity/module/torgchecks.js";
+import {TestDialog} from "/systems/torgeternity/module/test-dialog.js";
 
 /**
  *
@@ -288,4 +289,98 @@ export class TorgeternityMacros {
     }
   }
   // #endregion
+
+
+
+
+
+
+  async reconnection(){
+    const _token = canvas.tokens.controlled[0] 
+    const _actor = _token?.actor ?? game.user.character;
+    const eff = CONFIG.statusEffects.find((e) => e.id === "disconnected");
+    console.log(_actor);
+    if(!_actor) {
+      ui.notifications.error(game.i18n.localize("torgeternity.macros.commonMacroNoCharacter"));
+      return;
+    }
+    const realitySkill = _actor.system.skills.reality;
+    let _status;
+
+    for (const ef of _actor.statuses){
+      _status = ef === "disconnected" ? eff : false;      
+    }
+    console.log(_status);
+
+    if (!_status){
+        ui.notifications.error(game.i18n.localize("torgeternity.macros.bonusDieMacroNoDiscon"));
+        return;
+    } 
+
+    const difficultyRecon = {
+      pure: -8,
+      dominant: -4,
+      mixed: 0
+    }
+    
+    const test = {
+      actor: _actor.uuid,
+      actorPic: _actor.img,
+      actorName: _actor.name,
+      actorType: _actor.type,
+      skillName: "reality",
+      testType: "skill",
+      skillBaseAttribute: "spirit",
+      skillAdds: realitySkill.adds,
+      skillValue: realitySkill.value,
+      isAttack: false,
+      isFav: realitySkill.isFav,
+      targets: Array.from(game.user.targets),
+      applySize: false,
+      DNDescriptor: "standard",
+      attackOptions: false,
+      rollTotal: 0,
+      unskilledUse: realitySkill.unskilledUse,
+      chatnote: "",
+      woundModifier: parseInt(-_actor.system.wounds.value),
+      stymiedModifier: parseInt(_actor.system.stymiedModifier),
+      vulnerableModifier: parseInt(_actor.system.vulnerableModifier),
+      darknessModifier: parseInt(_actor.system.darknessModifier),
+      type: "skill",
+      movementModifier: 0,
+      isOther1: game.scenes.active.flags.torgeternity.cosm == "none" ? false : true,
+      other1Description: game.i18n.localize("torgeternity.macros.reconnectMacroZoneModifier"),
+      other1Modifier: difficultyRecon[game.scenes.active.flags.torgeternity.zone]
+    }
+
+    if (test.isother1 === false) {
+      await Dialog.prompt({
+        title: game.i18n.localize("torgeternity.macros.reconnectMacroZoneModifierNotDetectedTitle"),
+        content: `<p>${game.i18n.localize("torgeternity.macros.reconnectMacroZoneModifierNotDetected")}</p>`,
+      });      
+    }
+
+    const dialog = await TestDialog.asPromise(test);
+
+    if (!dialog) {
+      ui.notifications.error("Abbruch");
+      return;      
+    }
+    
+    console.log(dialog);
+
+    switch (dialog.flags.torgeternity.test.resultText) {
+      case game.i18n.localize("torgeternity.chatText.check.result.standartSuccess"):
+      case game.i18n.localize("torgeternity.chatText.check.result.goodSuccess"):
+      case game.i18n.localize("torgeternity.chatText.check.result.standartSuccess"):
+        _token.toggleEffect(eff, {active: false, overlay:false});
+      break;
+      case game.i18n.localize("torgeternity.chatText.check.result.failure"):
+        ChatMessage.create({content: "<p>Fehlschlag</p>"});
+      break;
+      case game.i18n.localize("torgeternity.chatText.check.result.mishape"):
+        ChatMessage.create({conten: "<p>Patzer, das wird witzig!</p>"});
+      break;
+    }
+  }  
 }

@@ -901,6 +901,7 @@
     },
     "macros": {
       "commonMacroNoTokensSelected": "Es wurden keine Token ausgewählt. Das Makro kann nicht ausgeführt werden.",
+      "commonMacroNoCharacter": "Ich kann keinen Charakter finden, um weiter zu machen.",
       "commonMacroNoValue": "Es wurde kein Wert eingegeben. Das Makro kann nicht ausgeführt werden.",
       "commonMacroOnlyByGM": "Dieses Makro kann nur von Spielleitern ausgeführt werden!",
       "fatigueMacroDealtDamage": "Folgenden Charakteren wurden Schock zugefügt:",
@@ -927,7 +928,11 @@
       "bonusDieMacroResult3": "Der Token mit dem Namen",
       "bonusDieMacroResult4": "erhält einen Schaden von",
       "bonusDieMacroResultNoDamage": "erhält keinen Schaden",
-      "bonusDieMacroNoTokenTargeted": "Es wurden keine Token ins Ziel genommen."      
+      "bonusDieMacroNoTokenTargeted": "Es wurden keine Token ins Ziel genommen.",
+      "bonusDieMacroNoDiscon": "Es gibt keinen \"Entkoppelt\"- Status auf diesem Charakter.",
+      "reconnectMacroZoneModifier": "Zonenmodifikator",
+      "reconnectMacroZoneModifierNotDetectedTitle": "Kein Zonenmodifikator",
+      "reconnectMacroZoneModifierNotDetected": "Ein Zonenmodifikator konnte nicht festgestellt werden, da die aktive Szene keine Zonen konfiguriert hat. Ändere den Modifikator im Ergebnis."
     }
   }
 }
