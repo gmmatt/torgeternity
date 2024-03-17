@@ -690,7 +690,7 @@
       "specialAbility": "Capacité spéciale",
       "spell": "Sortilège",
       "spells": "Sortilèges",
-      "spirit": "Spirituel",
+      "spirit": "Spirit.",
       "stats": "Caracs",
       "statusEffects": "Statut",
       "stormknight": "Chevalier des Tempêtes",
@@ -700,7 +700,7 @@
       "targetDefense": "Défense de la cible",
       "targetOptions": "Cibles",
       "targets": "Cibles",
-      "tech": "Technologie",
+      "tech": "Tech",
       "tempEffects": "Effets temporaires",
       "threat": "Menace",
       "titleDescription": "Titre/Description",
@@ -834,7 +834,8 @@
       "possibilities": "Possibilités",
       "shock": "Chocs",
       "speedModifier": "Modificateur de vitesse",
-      "wounds": "Blessures"
+      "wounds": "Blessures",
+      "axioms": "Axiomes"
     },
     "statusEffects": {
       "aiming": "Visée",
