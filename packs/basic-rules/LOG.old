@@ -1,5 +1,7 @@
-2024/03/12-14:06:01.449 17ec Log #141: 0 ops saved to Table #142 OK
-2024/03/12-14:06:01.449 17ec Archiving D:\Foundry\UserData\Data\systems\torgeternity\packs\basic-rules/000141.log: OK
-2024/03/12-14:06:01.450 17ec Table #123: 6 entries OK
-2024/03/12-14:06:01.470 17ec Archiving D:\Foundry\UserData\Data\systems\torgeternity\packs\basic-rules/MANIFEST-000140: OK
-2024/03/12-14:06:01.497 17ec **** Repaired leveldb D:\Foundry\UserData\Data\systems\torgeternity\packs\basic-rules; recovered 1 files; 63220 bytes. Some data may have been lost. ****
+2024/03/17-08:59:15.030 677c Recovering log #148
+2024/03/17-08:59:15.084 677c Delete type=0 #148
+2024/03/17-08:59:15.084 677c Delete type=3 #146
+2024/03/17-09:01:18.683 1550 Level-0 table #154: started
+2024/03/17-09:01:18.683 1550 Level-0 table #154: 0 bytes OK
+2024/03/17-09:01:18.708 1550 Delete type=0 #152
+2024/03/17-09:01:18.741 1550 Manual compaction at level-0 from '!journal!EDI95jBrQruLzDXr' @ 72057594037927935 : 1 .. '!journal.pages!EDI95jBrQruLzDXr.vKRDjVnjWqsowkYt' @ 0 : 0; will stop at (end)

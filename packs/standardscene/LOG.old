@@ -1,5 +1,7 @@
-2024/03/12-14:06:01.735 726c Log #126: 0 ops saved to Table #127 OK
-2024/03/12-14:06:01.735 726c Archiving D:\Foundry\UserData\Data\systems\torgeternity\packs\standardscene/000126.log: OK
-2024/03/12-14:06:01.735 726c Table #108: 1 entries OK
-2024/03/12-14:06:01.762 726c Archiving D:\Foundry\UserData\Data\systems\torgeternity\packs\standardscene/MANIFEST-000125: OK
-2024/03/12-14:06:01.780 726c **** Repaired leveldb D:\Foundry\UserData\Data\systems\torgeternity\packs\standardscene; recovered 1 files; 89944 bytes. Some data may have been lost. ****
+2024/03/17-08:59:15.177 241c Recovering log #133
+2024/03/17-08:59:15.208 241c Delete type=0 #133
+2024/03/17-08:59:15.208 241c Delete type=3 #131
+2024/03/17-09:01:18.757 1550 Level-0 table #139: started
+2024/03/17-09:01:18.757 1550 Level-0 table #139: 0 bytes OK
+2024/03/17-09:01:18.777 1550 Delete type=0 #137
+2024/03/17-09:01:18.810 1550 Manual compaction at level-0 from '!scenes!LxFt3CsDFSCSkASP' @ 72057594037927935 : 1 .. '!scenes!LxFt3CsDFSCSkASP' @ 0 : 0; will stop at (end)

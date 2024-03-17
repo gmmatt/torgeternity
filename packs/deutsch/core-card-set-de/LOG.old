@@ -1,5 +1,7 @@
-2024/03/12-14:06:02.585 6b0c Log #123: 0 ops saved to Table #124 OK
-2024/03/12-14:06:02.585 6b0c Archiving D:\Foundry\UserData\Data\systems\torgeternity\packs\deutsch\core-card-set-de/000123.log: OK
-2024/03/12-14:06:02.585 6b0c Table #5: 190 entries OK
-2024/03/12-14:06:02.612 6b0c Archiving D:\Foundry\UserData\Data\systems\torgeternity\packs\deutsch\core-card-set-de/MANIFEST-000122: OK
-2024/03/12-14:06:02.630 6b0c **** Repaired leveldb D:\Foundry\UserData\Data\systems\torgeternity\packs\deutsch\core-card-set-de; recovered 1 files; 23935 bytes. Some data may have been lost. ****
+2024/03/17-08:59:15.511 62e8 Recovering log #130
+2024/03/17-08:59:15.542 62e8 Delete type=0 #130
+2024/03/17-08:59:15.542 62e8 Delete type=3 #128
+2024/03/17-09:01:18.932 1550 Level-0 table #136: started
+2024/03/17-09:01:18.932 1550 Level-0 table #136: 0 bytes OK
+2024/03/17-09:01:18.947 1550 Delete type=0 #134
+2024/03/17-09:01:18.999 1550 Manual compaction at level-0 from '!cards!9isgXoIiiGWQHBx0' @ 72057594037927935 : 1 .. '!cards.cards!xaEDfI4ufJ2Z9Mli.zIFI7RtvNZjIDZ5l' @ 0 : 0; will stop at (end)

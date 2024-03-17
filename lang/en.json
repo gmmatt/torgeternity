@@ -933,7 +933,8 @@
       "bonusDieMacroNoDiscon": "There is no disconnected status on this character.",
       "reconnectMacroZoneModifier": "Zone modifier",
       "reconnectMacroZoneModifierNotDetectedTitle": "No zone modifier",
-      "reconnectMacroZoneModifierNotDetected": "Couldn't resolve a zone modifier, because the active scene has no cosm configured. Change the result's modifier by hand."
+      "reconnectMacroZoneModifierNotDetected": "Couldn't resolve a zone modifier, because the active scene has no cosm configured. Change the result's modifier by hand.",
+      "reconnectMacroStatusLiftet": "Disconnection-Status liftet after a successful Reconnect-Roll."
     }
   }
 }

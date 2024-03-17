@@ -1,5 +1,7 @@
-2024/03/12-14:06:02.405 1b3c Log #33: 0 ops saved to Table #34 OK
-2024/03/12-14:06:02.405 1b3c Archiving D:\Foundry\UserData\Data\systems\torgeternity\packs\deutsch\handouts-de/000033.log: OK
-2024/03/12-14:06:02.405 1b3c Table #15: 19 entries OK
-2024/03/12-14:06:02.429 1b3c Archiving D:\Foundry\UserData\Data\systems\torgeternity\packs\deutsch\handouts-de/MANIFEST-000032: OK
-2024/03/12-14:06:02.455 1b3c **** Repaired leveldb D:\Foundry\UserData\Data\systems\torgeternity\packs\deutsch\handouts-de; recovered 1 files; 3776 bytes. Some data may have been lost. ****
+2024/03/17-08:59:15.436 62e8 Recovering log #40
+2024/03/17-08:59:15.467 62e8 Delete type=0 #40
+2024/03/17-08:59:15.467 62e8 Delete type=3 #38
+2024/03/17-09:01:18.810 1550 Level-0 table #46: started
+2024/03/17-09:01:18.810 1550 Level-0 table #46: 0 bytes OK
+2024/03/17-09:01:18.824 1550 Delete type=0 #44
+2024/03/17-09:01:18.841 1550 Manual compaction at level-0 from '!journal!DLLvnXpv7RFhRgHu' @ 72057594037927935 : 1 .. '!journal.pages!DLLvnXpv7RFhRgHu.wyqIUAZMhqAUvoD6' @ 0 : 0; will stop at (end)

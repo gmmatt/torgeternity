@@ -905,6 +905,7 @@
       "commonMacroNoCharacter": "Ich kann keinen Charakter finden, um weiter zu machen.",
       "commonMacroNoValue": "Es wurde kein Wert eingegeben. Das Makro kann nicht ausgeführt werden.",
       "commonMacroOnlyByGM": "Dieses Makro kann nur von Spielleitern ausgeführt werden!",
+      "commonMacroNoChatMessageFound": "Es konnte keine Chatnachricht abgefangen werden, die weitere Verarbeitung wird abgegbrochen.",
       "fatigueMacroDealtDamage": "Folgenden Charakteren wurden Schock zugefügt:",
       "fatigueMacroCharKO": " ist damit K.O.!",
       "reviveMacroChatHeadline": "Schock-Erholung!",
@@ -933,7 +934,8 @@
       "bonusDieMacroNoDiscon": "Es gibt keinen \"Entkoppelt\"- Status auf diesem Charakter.",
       "reconnectMacroZoneModifier": "Zonenmodifikator",
       "reconnectMacroZoneModifierNotDetectedTitle": "Kein Zonenmodifikator",
-      "reconnectMacroZoneModifierNotDetected": "Ein Zonenmodifikator konnte nicht festgestellt werden, da die aktive Szene keine Zonen konfiguriert hat. Ändere den Modifikator im Ergebnis."
+      "reconnectMacroZoneModifierNotDetected": "Ein Zonenmodifikator konnte nicht festgestellt werden, da die aktive Szene keine Zonen konfiguriert hat. Ändere den Modifikator im Ergebnis.",
+      "reconnectMacroStatusLiftet": "Entkoppelt-Status nach einer erfolgreichen Realitätsprobe aufgehoben."
     }
   }
 }
