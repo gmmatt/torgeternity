@@ -727,7 +727,8 @@
       "weapons": "Waffen",
       "wounds": "Wunden",
       "xp": "EP",
-      "xpOnlyGM": "Nur die SL darf das füllen"
+      "xpOnlyGM": "Nur die SL darf das füllen",
+      "toolTipClickToAdd": "klicke, um die Fertigkeit der Zugriffliste hinzuzufügen oder zu löschen"
     },
     "sizes": {
       "large": "Groß",

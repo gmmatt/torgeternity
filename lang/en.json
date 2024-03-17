@@ -727,7 +727,8 @@
       "weapons": "Weapons",
       "wounds": "Wounds",
       "xp": "XP",
-      "xpOnlyGM": "only GM can fill"
+      "xpOnlyGM": "only GM can fill",
+      "toolTipClickToAdd": "click to add/remove the skill to the access list"
     },
     "sizes": {
       "large": "Large",
