@@ -201,25 +201,21 @@ export default class torgeternityActor extends Actor {
     // NOTE bis, with setThreatAdds() doing his job, skill.value can be used for both,
     // with possibility to use same path for effects => system.skills.xxx.adds
 
-    if ((this._source.type === "stormknight") | (this._source.type === "threat")) {
-      for (const [name, skill] of Object.entries(skillset)) {
-        if (this._source.system.skills[name].adds === null) {
-          if (skill.unskilledUse === 1) {
-            skill.value =
-              parseInt(this.system.attributes[skill.baseAttribute]) + (skill.adds ? parseInt(skill.adds) : 0);
-          } else {
-            skill.value = "-";
-            skill.adds = null;
-          }
+    if (["threat", "stormknight"].includes(this.type)) {
+      for (const skill of Object.values(skillset)) {
+        if (skill.unskilledUse === 1 || skill.adds) {
+          skill.value = parseInt(this.system.attributes[skill.baseAttribute]) + (skill.adds ? parseInt(skill.adds) : 0);
         } else {
-          skill.value = parseInt(skill.adds) + parseInt(this.system.attributes[skill.baseAttribute]);
-          if (isNaN(skill.value)) {
-            skill.value = "";
-          }
+          skill.value = "";
+          skill.adds = null;
         }
       }
     }
-
+    if (this.type === "threat") {
+      for (const skill of Object.values(skillset)) {
+        skill.isThreatSkill = skill.isThreatSkill || !!skill.adds;
+      }
+    }
     if ((this._source.type === "stormknight") | (this._source.type === "threat")) {
       // Set base unarmedDamage from interaction
       this.system.unarmedDamage = this.system.attributes.strength + (this.system?.unarmedDamageMod | 0);
@@ -373,7 +369,6 @@ export default class torgeternityActor extends Actor {
       if (malus?.disabled) {
         try {
           malus.delete();
-          console.log("Effacé dans l'actor");
         } catch (e) {}
       }
     }

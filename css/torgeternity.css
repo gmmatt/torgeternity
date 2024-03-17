@@ -428,14 +428,8 @@ form.actor-sheet header.sheet-header-vehicle {
   /*color:white;*/
 }
 
-.window-app .window-content input::-moz-placeholder {
-  background-color: rgba(0, 0, 0, 0);
-}
-
-.window-app .window-content input:-ms-input-placeholder {
-  background-color: rgba(0, 0, 0, 0);
-}
-
+.window-app .window-content input::-moz-placeholder,
+.window-app .window-content input:-ms-input-placeholder,
 .window-app .window-content input::placeholder {
   background-color: rgba(0, 0, 0, 0);
 }
@@ -842,23 +836,11 @@ span.open-poss:hover {
 .app input[type="text"]::-moz-placeholder,
 .app input[type="number"]::-moz-placeholder,
 .window-app input[type="text"]::-moz-placeholder,
-.window-app input[type="number"]::-moz-placeholder {
-  /*color: rgba(0, 0, 0, 0.472);*/
-  color: rgba(245, 245, 245, 0.9);
-  background-color: transparent;
-  text-shadow: 0px 0px 10px black;
-}
-
+.window-app input[type="number"]::-moz-placeholder,
 .app input[type="text"]:-ms-input-placeholder,
 .app input[type="number"]:-ms-input-placeholder,
 .window-app input[type="text"]:-ms-input-placeholder,
-.window-app input[type="number"]:-ms-input-placeholder {
-  /*color: rgba(0, 0, 0, 0.472);*/
-  color: rgba(245, 245, 245, 0.9);
-  background-color: transparent;
-  text-shadow: 0px 0px 10px black;
-}
-
+.window-app input[type="number"]:-ms-input-placeholder,
 .app input[type="text"]::placeholder,
 .app input[type="number"]::placeholder,
 .window-app input[type="text"]::placeholder,
@@ -2390,21 +2372,9 @@ form.actor-sheet header input[name="name"] {
 }
 
 .window-content .actor-sheet input[type="text"]::-moz-placeholder,
-.window-content .actor-sheet input[type="number"]::-moz-placeholder {
-  /*color: #293131;*/
-  color: rgba(245, 245, 245, 0.9);
-  background-color: transparent;
-  text-shadow: 0px 0px 10px black;
-}
-
+.window-content .actor-sheet input[type="number"]::-moz-placeholder,
 .window-content .actor-sheet input[type="text"]:-ms-input-placeholder,
-.window-content .actor-sheet input[type="number"]:-ms-input-placeholder {
-  /*color: #293131;*/
-  color: rgba(245, 245, 245, 0.9);
-  background-color: transparent;
-  text-shadow: 0px 0px 10px black;
-}
-
+.window-content .actor-sheet input[type="number"]:-ms-input-placeholder,
 .window-content .actor-sheet input[type="text"]::placeholder,
 .window-content .actor-sheet input[type="number"]::placeholder {
   /*color: #293131;*/
@@ -2475,6 +2445,11 @@ form.actor-sheet header input[name="name"] {
 
 .window-content .actor-sheet a.skill-roll:hover,
 .window-content .actor-sheet a.skill-roll:active {
+  text-shadow: 0px 0px 10px #474a68;
+}
+
+.window-content .actor-sheet a.skill-list:hover,
+.window-content .actor-sheet a.skill-list:active {
   text-shadow: 0px 0px 10px #474a68;
 }
 
@@ -3487,21 +3462,9 @@ form.actor-sheet.threat .tab[data-tab].active .editor {
 }
 
 .item .window-content form.item-sheet input[type="text"]::-moz-placeholder,
-.item .window-content form.item-sheet input[type="number"]::-moz-placeholder {
-  /*color: #161a1a;*/
-  color: rgba(245, 245, 245, 0.9);
-  background-color: transparent;
-  text-shadow: 0px 0px 10px black;
-}
-
+.item .window-content form.item-sheet input[type="number"]::-moz-placeholder,
 .item .window-content form.item-sheet input[type="text"]:-ms-input-placeholder,
-.item .window-content form.item-sheet input[type="number"]:-ms-input-placeholder {
-  /*color: #161a1a;*/
-  color: rgba(245, 245, 245, 0.9);
-  background-color: transparent;
-  text-shadow: 0px 0px 10px black;
-}
-
+.item .window-content form.item-sheet input[type="number"]:-ms-input-placeholder,
 .item .window-content form.item-sheet input[type="text"]::placeholder,
 .item .window-content form.item-sheet input[type="number"]::placeholder {
   /*color: #161a1a;*/

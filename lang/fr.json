@@ -726,7 +726,8 @@
       "weapons": "Armes",
       "wounds": "Blessures",
       "xp": "XP",
-      "xpOnlyGM": "Seul le MJ peut remplir"
+      "xpOnlyGM": "Seul le MJ peut remplir",
+      "toolTipClickToAdd": "click to add/remove the skill to the access list"
     },
     "sizes": {
       "large": "grande",

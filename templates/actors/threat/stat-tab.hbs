@@ -393,7 +393,7 @@
     <div class="threat-block">
       <span class="inline-skill-list">
         {{#each actor.system.skills as |content name|}}
-          {{#if content.value}}
+          {{#if content.isThreatSkill}}
             <span class="inline-skill-item">
               <a
                 class="skill-roll"
@@ -426,13 +426,14 @@
             <div class="skill-element-edit">
               <span
                 style="position:relative"
-                class="skill-element-roll"
+                class="skill-list"
                 data-testtype="skill"
                 data-baseattribute="{{skill.baseAttribute}}"
                 data-adds="{{skill.adds}}"
                 data-value="{{skill.value}}"
                 data-unskilleduse="{{skill.unskilledUse}}"
                 data-name="{{key}}"
+                data-tooltip="{{localize "torgeternity.sheetLabels.toolTipClickToAdd"}}"
               >{{localize (concatSkillName key)}}
               </span>
               <span class="inputsFav">
@@ -442,6 +443,7 @@
                   type="number"
                   class="small-input"
                   value="{{skill.value}}"
+                  placeholder="-"
                 />
 
                 <a class="toggleFav {{checked skill.isFav}}">

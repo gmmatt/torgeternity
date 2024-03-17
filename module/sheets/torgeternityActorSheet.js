@@ -213,7 +213,6 @@ export default class torgeternityActorSheet extends ActorSheet {
    */
   activateListeners(html) {
     // localizing hardcoded possibility potential value
-    console.log(this.actor);
     if (
       game.settings.get("core", "language") != "en" &&
       this.actor.type === "threat" &&
@@ -263,6 +262,10 @@ export default class torgeternityActorSheet extends ActorSheet {
 
     if (this.actor.isOwner) {
       html.find(".skill-roll").click(this._onSkillRoll.bind(this));
+    }
+
+    if (this.actor.isOwner) {
+      html.find(".skill-list").click(this._onSkillList.bind(this));
     }
 
     if (this.actor.isOwner) {
@@ -424,15 +427,21 @@ export default class torgeternityActorSheet extends ActorSheet {
    */
   async setThreatAdds(event) {
     const skill = event.target.dataset.skill;
-    if (event.target.value === "0") {
+    if (["0", ""].includes(event.target.value)) {
       // reset the 'skill object' to hide any value (the zero)
-      await this.actor.update({ [`system.skills.${skill}.adds`]: "" });
-      await this.actor.update({ [`system.skills.${skill}.value`]: "" });
+      await this.actor.update({
+        [`system.skills.${skill}.adds`]: "",
+        [`system.skills.${skill}.value`]: "",
+        [`system.skills.${skill}.isThreatSkill`]: false,
+      });
     } else {
       if (!!skill) {
         const skillObject = this.actor.system.skills[skill];
         const computedAdds = event.target?.value - this.actor.system.attributes[skillObject?.baseAttribute];
-        await this.actor.update({ [`system.skills.${skill}.adds`]: computedAdds });
+        await this.actor.update({
+          [`system.skills.${skill}.adds`]: computedAdds,
+          [`system.skills.${skill}.isThreatSkill`]: true,
+        });
       }
     }
   }
@@ -463,6 +472,20 @@ export default class torgeternityActorSheet extends ActorSheet {
     if (!windo) {
       PossibilityByCosm.create(actor);
     }
+  }
+
+  /**
+   *
+   * @param event
+   */
+  async _onSkillList(event) {
+    const skillName = event.currentTarget.dataset.name;
+    const isThreatSkill = this.actor.system.skills[skillName].isThreatSkill;
+    const update = { [`system.skills.${skillName}.isThreatSkill`]: !isThreatSkill };
+    if (isThreatSkill) {
+      update[`system.skills.${skillName}.adds`] = "";
+    }
+    await this.actor.update(update);
   }
 
   /**
@@ -1139,7 +1162,7 @@ export default class torgeternityActorSheet extends ActorSheet {
  * @param actor
  */
 export function checkUnskilled(skillValue, skillName, actor) {
-  if (skillValue === "-") {
+  if (!skillValue) {
     const cantRollData = {
       user: game.user._id,
       speaker: ChatMessage.getSpeaker(),

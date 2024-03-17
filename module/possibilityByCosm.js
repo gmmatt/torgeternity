@@ -99,7 +99,6 @@ export class PossibilityByCosm extends Application {
     };
     await acto.setFlag("torgeternity", "possibilityByCosm", possibilityByCosm);
     await acto.update({ system: { other: { possibilities: coreEarthPoss } } });
-    console.log(possibilityByCosm);
     await this._render();
   }
 
