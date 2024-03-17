@@ -480,7 +480,7 @@ export default class torgeternityActorSheet extends ActorSheet {
    */
   async _onSkillList(event) {
     const skillName = event.currentTarget.dataset.name;
-    const isThreatSkill = this.actor.system.skills[skillName].isThreatSkill;
+    const isThreatSkill = this.actor.system.skills[skillName]?.isThreatSkill;
     const update = { [`system.skills.${skillName}.isThreatSkill`]: !isThreatSkill };
     if (isThreatSkill) {
       update[`system.skills.${skillName}.adds`] = "";
