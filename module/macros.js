@@ -1,21 +1,10 @@
-import * as torgchecks from "./torgchecks.js";
+import * as torgchecks from "/systems/torgeternity/module/torgchecks.js";
+import {TestDialog} from "/systems/torgeternity/module/test-dialog.js";
 
 /**
  *
  */
 export class TorgeternityMacros {
-  //#region common
-  onRenderKeyEnter(html, func) {
-    const picker = html[0];
-    picker.addEventListener("keypress", (event) => {
-      if (event.key === "Enter") {
-        event.preventDefault();
-        func();
-      }
-    });
-  }
-
-  //#endregion
   /**
    *
    */
@@ -38,10 +27,8 @@ export class TorgeternityMacros {
             case "stymied":
             case "veryStymied":
             case "vulnerable":
-            case "veryVulnerable":
-              console.log("Found " + effect);
+            case "veryVulnerable":              
               const ef = CONFIG.statusEffects.find((e) => e.id === effect);
-              console.log(ef);
               await token.toggleEffect(ef, { active: false });
               chatOutput += `<li>${game.i18n.localize("torgeternity.macros.clearStatusEffectsliftetFrom")} ${
                 token.actor.name
@@ -63,7 +50,7 @@ export class TorgeternityMacros {
 
       ChatMessage.create({ content: chatOutput });
     } catch (e) {
-      ui.notification.error(e.message);
+      ui.notifications.error(e.message);
     }
   }
 
@@ -81,11 +68,10 @@ export class TorgeternityMacros {
       "torgeternity.macros.fatigueMacroDealtDamage"
     )}</p><ul>`;
     for (const _target of tokens) {
-      if (_target === undefined) {
-        console.log("Token is not defined! Returning!");
+      if (_target === undefined) {        
         throw new Error("Exception, token is undefined");
       }
-      console.log(_target);
+      
       if (_target.actor.system.shock.value === _target.actor.system.shock.max) {
         chatOutput += `<li>${_target.actor.name} ${game.i18n.localize(
           "torgeternity.macros.fatigueMacroCharAlreadyKO"
@@ -103,10 +89,7 @@ export class TorgeternityMacros {
         shockResult = parseInt(_target.actor.system.shock.max);
       }
 
-      await _target.actor.update({ "system.shock.value": shockResult });
-      console.log(
-        `Successfully increased the shock for ${_target.document.name} for the amount of ${shockIncrease} to ${shockResult}.`
-      );
+      await _target.actor.update({ "system.shock.value": shockResult });      
       chatOutput += `<li>${_target.document.name}: ${shockIncrease} ${game.i18n.localize(
         "torgeternity.sheetLabels.shock"
       )}`;
@@ -150,6 +133,7 @@ export class TorgeternityMacros {
           callback: game.torgeternity.macros._processReviveShock,
         },
       },
+      default: buttonExecute
     }).render(true);
   }
 
@@ -224,16 +208,6 @@ export class TorgeternityMacros {
    *
    */
   async rollBDs() {
-    function onRender(html) {
-      const picker = html[0];
-      picker.addEventListener("keypress", (event) => {
-        if (event.key === "Enter") {
-          event.preventDefault();
-          _rollItBDs();
-        }
-      });
-    }
-
     const windowContent = `
             <form style="margin-bottom: 1rem;display:flex;flex-direction:row;gap: 9px;align-items:center">
                 <label for="inputValue">${game.i18n.localize("torgeternity.macros.bonusDieMacroContent")}</label>
@@ -250,7 +224,7 @@ export class TorgeternityMacros {
           callback: game.torgeternity.macros._rollItBDs,
         },
       },
-      render: onRender,
+      default: "buttonRoll",
     }).render(true);
   }
 
@@ -271,10 +245,8 @@ export class TorgeternityMacros {
 
       const diceroll = await new Roll(`${diceAmount}d6x6max5`).evaluate({ async: true });
 
-      try {
-        await game.dice3d.showForRoll(diceroll);
-      } catch {} // if dice so nice is not active, this will be an exception, but with a void catch statement
-
+      await game.dice3d?.showForRoll(diceroll);
+      
       let chatOutput = `<p>${game.i18n.localize(
         "torgeternity.macros.bonusDieMacroResult1"
       )} ${diceAmount} ${game.i18n.localize("torgeternity.chatText.bonusDice")} ${game.i18n.localize(
@@ -282,8 +254,7 @@ export class TorgeternityMacros {
       )} ${diceroll.total}.</p>`;
 
       const targetedTokens = Array.from(game.user.targets);
-      console.log(targetedTokens);
-      console.log(targetedTokens.length);
+      
       if (targetedTokens.size === 0) {
         chatOutput += `<p>${game.i18n.localize("torgeternity.macros.bonusDieMacroNoTokenTargeted")}</p>`;
         console.log("No targets, creating chat Message, leaving Macro.");
@@ -311,4 +282,93 @@ export class TorgeternityMacros {
     }
   }
   // #endregion
+  /**
+   * 
+   */
+  async reconnection(){
+    const _token = canvas.tokens.controlled[0] 
+    const _actor = _token?.actor;
+    const eff = CONFIG.statusEffects.find((e) => e.id === "disconnected");
+    
+    if(!_actor) {
+      ui.notifications.error(game.i18n.localize("torgeternity.macros.commonMacroNoTokensSelected"));
+      return;
+    }
+    const realitySkill = _actor.system.skills.reality;
+    let _status;
+
+    for (const ef of _actor.statuses){
+      _status = ef === "disconnected" ? eff : false;      
+    }
+
+    if (!_status){
+        ui.notifications.error(game.i18n.localize("torgeternity.macros.bonusDieMacroNoDiscon"));
+        return;
+    } 
+    
+    const difficultyRecon = {
+      pure: -8,
+      dominant: -4,
+      mixed: 0
+    }
+    
+    const test = {
+      actor: _actor.uuid,
+      actorPic: _actor.img,
+      actorName: _actor.name,
+      actorType: _actor.type,
+      skillName: "reality",
+      testType: "skill",
+      skillBaseAttribute: "spirit",
+      skillAdds: realitySkill.adds,
+      skillValue: realitySkill.value,
+      isAttack: false,
+      isFav: realitySkill.isFav,
+      targets: Array.from(game.user.targets),
+      applySize: false,
+      DNDescriptor: "standard",
+      attackOptions: false,
+      rollTotal: 0,
+      unskilledUse: realitySkill.unskilledUse,
+      chatnote: "",
+      woundModifier: parseInt(-_actor.system.wounds.value),
+      stymiedModifier: parseInt(_actor.system.stymiedModifier),
+      vulnerableModifier: parseInt(_actor.system.vulnerableModifier),
+      darknessModifier: parseInt(_actor.system.darknessModifier),
+      type: "skill",
+      movementModifier: 0,
+      isOther1: game.scenes.active.flags.torgeternity.cosm == "none" ? false : true,
+      other1Description: game.i18n.localize("torgeternity.macros.reconnectMacroZoneModifier"),
+      other1Modifier: difficultyRecon[game.scenes.active.flags.torgeternity.zone]
+    }
+
+    if (test.isother1 === false) {
+      await Dialog.prompt({
+        title: game.i18n.localize("torgeternity.macros.reconnectMacroZoneModifierNotDetectedTitle"),
+        content: `<p>${game.i18n.localize("torgeternity.macros.reconnectMacroZoneModifierNotDetected")}</p>`,
+      });      
+    }
+
+    const dialog = await TestDialog.asPromise(test);
+
+    if (!dialog) {
+      ui.notifications.error(game.i18n.localize("torgeternity.macros.commonMacroNoChatMessageFound"));
+      return;      
+    }
+    
+    switch (dialog.flags.torgeternity.test.resultText) {
+      case game.i18n.localize("torgeternity.chatText.check.result.standartSuccess"):
+      case game.i18n.localize("torgeternity.chatText.check.result.goodSuccess"):
+      case game.i18n.localize("torgeternity.chatText.check.result.standartSuccess"):
+        await _token.toggleEffect(eff, {active: false, overlay:false});
+        ui.notifications.info(`${game.i18n.localize("torgeternity.macros.reconnectMacroStatusLiftet")}</p>`)
+      break;
+      case game.i18n.localize("torgeternity.chatText.check.result.failure"):
+        //ChatMessage.create({content: "<p>Fehlschlag</p>"});
+      break;
+      case game.i18n.localize("torgeternity.chatText.check.result.mishape"):
+        //ChatMessage.create({conten: "<p>Patzer, das wird witzig!</p>"});
+      break;
+    }
+  }  
 }

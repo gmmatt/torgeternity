@@ -902,6 +902,7 @@
     },
     "macros": {
       "commonMacroNoTokensSelected": "There were no tokens selected. The macro cannot compute.",
+      "commonMacroNoCharacter": "I cannot find a character to continue with.",
       "commonMacroNoValue": "No value entered. The macro cannot compute.",
       "commonMacroOnlyByGM": "This Macro is only executionable by GMs!",
       "fatigueMacroDealtDamage": "Dealt damage to the following characters:",
@@ -928,7 +929,12 @@
       "bonusDieMacroResult3": "The token with the name",
       "bonusDieMacroResult4": "receives a damage of",
       "bonusDieMacroResultNoDamage": "receives no Damage at all",
-      "bonusDieMacroNoTokenTargeted": "There were no tokens targeted."
+      "bonusDieMacroNoTokenTargeted": "There were no tokens targeted.",
+      "bonusDieMacroNoDiscon": "There is no disconnected status on this character.",
+      "reconnectMacroZoneModifier": "Zone modifier",
+      "reconnectMacroZoneModifierNotDetectedTitle": "No zone modifier",
+      "reconnectMacroZoneModifierNotDetected": "Couldn't resolve a zone modifier, because the active scene has no cosm configured. Change the result's modifier by hand.",
+      "reconnectMacroStatusLiftet": "Disconnection-Status liftet after a successful Reconnect-Roll."
     }
   }
 }

@@ -1,3 +1,7 @@
-2024/03/10-10:38:54.427 c18 Recovering log #120
-2024/03/10-10:38:54.479 c18 Delete type=0 #120
-2024/03/10-10:38:54.479 c18 Delete type=3 #118
+2024/03/17-09:01:26.909 241c Recovering log #135
+2024/03/17-09:01:26.941 241c Delete type=0 #135
+2024/03/17-09:01:26.941 241c Delete type=3 #133
+2024/03/17-09:06:30.619 1550 Level-0 table #140: started
+2024/03/17-09:06:30.619 1550 Level-0 table #140: 0 bytes OK
+2024/03/17-09:06:30.636 1550 Delete type=0 #138
+2024/03/17-09:06:30.656 1550 Manual compaction at level-0 from '!scenes!nGb3YPFMhvhcL1Xs' @ 72057594037927935 : 1 .. '!scenes!nGb3YPFMhvhcL1Xs' @ 0 : 0; will stop at (end)
