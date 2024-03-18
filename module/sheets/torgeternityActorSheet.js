@@ -506,6 +506,33 @@ export default class torgeternityActorSheet extends ActorSheet {
 
     // Before calculating roll, check to see if it can be attempted unskilled; exit test if actor doesn't have required skill
     if (checkUnskilled(skillValue, skillName, this.actor)) {
+      
+      return;
+    }
+
+    //Check if character is trying to roll on reality while disconnected
+    if (skillName === "reality" && torgchecks.checkForDiscon(this.actor)) {
+      const cantRollData = {
+        user: game.user._id,
+        speaker: ChatMessage.getSpeaker(),
+        owner: this.actor,
+      };
+  
+      const templateData = {
+        message: game.i18n.localize("torgeternity.chatText.check.cantUseRealityWhileDisconnected"),
+        actorPic: this.actor.img,
+        actorName: this.actor.name,
+      };
+  
+      const templatePromise = renderTemplate(
+        "./systems/torgeternity/templates/partials/skill-error-card.hbs",
+        templateData
+      );
+  
+      templatePromise.then((content) => {
+        cantRollData.content = content;
+        ChatMessage.create(cantRollData);
+      });
       return;
     }
 

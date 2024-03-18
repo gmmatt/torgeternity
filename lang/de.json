@@ -46,6 +46,7 @@
       "check": {
         "cantUseSkillRecquired": "Kann nicht ohne mindestens 1 Fertigkeitspunkt in der erforderlichen Fertigkeit verwendet werden.",
         "cantUseUntrained": "Kann nicht untrainiert verwendet werden (mindestens Fertigkeitswert 1)",
+        "cantUseRealityWhileDisconnected": "Du kannst nicht die Fähigkeit Realität verwenden, so lange du abgekoppelt bist.",
         "interactionNeedTarget": "Der Interaktionsangriff kann ohne ausgewähltes Ziel nicht durchgeführt werden. Bitte Ziel auswählen und nochmal versuchen.",
         "modifier": {
           "aimedShot": "Zielen (+4)",

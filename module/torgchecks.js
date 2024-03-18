@@ -626,6 +626,12 @@ export async function renderSkillChat(test) {
 
     // Choose Text to Display as Result
     const myActor = fromUuidSync(test.actor);
+    if (checkForDiscon(myActor)) {
+      test.possibilityStyle = "display:none";
+      test.heroStyle = "display:none";
+      test.dramaStyle = "display:none";
+    }
+
     if (test.rollTotal === 1 && !(test.testType === "activeDefenseUpdate" || test.testType === "activeDefense")) {
       // Roll 1 and not defense = Mishape
       test.resultText = game.i18n.localize("torgeternity.chatText.check.result.mishape");
@@ -1009,6 +1015,21 @@ export async function renderSkillChat(test) {
     await game.dice3d.showForRoll(test.diceroll, game.user, true);
     game.dice3d.messageHookDisabled = false;
   } catch (e) {}
+}
+
+/**
+ * 
+ * @param {TorgEternityActor} actor 
+ * @returns 
+ */
+
+export function checkForDiscon(actor){
+  for (const ef of actor.statuses) {
+    if (ef === "disconnected") {
+      return true;
+    }
+  }
+  return false;
 }
 
 /**
