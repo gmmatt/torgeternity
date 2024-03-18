@@ -506,11 +506,10 @@ export default class torgeternityActorSheet extends ActorSheet {
 
     // Before calculating roll, check to see if it can be attempted unskilled; exit test if actor doesn't have required skill
     if (checkUnskilled(skillValue, skillName, this.actor)) {
-      
       return;
     }
 
-    //Check if character is trying to roll on reality while disconnected- must be allowed if reconnection-roll
+    // Check if character is trying to roll on reality while disconnected- must be allowed if reconnection-roll
     if (skillName === "reality" && torgchecks.checkForDiscon(this.actor)) {
       const d = await Dialog.confirm({
         title: game.i18n.localize("torgeternity.dialogWindow.realityCheck.title"),
@@ -538,8 +537,6 @@ export default class torgeternityActorSheet extends ActorSheet {
           cantRollData.content = content;
           ChatMessage.create(cantRollData);
         });
-      }
-      if (d === false) {
         return;
       }
     }
