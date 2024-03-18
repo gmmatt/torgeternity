@@ -6,7 +6,8 @@
 - Changed FR localisation for display-reasons
 - Chat messages are now rendered on client-side. So settings, specially for chat messages, are now individual to each user's settings
 - Skill-Values of threats are now processed on other terms. Besides that, you can add skills or take them away from the access list by clicking them
-- Disconnect-status has now impact: As long as you're disconnected, it will not be possible to roll on ........
+- Disconnect-status has now impact: As long as you're disconnected, it will not be possible to roll on "reality" - except for reconnetion, of course
+- 
 
 ## v. 3.6.0
 - Resolved a bug where dice-so-nice-rendered dices were only shown to the player- now everyone sees them
