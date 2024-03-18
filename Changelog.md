@@ -2,7 +2,7 @@
 
 ## v. 3.x.x
 - A lot of code-cleanup
-- Included new Macros- Compendium with preset macros, hopeing to provide your gameflow
+- Included new Macros- Compendium with preset macros, hoping to provide your gameflow
 - Changed FR localisation for display-reasons
 - Chat messages are now rendered on client-side. So settings, specially for chat messages, are now individual to each user's settings
 - Skill-Values of threats are now processed on other terms. Besides that, you can add skills or take them away from the access list by clicking them
