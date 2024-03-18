@@ -215,6 +215,10 @@
         "content": "Are you sure you want to delete this? It will be permanently removed from the sheet.",
         "title": "Confirm Deletion"
       },
+      "realityCheck": {
+        "title": "Reconnecting?",
+        "content": "Are you trying to reconnect?"
+      },
       "buttons": {
         "execute": "Execute",
         "ok": "OK"

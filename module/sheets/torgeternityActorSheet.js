@@ -510,30 +510,38 @@ export default class torgeternityActorSheet extends ActorSheet {
       return;
     }
 
-    //Check if character is trying to roll on reality while disconnected
+    //Check if character is trying to roll on reality while disconnected- must be allowed if reconnection-roll
     if (skillName === "reality" && torgchecks.checkForDiscon(this.actor)) {
-      const cantRollData = {
-        user: game.user._id,
-        speaker: ChatMessage.getSpeaker(),
-        owner: this.actor,
-      };
-  
-      const templateData = {
-        message: game.i18n.localize("torgeternity.chatText.check.cantUseRealityWhileDisconnected"),
-        actorPic: this.actor.img,
-        actorName: this.actor.name,
-      };
-  
-      const templatePromise = renderTemplate(
-        "./systems/torgeternity/templates/partials/skill-error-card.hbs",
-        templateData
-      );
-  
-      templatePromise.then((content) => {
-        cantRollData.content = content;
-        ChatMessage.create(cantRollData);
+      const d = await Dialog.confirm({
+        title: game.i18n.localize("torgeternity.dialogWindow.realityCheck.title"),
+        content: game.i18n.localize("torgeternity.dialogWindow.realityCheck.content"),
       });
-      return;
+      if (d === false) {
+        const cantRollData = {
+          user: game.user._id,
+          speaker: ChatMessage.getSpeaker(),
+          owner: this.actor,
+        };
+
+        const templateData = {
+          message: game.i18n.localize("torgeternity.chatText.check.cantUseRealityWhileDisconnected"),
+          actorPic: this.actor.img,
+          actorName: this.actor.name,
+        };
+
+        const templatePromise = renderTemplate(
+          "./systems/torgeternity/templates/partials/skill-error-card.hbs",
+          templateData
+        );
+
+        templatePromise.then((content) => {
+          cantRollData.content = content;
+          ChatMessage.create(cantRollData);
+        });
+      }
+      if (d === false) {
+        return;
+      }
     }
 
     const test = {

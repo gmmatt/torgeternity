@@ -215,6 +215,10 @@
         "content": "Bist du sicher, dass du das löschen willst? Es wird dauerhaft aus deinem Blatt entfernt.",
         "title": "Wirklich löschen?"
       },
+      "realityCheck": {
+        "title": "Reconnecting?",
+        "content": "Are you trying to reconnect?"
+      },
       "buttons": {
         "execute": "Ausführen",
         "ok": "OK"
