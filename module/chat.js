@@ -73,9 +73,9 @@ async function onPossibility(event) {
   let possPool;
   // If no valid possOwner, take possibilities from the GM
   if (!!possOwner) {
-    possPool = fromUuidSync(possOwner).system.other.possibilities;
+    possPool = parseInt(fromUuidSync(possOwner).system.other.possibilities);
   } else {
-    possPool = game.user.isGM ? game.user.getFlag("torgeternity", "GMpossibilities") : 0;
+    possPool = game.user.isGM ? parseInt(game.user.getFlag("torgeternity", "GMpossibilities")) : 0;
   }
   // 0 => if GM ask for confirm, or return message "no poss"
   if ((possPool <= 0) & !game.user.isGM) {
@@ -134,7 +134,7 @@ async function onPossibility(event) {
   ) {
     test.possibilityStyle = "pointer-events:none;color:gray";
   }
-
+  
   const diceroll = new Roll("1d20x10x20").evaluate({ async: false });
   if (test.disfavored) {
     test.possibilityTotal = 0.1;
