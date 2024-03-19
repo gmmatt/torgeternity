@@ -133,7 +133,7 @@ export class TorgeternityMacros {
           callback: game.torgeternity.macros._processReviveShock,
         },
       },
-      default: buttonExecute
+      default: "buttonExecute"
     }).render(true);
   }
 

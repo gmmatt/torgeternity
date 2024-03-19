@@ -1,7 +1,11 @@
-2024/03/17-08:59:15.212 241c Recovering log #130
-2024/03/17-08:59:15.242 241c Delete type=0 #130
-2024/03/17-08:59:15.242 241c Delete type=3 #128
-2024/03/17-09:01:18.794 1550 Level-0 table #136: started
-2024/03/17-09:01:18.794 1550 Level-0 table #136: 0 bytes OK
-2024/03/17-09:01:18.810 1550 Delete type=0 #134
-2024/03/17-09:01:18.824 1550 Manual compaction at level-0 from '!scenes!LxFt3CsDFSCSkASP' @ 72057594037927935 : 1 .. '!scenes!LxFt3CsDFSCSkASP' @ 0 : 0; will stop at (end)
+2024/03/19-21:20:40.617 1cfc Delete type=3 #1
+2024/03/19-21:22:43.274 458c Level-0 table #144: started
+2024/03/19-21:22:43.274 458c Level-0 table #144: 0 bytes OK
+2024/03/19-21:22:43.280 458c Delete type=0 #142
+2024/03/19-21:22:43.303 458c Manual compaction at level-0 from '!scenes!LxFt3CsDFSCSkASP' @ 72057594037927935 : 1 .. '!scenes!LxFt3CsDFSCSkASP' @ 0 : 0; will stop at '!scenes!LxFt3CsDFSCSkASP' @ 1 : 1
+2024/03/19-21:22:43.303 458c Compacting 1@0 + 0@1 files
+2024/03/19-21:22:43.319 458c Generated table #145@0: 1 keys, 89690 bytes
+2024/03/19-21:22:43.320 458c Compacted 1@0 + 0@1 files => 89690 bytes
+2024/03/19-21:22:43.321 458c compacted to: files[ 0 1 0 0 0 0 0 ]
+2024/03/19-21:22:43.321 458c Delete type=2 #132
+2024/03/19-21:22:43.337 458c Manual compaction at level-0 from '!scenes!LxFt3CsDFSCSkASP' @ 1 : 1 .. '!scenes!LxFt3CsDFSCSkASP' @ 0 : 0; will stop at (end)
