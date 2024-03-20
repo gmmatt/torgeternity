@@ -377,9 +377,11 @@ export class TestDialog extends FormApplication {
       this.test.isOther3 = false;
     }
 
-    const message = torgchecks.renderSkillChat(this.test);
-    if (message && this.callback) {
-      this.callback(message);
+    const messages = torgchecks.renderSkillChat(this.test);
+    if (messages && this.callback) {
+      for (const message of messages) {
+        this.callback(message);
+      }
     }
     this.close();
   }

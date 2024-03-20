@@ -7,6 +7,7 @@ import { ChatMessageTorg } from "./chat/document.js";
  * @param test
  */
 export async function renderSkillChat(test) {
+  const messages = [];
   if (test?.targetAll.length != 0) {
   } else test.targetAll = [test.target];
   // disable DSN (if used) for 'every' message (want to show only one dice despite many targets)
@@ -676,95 +677,95 @@ export async function renderSkillChat(test) {
       }
       // Create and Manage Active Effect if SK is Actively Defending (thanks Durak!)
     } else if (test.testType === "activeDefense") {
-        // Click on defense
-        const oldAD = myActor.effects.find((a) => a.name === "ActiveDefense"); // Search for an ActiveDefense effect
-        const shieldOn = myActor.items.filter((it) => it.type === "shield" && it.system.equipped); // Search for an equipped shield (an array)
-        let shieldBonus = 0; // set the shieldBonus to 0 then check if the actor is Vulnerable, if true, shield bonus stay 0
-        if (
-          !myActor.effects.find((a) => a.name === game.i18n.localize("torgeternity.statusEffects.vulnerable")) &&
-          !myActor.effects.find((a) => a.name === game.i18n.localize("torgeternity.statusEffects.veryVulnerable"))
-        ) {
-          shieldBonus += shieldOn[0]?.system?.bonus || 0;
-        }
-        if (!oldAD) {
-          // Create it if not present (if it exists, will be deleted farther)
-          const NewActiveDefense = {
-            name: "ActiveDefense", // Add an icon to remind the defense, bigger ? Change color of Defense ?
-            icon: "icons/equipment/shield/heater-crystal-blue.webp", // To change I think, taken in Core, should have a dedicated file
-            duration: { rounds: 1 },
-            changes: [
-              {
-                // Modify all existing "basic" defense in block
-                key: "system.dodgeDefenseMod", // Should need other work for defense vs powers
-                value: test.bonus, // that don't target xxDefense
-                priority: 20, // Create a data.ADB that store the bonus ?
-                mode: 2,
-              },
-              {
-                key: "system.intimidationDefenseMod",
-                value: test.bonus,
-                priority: 20,
-                mode: 2,
-              },
-              {
-                key: "system.maneuverDefenseMod",
-                value: test.bonus,
-                priority: 20,
-                mode: 2,
-              },
-              {
-                key: "system.meleeWeaponsDefenseMod",
-                value: test.bonus,
-                priority: 20,
-                mode: 2,
-              },
-              {
-                key: "system.tauntDefenseMod",
-                value: test.bonus,
-                priority: 20,
-                mode: 2,
-              },
-              {
-                key: "system.trickDefenseMod",
-                value: test.bonus,
-                priority: 20,
-                mode: 2,
-              },
-              {
-                key: "system.unarmedCombatDefenseMod",
-                value: test.bonus,
-                priority: 20,
-                mode: 2,
-              },
-              {
-                key: "system.other.toughness",
-                value: shieldBonus,
-                priority: 20,
-                mode: 2,
-              },
-            ],
-            disabled: false,
-          };
-          fromUuidSync(test.actor).createEmbeddedDocuments("ActiveEffect", [NewActiveDefense]);
-          test.testType = "activeDefenseUpdate";
-          test.resultText = "+ " + test.bonus;
-          test.actionTotalLabel = "display:none";
-        }
-        if (oldAD) {
-          // if present, reset by deleting
-          fromUuidSync(test.actor)
-            .effects.find((a) => a.name === "ActiveDefense")
-            .delete();
-          // //
-          const RAD = {
-            // Simple chat message for information
-            speaker: ChatMessage.getSpeaker(),
-            content: game.i18n.localize("torgeternity.chatText.check.result.resetDefense"), // Need to be implemented if incorporated
-          };
-          await ChatMessage.create(RAD);
-          return;
-          // /
-        }
+      // Click on defense
+      const oldAD = myActor.effects.find((a) => a.name === "ActiveDefense"); // Search for an ActiveDefense effect
+      const shieldOn = myActor.items.filter((it) => it.type === "shield" && it.system.equipped); // Search for an equipped shield (an array)
+      let shieldBonus = 0; // set the shieldBonus to 0 then check if the actor is Vulnerable, if true, shield bonus stay 0
+      if (
+        !myActor.effects.find((a) => a.name === game.i18n.localize("torgeternity.statusEffects.vulnerable")) &&
+        !myActor.effects.find((a) => a.name === game.i18n.localize("torgeternity.statusEffects.veryVulnerable"))
+      ) {
+        shieldBonus += shieldOn[0]?.system?.bonus || 0;
+      }
+      if (!oldAD) {
+        // Create it if not present (if it exists, will be deleted farther)
+        const NewActiveDefense = {
+          name: "ActiveDefense", // Add an icon to remind the defense, bigger ? Change color of Defense ?
+          icon: "icons/equipment/shield/heater-crystal-blue.webp", // To change I think, taken in Core, should have a dedicated file
+          duration: { rounds: 1 },
+          changes: [
+            {
+              // Modify all existing "basic" defense in block
+              key: "system.dodgeDefenseMod", // Should need other work for defense vs powers
+              value: test.bonus, // that don't target xxDefense
+              priority: 20, // Create a data.ADB that store the bonus ?
+              mode: 2,
+            },
+            {
+              key: "system.intimidationDefenseMod",
+              value: test.bonus,
+              priority: 20,
+              mode: 2,
+            },
+            {
+              key: "system.maneuverDefenseMod",
+              value: test.bonus,
+              priority: 20,
+              mode: 2,
+            },
+            {
+              key: "system.meleeWeaponsDefenseMod",
+              value: test.bonus,
+              priority: 20,
+              mode: 2,
+            },
+            {
+              key: "system.tauntDefenseMod",
+              value: test.bonus,
+              priority: 20,
+              mode: 2,
+            },
+            {
+              key: "system.trickDefenseMod",
+              value: test.bonus,
+              priority: 20,
+              mode: 2,
+            },
+            {
+              key: "system.unarmedCombatDefenseMod",
+              value: test.bonus,
+              priority: 20,
+              mode: 2,
+            },
+            {
+              key: "system.other.toughness",
+              value: shieldBonus,
+              priority: 20,
+              mode: 2,
+            },
+          ],
+          disabled: false,
+        };
+        fromUuidSync(test.actor).createEmbeddedDocuments("ActiveEffect", [NewActiveDefense]);
+        test.testType = "activeDefenseUpdate";
+        test.resultText = "+ " + test.bonus;
+        test.actionTotalLabel = "display:none";
+      }
+      if (oldAD) {
+        // if present, reset by deleting
+        fromUuidSync(test.actor)
+          .effects.find((a) => a.name === "ActiveDefense")
+          .delete();
+        // //
+        const RAD = {
+          // Simple chat message for information
+          speaker: ChatMessage.getSpeaker(),
+          content: game.i18n.localize("torgeternity.chatText.check.result.resetDefense"), // Need to be implemented if incorporated
+        };
+        await ChatMessage.create(RAD);
+        return;
+        // /
+      }
     } else if (test.testType === "activeDefenseUpdate") {
       // update bonus in case of bonus roll possibility / up
       // Delete Existing Active Effects
@@ -1002,8 +1003,7 @@ export async function renderSkillChat(test) {
       },
     };
 
-    const message = await ChatMessageTorg.create(messageData);
-    return message;
+    messages.push(await ChatMessageTorg.create(messageData));
   }
 
   // reset tokens targeted, they are printed in the chatCard
@@ -1015,15 +1015,16 @@ export async function renderSkillChat(test) {
     await game.dice3d.showForRoll(test.diceroll, game.user, true);
     game.dice3d.messageHookDisabled = false;
   } catch (e) {}
+  return messages;
 }
 
 /**
- * 
- * @param {TorgEternityActor} actor 
- * @returns 
+ *
+ * @param {TorgEternityActor} actor
+ * @returns
  */
 
-export function checkForDiscon(actor){
+export function checkForDiscon(actor) {
   for (const ef of actor.statuses) {
     if (ef === "disconnected") {
       return true;
