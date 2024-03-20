@@ -12,19 +12,23 @@ export default class torgeternityItem extends Item {
     gear: "systems/torgeternity/templates/partials/gear-card.hbs",
     implant: "systems/torgeternity/templates/partials/implant-card.hbs",
     enhancement: "systems/torgeternity/templates/partials/enhancement-card.hbs",
-    eternityshard: "systems/torgeternity/templates/partials/eternityshard-card.hbs",
+    eternityshard:
+      "systems/torgeternity/templates/partials/eternityshard-card.hbs",
     armor: "systems/torgeternity/templates/partials/armor-card.hbs",
     shield: "systems/torgeternity/templates/partials/shield-card.hbs",
     spell: "systems/torgeternity/templates/partials/spell-card.hbs",
     miracle: "systems/torgeternity/templates/partials/miracle-card.hbs",
-    psionicpower: "systems/torgeternity/templates/partials/psionicpower-card.hbs",
-    specialability: "systems/torgeternity/templates/partials/specialability-card.hbs",
+    psionicpower:
+      "systems/torgeternity/templates/partials/psionicpower-card.hbs",
+    specialability:
+      "systems/torgeternity/templates/partials/specialability-card.hbs",
     vehicle: "systems/torgeternity/templates/partials/vehicle-card.hbs",
     destinyCard: "systems/torgeternity/templates/partials/destinyCard.hbs",
     cosmCard: "systems/torgeternity/templates/partials/cosmCard.hbs",
     dramaCard: "systems/torgeternity/templates/partials/dramaCard.hbs",
     customSkill: "systems/torgeternity/templates/partials/customSkill-card.hbs",
-    vehicleAddOn: "systems/torgeternity/templates/partials/vehicleAddOn-card.hbs",
+    vehicleAddOn:
+      "systems/torgeternity/templates/partials/vehicleAddOn-card.hbs",
   };
 
   prepareBaseData() {
@@ -40,66 +44,68 @@ export default class torgeternityItem extends Item {
 
   _onCreate(data, options, userId) {
     super._onCreate(data, options, userId);
-    var image;
-    switch (data.type) {
-      case "gear":
-        image = "gear-icon.webp";
-        break;
-      case "eternityshard":
-        image = "eternityshard.webp";
-        break;
-      case "armor":
-        image = "armor-icon.webp";
-        break;
-      case "shield":
-        image = "shield.webp";
-        break;
-      case "meleeweapon":
-        image = "meleeweapon.webp";
-        break;
-      case "missileweapon":
-        image = "missileweapon.webp";
-        break;
-      case "firearm":
-        image = "firearm.webp";
-        break;
-      case "implant":
-        image = "implant.webp";
-        break;
-      case "heavyweapon":
-        image = "heavyweapon.webp";
-        break;
-      case "vehicle":
-        image = "vehicle.webp";
-        break;
-      case "perk":
-        image = "perk.webp";
-        break;
-      case "enhancement":
-        image = "enhancement.webp";
-        break;
-      case "specialability":
-        image = "specialability.webp";
-        break;
-      case "specialability-rollable":
-        image = "specialability-rollable.webp";
-        break;
-      case "spell":
-        image = "spell.webp";
-        break;
-      case "miracle":
-        image = "miracle.webp";
-        break;
-      case "psionicpower":
-        image = "psionicpower.webp";
-        break;
-      case "customSkill":
-      case "vehicleAddon":
-      case "customAttack":
-      default:
-        ;
+    if (this.img === "icons/svg/item-bag.svg") {
+      let image;
+      switch (data.type) {
+        case "gear":
+          image = "gear-icon.webp";
+          break;
+        case "eternityshard":
+          image = "eternityshard.webp";
+          break;
+        case "armor":
+          image = "armor-icon.webp";
+          break;
+        case "shield":
+          image = "shield.webp";
+          break;
+        case "meleeweapon":
+          image = "meleeweapon.webp";
+          break;
+        case "missileweapon":
+          image = "missileweapon.webp";
+          break;
+        case "firearm":
+          image = "firearm.webp";
+          break;
+        case "implant":
+          image = "implant.webp";
+          break;
+        case "heavyweapon":
+          image = "heavyweapon.webp";
+          break;
+        case "vehicle":
+          image = "vehicle.webp";
+          break;
+        case "perk":
+          image = "perk.webp";
+          break;
+        case "enhancement":
+          image = "enhancement.webp";
+          break;
+        case "specialability":
+          image = "specialability.webp";
+          break;
+        case "specialability-rollable":
+          image = "specialability-rollable.webp";
+          break;
+        case "spell":
+          image = "spell.webp";
+          break;
+        case "miracle":
+          image = "miracle.webp";
+          break;
+        case "psionicpower":
+          image = "psionicpower.webp";
+          break;
+        case "customSkill":
+        case "vehicleAddon":
+        case "customAttack":
+        default:
+      }
+      if (image)
+        this.update({ img: "systems/torgeternity/images/icons/" + image });
     }
-    if (image) this.update({ img: "systems/torgeternity/images/icons/" + image });
 
     if (this.parent !== null && this.system.hasOwnProperty("equipped")) {
       // set the item to be equipped and un-equip other items of the same type
@@ -111,7 +117,11 @@ export default class torgeternityItem extends Item {
       let actor = this.parent;
       let item = this;
       actor.items.forEach(function (otherItem, key) {
-        if (otherItem._id !== item._id && otherItem.system.equipped && otherItem.type === item.type) {
+        if (
+          otherItem._id !== item._id &&
+          otherItem.system.equipped &&
+          otherItem.type === item.type
+        ) {
           torgeternityItem.toggleEquipState(otherItem, actor);
         }
       });
@@ -120,7 +130,9 @@ export default class torgeternityItem extends Item {
 
   static toggleEquipState(item, actor) {
     let equipped = !getProperty(item, torgeternityItem.equipProp);
-    let equipClass = equipped ? torgeternityItem.cssEquipped : torgeternityItem.cssUnequipped;
+    let equipClass = equipped
+      ? torgeternityItem.cssEquipped
+      : torgeternityItem.cssUnequipped;
 
     // flip the flag/CSS class
     item.update({
@@ -152,7 +164,10 @@ export default class torgeternityItem extends Item {
       owner: this.actor._id,
     };
 
-    chatData.content = await renderTemplate(this.chatTemplate[this.type], cardData);
+    chatData.content = await renderTemplate(
+      this.chatTemplate[this.type],
+      cardData
+    );
 
     return ChatMessage.create(chatData);
   }
@@ -215,7 +230,9 @@ export default class torgeternityItem extends Item {
     if (this.system.damageType == "flat") {
       var baseDamage = this.system.damage;
     } else if (this.system.damageType == "strengthPlus") {
-      var baseDamage = parseInt(this.actor.system.attributes.strength) + parseInt(this.system.damage);
+      var baseDamage =
+        parseInt(this.actor.system.attributes.strength) +
+        parseInt(this.system.damage);
     } else {
       var baseDamage = this.system.damage;
     }
@@ -245,7 +262,10 @@ export default class torgeternityItem extends Item {
     };
 
     // Send the chat
-    chatData.content = await renderTemplate(this.chatTemplate["attack"], cardData);
+    chatData.content = await renderTemplate(
+      this.chatTemplate["attack"],
+      cardData
+    );
 
     chatData.speaker.actor = this.actor.id;
     chatData.weaponAttack = true;
@@ -417,7 +437,10 @@ export default class torgeternityItem extends Item {
     };
 
     // Send the chat
-    chatData.content = await renderTemplate(this.chatTemplate["power"], cardData);
+    chatData.content = await renderTemplate(
+      this.chatTemplate["power"],
+      cardData
+    );
 
     chatData.power = true;
 
