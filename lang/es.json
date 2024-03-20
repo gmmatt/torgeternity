@@ -46,6 +46,7 @@
       "check": {
         "cantUseSkillRecquired": " no se puede utilizar sin 1 adición en la habilidad requerida.",
         "cantUseUntrained": " no se puede utilizar sin entrenar (mínimo 1 adición).",
+        "cantUseRealityWhileDisconnected": "Du kannst nicht die Fähigkeit Realität verwenden, so lange du abgekoppelt bist.",
         "interactionNeedTarget": "Cannot attempt interaction attack test without a target. Select a target and try again.",
         "modifier": {
           "aimedShot": "Tiro Apuntado (+4)",
@@ -74,6 +75,7 @@
         "result": {
           "actionTotal": "TOTAL",
           "attackMissed": "Ataque Falla",
+          "diceTotal": "Würfelergebnis",
           "damage": "Daño",
           "failure": "Fallo",
           "goodSuccess": "Éxito Bueno",
@@ -192,7 +194,7 @@
       "playerPassLabel": "Intercambiar",
       "playerPassTitle": "Intercambiar con Jugador",
       "playerPassTo": "Intercambiar con",
-      "plays": "Jugar",
+      "playCard": "Jugar",
       "return": "Devuelve todas las cartas a sus mazos. NO baraja automáticamente los mazos.",
       "selectCosmDeck": "Escoge Mazo Cosmos",
       "showToPlayers": "Mostrar carta a Todos"
@@ -212,6 +214,14 @@
       "itemDeletion": {
         "content": "¿Estás seguro que quieres borrar esto? Será eliminado permanentemente de la hoja.",
         "title": "Confirma Borrar"
+      },
+      "realityCheck": {
+        "title": "Reconnecting?",
+        "content": "Are you trying to reconnect?"
+      },
+      "buttons": {
+        "execute": "Ausführen",
+        "ok": "OK"
       }
     },
     "dnTypes": {
@@ -489,6 +499,10 @@
         "hint": "If activated, the game uses daltonistism friendly red and green colors.",
         "name": "Use daltonism (colorblind)- friendly colors"
       },
+      "useRenderedTorgDice": {
+        "hint": "Wenn angehakt, bekommen die Würfel in Chat-Karten einen Torg-Anstrich. Wenn nicht, sind diese standard-grau.",
+        "name": "Zeige Torg-Würfel in Chatkarten"
+      },
       "autoDamages": {
         "hint": "If checked, shocks and wounds would be automatically apply if player has a valid target token. WARNING: This feature only works correctly with initial damage rolls. It will not correctly record subsequent bonus die rolls. Use with caution.",
         "name": "Apply damages automatically"
@@ -718,7 +732,8 @@
       "weapons": "Armas",
       "wounds": "Heridas",
       "xp": "PX",
-      "xpOnlyGM": "only GM can fill"
+      "xpOnlyGM": "only GM can fill",
+      "toolTipClickToAdd": "klicke, um die Fertigkeit der Zugriffliste hinzuzufügen oder zu löschen"
     },
     "sizes": {
       "large": "Grande",
@@ -829,7 +844,8 @@
       "possibilities": "Posibilidad",
       "shock": "Shock",
       "speedModifier": "Vehicle Speed Modifier",
-      "wounds": "Heridas"
+      "wounds": "Heridas",
+      "axioms": "Axiome"
     },
     "statusEffects": {
       "aiming": "Apuntando",
@@ -888,6 +904,43 @@
     "yesNo": {
       "false": "No",
       "true": "Si"
+    },
+    "macros": {
+      "commonMacroNoTokensSelected": "Es wurden keine Token ausgewählt. Das Makro kann nicht ausgeführt werden.",
+      "commonMacroNoCharacter": "Ich kann keinen Charakter finden, um weiter zu machen.",
+      "commonMacroNoValue": "Es wurde kein Wert eingegeben. Das Makro kann nicht ausgeführt werden.",
+      "commonMacroOnlyByGM": "Dieses Makro kann nur von Spielleitern ausgeführt werden!",
+      "commonMacroNoChatMessageFound": "Es konnte keine Chatnachricht abgefangen werden, die weitere Verarbeitung wird abgegbrochen.",
+      "fatigueMacroDealtDamage": "Folgenden Charakteren wurden Schock zugefügt:",
+      "fatigueMacroCharKO": " ist damit K.O.!",
+      "reviveMacroChatHeadline": "Schock-Erholung!",
+      "reviveMacroWindowLabel1": "Wie viel Schock soll zurückgewonnen werden?",
+      "reviveMacroError1": "In das Feld für die Menge wurde nichts eingegeben und auch das Kontrollkästchen war nicht aktiviert. Was soll ich tun? Abbruch.",
+      "fatigueMacroCharAlreadyKO": " ist bereits K.O.! Mehr Schock geht nicht.",
+      "reviveMacroFirst": "Die folgenden Charaktere erholen sich vom Schock: ",      
+      "reviveMacroAlreadyFull": " ist bereits wohlauf und hat keinen Schock!",
+      "reviveMacroCharRevived": " ist vollständig wiederhergestellt.",
+      "reviveMacroCharPartyRevived": " wurde um die folgende Menge geheilt: ",
+      "reviveMacroCharDeKOed": "Der K.O. Status wurde aufgehoben für ", 
+      "reviveMacroWholeRevive": "Allen Schock erholen?",
+      "clearStatusEffectsHeadline": "Für folgende Charaktere wurden Stati aufgehoben:",
+      "clearStatusEffectsNothingFound": "Es wurden keine Stati für die markierten Token gefunden.",
+      "clearStatusEffectsliftetFrom": "Von",
+      "clearStatusEffectsliftetStatusOf": "wurde folgender Status aufgehoben:",
+      "bonusDieMacroTitle": "Makro für Bonuswürfel",
+      "bonusDieMacroContent": "Wieviele Bonuswürfel sollen denn geworfen werden?",
+      "bonusDieMacroErrorIntegerValue": "Die Eingabe war keine Ganzzahl. Bitte gebe eine Ganzzahl ein.",
+      "bonusDieMacroResult1": "Du hast gewürfelt:",
+      "bonusDieMacroResult2": "mit einem Ergebnis von",
+      "bonusDieMacroResult3": "Der Token mit dem Namen",
+      "bonusDieMacroResult4": "erhält einen Schaden von",
+      "bonusDieMacroResultNoDamage": "erhält keinen Schaden",
+      "bonusDieMacroNoTokenTargeted": "Es wurden keine Token ins Ziel genommen.",
+      "bonusDieMacroNoDiscon": "Es gibt keinen \"Entkoppelt\"- Status auf diesem Charakter.",
+      "reconnectMacroZoneModifier": "Zonenmodifikator",
+      "reconnectMacroZoneModifierNotDetectedTitle": "Kein Zonenmodifikator",
+      "reconnectMacroZoneModifierNotDetected": "Ein Zonenmodifikator konnte nicht festgestellt werden, da die aktive Szene keine Zonen konfiguriert hat. Ändere den Modifikator im Ergebnis.",
+      "reconnectMacroStatusLiftet": "Entkoppelt-Status nach einer erfolgreichen Realitätsprobe aufgehoben."
     }
   }
 }
