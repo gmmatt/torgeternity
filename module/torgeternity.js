@@ -568,9 +568,10 @@ function rollItemMacro(itemName) {
         const weaponData = item.system;
         const attackWith = weaponData.attackWith;
         const skillData = actor.system.skills[weaponData.attackWith];
-        const dnDescriptor = "standard";
+        let dnDescriptor = "standard";
         const damageType = weaponData.damageType;
         const weaponDamage = weaponData.damage;
+        let adjustedDamage;
         const attributes = actor.system.attributes;
         const attackType = weaponData.damageType;
 
@@ -786,7 +787,7 @@ function rollSkillMacro(skillName, attributeName, isInteractionAttack) {
   const isAttributeTest = skillName === attributeName;
   let skill = null;
   if (!isAttributeTest) {
-    const skillNameKey = skillName.toLowerCase(); // skillName required to be internal value
+    const skillNameKey = skillName;//.toLowerCase(); // skillName required to be internal value
     // would be nice to use display value as an input instead but we can't translate from i18n to internal values
     skill = actor && Object.keys(actor.system.skills).includes(skillNameKey) ? actor.system.skills[skillNameKey] : null;
     if (!skill) return ui.notifications.warn(game.i18n.localize("torgeternity.notifications.noSkillNamed") + skillName);
