@@ -12,9 +12,6 @@ export default class torgeternityActor extends Actor {
     // Set Values for All Characters
 
     if ((this._source.type === "stormknight") | (this._source.type === "threat")) {
-      // Base Fatigue
-      this.system.other.fatigue = 2;
-
       if (this.system.other.possibilities === false) {
         // Set Possiblities to 3, as this is most likely the value a Storm Knight starts with
         if (this._source.type === "stormknight") this.system.other.possibilities = 3;
@@ -111,19 +108,6 @@ export default class torgeternityActor extends Actor {
           break;
       }
 
-      // Set clearance level
-      if (this.system.xp.earned < 50) {
-        this.system.details.clearance = "alpha";
-      } else if (this.system.xp.earned < 200) {
-        this.system.details.clearance = "beta";
-      } else if (this.system.xp.earned < 500) {
-        this.system.details.clearance = "gamma";
-      } else if (this.system.xp.earned < 1000) {
-        this.system.details.clearance = "delta";
-      } else {
-        this.system.details.clearance = "omega";
-      }
-
       // Set armor and shield toggle states
       let i;
       for (i = 0; i < this.items.length; i++) {
@@ -195,22 +179,6 @@ export default class torgeternityActor extends Actor {
     // Skillsets
     const skillset = this.system.skills;
 
-    // Derive Skill values for Storm Knights
-    //
-    // NOTE: Threat skill values are created directly by user, but SK skill values are derived based on attribute + adds.
-    // NOTE bis, with setThreatAdds() doing his job, skill.value can be used for both,
-    // with possibility to use same path for effects => system.skills.xxx.adds
-
-    if (["threat", "stormknight"].includes(this.type)) {
-      for (const skill of Object.values(skillset)) {
-        if (skill.unskilledUse === 1 || skill.adds) {
-          skill.value = parseInt(this.system.attributes[skill.baseAttribute]) + (skill.adds ? parseInt(skill.adds) : 0);
-        } else {
-          skill.value = "";
-          skill.adds = null;
-        }
-      }
-    }
     if (this.type === "threat") {
       for (const skill of Object.values(skillset)) {
         skill.isThreatSkill = skill.isThreatSkill || !!skill.adds;
@@ -270,19 +238,6 @@ export default class torgeternityActor extends Actor {
 
     // Other derived attributes for Storm Knights
     if ((this._source.type === "stormknight") | (this._source.type === "threat")) {
-      mergeObject(
-        this.prototypeToken,
-        {
-          actorLink: true,
-          disposition: 1,
-        },
-        { overwrite: true }
-      );
-
-      // Set base move and run
-      this.system.other.move = this.system.attributes.dexterity;
-      this.system.other.run = parseInt(this.system.attributes.dexterity) * 3;
-      //
       // Apply the moveMod effect
       const listChanges = [];
       let computeMove = this.system.other.move;

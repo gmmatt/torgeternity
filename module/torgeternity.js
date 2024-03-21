@@ -36,6 +36,7 @@ import { torgMigration } from "./migrations.js";
 import initTextEdidor from "./initTextEditor.js";
 import { TorgeternityMacros } from "./macros.js";
 import { ChatMessageTorg } from "./chat/document.js";
+import * as dataModels from "./data/actor/index.js";
 
 Hooks.once("init", async function () {
   console.log("torgeternity | Initializing Torg Eternity System");
@@ -54,6 +55,7 @@ Hooks.once("init", async function () {
   CONFIG.torgeternity = torgeternity;
   CONFIG.Item.documentClass = torgeternityItem;
   CONFIG.Actor.documentClass = torgeternityActor;
+  CONFIG.Actor.dataModels = dataModels.config;
   CONFIG.statusEffects = torgeternity.statusEffects;
   CONFIG.attributeTypes = torgeternity.attributeTypes;
 

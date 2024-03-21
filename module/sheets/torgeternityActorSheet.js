@@ -213,16 +213,6 @@ export default class torgeternityActorSheet extends ActorSheet {
    */
   activateListeners(html) {
     // localizing hardcoded possibility potential value
-    if (
-      game.settings.get("core", "language") != "en" &&
-      this.actor.type === "threat" &&
-      this.actor.system.details.possibilitypotential === "(none)"
-    ) {
-      this.actor.update({
-        "system.details.possibilitypotential": game.i18n.localize("torgeternity.sheetLabels.none"),
-      });
-    }
-
     if (this.actor.isOwner)
       if (this.actor.isOwner) {
         // Owner-only Listeners
@@ -828,17 +818,9 @@ export default class torgeternityActorSheet extends ActorSheet {
    * @param event
    */
   _onSkillEditToggle(event) {
-    const toggleState = this.actor.system.editstate;
     event.preventDefault();
-    if ((toggleState === null) | (toggleState === "none")) {
-      this.actor.update({
-        "system.editstate": true,
-      });
-    } else {
-      this.actor.update({
-        "system.editstate": null,
-      });
-    }
+    const toggleState = this.actor.system.editstate;
+    this.actor.update({ "system.editstate": !toggleState });
   }
 
   /**

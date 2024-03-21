@@ -252,10 +252,10 @@ torgeternity.yesNo = {
 };
 
 torgeternity.sizes = {
-  normal: "torgeternity.sizes.normal",
   tiny: "torgeternity.sizes.tiny",
   verySmall: "torgeternity.sizes.verySmall",
   small: "torgeternity.sizes.small",
+  normal: "torgeternity.sizes.normal",
   large: "torgeternity.sizes.large",
   veryLarge: "torgeternity.sizes.veryLarge",
 };
