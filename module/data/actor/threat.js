@@ -1,4 +1,5 @@
 import { CommonActorData } from "./common.js";
+import { torgeternity } from "../../config.js";
 
 const fields = foundry.data.fields;
 
@@ -15,7 +16,11 @@ export class ThreatData extends CommonActorData {
       ...super.defineSchema(),
       details: new fields.SchemaField({
         description: new fields.HTMLField({ initial: "", textSearch: true }),
-        sizeBonus: new fields.StringField({ initial: "normal" }),
+        sizeBonus: new fields.StringField({
+          initial: torgeternity.sizes.normal,
+          choices: Object.values(torgeternity.sizes),
+          required: true,
+        }),
       }),
     };
   }

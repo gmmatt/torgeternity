@@ -1,5 +1,5 @@
 import { CommonActorData } from "./common.js";
-
+import { torgeternity } from "../../config.js";
 const fields = foundry.data.fields;
 
 /**
@@ -22,7 +22,11 @@ export class StormKnightData extends CommonActorData {
       details: new fields.SchemaField({
         background: new fields.HTMLField({ initial: "", textSearch: true }),
         race: new fields.StringField({ initial: "" }),
-        sizeBonus: new fields.StringField({ initial: "normal" }),
+        sizeBonus: new fields.StringField({
+          initial: torgeternity.sizes.normal,
+          choices: Object.values(torgeternity.sizes),
+          required: true,
+        }),
       }),
       xp: new fields.SchemaField({
         earned: new fields.NumberField({ initial: 0, integer: true, nullable: false }),

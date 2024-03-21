@@ -1,4 +1,5 @@
 import { makeSkillFields } from "../shared.js";
+import { torgeternity } from "../../config.js";
 
 const fields = foundry.data.fields;
 /**
@@ -19,7 +20,11 @@ export class CommonActorData extends foundry.abstract.TypeDataModel {
         strength: new fields.NumberField({ initial: 8, integer: true, nullable: false }),
       }),
       other: new fields.SchemaField({
-        cosm: new fields.StringField({ initial: "", textSearch: true }),
+        cosm: new fields.StringField({
+          initial: torgeternity.cosmTypes.none,
+          choices: Object.values(torgeternity.cosmTypes),
+          required: true,
+        }),
         possibilities: new fields.NumberField({ initial: 3, integer: true, nullable: false }),
       }),
       shock: new fields.SchemaField({
