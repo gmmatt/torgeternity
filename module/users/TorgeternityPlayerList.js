@@ -21,7 +21,7 @@ export default class TorgeternityPlayerList extends PlayerList {
     for (const user of data.users) {
       if (user.character) {
         const userActor = await game.actors.get(user.character);
-        user.characterPossibilities = userActor.system.other.possibilities;
+        user.characterPossibilities = parseInt(userActor.system.other.possibilities);
       } else {
         user.characterPossibilities = 0;
       }
@@ -88,7 +88,7 @@ export default class TorgeternityPlayerList extends PlayerList {
         _id: targetActor._id,
         system: {
           other: {
-            possibilities: targetActor.system.other.possibilities + 1,
+            possibilities: parseInt(targetActor.system.other.possibilities) + 1,
           },
         },
       });
@@ -110,7 +110,7 @@ export default class TorgeternityPlayerList extends PlayerList {
         _id: targetActor._id,
         system: {
           other: {
-            possibilities: targetActor.system.other.possibilities - 1,
+            possibilities: parseInt(targetActor.system.other.possibilities) - 1,
           },
         },
       });

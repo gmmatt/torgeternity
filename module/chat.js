@@ -343,7 +343,7 @@ async function soakDam(event) {
   }
   const soaker = fromUuidSync(targetuuid).actor; // game.actors.get(targetid) ?? game.user.character) ?? Array.from(game.user.targets)[0].actor;
   // ///
-  let possPool = soaker.system.other.possibilities;
+  let possPool = parseInt(soaker.system.other.possibilities);
   // 0 => if GM ask for confirm, or return message "no poss"
   if ((possPool <= 0) & !game.user.isGM) {
     ui.notifications.warn(" No possibility !");
