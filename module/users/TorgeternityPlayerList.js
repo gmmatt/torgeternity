@@ -11,8 +11,10 @@ export default class TorgeternityPlayerList extends PlayerList {
     data.GMpossibilities = GM.getFlag("torgeternity", "GMpossibilities");
     for (let user of data.users) {
       if (user.character) {
-        let userActor = await game.actors.get(user.character);
-        user.characterPossibilities = userActor.system.other.possibilities;
+        const userActor = await game.actors.get(user.character);
+        user.characterPossibilities = parseInt(
+          userActor.system.other.possibilities
+        );
       } else {
         user.characterPossibilities = 0;
       }
@@ -63,7 +65,7 @@ export default class TorgeternityPlayerList extends PlayerList {
         _id: targetActor._id,
         system: {
           other: {
-            possibilities: targetActor.system.other.possibilities + 1,
+            possibilities: parseInt(targetActor.system.other.possibilities) + 1,
           },
         },
       });
@@ -81,7 +83,7 @@ export default class TorgeternityPlayerList extends PlayerList {
         _id: targetActor._id,
         system: {
           other: {
-            possibilities: targetActor.system.other.possibilities - 1,
+            possibilities: parseInt(targetActor.system.other.possibilities) - 1,
           },
         },
       });
@@ -109,7 +111,9 @@ export default class TorgeternityPlayerList extends PlayerList {
             game.users.forEach((user) => {
               if (user.character) {
                 let target = game.actors.get(user.character.id);
-                let newVal = parseInt(document.getElementById("possibilitiesValue").value);
+                let newVal = parseInt(
+                  document.getElementById("possibilitiesValue").value
+                );
                 target.update({
                   id: target.id,
                   system: {
