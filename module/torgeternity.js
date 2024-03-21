@@ -671,11 +671,11 @@ function rollItemMacro(itemName) {
         const powerData = item.system;
         const skillName = powerData.skill;
         const skillData = actor.system.skills[skillName];
-        const dnDescriptor = "standard";
-        const isAttack = false;
-        const applyArmor = true;
-        const applySize = true;
-        const powerModifier = 0;
+        let dnDescriptor = "standard";
+        let isAttack = false;
+        let applyArmor = true;
+        let applySize = true;
+        let powerModifier = 0;
 
         // Convert yes/no options from sheet into boolean values (or else renderSkillChat gets confused)
         if (powerData.isAttack == "true") {
