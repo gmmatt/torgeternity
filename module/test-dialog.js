@@ -208,7 +208,7 @@ export class TestDialog extends FormApplication {
    * @param event
    * @param html
    */
-  _onRoll(event, html) {
+  async _onRoll(event, html) {
     // Set DN Descriptor unless actively defending (in which case no DN, but we set to standard to avoid problems down the line)
     if (this.test.testType != "activeDefense") {
       this.test.DNDescriptor = document.getElementById("difficulty").value;
@@ -377,7 +377,7 @@ export class TestDialog extends FormApplication {
       this.test.isOther3 = false;
     }
 
-    const messages = torgchecks.renderSkillChat(this.test);
+    const messages = await torgchecks.renderSkillChat(this.test);
     if (messages && this.callback) {
       for (const message of messages) {
         this.callback(message);
