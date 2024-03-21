@@ -21,7 +21,9 @@ export class StormKnightData extends CommonActorData {
       }),
       details: new fields.SchemaField({
         background: new fields.HTMLField({ initial: "", textSearch: true }),
-        race: new fields.StringField({ initial: "" }),
+        race: new fields.StringField({
+          choices: Object.values(torgeternity.races),
+        }),
         sizeBonus: new fields.StringField({
           initial: torgeternity.sizes.normal,
           choices: Object.values(torgeternity.sizes),
