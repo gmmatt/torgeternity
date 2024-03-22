@@ -46,7 +46,8 @@
       "check": {
         "cantUseSkillRecquired": " no se puede utilizar sin 1 adición en la habilidad requerida.",
         "cantUseUntrained": " no se puede utilizar sin entrenar (mínimo 1 adición).",
-        "interactionNeedTarget": "Cannot attempt interaction attack test without a target. Select a target and try again.",
+        "cantUseRealityWhileDisconnected": "No puedes utilizar la capacidad de la realidad mientras estés desconectado.",
+        "interactionNeedTarget": "No se puede intentar la prueba de ataque de interacción sin un objetivo. Selecciona un objetivo e inténtalo de nuevo.",
         "modifier": {
           "aimedShot": "Tiro Apuntado (+4)",
           "allOutAttack": "Ataque Total",
@@ -74,6 +75,7 @@
         "result": {
           "actionTotal": "TOTAL",
           "attackMissed": "Ataque Falla",
+          "diceTotal": "Resultado del dado",
           "damage": "Daño",
           "failure": "Fallo",
           "goodSuccess": "Éxito Bueno",
@@ -192,7 +194,7 @@
       "playerPassLabel": "Intercambiar",
       "playerPassTitle": "Intercambiar con Jugador",
       "playerPassTo": "Intercambiar con",
-      "plays": "Jugar",
+      "playCard": "Jugar",
       "return": "Devuelve todas las cartas a sus mazos. NO baraja automáticamente los mazos.",
       "selectCosmDeck": "Escoge Mazo Cosmos",
       "showToPlayers": "Mostrar carta a Todos"
@@ -212,11 +214,19 @@
       "itemDeletion": {
         "content": "¿Estás seguro que quieres borrar esto? Será eliminado permanentemente de la hoja.",
         "title": "Confirma Borrar"
+      },
+      "realityCheck": {
+        "title": "¿Reconexión?",
+        "content": "¿Estás intentando reconectar?"
+      },
+      "buttons": {
+        "execute": "Ejecute",
+        "ok": "OK"
       }
     },
     "dnTypes": {
-      "challenging": "Challenging (12)",
-      "easy": "Easy (8)",
+      "challenging": "Desafío (12)",
+      "easy": "Fácil (8)",
       "hard": "Hard (14)",
       "heroic": "Heroic (18)",
       "highestSpeed": "Fastest Participant in Combat Tracker",
@@ -489,6 +499,10 @@
         "hint": "If activated, the game uses daltonistism friendly red and green colors.",
         "name": "Use daltonism (colorblind)- friendly colors"
       },
+      "useRenderedTorgDice": {
+        "hint": "Si está marcada, los cubos de las cartas de chat reciben un recubrimiento Torg. Si no, son de color gris estándar.",
+        "name": "Mostrar cubos Torg en tarjetas de chat"
+      },
       "autoDamages": {
         "hint": "If checked, shocks and wounds would be automatically apply if player has a valid target token. WARNING: This feature only works correctly with initial damage rolls. It will not correctly record subsequent bonus die rolls. Use with caution.",
         "name": "Apply damages automatically"
@@ -718,7 +732,8 @@
       "weapons": "Armas",
       "wounds": "Heridas",
       "xp": "PX",
-      "xpOnlyGM": "only GM can fill"
+      "xpOnlyGM": "only GM can fill",
+      "toolTipClickToAdd": "pulse para añadir o eliminar la competencia de la lista de acceso"
     },
     "sizes": {
       "large": "Grande",
@@ -829,7 +844,8 @@
       "possibilities": "Posibilidad",
       "shock": "Shock",
       "speedModifier": "Vehicle Speed Modifier",
-      "wounds": "Heridas"
+      "wounds": "Heridas",
+      "axioms": "Axiome"
     },
     "statusEffects": {
       "aiming": "Apuntando",
@@ -888,6 +904,43 @@
     "yesNo": {
       "false": "No",
       "true": "Si"
+    },
+    "macros": {
+      "commonMacroNoTokensSelected": "No se ha seleccionado ninguna ficha. La macro no puede ejecutarse.",
+      "commonMacroNoCharacter": "No puedo encontrar un personaje para continuar.",
+      "commonMacroNoValue": "No se ha introducido ningún valor. La macro no puede ejecutarse.",
+      "commonMacroOnlyByGM": "¡Esta macro sólo puede ser ejecutada por game masters!",
+      "commonMacroNoChatMessageFound": "No se ha podido interceptar ningún mensaje de chat, se cancela el procesamiento posterior.",
+      "fatigueMacroDealtDamage": "Los siguientes personajes han sufrido un shock:",
+      "fatigueMacroCharKO": " está noqueado!",
+      "reviveMacroChatHeadline": "¡Recuperación de choque!",
+      "reviveMacroWindowLabel1": "c¿Cuánto choque debe recuperarse?",
+      "reviveMacroError1": "No se ha introducido nada en el campo de la cantidad y la casilla de verificación no está marcada. ¿Qué debo hacer? Cancelar.",
+      "fatigueMacroCharAlreadyKO": " ¡ya está noqueado! Más choque no es posible.",
+      "reviveMacroFirst": "Los siguientes personajes se recuperan del shock: ",      
+      "reviveMacroAlreadyFull": " ¡ya está bien y no tiene sobresaltos!",
+      "reviveMacroCharRevived": " está totalmente restablecido.",
+      "reviveMacroCharPartyRevived": " se curó en la siguiente cantidad: ",
+      "reviveMacroCharDeKOed": "Se ha anulado el estatuto de nocaut para ", 
+      "reviveMacroWholeRevive": "¿Recuperarse de la conmoción?",
+      "clearStatusEffectsHeadline": "Se han cancelado los estatus de los siguientes personajes:",
+      "clearStatusEffectsNothingFound": "No se han encontrado estados para las fichas seleccionadas.",
+      "clearStatusEffectsliftetFrom": "En",
+      "clearStatusEffectsliftetStatusOf": "se canceló el siguiente estado:",
+      "bonusDieMacroTitle": "Macro para cubos de bonificación",
+      "bonusDieMacroContent": "¿Cuántos dados de bonificación hay que tirar?",
+      "bonusDieMacroErrorIntegerValue": "La entrada no era un número entero. Por favor, introduzca un número entero.",
+      "bonusDieMacroResult1": "Has tirado los dados:",
+      "bonusDieMacroResult2": "con un resultado de",
+      "bonusDieMacroResult3": "El token con el nombre",
+      "bonusDieMacroResult4": "recibe un daño de",
+      "bonusDieMacroResultNoDamage": "no recibe daños",
+      "bonusDieMacroNoTokenTargeted": "No se llevaron fichas a la meta.",
+      "bonusDieMacroNoDiscon": "Este personaje no está \"Desacoplado\".",
+      "reconnectMacroZoneModifier": "Modificador de zona",
+      "reconnectMacroZoneModifierNotDetectedTitle": "Sin modificador de zona",
+      "reconnectMacroZoneModifierNotDetected": "No se ha podido detectar un modificador de zona porque la escena activa no tiene zonas configuradas. Cambie el modificador en el resultado.",
+      "reconnectMacroStatusLiftet": "Estado desacoplado cancelado tras una comprobación de la realidad satisfactoria."
     }
   }
 }

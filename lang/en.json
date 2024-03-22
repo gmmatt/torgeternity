@@ -910,6 +910,7 @@
       "commonMacroNoCharacter": "I cannot find a character to continue with.",
       "commonMacroNoValue": "No value entered. The macro cannot compute.",
       "commonMacroOnlyByGM": "This Macro is only executionable by GMs!",
+      "commonMacroNoChatMessageFound": "No chatmessage-card found. Abort computing.",
       "fatigueMacroDealtDamage": "Dealt damage to the following characters:",
       "fatigueMacroCharKO": " is therefore K.O.!",
       "fatigueMacroCharAlreadyKO": " is already K.O.! There is no more shock to add.",
