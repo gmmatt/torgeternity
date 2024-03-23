@@ -1,9 +1,7 @@
-import { getTorgValue } from "./torgchecks.js";
-
 /**
  *
  */
-export default class torgeternityActor extends Actor {
+export default class TorgeternityActor extends Actor {
   /**
    * @inheritdoc
    */
@@ -18,63 +16,10 @@ export default class torgeternityActor extends Actor {
         item.system.equippedClass = item.system.equipped ? "item-equipped" : "item-unequipped";
       }
     }
-
-    if ((this._source.type === "stormknight") | (this._source.type === "threat")) {
-      if (this.system.other.possibilities === false) {
-        // Set Possiblities to 3, as this is most likely the value a Storm Knight starts with
-        if (this._source.type === "stormknight") this.system.other.possibilities = 3;
-        else {
-          this.system.other.possibilities = 0;
-          this.update({
-            "prototypeToken.texture.src": "systems/torgeternity/images/icons/threat-token.webp",
-            img: "systems/torgeternity/images/icons/threat.webp",
-          });
-        }
-      }
+    if (["threat", "stormknight"].includes(this.type)) {
+      // initialize the worn armor bonus
+      this.system.other.armor = this.wornArmor?.system?.bonus ?? 0;
     }
-
-    // Set derived values for vehicles
-    if (this._source.type === "vehicle") {
-      if (this.img.includes("mystery-man")) {
-        this.update({
-          "prototypeToken.texture.src": "systems/torgeternity/images/icons/vehicle-Token.webp",
-          img: "systems/torgeternity/images/icons/vehicle.webp",
-        });
-      }
-      let convertedPrice = 0;
-      switch (this.system.price.magnitude) {
-        case "ones":
-          convertedPrice = this.system.price.dollars;
-          break;
-        case "thousands":
-          convertedPrice = parseInt(this.system.price.dollars * 1000);
-          break;
-        case "millions":
-          convertedPrice = parseInt(this.system.price.dollars * 1000000);
-          break;
-        case "billions":
-          convertedPrice = parseInt(this.system.price.dollars * 1000000000);
-      }
-      this.system.price.value = getTorgValue(convertedPrice);
-      const speedValue = parseInt(getTorgValue(this.system.topSpeed.kph) + 2);
-      this.system.topSpeed.value = speedValue;
-      let speedPenalty = 0;
-      if (speedValue < 11) {
-        speedPenalty = 0;
-      } else if (speedValue < 15) {
-        speedPenalty = -2;
-      } else if (speedValue < 17) {
-        speedPenalty = -4;
-      } else {
-        speedPenalty = -6;
-      }
-      this.system.topSpeed.penalty = speedPenalty;
-
-      this.system.defense = parseInt(this.system.operator.skillValue + this.system.maneuver);
-    }
-    // initialize the worn armor bonus
-    // this.system.other.armor = this.wornArmor?.system?.bonus ?? 0;
-    this.system.other.armor = 0;
   }
 
   /**
@@ -120,14 +65,6 @@ export default class torgeternityActor extends Actor {
       const trickDefenseMod = this.system.trickDefenseMod || 0;
       const trickDefenseSkill = skills.trick.value || attributes.mind;
       this.system.trickDefense = trickDefenseSkill + trickDefenseMod;
-    }
-    if (game.user.isGM) {
-      const malus = this.effects.find((ef) => ef.name === "Malus");
-      if (malus?.disabled) {
-        try {
-          malus.delete();
-        } catch (e) {}
-      }
     }
   }
 

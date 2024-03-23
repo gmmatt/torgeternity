@@ -1,13 +1,13 @@
 import * as torgchecks from "../torgchecks.js";
 import { onManageActiveEffect, prepareActiveEffectCategories } from "../effects.js";
 import { TestDialog } from "../test-dialog.js";
-import torgeternityItem from "../torgeternityItem.js";
+import TorgeternityItem from "../documents/item/torgeternityItem.js";
 import { PossibilityByCosm } from "../possibilityByCosm.js";
 
 /**
  *
  */
-export default class torgeternityActorSheet extends ActorSheet {
+export default class TorgeternityActorSheet extends ActorSheet {
   /**
    *
    * @param {...any} args
@@ -1156,14 +1156,14 @@ export default class torgeternityActorSheet extends ActorSheet {
   _onItemEquip(event) {
     const itemID = event.currentTarget.closest(".item").getAttribute("data-item-id");
     const item = this.actor.items.get(itemID);
-    const doCheckOtherItems = torgeternityItem.toggleEquipState(item, this.actor);
+    const doCheckOtherItems = TorgeternityItem.toggleEquipState(item, this.actor);
 
     // for armor and shield, ensure there's only one equipped
     if (doCheckOtherItems && item.system && item.system.hasOwnProperty("equipped")) {
       const actor = this.actor;
       actor.items.forEach(function (otherItem) {
         if (otherItem._id !== item._id && otherItem.system.equipped && otherItem.type === item.type) {
-          torgeternityItem.toggleEquipState(otherItem, actor);
+          TorgeternityItem.toggleEquipState(otherItem, actor);
         }
       });
     }

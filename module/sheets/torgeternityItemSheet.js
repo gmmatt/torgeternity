@@ -3,7 +3,7 @@ import { onManageActiveEffect, prepareActiveEffectCategories } from "../effects.
 /**
  *
  */
-export default class torgeternityItemSheet extends ItemSheet {
+export default class TorgeternityItemSheet extends ItemSheet {
   /**
    *
    * @param {...any} args

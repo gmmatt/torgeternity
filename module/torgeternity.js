@@ -1,10 +1,10 @@
 "use strict";
 import { torgeternity } from "./config.js";
 import * as Chat from "./chat.js";
-import torgeternityItem from "./torgeternityItem.js";
-import torgeternityActor from "./torgeternityActor.js";
-import torgeternityItemSheet from "./sheets/torgeternityItemSheet.js";
-import torgeternityActorSheet from "./sheets/torgeternityActorSheet.js";
+import TorgeternityItem from "./documents/item/torgeternityItem.js";
+import TorgeternityActor from "./documents/actor/torgeternityActor.js";
+import TorgeternityItemSheet from "./sheets/torgeternityItemSheet.js";
+import TorgeternityActorSheet from "./sheets/torgeternityActorSheet.js";
 import { sheetResize } from "./sheetResize.js";
 import { preloadTemplates } from "./preloadTemplates.js";
 import torgeternityCombat from "./dramaticScene/torgeternityCombat.js";
@@ -36,7 +36,8 @@ import { torgMigration } from "./migrations.js";
 import initTextEdidor from "./initTextEditor.js";
 import { TorgeternityMacros } from "./macros.js";
 import { ChatMessageTorg } from "./chat/document.js";
-import * as dataModels from "./data/actor/index.js";
+import * as actorDataModels from "./data/actor/index.js";
+import * as itemDataModels from "./data/actor/index.js";
 import TorgActiveEffect from "./documents/active-effect/torgActiveEffect.js";
 
 Hooks.once("init", async function () {
@@ -54,10 +55,11 @@ Hooks.once("init", async function () {
   };
   initTextEdidor();
   CONFIG.torgeternity = torgeternity;
-  CONFIG.Item.documentClass = torgeternityItem;
-  CONFIG.Actor.documentClass = torgeternityActor;
+  CONFIG.Item.documentClass = TorgeternityItem;
+  CONFIG.Actor.documentClass = TorgeternityActor;
   CONFIG.ActiveEffect.documentClass = TorgActiveEffect;
-  CONFIG.Actor.dataModels = dataModels.config;
+  CONFIG.Actor.dataModels = actorDataModels.config;
+  CONFIG.Item.dataModels = itemDataModels.config;
   CONFIG.statusEffects = torgeternity.statusEffects;
   CONFIG.attributeTypes = torgeternity.attributeTypes;
 
@@ -118,12 +120,12 @@ Hooks.once("init", async function () {
   registerTorgSettings();
   // ---register items and actors
   Items.unregisterSheet("core", ItemSheet);
-  Items.registerSheet("torgeternity", torgeternityItemSheet, {
+  Items.registerSheet("torgeternity", TorgeternityItemSheet, {
     makeDefault: true,
   });
 
   Actors.unregisterSheet("core", ItemSheet);
-  Actors.registerSheet("torgeternity", torgeternityActorSheet, {
+  Actors.registerSheet("torgeternity", TorgeternityActorSheet, {
     makeDefault: true,
   });
 
@@ -568,7 +570,7 @@ function rollItemMacro(itemName) {
     case "heavyweapon":
     case "specialability-rollable":
       {
-        // The following is copied/pasted/adjusted from _onAttackRoll in torgeternityActorSheet
+        // The following is copied/pasted/adjusted from _onAttackRoll in TorgeternityActorSheet
         const weaponData = item.system;
         const attackWith = weaponData.attackWith;
         const skillData = actor.system.skills[weaponData.attackWith];
@@ -828,7 +830,7 @@ function rollSkillMacro(skillName, attributeName, isInteractionAttack) {
     }
   }
   // Trigger the skill roll
-  // The following is copied/pasted/adjusted from _onSkillRoll and _onInteractionAttack in torgeternityActorSheet
+  // The following is copied/pasted/adjusted from _onSkillRoll and _onInteractionAttack in TorgeternityActorSheet
   // This code needs to be centrally located!!!
   const test = {
     testType: isAttributeTest ? "attribute" : "skill",
@@ -934,6 +936,12 @@ Hooks.on("preCreateActor", (actor, data, options, userId) => {
   if (data.type === "stormknight" && !data.hasOwnProperty("prototypeToken")) {
     actor.updateSource({ "prototypeToken.actorLink": true });
   }
+  if (data.type === "vehicle" && actor.img.includes("mystery-man")) {
+    actor.updateSource({
+      "prototypeToken.texture.src": "systems/torgeternity/images/icons/vehicle-Token.webp",
+      img: "systems/torgeternity/images/icons/vehicle.webp",
+    });
+  }
 });
 
 // by default creating a  hand for each stormknight
@@ -973,58 +981,4 @@ Hooks.on("deleteActor", async (actor, data1, data2) => {
 Hooks.on("renderChatLog", (app, html, data) => {
   // ----chat messages listeners
   Chat.addChatListeners(html);
-});
-
-Hooks.on("applyActiveEffect", async (actor, change, current, delta, changes) => {
-  if (game.user.isGM) {
-    await actor.setFlag("torgeternity", "dexLimit", true); // an idea I keep there, useless
-    const custom = change.value.split(/\s+/); // should be strength, need other code and test with other attributes
-    const sourceObject = actor.items.find((it) => it.uuid === change.effect.origin);
-    const neoRequired = sourceObject.system?.minStrength || 0;
-    const neo =
-      Math.max(actor?.overrides?.system?.attributes?.[custom[0]] || 0, actor.system.attributes[custom[0]]) -
-      neoRequired;
-    if (neo < 0) {
-      if (!actor.effects.find((ef) => ef.name === "Malus")) {
-        const StrengthDebuff = {
-          name: "Malus",
-          icon: "icons/svg/door-locked-outline.svg",
-          tint: "#ff0000",
-          duration: { rounds: 100 },
-          origin: change.effect.origin,
-          changes: [
-            {
-              key: change.key,
-              mode: 2,
-              priority: change.priority + 90,
-              value: Math.min(neo, 0),
-            },
-          ],
-        };
-        await actor.createEmbeddedDocuments("ActiveEffect", [StrengthDebuff]);
-      }
-    }
-  }
-});
-
-Hooks.on("preCreateActiveEffect", async (effect, changes, data, id) => {
-  // if (game.user.isGM) {
-  const malus = effect.parent.effects.find((ef) => ef.name === "Malus");
-  if (malus) {
-    try {
-      malus.delete();
-      console.log("Effacé dans le preCreateActiveEffect");
-    } catch (e) {}
-  }
-  // }
-});
-
-Hooks.on("deleteActiveEffect", async (effect, changes, data, id) => {
-  if (game.user.isGM) {
-    const malus = effect.parent.effects.find((ef) => ef.name === "Malus");
-    try {
-      malus.delete();
-      console.log("Effacé dans le deleteActiveEffect");
-    } catch (e) {}
-  }
 });
