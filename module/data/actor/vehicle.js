@@ -1,5 +1,5 @@
 import { torgeternity } from "../../config.js";
-import { getTorgValue } from "../../utils.js";
+import { getTorgValue } from "../../torgchecks.js";
 
 const fields = foundry.data.fields;
 /**
@@ -18,37 +18,37 @@ export class VehicleData extends foundry.abstract.TypeDataModel {
           choices: Object.keys(torgeternity.sizes),
           required: true,
         }),
-        armor: new fields.NumberField({ initial: 0, integer: true, nullable: false }),
-        axioms: new fields.SchemaField({
-          magic: new fields.NumberField({ initial: 0, integer: true, nullable: false }),
-          social: new fields.NumberField({ initial: 0, integer: true, nullable: false }),
-          spirit: new fields.NumberField({ initial: 0, integer: true, nullable: false }),
-          tech: new fields.NumberField({ initial: 10, integer: true, nullable: false }),
+      }),
+      armor: new fields.NumberField({ initial: 0, integer: true, nullable: false }),
+      axioms: new fields.SchemaField({
+        magic: new fields.NumberField({ initial: 0, integer: true, nullable: false }),
+        social: new fields.NumberField({ initial: 0, integer: true, nullable: false }),
+        spirit: new fields.NumberField({ initial: 0, integer: true, nullable: false }),
+        tech: new fields.NumberField({ initial: 10, integer: true, nullable: false }),
+      }),
+      description: new fields.HTMLField({ initial: "", textSearch: true }),
+      maneuver: new fields.NumberField({ initial: -1, integer: true, nullable: false }),
+      operator: new fields.SchemaField({
+        name: new fields.StringField({ initial: "" }),
+        skillValue: new fields.StringField({ initial: "" }),
+      }),
+      passengers: new fields.NumberField({ initial: 0, integer: true, nullable: false }),
+      price: new fields.SchemaField({
+        dollars: new fields.NumberField({ initial: 100, integer: true, nullable: false }),
+        magnitude: new fields.StringField({
+          initial: "ones",
+          choices: Object.keys(torgeternity.magnitudes),
+          required: true,
         }),
-        description: new fields.HTMLField({ initial: "", textSearch: true }),
-        maneuver: new fields.NumberField({ initial: -1, integer: true, nullable: false }),
-        operator: new fields.SchemaField({
-          name: new fields.StringField({ initial: "" }),
-          skillValue: new fields.StringField({ initial: "" }),
-        }),
-        passengers: new fields.NumberField({ initial: 0, integer: true, nullable: false }),
-        price: new fields.SchemaField({
-          dollars: new fields.NumberField({ initial: 100, integer: true, nullable: false }),
-          magnitude: new fields.StringField({
-            initial: "ones",
-            choices: Object.keys(torgeternity.magnitutes),
-            required: true,
-          }),
-        }),
-        topSpeed: new fields.SchemaField({
-          kph: new fields.NumberField({ initial: 100, integer: true, nullable: false }),
-        }),
-        toughness: new fields.NumberField({ initial: 5, integer: true, nullable: false }),
-        type: new fields.StringField({ initial: "land" }),
-        wounds: new fields.SchemaField({
-          current: new fields.NumberField({ initial: 0, integer: true, nullable: false }),
-          max: new fields.NumberField({ initial: 3, integer: true, nullable: false }),
-        }),
+      }),
+      topSpeed: new fields.SchemaField({
+        kph: new fields.NumberField({ initial: 100, integer: true, nullable: false }),
+      }),
+      toughness: new fields.NumberField({ initial: 5, integer: true, nullable: false }),
+      type: new fields.StringField({ initial: "land" }),
+      wounds: new fields.SchemaField({
+        current: new fields.NumberField({ initial: 0, integer: true, nullable: false }),
+        max: new fields.NumberField({ initial: 3, integer: true, nullable: false }),
       }),
     };
   }
