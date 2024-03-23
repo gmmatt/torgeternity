@@ -17,8 +17,8 @@ export class ThreatData extends CommonActorData {
       details: new fields.SchemaField({
         description: new fields.HTMLField({ initial: "", textSearch: true }),
         sizeBonus: new fields.StringField({
-          initial: torgeternity.sizes.normal,
-          choices: Object.values(torgeternity.sizes),
+          initial: "normal",
+          choices: Object.keys(torgeternity.sizes),
           required: true,
         }),
       }),

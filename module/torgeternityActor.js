@@ -85,36 +85,39 @@ export default class torgeternityActor extends Actor {
     // Skillsets
     if (["threat", "stormknight"].includes(this.type)) {
       // Set base unarmedDamage from interaction
-      const unarmedDamageMod = this.system.unarmedDamageMod || 0;
-      this.system.unarmedDamage = this.attributes.strength + unarmedDamageMod;
+      const skills = this.system.skills;
+      const attributes = this.system.attributes;
 
-      // Set Defensive Values based on modified this.attributes
+      const unarmedDamageMod = this.system.unarmedDamageMod || 0;
+      this.system.unarmedDamage = attributes.strength + unarmedDamageMod;
+
+      // Set Defensive Values based on modified attributes
       const dodgeDefenseMod = this.system.dodgeDefenseMod || 0;
-      const dodgeDefenseSkill = this.skills.dodge.value || this.attributes.dexterity;
+      const dodgeDefenseSkill = skills.dodge.value || attributes.dexterity;
       this.system.dodgeDefense = dodgeDefenseSkill + dodgeDefenseMod;
 
       const meleeWeaponsDefenseMod = this.system.meleeWeaponsDefenseMod || 0;
-      const meleeWeaponsDefenseSkill = this.skills.meleeWeapons.value || this.attributes.dexterity;
+      const meleeWeaponsDefenseSkill = skills.meleeWeapons.value || attributes.dexterity;
       this.system.meleeWeaponsDefense = meleeWeaponsDefenseSkill + meleeWeaponsDefenseMod;
 
       const unarmedCombatDefenseMod = this.system.unarmedCombatDefenseMod || 0;
-      const unarmedCombatDefenseSkill = this.skills.unarmedCombat.value || this.attributes.dexterity;
+      const unarmedCombatDefenseSkill = skills.unarmedCombat.value || attributes.dexterity;
       this.system.unarmedCombatDefense = unarmedCombatDefenseSkill + unarmedCombatDefenseMod;
 
       const intimidationDefenseMod = this.system.intimidationDefenseMod || 0;
-      const intimidationDefenseSkill = this.skills.intimidation.value || this.attributes.spirit;
+      const intimidationDefenseSkill = skills.intimidation.value || attributes.spirit;
       this.system.intimidationDefense = intimidationDefenseSkill + intimidationDefenseMod;
 
       const maneuverDefenseMod = this.system.maneuverDefenseMod || 0;
-      const maneuverDefenseSkill = this.skills.maneuver.value || this.attributes.dexterity;
+      const maneuverDefenseSkill = skills.maneuver.value || attributes.dexterity;
       this.system.maneuverDefense = maneuverDefenseSkill + maneuverDefenseMod;
 
       const tauntDefenseMod = this.system.tauntDefenseMod || 0;
-      const tauntDefenseSkill = this.skills.taunt.value || this.attributes.charisma;
+      const tauntDefenseSkill = skills.taunt.value || attributes.charisma;
       this.system.tauntDefense = tauntDefenseSkill + tauntDefenseMod;
 
       const trickDefenseMod = this.system.trickDefenseMod || 0;
-      const trickDefenseSkill = this.skills.trick.value || this.attributes.mind;
+      const trickDefenseSkill = skills.trick.value || attributes.mind;
       this.system.trickDefense = trickDefenseSkill + trickDefenseMod;
 
       // Other derived attributes for Storm Knights

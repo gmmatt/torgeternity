@@ -21,8 +21,8 @@ export class CommonActorData extends foundry.abstract.TypeDataModel {
       }),
       other: new fields.SchemaField({
         cosm: new fields.StringField({
-          initial: torgeternity.cosmTypes.none,
-          choices: Object.values(torgeternity.cosmTypes),
+          initial: "none",
+          choices: Object.keys(torgeternity.cosmTypes),
           required: true,
         }),
         possibilities: new fields.NumberField({ initial: 3, integer: true, nullable: false }),

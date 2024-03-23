@@ -22,11 +22,11 @@ export class StormKnightData extends CommonActorData {
       details: new fields.SchemaField({
         background: new fields.HTMLField({ initial: "", textSearch: true }),
         race: new fields.StringField({
-          choices: Object.values(torgeternity.races),
+          choices: Object.keys(torgeternity.races),
         }),
         sizeBonus: new fields.StringField({
-          initial: torgeternity.sizes.normal,
-          choices: Object.values(torgeternity.sizes),
+          initial: "normal",
+          choices: Object.keys(torgeternity.sizes),
           required: true,
         }),
       }),
