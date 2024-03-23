@@ -231,9 +231,9 @@ export async function renderSkillChat(test) {
         // Find the fastest participant in the active combat
         const combatants = game.combats.active.turns;
         const combatantCount = game.combats.active.turns.length;
-        const combatantRun = 0;
-        const combatantSpeed = 0;
-        const highestSpeed = 0;
+        let combatantRun = 0;
+        let combatantSpeed = 0;
+        let highestSpeed = 0;
         for (let i = 0; i < combatantCount; i++) {
           if (combatants[i].actor.type === "vehicle") {
             combatantSpeed = combatants[i].actor.system.topSpeed.value;
