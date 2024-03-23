@@ -119,93 +119,6 @@ export default class torgeternityActor extends Actor {
       const trickDefenseMod = this.system.trickDefenseMod || 0;
       const trickDefenseSkill = skills.trick.value || attributes.mind;
       this.system.trickDefense = trickDefenseSkill + trickDefenseMod;
-
-      // Other derived attributes for Storm Knights
-
-      // Apply the moveMod effect
-      const listMove = [];
-      let computeMove = this.system.other.move;
-      this.appliedEffects.forEach((ef) =>
-        ef.changes.forEach((k) => {
-          if (k.key === "system.other.moveMod") {
-            listMove.push(k);
-          }
-        })
-      );
-      // Modify x
-      listMove
-        .filter((ef) => ef.mode === 1)
-        .forEach((ef) => {
-          computeMove = computeMove * parseInt(ef.value);
-        });
-      // Modify +/-
-      listMove
-        .filter((ef) => ef.mode === 2)
-        .forEach((ef) => {
-          computeMove += parseInt(ef.value);
-        });
-      // Modify minimum
-      listMove
-        .filter((ef) => ef.mode === 4)
-        .forEach((ef) => {
-          computeMove = Math.max(computeMove, parseInt(ef.value));
-        });
-      // Modify maximum
-      listMove
-        .filter((ef) => ef.mode === 3)
-        .forEach((ef) => {
-          computeMove = Math.min(computeMove, parseInt(ef.value));
-        });
-      // Modify Fixed
-      listMove
-        .filter((ef) => ef.mode === 5)
-        .forEach((ef) => {
-          computeMove = parseInt(ef.value);
-        });
-      this.system.other.move = computeMove;
-      //
-      // Apply the runMod effect
-      const listRun = [];
-      let computeRun = this.system.other.run;
-      this.appliedEffects.forEach((ef) =>
-        ef.changes.forEach((k) => {
-          if (k.key === "system.other.runMod") {
-            listRun.push(k);
-          }
-        })
-      );
-      // Modify x
-      listRun
-        .filter((ef) => ef.mode === 1)
-        .forEach((ef) => {
-          computeRun = computeRun * parseInt(ef.value);
-        });
-      // Modify +/-
-      listRun
-        .filter((ef) => ef.mode === 2)
-        .forEach((ef) => {
-          computeRun += parseInt(ef.value);
-        });
-      // Modify minimum
-      listRun
-        .filter((ef) => ef.mode === 4)
-        .forEach((ef) => {
-          computeRun = Math.max(computeRun, parseInt(ef.value));
-        });
-      // Modify maximum
-      listRun
-        .filter((ef) => ef.mode === 3)
-        .forEach((ef) => {
-          computeRun = Math.min(computeRun, parseInt(ef.value));
-        });
-      // Modify Fixed
-      listRun
-        .filter((ef) => ef.mode === 5)
-        .forEach((ef) => {
-          computeRun = parseInt(ef.value);
-        });
-      this.system.other.run = computeRun;
-      //
     }
     if (game.user.isGM) {
       const malus = this.effects.find((ef) => ef.name === "Malus");
@@ -255,16 +168,17 @@ export default class torgeternityActor extends Actor {
     return this.itemTypes.armor.find((a) => a.system.equipped) ?? null;
   }
 
-  // adding a method to get defauld stormknight cardhand
   /**
-   *
+   * @returns {object} the Hand of the actor
    */
   getDefaultHand() {
-    if (game.settings.get("torgeternity", "deckSetting").stormknights.hasOwnProperty(this.id)) {
-      return game.cards.get(game.settings.get("torgeternity", "deckSetting").stormknights[this.id]);
+    const setting = game.settings.get("torgeternity", "deckSetting");
+    const handId =
+      setting.stormknights[this.id] ?? game.cards.find((c) => c.data.flags?.torgeternity?.defaultHand === this.id)?.id;
+    if (handId) {
+      return game.cards.get(handId);
     } else {
-      console.error(`
-            no default hand for actor : ${this.name}`);
+      console.error(`no default hand for actor : ${this.name}`);
       return false;
     }
   }
@@ -278,6 +192,7 @@ export default class torgeternityActor extends Actor {
       name: this.name,
       type: "hand",
       ownership: this.getHandOwnership(),
+      flags: { torgeternity: { defaultHand: this.id } },
     };
     const characterHand = await Cards.create(cardData);
 
@@ -286,17 +201,19 @@ export default class torgeternityActor extends Actor {
     const handId = characterHand.id;
 
     // storing ids in game.settings
+    // deprecated, use the flag on the hand itself instead
+    // this can be removed in a future version
+    // reason: can be broken by race condition
     const settingData = game.settings.get("torgeternity", "deckSetting");
     settingData.stormknights[actorId] = handId;
-    game.settings.set("torgeternity", "deckSetting", settingData);
+    await game.settings.set("torgeternity", "deckSetting", settingData);
 
     // return the hand
     return characterHand;
   }
 
-  // return a permission update object for use with the corresponding hand - which has the same owners as the SK, the default as observer, and deletes other permissions
   /**
-   *
+   * @returns {object} permission update object for use with the corresponding hand - which has the same owners as the SK, the default as observer, and deletes other permissions
    */
   getHandOwnership() {
     const handOwnership = duplicate(this.ownership);

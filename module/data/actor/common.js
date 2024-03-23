@@ -28,6 +28,7 @@ export class CommonActorData extends foundry.abstract.TypeDataModel {
         possibilities: new fields.NumberField({ initial: 3, integer: true, nullable: false }),
       }),
       shock: new fields.SchemaField({
+        max: new fields.NumberField({ initial: 8, integer: true }),
         value: new fields.NumberField({ initial: 0, integer: true, nullable: false }),
       }),
       skills: new fields.SchemaField({

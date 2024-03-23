@@ -447,6 +447,7 @@ export default class torgeternityActorSheet extends ActorSheet {
       characterHand.sheet.render(true);
     } else {
       await this.object.createDefaultHand();
+      characterHand.sheet.render(true);
     }
   }
 

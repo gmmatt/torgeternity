@@ -37,6 +37,7 @@ import initTextEdidor from "./initTextEditor.js";
 import { TorgeternityMacros } from "./macros.js";
 import { ChatMessageTorg } from "./chat/document.js";
 import * as dataModels from "./data/actor/index.js";
+import TorgActiveEffect from "./documents/active-effect/torgActiveEffect.js";
 
 Hooks.once("init", async function () {
   console.log("torgeternity | Initializing Torg Eternity System");
@@ -55,6 +56,7 @@ Hooks.once("init", async function () {
   CONFIG.torgeternity = torgeternity;
   CONFIG.Item.documentClass = torgeternityItem;
   CONFIG.Actor.documentClass = torgeternityActor;
+  CONFIG.ActiveEffect.documentClass = TorgActiveEffect;
   CONFIG.Actor.dataModels = dataModels.config;
   CONFIG.statusEffects = torgeternity.statusEffects;
   CONFIG.attributeTypes = torgeternity.attributeTypes;
@@ -789,7 +791,7 @@ function rollSkillMacro(skillName, attributeName, isInteractionAttack) {
   const isAttributeTest = skillName === attributeName;
   let skill = null;
   if (!isAttributeTest) {
-    const skillNameKey = skillName;//.toLowerCase(); // skillName required to be internal value
+    const skillNameKey = skillName; // .toLowerCase(); // skillName required to be internal value
     // would be nice to use display value as an input instead but we can't translate from i18n to internal values
     skill = actor && Object.keys(actor.system.skills).includes(skillNameKey) ? actor.system.skills[skillNameKey] : null;
     if (!skill) return ui.notifications.warn(game.i18n.localize("torgeternity.notifications.noSkillNamed") + skillName);
