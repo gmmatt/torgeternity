@@ -1,7 +1,7 @@
 import * as torgchecks from "../torgchecks.js";
 import { onManageActiveEffect, prepareActiveEffectCategories } from "../effects.js";
 import { TestDialog } from "../test-dialog.js";
-import TorgeternityItem from "../torgeternityItem.js";
+import TorgeternityItem from "../documents/item/torgeternityItem.js";
 import { PossibilityByCosm } from "../possibilityByCosm.js";
 
 /**

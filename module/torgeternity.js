@@ -1,7 +1,7 @@
 "use strict";
 import { torgeternity } from "./config.js";
 import * as Chat from "./chat.js";
-import TorgeternityItem from "./torgeternityItem.js";
+import TorgeternityItem from "./documents/item/torgeternityItem.js";
 import TorgeternityActor from "./documents/actor/torgeternityActor.js";
 import TorgeternityItemSheet from "./sheets/torgeternityItemSheet.js";
 import TorgeternityActorSheet from "./sheets/torgeternityActorSheet.js";
