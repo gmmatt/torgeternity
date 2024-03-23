@@ -15,7 +15,7 @@
       "flags": {}
     }
   ],
-  "version": "3.6.1",
+  "version": "3.6.2",
   "compatibility": {
     "minimum": "11",
     "verified": "11.306"
@@ -379,5 +379,5 @@
   "secondaryTokenAttribute": "shock",
   "url": "https://github.com/gmmatt/torgeternity",
   "manifest": "https://github.com/gmmatt/torgeternity/releases/latest/download/system.json",
-  "download": "https://github.com/gmmatt/torgeternity/releases/download/3.6.1/torgeternity.zip"
+  "download": "https://github.com/gmmatt/torgeternity/releases/download/3.6.2/torgeternity.zip"
 }
