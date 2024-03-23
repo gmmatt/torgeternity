@@ -73,7 +73,8 @@ export default class torgeternityActor extends Actor {
       this.system.defense = parseInt(this.system.operator.skillValue + this.system.maneuver);
     }
     // initialize the worn armor bonus
-    this.system.other.armor = this.wornArmor?.system?.bonus || 0;
+    // this.system.other.armor = this.wornArmor?.system?.bonus ?? 0;
+    this.system.other.armor = 0;
   }
 
   /**
