@@ -48,6 +48,58 @@ torgeternity.cosmTypes = {
   orrorsh: "torgeternity.cosms.orrorsh",
   other: "torgeternity.cosms.other",
 };
+
+torgeternity.axiomByCosm = {
+  coreEarth: {
+    magic: 9,
+    social: 23,
+    spirit: 10,
+    tech: 23,
+  },
+  aysle: {
+    magic: 24,
+    social: 16,
+    spirit: 18,
+    tech: 14,
+  },
+  cyberpapacy: {
+    magic: 14,
+    social: 18,
+    spirit: 16,
+    tech: 26,
+  },
+  livingLand: {
+    magic: 1,
+    social: 7,
+    spirit: 24,
+    tech: 6,
+  },
+  nileEmpire: {
+    magic: 14,
+    social: 20,
+    spirit: 18,
+    tech: 20,
+  },
+  orrorsh: {
+    magic: 16,
+    social: 18,
+    spirit: 16,
+    tech: 18,
+  },
+  panPacifica: {
+    magic: 4,
+    social: 24,
+    spirit: 8,
+    tech: 24,
+  },
+  tharkold: {
+    magic: 12,
+    social: 25,
+    spirit: 4,
+    tech: 25,
+  },
+};
+
 torgeternity.actionLawCosms = {
   nileEmpire: "torgeternity.cosms.nileEmpire",
   other: "torgeternity.cosms.other",

@@ -37,5 +37,8 @@ export class ThreatData extends CommonActorData {
    */
   prepareDerivedData() {
     super.prepareDerivedData();
+    for (const skill of Object.values(this.skills)) {
+      skill.isThreatSkill = skill.isThreatSkill || !!skill.adds;
+    }
   }
 }

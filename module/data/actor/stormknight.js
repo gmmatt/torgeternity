@@ -42,6 +42,12 @@ export class StormKnightData extends CommonActorData {
    */
   prepareBaseData() {
     super.prepareBaseData();
+
+    // Set axioms based on home reality
+    this.axioms.magic = torgeternity.axiomByCosm[this.other.cosm]?.magic || this.axioms.magic;
+    this.axioms.social = torgeternity.axiomByCosm[this.other.cosm]?.social || this.axioms.social;
+    this.axioms.spirit = torgeternity.axiomByCosm[this.other.cosm]?.spirit || this.axioms.spirit;
+    this.axioms.tech = torgeternity.axiomByCosm[this.other.cosm]?.tech || this.axioms.tech;
   }
 
   /**
@@ -62,5 +68,6 @@ export class StormKnightData extends CommonActorData {
     } else {
       this.details.clearance = "omega";
     }
+    this.other.toughness = this.attributes.strength + this.other.armor;
   }
 }

@@ -5,11 +5,19 @@ import { getTorgValue } from "./torgchecks.js";
  */
 export default class torgeternityActor extends Actor {
   /**
-   *
+   * @inheritdoc
    */
   prepareBaseData() {
     // Here Effects are not yet applied
-    // Set Values for All Characters
+    // Set armor and shield toggle states
+    if (this.type === "stormknight") {
+      for (const item of this.itemTypes.armor) {
+        item.system.equippedClass = item.system.equipped ? "item-equipped" : "item-unequipped";
+      }
+      for (const item of this.itemTypes.shield) {
+        item.system.equippedClass = item.system.equipped ? "item-equipped" : "item-unequipped";
+      }
+    }
 
     if ((this._source.type === "stormknight") | (this._source.type === "threat")) {
       if (this.system.other.possibilities === false) {
@@ -21,110 +29,6 @@ export default class torgeternityActor extends Actor {
             "prototypeToken.texture.src": "systems/torgeternity/images/icons/threat-token.webp",
             img: "systems/torgeternity/images/icons/threat.webp",
           });
-        }
-      }
-    }
-
-    // Other derived attributes for Storm Knights
-    if (this._source.type === "stormknight") {
-      mergeObject(
-        this.prototypeToken,
-        {
-          actorLink: true,
-          disposition: 1,
-        },
-        { overwrite: true }
-      );
-
-      // Set base wounds to 3
-      this.system.wounds.max = 3;
-      // Set base shock to Spirit
-      this.system.shock.max = this.system.attributes.spirit;
-      // Set base armor to zero
-      this.system.other.armor = 0;
-      // Set base toughness
-      this.system.other.toughness = parseInt(this.system.attributes.strength) + parseInt(this.system.other.armor);
-
-      // Set axioms based on home reality
-      const magicAxiom = this.system.axioms.magic;
-      const socialAxiom = this.system.axioms.social;
-      const spiritAxiom = this.system.axioms.spirit;
-      const techAxiom = this.system.axioms.tech;
-      switch (this.system.other.cosm) {
-        case "coreEarth":
-          this.system.axioms.magic = 9;
-          this.system.axioms.social = 23;
-          this.system.axioms.spirit = 10;
-          this.system.axioms.tech = 23;
-          break;
-        case "aysle":
-          this.system.axioms.magic = 24;
-          this.system.axioms.social = 16;
-          this.system.axioms.spirit = 18;
-          this.system.axioms.tech = 14;
-          break;
-        case "cyberpapacy":
-          this.system.axioms.magic = 14;
-          this.system.axioms.social = 18;
-          this.system.axioms.spirit = 16;
-          this.system.axioms.tech = 26;
-          break;
-        case "livingLand":
-          this.system.axioms.magic = 1;
-          this.system.axioms.social = 7;
-          this.system.axioms.spirit = 24;
-          this.system.axioms.tech = 6;
-          break;
-        case "nileEmpire":
-          this.system.axioms.magic = 14;
-          this.system.axioms.social = 20;
-          this.system.axioms.spirit = 18;
-          this.system.axioms.tech = 20;
-          break;
-        case "orrorsh":
-          this.system.axioms.magic = 16;
-          this.system.axioms.social = 18;
-          this.system.axioms.spirit = 16;
-          this.system.axioms.tech = 18;
-          break;
-        case "panPacifica":
-          this.system.axioms.magic = 4;
-          this.system.axioms.social = 24;
-          this.system.axioms.spirit = 8;
-          this.system.axioms.tech = 24;
-          break;
-        case "tharkold":
-          this.system.axioms.magic = 12;
-          this.system.axioms.social = 25;
-          this.system.axioms.spirit = 4;
-          this.system.axioms.tech = 25;
-          break;
-        case "other":
-        default:
-          this.system.axioms.magic = magicAxiom;
-          this.system.axioms.social = socialAxiom;
-          this.system.axioms.spirit = spiritAxiom;
-          this.system.axioms.tech = techAxiom;
-          break;
-      }
-
-      // Set armor and shield toggle states
-      let i;
-      for (i = 0; i < this.items.length; i++) {
-        const item = this.items[i];
-        if (item.type === "shield") {
-          if (item.system.equipped === true) {
-            this.items[i].system.equippedClass = "item-equipped";
-          } else {
-            this.items[i].system.equippedClass = "item-unequipped";
-          }
-        }
-        if (item.type === "armor") {
-          if (item.system.equipped === true) {
-            this.items[i].system.equippedClass = "item-equipped";
-          } else {
-            this.items[i].system.equippedClass = "item-unequipped";
-          }
         }
       }
     }
@@ -168,110 +72,89 @@ export default class torgeternityActor extends Actor {
 
       this.system.defense = parseInt(this.system.operator.skillValue + this.system.maneuver);
     }
+    // initialize the worn armor bonus
+    this.system.other.armor = this.wornArmor?.system?.bonus || 0;
   }
 
   /**
-   *
+   * @inheritdoc
    */
   prepareDerivedData() {
     // Here Effects are applied, whatever follow cannot be directly affected by Effects
 
     // Skillsets
-    const skillset = this.system.skills;
-
-    if (this.type === "threat") {
-      for (const skill of Object.values(skillset)) {
-        skill.isThreatSkill = skill.isThreatSkill || !!skill.adds;
-      }
-    }
-    if ((this._source.type === "stormknight") | (this._source.type === "threat")) {
+    if (["threat", "stormknight"].includes(this.type)) {
       // Set base unarmedDamage from interaction
-      this.system.unarmedDamage = this.system.attributes.strength + (this.system?.unarmedDamageMod | 0);
+      const unarmedDamageMod = this.system.unarmedDamageMod || 0;
+      this.system.unarmedDamage = this.attributes.strength + unarmedDamageMod;
 
-      // Set Defensive Values based on modified attributes
-      if (skillset.dodge.value) {
-        this.system.dodgeDefense = this.system.skills.dodge.value + (this.system?.dodgeDefenseMod | 0);
-      } else {
-        this.system.dodgeDefense = this.system.attributes.dexterity + (this.system?.dodgeDefenseMod | 0);
-      }
+      // Set Defensive Values based on modified this.attributes
+      const dodgeDefenseMod = this.system.dodgeDefenseMod || 0;
+      const dodgeDefenseSkill = this.skills.dodge.value || this.attributes.dexterity;
+      this.system.dodgeDefense = dodgeDefenseSkill + dodgeDefenseMod;
 
-      if (skillset.meleeWeapons.value) {
-        this.system.meleeWeaponsDefense =
-          this.system.skills.meleeWeapons.value + (this.system?.meleeWeaponsDefenseMod | 0);
-      } else {
-        this.system.meleeWeaponsDefense = this.system.attributes.dexterity + (this.system?.meleeWeaponsDefenseMod | 0);
-      }
+      const meleeWeaponsDefenseMod = this.system.meleeWeaponsDefenseMod || 0;
+      const meleeWeaponsDefenseSkill = this.skills.meleeWeapons.value || this.attributes.dexterity;
+      this.system.meleeWeaponsDefense = meleeWeaponsDefenseSkill + meleeWeaponsDefenseMod;
 
-      if (skillset.unarmedCombat.value) {
-        this.system.unarmedCombatDefense =
-          this.system.skills.unarmedCombat.value + (this.system?.unarmedCombatDefenseMod | 0);
-      } else {
-        this.system.unarmedCombatDefense =
-          this.system.attributes.dexterity + (this.system?.unarmedCombatDefenseMod | 0);
-      }
+      const unarmedCombatDefenseMod = this.system.unarmedCombatDefenseMod || 0;
+      const unarmedCombatDefenseSkill = this.skills.unarmedCombat.value || this.attributes.dexterity;
+      this.system.unarmedCombatDefense = unarmedCombatDefenseSkill + unarmedCombatDefenseMod;
 
-      if (skillset.intimidation.value) {
-        this.system.intimidationDefense =
-          this.system.skills.intimidation.value + (this.system?.intimidationDefenseMod | 0);
-      } else {
-        this.system.intimidationDefense = this.system.attributes.spirit + (this.system?.intimidationDefenseMod | 0);
-      }
+      const intimidationDefenseMod = this.system.intimidationDefenseMod || 0;
+      const intimidationDefenseSkill = this.skills.intimidation.value || this.attributes.spirit;
+      this.system.intimidationDefense = intimidationDefenseSkill + intimidationDefenseMod;
 
-      if (skillset.maneuver.value) {
-        this.system.maneuverDefense = this.system.skills.maneuver.value + (this.system?.maneuverDefenseMod | 0);
-      } else {
-        this.system.maneuverDefense = this.system.attributes.dexterity + (this.system?.maneuverDefenseMod | 0);
-      }
+      const maneuverDefenseMod = this.system.maneuverDefenseMod || 0;
+      const maneuverDefenseSkill = this.skills.maneuver.value || this.attributes.dexterity;
+      this.system.maneuverDefense = maneuverDefenseSkill + maneuverDefenseMod;
 
-      if (skillset.taunt.value) {
-        this.system.tauntDefense = this.system.skills.taunt.value + (this.system?.tauntDefenseMod | 0);
-      } else {
-        this.system.tauntDefense = this.system.attributes.charisma + (this.system?.tauntDefenseMod | 0);
-      }
+      const tauntDefenseMod = this.system.tauntDefenseMod || 0;
+      const tauntDefenseSkill = this.skills.taunt.value || this.attributes.charisma;
+      this.system.tauntDefense = tauntDefenseSkill + tauntDefenseMod;
 
-      if (skillset.trick.value) {
-        this.system.trickDefense = this.system.skills.trick.value + (this.system?.trickDefenseMod | 0);
-      } else {
-        this.system.trickDefense = this.system.attributes.mind + (this.system?.trickDefenseMod | 0);
-      }
-    }
+      const trickDefenseMod = this.system.trickDefenseMod || 0;
+      const trickDefenseSkill = this.skills.trick.value || this.attributes.mind;
+      this.system.trickDefense = trickDefenseSkill + trickDefenseMod;
 
-    // Other derived attributes for Storm Knights
-    if ((this._source.type === "stormknight") | (this._source.type === "threat")) {
+      // Other derived attributes for Storm Knights
+
       // Apply the moveMod effect
-      const listChanges = [];
+      const listMove = [];
       let computeMove = this.system.other.move;
       this.appliedEffects.forEach((ef) =>
         ef.changes.forEach((k) => {
-          if (k.key === "system.other.moveMod") listChanges.push(k);
+          if (k.key === "system.other.moveMod") {
+            listMove.push(k);
+          }
         })
       );
       // Modify x
-      listChanges
+      listMove
         .filter((ef) => ef.mode === 1)
         .forEach((ef) => {
           computeMove = computeMove * parseInt(ef.value);
         });
       // Modify +/-
-      listChanges
+      listMove
         .filter((ef) => ef.mode === 2)
         .forEach((ef) => {
           computeMove += parseInt(ef.value);
         });
       // Modify minimum
-      listChanges
+      listMove
         .filter((ef) => ef.mode === 4)
         .forEach((ef) => {
           computeMove = Math.max(computeMove, parseInt(ef.value));
         });
       // Modify maximum
-      listChanges
+      listMove
         .filter((ef) => ef.mode === 3)
         .forEach((ef) => {
           computeMove = Math.min(computeMove, parseInt(ef.value));
         });
       // Modify Fixed
-      listChanges
+      listMove
         .filter((ef) => ef.mode === 5)
         .forEach((ef) => {
           computeMove = parseInt(ef.value);
@@ -283,7 +166,9 @@ export default class torgeternityActor extends Actor {
       let computeRun = this.system.other.run;
       this.appliedEffects.forEach((ef) =>
         ef.changes.forEach((k) => {
-          if (k.key === "system.other.runMod") listRun.push(k);
+          if (k.key === "system.other.runMod") {
+            listRun.push(k);
+          }
         })
       );
       // Modify x
@@ -356,6 +241,15 @@ export default class torgeternityActor extends Actor {
     } else if (effects.contents.find((ef) => ef.name === game.i18n.localize(`torgeternity.statusEffects.dim`))) {
       this.system.darknessModifier = -2;
     } else this.system.darknessModifier = 0;
+  }
+
+  /**
+   * simple getter for the equipped armor item
+   *
+   * @returns {Item|null}
+   */
+  get wornArmor() {
+    return this.itemTypes.armor.find((a) => a.equipped) ?? null;
   }
 
   // adding a method to get defauld stormknight cardhand
