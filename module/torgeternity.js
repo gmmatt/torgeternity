@@ -932,7 +932,6 @@ Hooks.on("updateActor", (actor, change, options, userId) => {
 // link StormKnight Prototype Token to the actor
 Hooks.on("preCreateActor", (actor, data, options, userId) => {
   if (data.type === "stormknight" && !data.hasOwnProperty("prototypeToken")) {
-    console.log(data);
     actor.updateSource({ "prototypeToken.actorLink": true });
   }
 });
@@ -981,9 +980,10 @@ Hooks.on("applyActiveEffect", async (actor, change, current, delta, changes) => 
     await actor.setFlag("torgeternity", "dexLimit", true); // an idea I keep there, useless
     const custom = change.value.split(/\s+/); // should be strength, need other code and test with other attributes
     const sourceObject = actor.items.find((it) => it.uuid === change.effect.origin);
-    const neoRequired = sourceObject.system?.minStrength | 0;
+    const neoRequired = sourceObject.system?.minStrength || 0;
     const neo =
-      Math.max(actor?.overrides?.system?.attributes?.[custom[0]] | 0, actor.system.attributes[custom[0]]) - neoRequired;
+      Math.max(actor?.overrides?.system?.attributes?.[custom[0]] || 0, actor.system.attributes[custom[0]]) -
+      neoRequired;
     if (neo < 0) {
       if (!actor.effects.find((ef) => ef.name === "Malus")) {
         const StrengthDebuff = {
