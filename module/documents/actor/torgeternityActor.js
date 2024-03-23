@@ -18,7 +18,8 @@ export default class TorgeternityActor extends Actor {
     }
     if (["threat", "stormknight"].includes(this.type)) {
       // initialize the worn armor bonus
-      this.system.other.armor = this.wornArmor?.system?.bonus ?? 0;
+      // this.system.other.armor = this.wornArmor?.system?.bonus ?? 0;
+      this.system.other.armor = 0;
     }
   }
 
