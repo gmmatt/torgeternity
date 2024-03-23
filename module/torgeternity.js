@@ -36,6 +36,8 @@ import { torgMigration } from "./migrations.js";
 import initTextEdidor from "./initTextEditor.js";
 import { TorgeternityMacros } from "./macros.js";
 import { ChatMessageTorg } from "./chat/document.js";
+import * as dataModels from "./data/actor/index.js";
+import TorgActiveEffect from "./documents/active-effect/torgActiveEffect.js";
 
 Hooks.once("init", async function () {
   console.log("torgeternity | Initializing Torg Eternity System");
@@ -54,6 +56,8 @@ Hooks.once("init", async function () {
   CONFIG.torgeternity = torgeternity;
   CONFIG.Item.documentClass = torgeternityItem;
   CONFIG.Actor.documentClass = torgeternityActor;
+  CONFIG.ActiveEffect.documentClass = TorgActiveEffect;
+  CONFIG.Actor.dataModels = dataModels.config;
   CONFIG.statusEffects = torgeternity.statusEffects;
   CONFIG.attributeTypes = torgeternity.attributeTypes;
 
@@ -787,7 +791,7 @@ function rollSkillMacro(skillName, attributeName, isInteractionAttack) {
   const isAttributeTest = skillName === attributeName;
   let skill = null;
   if (!isAttributeTest) {
-    const skillNameKey = skillName;//.toLowerCase(); // skillName required to be internal value
+    const skillNameKey = skillName; // .toLowerCase(); // skillName required to be internal value
     // would be nice to use display value as an input instead but we can't translate from i18n to internal values
     skill = actor && Object.keys(actor.system.skills).includes(skillNameKey) ? actor.system.skills[skillNameKey] : null;
     if (!skill) return ui.notifications.warn(game.i18n.localize("torgeternity.notifications.noSkillNamed") + skillName);
@@ -925,6 +929,13 @@ Hooks.on("updateActor", (actor, change, options, userId) => {
   }
 });
 
+// link StormKnight Prototype Token to the actor
+Hooks.on("preCreateActor", (actor, data, options, userId) => {
+  if (data.type === "stormknight" && !data.hasOwnProperty("prototypeToken")) {
+    actor.updateSource({ "prototypeToken.actorLink": true });
+  }
+});
+
 // by default creating a  hand for each stormknight
 Hooks.on("createActor", async (actor, options, userId) => {
   // run by first active GM. Will be skipped if no GM is present, but that's the best we can do at the moment
@@ -969,9 +980,10 @@ Hooks.on("applyActiveEffect", async (actor, change, current, delta, changes) => 
     await actor.setFlag("torgeternity", "dexLimit", true); // an idea I keep there, useless
     const custom = change.value.split(/\s+/); // should be strength, need other code and test with other attributes
     const sourceObject = actor.items.find((it) => it.uuid === change.effect.origin);
-    const neoRequired = sourceObject.system?.minStrength | 0;
+    const neoRequired = sourceObject.system?.minStrength || 0;
     const neo =
-      Math.max(actor?.overrides?.system?.attributes?.[custom[0]] | 0, actor.system.attributes[custom[0]]) - neoRequired;
+      Math.max(actor?.overrides?.system?.attributes?.[custom[0]] || 0, actor.system.attributes[custom[0]]) -
+      neoRequired;
     if (neo < 0) {
       if (!actor.effects.find((ef) => ef.name === "Malus")) {
         const StrengthDebuff = {
