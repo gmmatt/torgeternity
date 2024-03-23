@@ -48,14 +48,10 @@ export class StormKnightData extends CommonActorData {
     this.axioms.social = torgeternity.axiomByCosm[this.other.cosm]?.social || this.axioms.social;
     this.axioms.spirit = torgeternity.axiomByCosm[this.other.cosm]?.spirit || this.axioms.spirit;
     this.axioms.tech = torgeternity.axiomByCosm[this.other.cosm]?.tech || this.axioms.tech;
-  }
 
-  /**
-   * Prepare derived data for Storm Knights
-   */
-  prepareDerivedData() {
-    super.prepareDerivedData();
+    // Set starting fatigue
     this.fatigue = 2;
+
     // Set clearance level
     if (this.xp.earned < 50) {
       this.details.clearance = "alpha";
@@ -68,6 +64,13 @@ export class StormKnightData extends CommonActorData {
     } else {
       this.details.clearance = "omega";
     }
+  }
+
+  /**
+   * Prepare derived data for Storm Knights
+   */
+  prepareDerivedData() {
+    super.prepareDerivedData();
     this.other.toughness = this.attributes.strength + this.other.armor;
   }
 }

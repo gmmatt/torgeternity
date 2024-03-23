@@ -252,7 +252,7 @@ export default class torgeternityActor extends Actor {
    * @returns {Item|null}
    */
   get wornArmor() {
-    return this.itemTypes.armor.find((a) => a.equipped) ?? null;
+    return this.itemTypes.armor.find((a) => a.system.equipped) ?? null;
   }
 
   // adding a method to get defauld stormknight cardhand
