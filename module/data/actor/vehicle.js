@@ -74,6 +74,7 @@ export class VehicleData extends foundry.abstract.TypeDataModel {
       case "thousands":
         convertedPrice = this.price.dollars * 1000;
       case "ones":
+      default:
         convertedPrice = this.price.dollars;
         break;
     }
