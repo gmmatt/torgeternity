@@ -12,7 +12,6 @@ export async function torgMigration() {
       await migrateImagestoWebp({ system: false, modules: true });
       ui.notifications.info("Premium Content Image Migration Complete");
     }
-    return;
   }
 
   // check for new worlds, which don't need migrating, and set their migration version accordingly
@@ -94,6 +93,51 @@ export async function torgMigration() {
         ui.notifications.info(act.name + "heavy : migrated");
       }
     });
+  }
+
+  // migrations for 3.7.0
+  if (isNewerVersion("3.7.0", migrationVersion)) {
+    ui.notifications.info("Migrating to 3.7.0");
+    console.log("Migrating to 3.7.0");
+    const badArmorKeys = ["system.other.armor", "system.other.toughness", "system.other.fatigue", "system.fatigue"];
+    for (const actor of game.actors) {
+      for (const item of actor.items) {
+        if (item.type === "armor") {
+          await item.update({ "data.groupName": "combat" });
+        }
+      }
+      const itemUuids = actor.items.map((item) => item.uuid);
+      const armorUuids = actor.itemTypes.armor.map((item) => item.uuid);
+      let sendMessage = false;
+      const armorsToUpdate = [];
+      for (const effect of actor.effects) {
+        if (!itemUuids.includes(effect.origin) && effect.origin.includes("Item")) {
+          await effect.update({ origin: `Actor.${actor.id}.Item.${effect.origin.split(".").at(-1)}` });
+        }
+        if (!itemUuids.includes(effect.origin) && effect.origin.includes("Item")) {
+          effect.update({ disabled: true });
+          sendMessage = true;
+        }
+        if (armorUuids.includes(effect.origin) && !armorsToUpdate.includes(effect.origin)) {
+          armorsToUpdate.push(effect.origin);
+        }
+      }
+      if (sendMessage) {
+        ui.notifications.info("Disabled effects on " + actor.name + " due to missing origin item");
+      }
+      for (const armorUuid of armorsToUpdate) {
+        const armor = fromUuidSync(armorUuid);
+        const armorData = armor.toObject();
+        armor.delete();
+        armorData.effects = armorData.effects
+          .map((effect) => {
+            effect.changes = effect.changes.filter((c) => !badArmorKeys.includes(c.key));
+            return effect;
+          })
+          .filter((effect) => effect.changes.length > 0);
+        await actor.createEmbeddedDocuments("Item", [armorData]);
+      }
+    }
   }
 
   /**
