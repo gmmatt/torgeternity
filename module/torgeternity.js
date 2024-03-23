@@ -2,7 +2,7 @@
 import { torgeternity } from "./config.js";
 import * as Chat from "./chat.js";
 import torgeternityItem from "./torgeternityItem.js";
-import TorgeternityActor from "./torgeternityActor.js";
+import TorgeternityActor from "./documents/actor/torgeternityActor.js";
 import torgeternityItemSheet from "./sheets/torgeternityItemSheet.js";
 import TorgeternityActorSheet from "./sheets/torgeternityActorSheet.js";
 import { sheetResize } from "./sheetResize.js";
