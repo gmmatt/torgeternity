@@ -86,7 +86,7 @@ export class TestDialog extends FormApplication {
       } else {
         data.test.speedModifier = 6;
       }
-      // maneuverModifier already set in torgeternityActorSheet
+      // maneuverModifier already set in TorgeternityActorSheet
     } else if (this.test.testType === "stunt" || this.test.testType === "vehicleBase") {
       // Do Nothing - this leaves maneuverModifier in place
     } else {

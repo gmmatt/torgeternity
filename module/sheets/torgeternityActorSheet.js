@@ -7,7 +7,7 @@ import { PossibilityByCosm } from "../possibilityByCosm.js";
 /**
  *
  */
-export default class torgeternityActorSheet extends ActorSheet {
+export default class TorgeternityActorSheet extends ActorSheet {
   /**
    *
    * @param {...any} args

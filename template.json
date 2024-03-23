@@ -1,38 +1,6 @@
 {
   "Actor": {
-    "types": ["stormknight", "threat", "vehicle"],
-    "vehicle": {
-      "details": {
-        "sizeBonus": "normal"
-      },
-      "armor": 0,
-      "axioms": {
-        "magic": 0,
-        "social": 0,
-        "spirit": 0,
-        "tech": 10
-      },
-      "description": "",
-      "maneuver": -1,
-      "operator": {
-        "name": "",
-        "skillValue": ""
-      },
-      "passengers": 1,
-      "price": {
-        "dollars": 100,
-        "magnitude": "-"
-      },
-      "topSpeed": {
-        "kph": 100
-      },
-      "toughness": 5,
-      "type": "land",
-      "wounds": {
-        "current": 0,
-        "max": 3
-      }
-    }
+    "types": ["stormknight", "threat", "vehicle"]
   },
   "Card": {
     "cosm": {

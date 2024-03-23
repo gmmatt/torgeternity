@@ -2,9 +2,9 @@
 import { torgeternity } from "./config.js";
 import * as Chat from "./chat.js";
 import torgeternityItem from "./torgeternityItem.js";
-import torgeternityActor from "./torgeternityActor.js";
+import TorgeternityActor from "./torgeternityActor.js";
 import torgeternityItemSheet from "./sheets/torgeternityItemSheet.js";
-import torgeternityActorSheet from "./sheets/torgeternityActorSheet.js";
+import TorgeternityActorSheet from "./sheets/torgeternityActorSheet.js";
 import { sheetResize } from "./sheetResize.js";
 import { preloadTemplates } from "./preloadTemplates.js";
 import torgeternityCombat from "./dramaticScene/torgeternityCombat.js";
@@ -55,7 +55,7 @@ Hooks.once("init", async function () {
   initTextEdidor();
   CONFIG.torgeternity = torgeternity;
   CONFIG.Item.documentClass = torgeternityItem;
-  CONFIG.Actor.documentClass = torgeternityActor;
+  CONFIG.Actor.documentClass = TorgeternityActor;
   CONFIG.ActiveEffect.documentClass = TorgActiveEffect;
   CONFIG.Actor.dataModels = dataModels.config;
   CONFIG.statusEffects = torgeternity.statusEffects;
@@ -123,7 +123,7 @@ Hooks.once("init", async function () {
   });
 
   Actors.unregisterSheet("core", ItemSheet);
-  Actors.registerSheet("torgeternity", torgeternityActorSheet, {
+  Actors.registerSheet("torgeternity", TorgeternityActorSheet, {
     makeDefault: true,
   });
 
@@ -568,7 +568,7 @@ function rollItemMacro(itemName) {
     case "heavyweapon":
     case "specialability-rollable":
       {
-        // The following is copied/pasted/adjusted from _onAttackRoll in torgeternityActorSheet
+        // The following is copied/pasted/adjusted from _onAttackRoll in TorgeternityActorSheet
         const weaponData = item.system;
         const attackWith = weaponData.attackWith;
         const skillData = actor.system.skills[weaponData.attackWith];
@@ -828,7 +828,7 @@ function rollSkillMacro(skillName, attributeName, isInteractionAttack) {
     }
   }
   // Trigger the skill roll
-  // The following is copied/pasted/adjusted from _onSkillRoll and _onInteractionAttack in torgeternityActorSheet
+  // The following is copied/pasted/adjusted from _onSkillRoll and _onInteractionAttack in TorgeternityActorSheet
   // This code needs to be centrally located!!!
   const test = {
     testType: isAttributeTest ? "attribute" : "skill",
@@ -933,6 +933,12 @@ Hooks.on("updateActor", (actor, change, options, userId) => {
 Hooks.on("preCreateActor", (actor, data, options, userId) => {
   if (data.type === "stormknight" && !data.hasOwnProperty("prototypeToken")) {
     actor.updateSource({ "prototypeToken.actorLink": true });
+  }
+  if (data.type === "vehicle" && actor.img.includes("mystery-man")) {
+    actor.updateSource({
+      "prototypeToken.texture.src": "systems/torgeternity/images/icons/vehicle-Token.webp",
+      img: "systems/torgeternity/images/icons/vehicle.webp",
+    });
   }
 });
 
