@@ -1,10 +1,14 @@
 {
   "CARD": {
     "discard": "Discard",
-    "display": "Show this card to players",
-    "TypeCosm": "Cosm",
-    "TypeDestiny": "Destiny",
-    "TypeDrama": "Drama"
+    "display": "Show this card to players"
+  },
+  "TYPES": {
+    "Card": {
+      "destiny": "Destiny",
+      "drama": "Drama",
+      "cosm": "Cosm"
+    }
   },
   "torgeternity": {
     "attackTypes": {
@@ -914,14 +918,14 @@
       "fatigueMacroDealtDamage": "Dealt damage to the following characters:",
       "fatigueMacroCharKO": " is therefore K.O.!",
       "fatigueMacroCharAlreadyKO": " is already K.O.! There is no more shock to add.",
-      "reviveMacroChatHeadline": "Shock recovery!",      
+      "reviveMacroChatHeadline": "Shock recovery!",
       "reviveMacroWindowLabel1": "How much shock should be recovered?",
       "reviveMacroError1": "There was no input in the amount-field and also the checkbox wasn't checked. What should I do? Aborting.",
       "reviveMacroFirst": "The following characters are revived from shock: ",
       "reviveMacroAlreadyFull": " is already recovered and has no shock.",
       "reviveMacroCharRevived": " is fully revived.",
       "reviveMacroCharPartyRevived": " was healed by the following amount: ",
-      "reviveMacroCharDeKOed": "Liftet K.O. status from ", 
+      "reviveMacroCharDeKOed": "Liftet K.O. status from ",
       "reviveMacroWholeRevive": "Revive all shock?",
       "clearStatusEffectsHeadline": "Lifting status effects from the following characters:",
       "clearStatusEffectsNothingFound": "No status effects found for marked characters.",

@@ -18,8 +18,7 @@ export default class TorgeternityActor extends Actor {
     }
     if (["threat", "stormknight"].includes(this.type)) {
       // initialize the worn armor bonus
-      // this.system.other.armor = this.wornArmor?.system?.bonus ?? 0;
-      this.system.other.armor = 0;
+      this.system.other.armor = this.wornArmor?.system?.bonus ?? 0;
     }
   }
 
@@ -66,14 +65,6 @@ export default class TorgeternityActor extends Actor {
       const trickDefenseMod = this.system.trickDefenseMod || 0;
       const trickDefenseSkill = skills.trick.value || attributes.mind;
       this.system.trickDefense = trickDefenseSkill + trickDefenseMod;
-    }
-    if (game.user.isGM) {
-      const malus = this.effects.find((ef) => ef.name === "Malus");
-      if (malus?.disabled) {
-        try {
-          malus.delete();
-        } catch (e) {}
-      }
     }
   }
 

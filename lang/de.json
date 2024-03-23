@@ -1,10 +1,7 @@
 {
   "CARD": {
     "discard": "Wegwerfen",
-    "display": "Zeige diese Karte den anderen Spielern",
-    "TypeCosm": "Cosm",
-    "TypeDestiny": "Schicksal",
-    "TypeDrama": "Drama"
+    "display": "Zeige diese Karte den anderen Spielern"
   },
   "torgeternity": {
     "attackTypes": {
@@ -382,7 +379,7 @@
       "onlyReservedCard": "Bitte nur Karten aus dem Aktionenpool spielen.",
       "openDiscord": "Dein Browser wird einen neuen Tab öffnen, der dich zum Discord-Server weiterleitet.",
       "openIssue": "Dein Browser wird einen neuen Tab öffnen, um diese Aufgabe durchzuführen.",
-      "openUlisses": "Dein Browser wird einen neuen Tab öffnen und dich auf die Ulisses-Webseite weiterleiten."      
+      "openUlisses": "Dein Browser wird einen neuen Tab öffnen und dich auf die Ulisses-Webseite weiterleiten."
     },
     "packs": {
       "basicRules": "torgeternity.system-de-basisregeln",
@@ -547,8 +544,8 @@
       "welcome": {
         "hint": "Wenn ausgewählt, erscheint beim Laden die Willkommensnachricht",
         "name": "Willkommensnachricht anzeigen"
-      }      
-    },    
+      }
+    },
     "sheetLabels": {
       "abilities": "Fähigkeiten",
       "actions": "Aktionen",
@@ -917,11 +914,11 @@
       "reviveMacroWindowLabel1": "Wie viel Schock soll zurückgewonnen werden?",
       "reviveMacroError1": "In das Feld für die Menge wurde nichts eingegeben und auch das Kontrollkästchen war nicht aktiviert. Was soll ich tun? Abbruch.",
       "fatigueMacroCharAlreadyKO": " ist bereits K.O.! Mehr Schock geht nicht.",
-      "reviveMacroFirst": "Die folgenden Charaktere erholen sich vom Schock: ",      
+      "reviveMacroFirst": "Die folgenden Charaktere erholen sich vom Schock: ",
       "reviveMacroAlreadyFull": " ist bereits wohlauf und hat keinen Schock!",
       "reviveMacroCharRevived": " ist vollständig wiederhergestellt.",
       "reviveMacroCharPartyRevived": " wurde um die folgende Menge geheilt: ",
-      "reviveMacroCharDeKOed": "Der K.O. Status wurde aufgehoben für ", 
+      "reviveMacroCharDeKOed": "Der K.O. Status wurde aufgehoben für ",
       "reviveMacroWholeRevive": "Allen Schock erholen?",
       "clearStatusEffectsHeadline": "Für folgende Charaktere wurden Stati aufgehoben:",
       "clearStatusEffectsNothingFound": "Es wurden keine Stati für die markierten Token gefunden.",
@@ -941,6 +938,13 @@
       "reconnectMacroZoneModifierNotDetectedTitle": "Kein Zonenmodifikator",
       "reconnectMacroZoneModifierNotDetected": "Ein Zonenmodifikator konnte nicht festgestellt werden, da die aktive Szene keine Zonen konfiguriert hat. Ändere den Modifikator im Ergebnis.",
       "reconnectMacroStatusLiftet": "Entkoppelt-Status nach einer erfolgreichen Realitätsprobe aufgehoben."
+    }
+  },
+  "TYPES": {
+    "Card": {
+      "destiny": "Schicksal",
+      "drama": "Drama",
+      "cosm": "Cosm"
     }
   }
 }
