@@ -929,6 +929,14 @@ Hooks.on("updateActor", (actor, change, options, userId) => {
   }
 });
 
+// link StormKnight Prototype Token to the actor
+Hooks.on("preCreateActor", (actor, data, options, userId) => {
+  if (data.type === "stormknight" && !data.hasOwnProperty("prototypeToken")) {
+    console.log(data);
+    actor.updateSource({ "prototypeToken.actorLink": true });
+  }
+});
+
 // by default creating a  hand for each stormknight
 Hooks.on("createActor", async (actor, options, userId) => {
   // run by first active GM. Will be skipped if no GM is present, but that's the best we can do at the moment
