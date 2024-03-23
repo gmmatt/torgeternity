@@ -114,7 +114,7 @@ export async function torgMigration() {
         if (!itemUuids.includes(effect.origin) && effect.origin.includes("Item")) {
           await effect.update({ origin: `Actor.${actor.id}.Item.${effect.origin.split(".").at(-1)}` });
         }
-        if (!itemUuids.includes(effect.origin) && effect.origin.includes("Item")) {
+        if (!itemUuids.includes(effect.origin) && effect.origin.includes("Item") && !effect.disabled) {
           effect.update({ disabled: true });
           sendMessage = true;
         }
