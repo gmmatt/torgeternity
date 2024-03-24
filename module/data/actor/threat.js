@@ -24,9 +24,22 @@ export class ThreatData extends CommonActorData {
       }),
     };
   }
+
+  /**
+   *
+   * @param {object} data the data object to migrate
+   * @returns {object} the migrated data object
+   */
+  static migrateData(data) {
+    super.migrateData(data);
+    this.details.sizeBonus = Object.keys(torgeternity.sizes).includes(this.details.sizeBonus)
+      ? this.details.sizeBonus
+      : "normal";
+    return data;
+  }
+
   /**
    * Prepare base data for Threats
-   
    */
   prepareBaseData() {
     super.prepareBaseData();
