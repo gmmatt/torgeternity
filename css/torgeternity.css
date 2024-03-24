@@ -3979,6 +3979,13 @@ form.actor-sheet img.profile-img {
   aspect-ratio: 1/1;
 }
 
+@-moz-document url-prefix() { 
+  form.actor-sheet img.profile-img {
+  height: 120px;
+  width: 120px;
+  }
+}
+
 form.actor-sheet .vehicle-header-image img {
   max-height: 120px;
   max-width: 120px;
