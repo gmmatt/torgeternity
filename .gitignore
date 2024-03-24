@@ -11,4 +11,4 @@ npm-debug.log*
 .vscode-test
 
 # packs files
-# ./packs/
+./packs/
