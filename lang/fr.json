@@ -491,6 +491,7 @@
       "HeaderDetailsHint": "Configure les détails de base de la scène et les permissions qui contrôlent sa visibilité.",
       "HeaderGridHint": "Configure les dimensions de la grille utilisée pour mesurer le mouvement des tokens de la scène.",
       "HeaderVisionHint": "Configure les paramètres de vision, d'éclairage et de brouillard de guerre de la scène.",
+      "main": "Scène standard",
       "reality": "Réalité",
       "realityHint": "Configure la réalité de la zone de la scène."
     },
