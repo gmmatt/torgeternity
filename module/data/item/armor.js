@@ -16,6 +16,7 @@ export class ArmorItemData extends GeneralItemData {
       maxDex: new fields.NumberField({ initial: 12, integer: true }),
       minStrength: new fields.NumberField({ initial: 0, integer: true }),
       notes: new fields.StringField({ initial: "" }),
+      fatigue: new fields.NumberField({ initial: 0, integer: true }),
     };
   }
 

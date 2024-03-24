@@ -63,9 +63,6 @@ export class StormKnightData extends CommonActorData {
     this.axioms.spirit = torgeternity.axiomByCosm[this.other.cosm]?.spirit || this.axioms.spirit;
     this.axioms.tech = torgeternity.axiomByCosm[this.other.cosm]?.tech || this.axioms.tech;
 
-    // Set starting fatigue
-    this.fatigue = 2;
-
     // Set clearance level
     if (this.xp.earned < 50) {
       this.details.clearance = "alpha";
