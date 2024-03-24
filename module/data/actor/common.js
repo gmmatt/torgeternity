@@ -82,6 +82,17 @@ export class CommonActorData extends foundry.abstract.TypeDataModel {
   }
 
   /**
+   *
+   * @param {object} data the data object to migrate
+   * @returns {object} the migrated data object
+   */
+  static migrateData(data) {
+    super.migrateData(data);
+    this.other.cosm = Object.keys(torgeternity.cosmTypes).includes(this.other.cosm) ? this.other.cosm : "none";
+    return data;
+  }
+
+  /**
    * Prepare base data for Storm Knights and Threats
    */
   prepareBaseData() {
