@@ -32,8 +32,8 @@ export class ThreatData extends CommonActorData {
    */
   static migrateData(data) {
     super.migrateData(data);
-    this.details.sizeBonus = Object.keys(torgeternity.sizes).includes(this.details.sizeBonus)
-      ? this.details.sizeBonus
+    data.details.sizeBonus = Object.keys(torgeternity.sizes).includes(data.details.sizeBonus)
+      ? data.details.sizeBonus
       : "normal";
     return data;
   }
