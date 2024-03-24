@@ -54,6 +54,22 @@ export class VehicleData extends foundry.abstract.TypeDataModel {
   }
 
   /**
+   *
+   * @param {object} data the data object to migrate
+   * @returns {object} the migrated data object
+   */
+  static migrateData(data) {
+    super.migrateData(data);
+    this.price.magnitude = Object.keys(torgeternity.magnitudes).includes(this.price.magnitude)
+      ? this.price.magnitude
+      : "other";
+    this.details.sizeBonus = Object.keys(torgeternity.sizes).includes(this.details.sizeBonus)
+      ? this.details.sizeBonus
+      : "normal";
+    return data;
+  }
+
+  /**
    * Prepare base data for Storm Knights and Threats
    */
   prepareBaseData() {
