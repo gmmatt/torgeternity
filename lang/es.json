@@ -1,10 +1,14 @@
 {
   "CARD": {
     "discard": "Descarte",
-    "display": "Mostrar carta jugadores",
-    "TypeCosm": "Cosmos",
-    "TypeDestiny": "Destino",
-    "TypeDrama": "Drama"
+    "display": "Mostrar carta jugadores"
+  },
+  "TYPES": {
+    "Card": {
+      "destiny": "Destino",
+      "drama": "Drama",
+      "cosm": "Cosmos"
+    }
   },
   "torgeternity": {
     "attackTypes": {
@@ -917,11 +921,11 @@
       "reviveMacroWindowLabel1": "c¿Cuánto choque debe recuperarse?",
       "reviveMacroError1": "No se ha introducido nada en el campo de la cantidad y la casilla de verificación no está marcada. ¿Qué debo hacer? Cancelar.",
       "fatigueMacroCharAlreadyKO": " ¡ya está noqueado! Más choque no es posible.",
-      "reviveMacroFirst": "Los siguientes personajes se recuperan del shock: ",      
+      "reviveMacroFirst": "Los siguientes personajes se recuperan del shock: ",
       "reviveMacroAlreadyFull": " ¡ya está bien y no tiene sobresaltos!",
       "reviveMacroCharRevived": " está totalmente restablecido.",
       "reviveMacroCharPartyRevived": " se curó en la siguiente cantidad: ",
-      "reviveMacroCharDeKOed": "Se ha anulado el estatuto de nocaut para ", 
+      "reviveMacroCharDeKOed": "Se ha anulado el estatuto de nocaut para ",
       "reviveMacroWholeRevive": "¿Recuperarse de la conmoción?",
       "clearStatusEffectsHeadline": "Se han cancelado los estatus de los siguientes personajes:",
       "clearStatusEffectsNothingFound": "No se han encontrado estados para las fichas seleccionadas.",

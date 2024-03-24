@@ -1020,7 +1020,7 @@ export async function renderSkillChat(test) {
 
 /**
  *
- * @param {TorgEternityActor} actor
+ * @param {TorgeternityActor} actor
  * @returns
  */
 

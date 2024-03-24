@@ -2,7 +2,7 @@
  *
  */
 export function sheetResize() {
-  Hooks.on("rendertorgeternityActorSheet", async function (app, html, data) {
+  Hooks.on("renderTorgeternityActorSheet", async function (app, html, data) {
     if (app.object.type === "stormknight") {
       const sheet = document.getElementById(app.id);
       const ro = new ResizeObserver((entries) => {

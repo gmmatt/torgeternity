@@ -1,15 +1,15 @@
-import { ChatMessageTorg } from "./chat/document.js";
+import { ChatMessageTorg } from "../../chat/document.js";
 
 /**
  *
  */
-export default class torgeternityItem extends Item {
+export default class TorgeternityItem extends Item {
   static equipProp = "system.equipped";
   static equipClassProp = "system.equippedClass";
   static cssEquipped = "item-equipped";
   static cssUnequipped = "item-unequipped";
 
-  chatTemplate = {
+  static CHAT_TEMPLATE = {
     perk: "systems/torgeternity/templates/partials/perk-card.hbs",
     attack: "systems/torgeternity/templates/partials/attack-card.hbs",
     bonus: "systems/torgeternity/templates/partials/bonus-card.hbs",
@@ -37,7 +37,7 @@ export default class torgeternityItem extends Item {
    */
   prepareBaseData() {
     // Handle perk-related data
-    if (this._source.type === "perk") {
+    if (this.type === "perk") {
       this.system.navStyle = "right:-210px;top:210px";
       this.system.extendedNav = true;
     } else {
@@ -45,6 +45,26 @@ export default class torgeternityItem extends Item {
       this.system.extendedNav = false;
     }
   }
+
+  static DEFAULT_ICONS = {
+    gear: "gear-icon.webp",
+    eternityshard: "eternityshard.webp",
+    armor: "armor-icon.webp",
+    shield: "shield.webp",
+    meleeweapon: "meleeweapon.webp",
+    missileweapon: "missileweapon.webp",
+    firearm: "firearm.webp",
+    implant: "implant.webp",
+    heavyweapon: "heavyweapon.webp",
+    vehicle: "vehicle.webp",
+    perk: "perk.webp",
+    enhancement: "enhancement.webp",
+    specialability: "specialability.webp",
+    "specialability-rollable": "specialability-rollable.webp",
+    spell: "spell.webp",
+    miracle: "miracle.webp",
+    psionicpower: "psionicpower.webp",
+  };
 
   /**
    *
@@ -55,79 +75,24 @@ export default class torgeternityItem extends Item {
   _onCreate(data, options, userId) {
     super._onCreate(data, options, userId);
     if (this.img === "icons/svg/item-bag.svg") {
-      let image;
-      switch (data.type) {
-        case "gear":
-          image = "gear-icon.webp";
-          break;
-        case "eternityshard":
-          image = "eternityshard.webp";
-          break;
-        case "armor":
-          image = "armor-icon.webp";
-          break;
-        case "shield":
-          image = "shield.webp";
-          break;
-        case "meleeweapon":
-          image = "meleeweapon.webp";
-          break;
-        case "missileweapon":
-          image = "missileweapon.webp";
-          break;
-        case "firearm":
-          image = "firearm.webp";
-          break;
-        case "implant":
-          image = "implant.webp";
-          break;
-        case "heavyweapon":
-          image = "heavyweapon.webp";
-          break;
-        case "vehicle":
-          image = "vehicle.webp";
-          break;
-        case "perk":
-          image = "perk.webp";
-          break;
-        case "enhancement":
-          image = "enhancement.webp";
-          break;
-        case "specialability":
-          image = "specialability.webp";
-          break;
-        case "specialability-rollable":
-          image = "specialability-rollable.webp";
-          break;
-        case "spell":
-          image = "spell.webp";
-          break;
-        case "miracle":
-          image = "miracle.webp";
-          break;
-        case "psionicpower":
-          image = "psionicpower.webp";
-          break;
-        case "customSkill":
-        case "vehicleAddon":
-        case "customAttack":
-        default:
+      const image = TorgeternityItem.DEFAULT_ICONS[data.type] ?? null;
+      if (image) {
+        this.updateSource({ img: "systems/torgeternity/images/icons/" + image });
       }
-      if (image) this.update({ img: "systems/torgeternity/images/icons/" + image });
     }
-    
+
     if (this.parent !== null && this.system.hasOwnProperty("equipped")) {
       // set the item to be equipped and un-equip other items of the same type
       this.update({
-        [torgeternityItem.equipProp]: true,
-        [torgeternityItem.equipClassProp]: torgeternityItem.cssEquipped,
+        [TorgeternityItem.equipProp]: true,
+        [TorgeternityItem.equipClassProp]: TorgeternityItem.cssEquipped,
       });
 
       const actor = this.parent;
       const item = this;
       actor.items.forEach(function (otherItem, key) {
         if (otherItem._id !== item._id && otherItem.system.equipped && otherItem.type === item.type) {
-          torgeternityItem.toggleEquipState(otherItem, actor);
+          TorgeternityItem.toggleEquipState(otherItem, actor);
         }
       });
     }
@@ -137,15 +102,16 @@ export default class torgeternityItem extends Item {
    *
    * @param item
    * @param actor
+   * @returns {boolean}
    */
   static toggleEquipState(item, actor) {
-    const equipped = !getProperty(item, torgeternityItem.equipProp);
-    const equipClass = equipped ? torgeternityItem.cssEquipped : torgeternityItem.cssUnequipped;
+    const equipped = !getProperty(item, TorgeternityItem.equipProp);
+    const equipClass = equipped ? TorgeternityItem.cssEquipped : TorgeternityItem.cssUnequipped;
 
     // flip the flag/CSS class
     item.update({
-      [torgeternityItem.equipProp]: equipped,
-      [torgeternityItem.equipClassProp]: equipClass,
+      [TorgeternityItem.equipProp]: equipped,
+      [TorgeternityItem.equipClassProp]: equipClass,
     });
     // enable/disable effects
     const sourceOrigin = "Item." + item._id;
@@ -174,7 +140,7 @@ export default class torgeternityItem extends Item {
       speaker: ChatMessage.getSpeaker(),
       flags: {
         data: cardData,
-        template: this.chatTemplate[this.type],
+        template: TorgeternityItem.CHAT_TEMPLATE[this.type],
       },
     };
 
@@ -235,7 +201,7 @@ export default class torgeternityItem extends Item {
       speaker: ChatMessage.getSpeaker(),
       flags: {
         data: cardData,
-        template: this.chatTemplate["attack"],
+        template: TorgeternityItem.CHAT_TEMPLATE["attack"],
       },
     };
 
@@ -311,7 +277,7 @@ export default class torgeternityItem extends Item {
       speaker: ChatMessage.getSpeaker(),
       flags: {
         data: cardData,
-        template: this.chatTemplate["power"],
+        template: TorgeternityItem.CHAT_TEMPLATE["power"],
       },
     };
 
