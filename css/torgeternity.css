@@ -3371,12 +3371,24 @@ form.actor-sheet.threat .tab[data-tab].active .editor {
   grid-template-rows: repeat(3, 1fr);
   margin: 15px;
   color: black;
+  column-gap: 0.5em;
 }
 
 .item .window-content form.item-sheet .asside {
   grid-row: 1/4;
   grid-column: 1/2;
-  text-align: center;
+  text-align: center;   
+}
+
+.item .window-content form.item-sheet .asside.armor {
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  grid-template-columns: repeat(2,minmax(10px,1fr));  
+}
+
+.item .window-content form.item-sheet .asside.armor > * {
+  margin:unset;
 }
 
 .item .window-content form.item-sheet .asside input[type="number"] {
@@ -3388,6 +3400,7 @@ form.actor-sheet.threat .tab[data-tab].active .editor {
   background: url(../images/roundBack.webp);
   background-size: cover;
   color: black;
+  grid-column: 2/3;
 }
 
 .item .window-content form.item-sheet .asside input[name="data.price"],
@@ -3408,8 +3421,8 @@ form.actor-sheet.threat .tab[data-tab].active .editor {
 }
 
 .item .window-content form.item-sheet .editor {
-  width: 400px;
-  height: 400px;
+  /*width: 400px;*/
+  min-height: 400px;
   background: url(../images/bckg-hex.webp);
   background-size: 110% 110%;
   padding: 20px;
