@@ -41,169 +41,133 @@
       "name": "archetypes",
       "label": "Archetypes (en)",
       "system": "torgeternity",
-      "path": "packs/archetypes",
-      "type": "Actor",
       "ownership": {
         "PLAYER": "OBSERVER",
         "ASSISTANT": "OWNER"
       },
-      "flags": {}
+      "path": "packs/archetypes",
+      "type": "Actor"
     },
     {
       "name": "basic-rules",
       "label": "Basic Rules (en)",
       "system": "torgeternity",
-      "path": "packs/basic-rules",
-      "type": "JournalEntry",
       "ownership": {
         "PLAYER": "OBSERVER",
         "ASSISTANT": "OWNER"
       },
-      "flags": {}
+      "path": "packs/basic-rules",
+      "type": "JournalEntry"
     },
     {
       "name": "handouts",
       "label": "Handouts (en)",
       "system": "torgeternity",
-      "path": "packs/handouts",
-      "type": "JournalEntry",
       "ownership": {
         "PLAYER": "OBSERVER",
         "ASSISTANT": "OWNER"
       },
-      "flags": {}
+      "path": "packs/handouts",
+      "type": "JournalEntry"
     },
     {
       "name": "core-card-set",
       "label": "Core Card Set (en)",
       "system": "torgeternity",
-      "path": "packs/core-card-set",
-      "type": "Cards",
       "ownership": {
         "PLAYER": "OBSERVER",
         "ASSISTANT": "OWNER"
       },
-      "flags": {}
+      "path": "packs/core-card-set",
+      "type": "Cards"
     },
     {
       "name": "core-scenes",
       "label": "Main Scene (en)",
       "system": "torgeternity",
-      "path": "packs/standardscene",
-      "type": "Scene",
       "ownership": {
         "PLAYER": "OBSERVER",
         "ASSISTANT": "OWNER"
       },
-      "flags": {}
-    },
-    {
-      "name": "core-scenes-fr",
-      "label": "Scène standard (fr)",
-      "system": "torgeternity",
-      "path": "packs/french/standardscene",
-      "type": "Scene",
-      "ownership": {
-        "PLAYER": "OBSERVER",
-        "ASSISTANT": "OWNER"
-      },
-      "flags": {}
+      "path": "packs/core-scenes",
+      "type": "Scene"
     },
     {
       "name": "archetypes-fr",
       "label": "Archetypes (fr)",
       "system": "torgeternity",
-      "path": "packs/french/archetypes",
-      "type": "Actor",
       "ownership": {
         "PLAYER": "OBSERVER",
         "ASSISTANT": "OWNER"
       },
-      "flags": {}
+      "path": "packs/archetypes-fr",
+      "type": "Actor"
     },
     {
       "name": "basic-rules-fr",
       "label": "regles basiques (fr)",
       "system": "torgeternity",
-      "path": "packs/french/basic-rules",
-      "type": "JournalEntry",
       "ownership": {
         "PLAYER": "OBSERVER",
         "ASSISTANT": "OWNER"
       },
-      "flags": {}
+      "path": "packs/basic-rules-fr",
+      "type": "JournalEntry"
     },
     {
       "name": "core-card-set-fr",
       "label": "paquets de cartes de base (fr)",
       "system": "torgeternity",
-      "path": "packs/french/core-card-set",
-      "type": "Cards",
       "ownership": {
         "PLAYER": "OBSERVER",
         "ASSISTANT": "OWNER"
       },
-      "flags": {}
+      "path": "packs/core-card-set-fr",
+      "type": "Cards"
     },
     {
       "name": "system-de-archetypen",
       "label": "Archetypen (de)",
-      "path": "packs/deutsch/archetypen",
+      "path": "packs/system-de-archetypen",
       "system": "torgeternity",
-      "type": "Actor",
       "ownership": {
         "PLAYER": "OBSERVER",
         "ASSISTANT": "OWNER"
       },
-      "flags": {}
+      "type": "Actor"
     },
     {
       "name": "system-de-basisregeln",
       "label": "Basisregeln (de)",
-      "path": "packs/deutsch/basisregeln",
+      "path": "packs/system-de-basisregeln",
       "system": "torgeternity",
-      "type": "JournalEntry",
       "ownership": {
         "PLAYER": "OBSERVER",
         "ASSISTANT": "OWNER"
       },
-      "flags": {}
+      "type": "JournalEntry"
     },
     {
       "name": "system-de-handouts",
       "label": "Handouts (de)",
       "system": "torgeternity",
-      "path": "packs/deutsch/handouts-de",
-      "type": "JournalEntry",
       "ownership": {
         "PLAYER": "OBSERVER",
         "ASSISTANT": "OWNER"
       },
-      "flags": {}
-    },
-    {
-      "name": "core-de-scenes",
-      "label": "Standardszene (de)",
-      "system": "torgeternity",
-      "path": "packs/deutsch/standardszene",
-      "type": "Scene",
-      "ownership": {
-        "PLAYER": "OBSERVER",
-        "ASSISTANT": "OWNER"
-      },
-      "flags": {}
+      "path": "packs/system-de-handouts",
+      "type": "JournalEntry"
     },
     {
       "name": "system-de-grundkarten",
       "label": "Dramadeck (de)",
-      "path": "packs/deutsch/core-card-set-de",
+      "path": "packs/system-de-grundkarten",
       "system": "torgeternity",
-      "type": "Cards",
       "ownership": {
         "PLAYER": "OBSERVER",
         "ASSISTANT": "OWNER"
       },
-      "flags": {}
+      "type": "Cards"
     }
   ],
   "packFolders": [
