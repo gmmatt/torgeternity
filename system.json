@@ -32,7 +32,7 @@
       "path": "packs/macros",
       "type": "Macro",
       "ownership": {
-        "PLAYER": "NONE",
+        "PLAYER": "OBSERVER",
         "ASSISTANT": "OWNER"
       },
       "flags": {}
@@ -87,7 +87,7 @@
     },
     {
       "name": "core-scenes",
-      "label": "Main Scene (en)",
+      "label": "Main Scene",
       "system": "torgeternity",
       "ownership": {
         "PLAYER": "OBSERVER",
@@ -193,14 +193,19 @@
           "sorting": "m",
           "color": "#960000",
           "folders": [],
-          "packs": ["basic-rules", "handouts", "core-card-set", "archetypes", "core-scenes"]
+          "packs": ["basic-rules", "handouts", "core-card-set", "archetypes"]
         },
         {
           "name": "Deutsch",
           "sorting": "m",
           "color": "#960000",
           "folders": [],
-          "packs": ["system-de-archetypen", "system-de-basisregeln", "system-de-handouts", "system-de-grundkarten"]
+          "packs": [
+            "system-de-archetypen",
+            "system-de-basisregeln",
+            "system-de-handouts",
+            "system-de-grundkarten"
+          ]
         },
         {
           "name": "Français",
@@ -210,7 +215,7 @@
           "packs": ["basic-rules-fr", "core-card-set-fr", "archetypes-fr"]
         }
       ],
-      "packs": ["macros"]
+      "packs": ["macros", "core-scenes"]
     }
   ],
   "languages": [
