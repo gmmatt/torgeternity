@@ -88,7 +88,7 @@ export class CommonActorData extends foundry.abstract.TypeDataModel {
    */
   static migrateData(data) {
     super.migrateData(data);
-    this.other.cosm = Object.keys(torgeternity.cosmTypes).includes(this.other.cosm) ? this.other.cosm : "none";
+    data.other.cosm = Object.keys(torgeternity.cosmTypes).includes(data.other.cosm) ? data.other.cosm : "none";
     return data;
   }
 
