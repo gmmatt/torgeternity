@@ -1,0 +1,24 @@
+name: Le Chat à dent de sabre
+content: >-
+  <p>La Chasseuse primitive a un "animal de compagnie" qui agit à son tour. Le
+  joueur contrôle également le chat et suit ses Chocs et ses Blessures
+  séparément. Le chat n'a pas de Possibilités propres, mais le joueur peut
+  dépenser les Possibilités de la chasseuse primitive pour les tests de la
+  créature ou pour absorber les dégâts qui lui sont infligés.</p>
+
+  <p class="MsoNormal">Votre compagnon Chat à dents de sabre n’a pas la taille
+  d’un véritable tigre mais ses griffes sont mortelles. Utilisez sa Manoeuvre
+  pour préparer vos propres attaques. Prudence avec votre compagnon ; s’il est
+  tué, il peut se passer beaucoup de temps avant qu’un autre ne le remplace.</p>
+folder: null
+sort: 0
+permission:
+  default: 0
+  TK1vCAdCz548vBDu: 3
+flags:
+  core:
+    sourceId: JournalEntry.INZvazTjjcVtGd1J
+_id: HP7p3x89Zom9eG2P
+pages: []
+_key: '!journal!HP7p3x89Zom9eG2P'
+

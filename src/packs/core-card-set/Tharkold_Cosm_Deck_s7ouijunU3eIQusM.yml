@@ -1,0 +1,285 @@
+_id: s7ouijunU3eIQusM
+name: Tharkold Cosm Deck
+type: deck
+description: ''
+img: systems/torgeternity/images/cards/tharkold-back.webp
+cards:
+  - _id: H0UvlUC5sTFWHPa5
+    name: Looks Like Trouble
+    description: ''
+    type: cosm
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Looks Like Trouble
+        text: ''
+        img: systems/torgeternity/images/cards/cosm/tharkold/01.webp
+    face: 0
+    drawn: false
+    origin: yj8Z27rRt1qaLRoe
+    rotation: 0
+    sort: 0
+    flags: {}
+    system: {}
+    value: null
+    width: null
+    height: null
+    _key: '!cards.cards!s7ouijunU3eIQusM.H0UvlUC5sTFWHPa5'
+    cards: []
+  - _id: 4RkvymhU1vAOJ1CU
+    name: Supremacy
+    description: ''
+    type: cosm
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Supremacy
+        text: ''
+        img: systems/torgeternity/images/cards/cosm/tharkold/02.webp
+    face: 0
+    drawn: false
+    origin: yj8Z27rRt1qaLRoe
+    rotation: 0
+    sort: 1
+    flags: {}
+    system: {}
+    value: null
+    width: null
+    height: null
+    _key: '!cards.cards!s7ouijunU3eIQusM.4RkvymhU1vAOJ1CU'
+    cards: []
+  - _id: hkGQF5lgahMjZyW6
+    name: Scourge
+    description: ''
+    type: cosm
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Scourge
+        text: ''
+        img: systems/torgeternity/images/cards/cosm/tharkold/03.webp
+    face: 0
+    drawn: false
+    origin: yj8Z27rRt1qaLRoe
+    rotation: 0
+    sort: 2
+    flags: {}
+    value: null
+    system: {}
+    width: null
+    height: null
+    _key: '!cards.cards!s7ouijunU3eIQusM.hkGQF5lgahMjZyW6'
+    cards: []
+  - _id: KiPfLNmTgNl7Zb7P
+    name: Irradiated
+    description: ''
+    type: cosm
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Irradiated
+        text: ''
+        img: systems/torgeternity/images/cards/cosm/tharkold/04.webp
+    face: 0
+    drawn: false
+    origin: yj8Z27rRt1qaLRoe
+    rotation: 0
+    sort: 3
+    flags: {}
+    system: {}
+    value: null
+    width: null
+    height: null
+    _key: '!cards.cards!s7ouijunU3eIQusM.KiPfLNmTgNl7Zb7P'
+    cards: []
+  - _id: lekILbu1vkEnbm0C
+    name: Cyberpsychosis
+    description: ''
+    type: cosm
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Cyberpsychosis
+        text: ''
+        img: systems/torgeternity/images/cards/cosm/tharkold/05.webp
+    face: 0
+    drawn: false
+    origin: yj8Z27rRt1qaLRoe
+    rotation: 0
+    sort: 4
+    flags: {}
+    system: {}
+    value: null
+    width: null
+    height: null
+    _key: '!cards.cards!s7ouijunU3eIQusM.lekILbu1vkEnbm0C'
+    cards: []
+  - _id: nBFDBM3kNgV4EULh
+    name: Kneel!
+    description: ''
+    type: cosm
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Kneel!
+        text: ''
+        img: systems/torgeternity/images/cards/cosm/tharkold/06.webp
+    face: 0
+    drawn: false
+    origin: yj8Z27rRt1qaLRoe
+    rotation: 0
+    sort: 5
+    flags: {}
+    system: {}
+    value: null
+    width: null
+    height: null
+    _key: '!cards.cards!s7ouijunU3eIQusM.nBFDBM3kNgV4EULh'
+    cards: []
+  - _id: uG7ATjBRsZA14yLw
+    name: You Work for Me Now
+    description: ''
+    type: cosm
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: You Work for Me Now
+        text: ''
+        img: systems/torgeternity/images/cards/cosm/tharkold/07.webp
+    face: 0
+    drawn: false
+    origin: yj8Z27rRt1qaLRoe
+    rotation: 0
+    sort: 6
+    flags: {}
+    system: {}
+    value: null
+    width: null
+    height: null
+    _key: '!cards.cards!s7ouijunU3eIQusM.uG7ATjBRsZA14yLw'
+    cards: []
+  - _id: jTZwNoZKPahQt5Pr
+    name: Enraged
+    description: ''
+    type: cosm
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Enraged
+        text: ''
+        img: systems/torgeternity/images/cards/cosm/tharkold/08.webp
+    face: 0
+    drawn: false
+    origin: yj8Z27rRt1qaLRoe
+    rotation: 0
+    sort: 7
+    flags: {}
+    value: null
+    system: {}
+    width: null
+    height: null
+    _key: '!cards.cards!s7ouijunU3eIQusM.jTZwNoZKPahQt5Pr'
+    cards: []
+  - _id: xrMohqkI615rzZDr
+    name: Salvage!
+    description: ''
+    type: cosm
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Salvage!
+        text: ''
+        img: systems/torgeternity/images/cards/cosm/tharkold/09.webp
+    face: 0
+    drawn: false
+    origin: yj8Z27rRt1qaLRoe
+    rotation: 0
+    sort: 8
+    flags: {}
+    system: {}
+    value: null
+    width: null
+    height: null
+    _key: '!cards.cards!s7ouijunU3eIQusM.xrMohqkI615rzZDr'
+    cards: []
+  - _id: ZdCnkDBb6M0UY7zz
+    name: Torturous Visions
+    description: ''
+    type: cosm
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Torturous Visions
+        text: ''
+        img: systems/torgeternity/images/cards/cosm/tharkold/10.webp
+    face: 0
+    drawn: false
+    origin: yj8Z27rRt1qaLRoe
+    rotation: 0
+    sort: 9
+    flags: {}
+    system: {}
+    value: null
+    width: null
+    height: null
+    _key: '!cards.cards!s7ouijunU3eIQusM.ZdCnkDBb6M0UY7zz'
+    cards: []
+rotation: 0
+displayCount: false
+folder: null
+sort: 0
+flags:
+  exportSource:
+    world: torgv2p2
+    system: torgeternity
+    coreVersion: '9.235'
+    systemVersion: 2.0.5
+  core:
+    sourceId: Cards.4b8BekWDWpSWF961
+  torgeternity:
+    usage: tharkold
+system: {}
+ownership:
+  default: 0
+  juTas93IuPVP8p5D: 3
+width: null
+height: null
+_stats:
+  systemId: null
+  systemVersion: null
+  coreVersion: null
+  createdTime: null
+  modifiedTime: null
+  lastModifiedBy: null
+_key: '!cards!s7ouijunU3eIQusM'
+

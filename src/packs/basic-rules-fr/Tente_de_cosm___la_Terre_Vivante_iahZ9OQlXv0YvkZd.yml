@@ -1,0 +1,14 @@
+_id: iahZ9OQlXv0YvkZd
+name: 'Tente de cosm : la Terre Vivante'
+content: ''
+img: systems/torgeternity/images/cosm-cards/fr/livingLand.webp
+folder: null
+sort: 0
+permission:
+  kz1RJu8vrAPmTUwN: 3
+flags:
+  core:
+    sourceId: JournalEntry.kbcDGBaYUu20FWSK
+pages: []
+_key: '!journal!iahZ9OQlXv0YvkZd'
+

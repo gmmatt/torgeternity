@@ -1,0 +1,946 @@
+_id: 9SgkBX6SsRmbY75i
+name: Drama Deck
+type: deck
+description: ''
+img: systems/torgeternity/images/cards/drama-back.webp
+data: {}
+cards:
+  - _id: sAbNdpXzglFPLWjK
+    name: You Try to Outflank!
+    description: ''
+    type: drama
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: ''
+        text: ''
+        img: systems/torgeternity/images/cards/drama/01.webp
+    face: 0
+    drawn: false
+    origin: 9SgkBX6SsRmbY75i
+    rotation: 0
+    sort: 0
+    flags: {}
+    value: null
+    _key: '!cards.cards!9SgkBX6SsRmbY75i.sAbNdpXzglFPLWjK'
+    cards: []
+  - _id: BDLZ3nO3voCLGX1w
+    name: You Spot a Weakness!
+    description: ''
+    type: drama
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: ''
+        text: ''
+        img: systems/torgeternity/images/cards/drama/02.webp
+    face: 0
+    drawn: false
+    origin: 9SgkBX6SsRmbY75i
+    rotation: 0
+    sort: 1
+    flags: {}
+    value: null
+    _key: '!cards.cards!9SgkBX6SsRmbY75i.BDLZ3nO3voCLGX1w'
+    cards: []
+  - _id: wKsnFsEf7nf7WC7J
+    name: You're Thrown Back!
+    description: ''
+    type: drama
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: ''
+        text: ''
+        img: systems/torgeternity/images/cards/drama/03.webp
+    face: 0
+    drawn: false
+    origin: 9SgkBX6SsRmbY75i
+    rotation: 0
+    sort: 2
+    flags: {}
+    value: null
+    _key: '!cards.cards!9SgkBX6SsRmbY75i.wKsnFsEf7nf7WC7J'
+    cards: []
+  - _id: YFqM7pYxqOUxiQ2Y
+    name: You Seek an Advantage
+    description: ''
+    type: drama
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: ''
+        text: ''
+        img: systems/torgeternity/images/cards/drama/04.webp
+    face: 0
+    drawn: false
+    origin: 9SgkBX6SsRmbY75i
+    rotation: 0
+    sort: 3
+    flags: {}
+    number: null
+    _key: '!cards.cards!9SgkBX6SsRmbY75i.YFqM7pYxqOUxiQ2Y'
+    cards: []
+  - _id: 4SJjqVoOL4N19wHZ
+    name: They Hesitate!
+    description: ''
+    type: drama
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: ''
+        text: ''
+        img: systems/torgeternity/images/cards/drama/05.webp
+    face: 0
+    drawn: false
+    origin: 9SgkBX6SsRmbY75i
+    rotation: 0
+    sort: 4
+    flags: {}
+    number: null
+    _key: '!cards.cards!9SgkBX6SsRmbY75i.4SJjqVoOL4N19wHZ'
+    cards: []
+  - _id: aSgXYd5ZAOWg6pls
+    name: They Regroup!
+    description: ''
+    type: drama
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: ''
+        text: ''
+        img: systems/torgeternity/images/cards/drama/06.webp
+    face: 0
+    drawn: false
+    origin: 9SgkBX6SsRmbY75i
+    rotation: 0
+    sort: 5
+    flags: {}
+    number: null
+    _key: '!cards.cards!9SgkBX6SsRmbY75i.aSgXYd5ZAOWg6pls'
+    cards: []
+  - _id: 5CtwXsvUjLwey8Ys
+    name: They Strike!
+    description: ''
+    type: drama
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: ''
+        text: ''
+        img: systems/torgeternity/images/cards/drama/07.webp
+    face: 0
+    drawn: false
+    origin: 9SgkBX6SsRmbY75i
+    rotation: 0
+    sort: 6
+    flags: {}
+    number: null
+    _key: '!cards.cards!9SgkBX6SsRmbY75i.5CtwXsvUjLwey8Ys'
+    cards: []
+  - _id: 7sbTvfumbrL1VbK2
+    name: The Going Gets Tough!
+    description: ''
+    type: drama
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: ''
+        text: ''
+        img: systems/torgeternity/images/cards/drama/08.webp
+    face: 0
+    drawn: false
+    origin: 9SgkBX6SsRmbY75i
+    rotation: 0
+    sort: 7
+    flags: {}
+    number: null
+    _key: '!cards.cards!9SgkBX6SsRmbY75i.7sbTvfumbrL1VbK2'
+    cards: []
+  - _id: QcFX4w8X3Yl0VDij
+    name: That Old Chestnut!
+    description: ''
+    type: drama
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: ''
+        text: ''
+        img: systems/torgeternity/images/cards/drama/09.webp
+    face: 0
+    drawn: false
+    origin: 9SgkBX6SsRmbY75i
+    rotation: 0
+    sort: 8
+    flags: {}
+    number: null
+    _key: '!cards.cards!9SgkBX6SsRmbY75i.QcFX4w8X3Yl0VDij'
+    cards: []
+  - _id: MSIThmRP0azrvvnf
+    name: I'm Not Through Yet!
+    description: ''
+    type: drama
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: ''
+        text: ''
+        img: systems/torgeternity/images/cards/drama/10.webp
+    face: 0
+    drawn: false
+    origin: 9SgkBX6SsRmbY75i
+    rotation: 0
+    sort: 9
+    flags: {}
+    number: null
+    _key: '!cards.cards!9SgkBX6SsRmbY75i.MSIThmRP0azrvvnf'
+    cards: []
+  - _id: fKNR1HBHvDCKBDsd
+    name: You Warily Engage!
+    description: ''
+    type: drama
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: ''
+        text: ''
+        img: systems/torgeternity/images/cards/drama/11.webp
+    face: 0
+    drawn: false
+    origin: 9SgkBX6SsRmbY75i
+    rotation: 0
+    sort: 10
+    flags: {}
+    number: null
+    _key: '!cards.cards!9SgkBX6SsRmbY75i.fKNR1HBHvDCKBDsd'
+    cards: []
+  - _id: 9EQ2j0smFKh7KSfN
+    name: The Pace Quickens!
+    description: ''
+    type: drama
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: ''
+        text: ''
+        img: systems/torgeternity/images/cards/drama/12.webp
+    face: 0
+    drawn: false
+    origin: 9SgkBX6SsRmbY75i
+    rotation: 0
+    sort: 11
+    flags: {}
+    number: null
+    _key: '!cards.cards!9SgkBX6SsRmbY75i.9EQ2j0smFKh7KSfN'
+    cards: []
+  - _id: WgTYNah3bmhTenhh
+    name: Over the Top!
+    description: ''
+    type: drama
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: ''
+        text: ''
+        img: systems/torgeternity/images/cards/drama/13.webp
+    face: 0
+    drawn: false
+    origin: 9SgkBX6SsRmbY75i
+    rotation: 0
+    sort: 12
+    flags: {}
+    number: null
+    _key: '!cards.cards!9SgkBX6SsRmbY75i.WgTYNah3bmhTenhh'
+    cards: []
+  - _id: oIYwZQYE2tb5kCum
+    name: Not Like This!
+    description: ''
+    type: drama
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: ''
+        text: ''
+        img: systems/torgeternity/images/cards/drama/14.webp
+    face: 0
+    drawn: false
+    origin: 9SgkBX6SsRmbY75i
+    rotation: 0
+    sort: 13
+    flags: {}
+    number: null
+    _key: '!cards.cards!9SgkBX6SsRmbY75i.oIYwZQYE2tb5kCum'
+    cards: []
+  - _id: mMRfEBNWh8oX9hYz
+    name: Look Out!
+    description: ''
+    type: drama
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: ''
+        text: ''
+        img: systems/torgeternity/images/cards/drama/15.webp
+    face: 0
+    drawn: false
+    origin: 9SgkBX6SsRmbY75i
+    rotation: 0
+    sort: 14
+    flags: {}
+    number: null
+    _key: '!cards.cards!9SgkBX6SsRmbY75i.mMRfEBNWh8oX9hYz'
+    cards: []
+  - _id: lpE6EehHx7hrySZj
+    name: Always the Hard Way!
+    description: ''
+    type: drama
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: ''
+        text: ''
+        img: systems/torgeternity/images/cards/drama/16.webp
+    face: 0
+    drawn: false
+    origin: 9SgkBX6SsRmbY75i
+    rotation: 0
+    sort: 15
+    flags: {}
+    number: null
+    _key: '!cards.cards!9SgkBX6SsRmbY75i.lpE6EehHx7hrySZj'
+    cards: []
+  - _id: 7B2d5vjNDOwRtdt4
+    name: You Can't Stop Me!
+    description: ''
+    type: drama
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: ''
+        text: ''
+        img: systems/torgeternity/images/cards/drama/17.webp
+    face: 0
+    drawn: false
+    origin: 9SgkBX6SsRmbY75i
+    rotation: 0
+    sort: 16
+    flags: {}
+    number: null
+    _key: '!cards.cards!9SgkBX6SsRmbY75i.7B2d5vjNDOwRtdt4'
+    cards: []
+  - _id: k9r5re1cxALBnY7i
+    name: Into the Fire!
+    description: ''
+    type: drama
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: ''
+        text: ''
+        img: systems/torgeternity/images/cards/drama/18.webp
+    face: 0
+    drawn: false
+    origin: 9SgkBX6SsRmbY75i
+    rotation: 0
+    sort: 17
+    flags: {}
+    number: null
+    _key: '!cards.cards!9SgkBX6SsRmbY75i.k9r5re1cxALBnY7i'
+    cards: []
+  - _id: mDOLZFmnXxu8nUsK
+    name: Time for Action!
+    description: ''
+    type: drama
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: ''
+        text: ''
+        img: systems/torgeternity/images/cards/drama/19.webp
+    face: 0
+    drawn: false
+    origin: 9SgkBX6SsRmbY75i
+    rotation: 0
+    sort: 18
+    flags: {}
+    number: null
+    _key: '!cards.cards!9SgkBX6SsRmbY75i.mDOLZFmnXxu8nUsK'
+    cards: []
+  - _id: 6nh8CrSV697pwnrf
+    name: Here They Come!
+    description: ''
+    type: drama
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: ''
+        text: ''
+        img: systems/torgeternity/images/cards/drama/20.webp
+    face: 0
+    drawn: false
+    origin: 9SgkBX6SsRmbY75i
+    rotation: 0
+    sort: 19
+    flags: {}
+    number: null
+    _key: '!cards.cards!9SgkBX6SsRmbY75i.6nh8CrSV697pwnrf'
+    cards: []
+  - _id: 9WxQvWmeScAcVHxd
+    name: They're on the Run!
+    description: ''
+    type: drama
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: ''
+        text: ''
+        img: systems/torgeternity/images/cards/drama/21.webp
+    face: 0
+    drawn: false
+    origin: 9SgkBX6SsRmbY75i
+    rotation: 0
+    sort: 20
+    flags: {}
+    number: null
+    _key: '!cards.cards!9SgkBX6SsRmbY75i.9WxQvWmeScAcVHxd'
+    cards: []
+  - _id: oy6LZDyn2k5Z4wIS
+    name: Comeback!
+    description: ''
+    type: drama
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: ''
+        text: ''
+        img: systems/torgeternity/images/cards/drama/22.webp
+    face: 0
+    drawn: false
+    origin: 9SgkBX6SsRmbY75i
+    rotation: 0
+    sort: 21
+    flags: {}
+    number: null
+    _key: '!cards.cards!9SgkBX6SsRmbY75i.oy6LZDyn2k5Z4wIS'
+    cards: []
+  - _id: CvjL2mykDsajjn1d
+    name: Closer to Victory!
+    description: ''
+    type: drama
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: ''
+        text: ''
+        img: systems/torgeternity/images/cards/drama/23.webp
+    face: 0
+    drawn: false
+    origin: 9SgkBX6SsRmbY75i
+    rotation: 0
+    sort: 22
+    flags: {}
+    number: null
+    _key: '!cards.cards!9SgkBX6SsRmbY75i.CvjL2mykDsajjn1d'
+    cards: []
+  - _id: ATtxGxu4uZYWDit4
+    name: You Take it to Them!
+    description: ''
+    type: drama
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: ''
+        text: ''
+        img: systems/torgeternity/images/cards/drama/24.webp
+    face: 1
+    drawn: false
+    origin: 9SgkBX6SsRmbY75i
+    rotation: 0
+    sort: 23
+    flags: {}
+    number: null
+    _key: '!cards.cards!9SgkBX6SsRmbY75i.ATtxGxu4uZYWDit4'
+    cards: []
+  - _id: SC5tqfeWMsv7oxoz
+    name: Breakthrough!
+    description: ''
+    type: drama
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: ''
+        text: ''
+        img: systems/torgeternity/images/cards/drama/25.webp
+    face: 0
+    drawn: false
+    origin: 9SgkBX6SsRmbY75i
+    rotation: 0
+    sort: 24
+    flags: {}
+    number: null
+    _key: '!cards.cards!9SgkBX6SsRmbY75i.SC5tqfeWMsv7oxoz'
+    cards: []
+  - _id: iZzaexhJsgUqMxyh
+    name: Curses!
+    description: ''
+    type: drama
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: ''
+        text: ''
+        img: systems/torgeternity/images/cards/drama/26.webp
+    face: 0
+    drawn: false
+    origin: 9SgkBX6SsRmbY75i
+    rotation: 0
+    sort: 25
+    flags: {}
+    number: null
+    _key: '!cards.cards!9SgkBX6SsRmbY75i.iZzaexhJsgUqMxyh'
+    cards: []
+  - _id: lGWqVIwDN3562DJf
+    name: Reversal!
+    description: ''
+    type: drama
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: ''
+        text: ''
+        img: systems/torgeternity/images/cards/drama/27.webp
+    face: 0
+    drawn: false
+    origin: 9SgkBX6SsRmbY75i
+    rotation: 0
+    sort: 26
+    flags: {}
+    number: null
+    _key: '!cards.cards!9SgkBX6SsRmbY75i.lGWqVIwDN3562DJf'
+    cards: []
+  - _id: hBC0U3MVGBYUvcJr
+    name: Let 'Em Have It!
+    description: ''
+    type: drama
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: ''
+        text: ''
+        img: systems/torgeternity/images/cards/drama/28.webp
+    face: 0
+    drawn: false
+    origin: 9SgkBX6SsRmbY75i
+    rotation: 0
+    sort: 27
+    flags: {}
+    number: null
+    _key: '!cards.cards!9SgkBX6SsRmbY75i.hBC0U3MVGBYUvcJr'
+    cards: []
+  - _id: Opgbb7U4YrrScyFX
+    name: Lucky Break!
+    description: ''
+    type: drama
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: ''
+        text: ''
+        img: systems/torgeternity/images/cards/drama/29.webp
+    face: 0
+    drawn: false
+    origin: 9SgkBX6SsRmbY75i
+    rotation: 0
+    sort: 28
+    flags: {}
+    number: null
+    _key: '!cards.cards!9SgkBX6SsRmbY75i.Opgbb7U4YrrScyFX'
+    cards: []
+  - _id: 0oB89cAFblnGrp3w
+    name: Showdown!
+    description: ''
+    type: drama
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: ''
+        text: ''
+        img: systems/torgeternity/images/cards/drama/30.webp
+    face: 0
+    drawn: false
+    origin: 9SgkBX6SsRmbY75i
+    rotation: 0
+    sort: 29
+    flags: {}
+    number: null
+    _key: '!cards.cards!9SgkBX6SsRmbY75i.0oB89cAFblnGrp3w'
+    cards: []
+  - _id: 5eCo9t51kPFZedF0
+    name: You Give Up Ground!
+    description: ''
+    type: drama
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: ''
+        text: ''
+        img: systems/torgeternity/images/cards/drama/31.webp
+    face: 0
+    drawn: false
+    origin: 9SgkBX6SsRmbY75i
+    rotation: 0
+    sort: 30
+    flags: {}
+    number: null
+    _key: '!cards.cards!9SgkBX6SsRmbY75i.5eCo9t51kPFZedF0'
+    cards: []
+  - _id: MHFtfbuZufBzavzb
+    name: You're Driven Back!
+    description: ''
+    type: drama
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: ''
+        text: ''
+        img: systems/torgeternity/images/cards/drama/32.webp
+    face: 0
+    drawn: false
+    origin: 9SgkBX6SsRmbY75i
+    rotation: 0
+    sort: 31
+    flags: {}
+    number: null
+    _key: '!cards.cards!9SgkBX6SsRmbY75i.MHFtfbuZufBzavzb'
+    cards: []
+  - _id: O47I7u4ibOd4DOcY
+    name: I Have You Now!
+    description: ''
+    type: drama
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: ''
+        text: ''
+        img: systems/torgeternity/images/cards/drama/33.webp
+    face: 0
+    drawn: false
+    origin: 9SgkBX6SsRmbY75i
+    rotation: 0
+    sort: 32
+    flags: {}
+    number: null
+    _key: '!cards.cards!9SgkBX6SsRmbY75i.O47I7u4ibOd4DOcY'
+    cards: []
+  - _id: 4oA8YIWQdoVATrEK
+    name: The Battle is Mine!
+    description: ''
+    type: drama
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: ''
+        text: ''
+        img: systems/torgeternity/images/cards/drama/34.webp
+    face: 0
+    drawn: false
+    origin: 9SgkBX6SsRmbY75i
+    rotation: 0
+    sort: 33
+    flags: {}
+    number: null
+    _key: '!cards.cards!9SgkBX6SsRmbY75i.4oA8YIWQdoVATrEK'
+    cards: []
+  - _id: YSHHexWv8R5upODy
+    name: I Shall Triumph!
+    description: ''
+    type: drama
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: ''
+        text: ''
+        img: systems/torgeternity/images/cards/drama/35.webp
+    face: 0
+    drawn: false
+    origin: 9SgkBX6SsRmbY75i
+    rotation: 0
+    sort: 34
+    flags: {}
+    number: null
+    _key: '!cards.cards!9SgkBX6SsRmbY75i.YSHHexWv8R5upODy'
+    cards: []
+  - _id: EYa2gWofp8XR859H
+    name: Torg!
+    description: ''
+    type: drama
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: ''
+        text: ''
+        img: systems/torgeternity/images/cards/drama/36.webp
+    face: 0
+    drawn: false
+    origin: 9SgkBX6SsRmbY75i
+    rotation: 0
+    sort: 35
+    flags: {}
+    number: null
+    _key: '!cards.cards!9SgkBX6SsRmbY75i.EYa2gWofp8XR859H'
+    cards: []
+  - _id: voWcMBAynC8o2vYy
+    name: Oh No!
+    description: ''
+    type: drama
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: ''
+        text: ''
+        img: systems/torgeternity/images/cards/drama/37.webp
+    face: 0
+    drawn: false
+    origin: 9SgkBX6SsRmbY75i
+    rotation: 0
+    sort: 36
+    flags: {}
+    number: null
+    _key: '!cards.cards!9SgkBX6SsRmbY75i.voWcMBAynC8o2vYy'
+    cards: []
+  - _id: Q02TIJKGu0T5Zgzc
+    name: Run Away!
+    description: ''
+    type: drama
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: ''
+        text: ''
+        img: systems/torgeternity/images/cards/drama/38.webp
+    face: 0
+    drawn: false
+    origin: 9SgkBX6SsRmbY75i
+    rotation: 0
+    sort: 37
+    flags: {}
+    number: null
+    _key: '!cards.cards!9SgkBX6SsRmbY75i.Q02TIJKGu0T5Zgzc'
+    cards: []
+  - _id: jSwCUZyzoHnHAOeu
+    name: When Suddenly...
+    description: ''
+    type: drama
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: ''
+        text: ''
+        img: systems/torgeternity/images/cards/drama/39.webp
+    face: 0
+    drawn: false
+    origin: 9SgkBX6SsRmbY75i
+    rotation: 0
+    sort: 38
+    flags: {}
+    number: null
+    _key: '!cards.cards!9SgkBX6SsRmbY75i.jSwCUZyzoHnHAOeu'
+    cards: []
+  - _id: F8kIPBCbV7fPyOhR
+    name: Uh Oh!
+    description: ''
+    type: drama
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: ''
+        text: ''
+        img: systems/torgeternity/images/cards/drama/40.webp
+    face: 0
+    drawn: false
+    origin: 9SgkBX6SsRmbY75i
+    rotation: 0
+    sort: 39
+    flags: {}
+    number: null
+    _key: '!cards.cards!9SgkBX6SsRmbY75i.F8kIPBCbV7fPyOhR'
+    cards: []
+rotation: 0
+displayCount: false
+folder: null
+sort: 0
+permission:
+  default: 0
+  juTas93IuPVP8p5D: 3
+flags:
+  exportSource:
+    world: torgv2p2
+    system: torgeternity
+    coreVersion: '9.226'
+    systemVersion: 2.1.0
+  core:
+    sourceId: Cards.5eH9MbgstDaSvEi9
+  torgeternity:
+    usage: dramaDeck
+_key: '!cards!9SgkBX6SsRmbY75i'
+

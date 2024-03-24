@@ -1,0 +1,255 @@
+_id: zt7zadfXvHzLp4Xd
+name: Paquet Cosm Cyberpapauté
+type: deck
+description: ''
+img: systems/torgeternity/images/cards/cyberpapacy-back.webp
+data: {}
+cards:
+  - _id: 8sx5NBNYqeZodyTX
+    name: Le dieu dans la machine
+    description: ''
+    type: cosm
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: God in the Machine
+        img: systems/torgeternity/images/cards/cosm/cyberpapacy/fr/01.webp
+        text: ''
+    face: 1
+    drawn: false
+    origin: CYMTR5keKGmNOjkN
+    rotation: 0
+    sort: 0
+    flags: {}
+    number: null
+    _key: '!cards.cards!zt7zadfXvHzLp4Xd.8sx5NBNYqeZodyTX'
+    cards: []
+  - _id: 9Qv4VjcQfsynxGmp
+    name: La Résistance !
+    description: ''
+    type: cosm
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: La Resistance!
+        img: systems/torgeternity/images/cards/cosm/cyberpapacy/fr/02.webp
+        text: ''
+    face: 1
+    drawn: false
+    origin: CYMTR5keKGmNOjkN
+    rotation: 0
+    sort: 1
+    flags: {}
+    number: null
+    _key: '!cards.cards!zt7zadfXvHzLp4Xd.9Qv4VjcQfsynxGmp'
+    cards: []
+  - _id: puq9ubQi0P1XzFdT
+    name: Conjunction
+    description: ''
+    type: cosm
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Conjunction
+        img: systems/torgeternity/images/cards/cosm/cyberpapacy/fr/03.webp
+        text: ''
+    face: 1
+    drawn: false
+    origin: CYMTR5keKGmNOjkN
+    rotation: 0
+    sort: 2
+    flags: {}
+    number: null
+    _key: '!cards.cards!zt7zadfXvHzLp4Xd.puq9ubQi0P1XzFdT'
+    cards: []
+  - _id: og9anXBlQHjOTmv1
+    name: Magie hérétique
+    description: ''
+    type: cosm
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Heretical Magic
+        img: systems/torgeternity/images/cards/cosm/cyberpapacy/fr/04.webp
+        text: ''
+    face: 1
+    drawn: false
+    origin: CYMTR5keKGmNOjkN
+    rotation: 0
+    sort: 3
+    flags: {}
+    number: null
+    _key: '!cards.cards!zt7zadfXvHzLp4Xd.og9anXBlQHjOTmv1'
+    cards: []
+  - _id: Yrzu9nnoQqRYkZ3S
+    name: La fureur de Malraux
+    description: ''
+    type: cosm
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Malreaux's Wrath
+        img: systems/torgeternity/images/cards/cosm/cyberpapacy/fr/05.webp
+        text: ''
+    face: 1
+    drawn: false
+    origin: CYMTR5keKGmNOjkN
+    rotation: 0
+    sort: 4
+    flags: {}
+    number: null
+    _key: '!cards.cards!zt7zadfXvHzLp4Xd.Yrzu9nnoQqRYkZ3S'
+    cards: []
+  - _id: 1lw4ERFM0UKeqneE
+    name: Paranoïa exacerbée
+    description: ''
+    type: cosm
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Heightened Paranoia
+        img: systems/torgeternity/images/cards/cosm/cyberpapacy/fr/06.webp
+        text: ''
+    face: 0
+    drawn: false
+    origin: CYMTR5keKGmNOjkN
+    rotation: 0
+    sort: 5
+    flags: {}
+    number: null
+    _key: '!cards.cards!zt7zadfXvHzLp4Xd.1lw4ERFM0UKeqneE'
+    cards: []
+  - _id: 8h5THkHX8kDp9YuP
+    name: Dénonciation
+    description: ''
+    type: cosm
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Denounced
+        img: systems/torgeternity/images/cards/cosm/cyberpapacy/fr/07.webp
+        text: ''
+    face: 1
+    drawn: false
+    origin: CYMTR5keKGmNOjkN
+    rotation: 0
+    sort: 6
+    flags: {}
+    number: null
+    _key: '!cards.cards!zt7zadfXvHzLp4Xd.8h5THkHX8kDp9YuP'
+    cards: []
+  - _id: bsf76pnr8YpAdTdu
+    name: Avis de recherche
+    description: ''
+    type: cosm
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Wanted
+        img: systems/torgeternity/images/cards/cosm/cyberpapacy/fr/08.webp
+        text: ''
+    face: 1
+    drawn: false
+    origin: CYMTR5keKGmNOjkN
+    rotation: 0
+    sort: 7
+    flags: {}
+    number: null
+    _key: '!cards.cards!zt7zadfXvHzLp4Xd.bsf76pnr8YpAdTdu'
+    cards: []
+  - _id: UVZZyldh5j8CNfXW
+    name: Mise à jour impérative
+    description: ''
+    type: cosm
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Mandatory Upgrade
+        img: systems/torgeternity/images/cards/cosm/cyberpapacy/fr/09.webp
+        text: ''
+    face: 1
+    drawn: false
+    origin: CYMTR5keKGmNOjkN
+    rotation: 0
+    sort: 8
+    flags: {}
+    number: null
+    _key: '!cards.cards!zt7zadfXvHzLp4Xd.UVZZyldh5j8CNfXW'
+    cards: []
+  - _id: DYMMxfHDPoepl7vA
+    name: Rage
+    description: ''
+    type: cosm
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Rage
+        img: systems/torgeternity/images/cards/cosm/cyberpapacy/fr/10.webp
+        text: ''
+    face: 1
+    drawn: false
+    origin: CYMTR5keKGmNOjkN
+    rotation: 0
+    sort: 9
+    flags: {}
+    number: null
+    _key: '!cards.cards!zt7zadfXvHzLp4Xd.DYMMxfHDPoepl7vA'
+    cards: []
+rotation: 0
+displayCount: false
+folder: null
+sort: 0
+permission:
+  kz1RJu8vrAPmTUwN: 3
+flags:
+  exportSource:
+    world: torgv2p2
+    system: torgeternity
+    coreVersion: '9.235'
+    systemVersion: 2.0.5
+  core:
+    sourceId: Cards.4b8BekWDWpSWF961
+  torgeternity:
+    usage: cyberpapacy
+_key: '!cards!zt7zadfXvHzLp4Xd'
+

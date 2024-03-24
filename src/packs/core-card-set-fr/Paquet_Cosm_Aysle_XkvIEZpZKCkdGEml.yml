@@ -1,0 +1,255 @@
+_id: XkvIEZpZKCkdGEml
+name: Paquet Cosm Aysle
+type: deck
+description: ''
+img: systems/torgeternity/images/cards/aysle-back.webp
+data: {}
+cards:
+  - _id: QDKfdFFPj4T6kRrn
+    name: Regardez ce que j'ai trouvé !
+    description: ''
+    type: cosm
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Look What I Found!
+        img: systems/torgeternity/images/cards/cosm/aysle/fr/01.webp
+        text: ''
+    face: 1
+    drawn: false
+    origin: 4b8BekWDWpSWF961
+    rotation: 0
+    sort: 0
+    flags: {}
+    number: null
+    _key: '!cards.cards!XkvIEZpZKCkdGEml.QDKfdFFPj4T6kRrn'
+    cards: []
+  - _id: 5JwX7lcxn6rgcpLu
+    name: Affronte-moi !
+    description: ''
+    type: cosm
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Face Me!
+        img: systems/torgeternity/images/cards/cosm/aysle/fr/02.webp
+        text: ''
+    face: 1
+    drawn: false
+    origin: 4b8BekWDWpSWF961
+    rotation: 0
+    sort: 1
+    flags: {}
+    number: null
+    _key: '!cards.cards!XkvIEZpZKCkdGEml.5JwX7lcxn6rgcpLu'
+    cards: []
+  - _id: JJy0t8WEn0bSMUhl
+    name: Piège !
+    description: ''
+    type: cosm
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Trap!
+        img: systems/torgeternity/images/cards/cosm/aysle/fr/03.webp
+        text: ''
+    face: 1
+    drawn: false
+    origin: 4b8BekWDWpSWF961
+    rotation: 0
+    sort: 2
+    flags: {}
+    number: null
+    _key: '!cards.cards!XkvIEZpZKCkdGEml.JJy0t8WEn0bSMUhl'
+    cards: []
+  - _id: HHQncM8YVx4IYk9l
+    name: Intrigue de cour
+    description: ''
+    type: cosm
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Courtly Intrigue
+        img: systems/torgeternity/images/cards/cosm/aysle/fr/04.webp
+        text: ''
+    face: 1
+    drawn: false
+    origin: 4b8BekWDWpSWF961
+    rotation: 0
+    sort: 3
+    flags: {}
+    number: null
+    _key: '!cards.cards!XkvIEZpZKCkdGEml.HHQncM8YVx4IYk9l'
+    cards: []
+  - _id: 3b5nyRPbFVZ16B5P
+    name: Amour courtois
+    description: ''
+    type: cosm
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Courtly Romance
+        img: systems/torgeternity/images/cards/cosm/aysle/fr/05.webp
+        text: ''
+    face: 1
+    drawn: false
+    origin: 4b8BekWDWpSWF961
+    rotation: 0
+    sort: 4
+    flags: {}
+    number: null
+    _key: '!cards.cards!XkvIEZpZKCkdGEml.3b5nyRPbFVZ16B5P'
+    cards: []
+  - _id: 8Jt0m8xojCL0gMNY
+    name: Monstre errant
+    description: ''
+    type: cosm
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Wandering Monster
+        img: systems/torgeternity/images/cards/cosm/aysle/fr/06.webp
+        text: ''
+    face: 1
+    drawn: false
+    origin: 4b8BekWDWpSWF961
+    rotation: 0
+    sort: 5
+    flags: {}
+    number: null
+    _key: '!cards.cards!XkvIEZpZKCkdGEml.8Jt0m8xojCL0gMNY'
+    cards: []
+  - _id: sOSSdwnBG0EBCapY
+    name: Magie instable
+    description: ''
+    type: cosm
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Fickle Magic
+        img: systems/torgeternity/images/cards/cosm/aysle/fr/07.webp
+        text: ''
+    face: 1
+    drawn: false
+    origin: 4b8BekWDWpSWF961
+    rotation: 0
+    sort: 6
+    flags: {}
+    number: null
+    _key: '!cards.cards!XkvIEZpZKCkdGEml.sOSSdwnBG0EBCapY'
+    cards: []
+  - _id: Fqvpo8jWOYWOGp3K
+    name: Fais-lui les poches !
+    description: ''
+    type: cosm
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Loot the Body!
+        img: systems/torgeternity/images/cards/cosm/aysle/fr/08.webp
+        text: ''
+    face: 1
+    drawn: false
+    origin: 4b8BekWDWpSWF961
+    rotation: 0
+    sort: 7
+    flags: {}
+    number: null
+    _key: '!cards.cards!XkvIEZpZKCkdGEml.Fqvpo8jWOYWOGp3K'
+    cards: []
+  - _id: RwUaPaZeYyDjNrWy
+    name: Afflux de Mana
+    description: ''
+    type: cosm
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Mana Surge
+        img: systems/torgeternity/images/cards/cosm/aysle/fr/09.webp
+        text: ''
+    face: 1
+    drawn: false
+    origin: 4b8BekWDWpSWF961
+    rotation: 0
+    sort: 8
+    flags: {}
+    number: null
+    _key: '!cards.cards!XkvIEZpZKCkdGEml.RwUaPaZeYyDjNrWy'
+    cards: []
+  - _id: UYJ0iYkQuH0bZYEp
+    name: Qui trouve garde
+    description: ''
+    type: cosm
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Finders Keepers
+        img: systems/torgeternity/images/cards/cosm/aysle/fr/10.webp
+        text: ''
+    face: 1
+    drawn: false
+    origin: 4b8BekWDWpSWF961
+    rotation: 0
+    sort: 9
+    flags: {}
+    number: null
+    _key: '!cards.cards!XkvIEZpZKCkdGEml.UYJ0iYkQuH0bZYEp'
+    cards: []
+rotation: 0
+displayCount: false
+folder: null
+sort: 0
+permission:
+  kz1RJu8vrAPmTUwN: 3
+flags:
+  exportSource:
+    world: torgv2p2
+    system: torgeternity
+    coreVersion: '9.235'
+    systemVersion: 2.0.5
+  core:
+    sourceId: Cards.4b8BekWDWpSWF961
+  torgeternity:
+    usage: aysle
+_key: '!cards!XkvIEZpZKCkdGEml'
+

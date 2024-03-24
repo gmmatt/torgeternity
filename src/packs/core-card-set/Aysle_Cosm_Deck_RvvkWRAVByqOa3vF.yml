@@ -1,0 +1,285 @@
+_id: RvvkWRAVByqOa3vF
+name: Aysle Cosm Deck
+type: deck
+description: ''
+img: systems/torgeternity/images/cards/aysle-back.webp
+cards:
+  - _id: 2moJglDnzdLdQ6H5
+    name: Look What I Found!
+    description: ''
+    type: cosm
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Look What I Found!
+        text: ''
+        img: systems/torgeternity/images/cards/cosm/aysle/01.webp
+    face: 0
+    drawn: false
+    origin: 4b8BekWDWpSWF961
+    rotation: 0
+    sort: 0
+    flags: {}
+    system: {}
+    value: null
+    width: null
+    height: null
+    _key: '!cards.cards!RvvkWRAVByqOa3vF.2moJglDnzdLdQ6H5'
+    cards: []
+  - _id: kCtl6n8GyHL3Ksss
+    name: Face Me!
+    description: ''
+    type: cosm
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Face Me!
+        text: ''
+        img: systems/torgeternity/images/cards/cosm/aysle/02.webp
+    face: 0
+    drawn: false
+    origin: 4b8BekWDWpSWF961
+    rotation: 0
+    sort: 1
+    flags: {}
+    system: {}
+    value: null
+    width: null
+    height: null
+    _key: '!cards.cards!RvvkWRAVByqOa3vF.kCtl6n8GyHL3Ksss'
+    cards: []
+  - _id: BcvSSr8FneLAwtH4
+    name: Trap!
+    description: ''
+    type: cosm
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Trap!
+        text: ''
+        img: systems/torgeternity/images/cards/cosm/aysle/03.webp
+    face: 0
+    drawn: false
+    origin: 4b8BekWDWpSWF961
+    rotation: 0
+    sort: 2
+    flags: {}
+    system: {}
+    value: null
+    width: null
+    height: null
+    _key: '!cards.cards!RvvkWRAVByqOa3vF.BcvSSr8FneLAwtH4'
+    cards: []
+  - _id: WbuWhEpaXrl00aNM
+    name: Courtly Intrigue
+    description: ''
+    type: cosm
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Courtly Intrigue
+        text: ''
+        img: systems/torgeternity/images/cards/cosm/aysle/04.webp
+    face: 0
+    drawn: false
+    origin: 4b8BekWDWpSWF961
+    rotation: 0
+    sort: 3
+    flags: {}
+    system: {}
+    value: null
+    width: null
+    height: null
+    _key: '!cards.cards!RvvkWRAVByqOa3vF.WbuWhEpaXrl00aNM'
+    cards: []
+  - _id: 5FU8TA7uRaCF1ALd
+    name: Courtly Romance
+    description: ''
+    type: cosm
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Courtly Romance
+        text: ''
+        img: systems/torgeternity/images/cards/cosm/aysle/05.webp
+    face: 0
+    drawn: false
+    origin: 4b8BekWDWpSWF961
+    rotation: 0
+    sort: 4
+    flags: {}
+    system: {}
+    value: null
+    width: null
+    height: null
+    _key: '!cards.cards!RvvkWRAVByqOa3vF.5FU8TA7uRaCF1ALd'
+    cards: []
+  - _id: t0bwpZp2c25nYEl0
+    name: Wandering Monster
+    description: ''
+    type: cosm
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Wandering Monster
+        text: ''
+        img: systems/torgeternity/images/cards/cosm/aysle/06.webp
+    face: 0
+    drawn: false
+    origin: 4b8BekWDWpSWF961
+    rotation: 0
+    sort: 5
+    flags: {}
+    system: {}
+    value: null
+    width: null
+    height: null
+    _key: '!cards.cards!RvvkWRAVByqOa3vF.t0bwpZp2c25nYEl0'
+    cards: []
+  - _id: 6tsYI82XVTuBusyt
+    name: Fickle Magic
+    description: ''
+    type: cosm
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Fickle Magic
+        text: ''
+        img: systems/torgeternity/images/cards/cosm/aysle/07.webp
+    face: 0
+    drawn: false
+    origin: 4b8BekWDWpSWF961
+    rotation: 0
+    sort: 6
+    flags: {}
+    system: {}
+    value: null
+    width: null
+    height: null
+    _key: '!cards.cards!RvvkWRAVByqOa3vF.6tsYI82XVTuBusyt'
+    cards: []
+  - _id: FB0N1HcDCcrJy943
+    name: Loot the Body!
+    description: ''
+    type: cosm
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Loot the Body!
+        text: ''
+        img: systems/torgeternity/images/cards/cosm/aysle/08.webp
+    face: 0
+    drawn: false
+    origin: 4b8BekWDWpSWF961
+    rotation: 0
+    sort: 7
+    flags: {}
+    system: {}
+    value: null
+    width: null
+    height: null
+    _key: '!cards.cards!RvvkWRAVByqOa3vF.FB0N1HcDCcrJy943'
+    cards: []
+  - _id: Q5YTcCrSlYzfIPYq
+    name: Mana Surge
+    description: ''
+    type: cosm
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Mana Surge
+        text: ''
+        img: systems/torgeternity/images/cards/cosm/aysle/09.webp
+    face: 0
+    drawn: false
+    origin: 4b8BekWDWpSWF961
+    rotation: 0
+    sort: 8
+    flags: {}
+    system: {}
+    value: null
+    width: null
+    height: null
+    _key: '!cards.cards!RvvkWRAVByqOa3vF.Q5YTcCrSlYzfIPYq'
+    cards: []
+  - _id: QiF9ZqkcryKctFPt
+    name: Finders Keepers
+    description: ''
+    type: cosm
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Finders Keepers
+        text: ''
+        img: systems/torgeternity/images/cards/cosm/aysle/10.webp
+    face: 0
+    drawn: false
+    origin: 4b8BekWDWpSWF961
+    rotation: 0
+    sort: 9
+    flags: {}
+    system: {}
+    value: null
+    width: null
+    height: null
+    _key: '!cards.cards!RvvkWRAVByqOa3vF.QiF9ZqkcryKctFPt'
+    cards: []
+width: null
+height: null
+rotation: 0
+displayCount: false
+folder: null
+sort: 0
+flags:
+  exportSource:
+    world: torgv2p2
+    system: torgeternity
+    coreVersion: '9.235'
+    systemVersion: 2.0.5
+  core:
+    sourceId: Cards.4b8BekWDWpSWF961
+  torgeternity:
+    usage: aysle
+system: {}
+ownership:
+  default: 0
+  juTas93IuPVP8p5D: 3
+_stats:
+  systemId: null
+  systemVersion: null
+  coreVersion: null
+  createdTime: null
+  modifiedTime: null
+  lastModifiedBy: null
+_key: '!cards!RvvkWRAVByqOa3vF'
+

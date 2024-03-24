@@ -1,0 +1,1226 @@
+_id: cdSvyJHbG0GbFzkh
+name: La gardienne Elfe
+type: stormknight
+img: systems/torgeternity/images/characters/Elven_Warden.Avatar.webp
+data:
+  shock:
+    max: 5
+    value: 0
+  wounds:
+    max: 3
+    value: 0
+  attributes:
+    charisma: 8
+    dexterity: 10
+    mind: 7
+    spirit: 8
+    strength: 7
+  other:
+    move: 5
+    run: 5
+    toughness: 5
+    armor: 0
+    cosm: aysle
+    possibilities: 0
+    posibilities: 3
+  skills:
+    airVehicles:
+      baseAttribute: dexterity
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    alteration:
+      baseAttribute: mind
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    apportation:
+      baseAttribute: spirit
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    beastRiding:
+      baseAttribute: dexterity
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    computers:
+      baseAttribute: mind
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    conjuration:
+      baseAttribute: spirit
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    divination:
+      baseAttribute: mind
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    dodge:
+      baseAttribute: dexterity
+      adds: 2
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    energyWeapons:
+      baseAttribute: dexterity
+      adds: null
+      value: 0
+      isFav: false
+      groupName: combat
+      unskilledUse: 1
+    evidenceAnalysis:
+      baseAttribute: mind
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    faith:
+      baseAttribute: spirit
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    find:
+      baseAttribute: mind
+      adds: 2
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    fireCombat:
+      baseAttribute: dexterity
+      adds: null
+      value: 0
+      isFav: false
+      groupName: combat
+      unskilledUse: 1
+    firstAid:
+      baseAttribute: mind
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    heavyWeapons:
+      baseAttribute: dexterity
+      adds: null
+      value: 0
+      isFav: false
+      groupName: combat
+      unskilledUse: 1
+    intimidation:
+      baseAttribute: spirit
+      adds: null
+      value: 0
+      isFav: false
+      groupName: interaction
+      unskilledUse: 1
+    kinesis:
+      baseAttribute: spirit
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    landVehicles:
+      baseAttribute: dexterity
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    language:
+      baseAttribute: mind
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    lockpicking:
+      baseAttribute: dexterity
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    maneuver:
+      baseAttribute: dexterity
+      adds: 1
+      value: 0
+      isFav: false
+      groupName: interaction
+      unskilledUse: 1
+    medicine:
+      baseAttribute: mind
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    meleeWeapons:
+      baseAttribute: dexterity
+      adds: 1
+      value: 0
+      isFav: false
+      groupName: combat
+      unskilledUse: 1
+    missileWeapons:
+      baseAttribute: dexterity
+      adds: 3
+      value: 0
+      isFav: false
+      groupName: combat
+      unskilledUse: 1
+    persuasion:
+      baseAttribute: charisma
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    precognition:
+      baseAttribute: mind
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    profession:
+      baseAttribute: mind
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    reality:
+      baseAttribute: spirit
+      adds: 1
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    scholar:
+      baseAttribute: mind
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    science:
+      baseAttribute: mind
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    stealth:
+      baseAttribute: dexterity
+      adds: 2
+      value: 0
+      isFav: true
+      groupName: other
+      unskilledUse: 1
+    streetwise:
+      baseAttribute: charisma
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    survival:
+      baseAttribute: mind
+      adds: 1
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    taunt:
+      baseAttribute: charisma
+      adds: null
+      value: 0
+      isFav: false
+      groupName: interaction
+      unskilledUse: 1
+    telepathy:
+      baseAttribute: charisma
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    tracking:
+      baseAttribute: mind
+      adds: 2
+      value: 0
+      isFav: true
+      groupName: other
+      unskilledUse: 1
+    trick:
+      baseAttribute: mind
+      adds: 1
+      value: 0
+      isFav: false
+      groupName: interaction
+      unskilledUse: 1
+    unarmedCombat:
+      baseAttribute: dexterity
+      adds: null
+      value: 0
+      isFav: false
+      groupName: combat
+      unskilledUse: 1
+    waterVehicles:
+      baseAttribute: dexterity
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    willpower:
+      baseAttribute: spirit
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+  xp:
+    unspent: 0
+    earned: 0
+  axioms:
+    magic: 24
+    social: 16
+    spirit: 18
+    tech: 14
+  details:
+    clearance: ''
+    background: >-
+      <h2 class="MsoNormal">Pr&eacute;sentation</h2>
+
+      <p class="MsoNormal">Les Gardiens sont des chasseurs et des protecteurs
+      d&rsquo;Aysle qui hantent les for&ecirc;ts comme des fant&ocirc;mes,
+      frappant les ennemis des elfes avec discr&eacute;tion et ruse. Les arcs
+      longs et les manteaux verts sont embl&eacute;matiques des Gardiens ainsi
+      que les rares loups blancs que bon nombre d&rsquo;entre eux ont comme
+      compagnons.</p>
+
+      <h2 class="MsoNormal">Tactiques</h2>
+
+      <p class="MsoNormal">Vous &ecirc;tes une combattante qui excelle dans le
+      combat &agrave; distance. Vous pouvez toujours utiliser votre
+      &eacute;p&eacute;e longue mais il est g&eacute;n&eacute;ralement
+      pr&eacute;f&eacute;rable de vous fier &agrave; votre arc. Encocher une
+      fl&egrave;che vous demande une action simple aussi vous pouvez cibler deux
+      &agrave; trois adversaires avec une seule attaque.</p>
+
+      <p class="MsoNormal">Une des tactiques que les Gardiens appr&eacute;cient
+      est d&rsquo;&eacute;viter que leur loup soit engag&eacute; en combat
+      direct et qu&rsquo;il soit l&agrave; pour intimider des adversaires. Cela
+      peut rendre l&rsquo;ennemi Vuln&eacute;rable &agrave; une attaque avec
+      votre arc.</p>
+
+      <p class="MsoNormal">Si des adversaires parviennent &agrave; s&rsquo;en
+      prendre &agrave; votre ami &agrave; poils, utilisez la D&eacute;fense
+      active pour le prot&eacute;ger ou annuler les dommages gr&acirc;ce
+      &agrave; vos Possibilit&eacute;s.</p>
+
+      <p class="MsoNormal">M&eacute;fiez-vous des Zones avec un faible Axiome
+      Magie comme celles de la Prime Terre, de la Terre Vivante et du
+      Pan-Pacifica, puisque les elfes subissent trois points de Choc en cas de
+      Fatigue.</p>
+
+      <h2 class="MsoNormal">Instant fatidique</h2>
+
+      <p class="MsoNormal">Bien que les Gardiens prot&egrave;gent les
+      for&ecirc;ts d&rsquo;Aysle des forces obscures, tr&egrave;s peu
+      d&rsquo;entre eux deviennent des Chevaliers des Temp&ecirc;tes. Votre
+      Instant fatidique s&rsquo;est certainement produit apr&egrave;s avoir
+      suivi Dame Ardinay sur Terre pour accomplir sa qu&ecirc;te
+      insens&eacute;e. Affronter vos anciens ennemis dans un endroit aussi
+      diff&eacute;rent a &eacute;veill&eacute; en vous quelque chose que la
+      protection des for&ecirc;ts de votre monde n&rsquo;avait pas
+      stimul&eacute;. Il est aussi possible que vous ayez quitt&eacute; votre
+      poste pour sauver un nain ou un humain et que vous vous soyez
+      transform&eacute;e au cours de cet instant de pur altruisme</p>
+
+      <h2 class="MsoNormal">Citation</h2>
+
+      <p class="MsoNormal">&laquo; Dans les for&ecirc;ts, toutes les
+      cr&eacute;atures sont soit des proies, soit des pr&eacute;dateurs. Je vous
+      assure que je ne suis pas une proie. &raquo;</p>
+
+      <h2 class="MsoNormal">Description</h2>
+
+      <p class="MsoNormal">Les elfes des bois sont r&eacute;put&eacute;s pour
+      &ecirc;tre discrets et timides, surtout en comparaison &agrave; leurs
+      cousins plus mystiques. Les Gardiens portent des v&ecirc;tements en cuir
+      souple ou en tissu dense tant qu&rsquo;ils peuvent se d&eacute;placer
+      silencieusement avec. Ils favorisent la couleur verte m&ecirc;me en dehors
+      des for&ecirc;ts.</p>
+
+      <h2 class="MsoNormal">Objectif</h2>
+
+      <p class="MsoNormal">Les Gardiens elfes sont au courant d&rsquo;un sombre
+      secret connu des &eacute;lites parmi les hauts elfes et ils sont venus sur
+      la Prime Terre &agrave; cause d&rsquo;un sentiment de culpabilit&eacute;
+      d&eacute;plac&eacute;. Peut-&ecirc;tre que si tous les Seigneurs de
+      R&eacute;alit&eacute; sont vaincus les peuples d&rsquo;Aysle pourront-ils
+      conna&icirc;tre la paix.</p>
+
+      <h2 class="MsoNormal">Noms</h2>
+
+      <p class="MsoNormal">Amavae, Cimbar, Feyurit, Lief, Namys of Glaed, Nuvia,
+      Rose, Tierra, Waldir</p>
+
+      <h2 class="MsoNormal">Piste de progression (optionnelle)</h2>
+
+      <p class="MsoNormal">□ (5 PX) Archer elfe</p>
+
+      <p class="MsoNormal">□ (7 PX) Tireur d&rsquo;&eacute;lite</p>
+
+      <p class="MsoNormal">□ (1 PX) Crochetage +1</p>
+
+      <p class="MsoNormal">□ (2 PX) Armes de m&ecirc;l&eacute;e +2</p>
+
+      <p class="MsoNormal">□ (3 PX) Esquive +3</p>
+
+      <p class="MsoNormal">□ (3 PX) Discr&eacute;tion +3</p>
+
+      <p class="MsoNormal">□ (4 PX) Armes de jet +4</p>
+
+      <p class="MsoNormal">□ (5 PX) Armes de jet +5 <span style="mso-spacerun:
+      yes;">&nbsp;</span></p>
+    race: elf
+  editstate: null
+  fatigue: '1'
+token:
+  flags: {}
+  name: La gardienne Elfe
+  displayName: 30
+  img: systems/torgeternity/images/characters/Elven_Warden.Token.webp
+  tint: null
+  width: 1
+  height: 1
+  scale: 1
+  mirrorX: false
+  mirrorY: false
+  lockRotation: false
+  rotation: 0
+  vision: false
+  dimSight: 0
+  brightSight: 0
+  dimLight: 0
+  brightLight: 0
+  sightAngle: 0
+  lightAngle: 360
+  lightColor: ''
+  lightAlpha: 1
+  lightAnimation:
+    type: ''
+    speed: 5
+    intensity: 5
+  actorId: cdSvyJHbG0GbFzkh
+  actorLink: true
+  disposition: 1
+  displayBars: 20
+  bar1:
+    attribute: shock
+  bar2:
+    attribute: wounds
+  randomImg: false
+  alpha: 1
+  light:
+    alpha: 0.5
+    angle: 0
+    bright: 0
+    coloration: 1
+    dim: 0
+    gradual: true
+    luminosity: 0.5
+    saturation: 0
+    contrast: 0
+    shadows: 0
+    animation:
+      speed: 5
+      intensity: 5
+      reverse: false
+    darkness:
+      min: 0
+      max: 1
+    color: null
+items:
+  - _id: q33jbisDvFLOCyfH
+    name: Gardien
+    type: perk
+    data:
+      category: elf
+      cosm: Aysle
+      prerequisites: Elfe
+      timestaken: null
+      description: >-
+        <p class="MsoNormal">Les Gardiens elfes patrouillaient dans la nature
+        avant la Rage d&rsquo;Uthorion, &agrave; l&rsquo;aff&ucirc;t du moindre
+        danger pouvant mettre en p&eacute;ril le bon peuple. Apr&egrave;s que
+        les Rose Allain traque un groupe de maraudeurs dans les for&ecirc;ts
+        d&rsquo;Aysle. 88 hordes du T&eacute;n&eacute;breux ont ravag&eacute;
+        leurs for&ecirc;ts, le nombre de gardiens est pass&eacute; de quelques
+        milliers &agrave; moins d&rsquo;une centaine.</p>
+
+        <p class="MsoNormal">Bizarrement, la plupart de ces survivants sont
+        venus sur Terre. Ils refusent d&rsquo;expliquer pourquoi mais ils
+        semblent partager une sorte de honte en rapport avec
+        l&rsquo;incapacit&eacute; de leur peuple &agrave; arr&ecirc;ter Uthorion
+        avant qu&rsquo;il ne porte son attention sur la Prime Terre.</p>
+
+        <p class="MsoNormal">Les Gardiens sont ind&eacute;pendants, discrets et
+        rus&eacute;s et bon nombre d&rsquo;entre eux sont accompagn&eacute;s par
+        des animaux avec lesquels ils se sont li&eacute;s d&rsquo;amiti&eacute;
+        dans la nature (voir Loup blanc, ci-apr&egrave;s).</p>
+
+        <p class="MsoNormal">Les Gardiens consid&egrave;rent Discr&eacute;tion
+        et Pistage comme des comp&eacute;tences Favoris&eacute;es.</p>
+      pulpPowers:
+        enhancementNumber: 0
+        enhancement01:
+          title: ''
+          description: ''
+          taken: false
+        enhancement02:
+          title: ''
+          description: ''
+          taken: false
+        enhancement03:
+          title: ''
+          description: ''
+          taken: false
+        enhancement04:
+          title: ''
+          description: ''
+          taken: false
+        enhancement05:
+          title: ''
+          description: ''
+          taken: false
+        enhancement06:
+          title: ''
+          description: ''
+          taken: false
+        enhancement07:
+          title: ''
+          description: ''
+          taken: false
+        enhancement08:
+          title: ''
+          description: ''
+          taken: false
+        enhancement09:
+          title: ''
+          description: ''
+          taken: false
+        enhancement10:
+          title: ''
+          description: ''
+          taken: false
+        enhancement11:
+          title: ''
+          description: ''
+          taken: false
+        enhancement12:
+          title: ''
+          description: ''
+          taken: false
+        enhancement13:
+          title: ''
+          description: ''
+          taken: false
+        enhancement14:
+          title: ''
+          description: ''
+          taken: false
+        enhancement15:
+          title: ''
+          description: ''
+          taken: false
+        limitationNumber: 0
+        limitation01: ''
+        limitation02: ''
+        limitation03: ''
+        limitation04: ''
+        limitation05: ''
+        limitation06: ''
+        limitation07: ''
+        limitation08: ''
+        limitation09: ''
+        limitation10: ''
+    sort: 100001
+    flags:
+      core:
+        sourceId: Item.iAsTMdPbFnFfYbBe
+    img: systems/torgeternity/images/icons/perk.webp
+    effects: []
+    folder: null
+    permission:
+      default: 0
+    _key: '!actors.items!cdSvyJHbG0GbFzkh.q33jbisDvFLOCyfH'
+  - _id: 93G8qxXjw6byrBMI
+    name: Loup blanc
+    type: perk
+    data:
+      category: elf
+      cosm: Aysle
+      prerequisites: Gardien
+      timestaken: 1
+      description: >-
+        <p class="MsoNormal">Les Gardiens elfes ont souvent un loup blanc comme
+        compagnon (et non comme animal domestique) et ils vivent, combattent et
+        meurent ensemble d&egrave;s le moment o&ugrave; leur relation se
+        noue.</p>
+
+        <p class="MsoNormal">Cet Atout accorde &agrave; un Gardien elfe un loup
+        blanc loyal qui suit des instructions simples et combat
+        jusqu&rsquo;&agrave; la mort pour d&eacute;fendre son ma&icirc;tre.
+        L&rsquo;animal est aussi intelligent que le chien le mieux dress&eacute;
+        de la Prime Terre, ce qui signifie qu&rsquo;il peut choisir
+        intelligemment ses cibles, d&eacute;fendre une personne ou un lieu
+        pr&eacute;cis, ou r&eacute;cup&eacute;rer un objet s&rsquo;il l&rsquo;a
+        d&eacute;j&agrave; vu. Son compagnon elfe peut aussi choisir des &laquo;
+        lieux de ralliement &raquo; o&ugrave; peut se rendre le loup et y
+        attendre. Il faut cependant d&eacute;finir un lieu de ralliement par
+        avance en faisant un signe ou en donnant un ordre au loup &agrave; cet
+        endroit pr&eacute;cis. C&rsquo;est utile quand le gardien doit aller
+        dans une ville ou dans un endroit dangereux pour l&rsquo;animal.</p>
+
+        <p class="MsoNormal">En termes de jeu, c&rsquo;est le joueur qui
+        contr&ocirc;le le loup la plupart du temps en choisissant ses cibles, en
+        effectuant ses jets d&rsquo;attaque et ainsi de suite.</p>
+
+        <p class="MsoNormal">Les loups blancs n&rsquo;ont pas de
+        Possibilit&eacute;s mais le Gardien peut utiliser ses propres
+        Possibilit&eacute;s (et ses Cartes de Destin) pour la cr&eacute;ature,
+        m&ecirc;me s&rsquo;ils sont s&eacute;par&eacute;s.</p>
+
+        <p class="MsoNormal">Quand un loup blanc est tu&eacute;, son esprit va
+        dans un obscur royaume o&ugrave; il se reconstitue jusqu&rsquo;&agrave;
+        ce qu&rsquo;il puisse revenir sur la terre des vivants au d&eacute;but
+        de la prochaine Sc&egrave;ne.</p>
+
+        <p class="MsoNormal">Si le ma&icirc;tre du loup succombe, il subit un
+        point de Choc toutes les 24 heures jusqu&rsquo;&agrave; ce qu&rsquo;il
+        disparaisse dans le monde des esprits sans possibilit&eacute; de
+        retour.</p>
+      pulpPowers:
+        enhancementNumber: 0
+        enhancement01:
+          title: ''
+          description: ''
+          taken: false
+        enhancement02:
+          title: ''
+          description: ''
+          taken: false
+        enhancement03:
+          title: ''
+          description: ''
+          taken: false
+        enhancement04:
+          title: ''
+          description: ''
+          taken: false
+        enhancement05:
+          title: ''
+          description: ''
+          taken: false
+        enhancement06:
+          title: ''
+          description: ''
+          taken: false
+        enhancement07:
+          title: ''
+          description: ''
+          taken: false
+        enhancement08:
+          title: ''
+          description: ''
+          taken: false
+        enhancement09:
+          title: ''
+          description: ''
+          taken: false
+        enhancement10:
+          title: ''
+          description: ''
+          taken: false
+        enhancement11:
+          title: ''
+          description: ''
+          taken: false
+        enhancement12:
+          title: ''
+          description: ''
+          taken: false
+        enhancement13:
+          title: ''
+          description: ''
+          taken: false
+        enhancement14:
+          title: ''
+          description: ''
+          taken: false
+        enhancement15:
+          title: ''
+          description: ''
+          taken: false
+        limitationNumber: 0
+        limitation01: ''
+        limitation02: ''
+        limitation03: ''
+        limitation04: ''
+        limitation05: ''
+        limitation06: ''
+        limitation07: ''
+        limitation08: ''
+        limitation09: ''
+        limitation10: ''
+    sort: 200001
+    flags:
+      core:
+        sourceId: Item.OibVBWUouOM0VqRS
+    img: systems/torgeternity/images/icons/perk.webp
+    effects: []
+    folder: null
+    permission:
+      default: 0
+    _key: '!actors.items!cdSvyJHbG0GbFzkh.93G8qxXjw6byrBMI'
+  - _id: xSUfyWUYlFvFHbn7
+    name: Vision nocturne
+    type: perk
+    data:
+      category: elf
+      cosm: Aysle
+      prerequisites: elfe
+      timestaken: null
+      description: >-
+        <p>Les elfes ignorent jusqu&rsquo;&agrave; quatre points de malus
+        li&eacute;s &agrave; l&rsquo;obscurit&eacute; (voir page 125).</p>
+      pulpPowers:
+        enhancementNumber: 0
+        enhancement01:
+          title: ''
+          description: ''
+          taken: false
+        enhancement02:
+          title: ''
+          description: ''
+          taken: false
+        enhancement03:
+          title: ''
+          description: ''
+          taken: false
+        enhancement04:
+          title: ''
+          description: ''
+          taken: false
+        enhancement05:
+          title: ''
+          description: ''
+          taken: false
+        enhancement06:
+          title: ''
+          description: ''
+          taken: false
+        enhancement07:
+          title: ''
+          description: ''
+          taken: false
+        enhancement08:
+          title: ''
+          description: ''
+          taken: false
+        enhancement09:
+          title: ''
+          description: ''
+          taken: false
+        enhancement10:
+          title: ''
+          description: ''
+          taken: false
+        enhancement11:
+          title: ''
+          description: ''
+          taken: false
+        enhancement12:
+          title: ''
+          description: ''
+          taken: false
+        enhancement13:
+          title: ''
+          description: ''
+          taken: false
+        enhancement14:
+          title: ''
+          description: ''
+          taken: false
+        enhancement15:
+          title: ''
+          description: ''
+          taken: false
+        limitationNumber: 0
+        limitation01: ''
+        limitation02: ''
+        limitation03: ''
+        limitation04: ''
+        limitation05: ''
+        limitation06: ''
+        limitation07: ''
+        limitation08: ''
+        limitation09: ''
+        limitation10: ''
+    sort: 100001
+    flags:
+      core:
+        sourceId: Item.JCBCYFMvmpQHFWM4
+    img: systems/torgeternity/images/icons/perk.webp
+    effects: []
+    folder: null
+    permission:
+      default: 0
+    _key: '!actors.items!cdSvyJHbG0GbFzkh.xSUfyWUYlFvFHbn7'
+  - _id: 60VM3jzDEEY3SxpK
+    name: Gracieux
+    type: perk
+    data:
+      category: elf
+      cosm: Aysle
+      prerequisites: elfe
+      timestaken: 1
+      description: >-
+        <p class="MsoNormal">Quand les elfes effectuent un test directement sous
+        la Dext&eacute;rit&eacute;, ce test est consid&eacute;r&eacute; comme
+        Favoris&eacute; (page 109). Cela ne s&rsquo;applique qu&rsquo;aux
+        situations qui exigent sp&eacute;cifiquement un test de
+        Dext&eacute;rit&eacute; comme pour r&eacute;duire les dommages
+        d&rsquo;une chute, interrompre un adversaire quand l&rsquo;elfe est En
+        attente ou doubler un adversaire lors d&rsquo;une course &agrave;
+        pied.</p>
+      pulpPowers:
+        enhancementNumber: 0
+        enhancement01:
+          title: ''
+          description: ''
+          taken: false
+        enhancement02:
+          title: ''
+          description: ''
+          taken: false
+        enhancement03:
+          title: ''
+          description: ''
+          taken: false
+        enhancement04:
+          title: ''
+          description: ''
+          taken: false
+        enhancement05:
+          title: ''
+          description: ''
+          taken: false
+        enhancement06:
+          title: ''
+          description: ''
+          taken: false
+        enhancement07:
+          title: ''
+          description: ''
+          taken: false
+        enhancement08:
+          title: ''
+          description: ''
+          taken: false
+        enhancement09:
+          title: ''
+          description: ''
+          taken: false
+        enhancement10:
+          title: ''
+          description: ''
+          taken: false
+        enhancement11:
+          title: ''
+          description: ''
+          taken: false
+        enhancement12:
+          title: ''
+          description: ''
+          taken: false
+        enhancement13:
+          title: ''
+          description: ''
+          taken: false
+        enhancement14:
+          title: ''
+          description: ''
+          taken: false
+        enhancement15:
+          title: ''
+          description: ''
+          taken: false
+        limitationNumber: 0
+        limitation01: ''
+        limitation02: ''
+        limitation03: ''
+        limitation04: ''
+        limitation05: ''
+        limitation06: ''
+        limitation07: ''
+        limitation08: ''
+        limitation09: ''
+        limitation10: ''
+    sort: 200001
+    flags:
+      core:
+        sourceId: Item.vlDGBvvot6Ig0bzj
+    img: systems/torgeternity/images/icons/perk.webp
+    effects: []
+    folder: null
+    permission:
+      default: 0
+    _key: '!actors.items!cdSvyJHbG0GbFzkh.60VM3jzDEEY3SxpK'
+  - _id: 7vJhgHMYAd6SmA9J
+    name: Affinité avec la magie
+    type: perk
+    data:
+      category: elf
+      cosm: Aysle
+      prerequisites: elfe
+      timestaken: 1
+      description: >-
+        <p class="MsoNormal">Les elfes sont n&eacute;s de la magie et souffrent
+        s&rsquo;ils en sont priv&eacute;s. &Agrave; chaque fois qu&rsquo;un elfe
+        se trouve dans un royaume avec un Axiome Magie inf&eacute;rieur &agrave;
+        12, tout r&eacute;sultat Fatigue inflige un point de Choc
+        suppl&eacute;mentaire. Par exemple, un elfe &eacute;quip&eacute;
+        d&rsquo;une armure de plates dans une zone &agrave; faible magie subira
+        quatre points de Choc s&rsquo;il obtient un r&eacute;sultat Fatigue sur
+        la Ligne de Conflit (voir page 112) : un point suppl&eacute;mentaire
+        &agrave; cause de l&rsquo;armure et un autre &agrave; cause de son
+        Affinit&eacute; avec la magie.</p>
+      pulpPowers:
+        enhancementNumber: 0
+        enhancement01:
+          title: ''
+          description: ''
+          taken: false
+        enhancement02:
+          title: ''
+          description: ''
+          taken: false
+        enhancement03:
+          title: ''
+          description: ''
+          taken: false
+        enhancement04:
+          title: ''
+          description: ''
+          taken: false
+        enhancement05:
+          title: ''
+          description: ''
+          taken: false
+        enhancement06:
+          title: ''
+          description: ''
+          taken: false
+        enhancement07:
+          title: ''
+          description: ''
+          taken: false
+        enhancement08:
+          title: ''
+          description: ''
+          taken: false
+        enhancement09:
+          title: ''
+          description: ''
+          taken: false
+        enhancement10:
+          title: ''
+          description: ''
+          taken: false
+        enhancement11:
+          title: ''
+          description: ''
+          taken: false
+        enhancement12:
+          title: ''
+          description: ''
+          taken: false
+        enhancement13:
+          title: ''
+          description: ''
+          taken: false
+        enhancement14:
+          title: ''
+          description: ''
+          taken: false
+        enhancement15:
+          title: ''
+          description: ''
+          taken: false
+        limitationNumber: 0
+        limitation01: ''
+        limitation02: ''
+        limitation03: ''
+        limitation04: ''
+        limitation05: ''
+        limitation06: ''
+        limitation07: ''
+        limitation08: ''
+        limitation09: ''
+        limitation10: ''
+    sort: 300001
+    flags:
+      core:
+        sourceId: Item.qC6VYYNiTxOLv7L6
+    img: systems/torgeternity/images/icons/perk.webp
+    effects: []
+    folder: null
+    permission:
+      default: 0
+    _key: '!actors.items!cdSvyJHbG0GbFzkh.7vJhgHMYAd6SmA9J'
+  - _id: qSq08wDd7BjOyDUe
+    name: Potion de soin
+    type: gear
+    data:
+      cosm: Aysle
+      description: >-
+        <p>N&eacute;cessite un Axiome Magie de 13. Boire la potion est une
+        action simple et permet de r&eacute;cup&eacute;rer d&rsquo;une blessure
+        et d&rsquo;un D&eacute; Bonus de points de&nbsp; choc.</p>
+      techlevel: 12
+      price: '500'
+      value: 14
+    sort: 1200000
+    flags:
+      core:
+        sourceId: Item.sSWLrPCSi2G5jq6S
+    img: systems/torgeternity/images/icons/gear.webp
+    effects: []
+    folder: null
+    permission:
+      default: 0
+    _key: '!actors.items!cdSvyJHbG0GbFzkh.qSq08wDd7BjOyDUe'
+  - _id: ppzqLywwc7NrsWMn
+    name: Corde de 10m
+    type: gear
+    data:
+      cosm: Aysle
+      description: ''
+      techlevel: 8
+      price: '25'
+      value: 7
+    sort: 900000
+    flags:
+      core:
+        sourceId: Item.gzQRZhlLKWBaS49M
+    img: systems/torgeternity/images/icons/gear.webp
+    effects: []
+    folder: null
+    permission:
+      default: 0
+    _key: '!actors.items!cdSvyJHbG0GbFzkh.ppzqLywwc7NrsWMn'
+  - _id: vkDycEA4FyKcqNDp
+    name: Carquois
+    type: gear
+    data:
+      cosm: Aysle
+      description: >-
+        <p>Permet de stocker jusqu&rsquo;&agrave; 20 fl&egrave;ches (comprises
+        dans le prix).</p>
+      techlevel: 9
+      price: '5'
+      value: 4
+    sort: 1400000
+    flags:
+      core:
+        sourceId: Item.LFzKGBpEJvAe6D1t
+    img: systems/torgeternity/images/icons/gear.webp
+    effects: []
+    folder: null
+    permission:
+      default: 0
+    _key: '!actors.items!cdSvyJHbG0GbFzkh.vkDycEA4FyKcqNDp'
+  - _id: 88RG3LRq6IDjebha
+    name: Justaucorps en cuir
+    type: armor
+    data:
+      cosm: Aysle
+      description: ''
+      techlevel: 8
+      price: '100'
+      value: 10
+      bonus: 1
+      maxDex: 12
+      minStrength: null
+      equipped: false
+      equippedClass: .item-unequipped
+      notes: Torse
+    sort: 800000
+    flags:
+      core:
+        sourceId: Item.2rrg1qTCfjdHFtKl
+    img: systems/torgeternity/images/icons/armor.webp
+    effects:
+      - _id: m4QT8vQ1gc6L97GC
+        flags: {}
+        changes:
+          - key: data.other.armor
+            value: '1'
+            mode: 2
+          - key: data.other.toughness
+            value: '1'
+            mode: 2
+        disabled: false
+        duration:
+          startTime: null
+        icon: icons/svg/aura.svg
+        label: Armor +1
+        origin: Item.2rrg1qTCfjdHFtKl
+        tint: null
+        transfer: true
+        _key: >-
+          !actors.items.effects!cdSvyJHbG0GbFzkh.88RG3LRq6IDjebha.m4QT8vQ1gc6L97GC
+    folder: null
+    permission:
+      default: 0
+    _key: '!actors.items!cdSvyJHbG0GbFzkh.88RG3LRq6IDjebha'
+  - _id: 2SAaQ2J6dbdqjiuu
+    name: épée longue
+    type: meleeweapon
+    data:
+      cosm: Aysle
+      description: null
+      techlevel: 9
+      price: '120'
+      value: 10
+      attackWith: meleeWeapons
+      damageType: strengthPlus
+      damage: 3
+      ap: 0
+      bonus: 2
+      notes: '-'
+      chatNote: ''
+    sort: 500000
+    flags:
+      core:
+        sourceId: Item.LGGaptAxiwJMZLsD
+    img: systems/torgeternity/images/icons/melee-weapon-icon.webp
+    effects: []
+    folder: null
+    permission:
+      default: 0
+    _key: '!actors.items!cdSvyJHbG0GbFzkh.2SAaQ2J6dbdqjiuu'
+  - _id: sc5964pofzXsBkEK
+    name: Arc long composite
+    type: missileweapon
+    data:
+      cosm: Aysle
+      description: >-
+        <p class="MsoNormal">Version plus puissante de l&rsquo;arc long, cette
+        arme est constitu&eacute;e de trois mat&eacute;riaux diff&eacute;rents
+        et elle profite des propri&eacute;t&eacute;s &eacute;lastiques de
+        chacun. Bien que d&rsquo;une taille proche de celle d&rsquo;un arc
+        court, l&rsquo;arc composite propulse ses fl&egrave;ches avec une plus
+        grande v&eacute;locit&eacute;.</p>
+      techlevel: 13
+      price: '200'
+      value: 11
+      attackWith: missileWeapons
+      damageType: flat
+      damage: 13
+      ap: 0
+      ammo:
+        max: 1
+        value: 1
+      minStrength: 7
+      range: 20/40/80
+      notes: Force min 7
+      chatNote: ''
+    sort: 100000
+    flags:
+      core:
+        sourceId: Item.95xJ3EnPzdWIOAWh
+    img: systems/torgeternity/images/icons/missileweapon.webp
+    effects: []
+    folder: null
+    permission:
+      default: 0
+    _key: '!actors.items!cdSvyJHbG0GbFzkh.sc5964pofzXsBkEK'
+  - _id: i5pjyJX601Lh6KM5
+    name: Attaque à mains nues
+    type: customAttack
+    img: systems/torgeternity/images/icons/fist-icon.webp
+    data:
+      description: ''
+      attackWith: unarmedCombat
+      damageType: strengthPlus
+      damage: 0
+      ap: 0
+      notes: ''
+      chatNote: ''
+    effects: []
+    folder: null
+    sort: 0
+    permission:
+      default: 0
+      zWX19sSAtAWkeGhp: 3
+    flags:
+      core:
+        sourceId: Item.BFGjhDetVDm1xiku
+    _key: '!actors.items!cdSvyJHbG0GbFzkh.i5pjyJX601Lh6KM5'
+effects:
+  - _id: k9rKjxoCSjltaKB2
+    flags: {}
+    changes:
+      - key: data.other.armor
+        mode: 2
+        value: '1'
+      - key: data.other.toughness
+        mode: 2
+        value: '1'
+    disabled: false
+    duration:
+      startTime: 0
+    icon: icons/svg/aura.svg
+    label: Armure +1
+    origin: Actor.LS0j2kMQe09V0H6L.OwnedItem.88RG3LRq6IDjebha
+    tint: ''
+    transfer: true
+    _key: '!actors.effects!cdSvyJHbG0GbFzkh.k9rKjxoCSjltaKB2'
+folder: null
+sort: 100001
+permission:
+  default: 0
+  A9LyAqagoJJU3gDH: 3
+flags: {}
+_key: '!actors!cdSvyJHbG0GbFzkh'
+

@@ -1,0 +1,13 @@
+_id: ftoZLbQxK7cmnHIE
+name: Cartes de Cosm
+content: "<p>Les Cartes de Cosm sont le reflet de certains thèmes et Lois du Monde de la zone dans laquelle les personnages se trouvent.\_Chaque joueur reçoit une seule carte Cosm au début de chaque session. Sauf indication contraire dans le texte de la carte, un joueur peut choisir de jouer une carte Cosm à tout moment.</p>\n<p>\_</p>\n<p>Pour plus d'informations sur l'utilisation des cartes dans le système Foundry, voir\_\_<span style=\"font-family:var(--font-primary);font-size:var(--font-size-14)\">@Compendium[torgeternity.basic-rules-fr.ZaVT27zI7lzHCyvA]{gestion des cartes}</span></p>"
+folder: null
+sort: 0
+permission:
+  kz1RJu8vrAPmTUwN: 3
+flags:
+  core:
+    sourceId: JournalEntry.ohnNuFmlgEpYBrZT
+pages: []
+_key: '!journal!ftoZLbQxK7cmnHIE'
+

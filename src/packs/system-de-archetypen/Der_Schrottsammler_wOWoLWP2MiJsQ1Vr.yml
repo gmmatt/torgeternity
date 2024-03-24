@@ -1,0 +1,1231 @@
+_id: wOWoLWP2MiJsQ1Vr
+name: Der Schrottsammler
+type: stormknight
+img: systems/torgeternity/images/characters/Scrapper.Avatar.webp
+items:
+  - _id: sOJ9aOihM9D7wkYP
+    name: Geigerzähler
+    type: gear
+    img: systems/torgeternity/images/icons/gear-icon.webp
+    effects: []
+    folder: YrLpjzkzDZxqWzUw
+    sort: 0
+    flags:
+      core:
+        sourceId: Item.byDMEsJSaBUHDi5V
+    system:
+      cosm: Tharkold
+      description: <p>+4&nbsp;<em>Finden</em> von radioaktiven Stoffen.</p>
+      techlevel: 21
+      price: '0'
+      value: 0
+    ownership:
+      default: 0
+      9Q0XnqFwko7hRlvL: 3
+    _stats:
+      systemId: torgeternity
+      systemVersion: 3.1.1
+      coreVersion: '11.308'
+      createdTime: null
+      modifiedTime: 1694868259394
+      lastModifiedBy: CtisFurQNe9h7ABb
+    _key: '!actors.items!wOWoLWP2MiJsQ1Vr.sOJ9aOihM9D7wkYP'
+  - _id: x1JhUA2XJSYkaLfr
+    name: Aufprallhammer
+    type: meleeweapon
+    img: systems/torgeternity/images/icons/axe-icon.webp
+    effects: []
+    folder: null
+    sort: 15000000
+    flags:
+      core:
+        sourceId: >-
+          Compendium.te001-core-rulebook.grw-de-ausruestung.Item.UnO4Ubrqpn348wrx
+    system:
+      cosm: Tharkold
+      description: >-
+        <p>@UUID[Compendium.te001-core-rulebook.grw-de-grw.Qlx6yGF0Mmo6Xzrv.JournalEntryPage.7GGUUHzuYIqGPXDO#erschuttern:]{Ersch&uuml;ttern}</p>
+
+        <p>@UUID[Compendium.te001-core-rulebook.grw-de-grw.Qlx6yGF0Mmo6Xzrv.JournalEntryPage.7GGUUHzuYIqGPXDO#zweihandig:]{Zweih&auml;ndig}</p>
+
+        <p>Der schwere Kopf dieses Hammers enth&auml;lt einen pneumatischen
+        Mechanismus, der dem Schwung einen Sto&szlig; hinzuf&uuml;gt und den
+        Hammer am Auftreffpunkt in das Ziel treibt &ndash; vorausgesetzt der
+        Tr&auml;ger ist stark genug, den Hammer &uuml;berhaupt erst in Schwung
+        zu bringen.</p>
+      techlevel: 25
+      price: '300'
+      value: 13
+      attackWith: meleeWeapons
+      damageType: strengthPlus
+      damage: 4
+      ap: 0
+      bonus: 2
+      notes: Erschüttern, Zweihändig
+      chatNote: ''
+    ownership:
+      default: 0
+      9Q0XnqFwko7hRlvL: 3
+      CtisFurQNe9h7ABb: 3
+    _stats:
+      systemId: torgeternity
+      systemVersion: 3.1.1
+      coreVersion: '11.308'
+      createdTime: 1694868208996
+      modifiedTime: 1694868208996
+      lastModifiedBy: CtisFurQNe9h7ABb
+    _key: '!actors.items!wOWoLWP2MiJsQ1Vr.x1JhUA2XJSYkaLfr'
+  - _id: fTrf5YWN4AHjo5Rd
+    name: Netzwerfer
+    type: missileweapon
+    img: systems/torgeternity/images/icons/missile-weapon-icon.webp
+    effects: []
+    folder: null
+    sort: 17800000
+    flags:
+      core:
+        sourceId: >-
+          Compendium.te001-core-rulebook.grw-de-ausruestung.Item.ZoLSdDqVUue06Zsh
+    system:
+      cosm: Tharkold
+      description: >-
+        <p>@UUID[Compendium.te001-core-rulebook.grw-de-grw.Qlx6yGF0Mmo6Xzrv.JournalEntryPage.41rZYYhaMC2T260D#flachenangriffe]{Fl&auml;chenangriffe}</p>
+
+        <p>Ein mit Gewichten beschwertes Netz steckt in einem Rohr und wird auf
+        Knopfdruck mithilfe einer eng gewickelten Torsionsfeder auf das Ziel
+        geschleudert. Ein mechanischer Motor wird ben&ouml;tigt, um die Feder zu
+        spannen und das Netz nach einem Einsatz wieder einzufahren. Das Netz
+        funktioniert wie ein
+        @UUID[Compendium.te001-core-rulebook.grw-de-grw.Qlx6yGF0Mmo6Xzrv.JournalEntryPage.41rZYYhaMC2T260D#ringen]{Ringen-Angriff},
+        sodass ein Standard-Erfolg &ndash;2 Schaden verursacht, w&auml;hrend ein
+        guter Treffer das Ziel festh&auml;lt und vollen Schaden zuf&uuml;gt. Bei
+        einem hervorragenden Treffer erleidet das Ziel zudem den Zustand
+        Angeschlagen. Die St&auml;rke des Netzes betr&auml;gt f&uuml;r die
+        Vergleichende Probe zum Befreien 10. Technod&auml;monen verwenden oft
+        eine spezielle Version dieser Waffe, die ein Netz verschie&szlig;en,
+        welches gleichzeitig die Eigenschaften eines Schmerzhandschuhs
+        aufweist.</p>
+      techlevel: 25
+      price: '100'
+      value: 10
+      attackWith: missileWeapons
+      damageType: flat
+      damage: 5
+      ap: 0
+      ammo:
+        max: 1
+        value: 1
+      minStrength: null
+      range: 5/10/15
+      notes: Kleine Explosion
+      chatNote: ''
+    ownership:
+      default: 0
+      9Q0XnqFwko7hRlvL: 3
+      CtisFurQNe9h7ABb: 3
+    _stats:
+      systemId: torgeternity
+      systemVersion: 3.1.1
+      coreVersion: '11.308'
+      createdTime: 1694868215692
+      modifiedTime: 1694868215692
+      lastModifiedBy: CtisFurQNe9h7ABb
+    _key: '!actors.items!wOWoLWP2MiJsQ1Vr.fTrf5YWN4AHjo5Rd'
+  - _id: jqiacNIAfU9kIrUI
+    name: Diffraxplattenrüstung
+    type: armor
+    img: systems/torgeternity/images/icons/armor-icon.webp
+    effects:
+      - _id: oPRw0RQVk9rYL9az
+        changes:
+          - key: system.other.toughness
+            mode: 2
+            value: '3'
+            priority: null
+          - key: system.other.armor
+            mode: 2
+            value: '3'
+            priority: null
+        disabled: false
+        duration:
+          startTime: null
+          seconds: null
+          combat: null
+          rounds: null
+          turns: null
+          startRound: null
+          startTurn: null
+        icon: icons/svg/aura.svg
+        origin: Item.nvfE5QkiyYYi13bH
+        transfer: true
+        flags: {}
+        tint: null
+        name: Rüstung +3
+        description: ''
+        statuses: []
+        _key: >-
+          !actors.items.effects!wOWoLWP2MiJsQ1Vr.jqiacNIAfU9kIrUI.oPRw0RQVk9rYL9az
+      - _id: RsBPwdekd16EHOCw
+        changes:
+          - key: system.other.fatigue
+            mode: 2
+            value: '1'
+            priority: null
+        disabled: false
+        duration:
+          startTime: null
+          seconds: null
+          combat: null
+          rounds: null
+          turns: null
+          startRound: null
+          startTurn: null
+        icon: icons/svg/aura.svg
+        origin: Compendium.te001-core-rulebook.grw-de-ausruestung.lAjH7TpknFEg0r9V
+        transfer: true
+        flags: {}
+        tint: null
+        name: Ermüdung
+        description: ''
+        statuses: []
+        _key: >-
+          !actors.items.effects!wOWoLWP2MiJsQ1Vr.jqiacNIAfU9kIrUI.RsBPwdekd16EHOCw
+    folder: null
+    sort: 25000000
+    flags:
+      core:
+        sourceId: >-
+          Compendium.te001-core-rulebook.grw-de-ausruestung.Item.lAjH7TpknFEg0r9V
+    system:
+      cosm: Tharkold
+      description: >-
+        <p>@UUID[Compendium.te001-core-rulebook.grw-de-grw.Qlx6yGF0Mmo6Xzrv.JournalEntryPage.7GGUUHzuYIqGPXDO#ermudung:]{Erm&uuml;dung}</p>
+
+        <p>Diese R&uuml;stung besteht aus einem schwarzen Metall, das an
+        Obsidian erinnert und aus dem Schrott von energieablenkenden
+        Panzerplatten gewonnen wurde. Auftreffende Energiestrahlen zucken
+        brutzelnd und knallend &uuml;ber ihre Oberfl&auml;che und werden dann in
+        einem zuf&auml;lligen Winkel zur&uuml;ckgeworfen.</p>
+      techlevel: 25
+      price: '500'
+      value: 13
+      bonus: 3
+      maxDex: 8
+      minStrength: 8
+      equipped: true
+      equippedClass: item-equipped
+      notes: Ermüdung, Bonus gilt auch für Ausweichen gegen Energiewaffen.
+    ownership:
+      default: 0
+      9Q0XnqFwko7hRlvL: 3
+      CtisFurQNe9h7ABb: 3
+    _stats:
+      systemId: torgeternity
+      systemVersion: 3.1.1
+      coreVersion: '11.308'
+      createdTime: 1694868223532
+      modifiedTime: 1694868223537
+      lastModifiedBy: CtisFurQNe9h7ABb
+    _key: '!actors.items!wOWoLWP2MiJsQ1Vr.jqiacNIAfU9kIrUI'
+  - name: Filtermaske
+    type: gear
+    img: systems/torgeternity/images/icons/gear-icon.webp
+    effects: []
+    folder: null
+    sort: 29500000
+    flags:
+      core:
+        sourceId: Item.L5Lrdvhfc08MOsKu
+    _id: zSRHzUyGqRNCVKI5
+    system:
+      cosm: Pan-Pacifica
+      description: >-
+        <p>Fortschrittliche Mikrofasern filtern sch&auml;dliche Partikel aus der
+        Luft und machen den Tr&auml;ger immun gegen inhalierte Gifte und andere
+        sch&auml;dliche Stoffe.</p>
+      techlevel: 24
+      price: '60'
+      value: 9
+    ownership:
+      default: 0
+      9Q0XnqFwko7hRlvL: 3
+      CtisFurQNe9h7ABb: 3
+    _stats:
+      systemId: torgeternity
+      systemVersion: 3.1.1
+      coreVersion: '11.308'
+      createdTime: 1694868233363
+      modifiedTime: 1694868233363
+      lastModifiedBy: CtisFurQNe9h7ABb
+    _key: '!actors.items!wOWoLWP2MiJsQ1Vr.zSRHzUyGqRNCVKI5'
+  - name: Leuchtfackel
+    type: gear
+    img: systems/torgeternity/images/icons/gear-icon.webp
+    effects: []
+    folder: null
+    sort: 400000
+    flags:
+      core:
+        sourceId: Item.Uc1pL9fqLa4cfonl
+    _id: 82b6WBPl4IkH9bYe
+    system:
+      cosm: Nil-Imperium
+      description: ''
+      techlevel: 20
+      price: '5'
+      value: 4
+    ownership:
+      default: 0
+      9Q0XnqFwko7hRlvL: 3
+      CtisFurQNe9h7ABb: 3
+    _stats:
+      systemId: torgeternity
+      systemVersion: 3.1.1
+      coreVersion: '11.308'
+      createdTime: 1694868254328
+      modifiedTime: 1694868254328
+      lastModifiedBy: CtisFurQNe9h7ABb
+    _key: '!actors.items!wOWoLWP2MiJsQ1Vr.82b6WBPl4IkH9bYe'
+  - name: Digan Cyberarm
+    type: implant
+    img: systems/torgeternity/images/icons/implant.webp
+    effects:
+      - _id: xv8YcVKQNS2B70W6
+        changes:
+          - key: system.attributes.strength
+            mode: 2
+            value: '2'
+            priority: null
+        disabled: false
+        duration:
+          startTime: null
+          seconds: null
+          combat: null
+          rounds: null
+          turns: null
+          startRound: null
+          startTurn: null
+        icon: icons/svg/aura.svg
+        origin: Item.QysjEB4L1IrUlgve
+        transfer: true
+        flags: {}
+        tint: null
+        name: Stärke +2 (Arm)
+        description: ''
+        statuses: []
+        _key: >-
+          !actors.items.effects!wOWoLWP2MiJsQ1Vr.PH0fnq5a93BlVCbC.xv8YcVKQNS2B70W6
+      - icon: icons/svg/aura.svg
+        origin: >-
+          Compendium.te001-core-rulebook.grw-de-ausruestung.Item.EiR06Y2MYEbSMgTZ
+        duration:
+          startTime: null
+          seconds: null
+          combat: null
+          rounds: null
+          turns: null
+          startRound: null
+          startTurn: null
+        disabled: true
+        name: Rüstung +3 (Arm)
+        _id: 77CTUjM5RubOjoJX
+        changes:
+          - key: system.other.toughness
+            mode: 2
+            value: '3'
+            priority: null
+          - key: system.other.armor
+            mode: 2
+            value: '3'
+            priority: null
+        description: ''
+        transfer: true
+        statuses: []
+        flags: {}
+        tint: null
+        _key: >-
+          !actors.items.effects!wOWoLWP2MiJsQ1Vr.PH0fnq5a93BlVCbC.77CTUjM5RubOjoJX
+    folder: null
+    sort: 6800000
+    flags:
+      core:
+        sourceId: >-
+          Compendium.te001-core-rulebook.grw-de-ausruestung.Item.EiR06Y2MYEbSMgTZ
+    _id: PH0fnq5a93BlVCbC
+    system:
+      cosm: Tharkold
+      description: >-
+        <p>Digan-Konstruktionen sind sperrig, aber leistungsstark, und dieser
+        modulare Ersatzarm ist keine Ausnahme. Er verleiht einen Bonus von +2
+        auf St&auml;rke (und dadurch auch auf den Schaden im Nahkampf) und einen
+        R&uuml;stungsbonus von +3 in der dazugeh&ouml;rigen K&ouml;rperzone. Die
+        Armpanzerung sch&uuml;tzt den Torso des Charakters nur dann, wenn er
+        eine Aktive Verteidigung ausf&uuml;hrt. Die Verbesserung der St&auml;rke
+        gilt nur f&uuml;r Proben und Angriffe, die mit diesem Arm
+        durchgef&uuml;hrt werden.</p>
+      techlevel: 25
+      price: '8000'
+      value: 19
+      notes: Stärke +2 mit diesem Arm
+    ownership:
+      default: 0
+      9Q0XnqFwko7hRlvL: 3
+      CtisFurQNe9h7ABb: 3
+    _stats:
+      systemId: torgeternity
+      systemVersion: 3.1.1
+      coreVersion: '11.308'
+      createdTime: 1694868434753
+      modifiedTime: 1694868434753
+      lastModifiedBy: CtisFurQNe9h7ABb
+    _key: '!actors.items!wOWoLWP2MiJsQ1Vr.PH0fnq5a93BlVCbC'
+  - name: Thav Strahlungsfilter MK II
+    type: implant
+    img: systems/torgeternity/images/icons/implant.webp
+    effects: []
+    folder: null
+    sort: 28300000
+    flags:
+      core:
+        sourceId: >-
+          Compendium.te001-core-rulebook.grw-de-ausruestung.Item.rjyA5DdemvG61FxZ
+    _id: ps6rvCLzCHfBjtZ7
+    system:
+      cosm: Tharkold
+      description: ''
+      techlevel: 25
+      price: '2000'
+      value: 17
+      notes: Wunden durch Strahlung heilen normal
+    ownership:
+      default: 0
+      9Q0XnqFwko7hRlvL: 3
+      CtisFurQNe9h7ABb: 3
+    _stats:
+      systemId: torgeternity
+      systemVersion: 3.1.1
+      coreVersion: '11.308'
+      createdTime: 1694868444300
+      modifiedTime: 1694868444300
+      lastModifiedBy: CtisFurQNe9h7ABb
+    _key: '!actors.items!wOWoLWP2MiJsQ1Vr.ps6rvCLzCHfBjtZ7'
+  - _id: n1jJDaY6pxmXQSSn
+    name: Okkultech-Implantate
+    type: perk
+    img: systems/torgeternity/images/icons/reality-icon.webp
+    effects: []
+    folder: null
+    sort: 0
+    flags:
+      core:
+        sourceId: Compendium.te001-core-rulebook.grw-de-vorzuverb.Item.KZgfynKpQDBjiQfK
+    system:
+      category: occultech
+      cosm: Tharkold
+      prerequisites: Stärke 8+
+      timestaken: 1
+      description: >-
+        <p>Wenn der Charakter diesen Vorzug ausw&auml;hlt, darf er
+        Okkultech-Implantate mit einem Gesamtwert von 10.000 $
+        @UUID[Compendium.te001-core-rulebook.grw-de-grw.Qlx6yGF0Mmo6Xzrv.JournalEntryPage.7GGUUHzuYIqGPXDO#okkultech]{ausw&auml;hlen}.
+        Diese Implantate wurden zuvor sorgf&auml;ltig von jeglichem
+        d&auml;monischen Einfluss bereinigt.&nbsp;</p>
+
+        <p>Zus&auml;tzliche Implantate: Dieser Vorzug darf mehrmals
+        ausgew&auml;hlt werden. Jedes Mal nach dem ersten gew&auml;hrt es dem
+        Charaktere weitere Implantate im Wert von 5.000 $.&nbsp;</p>
+
+        <p>Die Cyberware aus Tharkold, auch als &bdquo;Okkultech&ldquo;
+        bezeichnet, ist eine grausame Mischung aus magischen und maschinellen
+        Teilen, die auf grobe Weise in den menschlichen K&ouml;rper gerammt
+        wurden. Es ist schmerzhaft, sie zu empfangen, zu benutzen und in Betrieb
+        zu halten, aber die D&auml;monen schwelgen in der Agonie, und die
+        Menschen verlassen sich auf sie, um der St&auml;rke ihrer Meister
+        begegnen zu k&ouml;nnen.&nbsp;</p>
+
+        <p>Implantate w&auml;hrend des Spiels: Falls der Okkultech- Vorzug nach
+        der Charaktererschaffung erworben wird, muss sich der Charakter nach
+        Tharkold begeben, um sich die Implantate in einer Cyberwerkstatt
+        einbauen zu lassen.</p>
+      pulpPowers:
+        enhancementNumber: 0
+        enhancement01:
+          title: ''
+          description: ''
+          taken: false
+        enhancement02:
+          title: ''
+          description: ''
+          taken: false
+        enhancement03:
+          title: ''
+          description: ''
+          taken: false
+        enhancement04:
+          title: ''
+          description: ''
+          taken: false
+        enhancement05:
+          title: ''
+          description: ''
+          taken: false
+        enhancement06:
+          title: ''
+          description: ''
+          taken: false
+        enhancement07:
+          title: ''
+          description: ''
+          taken: false
+        enhancement08:
+          title: ''
+          description: ''
+          taken: false
+        enhancement09:
+          title: ''
+          description: ''
+          taken: false
+        enhancement10:
+          title: ''
+          description: ''
+          taken: false
+        enhancement11:
+          title: ''
+          description: ''
+          taken: false
+        enhancement12:
+          title: ''
+          description: ''
+          taken: false
+        enhancement13:
+          title: ''
+          description: ''
+          taken: false
+        enhancement14:
+          title: ''
+          description: ''
+          taken: false
+        enhancement15:
+          title: ''
+          description: ''
+          taken: false
+        limitationNumber: 0
+        limitation01: ''
+        limitation02: ''
+        limitation03: ''
+        limitation04: ''
+        limitation05: ''
+        limitation06: ''
+        limitation07: ''
+        limitation08: ''
+        limitation09: ''
+        limitation10: ''
+    ownership:
+      default: 0
+      9Q0XnqFwko7hRlvL: 3
+      CtisFurQNe9h7ABb: 3
+    _stats:
+      systemId: torgeternity
+      systemVersion: 3.1.1
+      coreVersion: '11.308'
+      createdTime: 1694868478814
+      modifiedTime: 1694868492456
+      lastModifiedBy: CtisFurQNe9h7ABb
+    _key: '!actors.items!wOWoLWP2MiJsQ1Vr.n1jJDaY6pxmXQSSn'
+  - _id: o4fLdHCWhNgkpRht
+    name: Wirbelwind
+    type: perk
+    img: systems/torgeternity/images/icons/reality-icon.webp
+    effects: []
+    folder: null
+    sort: 0
+    flags:
+      core:
+        sourceId: Compendium.te001-core-rulebook.grw-de-vorzuverb.Item.fXcdeTQWWiPGEybU
+    system:
+      category: prowess
+      cosm: (Keins)
+      prerequisites: Geschicklichkeit 8+
+      timestaken: 1
+      description: >-
+        <p>Der Krieger hat daf&uuml;r trainiert, in einem Tanz des Todes auf
+        einen Schlag eine gro&szlig;e Zahl von Feinden zu treffen. Er darf beim
+        Einsatz von
+        @UUID[Compendium.te001-core-rulebook.grw-de-grw.Qlx6yGF0Mmo6Xzrv.JournalEntryPage.41rZYYhaMC2T260D#mehrfach-zielauswahl]{Mehrfach-Zielauswahl}
+        bei einem bewaffneten oder unbewaffneten Nahkampfangriff die ersten
+        beiden Malus-Punkte ignorieren.</p>
+      pulpPowers:
+        enhancementNumber: 0
+        enhancement01:
+          title: ''
+          description: ''
+          taken: false
+        enhancement02:
+          title: ''
+          description: ''
+          taken: false
+        enhancement03:
+          title: ''
+          description: ''
+          taken: false
+        enhancement04:
+          title: ''
+          description: ''
+          taken: false
+        enhancement05:
+          title: ''
+          description: ''
+          taken: false
+        enhancement06:
+          title: ''
+          description: ''
+          taken: false
+        enhancement07:
+          title: ''
+          description: ''
+          taken: false
+        enhancement08:
+          title: ''
+          description: ''
+          taken: false
+        enhancement09:
+          title: ''
+          description: ''
+          taken: false
+        enhancement10:
+          title: ''
+          description: ''
+          taken: false
+        enhancement11:
+          title: ''
+          description: ''
+          taken: false
+        enhancement12:
+          title: ''
+          description: ''
+          taken: false
+        enhancement13:
+          title: ''
+          description: ''
+          taken: false
+        enhancement14:
+          title: ''
+          description: ''
+          taken: false
+        enhancement15:
+          title: ''
+          description: ''
+          taken: false
+        limitationNumber: 0
+        limitation01: ''
+        limitation02: ''
+        limitation03: ''
+        limitation04: ''
+        limitation05: ''
+        limitation06: ''
+        limitation07: ''
+        limitation08: ''
+        limitation09: ''
+        limitation10: ''
+    ownership:
+      default: 0
+      9Q0XnqFwko7hRlvL: 3
+      CtisFurQNe9h7ABb: 3
+    _stats:
+      systemId: torgeternity
+      systemVersion: 3.1.1
+      coreVersion: '11.308'
+      createdTime: 1694868482856
+      modifiedTime: 1694868489377
+      lastModifiedBy: CtisFurQNe9h7ABb
+    _key: '!actors.items!wOWoLWP2MiJsQ1Vr.o4fLdHCWhNgkpRht'
+effects:
+  - _id: 8CZNvCMyFOInZCeo
+    changes:
+      - key: system.other.toughness
+        mode: 2
+        value: '3'
+        priority: null
+      - key: system.other.armor
+        mode: 2
+        value: '3'
+        priority: null
+    disabled: false
+    duration:
+      startTime: 0
+      seconds: null
+      combat: null
+      rounds: null
+      turns: null
+      startRound: null
+      startTurn: null
+    icon: icons/svg/aura.svg
+    origin: >-
+      Compendium.torgeternity.system-de-archetypen.Actor.wOWoLWP2MiJsQ1Vr.Item.jqiacNIAfU9kIrUI
+    transfer: false
+    flags: {}
+    tint: null
+    name: Rüstung +3
+    description: ''
+    statuses: []
+    _key: '!actors.effects!wOWoLWP2MiJsQ1Vr.8CZNvCMyFOInZCeo'
+  - _id: 9PbXrVGwn8adm5cN
+    changes:
+      - key: system.other.fatigue
+        mode: 2
+        value: '1'
+        priority: null
+    disabled: false
+    duration:
+      startTime: 0
+      seconds: null
+      combat: null
+      rounds: null
+      turns: null
+      startRound: null
+      startTurn: null
+    icon: icons/svg/aura.svg
+    origin: >-
+      Compendium.torgeternity.system-de-archetypen.Actor.wOWoLWP2MiJsQ1Vr.Item.jqiacNIAfU9kIrUI
+    transfer: false
+    flags: {}
+    tint: null
+    name: Ermüdung
+    description: ''
+    statuses: []
+    _key: '!actors.effects!wOWoLWP2MiJsQ1Vr.9PbXrVGwn8adm5cN'
+  - _id: Rhb58OAkOKdswdXy
+    changes:
+      - key: system.attributes.strength
+        mode: 2
+        value: '2'
+        priority: null
+    disabled: false
+    duration:
+      startTime: 0
+      seconds: null
+      combat: null
+      rounds: null
+      turns: null
+      startRound: null
+      startTurn: null
+    icon: icons/svg/aura.svg
+    origin: >-
+      Compendium.torgeternity.system-de-archetypen.Actor.wOWoLWP2MiJsQ1Vr.Item.PH0fnq5a93BlVCbC
+    transfer: false
+    flags: {}
+    tint: null
+    name: Stärke +2 (Arm)
+    description: ''
+    statuses: []
+    _key: '!actors.effects!wOWoLWP2MiJsQ1Vr.Rhb58OAkOKdswdXy'
+  - icon: icons/svg/aura.svg
+    origin: >-
+      Compendium.torgeternity.system-de-archetypen.Actor.wOWoLWP2MiJsQ1Vr.Item.PH0fnq5a93BlVCbC
+    duration:
+      startTime: 0
+      seconds: null
+      combat: null
+      rounds: null
+      turns: null
+      startRound: null
+      startTurn: null
+    disabled: true
+    name: Rüstung +3 (Arm)
+    _id: uRIouIuG7d9Ub2mD
+    changes:
+      - key: system.other.toughness
+        mode: 2
+        value: '3'
+        priority: null
+      - key: system.other.armor
+        mode: 2
+        value: '3'
+        priority: null
+    description: ''
+    transfer: false
+    statuses: []
+    flags: {}
+    tint: null
+    _key: '!actors.effects!wOWoLWP2MiJsQ1Vr.uRIouIuG7d9Ub2mD'
+folder: null
+sort: 0
+flags:
+  core:
+    sourceId: Compendium.torgeternity.archetypes.ys0MhNx2uIG2ORAD
+system:
+  shock:
+    max: 8
+    value: 0
+  wounds:
+    max: 3
+    value: 0
+  attributes:
+    charisma: 6
+    dexterity: 8
+    mind: 6
+    spirit: 8
+    strength: 12
+  other:
+    move: 8
+    run: 24
+    toughness: 15
+    armor: 3
+    cosm: tharkold
+    possibilities: 0
+    posibilities: 3
+  skills:
+    airVehicles:
+      baseAttribute: dexterity
+      adds: null
+      value: '-'
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    alteration:
+      baseAttribute: mind
+      adds: null
+      value: '-'
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    apportation:
+      baseAttribute: spirit
+      adds: null
+      value: '-'
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    beastRiding:
+      baseAttribute: dexterity
+      adds: null
+      value: 8
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    computers:
+      baseAttribute: mind
+      adds: null
+      value: 6
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    conjuration:
+      baseAttribute: spirit
+      adds: null
+      value: '-'
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    divination:
+      baseAttribute: mind
+      adds: null
+      value: '-'
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    dodge:
+      baseAttribute: dexterity
+      adds: 1
+      value: 9
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    energyWeapons:
+      baseAttribute: dexterity
+      adds: null
+      value: 8
+      isFav: false
+      groupName: combat
+      unskilledUse: 1
+    evidenceAnalysis:
+      baseAttribute: mind
+      adds: null
+      value: 6
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    faith:
+      baseAttribute: spirit
+      adds: null
+      value: 8
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    find:
+      baseAttribute: mind
+      adds: 2
+      value: 8
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    fireCombat:
+      baseAttribute: dexterity
+      adds: 1
+      value: 9
+      isFav: false
+      groupName: combat
+      unskilledUse: 1
+    firstAid:
+      baseAttribute: mind
+      adds: null
+      value: 6
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    heavyWeapons:
+      baseAttribute: dexterity
+      adds: 1
+      value: 9
+      isFav: false
+      groupName: combat
+      unskilledUse: 1
+    intimidation:
+      baseAttribute: spirit
+      adds: 2
+      value: 10
+      isFav: false
+      groupName: interaction
+      unskilledUse: 1
+    kinesis:
+      baseAttribute: spirit
+      adds: null
+      value: '-'
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    landVehicles:
+      baseAttribute: dexterity
+      adds: 1
+      value: 9
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    language:
+      baseAttribute: mind
+      adds: null
+      value: '-'
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    lockpicking:
+      baseAttribute: dexterity
+      adds: 1
+      value: 9
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    maneuver:
+      baseAttribute: dexterity
+      adds: null
+      value: 8
+      isFav: false
+      groupName: interaction
+      unskilledUse: 1
+    medicine:
+      baseAttribute: mind
+      adds: null
+      value: '-'
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    meleeWeapons:
+      baseAttribute: dexterity
+      adds: 3
+      value: 11
+      isFav: false
+      groupName: combat
+      unskilledUse: 1
+    missileWeapons:
+      baseAttribute: dexterity
+      adds: 1
+      value: 9
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    persuasion:
+      baseAttribute: charisma
+      adds: null
+      value: 6
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    precognition:
+      baseAttribute: mind
+      adds: null
+      value: '-'
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    profession:
+      baseAttribute: mind
+      adds: null
+      value: 6
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    reality:
+      baseAttribute: spirit
+      adds: 1
+      value: 9
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    scholar:
+      baseAttribute: mind
+      adds: null
+      value: 6
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    science:
+      baseAttribute: mind
+      adds: null
+      value: 6
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    stealth:
+      baseAttribute: dexterity
+      adds: null
+      value: 8
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    streetwise:
+      baseAttribute: charisma
+      adds: null
+      value: 6
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    survival:
+      baseAttribute: mind
+      adds: 1
+      value: 7
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    taunt:
+      baseAttribute: charisma
+      adds: 1
+      value: 7
+      isFav: false
+      groupName: interaction
+      unskilledUse: 1
+    telepathy:
+      baseAttribute: charisma
+      adds: null
+      value: '-'
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    tracking:
+      baseAttribute: mind
+      adds: null
+      value: 6
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    trick:
+      baseAttribute: mind
+      adds: null
+      value: 6
+      isFav: false
+      groupName: interaction
+      unskilledUse: 1
+    unarmedCombat:
+      baseAttribute: dexterity
+      adds: null
+      value: 8
+      isFav: false
+      groupName: combat
+      unskilledUse: 1
+    waterVehicles:
+      baseAttribute: dexterity
+      adds: null
+      value: 8
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    willpower:
+      baseAttribute: spirit
+      adds: null
+      value: 8
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+  xp:
+    unspent: 0
+    earned: 0
+  axioms:
+    magic: 12
+    social: 25
+    spirit: 4
+    tech: 25
+  details:
+    clearance: alpha
+    background: >-
+      <p><img class="charimg"
+      src="systems/torgeternity/images/characters/scrapper.webp" alt=""
+      width="1155" height="2061"></p>
+
+      <p
+      class="moreheight">@UUID[Compendium.torgeternity.system-de-handouts.JournalEntry.DLLvnXpv7RFhRgHu.JournalEntryPage.KlL26KhVUnkWipzG]{Archetyp
+      - Der Schrottsammler}</p>
+
+      <h3>&Uuml;berblick</h3>
+
+      <p>Als die Russen eine Atomwaffe auf die Tharkold-Mahlstrombr&uuml;cke
+      warfen, war der Fallout f&uuml;r beide Seiten vernichtend. Abgebr&uuml;hte
+      Menschen pl&uuml;ndern jetzt das riesige, verstrahlte Verheerte Land und
+      suchen nach n&uuml;tzlichen Teilen von
+      Technod&auml;mon-Ger&auml;tschaften, um sie zu erbeuten, zu verkaufen oder
+      zu benutzen.&nbsp;</p>
+
+      <p>Du warst einst Soldat in der russischen Armee, aber das Entsetzen der
+      Schlacht von Moskau und die erdr&uuml;ckende Entt&auml;uschung &uuml;ber
+      die Zusammenarbeit der Regierung mit den D&auml;monen nach der Schlacht
+      haben diese Tage beendet.</p>
+
+      <h3>Taktiken</h3>
+
+      <p>Dein Aufprallhammer ist eine extrem m&auml;chtige Waffe, besonders wenn
+      er mit deiner hohen <em>St&auml;rke </em>gef&uuml;hrt wird. Dein bester
+      Plan ist es normalerweise, in die Mitte der Gegner zu gelangen und den
+      Hammer zu schwingen, wobei dein CyberArm dem Angriff noch mehr Wumms
+      verleiht. Deine Interaktionsangriffe sind im Vergleich zu deinem Hammer
+      nicht sehr stark, aber einen Versuch wert, wenn es sich um anerkannte
+      Aktionen handelt. Wenn deine Gegner auf Abstand bleiben, mach dich auf die
+      Suche nach weggeworfenen Schusswaffen oder versuche sie
+      <em>einzusch&uuml;chtern</em>.</p>
+
+      <h3>Moment der Krise</h3>
+
+      <p>Nach der Schlacht von Moskau war die Fahnenflucht deine einzige Option.
+      Das Verheerte Land rief dich zu sich und bot dir einen sauberen Tod fernab
+      von Politik und Verrat. Stattdessen fandest du dort verzweifelte Menschen
+      vor, die von den Scheusalen heimgesucht werden, die der Fallout erschaffen
+      hat. Das T&ouml;ten eines dieser Tiere k&ouml;nnte deine Verwandlung in
+      einen Storm Knight ausgel&ouml;st haben, oder vielleicht war es die
+      Rettung einer Familie, ohne vorher einen Preis ausgehandelt zu haben.</p>
+
+      <h3>Zitat</h3>
+
+      <p>"Es gibt ein russisches Sprichwort: "Rache ist ein Gericht, das am
+      besten kalt serviert wird. In Russland ist es sehr, sehr kalt, Mudak."</p>
+
+      <h3>Beschreibung</h3>
+
+      <p>Du bist gro&szlig;, breitschultrig und wie ein Panzer gebaut. Jeder im
+      Verheerten Land tr&auml;gt &auml;hnliche Kleidung &ndash; hergestellt aus
+      wild zusammengew&uuml;rfelten Kleidungsst&uuml;cken und R&uuml;stungen,
+      die praktisch oder widerstandsf&auml;hig genug sind, um zu halten. Du
+      gibst vor, zynisch und sarkastisch zu sein, aber eigentlich bist du
+      optimistisch und idealistisch. Dein Aufprallhammer ist immer gut sichtbar,
+      ein &uuml;berdimensionales Ger&auml;t, das f&uuml;r Technod&auml;monen
+      entwickelt wurde. Selbst in Ruhe brummt es mit finsterer Energie.</p>
+
+      <h3>Agenda</h3>
+
+      <p>Freundschaft und Loyalit&auml;t stehen im Mittelpunkt deiner Handlungen
+      &ndash; allerdings wirst du nicht zulassen, dass das jemand herausfindet.
+      Du benutzt ein Vorwand der Gier, um dein weiches Herz zu verstecken.</p>
+
+      <h3>Namen</h3>
+
+      <p>Anton, Gennadi, Jenya, Lev, Nikita, Sasha, Valya, Vitya, Yaro</p>
+
+      <h3>Vorgeschlagener Aufstieg (Optional)</h3>
+
+      <ul>
+
+      <li>(5 EP) Occultech-Implantate Vav Schmerzd&auml;mpfer</li>
+
+      <li>(7 EP) Unnachgiebig</li>
+
+      <li>(1 EP) <em>Energiewaffen</em> +1</li>
+
+      <li>(2 EP) <em>&Uuml;berlebenskunst</em> +2</li>
+
+      <li>(3 EP) <em>Einsch&uuml;chtern</em> +3</li>
+
+      <li>(3 EP) <em>Finden</em> +3</li>
+
+      <li>(4 EP) <em>Nahkampfwaffen</em> +4</li>
+
+      <li>(5 EP) <em>Nahkampfwaffen</em> +5</li>
+
+      </ul>
+    race: human
+  editstate: null
+  fatigue: '1'
+ownership:
+  default: 0
+  9Q0XnqFwko7hRlvL: 3
+prototypeToken:
+  flags: {}
+  name: Der Schrottsammler
+  displayName: 0
+  width: 1
+  height: 1
+  lockRotation: true
+  rotation: 0
+  actorLink: true
+  disposition: 1
+  displayBars: 40
+  bar1:
+    attribute: wounds
+  bar2:
+    attribute: shock
+  randomImg: false
+  alpha: 1
+  light:
+    alpha: 1
+    angle: 360
+    bright: 0
+    color: null
+    coloration: 1
+    dim: 0
+    luminosity: 0.5
+    saturation: 0
+    contrast: 0
+    shadows: 0
+    animation:
+      speed: 5
+      intensity: 5
+      type: null
+      reverse: false
+    darkness:
+      min: 0
+      max: 1
+    attenuation: 0.5
+  texture:
+    src: systems/torgeternity/images/characters/scrapper.Token.webp
+    tint: null
+    scaleX: 1
+    scaleY: 1
+    offsetX: 0
+    offsetY: 0
+    rotation: 0
+  sight:
+    angle: 360
+    enabled: true
+    range: 0
+    brightness: 1
+    visionMode: basic
+    attenuation: 0.1
+    saturation: 0
+    contrast: 0
+  appendNumber: false
+  prependAdjective: false
+  detectionModes: []
+_stats:
+  systemId: torgeternity
+  systemVersion: 3.1.1
+  coreVersion: '11.308'
+  createdTime: 1694868197071
+  modifiedTime: 1694868492456
+  lastModifiedBy: CtisFurQNe9h7ABb
+_key: '!actors!wOWoLWP2MiJsQ1Vr'
+

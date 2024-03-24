@@ -1,0 +1,985 @@
+_id: REeNzywr6VElHSWZ
+name: Le justicier masqué
+type: stormknight
+img: systems/torgeternity/images/characters/Masked_Crusader.Avatar.webp
+data:
+  shock:
+    max: 5
+    value: 0
+  wounds:
+    max: 3
+    value: 0
+  attributes:
+    charisma: 6
+    dexterity: 8
+    mind: 8
+    spirit: 10
+    strength: 8
+  other:
+    move: 5
+    run: 5
+    toughness: 5
+    armor: 0
+    cosm: nileEmpire
+    possibilities: 0
+    posibilities: 3
+  skills:
+    airVehicles:
+      baseAttribute: dexterity
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    alteration:
+      baseAttribute: mind
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    apportation:
+      baseAttribute: spirit
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    beastRiding:
+      baseAttribute: dexterity
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    computers:
+      baseAttribute: mind
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    conjuration:
+      baseAttribute: spirit
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    divination:
+      baseAttribute: mind
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    dodge:
+      baseAttribute: dexterity
+      adds: 2
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    energyWeapons:
+      baseAttribute: dexterity
+      adds: null
+      value: 0
+      isFav: false
+      groupName: combat
+      unskilledUse: 1
+    evidenceAnalysis:
+      baseAttribute: mind
+      adds: 1
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    faith:
+      baseAttribute: spirit
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    find:
+      baseAttribute: mind
+      adds: 2
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    fireCombat:
+      baseAttribute: dexterity
+      adds: 2
+      value: 0
+      isFav: false
+      groupName: combat
+      unskilledUse: 1
+    firstAid:
+      baseAttribute: mind
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    heavyWeapons:
+      baseAttribute: dexterity
+      adds: null
+      value: 0
+      isFav: false
+      groupName: combat
+      unskilledUse: 1
+    intimidation:
+      baseAttribute: spirit
+      adds: 3
+      value: 0
+      isFav: false
+      groupName: interaction
+      unskilledUse: 1
+    kinesis:
+      baseAttribute: spirit
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    landVehicles:
+      baseAttribute: dexterity
+      adds: 1
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    language:
+      baseAttribute: mind
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    lockpicking:
+      baseAttribute: dexterity
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    maneuver:
+      baseAttribute: dexterity
+      adds: null
+      value: 0
+      isFav: false
+      groupName: interaction
+      unskilledUse: 1
+    medicine:
+      baseAttribute: mind
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    meleeWeapons:
+      baseAttribute: dexterity
+      adds: null
+      value: 0
+      isFav: false
+      groupName: combat
+      unskilledUse: 1
+    missileWeapons:
+      baseAttribute: dexterity
+      adds: null
+      value: 0
+      isFav: false
+      groupName: combat
+      unskilledUse: 1
+    persuasion:
+      baseAttribute: charisma
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    precognition:
+      baseAttribute: mind
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    profession:
+      baseAttribute: mind
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    reality:
+      baseAttribute: spirit
+      adds: 1
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    scholar:
+      baseAttribute: mind
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    science:
+      baseAttribute: mind
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    stealth:
+      baseAttribute: dexterity
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    streetwise:
+      baseAttribute: charisma
+      adds: 1
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    survival:
+      baseAttribute: mind
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    taunt:
+      baseAttribute: charisma
+      adds: 1
+      value: 0
+      isFav: false
+      groupName: interaction
+      unskilledUse: 1
+    telepathy:
+      baseAttribute: charisma
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    tracking:
+      baseAttribute: mind
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    trick:
+      baseAttribute: mind
+      adds: null
+      value: 0
+      isFav: false
+      groupName: interaction
+      unskilledUse: 1
+    unarmedCombat:
+      baseAttribute: dexterity
+      adds: 2
+      value: 0
+      isFav: false
+      groupName: combat
+      unskilledUse: 1
+    waterVehicles:
+      baseAttribute: dexterity
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    willpower:
+      baseAttribute: spirit
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+  xp:
+    unspent: 0
+    earned: 0
+  axioms:
+    magic: 14
+    social: 20
+    spirit: 18
+    tech: 20
+  details:
+    clearance: ''
+    background: >-
+      <p class="MsoNormal">&nbsp;</p>
+
+      <h2 class="MsoNormal">Pr&eacute;sentation</h2>
+
+      <p>&nbsp;</p>
+
+      <p class="MsoNormal">Un groupe de femmes et d&rsquo;hommes
+      myst&eacute;rieux s&rsquo;est constitu&eacute; pour mettre un terme au
+      r&egrave;gne tyrannique du Pharaon M&ouml;bius. Ces h&eacute;ros sont
+      bas&eacute;s au Caire mais ils voyagent &agrave; travers le monde pour
+      combattre le mal. Ils s&rsquo;entourent de myst&egrave;res et se voilent
+      le visage pour prot&eacute;ger leurs proches ou pour tromper la police
+      secr&egrave;te de M&ouml;bius. &Ecirc;tre un h&eacute;ros est un choix
+      p&eacute;rilleux surtout dans un monde dirig&eacute; par des vilains.
+      Quelques rares justiciers viennent de Terra, le monde natal des
+      envahisseurs, mais la plupart sont des citoyens transform&eacute;s de la
+      Prime Terre.</p>
+
+      <p>&nbsp;</p>
+
+      <h2 class="MsoNormal">Tactiques</h2>
+
+      <p>&nbsp;</p>
+
+      <p class="MsoNormal">Vous &ecirc;tes un tireur d&rsquo;&eacute;lite et
+      vous savez aussi vous battre avec vos poings. Cependant, c&rsquo;est
+      l&rsquo;Intimidation votre v&eacute;ritable arme. Avec un rang aussi
+      &eacute;lev&eacute;, le r&eacute;sultat Choix du Joueur est assez
+      fr&eacute;quent ce qui vous permet au minimum d&rsquo;annuler la prochaine
+      action du vilain et peut vous autoriser &agrave; faire fuir un adversaire.
+      Votre bon niveau en R&eacute;alit&eacute; vous permet d&rsquo;annuler les
+      dommages assez facilement. Et sous votre masque, vous &ecirc;tes un
+      d&eacute;tective plut&ocirc;t dou&eacute;. Si vos adversaires
+      effray&eacute;s refusent de parler, vos comp&eacute;tences de
+      D&eacute;brouillardise ou d&rsquo;Analyse d&rsquo;indices peuvent vous
+      permettre de trouver des indices.</p>
+
+      <p>&nbsp;</p>
+
+      <h2 class="MsoNormal">Instant fatidique</h2>
+
+      <p>&nbsp;</p>
+
+      <p class="MsoNormal">Vous &eacute;tiez autrefois un citoyen ordinaire mais
+      le m&ecirc;me &eacute;v&eacute;nement qui a catalys&eacute; vos pouvoirs a
+      &eacute;galement &eacute;t&eacute; le d&eacute;clencheur de votre Instant
+      fatidique. Peut-&ecirc;tre &eacute;tiez-vous au bon endroit, au bon moment
+      pour emp&ecirc;cher les sbires de M&ouml;bius de piller une tombe
+      pr&egrave;s du Caire, une tombe qui contenait un linceul fun&eacute;raire
+      que vous portez d&eacute;sormais comme une cape. Ou peut-&ecirc;tre un
+      h&eacute;ros plus ancien a &eacute;t&eacute; vaincu et vous avez
+      d&eacute;cid&eacute; d&rsquo;assumer ses responsabilit&eacute;s pour le
+      venger.</p>
+
+      <p>&nbsp;</p>
+
+      <h2 class="MsoNormal">Citation</h2>
+
+      <p>&nbsp;</p>
+
+      <p class="MsoNormal">&laquo; De quoi avez-vous peur ? &raquo;</p>
+
+      <p>&nbsp;</p>
+
+      <h2 class="MsoNormal">Description</h2>
+
+      <p>&nbsp;</p>
+
+      <p class="MsoNormal">Un masque noir et une cape en lambeaux sont des
+      accessoires n&eacute;cessaires, &agrave; moins que vous agissiez sous
+      votre identit&eacute; secr&egrave;te. Ils peuvent &ecirc;tre la source
+      magique de votre pouvoir d&rsquo;effroi ou peut-&ecirc;tre qu&rsquo;un
+      gadget &agrave; votre ceinture &eacute;met une sorte de champ provoquant
+      la peur. Vous vous exprimez souvent d&rsquo;une voix grave et basse en
+      affichant un air sinistre. Vos boutades ou plaisanteries occasionnelles
+      rappellent &agrave; tous qu&rsquo;il y a un &ecirc;tre humain sous le
+      masque.</p>
+
+      <p>&nbsp;</p>
+
+      <h2 class="MsoNormal">Objectif</h2>
+
+      <p>&nbsp;</p>
+
+      <p class="MsoNormal">La justice est votre objectif. Qu&rsquo;il
+      s&rsquo;agisse des petits forfaits des voleurs ordinaires ou des
+      atrocit&eacute;s des Seigneurs de R&eacute;alit&eacute;, le mal doit
+      &ecirc;tre combattu et les coupables punis.</p>
+
+      <p>&nbsp;</p>
+
+      <h2 class="MsoNormal">Noms</h2>
+
+      <p>&nbsp;</p>
+
+      <p class="MsoNormal">Capitaine Fant&ocirc;me, Apparition &Eacute;carlate,
+      Terreur Nocturne, Spectre Rouge, le Linceul</p>
+
+      <p>&nbsp;</p>
+
+      <h2 class="MsoNormal"><span style="mso-spacerun: yes;">&nbsp;</span>Piste
+      de progression (optionnelle)</h2>
+
+      <p>&nbsp;</p>
+
+      <p>□ (5 PX) Super Attribut (Esprit +1)</p>
+
+      <p class="MsoNormal">□ (7 PX) Arme de pr&eacute;dilection (pistolet
+      Mauser)</p>
+
+      <p class="MsoNormal">□ (2 PX) R&eacute;alit&eacute; +2</p>
+
+      <p class="MsoNormal">□ (3 PX) Armes &agrave; feu +3</p>
+
+      <p class="MsoNormal">□ (3 PX) Combat &agrave; mains nues +3</p>
+
+      <p class="MsoNormal">□ (4 PX) Armes &agrave; feu +4</p>
+
+      <p class="MsoNormal">□ (6 PX) Intimidation +6</p>
+
+      <p>&nbsp;</p>
+    race: human
+  editstate: null
+  fatigue: '1'
+token:
+  flags: {}
+  name: Le justicier masqué
+  displayName: 30
+  img: systems/torgeternity/images/characters/Masked_Crusader.Token.webp
+  tint: null
+  width: 1
+  height: 1
+  scale: 1
+  mirrorX: false
+  mirrorY: false
+  lockRotation: false
+  rotation: 0
+  vision: false
+  dimSight: 0
+  brightSight: 0
+  dimLight: 0
+  brightLight: 0
+  sightAngle: 0
+  lightAngle: 360
+  lightColor: ''
+  lightAlpha: 1
+  lightAnimation:
+    type: ''
+    speed: 5
+    intensity: 5
+  actorId: REeNzywr6VElHSWZ
+  actorLink: true
+  disposition: 1
+  displayBars: 20
+  bar1:
+    attribute: shock
+  bar2:
+    attribute: wounds
+  randomImg: false
+  alpha: 1
+  light:
+    alpha: 0.5
+    angle: 0
+    bright: 0
+    coloration: 1
+    dim: 0
+    gradual: true
+    luminosity: 0.5
+    saturation: 0
+    contrast: 0
+    shadows: 0
+    animation:
+      speed: 5
+      intensity: 5
+      reverse: false
+    darkness:
+      min: 0
+      max: 1
+    color: null
+items:
+  - _id: wY0gJqukmhoR1ar5
+    name: Bagarreur
+    type: perk
+    data:
+      category: prowess
+      cosm: (Non)
+      prerequisites: au moins deux rangs en Combat à mains nues
+      timestaken: 1
+      description: >-
+        <p>Le combattant cogne fort en ayant recours &agrave; des coups vicieux
+        et un bon uppercut gr&acirc;ce &agrave; ses entra&icirc;nements au
+        karat&eacute;, au jujitsu, au taekwondo et autres sports de combat. Les
+        personnages avec cet Atout infligent Force + 2 points de dommages
+        &agrave; mains nues quand ils attaquent avec la comp&eacute;tence Combat
+        &agrave; mains nues. C&rsquo;est cumulable avec tout autre bonus de
+        Combat &agrave; mains nues tels que les attaques de griffes des
+        edeinos.</p>
+
+        <p>Des techniques plus complexes peuvent &ecirc;tre apprises avec les
+        Atouts Pouvoirs du Ki du Pan-Pacifica.</p>
+      pulpPowers:
+        enhancementNumber: 0
+        enhancement01:
+          title: ''
+          description: ''
+          taken: false
+        enhancement02:
+          title: ''
+          description: ''
+          taken: false
+        enhancement03:
+          title: ''
+          description: ''
+          taken: false
+        enhancement04:
+          title: ''
+          description: ''
+          taken: false
+        enhancement05:
+          title: ''
+          description: ''
+          taken: false
+        enhancement06:
+          title: ''
+          description: ''
+          taken: false
+        enhancement07:
+          title: ''
+          description: ''
+          taken: false
+        enhancement08:
+          title: ''
+          description: ''
+          taken: false
+        enhancement09:
+          title: ''
+          description: ''
+          taken: false
+        enhancement10:
+          title: ''
+          description: ''
+          taken: false
+        enhancement11:
+          title: ''
+          description: ''
+          taken: false
+        enhancement12:
+          title: ''
+          description: ''
+          taken: false
+        enhancement13:
+          title: ''
+          description: ''
+          taken: false
+        enhancement14:
+          title: ''
+          description: ''
+          taken: false
+        enhancement15:
+          title: ''
+          description: ''
+          taken: false
+        limitationNumber: 0
+        limitation01: ''
+        limitation02: ''
+        limitation03: ''
+        limitation04: ''
+        limitation05: ''
+        limitation06: ''
+        limitation07: ''
+        limitation08: ''
+        limitation09: ''
+        limitation10: ''
+    sort: 100000
+    flags:
+      core:
+        sourceId: Compendium.world.perks.perk-brawler
+    img: systems/torgeternity/images/icons/perk.webp
+    effects: []
+    folder: null
+    permission:
+      default: 0
+    _key: '!actors.items!REeNzywr6VElHSWZ.wY0gJqukmhoR1ar5'
+  - _id: RpNrke9ubLEc5xWb
+    name: Super Compétence (intimidation)
+    type: perk
+    data:
+      category: pulpPowers
+      cosm: Empire du Nil
+      prerequisites: au moins trois rangs dans la compétence choisie.
+      timestaken: 1
+      description: >-
+        <p>Le h&eacute;ros pulp est exceptionnellement dou&eacute; dans un
+        domaine. Il peut &ecirc;tre un tireur d&rsquo;exception avec des Armes
+        &agrave; feu, un pur&nbsp; g&eacute;nie en Sciences ou &ecirc;tre
+        dot&eacute; d&rsquo;un esprit qui d&eacute;stabilise ses adversaires
+        avec la comp&eacute;tence Provocation.</p>
+
+        <p>Quand il choisit Super Comp&eacute;tence, le h&eacute;ros augmente
+        une comp&eacute;tence de deux rangs. Il peut exc&eacute;der la
+        limitation maximale de +5 sans avoir &agrave; prendre l&rsquo;Atout
+        Ma&icirc;trise (si le h&eacute;ros a l&rsquo;Atout Ma&icirc;trise, il
+        est cumulable avec Super Comp&eacute;tence).Cet effet cumulable avec
+        toute autre augmentation de comp&eacute;tence et permet &agrave; un
+        h&eacute;ros pulp d&rsquo;atteindre un niveau surhumain dans ce domaine
+        bien plus rapidement que les autres.</p>
+
+        <p>Comme pour Super Attribut, un h&eacute;ros ne peut choisir cet Atout
+        qu&rsquo;une seule fois. Il ne peut pas avoir plusieurs Super
+        Comp&eacute;tences.</p>
+
+        <p><strong>Am&eacute;liorations :</strong></p>
+
+        <p>&bull; <strong>Favoris&eacute; </strong>: la comp&eacute;tence est
+        consid&eacute;r&eacute;e comme Favoris&eacute;e.</p>
+
+        <p>&bull; <strong>Puissance </strong>: la comp&eacute;tence
+        b&eacute;n&eacute;ficie d&rsquo;un bonus de +4 rangs (au lieu de
+        +2).</p>
+      pulpPowers:
+        enhancementNumber: 0
+        enhancement01:
+          title: ''
+          description: ''
+          taken: false
+        enhancement02:
+          title: ''
+          description: ''
+          taken: false
+        enhancement03:
+          title: ''
+          description: ''
+          taken: false
+        enhancement04:
+          title: ''
+          description: ''
+          taken: false
+        enhancement05:
+          title: ''
+          description: ''
+          taken: false
+        enhancement06:
+          title: ''
+          description: ''
+          taken: false
+        enhancement07:
+          title: ''
+          description: ''
+          taken: false
+        enhancement08:
+          title: ''
+          description: ''
+          taken: false
+        enhancement09:
+          title: ''
+          description: ''
+          taken: false
+        enhancement10:
+          title: ''
+          description: ''
+          taken: false
+        enhancement11:
+          title: ''
+          description: ''
+          taken: false
+        enhancement12:
+          title: ''
+          description: ''
+          taken: false
+        enhancement13:
+          title: ''
+          description: ''
+          taken: false
+        enhancement14:
+          title: ''
+          description: ''
+          taken: false
+        enhancement15:
+          title: ''
+          description: ''
+          taken: false
+        limitationNumber: 0
+        limitation01: ''
+        limitation02: ''
+        limitation03: ''
+        limitation04: ''
+        limitation05: ''
+        limitation06: ''
+        limitation07: ''
+        limitation08: ''
+        limitation09: ''
+        limitation10: ''
+    sort: 100001
+    flags:
+      core:
+        sourceId: Item.AtEMebfVHcb25baY
+    img: systems/torgeternity/images/icons/perk.webp
+    effects:
+      - _id: dXpzXzrjw9UvaNpT
+        flags: {}
+        changes:
+          - key: data.skills.intimidation
+            value: ''
+            mode: 2
+        disabled: false
+        duration:
+          startTime: null
+        icon: icons/svg/aura.svg
+        label: Intimidation +2
+        origin: Item.AtEMebfVHcb25baY
+        tint: null
+        transfer: true
+        _key: >-
+          !actors.items.effects!REeNzywr6VElHSWZ.RpNrke9ubLEc5xWb.dXpzXzrjw9UvaNpT
+    folder: null
+    permission:
+      default: 0
+    _key: '!actors.items!REeNzywr6VElHSWZ.RpNrke9ubLEc5xWb'
+  - _id: S67kDdh9ssjgwSK7
+    name: Veste en cuir
+    type: armor
+    data:
+      cosm: (Sans cosm)
+      description: ''
+      techlevel: 19
+      price: '100'
+      value: 10
+      bonus: 1
+      maxDex: 12
+      minStrength: null
+      equipped: false
+      equippedClass: .item-unequipped
+      notes: Torse
+    sort: 800000
+    flags:
+      core:
+        sourceId: Item.Ih77xAUJLZwOROR7
+    img: systems/torgeternity/images/icons/armor.webp
+    effects:
+      - _id: m4QT8vQ1gc6L97GC
+        flags: {}
+        changes:
+          - key: data.other.armor
+            value: '1'
+            mode: 2
+          - key: data.other.toughness
+            value: '1'
+            mode: 2
+        disabled: false
+        duration:
+          startTime: null
+        icon: icons/svg/aura.svg
+        label: Armor +1
+        origin: Item.2rrg1qTCfjdHFtKl
+        tint: null
+        transfer: true
+        _key: >-
+          !actors.items.effects!REeNzywr6VElHSWZ.S67kDdh9ssjgwSK7.m4QT8vQ1gc6L97GC
+    folder: null
+    permission:
+      default: 0
+    _key: '!actors.items!REeNzywr6VElHSWZ.S67kDdh9ssjgwSK7'
+  - _id: 7ReWsx8LjYqyPMEx
+    name: Pistolet Mauser
+    type: firearm
+    data:
+      cosm: Empire du Nil
+      description: >-
+        <p>Design souvent imit&eacute; avec un long canon offrant une importante
+        vitesse initiale et une bonne p&eacute;n&eacute;tration ainsi
+        qu&rsquo;un chargeur&nbsp; caract&eacute;ristique &agrave; l&rsquo;avant
+        de l&rsquo;arme. Le&nbsp; Mauser demeure tr&egrave;s populaire au sein
+        de l&rsquo;Empire du Nil o&ugrave; des imitations de cette arme sont
+        encore produites.</p>
+      techlevel: 20
+      price: '250'
+      value: 12
+      attackWith: fireCombat
+      damageType: ''
+      damage: 13
+      ap: 0
+      ammo:
+        max: 10
+        value: 10
+      range: 10 / 25 / 40
+      notes: '-'
+      chatNote: ''
+    sort: 900000
+    flags:
+      core:
+        sourceId: Compendium.world.firearms.item-mauser-pistol
+    img: systems/torgeternity/images/icons/firearm.webp
+    effects: []
+    folder: null
+    permission:
+      default: 0
+    _key: '!actors.items!REeNzywr6VElHSWZ.7ReWsx8LjYqyPMEx'
+  - _id: WfpWhmXMDhdsA6VN
+    name: Cape et masque
+    type: gear
+    data:
+      cosm: Empire du Nil
+      description: <p>Myst&eacute;rieux !</p>
+      techlevel: 15
+      price: '100'
+      value: 10
+    sort: 2600000
+    flags:
+      core:
+        sourceId: Item.wl0B9YS9kJ0vhxwg
+    img: systems/torgeternity/images/icons/gear.webp
+    effects: []
+    folder: null
+    permission:
+      default: 0
+    _key: '!actors.items!REeNzywr6VElHSWZ.WfpWhmXMDhdsA6VN'
+  - _id: YNsCLlOR3zgPCtdI
+    name: Dispositif de pistage
+    type: gear
+    data:
+      cosm: Empire du Nil
+      description: >-
+        <p>Une balise qui &eacute;met un signal de localisation sur un
+        kilom&egrave;tre &agrave; tout r&eacute;cepteur radio captant sa
+        fr&eacute;quence.</p>
+      techlevel: 20
+      price: '150'
+      value: 11
+    sort: 2800000
+    flags:
+      core:
+        sourceId: Item.zGj5mxLW7ygVnIKC
+    img: systems/torgeternity/images/icons/gear.webp
+    effects: []
+    folder: null
+    permission:
+      default: 0
+    mce_12: >-
+      <p>une balise qui &eacute;met un signal de localisation sur un
+      kilom&egrave;tre &agrave; tout r&eacute;cepteur radio captant sa
+      fr&eacute;quence.</p>
+    _key: '!actors.items!REeNzywr6VElHSWZ.YNsCLlOR3zgPCtdI'
+  - _id: y0B6HPYsSspYtVvE
+    name: Chargeurs supplémentaires (5)
+    type: gear
+    img: systems/torgeternity/images/icons/gear.webp
+    data:
+      cosm: Prime Terre
+      description: <p>Cinq recharges pour Glock 9 mm</p>
+      techlevel: 22
+      price: '20'
+      value: 6
+    effects: []
+    folder: null
+    sort: 1600000
+    permission:
+      default: 0
+      TK1vCAdCz548vBDu: 3
+      qjRKKHBumHYSfxpw: 3
+    flags:
+      core:
+        sourceId: Item.qZuQoegFPBYC6tEB
+    _key: '!actors.items!REeNzywr6VElHSWZ.y0B6HPYsSspYtVvE'
+  - _id: YfdvUQUHc7i4GNmh
+    name: Fusées éclairantes (3)
+    type: gear
+    img: systems/torgeternity/images/icons/gear.webp
+    data:
+      cosm: Empire du Nil
+      description: <p>&Eacute;claire, peut allumer un feu</p>
+      techlevel: 20
+      price: '5'
+      value: 4
+    effects: []
+    folder: null
+    sort: 1600000
+    permission:
+      default: 0
+      qjRKKHBumHYSfxpw: 3
+    flags:
+      core:
+        sourceId: Item.JniN3c3c6HNv7cSp
+    _key: '!actors.items!REeNzywr6VElHSWZ.YfdvUQUHc7i4GNmh'
+  - _id: Ry951V53ZbMo7DVq
+    name: Menottes
+    type: gear
+    img: systems/torgeternity/images/icons/gear-icon.webp
+    data:
+      cosm: Empire du Nil
+      description: <p>Entrave un adversaire captur&eacute;</p>
+      techlevel: 19
+      price: '0'
+      value: 0
+    effects: []
+    folder: null
+    sort: 0
+    permission:
+      default: 0
+      TK1vCAdCz548vBDu: 3
+      qjRKKHBumHYSfxpw: 3
+    flags:
+      core:
+        sourceId: Item.YUDCGkWXWHejH49G
+    _key: '!actors.items!REeNzywr6VElHSWZ.Ry951V53ZbMo7DVq'
+  - _id: aPOfL2ECIo5XDkjo
+    name: Attaque à mains nues (+2)
+    type: customAttack
+    img: systems/torgeternity/images/icons/fist-icon.webp
+    data:
+      description: ''
+      attackWith: unarmedCombat
+      damageType: strengthPlus
+      damage: 2
+      ap: 0
+      notes: ''
+      chatNote: ''
+    effects: []
+    folder: null
+    sort: 0
+    permission:
+      default: 0
+      zWX19sSAtAWkeGhp: 3
+    flags:
+      core:
+        sourceId: Item.BFGjhDetVDm1xiku
+    _key: '!actors.items!REeNzywr6VElHSWZ.aPOfL2ECIo5XDkjo'
+effects:
+  - _id: 35ZydiYloB6XEGzz
+    flags: {}
+    changes:
+      - key: data.skills.intimidation.value
+        value: '2'
+        mode: 2
+    disabled: false
+    duration:
+      startTime: 0
+    icon: icons/svg/aura.svg
+    label: Intimidation +2
+    origin: Actor.LGH3vMNa0jMnMboU.OwnedItem.RpNrke9ubLEc5xWb
+    tint: null
+    transfer: true
+    _key: '!actors.effects!REeNzywr6VElHSWZ.35ZydiYloB6XEGzz'
+  - _id: yyrjyKyzFRpnZC4T
+    flags: {}
+    changes:
+      - key: data.other.armor
+        mode: 2
+        value: '1'
+      - key: data.other.toughness
+        mode: 2
+        value: '1'
+    disabled: false
+    duration:
+      startTime: 0
+    icon: icons/svg/aura.svg
+    label: Armure +1
+    origin: Actor.LGH3vMNa0jMnMboU.OwnedItem.S67kDdh9ssjgwSK7
+    tint: ''
+    transfer: true
+    _key: '!actors.effects!REeNzywr6VElHSWZ.yyrjyKyzFRpnZC4T'
+folder: null
+sort: 100001
+permission:
+  default: 0
+  A9LyAqagoJJU3gDH: 3
+flags: {}
+_key: '!actors!REeNzywr6VElHSWZ'
+

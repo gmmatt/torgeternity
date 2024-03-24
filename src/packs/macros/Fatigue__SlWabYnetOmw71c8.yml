@@ -1,0 +1,25 @@
+name: Fatigue!
+type: script
+_id: SlWabYnetOmw71c8
+author: s0Eq742Hj4e1Qv9j
+img: icons/svg/unconscious.svg
+scope: global
+command: |-
+  console.log("Starting Fatigue-Macro.");
+
+  game.torgeternity.macros.applyFatigue();
+folder: null
+sort: 0
+ownership:
+  default: 0
+  s0Eq742Hj4e1Qv9j: 3
+flags: {}
+_stats:
+  systemId: torgeternity
+  systemVersion: 3.6.0
+  coreVersion: '11.315'
+  createdTime: 1709974478682
+  modifiedTime: 1710249961102
+  lastModifiedBy: s0Eq742Hj4e1Qv9j
+_key: '!macros!SlWabYnetOmw71c8'
+

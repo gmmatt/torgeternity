@@ -1,0 +1,291 @@
+_id: MMWqppyG8SYX0ciu
+name: Zentralerde Cosm Deck
+type: deck
+description: ''
+img: >-
+  systems/torgeternity/images/deutsch/cards/Cosmkarten/Zentralerde/ZZZR%C3%BCckseite.webp
+cards:
+  - _id: XWqMEFnSdV2hvVog
+    name: Angetrieben
+    description: ''
+    type: cosm
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Angetrieben
+        text: ''
+        img: >-
+          systems/torgeternity/images/deutsch/cards/Cosmkarten/Zentralerde/01.webp
+    face: 0
+    drawn: false
+    origin: MMWqppyG8SYX0ciu
+    rotation: 0
+    sort: 0
+    flags: {}
+    system: {}
+    value: null
+    width: null
+    height: null
+    _key: '!cards.cards!MMWqppyG8SYX0ciu.XWqMEFnSdV2hvVog'
+    cards: []
+  - _id: Cc6W8HydjMcsfnMM
+    name: Weiterkämpfen
+    description: ''
+    type: cosm
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Weiterkämpfen
+        text: ''
+        img: >-
+          systems/torgeternity/images/deutsch/cards/Cosmkarten/Zentralerde/02.webp
+    face: 0
+    drawn: false
+    origin: MMWqppyG8SYX0ciu
+    rotation: 0
+    sort: 0
+    flags: {}
+    system: {}
+    value: null
+    width: null
+    height: null
+    _key: '!cards.cards!MMWqppyG8SYX0ciu.Cc6W8HydjMcsfnMM'
+    cards: []
+  - _id: wik5DXYOt06TEDWq
+    name: Inspirierende Rede
+    description: ''
+    type: cosm
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Inspirierende Rede
+        text: ''
+        img: >-
+          systems/torgeternity/images/deutsch/cards/Cosmkarten/Zentralerde/03.webp
+    face: 0
+    drawn: false
+    origin: MMWqppyG8SYX0ciu
+    rotation: 0
+    sort: 0
+    flags: {}
+    system: {}
+    value: null
+    width: null
+    height: null
+    _key: '!cards.cards!MMWqppyG8SYX0ciu.wik5DXYOt06TEDWq'
+    cards: []
+  - _id: BUpc7jQEN6VkO0IP
+    name: Gesetz der Hoffnung
+    description: ''
+    type: cosm
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Gesetz der Hoffnung
+        text: ''
+        img: >-
+          systems/torgeternity/images/deutsch/cards/Cosmkarten/Zentralerde/04.webp
+    face: 0
+    drawn: false
+    origin: MMWqppyG8SYX0ciu
+    rotation: 0
+    sort: 0
+    flags: {}
+    system: {}
+    value: null
+    width: null
+    height: null
+    _key: '!cards.cards!MMWqppyG8SYX0ciu.BUpc7jQEN6VkO0IP'
+    cards: []
+  - _id: DvRMvWWipEt8QOIp
+    name: Willkommen auf der Erde!
+    description: ''
+    type: cosm
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Willkommen auf der Erde!
+        text: ''
+        img: >-
+          systems/torgeternity/images/deutsch/cards/Cosmkarten/Zentralerde/05.webp
+    face: 0
+    drawn: false
+    origin: MMWqppyG8SYX0ciu
+    rotation: 0
+    sort: 0
+    flags: {}
+    system: {}
+    value: null
+    width: null
+    height: null
+    _key: '!cards.cards!MMWqppyG8SYX0ciu.DvRMvWWipEt8QOIp'
+    cards: []
+  - _id: 4M1vDbpBjZCFWeGA
+    name: Eskalation!
+    description: ''
+    type: cosm
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Eskalation!
+        text: ''
+        img: >-
+          systems/torgeternity/images/deutsch/cards/Cosmkarten/Zentralerde/06.webp
+    face: 0
+    drawn: false
+    origin: MMWqppyG8SYX0ciu
+    rotation: 0
+    sort: 0
+    flags: {}
+    system: {}
+    value: null
+    width: null
+    height: null
+    _key: '!cards.cards!MMWqppyG8SYX0ciu.4M1vDbpBjZCFWeGA'
+    cards: []
+  - _id: AwtNEUm1TStYbWDQ
+    name: Es gibt immer Hoffnung
+    description: ''
+    type: cosm
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Es gibt immer Hoffnung
+        text: ''
+        img: >-
+          systems/torgeternity/images/deutsch/cards/Cosmkarten/Zentralerde/07.webp
+    face: 0
+    drawn: false
+    origin: MMWqppyG8SYX0ciu
+    rotation: 0
+    sort: 0
+    flags: {}
+    system: {}
+    value: null
+    width: null
+    height: null
+    _key: '!cards.cards!MMWqppyG8SYX0ciu.AwtNEUm1TStYbWDQ'
+    cards: []
+  - _id: ZBMCEmmYWE3U3P8m
+    name: Nutze den Tag!
+    description: ''
+    type: cosm
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Nutze den Tag!
+        text: ''
+        img: >-
+          systems/torgeternity/images/deutsch/cards/Cosmkarten/Zentralerde/08.webp
+    face: 0
+    drawn: false
+    origin: MMWqppyG8SYX0ciu
+    rotation: 0
+    sort: 0
+    flags: {}
+    system: {}
+    value: null
+    width: null
+    height: null
+    _key: '!cards.cards!MMWqppyG8SYX0ciu.ZBMCEmmYWE3U3P8m'
+    cards: []
+  - _id: UbmoB2CltVh3ZNIg
+    name: Aufbäumen
+    description: ''
+    type: cosm
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Aufbäumen
+        text: ''
+        img: >-
+          systems/torgeternity/images/deutsch/cards/Cosmkarten/Zentralerde/09.webp
+    face: 0
+    drawn: false
+    origin: MMWqppyG8SYX0ciu
+    rotation: 0
+    sort: 0
+    flags: {}
+    system: {}
+    value: null
+    width: null
+    height: null
+    _key: '!cards.cards!MMWqppyG8SYX0ciu.UbmoB2CltVh3ZNIg'
+    cards: []
+  - _id: jxQief4EE0tbr3p1
+    name: Glückliche Fügung
+    description: ''
+    type: cosm
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Glückliche Fügung
+        text: ''
+        img: >-
+          systems/torgeternity/images/deutsch/cards/Cosmkarten/Zentralerde/10.webp
+    face: 0
+    drawn: false
+    origin: MMWqppyG8SYX0ciu
+    rotation: 0
+    sort: 0
+    flags: {}
+    system: {}
+    value: null
+    width: null
+    height: null
+    _key: '!cards.cards!MMWqppyG8SYX0ciu.jxQief4EE0tbr3p1'
+    cards: []
+rotation: 0
+displayCount: false
+folder: null
+sort: 0
+flags:
+  core:
+    sourceId: Cards.CjBKZB7BtLzhKOiJ
+  torgeternity:
+    usage: coreEarth
+system: {}
+ownership:
+  default: 0
+  1pSzpSNrhKGYYcib: 3
+width: null
+height: null
+_stats:
+  systemId: torgeternity
+  systemVersion: 2.5.1
+  coreVersion: '10.278'
+  createdTime: null
+  modifiedTime: 1660972044825
+  lastModifiedBy: pLf3kUpJuGZH0Ep4
+_key: '!cards!MMWqppyG8SYX0ciu'
+

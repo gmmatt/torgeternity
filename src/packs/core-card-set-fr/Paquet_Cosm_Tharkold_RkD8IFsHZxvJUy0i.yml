@@ -1,0 +1,257 @@
+_id: RkD8IFsHZxvJUy0i
+name: Paquet Cosm Tharkold
+type: deck
+description: ''
+img: systems/torgeternity/images/cards/tharkold-back.webp
+data: {}
+cards:
+  - _id: wNJ3M7yPmNVjxZyt
+    name: Ennuis en pperspective
+    description: ''
+    type: cosm
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Looks Like Trouble
+        img: systems/torgeternity/images/cards/cosm/tharkold/fr/01.webp
+        text: ''
+    face: 1
+    drawn: false
+    origin: yj8Z27rRt1qaLRoe
+    rotation: 0
+    sort: 0
+    flags: {}
+    number: null
+    _key: '!cards.cards!RkD8IFsHZxvJUy0i.wNJ3M7yPmNVjxZyt'
+    cards: []
+  - _id: oF8lCpeZE8euS6xd
+    name: Suprématie
+    description: ''
+    type: cosm
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Supremacy
+        img: systems/torgeternity/images/cards/cosm/tharkold/fr/02.webp
+        text: ''
+    face: 1
+    drawn: false
+    origin: yj8Z27rRt1qaLRoe
+    rotation: 0
+    sort: 1
+    flags: {}
+    number: null
+    _key: '!cards.cards!RkD8IFsHZxvJUy0i.oF8lCpeZE8euS6xd'
+    cards: []
+  - _id: zXMH54kOpN0ZIuTE
+    name: Calamité
+    description: ''
+    type: cosm
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Scourge
+        img: systems/torgeternity/images/cards/cosm/tharkold/fr/03.webp
+        text: ''
+    face: 1
+    drawn: false
+    origin: yj8Z27rRt1qaLRoe
+    rotation: 0
+    sort: 2
+    flags: {}
+    number: null
+    value: null
+    _key: '!cards.cards!RkD8IFsHZxvJUy0i.zXMH54kOpN0ZIuTE'
+    cards: []
+  - _id: jDk8OzgkxoRMxD74
+    name: Irradié
+    description: ''
+    type: cosm
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Irradiated
+        img: systems/torgeternity/images/cards/cosm/tharkold/fr/04.webp
+        text: ''
+    face: 1
+    drawn: false
+    origin: yj8Z27rRt1qaLRoe
+    rotation: 0
+    sort: 3
+    flags: {}
+    number: null
+    _key: '!cards.cards!RkD8IFsHZxvJUy0i.jDk8OzgkxoRMxD74'
+    cards: []
+  - _id: 7TpWSEzLSQn9TxmN
+    name: Cyberpsychose
+    description: ''
+    type: cosm
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Cyberpsychosis
+        img: systems/torgeternity/images/cards/cosm/tharkold/fr/05.webp
+        text: ''
+    face: 1
+    drawn: false
+    origin: yj8Z27rRt1qaLRoe
+    rotation: 0
+    sort: 4
+    flags: {}
+    number: null
+    _key: '!cards.cards!RkD8IFsHZxvJUy0i.7TpWSEzLSQn9TxmN'
+    cards: []
+  - _id: S86odic5MG8fe0OO
+    name: A genoux !
+    description: ''
+    type: cosm
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Kneel!
+        img: systems/torgeternity/images/cards/cosm/tharkold/fr/06.webp
+        text: ''
+    face: 0
+    drawn: false
+    origin: yj8Z27rRt1qaLRoe
+    rotation: 0
+    sort: 5
+    flags: {}
+    number: null
+    _key: '!cards.cards!RkD8IFsHZxvJUy0i.S86odic5MG8fe0OO'
+    cards: []
+  - _id: 6CN91F4kvphjc2Py
+    name: Tu travailles pour moi maintenant
+    description: ''
+    type: cosm
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: You Work for Me Now
+        img: systems/torgeternity/images/cards/cosm/tharkold/fr/07.webp
+        text: ''
+    face: 1
+    drawn: false
+    origin: yj8Z27rRt1qaLRoe
+    rotation: 0
+    sort: 6
+    flags: {}
+    number: null
+    _key: '!cards.cards!RkD8IFsHZxvJUy0i.6CN91F4kvphjc2Py'
+    cards: []
+  - _id: kZWx9WgnZ8xUQjTL
+    name: Enragé
+    description: ''
+    type: cosm
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Enraged
+        img: systems/torgeternity/images/cards/cosm/tharkold/fr/08.webp
+        text: ''
+    face: 1
+    drawn: false
+    origin: yj8Z27rRt1qaLRoe
+    rotation: 0
+    sort: 7
+    flags: {}
+    number: null
+    value: null
+    _key: '!cards.cards!RkD8IFsHZxvJUy0i.kZWx9WgnZ8xUQjTL'
+    cards: []
+  - _id: Bc7bjxbcaau2x7um
+    name: Récupération !
+    description: ''
+    type: cosm
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Salvage!
+        img: systems/torgeternity/images/cards/cosm/tharkold/fr/09.webp
+        text: ''
+    face: 1
+    drawn: false
+    origin: yj8Z27rRt1qaLRoe
+    rotation: 0
+    sort: 8
+    flags: {}
+    number: null
+    _key: '!cards.cards!RkD8IFsHZxvJUy0i.Bc7bjxbcaau2x7um'
+    cards: []
+  - _id: AmYI8JL3Et2jidDa
+    name: Visions atroces
+    description: ''
+    type: cosm
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Torturous Visions
+        img: systems/torgeternity/images/cards/cosm/tharkold/fr/10.webp
+        text: ''
+    face: 1
+    drawn: false
+    origin: yj8Z27rRt1qaLRoe
+    rotation: 0
+    sort: 9
+    flags: {}
+    number: null
+    _key: '!cards.cards!RkD8IFsHZxvJUy0i.AmYI8JL3Et2jidDa'
+    cards: []
+rotation: 0
+displayCount: false
+folder: null
+sort: 0
+permission:
+  kz1RJu8vrAPmTUwN: 3
+flags:
+  exportSource:
+    world: torgv2p2
+    system: torgeternity
+    coreVersion: '9.235'
+    systemVersion: 2.0.5
+  core:
+    sourceId: Cards.4b8BekWDWpSWF961
+  torgeternity:
+    usage: tharkold
+_key: '!cards!RkD8IFsHZxvJUy0i'
+

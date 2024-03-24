@@ -1,7 +1,0 @@
-2024/03/19-21:22:53.006 b38 Recovering log #146
-2024/03/19-21:22:53.011 b38 Delete type=0 #146
-2024/03/19-21:22:53.016 b38 Delete type=3 #144
-2024/03/19-21:23:29.628 458c Level-0 table #152: started
-2024/03/19-21:23:29.628 458c Level-0 table #152: 0 bytes OK
-2024/03/19-21:23:29.628 458c Delete type=0 #150
-2024/03/19-21:23:29.646 458c Manual compaction at level-0 from '!scenes!LxFt3CsDFSCSkASP' @ 72057594037927935 : 1 .. '!scenes!LxFt3CsDFSCSkASP' @ 0 : 0; will stop at (end)

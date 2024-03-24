@@ -1,0 +1,980 @@
+_id: 8YH1e6xGG3IHb1Mm
+name: Le détective dur à cuire
+type: stormknight
+img: systems/torgeternity/images/characters/Hardboiled_Detective.Avatar.webp
+data:
+  shock:
+    max: 8
+    value: 0
+  wounds:
+    max: 3
+    value: 0
+  attributes:
+    charisma: 6
+    dexterity: 10
+    mind: 8
+    spirit: 8
+    strength: 8
+  other:
+    move: 10
+    run: 30
+    toughness: 9
+    armor: 1
+    cosm: panPacifica
+    possibilities: 0
+    posibilities: 3
+  skills:
+    airVehicles:
+      baseAttribute: dexterity
+      adds: null
+      value: '-'
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    alteration:
+      baseAttribute: mind
+      adds: null
+      value: '-'
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    apportation:
+      baseAttribute: spirit
+      adds: null
+      value: '-'
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    beastRiding:
+      baseAttribute: dexterity
+      adds: null
+      value: 10
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    computers:
+      baseAttribute: mind
+      adds: null
+      value: 8
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    conjuration:
+      baseAttribute: spirit
+      adds: null
+      value: '-'
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    divination:
+      baseAttribute: mind
+      adds: null
+      value: '-'
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    dodge:
+      baseAttribute: dexterity
+      adds: 2
+      value: 12
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    energyWeapons:
+      baseAttribute: dexterity
+      adds: null
+      value: 10
+      isFav: false
+      groupName: combat
+      unskilledUse: 1
+    evidenceAnalysis:
+      baseAttribute: mind
+      adds: 1
+      value: 9
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    faith:
+      baseAttribute: spirit
+      adds: null
+      value: 8
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    find:
+      baseAttribute: mind
+      adds: 1
+      value: 9
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    fireCombat:
+      baseAttribute: dexterity
+      adds: 2
+      value: 12
+      isFav: false
+      groupName: combat
+      unskilledUse: 1
+    firstAid:
+      baseAttribute: mind
+      adds: null
+      value: 8
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    heavyWeapons:
+      baseAttribute: dexterity
+      adds: null
+      value: 10
+      isFav: false
+      groupName: combat
+      unskilledUse: 1
+    intimidation:
+      baseAttribute: spirit
+      adds: 1
+      value: 9
+      isFav: false
+      groupName: interaction
+      unskilledUse: 1
+    kinesis:
+      baseAttribute: spirit
+      adds: null
+      value: '-'
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    landVehicles:
+      baseAttribute: dexterity
+      adds: 1
+      value: 11
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    language:
+      baseAttribute: mind
+      adds: null
+      value: '-'
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    lockpicking:
+      baseAttribute: dexterity
+      adds: 1
+      value: 11
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    maneuver:
+      baseAttribute: dexterity
+      adds: 1
+      value: 11
+      isFav: false
+      groupName: interaction
+      unskilledUse: 1
+    medicine:
+      baseAttribute: mind
+      adds: null
+      value: '-'
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    meleeWeapons:
+      baseAttribute: dexterity
+      adds: null
+      value: 10
+      isFav: false
+      groupName: combat
+      unskilledUse: 1
+    missileWeapons:
+      baseAttribute: dexterity
+      adds: null
+      value: 10
+      isFav: false
+      groupName: combat
+      unskilledUse: 1
+    persuasion:
+      baseAttribute: charisma
+      adds: null
+      value: 6
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    precognition:
+      baseAttribute: mind
+      adds: null
+      value: '-'
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    profession:
+      baseAttribute: mind
+      adds: null
+      value: 8
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    reality:
+      baseAttribute: spirit
+      adds: 1
+      value: 9
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    scholar:
+      baseAttribute: mind
+      adds: null
+      value: 8
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    science:
+      baseAttribute: mind
+      adds: null
+      value: 8
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    stealth:
+      baseAttribute: dexterity
+      adds: null
+      value: 10
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    streetwise:
+      baseAttribute: charisma
+      adds: 1
+      value: 7
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    survival:
+      baseAttribute: mind
+      adds: null
+      value: 8
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    taunt:
+      baseAttribute: charisma
+      adds: 1
+      value: 7
+      isFav: false
+      groupName: interaction
+      unskilledUse: 1
+    telepathy:
+      baseAttribute: charisma
+      adds: null
+      value: '-'
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    tracking:
+      baseAttribute: mind
+      adds: null
+      value: 8
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    trick:
+      baseAttribute: mind
+      adds: null
+      value: 8
+      isFav: false
+      groupName: interaction
+      unskilledUse: 1
+    unarmedCombat:
+      baseAttribute: dexterity
+      adds: 3
+      value: 13
+      isFav: false
+      groupName: combat
+      unskilledUse: 1
+    waterVehicles:
+      baseAttribute: dexterity
+      adds: null
+      value: 10
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    willpower:
+      baseAttribute: spirit
+      adds: null
+      value: 8
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+  xp:
+    unspent: 0
+    earned: 0
+  axioms:
+    magic: 4
+    social: 24
+    spirit: 8
+    tech: 24
+  details:
+    clearance: alpha
+    background: >-
+      <h2>Pr&eacute;sentation</h2>
+
+      <p class="MsoNormal">Des ann&eacute;es pass&eacute;es dans les rues de
+      Hong Kong vous ont endurci et vous &ecirc;tes devenu une arme fatale.
+      Devenir un Chevalier des Temp&ecirc;tes n&rsquo;a fait
+      qu&rsquo;accro&icirc;tre vos capacit&eacute;s. Mais en tout premier lieu,
+      vous &ecirc;tes un enqu&ecirc;teur. Vous avez &eacute;t&eacute;
+      entra&icirc;n&eacute; pour suivre des pistes, interroger des
+      t&eacute;moins et faire r&eacute;gner la loi et l&rsquo;ordre. Quand les
+      criminels r&eacute;sistent &agrave; leur arrestation, ce qu&rsquo;ils font
+      toujours, les choses d&eacute;g&eacute;n&egrave;rent rapidement et vous
+      avez alors recours &agrave; vos autres comp&eacute;tences.</p>
+
+      <h2>Tactiques</h2>
+
+      <p class="MsoNormal">Vous &ecirc;tes un tireur &eacute;lite et vous avez
+      la puissance de feu d&rsquo;une petite arm&eacute;e quand vous utilisez
+      vos deux pistolets 9 mm. Vos comp&eacute;tences &eacute;lev&eacute;es en
+      Esquive et en Combat &agrave; mains nues vous permettent de vous
+      d&eacute;fendre contre des adversaires proches ou &eacute;loign&eacute;s.
+      Manoeuvre est votre principale interaction offensive, essayez d&rsquo;y
+      avoir recours &agrave; chaque fois que c&rsquo;est une Action
+      approuv&eacute;e. L&rsquo;Atout Parade offensive vous permet de riposter
+      contre un attaquant qui vous rate en m&ecirc;l&eacute;e, tant que vous
+      avez des points de Choc &agrave; d&eacute;penser. Vous pouvez avoir
+      recours &agrave; une attaque en m&ecirc;l&eacute;e m&ecirc;me quand vous
+      &ecirc;tes &eacute;quip&eacute; de vos deux pistolets ; vous utilisez vos
+      pieds ou vos &eacute;paules.</p>
+
+      <h2>Instant fatidique</h2>
+
+      <p class="MsoNormal">Quelque chose d&rsquo;important se pr&eacute;parait
+      et une corporation appel&eacute;e &laquo; Kanawa &raquo; &eacute;tait au
+      centre de cette affaire. Vos sup&eacute;rieurs vous ont menac&eacute; de
+      vous suspendre et de laisser tomber. Quelqu&rsquo;un a m&ecirc;me
+      essay&eacute; de vous tuer. Vous n&rsquo;avez pas laiss&eacute; tomber
+      m&ecirc;me apr&egrave;s le d&eacute;but de la Contagion et votre
+      d&eacute;termination a provoqu&eacute; en vous une subtile transformation.
+      Sinon, ce changement peut s&rsquo;&ecirc;tre produit en prot&eacute;geant
+      un groupe de r&eacute;fugi&eacute;s soi-disant infect&eacute;s d&rsquo;une
+      &laquo;&eacute;quipe de confinement&raquo; de Kanawa.</p>
+
+      <h2>Citation</h2>
+
+      <p class="MsoNormal">&laquo; Que ce soient des jiangshis, des criminels ou
+      des envahisseurs d&rsquo;une autre r&eacute;alit&eacute;, une balle peut
+      toujours faire la diff&eacute;rence. &raquo;</p>
+
+      <h2>Description</h2>
+
+      <p class="MsoNormal">On peut se moquer de votre veste en cuir mais
+      c&rsquo;est un v&ecirc;tement qui ne se d&eacute;mode pas. De plus, elle
+      dissimule vos deux holsters d&rsquo;&eacute;paule. Votre badge est utile
+      &agrave; Hong Kong dans votre juridiction mais il peut aussi vous aider
+      dans d&rsquo;autres r&eacute;gions du Pan-Pacifica tant que les gens ne
+      l&rsquo;examinent pas de trop pr&egrave;s. Vous &ecirc;tes
+      v&eacute;h&eacute;ment et vous ne supportez pas qu&rsquo;on manque de
+      respect &agrave; vous ou &agrave; votre badge.</p>
+
+      <h2>Objectif</h2>
+
+      <p class="MsoNormal">La Kanawa Corporation cache quelque chose, un lien
+      avec</p>
+
+      <p class="MsoNormal">les autres Pillards de R&eacute;alit&eacute;s ou avec
+      la Contagion. Quoi</p>
+
+      <p class="MsoNormal">qu&rsquo;il se passe, cela pourrait &eacute;branler
+      tout le Pan-Pacifica.</p>
+
+      <p class="MsoNormal">Bonne ou mauvaise, votre boulot est de
+      d&eacute;couvrir la v&eacute;rit&eacute;.</p>
+
+      <h2>Noms</h2>
+
+      <p class="MsoNormal">Bao, Curry, Dee, Eagle, Jin, Li, Ling, Shooter,
+      Whiskey, Zhang</p>
+
+      <h2>Piste de progression (optionnelle)</h2>
+
+      <p class="MsoNormal">□ (5 PX) Double tir</p>
+
+      <p class="MsoNormal">□ (7 PX) Frappe Ki</p>
+
+      <p class="MsoNormal">□ (1 PX) Persuasion +1</p>
+
+      <p class="MsoNormal">□ (2 PX) R&eacute;alit&eacute; +2</p>
+
+      <p class="MsoNormal">□ (3 PX) Esquive +3</p>
+
+      <p class="MsoNormal">□ (3 PX) Combat &agrave; mains nues +3</p>
+
+      <p class="MsoNormal">□ (4 PX) Armes &agrave; feu +4</p>
+
+      <p class="MsoNormal">□ (5 PX) Armes &agrave; feu +5</p>
+    race: human
+  editstate: null
+  fatigue: '1'
+token:
+  flags: {}
+  name: Le détective dur à cuire
+  displayName: 30
+  img: systems/torgeternity/images/characters/Hardboiled_Detective.Token.webp
+  tint: null
+  width: 1
+  height: 1
+  scale: 1
+  mirrorX: false
+  mirrorY: false
+  lockRotation: false
+  rotation: 0
+  vision: false
+  dimSight: 0
+  brightSight: 0
+  dimLight: 0
+  brightLight: 0
+  sightAngle: 0
+  lightAngle: 360
+  lightColor: ''
+  lightAlpha: 1
+  lightAnimation:
+    type: ''
+    speed: 5
+    intensity: 5
+  actorId: 8YH1e6xGG3IHb1Mm
+  actorLink: true
+  disposition: 1
+  displayBars: 40
+  bar1:
+    attribute: shock
+  bar2:
+    attribute: wounds
+  randomImg: false
+  alpha: 1
+  light:
+    alpha: 0.5
+    angle: 0
+    bright: 0
+    coloration: 1
+    dim: 0
+    gradual: true
+    luminosity: 0.5
+    saturation: 0
+    contrast: 0
+    shadows: 0
+    animation:
+      speed: 5
+      intensity: 5
+      reverse: false
+    darkness:
+      min: 0
+      max: 1
+    color: null
+items:
+  - _id: nHyY0U6fVQiVDVyn
+    name: Parade offensive
+    type: perk
+    data:
+      category: kiPowers
+      cosm: Pan Pacifica
+      prerequisites: Spirit 8+, at least three adds in unarmed combat
+      timestaken: 1
+      description: >-
+        <p>Quand un adversaire rate le personnage avec une attaque de
+        m&ecirc;l&eacute;e, ce dernier peut subir un point de Choc pour
+        imm&eacute;diatement&nbsp; effectuer une attaque de m&ecirc;l&eacute;e
+        contre cet adversaire.</p>
+      pulpPowers:
+        enhancementNumber: 0
+        enhancement01:
+          title: ''
+          description: ''
+          taken: false
+        enhancement02:
+          title: ''
+          description: ''
+          taken: false
+        enhancement03:
+          title: ''
+          description: ''
+          taken: false
+        enhancement04:
+          title: ''
+          description: ''
+          taken: false
+        enhancement05:
+          title: ''
+          description: ''
+          taken: false
+        enhancement06:
+          title: ''
+          description: ''
+          taken: false
+        enhancement07:
+          title: ''
+          description: ''
+          taken: false
+        enhancement08:
+          title: ''
+          description: ''
+          taken: false
+        enhancement09:
+          title: ''
+          description: ''
+          taken: false
+        enhancement10:
+          title: ''
+          description: ''
+          taken: false
+        enhancement11:
+          title: ''
+          description: ''
+          taken: false
+        enhancement12:
+          title: ''
+          description: ''
+          taken: false
+        enhancement13:
+          title: ''
+          description: ''
+          taken: false
+        enhancement14:
+          title: ''
+          description: ''
+          taken: false
+        enhancement15:
+          title: ''
+          description: ''
+          taken: false
+        limitationNumber: 0
+        limitation01: ''
+        limitation02: ''
+        limitation03: ''
+        limitation04: ''
+        limitation05: ''
+        limitation06: ''
+        limitation07: ''
+        limitation08: ''
+        limitation09: ''
+        limitation10: ''
+    sort: 100000
+    flags:
+      core:
+        sourceId: Compendium.te001-core-rulebook.Items.6yvgujLe6KwpQj8J
+    img: systems/torgeternity/images/icons/perk.webp
+    effects: []
+    folder: null
+    permission:
+      default: 0
+    _key: '!actors.items!8YH1e6xGG3IHb1Mm.nHyY0U6fVQiVDVyn'
+  - _id: KpWgjWWFgY2tXQbG
+    name: Vêtements raffinés
+    type: gear
+    data:
+      cosm: Pan Pacifica
+      description: |-
+        <p>Toujours avoir l&rsquo;air &eacute;l&eacute;gant</p>
+        <p>&nbsp;</p>
+      techlevel: 22
+      price: '0'
+      value: 0
+    sort: 100001
+    flags:
+      core:
+        sourceId: Item.2JInMXbRcbRiQo0P
+    img: systems/torgeternity/images/icons/gear.webp
+    effects: []
+    folder: null
+    permission:
+      default: 0
+    _key: '!actors.items!8YH1e6xGG3IHb1Mm.KpWgjWWFgY2tXQbG'
+  - _id: WQEeARuIk5dWxWCC
+    name: Glock 9mm
+    type: firearm
+    img: systems/torgeternity/images/icons/firearm.webp
+    data:
+      cosm: Prime Terre
+      description: >-
+        <p>Un semi-automatique 9 mm avec rechargement par recul.
+        R&eacute;put&eacute; pour son&nbsp; &eacute;pais chargeur grande
+        capacit&eacute;.</p>
+      techlevel: 22
+      price: '250'
+      value: 12
+      attackWith: fireCombat
+      damageType: ''
+      damage: 13
+      ap: 0
+      ammo:
+        max: 15
+        value: 15
+      range: 10/25/40
+      notes: '-Pistolet'
+      chatNote: ''
+    effects: []
+    folder: null
+    sort: 500000
+    permission:
+      default: 0
+      qjRKKHBumHYSfxpw: 3
+    flags:
+      core:
+        sourceId: Item.iOnl5BiGmVFaCzma
+    _key: '!actors.items!8YH1e6xGG3IHb1Mm.WQEeARuIk5dWxWCC'
+  - _id: tQXpaYu7WFDR2pYc
+    name: Glock 9mm
+    type: firearm
+    img: systems/torgeternity/images/icons/firearm.webp
+    data:
+      cosm: Prime Terre
+      description: >-
+        <p>Un semi-automatique 9 mm avec rechargement par recul.
+        R&eacute;put&eacute; pour son&nbsp; &eacute;pais chargeur grande
+        capacit&eacute;.</p>
+      techlevel: 22
+      price: '250'
+      value: 12
+      attackWith: fireCombat
+      damageType: ''
+      damage: 13
+      ap: 0
+      ammo:
+        max: 15
+        value: 15
+      range: 10/25/40
+      notes: '-Pistolet'
+      chatNote: ''
+    effects: []
+    folder: null
+    sort: 500000
+    permission:
+      default: 0
+      qjRKKHBumHYSfxpw: 3
+    flags:
+      core:
+        sourceId: Item.iOnl5BiGmVFaCzma
+    _key: '!actors.items!8YH1e6xGG3IHb1Mm.tQXpaYu7WFDR2pYc'
+  - _id: tc8NY79Kdx6Kda2K
+    name: Bagarreur
+    type: perk
+    img: systems/torgeternity/images/icons/perk.webp
+    data:
+      category: prowess
+      cosm: (Sans cosm)
+      prerequisites: au moins deux rangs en Combat à mains nues
+      timestaken: 1
+      description: >-
+        <p>Le combattant cogne fort en ayant recours &agrave; des coups vicieux
+        et un bon uppercut gr&acirc;ce &agrave; ses entra&icirc;nements au
+        karat&eacute;, au jujitsu, au taekwondo et autres sports de combat. Les
+        personnages avec cet Atout infligent Force + 2 points de dommages
+        &agrave; mains nues quand ils attaquent avec la comp&eacute;tence Combat
+        &agrave; mains nues. C&rsquo;est cumulable avec tout autre bonus de
+        Combat &agrave; mains nues tels que les attaques de griffes des
+        edeinos.</p>
+
+        <p>Des techniques plus complexes peuvent &ecirc;tre apprises avec les
+        Atouts Pouvoirs du Ki du Pan-Pacifica.</p>
+      pulpPowers:
+        enhancementNumber: 0
+        enhancement01:
+          title: ''
+          description: ''
+          taken: false
+        enhancement02:
+          title: ''
+          description: ''
+          taken: false
+        enhancement03:
+          title: ''
+          description: ''
+          taken: false
+        enhancement04:
+          title: ''
+          description: ''
+          taken: false
+        enhancement05:
+          title: ''
+          description: ''
+          taken: false
+        enhancement06:
+          title: ''
+          description: ''
+          taken: false
+        enhancement07:
+          title: ''
+          description: ''
+          taken: false
+        enhancement08:
+          title: ''
+          description: ''
+          taken: false
+        enhancement09:
+          title: ''
+          description: ''
+          taken: false
+        enhancement10:
+          title: ''
+          description: ''
+          taken: false
+        enhancement11:
+          title: ''
+          description: ''
+          taken: false
+        enhancement12:
+          title: ''
+          description: ''
+          taken: false
+        enhancement13:
+          title: ''
+          description: ''
+          taken: false
+        enhancement14:
+          title: ''
+          description: ''
+          taken: false
+        enhancement15:
+          title: ''
+          description: ''
+          taken: false
+        limitationNumber: 0
+        limitation01: ''
+        limitation02: ''
+        limitation03: ''
+        limitation04: ''
+        limitation05: ''
+        limitation06: ''
+        limitation07: ''
+        limitation08: ''
+        limitation09: ''
+        limitation10: ''
+    effects: []
+    folder: null
+    sort: 100000
+    permission:
+      default: 0
+      qjRKKHBumHYSfxpw: 3
+    flags:
+      core:
+        sourceId: Compendium.world.perks.perk-brawler
+    _key: '!actors.items!8YH1e6xGG3IHb1Mm.tc8NY79Kdx6Kda2K'
+  - _id: RQQULXqFcG4khx3v
+    name: Chargeurs supplémentaires (5)
+    type: gear
+    img: systems/torgeternity/images/icons/gear.webp
+    data:
+      cosm: Prime Terre
+      description: <p>Cinq recharges pour Glock 9 mm</p>
+      techlevel: 22
+      price: '20'
+      value: 6
+    effects: []
+    folder: null
+    sort: 1500000
+    permission:
+      default: 0
+      qjRKKHBumHYSfxpw: 3
+    flags:
+      core:
+        sourceId: Item.qZuQoegFPBYC6tEB
+    _key: '!actors.items!8YH1e6xGG3IHb1Mm.RQQULXqFcG4khx3v'
+  - _id: Lc1K5kWq3eCwHeM5
+    name: Insigne de police
+    type: gear
+    img: systems/torgeternity/images/icons/gear.webp
+    data:
+      cosm: Prime Terre
+      description: <p>Autorit&eacute;s locales</p>
+      techlevel: 22
+      price: '0'
+      value: 0
+    effects: []
+    folder: null
+    sort: 1800000
+    permission:
+      default: 0
+      qjRKKHBumHYSfxpw: 3
+    flags:
+      core:
+        sourceId: Item.fgtK79BumQwmkPzK
+    _key: '!actors.items!8YH1e6xGG3IHb1Mm.Lc1K5kWq3eCwHeM5'
+  - _id: shbOrxTn1RVzXEcf
+    name: Téléphone portable
+    type: gear
+    img: systems/torgeternity/images/icons/gear.webp
+    data:
+      cosm: Prime Terre
+      description: >-
+        <p>Des applications comme le GPS ou la lampe torche sont incluses. La
+        plupart des t&eacute;l&eacute;phones ont besoin de pyl&ocirc;nes
+        d&rsquo;amplification de signal, aussi dans des environnements avec une
+        technologie peu d&eacute;velopp&eacute;e, le t&eacute;l&eacute;phone
+        peut ne capter aucun signal. Les temp&ecirc;tes de r&eacute;alit&eacute;
+        perturbent &eacute;galement le signal.</p>
+      techlevel: 23
+      price: '300'
+      value: 13
+    effects: []
+    folder: null
+    sort: 400000
+    permission:
+      default: 0
+      qjRKKHBumHYSfxpw: 3
+    flags:
+      core:
+        sourceId: Compendium.te001-core-rulebook.Items.4XLIEkO0JxOkiTxR
+    _key: '!actors.items!8YH1e6xGG3IHb1Mm.shbOrxTn1RVzXEcf'
+  - _id: Qlh7pQzLxy6K5QNk
+    name: Lampe torche
+    type: gear
+    img: systems/torgeternity/images/icons/gear.webp
+    data:
+      cosm: Empire du Nil
+      description: <p>&Eacute;claire</p>
+      techlevel: 20
+      price: '10'
+      value: 5
+    effects: []
+    folder: null
+    sort: 1700000
+    permission:
+      default: 0
+      qjRKKHBumHYSfxpw: 3
+    flags:
+      core:
+        sourceId: Item.tktQLV7z5tnNkEqr
+    _key: '!actors.items!8YH1e6xGG3IHb1Mm.Qlh7pQzLxy6K5QNk'
+  - _id: 3Q7pQRHtUJQLwBoN
+    name: Lunettes de soleil
+    type: gear
+    img: systems/torgeternity/images/icons/gear.webp
+    data:
+      cosm: Empire du Nil
+      description: <p>&Eacute;l&eacute;gantes</p>
+      techlevel: 20
+      price: '10'
+      value: 5
+    effects: []
+    folder: null
+    sort: 2200000
+    permission:
+      default: 0
+      qjRKKHBumHYSfxpw: 3
+    flags:
+      core:
+        sourceId: Item.Wi4lFW6mtBCZS8EY
+    _key: '!actors.items!8YH1e6xGG3IHb1Mm.3Q7pQRHtUJQLwBoN'
+  - _id: kPWYETAaWgKsBoqG
+    name: Menottes rapides
+    type: gear
+    img: systems/torgeternity/images/icons/gear-icon.webp
+    data:
+      cosm: Prime Terre
+      description: <p>Entrave une cible</p>
+      techlevel: 22
+      price: '0'
+      value: 0
+    effects: []
+    folder: null
+    sort: 3500000
+    permission:
+      default: 0
+      TK1vCAdCz548vBDu: 3
+      qjRKKHBumHYSfxpw: 3
+    flags:
+      core:
+        sourceId: Item.YUDCGkWXWHejH49G
+    _key: '!actors.items!8YH1e6xGG3IHb1Mm.kPWYETAaWgKsBoqG'
+  - _id: PZxTNQSw6DWLKpxb
+    name: Veste en cuir
+    type: armor
+    img: systems/torgeternity/images/icons/armor.webp
+    data:
+      cosm: (Non)
+      description: ''
+      techlevel: 19
+      price: '100'
+      value: 10
+      bonus: 1
+      maxDex: 12
+      minStrength: null
+      equipped: false
+      equippedClass: .item-unequipped
+      notes: Torse
+    effects:
+      - _id: m4QT8vQ1gc6L97GC
+        flags: {}
+        changes:
+          - key: data.other.armor
+            value: '1'
+            mode: 2
+          - key: data.other.toughness
+            value: '1'
+            mode: 2
+        disabled: false
+        duration:
+          startTime: null
+        icon: icons/svg/aura.svg
+        label: Armor +1
+        origin: Item.2rrg1qTCfjdHFtKl
+        tint: null
+        transfer: true
+        _key: >-
+          !actors.items.effects!8YH1e6xGG3IHb1Mm.PZxTNQSw6DWLKpxb.m4QT8vQ1gc6L97GC
+    folder: null
+    sort: 800000
+    permission:
+      default: 0
+      qjRKKHBumHYSfxpw: 3
+    flags:
+      core:
+        sourceId: Item.Ih77xAUJLZwOROR7
+    _key: '!actors.items!8YH1e6xGG3IHb1Mm.PZxTNQSw6DWLKpxb'
+  - _id: cPqgeosGBc2dqDWm
+    name: Attaque à mains nues (+2)
+    type: customAttack
+    img: systems/torgeternity/images/icons/fist-icon.webp
+    data:
+      description: ''
+      attackWith: unarmedCombat
+      damageType: strengthPlus
+      damage: 2
+      ap: 0
+      notes: ''
+      chatNote: ''
+    effects: []
+    folder: null
+    sort: 0
+    permission:
+      default: 0
+      zWX19sSAtAWkeGhp: 3
+    flags:
+      core:
+        sourceId: Item.BFGjhDetVDm1xiku
+    _key: '!actors.items!8YH1e6xGG3IHb1Mm.cPqgeosGBc2dqDWm'
+effects:
+  - _id: yyVL5akSwrj5jb44
+    changes:
+      - key: data.other.armor
+        mode: 2
+        value: '1'
+      - key: data.other.toughness
+        mode: 2
+        value: '1'
+    disabled: false
+    duration:
+      startTime: 0
+    icon: icons/svg/aura.svg
+    label: Armure +1
+    origin: >-
+      Compendium.torgeternity.archetypes-fr.8YH1e6xGG3IHb1Mm.Item.PZxTNQSw6DWLKpxb
+    tint: ''
+    transfer: false
+    flags: {}
+    _key: '!actors.effects!8YH1e6xGG3IHb1Mm.yyVL5akSwrj5jb44'
+folder: null
+sort: 100001
+permission:
+  default: 0
+  A9LyAqagoJJU3gDH: 3
+flags: {}
+_key: '!actors!8YH1e6xGG3IHb1Mm'
+

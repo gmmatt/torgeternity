@@ -1,0 +1,956 @@
+_id: Aq6ZhdfGe9SMQxwv
+name: L’inventeuse excentrique
+type: stormknight
+img: >-
+  systems/torgeternity/images/characters/Eccentric_Inventor.Avatar.webp?1615058361679
+data:
+  shock:
+    max: 5
+    value: 0
+  wounds:
+    max: 3
+    value: 0
+  attributes:
+    charisma: 7
+    dexterity: 8
+    mind: 12
+    spirit: 7
+    strength: 6
+  other:
+    move: 5
+    run: 5
+    toughness: 5
+    armor: 0
+    cosm: nileEmpire
+    possibilities: 0
+    posibilities: 3
+  skills:
+    airVehicles:
+      baseAttribute: dexterity
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    alteration:
+      baseAttribute: mind
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    apportation:
+      baseAttribute: spirit
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    beastRiding:
+      baseAttribute: dexterity
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    computers:
+      baseAttribute: mind
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    conjuration:
+      baseAttribute: spirit
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    divination:
+      baseAttribute: mind
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    dodge:
+      baseAttribute: dexterity
+      adds: 2
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    energyWeapons:
+      baseAttribute: dexterity
+      adds: 2
+      value: 0
+      isFav: false
+      groupName: combat
+      unskilledUse: 1
+    evidenceAnalysis:
+      baseAttribute: mind
+      adds: 1
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    faith:
+      baseAttribute: spirit
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    find:
+      baseAttribute: mind
+      adds: 1
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    fireCombat:
+      baseAttribute: dexterity
+      adds: null
+      value: 0
+      isFav: false
+      groupName: combat
+      unskilledUse: 1
+    firstAid:
+      baseAttribute: mind
+      adds: 1
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    heavyWeapons:
+      baseAttribute: dexterity
+      adds: null
+      value: 0
+      isFav: false
+      groupName: combat
+      unskilledUse: 1
+    intimidation:
+      baseAttribute: spirit
+      adds: null
+      value: 0
+      isFav: false
+      groupName: interaction
+      unskilledUse: 1
+    kinesis:
+      baseAttribute: spirit
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    landVehicles:
+      baseAttribute: dexterity
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    language:
+      baseAttribute: mind
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    lockpicking:
+      baseAttribute: dexterity
+      adds: 1
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    maneuver:
+      baseAttribute: dexterity
+      adds: null
+      value: 0
+      isFav: false
+      groupName: interaction
+      unskilledUse: 1
+    medicine:
+      baseAttribute: mind
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    meleeWeapons:
+      baseAttribute: dexterity
+      adds: null
+      value: 0
+      isFav: false
+      groupName: combat
+      unskilledUse: 1
+    missileWeapons:
+      baseAttribute: dexterity
+      adds: null
+      value: 0
+      isFav: false
+      groupName: combat
+      unskilledUse: 1
+    persuasion:
+      baseAttribute: charisma
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    precognition:
+      baseAttribute: mind
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    profession:
+      baseAttribute: mind
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    reality:
+      baseAttribute: spirit
+      adds: 2
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    scholar:
+      baseAttribute: mind
+      adds: 1
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    science:
+      baseAttribute: mind
+      adds: 3
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    stealth:
+      baseAttribute: dexterity
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    streetwise:
+      baseAttribute: charisma
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    survival:
+      baseAttribute: mind
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    taunt:
+      baseAttribute: charisma
+      adds: 1
+      value: 0
+      isFav: false
+      groupName: interaction
+      unskilledUse: 1
+    telepathy:
+      baseAttribute: charisma
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    tracking:
+      baseAttribute: mind
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    trick:
+      baseAttribute: mind
+      adds: 1
+      value: 0
+      isFav: false
+      groupName: interaction
+      unskilledUse: 1
+    unarmedCombat:
+      baseAttribute: dexterity
+      adds: null
+      value: 0
+      isFav: false
+      groupName: combat
+      unskilledUse: 1
+    waterVehicles:
+      baseAttribute: dexterity
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    willpower:
+      baseAttribute: spirit
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+  xp:
+    unspent: 0
+    earned: 0
+  axioms:
+    magic: 14
+    social: 20
+    spirit: 18
+    tech: 20
+  details:
+    clearance: ''
+    background: >-
+      <h2>Pr&eacute;sentation</h2>
+
+      <p class="MsoNormal">Vous &eacute;tiez brillante et peut-&ecirc;tre un peu
+      excentrique m&ecirc;me avant les Guerres des Possibilit&eacute;s.
+      Apr&egrave;s votre transformation pour vous conformer &agrave; la
+      r&eacute;alit&eacute; pulp de l&rsquo;Empire du Nil, tout est devenu
+      possible. Les lois immuables de la physique sont d&eacute;sormais de
+      simples principes. Vous poussez cette nouvelle libert&eacute;
+      jusqu&rsquo;&agrave; ses limites en inventant d&rsquo;incroyables
+      appareils &eacute;lectroniques et en les utilisant contre les Pillards de
+      R&eacute;alit&eacute;s.&nbsp;</p>
+
+      <h2>Tactiques</h2>
+
+      <p>&nbsp;</p>
+
+      <p class="MsoNormal">Votre &eacute;lectro-rayon est efficace mais il peut
+      se d&eacute;charger s&rsquo;il est utilis&eacute; contre trop de cibles
+      trop rapidement. Votre interaction offensive Ruse est
+      particuli&egrave;rement d&eacute;vastatrice. De nombreux adversaires sont
+      faibles face &agrave; la Ruse et un r&eacute;sultat &laquo;Choix du
+      Joueur&raquo; peut &eacute;liminer des ennemis encore plus puissants dans
+      les bonnes circonstances.</p>
+
+      <p class="MsoNormal">Tant que votre Champ de force est
+      op&eacute;rationnel, vous pouvez utiliser ses charges pour annuler des
+      Blessures. Il peut bloquer deux points de Choc m&ecirc;me s&rsquo;il
+      n&rsquo;y a pas de Blessures mais il est pr&eacute;f&eacute;rable
+      d&rsquo;&eacute;conomiser ces charges. Une fois votre Champ de force
+      &eacute;puis&eacute;, ou si une D&eacute;connexion malencontreuse le
+      d&eacute;sactive, vous &ecirc;tes extr&ecirc;mement vuln&eacute;rable aux
+      dommages. Si possible, conservez des Cartes de Destin telles que
+      Volont&eacute; ou Action pour vous aider &agrave; vous
+      Reconnecter&nbsp;</p>
+
+      <h2>Instant fatidique</h2>
+
+      <p class="MsoNormal">Confront&eacute;e &agrave; l&rsquo;assaut
+      d&rsquo;envahisseurs au Caire, vous vous &ecirc;tes tourn&eacute;e vers la
+      science pour riposter et au cours d&rsquo;un moment d&rsquo;incroyable
+      inspiration (et un Instant fatidique) vous avez transform&eacute; un
+      t&eacute;l&eacute;phone, une lampe &agrave; lave et un s&eacute;choir en
+      un projecteur d&rsquo;&eacute;nergie mortelle. Vous pouvez aussi avoir
+      subi votre transformation en d&eacute;truisant de vieilles inventions
+      avant qu&rsquo;elles ne tombent entre les mains de M&ouml;bius et de ses
+      hordes&nbsp;</p>
+
+      <h2>Citation</h2>
+
+      <p class="MsoNormal">"Ouah ! Qui aurait pu pr&eacute;voir qu&rsquo;une
+      soudaine inversion de la polarit&eacute; provoque une telle explosion !
+      Enfin, &agrave; part moi, bien entendu. Car c&rsquo;est exactement ce que
+      j&rsquo;avais pr&eacute;vu. "</p>
+
+      <h2>Description</h2>
+
+      <p class="MsoNormal">Votre blouse en caoutchouc vulcanis&eacute; vous sert
+      &agrave; travailler mais dessous vous &ecirc;tes toujours habill&eacute;e
+      pour faire la f&ecirc;te. Vos lunettes sont &agrave; la mode dans toutes
+      les situations. Vous &ecirc;tes tr&egrave;s intelligente et tr&egrave;s
+      &eacute;duqu&eacute;e. Vous &ecirc;tes confiante, joyeuse et totalement
+      bizarre.&nbsp;</p>
+
+      <h2>Objectif</h2>
+
+      <p class="MsoNormal">La connaissance est le seul moyen d&rsquo;obtenir la
+      victoire et parfois, il faut faire des sacrifices pour atteindre cet
+      objectif. Sauver les gens et s&rsquo;amuser sont des priorit&eacute;s mais
+      la Science est toujours en t&ecirc;te de liste.&nbsp;</p>
+
+      <h2>Noms</h2>
+
+      <p>Capitaine Condensateur, Dr Foudre, Joy Buzzer, Professeur Diode,
+      L&rsquo;&Eacute;tincelle</p>
+
+      <h2>Piste de progression (optionnelle)</h2>
+
+      <ul>
+
+      <li>5 PX) Conscience environnementale</li>
+
+      <li>(7 PX) Champ de force (5 charges)</li>
+
+      <li>&nbsp;(9 PX) &Eacute;lectro-rayon (10 charges)</li>
+
+      <li>&nbsp;(3 PX) Esquive +3</li>
+
+      <li>&nbsp;(3 PX) Armes &agrave; &eacute;nergie +3</li>
+
+      <li>&nbsp;(3 PX) R&eacute;alit&eacute; +3</li>
+
+      </ul>
+    race: human
+  editstate: null
+  fatigue: '1'
+token:
+  flags: {}
+  name: L’inventeuse excentrique
+  displayName: 30
+  img: >-
+    systems/torgeternity/images/characters/Eccentric_Inventor.Token.webp?1615058361679
+  tint: null
+  width: 1
+  height: 1
+  scale: 1
+  lockRotation: false
+  rotation: 0
+  vision: false
+  dimSight: 0
+  brightSight: 0
+  dimLight: 0
+  brightLight: 0
+  sightAngle: 0
+  lightAngle: 360
+  lightAlpha: 1
+  lightAnimation:
+    speed: 5
+    intensity: 5
+  actorId: Aq6ZhdfGe9SMQxwv
+  actorLink: true
+  disposition: 1
+  displayBars: 20
+  bar1:
+    attribute: shock
+  bar2:
+    attribute: wounds
+  randomImg: false
+  mirrorX: false
+  mirrorY: false
+  alpha: 1
+  light:
+    alpha: 0.5
+    angle: 0
+    bright: 0
+    coloration: 1
+    dim: 0
+    gradual: true
+    luminosity: 0.5
+    saturation: 0
+    contrast: 0
+    shadows: 0
+    animation:
+      speed: 5
+      intensity: 5
+      reverse: false
+    darkness:
+      min: 0
+      max: 1
+    color: null
+items:
+  - _id: 80rM8r1q1ZuSjmNW
+    name: Électro-rayon
+    type: perk
+    data:
+      category: pulpPowers
+      cosm: Empire du Nil
+      prerequisites: ''
+      timestaken: 1
+      description: >-
+        <p>Le h&eacute;ros peut projeter un puissant rayon &eacute;lectrique. Il
+        attaque avec sa comp&eacute;tence Armes &agrave; &eacute;nergie ou son
+        attribut Dext&eacute;rit&eacute; et inflige 13 points de dommages.<br
+        />Le rayon a une port&eacute;e de 10/25/50, Munitions 5 et
+        r&eacute;g&eacute;n&egrave;re une charge par round.</p>
+
+        <p><br /><strong>Dangereux en cas d&rsquo;humidit&eacute; :</strong>
+        Augmente les dommages de +2 quand il pleut l&eacute;g&egrave;rement ou
+        si la cible se tient les pieds dans l&rsquo;eau et de +4 quand il pleut
+        &agrave; verse ou si la cible a de l&rsquo;eau au moins jusqu&rsquo;aux
+        chevilles.</p>
+      pulpPowers:
+        enhancementNumber: 0
+        enhancement01:
+          title: ''
+          description: ''
+          taken: false
+        enhancement02:
+          title: ''
+          description: ''
+          taken: false
+        enhancement03:
+          title: ''
+          description: ''
+          taken: false
+        enhancement04:
+          title: ''
+          description: ''
+          taken: false
+        enhancement05:
+          title: ''
+          description: ''
+          taken: false
+        enhancement06:
+          title: ''
+          description: ''
+          taken: false
+        enhancement07:
+          title: ''
+          description: ''
+          taken: false
+        enhancement08:
+          title: ''
+          description: ''
+          taken: false
+        enhancement09:
+          title: ''
+          description: ''
+          taken: false
+        enhancement10:
+          title: ''
+          description: ''
+          taken: false
+        enhancement11:
+          title: ''
+          description: ''
+          taken: false
+        enhancement12:
+          title: ''
+          description: ''
+          taken: false
+        enhancement13:
+          title: ''
+          description: ''
+          taken: false
+        enhancement14:
+          title: ''
+          description: ''
+          taken: false
+        enhancement15:
+          title: ''
+          description: ''
+          taken: false
+        limitationNumber: 0
+        limitation01: ''
+        limitation02: ''
+        limitation03: ''
+        limitation04: ''
+        limitation05: ''
+        limitation06: ''
+        limitation07: ''
+        limitation08: ''
+        limitation09: ''
+        limitation10: ''
+    sort: 200001
+    flags:
+      core:
+        sourceId: Item.XCIWjW6xVzFfafSU
+    img: systems/torgeternity/images/icons/perk.webp
+    effects: []
+    folder: null
+    permission:
+      default: 0
+    _key: '!actors.items!Aq6ZhdfGe9SMQxwv.80rM8r1q1ZuSjmNW'
+  - _id: GGNr7g7vMSTPaehJ
+    name: Champ de force
+    type: perk
+    data:
+      category: pulpPowers
+      cosm: Empire du Nil
+      prerequisites: ''
+      timestaken: 1
+      description: >-
+        <p>Le h&eacute;ros est environn&eacute; d&rsquo;un bouclier
+        d&rsquo;&eacute;nergie invisible. <span style="font-family:
+        var(--font-primary); font-size: var(--font-size-14);">Le champ de force
+        a trois </span><span style="font-family: var(--font-primary); font-size:
+        var(--font-size-14);">&laquo; charges &raquo;. &Agrave; chaque fois que
+        </span>le h&eacute;ros subit une&nbsp; blessure, le champ perd une de
+        ses charges pour bloquer la Blessure et 2 points de Choc.</p>
+
+        <p>Le champ r&eacute;g&eacute;n&egrave;re une charge par heure.</p>
+      pulpPowers:
+        enhancementNumber: 0
+        enhancement01:
+          title: ''
+          description: ''
+          taken: false
+        enhancement02:
+          title: ''
+          description: ''
+          taken: false
+        enhancement03:
+          title: ''
+          description: ''
+          taken: false
+        enhancement04:
+          title: ''
+          description: ''
+          taken: false
+        enhancement05:
+          title: ''
+          description: ''
+          taken: false
+        enhancement06:
+          title: ''
+          description: ''
+          taken: false
+        enhancement07:
+          title: ''
+          description: ''
+          taken: false
+        enhancement08:
+          title: ''
+          description: ''
+          taken: false
+        enhancement09:
+          title: ''
+          description: ''
+          taken: false
+        enhancement10:
+          title: ''
+          description: ''
+          taken: false
+        enhancement11:
+          title: ''
+          description: ''
+          taken: false
+        enhancement12:
+          title: ''
+          description: ''
+          taken: false
+        enhancement13:
+          title: ''
+          description: ''
+          taken: false
+        enhancement14:
+          title: ''
+          description: ''
+          taken: false
+        enhancement15:
+          title: ''
+          description: ''
+          taken: false
+        limitationNumber: 0
+        limitation01: ''
+        limitation02: ''
+        limitation03: ''
+        limitation04: ''
+        limitation05: ''
+        limitation06: ''
+        limitation07: ''
+        limitation08: ''
+        limitation09: ''
+        limitation10: ''
+    sort: 300001
+    flags:
+      core:
+        sourceId: Item.K6kYBttafWPIdNQs
+    img: systems/torgeternity/images/icons/perk.webp
+    effects: []
+    folder: null
+    permission:
+      default: 0
+    _key: '!actors.items!Aq6ZhdfGe9SMQxwv.GGNr7g7vMSTPaehJ'
+  - _id: YTn3DwXQRjQmHiv8
+    name: Mini transmetteur audio
+    type: gear
+    data:
+      cosm: Empire du Nil
+      description: >-
+        <p>Retransmet des sons vers un r&eacute;cepteur radio situ&eacute; dans
+        un p&eacute;rim&egrave;tre de 400 m&egrave;tres.</p>
+      techlevel: 20
+      price: '100'
+      value: 10
+    sort: 2900000
+    flags:
+      core:
+        sourceId: Item.j3maRwDVRJPYt1wO
+    img: systems/torgeternity/images/icons/gear.webp
+    effects: []
+    folder: null
+    permission:
+      default: 0
+    _key: '!actors.items!Aq6ZhdfGe9SMQxwv.YTn3DwXQRjQmHiv8'
+  - _id: ULLKqlRuslVlrPkq
+    name: Sac à dos
+    type: gear
+    data:
+      cosm: Aysle
+      description: <p>Toujours pr&ecirc;te !</p>
+      techlevel: 10
+      price: '50'
+      value: 9
+    sort: 3000000
+    flags:
+      core:
+        sourceId: Item.th671TeucbJU9ZOl
+    img: systems/torgeternity/images/icons/gear.webp
+    effects: []
+    folder: null
+    permission:
+      default: 0
+    _key: '!actors.items!Aq6ZhdfGe9SMQxwv.ULLKqlRuslVlrPkq'
+  - _id: D9xL4vD2vlmk43xR
+    name: Kit de premiers soins
+    type: gear
+    data:
+      cosm: Empire du Nil
+      description: <p>Tests de Premiers soins Favoris&eacute;s</p>
+      techlevel: 20
+      price: '50'
+      value: 7
+    sort: 3100000
+    flags:
+      core:
+        sourceId: Item.HsanlzQCJP0vTtEy
+    img: systems/torgeternity/images/icons/gear.webp
+    effects: []
+    folder: null
+    permission:
+      default: 0
+    _key: '!actors.items!Aq6ZhdfGe9SMQxwv.D9xL4vD2vlmk43xR'
+  - _id: xThbbxSuvzYe2PyQ
+    name: Outils de crochetage
+    type: gear
+    data:
+      cosm: Aysle
+      description: <p>Petits et facilement dissimulables</p>
+      techlevel: 10
+      price: '10'
+      value: 5
+    sort: 3200000
+    flags:
+      core:
+        sourceId: Item.xSw6gIp8xiCT1yXM
+    img: systems/torgeternity/images/icons/gear.webp
+    effects: []
+    folder: null
+    permission:
+      default: 0
+    _key: '!actors.items!Aq6ZhdfGe9SMQxwv.xThbbxSuvzYe2PyQ'
+  - _id: 1Hl7YPPwsY9etNJl
+    name: Poste radio
+    type: gear
+    data:
+      cosm: Empire du Nil
+      description: <p>Synchronis&eacute; au dispositif de pistage/transmetteur</p>
+      techlevel: 20
+      price: '50'
+      value: 9
+    sort: 3300000
+    flags:
+      core:
+        sourceId: Item.X4B9Ye2030sICMCa
+    img: systems/torgeternity/images/icons/gear.webp
+    effects: []
+    folder: null
+    permission:
+      default: 0
+    _key: '!actors.items!Aq6ZhdfGe9SMQxwv.1Hl7YPPwsY9etNJl'
+  - _id: 5DKkp05nGxK833lv
+    name: Ceinture à outils
+    type: gear
+    data:
+      cosm: Empire du Nil
+      description: <p>Cutters, pinces, tournevis et plus</p>
+      techlevel: 18
+      price: '100'
+      value: 10
+    sort: 3400000
+    flags:
+      core:
+        sourceId: Item.CvZU96RR15BnScXb
+    img: systems/torgeternity/images/icons/gear.webp
+    effects: []
+    folder: null
+    permission:
+      default: 0
+    _key: '!actors.items!Aq6ZhdfGe9SMQxwv.5DKkp05nGxK833lv'
+  - _id: MV07jQ3ZSwt0XVAu
+    name: Dispositif de pistage
+    type: gear
+    data:
+      cosm: Empire du Nil
+      description: >-
+        <p>Une balise qui &eacute;met un signal de localisation sur un
+        kilom&egrave;tre &agrave; tout r&eacute;cepteur radio captant sa
+        fr&eacute;quence.</p>
+      techlevel: 20
+      price: '150'
+      value: 11
+    sort: 2800000
+    flags:
+      core:
+        sourceId: Item.zGj5mxLW7ygVnIKC
+    img: systems/torgeternity/images/icons/gear.webp
+    effects: []
+    folder: null
+    permission:
+      default: 0
+    _key: '!actors.items!Aq6ZhdfGe9SMQxwv.MV07jQ3ZSwt0XVAu'
+  - _id: E6JiAtIrHBIrc4Hp
+    name: Électro-rayon
+    type: firearm
+    data:
+      cosm: Empire du Nil
+      description: ''
+      techlevel: 20
+      price: '0'
+      value: 0
+      attackWith: energyWeapons
+      damageType: ''
+      damage: 15
+      ap: 0
+      ammo:
+        max: 5
+        value: 5
+      range: 10/25/50
+      notes: necessite l'atout "électro-rayon" / Régénère 1 munition par round
+      chatNote: ''
+    sort: 400001
+    flags:
+      core:
+        sourceId: Item.W8ZARSxZdHHv4JZN
+    img: systems/torgeternity/images/icons/firearm.webp
+    effects: []
+    folder: null
+    permission:
+      default: 0
+    _key: '!actors.items!Aq6ZhdfGe9SMQxwv.E6JiAtIrHBIrc4Hp'
+  - _id: m4UNIQgIVWh0ofrr
+    name: Lampe torche
+    type: gear
+    img: systems/torgeternity/images/icons/gear.webp
+    data:
+      cosm: Empire du Nil
+      description: >-
+        <p><span style="color: #3e3e3e; font-family: 'Open Sans', sans-serif;
+        font-size: 16px;">&Eacute;</span>claire</p>
+      techlevel: 20
+      price: '10'
+      value: 5
+    effects: []
+    folder: null
+    sort: 1700000
+    permission:
+      default: 0
+      qjRKKHBumHYSfxpw: 3
+    flags:
+      core:
+        sourceId: Item.tktQLV7z5tnNkEqr
+    _key: '!actors.items!Aq6ZhdfGe9SMQxwv.m4UNIQgIVWh0ofrr'
+  - _id: JtXllaXMDuTpHTWT
+    name: Manteau en cuir
+    type: armor
+    img: systems/torgeternity/images/icons/armor.webp
+    data:
+      cosm: (Sans cosm)
+      description: ''
+      techlevel: 19
+      price: '100'
+      value: 10
+      bonus: 1
+      maxDex: 12
+      minStrength: null
+      equipped: false
+      equippedClass: .item-unequipped
+      notes: Torse
+    effects:
+      - _id: m4QT8vQ1gc6L97GC
+        flags: {}
+        changes:
+          - key: data.other.armor
+            value: '1'
+            mode: 2
+          - key: data.other.toughness
+            value: '1'
+            mode: 2
+        disabled: false
+        duration:
+          startTime: null
+        icon: icons/svg/aura.svg
+        label: Armor +1
+        origin: Item.2rrg1qTCfjdHFtKl
+        tint: null
+        transfer: true
+        _key: >-
+          !actors.items.effects!Aq6ZhdfGe9SMQxwv.JtXllaXMDuTpHTWT.m4QT8vQ1gc6L97GC
+    folder: null
+    sort: 800000
+    permission:
+      default: 0
+      qjRKKHBumHYSfxpw: 3
+    flags:
+      core:
+        sourceId: Item.Ih77xAUJLZwOROR7
+    _key: '!actors.items!Aq6ZhdfGe9SMQxwv.JtXllaXMDuTpHTWT'
+  - _id: oHBqOwXO2ED4k0wN
+    name: Attaque à mains nues
+    type: customAttack
+    img: systems/torgeternity/images/icons/fist-icon.webp
+    data:
+      description: ''
+      attackWith: unarmedCombat
+      damageType: strengthPlus
+      damage: 0
+      ap: 0
+      notes: ''
+      chatNote: ''
+    effects: []
+    folder: null
+    sort: 0
+    permission:
+      default: 0
+      zWX19sSAtAWkeGhp: 3
+    flags:
+      core:
+        sourceId: Item.BFGjhDetVDm1xiku
+    _key: '!actors.items!Aq6ZhdfGe9SMQxwv.oHBqOwXO2ED4k0wN'
+effects:
+  - _id: 0cb20uUutlrniHzZ
+    changes:
+      - key: data.other.armor
+        mode: 2
+        value: '1'
+      - key: data.other.toughness
+        mode: 2
+        value: '1'
+    disabled: false
+    duration:
+      startTime: 0
+    icon: icons/svg/aura.svg
+    label: Armure +1
+    origin: >-
+      Compendium.torgeternity.archetypes-fr.Aq6ZhdfGe9SMQxwv.Item.JtXllaXMDuTpHTWT
+    tint: ''
+    transfer: false
+    flags: {}
+    _key: '!actors.effects!Aq6ZhdfGe9SMQxwv.0cb20uUutlrniHzZ'
+folder: null
+sort: 100001
+permission:
+  default: 0
+  A9LyAqagoJJU3gDH: 3
+flags: {}
+_key: '!actors!Aq6ZhdfGe9SMQxwv'
+

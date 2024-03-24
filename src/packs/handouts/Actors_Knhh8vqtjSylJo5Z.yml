@@ -1,0 +1,522 @@
+name: Actors
+_id: Knhh8vqtjSylJo5Z
+pages:
+  - sort: 100000
+    name: Archetype - The Cyberwitch
+    type: image
+    _id: v8EhlvFjQYGClORG
+    title:
+      show: false
+      level: 1
+    image:
+      caption: ''
+    text:
+      format: 1
+    video:
+      controls: true
+      volume: 0.5
+    src: systems/torgeternity/images/characters/Cyberwitch.webp
+    system: {}
+    ownership:
+      default: -1
+      CtisFurQNe9h7ABb: 3
+    flags: {}
+    _stats:
+      systemId: torgeternity
+      systemVersion: 3.1.1
+      coreVersion: '11.308'
+      createdTime: 1693885332040
+      modifiedTime: 1693886048529
+      lastModifiedBy: CtisFurQNe9h7ABb
+    _key: '!journal.pages!Knhh8vqtjSylJo5Z.v8EhlvFjQYGClORG'
+  - sort: 100000
+    name: Archetype - The Dragon Warrior
+    type: image
+    title:
+      show: false
+      level: 1
+    image:
+      caption: ''
+    text:
+      format: 1
+    video:
+      controls: true
+      volume: 0.5
+    src: systems/torgeternity/images/characters/Dragon_Warrior.webp
+    system: {}
+    ownership:
+      default: -1
+      CtisFurQNe9h7ABb: 3
+    flags: {}
+    _stats:
+      systemId: torgeternity
+      systemVersion: 3.1.1
+      coreVersion: '11.308'
+      createdTime: 1693885332040
+      modifiedTime: 1693886111282
+      lastModifiedBy: CtisFurQNe9h7ABb
+    _id: wyqIUAZMhqAUvoD6
+    _key: '!journal.pages!Knhh8vqtjSylJo5Z.wyqIUAZMhqAUvoD6'
+  - sort: 100000
+    name: Archetype - The Eccentric Inventor
+    type: image
+    title:
+      show: false
+      level: 1
+    image:
+      caption: ''
+    text:
+      format: 1
+    video:
+      controls: true
+      volume: 0.5
+    src: systems/torgeternity/images/characters/Eccentric_Inventor.webp
+    system: {}
+    ownership:
+      default: -1
+      CtisFurQNe9h7ABb: 3
+    flags: {}
+    _stats:
+      systemId: torgeternity
+      systemVersion: 3.1.1
+      coreVersion: '11.308'
+      createdTime: 1693885332040
+      modifiedTime: 1693886126497
+      lastModifiedBy: CtisFurQNe9h7ABb
+    _id: 59zUF4TrfxfdMfhs
+    _key: '!journal.pages!Knhh8vqtjSylJo5Z.59zUF4TrfxfdMfhs'
+  - sort: 100000
+    name: Archetype - The Edeinos Optant
+    type: image
+    title:
+      show: false
+      level: 1
+    image:
+      caption: ''
+    text:
+      format: 1
+    video:
+      controls: true
+      volume: 0.5
+    src: systems/torgeternity/images/characters/Edeinos_Optant.webp
+    system: {}
+    ownership:
+      default: -1
+      CtisFurQNe9h7ABb: 3
+    flags: {}
+    _stats:
+      systemId: torgeternity
+      systemVersion: 3.1.1
+      coreVersion: '11.308'
+      createdTime: 1693885332040
+      modifiedTime: 1693886143098
+      lastModifiedBy: CtisFurQNe9h7ABb
+    _id: S9ZpLno9HjlxRrmV
+    _key: '!journal.pages!Knhh8vqtjSylJo5Z.S9ZpLno9HjlxRrmV'
+  - sort: 100000
+    name: Archetype - The Electric Samurai
+    type: image
+    title:
+      show: false
+      level: 1
+    image:
+      caption: ''
+    text:
+      format: 1
+    video:
+      controls: true
+      volume: 0.5
+    src: systems/torgeternity/images/characters/Electric_Samurai.webp
+    system: {}
+    ownership:
+      default: -1
+      CtisFurQNe9h7ABb: 3
+    flags: {}
+    _stats:
+      systemId: torgeternity
+      systemVersion: 3.1.1
+      coreVersion: '11.308'
+      createdTime: 1693885332040
+      modifiedTime: 1693886159906
+      lastModifiedBy: CtisFurQNe9h7ABb
+    _id: JrsdRBb5FF01sg6B
+    _key: '!journal.pages!Knhh8vqtjSylJo5Z.JrsdRBb5FF01sg6B'
+  - sort: 100000
+    name: Archetype - The Elven Warden
+    type: image
+    title:
+      show: false
+      level: 1
+    image:
+      caption: ''
+    text:
+      format: 1
+    video:
+      controls: true
+      volume: 0.5
+    src: systems/torgeternity/images/characters/Elven_Warden.webp
+    system: {}
+    ownership:
+      default: -1
+      CtisFurQNe9h7ABb: 3
+    flags: {}
+    _stats:
+      systemId: torgeternity
+      systemVersion: 3.1.1
+      coreVersion: '11.308'
+      createdTime: 1693885332040
+      modifiedTime: 1693886174826
+      lastModifiedBy: CtisFurQNe9h7ABb
+    _id: Y5Ywt3WpLVzwhwnm
+    _key: '!journal.pages!Knhh8vqtjSylJo5Z.Y5Ywt3WpLVzwhwnm'
+  - sort: 100000
+    name: Archetype - The Hardoiled Detective
+    type: image
+    title:
+      show: false
+      level: 1
+    image:
+      caption: ''
+    text:
+      format: 1
+    video:
+      controls: true
+      volume: 0.5
+    src: systems/torgeternity/images/characters/Hardboiled_Detective.webp
+    system: {}
+    ownership:
+      default: -1
+      CtisFurQNe9h7ABb: 3
+    flags: {}
+    _stats:
+      systemId: torgeternity
+      systemVersion: 3.1.1
+      coreVersion: '11.308'
+      createdTime: 1693885332040
+      modifiedTime: 1693886192513
+      lastModifiedBy: CtisFurQNe9h7ABb
+    _id: jGMEVr72h0Jjm3CQ
+    _key: '!journal.pages!Knhh8vqtjSylJo5Z.jGMEVr72h0Jjm3CQ'
+  - sort: 100000
+    name: Archetype - The Masked Crusader
+    type: image
+    title:
+      show: false
+      level: 1
+    image:
+      caption: ''
+    text:
+      format: 1
+    video:
+      controls: true
+      volume: 0.5
+    src: systems/torgeternity/images/characters/Masked_Crusader.webp
+    system: {}
+    ownership:
+      default: -1
+      CtisFurQNe9h7ABb: 3
+    flags: {}
+    _stats:
+      systemId: torgeternity
+      systemVersion: 3.1.1
+      coreVersion: '11.308'
+      createdTime: 1693885332040
+      modifiedTime: 1693886212522
+      lastModifiedBy: CtisFurQNe9h7ABb
+    _id: 4XMfQXpiBN5gsUNL
+    _key: '!journal.pages!Knhh8vqtjSylJo5Z.4XMfQXpiBN5gsUNL'
+  - sort: 100000
+    name: Archetype - The Monster Hunter
+    type: image
+    title:
+      show: false
+      level: 1
+    image:
+      caption: ''
+    text:
+      format: 1
+    video:
+      controls: true
+      volume: 0.5
+    src: systems/torgeternity/images/characters/Monster_Hunter.webp
+    system: {}
+    ownership:
+      default: -1
+      CtisFurQNe9h7ABb: 3
+    flags: {}
+    _stats:
+      systemId: torgeternity
+      systemVersion: 3.1.1
+      coreVersion: '11.308'
+      createdTime: 1693885332040
+      modifiedTime: 1693886230234
+      lastModifiedBy: CtisFurQNe9h7ABb
+    _id: XuZD3GOezHrsiAbQ
+    _key: '!journal.pages!Knhh8vqtjSylJo5Z.XuZD3GOezHrsiAbQ'
+  - sort: 100000
+    name: Archetype - The Primitive Hunter
+    type: image
+    title:
+      show: false
+      level: 1
+    image:
+      caption: ''
+    text:
+      format: 1
+    video:
+      controls: true
+      volume: 0.5
+    src: systems/torgeternity/images/characters/Primitive_Hunter.webp
+    system: {}
+    ownership:
+      default: -1
+      CtisFurQNe9h7ABb: 3
+    flags: {}
+    _stats:
+      systemId: torgeternity
+      systemVersion: 3.1.1
+      coreVersion: '11.308'
+      createdTime: 1693885332040
+      modifiedTime: 1693886251722
+      lastModifiedBy: CtisFurQNe9h7ABb
+    _id: XE6X141rfpUROtgY
+    _key: '!journal.pages!Knhh8vqtjSylJo5Z.XE6X141rfpUROtgY'
+  - sort: 100000
+    name: Archetype - The Realm Runner
+    type: image
+    title:
+      show: false
+      level: 1
+    image:
+      caption: ''
+    text:
+      format: 1
+    video:
+      controls: true
+      volume: 0.5
+    src: systems/torgeternity/images/characters/Realm_Runner.webp
+    system: {}
+    ownership:
+      default: -1
+      CtisFurQNe9h7ABb: 3
+    flags: {}
+    _stats:
+      systemId: torgeternity
+      systemVersion: 3.1.1
+      coreVersion: '11.308'
+      createdTime: 1693885332040
+      modifiedTime: 1693886283946
+      lastModifiedBy: CtisFurQNe9h7ABb
+    _id: RLk67atzGeIrJ9Ml
+    _key: '!journal.pages!Knhh8vqtjSylJo5Z.RLk67atzGeIrJ9Ml'
+  - sort: 100000
+    name: Archetype - The Relic Raider
+    type: image
+    title:
+      show: false
+      level: 1
+    image:
+      caption: ''
+    text:
+      format: 1
+    video:
+      controls: true
+      volume: 0.5
+    src: systems/torgeternity/images/characters/Relic_Raider.webp
+    system: {}
+    ownership:
+      default: -1
+      CtisFurQNe9h7ABb: 3
+    flags: {}
+    _stats:
+      systemId: torgeternity
+      systemVersion: 3.1.1
+      coreVersion: '11.308'
+      createdTime: 1693885332040
+      modifiedTime: 1693886302738
+      lastModifiedBy: CtisFurQNe9h7ABb
+    _id: tuOeVEYqdKLQkea4
+    _key: '!journal.pages!Knhh8vqtjSylJo5Z.tuOeVEYqdKLQkea4'
+  - sort: 100000
+    name: Archetype - The Renegade Priest
+    type: image
+    title:
+      show: false
+      level: 1
+    image:
+      caption: ''
+    text:
+      format: 1
+    video:
+      controls: true
+      volume: 0.5
+    src: systems/torgeternity/images/characters/Renegade_Priest.webp
+    system: {}
+    ownership:
+      default: -1
+      CtisFurQNe9h7ABb: 3
+    flags: {}
+    _stats:
+      systemId: torgeternity
+      systemVersion: 3.1.1
+      coreVersion: '11.308'
+      createdTime: 1693885332040
+      modifiedTime: 1693886317882
+      lastModifiedBy: CtisFurQNe9h7ABb
+    _id: hkGNur6sw23AZTbu
+    _key: '!journal.pages!Knhh8vqtjSylJo5Z.hkGNur6sw23AZTbu'
+  - sort: 100000
+    name: Archetype - The Resistance Fighter
+    type: image
+    title:
+      show: false
+      level: 1
+    image:
+      caption: ''
+    text:
+      format: 1
+    video:
+      controls: true
+      volume: 0.5
+    src: systems/torgeternity/images/characters/Resistance_Fighter.webp
+    system: {}
+    ownership:
+      default: -1
+      CtisFurQNe9h7ABb: 3
+    flags: {}
+    _stats:
+      systemId: torgeternity
+      systemVersion: 3.1.1
+      coreVersion: '11.308'
+      createdTime: 1693885332040
+      modifiedTime: 1693886334098
+      lastModifiedBy: CtisFurQNe9h7ABb
+    _id: pZZTcePrdVDCeCeF
+    _key: '!journal.pages!Knhh8vqtjSylJo5Z.pZZTcePrdVDCeCeF'
+  - sort: 100000
+    name: Archetype - The Scrapper
+    type: image
+    title:
+      show: false
+      level: 1
+    image:
+      caption: ''
+    text:
+      format: 1
+    video:
+      controls: true
+      volume: 0.5
+    src: systems/torgeternity/images/characters/Scrapper.webp
+    system: {}
+    ownership:
+      default: -1
+      CtisFurQNe9h7ABb: 3
+    flags: {}
+    _stats:
+      systemId: torgeternity
+      systemVersion: 3.1.1
+      coreVersion: '11.308'
+      createdTime: 1693885332040
+      modifiedTime: 1693886349386
+      lastModifiedBy: CtisFurQNe9h7ABb
+    _id: KlL26KhVUnkWipzG
+    _key: '!journal.pages!Knhh8vqtjSylJo5Z.KlL26KhVUnkWipzG'
+  - sort: 100000
+    name: Archetype - The Unstoppable Cop
+    type: image
+    title:
+      show: false
+      level: 1
+    image:
+      caption: ''
+    text:
+      format: 1
+    video:
+      controls: true
+      volume: 0.5
+    src: systems/torgeternity/images/characters/Unstoppable_Cop.webp
+    system: {}
+    ownership:
+      default: -1
+      CtisFurQNe9h7ABb: 3
+    flags: {}
+    _stats:
+      systemId: torgeternity
+      systemVersion: 3.1.1
+      coreVersion: '11.308'
+      createdTime: 1693885332040
+      modifiedTime: 1693886365442
+      lastModifiedBy: CtisFurQNe9h7ABb
+    _id: j7NJZCO90CI0aetf
+    _key: '!journal.pages!Knhh8vqtjSylJo5Z.j7NJZCO90CI0aetf'
+  - sort: 100000
+    name: Companion - Sabre-Tooth Cat
+    type: image
+    title:
+      show: false
+      level: 1
+    image:
+      caption: ''
+    text:
+      format: 1
+    video:
+      controls: true
+      volume: 0.5
+    src: systems/torgeternity/images/characters/Sabre_Tooth_Cat.webp
+    system: {}
+    ownership:
+      default: -1
+      CtisFurQNe9h7ABb: 3
+    flags: {}
+    _stats:
+      systemId: torgeternity
+      systemVersion: 3.1.1
+      coreVersion: '11.308'
+      createdTime: 1693885332040
+      modifiedTime: 1693886394514
+      lastModifiedBy: CtisFurQNe9h7ABb
+    _id: oSp48783apDZJbHt
+    _key: '!journal.pages!Knhh8vqtjSylJo5Z.oSp48783apDZJbHt'
+  - sort: 100000
+    name: Companion - White Wolf
+    type: image
+    title:
+      show: false
+      level: 1
+    image:
+      caption: ''
+    text:
+      format: 1
+    video:
+      controls: true
+      volume: 0.5
+    src: systems/torgeternity/images/characters/White_Wolf.webp
+    system: {}
+    ownership:
+      default: -1
+      CtisFurQNe9h7ABb: 3
+    flags: {}
+    _stats:
+      systemId: torgeternity
+      systemVersion: 3.1.1
+      coreVersion: '11.308'
+      createdTime: 1693885332040
+      modifiedTime: 1693886416650
+      lastModifiedBy: CtisFurQNe9h7ABb
+    _id: ItABNBtu0A2pm0Dc
+    _key: '!journal.pages!Knhh8vqtjSylJo5Z.ItABNBtu0A2pm0Dc'
+folder: null
+sort: 0
+ownership:
+  default: 0
+  CtisFurQNe9h7ABb: 3
+flags: {}
+_stats:
+  systemId: torgeternity
+  systemVersion: 3.1.1
+  coreVersion: '11.308'
+  createdTime: 1693885308072
+  modifiedTime: 1693886416650
+  lastModifiedBy: CtisFurQNe9h7ABb
+_key: '!journal!Knhh8vqtjSylJo5Z'
+

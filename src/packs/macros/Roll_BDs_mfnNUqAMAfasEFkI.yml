@@ -1,0 +1,23 @@
+name: Roll BDs
+type: script
+scope: global
+author: s0Eq742Hj4e1Qv9j
+img: icons/svg/dice-target.svg
+command: game.torgeternity.macros.rollBDs();
+folder: null
+ownership:
+  default: 0
+  s0Eq742Hj4e1Qv9j: 3
+flags:
+  core: {}
+_stats:
+  systemId: torgeternity
+  systemVersion: 3.6.0
+  coreVersion: '11.315'
+  createdTime: 1710250047195
+  modifiedTime: 1710250117335
+  lastModifiedBy: s0Eq742Hj4e1Qv9j
+_id: mfnNUqAMAfasEFkI
+sort: 0
+_key: '!macros!mfnNUqAMAfasEFkI'
+

@@ -1,0 +1,1386 @@
+_id: 54xKJBBQREaETwap
+name: Der Monsterjäger
+type: stormknight
+img: systems/torgeternity/images/characters/Monster_Hunter.Avatar.webp
+items:
+  - _id: l5YztYoW2lLfFuE7
+    name: Drachentöter
+    type: enhancement
+    img: systems/torgeternity/images/icons/enhancement.webp
+    data:
+      perk: Medaillen
+      description: >-
+        <p><span style="font-family: 'Palatino Linotype';">Verliehen an
+        diejenigen, die ein Sehr Gro&szlig;es und m&auml;chtiges Monster besiegt
+        haben. Der Charakter darf gegen Gro&szlig;e oder gr&ouml;&szlig;ere
+        Kreaturen (nicht Fahrzeuge oder Konstrukte) +1 BW Schaden addieren, wenn
+        Angriff eine Anerkannte Aktion ist.&nbsp;</span></p>
+    effects: []
+    folder: LyasDNAhbLqYWU56
+    sort: 0
+    permission:
+      default: 0
+      9Q0XnqFwko7hRlvL: 3
+    flags:
+      core:
+        sourceId: Item.2o4uyAarfqhvXsAb
+    _key: '!actors.items!54xKJBBQREaETwap.l5YztYoW2lLfFuE7'
+  - _id: cgOoj7U8q9ElWme8
+    name: Weihwasser-Patrone
+    type: enhancement
+    img: systems/torgeternity/images/icons/enhancement.webp
+    data:
+      perk: Patronenschmied
+      description: >-
+        <p><span style="font-family: 'Palatino Linotype';">+2 Schaden gegen
+        &uuml;bernat&uuml;rlich b&ouml;se Kreaturen, einschlie&szlig;lich
+        Gospog, Vampire und Untote.</span></p>
+    effects: []
+    folder: LyasDNAhbLqYWU56
+    sort: 0
+    permission:
+      default: 0
+      9Q0XnqFwko7hRlvL: 3
+    flags:
+      core:
+        sourceId: Item.ZLEDMBxF7sYYfGDt
+    _key: '!actors.items!54xKJBBQREaETwap.cgOoj7U8q9ElWme8'
+  - _id: RKUDEuSrme3mIBsL
+    name: Adamant-Patrone
+    type: enhancement
+    img: systems/torgeternity/images/icons/enhancement.webp
+    data:
+      perk: Patronenschmied
+      description: >-
+        <p><span style="font-family: 'Palatino Linotype';">Einige der Feinde der
+        Viktorianer sind von Kopf bis Fu&szlig; mit Metall, Schuppen und
+        manchmal sogar dicken Panzerplatten bedeckt. Diese Patrone ist
+        daf&uuml;r ausgelegt, solche R&uuml;stungen zu durchbrechen, sodass ein
+        Angriff mit ihr Panzerbrechend 4 erh&auml;lt.&nbsp;</span></p>
+    effects: []
+    folder: LyasDNAhbLqYWU56
+    sort: 0
+    permission:
+      default: 0
+      9Q0XnqFwko7hRlvL: 3
+    flags:
+      core:
+        sourceId: Item.aixA8mnHcAnk2jqP
+    _key: '!actors.items!54xKJBBQREaETwap.RKUDEuSrme3mIBsL'
+  - _id: ggMge8q9mNLisoLF
+    name: Riesenjäger-Patrone
+    type: enhancement
+    img: systems/torgeternity/images/icons/enhancement.webp
+    data:
+      perk: Patronenschmied
+      description: >-
+        <p><span style="font-family: 'Palatino Linotype';">Die Viktorianer
+        entwickelten diese schweren Patronen, um die gr&ouml;&szlig;ten
+        Schrecken des Hageren Mannes zu besiegen. Sie verursachen +5 Schaden
+        gegen Kreaturen, die Gro&szlig; oder gr&ouml;&szlig;er
+        sind.&nbsp;</span></p>
+    effects: []
+    folder: LyasDNAhbLqYWU56
+    sort: 0
+    permission:
+      default: 0
+      9Q0XnqFwko7hRlvL: 3
+    flags:
+      core:
+        sourceId: Item.bGEJwusZZlTPjJ8E
+    _key: '!actors.items!54xKJBBQREaETwap.ggMge8q9mNLisoLF'
+  - _id: boM8dYbi3L3o5AGN
+    name: Silberdolch
+    type: missileweapon
+    img: systems/torgeternity/images/icons/missile-weapon-icon.webp
+    effects: []
+    folder: c0xmFF9hQntpEdKX
+    sort: 0
+    flags:
+      core:
+        sourceId: Item.5WgKw7ZX3AraDLGK
+    system:
+      cosm: Orrorsh
+      description: <p>Verwenden, wenn der Silberdolch geworfen wird.</p>
+      techlevel: 8
+      price: '0'
+      value: 0
+      attackWith: missileWeapons
+      damageType: strengthPlus
+      damage: 1
+      ap: 0
+      ammo:
+        max: 1
+        value: 1
+      minStrength: null
+      range: 5/10/15
+      notes: ''
+      chatNote: ''
+    ownership:
+      default: 0
+      9Q0XnqFwko7hRlvL: 3
+    _stats:
+      systemId: torgeternity
+      systemVersion: 3.1.1
+      coreVersion: '11.308'
+      createdTime: null
+      modifiedTime: 1694868108125
+      lastModifiedBy: CtisFurQNe9h7ABb
+    _key: '!actors.items!54xKJBBQREaETwap.boM8dYbi3L3o5AGN'
+  - _id: Hs5XdWPZjiVqyJJb
+    name: Medaillen
+    type: perk
+    img: systems/torgeternity/images/icons/reality-icon.webp
+    effects: []
+    folder: null
+    sort: 0
+    flags:
+      core:
+        sourceId: Compendium.te001-core-rulebook.grw-de-vorzuverb.Item.j5BUaTKWjvJuOV9O
+    system:
+      category: occult
+      cosm: Orrorsh
+      prerequisites: Siehe die einzelnen Medaillen.
+      timestaken: 1
+      description: >-
+        <p>Viktorianer sind statusbewusst und verehren ihre Helden mehr als
+        alles andere. Die Viktorianer zeigen dies, indem sie den Tapferen, den
+        Genialen und den Unerschrockenen Medaillen verleihen. Manchmal
+        f&uuml;llen sich die Medaillen mit der Kraft ihres urspr&uuml;nglichen
+        Elans und helfen ihrem Tr&auml;ger bei der Rettung von Gaea.&nbsp;</p>
+
+        <p><strong>Neue Medaillen:</strong> Dieser Vorzug darf w&auml;hrend der
+        Charaktererstellung beliebig oft gew&auml;hlt werden. Auch danach kann
+        er mehrmals erworben werden, aber nur wenn der Held zuvor die bei der
+        jeweiligen Medaille aufgef&uuml;hrte Tat vollbracht hat. Die
+        Drachent&ouml;ter-Medaille wird zum Beispiel erst vergeben, nachdem der
+        Anw&auml;rter einem sehr gro&szlig;en Monster den letzten Schlag
+        versetzt hat.&nbsp;</p>
+
+        <p>Die Medaillen treffen nat&uuml;rlich nicht sofort ein, sondern werden
+        per Kurier geliefert, nachdem das Innenministerium Depeschen erhalten
+        hat, in denen die Tat belegt wird, sei es in Briefen an die
+        Daheimgebliebenen oder indem davon in der Presse berichtet wird. Der
+        Delphi-Rat versteht jedoch die mystische Natur dieser Auszeichnungen und
+        hilft den Viktorianern, sie so schnell wie m&ouml;glich auszuliefern.
+        Entscheide in Zusammenarbeit mit der Spielleiterin, wann die Medaille
+        eintrifft, aber es sollte in der Regel sp&auml;testens nach dem Akt
+        geschehen, in dem die Heldentat erfolgte. Der Vorzug darf erworben
+        werden, sobald der Charakter die Medaille in H&auml;nden
+        h&auml;lt.&nbsp;</p>
+
+        <p>Eine Medaille muss verliehen <span style="text-decoration:
+        underline;">und</span> getragen werden, um ihre F&auml;higkeit zu
+        gew&auml;hren. Sie gew&auml;hren keinen Bonus an andere.&nbsp;</p>
+
+        <p>Medaillen k&ouml;nnen an Au&szlig;enstehende aus anderen Cosms
+        verliehen werden, aber nur f&uuml;r einen Bewohner von Orrorshs
+        Realit&auml;t haben sie auch eine spieltechnische Wirkung. Sie erzeugen
+        keine Widerspr&uuml;che in anderen Realit&auml;ten.&nbsp;</p>
+
+        <p>Sofern die Beschreibung einer Medaille nichts anderes besagt, kann
+        sie demselben Helden nicht mehr als einmal verliehen werden.&nbsp;</p>
+
+        <ul>
+
+        <li>@Compendium[te001-core-rulebook.grw-de-vorzuverb.7b1rIrmURMLCiQtD]{Carnifex
+        Princeps}</li>
+
+        <li>@Compendium[te001-core-rulebook.grw-de-vorzuverb.2SM0WnI40gl89eWT]{Drachent&ouml;ter}</li>
+
+        <li>@Compendium[te001-core-rulebook.grw-de-vorzuverb.Eke8YWLTujfFzGJh]{Feldzugmedaille
+        der Possibility Wars}</li>
+
+        <li>@Compendium[te001-core-rulebook.grw-de-vorzuverb.LadrP4W2tQjozSrk]{Orden
+        von Cynthia Bartholom&auml;us}</li>
+
+        <li>@Compendium[te001-core-rulebook.grw-de-vorzuverb.J2AxbN99xNUOIgnc]{Verteidiger}</li>
+
+        <li>@Compendium[te001-core-rulebook.grw-de-vorzuverb.X0g6UjR7sasevGLF]{Victoria
+        Gloriana}</li>
+
+        </ul>
+      pulpPowers:
+        enhancementNumber: 6
+        enhancement01:
+          title: Carnifex Princeps
+          description: >-
+            Die Viktorianer wissen genau, wer der Hagere Mann ist. Diese
+            Auszeichnung wird jedem verliehen, der an der Tötung eines Ravagons
+            beteiligt ist, seiner gefährlichsten Untergebenen. Der Held bekommt
+            zu Beginn jeder dramatischen Szene eine zusätzliche Handkarte.
+          taken: false
+        enhancement02:
+          title: Drachentöter
+          description: >-
+            Verliehen an diejenigen, die ein Sehr Großes und mächtiges Monster
+            besiegt haben. Der Charakter darf gegen Große oder größere Kreaturen
+            (nicht Fahrzeuge oder Konstrukte) +1 BW Schaden addieren, wenn
+            Angriff eine Anerkannte Aktion ist.
+          taken: true
+        enhancement03:
+          title: Feldzugmedaille der Possibility Wars
+          description: >-
+            Wird jedem Storm Knight verliehen, der an einem Ruhm-Ereignis
+            teilnimmt. Die Medaille wird pro Cosm vergeben und kann einmal pro
+            Akt genutzt werden, um Schockschaden in Höhe eines Bonuswürfels zu
+            regenerieren. Dies ist jederzeit möglich und erfordert keine Aktion.
+          taken: false
+        enhancement04:
+          title: Orden von Cynthia Bartholomäus
+          description: >-
+            Verliehen für die Unterstützung der Verletzten oder Armen unter
+            großer Bedrohung oder für einen längeren Zeitraum. „Ms. Bart“, wie
+            die Armen sie nannten, war eine viktorianische Humanistin, die immer
+            für die Armen und Unterdrückten da war. Einmal pro Akt darf der
+            Charakter einen Verbündeten berühren, um bei diesem sofort allen
+            Schockschaden zu heilen. Dies ist eine einfache Aktion.
+          taken: false
+        enhancement05:
+          title: Verteidiger
+          description: >-
+            Verliehen an diejenigen, die eine beträchtliche Anzahl von Menschen,
+            wie eine Schule oder eine Stadt, unter großem persönlichen Risiko
+            gerettet oder verteidigt haben. Der Held beginnt jeden Akt mit 1
+            zusätzlicher Möglichkeit.
+          taken: false
+        enhancement06:
+          title: Victoria Gloriana
+          description: >-
+            Verliehen nach dem persönlichen Ausspielen einer Ruhmkarte. Dieses
+            prestigeträchtige Abzeichen wird nur den größten Helden des Landes
+            verliehen. Die Medaille verleiht einem Attribut, das bei der
+            Medaillenvergabe ausgewählt wird, und seinen verknüpften
+            Fertigkeiten einen Bonus von +1. Beachte, dass das Tragen der
+            Medaille und Würfeln auf das hierdurch verbesserte Attribut oder
+            eine damit verknüpfte Fertigkeit einen Widerspruch auslösen kann.
+          taken: false
+        enhancement07:
+          title: ''
+          description: ''
+          taken: false
+        enhancement08:
+          title: ''
+          description: ''
+          taken: false
+        enhancement09:
+          title: ''
+          description: ''
+          taken: false
+        enhancement10:
+          title: ''
+          description: ''
+          taken: false
+        enhancement11:
+          title: ''
+          description: ''
+          taken: false
+        enhancement12:
+          title: ''
+          description: ''
+          taken: false
+        enhancement13:
+          title: ''
+          description: ''
+          taken: false
+        enhancement14:
+          title: ''
+          description: ''
+          taken: false
+        enhancement15:
+          title: ''
+          description: ''
+          taken: false
+        limitationNumber: 0
+        limitation01: ''
+        limitation02: ''
+        limitation03: ''
+        limitation04: ''
+        limitation05: ''
+        limitation06: ''
+        limitation07: ''
+        limitation08: ''
+        limitation09: ''
+        limitation10: ''
+    ownership:
+      default: 0
+      9Q0XnqFwko7hRlvL: 3
+      CtisFurQNe9h7ABb: 3
+    _stats:
+      systemId: torgeternity
+      systemVersion: 3.1.1
+      coreVersion: '11.308'
+      createdTime: 1694867975270
+      modifiedTime: 1694868069024
+      lastModifiedBy: CtisFurQNe9h7ABb
+    _key: '!actors.items!54xKJBBQREaETwap.Hs5XdWPZjiVqyJJb'
+  - _id: 6RWboAjDxAtNFv3N
+    name: Patronenschmied
+    type: perk
+    img: systems/torgeternity/images/icons/reality-icon.webp
+    effects: []
+    folder: null
+    sort: 0
+    flags:
+      core:
+        sourceId: Compendium.te001-core-rulebook.grw-de-vorzuverb.Item.Xbg2XCya32s9HKJJ
+    system:
+      category: occult
+      cosm: Orrorsh
+      prerequisites: mindestens 2 Fertigkeitsstufen in Wissenschaft
+      timestaken: 1
+      description: >-
+        <p>Abenteurer von Orrorsh lernten vor langer Zeit, dass Bleikugeln und
+        Stahlklingen den Schrecken ihres Reiches nicht gewachsen sind. Die
+        Alchemie erwies sich als gro&szlig;e Hilfe f&uuml;r ihre Sache, und
+        einige unerschrockene Seelen verbanden dieses arkane Handwerk mit
+        praktischem Schusswaffengebrauch.&nbsp;</p>
+
+        <p>Wenn dieser Vorzug ausgew&auml;hlt wird, besitzt der Charakter ein
+        &bdquo;Jagdrevolvergewehr&ldquo; und wei&szlig;, wie man Munition
+        daf&uuml;r herstellt. Er darf die Standard-Patronen herstellen (Schaden
+        14) und drei der im Folgenden aufgef&uuml;hrten Patronentypen. Der kurze
+        Lauf der Waffe erlaubt es dem Sch&uuml;tzen, sie im Nahkampf wie einen
+        Karabiner einzusetzen.&nbsp;</p>
+
+        <p>Da die Kugeln notwendigerweise gro&szlig; sind und genaue
+        Spezifikationen erfordern, haben die Patronenschmiede sich f&uuml;r
+        einen sechssch&uuml;ssigen Trommelrevolver entschieden, um sie auch im
+        Nahkampf abfeuern zu k&ouml;nnen &ndash; die Patronen funktionieren
+        nicht mit anderen Waffen.&nbsp;</p>
+
+        <p><strong>@Compendium[te001-core-rulebook.grw-de-ausruestung.wEOCxOMN84sOaC3F]{Jagdrevolvergewehr}:</strong>
+        Reichweite 50/100/200, Schaden 14, 6 Schuss, Karabiner&nbsp;</p>
+
+        <p>Patronenschmiede d&uuml;rfen bis zu sechs besondere Patronen
+        herstellen und funktionsf&auml;hig halten, solange sie ihre
+        Ausr&uuml;stung bei sich haben (zu der auch eine tragbare
+        Waffen-Werkstatt geh&ouml;rt). Wenn &uuml;ber diese Obergrenze hinaus
+        besondere Patronen hergestellt werden, so haben diese keine besondere
+        Wirkung, sondern z&auml;hlen als die normalen Patronen der Waffe
+        (Schaden 14). Neue Patronen k&ouml;nnen zwischen zwei Szenen hergestellt
+        werden, oder bei einer l&auml;ngeren Rast, wenn die Spielleiterin dies
+        erlaubt.&nbsp;</p>
+
+        <p>Die Jagdrevolvergewehre sind so konstruiert, dass die Trommel schnell
+        gedreht und so eine beliebige der zuvor geladenen sechs Kammern
+        abgefeuert werden kann (die Bef&uuml;llung der einzelnen Kammern wird
+        zuvor notiert). Das Auswechseln oder neu Best&uuml;cken von bis zu drei
+        Kammern erfordert eine Aktion. Jede Patrone kann nur einen
+        zus&auml;tzlichen Effekt halten.&nbsp;</p>
+
+        <p><strong>Jagdpatronengurt:</strong> Patronenschmiede tragen einen
+        speziellen Patronengurt, der insgesamt 18 Patronen aufnehmen kann (12
+        normale und 6 besondere Patronen).&nbsp;</p>
+
+        <p><strong>Zus&auml;tzliche Patronen: </strong>Dieser Vorzug darf
+        mehrmals gew&auml;hlt werden. Jedes Mal nach dem ersten erlernt der
+        Patronenschmied einen neuen besonderen Patronentyp herzustellen und
+        erh&ouml;ht die Zahl der besonderen Patronen, die er gleichzeitig haben
+        darf, um zwei.&nbsp;</p>
+
+        <p>Hier sind einige der besonderen Patronen, die von den
+        Patronenschmieden entwickelt wurden:&nbsp;</p>
+
+        <ul>
+
+        <li>@Compendium[te001-core-rulebook.grw-de-vorzuverb.WtFrrL81DTorS9Ex]{Adamant-Patrone}</li>
+
+        <li>@Compendium[te001-core-rulebook.grw-de-vorzuverb.6jtijsM0CclsmqnL]{Elektrische
+        Patrone}</li>
+
+        <li>@Compendium[te001-core-rulebook.grw-de-vorzuverb.EEcVN7nH9Hiw5Uyo]{Explosive
+        Patrone}</li>
+
+        <li>@Compendium[te001-core-rulebook.grw-de-vorzuverb.fMGdmxr02BaGvfCj]{Phantom-Patrone}</li>
+
+        <li>@Compendium[te001-core-rulebook.grw-de-vorzuverb.szNK83xtC7xcf6jK]{Riesenj&auml;ger-Patrone}</li>
+
+        <li>@Compendium[te001-core-rulebook.grw-de-vorzuverb.gQ9kz5XRpSNU1JCR]{Silber-Patrone}</li>
+
+        <li>@Compendium[te001-core-rulebook.grw-de-vorzuverb.V0Py0P0asFUz4E1G]{Sonnen-Patrone}</li>
+
+        <li>@Compendium[te001-core-rulebook.grw-de-vorzuverb.mgdVFDGal2m8kNzD]{Weihwasser-Patrone}</li>
+
+        </ul>
+      pulpPowers:
+        enhancementNumber: 8
+        enhancement01:
+          title: Adamant-Patrone
+          description: >-
+            Einige der Feinde der Viktorianer sind von Kopf bis Fuß mit Metall,
+            Schuppen und manchmal sogar dicken Panzerplatten bedeckt. Diese
+            Patrone ist dafür ausgelegt, solche Rüstungen zu durchbrechen,
+            sodass ein Angriff mit ihr Panzerbrechend 4 erhält.
+          taken: true
+        enhancement02:
+          title: Elektrische Patrone
+          description: >-
+            Wasserbasierte Kreaturen oder Kreaturen, die im Wasser stehen,
+            erleiden einen zusätzlichen Schaden von +4, wenn sie mit einer
+            Elektrischen Patrone getroffen werden. Ein bisher unbekannter
+            Nebeneffekt dieser Patronen besteht darin, dass sie bei
+            Hightech-Elektronikgeräten Störungen verursachen können. Roboter und
+            Maschinen erleiden deshalb ebenfalls den zusätzlichen Schaden und
+            empfindliche Ausrüstung erleidet einen Kurzschluss, sodass sie 3
+            Runden lang nicht eingesetzt werden kann.
+          taken: false
+        enhancement03:
+          title: Explosive Patrone
+          description: >-
+            Diese Patrone gehört zu den gefährlichsten im Arsenal der
+            Patronenschmiede und verursacht 15 Schaden in einem kleinen
+            Explosionsradius.
+          taken: false
+        enhancement04:
+          title: Phantom-Patrone
+          description: >-
+            Diese Patronen werden aus verschiedenen Reagenzien wie kaltem Eisen,
+            Salz und Weihwasser hergestellt, die es ihnen ermöglichen, Kreaturen
+            mit der Fähigkeit „Ätherisch“ normal zu beeinflussen.
+          taken: false
+        enhancement05:
+          title: Riesenjäger-Patrone
+          description: >-
+            Die Viktorianer entwickelten diese schweren Patronen, um die größten
+            Schrecken des Hageren Mannes zu besiegen. Sie verursachen +5 Schaden
+            gegen Kreaturen, die Groß oder größer sind.
+          taken: true
+        enhancement06:
+          title: Silber-Patrone
+          description: >-
+            Kreaturen mit der Fähigkeit „Lykantropie“ erleiden durch
+            Silber-Patronen +4 Schaden.
+          taken: false
+        enhancement07:
+          title: Sonnen-Patrone
+          description: >-
+            Diese Patronen enthalten etwas, was die Alchemisten als „flüssiges
+            Sonnenlicht“ bezeichnen. Sie explodieren in einem mittleren
+            Explosionsradius aus ultraviolettem Licht, wodurch alle Kreaturen
+            mit einer Empfindlichkeit gegenüber Licht oder Sonnenlicht, die von
+            ihnen „getroffen“ werden, Sehr Verwundbar werden. Die meisten
+            Kreaturen, die im Dunkeln sehen können, sind von Sonnen-Patronen
+            betroffen.
+          taken: false
+        enhancement08:
+          title: Weihwasser-Patrone
+          description: >-
+            +2 Schaden gegen übernatürlich böse Kreaturen, einschließlich
+            Gospog, Vampire und Untote.
+          taken: true
+        enhancement09:
+          title: ''
+          description: ''
+          taken: false
+        enhancement10:
+          title: ''
+          description: ''
+          taken: false
+        enhancement11:
+          title: ''
+          description: ''
+          taken: false
+        enhancement12:
+          title: ''
+          description: ''
+          taken: false
+        enhancement13:
+          title: ''
+          description: ''
+          taken: false
+        enhancement14:
+          title: ''
+          description: ''
+          taken: false
+        enhancement15:
+          title: ''
+          description: ''
+          taken: false
+        limitationNumber: 0
+        limitation01: ''
+        limitation02: ''
+        limitation03: ''
+        limitation04: ''
+        limitation05: ''
+        limitation06: ''
+        limitation07: ''
+        limitation08: ''
+        limitation09: ''
+        limitation10: ''
+    ownership:
+      default: 0
+      9Q0XnqFwko7hRlvL: 3
+      CtisFurQNe9h7ABb: 3
+    _stats:
+      systemId: torgeternity
+      systemVersion: 3.1.1
+      coreVersion: '11.308'
+      createdTime: 1694867980101
+      modifiedTime: 1694868051568
+      lastModifiedBy: CtisFurQNe9h7ABb
+    _key: '!actors.items!54xKJBBQREaETwap.6RWboAjDxAtNFv3N'
+  - _id: y3PEaQZquxm7CfN5
+    name: Silberdolch
+    type: meleeweapon
+    img: systems/torgeternity/images/icons/axe-icon.webp
+    effects: []
+    folder: null
+    sort: 22700000
+    flags:
+      core:
+        sourceId: >-
+          Compendium.te001-core-rulebook.grw-de-ausruestung.Item.iDd5uxOdpiUJ9JFn
+    system:
+      cosm: Orrorsh
+      description: ''
+      techlevel: 8
+      price: '0'
+      value: 0
+      attackWith: meleeWeapons
+      damageType: strengthPlus
+      damage: 1
+      ap: 0
+      bonus: 2
+      notes: ''
+      chatNote: ''
+    ownership:
+      default: 0
+      9Q0XnqFwko7hRlvL: 3
+      CtisFurQNe9h7ABb: 3
+    _stats:
+      systemId: torgeternity
+      systemVersion: 3.1.1
+      coreVersion: '11.308'
+      createdTime: 1694868092620
+      modifiedTime: 1694868092620
+      lastModifiedBy: CtisFurQNe9h7ABb
+    _key: '!actors.items!54xKJBBQREaETwap.y3PEaQZquxm7CfN5'
+  - _id: kJWVVFbIlxn2K1fe
+    name: Webley Revolver
+    type: firearm
+    img: systems/torgeternity/images/icons/firearm-icon.webp
+    effects: []
+    folder: null
+    sort: 31400000
+    flags:
+      core:
+        sourceId: >-
+          Compendium.te001-core-rulebook.grw-de-ausruestung.Item.eaDTP2RPFOw4DHnq
+    system:
+      cosm: Orrorsh
+      description: >-
+        <p>@UUID[Compendium.te001-core-rulebook.grw-de-grw.Qlx6yGF0Mmo6Xzrv.JournalEntryPage.7GGUUHzuYIqGPXDO#karabiner:]{Pistole}</p>
+      techlevel: 18
+      price: '300'
+      value: 12
+      attackWith: fireCombat
+      damageType: ''
+      damage: 14
+      ap: 0
+      ammo:
+        max: 6
+        value: 6
+      range: 10/25/40
+      notes: ''
+      chatNote: Pistole
+    ownership:
+      default: 0
+      9Q0XnqFwko7hRlvL: 3
+      CtisFurQNe9h7ABb: 3
+    _stats:
+      systemId: torgeternity
+      systemVersion: 3.1.1
+      coreVersion: '11.308'
+      createdTime: 1694868115803
+      modifiedTime: 1694868128613
+      lastModifiedBy: CtisFurQNe9h7ABb
+    _key: '!actors.items!54xKJBBQREaETwap.kJWVVFbIlxn2K1fe'
+  - _id: pQwYUD5tTVwa0iN2
+    name: Jagdrevolvergewehr
+    type: firearm
+    img: systems/torgeternity/images/icons/firearm-icon.webp
+    effects: []
+    folder: null
+    sort: 31300000
+    flags:
+      core:
+        sourceId: >-
+          Compendium.te001-core-rulebook.grw-de-ausruestung.Item.wEOCxOMN84sOaC3F
+    system:
+      cosm: Orrorsh
+      description: >-
+        <p>@UUID[Compendium.te001-core-rulebook.grw-de-grw.Qlx6yGF0Mmo6Xzrv.JournalEntryPage.7GGUUHzuYIqGPXDO#karabiner:]{Karabiner}</p>
+      techlevel: 18
+      price: '0'
+      value: 0
+      attackWith: fireCombat
+      damageType: ''
+      damage: 14
+      ap: 0
+      ammo:
+        max: 6
+        value: 6
+      range: 50/100/200
+      notes: Karabiner
+      chatNote: ''
+    ownership:
+      default: 0
+      9Q0XnqFwko7hRlvL: 3
+      CtisFurQNe9h7ABb: 3
+    _stats:
+      systemId: torgeternity
+      systemVersion: 3.1.1
+      coreVersion: '11.308'
+      createdTime: 1694868126947
+      modifiedTime: 1694868126947
+      lastModifiedBy: CtisFurQNe9h7ABb
+    _key: '!actors.items!54xKJBBQREaETwap.pQwYUD5tTVwa0iN2'
+  - _id: E5L9eWESBf0zPhmf
+    name: Monsterfell-Mantel
+    type: armor
+    img: systems/torgeternity/images/icons/armor-icon.webp
+    effects:
+      - _id: cpcuOmv3sJ9em3S2
+        changes:
+          - key: system.other.toughness
+            mode: 2
+            value: '2'
+            priority: null
+          - key: system.other.armor
+            mode: 2
+            value: '2'
+            priority: null
+        disabled: false
+        duration:
+          startTime: null
+          seconds: null
+          combat: null
+          rounds: null
+          turns: null
+          startRound: null
+          startTurn: null
+        icon: icons/svg/aura.svg
+        origin: Item.luUzXC2YVG7OI1cF
+        transfer: true
+        flags: {}
+        tint: null
+        name: Rüstung +2
+        description: ''
+        statuses: []
+        _key: >-
+          !actors.items.effects!54xKJBBQREaETwap.E5L9eWESBf0zPhmf.cpcuOmv3sJ9em3S2
+      - _id: hl5oaGSNnz4RdaOz
+        changes:
+          - key: system.other.fatigue
+            mode: 2
+            value: '1'
+            priority: null
+        disabled: false
+        duration:
+          startTime: null
+          seconds: null
+          combat: null
+          rounds: null
+          turns: null
+          startRound: null
+          startTurn: null
+        icon: icons/svg/aura.svg
+        origin: Compendium.te001-core-rulebook.grw-de-ausruestung.6bQe7SykCFATMjWD
+        transfer: true
+        flags: {}
+        tint: null
+        name: Ermüdung
+        description: ''
+        statuses: []
+        _key: >-
+          !actors.items.effects!54xKJBBQREaETwap.E5L9eWESBf0zPhmf.hl5oaGSNnz4RdaOz
+    folder: null
+    sort: 3400000
+    flags:
+      core:
+        sourceId: >-
+          Compendium.te001-core-rulebook.grw-de-ausruestung.Item.6bQe7SykCFATMjWD
+    system:
+      cosm: Orrorsh
+      description: >-
+        <p>@UUID[Compendium.te001-core-rulebook.grw-de-grw.Qlx6yGF0Mmo6Xzrv.JournalEntryPage.7GGUUHzuYIqGPXDO#ermudung:]{Erm&uuml;dung}</p>
+
+        <p>Ein langer Mantel aus den behandelten Fellen verschiedener Tiere, die
+        einst die Unschuldigen terrorisiert haben. Die Monster von Orrorsh sind
+        notorisch robust, sodass ihr Leder besonders haltbar ist.</p>
+      techlevel: 16
+      price: '350'
+      value: 12
+      bonus: 2
+      maxDex: 10
+      minStrength: null
+      equipped: true
+      equippedClass: item-equipped
+      notes: Ermüdung
+    ownership:
+      default: 0
+      9Q0XnqFwko7hRlvL: 3
+      CtisFurQNe9h7ABb: 3
+    _stats:
+      systemId: torgeternity
+      systemVersion: 3.1.1
+      coreVersion: '11.308'
+      createdTime: 1694868143764
+      modifiedTime: 1694868143770
+      lastModifiedBy: CtisFurQNe9h7ABb
+    _key: '!actors.items!54xKJBBQREaETwap.E5L9eWESBf0zPhmf'
+  - _id: lntlAp4VUb9lNjTJ
+    name: Krähenfüße
+    type: gear
+    img: systems/torgeternity/images/icons/gear-icon.webp
+    effects:
+      - _id: UBMPRmdexcJIvmed
+        changes:
+          - key: system.skills.maneuver.isFav
+            mode: 5
+            value: '1'
+            priority: null
+        disabled: true
+        duration:
+          startTime: null
+          seconds: null
+          combat: null
+          rounds: null
+          turns: null
+          startRound: null
+          startTurn: null
+        icon: icons/svg/aura.svg
+        origin: Compendium.te001-core-rulebook.grw-de-ausruestung.GPs2FHE83EfpBIfZ
+        transfer: true
+        flags: {}
+        tint: null
+        name: Fertigkeitsbegünstigung
+        description: ''
+        statuses: []
+        _key: >-
+          !actors.items.effects!54xKJBBQREaETwap.lntlAp4VUb9lNjTJ.UBMPRmdexcJIvmed
+    folder: null
+    sort: 8600000
+    flags:
+      core:
+        sourceId: Item.prL9HtFgNGaw1Szz
+    system:
+      cosm: Aysle
+      description: >-
+        <p>Vierzackige Metallsterne zum Ausstreuen, die immer mit einem Stachel
+        nach oben weisen, und dadurch F&uuml;&szlig;e und Reifen
+        aufspie&szlig;en k&ouml;nnen. Nachdem sie mit einer einfachen Aktion
+        ausgestreut wurden, z&auml;hlen
+        <em>Man&ouml;vrieren</em>-Interaktionsangriffe in ihrem Bereich als
+        Beg&uuml;nstigt.</p>
+      techlevel: 14
+      price: '40'
+      value: 8
+    ownership:
+      default: 0
+      9Q0XnqFwko7hRlvL: 3
+      CtisFurQNe9h7ABb: 3
+    _stats:
+      systemId: torgeternity
+      systemVersion: 3.1.1
+      coreVersion: '11.308'
+      createdTime: 1694868152308
+      modifiedTime: 1694868160440
+      lastModifiedBy: CtisFurQNe9h7ABb
+    _key: '!actors.items!54xKJBBQREaETwap.lntlAp4VUb9lNjTJ'
+  - name: Fackel
+    type: gear
+    img: systems/torgeternity/images/icons/gear-icon.webp
+    effects: []
+    folder: null
+    sort: 8500000
+    flags:
+      core:
+        sourceId: Item.EVp5rwRYSGcx7uFV
+    _id: 6AtnJDCxsnKsj6Ab
+    system:
+      cosm: Das Lebende Land
+      description: ''
+      techlevel: 2
+      price: '5'
+      value: 4
+    ownership:
+      default: 0
+      9Q0XnqFwko7hRlvL: 3
+      CtisFurQNe9h7ABb: 3
+    _stats:
+      systemId: torgeternity
+      systemVersion: 3.1.1
+      coreVersion: '11.308'
+      createdTime: 1694868156419
+      modifiedTime: 1694868156419
+      lastModifiedBy: CtisFurQNe9h7ABb
+    _key: '!actors.items!54xKJBBQREaETwap.6AtnJDCxsnKsj6Ab'
+effects:
+  - _id: lHhX6roYZz2UukZQ
+    changes:
+      - key: system.other.toughness
+        mode: 2
+        value: '2'
+        priority: null
+      - key: system.other.armor
+        mode: 2
+        value: '2'
+        priority: null
+    disabled: false
+    duration:
+      startTime: 0
+      seconds: null
+      combat: null
+      rounds: null
+      turns: null
+      startRound: null
+      startTurn: null
+    icon: icons/svg/aura.svg
+    origin: >-
+      Compendium.torgeternity.system-de-archetypen.Actor.54xKJBBQREaETwap.Item.E5L9eWESBf0zPhmf
+    transfer: false
+    flags: {}
+    tint: null
+    name: Rüstung +2
+    description: ''
+    statuses: []
+    _key: '!actors.effects!54xKJBBQREaETwap.lHhX6roYZz2UukZQ'
+  - _id: gBOTxsFpgcoHI8A6
+    changes:
+      - key: system.other.fatigue
+        mode: 2
+        value: '1'
+        priority: null
+    disabled: false
+    duration:
+      startTime: 0
+      seconds: null
+      combat: null
+      rounds: null
+      turns: null
+      startRound: null
+      startTurn: null
+    icon: icons/svg/aura.svg
+    origin: >-
+      Compendium.torgeternity.system-de-archetypen.Actor.54xKJBBQREaETwap.Item.E5L9eWESBf0zPhmf
+    transfer: false
+    flags: {}
+    tint: null
+    name: Ermüdung
+    description: ''
+    statuses: []
+    _key: '!actors.effects!54xKJBBQREaETwap.gBOTxsFpgcoHI8A6'
+  - _id: tR4EzLKHTSRgSVVO
+    changes:
+      - key: system.skills.maneuver.isFav
+        mode: 5
+        value: '1'
+        priority: null
+    disabled: true
+    duration:
+      startTime: 0
+      seconds: null
+      combat: null
+      rounds: null
+      turns: null
+      startRound: null
+      startTurn: null
+    icon: icons/svg/aura.svg
+    origin: >-
+      Compendium.torgeternity.system-de-archetypen.Actor.54xKJBBQREaETwap.Item.lntlAp4VUb9lNjTJ
+    transfer: false
+    flags: {}
+    tint: null
+    name: Fertigkeitsbegünstigung
+    description: ''
+    statuses: []
+    _key: '!actors.effects!54xKJBBQREaETwap.tR4EzLKHTSRgSVVO'
+folder: null
+sort: 0
+flags:
+  core:
+    sourceId: Compendium.torgeternity.archetypes.8KlJAaxeijOcrJKN
+system:
+  shock:
+    max: 10
+    value: 0
+  wounds:
+    max: 3
+    value: 0
+  attributes:
+    charisma: 5
+    dexterity: 9
+    mind: 8
+    spirit: 10
+    strength: 8
+  other:
+    move: 9
+    run: 27
+    toughness: 10
+    armor: 2
+    cosm: orrorsh
+    possibilities: 0
+    posibilities: 3
+  skills:
+    airVehicles:
+      baseAttribute: dexterity
+      adds: null
+      value: '-'
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    alteration:
+      baseAttribute: mind
+      adds: null
+      value: '-'
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    apportation:
+      baseAttribute: spirit
+      adds: null
+      value: '-'
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    beastRiding:
+      baseAttribute: dexterity
+      adds: null
+      value: 9
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    computers:
+      baseAttribute: mind
+      adds: null
+      value: 8
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    conjuration:
+      baseAttribute: spirit
+      adds: null
+      value: '-'
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    divination:
+      baseAttribute: mind
+      adds: null
+      value: '-'
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    dodge:
+      baseAttribute: dexterity
+      adds: 1
+      value: 10
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    energyWeapons:
+      baseAttribute: dexterity
+      adds: null
+      value: 9
+      isFav: false
+      groupName: combat
+      unskilledUse: 1
+    evidenceAnalysis:
+      baseAttribute: mind
+      adds: 1
+      value: 9
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    faith:
+      baseAttribute: spirit
+      adds: null
+      value: 10
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    find:
+      baseAttribute: mind
+      adds: 1
+      value: 9
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    fireCombat:
+      baseAttribute: dexterity
+      adds: 3
+      value: 12
+      isFav: false
+      groupName: combat
+      unskilledUse: 1
+    firstAid:
+      baseAttribute: mind
+      adds: null
+      value: 8
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    heavyWeapons:
+      baseAttribute: dexterity
+      adds: null
+      value: 9
+      isFav: false
+      groupName: combat
+      unskilledUse: 1
+    intimidation:
+      baseAttribute: spirit
+      adds: 2
+      value: 12
+      isFav: false
+      groupName: interaction
+      unskilledUse: 1
+    kinesis:
+      baseAttribute: spirit
+      adds: null
+      value: '-'
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    landVehicles:
+      baseAttribute: dexterity
+      adds: null
+      value: 9
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    language:
+      baseAttribute: mind
+      adds: null
+      value: '-'
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    lockpicking:
+      baseAttribute: dexterity
+      adds: null
+      value: '-'
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    maneuver:
+      baseAttribute: dexterity
+      adds: 1
+      value: 10
+      isFav: false
+      groupName: interaction
+      unskilledUse: 1
+    medicine:
+      baseAttribute: mind
+      adds: null
+      value: '-'
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    meleeWeapons:
+      baseAttribute: dexterity
+      adds: 1
+      value: 10
+      isFav: false
+      groupName: combat
+      unskilledUse: 1
+    missileWeapons:
+      baseAttribute: dexterity
+      adds: null
+      value: 9
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    persuasion:
+      baseAttribute: charisma
+      adds: null
+      value: 5
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    precognition:
+      baseAttribute: mind
+      adds: null
+      value: '-'
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    profession:
+      baseAttribute: mind
+      adds: null
+      value: 8
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    reality:
+      baseAttribute: spirit
+      adds: 1
+      value: 11
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    scholar:
+      baseAttribute: mind
+      adds: 1
+      value: 9
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    science:
+      baseAttribute: mind
+      adds: 2
+      value: 10
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    stealth:
+      baseAttribute: dexterity
+      adds: null
+      value: 9
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    streetwise:
+      baseAttribute: charisma
+      adds: null
+      value: 5
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    survival:
+      baseAttribute: mind
+      adds: null
+      value: 8
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    taunt:
+      baseAttribute: charisma
+      adds: null
+      value: 5
+      isFav: false
+      groupName: interaction
+      unskilledUse: 1
+    telepathy:
+      baseAttribute: charisma
+      adds: null
+      value: '-'
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    tracking:
+      baseAttribute: mind
+      adds: 1
+      value: 9
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    trick:
+      baseAttribute: mind
+      adds: null
+      value: 8
+      isFav: false
+      groupName: interaction
+      unskilledUse: 1
+    unarmedCombat:
+      baseAttribute: dexterity
+      adds: null
+      value: 9
+      isFav: false
+      groupName: combat
+      unskilledUse: 1
+    waterVehicles:
+      baseAttribute: dexterity
+      adds: null
+      value: 9
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    willpower:
+      baseAttribute: spirit
+      adds: 1
+      value: 11
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+  xp:
+    unspent: 0
+    earned: 0
+  axioms:
+    magic: 16
+    social: 18
+    spirit: 16
+    tech: 18
+  details:
+    clearance: alpha
+    background: >-
+      <p><img class="charimg"
+      src="systems/torgeternity/images/characters/Monster_Hunter.webp" alt=""
+      width="1139" height="1982"></p>
+
+      <p
+      class="moreheight">@UUID[Compendium.torgeternity.system-de-handouts.JournalEntry.DLLvnXpv7RFhRgHu.JournalEntryPage.XuZD3GOezHrsiAbQ]{Archetyp
+      - Der Monsterj&auml;ger}</p>
+
+      <h3>&Uuml;berblick</h3>
+
+      <p>Du bist ein Viktorianer, und deine Welt Gaea ist im Griff der Schrecken
+      des Hageren Mannes. Du aber hast dich nicht damit zufrieden gegeben, vom
+      Entsetzen regiert zu werden, also hast du dich gewehrt. Entgegen aller
+      Wahrscheinlichkeit hast du &uuml;berlebt, und die verschiedenen Tricks,
+      Gegenst&auml;nde und Spezialwaffen, die du dir &uuml;ber Jahre hinweg im
+      Kampf gegen das B&ouml;se angeeignet hast, haben die Chancen erheblich
+      verbessert.&nbsp;</p>
+
+      <p>Als der Hagere Mann seine dunklen Kr&auml;fte sammelte, um &uuml;ber
+      die Mahlstrombr&uuml;cken zu reisen und seine Kreaturen auf die
+      Zentralerde loszulassen, folgtest du ihnen, um sie zu jagen, so wie du es
+      schon immer getan hast.</p>
+
+      <h3>Taktiken</h3>
+
+      <p>Die speziellen Patronen in deinem Jagdrevolvergewehr verleihen dir
+      Kraft und Vielseitigkeit gegen verschiedene Feinde, auch au&szlig;erhalb
+      von Orrorsh. Wann immer du kannst, solltest du versuchen, herauszufinden,
+      mit welchen Feinden du es wahrscheinlich zu tun bekommst, und eine dazu
+      passende Sammlung von Patronen vorbereiten. Weihwasser- Patronen sind sehr
+      effektiv gegen die Gospog, die von allen High Lords ins Feld gef&uuml;hrt
+      werden. Und selbst wenn du bereits alle Spezialgeschosse verbraucht hast,
+      hat auch deine Standardmunition noch odentlich Wumms.&nbsp;</p>
+
+      <p>Du bist sehr resistent gegen Angst und Einsch&uuml;chterung, aber sehr
+      anf&auml;llig f&uuml;r <em>Verspotten</em>-Interaktionsangriffe. Die
+      Viktorianer sind bekanntlich hochm&uuml;tig und intolerant gegen&uuml;ber
+      Beleidigungen!</p>
+
+      <h3>Moment der Krise</h3>
+
+      <p>Deine Krise geschah vor langer Zeit auf Gaea. Vielleicht war es ein
+      Werwolf, oder vielleicht war es ein Vampir. Was auch immer es war, es war
+      eine Kreatur des Hageren Mannes. Sie bis zu ihrem Versteck
+      zur&uuml;ckzuverfolgen war tollk&uuml;hn, aber dein Versuch l&ouml;ste
+      eine Ver&auml;nderung in dir aus. Als Storm Knight hattest du endlich die
+      Macht, dich zu wehren.</p>
+
+      <h3>Zitat</h3>
+
+      <p>"Es ist einfacher, seine Angst vor einer Kreatur zu
+      &uuml;berwinden,&nbsp;wenn man die Macht hat, sie zu zerst&ouml;ren."</p>
+
+      <h3>Beschreibung</h3>
+
+      <p>Der Kampf gegen Monster ist ein gef&auml;hrlicher Beruf, und du hast
+      zahlreiche Narben, die diese Tatsache belegen. Nur einige dieser Narben
+      sind sichtbar. Die Viktorianer bevorzugen stilvolle Kleidung, auch bei
+      extremer Hitze, und du bist da keine Ausnahme. Dein unverwechselbarer
+      Mantel aus seltsamem Leder und dein kunstvoll verziertes,
+      &uuml;berdimensionales Jagdrevolvergewehr lassen deine Berufung
+      erahnen.</p>
+
+      <h3>Agenda</h3>
+
+      <p>Die Zerst&ouml;rung des B&ouml;sen ist ein Gebot der Stunde. Wenn man
+      sie am Leben l&auml;sst, werden diese Monster nur noch abscheulicher und
+      m&auml;chtiger. Und die High Lords, trotz all ihrer Tricks und Masken,
+      sind am Ende auch nur Monster, die du verfolgen und ausschalten
+      kannst.</p>
+
+      <h3>Namen</h3>
+
+      <p>Ashton, Aubrey, Eli, Harper, Marion, Prester, Tanner, Thomas,
+      Winter</p>
+
+      <h3>Vorgeschlagener Aufstieg (Optional)</h3>
+
+      <ul>
+
+      <li>(5 EP) Scharfsch&uuml;tze</li>
+
+      <li>(7 EP) Patronenschmied (explosive Patrone)</li>
+
+      <li>(1 EP) <em>Tricksen</em> +1</li>
+
+      <li>(2 EP) <em>Man&ouml;vrieren</em> +2</li>
+
+      <li>(3 EP) <em>Einsch&uuml;chtern</em> +3</li>
+
+      <li>(3 EP) <em>Nahkampfwaffen</em> +3</li>
+
+      <li>(4 EP) <em>Feuerwaffen</em> +4</li>
+
+      <li>(5 EP) <em>Feuerwaffen</em> +5</li>
+
+      </ul>
+    race: human
+  editstate: null
+  fatigue: '1'
+ownership:
+  default: 0
+  9Q0XnqFwko7hRlvL: 3
+prototypeToken:
+  flags: {}
+  name: Der Monsterjäger
+  displayName: 0
+  width: 1
+  height: 1
+  lockRotation: true
+  rotation: 0
+  actorLink: true
+  disposition: 1
+  displayBars: 40
+  bar1:
+    attribute: wounds
+  bar2:
+    attribute: shock
+  randomImg: false
+  alpha: 1
+  light:
+    alpha: 1
+    angle: 360
+    bright: 0
+    color: null
+    coloration: 1
+    dim: 0
+    luminosity: 0.5
+    saturation: 0
+    contrast: 0
+    shadows: 0
+    animation:
+      speed: 5
+      intensity: 5
+      type: null
+      reverse: false
+    darkness:
+      min: 0
+      max: 1
+    attenuation: 0.5
+  texture:
+    src: systems/torgeternity/images/characters/monster_hunter.Token.webp
+    tint: null
+    scaleX: 1
+    scaleY: 1
+    offsetX: 0
+    offsetY: 0
+    rotation: 0
+  sight:
+    angle: 360
+    enabled: true
+    range: 0
+    brightness: 1
+    visionMode: basic
+    attenuation: 0.1
+    saturation: 0
+    contrast: 0
+  appendNumber: false
+  prependAdjective: false
+  detectionModes: []
+_stats:
+  systemId: torgeternity
+  systemVersion: 3.1.1
+  coreVersion: '11.308'
+  createdTime: 1694867975270
+  modifiedTime: 1694868160440
+  lastModifiedBy: CtisFurQNe9h7ABb
+_key: '!actors!54xKJBBQREaETwap'
+

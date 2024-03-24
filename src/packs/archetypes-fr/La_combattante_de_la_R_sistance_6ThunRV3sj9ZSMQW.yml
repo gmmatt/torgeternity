@@ -1,0 +1,1102 @@
+_id: 6ThunRV3sj9ZSMQW
+name: La combattante de la Résistance
+type: stormknight
+img: systems/torgeternity/images/characters/Resistance_Fighter.Avatar.webp
+data:
+  shock:
+    max: 9
+    value: 0
+  wounds:
+    max: 3
+    value: 0
+  attributes:
+    charisma: 8
+    dexterity: 8
+    mind: 8
+    spirit: 9
+    strength: 7
+  other:
+    move: 8
+    run: 24
+    toughness: 10
+    armor: 3
+    cosm: tharkold
+    possibilities: 0
+    posibilities: 3
+  skills:
+    airVehicles:
+      baseAttribute: dexterity
+      adds: null
+      value: '-'
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    alteration:
+      baseAttribute: mind
+      adds: null
+      value: '-'
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    apportation:
+      baseAttribute: spirit
+      adds: null
+      value: '-'
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    beastRiding:
+      baseAttribute: dexterity
+      adds: null
+      value: 8
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    computers:
+      baseAttribute: mind
+      adds: null
+      value: 8
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    conjuration:
+      baseAttribute: spirit
+      adds: null
+      value: '-'
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    divination:
+      baseAttribute: mind
+      adds: null
+      value: '-'
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    dodge:
+      baseAttribute: dexterity
+      adds: 2
+      value: 10
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    energyWeapons:
+      baseAttribute: dexterity
+      adds: 1
+      value: 9
+      isFav: false
+      groupName: combat
+      unskilledUse: 1
+    evidenceAnalysis:
+      baseAttribute: mind
+      adds: null
+      value: 8
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    faith:
+      baseAttribute: spirit
+      adds: null
+      value: 9
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    find:
+      baseAttribute: mind
+      adds: 1
+      value: 9
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    fireCombat:
+      baseAttribute: dexterity
+      adds: 1
+      value: 9
+      isFav: false
+      groupName: combat
+      unskilledUse: 1
+    firstAid:
+      baseAttribute: mind
+      adds: null
+      value: 8
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    heavyWeapons:
+      baseAttribute: dexterity
+      adds: null
+      value: 8
+      isFav: false
+      groupName: combat
+      unskilledUse: 1
+    intimidation:
+      baseAttribute: spirit
+      adds: null
+      value: 9
+      isFav: false
+      groupName: interaction
+      unskilledUse: 1
+    kinesis:
+      baseAttribute: spirit
+      adds: 3
+      value: 12
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    landVehicles:
+      baseAttribute: dexterity
+      adds: 1
+      value: 9
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    language:
+      baseAttribute: mind
+      adds: null
+      value: '-'
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    lockpicking:
+      baseAttribute: dexterity
+      adds: null
+      value: '-'
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    maneuver:
+      baseAttribute: dexterity
+      adds: null
+      value: 8
+      isFav: false
+      groupName: interaction
+      unskilledUse: 1
+    medicine:
+      baseAttribute: mind
+      adds: null
+      value: '-'
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    meleeWeapons:
+      baseAttribute: dexterity
+      adds: null
+      value: 8
+      isFav: false
+      groupName: combat
+      unskilledUse: 1
+    missileWeapons:
+      baseAttribute: dexterity
+      adds: null
+      value: 8
+      isFav: false
+      groupName: combat
+      unskilledUse: 1
+    persuasion:
+      baseAttribute: charisma
+      adds: null
+      value: 8
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    precognition:
+      baseAttribute: mind
+      adds: null
+      value: '-'
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    profession:
+      baseAttribute: mind
+      adds: null
+      value: 8
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    reality:
+      baseAttribute: spirit
+      adds: 2
+      value: 11
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    scholar:
+      baseAttribute: mind
+      adds: null
+      value: 8
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    science:
+      baseAttribute: mind
+      adds: null
+      value: 8
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    stealth:
+      baseAttribute: dexterity
+      adds: null
+      value: 8
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    streetwise:
+      baseAttribute: charisma
+      adds: null
+      value: 8
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    survival:
+      baseAttribute: mind
+      adds: 1
+      value: 9
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    taunt:
+      baseAttribute: charisma
+      adds: 1
+      value: 9
+      isFav: false
+      groupName: interaction
+      unskilledUse: 1
+    telepathy:
+      baseAttribute: charisma
+      adds: null
+      value: '-'
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    tracking:
+      baseAttribute: mind
+      adds: null
+      value: 8
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    trick:
+      baseAttribute: mind
+      adds: 1
+      value: 9
+      isFav: false
+      groupName: interaction
+      unskilledUse: 1
+    unarmedCombat:
+      baseAttribute: dexterity
+      adds: 1
+      value: 9
+      isFav: false
+      groupName: combat
+      unskilledUse: 1
+    waterVehicles:
+      baseAttribute: dexterity
+      adds: null
+      value: 8
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    willpower:
+      baseAttribute: spirit
+      adds: 1
+      value: 10
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+  xp:
+    unspent: 0
+    earned: 0
+  axioms:
+    magic: 12
+    social: 25
+    spirit: 4
+    tech: 25
+  details:
+    clearance: alpha
+    background: >-
+      <h2>Pr&eacute;sentation</h2>
+
+      <p class="MsoNormal">La Race d&eacute;signe les humains natifs de
+      Tharkold. Ils sont les esclaves des technod&eacute;mons qui r&egrave;gnent
+      sur eux depuis des si&egrave;cles. Depuis que la Race a &eacute;t&eacute;
+      soumise, la r&eacute;sistance est active mais la puissance des
+      technod&eacute;mons a limit&eacute; ses actions &agrave; de simples
+      op&eacute;rations de survie, jusqu&rsquo;&agrave; aujourd&rsquo;hui.
+      L&rsquo;attaque de Tharkold contre la Prime Terre a &eacute;t&eacute; une
+      occasion en or et d&eacute;sormais des membres de la r&eacute;sistance
+      profitent de cette opportunit&eacute; et en tirent profit.</p>
+
+      <h2>Tactiques</h2>
+
+      <p class="MsoNormal">Votre Thav-9 est un pistolet-mitrailleur redoutable
+      et sa puissance de feu compense votre relative inexp&eacute;rience dans
+      son maniement. Votre v&eacute;ritable talent r&eacute;side dans les
+      pouvoirs psychiques. Stimulation est &eacute;puisant mais
+      l&rsquo;augmentation de votre Dext&eacute;rit&eacute; permet
+      d&rsquo;am&eacute;liorer vos attaques et vos d&eacute;fenses et
+      l&rsquo;augmentation de votre Force am&eacute;liore votre
+      R&eacute;sistance et vos dommages en m&ecirc;l&eacute;e. La valeur de Dex
+      Max de votre armure est suffisamment &eacute;lev&eacute;e pour vous
+      permettre de tirer pleinement profit des deux bonus.
+      T&eacute;l&eacute;kin&eacute;sie vous permet d&rsquo;&ecirc;tre
+      polyvalente et d&rsquo;utiliser votre gantelet de souffrance pour des
+      attaques de lutte &agrave; distance ; utilisez Kin&eacute;sie pour
+      attaquer et utiliser votre Raison au lieu de votre Force pour vos
+      dommages. Votre arme secr&egrave;te est votre potentiel en commandement.
+      Soutien peut annuler les effets n&eacute;gatifs d&rsquo;une Carte
+      d&rsquo;Action (tels que D&eacute;sorient&eacute;s, Fatigu&eacute;s ou
+      m&ecirc;me D&eacute;ferlement) et inverser le cours de la bataille.
+      Instant fatidique Une existence de servitude a pris fin quand vous vous
+      &ecirc;tes dress&eacute;e pour d&eacute;fendre un autre esclave et que
+      vous avez dit &laquo; non ! &raquo; aux technod&eacute;mons. En cet
+      instant vous avez aussi d&eacute;bloqu&eacute; les pouvoirs psioniques qui
+      vous ont permis &agrave; tous les deux de survivre. Sinon, cet instant
+      fatidique a pu se produire quand vous &ecirc;tes arriv&eacute;e sur la
+      Prime Terre, quand l&rsquo;Axiome Tech inf&eacute;rieur a
+      d&eacute;sactiv&eacute; votre collier d&rsquo;esclave et que vous avez
+      initi&eacute; une petite r&eacute;bellion.</p>
+
+      <h2>Citation</h2>
+
+      <p class="MsoNormal">&laquo; D&eacute;barrassez-vous de vos cha&icirc;nes
+      et battez-vous ! Combattez avec votre esprit, avec vos armes ou m&ecirc;me
+      &agrave; mains nues s&rsquo;il le faut. &raquo;</p>
+
+      <h2>Description</h2>
+
+      <p class="MsoNormal">Les membres de la r&eacute;sistance portent des
+      armures rafistol&eacute;es avec tout ce qu&rsquo;ils trouvent. Les
+      ressources sont rares &agrave; Tharkold et la situation est &agrave; peine
+      meilleure sur Terre. Mais malgr&eacute; son aspect miteux, votre
+      accoutrement vous prot&egrave;ge bien. Vous &ecirc;tes
+      d&eacute;termin&eacute;e et passionn&eacute;e, aussi les gens vous
+      prennent au s&eacute;rieux.</p>
+
+      <h2>Objectif</h2>
+
+      <p class="MsoNormal">Le but ultime de la r&eacute;sistance est de
+      lib&eacute;rer la Race et tous les peuples, aujourd&rsquo;hui et &agrave;
+      jamais. Les Seigneurs de R&eacute;alit&eacute; sont tous des obstacles
+      pour atteindre cet objectif</p>
+
+      <h2>Noms</h2>
+
+      <p class="MsoNormal">Aren, Caron, Dalia, Ibis, Kellan, Leya, Mani, Sabra,
+      Theta,Zoya</p>
+
+      <h2>Piste de progression (optionnelle)</h2>
+
+      <p class="MsoNormal">□ (5 PX) Psionique (&Eacute;tranglement)</p>
+
+      <p class="MsoNormal">□ (7 PX) Chef naturel</p>
+
+      <p class="MsoNormal">□ (1 PX) Persuasion +1</p>
+
+      <p class="MsoNormal">□ (2 PX) Armes &agrave; feu +2</p>
+
+      <p class="MsoNormal">□ (3 PX) Armes &agrave; feu +3</p>
+
+      <p class="MsoNormal">□ (4 PX) Kin&eacute;sie +4</p>
+
+      <p class="MsoNormal">□ (5 PX) Kin&eacute;sie +5</p>
+
+      <p class="MsoNormal">□ (3 PX) R&eacute;alit&eacute; +3</p>
+    race: human
+  editstate: null
+  fatigue: '1'
+token:
+  flags: {}
+  name: La combattante de la Résistance
+  displayName: 30
+  img: systems/torgeternity/images/characters/Resistance_Fighter.Token.webp
+  tint: null
+  width: 1
+  height: 1
+  scale: 1
+  mirrorX: false
+  mirrorY: false
+  lockRotation: false
+  rotation: 0
+  vision: false
+  dimSight: 0
+  brightSight: 0
+  dimLight: 0
+  brightLight: 0
+  sightAngle: 0
+  lightAngle: 360
+  lightColor: ''
+  lightAlpha: 1
+  lightAnimation:
+    type: ''
+    speed: 5
+    intensity: 5
+  actorId: 6ThunRV3sj9ZSMQW
+  actorLink: true
+  disposition: 1
+  displayBars: 20
+  bar1:
+    attribute: shock
+  bar2:
+    attribute: wounds
+  randomImg: false
+  alpha: 1
+  light:
+    alpha: 0.5
+    angle: 0
+    bright: 0
+    coloration: 1
+    dim: 0
+    gradual: true
+    luminosity: 0.5
+    saturation: 0
+    contrast: 0
+    shadows: 0
+    animation:
+      speed: 5
+      intensity: 5
+      reverse: false
+    darkness:
+      min: 0
+      max: 1
+    color: null
+items:
+  - _id: mkDfDTkeExfM9yZj
+    name: Soutien
+    type: perk
+    data:
+      category: leadership
+      cosm: (Sans cosm)
+      prerequisites: ': Charisme 8+, au moins un rang en Réalité'
+      timestaken: 1
+      description: >-
+        <p class="MsoNormal">Un vrai chef sait motiver ses alli&eacute;s
+        d&rsquo;un simple regard, avec un bref discours ou toute autre action
+        qui renforce leur d&eacute;termination face &agrave;
+        l&rsquo;adversit&eacute;.</p>
+
+        <p class="MsoNormal">&nbsp;Les personnages avec cet Atout peuvent
+        d&eacute;penser une Possibilit&eacute; pour contrer un
+        D&eacute;savantage affectant le groupe sur la Carte d&rsquo;Action
+        actuelle de la Ligne de Conflit. Cela annule compl&egrave;tement la
+        Ligne de conflit pour son camp mais n&rsquo;a aucun effet sur le
+        r&eacute;sultat des rivaux. Cela peut &ecirc;tre fait &agrave;
+        n&rsquo;importe quel moment tant que la carte est encore active</p>
+
+        <p class="MsoNormal">&nbsp;</p>
+
+        <p>&nbsp;</p>
+      pulpPowers:
+        enhancementNumber: 0
+        enhancement01:
+          title: ''
+          description: ''
+          taken: false
+        enhancement02:
+          title: ''
+          description: ''
+          taken: false
+        enhancement03:
+          title: ''
+          description: ''
+          taken: false
+        enhancement04:
+          title: ''
+          description: ''
+          taken: false
+        enhancement05:
+          title: ''
+          description: ''
+          taken: false
+        enhancement06:
+          title: ''
+          description: ''
+          taken: false
+        enhancement07:
+          title: ''
+          description: ''
+          taken: false
+        enhancement08:
+          title: ''
+          description: ''
+          taken: false
+        enhancement09:
+          title: ''
+          description: ''
+          taken: false
+        enhancement10:
+          title: ''
+          description: ''
+          taken: false
+        enhancement11:
+          title: ''
+          description: ''
+          taken: false
+        enhancement12:
+          title: ''
+          description: ''
+          taken: false
+        enhancement13:
+          title: ''
+          description: ''
+          taken: false
+        enhancement14:
+          title: ''
+          description: ''
+          taken: false
+        enhancement15:
+          title: ''
+          description: ''
+          taken: false
+        limitationNumber: 0
+        limitation01: ''
+        limitation02: ''
+        limitation03: ''
+        limitation04: ''
+        limitation05: ''
+        limitation06: ''
+        limitation07: ''
+        limitation08: ''
+        limitation09: ''
+        limitation10: ''
+    sort: 100000
+    flags:
+      core:
+        sourceId: Compendium.te001-core-rulebook.Items.V0Jmybz7WGytQmIM
+    img: systems/torgeternity/images/icons/perk.webp
+    effects: []
+    folder: null
+    permission:
+      default: 0
+    _key: '!actors.items!6ThunRV3sj9ZSMQW.mkDfDTkeExfM9yZj'
+  - _id: t3n2NL6Htq5sswMD
+    name: Armure de cuir
+    type: armor
+    data:
+      cosm: Aysle
+      description: >-
+        <p>Ce sont des armures en peau d&rsquo;animal tann&eacute;e ou bouillie
+        pour la rendre plus r&eacute;sistante puis renforc&eacute;e avec des
+        clous ou d&rsquo;&eacute;paisses coutures. Elle se trouve sous une forme
+        ou une autre dans tous les cosms</p>
+      techlevel: 8
+      price: '150'
+      value: 11
+      bonus: 1
+      maxDex: 10
+      minStrength: null
+      equipped: false
+      equippedClass: item-unequipped
+      notes: ''
+    sort: 500000
+    flags:
+      core:
+        sourceId: Compendium.te001-core-rulebook.Items.6GTnNpLUtydDJVi1
+    img: systems/torgeternity/images/icons/armor.webp
+    effects:
+      - _id: 4FkehvPf5gFKLufu
+        flags: {}
+        changes:
+          - key: data.other.toughness
+            value: '1'
+            mode: 2
+          - key: data.other.armor
+            value: '1'
+            mode: 2
+        disabled: false
+        duration:
+          startTime: null
+        icon: icons/svg/aura.svg
+        label: Armor +1
+        origin: Item.i0UpOMkjfmzW0uFN
+        tint: null
+        transfer: true
+        _key: >-
+          !actors.items.effects!6ThunRV3sj9ZSMQW.t3n2NL6Htq5sswMD.4FkehvPf5gFKLufu
+    folder: null
+    permission:
+      default: 0
+    _key: '!actors.items!6ThunRV3sj9ZSMQW.t3n2NL6Htq5sswMD'
+  - _id: T5GcUNDAOu00TRze
+    name: Gilet de protection
+    type: armor
+    data:
+      cosm: (Sans cosm)
+      description: >-
+        <p>Plus l&eacute;ger et plus confortable qu&rsquo;une veste balistique,
+        cette armure est pr&eacute;vue pour arr&ecirc;ter des attaques
+        tranchantes ou perforantes. Elle demeure tout de m&ecirc;me relativement
+        efficace contre les balles</p>
+      techlevel: 23
+      price: '200'
+      value: 11
+      bonus: 3
+      maxDex: 10
+      minStrength: null
+      equipped: false
+      equippedClass: item-unequipped
+      notes: Torse
+    sort: 600000
+    flags:
+      core:
+        sourceId: Compendium.te001-core-rulebook.Items.G9m8o4kbueF7EWdt
+    img: systems/torgeternity/images/icons/armor.webp
+    effects:
+      - _id: OzihOXYdkQa3KJuz
+        flags: {}
+        changes:
+          - key: data.other.toughness
+            value: '3'
+            mode: 2
+          - key: data.other.armor
+            value: '3'
+            mode: 2
+        disabled: false
+        duration:
+          startTime: null
+        icon: icons/svg/aura.svg
+        label: +3 Armor
+        origin: Item.muPtAUlFLPCEwhmJ
+        tint: null
+        transfer: true
+        _key: >-
+          !actors.items.effects!6ThunRV3sj9ZSMQW.T5GcUNDAOu00TRze.OzihOXYdkQa3KJuz
+    folder: null
+    permission:
+      default: 0
+    _key: '!actors.items!6ThunRV3sj9ZSMQW.T5GcUNDAOu00TRze'
+  - _id: 29h6SVCn6EMXUikn
+    name: Gantelet de souffrance
+    type: meleeweapon
+    data:
+      cosm: Tharkold
+      description: >-
+        <p>Gantelet renforc&eacute; dot&eacute; de la technologie des
+        technod&eacute;mons. Une fois un adversaire Entrav&eacute;, le gantelet
+        inflige des dommages automatiquement &agrave; chaque round. C&rsquo;est
+        la comp&eacute;tence Combat &agrave; mains nues qui est utilis&eacute;e
+        pour attaquer avec ce gantelet</p>
+      techlevel: 25
+      price: '100'
+      value: 10
+      attackWith: meleeWeapons
+      damageType: strengthPlus
+      damage: 1
+      ap: 0
+      bonus: 2
+      notes: Douleur, Déséquilibre
+      chatNote: ''
+    sort: 700000
+    flags:
+      core:
+        sourceId: Compendium.te001-core-rulebook.Items.fmwK3vCtQr2PAPtN
+    img: systems/torgeternity/images/icons/meleeweapon.webp
+    effects: []
+    folder: null
+    permission:
+      default: 0
+    _key: '!actors.items!6ThunRV3sj9ZSMQW.29h6SVCn6EMXUikn'
+  - _id: rWow8Eu4Xl2rShRt
+    name: Thav-9 Pistolet Mitrailleur
+    type: firearm
+    data:
+      cosm: Tharkold
+      description: >-
+        <p>Un pistolet-mitrailleur standard utilis&eacute; &agrave; Tharkold. Un
+        frein de bouche sophistiqu&eacute;&nbsp; emp&ecirc;che les
+        probl&egrave;mes li&eacute;s aux tirs en rafales courtes.</p>
+      techlevel: 25
+      price: '500'
+      value: 13
+      attackWith: fireCombat
+      damageType: flat
+      damage: 13
+      ap: 0
+      ammo:
+        max: 60
+        value: 60
+      range: 25 / 50 / 100
+      notes: Pistolet, Rafale courte
+      chatNote: ''
+    sort: 100000
+    flags:
+      core:
+        sourceId: Compendium.te001-core-rulebook.Items.KlM3lZyDwImrJsGR
+    img: systems/torgeternity/images/icons/firearm.webp
+    effects: []
+    folder: null
+    permission:
+      default: 0
+    _key: '!actors.items!6ThunRV3sj9ZSMQW.rWow8Eu4Xl2rShRt'
+  - _id: tzZyWcxOUjPq4oxo
+    name: Stimulation
+    type: psionicpower
+    data:
+      axiom: 20
+      skill: kinesis
+      skilllevel: 10
+      castingtime: 1 action
+      dn: complexe (DN 12)
+      range: personnelle
+      duration: 3 rounds
+      description: >-
+        <p>Le psi accumule de l&rsquo;&eacute;nergie psychique et la canalise
+        dans son syst&egrave;me nerveux ce qui lui permet d&rsquo;augmenter sa
+        Force et sa Dext&eacute;rit&eacute; pendant la dur&eacute;e du pouvoir.
+        Cependant, cette capacit&eacute; est tr&egrave;s fatigante. D&egrave;s
+        la fin du pouvoir, le psi subit 2 points de Choc et un malus de -2
+        &agrave; sa Force et &agrave; sa Dext&eacute;rit&eacute; pendant la
+        minute qui suit. Un succ&egrave;s Simple augmente la Force et la
+        Dext&eacute;rit&eacute; de +1.</p>
+      good: |-
+        la Force et la Dextérité sont
+        augmentées de +2
+      outstanding: >-
+        la Force et la Dextérité sont augmentées de +2 et le psi ne subit aucun
+        malus à la fin du pouvoir.
+      isAttack: 'false'
+      damage: null
+    sort: 900000
+    flags:
+      core:
+        sourceId: Compendium.te001-core-rulebook.Items.E1aOVDM9yrPzXa4p
+    img: systems/torgeternity/images/icons/psionicpower.webp
+    effects: []
+    folder: null
+    permission:
+      default: 0
+    _key: '!actors.items!6ThunRV3sj9ZSMQW.tzZyWcxOUjPq4oxo'
+  - _id: capa9jmSXVQHjYmI
+    name: Télékinésie
+    type: psionicpower
+    data:
+      axiom: 23
+      skill: kinesis
+      skilllevel: 10
+      castingtime: 1 action
+      dn: Facile (DN 8)
+      range: 25 mètres
+      duration: Concentration
+      description: >-
+        <p>T&eacute;l&eacute;kin&eacute;sie permet &agrave; un psi de
+        d&eacute;placer des choses par la seule force de son esprit. Une fois le
+        pouvoir activ&eacute;, la Raison du psi devient sa Force mais il
+        continue &agrave; utiliser ses propres comp&eacute;tences.</p>
+
+        <p>Un psi peut utiliser T&eacute;l&eacute;kin&eacute;sie pour &laquo;
+        voler &raquo; &agrave; sa vitesse de marche si sa Force effective est
+        suffisante pour porter son propre poids. Le psi peut &eacute;galement
+        &laquo; courir &raquo; en l&eacute;vitant avec le malus habituel de -2
+        &agrave; toutes ses autres actions.</p>
+      good: >-
+        la portée est de 50 mètres et la Force effective du pouvoir est
+        augmentée de +2.
+      outstanding: >-
+        la portée est de 50 mètres et la Force effective du pouvoir est
+        augmentée de +4.
+      isAttack: 'false'
+      damage: null
+    sort: 1000000
+    flags:
+      core:
+        sourceId: Compendium.te001-core-rulebook.Items.W2UcfbwA52PfFsq0
+    img: systems/torgeternity/images/icons/psionicpower.webp
+    effects: []
+    folder: null
+    permission:
+      default: 0
+    _key: '!actors.items!6ThunRV3sj9ZSMQW.capa9jmSXVQHjYmI'
+  - _id: s63Bnkgoh62Vk0Yt
+    name: Barrière télékinétique
+    type: psionicpower
+    data:
+      axiom: 23
+      skill: kinesis
+      skilllevel: 12
+      castingtime: 1 action
+      dn: Standard (DN 10)
+      range: personnelle
+      duration: Concentration
+      description: >-
+        <p>Le psi se prot&egrave;ge des attaques avec une barri&egrave;re de
+        pure &eacute;nergie t&eacute;l&eacute;kin&eacute;tique.</p>
+
+        <p>En r&eacute;ussissant &agrave; activer le pouvoir, toutes les
+        d&eacute;fenses physiques du psi sont augment&eacute;es de +1 (Esquive,
+        Combat en m&ecirc;l&eacute;e et Combat &agrave;&nbsp; mains nues). Le
+        bonus suit les r&egrave;gles normales de Cumul, aussi un personnage avec
+        un vrai bouclier et qui est prot&eacute;g&eacute; par une
+        Barri&egrave;re t&eacute;l&eacute;kin&eacute;tique ne
+        b&eacute;n&eacute;ficie que du plus fort bonus.</p>
+      good: le bonus est de +2.
+      outstanding: le bonus passe à +3.
+      isAttack: 'false'
+      damage: null
+    sort: 1100000
+    flags:
+      core:
+        sourceId: Compendium.te001-core-rulebook.Items.3Z6PGIn3g8uZmqxl
+    img: systems/torgeternity/images/icons/psionicpower.webp
+    effects: []
+    folder: null
+    permission:
+      default: 0
+    _key: '!actors.items!6ThunRV3sj9ZSMQW.s63Bnkgoh62Vk0Yt'
+  - _id: xVz42Esa7k2roy65
+    name: Psionique
+    type: perk
+    img: systems/torgeternity/images/icons/perk.webp
+    data:
+      category: cyberware
+      cosm: Tharkold
+      prerequisites: moins un rang en Kinésie, Précognition ou Télépathie.
+      timestaken: 1
+      description: >-
+        <p class="MsoNormal">Les psioniques ou &laquo; psis &raquo; exploitent
+        la conscience collective, repr&eacute;sent&eacute;e par l&rsquo;Axiome
+        Social, pour utiliser d&rsquo;incroyables pouvoirs. Ils peuvent lire les
+        pens&eacute;es, d&eacute;placer la mati&egrave;re et
+        l&rsquo;&eacute;nergie et parfois m&ecirc;me voir ou pr&eacute;dire
+        certains aspects de l&rsquo;avenir.</p>
+
+        <p class="MsoNormal">Les psioniques peuvent se d&eacute;velopper partout
+        o&ugrave; l&rsquo;Axiome Social est suffisamment &eacute;lev&eacute;
+        mais, comme pour la magie ou les miracles, ce n&rsquo;est pas parce
+        qu&rsquo;un personnage le peut qu&rsquo;il a d&eacute;j&agrave;
+        r&eacute;v&eacute;l&eacute; ce pouvoir.</p>
+
+        <p class="MsoNormal">Quand un Psi prend cet Atout, il a acc&egrave;s
+        &agrave; la Liste des pouvoirs de son cosm (voir page 206). Il peut
+        choisir trois pouvoirs de n&rsquo;importe quelle liste &agrave; laquelle
+        il a acc&egrave;s et pour lesquels il a la comp&eacute;tence requise. La
+        description des pouvoirs et la mani&egrave;re dont ils se manifestent
+        sont d&eacute;taill&eacute;es dans le chapitre Psioniques &agrave;
+        partir de la page 204.</p>
+
+        <p class="MsoNormal"><strong>Nouveaux pouvoirs</strong> : Cet Atout peut
+        &ecirc;tre choisi plus d&rsquo;une fois. &Agrave; chaque fois
+        qu&rsquo;il choisit &agrave; nouveau cet Atout, le personnage gagne un
+        pouvoir suppl&eacute;mentaire.</p>
+      pulpPowers:
+        enhancementNumber: 0
+        enhancement01:
+          title: ''
+          description: ''
+          taken: false
+        enhancement02:
+          title: ''
+          description: ''
+          taken: false
+        enhancement03:
+          title: ''
+          description: ''
+          taken: false
+        enhancement04:
+          title: ''
+          description: ''
+          taken: false
+        enhancement05:
+          title: ''
+          description: ''
+          taken: false
+        enhancement06:
+          title: ''
+          description: ''
+          taken: false
+        enhancement07:
+          title: ''
+          description: ''
+          taken: false
+        enhancement08:
+          title: ''
+          description: ''
+          taken: false
+        enhancement09:
+          title: ''
+          description: ''
+          taken: false
+        enhancement10:
+          title: ''
+          description: ''
+          taken: false
+        enhancement11:
+          title: ''
+          description: ''
+          taken: false
+        enhancement12:
+          title: ''
+          description: ''
+          taken: false
+        enhancement13:
+          title: ''
+          description: ''
+          taken: false
+        enhancement14:
+          title: ''
+          description: ''
+          taken: false
+        enhancement15:
+          title: ''
+          description: ''
+          taken: false
+        limitationNumber: 0
+        limitation01: ''
+        limitation02: ''
+        limitation03: ''
+        limitation04: ''
+        limitation05: ''
+        limitation06: ''
+        limitation07: ''
+        limitation08: ''
+        limitation09: ''
+        limitation10: ''
+    effects: []
+    folder: null
+    sort: 200000
+    permission:
+      default: 0
+      qjRKKHBumHYSfxpw: 3
+    flags:
+      core:
+        sourceId: Compendium.te001-core-rulebook.Items.4ZtIS4h8WRGarKIV
+    _key: '!actors.items!6ThunRV3sj9ZSMQW.xVz42Esa7k2roy65'
+  - _id: HA3ZNV6zpDV4OeJ3
+    name: Caltrops
+    type: gear
+    img: systems/torgeternity/images/icons/gear.webp
+    data:
+      cosm: Aysle
+      description: >-
+        <p>Plusieurs petites pi&egrave;ces m&eacute;talliques constitu&eacute;es
+        de pointes dont l&rsquo;une d&rsquo;elles est orient&eacute;e vers le
+        haut. Dispers&eacute;es par terre, elles sont pr&eacute;vues pour crever
+        les pneus ou pour que des victimes marchent dessus. Une fois
+        d&eacute;ploy&eacute;es avec une action simple, l&rsquo;interaction
+        Manoeuvre devient Favoris&eacute;e autour des pointes.</p>
+      techlevel: 14
+      price: '40'
+      value: 8
+    effects: []
+    folder: null
+    sort: 300000
+    permission:
+      default: 0
+      qjRKKHBumHYSfxpw: 3
+    flags:
+      core:
+        sourceId: Compendium.te001-core-rulebook.Items.item-caltrops
+    mce_0: >-
+      <p>Plusieurs petites pi&egrave;ces m&eacute;talliques constitu&eacute;es
+      de pointes dont l&rsquo;une d&rsquo;elles est orient&eacute;e vers le
+      haut. Dispers&eacute;es par terre, elles sont pr&eacute;vues pour crever
+      les pneus ou pour que des victimes marchent dessus. Une fois
+      d&eacute;ploy&eacute;es avec une action simple, l&rsquo;interaction
+      Manoeuvre devient Favoris&eacute;e autour des pointes.</p>
+    _key: '!actors.items!6ThunRV3sj9ZSMQW.HA3ZNV6zpDV4OeJ3'
+  - _id: 54w2eixS1RsNzOer
+    name: Chargeurs supplémentaires (5)
+    type: gear
+    img: systems/torgeternity/images/icons/gear.webp
+    data:
+      cosm: Prime Terre
+      description: <p>Cinq recharges pour Glock 9 mm</p>
+      techlevel: 22
+      price: '20'
+      value: 6
+    effects: []
+    folder: null
+    sort: 1500000
+    permission:
+      default: 0
+      qjRKKHBumHYSfxpw: 3
+    flags:
+      core:
+        sourceId: Item.qZuQoegFPBYC6tEB
+    _key: '!actors.items!6ThunRV3sj9ZSMQW.54w2eixS1RsNzOer'
+  - _id: HuQq8uxNbNpaZR8h
+    name: Fusées éclairantes (3)
+    type: gear
+    img: systems/torgeternity/images/icons/gear.webp
+    data:
+      cosm: Empire du Nil
+      description: <p>&Eacute;claire, peut allumer un feu</p>
+      techlevel: 20
+      price: '5'
+      value: 4
+    effects: []
+    folder: null
+    sort: 1600000
+    permission:
+      default: 0
+      qjRKKHBumHYSfxpw: 3
+    flags:
+      core:
+        sourceId: Item.JniN3c3c6HNv7cSp
+    _key: '!actors.items!6ThunRV3sj9ZSMQW.HuQq8uxNbNpaZR8h'
+  - _id: KlCPFk1qWVHG8kGN
+    name: Attaque à mains nues
+    type: customAttack
+    img: systems/torgeternity/images/icons/fist-icon.webp
+    data:
+      description: ''
+      attackWith: unarmedCombat
+      damageType: strengthPlus
+      damage: 0
+      ap: 0
+      notes: ''
+      chatNote: ''
+    effects: []
+    folder: null
+    sort: 0
+    permission:
+      default: 0
+      zWX19sSAtAWkeGhp: 3
+    flags:
+      core:
+        sourceId: Item.BFGjhDetVDm1xiku
+    _key: '!actors.items!6ThunRV3sj9ZSMQW.KlCPFk1qWVHG8kGN'
+effects:
+  - _id: fD9gcuFeLzY5eA8Z
+    flags: {}
+    changes:
+      - key: data.other.toughness
+        mode: 2
+        value: '1'
+      - key: data.other.armor
+        mode: 2
+        value: '1'
+    disabled: false
+    duration:
+      startTime: 0
+    icon: icons/svg/aura.svg
+    label: armure +1
+    origin: Actor.BhuC9vKlc8lfD982.OwnedItem.t3n2NL6Htq5sswMD
+    tint: null
+    transfer: true
+    _key: '!actors.effects!6ThunRV3sj9ZSMQW.fD9gcuFeLzY5eA8Z'
+  - _id: sukPdeJg9HzjO7xo
+    flags: {}
+    changes:
+      - key: data.other.toughness
+        mode: 2
+        value: '3'
+      - key: data.other.armor
+        mode: 2
+        value: '3'
+    disabled: false
+    duration:
+      startTime: 0
+    icon: icons/svg/aura.svg
+    label: armure +3
+    origin: Actor.BhuC9vKlc8lfD982.OwnedItem.T5GcUNDAOu00TRze
+    tint: null
+    transfer: true
+    _key: '!actors.effects!6ThunRV3sj9ZSMQW.sukPdeJg9HzjO7xo'
+folder: null
+sort: 100001
+permission:
+  default: 0
+  A9LyAqagoJJU3gDH: 3
+flags: {}
+_key: '!actors!6ThunRV3sj9ZSMQW'
+

@@ -1,0 +1,77 @@
+_id: 86g2Wc6mJshFotQK
+name: Axiomes et lois du monde
+content: >-
+  <p>Lorsque les Chevaliers des Tempêtes visitent différents royaumes affectés
+  par d'autres réalités, ces axiomes et ces lois changent pour refléter ce qui
+  est facile à faire ici, et ce qui est difficile. Les axiomes mesurent ce qui
+  est abondant dans une réalité, et ce qui est "impossible". </p>
+
+  <h1>exemple pour le cosm Terre Vivante</h1>
+
+  <p>Voir @Compendium[torgeternity.basic-rules-fr.iahZ9OQlXv0YvkZd]{tente de
+  cosm : la Terre Vivante} pour les axiomes et les lois du monde de ce cosm.</p>
+
+  <p> </p>
+
+  <h2>Axiomes</h2>
+
+  <p><strong>Axiome de la magie</strong> : Le nombre faible signifie que la
+  magie n'existe pas ici. Un personnage qui possède de la magie est le Coureur
+  du Royaume, qui a une potion magique. Le fait de la porter crée une
+  "Contradiction", ce qui signifie qu'il est en décalage avec la réalité et
+  risque une
+  @Compendium[torgeternity.basic-rules-fr.5WMfad0rl1kP9myd]{déconnexion}.</p>
+
+  <p><strong>Axiome social</strong> : Le faible nombre signifie qu'un niveau de
+  civilisation plus élevé n'est pas supporté ici. La démocratie n'a pas de sens
+  pour les personnes en harmonie avec le royaume... mais suivre le chasseur le
+  plus fort et prendre ce que vous voulez, oui ! Si un chevalier des tempêtes
+  avait des pouvoirs psioniques, ils seraient en contradiction ici.</p>
+
+  <p><strong>Axiome spirituel</strong> : Le nombre élevé signifie que la foi a
+  des effets tangibles sur la Terre vivante. Les dieux sont réels, et prier pour
+  des miracles fonctionne sans contradiction !</p>
+
+  <p><strong>Axiome Technologie</strong> : C'est le chiffre qui intéresse la
+  plupart des chevaliers de la tempête présents. La technologie avancée est ici
+  contradictoire. Chaque personnage a un Axiome listé pour ses objets. Si le
+  chiffre est supérieur à 6, l'objet est une contradiction au sein de la Terre
+  vivante, et son utilisation expose le personnage à la possibilité d'une
+  déconnexion.</p>
+
+  <h2>Lois du monde</h2>
+
+  <p><strong>Loi de la sauvagerie</strong> : Lorsque la bataille fait rage, les
+  choses deviennent sanglantes sur la Terre vivante. Ne vous attardez pas sur la
+  signification exacte de cette règle avant le début du combat. </p>
+
+  <p><strong>Loi de la vie</strong> : Les blessures guérissent rapidement ici,
+  et la matière morte se décompose également rapidement. Il est peu probable que
+  cette règle apparaisse au cours du jeu, mais si c'est le cas, consultez
+  l'article
+  @Compendium[torgeternity.basic-rules-fr.MBnzTaIm6snTRS4j]{défaite}.</p>
+
+  <p><strong>Loi des Merveilles</strong> : Les objets perdus réapparaissent de
+  manière inattendue sur la Terre vivante, et les bâtiments en pierre et en
+  métal qui s'effondreraient normalement ont tendance à rester debout sous forme
+  de monolithes couverts de vignes.</p>
+
+  <blockquote>
+
+  <p><strong>Remarque sur le système de Foundry</strong>: pour voir les axiomes
+  et les lois du monde qui s'appliquent à la scène actuelle, repérez l'icône en
+  haut de l'écran qui affiche le nom de la scène actuelle et survolez l'icône
+  cosm sur cette scène. Ceci révèle les informations de la "tente de cosm" pour
+  la scène.</p>
+
+  </blockquote>
+folder: null
+sort: 0
+permission:
+  kz1RJu8vrAPmTUwN: 3
+flags:
+  core:
+    sourceId: JournalEntry.ew09Zjnywuwxkm9p
+pages: []
+_key: '!journal!86g2Wc6mJshFotQK'
+

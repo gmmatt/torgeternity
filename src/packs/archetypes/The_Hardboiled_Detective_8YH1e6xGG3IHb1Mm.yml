@@ -1,0 +1,1155 @@
+_id: 8YH1e6xGG3IHb1Mm
+name: The Hardboiled Detective
+type: stormknight
+img: systems/torgeternity/images/characters/Hardboiled_Detective.Avatar.webp
+items:
+  - _id: ihUuZFFwHUH4NiZg
+    name: Extra Magazines
+    type: gear
+    sort: 100001
+    flags:
+      core:
+        sourceId: Item.0EHW4xd7uD68qmYy
+    img: systems/torgeternity/images/icons/gear-icon.webp
+    effects: []
+    folder: null
+    system:
+      cosm: (None)
+      description: <p>Five extra Glock magazines.</p>
+      techlevel: 22
+      price: '0'
+      value: 0
+    ownership:
+      default: 0
+    _stats:
+      systemId: torgeternity
+      systemVersion: 3.1.1
+      coreVersion: '11.308'
+      createdTime: null
+      modifiedTime: 1693910800285
+      lastModifiedBy: CtisFurQNe9h7ABb
+    _key: '!actors.items!8YH1e6xGG3IHb1Mm.ihUuZFFwHUH4NiZg'
+  - _id: jWuf9aAkgGTwsYnG
+    name: Flashlight
+    type: gear
+    sort: 300000
+    flags:
+      core:
+        sourceId: Compendium.te001-core-rulebook.Items.tEnSd1UUK2wTfebw
+    img: systems/torgeternity/images/icons/gear-icon.webp
+    effects: []
+    folder: null
+    system:
+      cosm: Nile Empire
+      description: <p>Found in <strong>Core Rules</strong></p>
+      techlevel: 20
+      price: '10'
+      value: 5
+    ownership:
+      default: 0
+    _stats:
+      systemId: torgeternity
+      systemVersion: 3.1.1
+      coreVersion: '11.308'
+      createdTime: null
+      modifiedTime: 1693910817573
+      lastModifiedBy: CtisFurQNe9h7ABb
+    _key: '!actors.items!8YH1e6xGG3IHb1Mm.jWuf9aAkgGTwsYnG'
+  - _id: zgecpNvWeMZKsMos
+    name: Police Badge
+    type: gear
+    sort: 100001
+    flags:
+      core:
+        sourceId: Item.oxtzxXGFWhIVh6hL
+    img: systems/torgeternity/images/icons/gear-icon.webp
+    effects: []
+    folder: null
+    system:
+      cosm: (None)
+      description: <p>Local legal authority.</p>
+      techlevel: 22
+      price: '0'
+      value: 0
+    ownership:
+      default: 0
+    _stats:
+      systemId: torgeternity
+      systemVersion: 3.1.1
+      coreVersion: '11.308'
+      createdTime: null
+      modifiedTime: 1693910805956
+      lastModifiedBy: CtisFurQNe9h7ABb
+    _key: '!actors.items!8YH1e6xGG3IHb1Mm.zgecpNvWeMZKsMos'
+  - _id: qcmldTNf04jWAjjL
+    name: Mobile Phone
+    type: gear
+    sort: 400000
+    flags:
+      core:
+        sourceId: Compendium.te001-core-rulebook.Items.4XLIEkO0JxOkiTxR
+    img: systems/torgeternity/images/icons/gear-icon.webp
+    effects: []
+    folder: null
+    system:
+      cosm: Core Earth
+      description: >-
+        <p>Applications like GPS and a flashlight are included. Most cellphones
+        require signal boosting towers to get signal, so in low technology areas
+        a phone may still not have reception. Reality storms play havoc with
+        signals as well.</p>
+
+        <p>&nbsp;</p>
+
+        <p>Found in <strong>Core Rules</strong></p>
+      techlevel: 23
+      price: '300'
+      value: 13
+    ownership:
+      default: 0
+    _stats:
+      systemId: torgeternity
+      systemVersion: 3.1.1
+      coreVersion: '11.308'
+      createdTime: null
+      modifiedTime: 1693910837612
+      lastModifiedBy: CtisFurQNe9h7ABb
+    _key: '!actors.items!8YH1e6xGG3IHb1Mm.qcmldTNf04jWAjjL'
+  - _id: mFcHmwVkp1gSZn98
+    name: Handcuffs/Speedcuffs
+    type: gear
+    sort: 500000
+    flags:
+      core:
+        sourceId: Compendium.te001-core-rulebook.Items.UAnNKmonb2gzDB1j
+    img: systems/torgeternity/images/icons/gear-icon.webp
+    effects: []
+    folder: null
+    system:
+      cosm: Nile Empire
+      description: >-
+        <p>Sometimes called speedcuffs. Attaching handcuffs requires a Good
+        Grapple result (see page 123). A cuffed target’s hands are restrained
+        until the cuffs are unlocked or broken — Toughness 18 or a Heroic (DN
+        18) Strength test.</p>
+
+        <p>&nbsp;</p>
+
+        <p>Found in <strong>Core Rules</strong></p>
+      techlevel: 19
+      price: '50'
+      value: 9
+    ownership:
+      default: 0
+    _stats:
+      systemId: torgeternity
+      systemVersion: 3.1.1
+      coreVersion: '11.308'
+      createdTime: null
+      modifiedTime: 1693910843421
+      lastModifiedBy: CtisFurQNe9h7ABb
+    _key: '!actors.items!8YH1e6xGG3IHb1Mm.mFcHmwVkp1gSZn98'
+  - _id: ZMdLrD4bgdBjoV7j
+    name: Sunglasses
+    type: gear
+    sort: 600000
+    flags:
+      core:
+        sourceId: Compendium.te001-core-rulebook.Items.lmrP9mPgvki7BNrL
+    img: systems/torgeternity/images/icons/gear-icon.webp
+    effects: []
+    folder: null
+    system:
+      cosm: Nile Empire
+      description: <p>Found in <strong>Core Rules</strong></p>
+      techlevel: 20
+      price: '25'
+      value: 7
+    ownership:
+      default: 0
+    _stats:
+      systemId: torgeternity
+      systemVersion: 3.1.1
+      coreVersion: '11.308'
+      createdTime: null
+      modifiedTime: 1693910849357
+      lastModifiedBy: CtisFurQNe9h7ABb
+    _key: '!actors.items!8YH1e6xGG3IHb1Mm.ZMdLrD4bgdBjoV7j'
+  - _id: KpWgjWWFgY2tXQbG
+    name: Stylish Clothing
+    type: gear
+    sort: 100001
+    flags:
+      core:
+        sourceId: Item.2JInMXbRcbRiQo0P
+    img: systems/torgeternity/images/icons/gear-icon.webp
+    effects: []
+    folder: null
+    system:
+      cosm: Core Earth
+      description: <p>Looking good has no quitting time.</p>
+      techlevel: 22
+      price: '0'
+      value: 0
+    ownership:
+      default: 0
+    _stats:
+      systemId: torgeternity
+      systemVersion: 3.1.1
+      coreVersion: '11.308'
+      createdTime: null
+      modifiedTime: 1693910823613
+      lastModifiedBy: CtisFurQNe9h7ABb
+    _key: '!actors.items!8YH1e6xGG3IHb1Mm.KpWgjWWFgY2tXQbG'
+  - _id: NTpPoGBgrWUXPP8s
+    name: Fist
+    type: customAttack
+    sort: 500001
+    flags:
+      core:
+        sourceId: Item.ewfPYWfFRJSZ1FOs
+    img: systems/torgeternity/images/icons/fist-icon.webp
+    effects: []
+    folder: null
+    system:
+      description: null
+      attackWith: unarmedCombat
+      damageType: strengthPlus
+      damage: 2
+      ap: 0
+      notes: ''
+      chatNote: ''
+    ownership:
+      default: 0
+    _stats:
+      systemId: torgeternity
+      systemVersion: 3.1.1
+      coreVersion: '11.308'
+      createdTime: null
+      modifiedTime: 1694869367347
+      lastModifiedBy: CtisFurQNe9h7ABb
+    _key: '!actors.items!8YH1e6xGG3IHb1Mm.NTpPoGBgrWUXPP8s'
+  - _id: Bk7zje6BZXFbkWfa
+    name: Block Strike
+    type: perk
+    img: systems/torgeternity/images/icons/reality-icon.webp
+    effects: []
+    folder: null
+    sort: 7800000
+    flags:
+      core:
+        sourceId: Compendium.te001-core-rulebook.Items.6yvgujLe6KwpQj8J
+    system:
+      category: kiPowers
+      cosm: Pan-Pacifica
+      prerequisites: Spirit 8+, at least three adds in unarmed combat
+      timestaken: 1
+      description: >-
+        <p>When a foe misses the martial artist with a melee attack, she may
+        take one shock to immediately make a melee attack of her own against
+        that opponent.</p>
+
+        <p>&nbsp;</p>
+
+        <p>Found in <strong>Core Rules</strong></p>
+      pulpPowers:
+        enhancementNumber: 0
+        enhancement01:
+          title: ''
+          description: ''
+          taken: false
+        enhancement02:
+          title: ''
+          description: ''
+          taken: false
+        enhancement03:
+          title: ''
+          description: ''
+          taken: false
+        enhancement04:
+          title: ''
+          description: ''
+          taken: false
+        enhancement05:
+          title: ''
+          description: ''
+          taken: false
+        enhancement06:
+          title: ''
+          description: ''
+          taken: false
+        enhancement07:
+          title: ''
+          description: ''
+          taken: false
+        enhancement08:
+          title: ''
+          description: ''
+          taken: false
+        enhancement09:
+          title: ''
+          description: ''
+          taken: false
+        enhancement10:
+          title: ''
+          description: ''
+          taken: false
+        enhancement11:
+          title: ''
+          description: ''
+          taken: false
+        enhancement12:
+          title: ''
+          description: ''
+          taken: false
+        enhancement13:
+          title: ''
+          description: ''
+          taken: false
+        enhancement14:
+          title: ''
+          description: ''
+          taken: false
+        enhancement15:
+          title: ''
+          description: ''
+          taken: false
+        limitationNumber: 0
+        limitation01: ''
+        limitation02: ''
+        limitation03: ''
+        limitation04: ''
+        limitation05: ''
+        limitation06: ''
+        limitation07: ''
+        limitation08: ''
+        limitation09: ''
+        limitation10: ''
+    ownership:
+      default: 0
+      A9LyAqagoJJU3gDH: 3
+      CtisFurQNe9h7ABb: 3
+    _stats:
+      systemId: torgeternity
+      systemVersion: 3.1.1
+      coreVersion: '11.308'
+      createdTime: 1693910524596
+      modifiedTime: 1693910539996
+      lastModifiedBy: CtisFurQNe9h7ABb
+    _key: '!actors.items!8YH1e6xGG3IHb1Mm.Bk7zje6BZXFbkWfa'
+  - _id: IjNwvOSJXZejSwQ2
+    name: Brawler
+    type: perk
+    img: systems/torgeternity/images/icons/reality-icon.webp
+    effects:
+      - icon: icons/svg/aura.svg
+        origin: Item.WDcZathUzQ5AKAu9
+        duration:
+          startTime: null
+          seconds: null
+          combat: null
+          rounds: null
+          turns: null
+          startRound: null
+          startTurn: null
+        disabled: false
+        name: Unarmed Damage +2
+        _id: QQCo7NoEqsyECuj2
+        changes:
+          - key: system.unarmedDamage
+            mode: 2
+            value: '2'
+            priority: null
+        description: ''
+        transfer: true
+        statuses: []
+        flags: {}
+        tint: null
+        _key: >-
+          !actors.items.effects!8YH1e6xGG3IHb1Mm.IjNwvOSJXZejSwQ2.QQCo7NoEqsyECuj2
+    folder: null
+    sort: 100000
+    flags:
+      core:
+        sourceId: Compendium.te001-core-rulebook.Items.8DjcKPmDCOTdObL6
+    system:
+      category: prowess
+      cosm: (None)
+      prerequisites: At least two adds in unarmed combat
+      timestaken: 1
+      description: >-
+        <p>The fighter hits hard thanks to anything from dirty tricks and a good
+        uppercut to training in karate, jujitsu, tae kwon do, or similar
+        hand-tohand fighting styles. Characters with this Perk cause
+        <em>Strength</em> +2 damage with their bare hands when attacking with
+        <em>unarmed combat</em>. This stacks with any other <em>unarmed
+        combat</em> bonuses such as an edeinos’s claw attack.</p><p>More
+        advanced and exotic techniques are taught in Pan-Pacifica under the
+        <strong>Ki Powers Perks</strong>.</p>
+
+        <p>&nbsp;</p>
+
+        <p>Found in <strong>Core Rules</strong></p>
+      pulpPowers:
+        enhancementNumber: 0
+        enhancement01:
+          title: ''
+          description: ''
+          taken: false
+        enhancement02:
+          title: ''
+          description: ''
+          taken: false
+        enhancement03:
+          title: ''
+          description: ''
+          taken: false
+        enhancement04:
+          title: ''
+          description: ''
+          taken: false
+        enhancement05:
+          title: ''
+          description: ''
+          taken: false
+        enhancement06:
+          title: ''
+          description: ''
+          taken: false
+        enhancement07:
+          title: ''
+          description: ''
+          taken: false
+        enhancement08:
+          title: ''
+          description: ''
+          taken: false
+        enhancement09:
+          title: ''
+          description: ''
+          taken: false
+        enhancement10:
+          title: ''
+          description: ''
+          taken: false
+        enhancement11:
+          title: ''
+          description: ''
+          taken: false
+        enhancement12:
+          title: ''
+          description: ''
+          taken: false
+        enhancement13:
+          title: ''
+          description: ''
+          taken: false
+        enhancement14:
+          title: ''
+          description: ''
+          taken: false
+        enhancement15:
+          title: ''
+          description: ''
+          taken: false
+        limitationNumber: 0
+        limitation01: ''
+        limitation02: ''
+        limitation03: ''
+        limitation04: ''
+        limitation05: ''
+        limitation06: ''
+        limitation07: ''
+        limitation08: ''
+        limitation09: ''
+        limitation10: ''
+    ownership:
+      default: 0
+      A9LyAqagoJJU3gDH: 3
+      CtisFurQNe9h7ABb: 3
+    _stats:
+      systemId: torgeternity
+      systemVersion: 3.1.1
+      coreVersion: '11.308'
+      createdTime: 1693910528940
+      modifiedTime: 1693910661261
+      lastModifiedBy: CtisFurQNe9h7ABb
+    _key: '!actors.items!8YH1e6xGG3IHb1Mm.IjNwvOSJXZejSwQ2'
+  - _id: Myu554tiwfKlmiJo
+    name: Glock 9mm
+    type: firearm
+    img: systems/torgeternity/images/icons/firearm-icon.webp
+    effects: []
+    folder: null
+    sort: 3400000
+    flags:
+      core:
+        sourceId: Compendium.te001-core-rulebook.Items.36zun3ZNNpg6Al8g
+    system:
+      cosm: Core Earth
+      description: >-
+        <p>A recoil-operated 9mm semiautomatic. Notable for its large,
+        doublestacked ammo magazine.</p>
+
+        <p>&nbsp;</p>
+
+        <p>Found in <strong>Core Rules</strong></p>
+      techlevel: 22
+      price: '250'
+      value: 12
+      attackWith: fireCombat
+      damageType: flat
+      damage: 13
+      ap: 0
+      ammo:
+        max: 15
+        value: 15
+      range: 10 / 25 / 40
+      notes: ''
+      chatNote: ''
+    ownership:
+      default: 0
+      A9LyAqagoJJU3gDH: 3
+      CtisFurQNe9h7ABb: 3
+    _stats:
+      systemId: torgeternity
+      systemVersion: 3.1.1
+      coreVersion: '11.308'
+      createdTime: 1693910723284
+      modifiedTime: 1693910723284
+      lastModifiedBy: CtisFurQNe9h7ABb
+    _key: '!actors.items!8YH1e6xGG3IHb1Mm.Myu554tiwfKlmiJo'
+  - _id: Hsza99OCeUWSYmQq
+    name: Glock 9mm
+    type: firearm
+    img: systems/torgeternity/images/icons/firearm-icon.webp
+    effects: []
+    folder: null
+    sort: 3400000
+    flags:
+      core:
+        sourceId: Compendium.te001-core-rulebook.Items.36zun3ZNNpg6Al8g
+    system:
+      cosm: Core Earth
+      description: >-
+        <p>A recoil-operated 9mm semiautomatic. Notable for its large,
+        doublestacked ammo magazine.</p>
+
+        <p>&nbsp;</p>
+
+        <p>Found in <strong>Core Rules</strong></p>
+      techlevel: 22
+      price: '250'
+      value: 12
+      attackWith: fireCombat
+      damageType: flat
+      damage: 13
+      ap: 0
+      ammo:
+        max: 15
+        value: 15
+      range: 10 / 25 / 40
+      notes: ''
+      chatNote: ''
+    ownership:
+      default: 0
+      A9LyAqagoJJU3gDH: 3
+      CtisFurQNe9h7ABb: 3
+    _stats:
+      systemId: torgeternity
+      systemVersion: 3.1.1
+      coreVersion: '11.308'
+      createdTime: 1693910724556
+      modifiedTime: 1693910724556
+      lastModifiedBy: CtisFurQNe9h7ABb
+    _key: '!actors.items!8YH1e6xGG3IHb1Mm.Hsza99OCeUWSYmQq'
+  - _id: jO5Qvnnm7Oqag4jz
+    name: Leather Jacket
+    type: armor
+    img: systems/torgeternity/images/icons/armor-icon.webp
+    effects:
+      - _id: HEEEeLAOmww6nITp
+        flags: {}
+        changes:
+          - key: system.other.toughness
+            value: '1'
+            mode: 2
+            priority: null
+          - key: system.other.armor
+            value: '1'
+            mode: 2
+            priority: null
+        disabled: false
+        duration:
+          startTime: null
+          seconds: null
+          combat: null
+          rounds: null
+          turns: null
+          startRound: null
+          startTurn: null
+        icon: icons/svg/aura.svg
+        origin: Item.7Wgz7hUbakn1W4Ao
+        tint: null
+        transfer: true
+        name: Armor +1
+        description: ''
+        statuses: []
+        _key: >-
+          !actors.items.effects!8YH1e6xGG3IHb1Mm.jO5Qvnnm7Oqag4jz.HEEEeLAOmww6nITp
+    folder: null
+    sort: 3300000
+    flags:
+      core:
+        sourceId: Compendium.te001-core-rulebook.Items.34ioFwhBc4c39YFU
+    system:
+      cosm: Core Earth
+      description: >-
+        <p>@UUID[Compendium.te001-core-rulebook.rules.pwneQ55M0nnDH0Us.JournalEntryPage.qKdamp4rrcX6TTt0#full-body/torso:]{Torso}</p>
+      techlevel: 19
+      price: '75'
+      value: 9
+      bonus: 1
+      maxDex: 12
+      minStrength: null
+      equipped: true
+      equippedClass: item-equipped
+      notes: Torso
+    ownership:
+      default: 0
+      A9LyAqagoJJU3gDH: 3
+      CtisFurQNe9h7ABb: 3
+    _stats:
+      systemId: torgeternity
+      systemVersion: 3.1.1
+      coreVersion: '11.308'
+      createdTime: 1693910739365
+      modifiedTime: 1693910856254
+      lastModifiedBy: CtisFurQNe9h7ABb
+    _key: '!actors.items!8YH1e6xGG3IHb1Mm.jO5Qvnnm7Oqag4jz'
+effects:
+  - icon: icons/svg/aura.svg
+    origin: >-
+      Compendium.torgeternity.archetypes.Actor.8YH1e6xGG3IHb1Mm.Item.IjNwvOSJXZejSwQ2
+    duration:
+      startTime: 0
+      seconds: null
+      combat: null
+      rounds: null
+      turns: null
+      startRound: null
+      startTurn: null
+    disabled: false
+    name: Unarmed Damage +2
+    _id: gyrdPX6sl8dtPIem
+    changes:
+      - key: system.unarmedDamage
+        mode: 2
+        value: '2'
+    description: ''
+    transfer: false
+    statuses: []
+    flags: {}
+    tint: null
+    _key: '!actors.effects!8YH1e6xGG3IHb1Mm.gyrdPX6sl8dtPIem'
+  - _id: cxRaT3F3XjCJaxbA
+    flags: {}
+    changes:
+      - key: system.other.toughness
+        value: '1'
+        mode: 2
+        priority: null
+      - key: system.other.armor
+        value: '1'
+        mode: 2
+        priority: null
+    disabled: false
+    duration:
+      startTime: 0
+      seconds: null
+      combat: null
+      rounds: null
+      turns: null
+      startRound: null
+      startTurn: null
+    icon: icons/svg/aura.svg
+    origin: >-
+      Compendium.torgeternity.archetypes.Actor.8YH1e6xGG3IHb1Mm.Item.jO5Qvnnm7Oqag4jz
+    tint: null
+    transfer: false
+    name: Armor +1
+    description: ''
+    statuses: []
+    _key: '!actors.effects!8YH1e6xGG3IHb1Mm.cxRaT3F3XjCJaxbA'
+folder: null
+sort: 100001
+flags: {}
+system:
+  shock:
+    max: 8
+    value: 0
+  wounds:
+    max: 3
+    value: 0
+  attributes:
+    charisma: 6
+    dexterity: 10
+    mind: 8
+    spirit: 8
+    strength: 8
+  other:
+    move: 10
+    run: 30
+    toughness: 9
+    armor: 1
+    cosm: panPacifica
+    possibilities: 0
+    posibilities: 3
+  skills:
+    airVehicles:
+      baseAttribute: dexterity
+      adds: null
+      value: '-'
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    alteration:
+      baseAttribute: mind
+      adds: null
+      value: '-'
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    apportation:
+      baseAttribute: spirit
+      adds: null
+      value: '-'
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    beastRiding:
+      baseAttribute: dexterity
+      adds: null
+      value: 10
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    computers:
+      baseAttribute: mind
+      adds: null
+      value: 8
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    conjuration:
+      baseAttribute: spirit
+      adds: null
+      value: '-'
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    divination:
+      baseAttribute: mind
+      adds: null
+      value: '-'
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    dodge:
+      baseAttribute: dexterity
+      adds: 2
+      value: 12
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    energyWeapons:
+      baseAttribute: dexterity
+      adds: null
+      value: 10
+      isFav: false
+      groupName: combat
+      unskilledUse: 1
+    evidenceAnalysis:
+      baseAttribute: mind
+      adds: 1
+      value: 9
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    faith:
+      baseAttribute: spirit
+      adds: null
+      value: 8
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    find:
+      baseAttribute: mind
+      adds: 1
+      value: 9
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    fireCombat:
+      baseAttribute: dexterity
+      adds: 2
+      value: 12
+      isFav: false
+      groupName: combat
+      unskilledUse: 1
+    firstAid:
+      baseAttribute: mind
+      adds: null
+      value: 8
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    heavyWeapons:
+      baseAttribute: dexterity
+      adds: null
+      value: 10
+      isFav: false
+      groupName: combat
+      unskilledUse: 1
+    intimidation:
+      baseAttribute: spirit
+      adds: 1
+      value: 9
+      isFav: false
+      groupName: interaction
+      unskilledUse: 1
+    kinesis:
+      baseAttribute: spirit
+      adds: null
+      value: '-'
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    landVehicles:
+      baseAttribute: dexterity
+      adds: 1
+      value: 11
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    language:
+      baseAttribute: mind
+      adds: null
+      value: '-'
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    lockpicking:
+      baseAttribute: dexterity
+      adds: 1
+      value: 11
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    maneuver:
+      baseAttribute: dexterity
+      adds: 1
+      value: 11
+      isFav: false
+      groupName: interaction
+      unskilledUse: 1
+    medicine:
+      baseAttribute: mind
+      adds: null
+      value: '-'
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    meleeWeapons:
+      baseAttribute: dexterity
+      adds: null
+      value: 10
+      isFav: false
+      groupName: combat
+      unskilledUse: 1
+    missileWeapons:
+      baseAttribute: dexterity
+      adds: null
+      value: 10
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    persuasion:
+      baseAttribute: charisma
+      adds: null
+      value: 6
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    precognition:
+      baseAttribute: mind
+      adds: null
+      value: '-'
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    profession:
+      baseAttribute: mind
+      adds: null
+      value: 8
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    reality:
+      baseAttribute: spirit
+      adds: 1
+      value: 9
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    scholar:
+      baseAttribute: mind
+      adds: null
+      value: 8
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    science:
+      baseAttribute: mind
+      adds: null
+      value: 8
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    stealth:
+      baseAttribute: dexterity
+      adds: null
+      value: 10
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    streetwise:
+      baseAttribute: charisma
+      adds: 1
+      value: 7
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    survival:
+      baseAttribute: mind
+      adds: null
+      value: 8
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    taunt:
+      baseAttribute: charisma
+      adds: 1
+      value: 7
+      isFav: false
+      groupName: interaction
+      unskilledUse: 1
+    telepathy:
+      baseAttribute: charisma
+      adds: null
+      value: '-'
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    tracking:
+      baseAttribute: mind
+      adds: null
+      value: 8
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    trick:
+      baseAttribute: mind
+      adds: null
+      value: 8
+      isFav: false
+      groupName: interaction
+      unskilledUse: 1
+    unarmedCombat:
+      baseAttribute: dexterity
+      adds: 3
+      value: 13
+      isFav: false
+      groupName: combat
+      unskilledUse: 1
+    waterVehicles:
+      baseAttribute: dexterity
+      adds: null
+      value: 10
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    willpower:
+      baseAttribute: spirit
+      adds: null
+      value: 8
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+  xp:
+    unspent: 0
+    earned: 0
+  axioms:
+    magic: 4
+    social: 24
+    spirit: 8
+    tech: 24
+  details:
+    clearance: alpha
+    background: >-
+      <p><img class="charimg"
+      src="systems/torgeternity/images/characters/Hardboiled_Detective.webp"
+      alt="" width="1424" height="1858"></p>
+
+      <p
+      class="moreheight">@UUID[Compendium.torgeternity.handouts.JournalEntry.Knhh8vqtjSylJo5Z.JournalEntryPage.jGMEVr72h0Jjm3CQ]{Archetype
+      - The Hardoiled Detective}</p>
+
+      <h3>Overview</h3>
+
+      <p>Years on the mean streets of Hong Kong have hardened you into a lethal
+      weapon. Transcending into a Storm Knight only heightened your abilities.
+      First and foremost, you investigate crimes. You&rsquo;ve been trained to
+      follow leads, question witnesses, and uphold law and order. When the bad
+      guys resist arrest, and they always resist arrest, things get violent and
+      your other skills come into play.</p>
+
+      <h3>Tactics</h3>
+
+      <p>You are a crack shot, and have the firepower of a small army when
+      blazing away with your two 9mm pistols. Your high <em>dodge </em>and
+      <em>unarmed combat</em> provide solid defenses against opponents at any
+      distance. <em>Maneuver </em>is your strong interaction, try to use it
+      whenever it&rsquo;s an Approved Action. The Block Strike Perk lets you
+      punish a melee attacker who misses you&mdash;so long as you have the Shock
+      to burn. You may use an unarmed attack even while both pistols are
+      equipped; you just kick or strike with your elbows.</p>
+
+      <h3>Moment of Crisis</h3>
+
+      <p>Something big was going down, and some corporate type named
+      &ldquo;Kanawa&ldquo; was at the center of it. You were threatened with
+      suspension and asked to let it go by your superiors. Someone even tried to
+      kill you. You stayed on the case, even after the Contagion began, and your
+      stubborn pursuit triggered a subtle transformation. Alternatively, the
+      change may have come when you defended a group of supposedly infected
+      refugees from a murderous Kanawa Corporation &ldquo;Containment
+      Team.&ldquo;</p>
+
+      <h3>Quote</h3>
+
+      <p>&ldquo;Whether it&rsquo;s jiangshi, criminals, or invaders from another
+      reality, one bullet can still make a difference.&ldquo;</p>
+
+      <h3>Description</h3>
+
+      <p>Others may scoff at your leather jacket, but it&rsquo;s truly a
+      timeless fashion accessory. Plus it hides your two shoulder holsters very
+      well. Your badge is useful in Hong Kong where you have jurisdiction, but
+      it may work elsewhere in Pan-Pacifica so long as people don&rsquo;t look
+      at it too closely! You are intense, and don&rsquo;t tolerate disrespect
+      toward you or your badge.</p>
+
+      <h3>Agenda</h3>
+
+      <p>The Kanawa Corporation is hiding something, a connection to the other
+      Possibility Raiders or the Contagion. Whatever is going on, it could shake
+      all of Pan-Pacifica. Good or bad, your job is to discover the truth.</p>
+
+      <h3>Names</h3>
+
+      <p>Bao, Curry, Dee, Eagle, Jin, Li, Ling, Shooter, Whiskey, Zhang</p>
+
+      <h3>Advancement Track (Optional)</h3>
+
+      <ul>
+
+      <li>(5 XP) Double Tap</li>
+
+      <li>(7 XP) Ki Strike</li>
+
+      <li>(1 XP) <em>persuasion</em> +1</li>
+
+      <li>(2 XP) <em>reality</em> +2</li>
+
+      <li>(3 XP) <em>dodge</em> +3</li>
+
+      <li>(3 XP) <em>unarmed combat</em> +3</li>
+
+      <li>(4 XP) <em>fire combat</em> +4</li>
+
+      <li>(5 XP) <em>fire combat</em> +5</li>
+
+      </ul>
+    race: human
+  editstate: null
+  fatigue: '1'
+ownership:
+  default: 0
+  A9LyAqagoJJU3gDH: 3
+prototypeToken:
+  flags: {}
+  name: Hardboiled Detective
+  displayName: 30
+  width: 1
+  height: 1
+  lockRotation: false
+  rotation: 0
+  actorLink: true
+  disposition: 1
+  displayBars: 40
+  bar1:
+    attribute: wounds
+  bar2:
+    attribute: shock
+  randomImg: false
+  alpha: 1
+  light:
+    alpha: 1
+    angle: 360
+    bright: 0
+    coloration: 1
+    dim: 0
+    luminosity: 0.5
+    saturation: 0
+    contrast: 0
+    shadows: 0
+    animation:
+      type: null
+      speed: 5
+      intensity: 5
+      reverse: false
+    darkness:
+      min: 0
+      max: 1
+    color: null
+    attenuation: 0.5
+  texture:
+    src: systems/torgeternity/images/characters/hardboiled_detective.Token.webp
+    tint: null
+    scaleX: 1
+    scaleY: 1
+    offsetX: 0
+    offsetY: 0
+    rotation: 0
+  sight:
+    angle: 360
+    enabled: false
+    range: 0
+    brightness: 1
+    visionMode: basic
+    attenuation: 0.1
+    saturation: 0
+    contrast: 0
+  appendNumber: false
+  prependAdjective: false
+  detectionModes: []
+_stats:
+  systemId: torgeternity
+  systemVersion: 3.1.1
+  coreVersion: '11.308'
+  createdTime: 1693910524596
+  modifiedTime: 1694869367347
+  lastModifiedBy: CtisFurQNe9h7ABb
+_key: '!actors!8YH1e6xGG3IHb1Mm'
+

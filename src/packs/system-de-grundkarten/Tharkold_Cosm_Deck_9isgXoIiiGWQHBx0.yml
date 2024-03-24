@@ -1,0 +1,281 @@
+_id: 9isgXoIiiGWQHBx0
+name: Tharkold Cosm Deck
+type: deck
+description: ''
+img: >-
+  systems/torgeternity/images/deutsch/cards/Cosmkarten/Tharkold/TZZR%C3%BCckseite.webp
+cards:
+  - _id: 9Dr5MbGYWXIGrLCN
+    name: Sieht nach Ärger aus
+    description: ''
+    type: cosm
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Sieht nach Ärger aus
+        text: ''
+        img: systems/torgeternity/images/deutsch/cards/Cosmkarten/Tharkold/01.webp
+    face: 0
+    drawn: false
+    origin: 9isgXoIiiGWQHBx0
+    rotation: 0
+    sort: 0
+    flags: {}
+    system: {}
+    value: null
+    width: null
+    height: null
+    _key: '!cards.cards!9isgXoIiiGWQHBx0.9Dr5MbGYWXIGrLCN'
+    cards: []
+  - _id: 1OHFpLLxqHwMR6Jh
+    name: Überlegenheit
+    description: ''
+    type: cosm
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Überlegenheit
+        text: ''
+        img: systems/torgeternity/images/deutsch/cards/Cosmkarten/Tharkold/02.webp
+    face: 0
+    drawn: false
+    origin: 9isgXoIiiGWQHBx0
+    rotation: 0
+    sort: 0
+    flags: {}
+    system: {}
+    value: null
+    width: null
+    height: null
+    _key: '!cards.cards!9isgXoIiiGWQHBx0.1OHFpLLxqHwMR6Jh'
+    cards: []
+  - _id: jB1whjA8GJjrF7Jj
+    name: Geissel
+    description: ''
+    type: cosm
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Geissel
+        text: ''
+        img: systems/torgeternity/images/deutsch/cards/Cosmkarten/Tharkold/03.webp
+    face: 0
+    drawn: false
+    origin: 9isgXoIiiGWQHBx0
+    rotation: 0
+    sort: 0
+    flags: {}
+    system: {}
+    value: null
+    width: null
+    height: null
+    _key: '!cards.cards!9isgXoIiiGWQHBx0.jB1whjA8GJjrF7Jj'
+    cards: []
+  - _id: MpImhG3ExCrk4btW
+    name: Verstrahlt
+    description: ''
+    type: cosm
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Verstrahlt
+        text: ''
+        img: systems/torgeternity/images/deutsch/cards/Cosmkarten/Tharkold/04.webp
+    face: 0
+    drawn: false
+    origin: 9isgXoIiiGWQHBx0
+    rotation: 0
+    sort: 0
+    flags: {}
+    system: {}
+    value: null
+    width: null
+    height: null
+    _key: '!cards.cards!9isgXoIiiGWQHBx0.MpImhG3ExCrk4btW'
+    cards: []
+  - _id: jQEtI5gp3glnKWfs
+    name: Cyberpsychose
+    description: ''
+    type: cosm
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Cyberpsychose
+        text: ''
+        img: systems/torgeternity/images/deutsch/cards/Cosmkarten/Tharkold/05.webp
+    face: 0
+    drawn: false
+    origin: 9isgXoIiiGWQHBx0
+    rotation: 0
+    sort: 0
+    flags: {}
+    system: {}
+    value: null
+    width: null
+    height: null
+    _key: '!cards.cards!9isgXoIiiGWQHBx0.jQEtI5gp3glnKWfs'
+    cards: []
+  - _id: aukxYAq5s2zBC04R
+    name: Kniet nieder!
+    description: ''
+    type: cosm
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Kniet nieder!
+        text: ''
+        img: systems/torgeternity/images/deutsch/cards/Cosmkarten/Tharkold/06.webp
+    face: 0
+    drawn: false
+    origin: 9isgXoIiiGWQHBx0
+    rotation: 0
+    sort: 0
+    flags: {}
+    system: {}
+    value: null
+    width: null
+    height: null
+    _key: '!cards.cards!9isgXoIiiGWQHBx0.aukxYAq5s2zBC04R'
+    cards: []
+  - _id: V4iDxdaqsdfzJkAc
+    name: Du arbeitest jetzt für mich!
+    description: ''
+    type: cosm
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Du arbeitest jetzt für mich!
+        text: ''
+        img: systems/torgeternity/images/deutsch/cards/Cosmkarten/Tharkold/07.webp
+    face: 0
+    drawn: false
+    origin: 9isgXoIiiGWQHBx0
+    rotation: 0
+    sort: -100000
+    flags: {}
+    system: {}
+    value: null
+    width: null
+    height: null
+    _key: '!cards.cards!9isgXoIiiGWQHBx0.V4iDxdaqsdfzJkAc'
+    cards: []
+  - _id: 3e9I8u0AYv7YRoGr
+    name: Erzürnt
+    description: ''
+    type: cosm
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Erzürnt
+        text: ''
+        img: systems/torgeternity/images/deutsch/cards/Cosmkarten/Tharkold/08.webp
+    face: 0
+    drawn: false
+    origin: 9isgXoIiiGWQHBx0
+    rotation: 0
+    sort: 0
+    flags: {}
+    system: {}
+    value: null
+    width: null
+    height: null
+    _key: '!cards.cards!9isgXoIiiGWQHBx0.3e9I8u0AYv7YRoGr'
+    cards: []
+  - _id: eBBYNXc3g1QBlFCe
+    name: Beute!
+    description: ''
+    type: cosm
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Beute!
+        text: ''
+        img: systems/torgeternity/images/deutsch/cards/Cosmkarten/Tharkold/09.webp
+    face: 0
+    drawn: false
+    origin: 9isgXoIiiGWQHBx0
+    rotation: 0
+    sort: 0
+    flags: {}
+    system: {}
+    value: null
+    width: null
+    height: null
+    _key: '!cards.cards!9isgXoIiiGWQHBx0.eBBYNXc3g1QBlFCe'
+    cards: []
+  - _id: AaELmUGQPcpkebEz
+    name: Quälende Visionen
+    description: ''
+    type: cosm
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Quälende Visionen
+        text: ''
+        img: systems/torgeternity/images/deutsch/cards/Cosmkarten/Tharkold/10.webp
+    face: 0
+    drawn: false
+    origin: 9isgXoIiiGWQHBx0
+    rotation: 0
+    sort: 0
+    flags: {}
+    system: {}
+    value: null
+    width: null
+    height: null
+    _key: '!cards.cards!9isgXoIiiGWQHBx0.AaELmUGQPcpkebEz'
+    cards: []
+rotation: 0
+displayCount: false
+folder: null
+sort: 0
+flags:
+  core:
+    sourceId: Cards.edY8yNxMl2PYXsUf
+  torgeternity:
+    usage: tharkold
+system: {}
+ownership:
+  default: 0
+  1pSzpSNrhKGYYcib: 3
+width: null
+height: null
+_stats:
+  systemId: null
+  systemVersion: null
+  coreVersion: null
+  createdTime: null
+  modifiedTime: null
+  lastModifiedBy: null
+_key: '!cards!9isgXoIiiGWQHBx0'
+

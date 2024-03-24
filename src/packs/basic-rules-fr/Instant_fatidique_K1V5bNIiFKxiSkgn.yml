@@ -1,0 +1,19 @@
+_id: K1V5bNIiFKxiSkgn
+name: Instant fatidique
+content: >-
+  <p>Un personnage devient un chevalier des tempêtes lorsqu'il réagit de manière
+  héroïque à un moment de crise. Par exemple, il peut risquer sa vie pour sauver
+  d'autres personnes, ou affronter une créature deux fois plus grande que lui
+  pour sauver la vie de quelqu'un. Lorsque cela se produit, l'énergie brute se
+  déverse dans le héros et il acquiert la capacité de plier la réalité à sa
+  propre volonté.</p>
+folder: null
+sort: 0
+permission:
+  kz1RJu8vrAPmTUwN: 3
+flags:
+  core:
+    sourceId: JournalEntry.Aoe0PfUhPkuwfiNR
+pages: []
+_key: '!journal!K1V5bNIiFKxiSkgn'
+
