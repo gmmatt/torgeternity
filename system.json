@@ -32,7 +32,7 @@
       "path": "packs/macros",
       "type": "Macro",
       "ownership": {
-        "PLAYER": "NONE",
+        "PLAYER": "OBSERVER",
         "ASSISTANT": "OWNER"
       },
       "flags": {}
@@ -41,168 +41,144 @@
       "name": "archetypes",
       "label": "Archetypes (en)",
       "system": "torgeternity",
-      "path": "packs/archetypes",
-      "type": "Actor",
       "ownership": {
         "PLAYER": "OBSERVER",
         "ASSISTANT": "OWNER"
       },
+      "path": "packs/archetypes",
+      "type": "Actor",
       "flags": {}
     },
     {
       "name": "basic-rules",
       "label": "Basic Rules (en)",
       "system": "torgeternity",
-      "path": "packs/basic-rules",
-      "type": "JournalEntry",
       "ownership": {
         "PLAYER": "OBSERVER",
         "ASSISTANT": "OWNER"
       },
+      "path": "packs/basic-rules",
+      "type": "JournalEntry",
       "flags": {}
     },
     {
       "name": "handouts",
       "label": "Handouts (en)",
       "system": "torgeternity",
-      "path": "packs/handouts",
-      "type": "JournalEntry",
       "ownership": {
         "PLAYER": "OBSERVER",
         "ASSISTANT": "OWNER"
       },
+      "path": "packs/handouts",
+      "type": "JournalEntry",
       "flags": {}
     },
     {
       "name": "core-card-set",
       "label": "Core Card Set (en)",
       "system": "torgeternity",
-      "path": "packs/core-card-set",
-      "type": "Cards",
       "ownership": {
         "PLAYER": "OBSERVER",
         "ASSISTANT": "OWNER"
       },
+      "path": "packs/core-card-set",
+      "type": "Cards",
       "flags": {}
     },
     {
       "name": "core-scenes",
-      "label": "Main Scene (en)",
+      "label": "Main Scene",
       "system": "torgeternity",
-      "path": "packs/standardscene",
-      "type": "Scene",
       "ownership": {
         "PLAYER": "OBSERVER",
         "ASSISTANT": "OWNER"
       },
-      "flags": {}
-    },
-    {
-      "name": "core-scenes-fr",
-      "label": "Scène standard (fr)",
-      "system": "torgeternity",
-      "path": "packs/french/standardscene",
+      "path": "packs/core-scenes",
       "type": "Scene",
-      "ownership": {
-        "PLAYER": "OBSERVER",
-        "ASSISTANT": "OWNER"
-      },
       "flags": {}
     },
     {
       "name": "archetypes-fr",
       "label": "Archetypes (fr)",
       "system": "torgeternity",
-      "path": "packs/french/archetypes",
-      "type": "Actor",
       "ownership": {
         "PLAYER": "OBSERVER",
         "ASSISTANT": "OWNER"
       },
+      "path": "packs/archetypes-fr",
+      "type": "Actor",
       "flags": {}
     },
     {
       "name": "basic-rules-fr",
       "label": "regles basiques (fr)",
       "system": "torgeternity",
-      "path": "packs/french/basic-rules",
-      "type": "JournalEntry",
       "ownership": {
         "PLAYER": "OBSERVER",
         "ASSISTANT": "OWNER"
       },
+      "path": "packs/basic-rules-fr",
+      "type": "JournalEntry",
       "flags": {}
     },
     {
       "name": "core-card-set-fr",
       "label": "paquets de cartes de base (fr)",
       "system": "torgeternity",
-      "path": "packs/french/core-card-set",
-      "type": "Cards",
       "ownership": {
         "PLAYER": "OBSERVER",
         "ASSISTANT": "OWNER"
       },
+      "path": "packs/core-card-set-fr",
+      "type": "Cards",
       "flags": {}
     },
     {
       "name": "system-de-archetypen",
       "label": "Archetypen (de)",
-      "path": "packs/deutsch/archetypen",
+      "path": "packs/system-de-archetypen",
       "system": "torgeternity",
-      "type": "Actor",
       "ownership": {
         "PLAYER": "OBSERVER",
         "ASSISTANT": "OWNER"
       },
+      "type": "Actor",
       "flags": {}
     },
     {
       "name": "system-de-basisregeln",
       "label": "Basisregeln (de)",
-      "path": "packs/deutsch/basisregeln",
+      "path": "packs/system-de-basisregeln",
       "system": "torgeternity",
-      "type": "JournalEntry",
       "ownership": {
         "PLAYER": "OBSERVER",
         "ASSISTANT": "OWNER"
       },
+      "type": "JournalEntry",
       "flags": {}
     },
     {
       "name": "system-de-handouts",
       "label": "Handouts (de)",
       "system": "torgeternity",
-      "path": "packs/deutsch/handouts-de",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "path": "packs/system-de-handouts",
       "type": "JournalEntry",
-      "ownership": {
-        "PLAYER": "OBSERVER",
-        "ASSISTANT": "OWNER"
-      },
-      "flags": {}
-    },
-    {
-      "name": "core-de-scenes",
-      "label": "Standardszene (de)",
-      "system": "torgeternity",
-      "path": "packs/deutsch/standardszene",
-      "type": "Scene",
-      "ownership": {
-        "PLAYER": "OBSERVER",
-        "ASSISTANT": "OWNER"
-      },
       "flags": {}
     },
     {
       "name": "system-de-grundkarten",
       "label": "Dramadeck (de)",
-      "path": "packs/deutsch/core-card-set-de",
+      "path": "packs/system-de-grundkarten",
       "system": "torgeternity",
-      "type": "Cards",
       "ownership": {
         "PLAYER": "OBSERVER",
         "ASSISTANT": "OWNER"
       },
+      "type": "Cards",
       "flags": {}
     }
   ],
@@ -216,112 +192,30 @@
           "name": "English",
           "sorting": "m",
           "color": "#960000",
-          "folders": [
-            {
-              "name": "Journals",
-              "sorting": "m",
-              "color": "#415a9b",
-              "packs": ["basic-rules", "handouts"],
-              "folders": []
-            },
-            {
-              "name": "Card Decks",
-              "sorting": "m",
-              "color": "#415a9b",
-              "packs": ["core-card-set"],
-              "folders": []
-            },
-            {
-              "name": "Actors",
-              "sorting": "m",
-              "color": "#415a9b",
-              "packs": ["archetypes"],
-              "folders": []
-            },
-            {
-              "name": "Scenes",
-              "sorting": "m",
-              "color": "#415a9b",
-              "packs": ["core-scenes"],
-              "folders": []
-            }
-          ],
-          "packs": []
+          "folders": [],
+          "packs": ["basic-rules", "handouts", "core-card-set", "archetypes"]
         },
         {
           "name": "Deutsch",
           "sorting": "m",
           "color": "#960000",
-          "folders": [
-            {
-              "name": "Journale",
-              "sorting": "m",
-              "color": "#415a9b",
-              "packs": ["system-de-basisregeln", "system-de-handouts"],
-              "folders": []
-            },
-            {
-              "name": "Kartendecks",
-              "sorting": "m",
-              "color": "#415a9b",
-              "packs": ["system-de-grundkarten"],
-              "folders": []
-            },
-            {
-              "name": "Akteure",
-              "sorting": "m",
-              "color": "#415a9b",
-              "packs": ["system-de-archetypen"],
-              "folders": []
-            },
-            {
-              "name": "Szenen",
-              "sorting": "m",
-              "color": "#415a9b",
-              "packs": ["core-de-scenes"],
-              "folders": []
-            }
-          ],
-          "packs": []
+          "folders": [],
+          "packs": [
+            "system-de-archetypen",
+            "system-de-basisregeln",
+            "system-de-handouts",
+            "system-de-grundkarten"
+          ]
         },
         {
           "name": "Français",
           "sorting": "m",
           "color": "#960000",
-          "folders": [
-            {
-              "name": "Journals",
-              "sorting": "m",
-              "color": "#415a9b",
-              "packs": ["basic-rules-fr"],
-              "folders": []
-            },
-            {
-              "name": "Card Decks",
-              "sorting": "m",
-              "color": "#415a9b",
-              "packs": ["core-card-set-fr"],
-              "folders": []
-            },
-            {
-              "name": "Actors",
-              "sorting": "m",
-              "color": "#415a9b",
-              "packs": ["archetypes-fr"],
-              "folders": []
-            },
-            {
-              "name": "Scenes",
-              "sorting": "m",
-              "color": "#415a9b",
-              "packs": ["core-scenes-fr"],
-              "folders": []
-            }
-          ],
-          "packs": []
+          "folders": [],
+          "packs": ["basic-rules-fr", "core-card-set-fr", "archetypes-fr"]
         }
       ],
-      "packs": ["macros"]
+      "packs": ["macros", "core-scenes"]
     }
   ],
   "languages": [

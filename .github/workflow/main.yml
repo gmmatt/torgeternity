@@ -8,7 +8,9 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
+        with:
+          node-version: "20.x"
 
       # get part of the tag after the `v`
       - name: Extract tag version number
@@ -26,6 +28,11 @@ jobs:
           url: https://github.com/${{github.repository}}
           manifest: https://github.com/${{github.repository}}/releases/latest/download/system.json
           download: https://github.com/${{github.repository}}/releases/download/${{github.event.release.tag_name}}/torgeternity.zip
+
+      # compile packs
+      - name: compile packs
+      - run: npm ci
+      - run: npm run build
 
       # Create a zip file with all files required by the system to add to the release
       - run: zip -r ./torgeternity.zip system.json module/ packs/ templates/ lang/ images/ fonts/ dice-models/ css/ Changelog.md Readme.md License

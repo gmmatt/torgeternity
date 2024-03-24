@@ -1,0 +1,1032 @@
+_id: sPLt8RBL1hieic6p
+name: The Primitive Hunter
+type: stormknight
+img: systems/torgeternity/images/characters/Primitive_Hunter.Avatar.webp
+items:
+  - _id: Py9XbkHtiMeVAivQ
+    name: Torch
+    type: gear
+    sort: 2400000
+    flags:
+      core:
+        sourceId: Item.TE2jmWDyTxhRulgk
+    img: systems/torgeternity/images/icons/gear-icon.webp
+    effects: []
+    folder: null
+    system:
+      cosm: Living Land
+      description: ''
+      techlevel: 2
+      price: '5'
+      value: 4
+    ownership:
+      default: 0
+    _stats:
+      systemId: torgeternity
+      systemVersion: 3.1.1
+      coreVersion: '11.308'
+      createdTime: null
+      modifiedTime: 1693912271466
+      lastModifiedBy: CtisFurQNe9h7ABb
+    _key: '!actors.items!sPLt8RBL1hieic6p.Py9XbkHtiMeVAivQ'
+  - _id: d9AM1AiyTKzB2o6A
+    name: Totem
+    type: gear
+    sort: 2300000
+    flags:
+      core:
+        sourceId: Item.V6vSEnqgNmYQKs4o
+    img: systems/torgeternity/images/icons/gear-icon.webp
+    effects: []
+    folder: null
+    system:
+      cosm: Living Land
+      description: <p>Bone carving of Lanala.</p>
+      techlevel: 3
+      price: '0'
+      value: 0
+    ownership:
+      default: 0
+    _stats:
+      systemId: torgeternity
+      systemVersion: 3.1.1
+      coreVersion: '11.308'
+      createdTime: null
+      modifiedTime: 1693912265602
+      lastModifiedBy: CtisFurQNe9h7ABb
+    _key: '!actors.items!sPLt8RBL1hieic6p.d9AM1AiyTKzB2o6A'
+  - _id: eoKkKx6JMkRheNol
+    name: War Paint
+    type: gear
+    sort: 2500000
+    flags:
+      core:
+        sourceId: Item.6g0k6JMCuHpfTB8I
+    img: systems/torgeternity/images/icons/gear-icon.webp
+    effects: []
+    folder: null
+    system:
+      cosm: Living Land
+      description: <p>Red, white, and blue.</p>
+      techlevel: 4
+      price: '1'
+      value: 1
+    ownership:
+      default: 0
+    _stats:
+      systemId: torgeternity
+      systemVersion: 3.1.1
+      coreVersion: '11.308'
+      createdTime: null
+      modifiedTime: 1693912280491
+      lastModifiedBy: CtisFurQNe9h7ABb
+    _key: '!actors.items!sPLt8RBL1hieic6p.eoKkKx6JMkRheNol'
+  - _id: buudvAP0bQpbvIvj
+    name: Animal Companion (Sabre-Tooth Cat)
+    type: perk
+    img: systems/torgeternity/images/icons/reality-icon.webp
+    effects: []
+    folder: null
+    sort: 700000
+    flags:
+      core:
+        sourceId: Compendium.te001-core-rulebook.Items.0dFkF4uWXXNOCRQ0
+    system:
+      category: savagery
+      cosm: (Keins)
+      prerequisites: Charisma 8+
+      timestaken: 1
+      description: >-
+        <p>The great tigers of the Living Land are fearsome predators capable of
+        taking down all but the largest dinosaurs. A smaller breed exists that
+        seem far more interested in traveling with humans and edeinos &mdash;
+        and less interested in eating them.</p>
+
+        <p>This Perk grants the hero a sabre-tooth cat as a companion. It is as
+        intelligent as the most welltrained dog so it can follow basic commands,
+        such as attacking a foe it&rsquo;s pointed at, protecting a person or
+        area, or going to or waiting at a familiar place the character has
+        marked for it.</p>
+
+        <p>The player controls the cat. The Game Master should only take over if
+        the pet becomes confused, abused, or is off on its own.</p>
+
+        <p>The beast does not have
+        @UUID[Compendium.te001-core-rulebook.rules.pwneQ55M0nnDH0Us.JournalEntryPage.kYP18QiA72P6PlUi#possibilities]{Possibilities}
+        of its own, but the character can spend <em>his</em> possibilities (and
+        Destiny cards) for the creature even if they are separated.</p>
+
+        <p>If the cat is Defeated, it should be considered Incapacitated instead
+        of slain. It returns at the start of the next act. If it&rsquo;s truly
+        and undeniably killed, the character must visit the Living Land and
+        spend several nights in the jungle to bond with a new companion.</p>
+
+        <div class="row">
+
+        <div class="col-12
+        col-lg-auto">@UUID[Compendium.torgeternity.archetypes.Actor.0ScjEZmA3HcIcn4g]{Companion:
+        Sabre-Tooth Cat}</div>
+
+        </div>
+
+        <p>Found in <strong>Core Rules</strong></p>
+      pulpPowers:
+        enhancementNumber: 0
+        enhancement01:
+          title: ''
+          description: ''
+          taken: false
+        enhancement02:
+          title: ''
+          description: ''
+          taken: false
+        enhancement03:
+          title: ''
+          description: ''
+          taken: false
+        enhancement04:
+          title: ''
+          description: ''
+          taken: false
+        enhancement05:
+          title: ''
+          description: ''
+          taken: false
+        enhancement06:
+          title: ''
+          description: ''
+          taken: false
+        enhancement07:
+          title: ''
+          description: ''
+          taken: false
+        enhancement08:
+          title: ''
+          description: ''
+          taken: false
+        enhancement09:
+          title: ''
+          description: ''
+          taken: false
+        enhancement10:
+          title: ''
+          description: ''
+          taken: false
+        enhancement11:
+          title: ''
+          description: ''
+          taken: false
+        enhancement12:
+          title: ''
+          description: ''
+          taken: false
+        enhancement13:
+          title: ''
+          description: ''
+          taken: false
+        enhancement14:
+          title: ''
+          description: ''
+          taken: false
+        enhancement15:
+          title: ''
+          description: ''
+          taken: false
+        limitationNumber: 0
+        limitation01: ''
+        limitation02: ''
+        limitation03: ''
+        limitation04: ''
+        limitation05: ''
+        limitation06: ''
+        limitation07: ''
+        limitation08: ''
+        limitation09: ''
+        limitation10: ''
+    ownership:
+      default: 0
+      A9LyAqagoJJU3gDH: 3
+      CtisFurQNe9h7ABb: 3
+    _stats:
+      systemId: torgeternity
+      systemVersion: 3.1.1
+      coreVersion: '11.308'
+      createdTime: 1693912137290
+      modifiedTime: 1694861954132
+      lastModifiedBy: CtisFurQNe9h7ABb
+    _key: '!actors.items!sPLt8RBL1hieic6p.buudvAP0bQpbvIvj'
+  - _id: 4yiDEmxDFxwBzdiF
+    name: Relentless
+    type: perk
+    img: systems/torgeternity/images/icons/reality-icon.webp
+    effects: []
+    folder: null
+    sort: 39100000
+    flags:
+      core:
+        sourceId: Compendium.te001-core-rulebook.Items.u8mNCguZj1SbAIVd
+    system:
+      category: prowess
+      cosm: (None)
+      prerequisites: Strength 10+
+      timestaken: 1
+      description: >-
+        <p>The most furious fighters put everything they have into their
+        blows.</p><p>When the character successfully uses the AllOut Attack
+        option in melee, he can spend 3 shock to add an extra BD to the damage.
+        This stacks with the usual bonus damage from Good and Outstanding
+        results. The warrior must have the available shock to spend or the
+        ability doesn’t function.</p>
+
+        <p>&nbsp;</p>
+
+        <p>Found in <strong>Core Rules</strong></p>
+      pulpPowers:
+        enhancementNumber: 0
+        enhancement01:
+          title: ''
+          description: ''
+          taken: false
+        enhancement02:
+          title: ''
+          description: ''
+          taken: false
+        enhancement03:
+          title: ''
+          description: ''
+          taken: false
+        enhancement04:
+          title: ''
+          description: ''
+          taken: false
+        enhancement05:
+          title: ''
+          description: ''
+          taken: false
+        enhancement06:
+          title: ''
+          description: ''
+          taken: false
+        enhancement07:
+          title: ''
+          description: ''
+          taken: false
+        enhancement08:
+          title: ''
+          description: ''
+          taken: false
+        enhancement09:
+          title: ''
+          description: ''
+          taken: false
+        enhancement10:
+          title: ''
+          description: ''
+          taken: false
+        enhancement11:
+          title: ''
+          description: ''
+          taken: false
+        enhancement12:
+          title: ''
+          description: ''
+          taken: false
+        enhancement13:
+          title: ''
+          description: ''
+          taken: false
+        enhancement14:
+          title: ''
+          description: ''
+          taken: false
+        enhancement15:
+          title: ''
+          description: ''
+          taken: false
+        limitationNumber: 0
+        limitation01: ''
+        limitation02: ''
+        limitation03: ''
+        limitation04: ''
+        limitation05: ''
+        limitation06: ''
+        limitation07: ''
+        limitation08: ''
+        limitation09: ''
+        limitation10: ''
+    ownership:
+      default: 0
+      A9LyAqagoJJU3gDH: 3
+      CtisFurQNe9h7ABb: 3
+    _stats:
+      systemId: torgeternity
+      systemVersion: 3.1.1
+      coreVersion: '11.308'
+      createdTime: 1693912142691
+      modifiedTime: 1693912204577
+      lastModifiedBy: CtisFurQNe9h7ABb
+    _key: '!actors.items!sPLt8RBL1hieic6p.4yiDEmxDFxwBzdiF'
+  - _id: F6B05RvuOdlBJZPX
+    name: Hrockt Shoot Spear
+    type: meleeweapon
+    img: systems/torgeternity/images/icons/axe-icon.webp
+    effects: []
+    folder: null
+    sort: 0
+    flags:
+      core:
+        sourceId: Compendium.te001-core-rulebook.Items.ammMtd4GDTZAbVQx
+    system:
+      cosm: Living Land
+      description: >-
+        <p>@UUID[Compendium.te001-core-rulebook.rules.pwneQ55M0nnDH0Us.JournalEntryPage.qKdamp4rrcX6TTt0#thrown:]{Thrown}</p>
+
+        <p>Pliable when wet and growing, but hard as iron once cut and dried.
+        Often cultivated into straight spears with sharp points. Also commonly
+        thrown as a missile weapon.</p>
+
+        <p>In the missile weapons table this weapon has Tech Axiom 3.</p>
+
+        <p>&nbsp;</p>
+
+        <p>Found in <strong>Core Rules</strong></p>
+      techlevel: 3
+      price: '40'
+      value: 8
+      attackWith: meleeWeapons
+      damageType: strengthPlus
+      damage: 2
+      ap: 0
+      bonus: 2
+      notes: Thrown
+      chatNote: ''
+    ownership:
+      default: 0
+      A9LyAqagoJJU3gDH: 3
+      CtisFurQNe9h7ABb: 3
+    _stats:
+      systemId: torgeternity
+      systemVersion: 3.1.1
+      coreVersion: '11.308'
+      createdTime: 1693909378930
+      modifiedTime: 1693912233169
+      lastModifiedBy: CtisFurQNe9h7ABb
+    _key: '!actors.items!sPLt8RBL1hieic6p.F6B05RvuOdlBJZPX'
+  - _id: gxWQJats4GkgCdjH
+    name: Hrockt Shoot Spear (Thrown)
+    type: missileweapon
+    img: systems/torgeternity/images/icons/missile-weapon-icon.webp
+    effects: []
+    folder: null
+    sort: 0
+    flags:
+      core:
+        sourceId: Compendium.te001-core-rulebook.Items.ifZclb6BhuIsPfjt
+    system:
+      cosm: Living Land
+      description: >-
+        <p>Pliable when wet and growing, but hard as iron once cut and dried.
+        Often cultivated into straight spears with sharp points.</p>
+      techlevel: 3
+      price: '40'
+      value: 8
+      attackWith: missileWeapons
+      damageType: strengthPlus
+      damage: 2
+      ap: 0
+      ammo:
+        max: 1
+        value: 1
+      minStrength: 8
+      range: 10 / 20 / 40
+      notes: Thrown
+      chatNote: ''
+    ownership:
+      default: 0
+      A9LyAqagoJJU3gDH: 3
+      CtisFurQNe9h7ABb: 3
+    _stats:
+      systemId: torgeternity
+      systemVersion: 3.1.1
+      coreVersion: '11.308'
+      createdTime: 1693909485506
+      modifiedTime: 1693912234578
+      lastModifiedBy: CtisFurQNe9h7ABb
+    _key: '!actors.items!sPLt8RBL1hieic6p.gxWQJats4GkgCdjH'
+  - _id: JJc7a0Avc4bXfsDP
+    name: Bone Knife
+    type: meleeweapon
+    img: systems/torgeternity/images/icons/axe-icon.webp
+    effects: []
+    folder: null
+    sort: 10500000
+    flags:
+      core:
+        sourceId: Compendium.te001-core-rulebook.Items.9AgUL9MMDkCf2WT9
+    system:
+      cosm: Living Land
+      description: >-
+        <p>@UUID[Compendium.te001-core-rulebook.rules.pwneQ55M0nnDH0Us.JournalEntryPage.qKdamp4rrcX6TTt0#fragile:]{Fragile}</p>
+
+        <p>@UUID[Compendium.te001-core-rulebook.rules.pwneQ55M0nnDH0Us.JournalEntryPage.qKdamp4rrcX6TTt0#small:]{Small}</p>
+
+        <p>The simplest stabbing weapon, usually little more than a handhold and
+        a short shaft with a sharpened point.</p>
+
+        <p>&nbsp;</p>
+
+        <p>Found in <strong>Core Rules</strong></p>
+      techlevel: 3
+      price: '5'
+      value: 4
+      attackWith: meleeWeapons
+      damageType: strengthPlus
+      damage: 1
+      ap: 0
+      bonus: 2
+      notes: Fragile, Small
+      chatNote: ''
+    ownership:
+      default: 0
+      A9LyAqagoJJU3gDH: 3
+      CtisFurQNe9h7ABb: 3
+    _stats:
+      systemId: torgeternity
+      systemVersion: 3.1.1
+      coreVersion: '11.308'
+      createdTime: 1693912255642
+      modifiedTime: 1693912255642
+      lastModifiedBy: CtisFurQNe9h7ABb
+    _key: '!actors.items!sPLt8RBL1hieic6p.JJc7a0Avc4bXfsDP'
+  - _id: dFacISfTma01D48w
+    name: Bone and Hide
+    type: armor
+    img: systems/torgeternity/images/icons/armor-icon.webp
+    effects:
+      - _id: b1hVLCiVkDH7pgeM
+        flags: {}
+        changes:
+          - key: system.other.toughness
+            value: '1'
+            mode: 2
+            priority: null
+          - key: system.other.armor
+            value: '1'
+            mode: 2
+            priority: null
+        disabled: false
+        duration:
+          startTime: null
+          seconds: null
+          combat: null
+          rounds: null
+          turns: null
+          startRound: null
+          startTurn: null
+        icon: icons/svg/aura.svg
+        origin: Item.Mt0GRAYglbVwuVCM
+        tint: null
+        transfer: true
+        name: Armor +1
+        description: ''
+        statuses: []
+        _key: >-
+          !actors.items.effects!sPLt8RBL1hieic6p.dFacISfTma01D48w.b1hVLCiVkDH7pgeM
+    folder: null
+    sort: 1400000
+    flags:
+      core:
+        sourceId: Compendium.te001-core-rulebook.Items.1KCcsTDnBSqBMA8h
+    system:
+      cosm: Living Land
+      description: >-
+        <p>@UUID[Compendium.te001-core-rulebook.rules.pwneQ55M0nnDH0Us.JournalEntryPage.qKdamp4rrcX6TTt0#full-body/torso:]{Torso}</p>
+
+        <p>Bone and hide armor consists of finely shaped bone pieces carefully
+        sewn into the hide. It is very difficult to make, for if the bone layer
+        does not conform in shape to the user, it breaks easily in combat.</p>
+
+        <p>&nbsp;</p>
+
+        <p>Found in <strong>Core Rules</strong></p>
+      techlevel: 3
+      price: '50'
+      value: 8
+      bonus: 1
+      maxDex: 12
+      minStrength: null
+      equipped: true
+      equippedClass: item-equipped
+      notes: Torso
+    ownership:
+      default: 0
+      A9LyAqagoJJU3gDH: 3
+      CtisFurQNe9h7ABb: 3
+    _stats:
+      systemId: torgeternity
+      systemVersion: 3.1.1
+      coreVersion: '11.308'
+      createdTime: 1693912256786
+      modifiedTime: 1693912256791
+      lastModifiedBy: CtisFurQNe9h7ABb
+    _key: '!actors.items!sPLt8RBL1hieic6p.dFacISfTma01D48w'
+effects:
+  - _id: pN3kSjDhUTK3cyMV
+    flags: {}
+    changes:
+      - key: system.other.toughness
+        value: '1'
+        mode: 2
+        priority: null
+      - key: system.other.armor
+        value: '1'
+        mode: 2
+        priority: null
+    disabled: false
+    duration:
+      startTime: 0
+      seconds: null
+      combat: null
+      rounds: null
+      turns: null
+      startRound: null
+      startTurn: null
+    icon: icons/svg/aura.svg
+    origin: >-
+      Compendium.torgeternity.archetypes.Actor.sPLt8RBL1hieic6p.Item.dFacISfTma01D48w
+    tint: null
+    transfer: false
+    name: Armor +1
+    description: ''
+    statuses: []
+    _key: '!actors.effects!sPLt8RBL1hieic6p.pN3kSjDhUTK3cyMV'
+folder: null
+sort: 100001
+flags: {}
+system:
+  shock:
+    max: 5
+    value: 0
+  wounds:
+    max: 3
+    value: 0
+  attributes:
+    charisma: 8
+    dexterity: 10
+    mind: 5
+    spirit: 7
+    strength: 10
+  other:
+    move: 5
+    run: 5
+    toughness: 5
+    armor: 0
+    cosm: livingLand
+    possibilities: 0
+    posibilities: 3
+  skills:
+    airVehicles:
+      baseAttribute: dexterity
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    alteration:
+      baseAttribute: mind
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    apportation:
+      baseAttribute: spirit
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    beastRiding:
+      baseAttribute: dexterity
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    computers:
+      baseAttribute: mind
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    conjuration:
+      baseAttribute: spirit
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    divination:
+      baseAttribute: mind
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    dodge:
+      baseAttribute: dexterity
+      adds: 1
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    energyWeapons:
+      baseAttribute: dexterity
+      adds: null
+      value: 0
+      isFav: false
+      groupName: combat
+      unskilledUse: 1
+    evidenceAnalysis:
+      baseAttribute: mind
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    faith:
+      baseAttribute: spirit
+      adds: 1
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    find:
+      baseAttribute: mind
+      adds: 1
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    fireCombat:
+      baseAttribute: dexterity
+      adds: null
+      value: 0
+      isFav: false
+      groupName: combat
+      unskilledUse: 1
+    firstAid:
+      baseAttribute: mind
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    heavyWeapons:
+      baseAttribute: dexterity
+      adds: null
+      value: 0
+      isFav: false
+      groupName: combat
+      unskilledUse: 1
+    intimidation:
+      baseAttribute: spirit
+      adds: 1
+      value: 0
+      isFav: false
+      groupName: interaction
+      unskilledUse: 1
+    kinesis:
+      baseAttribute: spirit
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    landVehicles:
+      baseAttribute: dexterity
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    language:
+      baseAttribute: mind
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    lockpicking:
+      baseAttribute: dexterity
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    maneuver:
+      baseAttribute: dexterity
+      adds: 1
+      value: 0
+      isFav: false
+      groupName: interaction
+      unskilledUse: 1
+    medicine:
+      baseAttribute: mind
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    meleeWeapons:
+      baseAttribute: dexterity
+      adds: 3
+      value: 0
+      isFav: false
+      groupName: combat
+      unskilledUse: 1
+    missileWeapons:
+      baseAttribute: dexterity
+      adds: 2
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    persuasion:
+      baseAttribute: charisma
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    precognition:
+      baseAttribute: mind
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    profession:
+      baseAttribute: mind
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    reality:
+      baseAttribute: spirit
+      adds: 1
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    scholar:
+      baseAttribute: mind
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    science:
+      baseAttribute: mind
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    stealth:
+      baseAttribute: dexterity
+      adds: 1
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    streetwise:
+      baseAttribute: charisma
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    survival:
+      baseAttribute: mind
+      adds: 2
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    taunt:
+      baseAttribute: charisma
+      adds: null
+      value: 0
+      isFav: false
+      groupName: interaction
+      unskilledUse: 1
+    telepathy:
+      baseAttribute: charisma
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    tracking:
+      baseAttribute: mind
+      adds: 1
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    trick:
+      baseAttribute: mind
+      adds: null
+      value: 0
+      isFav: false
+      groupName: interaction
+      unskilledUse: 1
+    unarmedCombat:
+      baseAttribute: dexterity
+      adds: 1
+      value: 0
+      isFav: false
+      groupName: combat
+      unskilledUse: 1
+    waterVehicles:
+      baseAttribute: dexterity
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    willpower:
+      baseAttribute: spirit
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+  xp:
+    unspent: 0
+    earned: 0
+  axioms:
+    magic: 1
+    social: 7
+    spirit: 24
+    tech: 6
+  details:
+    clearance: ''
+    background: >-
+      <p><img class="charimg"
+      src="systems/torgeternity/images/characters/Primitive_Hunter.webp" alt=""
+      width="1449" height="1801"></p>
+
+      <p
+      class="moreheight">@UUID[Compendium.torgeternity.handouts.JournalEntry.Knhh8vqtjSylJo5Z.JournalEntryPage.XE6X141rfpUROtgY]{Archetype
+      - The Primitive Hunter}</p>
+
+      <h3>Overview</h3>
+
+      <p>Humans transformed to the reality of the Living Land don&rsquo;t become
+      Neanderthals as some rumors claim. They remain completely human, but are
+      now perfectly adapted to the harsh physical environment and a low Social
+      Axiom that makes certain thoughts contradictory. Confusing memories of
+      their pretransformation life remain, but most just don&rsquo;t make sense
+      anymore.</p>
+
+      <p>These humans also hear the voice of Lanala and worship her the same way
+      the edeinos do. Worshipers are known as &ldquo;jakkats,&ldquo; followers
+      of the ways of Keta Kalles. Jakkats worship by savoring every sensation
+      life has to offer.</p>
+
+      <h3>Tactics</h3>
+
+      <p>You usually just get close and stab or bludgeon your foes until they
+      stop moving. You can throw your spear in the rare case where you
+      don&rsquo;t wish to get too close to an opponent. All-Out Attack is
+      usually a good option, either to trigger the Relentless Perk or to take
+      advantage of the Law of Savagery when it applies. Maneuver is your
+      interaction of choice, although intimidation works well in a pinch.</p>
+
+      <p>The Sabre-Tooth Cat companion isn&rsquo;t a full-sized tiger, but its
+      claws are deadly. Use its maneuver to set up your own attacks. Be careful
+      with your friend; if he&rsquo;s slain it may be awhile before another
+      comes along.</p>
+
+      <h3>Moment of Crisis</h3>
+
+      <p>Before the maelstrom bridges landed, you lived an ordinary life working
+      a job you loved. After transforming, some spark of your independence
+      remained. When the weak and soft people from your old life were attacked,
+      you acted and became something more. It&rsquo;s also possible you
+      transformed as a direct result of your heroic act, as if Lanala or some
+      other force knew you needed augmented strength and deadly skills to take
+      your battle to the High Lords.</p>
+
+      <h3>Quote</h3>
+
+      <p>&ldquo;How do you fight wearing all those...things?!&ldquo;</p>
+
+      <h3>Description</h3>
+
+      <p>Jakkats don&rsquo;t wear much clothing. Leather, teeth, and bone are
+      preferred, since at one time those things were alive. You also like body
+      paints, the colors remind you of your previous life somehow. Most humans
+      find you aggressive and blunt, but very physically striking.</p>
+
+      <h3>Agenda</h3>
+
+      <p>Wars, politics, and organizations just don&rsquo;t make sense. There is
+      only fighting the enemy right here and now. Consequences are complicated,
+      unknowable things best left to gods and wizards.</p>
+
+      <h3>Names</h3>
+
+      <p>Andar, Burly, Honda, Leena, Maka, Merron, Novan, Rayan, Vanna</p>
+
+      <h3>Advancement Track (Optional)</h3>
+
+      <ul>
+
+      <li>(5 XP) Vengeful</li>
+
+      <li>(7 XP) Whirlwind</li>
+
+      <li>(9 XP) Hard to Kill</li>
+
+      <li>(4 XP) <em>melee weapons</em> +4</li>
+
+      <li>(5 XP) <em>melee weapons</em> +5</li>
+
+      </ul>
+    race: human
+  editstate: null
+  fatigue: '1'
+ownership:
+  default: 0
+  A9LyAqagoJJU3gDH: 3
+prototypeToken:
+  flags: {}
+  name: Primitive Hunter
+  displayName: 0
+  width: 1
+  height: 1
+  lockRotation: false
+  rotation: 0
+  actorLink: true
+  disposition: 1
+  displayBars: 40
+  bar1:
+    attribute: wounds
+  bar2:
+    attribute: shock
+  randomImg: false
+  alpha: 1
+  light:
+    alpha: 1
+    angle: 360
+    bright: 0
+    coloration: 1
+    dim: 0
+    luminosity: 0.5
+    saturation: 0
+    contrast: 0
+    shadows: 0
+    animation:
+      type: null
+      speed: 5
+      intensity: 5
+      reverse: false
+    darkness:
+      min: 0
+      max: 1
+    color: null
+    attenuation: 0.5
+  texture:
+    src: systems/torgeternity/images/characters/primitive_hunter.Token.webp
+    tint: null
+    scaleX: 1
+    scaleY: 1
+    offsetX: 0
+    offsetY: 0
+    rotation: 0
+  sight:
+    angle: 360
+    enabled: false
+    range: 0
+    brightness: 1
+    visionMode: basic
+    attenuation: 0.1
+    saturation: 0
+    contrast: 0
+  appendNumber: false
+  prependAdjective: false
+  detectionModes: []
+_stats:
+  systemId: torgeternity
+  systemVersion: 3.1.1
+  coreVersion: '11.308'
+  createdTime: 1693912137290
+  modifiedTime: 1694861954132
+  lastModifiedBy: CtisFurQNe9h7ABb
+_key: '!actors!sPLt8RBL1hieic6p'
+

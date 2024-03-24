@@ -1,0 +1,291 @@
+_id: hxp32qopMknOTFHc
+name: Pan Pacifica Cosm Deck
+type: deck
+description: ''
+img: >-
+  systems/torgeternity/images/deutsch/cards/Cosmkarten/Pan-Pacifika/PZZR%C3%BCckseite.webp
+cards:
+  - _id: ts7JFvfcZ0suxq8Q
+    name: Die Rache ist mein!
+    description: ''
+    type: cosm
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Die Rache ist mein!
+        text: ''
+        img: >-
+          systems/torgeternity/images/deutsch/cards/Cosmkarten/Pan-Pacifika/01.webp
+    face: 0
+    drawn: false
+    origin: hxp32qopMknOTFHc
+    rotation: 0
+    sort: 0
+    flags: {}
+    system: {}
+    value: null
+    width: null
+    height: null
+    _key: '!cards.cards!hxp32qopMknOTFHc.ts7JFvfcZ0suxq8Q'
+    cards: []
+  - _id: 19oCDWJmlAXzJBXO
+    name: Blutbad
+    description: ''
+    type: cosm
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Blutbad
+        text: ''
+        img: >-
+          systems/torgeternity/images/deutsch/cards/Cosmkarten/Pan-Pacifika/02.webp
+    face: 0
+    drawn: false
+    origin: hxp32qopMknOTFHc
+    rotation: 0
+    sort: 0
+    flags: {}
+    system: {}
+    value: null
+    width: null
+    height: null
+    _key: '!cards.cards!hxp32qopMknOTFHc.19oCDWJmlAXzJBXO'
+    cards: []
+  - _id: dciZtzTGMRhapQz8
+    name: Fehde
+    description: ''
+    type: cosm
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Fehde
+        text: ''
+        img: >-
+          systems/torgeternity/images/deutsch/cards/Cosmkarten/Pan-Pacifika/03.webp
+    face: 0
+    drawn: false
+    origin: hxp32qopMknOTFHc
+    rotation: 0
+    sort: 0
+    flags: {}
+    system: {}
+    value: null
+    width: null
+    height: null
+    _key: '!cards.cards!hxp32qopMknOTFHc.dciZtzTGMRhapQz8'
+    cards: []
+  - _id: oPc4Ty1lgGljuPAh
+    name: Mutation
+    description: ''
+    type: cosm
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Mutation
+        text: ''
+        img: >-
+          systems/torgeternity/images/deutsch/cards/Cosmkarten/Pan-Pacifika/04.webp
+    face: 0
+    drawn: false
+    origin: hxp32qopMknOTFHc
+    rotation: 0
+    sort: 0
+    flags: {}
+    system: {}
+    value: null
+    width: null
+    height: null
+    _key: '!cards.cards!hxp32qopMknOTFHc.oPc4Ty1lgGljuPAh'
+    cards: []
+  - _id: vu97OQmWNEhUuPAG
+    name: Ausbruch
+    description: ''
+    type: cosm
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Ausbruch
+        text: ''
+        img: >-
+          systems/torgeternity/images/deutsch/cards/Cosmkarten/Pan-Pacifika/05.webp
+    face: 0
+    drawn: false
+    origin: hxp32qopMknOTFHc
+    rotation: 0
+    sort: 0
+    flags: {}
+    system: {}
+    value: null
+    width: null
+    height: null
+    _key: '!cards.cards!hxp32qopMknOTFHc.vu97OQmWNEhUuPAG'
+    cards: []
+  - _id: sODeBIA3D3YBsPr5
+    name: Fäuste des Zorns
+    description: ''
+    type: cosm
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Fäuste des Zorns
+        text: ''
+        img: >-
+          systems/torgeternity/images/deutsch/cards/Cosmkarten/Pan-Pacifika/06.webp
+    face: 0
+    drawn: false
+    origin: hxp32qopMknOTFHc
+    rotation: 0
+    sort: 0
+    flags: {}
+    system: {}
+    value: null
+    width: null
+    height: null
+    _key: '!cards.cards!hxp32qopMknOTFHc.sODeBIA3D3YBsPr5'
+    cards: []
+  - _id: TbAx7uZpO3U9Fkqu
+    name: Ist das ein Biss?
+    description: ''
+    type: cosm
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Ist das ein Biss?
+        text: ''
+        img: >-
+          systems/torgeternity/images/deutsch/cards/Cosmkarten/Pan-Pacifika/07.webp
+    face: 0
+    drawn: false
+    origin: hxp32qopMknOTFHc
+    rotation: 0
+    sort: 0
+    flags: {}
+    system: {}
+    value: null
+    width: null
+    height: null
+    _key: '!cards.cards!hxp32qopMknOTFHc.TbAx7uZpO3U9Fkqu'
+    cards: []
+  - _id: 8lDHK5cKHo11PotE
+    name: Du siehst kacke aus.
+    description: ''
+    type: cosm
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Du siehst kacke aus.
+        text: ''
+        img: >-
+          systems/torgeternity/images/deutsch/cards/Cosmkarten/Pan-Pacifika/08.webp
+    face: 0
+    drawn: false
+    origin: hxp32qopMknOTFHc
+    rotation: 0
+    sort: 0
+    flags: {}
+    system: {}
+    value: null
+    width: null
+    height: null
+    _key: '!cards.cards!hxp32qopMknOTFHc.8lDHK5cKHo11PotE'
+    cards: []
+  - _id: WodLAobYt7vUZuRL
+    name: Verkauft
+    description: ''
+    type: cosm
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Verkauft
+        text: ''
+        img: >-
+          systems/torgeternity/images/deutsch/cards/Cosmkarten/Pan-Pacifika/09.webp
+    face: 0
+    drawn: false
+    origin: hxp32qopMknOTFHc
+    rotation: 0
+    sort: 0
+    flags: {}
+    system: {}
+    value: null
+    width: null
+    height: null
+    _key: '!cards.cards!hxp32qopMknOTFHc.WodLAobYt7vUZuRL'
+    cards: []
+  - _id: kr0M54TqpH5MjWyw
+    name: Abgebrüht
+    description: ''
+    type: cosm
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Abgebrüht
+        text: ''
+        img: >-
+          systems/torgeternity/images/deutsch/cards/Cosmkarten/Pan-Pacifika/10.webp
+    face: 0
+    drawn: false
+    origin: hxp32qopMknOTFHc
+    rotation: 0
+    sort: 0
+    flags: {}
+    system: {}
+    value: null
+    width: null
+    height: null
+    _key: '!cards.cards!hxp32qopMknOTFHc.kr0M54TqpH5MjWyw'
+    cards: []
+rotation: 0
+displayCount: false
+folder: null
+sort: 0
+flags:
+  core:
+    sourceId: Cards.BMEXCFRgfLAn56S5
+  torgeternity:
+    usage: panPacifica
+system: {}
+ownership:
+  default: 0
+  1pSzpSNrhKGYYcib: 3
+width: null
+height: null
+_stats:
+  systemId: null
+  systemVersion: null
+  coreVersion: null
+  createdTime: null
+  modifiedTime: null
+  lastModifiedBy: null
+_key: '!cards!hxp32qopMknOTFHc'
+

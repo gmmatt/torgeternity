@@ -491,6 +491,7 @@
       "HeaderDetailsHint": "Configure Details",
       "HeaderGridHint": "Configure Grid Dimensions.",
       "HeaderVisionHint": "Configure Vision and Lighting Options.",
+      "main": "Main scene",
       "reality": "Reality",
       "realityHint": "Configure Reality"
     },

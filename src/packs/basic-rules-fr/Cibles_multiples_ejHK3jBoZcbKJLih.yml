@@ -1,0 +1,28 @@
+_id: ejHK3jBoZcbKJLih
+name: Cibles multiples
+content: >-
+  <p class="MsoNormal">Les personnages peuvent attaquer plusieurs adversaires à
+  la fois avec des attaques physiques ou d’interaction offensives. Chaque cible
+  supplémentaire entraîne un malus de -2 au test. Tirer sur trois cibles, par
+  exemple, soustrait 4 au total de l’attaque. En cas de réussite, toutes les
+  cibles sont touchées et subissent des dommages normalement. </p>
+
+  <blockquote>
+
+  <p><strong>Remarque sur le système Foundry : </strong>si tu fais un test de
+  compétence améliorée, le système calculera automatiquement une pénalité
+  multi-cibles.  (voir
+  @Compendium[torgeternity.basic-rules-fr.J0Yt8ueE280AzxmS]{attaque}).</p>
+
+  </blockquote>
+folder: null
+sort: 0
+permission:
+  default: 0
+  TK1vCAdCz548vBDu: 3
+flags:
+  core:
+    sourceId: JournalEntry.xdrk6Ham3C1W9VNZ
+pages: []
+_key: '!journal!ejHK3jBoZcbKJLih'
+

@@ -491,6 +491,7 @@
       "HeaderDetailsHint": "Configura Detalles",
       "HeaderGridHint": "Configura Dimensión Rejilla.",
       "HeaderVisionHint": "Configura Opciones Visión e Iluminación.",
+      "main": "escena estándar",
       "reality": "Realidad",
       "realityHint": "Configura Realidad"
     },

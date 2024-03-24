@@ -1,0 +1,298 @@
+_id: cBTPvBrPQpFTkUcm
+name: Core Earth Cosm Deck
+type: deck
+description: ''
+img: systems/torgeternity/images/cards/earth-back.webp
+cards:
+  - _id: 9GLH1SiOkFx66qUe
+    name: Escalation!
+    description: ''
+    type: cosm
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Escalation!
+        text: >-
+          Play at any time during an encounter. Enemy reenforcements arrive,
+          including a reality-rated foe.
+
+
+          All Storm Knights gain one to three Possibilities after the
+          adversaries are dealt with, depending on the strength of the forces
+          who appeared.
+        img: systems/torgeternity/images/cards/cosm/core-earth/06.webp
+    face: 0
+    drawn: false
+    origin: cBTPvBrPQpFTkUcm
+    rotation: 0
+    sort: 5
+    flags: {}
+    value: 6
+    system: {}
+    width: null
+    height: null
+    _key: '!cards.cards!cBTPvBrPQpFTkUcm.9GLH1SiOkFx66qUe'
+    cards: []
+  - _id: wvB3JtrHtnzk4ijq
+    name: There's Always Hope
+    description: ''
+    type: cosm
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: There's Always Hope
+        text: >-
+          All tests related to a Dramatic Skill Resolution are Favored for the
+          rest of the scene.
+        img: systems/torgeternity/images/cards/cosm/core-earth/07.webp
+    face: 0
+    drawn: false
+    origin: cBTPvBrPQpFTkUcm
+    rotation: 0
+    sort: 6
+    flags: {}
+    value: 7
+    system: {}
+    width: null
+    height: null
+    _key: '!cards.cards!cBTPvBrPQpFTkUcm.wvB3JtrHtnzk4ijq'
+    cards: []
+  - _id: pfC9x14grTLRMPk2
+    name: Seize the Day
+    description: ''
+    type: cosm
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Seize the Day
+        text: >-
+          Play when a new Drama card is revealed. Swap the Conflict lines for
+          the Heroes and Villains (including Initiative).
+        img: systems/torgeternity/images/cards/cosm/core-earth/08.webp
+    face: 0
+    drawn: false
+    origin: cBTPvBrPQpFTkUcm
+    rotation: 0
+    sort: 7
+    flags: {}
+    value: 8
+    system: {}
+    width: null
+    height: null
+    _key: '!cards.cards!cBTPvBrPQpFTkUcm.pfC9x14grTLRMPk2'
+    cards: []
+  - _id: 4BTlS8ORZnUTbYsc
+    name: Go for Broke
+    description: ''
+    type: cosm
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Go for Broke
+        text: >-
+          All Storm Knights may ignore up to 4 points of penalties this round
+          for any and all actions.
+        img: systems/torgeternity/images/cards/cosm/core-earth/09.webp
+    face: 0
+    drawn: false
+    origin: cBTPvBrPQpFTkUcm
+    rotation: 0
+    sort: 8
+    flags: {}
+    value: 9
+    system: {}
+    width: null
+    height: null
+    _key: '!cards.cards!cBTPvBrPQpFTkUcm.4BTlS8ORZnUTbYsc'
+    cards: []
+  - _id: 8OCejvGcy7RuhQrC
+    name: Lucky Break
+    description: ''
+    type: cosm
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Lucky Break
+        text: Play to negate all Wounds and Shock from a single attack.
+        img: systems/torgeternity/images/cards/cosm/core-earth/10.webp
+    face: 0
+    drawn: false
+    origin: cBTPvBrPQpFTkUcm
+    rotation: 0
+    sort: 9
+    flags: {}
+    value: 10
+    system: {}
+    width: null
+    height: null
+    _key: '!cards.cards!cBTPvBrPQpFTkUcm.8OCejvGcy7RuhQrC'
+    cards: []
+  - name: Spurred On!
+    type: cosm
+    _id: 1S7TmNvQ8Cl41CGM
+    description: ''
+    system: {}
+    suit: ''
+    value: null
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Spurred On!
+        img: systems/torgeternity/images/cards/cosm/core-earth/01.webp
+        text: ''
+    face: 0
+    drawn: false
+    origin: null
+    width: null
+    height: null
+    rotation: 0
+    sort: 0
+    flags: {}
+    _key: '!cards.cards!cBTPvBrPQpFTkUcm.1S7TmNvQ8Cl41CGM'
+    cards: []
+  - name: Keep Fighting
+    type: cosm
+    _id: lop40OO2fDJMgTXT
+    description: ''
+    system: {}
+    suit: ''
+    value: null
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Keep Fighting
+        img: systems/torgeternity/images/cards/cosm/core-earth/02.webp
+        text: ''
+    face: 0
+    drawn: false
+    origin: null
+    width: null
+    height: null
+    rotation: 0
+    sort: 0
+    flags: {}
+    _key: '!cards.cards!cBTPvBrPQpFTkUcm.lop40OO2fDJMgTXT'
+    cards: []
+  - name: Rousing Speech
+    type: cosm
+    _id: cLBB93NWdEFcCYS3
+    description: ''
+    system: {}
+    suit: ''
+    value: null
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Rousing Speech
+        img: systems/torgeternity/images/cards/cosm/core-earth/03.webp
+        text: ''
+    face: 0
+    drawn: false
+    origin: null
+    width: null
+    height: null
+    rotation: 0
+    sort: 0
+    flags: {}
+    _key: '!cards.cards!cBTPvBrPQpFTkUcm.cLBB93NWdEFcCYS3'
+    cards: []
+  - name: The Law of Hope
+    type: cosm
+    _id: Sj4lDwYzbh2wELmG
+    description: ''
+    system: {}
+    suit: ''
+    value: null
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: The Law of Hope
+        img: systems/torgeternity/images/cards/cosm/core-earth/04.webp
+        text: ''
+    face: 0
+    drawn: false
+    origin: null
+    width: null
+    height: null
+    rotation: 0
+    sort: 0
+    flags: {}
+    _key: '!cards.cards!cBTPvBrPQpFTkUcm.Sj4lDwYzbh2wELmG'
+    cards: []
+  - name: Welcome to our World!
+    type: cosm
+    _id: 8xRtwKfY86pqz1ol
+    description: ''
+    system: {}
+    suit: ''
+    value: null
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Welcome to our World!
+        img: systems/torgeternity/images/cards/cosm/core-earth/05.webp
+        text: ''
+    face: 0
+    drawn: false
+    origin: null
+    width: null
+    height: null
+    rotation: 0
+    sort: 0
+    flags: {}
+    _key: '!cards.cards!cBTPvBrPQpFTkUcm.8xRtwKfY86pqz1ol'
+    cards: []
+rotation: 0
+displayCount: false
+folder: null
+sort: 0
+flags:
+  exportSource:
+    world: torgv2p2
+    system: torgeternity
+    coreVersion: '9.226'
+    systemVersion: 2.1.0
+  core:
+    sourceId: Cards.oMOBBSZVVgrH9Dde
+  torgeternity:
+    usage: coreEarth
+system: {}
+ownership:
+  default: 0
+  juTas93IuPVP8p5D: 3
+width: null
+height: null
+_stats:
+  systemId: null
+  systemVersion: null
+  coreVersion: null
+  createdTime: null
+  modifiedTime: null
+  lastModifiedBy: null
+_key: '!cards!cBTPvBrPQpFTkUcm'
+

@@ -1,0 +1,1073 @@
+_id: Aq6ZhdfGe9SMQxwv
+name: The Eccentric Inventor
+type: stormknight
+img: systems/torgeternity/images/characters/Eccentric_Inventor.Avatar.webp
+items:
+  - _id: E6JiAtIrHBIrc4Hp
+    name: Electro-Ray
+    type: firearm
+    sort: 400001
+    flags:
+      core:
+        sourceId: Item.W8ZARSxZdHHv4JZN
+    img: systems/torgeternity/images/icons/firearm-icon.webp
+    effects: []
+    folder: null
+    system:
+      cosm: Nile Empire
+      description: >-
+        <p>If energy weapons test is a Mishap device stops functioning for the
+        scene.</p>
+      techlevel: 20
+      price: '0'
+      value: 0
+      attackWith: energyWeapons
+      damageType: ''
+      damage: 15
+      ap: 0
+      ammo:
+        max: 5
+        value: 5
+      range: 10/25/50
+      notes: Requires Electro-Ray perk, Replinishes 1 ammo per round
+      chatNote: +2 damage if target wet or +4 if soaked
+    ownership:
+      default: 0
+    _stats:
+      systemId: torgeternity
+      systemVersion: 3.1.1
+      coreVersion: '11.308'
+      createdTime: null
+      modifiedTime: 1693902505392
+      lastModifiedBy: CtisFurQNe9h7ABb
+    _key: '!actors.items!Aq6ZhdfGe9SMQxwv.E6JiAtIrHBIrc4Hp'
+  - _id: el7ijfFcwh1cCRcR
+    name: Electro-Ray
+    type: perk
+    img: systems/torgeternity/images/icons/reality-icon.webp
+    effects: []
+    folder: null
+    sort: 0
+    flags:
+      core:
+        sourceId: Compendium.te001-core-rulebook.Items.OMSbysWG7R7kHKnY
+    system:
+      category: pulpPowers
+      cosm: (Keins)
+      prerequisites: ''
+      timestaken: 1
+      description: >-
+        <p>The hero can fire a powerful bolt of electricity at a target. It has
+        a maximum range of 10/25/50 meters and causes 13 damage. The ray
+        contains five shots, and regenerates one shot each round. Attacking with
+        the Ray uses <em>energy weapons</em>.</p>
+
+        <p><strong>Dangerous When Wet:</strong> Increase the damage by +2 in
+        light rain or if the target is standing in a puddle, and +4 in heavy
+        rain or if the target is in water up to his ankles or higher.</p>
+
+        <p>&nbsp;</p>
+
+        <p>Found in <strong>Core Rules</strong></p>
+      pulpPowers:
+        enhancementNumber: 4
+        enhancement01:
+          title: Damage
+          description: The damage is increased to 15.
+          taken: true
+        enhancement02:
+          title: Rapid Fire
+          description: >-
+            The character may use the Short Burst option when using his
+            Electro-Ray.
+          taken: false
+        enhancement03:
+          title: Shots
+          description: The power now holds 10 shots.
+          taken: false
+        enhancement04:
+          title: Small Blast Radius
+          description: The ray gun affects everyone in a Small Blast Radius.
+          taken: false
+        enhancement05:
+          title: ''
+          description: ''
+          taken: false
+        enhancement06:
+          title: ''
+          description: ''
+          taken: false
+        enhancement07:
+          title: ''
+          description: ''
+          taken: false
+        enhancement08:
+          title: ''
+          description: ''
+          taken: false
+        enhancement09:
+          title: ''
+          description: ''
+          taken: false
+        enhancement10:
+          title: ''
+          description: ''
+          taken: false
+        enhancement11:
+          title: ''
+          description: ''
+          taken: false
+        enhancement12:
+          title: ''
+          description: ''
+          taken: false
+        enhancement13:
+          title: ''
+          description: ''
+          taken: false
+        enhancement14:
+          title: ''
+          description: ''
+          taken: false
+        enhancement15:
+          title: ''
+          description: ''
+          taken: false
+        limitationNumber: 1
+        limitation01: >-
+          If energy weapons test is a Mishap device stops functioning for the
+          scene.
+        limitation02: ''
+        limitation03: ''
+        limitation04: ''
+        limitation05: ''
+        limitation06: ''
+        limitation07: ''
+        limitation08: ''
+        limitation09: ''
+        limitation10: ''
+    ownership:
+      default: 0
+      A9LyAqagoJJU3gDH: 3
+      CtisFurQNe9h7ABb: 3
+    _stats:
+      systemId: torgeternity
+      systemVersion: 3.1.1
+      coreVersion: '11.308'
+      createdTime: 1693901087967
+      modifiedTime: 1694866875694
+      lastModifiedBy: CtisFurQNe9h7ABb
+    _key: '!actors.items!Aq6ZhdfGe9SMQxwv.el7ijfFcwh1cCRcR'
+  - _id: uk7sK6sWfxJIbulc
+    name: Force Field
+    type: perk
+    img: systems/torgeternity/images/icons/reality-icon.webp
+    effects: []
+    folder: null
+    sort: 0
+    flags:
+      core:
+        sourceId: Compendium.te001-core-rulebook.Items.r3NzZGyQ04yQNJXc
+    system:
+      category: pulpPowers
+      cosm: (Keins)
+      prerequisites: ''
+      timestaken: 1
+      description: >-
+        <p>A shield of invisible energy surrounds the hero.</p>
+
+        <p>The force field has three <q>charges.</q> Each time the hero suffers
+        a wound, the field expends a charge to block the wound and 2 shock.</p>
+
+        <p>The field recharges at the rate of one charge per hour.</p>
+
+        <p>&nbsp;</p>
+
+        <p>Found in <strong>Core Rules</strong></p>
+      pulpPowers:
+        enhancementNumber: 3
+        enhancement01:
+          title: Power
+          description: The field has 5 charges.
+          taken: true
+        enhancement02:
+          title: Recharge
+          description: The field regains a charge every 10 minutes.
+          taken: false
+        enhancement03:
+          title: Size
+          description: The field can be used to protect an adjacent ally.
+          taken: false
+        enhancement04:
+          title: ''
+          description: ''
+          taken: false
+        enhancement05:
+          title: ''
+          description: ''
+          taken: false
+        enhancement06:
+          title: ''
+          description: ''
+          taken: false
+        enhancement07:
+          title: ''
+          description: ''
+          taken: false
+        enhancement08:
+          title: ''
+          description: ''
+          taken: false
+        enhancement09:
+          title: ''
+          description: ''
+          taken: false
+        enhancement10:
+          title: ''
+          description: ''
+          taken: false
+        enhancement11:
+          title: ''
+          description: ''
+          taken: false
+        enhancement12:
+          title: ''
+          description: ''
+          taken: false
+        enhancement13:
+          title: ''
+          description: ''
+          taken: false
+        enhancement14:
+          title: ''
+          description: ''
+          taken: false
+        enhancement15:
+          title: ''
+          description: ''
+          taken: false
+        limitationNumber: 1
+        limitation01: Device must be activated as a simple action.
+        limitation02: ''
+        limitation03: ''
+        limitation04: ''
+        limitation05: ''
+        limitation06: ''
+        limitation07: ''
+        limitation08: ''
+        limitation09: ''
+        limitation10: ''
+    ownership:
+      default: 0
+      A9LyAqagoJJU3gDH: 3
+      CtisFurQNe9h7ABb: 3
+    _stats:
+      systemId: torgeternity
+      systemVersion: 3.1.1
+      coreVersion: '11.308'
+      createdTime: 1693901168472
+      modifiedTime: 1694866828222
+      lastModifiedBy: CtisFurQNe9h7ABb
+    _key: '!actors.items!Aq6ZhdfGe9SMQxwv.uk7sK6sWfxJIbulc'
+  - _id: xqi2McEW7xOJftcs
+    name: Leather Coat
+    type: armor
+    img: systems/torgeternity/images/icons/armor-icon.webp
+    effects:
+      - _id: HEEEeLAOmww6nITp
+        flags: {}
+        changes:
+          - key: system.other.toughness
+            value: '1'
+            mode: 2
+            priority: null
+          - key: system.other.armor
+            value: '1'
+            mode: 2
+            priority: null
+        disabled: false
+        duration:
+          startTime: null
+          seconds: null
+          combat: null
+          rounds: null
+          turns: null
+          startRound: null
+          startTurn: null
+        icon: icons/svg/aura.svg
+        origin: Item.7Wgz7hUbakn1W4Ao
+        tint: null
+        transfer: true
+        name: Armor +1
+        description: ''
+        statuses: []
+        _key: >-
+          !actors.items.effects!Aq6ZhdfGe9SMQxwv.xqi2McEW7xOJftcs.HEEEeLAOmww6nITp
+    folder: null
+    sort: 0
+    flags:
+      core:
+        sourceId: Compendium.te001-core-rulebook.Items.34ioFwhBc4c39YFU
+    system:
+      cosm: Nile Empire
+      description: >-
+        <p>@UUID[Compendium.te001-core-rulebook.rules.pwneQ55M0nnDH0Us.JournalEntryPage.qKdamp4rrcX6TTt0#full-body/torso:]{Torso}</p>
+
+        <p>&nbsp;</p>
+      techlevel: 19
+      price: '100'
+      value: 10
+      bonus: 1
+      maxDex: 12
+      minStrength: null
+      equipped: true
+      equippedClass: item-equipped
+      notes: Torso
+    ownership:
+      default: 0
+      A9LyAqagoJJU3gDH: 3
+      CtisFurQNe9h7ABb: 3
+    _stats:
+      systemId: torgeternity
+      systemVersion: 3.1.1
+      coreVersion: '11.308'
+      createdTime: 1693901274086
+      modifiedTime: 1693901293034
+      lastModifiedBy: CtisFurQNe9h7ABb
+    _key: '!actors.items!Aq6ZhdfGe9SMQxwv.xqi2McEW7xOJftcs'
+  - _id: NWapUa2jcALYy3AO
+    name: Flashlight
+    type: gear
+    img: systems/torgeternity/images/icons/gear-icon.webp
+    effects: []
+    folder: null
+    sort: 425000
+    flags:
+      core:
+        sourceId: Compendium.te001-core-rulebook.Items.tEnSd1UUK2wTfebw
+    system:
+      cosm: Nile Empire
+      description: <p>Found in <strong>Core Rules</strong></p>
+      techlevel: 20
+      price: '10'
+      value: 5
+    ownership:
+      default: 0
+      A9LyAqagoJJU3gDH: 3
+      CtisFurQNe9h7ABb: 3
+    _stats:
+      systemId: torgeternity
+      systemVersion: 3.1.1
+      coreVersion: '11.308'
+      createdTime: 1693901305711
+      modifiedTime: 1693901411423
+      lastModifiedBy: CtisFurQNe9h7ABb
+    _key: '!actors.items!Aq6ZhdfGe9SMQxwv.NWapUa2jcALYy3AO'
+  - _id: sURNPsJD7MBaiuoE
+    name: Tracking Device
+    type: gear
+    img: systems/torgeternity/images/icons/gear-icon.webp
+    effects: []
+    folder: null
+    sort: 900000
+    flags:
+      core:
+        sourceId: Compendium.te001-core-rulebook.Items.06c6JoWaPqyNzpRv
+    system:
+      cosm: Nile Empire
+      description: >-
+        <p>A beacon that broadcasts its location to any attuned radio receiver
+        within one kilometer.</p>
+
+        <p>&nbsp;</p>
+
+        <p>Found in <strong>Core Rules</strong></p>
+      techlevel: 20
+      price: '150'
+      value: 11
+    ownership:
+      default: 0
+      A9LyAqagoJJU3gDH: 3
+      CtisFurQNe9h7ABb: 3
+    _stats:
+      systemId: torgeternity
+      systemVersion: 3.1.1
+      coreVersion: '11.308'
+      createdTime: 1693901311210
+      modifiedTime: 1693901406734
+      lastModifiedBy: CtisFurQNe9h7ABb
+    _key: '!actors.items!Aq6ZhdfGe9SMQxwv.sURNPsJD7MBaiuoE'
+  - _id: 36umQpiNEdaUN7yk
+    name: Micro Audio Transmitter
+    type: gear
+    img: systems/torgeternity/images/icons/gear-icon.webp
+    effects: []
+    folder: null
+    sort: 500000
+    flags:
+      core:
+        sourceId: Compendium.te001-core-rulebook.Items.cae3PZicII8jW148
+    system:
+      cosm: Nile Empire
+      description: |-
+        <p>Relays sound to any attuned radio receivers within 400 meters.</p>
+        <p>&nbsp;</p>
+        <p>Found in <strong>Core Rules</strong></p>
+      techlevel: 20
+      price: '100'
+      value: 10
+    ownership:
+      default: 0
+      A9LyAqagoJJU3gDH: 3
+      CtisFurQNe9h7ABb: 3
+    _stats:
+      systemId: torgeternity
+      systemVersion: 3.1.1
+      coreVersion: '11.308'
+      createdTime: 1693901326287
+      modifiedTime: 1693901401203
+      lastModifiedBy: CtisFurQNe9h7ABb
+    _key: '!actors.items!Aq6ZhdfGe9SMQxwv.36umQpiNEdaUN7yk'
+  - _id: cVUn4Bk2Dzitb68n
+    name: Backpack
+    type: gear
+    img: systems/torgeternity/images/icons/gear-icon.webp
+    effects: []
+    folder: null
+    sort: 300000
+    flags:
+      core:
+        sourceId: Compendium.te001-core-rulebook.Items.RSnCZO6bMZqc5e1X
+    system:
+      cosm: Aysle
+      description: <p>Found in <strong>Core Rules</strong></p>
+      techlevel: 8
+      price: '100'
+      value: 10
+    ownership:
+      default: 0
+      A9LyAqagoJJU3gDH: 3
+      CtisFurQNe9h7ABb: 3
+    _stats:
+      systemId: torgeternity
+      systemVersion: 3.1.1
+      coreVersion: '11.308'
+      createdTime: 1693901332502
+      modifiedTime: 1693901401203
+      lastModifiedBy: CtisFurQNe9h7ABb
+    _key: '!actors.items!Aq6ZhdfGe9SMQxwv.cVUn4Bk2Dzitb68n'
+  - _id: ng5dPcLuc7LPWsYP
+    name: First Aid Kit
+    type: gear
+    img: systems/torgeternity/images/icons/gear-icon.webp
+    effects: []
+    folder: null
+    sort: 400000
+    flags:
+      core:
+        sourceId: Compendium.te001-core-rulebook.Items.1TCaPKKRqqbJFApZ
+    system:
+      cosm: Nile Empire
+      description: |-
+        <p>Makes first aid tests Favored.</p>
+        <p>&nbsp;</p>
+        <p>Found in <strong>Core Rules</strong></p>
+      techlevel: 19
+      price: '50'
+      value: 9
+    ownership:
+      default: 0
+      A9LyAqagoJJU3gDH: 3
+      CtisFurQNe9h7ABb: 3
+    _stats:
+      systemId: torgeternity
+      systemVersion: 3.1.1
+      coreVersion: '11.308'
+      createdTime: 1693901342007
+      modifiedTime: 1693901401203
+      lastModifiedBy: CtisFurQNe9h7ABb
+    _key: '!actors.items!Aq6ZhdfGe9SMQxwv.ng5dPcLuc7LPWsYP'
+  - _id: bnlZswmHuUmFCgDL
+    name: Lock Picks
+    type: gear
+    img: systems/torgeternity/images/icons/gear-icon.webp
+    effects: []
+    folder: null
+    sort: 450000
+    flags:
+      core:
+        sourceId: Compendium.te001-core-rulebook.Items.lyBSUlh3gT1qYamL
+    system:
+      cosm: Aysle
+      description: <p>Found in <strong>Core Rules</strong></p>
+      techlevel: 10
+      price: '10'
+      value: 5
+    ownership:
+      default: 0
+      A9LyAqagoJJU3gDH: 3
+      CtisFurQNe9h7ABb: 3
+    _stats:
+      systemId: torgeternity
+      systemVersion: 3.1.1
+      coreVersion: '11.308'
+      createdTime: 1693901350757
+      modifiedTime: 1693901402503
+      lastModifiedBy: CtisFurQNe9h7ABb
+    _key: '!actors.items!Aq6ZhdfGe9SMQxwv.bnlZswmHuUmFCgDL'
+  - _id: d7byAJpKPH7u0yYz
+    name: Radio Receiver
+    type: gear
+    img: systems/torgeternity/images/icons/gear-icon.webp
+    effects: []
+    folder: null
+    sort: 700000
+    flags:
+      core:
+        sourceId: Compendium.te001-core-rulebook.Items.EyJpTkom5GEE706E
+    system:
+      cosm: Nile Empire
+      description: <p>Found in <strong>Core Rules</strong></p>
+      techlevel: 18
+      price: '50'
+      value: 9
+    ownership:
+      default: 0
+      A9LyAqagoJJU3gDH: 3
+      CtisFurQNe9h7ABb: 3
+    _stats:
+      systemId: torgeternity
+      systemVersion: 3.1.1
+      coreVersion: '11.308'
+      createdTime: 1693901357439
+      modifiedTime: 1693901401203
+      lastModifiedBy: CtisFurQNe9h7ABb
+    _key: '!actors.items!Aq6ZhdfGe9SMQxwv.d7byAJpKPH7u0yYz'
+  - _id: AHDH6vseOwIBIwfs
+    name: Tool Belt
+    type: gear
+    img: systems/torgeternity/images/icons/gear-icon.webp
+    effects: []
+    folder: null
+    sort: 800000
+    flags:
+      core:
+        sourceId: Compendium.te001-core-rulebook.Items.L3NJPS1akDMAqkPK
+    system:
+      cosm: Orrorsh
+      description: <p>Found in <strong>Core Rules</strong></p>
+      techlevel: 16
+      price: '100'
+      value: 10
+    ownership:
+      default: 0
+      A9LyAqagoJJU3gDH: 3
+      CtisFurQNe9h7ABb: 3
+    _stats:
+      systemId: torgeternity
+      systemVersion: 3.1.1
+      coreVersion: '11.308'
+      createdTime: 1693901366464
+      modifiedTime: 1693901401203
+      lastModifiedBy: CtisFurQNe9h7ABb
+    _key: '!actors.items!Aq6ZhdfGe9SMQxwv.AHDH6vseOwIBIwfs'
+effects:
+  - _id: HiZZcESSMyRETa11
+    flags: {}
+    changes:
+      - key: system.other.toughness
+        value: '1'
+        mode: 2
+        priority: null
+      - key: system.other.armor
+        value: '1'
+        mode: 2
+        priority: null
+    disabled: false
+    duration:
+      startTime: 0
+      seconds: null
+      combat: null
+      rounds: null
+      turns: null
+      startRound: null
+      startTurn: null
+    icon: icons/svg/aura.svg
+    origin: >-
+      Compendium.torgeternity.archetypes.Actor.Aq6ZhdfGe9SMQxwv.Item.xqi2McEW7xOJftcs
+    tint: null
+    transfer: false
+    name: Armor +1
+    description: ''
+    statuses: []
+    _key: '!actors.effects!Aq6ZhdfGe9SMQxwv.HiZZcESSMyRETa11'
+folder: null
+sort: 100001
+flags: {}
+system:
+  shock:
+    max: 5
+    value: 0
+  wounds:
+    max: 3
+    value: 0
+  attributes:
+    charisma: 7
+    dexterity: 8
+    mind: 12
+    spirit: 7
+    strength: 6
+  other:
+    move: 5
+    run: 5
+    toughness: 5
+    armor: 0
+    cosm: nileEmpire
+    possibilities: 0
+    posibilities: 3
+  skills:
+    airVehicles:
+      baseAttribute: dexterity
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    alteration:
+      baseAttribute: mind
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    apportation:
+      baseAttribute: spirit
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    beastRiding:
+      baseAttribute: dexterity
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    computers:
+      baseAttribute: mind
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    conjuration:
+      baseAttribute: spirit
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    divination:
+      baseAttribute: mind
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    dodge:
+      baseAttribute: dexterity
+      adds: 2
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    energyWeapons:
+      baseAttribute: dexterity
+      adds: 2
+      value: 0
+      isFav: false
+      groupName: combat
+      unskilledUse: 1
+    evidenceAnalysis:
+      baseAttribute: mind
+      adds: 1
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    faith:
+      baseAttribute: spirit
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    find:
+      baseAttribute: mind
+      adds: 1
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    fireCombat:
+      baseAttribute: dexterity
+      adds: null
+      value: 0
+      isFav: false
+      groupName: combat
+      unskilledUse: 1
+    firstAid:
+      baseAttribute: mind
+      adds: 1
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    heavyWeapons:
+      baseAttribute: dexterity
+      adds: null
+      value: 0
+      isFav: false
+      groupName: combat
+      unskilledUse: 1
+    intimidation:
+      baseAttribute: spirit
+      adds: null
+      value: 0
+      isFav: false
+      groupName: interaction
+      unskilledUse: 1
+    kinesis:
+      baseAttribute: spirit
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    landVehicles:
+      baseAttribute: dexterity
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    language:
+      baseAttribute: mind
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    lockpicking:
+      baseAttribute: dexterity
+      adds: 1
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    maneuver:
+      baseAttribute: dexterity
+      adds: null
+      value: 0
+      isFav: false
+      groupName: interaction
+      unskilledUse: 1
+    medicine:
+      baseAttribute: mind
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    meleeWeapons:
+      baseAttribute: dexterity
+      adds: null
+      value: 0
+      isFav: false
+      groupName: combat
+      unskilledUse: 1
+    missileWeapons:
+      baseAttribute: dexterity
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    persuasion:
+      baseAttribute: charisma
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    precognition:
+      baseAttribute: mind
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    profession:
+      baseAttribute: mind
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    reality:
+      baseAttribute: spirit
+      adds: 2
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    scholar:
+      baseAttribute: mind
+      adds: 1
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    science:
+      baseAttribute: mind
+      adds: 3
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    stealth:
+      baseAttribute: dexterity
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    streetwise:
+      baseAttribute: charisma
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    survival:
+      baseAttribute: mind
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    taunt:
+      baseAttribute: charisma
+      adds: 1
+      value: 0
+      isFav: false
+      groupName: interaction
+      unskilledUse: 1
+    telepathy:
+      baseAttribute: charisma
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    tracking:
+      baseAttribute: mind
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    trick:
+      baseAttribute: mind
+      adds: 1
+      value: 0
+      isFav: false
+      groupName: interaction
+      unskilledUse: 1
+    unarmedCombat:
+      baseAttribute: dexterity
+      adds: null
+      value: 0
+      isFav: false
+      groupName: combat
+      unskilledUse: 1
+    waterVehicles:
+      baseAttribute: dexterity
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    willpower:
+      baseAttribute: spirit
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+  xp:
+    unspent: 0
+    earned: 0
+  axioms:
+    magic: 14
+    social: 20
+    spirit: 18
+    tech: 20
+  details:
+    clearance: ''
+    background: >-
+      <p><img class="charimg"
+      src="systems/torgeternity/images/characters/Eccentric_Inventor.webp"
+      alt="" width="1125" height="2052"></p>
+
+      <p
+      class="moreheight">@UUID[Compendium.torgeternity.handouts.JournalEntry.Knhh8vqtjSylJo5Z.JournalEntryPage.59zUF4TrfxfdMfhs]{Archetype
+      - The Eccentric Inventor}</p>
+
+      <h3>Overview</h3>
+
+      <p>You were brilliant, and perhaps a bit odd, even before the Possibility
+      Wars. After you transformed to fit the pulpy reality of the Nile Empire
+      anything became possible. Immutable laws of physics are now mere
+      guidelines. You push this new freedom to its limits, inventing wondrous
+      electronic devices and then using them against the Possibility
+      Raiders.</p>
+
+      <h3>Tactics</h3>
+
+      <p>Your Electro-Ray is effective, but it can run out of charges if used on
+      too many targets too quickly. Your trick interaction is especially
+      devastating. Many opponents are weak against trick, and a
+      &ldquo;Player&rsquo;s Call&ldquo; result might eliminate even stronger
+      foes when the circumstances support it.</p>
+
+      <p>While your Force Field is operational you can use its charges to Soak
+      Wounds. It can block two Shock even if there&rsquo;s no Wound, but
+      it&rsquo;s better to save those charges. Once the Force Field is depleted,
+      or if an untimely disconnection disables it, you are extremely susceptible
+      to damage. If possible, hang on to a Destiny card like Willpower or Action
+      to help reconnect if you get into a tight spot.</p>
+
+      <h3>Moment of Crisis</h3>
+
+      <p>Faced with an onslaught of invaders in Cairo you turned to science for
+      a way to fight back, and in a moment of indescribable inspiration (and
+      crisis) you reassembled a phone, a lava lamp, and a blow dryer into a
+      deadly energy projector. Alternatively, you may have transformed while
+      destroying some of your older inventions and plans before they could fall
+      into the hands of Mobius and his hordes.</p>
+
+      <h3>Quote</h3>
+
+      <p>&ldquo;Whoa, who could have predicted a sudden polarity inversion would
+      cause an explosion like that. I mean, other than me. Because I totally
+      called that.&ldquo;</p>
+
+      <h3>Description</h3>
+
+      <p>Your vulcanized rubber lab coat is for work, but underneath that
+      you&rsquo;re always ready for a good party. Your goggles are fashionable
+      in any situation. You are highly intelligent and well-schooled. You are
+      confident, happy, and unapologetically weird.</p>
+
+      <h3>Agenda</h3>
+
+      <p>Knowledge is the only path to true victory, and sometimes sacrifices
+      must be made toward that end. Saving people and having fun are on your
+      list of priorities, but science is always at the top.</p>
+
+      <h3>Names</h3>
+
+      <p>Captain Capacitor, Dr. Lightning, Joy Buzzer, Professor Diode, The
+      Spark</p>
+
+      <h3>Advancement Track (Optional)</h3>
+
+      <ul>
+
+      <li>(5 XP) Situational Awareness</li>
+
+      <li>(7 XP) Force Field (5 charges)</li>
+
+      <li>(9 XP) Electro-Ray (10 charges)</li>
+
+      <li>(3 XP) <em>dodge</em> +3</li>
+
+      <li>(3 XP) <em>energy weapons</em> +3</li>
+
+      <li>(3 XP) <em>reality</em> +3</li>
+
+      </ul>
+    race: human
+  editstate: null
+  fatigue: '1'
+ownership:
+  default: 0
+  A9LyAqagoJJU3gDH: 3
+prototypeToken:
+  flags: {}
+  name: Eccentric Inventor
+  displayName: 0
+  width: 1
+  height: 1
+  lockRotation: false
+  rotation: 0
+  actorLink: true
+  disposition: 1
+  displayBars: 40
+  bar1:
+    attribute: wounds
+  bar2:
+    attribute: shock
+  randomImg: false
+  alpha: 1
+  light:
+    alpha: 1
+    angle: 360
+    bright: 0
+    coloration: 1
+    dim: 0
+    luminosity: 0.5
+    saturation: 0
+    contrast: 0
+    shadows: 0
+    animation:
+      speed: 5
+      intensity: 5
+      type: null
+      reverse: false
+    darkness:
+      min: 0
+      max: 1
+    color: null
+    attenuation: 0.5
+  texture:
+    src: systems/torgeternity/images/characters/eccentric_inventor.Token.webp
+    tint: null
+    scaleX: 1
+    scaleY: 1
+    offsetX: 0
+    offsetY: 0
+    rotation: 0
+  sight:
+    angle: 360
+    enabled: false
+    range: 0
+    brightness: 1
+    visionMode: basic
+    attenuation: 0.1
+    saturation: 0
+    contrast: 0
+  appendNumber: false
+  prependAdjective: false
+  detectionModes: []
+_stats:
+  systemId: torgeternity
+  systemVersion: 3.1.1
+  coreVersion: '11.308'
+  createdTime: 1693901061941
+  modifiedTime: 1694866875694
+  lastModifiedBy: CtisFurQNe9h7ABb
+_key: '!actors!Aq6ZhdfGe9SMQxwv'
+

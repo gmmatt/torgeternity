@@ -1,0 +1,27 @@
+_id: IaIcLLInM85yR1D3
+name: Cartes de Destin
+content: >-
+  <p>Au début d'une session, chaque joueur doit tirer quatre (4) cartes
+  Destinée. Chaque carte explique son effet. En dehors des combats, ces cartes
+  peuvent être échangées entre les joueurs (une pour une) à tout moment.</p>
+
+  <p> </p>
+
+  <blockquote>
+
+  <p>Pour plus d'informations sur l'utilisation des cartes dans le système
+  Foundry, consulte la
+  @Compendium[torgeternity.basic-rules-fr.ZaVT27zI7lzHCyvA]{gestion des
+  cartes}</p>
+
+  </blockquote>
+folder: null
+sort: 0
+permission:
+  kz1RJu8vrAPmTUwN: 3
+flags:
+  core:
+    sourceId: JournalEntry.eKffcgFMmoQE1YCO
+pages: []
+_key: '!journal!IaIcLLInM85yR1D3'
+

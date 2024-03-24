@@ -1,0 +1,1148 @@
+_id: tzZ99BGG1WkwkQMO
+name: Der Weltenläufer
+type: stormknight
+img: systems/torgeternity/images/characters/Realm_Runner.Avatar.webp
+items:
+  - _id: Ls0L5wiAmyGrWu92
+    name: Extra-Magazine
+    type: gear
+    img: systems/torgeternity/images/icons/gear-icon.webp
+    effects: []
+    folder: YrLpjzkzDZxqWzUw
+    sort: 0
+    flags:
+      core:
+        sourceId: Item.9VjiNmOA2TB62Xej
+    system:
+      cosm: (Keins)
+      description: <p>F&uuml;nfmal Glock 9mm nachladen</p>
+      techlevel: 22
+      price: '0'
+      value: 0
+    ownership:
+      default: 0
+      9Q0XnqFwko7hRlvL: 3
+    _stats:
+      systemId: torgeternity
+      systemVersion: 3.1.1
+      coreVersion: '11.308'
+      createdTime: null
+      modifiedTime: 1694868586263
+      lastModifiedBy: CtisFurQNe9h7ABb
+    _key: '!actors.items!tzZ99BGG1WkwkQMO.Ls0L5wiAmyGrWu92'
+  - _id: N0NOWg4w2Hgj95hF
+    name: Weltenläufer
+    type: perk
+    img: systems/torgeternity/images/icons/reality-icon.webp
+    effects: []
+    folder: null
+    sort: 0
+    flags:
+      core:
+        sourceId: Compendium.te001-core-rulebook.grw-de-vorzuverb.Item.DKa7TaWUVZibh2yn
+    system:
+      category: reality
+      cosm: Zentralerde
+      prerequisites: ''
+      timestaken: null
+      description: >-
+        <p>Der Storm Knight hat ein nat&uuml;rliches Gesp&uuml;r f&uuml;r die
+        Manipulation der Realit&auml;t. Er ignoriert 4 Punkte vom Malus auf
+        Realit&auml;ts-Proben, wenn er versucht, sich neu anzukoppeln, und er
+        darf in jedem Akt das erste Entkoppeln ignorieren.</p>
+      pulpPowers:
+        enhancementNumber: 0
+        enhancement01:
+          title: ''
+          description: ''
+          taken: false
+        enhancement02:
+          title: ''
+          description: ''
+          taken: false
+        enhancement03:
+          title: ''
+          description: ''
+          taken: false
+        enhancement04:
+          title: ''
+          description: ''
+          taken: false
+        enhancement05:
+          title: ''
+          description: ''
+          taken: false
+        enhancement06:
+          title: ''
+          description: ''
+          taken: false
+        enhancement07:
+          title: ''
+          description: ''
+          taken: false
+        enhancement08:
+          title: ''
+          description: ''
+          taken: false
+        enhancement09:
+          title: ''
+          description: ''
+          taken: false
+        enhancement10:
+          title: ''
+          description: ''
+          taken: false
+        enhancement11:
+          title: ''
+          description: ''
+          taken: false
+        enhancement12:
+          title: ''
+          description: ''
+          taken: false
+        enhancement13:
+          title: ''
+          description: ''
+          taken: false
+        enhancement14:
+          title: ''
+          description: ''
+          taken: false
+        enhancement15:
+          title: ''
+          description: ''
+          taken: false
+        limitationNumber: 0
+        limitation01: ''
+        limitation02: ''
+        limitation03: ''
+        limitation04: ''
+        limitation05: ''
+        limitation06: ''
+        limitation07: ''
+        limitation08: ''
+        limitation09: ''
+        limitation10: ''
+    ownership:
+      default: 0
+      9Q0XnqFwko7hRlvL: 3
+      CtisFurQNe9h7ABb: 3
+    _stats:
+      systemId: torgeternity
+      systemVersion: 3.1.1
+      coreVersion: '11.308'
+      createdTime: 1694868513566
+      modifiedTime: 1694868513566
+      lastModifiedBy: CtisFurQNe9h7ABb
+    _key: '!actors.items!tzZ99BGG1WkwkQMO.N0NOWg4w2Hgj95hF'
+  - _id: 7jS3c05xSw5MIrlf
+    name: Wunderkind
+    type: perk
+    img: systems/torgeternity/images/icons/reality-icon.webp
+    effects:
+      - _id: PKrDOXEu7d3UCZMo
+        changes:
+          - key: system.other.possibilities
+            mode: 2
+            value: '1'
+            priority: null
+        disabled: false
+        duration:
+          startTime: null
+          seconds: null
+          combat: null
+          rounds: null
+          turns: null
+          startRound: null
+          startTurn: null
+        icon: icons/svg/aura.svg
+        origin: Item.1Sy4iM9TBdoYsfLy
+        transfer: true
+        flags: {}
+        tint: null
+        name: Wunderkind
+        description: ''
+        statuses: []
+        _key: >-
+          !actors.items.effects!tzZ99BGG1WkwkQMO.7jS3c05xSw5MIrlf.PKrDOXEu7d3UCZMo
+    folder: null
+    sort: 0
+    flags:
+      core:
+        sourceId: Compendium.te001-core-rulebook.grw-de-vorzuverb.Item.5NH1DrMFKWCJIHKn
+    system:
+      category: reality
+      cosm: Zentralerde
+      prerequisites: ''
+      timestaken: null
+      description: >-
+        <p>Der Charakter ist reich an M&ouml;glichkeitsenergie. Er&nbsp;beginnt
+        jeden Akt mit einer zus&auml;tzlichen M&ouml;glichkeit.&nbsp;Dies
+        addiert sich mit anderen F&auml;higkeiten, die zus&auml;tzliche
+        M&ouml;glichkeiten zur Verf&uuml;gung stellen.</p>
+      pulpPowers:
+        enhancementNumber: 0
+        enhancement01:
+          title: ''
+          description: ''
+          taken: false
+        enhancement02:
+          title: ''
+          description: ''
+          taken: false
+        enhancement03:
+          title: ''
+          description: ''
+          taken: false
+        enhancement04:
+          title: ''
+          description: ''
+          taken: false
+        enhancement05:
+          title: ''
+          description: ''
+          taken: false
+        enhancement06:
+          title: ''
+          description: ''
+          taken: false
+        enhancement07:
+          title: ''
+          description: ''
+          taken: false
+        enhancement08:
+          title: ''
+          description: ''
+          taken: false
+        enhancement09:
+          title: ''
+          description: ''
+          taken: false
+        enhancement10:
+          title: ''
+          description: ''
+          taken: false
+        enhancement11:
+          title: ''
+          description: ''
+          taken: false
+        enhancement12:
+          title: ''
+          description: ''
+          taken: false
+        enhancement13:
+          title: ''
+          description: ''
+          taken: false
+        enhancement14:
+          title: ''
+          description: ''
+          taken: false
+        enhancement15:
+          title: ''
+          description: ''
+          taken: false
+        limitationNumber: 0
+        limitation01: ''
+        limitation02: ''
+        limitation03: ''
+        limitation04: ''
+        limitation05: ''
+        limitation06: ''
+        limitation07: ''
+        limitation08: ''
+        limitation09: ''
+        limitation10: ''
+    ownership:
+      default: 0
+      9Q0XnqFwko7hRlvL: 3
+      CtisFurQNe9h7ABb: 3
+    _stats:
+      systemId: torgeternity
+      systemVersion: 3.1.1
+      coreVersion: '11.308'
+      createdTime: 1694868518647
+      modifiedTime: 1694868518647
+      lastModifiedBy: CtisFurQNe9h7ABb
+    _key: '!actors.items!tzZ99BGG1WkwkQMO.7jS3c05xSw5MIrlf'
+  - _id: I8A1GlS1ktRNssiT
+    name: Machete
+    type: meleeweapon
+    img: systems/torgeternity/images/icons/axe-icon.webp
+    effects:
+      - _id: sFPcVAMnyhyPeTzH
+        changes:
+          - key: system.skills.survival.isFav
+            mode: 5
+            value: '1'
+            priority: null
+        disabled: false
+        duration:
+          startTime: null
+          seconds: null
+          combat: null
+          rounds: null
+          turns: null
+          startRound: null
+          startTurn: null
+        icon: icons/svg/aura.svg
+        origin: Compendium.te001-core-rulebook.grw-de-ausruestung.b6nZOz177J3nWcLF
+        transfer: true
+        flags: {}
+        tint: null
+        name: Begünstigung Überleben
+        description: ''
+        statuses: []
+        _key: >-
+          !actors.items.effects!tzZ99BGG1WkwkQMO.I8A1GlS1ktRNssiT.sFPcVAMnyhyPeTzH
+    folder: null
+    sort: 18500000
+    flags:
+      core:
+        sourceId: >-
+          Compendium.te001-core-rulebook.grw-de-ausruestung.Item.b6nZOz177J3nWcLF
+    system:
+      cosm: Zentralerde
+      description: >-
+        <p>Diese mittelgro&szlig;e, einschneidige Klinge ist bestens f&uuml;r
+        das Entfernen dichten Gestr&uuml;pps ausbalanciert und eignet sich auch
+        hervorragend zum Zerteilen von Fleisch. Moderne Macheten haben in den
+        Griff eingebautes &Uuml;berlebenswerkzeug, wodurch &Uuml;berlebenskunst-
+        Proben als Beg&uuml;nstigt z&auml;hlen.</p>
+      techlevel: 22
+      price: '40'
+      value: 8
+      attackWith: meleeWeapons
+      damageType: strengthPlus
+      damage: 2
+      ap: 0
+      bonus: 2
+      notes: Überlebenskunst-Proben werden Begünstigt
+      chatNote: ''
+    ownership:
+      default: 0
+      9Q0XnqFwko7hRlvL: 3
+      CtisFurQNe9h7ABb: 3
+    _stats:
+      systemId: torgeternity
+      systemVersion: 3.1.1
+      coreVersion: '11.308'
+      createdTime: 1694868536613
+      modifiedTime: 1694868536613
+      lastModifiedBy: CtisFurQNe9h7ABb
+    _key: '!actors.items!tzZ99BGG1WkwkQMO.I8A1GlS1ktRNssiT'
+  - _id: fZ2i8jtev3Zxzgzk
+    name: Disruptorgranate
+    type: missileweapon
+    img: systems/torgeternity/images/icons/missile-weapon-icon.webp
+    effects: []
+    folder: null
+    sort: 17000000
+    flags:
+      core:
+        sourceId: >-
+          Compendium.te001-core-rulebook.grw-de-ausruestung.Item.YEMCChtf6jhno2TS
+    system:
+      cosm: Cyberpontifikat
+      description: >-
+        <p>@UUID[Compendium.te001-core-rulebook.grw-de-grw.Qlx6yGF0Mmo6Xzrv.JournalEntryPage.41rZYYhaMC2T260D#nicht-todlicher-schaden]{Nicht-t&ouml;dlicher
+        Schaden}</p>
+
+        <p>@UUID[Compendium.te001-core-rulebook.grw-de-grw.Qlx6yGF0Mmo6Xzrv.JournalEntryPage.41rZYYhaMC2T260D#flachenangriffe]{Fl&auml;chenangriffe}</p>
+
+        <p>Diese Granate &auml;hnelt einer flachen Wurfscheibe. Wenn sie auf den
+        Boden oder auf ein Ziel trifft, sendet sie einen starken Impuls aus, der
+        jeden in der N&auml;he au&szlig;er Gefecht setzen soll. Einige
+        Disruptoren verwenden elektrische Impulse, andere verwenden
+        Schallwellen, aber beide haben die gleiche Wirkung auf die
+        Ungl&uuml;cklichen, die in ihren Impuls geraten.</p>
+      techlevel: 26
+      price: '100'
+      value: 11
+      attackWith: missileWeapons
+      damageType: flat
+      damage: 16
+      ap: 0
+      ammo:
+        max: 1
+        value: 1
+      minStrength: null
+      range: 10/20/30
+      notes: Nicht-tödlich, Mittlere Explosion
+      chatNote: ''
+    ownership:
+      default: 0
+      9Q0XnqFwko7hRlvL: 3
+      CtisFurQNe9h7ABb: 3
+    _stats:
+      systemId: torgeternity
+      systemVersion: 3.1.1
+      coreVersion: '11.308'
+      createdTime: 1694868543565
+      modifiedTime: 1694868543565
+      lastModifiedBy: CtisFurQNe9h7ABb
+    _key: '!actors.items!tzZ99BGG1WkwkQMO.fZ2i8jtev3Zxzgzk'
+  - _id: OgeIr0GPjdO21ell
+    name: Glock 9mm
+    type: firearm
+    img: systems/torgeternity/images/icons/firearm-icon.webp
+    effects: []
+    folder: null
+    sort: 30200000
+    flags:
+      core:
+        sourceId: >-
+          Compendium.te001-core-rulebook.grw-de-ausruestung.Item.uS5bsDS4zQkN7NTj
+    system:
+      cosm: Zentralerde
+      description: >-
+        <p>@UUID[Compendium.te001-core-rulebook.grw-de-grw.Qlx6yGF0Mmo6Xzrv.JournalEntryPage.7GGUUHzuYIqGPXDO#karabiner:]{Pistole}</p>
+
+        <p>Eine r&uuml;cksto&szlig;ladende 9 mm Halbautomatik- Pistole, die
+        f&uuml;r ihr gro&szlig;es, doppelt gestapeltes Munitionsmagazin bekannt
+        ist.</p>
+      techlevel: 22
+      price: '250'
+      value: 12
+      attackWith: fireCombat
+      damageType: ''
+      damage: 13
+      ap: 0
+      ammo:
+        max: 15
+        value: 15
+      range: 10/25/40
+      notes: Pistole
+      chatNote: ''
+    ownership:
+      default: 0
+      9Q0XnqFwko7hRlvL: 3
+      CtisFurQNe9h7ABb: 3
+    _stats:
+      systemId: torgeternity
+      systemVersion: 3.1.1
+      coreVersion: '11.308'
+      createdTime: 1694868550013
+      modifiedTime: 1694868550013
+      lastModifiedBy: CtisFurQNe9h7ABb
+    _key: '!actors.items!tzZ99BGG1WkwkQMO.OgeIr0GPjdO21ell'
+  - _id: xzFkk9YOnK3UGZFG
+    name: Lederjacke
+    type: armor
+    img: systems/torgeternity/images/icons/armor-icon.webp
+    effects:
+      - _id: LbA5jhxYBbhv1Y2O
+        changes:
+          - key: system.other.toughness
+            mode: 2
+            value: '1'
+            priority: null
+          - key: system.other.armor
+            mode: 2
+            value: '1'
+            priority: null
+        disabled: false
+        duration:
+          startTime: null
+          seconds: null
+          combat: null
+          rounds: null
+          turns: null
+          startRound: null
+          startTurn: null
+        icon: icons/svg/aura.svg
+        origin: Item.BlLZXOO5w1iYYsz2
+        transfer: true
+        flags: {}
+        tint: null
+        name: Rüstung +1
+        description: ''
+        statuses: []
+        _key: >-
+          !actors.items.effects!tzZ99BGG1WkwkQMO.xzFkk9YOnK3UGZFG.LbA5jhxYBbhv1Y2O
+    folder: null
+    sort: 23000000
+    flags:
+      core:
+        sourceId: >-
+          Compendium.te001-core-rulebook.grw-de-ausruestung.Item.ibQvaehrqx24DxvU
+    system:
+      cosm: (Keins)
+      description: >-
+        <p>@UUID[Compendium.te001-core-rulebook.grw-de-grw.Qlx6yGF0Mmo6Xzrv.JournalEntryPage.7GGUUHzuYIqGPXDO#ganzkorper/torso:]{Torso}</p>
+
+        <p>Schwarz und stylisch!</p>
+      techlevel: 19
+      price: '100'
+      value: 10
+      bonus: 1
+      maxDex: 12
+      minStrength: null
+      equipped: true
+      equippedClass: item-equipped
+      notes: Torso
+    ownership:
+      default: 0
+      9Q0XnqFwko7hRlvL: 3
+      CtisFurQNe9h7ABb: 3
+    _stats:
+      systemId: torgeternity
+      systemVersion: 3.1.1
+      coreVersion: '11.308'
+      createdTime: 1694868557421
+      modifiedTime: 1694868557425
+      lastModifiedBy: CtisFurQNe9h7ABb
+    _key: '!actors.items!tzZ99BGG1WkwkQMO.xzFkk9YOnK3UGZFG'
+  - name: Multitool
+    type: gear
+    img: systems/torgeternity/images/icons/gear-icon.webp
+    effects: []
+    folder: null
+    sort: 12300000
+    flags:
+      core:
+        sourceId: Item.G0KmopPlr7jWlbXo
+    _id: FFUsBNHLuKjWCfNW
+    system:
+      cosm: Zentralerde
+      description: >-
+        <p>N&uuml;tzlich f&uuml;r Reparaturen, funktioniert wie ein
+        Dietrich.</p>
+      techlevel: 22
+      price: '40'
+      value: 8
+    ownership:
+      default: 0
+      9Q0XnqFwko7hRlvL: 3
+      CtisFurQNe9h7ABb: 3
+    _stats:
+      systemId: torgeternity
+      systemVersion: 3.1.1
+      coreVersion: '11.308'
+      createdTime: 1694868564181
+      modifiedTime: 1694868564181
+      lastModifiedBy: CtisFurQNe9h7ABb
+    _key: '!actors.items!tzZ99BGG1WkwkQMO.FFUsBNHLuKjWCfNW'
+  - name: Taschenlampe
+    type: gear
+    img: systems/torgeternity/images/icons/gear-icon.webp
+    effects: []
+    folder: null
+    sort: 18450000
+    flags:
+      core:
+        sourceId: Item.ghYEu90Et15IioVa
+    _id: yyssBr6H3JoILMf8
+    system:
+      cosm: Nil-Imperium
+      description: ''
+      techlevel: 20
+      price: '10'
+      value: 5
+    ownership:
+      default: 0
+      9Q0XnqFwko7hRlvL: 3
+      CtisFurQNe9h7ABb: 3
+    _stats:
+      systemId: torgeternity
+      systemVersion: 3.1.1
+      coreVersion: '11.308'
+      createdTime: 1694868568884
+      modifiedTime: 1694868590753
+      lastModifiedBy: CtisFurQNe9h7ABb
+    _key: '!actors.items!tzZ99BGG1WkwkQMO.yyssBr6H3JoILMf8'
+  - _id: ohO82JzysApayR0C
+    name: Trank der Heilung
+    type: gear
+    img: systems/torgeternity/images/icons/gear-icon.webp
+    effects: []
+    folder: null
+    sort: 24600000
+    flags:
+      core:
+        sourceId: >-
+          Compendium.te001-core-rulebook.grw-de-ausruestung.Item.kiWS8lQLXbtS6FYE
+    system:
+      cosm: Aysle
+      description: >-
+        <p>Ben&ouml;tigt ein Magie-Axiom von 13, um zu wirken. Das Trinken des
+        Tranks ist eine einfache Aktion und er regeneriert 1 Wunde und
+        Schockschaden in H&ouml;he eines Bonusw&uuml;rfels.</p>
+      techlevel: 12
+      price: '500'
+      value: 14
+    ownership:
+      default: 0
+      9Q0XnqFwko7hRlvL: 3
+      CtisFurQNe9h7ABb: 3
+    _stats:
+      systemId: torgeternity
+      systemVersion: 3.1.1
+      coreVersion: '11.308'
+      createdTime: 1694868573414
+      modifiedTime: 1694868573414
+      lastModifiedBy: CtisFurQNe9h7ABb
+    _key: '!actors.items!tzZ99BGG1WkwkQMO.ohO82JzysApayR0C'
+effects:
+  - _id: FSGCGqrhdLMqxrK0
+    changes:
+      - key: system.other.possibilities
+        mode: 2
+        value: '1'
+        priority: null
+    disabled: false
+    duration:
+      startTime: 0
+      seconds: null
+      combat: null
+      rounds: null
+      turns: null
+      startRound: null
+      startTurn: null
+    icon: icons/svg/aura.svg
+    origin: >-
+      Compendium.torgeternity.system-de-archetypen.Actor.tzZ99BGG1WkwkQMO.Item.7jS3c05xSw5MIrlf
+    transfer: false
+    flags: {}
+    tint: null
+    name: Wunderkind
+    description: ''
+    statuses: []
+    _key: '!actors.effects!tzZ99BGG1WkwkQMO.FSGCGqrhdLMqxrK0'
+  - _id: 9T2SgSGgiUkXHNdR
+    changes:
+      - key: system.skills.survival.isFav
+        mode: 5
+        value: '1'
+        priority: null
+    disabled: false
+    duration:
+      startTime: 0
+      seconds: null
+      combat: null
+      rounds: null
+      turns: null
+      startRound: null
+      startTurn: null
+    icon: icons/svg/aura.svg
+    origin: >-
+      Compendium.torgeternity.system-de-archetypen.Actor.tzZ99BGG1WkwkQMO.Item.I8A1GlS1ktRNssiT
+    transfer: false
+    flags: {}
+    tint: null
+    name: Begünstigung Überleben
+    description: ''
+    statuses: []
+    _key: '!actors.effects!tzZ99BGG1WkwkQMO.9T2SgSGgiUkXHNdR'
+  - _id: FHoggDEBvsuCTAEF
+    changes:
+      - key: system.other.toughness
+        mode: 2
+        value: '1'
+        priority: null
+      - key: system.other.armor
+        mode: 2
+        value: '1'
+        priority: null
+    disabled: false
+    duration:
+      startTime: 0
+      seconds: null
+      combat: null
+      rounds: null
+      turns: null
+      startRound: null
+      startTurn: null
+    icon: icons/svg/aura.svg
+    origin: >-
+      Compendium.torgeternity.system-de-archetypen.Actor.tzZ99BGG1WkwkQMO.Item.xzFkk9YOnK3UGZFG
+    transfer: false
+    flags: {}
+    tint: null
+    name: Rüstung +1
+    description: ''
+    statuses: []
+    _key: '!actors.effects!tzZ99BGG1WkwkQMO.FHoggDEBvsuCTAEF'
+folder: null
+sort: 0
+flags:
+  core:
+    sourceId: Compendium.torgeternity.archetypes.BpClx5rBCesWUzIN
+system:
+  shock:
+    max: 5
+    value: 0
+  wounds:
+    max: 3
+    value: 0
+  attributes:
+    charisma: 7
+    dexterity: 8
+    mind: 8
+    spirit: 9
+    strength: 8
+  other:
+    move: 5
+    run: 5
+    toughness: 5
+    armor: 0
+    cosm: coreEarth
+    possibilities: 0
+    posibilities: 4
+  skills:
+    airVehicles:
+      baseAttribute: dexterity
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    alteration:
+      baseAttribute: mind
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    apportation:
+      baseAttribute: spirit
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    beastRiding:
+      baseAttribute: dexterity
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    computers:
+      baseAttribute: mind
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    conjuration:
+      baseAttribute: spirit
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    divination:
+      baseAttribute: mind
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    dodge:
+      baseAttribute: dexterity
+      adds: 2
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    energyWeapons:
+      baseAttribute: dexterity
+      adds: null
+      value: 0
+      isFav: false
+      groupName: combat
+      unskilledUse: 1
+    evidenceAnalysis:
+      baseAttribute: mind
+      adds: 1
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    faith:
+      baseAttribute: spirit
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    find:
+      baseAttribute: mind
+      adds: 1
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    fireCombat:
+      baseAttribute: dexterity
+      adds: 1
+      value: 0
+      isFav: false
+      groupName: combat
+      unskilledUse: 1
+    firstAid:
+      baseAttribute: mind
+      adds: 1
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    heavyWeapons:
+      baseAttribute: dexterity
+      adds: null
+      value: 0
+      isFav: false
+      groupName: combat
+      unskilledUse: 1
+    intimidation:
+      baseAttribute: spirit
+      adds: null
+      value: 0
+      isFav: false
+      groupName: interaction
+      unskilledUse: 1
+    kinesis:
+      baseAttribute: spirit
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    landVehicles:
+      baseAttribute: dexterity
+      adds: 1
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    language:
+      baseAttribute: mind
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    lockpicking:
+      baseAttribute: dexterity
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    maneuver:
+      baseAttribute: dexterity
+      adds: null
+      value: 0
+      isFav: false
+      groupName: interaction
+      unskilledUse: 1
+    medicine:
+      baseAttribute: mind
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    meleeWeapons:
+      baseAttribute: dexterity
+      adds: 1
+      value: 0
+      isFav: false
+      groupName: combat
+      unskilledUse: 1
+    missileWeapons:
+      baseAttribute: dexterity
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    persuasion:
+      baseAttribute: charisma
+      adds: 1
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    precognition:
+      baseAttribute: mind
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    profession:
+      baseAttribute: mind
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    reality:
+      baseAttribute: spirit
+      adds: 3
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    scholar:
+      baseAttribute: mind
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    science:
+      baseAttribute: mind
+      adds: 1
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    stealth:
+      baseAttribute: dexterity
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    streetwise:
+      baseAttribute: charisma
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    survival:
+      baseAttribute: mind
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    taunt:
+      baseAttribute: charisma
+      adds: 1
+      value: 0
+      isFav: false
+      groupName: interaction
+      unskilledUse: 1
+    telepathy:
+      baseAttribute: charisma
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    tracking:
+      baseAttribute: mind
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    trick:
+      baseAttribute: mind
+      adds: 1
+      value: 0
+      isFav: false
+      groupName: interaction
+      unskilledUse: 1
+    unarmedCombat:
+      baseAttribute: dexterity
+      adds: 1
+      value: 0
+      isFav: false
+      groupName: combat
+      unskilledUse: 1
+    waterVehicles:
+      baseAttribute: dexterity
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    willpower:
+      baseAttribute: spirit
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+  xp:
+    unspent: 0
+    earned: 0
+  axioms:
+    magic: 9
+    social: 23
+    spirit: 10
+    tech: 23
+  details:
+    clearance: ''
+    background: >-
+      <p><img class="charimg"
+      src="systems/torgeternity/images/characters/Realm_Runner.webp" alt=""
+      width="1027" height="2094"></p>
+
+      <p
+      class="moreheight">@UUID[Compendium.torgeternity.system-de-handouts.JournalEntry.DLLvnXpv7RFhRgHu.JournalEntryPage.RLk67atzGeIrJ9Ml]{Archetyp
+      - Der Weltenl&auml;ufer}</p>
+
+      <h3>&Uuml;berblick</h3>
+
+      <p>Weltenl&auml;ufer sind Menschen von der Erde, die ein starkes,
+      intuitives Verst&auml;ndnis der Realit&auml;t haben. Nicht nur die
+      Realit&auml;t der Zentralerde, sondern auch die der eindringenden Cosms.
+      Solche Individuen sind &auml;u&szlig;erst anpassungsf&auml;hig, reisen mit
+      relativer Leichtigkeit durch die eindringenden Reiche und eignen sich den
+      Umgang mit Werkzeugen und Konzepte an, die bei anderen Leuten zu
+      Widerspr&uuml;chen f&uuml;hren w&uuml;rden. Dieses Ph&auml;nomen scheint
+      einzigartig f&uuml;r die Zentralerde zu sein.</p>
+
+      <h3>Taktiken</h3>
+
+      <p>Du bist ein Allesk&ouml;nner: ziemlich geschickt mit den meisten
+      Waffen, aber auch ohne. Andererseits ist jede Waffe und jeder Gegenstand,
+      den du in irgendeiner Realit&auml;t findest, f&uuml;r dich akzeptabel.
+      Scheue dich nicht, m&auml;chtige Werkzeuge aus anderen Realit&auml;ten
+      auszuprobieren und zu nutzen, selbst wenn sie Widerspr&uuml;che
+      verursachen k&ouml;nnten. Entkopplungen treten auch bei dir nicht so
+      h&auml;ufig auf und es f&auml;llt dir leichter, dich wieder anzukoppeln,
+      selbst in einer reinen Zone.&nbsp;</p>
+
+      <p>Benutze alle anerkannten Interaktionen (beim Tricksen bist du am
+      st&auml;rksten), um Gegner angeschlagen oder verwundbar zu machen. Erfolg
+      bringt dir eine Schicksalskarte und hilft dem Team &ndash; und es
+      erh&ouml;ht sogar deine eigenen Chancen bei einem Gegenangriff. Mit deiner
+      hohen Realit&auml;t-Fertigkeit kannst du Schaden sehr zuverl&auml;ssig
+      wegstecken, sodass du viel h&auml;rter bist als du aussiehst.</p>
+
+      <h3>Moment der Krise</h3>
+
+      <p>Vor der Invasion war jeder Tag eine ziemliche Routine. Dann wurde die
+      Welt ersch&uuml;ttert und du vor eine t&ouml;dliche Wahl gestellt: in
+      Angst und Schrecken zu geraten wie alle anderen oder ein Monster davon
+      abzuhalten, einen Unschuldigen zu verschlingen. Irgendwie hattest du das
+      Gl&uuml;ck auf deiner Seite, das Opfer wurde gerettet, und ein Storm
+      Knight wurde geboren.</p>
+
+      <h3>Zitat</h3>
+
+      <p>"Keine Sorge, Leute, ich schaffe das!"</p>
+
+      <h3>Beschreibung</h3>
+
+      <p>Schlank und agil, ist dein Markenzeichen ein Sammelsurium von allem,
+      was wirkt. Jeans, Lederjacke und ein b&ouml;sartiges Grinsen sind
+      gleichbleibende Konstanten. Alles andere, von fortgeschrittenen
+      Ger&auml;ten bis hin zu magischen Totems, sammelst du auf Reisen in
+      verschiedene Reiche an.</p>
+
+      <h3>Agenda</h3>
+
+      <p>Oberfl&auml;chlich betrachtet wirkst du so, als w&uuml;rdest du nur
+      herumalberst und die gef&auml;hrlichen Situationen vielleicht nicht ernst
+      genug nehmen. Insgeheim bist du aber zutiefst besorgt um die Personen, die
+      inmitten der Possibility Wars gefangen sind. Diese Menschen vor
+      unmittelbarer Gefahr zu bewahren und ihre Stimmung aufrechtzuerhalten, ist
+      deine eigentliche Priorit&auml;t &ndash; Spa&szlig; zu haben, w&auml;hrend
+      du es tust, ist nur ein Bonus.</p>
+
+      <h3>Namen</h3>
+
+      <p>Adison, Aidan, Cody, Daryl, Jamie, Lee, Leslie, Regan, Sean, Terry</p>
+
+      <h3>Vorgeschlagener Aufstieg (Optional)</h3>
+
+      <ul>
+
+      <li>(5 EP) Anpassungsf&auml;hig</li>
+
+      <li>(7 EP) Geschichtenerz&auml;hler</li>
+
+      <li>(1 EP) <em>Gassenwissen</em> +1</li>
+
+      <li>(2 EP) <em>Tricksen</em> +2</li>
+
+      <li>(3 EP) <em>Ausweichen</em> +3</li>
+
+      <li>(3 EP) <em>Tricksen</em> +3</li>
+
+      <li>(4 EP) <em>Realit&auml;t</em> +4</li>
+
+      <li>(5 EP) <em>Realit&auml;t</em> +5</li>
+
+      </ul>
+    race: human
+  editstate: null
+  fatigue: '1'
+ownership:
+  default: 0
+  9Q0XnqFwko7hRlvL: 3
+prototypeToken:
+  flags: {}
+  name: Der Weltenläufer
+  displayName: 0
+  width: 1
+  height: 1
+  lockRotation: true
+  rotation: 0
+  actorLink: true
+  disposition: 1
+  displayBars: 40
+  bar1:
+    attribute: wounds
+  bar2:
+    attribute: shock
+  randomImg: false
+  alpha: 1
+  light:
+    alpha: 1
+    angle: 360
+    bright: 0
+    color: null
+    coloration: 1
+    dim: 0
+    luminosity: 0.5
+    saturation: 0
+    contrast: 0
+    shadows: 0
+    animation:
+      speed: 5
+      intensity: 5
+      type: null
+      reverse: false
+    darkness:
+      min: 0
+      max: 1
+    attenuation: 0.5
+  texture:
+    src: systems/torgeternity/images/characters/realm_runner.Token.webp
+    tint: null
+    scaleX: 1
+    scaleY: 1
+    offsetX: 0
+    offsetY: 0
+    rotation: 0
+  sight:
+    angle: 360
+    enabled: true
+    range: 0
+    brightness: 1
+    visionMode: basic
+    attenuation: 0.1
+    saturation: 0
+    contrast: 0
+  appendNumber: false
+  prependAdjective: false
+  detectionModes: []
+_stats:
+  systemId: torgeternity
+  systemVersion: 3.1.1
+  coreVersion: '11.308'
+  createdTime: 1694868498745
+  modifiedTime: 1694868590753
+  lastModifiedBy: CtisFurQNe9h7ABb
+_key: '!actors!tzZ99BGG1WkwkQMO'
+

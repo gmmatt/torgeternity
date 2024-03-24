@@ -1,0 +1,948 @@
+_id: vc02CSfbHRzkQlvF
+name: Paquet d'Action
+type: deck
+description: ''
+img: systems/torgeternity/images/cards/drama-back.webp
+data: {}
+cards:
+  - _id: Wz6BA4cy4XE6Gxmj
+    name: Vous tentez de les déborder !
+    description: ''
+    type: drama
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: ''
+        img: systems/torgeternity/images/cards/drama/fr/01.webp
+        text: ''
+    face: 0
+    drawn: false
+    origin: 9SgkBX6SsRmbY75i
+    rotation: 0
+    sort: 0
+    flags: {}
+    value: null
+    number: null
+    _key: '!cards.cards!vc02CSfbHRzkQlvF.Wz6BA4cy4XE6Gxmj'
+    cards: []
+  - _id: 7AYNr4QbQGEi0fxf
+    name: Vous remarquez un point faible!
+    description: ''
+    type: drama
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: ''
+        img: systems/torgeternity/images/cards/drama/fr/02.webp
+        text: ''
+    face: 0
+    drawn: false
+    origin: 9SgkBX6SsRmbY75i
+    rotation: 0
+    sort: 1
+    flags: {}
+    value: null
+    number: null
+    _key: '!cards.cards!vc02CSfbHRzkQlvF.7AYNr4QbQGEi0fxf'
+    cards: []
+  - _id: Zii2WV1HUwsEpUBb
+    name: Vous êtes repoussés !
+    description: ''
+    type: drama
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: ''
+        img: systems/torgeternity/images/cards/drama/fr/03.webp
+        text: ''
+    face: 0
+    drawn: false
+    origin: 9SgkBX6SsRmbY75i
+    rotation: 0
+    sort: 2
+    flags: {}
+    value: null
+    number: null
+    _key: '!cards.cards!vc02CSfbHRzkQlvF.Zii2WV1HUwsEpUBb'
+    cards: []
+  - _id: GqlKFT6GfsNa2rpl
+    name: Vous cherchez un avantage
+    description: ''
+    type: drama
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: ''
+        img: systems/torgeternity/images/cards/drama/fr/04.webp
+        text: ''
+    face: 0
+    drawn: false
+    origin: 9SgkBX6SsRmbY75i
+    rotation: 0
+    sort: 3
+    flags: {}
+    number: null
+    _key: '!cards.cards!vc02CSfbHRzkQlvF.GqlKFT6GfsNa2rpl'
+    cards: []
+  - _id: tigJXXB3pKueyMCf
+    name: Ils hésitent !
+    description: ''
+    type: drama
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: ''
+        img: systems/torgeternity/images/cards/drama/fr/05.webp
+        text: ''
+    face: 0
+    drawn: false
+    origin: 9SgkBX6SsRmbY75i
+    rotation: 0
+    sort: 4
+    flags: {}
+    number: null
+    _key: '!cards.cards!vc02CSfbHRzkQlvF.tigJXXB3pKueyMCf'
+    cards: []
+  - _id: 5oPRTrRPJmUSKjod
+    name: Ils se regroupent !
+    description: ''
+    type: drama
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: ''
+        img: systems/torgeternity/images/cards/drama/fr/06.webp
+        text: ''
+    face: 0
+    drawn: false
+    origin: 9SgkBX6SsRmbY75i
+    rotation: 0
+    sort: 5
+    flags: {}
+    number: null
+    _key: '!cards.cards!vc02CSfbHRzkQlvF.5oPRTrRPJmUSKjod'
+    cards: []
+  - _id: 5KVJ0THcmjJBIIIp
+    name: Ils frappent !
+    description: ''
+    type: drama
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: ''
+        img: systems/torgeternity/images/cards/drama/fr/07.webp
+        text: ''
+    face: 0
+    drawn: false
+    origin: 9SgkBX6SsRmbY75i
+    rotation: 0
+    sort: 6
+    flags: {}
+    number: null
+    _key: '!cards.cards!vc02CSfbHRzkQlvF.5KVJ0THcmjJBIIIp'
+    cards: []
+  - _id: 675lbdeLDi8R1Ji4
+    name: Ca devient dur !
+    description: ''
+    type: drama
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: ''
+        img: systems/torgeternity/images/cards/drama/fr/08.webp
+        text: ''
+    face: 0
+    drawn: false
+    origin: 9SgkBX6SsRmbY75i
+    rotation: 0
+    sort: 7
+    flags: {}
+    number: null
+    _key: '!cards.cards!vc02CSfbHRzkQlvF.675lbdeLDi8R1Ji4'
+    cards: []
+  - _id: i2vYxXYg7bd7ftWP
+    name: Cette vieille rengaine !
+    description: ''
+    type: drama
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: ''
+        img: systems/torgeternity/images/cards/drama/fr/09.webp
+        text: ''
+    face: 0
+    drawn: false
+    origin: 9SgkBX6SsRmbY75i
+    rotation: 0
+    sort: 8
+    flags: {}
+    number: null
+    _key: '!cards.cards!vc02CSfbHRzkQlvF.i2vYxXYg7bd7ftWP'
+    cards: []
+  - _id: O04725Yax5GGT6c0
+    name: Je n'y suis pas encore !
+    description: ''
+    type: drama
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: ''
+        img: systems/torgeternity/images/cards/drama/fr/10.webp
+        text: ''
+    face: 0
+    drawn: false
+    origin: 9SgkBX6SsRmbY75i
+    rotation: 0
+    sort: 9
+    flags: {}
+    number: null
+    _key: '!cards.cards!vc02CSfbHRzkQlvF.O04725Yax5GGT6c0'
+    cards: []
+  - _id: 2zG1dK5GzWmYDISg
+    name: Vous attaquez avec prudence !
+    description: ''
+    type: drama
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: ''
+        img: systems/torgeternity/images/cards/drama/fr/11.webp
+        text: ''
+    face: 0
+    drawn: false
+    origin: 9SgkBX6SsRmbY75i
+    rotation: 0
+    sort: 10
+    flags: {}
+    number: null
+    _key: '!cards.cards!vc02CSfbHRzkQlvF.2zG1dK5GzWmYDISg'
+    cards: []
+  - _id: m1XyzPtfAijKoVzA
+    name: Le rythme s'accélère !
+    description: ''
+    type: drama
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: ''
+        img: systems/torgeternity/images/cards/drama/fr/12.webp
+        text: ''
+    face: 0
+    drawn: false
+    origin: 9SgkBX6SsRmbY75i
+    rotation: 0
+    sort: 11
+    flags: {}
+    number: null
+    _key: '!cards.cards!vc02CSfbHRzkQlvF.m1XyzPtfAijKoVzA'
+    cards: []
+  - _id: HVlvW2AJJPjGTIpy
+    name: On a le dessus !
+    description: ''
+    type: drama
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: ''
+        img: systems/torgeternity/images/cards/drama/fr/13.webp
+        text: ''
+    face: 0
+    drawn: false
+    origin: 9SgkBX6SsRmbY75i
+    rotation: 0
+    sort: 12
+    flags: {}
+    number: null
+    _key: '!cards.cards!vc02CSfbHRzkQlvF.HVlvW2AJJPjGTIpy'
+    cards: []
+  - _id: Ve4HUstwueK2E9UA
+    name: Pas comme ça !
+    description: ''
+    type: drama
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: ''
+        img: systems/torgeternity/images/cards/drama/fr/14.webp
+        text: ''
+    face: 0
+    drawn: false
+    origin: 9SgkBX6SsRmbY75i
+    rotation: 0
+    sort: 13
+    flags: {}
+    number: null
+    _key: '!cards.cards!vc02CSfbHRzkQlvF.Ve4HUstwueK2E9UA'
+    cards: []
+  - _id: rOsbLG1wgjKxy9Ds
+    name: Attention !
+    description: ''
+    type: drama
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: ''
+        img: systems/torgeternity/images/cards/drama/fr/15.webp
+        text: ''
+    face: 0
+    drawn: false
+    origin: 9SgkBX6SsRmbY75i
+    rotation: 0
+    sort: 14
+    flags: {}
+    number: null
+    _key: '!cards.cards!vc02CSfbHRzkQlvF.rOsbLG1wgjKxy9Ds'
+    cards: []
+  - _id: f5MFTL4MlYwQNS6V
+    name: Jamais simple !
+    description: ''
+    type: drama
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: ''
+        img: systems/torgeternity/images/cards/drama/fr/16.webp
+        text: ''
+    face: 0
+    drawn: false
+    origin: 9SgkBX6SsRmbY75i
+    rotation: 0
+    sort: 15
+    flags: {}
+    number: null
+    _key: '!cards.cards!vc02CSfbHRzkQlvF.f5MFTL4MlYwQNS6V'
+    cards: []
+  - _id: fnOaLXFOdcb3zLx0
+    name: Vous ne pourrez pas m'arrêter !
+    description: ''
+    type: drama
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: ''
+        img: systems/torgeternity/images/cards/drama/fr/17.webp
+        text: ''
+    face: 0
+    drawn: false
+    origin: 9SgkBX6SsRmbY75i
+    rotation: 0
+    sort: 16
+    flags: {}
+    number: null
+    _key: '!cards.cards!vc02CSfbHRzkQlvF.fnOaLXFOdcb3zLx0'
+    cards: []
+  - _id: RXtk5iX3xWx1EuSt
+    name: Sous le feu !
+    description: ''
+    type: drama
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: ''
+        img: systems/torgeternity/images/cards/drama/fr/18.webp
+        text: ''
+    face: 0
+    drawn: false
+    origin: 9SgkBX6SsRmbY75i
+    rotation: 0
+    sort: 17
+    flags: {}
+    number: null
+    _key: '!cards.cards!vc02CSfbHRzkQlvF.RXtk5iX3xWx1EuSt'
+    cards: []
+  - _id: B8pqzAPWcr2IVXqc
+    name: Il est temps d'agir !
+    description: ''
+    type: drama
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: ''
+        img: systems/torgeternity/images/cards/drama/fr/19.webp
+        text: ''
+    face: 0
+    drawn: false
+    origin: 9SgkBX6SsRmbY75i
+    rotation: 0
+    sort: 18
+    flags: {}
+    number: null
+    _key: '!cards.cards!vc02CSfbHRzkQlvF.B8pqzAPWcr2IVXqc'
+    cards: []
+  - _id: gFOfJugLwFqTRQ7U
+    name: Ils arrivent !
+    description: ''
+    type: drama
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: ''
+        img: systems/torgeternity/images/cards/drama/fr/20.webp
+        text: ''
+    face: 0
+    drawn: false
+    origin: 9SgkBX6SsRmbY75i
+    rotation: 0
+    sort: 19
+    flags: {}
+    number: null
+    _key: '!cards.cards!vc02CSfbHRzkQlvF.gFOfJugLwFqTRQ7U'
+    cards: []
+  - _id: F19KAzKEVCZgdruH
+    name: Ils s'enfuuient !
+    description: ''
+    type: drama
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: ''
+        img: systems/torgeternity/images/cards/drama/fr/21.webp
+        text: ''
+    face: 0
+    drawn: false
+    origin: 9SgkBX6SsRmbY75i
+    rotation: 0
+    sort: 20
+    flags: {}
+    number: null
+    _key: '!cards.cards!vc02CSfbHRzkQlvF.F19KAzKEVCZgdruH'
+    cards: []
+  - _id: xvBmC8DegncFxEeq
+    name: De retour !
+    description: ''
+    type: drama
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: ''
+        img: systems/torgeternity/images/cards/drama/fr/22.webp
+        text: ''
+    face: 0
+    drawn: false
+    origin: 9SgkBX6SsRmbY75i
+    rotation: 0
+    sort: 21
+    flags: {}
+    number: null
+    _key: '!cards.cards!vc02CSfbHRzkQlvF.xvBmC8DegncFxEeq'
+    cards: []
+  - _id: 0w5EEbkSRs529k3w
+    name: La victoire est proche !
+    description: ''
+    type: drama
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: ''
+        img: systems/torgeternity/images/cards/drama/fr/23.webp
+        text: ''
+    face: 0
+    drawn: false
+    origin: 9SgkBX6SsRmbY75i
+    rotation: 0
+    sort: 22
+    flags: {}
+    number: null
+    _key: '!cards.cards!vc02CSfbHRzkQlvF.0w5EEbkSRs529k3w'
+    cards: []
+  - _id: kKlFQ4CeQwhMxA2Q
+    name: Passez à l'action !
+    description: ''
+    type: drama
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: ''
+        img: systems/torgeternity/images/cards/drama/fr/24.webp
+        text: ''
+    face: 1
+    drawn: false
+    origin: 9SgkBX6SsRmbY75i
+    rotation: 0
+    sort: 23
+    flags: {}
+    number: null
+    _key: '!cards.cards!vc02CSfbHRzkQlvF.kKlFQ4CeQwhMxA2Q'
+    cards: []
+  - _id: idyvTOtPgB51l5Xn
+    name: Une percée !
+    description: ''
+    type: drama
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: ''
+        img: systems/torgeternity/images/cards/drama/fr/25.webp
+        text: ''
+    face: 0
+    drawn: false
+    origin: 9SgkBX6SsRmbY75i
+    rotation: 0
+    sort: 24
+    flags: {}
+    number: null
+    _key: '!cards.cards!vc02CSfbHRzkQlvF.idyvTOtPgB51l5Xn'
+    cards: []
+  - _id: dk5kZDjmQBgYknHO
+    name: Malédiction !
+    description: ''
+    type: drama
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: ''
+        img: systems/torgeternity/images/cards/drama/fr/26.webp
+        text: ''
+    face: 0
+    drawn: false
+    origin: 9SgkBX6SsRmbY75i
+    rotation: 0
+    sort: 25
+    flags: {}
+    number: null
+    _key: '!cards.cards!vc02CSfbHRzkQlvF.dk5kZDjmQBgYknHO'
+    cards: []
+  - _id: F2QhZ1LXkWaIi8oZ
+    name: Renversement !
+    description: ''
+    type: drama
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: ''
+        img: systems/torgeternity/images/cards/drama/fr/27.webp
+        text: ''
+    face: 0
+    drawn: false
+    origin: 9SgkBX6SsRmbY75i
+    rotation: 0
+    sort: 26
+    flags: {}
+    number: null
+    _key: '!cards.cards!vc02CSfbHRzkQlvF.F2QhZ1LXkWaIi8oZ'
+    cards: []
+  - _id: mqpTRGaL02RPLMTW
+    name: A eux d'encaisser !
+    description: ''
+    type: drama
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: ''
+        img: systems/torgeternity/images/cards/drama/fr/28.webp
+        text: ''
+    face: 0
+    drawn: false
+    origin: 9SgkBX6SsRmbY75i
+    rotation: 0
+    sort: 27
+    flags: {}
+    number: null
+    _key: '!cards.cards!vc02CSfbHRzkQlvF.mqpTRGaL02RPLMTW'
+    cards: []
+  - _id: QAIoeaCQtDi5BKAd
+    name: Un répit bienvenu !
+    description: ''
+    type: drama
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: ''
+        img: systems/torgeternity/images/cards/drama/fr/29.webp
+        text: ''
+    face: 0
+    drawn: false
+    origin: 9SgkBX6SsRmbY75i
+    rotation: 0
+    sort: 28
+    flags: {}
+    number: null
+    _key: '!cards.cards!vc02CSfbHRzkQlvF.QAIoeaCQtDi5BKAd'
+    cards: []
+  - _id: nmxwZ5L2ZcORgKMT
+    name: Epreuve de force !
+    description: ''
+    type: drama
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: ''
+        img: systems/torgeternity/images/cards/drama/fr/30.webp
+        text: ''
+    face: 0
+    drawn: false
+    origin: 9SgkBX6SsRmbY75i
+    rotation: 0
+    sort: 29
+    flags: {}
+    number: null
+    _key: '!cards.cards!vc02CSfbHRzkQlvF.nmxwZ5L2ZcORgKMT'
+    cards: []
+  - _id: 7lhvLNDqTyowcVEo
+    name: Vous cédez du terrain !
+    description: ''
+    type: drama
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: ''
+        img: systems/torgeternity/images/cards/drama/fr/31.webp
+        text: ''
+    face: 0
+    drawn: false
+    origin: 9SgkBX6SsRmbY75i
+    rotation: 0
+    sort: 30
+    flags: {}
+    number: null
+    _key: '!cards.cards!vc02CSfbHRzkQlvF.7lhvLNDqTyowcVEo'
+    cards: []
+  - _id: CenESxdxoabFGqIR
+    name: Vous reculez !
+    description: ''
+    type: drama
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: ''
+        img: systems/torgeternity/images/cards/drama/fr/32.webp
+        text: ''
+    face: 0
+    drawn: false
+    origin: 9SgkBX6SsRmbY75i
+    rotation: 0
+    sort: 31
+    flags: {}
+    number: null
+    _key: '!cards.cards!vc02CSfbHRzkQlvF.CenESxdxoabFGqIR'
+    cards: []
+  - _id: 8XKGhmouwiMwJVbC
+    name: Tu es à moi maintenant !
+    description: ''
+    type: drama
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: ''
+        img: systems/torgeternity/images/cards/drama/fr/33.webp
+        text: ''
+    face: 0
+    drawn: false
+    origin: 9SgkBX6SsRmbY75i
+    rotation: 0
+    sort: 32
+    flags: {}
+    number: null
+    _key: '!cards.cards!vc02CSfbHRzkQlvF.8XKGhmouwiMwJVbC'
+    cards: []
+  - _id: pEZxm70ScVhdw8Ka
+    name: La victoire est à moi !
+    description: ''
+    type: drama
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: ''
+        img: systems/torgeternity/images/cards/drama/fr/34.webp
+        text: ''
+    face: 0
+    drawn: false
+    origin: 9SgkBX6SsRmbY75i
+    rotation: 0
+    sort: 33
+    flags: {}
+    number: null
+    _key: '!cards.cards!vc02CSfbHRzkQlvF.pEZxm70ScVhdw8Ka'
+    cards: []
+  - _id: dPI5mNwxXA0I6aoh
+    name: Mon triomphe est inéluctable !
+    description: ''
+    type: drama
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: ''
+        img: systems/torgeternity/images/cards/drama/fr/35.webp
+        text: ''
+    face: 0
+    drawn: false
+    origin: 9SgkBX6SsRmbY75i
+    rotation: 0
+    sort: 34
+    flags: {}
+    number: null
+    _key: '!cards.cards!vc02CSfbHRzkQlvF.dPI5mNwxXA0I6aoh'
+    cards: []
+  - _id: IvXylMuqDKT2fBrY
+    name: Torg !
+    description: ''
+    type: drama
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: ''
+        img: systems/torgeternity/images/cards/drama/fr/36.webp
+        text: ''
+    face: 0
+    drawn: false
+    origin: 9SgkBX6SsRmbY75i
+    rotation: 0
+    sort: 35
+    flags: {}
+    number: null
+    _key: '!cards.cards!vc02CSfbHRzkQlvF.IvXylMuqDKT2fBrY'
+    cards: []
+  - _id: HIdPvVAqcejtERaX
+    name: Oh Non !
+    description: ''
+    type: drama
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: ''
+        img: systems/torgeternity/images/cards/drama/fr/37.webp
+        text: ''
+    face: 0
+    drawn: false
+    origin: 9SgkBX6SsRmbY75i
+    rotation: 0
+    sort: 36
+    flags: {}
+    number: null
+    _key: '!cards.cards!vc02CSfbHRzkQlvF.HIdPvVAqcejtERaX'
+    cards: []
+  - _id: 08JAcDZoQZTSw6vU
+    name: Fuyez !
+    description: ''
+    type: drama
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: ''
+        img: systems/torgeternity/images/cards/drama/38.webp
+        text: ''
+    face: 0
+    drawn: false
+    origin: 9SgkBX6SsRmbY75i
+    rotation: 0
+    sort: 37
+    flags: {}
+    number: null
+    _key: '!cards.cards!vc02CSfbHRzkQlvF.08JAcDZoQZTSw6vU'
+    cards: []
+  - _id: SBV7Id4GT33UsWXu
+    name: Quand soudain ...
+    description: ''
+    type: drama
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: ''
+        img: systems/torgeternity/images/cards/drama/fr/39.webp
+        text: ''
+    face: 0
+    drawn: false
+    origin: 9SgkBX6SsRmbY75i
+    rotation: 0
+    sort: 38
+    flags: {}
+    number: null
+    _key: '!cards.cards!vc02CSfbHRzkQlvF.SBV7Id4GT33UsWXu'
+    cards: []
+  - _id: yKl5l4haeiLTod54
+    name: Oh Oh!
+    description: ''
+    type: drama
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: ''
+        img: systems/torgeternity/images/cards/drama/fr/40.webp
+        text: ''
+    face: 0
+    drawn: false
+    origin: 9SgkBX6SsRmbY75i
+    rotation: 0
+    sort: 39
+    flags: {}
+    number: null
+    _key: '!cards.cards!vc02CSfbHRzkQlvF.yKl5l4haeiLTod54'
+    cards: []
+rotation: 0
+displayCount: false
+folder: null
+sort: 0
+permission:
+  kz1RJu8vrAPmTUwN: 3
+flags:
+  exportSource:
+    world: torgv2p2
+    system: torgeternity
+    coreVersion: '9.226'
+    systemVersion: 2.1.0
+  core:
+    sourceId: Cards.5eH9MbgstDaSvEi9
+  torgeternity:
+    usage: dramaDeck
+_key: '!cards!vc02CSfbHRzkQlvF'
+

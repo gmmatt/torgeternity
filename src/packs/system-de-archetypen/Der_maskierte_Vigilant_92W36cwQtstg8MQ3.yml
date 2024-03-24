@@ -1,0 +1,1082 @@
+_id: 92W36cwQtstg8MQ3
+name: Der maskierte Vigilant
+type: stormknight
+img: systems/torgeternity/images/characters/Masked_Crusader.Avatar.webp
+items:
+  - _id: eu1fNLOkaeAxVTKf
+    name: Waffenlos
+    type: customAttack
+    img: systems/torgeternity/images/icons/fist-icon.webp
+    effects: []
+    folder: R0u9Ztaprf22IfSC
+    sort: 0
+    flags:
+      core:
+        sourceId: Item.w4b7qWApQXkghQXE
+    system:
+      description: ''
+      attackWith: unarmedCombat
+      damageType: strengthPlus
+      damage: 2
+      ap: 0
+      notes: ''
+      chatNote: ''
+    ownership:
+      default: 0
+      9Q0XnqFwko7hRlvL: 3
+    _stats:
+      systemId: torgeternity
+      systemVersion: 3.1.1
+      coreVersion: '11.308'
+      createdTime: null
+      modifiedTime: 1694868187854
+      lastModifiedBy: CtisFurQNe9h7ABb
+    _key: '!actors.items!92W36cwQtstg8MQ3.eu1fNLOkaeAxVTKf'
+  - _id: aMOK1Bd8rFpUkhIL
+    name: Mantel und Maske
+    type: gear
+    img: systems/torgeternity/images/icons/gear-icon.webp
+    effects: []
+    folder: YrLpjzkzDZxqWzUw
+    sort: 0
+    flags:
+      core:
+        sourceId: Item.UuCLymRLTqUajZYc
+    system:
+      cosm: Nil-Imperium
+      description: <p>Geheimnisvoll!</p>
+      techlevel: 15
+      price: '0'
+      value: 0
+    ownership:
+      default: 0
+      9Q0XnqFwko7hRlvL: 3
+    _stats:
+      systemId: torgeternity
+      systemVersion: 3.1.1
+      coreVersion: '11.308'
+      createdTime: null
+      modifiedTime: 1694867901744
+      lastModifiedBy: CtisFurQNe9h7ABb
+    _key: '!actors.items!92W36cwQtstg8MQ3.aMOK1Bd8rFpUkhIL'
+  - _id: 75Sn04Vgl3qiBCVP
+    name: Extra-Magazine
+    type: gear
+    img: systems/torgeternity/images/icons/gear-icon.webp
+    effects: []
+    folder: YrLpjzkzDZxqWzUw
+    sort: 0
+    flags:
+      core:
+        sourceId: Item.9VjiNmOA2TB62Xej
+    system:
+      cosm: (Keins)
+      description: <p>5x Mauser nachladen</p>
+      techlevel: 20
+      price: '0'
+      value: 0
+    ownership:
+      default: 0
+      9Q0XnqFwko7hRlvL: 3
+    _stats:
+      systemId: torgeternity
+      systemVersion: 3.1.1
+      coreVersion: '11.308'
+      createdTime: null
+      modifiedTime: 1694867921328
+      lastModifiedBy: CtisFurQNe9h7ABb
+    _key: '!actors.items!92W36cwQtstg8MQ3.75Sn04Vgl3qiBCVP'
+  - _id: y4woDXhqG1YWPcpB
+    name: Leuchtfackel
+    type: gear
+    img: systems/torgeternity/images/icons/gear-icon.webp
+    effects: []
+    folder: YrLpjzkzDZxqWzUw
+    sort: 0
+    flags:
+      core:
+        sourceId: Item.Uc1pL9fqLa4cfonl
+    system:
+      cosm: Nil-Imperium
+      description: ''
+      techlevel: 20
+      price: '5'
+      value: 4
+    ownership:
+      default: 0
+      9Q0XnqFwko7hRlvL: 3
+    _stats:
+      systemId: torgeternity
+      systemVersion: 3.1.1
+      coreVersion: '11.308'
+      createdTime: null
+      modifiedTime: 1694867933032
+      lastModifiedBy: CtisFurQNe9h7ABb
+    _key: '!actors.items!92W36cwQtstg8MQ3.y4woDXhqG1YWPcpB'
+  - _id: 9EFl6ObKOnDr8PqP
+    name: Handschellen
+    type: gear
+    img: systems/torgeternity/images/icons/gear-icon.webp
+    effects: []
+    folder: YrLpjzkzDZxqWzUw
+    sort: 0
+    flags:
+      core:
+        sourceId: Item.sh2tcK6G0tcScgwq
+    system:
+      cosm: Nil-Imperium
+      description: >-
+        <p>Das Anbringen von Handschellen erfordert einen guten Erfolg bei einem
+        Ringen-Angriff (siehe Seite 125). Die H&auml;nde des festgehaltenen
+        Ziels werden zusammengebunden, bis die Handschellen ge&ouml;ffnet oder
+        aufgebrochen wurden, was einen Angriff gegen Robustheit 18 oder eine
+        heldenhafte (MW 18) St&auml;rke-Probe erfordert.</p>
+      techlevel: 19
+      price: '50'
+      value: 9
+    ownership:
+      default: 0
+      9Q0XnqFwko7hRlvL: 3
+    _stats:
+      systemId: torgeternity
+      systemVersion: 3.1.1
+      coreVersion: '11.308'
+      createdTime: null
+      modifiedTime: 1694867945568
+      lastModifiedBy: CtisFurQNe9h7ABb
+    _key: '!actors.items!92W36cwQtstg8MQ3.9EFl6ObKOnDr8PqP'
+  - _id: XbOqDjoqDkDk2Coa
+    name: Peilsender
+    type: gear
+    img: systems/torgeternity/images/icons/gear-icon.webp
+    effects: []
+    folder: YrLpjzkzDZxqWzUw
+    sort: 0
+    flags:
+      core:
+        sourceId: Item.hnzAJpMqPZrjYrX8
+    system:
+      cosm: Nil-Imperium
+      description: >-
+        <p>Ein kleines Ger&auml;t, das seinen Standort an darauf abgestimmte
+        Funkempf&auml;nger innerhalb eines Kilometers sendet.</p>
+      techlevel: 20
+      price: '150'
+      value: 11
+    ownership:
+      default: 0
+      9Q0XnqFwko7hRlvL: 3
+    _stats:
+      systemId: torgeternity
+      systemVersion: 3.1.1
+      coreVersion: '11.308'
+      createdTime: null
+      modifiedTime: 1694867959912
+      lastModifiedBy: CtisFurQNe9h7ABb
+    _key: '!actors.items!92W36cwQtstg8MQ3.XbOqDjoqDkDk2Coa'
+  - _id: 2Ek4UPEwzb1actmc
+    name: Schläger
+    type: perk
+    img: systems/torgeternity/images/icons/reality-icon.webp
+    effects: []
+    folder: null
+    sort: 0
+    flags:
+      core:
+        sourceId: Compendium.te001-core-rulebook.grw-de-vorzuverb.Item.sWRXWBwLHBCcTUOJ
+    system:
+      category: prowess
+      cosm: (Keins)
+      prerequisites: mindestens 2 Fertigkeitsstufen in Waffenloser Kampf
+      timestaken: 1
+      description: >-
+        <p>Der Charakter hat gelernt, hart zuzuschlagen, sei es mithilfe von
+        schmutzigen Tricks und einem guten Aufw&auml;rtshaken oder einem
+        umfangreichen Training in Karate, Jujitsu, Tae Kwon Do oder
+        &auml;hnlichen Kampfstilen. Charaktere mit diesem Bonus verursachen bei
+        Waffenloser- Kampf-Angriffen mit ihren blo&szlig;en H&auml;nden
+        St&auml;rke +2 Schaden. Dies darf mit anderen Bonussen kombiniert
+        werden, zum Beispiel den Nat&uuml;rlichen Waffen eines
+        Edeinos.&nbsp;</p>
+
+        <p>Fortgeschrittenere und exotischere Techniken k&ouml;nnen in Form der
+        Ki-Kr&auml;fte von Pan-Pacifica erlernt werden.</p>
+      pulpPowers:
+        enhancementNumber: 0
+        enhancement01:
+          title: ''
+          description: ''
+          taken: false
+        enhancement02:
+          title: ''
+          description: ''
+          taken: false
+        enhancement03:
+          title: ''
+          description: ''
+          taken: false
+        enhancement04:
+          title: ''
+          description: ''
+          taken: false
+        enhancement05:
+          title: ''
+          description: ''
+          taken: false
+        enhancement06:
+          title: ''
+          description: ''
+          taken: false
+        enhancement07:
+          title: ''
+          description: ''
+          taken: false
+        enhancement08:
+          title: ''
+          description: ''
+          taken: false
+        enhancement09:
+          title: ''
+          description: ''
+          taken: false
+        enhancement10:
+          title: ''
+          description: ''
+          taken: false
+        enhancement11:
+          title: ''
+          description: ''
+          taken: false
+        enhancement12:
+          title: ''
+          description: ''
+          taken: false
+        enhancement13:
+          title: ''
+          description: ''
+          taken: false
+        enhancement14:
+          title: ''
+          description: ''
+          taken: false
+        enhancement15:
+          title: ''
+          description: ''
+          taken: false
+        limitationNumber: 0
+        limitation01: ''
+        limitation02: ''
+        limitation03: ''
+        limitation04: ''
+        limitation05: ''
+        limitation06: ''
+        limitation07: ''
+        limitation08: ''
+        limitation09: ''
+        limitation10: ''
+    ownership:
+      default: 0
+      9Q0XnqFwko7hRlvL: 3
+      CtisFurQNe9h7ABb: 3
+    _stats:
+      systemId: torgeternity
+      systemVersion: 3.1.1
+      coreVersion: '11.308'
+      createdTime: 1694867682420
+      modifiedTime: 1694867767024
+      lastModifiedBy: CtisFurQNe9h7ABb
+    _key: '!actors.items!92W36cwQtstg8MQ3.2Ek4UPEwzb1actmc'
+  - _id: eoP2vnMCxD3yRNJS
+    name: Super-Fertigkeit (Einschüchtern)
+    type: perk
+    img: systems/torgeternity/images/icons/reality-icon.webp
+    effects:
+      - icon: icons/svg/aura.svg
+        origin: Item.NP52D0TMUBVKQK7d
+        duration:
+          startTime: null
+          seconds: null
+          combat: null
+          rounds: null
+          turns: null
+          startRound: null
+          startTurn: null
+        disabled: false
+        name: Einschüchtern +2
+        _id: 1VTOsm0M13fBNOeh
+        changes:
+          - key: system.skills.intimidation.adds
+            mode: 2
+            value: '2'
+            priority: null
+        description: ''
+        transfer: true
+        statuses: []
+        flags: {}
+        tint: null
+        _key: >-
+          !actors.items.effects!92W36cwQtstg8MQ3.eoP2vnMCxD3yRNJS.1VTOsm0M13fBNOeh
+    folder: null
+    sort: 150000
+    flags:
+      core:
+        sourceId: Compendium.te001-core-rulebook.Items.ohmish0RVlju7Qbk
+    system:
+      category: pulpPowers
+      cosm: Nil-Imperium
+      prerequisites: mindestens 3 Fertigkeitsstufen in der ausgewählten Fertigkeit
+      timestaken: 1
+      description: >-
+        <p>Der Pulp-Held ist au&szlig;ergew&ouml;hnlich gut in etwas.
+        M&ouml;glicherweise ist er ein Ass im Umgang mit Feuerwaffen, oder ein
+        Genie der Wissenschaft, oder er vermag andere Einzusch&uuml;chtern wie
+        kein Zweiter.&nbsp;</p>
+
+        <p>Wenn die Superfertigkeit ausgew&auml;hlt wird, erh&auml;lt der
+        Charakter in einer Fertigkeit seiner Wahl 2 zus&auml;tzliche
+        Fertigkeitsstufen. Er darf dabei das &uuml;bliche Maximum von +5
+        &uuml;berschreiten, ohne den Meisterschaft-Vorzug erwerben zu
+        m&uuml;ssen. (Falls er den Meisterschaft-Vorzug besitzt, addieren sich
+        die Wirkungen der beiden.) Dies z&auml;hlt zus&auml;tzlich zu anderen
+        Erh&ouml;hungen des Fertigkeitswerts und erlaubt es einem Pulp-Helden,
+        eine &uuml;bermenschliche Kompetenz weit jenseits des normal
+        m&ouml;glichen zu erreichen.&nbsp;</p>
+
+        <p>Wie beim Superattribut darf auch die Superfertigkeit von einem
+        Charakter nur maximal einmal ausgew&auml;hlt werden. Er darf diese
+        Superkraft nicht mehrmals besitzen.</p>
+      pulpPowers:
+        enhancementNumber: 2
+        enhancement01:
+          title: Begünstigt
+          description: Die ausgewählte Fertigkeit zählt für den Charakter als Begünstigt.
+          taken: true
+        enhancement02:
+          title: Macht
+          description: Die Fertigkeit erhält 4 zusätzliche Fertigkeitsstufen.
+          taken: false
+        enhancement03:
+          title: ''
+          description: ''
+          taken: false
+        enhancement04:
+          title: ''
+          description: ''
+          taken: false
+        enhancement05:
+          title: ''
+          description: ''
+          taken: false
+        enhancement06:
+          title: ''
+          description: ''
+          taken: false
+        enhancement07:
+          title: ''
+          description: ''
+          taken: false
+        enhancement08:
+          title: ''
+          description: ''
+          taken: false
+        enhancement09:
+          title: ''
+          description: ''
+          taken: false
+        enhancement10:
+          title: ''
+          description: ''
+          taken: false
+        enhancement11:
+          title: ''
+          description: ''
+          taken: false
+        enhancement12:
+          title: ''
+          description: ''
+          taken: false
+        enhancement13:
+          title: ''
+          description: ''
+          taken: false
+        enhancement14:
+          title: ''
+          description: ''
+          taken: false
+        enhancement15:
+          title: ''
+          description: ''
+          taken: false
+        limitationNumber: 1
+        limitation01: Gerät mit Reichweite 20m
+        limitation02: ''
+        limitation03: ''
+        limitation04: ''
+        limitation05: ''
+        limitation06: ''
+        limitation07: ''
+        limitation08: ''
+        limitation09: ''
+        limitation10: ''
+    ownership:
+      default: 0
+      9Q0XnqFwko7hRlvL: 3
+      CtisFurQNe9h7ABb: 3
+    _stats:
+      systemId: torgeternity
+      systemVersion: 3.1.1
+      coreVersion: '11.308'
+      createdTime: 1694867691972
+      modifiedTime: 1694867865088
+      lastModifiedBy: CtisFurQNe9h7ABb
+    _key: '!actors.items!92W36cwQtstg8MQ3.eoP2vnMCxD3yRNJS'
+  - name: Mauser Pistole
+    type: firearm
+    img: systems/torgeternity/images/icons/firearm-icon.webp
+    effects: []
+    folder: null
+    sort: 18200000
+    flags:
+      core:
+        sourceId: >-
+          Compendium.te001-core-rulebook.grw-de-ausruestung.Item.ajZNYaj0VhtUFIjl
+    _id: 5uhBz0KDWgG5ye1v
+    system:
+      cosm: Nil-Imperium
+      description: >-
+        <p>Ein oft kopiertes Design mit hoher M&uuml;ndungsgeschwindigkeit und
+        exzellenter Schadenswirkung, sowie einem markanten Boxmagazin vor dem
+        Abzug. Im Nil-Imperium, wo noch immer verschiedene Nachahmer-Modelle
+        hergestellt werden, erfreut sie sich gro&szlig;er Beliebtheit.</p>
+      techlevel: 20
+      price: '250'
+      value: 12
+      attackWith: fireCombat
+      damageType: ''
+      damage: 13
+      ap: 0
+      ammo:
+        max: 10
+        value: 10
+      range: 10/25/40
+      notes: ''
+      chatNote: ''
+    ownership:
+      default: 0
+      9Q0XnqFwko7hRlvL: 3
+      CtisFurQNe9h7ABb: 3
+    _stats:
+      systemId: torgeternity
+      systemVersion: 3.1.1
+      coreVersion: '11.308'
+      createdTime: 1694867881572
+      modifiedTime: 1694867881572
+      lastModifiedBy: CtisFurQNe9h7ABb
+    _key: '!actors.items!92W36cwQtstg8MQ3.5uhBz0KDWgG5ye1v'
+  - _id: ET5tybQgB9fIVh0f
+    name: Lederweste
+    type: armor
+    img: systems/torgeternity/images/icons/armor-icon.webp
+    effects:
+      - _id: LbA5jhxYBbhv1Y2O
+        changes:
+          - key: system.other.toughness
+            mode: 2
+            value: '1'
+            priority: null
+          - key: system.other.armor
+            mode: 2
+            value: '1'
+            priority: null
+        disabled: false
+        duration:
+          startTime: null
+          seconds: null
+          combat: null
+          rounds: null
+          turns: null
+          startRound: null
+          startTurn: null
+        icon: icons/svg/aura.svg
+        origin: Item.BlLZXOO5w1iYYsz2
+        transfer: true
+        flags: {}
+        tint: null
+        name: Rüstung +1
+        description: ''
+        statuses: []
+        _key: >-
+          !actors.items.effects!92W36cwQtstg8MQ3.ET5tybQgB9fIVh0f.LbA5jhxYBbhv1Y2O
+    folder: null
+    sort: 32400000
+    flags:
+      core:
+        sourceId: >-
+          Compendium.te001-core-rulebook.grw-de-ausruestung.Item.xWI54mxsNNqaWXsX
+    system:
+      cosm: Aysle
+      description: >-
+        <p>@UUID[Compendium.te001-core-rulebook.grw-de-grw.Qlx6yGF0Mmo6Xzrv.JournalEntryPage.7GGUUHzuYIqGPXDO#ganzkorper/torso:]{Torso}</p>
+
+        <p>Tierh&auml;ute wurden zu einer steifen, haltbaren Oberfl&auml;che
+        gegerbt oder gekocht und danach mit Nieten oder Steppn&auml;hten
+        verst&auml;rkt. L&auml;sst sich in allen Cosms antreffen.</p>
+      techlevel: 8
+      price: '100'
+      value: 10
+      bonus: 1
+      maxDex: 12
+      minStrength: null
+      equipped: true
+      equippedClass: item-equipped
+      notes: Torso
+    ownership:
+      default: 0
+      9Q0XnqFwko7hRlvL: 3
+      CtisFurQNe9h7ABb: 3
+    _stats:
+      systemId: torgeternity
+      systemVersion: 3.1.1
+      coreVersion: '11.308'
+      createdTime: 1694867887955
+      modifiedTime: 1694867887961
+      lastModifiedBy: CtisFurQNe9h7ABb
+    _key: '!actors.items!92W36cwQtstg8MQ3.ET5tybQgB9fIVh0f'
+effects:
+  - icon: icons/svg/aura.svg
+    origin: >-
+      Compendium.torgeternity.system-de-archetypen.Actor.92W36cwQtstg8MQ3.Item.eoP2vnMCxD3yRNJS
+    duration:
+      startTime: 0
+      seconds: null
+      combat: null
+      rounds: null
+      turns: null
+      startRound: null
+      startTurn: null
+    disabled: false
+    name: Einschüchtern +2
+    _id: oqkPZlkIP6uxPf3N
+    changes:
+      - key: system.skills.intimidation.adds
+        mode: 2
+        value: '2'
+        priority: null
+    description: ''
+    transfer: false
+    statuses: []
+    flags: {}
+    tint: null
+    _key: '!actors.effects!92W36cwQtstg8MQ3.oqkPZlkIP6uxPf3N'
+  - _id: TsjZ9iAh5f8OQqQH
+    changes:
+      - key: system.other.toughness
+        mode: 2
+        value: '1'
+        priority: null
+      - key: system.other.armor
+        mode: 2
+        value: '1'
+        priority: null
+    disabled: false
+    duration:
+      startTime: 0
+      seconds: null
+      combat: null
+      rounds: null
+      turns: null
+      startRound: null
+      startTurn: null
+    icon: icons/svg/aura.svg
+    origin: >-
+      Compendium.torgeternity.system-de-archetypen.Actor.92W36cwQtstg8MQ3.Item.ET5tybQgB9fIVh0f
+    transfer: false
+    flags: {}
+    tint: null
+    name: Rüstung +1
+    description: ''
+    statuses: []
+    _key: '!actors.effects!92W36cwQtstg8MQ3.TsjZ9iAh5f8OQqQH'
+folder: null
+sort: 0
+flags:
+  core:
+    sourceId: Compendium.torgeternity.archetypes.REeNzywr6VElHSWZ
+system:
+  shock:
+    max: 5
+    value: 0
+  wounds:
+    max: 3
+    value: 0
+  attributes:
+    charisma: 6
+    dexterity: 8
+    mind: 8
+    spirit: 10
+    strength: 8
+  other:
+    move: 5
+    run: 5
+    toughness: 5
+    armor: 0
+    cosm: nileEmpire
+    possibilities: 0
+    posibilities: 3
+  skills:
+    airVehicles:
+      baseAttribute: dexterity
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    alteration:
+      baseAttribute: mind
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    apportation:
+      baseAttribute: spirit
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    beastRiding:
+      baseAttribute: dexterity
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    computers:
+      baseAttribute: mind
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    conjuration:
+      baseAttribute: spirit
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    divination:
+      baseAttribute: mind
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    dodge:
+      baseAttribute: dexterity
+      adds: 2
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    energyWeapons:
+      baseAttribute: dexterity
+      adds: null
+      value: 0
+      isFav: false
+      groupName: combat
+      unskilledUse: 1
+    evidenceAnalysis:
+      baseAttribute: mind
+      adds: 1
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    faith:
+      baseAttribute: spirit
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    find:
+      baseAttribute: mind
+      adds: 2
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    fireCombat:
+      baseAttribute: dexterity
+      adds: 2
+      value: 0
+      isFav: false
+      groupName: combat
+      unskilledUse: 1
+    firstAid:
+      baseAttribute: mind
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    heavyWeapons:
+      baseAttribute: dexterity
+      adds: null
+      value: 0
+      isFav: false
+      groupName: combat
+      unskilledUse: 1
+    intimidation:
+      baseAttribute: spirit
+      adds: 3
+      value: 0
+      isFav: false
+      groupName: interaction
+      unskilledUse: 1
+    kinesis:
+      baseAttribute: spirit
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    landVehicles:
+      baseAttribute: dexterity
+      adds: 1
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    language:
+      baseAttribute: mind
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    lockpicking:
+      baseAttribute: dexterity
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    maneuver:
+      baseAttribute: dexterity
+      adds: null
+      value: 0
+      isFav: false
+      groupName: interaction
+      unskilledUse: 1
+    medicine:
+      baseAttribute: mind
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    meleeWeapons:
+      baseAttribute: dexterity
+      adds: null
+      value: 0
+      isFav: false
+      groupName: combat
+      unskilledUse: 1
+    missileWeapons:
+      baseAttribute: dexterity
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    persuasion:
+      baseAttribute: charisma
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    precognition:
+      baseAttribute: mind
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    profession:
+      baseAttribute: mind
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    reality:
+      baseAttribute: spirit
+      adds: 1
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    scholar:
+      baseAttribute: mind
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    science:
+      baseAttribute: mind
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    stealth:
+      baseAttribute: dexterity
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    streetwise:
+      baseAttribute: charisma
+      adds: 1
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    survival:
+      baseAttribute: mind
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    taunt:
+      baseAttribute: charisma
+      adds: 1
+      value: 0
+      isFav: false
+      groupName: interaction
+      unskilledUse: 1
+    telepathy:
+      baseAttribute: charisma
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    tracking:
+      baseAttribute: mind
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    trick:
+      baseAttribute: mind
+      adds: null
+      value: 0
+      isFav: false
+      groupName: interaction
+      unskilledUse: 1
+    unarmedCombat:
+      baseAttribute: dexterity
+      adds: 2
+      value: 0
+      isFav: false
+      groupName: combat
+      unskilledUse: 1
+    waterVehicles:
+      baseAttribute: dexterity
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    willpower:
+      baseAttribute: spirit
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+  xp:
+    unspent: 0
+    earned: 0
+  axioms:
+    magic: 14
+    social: 20
+    spirit: 18
+    tech: 20
+  details:
+    clearance: ''
+    background: >-
+      <p><img class="charimg"
+      src="systems/torgeternity/images/characters/Masked_Crusader.webp" alt=""
+      width="1189" height="1924"></p>
+
+      <p
+      class="moreheight">@UUID[Compendium.torgeternity.system-de-handouts.JournalEntry.DLLvnXpv7RFhRgHu.JournalEntryPage.4XMfQXpiBN5gsUNL]{Archetyp
+      - Der maskierte Vigilant}</p>
+
+      <h3>&Uuml;berblick</h3>
+
+      <p>Eine Gruppe geheimnisvoller M&auml;nner und Frauen hat sich
+      zusammengeschlossen, um die Schreckensherrschaft des Pharao M&ouml;bius zu
+      beenden. Diese Helden haben ihren Sitz in Kairo, reisen aber um die ganze
+      Welt, um das B&ouml;se zu bek&auml;mpfen. Die Masken und das Geheimnis,
+      das sie umgibt, dienen dazu, ihre Liebsten zu sch&uuml;tzen oder das
+      Nachstellen durch M&ouml;bius' Geheimpolizei zu vereiteln. Ein Held zu
+      sein ist eine gef&auml;hrliche Berufung, besonders in einer Welt, die von
+      Schurken regiert wird. Einige seltene Vigilanten kommen aus Terra, der
+      Heimat der Invasoren, aber die meisten sind verwandelte B&uuml;rger der
+      Zentralerde.</p>
+
+      <h3>Taktiken</h3>
+
+      <p>Du bist ein Meistersch&uuml;tze und kennst dich auch mit
+      Faustk&auml;mpfen aus. Allerdings ist das <em>Einsch&uuml;chtern
+      </em>deine wahre Waffe. Dein hoher Wert f&uuml;hrt oft zu einem
+      "Spielerentscheidung"- Ergebnis, das mindestens die n&auml;chste Aktion
+      eines B&ouml;sewichts verhindert und bestenfalls dazu f&uuml;hrt, dass ein
+      Feind schreiend davonl&auml;uft. Deine hohe
+      <em>Realit&auml;t</em>-Fertigkeit erlaubt es dir, Schaden
+      wegzustecken.&nbsp;</p>
+
+      <p>Unter der Maske bist du ein ehrenhafter Detektiv. Wenn deine
+      ver&auml;ngstigten Feinde nicht reden, k&ouml;nnen dein <em>Gassenwissen
+      </em>und deine <em>Beweisanalyse </em>wichtige Hinweise liefern.</p>
+
+      <h3>Moment der Krise</h3>
+
+      <p>Einst warst du ein gew&ouml;hnlicher B&uuml;rger, aber das gleiche
+      Ereignis, das deine Kr&auml;fte erweckt hat, war auch der Wendepunkt in
+      deinem Moment der Krise. Vielleicht warst du zur richtigen Zeit am
+      richtigen Ort, um M&ouml;bius' Diener daran zu hindern, ein Grab in der
+      N&auml;he von Kairo zu pl&uuml;ndern &ndash; ein Grab, das ein Grabtuch
+      enthielt, das du heute als Umhang tr&auml;gst. Oder vielleicht ist ein
+      vorheriger Held gefallen, und du hast seinen Mantel aufgehoben, um ihn zu
+      r&auml;chen.</p>
+
+      <h3>Zitat</h3>
+
+      <p>&ldquo;Wovor hast du Angst?&ldquo;</p>
+
+      <h3>Beschreibung</h3>
+
+      <p>Eine schwarze Maske und ein zerkl&uuml;fteter Umhang sind
+      Pflichtkleidung - es sei denn, du bewegst dich in deiner wirklichen
+      Identit&auml;t. Verschiedene Gegenst&auml;nde bieten sich als magische
+      Quelle deiner schrecklichen Macht an, oder vielleicht ist es ein
+      Ger&auml;t an deinem G&uuml;rtel, das ein Angst erzeugendes Feld
+      ausstrahlt? Du sprichst normalerweise mit einer leisen, ernsten Stimme und
+      h&auml;ltst eine grimmige Fassade aufrecht. Das ist jedoch alles nur
+      Berechnung, und deine gelegentliche Witze erinnern jeden daran, dass sich
+      ein Mensch unter der Maske befindet.</p>
+
+      <h3>Agenda</h3>
+
+      <p>Gerechtigkeit ist dein Ziel. Egal ob es sich nun um die Verbrechen von
+      Kleinkriminellen handelt oder um die Grausamkeit der High Lords, das
+      B&ouml;se muss bek&auml;mpft und die Schuldigen bestraft werden.</p>
+
+      <h3>Namen</h3>
+
+      <p>Captain Phantom, Crimson Wraith, Nachtschrecken, Rotes Gespenst, Das
+      Grabtuch</p>
+
+      <h3>Vorgeschlagener Aufstieg (Optional)</h3>
+
+      <ul>
+
+      <li>(5 EP) Superattribut (Geist)</li>
+
+      <li>(7 EP) Lieblingswaffe (Mauser-Pistole)</li>
+
+      <li>(2 EP) <em>Realit&auml;t</em> +2</li>
+
+      <li>(3 EP) <em>Feuerwaffen</em> +3</li>
+
+      <li>(3 EP) <em>Waffenloser Kampf</em> +3</li>
+
+      <li>(4 EP) <em>Feuerwaffen</em> +4</li>
+
+      <li>(4 EP) <em>Einsch&uuml;chtern</em> +4</li>
+
+      </ul>
+    race: human
+  editstate: null
+  fatigue: '1'
+ownership:
+  default: 0
+  9Q0XnqFwko7hRlvL: 3
+prototypeToken:
+  flags: {}
+  name: Der maskierte Vigilant
+  displayName: 0
+  width: 1
+  height: 1
+  lockRotation: true
+  rotation: 0
+  actorLink: true
+  disposition: 1
+  displayBars: 40
+  bar1:
+    attribute: wounds
+  bar2:
+    attribute: shock
+  randomImg: false
+  alpha: 1
+  light:
+    alpha: 1
+    angle: 360
+    bright: 0
+    color: null
+    coloration: 1
+    dim: 0
+    luminosity: 0.5
+    saturation: 0
+    contrast: 0
+    shadows: 0
+    animation:
+      speed: 5
+      intensity: 5
+      type: null
+      reverse: false
+    darkness:
+      min: 0
+      max: 1
+    attenuation: 0.5
+  texture:
+    src: systems/torgeternity/images/characters/masked_crusader.Token.webp
+    tint: null
+    scaleX: 1
+    scaleY: 1
+    offsetX: 0
+    offsetY: 0
+    rotation: 0
+  sight:
+    angle: 360
+    enabled: true
+    range: 0
+    brightness: 1
+    visionMode: basic
+    attenuation: 0.1
+    saturation: 0
+    contrast: 0
+  appendNumber: false
+  prependAdjective: false
+  detectionModes: []
+_stats:
+  systemId: torgeternity
+  systemVersion: 3.1.1
+  coreVersion: '11.308'
+  createdTime: 1694867673206
+  modifiedTime: 1694868187854
+  lastModifiedBy: CtisFurQNe9h7ABb
+_key: '!actors!92W36cwQtstg8MQ3'
+

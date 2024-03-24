@@ -1,0 +1,523 @@
+name: Akteure
+pages:
+  - sort: 350000
+    name: Archetyp - Die Cyber-Hexe
+    type: image
+    _id: v8EhlvFjQYGClORG
+    title:
+      show: false
+      level: 1
+    image:
+      caption: ''
+    text:
+      format: 1
+    video:
+      controls: true
+      volume: 0.5
+    src: systems/torgeternity/images/characters/Cyberwitch.webp
+    system: {}
+    ownership:
+      default: -1
+      CtisFurQNe9h7ABb: 3
+    flags: {}
+    _stats:
+      systemId: torgeternity
+      systemVersion: 3.1.1
+      coreVersion: '11.308'
+      createdTime: 1693885332040
+      modifiedTime: 1694857711326
+      lastModifiedBy: CtisFurQNe9h7ABb
+    _key: '!journal.pages!DLLvnXpv7RFhRgHu.v8EhlvFjQYGClORG'
+  - sort: 375000
+    name: Archetyp - Die Drachenkriegerin
+    type: image
+    title:
+      show: false
+      level: 1
+    image:
+      caption: ''
+    text:
+      format: 1
+    video:
+      controls: true
+      volume: 0.5
+    src: systems/torgeternity/images/characters/Dragon_Warrior.webp
+    system: {}
+    ownership:
+      default: -1
+      CtisFurQNe9h7ABb: 3
+    flags: {}
+    _stats:
+      systemId: torgeternity
+      systemVersion: 3.1.1
+      coreVersion: '11.308'
+      createdTime: 1693885332040
+      modifiedTime: 1694857712773
+      lastModifiedBy: CtisFurQNe9h7ABb
+    _id: wyqIUAZMhqAUvoD6
+    _key: '!journal.pages!DLLvnXpv7RFhRgHu.wyqIUAZMhqAUvoD6'
+  - sort: 400000
+    name: Archetyp - Die exzentrische Erfinderin
+    type: image
+    title:
+      show: false
+      level: 1
+    image:
+      caption: ''
+    text:
+      format: 1
+    video:
+      controls: true
+      volume: 0.5
+    src: systems/torgeternity/images/characters/Eccentric_Inventor.webp
+    system: {}
+    ownership:
+      default: -1
+      CtisFurQNe9h7ABb: 3
+    flags: {}
+    _stats:
+      systemId: torgeternity
+      systemVersion: 3.1.1
+      coreVersion: '11.308'
+      createdTime: 1693885332040
+      modifiedTime: 1694857672888
+      lastModifiedBy: CtisFurQNe9h7ABb
+    _id: 59zUF4TrfxfdMfhs
+    _key: '!journal.pages!DLLvnXpv7RFhRgHu.59zUF4TrfxfdMfhs'
+  - sort: 250000
+    name: Archetyp - Der Edeinos-Optant
+    type: image
+    title:
+      show: false
+      level: 1
+    image:
+      caption: ''
+    text:
+      format: 1
+    video:
+      controls: true
+      volume: 0.5
+    src: systems/torgeternity/images/characters/Edeinos_Optant.webp
+    system: {}
+    ownership:
+      default: -1
+      CtisFurQNe9h7ABb: 3
+    flags: {}
+    _stats:
+      systemId: torgeternity
+      systemVersion: 3.1.1
+      coreVersion: '11.308'
+      createdTime: 1693885332040
+      modifiedTime: 1694857679238
+      lastModifiedBy: CtisFurQNe9h7ABb
+    _id: S9ZpLno9HjlxRrmV
+    _key: '!journal.pages!DLLvnXpv7RFhRgHu.S9ZpLno9HjlxRrmV'
+  - sort: 387500
+    name: Archetyp - Die Elektrosamurai
+    type: image
+    title:
+      show: false
+      level: 1
+    image:
+      caption: ''
+    text:
+      format: 1
+    video:
+      controls: true
+      volume: 0.5
+    src: systems/torgeternity/images/characters/Electric_Samurai.webp
+    system: {}
+    ownership:
+      default: -1
+      CtisFurQNe9h7ABb: 3
+    flags: {}
+    _stats:
+      systemId: torgeternity
+      systemVersion: 3.1.1
+      coreVersion: '11.308'
+      createdTime: 1693885332040
+      modifiedTime: 1694857715773
+      lastModifiedBy: CtisFurQNe9h7ABb
+    _id: JrsdRBb5FF01sg6B
+    _key: '!journal.pages!DLLvnXpv7RFhRgHu.JrsdRBb5FF01sg6B'
+  - sort: 393750
+    name: Archetyp - Die elfische Hüterin
+    type: image
+    title:
+      show: false
+      level: 1
+    image:
+      caption: ''
+    text:
+      format: 1
+    video:
+      controls: true
+      volume: 0.5
+    src: systems/torgeternity/images/characters/Elven_Warden.webp
+    system: {}
+    ownership:
+      default: -1
+      CtisFurQNe9h7ABb: 3
+    flags: {}
+    _stats:
+      systemId: torgeternity
+      systemVersion: 3.1.1
+      coreVersion: '11.308'
+      createdTime: 1693885332040
+      modifiedTime: 1694857720126
+      lastModifiedBy: CtisFurQNe9h7ABb
+    _id: Y5Ywt3WpLVzwhwnm
+    _key: '!journal.pages!DLLvnXpv7RFhRgHu.Y5Ywt3WpLVzwhwnm'
+  - sort: 100000
+    name: Archetyp - Der abgebrühte Detektiv
+    type: image
+    title:
+      show: false
+      level: 1
+    image:
+      caption: ''
+    text:
+      format: 1
+    video:
+      controls: true
+      volume: 0.5
+    src: systems/torgeternity/images/characters/Hardboiled_Detective.webp
+    system: {}
+    ownership:
+      default: -1
+      CtisFurQNe9h7ABb: 3
+    flags: {}
+    _stats:
+      systemId: torgeternity
+      systemVersion: 3.1.1
+      coreVersion: '11.308'
+      createdTime: 1693885332040
+      modifiedTime: 1694857557261
+      lastModifiedBy: CtisFurQNe9h7ABb
+    _id: jGMEVr72h0Jjm3CQ
+    _key: '!journal.pages!DLLvnXpv7RFhRgHu.jGMEVr72h0Jjm3CQ'
+  - sort: 275000
+    name: Archetyp - Der maskierte Vigilant
+    type: image
+    title:
+      show: false
+      level: 1
+    image:
+      caption: ''
+    text:
+      format: 1
+    video:
+      controls: true
+      volume: 0.5
+    src: systems/torgeternity/images/characters/Masked_Crusader.webp
+    system: {}
+    ownership:
+      default: -1
+      CtisFurQNe9h7ABb: 3
+    flags: {}
+    _stats:
+      systemId: torgeternity
+      systemVersion: 3.1.1
+      coreVersion: '11.308'
+      createdTime: 1693885332040
+      modifiedTime: 1694857683310
+      lastModifiedBy: CtisFurQNe9h7ABb
+    _id: 4XMfQXpiBN5gsUNL
+    _key: '!journal.pages!DLLvnXpv7RFhRgHu.4XMfQXpiBN5gsUNL'
+  - sort: 287500
+    name: Archetyp - Der Monsterjäger
+    type: image
+    title:
+      show: false
+      level: 1
+    image:
+      caption: ''
+    text:
+      format: 1
+    video:
+      controls: true
+      volume: 0.5
+    src: systems/torgeternity/images/characters/Monster_Hunter.webp
+    system: {}
+    ownership:
+      default: -1
+      CtisFurQNe9h7ABb: 3
+    flags: {}
+    _stats:
+      systemId: torgeternity
+      systemVersion: 3.1.1
+      coreVersion: '11.308'
+      createdTime: 1693885332040
+      modifiedTime: 1694857685854
+      lastModifiedBy: CtisFurQNe9h7ABb
+    _id: XuZD3GOezHrsiAbQ
+    _key: '!journal.pages!DLLvnXpv7RFhRgHu.XuZD3GOezHrsiAbQ'
+  - sort: 775000
+    name: Archetyp - Die urzeitliche Jägerin
+    type: image
+    title:
+      show: false
+      level: 1
+    image:
+      caption: ''
+    text:
+      format: 1
+    video:
+      controls: true
+      volume: 0.5
+    src: systems/torgeternity/images/characters/Primitive_Hunter.webp
+    system: {}
+    ownership:
+      default: -1
+      CtisFurQNe9h7ABb: 3
+    flags: {}
+    _stats:
+      systemId: torgeternity
+      systemVersion: 3.1.1
+      coreVersion: '11.308'
+      createdTime: 1693885332040
+      modifiedTime: 1694857728686
+      lastModifiedBy: CtisFurQNe9h7ABb
+    _id: XE6X141rfpUROtgY
+    _key: '!journal.pages!DLLvnXpv7RFhRgHu.XE6X141rfpUROtgY'
+  - sort: 296875
+    name: Archetyp - Der Weltenläufer
+    type: image
+    title:
+      show: false
+      level: 1
+    image:
+      caption: ''
+    text:
+      format: 1
+    video:
+      controls: true
+      volume: 0.5
+    src: systems/torgeternity/images/characters/Realm_Runner.webp
+    system: {}
+    ownership:
+      default: -1
+      CtisFurQNe9h7ABb: 3
+    flags: {}
+    _stats:
+      systemId: torgeternity
+      systemVersion: 3.1.1
+      coreVersion: '11.308'
+      createdTime: 1693885332040
+      modifiedTime: 1694857703758
+      lastModifiedBy: CtisFurQNe9h7ABb
+    _id: RLk67atzGeIrJ9Ml
+    _key: '!journal.pages!DLLvnXpv7RFhRgHu.RLk67atzGeIrJ9Ml'
+  - sort: 700000
+    name: Archetyp - Die Schatzjägerin
+    type: image
+    title:
+      show: false
+      level: 1
+    image:
+      caption: ''
+    text:
+      format: 1
+    video:
+      controls: true
+      volume: 0.5
+    src: systems/torgeternity/images/characters/Relic_Raider.webp
+    system: {}
+    ownership:
+      default: -1
+      CtisFurQNe9h7ABb: 3
+    flags: {}
+    _stats:
+      systemId: torgeternity
+      systemVersion: 3.1.1
+      coreVersion: '11.308'
+      createdTime: 1693885332040
+      modifiedTime: 1694857723837
+      lastModifiedBy: CtisFurQNe9h7ABb
+    _id: tuOeVEYqdKLQkea4
+    _key: '!journal.pages!DLLvnXpv7RFhRgHu.tuOeVEYqdKLQkea4'
+  - sort: 150000
+    name: Archetyp - Der abtrünnige Priester
+    type: image
+    title:
+      show: false
+      level: 1
+    image:
+      caption: ''
+    text:
+      format: 1
+    video:
+      controls: true
+      volume: 0.5
+    src: systems/torgeternity/images/characters/Renegade_Priest.webp
+    system: {}
+    ownership:
+      default: -1
+      CtisFurQNe9h7ABb: 3
+    flags: {}
+    _stats:
+      systemId: torgeternity
+      systemVersion: 3.1.1
+      coreVersion: '11.308'
+      createdTime: 1693885332040
+      modifiedTime: 1694857676771
+      lastModifiedBy: CtisFurQNe9h7ABb
+    _id: hkGNur6sw23AZTbu
+    _key: '!journal.pages!DLLvnXpv7RFhRgHu.hkGNur6sw23AZTbu'
+  - sort: 850000
+    name: Archetyp - Die Widerstandskämpferin
+    type: image
+    title:
+      show: false
+      level: 1
+    image:
+      caption: ''
+    text:
+      format: 1
+    video:
+      controls: true
+      volume: 0.5
+    src: systems/torgeternity/images/characters/Resistance_Fighter.webp
+    system: {}
+    ownership:
+      default: -1
+      CtisFurQNe9h7ABb: 3
+    flags: {}
+    _stats:
+      systemId: torgeternity
+      systemVersion: 3.1.1
+      coreVersion: '11.308'
+      createdTime: 1693885332040
+      modifiedTime: 1694857727350
+      lastModifiedBy: CtisFurQNe9h7ABb
+    _id: pZZTcePrdVDCeCeF
+    _key: '!journal.pages!DLLvnXpv7RFhRgHu.pZZTcePrdVDCeCeF'
+  - sort: 293750
+    name: Archetyp - Der Schrottsammler
+    type: image
+    title:
+      show: false
+      level: 1
+    image:
+      caption: ''
+    text:
+      format: 1
+    video:
+      controls: true
+      volume: 0.5
+    src: systems/torgeternity/images/characters/Scrapper.webp
+    system: {}
+    ownership:
+      default: -1
+      CtisFurQNe9h7ABb: 3
+    flags: {}
+    _stats:
+      systemId: torgeternity
+      systemVersion: 3.1.1
+      coreVersion: '11.308'
+      createdTime: 1693885332040
+      modifiedTime: 1694857699293
+      lastModifiedBy: CtisFurQNe9h7ABb
+    _id: KlL26KhVUnkWipzG
+    _key: '!journal.pages!DLLvnXpv7RFhRgHu.KlL26KhVUnkWipzG'
+  - sort: 737500
+    name: Archetyp - Die unaufhaltsame Polizistin
+    type: image
+    title:
+      show: false
+      level: 1
+    image:
+      caption: ''
+    text:
+      format: 1
+    video:
+      controls: true
+      volume: 0.5
+    src: systems/torgeternity/images/characters/Unstoppable_Cop.webp
+    system: {}
+    ownership:
+      default: -1
+      CtisFurQNe9h7ABb: 3
+    flags: {}
+    _stats:
+      systemId: torgeternity
+      systemVersion: 3.1.1
+      coreVersion: '11.308'
+      createdTime: 1693885332040
+      modifiedTime: 1694857729789
+      lastModifiedBy: CtisFurQNe9h7ABb
+    _id: j7NJZCO90CI0aetf
+    _key: '!journal.pages!DLLvnXpv7RFhRgHu.j7NJZCO90CI0aetf'
+  - sort: 1700000
+    name: Tiergefährte - Säbelzahntiger
+    type: image
+    title:
+      show: false
+      level: 1
+    image:
+      caption: ''
+    text:
+      format: 1
+    video:
+      controls: true
+      volume: 0.5
+    src: systems/torgeternity/images/characters/Sabre_Tooth_Cat.webp
+    system: {}
+    ownership:
+      default: -1
+      CtisFurQNe9h7ABb: 3
+    flags: {}
+    _stats:
+      systemId: torgeternity
+      systemVersion: 3.1.1
+      coreVersion: '11.308'
+      createdTime: 1693885332040
+      modifiedTime: 1694857672888
+      lastModifiedBy: CtisFurQNe9h7ABb
+    _id: oSp48783apDZJbHt
+    _key: '!journal.pages!DLLvnXpv7RFhRgHu.oSp48783apDZJbHt'
+  - sort: 1800000
+    name: Tiergefährte - Weißer Wolf
+    type: image
+    title:
+      show: false
+      level: 1
+    image:
+      caption: ''
+    text:
+      format: 1
+    video:
+      controls: true
+      volume: 0.5
+    src: systems/torgeternity/images/characters/White_Wolf.webp
+    system: {}
+    ownership:
+      default: -1
+      CtisFurQNe9h7ABb: 3
+    flags: {}
+    _stats:
+      systemId: torgeternity
+      systemVersion: 3.1.1
+      coreVersion: '11.308'
+      createdTime: 1693885332040
+      modifiedTime: 1694857672888
+      lastModifiedBy: CtisFurQNe9h7ABb
+    _id: ItABNBtu0A2pm0Dc
+    _key: '!journal.pages!DLLvnXpv7RFhRgHu.ItABNBtu0A2pm0Dc'
+folder: null
+ownership:
+  default: 0
+  CtisFurQNe9h7ABb: 3
+flags:
+  core: {}
+_stats:
+  systemId: torgeternity
+  systemVersion: 3.1.1
+  coreVersion: '11.308'
+  createdTime: 1693885308072
+  modifiedTime: 1694857729789
+  lastModifiedBy: CtisFurQNe9h7ABb
+_id: DLLvnXpv7RFhRgHu
+sort: 0
+_key: '!journal!DLLvnXpv7RFhRgHu'
+

@@ -1,7 +1,0 @@
-2024/03/19-21:22:53.219 1cfc Recovering log #160
-2024/03/19-21:22:53.228 1cfc Delete type=0 #160
-2024/03/19-21:22:53.228 1cfc Delete type=3 #158
-2024/03/19-21:23:29.677 458c Level-0 table #166: started
-2024/03/19-21:23:29.677 458c Level-0 table #166: 0 bytes OK
-2024/03/19-21:23:29.682 458c Delete type=0 #164
-2024/03/19-21:23:29.690 458c Manual compaction at level-0 from '!journal!ePJekdztsz1JPoT9' @ 72057594037927935 : 1 .. '!journal.pages!ePJekdztsz1JPoT9.v46rtTLn1xMuJBSz' @ 0 : 0; will stop at (end)

@@ -1,0 +1,293 @@
+_id: 2OV0sXVI9wM9e6U7
+name: Paquet Cosm Prime Terre
+type: deck
+description: ''
+img: systems/torgeternity/images/cards/earth-back.webp
+data: {}
+cards:
+  - _id: Fxdkt0cX0uQPc7Qc
+    name: Piqués au vif !
+    description: ''
+    type: cosm
+    data: {}
+    suit: ''
+    back:
+      name: Core Earth Cosm
+      text: ''
+      img: systems/torgeternity/images/cards/earth-back.webp
+    faces:
+      - name: Spurred On!
+        img: systems/torgeternity/images/cards/cosm/core-earth/fr/01.webp
+        text: ''
+    face: 1
+    drawn: false
+    origin: cBTPvBrPQpFTkUcm
+    rotation: 0
+    sort: 0
+    flags: {}
+    value: 1
+    number: null
+    _key: '!cards.cards!2OV0sXVI9wM9e6U7.Fxdkt0cX0uQPc7Qc'
+    cards: []
+  - _id: dh4M4dQifesj6hVd
+    name: Continuez le combat
+    description: ''
+    type: cosm
+    data: {}
+    suit: ''
+    back:
+      name: Unknown (Core Earth Cosm)
+      text: ''
+      img: systems/torgeternity/images/cards/earth-back.webp
+    faces:
+      - name: Keep Fighting
+        img: systems/torgeternity/images/cards/cosm/core-earth/fr/02.webp
+        text: >-
+          Play when any character must test Defeat. She automatically receives
+          an Outstanding result without a roll. She may say a few encouraging
+          words before being KO'ed.
+
+
+          All Storm Knights gain one Possibility from her heroic sentiment.
+    face: 1
+    drawn: false
+    origin: cBTPvBrPQpFTkUcm
+    rotation: 0
+    sort: 1
+    flags: {}
+    value: 2
+    number: null
+    _key: '!cards.cards!2OV0sXVI9wM9e6U7.dh4M4dQifesj6hVd'
+    cards: []
+  - _id: RIU4il6GbddkAwo7
+    name: Discour stimulant
+    description: ''
+    type: cosm
+    data: {}
+    suit: ''
+    back:
+      name: Unknown (Core Earth Cosm)
+      text: ''
+      img: systems/torgeternity/images/cards/earth-back.webp
+    faces:
+      - name: Rousing Speech
+        img: systems/torgeternity/images/cards/cosm/core-earth/fr/03.webp
+        text: >-
+          Make a short speech designed to inspire allies. If played during
+          combat the speech is a simple action.
+
+
+          The speaker and everyone who can hear gains two Possibilities
+    face: 1
+    drawn: false
+    origin: cBTPvBrPQpFTkUcm
+    rotation: 0
+    sort: 2
+    flags: {}
+    value: 3
+    number: null
+    _key: '!cards.cards!2OV0sXVI9wM9e6U7.RIU4il6GbddkAwo7'
+    cards: []
+  - _id: wpIVNckT7iM8wcc2
+    name: La loi de l'espoir
+    description: ''
+    type: cosm
+    data: {}
+    suit: ''
+    back:
+      name: Unknown (Core Earth Cosm)
+      text: ''
+      img: systems/torgeternity/images/cards/earth-back.webp
+    faces:
+      - name: The Law of Hope
+        img: systems/torgeternity/images/cards/cosm/core-earth/fr/04.webp
+        text: >-
+          Play at any time. Any Storm Knight who wishes may immediately refresh
+          his Possibilities.
+    face: 1
+    drawn: false
+    origin: cBTPvBrPQpFTkUcm
+    rotation: 0
+    sort: 3
+    flags: {}
+    value: 4
+    number: null
+    _key: '!cards.cards!2OV0sXVI9wM9e6U7.wpIVNckT7iM8wcc2'
+    cards: []
+  - _id: s8SXtaDYGuvB9l0b
+    name: Bienvenue dans notre monde !
+    description: ''
+    type: cosm
+    data: {}
+    suit: ''
+    back:
+      name: Unknown (Core Earth Cosm)
+      text: ''
+      img: systems/torgeternity/images/cards/earth-back.webp
+    faces:
+      - name: Welcome to Our World!
+        img: systems/torgeternity/images/cards/cosm/core-earth/fr/05.webp
+        text: >-
+          Play on a reality-rated foe. The target must make an immediate Near
+          Impossible (DN 20) reality roll or be disconnected.
+    face: 1
+    drawn: false
+    origin: cBTPvBrPQpFTkUcm
+    rotation: 0
+    sort: 4
+    flags: {}
+    value: 5
+    number: null
+    _key: '!cards.cards!2OV0sXVI9wM9e6U7.s8SXtaDYGuvB9l0b'
+    cards: []
+  - _id: TNUZFqhOiVCZqtPA
+    name: Escalade !
+    description: ''
+    type: cosm
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Escalation!
+        img: systems/torgeternity/images/cards/cosm/core-earth/fr/06.webp
+        text: >-
+          Play at any time during an encounter. Enemy reenforcements arrive,
+          including a reality-rated foe.
+
+
+          All Storm Knights gain one to three Possibilities after the
+          adversaries are dealt with, depending on the strength of the forces
+          who appeared.
+    face: 1
+    drawn: false
+    origin: cBTPvBrPQpFTkUcm
+    rotation: 0
+    sort: 5
+    flags: {}
+    value: 6
+    number: null
+    _key: '!cards.cards!2OV0sXVI9wM9e6U7.TNUZFqhOiVCZqtPA'
+    cards: []
+  - _id: 8c8X7RFd7oibsIdI
+    name: Il y a toujours de l'espoir
+    description: ''
+    type: cosm
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: There's Always Hope
+        img: systems/torgeternity/images/cards/cosm/core-earth/fr/07.webp
+        text: >-
+          All tests related to a Dramatic Skill Resolution are Favored for the
+          rest of the scene.
+    face: 1
+    drawn: false
+    origin: cBTPvBrPQpFTkUcm
+    rotation: 0
+    sort: 6
+    flags: {}
+    value: 7
+    number: null
+    _key: '!cards.cards!2OV0sXVI9wM9e6U7.8c8X7RFd7oibsIdI'
+    cards: []
+  - _id: UUVkBBMLuNoFcUwN
+    name: Saisir l'opportunité
+    description: ''
+    type: cosm
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Seize the Day
+        img: systems/torgeternity/images/cards/cosm/core-earth/fr/08.webp
+        text: >-
+          Play when a new Drama card is revealed. Swap the Conflict lines for
+          the Heroes and Villains (including Initiative).
+    face: 1
+    drawn: false
+    origin: cBTPvBrPQpFTkUcm
+    rotation: 0
+    sort: 7
+    flags: {}
+    value: 8
+    number: null
+    _key: '!cards.cards!2OV0sXVI9wM9e6U7.UUVkBBMLuNoFcUwN'
+    cards: []
+  - _id: JbW9ZRwDhBLHxsXr
+    name: Le tout pour le tout
+    description: ''
+    type: cosm
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Go for Broke
+        img: systems/torgeternity/images/cards/cosm/core-earth/fr/09.webp
+        text: >-
+          All Storm Knights may ignore up to 4 points of penalties this round
+          for any and all actions.
+    face: 1
+    drawn: false
+    origin: cBTPvBrPQpFTkUcm
+    rotation: 0
+    sort: 8
+    flags: {}
+    value: 9
+    number: null
+    _key: '!cards.cards!2OV0sXVI9wM9e6U7.JbW9ZRwDhBLHxsXr'
+    cards: []
+  - _id: anTYTGmOJDE9eVcA
+    name: Un répit bienvenu !
+    description: ''
+    type: cosm
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Lucky Break
+        img: systems/torgeternity/images/cards/cosm/core-earth/fr/10.webp
+        text: Play to negate all Wounds and Shock from a single attack.
+    face: 1
+    drawn: false
+    origin: cBTPvBrPQpFTkUcm
+    rotation: 0
+    sort: 9
+    flags: {}
+    value: 10
+    number: null
+    _key: '!cards.cards!2OV0sXVI9wM9e6U7.anTYTGmOJDE9eVcA'
+    cards: []
+rotation: 0
+displayCount: false
+folder: null
+sort: 0
+permission:
+  kz1RJu8vrAPmTUwN: 3
+flags:
+  exportSource:
+    world: torgv2p2
+    system: torgeternity
+    coreVersion: '9.226'
+    systemVersion: 2.1.0
+  core:
+    sourceId: Cards.oMOBBSZVVgrH9Dde
+  torgeternity:
+    usage: coreEarth
+_key: '!cards!2OV0sXVI9wM9e6U7'
+

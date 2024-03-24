@@ -1,0 +1,421 @@
+_id: azyXdSKJRLmriHz6
+name: 'Companion: White Wolf'
+type: threat
+img: systems/torgeternity/images/characters/white_wolf.Avatar.webp
+items:
+  - _id: RXchDCkWZSSTuYjj
+    name: Bite/Claws
+    type: specialability-rollable
+    sort: 100000
+    flags: {}
+    img: systems/torgeternity/images/icons/bite-icon.webp
+    effects: []
+    folder: null
+    system:
+      description: <p><em>Strength </em>+2.</p>
+      attackWith: unarmedCombat
+      damage: 10
+      ap: 0
+      chatNote: ''
+    ownership:
+      default: 0
+    _stats:
+      systemId: torgeternity
+      systemVersion: 3.1.1
+      coreVersion: '11.308'
+      createdTime: null
+      modifiedTime: 1693899262797
+      lastModifiedBy: CtisFurQNe9h7ABb
+    _key: '!actors.items!azyXdSKJRLmriHz6.RXchDCkWZSSTuYjj'
+effects: []
+folder: null
+sort: 100001
+flags: {}
+system:
+  shock:
+    max: 9
+    value: 0
+  wounds:
+    max: 2
+    value: 0
+  attributes:
+    charisma: 7
+    dexterity: 8
+    mind: 5
+    spirit: 9
+    strength: 8
+  other:
+    move: 12
+    run: 5
+    toughness: 8
+    armor: 0
+    cosm: ''
+    possibilities: 0
+  skills:
+    airVehicles:
+      baseAttribute: dexterity
+      adds: ''
+      value: null
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    alteration:
+      baseAttribute: mind
+      adds: ''
+      value: null
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    apportation:
+      baseAttribute: spirit
+      adds: ''
+      value: null
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    beastRiding:
+      baseAttribute: dexterity
+      adds: ''
+      value: null
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    computers:
+      baseAttribute: mind
+      adds: ''
+      value: null
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    conjuration:
+      baseAttribute: spirit
+      adds: ''
+      value: null
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    divination:
+      baseAttribute: mind
+      adds: ''
+      value: null
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    dodge:
+      baseAttribute: dexterity
+      adds: ''
+      value: 10
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    energyWeapons:
+      baseAttribute: dexterity
+      adds: ''
+      value: null
+      isFav: false
+      groupName: combat
+      unskilledUse: 1
+    evidenceAnalysis:
+      baseAttribute: mind
+      adds: ''
+      value: null
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    faith:
+      baseAttribute: spirit
+      adds: ''
+      value: null
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    find:
+      baseAttribute: mind
+      adds: ''
+      value: null
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    fireCombat:
+      baseAttribute: dexterity
+      adds: ''
+      value: null
+      isFav: false
+      groupName: combat
+      unskilledUse: 1
+    firstAid:
+      baseAttribute: mind
+      adds: ''
+      value: null
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    heavyWeapons:
+      baseAttribute: dexterity
+      adds: ''
+      value: null
+      isFav: false
+      groupName: combat
+      unskilledUse: 1
+    intimidation:
+      baseAttribute: spirit
+      adds: ''
+      value: 10
+      isFav: false
+      groupName: interaction
+      unskilledUse: 1
+      defenseOnly: 'false'
+    kinesis:
+      baseAttribute: spirit
+      adds: ''
+      value: null
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    landVehicles:
+      baseAttribute: dexterity
+      adds: ''
+      value: null
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    language:
+      baseAttribute: mind
+      adds: ''
+      value: null
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    lockpicking:
+      baseAttribute: dexterity
+      adds: ''
+      value: null
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    maneuver:
+      baseAttribute: dexterity
+      adds: ''
+      value: null
+      isFav: false
+      groupName: interaction
+      unskilledUse: 1
+      defenseOnly: 'true'
+    medicine:
+      baseAttribute: mind
+      adds: ''
+      value: null
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    meleeWeapons:
+      baseAttribute: dexterity
+      adds: ''
+      value: null
+      isFav: false
+      groupName: combat
+      unskilledUse: 1
+    missileWeapons:
+      baseAttribute: dexterity
+      adds: ''
+      value: null
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    persuasion:
+      baseAttribute: charisma
+      adds: ''
+      value: null
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    precognition:
+      baseAttribute: mind
+      adds: ''
+      value: null
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    profession:
+      baseAttribute: mind
+      adds: ''
+      value: null
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    reality:
+      baseAttribute: spirit
+      adds: ''
+      value: null
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    scholar:
+      baseAttribute: mind
+      adds: ''
+      value: null
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    science:
+      baseAttribute: mind
+      adds: ''
+      value: null
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    stealth:
+      baseAttribute: dexterity
+      adds: ''
+      value: 10
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    streetwise:
+      baseAttribute: charisma
+      adds: ''
+      value: null
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    survival:
+      baseAttribute: mind
+      adds: ''
+      value: null
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    taunt:
+      baseAttribute: charisma
+      adds: ''
+      value: null
+      isFav: false
+      groupName: interaction
+      unskilledUse: 1
+      defenseOnly: 'true'
+    telepathy:
+      baseAttribute: charisma
+      adds: ''
+      value: null
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    tracking:
+      baseAttribute: mind
+      adds: ''
+      value: 8
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    trick:
+      baseAttribute: mind
+      adds: ''
+      value: null
+      isFav: false
+      groupName: interaction
+      unskilledUse: 1
+      defenseOnly: 'true'
+    unarmedCombat:
+      baseAttribute: dexterity
+      adds: ''
+      value: 10
+      isFav: false
+      groupName: combat
+      unskilledUse: 1
+    waterVehicles:
+      baseAttribute: dexterity
+      adds: ''
+      value: null
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    willpower:
+      baseAttribute: spirit
+      adds: ''
+      value: null
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+  details:
+    possibilitypotential: Never
+    description: >-
+      <p class="moreheight">Companion from
+      @UUID[Compendium.torgeternity.archetypes.Actor.cdSvyJHbG0GbFzkh]{The Elven
+      Warden}</p>
+
+      <p
+      class="moreheight">@UUID[Compendium.torgeternity.handouts.JournalEntry.Knhh8vqtjSylJo5Z.JournalEntryPage.ItABNBtu0A2pm0Dc]{Companion
+      - White Wolf}</p>
+    sizeBonus: normal
+    clearance: alpha
+  editstate: none
+  possibilities: 0
+ownership:
+  default: 0
+  A9LyAqagoJJU3gDH: 3
+prototypeToken:
+  flags: {}
+  name: White Wolf
+  displayName: 0
+  width: 1
+  height: 1
+  lockRotation: false
+  rotation: 0
+  actorLink: false
+  disposition: -1
+  displayBars: 40
+  bar1:
+    attribute: wounds
+  bar2:
+    attribute: shock
+  randomImg: false
+  alpha: 1
+  light:
+    alpha: 1
+    angle: 360
+    bright: 0
+    coloration: 1
+    dim: 0
+    luminosity: 0.5
+    saturation: 0
+    contrast: 0
+    shadows: 0
+    animation:
+      type: null
+      speed: 5
+      intensity: 5
+      reverse: false
+    darkness:
+      min: 0
+      max: 1
+    color: null
+    attenuation: 0.5
+  texture:
+    src: systems/torgeternity/images/characters/white_wolf.Token.webp
+    tint: null
+    scaleX: 1
+    scaleY: 1
+    offsetX: 0
+    offsetY: 0
+    rotation: 0
+  sight:
+    angle: 360
+    enabled: false
+    range: 0
+    brightness: 1
+    visionMode: basic
+    attenuation: 0.1
+    saturation: 0
+    contrast: 0
+  appendNumber: false
+  prependAdjective: false
+  detectionModes: []
+_stats:
+  systemId: torgeternity
+  systemVersion: 3.1.1
+  coreVersion: '11.308'
+  createdTime: 1693899262797
+  modifiedTime: 1693899262797
+  lastModifiedBy: CtisFurQNe9h7ABb
+_key: '!actors!azyXdSKJRLmriHz6'
+

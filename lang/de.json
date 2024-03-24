@@ -484,6 +484,7 @@
       "HeaderDetailsHint": "Hier werden grundlegende Details für diese Szene und die Berechtigungen, die die Sichtbarkeit der Szene steuern, konfiguriert.",
       "HeaderGridHint": "Wähle die Rastermaße, die zur Messung der Tokenbewegung in dieser Szene verwendet werden.",
       "HeaderVisionHint": "Hier werden die für diese Szene geltenden Einstellungen für Sicht, Beleuchtung und Kriegsnebel konfiguriert.",
+      "main": "Standardszene",
       "reality": "Realität",
       "realityHint": "Stelle die Realität der Zone ein."
     },

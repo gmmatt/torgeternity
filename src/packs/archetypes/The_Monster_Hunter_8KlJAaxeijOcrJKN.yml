@@ -1,0 +1,1122 @@
+_id: 8KlJAaxeijOcrJKN
+name: The Monster Hunter
+type: stormknight
+img: systems/torgeternity/images/characters/Monster_Hunter.Avatar.webp
+items:
+  - _id: gfxtCXojsN3PMaUK
+    name: Slayer's Gun
+    type: firearm
+    sort: 100001
+    flags:
+      core:
+        sourceId: Item.fW9IrnHVWRXgCWEx
+    img: systems/torgeternity/images/icons/firearm-icon.webp
+    effects: []
+    folder: null
+    system:
+      cosm: Orrorsh
+      description: |-
+        <p>Adamant Shells (2 shots, AP 4)</p>
+        <p>Holy Water Shells (2 shots, +2 dmg vs evil)</p>
+        <p>Giant Killer Shells (+5 damage v large or larger creatures)</p>
+        <p>Slayer's Gun Shells (12 shots, standard 14 dmg)</p>
+      techlevel: 18
+      price: '0'
+      value: 0
+      attackWith: fireCombat
+      damageType: ''
+      damage: 14
+      ap: 0
+      ammo:
+        max: 6
+        value: 6
+      range: 50/100/200
+      notes: Uses special shells
+      chatNote: ''
+    ownership:
+      default: 0
+    _stats:
+      systemId: torgeternity
+      systemVersion: 3.1.1
+      coreVersion: '11.308'
+      createdTime: null
+      modifiedTime: 1693912070049
+      lastModifiedBy: CtisFurQNe9h7ABb
+    _key: '!actors.items!8KlJAaxeijOcrJKN.gfxtCXojsN3PMaUK'
+  - _id: P5v3znC9UTPMRB7J
+    name: Silver Dagger
+    type: meleeweapon
+    sort: 500000
+    flags:
+      core:
+        sourceId: Compendium.te001-core-rulebook.Items.item-dagger
+    img: systems/torgeternity/images/icons/axe-icon.webp
+    effects: []
+    folder: null
+    system:
+      cosm: Aysle
+      description: >-
+        <p>short-bladed weapon between 15 and 30 centimeters in length. Daggers
+        can be easily concealed and drawn in close quarters.</p>
+
+        <p>&nbsp;</p>
+
+        <p>Found in <strong>Core Rules</strong></p>
+      techlevel: 8
+      price: '25'
+      value: 7
+      attackWith: meleeWeapons
+      damageType: strengthPlus
+      damage: 1
+      ap: 0
+      bonus: 2
+      notes: >-
+        The item is relatively small and easy to hide. Searches suffer a –2
+        penalty to find the weapon if it's hidden.
+      chatNote: ''
+    ownership:
+      default: 0
+    _stats:
+      systemId: torgeternity
+      systemVersion: 3.1.1
+      coreVersion: '11.308'
+      createdTime: null
+      modifiedTime: 1693895876765
+      lastModifiedBy: CtisFurQNe9h7ABb
+    _key: '!actors.items!8KlJAaxeijOcrJKN.P5v3znC9UTPMRB7J'
+  - _id: x75vrICPEW0IMXTW
+    name: Monster Hide Duster
+    type: armor
+    img: systems/torgeternity/images/icons/armor-icon.webp
+    effects:
+      - _id: cCmq8JitymSgykcf
+        flags: {}
+        changes:
+          - key: system.other.toughness
+            value: '2'
+            mode: 2
+            priority: null
+          - key: system.other.armor
+            value: '2'
+            mode: 2
+            priority: null
+        disabled: false
+        duration:
+          startTime: null
+          seconds: null
+          combat: null
+          rounds: null
+          turns: null
+          startRound: null
+          startTurn: null
+        icon: icons/svg/aura.svg
+        origin: Item.T0BbCEFeJ2wLx0Ds
+        tint: null
+        transfer: true
+        name: Armor +2
+        description: ''
+        statuses: []
+        _key: >-
+          !actors.items.effects!8KlJAaxeijOcrJKN.x75vrICPEW0IMXTW.cCmq8JitymSgykcf
+    folder: null
+    sort: 24800000
+    flags:
+      core:
+        sourceId: Compendium.te001-core-rulebook.Items.RMjiwdeeAr3kBkLK
+    system:
+      cosm: Orrorsh
+      description: >-
+        <p>@UUID[Compendium.te001-core-rulebook.rules.pwneQ55M0nnDH0Us.JournalEntryPage.qKdamp4rrcX6TTt0#fatigues:]{Fatigues}</p>
+
+        <p>A long overcoat made from the treated skins of various beasts that
+        once terrorized the innocent. The monsters of Orrorsh are notoriously
+        hardy, so leather made from their hides is especially durable.</p>
+
+        <p>&nbsp;</p>
+
+        <p>Found in <strong>Core Rules</strong></p>
+      techlevel: 16
+      price: '350'
+      value: 12
+      bonus: 2
+      maxDex: 10
+      minStrength: null
+      equipped: true
+      equippedClass: item-equipped
+      notes: Fatigues
+    ownership:
+      default: 0
+      A9LyAqagoJJU3gDH: 3
+      CtisFurQNe9h7ABb: 3
+    _stats:
+      systemId: torgeternity
+      systemVersion: 3.1.1
+      coreVersion: '11.308'
+      createdTime: 1693911903935
+      modifiedTime: 1693911903942
+      lastModifiedBy: CtisFurQNe9h7ABb
+    _key: '!actors.items!8KlJAaxeijOcrJKN.x75vrICPEW0IMXTW'
+  - _id: 7DX5OkocFjEmYTOv
+    name: Webley Revolver
+    type: firearm
+    img: systems/torgeternity/images/icons/firearm-icon.webp
+    effects: []
+    folder: null
+    sort: 44400000
+    flags:
+      core:
+        sourceId: Compendium.te001-core-rulebook.Items.n63WoEGQsRLKfkBa
+    system:
+      cosm: Orrorsh
+      description: <p>Found in <strong>Core Rules</strong></p>
+      techlevel: 18
+      price: '300'
+      value: 12
+      attackWith: fireCombat
+      damageType: flat
+      damage: 14
+      ap: 0
+      ammo:
+        max: 6
+        value: 6
+      range: 10 / 25 / 40
+      notes: ''
+      chatNote: ''
+    ownership:
+      default: 0
+      A9LyAqagoJJU3gDH: 3
+      CtisFurQNe9h7ABb: 3
+    _stats:
+      systemId: torgeternity
+      systemVersion: 3.1.1
+      coreVersion: '11.308'
+      createdTime: 1693911912230
+      modifiedTime: 1693911912230
+      lastModifiedBy: CtisFurQNe9h7ABb
+    _key: '!actors.items!8KlJAaxeijOcrJKN.7DX5OkocFjEmYTOv'
+  - _id: d9Bzjb00u4cjYSiu
+    name: Bulletsmith
+    type: perk
+    img: systems/torgeternity/images/icons/reality-icon.webp
+    effects: []
+    folder: null
+    sort: 39500000
+    flags:
+      core:
+        sourceId: Compendium.te001-core-rulebook.Items.iKjiXUHRWLiyQY3S
+    system:
+      category: occult
+      cosm: Orrorsh
+      prerequisites: At least 2 adds in science
+      timestaken: 1
+      description: >-
+        <p>Adventurers of Orrorsh long ago learned lead bullets and steel blades
+        were no match for the horrors of their realm. Alchemy proved a great
+        help to their cause, and some intrepid souls eventually combined that
+        arcane craft with the more practical skill of marksmanship.</p><p>When
+        this Perk is taken, the user has a <q>slayer’s gun</q> and knows how to
+        create various rounds for it. He receives his weapon and the knowledge
+        to make basic metal slugs (damage 14) and any three of the specialized
+        rounds below. Crafted for close encounters, the short-barrel carbine
+        design of the slayer’s gun allows it to be used in melee like a
+        pistol.</p><p>Because the bullets are necessarily large and require
+        exacting specifications, monster hunters who make use of them have
+        standardized a sixchambered, carbine-style gun to fire them—the rounds
+        don’t work in any other kind of weapon.</p><ul><li><strong>Slayer’s
+        Gun:</strong> Range 50/100/200, damage 14, Shots
+        6</li></ul><p>Bulletsmiths can keep and maintain up to six special
+        bullets as long as they have access to their gear (which always contains
+        a small bullet-making kit). If more rounds are created, they lose the
+        magical essence the Bulletsmith inherently provides and act as regular
+        slugs (damage 14). Replacement rounds may be created between scenes, or
+        during downtime if the Game Master feels it’s
+        appropriate.</p><p>Slayer’s guns are designed to rotate quickly and so
+        can fire any one of their preloaded six chambers (specified before use).
+        Swapping or reloading up to three rounds is an
+        action.</p><p><strong>Slayer’s Bandoleer:</strong> Monster hunters wear
+        a specialized bandoleer designed to hold 18 shells total (12 regular
+        shells and their six special rounds).</p><p><strong>Extra
+        Shells:</strong> This Perk may be taken more than once. Each time after
+        the first the Bulletsmith learns to make a new type of shell and may
+        maintain two more special rounds at a time.</p><p>Here are some of the
+        shells Bulletsmiths have thus far discovered:</p><ul><li><strong>Adamant
+        Shell:</strong> Some of the Victorians’ foes are armored from head to
+        toe with metal, scales, or even a carapace. These shells are designed to
+        cut through them, causing Armor Piercing 4</li><li><strong>Electric
+        Shell:</strong> Water-based creatures or creatures standing in water
+        take an additional +4 damage when hit by electric shells. A previously
+        unknown side-effect of these rounds is that they can cause glitches in
+        high-tech <em>electronic</em> equipment. Robots and machines take the
+        extra damage, and sensitive equipment shorts out and is inoperable for
+        three rounds</li><li><strong>Explosive Shell:</strong> The most
+        dangerous of the Bullet Smith’s shells causes damage 15 in a Small Blast
+        Radius</li><li><strong>Giant Killer Shell:</strong> The Victorians
+        developed these heavy shells to take down the Gaunt Man’s biggest
+        horrors. They cause +5 damage against Large or greater
+        creatures</li><li><strong>Holy Water Shell:</strong> +2 damage versus
+        any supernaturally evil creature, including gospog, vampires, and
+        undead</li><li><strong>Phantom Shell:</strong> These rounds are made
+        from various reagents such as cold iron, salt, and holy water that
+        allows them to affect ethereal creatures normally</li><li><strong>Silver
+        Shell:</strong> Creatures with the Lycanthrope Special Ability take +4
+        damage from silver shells</li><li><strong>Sun Shell:</strong> These
+        rounds contain something the alchemists call <q>liquid sunlight.</q>
+        They explode with ultraviolet light in a Medium Blast, causing any
+        creatures <q>hit</q> by them to be Very Vulnerable if they have a
+        sensitivity to light or sunlight. Most creatures that can see in
+        darkness are affected by sun shells</li></ul>
+
+        <p>&nbsp;</p>
+
+        <p>Found in <strong>Core Rules</strong></p>
+      pulpPowers:
+        enhancementNumber: 0
+        enhancement01:
+          title: ''
+          description: ''
+          taken: false
+        enhancement02:
+          title: ''
+          description: ''
+          taken: false
+        enhancement03:
+          title: ''
+          description: ''
+          taken: false
+        enhancement04:
+          title: ''
+          description: ''
+          taken: false
+        enhancement05:
+          title: ''
+          description: ''
+          taken: false
+        enhancement06:
+          title: ''
+          description: ''
+          taken: false
+        enhancement07:
+          title: ''
+          description: ''
+          taken: false
+        enhancement08:
+          title: ''
+          description: ''
+          taken: false
+        enhancement09:
+          title: ''
+          description: ''
+          taken: false
+        enhancement10:
+          title: ''
+          description: ''
+          taken: false
+        enhancement11:
+          title: ''
+          description: ''
+          taken: false
+        enhancement12:
+          title: ''
+          description: ''
+          taken: false
+        enhancement13:
+          title: ''
+          description: ''
+          taken: false
+        enhancement14:
+          title: ''
+          description: ''
+          taken: false
+        enhancement15:
+          title: ''
+          description: ''
+          taken: false
+        limitationNumber: 0
+        limitation01: ''
+        limitation02: ''
+        limitation03: ''
+        limitation04: ''
+        limitation05: ''
+        limitation06: ''
+        limitation07: ''
+        limitation08: ''
+        limitation09: ''
+        limitation10: ''
+    ownership:
+      default: 0
+      A9LyAqagoJJU3gDH: 3
+      CtisFurQNe9h7ABb: 3
+    _stats:
+      systemId: torgeternity
+      systemVersion: 3.1.1
+      coreVersion: '11.308'
+      createdTime: 1693911979828
+      modifiedTime: 1693912033418
+      lastModifiedBy: CtisFurQNe9h7ABb
+    _key: '!actors.items!8KlJAaxeijOcrJKN.d9Bzjb00u4cjYSiu'
+  - _id: KgWICNPz8lNZiFIB
+    name: Medals (Dragon Slayer)
+    type: perk
+    img: systems/torgeternity/images/icons/reality-icon.webp
+    effects: []
+    folder: null
+    sort: 39600000
+    flags:
+      core:
+        sourceId: Compendium.te001-core-rulebook.Items.MevCMs1Mc6Ck02PP
+    system:
+      category: occult
+      cosm: Orrorsh
+      prerequisites: See the individual medals
+      timestaken: 1
+      description: >-
+        <p>Victorians are status conscious, and few are held in higher esteem
+        than their heroes. The Victorians show this regard by awarding medals to
+        the brave, the ingenious, and the intrepid. Sometimes the medals become
+        imbued with their intent and aid the recipient in their quest to save
+        Gaea.</p>
+
+        <p><strong>New Medals:</strong> This Perk may be taken as desired during
+        character creation. Afterwards, it may be taken multiple times, but only
+        after completing the event described in the individual awards. The
+        Dragon Slayer, for example, is awarded only after dealing the final blow
+        to a huge monster.</p>
+
+        <p>Medals don&rsquo;t arrive instantly, of course, but may be delivered
+        by courier after the Home Office receives dispatches testifying to the
+        deed, a loved one receives letters, or the press announces it to the
+        world. The Delphi Council understands the mystical nature of these
+        awards, however, and assists the Victorians in delivering them when
+        possible. Work with the Game Master to figure out the timing of the
+        medal itself, but it should generally occur no later than the act after
+        it was earned. The Perk may be purchased once the medal itself is in
+        hand.</p>
+
+        <p>A medal must be awarded <em>and</em> worn to grant its power. They
+        grant no bonuses to others.</p>
+
+        <p>Medals may be awarded to outsiders from other cosms, but only have
+        powers for those of Orrorsh&rsquo;s reality.</p>
+
+        <p>Unless an award says otherwise, it is never granted more than
+        once.</p>
+
+        <ul>
+
+        <li><strong>Carnifex Princeps:</strong> The Victorians know exactly who
+        the Gaunt Man is. This award is granted to anyone who takes part in the
+        killing of a ravagon, his fiercest lieutenants. The hero draws and adds
+        an additional card to his hand at the start of any Dramatic Scene</li>
+
+        <li><strong>Defender:</strong> Awarded to those who rescue or defend a
+        significant number of people, such as a school or town, at great
+        personal risk. The hero starts each act with one additional
+        @UUID[Compendium.te001-core-rulebook.rules.pwneQ55M0nnDH0Us.JournalEntryPage.kYP18QiA72P6PlUi#possibilities]{Possibility}</li>
+
+        <li><strong>Dragon Slayer:</strong> Awarded to those who defeat a very
+        large and powerful monster. The character adds +1 BD to all damage
+        totals against all Large or greater-sized creatures (not vehicles or
+        constructs) when Attack is an Approved Action</li>
+
+        <li><strong>Order of Cynthia Bartholomew:</strong> Awarded for helping
+        the injured or poor under great threat or for an extended period. <q>Ms.
+        Bart,</q> as the poor called her, was a Victorian humanitarian who
+        always helped the poor and downtrodden. Once per act, the recipient can
+        touch an ally to remove all shock. This is a simple action</li>
+
+        <li><strong>Victoria Gloriana:</strong> Awarded after personally playing
+        a Glory card. This prestigious award is only granted to the
+        country&rsquo;s greatest heroes. The medal grants a +1 bonus to any one
+        attribute and its linked skills, chosen when the medal is awarded. Note
+        that if the medal is worn and the attribute or linked skill is used, it
+        does cause a Contradiction</li>
+
+        <li><strong>Possibility Wars Campaign Medal:</strong> Awarded to any
+        Storm Knight who participates in a Glory event. The medal is awarded per
+        cosm, and may be used once per act to restore 1 BD of shock. This does
+        not require an action and may be used at any time</li>
+
+        <li><strong>Sole Survivor Medal:</strong> Awarded to the one person to
+        return from an otherwise doomed expedition. The Sole Survivor medal
+        cancels the effects of The Law of Perseverance and its recipient may
+        Soak damage normally in Orrorsh.</li>
+
+        <li><strong>India Campaign Medal:</strong> Awarded to any Storm Knight
+        who recovers an Eternity Shard inside Orrorsh. Once per act, the wearer
+        may play a Destiny Card into her own Action Pool or the pool of an ally
+        as a free reaction during any turn.</li>
+
+        <li><strong>Order Vestigium:</strong> Awarded to those who defeat a
+        Nightmare. <em>Evidence analysis</em> tests become Favored, and the
+        character is automatically aware if any clue to a Nightmare&rsquo;s
+        origin is nearby. This doesn&rsquo;t tell them what the clue is or where
+        it can be found, just that something is afoot.</li>
+
+        <li><strong>Order of the New Dawn:</strong> This medal is awarded to
+        those who have been cursed, but managed to eliminate the being or force
+        that cursed them. This award is a mixed blessing, as its presence also
+        alerts Victorians that the wearer is cursed, which may lead to trust
+        issues. The wearer&rsquo;s Corruption tests become Favored, and when a
+        test fails the medal may be <q>burned</q> instead of losing Charisma. It
+        still counts as a possessed Perk when determining the cost for buying
+        new ones, but no longer has any other effect if burned.</li>
+
+        </ul>
+
+        <p>&nbsp;</p>
+
+        <p>Found in <strong>Core Rules</strong></p>
+      pulpPowers:
+        enhancementNumber: 0
+        enhancement01:
+          title: ''
+          description: ''
+          taken: false
+        enhancement02:
+          title: ''
+          description: ''
+          taken: false
+        enhancement03:
+          title: ''
+          description: ''
+          taken: false
+        enhancement04:
+          title: ''
+          description: ''
+          taken: false
+        enhancement05:
+          title: ''
+          description: ''
+          taken: false
+        enhancement06:
+          title: ''
+          description: ''
+          taken: false
+        enhancement07:
+          title: ''
+          description: ''
+          taken: false
+        enhancement08:
+          title: ''
+          description: ''
+          taken: false
+        enhancement09:
+          title: ''
+          description: ''
+          taken: false
+        enhancement10:
+          title: ''
+          description: ''
+          taken: false
+        enhancement11:
+          title: ''
+          description: ''
+          taken: false
+        enhancement12:
+          title: ''
+          description: ''
+          taken: false
+        enhancement13:
+          title: ''
+          description: ''
+          taken: false
+        enhancement14:
+          title: ''
+          description: ''
+          taken: false
+        enhancement15:
+          title: ''
+          description: ''
+          taken: false
+        limitationNumber: 0
+        limitation01: ''
+        limitation02: ''
+        limitation03: ''
+        limitation04: ''
+        limitation05: ''
+        limitation06: ''
+        limitation07: ''
+        limitation08: ''
+        limitation09: ''
+        limitation10: ''
+    ownership:
+      default: 0
+      A9LyAqagoJJU3gDH: 3
+      CtisFurQNe9h7ABb: 3
+    _stats:
+      systemId: torgeternity
+      systemVersion: 3.1.1
+      coreVersion: '11.308'
+      createdTime: 1693911984563
+      modifiedTime: 1693912045162
+      lastModifiedBy: CtisFurQNe9h7ABb
+    _key: '!actors.items!8KlJAaxeijOcrJKN.KgWICNPz8lNZiFIB'
+  - _id: keq7EUhw9cRhwFpt
+    name: Caltrops
+    type: gear
+    img: systems/torgeternity/images/icons/gear-icon.webp
+    effects: []
+    folder: null
+    sort: 20500000
+    flags:
+      core:
+        sourceId: Compendium.te001-core-rulebook.Items.KKJPrdjO5sFkhZzF
+    system:
+      cosm: Aysle
+      description: >-
+        <p>A batch of scattered spikes that always land with a point upwards,
+        designed to impale feet and tires. Once deployed as a simple action
+        maneuver interactions become Favored around the spikes.</p>
+
+        <p>&nbsp;</p>
+
+        <p>Found in <strong>Core Rules</strong></p>
+      techlevel: 14
+      price: '40'
+      value: 8
+    ownership:
+      default: 0
+      A9LyAqagoJJU3gDH: 3
+      CtisFurQNe9h7ABb: 3
+    _stats:
+      systemId: torgeternity
+      systemVersion: 3.1.1
+      coreVersion: '11.308'
+      createdTime: 1693912105771
+      modifiedTime: 1693912105771
+      lastModifiedBy: CtisFurQNe9h7ABb
+    _key: '!actors.items!8KlJAaxeijOcrJKN.keq7EUhw9cRhwFpt'
+  - _id: rojDSaAJcWsl7TIO
+    name: Torch
+    type: gear
+    img: systems/torgeternity/images/icons/gear-icon.webp
+    effects: []
+    folder: null
+    sort: 24700000
+    flags:
+      core:
+        sourceId: Compendium.te001-core-rulebook.Items.R4N0t7lhhqM2uJO9
+    system:
+      cosm: Living Land
+      description: <p>Found in <strong>Core Rules</strong></p>
+      techlevel: 2
+      price: '5'
+      value: 4
+    ownership:
+      default: 0
+      A9LyAqagoJJU3gDH: 3
+      CtisFurQNe9h7ABb: 3
+    _stats:
+      systemId: torgeternity
+      systemVersion: 3.1.1
+      coreVersion: '11.308'
+      createdTime: 1693912110937
+      modifiedTime: 1693912110937
+      lastModifiedBy: CtisFurQNe9h7ABb
+    _key: '!actors.items!8KlJAaxeijOcrJKN.rojDSaAJcWsl7TIO'
+effects:
+  - _id: 2IAsYSb5OPCpRbTz
+    flags: {}
+    changes:
+      - key: system.other.toughness
+        value: '2'
+        mode: 2
+        priority: null
+      - key: system.other.armor
+        value: '2'
+        mode: 2
+        priority: null
+    disabled: false
+    duration:
+      startTime: 0
+      seconds: null
+      combat: null
+      rounds: null
+      turns: null
+      startRound: null
+      startTurn: null
+    icon: icons/svg/aura.svg
+    origin: >-
+      Compendium.torgeternity.archetypes.Actor.8KlJAaxeijOcrJKN.Item.x75vrICPEW0IMXTW
+    tint: null
+    transfer: false
+    name: Armor +2
+    description: ''
+    statuses: []
+    _key: '!actors.effects!8KlJAaxeijOcrJKN.2IAsYSb5OPCpRbTz'
+folder: null
+sort: 100001
+flags: {}
+system:
+  shock:
+    max: 10
+    value: 0
+  wounds:
+    max: 3
+    value: 0
+  attributes:
+    charisma: 5
+    dexterity: 9
+    mind: 8
+    spirit: 10
+    strength: 8
+  other:
+    move: 9
+    run: 27
+    toughness: 10
+    armor: 2
+    cosm: orrorsh
+    possibilities: 0
+    posibilities: 3
+  skills:
+    airVehicles:
+      baseAttribute: dexterity
+      adds: null
+      value: '-'
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    alteration:
+      baseAttribute: mind
+      adds: null
+      value: '-'
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    apportation:
+      baseAttribute: spirit
+      adds: null
+      value: '-'
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    beastRiding:
+      baseAttribute: dexterity
+      adds: null
+      value: 9
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    computers:
+      baseAttribute: mind
+      adds: null
+      value: 8
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    conjuration:
+      baseAttribute: spirit
+      adds: null
+      value: '-'
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    divination:
+      baseAttribute: mind
+      adds: null
+      value: '-'
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    dodge:
+      baseAttribute: dexterity
+      adds: 1
+      value: 10
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    energyWeapons:
+      baseAttribute: dexterity
+      adds: null
+      value: 9
+      isFav: false
+      groupName: combat
+      unskilledUse: 1
+    evidenceAnalysis:
+      baseAttribute: mind
+      adds: 1
+      value: 9
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    faith:
+      baseAttribute: spirit
+      adds: null
+      value: 10
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    find:
+      baseAttribute: mind
+      adds: 1
+      value: 9
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    fireCombat:
+      baseAttribute: dexterity
+      adds: 3
+      value: 12
+      isFav: false
+      groupName: combat
+      unskilledUse: 1
+    firstAid:
+      baseAttribute: mind
+      adds: null
+      value: 8
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    heavyWeapons:
+      baseAttribute: dexterity
+      adds: null
+      value: 9
+      isFav: false
+      groupName: combat
+      unskilledUse: 1
+    intimidation:
+      baseAttribute: spirit
+      adds: 2
+      value: 12
+      isFav: false
+      groupName: interaction
+      unskilledUse: 1
+    kinesis:
+      baseAttribute: spirit
+      adds: null
+      value: '-'
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    landVehicles:
+      baseAttribute: dexterity
+      adds: null
+      value: 9
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    language:
+      baseAttribute: mind
+      adds: null
+      value: '-'
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    lockpicking:
+      baseAttribute: dexterity
+      adds: null
+      value: '-'
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    maneuver:
+      baseAttribute: dexterity
+      adds: 1
+      value: 10
+      isFav: false
+      groupName: interaction
+      unskilledUse: 1
+    medicine:
+      baseAttribute: mind
+      adds: null
+      value: '-'
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    meleeWeapons:
+      baseAttribute: dexterity
+      adds: 1
+      value: 10
+      isFav: false
+      groupName: combat
+      unskilledUse: 1
+    missileWeapons:
+      baseAttribute: dexterity
+      adds: null
+      value: 9
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    persuasion:
+      baseAttribute: charisma
+      adds: null
+      value: 5
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    precognition:
+      baseAttribute: mind
+      adds: null
+      value: '-'
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    profession:
+      baseAttribute: mind
+      adds: null
+      value: 8
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    reality:
+      baseAttribute: spirit
+      adds: 1
+      value: 11
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    scholar:
+      baseAttribute: mind
+      adds: 1
+      value: 9
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    science:
+      baseAttribute: mind
+      adds: 2
+      value: 10
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    stealth:
+      baseAttribute: dexterity
+      adds: null
+      value: 9
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    streetwise:
+      baseAttribute: charisma
+      adds: null
+      value: 5
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    survival:
+      baseAttribute: mind
+      adds: null
+      value: 8
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    taunt:
+      baseAttribute: charisma
+      adds: null
+      value: 5
+      isFav: false
+      groupName: interaction
+      unskilledUse: 1
+    telepathy:
+      baseAttribute: charisma
+      adds: null
+      value: '-'
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    tracking:
+      baseAttribute: mind
+      adds: 1
+      value: 9
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    trick:
+      baseAttribute: mind
+      adds: null
+      value: 8
+      isFav: false
+      groupName: interaction
+      unskilledUse: 1
+    unarmedCombat:
+      baseAttribute: dexterity
+      adds: null
+      value: 9
+      isFav: false
+      groupName: combat
+      unskilledUse: 1
+    waterVehicles:
+      baseAttribute: dexterity
+      adds: null
+      value: 9
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    willpower:
+      baseAttribute: spirit
+      adds: 1
+      value: 11
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+  xp:
+    unspent: 0
+    earned: 0
+  axioms:
+    magic: 16
+    social: 18
+    spirit: 16
+    tech: 18
+  details:
+    clearance: alpha
+    background: >-
+      <p><img class="charimg"
+      src="systems/torgeternity/images/characters/Monster_Hunter.webp" alt=""
+      width="1139" height="1982"></p>
+
+      <p
+      class="moreheight">@UUID[Compendium.torgeternity.handouts.JournalEntry.Knhh8vqtjSylJo5Z.JournalEntryPage.XuZD3GOezHrsiAbQ]{Archetype
+      - The Monster Hunter}</p>
+
+      <h3>Overview</h3>
+
+      <p>You are a Victorian, and your world, Gaea, is caught in the grip of the
+      Gaunt Man&rsquo;s horrors. You weren&rsquo;t content to be ruled by
+      terror, and so you fought back. Against all odds you survived, and the
+      various tricks, gadgets, and special weapons you&rsquo;ve acquired over
+      years of battling evil have evened the odds considerably.</p>
+
+      <p>When the Gaunt Man gathered his dark forces to travel through the
+      maelstrom bridges and unleash their fury upon Core Earth, you followed to
+      stalk them, just as you&rsquo;ve always done.</p>
+
+      <h3>Tactics</h3>
+
+      <p>The special shells in your Slayer&rsquo;s Gun gives you power and
+      flexibility against specific foes, even outside of Orrorsh. Whenever you
+      can, investigate what types of foes are likely to appear and prepare a
+      custom load of shells to deal with them. Holy Water shells work well
+      against gospog, a common enemy employed by all the High Lords. Even once
+      all your specialized shells are used, your standard ammunition still packs
+      a punch.</p>
+
+      <p>You are highly resistant to fear and intimidation, but extremely
+      vulnerable to taunt interactions. Victorians are notoriously haughty and
+      intolerant of insults!</p>
+
+      <h3>Moment of Crisis</h3>
+
+      <p>Your crisis came long ago on Gaea. Maybe it was a werewolf, or perhaps
+      it was a vampire. Whatever it was, it was a product of the Gaunt
+      Man&rsquo;s evil. Tracking it back to its lair was foolhardy, but your
+      attempt triggered a change in you. As a Storm Knight you finally had the
+      power to fight back.</p>
+
+      <h3>Quote</h3>
+
+      <p>&ldquo;It&rsquo;s easier to stop fearing a thing once you have the
+      power to destroy it.&ldquo;</p>
+
+      <h3>Description</h3>
+
+      <p>Battling monsters is a dangerous profession, and you bear numerous
+      scars attesting to that fact. Only some of those scars are visible.
+      Victorians prefer modest dress, even in excruciating heat, and
+      you&rsquo;re no exception. Your distinctive coat made of strange leather
+      and the ornately decorated, oversized Slayer&rsquo;s Gun you carry are
+      both giveaways to your profession.</p>
+
+      <h3>Agenda</h3>
+
+      <p>The destruction of evil is an imperative. If left to fester, monsters
+      only become more vile and powerful. The High Lords, for all their tricks
+      and facades, are just more monsters for you to stalk and terminate.</p>
+
+      <h3>Names</h3>
+
+      <p>Ashton, Aubrey, Eli, Harper, Marion, Prester, Tanner, Thomas,
+      Winter</p>
+
+      <h3>Advancement Track (Optional)</h3>
+
+      <ul>
+
+      <li>(5 XP) Sniper</li>
+
+      <li>(7 XP) Bulletsmith (Explosive Shells)</li>
+
+      <li>(1 XP) <em>trick</em> +1</li>
+
+      <li>(2 XP) <em>maneuver</em> +2</li>
+
+      <li>(3 XP) <em>intimidation</em> +3</li>
+
+      <li>(3 XP) <em>melee weapons</em> +3</li>
+
+      <li>(4 XP) <em>fire combat</em> +4</li>
+
+      <li>(5 XP) <em>fire combat</em> +5</li>
+
+      </ul>
+    race: human
+  editstate: null
+  fatigue: '1'
+ownership:
+  default: 0
+  A9LyAqagoJJU3gDH: 3
+prototypeToken:
+  flags: {}
+  name: Monster Hunter
+  displayName: 30
+  width: 1
+  height: 1
+  lockRotation: false
+  rotation: 0
+  actorLink: true
+  disposition: 1
+  displayBars: 40
+  bar1:
+    attribute: wounds
+  bar2:
+    attribute: shock
+  randomImg: false
+  alpha: 1
+  light:
+    alpha: 1
+    angle: 360
+    bright: 0
+    coloration: 1
+    dim: 0
+    luminosity: 0.5
+    saturation: 0
+    contrast: 0
+    shadows: 0
+    animation:
+      type: null
+      speed: 5
+      intensity: 5
+      reverse: false
+    darkness:
+      min: 0
+      max: 1
+    color: null
+    attenuation: 0.5
+  texture:
+    src: systems/torgeternity/images/characters/monster_hunter.Token.webp
+    tint: null
+    scaleX: 1
+    scaleY: 1
+    offsetX: 0
+    offsetY: 0
+    rotation: 0
+  sight:
+    angle: 360
+    enabled: false
+    range: 0
+    brightness: 1
+    visionMode: basic
+    attenuation: 0.1
+    saturation: 0
+    contrast: 0
+  appendNumber: false
+  prependAdjective: false
+  detectionModes: []
+_stats:
+  systemId: torgeternity
+  systemVersion: 3.1.1
+  coreVersion: '11.308'
+  createdTime: 1693895859465
+  modifiedTime: 1693912116745
+  lastModifiedBy: CtisFurQNe9h7ABb
+_key: '!actors!8KlJAaxeijOcrJKN'
+

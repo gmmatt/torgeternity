@@ -1,0 +1,13 @@
+_id: qECNuuGTDaE6MMuy
+name: Chevalier des tempêtes
+content: "<p>Les Chevaliers des Tempêtes sont des héros ayant la capacité de manipuler l'énergie des possibilités. Dans Torg Eternity, chaque personnage du joueur est un chevalier de la tempête.</p>\n<p>\_</p>\n<p>Un personnage devient un Chevalier des Tempêtes lorsqu'il vit un @Compendium[torgeternity.basic-rules-fr.K1V5bNIiFKxiSkgn]{instant fatidique}. Une fois qu'il est devenu un chevalier de la tempête, le personnage peut puiser dans une réserve spéciale appelée @Compendium[torgeternity.basic-rules-fr.IvQQycIVv7OGCYb1]{énergie des possibilités}.</p>\n<p>\_</p>\n<p>Le système Torg Eternity pour Foundry comprend un compendium qui contient un ensemble de 16 archétypes de personnages prêts à jouer. Les règles et autres données nécessaires pour créer vos propres personnages sont incluses dans le module de règles de base de Torg Eternity, qui est disponible à l'achat.</p>\n<p>\_</p>"
+folder: null
+sort: 0
+permission:
+  kz1RJu8vrAPmTUwN: 3
+flags:
+  core:
+    sourceId: JournalEntry.ov890sgVM2Wig5Tk
+pages: []
+_key: '!journal!qECNuuGTDaE6MMuy'
+

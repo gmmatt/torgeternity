@@ -1,0 +1,1029 @@
+_id: 8KlJAaxeijOcrJKN
+name: Le chasseur de monstres
+type: stormknight
+img: systems/torgeternity/images/characters/Monster_Hunter.Avatar.webp
+data:
+  shock:
+    max: 10
+    value: 0
+  wounds:
+    max: 3
+    value: 0
+  attributes:
+    charisma: 5
+    dexterity: 9
+    mind: 8
+    spirit: 10
+    strength: 8
+  other:
+    move: 9
+    run: 27
+    toughness: 10
+    armor: 2
+    cosm: orrorsh
+    possibilities: 0
+    posibilities: 3
+  skills:
+    airVehicles:
+      baseAttribute: dexterity
+      adds: null
+      value: '-'
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    alteration:
+      baseAttribute: mind
+      adds: null
+      value: '-'
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    apportation:
+      baseAttribute: spirit
+      adds: null
+      value: '-'
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    beastRiding:
+      baseAttribute: dexterity
+      adds: null
+      value: 9
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    computers:
+      baseAttribute: mind
+      adds: null
+      value: 8
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    conjuration:
+      baseAttribute: spirit
+      adds: null
+      value: '-'
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    divination:
+      baseAttribute: mind
+      adds: null
+      value: '-'
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    dodge:
+      baseAttribute: dexterity
+      adds: 1
+      value: 10
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    energyWeapons:
+      baseAttribute: dexterity
+      adds: null
+      value: 9
+      isFav: false
+      groupName: combat
+      unskilledUse: 1
+    evidenceAnalysis:
+      baseAttribute: mind
+      adds: 1
+      value: 9
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    faith:
+      baseAttribute: spirit
+      adds: null
+      value: 10
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    find:
+      baseAttribute: mind
+      adds: 1
+      value: 9
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    fireCombat:
+      baseAttribute: dexterity
+      adds: 3
+      value: 12
+      isFav: false
+      groupName: combat
+      unskilledUse: 1
+    firstAid:
+      baseAttribute: mind
+      adds: null
+      value: 8
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    heavyWeapons:
+      baseAttribute: dexterity
+      adds: null
+      value: 9
+      isFav: false
+      groupName: combat
+      unskilledUse: 1
+    intimidation:
+      baseAttribute: spirit
+      adds: 2
+      value: 12
+      isFav: false
+      groupName: interaction
+      unskilledUse: 1
+    kinesis:
+      baseAttribute: spirit
+      adds: null
+      value: '-'
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    landVehicles:
+      baseAttribute: dexterity
+      adds: null
+      value: 9
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    language:
+      baseAttribute: mind
+      adds: null
+      value: '-'
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    lockpicking:
+      baseAttribute: dexterity
+      adds: null
+      value: '-'
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    maneuver:
+      baseAttribute: dexterity
+      adds: 1
+      value: 10
+      isFav: false
+      groupName: interaction
+      unskilledUse: 1
+    medicine:
+      baseAttribute: mind
+      adds: null
+      value: '-'
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    meleeWeapons:
+      baseAttribute: dexterity
+      adds: 1
+      value: 10
+      isFav: false
+      groupName: combat
+      unskilledUse: 1
+    missileWeapons:
+      baseAttribute: dexterity
+      adds: null
+      value: 9
+      isFav: false
+      groupName: combat
+      unskilledUse: 1
+    persuasion:
+      baseAttribute: charisma
+      adds: null
+      value: 5
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    precognition:
+      baseAttribute: mind
+      adds: null
+      value: '-'
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    profession:
+      baseAttribute: mind
+      adds: null
+      value: 8
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    reality:
+      baseAttribute: spirit
+      adds: 1
+      value: 11
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    scholar:
+      baseAttribute: mind
+      adds: 1
+      value: 9
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    science:
+      baseAttribute: mind
+      adds: 2
+      value: 10
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    stealth:
+      baseAttribute: dexterity
+      adds: null
+      value: 9
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    streetwise:
+      baseAttribute: charisma
+      adds: null
+      value: 5
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    survival:
+      baseAttribute: mind
+      adds: null
+      value: 8
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    taunt:
+      baseAttribute: charisma
+      adds: null
+      value: 5
+      isFav: false
+      groupName: interaction
+      unskilledUse: 1
+    telepathy:
+      baseAttribute: charisma
+      adds: null
+      value: '-'
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    tracking:
+      baseAttribute: mind
+      adds: 1
+      value: 9
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    trick:
+      baseAttribute: mind
+      adds: null
+      value: 8
+      isFav: false
+      groupName: interaction
+      unskilledUse: 1
+    unarmedCombat:
+      baseAttribute: dexterity
+      adds: null
+      value: 9
+      isFav: false
+      groupName: combat
+      unskilledUse: 1
+    waterVehicles:
+      baseAttribute: dexterity
+      adds: null
+      value: 9
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    willpower:
+      baseAttribute: spirit
+      adds: 1
+      value: 11
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+  xp:
+    unspent: 0
+    earned: 0
+  axioms:
+    magic: 16
+    social: 18
+    spirit: 16
+    tech: 18
+  details:
+    clearance: alpha
+    background: >-
+      <h2>Pr&eacute;sentation</h2>
+
+      <p class="MsoNormal"><span style="mso-spacerun: yes;">&nbsp;</span>Vous
+      &ecirc;tes un Victorien et votre monde, Ga&eacute;a, est ravag&eacute; par
+      les horreurs du D&eacute;charn&eacute;. Vous avez refus&eacute;
+      d&rsquo;&ecirc;tre soumis &agrave; la terreur alors vous avez
+      ripost&eacute;. Contre toute attente, vous avez surv&eacute;cu et les
+      diff&eacute;rents gadgets, les astuces et les armes sp&eacute;ciales que
+      vous avez acquis au fil des ann&eacute;es de combat vous ont permis de
+      r&eacute;tablir l&rsquo;&eacute;quilibre.</p>
+
+      <p class="MsoNormal">Quand le D&eacute;charn&eacute; a rassembl&eacute;
+      ses sombres hordes pour franchir les ponts maelstr&ouml;m afin de
+      d&eacute;cha&icirc;ner sa fureur sur la Prime Terre, vous avez
+      d&eacute;cid&eacute; de les suivre pour les harceler comme vous
+      l&rsquo;avez toujours fait.</p>
+
+      <h2>Tactiques</h2>
+
+      <p class="MsoNormal">Les cartouches sp&eacute;ciales de votre fusil tueur
+      vous conf&egrave;rent une grande puissance de feu et une grande souplesse
+      contre des ennemis pr&eacute;cis, m&ecirc;me en dehors d&rsquo;Orrorsh.
+      &Agrave; chaque fois que vous le pouvez, renseignez-vous pour savoir quels
+      types d&rsquo;adversaires vous risquez de rencontrer et pr&eacute;parez
+      votre &eacute;quipement en cons&eacute;quence. Les Cartouches d&rsquo;eau
+      b&eacute;nite sont efficaces contre les gospogs, un ennemi commun
+      employ&eacute; par tous les Seigneurs de R&eacute;alit&eacute;. M&ecirc;me
+      une fois toutes vos cartouches sp&eacute;cialis&eacute;es
+      utilis&eacute;es, vos munitions standards demeurent assez puissantes. Vous
+      &ecirc;tes tr&egrave;s r&eacute;sistant &agrave; la peur et &agrave;
+      l&rsquo;Intimidation mais tr&egrave;s vuln&eacute;rable aux interactions
+      offensives de Provocation. Les Victoriens sont notoirement hautains et ne
+      supportent pas les insultes.</p>
+
+      <h2><span style="mso-spacerun: yes;">&nbsp;</span>Instant fatidique</h2>
+
+      <p class="MsoNormal">Votre Instant fatidique s&rsquo;est produit il y a
+      tr&egrave;s longtemps sur Ga&eacute;a. Peut-&ecirc;tre &agrave; cause
+      d&rsquo;un loup-garou ou d&rsquo;un vampire. Quoi qu&rsquo;il en soit,
+      c&rsquo;&eacute;tait une abomination engendr&eacute;e par la malfaisance
+      du D&eacute;charn&eacute;. La traquer jusqu&rsquo;&agrave; sa
+      tani&egrave;re &eacute;tait t&eacute;m&eacute;raire mais cela a
+      d&eacute;clench&eacute; un changement en vous. En tant que Chevalier des
+      Temp&ecirc;tes vous avez d&eacute;sormais le pouvoir de
+      r&eacute;pliquer.</p>
+
+      <h2>Citation</h2>
+
+      <p class="MsoNormal">&laquo; Il est plus facile de ne plus avoir peur
+      d&rsquo;une chose une fois que vous avez le pouvoir de la d&eacute;truire.
+      &raquo;</p>
+
+      <h2><span style="mso-spacerun: yes;">&nbsp;</span>Description</h2>
+
+      <p class="MsoNormal">*Combattre des monstres est une profession dangereuse
+      et vos diff&eacute;rentes cicatrices sont l&agrave; pour en
+      t&eacute;moigner. Seules certaines de ces cicatrices sont visibles. Les
+      Victoriens pr&eacute;f&egrave;rent les tenues modestes couvrant tout leur
+      corps m&ecirc;me quand il fait extr&ecirc;mement chaud et vous ne faites
+      pas exception &agrave; la r&egrave;gle. Votre manteau si particulier,
+      constitu&eacute; d&rsquo;un cuir &eacute;trange, et votre fusil tueur
+      d&eacute;mesur&eacute; et d&eacute;cor&eacute; trahissent votre
+      profession.</p>
+
+      <h2>Objectif</h2>
+
+      <p class="MsoNormal"><span style="mso-spacerun: yes;">&nbsp; </span>La
+      destruction du mal est un imp&eacute;ratif. Si on les laisse<span
+      style="mso-spacerun: yes;">&nbsp;&nbsp; </span>prosp&eacute;rer, les
+      monstres deviennent encore plus puissants<span style="mso-spacerun:
+      yes;">&nbsp;&nbsp; </span>et vils. Les Seigneurs de R&eacute;alit&eacute;,
+      malgr&eacute; toutes leurs ruses<span style="mso-spacerun:
+      yes;">&nbsp;&nbsp; </span>et leurs faux semblants, ne sont que des
+      monstres que vous<span style="mso-spacerun: yes;">&nbsp;&nbsp;
+      </span>devez traquer et exterminer.</p>
+
+      <h2><span style="mso-spacerun: yes;">&nbsp; </span>Noms</h2>
+
+      <p class="MsoNormal"><span style="mso-spacerun: yes;">&nbsp;
+      </span>Ashton, Aubrey, Eli, Harper, Marion, Prester, Tanner,<span
+      style="mso-spacerun: yes;">&nbsp;&nbsp; </span>Thomas, Winter<span
+      style="mso-spacerun: yes;">&nbsp;&nbsp; </span></p>
+
+      <h2>Piste de progression (optionnelle)<span style="mso-spacerun:
+      yes;">&nbsp; </span></h2>
+
+      <p class="MsoNormal"><span style="mso-spacerun: yes;">&nbsp;</span>□ (5
+      PX) Tireur d&rsquo;&eacute;lite<span style="mso-spacerun:
+      yes;">&nbsp;&nbsp; </span></p>
+
+      <p class="MsoNormal">□ (7 PX) Armurier (Cartouches explosives)<span
+      style="mso-spacerun: yes;">&nbsp;&nbsp;</span></p>
+
+      <p class="MsoNormal"><span style="mso-spacerun: yes;"> </span>□ (1 PX)
+      Ruse +1<span style="mso-spacerun: yes;">&nbsp;&nbsp; </span></p>
+
+      <p class="MsoNormal">□ (2 PX) Manoeuvre +2<span style="mso-spacerun:
+      yes;">&nbsp;&nbsp; </span></p>
+
+      <p class="MsoNormal">□ (3 PX) Intimidation +3<span style="mso-spacerun:
+      yes;">&nbsp;&nbsp; </span></p>
+
+      <p class="MsoNormal">□ (3 PX) Armes de m&ecirc;l&eacute;e +3<span
+      style="mso-spacerun: yes;">&nbsp;&nbsp; </span></p>
+
+      <p class="MsoNormal">□ (4 PX) Armes &agrave; feu +4<span
+      style="mso-spacerun: yes;">&nbsp;&nbsp; </span></p>
+
+      <p class="MsoNormal">□ (5 PX) Armes &agrave; feu +5<span
+      style="mso-spacerun: yes;">&nbsp;&nbsp; </span></p>
+    race: human
+  editstate: null
+  fatigue: '1'
+token:
+  flags: {}
+  name: Le chasseur de monstres
+  displayName: 30
+  img: systems/torgeternity/images/characters/Monster_Hunter.Token.webp
+  tint: null
+  width: 1
+  height: 1
+  scale: 1
+  mirrorX: false
+  mirrorY: false
+  lockRotation: false
+  rotation: 0
+  vision: false
+  dimSight: 0
+  brightSight: 0
+  dimLight: 0
+  brightLight: 0
+  sightAngle: 0
+  lightAngle: 360
+  lightColor: ''
+  lightAlpha: 1
+  lightAnimation:
+    type: ''
+    speed: 5
+    intensity: 5
+  actorId: 8KlJAaxeijOcrJKN
+  actorLink: true
+  disposition: 1
+  displayBars: 20
+  bar1:
+    attribute: shock
+  bar2:
+    attribute: wounds
+  randomImg: false
+  alpha: 1
+  light:
+    alpha: 0.5
+    angle: 0
+    bright: 0
+    coloration: 1
+    dim: 0
+    gradual: true
+    luminosity: 0.5
+    saturation: 0
+    contrast: 0
+    shadows: 0
+    animation:
+      speed: 5
+      intensity: 5
+      reverse: false
+    darkness:
+      min: 0
+      max: 1
+    color: null
+items:
+  - _id: 9Kmq8C81nIIjwSdi
+    name: Armurier
+    type: perk
+    data:
+      category: occult
+      cosm: Orrorsh
+      prerequisites: au moins 2 rangs en Sciences
+      timestaken: 1
+      description: >-
+        <p class="MsoNormal">Les aventuriers d&rsquo;Orrorsh ont appris il y a
+        bien longtemps que les balles en plomb et les lames en acier
+        &eacute;taient inutiles contre les horreurs de leur royaume.
+        L&rsquo;alchimie leur a &eacute;t&eacute; d&rsquo;un grand secours et
+        certaines &acirc;mes intr&eacute;pides sont parvenues &agrave; combiner
+        cet art occulte avec celui de la fabrication des armes.</p>
+
+        <p class="MsoNormal">Quand il choisit cet Atout, l&rsquo;utilisateur
+        obtient un &laquo; fusil de tueur &raquo; et sait fabriquer des
+        munitions pour cette arme. Il re&ccedil;oit son arme et les
+        connaissances n&eacute;cessaires pour fabriquer des projectiles
+        m&eacute;talliques basiques (dommages 14) et trois des balles
+        sp&eacute;cialis&eacute;es pr&eacute;sent&eacute;es ci-apr&egrave;s.
+        Con&ccedil;u pour le combat rapproch&eacute;, la conception du fusil de
+        tueur &agrave; canon court permet &agrave; son utilisateur de s&rsquo;en
+        servir en m&ecirc;l&eacute;e, comme un pistolet.</p>
+
+        <p class="MsoNormal">Comme les balles sont forc&eacute;ment volumineuses
+        et ont des sp&eacute;cifications exigeantes, les chasseurs de monstres
+        qui les utilisent ont cr&eacute;&eacute; un fusil standardis&eacute;
+        &agrave; six coups dont les balles ne peuvent &ecirc;tre
+        utilis&eacute;es avec une autre arme.</p>
+      pulpPowers:
+        enhancementNumber: 0
+        enhancement01:
+          title: ''
+          description: ''
+          taken: false
+        enhancement02:
+          title: ''
+          description: ''
+          taken: false
+        enhancement03:
+          title: ''
+          description: ''
+          taken: false
+        enhancement04:
+          title: ''
+          description: ''
+          taken: false
+        enhancement05:
+          title: ''
+          description: ''
+          taken: false
+        enhancement06:
+          title: ''
+          description: ''
+          taken: false
+        enhancement07:
+          title: ''
+          description: ''
+          taken: false
+        enhancement08:
+          title: ''
+          description: ''
+          taken: false
+        enhancement09:
+          title: ''
+          description: ''
+          taken: false
+        enhancement10:
+          title: ''
+          description: ''
+          taken: false
+        enhancement11:
+          title: ''
+          description: ''
+          taken: false
+        enhancement12:
+          title: ''
+          description: ''
+          taken: false
+        enhancement13:
+          title: ''
+          description: ''
+          taken: false
+        enhancement14:
+          title: ''
+          description: ''
+          taken: false
+        enhancement15:
+          title: ''
+          description: ''
+          taken: false
+        limitationNumber: 0
+        limitation01: ''
+        limitation02: ''
+        limitation03: ''
+        limitation04: ''
+        limitation05: ''
+        limitation06: ''
+        limitation07: ''
+        limitation08: ''
+        limitation09: ''
+        limitation10: ''
+    sort: 100000
+    flags:
+      core:
+        sourceId: Compendium.te001-core-rulebook.Items.perk-bulletsmith
+    img: systems/torgeternity/images/icons/perk.webp
+    effects: []
+    folder: null
+    permission:
+      default: 0
+    mce_22: >-
+      <p class="MsoNormal">Les aventuriers d&rsquo;Orrorsh ont appris il y a
+      bien longtemps que les balles en plomb et les lames en acier
+      &eacute;taient inutiles contre les horreurs de leur royaume.
+      L&rsquo;alchimie leur a &eacute;t&eacute; d&rsquo;un grand secours et
+      certaines &acirc;mes intr&eacute;pides sont parvenues &agrave; combiner
+      cet art occulte avec celui de la fabrication des armes.</p>
+
+      <p class="MsoNormal">Quand il choisit cet Atout, l&rsquo;utilisateur
+      obtient un &laquo; fusil de tueur &raquo; et sait fabriquer des munitions
+      pour cette arme. Il re&ccedil;oit son arme et les connaissances
+      n&eacute;cessaires pour fabriquer des projectiles m&eacute;talliques
+      basiques (dommages 14) et trois des balles sp&eacute;cialis&eacute;es
+      pr&eacute;sent&eacute;es ci-apr&egrave;s. Con&ccedil;u pour le combat
+      rapproch&eacute;, la conception du fusil de tueur &agrave; canon court
+      permet &agrave; son utilisateur de s&rsquo;en servir en
+      m&ecirc;l&eacute;e, comme un pistolet.</p>
+
+      <p class="MsoNormal">Comme les balles sont forc&eacute;ment volumineuses
+      et ont des sp&eacute;cifications exigeantes, les chasseurs de monstres qui
+      les utilisent ont cr&eacute;&eacute; un fusil standardis&eacute; &agrave;
+      six coups dont les balles ne peuvent &ecirc;tre utilis&eacute;es avec une
+      autre arme.</p>
+    _key: '!actors.items!8KlJAaxeijOcrJKN.9Kmq8C81nIIjwSdi'
+  - _id: UTEYkvqTcKLhFHtX
+    name: Caltrops (en argent)
+    type: gear
+    data:
+      cosm: Orrorsh
+      description: >-
+        <p class="MsoNormal">Plusieurs petites pi&egrave;ces m&eacute;talliques
+        constitu&eacute;es de pointes dont l&rsquo;une d&rsquo;elles est
+        orient&eacute;e vers le haut. Dispers&eacute;es par terre, elles sont
+        pr&eacute;vues pour crever les pneus ou pour que des victimes marchent
+        dessus. Une fois d&eacute;ploy&eacute;es avec une action simple,
+        l&rsquo;interaction Manoeuvre devient Favoris&eacute;e autour des
+        pointes.</p>
+      techlevel: 14
+      price: '40'
+      value: 8
+    sort: 300000
+    flags:
+      core:
+        sourceId: Compendium.te001-core-rulebook.Items.item-caltrops
+    img: systems/torgeternity/images/icons/gear.webp
+    effects: []
+    folder: null
+    permission:
+      default: 0
+    _key: '!actors.items!8KlJAaxeijOcrJKN.UTEYkvqTcKLhFHtX'
+  - _id: gfxtCXojsN3PMaUK
+    name: Fusil tueur
+    type: firearm
+    data:
+      cosm: Orrorsh
+      description: >-
+        <p><strong>Cartouches en adamante :</strong></p>
+
+        <p>2 cartouches, P&eacute;n&eacute;tration d&rsquo;armure 4</p>
+
+        <p><strong>Cartouches d&rsquo;eau b&eacute;nite :</strong></p>
+
+        <p>2 cartouches, +2 aux dommages contre cr&eacute;atures
+        mal&eacute;fiques</p>
+
+        <p><strong>Cartouches de Fusil tueur :</strong></p>
+
+        <p>12 cartouches, dommages de base de 14</p>
+      techlevel: 18
+      price: '0'
+      value: 0
+      attackWith: fireCombat
+      damageType: ''
+      damage: 14
+      ap: 0
+      ammo:
+        max: 6
+        value: 6
+      range: 50/100/200
+      notes: Utilise les munitions spéciales
+      chatNote: ''
+    sort: 100001
+    flags:
+      core:
+        sourceId: Item.fW9IrnHVWRXgCWEx
+    img: systems/torgeternity/images/icons/firearm.webp
+    effects: []
+    folder: null
+    permission:
+      default: 0
+    mce_28: >-
+      <p><strong>Cartouches en adamante :</strong></p>
+
+      <p>2 cartouches, P&eacute;n&eacute;tration d&rsquo;armure 4</p>
+
+      <p><strong>Cartouches d&rsquo;eau b&eacute;nite :</strong></p>
+
+      <p>2 cartouches, +2 aux dommages contre cr&eacute;atures
+      mal&eacute;fiques</p>
+
+      <p><strong>Cartouches de Fusil tueur :</strong></p>
+
+      <p>12 cartouches, dommages de base de 14</p>
+    _key: '!actors.items!8KlJAaxeijOcrJKN.gfxtCXojsN3PMaUK'
+  - _id: P5v3znC9UTPMRB7J
+    name: Dague en argent
+    type: meleeweapon
+    data:
+      cosm: Orrorsh
+      description: >-
+        <p>Une arme &agrave; lame courte de 15 &agrave; 30 centim&egrave;tres de
+        long. Les dagues peuvent facilement &ecirc;tre&nbsp; dissimul&eacute;es
+        et d&eacute;gain&eacute;es en combat rapproch&eacute;</p>
+      techlevel: 8
+      price: '25'
+      value: 7
+      attackWith: meleeWeapons
+      damageType: strengthPlus
+      damage: 1
+      ap: 0
+      bonus: 2
+      notes: Lancée avec Armes de jet
+      chatNote: Discret
+    sort: 500000
+    flags:
+      core:
+        sourceId: Compendium.te001-core-rulebook.Items.item-dagger
+    img: systems/torgeternity/images/icons/meleeweapon.webp
+    effects: []
+    folder: null
+    permission:
+      default: 0
+    _key: '!actors.items!8KlJAaxeijOcrJKN.P5v3znC9UTPMRB7J'
+  - _id: JUgj5Cmj63HzgDek
+    name: Revolver Webley
+    type: firearm
+    data:
+      cosm: Orrorsh
+      description: ''
+      techlevel: 18
+      price: '200'
+      value: 12
+      attackWith: fireCombat
+      damageType: flat
+      damage: 14
+      ap: 0
+      ammo:
+        max: 6
+        value: 6
+      range: 10 / 25 / 40
+      notes: ''
+      chatNote: ''
+    sort: 600000
+    flags:
+      core:
+        sourceId: Compendium.te001-core-rulebook.Items.item-webley-revolver
+    img: systems/torgeternity/images/icons/firearm.webp
+    effects: []
+    folder: null
+    permission:
+      default: 0
+    mce_29: ''
+    _key: '!actors.items!8KlJAaxeijOcrJKN.JUgj5Cmj63HzgDek'
+  - _id: RUsXW2vMzlcDbzM4
+    name: Manteau en peau de monstre
+    type: armor
+    data:
+      cosm: Orrorsh
+      description: >-
+        <p class="MsoNormal">Un long manteau constitu&eacute; de la peau
+        trait&eacute;e de diff&eacute;rentes b&ecirc;tes qui terrorisaient les
+        innocents. Les monstres d&rsquo;Orrorsh sont notoirement robustes, aussi
+        le cuir de leur peau est particuli&egrave;rement r&eacute;sistant.</p>
+      techlevel: 16
+      price: '350'
+      value: 12
+      bonus: 2
+      maxDex: 10
+      minStrength: null
+      equipped: false
+      equippedClass: item-unequipped
+      notes: Fatigue
+    sort: 100001
+    flags:
+      core:
+        sourceId: Item.Lr8qGqk2VWGODo7S
+    img: systems/torgeternity/images/icons/armor.webp
+    effects:
+      - _id: 1oM56g3yX2h8ox2M
+        flags: {}
+        changes:
+          - key: data.other.armor
+            value: '2'
+            mode: 2
+          - key: data.other.toughness
+            value: '2'
+            mode: 2
+        disabled: false
+        duration:
+          startTime: null
+        icon: icons/svg/aura.svg
+        label: Armor +2
+        origin: Item.Lr8qGqk2VWGODo7S
+        tint: null
+        transfer: true
+        _key: >-
+          !actors.items.effects!8KlJAaxeijOcrJKN.RUsXW2vMzlcDbzM4.1oM56g3yX2h8ox2M
+    folder: null
+    permission:
+      default: 0
+    _key: '!actors.items!8KlJAaxeijOcrJKN.RUsXW2vMzlcDbzM4'
+  - _id: k5oxi4S2Vf0lhwIa
+    name: Médaille (Tueur de dragon)
+    type: perk
+    img: systems/torgeternity/images/icons/perk.webp
+    data:
+      category: occult
+      cosm: Orrorsh
+      prerequisites: voir la description de chaque médaille.
+      timestaken: 1
+      description: >-
+        <p class="MsoNormal">Les Victoriens sont tr&egrave;s attach&eacute;s au
+        statut et peu sont consid&eacute;r&eacute;s avec autant d&rsquo;estime
+        que leurs h&eacute;ros. Les Victoriens t&eacute;moignent de cette estime
+        en accordant des m&eacute;dailles aux braves, aux ing&eacute;nieux et
+        aux intr&eacute;pides. Parfois, ces m&eacute;dailles
+        s&rsquo;impr&egrave;gnent de la nature m&ecirc;me de l&rsquo;acte
+        r&eacute;compens&eacute; et aident le b&eacute;n&eacute;ficiaire dans sa
+        qu&ecirc;te pour sauver Ga&eacute;a.</p>
+
+        <p class="MsoNormal"><strong>Nouvelles M&eacute;dailles </strong>: cet
+        Atout peut &ecirc;tre choisi autant de fois que souhait&eacute; au cours
+        de la cr&eacute;ation de personnage. Apr&egrave;s, il peut &ecirc;tre
+        choisi plusieurs fois mais uniquement apr&egrave;s avoir accompli
+        l&rsquo;exploit d&eacute;crit pour chaque type de m&eacute;daille. Le
+        Tueur de dragon, par exemple, n&rsquo;est accord&eacute;
+        qu&rsquo;apr&egrave;s avoir inflig&eacute; le coup de gr&acirc;ce
+        &agrave; un monstre &eacute;norme.</p>
+
+        <p class="MsoNormal">Les m&eacute;dailles ne sont pas accord&eacute;es
+        instantan&eacute;ment, naturellement, mais elles peuvent &ecirc;tre
+        remises par courrier apr&egrave;s que le Bureau central a obtenu les
+        preuves de cet exploit, un proche a re&ccedil;u une lettre ou que la
+        presse l&rsquo;a annonc&eacute; au monde entier. Cependant, le Conseil
+        de Delphes est conscient de la nature mystique de ces r&eacute;compenses
+        et aide les Victoriens &agrave; les remettre le plus rapidement
+        possible. Discutez avec le MJ pour d&eacute;terminer le d&eacute;lai
+        avant l&rsquo;obtention de la m&eacute;daille mais,
+        g&eacute;n&eacute;ralement, elle ne devrait pas arriver plus tard que la
+        fin de l&rsquo;Acte apr&egrave;s lequel elle a &eacute;t&eacute;
+        gagn&eacute;e. L&rsquo;Atout peut &ecirc;tre achet&eacute; une fois la
+        m&eacute;daille obtenue.</p>
+
+        <p class="MsoNormal">Pour qu&rsquo;elle accorde son pouvoir, une
+        m&eacute;daille doit &ecirc;tre offerte et port&eacute;e. Personne
+        d&rsquo;autre ne peut b&eacute;n&eacute;ficier de ses bonus.</p>
+
+        <p class="MsoNormal">Des m&eacute;dailles peuvent r&eacute;compenser des
+        &eacute;trangers venus des autres cosms mais elles n&rsquo;ont un
+        pouvoir que pour ceux de la r&eacute;alit&eacute;
+        d&rsquo;Orrorsh.&nbsp;</p>
+
+        <p class="MsoNormal">&Agrave; moins que le contraire ne soit
+        indiqu&eacute;, une m&ecirc;me r&eacute;compense n&rsquo;est
+        accord&eacute;e qu&rsquo;une seule fois.</p>
+
+        <p class="MsoNormal">&nbsp;</p>
+
+        <p class="MsoNormal"><strong>Tueur de dragon :</strong></p>
+
+        <p class="MsoNormal">accord&eacute;e &agrave; ceux qui triomphent
+        d&rsquo;un monstre tr&egrave;s grand et tr&egrave;s puissant. Quand
+        l&rsquo;Attaque est une Action approuv&eacute;e, le personnage ajoute +1
+        DB au total de ses dommages contre les cr&eacute;atures de Grande taille
+        ou d&rsquo;une taille sup&eacute;rieure (pas les v&eacute;hicules ou les
+        cr&eacute;atures artificielles).</p>
+      pulpPowers:
+        enhancementNumber: 0
+        enhancement01:
+          title: ''
+          description: ''
+          taken: false
+        enhancement02:
+          title: ''
+          description: ''
+          taken: false
+        enhancement03:
+          title: ''
+          description: ''
+          taken: false
+        enhancement04:
+          title: ''
+          description: ''
+          taken: false
+        enhancement05:
+          title: ''
+          description: ''
+          taken: false
+        enhancement06:
+          title: ''
+          description: ''
+          taken: false
+        enhancement07:
+          title: ''
+          description: ''
+          taken: false
+        enhancement08:
+          title: ''
+          description: ''
+          taken: false
+        enhancement09:
+          title: ''
+          description: ''
+          taken: false
+        enhancement10:
+          title: ''
+          description: ''
+          taken: false
+        enhancement11:
+          title: ''
+          description: ''
+          taken: false
+        enhancement12:
+          title: ''
+          description: ''
+          taken: false
+        enhancement13:
+          title: ''
+          description: ''
+          taken: false
+        enhancement14:
+          title: ''
+          description: ''
+          taken: false
+        enhancement15:
+          title: ''
+          description: ''
+          taken: false
+        limitationNumber: 0
+        limitation01: ''
+        limitation02: ''
+        limitation03: ''
+        limitation04: ''
+        limitation05: ''
+        limitation06: ''
+        limitation07: ''
+        limitation08: ''
+        limitation09: ''
+        limitation10: ''
+    effects: []
+    folder: null
+    sort: 200000
+    permission:
+      default: 0
+      qjRKKHBumHYSfxpw: 3
+    flags:
+      core:
+        sourceId: Compendium.te001-core-rulebook.Items.perk-medals
+    _key: '!actors.items!8KlJAaxeijOcrJKN.k5oxi4S2Vf0lhwIa'
+  - _id: rj0VDXqmToHXvSNg
+    name: Torche
+    type: gear
+    img: systems/torgeternity/images/icons/gear.webp
+    data:
+      cosm: Terre-Vivante
+      description: <p>&Eacute;claire</p>
+      techlevel: 2
+      price: '5'
+      value: 4
+    effects: []
+    folder: null
+    sort: 2400000
+    permission:
+      default: 0
+      qjRKKHBumHYSfxpw: 3
+    flags:
+      core:
+        sourceId: Item.TE2jmWDyTxhRulgk
+    _key: '!actors.items!8KlJAaxeijOcrJKN.rj0VDXqmToHXvSNg'
+  - _id: hQZcOgojBbDcCCfe
+    name: Attaque à mains nues
+    type: customAttack
+    img: systems/torgeternity/images/icons/fist-icon.webp
+    data:
+      description: ''
+      attackWith: unarmedCombat
+      damageType: strengthPlus
+      damage: 0
+      ap: 0
+      notes: ''
+      chatNote: ''
+    effects: []
+    folder: null
+    sort: 0
+    permission:
+      default: 0
+      zWX19sSAtAWkeGhp: 3
+    flags:
+      core:
+        sourceId: Item.BFGjhDetVDm1xiku
+    _key: '!actors.items!8KlJAaxeijOcrJKN.hQZcOgojBbDcCCfe'
+effects:
+  - _id: 4CnECaHDlW4TJfe7
+    flags: {}
+    changes:
+      - key: data.other.armor
+        value: '2'
+        mode: 2
+      - key: data.other.toughness
+        value: '2'
+        mode: 2
+    disabled: false
+    duration:
+      startTime: 0
+      startRound: 0
+      startTurn: 0
+    icon: icons/svg/aura.svg
+    label: Armor +2
+    origin: Actor.jvm80YhOFmKEp0Zy.OwnedItem.RUsXW2vMzlcDbzM4
+    tint: null
+    transfer: true
+    _key: '!actors.effects!8KlJAaxeijOcrJKN.4CnECaHDlW4TJfe7'
+folder: null
+sort: 100001
+permission:
+  default: 0
+  A9LyAqagoJJU3gDH: 3
+flags: {}
+_key: '!actors!8KlJAaxeijOcrJKN'
+

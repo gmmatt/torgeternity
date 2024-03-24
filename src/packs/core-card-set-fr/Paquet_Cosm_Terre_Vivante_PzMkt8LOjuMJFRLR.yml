@@ -1,0 +1,256 @@
+_id: PzMkt8LOjuMJFRLR
+name: Paquet Cosm Terre Vivante
+type: deck
+description: ''
+img: systems/torgeternity/images/cards/living-land-back.webp
+data: {}
+cards:
+  - _id: gJxAqFpVTfWJnVe7
+    name: Attaque de dinos !
+    description: ''
+    type: cosm
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Dino Attack!
+        img: systems/torgeternity/images/cards/cosm/living-land/fr/01.webp
+        text: ''
+    face: 1
+    drawn: false
+    origin: pv0VdyaTRNSwjiGi
+    rotation: 0
+    sort: 0
+    flags: {}
+    number: null
+    _key: '!cards.cards!PzMkt8LOjuMJFRLR.gJxAqFpVTfWJnVe7'
+    cards: []
+  - _id: iZaVFWN8xPwtNRrn
+    name: Loi de la déterioration
+    description: ''
+    type: cosm
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: The Law of Decay
+        img: systems/torgeternity/images/cards/cosm/living-land/fr/02.webp
+        text: ''
+    face: 1
+    drawn: false
+    origin: pv0VdyaTRNSwjiGi
+    rotation: 0
+    sort: 1
+    flags: {}
+    number: null
+    _key: '!cards.cards!PzMkt8LOjuMJFRLR.iZaVFWN8xPwtNRrn'
+    cards: []
+  - _id: dkRxxnTGMYROgtW8
+    name: La meilleur défense
+    description: ''
+    type: cosm
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: The Best Defense
+        img: systems/torgeternity/images/cards/cosm/living-land/fr/03.webp
+        text: ''
+    face: 1
+    drawn: false
+    origin: pv0VdyaTRNSwjiGi
+    rotation: 0
+    sort: 2
+    flags: {}
+    number: null
+    _key: '!cards.cards!PzMkt8LOjuMJFRLR.dkRxxnTGMYROgtW8'
+    cards: []
+  - _id: k1y7C4Wm7cKSyvcA
+    name: La survie du plus fort
+    description: ''
+    type: cosm
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Survival of the Fittest
+        img: systems/torgeternity/images/cards/cosm/living-land/fr/04.webp
+        text: ''
+    face: 1
+    drawn: false
+    origin: pv0VdyaTRNSwjiGi
+    rotation: 0
+    sort: 3
+    flags: {}
+    number: null
+    _key: '!cards.cards!PzMkt8LOjuMJFRLR.k1y7C4Wm7cKSyvcA'
+    cards: []
+  - _id: i8I6o5b6pf7EtiCv
+    name: Les périls de la Terre Vivante
+    description: ''
+    type: cosm
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Perils of the Living Land
+        img: systems/torgeternity/images/cards/cosm/living-land/fr/05.webp
+        text: ''
+    face: 1
+    drawn: false
+    origin: pv0VdyaTRNSwjiGi
+    rotation: 0
+    sort: 4
+    flags: {}
+    number: null
+    _key: '!cards.cards!PzMkt8LOjuMJFRLR.i8I6o5b6pf7EtiCv'
+    cards: []
+  - _id: nmE3raA8sP9pLuJP
+    name: La brume dense
+    description: ''
+    type: cosm
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: The Deep Mist
+        img: systems/torgeternity/images/cards/cosm/living-land/fr/06.webp
+        text: ''
+    face: 0
+    drawn: false
+    origin: pv0VdyaTRNSwjiGi
+    rotation: 0
+    sort: 5
+    flags: {}
+    number: null
+    _key: '!cards.cards!PzMkt8LOjuMJFRLR.nmE3raA8sP9pLuJP'
+    cards: []
+  - _id: QR6IIAwYSQgKVKgo
+    name: La loi de la vie
+    description: ''
+    type: cosm
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: The Law of Life
+        img: systems/torgeternity/images/cards/cosm/living-land/fr/07.webp
+        text: ''
+    face: 1
+    drawn: false
+    origin: pv0VdyaTRNSwjiGi
+    rotation: 0
+    sort: 6
+    flags: {}
+    number: null
+    _key: '!cards.cards!PzMkt8LOjuMJFRLR.QR6IIAwYSQgKVKgo'
+    cards: []
+  - _id: TppcztykYgbBjYAV
+    name: Instincts primitifs
+    description: ''
+    type: cosm
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Primal Instincts
+        img: systems/torgeternity/images/cards/cosm/living-land/fr/08.webp
+        text: ''
+    face: 1
+    drawn: false
+    origin: pv0VdyaTRNSwjiGi
+    rotation: 0
+    sort: 7
+    flags: {}
+    number: null
+    value: null
+    _key: '!cards.cards!PzMkt8LOjuMJFRLR.TppcztykYgbBjYAV'
+    cards: []
+  - _id: pYfHY1FV9LmkNNRc
+    name: Trésor perdu
+    description: ''
+    type: cosm
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Lost Treasure
+        img: systems/torgeternity/images/cards/cosm/living-land/fr/09.webp
+        text: ''
+    face: 1
+    drawn: false
+    origin: pv0VdyaTRNSwjiGi
+    rotation: 0
+    sort: 8
+    flags: {}
+    number: null
+    _key: '!cards.cards!PzMkt8LOjuMJFRLR.pYfHY1FV9LmkNNRc'
+    cards: []
+  - _id: 9jzqBlOOR2f2MEze
+    name: La loi de la déterioration
+    description: ''
+    type: cosm
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: The Law of Decay
+        img: systems/torgeternity/images/cards/cosm/living-land/fr/10.webp
+        text: ''
+    face: 1
+    drawn: false
+    origin: pv0VdyaTRNSwjiGi
+    rotation: 0
+    sort: 9
+    flags: {}
+    number: null
+    _key: '!cards.cards!PzMkt8LOjuMJFRLR.9jzqBlOOR2f2MEze'
+    cards: []
+rotation: 0
+displayCount: false
+folder: null
+sort: 0
+permission:
+  kz1RJu8vrAPmTUwN: 3
+flags:
+  exportSource:
+    world: torgv2p2
+    system: torgeternity
+    coreVersion: '9.235'
+    systemVersion: 2.0.5
+  core:
+    sourceId: Cards.4b8BekWDWpSWF961
+  torgeternity:
+    usage: livingLand
+_key: '!cards!PzMkt8LOjuMJFRLR'
+

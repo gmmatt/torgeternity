@@ -1,0 +1,19 @@
+name: Déplacement
+content: >-
+  <p class="MsoNormal">Les personnages peuvent se déplacer jusqu’à leur score
+  d’attribut Dextérité en mètre à chaque round. Ils peuvent aussi courir jusqu’à
+  3 fois leur valeur de Dextérité, mais en subissant un malus de -2 sur tous
+  leurs tests durant le tour. Le déplacement n’est pas une action ; il fait
+  simplement parti du tour du héros.<span style="mso-spacerun:yes">  </span></p>
+folder: null
+sort: 0
+permission:
+  default: 0
+  TK1vCAdCz548vBDu: 3
+flags:
+  core:
+    sourceId: JournalEntry.JiGP9oyvvLlUCnJr
+_id: 61fVKXwcwQHyhDq0
+pages: []
+_key: '!journal!61fVKXwcwQHyhDq0'
+

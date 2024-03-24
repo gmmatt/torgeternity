@@ -1,0 +1,1033 @@
+_id: non4XwpfJLE9GiST
+name: The Unstoppable Cop
+type: stormknight
+img: systems/torgeternity/images/characters/Unstoppable_Cop.Avatar.webp
+items:
+  - _id: FO6D5TLpZiLFO2dm
+    name: Extra Magazines (5)
+    type: gear
+    sort: 1500000
+    flags:
+      core:
+        sourceId: Item.qZuQoegFPBYC6tEB
+    img: systems/torgeternity/images/icons/gear-icon.webp
+    effects: []
+    folder: null
+    system:
+      cosm: Core Earth
+      description: <p>Five reloads for Glock 9mm</p>
+      techlevel: 22
+      price: '20'
+      value: 6
+    ownership:
+      default: 0
+    _stats:
+      systemId: torgeternity
+      systemVersion: 3.1.1
+      coreVersion: '11.308'
+      createdTime: null
+      modifiedTime: 1693914912805
+      lastModifiedBy: CtisFurQNe9h7ABb
+    _key: '!actors.items!non4XwpfJLE9GiST.FO6D5TLpZiLFO2dm'
+  - _id: IWuewwOZhaOsjEZt
+    name: Police Badge
+    type: gear
+    sort: 1800000
+    flags:
+      core:
+        sourceId: Item.fgtK79BumQwmkPzK
+    img: systems/torgeternity/images/icons/gear-icon.webp
+    effects: []
+    folder: null
+    system:
+      cosm: Core Earth
+      description: ''
+      techlevel: 22
+      price: '0'
+      value: 0
+    ownership:
+      default: 0
+    _stats:
+      systemId: torgeternity
+      systemVersion: 3.1.1
+      coreVersion: '11.308'
+      createdTime: null
+      modifiedTime: 1693914920140
+      lastModifiedBy: CtisFurQNe9h7ABb
+    _key: '!actors.items!non4XwpfJLE9GiST.IWuewwOZhaOsjEZt'
+  - _id: 60Hn7sxT2ytPIWI9
+    name: Baton
+    type: meleeweapon
+    sort: 600000
+    flags:
+      core:
+        sourceId: Item.NwUEzGCgHe2GgC6N
+    img: systems/torgeternity/images/icons/axe-icon.webp
+    effects: []
+    folder: null
+    system:
+      cosm: Core Earth
+      description: null
+      techlevel: 22
+      price: '20'
+      value: 6
+      attackWith: meleeWeapons
+      damageType: strengthPlus
+      damage: 2
+      ap: 0
+      bonus: 2
+      notes: May use to grapple
+      chatNote: ''
+    ownership:
+      default: 0
+    _stats:
+      systemId: torgeternity
+      systemVersion: 3.1.1
+      coreVersion: '11.308'
+      createdTime: null
+      modifiedTime: 1693914708441
+      lastModifiedBy: CtisFurQNe9h7ABb
+    _key: '!actors.items!non4XwpfJLE9GiST.60Hn7sxT2ytPIWI9'
+  - _id: foEY3vdIO3IYdKLF
+    name: Situational Awareness
+    type: perk
+    img: systems/torgeternity/images/icons/reality-icon.webp
+    effects: []
+    folder: null
+    sort: 28400000
+    flags:
+      core:
+        sourceId: Compendium.te001-core-rulebook.Items.VolVbsElAMc8KiPt
+    system:
+      category: prowess
+      cosm: (None)
+      prerequisites: Mind 8+
+      timestaken: null
+      description: >-
+        <p>Veteran Storm Knights become hyper-aware of their surroundings when
+        danger nears, marking exits, reading their foes’ intent, and knowing
+        when and where to maneuver next.</p><p>Once per scene, a character with
+        Situational Awareness may play a single card directly from her hand into
+        her pool (and use it immediately if desired).</p>
+
+        <p>&nbsp;</p>
+
+        <p>Found in <strong>Core Rules</strong></p>
+      pulpPowers:
+        enhancementNumber: 0
+        enhancement01:
+          title: ''
+          description: ''
+          taken: false
+        enhancement02:
+          title: ''
+          description: ''
+          taken: false
+        enhancement03:
+          title: ''
+          description: ''
+          taken: false
+        enhancement04:
+          title: ''
+          description: ''
+          taken: false
+        enhancement05:
+          title: ''
+          description: ''
+          taken: false
+        enhancement06:
+          title: ''
+          description: ''
+          taken: false
+        enhancement07:
+          title: ''
+          description: ''
+          taken: false
+        enhancement08:
+          title: ''
+          description: ''
+          taken: false
+        enhancement09:
+          title: ''
+          description: ''
+          taken: false
+        enhancement10:
+          title: ''
+          description: ''
+          taken: false
+        enhancement11:
+          title: ''
+          description: ''
+          taken: false
+        enhancement12:
+          title: ''
+          description: ''
+          taken: false
+        enhancement13:
+          title: ''
+          description: ''
+          taken: false
+        enhancement14:
+          title: ''
+          description: ''
+          taken: false
+        enhancement15:
+          title: ''
+          description: ''
+          taken: false
+        limitationNumber: 0
+        limitation01: ''
+        limitation02: ''
+        limitation03: ''
+        limitation04: ''
+        limitation05: ''
+        limitation06: ''
+        limitation07: ''
+        limitation08: ''
+        limitation09: ''
+        limitation10: ''
+    ownership:
+      default: 0
+      A9LyAqagoJJU3gDH: 3
+      CtisFurQNe9h7ABb: 3
+    _stats:
+      systemId: torgeternity
+      systemVersion: 3.1.1
+      coreVersion: '11.308'
+      createdTime: 1693914682084
+      modifiedTime: 1693914682084
+      lastModifiedBy: CtisFurQNe9h7ABb
+    _key: '!actors.items!non4XwpfJLE9GiST.foEY3vdIO3IYdKLF'
+  - _id: 850Io47ql85dGtYF
+    name: Negation
+    type: perk
+    img: systems/torgeternity/images/icons/reality-icon.webp
+    effects: []
+    folder: null
+    sort: 50600000
+    flags:
+      core:
+        sourceId: Compendium.te001-core-rulebook.Items.uNmrQFTiSe5b1FXp
+    system:
+      category: reality
+      cosm: Core Earth
+      prerequisites: ''
+      timestaken: null
+      description: >-
+        <p>When an enemy attempts to spend a Possibility for an attribute or
+        skill test, the Storm Knight may spend her own Possibility&nbsp;to
+        instantly negate it. This is a free action she can perform as long as
+        she&rsquo;s aware of the rival&rsquo;s action.</p>
+
+        <p>Negation may <em>not</em> be used to stop a foe from spending
+        Possibilities&nbsp;to activate abilitise (such as Soak Damage).</p>
+
+        <p>&nbsp;</p>
+
+        <p>Found in <strong>Core Rules</strong></p>
+      pulpPowers:
+        enhancementNumber: 0
+        enhancement01:
+          title: ''
+          description: ''
+          taken: false
+        enhancement02:
+          title: ''
+          description: ''
+          taken: false
+        enhancement03:
+          title: ''
+          description: ''
+          taken: false
+        enhancement04:
+          title: ''
+          description: ''
+          taken: false
+        enhancement05:
+          title: ''
+          description: ''
+          taken: false
+        enhancement06:
+          title: ''
+          description: ''
+          taken: false
+        enhancement07:
+          title: ''
+          description: ''
+          taken: false
+        enhancement08:
+          title: ''
+          description: ''
+          taken: false
+        enhancement09:
+          title: ''
+          description: ''
+          taken: false
+        enhancement10:
+          title: ''
+          description: ''
+          taken: false
+        enhancement11:
+          title: ''
+          description: ''
+          taken: false
+        enhancement12:
+          title: ''
+          description: ''
+          taken: false
+        enhancement13:
+          title: ''
+          description: ''
+          taken: false
+        enhancement14:
+          title: ''
+          description: ''
+          taken: false
+        enhancement15:
+          title: ''
+          description: ''
+          taken: false
+        limitationNumber: 0
+        limitation01: ''
+        limitation02: ''
+        limitation03: ''
+        limitation04: ''
+        limitation05: ''
+        limitation06: ''
+        limitation07: ''
+        limitation08: ''
+        limitation09: ''
+        limitation10: ''
+    ownership:
+      default: 0
+      A9LyAqagoJJU3gDH: 3
+      CtisFurQNe9h7ABb: 3
+    _stats:
+      systemId: torgeternity
+      systemVersion: 3.1.1
+      coreVersion: '11.308'
+      createdTime: 1693914688523
+      modifiedTime: 1693914688523
+      lastModifiedBy: CtisFurQNe9h7ABb
+    _key: '!actors.items!non4XwpfJLE9GiST.850Io47ql85dGtYF'
+  - _id: um7IpTMm9O9yoHyJ
+    name: Glock 9mm
+    type: firearm
+    img: systems/torgeternity/images/icons/firearm-icon.webp
+    effects: []
+    folder: null
+    sort: 3400000
+    flags:
+      core:
+        sourceId: Compendium.te001-core-rulebook.Items.36zun3ZNNpg6Al8g
+    system:
+      cosm: Core Earth
+      description: >-
+        <p>A recoil-operated 9mm semiautomatic. Notable for its large,
+        doublestacked ammo magazine.</p>
+
+        <p>&nbsp;</p>
+
+        <p>Found in <strong>Core Rules</strong></p>
+      techlevel: 22
+      price: '250'
+      value: 12
+      attackWith: fireCombat
+      damageType: flat
+      damage: 13
+      ap: 0
+      ammo:
+        max: 15
+        value: 15
+      range: 10 / 25 / 40
+      notes: ''
+      chatNote: ''
+    ownership:
+      default: 0
+      A9LyAqagoJJU3gDH: 3
+      CtisFurQNe9h7ABb: 3
+    _stats:
+      systemId: torgeternity
+      systemVersion: 3.1.1
+      coreVersion: '11.308'
+      createdTime: 1693914872301
+      modifiedTime: 1693914872301
+      lastModifiedBy: CtisFurQNe9h7ABb
+    _key: '!actors.items!non4XwpfJLE9GiST.um7IpTMm9O9yoHyJ'
+  - _id: JGi6CEUQVRcepAKC
+    name: Ballistic/Kevlar Vest
+    type: armor
+    img: systems/torgeternity/images/icons/armor-icon.webp
+    effects:
+      - _id: 9ymLEqwqQu84dE3Z
+        flags: {}
+        changes:
+          - key: system.other.toughness
+            mode: 2
+            value: '4'
+            priority: null
+          - key: system.other.armor
+            mode: 2
+            value: '4'
+            priority: null
+          - key: system.other.fatigue
+            mode: 2
+            value: '1'
+            priority: null
+        disabled: false
+        duration:
+          startTime: null
+          seconds: null
+          combat: null
+          rounds: null
+          turns: null
+          startRound: null
+          startTurn: null
+        icon: icons/svg/aura.svg
+        origin: Item.ec5YdyhXgjNxP47h
+        tint: null
+        transfer: true
+        name: Armor +4, Fatigues
+        description: ''
+        statuses: []
+        _key: >-
+          !actors.items.effects!non4XwpfJLE9GiST.JGi6CEUQVRcepAKC.9ymLEqwqQu84dE3Z
+    folder: null
+    sort: 42900000
+    flags:
+      core:
+        sourceId: Compendium.te001-core-rulebook.Items.lUVVQi2BmucoAM0E
+    system:
+      cosm: Core Earth
+      description: >-
+        <p>@UUID[Compendium.te001-core-rulebook.rules.pwneQ55M0nnDH0Us.JournalEntryPage.qKdamp4rrcX6TTt0#full-body/torso:]{Torso}</p>
+
+        <p>@UUID[Compendium.te001-core-rulebook.rules.pwneQ55M0nnDH0Us.JournalEntryPage.qKdamp4rrcX6TTt0#fatigues:]{Fatigues}</p>
+
+        <p>Also known as bulletproof vests or Kevlar armor. Made of synthetic
+        material designed to catch and stop bullets as they spin into different
+        protective layers.</p>
+
+        <p>&nbsp;</p>
+
+        <p>Found in <strong>Core Rules</strong></p>
+      techlevel: 22
+      price: '250'
+      value: 12
+      bonus: 4
+      maxDex: 10
+      minStrength: null
+      equipped: true
+      equippedClass: item-equipped
+      notes: Torso, Fatigues
+    ownership:
+      default: 0
+      A9LyAqagoJJU3gDH: 3
+      CtisFurQNe9h7ABb: 3
+    _stats:
+      systemId: torgeternity
+      systemVersion: 3.1.1
+      coreVersion: '11.308'
+      createdTime: 1693914881260
+      modifiedTime: 1693914881265
+      lastModifiedBy: CtisFurQNe9h7ABb
+    _key: '!actors.items!non4XwpfJLE9GiST.JGi6CEUQVRcepAKC'
+  - _id: RCKN2Q1yd7kkWeRT
+    name: Multi-Tool
+    type: gear
+    img: systems/torgeternity/images/icons/gear-icon.webp
+    effects: []
+    folder: null
+    sort: 1650000
+    flags:
+      core:
+        sourceId: Compendium.te001-core-rulebook.Items.HzAmhij6mdm2Zac6
+    system:
+      cosm: Core Earth
+      description: >-
+        <p>A handy device that combines clippers, screwdrivers, a wrench, and
+        other small tools into a single fold-out tool.</p>
+
+        <p>&nbsp;</p>
+
+        <p>Found in <strong>Core Rules</strong></p>
+      techlevel: 22
+      price: '40'
+      value: 8
+    ownership:
+      default: 0
+      A9LyAqagoJJU3gDH: 3
+      CtisFurQNe9h7ABb: 3
+    _stats:
+      systemId: torgeternity
+      systemVersion: 3.1.1
+      coreVersion: '11.308'
+      createdTime: 1693914887003
+      modifiedTime: 1693914931164
+      lastModifiedBy: CtisFurQNe9h7ABb
+    _key: '!actors.items!non4XwpfJLE9GiST.RCKN2Q1yd7kkWeRT'
+  - _id: nIDSxLm272ubu5xH
+    name: Flares (3)
+    type: gear
+    img: systems/torgeternity/images/icons/gear-icon.webp
+    effects: []
+    folder: null
+    sort: 1537500
+    flags:
+      core:
+        sourceId: Compendium.te001-core-rulebook.Items.wOSsT4wHWPEcX85E
+    system:
+      cosm: Nile Empire
+      description: <p>Found in <strong>Core Rules</strong></p>
+      techlevel: 20
+      price: '5'
+      value: 4
+    ownership:
+      default: 0
+      A9LyAqagoJJU3gDH: 3
+      CtisFurQNe9h7ABb: 3
+    _stats:
+      systemId: torgeternity
+      systemVersion: 3.1.1
+      coreVersion: '11.308'
+      createdTime: 1693914896396
+      modifiedTime: 1693914937564
+      lastModifiedBy: CtisFurQNe9h7ABb
+    _key: '!actors.items!non4XwpfJLE9GiST.nIDSxLm272ubu5xH'
+  - _id: WCcrMD3PJGI2XPWL
+    name: Flashlight
+    type: gear
+    img: systems/torgeternity/images/icons/gear-icon.webp
+    effects: []
+    folder: null
+    sort: 1575000
+    flags:
+      core:
+        sourceId: Compendium.te001-core-rulebook.Items.tEnSd1UUK2wTfebw
+    system:
+      cosm: Nile Empire
+      description: <p>Found in <strong>Core Rules</strong></p>
+      techlevel: 20
+      price: '10'
+      value: 5
+    ownership:
+      default: 0
+      A9LyAqagoJJU3gDH: 3
+      CtisFurQNe9h7ABb: 3
+    _stats:
+      systemId: torgeternity
+      systemVersion: 3.1.1
+      coreVersion: '11.308'
+      createdTime: 1693914926964
+      modifiedTime: 1693914933348
+      lastModifiedBy: CtisFurQNe9h7ABb
+    _key: '!actors.items!non4XwpfJLE9GiST.WCcrMD3PJGI2XPWL'
+effects:
+  - _id: LRILn8FQkH7zQHC9
+    flags: {}
+    changes:
+      - key: system.other.toughness
+        mode: 2
+        value: '4'
+        priority: null
+      - key: system.other.armor
+        mode: 2
+        value: '4'
+        priority: null
+      - key: system.other.fatigue
+        mode: 2
+        value: '1'
+        priority: null
+    disabled: false
+    duration:
+      startTime: 0
+      seconds: null
+      combat: null
+      rounds: null
+      turns: null
+      startRound: null
+      startTurn: null
+    icon: icons/svg/aura.svg
+    origin: >-
+      Compendium.torgeternity.archetypes.Actor.non4XwpfJLE9GiST.Item.JGi6CEUQVRcepAKC
+    tint: null
+    transfer: false
+    name: Armor +4, Fatigues
+    description: ''
+    statuses: []
+    _key: '!actors.effects!non4XwpfJLE9GiST.LRILn8FQkH7zQHC9'
+folder: null
+sort: 100001
+flags: {}
+system:
+  shock:
+    max: 5
+    value: 0
+  wounds:
+    max: 3
+    value: 0
+  attributes:
+    charisma: 6
+    dexterity: 8
+    mind: 8
+    spirit: 10
+    strength: 8
+  other:
+    move: 5
+    run: 5
+    toughness: 5
+    armor: 0
+    cosm: coreEarth
+    possibilities: 0
+    posibilities: 3
+  skills:
+    airVehicles:
+      baseAttribute: dexterity
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    alteration:
+      baseAttribute: mind
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    apportation:
+      baseAttribute: spirit
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    beastRiding:
+      baseAttribute: dexterity
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    computers:
+      baseAttribute: mind
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    conjuration:
+      baseAttribute: spirit
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    divination:
+      baseAttribute: mind
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    dodge:
+      baseAttribute: dexterity
+      adds: 1
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    energyWeapons:
+      baseAttribute: dexterity
+      adds: null
+      value: 0
+      isFav: false
+      groupName: combat
+      unskilledUse: 1
+    evidenceAnalysis:
+      baseAttribute: mind
+      adds: 1
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    faith:
+      baseAttribute: spirit
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    find:
+      baseAttribute: mind
+      adds: 1
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    fireCombat:
+      baseAttribute: dexterity
+      adds: 2
+      value: 0
+      isFav: false
+      groupName: combat
+      unskilledUse: 1
+    firstAid:
+      baseAttribute: mind
+      adds: 1
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    heavyWeapons:
+      baseAttribute: dexterity
+      adds: null
+      value: 0
+      isFav: false
+      groupName: combat
+      unskilledUse: 1
+    intimidation:
+      baseAttribute: spirit
+      adds: 3
+      value: 0
+      isFav: false
+      groupName: interaction
+      unskilledUse: 1
+    kinesis:
+      baseAttribute: spirit
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    landVehicles:
+      baseAttribute: dexterity
+      adds: 1
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    language:
+      baseAttribute: mind
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    lockpicking:
+      baseAttribute: dexterity
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    maneuver:
+      baseAttribute: dexterity
+      adds: null
+      value: 0
+      isFav: false
+      groupName: interaction
+      unskilledUse: 1
+    medicine:
+      baseAttribute: mind
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    meleeWeapons:
+      baseAttribute: dexterity
+      adds: 1
+      value: 0
+      isFav: false
+      groupName: combat
+      unskilledUse: 1
+    missileWeapons:
+      baseAttribute: dexterity
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    persuasion:
+      baseAttribute: charisma
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    precognition:
+      baseAttribute: mind
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    profession:
+      baseAttribute: mind
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    reality:
+      baseAttribute: spirit
+      adds: 2
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    scholar:
+      baseAttribute: mind
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    science:
+      baseAttribute: mind
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    stealth:
+      baseAttribute: dexterity
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    streetwise:
+      baseAttribute: charisma
+      adds: 2
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    survival:
+      baseAttribute: mind
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    taunt:
+      baseAttribute: charisma
+      adds: null
+      value: 0
+      isFav: false
+      groupName: interaction
+      unskilledUse: 1
+    telepathy:
+      baseAttribute: charisma
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    tracking:
+      baseAttribute: mind
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    trick:
+      baseAttribute: mind
+      adds: null
+      value: 0
+      isFav: false
+      groupName: interaction
+      unskilledUse: 1
+    unarmedCombat:
+      baseAttribute: dexterity
+      adds: 1
+      value: 0
+      isFav: false
+      groupName: combat
+      unskilledUse: 1
+    waterVehicles:
+      baseAttribute: dexterity
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    willpower:
+      baseAttribute: spirit
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+  xp:
+    unspent: 0
+    earned: 0
+  axioms:
+    magic: 9
+    social: 23
+    spirit: 10
+    tech: 23
+  details:
+    clearance: ''
+    background: >-
+      <p><img class="charimg"
+      src="systems/torgeternity/images/characters/Unstoppable_Cop.webp" alt=""
+      width="758" height="2000"></p>
+
+      <p
+      class="moreheight">@UUID[Compendium.torgeternity.handouts.JournalEntry.Knhh8vqtjSylJo5Z.JournalEntryPage.j7NJZCO90CI0aetf]{Archetype
+      - The Unstoppable Cop}</p>
+
+      <h3>Overview</h3>
+
+      <p>Even before the High Lords invaded, Core Earth had heroes capable of
+      amazing feats. Some consistently found trouble battling groups of
+      criminals, mercenaries, or psychos. You were one of those heroes, and
+      dispatching small armies of bad guys was just part of your job.</p>
+
+      <p>The Possibility Raiders represent a threat on a whole new scale. Gangs,
+      cartels, and even a corrupt conspiracy ring didn&rsquo;t make you back
+      down, so why quit now? Like your (former) partner said once, you&rsquo;re
+      unstoppable.</p>
+
+      <h3>Tactics</h3>
+
+      <p>You&rsquo;re no stranger to gunplay and are tough enough to take some
+      serious hits without resorting to soaking damage&mdash;which you excel at.
+      If forced into melee combat, try grappling to restrain opponents rather
+      than depending on straight damage.</p>
+
+      <p>Negation is your secret weapon. Blocking a Stormer&rsquo;s ability to
+      boost attacks is nothing to scoff at, and can quickly turn the momentum of
+      any battle. Use intimidation to soften up your foes. Stymie subtracts from
+      their total and Vulnerable adds to yours. Since Negation requires a
+      contest of reality you can take advantage of both!</p>
+
+      <h3>Moment of Crisis</h3>
+
+      <p>Dozens of incidents may have pushed you from hero to Storm Knight. It
+      might have been the renegade Stormer using his powers to build a new drug
+      cartel. Or it could have been the time you pinned and cuffed a rampaging
+      raptor&mdash;people are still talking about that one.</p>
+
+      <h3>Quote</h3>
+
+      <p>&ldquo;Put the weird glowing thing down on the ground and place your
+      hands on your head.&ldquo;</p>
+
+      <h3>Description</h3>
+
+      <p>It&rsquo;s important to still wear the uniform, even out of
+      jurisdiction or in places that have been transformed. It projects normalcy
+      and authority, and the bulletproof vest doesn&rsquo;t hurt either. Not
+      everyone likes or respects the police, but just seeing the blue and the
+      badge still snaps most people back to reality. Brusque manners and an
+      intense gaze reinforce that sense of strength.</p>
+
+      <h3>Agenda</h3>
+
+      <p>The Unstoppable Cop just wants to get things back to normal. Reality
+      has laws too, and these invaders are breaking them. Cut through the
+      nonsense, stop the bad guys, and protect the poor innocents caught in the
+      middle.</p>
+
+      <h3>Names</h3>
+
+      <p>Alta, Carmen, Cristian, Dani, Gabriel, Jaide, Lani, Marvel, Paz, Rio,
+      Sal</p>
+
+      <h3>Advancement Track (Optional)</h3>
+
+      <ul>
+
+      <li>(5 XP) Strong-Willed</li>
+
+      <li>(7 XP) Hard to Kill</li>
+
+      <li>(1 XP) <em>lockpicking</em> +1</li>
+
+      <li>(2 XP) <em>streetwise</em> +2</li>
+
+      <li>(3 XP) <em>fire combat</em> +3</li>
+
+      <li>(3 XP) <em>reality</em> +3</li>
+
+      <li>(4 XP) <em>fire combat</em> +4</li>
+
+      <li>(5 XP) <em>fire combat</em> +5</li>
+
+      </ul>
+    race: human
+  editstate: null
+  fatigue: '1'
+ownership:
+  default: 0
+  A9LyAqagoJJU3gDH: 3
+prototypeToken:
+  flags: {}
+  name: Unstoppable Cop
+  displayName: 0
+  width: 1
+  height: 1
+  lockRotation: false
+  rotation: 0
+  actorLink: true
+  disposition: 1
+  displayBars: 40
+  bar1:
+    attribute: wounds
+  bar2:
+    attribute: shock
+  randomImg: false
+  alpha: 1
+  light:
+    alpha: 1
+    angle: 360
+    bright: 0
+    coloration: 1
+    dim: 0
+    luminosity: 0.5
+    saturation: 0
+    contrast: 0
+    shadows: 0
+    animation:
+      type: null
+      speed: 5
+      intensity: 5
+      reverse: false
+    darkness:
+      min: 0
+      max: 1
+    color: null
+    attenuation: 0.5
+  texture:
+    src: systems/torgeternity/images/characters/unstoppable_cop.Token.webp
+    tint: null
+    scaleX: 1
+    scaleY: 1
+    offsetX: 0
+    offsetY: 0
+    rotation: 0
+  sight:
+    angle: 360
+    enabled: false
+    range: 0
+    brightness: 1
+    visionMode: basic
+    attenuation: 0.1
+    saturation: 0
+    contrast: 0
+  appendNumber: false
+  prependAdjective: false
+  detectionModes: []
+_stats:
+  systemId: torgeternity
+  systemVersion: 3.1.1
+  coreVersion: '11.308'
+  createdTime: 1693914682084
+  modifiedTime: 1693914937564
+  lastModifiedBy: CtisFurQNe9h7ABb
+_key: '!actors!non4XwpfJLE9GiST'
+

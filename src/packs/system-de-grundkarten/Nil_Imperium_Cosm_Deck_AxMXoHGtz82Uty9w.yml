@@ -1,0 +1,291 @@
+_id: AxMXoHGtz82Uty9w
+name: Nil-Imperium Cosm Deck
+type: deck
+description: ''
+img: >-
+  systems/torgeternity/images/deutsch/cards/Cosmkarten/Nil-Imperium/NZZR%C3%BCckseite.webp
+cards:
+  - _id: aF6JUBlztjdvj1AG
+    name: Abschiedsgruß
+    description: ''
+    type: cosm
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Abschiedsgruß
+        text: ''
+        img: >-
+          systems/torgeternity/images/deutsch/cards/Cosmkarten/Nil-Imperium/01.webp
+    face: 0
+    drawn: false
+    origin: AxMXoHGtz82Uty9w
+    rotation: 0
+    sort: 0
+    flags: {}
+    system: {}
+    value: null
+    width: null
+    height: null
+    _key: '!cards.cards!AxMXoHGtz82Uty9w.aF6JUBlztjdvj1AG'
+    cards: []
+  - _id: 3xceZLJE6rqueVyZ
+    name: Im Kreuzfeuer
+    description: ''
+    type: cosm
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Im Kreuzfeuer
+        text: ''
+        img: >-
+          systems/torgeternity/images/deutsch/cards/Cosmkarten/Nil-Imperium/02.webp
+    face: 0
+    drawn: false
+    origin: AxMXoHGtz82Uty9w
+    rotation: 0
+    sort: 0
+    flags: {}
+    system: {}
+    value: null
+    width: null
+    height: null
+    _key: '!cards.cards!AxMXoHGtz82Uty9w.3xceZLJE6rqueVyZ'
+    cards: []
+  - _id: CVpzln7jqxtMtJVE
+    name: Gefangen!
+    description: ''
+    type: cosm
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Gefangen!
+        text: ''
+        img: >-
+          systems/torgeternity/images/deutsch/cards/Cosmkarten/Nil-Imperium/03.webp
+    face: 0
+    drawn: false
+    origin: AxMXoHGtz82Uty9w
+    rotation: 0
+    sort: 0
+    flags: {}
+    system: {}
+    value: null
+    width: null
+    height: null
+    _key: '!cards.cards!AxMXoHGtz82Uty9w.CVpzln7jqxtMtJVE'
+    cards: []
+  - _id: KH8YzTEfb1sOb2fF
+    name: In die Verlängerung
+    description: ''
+    type: cosm
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: In die Verlängerung
+        text: ''
+        img: >-
+          systems/torgeternity/images/deutsch/cards/Cosmkarten/Nil-Imperium/04.webp
+    face: 0
+    drawn: false
+    origin: AxMXoHGtz82Uty9w
+    rotation: 0
+    sort: 0
+    flags: {}
+    system: {}
+    value: null
+    width: null
+    height: null
+    _key: '!cards.cards!AxMXoHGtz82Uty9w.KH8YzTEfb1sOb2fF'
+    cards: []
+  - _id: mBj5ZITfoDIC1gp4
+    name: Plötzlich...
+    description: ''
+    type: cosm
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Plötzlich...
+        text: ''
+        img: >-
+          systems/torgeternity/images/deutsch/cards/Cosmkarten/Nil-Imperium/05.webp
+    face: 0
+    drawn: false
+    origin: AxMXoHGtz82Uty9w
+    rotation: 0
+    sort: 0
+    flags: {}
+    system: {}
+    value: null
+    width: null
+    height: null
+    _key: '!cards.cards!AxMXoHGtz82Uty9w.mBj5ZITfoDIC1gp4'
+    cards: []
+  - _id: ds1K6w3RKxRfxl2z
+    name: Dramatische Offenbarung
+    description: ''
+    type: cosm
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Dramatische Offenbarung
+        text: ''
+        img: >-
+          systems/torgeternity/images/deutsch/cards/Cosmkarten/Nil-Imperium/06.webp
+    face: 0
+    drawn: false
+    origin: AxMXoHGtz82Uty9w
+    rotation: 0
+    sort: 0
+    flags: {}
+    system: {}
+    value: null
+    width: null
+    height: null
+    _key: '!cards.cards!AxMXoHGtz82Uty9w.ds1K6w3RKxRfxl2z'
+    cards: []
+  - _id: XNAk7AN0Dp6f1bk6
+    name: Vorzeitiger Rückzug
+    description: ''
+    type: cosm
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Vorzeitiger Rückzug
+        text: ''
+        img: >-
+          systems/torgeternity/images/deutsch/cards/Cosmkarten/Nil-Imperium/07.webp
+    face: 0
+    drawn: false
+    origin: AxMXoHGtz82Uty9w
+    rotation: 0
+    sort: 0
+    flags: {}
+    system: {}
+    value: null
+    width: null
+    height: null
+    _key: '!cards.cards!AxMXoHGtz82Uty9w.XNAk7AN0Dp6f1bk6'
+    cards: []
+  - _id: 6RwaBpUl1d8bqfvA
+    name: Triumphierende Rede
+    description: ''
+    type: cosm
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Triumphierende Rede
+        text: ''
+        img: >-
+          systems/torgeternity/images/deutsch/cards/Cosmkarten/Nil-Imperium/08.webp
+    face: 0
+    drawn: false
+    origin: AxMXoHGtz82Uty9w
+    rotation: 0
+    sort: 0
+    flags: {}
+    system: {}
+    value: null
+    width: null
+    height: null
+    _key: '!cards.cards!AxMXoHGtz82Uty9w.6RwaBpUl1d8bqfvA'
+    cards: []
+  - _id: Hz8LydfAMvOfxbFh
+    name: Unvermeidbare Rückkehr
+    description: ''
+    type: cosm
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Unvermeidbare Rückkehr
+        text: ''
+        img: >-
+          systems/torgeternity/images/deutsch/cards/Cosmkarten/Nil-Imperium/09.webp
+    face: 0
+    drawn: false
+    origin: AxMXoHGtz82Uty9w
+    rotation: 0
+    sort: 0
+    flags: {}
+    system: {}
+    value: null
+    width: null
+    height: null
+    _key: '!cards.cards!AxMXoHGtz82Uty9w.Hz8LydfAMvOfxbFh'
+    cards: []
+  - _id: QGyXZOjw3CM8qhrI
+    name: Gesetz der Action
+    description: ''
+    type: cosm
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Gesetz der Action
+        text: ''
+        img: >-
+          systems/torgeternity/images/deutsch/cards/Cosmkarten/Nil-Imperium/10.webp
+    face: 0
+    drawn: false
+    origin: AxMXoHGtz82Uty9w
+    rotation: 0
+    sort: 0
+    flags: {}
+    system: {}
+    value: null
+    width: null
+    height: null
+    _key: '!cards.cards!AxMXoHGtz82Uty9w.QGyXZOjw3CM8qhrI'
+    cards: []
+rotation: 0
+displayCount: false
+folder: null
+sort: 0
+flags:
+  core:
+    sourceId: Cards.VPYV2jqR3aAc2Mzj
+  torgeternity:
+    usage: nileEmpire
+system: {}
+ownership:
+  default: 0
+  1pSzpSNrhKGYYcib: 3
+width: null
+height: null
+_stats:
+  systemId: torgeternity
+  systemVersion: 2.5.1
+  coreVersion: '10.278'
+  createdTime: null
+  modifiedTime: 1660972917945
+  lastModifiedBy: pLf3kUpJuGZH0Ep4
+_key: '!cards!AxMXoHGtz82Uty9w'
+

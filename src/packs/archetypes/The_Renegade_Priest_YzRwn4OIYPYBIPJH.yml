@@ -1,0 +1,2144 @@
+_id: YzRwn4OIYPYBIPJH
+name: The Renegade Priest
+type: stormknight
+img: systems/torgeternity/images/characters/Renegade_Priest.Avatar.webp
+items:
+  - _id: iymHb9kSwcAnU0fm
+    name: Holy Symbol
+    type: gear
+    sort: 36500000
+    flags:
+      core:
+        sourceId: Item.yLlmFt0wyS2ppWTq
+    img: systems/torgeternity/images/icons/gear-icon.webp
+    effects: []
+    folder: null
+    system:
+      cosm: Cyberpapacy
+      description: <p>Catholic cross</p>
+      techlevel: 5
+      price: '0'
+      value: 0
+    ownership:
+      default: 0
+    _stats:
+      systemId: torgeternity
+      systemVersion: 3.1.1
+      coreVersion: '11.308'
+      createdTime: null
+      modifiedTime: 1693913459309
+      lastModifiedBy: CtisFurQNe9h7ABb
+    _key: '!actors.items!YzRwn4OIYPYBIPJH.iymHb9kSwcAnU0fm'
+  - _id: Okd70pnwBHGmywFu
+    name: Cyberware Implants
+    type: perk
+    img: systems/torgeternity/images/icons/reality-icon.webp
+    effects: []
+    folder: null
+    sort: 9300000
+    flags:
+      core:
+        sourceId: Compendium.te001-core-rulebook.Items.8LBHAgahJO6xorta
+    system:
+      category: cyberware
+      cosm: Cyberpapacy
+      prerequisites: ''
+      timestaken: 1
+      description: >-
+        <p>When this Perk is selected, the character may choose up to $10 000
+        worth of Cyberware from the lists on page 160.</p>
+
+        <p>Official Church-approved cyberware is linked directly to the GodNet
+        and carefully monitored. Devices bought via this Perk are <q>hacked</q>
+        and don&rsquo;t link to the GodNet (unless the wearer wants it to for
+        some reason). Its installation is safe and free from risk of injury.</p>
+
+        <p>Hacked cyberware is a crime in the Cyberpapacy, however. Heroes who
+        <q>chrome</q> their bodies best beware of the Church Police&mdash;they
+        are <em>always</em> watching.</p>
+
+        <p><strong>New Implants:</strong> This Perk may be taken more than once.
+        Each time after the first, it grants the user another $5 000 worth of
+        implants.</p>
+
+        <p>&nbsp;</p>
+
+        <p>Found in <strong>Core Rules</strong></p>
+      pulpPowers:
+        enhancementNumber: 0
+        enhancement01:
+          title: ''
+          description: ''
+          taken: false
+        enhancement02:
+          title: ''
+          description: ''
+          taken: false
+        enhancement03:
+          title: ''
+          description: ''
+          taken: false
+        enhancement04:
+          title: ''
+          description: ''
+          taken: false
+        enhancement05:
+          title: ''
+          description: ''
+          taken: false
+        enhancement06:
+          title: ''
+          description: ''
+          taken: false
+        enhancement07:
+          title: ''
+          description: ''
+          taken: false
+        enhancement08:
+          title: ''
+          description: ''
+          taken: false
+        enhancement09:
+          title: ''
+          description: ''
+          taken: false
+        enhancement10:
+          title: ''
+          description: ''
+          taken: false
+        enhancement11:
+          title: ''
+          description: ''
+          taken: false
+        enhancement12:
+          title: ''
+          description: ''
+          taken: false
+        enhancement13:
+          title: ''
+          description: ''
+          taken: false
+        enhancement14:
+          title: ''
+          description: ''
+          taken: false
+        enhancement15:
+          title: ''
+          description: ''
+          taken: false
+        limitationNumber: 0
+        limitation01: ''
+        limitation02: ''
+        limitation03: ''
+        limitation04: ''
+        limitation05: ''
+        limitation06: ''
+        limitation07: ''
+        limitation08: ''
+        limitation09: ''
+        limitation10: ''
+    ownership:
+      default: 0
+      A9LyAqagoJJU3gDH: 3
+      CtisFurQNe9h7ABb: 3
+    _stats:
+      systemId: torgeternity
+      systemVersion: 3.1.1
+      coreVersion: '11.308'
+      createdTime: 1693913394557
+      modifiedTime: 1693913413260
+      lastModifiedBy: CtisFurQNe9h7ABb
+    _key: '!actors.items!YzRwn4OIYPYBIPJH.Okd70pnwBHGmywFu'
+  - _id: gTf43bBWAsmksuZv
+    name: Miracles
+    type: perk
+    img: systems/torgeternity/images/icons/reality-icon.webp
+    effects: []
+    folder: null
+    sort: 28700000
+    flags:
+      core:
+        sourceId: Compendium.te001-core-rulebook.Items.W6HcoYyOqi6pGGfD
+    system:
+      category: faith
+      cosm: Other
+      prerequisites: At least one add in faith
+      timestaken: 1
+      description: >-
+        <p><strong>Cosms:</strong> Core Earth, Aysle, Cyberpapacy, Living Land,
+        Nile Empire, Orrorsh</p>
+
+        <p>The hero is blessed with the ability to call forth miracles. He gains
+        access to any Miracle List that is associated with his religion, and is
+        not specified by another Perk. Some example lists are given on page
+        199.</p>
+
+        <p>She gains <em>ward enemy</em> any two miracles chosen from any list
+        she knows. See
+        @UUID[Compendium.te001-core-rulebook.rules.pwneQ55M0nnDH0Us.JournalEntryPage.0yCTjO5Wj0tFVzBW]{Miracles}&nbsp;to
+        find out how to invoke them and what happens should the invocation
+        fail.</p>
+
+        <p><strong>New Miracles:</strong> This Perk may be taken more than once.
+        Each time after the first, it grants the user one additional
+        miracle.</p>
+
+        <p>&nbsp;</p>
+
+        <p>Found in <strong>Core Rules</strong></p>
+      pulpPowers:
+        enhancementNumber: 0
+        enhancement01:
+          title: ''
+          description: ''
+          taken: false
+        enhancement02:
+          title: ''
+          description: ''
+          taken: false
+        enhancement03:
+          title: ''
+          description: ''
+          taken: false
+        enhancement04:
+          title: ''
+          description: ''
+          taken: false
+        enhancement05:
+          title: ''
+          description: ''
+          taken: false
+        enhancement06:
+          title: ''
+          description: ''
+          taken: false
+        enhancement07:
+          title: ''
+          description: ''
+          taken: false
+        enhancement08:
+          title: ''
+          description: ''
+          taken: false
+        enhancement09:
+          title: ''
+          description: ''
+          taken: false
+        enhancement10:
+          title: ''
+          description: ''
+          taken: false
+        enhancement11:
+          title: ''
+          description: ''
+          taken: false
+        enhancement12:
+          title: ''
+          description: ''
+          taken: false
+        enhancement13:
+          title: ''
+          description: ''
+          taken: false
+        enhancement14:
+          title: ''
+          description: ''
+          taken: false
+        enhancement15:
+          title: ''
+          description: ''
+          taken: false
+        limitationNumber: 0
+        limitation01: ''
+        limitation02: ''
+        limitation03: ''
+        limitation04: ''
+        limitation05: ''
+        limitation06: ''
+        limitation07: ''
+        limitation08: ''
+        limitation09: ''
+        limitation10: ''
+    ownership:
+      default: 0
+      A9LyAqagoJJU3gDH: 3
+      CtisFurQNe9h7ABb: 3
+    _stats:
+      systemId: torgeternity
+      systemVersion: 3.1.1
+      coreVersion: '11.308'
+      createdTime: 1693913398922
+      modifiedTime: 1693913407972
+      lastModifiedBy: CtisFurQNe9h7ABb
+    _key: '!actors.items!YzRwn4OIYPYBIPJH.gTf43bBWAsmksuZv'
+  - _id: Jyr9qESO0watn4r5
+    name: GWI GodBeam Laser
+    type: firearm
+    img: systems/torgeternity/images/icons/firearm-icon.webp
+    effects: []
+    folder: null
+    sort: 3800000
+    flags:
+      core:
+        sourceId: Compendium.te001-core-rulebook.Items.3G2SVFJnklgCOnmw
+    system:
+      cosm: Cyberpapacy
+      description: >-
+        <p>@UUID[Compendium.te001-core-rulebook.rules.pwneQ55M0nnDH0Us.JournalEntryPage.qKdamp4rrcX6TTt0#short-burst:]{Short
+        Burst}</p>
+
+        <p>The GodBeam has a long barrel, a stabilizing stock, and laser sight.
+        It emits a deadly blue beam of laser light. A laser sight (page 141) is
+        integral, using a low-power beam from the weapon itself. All GWI weapons
+        are connected to the GodNet by default, so hacked versions are rare and
+        expensive.</p>
+
+        <p>&nbsp;</p>
+
+        <p>Found in <strong>Core Rules</strong></p>
+      techlevel: 26
+      price: '600'
+      value: 14
+      attackWith: energyWeapons
+      damageType: flat
+      damage: 14
+      ap: 1
+      ammo:
+        max: 15
+        value: 15
+      range: 100 / 500 / 1000
+      notes: Short Burst
+      chatNote: ''
+    ownership:
+      default: 0
+      A9LyAqagoJJU3gDH: 3
+      CtisFurQNe9h7ABb: 3
+    _stats:
+      systemId: torgeternity
+      systemVersion: 3.1.1
+      coreVersion: '11.308'
+      createdTime: 1693913428828
+      modifiedTime: 1693913428828
+      lastModifiedBy: CtisFurQNe9h7ABb
+    _key: '!actors.items!YzRwn4OIYPYBIPJH.Jyr9qESO0watn4r5'
+  - _id: G8MyzX3sL4Dj8zLZ
+    name: IriMesh Clothing
+    type: armor
+    img: systems/torgeternity/images/icons/armor-icon.webp
+    effects:
+      - _id: z9N78504rtLWR28c
+        flags: {}
+        changes:
+          - key: system.other.toughness
+            value: '2'
+            mode: 2
+            priority: null
+          - key: system.other.armor
+            value: '2'
+            mode: 2
+            priority: null
+        disabled: false
+        duration:
+          startTime: null
+          seconds: null
+          combat: null
+          rounds: null
+          turns: null
+          startRound: null
+          startTurn: null
+        icon: icons/svg/aura.svg
+        origin: Item.vLeYXXhLIv3RcUxq
+        tint: null
+        transfer: true
+        name: Armor +2
+        description: ''
+        statuses: []
+        _key: >-
+          !actors.items.effects!YzRwn4OIYPYBIPJH.G8MyzX3sL4Dj8zLZ.z9N78504rtLWR28c
+    folder: null
+    sort: 40100000
+    flags:
+      core:
+        sourceId: Compendium.te001-core-rulebook.Items.iqqKO58UXvYX0BOU
+    system:
+      cosm: (None)
+      description: >-
+        <p>A light textile woven by nano-machines. IriMesh looks and feels
+        similar to silk, but with even more tensile strength. IriMesh can be
+        worn at elegant banquets without looking out of place, and doesn’t raise
+        security concerns at checkpoints.</p>
+
+        <p>&nbsp;</p>
+
+        <p>Found in <strong>Core Rules</strong></p>
+      techlevel: 24
+      price: '250'
+      value: 12
+      bonus: 2
+      maxDex: 12
+      minStrength: null
+      equipped: true
+      equippedClass: item-equipped
+      notes: ''
+    ownership:
+      default: 0
+      A9LyAqagoJJU3gDH: 3
+      CtisFurQNe9h7ABb: 3
+    _stats:
+      systemId: torgeternity
+      systemVersion: 3.1.1
+      coreVersion: '11.308'
+      createdTime: 1693913444548
+      modifiedTime: 1693913444556
+      lastModifiedBy: CtisFurQNe9h7ABb
+    _key: '!actors.items!YzRwn4OIYPYBIPJH.G8MyzX3sL4Dj8zLZ'
+  - _id: SYeOq9KXKESjLZZR
+    name: Cyberdeck
+    type: gear
+    img: systems/torgeternity/images/icons/gear-icon.webp
+    effects: []
+    folder: null
+    sort: 36400000
+    flags:
+      core:
+        sourceId: Compendium.te001-core-rulebook.Items.eYpjJYTmQUROTCDZ
+    system:
+      cosm: Cyberpapacy
+      description: >-
+        <p>The most common design of cyberdeck available through the black
+        market is the First Seal, which allows a person equipped with a neural
+        jack or TempTrodes to gain access the GodNet.</p>
+
+        <p>updated in Cyberpapacy Sourcebook</p>
+
+        <p>&nbsp;</p>
+
+        <p>Found in <strong>Cyberpapacy Sourcebook, Core Rules</strong></p>
+      techlevel: 26
+      price: '700'
+      value: 14
+    ownership:
+      default: 0
+      A9LyAqagoJJU3gDH: 3
+      CtisFurQNe9h7ABb: 3
+    _stats:
+      systemId: torgeternity
+      systemVersion: 3.1.1
+      coreVersion: '11.308'
+      createdTime: 1693913451892
+      modifiedTime: 1693913451892
+      lastModifiedBy: CtisFurQNe9h7ABb
+    _key: '!actors.items!YzRwn4OIYPYBIPJH.SYeOq9KXKESjLZZR'
+  - _id: aHnSTe0A1LIq28ea
+    name: BelleView 20-20 Cyber Eye
+    type: implant
+    img: systems/torgeternity/images/icons/cyberware-icon.webp
+    effects:
+      - _id: fr4HPRlgg1TaUMWt
+        flags: {}
+        changes:
+          - key: system.skills.find.isFav
+            value: 'True'
+            mode: 5
+            priority: null
+          - key: system.skills.tracking.isFav
+            value: 'True'
+            mode: 5
+            priority: null
+        disabled: false
+        duration:
+          startTime: null
+          seconds: null
+          combat: null
+          rounds: null
+          turns: null
+          startRound: null
+          startTurn: null
+        icon: icons/svg/aura.svg
+        origin: Item.XwKMqZyw8Ykv12a8
+        tint: null
+        transfer: true
+        name: Find and Tracking Favored
+        description: ''
+        statuses: []
+        _key: >-
+          !actors.items.effects!YzRwn4OIYPYBIPJH.aHnSTe0A1LIq28ea.fr4HPRlgg1TaUMWt
+    folder: null
+    sort: 20500000
+    flags:
+      core:
+        sourceId: Compendium.te001-core-rulebook.Items.PKBgi2Obr2zhhCLX
+    system:
+      cosm: Cyberpapacy
+      description: >-
+        <p>This eye enhancement increases fine detail and can even detect
+        patterns or breaks in patterns. Any test made to detect and comprehend
+        visual evidence, usually <q>find</q> or <q>tracking</q>, becomes Favored
+        (page 109).</p>
+
+        <p>updated in Cyberpapacy Sourcebook</p>
+
+        <p>&nbsp;</p>
+
+        <p>Found in <strong>Core Rules, Cyberpapacy Sourcebook</strong></p>
+      techlevel: 26
+      price: 2,000
+      value: 17
+      notes: ''
+    ownership:
+      default: 0
+      A9LyAqagoJJU3gDH: 3
+      CtisFurQNe9h7ABb: 3
+    _stats:
+      systemId: torgeternity
+      systemVersion: 3.1.1
+      coreVersion: '11.308'
+      createdTime: 1693913490442
+      modifiedTime: 1693913514308
+      lastModifiedBy: CtisFurQNe9h7ABb
+    _key: '!actors.items!YzRwn4OIYPYBIPJH.aHnSTe0A1LIq28ea'
+  - _id: SCn5yulik1qI2JKh
+    name: BelleView Low-Light MK II
+    type: implant
+    img: systems/torgeternity/images/icons/cyberware-icon.webp
+    effects: []
+    folder: null
+    sort: 20550000
+    flags:
+      core:
+        sourceId: Compendium.te001-core-rulebook.Items.brQSx8v2pebz9LT1
+    system:
+      cosm: Cyberpapacy
+      description: |-
+        <p>updated in Cyberpapacy Sourcebook</p>
+        <p>&nbsp;</p>
+        <p>Found in <strong>Core Rules, Cyberpapacy Sourcebook</strong></p>
+      techlevel: 26
+      price: 1,000
+      value: 15
+      notes: ''
+    ownership:
+      default: 0
+      A9LyAqagoJJU3gDH: 3
+      CtisFurQNe9h7ABb: 3
+    _stats:
+      systemId: torgeternity
+      systemVersion: 3.1.1
+      coreVersion: '11.308'
+      createdTime: 1693913497179
+      modifiedTime: 1693913515323
+      lastModifiedBy: CtisFurQNe9h7ABb
+    _key: '!actors.items!YzRwn4OIYPYBIPJH.SCn5yulik1qI2JKh'
+  - _id: B2Ogv5Qea09CaOiw
+    name: HardPlas Arm
+    type: implant
+    img: systems/torgeternity/images/icons/cyberware-icon.webp
+    effects:
+      - icon: icons/svg/aura.svg
+        origin: Item.9yaicAAj48dbaybS
+        duration:
+          startTime: null
+          seconds: null
+          combat: null
+          rounds: null
+          turns: null
+          startRound: null
+          startTurn: null
+        disabled: false
+        name: Strength +1 (Arm)
+        _id: 4icpSmCFpseeAB0D
+        changes:
+          - key: system.attributes.strength
+            mode: 2
+            value: '1'
+            priority: null
+        description: ''
+        transfer: true
+        statuses: []
+        flags: {}
+        tint: null
+        _key: >-
+          !actors.items.effects!YzRwn4OIYPYBIPJH.B2Ogv5Qea09CaOiw.4icpSmCFpseeAB0D
+      - icon: icons/svg/aura.svg
+        origin: Item.9yaicAAj48dbaybS
+        duration:
+          startTime: null
+          seconds: null
+          combat: null
+          rounds: null
+          turns: null
+          startRound: null
+          startTurn: null
+        disabled: true
+        name: Armor +2 (Arm)
+        _id: 8eNrGmL5ettF6ZQv
+        changes:
+          - key: system.other.toughness
+            mode: 2
+            value: '2'
+            priority: null
+          - key: system.other.armor
+            mode: 2
+            value: '2'
+            priority: null
+        description: ''
+        transfer: true
+        statuses: []
+        flags: {}
+        tint: null
+        _key: >-
+          !actors.items.effects!YzRwn4OIYPYBIPJH.B2Ogv5Qea09CaOiw.8eNrGmL5ettF6ZQv
+    folder: null
+    sort: 20650000
+    flags:
+      core:
+        sourceId: Compendium.te001-core-rulebook.Items.Kge40uOXKJH20nk6
+    system:
+      cosm: (Keins)
+      description: >-
+        <p>One of the hero’s arms is replaced by a cybernetic version. It
+        increases <em>Strength</em> tests by +1 and has +2 Armor on that limb
+        only. The arm’s Armor protects the character’s torso if he takes an
+        Active Defense. The <em>Strength</em> increase applies only to tests and
+        attacks made with that limb.</p>
+
+        <p>&nbsp;</p>
+
+        <p>Found in <strong>Core Rules</strong></p>
+      techlevel: 26
+      price: 5,000
+      value: 18
+      notes: ''
+    ownership:
+      default: 0
+      A9LyAqagoJJU3gDH: 3
+      CtisFurQNe9h7ABb: 3
+    _stats:
+      systemId: torgeternity
+      systemVersion: 3.1.1
+      coreVersion: '11.308'
+      createdTime: 1693913502475
+      modifiedTime: 1694867340056
+      lastModifiedBy: CtisFurQNe9h7ABb
+    _key: '!actors.items!YzRwn4OIYPYBIPJH.B2Ogv5Qea09CaOiw'
+  - _id: h8Pjmy5xh9xAKe3M
+    name: Healing
+    type: miracle
+    img: systems/torgeternity/images/icons/miracles-icon.webp
+    effects: []
+    folder: null
+    sort: 27800000
+    flags:
+      core:
+        sourceId: Compendium.te001-core-rulebook.Items.UpTgsybNJ1srMK4o
+    system:
+      axiom: 10
+      skill: faith
+      skilllevel: 10
+      castingtime: 1 action
+      dnType: ''
+      dn: standard
+      targetDefense: ''
+      modifier: null
+      range: Touch
+      duration: Instant
+      description: >-
+        <p>Perhaps the most important ability a chosen one brings to a band of
+        Storm Knights is her ability to heal. Whether she&rsquo;s patching up
+        her teammate&rsquo;s Wounds&nbsp;or winning over injured villagers,
+        <em>healing</em> is a critical skill.</p>
+
+        <p>The invoker&rsquo;s total is modified by the target&rsquo;s Wound
+        penalties (as well as the caster&rsquo;s if he happens to be Wounded). A
+        success heals 1 Wound, all Shock, and removes KO.</p>
+
+        <p><em>Healing</em> may only be attempted on a single individual once
+        per scene&mdash;choose wisely! If Maru is injured in a fight and healed
+        by Father Damien, he won&rsquo;t be able to heal her again until the
+        next scene. He could still use <em>first aid</em> on her, and may use
+        <em>healing</em> on his other comrades.</p>
+
+        <p>&nbsp;</p>
+
+        <p>Found in <strong>Core Rules</strong></p>
+      good: 2 Wounds are healed
+      outstanding: 3 Wounds are healed
+      isAttack: 'false'
+      damage: null
+      ap: 0
+      applySize: 'false'
+      applyArmor: 'false'
+    ownership:
+      default: 0
+      A9LyAqagoJJU3gDH: 3
+      CtisFurQNe9h7ABb: 3
+    _stats:
+      systemId: torgeternity
+      systemVersion: 3.1.1
+      coreVersion: '11.308'
+      createdTime: 1693913699020
+      modifiedTime: 1693913699020
+      lastModifiedBy: CtisFurQNe9h7ABb
+    _key: '!actors.items!YzRwn4OIYPYBIPJH.h8Pjmy5xh9xAKe3M'
+  - _id: vmkCvyPe5aUFaIT3
+    name: Bless
+    type: miracle
+    img: systems/torgeternity/images/icons/miracles-icon.webp
+    effects:
+      - _id: ejsHxyVSYc4H584m
+        changes:
+          - key: system.attributes.charisma
+            mode: 2
+            value: '1'
+            priority: null
+        disabled: true
+        duration:
+          startTime: null
+          rounds: 3
+          seconds: null
+          combat: null
+          turns: null
+          startRound: null
+          startTurn: null
+        icon: icons/svg/aura.svg
+        origin: Compendium.te001-core-rulebook.Items.se2mx9JyDViZfTFt
+        transfer: true
+        flags: {}
+        tint: null
+        name: Charisma standard
+        description: ''
+        statuses: []
+        _key: >-
+          !actors.items.effects!YzRwn4OIYPYBIPJH.vmkCvyPe5aUFaIT3.ejsHxyVSYc4H584m
+      - _id: UEJxiEVAmMFSgV3V
+        changes:
+          - key: system.attributes.charisma
+            mode: 2
+            value: '1'
+            priority: null
+        disabled: true
+        duration:
+          startTime: null
+          rounds: 6
+          seconds: null
+          combat: null
+          turns: null
+          startRound: null
+          startTurn: null
+        icon: icons/svg/aura.svg
+        origin: Compendium.te001-core-rulebook.Items.se2mx9JyDViZfTFt
+        transfer: true
+        flags: {}
+        tint: null
+        name: Charisma good
+        description: ''
+        statuses: []
+        _key: >-
+          !actors.items.effects!YzRwn4OIYPYBIPJH.vmkCvyPe5aUFaIT3.UEJxiEVAmMFSgV3V
+      - _id: 7hLkPnWQ3Cz4sIvx
+        changes:
+          - key: system.attributes.charisma
+            mode: 2
+            value: '2'
+            priority: null
+        disabled: true
+        duration:
+          startTime: null
+          rounds: 6
+          seconds: null
+          combat: null
+          turns: null
+          startRound: null
+          startTurn: null
+        icon: icons/svg/aura.svg
+        origin: Compendium.te001-core-rulebook.Items.se2mx9JyDViZfTFt
+        transfer: true
+        flags: {}
+        tint: null
+        name: Charisma outstanding
+        description: ''
+        statuses: []
+        _key: >-
+          !actors.items.effects!YzRwn4OIYPYBIPJH.vmkCvyPe5aUFaIT3.7hLkPnWQ3Cz4sIvx
+      - _id: Gk4Dt9zemEPdV4Lf
+        changes:
+          - key: system.attributes.dexterity
+            mode: 2
+            value: '1'
+            priority: null
+        disabled: true
+        duration:
+          startTime: null
+          rounds: 3
+          seconds: null
+          combat: null
+          turns: null
+          startRound: null
+          startTurn: null
+        icon: icons/svg/aura.svg
+        origin: Compendium.te001-core-rulebook.Items.se2mx9JyDViZfTFt
+        transfer: true
+        flags: {}
+        tint: null
+        name: Dexterity standard
+        description: ''
+        statuses: []
+        _key: >-
+          !actors.items.effects!YzRwn4OIYPYBIPJH.vmkCvyPe5aUFaIT3.Gk4Dt9zemEPdV4Lf
+      - _id: hjgrSJkvynzfz1B7
+        changes:
+          - key: system.attributes.dexterity
+            mode: 2
+            value: '1'
+            priority: null
+        disabled: true
+        duration:
+          startTime: null
+          rounds: 6
+          seconds: null
+          combat: null
+          turns: null
+          startRound: null
+          startTurn: null
+        icon: icons/svg/aura.svg
+        origin: Compendium.te001-core-rulebook.Items.se2mx9JyDViZfTFt
+        transfer: true
+        flags: {}
+        tint: null
+        name: Dexterity good
+        description: ''
+        statuses: []
+        _key: >-
+          !actors.items.effects!YzRwn4OIYPYBIPJH.vmkCvyPe5aUFaIT3.hjgrSJkvynzfz1B7
+      - _id: 4vENwA8ULwUdWZuL
+        changes:
+          - key: system.attributes.dexterity
+            mode: 2
+            value: '2'
+            priority: null
+        disabled: true
+        duration:
+          startTime: null
+          rounds: 6
+          seconds: null
+          combat: null
+          turns: null
+          startRound: null
+          startTurn: null
+        icon: icons/svg/aura.svg
+        origin: Compendium.te001-core-rulebook.Items.se2mx9JyDViZfTFt
+        transfer: true
+        flags: {}
+        tint: null
+        name: Dexterity outstanding
+        description: ''
+        statuses: []
+        _key: >-
+          !actors.items.effects!YzRwn4OIYPYBIPJH.vmkCvyPe5aUFaIT3.4vENwA8ULwUdWZuL
+      - _id: ZagMGUXj56KZTy70
+        changes:
+          - key: system.attributes.mind
+            mode: 2
+            value: '1'
+            priority: null
+        disabled: true
+        duration:
+          startTime: null
+          rounds: 3
+          seconds: null
+          combat: null
+          turns: null
+          startRound: null
+          startTurn: null
+        icon: icons/svg/aura.svg
+        origin: Compendium.te001-core-rulebook.Items.se2mx9JyDViZfTFt
+        transfer: true
+        flags: {}
+        tint: null
+        name: Mind standard
+        description: ''
+        statuses: []
+        _key: >-
+          !actors.items.effects!YzRwn4OIYPYBIPJH.vmkCvyPe5aUFaIT3.ZagMGUXj56KZTy70
+      - _id: 8bq7UJUETHyFo1gM
+        changes:
+          - key: system.attributes.mind
+            mode: 2
+            value: '1'
+            priority: null
+        disabled: true
+        duration:
+          startTime: null
+          rounds: 6
+          seconds: null
+          combat: null
+          turns: null
+          startRound: null
+          startTurn: null
+        icon: icons/svg/aura.svg
+        origin: Compendium.te001-core-rulebook.Items.se2mx9JyDViZfTFt
+        transfer: true
+        flags: {}
+        tint: null
+        name: Mind good
+        description: ''
+        statuses: []
+        _key: >-
+          !actors.items.effects!YzRwn4OIYPYBIPJH.vmkCvyPe5aUFaIT3.8bq7UJUETHyFo1gM
+      - _id: Tt7MWjXGciRG35AL
+        changes:
+          - key: system.attributes.mind
+            mode: 2
+            value: '2'
+            priority: null
+        disabled: true
+        duration:
+          startTime: null
+          rounds: 6
+          seconds: null
+          combat: null
+          turns: null
+          startRound: null
+          startTurn: null
+        icon: icons/svg/aura.svg
+        origin: Compendium.te001-core-rulebook.Items.se2mx9JyDViZfTFt
+        transfer: true
+        flags: {}
+        tint: null
+        name: Mind outstanding
+        description: ''
+        statuses: []
+        _key: >-
+          !actors.items.effects!YzRwn4OIYPYBIPJH.vmkCvyPe5aUFaIT3.Tt7MWjXGciRG35AL
+      - _id: vTigaxKhfG399XAn
+        changes:
+          - key: system.attributes.spirit
+            mode: 2
+            value: '1'
+            priority: null
+        disabled: true
+        duration:
+          startTime: null
+          rounds: 3
+          seconds: null
+          combat: null
+          turns: null
+          startRound: null
+          startTurn: null
+        icon: icons/svg/aura.svg
+        origin: Compendium.te001-core-rulebook.Items.se2mx9JyDViZfTFt
+        transfer: true
+        flags: {}
+        tint: null
+        name: Spirit standard
+        description: ''
+        statuses: []
+        _key: >-
+          !actors.items.effects!YzRwn4OIYPYBIPJH.vmkCvyPe5aUFaIT3.vTigaxKhfG399XAn
+      - _id: 3GQjjcjSdCrfSuFw
+        changes:
+          - key: system.attributes.spirit
+            mode: 2
+            value: '1'
+            priority: null
+        disabled: true
+        duration:
+          startTime: null
+          rounds: 6
+          seconds: null
+          combat: null
+          turns: null
+          startRound: null
+          startTurn: null
+        icon: icons/svg/aura.svg
+        origin: Compendium.te001-core-rulebook.Items.se2mx9JyDViZfTFt
+        transfer: true
+        flags: {}
+        tint: null
+        name: Spirit good
+        description: ''
+        statuses: []
+        _key: >-
+          !actors.items.effects!YzRwn4OIYPYBIPJH.vmkCvyPe5aUFaIT3.3GQjjcjSdCrfSuFw
+      - _id: ROpBOp9qzrFAkanv
+        changes:
+          - key: system.attributes.spirit
+            mode: 2
+            value: '2'
+            priority: null
+        disabled: true
+        duration:
+          startTime: null
+          rounds: 6
+          seconds: null
+          combat: null
+          turns: null
+          startRound: null
+          startTurn: null
+        icon: icons/svg/aura.svg
+        origin: Compendium.te001-core-rulebook.Items.se2mx9JyDViZfTFt
+        transfer: true
+        flags: {}
+        tint: null
+        name: Spirit outstanding
+        description: ''
+        statuses: []
+        _key: >-
+          !actors.items.effects!YzRwn4OIYPYBIPJH.vmkCvyPe5aUFaIT3.ROpBOp9qzrFAkanv
+      - _id: AQOnDabxLTdMzsol
+        changes:
+          - key: system.attributes.strength
+            mode: 2
+            value: '1'
+            priority: null
+        disabled: true
+        duration:
+          startTime: null
+          rounds: 3
+          seconds: null
+          combat: null
+          turns: null
+          startRound: null
+          startTurn: null
+        icon: icons/svg/aura.svg
+        origin: Compendium.te001-core-rulebook.Items.se2mx9JyDViZfTFt
+        transfer: true
+        flags: {}
+        tint: null
+        name: Strength standard
+        description: ''
+        statuses: []
+        _key: >-
+          !actors.items.effects!YzRwn4OIYPYBIPJH.vmkCvyPe5aUFaIT3.AQOnDabxLTdMzsol
+      - _id: VBZlldbwSpYM8gzS
+        changes:
+          - key: system.attributes.strength
+            mode: 2
+            value: '1'
+            priority: null
+        disabled: true
+        duration:
+          startTime: null
+          rounds: 6
+          seconds: null
+          combat: null
+          turns: null
+          startRound: null
+          startTurn: null
+        icon: icons/svg/aura.svg
+        origin: Compendium.te001-core-rulebook.Items.se2mx9JyDViZfTFt
+        transfer: true
+        flags: {}
+        tint: null
+        name: Strength good
+        description: ''
+        statuses: []
+        _key: >-
+          !actors.items.effects!YzRwn4OIYPYBIPJH.vmkCvyPe5aUFaIT3.VBZlldbwSpYM8gzS
+      - _id: ztjlxv8a1LnAkd47
+        changes:
+          - key: system.attributes.strength
+            mode: 2
+            value: '2'
+            priority: null
+        disabled: true
+        duration:
+          startTime: null
+          rounds: 6
+          seconds: null
+          combat: null
+          turns: null
+          startRound: null
+          startTurn: null
+        icon: icons/svg/aura.svg
+        origin: Compendium.te001-core-rulebook.Items.se2mx9JyDViZfTFt
+        transfer: true
+        flags: {}
+        tint: null
+        name: Strength outstanding
+        description: ''
+        statuses: []
+        _key: >-
+          !actors.items.effects!YzRwn4OIYPYBIPJH.vmkCvyPe5aUFaIT3.ztjlxv8a1LnAkd47
+    folder: null
+    sort: 48700000
+    flags:
+      core:
+        sourceId: Compendium.te001-core-rulebook.Items.se2mx9JyDViZfTFt
+    system:
+      axiom: 9
+      skill: faith
+      skilllevel: 10
+      castingtime: 1 action
+      dnType: ''
+      dn: standard
+      targetDefense: ''
+      modifier: null
+      range: 5 meters radius
+      duration: 3 rounds
+      description: >-
+        <p><em>Bless</em> surrounds and infuses the caster and his allies with
+        spiritual energy that boosts their physical or mental abilities. The
+        priest chooses any one attribute and calls on his deity to enhance it.
+        <q>May the Lord give us the might of Daniel in the Lion&rsquo;s Den!</q>
+        increases <em>Strength</em>, for example. Or <q>May Vishnu grant you
+        clarity!</q> might enhance <em>Mind</em>.</p>
+
+        <p>If successful, every ally in range adds +1 to that attribute.
+        Increasing <em>Strength</em> or <em>Spirit</em> does not increase the
+        derived statistics of Toughness and Shock, however.</p>
+
+        <p>&nbsp;</p>
+
+        <p>Found in <strong>Core Rules</strong></p>
+      good: Duration increases to 1 minute
+      outstanding: As Good, and the attribute increases by +2
+      isAttack: 'false'
+      damage: null
+      ap: 0
+      applySize: 'false'
+      applyArmor: 'false'
+    ownership:
+      default: 0
+      A9LyAqagoJJU3gDH: 3
+      CtisFurQNe9h7ABb: 3
+    _stats:
+      systemId: torgeternity
+      systemVersion: 3.1.1
+      coreVersion: '11.308'
+      createdTime: 1693913704324
+      modifiedTime: 1693913704324
+      lastModifiedBy: CtisFurQNe9h7ABb
+    _key: '!actors.items!YzRwn4OIYPYBIPJH.vmkCvyPe5aUFaIT3'
+  - _id: 9kYPQ0EfSd09tUbr
+    name: Ward Enemy
+    type: miracle
+    img: systems/torgeternity/images/icons/miracles-icon.webp
+    effects: []
+    folder: null
+    sort: 50200000
+    flags:
+      core:
+        sourceId: Compendium.te001-core-rulebook.Items.u8AtVmCMnPyP3Ewx
+    system:
+      axiom: 8
+      skill: faith
+      skilllevel: 8
+      castingtime: 1 action
+      dnType: ''
+      dn: standard
+      targetDefense: ''
+      modifier: null
+      range: 5 meter radius
+      duration: Concentration
+      description: >-
+        <p><em>Ward enemy</em> protects the faithful from supernatural beings
+        that prey on or seek to harm humanity.</p>
+
+        <p>To cast, the invoker must brandish a holy symbol, recite prayers, or
+        otherwise clearly call on the source of his power, making him an obvious
+        target for the taunts of spirits, demons, or other antagonists likely to
+        be affected.</p>
+
+        <p>While the ward is active, all allies within five meters add +1 to
+        their defenses versus
+        @UUID[Compendium.te001-core-rulebook.rules.pwneQ55M0nnDH0Us.JournalEntryPage.Pu4XsglS98BqDRgX#supernatural-evil]{supernaturally
+        evil} creatures and their attacks. The bonus counts toward both physical
+        and interaction defenses.</p>
+
+        <p><strong>Special:</strong> This miracle may be attempted without the
+        Miracles Perk if the <em>faith</em> prerequisite is met.</p>
+
+        <p>In the Cyberpapacy faith, witches and other spellcasters are
+        considered supernatural enemies of the faith. In addition to
+        supernaturally evil creatures, the ward enemy miracle invoked by a
+        worshiper of the Cyberpapacy functions against any character with any
+        Spellcaster Perk or spellcasting Special Ability.</p>
+
+        <p>&nbsp;</p>
+
+        <p>Found in <strong>Core Rules</strong></p>
+      good: Those protected add +2 to all defenses
+      outstanding: >-
+        As the Good result, and supernaturally evil creatures who fail an attack
+        against any of the protected individuals are Stymied
+      isAttack: 'false'
+      damage: null
+      ap: 0
+      applySize: 'false'
+      applyArmor: 'false'
+    ownership:
+      default: 0
+      A9LyAqagoJJU3gDH: 3
+      CtisFurQNe9h7ABb: 3
+    _stats:
+      systemId: torgeternity
+      systemVersion: 3.1.1
+      coreVersion: '11.308'
+      createdTime: 1693913707540
+      modifiedTime: 1693913707540
+      lastModifiedBy: CtisFurQNe9h7ABb
+    _key: '!actors.items!YzRwn4OIYPYBIPJH.9kYPQ0EfSd09tUbr'
+effects:
+  - _id: D9wP4XDSkUGUOjij
+    flags: {}
+    changes:
+      - key: system.other.toughness
+        value: '2'
+        mode: 2
+        priority: null
+      - key: system.other.armor
+        value: '2'
+        mode: 2
+        priority: null
+    disabled: false
+    duration:
+      startTime: 0
+      seconds: null
+      combat: null
+      rounds: null
+      turns: null
+      startRound: null
+      startTurn: null
+    icon: icons/svg/aura.svg
+    origin: >-
+      Compendium.torgeternity.archetypes.Actor.YzRwn4OIYPYBIPJH.Item.G8MyzX3sL4Dj8zLZ
+    tint: null
+    transfer: false
+    name: Armor +2
+    description: ''
+    statuses: []
+    _key: '!actors.effects!YzRwn4OIYPYBIPJH.D9wP4XDSkUGUOjij'
+  - _id: OD88OO0fEVgzqpzV
+    flags: {}
+    changes:
+      - key: system.skills.find.isFav
+        value: 'True'
+        mode: 5
+        priority: null
+      - key: system.skills.tracking.isFav
+        value: 'True'
+        mode: 5
+        priority: null
+    disabled: false
+    duration:
+      startTime: 0
+      seconds: null
+      combat: null
+      rounds: null
+      turns: null
+      startRound: null
+      startTurn: null
+    icon: icons/svg/aura.svg
+    origin: >-
+      Compendium.torgeternity.archetypes.Actor.YzRwn4OIYPYBIPJH.Item.aHnSTe0A1LIq28ea
+    tint: null
+    transfer: false
+    name: Find and Tracking Favored
+    description: ''
+    statuses: []
+    _key: '!actors.effects!YzRwn4OIYPYBIPJH.OD88OO0fEVgzqpzV'
+  - icon: icons/svg/aura.svg
+    origin: >-
+      Compendium.torgeternity.archetypes.Actor.YzRwn4OIYPYBIPJH.Item.B2Ogv5Qea09CaOiw
+    duration:
+      startTime: 0
+      seconds: null
+      combat: null
+      rounds: null
+      turns: null
+      startRound: null
+      startTurn: null
+    disabled: false
+    name: Strength +1 (Arm)
+    _id: lIHi5gkAKFhcgaZZ
+    changes:
+      - key: system.attributes.strength
+        mode: 2
+        value: '1'
+        priority: null
+    description: ''
+    transfer: false
+    statuses: []
+    flags: {}
+    tint: null
+    _key: '!actors.effects!YzRwn4OIYPYBIPJH.lIHi5gkAKFhcgaZZ'
+  - icon: icons/svg/aura.svg
+    origin: >-
+      Compendium.torgeternity.archetypes.Actor.YzRwn4OIYPYBIPJH.Item.B2Ogv5Qea09CaOiw
+    duration:
+      startTime: 0
+      seconds: null
+      combat: null
+      rounds: null
+      turns: null
+      startRound: null
+      startTurn: null
+    disabled: true
+    name: Armor +2 (Arm)
+    _id: YKngU3ubKoGSC8GM
+    changes:
+      - key: system.other.toughness
+        mode: 2
+        value: '2'
+        priority: null
+      - key: system.other.armor
+        mode: 2
+        value: '2'
+        priority: null
+    description: ''
+    transfer: false
+    statuses: []
+    flags: {}
+    tint: null
+    _key: '!actors.effects!YzRwn4OIYPYBIPJH.YKngU3ubKoGSC8GM'
+  - _id: QU7Y7tvCFUQIRGab
+    changes:
+      - key: system.attributes.charisma
+        mode: 2
+        value: '1'
+        priority: null
+    disabled: true
+    duration:
+      startTime: 0
+      rounds: 3
+      seconds: null
+      combat: null
+      turns: null
+      startRound: null
+      startTurn: null
+    icon: icons/svg/aura.svg
+    origin: >-
+      Compendium.torgeternity.archetypes.Actor.YzRwn4OIYPYBIPJH.Item.vmkCvyPe5aUFaIT3
+    transfer: false
+    flags: {}
+    tint: null
+    name: Charisma standard
+    description: ''
+    statuses: []
+    _key: '!actors.effects!YzRwn4OIYPYBIPJH.QU7Y7tvCFUQIRGab'
+  - _id: tL9YoN5AIbDPBg3T
+    changes:
+      - key: system.attributes.charisma
+        mode: 2
+        value: '1'
+        priority: null
+    disabled: true
+    duration:
+      startTime: 0
+      rounds: 6
+      seconds: null
+      combat: null
+      turns: null
+      startRound: null
+      startTurn: null
+    icon: icons/svg/aura.svg
+    origin: >-
+      Compendium.torgeternity.archetypes.Actor.YzRwn4OIYPYBIPJH.Item.vmkCvyPe5aUFaIT3
+    transfer: false
+    flags: {}
+    tint: null
+    name: Charisma good
+    description: ''
+    statuses: []
+    _key: '!actors.effects!YzRwn4OIYPYBIPJH.tL9YoN5AIbDPBg3T'
+  - _id: MZUVwOduYomIV7FK
+    changes:
+      - key: system.attributes.charisma
+        mode: 2
+        value: '2'
+        priority: null
+    disabled: true
+    duration:
+      startTime: 0
+      rounds: 6
+      seconds: null
+      combat: null
+      turns: null
+      startRound: null
+      startTurn: null
+    icon: icons/svg/aura.svg
+    origin: >-
+      Compendium.torgeternity.archetypes.Actor.YzRwn4OIYPYBIPJH.Item.vmkCvyPe5aUFaIT3
+    transfer: false
+    flags: {}
+    tint: null
+    name: Charisma outstanding
+    description: ''
+    statuses: []
+    _key: '!actors.effects!YzRwn4OIYPYBIPJH.MZUVwOduYomIV7FK'
+  - _id: RXEhVfQuRDwvK9au
+    changes:
+      - key: system.attributes.dexterity
+        mode: 2
+        value: '1'
+        priority: null
+    disabled: true
+    duration:
+      startTime: 0
+      rounds: 3
+      seconds: null
+      combat: null
+      turns: null
+      startRound: null
+      startTurn: null
+    icon: icons/svg/aura.svg
+    origin: >-
+      Compendium.torgeternity.archetypes.Actor.YzRwn4OIYPYBIPJH.Item.vmkCvyPe5aUFaIT3
+    transfer: false
+    flags: {}
+    tint: null
+    name: Dexterity standard
+    description: ''
+    statuses: []
+    _key: '!actors.effects!YzRwn4OIYPYBIPJH.RXEhVfQuRDwvK9au'
+  - _id: E34ShANgpX7eCDyu
+    changes:
+      - key: system.attributes.dexterity
+        mode: 2
+        value: '1'
+        priority: null
+    disabled: true
+    duration:
+      startTime: 0
+      rounds: 6
+      seconds: null
+      combat: null
+      turns: null
+      startRound: null
+      startTurn: null
+    icon: icons/svg/aura.svg
+    origin: >-
+      Compendium.torgeternity.archetypes.Actor.YzRwn4OIYPYBIPJH.Item.vmkCvyPe5aUFaIT3
+    transfer: false
+    flags: {}
+    tint: null
+    name: Dexterity good
+    description: ''
+    statuses: []
+    _key: '!actors.effects!YzRwn4OIYPYBIPJH.E34ShANgpX7eCDyu'
+  - _id: Ukg3IkXqEjHsLB9o
+    changes:
+      - key: system.attributes.dexterity
+        mode: 2
+        value: '2'
+        priority: null
+    disabled: true
+    duration:
+      startTime: 0
+      rounds: 6
+      seconds: null
+      combat: null
+      turns: null
+      startRound: null
+      startTurn: null
+    icon: icons/svg/aura.svg
+    origin: >-
+      Compendium.torgeternity.archetypes.Actor.YzRwn4OIYPYBIPJH.Item.vmkCvyPe5aUFaIT3
+    transfer: false
+    flags: {}
+    tint: null
+    name: Dexterity outstanding
+    description: ''
+    statuses: []
+    _key: '!actors.effects!YzRwn4OIYPYBIPJH.Ukg3IkXqEjHsLB9o'
+  - _id: 5XmKUEiNKuZNC8L3
+    changes:
+      - key: system.attributes.mind
+        mode: 2
+        value: '1'
+        priority: null
+    disabled: true
+    duration:
+      startTime: 0
+      rounds: 3
+      seconds: null
+      combat: null
+      turns: null
+      startRound: null
+      startTurn: null
+    icon: icons/svg/aura.svg
+    origin: >-
+      Compendium.torgeternity.archetypes.Actor.YzRwn4OIYPYBIPJH.Item.vmkCvyPe5aUFaIT3
+    transfer: false
+    flags: {}
+    tint: null
+    name: Mind standard
+    description: ''
+    statuses: []
+    _key: '!actors.effects!YzRwn4OIYPYBIPJH.5XmKUEiNKuZNC8L3'
+  - _id: W7iYq44oBHSxG2rY
+    changes:
+      - key: system.attributes.mind
+        mode: 2
+        value: '1'
+        priority: null
+    disabled: true
+    duration:
+      startTime: 0
+      rounds: 6
+      seconds: null
+      combat: null
+      turns: null
+      startRound: null
+      startTurn: null
+    icon: icons/svg/aura.svg
+    origin: >-
+      Compendium.torgeternity.archetypes.Actor.YzRwn4OIYPYBIPJH.Item.vmkCvyPe5aUFaIT3
+    transfer: false
+    flags: {}
+    tint: null
+    name: Mind good
+    description: ''
+    statuses: []
+    _key: '!actors.effects!YzRwn4OIYPYBIPJH.W7iYq44oBHSxG2rY'
+  - _id: YkbdysdtcaOkPbiq
+    changes:
+      - key: system.attributes.mind
+        mode: 2
+        value: '2'
+        priority: null
+    disabled: true
+    duration:
+      startTime: 0
+      rounds: 6
+      seconds: null
+      combat: null
+      turns: null
+      startRound: null
+      startTurn: null
+    icon: icons/svg/aura.svg
+    origin: >-
+      Compendium.torgeternity.archetypes.Actor.YzRwn4OIYPYBIPJH.Item.vmkCvyPe5aUFaIT3
+    transfer: false
+    flags: {}
+    tint: null
+    name: Mind outstanding
+    description: ''
+    statuses: []
+    _key: '!actors.effects!YzRwn4OIYPYBIPJH.YkbdysdtcaOkPbiq'
+  - _id: Hh0XlZcy25ngK8aW
+    changes:
+      - key: system.attributes.spirit
+        mode: 2
+        value: '1'
+        priority: null
+    disabled: true
+    duration:
+      startTime: 0
+      rounds: 3
+      seconds: null
+      combat: null
+      turns: null
+      startRound: null
+      startTurn: null
+    icon: icons/svg/aura.svg
+    origin: >-
+      Compendium.torgeternity.archetypes.Actor.YzRwn4OIYPYBIPJH.Item.vmkCvyPe5aUFaIT3
+    transfer: false
+    flags: {}
+    tint: null
+    name: Spirit standard
+    description: ''
+    statuses: []
+    _key: '!actors.effects!YzRwn4OIYPYBIPJH.Hh0XlZcy25ngK8aW'
+  - _id: J3TFqUJ4uxMYhGeI
+    changes:
+      - key: system.attributes.spirit
+        mode: 2
+        value: '1'
+        priority: null
+    disabled: true
+    duration:
+      startTime: 0
+      rounds: 6
+      seconds: null
+      combat: null
+      turns: null
+      startRound: null
+      startTurn: null
+    icon: icons/svg/aura.svg
+    origin: >-
+      Compendium.torgeternity.archetypes.Actor.YzRwn4OIYPYBIPJH.Item.vmkCvyPe5aUFaIT3
+    transfer: false
+    flags: {}
+    tint: null
+    name: Spirit good
+    description: ''
+    statuses: []
+    _key: '!actors.effects!YzRwn4OIYPYBIPJH.J3TFqUJ4uxMYhGeI'
+  - _id: pVc8p8Op6ffNTk8e
+    changes:
+      - key: system.attributes.spirit
+        mode: 2
+        value: '2'
+        priority: null
+    disabled: true
+    duration:
+      startTime: 0
+      rounds: 6
+      seconds: null
+      combat: null
+      turns: null
+      startRound: null
+      startTurn: null
+    icon: icons/svg/aura.svg
+    origin: >-
+      Compendium.torgeternity.archetypes.Actor.YzRwn4OIYPYBIPJH.Item.vmkCvyPe5aUFaIT3
+    transfer: false
+    flags: {}
+    tint: null
+    name: Spirit outstanding
+    description: ''
+    statuses: []
+    _key: '!actors.effects!YzRwn4OIYPYBIPJH.pVc8p8Op6ffNTk8e'
+  - _id: oSsqZJgLvvECHxW3
+    changes:
+      - key: system.attributes.strength
+        mode: 2
+        value: '1'
+        priority: null
+    disabled: true
+    duration:
+      startTime: 0
+      rounds: 3
+      seconds: null
+      combat: null
+      turns: null
+      startRound: null
+      startTurn: null
+    icon: icons/svg/aura.svg
+    origin: >-
+      Compendium.torgeternity.archetypes.Actor.YzRwn4OIYPYBIPJH.Item.vmkCvyPe5aUFaIT3
+    transfer: false
+    flags: {}
+    tint: null
+    name: Strength standard
+    description: ''
+    statuses: []
+    _key: '!actors.effects!YzRwn4OIYPYBIPJH.oSsqZJgLvvECHxW3'
+  - _id: n6Z0C2GLi17WJTgR
+    changes:
+      - key: system.attributes.strength
+        mode: 2
+        value: '1'
+        priority: null
+    disabled: true
+    duration:
+      startTime: 0
+      rounds: 6
+      seconds: null
+      combat: null
+      turns: null
+      startRound: null
+      startTurn: null
+    icon: icons/svg/aura.svg
+    origin: >-
+      Compendium.torgeternity.archetypes.Actor.YzRwn4OIYPYBIPJH.Item.vmkCvyPe5aUFaIT3
+    transfer: false
+    flags: {}
+    tint: null
+    name: Strength good
+    description: ''
+    statuses: []
+    _key: '!actors.effects!YzRwn4OIYPYBIPJH.n6Z0C2GLi17WJTgR'
+  - _id: BJQHsQZEQhtNEsl3
+    changes:
+      - key: system.attributes.strength
+        mode: 2
+        value: '2'
+        priority: null
+    disabled: true
+    duration:
+      startTime: 0
+      rounds: 6
+      seconds: null
+      combat: null
+      turns: null
+      startRound: null
+      startTurn: null
+    icon: icons/svg/aura.svg
+    origin: >-
+      Compendium.torgeternity.archetypes.Actor.YzRwn4OIYPYBIPJH.Item.vmkCvyPe5aUFaIT3
+    transfer: false
+    flags: {}
+    tint: null
+    name: Strength outstanding
+    description: ''
+    statuses: []
+    _key: '!actors.effects!YzRwn4OIYPYBIPJH.BJQHsQZEQhtNEsl3'
+folder: null
+sort: 100001
+flags: {}
+system:
+  shock:
+    max: 5
+    value: 0
+  wounds:
+    max: 3
+    value: 0
+  attributes:
+    charisma: 8
+    dexterity: 7
+    mind: 7
+    spirit: 11
+    strength: 7
+  other:
+    move: 5
+    run: 5
+    toughness: 5
+    armor: 0
+    cosm: cyberpapacy
+    possibilities: 0
+    posibilities: 3
+  skills:
+    airVehicles:
+      baseAttribute: dexterity
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    alteration:
+      baseAttribute: mind
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    apportation:
+      baseAttribute: spirit
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    beastRiding:
+      baseAttribute: dexterity
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    computers:
+      baseAttribute: mind
+      adds: 1
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    conjuration:
+      baseAttribute: spirit
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    divination:
+      baseAttribute: mind
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    dodge:
+      baseAttribute: dexterity
+      adds: 2
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    energyWeapons:
+      baseAttribute: dexterity
+      adds: 1
+      value: 0
+      isFav: false
+      groupName: combat
+      unskilledUse: 1
+    evidenceAnalysis:
+      baseAttribute: mind
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    faith:
+      baseAttribute: spirit
+      adds: 3
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    find:
+      baseAttribute: mind
+      adds: 1
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    fireCombat:
+      baseAttribute: dexterity
+      adds: null
+      value: 0
+      isFav: false
+      groupName: combat
+      unskilledUse: 1
+    firstAid:
+      baseAttribute: mind
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    heavyWeapons:
+      baseAttribute: dexterity
+      adds: null
+      value: 0
+      isFav: false
+      groupName: combat
+      unskilledUse: 1
+    intimidation:
+      baseAttribute: spirit
+      adds: 1
+      value: 0
+      isFav: false
+      groupName: interaction
+      unskilledUse: 1
+    kinesis:
+      baseAttribute: spirit
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    landVehicles:
+      baseAttribute: dexterity
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    language:
+      baseAttribute: mind
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    lockpicking:
+      baseAttribute: dexterity
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    maneuver:
+      baseAttribute: dexterity
+      adds: null
+      value: 0
+      isFav: false
+      groupName: interaction
+      unskilledUse: 1
+    medicine:
+      baseAttribute: mind
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    meleeWeapons:
+      baseAttribute: dexterity
+      adds: null
+      value: 0
+      isFav: false
+      groupName: combat
+      unskilledUse: 1
+    missileWeapons:
+      baseAttribute: dexterity
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    persuasion:
+      baseAttribute: charisma
+      adds: 1
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    precognition:
+      baseAttribute: mind
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    profession:
+      baseAttribute: mind
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    reality:
+      baseAttribute: spirit
+      adds: 1
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    scholar:
+      baseAttribute: mind
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    science:
+      baseAttribute: mind
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    stealth:
+      baseAttribute: dexterity
+      adds: 1
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    streetwise:
+      baseAttribute: charisma
+      adds: 1
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    survival:
+      baseAttribute: mind
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    taunt:
+      baseAttribute: charisma
+      adds: 2
+      value: 0
+      isFav: false
+      groupName: interaction
+      unskilledUse: 1
+    telepathy:
+      baseAttribute: charisma
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    tracking:
+      baseAttribute: mind
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    trick:
+      baseAttribute: mind
+      adds: null
+      value: 0
+      isFav: false
+      groupName: interaction
+      unskilledUse: 1
+    unarmedCombat:
+      baseAttribute: dexterity
+      adds: 1
+      value: 0
+      isFav: false
+      groupName: combat
+      unskilledUse: 1
+    waterVehicles:
+      baseAttribute: dexterity
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    willpower:
+      baseAttribute: spirit
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+  xp:
+    unspent: 0
+    earned: 0
+  axioms:
+    magic: 14
+    social: 18
+    spirit: 16
+    tech: 26
+  details:
+    clearance: ''
+    background: >-
+      <p><img class="charimg"
+      src="systems/torgeternity/images/characters/Renegade_Priest.webp" alt=""
+      width="1146" height="2017"></p>
+
+      <p
+      class="moreheight">@UUID[Compendium.torgeternity.handouts.JournalEntry.Knhh8vqtjSylJo5Z.JournalEntryPage.hkGNur6sw23AZTbu]{Archetype
+      - The Renegade Priest}</p>
+
+      <h3>Overview</h3>
+
+      <p>Not every preacher in the Cyberpapacy has fallen under Jean
+      Malraux&rsquo;s sway. Many still believe in a far more benovelent and
+      forgiving deity. These &ldquo;renegades,&ldquo; as the Antipope calls
+      them, resisted his totalitarian regime, faced the Inquisition, and now
+      fight on the streets with the resistance.</p>
+
+      <h3>Tactics</h3>
+
+      <p>Your miracles mostly provide support: keeping your allies fighting
+      despite their wounds or boosting their critical abilities. The high-tech
+      armor that lines your clothing offers good protection, and your high
+      reality skill makes Soaking most Wounds easy.</p>
+
+      <p>The integrated GodBeam laser in your arm can be a nasty surprise when
+      things turn violent, but your true weapon is your interpersonal skills.
+      Persuasion might avoid trouble entirely, and intimidation or taunt cause
+      havoc with weak-willed foes.</p>
+
+      <h3>Moment of Crisis</h3>
+
+      <p>Your Moment of Crisis was likely a crisis of faith and conscience as
+      well. The Cyberpope&rsquo;s flawed and ruthless vision brought out the
+      lion inside you, and triggered the transition from &ldquo;father&ldquo; to
+      Storm Knight.</p>
+
+      <p>Or perhaps you simply prayed for divine intervention. The Almighty
+      works in mysterious ways, and instead of smiting your foes, He gave you a
+      little extra ability to fight for righteousness.</p>
+
+      <h3>Quote</h3>
+
+      <p>&ldquo;It is not with my eye that I see the world as it truly is, but
+      with my faith.&ldquo;</p>
+
+      <h3>Description</h3>
+
+      <p>The white collar is a well-known symbol for the church in both Earth
+      and Magna Verita. The sash worn around the waist varies in color depending
+      on the priest&rsquo;s rank and region. The red one you wear was awarded
+      for merit and good works.</p>
+
+      <p>The cybernetic eye is a Belleview model, a common enough enhancement in
+      the Cyberpapacy, but also a potential source of trouble if authorities
+      realize it&rsquo;s been disconnected from the GodNet.</p>
+
+      <h3>Agenda</h3>
+
+      <p>Spread the love and forgiveness of God. So many only experience Jean
+      Malraux&rsquo;s version of religion&mdash;the truly faithful must counter
+      that poison with humility and kindness.</p>
+
+      <h3>Names</h3>
+
+      <p>Claude, Damien, Dominique, Francis, Honore, Marc, Pascale, Tristan,
+      Xavier</p>
+
+      <h3>Advancement Track (Optional)</h3>
+
+      <ul>
+
+      <li>(5 XP) Protected</li>
+
+      <li>(7 XP) Miracles (lightning strike)</li>
+
+      <li>(1 XP) <em>trick</em> +1</li>
+
+      <li>(2 XP) <em>persuasion</em> +2</li>
+
+      <li>(3 XP) <em>reality</em> +3</li>
+
+      <li>(3 XP) <em>taunt</em> +3</li>
+
+      <li>(4 XP) <em>faith</em> +4</li>
+
+      <li>(5 XP) <em>faith</em> +5</li>
+
+      </ul>
+    race: human
+  editstate: null
+  fatigue: '1'
+ownership:
+  default: 0
+  A9LyAqagoJJU3gDH: 3
+prototypeToken:
+  flags: {}
+  name: Renegade Priest
+  displayName: 0
+  width: 1
+  height: 1
+  lockRotation: false
+  rotation: 0
+  actorLink: true
+  disposition: 1
+  displayBars: 40
+  bar1:
+    attribute: wounds
+  bar2:
+    attribute: shock
+  randomImg: false
+  alpha: 1
+  light:
+    alpha: 1
+    angle: 360
+    bright: 0
+    coloration: 1
+    dim: 0
+    luminosity: 0.5
+    saturation: 0
+    contrast: 0
+    shadows: 0
+    animation:
+      type: null
+      speed: 5
+      intensity: 5
+      reverse: false
+    darkness:
+      min: 0
+      max: 1
+    color: null
+    attenuation: 0.5
+  texture:
+    src: systems/torgeternity/images/characters/renegade_priest.Token.webp
+    tint: null
+    scaleX: 1
+    scaleY: 1
+    offsetX: 0
+    offsetY: 0
+    rotation: 0
+  sight:
+    angle: 360
+    enabled: false
+    range: 0
+    brightness: 1
+    visionMode: basic
+    attenuation: 0.1
+    saturation: 0
+    contrast: 0
+  appendNumber: false
+  prependAdjective: false
+  detectionModes: []
+_stats:
+  systemId: torgeternity
+  systemVersion: 3.1.1
+  coreVersion: '11.308'
+  createdTime: 1693913382916
+  modifiedTime: 1694867340056
+  lastModifiedBy: CtisFurQNe9h7ABb
+_key: '!actors!YzRwn4OIYPYBIPJH'
+

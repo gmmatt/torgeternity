@@ -1,0 +1,285 @@
+_id: Mcct61buQ9qPeJ6Z
+name: Living Land Cosm Deck
+type: deck
+description: ''
+img: systems/torgeternity/images/cards/living-land-back.webp
+cards:
+  - _id: zyuC3xylVN3c2tOK
+    name: Dino Attack!
+    description: ''
+    type: cosm
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Dino Attack!
+        text: ''
+        img: systems/torgeternity/images/cards/cosm/living-land/01.webp
+    face: 0
+    drawn: false
+    origin: pv0VdyaTRNSwjiGi
+    rotation: 0
+    sort: 0
+    flags: {}
+    system: {}
+    value: null
+    width: null
+    height: null
+    _key: '!cards.cards!Mcct61buQ9qPeJ6Z.zyuC3xylVN3c2tOK'
+    cards: []
+  - _id: mz0Rx77lFVqKIk27
+    name: The Law of Decay
+    description: ''
+    type: cosm
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: The Law of Decay
+        text: ''
+        img: systems/torgeternity/images/cards/cosm/living-land/02.webp
+    face: 0
+    drawn: false
+    origin: pv0VdyaTRNSwjiGi
+    rotation: 0
+    sort: 1
+    flags: {}
+    system: {}
+    value: null
+    width: null
+    height: null
+    _key: '!cards.cards!Mcct61buQ9qPeJ6Z.mz0Rx77lFVqKIk27'
+    cards: []
+  - _id: m9O0dwBnm40rHaCF
+    name: The Best Defense
+    description: ''
+    type: cosm
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: The Best Defense
+        text: ''
+        img: systems/torgeternity/images/cards/cosm/living-land/03.webp
+    face: 0
+    drawn: false
+    origin: pv0VdyaTRNSwjiGi
+    rotation: 0
+    sort: 2
+    flags: {}
+    system: {}
+    value: null
+    width: null
+    height: null
+    _key: '!cards.cards!Mcct61buQ9qPeJ6Z.m9O0dwBnm40rHaCF'
+    cards: []
+  - _id: HzULMddSezsAfhxW
+    name: Survival of the Fittest
+    description: ''
+    type: cosm
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Survival of the Fittest
+        text: ''
+        img: systems/torgeternity/images/cards/cosm/living-land/04.webp
+    face: 0
+    drawn: false
+    origin: pv0VdyaTRNSwjiGi
+    rotation: 0
+    sort: 3
+    flags: {}
+    system: {}
+    value: null
+    width: null
+    height: null
+    _key: '!cards.cards!Mcct61buQ9qPeJ6Z.HzULMddSezsAfhxW'
+    cards: []
+  - _id: JFJdSjtOMRB9hCvH
+    name: Perils of the Living Land
+    description: ''
+    type: cosm
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Perils of the Living Land
+        text: ''
+        img: systems/torgeternity/images/cards/cosm/living-land/05.webp
+    face: 0
+    drawn: false
+    origin: pv0VdyaTRNSwjiGi
+    rotation: 0
+    sort: 4
+    flags: {}
+    system: {}
+    value: null
+    width: null
+    height: null
+    _key: '!cards.cards!Mcct61buQ9qPeJ6Z.JFJdSjtOMRB9hCvH'
+    cards: []
+  - _id: 1CK1eH2j0Ell6Yr2
+    name: The Deep Mist
+    description: ''
+    type: cosm
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: The Deep Mist
+        text: ''
+        img: systems/torgeternity/images/cards/cosm/living-land/06.webp
+    face: 0
+    drawn: false
+    origin: pv0VdyaTRNSwjiGi
+    rotation: 0
+    sort: 5
+    flags: {}
+    system: {}
+    value: null
+    width: null
+    height: null
+    _key: '!cards.cards!Mcct61buQ9qPeJ6Z.1CK1eH2j0Ell6Yr2'
+    cards: []
+  - _id: UEjGqFcrKUu4JOqA
+    name: The Law of Life
+    description: ''
+    type: cosm
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: The Law of Life
+        text: ''
+        img: systems/torgeternity/images/cards/cosm/living-land/07.webp
+    face: 0
+    drawn: false
+    origin: pv0VdyaTRNSwjiGi
+    rotation: 0
+    sort: 6
+    flags: {}
+    system: {}
+    value: null
+    width: null
+    height: null
+    _key: '!cards.cards!Mcct61buQ9qPeJ6Z.UEjGqFcrKUu4JOqA'
+    cards: []
+  - _id: bboAx7U8n4NWvjxU
+    name: Primal Instincts
+    description: ''
+    type: cosm
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Primal Instincts
+        text: ''
+        img: systems/torgeternity/images/cards/cosm/living-land/08.webp
+    face: 0
+    drawn: false
+    origin: pv0VdyaTRNSwjiGi
+    rotation: 0
+    sort: 7
+    flags: {}
+    value: null
+    system: {}
+    width: null
+    height: null
+    _key: '!cards.cards!Mcct61buQ9qPeJ6Z.bboAx7U8n4NWvjxU'
+    cards: []
+  - _id: uVCtCiQN11jM0xuO
+    name: Lost Treasure
+    description: ''
+    type: cosm
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Lost Treasure
+        text: ''
+        img: systems/torgeternity/images/cards/cosm/living-land/09.webp
+    face: 0
+    drawn: false
+    origin: pv0VdyaTRNSwjiGi
+    rotation: 0
+    sort: 8
+    flags: {}
+    system: {}
+    value: null
+    width: null
+    height: null
+    _key: '!cards.cards!Mcct61buQ9qPeJ6Z.uVCtCiQN11jM0xuO'
+    cards: []
+  - _id: 9EIbroko62cGQVA0
+    name: The Law of Decay
+    description: ''
+    type: cosm
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: The Law of Decay
+        text: ''
+        img: systems/torgeternity/images/cards/cosm/living-land/10.webp
+    face: 0
+    drawn: false
+    origin: pv0VdyaTRNSwjiGi
+    rotation: 0
+    sort: 9
+    flags: {}
+    system: {}
+    value: null
+    width: null
+    height: null
+    _key: '!cards.cards!Mcct61buQ9qPeJ6Z.9EIbroko62cGQVA0'
+    cards: []
+rotation: 0
+displayCount: false
+folder: null
+sort: 0
+flags:
+  exportSource:
+    world: torgv2p2
+    system: torgeternity
+    coreVersion: '9.235'
+    systemVersion: 2.0.5
+  core:
+    sourceId: Cards.4b8BekWDWpSWF961
+  torgeternity:
+    usage: livingLand
+system: {}
+ownership:
+  default: 0
+  juTas93IuPVP8p5D: 3
+width: null
+height: null
+_stats:
+  systemId: null
+  systemVersion: null
+  coreVersion: null
+  createdTime: null
+  modifiedTime: null
+  lastModifiedBy: null
+_key: '!cards!Mcct61buQ9qPeJ6Z'
+

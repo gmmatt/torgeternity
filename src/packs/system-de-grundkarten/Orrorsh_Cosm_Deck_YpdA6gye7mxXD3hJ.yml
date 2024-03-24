@@ -1,0 +1,281 @@
+_id: YpdA6gye7mxXD3hJ
+name: Orrorsh Cosm Deck
+type: deck
+description: ''
+img: >-
+  systems/torgeternity/images/deutsch/cards/Cosmkarten/Orrorsh/OZZR%C3%BCckseite.webp
+cards:
+  - _id: Uy4wGiPo12Tj0MPY
+    name: Verdammt
+    description: ''
+    type: cosm
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Verdammt
+        text: ''
+        img: systems/torgeternity/images/deutsch/cards/Cosmkarten/Orrorsh/01.webp
+    face: 0
+    drawn: false
+    origin: YpdA6gye7mxXD3hJ
+    rotation: 0
+    sort: 0
+    flags: {}
+    system: {}
+    value: null
+    width: null
+    height: null
+    _key: '!cards.cards!YpdA6gye7mxXD3hJ.Uy4wGiPo12Tj0MPY'
+    cards: []
+  - _id: 1SdRNebA8tyvrHXK
+    name: Versuchung
+    description: ''
+    type: cosm
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Versuchung
+        text: ''
+        img: systems/torgeternity/images/deutsch/cards/Cosmkarten/Orrorsh/02.webp
+    face: 0
+    drawn: false
+    origin: YpdA6gye7mxXD3hJ
+    rotation: 0
+    sort: 0
+    flags: {}
+    system: {}
+    value: null
+    width: null
+    height: null
+    _key: '!cards.cards!YpdA6gye7mxXD3hJ.1SdRNebA8tyvrHXK'
+    cards: []
+  - _id: pZZMvlZrvWD9d5kp
+    name: Ominöse Vorzeichen
+    description: ''
+    type: cosm
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Ominöse Vorzeichen
+        text: ''
+        img: systems/torgeternity/images/deutsch/cards/Cosmkarten/Orrorsh/03.webp
+    face: 0
+    drawn: false
+    origin: YpdA6gye7mxXD3hJ
+    rotation: 0
+    sort: 0
+    flags: {}
+    system: {}
+    value: null
+    width: null
+    height: null
+    _key: '!cards.cards!YpdA6gye7mxXD3hJ.pZZMvlZrvWD9d5kp'
+    cards: []
+  - _id: jcYoRRQAfMdNGMWg
+    name: Schockmoment
+    description: ''
+    type: cosm
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Schockmoment
+        text: ''
+        img: systems/torgeternity/images/deutsch/cards/Cosmkarten/Orrorsh/04.webp
+    face: 0
+    drawn: false
+    origin: YpdA6gye7mxXD3hJ
+    rotation: 0
+    sort: 0
+    flags: {}
+    system: {}
+    value: null
+    width: null
+    height: null
+    _key: '!cards.cards!YpdA6gye7mxXD3hJ.jcYoRRQAfMdNGMWg'
+    cards: []
+  - _id: 0CFEgYmjYy98FGjY
+    name: Vom Tod Gezeichnet
+    description: ''
+    type: cosm
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Vom Tod Gezeichnet
+        text: ''
+        img: systems/torgeternity/images/deutsch/cards/Cosmkarten/Orrorsh/05.webp
+    face: 0
+    drawn: false
+    origin: YpdA6gye7mxXD3hJ
+    rotation: 0
+    sort: 0
+    flags: {}
+    system: {}
+    value: null
+    width: null
+    height: null
+    _key: '!cards.cards!YpdA6gye7mxXD3hJ.0CFEgYmjYy98FGjY'
+    cards: []
+  - _id: uI9GwtWbtgcqwAaV
+    name: Sonnenuntergang?
+    description: ''
+    type: cosm
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Sonnenuntergang?
+        text: ''
+        img: systems/torgeternity/images/deutsch/cards/Cosmkarten/Orrorsh/06.webp
+    face: 0
+    drawn: false
+    origin: YpdA6gye7mxXD3hJ
+    rotation: 0
+    sort: 0
+    flags: {}
+    system: {}
+    value: null
+    width: null
+    height: null
+    _key: '!cards.cards!YpdA6gye7mxXD3hJ.uI9GwtWbtgcqwAaV'
+    cards: []
+  - _id: zurv34bR28iioX9j
+    name: Dunkle Geheimnisse
+    description: ''
+    type: cosm
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Dunkle Geheimnisse
+        text: ''
+        img: systems/torgeternity/images/deutsch/cards/Cosmkarten/Orrorsh/07.webp
+    face: 0
+    drawn: false
+    origin: YpdA6gye7mxXD3hJ
+    rotation: 0
+    sort: 0
+    flags: {}
+    system: {}
+    value: null
+    width: null
+    height: null
+    _key: '!cards.cards!YpdA6gye7mxXD3hJ.zurv34bR28iioX9j'
+    cards: []
+  - _id: dZ5I6j4xnWgs166O
+    name: Unheiliges Interesse
+    description: ''
+    type: cosm
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Unheiliges Interesse
+        text: ''
+        img: systems/torgeternity/images/deutsch/cards/Cosmkarten/Orrorsh/08.webp
+    face: 0
+    drawn: false
+    origin: YpdA6gye7mxXD3hJ
+    rotation: 0
+    sort: 0
+    flags: {}
+    system: {}
+    value: null
+    width: null
+    height: null
+    _key: '!cards.cards!YpdA6gye7mxXD3hJ.dZ5I6j4xnWgs166O'
+    cards: []
+  - _id: JGXi4VdqSyE3Gghs
+    name: Zeichen der Furcht
+    description: ''
+    type: cosm
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Zeichen der Furcht
+        text: ''
+        img: systems/torgeternity/images/deutsch/cards/Cosmkarten/Orrorsh/09.webp
+    face: 0
+    drawn: false
+    origin: YpdA6gye7mxXD3hJ
+    rotation: 0
+    sort: 0
+    flags: {}
+    system: {}
+    value: null
+    width: null
+    height: null
+    _key: '!cards.cards!YpdA6gye7mxXD3hJ.JGXi4VdqSyE3Gghs'
+    cards: []
+  - _id: SdsZVHWDK8ZXg5ps
+    name: Licht aus!
+    description: ''
+    type: cosm
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Licht aus!
+        text: ''
+        img: systems/torgeternity/images/deutsch/cards/Cosmkarten/Orrorsh/10.webp
+    face: 0
+    drawn: false
+    origin: YpdA6gye7mxXD3hJ
+    rotation: 0
+    sort: 0
+    flags: {}
+    system: {}
+    value: null
+    width: null
+    height: null
+    _key: '!cards.cards!YpdA6gye7mxXD3hJ.SdsZVHWDK8ZXg5ps'
+    cards: []
+rotation: 0
+displayCount: false
+folder: null
+sort: 0
+flags:
+  core:
+    sourceId: Cards.lheO8UJGbFYwM7W5
+  torgeternity:
+    usage: orrorsh
+system: {}
+ownership:
+  default: 0
+  1pSzpSNrhKGYYcib: 3
+width: null
+height: null
+_stats:
+  systemId: null
+  systemVersion: null
+  coreVersion: null
+  createdTime: null
+  modifiedTime: null
+  lastModifiedBy: null
+_key: '!cards!YpdA6gye7mxXD3hJ'
+

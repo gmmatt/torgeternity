@@ -1,0 +1,42 @@
+_id: 5WMfad0rl1kP9myd
+name: Déconnexion
+content: >-
+  <p>Une attaque avec une arme ou tout autre objet supérieur à Tech 7 est une
+  Contradiction en Terre Vivante. Un Chevalier des Tempêtes peut toujours le
+  faire, mais il y a un risque. Si le premier dé du test donne un 1, le héros se
+  déconnecte complètement de la réalité. Les personnages déconnectés vacillent
+  entre différentes versions possibles d'eux-mêmes. Un personnage Déconnecté
+  peut toujours agir et utiliser des cartes Destinée, mais il ne peut pas
+  dépenser de jetons Possibilité - donc pas d'ajout de dés aux jets ni
+  d'absorption de dégâts ! Tous les objets Contradictoires deviennent
+  inutilisables oscillent entre les réalités. Cela signifie que les attaques
+  avec des armes de haute technologie deviennent impossibles pour un personnage
+  Déconnecté, et que les armures modernes disparaissent temporairement et ne
+  fournissent aucune protection. Au début du tour d'un personnage déconnecté, le
+  joueur lance un test de compétence de réalité contre ND 14. Si le test est
+  réussi, le chevalier des tempêtes se reconnecte immédiatement, l'équipement
+  redevient normal et l'énergie de possibilité peut à nouveau être utilisée. Si
+  le test échoue, le personnage reste Déconnecté. Si le jet est un 1, le
+  personnage perd définitivement 1 rang de compétence dans la réalité mais se
+  reconnecte. </p>
+
+  <p> </p>
+
+  <blockquote>
+
+  <p><strong>Remarque sur le système Foundry</strong> : lorsque votre personnage
+  se déconnecte, vous devez ajouter un effet de statut Déconnecté au personnage.
+  Pour ajouter un effet de statut, faites un clic droit sur le jeton de votre
+  personnage et cliquez sur le bouton Attribuer des effets de statut.</p>
+
+  </blockquote>
+folder: null
+sort: 0
+permission:
+  kz1RJu8vrAPmTUwN: 3
+flags:
+  core:
+    sourceId: JournalEntry.mGmjsnwHLWn7MXvU
+pages: []
+_key: '!journal!5WMfad0rl1kP9myd'
+
