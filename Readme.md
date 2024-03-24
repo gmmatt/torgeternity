@@ -1,5 +1,24 @@
 # **Torg Eternity System** for Foundry VTT.
 
+## using the system for development
+
+### Prerequisite
+
+1. download the system git
+1. download and install node https://nodejs.org/en/download
+
+### Build the system
+
+1. run `npm ci` in the terminal/command Line of the project
+1. run `npm run build` in the terminal/command Line of the project
+
+### commit data
+
+1. run `npm run extract` in the terminal/command Line of the project
+1. commit the yml files as usual
+
+it is also possible to directly edit the yml files in src/packs
+
 ## Performing the release on github:
 
 1. Change version number in system.json (Major.NewFeature.Bugfix)  
