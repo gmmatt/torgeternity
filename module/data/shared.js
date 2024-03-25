@@ -13,6 +13,7 @@ export function makeSkillFields(unskilledUse, baseAttribute, groupName) {
     groupName: new fields.StringField({ initial: groupName }),
     isFav: new fields.BooleanField({ initial: false }),
     isThreatSkill: new fields.BooleanField({ initial: false }),
+    defenseOnly: new fields.BooleanField({ initial: false }),
     unskilledUse: new fields.NumberField({
       initial: unskilledUse ? 1 : 0,
       integer: true,
