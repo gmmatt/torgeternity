@@ -34,7 +34,7 @@ items:
         Erm&uuml;dung.</p>
 
         <p>Bei Wahl des Vorzuges
-        @Compendium[te001-core-rulebook.grw-de-ausruestung.KL5fs0ulvsqCVcwr]{Ionengusoku
+        @UUID[Compendium.te001-core-rulebook.grw-de-ausruestung.Item.KL5fs0ulvsqCVcwr]{Ionengusoku
         (R&uuml;stung)} ausr&uuml;sten.&nbsp;</p>
 
         <ul>
@@ -45,16 +45,16 @@ items:
         anderes angegeben ist, darf jede Verbesserung nur einmal ausgew&auml;hlt
         werden&nbsp;</li>
 
-        <li>@Compendium[te001-core-rulebook.grw-de-vorzuverb.Rk32103yeVzF2tTc]{Blendblitz}</li>
+        <li>@UUID[Compendium.te001-core-rulebook.grw-de-vorzuverb.Item.Rk32103yeVzF2tTc]{Blendblitz}</li>
 
-        <li>@Compendium[te001-core-rulebook.grw-de-vorzuverb.Sgekb3d5Yw9To2KE]{Blitzh&uuml;lle}</li>
+        <li>@UUID[Compendium.te001-core-rulebook.grw-de-vorzuverb.Item.Sgekb3d5Yw9To2KE]{Blitzh&uuml;lle}</li>
 
-        <li>@Compendium[te001-core-rulebook.grw-de-vorzuverb.n36LEGfrj6f4X4qR]{Cham&auml;leonplatten}</li>
+        <li>@UUID[Compendium.te001-core-rulebook.grw-de-vorzuverb.Item.n36LEGfrj6f4X4qR]{Cham&auml;leonplatten}</li>
 
-        <li>@Compendium[te001-core-rulebook.grw-de-vorzuverb.xPjDp0egw00ew40H]{Kabuto
+        <li>@UUID[Compendium.te001-core-rulebook.grw-de-vorzuverb.Item.xPjDp0egw00ew40H]{Kabuto
         HUD}</li>
 
-        <li>@Compendium[te001-core-rulebook.grw-de-vorzuverb.CZWjBkTqdE1WMK1k]{Ultraleicht-Legierung}</li>
+        <li>@UUID[Compendium.te001-core-rulebook.grw-de-vorzuverb.Item.CZWjBkTqdE1WMK1k]{Ultraleicht-Legierung}</li>
 
         </ul>
       pulpPowers:
@@ -978,4 +978,3 @@ _stats:
   modifiedTime: 1694866579391
   lastModifiedBy: CtisFurQNe9h7ABb
 _key: '!actors!V5GRrizDgqY1gzHu'
-

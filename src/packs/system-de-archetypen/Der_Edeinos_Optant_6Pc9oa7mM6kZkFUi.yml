@@ -304,7 +304,7 @@ items:
         zus&auml;tzlich als Wurfwaffe und kann mit der
         Projektilwaffen-Fertigkeit auf eine Reichweite von 10/20/40 geworfen
         werden. Zum Ausr&uuml;sten s.
-        @Compendium[te001-core-rulebook.grw-de-ausruestung.VRuK7Un8bvtpUk3s]{Hrockt-Sprossenspeer}</p>
+        @UUID[Compendium.te001-core-rulebook.grw-de-ausruestung.Item.VRuK7Un8bvtpUk3s]{Hrockt-Sprossenspeer}</p>
 
         <p>Die Sprossen sind im Wachstum weich und biegsam, werden aber hart wie
         Stahl, nachdem sie abgeschnitten und getrocknet wurden. Am
@@ -346,7 +346,7 @@ items:
       cosm: Das Lebende Land
       description: >-
         <p>S.
-        @Compendium[te001-core-rulebook.grw-de-ausruestung.kXL8gB3WmlckpUWD]{Hrockt-Sprossenspeer}
+        @UUID[Compendium.te001-core-rulebook.grw-de-ausruestung.Item.kXL8gB3WmlckpUWD]{Hrockt-Sprossenspeer}
         als Nahkampfwaffe</p>
       techlevel: 2
       price: '40'
@@ -1493,4 +1493,3 @@ _stats:
   modifiedTime: 1694867637048
   lastModifiedBy: CtisFurQNe9h7ABb
 _key: '!actors!6Pc9oa7mM6kZkFUi'
-

@@ -388,7 +388,7 @@ items:
         <p>Die W&auml;chter sind unabh&auml;ngig, unauff&auml;llig und gerissen,
         und viele werden von Tieren begleitet, mit denen sie sich in der Wildnis
         angefreundet haben (siehe
-        @Compendium[te001-core-rulebook.grw-de-vorzuverb.K9A5acqvE1fUUeUr]{Tiergef&auml;hrte:
+        @UUID[Compendium.te001-core-rulebook.grw-de-vorzuverb.Item.K9A5acqvE1fUUeUr]{Tiergef&auml;hrte:
         Weisser Wolf}). Die W&auml;chter d&uuml;rfen Heimlichkeit und
         Spurenlesen als Beg&uuml;nstigte Fertigkeiten einsetzen.</p>
       pulpPowers:
@@ -1363,4 +1363,3 @@ _stats:
   modifiedTime: 1694868784042
   lastModifiedBy: CtisFurQNe9h7ABb
 _key: '!actors!OB5I9LwFUwB5C3C4'
-

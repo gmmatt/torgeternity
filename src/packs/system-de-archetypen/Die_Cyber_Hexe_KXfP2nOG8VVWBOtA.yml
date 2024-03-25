@@ -962,7 +962,7 @@ items:
 
         <p>Wenn ein Zauberkundiger eine R&uuml;ckkopplung erleidet, funktioniert
         der Hexxer MK II wie die MK-I-Version (siehe
-        @Compendium[te001-core-rulebook.grw-de-ausruestung.DKGshzXtDwEg4nQj]{Hexxer
+        @UUID[Compendium.te001-core-rulebook.grw-de-ausruestung.Item.DKGshzXtDwEg4nQj]{Hexxer
         MK I}) und negiert die H&auml;lfte des Schockschadens. Dar&uuml;ber
         hinaus werden die auf diese Weise negierten Schockpunkte automatisch als
         Bonus auf den n&auml;chsten Zauberspruch des Charakters angewendet. Die
@@ -2362,4 +2362,3 @@ _stats:
   modifiedTime: 1694868600716
   lastModifiedBy: CtisFurQNe9h7ABb
 _key: '!actors!KXfP2nOG8VVWBOtA'
-

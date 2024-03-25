@@ -204,7 +204,7 @@ items:
         bewusst, dass sie vermutlich in diesen R&uuml;stungen sterben
         werden.&nbsp;</p>
 
-        <p>Drachenkrieger-@Compendium[te001-core-rulebook.grw-de-ausruestung.JDuvJIY9Q03Pq1Fh]{R&uuml;stungen)}
+        <p>Drachenkrieger-@UUID[Compendium.te001-core-rulebook.grw-de-ausruestung.Item.JDuvJIY9Q03Pq1Fh]{R&uuml;stungen)}
         sind mit erstaunlichen Waffen und Ausr&uuml;stungsteilen versehen, die
         ihren Tr&auml;ger in eine Vernichtungsmaschine verwandeln. Sie
         z&auml;hlen als Vollk&ouml;rperr&uuml;stung, verleihen R&uuml;stung +4,
@@ -223,20 +223,20 @@ items:
 
         <ul>
 
-        <li>@Compendium[te001-core-rulebook.grw-de-vorzuverb.MfpVMbDHTuvuwo8j]{Bolzenwerfer}</li>
+        <li>@UUID[Compendium.te001-core-rulebook.grw-de-vorzuverb.Item.MfpVMbDHTuvuwo8j]{Bolzenwerfer}</li>
 
-        <li>@Compendium[te001-core-rulebook.grw-de-vorzuverb.NRvv8hNRTjw4tSlN]{Drachenodem}</li>
+        <li>@UUID[Compendium.te001-core-rulebook.grw-de-vorzuverb.Item.NRvv8hNRTjw4tSlN]{Drachenodem}</li>
 
-        <li>@Compendium[te001-core-rulebook.grw-de-vorzuverb.XrnJpjkipFXcRksh]{Drachenklauen}</li>
+        <li>@UUID[Compendium.te001-core-rulebook.grw-de-vorzuverb.Item.XrnJpjkipFXcRksh]{Drachenklauen}</li>
 
-        <li>@Compendium[te001-core-rulebook.grw-de-vorzuverb.GTCoSWZvAlA566FM]{Drachenschuppen}</li>
+        <li>@UUID[Compendium.te001-core-rulebook.grw-de-vorzuverb.Item.GTCoSWZvAlA566FM]{Drachenschuppen}</li>
 
-        <li>@Compendium[te001-core-rulebook.grw-de-vorzuverb.b398hO52pkRbpmSY]{Riesenst&auml;rke}</li>
+        <li>@UUID[Compendium.te001-core-rulebook.grw-de-vorzuverb.Item.b398hO52pkRbpmSY]{Riesenst&auml;rke}</li>
 
-        <li>@Compendium[te001-core-rulebook.grw-de-vorzuverb.NVPWpgmvmaiAHUhY]{Rune
+        <li>@UUID[Compendium.te001-core-rulebook.grw-de-vorzuverb.Item.NVPWpgmvmaiAHUhY]{Rune
         der Erholung}</li>
 
-        <li>@Compendium[te001-core-rulebook.grw-de-vorzuverb.22qQLGkOWUm0LRLt]{Sprungd&uuml;senstiefel}</li>
+        <li>@UUID[Compendium.te001-core-rulebook.grw-de-vorzuverb.Item.22qQLGkOWUm0LRLt]{Sprungd&uuml;senstiefel}</li>
 
         </ul>
       pulpPowers:
@@ -248,7 +248,7 @@ items:
             Die Bolzen werden mit Projektilwaffen eingesetzt, verursachen 13
             Schaden, haben Reichweite 10/20/40 und dürfen als Kurzer Feuerstoß
             abgefeuert werden (siehe
-            @Compendium[te001-core-rulebook.grw-de-grw.bdfqEp6RxtqIYlgp]{Schnellfeuer}). 
+            @UUID[Compendium.te001-core-rulebook.grw-de-grw.JournalEntry.bdfqEp6RxtqIYlgp]{Schnellfeuer}). 
 
             Weitere Fächer in der Rüstung enthalten 12 zusätzliche Bolzen. Jeder
             Zwerg, der diese Verbesserung besitzt, weiß, wie er aus
@@ -269,9 +269,9 @@ items:
             Rücken führt. Wenn sie mit Projektilwaffen eingesetzt wird,
             verschießt die Röhre einen Feuerstrahl mit einer Reichweite von 10
             Metern und einem kleinen Explosionsradius (siehe
-            @Compendium[te001-core-rulebook.grw-de-grw.ONabiu46PtHW8SBl]{Flächenangriffe}).
+            @UUID[Compendium.te001-core-rulebook.grw-de-grw.JournalEntry.ONabiu46PtHW8SBl]{Flächenangriffe}).
             Alle getroffenen Ziele erleidet 16 Punkte Feuerschaden (siehe
-            @Compendium[te001-core-rulebook.grw-de-grw.EZV1qD4fyfVcdZc0]{Feuer}).
+            @UUID[Compendium.te001-core-rulebook.grw-de-grw.JournalEntry.EZV1qD4fyfVcdZc0]{Feuer}).
             Die Kammer enthält genug Brennstoff für drei Angriffe. 
 
             Der Behälter lädt sich am Ende jeder Szene oder während einer langen
@@ -1368,4 +1368,3 @@ _stats:
   modifiedTime: 1694868764649
   lastModifiedBy: CtisFurQNe9h7ABb
 _key: '!actors!4maHTlnkLTHmuYpB'
-

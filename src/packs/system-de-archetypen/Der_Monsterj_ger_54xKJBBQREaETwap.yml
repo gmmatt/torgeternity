@@ -183,20 +183,20 @@ items:
 
         <ul>
 
-        <li>@Compendium[te001-core-rulebook.grw-de-vorzuverb.7b1rIrmURMLCiQtD]{Carnifex
+        <li>@UUID[Compendium.te001-core-rulebook.grw-de-vorzuverb.Item.7b1rIrmURMLCiQtD]{Carnifex
         Princeps}</li>
 
-        <li>@Compendium[te001-core-rulebook.grw-de-vorzuverb.2SM0WnI40gl89eWT]{Drachent&ouml;ter}</li>
+        <li>@UUID[Compendium.te001-core-rulebook.grw-de-vorzuverb.Item.2SM0WnI40gl89eWT]{Drachent&ouml;ter}</li>
 
-        <li>@Compendium[te001-core-rulebook.grw-de-vorzuverb.Eke8YWLTujfFzGJh]{Feldzugmedaille
+        <li>@UUID[Compendium.te001-core-rulebook.grw-de-vorzuverb.Item.Eke8YWLTujfFzGJh]{Feldzugmedaille
         der Possibility Wars}</li>
 
-        <li>@Compendium[te001-core-rulebook.grw-de-vorzuverb.LadrP4W2tQjozSrk]{Orden
+        <li>@UUID[Compendium.te001-core-rulebook.grw-de-vorzuverb.Item.LadrP4W2tQjozSrk]{Orden
         von Cynthia Bartholom&auml;us}</li>
 
-        <li>@Compendium[te001-core-rulebook.grw-de-vorzuverb.J2AxbN99xNUOIgnc]{Verteidiger}</li>
+        <li>@UUID[Compendium.te001-core-rulebook.grw-de-vorzuverb.Item.J2AxbN99xNUOIgnc]{Verteidiger}</li>
 
-        <li>@Compendium[te001-core-rulebook.grw-de-vorzuverb.X0g6UjR7sasevGLF]{Victoria
+        <li>@UUID[Compendium.te001-core-rulebook.grw-de-vorzuverb.Item.X0g6UjR7sasevGLF]{Victoria
         Gloriana}</li>
 
         </ul>
@@ -349,7 +349,7 @@ items:
         Nahkampf abfeuern zu k&ouml;nnen &ndash; die Patronen funktionieren
         nicht mit anderen Waffen.&nbsp;</p>
 
-        <p><strong>@Compendium[te001-core-rulebook.grw-de-ausruestung.wEOCxOMN84sOaC3F]{Jagdrevolvergewehr}:</strong>
+        <p><strong>@UUID[Compendium.te001-core-rulebook.grw-de-ausruestung.Item.wEOCxOMN84sOaC3F]{Jagdrevolvergewehr}:</strong>
         Reichweite 50/100/200, Schaden 14, 6 Schuss, Karabiner&nbsp;</p>
 
         <p>Patronenschmiede d&uuml;rfen bis zu sechs besondere Patronen
@@ -384,23 +384,23 @@ items:
 
         <ul>
 
-        <li>@Compendium[te001-core-rulebook.grw-de-vorzuverb.WtFrrL81DTorS9Ex]{Adamant-Patrone}</li>
+        <li>@UUID[Compendium.te001-core-rulebook.grw-de-vorzuverb.Item.WtFrrL81DTorS9Ex]{Adamant-Patrone}</li>
 
-        <li>@Compendium[te001-core-rulebook.grw-de-vorzuverb.6jtijsM0CclsmqnL]{Elektrische
+        <li>@UUID[Compendium.te001-core-rulebook.grw-de-vorzuverb.Item.6jtijsM0CclsmqnL]{Elektrische
         Patrone}</li>
 
-        <li>@Compendium[te001-core-rulebook.grw-de-vorzuverb.EEcVN7nH9Hiw5Uyo]{Explosive
+        <li>@UUID[Compendium.te001-core-rulebook.grw-de-vorzuverb.Item.EEcVN7nH9Hiw5Uyo]{Explosive
         Patrone}</li>
 
-        <li>@Compendium[te001-core-rulebook.grw-de-vorzuverb.fMGdmxr02BaGvfCj]{Phantom-Patrone}</li>
+        <li>@UUID[Compendium.te001-core-rulebook.grw-de-vorzuverb.Item.fMGdmxr02BaGvfCj]{Phantom-Patrone}</li>
 
-        <li>@Compendium[te001-core-rulebook.grw-de-vorzuverb.szNK83xtC7xcf6jK]{Riesenj&auml;ger-Patrone}</li>
+        <li>@UUID[Compendium.te001-core-rulebook.grw-de-vorzuverb.Item.szNK83xtC7xcf6jK]{Riesenj&auml;ger-Patrone}</li>
 
-        <li>@Compendium[te001-core-rulebook.grw-de-vorzuverb.gQ9kz5XRpSNU1JCR]{Silber-Patrone}</li>
+        <li>@UUID[Compendium.te001-core-rulebook.grw-de-vorzuverb.Item.gQ9kz5XRpSNU1JCR]{Silber-Patrone}</li>
 
-        <li>@Compendium[te001-core-rulebook.grw-de-vorzuverb.V0Py0P0asFUz4E1G]{Sonnen-Patrone}</li>
+        <li>@UUID[Compendium.te001-core-rulebook.grw-de-vorzuverb.Item.V0Py0P0asFUz4E1G]{Sonnen-Patrone}</li>
 
-        <li>@Compendium[te001-core-rulebook.grw-de-vorzuverb.mgdVFDGal2m8kNzD]{Weihwasser-Patrone}</li>
+        <li>@UUID[Compendium.te001-core-rulebook.grw-de-vorzuverb.Item.mgdVFDGal2m8kNzD]{Weihwasser-Patrone}</li>
 
         </ul>
       pulpPowers:
@@ -1383,4 +1383,3 @@ _stats:
   modifiedTime: 1694868160440
   lastModifiedBy: CtisFurQNe9h7ABb
 _key: '!actors!54xKJBBQREaETwap'
-

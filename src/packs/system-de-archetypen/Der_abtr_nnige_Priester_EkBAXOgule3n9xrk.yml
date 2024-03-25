@@ -284,7 +284,7 @@ items:
         <p>Der GodBeam hat einen langen Lauf, einen stabilisierenden Schaft und
         einen Ziellaser. Er verschie&szlig;t einen t&ouml;dlichen Strahl aus
         blauem Laserlicht. Der
-        @Compendium[te001-core-rulebook.grw-de-ausruestung.EAikjxlu4qDJrF5u]{Ziellaser}
+        @UUID[Compendium.te001-core-rulebook.grw-de-ausruestung.Item.EAikjxlu4qDJrF5u]{Ziellaser}
         ist ein integraler Bestandteil und verwendet den normalen Waffenlaser
         des Gewehrs, nur mit deutlich niedrigerer St&auml;rke.</p>
       techlevel: 26
@@ -2354,4 +2354,3 @@ _stats:
   modifiedTime: 1694869606583
   lastModifiedBy: CtisFurQNe9h7ABb
 _key: '!actors!EkBAXOgule3n9xrk'
-
