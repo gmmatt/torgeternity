@@ -12,7 +12,7 @@ content: >-
   <p><strong>Remarque sur le système Foundry : </strong>si tu fais un test de
   compétence améliorée, le système calculera automatiquement une pénalité
   multi-cibles.  (voir
-  @Compendium[torgeternity.basic-rules-fr.J0Yt8ueE280AzxmS]{attaque}).</p>
+  @UUID[Compendium.torgeternity.basic-rules-fr.JournalEntry.J0Yt8ueE280AzxmS]{attaque}).</p>
 
   </blockquote>
 folder: null
@@ -25,4 +25,3 @@ flags:
     sourceId: JournalEntry.xdrk6Ham3C1W9VNZ
 pages: []
 _key: '!journal!ejHK3jBoZcbKJLih'
-

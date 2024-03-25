@@ -32,7 +32,7 @@ content: >-
   <p><strong>Remarque sur le système Foundry</strong> : lorsque vous effectuez
   une attaque avancée, les blessures et les chocs sont automatiquement calculés
   pour vous. Pour plus d'informations sur les attaques avancées, voir 
-  @Compendium[torgeternity.basic-rules-fr.J0Yt8ueE280AzxmS]{attaque}.</p>
+  @UUID[Compendium.torgeternity.basic-rules-fr.JournalEntry.J0Yt8ueE280AzxmS]{attaque}.</p>
 
   </blockquote>
 
@@ -43,7 +43,7 @@ content: >-
   <p>Chaque Blessure est une pénalité permanente de -1 à tous les tests.
   Lorsqu'un chevalier des tempêtes subit plus de 3 blessures, il est KO et doit
   effectuer un test de 
-  @Compendium[torgeternity.basic-rules-fr.MBnzTaIm6snTRS4j]{défaite}. Les
+  @UUID[Compendium.torgeternity.basic-rules-fr.JournalEntry.MBnzTaIm6snTRS4j]{défaite}. Les
   méchants comme Gospog ou les edeinos normaux sont mis KO par une simple
   Blessure.</p>
 
@@ -190,4 +190,3 @@ flags:
     sourceId: JournalEntry.ZUjwVA7Mh1wjoKu5
 pages: []
 _key: '!journal!13SHkU9JCei37ioP'
-

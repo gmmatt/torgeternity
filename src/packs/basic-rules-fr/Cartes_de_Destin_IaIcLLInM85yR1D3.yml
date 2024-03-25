@@ -11,7 +11,7 @@ content: >-
 
   <p>Pour plus d'informations sur l'utilisation des cartes dans le système
   Foundry, consulte la
-  @Compendium[torgeternity.basic-rules-fr.ZaVT27zI7lzHCyvA]{gestion des
+  @UUID[Compendium.torgeternity.basic-rules-fr.JournalEntry.ZaVT27zI7lzHCyvA]{gestion des
   cartes}</p>
 
   </blockquote>
@@ -24,4 +24,3 @@ flags:
     sourceId: JournalEntry.eKffcgFMmoQE1YCO
 pages: []
 _key: '!journal!IaIcLLInM85yR1D3'
-

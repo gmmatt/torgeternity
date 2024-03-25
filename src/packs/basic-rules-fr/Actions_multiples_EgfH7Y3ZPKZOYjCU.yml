@@ -21,9 +21,9 @@ content: >-
   <p><strong>Remarque sur le système Foundry : </strong>si tu fais un test de
   compétence amélioré, le système calculera automatiquement une pénalité pour
   les actions multiples.  (voir
-  @Compendium[torgeternity.basic-rules-fr.PBDHuKQtqi1qkvIO]{tests de compétence
+  @UUID[Compendium.torgeternity.basic-rules-fr.JournalEntry.PBDHuKQtqi1qkvIO]{tests de compétence
   ou d'attribut}  et
-  @Compendium[torgeternity.basic-rules-fr.J0Yt8ueE280AzxmS]{attaque}.</p>
+  @UUID[Compendium.torgeternity.basic-rules-fr.JournalEntry.J0Yt8ueE280AzxmS]{attaque}.</p>
 
   </blockquote>
 folder: null
@@ -37,4 +37,3 @@ flags:
 _id: EgfH7Y3ZPKZOYjCU
 pages: []
 _key: '!journal!EgfH7Y3ZPKZOYjCU'
-

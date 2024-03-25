@@ -8,7 +8,7 @@ content: >-
 
   <h1>exemple pour le cosm Terre Vivante</h1>
 
-  <p>Voir @Compendium[torgeternity.basic-rules-fr.iahZ9OQlXv0YvkZd]{tente de
+  <p>Voir @UUID[Compendium.torgeternity.basic-rules-fr.JournalEntry.iahZ9OQlXv0YvkZd]{tente de
   cosm : la Terre Vivante} pour les axiomes et les lois du monde de ce cosm.</p>
 
   <p> </p>
@@ -20,7 +20,7 @@ content: >-
   du Royaume, qui a une potion magique. Le fait de la porter crée une
   "Contradiction", ce qui signifie qu'il est en décalage avec la réalité et
   risque une
-  @Compendium[torgeternity.basic-rules-fr.5WMfad0rl1kP9myd]{déconnexion}.</p>
+  @UUID[Compendium.torgeternity.basic-rules-fr.JournalEntry.5WMfad0rl1kP9myd]{déconnexion}.</p>
 
   <p><strong>Axiome social</strong> : Le faible nombre signifie qu'un niveau de
   civilisation plus élevé n'est pas supporté ici. La démocratie n'a pas de sens
@@ -49,7 +49,7 @@ content: >-
   et la matière morte se décompose également rapidement. Il est peu probable que
   cette règle apparaisse au cours du jeu, mais si c'est le cas, consultez
   l'article
-  @Compendium[torgeternity.basic-rules-fr.MBnzTaIm6snTRS4j]{défaite}.</p>
+  @UUID[Compendium.torgeternity.basic-rules-fr.JournalEntry.MBnzTaIm6snTRS4j]{défaite}.</p>
 
   <p><strong>Loi des Merveilles</strong> : Les objets perdus réapparaissent de
   manière inattendue sur la Terre vivante, et les bâtiments en pierre et en
@@ -74,4 +74,3 @@ flags:
     sourceId: JournalEntry.ew09Zjnywuwxkm9p
 pages: []
 _key: '!journal!86g2Wc6mJshFotQK'
-

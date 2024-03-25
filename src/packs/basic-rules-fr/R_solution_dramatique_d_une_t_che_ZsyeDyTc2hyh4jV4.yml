@@ -25,7 +25,7 @@ content: >-
   <p> </p>
 
   <p>Commencez un nouveau
-  @Compendium[torgeternity.basic-rules-fr.v3rvYofTLiD0EgfS]{Combat}  dans le
+  @UUID[Compendium.torgeternity.basic-rules-fr.JournalEntry.v3rvYofTLiD0EgfS]{Combat}  dans le
   Combat Tracker pour indiquer que la tâche a commencé, en faisant référence à
   la ligne de conflit appropriée, selon que la scène est Standard ou Dramatique.
   Tout ou partie des lettres A à D peuvent apparaître dans le bloc situé sur le
@@ -44,7 +44,7 @@ content: >-
   +2 en cas de bon succès, ou +3 en cas de succès spectaculaire. Une RDT est une
   rencontre, ce qui signifie que les cartes ne peuvent être jouées qu'à partir
   du Réservoir d'Action. Voir
-  @Compendium[torgeternity.basic-rules-fr.v3rvYofTLiD0EgfS]{Combat}  pour plus
+  @UUID[Compendium.torgeternity.basic-rules-fr.JournalEntry.v3rvYofTLiD0EgfS]{Combat}  pour plus
   de détails concernant les mains et les réserves d'action.</p>
 
   <p> </p>
@@ -125,4 +125,3 @@ flags:
     sourceId: JournalEntry.QjqWpTVssz8tZ3kb
 pages: []
 _key: '!journal!ZsyeDyTc2hyh4jV4'
-

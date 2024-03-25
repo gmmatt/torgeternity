@@ -27,7 +27,7 @@ content: >-
 
   <p><strong>Note du système Foundry : </strong>Si tu effectues une attaque avec
   une rafale courte, le système calculera automatiquement un bonus (voir
-  @Compendium[torgeternity.basic-rules-fr.ejHK3jBoZcbKJLih]{Cibles
+  @UUID[Compendium.torgeternity.basic-rules-fr.JournalEntry.ejHK3jBoZcbKJLih]{Cibles
   multiples}).</p>
 
   </blockquote>
@@ -41,4 +41,3 @@ flags:
     sourceId: JournalEntry.GaKxs9k9VSIHQadj
 pages: []
 _key: '!journal!7XVr3UzUcFRv9HHq'
-

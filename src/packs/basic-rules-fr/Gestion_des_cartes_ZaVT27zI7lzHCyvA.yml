@@ -105,7 +105,7 @@ content: >-
   jeu appropriée.</p>
 
   <p>Lorsque vous lancez un combat dans le suivi des combats (voir
-  @Compendium[torgeternity.basic-rules-fr.v3rvYofTLiD0EgfS]{Combat}), une
+  @UUID[Compendium.torgeternity.basic-rules-fr.JournalEntry.v3rvYofTLiD0EgfS]{Combat}), une
   nouvelle carte Action est automatiquement tirée.</p>
 
   <p>Cliquez sur le bouton "Nouveau" dans le compteur de combat pour passer à un
@@ -210,4 +210,3 @@ flags:
     usage: manageCards
 pages: []
 _key: '!journal!ZaVT27zI7lzHCyvA'
-

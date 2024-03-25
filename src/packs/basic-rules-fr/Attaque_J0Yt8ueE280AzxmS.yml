@@ -2,7 +2,7 @@ _id: J0Yt8ueE280AzxmS
 name: Attaque
 content: >-
   <p>Une attaque est un
-  @Compendium[torgeternity.basic-rules-fr.PBDHuKQtqi1qkvIO]{tests de compétence
+  @UUID[Compendium.torgeternity.basic-rules-fr.JournalEntry.PBDHuKQtqi1qkvIO]{tests de compétence
   } comme tout les autres.</p>
 
   <p>La compétences <strong>armes à feu </strong>  est utilisé pour les armes à
@@ -17,7 +17,7 @@ content: >-
   combat à mains nues), la défense appropriée est basée sur les armes de mêlée
   si le défenseur est armé, ou le combat à mains nues si le défenseur a les
   mains vides. Une réussite inflige des 
-  @Compendium[torgeternity.basic-rules-fr.13SHkU9JCei37ioP]{Dommages}. Un succès
+  @UUID[Compendium.torgeternity.basic-rules-fr.JournalEntry.13SHkU9JCei37ioP]{Dommages}. Un succès
   supérieur ajoute un dé bonus (+1 DB) aux dégâts, comme décrit dans cette
   section. Un succès spectaculaire ajoute deux dés de bonus (+2 DB). </p>
 
@@ -47,7 +47,7 @@ content: >-
   </blockquote>
 
   <p>Pour plus d'informations sur le lancement de dés bonus, voir <span
-  style="font-family:var(--font-primary);font-size:var(--font-size-14)">@Compendium[torgeternity.basic-rules-fr.13SHkU9JCei37ioP]{Dommages}</span></p>
+  style="font-family:var(--font-primary);font-size:var(--font-size-14)">@UUID[Compendium.torgeternity.basic-rules-fr.JournalEntry.13SHkU9JCei37ioP]{Dommages}</span></p>
 folder: null
 sort: 0
 permission:
@@ -57,4 +57,3 @@ flags:
     sourceId: JournalEntry.CV65eczzD5HERVE6
 pages: []
 _key: '!journal!J0Yt8ueE280AzxmS'
-
