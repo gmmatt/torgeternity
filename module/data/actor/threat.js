@@ -31,13 +31,17 @@ export class ThreatData extends CommonActorData {
    */
   static migrateData(data) {
     super.migrateData(data);
-    data.details.sizeBonus = Object.keys(torgeternity.sizes).includes(data.details.sizeBonus)
-      ? data.details.sizeBonus
-      : 'normal';
+    if (data?.details && Object.hasOwn(data?.details, 'sizeBonus')) {
+      data.details.sizeBonus = Object.keys(torgeternity.sizes).includes(data.details.sizeBonus)
+        ? data.details.sizeBonus
+        : 'normal';
+    }
     for (const skill of Object.values(data.skills)) {
-      skill.adds = parseInt(skill.adds) || 0;
-      if (skill.value) {
-        skill.adds = parseInt(skill.value) - data.attributes[skill.baseAttribute];
+      if (Object.hasOwn(skill, 'adds')) {
+        skill.adds = parseInt(skill.adds) || 0;
+      }
+      if (Object.hasOwn(skill, 'value') && parseInt(skill.value) > 0) {
+        skill.adds = parseInt(skill.value) - parseInt(data.attributes[skill.baseAttribute]);
       }
     }
   }
@@ -55,7 +59,7 @@ export class ThreatData extends CommonActorData {
   prepareDerivedData() {
     super.prepareDerivedData();
     for (const skill of Object.values(this.skills)) {
-      skill.isThreatSkill = skill.isThreatSkill || !!skill.adds;
+      skill.isThreatSkill = skill.isThreatSkill || skill.adds !== 0;
     }
   }
 }

@@ -1,376 +1,472 @@
-<div class="threat-contents block">
-  <div class="threat-block">
-    <div class="threat-section-attributes">
-      <div class="section-bar">
-        {{localize "torgeternity.sheetLabels.attributes"}}
+<div class='threat-contents block'>
+  <div class='threat-block'>
+    <div class='threat-section-attributes'>
+      <div class='section-bar'>
+        {{localize 'torgeternity.sheetLabels.attributes'}}
       </div>
 
-      <div class="threat-edit attribut-list-edit">
+      <div class='threat-edit attribut-list-edit'>
         <span>
           <a
-            class="skill-roll"
-            data-testType="attribute"
-            data-value="{{actor.system.attributes.charisma}}"
-            data-name="charisma"
-            data-baseAttribute="charisma"
-            data-adds="0"
-            data-unskilledUse="1"
+            class='skill-roll'
+            data-testType='attribute'
+            data-value='{{actor.system.attributes.charisma}}'
+            data-name='charisma'
+            data-baseAttribute='charisma'
+            data-adds='0'
+            data-unskilledUse='1'
           >
-            {{localize "torgeternity.attributes.charisma"}}
+            {{localize 'torgeternity.attributes.charisma'}}
           </a>
           <input
-            name="system.attributes.charisma"
-            type="number"
-            value="{{actor.system.attributes.charisma}}"
-            data-dtype="Number"
-            class="small-input"
+            name='system.attributes.charisma'
+            type='number'
+            value='{{actor.system.attributes.charisma}}'
+            data-dtype='Number'
+            class='small-input'
           />
         </span>
         <span>
           <a
-            class="skill-roll"
-            data-testType="attribute"
-            data-value="{{actor.system.attributes.dexterity}}"
-            data-name="dexterity"
-            data-baseAttribute="dexterity"
-            data-adds="0"
-            data-unskilledUse="1"
+            class='skill-roll'
+            data-testType='attribute'
+            data-value='{{actor.system.attributes.dexterity}}'
+            data-name='dexterity'
+            data-baseAttribute='dexterity'
+            data-adds='0'
+            data-unskilledUse='1'
           >
-            {{localize "torgeternity.attributes.dexterity"}}
+            {{localize 'torgeternity.attributes.dexterity'}}
           </a>
           <input
-            name="system.attributes.dexterity"
-            type="number"
-            value="{{actor.system.attributes.dexterity}}"
-            data-dtype="Number"
-            class="small-input"
+            name='system.attributes.dexterity'
+            type='number'
+            value='{{actor.system.attributes.dexterity}}'
+            data-dtype='Number'
+            class='small-input'
           />
         </span>
         <span>
           <a
-            class="skill-roll"
-            data-testType="attribute"
-            data-value="{{actor.system.attributes.mind}}"
-            data-name="mind"
-            data-baseAttribute="mind"
-            data-adds="0"
-            data-unskilledUse="1"
+            class='skill-roll'
+            data-testType='attribute'
+            data-value='{{actor.system.attributes.mind}}'
+            data-name='mind'
+            data-baseAttribute='mind'
+            data-adds='0'
+            data-unskilledUse='1'
           >
-            {{localize "torgeternity.attributes.mind"}}
+            {{localize 'torgeternity.attributes.mind'}}
           </a>
           <input
-            name="system.attributes.mind"
-            type="number"
-            value="{{actor.system.attributes.mind}}"
-            data-dtype="Number"
-            class="small-input"
+            name='system.attributes.mind'
+            type='number'
+            value='{{actor.system.attributes.mind}}'
+            data-dtype='Number'
+            class='small-input'
           />
         </span>
         <span>
           <a
-            class="skill-roll"
-            data-testType="attribute"
-            data-value="{{actor.system.attributes.spirit}}"
-            data-name="spirit"
-            data-baseAttribute="spirit"
-            data-adds="0"
-            data-unskilledUse="1"
+            class='skill-roll'
+            data-testType='attribute'
+            data-value='{{actor.system.attributes.spirit}}'
+            data-name='spirit'
+            data-baseAttribute='spirit'
+            data-adds='0'
+            data-unskilledUse='1'
           >
-            {{localize "torgeternity.attributes.spirit"}}
+            {{localize 'torgeternity.attributes.spirit'}}
           </a>
           <input
-            name="system.attributes.spirit"
-            type="number"
-            value="{{actor.system.attributes.spirit}}"
-            data-dtype="Number"
-            class="small-input"
+            name='system.attributes.spirit'
+            type='number'
+            value='{{actor.system.attributes.spirit}}'
+            data-dtype='Number'
+            class='small-input'
           />
         </span>
         <span>
           <a
-            class="skill-roll"
-            data-testType="attribute"
-            data-value="{{actor.system.attributes.strength}}"
-            data-name="strength"
-            data-baseAttribute="strength"
-            data-adds="0"
-            data-unskilledUse="1"
+            class='skill-roll'
+            data-testType='attribute'
+            data-value='{{actor.system.attributes.strength}}'
+            data-name='strength'
+            data-baseAttribute='strength'
+            data-adds='0'
+            data-unskilledUse='1'
           >
-            {{localize "torgeternity.attributes.strength"}}
+            {{localize 'torgeternity.attributes.strength'}}
           </a>
           <input
-            name="system.attributes.strength"
-            type="number"
-            value="{{actor.system.attributes.strength}}"
-            data-dtype="Number"
-            class="small-input"
+            name='system.attributes.strength'
+            type='number'
+            value='{{actor.system.attributes.strength}}'
+            data-dtype='Number'
+            class='small-input'
           />
         </span>
       </div>
     </div>
   </div>
 
-  <div class="threat-section-actions">
-    <div class="section-bar">
-      {{localize "torgeternity.sheetLabels.actions"}}
+  <div class='threat-section-actions'>
+    <div class='section-bar'>
+      {{localize 'torgeternity.sheetLabels.actions'}}
     </div>
-    <div class="interaction-attack-list">
+    <div class='interaction-attack-list'>
       <a
-        class="unarmed-attack"
-        data-name="unarmedCombat"
-        data-base-attribute="dexterity"
-        data-adds="{{actor.system.skills.unarmedCombat.adds}}"
-        data-skill-value="{{actor.system.skills.unarmedCombat.value}}"
-        data-attack-type="unarmed"
-        data-damage="{{actor.system.unarmedDamage}}"
+        class='unarmed-attack'
+        data-name='unarmedCombat'
+        data-base-attribute='dexterity'
+        data-adds='{{actor.system.skills.unarmedCombat.adds}}'
+        data-skill-value='{{actor.system.skills.unarmedCombat.value}}'
+        data-attack-type='unarmed'
+        data-damage='{{actor.system.unarmedDamage}}'
       >
-        {{localize "torgeternity.skills.unarmedCombat"}}
+        {{localize 'torgeternity.skills.unarmedCombat'}}
       </a>
       {{#iffalse actor.system.skills.intimidation.defenseOnly}}
         &bull;
         <a
-          class="interaction-attack"
-          data-name="intimidation"
-          data-base-attribute="spirit"
-          data-adds="{{actor.system.skills.intimidation.adds}}"
-          data-skill-value="{{actor.system.skills.intimidation.value}}"
-          data-attack-type="intimidation"
+          class='interaction-attack'
+          data-name='intimidation'
+          data-base-attribute='spirit'
+          data-adds='{{actor.system.skills.intimidation.adds}}'
+          data-skill-value='{{actor.system.skills.intimidation.value}}'
+          data-attack-type='intimidation'
         >
-          {{localize "torgeternity.skills.intimidation"}}
+          {{localize 'torgeternity.skills.intimidation'}}
         </a>
       {{/iffalse}}
       {{#iffalse actor.system.skills.maneuver.defenseOnly}}
         &bull;
         <a
-          class="interaction-attack"
-          data-name="maneuver"
-          data-base-attribute="dexterity"
-          data-adds="{{actor.system.skills.maneuver.adds}}"
-          data-skill-value="{{actor.system.skills.maneuver.value}}"
-          data-attack-type="maneuver"
+          class='interaction-attack'
+          data-name='maneuver'
+          data-base-attribute='dexterity'
+          data-adds='{{actor.system.skills.maneuver.adds}}'
+          data-skill-value='{{actor.system.skills.maneuver.value}}'
+          data-attack-type='maneuver'
         >
-          {{localize "torgeternity.skills.maneuver"}}
+          {{localize 'torgeternity.skills.maneuver'}}
         </a>
       {{/iffalse}}
       {{#iffalse actor.system.skills.taunt.defenseOnly}}
         &bull;
         <a
-          class="interaction-attack"
-          data-name="taunt"
-          data-base-attribute="charisma"
-          data-adds="{{actor.system.skills.taunt.adds}}"
-          data-skill-value="{{actor.system.skills.taunt.value}}"
-          data-attack-type="taunt"
+          class='interaction-attack'
+          data-name='taunt'
+          data-base-attribute='charisma'
+          data-adds='{{actor.system.skills.taunt.adds}}'
+          data-skill-value='{{actor.system.skills.taunt.value}}'
+          data-attack-type='taunt'
         >
-          {{localize "torgeternity.skills.taunt"}}
+          {{localize 'torgeternity.skills.taunt'}}
         </a>
       {{/iffalse}}
       {{#iffalse actor.system.skills.trick.defenseOnly}}
         &bull;
         <a
-          class="interaction-attack"
-          data-name="trick"
-          data-base-attribute="mind"
-          data-adds="{{actor.system.skills.trick.adds}}"
-          data-skill-value="{{actor.system.skills.trick.value}}"
-          data-attack-type="trick"
+          class='interaction-attack'
+          data-name='trick'
+          data-base-attribute='mind'
+          data-adds='{{actor.system.skills.trick.adds}}'
+          data-skill-value='{{actor.system.skills.trick.value}}'
+          data-attack-type='trick'
         >
-          {{localize "torgeternity.skills.trick"}}
+          {{localize 'torgeternity.skills.trick'}}
         </a>
       {{/iffalse}}
     </div>
 
-    <div class="weapons-list">
-      <div class="item-list">
+    <div class='weapons-list'>
+      <div class='item-list'>
         {{#each meleeweapons as |item id|}}
-          <li class="item" data-item-id="{{item._id}}">
+          <li class='item' data-item-id='{{item._id}}'>
 
             <div>
-              <img src="{{item.img}}" title="{{item.name}}" />
+              <img src='{{item.img}}' title='{{item.name}}' />
 
             </div>
-            <span class="item-name">{{item.name}}
+            <span class='item-name'>{{item.name}}
             </span>
-            <div class="item-controls">
-              <a class="item-control item-attackRoll" title="{{localize 'torgeternity.iconeTitles.attackRoll'}}">
-                <i class="fas fa-dice-d20"></i>
+            <div class='item-controls'>
+              <a
+                class='item-control item-attackRoll'
+                title='{{localize "torgeternity.iconeTitles.attackRoll"}}'
+              >
+                <i class='fas fa-dice-d20'></i>
               </a>
-              <a class="item-control item-bonusRoll" title="{{localize 'torgeternity.iconeTitles.bonusRoll'}}">
-                <i class="fas fa-dice-d6"></i>
+              <a
+                class='item-control item-bonusRoll'
+                title='{{localize "torgeternity.iconeTitles.bonusRoll"}}'
+              >
+                <i class='fas fa-dice-d6'></i>
               </a>
-              <a class="item-control item-edit" title="{{localize 'torgeternity.iconeTitles.edit'}}">
-                <i class="fas fa-edit"></i>
+              <a
+                class='item-control item-edit'
+                title='{{localize "torgeternity.iconeTitles.edit"}}'
+              >
+                <i class='fas fa-edit'></i>
               </a>
-              <a class="item-control item-delete" title="{{localize 'torgeternity.iconeTitles.delete'}}">
-                <i class="fas fa-trash"></i>
+              <a
+                class='item-control item-delete'
+                title='{{localize "torgeternity.iconeTitles.delete"}}'
+              >
+                <i class='fas fa-trash'></i>
               </a>
             </div>
           </li>
         {{/each}}
 
         {{#each missileweapon as |item id|}}
-          <li class="item" data-item-id="{{item._id}}">
+          <li class='item' data-item-id='{{item._id}}'>
 
             <div>
-              <img src="{{item.img}}" title="{{item.name}}" />
+              <img src='{{item.img}}' title='{{item.name}}' />
 
             </div>
-            <span class="item-name">{{item.name}}</span>
-            <div class="item-controls">
-              <a class="item-control item-attackRoll" title="{{localize 'torgeternity.iconeTitles.attackRoll'}}">
-                <i class="fas fa-dice-d20"></i>
+            <span class='item-name'>{{item.name}}</span>
+            <div class='item-controls'>
+              <a
+                class='item-control item-attackRoll'
+                title='{{localize "torgeternity.iconeTitles.attackRoll"}}'
+              >
+                <i class='fas fa-dice-d20'></i>
               </a>
-              <a class="item-control item-bonusRoll" title="{{localize 'torgeternity.iconeTitles.bonusRoll'}}">
-                <i class="fas fa-dice-d6"></i>
+              <a
+                class='item-control item-bonusRoll'
+                title='{{localize "torgeternity.iconeTitles.bonusRoll"}}'
+              >
+                <i class='fas fa-dice-d6'></i>
               </a>
-              <a class="item-control item-edit" title="{{localize 'torgeternity.iconeTitles.edit'}}">
-                <i class="fas fa-edit"></i>
+              <a
+                class='item-control item-edit'
+                title='{{localize "torgeternity.iconeTitles.edit"}}'
+              >
+                <i class='fas fa-edit'></i>
               </a>
-              <a class="item-control item-delete" title="{{localize 'torgeternity.iconeTitles.delete'}}">
-                <i class="fas fa-trash"></i>
+              <a
+                class='item-control item-delete'
+                title='{{localize "torgeternity.iconeTitles.delete"}}'
+              >
+                <i class='fas fa-trash'></i>
               </a>
             </div>
           </li>
         {{/each}}
 
         {{#each firearm as |item id|}}
-          <li class="item" data-item-id="{{item._id}}">
+          <li class='item' data-item-id='{{item._id}}'>
 
             <div>
-              <img src="{{item.img}}" title="{{item.name}}" />
+              <img src='{{item.img}}' title='{{item.name}}' />
 
             </div>
-            <span class="item-name">{{item.name}}
+            <span class='item-name'>{{item.name}}
             </span>
-            <div class="item-controls">
-              <a class="item-control item-attackRoll" title="{{localize 'torgeternity.iconeTitles.attackRoll'}}">
-                <i class="fas fa-dice-d20"></i>
+            <div class='item-controls'>
+              <a
+                class='item-control item-attackRoll'
+                title='{{localize "torgeternity.iconeTitles.attackRoll"}}'
+              >
+                <i class='fas fa-dice-d20'></i>
               </a>
-              <a class="item-control item-bonusRoll" title="{{localize 'torgeternity.iconeTitles.bonusRoll'}}">
-                <i class="fas fa-dice-d6"></i>
+              <a
+                class='item-control item-bonusRoll'
+                title='{{localize "torgeternity.iconeTitles.bonusRoll"}}'
+              >
+                <i class='fas fa-dice-d6'></i>
               </a>
-              <a class="item-control item-edit" title="{{localize 'torgeternity.iconeTitles.edit'}}">
-                <i class="fas fa-edit"></i>
+              <a
+                class='item-control item-edit'
+                title='{{localize "torgeternity.iconeTitles.edit"}}'
+              >
+                <i class='fas fa-edit'></i>
               </a>
-              <a class="item-control item-delete" title="{{localize 'torgeternity.iconeTitles.delete'}}">
-                <i class="fas fa-trash"></i>
+              <a
+                class='item-control item-delete'
+                title='{{localize "torgeternity.iconeTitles.delete"}}'
+              >
+                <i class='fas fa-trash'></i>
               </a>
             </div>
           </li>
         {{/each}}
 
         {{#each heavyweapon as |item id|}}
-          <li class="item" data-item-id="{{item._id}}">
+          <li class='item' data-item-id='{{item._id}}'>
 
             <div>
-              <img src="{{item.img}}" title="{{item.name}}" />
+              <img src='{{item.img}}' title='{{item.name}}' />
 
             </div>
-            <span class="item-name">{{item.name}}</span>
-            <div class="item-controls">
-              <a class="item-control item-attackRoll" title="{{localize 'torgeternity.iconeTitles.attackRoll'}}">
-                <i class="fas fa-dice-d20"></i>
+            <span class='item-name'>{{item.name}}</span>
+            <div class='item-controls'>
+              <a
+                class='item-control item-attackRoll'
+                title='{{localize "torgeternity.iconeTitles.attackRoll"}}'
+              >
+                <i class='fas fa-dice-d20'></i>
               </a>
-              <a class="item-control item-bonusRoll" title="{{localize 'torgeternity.iconeTitles.bonusRoll'}}">
-                <i class="fas fa-dice-d6"></i>
+              <a
+                class='item-control item-bonusRoll'
+                title='{{localize "torgeternity.iconeTitles.bonusRoll"}}'
+              >
+                <i class='fas fa-dice-d6'></i>
               </a>
-              <a class="item-control item-edit" title="{{localize 'torgeternity.iconeTitles.edit'}}">
-                <i class="fas fa-edit"></i>
+              <a
+                class='item-control item-edit'
+                title='{{localize "torgeternity.iconeTitles.edit"}}'
+              >
+                <i class='fas fa-edit'></i>
               </a>
-              <a class="item-control item-delete" title="{{localize 'torgeternity.iconeTitles.delete'}}">
-                <i class="fas fa-trash"></i>
+              <a
+                class='item-control item-delete'
+                title='{{localize "torgeternity.iconeTitles.delete"}}'
+              >
+                <i class='fas fa-trash'></i>
               </a>
             </div>
           </li>
         {{/each}}
 
         {{#each spell as |item id|}}
-          <li class="item" data-item-id="{{item._id}}">
+          <li class='item' data-item-id='{{item._id}}'>
             <div>
-              <img src="{{item.img}}" title="{{item.name}}" />
+              <img src='{{item.img}}' title='{{item.name}}' />
             </div>
-            <span class="item-name">{{item.name}}</span>
-            <div class="item-controls">
-              <a class="item-control item-powerRoll" title="{{localize 'torgeternity.iconeTitles.spellRoll'}}">
-                <i class="fas fa-dice-d20"></i>
+            <span class='item-name'>{{item.name}}</span>
+            <div class='item-controls'>
+              <a
+                class='item-control item-powerRoll'
+                title='{{localize "torgeternity.iconeTitles.spellRoll"}}'
+              >
+                <i class='fas fa-dice-d20'></i>
               </a>
-              <a class="item-control item-bonusRoll" title="{{localize 'torgeternity.iconeTitles.bonusRoll'}}">
-                <i class="fas fa-dice-d6"></i>
+              <a
+                class='item-control item-bonusRoll'
+                title='{{localize "torgeternity.iconeTitles.bonusRoll"}}'
+              >
+                <i class='fas fa-dice-d6'></i>
               </a>
-              <a class="item-control item-edit" title="{{localize 'torgeternity.iconeTitles.edit'}}">
-                <i class="fas fa-edit"></i>
+              <a
+                class='item-control item-edit'
+                title='{{localize "torgeternity.iconeTitles.edit"}}'
+              >
+                <i class='fas fa-edit'></i>
               </a>
-              <a class="item-control item-delete" title="{{localize 'torgeternity.iconeTitles.delete'}}">
-                <i class="fas fa-trash"></i>
+              <a
+                class='item-control item-delete'
+                title='{{localize "torgeternity.iconeTitles.delete"}}'
+              >
+                <i class='fas fa-trash'></i>
               </a>
             </div>
           </li>
         {{/each}}
 
         {{#each miracle as |item id|}}
-          <li class="item" data-item-id="{{item._id}}">
+          <li class='item' data-item-id='{{item._id}}'>
             <div>
-              <img src="{{item.img}}" title="{{item.name}}" />
+              <img src='{{item.img}}' title='{{item.name}}' />
             </div>
-            <span class="item-name">{{item.name}}</span>
-            <div class="item-controls">
-              <a class="item-control item-powerRoll" title="{{localize 'torgeternity.iconeTitles.miracleRoll'}}">
-                <i class="fas fa-dice-d20"></i>
+            <span class='item-name'>{{item.name}}</span>
+            <div class='item-controls'>
+              <a
+                class='item-control item-powerRoll'
+                title='{{localize "torgeternity.iconeTitles.miracleRoll"}}'
+              >
+                <i class='fas fa-dice-d20'></i>
               </a>
-              <a class="item-control item-bonusRoll" title="{{localize 'torgeternity.iconeTitles.bonusRoll'}}">
-                <i class="fas fa-dice-d6"></i>
+              <a
+                class='item-control item-bonusRoll'
+                title='{{localize "torgeternity.iconeTitles.bonusRoll"}}'
+              >
+                <i class='fas fa-dice-d6'></i>
               </a>
-              <a class="item-control item-edit" title="{{localize 'torgeternity.iconeTitles.edit'}}">
-                <i class="fas fa-edit"></i>
+              <a
+                class='item-control item-edit'
+                title='{{localize "torgeternity.iconeTitles.edit"}}'
+              >
+                <i class='fas fa-edit'></i>
               </a>
-              <a class="item-control item-delete" title="{{localize 'torgeternity.iconeTitles.delete'}}">
-                <i class="fas fa-trash"></i>
+              <a
+                class='item-control item-delete'
+                title='{{localize "torgeternity.iconeTitles.delete"}}'
+              >
+                <i class='fas fa-trash'></i>
               </a>
             </div>
           </li>
         {{/each}}
 
         {{#each psionicpower as |item id|}}
-          <li class="item" data-item-id="{{item._id}}">
+          <li class='item' data-item-id='{{item._id}}'>
             <div>
-              <img src="{{item.img}}" title="{{item.name}}" />
+              <img src='{{item.img}}' title='{{item.name}}' />
             </div>
-            <span class="item-name">{{item.name}}</span>
-            <div class="item-controls">
-              <a class="item-control item-powerRoll" title="{{localize 'torgeternity.iconeTitles.psionicRoll'}}">
-                <i class="fas fa-dice-d20"></i>
+            <span class='item-name'>{{item.name}}</span>
+            <div class='item-controls'>
+              <a
+                class='item-control item-powerRoll'
+                title='{{localize "torgeternity.iconeTitles.psionicRoll"}}'
+              >
+                <i class='fas fa-dice-d20'></i>
               </a>
-              <a class="item-control item-bonusRoll" title="{{localize 'torgeternity.iconeTitles.bonusRoll'}}">
-                <i class="fas fa-dice-d6"></i>
+              <a
+                class='item-control item-bonusRoll'
+                title='{{localize "torgeternity.iconeTitles.bonusRoll"}}'
+              >
+                <i class='fas fa-dice-d6'></i>
               </a>
-              <a class="item-control item-edit" title="{{localize 'torgeternity.iconeTitles.edit'}}">
-                <i class="fas fa-edit"></i>
+              <a
+                class='item-control item-edit'
+                title='{{localize "torgeternity.iconeTitles.edit"}}'
+              >
+                <i class='fas fa-edit'></i>
               </a>
-              <a class="item-control item-delete" title="{{localize 'torgeternity.iconeTitles.delete'}}">
-                <i class="fas fa-trash"></i>
+              <a
+                class='item-control item-delete'
+                title='{{localize "torgeternity.iconeTitles.delete"}}'
+              >
+                <i class='fas fa-trash'></i>
               </a>
             </div>
           </li>
         {{/each}}
 
         {{#each specialabilityRollable as |item id|}}
-          <li class="item" data-item-id="{{item._id}}">
+          <li class='item' data-item-id='{{item._id}}'>
             <div>
-              <img src="{{item.img}}" title="{{item.name}}" width="30" height="30" />
+              <img src='{{item.img}}' title='{{item.name}}' width='30' height='30' />
             </div>
-            <span class="item-name">{{item.name}}</span>
-            <div class="item-controls">
-              <a class="item-control item-attackRoll" title="{{localize 'torgeternity.iconeTitles.attackRoll'}}">
-                <i class="fas fa-dice-d20"></i>
+            <span class='item-name'>{{item.name}}</span>
+            <div class='item-controls'>
+              <a
+                class='item-control item-attackRoll'
+                title='{{localize "torgeternity.iconeTitles.attackRoll"}}'
+              >
+                <i class='fas fa-dice-d20'></i>
               </a>
-              <a class="item-control item-bonusRoll" title="{{localize 'torgeternity.iconeTitles.bonusRoll'}}">
-                <i class="fas fa-dice-d6"></i>
+              <a
+                class='item-control item-bonusRoll'
+                title='{{localize "torgeternity.iconeTitles.bonusRoll"}}'
+              >
+                <i class='fas fa-dice-d6'></i>
               </a>
-              <a class="item-control item-edit" title="{{localize 'torgeternity.iconeTitles.edit'}}">
-                <i class="fas fa-edit"></i>
+              <a
+                class='item-control item-edit'
+                title='{{localize "torgeternity.iconeTitles.edit"}}'
+              >
+                <i class='fas fa-edit'></i>
               </a>
-              <a class="item-control item-delete" title="{{localize 'torgeternity.iconeTitles.delete'}}">
-                <i class="fas fa-trash"></i>
+              <a
+                class='item-control item-delete'
+                title='{{localize "torgeternity.iconeTitles.delete"}}'
+              >
+                <i class='fas fa-trash'></i>
               </a>
             </div>
           </li>
@@ -380,35 +476,35 @@
     </div>
   </div>
 
-  <div class="threat-section-skills">
-    <div class="section-bar">
-      {{localize "torgeternity.sheetLabels.skills"}}
-      <span style="float:right">
-        <a class="skill-edit-toggle">
-          <i class="fas fa-edit"></i>
+  <div class='threat-section-skills'>
+    <div class='section-bar'>
+      {{localize 'torgeternity.sheetLabels.skills'}}
+      <span style='float:right'>
+        <a class='skill-edit-toggle'>
+          <i class='fas fa-edit'></i>
         </a>
       </span>
     </div>
 
-    <div class="threat-block">
-      <span class="inline-skill-list">
+    <div class='threat-block'>
+      <span class='inline-skill-list'>
         {{#each actor.system.skills as |content name|}}
           {{#if content.isThreatSkill}}
-            <span class="inline-skill-item">
+            <span class='inline-skill-item'>
               <a
-                class="skill-roll"
-                data-testtype="skill"
-                data-baseattribute="{{content.baseAttribute}}"
-                data-adds="{{content.adds}}"
-                data-value="{{content.value}}"
-                data-unskilleduse="{{content.unskilledUse}}"
-                data-name="{{name}}"
+                class='skill-roll'
+                data-testtype='skill'
+                data-baseattribute='{{content.baseAttribute}}'
+                data-adds='{{content.adds}}'
+                data-value='{{content.value}}'
+                data-unskilleduse='{{content.unskilledUse}}'
+                data-name='{{name}}'
               >
                 {{localize (concatSkillName name)}}
               </a>
               {{#if content.isFav}}
-                <a class="toggleFav checked">
-                  <i class="far fa-star"></i>
+                <a class='toggleFav checked'>
+                  <i class='far fa-star'></i>
                 </a>
               {{/if}}
               &nbsp;{{content.value}}
@@ -419,85 +515,84 @@
       </span>
     </div>
 
-    <div class="threat-editor" id="threat-editor">
+    <div class='threat-editor' id='threat-editor'>
       {{#if actor.system.editstate}}
-        <div class="skill-list-edit">
+        <div class='skill-list-edit'>
           {{#each actor.system.skills as |skill key|}}
-            <div class="skill-element-edit">
+            <div class='skill-element-edit'>
               <span
-                style="position:relative"
-                class="skill-list"
-                data-testtype="skill"
-                data-baseattribute="{{skill.baseAttribute}}"
-                data-adds="{{skill.adds}}"
-                data-value="{{skill.value}}"
-                data-unskilleduse="{{skill.unskilledUse}}"
-                data-name="{{key}}"
-                data-tooltip="{{localize "torgeternity.sheetLabels.toolTipClickToAdd"}}"
+                style='position:relative'
+                class='skill-list'
+                data-testtype='skill'
+                data-baseattribute='{{skill.baseAttribute}}'
+                data-adds='{{skill.adds}}'
+                data-value='{{skill.value}}'
+                data-unskilleduse='{{skill.unskilledUse}}'
+                data-name='{{key}}'
+                data-tooltip='{{localize "torgeternity.sheetLabels.toolTipClickToAdd"}}'
               >{{localize (concatSkillName key)}}
               </span>
-              <span class="inputsFav">
+              <span class='inputsFav'>
                 <input
-                  name="system.skills.{{key}}.value"
-                  data-skill="{{key}}"
-                  type="number"
-                  class="small-input"
-                  value="{{skill.value}}"
-                  placeholder="-"
+                  data-skill='{{key}}'
+                  type='number'
+                  class='small-input'
+                  value='{{skill.value}}'
+                  placeholder='-'
                 />
 
-                <a class="toggleFav {{checked skill.isFav}}">
-                  <i class="far fa-star"></i>
+                <a class='toggleFav {{checked skill.isFav}}'>
+                  <i class='far fa-star'></i>
                 </a>
                 <input
-                  class="favCheck"
-                  type="checkbox"
-                  name="system.skills.{{key}}.isFav"
+                  class='favCheck'
+                  type='checkbox'
+                  name='system.skills.{{key}}.isFav'
                   {{checked skill.isFav}}
-                  data-dtype="Boolean"
+                  data-dtype='Boolean'
                 />
               </span>
             </div>
           {{/each}}
         </div>
 
-        <div class="defenseChecks">
+        <div class='defenseChecks'>
           <div>
             Defense Only?
           </div>
           <span>
-            {{localize "torgeternity.skills.intimidation"}}
-            <select name="system.skills.intimidation.defenseOnly" class="input-box">
+            {{localize 'torgeternity.skills.intimidation'}}
+            <select name='system.skills.intimidation.defenseOnly' class='input-box'>
               {{#select actor.system.skills.intimidation.defenseOnly}}
                 {{#each config.yesNo as |name type|}}
-                  <option value="{{type}}">{{localize name}}</option>
+                  <option value='{{type}}'>{{localize name}}</option>
                 {{/each}}
               {{/select}}
             </select>
 
-            {{localize "torgeternity.skills.maneuver"}}
-            <select name="system.skills.maneuver.defenseOnly" class="input-box">
+            {{localize 'torgeternity.skills.maneuver'}}
+            <select name='system.skills.maneuver.defenseOnly' class='input-box'>
               {{#select actor.system.skills.maneuver.defenseOnly}}
                 {{#each config.yesNo as |name type|}}
-                  <option value="{{type}}">{{localize name}}</option>
+                  <option value='{{type}}'>{{localize name}}</option>
                 {{/each}}
               {{/select}}
             </select>
 
-            {{localize "torgeternity.skills.taunt"}}
-            <select name="system.skills.taunt.defenseOnly" class="input-box">
+            {{localize 'torgeternity.skills.taunt'}}
+            <select name='system.skills.taunt.defenseOnly' class='input-box'>
               {{#select actor.system.skills.taunt.defenseOnly}}
                 {{#each config.yesNo as |name type|}}
-                  <option value="{{type}}">{{localize name}}</option>
+                  <option value='{{type}}'>{{localize name}}</option>
                 {{/each}}
               {{/select}}
             </select>
 
-            {{localize "torgeternity.skills.trick"}}
-            <select name="system.skills.trick.defenseOnly" class="input-box">
+            {{localize 'torgeternity.skills.trick'}}
+            <select name='system.skills.trick.defenseOnly' class='input-box'>
               {{#select actor.system.skills.trick.defenseOnly}}
                 {{#each config.yesNo as |name type|}}
-                  <option value="{{type}}">{{localize name}}</option>
+                  <option value='{{type}}'>{{localize name}}</option>
                 {{/each}}
               {{/select}}
             </select>
@@ -509,43 +604,52 @@
 
   </div>
 
-  <div class="threat-section-perks">
-    <div class="section-bar">
-      {{localize "torgeternity.sheetLabels.other"}}
+  <div class='threat-section-perks'>
+    <div class='section-bar'>
+      {{localize 'torgeternity.sheetLabels.other'}}
     </div>
   </div>
 
-  <div class="threat-block">
+  <div class='threat-block'>
 
-    <ol class="item-list">
+    <ol class='item-list'>
       {{#each perk as |item id|}}
-        <li class="item" data-item-id="{{item._id}}">
-          <div class="item-row flexrow">
-            <img src="{{item.img}}" title="{{item.name}}" width="30" height="30" />
-            <a class="item-name">{{item.name}}</a>
-            <div class="item-controls">
-              <a class="item-control item-tochat" title="{{localize 'torgeternity.iconeTitles.sendToChat'}}">
-                <i class="fas fa-comment"></i>
+        <li class='item' data-item-id='{{item._id}}'>
+          <div class='item-row flexrow'>
+            <img src='{{item.img}}' title='{{item.name}}' width='30' height='30' />
+            <a class='item-name'>{{item.name}}</a>
+            <div class='item-controls'>
+              <a
+                class='item-control item-tochat'
+                title='{{localize "torgeternity.iconeTitles.sendToChat"}}'
+              >
+                <i class='fas fa-comment'></i>
               </a>
-              <a class="item-control item-edit" title="{{localize 'torgeternity.iconeTitles.edit'}}">
-                <i class="fas fa-edit"></i>
+              <a
+                class='item-control item-edit'
+                title='{{localize "torgeternity.iconeTitles.edit"}}'
+              >
+                <i class='fas fa-edit'></i>
               </a>
-              <a class="item-control item-delete" title="{{localize 'torgeternity.iconeTitles.delete'}}">
-                <i class="fas fa-trash"></i>
+              <a
+                class='item-control item-delete'
+                title='{{localize "torgeternity.iconeTitles.delete"}}'
+              >
+                <i class='fas fa-trash'></i>
               </a>
             </div>
           </div>
-          <div class="item-detail">
-            <div class="item-dropdown-description">
+          <div class='item-detail'>
+            <div class='item-dropdown-description'>
               {{{item.system.description}}}
               <p></p>
-              <div class="item-dropdown-extras">
+              <div class='item-dropdown-extras'>
                 {{localize (concatPerkType item.system.category)}}
               </div>
-              <div class="item-dropdown-extras">
+              <div class='item-dropdown-extras'>
                 {{item.system.cosm}}
               </div>
-              <div class="item-dropdown-extras">
+              <div class='item-dropdown-extras'>
                 {{item.system.timestaken}}x
               </div>
             </div>
@@ -554,28 +658,37 @@
       {{/each}}
     </ol>
 
-    <ol class="item-list">
+    <ol class='item-list'>
       {{#each specialability as |item id|}}
-        <li class="item" data-item-id="{{item._id}}">
+        <li class='item' data-item-id='{{item._id}}'>
 
-          <div class="item-row flexrow">
-            <img src="{{item.img}}" title="{{item.name}}" />
-            <a class="item-name">{{item.name}}</a>
-            <div class="item-controls">
-              <a class="item-control item-tochat" title="{{localize 'torgeternity.iconeTitles.sendToChat'}}">
-                <i class="fas fa-comment"></i>
+          <div class='item-row flexrow'>
+            <img src='{{item.img}}' title='{{item.name}}' />
+            <a class='item-name'>{{item.name}}</a>
+            <div class='item-controls'>
+              <a
+                class='item-control item-tochat'
+                title='{{localize "torgeternity.iconeTitles.sendToChat"}}'
+              >
+                <i class='fas fa-comment'></i>
               </a>
-              <a class="item-control item-edit" title="{{localize 'torgeternity.iconeTitles.edit'}}">
-                <i class="fas fa-edit"></i>
+              <a
+                class='item-control item-edit'
+                title='{{localize "torgeternity.iconeTitles.edit"}}'
+              >
+                <i class='fas fa-edit'></i>
               </a>
-              <a class="item-control item-delete" title="{{localize 'torgeternity.iconeTitles.delete'}}">
-                <i class="fas fa-trash"></i>
+              <a
+                class='item-control item-delete'
+                title='{{localize "torgeternity.iconeTitles.delete"}}'
+              >
+                <i class='fas fa-trash'></i>
               </a>
             </div>
           </div>
 
-          <div class="item-detail">
-            <div class="item-dropdown-description">
+          <div class='item-detail'>
+            <div class='item-dropdown-description'>
               {{{item.system.description}}}
             </div>
           </div>
