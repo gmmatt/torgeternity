@@ -1,5 +1,5 @@
-import { CommonActorData } from "./common.js";
-import { torgeternity } from "../../config.js";
+import { CommonActorData } from './common.js';
+import { torgeternity } from '../../config.js';
 
 const fields = foundry.data.fields;
 
@@ -15,9 +15,9 @@ export class ThreatData extends CommonActorData {
     return {
       ...super.defineSchema(),
       details: new fields.SchemaField({
-        description: new fields.HTMLField({ initial: "", textSearch: true }),
+        description: new fields.HTMLField({ initial: '', textSearch: true }),
         sizeBonus: new fields.StringField({
-          initial: "normal",
+          initial: 'normal',
           choices: Object.keys(torgeternity.sizes),
           required: true,
         }),
@@ -28,14 +28,18 @@ export class ThreatData extends CommonActorData {
   /**
    *
    * @param {object} data the data object to migrate
-   * @returns {object} the migrated data object
    */
   static migrateData(data) {
     super.migrateData(data);
     data.details.sizeBonus = Object.keys(torgeternity.sizes).includes(data.details.sizeBonus)
       ? data.details.sizeBonus
-      : "normal";
-    return data;
+      : 'normal';
+    for (const skill of Object.values(data.skills)) {
+      skill.adds = parseInt(skill.adds) || 0;
+      if (skill.value) {
+        skill.adds = parseInt(skill.value) - data.attributes[skill.baseAttribute];
+      }
+    }
   }
 
   /**
