@@ -1,5 +1,5 @@
-import { CommonActorData } from "./common.js";
-import { torgeternity } from "../../config.js";
+import { CommonActorData } from './common.js';
+import { torgeternity } from '../../config.js';
 const fields = foundry.data.fields;
 
 /**
@@ -20,12 +20,12 @@ export class StormKnightData extends CommonActorData {
         tech: new fields.NumberField({ initial: 0, integer: true, nullable: false }),
       }),
       details: new fields.SchemaField({
-        background: new fields.HTMLField({ initial: "", textSearch: true }),
+        background: new fields.HTMLField({ initial: '', textSearch: true }),
         race: new fields.StringField({
           choices: Object.keys(torgeternity.races),
         }),
         sizeBonus: new fields.StringField({
-          initial: "normal",
+          initial: 'normal',
           choices: Object.keys(torgeternity.sizes),
           required: true,
         }),
@@ -40,15 +40,19 @@ export class StormKnightData extends CommonActorData {
   /**
    *
    * @param {object} data the data object to migrate
-   * @returns {object} the migrated data object
    */
   static migrateData(data) {
     super.migrateData(data);
-    data.details.race = Object.keys(torgeternity.races).includes(data.details.race) ? data.details.race : "other";
-    data.details.sizeBonus = Object.keys(torgeternity.sizes).includes(data.details.sizeBonus)
-      ? data.details.sizeBonus
-      : "normal";
-    return data;
+    if (data?.details && Object.hasOwn(data?.details, 'race')) {
+      data.details.sizeBonus = Object.keys(torgeternity.races).includes(data.details.race)
+        ? data.details.race
+        : 'other';
+    }
+    if (data?.details && Object.hasOwn(data?.details, 'sizeBonus')) {
+      data.details.sizeBonus = Object.keys(torgeternity.sizes).includes(data.details.sizeBonus)
+        ? data.details.sizeBonus
+        : 'normal';
+    }
   }
 
   /**
@@ -65,15 +69,15 @@ export class StormKnightData extends CommonActorData {
 
     // Set clearance level
     if (this.xp.earned < 50) {
-      this.details.clearance = "alpha";
+      this.details.clearance = 'alpha';
     } else if (this.xp.earned < 200) {
-      this.details.clearance = "beta";
+      this.details.clearance = 'beta';
     } else if (this.xp.earned < 500) {
-      this.details.clearance = "gamma";
+      this.details.clearance = 'gamma';
     } else if (this.xp.earned < 1000) {
-      this.details.clearance = "delta";
+      this.details.clearance = 'delta';
     } else {
-      this.details.clearance = "omega";
+      this.details.clearance = 'omega';
     }
   }
 

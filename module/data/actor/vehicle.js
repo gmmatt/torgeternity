@@ -1,5 +1,5 @@
-import { torgeternity } from "../../config.js";
-import { getTorgValue } from "../../torgchecks.js";
+import { torgeternity } from '../../config.js';
+import { getTorgValue } from '../../torgchecks.js';
 
 const fields = foundry.data.fields;
 /**
@@ -14,7 +14,7 @@ export class VehicleData extends foundry.abstract.TypeDataModel {
     return {
       details: new fields.SchemaField({
         sizeBonus: new fields.StringField({
-          initial: "normal",
+          initial: 'normal',
           choices: Object.keys(torgeternity.sizes),
           required: true,
         }),
@@ -26,17 +26,17 @@ export class VehicleData extends foundry.abstract.TypeDataModel {
         spirit: new fields.NumberField({ initial: 0, integer: true, nullable: false }),
         tech: new fields.NumberField({ initial: 10, integer: true, nullable: false }),
       }),
-      description: new fields.HTMLField({ initial: "", textSearch: true }),
+      description: new fields.HTMLField({ initial: '', textSearch: true }),
       maneuver: new fields.NumberField({ initial: -1, integer: true, nullable: false }),
       operator: new fields.SchemaField({
-        name: new fields.StringField({ initial: "" }),
-        skillValue: new fields.StringField({ initial: "" }),
+        name: new fields.StringField({ initial: '' }),
+        skillValue: new fields.StringField({ initial: '' }),
       }),
       passengers: new fields.NumberField({ initial: 0, integer: true, nullable: false }),
       price: new fields.SchemaField({
         dollars: new fields.NumberField({ initial: 100, integer: true, nullable: false }),
         magnitude: new fields.StringField({
-          initial: "ones",
+          initial: 'ones',
           choices: Object.keys(torgeternity.magnitudes),
           required: true,
         }),
@@ -45,7 +45,7 @@ export class VehicleData extends foundry.abstract.TypeDataModel {
         kph: new fields.NumberField({ initial: 100, integer: true, nullable: false }),
       }),
       toughness: new fields.NumberField({ initial: 5, integer: true, nullable: false }),
-      type: new fields.StringField({ initial: "land" }),
+      type: new fields.StringField({ initial: 'land' }),
       wounds: new fields.SchemaField({
         current: new fields.NumberField({ initial: 0, integer: true, nullable: false }),
         max: new fields.NumberField({ initial: 3, integer: true, nullable: false }),
@@ -56,17 +56,24 @@ export class VehicleData extends foundry.abstract.TypeDataModel {
   /**
    *
    * @param {object} data the data object to migrate
-   * @returns {object} the migrated data object
    */
   static migrateData(data) {
     super.migrateData(data);
-    this.price.magnitude = Object.keys(torgeternity.magnitudes).includes(this.price.magnitude)
-      ? this.price.magnitude
-      : "other";
-    this.details.sizeBonus = Object.keys(torgeternity.sizes).includes(this.details.sizeBonus)
-      ? this.details.sizeBonus
-      : "normal";
-    return data;
+    if (data?.details && Object.hasOwn(data?.details, 'sizeBonus')) {
+      data.details.sizeBonus = Object.keys(torgeternity.sizes).includes(data.details.sizeBonus)
+        ? data.details.sizeBonus
+        : 'normal';
+    }
+    if (data?.price && Object.hasOwn(data?.price, 'magnitude')) {
+      data.price.magnitude = Object.keys(torgeternity.magnitudes).includes(data.price.magnitude)
+        ? data.price.magnitude
+        : 'other';
+    }
+    if (data?.details && Object.hasOwn(data?.details, 'sizeBonus')) {
+      data.details.sizeBonus = Object.keys(torgeternity.sizes).includes(data.details.sizeBonus)
+        ? data.details.sizeBonus
+        : 'normal';
+    }
   }
 
   /**
@@ -83,13 +90,13 @@ export class VehicleData extends foundry.abstract.TypeDataModel {
     super.prepareDerivedData();
     let convertedPrice = 0;
     switch (this.price.magnitude) {
-      case "billions":
+      case 'billions':
         convertedPrice = this.price.dollars * 1000;
-      case "millions":
+      case 'millions':
         convertedPrice = this.price.dollars * 1000;
-      case "thousands":
+      case 'thousands':
         convertedPrice = this.price.dollars * 1000;
-      case "ones":
+      case 'ones':
       default:
         convertedPrice = this.price.dollars;
         break;
