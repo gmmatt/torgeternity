@@ -19,7 +19,9 @@
 
 it is also possible to directly edit the yml files in src/packs
 
-## Performing the release on github:
+## Releasing
+### Performing the release 
+#### on github:
 
 1. Make sure Changelog is up to date.
 1. Merge all commits for the release to master
@@ -29,8 +31,15 @@ it is also possible to directly edit the yml files in src/packs
    - Choose a tag exactly like the version number, example: "3.7.0"
    - select the master branch as release branch
    - Add a description (copy & paste the Changelog snippet for that version)
+  
+#### on Foundry:
+- use [this link](https://foundryvtt.com/packages/torgeternity/edit)
+  - Version Number: natural
+  - Package Manifest URL: release-URL with system.json, for example: https://github.com/gmmatt/torgeternity/releases/download/3.6.2/system.json
+  - Release Notes: From 3.7.0 it's always https://github.com/gmmatt/torgeternity/blob/master/Changelog.md
+  - Foundry-Versions like in system.json
 
-Release Module
+### Release Module
 
 (1) In the module.json file, change "protected" to true  
 (2) Increase the version number  
