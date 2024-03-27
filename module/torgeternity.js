@@ -1,47 +1,47 @@
-"use strict";
-import { torgeternity } from "./config.js";
-import * as Chat from "./chat.js";
-import TorgeternityItem from "./documents/item/torgeternityItem.js";
-import TorgeternityActor from "./documents/actor/torgeternityActor.js";
-import TorgeternityItemSheet from "./sheets/torgeternityItemSheet.js";
-import TorgeternityActorSheet from "./sheets/torgeternityActorSheet.js";
-import { sheetResize } from "./sheetResize.js";
-import { preloadTemplates } from "./preloadTemplates.js";
-import torgeternityCombat from "./dramaticScene/torgeternityCombat.js";
-import torgeternityCombatTracker from "./dramaticScene/torgeternityCombatTracker.js";
-import { alphabSort } from "./AlphabeticalSort.js";
+'use strict';
+import { torgeternity } from './config.js';
+import * as Chat from './chat.js';
+import TorgeternityItem from './documents/item/torgeternityItem.js';
+import TorgeternityActor from './documents/actor/torgeternityActor.js';
+import TorgeternityItemSheet from './sheets/torgeternityItemSheet.js';
+import TorgeternityActorSheet from './sheets/torgeternityActorSheet.js';
+import { sheetResize } from './sheetResize.js';
+import { preloadTemplates } from './preloadTemplates.js';
+import torgeternityCombat from './dramaticScene/torgeternityCombat.js';
+import torgeternityCombatTracker from './dramaticScene/torgeternityCombatTracker.js';
+import { alphabSort } from './AlphabeticalSort.js';
 // Disabling Player List extension until it can be updated for version 10
-import TorgeternityPlayerList from "./users/TorgeternityPlayerList.js";
-import torgeternitySceneConfig from "./torgeternitySceneConfig.js";
-import torgeternityNav from "./torgeternityNav.js";
-import { registerTorgSettings } from "./settings.js";
-import { modifyTokenBars } from "./tokenBars.js";
-import { registerHelpers } from "./handlebarHelpers.js";
-import torgCombatant from "./dramaticScene/torgeternityCombatant.js";
-import { registerDiceSoNice } from "./dice-so-nice.js";
-import torgeternityPlayerHand from "./cards/torgeternityPlayerHand.js";
-import torgeternityPile from "./cards/torgeternityPile.js";
-import torgeternityDeck from "./cards/torgeternityDeck.js";
-import torgeternityCardConfig from "./cards/torgeternityCardConfig.js";
-import { torgeternityCards } from "./cards/torgeternityCards.js";
-import { TestDialog } from "./test-dialog.js";
-import { hideCompendium } from "./hideCompendium.js";
-import initTorgControlButtons from "./controlButtons.js";
-import createTorgShortcuts from "./keybinding.js";
-import GMScreen from "./GMScreen.js";
-import { setUpCardPiles } from "./cards/setUpCardPiles.js";
-import { explode, reroll } from "./explode.js";
-import { activateStandartScene } from "./activateStandartScene.js";
-import { torgMigration } from "./migrations.js";
-import initTextEdidor from "./initTextEditor.js";
-import { TorgeternityMacros } from "./macros.js";
-import { ChatMessageTorg } from "./chat/document.js";
-import * as actorDataModels from "./data/actor/index.js";
-import * as itemDataModels from "./data/actor/index.js";
-import TorgActiveEffect from "./documents/active-effect/torgActiveEffect.js";
+import TorgeternityPlayerList from './users/TorgeternityPlayerList.js';
+import torgeternitySceneConfig from './torgeternitySceneConfig.js';
+import torgeternityNav from './torgeternityNav.js';
+import { registerTorgSettings } from './settings.js';
+import { modifyTokenBars } from './tokenBars.js';
+import { registerHelpers } from './handlebarHelpers.js';
+import torgCombatant from './dramaticScene/torgeternityCombatant.js';
+import { registerDiceSoNice } from './dice-so-nice.js';
+import torgeternityPlayerHand from './cards/torgeternityPlayerHand.js';
+import torgeternityPile from './cards/torgeternityPile.js';
+import torgeternityDeck from './cards/torgeternityDeck.js';
+import torgeternityCardConfig from './cards/torgeternityCardConfig.js';
+import { torgeternityCards } from './cards/torgeternityCards.js';
+import { TestDialog } from './test-dialog.js';
+import { hideCompendium } from './hideCompendium.js';
+import initTorgControlButtons from './controlButtons.js';
+import createTorgShortcuts from './keybinding.js';
+import GMScreen from './GMScreen.js';
+import { setUpCardPiles } from './cards/setUpCardPiles.js';
+import { explode, reroll } from './explode.js';
+import { activateStandartScene } from './activateStandartScene.js';
+import { torgMigration } from './migrations.js';
+import initTextEdidor from './initTextEditor.js';
+import { TorgeternityMacros } from './macros.js';
+import { ChatMessageTorg } from './chat/document.js';
+import * as actorDataModels from './data/actor/index.js';
+import * as itemDataModels from './data/actor/index.js';
+import TorgActiveEffect from './documents/active-effect/torgActiveEffect.js';
 
-Hooks.once("init", async function () {
-  console.log("torgeternity | Initializing Torg Eternity System");
+Hooks.once('init', async function () {
+  console.log('torgeternity | Initializing Torg Eternity System');
   // CONFIG.debug.hooks = true; //The Developer Mode module can do this for you without accidentally leaving hooks on for anyone working in your system
   // ----helpers
   registerHelpers();
@@ -64,7 +64,7 @@ Hooks.once("init", async function () {
   CONFIG.attributeTypes = torgeternity.attributeTypes;
 
   // --------combats
-  CONFIG.Combat.initiative.formula = "1";
+  CONFIG.Combat.initiative.formula = '1';
   CONFIG.Combat.documentClass = torgeternityCombat;
   CONFIG.ui.combat = torgeternityCombatTracker;
   CONFIG.Combatant.documentClass = torgCombatant;
@@ -72,8 +72,8 @@ Hooks.once("init", async function () {
 
   // ----scenes
   // CONFIG.Scene.sheetClass = torgeternitySceneConfig;
-  DocumentSheetConfig.registerSheet(Scene, "torgeternity", torgeternitySceneConfig, {
-    label: "Torg Eternity Scene Config",
+  DocumentSheetConfig.registerSheet(Scene, 'torgeternity', torgeternitySceneConfig, {
+    label: 'Torg Eternity Scene Config',
     makeDefault: true,
   });
   CONFIG.ui.nav = torgeternityNav;
@@ -88,66 +88,68 @@ Hooks.once("init", async function () {
 
   // ---localizing entities labels
   CONFIG.Actor.typeLabels = {
-    stormknight: game.i18n.localize("torgeternity.sheetLabels.stormknight"),
-    threat: game.i18n.localize("torgeternity.sheetLabels.threat"),
-    vehicle: game.i18n.localize("torgeternity.sheetLabels.vehicle"),
+    stormknight: game.i18n.localize('torgeternity.sheetLabels.stormknight'),
+    threat: game.i18n.localize('torgeternity.sheetLabels.threat'),
+    vehicle: game.i18n.localize('torgeternity.sheetLabels.vehicle'),
   };
   CONFIG.Item.typeLabels = {
-    gear: game.i18n.localize("torgeternity.itemSheetDescriptions.generalGear"),
-    eternityshard: game.i18n.localize("torgeternity.itemSheetDescriptions.eternityshard"),
-    armor: game.i18n.localize("torgeternity.itemSheetDescriptions.armor"),
-    shield: game.i18n.localize("torgeternity.itemSheetDescriptions.shield"),
-    customAttack: game.i18n.localize("torgeternity.itemSheetDescriptions.customAttack"),
-    meleeweapon: game.i18n.localize("torgeternity.itemSheetDescriptions.meleeWeapon"),
-    missileweapon: game.i18n.localize("torgeternity.itemSheetDescriptions.missileWeapon"),
-    firearm: game.i18n.localize("torgeternity.itemSheetDescriptions.firearm"),
-    implant: game.i18n.localize("torgeternity.itemSheetDescriptions.implant"),
-    heavyweapon: game.i18n.localize("torgeternity.itemSheetDescriptions.heavyWeapon"),
-    vehicle: game.i18n.localize("torgeternity.itemSheetDescriptions.vehicule"),
-    perk: game.i18n.localize("torgeternity.itemSheetDescriptions.perk"),
-    enhancement: game.i18n.localize("torgeternity.itemSheetDescriptions.enhancement"),
-    specialability: game.i18n.localize("torgeternity.itemSheetDescriptions.specialability"),
-    "specialability-rollable": game.i18n.localize("torgeternity.itemSheetDescriptions.specialabilityRollable"),
-    spell: game.i18n.localize("torgeternity.itemSheetDescriptions.spell"),
-    miracle: game.i18n.localize("torgeternity.itemSheetDescriptions.miracle"),
-    psionicpower: game.i18n.localize("torgeternity.itemSheetDescriptions.psionicpower"),
-    customSkill: game.i18n.localize("torgeternity.itemSheetDescriptions.customSkill"),
-    vehicleAddOn: game.i18n.localize("torgeternity.itemSheetDescriptions.vehicleAddOn"),
+    gear: game.i18n.localize('torgeternity.itemSheetDescriptions.generalGear'),
+    eternityshard: game.i18n.localize('torgeternity.itemSheetDescriptions.eternityshard'),
+    armor: game.i18n.localize('torgeternity.itemSheetDescriptions.armor'),
+    shield: game.i18n.localize('torgeternity.itemSheetDescriptions.shield'),
+    customAttack: game.i18n.localize('torgeternity.itemSheetDescriptions.customAttack'),
+    meleeweapon: game.i18n.localize('torgeternity.itemSheetDescriptions.meleeWeapon'),
+    missileweapon: game.i18n.localize('torgeternity.itemSheetDescriptions.missileWeapon'),
+    firearm: game.i18n.localize('torgeternity.itemSheetDescriptions.firearm'),
+    implant: game.i18n.localize('torgeternity.itemSheetDescriptions.implant'),
+    heavyweapon: game.i18n.localize('torgeternity.itemSheetDescriptions.heavyWeapon'),
+    vehicle: game.i18n.localize('torgeternity.itemSheetDescriptions.vehicule'),
+    perk: game.i18n.localize('torgeternity.itemSheetDescriptions.perk'),
+    enhancement: game.i18n.localize('torgeternity.itemSheetDescriptions.enhancement'),
+    specialability: game.i18n.localize('torgeternity.itemSheetDescriptions.specialability'),
+    'specialability-rollable': game.i18n.localize(
+      'torgeternity.itemSheetDescriptions.specialabilityRollable'
+    ),
+    spell: game.i18n.localize('torgeternity.itemSheetDescriptions.spell'),
+    miracle: game.i18n.localize('torgeternity.itemSheetDescriptions.miracle'),
+    psionicpower: game.i18n.localize('torgeternity.itemSheetDescriptions.psionicpower'),
+    customSkill: game.i18n.localize('torgeternity.itemSheetDescriptions.customSkill'),
+    vehicleAddOn: game.i18n.localize('torgeternity.itemSheetDescriptions.vehicleAddOn'),
   };
 
   ui.GMScreen = new GMScreen();
   // all settings after config
   registerTorgSettings();
   // ---register items and actors
-  Items.unregisterSheet("core", ItemSheet);
-  Items.registerSheet("torgeternity", TorgeternityItemSheet, {
+  Items.unregisterSheet('core', ItemSheet);
+  Items.registerSheet('torgeternity', TorgeternityItemSheet, {
     makeDefault: true,
   });
 
-  Actors.unregisterSheet("core", ItemSheet);
-  Actors.registerSheet("torgeternity", TorgeternityActorSheet, {
+  Actors.unregisterSheet('core', ItemSheet);
+  Actors.registerSheet('torgeternity', TorgeternityActorSheet, {
     makeDefault: true,
   });
 
   // ---register cards
-  DocumentSheetConfig.registerSheet(Cards, "core", torgeternityPlayerHand, {
-    label: "Torg Player Hand",
-    types: ["hand"],
+  DocumentSheetConfig.registerSheet(Cards, 'core', torgeternityPlayerHand, {
+    label: 'Torg Player Hand',
+    types: ['hand'],
     makeDefault: true,
   });
-  DocumentSheetConfig.registerSheet(Cards, "core", torgeternityPile, {
-    label: "Torg Pile",
-    types: ["pile"],
+  DocumentSheetConfig.registerSheet(Cards, 'core', torgeternityPile, {
+    label: 'Torg Pile',
+    types: ['pile'],
     makeDefault: true,
   });
-  DocumentSheetConfig.registerSheet(Cards, "core", torgeternityDeck, {
-    label: "Torg Deck",
-    types: ["deck"],
+  DocumentSheetConfig.registerSheet(Cards, 'core', torgeternityDeck, {
+    label: 'Torg Deck',
+    types: ['deck'],
     makeDefault: true,
   });
-  DocumentSheetConfig.registerSheet(Card, "core", torgeternityCardConfig, {
-    label: "Torg Eternity Card Configuration",
-    types: ["destiny", "drama", "cosm"],
+  DocumentSheetConfig.registerSheet(Card, 'core', torgeternityCardConfig, {
+    label: 'Torg Eternity Card Configuration',
+    types: ['destiny', 'drama', 'cosm'],
     makeDefault: true,
   });
 
@@ -159,27 +161,27 @@ Hooks.once("init", async function () {
   createTorgShortcuts();
 });
 
-Hooks.once("setup", async function () {
+Hooks.once('setup', async function () {
   modifyTokenBars();
   // changing stutus marker
   // preparing status marker
 
-  if (game.settings.get("core", "language") === "fr") {
+  if (game.settings.get('core', 'language') === 'fr') {
     for (const effect of CONFIG.statusEffects) {
       effect.icon = effect.icon.replace(
-        "systems/torgeternity/images/status-markers",
-        "systems/torgeternity/images/status-markers/fr"
+        'systems/torgeternity/images/status-markers',
+        'systems/torgeternity/images/status-markers/fr'
       );
     }
   }
 });
 
-Hooks.once("diceSoNiceReady", (dice3d) => {
+Hooks.once('diceSoNiceReady', (dice3d) => {
   registerDiceSoNice(dice3d);
 });
 
 // -------------once everything ready
-Hooks.on("ready", async function () {
+Hooks.on('ready', async function () {
   // migration script
   if (game.user.isGM) torgMigration();
 
@@ -193,31 +195,33 @@ Hooks.on("ready", async function () {
   ui.GMScreen = new GMScreen();
 
   // -----applying GM possibilities pool if absent
-  if (game.user.isGM && !game.user.getFlag("torgeternity", "GMpossibilities")) {
-    game.user.setFlag("torgeternity", "GMpossibilities", 0);
+  if (game.user.isGM && !game.user.getFlag('torgeternity', 'GMpossibilities')) {
+    game.user.setFlag('torgeternity', 'GMpossibilities', 0);
   }
 
   // ----load template for welcome message depending on supported languages
-  let lang = game.settings.get("core", "language");
-  torgeternity.supportedLanguages.indexOf(lang) == -1 ? (lang = "en") : (lang = lang);
+  let lang = game.settings.get('core', 'language');
+  torgeternity.supportedLanguages.indexOf(lang) == -1 ? (lang = 'en') : (lang = lang);
 
-  torgeternity.welcomeMessage = await renderTemplate(`systems/torgeternity/templates/welcomeMessage/${lang}.hbs`);
+  torgeternity.welcomeMessage = await renderTemplate(
+    `systems/torgeternity/templates/welcomeMessage/${lang}.hbs`
+  );
 
   // ----rendering welcome message
-  if (game.settings.get("torgeternity", "welcomeMessage") == true) {
+  if (game.settings.get('torgeternity', 'welcomeMessage') == true) {
     const d = new Dialog(
       {
-        title: "Welcome to the Official Torg Eternity System for Foundry VTT!",
+        title: 'Welcome to the Official Torg Eternity System for Foundry VTT!',
         content: torgeternity.welcomeMessage,
         buttons: {
           one: {
             icon: '<i class="fas fa-check"></i>',
-            label: `${game.i18n.localize("torgeternity.submit.OK")}`,
+            label: `${game.i18n.localize('torgeternity.submit.OK')}`,
           },
           two: {
             icon: '<i class="fas fa-ban"></i>',
-            label: `${game.i18n.localize("torgeternity.submit.dontShow")}`,
-            callback: () => game.settings.set("torgeternity", "welcomeMessage", false),
+            label: `${game.i18n.localize('torgeternity.submit.dontShow')}`,
+            callback: () => game.settings.set('torgeternity', 'welcomeMessage', false),
           },
         },
       },
@@ -232,25 +236,25 @@ Hooks.on("ready", async function () {
 
   // ------Ask about hiding nonlocal compendium
   if (
-    game.settings.get("torgeternity", "welcomeMessage") == true &&
-    !game.settings.get("torgeternity", "hideForeignCompendium")
+    game.settings.get('torgeternity', 'welcomeMessage') == true &&
+    !game.settings.get('torgeternity', 'hideForeignCompendium')
   ) {
     const d = new Dialog(
       {
-        title: game.i18n.localize("torgeternity.dialogWindow.hideForeignCompendium.title"),
-        content: game.i18n.localize("torgeternity.dialogWindow.hideForeignCompendium.content"),
+        title: game.i18n.localize('torgeternity.dialogWindow.hideForeignCompendium.title'),
+        content: game.i18n.localize('torgeternity.dialogWindow.hideForeignCompendium.content'),
         buttons: {
           one: {
             icon: `<i class="fas fa-check"></i>`,
-            label: game.i18n.localize("torgeternity.yesNo.true"),
+            label: game.i18n.localize('torgeternity.yesNo.true'),
             callback: async () => {
-              await game.settings.set("torgeternity", "hideForeignCompendium", true);
+              await game.settings.set('torgeternity', 'hideForeignCompendium', true);
               window.location.reload();
             },
           },
           two: {
             icon: '<i class="fas fa-ban"></i>',
-            label: game.i18n.localize("torgeternity.yesNo.false"),
+            label: game.i18n.localize('torgeternity.yesNo.false'),
           },
         },
       },
@@ -263,12 +267,15 @@ Hooks.on("ready", async function () {
   }
 
   // ----setup cards if needed
-  if (game.settings.get("torgeternity", "setUpCards") === true && game.user.isGM) {
+  if (game.settings.get('torgeternity', 'setUpCards') === true && game.user.isGM) {
     await setUpCardPiles();
   }
 
   // ----reset cards to initial face
-  if (game.user.isGM) Array.from(game.cards).forEach((d) => Array.from(d.cards).forEach((c) => c.update({ face: 0 })));
+  if (game.user.isGM)
+    Array.from(game.cards).forEach((d) =>
+      Array.from(d.cards).forEach((c) => c.update({ face: 0 }))
+    );
 
   // activation of standart scene
   if (game.scenes.size < 1) {
@@ -289,15 +296,15 @@ Hooks.on("ready", async function () {
   // -------define a dialog for external links
 
   const dialData = {
-    title: game.i18n.localize("torgeternity.dialogWindow.externalLinks.title"),
-    content: game.i18n.localize("torgeternity.dialogWindow.externalLinks.content"),
+    title: game.i18n.localize('torgeternity.dialogWindow.externalLinks.title'),
+    content: game.i18n.localize('torgeternity.dialogWindow.externalLinks.content'),
     buttons: {
       one: {
         icon: '<i class="fas fa-expand-arrows-alt"style="font-size:24px"></i>',
-        label: game.i18n.localize("torgeternity.dialogWindow.externalLinks.reference"),
+        label: game.i18n.localize('torgeternity.dialogWindow.externalLinks.reference'),
         callback: () => {
-          new FrameViewer("http://torg-gamereference.com/index.php", {
-            title: "torg game reference",
+          new FrameViewer('http://torg-gamereference.com/index.php', {
+            title: 'torg game reference',
             top: 200,
             left: 200,
             width: 520,
@@ -308,56 +315,58 @@ Hooks.on("ready", async function () {
       },
       two: {
         icon: '<i class="fab fa-discord"style="font-size:24px"></i>',
-        label: "<p>Discord</p>",
+        label: '<p>Discord</p>',
         callback: () => {
-          ui.notifications.info(game.i18n.localize("torgeternity.notifications.openDiscord"));
-          window.open("https://discord.gg/foundryvtt", "_blank");
+          ui.notifications.info(game.i18n.localize('torgeternity.notifications.openDiscord'));
+          window.open('https://discord.gg/foundryvtt', '_blank');
         },
       },
 
       three: {
         icon: '<i class="fas fa-bug" style="font-size:24px"></i>',
-        label: game.i18n.localize("torgeternity.dialogWindow.externalLinks.bug"),
+        label: game.i18n.localize('torgeternity.dialogWindow.externalLinks.bug'),
         callback: () => {
-          ui.notifications.info(game.i18n.localize("torgeternity.notifications.openIssue"));
-          window.open("https://github.com/gmmatt/torgeternity/issues/new", "_blank");
+          ui.notifications.info(game.i18n.localize('torgeternity.notifications.openIssue'));
+          window.open('https://github.com/gmmatt/torgeternity/issues/new', '_blank');
         },
       },
       four: {
         icon: '<img src="systems/torgeternity/images/ulissesLogo.webp" alt="logo ulisses" style="filter:grayscale(1)">',
-        label: game.i18n.localize("torgeternity.dialogWindow.externalLinks.publisher"),
+        label: game.i18n.localize('torgeternity.dialogWindow.externalLinks.publisher'),
         callback: () => {
-          ui.notifications.info(game.i18n.localize("torgeternity.notifications.openUlisses"));
-          window.open("https://ulisses-us.com", "_blank");
+          ui.notifications.info(game.i18n.localize('torgeternity.notifications.openUlisses'));
+          window.open('https://ulisses-us.com', '_blank');
         },
       },
     },
   };
   const dialOption = {
-    width: "auto",
+    width: 'auto',
     height: 250,
     left: 100,
     top: 20,
   };
   // adding french links (shamelessly)
-  if (game.settings.get("core", "language") == "fr") {
+  if (game.settings.get('core', 'language') == 'fr') {
     dialData.buttons.five = {
       icon: '<img src="systems/torgeternity/images/BBE_logo.webp" alt="logo BBE" style="filter:grayscale(1);max-height:3em">',
-      label: "<p>Distr. français</p>",
+      label: '<p>Distr. français</p>',
       callback: () => {
-        ui.notifications.info("votre navigateur va ouvrir le site de BlackBook Editions dans un nouvel onglet  ");
-        window.open("https://www.black-book-editions.fr/catalogue.php?id=668", "_blank");
+        ui.notifications.info(
+          'votre navigateur va ouvrir le site de BlackBook Editions dans un nouvel onglet  '
+        );
+        window.open('https://www.black-book-editions.fr/catalogue.php?id=668', '_blank');
       },
     };
   }
   const externalLinks = new Dialog(dialData, dialOption);
   // ----logo image
-  const logo = document.getElementById("logo");
-  logo.style.position = "absolute";
-  logo.setAttribute("src", "/systems/torgeternity/images/vttLogo.webp");
+  const logo = document.getElementById('logo');
+  logo.style.position = 'absolute';
+  logo.setAttribute('src', '/systems/torgeternity/images/vttLogo.webp');
   // ----open links when click on logo
-  logo.title = "external links";
-  logo.addEventListener("click", function () {
+  logo.title = 'external links';
+  logo.addEventListener('click', function () {
     externalLinks.render(true);
   });
 
@@ -381,9 +390,14 @@ Hooks.on("ready", async function () {
 });
 
 // moved out of the setup hook, because it had no need to be in there
-Hooks.on("hotbarDrop", (bar, data, slot) => {
+Hooks.on('hotbarDrop', (bar, data, slot) => {
   // return true means we are not handling this event, false means we did handle it
-  if (data.type !== "Item" && data.type !== "skill" && data.type !== "interaction" && data.type !== "attribute")
+  if (
+    data.type !== 'Item' &&
+    data.type !== 'skill' &&
+    data.type !== 'interaction' &&
+    data.type !== 'attribute'
+  )
     return true;
 
   createTorgEternityMacro(data, slot);
@@ -394,72 +408,76 @@ Hooks.on("hotbarDrop", (bar, data, slot) => {
 /*  Hotbar Macros                               */
 /* -------------------------------------------- */
 
-Hooks.on("getMonarchHandComponents", (hand, components) => {
+Hooks.on('getMonarchHandComponents', (hand, components) => {
   components.markers.push({
-    tooltip: `${game.i18n.localize("torgeternity.poolToggle.inPool")}`,
-    class: "pool-marker",
-    icon: "fas fa-tags",
-    color: "#FFFFFF",
-    show: (card) => card.getFlag("torgeternity", "pooled"),
+    tooltip: `${game.i18n.localize('torgeternity.poolToggle.inPool')}`,
+    class: 'pool-marker',
+    icon: 'fas fa-tags',
+    color: '#FFFFFF',
+    show: (card) => card.getFlag('torgeternity', 'pooled'),
   });
   components.controls.push({
-    tooltip: `${game.i18n.localize("torgeternity.monarch.discard")}`,
-    class: "discard-button",
-    icon: "fas fa-inbox",
-    color: "#FFFFFF",
+    tooltip: `${game.i18n.localize('torgeternity.monarch.discard')}`,
+    class: 'discard-button',
+    icon: 'fas fa-inbox',
+    color: '#FFFFFF',
     onclick: (event, card) => {
-      card.setFlag("torgeternity", "pooled", false);
-      if (card.type == "destiny") {
-        card.pass(game.cards.get(game.settings.get("torgeternity", "deckSetting").destinyDiscard));
+      card.setFlag('torgeternity', 'pooled', false);
+      if (card.type == 'destiny') {
+        card.pass(game.cards.get(game.settings.get('torgeternity', 'deckSetting').destinyDiscard));
       } else {
-        card.pass(game.cards.get(game.settings.get("torgeternity", "deckSetting").cosmDiscard));
+        card.pass(game.cards.get(game.settings.get('torgeternity', 'deckSetting').cosmDiscard));
       }
       card.toMessage({
         content: `<div class="card-draw flexrow"><span class="card-chat-tooltip"><img class="card-face" src="${
           card.img
         }"/><span><img src="${card.img}"></span></span><span class="card-name">${game.i18n.localize(
-          "torgeternity.chatText.discardsCard"
+          'torgeternity.chatText.discardsCard'
         )} ${card.name}</span></div>`,
       });
     },
   });
   components.controls.push({
-    tooltip: `${game.i18n.localize("torgeternity.monarch.broadcast")}`,
-    class: "broadcast-button",
-    icon: "fas fa-broadcast-tower",
-    color: "#FFFFFF",
+    tooltip: `${game.i18n.localize('torgeternity.monarch.broadcast')}`,
+    class: 'broadcast-button',
+    icon: 'fas fa-broadcast-tower',
+    color: '#FFFFFF',
     onclick: (event, card) => {
-      const x = new ImagePopout(card.img, { title: card.name }).render(true, { width: 425, height: 650 });
+      const x = new ImagePopout(card.img, { title: card.name }).render(true, {
+        width: 425,
+        height: 650,
+      });
       x.shareImage();
     },
   });
   components.controls.push({
-    tooltip: `${game.i18n.localize("torgeternity.monarch.play")}`,
-    class: "play-button",
-    icon: "fas fa-play",
-    color: "#FFFFFF",
+    tooltip: `${game.i18n.localize('torgeternity.monarch.play')}`,
+    class: 'play-button',
+    icon: 'fas fa-play',
+    color: '#FFFFFF',
     onclick: (event, card) => {
-      card.setFlag("torgeternity", "pooled", false);
-      if (card.type == "destiny") {
-        card.pass(game.cards.get(game.settings.get("torgeternity", "deckSetting").destinyDiscard));
+      card.setFlag('torgeternity', 'pooled', false);
+      if (card.type == 'destiny') {
+        card.pass(game.cards.get(game.settings.get('torgeternity', 'deckSetting').destinyDiscard));
       } else {
-        card.pass(game.cards.get(game.settings.get("torgeternity", "deckSetting").cosmDiscard));
+        card.pass(game.cards.get(game.settings.get('torgeternity', 'deckSetting').cosmDiscard));
       }
       card.toMessage({
         content: `<div class="card-draw flexrow"><span class="card-chat-tooltip"><img class="card-face" src="${
           card.img
         }"/><span><img src="${card.img}"></span></span><span class="card-name">${game.i18n.localize(
-          "torgeternity.chatText.playsCard"
+          'torgeternity.chatText.playsCard'
         )} ${card.name}</span></div>`,
       });
     },
   });
   components.controls.push({
-    class: "pool-toggle",
-    tooltip: `${game.i18n.localize("torgeternity.poolToggle.toogle")}`,
-    icon: "fas fa-tags",
-    color: "#FFFFFF",
-    onclick: (event, card) => card.setFlag("torgeternity", "pooled", !card.getFlag("torgeternity", "pooled")),
+    class: 'pool-toggle',
+    tooltip: `${game.i18n.localize('torgeternity.poolToggle.toogle')}`,
+    icon: 'fas fa-tags',
+    color: '#FFFFFF',
+    onclick: (event, card) =>
+      card.setFlag('torgeternity', 'pooled', !card.getFlag('torgeternity', 'pooled')),
   });
 });
 
@@ -472,36 +490,44 @@ async function createTorgEternityMacro(data, slot) {
   let macroImg = null;
   let macroFlag = null;
 
-  if (data.type === "Item") {
+  if (data.type === 'Item') {
     command = `game.torgeternity.rollItemMacro("${objData.name}");`;
     macroName = objData.name;
     macroImg = objData.img;
-    macroFlag = "itemMacro";
+    macroFlag = 'itemMacro';
   } // attribute, skill, interaction
   else {
     const internalSkillName = objData.name;
     const internalAttributeName = objData.attribute;
     const isAttributeTest = internalSkillName === internalAttributeName;
-    const isInteractionAttack = data.type === "interaction";
+    const isInteractionAttack = data.type === 'interaction';
 
     command = `game.torgeternity.rollSkillMacro("${internalSkillName}", "${internalAttributeName}", ${isInteractionAttack});`;
 
-    const displaySkillName = isAttributeTest ? null : game.i18n.localize("torgeternity.skills." + internalSkillName);
-    const displayAttributeName = game.i18n.localize("torgeternity.attributes." + internalAttributeName);
+    const displaySkillName = isAttributeTest
+      ? null
+      : game.i18n.localize('torgeternity.skills.' + internalSkillName);
+    const displayAttributeName = game.i18n.localize(
+      'torgeternity.attributes.' + internalAttributeName
+    );
 
-    if (data.type === "skill") macroName = displaySkillName + "/" + displayAttributeName;
-    else if (data.type === "attribute") macroName = displayAttributeName;
-    else if (data.type === "interaction") macroName = displaySkillName;
-    macroFlag = "skillMacro";
+    if (data.type === 'skill') macroName = displaySkillName + '/' + displayAttributeName;
+    else if (data.type === 'attribute') macroName = displayAttributeName;
+    else if (data.type === 'interaction') macroName = displaySkillName;
+    macroFlag = 'skillMacro';
 
-    if (data.type === "attribute") {
+    if (data.type === 'attribute') {
       // this is an attribute test
       // use built-in foundry icons
-      if (internalAttributeName === "charisma") macroImg = "icons/skills/social/diplomacy-handshake.webp";
-      else if (internalAttributeName === "dexterity") macroImg = "icons/skills/movement/feet-winged-boots-brown.webp";
-      else if (internalAttributeName === "mind") macroImg = "icons/sundries/books/book-stack.webp";
-      else if (internalAttributeName === "spirit") macroImg = "icons/magic/life/heart-shadow-red.webp";
-      else if (internalAttributeName === "strength") macroImg = "icons/magic/control/buff-strength-muscle-damage.webp";
+      if (internalAttributeName === 'charisma')
+        macroImg = 'icons/skills/social/diplomacy-handshake.webp';
+      else if (internalAttributeName === 'dexterity')
+        macroImg = 'icons/skills/movement/feet-winged-boots-brown.webp';
+      else if (internalAttributeName === 'mind') macroImg = 'icons/sundries/books/book-stack.webp';
+      else if (internalAttributeName === 'spirit')
+        macroImg = 'icons/magic/life/heart-shadow-red.webp';
+      else if (internalAttributeName === 'strength')
+        macroImg = 'icons/magic/control/buff-strength-muscle-damage.webp';
     } else {
       // not attribute test
       // don't have skill icons yet
@@ -517,7 +543,7 @@ async function createTorgEternityMacro(data, slot) {
     if (!macroImg) {
       macro = await Macro.create({
         name: macroName,
-        type: "script",
+        type: 'script',
         command: command,
         ownership: { default: CONST.DOCUMENT_OWNERSHIP_LEVELS.OBSERVER },
         flags: {
@@ -529,7 +555,7 @@ async function createTorgEternityMacro(data, slot) {
     } else {
       macro = await Macro.create({
         name: macroName,
-        type: "script",
+        type: 'script',
         img: macroImg,
         command: command,
         ownership: { default: CONST.DOCUMENT_OWNERSHIP_LEVELS.OBSERVER },
@@ -558,23 +584,26 @@ function rollItemMacro(itemName) {
   if (speaker.token) actor = game.actors.tokens[speaker.token];
   if (!actor) actor = game.actors.get(speaker.actor);
   const item = actor ? actor.items.find((i) => i.name === itemName) : null;
-  if (!item) return ui.notifications.warn(game.i18n.localize("torgeternity.notifications.noItemNamed") + itemName);
+  if (!item)
+    return ui.notifications.warn(
+      game.i18n.localize('torgeternity.notifications.noItemNamed') + itemName
+    );
 
   // Trigger the item roll
   switch (item.type) {
-    case "customAttack":
-    case "meleeweapon":
-    case "missileweapon":
-    case "firearm":
-    case "energyweapon":
-    case "heavyweapon":
-    case "specialability-rollable":
+    case 'customAttack':
+    case 'meleeweapon':
+    case 'missileweapon':
+    case 'firearm':
+    case 'energyweapon':
+    case 'heavyweapon':
+    case 'specialability-rollable':
       {
         // The following is copied/pasted/adjusted from _onAttackRoll in TorgeternityActorSheet
         const weaponData = item.system;
         const attackWith = weaponData.attackWith;
         const skillData = actor.system.skills[weaponData.attackWith];
-        let dnDescriptor = "standard";
+        let dnDescriptor = 'standard';
         const damageType = weaponData.damageType;
         const weaponDamage = weaponData.damage;
         let adjustedDamage;
@@ -583,51 +612,54 @@ function rollItemMacro(itemName) {
 
         // Modify dnDecriptor if target exists
         if (Array.from(game.user.targets).length > 0) {
-          let firstTarget = Array.from(game.user.targets).find((t) => t.actor.type !== "vehicle")?.actor;
+          let firstTarget = Array.from(game.user.targets).find(
+            (t) => t.actor.type !== 'vehicle'
+          )?.actor;
           if (!firstTarget) firstTarget = Array.from(game.user.targets)[0].actor;
 
           switch (attackWith) {
-            case "meleeWeapons":
-            case "unarmedCombat":
-              firstTarget.items.filter((it) => it.type === "meleeweapon").filter((it) => it.system.equipped).length ===
-              0
-                ? (dnDescriptor = "targetUnarmedCombat")
-                : (dnDescriptor = "targetMeleeWeapons");
+            case 'meleeWeapons':
+            case 'unarmedCombat':
+              firstTarget.items
+                .filter((it) => it.type === 'meleeweapon')
+                .filter((it) => it.system.equipped).length === 0
+                ? (dnDescriptor = 'targetUnarmedCombat')
+                : (dnDescriptor = 'targetMeleeWeapons');
               break;
-            case "fireCombat":
-            case "energyWeapons":
-            case "heavyWeapons":
-            case "missileWeapons":
-              dnDescriptor = "targetDodge";
+            case 'fireCombat':
+            case 'energyWeapons':
+            case 'heavyWeapons':
+            case 'missileWeapons':
+              dnDescriptor = 'targetDodge';
               break;
             default:
-              dnDescriptor = "targetMeleeWeapons";
+              dnDescriptor = 'targetMeleeWeapons';
           }
-          if (firstTarget.type === "vehicle") {
-            dnDescriptor = "targetVehicleDefense";
+          if (firstTarget.type === 'vehicle') {
+            dnDescriptor = 'targetVehicleDefense';
           }
         } else {
-          dnDescriptor = "standard";
+          dnDescriptor = 'standard';
         }
 
         // Calculate damage caused by weapon
         switch (damageType) {
-          case "flat":
+          case 'flat':
             adjustedDamage = weaponDamage;
             break;
-          case "strengthPlus":
+          case 'strengthPlus':
             adjustedDamage = parseInt(attributes.strength) + parseInt(weaponDamage);
             break;
-          case "charismaPlus":
+          case 'charismaPlus':
             adjustedDamage = parseInt(attributes.charisma) + parseInt(weaponDamage);
             break;
-          case "dexterityPlus":
+          case 'dexterityPlus':
             adjustedDamage = parseInt(attributes.dexterity) + parseInt(weaponDamage);
             break;
-          case "mindPlus":
+          case 'mindPlus':
             adjustedDamage = parseInt(attributes.mind) + parseInt(weaponDamage);
             break;
-          case "spiritPlus":
+          case 'spiritPlus':
             adjustedDamage = parseInt(attributes.spirit) + parseInt(weaponDamage);
             break;
           default:
@@ -635,8 +667,8 @@ function rollItemMacro(itemName) {
         }
 
         const mTest = {
-          testType: "attack",
-          type: "attack",
+          testType: 'attack',
+          type: 'attack',
           actor: actor.uuid,
           actorType: actor.type,
           item: item,
@@ -670,33 +702,33 @@ function rollItemMacro(itemName) {
         new TestDialog(mTest);
       }
       break;
-    case "psionicpower":
-    case "miracle":
-    case "spell":
+    case 'psionicpower':
+    case 'miracle':
+    case 'spell':
       {
         const powerData = item.system;
         const skillName = powerData.skill;
         const skillData = actor.system.skills[skillName];
-        let dnDescriptor = "standard";
+        let dnDescriptor = 'standard';
         let isAttack = false;
         let applyArmor = true;
         let applySize = true;
         let powerModifier = 0;
 
         // Convert yes/no options from sheet into boolean values (or else renderSkillChat gets confused)
-        if (powerData.isAttack == "true") {
+        if (powerData.isAttack == 'true') {
           isAttack = true;
         } else {
           isAttack = false;
         }
 
-        if (powerData.applyArmor == "true") {
+        if (powerData.applyArmor == 'true') {
           applyArmor = true;
         } else {
           applyArmor = false;
         }
 
-        if (powerData.applySize == "true") {
+        if (powerData.applySize == 'true') {
           applySize = true;
         } else {
           applySize = false;
@@ -713,22 +745,22 @@ function rollItemMacro(itemName) {
         if (Array.from(game.user.targets).length > 0) {
           dnDescriptor = powerData.dn;
         } else {
-          dnDescriptor = "standard";
+          dnDescriptor = 'standard';
         }
 
         const test = {
-          testType: "power",
+          testType: 'power',
           actor: actor.uuid,
           actorPic: actor.img,
           actorName: actor.name,
           actorType: actor.type,
-          attackType: "power",
+          attackType: 'power',
           powerName: item.name,
           powerModifier: powerModifier,
           isAttack: isAttack,
           amountBD: 0,
           skillName: skillName,
-          skillBaseAttribute: game.i18n.localize("torgeternity.skills." + skillData.baseAttribute),
+          skillBaseAttribute: game.i18n.localize('torgeternity.skills.' + skillData.baseAttribute),
           skillAdds: skillData.adds,
           skillValue: skillData.value,
           unskilledUse: false,
@@ -737,12 +769,12 @@ function rollItemMacro(itemName) {
           applyArmor: applyArmor,
           darknessModifier: 0,
           DNDescriptor: dnDescriptor,
-          type: "power",
+          type: 'power',
           targets: Array.from(game.user.targets),
           applySize: applySize,
           attackOptions: true,
           rollTotal: 0,
-          chatNote: "",
+          chatNote: '',
         };
 
         new TestDialog(test);
@@ -795,8 +827,14 @@ function rollSkillMacro(skillName, attributeName, isInteractionAttack) {
   if (!isAttributeTest) {
     const skillNameKey = skillName; // .toLowerCase(); // skillName required to be internal value
     // would be nice to use display value as an input instead but we can't translate from i18n to internal values
-    skill = actor && Object.keys(actor.system.skills).includes(skillNameKey) ? actor.system.skills[skillNameKey] : null;
-    if (!skill) return ui.notifications.warn(game.i18n.localize("torgeternity.notifications.noSkillNamed") + skillName);
+    skill =
+      actor && Object.keys(actor.system.skills).includes(skillNameKey)
+        ? actor.system.skills[skillNameKey]
+        : null;
+    if (!skill)
+      return ui.notifications.warn(
+        game.i18n.localize('torgeternity.notifications.noSkillNamed') + skillName
+      );
   }
 
   const attributeNameKey = attributeName.toLowerCase();
@@ -804,15 +842,16 @@ function rollSkillMacro(skillName, attributeName, isInteractionAttack) {
     actor && Object.keys(actor.system.attributes).includes(attributeNameKey)
       ? actor.system.attributes[attributeNameKey]
       : null;
-  if (!attribute) return ui.notifications.warn(game.i18n.localize("torgeternity.notifications.noItemNamed"));
+  if (!attribute)
+    return ui.notifications.warn(game.i18n.localize('torgeternity.notifications.noItemNamed'));
   if (isAttributeTest) {
     // dummy skill object since there's no actual skill in this case
     skill = {
       baseAttribute: attributeNameKey,
       adds: 0,
       value: attribute,
-      isFav: actor.system.attributes[attributeNameKey + "IsFav"],
-      groupName: "other",
+      isFav: actor.system.attributes[attributeNameKey + 'IsFav'],
+      groupName: 'other',
       unskilledUse: 1,
     };
   }
@@ -822,9 +861,9 @@ function rollSkillMacro(skillName, attributeName, isInteractionAttack) {
   //    logic is needed for threats, who don't have adds.
   let skillValue = attribute;
   if (!isAttributeTest) {
-    if (actor.type === "stormknight") {
+    if (actor.type === 'stormknight') {
       skillValue += skill.adds;
-    } else if (actor.type == "threat") {
+    } else if (actor.type == 'threat') {
       const otherAttribute = actor.system.attributes[skill.baseAttribute];
       skillValue = Math.max(skill.value, otherAttribute);
     }
@@ -833,35 +872,35 @@ function rollSkillMacro(skillName, attributeName, isInteractionAttack) {
   // The following is copied/pasted/adjusted from _onSkillRoll and _onInteractionAttack in TorgeternityActorSheet
   // This code needs to be centrally located!!!
   const test = {
-    testType: isAttributeTest ? "attribute" : "skill",
+    testType: isAttributeTest ? 'attribute' : 'skill',
     actor: actor.uuid,
     actorPic: actor.img,
     actorName: actor.name,
     actorType: actor.type,
     skillName: isAttributeTest ? attributeName : skillName,
-    skillBaseAttribute: game.i18n.localize("torgeternity.attributes." + attributeName),
+    skillBaseAttribute: game.i18n.localize('torgeternity.attributes.' + attributeName),
     skillAdds: skill.adds,
     skillValue: skillValue,
     isAttack: false,
     isFav: skill.isFav,
     targets: Array.from(game.user.targets),
     applySize: false,
-    DNDescriptor: "standard",
+    DNDescriptor: 'standard',
     attackOptions: false,
     rollTotal: 0,
     unskilledUse: skill.unskilledUse,
-    chatNote: "",
+    chatNote: '',
     woundModifier: parseInt(-actor.system.wounds.value),
     stymiedModifier: parseInt(actor.system.stymiedModifier),
     darknessModifier: 0, // parseInt(actor.system.darknessModifier),
-    type: "skill",
+    type: 'skill',
     movementModifier: 0,
   };
   if (isInteractionAttack) {
-    test["type"] = "interactionAttack";
-    test["testType"] = "interactionAttack";
-    test["interactionAttackType"] = skillName;
-    test["darknessModifier"] = 0;
+    test['type'] = 'interactionAttack';
+    test['testType'] = 'interactionAttack';
+    test['interactionAttackType'] = skillName;
+    test['darknessModifier'] = 0;
     // Darkness seems like it would be hard to determine if it should apply to
     //    skill/attribute tests or not, maybe should be option in dialog?
 
@@ -869,23 +908,23 @@ function rollSkillMacro(skillName, attributeName, isInteractionAttack) {
     let dnDescriptor;
     if (Array.from(game.user.targets).length > 0) {
       switch (skillName) {
-        case "intimidation":
-          dnDescriptor = "targetIntimidation";
+        case 'intimidation':
+          dnDescriptor = 'targetIntimidation';
           break;
-        case "maneuver":
-          dnDescriptor = "targetManeuver";
+        case 'maneuver':
+          dnDescriptor = 'targetManeuver';
           break;
-        case "taunt":
-          dnDescriptor = "targetTaunt";
+        case 'taunt':
+          dnDescriptor = 'targetTaunt';
           break;
-        case "trick":
-          dnDescriptor = "targetTrick";
+        case 'trick':
+          dnDescriptor = 'targetTrick';
           break;
         default:
-          dnDescriptor = "standard";
+          dnDescriptor = 'standard';
       }
     } else {
-      dnDescriptor = "standard";
+      dnDescriptor = 'standard';
     }
     test.DNDescriptor = dnDescriptor;
     test.unskilledUse = true;
@@ -894,30 +933,30 @@ function rollSkillMacro(skillName, attributeName, isInteractionAttack) {
   new TestDialog(test);
 }
 
-Hooks.on("renderCombatTracker", (combatTracker) => {
+Hooks.on('renderCombatTracker', (combatTracker) => {
   const hands = game.cards;
   for (const hand of hands) {
     hand.apps[combatTracker.id] = combatTracker;
   }
 });
 
-Hooks.on("changeSidebarTab", (tabDirectory) => {
-  if (game.settings.get("torgeternity", "hideForeignCompendium") == true) {
-    hideCompendium(game.settings.get("core", "language"), tabDirectory);
+Hooks.on('changeSidebarTab', (tabDirectory) => {
+  if (game.settings.get('torgeternity', 'hideForeignCompendium') == true) {
+    hideCompendium(game.settings.get('core', 'language'), tabDirectory);
   }
 });
 
 // ----alphabetic sorting in character sheets
-Hooks.on("renderActorSheet", (app, html, data) => {
+Hooks.on('renderActorSheet', (app, html, data) => {
   // alphabetical sorting
   alphabSort(html, data);
 });
 
-Hooks.on("updateActor", (actor, change, options, userId) => {
+Hooks.on('updateActor', (actor, change, options, userId) => {
   // updating playerList with users character up-to-date data
   ui.players.render(true);
 
-  if (actor.type === "stormknight") {
+  if (actor.type === 'stormknight') {
     const hand = actor.getDefaultHand();
     // If there is no hand for that SK, and a GM is online, create one
     if (!hand && game.userId === game.users.find((u) => u.isGM && u.active).id) {
@@ -932,28 +971,31 @@ Hooks.on("updateActor", (actor, change, options, userId) => {
 });
 
 // link StormKnight Prototype Token to the actor
-Hooks.on("preCreateActor", (actor, data, options, userId) => {
-  if (data.type === "stormknight" && !data.hasOwnProperty("prototypeToken")) {
-    actor.updateSource({ "prototypeToken.actorLink": true });
+Hooks.on('preCreateActor', (actor, data, options, userId) => {
+  if (data.type === 'stormknight' && !data.hasOwnProperty('prototypeToken')) {
+    actor.updateSource({ 'prototypeToken.actorLink': true });
   }
-  if (data.type === "vehicle" && actor.img.includes("mystery-man")) {
+  if (data.type === 'vehicle' && actor.img.includes('mystery-man')) {
     actor.updateSource({
-      "prototypeToken.texture.src": "systems/torgeternity/images/icons/vehicle-Token.webp",
-      img: "systems/torgeternity/images/icons/vehicle.webp",
+      'prototypeToken.texture.src': 'systems/torgeternity/images/icons/vehicle-Token.webp',
+      img: 'systems/torgeternity/images/icons/vehicle.webp',
     });
   }
 });
 
 // by default creating a  hand for each stormknight
-Hooks.on("createActor", async (actor, options, userId) => {
+Hooks.on('createActor', async (actor, options, userId) => {
   // run by first active GM. Will be skipped if no GM is present, but that's the best we can do at the moment
-  if (actor.type === "stormknight" && game.userId === game.users.find((u) => u.isGM && u.active).id) {
+  if (
+    actor.type === 'stormknight' &&
+    game.userId === game.users.find((u) => u.isGM && u.active).id
+  ) {
     await actor.createDefaultHand();
   }
 });
 
 // un-pool cards of SK when the GM ends the combat encounter
-Hooks.on("deleteCombat", async (combat, dataUpdate) => {
+Hooks.on('deleteCombat', async (combat, dataUpdate) => {
   if (!game.user.isGM) return;
   const listCombatants = [];
   const listHandsReset = [];
@@ -961,7 +1003,7 @@ Hooks.on("deleteCombat", async (combat, dataUpdate) => {
   combat.combatants.forEach((fighter) => listCombatants.push(fighter.actorId));
   // listing of actors in the closing combat
   combat.combatants
-    .filter((sk) => sk.actor.type === "stormknight")
+    .filter((sk) => sk.actor.type === 'stormknight')
     .forEach((fighter) => listCombatants.push(fighter.actorId));
   // listing of hands' actors in closing combat
   listCombatants.forEach((i) => {
@@ -970,15 +1012,17 @@ Hooks.on("deleteCombat", async (combat, dataUpdate) => {
     }
   });
   // delete the flag that give the pooled condition in each card of each hand
-  listHandsReset.forEach((hand) => hand.cards.forEach((card) => card.unsetFlag("torgeternity", "pooled")));
+  listHandsReset.forEach((hand) =>
+    hand.cards.forEach((card) => card.unsetFlag('torgeternity', 'pooled'))
+  );
 });
 
-Hooks.on("deleteActor", async (actor, data1, data2) => {
+Hooks.on('deleteActor', async (actor, data1, data2) => {
   if (!game.user.isGM) return;
   actor.getDefaultHand().delete();
 });
 
-Hooks.on("renderChatLog", (app, html, data) => {
+Hooks.on('renderChatLog', (app, html, data) => {
   // ----chat messages listeners
   Chat.addChatListeners(html);
 });

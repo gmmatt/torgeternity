@@ -1,4 +1,4 @@
-import { GeneralItemData } from "./general";
+import { GeneralItemData } from './general';
 
 const fields = foundry.data.fields;
 /**
@@ -12,13 +12,13 @@ export class MeleeWeaponItemData extends GeneralItemData {
     return {
       ...super.defineSchema(),
       ap: new fields.NumberField({ initial: 0, integer: true }),
-      attackWith: new fields.StringField({ initial: "meleeWeapons" }),
+      attackWith: new fields.StringField({ initial: 'meleeWeapons' }),
       bonus: new fields.NumberField({ initial: 2, integer: true }),
-      chatNote: new fields.StringField({ initial: "" }),
+      chatNote: new fields.StringField({ initial: '' }),
       damage: new fields.NumberField({ initial: 0, integer: true }),
-      damageType: new fields.StringField({ initial: "" }),
+      damageType: new fields.StringField({ initial: '' }),
       equipped: new fields.BooleanField({ initial: false }),
-      notes: new fields.StringField({ initial: "" }),
+      notes: new fields.StringField({ initial: '' }),
     };
   }
 

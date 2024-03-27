@@ -8,12 +8,12 @@ export class EternityShardItemData extends foundry.abstract.TypeDataModel {
    */
   static defineSchema() {
     return {
-      cosm: new fields.StringField({ initial: "" }),
-      description: new fields.HtmlField({ initial: "" }),
+      cosm: new fields.StringField({ initial: '' }),
+      description: new fields.HtmlField({ initial: '' }),
       possibilities: new fields.NumberField({ initial: 3, integer: true }),
-      powers: new fields.StringField({ initial: "" }),
-      purpose: new fields.StringField({ initial: "" }),
-      restrictions: new fields.StringField({ initial: "" }),
+      powers: new fields.StringField({ initial: '' }),
+      purpose: new fields.StringField({ initial: '' }),
+      restrictions: new fields.StringField({ initial: '' }),
       tappingDifficulty: new fields.NumberField({ initial: 18, integer: true }),
     };
   }

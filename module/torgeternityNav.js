@@ -7,7 +7,7 @@ export default class TorgeternityNav extends SceneNavigation {
    */
   getData() {
     const context = super.getData();
-    context.lang = game.settings.get("core", "language");
+    context.lang = game.settings.get('core', 'language');
     context.scenes = context.scenes.map((s) => ({ ...s, flags: game.scenes.get(s.id).flags }));
     return context;
   }
@@ -15,6 +15,6 @@ export default class TorgeternityNav extends SceneNavigation {
    *
    */
   get template() {
-    return "systems/torgeternity/templates/scenes/nav.hbs";
+    return 'systems/torgeternity/templates/scenes/nav.hbs';
   }
 }

@@ -1,4 +1,4 @@
-import { GeneralItemData } from "./general";
+import { GeneralItemData } from './general';
 
 const fields = foundry.data.fields;
 /**
@@ -16,14 +16,14 @@ export class MissileWeaponItemData extends GeneralItemData {
         value: new fields.NumberField({ initial: 1, integer: true }),
       }),
       ap: new fields.NumberField({ initial: 0, integer: true }),
-      attackWith: new fields.StringField({ initial: "missileWeapons" }),
-      chatNote: new fields.StringField({ initial: "" }),
+      attackWith: new fields.StringField({ initial: 'missileWeapons' }),
+      chatNote: new fields.StringField({ initial: '' }),
       damage: new fields.NumberField({ initial: 0, integer: true }),
-      damageType: new fields.StringField({ initial: "" }),
+      damageType: new fields.StringField({ initial: '' }),
       equipped: new fields.BooleanField({ initial: false }),
-      minStrength: new fields.StringField({ initial: "" }),
-      notes: new fields.StringField({ initial: "" }),
-      range: new fields.StringField({ initial: "" }),
+      minStrength: new fields.StringField({ initial: '' }),
+      notes: new fields.StringField({ initial: '' }),
+      range: new fields.StringField({ initial: '' }),
     };
   }
 

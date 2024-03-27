@@ -9,8 +9,8 @@ export class GeneralItemData extends foundry.abstract.TypeDataModel {
    */
   static defineSchema() {
     return {
-      cosm: new fields.StringField({ initial: "" }),
-      description: new fields.HtmlField({ initial: "" }),
+      cosm: new fields.StringField({ initial: '' }),
+      description: new fields.HtmlField({ initial: '' }),
       price: new fields.NumberField({ initial: 0, integer: true }),
       techlevel: new fields.NumberField({ initial: 1, integer: true }),
       value: new fields.NumberField({ initial: 0, integer: true }),

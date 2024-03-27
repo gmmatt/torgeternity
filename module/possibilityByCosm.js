@@ -7,10 +7,10 @@ export class PossibilityByCosm extends Application {
    */
   static get defaultOptions() {
     return mergeObject(super.defaultOptions, {
-      template: "systems/torgeternity/templates/possibilityByCosm.hbs",
-      width: "auto",
-      height: "auto",
-      title: game.i18n.localize("torgeternity.sheetLabels.possibilityByCosm"),
+      template: 'systems/torgeternity/templates/possibilityByCosm.hbs',
+      width: 'auto',
+      height: 'auto',
+      title: game.i18n.localize('torgeternity.sheetLabels.possibilityByCosm'),
       resizeable: false,
     });
   }
@@ -21,7 +21,7 @@ export class PossibilityByCosm extends Application {
    */
   constructor(actor) {
     super();
-    this.actorPoss = actor.getFlag("torgeternity", "possibilityByCosm");
+    this.actorPoss = actor.getFlag('torgeternity', 'possibilityByCosm');
     this.actor = actor;
   }
 
@@ -40,7 +40,7 @@ export class PossibilityByCosm extends Application {
     // return mergeObject(await super.getData(), this.parameters)
     const data = super.getData();
     data.actor = this.actor;
-    data.actorPoss = this.actor.getFlag("torgeternity", "possibilityByCosm");
+    data.actorPoss = this.actor.getFlag('torgeternity', 'possibilityByCosm');
     return data;
   }
 
@@ -50,9 +50,9 @@ export class PossibilityByCosm extends Application {
    */
   activateListeners(html) {
     super.activateListeners(html);
-    html.find(".save-button").click(this.onSave.bind(this));
-    html.find(".inputField").change(this.modifyPoss.bind(this));
-    html.find(".content-link").click(this.testActiveModule.bind(this));
+    html.find('.save-button').click(this.onSave.bind(this));
+    html.find('.inputField').change(this.modifyPoss.bind(this));
+    html.find('.content-link').click(this.testActiveModule.bind(this));
   }
 
   /**
@@ -63,7 +63,8 @@ export class PossibilityByCosm extends Application {
     const compendiumLink = event.target.dataset.uuid;
     try {
       const tes = await fromUuidSync(compendiumLink);
-      if (!tes) ui.notifications.warn(game.i18n.localize("torgeternity.notifications.moduleNotActive"));
+      if (!tes)
+        ui.notifications.warn(game.i18n.localize('torgeternity.notifications.moduleNotActive'));
     } catch {
       (err) => {
         return;
@@ -76,15 +77,15 @@ export class PossibilityByCosm extends Application {
    * @param event
    */
   async modifyPoss(event) {
-    const ayslePoss = parseInt(document.getElementById("ayslePoss").value);
-    const cyberpapacyPoss = parseInt(document.getElementById("cyberpapacyPoss").value);
-    const coreEarthPoss = parseInt(document.getElementById("coreEarthPoss").value);
-    const livingLandPoss = parseInt(document.getElementById("livingLandPoss").value);
-    const nileEmpirePoss = parseInt(document.getElementById("nileEmpirePoss").value);
-    const orrorshPoss = parseInt(document.getElementById("orrorshPoss").value);
-    const panPacificaPoss = parseInt(document.getElementById("panPacificaPoss").value);
-    const tharkoldPoss = parseInt(document.getElementById("tharkoldPoss").value);
-    const otherPoss = parseInt(document.getElementById("otherPoss").value);
+    const ayslePoss = parseInt(document.getElementById('ayslePoss').value);
+    const cyberpapacyPoss = parseInt(document.getElementById('cyberpapacyPoss').value);
+    const coreEarthPoss = parseInt(document.getElementById('coreEarthPoss').value);
+    const livingLandPoss = parseInt(document.getElementById('livingLandPoss').value);
+    const nileEmpirePoss = parseInt(document.getElementById('nileEmpirePoss').value);
+    const orrorshPoss = parseInt(document.getElementById('orrorshPoss').value);
+    const panPacificaPoss = parseInt(document.getElementById('panPacificaPoss').value);
+    const tharkoldPoss = parseInt(document.getElementById('tharkoldPoss').value);
+    const otherPoss = parseInt(document.getElementById('otherPoss').value);
     const acto = this.actor;
     const possibilityByCosm = {
       ayslePoss: ayslePoss,
@@ -97,7 +98,7 @@ export class PossibilityByCosm extends Application {
       tharkoldPoss: tharkoldPoss,
       otherPoss: otherPoss,
     };
-    await acto.setFlag("torgeternity", "possibilityByCosm", possibilityByCosm);
+    await acto.setFlag('torgeternity', 'possibilityByCosm', possibilityByCosm);
     await acto.update({ system: { other: { possibilities: coreEarthPoss } } });
     await this._render();
   }
@@ -107,15 +108,15 @@ export class PossibilityByCosm extends Application {
    * @param event
    */
   async onSave(event) {
-    const ayslePoss = parseInt(document.getElementById("ayslePoss").value);
-    const cyberpapacyPoss = parseInt(document.getElementById("cyberpapacyPoss").value);
-    const coreEarthPoss = parseInt(document.getElementById("coreEarthPoss").value);
-    const livingLandPoss = parseInt(document.getElementById("livingLandPoss").value);
-    const nileEmpirePoss = parseInt(document.getElementById("nileEmpirePoss").value);
-    const orrorshPoss = parseInt(document.getElementById("orrorshPoss").value);
-    const panPacificaPoss = parseInt(document.getElementById("panPacificaPoss").value);
-    const tharkoldPoss = parseInt(document.getElementById("tharkoldPoss").value);
-    const otherPoss = parseInt(document.getElementById("otherPoss").value);
+    const ayslePoss = parseInt(document.getElementById('ayslePoss').value);
+    const cyberpapacyPoss = parseInt(document.getElementById('cyberpapacyPoss').value);
+    const coreEarthPoss = parseInt(document.getElementById('coreEarthPoss').value);
+    const livingLandPoss = parseInt(document.getElementById('livingLandPoss').value);
+    const nileEmpirePoss = parseInt(document.getElementById('nileEmpirePoss').value);
+    const orrorshPoss = parseInt(document.getElementById('orrorshPoss').value);
+    const panPacificaPoss = parseInt(document.getElementById('panPacificaPoss').value);
+    const tharkoldPoss = parseInt(document.getElementById('tharkoldPoss').value);
+    const otherPoss = parseInt(document.getElementById('otherPoss').value);
     const acto = this.actor;
     const possibilityByCosm = {
       ayslePoss: ayslePoss,
@@ -128,7 +129,7 @@ export class PossibilityByCosm extends Application {
       tharkoldPoss: tharkoldPoss,
       otherPoss: otherPoss,
     };
-    await acto.setFlag("torgeternity", "possibilityByCosm", possibilityByCosm);
+    await acto.setFlag('torgeternity', 'possibilityByCosm', possibilityByCosm);
     await acto.update({ system: { other: { possibilities: coreEarthPoss } } });
     this.close();
   }

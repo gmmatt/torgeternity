@@ -8,10 +8,10 @@ export class CustomSkillItemData extends foundry.abstract.TypeDataModel {
    */
   static defineSchema() {
     return {
-      adds: new fields.StringField({ initial: "1" }),
-      baseAttribute: new fields.StringField({ initial: "strength" }),
-      description: new fields.HtmlField({ initial: "" }),
-      isFav: new fields.StringField({ initial: "" }),
+      adds: new fields.StringField({ initial: '1' }),
+      baseAttribute: new fields.StringField({ initial: 'strength' }),
+      description: new fields.HtmlField({ initial: '' }),
+      isFav: new fields.StringField({ initial: '' }),
     };
   }
 

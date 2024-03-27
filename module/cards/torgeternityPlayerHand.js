@@ -8,15 +8,15 @@ export default class torgeternityPlayerHand extends CardsHand {
   static get defaultOptions() {
     let windowTop;
     let windowLeft;
-    if (game.settings.get("torgeternity", "playerHandBottom") === true) {
+    if (game.settings.get('torgeternity', 'playerHandBottom') === true) {
       windowTop = parseInt(canvas.screenDimensions[1] - 350);
       windowLeft = parseInt(canvas.screenDimensions[0] - 1250);
     } else {
       windowTop = 150;
-      windowLeft = "";
+      windowLeft = '';
     }
     return foundry.utils.mergeObject(super.defaultOptions, {
-      classes: ["torgeternity", "sheet", "cardsHand", "cards-config"],
+      classes: ['torgeternity', 'sheet', 'cardsHand', 'cards-config'],
       width: 800,
       top: windowTop,
       left: windowLeft,
@@ -29,10 +29,10 @@ export default class torgeternityPlayerHand extends CardsHand {
    */
   get template() {
     let path;
-    if (this.object.getFlag("torgeternity", "lifelike")) {
-      path = "systems/torgeternity/templates/cards/torgeternityPlayerHand_lifelike.hbs";
+    if (this.object.getFlag('torgeternity', 'lifelike')) {
+      path = 'systems/torgeternity/templates/cards/torgeternityPlayerHand_lifelike.hbs';
     } else {
-      path = "systems/torgeternity/templates/cards/torgeternityPlayerHand.hbs";
+      path = 'systems/torgeternity/templates/cards/torgeternityPlayerHand.hbs';
     }
     return path;
   }
@@ -42,11 +42,11 @@ export default class torgeternityPlayerHand extends CardsHand {
    * @param html
    */
   async activateListeners(html) {
-    if (this.object.getFlag("torgeternity", "lifelike")) {
+    if (this.object.getFlag('torgeternity', 'lifelike')) {
       this.rotateCards(html);
-      html.find(".card img").click(this.focusCard.bind(this));
+      html.find('.card img').click(this.focusCard.bind(this));
     }
-    html.find("#lifelike").click(this.submit.bind(this));
+    html.find('#lifelike').click(this.submit.bind(this));
     super.activateListeners(html);
   }
 
@@ -57,101 +57,120 @@ export default class torgeternityPlayerHand extends CardsHand {
   async _onCardControl(event) {
     // Shamelessly stolen from core software
     const button = event.currentTarget;
-    const li = button.closest(".card");
+    const li = button.closest('.card');
     const card = li ? this.object.cards.get(li.dataset.cardId) : null;
-    const cls = getDocumentClass("Card");
+    const cls = getDocumentClass('Card');
 
     // Save any pending change to the form
     await this._onSubmit(event, { preventClose: true, preventRender: true });
 
     // Handle the control action
     switch (button.dataset.action) {
-      case "play":
-        await card.setFlag("torgeternity", "pooled", false);
-        if (card.type == "destiny") {
-          await card.pass(game.cards.get(game.settings.get("torgeternity", "deckSetting").destinyDiscard));
+      case 'play':
+        await card.setFlag('torgeternity', 'pooled', false);
+        if (card.type == 'destiny') {
+          await card.pass(
+            game.cards.get(game.settings.get('torgeternity', 'deckSetting').destinyDiscard)
+          );
         } else {
-          await card.pass(game.cards.get(game.settings.get("torgeternity", "deckSetting").cosmDiscard));
+          await card.pass(
+            game.cards.get(game.settings.get('torgeternity', 'deckSetting').cosmDiscard)
+          );
         }
         card.toMessage({
           content: `<div class="card-draw flexrow"><span class="card-chat-tooltip"><img class="card-face" src="${
             card.img
-          }"/><span><img src="${card.img}"></span></span><span class="card-name">${game.i18n.localize(
-            "torgeternity.chatText.playsCard"
+          }"/><span><img src="${
+            card.img
+          }"></span></span><span class="card-name">${game.i18n.localize(
+            'torgeternity.chatText.playsCard'
           )} ${card.name}</span>
             </div>`,
         });
         // await game.combats.apps[0].viewed.resetAll();
         return;
-      case "view":
+      case 'view':
         new ImagePopout(card.img, { title: card.name }).render(true, { width: 425, height: 650 });
         return;
-      case "display":
-        const x = new ImagePopout(card.img, { title: card.name }).render(true, { width: 425, height: 650 });
+      case 'display':
+        const x = new ImagePopout(card.img, { title: card.name }).render(true, {
+          width: 425,
+          height: 650,
+        });
         x.shareImage();
         return;
-      case "discard":
-        await card.setFlag("torgeternity", "pooled", false);
-        if (card.type == "destiny") {
-          await card.pass(game.cards.get(game.settings.get("torgeternity", "deckSetting").destinyDiscard));
+      case 'discard':
+        await card.setFlag('torgeternity', 'pooled', false);
+        if (card.type == 'destiny') {
+          await card.pass(
+            game.cards.get(game.settings.get('torgeternity', 'deckSetting').destinyDiscard)
+          );
         } else {
-          await card.pass(game.cards.get(game.settings.get("torgeternity", "deckSetting").cosmDiscard));
+          await card.pass(
+            game.cards.get(game.settings.get('torgeternity', 'deckSetting').cosmDiscard)
+          );
         }
         card.toMessage({
           content: `<div class="card-draw flexrow"><span class="card-chat-tooltip"><img class="card-face" src="${
             card.img
-          }"/><span><img src="${card.img}"></span></span><span class="card-name">${game.i18n.localize(
-            "torgeternity.chatText.discardsCard"
+          }"/><span><img src="${
+            card.img
+          }"></span></span><span class="card-name">${game.i18n.localize(
+            'torgeternity.chatText.discardsCard'
           )} ${card.name}</span>
               </div>`,
         });
         // await game.combats.apps[0].viewed.resetAll();
         return;
-      case "drawDestiny":
-        const destinyDeck = game.cards.get(game.settings.get("torgeternity", "deckSetting").destinyDeck);
+      case 'drawDestiny':
+        const destinyDeck = game.cards.get(
+          game.settings.get('torgeternity', 'deckSetting').destinyDeck
+        );
         if (destinyDeck.cards.size) {
           const [firstCardKey] = destinyDeck.cards.keys(); // need to grab a card to get toMessage access
           const card = destinyDeck.cards.get(firstCardKey);
           card.toMessage({
             content: `<div class="card-draw flexrow"><span class="card-chat-tooltip"><img class="card-face" src="${
               destinyDeck.img
-            }"/><span><img src="${destinyDeck.img}"></span></span><h4 class="card-name">${game.i18n.localize(
-              "torgeternity.chatText.drawsCard"
+            }"/><span><img src="${
+              destinyDeck.img
+            }"></span></span><h4 class="card-name">${game.i18n.localize(
+              'torgeternity.chatText.drawsCard'
             )} ${destinyDeck.name}.</h4></div>`,
           });
         }
         return this.object.draw(destinyDeck, 1, { face: 1 });
-      case "drawCosm":
+      case 'drawCosm':
         this.drawCosmDialog();
         return;
-      case "pass":
+      case 'pass':
         await this.playerPassDialog(card);
         // await game.combats.apps[0].viewed.resetAll();
         return;
-      case "create":
+      case 'create':
         return cls.createDialog({}, { parent: this.object, pack: this.object.pack });
-      case "edit":
+      case 'edit':
         return card.sheet.render(true);
-      case "delete":
+      case 'delete':
         return card.deleteDialog();
-      case "deal":
+      case 'deal':
         return this.object.dealDialog();
-      case "draw":
+      case 'draw':
         return this.object.drawDialog();
-      case "pass":
+      case 'pass':
         return this.object.passDialog();
-      case "reset":
+      case 'reset':
         this._sortStandard = true;
         return this.object.recall();
-      case "shuffle":
+      case 'shuffle':
         this._sortStandard = false;
         return this.object.shuffle();
-      case "toggleSort":
+      case 'toggleSort':
         this._sortStandard = !this._sortStandard;
         return this.render();
-      case "nextFace":
+      case 'nextFace':
         return card.update({ face: card.face === null ? 0 : card.face + 1 });
-      case "prevFace":
+      case 'prevFace':
         return card.update({ face: card.face === 0 ? null : card.face - 1 });
     }
   }
@@ -162,7 +181,7 @@ export default class torgeternityPlayerHand extends CardsHand {
    */
   async _onChangeInput(event) {
     const input = event.currentTarget;
-    const li = input.closest(".card");
+    const li = input.closest('.card');
     const card = li ? this.object.cards.get(li.dataset.cardId) : null;
 
     // Save any pending change
@@ -170,12 +189,12 @@ export default class torgeternityPlayerHand extends CardsHand {
 
     // Handle the control action
     switch (input.dataset.action) {
-      case "poolToggle":
-        if (card.getFlag("torgeternity", "pooled") === true) {
-          await card.setFlag("torgeternity", "pooled", false);
+      case 'poolToggle':
+        if (card.getFlag('torgeternity', 'pooled') === true) {
+          await card.setFlag('torgeternity', 'pooled', false);
           // await game.combats.apps[0].viewed.resetAll();
         } else {
-          await card.setFlag("torgeternity", "pooled", true);
+          await card.setFlag('torgeternity', 'pooled', true);
           // await game.combats.apps[0].viewed.resetAll();
         }
         /* if (input.checked === true) {
@@ -198,25 +217,31 @@ export default class torgeternityPlayerHand extends CardsHand {
     activePlayers.forEach((h) => activeHand.push(h.character.getDefaultHand()));
     let cards;
     if (game.user.isGM) {
-      cards = game.cards.filter((c) => c !== this && c.type !== "deck" && c.testUserPermission(game.user, "LIMITED"));
+      cards = game.cards.filter(
+        (c) => c !== this && c.type !== 'deck' && c.testUserPermission(game.user, 'LIMITED')
+      );
     } else {
-      cards = activeHand.filter((c) => c.type !== "deck" && c.testUserPermission(game.user, "LIMITED"));
+      cards = activeHand.filter(
+        (c) => c.type !== 'deck' && c.testUserPermission(game.user, 'LIMITED')
+      );
     }
     if (!cards.length)
-      return ui.notifications.warn(game.i18n.localize("torgeternity.notifications.noHands"), { localize: true });
+      return ui.notifications.warn(game.i18n.localize('torgeternity.notifications.noHands'), {
+        localize: true,
+      });
 
     // Construct the dialog HTML
-    const html = await renderTemplate("systems/torgeternity/templates/cards/playerPassDialog.hbs", {
+    const html = await renderTemplate('systems/torgeternity/templates/cards/playerPassDialog.hbs', {
       cards: cards,
     });
 
     // Display the prompt
     return Dialog.prompt({
-      title: game.i18n.localize("torgeternity.dialogPrompts.playerPassTitle"),
-      label: game.i18n.localize("torgeternity.dialogPrompts.playerPassLabel"),
+      title: game.i18n.localize('torgeternity.dialogPrompts.playerPassTitle'),
+      label: game.i18n.localize('torgeternity.dialogPrompts.playerPassLabel'),
       content: html,
       callback: (html) => {
-        const form = html.querySelector("form.cards-dialog");
+        const form = html.querySelector('form.cards-dialog');
         const fd = new FormDataExtended(form).object;
         const to = game.cards.get(fd.to);
         const toName = to.name;
@@ -224,8 +249,10 @@ export default class torgeternityPlayerHand extends CardsHand {
           content: `<div class="card-draw flexrow"><span class="card-chat-tooltip"><img class="card-face" src="${
             card.img
           }"/><span><img src="${card.img}"></span></span><h4 class="card-name">${game.i18n.localize(
-            "torgeternity.chatText.passesCard1"
-          )} ${card.name} ${game.i18n.localize("torgeternity.chatText.passesCard2")} ${toName}.</h4></div>`,
+            'torgeternity.chatText.passesCard1'
+          )} ${card.name} ${game.i18n.localize(
+            'torgeternity.chatText.passesCard2'
+          )} ${toName}.</h4></div>`,
         });
         return card.pass(to).catch((err) => {
           ui.notifications.error(err.message);
@@ -241,15 +268,18 @@ export default class torgeternityPlayerHand extends CardsHand {
    */
   async drawCosmDialog() {
     const data = {};
-    data.decks = game.settings.get("torgeternity", "deckSetting");
-    const html = await renderTemplate("systems/torgeternity/templates/cards/drawCosmDialog.hbs", data);
+    data.decks = game.settings.get('torgeternity', 'deckSetting');
+    const html = await renderTemplate(
+      'systems/torgeternity/templates/cards/drawCosmDialog.hbs',
+      data
+    );
 
     return Dialog.prompt({
-      title: game.i18n.localize("torgeternity.dialogPrompts.cosmDialogTitle"),
-      label: game.i18n.localize("torgeternity.dialogPrompts.cosmDeckDialogLabel"),
+      title: game.i18n.localize('torgeternity.dialogPrompts.cosmDialogTitle'),
+      label: game.i18n.localize('torgeternity.dialogPrompts.cosmDeckDialogLabel'),
       content: html,
       callback: (html) => {
-        const form = html[0].querySelector("form.cosm-dialog");
+        const form = html[0].querySelector('form.cosm-dialog');
         const fd = new FormDataExtended(form).object;
         const cosmDeck = game.cards.get(fd.from);
         if (cosmDeck.cards.size) {
@@ -258,8 +288,10 @@ export default class torgeternityPlayerHand extends CardsHand {
           card.toMessage({
             content: `<div class="card-draw flexrow"><span class="card-chat-tooltip"><img class="card-face" src="${
               cosmDeck.img
-            }"/><span><img src="${cosmDeck.img}"></span></span><h4 class="card-name">${game.i18n.localize(
-              "torgeternity.chatText.drawsCard"
+            }"/><span><img src="${
+              cosmDeck.img
+            }"></span></span><h4 class="card-name">${game.i18n.localize(
+              'torgeternity.chatText.drawsCard'
             )} ${cosmDeck.name}.</h4></div>`,
           });
         }
@@ -275,7 +307,7 @@ export default class torgeternityPlayerHand extends CardsHand {
    * @param html
    */
   rotateCards(html) {
-    const cardsAreas = html.find(".cards");
+    const cardsAreas = html.find('.cards');
     for (const area of cardsAreas) {
       for (let i = 0; i < area.children.length; i++) {
         const card = area.children[i];
@@ -291,18 +323,20 @@ export default class torgeternityPlayerHand extends CardsHand {
    * @param ev
    */
   focusCard(ev) {
-    const card = ev.currentTarget.closest("li.card");
-    card.classList.toggle("focusedCard");
-    if (card.classList.contains("focusedCard")) {
-      card.setAttribute("data-rot", card.style.transform);
-      const correction = parseInt(card.parentElement.style.transform.replace("rotateZ(", "").replace(")deg", "")) * -1;
-      if (game.settings.get("torgeternity", "playerHandBottom") === true) {
+    const card = ev.currentTarget.closest('li.card');
+    card.classList.toggle('focusedCard');
+    if (card.classList.contains('focusedCard')) {
+      card.setAttribute('data-rot', card.style.transform);
+      const correction =
+        parseInt(card.parentElement.style.transform.replace('rotateZ(', '').replace(')deg', '')) *
+        -1;
+      if (game.settings.get('torgeternity', 'playerHandBottom') === true) {
         card.style.transform = `rotateZ(${correction}deg) translateY(-700px)`;
       } else {
         card.style.transform = `rotateZ(${correction}deg)`;
       }
     } else {
-      card.style.transform = card.getAttribute("data-rot");
+      card.style.transform = card.getAttribute('data-rot');
     }
   }
 

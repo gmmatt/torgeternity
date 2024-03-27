@@ -1,4 +1,4 @@
-import { PowerItemData } from "./power";
+import { PowerItemData } from './power';
 
 /**
  * @inheritdoc

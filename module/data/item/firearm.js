@@ -1,4 +1,4 @@
-import { GeneralItemData } from "./general";
+import { GeneralItemData } from './general';
 
 const fields = foundry.data.fields;
 /**
@@ -16,13 +16,13 @@ export class FirearmItemData extends GeneralItemData {
         value: new fields.NumberField({ initial: 1, integer: true }),
       }),
       ap: new fields.NumberField({ initial: 0, integer: true }),
-      attackWith: new fields.StringField({ initial: "fireCombat" }),
-      chatNote: new fields.StringField({ initial: "" }),
+      attackWith: new fields.StringField({ initial: 'fireCombat' }),
+      chatNote: new fields.StringField({ initial: '' }),
       damage: new fields.NumberField({ initial: 0, integer: true }),
-      damageType: new fields.StringField({ initial: "" }),
+      damageType: new fields.StringField({ initial: '' }),
       equipped: new fields.BooleanField({ initial: false }),
-      notes: new fields.StringField({ initial: "" }),
-      range: new fields.StringField({ initial: "" }),
+      notes: new fields.StringField({ initial: '' }),
+      range: new fields.StringField({ initial: '' }),
     };
   }
 

@@ -1,4 +1,4 @@
-import { GeneralItemData } from "./general";
+import { GeneralItemData } from './general';
 
 /**
  * @inheritdoc

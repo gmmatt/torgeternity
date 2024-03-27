@@ -1,4 +1,4 @@
-import { GeneralItemData } from "./general";
+import { GeneralItemData } from './general';
 
 const fields = foundry.data.fields;
 /**
@@ -13,8 +13,8 @@ export class ShieldItemData extends GeneralItemData {
       ...super.defineSchema(),
       bonus: new fields.NumberField({ initial: 1, integer: true }),
       equipped: new fields.BooleanField({ initial: false }),
-      minStrength: new fields.StringField({ initial: "" }),
-      notes: new fields.StringField({ initial: "" }),
+      minStrength: new fields.StringField({ initial: '' }),
+      notes: new fields.StringField({ initial: '' }),
     };
   }
 

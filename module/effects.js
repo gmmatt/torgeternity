@@ -6,24 +6,24 @@
 export function onManageActiveEffect(event, owner) {
   event.preventDefault();
   const a = event.currentTarget;
-  const li = a.closest("li");
+  const li = a.closest('li');
   const effect = li.dataset.effectId ? owner.effects.get(li.dataset.effectId) : null;
   switch (a.dataset.action) {
-    case "create":
-      return owner.createEmbeddedDocuments("ActiveEffect", [
+    case 'create':
+      return owner.createEmbeddedDocuments('ActiveEffect', [
         {
-          label: "New Effect",
-          icon: "icons/svg/aura.svg",
+          label: 'New Effect',
+          icon: 'icons/svg/aura.svg',
           origin: owner.uuid,
-          "duration.rounds": li.dataset.effectType === "temporary" ? 1 : undefined,
-          disabled: li.dataset.effectType === "inactive",
+          'duration.rounds': li.dataset.effectType === 'temporary' ? 1 : undefined,
+          disabled: li.dataset.effectType === 'inactive',
         },
       ]);
-    case "edit":
+    case 'edit':
       return effect.sheet.render(true);
-    case "delete":
+    case 'delete':
       return effect.delete();
-    case "toggle":
+    case 'toggle':
       return effect.update({ disabled: !effect.disabled });
   }
 }
@@ -36,18 +36,18 @@ export function prepareActiveEffectCategories(effects) {
   // Define effect header categories
   const categories = {
     temporary: {
-      type: "temporary",
-      label: `${game.i18n.localize("torgeternity.sheetLabels.tempEffects")}`,
+      type: 'temporary',
+      label: `${game.i18n.localize('torgeternity.sheetLabels.tempEffects')}`,
       effects: [],
     },
     passive: {
-      type: "passive",
-      label: `${game.i18n.localize("torgeternity.sheetLabels.passiveEffects")}`,
+      type: 'passive',
+      label: `${game.i18n.localize('torgeternity.sheetLabels.passiveEffects')}`,
       effects: [],
     },
     inactive: {
-      type: "inactive",
-      label: `${game.i18n.localize("torgeternity.sheetLabels.inactiveEffects")}`,
+      type: 'inactive',
+      label: `${game.i18n.localize('torgeternity.sheetLabels.inactiveEffects')}`,
 
       effects: [],
     },

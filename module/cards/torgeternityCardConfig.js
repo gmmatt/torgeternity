@@ -5,10 +5,10 @@ export default class torgeternityCardConfig extends CardConfig {
   /** @inheritdoc */
   static get defaultOptions() {
     return foundry.utils.mergeObject(super.defaultOptions, {
-      classes: ["torgeternity", "sheet", "card-config"],
+      classes: ['torgeternity', 'sheet', 'card-config'],
       width: 480,
-      height: "auto",
-      tabs: [{ navSelector: ".tabs", contentSelector: "form", initial: "details" }],
+      height: 'auto',
+      tabs: [{ navSelector: '.tabs', contentSelector: 'form', initial: 'details' }],
       sheetConfig: true,
     });
   }
@@ -27,7 +27,7 @@ export default class torgeternityCardConfig extends CardConfig {
   /** @inheritdoc */
   activateListeners(html) {
     super.activateListeners(html);
-    html.find(".face-control").click(this._onFaceControl.bind(this));
+    html.find('.face-control').click(this._onFaceControl.bind(this));
   }
 
   /* -------------------------------------------- */
@@ -41,12 +41,12 @@ export default class torgeternityCardConfig extends CardConfig {
 
   /** @inheritdoc */
   get template() {
-    if (this.object.type === "destiny") {
-      return "systems/torgeternity/templates/cards/torgeternityDestiny.hbs";
-    } else if (this.object.type === "cosm") {
-      return "systems/torgeternity/templates/cards/torgeternityCosm.hbs";
+    if (this.object.type === 'destiny') {
+      return 'systems/torgeternity/templates/cards/torgeternityDestiny.hbs';
+    } else if (this.object.type === 'cosm') {
+      return 'systems/torgeternity/templates/cards/torgeternityCosm.hbs';
     } else {
-      return "systems/torgeternity/templates/cards/torgeternityDrama.hbs";
+      return 'systems/torgeternity/templates/cards/torgeternityDrama.hbs';
     }
   }
 
@@ -56,7 +56,7 @@ export default class torgeternityCardConfig extends CardConfig {
    */
   async _onFaceControl(event) {
     const button = event.currentTarget;
-    const face = button.closest(".face");
+    const face = button.closest('.face');
     let faces = [];
 
     // Save any pending change to the form
@@ -64,13 +64,15 @@ export default class torgeternityCardConfig extends CardConfig {
 
     // Handle the control action
     switch (button.dataset.action) {
-      case "addFace":
+      case 'addFace':
         faces = this.object.data.faces.map((f) => f.object).concat([{}]);
         return this.object.update({ faces });
-      case "deleteFace":
+      case 'deleteFace':
         return Dialog.confirm({
-          title: game.i18n.localize("CARD.FaceDelete"),
-          content: `<h4>${game.i18n.localize("AreYouSure")}</h4><p>${game.i18n.localize("CARD.FaceDeleteWarning")}</p>`,
+          title: game.i18n.localize('CARD.FaceDelete'),
+          content: `<h4>${game.i18n.localize('AreYouSure')}</h4><p>${game.i18n.localize(
+            'CARD.FaceDeleteWarning'
+          )}</p>`,
           yes: () => {
             const i = Number(face.dataset.face);
             faces = foundry.utils.deepClone(this.object.data.faces);

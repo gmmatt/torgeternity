@@ -3,7 +3,7 @@
  * renders the chatMessage from data every time the HTML is rendered
  */
 class ChatMessageTorg extends ChatMessage {
-  template = "";
+  template = '';
 
   async getHTML() {
     const $html = await super.getHTML();
@@ -12,7 +12,7 @@ class ChatMessageTorg extends ChatMessage {
       const template = this.flags.template;
       const templateData = this.flags?.torgeternity?.test ?? this.flags.data;
       const renderedTemplate = await renderTemplate(template, templateData);
-      html.querySelector(".message-content").innerHTML = renderedTemplate;
+      html.querySelector('.message-content').innerHTML = renderedTemplate;
     }
     return $html;
   }

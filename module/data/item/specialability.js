@@ -9,7 +9,7 @@ export class SpecialAbilityItemData extends foundry.abstract.TypeDataModel {
    */
   static defineSchema() {
     return {
-      description: new fields.HtmlField({ initial: "" }),
+      description: new fields.HtmlField({ initial: '' }),
     };
   }
 

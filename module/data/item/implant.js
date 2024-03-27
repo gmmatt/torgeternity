@@ -1,4 +1,4 @@
-import { GeneralItemData } from "./general";
+import { GeneralItemData } from './general';
 
 const fields = foundry.data.fields;
 /**
@@ -11,7 +11,7 @@ export class ImplantItemData extends GeneralItemData {
   static defineSchema() {
     return {
       ...super.defineSchema(),
-      notes: new fields.StringField({ initial: "" }),
+      notes: new fields.StringField({ initial: '' }),
     };
   }
 

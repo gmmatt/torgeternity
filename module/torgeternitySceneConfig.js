@@ -16,14 +16,14 @@ export default class torgeternitySceneConfig extends SceneConfig {
   activateListeners(html) {
     super.activateListeners(html);
 
-    const selCosm = html.find("select.cosm")[0];
-    selCosm.addEventListener("change", this._onChangeCosm.bind(this));
-    const selZone = html.find("select.zone-type")[0];
-    selZone.addEventListener("change", this._onChangeZone.bind(this));
+    const selCosm = html.find('select.cosm')[0];
+    selCosm.addEventListener('change', this._onChangeCosm.bind(this));
+    const selZone = html.find('select.zone-type')[0];
+    selZone.addEventListener('change', this._onChangeZone.bind(this));
 
-    const selCosm2 = html.find("select.cosm-secondary")[0];
+    const selCosm2 = html.find('select.cosm-secondary')[0];
     if (selCosm2) {
-      selCosm2.addEventListener("change", this._onChangeCosm2.bind(this));
+      selCosm2.addEventListener('change', this._onChangeCosm2.bind(this));
     }
   }
 
@@ -33,7 +33,7 @@ export default class torgeternitySceneConfig extends SceneConfig {
    */
   _onChangeCosm(ev) {
     const cosm = ev.currentTarget.options[ev.currentTarget.selectedIndex].value;
-    this.document.setFlag("torgeternity", "cosm", cosm);
+    this.document.setFlag('torgeternity', 'cosm', cosm);
   }
   /**
    *
@@ -41,16 +41,16 @@ export default class torgeternitySceneConfig extends SceneConfig {
    */
   _onChangeZone(ev) {
     const zone = ev.currentTarget.options[ev.currentTarget.selectedIndex].value;
-    this.document.setFlag("torgeternity", "zone", zone);
-    if (zone === "mixed" || zone === "dominant") {
-      this.document.setFlag("torgeternity", "displayCosm2", true);
+    this.document.setFlag('torgeternity', 'zone', zone);
+    if (zone === 'mixed' || zone === 'dominant') {
+      this.document.setFlag('torgeternity', 'displayCosm2', true);
     } else {
-      this.document.setFlag("torgeternity", "displayCosm2", false);
+      this.document.setFlag('torgeternity', 'displayCosm2', false);
     }
-    if (zone === "mixed") {
-      this.document.setFlag("torgeternity", "isMixed", true);
+    if (zone === 'mixed') {
+      this.document.setFlag('torgeternity', 'isMixed', true);
     } else {
-      this.document.setFlag("torgeternity", "isMixed", false);
+      this.document.setFlag('torgeternity', 'isMixed', false);
     }
   }
   /**
@@ -59,6 +59,6 @@ export default class torgeternitySceneConfig extends SceneConfig {
    */
   _onChangeCosm2(ev) {
     const cosm = ev.currentTarget.options[ev.currentTarget.selectedIndex].value;
-    this.document.setFlag("torgeternity", "cosm2", cosm);
+    this.document.setFlag('torgeternity', 'cosm2', cosm);
   }
 }

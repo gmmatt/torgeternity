@@ -2,58 +2,60 @@
  *
  */
 export async function setUpCardPiles() {
-  const deckSetting = game.settings.get("torgeternity", "deckSetting");
-  const deckPack = game.packs.get(game.i18n.localize("torgeternity.packs.decks"));
+  const deckSetting = game.settings.get('torgeternity', 'deckSetting');
+  const deckPack = game.packs.get(game.i18n.localize('torgeternity.packs.decks'));
   let deckFolder =
-    game.folders.find((folder) => folder.data.flags?.torgeternity?.usage === "coreCards") ||
+    game.folders.find((folder) => folder.data.flags?.torgeternity?.usage === 'coreCards') ||
     game.folders.getName(deckPack.title);
-  if (!deckFolder || deckFolder.data.type != "Cards") {
+  if (!deckFolder || deckFolder.data.type != 'Cards') {
     deckFolder = await Folder.create({
       name: deckPack.title,
-      type: "Cards",
+      type: 'Cards',
       flags: {
         torgeternity: {
-          usage: "coreCards",
+          usage: 'coreCards',
         },
       },
     });
   }
   /* list of deck keys for all the decks that will be in the pack - i.e. all keys of deckSettings aside from discard piles, active card, and storm knight hands*/
   const deckKeys = [
-    "destinyDeck",
-    "dramaDeck",
-    "coreEarth",
-    "aysle",
-    "cyberpapacy",
-    "livingLand",
-    "nileEmpire",
-    "orrorsh",
-    "panPacifica",
-    "tharkold",
+    'destinyDeck',
+    'dramaDeck',
+    'coreEarth',
+    'aysle',
+    'cyberpapacy',
+    'livingLand',
+    'nileEmpire',
+    'orrorsh',
+    'panPacifica',
+    'tharkold',
   ];
 
   console.log(`Torg eternity system // setting up default card decks`);
 
-  const deckIndex = await deckPack.getIndex({ fields: ["flags.torgeternity.usage"] });
+  const deckIndex = await deckPack.getIndex({ fields: ['flags.torgeternity.usage'] });
 
   for (const deckKey of deckKeys) {
     if (!game.cards.get(deckSetting[deckKey])) {
       // if the deck defined by the current setting does not exist
       const deckId = deckIndex.find((deck) => deck.flags?.torgeternity?.usage === deckKey)._id; // find the ID of the deck with the appropriate flag
-      const deck = await game.cards.importFromCompendium(deckPack, deckId, { folder: deckFolder.id }); // import that deck
+      const deck = await game.cards.importFromCompendium(deckPack, deckId, {
+        folder: deckFolder.id,
+      }); // import that deck
       deckSetting[deckKey] = deck.id; // add the deck name to the temporary settings object
     }
   }
 
   console.log(`Torg eternity system // setting up default discard piles and active card piles`);
 
-  const discardKeys = ["cosmDiscard", "dramaDiscard", "destinyDiscard"];
+  const discardKeys = ['cosmDiscard', 'dramaDiscard', 'destinyDiscard'];
   // set up discard piles
   for (const discardKey of discardKeys) {
     if (!game.cards.get(deckSetting[discardKey])) {
       const cardData = {
-        name: game.i18n.localize("torgeternity.cardTypes." + discardKey),
-        type: "pile",
+        name: game.i18n.localize('torgeternity.cardTypes.' + discardKey),
+        type: 'pile',
         ownership: { default: CONST.DOCUMENT_OWNERSHIP_LEVELS.OWNER },
         folder: deckFolder.id,
       };
@@ -65,8 +67,8 @@ export async function setUpCardPiles() {
   // Add Active Drama
   if (!game.cards.get(deckSetting.activeDrama)) {
     const cardData = {
-      name: game.i18n.localize("torgeternity.cardTypes.activeDrama"),
-      type: "pile",
+      name: game.i18n.localize('torgeternity.cardTypes.activeDrama'),
+      type: 'pile',
       folder: deckFolder.id,
     };
     const activeDrama = await Cards.create(cardData, { keepId: true, renderSheet: false });
@@ -79,12 +81,12 @@ export async function setUpCardPiles() {
         await game.journal.importFromCompendium(basicRulesPack, journalId)
     }*/
 
-  const stormknights = game.actors.filter((act) => act.type == "stormknight");
+  const stormknights = game.actors.filter((act) => act.type == 'stormknight');
   for (const sk of stormknights) {
     if (!sk.getDefaultHand()) {
       await sk.createDefaultHand();
     }
   }
-  game.settings.set("torgeternity", "deckSetting", deckSetting);
-  game.settings.set("torgeternity", "setUpCards", false);
+  game.settings.set('torgeternity', 'deckSetting', deckSetting);
+  game.settings.set('torgeternity', 'setUpCards', false);
 }

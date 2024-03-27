@@ -8,7 +8,7 @@ export default class DeckSettingMenu extends FormApplication {
    */
   constructor(settings) {
     super();
-    this.settings = game.settings.get("torgeternity", "deckSetting");
+    this.settings = game.settings.get('torgeternity', 'deckSetting');
     this.doubledValues = [];
   }
   /**
@@ -17,9 +17,9 @@ export default class DeckSettingMenu extends FormApplication {
    */
   static get defaultOptions() {
     const options = super.defaultOptions;
-    options.template = "/systems/torgeternity/templates/cards/settingMenu.hbs";
+    options.template = '/systems/torgeternity/templates/cards/settingMenu.hbs';
     options.top = 300;
-    options.title = game.i18n.localize("torgeternity.settingMenu.deckSetting.name");
+    options.title = game.i18n.localize('torgeternity.settingMenu.deckSetting.name');
     options.left = 500;
     options.submitOnChange = true;
     options.editable = true;
@@ -34,12 +34,14 @@ export default class DeckSettingMenu extends FormApplication {
     const data = {
       isGM: game.user.isGM,
       deckList: game.cards.contents,
-      object: game.settings.get("torgeternity", "deckSetting"),
-      stormknights: game.actors.filter((act) => act.type == "stormknight"),
+      object: game.settings.get('torgeternity', 'deckSetting'),
+      stormknights: game.actors.filter((act) => act.type == 'stormknight'),
     };
     for (const sk of data.stormknights) {
-      if (game.settings.get("torgeternity", "deckSetting").stormknights) {
-        data.stormknights[sk.id] = game.settings.get("torgeternity", "deckSetting").stormknights[sk.id];
+      if (game.settings.get('torgeternity', 'deckSetting').stormknights) {
+        data.stormknights[sk.id] = game.settings.get('torgeternity', 'deckSetting').stormknights[
+          sk.id
+        ];
       }
     }
     return mergeObject(super.getData(), data);
@@ -53,15 +55,15 @@ export default class DeckSettingMenu extends FormApplication {
     // checking if doubled values
     this.checkDoubled();
     // changing default deck
-    html.find(".selectDeck").change(this.onChangeDeck.bind(this, html));
+    html.find('.selectDeck').change(this.onChangeDeck.bind(this, html));
     // assigning user rights for stormknights owners
-    html.find("select.stormknightHand").change(this.onChangeHand.bind(this, html));
+    html.find('select.stormknightHand').change(this.onChangeHand.bind(this, html));
     // creating new cards decks or piles or hand
-    html.find("button.createCards").click(this.onCreateCards.bind(this));
+    html.find('button.createCards').click(this.onCreateCards.bind(this));
 
     // adding hook on for refreshing the display while a card stack is created
     // avoid having to re-open the menu to have new card stack available in selects
-    Hooks.on("createCards", (card, options, id) => {
+    Hooks.on('createCards', (card, options, id) => {
       if (this.rendered) {
         this.render(true);
       }
@@ -74,7 +76,7 @@ export default class DeckSettingMenu extends FormApplication {
    */
   _updateObject(event, formData) {
     const data = expandObject(formData);
-    game.settings.set("torgeternity", "deckSetting", data);
+    game.settings.set('torgeternity', 'deckSetting', data);
   }
   /**
    *
@@ -95,14 +97,14 @@ export default class DeckSettingMenu extends FormApplication {
     // checking if other select/options have same value
     this.checkDoubled();
     // checking if other select are not doubled anymore
-    for (const select of html.find("select")) {
+    for (const select of html.find('select')) {
       if (this.doubledValues.indexOf(select.options[select.selectedIndex].value) == -1) {
-        select.classList.remove("doubled");
+        select.classList.remove('doubled');
       }
     }
 
     // allowing submit if no doubled value
-    if (this.element.find(".doubled").length > 0) {
+    if (this.element.find('.doubled').length > 0) {
       this.element.find('button[type="submit"]')[0].disabled = true;
     } else {
       this.element.find('button[type="submit"]')[0].disabled = false;
@@ -114,7 +116,7 @@ export default class DeckSettingMenu extends FormApplication {
    * @param {Event} event The event object.
    */
   onChangeHand(html, event) {
-    const actorId = event.currentTarget.getAttribute("name").replace("stormknights.", "");
+    const actorId = event.currentTarget.getAttribute('name').replace('stormknights.', '');
     const handId = event.currentTarget.options[event.currentTarget.selectedIndex].value;
 
     const actor = game.actors.get(actorId);
@@ -134,7 +136,7 @@ export default class DeckSettingMenu extends FormApplication {
   checkDoubled() {
     const selectedValues = [];
 
-    for (const select of this.element.find("select")) {
+    for (const select of this.element.find('select')) {
       const value = select.options[select.selectedIndex].value;
       selectedValues.push(value);
       const valueCount = selectedValues.filter((val) => val == value).length;
@@ -147,12 +149,12 @@ export default class DeckSettingMenu extends FormApplication {
         }
       }
     }
-    for (const select of this.element.find("select")) {
+    for (const select of this.element.find('select')) {
       const value = select.options[select.selectedIndex].value;
       if (this.doubledValues.indexOf(value) > -1) {
-        select.classList.add("doubled");
+        select.classList.add('doubled');
       } else {
-        select.classList.remove("doubled");
+        select.classList.remove('doubled');
       }
     }
   }

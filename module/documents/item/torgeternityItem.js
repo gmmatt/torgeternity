@@ -1,35 +1,35 @@
-import { ChatMessageTorg } from "../../chat/document.js";
+import { ChatMessageTorg } from '../../chat/document.js';
 
 /**
  *
  */
 export default class TorgeternityItem extends Item {
-  static equipProp = "system.equipped";
-  static equipClassProp = "system.equippedClass";
-  static cssEquipped = "item-equipped";
-  static cssUnequipped = "item-unequipped";
+  static equipProp = 'system.equipped';
+  static equipClassProp = 'system.equippedClass';
+  static cssEquipped = 'item-equipped';
+  static cssUnequipped = 'item-unequipped';
 
   static CHAT_TEMPLATE = {
-    perk: "systems/torgeternity/templates/partials/perk-card.hbs",
-    attack: "systems/torgeternity/templates/partials/attack-card.hbs",
-    bonus: "systems/torgeternity/templates/partials/bonus-card.hbs",
-    power: "systems/torgeternity/templates/partials/power-card.hbs",
-    gear: "systems/torgeternity/templates/partials/gear-card.hbs",
-    implant: "systems/torgeternity/templates/partials/implant-card.hbs",
-    enhancement: "systems/torgeternity/templates/partials/enhancement-card.hbs",
-    eternityshard: "systems/torgeternity/templates/partials/eternityshard-card.hbs",
-    armor: "systems/torgeternity/templates/partials/armor-card.hbs",
-    shield: "systems/torgeternity/templates/partials/shield-card.hbs",
-    spell: "systems/torgeternity/templates/partials/spell-card.hbs",
-    miracle: "systems/torgeternity/templates/partials/miracle-card.hbs",
-    psionicpower: "systems/torgeternity/templates/partials/psionicpower-card.hbs",
-    specialability: "systems/torgeternity/templates/partials/specialability-card.hbs",
-    vehicle: "systems/torgeternity/templates/partials/vehicle-card.hbs",
-    destinyCard: "systems/torgeternity/templates/partials/destinyCard.hbs",
-    cosmCard: "systems/torgeternity/templates/partials/cosmCard.hbs",
-    dramaCard: "systems/torgeternity/templates/partials/dramaCard.hbs",
-    customSkill: "systems/torgeternity/templates/partials/customSkill-card.hbs",
-    vehicleAddOn: "systems/torgeternity/templates/partials/vehicleAddOn-card.hbs",
+    perk: 'systems/torgeternity/templates/partials/perk-card.hbs',
+    attack: 'systems/torgeternity/templates/partials/attack-card.hbs',
+    bonus: 'systems/torgeternity/templates/partials/bonus-card.hbs',
+    power: 'systems/torgeternity/templates/partials/power-card.hbs',
+    gear: 'systems/torgeternity/templates/partials/gear-card.hbs',
+    implant: 'systems/torgeternity/templates/partials/implant-card.hbs',
+    enhancement: 'systems/torgeternity/templates/partials/enhancement-card.hbs',
+    eternityshard: 'systems/torgeternity/templates/partials/eternityshard-card.hbs',
+    armor: 'systems/torgeternity/templates/partials/armor-card.hbs',
+    shield: 'systems/torgeternity/templates/partials/shield-card.hbs',
+    spell: 'systems/torgeternity/templates/partials/spell-card.hbs',
+    miracle: 'systems/torgeternity/templates/partials/miracle-card.hbs',
+    psionicpower: 'systems/torgeternity/templates/partials/psionicpower-card.hbs',
+    specialability: 'systems/torgeternity/templates/partials/specialability-card.hbs',
+    vehicle: 'systems/torgeternity/templates/partials/vehicle-card.hbs',
+    destinyCard: 'systems/torgeternity/templates/partials/destinyCard.hbs',
+    cosmCard: 'systems/torgeternity/templates/partials/cosmCard.hbs',
+    dramaCard: 'systems/torgeternity/templates/partials/dramaCard.hbs',
+    customSkill: 'systems/torgeternity/templates/partials/customSkill-card.hbs',
+    vehicleAddOn: 'systems/torgeternity/templates/partials/vehicleAddOn-card.hbs',
   };
 
   /**
@@ -37,33 +37,33 @@ export default class TorgeternityItem extends Item {
    */
   prepareBaseData() {
     // Handle perk-related data
-    if (this.type === "perk") {
-      this.system.navStyle = "right:-210px;top:210px";
+    if (this.type === 'perk') {
+      this.system.navStyle = 'right:-210px;top:210px';
       this.system.extendedNav = true;
     } else {
-      this.system.navStyle = "right:-110px;top:115px";
+      this.system.navStyle = 'right:-110px;top:115px';
       this.system.extendedNav = false;
     }
   }
 
   static DEFAULT_ICONS = {
-    gear: "gear-icon.webp",
-    eternityshard: "eternityshard.webp",
-    armor: "armor-icon.webp",
-    shield: "shield.webp",
-    meleeweapon: "meleeweapon.webp",
-    missileweapon: "missileweapon.webp",
-    firearm: "firearm.webp",
-    implant: "implant.webp",
-    heavyweapon: "heavyweapon.webp",
-    vehicle: "vehicle.webp",
-    perk: "perk.webp",
-    enhancement: "enhancement.webp",
-    specialability: "specialability.webp",
-    "specialability-rollable": "specialability-rollable.webp",
-    spell: "spell.webp",
-    miracle: "miracle.webp",
-    psionicpower: "psionicpower.webp",
+    gear: 'gear-icon.webp',
+    eternityshard: 'eternityshard.webp',
+    armor: 'armor-icon.webp',
+    shield: 'shield.webp',
+    meleeweapon: 'meleeweapon.webp',
+    missileweapon: 'missileweapon.webp',
+    firearm: 'firearm.webp',
+    implant: 'implant.webp',
+    heavyweapon: 'heavyweapon.webp',
+    vehicle: 'vehicle.webp',
+    perk: 'perk.webp',
+    enhancement: 'enhancement.webp',
+    specialability: 'specialability.webp',
+    'specialability-rollable': 'specialability-rollable.webp',
+    spell: 'spell.webp',
+    miracle: 'miracle.webp',
+    psionicpower: 'psionicpower.webp',
   };
 
   /**
@@ -74,14 +74,14 @@ export default class TorgeternityItem extends Item {
    */
   _onCreate(data, options, userId) {
     super._onCreate(data, options, userId);
-    if (this.img === "icons/svg/item-bag.svg") {
+    if (this.img === 'icons/svg/item-bag.svg') {
       const image = TorgeternityItem.DEFAULT_ICONS[data.type] ?? null;
       if (image) {
-        this.updateSource({ img: "systems/torgeternity/images/icons/" + image });
+        this.updateSource({ img: 'systems/torgeternity/images/icons/' + image });
       }
     }
 
-    if (this.parent !== null && this.system.hasOwnProperty("equipped")) {
+    if (this.parent !== null && this.system.hasOwnProperty('equipped')) {
       // set the item to be equipped and un-equip other items of the same type
       this.update({
         [TorgeternityItem.equipProp]: true,
@@ -91,7 +91,11 @@ export default class TorgeternityItem extends Item {
       const actor = this.parent;
       const item = this;
       actor.items.forEach(function (otherItem, key) {
-        if (otherItem._id !== item._id && otherItem.system.equipped && otherItem.type === item.type) {
+        if (
+          otherItem._id !== item._id &&
+          otherItem.system.equipped &&
+          otherItem.type === item.type
+        ) {
           TorgeternityItem.toggleEquipState(otherItem, actor);
         }
       });
@@ -114,7 +118,7 @@ export default class TorgeternityItem extends Item {
       [TorgeternityItem.equipClassProp]: equipClass,
     });
     // enable/disable effects
-    const sourceOrigin = "Item." + item._id;
+    const sourceOrigin = 'Item.' + item._id;
     actor.effects.forEach(function (effect, key) {
       if (!!effect.origin) {
         if (effect.origin.endsWith(sourceOrigin)) {
@@ -152,7 +156,7 @@ export default class TorgeternityItem extends Item {
    */
   async weaponAttack() {
     // Roll those dice!
-    const dicerollint = new Roll("1d20x10x20").roll({ async: false });
+    const dicerollint = new Roll('1d20x10x20').roll({ async: false });
     dicerollint.toMessage();
     const diceroll = dicerollint.total;
 
@@ -170,11 +174,11 @@ export default class TorgeternityItem extends Item {
 
     const messageContent =
       diceroll > 4
-        ? `Bonus: ${bonus >= 0 ? "+" : "-"}${bonus}`
-        : (diceroll = 1 ? "Failure (Check for Mishap)" : `Bonus: -${bonus} (Disconnect if 4 Case)`);
+        ? `Bonus: ${bonus >= 0 ? '+' : '-'}${bonus}`
+        : (diceroll = 1 ? 'Failure (Check for Mishap)' : `Bonus: -${bonus} (Disconnect if 4 Case)`);
 
     const baseDamage =
-      this.system.damageType == "strengthPlus"
+      this.system.damageType == 'strengthPlus'
         ? parseInt(this.actor.system.attributes.strength) + parseInt(this.system.damage)
         : this.system.damage;
 
@@ -201,7 +205,7 @@ export default class TorgeternityItem extends Item {
       speaker: ChatMessage.getSpeaker(),
       flags: {
         data: cardData,
-        template: TorgeternityItem.CHAT_TEMPLATE["attack"],
+        template: TorgeternityItem.CHAT_TEMPLATE['attack'],
       },
     };
 
@@ -215,7 +219,7 @@ export default class TorgeternityItem extends Item {
    *
    */
   async bonus() {
-    const rollResult = new Roll("1d6x6max5").roll({ async: false });
+    const rollResult = new Roll('1d6x6max5').roll({ async: false });
 
     const chatData = {
       type: CONST.CHAT_MESSAGE_TYPES.ROLL,
@@ -234,7 +238,7 @@ export default class TorgeternityItem extends Item {
    */
   async power() {
     // Roll those dice!
-    const dicerollint = new Roll("1d20x10x20").roll({ async: false });
+    const dicerollint = new Roll('1d20x10x20').roll({ async: false });
     dicerollint.toMessage();
     const diceroll = dicerollint.total;
 
@@ -251,8 +255,8 @@ export default class TorgeternityItem extends Item {
 
     const messageContent =
       diceroll > 4
-        ? `Bonus: ${bonus >= 0 ? "+" : "-"}${bonus}`
-        : (diceroll = 1 ? "Failure (Check for Mishap)" : `Bonus: -${bonus} (Disconnect if 4 Case)`);
+        ? `Bonus: ${bonus >= 0 ? '+' : '-'}${bonus}`
+        : (diceroll = 1 ? 'Failure (Check for Mishap)' : `Bonus: -${bonus} (Disconnect if 4 Case)`);
 
     // Retrieve the applicable skill value from the current actor
     const skillToUse = this.actor.system.skills[this.system.skill];
@@ -277,7 +281,7 @@ export default class TorgeternityItem extends Item {
       speaker: ChatMessage.getSpeaker(),
       flags: {
         data: cardData,
-        template: TorgeternityItem.CHAT_TEMPLATE["power"],
+        template: TorgeternityItem.CHAT_TEMPLATE['power'],
       },
     };
 

@@ -10,8 +10,8 @@ export class VehicleAddOnItemData extends foundry.abstract.TypeDataModel {
   static defineSchema() {
     return {
       ...super.defineSchema(),
-      description: new fields.HtmlField({ initial: "" }),
-      "short-description": new fields.StringField({ initial: "" }),
+      description: new fields.HtmlField({ initial: '' }),
+      'short-description': new fields.StringField({ initial: '' }),
     };
   }
 
