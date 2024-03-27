@@ -8,19 +8,18 @@ export default class TorgeternityActor extends Actor {
   prepareBaseData() {
     // Here Effects are not yet applied
     // Set armor and shield toggle states
-    if (this.type === "stormknight") {
+    if (this.type === 'stormknight') {
       for (const item of this.itemTypes.armor) {
-        item.system.equippedClass = item.system.equipped ? "item-equipped" : "item-unequipped";
+        item.system.equippedClass = item.system.equipped ? 'item-equipped' : 'item-unequipped';
       }
       for (const item of this.itemTypes.shield) {
-        item.system.equippedClass = item.system.equipped ? "item-equipped" : "item-unequipped";
+        item.system.equippedClass = item.system.equipped ? 'item-equipped' : 'item-unequipped';
       }
     }
-    if (["threat", "stormknight"].includes(this.type)) {
+    if (['threat', 'stormknight'].includes(this.type)) {
       // initialize the worn armor bonus
       this.system.other.armor = this.wornArmor?.system?.bonus ?? 0;
       this.system.fatigue = 2 + this.wornArmor?.system?.fatigue ?? 0;
-
     }
   }
 
@@ -31,7 +30,7 @@ export default class TorgeternityActor extends Actor {
     // Here Effects are applied, whatever follow cannot be directly affected by Effects
 
     // Skillsets
-    if (["threat", "stormknight"].includes(this.type)) {
+    if (['threat', 'stormknight'].includes(this.type)) {
       // Set base unarmedDamage from interaction
       const skills = this.system.skills;
       const attributes = this.system.attributes;
@@ -78,23 +77,51 @@ export default class TorgeternityActor extends Actor {
 
     const effects = this.effects;
 
-    if (effects.contents.find((ef) => ef.name === game.i18n.localize(`torgeternity.statusEffects.veryStymied`))) {
+    if (
+      effects.contents.find(
+        (ef) => ef.name === game.i18n.localize(`torgeternity.statusEffects.veryStymied`)
+      )
+    ) {
       this.system.stymiedModifier = -4;
-    } else if (effects.contents.find((ef) => ef.name === game.i18n.localize(`torgeternity.statusEffects.stymied`))) {
+    } else if (
+      effects.contents.find(
+        (ef) => ef.name === game.i18n.localize(`torgeternity.statusEffects.stymied`)
+      )
+    ) {
       this.system.stymiedModifier = -2;
     } else this.system.stymiedModifier = 0;
 
-    if (effects.contents.find((ef) => ef.name === game.i18n.localize(`torgeternity.statusEffects.veryVulnerable`))) {
+    if (
+      effects.contents.find(
+        (ef) => ef.name === game.i18n.localize(`torgeternity.statusEffects.veryVulnerable`)
+      )
+    ) {
       this.system.vulnerableModifier = 4;
-    } else if (effects.contents.find((ef) => ef.name === game.i18n.localize(`torgeternity.statusEffects.vulnerable`))) {
+    } else if (
+      effects.contents.find(
+        (ef) => ef.name === game.i18n.localize(`torgeternity.statusEffects.vulnerable`)
+      )
+    ) {
       this.system.vulnerableModifier = 2;
     } else this.system.vulnerableModifier = 0;
 
-    if (effects.contents.find((ef) => ef.name === game.i18n.localize(`torgeternity.statusEffects.pitchBlack`))) {
+    if (
+      effects.contents.find(
+        (ef) => ef.name === game.i18n.localize(`torgeternity.statusEffects.pitchBlack`)
+      )
+    ) {
       this.system.darknessModifier = -6;
-    } else if (effects.contents.find((ef) => ef.name === game.i18n.localize(`torgeternity.statusEffects.dark`))) {
+    } else if (
+      effects.contents.find(
+        (ef) => ef.name === game.i18n.localize(`torgeternity.statusEffects.dark`)
+      )
+    ) {
       this.system.darknessModifier = -4;
-    } else if (effects.contents.find((ef) => ef.name === game.i18n.localize(`torgeternity.statusEffects.dim`))) {
+    } else if (
+      effects.contents.find(
+        (ef) => ef.name === game.i18n.localize(`torgeternity.statusEffects.dim`)
+      )
+    ) {
       this.system.darknessModifier = -2;
     } else this.system.darknessModifier = 0;
   }
@@ -112,9 +139,10 @@ export default class TorgeternityActor extends Actor {
    * @returns {object} the Hand of the actor
    */
   getDefaultHand() {
-    const setting = game.settings.get("torgeternity", "deckSetting");
+    const setting = game.settings.get('torgeternity', 'deckSetting');
     const handId =
-      setting.stormknights[this.id] ?? game.cards.find((c) => c.data.flags?.torgeternity?.defaultHand === this.id)?.id;
+      setting.stormknights[this.id] ??
+      game.cards.find((c) => c.data.flags?.torgeternity?.defaultHand === this.id)?.id;
     if (handId) {
       return game.cards.get(handId);
     } else {
@@ -130,7 +158,7 @@ export default class TorgeternityActor extends Actor {
     // creating a card hand then render it
     const cardData = {
       name: this.name,
-      type: "hand",
+      type: 'hand',
       ownership: this.getHandOwnership(),
       flags: { torgeternity: { defaultHand: this.id } },
     };
@@ -144,9 +172,9 @@ export default class TorgeternityActor extends Actor {
     // deprecated, use the flag on the hand itself instead
     // this can be removed in a future version
     // reason: can be broken by race condition
-    const settingData = game.settings.get("torgeternity", "deckSetting");
+    const settingData = game.settings.get('torgeternity', 'deckSetting');
     settingData.stormknights[actorId] = handId;
-    await game.settings.set("torgeternity", "deckSetting", settingData);
+    await game.settings.set('torgeternity', 'deckSetting', settingData);
 
     // return the hand
     return characterHand;
