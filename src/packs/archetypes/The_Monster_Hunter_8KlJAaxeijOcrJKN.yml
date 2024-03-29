@@ -84,78 +84,6 @@ items:
       modifiedTime: 1693895876765
       lastModifiedBy: CtisFurQNe9h7ABb
     _key: '!actors.items!8KlJAaxeijOcrJKN.P5v3znC9UTPMRB7J'
-  - _id: x75vrICPEW0IMXTW
-    name: Monster Hide Duster
-    type: armor
-    img: systems/torgeternity/images/icons/armor-icon.webp
-    effects:
-      - _id: cCmq8JitymSgykcf
-        flags: {}
-        changes:
-          - key: system.other.toughness
-            value: '2'
-            mode: 2
-            priority: null
-          - key: system.other.armor
-            value: '2'
-            mode: 2
-            priority: null
-        disabled: false
-        duration:
-          startTime: null
-          seconds: null
-          combat: null
-          rounds: null
-          turns: null
-          startRound: null
-          startTurn: null
-        icon: icons/svg/aura.svg
-        origin: Item.T0BbCEFeJ2wLx0Ds
-        tint: null
-        transfer: true
-        name: Armor +2
-        description: ''
-        statuses: []
-        _key: >-
-          !actors.items.effects!8KlJAaxeijOcrJKN.x75vrICPEW0IMXTW.cCmq8JitymSgykcf
-    folder: null
-    sort: 24800000
-    flags:
-      core:
-        sourceId: Compendium.te001-core-rulebook.Items.RMjiwdeeAr3kBkLK
-    system:
-      cosm: Orrorsh
-      description: >-
-        <p>@UUID[Compendium.te001-core-rulebook.rules.pwneQ55M0nnDH0Us.JournalEntryPage.qKdamp4rrcX6TTt0#fatigues:]{Fatigues}</p>
-
-        <p>A long overcoat made from the treated skins of various beasts that
-        once terrorized the innocent. The monsters of Orrorsh are notoriously
-        hardy, so leather made from their hides is especially durable.</p>
-
-        <p>&nbsp;</p>
-
-        <p>Found in <strong>Core Rules</strong></p>
-      techlevel: 16
-      price: '350'
-      value: 12
-      bonus: 2
-      maxDex: 10
-      minStrength: null
-      equipped: true
-      equippedClass: item-equipped
-      notes: Fatigues
-    ownership:
-      default: 0
-      A9LyAqagoJJU3gDH: 3
-      CtisFurQNe9h7ABb: 3
-    _stats:
-      systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
-      createdTime: 1693911903935
-      modifiedTime: 1693911903942
-      lastModifiedBy: CtisFurQNe9h7ABb
-    _key: '!actors.items!8KlJAaxeijOcrJKN.x75vrICPEW0IMXTW'
   - _id: 7DX5OkocFjEmYTOv
     name: Webley Revolver
     type: firearm
@@ -614,36 +542,51 @@ items:
       modifiedTime: 1693912110937
       lastModifiedBy: CtisFurQNe9h7ABb
     _key: '!actors.items!8KlJAaxeijOcrJKN.rojDSaAJcWsl7TIO'
-effects:
-  - _id: 2IAsYSb5OPCpRbTz
-    flags: {}
-    changes:
-      - key: system.other.toughness
-        value: '2'
-        mode: 2
-        priority: null
-      - key: system.other.armor
-        value: '2'
-        mode: 2
-        priority: null
-    disabled: false
-    duration:
-      startTime: 0
-      seconds: null
-      combat: null
-      rounds: null
-      turns: null
-      startRound: null
-      startTurn: null
-    icon: icons/svg/aura.svg
-    origin: >-
-      Compendium.torgeternity.archetypes.Actor.8KlJAaxeijOcrJKN.Item.x75vrICPEW0IMXTW
-    tint: null
-    transfer: false
-    name: Armor +2
-    description: ''
-    statuses: []
-    _key: '!actors.effects!8KlJAaxeijOcrJKN.2IAsYSb5OPCpRbTz'
+  - _id: PUXI2Ww7Tkw5WtJm
+    name: Monster Hide Duster
+    type: armor
+    img: systems/torgeternity/images/icons/armor-icon.webp
+    effects: []
+    folder: null
+    sort: 24800000
+    flags:
+      core:
+        sourceId: Compendium.te001-core-rulebook.Items.Item.RMjiwdeeAr3kBkLK
+    system:
+      cosm: Orrorsh
+      description: >-
+        <p>@UUID[Compendium.te001-core-rulebook.rules.pwneQ55M0nnDH0Us.JournalEntryPage.qKdamp4rrcX6TTt0#fatigues:]{Fatigues}</p>
+
+        <p>A long overcoat made from the treated skins of various beasts that
+        once terrorized the innocent. The monsters of Orrorsh are notoriously
+        hardy, so leather made from their hides is especially durable.</p>
+
+        <p>&nbsp;</p>
+
+        <p>Found in <strong>Core Rules</strong></p>
+      price: '350'
+      techlevel: 16
+      value: 12
+      bonus: 2
+      equipped: true
+      equippedClass: item-equipped
+      maxDex: 10
+      minStrength: null
+      notes: Fatigues
+      fatigue: 1
+    ownership:
+      default: 0
+      A9LyAqagoJJU3gDH: 3
+      CtisFurQNe9h7ABb: 3
+    _stats:
+      systemId: torgeternity
+      systemVersion: 3.7.0
+      coreVersion: '11.315'
+      createdTime: 1711551146791
+      modifiedTime: 1711704878844
+      lastModifiedBy: CtisFurQNe9h7ABb
+    _key: '!actors.items!8KlJAaxeijOcrJKN.PUXI2Ww7Tkw5WtJm'
+effects: []
 folder: null
 sort: 100001
 flags: {}
@@ -1113,10 +1056,10 @@ prototypeToken:
   detectionModes: []
 _stats:
   systemId: torgeternity
-  systemVersion: 3.1.1
-  coreVersion: '11.308'
+  systemVersion: 3.7.0
+  coreVersion: '11.315'
   createdTime: 1693895859465
-  modifiedTime: 1693912116745
+  modifiedTime: 1711704878844
   lastModifiedBy: CtisFurQNe9h7ABb
 _key: '!actors!8KlJAaxeijOcrJKN'
 

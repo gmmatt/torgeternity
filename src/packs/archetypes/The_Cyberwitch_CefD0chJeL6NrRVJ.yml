@@ -1151,6 +1151,49 @@ items:
     _id: 340u8OZL2dvf6ySh
     sort: -50000
     _key: '!actors.items!CefD0chJeL6NrRVJ.340u8OZL2dvf6ySh'
+  - _id: MXjTP0iOJzjmjAP2
+    name: IriMesh Clothing
+    type: armor
+    img: systems/torgeternity/images/icons/armor-icon.webp
+    effects: []
+    folder: null
+    sort: 40100000
+    flags:
+      core:
+        sourceId: Compendium.te001-core-rulebook.Items.Item.iqqKO58UXvYX0BOU
+    system:
+      cosm: (None)
+      description: >-
+        <p>A light textile woven by nano-machines. IriMesh looks and feels
+        similar to silk, but with even more tensile strength. IriMesh can be
+        worn at elegant banquets without looking out of place, and doesn’t raise
+        security concerns at checkpoints.</p>
+
+        <p>&nbsp;</p>
+
+        <p>Found in <strong>Core Rules</strong></p>
+      price: '250'
+      techlevel: 24
+      value: 12
+      bonus: 2
+      equipped: true
+      equippedClass: item-equipped
+      maxDex: null
+      minStrength: null
+      notes: ''
+      fatigue: null
+    ownership:
+      default: 0
+      A9LyAqagoJJU3gDH: 3
+      CtisFurQNe9h7ABb: 3
+    _stats:
+      systemId: torgeternity
+      systemVersion: 3.7.0
+      coreVersion: '11.315'
+      createdTime: 1711551146882
+      modifiedTime: 1711704720368
+      lastModifiedBy: CtisFurQNe9h7ABb
+    _key: '!actors.items!CefD0chJeL6NrRVJ.MXjTP0iOJzjmjAP2'
 effects:
   - _id: HBek5YSnVCsIigXg
     changes:
@@ -2100,8 +2143,8 @@ system:
       <p class="moreheight"><a class="content-link" draggable="true"
       data-uuid="Compendium.torgeternity.handouts.JournalEntry.Knhh8vqtjSylJo5Z.JournalEntryPage.v8EhlvFjQYGClORG"
       data-id="v8EhlvFjQYGClORG" data-type="JournalEntryPage"
-      data-pack="torgeternity.handouts" data-tooltip="Image Page"><i class="fas
-      fa-file-image"></i>Archetype - The Cyberwitch</a></p>
+      data-pack="torgeternity.handouts" data-tooltip="Image Page">Archetype -
+      The Cyberwitch</a></p>
 
       <h3>Overview</h3>
 
@@ -2111,42 +2154,44 @@ system:
       supported.</p>
 
       <p>Such power is a threat to Malraux, who has declared all practitioners
-      of magic “blasphemous.“ You agree, and have decided to use your power to
-      protect the oppressed and topple the tyrannical Antipope.</p>
+      of magic &ldquo;blasphemous.&ldquo; You agree, and have decided to use
+      your power to protect the oppressed and topple the tyrannical
+      Antipope.</p>
 
-      <p>Of course, a little help from all this modern technology won’t
+      <p>Of course, a little help from all this modern technology won&rsquo;t
       hurt.</p>
 
       <h3>Tactics</h3>
 
       <p><em>Enhance </em>is a powerful and flexible spell. Boosting your
-      allies’ <em>Strength </em>increases Toughness and melee damage, while
-      <em>Dexterity </em>improves both attacks and defenses. Likewise,
-      <em>diminish </em>is a bane to your foes, hampering attacks or reducing
-      their resistance to further spells.</p>
+      allies&rsquo; <em>Strength </em>increases melee damage,
+      while&nbsp;<em>Dexterity </em>improves both attacks and defenses.
+      Likewise, <em>diminish </em>is a bane to your foes, hampering attacks or
+      reducing their resistance to further spells.</p>
 
       <p><em>Intimidation </em>and <em>trick </em>are your go-to interactions.
-      Take advantage of the Cyberpapacy’s high Tech Axiom by using powerful
-      handguns and armor to supplement your magic. The Hexxer helps mitigate the
-      Cyberpapacy’s powerful backlash, and even turns it into an advantage.</p>
+      Take advantage of the Cyberpapacy&rsquo;s high Tech Axiom by using
+      powerful handguns and armor to supplement your magic. The Hexxer helps
+      mitigate the Cyberpapacy&rsquo;s powerful backlash, and even turns it into
+      an advantage.</p>
 
       <h3>Moment of Crisis</h3>
 
-      <p>Malraux’s regime oppresses all those who don’t agree with his dictates.
-      Many resisted, and some came to harm from his legions of corrupt Church
-      Police. You stood against them, and somewhere along the way transformed
-      from a rebel to a hero to a Storm Knight.</p>
+      <p>Malraux&rsquo;s regime oppresses all those who don&rsquo;t agree with
+      his dictates. Many resisted, and some came to harm from his legions of
+      corrupt Church Police. You stood against them, and somewhere along the way
+      transformed from a rebel to a hero to a Storm Knight.</p>
 
       <h3>Quote</h3>
 
-      <p>“<em>Abracadabra </em>might be the last thing you ever hear, mon
-      ami.“</p>
+      <p>&ldquo;<em>Abracadabra </em>might be the last thing you ever hear, mon
+      ami.&ldquo;</p>
 
       <h3>Description</h3>
 
       <p>You hide in crowds or shadows when you can. If examined closely your
-      Hexxer is a dead giveaway. It’s an illegal implant with only one purpose:
-      to defy Malraux’s ban on sorcery!</p>
+      Hexxer is a dead giveaway. It&rsquo;s an illegal implant with only one
+      purpose: to defy Malraux&rsquo;s ban on sorcery!</p>
 
       <p>Once your disguise or cowl is dropped, however, your unrestrained power
       is a true terror to behold.</p>
@@ -2154,8 +2199,8 @@ system:
       <h3>Agenda</h3>
 
       <p>You fight for personal freedom and lash out at
-      authoritarianism—especially Malraux’s oppressive and self-righteous
-      regime.</p>
+      authoritarianism&mdash;especially Malraux&rsquo;s oppressive and
+      self-righteous regime.</p>
 
       <h3>Names</h3>
 
@@ -2247,10 +2292,10 @@ prototypeToken:
   detectionModes: []
 _stats:
   systemId: torgeternity
-  systemVersion: 3.1.1
-  coreVersion: '11.308'
+  systemVersion: 3.7.0
+  coreVersion: '11.315'
   createdTime: 1693893984135
-  modifiedTime: 1693900567608
+  modifiedTime: 1711705329807
   lastModifiedBy: CtisFurQNe9h7ABb
 _key: '!actors!CefD0chJeL6NrRVJ'
 

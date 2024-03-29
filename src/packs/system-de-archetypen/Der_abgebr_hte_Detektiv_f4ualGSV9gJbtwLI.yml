@@ -451,73 +451,6 @@ items:
       modifiedTime: 1694869490779
       lastModifiedBy: CtisFurQNe9h7ABb
     _key: '!actors.items!f4ualGSV9gJbtwLI.RCMHOsLlvVdprXvr'
-  - _id: kpVJhdVTT8Gz1ypF
-    name: Lederjacke
-    type: armor
-    img: systems/torgeternity/images/icons/armor-icon.webp
-    effects:
-      - _id: LbA5jhxYBbhv1Y2O
-        changes:
-          - key: system.other.toughness
-            mode: 2
-            value: '1'
-            priority: null
-          - key: system.other.armor
-            mode: 2
-            value: '1'
-            priority: null
-        disabled: false
-        duration:
-          startTime: null
-          seconds: null
-          combat: null
-          rounds: null
-          turns: null
-          startRound: null
-          startTurn: null
-        icon: icons/svg/aura.svg
-        origin: Item.BlLZXOO5w1iYYsz2
-        transfer: true
-        flags: {}
-        tint: null
-        name: Rüstung +1
-        description: ''
-        statuses: []
-        _key: >-
-          !actors.items.effects!f4ualGSV9gJbtwLI.kpVJhdVTT8Gz1ypF.LbA5jhxYBbhv1Y2O
-    folder: null
-    sort: 23000000
-    flags:
-      core:
-        sourceId: >-
-          Compendium.te001-core-rulebook.grw-de-ausruestung.Item.ibQvaehrqx24DxvU
-    system:
-      cosm: (Keins)
-      description: >-
-        <p>@UUID[Compendium.te001-core-rulebook.grw-de-grw.Qlx6yGF0Mmo6Xzrv.JournalEntryPage.7GGUUHzuYIqGPXDO#ganzkorper/torso:]{Torso}</p>
-
-        <p>Schwarz und stylisch!</p>
-      techlevel: 19
-      price: '100'
-      value: 10
-      bonus: 1
-      maxDex: 12
-      minStrength: null
-      equipped: true
-      equippedClass: item-equipped
-      notes: Torso
-    ownership:
-      default: 0
-      9Q0XnqFwko7hRlvL: 3
-      CtisFurQNe9h7ABb: 3
-    _stats:
-      systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
-      createdTime: 1694869499672
-      modifiedTime: 1694869499678
-      lastModifiedBy: CtisFurQNe9h7ABb
-    _key: '!actors.items!f4ualGSV9gJbtwLI.kpVJhdVTT8Gz1ypF'
   - _id: GzLZEYOYkSHaZqOu
     name: Handschellen
     type: gear
@@ -608,36 +541,46 @@ items:
       modifiedTime: 1694869588488
       lastModifiedBy: CtisFurQNe9h7ABb
     _key: '!actors.items!f4ualGSV9gJbtwLI.H6HBbufEIw9Miatd'
-effects:
-  - _id: T3Y78KrMPHYfHJdw
-    changes:
-      - key: system.other.toughness
-        mode: 2
-        value: '1'
-        priority: null
-      - key: system.other.armor
-        mode: 2
-        value: '1'
-        priority: null
-    disabled: false
-    duration:
-      startTime: 0
-      seconds: null
-      combat: null
-      rounds: null
-      turns: null
-      startRound: null
-      startTurn: null
-    icon: icons/svg/aura.svg
-    origin: >-
-      Compendium.torgeternity.system-de-archetypen.Actor.f4ualGSV9gJbtwLI.Item.kpVJhdVTT8Gz1ypF
-    transfer: false
-    flags: {}
-    tint: null
-    name: Rüstung +1
-    description: ''
-    statuses: []
-    _key: '!actors.effects!f4ualGSV9gJbtwLI.T3Y78KrMPHYfHJdw'
+  - _id: rFy5ucB7V1HgwoVj
+    name: Lederjacke
+    type: armor
+    img: systems/torgeternity/images/icons/armor-icon.webp
+    effects: []
+    folder: null
+    sort: 23000000
+    flags:
+      core:
+        sourceId: >-
+          Compendium.te001-core-rulebook.grw-de-ausruestung.Item.ibQvaehrqx24DxvU
+    system:
+      cosm: Zentralerde
+      description: >-
+        <p>@UUID[Compendium.te001-core-rulebook.grw-de-grw.Qlx6yGF0Mmo6Xzrv.JournalEntryPage.7GGUUHzuYIqGPXDO#ganzkorper/torso:]{Torso}</p>
+
+        <p>Schwarz und stylisch!</p>
+      price: '100'
+      techlevel: 19
+      value: 10
+      bonus: 1
+      equipped: true
+      equippedClass: item-equipped
+      maxDex: 12
+      minStrength: null
+      notes: Torso
+      fatigue: null
+    ownership:
+      default: 0
+      9Q0XnqFwko7hRlvL: 3
+      CtisFurQNe9h7ABb: 3
+    _stats:
+      systemId: torgeternity
+      systemVersion: 3.7.0
+      coreVersion: '11.315'
+      createdTime: 1711562366193
+      modifiedTime: 1711706309755
+      lastModifiedBy: CtisFurQNe9h7ABb
+    _key: '!actors.items!f4ualGSV9gJbtwLI.rFy5ucB7V1HgwoVj'
+effects: []
 folder: null
 sort: 0
 flags:
@@ -1114,10 +1057,10 @@ prototypeToken:
   detectionModes: []
 _stats:
   systemId: torgeternity
-  systemVersion: 3.1.1
-  coreVersion: '11.308'
+  systemVersion: 3.7.0
+  coreVersion: '11.315'
   createdTime: 1694867157183
-  modifiedTime: 1694869588488
+  modifiedTime: 1711706309755
   lastModifiedBy: CtisFurQNe9h7ABb
 _key: '!actors!f4ualGSV9gJbtwLI'
 

@@ -296,73 +296,6 @@ items:
       modifiedTime: 1694867008591
       lastModifiedBy: CtisFurQNe9h7ABb
     _key: '!actors.items!LS1z3a6GAJT83doA.ILlukSLFB0oP3oxR'
-  - name: Ledermantel
-    type: armor
-    img: systems/torgeternity/images/icons/armor-icon.webp
-    effects:
-      - _id: xxMzKtY18ozWp6IT
-        changes:
-          - key: system.other.armor
-            mode: 2
-            value: '2'
-            priority: null
-          - key: system.other.toughness
-            mode: 2
-            value: '2'
-            priority: null
-        disabled: false
-        duration:
-          startTime: null
-          seconds: null
-          combat: null
-          rounds: null
-          turns: null
-          startRound: null
-          startTurn: null
-        icon: icons/svg/aura.svg
-        origin: Item.13h50tsaYDtiatIw
-        transfer: true
-        flags: {}
-        tint: null
-        name: Rüstung +2
-        description: ''
-        statuses: []
-        _key: >-
-          !actors.items.effects!LS1z3a6GAJT83doA.PirM55ZOHju9OtdY.xxMzKtY18ozWp6IT
-    folder: null
-    sort: 28400000
-    flags:
-      core:
-        sourceId: >-
-          Compendium.te001-core-rulebook.grw-de-ausruestung.Item.s0uhujKKdqpJw210
-    _id: PirM55ZOHju9OtdY
-    system:
-      cosm: Nil-Imperium
-      description: >-
-        <p>Tierh&auml;ute wurden zu einer steifen, haltbaren Oberfl&auml;che
-        gegerbt oder gekocht und danach mit Nieten oder Steppn&auml;hten
-        verst&auml;rkt. L&auml;sst sich in allen Cosms antreffen.</p>
-      techlevel: 19
-      price: '150'
-      value: 8
-      bonus: 2
-      maxDex: 12
-      minStrength: 6
-      equipped: true
-      equippedClass: item-equipped
-      notes: ''
-    ownership:
-      default: 0
-      9Q0XnqFwko7hRlvL: 3
-      CtisFurQNe9h7ABb: 3
-    _stats:
-      systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
-      createdTime: 1694867027163
-      modifiedTime: 1694867027168
-      lastModifiedBy: CtisFurQNe9h7ABb
-    _key: '!actors.items!LS1z3a6GAJT83doA.PirM55ZOHju9OtdY'
   - name: Mikro-Audiosender
     type: gear
     img: systems/torgeternity/images/icons/gear-icon.webp
@@ -556,36 +489,44 @@ items:
       modifiedTime: 1694867083090
       lastModifiedBy: CtisFurQNe9h7ABb
     _key: '!actors.items!LS1z3a6GAJT83doA.JOEXCC8y8rElWHrS'
+  - name: Ledermantel
+    type: armor
+    img: systems/torgeternity/images/icons/armor-icon.webp
+    effects: []
+    folder: null
+    sort: 28400000
+    flags:
+      core:
+        sourceId: >-
+          Compendium.te001-core-rulebook.grw-de-ausruestung.Item.s0uhujKKdqpJw210
+    _id: 8FoodSadABORHrmX
+    system:
+      cosm: Nil-Imperium
+      description: >-
+        <p>@UUID[Compendium.te001-core-rulebook.grw-de-grw.Qlx6yGF0Mmo6Xzrv.JournalEntryPage.7GGUUHzuYIqGPXDO#ganzkorper/torso:]{Torso}</p>
+      price: '100'
+      techlevel: 19
+      value: 10
+      bonus: 1
+      equipped: true
+      equippedClass: item-equipped
+      maxDex: 12
+      minStrength: null
+      notes: Torso
+      fatigue: null
+    ownership:
+      default: 0
+      9Q0XnqFwko7hRlvL: 3
+      CtisFurQNe9h7ABb: 3
+    _stats:
+      systemId: torgeternity
+      systemVersion: 3.7.0
+      coreVersion: '11.315'
+      createdTime: 1711562366193
+      modifiedTime: 1711706120829
+      lastModifiedBy: CtisFurQNe9h7ABb
+    _key: '!actors.items!LS1z3a6GAJT83doA.8FoodSadABORHrmX'
 effects:
-  - _id: zpNW7MFVazyO4JAv
-    changes:
-      - key: system.other.armor
-        mode: 2
-        value: '2'
-        priority: null
-      - key: system.other.toughness
-        mode: 2
-        value: '2'
-        priority: null
-    disabled: false
-    duration:
-      startTime: 0
-      seconds: null
-      combat: null
-      rounds: null
-      turns: null
-      startRound: null
-      startTurn: null
-    icon: icons/svg/aura.svg
-    origin: >-
-      Compendium.torgeternity.system-de-archetypen.Actor.LS1z3a6GAJT83doA.Item.PirM55ZOHju9OtdY
-    transfer: false
-    flags: {}
-    tint: null
-    name: Rüstung +2
-    description: ''
-    statuses: []
-    _key: '!actors.effects!LS1z3a6GAJT83doA.zpNW7MFVazyO4JAv'
   - _id: cyPKID3tHRDIqS44
     changes:
       - key: system.skills.firstAid.isFav
@@ -1083,10 +1024,10 @@ prototypeToken:
   detectionModes: []
 _stats:
   systemId: torgeternity
-  systemVersion: 3.1.1
-  coreVersion: '11.308'
+  systemVersion: 3.7.0
+  coreVersion: '11.315'
   createdTime: 1694866736301
-  modifiedTime: 1694869709465
+  modifiedTime: 1711706120829
   lastModifiedBy: CtisFurQNe9h7ABb
 _key: '!actors!LS1z3a6GAJT83doA'
 

@@ -452,70 +452,6 @@ items:
       modifiedTime: 1693912920114
       lastModifiedBy: CtisFurQNe9h7ABb
     _key: '!actors.items!tbqGzMeQeCA3n1Mt.1ArDlWQasMrdYIBi'
-  - _id: Uka5l2cfRQLOT0fO
-    name: Leather Jacket
-    type: armor
-    img: systems/torgeternity/images/icons/armor-icon.webp
-    effects:
-      - _id: HEEEeLAOmww6nITp
-        flags: {}
-        changes:
-          - key: system.other.toughness
-            value: '1'
-            mode: 2
-            priority: null
-          - key: system.other.armor
-            value: '1'
-            mode: 2
-            priority: null
-        disabled: false
-        duration:
-          startTime: null
-          seconds: null
-          combat: null
-          rounds: null
-          turns: null
-          startRound: null
-          startTurn: null
-        icon: icons/svg/aura.svg
-        origin: Item.7Wgz7hUbakn1W4Ao
-        tint: null
-        transfer: true
-        name: Armor +1
-        description: ''
-        statuses: []
-        _key: >-
-          !actors.items.effects!tbqGzMeQeCA3n1Mt.Uka5l2cfRQLOT0fO.HEEEeLAOmww6nITp
-    folder: null
-    sort: 3300000
-    flags:
-      core:
-        sourceId: Compendium.te001-core-rulebook.Items.34ioFwhBc4c39YFU
-    system:
-      cosm: Orrorsh
-      description: >-
-        <p>@UUID[Compendium.te001-core-rulebook.rules.pwneQ55M0nnDH0Us.JournalEntryPage.qKdamp4rrcX6TTt0#full-body/torso:]{Torso}</p>
-      techlevel: 19
-      price: '100'
-      value: 10
-      bonus: 1
-      maxDex: 12
-      minStrength: null
-      equipped: true
-      equippedClass: item-equipped
-      notes: Torso
-    ownership:
-      default: 0
-      A9LyAqagoJJU3gDH: 3
-      CtisFurQNe9h7ABb: 3
-    _stats:
-      systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
-      createdTime: 1693912461562
-      modifiedTime: 1693912974628
-      lastModifiedBy: CtisFurQNe9h7ABb
-    _key: '!actors.items!tbqGzMeQeCA3n1Mt.Uka5l2cfRQLOT0fO'
   - _id: 0dEHsnxKa5BHwwYS
     name: Climbing Gear
     type: gear
@@ -681,6 +617,42 @@ items:
       modifiedTime: 1693913090547
       lastModifiedBy: CtisFurQNe9h7ABb
     _key: '!actors.items!tbqGzMeQeCA3n1Mt.afSWn6GATHVmNMLW'
+  - _id: OMBiOTq5oRqbacsG
+    name: Leather Jacket
+    type: armor
+    img: systems/torgeternity/images/icons/armor-icon.webp
+    effects: []
+    folder: null
+    sort: 200000
+    flags:
+      core:
+        sourceId: Compendium.te001-core-rulebook.Items.Item.34ioFwhBc4c39YFU
+    system:
+      cosm: Core Earth
+      description: >-
+        <p>@UUID[Compendium.te001-core-rulebook.rules.pwneQ55M0nnDH0Us.JournalEntryPage.qKdamp4rrcX6TTt0#full-body/torso:]{Torso}</p>
+      price: '100'
+      techlevel: 19
+      value: 10
+      bonus: 1
+      equipped: true
+      equippedClass: item-equipped
+      maxDex: 12
+      minStrength: null
+      notes: Torso
+      fatigue: null
+    ownership:
+      default: 0
+      A9LyAqagoJJU3gDH: 3
+      CtisFurQNe9h7ABb: 3
+    _stats:
+      systemId: torgeternity
+      systemVersion: 3.7.0
+      coreVersion: '11.315'
+      createdTime: 1711551146690
+      modifiedTime: 1711704951145
+      lastModifiedBy: CtisFurQNe9h7ABb
+    _key: '!actors.items!tbqGzMeQeCA3n1Mt.OMBiOTq5oRqbacsG'
 effects:
   - icon: icons/svg/aura.svg
     origin: >-
@@ -707,35 +679,6 @@ effects:
     description: ''
     statuses: []
     _key: '!actors.effects!tbqGzMeQeCA3n1Mt.zlNXxh3cq6A1F3Bm'
-  - _id: 1hHvAG2xDAiLEiPr
-    flags: {}
-    changes:
-      - key: system.other.toughness
-        value: '1'
-        mode: 2
-        priority: null
-      - key: system.other.armor
-        value: '1'
-        mode: 2
-        priority: null
-    disabled: false
-    duration:
-      startTime: 0
-      seconds: null
-      combat: null
-      rounds: null
-      turns: null
-      startRound: null
-      startTurn: null
-    icon: icons/svg/aura.svg
-    origin: >-
-      Compendium.torgeternity.archetypes.Actor.tbqGzMeQeCA3n1Mt.Item.Uka5l2cfRQLOT0fO
-    tint: null
-    transfer: false
-    name: Armor +1
-    description: ''
-    statuses: []
-    _key: '!actors.effects!tbqGzMeQeCA3n1Mt.1hHvAG2xDAiLEiPr'
 folder: null
 sort: 100001
 flags: {}
@@ -1202,10 +1145,10 @@ prototypeToken:
   detectionModes: []
 _stats:
   systemId: torgeternity
-  systemVersion: 3.1.1
-  coreVersion: '11.308'
+  systemVersion: 3.7.0
+  coreVersion: '11.315'
   createdTime: 1693912855771
-  modifiedTime: 1694869257277
+  modifiedTime: 1711704951145
   lastModifiedBy: CtisFurQNe9h7ABb
 _key: '!actors!tbqGzMeQeCA3n1Mt'
 

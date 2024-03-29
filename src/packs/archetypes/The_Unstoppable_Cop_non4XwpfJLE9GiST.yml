@@ -354,84 +354,6 @@ items:
       modifiedTime: 1693914872301
       lastModifiedBy: CtisFurQNe9h7ABb
     _key: '!actors.items!non4XwpfJLE9GiST.um7IpTMm9O9yoHyJ'
-  - _id: JGi6CEUQVRcepAKC
-    name: Ballistic/Kevlar Vest
-    type: armor
-    img: systems/torgeternity/images/icons/armor-icon.webp
-    effects:
-      - _id: 9ymLEqwqQu84dE3Z
-        flags: {}
-        changes:
-          - key: system.other.toughness
-            mode: 2
-            value: '4'
-            priority: null
-          - key: system.other.armor
-            mode: 2
-            value: '4'
-            priority: null
-          - key: system.other.fatigue
-            mode: 2
-            value: '1'
-            priority: null
-        disabled: false
-        duration:
-          startTime: null
-          seconds: null
-          combat: null
-          rounds: null
-          turns: null
-          startRound: null
-          startTurn: null
-        icon: icons/svg/aura.svg
-        origin: Item.ec5YdyhXgjNxP47h
-        tint: null
-        transfer: true
-        name: Armor +4, Fatigues
-        description: ''
-        statuses: []
-        _key: >-
-          !actors.items.effects!non4XwpfJLE9GiST.JGi6CEUQVRcepAKC.9ymLEqwqQu84dE3Z
-    folder: null
-    sort: 42900000
-    flags:
-      core:
-        sourceId: Compendium.te001-core-rulebook.Items.lUVVQi2BmucoAM0E
-    system:
-      cosm: Core Earth
-      description: >-
-        <p>@UUID[Compendium.te001-core-rulebook.rules.pwneQ55M0nnDH0Us.JournalEntryPage.qKdamp4rrcX6TTt0#full-body/torso:]{Torso}</p>
-
-        <p>@UUID[Compendium.te001-core-rulebook.rules.pwneQ55M0nnDH0Us.JournalEntryPage.qKdamp4rrcX6TTt0#fatigues:]{Fatigues}</p>
-
-        <p>Also known as bulletproof vests or Kevlar armor. Made of synthetic
-        material designed to catch and stop bullets as they spin into different
-        protective layers.</p>
-
-        <p>&nbsp;</p>
-
-        <p>Found in <strong>Core Rules</strong></p>
-      techlevel: 22
-      price: '250'
-      value: 12
-      bonus: 4
-      maxDex: 10
-      minStrength: null
-      equipped: true
-      equippedClass: item-equipped
-      notes: Torso, Fatigues
-    ownership:
-      default: 0
-      A9LyAqagoJJU3gDH: 3
-      CtisFurQNe9h7ABb: 3
-    _stats:
-      systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
-      createdTime: 1693914881260
-      modifiedTime: 1693914881265
-      lastModifiedBy: CtisFurQNe9h7ABb
-    _key: '!actors.items!non4XwpfJLE9GiST.JGi6CEUQVRcepAKC'
   - _id: RCKN2Q1yd7kkWeRT
     name: Multi-Tool
     type: gear
@@ -522,40 +444,53 @@ items:
       modifiedTime: 1693914933348
       lastModifiedBy: CtisFurQNe9h7ABb
     _key: '!actors.items!non4XwpfJLE9GiST.WCcrMD3PJGI2XPWL'
-effects:
-  - _id: LRILn8FQkH7zQHC9
-    flags: {}
-    changes:
-      - key: system.other.toughness
-        mode: 2
-        value: '4'
-        priority: null
-      - key: system.other.armor
-        mode: 2
-        value: '4'
-        priority: null
-      - key: system.other.fatigue
-        mode: 2
-        value: '1'
-        priority: null
-    disabled: false
-    duration:
-      startTime: 0
-      seconds: null
-      combat: null
-      rounds: null
-      turns: null
-      startRound: null
-      startTurn: null
-    icon: icons/svg/aura.svg
-    origin: >-
-      Compendium.torgeternity.archetypes.Actor.non4XwpfJLE9GiST.Item.JGi6CEUQVRcepAKC
-    tint: null
-    transfer: false
-    name: Armor +4, Fatigues
-    description: ''
-    statuses: []
-    _key: '!actors.effects!non4XwpfJLE9GiST.LRILn8FQkH7zQHC9'
+  - _id: 1jhdApzFS5pZJkoZ
+    name: Ballistic/Kevlar Vest
+    type: armor
+    img: systems/torgeternity/images/icons/armor-icon.webp
+    effects: []
+    folder: null
+    sort: 42900000
+    flags:
+      core:
+        sourceId: Compendium.te001-core-rulebook.Items.Item.lUVVQi2BmucoAM0E
+    system:
+      cosm: Core Earth
+      description: >-
+        <p>@UUID[Compendium.te001-core-rulebook.rules.pwneQ55M0nnDH0Us.JournalEntryPage.qKdamp4rrcX6TTt0#full-body/torso:]{Torso}</p>
+
+        <p>@UUID[Compendium.te001-core-rulebook.rules.pwneQ55M0nnDH0Us.JournalEntryPage.qKdamp4rrcX6TTt0#fatigues:]{Fatigues}</p>
+
+        <p>Also known as bulletproof vests or Kevlar armor. Made of synthetic
+        material designed to catch and stop bullets as they spin into different
+        protective layers.</p>
+
+        <p>&nbsp;</p>
+
+        <p>Found in <strong>Core Rules</strong></p>
+      price: '250'
+      techlevel: 22
+      value: 12
+      bonus: 4
+      equipped: true
+      equippedClass: item-equipped
+      maxDex: 10
+      minStrength: null
+      notes: Torso, Fatigues
+      fatigue: 1
+    ownership:
+      default: 0
+      A9LyAqagoJJU3gDH: 3
+      CtisFurQNe9h7ABb: 3
+    _stats:
+      systemId: torgeternity
+      systemVersion: 3.7.0
+      coreVersion: '11.315'
+      createdTime: 1711551146882
+      modifiedTime: 1711704217229
+      lastModifiedBy: CtisFurQNe9h7ABb
+    _key: '!actors.items!non4XwpfJLE9GiST.1jhdApzFS5pZJkoZ'
+effects: []
 folder: null
 sort: 100001
 flags: {}
@@ -960,7 +895,7 @@ system:
 
       </ul>
     race: human
-  editstate: null
+  editstate: false
   fatigue: '1'
 ownership:
   default: 0
@@ -1024,10 +959,10 @@ prototypeToken:
   detectionModes: []
 _stats:
   systemId: torgeternity
-  systemVersion: 3.1.1
-  coreVersion: '11.308'
+  systemVersion: 3.7.0
+  coreVersion: '11.315'
   createdTime: 1693914682084
-  modifiedTime: 1693914937564
+  modifiedTime: 1711704217229
   lastModifiedBy: CtisFurQNe9h7ABb
 _key: '!actors!non4XwpfJLE9GiST'
 

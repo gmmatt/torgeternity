@@ -326,83 +326,6 @@ items:
       modifiedTime: 1693914426740
       lastModifiedBy: CtisFurQNe9h7ABb
     _key: '!actors.items!ys0MhNx2uIG2ORAD.3cpjqoL7Qu1R3hNm'
-  - _id: qkv2NnYcyIjWJVEP
-    name: Diffrax Plate
-    type: armor
-    img: systems/torgeternity/images/icons/armor-icon.webp
-    effects:
-      - _id: ZG2C28w8MthXs0or
-        flags: {}
-        changes:
-          - key: system.other.toughness
-            mode: 2
-            value: '3'
-            priority: null
-          - key: system.other.armor
-            mode: 2
-            value: '3'
-            priority: null
-          - key: system.other.fatigue
-            mode: 2
-            value: '1'
-            priority: null
-        disabled: false
-        duration:
-          startTime: null
-          seconds: null
-          combat: null
-          rounds: null
-          turns: null
-          startRound: null
-          startTurn: null
-        icon: icons/svg/aura.svg
-        origin: Item.yLttY1L9GtJZF6rr
-        tint: null
-        transfer: true
-        name: Armor +3, Fatigues
-        description: ''
-        statuses: []
-        _key: >-
-          !actors.items.effects!ys0MhNx2uIG2ORAD.qkv2NnYcyIjWJVEP.ZG2C28w8MthXs0or
-    folder: null
-    sort: 52500000
-    flags:
-      core:
-        sourceId: Compendium.te001-core-rulebook.Items.wP7vzluooDeOtebZ
-    system:
-      cosm: Tharkold
-      description: >-
-        <p>@UUID[Compendium.te001-core-rulebook.rules.pwneQ55M0nnDH0Us.JournalEntryPage.qKdamp4rrcX6TTt0#fatigues:]{Fatigues}</p>
-
-        <p>Black metallic armor cobbled together from energy-diffusing salvage.
-        It resembles obsidian, and energy skitters across its surface, sizzling
-        and popping until it coalesces and re-emerges projected at some
-        different angle.</p>
-
-        <p>&nbsp;</p>
-
-        <p>Found in <strong>Core Rules</strong></p>
-      techlevel: 25
-      price: '500'
-      value: 13
-      bonus: 3
-      maxDex: 8
-      minStrength: 8
-      equipped: true
-      equippedClass: item-equipped
-      notes: Fatigues, bonus adds to dodge vs. energy weapons
-    ownership:
-      default: 0
-      A9LyAqagoJJU3gDH: 3
-      CtisFurQNe9h7ABb: 3
-    _stats:
-      systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
-      createdTime: 1693914440501
-      modifiedTime: 1693914440506
-      lastModifiedBy: CtisFurQNe9h7ABb
-    _key: '!actors.items!ys0MhNx2uIG2ORAD.qkv2NnYcyIjWJVEP'
   - _id: y7Vavfy3rgxzs0mG
     name: Filter Mask
     type: gear
@@ -622,40 +545,52 @@ items:
       modifiedTime: 1693914625530
       lastModifiedBy: CtisFurQNe9h7ABb
     _key: '!actors.items!ys0MhNx2uIG2ORAD.6QxM5pY3h7MRaTHM'
+  - _id: ryISQSHD5wRghm0e
+    name: Diffrax Plate
+    type: armor
+    img: systems/torgeternity/images/icons/armor-icon.webp
+    effects: []
+    folder: null
+    sort: 52500000
+    flags:
+      core:
+        sourceId: Compendium.te001-core-rulebook.Items.Item.wP7vzluooDeOtebZ
+    system:
+      cosm: Tharkold
+      description: >-
+        <p>@UUID[Compendium.te001-core-rulebook.rules.pwneQ55M0nnDH0Us.JournalEntryPage.qKdamp4rrcX6TTt0#fatigues:]{Fatigues}</p>
+
+        <p>Black metallic armor cobbled together from energy-diffusing salvage.
+        It resembles obsidian, and energy skitters across its surface, sizzling
+        and popping until it coalesces and re-emerges projected at some
+        different angle.</p>
+
+        <p>&nbsp;</p>
+
+        <p>Found in <strong>Core Rules</strong></p>
+      price: '500'
+      techlevel: 25
+      value: 13
+      bonus: 3
+      equipped: true
+      equippedClass: item-equipped
+      maxDex: 8
+      minStrength: 8
+      notes: Fatigues, bonus adds to dodge vs. energy weapons
+      fatigue: 1
+    ownership:
+      default: 0
+      A9LyAqagoJJU3gDH: 3
+      CtisFurQNe9h7ABb: 3
+    _stats:
+      systemId: torgeternity
+      systemVersion: 3.7.0
+      coreVersion: '11.315'
+      createdTime: 1711551146924
+      modifiedTime: 1711705159429
+      lastModifiedBy: CtisFurQNe9h7ABb
+    _key: '!actors.items!ys0MhNx2uIG2ORAD.ryISQSHD5wRghm0e'
 effects:
-  - _id: pdOPxyzBxWluaYTE
-    flags: {}
-    changes:
-      - key: system.other.toughness
-        mode: 2
-        value: '3'
-        priority: null
-      - key: system.other.armor
-        mode: 2
-        value: '3'
-        priority: null
-      - key: system.other.fatigue
-        mode: 2
-        value: '1'
-        priority: null
-    disabled: false
-    duration:
-      startTime: 0
-      seconds: null
-      combat: null
-      rounds: null
-      turns: null
-      startRound: null
-      startTurn: null
-    icon: icons/svg/aura.svg
-    origin: >-
-      Compendium.torgeternity.archetypes.Actor.ys0MhNx2uIG2ORAD.Item.qkv2NnYcyIjWJVEP
-    tint: null
-    transfer: false
-    name: Armor +3, Fatigues
-    description: ''
-    statuses: []
-    _key: '!actors.effects!ys0MhNx2uIG2ORAD.pdOPxyzBxWluaYTE'
   - icon: icons/svg/aura.svg
     origin: >-
       Compendium.torgeternity.archetypes.Actor.ys0MhNx2uIG2ORAD.Item.6QxM5pY3h7MRaTHM
@@ -667,7 +602,7 @@ effects:
       turns: null
       startRound: null
       startTurn: null
-    disabled: false
+    disabled: true
     name: Strength +2 (Arm)
     _id: hJopDtTRygZm4OjO
     changes:
@@ -1172,10 +1107,10 @@ prototypeToken:
   detectionModes: []
 _stats:
   systemId: torgeternity
-  systemVersion: 3.1.1
-  coreVersion: '11.308'
+  systemVersion: 3.7.0
+  coreVersion: '11.315'
   createdTime: 1693914389548
-  modifiedTime: 1693914666436
+  modifiedTime: 1711705164257
   lastModifiedBy: CtisFurQNe9h7ABb
 _key: '!actors!ys0MhNx2uIG2ORAD'
 

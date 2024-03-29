@@ -131,102 +131,6 @@ items:
       modifiedTime: 1694868215692
       lastModifiedBy: CtisFurQNe9h7ABb
     _key: '!actors.items!wOWoLWP2MiJsQ1Vr.fTrf5YWN4AHjo5Rd'
-  - _id: jqiacNIAfU9kIrUI
-    name: Diffraxplattenrüstung
-    type: armor
-    img: systems/torgeternity/images/icons/armor-icon.webp
-    effects:
-      - _id: oPRw0RQVk9rYL9az
-        changes:
-          - key: system.other.toughness
-            mode: 2
-            value: '3'
-            priority: null
-          - key: system.other.armor
-            mode: 2
-            value: '3'
-            priority: null
-        disabled: false
-        duration:
-          startTime: null
-          seconds: null
-          combat: null
-          rounds: null
-          turns: null
-          startRound: null
-          startTurn: null
-        icon: icons/svg/aura.svg
-        origin: Item.nvfE5QkiyYYi13bH
-        transfer: true
-        flags: {}
-        tint: null
-        name: Rüstung +3
-        description: ''
-        statuses: []
-        _key: >-
-          !actors.items.effects!wOWoLWP2MiJsQ1Vr.jqiacNIAfU9kIrUI.oPRw0RQVk9rYL9az
-      - _id: RsBPwdekd16EHOCw
-        changes:
-          - key: system.other.fatigue
-            mode: 2
-            value: '1'
-            priority: null
-        disabled: false
-        duration:
-          startTime: null
-          seconds: null
-          combat: null
-          rounds: null
-          turns: null
-          startRound: null
-          startTurn: null
-        icon: icons/svg/aura.svg
-        origin: Compendium.te001-core-rulebook.grw-de-ausruestung.lAjH7TpknFEg0r9V
-        transfer: true
-        flags: {}
-        tint: null
-        name: Ermüdung
-        description: ''
-        statuses: []
-        _key: >-
-          !actors.items.effects!wOWoLWP2MiJsQ1Vr.jqiacNIAfU9kIrUI.RsBPwdekd16EHOCw
-    folder: null
-    sort: 25000000
-    flags:
-      core:
-        sourceId: >-
-          Compendium.te001-core-rulebook.grw-de-ausruestung.Item.lAjH7TpknFEg0r9V
-    system:
-      cosm: Tharkold
-      description: >-
-        <p>@UUID[Compendium.te001-core-rulebook.grw-de-grw.Qlx6yGF0Mmo6Xzrv.JournalEntryPage.7GGUUHzuYIqGPXDO#ermudung:]{Erm&uuml;dung}</p>
-
-        <p>Diese R&uuml;stung besteht aus einem schwarzen Metall, das an
-        Obsidian erinnert und aus dem Schrott von energieablenkenden
-        Panzerplatten gewonnen wurde. Auftreffende Energiestrahlen zucken
-        brutzelnd und knallend &uuml;ber ihre Oberfl&auml;che und werden dann in
-        einem zuf&auml;lligen Winkel zur&uuml;ckgeworfen.</p>
-      techlevel: 25
-      price: '500'
-      value: 13
-      bonus: 3
-      maxDex: 8
-      minStrength: 8
-      equipped: true
-      equippedClass: item-equipped
-      notes: Ermüdung, Bonus gilt auch für Ausweichen gegen Energiewaffen.
-    ownership:
-      default: 0
-      9Q0XnqFwko7hRlvL: 3
-      CtisFurQNe9h7ABb: 3
-    _stats:
-      systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
-      createdTime: 1694868223532
-      modifiedTime: 1694868223537
-      lastModifiedBy: CtisFurQNe9h7ABb
-    _key: '!actors.items!wOWoLWP2MiJsQ1Vr.jqiacNIAfU9kIrUI'
   - name: Filtermaske
     type: gear
     img: systems/torgeternity/images/icons/gear-icon.webp
@@ -639,68 +543,57 @@ items:
       modifiedTime: 1694868489377
       lastModifiedBy: CtisFurQNe9h7ABb
     _key: '!actors.items!wOWoLWP2MiJsQ1Vr.o4fLdHCWhNgkpRht'
+  - _id: 9ZH2I54xOn8z9G0M
+    name: Diffraxplattenrüstung
+    type: armor
+    img: systems/torgeternity/images/icons/armor-icon.webp
+    effects: []
+    folder: null
+    sort: 25000000
+    flags:
+      core:
+        sourceId: >-
+          Compendium.te001-core-rulebook.grw-de-ausruestung.Item.lAjH7TpknFEg0r9V
+    system:
+      cosm: Tharkold
+      description: >-
+        <p>@UUID[Compendium.te001-core-rulebook.grw-de-grw.Qlx6yGF0Mmo6Xzrv.JournalEntryPage.7GGUUHzuYIqGPXDO#ermudung:]{Erm&uuml;dung}</p>
+
+        <p>Diese R&uuml;stung besteht aus einem schwarzen Metall, das an
+        Obsidian erinnert und aus dem Schrott von energieablenkenden
+        Panzerplatten gewonnen wurde. Auftreffende Energiestrahlen zucken
+        brutzelnd und knallend &uuml;ber ihre Oberfl&auml;che und werden dann in
+        einem zuf&auml;lligen Winkel zur&uuml;ckgeworfen.</p>
+      price: '500'
+      techlevel: 25
+      value: 13
+      bonus: 3
+      equipped: true
+      equippedClass: item-equipped
+      maxDex: 8
+      minStrength: 8
+      notes: Ermüdung, Bonus gilt auch für Ausweichen gegen Energiewaffen.
+      fatigue: 1
+    ownership:
+      default: 0
+      9Q0XnqFwko7hRlvL: 3
+      CtisFurQNe9h7ABb: 3
+    _stats:
+      systemId: torgeternity
+      systemVersion: 3.7.0
+      coreVersion: '11.315'
+      createdTime: 1711562366193
+      modifiedTime: 1711706363197
+      lastModifiedBy: CtisFurQNe9h7ABb
+    _key: '!actors.items!wOWoLWP2MiJsQ1Vr.9ZH2I54xOn8z9G0M'
 effects:
-  - _id: 8CZNvCMyFOInZCeo
-    changes:
-      - key: system.other.toughness
-        mode: 2
-        value: '3'
-        priority: null
-      - key: system.other.armor
-        mode: 2
-        value: '3'
-        priority: null
-    disabled: false
-    duration:
-      startTime: 0
-      seconds: null
-      combat: null
-      rounds: null
-      turns: null
-      startRound: null
-      startTurn: null
-    icon: icons/svg/aura.svg
-    origin: >-
-      Compendium.torgeternity.system-de-archetypen.Actor.wOWoLWP2MiJsQ1Vr.Item.jqiacNIAfU9kIrUI
-    transfer: false
-    flags: {}
-    tint: null
-    name: Rüstung +3
-    description: ''
-    statuses: []
-    _key: '!actors.effects!wOWoLWP2MiJsQ1Vr.8CZNvCMyFOInZCeo'
-  - _id: 9PbXrVGwn8adm5cN
-    changes:
-      - key: system.other.fatigue
-        mode: 2
-        value: '1'
-        priority: null
-    disabled: false
-    duration:
-      startTime: 0
-      seconds: null
-      combat: null
-      rounds: null
-      turns: null
-      startRound: null
-      startTurn: null
-    icon: icons/svg/aura.svg
-    origin: >-
-      Compendium.torgeternity.system-de-archetypen.Actor.wOWoLWP2MiJsQ1Vr.Item.jqiacNIAfU9kIrUI
-    transfer: false
-    flags: {}
-    tint: null
-    name: Ermüdung
-    description: ''
-    statuses: []
-    _key: '!actors.effects!wOWoLWP2MiJsQ1Vr.9PbXrVGwn8adm5cN'
   - _id: Rhb58OAkOKdswdXy
     changes:
       - key: system.attributes.strength
         mode: 2
         value: '2'
         priority: null
-    disabled: false
+    disabled: true
     duration:
       startTime: 0
       seconds: null
@@ -1222,10 +1115,10 @@ prototypeToken:
   detectionModes: []
 _stats:
   systemId: torgeternity
-  systemVersion: 3.1.1
-  coreVersion: '11.308'
+  systemVersion: 3.7.0
+  coreVersion: '11.315'
   createdTime: 1694868197071
-  modifiedTime: 1694868492456
+  modifiedTime: 1711706365981
   lastModifiedBy: CtisFurQNe9h7ABb
 _key: '!actors!wOWoLWP2MiJsQ1Vr'
 
