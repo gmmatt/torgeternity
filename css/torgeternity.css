@@ -4008,6 +4008,10 @@ form.actor-sheet.threat img.profile-img {
   border: none;
   margin: 5px 5px 5px 5px;
   height: 20px;
+  display:flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .window-content .actor-sheet .threat-sidebar .sidebar-statline .sidebar-statline-left {
@@ -4022,8 +4026,8 @@ form.actor-sheet.threat img.profile-img {
   text-align: center;
 }
 
-.window-content .actor-sheet .threat-sidebar .sidebar-statline .sidebar-statline-right {
-  float: right;
+.window-content .actor-sheet .threat-sidebar .sidebar-statline .sidebar-statline-right, .sidebar-statline-right > * {
+  padding: 1px 3px;
 }
 
 .window-content .actor-sheet .threat-sidebar img {
