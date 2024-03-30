@@ -1018,7 +1018,7 @@ Hooks.on('deleteCombat', async (combat, dataUpdate) => {
 });
 
 Hooks.on('deleteActor', async (actor, data1, data2) => {
-  if (!game.user.isGM) return;
+  if (!game.user.isGM || actor.type != 'stormknight') return;
   actor.getDefaultHand().delete();
 });
 
