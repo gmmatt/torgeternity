@@ -29,78 +29,6 @@ items:
       modifiedTime: 1693910172992
       lastModifiedBy: CtisFurQNe9h7ABb
     _key: '!actors.items!cdSvyJHbG0GbFzkh.ppzqLywwc7NrsWMn'
-  - _id: w6iGF4iaTeGXZSFH
-    name: Leather Jerkin
-    type: armor
-    img: systems/torgeternity/images/icons/armor-icon.webp
-    effects:
-      - _id: HEEEeLAOmww6nITp
-        flags: {}
-        changes:
-          - key: system.other.toughness
-            value: '1'
-            mode: 2
-            priority: null
-          - key: system.other.armor
-            value: '1'
-            mode: 2
-            priority: null
-        disabled: false
-        duration:
-          startTime: null
-          seconds: null
-          combat: null
-          rounds: null
-          turns: null
-          startRound: null
-          startTurn: null
-        icon: icons/svg/aura.svg
-        origin: Item.7Wgz7hUbakn1W4Ao
-        tint: null
-        transfer: true
-        name: Armor +1
-        description: ''
-        statuses: []
-        _key: >-
-          !actors.items.effects!cdSvyJHbG0GbFzkh.w6iGF4iaTeGXZSFH.HEEEeLAOmww6nITp
-    folder: null
-    sort: 3300000
-    flags:
-      core:
-        sourceId: Compendium.te001-core-rulebook.Items.34ioFwhBc4c39YFU
-    system:
-      cosm: Aysle
-      description: >-
-        <p>@UUID[Compendium.te001-core-rulebook.rules.pwneQ55M0nnDH0Us.JournalEntryPage.qKdamp4rrcX6TTt0#full-body/torso:]{Torso}</p>
-
-        <p>Animal hides tanned or boiled to a stiffer, more durable finish, then
-        reinforced with studs or stitched seams. Found in some form in every
-        cosm.</p>
-
-        <p>&nbsp;</p>
-
-        <p>Found in <strong>Core Rules</strong></p>
-      techlevel: 8
-      price: '100'
-      value: 10
-      bonus: 1
-      maxDex: 12
-      minStrength: null
-      equipped: true
-      equippedClass: item-equipped
-      notes: Torso
-    ownership:
-      default: 0
-      A9LyAqagoJJU3gDH: 3
-      CtisFurQNe9h7ABb: 3
-    _stats:
-      systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
-      createdTime: 1693910142531
-      modifiedTime: 1693910142536
-      lastModifiedBy: CtisFurQNe9h7ABb
-    _key: '!actors.items!cdSvyJHbG0GbFzkh.w6iGF4iaTeGXZSFH'
   - _id: haZJ2A3wPH74aOBw
     name: Composite Longbow
     type: missileweapon
@@ -824,36 +752,51 @@ items:
       modifiedTime: 1693910381587
       lastModifiedBy: CtisFurQNe9h7ABb
     _key: '!actors.items!cdSvyJHbG0GbFzkh.jYmAGel8tlmPept4'
-effects:
-  - _id: bBYCGYkgQAUWKBcN
-    flags: {}
-    changes:
-      - key: system.other.toughness
-        value: '1'
-        mode: 2
-        priority: null
-      - key: system.other.armor
-        value: '1'
-        mode: 2
-        priority: null
-    disabled: false
-    duration:
-      startTime: 0
-      seconds: null
-      combat: null
-      rounds: null
-      turns: null
-      startRound: null
-      startTurn: null
-    icon: icons/svg/aura.svg
-    origin: >-
-      Compendium.torgeternity.archetypes.Actor.cdSvyJHbG0GbFzkh.Item.w6iGF4iaTeGXZSFH
-    tint: null
-    transfer: false
-    name: Armor +1
-    description: ''
-    statuses: []
-    _key: '!actors.effects!cdSvyJHbG0GbFzkh.bBYCGYkgQAUWKBcN'
+  - _id: 21KNmkaBFbvVkPRY
+    name: Leather Jerkin
+    type: armor
+    img: systems/torgeternity/images/icons/armor-icon.webp
+    effects: []
+    folder: null
+    sort: 3300000
+    flags:
+      core:
+        sourceId: Compendium.te001-core-rulebook.Items.Item.34ioFwhBc4c39YFU
+    system:
+      cosm: Aysle
+      description: >-
+        <p>@UUID[Compendium.te001-core-rulebook.rules.pwneQ55M0nnDH0Us.JournalEntryPage.qKdamp4rrcX6TTt0#full-body/torso:]{Torso}</p>
+
+        <p>Animal hides tanned or boiled to a stiffer, more durable finish, then
+        reinforced with studs or stitched seams. Found in some form in every
+        cosm.</p>
+
+        <p>&nbsp;</p>
+
+        <p>Found in <strong>Core Rules</strong></p>
+      price: '100'
+      techlevel: 8
+      value: 10
+      bonus: 1
+      equipped: true
+      equippedClass: item-equipped
+      maxDex: 12
+      minStrength: null
+      notes: Torso
+      fatigue: null
+    ownership:
+      default: 0
+      A9LyAqagoJJU3gDH: 3
+      CtisFurQNe9h7ABb: 3
+    _stats:
+      systemId: torgeternity
+      systemVersion: 3.7.0
+      coreVersion: '11.315'
+      createdTime: 1711551146690
+      modifiedTime: 1711704505534
+      lastModifiedBy: CtisFurQNe9h7ABb
+    _key: '!actors.items!cdSvyJHbG0GbFzkh.21KNmkaBFbvVkPRY'
+effects: []
 folder: null
 sort: 100001
 flags: {}
@@ -1322,10 +1265,10 @@ prototypeToken:
   detectionModes: []
 _stats:
   systemId: torgeternity
-  systemVersion: 3.1.1
-  coreVersion: '11.308'
+  systemVersion: 3.7.0
+  coreVersion: '11.315'
   createdTime: 1693910130714
-  modifiedTime: 1693912168277
+  modifiedTime: 1711704505534
   lastModifiedBy: CtisFurQNe9h7ABb
 _key: '!actors!cdSvyJHbG0GbFzkh'
 

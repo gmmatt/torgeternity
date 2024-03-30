@@ -563,70 +563,42 @@ items:
       modifiedTime: 1693910724556
       lastModifiedBy: CtisFurQNe9h7ABb
     _key: '!actors.items!8YH1e6xGG3IHb1Mm.Hsza99OCeUWSYmQq'
-  - _id: jO5Qvnnm7Oqag4jz
+  - _id: mfuWfRMGqxapJsWP
     name: Leather Jacket
     type: armor
     img: systems/torgeternity/images/icons/armor-icon.webp
-    effects:
-      - _id: HEEEeLAOmww6nITp
-        flags: {}
-        changes:
-          - key: system.other.toughness
-            value: '1'
-            mode: 2
-            priority: null
-          - key: system.other.armor
-            value: '1'
-            mode: 2
-            priority: null
-        disabled: false
-        duration:
-          startTime: null
-          seconds: null
-          combat: null
-          rounds: null
-          turns: null
-          startRound: null
-          startTurn: null
-        icon: icons/svg/aura.svg
-        origin: Item.7Wgz7hUbakn1W4Ao
-        tint: null
-        transfer: true
-        name: Armor +1
-        description: ''
-        statuses: []
-        _key: >-
-          !actors.items.effects!8YH1e6xGG3IHb1Mm.jO5Qvnnm7Oqag4jz.HEEEeLAOmww6nITp
+    effects: []
     folder: null
-    sort: 3300000
+    sort: 200000
     flags:
       core:
-        sourceId: Compendium.te001-core-rulebook.Items.34ioFwhBc4c39YFU
+        sourceId: Compendium.te001-core-rulebook.Items.Item.34ioFwhBc4c39YFU
     system:
       cosm: Core Earth
       description: >-
         <p>@UUID[Compendium.te001-core-rulebook.rules.pwneQ55M0nnDH0Us.JournalEntryPage.qKdamp4rrcX6TTt0#full-body/torso:]{Torso}</p>
+      price: '100'
       techlevel: 19
-      price: '75'
-      value: 9
+      value: 10
       bonus: 1
-      maxDex: 12
-      minStrength: null
       equipped: true
       equippedClass: item-equipped
+      maxDex: 12
+      minStrength: null
       notes: Torso
+      fatigue: null
     ownership:
       default: 0
       A9LyAqagoJJU3gDH: 3
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
-      createdTime: 1693910739365
-      modifiedTime: 1693910856254
+      systemVersion: 3.7.0
+      coreVersion: '11.315'
+      createdTime: 1711551146690
+      modifiedTime: 1711705040447
       lastModifiedBy: CtisFurQNe9h7ABb
-    _key: '!actors.items!8YH1e6xGG3IHb1Mm.jO5Qvnnm7Oqag4jz'
+    _key: '!actors.items!8YH1e6xGG3IHb1Mm.mfuWfRMGqxapJsWP'
 effects:
   - icon: icons/svg/aura.svg
     origin: >-
@@ -639,48 +611,20 @@ effects:
       turns: null
       startRound: null
       startTurn: null
-    disabled: false
+    disabled: true
     name: Unarmed Damage +2
     _id: gyrdPX6sl8dtPIem
     changes:
       - key: system.unarmedDamage
         mode: 2
         value: '2'
+        priority: null
     description: ''
     transfer: false
     statuses: []
     flags: {}
     tint: null
     _key: '!actors.effects!8YH1e6xGG3IHb1Mm.gyrdPX6sl8dtPIem'
-  - _id: cxRaT3F3XjCJaxbA
-    flags: {}
-    changes:
-      - key: system.other.toughness
-        value: '1'
-        mode: 2
-        priority: null
-      - key: system.other.armor
-        value: '1'
-        mode: 2
-        priority: null
-    disabled: false
-    duration:
-      startTime: 0
-      seconds: null
-      combat: null
-      rounds: null
-      turns: null
-      startRound: null
-      startTurn: null
-    icon: icons/svg/aura.svg
-    origin: >-
-      Compendium.torgeternity.archetypes.Actor.8YH1e6xGG3IHb1Mm.Item.jO5Qvnnm7Oqag4jz
-    tint: null
-    transfer: false
-    name: Armor +1
-    description: ''
-    statuses: []
-    _key: '!actors.effects!8YH1e6xGG3IHb1Mm.cxRaT3F3XjCJaxbA'
 folder: null
 sort: 100001
 flags: {}
@@ -1146,10 +1090,10 @@ prototypeToken:
   detectionModes: []
 _stats:
   systemId: torgeternity
-  systemVersion: 3.1.1
-  coreVersion: '11.308'
+  systemVersion: 3.7.0
+  coreVersion: '11.315'
   createdTime: 1693910524596
-  modifiedTime: 1694869367347
+  modifiedTime: 1711706548526
   lastModifiedBy: CtisFurQNe9h7ABb
 _key: '!actors!8YH1e6xGG3IHb1Mm'
 

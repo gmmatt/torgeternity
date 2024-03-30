@@ -636,100 +636,6 @@ items:
       modifiedTime: 1694868126947
       lastModifiedBy: CtisFurQNe9h7ABb
     _key: '!actors.items!54xKJBBQREaETwap.pQwYUD5tTVwa0iN2'
-  - _id: E5L9eWESBf0zPhmf
-    name: Monsterfell-Mantel
-    type: armor
-    img: systems/torgeternity/images/icons/armor-icon.webp
-    effects:
-      - _id: cpcuOmv3sJ9em3S2
-        changes:
-          - key: system.other.toughness
-            mode: 2
-            value: '2'
-            priority: null
-          - key: system.other.armor
-            mode: 2
-            value: '2'
-            priority: null
-        disabled: false
-        duration:
-          startTime: null
-          seconds: null
-          combat: null
-          rounds: null
-          turns: null
-          startRound: null
-          startTurn: null
-        icon: icons/svg/aura.svg
-        origin: Item.luUzXC2YVG7OI1cF
-        transfer: true
-        flags: {}
-        tint: null
-        name: Rüstung +2
-        description: ''
-        statuses: []
-        _key: >-
-          !actors.items.effects!54xKJBBQREaETwap.E5L9eWESBf0zPhmf.cpcuOmv3sJ9em3S2
-      - _id: hl5oaGSNnz4RdaOz
-        changes:
-          - key: system.other.fatigue
-            mode: 2
-            value: '1'
-            priority: null
-        disabled: false
-        duration:
-          startTime: null
-          seconds: null
-          combat: null
-          rounds: null
-          turns: null
-          startRound: null
-          startTurn: null
-        icon: icons/svg/aura.svg
-        origin: Compendium.te001-core-rulebook.grw-de-ausruestung.6bQe7SykCFATMjWD
-        transfer: true
-        flags: {}
-        tint: null
-        name: Ermüdung
-        description: ''
-        statuses: []
-        _key: >-
-          !actors.items.effects!54xKJBBQREaETwap.E5L9eWESBf0zPhmf.hl5oaGSNnz4RdaOz
-    folder: null
-    sort: 3400000
-    flags:
-      core:
-        sourceId: >-
-          Compendium.te001-core-rulebook.grw-de-ausruestung.Item.6bQe7SykCFATMjWD
-    system:
-      cosm: Orrorsh
-      description: >-
-        <p>@UUID[Compendium.te001-core-rulebook.grw-de-grw.Qlx6yGF0Mmo6Xzrv.JournalEntryPage.7GGUUHzuYIqGPXDO#ermudung:]{Erm&uuml;dung}</p>
-
-        <p>Ein langer Mantel aus den behandelten Fellen verschiedener Tiere, die
-        einst die Unschuldigen terrorisiert haben. Die Monster von Orrorsh sind
-        notorisch robust, sodass ihr Leder besonders haltbar ist.</p>
-      techlevel: 16
-      price: '350'
-      value: 12
-      bonus: 2
-      maxDex: 10
-      minStrength: null
-      equipped: true
-      equippedClass: item-equipped
-      notes: Ermüdung
-    ownership:
-      default: 0
-      9Q0XnqFwko7hRlvL: 3
-      CtisFurQNe9h7ABb: 3
-    _stats:
-      systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
-      createdTime: 1694868143764
-      modifiedTime: 1694868143770
-      lastModifiedBy: CtisFurQNe9h7ABb
-    _key: '!actors.items!54xKJBBQREaETwap.E5L9eWESBf0zPhmf'
   - _id: lntlAp4VUb9lNjTJ
     name: Krähenfüße
     type: gear
@@ -817,61 +723,48 @@ items:
       modifiedTime: 1694868156419
       lastModifiedBy: CtisFurQNe9h7ABb
     _key: '!actors.items!54xKJBBQREaETwap.6AtnJDCxsnKsj6Ab'
+  - _id: PxU0v0Y7eUaDyHIJ
+    name: Monsterfell-Mantel
+    type: armor
+    img: systems/torgeternity/images/icons/armor-icon.webp
+    effects: []
+    folder: null
+    sort: 3400000
+    flags:
+      core:
+        sourceId: >-
+          Compendium.te001-core-rulebook.grw-de-ausruestung.Item.6bQe7SykCFATMjWD
+    system:
+      cosm: Orrorsh
+      description: >-
+        <p>@UUID[Compendium.te001-core-rulebook.grw-de-grw.Qlx6yGF0Mmo6Xzrv.JournalEntryPage.7GGUUHzuYIqGPXDO#ermudung:]{Erm&uuml;dung}</p>
+
+        <p>Ein langer Mantel aus den behandelten Fellen verschiedener Tiere, die
+        einst die Unschuldigen terrorisiert haben. Die Monster von Orrorsh sind
+        notorisch robust, sodass ihr Leder besonders haltbar ist.</p>
+      price: '350'
+      techlevel: 16
+      value: 12
+      bonus: 2
+      equipped: true
+      equippedClass: item-equipped
+      maxDex: 10
+      minStrength: null
+      notes: Ermüdung
+      fatigue: 1
+    ownership:
+      default: 0
+      9Q0XnqFwko7hRlvL: 3
+      CtisFurQNe9h7ABb: 3
+    _stats:
+      systemId: torgeternity
+      systemVersion: 3.7.0
+      coreVersion: '11.315'
+      createdTime: 1711562366100
+      modifiedTime: 1711706151854
+      lastModifiedBy: CtisFurQNe9h7ABb
+    _key: '!actors.items!54xKJBBQREaETwap.PxU0v0Y7eUaDyHIJ'
 effects:
-  - _id: lHhX6roYZz2UukZQ
-    changes:
-      - key: system.other.toughness
-        mode: 2
-        value: '2'
-        priority: null
-      - key: system.other.armor
-        mode: 2
-        value: '2'
-        priority: null
-    disabled: false
-    duration:
-      startTime: 0
-      seconds: null
-      combat: null
-      rounds: null
-      turns: null
-      startRound: null
-      startTurn: null
-    icon: icons/svg/aura.svg
-    origin: >-
-      Compendium.torgeternity.system-de-archetypen.Actor.54xKJBBQREaETwap.Item.E5L9eWESBf0zPhmf
-    transfer: false
-    flags: {}
-    tint: null
-    name: Rüstung +2
-    description: ''
-    statuses: []
-    _key: '!actors.effects!54xKJBBQREaETwap.lHhX6roYZz2UukZQ'
-  - _id: gBOTxsFpgcoHI8A6
-    changes:
-      - key: system.other.fatigue
-        mode: 2
-        value: '1'
-        priority: null
-    disabled: false
-    duration:
-      startTime: 0
-      seconds: null
-      combat: null
-      rounds: null
-      turns: null
-      startRound: null
-      startTurn: null
-    icon: icons/svg/aura.svg
-    origin: >-
-      Compendium.torgeternity.system-de-archetypen.Actor.54xKJBBQREaETwap.Item.E5L9eWESBf0zPhmf
-    transfer: false
-    flags: {}
-    tint: null
-    name: Ermüdung
-    description: ''
-    statuses: []
-    _key: '!actors.effects!54xKJBBQREaETwap.gBOTxsFpgcoHI8A6'
   - _id: tR4EzLKHTSRgSVVO
     changes:
       - key: system.skills.maneuver.isFav
@@ -1377,9 +1270,10 @@ prototypeToken:
   detectionModes: []
 _stats:
   systemId: torgeternity
-  systemVersion: 3.1.1
-  coreVersion: '11.308'
+  systemVersion: 3.7.0
+  coreVersion: '11.315'
   createdTime: 1694867975270
-  modifiedTime: 1694868160440
+  modifiedTime: 1711706151854
   lastModifiedBy: CtisFurQNe9h7ABb
 _key: '!actors!54xKJBBQREaETwap'
+

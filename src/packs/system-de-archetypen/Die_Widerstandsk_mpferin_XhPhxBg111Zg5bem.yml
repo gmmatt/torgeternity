@@ -311,142 +311,6 @@ items:
       modifiedTime: 1694863291067
       lastModifiedBy: CtisFurQNe9h7ABb
     _key: '!actors.items!XhPhxBg111Zg5bem.XxAQ2D8TP4ijh9wf'
-  - _id: xvw91FNoDE9mzEu0
-    name: Stichschutzweste
-    type: armor
-    img: systems/torgeternity/images/icons/armor-icon.webp
-    effects:
-      - _id: APj6JtC8NsHb1O2i
-        changes:
-          - key: system.other.toughness
-            mode: 2
-            value: '3'
-            priority: null
-          - key: system.other.armor
-            mode: 2
-            value: '3'
-            priority: null
-        disabled: false
-        duration:
-          startTime: null
-          seconds: null
-          combat: null
-          rounds: null
-          turns: null
-          startRound: null
-          startTurn: null
-        icon: icons/svg/aura.svg
-        origin: Item.UDglwF5HvyVX2dwJ
-        transfer: true
-        flags: {}
-        tint: null
-        name: Rüstung +3
-        description: ''
-        statuses: []
-        _key: >-
-          !actors.items.effects!XhPhxBg111Zg5bem.xvw91FNoDE9mzEu0.APj6JtC8NsHb1O2i
-    folder: null
-    sort: 100000
-    flags:
-      core:
-        sourceId: >-
-          Compendium.te001-core-rulebook.grw-de-ausruestung.Item.NS8rwrLbP6hgW4VF
-    system:
-      cosm: Zentralerde
-      description: >-
-        <p>@UUID[Compendium.te001-core-rulebook.grw-de-grw.Qlx6yGF0Mmo6Xzrv.JournalEntryPage.7GGUUHzuYIqGPXDO#ganzkorper/torso:]{Torso}</p>
-
-        <p>Leichter und bequemer als eine Flakweste und vor allem daf&uuml;r
-        ausgelegt, die Schneidund Stichwirkung von Nahkampfwaffen zu stoppen.
-        Wirkt aber auch gegen Kugeln.</p>
-      techlevel: 23
-      price: '200'
-      value: 11
-      bonus: 3
-      maxDex: 10
-      minStrength: null
-      equipped: true
-      equippedClass: item-equipped
-      notes: Torso
-    ownership:
-      default: 0
-      9Q0XnqFwko7hRlvL: 3
-      CtisFurQNe9h7ABb: 3
-    _stats:
-      systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
-      createdTime: 1694863326072
-      modifiedTime: 1694863363522
-      lastModifiedBy: CtisFurQNe9h7ABb
-    _key: '!actors.items!XhPhxBg111Zg5bem.xvw91FNoDE9mzEu0'
-  - name: Lederrüstung
-    type: armor
-    img: systems/torgeternity/images/icons/armor-icon.webp
-    effects:
-      - _id: YMQ5eMR8pHjSA7N7
-        changes:
-          - key: system.other.toughness
-            mode: 2
-            value: '1'
-            priority: null
-          - key: system.other.armor
-            mode: 2
-            value: '1'
-            priority: null
-        disabled: false
-        duration:
-          startTime: null
-          seconds: null
-          combat: null
-          rounds: null
-          turns: null
-          startRound: null
-          startTurn: null
-        icon: icons/svg/aura.svg
-        origin: Item.eZrVTocDByVQyEno
-        transfer: true
-        flags: {}
-        tint: null
-        name: Rüstung +1
-        description: ''
-        statuses: []
-        _key: >-
-          !actors.items.effects!XhPhxBg111Zg5bem.wXSp28fJYOrzITek.YMQ5eMR8pHjSA7N7
-    folder: null
-    sort: 0
-    flags:
-      core:
-        sourceId: >-
-          Compendium.te001-core-rulebook.grw-de-ausruestung.Item.Fut420hs61X914Gu
-    _id: wXSp28fJYOrzITek
-    system:
-      cosm: Aysle
-      description: >-
-        <p>Tierh&auml;ute wurden zu einer steifen, haltbaren Oberfl&auml;che
-        gegerbt oder gekocht und danach mit Nieten oder Steppn&auml;hten
-        verst&auml;rkt. L&auml;sst sich in allen Cosms antreffen.</p>
-      techlevel: 8
-      price: '150'
-      value: 11
-      bonus: 1
-      maxDex: 10
-      minStrength: null
-      equipped: false
-      equippedClass: item-unequipped
-      notes: ''
-    ownership:
-      default: 0
-      9Q0XnqFwko7hRlvL: 3
-      CtisFurQNe9h7ABb: 3
-    _stats:
-      systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
-      createdTime: 1694863331591
-      modifiedTime: 1694863363525
-      lastModifiedBy: CtisFurQNe9h7ABb
-    _key: '!actors.items!XhPhxBg111Zg5bem.wXSp28fJYOrzITek'
   - _id: xTmq5Ts7LszCQJFh
     name: Krähenfüße
     type: gear
@@ -958,65 +822,87 @@ items:
     _id: nhRhAawVMBao1keF
     sort: 0
     _key: '!actors.items!XhPhxBg111Zg5bem.nhRhAawVMBao1keF'
+  - name: Lederrüstung
+    type: armor
+    img: systems/torgeternity/images/icons/armor-icon.webp
+    effects: []
+    folder: null
+    sort: 7300000
+    flags:
+      core:
+        sourceId: >-
+          Compendium.te001-core-rulebook.grw-de-ausruestung.Item.Fut420hs61X914Gu
+    _id: H4hQ7REH5pEiSwwx
+    system:
+      cosm: Aysle
+      description: >-
+        <p>Tierh&auml;ute wurden zu einer steifen, haltbaren Oberfl&auml;che
+        gegerbt oder gekocht und danach mit Nieten oder Steppn&auml;hten
+        verst&auml;rkt. L&auml;sst sich in allen Cosms antreffen.</p>
+      price: '150'
+      techlevel: 8
+      value: 11
+      bonus: 1
+      equipped: false
+      equippedClass: item-unequipped
+      maxDex: 10
+      minStrength: null
+      notes: ''
+      fatigue: null
+    ownership:
+      default: 0
+      9Q0XnqFwko7hRlvL: 3
+      CtisFurQNe9h7ABb: 3
+    _stats:
+      systemId: torgeternity
+      systemVersion: 3.7.0
+      coreVersion: '11.315'
+      createdTime: 1711562366100
+      modifiedTime: 1711706337786
+      lastModifiedBy: CtisFurQNe9h7ABb
+    _key: '!actors.items!XhPhxBg111Zg5bem.H4hQ7REH5pEiSwwx'
+  - _id: 57qzhW5zh4ntWJ4l
+    name: Stichschutzweste
+    type: armor
+    img: systems/torgeternity/images/icons/armor-icon.webp
+    effects: []
+    folder: null
+    sort: 11600000
+    flags:
+      core:
+        sourceId: >-
+          Compendium.te001-core-rulebook.grw-de-ausruestung.Item.NS8rwrLbP6hgW4VF
+    system:
+      cosm: Zentralerde
+      description: >-
+        <p>@UUID[Compendium.te001-core-rulebook.grw-de-grw.Qlx6yGF0Mmo6Xzrv.JournalEntryPage.7GGUUHzuYIqGPXDO#ganzkorper/torso:]{Torso}</p>
+
+        <p>Leichter und bequemer als eine Flakweste und vor allem daf&uuml;r
+        ausgelegt, die Schneidund Stichwirkung von Nahkampfwaffen zu stoppen.
+        Wirkt aber auch gegen Kugeln.</p>
+      price: '200'
+      techlevel: 23
+      value: 11
+      bonus: 3
+      equipped: true
+      equippedClass: item-equipped
+      maxDex: 10
+      minStrength: null
+      notes: Torso
+      fatigue: null
+    ownership:
+      default: 0
+      9Q0XnqFwko7hRlvL: 3
+      CtisFurQNe9h7ABb: 3
+    _stats:
+      systemId: torgeternity
+      systemVersion: 3.7.0
+      coreVersion: '11.315'
+      createdTime: 1711562366153
+      modifiedTime: 1711706337784
+      lastModifiedBy: CtisFurQNe9h7ABb
+    _key: '!actors.items!XhPhxBg111Zg5bem.57qzhW5zh4ntWJ4l'
 effects:
-  - _id: nuogFRjoGTC4o6Dk
-    changes:
-      - key: system.other.toughness
-        mode: 2
-        value: '3'
-        priority: null
-      - key: system.other.armor
-        mode: 2
-        value: '3'
-        priority: null
-    disabled: false
-    duration:
-      startTime: 0
-      seconds: null
-      combat: null
-      rounds: null
-      turns: null
-      startRound: null
-      startTurn: null
-    icon: icons/svg/aura.svg
-    origin: >-
-      Compendium.torgeternity.system-de-archetypen.Actor.XhPhxBg111Zg5bem.Item.xvw91FNoDE9mzEu0
-    transfer: false
-    flags: {}
-    tint: null
-    name: Rüstung +3
-    description: ''
-    statuses: []
-    _key: '!actors.effects!XhPhxBg111Zg5bem.nuogFRjoGTC4o6Dk'
-  - _id: S6J3jLnHHT32LxZL
-    changes:
-      - key: system.other.toughness
-        mode: 2
-        value: '1'
-        priority: null
-      - key: system.other.armor
-        mode: 2
-        value: '1'
-        priority: null
-    disabled: true
-    duration:
-      startTime: 0
-      seconds: null
-      combat: null
-      rounds: null
-      turns: null
-      startRound: null
-      startTurn: null
-    icon: icons/svg/aura.svg
-    origin: >-
-      Compendium.torgeternity.system-de-archetypen.Actor.XhPhxBg111Zg5bem.Item.wXSp28fJYOrzITek
-    transfer: false
-    flags: {}
-    tint: null
-    name: Rüstung +1
-    description: ''
-    statuses: []
-    _key: '!actors.effects!XhPhxBg111Zg5bem.S6J3jLnHHT32LxZL'
   - _id: jjB96dzmOt3gxZvg
     changes:
       - key: system.skills.maneuver.isFav
@@ -1706,10 +1592,10 @@ prototypeToken:
   detectionModes: []
 _stats:
   systemId: torgeternity
-  systemVersion: 3.1.1
-  coreVersion: '11.308'
+  systemVersion: 3.7.0
+  coreVersion: '11.315'
   createdTime: 1694863252503
-  modifiedTime: 1694869786629
+  modifiedTime: 1711706337786
   lastModifiedBy: CtisFurQNe9h7ABb
 _key: '!actors!XhPhxBg111Zg5bem'
 

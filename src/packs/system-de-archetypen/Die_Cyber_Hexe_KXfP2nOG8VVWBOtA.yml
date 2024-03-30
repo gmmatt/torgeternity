@@ -843,76 +843,6 @@ items:
       modifiedTime: 1694865974402
       lastModifiedBy: CtisFurQNe9h7ABb
     _key: '!actors.items!KXfP2nOG8VVWBOtA.KiKe4Jru8egaH7t1'
-  - name: IriMesh-Kleidung
-    type: armor
-    img: systems/torgeternity/images/icons/armor-icon.webp
-    effects:
-      - _id: 8f52hILeGZFkin49
-        changes:
-          - key: system.other.toughness
-            mode: 2
-            value: '2'
-            priority: null
-          - key: system.other.armor
-            mode: 2
-            value: '2'
-            priority: null
-        disabled: false
-        duration:
-          startTime: null
-          seconds: null
-          combat: null
-          rounds: null
-          turns: null
-          startRound: null
-          startTurn: null
-        icon: icons/svg/aura.svg
-        origin: Item.lO79pZIArOBvTiJn
-        transfer: true
-        flags: {}
-        tint: null
-        name: Rüstung +2
-        description: ''
-        statuses: []
-        _key: >-
-          !actors.items.effects!KXfP2nOG8VVWBOtA.yQ5APeWBVPDVAluS.8f52hILeGZFkin49
-    folder: null
-    sort: 2900000
-    flags:
-      core:
-        sourceId: >-
-          Compendium.te001-core-rulebook.grw-de-ausruestung.Item.5hPro8JFEq4iFcUH
-    _id: yQ5APeWBVPDVAluS
-    system:
-      cosm: Pan-Pacifica
-      description: >-
-        <p>Ein leichtes Gewebe, das mithilfe von Nano-Maschinen gewebt wurde.
-        IriMesh sieht und f&uuml;hlt sich &auml;hnlich wie Seide an, aber mit
-        einer noch gr&ouml;&szlig;eren Rei&szlig;festigkeit. Die Kleidung kann
-        auf eleganten Empf&auml;ngen getragen werden, ohne fehl am Platz zu
-        wirken, und erregt auch an Kontrollpunkten keine unerw&uuml;nschte
-        Aufmerksamkeit.</p>
-      techlevel: 24
-      price: '250'
-      value: 12
-      bonus: 2
-      maxDex: 12
-      minStrength: null
-      equipped: true
-      equippedClass: item-equipped
-      notes: ''
-    ownership:
-      default: 0
-      9Q0XnqFwko7hRlvL: 3
-      CtisFurQNe9h7ABb: 3
-    _stats:
-      systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
-      createdTime: 1694865985107
-      modifiedTime: 1694865985117
-      lastModifiedBy: CtisFurQNe9h7ABb
-    _key: '!actors.items!KXfP2nOG8VVWBOtA.yQ5APeWBVPDVAluS'
   - name: Sonnenbrille
     type: gear
     img: systems/torgeternity/images/icons/gear-icon.webp
@@ -1223,6 +1153,48 @@ items:
       modifiedTime: 1694866014076
       lastModifiedBy: CtisFurQNe9h7ABb
     _key: '!actors.items!KXfP2nOG8VVWBOtA.GLjFsTAZK3JW5cJo'
+  - name: IriMesh-Kleidung
+    type: armor
+    img: systems/torgeternity/images/icons/armor-icon.webp
+    effects: []
+    folder: null
+    sort: 2900000
+    flags:
+      core:
+        sourceId: >-
+          Compendium.te001-core-rulebook.grw-de-ausruestung.Item.5hPro8JFEq4iFcUH
+    _id: Z4nC236F0vnt4Neo
+    system:
+      cosm: Pan-Pacifica
+      description: >-
+        <p>Ein leichtes Gewebe, das mithilfe von Nano-Maschinen gewebt wurde.
+        IriMesh sieht und f&uuml;hlt sich &auml;hnlich wie Seide an, aber mit
+        einer noch gr&ouml;&szlig;eren Rei&szlig;festigkeit. Die Kleidung kann
+        auf eleganten Empf&auml;ngen getragen werden, ohne fehl am Platz zu
+        wirken, und erregt auch an Kontrollpunkten keine unerw&uuml;nschte
+        Aufmerksamkeit.</p>
+      price: '250'
+      techlevel: 24
+      value: 12
+      bonus: 2
+      equipped: true
+      equippedClass: item-equipped
+      maxDex: null
+      minStrength: null
+      notes: ''
+      fatigue: null
+    ownership:
+      default: 0
+      9Q0XnqFwko7hRlvL: 3
+      CtisFurQNe9h7ABb: 3
+    _stats:
+      systemId: torgeternity
+      systemVersion: 3.7.0
+      coreVersion: '11.315'
+      createdTime: 1711562366100
+      modifiedTime: 1711705964689
+      lastModifiedBy: CtisFurQNe9h7ABb
+    _key: '!actors.items!KXfP2nOG8VVWBOtA.Z4nC236F0vnt4Neo'
 effects:
   - _id: xNBx8sd8jMvU0rJV
     changes:
@@ -1849,35 +1821,6 @@ effects:
     description: ''
     statuses: []
     _key: '!actors.effects!KXfP2nOG8VVWBOtA.C7CvOZhWpth0kQZl'
-  - _id: ujE5t6JYywPg15sT
-    changes:
-      - key: system.other.toughness
-        mode: 2
-        value: '2'
-        priority: null
-      - key: system.other.armor
-        mode: 2
-        value: '2'
-        priority: null
-    disabled: false
-    duration:
-      startTime: 0
-      seconds: null
-      combat: null
-      rounds: null
-      turns: null
-      startRound: null
-      startTurn: null
-    icon: icons/svg/aura.svg
-    origin: >-
-      Compendium.torgeternity.system-de-archetypen.Actor.KXfP2nOG8VVWBOtA.Item.yQ5APeWBVPDVAluS
-    transfer: false
-    flags: {}
-    tint: null
-    name: Rüstung +2
-    description: ''
-    statuses: []
-    _key: '!actors.effects!KXfP2nOG8VVWBOtA.ujE5t6JYywPg15sT'
 folder: null
 sort: 0
 flags:
@@ -2224,11 +2167,11 @@ system:
 
       <p><em>Verbesserung </em>ist ein m&auml;chtiger und vielseitiger Zauber.
       Das Anheben der <em>St&auml;rke</em> deiner Verb&uuml;ndeten erh&ouml;ht
-      deren Robustheit und Nahkampfschaden, w&auml;hrend die
-      <em>Geschicklichkeit </em>sowohl Angriff als auch Verteidigung verbessert.
-      Im selben Ma&szlig;e ist <em>Reduzieren </em>ein Fluch f&uuml;r deine
-      Feinde, indem es ihre Angriffe behindert oder ihren Widerstand gegen
-      weitere Zauber verringert.&nbsp;</p>
+      deren Nahkampfschaden, w&auml;hrend die&nbsp;<em>Geschicklichkeit
+      </em>sowohl Angriff als auch Verteidigung verbessert. Im selben Ma&szlig;e
+      ist <em>Reduzieren </em>ein Fluch f&uuml;r deine Feinde, indem es ihre
+      Angriffe behindert oder ihren Widerstand gegen weitere Zauber
+      verringert.&nbsp;</p>
 
       <p><em>Einsch&uuml;chtern </em>und <em>Tricksen </em>sind deine
       bevorzugten Interaktionen. Du kannst au&szlig;erdem die Vorteile des hohen
@@ -2356,9 +2299,10 @@ prototypeToken:
   detectionModes: []
 _stats:
   systemId: torgeternity
-  systemVersion: 3.1.1
-  coreVersion: '11.308'
+  systemVersion: 3.7.0
+  coreVersion: '11.315'
   createdTime: 1694865921702
-  modifiedTime: 1694868600716
+  modifiedTime: 1711706404429
   lastModifiedBy: CtisFurQNe9h7ABb
 _key: '!actors!KXfP2nOG8VVWBOtA'
+

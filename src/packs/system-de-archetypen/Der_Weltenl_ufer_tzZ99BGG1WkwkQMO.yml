@@ -426,73 +426,6 @@ items:
       modifiedTime: 1694868550013
       lastModifiedBy: CtisFurQNe9h7ABb
     _key: '!actors.items!tzZ99BGG1WkwkQMO.OgeIr0GPjdO21ell'
-  - _id: xzFkk9YOnK3UGZFG
-    name: Lederjacke
-    type: armor
-    img: systems/torgeternity/images/icons/armor-icon.webp
-    effects:
-      - _id: LbA5jhxYBbhv1Y2O
-        changes:
-          - key: system.other.toughness
-            mode: 2
-            value: '1'
-            priority: null
-          - key: system.other.armor
-            mode: 2
-            value: '1'
-            priority: null
-        disabled: false
-        duration:
-          startTime: null
-          seconds: null
-          combat: null
-          rounds: null
-          turns: null
-          startRound: null
-          startTurn: null
-        icon: icons/svg/aura.svg
-        origin: Item.BlLZXOO5w1iYYsz2
-        transfer: true
-        flags: {}
-        tint: null
-        name: Rüstung +1
-        description: ''
-        statuses: []
-        _key: >-
-          !actors.items.effects!tzZ99BGG1WkwkQMO.xzFkk9YOnK3UGZFG.LbA5jhxYBbhv1Y2O
-    folder: null
-    sort: 23000000
-    flags:
-      core:
-        sourceId: >-
-          Compendium.te001-core-rulebook.grw-de-ausruestung.Item.ibQvaehrqx24DxvU
-    system:
-      cosm: (Keins)
-      description: >-
-        <p>@UUID[Compendium.te001-core-rulebook.grw-de-grw.Qlx6yGF0Mmo6Xzrv.JournalEntryPage.7GGUUHzuYIqGPXDO#ganzkorper/torso:]{Torso}</p>
-
-        <p>Schwarz und stylisch!</p>
-      techlevel: 19
-      price: '100'
-      value: 10
-      bonus: 1
-      maxDex: 12
-      minStrength: null
-      equipped: true
-      equippedClass: item-equipped
-      notes: Torso
-    ownership:
-      default: 0
-      9Q0XnqFwko7hRlvL: 3
-      CtisFurQNe9h7ABb: 3
-    _stats:
-      systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
-      createdTime: 1694868557421
-      modifiedTime: 1694868557425
-      lastModifiedBy: CtisFurQNe9h7ABb
-    _key: '!actors.items!tzZ99BGG1WkwkQMO.xzFkk9YOnK3UGZFG'
   - name: Multitool
     type: gear
     img: systems/torgeternity/images/icons/gear-icon.webp
@@ -583,32 +516,46 @@ items:
       modifiedTime: 1694868573414
       lastModifiedBy: CtisFurQNe9h7ABb
     _key: '!actors.items!tzZ99BGG1WkwkQMO.ohO82JzysApayR0C'
+  - _id: 4AmydcIKkXPHFyFx
+    name: Lederjacke
+    type: armor
+    img: systems/torgeternity/images/icons/armor-icon.webp
+    effects: []
+    folder: null
+    sort: 23000000
+    flags:
+      core:
+        sourceId: >-
+          Compendium.te001-core-rulebook.grw-de-ausruestung.Item.ibQvaehrqx24DxvU
+    system:
+      cosm: Zentralerde
+      description: >-
+        <p>@UUID[Compendium.te001-core-rulebook.grw-de-grw.Qlx6yGF0Mmo6Xzrv.JournalEntryPage.7GGUUHzuYIqGPXDO#ganzkorper/torso:]{Torso}</p>
+
+        <p>Schwarz und stylisch!</p>
+      price: '100'
+      techlevel: 19
+      value: 10
+      bonus: 1
+      equipped: true
+      equippedClass: item-equipped
+      maxDex: 12
+      minStrength: null
+      notes: Torso
+      fatigue: null
+    ownership:
+      default: 0
+      9Q0XnqFwko7hRlvL: 3
+      CtisFurQNe9h7ABb: 3
+    _stats:
+      systemId: torgeternity
+      systemVersion: 3.7.0
+      coreVersion: '11.315'
+      createdTime: 1711562366193
+      modifiedTime: 1711705856750
+      lastModifiedBy: CtisFurQNe9h7ABb
+    _key: '!actors.items!tzZ99BGG1WkwkQMO.4AmydcIKkXPHFyFx'
 effects:
-  - _id: FSGCGqrhdLMqxrK0
-    changes:
-      - key: system.other.possibilities
-        mode: 2
-        value: '1'
-        priority: null
-    disabled: false
-    duration:
-      startTime: 0
-      seconds: null
-      combat: null
-      rounds: null
-      turns: null
-      startRound: null
-      startTurn: null
-    icon: icons/svg/aura.svg
-    origin: >-
-      Compendium.torgeternity.system-de-archetypen.Actor.tzZ99BGG1WkwkQMO.Item.7jS3c05xSw5MIrlf
-    transfer: false
-    flags: {}
-    tint: null
-    name: Wunderkind
-    description: ''
-    statuses: []
-    _key: '!actors.effects!tzZ99BGG1WkwkQMO.FSGCGqrhdLMqxrK0'
   - _id: 9T2SgSGgiUkXHNdR
     changes:
       - key: system.skills.survival.isFav
@@ -634,35 +581,6 @@ effects:
     description: ''
     statuses: []
     _key: '!actors.effects!tzZ99BGG1WkwkQMO.9T2SgSGgiUkXHNdR'
-  - _id: FHoggDEBvsuCTAEF
-    changes:
-      - key: system.other.toughness
-        mode: 2
-        value: '1'
-        priority: null
-      - key: system.other.armor
-        mode: 2
-        value: '1'
-        priority: null
-    disabled: false
-    duration:
-      startTime: 0
-      seconds: null
-      combat: null
-      rounds: null
-      turns: null
-      startRound: null
-      startTurn: null
-    icon: icons/svg/aura.svg
-    origin: >-
-      Compendium.torgeternity.system-de-archetypen.Actor.tzZ99BGG1WkwkQMO.Item.xzFkk9YOnK3UGZFG
-    transfer: false
-    flags: {}
-    tint: null
-    name: Rüstung +1
-    description: ''
-    statuses: []
-    _key: '!actors.effects!tzZ99BGG1WkwkQMO.FHoggDEBvsuCTAEF'
 folder: null
 sort: 0
 flags:
@@ -687,7 +605,7 @@ system:
     toughness: 5
     armor: 0
     cosm: coreEarth
-    possibilities: 0
+    possibilities: 4
     posibilities: 4
   skills:
     airVehicles:
@@ -1059,7 +977,7 @@ system:
 
       <li>(5 EP) Anpassungsf&auml;hig</li>
 
-      <li>(7 EP) Geschichtenerz&auml;hler</li>
+      <li>(7 EP) Hartn&auml;ckig</li>
 
       <li>(1 EP) <em>Gassenwissen</em> +1</li>
 
@@ -1139,10 +1057,10 @@ prototypeToken:
   detectionModes: []
 _stats:
   systemId: torgeternity
-  systemVersion: 3.1.1
-  coreVersion: '11.308'
+  systemVersion: 3.7.0
+  coreVersion: '11.315'
   createdTime: 1694868498745
-  modifiedTime: 1694868590753
+  modifiedTime: 1711706500592
   lastModifiedBy: CtisFurQNe9h7ABb
 _key: '!actors!tzZ99BGG1WkwkQMO'
 

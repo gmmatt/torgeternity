@@ -303,70 +303,6 @@ items:
       modifiedTime: 1693912420479
       lastModifiedBy: CtisFurQNe9h7ABb
     _key: '!actors.items!BpClx5rBCesWUzIN.RxDRpiVQ29xDGiGX'
-  - _id: 2vixEEYvPxhObjqE
-    name: Leather Jacket
-    type: armor
-    img: systems/torgeternity/images/icons/armor-icon.webp
-    effects:
-      - _id: HEEEeLAOmww6nITp
-        flags: {}
-        changes:
-          - key: system.other.toughness
-            value: '1'
-            mode: 2
-            priority: null
-          - key: system.other.armor
-            value: '1'
-            mode: 2
-            priority: null
-        disabled: false
-        duration:
-          startTime: null
-          seconds: null
-          combat: null
-          rounds: null
-          turns: null
-          startRound: null
-          startTurn: null
-        icon: icons/svg/aura.svg
-        origin: Item.7Wgz7hUbakn1W4Ao
-        tint: null
-        transfer: true
-        name: Armor +1
-        description: ''
-        statuses: []
-        _key: >-
-          !actors.items.effects!BpClx5rBCesWUzIN.2vixEEYvPxhObjqE.HEEEeLAOmww6nITp
-    folder: null
-    sort: 3300000
-    flags:
-      core:
-        sourceId: Compendium.te001-core-rulebook.Items.34ioFwhBc4c39YFU
-    system:
-      cosm: Core Earth
-      description: >-
-        <p>@UUID[Compendium.te001-core-rulebook.rules.pwneQ55M0nnDH0Us.JournalEntryPage.qKdamp4rrcX6TTt0#full-body/torso:]{Torso}</p>
-      techlevel: 19
-      price: '100'
-      value: 10
-      bonus: 1
-      maxDex: 12
-      minStrength: null
-      equipped: true
-      equippedClass: item-equipped
-      notes: Torso
-    ownership:
-      default: 0
-      A9LyAqagoJJU3gDH: 3
-      CtisFurQNe9h7ABb: 3
-    _stats:
-      systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
-      createdTime: 1693912461562
-      modifiedTime: 1693912477347
-      lastModifiedBy: CtisFurQNe9h7ABb
-    _key: '!actors.items!BpClx5rBCesWUzIN.2vixEEYvPxhObjqE'
   - _id: ZlZ8dDR8qO6ZyF9z
     name: Multi-Tool
     type: gear
@@ -570,6 +506,42 @@ items:
     _id: kT4xT1ZyGgyvWg9q
     sort: 300000
     _key: '!actors.items!BpClx5rBCesWUzIN.kT4xT1ZyGgyvWg9q'
+  - _id: H4lAQvvvcSaBwk3A
+    name: Leather Jacket
+    type: armor
+    img: systems/torgeternity/images/icons/armor-icon.webp
+    effects: []
+    folder: null
+    sort: 200000
+    flags:
+      core:
+        sourceId: Compendium.te001-core-rulebook.Items.Item.34ioFwhBc4c39YFU
+    system:
+      cosm: Core Earth
+      description: >-
+        <p>@UUID[Compendium.te001-core-rulebook.rules.pwneQ55M0nnDH0Us.JournalEntryPage.qKdamp4rrcX6TTt0#full-body/torso:]{Torso}</p>
+      price: '100'
+      techlevel: 19
+      value: 10
+      bonus: 1
+      equipped: true
+      equippedClass: item-equipped
+      maxDex: 12
+      minStrength: null
+      notes: Torso
+      fatigue: null
+    ownership:
+      default: 0
+      A9LyAqagoJJU3gDH: 3
+      CtisFurQNe9h7ABb: 3
+    _stats:
+      systemId: torgeternity
+      systemVersion: 3.7.0
+      coreVersion: '11.315'
+      createdTime: 1711551146690
+      modifiedTime: 1711704588570
+      lastModifiedBy: CtisFurQNe9h7ABb
+    _key: '!actors.items!BpClx5rBCesWUzIN.H4lAQvvvcSaBwk3A'
 effects:
   - icon: icons/svg/aura.svg
     origin: >-
@@ -596,35 +568,6 @@ effects:
     description: ''
     statuses: []
     _key: '!actors.effects!BpClx5rBCesWUzIN.CtNuycNaTFDgpixo'
-  - _id: Ke0YRgXRTWcg92VQ
-    flags: {}
-    changes:
-      - key: system.other.toughness
-        value: '1'
-        mode: 2
-        priority: null
-      - key: system.other.armor
-        value: '1'
-        mode: 2
-        priority: null
-    disabled: false
-    duration:
-      startTime: 0
-      seconds: null
-      combat: null
-      rounds: null
-      turns: null
-      startRound: null
-      startTurn: null
-    icon: icons/svg/aura.svg
-    origin: >-
-      Compendium.torgeternity.archetypes.Actor.BpClx5rBCesWUzIN.Item.2vixEEYvPxhObjqE
-    tint: null
-    transfer: false
-    name: Armor +1
-    description: ''
-    statuses: []
-    _key: '!actors.effects!BpClx5rBCesWUzIN.Ke0YRgXRTWcg92VQ'
 folder: null
 sort: 100001
 flags: {}
@@ -948,8 +891,8 @@ system:
       <p class="moreheight"><a class="content-link" draggable="true"
       data-uuid="Compendium.torgeternity.handouts.JournalEntry.Knhh8vqtjSylJo5Z.JournalEntryPage.RLk67atzGeIrJ9Ml"
       data-id="RLk67atzGeIrJ9Ml" data-type="JournalEntryPage"
-      data-pack="torgeternity.handouts" data-tooltip="Image Page"><i class="fas
-      fa-file-image"></i>Archetype - The Realm Runner</a></p>
+      data-pack="torgeternity.handouts" data-tooltip="Image Page">Archetype -
+      The Realm Runner</a></p>
 
       <h3>Overview</h3>
 
@@ -964,16 +907,16 @@ system:
 
       <p>You are a jack-of-all-trades: reasonably proficient with most weapons
       but a master of none. Then again, any weapon or item you find in any
-      reality is fair game. Don’t be afraid to try out and use powerful tools
-      from other realities, even if they might cause Contradictions.
-      Disconnections still happen, but not as often and it’s easy for you to
-      reconnect, even in a Pure Zone.</p>
+      reality is fair game. Don&rsquo;t be afraid to try out and use powerful
+      tools from other realities, even if they might cause Contradictions.
+      Disconnections still happen, but not as often and it&rsquo;s easy for you
+      to reconnect, even in a Pure Zone.</p>
 
       <p>Use any Approved interaction (trick is strongest) to Stymie opponents
       or make them Vulnerable. Success gains you a Destiny card and helps out
-      the team—or enhances your own chances for a successful followup attack.
-      Your high reality skill lets you Soak damage very reliably, so you’re much
-      tougher than you look.</p>
+      the team&mdash;or enhances your own chances for a successful followup
+      attack. Your high reality skill lets you Soak damage very reliably, so
+      you&rsquo;re much tougher than you look.</p>
 
       <h3>Moment of Crisis</h3>
 
@@ -985,7 +928,7 @@ system:
 
       <h3>Quote</h3>
 
-      <p>“Don’t worry guys, I got this!“</p>
+      <p>&ldquo;Don&rsquo;t worry guys, I got this!&ldquo;</p>
 
       <h3>Description</h3>
 
@@ -1000,8 +943,8 @@ system:
       not taking these dangerous situations seriously enough. Under that
       exterior, however, you are deeply concerned for the individuals caught in
       the middle of the Possibility Wars. Saving these people from immediate
-      danger and keeping their spirits up is your real priority—having fun while
-      you do it is just a bonus.</p>
+      danger and keeping their spirits up is your real priority&mdash;having fun
+      while you do it is just a bonus.</p>
 
       <h3>Names</h3>
 
@@ -1013,7 +956,7 @@ system:
 
       <li>(5 XP) Adaptable</li>
 
-      <li>(7 XP) Story Teller</li>
+      <li>(7 XP) Tenacious</li>
 
       <li>(1 XP) <em>streetwise</em> +1</li>
 
@@ -1093,10 +1036,10 @@ prototypeToken:
   detectionModes: []
 _stats:
   systemId: torgeternity
-  systemVersion: 3.1.1
-  coreVersion: '11.308'
+  systemVersion: 3.7.0
+  coreVersion: '11.315'
   createdTime: 1693912355058
-  modifiedTime: 1693913296275
+  modifiedTime: 1711705427573
   lastModifiedBy: CtisFurQNe9h7ABb
 _key: '!actors!BpClx5rBCesWUzIN'
 

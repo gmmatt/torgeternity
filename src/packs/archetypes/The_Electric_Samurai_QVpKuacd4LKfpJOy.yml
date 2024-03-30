@@ -56,178 +56,6 @@ items:
     permission:
       default: 0
     _key: '!actors.items!QVpKuacd4LKfpJOy.GC4sa5RhVhoCbPr1'
-  - _id: cWdUhs7IJJaWYMWf
-    name: Ion Gusoku
-    type: perk
-    img: systems/torgeternity/images/icons/reality-icon.webp
-    effects: []
-    folder: null
-    sort: 0
-    flags:
-      core:
-        sourceId: Compendium.te001-core-rulebook.Items.NlvMMLc98zfTyvF1
-    system:
-      category: electricSamurai
-      cosm: Pan-Pacifica
-      prerequisites: Spirit 8+, at least two adds in melee weapons
-      timestaken: 1
-      description: >-
-        <p>The distinctive armor of the Electric Samurai is the Ion Gusoku. The
-        first suits were adapted from the armor worn by Kanawa&rsquo;s elite
-        security forces, but many adaptations and improvements were added as the
-        samurai reverse-engineered Kanawa&rsquo;s technology.</p>
-
-        <p>The armor itself is highly advanced and built specifically for the
-        samurai intended to wear it. A bio-scan lock shuts down functions and
-        seizes up when anyone else puts it on. It limits its wearer&rsquo;s
-        <em>Dexterity</em> to 10, is Tech Axiom 24, provides +4 Armor, and
-        causes Fatigue.</p>
-
-        <p>@UUID[Compendium.te001-core-rulebook.Items.NlvMMLc98zfTyvF1]{Ion
-        Gusoku}</p>
-
-        <p><strong>New Enhancements:</strong> This Perk may be taken more than
-        once. Each additional Perk enhances the armor with one of the systems
-        below. Unless it says otherwise, each enhancement may only be taken
-        once.</p>
-
-        <ul>
-
-        <li><strong>Chameleon Plates:</strong> The entire outer layer of the
-        gusoku is covered in sensors and LEDs that shift color and brightness to
-        mimic the surrounding area when the samurai stands still. So long as she
-        remains completely still (no actions or movement) she is effectively
-        invisible, and opponents suffer a &ndash;6 penalty on attempts to
-        <em>find</em> her or hit her with ranged attacks</li>
-
-        <li><strong>Flash Burst:</strong> Once per scene the armor may unleash a
-        blinding flash of light as a free action. The light momentarily dazzles
-        individuals within a Medium Blast around the character, rendering each
-        Very Stymied</li>
-
-        <li><strong>Kabuto HUD:</strong> The armor&rsquo;s helmet features an
-        integrated display that removes the first two points of penalties from
-        the samurai&rsquo;s ranged attacks</li>
-
-        <li><strong>Lightning Sheath:</strong> Electric samurai quickly learned
-        the dangers of being overwhelmed by hordes of infected or the
-        jiangshi&rsquo;s deadly grappling attack. Once a scene, the armor may
-        discharge an electric blast as a free action, causing 12 damage +1 BD to
-        anything touching the armor. Anything grabbing the samurai automatically
-        releases its hold</li>
-
-        <li><strong>Ultra-Light Alloys:</strong> The armor&rsquo;s low weight
-        and perfect fit combine to eliminate the suit&rsquo;s Fatigue
-        penalty</li>
-
-        </ul>
-
-        <p>&nbsp;</p>
-
-        <p>Found in <strong>Core Rules</strong></p>
-      pulpPowers:
-        enhancementNumber: 5
-        enhancement01:
-          title: Chameleon Plates
-          description: >-
-            The entire outer layer of the gusoku is covered in sensors and LEDs
-            that shift color and brightness to mimic the surrounding area when
-            the samurai stands still. So long as she remains completely still
-            (no actions or movement) she is effectively invisible, and opponents
-            suffer a –6 penalty on attempts to find her or hit her with ranged
-            attacks.
-          taken: false
-        enhancement02:
-          title: Flash Burst
-          description: >-
-            Once per scene the armor may unleash a blinding flash of light as a
-            free action. The light momentarily dazzles individuals within a
-            Medium Blast around the character, rendering each Very Stymied.
-          taken: false
-        enhancement03:
-          title: Kabuto HUD
-          description: >-
-            The armor’s helmet features an integrated display that removes the
-            first two points of penalties from the samurai’s ranged attacks.
-          taken: false
-        enhancement04:
-          title: ' Lightning Sheath'
-          description: >-
-            Electric samurai quickly learned the dangers of being overwhelmed by
-            hordes of infected or the jiangshi’s deadly grappling attack. Once a
-            scene, the armor may discharge an electric blast as a free action,
-            causing 12 damage +1 BD to anything touching the armor. Anything
-            grabbing the samurai automatically releases its hold.
-          taken: false
-        enhancement05:
-          title: ' Ultra-Light Alloys'
-          description: >-
-            The armor’s low weight and perfect fit combine to eliminate the
-            suit’s Fatigue penalty.
-          taken: false
-        enhancement06:
-          title: ''
-          description: ''
-          taken: false
-        enhancement07:
-          title: ''
-          description: ''
-          taken: false
-        enhancement08:
-          title: ''
-          description: ''
-          taken: false
-        enhancement09:
-          title: ''
-          description: ''
-          taken: false
-        enhancement10:
-          title: ''
-          description: ''
-          taken: false
-        enhancement11:
-          title: ''
-          description: ''
-          taken: false
-        enhancement12:
-          title: ''
-          description: ''
-          taken: false
-        enhancement13:
-          title: ''
-          description: ''
-          taken: false
-        enhancement14:
-          title: ''
-          description: ''
-          taken: false
-        enhancement15:
-          title: ''
-          description: ''
-          taken: false
-        limitationNumber: 0
-        limitation01: ''
-        limitation02: ''
-        limitation03: ''
-        limitation04: ''
-        limitation05: ''
-        limitation06: ''
-        limitation07: ''
-        limitation08: ''
-        limitation09: ''
-        limitation10: ''
-    ownership:
-      default: 0
-      A9LyAqagoJJU3gDH: 3
-      CtisFurQNe9h7ABb: 3
-    _stats:
-      systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
-      createdTime: 1693909765954
-      modifiedTime: 1693910462347
-      lastModifiedBy: CtisFurQNe9h7ABb
-    _key: '!actors.items!QVpKuacd4LKfpJOy.cWdUhs7IJJaWYMWf'
   - _id: Q3AEnYDnCuWdHQJw
     name: Trademark Weapon (Electric Katana)
     type: perk
@@ -429,107 +257,216 @@ items:
       modifiedTime: 1693909870243
       lastModifiedBy: CtisFurQNe9h7ABb
     _key: '!actors.items!QVpKuacd4LKfpJOy.yoJKfoP1BFsr65l9'
-  - name: Ion Gusoku armor
-    type: armor
-    img: systems/torgeternity/images/icons/armor-icon.webp
-    effects:
-      - _id: 9ymLEqwqQu84dE3Z
-        flags: {}
-        changes:
-          - key: system.other.toughness
-            mode: 2
-            value: '4'
-            priority: null
-          - key: system.other.armor
-            mode: 2
-            value: '4'
-            priority: null
-          - key: system.other.fatigue
-            mode: 2
-            value: '1'
-            priority: null
-        disabled: false
-        duration:
-          startTime: null
-          seconds: null
-          combat: null
-          rounds: null
-          turns: null
-          startRound: null
-          startTurn: null
-        icon: icons/svg/aura.svg
-        origin: Item.ec5YdyhXgjNxP47h
-        tint: null
-        transfer: true
-        name: Armor +4, Fatigues
-        description: ''
-        statuses: []
-        _key: >-
-          !actors.items.effects!QVpKuacd4LKfpJOy.DTH9qM7NJDD5Pzbj.9ymLEqwqQu84dE3Z
-    folder: null
-    flags:
-      core:
-        sourceId: Compendium.te001-core-rulebook.Items.Item.lUVVQi2BmucoAM0E
+  - name: Ion Gusoku
+    type: perk
+    img: systems/torgeternity/images/icons/reality-icon.webp
     system:
+      category: electricSamurai
       cosm: Pan-Pacifica
       description: >-
-        <p>@UUID[Compendium.te001-core-rulebook.rules.pwneQ55M0nnDH0Us.JournalEntryPage.qKdamp4rrcX6TTt0#fatigues:]{Fatigues}</p>
-      techlevel: 24
-      price: ''
-      value: null
-      bonus: 4
-      maxDex: 10
-      minStrength: null
-      equipped: true
-      equippedClass: item-equipped
-      notes: Fatigues
+        <p>The distinctive armor of the Electric Samurai is the Ion Gusoku. The
+        first suits were adapted from the armor worn by Kanawa&rsquo;s elite
+        security forces, but many adaptations and improvements were added as the
+        samurai reverse-engineered Kanawa&rsquo;s technology.</p>
+
+        <p>The
+        @UUID[Compendium.te001-core-rulebook.Items.Item.NlvMMLc98zfTyvF1]{Ion
+        Gusoku Armor} itself is highly advanced and built specifically for the
+        samurai intended to wear it. A bio-scan lock shuts down functions and
+        seizes up when anyone else puts it on. It limits its wearer&rsquo;s
+        Dexterity to 10, is Tech Axiom 24, provides +4 Full Body Armor, and
+        causes Fatigue.</p>
+
+        <p><strong>New Enhancements:</strong> This Perk may be taken more than
+        once. Each additional Perk enhances the armor with one of the systems
+        below. Unless it says otherwise, each enhancement may only be taken
+        once.</p>
+
+        <ul>
+
+        <li><strong>Chameleon Plates:</strong> The entire outer layer of the
+        gusoku is covered in sensors and LEDs that shift color and brightness to
+        mimic the surrounding area when the samurai stands still. So long as she
+        remains completely still (no actions or movement) she is effectively
+        invisible, and opponents suffer a &ndash;6 penalty on attempts to find
+        her or hit her with ranged attacks.</li>
+
+        <li><strong>Flash Burst:</strong> Once per scene the armor may unleash a
+        blinding flash of light as a free action. The light momentarily dazzles
+        individuals within a Medium Blast around the character, rendering each
+        Very Stymied.</li>
+
+        <li><strong>Kabuto HUD:</strong> The armor&rsquo;s helmet features an
+        integrated display that removes the first two points of penalties from
+        the samurai&rsquo;s ranged attacks.</li>
+
+        <li><strong>Lightning Sheath:</strong> Electric samurai quickly learned
+        the dangers of being overwhelmed by hordes of infected or the
+        jiangshi&rsquo;s deadly grappling attack. Once a scene, the armor may
+        discharge an electric blast as a free action, causing 12 damage +1BD to
+        anything touching the armor. Anything grabbing the samurai automatically
+        releases its hold.</li>
+
+        <li><strong>Ultra-Light Alloys:</strong> The armor&rsquo;s low weight
+        and perfect fit combine to eliminate the suit&rsquo;s Fatigue
+        penalty.</li>
+
+        </ul>
+      prerequisites: Spirit 8+, at least two adds in melee weapons
+      pulpPowers:
+        enhancement01:
+          description: >-
+            The entire outer layer of the gusoku is covered in sensors and LEDs
+            that shift color and brightness to mimic the surrounding area when
+            the samurai stands still. So long as she remains completely still
+            (no actions or movement) she is effectively invisible, and opponents
+            suffer a –6 penalty on attempts to find her or hit her with ranged
+            attacks.
+          taken: false
+          title: Chameleon Plates
+        enhancement02:
+          description: >-
+            Once per scene the armor may unleash a blinding flash of light as a
+            free action. The light momentarily dazzles individuals within a
+            Medium Blast around the character, rendering each Very Stymied.
+          taken: false
+          title: Flash Burst
+        enhancement03:
+          description: >-
+            The armor’s helmet features an integrated display that removes the
+            first two points of penalties from the samurai’s ranged attacks.
+          taken: false
+          title: Kabuto HUD
+        enhancement04:
+          description: >-
+            Electric samurai quickly learned the dangers of being overwhelmed by
+            hordes of infected or the jiangshi’s deadly grappling attack. Once a
+            scene, the armor may discharge an electric blast as a free action,
+            causing 12 damage +1BD to anything touching the armor. Anything
+            grabbing the samurai automatically releases its hold.
+          taken: false
+          title: Lightning Sheath
+        enhancement05:
+          description: >-
+            The armor’s low weight and perfect fit combine to eliminate the
+            suit’s Fatigue penalty.
+          taken: false
+          title: ' Ultra-Light Alloys'
+        enhancement06:
+          description: ''
+          taken: false
+          title: ''
+        enhancement07:
+          description: ''
+          taken: false
+          title: ''
+        enhancement08:
+          description: ''
+          taken: false
+          title: ''
+        enhancement09:
+          description: ''
+          taken: false
+          title: ''
+        enhancement10:
+          description: ''
+          taken: false
+          title: ''
+        enhancement11:
+          description: ''
+          taken: false
+          title: ''
+        enhancement12:
+          description: ''
+          taken: false
+          title: ''
+        enhancement13:
+          description: ''
+          taken: false
+          title: ''
+        enhancement14:
+          description: ''
+          taken: false
+          title: ''
+        enhancement15:
+          description: ''
+          taken: false
+          title: ''
+        enhancementNumber: 5
+        limitation01: ''
+        limitation02: ''
+        limitation03: ''
+        limitation04: ''
+        limitation05: ''
+        limitation06: ''
+        limitation07: ''
+        limitation08: ''
+        limitation09: ''
+        limitation10: ''
+        limitationNumber: 0
+      timestaken: 1
+    effects: []
+    flags:
+      core:
+        sourceId: Compendium.te001-core-rulebook.Items.Item.vW54lUFBIwEtpPKL
+    _stats:
+      systemId: torgeternity
+      systemVersion: 3.7.0
+      coreVersion: '11.315'
+      createdTime: 1675505758859
+      modifiedTime: 1711705011193
+      lastModifiedBy: CtisFurQNe9h7ABb
+    folder: null
     ownership:
       default: 0
       CtisFurQNe9h7ABb: 3
+    _id: 0UWlo3flUkxiA1rj
+    sort: 0
+    _key: '!actors.items!QVpKuacd4LKfpJOy.0UWlo3flUkxiA1rj'
+  - _id: 19I6fIErltEo3Hqw
+    name: Ion Gusoku Armor
+    type: armor
+    img: systems/torgeternity/images/icons/armor-icon.webp
+    effects: []
+    folder: null
+    sort: 22800000
+    flags:
+      core:
+        sourceId: Compendium.te001-core-rulebook.Items.Item.NlvMMLc98zfTyvF1
+    system:
+      cosm: Pan-Pacifica
+      description: >-
+        <p>Provided by
+        @UUID[Compendium.te001-core-rulebook.Items.Item.vW54lUFBIwEtpPKL]{Ion
+        Gusoku} Perk</p>
+
+        <p>@UUID[Compendium.te001-core-rulebook.rules.pwneQ55M0nnDH0Us.JournalEntryPage.qKdamp4rrcX6TTt0#fatigues:]{Fatigues}</p>
+
+        <p>@UUID[Compendium.te001-core-rulebook.rules.pwneQ55M0nnDH0Us.JournalEntryPage.qKdamp4rrcX6TTt0#full-body/torso:]{Full
+        Body Armor}</p>
+      price: ''
+      techlevel: 24
+      value: null
+      bonus: 4
+      equipped: true
+      equippedClass: item-equipped
+      maxDex: 10
+      minStrength: null
+      notes: Fatigues, Full Body
+      fatigue: 1
+    ownership:
+      default: 0
+      A9LyAqagoJJU3gDH: 3
+      CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
-      createdTime: 1693909939436
-      modifiedTime: 1693910017562
+      systemVersion: 3.7.0
+      coreVersion: '11.315'
+      createdTime: 1711551146690
+      modifiedTime: 1711705007684
       lastModifiedBy: CtisFurQNe9h7ABb
-    _id: DTH9qM7NJDD5Pzbj
-    sort: 0
-    _key: '!actors.items!QVpKuacd4LKfpJOy.DTH9qM7NJDD5Pzbj'
-effects:
-  - _id: J5iDW1NtryYdiDhz
-    flags: {}
-    changes:
-      - key: system.other.toughness
-        mode: 2
-        value: '4'
-        priority: null
-      - key: system.other.armor
-        mode: 2
-        value: '4'
-        priority: null
-      - key: system.other.fatigue
-        mode: 2
-        value: '1'
-        priority: null
-    disabled: false
-    duration:
-      startTime: 0
-      seconds: null
-      combat: null
-      rounds: null
-      turns: null
-      startRound: null
-      startTurn: null
-    icon: icons/svg/aura.svg
-    origin: >-
-      Compendium.torgeternity.archetypes.Actor.QVpKuacd4LKfpJOy.Item.DTH9qM7NJDD5Pzbj
-    tint: null
-    transfer: false
-    name: Armor +4, Fatigues
-    description: ''
-    statuses: []
-    _key: '!actors.effects!QVpKuacd4LKfpJOy.J5iDW1NtryYdiDhz'
+    _key: '!actors.items!QVpKuacd4LKfpJOy.19I6fIErltEo3Hqw'
+effects: []
 folder: null
 sort: 100001
 flags: {}
@@ -995,10 +932,10 @@ prototypeToken:
   detectionModes: []
 _stats:
   systemId: torgeternity
-  systemVersion: 3.1.1
-  coreVersion: '11.308'
+  systemVersion: 3.7.0
+  coreVersion: '11.315'
   createdTime: 1693909765954
-  modifiedTime: 1693910466948
+  modifiedTime: 1711705011193
   lastModifiedBy: CtisFurQNe9h7ABb
 _key: '!actors!QVpKuacd4LKfpJOy'
 

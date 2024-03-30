@@ -3,167 +3,6 @@ name: Die Elektrosamurai
 type: stormknight
 img: systems/torgeternity/images/characters/Electric_Samurai.Avatar.webp
 items:
-  - _id: JSo9Y7WWWC3wSS26
-    name: Ionengusoku
-    type: perk
-    img: systems/torgeternity/images/icons/reality-icon.webp
-    effects: []
-    folder: null
-    sort: 0
-    flags:
-      core:
-        sourceId: Compendium.te001-core-rulebook.grw-de-vorzuverb.Item.5ILSmFBkAJ0HDq1v
-    system:
-      category: electricSamurai
-      cosm: Pan-Pacifica
-      prerequisites: Geist 8+, mindestens 2 Fertigkeitsstufen in Nahkampfwaffen
-      timestaken: 1
-      description: >-
-        <p>Die charakteristische R&uuml;stung der Elektrosamurai ist der
-        Ionengusoku. Die ersten R&uuml;stungen orientierten sich an den
-        Kampfr&uuml;stungen der Elite-Sicherheitskr&auml;fte von Kanawa, aber im
-        Laufe der Zeit kamen viele Anpassungen und Verbesserungen hinzu, als die
-        Samurai die Technologie von Kanawa f&uuml;r sich nutzten.&nbsp;</p>
-
-        <p>Die R&uuml;stung selbst ist hochentwickelt und f&uuml;r ihren
-        Tr&auml;ger ma&szlig;geschneidert. Ein Bio-Scanner sorgt daf&uuml;r,
-        dass sich die R&uuml;stung automatisch abschaltet und in Starre
-        verf&auml;llt, wenn sie von jemand anderem angelegt wird. Sie begrenzt
-        die Geschicklichkeit ihres Tr&auml;gers auf 10, hat ein Tech-Axiom von
-        24, liefert +4 R&uuml;stung am gesamten K&ouml;rper und verursacht
-        Erm&uuml;dung.</p>
-
-        <p>Bei Wahl des Vorzuges
-        @UUID[Compendium.te001-core-rulebook.grw-de-ausruestung.Item.KL5fs0ulvsqCVcwr]{Ionengusoku
-        (R&uuml;stung)} ausr&uuml;sten.&nbsp;</p>
-
-        <ul>
-
-        <li>Neue Verbesserungen: Dieser Vorzug darf mehr als einmal erworben
-        werden. Mit jedem zus&auml;tzlichen Erwerb wird die R&uuml;stung um eine
-        der unten aufgef&uuml;hrten Verbesserungen erweitert. Sofern nichts
-        anderes angegeben ist, darf jede Verbesserung nur einmal ausgew&auml;hlt
-        werden&nbsp;</li>
-
-        <li>@UUID[Compendium.te001-core-rulebook.grw-de-vorzuverb.Item.Rk32103yeVzF2tTc]{Blendblitz}</li>
-
-        <li>@UUID[Compendium.te001-core-rulebook.grw-de-vorzuverb.Item.Sgekb3d5Yw9To2KE]{Blitzh&uuml;lle}</li>
-
-        <li>@UUID[Compendium.te001-core-rulebook.grw-de-vorzuverb.Item.n36LEGfrj6f4X4qR]{Cham&auml;leonplatten}</li>
-
-        <li>@UUID[Compendium.te001-core-rulebook.grw-de-vorzuverb.Item.xPjDp0egw00ew40H]{Kabuto
-        HUD}</li>
-
-        <li>@UUID[Compendium.te001-core-rulebook.grw-de-vorzuverb.Item.CZWjBkTqdE1WMK1k]{Ultraleicht-Legierung}</li>
-
-        </ul>
-      pulpPowers:
-        enhancementNumber: 5
-        enhancement01:
-          title: Blendblitz
-          description: >-
-            Einmal pro Szene darf die Rüstung als freie Aktion einen blendenden
-            Lichtblitz abstrahlen. Das Licht blendet augenblicklich alle
-            Personen in einem mittleren Explosionsradius um den Charakter und
-            macht sie Sehr Angeschlagen.
-          taken: false
-        enhancement02:
-          title: Blitzhülle
-          description: >-
-            Die Elektrosamurai erkannten schnell die Gefahr, die von Horden aus
-            Infizierten oder dem tödlichen Klammerangriff der Jiang Shi ausgeht.
-            Einmal pro Szene darf der Träger als freie Aktion eine elektrische
-            Entladung auslösen, was 12 Schaden + 1 BW bei allem verursacht, das
-            die Rüstung berührt. Alles, was den Samurai umklammert hält, löst
-            diese Umklammerung automatisch auf.
-          taken: false
-        enhancement03:
-          title: Chamäleonplatten
-          description: >-
-            Die gesamte äußere Schicht der Gusoku ist mit Sensoren und LEDs
-            bedeckt, die Farbe und Helligkeit verändern, um die Umgebung
-            nachzuahmen, wenn der Samurai stillsteht. Solange er völlig
-            bewegungslos bleibt (keine Aktionen oder Bewegungen), ist er
-            effektiv unsichtbar und die Gegner erleiden beim Versuch, ihn zu
-            finden oder mit Fernkampfangriffen zu treffen, einen Malus von –6.
-          taken: false
-        enhancement04:
-          title: Kabuto HUD
-          description: >-
-            Der Helm der Rüstung verfügt über ein integriertes Display, das es
-            dem Träger erlaubt, bei seinen Fernkampfangriffen 2 Punkte Malus zu
-            ignorieren.
-          taken: false
-        enhancement05:
-          title: Ultraleicht-Legierung
-          description: >-
-            Das geringe Gewicht der Rüstung und die perfekte Passform sorgen
-            dafür, dass der Träger bei einem Ermüdungs-Effekt keinen
-            zusätzlichen Schockschaden erleidet.
-          taken: false
-        enhancement06:
-          title: ''
-          description: ''
-          taken: false
-        enhancement07:
-          title: ''
-          description: ''
-          taken: false
-        enhancement08:
-          title: ''
-          description: ''
-          taken: false
-        enhancement09:
-          title: ''
-          description: ''
-          taken: false
-        enhancement10:
-          title: ''
-          description: ''
-          taken: false
-        enhancement11:
-          title: ''
-          description: ''
-          taken: false
-        enhancement12:
-          title: ''
-          description: ''
-          taken: false
-        enhancement13:
-          title: ''
-          description: ''
-          taken: false
-        enhancement14:
-          title: ''
-          description: ''
-          taken: false
-        enhancement15:
-          title: ''
-          description: ''
-          taken: false
-        limitationNumber: 0
-        limitation01: ''
-        limitation02: ''
-        limitation03: ''
-        limitation04: ''
-        limitation05: ''
-        limitation06: ''
-        limitation07: ''
-        limitation08: ''
-        limitation09: ''
-        limitation10: ''
-    ownership:
-      default: 0
-      9Q0XnqFwko7hRlvL: 3
-      CtisFurQNe9h7ABb: 3
-    _stats:
-      systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
-      createdTime: 1694866294442
-      modifiedTime: 1694866559334
-      lastModifiedBy: CtisFurQNe9h7ABb
-    _key: '!actors.items!V5GRrizDgqY1gzHu.JSo9Y7WWWC3wSS26'
   - _id: kSLUifL30SjjsOrA
     name: Lieblingswaffe
     type: perk
@@ -394,46 +233,178 @@ items:
       modifiedTime: 1694866439177
       lastModifiedBy: CtisFurQNe9h7ABb
     _key: '!actors.items!V5GRrizDgqY1gzHu.tHnol0Anh6GtJ72e'
+  - _id: qxjS47DIU0aTw16e
+    name: Ionengusoku
+    type: perk
+    img: systems/torgeternity/images/icons/reality-icon.webp
+    effects: []
+    folder: null
+    sort: 50000
+    flags:
+      core:
+        sourceId: Compendium.te001-core-rulebook.grw-de-vorzuverb.Item.5ILSmFBkAJ0HDq1v
+    system:
+      category: electricSamurai
+      cosm: Pan-Pacifica
+      description: >-
+        <p>Die charakteristische R&uuml;stung der Elektrosamurai ist der
+        Ionengusoku. Die ersten R&uuml;stungen orientierten sich an den
+        Kampfr&uuml;stungen der Elite-Sicherheitskr&auml;fte von Kanawa, aber im
+        Laufe der Zeit kamen viele Anpassungen und Verbesserungen hinzu, als die
+        Samurai die Technologie von Kanawa f&uuml;r sich nutzten.&nbsp;</p>
+
+        <p>Die R&uuml;stung selbst ist hochentwickelt und f&uuml;r ihren
+        Tr&auml;ger ma&szlig;geschneidert. Ein Bio-Scanner sorgt daf&uuml;r,
+        dass sich die R&uuml;stung automatisch abschaltet und in Starre
+        verf&auml;llt, wenn sie von jemand anderem angelegt wird. Sie begrenzt
+        die Geschicklichkeit ihres Tr&auml;gers auf 10, hat ein Tech-Axiom von
+        24, liefert +4 R&uuml;stung am gesamten K&ouml;rper und verursacht
+        Erm&uuml;dung.</p>
+
+        <p>Bei Wahl des Vorzuges
+        @Compendium[te001-core-rulebook.grw-de-ausruestung.KL5fs0ulvsqCVcwr]{Ionengusoku
+        (R&uuml;stung)} ausr&uuml;sten.&nbsp;</p>
+
+        <ul>
+
+        <li>Neue Verbesserungen: Dieser Vorzug darf mehr als einmal erworben
+        werden. Mit jedem zus&auml;tzlichen Erwerb wird die R&uuml;stung um eine
+        der unten aufgef&uuml;hrten Verbesserungen erweitert. Sofern nichts
+        anderes angegeben ist, darf jede Verbesserung nur einmal ausgew&auml;hlt
+        werden&nbsp;</li>
+
+        <li>@Compendium[te001-core-rulebook.grw-de-vorzuverb.Rk32103yeVzF2tTc]{Blendblitz}</li>
+
+        <li>@Compendium[te001-core-rulebook.grw-de-vorzuverb.Sgekb3d5Yw9To2KE]{Blitzh&uuml;lle}</li>
+
+        <li>@Compendium[te001-core-rulebook.grw-de-vorzuverb.n36LEGfrj6f4X4qR]{Cham&auml;leonplatten}</li>
+
+        <li>@Compendium[te001-core-rulebook.grw-de-vorzuverb.xPjDp0egw00ew40H]{Kabuto
+        HUD}</li>
+
+        <li>@Compendium[te001-core-rulebook.grw-de-vorzuverb.CZWjBkTqdE1WMK1k]{Ultraleicht-Legierung}</li>
+
+        </ul>
+      prerequisites: Geist 8+, mindestens 2 Fertigkeitsstufen in Nahkampfwaffen
+      pulpPowers:
+        enhancement01:
+          description: >-
+            Einmal pro Szene darf die Rüstung als freie Aktion einen blendenden
+            Lichtblitz abstrahlen. Das Licht blendet augenblicklich alle
+            Personen in einem mittleren Explosionsradius um den Charakter und
+            macht sie Sehr Angeschlagen.
+          taken: false
+          title: Blendblitz
+        enhancement02:
+          description: >-
+            Die Elektrosamurai erkannten schnell die Gefahr, die von Horden aus
+            Infizierten oder dem tödlichen Klammerangriff der Jiang Shi ausgeht.
+            Einmal pro Szene darf der Träger als freie Aktion eine elektrische
+            Entladung auslösen, was 12 Schaden + 1 BW bei allem verursacht, das
+            die Rüstung berührt. Alles, was den Samurai umklammert hält, löst
+            diese Umklammerung automatisch auf.
+          taken: false
+          title: Blitzhülle
+        enhancement03:
+          description: >-
+            Die gesamte äußere Schicht der Gusoku ist mit Sensoren und LEDs
+            bedeckt, die Farbe und Helligkeit verändern, um die Umgebung
+            nachzuahmen, wenn der Samurai stillsteht. Solange er völlig
+            bewegungslos bleibt (keine Aktionen oder Bewegungen), ist er
+            effektiv unsichtbar und die Gegner erleiden beim Versuch, ihn zu
+            finden oder mit Fernkampfangriffen zu treffen, einen Malus von –6.
+          taken: false
+          title: Chamäleonplatten
+        enhancement04:
+          description: >-
+            Der Helm der Rüstung verfügt über ein integriertes Display, das es
+            dem Träger erlaubt, bei seinen Fernkampfangriffen 2 Punkte Malus zu
+            ignorieren.
+          taken: false
+          title: Kabuto HUD
+        enhancement05:
+          description: >-
+            Das geringe Gewicht der Rüstung und die perfekte Passform sorgen
+            dafür, dass der Träger bei einem Ermüdungs-Effekt keinen
+            zusätzlichen Schockschaden erleidet.
+          taken: false
+          title: Ultraleicht-Legierung
+        enhancement06:
+          description: ''
+          taken: false
+          title: ''
+        enhancement07:
+          description: ''
+          taken: false
+          title: ''
+        enhancement08:
+          description: ''
+          taken: false
+          title: ''
+        enhancement09:
+          description: ''
+          taken: false
+          title: ''
+        enhancement10:
+          description: ''
+          taken: false
+          title: ''
+        enhancement11:
+          description: ''
+          taken: false
+          title: ''
+        enhancement12:
+          description: ''
+          taken: false
+          title: ''
+        enhancement13:
+          description: ''
+          taken: false
+          title: ''
+        enhancement14:
+          description: ''
+          taken: false
+          title: ''
+        enhancement15:
+          description: ''
+          taken: false
+          title: ''
+        enhancementNumber: 5
+        limitation01: ''
+        limitation02: ''
+        limitation03: ''
+        limitation04: ''
+        limitation05: ''
+        limitation06: ''
+        limitation07: ''
+        limitation08: ''
+        limitation09: ''
+        limitation10: ''
+        limitationNumber: 0
+      timestaken: 1
+    ownership:
+      default: 0
+      9Q0XnqFwko7hRlvL: 3
+      CtisFurQNe9h7ABb: 3
+    _stats:
+      systemId: torgeternity
+      systemVersion: 3.7.0
+      coreVersion: '11.315'
+      createdTime: 1711706232065
+      modifiedTime: 1711706262758
+      lastModifiedBy: CtisFurQNe9h7ABb
+    _key: '!actors.items!V5GRrizDgqY1gzHu.qxjS47DIU0aTw16e'
   - name: Ionengusoku (Rüstung)
     type: armor
     img: systems/torgeternity/images/icons/armor-icon.webp
-    effects:
-      - _id: 9nzZQ8IB2tBru8Dn
-        changes:
-          - key: system.other.toughness
-            mode: 2
-            value: '4'
-            priority: null
-          - key: system.other.armor
-            mode: 2
-            value: '4'
-            priority: null
-        disabled: false
-        duration:
-          startTime: null
-          seconds: null
-          combat: null
-          rounds: null
-          turns: null
-          startRound: null
-          startTurn: null
-        icon: icons/svg/aura.svg
-        origin: Item.cphrvnPCQlf0UtEP
-        transfer: true
-        flags: {}
-        tint: null
-        name: Rüstung +4
-        description: ''
-        statuses: []
-        _key: >-
-          !actors.items.effects!V5GRrizDgqY1gzHu.xIPeShi0J6fSK3Hc.9nzZQ8IB2tBru8Dn
+    effects: []
     folder: null
-    sort: 9500000
+    sort: 300000
     flags:
       core:
         sourceId: >-
           Compendium.te001-core-rulebook.grw-de-ausruestung.Item.KL5fs0ulvsqCVcwr
-    _id: xIPeShi0J6fSK3Hc
+    _id: wh1XEzDQhhm5obr3
     system:
       cosm: Pan-Pacifica
       description: >-
@@ -443,57 +414,29 @@ items:
 
         <p>Du erh&auml;lst diese R&uuml;stung automatisch, sobald du den Vorzug
         "Ionengusoku" w&auml;hlst.</p>
-      techlevel: 24
       price: '0'
+      techlevel: 24
       value: 0
       bonus: 4
-      maxDex: 10
-      minStrength: null
       equipped: true
       equippedClass: item-equipped
+      maxDex: 10
+      minStrength: null
       notes: Ermüdend, Ganzkörper
+      fatigue: 1
     ownership:
       default: 0
       9Q0XnqFwko7hRlvL: 3
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
-      createdTime: 1694866569854
-      modifiedTime: 1694866569863
+      systemVersion: 3.7.0
+      coreVersion: '11.315'
+      createdTime: 1711562366100
+      modifiedTime: 1711706276641
       lastModifiedBy: CtisFurQNe9h7ABb
-    _key: '!actors.items!V5GRrizDgqY1gzHu.xIPeShi0J6fSK3Hc'
-effects:
-  - _id: nCcdlxgkhvjvNYe0
-    changes:
-      - key: system.other.toughness
-        mode: 2
-        value: '4'
-        priority: null
-      - key: system.other.armor
-        mode: 2
-        value: '4'
-        priority: null
-    disabled: false
-    duration:
-      startTime: 0
-      seconds: null
-      combat: null
-      rounds: null
-      turns: null
-      startRound: null
-      startTurn: null
-    icon: icons/svg/aura.svg
-    origin: >-
-      Compendium.torgeternity.system-de-archetypen.Actor.V5GRrizDgqY1gzHu.Item.xIPeShi0J6fSK3Hc
-    transfer: false
-    flags: {}
-    tint: null
-    name: Rüstung +4
-    description: ''
-    statuses: []
-    _key: '!actors.effects!V5GRrizDgqY1gzHu.nCcdlxgkhvjvNYe0'
+    _key: '!actors.items!V5GRrizDgqY1gzHu.wh1XEzDQhhm5obr3'
+effects: []
 folder: null
 sort: 0
 flags:
@@ -972,9 +915,10 @@ prototypeToken:
   detectionModes: []
 _stats:
   systemId: torgeternity
-  systemVersion: 3.1.1
-  coreVersion: '11.308'
+  systemVersion: 3.7.0
+  coreVersion: '11.315'
   createdTime: 1694866294442
-  modifiedTime: 1694866579391
+  modifiedTime: 1711706276641
   lastModifiedBy: CtisFurQNe9h7ABb
 _key: '!actors!V5GRrizDgqY1gzHu'
+

@@ -430,77 +430,6 @@ items:
       modifiedTime: 1694862023179
       lastModifiedBy: CtisFurQNe9h7ABb
     _key: '!actors.items!pGJE5A6rJMK7Za84.PUNnBfqB6aI6XuN0'
-  - _id: vREDOGSvuuX8ekOb
-    name: Knochen und Fell
-    type: armor
-    img: systems/torgeternity/images/icons/armor-icon.webp
-    effects:
-      - _id: 0Q8uLsW6dwhIBilt
-        changes:
-          - key: system.other.toughness
-            mode: 2
-            value: '1'
-            priority: null
-          - key: system.other.armor
-            mode: 2
-            value: '1'
-            priority: null
-        disabled: false
-        duration:
-          startTime: null
-          seconds: null
-          combat: null
-          rounds: null
-          turns: null
-          startRound: null
-          startTurn: null
-        icon: icons/svg/aura.svg
-        origin: Item.mM29CeW1rqEPlNHk
-        transfer: true
-        flags: {}
-        tint: null
-        name: Rüstung +1
-        description: ''
-        statuses: []
-        _key: >-
-          !actors.items.effects!pGJE5A6rJMK7Za84.vREDOGSvuuX8ekOb.0Q8uLsW6dwhIBilt
-    folder: null
-    sort: 0
-    flags:
-      core:
-        sourceId: >-
-          Compendium.te001-core-rulebook.grw-de-ausruestung.Item.tDUAjI78Wk2mAV6s
-    system:
-      cosm: Das Lebende Land
-      description: >-
-        <p>@UUID[Compendium.te001-core-rulebook.grw-de-grw.Qlx6yGF0Mmo6Xzrv.JournalEntryPage.7GGUUHzuYIqGPXDO#ganzkorper/torso:]{Torso}</p>
-
-        <p>Die R&uuml;stung besteht aus fein polierten Knochenst&uuml;cken, die
-        sorgf&auml;ltig in die darunterliegende Fellkleidung eingen&auml;ht
-        sind. Sie ist sehr aufwendig in der Herstellung, denn wenn die
-        Knochenschicht nicht an den K&ouml;rper des Benutzers anpasst wurde,
-        kann sie in einem Kampf leicht brechen.</p>
-      techlevel: 3
-      price: '50'
-      value: 8
-      bonus: 1
-      maxDex: 12
-      minStrength: null
-      equipped: true
-      equippedClass: item-equipped
-      notes: Torso
-    ownership:
-      default: 0
-      9Q0XnqFwko7hRlvL: 3
-      CtisFurQNe9h7ABb: 3
-    _stats:
-      systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
-      createdTime: 1694862025252
-      modifiedTime: 1694862025259
-      lastModifiedBy: CtisFurQNe9h7ABb
-    _key: '!actors.items!pGJE5A6rJMK7Za84.vREDOGSvuuX8ekOb'
   - name: Fackel
     type: gear
     img: systems/torgeternity/images/icons/gear-icon.webp
@@ -529,36 +458,50 @@ items:
       modifiedTime: 1694862047031
       lastModifiedBy: CtisFurQNe9h7ABb
     _key: '!actors.items!pGJE5A6rJMK7Za84.YidgqgRHWHRc1NCw'
-effects:
-  - _id: 7lOq1Cd07YjUKEHe
-    changes:
-      - key: system.other.toughness
-        mode: 2
-        value: '1'
-        priority: null
-      - key: system.other.armor
-        mode: 2
-        value: '1'
-        priority: null
-    disabled: false
-    duration:
-      startTime: 0
-      seconds: null
-      combat: null
-      rounds: null
-      turns: null
-      startRound: null
-      startTurn: null
-    icon: icons/svg/aura.svg
-    origin: >-
-      Compendium.torgeternity.system-de-archetypen.Actor.pGJE5A6rJMK7Za84.Item.vREDOGSvuuX8ekOb
-    transfer: false
-    flags: {}
-    tint: null
-    name: Rüstung +1
-    description: ''
-    statuses: []
-    _key: '!actors.effects!pGJE5A6rJMK7Za84.7lOq1Cd07YjUKEHe'
+  - _id: 1oyv8fqmX1WIiSaF
+    name: Knochen und Fell
+    type: armor
+    img: systems/torgeternity/images/icons/armor-icon.webp
+    effects: []
+    folder: null
+    sort: 29000000
+    flags:
+      core:
+        sourceId: >-
+          Compendium.te001-core-rulebook.grw-de-ausruestung.Item.tDUAjI78Wk2mAV6s
+    system:
+      cosm: Das Lebende Land
+      description: >-
+        <p>@UUID[Compendium.te001-core-rulebook.grw-de-grw.Qlx6yGF0Mmo6Xzrv.JournalEntryPage.7GGUUHzuYIqGPXDO#ganzkorper/torso:]{Torso}</p>
+
+        <p>Die R&uuml;stung besteht aus fein polierten Knochenst&uuml;cken, die
+        sorgf&auml;ltig in die darunterliegende Fellkleidung eingen&auml;ht
+        sind. Sie ist sehr aufwendig in der Herstellung, denn wenn die
+        Knochenschicht nicht an den K&ouml;rper des Benutzers anpasst wurde,
+        kann sie in einem Kampf leicht brechen.</p>
+      price: '50'
+      techlevel: 3
+      value: 8
+      bonus: 1
+      equipped: true
+      equippedClass: item-equipped
+      maxDex: 12
+      minStrength: null
+      notes: Torso
+      fatigue: null
+    ownership:
+      default: 0
+      9Q0XnqFwko7hRlvL: 3
+      CtisFurQNe9h7ABb: 3
+    _stats:
+      systemId: torgeternity
+      systemVersion: 3.7.0
+      coreVersion: '11.315'
+      createdTime: 1711562366193
+      modifiedTime: 1711706036325
+      lastModifiedBy: CtisFurQNe9h7ABb
+    _key: '!actors.items!pGJE5A6rJMK7Za84.1oyv8fqmX1WIiSaF'
+effects: []
 folder: null
 sort: 0
 flags:
@@ -958,7 +901,7 @@ system:
 
       <ul>
 
-      <li>(5 EP) Rachs&uuml;chtig</li>
+      <li>(5 EP) Ausdauer</li>
 
       <li>(7 EP) Wirbelwind</li>
 
@@ -1034,9 +977,10 @@ prototypeToken:
   detectionModes: []
 _stats:
   systemId: torgeternity
-  systemVersion: 3.1.1
-  coreVersion: '11.308'
+  systemVersion: 3.7.0
+  coreVersion: '11.315'
   createdTime: 1694861916375
-  modifiedTime: 1694869775524
+  modifiedTime: 1711706036325
   lastModifiedBy: CtisFurQNe9h7ABb
 _key: '!actors!pGJE5A6rJMK7Za84'
+

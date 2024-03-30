@@ -269,72 +269,6 @@ items:
       modifiedTime: 1694866828222
       lastModifiedBy: CtisFurQNe9h7ABb
     _key: '!actors.items!Aq6ZhdfGe9SMQxwv.uk7sK6sWfxJIbulc'
-  - _id: xqi2McEW7xOJftcs
-    name: Leather Coat
-    type: armor
-    img: systems/torgeternity/images/icons/armor-icon.webp
-    effects:
-      - _id: HEEEeLAOmww6nITp
-        flags: {}
-        changes:
-          - key: system.other.toughness
-            value: '1'
-            mode: 2
-            priority: null
-          - key: system.other.armor
-            value: '1'
-            mode: 2
-            priority: null
-        disabled: false
-        duration:
-          startTime: null
-          seconds: null
-          combat: null
-          rounds: null
-          turns: null
-          startRound: null
-          startTurn: null
-        icon: icons/svg/aura.svg
-        origin: Item.7Wgz7hUbakn1W4Ao
-        tint: null
-        transfer: true
-        name: Armor +1
-        description: ''
-        statuses: []
-        _key: >-
-          !actors.items.effects!Aq6ZhdfGe9SMQxwv.xqi2McEW7xOJftcs.HEEEeLAOmww6nITp
-    folder: null
-    sort: 0
-    flags:
-      core:
-        sourceId: Compendium.te001-core-rulebook.Items.34ioFwhBc4c39YFU
-    system:
-      cosm: Nile Empire
-      description: >-
-        <p>@UUID[Compendium.te001-core-rulebook.rules.pwneQ55M0nnDH0Us.JournalEntryPage.qKdamp4rrcX6TTt0#full-body/torso:]{Torso}</p>
-
-        <p>&nbsp;</p>
-      techlevel: 19
-      price: '100'
-      value: 10
-      bonus: 1
-      maxDex: 12
-      minStrength: null
-      equipped: true
-      equippedClass: item-equipped
-      notes: Torso
-    ownership:
-      default: 0
-      A9LyAqagoJJU3gDH: 3
-      CtisFurQNe9h7ABb: 3
-    _stats:
-      systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
-      createdTime: 1693901274086
-      modifiedTime: 1693901293034
-      lastModifiedBy: CtisFurQNe9h7ABb
-    _key: '!actors.items!Aq6ZhdfGe9SMQxwv.xqi2McEW7xOJftcs'
   - _id: NWapUa2jcALYy3AO
     name: Flashlight
     type: gear
@@ -571,36 +505,43 @@ items:
       modifiedTime: 1693901401203
       lastModifiedBy: CtisFurQNe9h7ABb
     _key: '!actors.items!Aq6ZhdfGe9SMQxwv.AHDH6vseOwIBIwfs'
-effects:
-  - _id: HiZZcESSMyRETa11
-    flags: {}
-    changes:
-      - key: system.other.toughness
-        value: '1'
-        mode: 2
-        priority: null
-      - key: system.other.armor
-        value: '1'
-        mode: 2
-        priority: null
-    disabled: false
-    duration:
-      startTime: 0
-      seconds: null
-      combat: null
-      rounds: null
-      turns: null
-      startRound: null
-      startTurn: null
-    icon: icons/svg/aura.svg
-    origin: >-
-      Compendium.torgeternity.archetypes.Actor.Aq6ZhdfGe9SMQxwv.Item.xqi2McEW7xOJftcs
-    tint: null
-    transfer: false
-    name: Armor +1
-    description: ''
-    statuses: []
-    _key: '!actors.effects!Aq6ZhdfGe9SMQxwv.HiZZcESSMyRETa11'
+  - _id: gKZOg5vmIgArnWQj
+    name: Leather Coat
+    type: armor
+    img: systems/torgeternity/images/icons/armor-icon.webp
+    effects: []
+    folder: null
+    sort: 200000
+    flags:
+      core:
+        sourceId: Compendium.te001-core-rulebook.Items.Item.34ioFwhBc4c39YFU
+    system:
+      cosm: Nile Empire
+      description: >-
+        <p>@UUID[Compendium.te001-core-rulebook.rules.pwneQ55M0nnDH0Us.JournalEntryPage.qKdamp4rrcX6TTt0#full-body/torso:]{Torso}</p>
+      price: '100'
+      techlevel: 19
+      value: 10
+      bonus: 1
+      equipped: true
+      equippedClass: item-equipped
+      maxDex: 12
+      minStrength: null
+      notes: Torso
+      fatigue: null
+    ownership:
+      default: 0
+      A9LyAqagoJJU3gDH: 3
+      CtisFurQNe9h7ABb: 3
+    _stats:
+      systemId: torgeternity
+      systemVersion: 3.7.0
+      coreVersion: '11.315'
+      createdTime: 1711551146690
+      modifiedTime: 1711704852287
+      lastModifiedBy: CtisFurQNe9h7ABb
+    _key: '!actors.items!Aq6ZhdfGe9SMQxwv.gKZOg5vmIgArnWQj'
+effects: []
 folder: null
 sort: 100001
 flags: {}
@@ -1064,10 +1005,10 @@ prototypeToken:
   detectionModes: []
 _stats:
   systemId: torgeternity
-  systemVersion: 3.1.1
-  coreVersion: '11.308'
+  systemVersion: 3.7.0
+  coreVersion: '11.315'
   createdTime: 1693901061941
-  modifiedTime: 1694866875694
+  modifiedTime: 1711704852287
   lastModifiedBy: CtisFurQNe9h7ABb
 _key: '!actors!Aq6ZhdfGe9SMQxwv'
 

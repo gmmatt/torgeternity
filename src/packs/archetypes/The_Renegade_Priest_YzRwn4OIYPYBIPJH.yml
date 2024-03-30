@@ -321,77 +321,6 @@ items:
       modifiedTime: 1693913428828
       lastModifiedBy: CtisFurQNe9h7ABb
     _key: '!actors.items!YzRwn4OIYPYBIPJH.Jyr9qESO0watn4r5'
-  - _id: G8MyzX3sL4Dj8zLZ
-    name: IriMesh Clothing
-    type: armor
-    img: systems/torgeternity/images/icons/armor-icon.webp
-    effects:
-      - _id: z9N78504rtLWR28c
-        flags: {}
-        changes:
-          - key: system.other.toughness
-            value: '2'
-            mode: 2
-            priority: null
-          - key: system.other.armor
-            value: '2'
-            mode: 2
-            priority: null
-        disabled: false
-        duration:
-          startTime: null
-          seconds: null
-          combat: null
-          rounds: null
-          turns: null
-          startRound: null
-          startTurn: null
-        icon: icons/svg/aura.svg
-        origin: Item.vLeYXXhLIv3RcUxq
-        tint: null
-        transfer: true
-        name: Armor +2
-        description: ''
-        statuses: []
-        _key: >-
-          !actors.items.effects!YzRwn4OIYPYBIPJH.G8MyzX3sL4Dj8zLZ.z9N78504rtLWR28c
-    folder: null
-    sort: 40100000
-    flags:
-      core:
-        sourceId: Compendium.te001-core-rulebook.Items.iqqKO58UXvYX0BOU
-    system:
-      cosm: (None)
-      description: >-
-        <p>A light textile woven by nano-machines. IriMesh looks and feels
-        similar to silk, but with even more tensile strength. IriMesh can be
-        worn at elegant banquets without looking out of place, and doesn’t raise
-        security concerns at checkpoints.</p>
-
-        <p>&nbsp;</p>
-
-        <p>Found in <strong>Core Rules</strong></p>
-      techlevel: 24
-      price: '250'
-      value: 12
-      bonus: 2
-      maxDex: 12
-      minStrength: null
-      equipped: true
-      equippedClass: item-equipped
-      notes: ''
-    ownership:
-      default: 0
-      A9LyAqagoJJU3gDH: 3
-      CtisFurQNe9h7ABb: 3
-    _stats:
-      systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
-      createdTime: 1693913444548
-      modifiedTime: 1693913444556
-      lastModifiedBy: CtisFurQNe9h7ABb
-    _key: '!actors.items!YzRwn4OIYPYBIPJH.G8MyzX3sL4Dj8zLZ'
   - _id: SYeOq9KXKESjLZZR
     name: Cyberdeck
     type: gear
@@ -1179,36 +1108,50 @@ items:
       modifiedTime: 1693913707540
       lastModifiedBy: CtisFurQNe9h7ABb
     _key: '!actors.items!YzRwn4OIYPYBIPJH.9kYPQ0EfSd09tUbr'
+  - _id: tDH3SHtwnezxojKa
+    name: IriMesh Clothing
+    type: armor
+    img: systems/torgeternity/images/icons/armor-icon.webp
+    effects: []
+    folder: null
+    sort: 40100000
+    flags:
+      core:
+        sourceId: Compendium.te001-core-rulebook.Items.Item.iqqKO58UXvYX0BOU
+    system:
+      cosm: (None)
+      description: >-
+        <p>A light textile woven by nano-machines. IriMesh looks and feels
+        similar to silk, but with even more tensile strength. IriMesh can be
+        worn at elegant banquets without looking out of place, and doesn’t raise
+        security concerns at checkpoints.</p>
+
+        <p>&nbsp;</p>
+
+        <p>Found in <strong>Core Rules</strong></p>
+      price: '250'
+      techlevel: 24
+      value: 12
+      bonus: 2
+      equipped: true
+      equippedClass: item-equipped
+      maxDex: null
+      minStrength: null
+      notes: ''
+      fatigue: null
+    ownership:
+      default: 0
+      A9LyAqagoJJU3gDH: 3
+      CtisFurQNe9h7ABb: 3
+    _stats:
+      systemId: torgeternity
+      systemVersion: 3.7.0
+      coreVersion: '11.315'
+      createdTime: 1711551146882
+      modifiedTime: 1711704624283
+      lastModifiedBy: CtisFurQNe9h7ABb
+    _key: '!actors.items!YzRwn4OIYPYBIPJH.tDH3SHtwnezxojKa'
 effects:
-  - _id: D9wP4XDSkUGUOjij
-    flags: {}
-    changes:
-      - key: system.other.toughness
-        value: '2'
-        mode: 2
-        priority: null
-      - key: system.other.armor
-        value: '2'
-        mode: 2
-        priority: null
-    disabled: false
-    duration:
-      startTime: 0
-      seconds: null
-      combat: null
-      rounds: null
-      turns: null
-      startRound: null
-      startTurn: null
-    icon: icons/svg/aura.svg
-    origin: >-
-      Compendium.torgeternity.archetypes.Actor.YzRwn4OIYPYBIPJH.Item.G8MyzX3sL4Dj8zLZ
-    tint: null
-    transfer: false
-    name: Armor +2
-    description: ''
-    statuses: []
-    _key: '!actors.effects!YzRwn4OIYPYBIPJH.D9wP4XDSkUGUOjij'
   - _id: OD88OO0fEVgzqpzV
     flags: {}
     changes:
@@ -1249,7 +1192,7 @@ effects:
       turns: null
       startRound: null
       startTurn: null
-    disabled: false
+    disabled: true
     name: Strength +1 (Arm)
     _id: lIHi5gkAKFhcgaZZ
     changes:
@@ -2135,10 +2078,10 @@ prototypeToken:
   detectionModes: []
 _stats:
   systemId: torgeternity
-  systemVersion: 3.1.1
-  coreVersion: '11.308'
+  systemVersion: 3.7.0
+  coreVersion: '11.315'
   createdTime: 1693913382916
-  modifiedTime: 1694867340056
+  modifiedTime: 1711704659626
   lastModifiedBy: CtisFurQNe9h7ABb
 _key: '!actors!YzRwn4OIYPYBIPJH'
 

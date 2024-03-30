@@ -630,148 +630,6 @@ items:
       modifiedTime: 1693913993707
       lastModifiedBy: CtisFurQNe9h7ABb
     _key: '!actors.items!6ThunRV3sj9ZSMQW.uqdS5oGcIL2Cdzdn'
-  - _id: WvEBmGIuviblLQTR
-    name: Leather Armor
-    type: armor
-    img: systems/torgeternity/images/icons/armor-icon.webp
-    effects:
-      - _id: 4FkehvPf5gFKLufu
-        flags: {}
-        changes:
-          - key: system.other.toughness
-            value: '1'
-            mode: 2
-            priority: null
-          - key: system.other.armor
-            value: '1'
-            mode: 2
-            priority: null
-        disabled: false
-        duration:
-          startTime: null
-          seconds: null
-          combat: null
-          rounds: null
-          turns: null
-          startRound: null
-          startTurn: null
-        icon: icons/svg/aura.svg
-        origin: Item.i0UpOMkjfmzW0uFN
-        tint: null
-        transfer: true
-        name: Armor +1
-        description: ''
-        statuses: []
-        _key: >-
-          !actors.items.effects!6ThunRV3sj9ZSMQW.WvEBmGIuviblLQTR.4FkehvPf5gFKLufu
-    folder: null
-    sort: 6900000
-    flags:
-      core:
-        sourceId: Compendium.te001-core-rulebook.Items.6GTnNpLUtydDJVi1
-    system:
-      cosm: Aysle
-      description: >-
-        <p>Animal hides tanned or boiled to a stiffer, more durable finish, then
-        reinforced with studs or stitched seams. Found in some form in every
-        cosm.</p>
-
-        <p>&nbsp;</p>
-
-        <p>Found in <strong>Core Rules</strong></p>
-      techlevel: 8
-      price: '150'
-      value: 11
-      bonus: 1
-      maxDex: 10
-      minStrength: null
-      equipped: false
-      equippedClass: item-unequipped
-      notes: ''
-    ownership:
-      default: 0
-      A9LyAqagoJJU3gDH: 3
-      CtisFurQNe9h7ABb: 3
-    _stats:
-      systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
-      createdTime: 1693914022612
-      modifiedTime: 1693914030421
-      lastModifiedBy: CtisFurQNe9h7ABb
-    _key: '!actors.items!6ThunRV3sj9ZSMQW.WvEBmGIuviblLQTR'
-  - _id: jvgJIaDovW9Wogli
-    name: Stab Vest
-    type: armor
-    img: systems/torgeternity/images/icons/armor-icon.webp
-    effects:
-      - _id: OzihOXYdkQa3KJuz
-        flags: {}
-        changes:
-          - key: system.other.toughness
-            value: '3'
-            mode: 2
-            priority: null
-          - key: system.other.armor
-            value: '3'
-            mode: 2
-            priority: null
-        disabled: false
-        duration:
-          startTime: null
-          seconds: null
-          combat: null
-          rounds: null
-          turns: null
-          startRound: null
-          startTurn: null
-        icon: icons/svg/aura.svg
-        origin: Item.muPtAUlFLPCEwhmJ
-        tint: null
-        transfer: true
-        name: +3 Armor
-        description: ''
-        statuses: []
-        _key: >-
-          !actors.items.effects!6ThunRV3sj9ZSMQW.jvgJIaDovW9Wogli.OzihOXYdkQa3KJuz
-    folder: null
-    sort: 16600000
-    flags:
-      core:
-        sourceId: Compendium.te001-core-rulebook.Items.G9m8o4kbueF7EWdt
-    system:
-      cosm: Core Earth
-      description: >-
-        <p>@UUID[Compendium.te001-core-rulebook.rules.pwneQ55M0nnDH0Us.JournalEntryPage.qKdamp4rrcX6TTt0#full-body/torso:]{Torso}</p>
-
-        <p>Lighter and more comfortable than a ballistic vest, and designed more
-        to stop slashing and piercing weapons. Still somewhat effective against
-        bullets.</p>
-
-        <p>&nbsp;</p>
-
-        <p>Found in <strong>Core Rules</strong></p>
-      techlevel: 23
-      price: '200'
-      value: 11
-      bonus: 3
-      maxDex: 10
-      minStrength: null
-      equipped: true
-      equippedClass: item-equipped
-      notes: Torso
-    ownership:
-      default: 0
-      A9LyAqagoJJU3gDH: 3
-      CtisFurQNe9h7ABb: 3
-    _stats:
-      systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
-      createdTime: 1693914030412
-      modifiedTime: 1693914030418
-      lastModifiedBy: CtisFurQNe9h7ABb
-    _key: '!actors.items!6ThunRV3sj9ZSMQW.jvgJIaDovW9Wogli'
   - name: Pain Gauntlet
     type: gear
     img: systems/torgeternity/images/icons/axe-icon.webp
@@ -852,6 +710,92 @@ items:
       modifiedTime: 1693914254765
       lastModifiedBy: CtisFurQNe9h7ABb
     _key: '!actors.items!6ThunRV3sj9ZSMQW.Uv3ApXgF1UfEH3ay'
+  - _id: i45pPCUAHmPwtlVJ
+    name: Stab Vest
+    type: armor
+    img: systems/torgeternity/images/icons/armor-icon.webp
+    effects: []
+    folder: null
+    sort: 16600000
+    flags:
+      core:
+        sourceId: Compendium.te001-core-rulebook.Items.Item.G9m8o4kbueF7EWdt
+    system:
+      cosm: Core Earth
+      description: >-
+        <p>@UUID[Compendium.te001-core-rulebook.rules.pwneQ55M0nnDH0Us.JournalEntryPage.qKdamp4rrcX6TTt0#full-body/torso:]{Torso}</p>
+
+        <p>Lighter and more comfortable than a ballistic vest, and designed more
+        to stop slashing and piercing weapons. Still somewhat effective against
+        bullets.</p>
+
+        <p>&nbsp;</p>
+
+        <p>Found in <strong>Core Rules</strong></p>
+      price: '200'
+      techlevel: 23
+      value: 11
+      bonus: 3
+      equipped: true
+      equippedClass: item-equipped
+      maxDex: 10
+      minStrength: null
+      notes: Torso
+      fatigue: null
+    ownership:
+      default: 0
+      A9LyAqagoJJU3gDH: 3
+      CtisFurQNe9h7ABb: 3
+    _stats:
+      systemId: torgeternity
+      systemVersion: 3.7.0
+      coreVersion: '11.315'
+      createdTime: 1711551146747
+      modifiedTime: 1711705121625
+      lastModifiedBy: CtisFurQNe9h7ABb
+    _key: '!actors.items!6ThunRV3sj9ZSMQW.i45pPCUAHmPwtlVJ'
+  - _id: foI6JV88RYV10i7V
+    name: Leather Armor
+    type: armor
+    img: systems/torgeternity/images/icons/armor-icon.webp
+    effects: []
+    folder: null
+    sort: 6900000
+    flags:
+      core:
+        sourceId: Compendium.te001-core-rulebook.Items.Item.6GTnNpLUtydDJVi1
+    system:
+      cosm: Aysle
+      description: >-
+        <p>Animal hides tanned or boiled to a stiffer, more durable finish, then
+        reinforced with studs or stitched seams. Found in some form in every
+        cosm.</p>
+
+        <p>&nbsp;</p>
+
+        <p>Found in <strong>Core Rules</strong></p>
+      price: '150'
+      techlevel: 8
+      value: 11
+      bonus: 1
+      equipped: false
+      equippedClass: item-unequipped
+      maxDex: 10
+      minStrength: null
+      notes: ''
+      fatigue: null
+    ownership:
+      default: 0
+      A9LyAqagoJJU3gDH: 3
+      CtisFurQNe9h7ABb: 3
+    _stats:
+      systemId: torgeternity
+      systemVersion: 3.7.0
+      coreVersion: '11.315'
+      createdTime: 1711551146690
+      modifiedTime: 1711705121628
+      lastModifiedBy: CtisFurQNe9h7ABb
+    _key: '!actors.items!6ThunRV3sj9ZSMQW.foI6JV88RYV10i7V'
 effects:
   - _id: lCixEDWBVYObydTz
     changes:
@@ -997,64 +941,6 @@ effects:
     description: ''
     statuses: []
     _key: '!actors.effects!6ThunRV3sj9ZSMQW.aC8NLLy68uR2lQl8'
-  - _id: vxGUErnAtvVnpY7L
-    flags: {}
-    changes:
-      - key: system.other.toughness
-        value: '1'
-        mode: 2
-        priority: null
-      - key: system.other.armor
-        value: '1'
-        mode: 2
-        priority: null
-    disabled: true
-    duration:
-      startTime: 0
-      seconds: null
-      combat: null
-      rounds: null
-      turns: null
-      startRound: null
-      startTurn: null
-    icon: icons/svg/aura.svg
-    origin: >-
-      Compendium.torgeternity.archetypes.Actor.6ThunRV3sj9ZSMQW.Item.WvEBmGIuviblLQTR
-    tint: null
-    transfer: false
-    name: Armor +1
-    description: ''
-    statuses: []
-    _key: '!actors.effects!6ThunRV3sj9ZSMQW.vxGUErnAtvVnpY7L'
-  - _id: DzzNIomJ0AB1CwAm
-    flags: {}
-    changes:
-      - key: system.other.toughness
-        value: '3'
-        mode: 2
-        priority: null
-      - key: system.other.armor
-        value: '3'
-        mode: 2
-        priority: null
-    disabled: false
-    duration:
-      startTime: 0
-      seconds: null
-      combat: null
-      rounds: null
-      turns: null
-      startRound: null
-      startTurn: null
-    icon: icons/svg/aura.svg
-    origin: >-
-      Compendium.torgeternity.archetypes.Actor.6ThunRV3sj9ZSMQW.Item.jvgJIaDovW9Wogli
-    tint: null
-    transfer: false
-    name: +3 Armor
-    description: ''
-    statuses: []
-    _key: '!actors.effects!6ThunRV3sj9ZSMQW.DzzNIomJ0AB1CwAm'
 folder: null
 sort: 100001
 flags: {}
@@ -1523,10 +1409,10 @@ prototypeToken:
   detectionModes: []
 _stats:
   systemId: torgeternity
-  systemVersion: 3.1.1
-  coreVersion: '11.308'
+  systemVersion: 3.7.0
+  coreVersion: '11.315'
   createdTime: 1693913842164
-  modifiedTime: 1694864078670
+  modifiedTime: 1711705121628
   lastModifiedBy: CtisFurQNe9h7ABb
 _key: '!actors!6ThunRV3sj9ZSMQW'
 

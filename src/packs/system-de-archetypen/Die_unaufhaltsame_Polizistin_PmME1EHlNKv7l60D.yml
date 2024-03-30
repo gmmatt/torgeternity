@@ -57,102 +57,6 @@ items:
       modifiedTime: 1694869746476
       lastModifiedBy: CtisFurQNe9h7ABb
     _key: '!actors.items!PmME1EHlNKv7l60D.iq2B0D76k7kPnsBz'
-  - _id: 97ugIHv3IgEZpVG5
-    name: Ballistische/Kevlarweste
-    type: armor
-    img: systems/torgeternity/images/icons/armor-icon.webp
-    effects:
-      - _id: fuC2feuWm0gGEvBz
-        changes:
-          - key: system.other.toughness
-            mode: 2
-            value: '4'
-            priority: null
-          - key: system.other.armor
-            mode: 2
-            value: '4'
-            priority: null
-        disabled: false
-        duration:
-          startTime: null
-          seconds: null
-          combat: null
-          rounds: null
-          turns: null
-          startRound: null
-          startTurn: null
-        icon: icons/svg/aura.svg
-        origin: Item.e80oWkKipxAnyLvV
-        transfer: true
-        flags: {}
-        tint: null
-        name: Rüstung +4
-        description: ''
-        statuses: []
-        _key: >-
-          !actors.items.effects!PmME1EHlNKv7l60D.97ugIHv3IgEZpVG5.fuC2feuWm0gGEvBz
-      - _id: y8BQOMJQ0bnviHpH
-        changes:
-          - key: system.other.fatigue
-            mode: 2
-            value: '1'
-            priority: null
-        disabled: false
-        duration:
-          startTime: null
-          seconds: null
-          combat: null
-          rounds: null
-          turns: null
-          startRound: null
-          startTurn: null
-        icon: icons/svg/aura.svg
-        origin: Compendium.te001-core-rulebook.grw-de-ausruestung.wT9t85wtxun9qe9w
-        transfer: true
-        flags: {}
-        tint: null
-        name: Ermüdung
-        description: ''
-        statuses: []
-        _key: >-
-          !actors.items.effects!PmME1EHlNKv7l60D.97ugIHv3IgEZpVG5.y8BQOMJQ0bnviHpH
-    folder: null
-    sort: 0
-    flags:
-      core:
-        sourceId: >-
-          Compendium.te001-core-rulebook.grw-de-ausruestung.Item.wT9t85wtxun9qe9w
-    system:
-      cosm: Zentralerde
-      description: >-
-        <p>@UUID[Compendium.te001-core-rulebook.grw-de-grw.Qlx6yGF0Mmo6Xzrv.JournalEntryPage.7GGUUHzuYIqGPXDO#ermudung:]{Erm&uuml;dung}</p>
-
-        <p>@UUID[Compendium.te001-core-rulebook.grw-de-grw.Qlx6yGF0Mmo6Xzrv.JournalEntryPage.7GGUUHzuYIqGPXDO#ganzkorper/torso:]{Torso}</p>
-
-        <p>Auch als kugelsichere Westen oder Kevlarwesten bekannt. Hergestellt
-        aus synthetischem Material, das die Energie von auftreffenden Kugeln
-        &uuml;ber mehrere Schutzschichten verteilt.</p>
-      techlevel: 22
-      price: '250'
-      value: 12
-      bonus: 4
-      maxDex: 10
-      minStrength: null
-      equipped: true
-      equippedClass: item-equipped
-      notes: Torso, Ermüdung
-    ownership:
-      default: 0
-      9Q0XnqFwko7hRlvL: 3
-      CtisFurQNe9h7ABb: 3
-    _stats:
-      systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
-      createdTime: 1694861609019
-      modifiedTime: 1694861609026
-      lastModifiedBy: CtisFurQNe9h7ABb
-    _key: '!actors.items!PmME1EHlNKv7l60D.97ugIHv3IgEZpVG5'
   - _id: GueHBl4GQ4sTVI0B
     name: Schlagstock
     type: meleeweapon
@@ -574,61 +478,50 @@ items:
       modifiedTime: 1694868652521
       lastModifiedBy: CtisFurQNe9h7ABb
     _key: '!actors.items!PmME1EHlNKv7l60D.bZ0ymfbNEtDGRdqq'
-effects:
-  - _id: u1ffMaLppeMpHolT
-    changes:
-      - key: system.other.toughness
-        mode: 2
-        value: '4'
-        priority: null
-      - key: system.other.armor
-        mode: 2
-        value: '4'
-        priority: null
-    disabled: false
-    duration:
-      startTime: 0
-      seconds: null
-      combat: null
-      rounds: null
-      turns: null
-      startRound: null
-      startTurn: null
-    icon: icons/svg/aura.svg
-    origin: >-
-      Compendium.torgeternity.system-de-archetypen.Actor.PmME1EHlNKv7l60D.Item.97ugIHv3IgEZpVG5
-    transfer: false
-    flags: {}
-    tint: null
-    name: Rüstung +4
-    description: ''
-    statuses: []
-    _key: '!actors.effects!PmME1EHlNKv7l60D.u1ffMaLppeMpHolT'
-  - _id: MszsYnwDWLVGzROq
-    changes:
-      - key: system.other.fatigue
-        mode: 2
-        value: '1'
-        priority: null
-    disabled: false
-    duration:
-      startTime: 0
-      seconds: null
-      combat: null
-      rounds: null
-      turns: null
-      startRound: null
-      startTurn: null
-    icon: icons/svg/aura.svg
-    origin: >-
-      Compendium.torgeternity.system-de-archetypen.Actor.PmME1EHlNKv7l60D.Item.97ugIHv3IgEZpVG5
-    transfer: false
-    flags: {}
-    tint: null
-    name: Ermüdung
-    description: ''
-    statuses: []
-    _key: '!actors.effects!PmME1EHlNKv7l60D.MszsYnwDWLVGzROq'
+  - _id: GCZ1wJSh7G4VsnIg
+    name: Ballistische/Kevlarweste
+    type: armor
+    img: systems/torgeternity/images/icons/armor-icon.webp
+    effects: []
+    folder: null
+    sort: 31600000
+    flags:
+      core:
+        sourceId: >-
+          Compendium.te001-core-rulebook.grw-de-ausruestung.Item.wT9t85wtxun9qe9w
+    system:
+      cosm: Zentralerde
+      description: >-
+        <p>@UUID[Compendium.te001-core-rulebook.grw-de-grw.Qlx6yGF0Mmo6Xzrv.JournalEntryPage.7GGUUHzuYIqGPXDO#ermudung:]{Erm&uuml;dung}</p>
+
+        <p>@UUID[Compendium.te001-core-rulebook.grw-de-grw.Qlx6yGF0Mmo6Xzrv.JournalEntryPage.7GGUUHzuYIqGPXDO#ganzkorper/torso:]{Torso}</p>
+
+        <p>Auch als kugelsichere Westen oder Kevlarwesten bekannt. Hergestellt
+        aus synthetischem Material, das die Energie von auftreffenden Kugeln
+        &uuml;ber mehrere Schutzschichten verteilt.</p>
+      price: '250'
+      techlevel: 22
+      value: 12
+      bonus: 4
+      equipped: true
+      equippedClass: item-equipped
+      maxDex: 10
+      minStrength: null
+      notes: Torso, Ermüdung
+      fatigue: 1
+    ownership:
+      default: 0
+      9Q0XnqFwko7hRlvL: 3
+      CtisFurQNe9h7ABb: 3
+    _stats:
+      systemId: torgeternity
+      systemVersion: 3.7.0
+      coreVersion: '11.315'
+      createdTime: 1711562366229
+      modifiedTime: 1711705830406
+      lastModifiedBy: CtisFurQNe9h7ABb
+    _key: '!actors.items!PmME1EHlNKv7l60D.GCZ1wJSh7G4VsnIg'
+effects: []
 folder: null
 sort: 0
 flags:
@@ -1109,10 +1002,10 @@ prototypeToken:
   detectionModes: []
 _stats:
   systemId: torgeternity
-  systemVersion: 3.1.1
-  coreVersion: '11.308'
+  systemVersion: 3.7.0
+  coreVersion: '11.315'
   createdTime: 1694861600031
-  modifiedTime: 1694869755700
+  modifiedTime: 1711705830406
   lastModifiedBy: CtisFurQNe9h7ABb
 _key: '!actors!PmME1EHlNKv7l60D'
 
