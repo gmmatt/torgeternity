@@ -1528,7 +1528,7 @@ system:
 
       </ul>
     race: theRace
-  editstate: null
+  editstate: false
   fatigue: '1'
 ownership:
   default: 0
@@ -1595,7 +1595,7 @@ _stats:
   systemVersion: 3.7.0
   coreVersion: '11.315'
   createdTime: 1694863252503
-  modifiedTime: 1711706337786
+  modifiedTime: 1711803251902
   lastModifiedBy: CtisFurQNe9h7ABb
 _key: '!actors!XhPhxBg111Zg5bem'
 

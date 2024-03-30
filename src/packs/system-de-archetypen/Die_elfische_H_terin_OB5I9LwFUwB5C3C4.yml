@@ -1236,7 +1236,7 @@ system:
 
       </ul>
     race: elf
-  editstate: null
+  editstate: false
   fatigue: '1'
 ownership:
   default: 0
@@ -1303,7 +1303,7 @@ _stats:
   systemVersion: 3.7.0
   coreVersion: '11.315'
   createdTime: 1694866454541
-  modifiedTime: 1711705809069
+  modifiedTime: 1711803218168
   lastModifiedBy: CtisFurQNe9h7ABb
 _key: '!actors!OB5I9LwFUwB5C3C4'
 

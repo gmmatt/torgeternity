@@ -631,14 +631,9 @@ effects:
     name: Armor +3 (Arm)
     _id: tfdPfqnwELylRgKR
     changes:
-      - key: system.other.toughness
-        mode: 2
-        value: '3'
-        priority: null
       - key: system.other.armor
         mode: 2
         value: '3'
-        priority: null
     description: ''
     transfer: false
     statuses: []
@@ -1043,7 +1038,7 @@ system:
 
       </ul>
     race: human
-  editstate: null
+  editstate: false
   fatigue: '1'
 ownership:
   default: 0
@@ -1110,7 +1105,7 @@ _stats:
   systemVersion: 3.7.0
   coreVersion: '11.315'
   createdTime: 1693914389548
-  modifiedTime: 1711705164257
+  modifiedTime: 1711803389183
   lastModifiedBy: CtisFurQNe9h7ABb
 _key: '!actors!ys0MhNx2uIG2ORAD'
 

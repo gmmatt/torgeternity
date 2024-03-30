@@ -1026,7 +1026,7 @@ system:
 
       </ul>
     race: human
-  editstate: null
+  editstate: false
   fatigue: '1'
 ownership:
   default: 0
@@ -1093,7 +1093,7 @@ _stats:
   systemVersion: 3.7.0
   coreVersion: '11.315'
   createdTime: 1693910524596
-  modifiedTime: 1711706548526
+  modifiedTime: 1711803340831
   lastModifiedBy: CtisFurQNe9h7ABb
 _key: '!actors!8YH1e6xGG3IHb1Mm'
 

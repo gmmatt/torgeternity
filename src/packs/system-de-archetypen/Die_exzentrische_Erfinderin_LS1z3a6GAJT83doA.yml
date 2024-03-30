@@ -960,7 +960,7 @@ system:
 
       </ul>
     race: human
-  editstate: null
+  editstate: false
   fatigue: '1'
 ownership:
   default: 0
@@ -1027,7 +1027,7 @@ _stats:
   systemVersion: 3.7.0
   coreVersion: '11.315'
   createdTime: 1694866736301
-  modifiedTime: 1711706120829
+  modifiedTime: 1711803225110
   lastModifiedBy: CtisFurQNe9h7ABb
 _key: '!actors!LS1z3a6GAJT83doA'
 
