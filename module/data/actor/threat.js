@@ -29,6 +29,7 @@ export class ThreatData extends CommonActorData {
         possibilityPotential: new fields.StringField({
           initial: 'Never',
           required: true,
+          blank: false,
         }),
       }),
     };
