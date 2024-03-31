@@ -35,27 +35,6 @@ items:
       modifiedTime: 1693910024116
       lastModifiedBy: CtisFurQNe9h7ABb
     _key: '!actors.items!QVpKuacd4LKfpJOy.KyvSH0G67CXa05a2'
-  - _id: GC4sa5RhVhoCbPr1
-    name: HTH Attack
-    type: customAttack
-    data:
-      description: null
-      attackWith: unarmedCombat
-      damageType: strengthPlus
-      damage: 0
-      ap: 0
-      notes: ''
-      chatNote: ''
-    sort: 500001
-    flags:
-      core:
-        sourceId: Item.ewfPYWfFRJSZ1FOs
-    img: systems/torgeternity/images/icons/melee-weapon-icon.jpg
-    effects: []
-    folder: null
-    permission:
-      default: 0
-    _key: '!actors.items!QVpKuacd4LKfpJOy.GC4sa5RhVhoCbPr1'
   - _id: Q3AEnYDnCuWdHQJw
     name: Trademark Weapon (Electric Katana)
     type: perk
@@ -489,7 +468,7 @@ system:
     toughness: 13
     armor: 4
     cosm: panPacifica
-    possibilities: 0
+    possibilities: 3
     posibilities: 3
   skills:
     airVehicles:
@@ -935,7 +914,7 @@ _stats:
   systemVersion: 3.7.0
   coreVersion: '11.315'
   createdTime: 1693909765954
-  modifiedTime: 1711803334854
+  modifiedTime: 1711900306016
   lastModifiedBy: CtisFurQNe9h7ABb
 _key: '!actors!QVpKuacd4LKfpJOy'
 

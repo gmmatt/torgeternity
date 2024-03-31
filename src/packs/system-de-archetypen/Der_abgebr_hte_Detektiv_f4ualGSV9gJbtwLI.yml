@@ -605,7 +605,7 @@ system:
     toughness: 9
     armor: 1
     cosm: panPacifica
-    possibilities: 0
+    possibilities: 3
     posibilities: 3
   skills:
     airVehicles:
@@ -1060,7 +1060,7 @@ _stats:
   systemVersion: 3.7.0
   coreVersion: '11.315'
   createdTime: 1694867157183
-  modifiedTime: 1711803129219
+  modifiedTime: 1711900111251
   lastModifiedBy: CtisFurQNe9h7ABb
 _key: '!actors!f4ualGSV9gJbtwLI'
 

@@ -814,7 +814,7 @@ system:
     toughness: 10
     armor: 2
     cosm: orrorsh
-    possibilities: 0
+    possibilities: 3
     posibilities: 3
   skills:
     airVehicles:
@@ -1273,7 +1273,7 @@ _stats:
   systemVersion: 3.7.0
   coreVersion: '11.315'
   createdTime: 1694867975270
-  modifiedTime: 1711803159908
+  modifiedTime: 1711900150255
   lastModifiedBy: CtisFurQNe9h7ABb
 _key: '!actors!54xKJBBQREaETwap'
 

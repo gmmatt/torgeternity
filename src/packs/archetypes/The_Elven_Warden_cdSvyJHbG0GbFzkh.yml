@@ -819,7 +819,7 @@ system:
     toughness: 5
     armor: 0
     cosm: aysle
-    possibilities: 0
+    possibilities: 3
     posibilities: 3
   skills:
     airVehicles:
@@ -1268,7 +1268,7 @@ _stats:
   systemVersion: 3.7.0
   coreVersion: '11.315'
   createdTime: 1693910130714
-  modifiedTime: 1711803337574
+  modifiedTime: 1711900314639
   lastModifiedBy: CtisFurQNe9h7ABb
 _key: '!actors!cdSvyJHbG0GbFzkh'
 
