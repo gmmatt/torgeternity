@@ -86,6 +86,5 @@ export class StormKnightData extends CommonActorData {
    */
   prepareDerivedData() {
     super.prepareDerivedData();
-    this.other.toughness = this.attributes.strength + this.other.armor;
   }
 }

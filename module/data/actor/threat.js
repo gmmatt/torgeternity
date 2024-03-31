@@ -58,7 +58,6 @@ export class ThreatData extends CommonActorData {
    */
   prepareDerivedData() {
     super.prepareDerivedData();
-    this.other.toughness = this.attributes.strength + this.other?.armor;
     for (const skill of Object.values(this.skills)) {
       skill.isThreatSkill = skill.isThreatSkill || skill.adds !== 0;
     }

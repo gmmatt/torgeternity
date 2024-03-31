@@ -99,9 +99,8 @@ export class CommonActorData extends foundry.abstract.TypeDataModel {
    */
   prepareBaseData() {
     super.prepareBaseData();
-    this.other.move = this.attributes.dexterity;
-    this.other.run = this.attributes.dexterity * 3;
     this.shock.max = this.attributes.spirit;
+    this.other.toughness = this.attributes.strength;
   }
 
   /**
@@ -109,6 +108,13 @@ export class CommonActorData extends foundry.abstract.TypeDataModel {
    */
   prepareDerivedData() {
     super.prepareDerivedData();
+    // Modify dexterity based on armor, and adjust move after
+    this.attributes.dexterity =
+      Math.min(this.attributes.dexterity, this.maxDex) +
+      Math.min(this.attributes.strength - this.minStr, 0);
+    this.other.move = this.attributes.dexterity;
+    this.other.run = this.attributes.dexterity * 3;
+    this.other.toughness += this.other.armor;
     // Derive Skill values for Storm Knights and Threats
     for (const skill of Object.values(this.skills)) {
       const trained = skill.unskilledUse === 1 || skill.adds;
