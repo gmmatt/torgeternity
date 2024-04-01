@@ -95,10 +95,13 @@ export class VehicleData extends foundry.abstract.TypeDataModel {
     switch (this.price.magnitude) {
       case 'billions':
         convertedPrice = this.price.dollars * 1000;
+        break;
       case 'millions':
         convertedPrice = this.price.dollars * 1000;
+        break;
       case 'thousands':
         convertedPrice = this.price.dollars * 1000;
+        break;
       case 'ones':
       default:
         convertedPrice = this.price.dollars;
@@ -119,6 +122,6 @@ export class VehicleData extends foundry.abstract.TypeDataModel {
     }
     this.topSpeed.penalty = speedPenalty;
 
-    this.defense = parseInt(this.operator.skillValue + this.maneuver);
+    this.defense = parseInt(this.operator.skillValue) + parseInt(this.maneuver);
   }
 }
