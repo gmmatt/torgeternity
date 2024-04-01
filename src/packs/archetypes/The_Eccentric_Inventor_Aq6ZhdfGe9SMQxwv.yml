@@ -564,7 +564,7 @@ system:
     toughness: 5
     armor: 0
     cosm: nileEmpire
-    possibilities: 0
+    possibilities: 3
     posibilities: 3
   skills:
     airVehicles:
@@ -1008,7 +1008,7 @@ _stats:
   systemVersion: 3.7.0
   coreVersion: '11.315'
   createdTime: 1693901061941
-  modifiedTime: 1711803328462
+  modifiedTime: 1711900279607
   lastModifiedBy: CtisFurQNe9h7ABb
 _key: '!actors!Aq6ZhdfGe9SMQxwv'
 

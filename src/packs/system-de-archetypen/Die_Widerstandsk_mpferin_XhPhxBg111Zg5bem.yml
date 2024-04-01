@@ -1138,7 +1138,7 @@ system:
     toughness: 10
     armor: 3
     cosm: tharkold
-    possibilities: 0
+    possibilities: 3
     posibilities: 3
   skills:
     airVehicles:
@@ -1595,7 +1595,7 @@ _stats:
   systemVersion: 3.7.0
   coreVersion: '11.315'
   createdTime: 1694863252503
-  modifiedTime: 1711803251902
+  modifiedTime: 1711900196711
   lastModifiedBy: CtisFurQNe9h7ABb
 _key: '!actors!XhPhxBg111Zg5bem'
 

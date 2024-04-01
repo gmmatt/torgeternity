@@ -687,7 +687,7 @@ system:
     toughness: 8
     armor: 1
     cosm: coreEarth
-    possibilities: 0
+    possibilities: 3
     posibilities: 3
   skills:
     airVehicles:
@@ -1143,7 +1143,7 @@ _stats:
   systemVersion: 3.7.0
   coreVersion: '11.315'
   createdTime: 1694861141351
-  modifiedTime: 1711803231761
+  modifiedTime: 1711900181186
   lastModifiedBy: CtisFurQNe9h7ABb
 _key: '!actors!sThfpHelpOeE3Ipz'
 

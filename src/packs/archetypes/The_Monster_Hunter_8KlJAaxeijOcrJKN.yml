@@ -609,7 +609,7 @@ system:
     toughness: 10
     armor: 2
     cosm: orrorsh
-    possibilities: 0
+    possibilities: 3
     posibilities: 3
   skills:
     airVehicles:
@@ -907,31 +907,33 @@ system:
       src="systems/torgeternity/images/characters/Monster_Hunter.webp" alt=""
       width="1139" height="1982"></p>
 
-      <p
-      class="moreheight">@UUID[Compendium.torgeternity.handouts.JournalEntry.Knhh8vqtjSylJo5Z.JournalEntryPage.XuZD3GOezHrsiAbQ]{Archetype
-      - The Monster Hunter}</p>
+      <p class="moreheight"><a class="content-link" draggable="true"
+      data-uuid="Compendium.torgeternity.handouts.JournalEntry.Knhh8vqtjSylJo5Z.JournalEntryPage.XuZD3GOezHrsiAbQ"
+      data-id="XuZD3GOezHrsiAbQ" data-type="JournalEntryPage"
+      data-pack="torgeternity.handouts" data-tooltip="Image Page"><i class="fas
+      fa-file-image"></i>Archetype - The Monster Hunter</a></p>
 
       <h3>Overview</h3>
 
       <p>You are a Victorian, and your world, Gaea, is caught in the grip of the
-      Gaunt Man&rsquo;s horrors. You weren&rsquo;t content to be ruled by
-      terror, and so you fought back. Against all odds you survived, and the
-      various tricks, gadgets, and special weapons you&rsquo;ve acquired over
-      years of battling evil have evened the odds considerably.</p>
+      Gaunt Man’s horrors. You weren’t content to be ruled by terror, and so you
+      fought back. Against all odds you survived, and the various tricks,
+      gadgets, and special weapons you’ve acquired over years of battling evil
+      have evened the odds considerably.</p>
 
       <p>When the Gaunt Man gathered his dark forces to travel through the
       maelstrom bridges and unleash their fury upon Core Earth, you followed to
-      stalk them, just as you&rsquo;ve always done.</p>
+      stalk them, just as you’ve always done.</p>
 
       <h3>Tactics</h3>
 
-      <p>The special shells in your Slayer&rsquo;s Gun gives you power and
-      flexibility against specific foes, even outside of Orrorsh. Whenever you
-      can, investigate what types of foes are likely to appear and prepare a
-      custom load of shells to deal with them. Holy Water shells work well
-      against gospog, a common enemy employed by all the High Lords. Even once
-      all your specialized shells are used, your standard ammunition still packs
-      a punch.</p>
+      <p>The special shells in your Slayer’s Gun gives you power and flexibility
+      against specific foes, even outside of Orrorsh. Whenever you can,
+      investigate what types of foes are likely to appear and prepare a custom
+      load of shells to deal with them. Holy Water shells work well against
+      gospog, a common enemy employed by all the High Lords. Even once all your
+      specialized shells are used, your standard ammunition still packs a
+      punch.</p>
 
       <p>You are highly resistant to fear and intimidation, but extremely
       vulnerable to taunt interactions. Victorians are notoriously haughty and
@@ -940,24 +942,24 @@ system:
       <h3>Moment of Crisis</h3>
 
       <p>Your crisis came long ago on Gaea. Maybe it was a werewolf, or perhaps
-      it was a vampire. Whatever it was, it was a product of the Gaunt
-      Man&rsquo;s evil. Tracking it back to its lair was foolhardy, but your
-      attempt triggered a change in you. As a Storm Knight you finally had the
-      power to fight back.</p>
+      it was a vampire. Whatever it was, it was a product of the Gaunt Man’s
+      evil. Tracking it back to its lair was foolhardy, but your attempt
+      triggered a change in you. As a Storm Knight you finally had the power to
+      fight back.</p>
 
       <h3>Quote</h3>
 
-      <p>&ldquo;It&rsquo;s easier to stop fearing a thing once you have the
-      power to destroy it.&ldquo;</p>
+      <p>“It’s easier to stop fearing a thing once you have the power to destroy
+      it.“</p>
 
       <h3>Description</h3>
 
       <p>Battling monsters is a dangerous profession, and you bear numerous
       scars attesting to that fact. Only some of those scars are visible.
-      Victorians prefer modest dress, even in excruciating heat, and
-      you&rsquo;re no exception. Your distinctive coat made of strange leather
-      and the ornately decorated, oversized Slayer&rsquo;s Gun you carry are
-      both giveaways to your profession.</p>
+      Victorians prefer modest dress, even in excruciating heat, and you’re no
+      exception. Your distinctive coat made of strange leather and the ornately
+      decorated, oversized Slayer’s Gun you carry are both giveaways to your
+      profession.</p>
 
       <h3>Agenda</h3>
 
@@ -1059,7 +1061,7 @@ _stats:
   systemVersion: 3.7.0
   coreVersion: '11.315'
   createdTime: 1693895859465
-  modifiedTime: 1711803347022
+  modifiedTime: 1711900328552
   lastModifiedBy: CtisFurQNe9h7ABb
 _key: '!actors!8KlJAaxeijOcrJKN'
 
