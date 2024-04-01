@@ -47,7 +47,7 @@ export class VehicleData extends foundry.abstract.TypeDataModel {
       toughness: new fields.NumberField({ initial: 5, integer: true, nullable: false }),
       type: new fields.StringField({ initial: 'land' }),
       wounds: new fields.SchemaField({
-        current: new fields.NumberField({ initial: 0, integer: true, nullable: false }),
+        value: new fields.NumberField({ initial: 0, integer: true, nullable: false }),
         max: new fields.NumberField({ initial: 3, integer: true, nullable: false }),
       }),
     };
@@ -73,6 +73,9 @@ export class VehicleData extends foundry.abstract.TypeDataModel {
       data.details.sizeBonus = Object.keys(torgeternity.sizes).includes(data.details.sizeBonus)
         ? data.details.sizeBonus
         : 'normal';
+    }
+    if (Object.hasOwn(data.wounds, 'current')) {
+      data.wounds.value = data.wounds.current;
     }
   }
 
