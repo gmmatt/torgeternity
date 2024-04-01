@@ -12,8 +12,7 @@ export async function torgMigration() {
       await migrateImagestoWebp({ system: false, modules: true });
       ui.notifications.info('Premium Content Image Migration Complete');
     }
-  }
-
+  } else {
   // check for new worlds, which don't need migrating, and set their migration version accordingly
   if (migrationVersion === '1.0.0' && isNewWorld()) {
     await game.settings.set('torgeternity', 'migrationVersion', currentVersion);
@@ -167,6 +166,7 @@ export async function torgMigration() {
   await game.settings.set('torgeternity', 'migrationVersion', currentVersion);
 
   ui.notifications.info('System Migration Complete');
+  }
 }
 
 // Function to test if a world is a new world, to hude my hacky approach under a nice rug
