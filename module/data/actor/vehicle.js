@@ -69,11 +69,6 @@ export class VehicleData extends foundry.abstract.TypeDataModel {
         ? data.price.magnitude
         : 'other';
     }
-    if (data?.details && Object.hasOwn(data?.details, 'sizeBonus')) {
-      data.details.sizeBonus = Object.keys(torgeternity.sizes).includes(data.details.sizeBonus)
-        ? data.details.sizeBonus
-        : 'normal';
-    }
     if (Object.hasOwn(data.wounds, 'current')) {
       data.wounds.value = data.wounds.current;
     }
