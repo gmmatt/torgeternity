@@ -1229,26 +1229,42 @@ export async function applyDamages(damageObject, targetuuid) {
   ); // find(tok=> tok.actor.id === targetuuid);
   // checking if user has target
   if (targetToken) {
-    // computing new values
-    const newShock = targetToken.actor.system.shock.value + damageObject.shocks;
-    const newWound = targetToken.actor.system.wounds.value + damageObject.wounds;
-    // updating the target token's  actor
-    await targetToken.actor.update({
-      'system.shock.value': newShock,
-      'system.wounds.value': newWound,
-    });
-    // too many wounds => apply defeat ? Ko ?
-    if (newWound > targetToken.actor.system.wounds.max) {
-      if (!targetToken.actor.statuses.find((d) => d === 'dead')) {
-        const eff = CONFIG.statusEffects.find((e) => e.id === 'dead');
-        await targetToken.toggleEffect(eff, { active: true, overlay: true });
-      }
-    }
-    // too many shocks, apply KO if not dead
-    if (newShock > targetToken.actor.system.shock.max) {
-      if (!targetToken.actor.statuses.find((d) => d === 'unconscious')) {
+    if (targetToken.actor.type !== 'vehicle') {
+      // computing new values
+      const newShock = targetToken.actor.system.shock.value + damageObject.shocks;
+      const newWound = targetToken.actor.system.wounds.value + damageObject.wounds;
+      // updating the target token's  actor
+      await targetToken.actor.update({
+        'system.shock.value': newShock,
+        'system.wounds.value': newWound,
+      });
+      // too many wounds => apply defeat ? Ko ?
+      if (newWound > targetToken.actor.system.wounds.max) {
         if (!targetToken.actor.statuses.find((d) => d === 'dead')) {
-          const eff = CONFIG.statusEffects.find((e) => e.id === 'unconscious');
+          const eff = CONFIG.statusEffects.find((e) => e.id === 'dead');
+          await targetToken.toggleEffect(eff, { active: true, overlay: true });
+        }
+      }
+      // too many shocks, apply KO if not dead
+      if (newShock > targetToken.actor.system.shock.max) {
+        if (!targetToken.actor.statuses.find((d) => d === 'unconscious')) {
+          if (!targetToken.actor.statuses.find((d) => d === 'dead')) {
+            const eff = CONFIG.statusEffects.find((e) => e.id === 'unconscious');
+            await targetToken.toggleEffect(eff, { active: true, overlay: true });
+          }
+        }
+      }
+    } else {
+      // computing new values
+      const newWound = targetToken.actor.system.wounds.value + damageObject.wounds;
+      // updating the target token's  actor
+      await targetToken.actor.update({
+        'system.wounds.value': newWound,
+      });
+      // too many wounds => apply defeat ? Ko ?
+      if (newWound > targetToken.actor.system.wounds.max) {
+        if (!targetToken.actor.statuses.find((d) => d === 'dead')) {
+          const eff = CONFIG.statusEffects.find((e) => e.id === 'dead');
           await targetToken.toggleEffect(eff, { active: true, overlay: true });
         }
       }
