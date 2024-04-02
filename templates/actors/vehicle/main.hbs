@@ -85,6 +85,10 @@
             </th>
             <th>
               <a class="attribut-block">
+              </a>
+            </th>
+            <th>
+              <a class="attribut-block">
                 {{localize "torgeternity.gear.price"}}
               </a>
             </th>
@@ -119,6 +123,9 @@
             </td>
             <td class="vehicle-stat">
               <input name="system.armor" type="number" value="{{actor.system.armor}}" data-dtype="Number">
+            </td>
+            <td class="vehicle-stat">
+              <input type="text" value="{{actor.system.toughness}}({{actor.system.armor}})" >
             </td>
             <td class="vehicle-stat">
               <input name="system.price.dollars" type="number" value="{{actor.system.price.dollars}}"
