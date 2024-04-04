@@ -2,15 +2,18 @@
 
 ## v. 3.7.0
 
-- A lot of code-cleanup
+- A lot of code-cleanup, refactoring and overdoing
 - Changing old templates to new DataModels
 - Included new Macros- Compendium with preset macros, hoping to provide your gameflow. More are to come.
 - Changed FR localisation for display-reasons
 - Chat messages are now rendered on client-side. So settings, specially for chat messages, are now individual to each user's settings
 - Skill-Values of threats are now processed on other terms. Besides that, you can add skills or take them away from the access list by clicking them
 - Disconnect-status has now impact: As long as you're disconnected, it will not be possible to roll on "reality" - except for reconnetion, of course
-- The armor-item now derives directly from all the given values (bonus, fatigue). Active effects are no longer necessary. MinStr/MaxDex should work as well and intended.
+- The armor-item now derives directly from all the given values (bonus, fatigue). Active effects are no longer necessary. MinStr/MaxDex should work as well and intended. More item-related natural handling will come around in near future.
 - Some Style-corrections for Firefox-Browser
+- Vehicles have some additional fields for armor rating. This is an interim solution for further Toughness/Armor handling. Please be aware that you need to deactivate any active effects if you want to change these ratings by hand.
+- Card-Handling by GMs will now by private chat cards
+- Some redoing of the threat sheet. 'Run' will now be displayed too
 
 ## v. 3.6.1
 
