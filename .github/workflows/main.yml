@@ -36,7 +36,20 @@ jobs:
       - run: npm run build
 
       # Create a zip file with all files required by the system to add to the release
-      - run: zip -r ./torgeternity.zip system.json module/ packs/ templates/ lang/ images/ fonts/ dice-models/ css/ Changelog.md Readme.md License
+      - run: |
+          zip -r ./torgeternity.zip \
+            css/ \
+            dice-models/ \
+            fonts/ \
+            images/ \
+            lang/ \
+            module/ \
+            packs/ \
+            templates/ \
+            Changelog.md \
+            LICENSE \
+            system.json \
+            template.json
 
       # Create a release for this specific version
       - name: Update Release with Files
