@@ -1,3 +1,6 @@
+/**
+ *
+ */
 export function modifyTokenBars() {
   Token.prototype._drawBar = function (number, bar, data) {
     const val = Number(data.value);
@@ -5,7 +8,7 @@ export function modifyTokenBars() {
     let h = Math.max(canvas.dimensions.size / 12, 8);
     if (this.height >= 2) h *= 1.6; // Enlarge the bar for large tokens
     // Draw the bar
-    let color = [0.8, 1 - pct, 0];
+    const color = [0.8, 1 - pct, 0];
     bar.clear().beginFill(0x005500, 1).lineStyle(1, 0x000000, 1);
     // each max draw a green rectangle in background
     for (let index = 0; index < data.max; index++) {
@@ -17,7 +20,7 @@ export function modifyTokenBars() {
       bar.drawRect(index * (this.w / data.max), 0, this.w / data.max, h);
     }
     // Set position
-    let posY = number === 0 ? this.h : -h;
+    const posY = number === 0 ? this.h : -h;
     bar.position.set(0, posY);
   };
 }

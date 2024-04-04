@@ -23,9 +23,7 @@
         <span class="skillAdd">
             <input name="system.skills.{{name}}.adds" type="number" value="{{content.adds}}" data-dtype="Number" />
         </span>
-        <span class="skill-line">
-            {{content.value}}
-        </span>
+        <input class="skill-line" placeholder="-" value="{{content.value}}" disabled />
         <span>
             <a class="toggleFav {{#if content.isFav}}checked{{/if}}">
                 <i class="far fa-star"></i>
@@ -37,7 +35,6 @@
     {{/inline}}
 
     {{#*inline "customSkillRow" content name}}
-    {{log "Name " name}}
     <li title="{{localize 'torgeternity.sheetLabels.customSkill'}}">
         <span>
             <a class="skill-roll" data-testtype="skill" data-customskill="true" data-baseattribute="{{content.system.baseAttribute}}"

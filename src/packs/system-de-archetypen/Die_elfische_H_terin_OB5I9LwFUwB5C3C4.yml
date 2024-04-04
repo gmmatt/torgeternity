@@ -1,0 +1,1309 @@
+_id: OB5I9LwFUwB5C3C4
+name: Die elfische Hüterin
+type: stormknight
+img: systems/torgeternity/images/characters/Elven_Warden.Avatar.webp
+items:
+  - _id: wfMjjNl2iS6JqR7G
+    name: Dunkelsicht (Volk)
+    type: perk
+    img: systems/torgeternity/images/icons/reality-icon.webp
+    effects: []
+    folder: null
+    sort: 100000
+    flags:
+      core:
+        sourceId: Compendium.te001-core-rulebook.grw-de-vorzuverb.Item.ZatdKThAEeXYAA9r
+    system:
+      category: racial
+      cosm: Aysle
+      prerequisites: 'Volk: Elf oder Zwerg'
+      timestaken: null
+      description: >-
+        <p>Zwerge und Elfen ignorieren bis zu 4 Punkte an
+        @UUID[Compendium.te001-core-rulebook.grw-de-grw.Qlx6yGF0Mmo6Xzrv.JournalEntryPage.41rZYYhaMC2T260D#dunkelheit]{Dunkelheitsmalussen}.</p>
+      pulpPowers:
+        enhancementNumber: 0
+        enhancement01:
+          title: ''
+          description: ''
+          taken: false
+        enhancement02:
+          title: ''
+          description: ''
+          taken: false
+        enhancement03:
+          title: ''
+          description: ''
+          taken: false
+        enhancement04:
+          title: ''
+          description: ''
+          taken: false
+        enhancement05:
+          title: ''
+          description: ''
+          taken: false
+        enhancement06:
+          title: ''
+          description: ''
+          taken: false
+        enhancement07:
+          title: ''
+          description: ''
+          taken: false
+        enhancement08:
+          title: ''
+          description: ''
+          taken: false
+        enhancement09:
+          title: ''
+          description: ''
+          taken: false
+        enhancement10:
+          title: ''
+          description: ''
+          taken: false
+        enhancement11:
+          title: ''
+          description: ''
+          taken: false
+        enhancement12:
+          title: ''
+          description: ''
+          taken: false
+        enhancement13:
+          title: ''
+          description: ''
+          taken: false
+        enhancement14:
+          title: ''
+          description: ''
+          taken: false
+        enhancement15:
+          title: ''
+          description: ''
+          taken: false
+        limitationNumber: 0
+        limitation01: ''
+        limitation02: ''
+        limitation03: ''
+        limitation04: ''
+        limitation05: ''
+        limitation06: ''
+        limitation07: ''
+        limitation08: ''
+        limitation09: ''
+        limitation10: ''
+    ownership:
+      default: 0
+      9Q0XnqFwko7hRlvL: 3
+      CtisFurQNe9h7ABb: 3
+    _stats:
+      systemId: torgeternity
+      systemVersion: 3.1.1
+      coreVersion: '11.308'
+      createdTime: 1694866611394
+      modifiedTime: 1694866644950
+      lastModifiedBy: CtisFurQNe9h7ABb
+    _key: '!actors.items!OB5I9LwFUwB5C3C4.wfMjjNl2iS6JqR7G'
+  - _id: No6Ooy2t0DJTxMnU
+    name: Magische Verbundenheit (Volk)
+    type: perk
+    img: systems/torgeternity/images/icons/reality-icon.webp
+    effects: []
+    folder: null
+    sort: 300000
+    flags:
+      core:
+        sourceId: Compendium.te001-core-rulebook.grw-de-vorzuverb.Item.ykkjArshIIcq4HuK
+    system:
+      category: racial
+      cosm: Aysle
+      prerequisites: 'Volk: Elf'
+      timestaken: null
+      description: >-
+        <p>Elfen sind aus der Magie geboren und leiden ohne sie. Immer wenn sich
+        ein Elf in einem Bereich mit einem Magie-Axiom von weniger als 12
+        aufh&auml;lt, verursacht jeder Erm&uuml;dungs- Effekt 1
+        zus&auml;tzlichen Punkt Schockschaden.</p>
+
+        <p>Zum Beispiel w&uuml;rde ein Elf mit Plattenr&uuml;stung in einer Zone
+        mit niedriger Magie 4 Punkte Schock erleiden, wenn es in der
+        @UUID[Compendium.te001-core-rulebook.grw-de-grw.Qlx6yGF0Mmo6Xzrv.JournalEntryPage.41rZYYhaMC2T260D#die-konfliktzeile]{Konfliktzeile}
+        zu einem Ersch&ouml;pfungs-Ereignis kommt: einen zus&auml;tzlichen
+        f&uuml;r die besondere Eigenschaft der R&uuml;stung und einen weiteren
+        wegen der Magischen Verbundenheit.</p>
+      pulpPowers:
+        enhancementNumber: 0
+        enhancement01:
+          title: ''
+          description: ''
+          taken: false
+        enhancement02:
+          title: ''
+          description: ''
+          taken: false
+        enhancement03:
+          title: ''
+          description: ''
+          taken: false
+        enhancement04:
+          title: ''
+          description: ''
+          taken: false
+        enhancement05:
+          title: ''
+          description: ''
+          taken: false
+        enhancement06:
+          title: ''
+          description: ''
+          taken: false
+        enhancement07:
+          title: ''
+          description: ''
+          taken: false
+        enhancement08:
+          title: ''
+          description: ''
+          taken: false
+        enhancement09:
+          title: ''
+          description: ''
+          taken: false
+        enhancement10:
+          title: ''
+          description: ''
+          taken: false
+        enhancement11:
+          title: ''
+          description: ''
+          taken: false
+        enhancement12:
+          title: ''
+          description: ''
+          taken: false
+        enhancement13:
+          title: ''
+          description: ''
+          taken: false
+        enhancement14:
+          title: ''
+          description: ''
+          taken: false
+        enhancement15:
+          title: ''
+          description: ''
+          taken: false
+        limitationNumber: 0
+        limitation01: ''
+        limitation02: ''
+        limitation03: ''
+        limitation04: ''
+        limitation05: ''
+        limitation06: ''
+        limitation07: ''
+        limitation08: ''
+        limitation09: ''
+        limitation10: ''
+    ownership:
+      default: 0
+      9Q0XnqFwko7hRlvL: 3
+      CtisFurQNe9h7ABb: 3
+    _stats:
+      systemId: torgeternity
+      systemVersion: 3.1.1
+      coreVersion: '11.308'
+      createdTime: 1694866617548
+      modifiedTime: 1694866644950
+      lastModifiedBy: CtisFurQNe9h7ABb
+    _key: '!actors.items!OB5I9LwFUwB5C3C4.No6Ooy2t0DJTxMnU'
+  - _id: LNDQWIEA7bWA7KA2
+    name: Graziös (Volk)
+    type: perk
+    img: systems/torgeternity/images/icons/reality-icon.webp
+    effects: []
+    folder: null
+    sort: 200000
+    flags:
+      core:
+        sourceId: Compendium.te001-core-rulebook.grw-de-vorzuverb.Item.xWyXQEExiFy8Mmwj
+    system:
+      category: racial
+      cosm: Aysle
+      prerequisites: 'Volk: Elf'
+      timestaken: null
+      description: >-
+        <p>Wenn du eine Probe direkt auf Geschicklichkeit ablegst, gilt diese
+        als
+        @UUID[Compendium.te001-core-rulebook.grw-de-grw.Qlx6yGF0Mmo6Xzrv.JournalEntryPage.41rZYYhaMC2T260D#begunstigte-fertigkeiten]{Beg&uuml;nstigt}.
+        Auf Geschicklichkeit basierende ungelernte Fertigkeitsproben
+        (Fertigkeitswert 0) z&auml;hlen hierbei nicht mit, sondern nur solche
+        Situationen, die nach einer direkten Geschicklichkeits-Probe verlangen,
+        wie zum Beispiel die Vermeidung von Sturzschaden, die Unterbrechung
+        eines Gegners beim Warten oder die Verbesserung der Position bei einer
+        Verfolgungsjagd zu Fu&szlig;.</p>
+      pulpPowers:
+        enhancementNumber: 0
+        enhancement01:
+          title: ''
+          description: ''
+          taken: false
+        enhancement02:
+          title: ''
+          description: ''
+          taken: false
+        enhancement03:
+          title: ''
+          description: ''
+          taken: false
+        enhancement04:
+          title: ''
+          description: ''
+          taken: false
+        enhancement05:
+          title: ''
+          description: ''
+          taken: false
+        enhancement06:
+          title: ''
+          description: ''
+          taken: false
+        enhancement07:
+          title: ''
+          description: ''
+          taken: false
+        enhancement08:
+          title: ''
+          description: ''
+          taken: false
+        enhancement09:
+          title: ''
+          description: ''
+          taken: false
+        enhancement10:
+          title: ''
+          description: ''
+          taken: false
+        enhancement11:
+          title: ''
+          description: ''
+          taken: false
+        enhancement12:
+          title: ''
+          description: ''
+          taken: false
+        enhancement13:
+          title: ''
+          description: ''
+          taken: false
+        enhancement14:
+          title: ''
+          description: ''
+          taken: false
+        enhancement15:
+          title: ''
+          description: ''
+          taken: false
+        limitationNumber: 0
+        limitation01: ''
+        limitation02: ''
+        limitation03: ''
+        limitation04: ''
+        limitation05: ''
+        limitation06: ''
+        limitation07: ''
+        limitation08: ''
+        limitation09: ''
+        limitation10: ''
+    ownership:
+      default: 0
+      9Q0XnqFwko7hRlvL: 3
+      CtisFurQNe9h7ABb: 3
+    _stats:
+      systemId: torgeternity
+      systemVersion: 3.1.1
+      coreVersion: '11.308'
+      createdTime: 1694866621795
+      modifiedTime: 1694866644950
+      lastModifiedBy: CtisFurQNe9h7ABb
+    _key: '!actors.items!OB5I9LwFUwB5C3C4.LNDQWIEA7bWA7KA2'
+  - _id: eAg0oK25V14HTe7u
+    name: Wächter
+    type: perk
+    img: systems/torgeternity/images/icons/reality-icon.webp
+    effects:
+      - _id: FNj9yLmDXWAA0VSx
+        changes:
+          - key: system.skills.stealth.isFav
+            mode: 5
+            value: '1'
+            priority: null
+          - key: system.skills.tracking.isFav
+            mode: 5
+            value: '1'
+            priority: null
+        disabled: false
+        duration:
+          startTime: null
+          seconds: null
+          combat: null
+          rounds: null
+          turns: null
+          startRound: null
+          startTurn: null
+        icon: icons/svg/aura.svg
+        origin: Compendium.te001-core-rulebook.grw-de-vorzuverb.jgTek2ORzUYzW7VR
+        transfer: true
+        flags: {}
+        tint: null
+        name: Fertigkeitsbegünstigung
+        description: ''
+        statuses: []
+        _key: >-
+          !actors.items.effects!OB5I9LwFUwB5C3C4.eAg0oK25V14HTe7u.FNj9yLmDXWAA0VSx
+    folder: null
+    sort: 400000
+    flags:
+      core:
+        sourceId: Compendium.te001-core-rulebook.grw-de-vorzuverb.Item.jgTek2ORzUYzW7VR
+    system:
+      category: elf
+      cosm: Aysle
+      prerequisites: Elf
+      timestaken: 1
+      description: >-
+        <p>Vor Uthorions Zorn durchstreiften die elfischen W&auml;chter die
+        Wildnis von Aysle, immer wachsam gegen&uuml;ber Bedrohungen f&uuml;r die
+        einfachen Leute. Als die Horden der Finsternis durch ihre W&auml;lder
+        marschierten, schrumpfte die Zahlen der W&auml;chter von Tausenden auf
+        weniger als einhundert.&nbsp;</p>
+
+        <p>Die meisten dieser &Uuml;berlebenden kamen seltsamerweise zur Erde.
+        Sie schweigen hartn&auml;ckig &uuml;ber ihre Gr&uuml;nde, scheinen aber
+        eine gewisse Scham f&uuml;r die Unf&auml;higkeit ihres Volkes zu
+        empfinden, den High Lord nicht aufgehalten zu haben, bevor er seine
+        Aufmerksamkeit der Zentralerde zuwandte.&nbsp;</p>
+
+        <p>Die W&auml;chter sind unabh&auml;ngig, unauff&auml;llig und gerissen,
+        und viele werden von Tieren begleitet, mit denen sie sich in der Wildnis
+        angefreundet haben (siehe
+        @UUID[Compendium.te001-core-rulebook.grw-de-vorzuverb.Item.K9A5acqvE1fUUeUr]{Tiergef&auml;hrte:
+        Weisser Wolf}). Die W&auml;chter d&uuml;rfen Heimlichkeit und
+        Spurenlesen als Beg&uuml;nstigte Fertigkeiten einsetzen.</p>
+      pulpPowers:
+        enhancementNumber: 0
+        enhancement01:
+          title: ''
+          description: ''
+          taken: false
+        enhancement02:
+          title: ''
+          description: ''
+          taken: false
+        enhancement03:
+          title: ''
+          description: ''
+          taken: false
+        enhancement04:
+          title: ''
+          description: ''
+          taken: false
+        enhancement05:
+          title: ''
+          description: ''
+          taken: false
+        enhancement06:
+          title: ''
+          description: ''
+          taken: false
+        enhancement07:
+          title: ''
+          description: ''
+          taken: false
+        enhancement08:
+          title: ''
+          description: ''
+          taken: false
+        enhancement09:
+          title: ''
+          description: ''
+          taken: false
+        enhancement10:
+          title: ''
+          description: ''
+          taken: false
+        enhancement11:
+          title: ''
+          description: ''
+          taken: false
+        enhancement12:
+          title: ''
+          description: ''
+          taken: false
+        enhancement13:
+          title: ''
+          description: ''
+          taken: false
+        enhancement14:
+          title: ''
+          description: ''
+          taken: false
+        enhancement15:
+          title: ''
+          description: ''
+          taken: false
+        limitationNumber: 0
+        limitation01: ''
+        limitation02: ''
+        limitation03: ''
+        limitation04: ''
+        limitation05: ''
+        limitation06: ''
+        limitation07: ''
+        limitation08: ''
+        limitation09: ''
+        limitation10: ''
+    ownership:
+      default: 0
+      9Q0XnqFwko7hRlvL: 3
+      CtisFurQNe9h7ABb: 3
+    _stats:
+      systemId: torgeternity
+      systemVersion: 3.1.1
+      coreVersion: '11.308'
+      createdTime: 1694866626691
+      modifiedTime: 1694866666430
+      lastModifiedBy: CtisFurQNe9h7ABb
+    _key: '!actors.items!OB5I9LwFUwB5C3C4.eAg0oK25V14HTe7u'
+  - _id: bK9FTMS5YhLFH13I
+    name: Tiergefährte (Weisser Wolf)
+    type: perk
+    img: systems/torgeternity/images/icons/reality-icon.webp
+    effects: []
+    folder: null
+    sort: 350000
+    flags:
+      core:
+        sourceId: Compendium.te001-core-rulebook.grw-de-vorzuverb.Item.K9A5acqvE1fUUeUr
+    system:
+      category: elf
+      cosm: Aysle
+      prerequisites: Wächter
+      timestaken: 1
+      description: >-
+        <p>W&auml;chter haben oft Wei&szlig;e W&ouml;lfe als Gef&auml;hrten
+        (nicht als Haustiere), und vom Moment ihres B&uuml;ndnisses an leben,
+        k&auml;mpfen und sterben die beiden gemeinsam.&nbsp;</p>
+
+        <p>Dieser Vorzug stellt einem elfischen W&auml;chter einen loyalen
+        Wei&szlig;en Wolf an die Seite, der grundlegende Befehle befolgt und bis
+        zum Tod k&auml;mpft, um seinen Meister zu verteidigen. Das Tier ist so
+        schlau wie die besten trainierten Hunde der Zentralerde, was bedeutet,
+        dass es Ziele intelligent ausw&auml;hlen, eine bestimmte Person oder
+        einen bestimmten Ort verteidigen oder ein bestimmtes Objekt einsammeln
+        kann, wenn es dieses zuvor gesehen hat. Der Besitzer darf au&szlig;erdem
+        &bdquo;R&uuml;ckzugsorte&ldquo; festlegen, zu denen sich der Wolf begibt
+        und dort wartet, wobei der entsprechende Ort zuvor mit einem Handzeichen
+        oder einem Befehl markiert werden muss. Dies ist vor allem dann
+        n&uuml;tzlich, wenn der W&auml;chter eine Stadt oder einen Ort betreten
+        muss, an denen der Wolf unwillkommen oder gef&auml;hrdet w&auml;re.
+        Regeltechnisch darf der Spieler den Wolf die meiste Zeit &uuml;ber frei
+        steuern, seine Ziele w&auml;hlen, f&uuml;r seine Angriffe w&uuml;rfeln
+        und so weiter.&nbsp;</p>
+
+        <p>Wei&szlig;e W&ouml;lfe haben keine M&ouml;glichkeiten, aber der
+        W&auml;chter kann seine M&ouml;glichkeiten (und Schicksalskarten)
+        f&uuml;r den Wolf ausgeben &ndash; selbst wenn sie getrennt sind. Falls
+        ein Wei&szlig;er Wolf get&ouml;tet wird, so f&auml;hrt sein Geist in ein
+        schattiges Unterreich ein und sammelt dort seine Kr&auml;fte, sodass er
+        zu Beginn des n&auml;chsten Aktes zur&uuml;ckkehren kann.&nbsp;</p>
+
+        <p>Falls der Herr des Wolfs stirbt, dann erleidet der Wolf alle 24
+        Stunden einen permanenten Punkt Schockschaden, bis er dahinscheidet und
+        f&uuml;r immer in die Welt der Geister entschwindet.&nbsp;</p>
+
+        <p>@UUID[Compendium.torgeternity.system-de-archetypen.Actor.Hy1XeUQA64WoxKxs]{Tiergef&auml;hrte:
+        Wei&szlig;er Wolf}</p>
+      pulpPowers:
+        enhancementNumber: 0
+        enhancement01:
+          title: ''
+          description: ''
+          taken: false
+        enhancement02:
+          title: ''
+          description: ''
+          taken: false
+        enhancement03:
+          title: ''
+          description: ''
+          taken: false
+        enhancement04:
+          title: ''
+          description: ''
+          taken: false
+        enhancement05:
+          title: ''
+          description: ''
+          taken: false
+        enhancement06:
+          title: ''
+          description: ''
+          taken: false
+        enhancement07:
+          title: ''
+          description: ''
+          taken: false
+        enhancement08:
+          title: ''
+          description: ''
+          taken: false
+        enhancement09:
+          title: ''
+          description: ''
+          taken: false
+        enhancement10:
+          title: ''
+          description: ''
+          taken: false
+        enhancement11:
+          title: ''
+          description: ''
+          taken: false
+        enhancement12:
+          title: ''
+          description: ''
+          taken: false
+        enhancement13:
+          title: ''
+          description: ''
+          taken: false
+        enhancement14:
+          title: ''
+          description: ''
+          taken: false
+        enhancement15:
+          title: ''
+          description: ''
+          taken: false
+        limitationNumber: 0
+        limitation01: ''
+        limitation02: ''
+        limitation03: ''
+        limitation04: ''
+        limitation05: ''
+        limitation06: ''
+        limitation07: ''
+        limitation08: ''
+        limitation09: ''
+        limitation10: ''
+    ownership:
+      default: 0
+      9Q0XnqFwko7hRlvL: 3
+      CtisFurQNe9h7ABb: 3
+    _stats:
+      systemId: torgeternity
+      systemVersion: 3.1.1
+      coreVersion: '11.308'
+      createdTime: 1694866631347
+      modifiedTime: 1694866661726
+      lastModifiedBy: CtisFurQNe9h7ABb
+    _key: '!actors.items!OB5I9LwFUwB5C3C4.bK9FTMS5YhLFH13I'
+  - name: Langschwert
+    type: meleeweapon
+    img: systems/torgeternity/images/icons/axe-icon.webp
+    effects: []
+    folder: null
+    sort: 1900000
+    flags:
+      core:
+        sourceId: >-
+          Compendium.te001-core-rulebook.grw-de-ausruestung.Item.3YH7UaaVOmI5NACl
+    _id: yMSKWEoWqjj6uJ7h
+    system:
+      cosm: Aysle
+      description: ''
+      techlevel: 9
+      price: '120'
+      value: 10
+      attackWith: meleeWeapons
+      damageType: strengthPlus
+      damage: 3
+      ap: 0
+      bonus: 2
+      notes: ''
+      chatNote: ''
+    ownership:
+      default: 0
+      9Q0XnqFwko7hRlvL: 3
+      CtisFurQNe9h7ABb: 3
+    _stats:
+      systemId: torgeternity
+      systemVersion: 3.1.1
+      coreVersion: '11.308'
+      createdTime: 1694866678858
+      modifiedTime: 1694866678858
+      lastModifiedBy: CtisFurQNe9h7ABb
+    _key: '!actors.items!OB5I9LwFUwB5C3C4.yMSKWEoWqjj6uJ7h'
+  - name: Kompositlangbogen
+    type: missileweapon
+    img: systems/torgeternity/images/icons/missile-weapon-icon.webp
+    effects: []
+    folder: null
+    sort: 23700000
+    flags:
+      core:
+        sourceId: >-
+          Compendium.te001-core-rulebook.grw-de-ausruestung.Item.jbnyGq61BgeKPjNL
+    _id: xFxiSrb1dOBKtdz9
+    system:
+      cosm: Aysle
+      description: >-
+        <p>Eine verst&auml;rkte Version des Langbogens, die aus drei
+        &uuml;bereinandergelegten Materialien besteht, die miteinander verbunden
+        wurden, um ihre elastischen Eigenschaften zu kombinieren. Obwohl der
+        Kompositbogen in seiner tats&auml;chlichen Gr&ouml;&szlig;e dem
+        Kurzbogen &auml;hnelt, feuert er Pfeile mit einer h&ouml;heren
+        Geschwindigkeit ab.</p>
+      techlevel: 13
+      price: '200'
+      value: 11
+      attackWith: missileWeapons
+      damageType: flat
+      damage: 13
+      ap: 0
+      ammo:
+        max: 1
+        value: 1
+      minStrength: 7
+      range: 20/40/80
+      notes: ''
+      chatNote: ''
+    ownership:
+      default: 0
+      9Q0XnqFwko7hRlvL: 3
+      CtisFurQNe9h7ABb: 3
+    _stats:
+      systemId: torgeternity
+      systemVersion: 3.1.1
+      coreVersion: '11.308'
+      createdTime: 1694866689090
+      modifiedTime: 1694866689090
+      lastModifiedBy: CtisFurQNe9h7ABb
+    _key: '!actors.items!OB5I9LwFUwB5C3C4.xFxiSrb1dOBKtdz9'
+  - name: Hanfseil, 10 Meter
+    type: gear
+    img: systems/torgeternity/images/icons/gear-icon.webp
+    effects: []
+    folder: null
+    sort: 8700000
+    flags:
+      core:
+        sourceId: Item.UqBpg4NYAUDXT2Yr
+    _id: IduEEQ2qynnSB3rk
+    system:
+      cosm: Aysle
+      description: ''
+      techlevel: 8
+      price: '15'
+      value: 6
+    ownership:
+      default: 0
+      9Q0XnqFwko7hRlvL: 3
+      CtisFurQNe9h7ABb: 3
+    _stats:
+      systemId: torgeternity
+      systemVersion: 3.1.1
+      coreVersion: '11.308'
+      createdTime: 1694866705662
+      modifiedTime: 1694866705662
+      lastModifiedBy: CtisFurQNe9h7ABb
+    _key: '!actors.items!OB5I9LwFUwB5C3C4.IduEEQ2qynnSB3rk'
+  - name: Köcher
+    type: gear
+    img: systems/torgeternity/images/icons/gear-icon.webp
+    effects: []
+    folder: null
+    sort: 16650000
+    flags:
+      core:
+        sourceId: Item.AYgLHhrMBAZq1JJ0
+    _id: ax4IMauksDDbmdw2
+    system:
+      cosm: Aysle
+      description: ''
+      techlevel: 7
+      price: '5'
+      value: 4
+    ownership:
+      default: 0
+      9Q0XnqFwko7hRlvL: 3
+      CtisFurQNe9h7ABb: 3
+    _stats:
+      systemId: torgeternity
+      systemVersion: 3.1.1
+      coreVersion: '11.308'
+      createdTime: 1694866710650
+      modifiedTime: 1694866725799
+      lastModifiedBy: CtisFurQNe9h7ABb
+    _key: '!actors.items!OB5I9LwFUwB5C3C4.ax4IMauksDDbmdw2'
+  - _id: 6QA3wRjkA4tJRkRK
+    name: Trank der Heilung
+    type: gear
+    img: systems/torgeternity/images/icons/gear-icon.webp
+    effects: []
+    folder: null
+    sort: 24600000
+    flags:
+      core:
+        sourceId: >-
+          Compendium.te001-core-rulebook.grw-de-ausruestung.Item.kiWS8lQLXbtS6FYE
+    system:
+      cosm: Aysle
+      description: >-
+        <p>Ben&ouml;tigt ein Magie-Axiom von 13, um zu wirken. Das Trinken des
+        Tranks ist eine einfache Aktion und er regeneriert 1 Wunde und
+        Schockschaden in H&ouml;he eines Bonusw&uuml;rfels.</p>
+      techlevel: 12
+      price: '500'
+      value: 14
+    ownership:
+      default: 0
+      9Q0XnqFwko7hRlvL: 3
+      CtisFurQNe9h7ABb: 3
+    _stats:
+      systemId: torgeternity
+      systemVersion: 3.1.1
+      coreVersion: '11.308'
+      createdTime: 1694866716591
+      modifiedTime: 1694866716591
+      lastModifiedBy: CtisFurQNe9h7ABb
+    _key: '!actors.items!OB5I9LwFUwB5C3C4.6QA3wRjkA4tJRkRK'
+  - _id: f4vHwajpFSfAwKNx
+    name: Lederweste
+    type: armor
+    img: systems/torgeternity/images/icons/armor-icon.webp
+    effects: []
+    folder: null
+    sort: 32400000
+    flags:
+      core:
+        sourceId: >-
+          Compendium.te001-core-rulebook.grw-de-ausruestung.Item.xWI54mxsNNqaWXsX
+    system:
+      cosm: Aysle
+      description: >-
+        <p>@UUID[Compendium.te001-core-rulebook.grw-de-grw.Qlx6yGF0Mmo6Xzrv.JournalEntryPage.7GGUUHzuYIqGPXDO#ganzkorper/torso:]{Torso}</p>
+
+        <p>Tierh&auml;ute wurden zu einer steifen, haltbaren Oberfl&auml;che
+        gegerbt oder gekocht und danach mit Nieten oder Steppn&auml;hten
+        verst&auml;rkt. L&auml;sst sich in allen Cosms antreffen.</p>
+      price: '100'
+      techlevel: 8
+      value: 10
+      bonus: 1
+      equipped: true
+      equippedClass: item-equipped
+      maxDex: 12
+      minStrength: null
+      notes: Torso
+      fatigue: null
+    ownership:
+      default: 0
+      9Q0XnqFwko7hRlvL: 3
+      CtisFurQNe9h7ABb: 3
+    _stats:
+      systemId: torgeternity
+      systemVersion: 3.7.0
+      coreVersion: '11.315'
+      createdTime: 1711562366229
+      modifiedTime: 1711705809069
+      lastModifiedBy: CtisFurQNe9h7ABb
+    _key: '!actors.items!OB5I9LwFUwB5C3C4.f4vHwajpFSfAwKNx'
+effects: []
+folder: null
+sort: 0
+flags:
+  core:
+    sourceId: Compendium.torgeternity.archetypes.cdSvyJHbG0GbFzkh
+system:
+  shock:
+    max: 5
+    value: 0
+  wounds:
+    max: 3
+    value: 0
+  attributes:
+    charisma: 8
+    dexterity: 10
+    mind: 7
+    spirit: 8
+    strength: 7
+  other:
+    move: 5
+    run: 5
+    toughness: 5
+    armor: 0
+    cosm: aysle
+    possibilities: 3
+    posibilities: 3
+  skills:
+    airVehicles:
+      baseAttribute: dexterity
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    alteration:
+      baseAttribute: mind
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    apportation:
+      baseAttribute: spirit
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    beastRiding:
+      baseAttribute: dexterity
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    computers:
+      baseAttribute: mind
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    conjuration:
+      baseAttribute: spirit
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    divination:
+      baseAttribute: mind
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    dodge:
+      baseAttribute: dexterity
+      adds: 2
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    energyWeapons:
+      baseAttribute: dexterity
+      adds: null
+      value: 0
+      isFav: false
+      groupName: combat
+      unskilledUse: 1
+    evidenceAnalysis:
+      baseAttribute: mind
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    faith:
+      baseAttribute: spirit
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    find:
+      baseAttribute: mind
+      adds: 2
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    fireCombat:
+      baseAttribute: dexterity
+      adds: null
+      value: 0
+      isFav: false
+      groupName: combat
+      unskilledUse: 1
+    firstAid:
+      baseAttribute: mind
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    heavyWeapons:
+      baseAttribute: dexterity
+      adds: null
+      value: 0
+      isFav: false
+      groupName: combat
+      unskilledUse: 1
+    intimidation:
+      baseAttribute: spirit
+      adds: null
+      value: 0
+      isFav: false
+      groupName: interaction
+      unskilledUse: 1
+    kinesis:
+      baseAttribute: spirit
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    landVehicles:
+      baseAttribute: dexterity
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    language:
+      baseAttribute: mind
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    lockpicking:
+      baseAttribute: dexterity
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    maneuver:
+      baseAttribute: dexterity
+      adds: 1
+      value: 0
+      isFav: false
+      groupName: interaction
+      unskilledUse: 1
+    medicine:
+      baseAttribute: mind
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    meleeWeapons:
+      baseAttribute: dexterity
+      adds: 1
+      value: 0
+      isFav: false
+      groupName: combat
+      unskilledUse: 1
+    missileWeapons:
+      baseAttribute: dexterity
+      adds: 3
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    persuasion:
+      baseAttribute: charisma
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    precognition:
+      baseAttribute: mind
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    profession:
+      baseAttribute: mind
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    reality:
+      baseAttribute: spirit
+      adds: 1
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    scholar:
+      baseAttribute: mind
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    science:
+      baseAttribute: mind
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    stealth:
+      baseAttribute: dexterity
+      adds: 2
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    streetwise:
+      baseAttribute: charisma
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    survival:
+      baseAttribute: mind
+      adds: 1
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    taunt:
+      baseAttribute: charisma
+      adds: null
+      value: 0
+      isFav: false
+      groupName: interaction
+      unskilledUse: 1
+    telepathy:
+      baseAttribute: charisma
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    tracking:
+      baseAttribute: mind
+      adds: 2
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    trick:
+      baseAttribute: mind
+      adds: 1
+      value: 0
+      isFav: false
+      groupName: interaction
+      unskilledUse: 1
+    unarmedCombat:
+      baseAttribute: dexterity
+      adds: null
+      value: 0
+      isFav: false
+      groupName: combat
+      unskilledUse: 1
+    waterVehicles:
+      baseAttribute: dexterity
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    willpower:
+      baseAttribute: spirit
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+  xp:
+    unspent: 0
+    earned: 0
+  axioms:
+    magic: 24
+    social: 16
+    spirit: 18
+    tech: 14
+  details:
+    clearance: ''
+    background: >-
+      <p><img class="charimg"
+      src="systems/torgeternity/images/characters/Elven_Warden.webp" alt=""
+      width="1190" height="1942"></p>
+
+      <p
+      class="moreheight">@UUID[Compendium.torgeternity.system-de-handouts.JournalEntry.DLLvnXpv7RFhRgHu.JournalEntryPage.Y5Ywt3WpLVzwhwnm]{Archetyp
+      - Die elfische H&uuml;terin}</p>
+
+      <h3>&Uuml;berblick</h3>
+
+      <p>Die H&uuml;ter sind J&auml;ger und W&auml;chter aus Aysle, die wie
+      Geister durch die W&auml;lder ziehen und die Feinde der Elfen aus dem
+      Hinterhalt niedermachen. Ihre Markenzeichen sind ebenso Langbogen und
+      gr&uuml;ner Umhang, wie die wei&szlig;en W&ouml;lfe, die vielen von ihnen
+      als Tiergef&auml;hrten zur Seite stehen.</p>
+
+      <h3>Taktiken</h3>
+
+      <p>Du bist ein Fernk&auml;mpfer durch und durch. Das Langschwert ist dir
+      ebenfalls nicht fremd, aber es ist normalerweise besser, sich aus dem
+      Nahkampf herauszuhalten und den Bogen zu benutzen. Das Einlegen eines
+      Pfeils ist eine einfache Aktion, so dass du mit einem einzigen Angriff
+      zwei oder drei Gegner ins Visier nehmen kannst.&nbsp;</p>
+
+      <p>Eine taktisch vorgehende H&uuml;terin h&auml;lt auch ihren Wolf aus
+      einem direkten Kampf heraus und benutzt ihn stattdessen, um die Gegner
+      <em>einzusch&uuml;chtern </em>und sie dadurch verwundbar f&uuml;r ihren
+      Angriff mit dem Bogen zu machen.&nbsp;</p>
+
+      <p>Sollte es den Gegnern gelingen, deinen vierbeinigen Freund im Nahkampf
+      zu binden, setze aktive Verteidigung ein, um ihn zu sch&uuml;tzen und
+      reduziere den Schaden mit deinen eigenen M&ouml;glichkeiten.&nbsp;</p>
+
+      <p>H&uuml;te dich vor Zonen mit einem niedrigen magischen Axiom wie der
+      Zentralerde, dem Lebende Land oder Pan-Pacifica, da Elfen dort drei
+      Schockschaden erleiden, wenn Ersch&ouml;pfung auftritt.</p>
+
+      <h3>Moment der Krise</h3>
+
+      <p>Obwohl die H&uuml;ter die W&auml;lder von Aysle vor dunklen
+      M&auml;chten sch&uuml;tzen, werden nur sehr wenige zu Storm Knights. Deine
+      Krise kam wahrscheinlich, als du Lady Ardinay auf ihrer t&ouml;richten
+      Queste zur Erde gefolgt bist. Die Begegnung mit dem alten Feind an einem
+      so anderen Ort bewegte etwas in dir, was die Verteidigung der W&auml;lder
+      nicht vermochte. Es ist auch m&ouml;glich, dass du deine Pflicht
+      aufgegeben hast, um einen Zwerg oder Menschen zu retten, und in diesem
+      selbstlosen Moment transformiert wurdest.</p>
+
+      <h3>Zitat</h3>
+
+      <p>"Alle Kreaturen des Waldes sind entweder J&auml;ger oder
+      Beute.&nbsp;Ich versichere dir, ich bin keine Beute."</p>
+
+      <h3>Beschreibung</h3>
+
+      <p>Waldelfen sind daf&uuml;r bekannt, still und zur&uuml;ckhaltend zu
+      sein, besonders im Vergleich zu ihren mystischen Vettern. Die H&uuml;ter
+      tragen meist weiches Leder oder dicht gewebte Stoffe, um bei der Bewegung
+      keine Ger&auml;usche zu verursachen. Gr&uuml;n ist eine beliebte Farbe,
+      auch wenn sie sich au&szlig;erhalb des Waldes aufhalten.</p>
+
+      <h3>Agenda</h3>
+
+      <p>Die elfische H&uuml;terin ist in ein dunkles Geheimnis eingeweiht, das
+      von der Elite der Hochelfen bewahrt wird, und ist aus einem fehlgeleiteten
+      Schuldgef&uuml;hl zur Zentralerde gekommen. Wenn die High Lords besiegt
+      werden, k&ouml;nnen vielleicht alle V&ouml;lker von Aysle endlich Frieden
+      finden.</p>
+
+      <h3>Namen</h3>
+
+      <p>Amavae, Cimbar, Feyurit, Lief, Namys von Glaed, Nuvia,&nbsp;Rose,
+      Tierra, Waldir</p>
+
+      <h3>Vorgeschlagener Aufstieg (Optional)</h3>
+
+      <ul>
+
+      <li>(5 EP) Elfischer Bogensch&uuml;tze</li>
+
+      <li>(7 EP) Scharfsch&uuml;tze</li>
+
+      <li>(1 EP) <em>Schl&ouml;sserknacken</em> +1</li>
+
+      <li>(2 EP) <em>Nahkampfwaffen</em> +2</li>
+
+      <li>(3 EP) <em>Ausweichen</em> +3</li>
+
+      <li>(3 EP) <em>Heimlichkeit</em> +3</li>
+
+      <li>(4 EP) <em>Projektilwaffen</em> +4</li>
+
+      <li>(5 EP) <em>Projektilwaffen</em> +5</li>
+
+      </ul>
+    race: elf
+  editstate: false
+  fatigue: '1'
+ownership:
+  default: 0
+  9Q0XnqFwko7hRlvL: 3
+prototypeToken:
+  flags: {}
+  name: Die elfische Hüterin
+  displayName: 0
+  width: 1
+  height: 1
+  lockRotation: true
+  rotation: 0
+  actorLink: true
+  disposition: 1
+  displayBars: 40
+  bar1:
+    attribute: wounds
+  bar2:
+    attribute: shock
+  randomImg: false
+  alpha: 1
+  light:
+    alpha: 1
+    angle: 360
+    bright: 0
+    color: null
+    coloration: 1
+    dim: 0
+    luminosity: 0.5
+    saturation: 0
+    contrast: 0
+    shadows: 0
+    animation:
+      speed: 5
+      intensity: 5
+      type: null
+      reverse: false
+    darkness:
+      min: 0
+      max: 1
+    attenuation: 0.5
+  texture:
+    src: systems/torgeternity/images/characters/elven_warden.Token.webp
+    tint: null
+    scaleX: 1
+    scaleY: 1
+    offsetX: 0
+    offsetY: 0
+    rotation: 0
+  sight:
+    angle: 360
+    enabled: true
+    range: 0
+    brightness: 1
+    visionMode: basic
+    attenuation: 0.1
+    saturation: 0
+    contrast: 0
+  appendNumber: false
+  prependAdjective: false
+  detectionModes: []
+_stats:
+  systemId: torgeternity
+  systemVersion: 3.7.0
+  coreVersion: '11.315'
+  createdTime: 1694866454541
+  modifiedTime: 1711900172071
+  lastModifiedBy: CtisFurQNe9h7ABb
+_key: '!actors!OB5I9LwFUwB5C3C4'
+

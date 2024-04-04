@@ -1,51 +1,68 @@
+/**
+ *
+ */
 export default class GMScreen extends Application {
+  /**
+   *
+   */
   static get defaultOptions() {
     const options = super.defaultOptions;
-    options.template = "systems/torgeternity/templates/gmscreen/screen.html";
-    options.width = "1300";
-    options.height = "500";
-    options.id = "GMScreen";
-    options.title = game.i18n.localize("torgeternity.gmScreen.title");
+    options.template = 'systems/torgeternity/templates/gmscreen/screen.html';
+    options.width = '1300';
+    options.height = '500';
+    options.id = 'GMScreen';
+    options.title = game.i18n.localize('torgeternity.gmScreen.title');
     options.resizable = true;
     options.top = 10;
     return options;
   }
 
+  /**
+   *
+   * @param html
+   */
   activateListeners(html) {
     super.activateListeners(html);
 
-    html.find(".screen-panel").click(this.clickPanel.bind(this));
+    html.find('.screen-panel').click(this.clickPanel.bind(this));
   }
+  /**
+   *
+   * @param evt
+   */
   clickPanel(evt) {
     let cl;
 
-    let GMScreen = this.element.find("#gm-screen")[0];
+    const GMScreen = this.element.find('#gm-screen')[0];
     switch (evt.currentTarget.id) {
-      case "right-panel":
-        cl = "focus-right";
+      case 'right-panel':
+        cl = 'focus-right';
 
         break;
-      case "center-panel":
-        cl = "focus-center";
+      case 'center-panel':
+        cl = 'focus-center';
 
         break;
-      case "left-panel":
-        cl = "focus-left";
+      case 'left-panel':
+        cl = 'focus-left';
 
         break;
     }
     GMScreen.classList.toggle(cl);
   }
+  /**
+   *
+   */
   getData() {
-    let data = super.getData();
-    let path = game.settings.get("torgeternity", "gmScreen");
-    let lang = game.settings.get("core", "language");
+    const data = super.getData();
+    const path = game.settings.get('torgeternity', 'gmScreen');
+    let lang = game.settings.get('core', 'language');
 
     // setting english as default
-    if (lang != "en" && lang != "de" && lang != "fr") {
-      lang = "en";
+    if (lang != 'en' && lang != 'de' && lang != 'fr') {
+      lang = 'en';
     }
-    if (path == "none") {
+    if (path == 'none') {
       data.noScreen = true;
       data.background = false;
     } else {
@@ -53,6 +70,9 @@ export default class GMScreen extends Application {
     }
     return data;
   }
+  /**
+   *
+   */
   toggleRender() {
     if (this.rendered) {
       if (this._minimized) return this.maximize();

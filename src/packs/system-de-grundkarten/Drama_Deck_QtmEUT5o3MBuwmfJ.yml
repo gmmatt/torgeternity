@@ -1,0 +1,941 @@
+_id: QtmEUT5o3MBuwmfJ
+name: Drama Deck
+type: deck
+description: ''
+img: systems/torgeternity/images/deutsch/cards/Dramakarten/ZZR%C3%BCckseite.webp
+data: {}
+cards:
+  - _id: kipYAUgTfdNYPGue
+    name: Ihr versucht sie zu umgehen!
+    description: ''
+    type: drama
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: ''
+        text: ''
+        img: systems/torgeternity/images/deutsch/cards/Dramakarten/01.webp
+    face: 0
+    drawn: false
+    origin: QtmEUT5o3MBuwmfJ
+    rotation: 0
+    sort: 0
+    flags: {}
+    number: null
+    _key: '!cards.cards!QtmEUT5o3MBuwmfJ.kipYAUgTfdNYPGue'
+    cards: []
+  - _id: tIqMmJZNa4pHppcg
+    name: Ihr findet eine Schwäche!
+    description: ''
+    type: drama
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: ''
+        text: ''
+        img: systems/torgeternity/images/deutsch/cards/Dramakarten/02.webp
+    face: 0
+    drawn: false
+    origin: QtmEUT5o3MBuwmfJ
+    rotation: 0
+    sort: 0
+    flags: {}
+    number: null
+    _key: '!cards.cards!QtmEUT5o3MBuwmfJ.tIqMmJZNa4pHppcg'
+    cards: []
+  - _id: Upvia7yS3nDGG5O0
+    name: Ihr werdet zurückgeworfen!
+    description: ''
+    type: drama
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: ''
+        text: ''
+        img: systems/torgeternity/images/deutsch/cards/Dramakarten/03.webp
+    face: 0
+    drawn: false
+    origin: QtmEUT5o3MBuwmfJ
+    rotation: 0
+    sort: 0
+    flags: {}
+    number: null
+    _key: '!cards.cards!QtmEUT5o3MBuwmfJ.Upvia7yS3nDGG5O0'
+    cards: []
+  - _id: 9z6nyKDG1smARq9I
+    name: Ihr sucht einen Vorteil!
+    description: ''
+    type: drama
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: ''
+        text: ''
+        img: systems/torgeternity/images/deutsch/cards/Dramakarten/04.webp
+    face: 0
+    drawn: false
+    origin: QtmEUT5o3MBuwmfJ
+    rotation: 0
+    sort: 0
+    flags: {}
+    number: null
+    _key: '!cards.cards!QtmEUT5o3MBuwmfJ.9z6nyKDG1smARq9I'
+    cards: []
+  - _id: 8VM36OdsMMXNS5BM
+    name: Sie zögern!
+    description: ''
+    type: drama
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: ''
+        text: ''
+        img: systems/torgeternity/images/deutsch/cards/Dramakarten/05.webp
+    face: 0
+    drawn: false
+    origin: QtmEUT5o3MBuwmfJ
+    rotation: 0
+    sort: 0
+    flags: {}
+    number: null
+    _key: '!cards.cards!QtmEUT5o3MBuwmfJ.8VM36OdsMMXNS5BM'
+    cards: []
+  - _id: z3bGqZV77fDqSURU
+    name: Sie sammeln sich!
+    description: ''
+    type: drama
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: ''
+        text: ''
+        img: systems/torgeternity/images/deutsch/cards/Dramakarten/06.webp
+    face: 0
+    drawn: false
+    origin: QtmEUT5o3MBuwmfJ
+    rotation: 0
+    sort: 0
+    flags: {}
+    number: null
+    _key: '!cards.cards!QtmEUT5o3MBuwmfJ.z3bGqZV77fDqSURU'
+    cards: []
+  - _id: AtUg0bagIaeQ6icI
+    name: Sie schlagen zu!
+    description: ''
+    type: drama
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: ''
+        text: ''
+        img: systems/torgeternity/images/deutsch/cards/Dramakarten/07.webp
+    face: 0
+    drawn: false
+    origin: QtmEUT5o3MBuwmfJ
+    rotation: 0
+    sort: 0
+    flags: {}
+    number: null
+    _key: '!cards.cards!QtmEUT5o3MBuwmfJ.AtUg0bagIaeQ6icI'
+    cards: []
+  - _id: ZXkc8ziVbaqIIbAw
+    name: Es wird hart!
+    description: ''
+    type: drama
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: ''
+        text: ''
+        img: systems/torgeternity/images/deutsch/cards/Dramakarten/08.webp
+    face: 0
+    drawn: false
+    origin: QtmEUT5o3MBuwmfJ
+    rotation: 0
+    sort: 0
+    flags: {}
+    number: null
+    _key: '!cards.cards!QtmEUT5o3MBuwmfJ.ZXkc8ziVbaqIIbAw'
+    cards: []
+  - _id: bafCihenfPE0tOCU
+    name: Diese olle Kamelle!
+    description: ''
+    type: drama
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: ''
+        text: ''
+        img: systems/torgeternity/images/deutsch/cards/Dramakarten/09.webp
+    face: 0
+    drawn: false
+    origin: QtmEUT5o3MBuwmfJ
+    rotation: 0
+    sort: 0
+    flags: {}
+    number: null
+    _key: '!cards.cards!QtmEUT5o3MBuwmfJ.bafCihenfPE0tOCU'
+    cards: []
+  - _id: E5AVT8gouxzbJ6YA
+    name: Ich bin noch nicht fertig!
+    description: ''
+    type: drama
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: ''
+        text: ''
+        img: systems/torgeternity/images/deutsch/cards/Dramakarten/10.webp
+    face: 0
+    drawn: false
+    origin: QtmEUT5o3MBuwmfJ
+    rotation: 0
+    sort: 0
+    flags: {}
+    number: null
+    _key: '!cards.cards!QtmEUT5o3MBuwmfJ.E5AVT8gouxzbJ6YA'
+    cards: []
+  - _id: zQ9h8pZU0PCYl3Ek
+    name: Ihr geht vorsichtig voran!
+    description: ''
+    type: drama
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: ''
+        text: ''
+        img: systems/torgeternity/images/deutsch/cards/Dramakarten/11.webp
+    face: 0
+    drawn: false
+    origin: QtmEUT5o3MBuwmfJ
+    rotation: 0
+    sort: 0
+    flags: {}
+    number: null
+    _key: '!cards.cards!QtmEUT5o3MBuwmfJ.zQ9h8pZU0PCYl3Ek'
+    cards: []
+  - _id: 1Gp9RN8hTuQuwJa6
+    name: Es wird hektisch!
+    description: ''
+    type: drama
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: ''
+        text: ''
+        img: systems/torgeternity/images/deutsch/cards/Dramakarten/12.webp
+    face: 0
+    drawn: false
+    origin: QtmEUT5o3MBuwmfJ
+    rotation: 0
+    sort: 0
+    flags: {}
+    number: null
+    _key: '!cards.cards!QtmEUT5o3MBuwmfJ.1Gp9RN8hTuQuwJa6'
+    cards: []
+  - _id: 6e3LbzGbHbJthgHZ
+    name: Überwältigender Einsatz!
+    description: ''
+    type: drama
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: ''
+        text: ''
+        img: systems/torgeternity/images/deutsch/cards/Dramakarten/13.webp
+    face: 0
+    drawn: false
+    origin: QtmEUT5o3MBuwmfJ
+    rotation: 0
+    sort: 0
+    flags: {}
+    number: null
+    _key: '!cards.cards!QtmEUT5o3MBuwmfJ.6e3LbzGbHbJthgHZ'
+    cards: []
+  - _id: Sy6Wu05BJtIpnFuE
+    name: Das gefällt mir nicht!
+    description: ''
+    type: drama
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: ''
+        text: ''
+        img: systems/torgeternity/images/deutsch/cards/Dramakarten/14.webp
+    face: 0
+    drawn: false
+    origin: QtmEUT5o3MBuwmfJ
+    rotation: 0
+    sort: 0
+    flags: {}
+    number: null
+    _key: '!cards.cards!QtmEUT5o3MBuwmfJ.Sy6Wu05BJtIpnFuE'
+    cards: []
+  - _id: aauTeuWdNpgFZxOl
+    name: Vorsicht!
+    description: ''
+    type: drama
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: ''
+        text: ''
+        img: systems/torgeternity/images/deutsch/cards/Dramakarten/15.webp
+    face: 0
+    drawn: false
+    origin: QtmEUT5o3MBuwmfJ
+    rotation: 0
+    sort: 0
+    flags: {}
+    number: null
+    _key: '!cards.cards!QtmEUT5o3MBuwmfJ.aauTeuWdNpgFZxOl'
+    cards: []
+  - _id: 9lE6xoqQfOx2orEd
+    name: Dann eben mit Gewalt!
+    description: ''
+    type: drama
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: ''
+        text: ''
+        img: systems/torgeternity/images/deutsch/cards/Dramakarten/16.webp
+    face: 0
+    drawn: false
+    origin: QtmEUT5o3MBuwmfJ
+    rotation: 0
+    sort: 0
+    flags: {}
+    number: null
+    _key: '!cards.cards!QtmEUT5o3MBuwmfJ.9lE6xoqQfOx2orEd'
+    cards: []
+  - _id: Cjn6oWPGhKqSW7Y1
+    name: Ihr könnt mich nicht stoppen!
+    description: ''
+    type: drama
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: ''
+        text: ''
+        img: systems/torgeternity/images/deutsch/cards/Dramakarten/17.webp
+    face: 0
+    drawn: false
+    origin: QtmEUT5o3MBuwmfJ
+    rotation: 0
+    sort: 0
+    flags: {}
+    number: null
+    _key: '!cards.cards!QtmEUT5o3MBuwmfJ.Cjn6oWPGhKqSW7Y1'
+    cards: []
+  - _id: hMSN1v2i3ilntPtx
+    name: Mitten ins Feuer
+    description: ''
+    type: drama
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: ''
+        text: ''
+        img: systems/torgeternity/images/deutsch/cards/Dramakarten/18.webp
+    face: 0
+    drawn: false
+    origin: QtmEUT5o3MBuwmfJ
+    rotation: 0
+    sort: 0
+    flags: {}
+    number: null
+    _key: '!cards.cards!QtmEUT5o3MBuwmfJ.hMSN1v2i3ilntPtx'
+    cards: []
+  - _id: 7cyDLqaMCfLp4UI8
+    name: Zeit zu Handeln!
+    description: ''
+    type: drama
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: ''
+        text: ''
+        img: systems/torgeternity/images/deutsch/cards/Dramakarten/19.webp
+    face: 0
+    drawn: false
+    origin: QtmEUT5o3MBuwmfJ
+    rotation: 0
+    sort: 0
+    flags: {}
+    number: null
+    _key: '!cards.cards!QtmEUT5o3MBuwmfJ.7cyDLqaMCfLp4UI8'
+    cards: []
+  - _id: E7pE9Tt0KvMX44kc
+    name: Hier kommen sie!
+    description: ''
+    type: drama
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: ''
+        text: ''
+        img: systems/torgeternity/images/deutsch/cards/Dramakarten/20.webp
+    face: 0
+    drawn: false
+    origin: QtmEUT5o3MBuwmfJ
+    rotation: 0
+    sort: 0
+    flags: {}
+    number: null
+    _key: '!cards.cards!QtmEUT5o3MBuwmfJ.E7pE9Tt0KvMX44kc'
+    cards: []
+  - _id: dcVn9rcf2HZlPpnV
+    name: Sie sind auf der Flucht!
+    description: ''
+    type: drama
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: ''
+        text: ''
+        img: systems/torgeternity/images/deutsch/cards/Dramakarten/21.webp
+    face: 0
+    drawn: false
+    origin: QtmEUT5o3MBuwmfJ
+    rotation: 0
+    sort: 0
+    flags: {}
+    number: null
+    _key: '!cards.cards!QtmEUT5o3MBuwmfJ.dcVn9rcf2HZlPpnV'
+    cards: []
+  - _id: 9MbuKT4vLHciu168
+    name: Die Rückkehr!
+    description: ''
+    type: drama
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: ''
+        text: ''
+        img: systems/torgeternity/images/deutsch/cards/Dramakarten/22.webp
+    face: 0
+    drawn: false
+    origin: QtmEUT5o3MBuwmfJ
+    rotation: 0
+    sort: 0
+    flags: {}
+    number: null
+    _key: '!cards.cards!QtmEUT5o3MBuwmfJ.9MbuKT4vLHciu168'
+    cards: []
+  - _id: pZ9cy7RVNlleQepL
+    name: Dem Sieg einen Schritt näher!
+    description: ''
+    type: drama
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: ''
+        text: ''
+        img: systems/torgeternity/images/deutsch/cards/Dramakarten/23.webp
+    face: 0
+    drawn: false
+    origin: QtmEUT5o3MBuwmfJ
+    rotation: 0
+    sort: 0
+    flags: {}
+    number: null
+    _key: '!cards.cards!QtmEUT5o3MBuwmfJ.pZ9cy7RVNlleQepL'
+    cards: []
+  - _id: OaL1Ua6f8NEsbTdM
+    name: Tragt den Kampf zu ihnen!
+    description: ''
+    type: drama
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: ''
+        text: ''
+        img: systems/torgeternity/images/deutsch/cards/Dramakarten/24.webp
+    face: 0
+    drawn: false
+    origin: QtmEUT5o3MBuwmfJ
+    rotation: 0
+    sort: 0
+    flags: {}
+    number: null
+    _key: '!cards.cards!QtmEUT5o3MBuwmfJ.OaL1Ua6f8NEsbTdM'
+    cards: []
+  - _id: aRIAYCeLIOtUK4Z5
+    name: Durchbruch!
+    description: ''
+    type: drama
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: ''
+        text: ''
+        img: systems/torgeternity/images/deutsch/cards/Dramakarten/25.webp
+    face: 0
+    drawn: false
+    origin: QtmEUT5o3MBuwmfJ
+    rotation: 0
+    sort: 0
+    flags: {}
+    number: null
+    _key: '!cards.cards!QtmEUT5o3MBuwmfJ.aRIAYCeLIOtUK4Z5'
+    cards: []
+  - _id: 4DitQPHjGrsGdSYE
+    name: Verflucht!
+    description: ''
+    type: drama
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: ''
+        text: ''
+        img: systems/torgeternity/images/deutsch/cards/Dramakarten/26.webp
+    face: 0
+    drawn: false
+    origin: QtmEUT5o3MBuwmfJ
+    rotation: 0
+    sort: 0
+    flags: {}
+    number: null
+    _key: '!cards.cards!QtmEUT5o3MBuwmfJ.4DitQPHjGrsGdSYE'
+    cards: []
+  - _id: JpbFeHEXyTCPr7Px
+    name: Die Wende!
+    description: ''
+    type: drama
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: ''
+        text: ''
+        img: systems/torgeternity/images/deutsch/cards/Dramakarten/27.webp
+    face: 0
+    drawn: false
+    origin: QtmEUT5o3MBuwmfJ
+    rotation: 0
+    sort: 0
+    flags: {}
+    number: null
+    _key: '!cards.cards!QtmEUT5o3MBuwmfJ.JpbFeHEXyTCPr7Px'
+    cards: []
+  - _id: BU034EzWq9Tw8z3U
+    name: Gebt es ihnen!
+    description: ''
+    type: drama
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: ''
+        text: ''
+        img: systems/torgeternity/images/deutsch/cards/Dramakarten/28.webp
+    face: 0
+    drawn: false
+    origin: QtmEUT5o3MBuwmfJ
+    rotation: 0
+    sort: 0
+    flags: {}
+    number: null
+    _key: '!cards.cards!QtmEUT5o3MBuwmfJ.BU034EzWq9Tw8z3U'
+    cards: []
+  - _id: NkXjxEfZr8PZCW5l
+    name: Glücklicher Zufall!
+    description: ''
+    type: drama
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: ''
+        text: ''
+        img: systems/torgeternity/images/deutsch/cards/Dramakarten/29.webp
+    face: 0
+    drawn: false
+    origin: QtmEUT5o3MBuwmfJ
+    rotation: 0
+    sort: 0
+    flags: {}
+    number: null
+    _key: '!cards.cards!QtmEUT5o3MBuwmfJ.NkXjxEfZr8PZCW5l'
+    cards: []
+  - _id: MNcunYI0F9oybGcg
+    name: Kraftprobe!
+    description: ''
+    type: drama
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: ''
+        text: ''
+        img: systems/torgeternity/images/deutsch/cards/Dramakarten/30.webp
+    face: 0
+    drawn: false
+    origin: QtmEUT5o3MBuwmfJ
+    rotation: 0
+    sort: 0
+    flags: {}
+    number: null
+    _key: '!cards.cards!QtmEUT5o3MBuwmfJ.MNcunYI0F9oybGcg'
+    cards: []
+  - _id: TIWfb4Jcie6J4MmX
+    name: Ihr verliert an Boden!
+    description: ''
+    type: drama
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: ''
+        text: ''
+        img: systems/torgeternity/images/deutsch/cards/Dramakarten/31.webp
+    face: 0
+    drawn: false
+    origin: QtmEUT5o3MBuwmfJ
+    rotation: 0
+    sort: 0
+    flags: {}
+    number: null
+    _key: '!cards.cards!QtmEUT5o3MBuwmfJ.TIWfb4Jcie6J4MmX'
+    cards: []
+  - _id: x4MFH4sytOshoL53
+    name: Ihr werdet zurückgedrängt!
+    description: ''
+    type: drama
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: ''
+        text: ''
+        img: systems/torgeternity/images/deutsch/cards/Dramakarten/32.webp
+    face: 0
+    drawn: false
+    origin: QtmEUT5o3MBuwmfJ
+    rotation: 0
+    sort: 0
+    flags: {}
+    number: null
+    _key: '!cards.cards!QtmEUT5o3MBuwmfJ.x4MFH4sytOshoL53'
+    cards: []
+  - _id: IRxUx2GIfPGSfGjr
+    name: Jetzt hab ich euch!
+    description: ''
+    type: drama
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: ''
+        text: ''
+        img: systems/torgeternity/images/deutsch/cards/Dramakarten/33.webp
+    face: 0
+    drawn: false
+    origin: QtmEUT5o3MBuwmfJ
+    rotation: 0
+    sort: 0
+    flags: {}
+    number: null
+    _key: '!cards.cards!QtmEUT5o3MBuwmfJ.IRxUx2GIfPGSfGjr'
+    cards: []
+  - _id: 1sWiAZjeusXNuVXU
+    name: Die Schlacht ist mein!
+    description: ''
+    type: drama
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: ''
+        text: ''
+        img: systems/torgeternity/images/deutsch/cards/Dramakarten/34.webp
+    face: 0
+    drawn: false
+    origin: QtmEUT5o3MBuwmfJ
+    rotation: 0
+    sort: 0
+    flags: {}
+    number: null
+    _key: '!cards.cards!QtmEUT5o3MBuwmfJ.1sWiAZjeusXNuVXU'
+    cards: []
+  - _id: 3GE7o7wnrM2WAGq9
+    name: Ich werde triumphieren!
+    description: ''
+    type: drama
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: ''
+        text: ''
+        img: systems/torgeternity/images/deutsch/cards/Dramakarten/35.webp
+    face: 0
+    drawn: false
+    origin: QtmEUT5o3MBuwmfJ
+    rotation: 0
+    sort: 0
+    flags: {}
+    number: null
+    _key: '!cards.cards!QtmEUT5o3MBuwmfJ.3GE7o7wnrM2WAGq9'
+    cards: []
+  - _id: zr3Uamw8k9yutVDZ
+    name: Torg!
+    description: ''
+    type: drama
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: ''
+        text: ''
+        img: systems/torgeternity/images/deutsch/cards/Dramakarten/36.webp
+    face: 0
+    drawn: false
+    origin: QtmEUT5o3MBuwmfJ
+    rotation: 0
+    sort: 0
+    flags: {}
+    number: null
+    _key: '!cards.cards!QtmEUT5o3MBuwmfJ.zr3Uamw8k9yutVDZ'
+    cards: []
+  - _id: nntTxqjBUyC2MZSR
+    name: Oh nein!
+    description: ''
+    type: drama
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: ''
+        text: ''
+        img: systems/torgeternity/images/deutsch/cards/Dramakarten/37.webp
+    face: 0
+    drawn: false
+    origin: QtmEUT5o3MBuwmfJ
+    rotation: 0
+    sort: 0
+    flags: {}
+    number: null
+    _key: '!cards.cards!QtmEUT5o3MBuwmfJ.nntTxqjBUyC2MZSR'
+    cards: []
+  - _id: UYtJqNEfGQmt9pLe
+    name: Lauft, ihr Narren!
+    description: ''
+    type: drama
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: ''
+        text: ''
+        img: systems/torgeternity/images/deutsch/cards/Dramakarten/38.webp
+    face: 0
+    drawn: false
+    origin: QtmEUT5o3MBuwmfJ
+    rotation: 0
+    sort: 0
+    flags: {}
+    number: null
+    _key: '!cards.cards!QtmEUT5o3MBuwmfJ.UYtJqNEfGQmt9pLe'
+    cards: []
+  - _id: D8dbFRLTx9ufh2M1
+    name: Knall auf Fall!
+    description: ''
+    type: drama
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: ''
+        text: ''
+        img: systems/torgeternity/images/deutsch/cards/Dramakarten/39.webp
+    face: 0
+    drawn: false
+    origin: QtmEUT5o3MBuwmfJ
+    rotation: 0
+    sort: 0
+    flags: {}
+    number: null
+    _key: '!cards.cards!QtmEUT5o3MBuwmfJ.D8dbFRLTx9ufh2M1'
+    cards: []
+  - _id: ML2ffPGU8Tmc6EVu
+    name: Hoppla!
+    description: ''
+    type: drama
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: ''
+        text: ''
+        img: systems/torgeternity/images/deutsch/cards/Dramakarten/40.webp
+    face: 0
+    drawn: false
+    origin: QtmEUT5o3MBuwmfJ
+    rotation: 0
+    sort: 0
+    flags: {}
+    number: null
+    _key: '!cards.cards!QtmEUT5o3MBuwmfJ.ML2ffPGU8Tmc6EVu'
+    cards: []
+rotation: 0
+displayCount: false
+folder: null
+sort: 0
+permission:
+  default: 0
+  1pSzpSNrhKGYYcib: 3
+flags:
+  core:
+    sourceId: Cards.cmBgKk32JInJOXmg
+  torgeternity:
+    usage: dramaDeck
+_key: '!cards!QtmEUT5o3MBuwmfJ'
+

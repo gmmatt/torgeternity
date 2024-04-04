@@ -1,33 +1,27 @@
-import GMScreen from "./GMScreen.js";
-import deckSettingMenu from "./cards/cardSettingMenu.js";
+import DeckSettingMenu from './cards/cardSettingMenu.js';
 
+/**
+ *
+ */
 export default function initTorgControlButtons() {
-  //adding layer control for Torg entities
-  class torgLayer extends CanvasLayer {
-    static get layerOptions() {
-      return foundry.utils.mergeObject(super.layerOptions, {
-        name: "Torg",
-        canDragCreate: false,
-        controllableObjects: true,
-        rotatableObjects: true,
-        zIndex: 666,
-      });
-    }
-  }
-  CONFIG.Canvas.layers.torgeternity = { layerClass: ControlsLayer, group: "primary" };
+  // adding layer control for Torg entities
+  /**
+   *
+   */
+  CONFIG.Canvas.layers.torgeternity = { layerClass: ControlsLayer, group: 'primary' };
 
-  Hooks.on("getSceneControlButtons", (btns) => {
-    let menu = [
+  Hooks.on('getSceneControlButtons', (btns) => {
+    const menu = [
       {
-        name: game.i18n.localize("CARDS.TypeHand"),
-        title: game.i18n.localize("CARDS.TypeHand"),
-        icon: "fa fa-id-badge",
+        name: game.i18n.localize('CARDS.TypeHand'),
+        title: game.i18n.localize('CARDS.TypeHand'),
+        icon: 'fa fa-id-badge',
         button: true,
         onClick: () => {
           if (game.user.character) {
             game.user.character.getDefaultHand().sheet.toggleRender();
           } else {
-            ui.notifications.error(game.i18n.localize("torgeternity.notifications.noHands"));
+            ui.notifications.error(game.i18n.localize('torgeternity.notifications.noHands'));
           }
         },
       },
@@ -36,31 +30,31 @@ export default function initTorgControlButtons() {
     if (game.user.isGM) {
       menu.push(
         {
-          name: game.i18n.localize("torgeternity.gmScreen.toggle"),
-          title: game.i18n.localize("torgeternity.gmScreen.toggle"),
-          icon: "fa fa-book-open",
+          name: game.i18n.localize('torgeternity.gmScreen.toggle'),
+          title: game.i18n.localize('torgeternity.gmScreen.toggle'),
+          icon: 'fa fa-book-open',
           button: true,
           onClick: () => {
             ui.GMScreen.toggleRender();
           },
         },
         {
-          name: game.i18n.localize("torgeternity.settingMenu.deckSetting.name"),
-          title: game.i18n.localize("torgeternity.settingMenu.deckSetting.name"),
-          icon: "fa fa-cog",
+          name: game.i18n.localize('torgeternity.settingMenu.deckSetting.name'),
+          title: game.i18n.localize('torgeternity.settingMenu.deckSetting.name'),
+          icon: 'fa fa-cog',
           button: true,
           onClick: () => {
-            new deckSettingMenu().render(true);
+            new DeckSettingMenu().render(true);
           },
         }
       );
     }
 
     btns.push({
-      name: "TORG",
-      title: "TORG",
-      icon: "torg",
-      layer: "torgeternity",
+      name: 'TORG',
+      title: 'TORG',
+      icon: 'torg',
+      layer: 'torgeternity',
       tools: menu,
     });
   });

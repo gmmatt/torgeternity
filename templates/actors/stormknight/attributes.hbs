@@ -2,7 +2,6 @@
 <ul class="attribut-list">
 
   <!-- iterate each attribute individually to avoid a problem with data structures in sheets created under early versions of system -->
-  {{log this}}
   <li class="attribut-block">
     <a
       class="skill-roll"
@@ -19,7 +18,7 @@
       name="system.attributes.charisma"
       type="number"
       value="{{actor.system.attributes.charisma}}"
-      data='dtype="Number"'
+      data-dtype="Number"
     />
   </li>
 
@@ -41,7 +40,6 @@
       value="{{actor.system.attributes.dexterity}}"
       data-dtype="Number"
     />
-    {{log actor.system.attributes.dexterity}}
   </li>
 
   <li class="attribut-block">
@@ -56,7 +54,7 @@
     >
       {{localize "torgeternity.attributes.mind"}}
     </a>
-    <input name="system.attributes.mind" type="number" value="{{actor.system.attributes.mind}}" data='dtype="Number"' />
+    <input name="system.attributes.mind" type="number" value="{{actor.system.attributes.mind}}" data-dtype="Number" />
   </li>
 
   <li class="attribut-block">
@@ -75,7 +73,7 @@
       name="system.attributes.spirit"
       type="number"
       value="{{actor.system.attributes.spirit}}"
-      data='dtype="Number"'
+      data-dtype="Number"
     />
   </li>
 
@@ -95,7 +93,7 @@
       name="system.attributes.strength"
       type="number"
       value="{{actor.system.attributes.strength}}"
-      data='dtype="Number"'
+      data-dtype="Number"
     />
   </li>
 

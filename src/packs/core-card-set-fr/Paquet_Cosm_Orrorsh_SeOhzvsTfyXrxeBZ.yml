@@ -1,0 +1,255 @@
+_id: SeOhzvsTfyXrxeBZ
+name: Paquet Cosm Orrorsh
+type: deck
+description: ''
+img: systems/torgeternity/images/cards/orrorsh-back.webp
+data: {}
+cards:
+  - _id: UzBMSJBgXnCqpQwf
+    name: Damné
+    description: ''
+    type: cosm
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Damned
+        img: systems/torgeternity/images/cards/cosm/orrorsh/fr/01.webp
+        text: ''
+    face: 1
+    drawn: false
+    origin: 7rhA82uDSE499m1h
+    rotation: 0
+    sort: 0
+    flags: {}
+    number: null
+    _key: '!cards.cards!SeOhzvsTfyXrxeBZ.UzBMSJBgXnCqpQwf'
+    cards: []
+  - _id: tvjkixrm45znnyrh
+    name: Tentation
+    description: ''
+    type: cosm
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Temptation
+        img: systems/torgeternity/images/cards/cosm/orrorsh/fr/02.webp
+        text: ''
+    face: 1
+    drawn: false
+    origin: 7rhA82uDSE499m1h
+    rotation: 0
+    sort: 1
+    flags: {}
+    number: null
+    _key: '!cards.cards!SeOhzvsTfyXrxeBZ.tvjkixrm45znnyrh'
+    cards: []
+  - _id: ZeU0RmCO6n5ujabP
+    name: Sombres présages
+    description: ''
+    type: cosm
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Ominous Portents
+        img: systems/torgeternity/images/cards/cosm/orrorsh/fr/03.webp
+        text: ''
+    face: 1
+    drawn: false
+    origin: 7rhA82uDSE499m1h
+    rotation: 0
+    sort: 2
+    flags: {}
+    number: null
+    _key: '!cards.cards!SeOhzvsTfyXrxeBZ.ZeU0RmCO6n5ujabP'
+    cards: []
+  - _id: KKz9qmHPMlr2Y2e6
+    name: Frayeur
+    description: ''
+    type: cosm
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Jump Scare
+        img: systems/torgeternity/images/cards/cosm/orrorsh/fr/04.webp
+        text: ''
+    face: 1
+    drawn: false
+    origin: 7rhA82uDSE499m1h
+    rotation: 0
+    sort: 3
+    flags: {}
+    number: null
+    _key: '!cards.cards!SeOhzvsTfyXrxeBZ.KKz9qmHPMlr2Y2e6'
+    cards: []
+  - _id: Qng9tIy1xstNdWaD
+    name: Marqué par la mort
+    description: ''
+    type: cosm
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Marked for Death
+        img: systems/torgeternity/images/cards/cosm/orrorsh/fr/05.webp
+        text: ''
+    face: 1
+    drawn: false
+    origin: 7rhA82uDSE499m1h
+    rotation: 0
+    sort: 4
+    flags: {}
+    number: null
+    _key: '!cards.cards!SeOhzvsTfyXrxeBZ.Qng9tIy1xstNdWaD'
+    cards: []
+  - _id: lzKfdzYDsv9StzEC
+    name: Le crépuscule ?!
+    description: ''
+    type: cosm
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Sunset?!
+        img: systems/torgeternity/images/cards/cosm/orrorsh/fr/06.webp
+        text: ''
+    face: 1
+    drawn: false
+    origin: 7rhA82uDSE499m1h
+    rotation: 0
+    sort: 5
+    flags: {}
+    number: null
+    _key: '!cards.cards!SeOhzvsTfyXrxeBZ.lzKfdzYDsv9StzEC'
+    cards: []
+  - _id: 1RIT9f5rC7YyALzD
+    name: Sinistres secrets
+    description: ''
+    type: cosm
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Sinister Secrets
+        img: systems/torgeternity/images/cards/cosm/orrorsh/fr/07.webp
+        text: ''
+    face: 1
+    drawn: false
+    origin: 7rhA82uDSE499m1h
+    rotation: 0
+    sort: 6
+    flags: {}
+    number: null
+    _key: '!cards.cards!SeOhzvsTfyXrxeBZ.1RIT9f5rC7YyALzD'
+    cards: []
+  - _id: rkhNR9RzxS2FrfpZ
+    name: Intérêt malsain
+    description: ''
+    type: cosm
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Unholy Interest
+        img: systems/torgeternity/images/cards/cosm/orrorsh/fr/08.webp
+        text: ''
+    face: 1
+    drawn: false
+    origin: 7rhA82uDSE499m1h
+    rotation: 0
+    sort: 7
+    flags: {}
+    number: null
+    _key: '!cards.cards!SeOhzvsTfyXrxeBZ.rkhNR9RzxS2FrfpZ'
+    cards: []
+  - _id: PIOIdbKYkEu1z7sc
+    name: Stigmate de terreur
+    description: ''
+    type: cosm
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Mark of Terror
+        img: systems/torgeternity/images/cards/cosm/orrorsh/fr/09.webp
+        text: ''
+    face: 1
+    drawn: false
+    origin: 7rhA82uDSE499m1h
+    rotation: 0
+    sort: 8
+    flags: {}
+    number: null
+    _key: '!cards.cards!SeOhzvsTfyXrxeBZ.PIOIdbKYkEu1z7sc'
+    cards: []
+  - _id: 4huNs758PKmLt5ie
+    name: Extinction des feux !
+    description: ''
+    type: cosm
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Lights Out!
+        img: systems/torgeternity/images/cards/cosm/orrorsh/fr/10.webp
+        text: ''
+    face: 1
+    drawn: false
+    origin: 7rhA82uDSE499m1h
+    rotation: 0
+    sort: 9
+    flags: {}
+    number: null
+    _key: '!cards.cards!SeOhzvsTfyXrxeBZ.4huNs758PKmLt5ie'
+    cards: []
+rotation: 0
+displayCount: false
+folder: null
+sort: 0
+permission:
+  kz1RJu8vrAPmTUwN: 3
+flags:
+  exportSource:
+    world: torgv2p2
+    system: torgeternity
+    coreVersion: '9.235'
+    systemVersion: 2.0.5
+  core:
+    sourceId: Cards.7rhA82uDSE499m1h
+  torgeternity:
+    usage: orrorsh
+_key: '!cards!SeOhzvsTfyXrxeBZ'
+

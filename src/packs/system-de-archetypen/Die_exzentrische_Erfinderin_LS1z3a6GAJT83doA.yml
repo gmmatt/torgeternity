@@ -1,0 +1,1033 @@
+_id: LS1z3a6GAJT83doA
+name: Die exzentrische Erfinderin
+type: stormknight
+img: systems/torgeternity/images/characters/Eccentric_Inventor.Avatar.webp
+items:
+  - _id: oYpHjuMGhIsNv8XC
+    name: Peilsender
+    type: gear
+    img: systems/torgeternity/images/icons/gear-icon.webp
+    effects: []
+    folder: YrLpjzkzDZxqWzUw
+    sort: 0
+    flags:
+      core:
+        sourceId: Item.hnzAJpMqPZrjYrX8
+    system:
+      cosm: Nil-Imperium
+      description: >-
+        <p>Ein kleines Ger&auml;t, das seinen Standort an darauf abgestimmte
+        Funkempf&auml;nger innerhalb eines Kilometers sendet.</p>
+      techlevel: 20
+      price: '150'
+      value: 11
+    ownership:
+      default: 0
+      9Q0XnqFwko7hRlvL: 3
+    _stats:
+      systemId: torgeternity
+      systemVersion: 3.1.1
+      coreVersion: '11.308'
+      createdTime: null
+      modifiedTime: 1694869709465
+      lastModifiedBy: CtisFurQNe9h7ABb
+    _key: '!actors.items!LS1z3a6GAJT83doA.oYpHjuMGhIsNv8XC'
+  - _id: Ld5AIx57YpaDZE4T
+    name: Stromstrahl
+    type: perk
+    img: systems/torgeternity/images/icons/reality-icon.webp
+    effects: []
+    folder: null
+    sort: 100000
+    flags:
+      core:
+        sourceId: Compendium.te001-core-rulebook.grw-de-vorzuverb.Oow5hug0e0C5BCNH
+    system:
+      category: pulpPowers
+      cosm: Nil-Imperium
+      prerequisites: ''
+      timestaken: 1
+      description: >-
+        <p>Der Held kann einen m&auml;chtigen elektrischen Blitz abfeuern. Er
+        greift mit Energiewaffen oder Geschicklichkeit an und verursacht 13
+        Schaden. Der Strahl hat eine Reichweite von 10/25/50, Munition 5 und
+        regeneriert 1 Schuss pro Runde.&nbsp;</p>
+
+        <p>Gef&auml;hrlich bei N&auml;sse: Bei leichtem Regen oder wenn das Ziel
+        in einer Pf&uuml;tze steht, erh&ouml;ht sich der Schaden um +2. Bei
+        starkem Regen oder wenn sich das Ziel bis zu den Kn&ouml;cheln oder
+        h&ouml;her im Wasser befindet, erh&ouml;ht sich der Schaden um
+        +4.&nbsp;</p>
+      pulpPowers:
+        enhancementNumber: 4
+        enhancement01:
+          title: Kleiner Explosionsradius
+          description: Der Strahl betrifft alle Ziele in einem kleinen Explosionsradius.
+          taken: false
+        enhancement02:
+          title: Munition
+          description: Die Munitionskapazität erhöht sich auf 10.
+          taken: false
+        enhancement03:
+          title: Schaden
+          description: Der Schaden erhöht sich auf 15.
+          taken: true
+        enhancement04:
+          title: Schnellfeuer
+          description: >-
+            Der Charakter darf beim Einsatz des Stromstrahls die Option „Kurzer
+            Waffenstoß“ einsetzen.
+          taken: false
+        enhancement05:
+          title: ''
+          description: ''
+          taken: false
+        enhancement06:
+          title: ''
+          description: ''
+          taken: false
+        enhancement07:
+          title: ''
+          description: ''
+          taken: false
+        enhancement08:
+          title: ''
+          description: ''
+          taken: false
+        enhancement09:
+          title: ''
+          description: ''
+          taken: false
+        enhancement10:
+          title: ''
+          description: ''
+          taken: false
+        enhancement11:
+          title: ''
+          description: ''
+          taken: false
+        enhancement12:
+          title: ''
+          description: ''
+          taken: false
+        enhancement13:
+          title: ''
+          description: ''
+          taken: false
+        enhancement14:
+          title: ''
+          description: ''
+          taken: false
+        enhancement15:
+          title: ''
+          description: ''
+          taken: false
+        limitationNumber: 1
+        limitation01: Bei einem Patzer für laufende Szene nicht nutzbar.
+        limitation02: ''
+        limitation03: ''
+        limitation04: ''
+        limitation05: ''
+        limitation06: ''
+        limitation07: ''
+        limitation08: ''
+        limitation09: ''
+        limitation10: ''
+    ownership:
+      ZuS1Anc9ORZov40T: 3
+      CtisFurQNe9h7ABb: 3
+    _stats:
+      systemId: torgeternity
+      systemVersion: 3.1.1
+      coreVersion: '11.308'
+      createdTime: 1694866747115
+      modifiedTime: 1694868789721
+      lastModifiedBy: CtisFurQNe9h7ABb
+    _key: '!actors.items!LS1z3a6GAJT83doA.Ld5AIx57YpaDZE4T'
+  - _id: 33139H5tzkxx6FAx
+    name: Kraftfeld
+    type: perk
+    img: systems/torgeternity/images/icons/reality-icon.webp
+    effects: []
+    folder: null
+    sort: 0
+    flags:
+      core:
+        sourceId: Compendium.te001-core-rulebook.grw-de-vorzuverb.Item.RUqkRcpgyDXQXRi2
+    system:
+      category: pulpPowers
+      cosm: Nil-Imperium
+      prerequisites: ''
+      timestaken: 1
+      description: >-
+        <p>Ein Schild aus unsichtbarer Energie umgibt den Helden. Das Kraftfeld
+        hat drei &bdquo;Ladungen&ldquo;. Jedes Mal, wenn der Held eine Wunde
+        erleidet, verbraucht das Feld eine Ladung, um die Wunde und 2 Punkte
+        Schockschaden zu blockieren.&nbsp;</p>
+
+        <p>Das Feld l&auml;dt sich mit einer Ladung pro Stunde wieder
+        auf.&nbsp;</p>
+      pulpPowers:
+        enhancementNumber: 3
+        enhancement01:
+          title: Wiederaufladung
+          description: Das Feld erhält alle 10 Minuten eine Ladung zurück.
+          taken: false
+        enhancement02:
+          title: Kraft
+          description: Das Feld hat 5 Ladungen.
+          taken: true
+        enhancement03:
+          title: Größe
+          description: >-
+            Das Feld kann benutzt werden, um einen benachbarten Verbündeten zu
+            schützen.
+          taken: false
+        enhancement04:
+          title: ''
+          description: ''
+          taken: false
+        enhancement05:
+          title: ''
+          description: ''
+          taken: false
+        enhancement06:
+          title: ''
+          description: ''
+          taken: false
+        enhancement07:
+          title: ''
+          description: ''
+          taken: false
+        enhancement08:
+          title: ''
+          description: ''
+          taken: false
+        enhancement09:
+          title: ''
+          description: ''
+          taken: false
+        enhancement10:
+          title: ''
+          description: ''
+          taken: false
+        enhancement11:
+          title: ''
+          description: ''
+          taken: false
+        enhancement12:
+          title: ''
+          description: ''
+          taken: false
+        enhancement13:
+          title: ''
+          description: ''
+          taken: false
+        enhancement14:
+          title: ''
+          description: ''
+          taken: false
+        enhancement15:
+          title: ''
+          description: ''
+          taken: false
+        limitationNumber: 1
+        limitation01: Gerät muss als einfache Aktion aktiviert werden.
+        limitation02: ''
+        limitation03: ''
+        limitation04: ''
+        limitation05: ''
+        limitation06: ''
+        limitation07: ''
+        limitation08: ''
+        limitation09: ''
+        limitation10: ''
+    ownership:
+      default: 0
+      9Q0XnqFwko7hRlvL: 3
+      CtisFurQNe9h7ABb: 3
+    _stats:
+      systemId: torgeternity
+      systemVersion: 3.1.1
+      coreVersion: '11.308'
+      createdTime: 1694866751899
+      modifiedTime: 1694866959782
+      lastModifiedBy: CtisFurQNe9h7ABb
+    _key: '!actors.items!LS1z3a6GAJT83doA.33139H5tzkxx6FAx'
+  - _id: ILlukSLFB0oP3oxR
+    name: Stromstrahl (Waffe)
+    type: firearm
+    img: systems/torgeternity/images/icons/firearm-icon.webp
+    effects: []
+    folder: null
+    sort: 23400000
+    flags:
+      core:
+        sourceId: >-
+          Compendium.te001-core-rulebook.grw-de-ausruestung.Item.jDYOf9wwFysGXhkN
+    system:
+      cosm: Nil-Imperium
+      description: >-
+        <p>Ben&ouml;tigt den Vorzug
+        "@UUID[Compendium.te001-core-rulebook.grw-de-vorzuverb.0P0XvH8qiYpp8Gun]{Stromstrahl}",
+        Erneuert 1 Munition pro Spielzug</p>
+      techlevel: 20
+      price: '0'
+      value: 0
+      attackWith: energyWeapons
+      damageType: ''
+      damage: 15
+      ap: 0
+      ammo:
+        max: 5
+        value: 5
+      range: 10/25/50
+      notes: ''
+      chatNote: ''
+    ownership:
+      default: 0
+      9Q0XnqFwko7hRlvL: 3
+      CtisFurQNe9h7ABb: 3
+    _stats:
+      systemId: torgeternity
+      systemVersion: 3.1.1
+      coreVersion: '11.308'
+      createdTime: 1694866995356
+      modifiedTime: 1694867008591
+      lastModifiedBy: CtisFurQNe9h7ABb
+    _key: '!actors.items!LS1z3a6GAJT83doA.ILlukSLFB0oP3oxR'
+  - name: Mikro-Audiosender
+    type: gear
+    img: systems/torgeternity/images/icons/gear-icon.webp
+    effects: []
+    folder: null
+    sort: -25000
+    flags:
+      core:
+        sourceId: Item.oQDasq1tsV2C1xba
+    _id: z5kuKXicHCTjagsy
+    system:
+      cosm: Nil-Imperium
+      description: ''
+      techlevel: 20
+      price: '100'
+      value: 10
+    ownership:
+      default: 0
+      9Q0XnqFwko7hRlvL: 3
+      CtisFurQNe9h7ABb: 3
+    _stats:
+      systemId: torgeternity
+      systemVersion: 3.1.1
+      coreVersion: '11.308'
+      createdTime: 1694867036963
+      modifiedTime: 1694867119047
+      lastModifiedBy: CtisFurQNe9h7ABb
+    _key: '!actors.items!LS1z3a6GAJT83doA.z5kuKXicHCTjagsy'
+  - name: Rucksack
+    type: gear
+    img: systems/torgeternity/images/icons/gear-icon.webp
+    effects: []
+    folder: null
+    sort: 13500000
+    flags:
+      core:
+        sourceId: Item.9OFC7IM8K9EMljbZ
+    _id: 4aD1KQ5M35j8LPLG
+    system:
+      cosm: Aysle
+      description: ''
+      techlevel: 8
+      price: '100'
+      value: 10
+    ownership:
+      default: 0
+      9Q0XnqFwko7hRlvL: 3
+      CtisFurQNe9h7ABb: 3
+    _stats:
+      systemId: torgeternity
+      systemVersion: 3.1.1
+      coreVersion: '11.308'
+      createdTime: 1694867043890
+      modifiedTime: 1694867043890
+      lastModifiedBy: CtisFurQNe9h7ABb
+    _key: '!actors.items!LS1z3a6GAJT83doA.4aD1KQ5M35j8LPLG'
+  - _id: vsz0ZonowO3k7bcL
+    name: Erste-Hilfe-Kasten
+    type: gear
+    img: systems/torgeternity/images/icons/gear-icon.webp
+    effects:
+      - _id: 4O95ViFk7K3rqW7i
+        changes:
+          - key: system.skills.firstAid.isFav
+            mode: 5
+            value: '1'
+            priority: null
+        disabled: false
+        duration:
+          startTime: null
+          seconds: null
+          combat: null
+          rounds: null
+          turns: null
+          startRound: null
+          startTurn: null
+        icon: icons/svg/aura.svg
+        origin: Compendium.te001-core-rulebook.grw-de-ausruestung.ccAyQ6SPYCK8IWQS
+        transfer: true
+        flags: {}
+        tint: null
+        name: Fertigkeitsbegünstigung
+        description: ''
+        statuses: []
+        _key: >-
+          !actors.items.effects!LS1z3a6GAJT83doA.vsz0ZonowO3k7bcL.4O95ViFk7K3rqW7i
+    folder: null
+    sort: -100000
+    flags:
+      core:
+        sourceId: Item.qfuqdyayux9JCd6l
+    system:
+      cosm: Zentralerde
+      description: <p><em>Erste-Hilfe</em>-Proben sind beg&uuml;nstigt</p>
+      techlevel: 23
+      price: '0'
+      value: 0
+    ownership:
+      default: 0
+      9Q0XnqFwko7hRlvL: 3
+      CtisFurQNe9h7ABb: 3
+    _stats:
+      systemId: torgeternity
+      systemVersion: 3.1.1
+      coreVersion: '11.308'
+      createdTime: 1694867047131
+      modifiedTime: 1694867114123
+      lastModifiedBy: CtisFurQNe9h7ABb
+    _key: '!actors.items!LS1z3a6GAJT83doA.vsz0ZonowO3k7bcL'
+  - name: Taschenlampe
+    type: gear
+    img: systems/torgeternity/images/icons/gear-icon.webp
+    effects: []
+    folder: null
+    sort: 22100000
+    flags:
+      core:
+        sourceId: Item.ghYEu90Et15IioVa
+    _id: A3zASEYHS3ksPNvh
+    system:
+      cosm: Nil-Imperium
+      description: ''
+      techlevel: 20
+      price: '10'
+      value: 5
+    ownership:
+      default: 0
+      9Q0XnqFwko7hRlvL: 3
+      CtisFurQNe9h7ABb: 3
+    _stats:
+      systemId: torgeternity
+      systemVersion: 3.1.1
+      coreVersion: '11.308'
+      createdTime: 1694867051051
+      modifiedTime: 1694867121383
+      lastModifiedBy: CtisFurQNe9h7ABb
+    _key: '!actors.items!LS1z3a6GAJT83doA.A3zASEYHS3ksPNvh'
+  - name: Funkempfänger
+    type: gear
+    img: systems/torgeternity/images/icons/gear-icon.webp
+    effects: []
+    folder: null
+    sort: -50000
+    flags:
+      core:
+        sourceId: Item.CBYudRRbDHQzC9F2
+    _id: 5V8SDuZZgyq8hEge
+    system:
+      cosm: Nil-Imperium
+      description: ''
+      techlevel: 18
+      price: '50'
+      value: 9
+    ownership:
+      default: 0
+      9Q0XnqFwko7hRlvL: 3
+      CtisFurQNe9h7ABb: 3
+    _stats:
+      systemId: torgeternity
+      systemVersion: 3.1.1
+      coreVersion: '11.308'
+      createdTime: 1694867074874
+      modifiedTime: 1694867115799
+      lastModifiedBy: CtisFurQNe9h7ABb
+    _key: '!actors.items!LS1z3a6GAJT83doA.5V8SDuZZgyq8hEge'
+  - name: Werkzeuggürtel
+    type: gear
+    img: systems/torgeternity/images/icons/gear-icon.webp
+    effects: []
+    folder: null
+    sort: 30700000
+    flags:
+      core:
+        sourceId: Item.NDVbTsJFnguLs4Bx
+    _id: JOEXCC8y8rElWHrS
+    system:
+      cosm: Orrorsh
+      description: ''
+      techlevel: 16
+      price: '100'
+      value: 10
+    ownership:
+      default: 0
+      9Q0XnqFwko7hRlvL: 3
+      CtisFurQNe9h7ABb: 3
+    _stats:
+      systemId: torgeternity
+      systemVersion: 3.1.1
+      coreVersion: '11.308'
+      createdTime: 1694867083090
+      modifiedTime: 1694867083090
+      lastModifiedBy: CtisFurQNe9h7ABb
+    _key: '!actors.items!LS1z3a6GAJT83doA.JOEXCC8y8rElWHrS'
+  - name: Ledermantel
+    type: armor
+    img: systems/torgeternity/images/icons/armor-icon.webp
+    effects: []
+    folder: null
+    sort: 28400000
+    flags:
+      core:
+        sourceId: >-
+          Compendium.te001-core-rulebook.grw-de-ausruestung.Item.s0uhujKKdqpJw210
+    _id: 8FoodSadABORHrmX
+    system:
+      cosm: Nil-Imperium
+      description: >-
+        <p>@UUID[Compendium.te001-core-rulebook.grw-de-grw.Qlx6yGF0Mmo6Xzrv.JournalEntryPage.7GGUUHzuYIqGPXDO#ganzkorper/torso:]{Torso}</p>
+      price: '100'
+      techlevel: 19
+      value: 10
+      bonus: 1
+      equipped: true
+      equippedClass: item-equipped
+      maxDex: 12
+      minStrength: null
+      notes: Torso
+      fatigue: null
+    ownership:
+      default: 0
+      9Q0XnqFwko7hRlvL: 3
+      CtisFurQNe9h7ABb: 3
+    _stats:
+      systemId: torgeternity
+      systemVersion: 3.7.0
+      coreVersion: '11.315'
+      createdTime: 1711562366193
+      modifiedTime: 1711706120829
+      lastModifiedBy: CtisFurQNe9h7ABb
+    _key: '!actors.items!LS1z3a6GAJT83doA.8FoodSadABORHrmX'
+effects:
+  - _id: cyPKID3tHRDIqS44
+    changes:
+      - key: system.skills.firstAid.isFav
+        mode: 5
+        value: '1'
+        priority: null
+    disabled: false
+    duration:
+      startTime: 0
+      seconds: null
+      combat: null
+      rounds: null
+      turns: null
+      startRound: null
+      startTurn: null
+    icon: icons/svg/aura.svg
+    origin: >-
+      Compendium.torgeternity.system-de-archetypen.Actor.LS1z3a6GAJT83doA.Item.vsz0ZonowO3k7bcL
+    transfer: false
+    flags: {}
+    tint: null
+    name: Fertigkeitsbegünstigung
+    description: ''
+    statuses: []
+    _key: '!actors.effects!LS1z3a6GAJT83doA.cyPKID3tHRDIqS44'
+folder: null
+sort: 0
+flags:
+  core:
+    sourceId: Compendium.torgeternity.archetypes.Aq6ZhdfGe9SMQxwv
+system:
+  shock:
+    max: 5
+    value: 0
+  wounds:
+    max: 3
+    value: 0
+  attributes:
+    charisma: 7
+    dexterity: 8
+    mind: 12
+    spirit: 7
+    strength: 6
+  other:
+    move: 5
+    run: 5
+    toughness: 5
+    armor: 0
+    cosm: nileEmpire
+    possibilities: 3
+    posibilities: 3
+  skills:
+    airVehicles:
+      baseAttribute: dexterity
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    alteration:
+      baseAttribute: mind
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    apportation:
+      baseAttribute: spirit
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    beastRiding:
+      baseAttribute: dexterity
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    computers:
+      baseAttribute: mind
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    conjuration:
+      baseAttribute: spirit
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    divination:
+      baseAttribute: mind
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    dodge:
+      baseAttribute: dexterity
+      adds: 2
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    energyWeapons:
+      baseAttribute: dexterity
+      adds: 2
+      value: 0
+      isFav: false
+      groupName: combat
+      unskilledUse: 1
+    evidenceAnalysis:
+      baseAttribute: mind
+      adds: 1
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    faith:
+      baseAttribute: spirit
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    find:
+      baseAttribute: mind
+      adds: 1
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    fireCombat:
+      baseAttribute: dexterity
+      adds: null
+      value: 0
+      isFav: false
+      groupName: combat
+      unskilledUse: 1
+    firstAid:
+      baseAttribute: mind
+      adds: 1
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    heavyWeapons:
+      baseAttribute: dexterity
+      adds: null
+      value: 0
+      isFav: false
+      groupName: combat
+      unskilledUse: 1
+    intimidation:
+      baseAttribute: spirit
+      adds: null
+      value: 0
+      isFav: false
+      groupName: interaction
+      unskilledUse: 1
+    kinesis:
+      baseAttribute: spirit
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    landVehicles:
+      baseAttribute: dexterity
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    language:
+      baseAttribute: mind
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    lockpicking:
+      baseAttribute: dexterity
+      adds: 1
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    maneuver:
+      baseAttribute: dexterity
+      adds: null
+      value: 0
+      isFav: false
+      groupName: interaction
+      unskilledUse: 1
+    medicine:
+      baseAttribute: mind
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    meleeWeapons:
+      baseAttribute: dexterity
+      adds: null
+      value: 0
+      isFav: false
+      groupName: combat
+      unskilledUse: 1
+    missileWeapons:
+      baseAttribute: dexterity
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    persuasion:
+      baseAttribute: charisma
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    precognition:
+      baseAttribute: mind
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    profession:
+      baseAttribute: mind
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    reality:
+      baseAttribute: spirit
+      adds: 2
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    scholar:
+      baseAttribute: mind
+      adds: 1
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    science:
+      baseAttribute: mind
+      adds: 3
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    stealth:
+      baseAttribute: dexterity
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    streetwise:
+      baseAttribute: charisma
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    survival:
+      baseAttribute: mind
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    taunt:
+      baseAttribute: charisma
+      adds: 1
+      value: 0
+      isFav: false
+      groupName: interaction
+      unskilledUse: 1
+    telepathy:
+      baseAttribute: charisma
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    tracking:
+      baseAttribute: mind
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    trick:
+      baseAttribute: mind
+      adds: 1
+      value: 0
+      isFav: false
+      groupName: interaction
+      unskilledUse: 1
+    unarmedCombat:
+      baseAttribute: dexterity
+      adds: null
+      value: 0
+      isFav: false
+      groupName: combat
+      unskilledUse: 1
+    waterVehicles:
+      baseAttribute: dexterity
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    willpower:
+      baseAttribute: spirit
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+  xp:
+    unspent: 0
+    earned: 0
+  axioms:
+    magic: 14
+    social: 20
+    spirit: 18
+    tech: 20
+  details:
+    clearance: ''
+    background: >-
+      <p><img class="charimg"
+      src="systems/torgeternity/images/characters/Eccentric_Inventor.webp"
+      alt="" width="1125" height="2052"></p>
+
+      <p
+      class="moreheight">@UUID[Compendium.torgeternity.system-de-handouts.JournalEntry.DLLvnXpv7RFhRgHu.JournalEntryPage.59zUF4TrfxfdMfhs]{Archetyp
+      - Die exzentrische Erfinderin}</p>
+
+      <h3>&Uuml;berblick</h3>
+
+      <p>Du warst brillant und vielleicht ein bisschen seltsam, schon bevor die
+      Possibility Wars begannen. Nachdem du dich in die Pulp-Realit&auml;t des
+      Nil-Imperiums verwandelt hast, wurde alles m&ouml;glich.
+      Unver&auml;nderliche Gesetze der Physik sind heute nur noch Richtlinien.
+      Du treibst diese neue Freiheit an ihre Grenzen, erfindest wundersame
+      elektronische Ger&auml;te und benutzt sie dann gegen die
+      Realit&auml;tsr&auml;uber.</p>
+
+      <h3>Taktiken</h3>
+
+      <p>Dein Stromstrahl ist effektiv, aber es k&ouml;nnen ihm die Ladungen
+      ausgehen, wenn er zu oft auf zu viele Zielen abgefeuert wird. Deine
+      <em>Tricksen</em>- Interaktion ist besonders verheerend. Viele Gegner sind
+      schwach gegen <em>Tricksen</em>, und ein "Spielerentscheidung"- Ergebnis
+      k&ouml;nnte selbst st&auml;rkere Feinde eliminieren, wenn die
+      Umst&auml;nde es m&ouml;glich machen.&nbsp;</p>
+
+      <p>W&auml;hrend dein Kraftfeld einsatzbereit ist, kannst du seine Ladungen
+      zum Einstecken von Wunden verwenden. Es kann zwei Schocks absorbieren,
+      selbst wenn keine Wunde verursacht wird, aber es ist besser, diese
+      Ladungen aufzusparen. Sobald das Kraftfeld ersch&ouml;pft ist oder wenn
+      eine vorzeitige Entkopplung es deaktiviert, bist du extrem anf&auml;llig
+      f&uuml;r Schaden. Bewahre dir deshalb m&ouml;glichst eine Schicksalskarte
+      wie Willenskraft oder Tatendrang auf, um das Ankoppeln zu erleichtern,
+      falls du in die Enge ger&auml;tst.</p>
+
+      <h3>Moment der Krise</h3>
+
+      <p>Im Angesicht des Ansturms von Eindringlingen in Kairo hast du auf die
+      Wissenschaft zur&uuml;ckgegriffen, um dich zu wehren, und in einem Moment
+      unbeschreiblicher Inspiration (und Krise) bautest du ein Telefon, eine
+      Lavalampe und einen F&ouml;hn zu einem t&ouml;dlichen Energieprojektor
+      zusammen. Alternativ k&ouml;nntest du dich verwandelt haben, als du einige
+      deiner Erfindungen und Pl&auml;ne zerst&ouml;rtest, bevor sie in die
+      H&auml;nde von M&ouml;bius und seinen Horden fallen konnten.</p>
+
+      <h3>Zitat</h3>
+
+      <p>"Whoa, wer h&auml;tte gedacht, dass eine pl&ouml;tzliche
+      Polarit&auml;tsumkehr eine solche Explosion verursachen k&ouml;nnte. Ich
+      meine, au&szlig;er mir. Weil ich das so nat&uuml;rlich genau so geplant
+      habe."</p>
+
+      <h3>Beschreibung</h3>
+
+      <p>Dein Hartgummi-Laborkittel ist f&uuml;r die Arbeit gedacht, aber
+      darunter bist du immer bereit f&uuml;r eine gute Party. Deine Brille ist
+      in jeder Situation modisch. Du bist sehr intelligent und gebildet. Du bist
+      selbstbewusst, gl&uuml;cklich und schamlos seltsam.</p>
+
+      <h3>Agenda</h3>
+
+      <p>Wissen ist der einzige Weg zum wahren Sieg, und manchmal m&uuml;ssen
+      daf&uuml;r Opfer gebracht werden. Menschen zu retten und Spa&szlig; zu
+      haben steht auf deiner Priorit&auml;tenliste, aber die Wissenschaft steht
+      immer ganz oben.</p>
+
+      <h3>Namen</h3>
+
+      <p>Kapit&auml;n Kondensator, Dr. Blitz, Joy Buzzer, Professor Diode, Der
+      Funkek</p>
+
+      <h3>Vorgeschlagener Aufstieg (Optional)</h3>
+
+      <ul>
+
+      <li>(5 EP) Auffassungsgabe</li>
+
+      <li>(7 EP) Kraftfeld</li>
+
+      <li>(9 EP) Stromstrahl (10 Ladungen)</li>
+
+      <li>(3 EP) <em>Ausweichen</em> +3</li>
+
+      <li>(3 EP) <em>Energiewaffen</em> +3</li>
+
+      <li>(3 EP) <em>Realit&auml;t</em> +3</li>
+
+      </ul>
+    race: human
+  editstate: false
+  fatigue: '1'
+ownership:
+  default: 0
+  9Q0XnqFwko7hRlvL: 3
+prototypeToken:
+  flags: {}
+  name: Die exzentrische Erfinderin
+  displayName: 0
+  width: 1
+  height: 1
+  lockRotation: true
+  rotation: 0
+  actorLink: true
+  disposition: 1
+  displayBars: 40
+  bar1:
+    attribute: wounds
+  bar2:
+    attribute: shock
+  randomImg: false
+  alpha: 1
+  light:
+    alpha: 1
+    angle: 360
+    bright: 0
+    color: null
+    coloration: 1
+    dim: 0
+    luminosity: 0.5
+    saturation: 0
+    contrast: 0
+    shadows: 0
+    animation:
+      speed: 5
+      intensity: 5
+      type: null
+      reverse: false
+    darkness:
+      min: 0
+      max: 1
+    attenuation: 0.5
+  texture:
+    src: systems/torgeternity/images/characters/eccentric_inventor.Token.webp
+    tint: null
+    scaleX: 1
+    scaleY: 1
+    offsetX: 0
+    offsetY: 0
+    rotation: 0
+  sight:
+    angle: 360
+    enabled: true
+    range: 0
+    brightness: 1
+    visionMode: basic
+    attenuation: 0.1
+    saturation: 0
+    contrast: 0
+  appendNumber: false
+  prependAdjective: false
+  detectionModes: []
+_stats:
+  systemId: torgeternity
+  systemVersion: 3.7.0
+  coreVersion: '11.315'
+  createdTime: 1694866736301
+  modifiedTime: 1711900177327
+  lastModifiedBy: CtisFurQNe9h7ABb
+_key: '!actors!LS1z3a6GAJT83doA'
+

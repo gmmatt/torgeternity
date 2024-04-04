@@ -1,10 +1,14 @@
 {
   "CARD": {
     "discard": "Défausser",
-    "display": "Montrer cette carte aux joueurs",
-    "TypeCosm": "Cosm",
-    "TypeDestiny": "Destin",
-    "TypeDrama": "Action"
+    "display": "Montrer cette carte aux joueurs"
+  },
+  "TYPES": {
+    "Card": {
+      "destiny": "Destin",
+      "drama": "Action",
+      "cosm": "Cosm"
+    }
   },
   "torgeternity": {
     "attackTypes": {
@@ -46,6 +50,7 @@
       "check": {
         "cantUseSkillRecquired": " ne peut pas être utilisé sans au moins un rang dans la compétence requise",
         "cantUseUntrained": " ne peut pas être utilisé sans être appris (au moins un rang).",
+        "cantUseRealityWhileDisconnected": "Vous ne pouvez pas utiliser la compétence Réalité lorsque vous êtes déconnecté.",
         "interactionNeedTarget": "Impossible d’effectuer une attaque d'interaction sans cible. Ciblez un token puis réessayez.",
         "modifier": {
           "aimedShot": "tir visé (+4)",
@@ -74,6 +79,7 @@
         "result": {
           "actionTotal": "Total de l'action",
           "attackMissed": "Attaque ratée",
+          "diceTotal": "Résultat des dés",
           "damage": "Dommages",
           "failure": "Échec",
           "goodSuccess": "Succès supérieur",
@@ -212,6 +218,14 @@
       "itemDeletion": {
         "content": "Êtes-vous sûr de vouloir supprimer ceci ? Cela sera effacé de votre fiche de manière permanente.",
         "title": "Confirmer la suppression"
+      },
+      "realityCheck": {
+        "title": "Reconnection?",
+        "content": "Essayez-vous de vous re-connecter?"
+      },
+      "buttons": {
+        "execute": "Confirmer",
+        "ok": "OK"
       }
     },
     "dnTypes": {
@@ -268,7 +282,7 @@
     "gear": {
       "ammo": "Munitions",
       "ap": "PA",
-      "armor": "Armor",
+      "armor": "Armure",
       "attackWith": "Attaque avec",
       "bonus": "Bonus",
       "chatNote": "Note",
@@ -477,6 +491,7 @@
       "HeaderDetailsHint": "Configure les détails de base de la scène et les permissions qui contrôlent sa visibilité.",
       "HeaderGridHint": "Configure les dimensions de la grille utilisée pour mesurer le mouvement des tokens de la scène.",
       "HeaderVisionHint": "Configure les paramètres de vision, d'éclairage et de brouillard de guerre de la scène.",
+      "main": "Scène standard",
       "reality": "Réalité",
       "realityHint": "Configure la réalité de la zone de la scène."
     },
@@ -492,10 +507,6 @@
       "autoDamages": {
         "hint": "Si coché, les chocs et les blessures seront automatiquement appliqués si le joueur a un token cible valide.",
         "name": "Application des dommages automatiques"
-      },
-      "useColorBlindnessColors": {
-        "hint": "If activated, the game uses daltonistism friendly red and green colors.",
-        "name": "Use daltonism (colorblind)- friendly colors"
       },
       "useRenderedTorgDice": {
         "hint": "If activated, the Dice in Chat-Cards will be Torgish. If disabled, they're standard-foundry-grey.",
@@ -605,8 +616,8 @@
       "explosionCancelled": "La première explosion de dé est annulée, mais vous n'êtes plus Défavorisé. ",
       "explosives": "Explosifs",
       "fatigue": "Fatigue",
-      "favDis": "Favorisé & Défavorisés'annulent mutuellement.",
-      "favored": "Favorisée",
+      "favDis": "Favorisé & Défavorisé s'annulent mutuellement.",
+      "favored": "Favorisé",
       "firearms": "Armes à feu",
       "freePoss": " Le GM offre une possibilité!",
       "gear": "Équipement",
@@ -666,7 +677,7 @@
       "psionicPower": "Pouvoir psionique",
       "psionicPowers": "Pouvoirs psioniques",
       "race": "Race",
-      "range": "Range",
+      "range": "Portée",
       "return": "Retour",
       "roll": "Lancer",
       "run": "Course",
@@ -674,7 +685,7 @@
       "secondaryCosm": "Cosm secondaire",
       "shield": "Bouclier",
       "shields": "Boucliers",
-      "shock": "Points de chocs",
+      "shock": "Chocs",
       "shortBurst": "Courte (+2)",
       "size": "Taille",
       "skill": "Compétence",
@@ -687,14 +698,14 @@
       "soakDamageTooltip": "Jet de Réalité pour annuler les dommages, donne la réduction.",
       "soakNull": "Vous n'annulez aucun dommage.",
       "soakRoll": "Jet de Réalité/Annulation dommages",
-      "soakValue": " blessure(s) annulée(s), et tout le Shock.",
+      "soakValue": " blessure(s) annulée(s), et tout le Choc.",
       "social": "Social",
       "source": "Source",
       "specialabilities": "Capacités spéciales",
       "specialAbility": "Capacité spéciale",
       "spell": "Sortilège",
       "spells": "Sortilèges",
-      "spirit": "Spirituel",
+      "spirit": "Spirit.",
       "stats": "Caracs",
       "statusEffects": "Statut",
       "stormknight": "Chevalier des Tempêtes",
@@ -704,7 +715,7 @@
       "targetDefense": "Défense de la cible",
       "targetOptions": "Cibles",
       "targets": "Cibles",
-      "tech": "Technologie",
+      "tech": "Tech",
       "tempEffects": "Effets temporaires",
       "threat": "Menace",
       "titleDescription": "Titre/Description",
@@ -726,7 +737,8 @@
       "weapons": "Armes",
       "wounds": "Blessures",
       "xp": "XP",
-      "xpOnlyGM": "Seul le MJ peut remplir"
+      "xpOnlyGM": "Seul le MJ peut remplir",
+      "toolTipClickToAdd": "cliquer pour ajouter/oter la compétence dans la liste du dessus"
     },
     "sizes": {
       "large": "grande",
@@ -837,7 +849,8 @@
       "possibilities": "Possibilités",
       "shock": "Chocs",
       "speedModifier": "Modificateur de vitesse",
-      "wounds": "Blessures"
+      "wounds": "Blessures",
+      "axioms": "Axiomes"
     },
     "statusEffects": {
       "aiming": "Visée",
@@ -896,6 +909,43 @@
     "yesNo": {
       "false": "Non",
       "true": "Oui"
+    },
+    "macros": {
+      "commonMacroNoTokensSelected": "Aucun token n'a été sélectionné. La macro ne peut pas être exécutée.",
+      "commonMacroNoCharacter": "Je ne trouve pas de personnage pour continuer.",
+      "commonMacroNoValue": "Aucune valeur n'a été saisie. La macro ne peut pas être exécutée.",
+      "commonMacroOnlyByGM": "Cette macro ne peut être exécutée que par les maîtres du jeu !",
+      "commonMacroNoChatMessageFound": "Aucun message de chat n'a pu être intercepté, la suite du traitement sera interrompue.",
+      "fatigueMacroDealtDamage": "Les personnages suivants ont reçu du Choc:",
+      "fatigueMacroCharKO": "assommé !",
+      "reviveMacroChatHeadline": "Récupération après choc !",
+      "reviveMacroWindowLabel1": "Quelle quantité de choc faut-il récupérer ?",
+      "reviveMacroError1": "Rien n'a été renseigné dans le champ quantité et la case n'a pas été cochée. Que dois-je faire ? Annuler.",
+      "fatigueMacroCharAlreadyKO": "est déjà KO ! Pas de choc supplémentaire.",
+      "reviveMacroFirst": "Les personnages suivants se remettent du choc: ",
+      "reviveMacroAlreadyFull": "va bien et n'a pas perdu de choc !",
+      "reviveMacroCharRevived": "est entièrement restauré.",
+      "reviveMacroCharPartyRevived": "a été soigné du montant suivant: ",
+      "reviveMacroCharDeKOed": "Le statut KO a été levé pour ",
+      "reviveMacroWholeRevive": "Récupérer tous les chocs ?",
+      "clearStatusEffectsHeadline": "Les statuts ont été supprimées pour les personnages suivants :",
+      "clearStatusEffectsNothingFound": "Aucun état n'a été trouvé pour les tokens marqués.",
+      "clearStatusEffectsliftedFrom": "De",
+      "clearStatusEffectsliftedStatusOf": "le statut suivant a été levé:",
+      "bonusDieMacroTitle": "Macro pour dés bonus",
+      "bonusDieMacroContent": "Combien de dés bonus faut-il lancer ?",
+      "bonusDieMacroErrorIntegerValue": "La saisie n'était pas un entier. Veuillez saisir un entier.",
+      "bonusDieMacroResult1": "Vous avez lancé les dés:",
+      "bonusDieMacroResult2": "avec un résultat de",
+      "bonusDieMacroResult3": "Le token avec le nom",
+      "bonusDieMacroResult4": "reçoit des dégâts de",
+      "bonusDieMacroResultNoDamage": "ne subit aucun dégât",
+      "bonusDieMacroNoTokenTargeted": "Aucun token n'a été ciblé.",
+      "bonusDieMacroNoDiscon": "Il n'y a pas de statut \"Déconnecté\" sur ce personnage.",
+      "reconnectMacroZoneModifier": "Modificateur de zone",
+      "reconnectMacroZoneModifierNotDetectedTitle": "Aucun modificateur de zone",
+      "reconnectMacroZoneModifierNotDetected": "Un modificateur de zone n'a pas pu être détecté car la scène active n'a aucune zone configurée. Modifiez le modificateur dans le résultat.",
+      "reconnectMacroStatusLiftet": "Statut non lié levé après un test de réalité réussi."
     }
   }
 }

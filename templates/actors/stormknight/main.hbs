@@ -1,98 +1,61 @@
 <form class="actor-sheet {{cssClass}}" autocomplete="off">
+  <h3 class="actor-type"><span>{{localize "torgeternity.sheetLabels.stormknight"}}</span></h3>
 
-    <h3 class="actor-type"><span>{{localize "torgeternity.sheetLabels.stormknight"}}</span></h3>
+  <!--**************** tabs******************--->
+  <nav class="sheet-tabs tabs" data-group="primary">
+    <a class="item" data-tab="stats">{{localize "torgeternity.sheetLabels.stats"}}</a>
+    <a class="item" data-tab="perks">{{localize "torgeternity.sheetLabels.perks"}}</a>
+    <a class="item" data-tab="gear">{{localize "torgeternity.sheetLabels.gear"}}</a>
+    <a class="item" data-tab="powers">{{localize "torgeternity.sheetLabels.powers"}}</a>
+    <a class="item" data-tab="effects">{{localize "torgeternity.sheetLabels.effects"}}</a>
+    <a class="item" data-tab="background">{{localize "torgeternity.sheetLabels.notes"}}</a>
+  </nav>
 
-    <!--**************** tabs******************--->
-    <nav class="sheet-tabs tabs" data-group="primary">
-        <a class="item" data-tab="stats">{{localize "torgeternity.sheetLabels.stats"}}</a>
-        <a class="item" data-tab="perks">{{localize "torgeternity.sheetLabels.perks"}}</a>
-        <a class="item" data-tab="gear">{{localize "torgeternity.sheetLabels.gear"}}</a>
-        <a class="item" data-tab="powers">{{localize "torgeternity.sheetLabels.powers"}}</a>
-        <a class="item" data-tab="effects">{{localize "torgeternity.sheetLabels.effects"}}</a>
-        <a class="item" data-tab="background">{{localize "torgeternity.sheetLabels.notes"}}</a>
-    </nav>
+  <section class="sheet-body">
+    <!--**************** stat-tab******************--->
+    <div class="tab stats" data-group="primary" data-tab="stats">
+      <div class="sheet-header block">{{> "systems/torgeternity/templates/actors/stormknight/header.hbs"}}</div>
 
-    
-    <section class="sheet-body">
-        <!--**************** stat-tab******************--->
-        <div class="tab stats" data-group="primary" data-tab="stats">
+      <div class="attributes block">{{> "systems/torgeternity/templates/actors/stormknight/attributes.hbs"}}</div>
 
-            <div class="sheet-header block">
-                {{> "systems/torgeternity/templates/actors/stormknight/header.hbs"}}
-            </div>
-            
-            <div class="attributes block ">
-                {{> "systems/torgeternity/templates/actors/stormknight/attributes.hbs"}}
-            </div>
-            
-            <div class="others block">
-                {{> "systems/torgeternity/templates/actors/stormknight/others.hbs"}}
-            </div>
-            
-            <div class="skills block">
-                {{> "systems/torgeternity/templates/actors/stormknight/skills.hbs"}}
-            </div>
-            
-            <div class="char_image">
-                <img src="{{actor.img}}" class="profile-img" data-edit="img" title="{{actor.name}}" />
-            </div>
-            
-            <div class="weapons-list block">
-                {{> "systems/torgeternity/templates/actors/stormknight/weapons-list.hbs"}}
-            </div>
-            
-            <div class="defense block">
-                {{> "systems/torgeternity/templates/actors/stormknight/defense.hbs"}}
-            </div>
-            
-            <div class="xp block">
-                {{> "systems/torgeternity/templates/actors/stormknight/xp.hbs"}}
-            </div>
-            
-            <div class="perks-list block">
-                {{> "systems/torgeternity/templates/actors/stormknight/perks-list.hbs"}}
-            </div>
-            
-        </div>
+      <div class="others block">{{> "systems/torgeternity/templates/actors/stormknight/others.hbs"}}</div>
 
+      <div class="skills block">{{> "systems/torgeternity/templates/actors/stormknight/skills.hbs"}}</div>
 
-        <div class="tab perks" data-group="primary" data-tab="perks">
-            <div class="perks-details block">
-                {{> "systems/torgeternity/templates/actors/stormknight/perks-details.hbs"}}
-            </div>
-        </div>
-        
+      <div class="char_image">
+        <img src="{{actor.img}}" class="profile-img" data-edit="img" title="{{actor.name}}" />
+      </div>
 
-        <div class="tab gear" data-group="primary" data-tab="gear">
-            <div class="gear block">
-                {{> "systems/torgeternity/templates/actors/stormknight/gear.hbs"}}
-            </div>
+      <div class="weapons-list block">{{> "systems/torgeternity/templates/actors/stormknight/weapons-list.hbs"}}</div>
 
-        </div>
-        
+      <div class="defense block">{{> "systems/torgeternity/templates/actors/stormknight/defense.hbs"}}</div>
 
-        <div class="tab powers" data-group="primary" data-tab="powers">
-            <div class="powers block">
-                {{> "systems/torgeternity/templates/actors/stormknight/powers.hbs"}}
-            </div>
-        </div>
-        
-        <div class="tab effects" data-group="primary" data-tab="effects">
-            <div class="effects block">
-                {{> "systems/torgeternity/templates/parts/active-effects.hbs"}}
-            </div>
-        </div>
-        
-        <div class="tab background" data-group="primary" data-tab="background">
+      <div class="xp block">{{> "systems/torgeternity/templates/actors/stormknight/xp.hbs"}}</div>
 
-            <h1 class="list-section-heading" style="color:white">{{localize
-                "torgeternity.sheetLabels.backgroundAndNotes"}}</h1>
-            {{editor enrichedBackground target="system.details.background" button=true owner=owner
-            editable=editable}}
+      <div class="perks-list block">{{> "systems/torgeternity/templates/actors/stormknight/perks-list.hbs"}}</div>
+    </div>
 
-        </div>
-        
-    </section>
+    <div class="tab perks" data-group="primary" data-tab="perks">
+      <div class="perks-details block">{{> "systems/torgeternity/templates/actors/stormknight/perks-details.hbs"}}</div>
+    </div>
 
+    <div class="tab gear" data-group="primary" data-tab="gear">
+      <div class="gear block">{{> "systems/torgeternity/templates/actors/stormknight/gear.hbs"}}</div>
+    </div>
 
+    <div class="tab powers" data-group="primary" data-tab="powers">
+      <div class="powers block">{{> "systems/torgeternity/templates/actors/stormknight/powers.hbs"}}</div>
+    </div>
+
+    <div class="tab effects" data-group="primary" data-tab="effects">
+      <div class="effects block">{{> "systems/torgeternity/templates/parts/active-effects.hbs"}}</div>
+    </div>
+
+    <div class="tab background" data-group="primary" data-tab="background">
+      <h1 class="list-section-heading" style="color: white">
+        {{localize "torgeternity.sheetLabels.backgroundAndNotes"}}
+      </h1>
+      {{editor enrichedBackground target="system.details.background" button=true editable=editable}}
+    </div>
+  </section>
 </form>

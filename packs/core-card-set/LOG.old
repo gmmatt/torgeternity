@@ -1,8 +1,0 @@
-2023/10/15-08:20:09.253 14ec Recovering log #101
-2023/10/15-08:20:09.312 14ec Delete type=0 #101
-2023/10/15-08:20:09.313 14ec Delete type=3 #100
-2023/10/15-08:27:31.256 6440 Level-0 table #105: started
-2023/10/15-08:27:31.256 6440 Level-0 table #105: 0 bytes OK
-2023/10/15-08:27:31.281 6440 Delete type=0 #103
-2023/10/15-08:27:31.381 6440 Manual compaction at level-0 from '!cards!9SgkBX6SsRmbY75i' @ 72057594037927935 : 1 .. '!cards.cards!wC9PKdHJuhDjCwyV.zHzn8MqbEo0nIqrZ' @ 0 : 0; will stop at (end)
-2023/10/15-08:27:31.455 6440 Manual compaction at level-1 from '!cards!9SgkBX6SsRmbY75i' @ 72057594037927935 : 1 .. '!cards.cards!wC9PKdHJuhDjCwyV.zHzn8MqbEo0nIqrZ' @ 0 : 0; will stop at (end)

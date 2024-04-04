@@ -1,0 +1,20 @@
+_id: IvQQycIVv7OGCYb1
+name: Énergie des possibilités
+content: >-
+  <p>L'énergie de possibilité représente la capacité des Chevaliers desTempêtes
+  à "repousser" une réalité. </p>
+
+  <p> </p>
+
+  <p>La plupart des joueurs commencent une session avec trois (3) possibilités.
+  Les personnages qui ont l'atout Prodige commencent avec quatre.</p>
+folder: null
+sort: 0
+permission:
+  kz1RJu8vrAPmTUwN: 3
+flags:
+  core:
+    sourceId: JournalEntry.IEYuGSkHmfm5X1ud
+pages: []
+_key: '!journal!IvQQycIVv7OGCYb1'
+

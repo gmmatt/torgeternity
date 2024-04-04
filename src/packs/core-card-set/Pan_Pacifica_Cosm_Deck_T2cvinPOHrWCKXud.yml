@@ -1,0 +1,285 @@
+_id: T2cvinPOHrWCKXud
+name: Pan Pacifica Cosm Deck
+type: deck
+description: ''
+img: systems/torgeternity/images/cards/pan-pacifica-back.webp
+cards:
+  - _id: 3olSO8sFyEFDZrvq
+    name: Vengeance is Mine
+    description: ''
+    type: cosm
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Vengeance is Mine
+        text: ''
+        img: systems/torgeternity/images/cards/cosm/pan-pacifica/01.webp
+    face: 0
+    drawn: false
+    origin: Fc2aShTOMGQgJKDY
+    rotation: 0
+    sort: 0
+    flags: {}
+    system: {}
+    value: null
+    width: null
+    height: null
+    _key: '!cards.cards!T2cvinPOHrWCKXud.3olSO8sFyEFDZrvq'
+    cards: []
+  - _id: vUqyCz9LJDzzqBzf
+    name: Bloodbath
+    description: ''
+    type: cosm
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Bloodbath
+        text: ''
+        img: systems/torgeternity/images/cards/cosm/pan-pacifica/02.webp
+    face: 0
+    drawn: false
+    origin: Fc2aShTOMGQgJKDY
+    rotation: 0
+    sort: 1
+    flags: {}
+    system: {}
+    value: null
+    width: null
+    height: null
+    _key: '!cards.cards!T2cvinPOHrWCKXud.vUqyCz9LJDzzqBzf'
+    cards: []
+  - _id: B4ZIJQShlpAe7j0V
+    name: Feud!
+    description: ''
+    type: cosm
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Feud!
+        text: ''
+        img: systems/torgeternity/images/cards/cosm/pan-pacifica/03.webp
+    face: 0
+    drawn: false
+    origin: Fc2aShTOMGQgJKDY
+    rotation: 0
+    sort: 2
+    flags: {}
+    value: null
+    system: {}
+    width: null
+    height: null
+    _key: '!cards.cards!T2cvinPOHrWCKXud.B4ZIJQShlpAe7j0V'
+    cards: []
+  - _id: MuhTvZ7HKaglybC4
+    name: Mutation
+    description: ''
+    type: cosm
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Mutation
+        text: ''
+        img: systems/torgeternity/images/cards/cosm/pan-pacifica/04.webp
+    face: 0
+    drawn: false
+    origin: Fc2aShTOMGQgJKDY
+    rotation: 0
+    sort: 3
+    flags: {}
+    system: {}
+    value: null
+    width: null
+    height: null
+    _key: '!cards.cards!T2cvinPOHrWCKXud.MuhTvZ7HKaglybC4'
+    cards: []
+  - _id: KjS6Exs0r1wNBJpo
+    name: Outbreak
+    description: ''
+    type: cosm
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Outbreak
+        text: ''
+        img: systems/torgeternity/images/cards/cosm/pan-pacifica/05.webp
+    face: 0
+    drawn: false
+    origin: Fc2aShTOMGQgJKDY
+    rotation: 0
+    sort: 4
+    flags: {}
+    system: {}
+    value: null
+    width: null
+    height: null
+    _key: '!cards.cards!T2cvinPOHrWCKXud.KjS6Exs0r1wNBJpo'
+    cards: []
+  - _id: jO2y2RWjWGNZ9PM5
+    name: Fists of Fury
+    description: ''
+    type: cosm
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Fists of Fury
+        text: ''
+        img: systems/torgeternity/images/cards/cosm/pan-pacifica/06.webp
+    face: 0
+    drawn: false
+    origin: Fc2aShTOMGQgJKDY
+    rotation: 0
+    sort: 5
+    flags: {}
+    system: {}
+    value: null
+    width: null
+    height: null
+    _key: '!cards.cards!T2cvinPOHrWCKXud.jO2y2RWjWGNZ9PM5'
+    cards: []
+  - _id: fNKYsrS4VvdFS2G6
+    name: Is That a Bite?
+    description: ''
+    type: cosm
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Is That a Bite?
+        text: ''
+        img: systems/torgeternity/images/cards/cosm/pan-pacifica/07.webp
+    face: 0
+    drawn: false
+    origin: Fc2aShTOMGQgJKDY
+    rotation: 0
+    sort: 6
+    flags: {}
+    system: {}
+    value: null
+    width: null
+    height: null
+    _key: '!cards.cards!T2cvinPOHrWCKXud.fNKYsrS4VvdFS2G6'
+    cards: []
+  - _id: lsTytXScl2kz411M
+    name: You Don't Look so Good
+    description: ''
+    type: cosm
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: You Don't Look so Good
+        text: ''
+        img: systems/torgeternity/images/cards/cosm/pan-pacifica/08.webp
+    face: 0
+    drawn: false
+    origin: Fc2aShTOMGQgJKDY
+    rotation: 0
+    sort: 7
+    flags: {}
+    value: null
+    system: {}
+    width: null
+    height: null
+    _key: '!cards.cards!T2cvinPOHrWCKXud.lsTytXScl2kz411M'
+    cards: []
+  - _id: rWGFHmZq3PR6ghn1
+    name: Sold Out
+    description: ''
+    type: cosm
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Sold Out
+        text: ''
+        img: systems/torgeternity/images/cards/cosm/pan-pacifica/09.webp
+    face: 0
+    drawn: false
+    origin: Fc2aShTOMGQgJKDY
+    rotation: 0
+    sort: 8
+    flags: {}
+    system: {}
+    value: null
+    width: null
+    height: null
+    _key: '!cards.cards!T2cvinPOHrWCKXud.rWGFHmZq3PR6ghn1'
+    cards: []
+  - _id: syIR8XrE7fadAaE3
+    name: Hardboiled
+    description: ''
+    type: cosm
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Hardboiled
+        text: ''
+        img: systems/torgeternity/images/cards/cosm/pan-pacifica/10.webp
+    face: 0
+    drawn: false
+    origin: Fc2aShTOMGQgJKDY
+    rotation: 0
+    sort: 9
+    flags: {}
+    system: {}
+    value: null
+    width: null
+    height: null
+    _key: '!cards.cards!T2cvinPOHrWCKXud.syIR8XrE7fadAaE3'
+    cards: []
+rotation: 0
+displayCount: false
+folder: null
+sort: 0
+flags:
+  exportSource:
+    world: torgv2p2
+    system: torgeternity
+    coreVersion: '9.235'
+    systemVersion: 2.0.5
+  core:
+    sourceId: Cards.4b8BekWDWpSWF961
+  torgeternity:
+    usage: panPacifica
+system: {}
+ownership:
+  default: 0
+  juTas93IuPVP8p5D: 3
+width: null
+height: null
+_stats:
+  systemId: null
+  systemVersion: null
+  coreVersion: null
+  createdTime: null
+  modifiedTime: null
+  lastModifiedBy: null
+_key: '!cards!T2cvinPOHrWCKXud'
+

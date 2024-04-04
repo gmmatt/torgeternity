@@ -2,30 +2,30 @@
   "name": "torgeternity",
   "version": "1.0.0",
   "description": "torg eternity system for foundry vtt",
-  "main": "torgeternity.js",
-  "dependencies": {
-    "gulp": "^4.0.2",
-    "gulp-autoprefixer": "^7.0.1",
-    "gulp-scss": "^1.4.0",
-    "gulp-zip": "^5.0.2"
-  },
+  "main": "system.json",
+  "license": "MIT",
+  "author": "GM_Matt, Orome, Rwan, Durak, Algor",
+  "dependencies": {},
   "devDependencies": {
-    "gulp": "^4.0.2",
-    "gulp-autoprefixer": "^7.0.1",
-    "gulp-sass": "^4.1.1",
-    "gulp-zip": "^5.0.2"
+    "@foundryvtt/foundryvtt-cli": "^1.0.0-rc.4",
+    "@babel/eslint-parser": "^7.19.1",
+    "@babel/plugin-syntax-import-assertions": "^7.20.0",
+    "eslint": "^8.34.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-config-prettier": "^8.6.0",
+    "eslint-plugin-jsdoc": "^40.0.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "prettier": "^2.8.4",
+    "sass": "^1.58.3"
   },
   "scripts": {
-    "compile": "gulp css",
-    "watch": "gulp",
-    "zip": "gulp zip"
+    "build": "node ./tools/pullYMLtoLDB.mjs",
+    "extract": "node ./tools/pushLDBtoYML.mjs"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/gmmatt/torgeternity.git"
   },
-  "author": "GM_Mat, Orome,Rwan",
-  "license": "ISC",
   "bugs": {
     "url": "https://github.com/gmmatt/torgeternity/issues"
   },

@@ -1,10 +1,14 @@
 {
   "CARD": {
     "discard": "Discard",
-    "display": "Show this card to players",
-    "TypeCosm": "Cosm",
-    "TypeDestiny": "Destiny",
-    "TypeDrama": "Drama"
+    "display": "Show this card to players"
+  },
+  "TYPES": {
+    "Card": {
+      "destiny": "Destiny",
+      "drama": "Drama",
+      "cosm": "Cosm"
+    }
   },
   "torgeternity": {
     "attackTypes": {
@@ -46,6 +50,7 @@
       "check": {
         "cantUseSkillRecquired": " cannot be used without at least 1 add in the required skill.",
         "cantUseUntrained": " cannot be used unless it is learned (at least 1 skill add).",
+        "cantUseRealityWhileDisconnected": "You cannot use the reality skill as long as you are disconnected",
         "interactionNeedTarget": "Cannot attempt interaction attack test without a target. Select a target and try again.",
         "modifier": {
           "aimedShot": "Aimed Shot (+4)",
@@ -213,6 +218,14 @@
       "itemDeletion": {
         "content": "Are you sure you want to delete this? It will be permanently removed from the sheet.",
         "title": "Confirm Deletion"
+      },
+      "realityCheck": {
+        "title": "Reconnecting?",
+        "content": "Are you trying to reconnect?"
+      },
+      "buttons": {
+        "execute": "Execute",
+        "ok": "OK"
       }
     },
     "dnTypes": {
@@ -478,6 +491,7 @@
       "HeaderDetailsHint": "Configure Details",
       "HeaderGridHint": "Configure Grid Dimensions.",
       "HeaderVisionHint": "Configure Vision and Lighting Options.",
+      "main": "Main scene",
       "reality": "Reality",
       "realityHint": "Configure Reality"
     },
@@ -723,7 +737,8 @@
       "weapons": "Weapons",
       "wounds": "Wounds",
       "xp": "XP",
-      "xpOnlyGM": "only GM can fill"
+      "xpOnlyGM": "only GM can fill",
+      "toolTipClickToAdd": "click to add/remove the skill to the access list"
     },
     "sizes": {
       "large": "Large",
@@ -897,11 +912,40 @@
     },
     "macros": {
       "commonMacroNoTokensSelected": "There were no tokens selected. The macro cannot compute.",
+      "commonMacroNoCharacter": "I cannot find a character to continue with.",
       "commonMacroNoValue": "No value entered. The macro cannot compute.",
       "commonMacroOnlyByGM": "This Macro is only executionable by GMs!",
+      "commonMacroNoChatMessageFound": "No chatmessage-card found. Abort computing.",
+      "fatigueMacroDealtDamage": "Dealt damage to the following characters:",
+      "fatigueMacroCharKO": " is therefore K.O.!",
+      "fatigueMacroCharAlreadyKO": " is already K.O.! There is no more shock to add.",
+      "reviveMacroChatHeadline": "Shock recovery!",
+      "reviveMacroWindowLabel1": "How much shock should be recovered?",
+      "reviveMacroError1": "There was no input in the amount-field and also the checkbox wasn't checked. What should I do? Aborting.",
+      "reviveMacroFirst": "The following characters are revived from shock: ",
+      "reviveMacroAlreadyFull": " is already recovered and has no shock.",
+      "reviveMacroCharRevived": " is fully revived.",
+      "reviveMacroCharPartyRevived": " was healed by the following amount: ",
+      "reviveMacroCharDeKOed": "Liftet K.O. status from ",
+      "reviveMacroWholeRevive": "Revive all shock?",
+      "clearStatusEffectsHeadline": "Lifting status effects from the following characters:",
+      "clearStatusEffectsNothingFound": "No status effects found for marked characters.",
+      "clearStatusEffectsliftetFrom": "From",
+      "clearStatusEffectsliftetStatusOf": "the status of",
       "bonusDieMacroTitle": "Macro for Bonus-Dice",
       "bonusDieMacroContent": "How many bonus-di(c)e do you want to throw?",
-      "bonusDieMacroErrorIntegerValue": "The entered value in the dialog was not a number or a float / decimal. Please enter an integer."
+      "bonusDieMacroErrorIntegerValue": "The entered value in the dialog was not a number or a float / decimal. Please enter an integer.",
+      "bonusDieMacroResult1": "You have rolled",
+      "bonusDieMacroResult2": "with a result of",
+      "bonusDieMacroResult3": "The token with the name",
+      "bonusDieMacroResult4": "receives a damage of",
+      "bonusDieMacroResultNoDamage": "receives no Damage at all",
+      "bonusDieMacroNoTokenTargeted": "There were no tokens targeted.",
+      "bonusDieMacroNoDiscon": "There is no disconnected status on this character.",
+      "reconnectMacroZoneModifier": "Zone modifier",
+      "reconnectMacroZoneModifierNotDetectedTitle": "No zone modifier",
+      "reconnectMacroZoneModifierNotDetected": "Couldn't resolve a zone modifier, because the active scene has no cosm configured. Change the result's modifier by hand.",
+      "reconnectMacroStatusLiftet": "Disconnection-Status liftet after a successful Reconnect-Roll."
     }
   }
 }

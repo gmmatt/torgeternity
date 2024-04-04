@@ -1,0 +1,192 @@
+_id: 13SHkU9JCei37ioP
+name: Dommages
+content: >-
+  <p>Lorsqu'une attaque touche une cible, les dégâts de l'arme sont comparés à
+  la résistance de la cible. L'armure est déjà incluse dans la résistance, donc
+  les joueurs n'ont pas besoin de la considérer séparément.</p>
+
+  <ul>
+
+  <li>Si les dégâts sont inférieurs de 5 ou plus à la résistance, l'attaque n'a
+  aucun effet.</li>
+
+  <li>Si les dégâts sont inférieurs à la résistance, l'attaque inflige 1 Choc.
+  Un personnage qui subit un choc supérieur à la limite indiquée est mis KO
+  (Knocked Out) et ne joue plus à ses tours.</li>
+
+  <li>Si les dégâts sont au moins égaux à la Résistance, la cible subit 2
+  Chocs.</li>
+
+  <li>Si les dégâts sont supérieurs de 5 à la Résistance, la cible subit 2 Chocs
+  et 1 Blessure (voir ci-dessous).</li>
+
+  <li>Chaque fois que les dégâts sont supérieurs de +5, la cible subit une autre
+  Blessure et 2 autre Chocs.</li>
+
+  </ul>
+
+  <p> </p>
+
+  <blockquote>
+
+  <p><strong>Remarque sur le système Foundry</strong> : lorsque vous effectuez
+  une attaque avancée, les blessures et les chocs sont automatiquement calculés
+  pour vous. Pour plus d'informations sur les attaques avancées, voir 
+  @UUID[Compendium.torgeternity.basic-rules-fr.JournalEntry.J0Yt8ueE280AzxmS]{attaque}.</p>
+
+  </blockquote>
+
+  <p> </p>
+
+  <h2>Blessures</h2>
+
+  <p>Chaque Blessure est une pénalité permanente de -1 à tous les tests.
+  Lorsqu'un chevalier des tempêtes subit plus de 3 blessures, il est KO et doit
+  effectuer un test de 
+  @UUID[Compendium.torgeternity.basic-rules-fr.JournalEntry.MBnzTaIm6snTRS4j]{défaite}. Les
+  méchants comme Gospog ou les edeinos normaux sont mis KO par une simple
+  Blessure.</p>
+
+  <p> </p>
+
+  <blockquote>
+
+  <p><strong>Note du système Foundry</strong> : vous pouvez enregistrer les
+  blessures de votre personnage sur votre feuille de personnage ou en faisant un
+  clic droit sur le jeton de votre personnage et en modifiant le nombre
+  approprié. Une fois enregistrée, votre pénalité de blessure est prise en
+  compte dans tous les jets futurs.</p>
+
+  </blockquote>
+
+  <p> </p>
+
+  <h2>TABLE DE RÉSULTATS DES DOMMAGES</h2>
+
+  <table style="width:77.5796%;height:223px" border="1">
+
+  <tbody>
+
+  <tr style="height:54px">
+
+  <td style="text-align:center;width:45.3963%;height:54px">
+
+  <h3>dommages par rapport à résistance</h3>
+
+  </td>
+
+  <td style="text-align:center;width:53.828%;height:54px">
+
+  <h3>dommages</h3>
+
+  </td>
+
+  </tr>
+
+  <tr style="height:16px">
+
+  <td style="text-align:center;width:45.3963%;height:16px">-6 ou plus</td>
+
+  <td style="width:53.828%;height:16px">Pas d'effets</td>
+
+  </tr>
+
+  <tr style="height:16px">
+
+  <td style="text-align:center;width:45.3963%;height:16px">-5 à -1</td>
+
+  <td style="width:53.828%;height:16px">1 Choc</td>
+
+  </tr>
+
+  <tr style="height:16px">
+
+  <td style="text-align:center;width:45.3963%;height:16px">0-4</td>
+
+  <td style="width:53.828%;height:16px">2 Chocs</td>
+
+  </tr>
+
+  <tr style="height:16px">
+
+  <td style="text-align:center;width:45.3963%;height:16px">5-9</td>
+
+  <td style="width:53.828%;height:16px">1 Blessure, 2 Chocs</td>
+
+  </tr>
+
+  <tr style="height:16px">
+
+  <td style="text-align:center;width:45.3963%;height:16px">10-14</td>
+
+  <td style="width:53.828%;height:16px">2 Blessures, 4 Chocs</td>
+
+  </tr>
+
+  <tr style="height:16px">
+
+  <td style="text-align:center;width:45.3963%;height:16px">15-19</td>
+
+  <td style="width:53.828%;height:16px">3 Blessures, 6 Chocs</td>
+
+  </tr>
+
+  <tr style="height:16px">
+
+  <td style="text-align:center;width:45.3963%;height:16px">20=24</td>
+
+  <td style="width:53.828%;height:16px">4 Blessures, 8 Chocs</td>
+
+  </tr>
+
+  </tbody>
+
+  </table>
+
+  <p>...et ainsi de suite</p>
+
+  <p> </p>
+
+  <h2><span style="font-size:15.75px">Dés bonus</span></h2>
+
+  <p><span style="font-size:15.75px"> </span></p>
+
+  <p><span style="font-size:15.75px">Une bonne réussite ou plus sur une attaque,
+  la loi de la sauvagerie ou les capacités individuelles d'un personnage peuvent
+  rapporter des dés bonus (DB) pour les dégâts. Commencez par les dégâts normaux
+  de l'attaque, puis cliquez sur le bouton DB en bas du message de discussion
+  qui affiche l'attaque réussie. Cela lancera un seul DB et ajoutera le résultat
+  à la valeur totale des dégâts. Comparez cette valeur de dégâts à la
+  résistance. Lancer un symbole ∞ ajoute +5 aux dégâts ET lance un autre
+  DB!</span></p>
+
+  <p><span style="font-size:15.75px"> </span></p>
+
+  <p><span style="font-size:15.75px">Si votre attaque a généré plus d'un DB,
+  continuez à cliquer sur le bouton DB en bas de chaque nouveau message du chat
+  jusqu'à ce que le nombre correct de DB ait été lancé.</span></p>
+
+  <p><span style="font-size:15.75px"> </span></p>
+
+  <h2><span style="font-size:15.75px">Annulation des dommages</span></h2>
+
+  <p><span style="font-size:1.125em;font-family:var(--font-primary)"><span
+  style="font-size:15.75px">Lorsqu'un chevalier de la tempête subit une blessure
+  pour la première fois, introduisez le concept de d'annulation des dommages,
+  l'autre utilisation majeure des possibilités. Le personnage change de réalité,
+  choisissant une version des événements où le résultat de l'attaque est plus
+  favorable. Dépensez 1 possibilité et faites un test normal de ND 10 contre la
+  compétence de réalité du personnage. En cas de réussite, les dommages de
+  l'attaque sont réduits de 1 Blessure, et TOUT le Choc est ignoré. Un succès
+  supérieur réduit les dommages de 2 Blessures. Un succès spectaculaire élimine
+  tous les dommages, quel que soit le nombre de blessures qu'ils auraient pu
+  causer. </span></span></p>
+folder: null
+sort: 0
+permission:
+  kz1RJu8vrAPmTUwN: 3
+flags:
+  core:
+    sourceId: JournalEntry.ZUjwVA7Mh1wjoKu5
+pages: []
+_key: '!journal!13SHkU9JCei37ioP'

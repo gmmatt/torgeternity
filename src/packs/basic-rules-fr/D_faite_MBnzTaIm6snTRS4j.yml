@@ -1,0 +1,19 @@
+_id: MBnzTaIm6snTRS4j
+name: Défaite
+content: >-
+  <p>Lorsqu’un personnage subit des Blessures égales à son maximum, il doit
+  immédiatement faire un test de Force ou d’Esprit (celui qui est le plus
+  faible) ND 10. Si le test échoue, il meurt. Il a immédiatement droit à une
+  dernière Action dramatique avant de quitter son enveloppe mortelle. Il peut
+  ignorer ses malus de blessure pour ce dernier effort héroïque. Si le test
+  réussit, il est mis KO.</p>
+folder: null
+sort: 0
+permission:
+  kz1RJu8vrAPmTUwN: 3
+flags:
+  core:
+    sourceId: JournalEntry.337gtgZ4kJr8Z100
+pages: []
+_key: '!journal!MBnzTaIm6snTRS4j'
+

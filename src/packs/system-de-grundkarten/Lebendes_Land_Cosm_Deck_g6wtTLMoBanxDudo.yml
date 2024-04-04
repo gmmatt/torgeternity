@@ -1,0 +1,291 @@
+_id: g6wtTLMoBanxDudo
+name: Lebendes Land Cosm Deck
+type: deck
+description: ''
+img: >-
+  systems/torgeternity/images/deutsch/cards/Cosmkarten/Das%20lebende%20Land/LZZR%C3%BCckseite.webp
+cards:
+  - _id: VSR1Dod8Xl2Q6lwy
+    name: Dino-Angriff!
+    description: ''
+    type: cosm
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Dino-Angriff!
+        text: ''
+        img: >-
+          systems/torgeternity/images/deutsch/cards/Cosmkarten/Das%20lebende%20Land/01.webp
+    face: 0
+    drawn: false
+    origin: g6wtTLMoBanxDudo
+    rotation: 0
+    sort: 0
+    flags: {}
+    system: {}
+    value: null
+    width: null
+    height: null
+    _key: '!cards.cards!g6wtTLMoBanxDudo.VSR1Dod8Xl2Q6lwy'
+    cards: []
+  - _id: Bz3KJawja9BVkwle
+    name: Gesetz des Verfalls
+    description: ''
+    type: cosm
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Gesetz des Verfalls
+        text: ''
+        img: >-
+          systems/torgeternity/images/deutsch/cards/Cosmkarten/Das%20lebende%20Land/02.webp
+    face: 0
+    drawn: false
+    origin: g6wtTLMoBanxDudo
+    rotation: 0
+    sort: 0
+    flags: {}
+    system: {}
+    value: null
+    width: null
+    height: null
+    _key: '!cards.cards!g6wtTLMoBanxDudo.Bz3KJawja9BVkwle'
+    cards: []
+  - _id: NhxwrBX7a06zuC7W
+    name: Die beste Verteidigung
+    description: ''
+    type: cosm
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Die beste Verteidigung
+        text: ''
+        img: >-
+          systems/torgeternity/images/deutsch/cards/Cosmkarten/Das%20lebende%20Land/03.webp
+    face: 0
+    drawn: false
+    origin: g6wtTLMoBanxDudo
+    rotation: 0
+    sort: 0
+    flags: {}
+    system: {}
+    value: null
+    width: null
+    height: null
+    _key: '!cards.cards!g6wtTLMoBanxDudo.NhxwrBX7a06zuC7W'
+    cards: []
+  - _id: d8DueTWeGyLMOvq2
+    name: Überleben des Tüchtigsten
+    description: ''
+    type: cosm
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Überleben des Tüchtigsten
+        text: ''
+        img: >-
+          systems/torgeternity/images/deutsch/cards/Cosmkarten/Das%20lebende%20Land/04.webp
+    face: 0
+    drawn: false
+    origin: g6wtTLMoBanxDudo
+    rotation: 0
+    sort: 0
+    flags: {}
+    system: {}
+    value: null
+    width: null
+    height: null
+    _key: '!cards.cards!g6wtTLMoBanxDudo.d8DueTWeGyLMOvq2'
+    cards: []
+  - _id: xEZt51yN6mRJ13FD
+    name: Gefahren des Landes
+    description: ''
+    type: cosm
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Gefahren des Landes
+        text: ''
+        img: >-
+          systems/torgeternity/images/deutsch/cards/Cosmkarten/Das%20lebende%20Land/05.webp
+    face: 0
+    drawn: false
+    origin: g6wtTLMoBanxDudo
+    rotation: 0
+    sort: 0
+    flags: {}
+    system: {}
+    value: null
+    width: null
+    height: null
+    _key: '!cards.cards!g6wtTLMoBanxDudo.xEZt51yN6mRJ13FD'
+    cards: []
+  - _id: ImHOQjUO0nYAZAPc
+    name: Der tiefe Nebel
+    description: ''
+    type: cosm
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Der tiefe Nebel
+        text: ''
+        img: >-
+          systems/torgeternity/images/deutsch/cards/Cosmkarten/Das%20lebende%20Land/06.webp
+    face: 0
+    drawn: false
+    origin: g6wtTLMoBanxDudo
+    rotation: 0
+    sort: 0
+    flags: {}
+    system: {}
+    value: null
+    width: null
+    height: null
+    _key: '!cards.cards!g6wtTLMoBanxDudo.ImHOQjUO0nYAZAPc'
+    cards: []
+  - _id: rVb185ZRvGlyArW3
+    name: Gesetz des Lebens
+    description: ''
+    type: cosm
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Gesetz des Lebens
+        text: ''
+        img: >-
+          systems/torgeternity/images/deutsch/cards/Cosmkarten/Das%20lebende%20Land/07.webp
+    face: 0
+    drawn: false
+    origin: g6wtTLMoBanxDudo
+    rotation: 0
+    sort: 0
+    flags: {}
+    system: {}
+    value: null
+    width: null
+    height: null
+    _key: '!cards.cards!g6wtTLMoBanxDudo.rVb185ZRvGlyArW3'
+    cards: []
+  - _id: YqJxnV96EWa2S16u
+    name: Urinstinkte
+    description: ''
+    type: cosm
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Urinstinkte
+        text: ''
+        img: >-
+          systems/torgeternity/images/deutsch/cards/Cosmkarten/Das%20lebende%20Land/08.webp
+    face: 0
+    drawn: false
+    origin: g6wtTLMoBanxDudo
+    rotation: 0
+    sort: 0
+    flags: {}
+    system: {}
+    value: null
+    width: null
+    height: null
+    _key: '!cards.cards!g6wtTLMoBanxDudo.YqJxnV96EWa2S16u'
+    cards: []
+  - _id: NyQTEfLCIwqqucUP
+    name: Verlorene Schätze
+    description: ''
+    type: cosm
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Verlorene Schätze
+        text: ''
+        img: >-
+          systems/torgeternity/images/deutsch/cards/Cosmkarten/Das%20lebende%20Land/09.webp
+    face: 0
+    drawn: false
+    origin: g6wtTLMoBanxDudo
+    rotation: 0
+    sort: 0
+    flags: {}
+    system: {}
+    value: null
+    width: null
+    height: null
+    _key: '!cards.cards!g6wtTLMoBanxDudo.NyQTEfLCIwqqucUP'
+    cards: []
+  - _id: TvoCQn1loNasodoW
+    name: Gesetz des Verfalls
+    description: ''
+    type: cosm
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Gesetz des Verfalls
+        text: ''
+        img: >-
+          systems/torgeternity/images/deutsch/cards/Cosmkarten/Das%20lebende%20Land/10.webp
+    face: 0
+    drawn: false
+    origin: g6wtTLMoBanxDudo
+    rotation: 0
+    sort: 0
+    flags: {}
+    system: {}
+    value: null
+    width: null
+    height: null
+    _key: '!cards.cards!g6wtTLMoBanxDudo.TvoCQn1loNasodoW'
+    cards: []
+rotation: 0
+displayCount: false
+folder: null
+sort: 0
+flags:
+  core:
+    sourceId: Cards.xDKnUQ4micom96hn
+  torgeternity:
+    usage: livingLand
+system: {}
+ownership:
+  default: 0
+  1pSzpSNrhKGYYcib: 3
+width: null
+height: null
+_stats:
+  systemId: torgeternity
+  systemVersion: 2.5.1
+  coreVersion: '10.278'
+  createdTime: null
+  modifiedTime: 1660972843937
+  lastModifiedBy: pLf3kUpJuGZH0Ep4
+_key: '!cards!g6wtTLMoBanxDudo'
+

@@ -14,32 +14,34 @@
   <section class="sheet-body">
     <div class="tab stats" data-group="primary" data-tab="stats">
       <div class="sheet-content">
-        <div class="asside">
-          <p class="item-data-label">{{localize "torgeternity.gear.cosm"}}</p>
-          <select name="system.cosm" class="input-box">
+        <aside class="asside armor">
+          <label style="grid-column: 1/3" for="system.cosm" class="item-data-label">{{localize "torgeternity.gear.cosm"}}</label>
+          <select style="grid-column: 1/3" name="system.cosm" class="input-box">
             {{#select item.system.cosm}} {{#each config.cosmTypes as |name type|}}
             <option value="{{localize name}}">{{localize name}}</option>
             {{/each}} {{/select}}
           </select>
-          <p class="item-data-label">{{localize "torgeternity.gear.techlevel"}}</p>
+          <label for="system.techlevel" class="item-data-label">{{localize "torgeternity.gear.techlevel"}}</label>
           <input name="system.techlevel" type="number" value="{{item.system.techlevel}}" class="input-box" />
-          <p class="item-data-label">{{localize "torgeternity.gear.price"}}/{{localize "torgeternity.gear.value"}}</p>
+          <label for="system.price" style="grid-column: 1/3;" class="item-data-label">{{localize "torgeternity.gear.price"}}/{{localize "torgeternity.gear.value"}}</label>
           <input name="system.price" type="text" value="{{item.system.price}}" class="input-box-small" />
           <input name="system.value" type="number" value="{{item.system.value}}" class="input-box-small" />
-          <p class="item-data-label">{{localize "torgeternity.gear.minStrength"}}</p>
+          <label for="system.minStrength" class="item-data-label">{{localize "torgeternity.gear.minStrength"}}</label>
           <input name="system.minStrength" type="number" value="{{item.system.minStrength}}" class="input-box-small" />
-          <p class="item-data-label">{{localize "torgeternity.gear.maxDex"}}</p>
+          <label for="system.maxDex" class="item-data-label">{{localize "torgeternity.gear.maxDex"}}</label>
           <input name="system.maxDex" type="number" value="{{item.system.maxDex}}" class="input-box" />
-          <p class="item-data-label">{{localize "torgeternity.gear.bonus"}}</p>
+          <label for="system.bonus" class="item-data-label">{{localize "torgeternity.gear.bonus"}}</label>
           <input name="system.bonus" type="number" value="{{item.system.bonus}}" class="input-box" />
-        </div>
+          <label class="item-data-label" for="system.fatigue">{{localize "torgeternity.sheetLabels.fatigue"}}</label>
+          <input name="system.fatigue" type="number" value="{{item.system.fatigue}}" class="input-box" />
+        </aside>
         <div class="main-content">
           <p class="item-data-label">
             {{localize "torgeternity.gear.notes"}}&nbsp;
             <input name="system.notes" type="text" value="{{item.system.notes}}" class="input-box" />
           </p>
           <div name="system.description" class="item-description-textarea">
-            {{editor description target="system.description" button=true owner=owner editable=editable}}
+            {{editor description target="system.description" button=true editable=editable}}
           </div>
         </div>
       </div>

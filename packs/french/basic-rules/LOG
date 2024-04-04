@@ -1,8 +1,0 @@
-2023/10/15-08:27:45.392 14ec Recovering log #104
-2023/10/15-08:27:45.503 14ec Delete type=0 #104
-2023/10/15-08:27:45.503 14ec Delete type=3 #102
-2023/10/15-08:28:14.661 6440 Level-0 table #109: started
-2023/10/15-08:28:14.661 6440 Level-0 table #109: 0 bytes OK
-2023/10/15-08:28:14.686 6440 Delete type=0 #107
-2023/10/15-08:28:14.686 6440 Manual compaction at level-0 from '!journal!13SHkU9JCei37ioP' @ 72057594037927935 : 1 .. '!journal!xvfgaYujZOdiScLS' @ 0 : 0; will stop at (end)
-2023/10/15-08:28:14.686 6440 Manual compaction at level-1 from '!journal!13SHkU9JCei37ioP' @ 72057594037927935 : 1 .. '!journal!xvfgaYujZOdiScLS' @ 0 : 0; will stop at (end)

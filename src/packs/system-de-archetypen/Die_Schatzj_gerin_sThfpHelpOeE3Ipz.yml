@@ -1,0 +1,1149 @@
+_id: sThfpHelpOeE3Ipz
+name: Die Schatzjägerin
+type: stormknight
+img: systems/torgeternity/images/characters/Relic_Raider.Avatar.webp
+items:
+  - _id: vB16mDqzwGbLhKwc
+    name: Enterhaken
+    type: gear
+    img: systems/torgeternity/images/icons/gear-icon.webp
+    effects: []
+    folder: YrLpjzkzDZxqWzUw
+    sort: 100000
+    flags:
+      core:
+        sourceId: Item.vK8vzkKB1kMvWNsB
+    system:
+      cosm: Zentralerde
+      description: <p>Zum Schwingen und Klettern.</p>
+      techlevel: 10
+      price: '0'
+      value: 0
+    ownership:
+      default: 0
+      9Q0XnqFwko7hRlvL: 3
+    _stats:
+      systemId: torgeternity
+      systemVersion: 3.1.1
+      coreVersion: '11.308'
+      createdTime: null
+      modifiedTime: 1694869720989
+      lastModifiedBy: CtisFurQNe9h7ABb
+    _key: '!actors.items!sThfpHelpOeE3Ipz.vB16mDqzwGbLhKwc'
+  - _id: 2DL9H0cKLvt6BP6t
+    name: Smartphone
+    type: gear
+    img: systems/torgeternity/images/icons/gear-icon.webp
+    effects: []
+    folder: YrLpjzkzDZxqWzUw
+    sort: 400000
+    flags:
+      core:
+        sourceId: Item.ELZyQ5vEHcMPe2tX
+    system:
+      cosm: Zentralerde
+      description: >-
+        <p>Extras wie GPS und eine Taschenlampe sind im Lieferumfang enthalten.
+        Die meisten Handys m&uuml;ssen sich in ausreichender N&auml;he zu einem
+        Mobilfunkturm befinden, um ein Signal zu erhalten, sodass ein Telefon in
+        Gebieten mit niedriger Tech-Stufe m&ouml;glicherweise keinen Empfang
+        hat. Realit&auml;tsst&uuml;rme wirken sich ebenfalls sehr negativ auf
+        den Empfang aus.</p>
+      techlevel: 23
+      price: '700'
+      value: 14
+    ownership:
+      default: 0
+      9Q0XnqFwko7hRlvL: 3
+    _stats:
+      systemId: torgeternity
+      systemVersion: 3.1.1
+      coreVersion: '11.308'
+      createdTime: null
+      modifiedTime: 1694869734492
+      lastModifiedBy: CtisFurQNe9h7ABb
+    _key: '!actors.items!sThfpHelpOeE3Ipz.2DL9H0cKLvt6BP6t'
+  - _id: 36LCPKaz6JIqD1zn
+    name: Extra-Magazine
+    type: gear
+    img: systems/torgeternity/images/icons/gear-icon.webp
+    effects: []
+    folder: YrLpjzkzDZxqWzUw
+    sort: 150000
+    flags:
+      core:
+        sourceId: Item.9VjiNmOA2TB62Xej
+    system:
+      cosm: (Keins)
+      description: <p>F&uuml;nf zus&auml;tzliche Magazine.</p>
+      techlevel: 22
+      price: '0'
+      value: 0
+    ownership:
+      default: 0
+      9Q0XnqFwko7hRlvL: 3
+    _stats:
+      systemId: torgeternity
+      systemVersion: 3.1.1
+      coreVersion: '11.308'
+      createdTime: null
+      modifiedTime: 1694869727172
+      lastModifiedBy: CtisFurQNe9h7ABb
+    _key: '!actors.items!sThfpHelpOeE3Ipz.36LCPKaz6JIqD1zn'
+  - _id: PlwsU5FNqM93PzIQ
+    name: Hartnäckig
+    type: perk
+    img: systems/torgeternity/images/icons/reality-icon.webp
+    effects: []
+    folder: null
+    sort: 0
+    flags:
+      core:
+        sourceId: Compendium.te001-core-rulebook.grw-de-vorzuverb.Item.Nb8xOGBjmWt9E7vK
+    system:
+      category: reality
+      cosm: Zentralerde
+      prerequisites: Geist 8+
+      timestaken: 1
+      description: >-
+        <p>Nichts kann den Helden lange am Boden halten. Seine&nbsp;Proben beim
+        Wegstecken von Schaden sind Beg&uuml;nstigt.</p>
+      pulpPowers:
+        enhancementNumber: 0
+        enhancement01:
+          title: ''
+          description: ''
+          taken: false
+        enhancement02:
+          title: ''
+          description: ''
+          taken: false
+        enhancement03:
+          title: ''
+          description: ''
+          taken: false
+        enhancement04:
+          title: ''
+          description: ''
+          taken: false
+        enhancement05:
+          title: ''
+          description: ''
+          taken: false
+        enhancement06:
+          title: ''
+          description: ''
+          taken: false
+        enhancement07:
+          title: ''
+          description: ''
+          taken: false
+        enhancement08:
+          title: ''
+          description: ''
+          taken: false
+        enhancement09:
+          title: ''
+          description: ''
+          taken: false
+        enhancement10:
+          title: ''
+          description: ''
+          taken: false
+        enhancement11:
+          title: ''
+          description: ''
+          taken: false
+        enhancement12:
+          title: ''
+          description: ''
+          taken: false
+        enhancement13:
+          title: ''
+          description: ''
+          taken: false
+        enhancement14:
+          title: ''
+          description: ''
+          taken: false
+        enhancement15:
+          title: ''
+          description: ''
+          taken: false
+        limitationNumber: 0
+        limitation01: ''
+        limitation02: ''
+        limitation03: ''
+        limitation04: ''
+        limitation05: ''
+        limitation06: ''
+        limitation07: ''
+        limitation08: ''
+        limitation09: ''
+        limitation10: ''
+    ownership:
+      default: 0
+      9Q0XnqFwko7hRlvL: 3
+      CtisFurQNe9h7ABb: 3
+    _stats:
+      systemId: torgeternity
+      systemVersion: 3.1.1
+      coreVersion: '11.308'
+      createdTime: 1694861180309
+      modifiedTime: 1694868647105
+      lastModifiedBy: CtisFurQNe9h7ABb
+    _key: '!actors.items!sThfpHelpOeE3Ipz.PlwsU5FNqM93PzIQ'
+  - _id: 7HbIyllEQKWpARe3
+    name: Unbeugsam
+    type: perk
+    img: systems/torgeternity/images/icons/reality-icon.webp
+    effects: []
+    folder: null
+    sort: 0
+    flags:
+      core:
+        sourceId: Compendium.te001-core-rulebook.grw-de-vorzuverb.Item.hmgsI717UyWYslVA
+    system:
+      category: prowess
+      cosm: (Keins)
+      prerequisites: ''
+      timestaken: 1
+      description: >-
+        <p>Wenn der Charakter eine Aktive Verteidigung unternimmt, z&auml;hlt
+        die Probe als Beg&uuml;nstigt.</p>
+      pulpPowers:
+        enhancementNumber: 0
+        enhancement01:
+          title: ''
+          description: ''
+          taken: false
+        enhancement02:
+          title: ''
+          description: ''
+          taken: false
+        enhancement03:
+          title: ''
+          description: ''
+          taken: false
+        enhancement04:
+          title: ''
+          description: ''
+          taken: false
+        enhancement05:
+          title: ''
+          description: ''
+          taken: false
+        enhancement06:
+          title: ''
+          description: ''
+          taken: false
+        enhancement07:
+          title: ''
+          description: ''
+          taken: false
+        enhancement08:
+          title: ''
+          description: ''
+          taken: false
+        enhancement09:
+          title: ''
+          description: ''
+          taken: false
+        enhancement10:
+          title: ''
+          description: ''
+          taken: false
+        enhancement11:
+          title: ''
+          description: ''
+          taken: false
+        enhancement12:
+          title: ''
+          description: ''
+          taken: false
+        enhancement13:
+          title: ''
+          description: ''
+          taken: false
+        enhancement14:
+          title: ''
+          description: ''
+          taken: false
+        enhancement15:
+          title: ''
+          description: ''
+          taken: false
+        limitationNumber: 0
+        limitation01: ''
+        limitation02: ''
+        limitation03: ''
+        limitation04: ''
+        limitation05: ''
+        limitation06: ''
+        limitation07: ''
+        limitation08: ''
+        limitation09: ''
+        limitation10: ''
+    ownership:
+      default: 0
+      9Q0XnqFwko7hRlvL: 3
+      CtisFurQNe9h7ABb: 3
+    _stats:
+      systemId: torgeternity
+      systemVersion: 3.1.1
+      coreVersion: '11.308'
+      createdTime: 1694861188083
+      modifiedTime: 1694868643969
+      lastModifiedBy: CtisFurQNe9h7ABb
+    _key: '!actors.items!sThfpHelpOeE3Ipz.7HbIyllEQKWpARe3'
+  - _id: Mt7Lc6QAGGXYT2hK
+    name: Machete
+    type: meleeweapon
+    img: systems/torgeternity/images/icons/axe-icon.webp
+    effects:
+      - _id: sFPcVAMnyhyPeTzH
+        changes:
+          - key: system.skills.survival.isFav
+            mode: 5
+            value: '1'
+            priority: null
+        disabled: false
+        duration:
+          startTime: null
+          seconds: null
+          combat: null
+          rounds: null
+          turns: null
+          startRound: null
+          startTurn: null
+        icon: icons/svg/aura.svg
+        origin: Compendium.te001-core-rulebook.grw-de-ausruestung.b6nZOz177J3nWcLF
+        transfer: true
+        flags: {}
+        tint: null
+        name: Begünstigung Überleben
+        description: ''
+        statuses: []
+        _key: >-
+          !actors.items.effects!sThfpHelpOeE3Ipz.Mt7Lc6QAGGXYT2hK.sFPcVAMnyhyPeTzH
+    folder: null
+    sort: 0
+    flags:
+      core:
+        sourceId: >-
+          Compendium.te001-core-rulebook.grw-de-ausruestung.Item.b6nZOz177J3nWcLF
+    system:
+      cosm: Zentralerde
+      description: >-
+        <p>Diese mittelgro&szlig;e, einschneidige Klinge ist bestens f&uuml;r
+        das Entfernen dichten Gestr&uuml;pps ausbalanciert und eignet sich auch
+        hervorragend zum Zerteilen von Fleisch. Moderne Macheten haben in den
+        Griff eingebautes &Uuml;berlebenswerkzeug, wodurch &Uuml;berlebenskunst-
+        Proben als Beg&uuml;nstigt z&auml;hlen.</p>
+      techlevel: 22
+      price: '40'
+      value: 8
+      attackWith: meleeWeapons
+      damageType: strengthPlus
+      damage: 2
+      ap: 0
+      bonus: 2
+      notes: Überlebenskunst-Proben werden Begünstigt
+      chatNote: ''
+    ownership:
+      default: 0
+      9Q0XnqFwko7hRlvL: 3
+      CtisFurQNe9h7ABb: 3
+    _stats:
+      systemId: torgeternity
+      systemVersion: 3.1.1
+      coreVersion: '11.308'
+      createdTime: 1694861213124
+      modifiedTime: 1694861213124
+      lastModifiedBy: CtisFurQNe9h7ABb
+    _key: '!actors.items!sThfpHelpOeE3Ipz.Mt7Lc6QAGGXYT2hK'
+  - _id: yo0jeFjW3zbtMlmk
+    name: Glock 9mm
+    type: firearm
+    img: systems/torgeternity/images/icons/firearm-icon.webp
+    effects: []
+    folder: null
+    sort: 0
+    flags:
+      core:
+        sourceId: >-
+          Compendium.te001-core-rulebook.grw-de-ausruestung.Item.uS5bsDS4zQkN7NTj
+    system:
+      cosm: Zentralerde
+      description: >-
+        <p>@UUID[Compendium.te001-core-rulebook.grw-de-grw.Qlx6yGF0Mmo6Xzrv.JournalEntryPage.7GGUUHzuYIqGPXDO#karabiner:]{Pistole}</p>
+
+        <p>Eine r&uuml;cksto&szlig;ladende 9 mm Halbautomatik- Pistole, die
+        f&uuml;r ihr gro&szlig;es, doppelt gestapeltes Munitionsmagazin bekannt
+        ist.</p>
+      techlevel: 22
+      price: '250'
+      value: 12
+      attackWith: fireCombat
+      damageType: ''
+      damage: 13
+      ap: 0
+      ammo:
+        max: 15
+        value: 15
+      range: 10/25/40
+      notes: Pistole
+      chatNote: ''
+    ownership:
+      default: 0
+      9Q0XnqFwko7hRlvL: 3
+      CtisFurQNe9h7ABb: 3
+    _stats:
+      systemId: torgeternity
+      systemVersion: 3.1.1
+      coreVersion: '11.308'
+      createdTime: 1694861223835
+      modifiedTime: 1694861223835
+      lastModifiedBy: CtisFurQNe9h7ABb
+    _key: '!actors.items!sThfpHelpOeE3Ipz.yo0jeFjW3zbtMlmk'
+  - _id: pkS48dk1kJwUySzc
+    name: Glock 9mm
+    type: firearm
+    img: systems/torgeternity/images/icons/firearm-icon.webp
+    effects: []
+    folder: null
+    sort: 0
+    flags:
+      core:
+        sourceId: >-
+          Compendium.te001-core-rulebook.grw-de-ausruestung.Item.uS5bsDS4zQkN7NTj
+    system:
+      cosm: Zentralerde
+      description: >-
+        <p>@UUID[Compendium.te001-core-rulebook.grw-de-grw.Qlx6yGF0Mmo6Xzrv.JournalEntryPage.7GGUUHzuYIqGPXDO#karabiner:]{Pistole}</p>
+
+        <p>Eine r&uuml;cksto&szlig;ladende 9 mm Halbautomatik- Pistole, die
+        f&uuml;r ihr gro&szlig;es, doppelt gestapeltes Munitionsmagazin bekannt
+        ist.</p>
+      techlevel: 22
+      price: '250'
+      value: 12
+      attackWith: fireCombat
+      damageType: ''
+      damage: 13
+      ap: 0
+      ammo:
+        max: 15
+        value: 15
+      range: 10/25/40
+      notes: Pistole
+      chatNote: ''
+    ownership:
+      default: 0
+      9Q0XnqFwko7hRlvL: 3
+      CtisFurQNe9h7ABb: 3
+    _stats:
+      systemId: torgeternity
+      systemVersion: 3.1.1
+      coreVersion: '11.308'
+      createdTime: 1694861228288
+      modifiedTime: 1694861228288
+      lastModifiedBy: CtisFurQNe9h7ABb
+    _key: '!actors.items!sThfpHelpOeE3Ipz.pkS48dk1kJwUySzc'
+  - name: Nylonseil, 30 Meter
+    type: gear
+    img: systems/torgeternity/images/icons/gear-icon.webp
+    effects: []
+    folder: null
+    sort: 275000
+    flags:
+      core:
+        sourceId: Item.DFbZ3PM0PEsBi2Mq
+    _id: fbOTTyFZwUvZ0eo9
+    system:
+      cosm: Zentralerde
+      description: ''
+      techlevel: 22
+      price: '25'
+      value: 7
+    ownership:
+      default: 0
+      9Q0XnqFwko7hRlvL: 3
+      CtisFurQNe9h7ABb: 3
+    _stats:
+      systemId: torgeternity
+      systemVersion: 3.1.1
+      coreVersion: '11.308'
+      createdTime: 1694861249282
+      modifiedTime: 1694861343063
+      lastModifiedBy: CtisFurQNe9h7ABb
+    _key: '!actors.items!sThfpHelpOeE3Ipz.fbOTTyFZwUvZ0eo9'
+  - name: Fackel
+    type: gear
+    img: systems/torgeternity/images/icons/gear-icon.webp
+    effects: []
+    folder: null
+    sort: 200000
+    flags:
+      core:
+        sourceId: Item.EVp5rwRYSGcx7uFV
+    _id: fCqNcPSt8Vg04p3x
+    system:
+      cosm: Das Lebende Land
+      description: ''
+      techlevel: 2
+      price: '5'
+      value: 4
+    ownership:
+      default: 0
+      9Q0XnqFwko7hRlvL: 3
+      CtisFurQNe9h7ABb: 3
+    _stats:
+      systemId: torgeternity
+      systemVersion: 3.1.1
+      coreVersion: '11.308'
+      createdTime: 1694861276548
+      modifiedTime: 1694861333968
+      lastModifiedBy: CtisFurQNe9h7ABb
+    _key: '!actors.items!sThfpHelpOeE3Ipz.fCqNcPSt8Vg04p3x'
+  - name: Kletterausrüstung
+    type: gear
+    img: systems/torgeternity/images/icons/gear-icon.webp
+    effects: []
+    folder: null
+    sort: 250000
+    flags:
+      core:
+        sourceId: Item.dkcmq8YzJ1NKxRvv
+    _id: VhD9TjE4HRc86Dgj
+    system:
+      cosm: Zentralerde
+      description: ''
+      techlevel: 23
+      price: '100'
+      value: 10
+    ownership:
+      default: 0
+      9Q0XnqFwko7hRlvL: 3
+      CtisFurQNe9h7ABb: 3
+    _stats:
+      systemId: torgeternity
+      systemVersion: 3.1.1
+      coreVersion: '11.308'
+      createdTime: 1694861282331
+      modifiedTime: 1694861340735
+      lastModifiedBy: CtisFurQNe9h7ABb
+    _key: '!actors.items!sThfpHelpOeE3Ipz.VhD9TjE4HRc86Dgj'
+  - name: Rucksack
+    type: gear
+    img: systems/torgeternity/images/icons/gear-icon.webp
+    effects: []
+    folder: null
+    sort: 287500
+    flags:
+      core:
+        sourceId: Item.9OFC7IM8K9EMljbZ
+    _id: uIerRFa2G8HaDvCL
+    system:
+      cosm: Aysle
+      description: ''
+      techlevel: 8
+      price: '100'
+      value: 10
+    ownership:
+      default: 0
+      9Q0XnqFwko7hRlvL: 3
+      CtisFurQNe9h7ABb: 3
+    _stats:
+      systemId: torgeternity
+      systemVersion: 3.1.1
+      coreVersion: '11.308'
+      createdTime: 1694861287979
+      modifiedTime: 1694861345511
+      lastModifiedBy: CtisFurQNe9h7ABb
+    _key: '!actors.items!sThfpHelpOeE3Ipz.uIerRFa2G8HaDvCL'
+  - _id: dTA20on8ymXQO4js
+    name: Schalldämper
+    type: gear
+    img: systems/torgeternity/images/icons/gear-icon.webp
+    effects: []
+    folder: null
+    sort: 900000
+    flags:
+      core:
+        sourceId: Item.iEYWjxoR1snKtXUi
+    system:
+      cosm: Nil-Imperium
+      description: >-
+        <p>Ein Schalld&auml;mpfer ist eine Vorrichtung am Lauf einer Waffe, die
+        den L&auml;rmpegel beim Abfeuern unterdr&uuml;ckt. Dies verringert den
+        Schadenswert der Waffe um 2, reduziert aber den Ger&auml;uschpegel der
+        meisten Waffen so stark, dass ihr Abfeuern nicht automatisch die
+        Position des Sch&uuml;tzen offenbart. Schallged&auml;mpfte Waffen
+        k&ouml;nnen nur bis zur mittleren
+        @UUID[Compendium.te001-core-rulebook.grw-de-grw.Qlx6yGF0Mmo6Xzrv.JournalEntryPage.41rZYYhaMC2T260D#reichweitenmalusse]{Reichweite}
+        abgefeuert werden.</p>
+      techlevel: 21
+      price: '60'
+      value: 9
+    ownership:
+      default: 0
+      9Q0XnqFwko7hRlvL: 3
+      CtisFurQNe9h7ABb: 3
+    _stats:
+      systemId: torgeternity
+      systemVersion: 3.1.1
+      coreVersion: '11.308'
+      createdTime: 1694861305363
+      modifiedTime: 1694861333968
+      lastModifiedBy: CtisFurQNe9h7ABb
+    _key: '!actors.items!sThfpHelpOeE3Ipz.dTA20on8ymXQO4js'
+  - _id: zPmSTPA4NrsRGeWN
+    name: Lederjacke
+    type: armor
+    img: systems/torgeternity/images/icons/armor-icon.webp
+    effects: []
+    folder: null
+    sort: 23000000
+    flags:
+      core:
+        sourceId: >-
+          Compendium.te001-core-rulebook.grw-de-ausruestung.Item.ibQvaehrqx24DxvU
+    system:
+      cosm: Zentralerde
+      description: >-
+        <p>@UUID[Compendium.te001-core-rulebook.grw-de-grw.Qlx6yGF0Mmo6Xzrv.JournalEntryPage.7GGUUHzuYIqGPXDO#ganzkorper/torso:]{Torso}</p>
+
+        <p>Schwarz und stylisch!</p>
+      price: '100'
+      techlevel: 19
+      value: 10
+      bonus: 1
+      equipped: true
+      equippedClass: item-equipped
+      maxDex: 12
+      minStrength: null
+      notes: Torso
+      fatigue: null
+    ownership:
+      default: 0
+      9Q0XnqFwko7hRlvL: 3
+      CtisFurQNe9h7ABb: 3
+    _stats:
+      systemId: torgeternity
+      systemVersion: 3.7.0
+      coreVersion: '11.315'
+      createdTime: 1711562366193
+      modifiedTime: 1711706181562
+      lastModifiedBy: CtisFurQNe9h7ABb
+    _key: '!actors.items!sThfpHelpOeE3Ipz.zPmSTPA4NrsRGeWN'
+effects:
+  - _id: uelyEowJpJCeEOCW
+    changes:
+      - key: system.skills.survival.isFav
+        mode: 5
+        value: '1'
+        priority: null
+    disabled: false
+    duration:
+      startTime: 0
+      seconds: null
+      combat: null
+      rounds: null
+      turns: null
+      startRound: null
+      startTurn: null
+    icon: icons/svg/aura.svg
+    origin: >-
+      Compendium.torgeternity.system-de-archetypen.Actor.sThfpHelpOeE3Ipz.Item.Mt7Lc6QAGGXYT2hK
+    transfer: false
+    flags: {}
+    tint: null
+    name: Begünstigung Überleben
+    description: ''
+    statuses: []
+    _key: '!actors.effects!sThfpHelpOeE3Ipz.uelyEowJpJCeEOCW'
+folder: null
+sort: 0
+flags:
+  core:
+    sourceId: Compendium.torgeternity.archetypes.tbqGzMeQeCA3n1Mt
+system:
+  shock:
+    max: 8
+    value: 0
+  wounds:
+    max: 3
+    value: 0
+  attributes:
+    charisma: 6
+    dexterity: 10
+    mind: 9
+    spirit: 8
+    strength: 7
+  other:
+    move: 10
+    run: 30
+    toughness: 8
+    armor: 1
+    cosm: coreEarth
+    possibilities: 3
+    posibilities: 3
+  skills:
+    airVehicles:
+      baseAttribute: dexterity
+      adds: null
+      value: '-'
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    alteration:
+      baseAttribute: mind
+      adds: null
+      value: '-'
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    apportation:
+      baseAttribute: spirit
+      adds: null
+      value: '-'
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    beastRiding:
+      baseAttribute: dexterity
+      adds: null
+      value: 10
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    computers:
+      baseAttribute: mind
+      adds: null
+      value: 9
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    conjuration:
+      baseAttribute: spirit
+      adds: null
+      value: '-'
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    divination:
+      baseAttribute: mind
+      adds: null
+      value: '-'
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    dodge:
+      baseAttribute: dexterity
+      adds: 2
+      value: 12
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    energyWeapons:
+      baseAttribute: dexterity
+      adds: null
+      value: 10
+      isFav: false
+      groupName: combat
+      unskilledUse: 1
+    evidenceAnalysis:
+      baseAttribute: mind
+      adds: 1
+      value: 10
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    faith:
+      baseAttribute: spirit
+      adds: null
+      value: 8
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    find:
+      baseAttribute: mind
+      adds: 2
+      value: 11
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    fireCombat:
+      baseAttribute: dexterity
+      adds: 2
+      value: 12
+      isFav: false
+      groupName: combat
+      unskilledUse: 1
+    firstAid:
+      baseAttribute: mind
+      adds: 1
+      value: 10
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    heavyWeapons:
+      baseAttribute: dexterity
+      adds: null
+      value: 10
+      isFav: false
+      groupName: combat
+      unskilledUse: 1
+    intimidation:
+      baseAttribute: spirit
+      adds: null
+      value: 8
+      isFav: false
+      groupName: interaction
+      unskilledUse: 1
+    kinesis:
+      baseAttribute: spirit
+      adds: null
+      value: '-'
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    landVehicles:
+      baseAttribute: dexterity
+      adds: null
+      value: 10
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    language:
+      baseAttribute: mind
+      adds: null
+      value: '-'
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    lockpicking:
+      baseAttribute: dexterity
+      adds: null
+      value: '-'
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    maneuver:
+      baseAttribute: dexterity
+      adds: 1
+      value: 11
+      isFav: false
+      groupName: interaction
+      unskilledUse: 1
+    medicine:
+      baseAttribute: mind
+      adds: null
+      value: '-'
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    meleeWeapons:
+      baseAttribute: dexterity
+      adds: 1
+      value: 11
+      isFav: false
+      groupName: combat
+      unskilledUse: 1
+    missileWeapons:
+      baseAttribute: dexterity
+      adds: null
+      value: 10
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    persuasion:
+      baseAttribute: charisma
+      adds: null
+      value: 6
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    precognition:
+      baseAttribute: mind
+      adds: null
+      value: '-'
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    profession:
+      baseAttribute: mind
+      adds: null
+      value: 9
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    reality:
+      baseAttribute: spirit
+      adds: 2
+      value: 10
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    scholar:
+      baseAttribute: mind
+      adds: 1
+      value: 10
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    science:
+      baseAttribute: mind
+      adds: null
+      value: 9
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    stealth:
+      baseAttribute: dexterity
+      adds: 1
+      value: 11
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    streetwise:
+      baseAttribute: charisma
+      adds: null
+      value: 6
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    survival:
+      baseAttribute: mind
+      adds: 1
+      value: 10
+      isFav: true
+      groupName: other
+      unskilledUse: 1
+    taunt:
+      baseAttribute: charisma
+      adds: null
+      value: 6
+      isFav: false
+      groupName: interaction
+      unskilledUse: 1
+    telepathy:
+      baseAttribute: charisma
+      adds: null
+      value: '-'
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    tracking:
+      baseAttribute: mind
+      adds: null
+      value: 9
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    trick:
+      baseAttribute: mind
+      adds: 1
+      value: 10
+      isFav: false
+      groupName: interaction
+      unskilledUse: 1
+    unarmedCombat:
+      baseAttribute: dexterity
+      adds: null
+      value: 10
+      isFav: false
+      groupName: combat
+      unskilledUse: 1
+    waterVehicles:
+      baseAttribute: dexterity
+      adds: null
+      value: 10
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    willpower:
+      baseAttribute: spirit
+      adds: null
+      value: 8
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+  xp:
+    unspent: 0
+    earned: 0
+  axioms:
+    magic: 9
+    social: 23
+    spirit: 10
+    tech: 23
+  details:
+    clearance: alpha
+    background: >-
+      <p><img class="charimg"
+      src="systems/torgeternity/images/characters/Relic_Raider.webp" alt=""
+      width="1138" height="1707"></p>
+
+      <p
+      class="moreheight">@UUID[Compendium.torgeternity.system-de-handouts.JournalEntry.DLLvnXpv7RFhRgHu.JournalEntryPage.tuOeVEYqdKLQkea4]{Archetyp
+      - Die Schatzj&auml;gerin}</p>
+
+      <h3>&Uuml;berblick</h3>
+
+      <p>Vor den Possibility Wars hast du dich f&uuml;r Arch&auml;ologie
+      interessiert, aber es war nicht dein Beruf. Als sich die Welt zu
+      ver&auml;ndern begann, verwandelten sich die Gr&auml;ber, Krypten und
+      Schreine auf dem ganzen Planeten in Orte der Macht und der Gefahr. Und
+      auch du hast dich ver&auml;ndert. Du bist nun schnell, clever und mutig
+      genug, um die Relikte zu finden, die an solchen Orten versteckt
+      sind.&nbsp;</p>
+
+      <p>Die Belohnungen solcher Expeditionen sind das Risiko wert. Einige
+      dunkle Orte verbergen Informationen &uuml;ber die
+      Realit&auml;tsr&auml;uber oder die Monster, die ihnen dienen. Andere
+      enthalten Sch&auml;tze, und die wertvollsten davon sind Artefakte, die
+      "Ewigkeitssplitter" genannt werden &ndash; hei&szlig; begehrt vom
+      Delphi-Konzil und den High Lords.</p>
+
+      <h3>Taktiken</h3>
+
+      <p>Deine hohe <em>Geschicklichkeit </em>und dein <em>Ausweichen
+      </em>erlauben es dir, gro&szlig;e Risiken einzugehen und normalerweise
+      unbeschadet zu entkommen. Deine Verteidigung im Nahkampf ist nicht so gut,
+      also solltest du nach M&ouml;glichkeit Abstand halten. Deine Machete ist
+      eine Waffe f&uuml;r den absoluten Notfall, aber sie ist praktisch, wenn
+      sie zusammen mit einer Pistole gezogen wird, um deine
+      <em>Nahkampfwaffen</em>-Verteidigung aufzubessern. Die andere
+      M&ouml;glichkeit ist, mit zwei Pistolen gleichzeitig zu schie&szlig;en,
+      was dir einen Bonus von +2 auf die Angriffsprobe verleiht!&nbsp;</p>
+
+      <p>Verwende <em>Man&ouml;vrieren</em>, um den Gegnern eine Falle zu
+      stellen, besonders wenn es sich um eine Anerkannte Aktion handelt.</p>
+
+      <h3>Moment der Krise</h3>
+
+      <p>Als die Nacht der Schreie kam und die erste Welle der Verw&uuml;stung
+      mit sich brachte, hast du dich freiwillig gemeldet, um zu helfen. Als die
+      Monster zum Angriff &uuml;bergingen, starben alle um dich herum. Der
+      Moment k&ouml;nnte gekommen sein, als du dich gegen die Kreaturen gewehrt
+      und eine besiegt hast, indem du sie in eine t&ouml;dliche Falle
+      man&ouml;vriertest. Oder es ist passiert, als du ein verletztes Opfer in
+      Sicherheit brachtest.</p>
+
+      <h3>Zitat</h3>
+
+      <p>"Das geh&ouml;rt in ein Museum! Nun, das vielleicht nicht, aber ich
+      werde es auf keinen Fall dir &uuml;berlassen!"</p>
+
+      <h3>Beschreibung</h3>
+
+      <p>Du bist modisch und bevorzugst helle Farben und eine Mischung aus
+      moderner Effizienz und traditionellem Stil. Du bist mutig, ernsthaft und
+      besonnen. Du genie&szlig;t es insgeheim, die Viktorianer mit deinem
+      Auftreten zu irritieren.</p>
+
+      <p><span style="font-size: 1.5em;">Agenda</span></p>
+
+      <p>Eternity Shards are important artifacts. Not just culturally, but for
+      the clues they offer about how reality functions and the power they
+      contain. Whatever they are, you need to find them, and keep them out of
+      the hands of the High Lords.</p>
+
+      <h3>Namen</h3>
+
+      <p>Anishaa, Bhaanu, Dara, Ganjan, Kantha, Maalya, Navya, Padma, Rahel</p>
+
+      <h3>Vorgeschlagener Aufstieg (Optional)</h3>
+
+      <ul>
+
+      <li>(5 EP) Auffassungsgabe</li>
+
+      <li>(7 EP) Ausdauer</li>
+
+      <li>(1 EP) <em>Glaube</em> +1</li>
+
+      <li>(2 EP) <em>Gelehrsamkeit</em> +2</li>
+
+      <li>(3 EP) <em>Feuerwaffen</em> +3</li>
+
+      <li>(3 EP) <em>Realit&auml;t</em> +3</li>
+
+      <li>(4 EP) <em>Ausweichen</em> +4</li>
+
+      <li>(5 EP) <em>Ausweichen</em> +5</li>
+
+      </ul>
+    race: human
+  editstate: false
+  fatigue: '1'
+ownership:
+  default: 0
+  9Q0XnqFwko7hRlvL: 3
+prototypeToken:
+  flags: {}
+  name: Die Schatzjägerin
+  displayName: 0
+  width: 1
+  height: 1
+  lockRotation: true
+  rotation: 0
+  actorLink: true
+  disposition: 1
+  displayBars: 40
+  bar1:
+    attribute: wounds
+  bar2:
+    attribute: shock
+  randomImg: false
+  alpha: 1
+  light:
+    alpha: 1
+    angle: 360
+    bright: 0
+    color: null
+    coloration: 1
+    dim: 0
+    luminosity: 0.5
+    saturation: 0
+    contrast: 0
+    shadows: 0
+    animation:
+      speed: 5
+      intensity: 5
+      type: null
+      reverse: false
+    darkness:
+      min: 0
+      max: 1
+    attenuation: 0.5
+  texture:
+    src: systems/torgeternity/images/characters/relic_raider.Token.webp
+    tint: null
+    scaleX: 1
+    scaleY: 1
+    offsetX: 0
+    offsetY: 0
+    rotation: 0
+  sight:
+    angle: 360
+    enabled: true
+    range: 0
+    brightness: 1
+    visionMode: basic
+    attenuation: 0.1
+    saturation: 0
+    contrast: 0
+  appendNumber: false
+  prependAdjective: false
+  detectionModes: []
+_stats:
+  systemId: torgeternity
+  systemVersion: 3.7.0
+  coreVersion: '11.315'
+  createdTime: 1694861141351
+  modifiedTime: 1711900181186
+  lastModifiedBy: CtisFurQNe9h7ABb
+_key: '!actors!sThfpHelpOeE3Ipz'
+

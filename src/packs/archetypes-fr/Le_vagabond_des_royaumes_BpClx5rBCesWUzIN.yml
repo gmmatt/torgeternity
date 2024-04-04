@@ -1,0 +1,941 @@
+_id: BpClx5rBCesWUzIN
+name: Le vagabond des royaumes
+type: stormknight
+img: systems/torgeternity/images/characters/Realm_Runner.Avatar.webp
+data:
+  shock:
+    max: 5
+    value: 0
+  wounds:
+    max: 3
+    value: 0
+  attributes:
+    charisma: 7
+    dexterity: 8
+    mind: 8
+    spirit: 9
+    strength: 8
+  other:
+    move: 5
+    run: 5
+    toughness: 5
+    armor: 0
+    cosm: coreEarth
+    possibilities: 0
+    posibilities: null
+  skills:
+    airVehicles:
+      baseAttribute: dexterity
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    alteration:
+      baseAttribute: mind
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    apportation:
+      baseAttribute: spirit
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    beastRiding:
+      baseAttribute: dexterity
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    computers:
+      baseAttribute: mind
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    conjuration:
+      baseAttribute: spirit
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    divination:
+      baseAttribute: mind
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    dodge:
+      baseAttribute: dexterity
+      adds: 2
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    energyWeapons:
+      baseAttribute: dexterity
+      adds: null
+      value: 0
+      isFav: false
+      groupName: combat
+      unskilledUse: 1
+    evidenceAnalysis:
+      baseAttribute: mind
+      adds: 1
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    faith:
+      baseAttribute: spirit
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    find:
+      baseAttribute: mind
+      adds: 1
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    fireCombat:
+      baseAttribute: dexterity
+      adds: 1
+      value: 0
+      isFav: false
+      groupName: combat
+      unskilledUse: 1
+    firstAid:
+      baseAttribute: mind
+      adds: 1
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    heavyWeapons:
+      baseAttribute: dexterity
+      adds: null
+      value: 0
+      isFav: false
+      groupName: combat
+      unskilledUse: 1
+    intimidation:
+      baseAttribute: spirit
+      adds: null
+      value: 0
+      isFav: false
+      groupName: interaction
+      unskilledUse: 1
+    kinesis:
+      baseAttribute: spirit
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    landVehicles:
+      baseAttribute: dexterity
+      adds: 1
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    language:
+      baseAttribute: mind
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    lockpicking:
+      baseAttribute: dexterity
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    maneuver:
+      baseAttribute: dexterity
+      adds: null
+      value: 0
+      isFav: false
+      groupName: interaction
+      unskilledUse: 1
+    medicine:
+      baseAttribute: mind
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    meleeWeapons:
+      baseAttribute: dexterity
+      adds: 1
+      value: 0
+      isFav: false
+      groupName: combat
+      unskilledUse: 1
+    missileWeapons:
+      baseAttribute: dexterity
+      adds: null
+      value: 0
+      isFav: false
+      groupName: combat
+      unskilledUse: 1
+    persuasion:
+      baseAttribute: charisma
+      adds: 1
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    precognition:
+      baseAttribute: mind
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    profession:
+      baseAttribute: mind
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    reality:
+      baseAttribute: spirit
+      adds: 3
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    scholar:
+      baseAttribute: mind
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    science:
+      baseAttribute: mind
+      adds: 1
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    stealth:
+      baseAttribute: dexterity
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    streetwise:
+      baseAttribute: charisma
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    survival:
+      baseAttribute: mind
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    taunt:
+      baseAttribute: charisma
+      adds: 1
+      value: 0
+      isFav: false
+      groupName: interaction
+      unskilledUse: 1
+    telepathy:
+      baseAttribute: charisma
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    tracking:
+      baseAttribute: mind
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    trick:
+      baseAttribute: mind
+      adds: 1
+      value: 0
+      isFav: false
+      groupName: interaction
+      unskilledUse: 1
+    unarmedCombat:
+      baseAttribute: dexterity
+      adds: 1
+      value: 0
+      isFav: false
+      groupName: combat
+      unskilledUse: 1
+    waterVehicles:
+      baseAttribute: dexterity
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    willpower:
+      baseAttribute: spirit
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+  xp:
+    unspent: 0
+    earned: 0
+  axioms:
+    magic: 9
+    social: 23
+    spirit: 10
+    tech: 23
+  details:
+    clearance: ''
+    background: >-
+      <h2 class="MsoNormal">Pr&eacute;sentation</h2>
+
+      <p class="MsoNormal">Les Vagabonds des royaumes sont des humains issus de
+      la Terre qui une forte sensibilit&eacute; intuitive de la
+      r&eacute;alit&eacute;. Pas uniquement de la r&eacute;alit&eacute; de la
+      Prime Terre mais aussi celle des cosms envahisseurs. Ces individus
+      s&rsquo;adaptent avec une facilit&eacute; d&eacute;concertante voyageant
+      dans les autres royaumes avec aisance et manipulant des outils et des
+      concepts qui, avec d&rsquo;autres, provoqueraient des contradictions. Ce
+      ph&eacute;nom&egrave;ne semble unique &agrave; la Prime Terre.</p>
+
+      <h2 class="MsoNormal">Tactiques</h2>
+
+      <p class="MsoNormal">Vous &ecirc;tes un touche-&agrave;-tout : vous maniez
+      raisonnablement bien la plupart des armes sans en ma&icirc;triser aucune.
+      Mais vous pouvez utiliser toutes les armes et tous les objets que vous
+      trouvez dans n&rsquo;importe quelle r&eacute;alit&eacute;.
+      N&rsquo;h&eacute;sitez pas &agrave; essayer et &agrave; utiliser les
+      puissants instruments des autres r&eacute;alit&eacute;s m&ecirc;me
+      s&rsquo;ils peuvent provoquer des Contradictions. Vous risquez toujours
+      d&rsquo;&ecirc;tre D&eacute;connect&eacute; mais pas aussi souvent que les
+      autres et il vous est facile de vous Reconnecter, m&ecirc;me dans une Zone
+      Pure.</p>
+
+      <p class="MsoNormal">Utilisez toutes les interactions Approuv&eacute;es
+      (Ruse est la plus forte) pour D&eacute;stabiliser les adversaires ou les
+      rendre Vuln&eacute;rables. En cas de r&eacute;ussite, vous obtenez une
+      Carte de Destin et vous aidez le reste de l&rsquo;&eacute;quipe ou vous
+      augmentez vos propres chances d&rsquo;encha&icirc;ner avec une attaque
+      r&eacute;ussie. Votre haute comp&eacute;tence R&eacute;alit&eacute; vous
+      permet d&rsquo;annuler des dommages de mani&egrave;re fiable, vous
+      &ecirc;tes donc beaucoup plus r&eacute;sistant que vous ne le laissez
+      para&icirc;tre.</p>
+
+      <h2 class="MsoNormal">Instant fatidique</h2>
+
+      <p class="MsoNormal">Avant l&rsquo;invasion, chaque jour &eacute;tait
+      routinier. Puis le monde s&rsquo;est bris&eacute; et vous avez
+      &eacute;t&eacute; confront&eacute; &agrave; un terrible choix : fuir de
+      terreur comme tous les autres ou emp&ecirc;cher un monstre de
+      d&eacute;vorer un innocent. D&rsquo;une mani&egrave;re ou d&rsquo;une
+      autre, vous avez eu de la chance, la victime a &eacute;t&eacute;
+      sauv&eacute;e et un Chevalier des Temp&ecirc;tes est n&eacute;.</p>
+
+      <h2 class="MsoNormal">Citation</h2>
+
+      <p class="MsoNormal">&laquo; Ne vous inqui&eacute;tez pas les gars, je
+      m&rsquo;en charge ! &raquo;</p>
+
+      <p class="MsoNormal">Description</p>
+
+      <p class="MsoNormal">Maigre et agile, votre tenue se doit avant tout
+      d&rsquo;&ecirc;tre pratique. Par contre, on vous verra toujours avec des
+      jeans et du cuir ainsi qu&rsquo;un sourire malicieux. Tout le reste, des
+      gadgets modernes aux totems magiques, vous l&rsquo;accumulez au hasard de
+      vos voyages dans les diff&eacute;rents royaumes.</p>
+
+      <h2 class="MsoNormal">Objectif</h2>
+
+      <p class="MsoNormal">Au premier abord, on a l&rsquo;impression que pour
+      vous tout &ccedil;a n&rsquo;est qu&rsquo;un jeu et que vous ne prenez
+      peut-&ecirc;tre pas assez au s&eacute;rieux les dangers auxquels vous
+      &ecirc;tes confront&eacute;s. Mais sous cette fa&ccedil;ade, cependant,
+      vous vous souciez profond&eacute;ment des innocents pris au pi&egrave;ge
+      de ces Guerres des Possibilit&eacute;s. Sauver ces gens des dangers
+      imm&eacute;diats et leur redonner le moral sont vos r&eacute;elles
+      priorit&eacute;s, vous amuser en le faisant n&rsquo;est qu&rsquo;un
+      bonus.</p>
+
+      <h2 class="MsoNormal">Noms</h2>
+
+      <p class="MsoNormal">Adison, Aidan, Cody, Daryl, Jamie, Lee, Leslie,
+      Regan, Sean, Terry</p>
+
+      <h2 class="MsoNormal">Piste de progression (optionnelle)</h2>
+
+      <p class="MsoNormal">□ (5 PX) Adaptabilit&eacute;</p>
+
+      <p class="MsoNormal">□ (7 PX) Conteur</p>
+
+      <p class="MsoNormal">□ (1 PX) D&eacute;brouillardise +1</p>
+
+      <p class="MsoNormal">□ (2 PX) Ruse +2</p>
+
+      <p class="MsoNormal">□ (3 PX) Esquive +3</p>
+
+      <p class="MsoNormal">□ (3 PX) Ruse +3</p>
+
+      <p class="MsoNormal">□ (4 PX) R&eacute;alit&eacute; +4</p>
+
+      <p class="MsoNormal">□ (5 PX) R&eacute;alit&eacute; +5</p>
+    race: human
+  editstate: null
+  fatigue: '1'
+token:
+  flags: {}
+  name: Le Vagabond des royaumes
+  displayName: 30
+  img: systems/torgeternity/images/characters/Realm_Runner.Token.webp
+  tint: null
+  width: 1
+  height: 1
+  scale: 1
+  mirrorX: false
+  mirrorY: false
+  lockRotation: false
+  rotation: 0
+  vision: false
+  dimSight: 0
+  brightSight: 0
+  dimLight: 0
+  brightLight: 0
+  sightAngle: 0
+  lightAngle: 360
+  lightColor: ''
+  lightAlpha: 1
+  lightAnimation:
+    type: ''
+    speed: 5
+    intensity: 5
+  actorId: BpClx5rBCesWUzIN
+  actorLink: true
+  disposition: 1
+  displayBars: 20
+  bar1:
+    attribute: shock
+  bar2:
+    attribute: wounds
+  randomImg: false
+  alpha: 1
+  light:
+    alpha: 0.5
+    angle: 0
+    bright: 0
+    coloration: 1
+    dim: 0
+    gradual: true
+    luminosity: 0.5
+    saturation: 0
+    contrast: 0
+    shadows: 0
+    animation:
+      speed: 5
+      intensity: 5
+      reverse: false
+    darkness:
+      min: 0
+      max: 1
+    color: null
+items:
+  - _id: kDR688PEiU9j0oUd
+    name: Prodige
+    type: perk
+    data:
+      category: reality
+      cosm: (Non)
+      prerequisites: ''
+      timestaken: null
+      description: >-
+        <p class="MsoNormal">Le personnage est impr&eacute;gn&eacute;
+        d&rsquo;&eacute;nergie des possibilit&eacute;s. Il d&eacute;bute chaque
+        Acte avec une Possibilit&eacute; suppl&eacute;mentaire. Cet effet est
+        cumulable avec toute autre capacit&eacute; accordant des
+        Possibilit&eacute;s suppl&eacute;mentaires</p>
+      pulpPowers:
+        enhancementNumber: 0
+        enhancement01:
+          title: ''
+          description: ''
+          taken: false
+        enhancement02:
+          title: ''
+          description: ''
+          taken: false
+        enhancement03:
+          title: ''
+          description: ''
+          taken: false
+        enhancement04:
+          title: ''
+          description: ''
+          taken: false
+        enhancement05:
+          title: ''
+          description: ''
+          taken: false
+        enhancement06:
+          title: ''
+          description: ''
+          taken: false
+        enhancement07:
+          title: ''
+          description: ''
+          taken: false
+        enhancement08:
+          title: ''
+          description: ''
+          taken: false
+        enhancement09:
+          title: ''
+          description: ''
+          taken: false
+        enhancement10:
+          title: ''
+          description: ''
+          taken: false
+        enhancement11:
+          title: ''
+          description: ''
+          taken: false
+        enhancement12:
+          title: ''
+          description: ''
+          taken: false
+        enhancement13:
+          title: ''
+          description: ''
+          taken: false
+        enhancement14:
+          title: ''
+          description: ''
+          taken: false
+        enhancement15:
+          title: ''
+          description: ''
+          taken: false
+        limitationNumber: 0
+        limitation01: ''
+        limitation02: ''
+        limitation03: ''
+        limitation04: ''
+        limitation05: ''
+        limitation06: ''
+        limitation07: ''
+        limitation08: ''
+        limitation09: ''
+        limitation10: ''
+    sort: 200001
+    flags:
+      core:
+        sourceId: Item.xXE09FeMfKBjV4uE
+    img: systems/torgeternity/images/icons/perk.webp
+    effects: []
+    folder: null
+    permission:
+      default: 0
+    _key: '!actors.items!BpClx5rBCesWUzIN.kDR688PEiU9j0oUd'
+  - _id: FXRnJ7s4n9TlajKU
+    name: Vagabond des royaumes
+    type: perk
+    data:
+      category: reality
+      cosm: (Non)
+      prerequisites: None
+      timestaken: null
+      description: >-
+        <p class="MsoNormal">Le Chevalier des Temp&ecirc;tes a un instinct
+        inn&eacute; pour manipuler la r&eacute;alit&eacute;. Il ignore quatre
+        points de malus de r&eacute;alit&eacute; quand il tente de se
+        reconnecter et peut ignorer une d&eacute;connexion la premi&egrave;re
+        fois que cela arrive au cours de chaque Acte.</p>
+      pulpPowers:
+        enhancementNumber: 0
+        enhancement01:
+          title: ''
+          description: ''
+          taken: false
+        enhancement02:
+          title: ''
+          description: ''
+          taken: false
+        enhancement03:
+          title: ''
+          description: ''
+          taken: false
+        enhancement04:
+          title: ''
+          description: ''
+          taken: false
+        enhancement05:
+          title: ''
+          description: ''
+          taken: false
+        enhancement06:
+          title: ''
+          description: ''
+          taken: false
+        enhancement07:
+          title: ''
+          description: ''
+          taken: false
+        enhancement08:
+          title: ''
+          description: ''
+          taken: false
+        enhancement09:
+          title: ''
+          description: ''
+          taken: false
+        enhancement10:
+          title: ''
+          description: ''
+          taken: false
+        enhancement11:
+          title: ''
+          description: ''
+          taken: false
+        enhancement12:
+          title: ''
+          description: ''
+          taken: false
+        enhancement13:
+          title: ''
+          description: ''
+          taken: false
+        enhancement14:
+          title: ''
+          description: ''
+          taken: false
+        enhancement15:
+          title: ''
+          description: ''
+          taken: false
+        limitationNumber: 0
+        limitation01: ''
+        limitation02: ''
+        limitation03: ''
+        limitation04: ''
+        limitation05: ''
+        limitation06: ''
+        limitation07: ''
+        limitation08: ''
+        limitation09: ''
+        limitation10: ''
+    sort: 500001
+    flags:
+      core:
+        sourceId: Item.DJAlj7BkFtkJ8GmN
+    img: systems/torgeternity/images/icons/perk.webp
+    effects: []
+    folder: null
+    permission:
+      default: 0
+    _key: '!actors.items!BpClx5rBCesWUzIN.FXRnJ7s4n9TlajKU'
+  - _id: 2p6hVKXGKxFiYmjT
+    name: Blouson d’aviateur
+    type: armor
+    data:
+      cosm: Empire du Nil
+      description: ''
+      techlevel: 19
+      price: '75'
+      value: 9
+      bonus: 1
+      maxDex: 12
+      minStrength: null
+      equipped: false
+      equippedClass: .item-unequipped
+      notes: Torse
+    sort: 800000
+    flags:
+      core:
+        sourceId: Item.Ih77xAUJLZwOROR7
+    img: systems/torgeternity/images/icons/armor.webp
+    effects:
+      - _id: m4QT8vQ1gc6L97GC
+        flags: {}
+        changes:
+          - key: data.other.armor
+            value: '1'
+            mode: 2
+          - key: data.other.toughness
+            value: '1'
+            mode: 2
+        disabled: false
+        duration:
+          startTime: null
+        icon: icons/svg/aura.svg
+        label: Armor +1
+        origin: Item.2rrg1qTCfjdHFtKl
+        tint: null
+        transfer: true
+        _key: >-
+          !actors.items.effects!BpClx5rBCesWUzIN.2p6hVKXGKxFiYmjT.m4QT8vQ1gc6L97GC
+    folder: null
+    permission:
+      default: 0
+    _key: '!actors.items!BpClx5rBCesWUzIN.2p6hVKXGKxFiYmjT'
+  - _id: 0z1Kf0KY2aBw5QDV
+    name: Machette
+    type: meleeweapon
+    data:
+      cosm: Prime Terre
+      description: >-
+        <p class="MsoNormal">Con&ccedil;ue pour se frayer un passage &agrave;
+        travers un feuillage dense, ces armes de taille moyenne avec une lame
+        &agrave; un seul tranchant sont &eacute;galement tr&egrave;s utiles pour
+        trancher la chair. Les machettes modernes ont des outils
+        int&eacute;gr&eacute;s et des caract&eacute;ristiques qui permettent aux
+        tests de Survie d&rsquo;&ecirc;tre Favoris&eacute;s.</p>
+      techlevel: 22
+      price: '40'
+      value: 8
+      attackWith: meleeWeapons
+      damageType: strengthPlus
+      damage: 2
+      ap: 0
+      bonus: 2
+      notes: Tests de Survie Favorisés
+      chatNote: ''
+    sort: 700000
+    flags:
+      core:
+        sourceId: Item.Of0q2y9B0BpfAByr
+    img: systems/torgeternity/images/icons/meleeweapon.webp
+    effects: []
+    folder: null
+    permission:
+      default: 0
+    _key: '!actors.items!BpClx5rBCesWUzIN.0z1Kf0KY2aBw5QDV'
+  - _id: kRW5blcdeOEP8xRp
+    name: Grenade à disruption
+    type: missileweapon
+    data:
+      cosm: Cyberpapauté
+      description: >-
+        <p class="MsoNormal">Chaque grenade ressemble &agrave; un disque plat.
+        Quand elle touche le sol ou une cible, elle lib&egrave;re une puissante
+        impulsion pr&eacute;vue pour neutraliser les cibles proches. Certaines
+        utilisent une impulsion &eacute;lectrique, d&rsquo;autres une onde
+        sonique mais elles ont toutes le m&ecirc;me effet sur ceux qui sont pris
+        dans leur zone d&rsquo;effet !</p>
+      techlevel: 26
+      price: '100'
+      value: 10
+      attackWith: missileWeapons
+      damageType: flat
+      damage: 16
+      ap: 0
+      ammo:
+        max: 1
+        value: 1
+      minStrength: null
+      range: 10/20/30
+      notes: Non létal, Zone d’effet moyenne
+      chatNote: ''
+    sort: 200000
+    flags:
+      core:
+        sourceId: Item.hvK73rLc7gT5pQIA
+    img: systems/torgeternity/images/icons/missileweapon.webp
+    effects: []
+    folder: null
+    permission:
+      default: 0
+    _key: '!actors.items!BpClx5rBCesWUzIN.kRW5blcdeOEP8xRp'
+  - _id: HaOi3fVkKquJiWrR
+    name: Glock 9mm
+    type: firearm
+    img: systems/torgeternity/images/icons/firearm.webp
+    data:
+      cosm: Prime Terre
+      description: >-
+        <p>Un semi-automatique 9 mm avec rechargement par recul.
+        R&eacute;put&eacute; pour son&nbsp; &eacute;pais chargeur grande
+        capacit&eacute;.</p>
+      techlevel: 22
+      price: '250'
+      value: 12
+      attackWith: fireCombat
+      damageType: ''
+      damage: 13
+      ap: 0
+      ammo:
+        max: 15
+        value: 15
+      range: 10/25/40
+      notes: Pistolet
+      chatNote: ''
+    effects: []
+    folder: null
+    sort: 600000
+    permission:
+      default: 0
+      TK1vCAdCz548vBDu: 3
+    flags:
+      core:
+        sourceId: Item.iOnl5BiGmVFaCzma
+    _key: '!actors.items!BpClx5rBCesWUzIN.HaOi3fVkKquJiWrR'
+  - _id: nB4dr3hVirizxtBL
+    name: Outil polyvalent
+    type: gear
+    img: systems/torgeternity/images/icons/gear.webp
+    data:
+      cosm: Prime Terre
+      description: >-
+        <p>Un instrument tr&egrave;s pratique qui combine pinces&nbsp;
+        coupantes, tournevis, cl&eacute; &agrave; molette et d&rsquo;autres
+        petits outils&nbsp;</p>
+      techlevel: 22
+      price: '40'
+      value: 8
+    effects: []
+    folder: null
+    sort: 1900000
+    permission:
+      default: 0
+      TK1vCAdCz548vBDu: 3
+    flags:
+      core:
+        sourceId: Item.qclakuW3FUv87ufW
+    _key: '!actors.items!BpClx5rBCesWUzIN.nB4dr3hVirizxtBL'
+  - _id: kran1rL5Py2M7ZKo
+    name: Lampe torche
+    type: gear
+    img: systems/torgeternity/images/icons/gear.webp
+    data:
+      cosm: (Sans cosm)
+      description: <p>&Eacute;claire</p>
+      techlevel: 20
+      price: '10'
+      value: 5
+    effects: []
+    folder: null
+    sort: 2200000
+    permission:
+      default: 0
+      TK1vCAdCz548vBDu: 3
+    flags:
+      core:
+        sourceId: Item.tktQLV7z5tnNkEqr
+    _key: '!actors.items!BpClx5rBCesWUzIN.kran1rL5Py2M7ZKo'
+  - _id: XuhiHJMpwJmi9Us2
+    name: Chargeurs supplémentaires (5)
+    type: gear
+    img: systems/torgeternity/images/icons/gear.webp
+    data:
+      cosm: Prime Terre
+      description: <p>Cinq recharges pour Glock 9 mm</p>
+      techlevel: 22
+      price: '20'
+      value: 6
+    effects: []
+    folder: null
+    sort: 1600000
+    permission:
+      default: 0
+      TK1vCAdCz548vBDu: 3
+    flags:
+      core:
+        sourceId: Item.qZuQoegFPBYC6tEB
+    _key: '!actors.items!BpClx5rBCesWUzIN.XuhiHJMpwJmi9Us2'
+  - _id: kXukzOgxxMCFYLCC
+    name: Potion de soin
+    type: gear
+    img: systems/torgeternity/images/icons/gear.webp
+    data:
+      cosm: Aysle
+      description: >-
+        <p>N&eacute;cessite un Axiome Magie de 13. Boire la potion est une
+        action simple et permet de r&eacute;cup&eacute;rer d&rsquo;une blessure
+        et d&rsquo;un D&eacute; Bonus de points de&nbsp; choc.</p>
+      techlevel: 12
+      price: '500'
+      value: 14
+    effects: []
+    folder: null
+    sort: 1800000
+    permission:
+      default: 0
+      TK1vCAdCz548vBDu: 3
+    flags:
+      core:
+        sourceId: Item.sSWLrPCSi2G5jq6S
+    _key: '!actors.items!BpClx5rBCesWUzIN.kXukzOgxxMCFYLCC'
+  - _id: k4qzTZV4hihR1LmC
+    name: Attaque à mains nues
+    type: customAttack
+    img: systems/torgeternity/images/icons/fist-icon.webp
+    data:
+      description: ''
+      attackWith: unarmedCombat
+      damageType: strengthPlus
+      damage: 0
+      ap: 0
+      notes: ''
+      chatNote: ''
+    effects: []
+    folder: null
+    sort: 0
+    permission:
+      default: 0
+      zWX19sSAtAWkeGhp: 3
+    flags:
+      core:
+        sourceId: Item.BFGjhDetVDm1xiku
+    _key: '!actors.items!BpClx5rBCesWUzIN.k4qzTZV4hihR1LmC'
+effects:
+  - _id: pklu4BLFg7hviXaT
+    flags: {}
+    changes:
+      - key: data.other.armor
+        mode: 2
+        value: '1'
+      - key: data.other.toughness
+        mode: 2
+        value: '1'
+    disabled: false
+    duration:
+      startTime: 0
+    icon: icons/svg/aura.svg
+    label: Armure +1
+    origin: Actor.HoTJjMNPZ1dmNnqZ.OwnedItem.2p6hVKXGKxFiYmjT
+    tint: null
+    transfer: true
+    _key: '!actors.effects!BpClx5rBCesWUzIN.pklu4BLFg7hviXaT'
+folder: null
+sort: 100001
+permission:
+  default: 0
+  A9LyAqagoJJU3gDH: 3
+flags: {}
+_key: '!actors!BpClx5rBCesWUzIN'
+

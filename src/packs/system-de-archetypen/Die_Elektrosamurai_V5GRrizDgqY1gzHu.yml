@@ -1,0 +1,924 @@
+_id: V5GRrizDgqY1gzHu
+name: Die Elektrosamurai
+type: stormknight
+img: systems/torgeternity/images/characters/Electric_Samurai.Avatar.webp
+items:
+  - _id: kSLUifL30SjjsOrA
+    name: Lieblingswaffe
+    type: perk
+    img: systems/torgeternity/images/icons/reality-icon.webp
+    effects: []
+    folder: null
+    sort: 0
+    flags:
+      core:
+        sourceId: Compendium.te001-core-rulebook.grw-de-vorzuverb.Item.WR4mGlmM1EdIyHUW
+    system:
+      category: prowess
+      cosm: (Keins)
+      prerequisites: ''
+      timestaken: 1
+      description: >-
+        <p>Dieser Storm Knight ist f&uuml;r eine bestimmte Waffe bekannt. Wenn
+        ein Angriff mit der Waffe dazu f&uuml;hrt, dass er bei der
+        Schadensermittlung Bonusw&uuml;rfel werfen darf, so darf der Spieler
+        jedes Wurfergebnis von &bdquo;1&ldquo; einmal wiederholen und das neue
+        Ergebnis w&auml;hlen.&nbsp;</p>
+
+        <p>Falls die Waffe verloren geht, sollte die Spielleiterin es dem
+        Charakter erlauben, einen Ersatz f&uuml;r sie zu finden, normalerweise
+        zu Beginn des n&auml;chsten Aktes.</p>
+      pulpPowers:
+        enhancementNumber: 0
+        enhancement01:
+          title: ''
+          description: ''
+          taken: false
+        enhancement02:
+          title: ''
+          description: ''
+          taken: false
+        enhancement03:
+          title: ''
+          description: ''
+          taken: false
+        enhancement04:
+          title: ''
+          description: ''
+          taken: false
+        enhancement05:
+          title: ''
+          description: ''
+          taken: false
+        enhancement06:
+          title: ''
+          description: ''
+          taken: false
+        enhancement07:
+          title: ''
+          description: ''
+          taken: false
+        enhancement08:
+          title: ''
+          description: ''
+          taken: false
+        enhancement09:
+          title: ''
+          description: ''
+          taken: false
+        enhancement10:
+          title: ''
+          description: ''
+          taken: false
+        enhancement11:
+          title: ''
+          description: ''
+          taken: false
+        enhancement12:
+          title: ''
+          description: ''
+          taken: false
+        enhancement13:
+          title: ''
+          description: ''
+          taken: false
+        enhancement14:
+          title: ''
+          description: ''
+          taken: false
+        enhancement15:
+          title: ''
+          description: ''
+          taken: false
+        limitationNumber: 0
+        limitation01: ''
+        limitation02: ''
+        limitation03: ''
+        limitation04: ''
+        limitation05: ''
+        limitation06: ''
+        limitation07: ''
+        limitation08: ''
+        limitation09: ''
+        limitation10: ''
+    ownership:
+      default: 0
+      9Q0XnqFwko7hRlvL: 3
+      CtisFurQNe9h7ABb: 3
+    _stats:
+      systemId: torgeternity
+      systemVersion: 3.1.1
+      coreVersion: '11.308'
+      createdTime: 1694866298554
+      modifiedTime: 1694866555606
+      lastModifiedBy: CtisFurQNe9h7ABb
+    _key: '!actors.items!V5GRrizDgqY1gzHu.kSLUifL30SjjsOrA'
+  - _id: kX73wRdLxfe0Sbz0
+    name: Elektrokatana
+    type: meleeweapon
+    img: systems/torgeternity/images/icons/axe-icon.webp
+    effects: []
+    folder: null
+    sort: 18900000
+    flags:
+      core:
+        sourceId: >-
+          Compendium.te001-core-rulebook.grw-de-ausruestung.Item.blwojapRBKk4M4Xg
+    system:
+      cosm: Pan-Pacifica
+      description: >-
+        <p>Die in der Klinge untergebrachte Ionenschaltung leuchtet bei der
+        Aktivierung mit Energie. Das Feld, das direkt &uuml;ber der
+        Oberfl&auml;che der Klinge erzeugt wird, schneidet noch sch&auml;rfer
+        und sch&uuml;tzt das darunter liegende Metall vor dem Abstumpfen. Kann
+        als normales Katana verwendet werden, wenn es nicht unter Strom
+        steht.</p>
+      techlevel: 24
+      price: '500'
+      value: 13
+      attackWith: meleeWeapons
+      damageType: strengthPlus
+      damage: 4
+      ap: 2
+      bonus: 2
+      notes: ''
+      chatNote: ''
+    ownership:
+      default: 0
+      9Q0XnqFwko7hRlvL: 3
+      CtisFurQNe9h7ABb: 3
+    _stats:
+      systemId: torgeternity
+      systemVersion: 3.1.1
+      coreVersion: '11.308'
+      createdTime: 1694866320665
+      modifiedTime: 1694866320665
+      lastModifiedBy: CtisFurQNe9h7ABb
+    _key: '!actors.items!V5GRrizDgqY1gzHu.kX73wRdLxfe0Sbz0'
+  - name: Rauchkugeln
+    type: gear
+    img: systems/torgeternity/images/icons/gear-icon.webp
+    effects: []
+    folder: null
+    sort: 7500000
+    flags:
+      core:
+        sourceId: Item.M1wtMEqhkMKt7zPa
+    _id: IrcoBjk02YCM7KTS
+    system:
+      cosm: Pan-Pacifica
+      description: >-
+        <p>Kann als Tricksen-Interaktionsangriff auf den Boden geworfen werden
+        und hinterl&auml;sst dabei Rauch (Deckungsmalus &ndash;2) in einem
+        Umkreis von f&uuml;nf Metern.</p>
+      techlevel: 24
+      price: '40'
+      value: 8
+    ownership:
+      default: 0
+      9Q0XnqFwko7hRlvL: 3
+      CtisFurQNe9h7ABb: 3
+    _stats:
+      systemId: torgeternity
+      systemVersion: 3.1.1
+      coreVersion: '11.308'
+      createdTime: 1694866345041
+      modifiedTime: 1694866345041
+      lastModifiedBy: CtisFurQNe9h7ABb
+    _key: '!actors.items!V5GRrizDgqY1gzHu.IrcoBjk02YCM7KTS'
+  - _id: tHnol0Anh6GtJ72e
+    name: SC Kyogo 144 SMG
+    type: firearm
+    img: systems/torgeternity/images/icons/firearm-icon.webp
+    effects: []
+    folder: null
+    sort: 8300000
+    flags:
+      core:
+        sourceId: >-
+          Compendium.te001-core-rulebook.grw-de-ausruestung.Item.HM1hHISeFvyErmvU
+    system:
+      cosm: Pan-Pacifica
+      description: >-
+        <p>@UUID[Compendium.te001-core-rulebook.grw-de-grw.Qlx6yGF0Mmo6Xzrv.JournalEntryPage.7GGUUHzuYIqGPXDO#kurzer-fs:]{Kurzer
+        Feuersto&szlig;}</p>
+
+        <p>@UUID[Compendium.te001-core-rulebook.grw-de-grw.Qlx6yGF0Mmo6Xzrv.JournalEntryPage.7GGUUHzuYIqGPXDO#karabiner:]{Pistole}</p>
+
+        <p>Diese leichte Maschinenpistole aus Pan-Pacifica ist im Vergleich mit
+        anderen Maschinenpistolen sehr pr&auml;zise und ist auch aufgrund ihrer
+        hohen Reichweite und Durchschlagskraft sehr beliebt.</p>
+      techlevel: 24
+      price: '400'
+      value: 13
+      attackWith: fireCombat
+      damageType: ''
+      damage: 13
+      ap: 0
+      ammo:
+        max: 45
+        value: 45
+      range: 20/40/80
+      notes: Kurzer FS, Pistole
+      chatNote: ''
+    ownership:
+      default: 0
+      9Q0XnqFwko7hRlvL: 3
+      CtisFurQNe9h7ABb: 3
+    _stats:
+      systemId: torgeternity
+      systemVersion: 3.1.1
+      coreVersion: '11.308'
+      createdTime: 1694866439177
+      modifiedTime: 1694866439177
+      lastModifiedBy: CtisFurQNe9h7ABb
+    _key: '!actors.items!V5GRrizDgqY1gzHu.tHnol0Anh6GtJ72e'
+  - _id: qxjS47DIU0aTw16e
+    name: Ionengusoku
+    type: perk
+    img: systems/torgeternity/images/icons/reality-icon.webp
+    effects: []
+    folder: null
+    sort: 50000
+    flags:
+      core:
+        sourceId: Compendium.te001-core-rulebook.grw-de-vorzuverb.Item.5ILSmFBkAJ0HDq1v
+    system:
+      category: electricSamurai
+      cosm: Pan-Pacifica
+      description: >-
+        <p>Die charakteristische R&uuml;stung der Elektrosamurai ist der
+        Ionengusoku. Die ersten R&uuml;stungen orientierten sich an den
+        Kampfr&uuml;stungen der Elite-Sicherheitskr&auml;fte von Kanawa, aber im
+        Laufe der Zeit kamen viele Anpassungen und Verbesserungen hinzu, als die
+        Samurai die Technologie von Kanawa f&uuml;r sich nutzten.&nbsp;</p>
+
+        <p>Die R&uuml;stung selbst ist hochentwickelt und f&uuml;r ihren
+        Tr&auml;ger ma&szlig;geschneidert. Ein Bio-Scanner sorgt daf&uuml;r,
+        dass sich die R&uuml;stung automatisch abschaltet und in Starre
+        verf&auml;llt, wenn sie von jemand anderem angelegt wird. Sie begrenzt
+        die Geschicklichkeit ihres Tr&auml;gers auf 10, hat ein Tech-Axiom von
+        24, liefert +4 R&uuml;stung am gesamten K&ouml;rper und verursacht
+        Erm&uuml;dung.</p>
+
+        <p>Bei Wahl des Vorzuges
+        @Compendium[te001-core-rulebook.grw-de-ausruestung.KL5fs0ulvsqCVcwr]{Ionengusoku
+        (R&uuml;stung)} ausr&uuml;sten.&nbsp;</p>
+
+        <ul>
+
+        <li>Neue Verbesserungen: Dieser Vorzug darf mehr als einmal erworben
+        werden. Mit jedem zus&auml;tzlichen Erwerb wird die R&uuml;stung um eine
+        der unten aufgef&uuml;hrten Verbesserungen erweitert. Sofern nichts
+        anderes angegeben ist, darf jede Verbesserung nur einmal ausgew&auml;hlt
+        werden&nbsp;</li>
+
+        <li>@Compendium[te001-core-rulebook.grw-de-vorzuverb.Rk32103yeVzF2tTc]{Blendblitz}</li>
+
+        <li>@Compendium[te001-core-rulebook.grw-de-vorzuverb.Sgekb3d5Yw9To2KE]{Blitzh&uuml;lle}</li>
+
+        <li>@Compendium[te001-core-rulebook.grw-de-vorzuverb.n36LEGfrj6f4X4qR]{Cham&auml;leonplatten}</li>
+
+        <li>@Compendium[te001-core-rulebook.grw-de-vorzuverb.xPjDp0egw00ew40H]{Kabuto
+        HUD}</li>
+
+        <li>@Compendium[te001-core-rulebook.grw-de-vorzuverb.CZWjBkTqdE1WMK1k]{Ultraleicht-Legierung}</li>
+
+        </ul>
+      prerequisites: Geist 8+, mindestens 2 Fertigkeitsstufen in Nahkampfwaffen
+      pulpPowers:
+        enhancement01:
+          description: >-
+            Einmal pro Szene darf die Rüstung als freie Aktion einen blendenden
+            Lichtblitz abstrahlen. Das Licht blendet augenblicklich alle
+            Personen in einem mittleren Explosionsradius um den Charakter und
+            macht sie Sehr Angeschlagen.
+          taken: false
+          title: Blendblitz
+        enhancement02:
+          description: >-
+            Die Elektrosamurai erkannten schnell die Gefahr, die von Horden aus
+            Infizierten oder dem tödlichen Klammerangriff der Jiang Shi ausgeht.
+            Einmal pro Szene darf der Träger als freie Aktion eine elektrische
+            Entladung auslösen, was 12 Schaden + 1 BW bei allem verursacht, das
+            die Rüstung berührt. Alles, was den Samurai umklammert hält, löst
+            diese Umklammerung automatisch auf.
+          taken: false
+          title: Blitzhülle
+        enhancement03:
+          description: >-
+            Die gesamte äußere Schicht der Gusoku ist mit Sensoren und LEDs
+            bedeckt, die Farbe und Helligkeit verändern, um die Umgebung
+            nachzuahmen, wenn der Samurai stillsteht. Solange er völlig
+            bewegungslos bleibt (keine Aktionen oder Bewegungen), ist er
+            effektiv unsichtbar und die Gegner erleiden beim Versuch, ihn zu
+            finden oder mit Fernkampfangriffen zu treffen, einen Malus von –6.
+          taken: false
+          title: Chamäleonplatten
+        enhancement04:
+          description: >-
+            Der Helm der Rüstung verfügt über ein integriertes Display, das es
+            dem Träger erlaubt, bei seinen Fernkampfangriffen 2 Punkte Malus zu
+            ignorieren.
+          taken: false
+          title: Kabuto HUD
+        enhancement05:
+          description: >-
+            Das geringe Gewicht der Rüstung und die perfekte Passform sorgen
+            dafür, dass der Träger bei einem Ermüdungs-Effekt keinen
+            zusätzlichen Schockschaden erleidet.
+          taken: false
+          title: Ultraleicht-Legierung
+        enhancement06:
+          description: ''
+          taken: false
+          title: ''
+        enhancement07:
+          description: ''
+          taken: false
+          title: ''
+        enhancement08:
+          description: ''
+          taken: false
+          title: ''
+        enhancement09:
+          description: ''
+          taken: false
+          title: ''
+        enhancement10:
+          description: ''
+          taken: false
+          title: ''
+        enhancement11:
+          description: ''
+          taken: false
+          title: ''
+        enhancement12:
+          description: ''
+          taken: false
+          title: ''
+        enhancement13:
+          description: ''
+          taken: false
+          title: ''
+        enhancement14:
+          description: ''
+          taken: false
+          title: ''
+        enhancement15:
+          description: ''
+          taken: false
+          title: ''
+        enhancementNumber: 5
+        limitation01: ''
+        limitation02: ''
+        limitation03: ''
+        limitation04: ''
+        limitation05: ''
+        limitation06: ''
+        limitation07: ''
+        limitation08: ''
+        limitation09: ''
+        limitation10: ''
+        limitationNumber: 0
+      timestaken: 1
+    ownership:
+      default: 0
+      9Q0XnqFwko7hRlvL: 3
+      CtisFurQNe9h7ABb: 3
+    _stats:
+      systemId: torgeternity
+      systemVersion: 3.7.0
+      coreVersion: '11.315'
+      createdTime: 1711706232065
+      modifiedTime: 1711706262758
+      lastModifiedBy: CtisFurQNe9h7ABb
+    _key: '!actors.items!V5GRrizDgqY1gzHu.qxjS47DIU0aTw16e'
+  - name: Ionengusoku (Rüstung)
+    type: armor
+    img: systems/torgeternity/images/icons/armor-icon.webp
+    effects: []
+    folder: null
+    sort: 300000
+    flags:
+      core:
+        sourceId: >-
+          Compendium.te001-core-rulebook.grw-de-ausruestung.Item.KL5fs0ulvsqCVcwr
+    _id: wh1XEzDQhhm5obr3
+    system:
+      cosm: Pan-Pacifica
+      description: >-
+        <p>@UUID[Compendium.te001-core-rulebook.grw-de-grw.Qlx6yGF0Mmo6Xzrv.JournalEntryPage.7GGUUHzuYIqGPXDO#ermudung:]{Erm&uuml;dung}</p>
+
+        <p>@UUID[Compendium.te001-core-rulebook.grw-de-grw.Qlx6yGF0Mmo6Xzrv.JournalEntryPage.7GGUUHzuYIqGPXDO#ganzkorper/torso:]{Ganzk&ouml;rper}</p>
+
+        <p>Du erh&auml;lst diese R&uuml;stung automatisch, sobald du den Vorzug
+        "Ionengusoku" w&auml;hlst.</p>
+      price: '0'
+      techlevel: 24
+      value: 0
+      bonus: 4
+      equipped: true
+      equippedClass: item-equipped
+      maxDex: 10
+      minStrength: null
+      notes: Ermüdend, Ganzkörper
+      fatigue: 1
+    ownership:
+      default: 0
+      9Q0XnqFwko7hRlvL: 3
+      CtisFurQNe9h7ABb: 3
+    _stats:
+      systemId: torgeternity
+      systemVersion: 3.7.0
+      coreVersion: '11.315'
+      createdTime: 1711562366100
+      modifiedTime: 1711706276641
+      lastModifiedBy: CtisFurQNe9h7ABb
+    _key: '!actors.items!V5GRrizDgqY1gzHu.wh1XEzDQhhm5obr3'
+effects: []
+folder: null
+sort: 0
+flags:
+  core:
+    sourceId: Compendium.torgeternity.archetypes.QVpKuacd4LKfpJOy
+system:
+  shock:
+    max: 8
+    value: 0
+  wounds:
+    max: 3
+    value: 0
+  attributes:
+    charisma: 6
+    dexterity: 9
+    mind: 8
+    spirit: 8
+    strength: 9
+  other:
+    move: 9
+    run: 27
+    toughness: 13
+    armor: 4
+    cosm: panPacifica
+    possibilities: 3
+    posibilities: 3
+  skills:
+    airVehicles:
+      baseAttribute: dexterity
+      adds: null
+      value: '-'
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    alteration:
+      baseAttribute: mind
+      adds: null
+      value: '-'
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    apportation:
+      baseAttribute: spirit
+      adds: null
+      value: '-'
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    beastRiding:
+      baseAttribute: dexterity
+      adds: null
+      value: 9
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    computers:
+      baseAttribute: mind
+      adds: 1
+      value: 9
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    conjuration:
+      baseAttribute: spirit
+      adds: null
+      value: '-'
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    divination:
+      baseAttribute: mind
+      adds: null
+      value: '-'
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    dodge:
+      baseAttribute: dexterity
+      adds: 2
+      value: 11
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    energyWeapons:
+      baseAttribute: dexterity
+      adds: null
+      value: 9
+      isFav: false
+      groupName: combat
+      unskilledUse: 1
+    evidenceAnalysis:
+      baseAttribute: mind
+      adds: 1
+      value: 9
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    faith:
+      baseAttribute: spirit
+      adds: null
+      value: 8
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    find:
+      baseAttribute: mind
+      adds: 1
+      value: 9
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    fireCombat:
+      baseAttribute: dexterity
+      adds: 1
+      value: 10
+      isFav: false
+      groupName: combat
+      unskilledUse: 1
+    firstAid:
+      baseAttribute: mind
+      adds: null
+      value: 8
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    heavyWeapons:
+      baseAttribute: dexterity
+      adds: null
+      value: 9
+      isFav: false
+      groupName: combat
+      unskilledUse: 1
+    intimidation:
+      baseAttribute: spirit
+      adds: null
+      value: 8
+      isFav: false
+      groupName: interaction
+      unskilledUse: 1
+    kinesis:
+      baseAttribute: spirit
+      adds: null
+      value: '-'
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    landVehicles:
+      baseAttribute: dexterity
+      adds: 1
+      value: 10
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    language:
+      baseAttribute: mind
+      adds: null
+      value: '-'
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    lockpicking:
+      baseAttribute: dexterity
+      adds: null
+      value: '-'
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    maneuver:
+      baseAttribute: dexterity
+      adds: 1
+      value: 10
+      isFav: false
+      groupName: interaction
+      unskilledUse: 1
+    medicine:
+      baseAttribute: mind
+      adds: null
+      value: '-'
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    meleeWeapons:
+      baseAttribute: dexterity
+      adds: 3
+      value: 12
+      isFav: false
+      groupName: combat
+      unskilledUse: 1
+    missileWeapons:
+      baseAttribute: dexterity
+      adds: null
+      value: 9
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    persuasion:
+      baseAttribute: charisma
+      adds: null
+      value: 6
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    precognition:
+      baseAttribute: mind
+      adds: null
+      value: '-'
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    profession:
+      baseAttribute: mind
+      adds: null
+      value: 8
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    reality:
+      baseAttribute: spirit
+      adds: 1
+      value: 9
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    scholar:
+      baseAttribute: mind
+      adds: null
+      value: 8
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    science:
+      baseAttribute: mind
+      adds: 1
+      value: 9
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    stealth:
+      baseAttribute: dexterity
+      adds: 1
+      value: 10
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    streetwise:
+      baseAttribute: charisma
+      adds: null
+      value: 6
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    survival:
+      baseAttribute: mind
+      adds: null
+      value: 8
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    taunt:
+      baseAttribute: charisma
+      adds: null
+      value: 6
+      isFav: false
+      groupName: interaction
+      unskilledUse: 1
+    telepathy:
+      baseAttribute: charisma
+      adds: null
+      value: '-'
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    tracking:
+      baseAttribute: mind
+      adds: null
+      value: 8
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    trick:
+      baseAttribute: mind
+      adds: 1
+      value: 9
+      isFav: false
+      groupName: interaction
+      unskilledUse: 1
+    unarmedCombat:
+      baseAttribute: dexterity
+      adds: null
+      value: 9
+      isFav: false
+      groupName: combat
+      unskilledUse: 1
+    waterVehicles:
+      baseAttribute: dexterity
+      adds: null
+      value: 9
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    willpower:
+      baseAttribute: spirit
+      adds: null
+      value: 8
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+  xp:
+    unspent: 0
+    earned: 0
+  axioms:
+    magic: 4
+    social: 24
+    spirit: 8
+    tech: 24
+  details:
+    clearance: alpha
+    background: >-
+      <p><img class="charimg"
+      src="systems/torgeternity/images/characters/Electric_Samurai.webp" alt=""
+      width="1015" height="1963"></p>
+
+      <p
+      class="moreheight">@UUID[Compendium.torgeternity.system-de-handouts.JournalEntry.DLLvnXpv7RFhRgHu.JournalEntryPage.JrsdRBb5FF01sg6B]{Archetyp
+      - Die Elektrosamurai}</p>
+
+      <h3>&Uuml;berblick</h3>
+
+      <p>Die Elektrosamurai sind eine Gruppe moderner Krieger, die dem alten
+      Kodex des Bushido folgen, aber hochmoderne Waffen und R&uuml;stungen
+      einsetzen. Die Urspr&uuml;nge der Bewegung sind verworren, ein seltsames
+      Zusammentreffen der Punk-Jugendkultur und der treuen Nachkommen der
+      urspr&uuml;nglichen Samurai. Die Mitgliedschaft ist nur auf Einladung
+      m&ouml;glich, und die Einladungen werden nur an diejenigen gerichtet, die
+      sich im und au&szlig;erhalb des Kampfes als w&uuml;rdig
+      erweisen.&nbsp;</p>
+
+      <p>Stormer und andere Feinde k&ouml;nnen die gleiche R&uuml;stung tragen
+      und &auml;hnliche Waffen f&uuml;hren, aber sie sind keine echten Samurai.
+      Es ist die Pflicht jedes Auserw&auml;hlten, solche Heuchler
+      herauszufordern.</p>
+
+      <h3>Taktiken</h3>
+
+      <p>Deine Hauptwaffe ist dein Elektrokatana, das erstaunlich schweren
+      Schaden anrichtet und R&uuml;stungen durchbohrt. Es ist keine Schande
+      praktisch vorzugehen, also tr&auml;gst du dein SC Kyogo 144 SMG bei dir,
+      um deine Chancen gegen eine gro&szlig;e Anzahl schw&auml;cherer Gegner
+      auszugleichen. Nutze die Vorteile des riesigen Munitionsclips der
+      Maschinenpistole, indem du lange Feuerst&ouml;&szlig;e einsetzt. Die
+      meisten deiner Interaktionsangriffe sind ziemlich gut. Greife deshalb auf
+      sie zur&uuml;ck, wenn sie Anerkannte Aktionen sind &ndash; abgesehen vom
+      <em>Verspotten</em>. Kleinliche Beleidigungen empfindest du als
+      leichtfertig und geschmacklos.</p>
+
+      <h3>Moment der Krise</h3>
+
+      <p>Als die Seuche zum ersten Mal auftauchte, hast du als Bio-Ingenieurin
+      gearbeitet, mit einem Schwerpunkt in der Genforschung. Bevor jemand
+      verstand, was geschah, brach ein Jiang Shi durch die Einz&auml;unung und
+      begann, deine Mitarbeiter umzubringen. Vielleicht waren es die langen
+      Jahre des Kendo-Unterrichts, die dir geholfen haben, die Kreatur zu
+      besiegen. Oder vielleicht war es die ruhige und methodische Art, mit der
+      du die Patienten und das Krankenhauspersonal gerettet hast. So oder so, es
+      l&ouml;ste eine Ver&auml;nderung in dir aus und lenkte die Aufmerksamkeit
+      der Elektrosamurai- Bewegung auf dich.</p>
+
+      <h3>Zitat</h3>
+
+      <p>"Ich w&uuml;rde meine Klinge nicht mit einem Feind wie dir
+      beschmutzen."</p>
+
+      <h3>Beschreibung</h3>
+
+      <p>Der Ionen-Gusoku und das Elektrokatana sind die unverwechselbaren
+      Markenzeichen der Elektrosamurai. Starre Selbstkontrolle und einwandfreie
+      Umgangsformen sind Ideale, die du anstrebst, aber nie ganz erreicht
+      hast.</p>
+
+      <h3>Agenda</h3>
+
+      <p>Die acht Tugenden des Bushido zwingen dich, die
+      Realit&auml;tsr&auml;uber und die Seuche zu bek&auml;mpfen und die
+      unschuldigen Menschen zu sch&uuml;tzen, die von beiden bedroht werden.
+      Folge dem Kodex! Sei rechtschaffen, heldenhaft, mitf&uuml;hlend,
+      h&ouml;flich, ehrlich, ehrenhaft, loyal und diszipliniert &ndash; auch
+      wenn es manchmal schwierig ist.</p>
+
+      <h3>Namen</h3>
+
+      <p>Akimi, Haruka, Izumi, Jun, Kazumi, Maru, Riku, Shigeri, Tomo</p>
+
+      <h3>Vorgeschlagener Aufstieg (Optional)</h3>
+
+      <ul>
+
+      <li>(5 EP) Unnachgiebig (Elektrosamurai)</li>
+
+      <li>(7 EP) Ionengusoku: Blitzh&uuml;lle</li>
+
+      <li>(1 EP) <em>Projektilwaffen</em> +1</li>
+
+      <li>(2 EP) <em>Realit&auml;t</em> +2</li>
+
+      <li>(3 EP) <em>Ausweichen</em> +3</li>
+
+      <li>(3 EP) <em>Landfahrzeuge</em> +3</li>
+
+      <li>(4 EP) <em>Nahkampfwaffen</em> +4</li>
+
+      <li>(5 EP) <em>Nahkampfwaffen</em> +5</li>
+
+      </ul>
+    race: human
+  editstate: false
+  fatigue: '1'
+ownership:
+  default: 0
+  9Q0XnqFwko7hRlvL: 3
+prototypeToken:
+  flags: {}
+  name: Die Elektrosamurai
+  displayName: 0
+  width: 1
+  height: 1
+  lockRotation: true
+  rotation: 0
+  actorLink: true
+  disposition: 1
+  displayBars: 40
+  bar1:
+    attribute: wounds
+  bar2:
+    attribute: shock
+  randomImg: false
+  alpha: 1
+  light:
+    alpha: 1
+    angle: 360
+    bright: 0
+    color: null
+    coloration: 1
+    dim: 0
+    luminosity: 0.5
+    saturation: 0
+    contrast: 0
+    shadows: 0
+    animation:
+      speed: 5
+      intensity: 5
+      type: null
+      reverse: false
+    darkness:
+      min: 0
+      max: 1
+    attenuation: 0.5
+  texture:
+    src: systems/torgeternity/images/characters/electric_samurai.Token.webp
+    tint: null
+    scaleX: 1
+    scaleY: 1
+    offsetX: 0
+    offsetY: 0
+    rotation: 0
+  sight:
+    angle: 360
+    enabled: true
+    range: 0
+    brightness: 1
+    visionMode: basic
+    attenuation: 0.1
+    saturation: 0
+    contrast: 0
+  appendNumber: false
+  prependAdjective: false
+  detectionModes: []
+_stats:
+  systemId: torgeternity
+  systemVersion: 3.7.0
+  coreVersion: '11.315'
+  createdTime: 1694866294442
+  modifiedTime: 1711900167863
+  lastModifiedBy: CtisFurQNe9h7ABb
+_key: '!actors!V5GRrizDgqY1gzHu'
+

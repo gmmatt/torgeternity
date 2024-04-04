@@ -1,0 +1,1111 @@
+_id: ys0MhNx2uIG2ORAD
+name: The Scrapper
+type: stormknight
+img: systems/torgeternity/images/characters/Scrapper.Avatar.webp
+items:
+  - _id: TwU5pg3OXKknzNFA
+    name: Occultech Implants
+    type: perk
+    img: systems/torgeternity/images/icons/reality-icon.webp
+    effects: []
+    folder: null
+    sort: 54400000
+    flags:
+      core:
+        sourceId: Compendium.te001-core-rulebook.Items.z7Zj7CEp6QKU15aW
+    system:
+      category: occultech
+      cosm: Tharkold
+      prerequisites: Strength 8+
+      timestaken: null
+      description: >-
+        <p>When the character takes this Perk, she may choose up to $10 000
+        worth of occultech. These implants have been properly exorcised of any
+        demonic influence. See the list of Tharkoldu
+        @UUID[Compendium.te001-core-rulebook.rules.pwneQ55M0nnDH0Us.JournalEntryPage.qKdamp4rrcX6TTt0#occultech]{Occultech}.</p>
+
+        <p><strong>New Implants:</strong> This Perk may be taken more than once.
+        Each time after the first, it grants the user another $5 000 worth of
+        implants.</p>
+
+        <p>&nbsp;</p>
+
+        <p>Found in <strong>Core Rules</strong></p>
+      pulpPowers:
+        enhancementNumber: 0
+        enhancement01:
+          title: ''
+          description: ''
+          taken: false
+        enhancement02:
+          title: ''
+          description: ''
+          taken: false
+        enhancement03:
+          title: ''
+          description: ''
+          taken: false
+        enhancement04:
+          title: ''
+          description: ''
+          taken: false
+        enhancement05:
+          title: ''
+          description: ''
+          taken: false
+        enhancement06:
+          title: ''
+          description: ''
+          taken: false
+        enhancement07:
+          title: ''
+          description: ''
+          taken: false
+        enhancement08:
+          title: ''
+          description: ''
+          taken: false
+        enhancement09:
+          title: ''
+          description: ''
+          taken: false
+        enhancement10:
+          title: ''
+          description: ''
+          taken: false
+        enhancement11:
+          title: ''
+          description: ''
+          taken: false
+        enhancement12:
+          title: ''
+          description: ''
+          taken: false
+        enhancement13:
+          title: ''
+          description: ''
+          taken: false
+        enhancement14:
+          title: ''
+          description: ''
+          taken: false
+        enhancement15:
+          title: ''
+          description: ''
+          taken: false
+        limitationNumber: 0
+        limitation01: ''
+        limitation02: ''
+        limitation03: ''
+        limitation04: ''
+        limitation05: ''
+        limitation06: ''
+        limitation07: ''
+        limitation08: ''
+        limitation09: ''
+        limitation10: ''
+    ownership:
+      default: 0
+      A9LyAqagoJJU3gDH: 3
+      CtisFurQNe9h7ABb: 3
+    _stats:
+      systemId: torgeternity
+      systemVersion: 3.1.1
+      coreVersion: '11.308'
+      createdTime: 1693914389548
+      modifiedTime: 1693914389548
+      lastModifiedBy: CtisFurQNe9h7ABb
+    _key: '!actors.items!ys0MhNx2uIG2ORAD.TwU5pg3OXKknzNFA'
+  - _id: fF3wo6bNS33bnk31
+    name: Whirlwind
+    type: perk
+    img: systems/torgeternity/images/icons/reality-icon.webp
+    effects: []
+    folder: null
+    sort: 54500000
+    flags:
+      core:
+        sourceId: Compendium.te001-core-rulebook.Items.Jk0kUgblznvJQrsI
+    system:
+      category: prowess
+      cosm: (None)
+      prerequisites: Dexterity 8+
+      timestaken: null
+      description: >-
+        <p>The warrior has trained to hit a large number of foes in a single
+        dance of death. He ignores the first two points of the
+        @UUID[Compendium.te001-core-rulebook.rules.pwneQ55M0nnDH0Us.JournalEntryPage.EhKa65cpHvodUl2L#multi-targeting]{Multi-Targeting}
+        penalty when using melee weapons.</p>
+
+        <p>&nbsp;</p>
+
+        <p>Found in <strong>Core Rules</strong></p>
+      pulpPowers:
+        enhancementNumber: 0
+        enhancement01:
+          title: ''
+          description: ''
+          taken: false
+        enhancement02:
+          title: ''
+          description: ''
+          taken: false
+        enhancement03:
+          title: ''
+          description: ''
+          taken: false
+        enhancement04:
+          title: ''
+          description: ''
+          taken: false
+        enhancement05:
+          title: ''
+          description: ''
+          taken: false
+        enhancement06:
+          title: ''
+          description: ''
+          taken: false
+        enhancement07:
+          title: ''
+          description: ''
+          taken: false
+        enhancement08:
+          title: ''
+          description: ''
+          taken: false
+        enhancement09:
+          title: ''
+          description: ''
+          taken: false
+        enhancement10:
+          title: ''
+          description: ''
+          taken: false
+        enhancement11:
+          title: ''
+          description: ''
+          taken: false
+        enhancement12:
+          title: ''
+          description: ''
+          taken: false
+        enhancement13:
+          title: ''
+          description: ''
+          taken: false
+        enhancement14:
+          title: ''
+          description: ''
+          taken: false
+        enhancement15:
+          title: ''
+          description: ''
+          taken: false
+        limitationNumber: 0
+        limitation01: ''
+        limitation02: ''
+        limitation03: ''
+        limitation04: ''
+        limitation05: ''
+        limitation06: ''
+        limitation07: ''
+        limitation08: ''
+        limitation09: ''
+        limitation10: ''
+    ownership:
+      default: 0
+      A9LyAqagoJJU3gDH: 3
+      CtisFurQNe9h7ABb: 3
+    _stats:
+      systemId: torgeternity
+      systemVersion: 3.1.1
+      coreVersion: '11.308'
+      createdTime: 1693914394476
+      modifiedTime: 1693914402276
+      lastModifiedBy: CtisFurQNe9h7ABb
+    _key: '!actors.items!ys0MhNx2uIG2ORAD.fF3wo6bNS33bnk31'
+  - _id: YstxDnzfvEu7Fqm3
+    name: Impact Hammer
+    type: meleeweapon
+    img: systems/torgeternity/images/icons/axe-icon.webp
+    effects: []
+    folder: null
+    sort: 300000
+    flags:
+      core:
+        sourceId: Compendium.te001-core-rulebook.Items.07pjHDJDrK1pESkv
+    system:
+      cosm: Tharkold
+      description: >-
+        <p>@UUID[Compendium.te001-core-rulebook.rules.pwneQ55M0nnDH0Us.JournalEntryPage.qKdamp4rrcX6TTt0#stagger:]{Stagger}</p>
+
+        <p>@UUID[Compendium.te001-core-rulebook.rules.pwneQ55M0nnDH0Us.JournalEntryPage.qKdamp4rrcX6TTt0#two-handed:]{Two-Handed}</p>
+
+        <p>The heavy head contains a pneumatic mechanism that adds a burst of
+        thrust to the swing and drives a spike forward at the point of impact to
+        greatly increase the force directed at the impact point&mdash;if a
+        wielder is strong enough to get the hammer moving in the first
+        place.</p>
+
+        <p>&nbsp;</p>
+
+        <p>Found in <strong>Core Rules</strong></p>
+      techlevel: 25
+      price: '300'
+      value: 13
+      attackWith: meleeWeapons
+      damageType: strengthPlus
+      damage: 4
+      ap: 0
+      bonus: 2
+      notes: Stagger, Two Handed
+      chatNote: ''
+    ownership:
+      default: 0
+      A9LyAqagoJJU3gDH: 3
+      CtisFurQNe9h7ABb: 3
+    _stats:
+      systemId: torgeternity
+      systemVersion: 3.1.1
+      coreVersion: '11.308'
+      createdTime: 1693914415715
+      modifiedTime: 1693914415715
+      lastModifiedBy: CtisFurQNe9h7ABb
+    _key: '!actors.items!ys0MhNx2uIG2ORAD.YstxDnzfvEu7Fqm3'
+  - _id: 3cpjqoL7Qu1R3hNm
+    name: Net Launcher
+    type: missileweapon
+    img: systems/torgeternity/images/icons/missile-weapon-icon.webp
+    effects: []
+    folder: null
+    sort: 49100000
+    flags:
+      core:
+        sourceId: Compendium.te001-core-rulebook.Items.t5x6s1AwFy1qZBpF
+    system:
+      cosm: Tharkold
+      description: >-
+        <p>@UUID[Compendium.te001-core-rulebook.rules.pwneQ55M0nnDH0Us.JournalEntryPage.qKdamp4rrcX6TTt0#blas:]{Blast}</p>
+
+        <p>A weighted net fits into a tube launcher powered by a tightly wound
+        torsion spring. A mechanical engine is needed to wind the spring or
+        recover the net after it&rsquo;s been launched. The net acts just like a
+        Grappling attempt (page 123), with a hit dealing &minus;2 damage. A Good
+        hit restrains the target temporarily and does full damage. An
+        Outstanding hit restrains and Stymies the target. Technodemons often
+        employ a special version of this weapon that deploys a net with the same
+        properties as a pain gauntlet.</p>
+
+        <p>&nbsp;</p>
+
+        <p>Found in <strong>Core Rules</strong></p>
+      techlevel: 25
+      price: '100'
+      value: 10
+      attackWith: missileWeapons
+      damageType: flat
+      damage: 5
+      ap: 0
+      ammo:
+        max: 0
+        value: 0
+      minStrength: null
+      range: 5 / 10 / 15
+      notes: Small Blast
+      chatNote: ''
+    ownership:
+      default: 0
+      A9LyAqagoJJU3gDH: 3
+      CtisFurQNe9h7ABb: 3
+    _stats:
+      systemId: torgeternity
+      systemVersion: 3.1.1
+      coreVersion: '11.308'
+      createdTime: 1693914426740
+      modifiedTime: 1693914426740
+      lastModifiedBy: CtisFurQNe9h7ABb
+    _key: '!actors.items!ys0MhNx2uIG2ORAD.3cpjqoL7Qu1R3hNm'
+  - _id: y7Vavfy3rgxzs0mG
+    name: Filter Mask
+    type: gear
+    img: systems/torgeternity/images/icons/gear-icon.webp
+    effects: []
+    folder: null
+    sort: 6700000
+    flags:
+      core:
+        sourceId: Compendium.te001-core-rulebook.Items.WP88DoYjrypNKL22
+    system:
+      cosm: Pan-Pacifica
+      description: >-
+        <p>Advanced microfibers screen particles from the air, making the wearer
+        immune to inhaled poisons and toxins.</p>
+
+        <p>&nbsp;</p>
+
+        <p>Found in <strong>Core Rules</strong></p>
+      techlevel: 24
+      price: '60'
+      value: 9
+    ownership:
+      default: 0
+      A9LyAqagoJJU3gDH: 3
+      CtisFurQNe9h7ABb: 3
+    _stats:
+      systemId: torgeternity
+      systemVersion: 3.1.1
+      coreVersion: '11.308'
+      createdTime: 1693914445650
+      modifiedTime: 1693914471715
+      lastModifiedBy: CtisFurQNe9h7ABb
+    _key: '!actors.items!ys0MhNx2uIG2ORAD.y7Vavfy3rgxzs0mG'
+  - _id: UKW0uwOazYvkWwEK
+    name: Flares
+    type: gear
+    img: systems/torgeternity/images/icons/gear-icon.webp
+    effects: []
+    folder: null
+    sort: 6750000
+    flags:
+      core:
+        sourceId: Compendium.te001-core-rulebook.Items.wOSsT4wHWPEcX85E
+    system:
+      cosm: Nile Empire
+      description: <p>Found in <strong>Core Rules</strong></p>
+      techlevel: 20
+      price: '5'
+      value: 4
+    ownership:
+      default: 0
+      A9LyAqagoJJU3gDH: 3
+      CtisFurQNe9h7ABb: 3
+    _stats:
+      systemId: torgeternity
+      systemVersion: 3.1.1
+      coreVersion: '11.308'
+      createdTime: 1693914453148
+      modifiedTime: 1693914473060
+      lastModifiedBy: CtisFurQNe9h7ABb
+    _key: '!actors.items!ys0MhNx2uIG2ORAD.UKW0uwOazYvkWwEK'
+  - _id: qJ5eghHKWM2cg5ig
+    name: Radiation Detector
+    type: gear
+    img: systems/torgeternity/images/icons/gear-icon.webp
+    effects: []
+    folder: null
+    sort: 6800000
+    flags:
+      core:
+        sourceId: Compendium.te001-core-rulebook.Items.6CYd0HCZf6RrM4JB
+    system:
+      cosm: Core Earth
+      description: >-
+        <p>Also known as a Geiger counter. When switched on it automatically
+        alerts the user of dangerous radiation levels. Grants a +4 bonus to find
+        items that are more radioactive than the background area.</p>
+
+        <p>&nbsp;</p>
+
+        <p>Found in <strong>Core Rules</strong></p>
+      techlevel: 21
+      price: '120'
+      value: 11
+    ownership:
+      default: 0
+      A9LyAqagoJJU3gDH: 3
+      CtisFurQNe9h7ABb: 3
+    _stats:
+      systemId: torgeternity
+      systemVersion: 3.1.1
+      coreVersion: '11.308'
+      createdTime: 1693914458276
+      modifiedTime: 1693914458276
+      lastModifiedBy: CtisFurQNe9h7ABb
+    _key: '!actors.items!ys0MhNx2uIG2ORAD.qJ5eghHKWM2cg5ig'
+  - _id: S2Lgu82VZjuG0Q0M
+    name: Thav Radiation Filter MK II
+    type: implant
+    img: systems/torgeternity/images/icons/implant.webp
+    effects: []
+    folder: null
+    sort: 39000000
+    flags:
+      core:
+        sourceId: Compendium.te001-core-rulebook.Items.hkVo701Qmh9NUKVg
+    system:
+      cosm: Tharkold
+      description: <p>Found in <strong>Core Rules</strong></p>
+      techlevel: 25
+      price: 2,000
+      value: 17
+      notes: ''
+    ownership:
+      default: 0
+      A9LyAqagoJJU3gDH: 3
+      CtisFurQNe9h7ABb: 3
+    _stats:
+      systemId: torgeternity
+      systemVersion: 3.1.1
+      coreVersion: '11.308'
+      createdTime: 1693914511570
+      modifiedTime: 1693914634493
+      lastModifiedBy: CtisFurQNe9h7ABb
+    _key: '!actors.items!ys0MhNx2uIG2ORAD.S2Lgu82VZjuG0Q0M'
+  - _id: 6QxM5pY3h7MRaTHM
+    name: Digan CyberArm
+    type: implant
+    img: systems/torgeternity/images/icons/implant.webp
+    effects:
+      - icon: icons/svg/aura.svg
+        origin: Item.JJ2UFjTvYy6vtWzR
+        duration:
+          startTime: null
+          seconds: null
+          combat: null
+          rounds: null
+          turns: null
+          startRound: null
+          startTurn: null
+        disabled: false
+        name: Strength +2 (Arm)
+        _id: e2sP6LcZtQlgO4DP
+        changes:
+          - key: system.attributes.strength
+            mode: 2
+            value: '2'
+            priority: null
+        description: ''
+        transfer: true
+        statuses: []
+        flags: {}
+        tint: null
+        _key: >-
+          !actors.items.effects!ys0MhNx2uIG2ORAD.6QxM5pY3h7MRaTHM.e2sP6LcZtQlgO4DP
+      - icon: icons/svg/aura.svg
+        origin: Item.JJ2UFjTvYy6vtWzR
+        duration:
+          startTime: null
+          seconds: null
+          combat: null
+          rounds: null
+          turns: null
+          startRound: null
+          startTurn: null
+        disabled: true
+        name: Armor +3 (Arm)
+        _id: LcMXSEQ8O4i1pjMt
+        changes:
+          - key: system.other.toughness
+            mode: 2
+            value: '3'
+            priority: null
+          - key: system.other.armor
+            mode: 2
+            value: '3'
+            priority: null
+        description: ''
+        transfer: true
+        statuses: []
+        flags: {}
+        tint: null
+        _key: >-
+          !actors.items.effects!ys0MhNx2uIG2ORAD.6QxM5pY3h7MRaTHM.LcMXSEQ8O4i1pjMt
+    folder: null
+    sort: 600000
+    flags:
+      core:
+        sourceId: Compendium.te001-core-rulebook.Items.eqLYuyoAdwVRcQrQ
+    system:
+      cosm: Tharkold
+      description: >-
+        <p>Digan constructions are bulky but powerful, and this modular
+        replacement arm is no exception. It increases <em>Strength</em> tests
+        and damage by +2 , and has +3 Armor on that limb only. The arm’s Armor
+        protects the character’s torso if he takes an Active Defense. The
+        <em>Strength</em> increase applies only to tests and attacks made with
+        that limb.</p>
+
+        <p>&nbsp;</p>
+
+        <p>Found in <strong>Core Rules</strong></p>
+      techlevel: 25
+      price: 8,000
+      value: 19
+      notes: ''
+    ownership:
+      default: 0
+      A9LyAqagoJJU3gDH: 3
+      CtisFurQNe9h7ABb: 3
+    _stats:
+      systemId: torgeternity
+      systemVersion: 3.1.1
+      coreVersion: '11.308'
+      createdTime: 1693914499180
+      modifiedTime: 1693914625530
+      lastModifiedBy: CtisFurQNe9h7ABb
+    _key: '!actors.items!ys0MhNx2uIG2ORAD.6QxM5pY3h7MRaTHM'
+  - _id: ryISQSHD5wRghm0e
+    name: Diffrax Plate
+    type: armor
+    img: systems/torgeternity/images/icons/armor-icon.webp
+    effects: []
+    folder: null
+    sort: 52500000
+    flags:
+      core:
+        sourceId: Compendium.te001-core-rulebook.Items.Item.wP7vzluooDeOtebZ
+    system:
+      cosm: Tharkold
+      description: >-
+        <p>@UUID[Compendium.te001-core-rulebook.rules.pwneQ55M0nnDH0Us.JournalEntryPage.qKdamp4rrcX6TTt0#fatigues:]{Fatigues}</p>
+
+        <p>Black metallic armor cobbled together from energy-diffusing salvage.
+        It resembles obsidian, and energy skitters across its surface, sizzling
+        and popping until it coalesces and re-emerges projected at some
+        different angle.</p>
+
+        <p>&nbsp;</p>
+
+        <p>Found in <strong>Core Rules</strong></p>
+      price: '500'
+      techlevel: 25
+      value: 13
+      bonus: 3
+      equipped: true
+      equippedClass: item-equipped
+      maxDex: 8
+      minStrength: 8
+      notes: Fatigues, bonus adds to dodge vs. energy weapons
+      fatigue: 1
+    ownership:
+      default: 0
+      A9LyAqagoJJU3gDH: 3
+      CtisFurQNe9h7ABb: 3
+    _stats:
+      systemId: torgeternity
+      systemVersion: 3.7.0
+      coreVersion: '11.315'
+      createdTime: 1711551146924
+      modifiedTime: 1711705159429
+      lastModifiedBy: CtisFurQNe9h7ABb
+    _key: '!actors.items!ys0MhNx2uIG2ORAD.ryISQSHD5wRghm0e'
+effects:
+  - icon: icons/svg/aura.svg
+    origin: >-
+      Compendium.torgeternity.archetypes.Actor.ys0MhNx2uIG2ORAD.Item.6QxM5pY3h7MRaTHM
+    duration:
+      startTime: 0
+      seconds: null
+      combat: null
+      rounds: null
+      turns: null
+      startRound: null
+      startTurn: null
+    disabled: true
+    name: Strength +2 (Arm)
+    _id: hJopDtTRygZm4OjO
+    changes:
+      - key: system.attributes.strength
+        mode: 2
+        value: '2'
+        priority: null
+    description: ''
+    transfer: false
+    statuses: []
+    flags: {}
+    tint: null
+    _key: '!actors.effects!ys0MhNx2uIG2ORAD.hJopDtTRygZm4OjO'
+  - icon: icons/svg/aura.svg
+    origin: >-
+      Compendium.torgeternity.archetypes.Actor.ys0MhNx2uIG2ORAD.Item.6QxM5pY3h7MRaTHM
+    duration:
+      startTime: 0
+      seconds: null
+      combat: null
+      rounds: null
+      turns: null
+      startRound: null
+      startTurn: null
+    disabled: true
+    name: Armor +3 (Arm)
+    _id: tfdPfqnwELylRgKR
+    changes:
+      - key: system.other.armor
+        mode: 2
+        value: '3'
+    description: ''
+    transfer: false
+    statuses: []
+    flags: {}
+    tint: null
+    _key: '!actors.effects!ys0MhNx2uIG2ORAD.tfdPfqnwELylRgKR'
+folder: null
+sort: 100001
+flags: {}
+system:
+  shock:
+    max: 8
+    value: 0
+  wounds:
+    max: 3
+    value: 0
+  attributes:
+    charisma: 6
+    dexterity: 8
+    mind: 6
+    spirit: 8
+    strength: 12
+  other:
+    move: 8
+    run: 24
+    toughness: 15
+    armor: 3
+    cosm: tharkold
+    possibilities: 3
+    posibilities: 3
+  skills:
+    airVehicles:
+      baseAttribute: dexterity
+      adds: null
+      value: '-'
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    alteration:
+      baseAttribute: mind
+      adds: null
+      value: '-'
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    apportation:
+      baseAttribute: spirit
+      adds: null
+      value: '-'
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    beastRiding:
+      baseAttribute: dexterity
+      adds: null
+      value: 8
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    computers:
+      baseAttribute: mind
+      adds: null
+      value: 6
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    conjuration:
+      baseAttribute: spirit
+      adds: null
+      value: '-'
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    divination:
+      baseAttribute: mind
+      adds: null
+      value: '-'
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    dodge:
+      baseAttribute: dexterity
+      adds: 1
+      value: 9
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    energyWeapons:
+      baseAttribute: dexterity
+      adds: null
+      value: 8
+      isFav: false
+      groupName: combat
+      unskilledUse: 1
+    evidenceAnalysis:
+      baseAttribute: mind
+      adds: null
+      value: 6
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    faith:
+      baseAttribute: spirit
+      adds: null
+      value: 8
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    find:
+      baseAttribute: mind
+      adds: 2
+      value: 8
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    fireCombat:
+      baseAttribute: dexterity
+      adds: 1
+      value: 9
+      isFav: false
+      groupName: combat
+      unskilledUse: 1
+    firstAid:
+      baseAttribute: mind
+      adds: null
+      value: 6
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    heavyWeapons:
+      baseAttribute: dexterity
+      adds: 1
+      value: 9
+      isFav: false
+      groupName: combat
+      unskilledUse: 1
+    intimidation:
+      baseAttribute: spirit
+      adds: 2
+      value: 10
+      isFav: false
+      groupName: interaction
+      unskilledUse: 1
+    kinesis:
+      baseAttribute: spirit
+      adds: null
+      value: '-'
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    landVehicles:
+      baseAttribute: dexterity
+      adds: 1
+      value: 9
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    language:
+      baseAttribute: mind
+      adds: null
+      value: '-'
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    lockpicking:
+      baseAttribute: dexterity
+      adds: 1
+      value: 9
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    maneuver:
+      baseAttribute: dexterity
+      adds: null
+      value: 8
+      isFav: false
+      groupName: interaction
+      unskilledUse: 1
+    medicine:
+      baseAttribute: mind
+      adds: null
+      value: '-'
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    meleeWeapons:
+      baseAttribute: dexterity
+      adds: 3
+      value: 11
+      isFav: false
+      groupName: combat
+      unskilledUse: 1
+    missileWeapons:
+      baseAttribute: dexterity
+      adds: 1
+      value: 9
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    persuasion:
+      baseAttribute: charisma
+      adds: null
+      value: 6
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    precognition:
+      baseAttribute: mind
+      adds: null
+      value: '-'
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    profession:
+      baseAttribute: mind
+      adds: null
+      value: 6
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    reality:
+      baseAttribute: spirit
+      adds: 1
+      value: 9
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    scholar:
+      baseAttribute: mind
+      adds: null
+      value: 6
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    science:
+      baseAttribute: mind
+      adds: null
+      value: 6
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    stealth:
+      baseAttribute: dexterity
+      adds: null
+      value: 8
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    streetwise:
+      baseAttribute: charisma
+      adds: null
+      value: 6
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    survival:
+      baseAttribute: mind
+      adds: 1
+      value: 7
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    taunt:
+      baseAttribute: charisma
+      adds: 1
+      value: 7
+      isFav: false
+      groupName: interaction
+      unskilledUse: 1
+    telepathy:
+      baseAttribute: charisma
+      adds: null
+      value: '-'
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    tracking:
+      baseAttribute: mind
+      adds: null
+      value: 6
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    trick:
+      baseAttribute: mind
+      adds: null
+      value: 6
+      isFav: false
+      groupName: interaction
+      unskilledUse: 1
+    unarmedCombat:
+      baseAttribute: dexterity
+      adds: null
+      value: 8
+      isFav: false
+      groupName: combat
+      unskilledUse: 1
+    waterVehicles:
+      baseAttribute: dexterity
+      adds: null
+      value: 8
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    willpower:
+      baseAttribute: spirit
+      adds: null
+      value: 8
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+  xp:
+    unspent: 0
+    earned: 0
+  axioms:
+    magic: 12
+    social: 25
+    spirit: 4
+    tech: 25
+  details:
+    clearance: alpha
+    background: >-
+      <p><img class="charimg"
+      src="systems/torgeternity/images/characters/Scrapper.webp" alt=""
+      width="1155" height="2061"></p>
+
+      <p
+      class="moreheight">@UUID[Compendium.torgeternity.handouts.JournalEntry.Knhh8vqtjSylJo5Z.JournalEntryPage.KlL26KhVUnkWipzG]{Archetype
+      - The Scrapper}</p>
+
+      <p>When the Russians hit the Tharkold maelstrom bridge with a nuclear
+      weapon, the fallout was devastating for both sides. Hardy humans now
+      scavenge the vast, irradiated Blasted Land, searching for useful bits of
+      technodemon machinery to salvage, sell, or use.</p>
+
+      <p>You were once a soldier in the Russian army, but the horror of the
+      Battle of Moscow and the crushing disappointment of the government&rsquo;s
+      cooperation with the demons after the battle put an end to those days.</p>
+
+      <h3>Tactics</h3>
+
+      <p>Your impact hammer is an extremely powerful weapon, especially when
+      wielded with your high <em>Strength</em>. Your best plan is usually to get
+      into the middle of the bad guys and start swinging! Your CyberArm adds
+      even more <em>Strength </em>to the attack. Your interactions aren&rsquo;t
+      very strong compared to your hammer, but are worth a try when they are
+      Approved Actions. If your opponents remain out of reach, try to find
+      discarded firearms or use intimidation on them.</p>
+
+      <h3>Moment of Crisis</h3>
+
+      <p>After the Battle of Moscow, desertion was your only option. The Blasted
+      Land called to you, offering you a clean death far away from politics and
+      betrayal. Instead you found people there, desperate ones beset by the
+      abominations the fallout created. Slaying one of those beasts may have
+      triggered your transformation into a Storm Knight, or perhaps it was
+      rescuing that family without negotiating a price first.</p>
+
+      <h3>Quote</h3>
+
+      <p>&ldquo;There is Russian saying: &rsquo;revenge is dish best served
+      cold.&rsquo; It is very cold in Russia, mudak.&ldquo;</p>
+
+      <h3>Description</h3>
+
+      <p>You are tall, broad-shouldered, and built like a tank. Everyone in the
+      Blasted Land wears similar apparel&mdash; made from whatever mismatched
+      clothing and armor is handy or resilient enough to last. You pretend to be
+      cynical and sarcastic, but underneath you are actually optimistic and
+      idealistic. Your impact hammer is always obvious, an oversized device made
+      for technodemons. Even at rest it hums with sinister energy.</p>
+
+      <h3>Agenda</h3>
+
+      <p>Friendship and loyalty are at the heart of your actions&mdash;not that
+      you allow anyone to discover that. You use a pretense of greed to hide
+      your soft heart.</p>
+
+      <h3>Names</h3>
+
+      <p>Anton, Gennadi, Jenya, Lev, Nikita, Sasha, Valya, Vitya, Yaro</p>
+
+      <h3>Advancement Track (Optional)</h3>
+
+      <ul>
+
+      <li>(5 XP) Occultech (Vav Sensation Suppressor)</li>
+
+      <li>(7 XP) Relentless</li>
+
+      <li>(1 XP) <em>energy weapons</em> +1</li>
+
+      <li>(2 XP) <em>survival</em> +2</li>
+
+      <li>(3 XP) <em>intimidation</em> +3</li>
+
+      <li>(3 XP) <em>find</em> +3</li>
+
+      <li>(4 XP) <em>melee weapons</em> +4</li>
+
+      <li>(5 XP) <em>melee weapons</em> +5</li>
+
+      </ul>
+    race: human
+  editstate: false
+  fatigue: '1'
+ownership:
+  default: 0
+  A9LyAqagoJJU3gDH: 3
+prototypeToken:
+  flags: {}
+  name: Scrapper
+  displayName: 30
+  width: 1
+  height: 1
+  lockRotation: false
+  rotation: 0
+  actorLink: true
+  disposition: 1
+  displayBars: 40
+  bar1:
+    attribute: wounds
+  bar2:
+    attribute: shock
+  randomImg: false
+  alpha: 1
+  light:
+    alpha: 1
+    angle: 360
+    bright: 0
+    coloration: 1
+    dim: 0
+    luminosity: 0.5
+    saturation: 0
+    contrast: 0
+    shadows: 0
+    animation:
+      type: null
+      speed: 5
+      intensity: 5
+      reverse: false
+    darkness:
+      min: 0
+      max: 1
+    color: null
+    attenuation: 0.5
+  texture:
+    src: systems/torgeternity/images/characters/scrapper.Token.webp
+    tint: null
+    scaleX: 1
+    scaleY: 1
+    offsetX: 0
+    offsetY: 0
+    rotation: 0
+  sight:
+    angle: 360
+    enabled: false
+    range: 0
+    brightness: 1
+    visionMode: basic
+    attenuation: 0.1
+    saturation: 0
+    contrast: 0
+  appendNumber: false
+  prependAdjective: false
+  detectionModes: []
+_stats:
+  systemId: torgeternity
+  systemVersion: 3.7.0
+  coreVersion: '11.315'
+  createdTime: 1693914389548
+  modifiedTime: 1711900374575
+  lastModifiedBy: CtisFurQNe9h7ABb
+_key: '!actors!ys0MhNx2uIG2ORAD'
+

@@ -1,8 +1,0 @@
-2023/10/15-08:27:45.725 14c8 Recovering log #104
-2023/10/15-08:27:45.772 14c8 Delete type=0 #104
-2023/10/15-08:27:45.772 14c8 Delete type=3 #102
-2023/10/15-08:28:14.820 6440 Level-0 table #109: started
-2023/10/15-08:28:14.820 6440 Level-0 table #109: 0 bytes OK
-2023/10/15-08:28:14.844 6440 Delete type=0 #107
-2023/10/15-08:28:14.844 6440 Manual compaction at level-0 from '!scenes!nGb3YPFMhvhcL1Xs' @ 72057594037927935 : 1 .. '!scenes!nGb3YPFMhvhcL1Xs' @ 0 : 0; will stop at (end)
-2023/10/15-08:28:14.844 6440 Manual compaction at level-1 from '!scenes!nGb3YPFMhvhcL1Xs' @ 72057594037927935 : 1 .. '!scenes!nGb3YPFMhvhcL1Xs' @ 0 : 0; will stop at (end)

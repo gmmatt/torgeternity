@@ -1,0 +1,212 @@
+_id: ZaVT27zI7lzHCyvA
+name: Gestion des cartes
+content: >-
+  <p>Le jeu de cartes dans le système Foundry est rapide et facile, mais il
+  nécessite une certaine préparation de la part du MJ. Vous trouverez ci-dessous
+  des guides pour les joueurs et les MJ</p>
+
+  <p> </p>
+
+  <h1>Guide pour les joueurs</h1>
+
+  <h3>Pour accéder à votre main</h3>
+
+  <p>Cliquez sur le bouton "Ouvrir la main" en haut de la feuille de personnage,
+  ou bien</p>
+
+  <p>Cliquez sur la main qui correspond au nom de votre personnage dans l'onglet
+  jeux de cartes de la barre latérale.</p>
+
+  <blockquote>
+
+  <p><strong>Remarque </strong>: si vous obtenez un message d'erreur lorsque
+  vous tentez d'ouvrir votre main, cela signifie que votre MJ n'a pas encore
+  configuré de main pour vous. Demandez à votre MJ d'établir une main pour votre
+  personnage (les instructions pour les MJ se trouvent ci-dessous).</p>
+
+  </blockquote>
+
+  <p> </p>
+
+  <p>Vous voudrez peut-être garder votre main ouverte tout au long de la partie
+  afin de pouvoir accéder facilement à vos cartes.</p>
+
+  <p> </p>
+
+  <h3>Pour tirer une carte Destin ou Cosm</h3>
+
+  <p>Cliquez sur le bouton approprié dans la fenêtre de  votre main.</p>
+
+  <p> </p>
+
+  <h3>Pour voir vos cartes</h3>
+
+  <p>Passez la souris sur la vignette de la carte souhaitée dans votre main.</p>
+
+  <p> </p>
+
+  <h3>Pour montrer une carte à tous les autres joueurs</h3>
+
+  <p>Cliquez sur l'icône "diffusion" à côté de la carte appropriée.</p>
+
+  <p> </p>
+
+  <h3>Pour placer ou retirer une carte de votre reserve</h3>
+
+  <p>Cliquez sur la case "En reserve ?" à côté de la carte appropriée.</p>
+
+  <p> </p>
+
+  <h3>Pour jouer, défausser ou passer une carte</h3>
+
+  <p>Cliquez sur l'icône appropriée à côté de la carte.</p>
+
+  <p> </p>
+
+  <h3>Pour voir une carte qu'un autre joueur a jouée ou jetée</h3>
+
+  <p>Recherchez un message de discussion relatif à l'action effectuée par
+  l'autre joueur. Ensuite, passez la souris sur la vignette de la carte.</p>
+
+  <p> </p>
+
+  <h3>Pour voir les cartes dans les reserves des autres joueurs</h3>
+
+  <p>Regardez dans le Suivi des combats. Passez votre souris sur le nom d'une
+  carte pour la voir.</p>
+
+  <p> </p>
+
+  <h1>Guide pour les MJ</h1>
+
+  <p>Voici quelques conseils/instructions de base pour les MJ :</p>
+
+  <p> </p>
+
+  <p>Pour que le système fonctionne correctement, chaque pioche et défausse doit
+  avoir un nom spécifique. Vous pouvez librement remplacer une pioche par une
+  autre, mais assurez-vous que la pioche que vous souhaitez utiliser porte le
+  nom correct. En particulier, assurez-vous que la pioche de Drame que vous
+  voulez utiliser s'appelle "Paquet d'Action" et que la pioche du destin  que
+  vous voulez utiliser s'appelle "Paquet du Destin".</p>
+
+  <blockquote>
+
+  <p><strong>IMPORTANT </strong>: Avant que les joueurs puissent accéder à leur
+  main, vous devez configurer la main du joueur. Consultez la section ci-dessous
+  sur la configuration des mains des joueurs pour savoir comment procéder.</p>
+
+  </blockquote>
+
+  <p>Vous pouvez librement glisser et déposer des cartes entre les mains, les
+  piles de défausse et les paquets.</p>
+
+  <p>Vous pouvez mélanger et réinitialiser les jeux de cartes dans la fenêtre de
+  jeu appropriée.</p>
+
+  <p>Lorsque vous lancez un combat dans le suivi des combats (voir
+  @UUID[Compendium.torgeternity.basic-rules-fr.JournalEntry.v3rvYofTLiD0EgfS]{Combat}), une
+  nouvelle carte Action est automatiquement tirée.</p>
+
+  <p>Cliquez sur le bouton "Nouveau" dans le compteur de combat pour passer à un
+  nouveau tour et tirer une nouvelle carte Action.</p>
+
+  <p>Cliquez sur le bouton "Garder" dans le compteur de combat pour passer à un
+  nouveau round, tout en conservant la carte Action actuelle.</p>
+
+  <p>La carte Action en cours est toujours contenue dans la pile de cartes
+  Action actives. Si vous faites une erreur ou si vous devez substituer une
+  nouvelle carte Action pour le tour en cours, faites glisser la carte souhaitée
+  dans la pile de cartes Action actives, déplacez la carte incorrecte à
+  l'emplacement correct (défausse et/ou pile de cartes) et appuyez sur le bouton
+  "Actualiser" dans le compteur de combat.</p>
+
+  <p>Si vous souhaitez remélanger le contenu d'une défausse dans une pioche sans
+  tirer, vous pouvez le faire en cliquant sur le bouton de remaniement de la
+  défausse.</p>
+
+  <p>Se débarrasser des cartes orphelines. Il est recommandé de réinitialiser un
+  jeu avant de le supprimer. Si vous ne le faites pas, toutes les cartes de ce
+  paquet resteront dans les mains des joueurs et dans les piles de défausse.
+  Actuellement, Foundry ne propose pas de moyen de se débarrasser de ces cartes.
+  Cependant, voici la solution recommandée : créez une pile ou une main
+  temporaire et placez-y toutes les cartes " orphelines ". Ensuite, supprimez la
+  pile ou la main temporaire.</p>
+
+  <p> </p>
+
+  <h2>Configuration des mains des joueurs</h2>
+
+  <p>Avant qu'un joueur ne puisse accéder à sa main, vous devez la configurer
+  pour lui. La configuration d'une main de joueur se fait en deux étapes.
+  Premièrement, vous devez créer une main pour le personnage du joueur. Ensuite,
+  vous devez donner au joueur la permission d'accéder à sa main.</p>
+
+  <p> </p>
+
+  <h3>Création d'une main</h3>
+
+  <p>Le moyen le plus simple de créer une main pour un personnage est d'ouvrir
+  la feuille du Chevalier des Tempêtes de ce personnage et de cliquer sur le
+  bouton "Ouvrir une main". Cela créera une main avec le nom correct, mais cette
+  main aura besoin de changer ses permissions (voir ci-dessous).</p>
+
+  <p> </p>
+
+  <p>Notez que si un joueur tente de créer une main à l'aide du bouton " Ouvrir
+  une main ", il recevra un message d'erreur car les joueurs ne sont pas
+  autorisés à créer leurs propres mains dans Foundry. En tant que MJ, vous
+  devrez être le premier à ouvrir une main pour un personnage.</p>
+
+  <p> </p>
+
+  <h3>Modification des autorisations des joueurs</h3>
+
+  <p>Pour modifier les autorisations d'une main afin qu'un joueur puisse y
+  accéder, procédez comme suit :</p>
+
+  <p> </p>
+
+  <p>Ouvrez l'onglet Piles de Cartes</p>
+
+  <p>Faites un clic droit sur la main qui contient le nom du personnage du
+  joueur.</p>
+
+  <p>Cliquez sur "Configurer les permissions".</p>
+
+  <p>Trouvez le nom du joueur, et changez le paramètre en Propriétaire.</p>
+
+  <p>Si vous souhaitez que tous les joueurs puissent voir et modifier les mains
+  de tous les autres joueurs, vous pouvez remplacer "Tous les joueurs" par
+  "Propriétaire".</p>
+
+  <p> </p>
+
+  <p> </p>
+
+  <p> </p>
+
+  <p> </p>
+
+  <p> </p>
+
+  <p> </p>
+
+  <p> </p>
+
+  <p> </p>
+
+  <p> </p>
+
+  <p> </p>
+folder: null
+sort: 0
+permission:
+  kz1RJu8vrAPmTUwN: 3
+flags:
+  core:
+    sourceId: JournalEntry.TPyO53xtRrYkVoQD
+  torgeternity:
+    usage: manageCards
+pages: []
+_key: '!journal!ZaVT27zI7lzHCyvA'

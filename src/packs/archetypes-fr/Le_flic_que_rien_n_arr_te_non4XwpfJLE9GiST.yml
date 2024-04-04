@@ -1,0 +1,948 @@
+_id: non4XwpfJLE9GiST
+name: Le flic que rien n’arrête
+type: stormknight
+img: systems/torgeternity/images/characters/Unstoppable_Cop.Avatar.webp
+data:
+  shock:
+    max: 5
+    value: 0
+  wounds:
+    max: 3
+    value: 0
+  attributes:
+    charisma: 6
+    dexterity: 8
+    mind: 8
+    spirit: 10
+    strength: 8
+  other:
+    move: 5
+    run: 5
+    toughness: 5
+    armor: 0
+    cosm: coreEarth
+    possibilities: 0
+    posibilities: 3
+  skills:
+    airVehicles:
+      baseAttribute: dexterity
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    alteration:
+      baseAttribute: mind
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    apportation:
+      baseAttribute: spirit
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    beastRiding:
+      baseAttribute: dexterity
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    computers:
+      baseAttribute: mind
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    conjuration:
+      baseAttribute: spirit
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    divination:
+      baseAttribute: mind
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    dodge:
+      baseAttribute: dexterity
+      adds: 1
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    energyWeapons:
+      baseAttribute: dexterity
+      adds: null
+      value: 0
+      isFav: false
+      groupName: combat
+      unskilledUse: 1
+    evidenceAnalysis:
+      baseAttribute: mind
+      adds: 1
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    faith:
+      baseAttribute: spirit
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    find:
+      baseAttribute: mind
+      adds: 1
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    fireCombat:
+      baseAttribute: dexterity
+      adds: 2
+      value: 0
+      isFav: false
+      groupName: combat
+      unskilledUse: 1
+    firstAid:
+      baseAttribute: mind
+      adds: 1
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    heavyWeapons:
+      baseAttribute: dexterity
+      adds: null
+      value: 0
+      isFav: false
+      groupName: combat
+      unskilledUse: 1
+    intimidation:
+      baseAttribute: spirit
+      adds: 3
+      value: 0
+      isFav: false
+      groupName: interaction
+      unskilledUse: 1
+    kinesis:
+      baseAttribute: spirit
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    landVehicles:
+      baseAttribute: dexterity
+      adds: 1
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    language:
+      baseAttribute: mind
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    lockpicking:
+      baseAttribute: dexterity
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    maneuver:
+      baseAttribute: dexterity
+      adds: null
+      value: 0
+      isFav: false
+      groupName: interaction
+      unskilledUse: 1
+    medicine:
+      baseAttribute: mind
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    meleeWeapons:
+      baseAttribute: dexterity
+      adds: 1
+      value: 0
+      isFav: false
+      groupName: combat
+      unskilledUse: 1
+    missileWeapons:
+      baseAttribute: dexterity
+      adds: null
+      value: 0
+      isFav: false
+      groupName: combat
+      unskilledUse: 1
+    persuasion:
+      baseAttribute: charisma
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    precognition:
+      baseAttribute: mind
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    profession:
+      baseAttribute: mind
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    reality:
+      baseAttribute: spirit
+      adds: 2
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    scholar:
+      baseAttribute: mind
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    science:
+      baseAttribute: mind
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    stealth:
+      baseAttribute: dexterity
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    streetwise:
+      baseAttribute: charisma
+      adds: 2
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    survival:
+      baseAttribute: mind
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    taunt:
+      baseAttribute: charisma
+      adds: null
+      value: 0
+      isFav: false
+      groupName: interaction
+      unskilledUse: 1
+    telepathy:
+      baseAttribute: charisma
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+    tracking:
+      baseAttribute: mind
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    trick:
+      baseAttribute: mind
+      adds: null
+      value: 0
+      isFav: false
+      groupName: interaction
+      unskilledUse: 1
+    unarmedCombat:
+      baseAttribute: dexterity
+      adds: 1
+      value: 0
+      isFav: false
+      groupName: combat
+      unskilledUse: 1
+    waterVehicles:
+      baseAttribute: dexterity
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+    willpower:
+      baseAttribute: spirit
+      adds: null
+      value: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+  xp:
+    unspent: 0
+    earned: 0
+  axioms:
+    magic: 9
+    social: 23
+    spirit: 10
+    tech: 23
+  details:
+    clearance: ''
+    background: >-
+      <h2 class="MsoNormal">Pr&eacute;sentation</h2>
+
+      <p class="MsoNormal">M&ecirc;me avant l&rsquo;invasion des Seigneurs de
+      R&eacute;alit&eacute;, il y avait sur la Prime Terre des h&eacute;ros
+      capables d&rsquo;exploits incroyables. Certains passaient leur temps
+      &agrave; combattre des groupes de criminels, de mercenaires ou des
+      psychopathes. Vous &eacute;tiez l&rsquo;une de ces h&eacute;ro&iuml;nes et
+      vaincre de v&eacute;ritables petites arm&eacute;es de m&eacute;chants
+      faisait juste partie de votre travail.</p>
+
+      <p class="MsoNormal">Les Pillards de R&eacute;alit&eacute; sont une menace
+      d&rsquo;une tout autre ampleur. Les gangs, les cartels et m&ecirc;me les
+      conspirateurs ne vous ont jamais fait reculer, alors pourquoi le
+      feriez-vous maintenant ? Comme votre (ancien) partenaire vous l&rsquo;a
+      dit autrefois, rien ne peut vous arr&ecirc;ter.</p>
+
+      <h2 class="MsoNormal">Tactiques</h2>
+
+      <p class="MsoNormal">Vous savez vous servir des armes &agrave; feu et vous
+      &ecirc;tes suffisamment r&eacute;sistante pour encaisser quelques coups
+      sans avoir besoin d&rsquo;annuler des dommages... ce que vous savez
+      tr&egrave;s bien faire. Si vous vous retrouvez en m&ecirc;l&eacute;e,
+      essayez de saisir vos adversaires pour les immobiliser plut&ocirc;t que
+      d&rsquo;infliger des dommages.</p>
+
+      <p class="MsoNormal">Le Contre est votre arme secr&egrave;te.
+      Emp&ecirc;cher un Tourmenteur de booster ses attaques en bloquant cette
+      capacit&eacute; n&rsquo;est pas n&eacute;gligeable et peut changer le
+      cours d&rsquo;un combat. Utilisez Intimidation pour affaiblir vos
+      adversaires. S&rsquo;ils sont D&eacute;stabilis&eacute;s ils subissent des
+      malus et s&rsquo;ils sont Vuln&eacute;rables vous b&eacute;n&eacute;ficiez
+      de bonus. Puisque Contre n&eacute;cessite un test de
+      R&eacute;alit&eacute;, vous pouvez tirer profit des deux !</p>
+
+      <h2 class="MsoNormal">Instant fatidique</h2>
+
+      <p class="MsoNormal">Des dizaines d&rsquo;incidents peuvent avoir
+      provoqu&eacute; votre &eacute;volution du statut
+      d&rsquo;h&eacute;ro&iuml;ne &agrave; celui de Chevalier des
+      Temp&ecirc;tes. Il se peut que ce soit &agrave; cause du Tourmenteur
+      ren&eacute;gat qui a utilis&eacute; ses pouvoirs pour constituer un
+      nouveau cartel de la drogue. Ou peut-&ecirc;tre est-ce &agrave; cause de
+      cette fois o&ugrave; vous avez immobilis&eacute; et menott&eacute; un
+      raptor... les gens en parlent encore.</p>
+
+      <h2 class="MsoNormal">Citation</h2>
+
+      <p class="MsoNormal">&laquo; Pose ce truc vert qui brille par terre et met
+      les mains sur la t&ecirc;te. &raquo;</p>
+
+      <h2 class="MsoNormal">Description</h2>
+
+      <p class="MsoNormal">Il est important de porter encore l&rsquo;uniforme
+      m&ecirc;me hors de votre juridiction ou dans des endroits
+      transform&eacute;s. C&rsquo;est un symbole de normalit&eacute; et
+      d&rsquo;autorit&eacute; et le gilet pare-balles est utile. La police
+      n&rsquo;est pas appr&eacute;ci&eacute;e, ni respect&eacute;e par tout le
+      monde mais le simple fait de voir votre uniforme bleu et votre badge peut
+      en ramener certains &agrave; la r&eacute;alit&eacute;. Une attitude
+      brusque et un regard s&eacute;v&egrave;re renforcent le sentiment de force
+      qui &eacute;mane de vous.</p>
+
+      <h2 class="MsoNormal">Objectif</h2>
+
+      <p class="MsoNormal">Le Flic que rien n&rsquo;arr&ecirc;te veut juste que
+      les choses reviennent &agrave; la normale. La R&eacute;alit&eacute; est
+      &eacute;galement soumise &agrave; des lois et ces envahisseurs les
+      enfreignent. Gardez les pieds sur terre, arr&ecirc;tez les m&eacute;chants
+      et prot&eacute;gez les pauvres innocents qui se retrouvent au milieu de ce
+      cirque.</p>
+
+      <h2 class="MsoNormal">Noms</h2>
+
+      <p class="MsoNormal">Alta, Carmen, Cristian, Dani, Gabriel, Jaide, Lani,
+      Marvel, Paz, Rio, Sal</p>
+
+      <h2 class="MsoNormal">Piste de progression (optionnelle)</h2>
+
+      <p class="MsoNormal">□ (5 PX) Obstin&eacute;</p>
+
+      <p class="MsoNormal">□ (7 PX) Dur &agrave; cuire</p>
+
+      <p class="MsoNormal">□ (1 PX) Crochetage +1</p>
+
+      <p class="MsoNormal">□ (2 PX) D&eacute;brouillardise +2</p>
+
+      <p class="MsoNormal">□ (3 PX) Armes &agrave; feu +3</p>
+
+      <p class="MsoNormal">□ (3 PX) R&eacute;alit&eacute; +3</p>
+
+      <p class="MsoNormal">□ (4 PX) Armes &agrave; feu +4</p>
+
+      <p class="MsoNormal">□ (5 PX) Armes &agrave; feu +5</p>
+    race: human
+  editstate: null
+  fatigue: '1'
+token:
+  flags: {}
+  name: Le flic que rien n’arrête
+  displayName: 30
+  img: systems/torgeternity/images/characters/Unstoppable_Cop.Token.webp
+  tint: null
+  width: 1
+  height: 1
+  scale: 1
+  mirrorX: false
+  mirrorY: false
+  lockRotation: false
+  rotation: 0
+  vision: false
+  dimSight: 0
+  brightSight: 0
+  dimLight: 0
+  brightLight: 0
+  sightAngle: 0
+  lightAngle: 360
+  lightColor: ''
+  lightAlpha: 1
+  lightAnimation:
+    type: ''
+    speed: 5
+    intensity: 5
+  actorId: non4XwpfJLE9GiST
+  actorLink: true
+  disposition: 1
+  displayBars: 20
+  bar1:
+    attribute: shock
+  bar2:
+    attribute: wounds
+  randomImg: false
+  alpha: 1
+  light:
+    alpha: 0.5
+    angle: 0
+    bright: 0
+    coloration: 1
+    dim: 0
+    gradual: true
+    luminosity: 0.5
+    saturation: 0
+    contrast: 0
+    shadows: 0
+    animation:
+      speed: 5
+      intensity: 5
+      reverse: false
+    darkness:
+      min: 0
+      max: 1
+    color: null
+items:
+  - _id: Bh5BKWwn5ZCR10rX
+    name: Contre
+    type: perk
+    data:
+      category: reality
+      cosm: (Non)
+      prerequisites: None
+      timestaken: 1
+      description: >-
+        <p class="MsoNormal">Quand un ennemi tente d&rsquo;utiliser une
+        Possibilit&eacute; pour un attribut ou un test de comp&eacute;tence, le
+        Chevalier des Temp&ecirc;tes peut d&eacute;penser une de ses propres
+        Possibilit&eacute;s pour l&rsquo;annuler instantan&eacute;ment.
+        C&rsquo;est une action gratuite qu&rsquo;il peut effectuer tant
+        qu&rsquo;il est conscient de l&rsquo;action de son rival. Contre ne peut
+        pas &ecirc;tre utilis&eacute; pour emp&ecirc;cher un adversaire
+        d&rsquo;Annuler des blessures avec des Possibilit&eacute;s.</p>
+      pulpPowers:
+        enhancementNumber: 0
+        enhancement01:
+          title: ''
+          description: ''
+          taken: false
+        enhancement02:
+          title: ''
+          description: ''
+          taken: false
+        enhancement03:
+          title: ''
+          description: ''
+          taken: false
+        enhancement04:
+          title: ''
+          description: ''
+          taken: false
+        enhancement05:
+          title: ''
+          description: ''
+          taken: false
+        enhancement06:
+          title: ''
+          description: ''
+          taken: false
+        enhancement07:
+          title: ''
+          description: ''
+          taken: false
+        enhancement08:
+          title: ''
+          description: ''
+          taken: false
+        enhancement09:
+          title: ''
+          description: ''
+          taken: false
+        enhancement10:
+          title: ''
+          description: ''
+          taken: false
+        enhancement11:
+          title: ''
+          description: ''
+          taken: false
+        enhancement12:
+          title: ''
+          description: ''
+          taken: false
+        enhancement13:
+          title: ''
+          description: ''
+          taken: false
+        enhancement14:
+          title: ''
+          description: ''
+          taken: false
+        enhancement15:
+          title: ''
+          description: ''
+          taken: false
+        limitationNumber: 0
+        limitation01: ''
+        limitation02: ''
+        limitation03: ''
+        limitation04: ''
+        limitation05: ''
+        limitation06: ''
+        limitation07: ''
+        limitation08: ''
+        limitation09: ''
+        limitation10: ''
+    sort: 800001
+    flags:
+      core:
+        sourceId: Item.qxJvzeASZsfyHgHj
+    img: systems/torgeternity/images/icons/perk.webp
+    effects: []
+    folder: null
+    permission:
+      default: 0
+    _key: '!actors.items!non4XwpfJLE9GiST.Bh5BKWwn5ZCR10rX'
+  - _id: W0Q0w7oeP6a464AI
+    name: Conscience environnementale
+    type: perk
+    data:
+      category: prowess
+      cosm: (Sans cosm)
+      prerequisites: Raison 8+
+      timestaken: 1
+      description: >-
+        <p class="MsoNormal">Les Chevaliers des Temp&ecirc;tes aguerris sont
+        hyper conscients de leur environnement quand le danger menace. Ils
+        notent les sorties possibles, per&ccedil;oivent les intentions de leurs
+        adversaires et savent quand et comment il convient d&rsquo;agir. Rama
+        Tut et le Linceul tentent d&rsquo;&eacute;chapper &agrave; une crue qui
+        n&rsquo;a rien de naturel. Nos h&eacute;ros parviendront-ils &agrave;
+        fuir ? 100 Une fois par Sc&egrave;ne, un personnage avec Conscience
+        environnementale peut poser une seule carte directement de sa main dans
+        sa R&eacute;serve (et l&rsquo;utiliser imm&eacute;diatement s&rsquo;il
+        le souhaite).</p>
+      pulpPowers:
+        enhancementNumber: 0
+        enhancement01:
+          title: ''
+          description: ''
+          taken: false
+        enhancement02:
+          title: ''
+          description: ''
+          taken: false
+        enhancement03:
+          title: ''
+          description: ''
+          taken: false
+        enhancement04:
+          title: ''
+          description: ''
+          taken: false
+        enhancement05:
+          title: ''
+          description: ''
+          taken: false
+        enhancement06:
+          title: ''
+          description: ''
+          taken: false
+        enhancement07:
+          title: ''
+          description: ''
+          taken: false
+        enhancement08:
+          title: ''
+          description: ''
+          taken: false
+        enhancement09:
+          title: ''
+          description: ''
+          taken: false
+        enhancement10:
+          title: ''
+          description: ''
+          taken: false
+        enhancement11:
+          title: ''
+          description: ''
+          taken: false
+        enhancement12:
+          title: ''
+          description: ''
+          taken: false
+        enhancement13:
+          title: ''
+          description: ''
+          taken: false
+        enhancement14:
+          title: ''
+          description: ''
+          taken: false
+        enhancement15:
+          title: ''
+          description: ''
+          taken: false
+        limitationNumber: 0
+        limitation01: ''
+        limitation02: ''
+        limitation03: ''
+        limitation04: ''
+        limitation05: ''
+        limitation06: ''
+        limitation07: ''
+        limitation08: ''
+        limitation09: ''
+        limitation10: ''
+    sort: 300001
+    flags:
+      core:
+        sourceId: Item.04E7lm4oz4EZGlSs
+    img: systems/torgeternity/images/icons/perk.webp
+    effects: []
+    folder: null
+    permission:
+      default: 0
+    _key: '!actors.items!non4XwpfJLE9GiST.W0Q0w7oeP6a464AI'
+  - _id: FO6D5TLpZiLFO2dm
+    name: Chargeurs supplémentaires (5)
+    type: gear
+    data:
+      cosm: Prime Terre
+      description: <p>Cinq recharges pour Glock 9 mm</p>
+      techlevel: 22
+      price: '20'
+      value: 6
+    sort: 250000
+    flags:
+      core:
+        sourceId: Item.qZuQoegFPBYC6tEB
+    img: systems/torgeternity/images/icons/gear.webp
+    effects: []
+    folder: null
+    permission:
+      default: 0
+    _key: '!actors.items!non4XwpfJLE9GiST.FO6D5TLpZiLFO2dm'
+  - _id: coAYdlmiRPR2SErV
+    name: Fusées éclairantes (3)
+    type: gear
+    data:
+      cosm: Empire du Nil
+      description: <p>&Eacute;claire, peut allumer un feu</p>
+      techlevel: 20
+      price: '5'
+      value: 4
+    sort: 325000
+    flags:
+      core:
+        sourceId: Item.JniN3c3c6HNv7cSp
+    img: systems/torgeternity/images/icons/gear.webp
+    effects: []
+    folder: null
+    permission:
+      default: 0
+    _key: '!actors.items!non4XwpfJLE9GiST.coAYdlmiRPR2SErV'
+  - _id: ikOnhbUEDPap417o
+    name: Lampe torche
+    type: gear
+    data:
+      cosm: Empire du Nil
+      description: <p>&Eacute;claire</p>
+      techlevel: 20
+      price: '10'
+      value: 5
+    sort: 350000
+    flags:
+      core:
+        sourceId: Item.tktQLV7z5tnNkEqr
+    img: systems/torgeternity/images/icons/gear.webp
+    effects: []
+    folder: null
+    permission:
+      default: 0
+    _key: '!actors.items!non4XwpfJLE9GiST.ikOnhbUEDPap417o'
+  - _id: E3S7lZD9oDPdNwVO
+    name: Outil polyvalent
+    type: gear
+    data:
+      cosm: Prime Terre
+      description: >-
+        <p>Un instrument tr&egrave;s pratique qui combine pinces coupantes,
+        tournevis, cl&eacute; &agrave; molette et d&rsquo;autres petits
+        outils&nbsp;</p>
+      techlevel: 22
+      price: '40'
+      value: 8
+    sort: 700000
+    flags:
+      core:
+        sourceId: Item.qclakuW3FUv87ufW
+    img: systems/torgeternity/images/icons/gear.webp
+    effects: []
+    folder: null
+    permission:
+      default: 0
+    _key: '!actors.items!non4XwpfJLE9GiST.E3S7lZD9oDPdNwVO'
+  - _id: IWuewwOZhaOsjEZt
+    name: Insigne de police
+    type: gear
+    data:
+      cosm: Prime Terre
+      description: <p>Autorit&eacute;s locales</p>
+      techlevel: 22
+      price: '0'
+      value: 0
+    sort: 300000
+    flags:
+      core:
+        sourceId: Item.fgtK79BumQwmkPzK
+    img: systems/torgeternity/images/icons/gear.webp
+    effects: []
+    folder: null
+    permission:
+      default: 0
+    _key: '!actors.items!non4XwpfJLE9GiST.IWuewwOZhaOsjEZt'
+  - _id: RUMcCWACZRv1vpoO
+    name: Veste balistique
+    type: armor
+    data:
+      cosm: (Sans cosm)
+      description: >-
+        <p class="MsoNormal">&Eacute;galement connue sous le nom de veste
+        pare-balles ou d&rsquo;armure kevlar. Elle est constitu&eacute;e
+        d&rsquo;un mat&eacute;riau synth&eacute;tique con&ccedil;u pour
+        arr&ecirc;ter les balles et les bloquer dans une de ses couches
+        protectrices</p>
+      techlevel: 22
+      price: '250'
+      value: 12
+      bonus: 4
+      maxDex: 10
+      minStrength: null
+      equipped: false
+      equippedClass: .item-unequipped
+      notes: Torse, Fatigues
+    sort: 600000
+    flags:
+      core:
+        sourceId: Item.hRA2cLvVL3HWJxlu
+    img: systems/torgeternity/images/icons/armor.webp
+    effects:
+      - _id: eCfGs5VS46PUaxI8
+        flags: {}
+        changes:
+          - key: data.other.armor
+            value: '4'
+            mode: 2
+          - key: data.other.toughness
+            value: '4'
+            mode: 2
+        disabled: false
+        duration:
+          startTime: null
+        icon: icons/svg/shield.svg
+        label: +4 armor
+        origin: Item.hRA2cLvVL3HWJxlu
+        tint: null
+        transfer: true
+        _key: >-
+          !actors.items.effects!non4XwpfJLE9GiST.RUMcCWACZRv1vpoO.eCfGs5VS46PUaxI8
+    folder: null
+    permission:
+      default: 0
+    _key: '!actors.items!non4XwpfJLE9GiST.RUMcCWACZRv1vpoO'
+  - _id: 60Hn7sxT2ytPIWI9
+    name: Matraque
+    type: meleeweapon
+    data:
+      cosm: (Sans cosm)
+      description: >-
+        <p>Une matraque constitu&eacute;e de mat&eacute;riaux modernes et
+        parfaitement &eacute;quilibr&eacute;e. De nombreuses versions ont une
+        extr&eacute;mit&eacute; mobile ou sont&nbsp; liables.</p>
+      techlevel: 21
+      price: '120'
+      value: 10
+      attackWith: meleeWeapons
+      damageType: strengthPlus
+      damage: 2
+      ap: 0
+      bonus: 2
+      notes: '-'
+      chatNote: ''
+    sort: 600000
+    flags:
+      core:
+        sourceId: Item.NwUEzGCgHe2GgC6N
+    img: systems/torgeternity/images/icons/meleeweapon.webp
+    effects: []
+    folder: null
+    permission:
+      default: 0
+    _key: '!actors.items!non4XwpfJLE9GiST.60Hn7sxT2ytPIWI9'
+  - _id: 0zgpX8TP92cI60QP
+    name: Glock 9mm
+    type: firearm
+    data:
+      cosm: Prime Terre
+      description: >-
+        <p>Un semi-automatique 9 mm avec rechargement par recul.
+        R&eacute;put&eacute; pour son&nbsp; &eacute;pais chargeur grande
+        capacit&eacute;.</p>
+      techlevel: 22
+      price: '250'
+      value: 12
+      attackWith: fireCombat
+      damageType: ''
+      damage: 13
+      ap: 0
+      ammo:
+        max: 15
+        value: 15
+      range: 10/25/40
+      notes: '-Pistolet'
+      chatNote: ''
+    sort: 500000
+    flags:
+      core:
+        sourceId: Item.iOnl5BiGmVFaCzma
+    img: systems/torgeternity/images/icons/firearm.webp
+    effects: []
+    folder: null
+    permission:
+      default: 0
+    _key: '!actors.items!non4XwpfJLE9GiST.0zgpX8TP92cI60QP'
+  - _id: bnn1lL9T1zV8c9wP
+    name: Menottes rapides
+    type: gear
+    img: systems/torgeternity/images/icons/gear-icon.webp
+    data:
+      cosm: Prime Terre
+      description: <p>Entrave une cible</p>
+      techlevel: 22
+      price: '0'
+      value: 0
+    effects: []
+    folder: null
+    sort: 525000
+    permission:
+      default: 0
+      TK1vCAdCz548vBDu: 3
+    flags:
+      core:
+        sourceId: Item.YUDCGkWXWHejH49G
+    _key: '!actors.items!non4XwpfJLE9GiST.bnn1lL9T1zV8c9wP'
+  - _id: zlCFLaObdqm1Pt1P
+    name: Attaque à mains nues
+    type: customAttack
+    img: systems/torgeternity/images/icons/fist-icon.webp
+    data:
+      description: ''
+      attackWith: unarmedCombat
+      damageType: strengthPlus
+      damage: 0
+      ap: 0
+      notes: ''
+      chatNote: ''
+    effects: []
+    folder: null
+    sort: 0
+    permission:
+      default: 0
+      zWX19sSAtAWkeGhp: 3
+    flags:
+      core:
+        sourceId: Item.BFGjhDetVDm1xiku
+    _key: '!actors.items!non4XwpfJLE9GiST.zlCFLaObdqm1Pt1P'
+effects:
+  - _id: G3bURQ2VTFKNrIcf
+    flags: {}
+    changes:
+      - key: data.other.armor
+        mode: 2
+        value: '4'
+      - key: data.other.toughness
+        mode: 2
+        value: '4'
+    disabled: false
+    duration:
+      startTime: 0
+    icon: icons/svg/shield.svg
+    label: +4 armure
+    origin: Actor.SZAUvb28VxAD8Xw8.OwnedItem.RUMcCWACZRv1vpoO
+    tint: null
+    transfer: true
+    _key: '!actors.effects!non4XwpfJLE9GiST.G3bURQ2VTFKNrIcf'
+folder: null
+sort: 100001
+permission:
+  default: 0
+  A9LyAqagoJJU3gDH: 3
+flags: {}
+_key: '!actors!non4XwpfJLE9GiST'
+

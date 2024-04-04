@@ -1,425 +1,6 @@
 {
   "Actor": {
-    "stormknight": {
-      "axioms": {
-        "magic": "",
-        "social": "",
-        "spirit": "",
-        "tech": ""
-      },
-      "details": {
-        "background": "",
-        "clearance": "",
-        "race": "",
-        "sizeBonus": "normal"
-      },
-      "editstate": true,
-      "fatigue": "1",
-      "templates": [
-        "commonStats"
-      ],
-      "xp": {
-        "earned": 0,
-        "unspent": 0
-      }
-    },
-    "templates": {
-      "commonStats": {
-        "attributes": {
-          "charisma": 8,
-          "dexterity": 8,
-          "mind": 8,
-          "spirit": 8,
-          "strength": 8
-        },
-        "other": {
-          "armor": 0,
-          "cosm": "",
-          "move": 8,
-          "possibilities": false,
-          "run": 24,
-          "toughness": 8
-        },
-        "shock": {
-          "max": 8,
-          "value": 0
-        },
-        "skills": {
-          "airVehicles": {
-            "adds": "",
-            "baseAttribute": "dexterity",
-            "groupName": "other",
-            "isFav": false,
-            "unskilledUse": 0,
-            "value": ""
-          },
-          "alteration": {
-            "adds": "",
-            "baseAttribute": "mind",
-            "groupName": "other",
-            "isFav": false,
-            "unskilledUse": 0,
-            "value": ""
-          },
-          "apportation": {
-            "adds": "",
-            "baseAttribute": "spirit",
-            "groupName": "other",
-            "isFav": false,
-            "unskilledUse": 0,
-            "value": ""
-          },
-          "beastRiding": {
-            "adds": "",
-            "baseAttribute": "dexterity",
-            "groupName": "other",
-            "isFav": false,
-            "unskilledUse": 1,
-            "value": ""
-          },
-          "computers": {
-            "adds": "",
-            "baseAttribute": "mind",
-            "groupName": "other",
-            "isFav": false,
-            "unskilledUse": 1,
-            "value": ""
-          },
-          "conjuration": {
-            "adds": "",
-            "baseAttribute": "spirit",
-            "groupName": "other",
-            "isFav": false,
-            "unskilledUse": 0,
-            "value": ""
-          },
-          "divination": {
-            "adds": "",
-            "baseAttribute": "mind",
-            "groupName": "other",
-            "isFav": false,
-            "unskilledUse": 0,
-            "value": ""
-          },
-          "dodge": {
-            "adds": "",
-            "baseAttribute": "dexterity",
-            "groupName": "other",
-            "isFav": false,
-            "unskilledUse": 1,
-            "value": ""
-          },
-          "energyWeapons": {
-            "adds": "",
-            "baseAttribute": "dexterity",
-            "groupName": "combat",
-            "isFav": false,
-            "unskilledUse": 1,
-            "value": ""
-          },
-          "evidenceAnalysis": {
-            "adds": "",
-            "baseAttribute": "mind",
-            "groupName": "other",
-            "isFav": false,
-            "unskilledUse": 1,
-            "value": ""
-          },
-          "faith": {
-            "adds": "",
-            "baseAttribute": "spirit",
-            "groupName": "other",
-            "isFav": false,
-            "unskilledUse": 1,
-            "value": ""
-          },
-          "find": {
-            "adds": "",
-            "baseAttribute": "mind",
-            "groupName": "other",
-            "isFav": false,
-            "unskilledUse": 1,
-            "value": ""
-          },
-          "fireCombat": {
-            "adds": "",
-            "baseAttribute": "dexterity",
-            "groupName": "combat",
-            "isFav": false,
-            "unskilledUse": 1,
-            "value": ""
-          },
-          "firstAid": {
-            "adds": "",
-            "baseAttribute": "mind",
-            "groupName": "other",
-            "isFav": false,
-            "unskilledUse": 1,
-            "value": ""
-          },
-          "heavyWeapons": {
-            "adds": "",
-            "baseAttribute": "dexterity",
-            "groupName": "combat",
-            "isFav": false,
-            "unskilledUse": 1,
-            "value": ""
-          },
-          "intimidation": {
-            "adds": "",
-            "baseAttribute": "spirit",
-            "groupName": "interaction",
-            "isFav": false,
-            "unskilledUse": 1,
-            "value": ""
-          },
-          "kinesis": {
-            "adds": "",
-            "baseAttribute": "spirit",
-            "groupName": "other",
-            "isFav": false,
-            "unskilledUse": 0,
-            "value": ""
-          },
-          "landVehicles": {
-            "adds": "",
-            "baseAttribute": "dexterity",
-            "groupName": "other",
-            "isFav": false,
-            "unskilledUse": 1,
-            "value": ""
-          },
-          "language": {
-            "adds": "",
-            "baseAttribute": "mind",
-            "groupName": "other",
-            "isFav": false,
-            "unskilledUse": 0,
-            "value": ""
-          },
-          "lockpicking": {
-            "adds": "",
-            "baseAttribute": "dexterity",
-            "groupName": "other",
-            "isFav": false,
-            "unskilledUse": 0,
-            "value": ""
-          },
-          "maneuver": {
-            "adds": "",
-            "baseAttribute": "dexterity",
-            "groupName": "interaction",
-            "isFav": false,
-            "unskilledUse": 1,
-            "value": ""
-          },
-          "medicine": {
-            "adds": "",
-            "baseAttribute": "mind",
-            "groupName": "other",
-            "isFav": false,
-            "unskilledUse": 0,
-            "value": ""
-          },
-          "meleeWeapons": {
-            "adds": "",
-            "baseAttribute": "dexterity",
-            "groupName": "combat",
-            "isFav": false,
-            "unskilledUse": 1,
-            "value": ""
-          },
-          "missileWeapons": {
-            "adds": "",
-            "baseAttribute": "dexterity",
-            "groupName": "combat",
-            "isFav": false,
-            "unskilledUse": 1,
-            "value": ""
-          },
-          "persuasion": {
-            "adds": "",
-            "baseAttribute": "charisma",
-            "groupName": "other",
-            "isFav": false,
-            "unskilledUse": 1,
-            "value": ""
-          },
-          "precognition": {
-            "adds": "",
-            "baseAttribute": "mind",
-            "groupName": "other",
-            "isFav": false,
-            "unskilledUse": 0,
-            "value": ""
-          },
-          "profession": {
-            "adds": "",
-            "baseAttribute": "mind",
-            "groupName": "other",
-            "isFav": false,
-            "unskilledUse": 1,
-            "value": ""
-          },
-          "reality": {
-            "adds": "",
-            "baseAttribute": "spirit",
-            "groupName": "other",
-            "isFav": false,
-            "unskilledUse": 0,
-            "value": ""
-          },
-          "scholar": {
-            "adds": "",
-            "baseAttribute": "mind",
-            "groupName": "other",
-            "isFav": false,
-            "unskilledUse": 1,
-            "value": ""
-          },
-          "science": {
-            "adds": "",
-            "baseAttribute": "mind",
-            "groupName": "other",
-            "isFav": false,
-            "unskilledUse": 1,
-            "value": ""
-          },
-          "stealth": {
-            "adds": "",
-            "baseAttribute": "dexterity",
-            "groupName": "other",
-            "isFav": false,
-            "unskilledUse": 1,
-            "value": ""
-          },
-          "streetwise": {
-            "adds": "",
-            "baseAttribute": "charisma",
-            "groupName": "other",
-            "isFav": false,
-            "unskilledUse": 1,
-            "value": ""
-          },
-          "survival": {
-            "adds": "",
-            "baseAttribute": "mind",
-            "groupName": "other",
-            "isFav": false,
-            "unskilledUse": 1,
-            "value": ""
-          },
-          "taunt": {
-            "adds": "",
-            "baseAttribute": "charisma",
-            "groupName": "interaction",
-            "isFav": false,
-            "unskilledUse": 1,
-            "value": ""
-          },
-          "telepathy": {
-            "adds": "",
-            "baseAttribute": "charisma",
-            "groupName": "other",
-            "isFav": false,
-            "unskilledUse": 0,
-            "value": ""
-          },
-          "tracking": {
-            "adds": "",
-            "baseAttribute": "mind",
-            "groupName": "other",
-            "isFav": false,
-            "unskilledUse": 1,
-            "value": ""
-          },
-          "trick": {
-            "adds": "",
-            "baseAttribute": "mind",
-            "groupName": "interaction",
-            "isFav": false,
-            "unskilledUse": 1,
-            "value": ""
-          },
-          "unarmedCombat": {
-            "adds": "",
-            "baseAttribute": "dexterity",
-            "groupName": "combat",
-            "isFav": false,
-            "unskilledUse": 1,
-            "value": ""
-          },
-          "waterVehicles": {
-            "adds": "",
-            "baseAttribute": "dexterity",
-            "groupName": "other",
-            "isFav": false,
-            "unskilledUse": 1,
-            "value": ""
-          },
-          "willpower": {
-            "adds": "",
-            "baseAttribute": "spirit",
-            "groupName": "other",
-            "isFav": false,
-            "unskilledUse": 1,
-            "value": ""
-          }
-        },
-        "wounds": {
-          "max": 3,
-          "value": 0
-        }
-      }
-    },
-    "threat": {
-      "details": {
-        "description": "",
-        "possibilitypotential": "(none)",
-        "sizeBonus": "normal"
-      },
-      "editstate": "none",
-      "templates": [
-        "commonStats"
-      ]
-    },
-    "types": [
-      "stormknight",
-      "threat",
-      "vehicle"
-    ],
-    "vehicle": {
-      "details": {
-        "sizeBonus": "normal"
-      },
-      "armor": 0,
-      "axioms": {
-        "magic": 0,
-        "social": 0,
-        "spirit": 0,
-        "tech": 10
-      },
-      "description": "",
-      "maneuver": -1,
-      "operator": {
-        "name": "",
-        "skillValue": ""
-      },
-      "passengers": 1,
-      "price": {
-        "dollars": 100,
-        "magnitude": "-"
-      },
-      "topSpeed": {
-        "kph": 100
-      },
-      "toughness": 5,
-      "type": "land",
-      "wounds": {
-        "current": 0,
-        "max": 3
-      }
-    }
+    "types": ["stormknight", "threat", "vehicle"]
   },
   "Card": {
     "cosm": {
@@ -443,11 +24,31 @@
       "villainsConditionsStandard": ""
     },
     "templates": {},
-    "types": [
-      "destiny",
-      "cosm",
-      "drama"
-    ]
+    "types": ["destiny", "cosm", "drama"]
+  },
+  "Card": {
+    "cosm": {
+      "cosm": "",
+      "number": ""
+    },
+    "destiny": {
+      "number": ""
+    },
+    "drama": {
+      "approvedActions": "",
+      "cosm": "",
+      "dsrLine": "",
+      "heroesConditionsDramatic": "",
+      "heroesConditionsStandard": "",
+      "heroesFirstDramatic": true,
+      "heroesFirstStandard": true,
+      "number": "",
+      "rule": "",
+      "villainsConditionsDramatic": "",
+      "villainsConditionsStandard": ""
+    },
+    "templates": {},
+    "types": ["destiny", "cosm", "drama"]
   },
   "Item": {
     "armor": {
@@ -457,9 +58,7 @@
       "maxDex": 12,
       "minStrength": "",
       "notes": "",
-      "templates": [
-        "general"
-      ]
+      "templates": ["general"]
     },
     "customAttack": {
       "ap": 0,
@@ -501,14 +100,10 @@
       "equippedClass": ".item-unequipped",
       "notes": "",
       "range": "",
-      "templates": [
-        "general"
-      ]
+      "templates": ["general"]
     },
     "gear": {
-      "templates": [
-        "general"
-      ]
+      "templates": ["general"]
     },
     "heavyweapon": {
       "ammo": {
@@ -527,15 +122,11 @@
       },
       "notes": "",
       "range": "",
-      "templates": [
-        "general"
-      ]
+      "templates": ["general"]
     },
     "implant": {
       "notes": "",
-      "templates": [
-        "general"
-      ]
+      "templates": ["general"]
     },
     "meleeweapon": {
       "ap": 0,
@@ -547,14 +138,10 @@
       "equipped": false,
       "equippedClass": ".item-unequipped",
       "notes": "",
-      "templates": [
-        "general"
-      ]
+      "templates": ["general"]
     },
     "miracle": {
-      "templates": [
-        "power"
-      ]
+      "templates": ["power"]
     },
     "missileweapon": {
       "ammo": {
@@ -571,9 +158,7 @@
       "minStrength": "",
       "notes": "",
       "range": "",
-      "templates": [
-        "general"
-      ]
+      "templates": ["general"]
     },
     "perk": {
       "category": "",
@@ -672,9 +257,7 @@
       "timestaken": ""
     },
     "psionicpower": {
-      "templates": [
-        "power"
-      ]
+      "templates": ["power"]
     },
     "shield": {
       "bonus": 1,
@@ -682,9 +265,7 @@
       "equippedClass": ".item-unequipped",
       "minStrength": "",
       "notes": "",
-      "templates": [
-        "general"
-      ]
+      "templates": ["general"]
     },
     "specialability": {
       "description": ""
@@ -697,9 +278,7 @@
       "description": ""
     },
     "spell": {
-      "templates": [
-        "power"
-      ]
+      "templates": ["power"]
     },
     "templates": {
       "general": {
@@ -751,21 +330,6 @@
       "psionicpower",
       "customSkill",
       "vehicleAddOn"
-    ],
-    "vehicle": {
-      "mr": -1,
-      "pass": 1,
-      "templates": [
-        "general"
-      ],
-      "topspeed": "",
-      "tough": "",
-      "wounds": 3
-    },
-    "vehicleAddOn": {
-      "description": "",
-      "name": "",
-      "short-description": ""
-    }
+    ]
   }
 }

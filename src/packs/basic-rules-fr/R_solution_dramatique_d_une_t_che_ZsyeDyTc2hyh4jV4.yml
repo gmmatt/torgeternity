@@ -1,0 +1,127 @@
+_id: ZsyeDyTc2hyh4jV4
+name: Résolution dramatique d'une tâche
+content: >-
+  <p>Dans Torg Eternity, une situation particulièrement tendue peut être jouée
+  sous forme de résolution dramatique de tâche. L'équipe a cinq rounds
+  (c'est-à-dire cinq cartes Action) pour accomplir la mission, qui consiste en
+  quatre étapes différentes. Après cinq tours, la résolution dramatique de la
+  tâche se solde par un échec. Cependant, si l'équipe termine les quatre étapes
+  en cinq tours ou moins, elle réussit. Les étapes de la mission sont désignées
+  comme étant les étapes A à D. Le MJ déterminera la nature et la difficulté de
+  chaque étape du test de compétence.</p>
+
+  <blockquote>
+
+  <p> </p>
+
+  <p><strong>Remarque sur le système Foundry</strong> : le suiveur de combat
+  comprend un outil qui vous permet de suivre l'étape actuelle d'une résolution
+  dramatique de compétence. Par défaut, l'outil affiche "No DSR". En cliquant
+  sur l'outil, vous pouvez faire avancer le DSR à l'étape A, puis - par la suite
+  - aux étapes B à D.</p>
+
+  </blockquote>
+
+  <p> </p>
+
+  <p>Commencez un nouveau
+  @UUID[Compendium.torgeternity.basic-rules-fr.JournalEntry.v3rvYofTLiD0EgfS]{Combat}  dans le
+  Combat Tracker pour indiquer que la tâche a commencé, en faisant référence à
+  la ligne de conflit appropriée, selon que la scène est Standard ou Dramatique.
+  Tout ou partie des lettres A à D peuvent apparaître dans le bloc situé sur le
+  côté de la carte, ainsi que différents problèmes appelés Dilemmes. Pendant une
+  RDT , une étape ne peut être tentée que si sa lettre apparaît sur la carte, et
+  chaque étape doit être effectuée dans l'ordre. Ainsi, si l'étape A apparaît,
+  un Chevalier des tempêtes peut tenter l'épreuve que le MJ désigne pour l'étape
+  A.</p>
+
+  <p> </p>
+
+  <p>Un seul Chevalier des tempêtes peut tenter une étape au cours du tour. Les
+  autres peuvent aider en combinant leurs actions. Chacun choisit : d'accorder
+  au Chevalier des tempêtes en tête un simple bonus de +1-ou de tenter le test
+  et de ne rien accorder en cas d'échec, un bonus de +1 en cas de succès simple,
+  +2 en cas de bon succès, ou +3 en cas de succès spectaculaire. Une RDT est une
+  rencontre, ce qui signifie que les cartes ne peuvent être jouées qu'à partir
+  du Réservoir d'Action. Voir
+  @UUID[Compendium.torgeternity.basic-rules-fr.JournalEntry.v3rvYofTLiD0EgfS]{Combat}  pour plus
+  de détails concernant les mains et les réserves d'action.</p>
+
+  <p> </p>
+
+  <p>Les chevaliers des tempêtes devraient choisir qui tente l'étape et laisser
+  les autres passer en premier pour empiler des bonus ou obtenir des cartes
+  Destin de soutien dans leurs réserves d'action. Si le premier personnage
+  échoue, le test de compétence ne peut plus être tenté au cours du même round.
+  Un personnage différent peut prendre la tête à chaque tour.</p>
+
+  <p> </p>
+
+  <p>Les RDT ne se déroulent pas toujours sans incident. Des menaces peuvent
+  attaquer les personnages, et un round de combat peut se dérouler en même temps
+  que la RDT . Les cartes en jeu et le nombre de possibilités peuvent être
+  encore plus importants que les compétences du personnage, alors soyez flexible
+  !</p>
+
+  <p> </p>
+
+  <h3>Étapes multiples</h3>
+
+  <p>Si plusieurs étapes sont disponibles sur la carte, le Chevalier des
+  tempêtes de tête peut effectuer une action multiple pour tenter les deux
+  étapes. Lancez un seul bonus et appliquez-le aux deux valeurs de compétences,
+  avec une pénalité supplémentaire de -2 pour chaque action supplémentaire.
+  Ainsi, si l'étape A a déjà été résolue et que la prochaine carte Action
+  mentionne les étapes B et C, le personnage qui prend la tête de l'équipe pour
+  ce tour peut effectuer un seul jet avec une pénalité de -2 et générer un total
+  pour les étapes B et C. Notez qu'une Rafale donne à toute l'équipe un tour
+  supplémentaire, ce qui signifie que deux étapes différentes peuvent être
+  tentées, et qu'un personnage différent peut mener la seconde tentative !</p>
+
+  <p> </p>
+
+  <h3>Dilemmes</h3>
+
+  <p>Si un Dilemme apparaît sur la carte, il compte comme l'étape actuelle
+  disponible (A si vous venez de commencer, B si vous avez terminé A, et ainsi
+  de suite), mais il y a une conséquence en cas d'échec. Ne pas essayer du tout
+  pendant le tour compte comme un échec !</p>
+
+  <p> </p>
+
+  <ul>
+
+  <li><strong>Complication </strong>: Quelque chose se produit qui pourrait
+  potentiellement rendre la résolution du RDS plus difficile à l'avenir. Si
+  l'étape échoue, tous les tests futurs contre le RDT subissent une pénalité de
+  -1.</li>
+
+  <li><strong>Revers possibles</strong> : Quelque chose s'est produit qui
+  obligera le groupe à revenir en arrière et à répéter une étape précédente.
+  Ainsi, si le groupe échoue au test de l'étape C pendant ce tour, il devra à
+  nouveau effectuer l'étape B à la place.</li>
+
+  <li><strong>Problème critique</strong> : Quelque chose se produit qui menace
+  d'annuler complètement les progrès des personnages. S'ils échouent à l'étape
+  pendant ce tour, toutes les étapes terminées sont perdues.</li>
+
+  </ul>
+
+  <h3>Ultime tentative</h3>
+
+  <p>Si c'est le cinquième tour et que les étapes ne sont pas réunies pour
+  accomplir la tâche, tout n'est pas perdu. L'équipe peut tenter un dernier
+  effort. Il s'agit d'une action multiple qui doit tenter chaque étape restante
+  et qui subit une pénalité supplémentaire de -2. Ainsi, s'il restait les étapes
+  B, C et D, le dernier effort subirait une pénalité de -6 pour les trois
+  compétences. Choisissez soigneusement la piste pour cette dernière tentative
+  !</p>
+folder: null
+sort: 0
+permission:
+  kz1RJu8vrAPmTUwN: 3
+flags:
+  core:
+    sourceId: JournalEntry.QjqWpTVssz8tZ3kb
+pages: []
+_key: '!journal!ZsyeDyTc2hyh4jV4'

@@ -1,0 +1,1531 @@
+_id: xaEDfI4ufJ2Z9Mli
+name: Schicksalskarten Deck
+type: deck
+description: Dies ist das Basis-Schicksalsdeck mit den Karten 1-60.
+img: >-
+  systems/torgeternity/images/deutsch/cards/Schicksalskarten/ZZR%C3%BCckseite.webp
+cards:
+  - _id: aXqAZWcvwALjPtqa
+    name: Adrenalin
+    description: ''
+    type: destiny
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Adrenalin
+        text: ''
+        img: systems/torgeternity/images/deutsch/cards/Schicksalskarten/01.webp
+    face: 0
+    drawn: false
+    origin: xaEDfI4ufJ2Z9Mli
+    rotation: 0
+    sort: 0
+    flags: {}
+    system: {}
+    value: null
+    width: null
+    height: null
+    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.aXqAZWcvwALjPtqa'
+    cards: []
+  - _id: aCtoVfKOXnZUBJHO
+    name: Adrenalin
+    description: ''
+    type: destiny
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Adrenalin
+        text: ''
+        img: systems/torgeternity/images/deutsch/cards/Schicksalskarten/02.webp
+    face: 0
+    drawn: false
+    origin: xaEDfI4ufJ2Z9Mli
+    rotation: 0
+    sort: 0
+    flags: {}
+    system: {}
+    value: null
+    width: null
+    height: null
+    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.aCtoVfKOXnZUBJHO'
+    cards: []
+  - _id: 7cLgtXNEWNLmqWn2
+    name: Adrenalin
+    description: ''
+    type: destiny
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Adrenalin
+        text: ''
+        img: systems/torgeternity/images/deutsch/cards/Schicksalskarten/03.webp
+    face: 0
+    drawn: false
+    origin: xaEDfI4ufJ2Z9Mli
+    rotation: 0
+    sort: 0
+    flags: {}
+    system: {}
+    value: null
+    width: null
+    height: null
+    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.7cLgtXNEWNLmqWn2'
+    cards: []
+  - _id: hGeDmk0fTeMXOn09
+    name: Adrenalin
+    description: ''
+    type: destiny
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Adrenalin
+        text: ''
+        img: systems/torgeternity/images/deutsch/cards/Schicksalskarten/04.webp
+    face: 0
+    drawn: false
+    origin: xaEDfI4ufJ2Z9Mli
+    rotation: 0
+    sort: 0
+    flags: {}
+    system: {}
+    value: null
+    width: null
+    height: null
+    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.hGeDmk0fTeMXOn09'
+    cards: []
+  - _id: yrqKDOq5prO25SGD
+    name: Willenskraft
+    description: ''
+    type: destiny
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Willenskraft
+        text: ''
+        img: systems/torgeternity/images/deutsch/cards/Schicksalskarten/05.webp
+    face: 0
+    drawn: false
+    origin: xaEDfI4ufJ2Z9Mli
+    rotation: 0
+    sort: 0
+    flags: {}
+    system: {}
+    value: null
+    width: null
+    height: null
+    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.yrqKDOq5prO25SGD'
+    cards: []
+  - _id: wLSWmubGwgH2cnhj
+    name: Willenskraft
+    description: ''
+    type: destiny
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Willenskraft
+        text: ''
+        img: systems/torgeternity/images/deutsch/cards/Schicksalskarten/06.webp
+    face: 0
+    drawn: false
+    origin: xaEDfI4ufJ2Z9Mli
+    rotation: 0
+    sort: 0
+    flags: {}
+    system: {}
+    value: null
+    width: null
+    height: null
+    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.wLSWmubGwgH2cnhj'
+    cards: []
+  - _id: 8DtxzWS4A6KWhmGO
+    name: Willenskraft
+    description: ''
+    type: destiny
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Willenskraft
+        text: ''
+        img: systems/torgeternity/images/deutsch/cards/Schicksalskarten/07.webp
+    face: 0
+    drawn: false
+    origin: xaEDfI4ufJ2Z9Mli
+    rotation: 0
+    sort: 0
+    flags: {}
+    system: {}
+    value: null
+    width: null
+    height: null
+    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.8DtxzWS4A6KWhmGO'
+    cards: []
+  - _id: bjbV0IRcB2Obzrnz
+    name: Willenskraft
+    description: ''
+    type: destiny
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Willenskraft
+        text: ''
+        img: systems/torgeternity/images/deutsch/cards/Schicksalskarten/08.webp
+    face: 0
+    drawn: false
+    origin: xaEDfI4ufJ2Z9Mli
+    rotation: 0
+    sort: 0
+    flags: {}
+    system: {}
+    value: null
+    width: null
+    height: null
+    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.bjbV0IRcB2Obzrnz'
+    cards: []
+  - _id: 7rKcq8o2pV1YDM7m
+    name: Wachsamkeit
+    description: ''
+    type: destiny
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Wachsamkeit
+        text: ''
+        img: systems/torgeternity/images/deutsch/cards/Schicksalskarten/09.webp
+    face: 0
+    drawn: false
+    origin: xaEDfI4ufJ2Z9Mli
+    rotation: 0
+    sort: 0
+    flags: {}
+    system: {}
+    value: null
+    width: null
+    height: null
+    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.7rKcq8o2pV1YDM7m'
+    cards: []
+  - _id: lduprVrjL5C9Ikew
+    name: Wachsamkeit
+    description: ''
+    type: destiny
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Wachsamkeit
+        text: ''
+        img: systems/torgeternity/images/deutsch/cards/Schicksalskarten/10.webp
+    face: 0
+    drawn: false
+    origin: xaEDfI4ufJ2Z9Mli
+    rotation: 0
+    sort: 0
+    flags: {}
+    system: {}
+    value: null
+    width: null
+    height: null
+    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.lduprVrjL5C9Ikew'
+    cards: []
+  - _id: KJytYyMjRXk5rre6
+    name: Märtyrer
+    description: ''
+    type: destiny
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Märtyrer
+        text: ''
+        img: systems/torgeternity/images/deutsch/cards/Schicksalskarten/11.webp
+    face: 0
+    drawn: false
+    origin: xaEDfI4ufJ2Z9Mli
+    rotation: 0
+    sort: 0
+    flags: {}
+    system: {}
+    value: null
+    width: null
+    height: null
+    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.KJytYyMjRXk5rre6'
+    cards: []
+  - _id: LkRINHi5vQXjL8WV
+    name: Tatendrang
+    description: ''
+    type: destiny
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Tatendrang
+        text: ''
+        img: systems/torgeternity/images/deutsch/cards/Schicksalskarten/12.webp
+    face: 0
+    drawn: false
+    origin: xaEDfI4ufJ2Z9Mli
+    rotation: 0
+    sort: 0
+    flags: {}
+    system: {}
+    value: null
+    width: null
+    height: null
+    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.LkRINHi5vQXjL8WV'
+    cards: []
+  - _id: 2EuA3S4IjXCq9yTE
+    name: Tatendrang
+    description: ''
+    type: destiny
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Tatendrang
+        text: ''
+        img: systems/torgeternity/images/deutsch/cards/Schicksalskarten/13.webp
+    face: 0
+    drawn: false
+    origin: xaEDfI4ufJ2Z9Mli
+    rotation: 0
+    sort: 0
+    flags: {}
+    system: {}
+    value: null
+    width: null
+    height: null
+    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.2EuA3S4IjXCq9yTE'
+    cards: []
+  - _id: 65rYngiVuKDZH5hA
+    name: Tatendrang
+    description: ''
+    type: destiny
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Tatendrang
+        text: ''
+        img: systems/torgeternity/images/deutsch/cards/Schicksalskarten/14.webp
+    face: 0
+    drawn: false
+    origin: xaEDfI4ufJ2Z9Mli
+    rotation: 0
+    sort: 0
+    flags: {}
+    system: {}
+    value: null
+    width: null
+    height: null
+    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.65rYngiVuKDZH5hA'
+    cards: []
+  - _id: Ry5JptU1fobavu2e
+    name: Tatendrang
+    description: ''
+    type: destiny
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Tatendrang
+        text: ''
+        img: systems/torgeternity/images/deutsch/cards/Schicksalskarten/15.webp
+    face: 0
+    drawn: false
+    origin: xaEDfI4ufJ2Z9Mli
+    rotation: 0
+    sort: 0
+    flags: {}
+    system: {}
+    value: null
+    width: null
+    height: null
+    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.Ry5JptU1fobavu2e'
+    cards: []
+  - _id: lrHW12ptQHI7ZSFo
+    name: Hast
+    description: ''
+    type: destiny
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Hast
+        text: ''
+        img: systems/torgeternity/images/deutsch/cards/Schicksalskarten/16.webp
+    face: 0
+    drawn: false
+    origin: xaEDfI4ufJ2Z9Mli
+    rotation: 0
+    sort: 0
+    flags: {}
+    system: {}
+    value: null
+    width: null
+    height: null
+    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.lrHW12ptQHI7ZSFo'
+    cards: []
+  - _id: U9VsDmCFxZEuEvhT
+    name: Hast
+    description: ''
+    type: destiny
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Hast
+        text: ''
+        img: systems/torgeternity/images/deutsch/cards/Schicksalskarten/17.webp
+    face: 0
+    drawn: false
+    origin: xaEDfI4ufJ2Z9Mli
+    rotation: 0
+    sort: 0
+    flags: {}
+    system: {}
+    value: null
+    width: null
+    height: null
+    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.U9VsDmCFxZEuEvhT'
+    cards: []
+  - _id: RQSujtoVfSbOsDZO
+    name: Meisterhafter Plan
+    description: ''
+    type: destiny
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Meisterhafter Plan
+        text: ''
+        img: systems/torgeternity/images/deutsch/cards/Schicksalskarten/18.webp
+    face: 0
+    drawn: false
+    origin: xaEDfI4ufJ2Z9Mli
+    rotation: 0
+    sort: 0
+    flags: {}
+    system: {}
+    value: null
+    width: null
+    height: null
+    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.RQSujtoVfSbOsDZO'
+    cards: []
+  - _id: zIFI7RtvNZjIDZ5l
+    name: Meisterhafter Plan
+    description: ''
+    type: destiny
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Meisterhafter Plan
+        text: ''
+        img: systems/torgeternity/images/deutsch/cards/Schicksalskarten/19.webp
+    face: 0
+    drawn: false
+    origin: xaEDfI4ufJ2Z9Mli
+    rotation: 0
+    sort: 0
+    flags: {}
+    system: {}
+    value: null
+    width: null
+    height: null
+    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.zIFI7RtvNZjIDZ5l'
+    cards: []
+  - _id: tB8P1o8XtEddY3bC
+    name: Ansporn
+    description: ''
+    type: destiny
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Ansporn
+        text: ''
+        img: systems/torgeternity/images/deutsch/cards/Schicksalskarten/20.webp
+    face: 0
+    drawn: false
+    origin: xaEDfI4ufJ2Z9Mli
+    rotation: 0
+    sort: 0
+    flags: {}
+    system: {}
+    value: null
+    width: null
+    height: null
+    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.tB8P1o8XtEddY3bC'
+    cards: []
+  - _id: B1ZIlttzG8RDHMsM
+    name: Initiative ergreifen
+    description: ''
+    type: destiny
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Initiative ergreifen
+        text: ''
+        img: systems/torgeternity/images/deutsch/cards/Schicksalskarten/21.webp
+    face: 0
+    drawn: false
+    origin: xaEDfI4ufJ2Z9Mli
+    rotation: 0
+    sort: 0
+    flags: {}
+    system: {}
+    value: null
+    width: null
+    height: null
+    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.B1ZIlttzG8RDHMsM'
+    cards: []
+  - _id: d2Ogsx4NmJsS7YN8
+    name: Initiative ergreifen
+    description: ''
+    type: destiny
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Initiative ergreifen
+        text: ''
+        img: systems/torgeternity/images/deutsch/cards/Schicksalskarten/22.webp
+    face: 0
+    drawn: false
+    origin: xaEDfI4ufJ2Z9Mli
+    rotation: 0
+    sort: 0
+    flags: {}
+    system: {}
+    value: null
+    width: null
+    height: null
+    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.d2Ogsx4NmJsS7YN8'
+    cards: []
+  - _id: TrfrMnh8hHqfz2Zb
+    name: Heldenhaft
+    description: ''
+    type: destiny
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Heldenhaft
+        text: ''
+        img: systems/torgeternity/images/deutsch/cards/Schicksalskarten/23.webp
+    face: 0
+    drawn: false
+    origin: xaEDfI4ufJ2Z9Mli
+    rotation: 0
+    sort: 0
+    flags: {}
+    system: {}
+    value: null
+    width: null
+    height: null
+    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.TrfrMnh8hHqfz2Zb'
+    cards: []
+  - _id: fJutw71wxYMh98il
+    name: Heldenhaft
+    description: ''
+    type: destiny
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Heldenhaft
+        text: ''
+        img: systems/torgeternity/images/deutsch/cards/Schicksalskarten/24.webp
+    face: 0
+    drawn: false
+    origin: xaEDfI4ufJ2Z9Mli
+    rotation: 0
+    sort: 0
+    flags: {}
+    system: {}
+    value: null
+    width: null
+    height: null
+    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.fJutw71wxYMh98il'
+    cards: []
+  - _id: 29NQjvdAXdm1tsLU
+    name: Heldenhaft
+    description: ''
+    type: destiny
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Heldenhaft
+        text: ''
+        img: systems/torgeternity/images/deutsch/cards/Schicksalskarten/25.webp
+    face: 0
+    drawn: false
+    origin: xaEDfI4ufJ2Z9Mli
+    rotation: 0
+    sort: 0
+    flags: {}
+    system: {}
+    value: null
+    width: null
+    height: null
+    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.29NQjvdAXdm1tsLU'
+    cards: []
+  - _id: ht90eKY89y0PaWnm
+    name: Heldenhaft
+    description: ''
+    type: destiny
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Heldenhaft
+        text: ''
+        img: systems/torgeternity/images/deutsch/cards/Schicksalskarten/26.webp
+    face: 0
+    drawn: false
+    origin: xaEDfI4ufJ2Z9Mli
+    rotation: 0
+    sort: 0
+    flags: {}
+    system: {}
+    value: null
+    width: null
+    height: null
+    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.ht90eKY89y0PaWnm'
+    cards: []
+  - _id: UJzNJy4G0m6d8uKE
+    name: Feind versagt
+    description: ''
+    type: destiny
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Feind versagt
+        text: ''
+        img: systems/torgeternity/images/deutsch/cards/Schicksalskarten/27.webp
+    face: 0
+    drawn: false
+    origin: xaEDfI4ufJ2Z9Mli
+    rotation: 0
+    sort: 0
+    flags: {}
+    system: {}
+    value: null
+    width: null
+    height: null
+    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.UJzNJy4G0m6d8uKE'
+    cards: []
+  - _id: SEAfMgE6qvLnVGpk
+    name: Feind versagt
+    description: ''
+    type: destiny
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Feind versagt
+        text: ''
+        img: systems/torgeternity/images/deutsch/cards/Schicksalskarten/28.webp
+    face: 0
+    drawn: false
+    origin: xaEDfI4ufJ2Z9Mli
+    rotation: 0
+    sort: 0
+    flags: {}
+    system: {}
+    value: null
+    width: null
+    height: null
+    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.SEAfMgE6qvLnVGpk'
+    cards: []
+  - _id: QqX7BiLNPiJCxrD5
+    name: Sammeln
+    description: ''
+    type: destiny
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Sammeln
+        text: ''
+        img: systems/torgeternity/images/deutsch/cards/Schicksalskarten/29.webp
+    face: 0
+    drawn: false
+    origin: xaEDfI4ufJ2Z9Mli
+    rotation: 0
+    sort: 0
+    flags: {}
+    system: {}
+    value: null
+    width: null
+    height: null
+    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.QqX7BiLNPiJCxrD5'
+    cards: []
+  - _id: FsnhsL8NWOECj4tE
+    name: Zweite Chance
+    description: ''
+    type: destiny
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Zweite Chance
+        text: ''
+        img: systems/torgeternity/images/deutsch/cards/Schicksalskarten/30.webp
+    face: 0
+    drawn: false
+    origin: xaEDfI4ufJ2Z9Mli
+    rotation: 0
+    sort: 0
+    flags: {}
+    system: {}
+    value: null
+    width: null
+    height: null
+    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.FsnhsL8NWOECj4tE'
+    cards: []
+  - _id: xOxMJQh4hlHvTQLD
+    name: Zweite Chance
+    description: ''
+    type: destiny
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Zweite Chance
+        text: ''
+        img: systems/torgeternity/images/deutsch/cards/Schicksalskarten/31.webp
+    face: 0
+    drawn: false
+    origin: xaEDfI4ufJ2Z9Mli
+    rotation: 0
+    sort: 0
+    flags: {}
+    system: {}
+    value: null
+    width: null
+    height: null
+    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.xOxMJQh4hlHvTQLD'
+    cards: []
+  - _id: u57pFPgU4cb7glpq
+    name: Zweite Chance
+    description: ''
+    type: destiny
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Zweite Chance
+        text: ''
+        img: systems/torgeternity/images/deutsch/cards/Schicksalskarten/32.webp
+    face: 0
+    drawn: false
+    origin: xaEDfI4ufJ2Z9Mli
+    rotation: 0
+    sort: 0
+    flags: {}
+    system: {}
+    value: null
+    width: null
+    height: null
+    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.u57pFPgU4cb7glpq'
+    cards: []
+  - _id: pPYiEwUyO5Xltisd
+    name: Verbindungen
+    description: ''
+    type: destiny
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Verbindungen
+        text: ''
+        img: systems/torgeternity/images/deutsch/cards/Schicksalskarten/33.webp
+    face: 0
+    drawn: false
+    origin: xaEDfI4ufJ2Z9Mli
+    rotation: 0
+    sort: 0
+    flags: {}
+    system: {}
+    value: null
+    width: null
+    height: null
+    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.pPYiEwUyO5Xltisd'
+    cards: []
+  - _id: gGh9VSXcirCg5YOu
+    name: Idee
+    description: ''
+    type: destiny
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Idee
+        text: ''
+        img: systems/torgeternity/images/deutsch/cards/Schicksalskarten/34.webp
+    face: 0
+    drawn: false
+    origin: xaEDfI4ufJ2Z9Mli
+    rotation: 0
+    sort: 0
+    flags: {}
+    system: {}
+    value: null
+    width: null
+    height: null
+    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.gGh9VSXcirCg5YOu'
+    cards: []
+  - _id: jMB2iCnjJOR7IJJT
+    name: Gut eingestimmt
+    description: ''
+    type: destiny
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Gut eingestimmt
+        text: ''
+        img: systems/torgeternity/images/deutsch/cards/Schicksalskarten/35.webp
+    face: 0
+    drawn: false
+    origin: xaEDfI4ufJ2Z9Mli
+    rotation: 0
+    sort: 0
+    flags: {}
+    system: {}
+    value: null
+    width: null
+    height: null
+    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.jMB2iCnjJOR7IJJT'
+    cards: []
+  - _id: K8lVv53GEu9CLDpT
+    name: Ruhm
+    description: ''
+    type: destiny
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Ruhm
+        text: ''
+        img: systems/torgeternity/images/deutsch/cards/Schicksalskarten/36.webp
+    face: 0
+    drawn: false
+    origin: xaEDfI4ufJ2Z9Mli
+    rotation: 0
+    sort: 0
+    flags: {}
+    system: {}
+    value: null
+    width: null
+    height: null
+    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.K8lVv53GEu9CLDpT'
+    cards: []
+  - _id: 9dceVPSbnpzZmfIP
+    name: Ruhm
+    description: ''
+    type: destiny
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Ruhm
+        text: ''
+        img: systems/torgeternity/images/deutsch/cards/Schicksalskarten/37.webp
+    face: 0
+    drawn: false
+    origin: xaEDfI4ufJ2Z9Mli
+    rotation: 0
+    sort: 0
+    flags: {}
+    system: {}
+    value: null
+    width: null
+    height: null
+    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.9dceVPSbnpzZmfIP'
+    cards: []
+  - _id: dgNu19BMa5pq6keh
+    name: Ruhm
+    description: ''
+    type: destiny
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Ruhm
+        text: ''
+        img: systems/torgeternity/images/deutsch/cards/Schicksalskarten/38.webp
+    face: 0
+    drawn: false
+    origin: xaEDfI4ufJ2Z9Mli
+    rotation: 0
+    sort: 0
+    flags: {}
+    system: {}
+    value: null
+    width: null
+    height: null
+    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.dgNu19BMa5pq6keh'
+    cards: []
+  - _id: KdcQdcYaAUUzZsDp
+    name: Ruhm
+    description: ''
+    type: destiny
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Ruhm
+        text: ''
+        img: systems/torgeternity/images/deutsch/cards/Schicksalskarten/39.webp
+    face: 0
+    drawn: false
+    origin: xaEDfI4ufJ2Z9Mli
+    rotation: 0
+    sort: 0
+    flags: {}
+    system: {}
+    value: null
+    width: null
+    height: null
+    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.KdcQdcYaAUUzZsDp'
+    cards: []
+  - _id: dR0SE3vMbHFNhn4D
+    name: Gnadenstoß
+    description: ''
+    type: destiny
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Gnadenstoß
+        text: ''
+        img: systems/torgeternity/images/deutsch/cards/Schicksalskarten/40.webp
+    face: 0
+    drawn: false
+    origin: xaEDfI4ufJ2Z9Mli
+    rotation: 0
+    sort: 0
+    flags: {}
+    system: {}
+    value: null
+    width: null
+    height: null
+    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.dR0SE3vMbHFNhn4D'
+    cards: []
+  - _id: usmbzSQVRn5MjBXQ
+    name: Gnadenstoß
+    description: ''
+    type: destiny
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Gnadenstoß
+        text: ''
+        img: systems/torgeternity/images/deutsch/cards/Schicksalskarten/41.webp
+    face: 0
+    drawn: false
+    origin: xaEDfI4ufJ2Z9Mli
+    rotation: 0
+    sort: 0
+    flags: {}
+    system: {}
+    value: null
+    width: null
+    height: null
+    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.usmbzSQVRn5MjBXQ'
+    cards: []
+  - _id: epK8fI8SP7IXomxz
+    name: Gnadenstoß
+    description: ''
+    type: destiny
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Gnadenstoß
+        text: ''
+        img: systems/torgeternity/images/deutsch/cards/Schicksalskarten/42.webp
+    face: 0
+    drawn: false
+    origin: xaEDfI4ufJ2Z9Mli
+    rotation: 0
+    sort: 0
+    flags: {}
+    system: {}
+    value: null
+    width: null
+    height: null
+    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.epK8fI8SP7IXomxz'
+    cards: []
+  - _id: PCQ2PVOp7KI2ywFn
+    name: Gnadenstoß
+    description: ''
+    type: destiny
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Gnadenstoß
+        text: ''
+        img: systems/torgeternity/images/deutsch/cards/Schicksalskarten/43.webp
+    face: 0
+    drawn: false
+    origin: xaEDfI4ufJ2Z9Mli
+    rotation: 0
+    sort: 0
+    flags: {}
+    system: {}
+    value: null
+    width: null
+    height: null
+    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.PCQ2PVOp7KI2ywFn'
+    cards: []
+  - _id: 1SOQqjlKUaK7DSei
+    name: Romanze
+    description: ''
+    type: destiny
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Romanze
+        text: ''
+        img: systems/torgeternity/images/deutsch/cards/Schicksalskarten/44.webp
+    face: 0
+    drawn: false
+    origin: xaEDfI4ufJ2Z9Mli
+    rotation: 0
+    sort: 0
+    flags: {}
+    system: {}
+    value: null
+    width: null
+    height: null
+    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.1SOQqjlKUaK7DSei'
+    cards: []
+  - _id: Wo1rI3LT0RWffiwU
+    name: Nemesis
+    description: ''
+    type: destiny
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Nemesis
+        text: ''
+        img: systems/torgeternity/images/deutsch/cards/Schicksalskarten/45.webp
+    face: 0
+    drawn: false
+    origin: xaEDfI4ufJ2Z9Mli
+    rotation: 0
+    sort: 0
+    flags: {}
+    system: {}
+    value: null
+    width: null
+    height: null
+    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.Wo1rI3LT0RWffiwU'
+    cards: []
+  - _id: 64oLDr5oABcnjKUW
+    name: Dramatik
+    description: ''
+    type: destiny
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Dramatik
+        text: ''
+        img: systems/torgeternity/images/deutsch/cards/Schicksalskarten/46.webp
+    face: 0
+    drawn: false
+    origin: xaEDfI4ufJ2Z9Mli
+    rotation: 0
+    sort: 0
+    flags: {}
+    system: {}
+    value: null
+    width: null
+    height: null
+    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.64oLDr5oABcnjKUW'
+    cards: []
+  - _id: 56PN45Wu5KhzLnrq
+    name: Dramatik
+    description: ''
+    type: destiny
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Dramatik
+        text: ''
+        img: systems/torgeternity/images/deutsch/cards/Schicksalskarten/47.webp
+    face: 0
+    drawn: false
+    origin: xaEDfI4ufJ2Z9Mli
+    rotation: 0
+    sort: 0
+    flags: {}
+    system: {}
+    value: null
+    width: null
+    height: null
+    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.56PN45Wu5KhzLnrq'
+    cards: []
+  - _id: aGNfqmEhLuRMuS5V
+    name: Dramatik
+    description: ''
+    type: destiny
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Dramatik
+        text: ''
+        img: systems/torgeternity/images/deutsch/cards/Schicksalskarten/48.webp
+    face: 0
+    drawn: false
+    origin: xaEDfI4ufJ2Z9Mli
+    rotation: 0
+    sort: 0
+    flags: {}
+    system: {}
+    value: null
+    width: null
+    height: null
+    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.aGNfqmEhLuRMuS5V'
+    cards: []
+  - _id: 3GvMGNOuITnzL0nJ
+    name: Dramatik
+    description: ''
+    type: destiny
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Dramatik
+        text: ''
+        img: systems/torgeternity/images/deutsch/cards/Schicksalskarten/49.webp
+    face: 0
+    drawn: false
+    origin: xaEDfI4ufJ2Z9Mli
+    rotation: 0
+    sort: 0
+    flags: {}
+    system: {}
+    value: null
+    width: null
+    height: null
+    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.3GvMGNOuITnzL0nJ'
+    cards: []
+  - _id: eOvVVsO6vqE2oofv
+    name: Anführer
+    description: ''
+    type: destiny
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Anführer
+        text: ''
+        img: systems/torgeternity/images/deutsch/cards/Schicksalskarten/50.webp
+    face: 0
+    drawn: false
+    origin: xaEDfI4ufJ2Z9Mli
+    rotation: 0
+    sort: 0
+    flags: {}
+    system: {}
+    value: null
+    width: null
+    height: null
+    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.eOvVVsO6vqE2oofv'
+    cards: []
+  - _id: WxzytN1DB12hWClF
+    name: Anführer
+    description: ''
+    type: destiny
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Anführer
+        text: ''
+        img: systems/torgeternity/images/deutsch/cards/Schicksalskarten/51.webp
+    face: 0
+    drawn: false
+    origin: xaEDfI4ufJ2Z9Mli
+    rotation: 0
+    sort: 0
+    flags: {}
+    system: {}
+    value: null
+    width: null
+    height: null
+    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.WxzytN1DB12hWClF'
+    cards: []
+  - _id: 7oUrViQH4Mrs1IGC
+    name: Unterstützer
+    description: ''
+    type: destiny
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Unterstützer
+        text: ''
+        img: systems/torgeternity/images/deutsch/cards/Schicksalskarten/52.webp
+    face: 0
+    drawn: false
+    origin: xaEDfI4ufJ2Z9Mli
+    rotation: 0
+    sort: 0
+    flags: {}
+    system: {}
+    value: null
+    width: null
+    height: null
+    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.7oUrViQH4Mrs1IGC'
+    cards: []
+  - _id: tHRAaTFX2tXXdyNq
+    name: Unterstützer
+    description: ''
+    type: destiny
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Unterstützer
+        text: ''
+        img: systems/torgeternity/images/deutsch/cards/Schicksalskarten/53.webp
+    face: 0
+    drawn: false
+    origin: xaEDfI4ufJ2Z9Mli
+    rotation: 0
+    sort: 0
+    flags: {}
+    system: {}
+    value: null
+    width: null
+    height: null
+    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.tHRAaTFX2tXXdyNq'
+    cards: []
+  - _id: DmTwdaB4lDvcSZt3
+    name: Unterstützer
+    description: ''
+    type: destiny
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Unterstützer
+        text: ''
+        img: systems/torgeternity/images/deutsch/cards/Schicksalskarten/54.webp
+    face: 0
+    drawn: false
+    origin: xaEDfI4ufJ2Z9Mli
+    rotation: 0
+    sort: 0
+    flags: {}
+    system: {}
+    value: null
+    width: null
+    height: null
+    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.DmTwdaB4lDvcSZt3'
+    cards: []
+  - _id: uuJ2NvWtnWnnAr9P
+    name: Unterstützer
+    description: ''
+    type: destiny
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Unterstützer
+        text: ''
+        img: systems/torgeternity/images/deutsch/cards/Schicksalskarten/55.webp
+    face: 0
+    drawn: false
+    origin: xaEDfI4ufJ2Z9Mli
+    rotation: 0
+    sort: 0
+    flags: {}
+    system: {}
+    value: null
+    width: null
+    height: null
+    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.uuJ2NvWtnWnnAr9P'
+    cards: []
+  - _id: bHD27ZpkimTAt5LT
+    name: Neue Kraft
+    description: ''
+    type: destiny
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Neue Kraft
+        text: ''
+        img: systems/torgeternity/images/deutsch/cards/Schicksalskarten/56.webp
+    face: 0
+    drawn: false
+    origin: xaEDfI4ufJ2Z9Mli
+    rotation: 0
+    sort: 0
+    flags: {}
+    system: {}
+    value: null
+    width: null
+    height: null
+    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.bHD27ZpkimTAt5LT'
+    cards: []
+  - _id: akz4OzGttHGVYSeo
+    name: Neue Kraft
+    description: ''
+    type: destiny
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Neue Kraft
+        text: ''
+        img: systems/torgeternity/images/deutsch/cards/Schicksalskarten/57.webp
+    face: 0
+    drawn: false
+    origin: xaEDfI4ufJ2Z9Mli
+    rotation: 0
+    sort: 0
+    flags: {}
+    system: {}
+    value: null
+    width: null
+    height: null
+    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.akz4OzGttHGVYSeo'
+    cards: []
+  - _id: SeuXeAfVDdd4gPjZ
+    name: Transfer
+    description: ''
+    type: destiny
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Transfer
+        text: ''
+        img: systems/torgeternity/images/deutsch/cards/Schicksalskarten/58.webp
+    face: 0
+    drawn: false
+    origin: xaEDfI4ufJ2Z9Mli
+    rotation: 0
+    sort: 0
+    flags: {}
+    system: {}
+    value: null
+    width: null
+    height: null
+    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.SeuXeAfVDdd4gPjZ'
+    cards: []
+  - _id: A3RgR5VtIFA077gn
+    name: Realitätswelle
+    description: ''
+    type: destiny
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Realitätswelle
+        text: ''
+        img: systems/torgeternity/images/deutsch/cards/Schicksalskarten/59.webp
+    face: 0
+    drawn: false
+    origin: xaEDfI4ufJ2Z9Mli
+    rotation: 0
+    sort: 0
+    flags: {}
+    system: {}
+    value: null
+    width: null
+    height: null
+    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.A3RgR5VtIFA077gn'
+    cards: []
+  - _id: FST0ZsTEQnLGgoUl
+    name: Mahlstrom
+    description: ''
+    type: destiny
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Mahlstrom
+        text: ''
+        img: systems/torgeternity/images/deutsch/cards/Schicksalskarten/60.webp
+    face: 0
+    drawn: false
+    origin: xaEDfI4ufJ2Z9Mli
+    rotation: 0
+    sort: 0
+    flags: {}
+    system: {}
+    value: null
+    width: null
+    height: null
+    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.FST0ZsTEQnLGgoUl'
+    cards: []
+rotation: 0
+displayCount: false
+folder: null
+sort: 0
+flags:
+  core:
+    sourceId: Cards.tL2JmgOWm0lJvfRU
+  torgeternity:
+    usage: destinyDeck
+system: {}
+ownership:
+  default: 0
+  1pSzpSNrhKGYYcib: 3
+width: null
+height: null
+_stats:
+  systemId: torgeternity
+  systemVersion: 2.5.1
+  coreVersion: '10.278'
+  createdTime: null
+  modifiedTime: 1660972227943
+  lastModifiedBy: pLf3kUpJuGZH0Ep4
+_key: '!cards!xaEDfI4ufJ2Z9Mli'
+

@@ -1,0 +1,1419 @@
+_id: tkTSelPVmWdGXA5t
+name: Paquet du Destin
+type: deck
+description: This is the base deck, consisting of cards 1-40.
+img: systems/torgeternity/images/cards/destiny-back.webp
+data: {}
+cards:
+  - _id: 9N1puYw3Ez17gV5r
+    name: Adrénaline
+    description: ''
+    type: destiny
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Adrenaline
+        img: systems/torgeternity/images/cards/destiny/fr/01.webp
+        text: ''
+    face: 1
+    drawn: false
+    origin: 9PJd5XGY6Zg9aQNk
+    rotation: 0
+    sort: 0
+    flags:
+      core:
+        sheetClass: ''
+    value: 1
+    number: null
+    _key: '!cards.cards!tkTSelPVmWdGXA5t.9N1puYw3Ez17gV5r'
+    cards: []
+  - _id: t8WUtVCkJzy8rls8
+    name: Adrénaline
+    description: ''
+    type: destiny
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Adrenaline
+        img: systems/torgeternity/images/cards/destiny/fr/02.webp
+        text: ''
+    face: 1
+    drawn: false
+    origin: 9PJd5XGY6Zg9aQNk
+    rotation: 0
+    sort: 1
+    flags: {}
+    value: 2
+    number: null
+    _key: '!cards.cards!tkTSelPVmWdGXA5t.t8WUtVCkJzy8rls8'
+    cards: []
+  - _id: PmeWMDKcv4rzjTku
+    name: Adrénaline
+    description: ''
+    type: destiny
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Adrenaline
+        img: systems/torgeternity/images/cards/destiny/fr/03.webp
+        text: ''
+    face: 1
+    drawn: false
+    origin: 9PJd5XGY6Zg9aQNk
+    rotation: 0
+    sort: 2
+    flags: {}
+    value: 3
+    number: null
+    _key: '!cards.cards!tkTSelPVmWdGXA5t.PmeWMDKcv4rzjTku'
+    cards: []
+  - _id: 7zACUJuEpP2qhpWP
+    name: Adrénaline
+    description: ''
+    type: destiny
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Adrenaline
+        img: systems/torgeternity/images/cards/destiny/fr/04.webp
+        text: ''
+    face: 1
+    drawn: false
+    origin: 9PJd5XGY6Zg9aQNk
+    rotation: 0
+    sort: 3
+    flags: {}
+    value: 4
+    number: null
+    _key: '!cards.cards!tkTSelPVmWdGXA5t.7zACUJuEpP2qhpWP'
+    cards: []
+  - _id: EuPnfTimrUdno0cu
+    name: Volonté
+    description: ''
+    type: destiny
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Willpower
+        img: systems/torgeternity/images/cards/destiny/05.webp
+        text: ''
+    face: 1
+    drawn: false
+    origin: 9PJd5XGY6Zg9aQNk
+    rotation: 0
+    sort: 4
+    flags: {}
+    value: 5
+    number: null
+    _key: '!cards.cards!tkTSelPVmWdGXA5t.EuPnfTimrUdno0cu'
+    cards: []
+  - _id: fz6KWQejphxPO1Zj
+    name: Volonté
+    description: ''
+    type: destiny
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Willpower
+        img: systems/torgeternity/images/cards/destiny/fr/06.webp
+        text: ''
+    face: 1
+    drawn: false
+    origin: 9PJd5XGY6Zg9aQNk
+    rotation: 0
+    sort: 5
+    flags: {}
+    value: 6
+    number: null
+    _key: '!cards.cards!tkTSelPVmWdGXA5t.fz6KWQejphxPO1Zj'
+    cards: []
+  - _id: x1p6jmmQIs7RBfVN
+    name: Volonté
+    description: ''
+    type: destiny
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Willpower
+        img: systems/torgeternity/images/cards/destiny/fr/07.webp
+        text: ''
+    face: 1
+    drawn: false
+    origin: 9PJd5XGY6Zg9aQNk
+    rotation: 0
+    sort: 6
+    flags: {}
+    value: 7
+    number: null
+    _key: '!cards.cards!tkTSelPVmWdGXA5t.x1p6jmmQIs7RBfVN'
+    cards: []
+  - _id: CTPzEfRKwY0uUrq7
+    name: Volonté
+    description: ''
+    type: destiny
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Willpower
+        img: systems/torgeternity/images/cards/destiny/fr/08.webp
+        text: ''
+    face: 1
+    drawn: false
+    origin: 9PJd5XGY6Zg9aQNk
+    rotation: 0
+    sort: 7
+    flags: {}
+    value: 8
+    number: null
+    _key: '!cards.cards!tkTSelPVmWdGXA5t.CTPzEfRKwY0uUrq7'
+    cards: []
+  - _id: oZiX53AxpcnoCJ9s
+    name: Vigilance
+    description: ''
+    type: destiny
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Alertness
+        img: systems/torgeternity/images/cards/destiny/fr/09.webp
+        text: ''
+    face: 1
+    drawn: false
+    origin: 9PJd5XGY6Zg9aQNk
+    rotation: 0
+    sort: 8
+    flags: {}
+    value: 9
+    number: null
+    _key: '!cards.cards!tkTSelPVmWdGXA5t.oZiX53AxpcnoCJ9s'
+    cards: []
+  - _id: IRlXLBzcS2auvwpq
+    name: Vigilance
+    description: ''
+    type: destiny
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Alertness
+        img: systems/torgeternity/images/cards/destiny/fr/10.webp
+        text: ''
+    face: 1
+    drawn: false
+    origin: 9PJd5XGY6Zg9aQNk
+    rotation: 0
+    sort: 9
+    flags: {}
+    value: 10
+    number: null
+    _key: '!cards.cards!tkTSelPVmWdGXA5t.IRlXLBzcS2auvwpq'
+    cards: []
+  - _id: lVL5INsrB3d0ZqKC
+    name: Martyr
+    description: ''
+    type: destiny
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Martyr
+        img: systems/torgeternity/images/cards/destiny/fr/11.webp
+        text: ''
+    face: 0
+    drawn: false
+    origin: 9PJd5XGY6Zg9aQNk
+    rotation: 0
+    sort: 10
+    flags: {}
+    number: null
+    _key: '!cards.cards!tkTSelPVmWdGXA5t.lVL5INsrB3d0ZqKC'
+    cards: []
+  - _id: LUx2FWBKgr9QdMnK
+    name: Action
+    description: ''
+    type: destiny
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Action
+        img: systems/torgeternity/images/cards/destiny/fr/12.webp
+        text: ''
+    face: 0
+    drawn: false
+    origin: 9PJd5XGY6Zg9aQNk
+    rotation: 0
+    sort: 11
+    flags: {}
+    number: null
+    _key: '!cards.cards!tkTSelPVmWdGXA5t.LUx2FWBKgr9QdMnK'
+    cards: []
+  - _id: SPCZWNVZwCS8UnKG
+    name: Action
+    description: ''
+    type: destiny
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Action
+        img: systems/torgeternity/images/cards/destiny/fr/13.webp
+        text: ''
+    face: 0
+    drawn: false
+    origin: 9PJd5XGY6Zg9aQNk
+    rotation: 0
+    sort: 12
+    flags: {}
+    number: null
+    _key: '!cards.cards!tkTSelPVmWdGXA5t.SPCZWNVZwCS8UnKG'
+    cards: []
+  - _id: cXIsue43BkeoM1yM
+    name: Action
+    description: ''
+    type: destiny
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Action
+        img: systems/torgeternity/images/cards/destiny/fr/14.webp
+        text: ''
+    face: 0
+    drawn: false
+    origin: 9PJd5XGY6Zg9aQNk
+    rotation: 0
+    sort: 13
+    flags: {}
+    number: null
+    _key: '!cards.cards!tkTSelPVmWdGXA5t.cXIsue43BkeoM1yM'
+    cards: []
+  - _id: nmDiZjfk8vRD4Exp
+    name: Action
+    description: ''
+    type: destiny
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Action
+        img: systems/torgeternity/images/cards/destiny/fr/15.webp
+        text: ''
+    face: 0
+    drawn: false
+    origin: 9PJd5XGY6Zg9aQNk
+    rotation: 0
+    sort: 14
+    flags: {}
+    number: null
+    _key: '!cards.cards!tkTSelPVmWdGXA5t.nmDiZjfk8vRD4Exp'
+    cards: []
+  - _id: 3sbx47f0RmICKpOM
+    name: Vivacité
+    description: ''
+    type: destiny
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Flurry
+        img: systems/torgeternity/images/cards/destiny/fr/16.webp
+        text: ''
+    face: 0
+    drawn: false
+    origin: 9PJd5XGY6Zg9aQNk
+    rotation: 0
+    sort: 15
+    flags: {}
+    number: null
+    _key: '!cards.cards!tkTSelPVmWdGXA5t.3sbx47f0RmICKpOM'
+    cards: []
+  - _id: HE5iYeyklOqFb8Xe
+    name: Vivacité
+    description: ''
+    type: destiny
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Flurry
+        img: systems/torgeternity/images/cards/destiny/fr/17.webp
+        text: ''
+    face: 0
+    drawn: false
+    origin: 9PJd5XGY6Zg9aQNk
+    rotation: 0
+    sort: 16
+    flags: {}
+    number: null
+    _key: '!cards.cards!tkTSelPVmWdGXA5t.HE5iYeyklOqFb8Xe'
+    cards: []
+  - _id: u4VHcJcI4jKWOwih
+    name: Plan génial
+    description: ''
+    type: destiny
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Master Plan
+        img: systems/torgeternity/images/cards/destiny/fr/18.webp
+        text: ''
+    face: 0
+    drawn: false
+    origin: 9PJd5XGY6Zg9aQNk
+    rotation: 0
+    sort: 17
+    flags: {}
+    number: null
+    _key: '!cards.cards!tkTSelPVmWdGXA5t.u4VHcJcI4jKWOwih'
+    cards: []
+  - _id: 4VvE80lcVbmA3aCJ
+    name: Plan génial
+    description: ''
+    type: destiny
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Master Plan
+        img: systems/torgeternity/images/cards/destiny/fr/20.webp
+        text: ''
+    face: 0
+    drawn: false
+    origin: 9PJd5XGY6Zg9aQNk
+    rotation: 0
+    sort: 18
+    flags: {}
+    number: null
+    _key: '!cards.cards!tkTSelPVmWdGXA5t.4VvE80lcVbmA3aCJ'
+    cards: []
+  - _id: vSr7TkOYQMs9J6ui
+    name: Inspiration
+    description: ''
+    type: destiny
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Inspire
+        img: systems/torgeternity/images/cards/destiny/fr/20.webp
+        text: ''
+    face: 0
+    drawn: false
+    origin: 9PJd5XGY6Zg9aQNk
+    rotation: 0
+    sort: 19
+    flags: {}
+    number: null
+    _key: '!cards.cards!tkTSelPVmWdGXA5t.vSr7TkOYQMs9J6ui'
+    cards: []
+  - _id: PFOhfDZ3ZBKNV3tb
+    name: Prise d'initiative
+    description: ''
+    type: destiny
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Seize Initiative
+        img: systems/torgeternity/images/cards/destiny/fr/21.webp
+        text: ''
+    face: 0
+    drawn: false
+    origin: 9PJd5XGY6Zg9aQNk
+    rotation: 0
+    sort: 20
+    flags: {}
+    number: null
+    _key: '!cards.cards!tkTSelPVmWdGXA5t.PFOhfDZ3ZBKNV3tb'
+    cards: []
+  - _id: 9cKoieIUb7Toe0bq
+    name: Prise d'initiative
+    description: ''
+    type: destiny
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Seize Initiative
+        img: systems/torgeternity/images/cards/destiny/fr/22.webp
+        text: ''
+    face: 0
+    drawn: false
+    origin: 9PJd5XGY6Zg9aQNk
+    rotation: 0
+    sort: 21
+    flags: {}
+    number: null
+    _key: '!cards.cards!tkTSelPVmWdGXA5t.9cKoieIUb7Toe0bq'
+    cards: []
+  - _id: B1adrvCoVAJeYvTE
+    name: Héros
+    description: ''
+    type: destiny
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Hero
+        img: systems/torgeternity/images/cards/destiny/fr/23.webp
+        text: ''
+    face: 0
+    drawn: false
+    origin: 9PJd5XGY6Zg9aQNk
+    rotation: 0
+    sort: 22
+    flags: {}
+    number: null
+    _key: '!cards.cards!tkTSelPVmWdGXA5t.B1adrvCoVAJeYvTE'
+    cards: []
+  - _id: 8aOOZrmTgsUuGMgT
+    name: Héros
+    description: ''
+    type: destiny
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Hero
+        img: systems/torgeternity/images/cards/destiny/fr/24.webp
+        text: ''
+    face: 0
+    drawn: false
+    origin: 9PJd5XGY6Zg9aQNk
+    rotation: 0
+    sort: 23
+    flags: {}
+    number: null
+    _key: '!cards.cards!tkTSelPVmWdGXA5t.8aOOZrmTgsUuGMgT'
+    cards: []
+  - _id: 4V4QvJ0ITpUppCUc
+    name: Héros
+    description: ''
+    type: destiny
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Hero
+        img: systems/torgeternity/images/cards/destiny/fr/25.webp
+        text: ''
+    face: 0
+    drawn: false
+    origin: 9PJd5XGY6Zg9aQNk
+    rotation: 0
+    sort: 24
+    flags: {}
+    number: null
+    _key: '!cards.cards!tkTSelPVmWdGXA5t.4V4QvJ0ITpUppCUc'
+    cards: []
+  - _id: doqi5dsKD2V2hDyL
+    name: Héros
+    description: ''
+    type: destiny
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Hero
+        img: systems/torgeternity/images/cards/destiny/fr/26.webp
+        text: ''
+    face: 0
+    drawn: false
+    origin: 9PJd5XGY6Zg9aQNk
+    rotation: 0
+    sort: 25
+    flags: {}
+    number: null
+    _key: '!cards.cards!tkTSelPVmWdGXA5t.doqi5dsKD2V2hDyL'
+    cards: []
+  - _id: 5wtzP7q6KeE4pQxH
+    name: Échec de l'adversaire
+    description: ''
+    type: destiny
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Opponent Fails
+        img: systems/torgeternity/images/cards/destiny/fr/27.webp
+        text: ''
+    face: 0
+    drawn: false
+    origin: 9PJd5XGY6Zg9aQNk
+    rotation: 0
+    sort: 26
+    flags: {}
+    number: null
+    _key: '!cards.cards!tkTSelPVmWdGXA5t.5wtzP7q6KeE4pQxH'
+    cards: []
+  - _id: 42Iy74IhuHotfnmR
+    name: Échec de l'adversaire
+    description: ''
+    type: destiny
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Opponent Fails
+        img: systems/torgeternity/images/cards/destiny/fr/28.webp
+        text: ''
+    face: 0
+    drawn: false
+    origin: 9PJd5XGY6Zg9aQNk
+    rotation: 0
+    sort: 27
+    flags: {}
+    number: null
+    _key: '!cards.cards!tkTSelPVmWdGXA5t.42Iy74IhuHotfnmR'
+    cards: []
+  - _id: NrOeMQJ5L98SJl8A
+    name: Ralliement
+    description: ''
+    type: destiny
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Rally
+        img: systems/torgeternity/images/cards/destiny/fr/29.webp
+        text: ''
+    face: 0
+    drawn: false
+    origin: 9PJd5XGY6Zg9aQNk
+    rotation: 0
+    sort: 28
+    flags: {}
+    number: null
+    _key: '!cards.cards!tkTSelPVmWdGXA5t.NrOeMQJ5L98SJl8A'
+    cards: []
+  - _id: B6apiqLr3Nm90Y85
+    name: Seconde chance
+    description: ''
+    type: destiny
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Second Chance
+        img: systems/torgeternity/images/cards/destiny/fr/30.webp
+        text: ''
+    face: 0
+    drawn: false
+    origin: 9PJd5XGY6Zg9aQNk
+    rotation: 0
+    sort: 29
+    flags: {}
+    number: null
+    _key: '!cards.cards!tkTSelPVmWdGXA5t.B6apiqLr3Nm90Y85'
+    cards: []
+  - _id: TnEPvpjh9WLmY5dK
+    name: Seconde chance
+    description: ''
+    type: destiny
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Second Chance
+        img: systems/torgeternity/images/cards/destiny/fr/31.webp
+        text: ''
+    face: 0
+    drawn: false
+    origin: 9PJd5XGY6Zg9aQNk
+    rotation: 0
+    sort: 30
+    flags: {}
+    number: null
+    _key: '!cards.cards!tkTSelPVmWdGXA5t.TnEPvpjh9WLmY5dK'
+    cards: []
+  - _id: AgEC47SpXUjqyfDe
+    name: Seconde chance
+    description: ''
+    type: destiny
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Second Chance
+        img: systems/torgeternity/images/cards/destiny/fr/32.webp
+        text: ''
+    face: 0
+    drawn: false
+    origin: 9PJd5XGY6Zg9aQNk
+    rotation: 0
+    sort: 31
+    flags: {}
+    number: null
+    _key: '!cards.cards!tkTSelPVmWdGXA5t.AgEC47SpXUjqyfDe'
+    cards: []
+  - _id: l6NxcKWzCtInbpLl
+    name: Relation
+    description: ''
+    type: destiny
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Connection
+        img: systems/torgeternity/images/cards/destiny/fr/33.webp
+        text: ''
+    face: 0
+    drawn: false
+    origin: 9PJd5XGY6Zg9aQNk
+    rotation: 0
+    sort: 32
+    flags: {}
+    number: null
+    _key: '!cards.cards!tkTSelPVmWdGXA5t.l6NxcKWzCtInbpLl'
+    cards: []
+  - _id: rsCQo0daFb9EafDv
+    name: Idée
+    description: ''
+    type: destiny
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Idea
+        img: systems/torgeternity/images/cards/destiny/fr/34.webp
+        text: ''
+    face: 0
+    drawn: false
+    origin: 9PJd5XGY6Zg9aQNk
+    rotation: 0
+    sort: 33
+    flags: {}
+    number: null
+    _key: '!cards.cards!tkTSelPVmWdGXA5t.rsCQo0daFb9EafDv'
+    cards: []
+  - _id: d2hPQtnzbWopjFSn
+    name: Harmonisation
+    description: ''
+    type: destiny
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Attuned
+        img: systems/torgeternity/images/cards/destiny/fr/35.webp
+        text: ''
+    face: 0
+    drawn: false
+    origin: 9PJd5XGY6Zg9aQNk
+    rotation: 0
+    sort: 34
+    flags: {}
+    number: null
+    _key: '!cards.cards!tkTSelPVmWdGXA5t.d2hPQtnzbWopjFSn'
+    cards: []
+  - _id: 2oCCx8G3YBLzDKHc
+    name: Gloire
+    description: ''
+    type: destiny
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Glory
+        img: systems/torgeternity/images/cards/destiny/fr/36.webp
+        text: ''
+    face: 0
+    drawn: false
+    origin: 9PJd5XGY6Zg9aQNk
+    rotation: 0
+    sort: 35
+    flags: {}
+    number: null
+    _key: '!cards.cards!tkTSelPVmWdGXA5t.2oCCx8G3YBLzDKHc'
+    cards: []
+  - _id: b8dFhivsUQnqmfLa
+    name: Gloire
+    description: ''
+    type: destiny
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Glory
+        img: systems/torgeternity/images/cards/destiny/fr/37.webp
+        text: ''
+    face: 0
+    drawn: false
+    origin: 9PJd5XGY6Zg9aQNk
+    rotation: 0
+    sort: 36
+    flags: {}
+    number: null
+    _key: '!cards.cards!tkTSelPVmWdGXA5t.b8dFhivsUQnqmfLa'
+    cards: []
+  - _id: q1vnKvmwGcaC997p
+    name: Gloire
+    description: ''
+    type: destiny
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Glory
+        img: systems/torgeternity/images/cards/destiny/fr/38.webp
+        text: ''
+    face: 0
+    drawn: false
+    origin: 9PJd5XGY6Zg9aQNk
+    rotation: 0
+    sort: 37
+    flags: {}
+    number: null
+    _key: '!cards.cards!tkTSelPVmWdGXA5t.q1vnKvmwGcaC997p'
+    cards: []
+  - _id: YGTyWtP0dE7Bippd
+    name: Gloire
+    description: ''
+    type: destiny
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Glory
+        img: systems/torgeternity/images/cards/destiny/fr/39.webp
+        text: ''
+    face: 0
+    drawn: false
+    origin: 9PJd5XGY6Zg9aQNk
+    rotation: 0
+    sort: 38
+    flags: {}
+    number: null
+    _key: '!cards.cards!tkTSelPVmWdGXA5t.YGTyWtP0dE7Bippd'
+    cards: []
+  - _id: zsS5WZ9Qxyqh5AYM
+    name: Coup de grâce
+    description: ''
+    type: destiny
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Coup de Grace
+        img: systems/torgeternity/images/cards/destiny/fr/40.webp
+        text: ''
+    face: 0
+    drawn: false
+    origin: 9PJd5XGY6Zg9aQNk
+    rotation: 0
+    sort: 39
+    flags: {}
+    number: null
+    _key: '!cards.cards!tkTSelPVmWdGXA5t.zsS5WZ9Qxyqh5AYM'
+    cards: []
+  - _id: x97Bt7Wky7p3lHqH
+    name: Coup de grâce
+    description: ''
+    type: destiny
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Coup de Grace
+        img: systems/torgeternity/images/cards/destiny/fr/41.webp
+        text: ''
+    face: 0
+    drawn: false
+    origin: 9PJd5XGY6Zg9aQNk
+    rotation: 0
+    sort: 40
+    flags: {}
+    number: null
+    _key: '!cards.cards!tkTSelPVmWdGXA5t.x97Bt7Wky7p3lHqH'
+    cards: []
+  - _id: LYZU9MZ9ApHVVAWm
+    name: Coup de grâce
+    description: ''
+    type: destiny
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Alertness
+        img: systems/torgeternity/images/cards/destiny/fr/42.webp
+        text: ''
+    face: 0
+    drawn: false
+    origin: 9PJd5XGY6Zg9aQNk
+    rotation: 0
+    sort: 41
+    flags: {}
+    number: null
+    _key: '!cards.cards!tkTSelPVmWdGXA5t.LYZU9MZ9ApHVVAWm'
+    cards: []
+  - _id: yqJPJaxXmO28fQLl
+    name: Coup de grâce
+    description: ''
+    type: destiny
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Coup de Grace
+        img: systems/torgeternity/images/cards/destiny/fr/43.webp
+        text: ''
+    face: 0
+    drawn: false
+    origin: 9PJd5XGY6Zg9aQNk
+    rotation: 0
+    sort: 42
+    flags: {}
+    number: null
+    _key: '!cards.cards!tkTSelPVmWdGXA5t.yqJPJaxXmO28fQLl'
+    cards: []
+  - _id: bBL0JQyj1BvCuWoa
+    name: Romance
+    description: ''
+    type: destiny
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Romance
+        img: systems/torgeternity/images/cards/destiny/fr/44.webp
+        text: ''
+    face: 0
+    drawn: false
+    origin: 9PJd5XGY6Zg9aQNk
+    rotation: 0
+    sort: 43
+    flags: {}
+    number: null
+    _key: '!cards.cards!tkTSelPVmWdGXA5t.bBL0JQyj1BvCuWoa'
+    cards: []
+  - _id: glh4CJ6ebHKOftW3
+    name: Némésis
+    description: ''
+    type: destiny
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Nemesis
+        img: systems/torgeternity/images/cards/destiny/fr/45.webp
+        text: ''
+    face: 0
+    drawn: false
+    origin: 9PJd5XGY6Zg9aQNk
+    rotation: 0
+    sort: 44
+    flags: {}
+    number: null
+    _key: '!cards.cards!tkTSelPVmWdGXA5t.glh4CJ6ebHKOftW3'
+    cards: []
+  - _id: B0UT2sZG1N0bMsd0
+    name: Drame
+    description: ''
+    type: destiny
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Drama
+        img: systems/torgeternity/images/cards/destiny/fr/46.webp
+        text: ''
+    face: 0
+    drawn: false
+    origin: 9PJd5XGY6Zg9aQNk
+    rotation: 0
+    sort: 45
+    flags: {}
+    number: null
+    _key: '!cards.cards!tkTSelPVmWdGXA5t.B0UT2sZG1N0bMsd0'
+    cards: []
+  - _id: vzqYUVStMTghrsW5
+    name: Drame
+    description: ''
+    type: destiny
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Drama
+        img: systems/torgeternity/images/cards/destiny/fr/47.webp
+        text: ''
+    face: 0
+    drawn: false
+    origin: 9PJd5XGY6Zg9aQNk
+    rotation: 0
+    sort: 46
+    flags: {}
+    number: null
+    _key: '!cards.cards!tkTSelPVmWdGXA5t.vzqYUVStMTghrsW5'
+    cards: []
+  - _id: 8HQn7PrNNxSMting
+    name: Drame
+    description: ''
+    type: destiny
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Drama
+        img: systems/torgeternity/images/cards/destiny/fr/48.webp
+        text: ''
+    face: 0
+    drawn: false
+    origin: 9PJd5XGY6Zg9aQNk
+    rotation: 0
+    sort: 47
+    flags: {}
+    number: null
+    _key: '!cards.cards!tkTSelPVmWdGXA5t.8HQn7PrNNxSMting'
+    cards: []
+  - _id: OKuHWULiV3pWbPwu
+    name: Drame
+    description: ''
+    type: destiny
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Drama
+        img: systems/torgeternity/images/cards/destiny/fr/49.webp
+        text: ''
+    face: 0
+    drawn: false
+    origin: 9PJd5XGY6Zg9aQNk
+    rotation: 0
+    sort: 48
+    flags: {}
+    number: null
+    _key: '!cards.cards!tkTSelPVmWdGXA5t.OKuHWULiV3pWbPwu'
+    cards: []
+  - _id: O4LjxTG05ioXMlR4
+    name: Commandement
+    description: ''
+    type: destiny
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Leadership
+        img: systems/torgeternity/images/cards/destiny/fr/50.webp
+        text: ''
+    face: 0
+    drawn: false
+    origin: 9PJd5XGY6Zg9aQNk
+    rotation: 0
+    sort: 49
+    flags: {}
+    number: null
+    _key: '!cards.cards!tkTSelPVmWdGXA5t.O4LjxTG05ioXMlR4'
+    cards: []
+  - _id: LUSPMjgdp5SEUgud
+    name: Commandement
+    description: ''
+    type: destiny
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Leadership
+        img: systems/torgeternity/images/cards/destiny/fr/51.webp
+        text: ''
+    face: 0
+    drawn: false
+    origin: 9PJd5XGY6Zg9aQNk
+    rotation: 0
+    sort: 50
+    flags: {}
+    number: null
+    _key: '!cards.cards!tkTSelPVmWdGXA5t.LUSPMjgdp5SEUgud'
+    cards: []
+  - _id: 5ysijDWTDkOikKor
+    name: Soutien
+    description: ''
+    type: destiny
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Supporter
+        img: systems/torgeternity/images/cards/destiny/fr/52.webp
+        text: ''
+    face: 0
+    drawn: false
+    origin: 9PJd5XGY6Zg9aQNk
+    rotation: 0
+    sort: 51
+    flags: {}
+    number: null
+    _key: '!cards.cards!tkTSelPVmWdGXA5t.5ysijDWTDkOikKor'
+    cards: []
+  - _id: O7wg25wv1gnzLR6Z
+    name: Soutien
+    description: ''
+    type: destiny
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Supporter
+        img: systems/torgeternity/images/cards/destiny/fr/53.webp
+        text: ''
+    face: 0
+    drawn: false
+    origin: 9PJd5XGY6Zg9aQNk
+    rotation: 0
+    sort: 52
+    flags: {}
+    number: null
+    _key: '!cards.cards!tkTSelPVmWdGXA5t.O7wg25wv1gnzLR6Z'
+    cards: []
+  - _id: PfkSZ0b2LVz3YPwz
+    name: Soutien
+    description: ''
+    type: destiny
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Supporter
+        img: systems/torgeternity/images/cards/destiny/fr/54.webp
+        text: ''
+    face: 0
+    drawn: false
+    origin: 9PJd5XGY6Zg9aQNk
+    rotation: 0
+    sort: 53
+    flags: {}
+    number: null
+    _key: '!cards.cards!tkTSelPVmWdGXA5t.PfkSZ0b2LVz3YPwz'
+    cards: []
+  - _id: OlcFFzISQyZbHVI5
+    name: Soutien
+    description: ''
+    type: destiny
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Supporter
+        img: systems/torgeternity/images/cards/destiny/fr/55.webp
+        text: ''
+    face: 0
+    drawn: false
+    origin: 9PJd5XGY6Zg9aQNk
+    rotation: 0
+    sort: 54
+    flags: {}
+    number: null
+    _key: '!cards.cards!tkTSelPVmWdGXA5t.OlcFFzISQyZbHVI5'
+    cards: []
+  - _id: ha7BN29r7kU1Kys2
+    name: Second souffle
+    description: ''
+    type: destiny
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Second Wind
+        img: systems/torgeternity/images/cards/destiny/fr/56.webp
+        text: ''
+    face: 0
+    drawn: false
+    origin: 9PJd5XGY6Zg9aQNk
+    rotation: 0
+    sort: 55
+    flags: {}
+    number: null
+    _key: '!cards.cards!tkTSelPVmWdGXA5t.ha7BN29r7kU1Kys2'
+    cards: []
+  - _id: BjEIoQcQcuF3t5KC
+    name: Second souffle
+    description: ''
+    type: destiny
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Second Wind
+        img: systems/torgeternity/images/cards/destiny/fr/57.webp
+        text: ''
+    face: 0
+    drawn: false
+    origin: 9PJd5XGY6Zg9aQNk
+    rotation: 0
+    sort: 56
+    flags: {}
+    number: null
+    _key: '!cards.cards!tkTSelPVmWdGXA5t.BjEIoQcQcuF3t5KC'
+    cards: []
+  - _id: lCWhxSgUVXO8sivR
+    name: Transfert
+    description: ''
+    type: destiny
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Transfer
+        img: systems/torgeternity/images/cards/destiny/fr/58.webp
+        text: ''
+    face: 0
+    drawn: false
+    origin: 9PJd5XGY6Zg9aQNk
+    rotation: 0
+    sort: 57
+    flags: {}
+    number: null
+    _key: '!cards.cards!tkTSelPVmWdGXA5t.lCWhxSgUVXO8sivR'
+    cards: []
+  - _id: Ruk18uqRBK6u7riI
+    name: Poussée de réalité
+    description: ''
+    type: destiny
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Reality Surge
+        img: systems/torgeternity/images/cards/destiny/fr/59.webp
+        text: ''
+    face: 0
+    drawn: false
+    origin: 9PJd5XGY6Zg9aQNk
+    rotation: 0
+    sort: 58
+    flags: {}
+    number: null
+    width: null
+    height: null
+    _key: '!cards.cards!tkTSelPVmWdGXA5t.Ruk18uqRBK6u7riI'
+    cards: []
+  - _id: TvC9HdiVmtHMbSoH
+    name: Maelström
+    description: ''
+    type: destiny
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Maelstrom
+        img: systems/torgeternity/images/cards/destiny/fr/60.webp
+        text: ''
+    face: 0
+    drawn: false
+    origin: 9PJd5XGY6Zg9aQNk
+    rotation: 0
+    sort: 59
+    flags: {}
+    number: null
+    _key: '!cards.cards!tkTSelPVmWdGXA5t.TvC9HdiVmtHMbSoH'
+    cards: []
+rotation: 0
+displayCount: false
+folder: null
+sort: 0
+permission:
+  kz1RJu8vrAPmTUwN: 3
+flags:
+  exportSource:
+    world: torgv2p2
+    system: torgeternity
+    coreVersion: '9.226'
+    systemVersion: 2.1.0
+  core:
+    sourceId: Cards.Xx9CCRsurDadGaCi
+  torgeternity:
+    usage: destinyDeck
+_key: '!cards!tkTSelPVmWdGXA5t'
+

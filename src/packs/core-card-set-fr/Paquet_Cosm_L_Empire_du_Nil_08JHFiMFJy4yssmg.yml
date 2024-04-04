@@ -1,0 +1,257 @@
+_id: 08JHFiMFJy4yssmg
+name: Paquet Cosm L'Empire du Nil
+type: deck
+description: ''
+img: systems/torgeternity/images/cards/nile-empire-back.webp
+data: {}
+cards:
+  - _id: tHu6rid1PcPh9HXu
+    name: Ultime action
+    description: ''
+    type: cosm
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Parting Shot
+        img: systems/torgeternity/images/cards/cosm/nile-empire/fr/01.webp
+        text: ''
+    face: 1
+    drawn: false
+    origin: JewxfCM98QtJjYAt
+    rotation: 0
+    sort: 0
+    flags: {}
+    number: null
+    _key: '!cards.cards!08JHFiMFJy4yssmg.tHu6rid1PcPh9HXu'
+    cards: []
+  - _id: cnPQiNSSbXG14z14
+    name: Pris entre deux feux
+    description: ''
+    type: cosm
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Into the Crossfire
+        img: systems/torgeternity/images/cards/cosm/nile-empire/fr/02.webp
+        text: ''
+    face: 1
+    drawn: false
+    origin: JewxfCM98QtJjYAt
+    rotation: 0
+    sort: 1
+    flags: {}
+    number: null
+    _key: '!cards.cards!08JHFiMFJy4yssmg.cnPQiNSSbXG14z14'
+    cards: []
+  - _id: 0RLeJuLpmmhBHGdq
+    name: Capturé !
+    description: ''
+    type: cosm
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Captured!
+        img: systems/torgeternity/images/cards/cosm/nile-empire/fr/03.webp
+        text: ''
+    face: 1
+    drawn: false
+    origin: JewxfCM98QtJjYAt
+    rotation: 0
+    sort: 2
+    flags: {}
+    number: null
+    value: null
+    _key: '!cards.cards!08JHFiMFJy4yssmg.0RLeJuLpmmhBHGdq'
+    cards: []
+  - _id: E0LCqOJz4bNsfXSJ
+    name: Deuxième round !
+    description: ''
+    type: cosm
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Round Two!
+        img: systems/torgeternity/images/cards/cosm/nile-empire/fr/04.webp
+        text: ''
+    face: 1
+    drawn: false
+    origin: JewxfCM98QtJjYAt
+    rotation: 0
+    sort: 3
+    flags: {}
+    number: null
+    _key: '!cards.cards!08JHFiMFJy4yssmg.E0LCqOJz4bNsfXSJ'
+    cards: []
+  - _id: zFbAtbl7T8mI6oqG
+    name: Soudain ...
+    description: ''
+    type: cosm
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Suddenly...
+        img: systems/torgeternity/images/cards/cosm/nile-empire/fr/05.webp
+        text: ''
+    face: 1
+    drawn: false
+    origin: JewxfCM98QtJjYAt
+    rotation: 0
+    sort: 4
+    flags: {}
+    number: null
+    _key: '!cards.cards!08JHFiMFJy4yssmg.zFbAtbl7T8mI6oqG'
+    cards: []
+  - _id: 5SGhhSLghyWcIeEu
+    name: Révélation dramatique
+    description: ''
+    type: cosm
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Dramatic Reveal
+        img: systems/torgeternity/images/cards/cosm/nile-empire/fr/06.webp
+        text: ''
+    face: 0
+    drawn: false
+    origin: JewxfCM98QtJjYAt
+    rotation: 0
+    sort: 5
+    flags: {}
+    number: null
+    _key: '!cards.cards!08JHFiMFJy4yssmg.5SGhhSLghyWcIeEu'
+    cards: []
+  - _id: THMs1JCqoPrtSAhY
+    name: Sursit temporaire
+    description: ''
+    type: cosm
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Temporary Reprieve
+        img: systems/torgeternity/images/cards/cosm/nile-empire/fr/07.webp
+        text: ''
+    face: 1
+    drawn: false
+    origin: JewxfCM98QtJjYAt
+    rotation: 0
+    sort: 6
+    flags: {}
+    number: null
+    _key: '!cards.cards!08JHFiMFJy4yssmg.THMs1JCqoPrtSAhY'
+    cards: []
+  - _id: 9g8SslhVGtWULC4f
+    name: Vantardise triomphante
+    description: ''
+    type: cosm
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Triumphant Boast
+        img: systems/torgeternity/images/cards/cosm/nile-empire/fr/08.webp
+        text: ''
+    face: 1
+    drawn: false
+    origin: JewxfCM98QtJjYAt
+    rotation: 0
+    sort: 7
+    flags: {}
+    number: null
+    value: null
+    _key: '!cards.cards!08JHFiMFJy4yssmg.9g8SslhVGtWULC4f'
+    cards: []
+  - _id: AnVtX1fx8X1Z2X8h
+    name: L'inévitable retour
+    description: ''
+    type: cosm
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Inevitable Return
+        img: systems/torgeternity/images/cards/cosm/nile-empire/fr/09.webp
+        text: ''
+    face: 1
+    drawn: false
+    origin: JewxfCM98QtJjYAt
+    rotation: 0
+    sort: 8
+    flags: {}
+    number: null
+    _key: '!cards.cards!08JHFiMFJy4yssmg.AnVtX1fx8X1Z2X8h'
+    cards: []
+  - _id: pXpTVIwa7xRqE1zM
+    name: La loi de l'action
+    description: ''
+    type: cosm
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: The Law of Action
+        img: systems/torgeternity/images/cards/cosm/nile-empire/fr/10.webp
+        text: ''
+    face: 1
+    drawn: false
+    origin: JewxfCM98QtJjYAt
+    rotation: 0
+    sort: 9
+    flags: {}
+    number: null
+    _key: '!cards.cards!08JHFiMFJy4yssmg.pXpTVIwa7xRqE1zM'
+    cards: []
+rotation: 0
+displayCount: false
+folder: null
+sort: 0
+permission:
+  kz1RJu8vrAPmTUwN: 3
+flags:
+  exportSource:
+    world: torgv2p2
+    system: torgeternity
+    coreVersion: '9.235'
+    systemVersion: 2.0.5
+  core:
+    sourceId: Cards.4b8BekWDWpSWF961
+  torgeternity:
+    usage: nileEmpire
+_key: '!cards!08JHFiMFJy4yssmg'
+

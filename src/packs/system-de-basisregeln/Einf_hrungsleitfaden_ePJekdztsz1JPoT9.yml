@@ -1,0 +1,1263 @@
+_id: ePJekdztsz1JPoT9
+name: Einführungsleitfaden
+folder: null
+sort: 0
+flags: {}
+pages:
+  - sort: 100000
+    name: Spielsitzung Null
+    type: text
+    _id: n0yd2gGkGgjElI0T
+    title:
+      show: false
+      level: 1
+    image: {}
+    text:
+      format: 1
+      content: >-
+        <div class="directive1" style="margin:0rem 6rem"><h4>Hallo!</h4><p>Ich
+        wollte dir nur kurz mitteilen, dass dieses kurze Büchlein einen anderen
+        Tonfall und Vorgangsweise hat als unsere üblichen Produkte. Es handelt
+        sich nicht um ein formelles Regelwerk.</p><p>Stellt dir einfach vor, wir
+        würden uns in einer Bar oder einem Cafe oder bei einer Spielmesse
+        zusammensetzen. Du hast uns gerade gefragt: „He, über was für Dinge
+        sollte ich mit meinen Spielern reden, bevor ich meine erste Torg
+        Eternity Spielsitzung leite?“</p><p>Auf der nächsten Seite findest du
+        die Definition einer Handvoll wichtiger Begriffe, und dann werden wir
+        diese Fragen auch gleich beantworten.</p><p>In jedem Abschnitt stellt
+        sich der Autor, der den entsprechenden Abschnitt für dich geschrieben
+        hat, kurz vor, und dann geht es auch gleich in medias
+        res!“</p></div><h1>Spielsitzung Null</h1><p>Greg Gorden hier. Wenn du
+        eine Spielsitzung Null abhältst, solltest du erstmal tief Luft holen und
+        dich entspannen. Du willst mit deinen Freunden darüber sprechen, wie
+        deine Spielrunde von <em>Torg Eternity</em> gestaltet werden soll, damit
+        sie allen Beteiligten möglichst viel Spaß macht, und nicht ein
+        Handelsabkommen mit China aushandeln. Und falls du mal tatsächlich ein
+        Handelsabkommen mit China aushandelst, solltest du mich unbedingt zu
+        deinen Spielsitzungen einladen, wenn es dabei um Pan-Pacifica geht. Das
+        würde ich dann wirklich gerne live erleben!</p><div class="sidenote
+        right"><h4>Begriffe und Techniken</h4><p>In jeder Realität von Torg
+        Eternity gibt es das Böse in den unterschiedlichsten Ausprägungen. Das
+        reicht von der Wildheit des Lebenden Landes über die Dunkelheit und
+        blutige Eroberungsfeldzüge in Aysle, ruchlose Schurken im Nil-Imperium
+        bis hin zu diabolischen Schrecken der Nacht in Orrorsh. Aber es gibt in
+        Torg auch viele Themen, die dafür sorgen können, dass sich die Spieler
+        und auch die SL bei ihrer Darstellung unbehaglich fühlen. Als erste
+        Faustregel gilt, dass das Wohlbefinden der Spieler immer den absoluten
+        Vorrang haben sollte, der über die Geschichte, die geplante Handlung und
+        auch über die „Genauigkeit“ der Darstellung des jeweiligen Settings
+        hinausgeht.</p><p>Es gibt heute eine Reihe von gut etablierten und gut
+        funktionierenden Techniken, die es der Spielleiterin leichter machen,
+        dafür zu sorgen, dass sie erfolgreiche Spielsitzungen leitet, bei denen
+        alle am Tisch ihren Spaß haben.</p><h3>Spielsitzung Null</h3><p>Bevor
+        das eigentliche Spiel beginnt, solltest du mit deinen Spielern ihre
+        Erwartungen besprechen. Besprich deinen geplanten Spielstiel und die
+        Themen, die potenziell eine Rolle spielen werden, damit alle von Anfang
+        an wissen, worauf sie sich einlassen werden. Du könntest verschiedenen
+        Themen beispielsweise eine Jugendfreigabe zuteilen (FSK 6, FSK 12, FSK
+        16 usw.). Dies ist hilfreich, um eine gemeinsame Grundlage zu schaffen
+        und zu etablieren, womit man rechnen sollte. Es kann sogar hilfreich
+        sein, dass du dich im Vier-Augen-Gespräch der Reihe nach mit deinen
+        einzelnen Spielern triffst, damit die Vertraulichkeit dieser
+        Diskussionen gewahrt bleibt und sich niemand unter Druck gesetzt fühlt,
+        intime Details über seine Grenzen vor den anderen Spielern zu enthüllen.
+        In diesem Dokument beschäftigen wir uns primär mit den wichtigen Themen
+        für diese Spielsitzung Null in den Cosms von Torg
+        Eternity.</p><h3>Grenzen und Schleier</h3><p>Diese Technik ermöglicht es
+        der SL und den Spielern sehr gut Grenzen zu ziehen. Du besprichst dabei
+        mit den Spielern die möglichen Themen, wie dies oben bereits beschrieben
+        wurden. Dann entscheidet ihr euch gemeinsam für jene Themen, die auf
+        jeden Fall hinter eine Grenze verbannt werden sollten, und damit in
+        euren Spielsitzungen überhaupt keine Rolle spielen dürfen. Für weniger
+        sensitive Themen könntet ihr euch entscheiden, sie nur hinter einen
+        Schleier zu verbannen. Das bedeutet, dass diese Themen in eurer
+        Spielwelt existieren und geschehen, dass dies aber niemals im
+        Rampenlicht geschieht und die Charaktere nicht direkt betreffen darf.
+        Diese Technik ist die wichtigste Technik, die wir auch in diesem
+        Dokument verwenden werden.</p><h3>Die X-Karte</h3><p>Diese Methode wurde
+        von John Stavropoulos entwickelt. Es handelt sich um ein gut sichtbares
+        Signal (vielleicht sogar in Form einer echten Karte), das die Spieler
+        verwenden können, um der SL mitzuteilen, wenn sie etwas, das gerade in
+        der Geschichte passiert, extrem unangenehm berührt. Wenn ein Spieler die
+        X-Karte zückt, dann entfernt die Spielleiterin das störende Element
+        sofort, ohne nachzufragen oder den Spieler gar dafür zu kritisieren. Sie
+        kann dies tun, indem sie die Geschichte verändert, einen Schritt weit
+        zurückgeht und ohne das Element neu erzählt oder es schlicht und einfach
+        sofort völlig entfernt. Du kannst mehr über X-Karten auf
+        htttp://tinyurl.com/x-card-rpg nachlesen. Diese Technik ist in keiner
+        Weise auf bestimmte Themen und Cosms beschränkt. Die Spieler und die SL
+        müssen sich also nur darauf einigen, sie zu verwenden, wenn das in
+        deiner Spielrunde gewünscht ist. Außerdem gibt es für Foundry ein Modul
+        das ebenfalls X-Card heißt. Es fügt sich in die Tokensteuerung
+        ein.</p><h3>Nachfragen und Nachbesprechungen</h3><p>Während der
+        Spielsitzung, vor allem wenn es sich um besonders brutale oder
+        furchterregende Szenen handelt, sollte die Spielleiterin auch mal eine
+        kurze Pause einlegen und die Spieler fragen, ob es in Ordnung ist, mit
+        diesem Thema so weiterzumachen. Nach einer Spielsitzung sollte die
+        Spielleiterin sich die Zeit nehmen, mit jedem Spieler persönlich darüber
+        zu sprechen, ob es in der Spielsitzung etwas gegeben hat, mit dem er
+        Probleme hatte, damit sie zukünftige Spielsitzungen entsprechend
+        anpassen kann</p><p>Es gibt natürlich noch viele andere Methoden, um mit
+        schwierigen Themen und Grenzsituationen umzugehen, und manche
+        funktionieren besser oder schlechter, je nach Gruppe. Der Schlüssel
+        besteht auf jeden Fall darin, dafür zu sorgen, dass sich alle am
+        Spieltisch sicher, geborgen und jederzeit unterstützt fühlen. Wenn ein
+        Spieler seinem Unbehagen Ausdruck verleiht, sollte man das einfach so
+        akzeptieren, wie es eben ist. Er sollte nicht dazu gedrängt werden,
+        seine Gefühle zu begründen oder gar zu
+        rechtfertigen.</p></div><p>Während wir uns in dem nachfolgenden Dokument
+        hauptsächlich mit den problematischen Themen der einzelnen Cosms
+        befassen wollen, solltest du daran denken, dass die Spielsitzung Null
+        auch eine gute Gelegenheit für dich ist, mit deinen Spielern zu
+        besprechen, welche Themen sie in ihren Abenteuern erleben wollen. Es ist
+        der ideale Zeitpunkt, um deinen Spielern mitzuteilen, welche Arten von
+        Abenteuern du zu leiten planst und ob es sich dabei um einzelne,
+        voneinander getrennte Abenteuer oder eine langfristige Kampagne handeln
+        wird.</p><p>Ich verbinde meine Spielsitzungen Null meistens mit Snacks
+        oder einem kleinen ungezwungenen Essen. Auch angesichts von COVID bitte
+        ich die Leute dennoch darum, Getränke und etwas zum Knabbern
+        mitzubringen und die Zeit zu genießen, die wir damit verbringen werden,
+        über das Spiel zu reden. Das hier ist ein entspanntes Gespräch und nicht
+        die Spanische Inquisition.</p><p>Wenn ich über Grenzen und Schleier
+        rede, dann teile ich diese gerne in drei unterschiedliche Arten von
+        Interaktionen, wobei die Gruppe für diese getrennte Grenzen festlegen
+        kann. Sie zeigen, was man am Spieltisch zeigen und ausspielen kann und
+        was nicht. Diese drei Arten von Interaktionen sind:</p><ul><li>NSC mit
+        NSC</li><li>NSC mit Storm Knight</li><li>Storm Knight mit Storm
+        Knight</li></ul><p>Ich bestehe dabei aber auch stets darauf, dass die
+        Grenzen für die Kategorie NSC mit Storm Knight für beide Seiten gelten.
+        Das bedeutet also, dass, wenn wir miteinander vereinbart haben, dass ein
+        Storm Knight mit den NSC X anstellen kann, dass dann auch die NSC X mit
+        den Storm Knights anstellen können. Die Storm Knights sollten nicht die
+        Möglichkeit haben, den NSC auf eine Weise das Leben schwer zu machen,
+        wie es dies dann den NSC im Gegenzug nicht freistehen
+        würde.</p><p>Nehmen wir als Beispiel ein Abenteuer, das in Orrorsh
+        spielt, und eines der Schlüsselelemente in dem Abenteuer besteht darin,
+        dass ein Kult Kinder entführt, um sie später zu verkaufen, zu
+        indoktrinieren oder zu opfern. Die Mitglieder meiner aktuellen Gruppe
+        würden mir vermutlich entsetzt mitteilen, dass das eine Grenze für sie
+        überschreitet. Es reicht ihnen auch nicht, wenn diese Dinge nur abseits
+        der Kamera stattfinden, damit die Behandlung des Themas für sie am
+        Spieltisch akzeptabel wäre. Deswegen verzichte ich auf meine
+        Idee.</p><p>Zu einem anderen Zeitpunkt plane ich eine Storyreihe, bei
+        der eine russische kriminelle Organisation die Forschungen des Büros für
+        Psychische Forschung auf dem Gebiet der Gedankenkontrolle unterstützt.
+        Dadurch soll eine Droge entwickelt werden, die die Gedankenkontrolle von
+        Menschen, Angehörigen des Volkes und Tharkoldu stark erleichtert. Damit
+        diese Geschichte überhaupt funktioniert, muss ich NSC mit der Fähigkeit
+        ausstatten, Gedankenkontrolle über andere NSC zu übernehmen. Wenn jetzt
+        die Spieler eine Möglichkeit haben wollen, dass ihre Storm Knights
+        vielleicht die Gelegenheit haben, mittels der Droge einen Technodämon zu
+        kontrollieren, dann müssen sie auch die Möglichkeit akzeptieren, dass
+        vielleicht ein NSC versuchen könnte, auf diesem Weg die Storm Knights zu
+        kontrollieren. Egal, für welche Option sich die Spieler entscheiden,
+        handelt es sich um eine Entscheidung für beide Seiten.</p><p>Wenn einige
+        Spieler nichts dagegen haben, dass ihre Charaktere vielleicht durch
+        einen NSC kontrolliert werden, und andere dagegen sind, dann solltest du
+        es nicht ermöglichen.</p><p>Ich persönlich wäre selbst nicht mit einer
+        Spielrunde zufrieden, in der ein Spieler am Tisch den Charakter eines
+        anderen Spielers auf diese Weise kontrollieren kann. Das würde schon für
+        <em>mich </em>eine Grenze überschreiten. Daher würde ich ein Spiel, in
+        dem das möglich ist, auf keinen Fall leiten.</p><p>Und wenn wir schon
+        mal von Tharkold sprechen … Immerhin ist das einer der Cosms, in dem es
+        eine Menge Elemente gibt, die den einen oder anderen Spieler nervös
+        machen können. Die Menge an blutiger Gewalt, die sich in diesem Cosm
+        abspielt, können sowohl durch Grenzen als auch durch Schleier
+        eingeschränkt werden. Wenn die Gruppe wirklich, wirklich unangenehm von
+        Gewalt und Gemetzeln berührt wird, dann ist Tharkold vielleicht sogar
+        ein Cosm, dem du völlig aus dem Weg gehen solltest. Doch vielleicht ist
+        deine Gruppe ja damit einverstanden, dass der Großteil der Gewalt
+        abseits der Kamera stattfindet. Dann könntest du beispielsweise eine
+        Szene mit der Beschreibung beenden, wie ein Technodämon drohend seine
+        brutale Klaue hebt und die unschuldigen Leibeigenen, die er gleich
+        abschlachten wird, panisch aufschreien, und dann blendest du weg.
+        Besprich einfach ein paar verschiedene mögliche Szenen mit deiner
+        Gruppe, und finde heraus, was noch innerhalb ihrer Komfortzone liegt und
+        was eben nicht.</p><h1>Aysle</h1><p>Hi, hier spricht Brian Reeves. Du
+        kennst mich vermutlich von Abenteuern wie<em> Feuer des Ra </em>oder
+        <em>Rache des Carredons</em>. In Aysle geht es um zahlreiche vertraute
+        Themen aus der Fantasy. Das reicht von Drachen über mit Monstern
+        gefüllte Gewölbe bis hin zur Magie. Das alles wird mit einer Prise
+        realer europäischer Legenden und den Märchen der Gebrüder Grimm
+        angereichert. Obwohl derartige Themen bei Rollenspielen ohnehin sehr
+        beliebt und verbreitet sind, können sie für manche Spieler dennoch
+        problematisch sein. Deswegen will ich nachfolgend ein paar wichtige
+        Themen beschreiben, die du mit deinen Spielern besprechen solltest,
+        bevor du Abenteuer in Aysle leitest.</p><h3>Wikinger</h3><p>In unserer
+        Welt haben sich diese Plünderer auf hoher See einen zweifelhaften Ruf
+        für gewaltsame Überfälle, Vergewaltigung, Mord und Sklaverei verdient.
+        Das brutale Abschlachten hilfloser Personen gehört zweifellos zu den
+        Vorgangsweisen der Wikinger Aysles und wird von manchen Spielern
+        vermutlich schwer verdaut werden. Besprich mit deinen Spielern am
+        besten, wie ihre Charaktere darauf reagieren würden, wenn sie Zeugen
+        einer solch ruchlosen Tat werden oder später über ihre Folgen stolpern.
+        Der sinnlose Tod von Kindern kann noch schwerer zu verdauen sein, und du
+        kannst auch ruhig darauf verzichten. Derartig extreme Gewalttaten sind
+        keineswegs notwendig, um die Wildheit der Wikinger zu untersteichen. Du
+        kannst natürlich auch sexuelle Ausschreitungen und Gewalttaten
+        auslassen, wenn du von der Brutalität der Wikinger berichtest. Dabei
+        handelt es sich nämlich für viele Gruppen um ein Thema, das die Grenzen
+        weit überschreitet, und zwar auch dann, wenn es außerhalb der Kamera
+        stattfindet. Vielleicht wäre es daher besser, das Thema gleich ganz zu
+        vermeiden. Ein Raubzug der Wikinger kann auch so furchterregend genug
+        sein, wenn die Angreifer „nur“ die Wachen massakrieren, die Ernte
+        verbrennen und alles stehlen, was sie auf ihren Langbooten unterbringen
+        können. Es reicht, die Unschuldigen verzweifelt aber am Leben
+        zurückzulassen.</p><h3>Sklaverei</h3><p>Und dann kommen wir auch schon
+        zum schwierigen Thema der Sklaverei. Gefangene brutal zur Arbeit zu
+        zwingen, passt sehr gut zum Sozial-Axiom von Aysle. Dennoch wird es im
+        ganzen Land allgemein als böse Tat angesehen, und daher herrschen nur
+        bei den Kräften der Dunkelheit derartige Zustände. Sklaverei kann gerade
+        in der Fantasie in den unterschiedlichsten Formen eine Rolle spielen. In
+        den Abenteuern, die ich in der Vergangenheit gespielt habe, sind
+        beispielsweise schmutzige, armselige Gnome vorgekommen, die angekettet
+        dazu gezwungen wurden, schwere Steinblöcke in einem Steinbruch
+        abzubauen, magisch dominierte Krieger, die dazu gezwungen wurden, für
+        ihren Feind zu kämpfen, Frauen, die im Harem eines bösen Hexers gefangen
+        waren, und Gefangene, die zur Ergötzung eines bösen Kriegsherren
+        gefoltert wurden. Dennoch kann gerade die Befreiung derartiger armer,
+        geknechteter Sklaven aus den Händen ihrer Unterdrücker, extrem
+        befriedigend für die Helden sein. Aber gibt es sicherlich Spieler, die
+        mit der Darstellung von Sklaverei auch in einem Fantasysetting in jeder
+        Form Probleme haben. In solch einem Fall kann es vielleicht helfen,
+        diese Sklaven als „Gefangene“ zu bezeichnen, um klarzustellen, dass es
+        nur ein vorübergehender Zustand ist. Außerdem solltest du die
+        Darstellung dieser Zwangsarbeit so gewaltfrei wie möglich machen. Auf
+        jeden Fall solltest du also mit deinen Spielern besprechen, wie weit du
+        bei der Darstellung von Sklaverei in der Fantasy gehen
+        kannst.</p><h3>Standesdünkel</h3><p>Da in Aysle eine feudale
+        Gesellschaft vorherrscht, spielen Status und Klasse in vielerlei
+        Hinsicht eine enorme Rolle. Die Leute werden normalerweise in ihren
+        Platz in der sozialen Hierarchie hineingeboren und abgesehen von einer
+        vorteilhaften Heirat oder wenn ein Sponsor einen Charakter niederen
+        Standes unter seine Fittiche nimmt, gibt es nicht vieles, was sie daran
+        ändern können oder überhaupt wollen. Der Stand einer Person bestimmt
+        ihren Zugriff auf Ressourcen, Schutz durch Recht und Polizei, die
+        Möglichkeiten zu reisen, die Rolle in der Gesellschaft, den Respekt, den
+        man ihnen entgegenbringt, und so vieles mehr. Manche Spieler finden
+        diese Ungleichheiten in der ayslischen Gesellschaft vielleicht schwer zu
+        akzeptieren. In einem Spiel, das auf cineastischer Aktion und Abenteuern
+        basiert, sollte es aber leicht sein, derartige lokale Ungleichheiten zu
+        übergehen, wenn das ein Problem für deine Spieler ist.</p><img
+        class="img-mid" src="systems/torgeternity/images/s0-01.webp" /><p
+        style="text-align:center"><em>Ein Abenteuer, das in einem Cosm spielt,
+        kann Elemente aus einem anderen Cosm enthalten. Sprich mit deinen
+        Spielern darüber.</em></p><h3>Legenden, örtliche Mythen und
+        Märchen</h3><p>Aysles Beziehung zur modernen Fantasy ist recht
+        eindeutig. Wir haben aber auch dafür gesorgt, dass in Aysle eine gute
+        Dosis aus europäischen Mythen und Märchen eine Rolle spielt,
+        beispielsweise auch die Märchen der Gebrüder Grimm. Manche dieser
+        Geschichten sind ziemlich brutal, und meistens handelt es sich bei den
+        armen Opfern in derartigen Geschichten um Kinder. Doch die SL kann
+        dennoch dem Geist Aysles gerecht werden, wenn sie die wirklich dunklen
+        Aspekte der Grausamkeit und des Missbrauchs unschuldiger Opfer, die in
+        derartigen Geschichten vorkommen, ausblendet.</p><p>Vielleicht sind
+        manche Spieler mit bestimmten Mythen aus dem nördlichen Europa auch sehr
+        vertraut und wissen sie zu schätzen. Vielleicht finden sie die Umsetzung
+        der Gestalten und Personen aus diesen Geschichten in Form eines nur ein
+        wenig anderen Fantasymonsters nicht angemessen. Das gilt vermutlich vor
+        allem für Feenwesen (die Seelie und die Unseelie), aber auch für
+        einzigartige Gestalten wie beispielsweise Cú Chulainn. Wenn das bei
+        deinen Spielern auch der Fall ist, dann solltest du sie vielleicht
+        modifizieren und ihnen neue Namen und Bezeichnungen geben, damit sie
+        nichts mehr mit ihren Gegenstücken in den Mythen der echten Welt zu tun
+        haben.</p><h3>Monster</h3><p>Wie auch in anderen Fantasyrollenspielen
+        ist Aysle förmlich mit schrecklichen Kreaturen vollgestopft. Manche von
+        ihnen können eine erstaunlich negative Reaktion bei Spielern
+        hervorrufen, mit der du vielleicht gar nicht gerechnet hast. Spieler mit
+        einer starken Spinnenphobie könnten beispielsweise ein großes Problem
+        mit Nibikrids haben, bei denen es sich effektiv um besonders gruslige,
+        sprechende Riesenspinnen handelt. Andere Spieler haben vielleicht
+        Probleme mit den Untoten, der Nekromantie und den moralischen Fragen,
+        die es aufwirft, wenn man einfach so die Totenruhe stört. Frag deine
+        Spieler also auf jeden Fall, ob es bestimmte Arten von Monstern gibt,
+        auf die sie lieber nicht treffen würden.</p><p>Außerdem möchte ich
+        natürlich ein häufig auftretendes Problem der Fantasy nicht
+        unangesprochen lassen. Es ist in derartigen Rollenspielen seit
+        Jahrzehnten üblich, ein ganzes Volk oder eine Spezies von Humanoiden
+        (wie beispielsweise Elfen, Zwerge, Gnome usw.) mit einer bestimmten
+        Kultur und bestimmten Verhaltensweisen unauflöslich in Verbindung zu
+        bringen. So werden beispielsweise Angehörige ganzer Völker als unrettbar
+        Böse beschrieben. In Aysle gibt es die Mächte von Licht und Dunkelheit,
+        und daher können sich schlussendlich die Angehörigen alle Völker dafür
+        entscheiden, gut oder böse zu sein. Selbst wenn die Mehrheit eines
+        Volkes zu der einen oder anderen Seite tendiert, bleibt jedem einzelnen
+        Mitglied schlussendlich noch immer die freie Wahlmöglichkeit, für welche
+        Seite es sich entscheiden will. Selbst Monster, die im wahrsten Sinne
+        des Wortes aus der Dunkelheit geboren werden, wie beispielsweise die
+        Laurer, könnten in deinem Spiel geläutert werden. Wenn du derartige
+        rassistische Stereotypen also in deinem Spiel also bewusst vermeidest,
+        kann das zu besonders interessantem Rollenspiel führen. So könnte es in
+        einem deiner Abenteuer beispielsweise einen Laurer geben, der für das
+        Licht kämpft und deiner Gruppe zur Hilfe eilt!</p><h3>Das
+        Böse!</h3><p>Schlussendlich sollten wir nicht vergessen, dass Aysle
+        tatsächlich ein Reich ist, in dem das Gute und das Böse wirklich
+        existieren und es auch zahlreiche Götter gibt, die auf der einen oder
+        anderen Seite stehen. Manche finden diesen moralischen Absolutismus
+        vielleicht nicht akzeptabel, andere haben vielleicht ein Problem damit,
+        dass es viele verschiedene Götter gibt. Aber in gewisser Weise bildet
+        ein derartiger Konflikt auch das Herz von Torg und schlussendlich ist es
+        ja ein Spiel über sehr stark unterschiedliche Realitäten. Du solltest in
+        solch einem Fall aber auf jeden Fall betonen, dass bloß, weil diese
+        Konzepte in Aysle wahr sind, es noch immer nicht bedeutet, dass sie wo
+        anders oder gar in unserer echten Welt wahr sind. Du solltest
+        unterstreichen, dass derartige Widersprüche eine der größten Stärken von
+        Torg sind. Das ganze Spiel stellt eine Kollision, Interaktion und
+        Vermischung von Welten dar, und da sind die Regeln eben oftmals
+        unterschiedlich und sehr vielfältig!</p><h1>Das
+        Cyberpontifikat</h1><p><em>Eric Simon übernimmt jetzt das Wort und
+        spricht ein wenig über unsere heiß geliebte religiöse Dystopie in Torg.
+        </em>Dieser Cosm sagt schon in seinem Namen praktisch alles darüber aus,
+        worum es geht. Die meisten Dinge, die du vermutlich besser mit deinen
+        Spielern besprechen solltest, entspringen entweder der Religion oder dem
+        Cyberpunkaspekt des Settings. Bevor du aber überhaupt damit beginnst,
+        solltest du sichergehen, dass deine Spieler genau über die allgemeinen
+        Themen und Motive des Cyberpontifikats Bescheid wissen. Wenn deine
+        Spieler mit ihnen ein Problem haben, dann ist es manchmal verdammt
+        schwierig, die ikonischen Themen des Cyberpontifikats im Cyberpontifikat
+        zu vermeiden. In solch einem Fall solltest du ihnen die Gelegenheit
+        geben, an anderen Orten nach Abenteuern zu
+        suchen.</p><h3>Allgegenwärtige Religion</h3><p>Es ist sehr wichtig,
+        stets daran zu denken, dass die Kirche Malraux’ in keiner Weise die
+        echte katholische Kirche widerspiegeln soll, und zwar weder innerhalb
+        der Spielwelt noch in unserer echten Welt. Malraux ist zweifellos ein
+        falscher Papst. Dennoch erinnern der Aufbau und die Vorgangsweise seiner
+        Kirche sehr stark an den Katholizismus in Zeiten der Inquisition. Manche
+        Spieler mögen vor diesen Parallelen aus den unterschiedlichsten Gründen
+        zurückscheuen. Sie fühlen sich vielleicht unwohl mit dem Gedanken, das
+        Christentum als Feind zu porträtieren, selbst wenn es sich dabei um eine
+        falsche Version des Glaubens handelt. Vielleicht haben sie auch Probleme
+        damit, in einer Gesellschaft zu spielen, in der nur eine Religion
+        gestattet ist und dies mittels grausamer Unterdrückung und Überwachung
+        durchgesetzt wird.</p><p>Wenn die Gruppe damit Probleme hat, aber
+        dennoch in diesem Setting spielen will, dann solltest du mit deinen
+        Spielern am besten darüber sprechen, wie die Kirche und ihre Agenten im
+        Spiel dargestellt werden könnten und sollten. Vielleicht möchten sie im
+        Spiel aktiv sehen, wie Angehörige der echten katholischen Kirche gegen
+        Marlaux kämpfen. Vielleicht solltest du nach anderen Möglichkeiten
+        suchen, um im Spiel das echte Christentum als Gegensatz zur Cyberkirche
+        besonders positiv darzustellen und so ein Gegengewicht zu bilden.
+        Vielleicht möchten deine Spieler die Konzepte der universellen
+        Religionsfreiheit erforschen und sich darauf konzentrieren, gerade jene
+        Personen zu unterstützen und zu retten, die von der Cyberkirche als
+        Ketzer angesehen werden.</p><p>Beide Vorgangsweisen können den Spielern
+        dabei helfen, sich mit den religiösen Themen des Settings selbst dann
+        aktiv auseinanderzusetzen, wenn Religion und Glauben sensitive Themen
+        für sie sind. Wenn die Spieler ihre eigene Bestimmung wählen und den Ton
+        des Abenteuers beeinflussen können, dann kann die ganze Erfahrung
+        besonders lohnend für alle Beteiligten sein.</p><h3>Engel, Dämonen und
+        Hexen</h3><p>Im Cyberpontifikat sind viele Dinge völlig real, die von
+        den meisten von uns im Bereich des Übernatürlichen verortet werden.
+        Manche Leute sind vielleicht dazu bereit, die Fiktion einer falschen
+        Kirche zu akzeptieren, sehen aber eine Grenze überschritten, wenn es um
+        Engel und Dämonen geht. Manche Spieler akzeptieren vielleicht das eine
+        Thema aber nicht das andere. Wenn du eines oder beide Elemente aus dem
+        Setting entfernst, dann verlierst du dadurch auch die besonders
+        herausfordernden Gegner der Storm Knights. Du wirst ein wenig Arbeit
+        darin investieren müssen, die menschlichen Gegenspieler der Kirche
+        interessanter zu machen</p><p>In gleichem Maß gilt, dass Hexen und ihre
+        Magie im Cyberpontifikat real und an der Tagesordnung sind. Da das
+        Cyberpontifikat ein wesentlich moderneres und realeres Setting ist als
+        beispielsweise das fantastische Aysle, haben vielleicht manche Leute ein
+        Problem mit dem Thema, da es die Magie zu sehr an das echte Leben
+        heranführt. Das genaue Gegenteil tritt bei jenen Spielern zutage, die
+        moderne Konzepte von Hexerei als einen wichtigen Teil ihres Lebens
+        ansehen und überhaupt nicht akzeptieren können, wie das Thema im
+        Cyberpontifikat dargestellt wird, vor allem die sehr technischen Aspekte
+        daran. Wie auch immer deine Gruppe das sehen will, du solltest dich
+        dabei ganz nach ihnen richten. Wenn sie die Ausübung von Magie in dieser
+        Weise nicht dargestellt sehen wollen, dann kannst du einfach sagen, dass
+        es sich um eine spezielle Form der Technologie handelt. Wenn sie nicht
+        wollen, dass die Magie durch die Technologie verdorben wird, dann kannst
+        du entscheiden, dass Cybertechnik keinerlei Einfluss auf Zauberkundige
+        hat und diese ganz aus ihnen allein entspringt. (Wenn dein Gruppe
+        Spieler von beiden Enden dieses Spektrums enthält, dann solltest du dich
+        auf eine sehr lange Diskussion einstellen.)</p><h3>Frauenfeindlichkeit
+        und Verrat</h3><p>Das Gesetz der Ketzerischen Magie und das Gesetz der
+        Verdächtigung führen vermutlich zu sehr herausfordernden persönlichen
+        Interaktionen, und zwar nicht nur zwischen Storm Knights und NSC,
+        sondern möglicherweise auch zwischen den Storm Knights selbst.
+        Glücklicherweise kann man diese Themen im Cyberpontifikat besonders
+        leicht vermeiden oder umgehen.</p><p>Aufgrund der gesellschaftlich
+        rückständigen Einstellungen der Kirche in Kombination mit den Problemen
+        der Kirche mit Hexen, die bereits oben thematisiert wurden, findet man
+        im <em>Cyberpontifikat Quellenbuch</em> die Information, dass man in der
+        Kirche sehr selten Frauen als Autoritätspersonen antrifft. Dies gilt in
+        besonderem Ausmaß für religiöse Positionen. Diese Frauenfeindlichkeit
+        kann den gesellschaftlichen Umgang im ganzen Cosm beeinflussen. Es gibt
+        allerdings keinen besonderen Grund, sich auf diese Facette zu
+        konzentrieren, ja man kann sie sogar einfach weglassen, wenn deine
+        Spieler ein Problem damit haben. Malraux’ Kirche ist ja schließlich eine
+        völlig fiktionale Kirche. Du kannst mit ihr am Spieltisch tun, was immer
+        du willst. (Natürlich kannst du im Gegenzug den Aspekt „Nieder mit dem
+        Patriarchat“ in Form der Auseinandersetzung zwischen Hexen und Priestern
+        besonders stark ausspielen und Spaß damit haben.“</p><p>Die Praktiken
+        der Kirche sorgen außerdem für eine Atmosphäre der Verdächtigungen und
+        Anschuldigen, die man als SL gerne als Handlungselement verwendet.
+        Vielleicht wendet sich ein freundlicher NSC in einer Schlüsselsituation
+        auf einmal gegen die Storm Knights. Denk daran, dass persönliche
+        Verdächtigungen und Verrat für manche Personen äußerst verstörend und
+        verletzend sein können. Versuche, am Anfang auf allgemeine Art und Weise
+        auszuloten, ob ein derartiger Verrat für dich als SL als Stilmittel
+        verfügbar sein sollte oder nicht. Auch wenn du als SL dieses Element
+        selbst nicht verwenden willst, solltest du es mit deinen Spielern
+        besprechen und ob sie selbst das Gesetz der Verdächtigung für
+        überraschende Wendungen nutzen sollen. Wenn es allerdings nötig ist,
+        dann gibt es zahlreiche Möglichkeiten, das Element der Verdächtigung in
+        den Hintergrund treten zu lassen, sodass es die Spieler nicht mehr
+        direkt betrifft.</p><h3>Behinderung, Prothesen und geistige
+        Freiheit</h3><p>In allen Settings, in denen es Kybernetik gibt, wird
+        automatisch die Frage aufgeworfen, wie Behinderte und Behinderung in
+        einer solchen Gesellschaft betrachtet und behandelt werden. Das spielt
+        im Cyberpontifikat aufgrund des Unterschieds zwischen sanktionierter und
+        nicht sanktionierter Cyberware eine besonders große Rolle. Die Tatsache,
+        dass die Kirche darüber entscheidet, was erlaubt ist und was nicht und
+        wer davon profitieren sollen, ist ziemlich drakonisch. Es kann besonders
+        verstörend für jene Leute sein, die sich mit ähnlichen Einstellungen und
+        Erfahrungen in ihren realen Leben herumschlagen mussten.</p><p>Außerdem
+        bringt die Cyberware eine Reihe von weiteren Fragen für Leute auf, die
+        mit geistiger Krankheit und emotionalem Missbrauch zu tun hatten. Das
+        Gesetz der Sanktionierung bringt die Möglichkeit ins Spiel, dass
+        gehackte Cyberware zu Cyberpsychose führen kann. Das kann ein
+        schwieriges Thema für Spieler sein, die selbst oder in ihrem Umfeld mit
+        mentalen Problemen zu tun haben. Sanktionierte Geräte hingegen fesseln
+        den Benutzer an die Kirche, und das wiederum kann ein schwieriges Thema
+        für Leute sein, die Probleme mit einer manipulativen Beziehung oder mit
+        einem Stalker hatten.</p><p>Diese Themen sind für betroffene Personen
+        vermutlich enorm schwierig und persönlich. Es gibt keine
+        allgemeingültige Lösung dafür, sie zu einem Teil des Spiels zu machen
+        oder aus dem Spiel zu verbannen. Es handelt sich um Themen, bei denen du
+        vermutlich auf erweiterte Gespräche unter vier Augen mit den betroffenen
+        Spielern setzen solltest. Sie sollen dir sagen, was sie noch tolerieren
+        können und was nicht, und du solltest dich dann ganz nach ihren Wünschen
+        richten.</p><h1>Das Lebende Land</h1><img class="imgright"
+        src="systems/torgeternity/images/s0-02.webp" width="1021" height="1432"
+        /><p>Hier ist also wieder mal Greg. Das Lebende Land ist ein Ort der
+        Wildheit und der Wunder. Hier gibt es eine reale Göttin des Lebens und
+        tödliche Dinosaurier. Nachfolgend findest du ein paar Dinge, die du mit
+        deinen Spielern besprechen solltest, bevor du Abenteuer in diesem Cosm
+        leitest. Ich meine, nachdem du durch die Illustration geblättert hast,
+        weil … Hast du jemals probiert, gegenüber Thrakmoss „Nein“ zu
+        sagen?</p><h3>Blutige Kämpfe</h3><p>Das Gesetz der Wildheit ermutigt
+        rücksichtslose Angriffe und die brutale Beschreibung der Resultate.
+        Diese Angriffe können von Storm Knights und NSC ausgeführt werden, oder
+        sie können zu deren Opfern werden. Die spieltechnischen Aspekte dieses
+        Gesetzes stellen ein wichtiges Merkmal der Abenteuer im Lebenden Land
+        dar. Die Beschreibungen müssen dies aber keineswegs sein. Du solltest
+        dich mit deinen Spielern darauf einigen, wie grafisch du die Kämpfe
+        beschreiben sollst oder nicht, bevor die Fetzen
+        fliegen.</p><h3>Berstende Blusen und heisse Küsse</h3><p>O. k., also es
+        gibt da das Weltgesetz, das direkt dafür verantwortlich ist, dass die
+        Kleidung an strategischen Stellen reißt und Löcher bekommt, und das
+        Gesetz des Lebens sorgt außerdem dafür, dass im Lebenden Land plötzlich
+        Leidenschaften und Lust entflammen können. Die grundlegende Annahme geht
+        davon aus, dass es zwischen NSC und NSC oder zwischen NSC und Storm
+        Knight daher plötzlich sehr romantisch und leidenschaftlich werden kann.
+        Dies kann durchaus im Rahmen des Spiels ausgespielt werden, aber sobald
+        sich die Lippen der Betreffenden in einem heißen Kuss treffen oder
+        spätestens dann, wenn es wirklich zur Sache geht, sollte die Kamera
+        diskret wegblenden. In den meisten Gruppen gilt allerdings, dass
+        derartige leidenschaftliche Begegnungen zwischen den Storm Knights trotz
+        der Existenz des Weltgesetzes die Grenze überschreiten. Du und deine
+        Gruppe sollten daher besprechen, wo die Grenze in deinem Spiel
+        liegt.</p><h3>Überall gibt es Wunder</h3><p>Das Gesetz der Wunder
+        besagt, dass es überall mysteriöse Orte voller fantastischer Schätze und
+        Gerätschaften im Lebenden Land gibt. Diese Wunder oder sogar nur
+        Gerüchte über das Auftauchen eines Wunders sind oftmals ein guter Grund
+        für den Delphi-Rat, die Helden in den Tiefen Nebel zu schicken.</p><p>In
+        Spielsitzung Null solltest du mit deinen Spielern besprechen, wie stark
+        diese Wunder ein Element in deinem Spiel sein sollten. Es könnte sein,
+        dass man im Verlauf des ganzen Kampfes gegen Baruk Kaah und seine
+        Schergen nur auf ein oder zwei Wunder trifft. Im Gegensatz dazu könnten
+        deine Spieler auch ein Spiel bevorzugen, bei dem es zugeht wie in einer
+        Mischung aus Sir Arthur Conan Doyles <em>Die verlorene Welt</em> und
+        <em>John Carter </em>vom Mars. In letzterem Fall treten die Possibility
+        Wars in den Hintergrund und werden nur noch zu einem Schauplatz, an dem
+        sich die Gruppe lieber mit einer Landschaft beschäftigt, in der es nur
+        so vor Trophäen Lanalas wimmelt.</p><h3>Religion</h3><p>Das Lebende Land
+        ist der Cosm mit der größten spirituellen Kraft. Die Anhänger Keta
+        Kalles’ können mühelos Wunder vollbringen, und es gibt zahlreiche Seiten
+        voller Regeln, um das im Spiel zu handhaben. Was ist aber mit anderen
+        Religionen? Das gilt vor allem dann, wenn deine Spieler ihre eigenen
+        religiösen Vorstellungen an den Spieltisch bringen. Es gibt viele
+        Religionen, die daran glauben, dass ein Gebet dazu ausreicht, um
+        göttliche Macht zu entfesseln. Im Verlauf von 30 Jahren, die ich nun
+        schon Torg spiele, hatte ich einige hitzige Debatten zwischen Spielern,
+        die versucht haben, ihre religiösen Vorstellungen aus der realen Welt
+        nach Torg zu exportieren.</p><p>Gut, <em>Torg Eternity</em> ist durch
+        ein Spiel mit etlichen Ähnlichkeiten zur realen Welt, aber es soll
+        keineswegs die reale Welt darstellen. Das Spiel verlangt von einem
+        Charakter, dass er über Vorzüge verfügt, bevor er Wunder einsetzen kann.
+        Wenn deine Gruppe Ausnahmen von dieser Regel verhandeln will, dann nur
+        zu. Ich hatte einmal eine bemerkenswerte Spielsitzung, in der die Storm
+        Knights eine Gruppe von Flüchtlingen im Verlauf mehrerer Tage in
+        Sicherheit gebracht haben. Eine Spielerin hat den Flüchtlingen jeden Tag
+        einen anderen Vers aus der Bibel vorgelesen. Sie war davon überzeugt,
+        dass sie auf diesem Weg besser für die beschwerliche Reise vorbreitetet
+        waren und dies die wichtigste Komponente für die erfolgreiche Flucht
+        sein würde. Für uns war das ein sehr machtvoller und passender
+        Augenblick, und wir haben uns alle wirklich große Mühe am Spieltisch
+        gegeben, um die Auswirkungen ihrer Gebete auch durch eine konkrete
+        Auswirkung im Spiel zu repräsentieren.</p><p>Du solltest in Spielsitzung
+        Null herausfinden, welche Einstellung die Leute bezüglich des Themas
+        Religion im Spiel haben. Andernfalls wirst du vielleicht feststellen
+        müssen, dass dein Spiel aus dem Ruder gerät, weil ein sehr religiöser
+        Spieler ein Problem mit seiner echten Religion im Kontrast zur
+        Darstellung einer fiktionalen Gottheit im Spiel
+        hat.</p><h3>Sklaverei</h3><p>Das Sozial-Axiom des Lebenden Landes macht
+        Sklaverei möglich. Doch die Sklaverei ist auf keinen Fall Brauch der
+        Edeinos, und sie verkaufen auch keine versklavten Menschen an andere
+        Stämme. Obwohl die Sklaverei also kulturell möglich ist, ist sie bei den
+        Kulturen des Lebenden Landes normalerweise nicht verbreitet. Deine
+        Kampagne im Lebenden Land funktioniert also auch einwandfrei, wenn du
+        dieses haarige Thema einfach weglässt</p><h1>Nil-Imperium</h1><p>Hallo,
+        hier spricht wieder Greg. Ich war gerade dabei, eine neue Bedrohung
+        auszuarbeiten, als man mich gebeten hat, kurz über das Nil-Imperium zu
+        sprechen. Das Nil-Imperium ist ein Cosm voller hemdsärmeliger Action,
+        moralischer Themen, die so scharf gezeichnet sind wie die Kontraste in
+        einem alten Film Noir, und Pulpkräfte, auf die selbst <em>Doc
+        Savage</em> stolz wäre. Hier sind ein paar Themen, die im Nil-Imperium
+        immer wieder eine Rolle spielen und über die du am besten mit deinen
+        Spielern bei Spielsitzung Null sprechen solltest.</p><h3>Kulturelle
+        Stereotypen</h3><p>Die Groschenromane der 30er waren schnell geschrieben
+        und voller Action, aber gleichzeitig so vollgestopft mit negativen,
+        kulturellen Stereotypen, dass man diese problemlos zu einer neuen
+        Gebirgskette hätte aufschütten können. Wir hatten tatsächlich sehr lange
+        Diskussionen über dieses Thema bei der Entwicklung von <em>Torg
+        Eternity</em>. Dabei haben wir tatsächlich unsere eigenen Grenzen und
+        Schleier festgelegt. Wir wollten so viel von dieser Altlast aus dem
+        Spiel eliminieren wie nur möglich, und ich denke, du wirst das an deinem
+        Spieltisch genauso machen wollen.</p><p>Wir haben beispielsweise gesagt,
+        dass Männer und Frauen im Nil-Imperium gleichberechtigt sind, ganz im
+        Gegensatz zu ihrer Darstellung in den Groschenromanen, die das
+        Nil-Imperium inspiriert haben. Wir haben vergessen, zu sagen, dass dies
+        in Torg auch in den Regionen in dieser Gegend auf der Zentralerde gilt.
+        Ich selbst habe ein paar unangenehme Beispielspielrunden erlebt, wo
+        Spieler ihr frauenfeindliches Verhalten einfach damit begründet haben,
+        „dass Frauen in der Gegend eben so behandelt werden.“ Natürlich habe ich
+        die Macht als Spielleiter einer Beispielspielrunde, derartig
+        frauenfeindliche Spieler einfach so vom Spiel auszuschließen, und tue
+        dies im Bedarfsfall auch. Bei deinen Freunden kannst du natürlich nicht
+        so radikal vorgehen. Sprich mit deiner Gruppe darüber, wie es möglich
+        ist, die Stimmung eines Ägyptens, das von einem verrückten Pharao aus
+        der Zeit der Groschenromane regiert wird, einzufangen, ohne dabei ein
+        Geschlecht zu benachteiligen, und sprich auch gleich darüber, wo die
+        Komfortzonen in deiner Gruppe liegen.</p><p>Das gleiche Gespräch
+        solltest du effektiv über die Darstellung verschiedener Religionen im
+        Nil-Imperium und ihrer Anhänger führen. Die Amaatisten sind eine rein
+        fiktionale Religion, und deswegen sollte es keinerlei Problem
+        darstellen, wenn sie schurkische Taten ohne Ende begehen und ihr
+        Verhalten in möglichst groben schwarzweißen Zügen in deinen Abenteuern
+        dargestellt wird. Aber was ist mit Christen, Juden und Moslems aus der
+        Zentralerde? Ihr Verhalten sollte keineswegs so gezeichnet werden.
+        Besprich das auf jeden Fall mit deiner Gruppe, bevor es am Spieltisch zu
+        verletzten Gefühlen kommt.</p><p>In den Groschenromanen der 30er waren
+        die Helden praktisch immer weiße Männer. Wir haben dafür gesorgt, dass
+        sowohl die Superhelden als auch die Superschurken im Nil-Imperium
+        wesentlich diverser sind. Verbündete aus der Zentralerde sind meistens
+        Afrikaner. Das Nil-Imperium ist also direkt aus den Groschenromanen
+        gerissen, aber dennoch gilt das in keiner Weise für die Demografie der
+        dort agierenden Personen. Ich habe ein paar Spielsitzungen auf
+        Spielemessen geleitet, wo Spieler angesichts dieser Umstände verwirrt
+        waren. Diese Verwirrung führt dann dazu, dass diese Spieler hässliche
+        Stereotypen aus den Groschenromanen in meinen Spielrunden so nachhaltig
+        ausleben wollten, dass die anderen Spieler sehr peinlich berührt waren.
+        Deswegen solltest du darüber reden, damit keine falschen Vorstellungen
+        bezüglich Diversität aufkommen, bevor du Geschichten im Nil-Imperium
+        leitest.</p><img class="imgleft"
+        style="shape-outside:url('systems/torgeternity/images/s0-03.webp');shape-margin:0.5rem"
+        src="systems/torgeternity/images/s0-03.webp" width="1524" height="1950"
+        /><h3>Gefangennahme, Verhöre und Folter</h3><p>Schurken werden
+        schurkische Dinge tun, und in Groschenromanen sind harte Verhöre und
+        auch mögliche Folter an der Tagesordnung. Das bedeutet aber keineswegs,
+        dass diese Dinge auch in deiner Gruppe an der Tagesordnung sein müssen.
+        Die Grundsituation im Nil-Imperium ist allerdings so, dass die Gefahr
+        von harten Drohungen und sogar Folter durch die Schurken durchaus Teil
+        des Settings ist, und deswegen können sie auch am Tisch ausgespielt
+        werden. Doch es könnte sein, dass deine Gruppe sich damit nicht
+        wohlfühlt.</p><p>Eine Gefangennahme, gefolgt von einem Verhör und dann
+        von der unweigerlichen Flucht, weil die Schurken irgendeinen dummen
+        Fehler begangen haben, sind ein regelmäßig vorkommendes Element der
+        Geschichten im Nil-Imperium. Wenn das für deine Gruppe nicht akzeptabel
+        ist, dann solltest du mit ihnen besprechen, in welcher Art und Weise
+        ihre Helden eine vorübergehende Niederlage erleben können, ohne dass das
+        für sie Grenzen überschreitet.</p><p>Und an welcher Stelle bei all dem
+        blendet die Kamera weg? Was soll in der Anfangsgeschichte im Quellenbuch
+        geschehen, und wie soll es beschrieben werden, wenn Zhang Zhi in die
+        Grube mit den Skarabäuskäfern hinabgesenkt wird?</p><h3>Moral im
+        Nil-Imperium</h3><p>Im Nil-Imperium befinden sich die Storm Knights und
+        die Schurken an den gegenüberliegenden Enden der moralischen Skala.
+        Spieler haben normalerweise keine Probleme damit, die Helden zu spielen.
+        dennoch gibt es manche Spieler, die nicht gut damit klarkommen, wenn die
+        Natur ihrer Heldenhaftigkeit ihre Handlungsmöglichkeiten stark
+        einschränkt. Doch im Nil-Imperium existieren derartige handfeste
+        Einschränkungen durchaus.</p><p>Sprich mit deiner Gruppe über moralische
+        Standards und über akzeptable Verhaltensweisen für Helden. Das Gesetz
+        der Moral besagt bereits klipp und klar, dass die Helden gefangene
+        Feinde nicht einfach so töten können. Welche andere Verhaltensweise ist
+        für Helden inakzeptabel?</p><p>Die Helden stehen im Nil-Imperium oft vor
+        dem Dilemma entweder ihrem Hauptauftrag zu folgen oder jemandem in Not
+        zu helfen. Die moralische Standarddoktrin für das Nil-Imperium geht
+        davon aus, dass die Helden immer jemandem helfen, der sich nicht selbst
+        helfen kann, selbst wenn das bedeutet, dass die Schurken fliehen können
+        oder in der Szene bei der Verfolgung ihrer Ziele erfolgreich sind.
+        Besprich mit deinen Spielern, ob das in Ordnung für sie ist.</p><p>Wenn
+        du bei der Diskussion mit deinen Spielern über die hohen moralischen
+        Anforderungen für Helden im Nil-Imperium feststellen musst, dass sie mit
+        solch einem noblen Verhalten überhaupt nicht klarkommen, dann solltest
+        du dir überlegen, ob du deine Abenteuer im Nil-Imperium nicht stark
+        einschränken willst. Für skrupellose Helden wäre vielleicht Pan-Pacifica
+        ideal?</p><h1>Orrorsh</h1><p>Hallo, hier spricht Tracy Sizemore. Nichts
+        ruft schneller dunkler Bilder und das Gefühl von heranschleichenden
+        Schrecken herauf, als die Vorstellung, an einem Horrorrollenspiel
+        teilzunehmen. Orrorsh ist ein Cosm voller Schrecken und lässt dabei kein
+        Klischee aus. Hier kann man auf schreckliche Monster, dunkle Schatten,
+        kriechende Korruption, unmögliche Visionen, lähmende Angst und den
+        Verlust jeglicher Hoffnung treffen. Du solltest dir nichts vormachen. Es
+        handelt sich um einen Cosm, auf den sich deine Spieler auch bereitwillig
+        einlassen müssen.</p><h3>Horror</h3><p>Beginnen wir gleich mit der
+        offensichtlichsten Herausforderung, wenn man Abenteuer in Orrorsh
+        spielen will. Hier geschehen grauenhafte Dinge. So ist das eben. Horror
+        ist nicht für jeden, und er kann hier viele Gestalten annehmen. In
+        Orrorsh spielt der Schrecken sowohl auf der allgemeinen als auch auf der
+        persönlichen Ebene eine tragende Rolle.</p><p>Hier bei Ulisses versuchen
+        wir unsere Abenteuer im Allgemeinen so zu schreiben, dass sie als Film
+        oder Serie mit FSK 12 durchgehen würden. Dennoch versuchen wir bei
+        Abenteuern, die in Orrorsh spielen, diese Grenzen so weit wie möglich
+        auszuloten, um das notwendige Spielgefühl zu transportieren. Hier kann
+        alles geschehen. Es könnten beispielsweise Riesenspinnen auftauchen, die
+        Menschenköpfe haben, oder ein völlig unschuldiges Kind grausam ermordet
+        werden. Diese Dinge sind auch wichtig, um zu etablieren, wie unglaublich
+        böse der Hagere Mann wirklich ist und warum er auf jeden Fall besiegt
+        und schlussendlich zerstört werden muss. Dennoch sorgen sie auch dafür,
+        dass es für Orrorsh besonders wichtig ist, über die Grenzen und Schleier
+        zu reden, die für deine Gruppe gültig sein sollen.</p><h3>Grenzen
+        managen</h3><p>Wenn deine Gruppe weniger Schrecken und Horror erleben
+        möchte, als dies für Orrorsh üblich ist, und du eines oder mehrere der
+        offiziellen Abenteuer für Orrorsh leiten möchtest, dann solltest du sie
+        vor Spielbeginn vollständig lesen. Dann kannst du entscheiden, welche
+        Elemente du hinter einem Schleier platzieren willst. Wenn du deine
+        eigenen Abenteuer leitest, dann solltest du in einem Gespräch mit deinen
+        Spielern herausfinden, was für sie noch akzeptabel ist und was
+        nicht.</p><h3>Dem Cosm gerecht werden</h3><p>Dennoch sind schlussendlich
+        schreckliche Ereignisse die Grundlage dieses Cosm. Du solltest es dir
+        sehr sorgfältig überlegen, bevor du dich dazu entscheidest, zuviel von
+        der Angst und dem Schrecken zu entfernen. Die magische Dreifaltigkeit
+        aus Horror, Hoffnung und Empathie bricht schließlich in sich zusammen,
+        wenn es nicht genügend unmenschliche Ereignisse gibt, um sie zu
+        befeuern. Orrorsh eignet sich, so wie dieser Cosm dargestellt ist, nicht
+        sehr gut dazu, um ihn so umzuschreiben, dass sich die Handlung in
+        Richtung von Action mit einem Schuss Horror verlagert. Dafür passt
+        Tharkold wesentlich besser.</p><p>Es ist eine völlig legitime
+        Entscheidung, wenn sich deine Gruppe dazu entschließt, dass es sich im
+        Rahmen des sich entfaltenden Krieges nur selten oder gar nicht auszahlt,
+        wenn man einen Vorstoß nach Orrorsh unternimmt. Wenn die Spieler
+        besonders allergisch gegenüber dem Spielstil und den Herausforderungen
+        Orrorshs sind, dann ist es vermutlich besser, Abenteuer in dem Reich
+        einfach auszulassen, statt es zu stark zu verbiegen und zu verändern. Es
+        ist schon in Ordnung, wenn sie solch eine große Panik vor Orrorsh haben,
+        dass sie sich niemals in diesen Cosm wagen.</p><h3>Angst</h3><p>Schon
+        allein aufgrund des Gesetzes der Beharrlichkeit ist die Chance, dass ein
+        Storm Knight hier endgültig stirbt, wesentlich höher als in jedem
+        anderen Cosm. Es ist schwieriger, hier Wunden Wegzustecken. Die richtige
+        Kombination aus Feinden, Cosmkarten und ein wenig Würfelpech können
+        schon dazu führen, dass die Storm Knights in einer Situation sterben,
+        für die du das eigentlich überhaupt nicht vorgesehen hattest.</p><p>Doch
+        ich will dich an einem großen Geheimnis teilhaben lassen. Das wahre Ziel
+        Orrorshs und dem Hageren Mannes besteht gar nicht darin, Leute zu töten.
+        Er braucht sie lebendig, damit er ihre Möglichkeitsenergie ernten kann.
+        Er will stattdessen die <em>Furcht</em> verbreiten, dass sie jederzeit
+        <em>getötet </em>werden könnten. Das ist das wahre Gefühl, das du durch
+        dieses Weltgesetz hervorrufen solltest.</p><p>Diese ganze Mechanik
+        sollte auch dazu führen, dass man in Orrorsh eine andere Art von
+        Abenteuer spielt als in den anderen Cosms. Obwohl es durchaus möglich
+        ist, sich zum Ziel zu setzen, ein Monster nach dem anderen zu töten, ist
+        das schlussendlich eine Vorgangsweise, die in Orrorsh früher oder später
+        zu einer Katastrophe führen wird. Das wird noch dadurch verstärkt, dass
+        es hier eine ganze Klasse von Monstern gibt, die man nicht permanent
+        töten kann, wenn man sie nicht zuerst ausführlich erforscht. Dabei
+        handelt es sich um die Albträume. Aus diesem Grund ist Orrorsh ein Cosm,
+        der sich sehr gut für Abenteuer eignet, in denen es um Nachforschungen
+        und Detektivarbeit geht. Abenteuer, in denen es hauptsächlich darum
+        geht, den bösen Jungs ohne viel Federlesens mitten ins Gesicht zu
+        schlagen, spielen sich wesentlich besser in anderen Cosms, wie
+        beispielsweise dem Nil-Imperium oder
+        Aysle.</p><h3>Charaktertod</h3><p>Dennoch sind Konfrontationen mit den
+        bösen Gegnern in Orrorsh schlussendlich unvermeidbar, und wenn es dazu
+        kommt, dann sind sie auch verdammt gefährlich. Die Möglichkeit, dass
+        hier Charaktere sterben könnten, ist eine Tatsache, die du klar
+        kommunizieren und mit deinen Spielern besprechen solltest. Wenn deine
+        Spieler damit einverstanden sind und das Risiko bereitwillig
+        akzeptieren, dann ist das ganz wunderbar. Und ja, sie sollten und dürfen
+        Angst vor Orrorsh haben! Das ist ja der ganze Punkt dieses
+        Cosm!</p><h3>Eigene Charaktere für Orrorsh</h3><p>Wenn deine Spieler
+        allerdings sehr zögerlich bezüglich des Gedankens sind, in Orrorsh ihrer
+        Charaktere zu verlieren, dann solltest du den Vorschlag machen, ob sie
+        nicht für das Spiel in Orrorsh eigene Charaktere erschaffen wollen. Da
+        sie diese nur vorübergehend spielen, sollten sie nicht so eng mit ihnen
+        verbunden sein, zumindest noch nicht.</p><p class="noindent"><strong>Gib
+        ihnen immer eine Fluchtmöglichkeit</strong> <br />Eine weitere
+        Möglichkeit besteht darin, dass du deine Spieler immer vorwarnst, wenn
+        ihren Charakteren eine entscheidende Auseinandersetzung bevorsteht, und
+        dass du ihnen immer eine Fluchtmöglichkeit gibst, falls sie diese nutzen
+        wollen. Wie schon einmal gesagt, geht es in Orrorsh ja eigentlich nicht
+        um den Tod, sondern um die <em>Furcht</em>. Das solltest du stets
+        bedenken, wenn du Abenteuer in Orrorsh
+        leitest.</p><h3>Verderbnis</h3><p>Doch wenn die Bedrohung durch den
+        permanenten Charaktertod nicht schon schlimm genug wäre, gibt es ein
+        noch wesentlich schlimmeres Schicksal, das auf die Storm Knights in
+        Orrorsh lauert. Das Gesetz der Ewigen Verdammnis gibt ihnen eine
+        verlockende Möglichkeit. Sie können sich gegen die Bedrohung durch die
+        zahllosen Schrecken des Cosm mit mächtigen Vorzügen wappnen und müssen
+        dazu doch nur einen kleinen Teil ihrer Menschlichkeit opfern. Für manche
+        Spieler ist der schlussendliche Ausgang für ihre Charaktere, wenn sie
+        diesen Pfad beschreiten, schlimmer als der Tod. Ich selbst habe
+        ebenfalls diese Einstellung. Wenn ich weiß, dass mein Charakter noch
+        immer lebt und da draußen ist, aber sich meiner Kontrolle entzieht und
+        nun unschuldigen Leuten grausame Dinge antut, statt sie zu retten, dann
+        bereitet mir das tatsächlich Albträume. Das ist ähnlich wie das Problem
+        mit der Gedankenkontrolle über das Greg bereits gesprochen hat,
+        allerdings ist es in diesem Fall zu einem permanenten Problem
+        geworden.</p><p class="noindent"><strong>Behandle die Verderbnis wie den
+        Tod</strong> <br />Deine Spieler sollten wissen, wie die Verderbnis
+        spieltechnisch funktioniert und welche Konsequenzen es hat, wenn ein
+        Charakter der Dunkelheit anheim fällt. Wenn deine Spieler damit ein
+        Problem haben, dann kannst du es abmildern, indem du ihnen versprichst,
+        dass ihre neuen Charaktere niemals direkt auf ihre alten, korrumpierten
+        Charaktere treffen werden. In diesem Fall verhält sich die Verderbnis
+        spieltechnisch gesehen fast genauso wie ein Charaktertod. Obwohl diese
+        Vorgangsweise die Brutalität der Verderbnis natürlich deutlich
+        abschwächt, kann sie bei Gruppen, die damit ein Problem haben, dennoch
+        eine wunderbare Lösung darstellen.</p><p
+        class="noindent"><strong>Verderbnis minimieren</strong> <br />Eine
+        andere Möglichkeit besteht darin, diese harten Wahlmöglichkeiten zu
+        minimieren. Sprich mit deinen Spielern darüber, wie groß die Rolle der
+        Verderbnis in ihrer Spielrunde sein soll, und passe deine Vorgangsweise
+        entsprechend an. Auch die Spieler können dann auf dieses Problem
+        reagieren und sich informiert entscheiden, ob sie derartige Vorzüge
+        wählen wollen.</p><h3>Kolonialismus</h3><p>Die Viktorianer aus Gaea
+        stellen ein schwerwiegendes und kompliziertes Problem dar, dass einen
+        Großteil der Entwicklungsländer erfasst hat. So wie Briten Indien
+        erobert und ausgebeutet haben, so verhalten sich die Viktorianer nun
+        auch in Torg.</p><p class="noindent"><strong>Die Viktorianer</strong>
+        <br />Eines solltest du immer im Auge behalten. Das Verhalten der
+        Viktorianer ist <em>falsch</em>, auch wenn man dies vor dem großen
+        Hintergrund der Possibility Wars betrachtet. Trotz ihrer Behauptungen
+        haben sie nicht die richtigen Antworten, und ihre Versuche, sich als die
+        Retter der Zentralerde aufzuspielen, sind zum Scheitern verurteilt,
+        genau so wie ihre Welt Gaea zur Zerstörung verdammt ist. Es ist wichtig,
+        dass du sie nicht zu den Helden der Realitätsinvasion in diesem Teil der
+        Welt hochspielst.</p><p>Obwohl es auch in ihren Reihen zweifellos
+        Individuen gibt (vor allem wenn es sich dabei um Storm Knights handelt),
+        die reinen Herzens sind, sind die Viktorianer in ihrer Gesamtheit doch
+        nicht mehr als ein weiteres Werkzeug des Hageren Mannes, mit dessen
+        Hilfe er falsche Hoffnungen und Lügen in den Reihen einer nichts
+        ahnenden Bevölkerung verbreitet.</p><p class="noindent"><strong>Die
+        Auswirkungen des Kolonialismus minimieren</strong> <br />Obwohl der
+        Aspekt des Kolonialismus zur Komplexität des Cosm und seiner Probleme
+        beiträgt, handelt es sich bei dem Kolonialismus, der in Orrorsh so stark
+        vorherrscht, schlussendlich doch um einen Aspekt des Cosm, den du im
+        Bedarfsfall herunterspielen kannst, ohne das Setting zu beschädigen.
+        Sprich mit deinen Spielern darüber. Wenn sie der starke Kolonialismus in
+        Orrorsh beunruhigt oder schlicht und einfach nicht interessiert, dann
+        solltest du seine Auswirkungen in deiner Spielrunde auf ein Minimum
+        reduzieren. Vielleicht sind in deiner Version der Welt die Viktorianer
+        schlicht und einfach völlig dabei gescheitert, Indien neu zu
+        kolonisieren?</p><h3>Empathie</h3><p>Rein oberflächlich betrachtet,
+        handelt es sich bei Orrorsh um einen schrecklichen Ort (und das stimmt
+        ja auch), aber im Gegensatz zu Tharkold spielen hier Empathie und
+        Verbindungen zu anderen Menschen eine wichtige Rolle auf dem Weg zum
+        Sieg. Der Hagere Mann möchte Furcht und Misstrauen säen. Er und die
+        Horrors, die ihm unterstehen, ernähren sich davon. Je mehr die Storm
+        Knights von seiner Realität verstehen und je mehr Verbündete sie finden
+        können, desto größer werden ihre Möglichkeiten, gegen die Angst und die
+        schleichende Verderbnis zu kämpfen.</p><h3>Die Macht der
+        Führung</h3><p>Es mag auf den ersten Blick ja überhaupt nicht so
+        aussehen, und der Hagere Mann möchte auf keinen Fall, dass die Storm
+        Knights diese Tatsache herausfinden, aber Orrorsh ist ein Ort an dem
+        tatsächlich auch Millionen von guten Leuten leben. Diese versuchen, das
+        Beste zu tun, und wenn es Helden gibt, die sie führen können, dann
+        können diese sie inspirieren, ermutigen und dazu bringen, ihre eigenen
+        Ängste zu überwinden. Es handelt sich um einen Ort der Entdeckungen, an
+        dem einige der schrecklichsten und größten Geheimnisse des Hageren
+        Mannes verborgen sind. Es handelt sich um einen Ort, an dem es fast
+        unmöglich erscheint, auch nur einen einzigen Albtraum zu besiegen. Wenn
+        eine derartige Tat allerdings erfolgreich ist, dann handelt es sich
+        dabei auch um einen heftigen und nachhaltigen Schlag gegen den High
+        Lord, der dadurch seinen unerbittlichen Griff auf die Bevölkerung
+        verlieren könnte.</p><p>Leite dein Spiel mit diesen Konzepten im
+        Hinterkopf. Du wirst dann dazu in der Lage sein, deinen Spielern Angst
+        und Schrecken einzujagen, doch wenn sie erfolgreich sind, dann werden
+        sie auf eine Art und Weise stolz auf ihre Leistungen sein, wie dies in
+        keinem anderen Cosm der Fall ist.</p><h1>Pan-Pacifica</h1><p>Hi! Ich bin
+        John Watson, und ich bin ein Spielleiter. Ja, manchmal fühlt sich der
+        wilde Strudel aus Emotionen, wenn man eine neue Spielrunde vorbereitet,
+        fast wie eine Sucht an. Angst, Erwartung und Freude spielen einen wilden
+        Reigen. Warum? Du willst Spaß an deiner Spielrunde haben, ebenso wie
+        deine Freunde. Wenn du der Spielleiter bist, musst du einen großen Teil
+        der Verantwortung dafür stemmen, damit das am Spieltisch auch für alle
+        klappt. „Wenn alle Beteiligten Spaß haben, dann haben alle gemeinsam
+        gewonnen!“ Das ist die einfache aber noch immer genau zutreffende
+        Leitlinie der Designer von West End Games bei der Erschaffung des ersten
+        <em>Star Wars</em> Rollenspiels gewesen. Und aus diesem Grund lastet
+        auch eine Menge Druck auf den meisten Spielleitern.</p><p>Wie kann man
+        sich also entspannen und gleichzeitig ein großartiges Spiel leiten? Bei
+        diesem Punkt kann dir die Spielsitzung Null wirklich nützlich sein.
+        Statt dass du all den Druck und die Verantwortung, die es mit sich
+        bringt, ein perfektes Spiel leiten zu wollen, auf deine eigenen
+        Schultern lädst, kann jeder in deiner Spielrunde auf diesem Weg einen
+        Beitrag leisten. „Viele Hände machen Arbeit schnell ein Ende?“ ist ein
+        Sprichwort, das auch für <em>Torg Eternity</em> seine Gültigkeit
+        hat.</p><p>Ich will mit dem großen Ganzen beginnen und mich dann den
+        Details widmen. Zuerst ist es wichtig, zu etablieren, mit welchem
+        Spielstil alle Beteiligten rechnen. Immerhin ist <em>Torg Eternity</em>
+        ein sehr vielfältiges und abwechslungsreiches Spiel mit den
+        unterschiedlichsten Settings, zwischen denen die Storm Knights jederzeit
+        ungehindert reisen können. Wenn du und deine Spieler wirklich wissen,
+        was sie vom Spiel erwarten, dann kann dies auch einen Einfluss darauf
+        haben, welche Cosms sie ausführlich erforschen wollen und welche man
+        vielleicht eher beiseitelassen sollte. Dabei kann der gewünschte
+        Spielstil sehr unterschiedlich sein und beispielsweise von einem stark
+        kampflastigen Spiel, bei dem die Storm Knights plündern und Gewölbe
+        erforschen können (dafür würde sich beispielsweise die Erforschung von
+        Gewölben in Aysle oder des Verheerten Landes in Tharkhold eignen), über
+        starkes Rollenspiel, bei dem jeder ständig seinen Charakter ausspielt
+        und eine reichhaltige und dramatische Geschichte die größte Rolle spielt
+        (Intrigen in Pan-Pacifica oder Drama im Nil-Imperium könnten sich dafür
+        eignen), bis hin zu einer Mischung der beiden Stile oder allem
+        dazwischen reichen.</p><p>Nachdem du den Spielstil etabliert hast, den
+        deine Gruppe im Allgemeinen bevorzugen würde, kannst du ins Detail gehen
+        und die einzelnen Spieler fragen, was sie eigentlich genau vom Spiel
+        erwarten. Dabei könnt ihr so detailliert vorgehen, wie ihr wollt, oder
+        die Frage auch nur in groben Zügen klären. Frag die Spieler einfach
+        Dinge wie: „Was erwartest du dir von diesem Spiel?“ und „Welche Dinge
+        würdest du aufregend und spannend finden, wenn sie sich regelmäßig am
+        Spieltisch ereignen?“ Du solltest die Spieler auch dazu ermutigen, dir
+        als Spielleiter und den anderen Spielern entsprechende Fragen zu
+        stellen. Auf diesem Weg können alle Beteiligten ein sehr gutes Gefühl
+        dafür entwickeln, welche Art von Spiel diese Spielrunde dominieren soll,
+        und Ideen für die Spieler und die Spielleiterin entwickeln.</p><p>Es ist
+        auch wichtig, darüber zu sprechen, was für deine Spieler gar nicht geht.
+        Als Spielleiter habe ich das selbst immer während der Spielsitzung Null
+        getan, damit meine Spieler mit mir besprechen können, mit welchen Themen
+        und Erfahrungen ihre Storm Knights niemals während des Spiels
+        konfrontiert werden wollen. Nachdem ich meine Vorstellungen dargelegt
+        habe, übergebe ich den Spielern das Wort und fragt sie, ob es
+        irgendwelche Tabuthemen im Spiel für sie gibt. Ich betone auch, dass sie
+        mir auch ruhig eine E-Mail, eine Textnachricht oder einen Brief oder was
+        auch immer schreiben können, wenn sie das nicht öffentlich diskutieren
+        wollen.</p><p>Dieser Vorgang kann so kurz oder lang sein, wie es für
+        dich und deine Gruppe angenehm und nützlich ist. Ich hatte aber stets
+        den Eindruck, dass es sich durchaus auszahlt, eine ganze Spielsitzung
+        für diese Vorbereitungen zu opfern. Wenn jeder bei diesen Diskussionen
+        wirklich engagiert und ehrlich ist, dann wird deine persönliche
+        Spielsitzung Null sehr produktiv sein und allen Beteiligten eine große
+        Last von den Schultern nehmen.</p><h3>Pan-Pacifica</h3><p>In
+        Pan-Pacifica gibt es gleich eine ganze Menge von Themen, die zu
+        einzigartigen Herausforderungen am Spieltisch führen können. Viele
+        Cosmkarten können die Spielleitern dazu zwingen, wichtige Änderungen an
+        der Handlung vorzunehmen. Die Spieler gehen vielleicht davon aus, dass
+        die Änderungen durch das Spielen von Cosmkarten sofort geschehen
+        sollten, aber du solltest von Anfang an klar machen, dass du manchmal
+        auch ein wenig Zeit benötigen wirst, um derartige Änderungen in dein
+        Spiel zu integrieren, und auf diesem Weg falsche Erwartungen zerstreuen.
+        Es gibt in Pan-Pacifica auch mehrere relativ ernste und erwachsene
+        Themen, wie die Verbrechersyndikate und die Verseuchung durch die Jiang
+        Shi. Dabei kann es sich um vorzügliche Werkzeuge handeln, die helfen,
+        spannende Geschichten zu erzählen, aber gleichzeitig können diese
+        ernsten Themen für manche Spieler sehr problematisch sein. Nachfolgend
+        findest du daher ein paar gute Ratschläge, wie man die schwierigen
+        Themen, die für Pan-Pacifica typisch sind, handhaben kann. Orientiere
+        dich an den Vorschlägen, die dich ansprechen, und ignoriere den
+        Rest.</p><h3>Verrat</h3><p>Einige der besonders denkwürdigen
+        Spielsitzungen von <em>Torg Eternity</em>, die ich in Pan-Pacifica
+        geleitet habe, haben sich um den Verrat gedreht. In einem Spiel hat sich
+        einer der Storm Knights in eine wichtige NSC verliebt. Zu einem späteren
+        Zeitpunkt hat die NSC den Storm Knight verraten, ihm aber dennoch ihre
+        wahre Liebe gestanden und ihn angefleht, doch zu verstehen, dass sie
+        keine Wahlmöglichkeit hatte. Das Abenteuer hat damit geendet, dass der
+        Storm Knight zahlreiche Leben gerettet hat, dabei aber sein Leben lassen
+        musste. Die NSC war von der Last ihres Verrats und dem Opfer des Storm
+        Knights so überwältig, dass sie einen Moment der Krise erlebte und von
+        einer NSC zu einem neuen Storm Knight wurde. Die neue Storm Knight
+        übernahm die Rolle ihres gefallenen Liebhabers und schloss sich der
+        restlichen Gruppe an, um für ihre verwerflichen Taten Buße zu tun und
+        das Leben ihrer verflossenen Liebe zu ehren.</p><p>Dieses Szenario hat
+        sich abgespielt, ohne dass ich es geplant hätte. Der Storm Knight
+        spielte die Schicksalskarte <em>Romanze </em>auf die NSC und kurz darauf
+        die Cosmkarte <em>Verkauft</em>. Die Verbindung war sofort
+        offensichtlich und sorgte für einen unglaubliche epischen Aufbau und ein
+        besseres Ende als jedes Ende, das ich mir selbst hätte ausdenken können.
+        Das alles hätte sich vermutlich als enorme Herausforderung erwiesen,
+        wenn ich es auf der Stelle hätte improvisieren müssen. Glücklicherweise
+        hatte ich meine Spieler vor Spielbeginn darüber informiert, dass es
+        durchaus sein konnte, dass Schicksals- und Cosmkarten in meiner
+        Spielrunde eine verzögerte Wirkung haben würden. Ich würde auf einen
+        geeigneten Zeitpunkt warten. Das hat mir ausreichend Zeit gegeben, die
+        Sache zu überdenken, während ich das Spiel leitete, und die Spieler
+        wussten ja bereits, dass es so ablaufen würde. Dadurch wurde die ganze
+        Angelegenheit für mich als Spielleiter leichter zu handhaben. Ich hatte
+        ausreichend Zeit, die einzelnen Elemente so auf den Weg zu bringen, dass
+        sie sich als hervorragendes Stilmittel für die Erzählung meiner
+        Geschichte eigneten.</p><p>Der plötzliche Verrat, der sich in
+        Pan-Pacifica aufgrund von Cosmkarten ereignen kann, ist eine der größten
+        Hürden dieses Cosm. Es ist aber auch wichtig, dass du das Thema im
+        Vorfeld mit deinen Spielern besprichst. Nehmen wir beispielsweise an,
+        der Spieler, der die Karte Verkauft gespielt hätte, hätte im echten
+        Leben gerade ein sehr hartes Beziehungsende hinter sich gebracht. In
+        solch einem Fall hätte ich eine andere Möglichkeit finden müssen, die
+        Resultate der Karte auszuspielen, weil dies ansonsten vermutlich nicht
+        angemessen gewesen wäre.</p><h3>Konzernkontrolle</h3><p>Die Kanawa
+        Corporation hat Pan-Pacifica fest im Griff. Praktisch alles hier
+        befindet sich in ihrem Besitz. Storm Knights müssen sich normalerweise
+        in den Cosm hineinschleichen und ihn auch auf diese Weise wieder
+        verlassen. Andernfalls muss sich der Delphi-Rat auf die Agenten
+        verlassen, die sich bereits im Cosm befinden. Dieser an eine
+        Militärdiktatur erinnernde Staat kann dafür sorgen, dass viele
+        eigentlich mundane Tätigkeiten zu einer großen Herausforderung
+        werden.</p><p>Doch gerade dieses Thema kann dafür sorgen, dass viele
+        Charaktere besonders glänzen. Storm Knights mit Fertigkeiten wie
+        <em>Gassenwissen </em>und <em>Überreden </em>werden in Pan-Pacifica auf
+        einmal besonders wertvoll. Die Bedrohung durch die Kanawa
+        Sicherheitskräfte lauert stets hinter der nächsten Ecke. Storm Knights,
+        die darin geschult sind, jemanden glaubwürdig das Blaue vom Himmel zu
+        erzählen, können diese Truppen oftmals davon überzeugen, dass sie von
+        keinem besonderen Interesse für sie sind. Ein anderer Storm Knight
+        könnte ein altes, verlassenes Gebäude aufspüren, in dem die örtliche
+        Bevölkerung sich Waren und Dienstleistungen verschafft, deren Zugang
+        durch die Kanawa Corporation stark eingeschränkt wird. Die
+        Möglichkeiten, die dieses Thema bietet, damit Storm Knights, die
+        normalerweise nicht so sehr im Rampenlicht stehen, aufgrund ihrer
+        ungewöhnlichen Fähigkeiten glänzen können, sind enorm.</p><h3>Die
+        Verbrechersyndikate</h3><p>Die verschiedenen Verbrechersyndikate in
+        Pan-Pacifica bestehen nicht aus netten Personen. Die meisten Personen
+        haben furchteinflößende Geschichten und Gerüchte darüber gehört, was sie
+        mit Leuten angestellt haben, die ihnen in die Quere gekommen sind, oder
+        einfach nur, um ein Exempel zu statuieren.</p><p>Erinnere deine Spieler
+        auch hier daran, dass dies nicht das echte Leben ist. <em>Torg
+        Eternity</em> repräsentiert nicht nur eine andere Zeitlinie, sondern
+        eine andere Welt als die unsere. Es gibt Ähnlichkeiten, aber sie sind
+        nicht identisch. Die Kanawa Corporation stellt die größte Bedrohung in
+        PanPacifica dar. Obwohl die Angehörigen der verschiedenen
+        Verbrechsyndikate keineswegs freundlich sind, führen sie doch alle einen
+        offenen Krieg gegen Kanawa. Die Storm Knights werden vielleicht
+        feststellen, dass die Bandenmitglieder zu unerwarteten Verbündeten
+        werden können, während sie gemeinsam ein ähnliches Ziel
+        verfolgen.</p><p>Dennoch ist es wichtig, das ganze Thema offen zu
+        besprechen, um Missverständnisse zu vermeiden. Erkläre deinen Spielern,
+        welche Einstellung der Delphi-Rat gegenüber den verschiedenen
+        Verbrechersyndikaten Pan-Pacificas in deinem Spiel hat. Jeder weiß auf
+        diesem Weg, wie die Verbrecherbanden in deinem Spiel repräsentiert
+        werden, und du weißt auch, welche Elemente, die man normalerweise mit
+        solchen Organisationen in Verbindung bringt, in deinem Spiel tabu sein
+        sollten.</p><h3>Das Virus</h3><p>Während ich diese Zeilen schreibe, muss
+        sich unsere Welt mit einer Pandemie auseinandersetzen. Vermutlich wurde
+        jede Person, die diese Zeilen liest, in kleinem oder großem Ausmaß davon
+        betroffen. Themen, die man mit Erfahrungen im realen Leben in Verbindung
+        bringen kann (vor allem wenn sie gerade frisch sind), sollten von uns
+        auch im Rollenspiel mit besonderer Sorgfalt behandelt werden. Obwohl die
+        Jiang-Shi-Verseuchung ein psionischer Virus ist, der seine Opfer in
+        Zombies verwandelt, könnte die ganze Angelegenheit dennoch für manche
+        deiner Spieler zu frisch in der Erinnerung sein.</p><p>Du solltest das
+        Thema daher ganz offen mit deinen Spielern besprechen. Wir alle sind
+        damit auf die eine oder andere Weise in Kontakt geraten, und deswegen
+        sollte man bei diesem Thema nicht um den heißen Brei herumreden. Manche
+        Cosmkarten Pan-Pacificas stehen direkt mit dem Virus in Verbindung. Wenn
+        du diese Karten nicht aus dem Cosmdeck entfernst, dann wird das Thema
+        auch dann, wenn du ihm anderweitig aus dem Weg gehst, irgendwann in
+        deiner Spielrunde seinen Auftritt haben. Wenn du das nicht willst, dann
+        besteht die einfachste Lösung vermutlich darin, dass du sagst, dass in
+        deiner Spielrunde ein Heilmittel oder ein Impfstoff gegen das Virus
+        entdeckt wurde. Die Infizierten existieren noch immer, aber die Gefahr,
+        dass man sich mit dem Virus infiziert oder daran stirbt, ist wesentlich
+        geringer.</p><p>Wenn deine Spieler keine Einwände haben, dann kann die
+        Seuche zu interessanten Momenten im Spiel führen. Man kann sich mit den
+        verschiedensten Problemen herumschlagen, beispielsweise versuchen, sich
+        nicht anstecken zu lassen, Experten aufzuspüren, die ein Heilmittel
+        finden können, auf Einsätze gehen, bei denen man auf der Jagd nach einem
+        möglichen Heilmittel ist, oder nach einer Möglichkeit finden, einen
+        extrem wichtigen NSC, der sich irgendwie angesteckt hat, zu heilen. Die
+        Möglichkeiten, die ein Spiel mit diesem Thema bietet, sind vielfältig.
+        Achte aber stets darauf, was in der jüngsten Zeit in unserer realen Welt
+        geschehen ist.</p><h1>Tharkold</h1><p>Hallo, ich bin Leamon Crafton Jr.,
+        einer der Autoren hier im Team von <em>Torg Eternity</em>. Ich habe
+        einige Zeit in Russland und der Ukraine verbracht. Russland kann schon
+        in unserer realen Welt ein sehr einschüchternder Ort sein. Am meisten
+        Angst in meinem bisherigen Leben erlebte ich in einer russischen
+        „Polizeiwache“. Ich schreibe das in Anführungszeichen, weil es sich
+        dabei um einen kleinen Raum unter einem Flughafen gehandelt hat, in den
+        man mich durch ein paar Sicherheitstüren und lange Wartungstunnel mit
+        Röhren und Schriften an der Decke gebracht hat. Das ganze Setting
+        erinnerte sehr stark an einen Film, in dem ein armer Kerl
+        davongeschleppt und in einem nicht näher definierten Raum an einen
+        Sessel gefesselt wird, wo man seine Schreie nicht hören kann, während er
+        verhört wird. Das mag jetzt ein wenig übertrieben sein, aber genau so
+        habe ich mich gefühlt, als mir das zugestoßen ist. Ich hatte eine kleine
+        Registrierungskarte verloren, und obwohl ich jetzt lachen kann, wenn ich
+        an die Situation zurückdenke, war ich zu diesem Zeitpunkt in heller
+        Panik. Und diese Erfahrung war noch ganz ohne die Realität
+        Tharkolds.</p><p>Von allen Cosms hat Tharkold das Potenzial, besonders
+        verstörend zu sein. <em>Torg Eternity</em> repräsentiert einen
+        verzweifelten, aber heroischen Kampf gegen die Realitätsplünderer, aber
+        jeder Cosm stellt eine eigene Realität mit ihren eigenen Regeln dar.
+        Tharkold ist dafür ein besonders extremes Beispiel. Storm Knights können
+        auch hier Helden sein, aber der Cosm selbst ist sehr weit davon
+        entfernt. Tharkold ist eine Realität, in der zahlreiche sehr unangenehme
+        Themen ganz offen daliegen. Die Spieler und die Spielleiterin fragen
+        sich vielleicht, wie es ein Reich geben kann, das sich in seiner
+        Darstellung so stark von allen anderen unterscheidet. Es handelt sich um
+        ein Reich, in dem man vielleicht mehr Grenzen als anderswo ziehen muss.
+        Themen wie Körperhorror, Leibeigenschaft und Splatterpunk sind hier an
+        der Tagesordnung.</p><p>Wie es Greg schon erwähnt hat, solltest du
+        ausführlich mit deinen Spielern sprechen und die hier vorgestellten
+        Werkzeuge benutzen, damit das Spiel für alle Beteiligten unterhaltsam
+        und angenehm bleibt. Wenn du Bedenken hast, ob du überhaupt Abenteuer in
+        Tharkold spielen solltest, dann ist das auch in Ordnung. Agenten und
+        Bedrohungen aus Tharkold können ja auch in den anderen Cosms ihren
+        Auftritt haben. Du hast auch immer die Option, die Tharkoldu und die
+        Bedrohungen Tharkolds zu nehmen und sie in ein anderes Reich zu bringen,
+        um dort die Storm Knights damit zu konfrontieren. Niemand zwingt dich
+        und deine Spieler dazu, ein Abenteuer unbedingt in Tharkold zu spielen.
+        Doch für den Fall, dass du es wagen willst, will ich hier die
+        wichtigsten Themen mit dir besprechen, die in Tharkold vermutlich für
+        deine Gruppe eine Rolle spielen werden.</p><img class="img-mid"
+        src="systems/torgeternity/images/s0-04.webp" width="1918" height="1110"
+        /><p style="text-align:center"><em>Ein Abenteuer in Kur sollte definitiv
+        im Vorfeld besprochen
+        werden.</em></p><h3>Einschüchterung</h3><p><em>Einschüchtern </em>kann
+        in Tharkold wesentlich weitreichender eingesetzt werden als anderswo.
+        Das Gesetz der Dominanz, die Cosmkarten und das Dramadeck von Tharkold
+        sorgen dafür, dass <em>Einschüchtern </em>auf einmal eine Hauptrolle
+        spielt. Bedrohungen aus Tharkold versuchen auch regelmäßig
+        <em>Einschüchtern </em>gegen die Storm Knights einzusetzen. Das führt
+        vermutlich zu Situationen, in denen die Storm Knights auf eine Art und
+        Weise reagieren, mit der auch ihre eigenen Spieler ein Problem haben.
+        Oder ein Storm Knight könnte <em>Einschüchtern </em>einsetzen, um einen
+        NSC dazu zu bringen, Dinge gegen seinen eigenen Willen zu tun. Denk auf
+        jeden Fall daran, dass diese Fertigkeit, die in den anderen Reichen eben
+        schlicht und einfach nur eine Fertigkeit ist, die man der Situation
+        angemessen einsetzt, in Tharkold auf einen sehr dunklen Pfad führen
+        kann.</p><h3>Mutationen</h3><p>Mutationen im Verheerten Land spielen
+        eine sehr große Rolle in dieser Gegend. Diese bringen den Charakteren
+        Vorteile und Nachteile, aber selbst Mutationen, die den Spielern einen
+        Vorteil bringen, drücken sich meist in irgendwelchen Verstümmelungen
+        oder Deformationen des Körpers aus. Sprich mit deiner Gruppe über diesen
+        Aspekt. Mutationen könnten für manche Gruppenmitglieder zu nahe an das
+        Thema des Bodyshamings herangehen, sodass sie sie vermeiden möchten.
+        Wenn nötig, solltest du bei deiner Handhabung des Themas Grenzen und
+        Schleier nutzen.</p><h3>Politik</h3><p>Obwohl es ja das geflügelte
+        Sprichwort gibt, dass man über Politik nicht sprechen sollte, lässt es
+        sich in diesem Fall nicht vermeiden. In Tharkold gilt die eindeutige
+        Prämisse, dass das Russland der Zentralerde sich bereitwillig mit den
+        dämonischen Invasoren verbündet hat. Dann hat dieses neu geschaffene
+        Reich Osteuropa erobert, das historisch gesehen meist unter der
+        Herrschaft der Sowjetunion stand. Wenn du Spieler in deiner Gruppe hast,
+        die aus dieser Gegend kommen, dann werden diese vielleicht ihren Wunsch
+        ausdrücken, dass sie dieses Thema lieber nicht im Spiel erforschen
+        wollen. Es ist zu nahe an dem dran, was in der realen Welt schon oft
+        geschehen ist und noch immer geschieht. Ich habe Freunde, die an der
+        Orangen Revolution und an der Maidan-Revolution in Kiew teilgenommen
+        haben. Das Thema ist sehr frisch für sie und lastet sehr schwer auf
+        ihnen. Du solltest historische Korrektheit nicht über das Wohlergehen
+        deiner Spieler stellen. Du kannst jederzeit etwas sagen wie: „Wir werden
+        in Russland bleiben und die anderen Schauplätze in Tharkold besser
+        ignorieren.“ Auch die Schauplätze in einem offiziellen Abenteuer lassen
+        sich leicht ändern.</p><h3>Körperhorror</h3><p>In Tharkold kann Fleisch
+        wie Ton geformt werden. Dabei nimmt es meist besonders grauenerregende
+        Formen an, und Okkultech ersetzt Körperteile durch Maschinerie, die von
+        Schmerzen angetrieben wird. Furchtbare Experimente und Zauber in
+        Tharkold verändern den Verstand und den Körper ihrer Opfer. Kreaturen
+        mit einer verdrehten oder mutierten Gestalt stellen einen Großteil der
+        Bedrohungen in Tharkold dar. Das Gesetz der Wildheit funktioniert
+        ähnlich wie das Gesetz der Wildnis im Lebenden Land, sobald die
+        Dramakarten aufgedeckt werden und der Kampf beginnt. In diesem Cosm gibt
+        es immer die Verlockung, die Dinge besonders grausam zu beschreiben und
+        sich dabei von Elementen des Splatterpunks inspirieren zu lassen. Du
+        kannst dich bezüglich dieses Problems am Abschnitt <strong>Blutige
+        Kämpfe</strong> fürs Lebende Land orientieren. Wenn nötig, solltest du
+        zu blutige Beschreibungen einschränken oder gleich auf sie
+        verzichten.</p><h3>Verursachtes Leiden</h3><p>In Tharkold verursachen
+        Leute und Kreaturen körperliches und geistiges Leid an anderen. Die
+        Essenz dieser Schmerzen kann zu einer kristallartigen Substanz namens
+        Vril kondensiert werden, indem man Leute mit Foltermaschinen verbindet.
+        Das Gesetz des Schmerzes ermutigt die Storm Knights dazu, ihren Feinden
+        Verletzungen zuzufügen, da sie dadurch selbst Schockschaden heilen.
+        Deswegen werden sie vermutlich dazu ermutigt, ihre Feinde zu töten,
+        statt sie nur k. o. zu schlagen, wie beispielsweise im Nil-Imperium, wo
+        man sogar Möglichkeiten erlangen kann, indem man einem besiegten Feind
+        die Chance gibt, zu einem späteren Zeitpunkt wiederzukommen. All diese
+        Dinge können auch in deiner Gruppe zu Unbehagen und Stress führen. Denk
+        daran, dass die Storm Knights trotz allem Helden sind und sich auch in
+        Tharkold so verhalten sollten</p><h3>Leibeigene</h3><p>In Tharkold gibt
+        es Leibeigene und Leibeigenschaft. Im Prinzip handelt es sich dabei nur
+        um Sklaverei, der man einen anderen Namen gegeben hat. Das Konzept
+        bedeutet allerdings weniger, dass man mit Sklaven handelt, sondern mehr,
+        dass Leute dazu gezwungen werden, anderen zu dienen, oder dass sie als
+        Leibeigene geboren wurden und daher immer Leibeigene bleiben werden. Das
+        macht die ganze Angelegenheit aber in keiner Weise besser. Diese armen
+        Seelen haben ihre Freiheit verloren. Der Delphi-Rat hat natürlich keine
+        Leibeigenen, aber das Gesetz der Dominanz ermutigt selbst Agenten des
+        Delphi-Rats dazu, ihre eigene Hackordnung zu schaffen. Es kann schwierig
+        sein, diesen Aspekt zu ignorieren, da er Teil der Geschichte und der
+        Weltgesetze Tharkolds ist. Dennoch kannst du das Thema hinter den
+        Schleier stellen oder, wenn es ein zu großes Problem darstellt, sogar
+        vollständig entfernen. Außerdem solltest du stets wachsam sein, wie sich
+        deine Gruppe an das Thema annähert. Vielleicht wirst du einschreiten
+        müssen, wenn einer deiner Spieler versucht, in den Reihen der Storm
+        Knights selbst eine Dominanzstruktur zu etablieren.</p>
+    video:
+      controls: true
+      volume: 0.5
+    src: null
+    system: {}
+    ownership:
+      default: -1
+      CtisFurQNe9h7ABb: 3
+    flags: {}
+    _stats:
+      systemId: torgeternity
+      systemVersion: 3.1.1
+      coreVersion: '11.308'
+      createdTime: 1694882749667
+      modifiedTime: 1694882922139
+      lastModifiedBy: CtisFurQNe9h7ABb
+    _key: '!journal.pages!ePJekdztsz1JPoT9.n0yd2gGkGgjElI0T'
+  - sort: 200000
+    name: Über die Basisregeln
+    type: text
+    _id: H6HOr7tw4MQNcWO9
+    title:
+      show: false
+      level: 1
+    image: {}
+    text:
+      format: 1
+      content: >-
+        <p>Die in diesem Modul enthaltenen Grundregeln wurden aus dem
+        Stromaufwärts-Abenteuermodul für Torg Eternity entlehnt.</p><h2>Original
+        Stromaufwärts Design Team:</h2><p><strong>Autor:</strong> Darrell
+        Hayhurst</p><p><strong>Bearbeitung:</strong> Ron
+        Blessing</p><p><strong>Künstlerische Leitung:</strong> Aaron
+        Acevedo</p><p><strong>Layout:</strong> Aaron Acevedo, Darrell
+        Hayhurst</p><p><strong>Grafikdesign:</strong> Aaron Acevedo, Jason
+        Engle, Maik Schmidt</p><p><strong>Titelbild:</strong> Gunship
+        Revolution</p><p><strong>Innenillustrationen:</strong> Chris Bivins,
+        Talon Dunning, Bien Flores, Gunship Revolution, Alida Saxon, Unique
+        Soparie</p><h2>Flussaufwärts Foundry-Modul</h2><p>Angepasst für das Torg
+        Eternity Foundry System von Matt Ritchie.</p><p>Deutsche Übersetzung von
+        Jens Bergmann</p><hr /><p>Torg, The Possibility Wars und alle
+        einzigartigen Charaktere, Konzepte, Orte und Kreaturen sind Warenzeichen
+        und / oder Urheberrechte von Ulisses Spiele. Alle Rechte
+        vorbehalten.</p>
+    video:
+      controls: true
+      volume: 0.5
+    src: null
+    system: {}
+    ownership:
+      default: -1
+      CtisFurQNe9h7ABb: 3
+    flags: {}
+    _stats:
+      systemId: torgeternity
+      systemVersion: 3.1.1
+      coreVersion: '11.308'
+      createdTime: 1694882783932
+      modifiedTime: 1694882949429
+      lastModifiedBy: CtisFurQNe9h7ABb
+    _key: '!journal.pages!ePJekdztsz1JPoT9.H6HOr7tw4MQNcWO9'
+  - sort: 300000
+    name: Basisregeln
+    type: text
+    _id: v46rtTLn1xMuJBSz
+    title:
+      show: false
+      level: 1
+    image: {}
+    text:
+      format: 1
+      content: "<h1>Storm Knights</h1><p>Storm Knights sind Helden mit der Fähigkeit, Möglichkeitsenergie zu manipulieren. In Torg Eternity ist jeder Spielercharakter ein Storm Knight.</p><p>Ein Charakter wird zum Storm Knight, wenn er einen Moment der Krise erlebt. Sobald er ein Storm Knight geworden ist, kann ein Charakter auf einen speziellen Vorrat an sogenannter Möglichkeitsenergie zurückgreifen.</p><p>Das System Torg Eternity Foundry enthält ein Kompendium mit 16 spielfertigen Charakterarchetypen. Die Regeln und andere Daten, die zur Erstellung eigener Charaktere erforderlich sind, sind im Torg Eternity Grundregelmodul enthalten, das käuflich erworben werden kann.</p><div class=\"sidenote\"><h4>Kurzer Feuerstoss</h4><p>Die Waffe des Elektro-Samurai feuert kurze Feuerstöße ab. Jeder Angriff auf ein Ziel verbraucht 3 Kugeln, gewährt aber einen Bonus von +2 auf den Treffer. Ein Wurf von 1 entkoppelt, wie üblich, aber ein Wurf von 2 verursacht eine Fehlfunktion der Waffe. Sie darf erst wieder abgefeuert werden, wenn der Charakter eine Aktion (keine Probe erforderlich) durchführt, um das Problem zu beheben.</p><blockquote><p><strong>Hinweis zum Foundry-System: </strong>Wenn du eine ausgedehnte Angriffsprobe machst, berechnet das System automatisch einen Bonus.\_ (siehe @UUID[.v46rtTLn1xMuJBSz#angriff]{Angriff}).</p></blockquote><h4>Panzerbrechend</h4><p>Das Elektro-Katana der Elektrosamurai und die Adamant-Patronen des Monsterjägers verfügen über die Eigenschaft Panzerbrechend. Panzerbrechen negiert eine bestimmte Anzahl von Punkten, die Rüstung auf Robustheit gewährt. Da weder die Gospog noch die Edeinos-Krieger über Rüstung verfügen, hat Panzerbrechend auf sie keine Auswirkungen. Der Tyrannosaurus hat allerdings 3 Rüstung. Das Katana reduziert seine Robustheit auf 18 und die Adamant-Patronen auf 17.</p><blockquote><p><strong>Hinweis zum Foundry System: </strong>Bei der Verwendung eines \"ausgeweiteten Angriffs\" (siehe @UUID[.v46rtTLn1xMuJBSz#angriff]{Angriff}) werden die Effekte von \"Panzerbrechend\" (PB) automatisch berechnet (siehe @UUID[.NtKJ9vOusDzsnH15#der-umgang-mit-karten]{Der Umgang mit Karten}).</p></blockquote><h4>Säbelzahntiger</h4><p>@UUID[Compendium.torgeternity.system-de-archetypen.Actor.pGJE5A6rJMK7Za84]{Die urzeitliche Jägerin} hat einen @UUID[Compendium.torgeternity.system-de-archetypen.Actor.SVU3O0osXn4bPoTn]{Säbelzahntiger} als Tiergefährten. Der Spieler kontrolliert den Tiger und verwaltet dessen Schock und Wunden getrennt von seinem Charakter. Der Tiger hat keine eigenen Möglichkeiten, aber die Urzeitliche Jägerin kann ihre Möglichkeiten aufwenden, um die Proben der Kreatur zu verbessern und sie Schaden wegstecken zu lassen.</p><p>Wenn der Spieler nicht sicher ist, was der Säbelzahntiger tun sollte, schlage ihm vor, die Katze für @UUID[.v46rtTLn1xMuJBSz#kombinierte-angriffe]{Kombinierte Angriffe} einzusetzen, um dasselbe Ziel wie der Charakter selbst anzugreifen, was der Urzeitlichen Jägerin +1 auf ihre Probe verleiht. Wenn <em>Manövrieren</em> eine Anerkannte Aktion ist, könnte die Katze einen Gegner mit <em>Manövrieren</em> bedrängen, damit sie die Jägerin anschließend erledigen kann. Dies erläutert den Spielern @UUID[.v46rtTLn1xMuJBSz#interaktionsangriffe]{Interaktionsangriffe} und sie kann sogar eine @UUID[.v46rtTLn1xMuJBSz#schicksalskarten]{Schicksalskarten} für ihre erfolgreiche Anwendung erhalten.</p></div><h2>Moment der Krise</h2><p>Ein Charakter wird zum Storm Knight, wenn er in einem kritischen, dramatischen Moment auf heldenhafte Weise reagiert. Sie könnten zum Beispiel ihr Leben riskieren, um andere Menschen zu retten, oder sich einer Kreatur stellen, die doppelt so groß ist wie sie selbst, um jemandes Leben zu retten. Wenn dies geschieht, strömt rohe Energie in den Helden und er erlangt die Fähigkeit, die Realität nach seinem eigenen Willen zu biegen.</p><h2>Möglichkeitsenergie</h2><p>Die Möglichkeitsenergie stellt die Fähigkeit der Storm Knights dar, sich gegen die Realität \"zu wehren\".</p><p>Die meisten Spieler beginnen eine Sitzung mit drei (3) Möglichkeiten. Charaktere, die die Fähigkeit Wunderkind haben, beginnen mit vier.</p><p></p><h2>Schicksalskarten</h2><p>Gib jedem Spieler vier Schicksalskarten. Auf jeder Karte ist erklärt, wozu man sie verwenden kann, doch das wird für die Spieler erst Sinn ergeben, wenn die ersten Proben abgelegt werden. Außerhalb des Kampfes können die Spieler die Karten frei untereinander austauchen, aber immer nur eine Karte gegen eine andre Karte. Für dieses Schnellspiel solltest du folgende Karten aussortieren: Gut eingestimmt, Hast, Idee, Mahlstrom, Märtyrer, Meisterhafter Plan, Nemesis, Realitätswelle, Romanze, Ruhm und Verbindungen.</p><p>@UUID[.NtKJ9vOusDzsnH15#der-umgang-mit-karten]{Der Umgang mit Karten} erklärt genau dieses.</p><h1>Realität</h1><p>Wenn die Storm Knights verschiedene Reiche besuchen, die von anderen Realitäten beeinflusst werden, ändern sich diese Axiome und Gesetze, um widerzuspiegeln, was hier leicht zu tun ist und was schwer. Axiome messen, was in einer Realität reichlich vorhanden ist, und was \"unmöglich\" ist. Im Basisregelwerk steht der Cosm des Lebenden Landes für das Spiel zur Verfügung.</p><img src=\"systems/torgeternity/images/deutsch/cosm-tabletents/LebendesLand.webp\" /><h2>Axioms</h2><ul><li><strong>Magie-Axiom: </strong>Die niedrige Zahl bedeutet, dass Magie hier so gut wie gar nicht existiert. Der einzige Charakter mit Magie ist der Weltenläufer, der einen Heiltrank bei sich trägt. Da er diesen Trank bei sich hat, riskiert er einen Widerspruch und wenn es dazu kommt, dann @UUID[.v46rtTLn1xMuJBSz#entkoppelung]{entkoppelt} er von der Realität.</li><li><strong>Sozial-Axiom: </strong>Die niedrige Zahl bedeutet, dass fortschrittliche gesellschaftliche Konzepte und Organisation hier nicht existieren kann. Die Demokratie ergibt für die Leute und Wesen hier beispielsweise keinen Sinn. Es ergibt hingegen sehr großen Sinn, den Befehlen des stärksten Jägers zu folgen und sich zu nehmen, was man will und braucht! Wenn einer der Storm Knights über Psi-Kräfte verfügen würde, würde das hier einen Widerspruch erzeugen.</li><li><strong>Spiritual-Axiom: </strong>Der hohe Wert bedeutet, dass Wunder, Glauben und Götter hier greifbare Auswirkungen haben. Die Götter sind real und man kann sehr mächtige Wunder wirken, ohne einen Widerspruch auszulösen</li><li><strong>Tech-Axiom: </strong>Das ist die Zahl, die die größten Auswirkungen für die Storm Knights hat. Beinahe jede fortschrittliche Technologie löst hier einen Widerspruch aus. Bei jedem Charakter ist bei jedem Gegenstand das Tech-Axiom angeführt. Alle Zahlen, die dabei über 6 sind, bedeuten, dass eine Benutzung des Gegenstands im Lebenden Land einen Widerspruch auslösen kann, was dazu führen würde, dass der Charakter Entkoppelt.</li></ul><h2>Weltgesetze</h2><ul><li><p><strong>Gesetz der Wildnis:</strong> Kämpfe im Lebenden Land sind brutal und blutig. Die genaue Bedeutung dieser Regel spielt erst eine Rolle, wenn es zum Kampf kommt.<br />Wenn Angriff eine Anerkannte Aktion ist, beschreibe den Vollen Angriff für die Spieler. Diese Option ist nur für Nahkampfangriffe verfügbar, also für Angriffe mit Nahkampfwaffen und Waffenloser Angriff. Der Angreifer erhält einen Bonus von +4 zum Treffen, wird aber im Gegenzug Sehr Verwundbar (+4). Diese Option ist immer verfügbar, aber das Gesetz der Wildnis sorgt dafür, dass sie besonders verlockend ist, wenn sie eine Anerkannte Aktion darstellt. Ein Treffer gewährt dann einen zusätzlichen Bonuswürfel (+1 BW) Schaden. Dies ist natürlich zusätzlich zu weiteren Bonuswürfeln, die man durch Gute und Hervorragende Erfolge erhält. Denk daran, dass Schurken wie Gospog diese Option nutzen, wenn Angriff eine Anerkannte Aktion ist!</p></li><li><strong>Gesetz des Lebens:</strong> Wunden heilen rasch und tote Materie verfällt extrem rasch. Es ist unwahrscheinlich, dass diese Regel im Rahmen des Schnellstarters eine Rolle spielt, aber wenn doch, dann kannst du sie bei @UUID[.v46rtTLn1xMuJBSz#niederlage]{Niederlage} nachschlagen.</li><li><strong>Gesetz der Wunder:</strong> Verlorene Dinge tauchen unerwartet im Lebenden Land auf und Stein- und Metallgebäude, die eigentlich einstürzen müssten, bleiben als stark verfallene Monolithen und Landmarken, die von Ranken und anderem Bewuchs überzogen sind, bestehen.</li></ul><blockquote><p><strong>Hinweis zum Foundry System:</strong> Um die Axiome und Weltgesetze, die in der aktuellen Szene Anwendung finden, anzusehen, beachte das Cosm-Symbol am oberen Rand beim Namen der aktivierten Szene. Wenn der Mauszeiger darüber steht, wird der \"Tischaufsteller\" mit diesen Informationen eingeblendet.</p></blockquote><h2>Cosm-Karten</h2><p>Eine Cosm-Karte repräsentiert ein bestimmtes Merkmal der Realität, in der die Spieler gerade ein Abenteuer erleben. Jeder Spieler erhält zu Beginn jeder Sitzung eine einzige Kosmoskarte. Sofern der Text der Karte nichts anderes angibt, kann ein Spieler jederzeit eine Cosm Karte ausspielen.</p><p>Für mehr Informationen zum Umgang mit Karten, siehe @UUID[.NtKJ9vOusDzsnH15#der-umgang-mit-karten]{Der Umgang mit Karten}.</p><h1>Attributs- und Fertigkeitsproben</h1><p>Die Attributsprobe und die Fertigkeitsprobe sind die Grundmechanismen in Torg Eternity.</p><p>Jeder Charakterbogen enthält eine Liste von fünf Attributen und eine Liste von Fertigkeiten. Um eine Attributs- oder Fertigkeitsprobe in Foundry zu machen, klicke auf den Namen des Attributs oder der Fertigkeit. Wenn du mit einer Waffe angreifen oder einen Vorzug benutzen willst, klicke auf das W20-Symbol, das neben dem Namen der Waffe und/oder des Vorzugs erscheint. Das Ergebnis der Fertigkeits- oder Attributsprobe wird im Chat angezeigt.</p><blockquote><p><strong>Hinweis zum Foundry-System: </strong>Du kannst auch eine ausgeweitete Fertigkeitsprobe machen. Um eine ausgeweitete Fertigkeitsprobe zu starten, klick auf die entsprechende Fertigkeit mit gedrückter Shift-Taste. Daraufhin wird ein Fenster angezeigt, in dem du den erforderlichen MW eingeben kannst, ebenso wie alle anwendbaren Modifikatoren. Das Fenster zeigt auch alle Modifikatoren an, die auf Statuseffekten basieren und automatisch angewendet werden. Sobald du die richtigen Informationen eingegeben hast, klicke auf Würfeln und das Ergebnis deines Tests wird automatisch im Chat angezeigt.</p><p>Wenn du einen Fehler gemacht hast und den MW oder die Modifikatoren ändern musst, kannst du in der Chatnachricht auf den Button Modifikatoren klicken. Dadurch kannst du einen neuen MW und/oder Modifikatoren eingeben.</p></blockquote><p>Die wichtigste Information in der Chat-Anzeige ist das <strong>Gesamtergebnis</strong> der Probe. Sie gibt die Effektivität deiner Probe an. Sie wird mit einem <strong>Mindestwert (MW)</strong> verglichen. Der Standard-MW ist 10, aber er kann manchmal durch die Umstände der Umwelt verändert werden.</p><ul><li>Wenn die Summe des Wurfes 1 ist, wird der Test als <strong>Patzer </strong>gewertet. Er schlägt automatisch fehl, und zusätzlich erleidet dein Charakter ein Unglück.</li><li>Ist die Summe kleiner als der MW, gilt der Test als <strong>gescheitert</strong>.</li><li>Ist die Summe des Wurfes gleich oder höher als der MW, wird der Wurf als <strong>Erfolg </strong>gewertet.</li><li>Wenn die Summe der Aktionen fünf oder mehr Punkte höher ist als der MW, gilt die Probe als <strong>guter Erfolg</strong>, und es können weitere positive Effekte aus der Probe resultieren.</li><li>Wenn die Summe des Wurfes zehn oder mehr Punkte höher ist als der MW, gilt die Probe als ein <strong>hervorragender Erfolg</strong>, und es können sich sogar noch mehr positive Auswirkungen ergeben.</li></ul><p>Wenn deine Probe den Einsatz einer Waffe oder bestimmter Kräfte (Magie, Wunder oder Psionik) beinhaltet, wird im Chat auch der Basisschaden für die Waffe oder Kraft angezeigt. Wenn du einen guten oder herausragenden Erfolg gewürfelt hast, verursachst du zusätzlichen Schaden. Um festzustellen, wie viel zusätzlicher Schaden verursacht wird, klicke auf die Schaltfläche \"BW\" am unteren Ende der Chatnachricht und ein zusätzlicher Würfel wird geworfen, der den Schaden erhöht. Würfle den BD zweimal, wenn du einen herausragenden Erfolg erzielt hast. Unter @UUID[.v46rtTLn1xMuJBSz#schaden]{Schaden} findest du weitere Informationen darüber, was passiert, wenn du Schaden verursachst oder erleidest.</p><p>Abhängig von der Art der Probe, die du machst, können auch einige oder alle der folgenden Informationen erscheinen:</p><ul><li>Dein <strong>Fertigkeits- oder Attributswert </strong>ist der Basiswert, der für den Test verwendet wird.</li><li>Das <strong>Würfelergebnis </strong>ist die Summe, die du mit einem oder mehreren Würfeln gewürfelt hast. Zu Beginn des Tests würfelst du mit einem einzelnen W20. Dieser Würfel kann jedoch bei einem Wurf von 10 oder 20 \"explodieren\" ( das heißt, es wird ein weiterer Würfel geworfen). Außerdem gibt es Dinge, die du tun kannst, um deiner Probe zusätzliche W20 hinzuzufügen (siehe unten).</li><li>Der <strong>Bonus </strong>ist eine Zahl, die durch den Vergleich der Würfelsumme mit der @UUID[.v46rtTLn1xMuJBSz#bonustabelle]{Bonustabelle} ermittelt wird.</li><li>Der Wert der Fertigkeit oder des Attributs wird zum Bonus addiert, um die Gesamtsumme der Aktion zu ermitteln.</li><li>In manchen Situationen fügt das Torg Eternity System für Foundry automatisch <strong>Modifikatoren </strong>zu deinem Test hinzu (z.B. wenn du verwundet bist, oder wenn du einen Angeschlagen- oder Verwundbar-Zustand hast).\_</li><li>Der Spielleiter kann festlegen, dass es zusätzliche Modifikatoren gibt, die nicht automatisch berechnet werden.</li></ul><p>Am unteren Rand der Chat-Anzeige befinden sich eine Reihe von Schaltflächen, mit denen du das Ergebnis deines Wurfs verändern kannst. Wenn du auf eine dieser Schaltflächen klickst, wird ein neues, aktualisiertes Testergebnis im Chat angezeigt:</p><ul><li>Falls die gewürfelte Fertigkeit als begünstigt markiert ist, kannst du, bevor du irgendeine Andere hier beschriebene Option nutzt, auf <strong>Begünstigt</strong> klicken um nochmal zu würfeln.</li><li>Wenn du eine Möglichkeit von deinem Charakterbogen ausgibst, kannst du auf die Schaltfläche <strong>Möglichkeit </strong>klicken, um einen zusätzlichen Würfel zu werfen. Dieser Würfel explodiert bei einer 10 oder 20 genau wie der ursprüngliche Würfelwurf. Das Mindestergebnis beim Ausgeben einer Möglichkeit ist eine 10.</li><li>Unter bestimmten Umständen kannst du einen <strong>Oberhand</strong>-Effekt haben. Klicke auf die Schaltfläche <strong>Oberhand</strong>, um einen weiteren Würfel zu werfen.</li><li>Du kannst eine <strong>Helden</strong>- oder <strong>Drama-Karte </strong>aus deiner Hand spielen (oder, wenn du in einer rundenbasierten Phase spielst, aus deinem Vorrat). Nachdem du die Karte gespielt hast, klicke auf den entsprechenden Button. Dies hat den gleichen Effekt wie das Ausspielen einer <strong>Möglichkeit</strong>.</li><li>Du kannst auch eine Karte ausspielen, die deine Aktionssumme um 3 erhöht. Klicke auf die Schaltfläche <strong>+3 Karte</strong>, um die Auswirkungen dieser Karte auf die im Chat angezeigte Aktionssumme zu addieren.</li></ul><p>Du kannst eine Möglichkeit, eine Heldenkarte und eine Dramakarte pro Test ausgeben. Es gibt keine Begrenzung für die Anzahl der +3-Karten, die gespielt werden können.</p><h1>Kampf</h1><p>Kampfrunden in Torg Eternity sind zehn Sekunden lang. Während dieser Zeit kann sich jeder Charakter bewegen und eine oder mehrere Aktionen ausführen.</p><blockquote><p><strong>Hinweis zum Foundry-System: </strong>Die Informationen, die für den Kampf und die Auflösung der dramatischen Fähigkeiten in Torg relevant sind, sind im Begegnungs-Tracker enthalten. Um den Begegnungs-Tracker aufzurufen, klicken Sie auf den faustförmigen Reiter/Symbol oben rechts. Um sicherzustellen, dass sowohl der Begegnungs-Tracker als auch der Chat jederzeit angezeigt werden, könnt ihr den Begegnungs-Tracker mit einem Rechtsklick auskoppeln.</p><p>Die Spielleiterin muss einen Kampf eröffnen, bevor der Begegnungs-Tracker irgendwelche Daten anzeigt. Um einen Kampf auszulösen, wählt zunächst die Token für alle Charaktere aus, die an dem Kampf teilnehmen werden. Klicke dann mit der rechten Maustaste auf eines der Token und klicke auf die Schaltfläche Begegnung hinzufügen. Nachdem alle Charaktere ausgewählt sind, klicke im Begegnungs-Tracker auf \"Starten\".</p></blockquote><h3>Initiative: Wie man die Drama-Karten benutzt</h3><p>Um die Reihenfolge zu bestimmen, in der die Spieler und Gegner handeln, zieht der Spielleiter eine @UUID[.v46rtTLn1xMuJBSz#dramakarten]{Dramakarten} und legt sie aus. Die aktuelle Drama-Karte wird immer oben im Begegnungs-Tracker angezeigt.</p><p>Die Dramakarte enthält zwei Konfliktzeilen. Die eine gilt für Kampfrunden, die in Standardszenen stattfinden, und die andere für Kampfrunden, die in dramatischen Szenen stattfinden (mehr zu Standard- und dramatischen Szenen finden Sie auf der @UUID[.qpNCgkoE0FyiuK6G#akte,-szenen-und-runden:-wie-torg-eternity-spiele-strukturiert-s]{Akte, Szenen und Runden: Wie Torg Eternity-Spiele strukturiert sind}. Die Konfliktzeile gibt an, ob die Helden (H) oder die Schurken (S) den Anfang machen. Die Konfliktzeile kann auch Bedingungen enthalten, die eine oder beide Seiten betreffen. Siehe @UUID[.v46rtTLn1xMuJBSz#dramakarten]{Dramakarten} für eine Beschreibung der Bedeutung jeder Bedingung.</p><p>Wenn die Helden an der Reihe sind, kann jeder Charakter in beliebiger Reihenfolge handeln. Ebenso können alle Bedrohungen in jeder vom Spielleiter festgelegten Reihenfolge agieren.</p><p><strong>Überraschung.</strong>\_Wenn der Spielleiter bestimmt, dass eine Seite überrascht ist, darf diese Seite während der Kampfrunde nicht handeln, wenn die Konfliktzeile zeigt, dass sie zuerst handeln sollte.</p><p>Sobald jeder Spieler seinen Zug beendet hat, ist die Runde beendet. Ziehe eine neue Dramakarte für die nächste Runde.</p><h3>Der Aktionsvorrat</h3><p>Bis zum Beginn einer Begegnung gibt es keine Beschränkungen für den Tausch oder das Spielen von Schicksalskarten. Sobald der Kampf jedoch beginnt, werden die Dinge komplizierter! Karten können nur aus dem Aktionsvorrat jedes Charakters gespielt oder getauscht werden, und dieser Vorrat ist zu Beginn leer. Am Ende jeder Runde, nachdem der Charakter gehandelt hat, kann der Spieler eine Schicksalskarte in seinen Vorrat legen, indem er sie auf der Hand \"anhakt\" (siehe @UUID[.NtKJ9vOusDzsnH15#der-umgang-mit-karten]{Der Umgang mit Karten}). Die Karte kann dann sofort oder zu einem beliebigen späteren Zeitpunkt gespielt werden. Das Ablegen einer Karte in den Aktionsvorrat bedeutet nicht, dass sie gespielt wird. Stattdessen wird die Karte dadurch für das Spiel verfügbar.</p><h2>Der Spielerzug</h2><p>Wenn ein Held (oder eine Bedrohung) an der Reihe ist, kann er sich bis zu seiner Geh- oder Laufgeschwindigkeit bewegen (siehe @UUID[.v46rtTLn1xMuJBSz#bewegung]{Bewegung} für weitere Details). Jeder Charakter, der sich mit seiner Laufgeschwindigkeit bewegt, erleidet einen Malus von -2 für alle Aktionen während der Runde.</p><p>Beim Ausführen einer Aktion haben die Charaktere mehrere grundlegende Möglichkeiten.</p><ul><li>Mit einem @UUID[.v46rtTLn1xMuJBSz#angriff]{Angriff} wird versucht, einem Ziel physischen Schaden zuzufügen.</li><li>Eine @UUID[.v46rtTLn1xMuJBSz#aktive-verteidigung]{Aktive Verteidigung} ist eine konzentrierte Anstrengung, um Schaden zu vermeiden.</li><li>Ein @UUID[.v46rtTLn1xMuJBSz#interaktionsangriffe]{Interaktionsangriffe} versucht, den Gegner durch schlaue Worte und/oder Handlungen zu benachteiligen.</li></ul><p>Wenn ein Storm Knight oder Gospog getroffen wird, gelten die Regeln für @UUID[.v46rtTLn1xMuJBSz#schaden]{Schaden}.</p><p>Andere Regeln, die während der Kampfbegegnungen ins Spiel kommen können, sind unter anderem:</p><ul><li>@UUID[.v46rtTLn1xMuJBSz#mehrfachaktionen]{Mehrfachaktionen finden statt, wenn ein Charakter mehr als eine Aktion auf einmal versucht.</li><li>Ein Storm Knight oder eine Bedrohung kann auch @UUID[.v46rtTLn1xMuJBSz#mehrfach-zielauswahl]{mehrere Ziele} angreifen.</li><li>Ein Storm Knight kann eine Waffe besitzen, die @UUID[.v46rtTLn1xMuJBSz#panzerbrechend]{panzerbrechenden} Schaden verursacht.</li><li>Ein Storm Knight kann eine Feuerwaffe besitzen, die den @UUID[.v46rtTLn1xMuJBSz#kurzer-feuerstoss]{kurzen Feuerstoß} einsetzt.</li><li>@UUID[Compendium.torgeternity.system-de-archetypen.Actor.pGJE5A6rJMK7Za84]{Die urzeitliche Jägerin} kann ihren @UUID[Compendium.torgeternity.system-de-archetypen.Actor.SVU3O0osXn4bPoTn]{Säbelzahntiger} einsetzen. Ebenso kann eine @UUID[Compendium.torgeternity.system-de-archetypen.Actor.OB5I9LwFUwB5C3C4]{ elfische Hüterin} ihren @UUID[Compendium.torgeternity.system-de-archetypen.Actor.Hy1XeUQA64WoxKxs]{Weißer Wolf} benutzen, wobei die gleichen Regeln gelten.</li><li>Wenn ein Storm Knight Ausrüstungsgegenstände benutzt, die eine höhere Tech-Stufe haben als das Tech-Axiom des aktuellen Cosm/Ortes, und wenn der Storm Knight bei einer Probe, bei der es um solche Ausrüstungsgegenstände geht, eine 1 würfelt, muss der Charakter eine Probe auf @UUID[.v46rtTLn1xMuJBSz#entkoppelung]{Entkoppelung} würfeln.</li><li>Wenn ein Storm Knight Magie benutzt, deren Magiestufe höher ist als das Magieaxiom des aktuellen Cosm/Ortes, und wenn der Storm Knight bei einem Test, bei dem es um solche Magie geht, eine 1 würfelt, muss der Charakter eine Probe auf @UUID[.v46rtTLn1xMuJBSz#entkoppelung]{Entkoppelung} ablegen.</li><li>Wenn ein Storm Knight mehr als drei Wunden erleidet, muss der Storm Knight eine Probe auf @UUID[.v46rtTLn1xMuJBSz#niederlage]{Niederlage} ablegen.</li><li>Wenn eine Bedrohung Verwundungen erleidet, die ihre Verwundungsschwelle überschreiten, muss sie keine Probe auf Niederlage ablegen. Stattdessen ist sie sofort besiegt.</li><li>Sind mehrere Bedrohungen im Spiel, sollte der Spielleiter überlegen, die Regel für @UUID[.v46rtTLn1xMuJBSz#kombinierte-angriffe]{Kombinierte Angriffe} anzuwenden.</li><li>Wenn ein Storm Knight versucht, eine Waffe oder einen anderen Fernkampfangriff im Nahkampf abzufeuern, geht er das Risiko ein, einen Verbündeten durch @UUID[.v46rtTLn1xMuJBSz#eigenbeschuss]{Eigenbeschuss} zu verletzen.</li></ul><h2>Dramakarten</h2><p><em>Torg Eternity </em>wird in Szenen gespielt, wobei jede Szene entweder eine Standardszene oder eine Dramatische Szene ist. Dieser Angriff ist eine Standardszene und du überprüfst nun, ob die Helden oder die Schurken zuerst an der Reihe sind. Wenn jemand einen Hervorragenden Erfolg auf seine <em>Finden</em>-Probe erzielt hat, können die Schurken in der ersten Runde nichts tun, auch dann nicht, wenn sie zuerst an der Reihe sind! Wenn die Helden am Zug sind, können sie in jeder beliebigen Reihenfolge handeln. Sie müssen sich einfach nur absprechen. Sobald alle Beteiligten an der Reihe waren, ist die Runde beendet und du deckst eine neue Dramakarte für die nächste Runde auf.</p><p>In der gleichen Zeile, die entscheidet, welche Seite zuerst an der Reihe ist, befindet sich außerdem eine Bedingung, die alle im Kampf betrifft. Nachfolgend findest du eine Beschreibung dieser Bedingungen:</p><ul><li><strong>Rückschlag: </strong>Wenn die Helden einen Rückschlag erleiden, geraten Ranken (oder Gospog) in die Propeller des Bootes, wodurch es stark verlangsamt wird. Jedes Mal, wenn die Schurken am Zug sind, können 2 weitere Gospog an Bord klettern und das geht so lange weiter, bis die Blockade beseitigt wurde. Um die Blockade zu beseitigen, muss sich ein Charakter in den hinteren Bereich des Bootes bewegen und eine <em>Stärke</em>-Probe (MW 10) ablegen. Wenn die Schurken von einem Rückschlag betroffen werden, wird ein Gospog mit seinen Ranken in die Propeller gerissen und in Stücke gehackt!</li><li><strong>Verwirrt: </strong>Die Helden können keine Schicksalskarten aktivieren. Sie können sie sich noch immer verdienen und in ihren Aktionsvorrat legen (siehe @UUID[.v46rtTLn1xMuJBSz#kampf]{Kampf}).</li><li><strong>Oberhand: </strong>Die Seite mit dem Resultat Oberhand wirft einen Würfel bei Proben und fügt dann sofort, unabhängig vom Resultat, einen weiteren Würfel hinzu!</li><li><strong>Erschöpfung: </strong>Jeder Held erleidet sofort 2 Schock (siehe @UUID[.v46rtTLn1xMuJBSz#schaden]{Schaden}). Wenn ein Held Rüstung mit der Eigenschaft Erschöpfung trägt, erleidet er stattdessen 3 Schock. Wenn bei der Rüstung ein höherer Wert für Erschöpfung angeführt ist, erleidet der Held dementsprechend mehr Erschöpfung! Gospog sind gegen Schock immun und werden daher von diesem Resultat überhaupt nicht betroffen!</li><li><strong>Inspiration: </strong>Jeder Charakter von der betroffenen Seite erholt sich von 2 Schock. Siehe @UUID[.v46rtTLn1xMuJBSz#schaden]{Schaden}.</li><li><strong>Welle: </strong>Die Realität des Lebenden Lands wehrt sich gegen Spieler, die über Gegenstände verfügen, die einen Widerspruch erzeugen. Jeder betroffene Storm Knight würfelt 1W20. Bei einer 1 @UUID[.v46rtTLn1xMuJBSz#entkoppelung]{entkoppelt} der Charakter. Der Weltenläufer trägt Gegenstände bei sich, die die Axiome des Lebenden Lands und seine eigenen Axiome übersteigen! Falls er sie noch bei sich trägt, Entkoppelt er bei einem Wurf von 1–4.</li><li><strong>Hast: </strong>Wickle alle Aktionen für diese Seite normal ab. Dann agiert jeder Charakter beziehungsweise jeder Schurke auf dieser Seite noch einmal!</li></ul><h3>Anerkannte Aktionen</h3><p>An der Unterseite jeder Karte werden eine oder zwei der folgenden Aktionen angeführt: Angriff, Verteidigung, Einschüchtern, Manövrieren, Verspotten, Tricksen, Jede und Jede Mehrfachaktion. Wenn ein Charakter eine der angeführten Aktionen ausführt und dabei erfolgreich ist, zieht er eine neue Schicksalskarte. Erkläre die Grundlagen von Aktionen (siehe unten) und erkläre dann Verteidigung, Interaktionen (Einschüchtern, Manövrieren, Tricksen und Verspotten), Mehrfachaktionen und das Gesetz der Wildnis. Du solltest dies allerdings nur jeweils dann tun, wenn die entsprechende Anerkannte Aktion eine Rolle spielt.</p><div class=\"sidenote right\"><h4>Das Gesetz der Wildnis und volle Angriffe</h4><p>Wenn Angriff eine Anerkannte Aktion ist, beschreibe den Vollen Angriff für die Spieler. Diese Option ist nur für Nahkampfangriffe verfügbar, also für Angriffe mit <em>Nahkampfwaffen </em>und <em>Waffenloser Angriff</em>. Der Angreifer erhält einen Bonus von +4 zum Treffen, wird aber im Gegenzug Sehr Verwundbar (+4). Diese Option ist immer verfügbar, aber das Gesetz der Wildnis sorgt dafür, dass sie besonders verlockend ist, wenn sie eine Anerkannte Aktion darstellt. Ein Treffer gewährt dann einen zusätzlichen Bonuswürfel (+1 BW) Schaden. Dies ist natürlich zusätzlich zu weiteren Bonuswürfeln, die man durch Gute und Hervorragende Erfolge erhält. Denk daran, dass Schurken wie Gospog diese Option nutzen, wenn Angriff eine Anerkannte Aktion ist!</p></div><h3>Schritte und Dilemmas</h3><p>&lt;</p><p>An der Seite sind die Buchstaben A, B, C und D oder ein Dilemma (Komplikation, Kritisches Problem und Potenzieller Rückschlag) aufgeführt. Ignoriere diese Angaben. Sie spielen erst im Rahmen einer @UUID[.v46rtTLn1xMuJBSz#dramatische-probenabwicklung]{Dramatische Probenabwicklung} eine Rolle.</p><h2>Grundlegende Aktionen</h2><p>Wenn die Helden (oder die Gospog) am Zug sind, haben sie verschiedene Optionen. Angriff ist eine besonders häufig eingesetzte Aktion, doch du solltest jetzt bereits das Konzept der Interaktionsangriffe vorstellen, vor allem, wenn es sich in dieser Runde um eine Anerkannte Aktion handelt. Das spielt allerdings nur bei Manövrieren oder Tricksen eine Rolle, da Gospog gegen Einschüchtern und Verspotten immun sind.</p><h6>Bewegung</h6><p>Die Bewegung ist keine eigene Aktion, sondern der Charakter kann sich einmal in seinem Zug bewegen. Das geschieht zu dem Zeitpunkt, zu dem er seine reguläre Aktion ausführt. Auf jedem Charakterbogen ist die mögliche Bewegungsreichweite in Metern angeführt. Auf der Karte ist jedes Feld 2 Meter groß. Ein Charakter kann Laufen und bewegt sich dann dreimal so schnell, erleidet aber auf alle anderen Proben für Aktionen einen Malus von –2.</p><h6>Angriff</h6><p>Ein Angriff wird ebenfalls mit einer @UUID[.v46rtTLn1xMuJBSz#attributs-und-fertigkeitsproben]{Fertigkeitsproben} abgewickelt. Die dafür normalerweise verwendeten Fertigkeiten stehen bei den angeführten Fertigkeiten auf dem Charakterbogen im ersten Block. Wenn man eine Schusswaffe einsetzt, verwendet man Feuerwaffen, wenn man eine Nahkampfwaffe einsetzt, verwendet man Nahkampfwaffen, setzt man eine Projektil- oder Wurfwaffe ein, würfelt man mit Projektilwaffen und wenn man mit bloßen Händen angreift, verwendet man Waffenloser Angriff. Der MW für einen Angriff ist nicht 10, sondern basiert auf der entsprechenden Verteidigung des Ziels. Gegen einen Fernkampfangriff (also Feuerwaffen und Projektilwaffen) kommt Ausweichen zur Anwendung, gegen einen Nahkampfangriff (also Nahkampfwaffen oder Waffenloser Angriff) kommt Nahkampf-Verteidigung zur Anwendung, wenn der Verteidiger bewaffnet ist und Waffenlose Verteidigung, wenn er unbewaffnet ist. All diese Verteidigungen findest du oben rechts auf dem Charakterbogen. Bei einem Erfolg richtet man @UUID[.v46rtTLn1xMuJBSz#schaden]{Schaden} an . Bei einem Guten Erfolg erhöht sich der Schaden um einen Bonuswürfel (+1 BW), wie dies im entsprechenden Abschnitt beschrieben ist. Bei einem Hervorragenden Erfolg richtet man zwei Bonuswürfel (+2 BW) Schaden an.</p><blockquote><p><strong>Hinweis zum Foundry-System: </strong>Es gibt zwei Möglichkeiten, einen Angriff im Foundry-System durchzuführen. Die erste ist, einfach auf das <strong>Würfelsymbol</strong> neben der aufgelisteten Waffe oder dem Angriff zu klicken. Im Chat wird dann die Gesamtzahl der Aktionen für den Angriff sowie der Grundschaden der Waffe angezeigt.</p><p>Die zweite Möglichkeit des Angriffs ist ein <strong>ausgeweiteter Angriff</strong>. Dies ist die empfohlene Art, die meisten Angriffe auszuführen. Um einen ausgeweiteten Angriff durchzuführen, musst du zunächst ein Ziel auswählen, indem du auf das Zielsymbol in der Symbolleiste klickst und dann das gewünschte Ziel für deinen Angriff anklickst. Klicken Sie dann mit gedrückter Umschalttaste auf das Würfelsymbol neben der gewählten Waffe oder Attacke. Daraufhin wird ein Dialogfeld eingeblendet. Wählen Sie in diesem Dialogfeld alle anwendbaren Modifikatoren aus und klicken Sie dann auf die Schaltfläche Würfeln. Dadurch wird das Ergebnis deines Angriffs angezeigt und dein Basisschaden berechnet.</p><p>Für Informationen zum Würfeln von Bonuswürfeln siehe @UUID[.v46rtTLn1xMuJBSz#schaden]{Schaden}.</p></blockquote><h6>Aktive Verteidigung</h6><p>Ein Held kann statt anderer Aktionen eine Aktive Verteidigung ankündigen. Dies gilt auch dann, wenn die Gegner zuerst am Zug sind. Er würfelt auf der Bonustabelle und erhält einen entsprechenden Bonus auf seine Verteidigungen. Dabei handelt es sich zumindest um einen Bonus von +1, egal wie schlecht er gewürfelt hat. Dieser Bonus kommt auf jede Verteidigung gegen Angriffe und Interaktionsangriffe für die ganze restliche Runde zur Anwendung. Wenn Verteidigung eine Anerkannte Aktion ist, erhält der Spieler eine Schicksalskarte, wenn ein Gegner erstmals in dieser Runde einen Angriff gegen ihn versucht und dabei scheitert.</p><blockquote><p><strong>Hinweis zum Foundry-System: </strong>Um sich im Foundry-System zu verteidigen, klicke auf die Überschrift \"Verteidigung\" auf dem Charakterbogen, dein Verteidigungswurf wird automatisch ergänzt und berechnet.</p></blockquote><h6>Interaktionsangriffe</h6><p>Interaktionen sind der zweite Block über Fertigkeiten auf dem Charakterbogen. Dabei handelt es sich um <em>Einschüchtern </em>(Feinden drohen), <em>Manövrieren </em>(Finten und rasche Bewegungen), <em>Verspotten </em>(verbales Verhöhnen) und <em>Tricksen </em>(geschickter Einsatz der Umgebung). Interaktionsangriffe funktionieren wie andere Angriffe. Du wählst ein Ziel und legst eine Probe ab. Der MW entspricht dem Wert des Ziels in derselben Fertigkeit, also <em>Tricksen </em>gegen <em>Tricksen</em>, <em>Manövrieren </em>gegen <em>Manövrieren </em>und so weiter.</p><blockquote><p><strong>Hinweis zum Foundry-System: </strong>Um einen Interaktionsangriff auszuführen, ist es zunächst erforderlich, das Ziel auszuwählen, indem du auf das Zielsymbol im oberen linken Teil deines Bildschirms klickst und dann das gewünschte Ziel anklickst. Klicke dann auf den gewünschten Interaktionsangriff im unteren rechten Bereich deines Charakterbogens. (Dies ist die empfohlene Methode, um einen Interaktionsangriff auszuführen. Wir empfehlen normalerweise nicht, in dieser Situation auf eine Fertigkeit zu klicken). Das Ergebnis deines Interaktionsangriffs wird im Chat angezeigt.</p></blockquote><p>Wenn der Angreifer erfolgreich ist, ist das Ziel bis zum Ende seines nächsten Zuges entweder Angeschlagen (–2 auf Proben) <em>oder </em>Verwundbar (alle Angriffe und Interaktionen erfolgen gegen dieses Ziel mit +2). Bei einem Guten Erfolg ist das Ziel entweder Sehr Angeschlagen (–4) <em>oder </em>Sehr Verwundbar (+4) <em>oder </em>Angeschlagen (–2) und Verwundbar (+2). Der Angreifer entscheidet!</p><blockquote><p><strong>Hinweis zum Foundry-System: </strong>Wenn einem Charakter oder einer Bedrohung der Zustand \"Angeschlagen\" oder \" Verwundbar\" zugewiesen wird, solltest du mit der rechten Maustaste auf sein Token klicken und den entsprechenden Effekt auf das Token legen. Dies bewirkt, dass das System den Effekt bei zukünftigen Fertigkeitsproben und Angriffstests automatisch berechnet.</p></blockquote><p>Ein Hervorragendes Resultat wird als <strong>Spielerentscheidung </strong>bezeichnet. Der Effekt des Guten Erfolgs kommt zur Anwendung, und der Spieler und die Spielleiterin handeln einen zusätzlichen Effekt aus. Das könnte durchaus machtvoll sein. Ein schwacher Gegner könnte beispielsweise flüchten oder durch irgendeinen Umwelteffekt ausgeschaltet werden. Ein stärkerer Gegner sollte durch eine Spielerentscheidung nicht sofort aus dem Kampf genommen werden, aber er sollte einen permanenten Effekt erleiden oder zumindest eine Aktion verlieren.\_</p><h3>Mehrfachaktionen</h3><p>Ein Storm Knight kann versuchen, zwei oder mehr Aktionen gleichzeitig in derselben Runde auszuführen. Er könnte also beispielsweise probieren, einen Gegner zu tricksen und einen anderen Gegner anzugreifen. Mehrfachaktionen finden gleichzeitig statt. Deswegen kann man beispielsweise keinen Interaktionsangriff einsetzen, um einen Angriff gegen das gleiche Ziel noch in dieser Runde zu erleichtern. Bei Mehrfachaktionen werden alle Aktionen mit einem Malus von –2 für jede zusätzliche Aktion belegt. Es wird nur <strong>einmal </strong>gewürfelt und der so erzielte Bonus kommt auf alle versuchten Aktionen zur Anwendung. Erkläre dieses Konzept erst, wenn ein Spieler etwas versuchen möchte, was man am Besten mit einer Mehrfachaktion abwickelt, oder wenn Mehrfachaktion eine Anerkannte Aktion ist.</p><blockquote><p><strong>Hinweis zum Foundry-System: </strong>Wenn du eine ausgeweitete Fertigkeitsprobe machst, berechnet das System automatisch einen Malus für mehrere Aktionen.\_ (siehe @UUID[.v46rtTLn1xMuJBSz#attributs-und-fertigkeitsproben]{Attributs- und Fertigkeitsproben} und @UUID[.v46rtTLn1xMuJBSz#angriff]{Angriff}).</p></blockquote><h3>Mehrfach-Zielauswahl</h3><p>Eine Mehrfach-Zielauswahl ist ähnlich einer @UUID[.v46rtTLn1xMuJBSz#mehrfachaktionen]{Mehrfachaktion}, allerdings handelt es sich dabei um einen Angriff oder eine Interaktion, die auf mehrere Ziele gleichzeitig ausgerichtet ist. Wenn man eine Waffe dazu verwendet, benötigt man die entsprechende Menge an Munition, also zumindest einen Schuss je Ziel. Jedes zusätzliche Ziel erlegt der Aktion einen Malus von –2 auf. Wenn man also gleichzeitig drei Gospog tricksen möchte, erleidet man dabei jedesmal einen Malus von –4. Erneut würfelt man nur einmal, wendet den Bonus auf die entsprechende Fertigkeit an und vergleicht dies mit den Verteidigungswerten der einzelnen Ziele. Du könntest dieses Konzept in der zweiten Kampfrunde vorstellen, sobald die Spieler mit regulären Angriffen und Proben vertraut sind.</p><blockquote><p><strong>Hinweis zum Foundry-System: </strong>Wenn du eine ausgeweitete Fertigkeitsprobe machst, berechnet das System automatisch einen Malus für mehrere Ziele.\_ (siehe @UUID[.v46rtTLn1xMuJBSz#angriff]{Angriff}).</p></blockquote><h3>Schaden</h3><p>Wenn ein Angriff trifft, vergleichst du den Schaden der Waffe mit der Robustheit des Ziels. Die Rüstung ist in der Robustheit bereits berücksichtigt. Wenn der Schaden 5 oder mehr Punkte unter der Robustheit liegt, hat der Angriff überhaupt keine Auswirkungen. Wenn der Schaden niedriger als die Robustheit ist, richtet er nur 1 Schock an. Ein Charakter, der mehr Schock als sein Limit hat, ist K.O. und nimmt nicht mehr am Kampf teil. Wenn der Schaden zumindest gleich hoch wie die Robustheit ist, erleidet das Ziel 2 Schock. Ist der Schaden um 5 Punkte größer als die Robustheit, erleidet das Ziel 2 Schock und 1 Wunde (siehe unten). Alle weiteren +5 Schaden über der Robustheit erhöht sich das um eine weitere Wunde und 2 weitere Punkte Schock.</p><blockquote><p><strong>Hinweis zum Foundry-System:</strong> Wenn du einen ausgeweiteten Angriff ausführst, werden Wunden und Schock automatisch für dich berechnet. Weitere Informationen zu ausgeweiteten Angriffen findest du unter @UUID[.v46rtTLn1xMuJBSz#angriff]{Angriff}.</p></blockquote><h3>Wunden</h3><p>Jede Wunde gibt dem Ziel einen permanenten Malus von –1 auf alle Proben. Wenn ein Storm Knight mehr als 3 Wunden erleidet, ist er K.O. und muss eine @UUID[.v46rtTLn1xMuJBSz#niederlage]{Niederlage}-Probe würfeln. Schurken wie Gospog oder reguläre Edeinos gehen mit einer einzelnen Wunde K.O.</p><blockquote><p><strong>Hinweis zum Foundry-System: </strong>Du kannst die Wunden deines Charakters auf deinem Charakterbogen eintragen oder indem du mit der rechten Maustaste auf dein Charakterplättchen klickst und die entsprechende Zahl änderst (oben Schock, unten Wunden. Hier die Zahlen aufsummieren). Einmal eingetragen, wird der Wundmalus bei allen zukünftigen Würfen berücksichtigt.</p></blockquote><h3>Bonuswürfel</h3><p>Mit einem Guten Erfolg oder besser bei einem Angriff, durch das Gesetz der Wildnis oder durch die individuellen Fähigkeiten eines Charakters kann dieser Bonuswürfel (BW) auf seinen Schaden erhalten. Der Charakter ermittelt zuerst den normalen Schaden für seinen Angriff und würfelt dann die entsprechende Anzahl W6. Er addiert das Ergebnis der BW direkt zu seinem Schaden, bevor er ihn mit der Robustheit vergleicht. Das Symbol ∞ fügt 5 Schaden hinzu und der Charakter darf einen weiteren BW werfen!</p><p>Wenn dein Angriff mehr als einen BW erzeugt hat, klicke so lange auf die BW-Schaltfläche am Ende jeder neuen Chat-Nachricht, bis die richtige Anzahl von BW gewürfelt wurden. Wichtig ist, dass immer die neue Chat-Nachricht abgewartet werden sollte.</p><h3>Schadenswirkung</h3><table><tbody><tr><th><p>Schaden</p><p>minus Robustheit</p></th><th><p>Wirkung</p></th></tr><tr><td style=\"text-align:center;width:45.3963%;height:16px\"><p>-6 oder darunter</p></td><td><p>Keine Wirkung</p></td></tr><tr><td style=\"text-align:center;width:45.3963%;height:16px\"><p>-5 bis -1</p></td><td><p>1 Schock</p></td></tr><tr><td style=\"text-align:center;width:45.3963%;height:16px\"><p>0-4</p></td><td><p>2 Schock</p></td></tr><tr><td style=\"text-align:center;width:45.3963%;height:16px\"><p>5-9</p></td><td><p>1 Wunde, 2 Schock</p></td></tr><tr><td style=\"text-align:center;width:45.3963%;height:16px\"><p>10-14</p></td><td><p>2 Wunden, 4 Schock</p></td></tr><tr><td style=\"text-align:center;width:45.3963%;height:16px\"><p>15-19</p></td><td><p>3 Wunden, 6 Schock</p></td></tr><tr><td style=\"text-align:center;width:45.3963%;height:16px\"><p>20-24</p></td><td><p>4 Wunden, 8 Schock</p></td></tr></tbody></table><p>...und so weiter</p><h3>Schaden wegstecken</h3><p>Wenn ein Storm Knight erstmals eine Wunde erleidet, erkläre die Regel für das Wegstecken von Schaden, eine weitere wichtige Anwendung von Möglichkeiten. Der Charakter verändert die <em>Realität</em> und wählt eine für ihn günstigere Version der Ereignisse. Wende 1 Möglichkeit auf und lege eine Realitäts-Probe gegen MW 10 ab. Bei einem Erfolg wird der Schaden um 1 Wunde reduziert und der Charakter vermeidet ALLEN Schock. Ein Guter Erfolg reduziert den Schaden um 2 Wunden und ein Hervorragender Erfolg negiert allen Schaden, egal wie hoch.</p><h3>Entkoppelung</h3><p>Ein Angriff mit einer Schusswaffe oder einem anderen Gegenstand über Tech 7 stellt in der aktuellen Realität einen Widerspruch dar. Ein Storm Knight kann dies zwar tun, allerdings geht er dabei ein Risiko ein. Wenn der erste Würfel bei einer entsprechenden Probe eine 1 zeigt, Entkoppelt der Charakter von der Realität. Ein entkoppelter Charakter flackert zwischen verschiedenen Versionen seiner selbst. Er kann weiterhin agieren und Schicksalskarten nutzen, er kann aber keine Möglichkeiten einsetzen, auf diesem Weg also keine Würfel zu Proben hinzufügen und auch keinen Schaden wegstecken! Alle Gegenstände des Charakters, die einen Widerspruch darstellen, verschwinden vorübergehend aus der Realität und können nicht benutzt werden. Ein entkoppelter Charakter kann also beispielsweise keine hochtechnischen Waffen mehr einsetzen und moderne Rüstung stellt keinen Schutz mehr für ihn dar. Zu Beginn seines Zuges kann der Charakter eine <em>Realitäts</em>-Probe gegen MW 14 ablegen. Bei einem Erfolg koppelt er wieder an die Realität an. Er kann seine Ausrüstung wieder normal einsetzen und auch wieder Möglichkeitsenergie nutzen. Wenn die Probe scheitert, bleibt er entkoppelt. Wenn der Wurf erneut eine 1 ist, koppelt der Charakter wieder an die Realität an, verliert aber permanent eine Fertigkeitsstufe in <em>Realität</em>.</p><blockquote><p><strong>Hinweis zum Foundry-System: </strong>Wenn sich dein Charakter abkoppelt, solltest du ihm den Statuseffekt \"Entkoppelt\" zuweisen. Um einen Statuseffekt hinzuzufügen, rechtsklicke auf dein Charakter-Token und klicke auf die Schaltfläche Status-Effekt zuweisen.</p></blockquote><h3>Niederlage</h3><p>Wenn ein glückloser Storm Knight mehr als 3 Wunden erleidet, würfelt er eine <em>Stärke</em>- oder <em>Geist</em>-Probe, je nachdem, welcher Wert niedriger ist. Der MW beträgt 10, allerdings gilt der Malus von –3 durch die erlittenen Wunden. Das Gesetz des Lebens gilt allerdings ebenfalls, wodurch der Charakter mit einem weiteren W20 würfeln darf, dessen Ergebnis zum ersten addiert wird. Wenn die Probe scheitert, ist der Charakter permanent tot! Autsch! Bei einem Erfolg geht der Charakter K.O. und verliert permanent 1 Punkt von einem Attribut seiner Wahl. Er erwacht wieder in Szene Zwei, hat aber noch immer 3 Wunden. Ein Gutes Resultat ist ähnlich wie ein normaler Erfolg, allerdings ist der Verlust des Attributs nur vorübergehend und kehrt zurück, sobald all seine Wunden geheilt werden. Ein Hervorragender Erfolg bedeutet ebenfalls, dass der Charakter K.O. geht, aber er verliert keinen Punkt eines Attributs.</p><h3>Kombinierte Angriffe</h3><p>Bei so vielen Gospog ist es wahrscheinlich, dass mehrere Kreaturen den gleichen Helden in einer Runde angreifen. Wenn dies der Fall ist, würfelst du nur einmal für die ganze Gruppe. Wenn zwei Gospog den gleichen Gegner angreifen, erhalten sie +1 auf ihren Angriff, bei drei Gospog erhalten sie +2 auf den Angriff und bei vier bis sechs Gegnern erhalten sie +3.</p><h3>Eigenbeschuss</h3><p>Mit einer Schusswaffe oder einem anderen Fernkampfangriff in den Nahkampf zu schießen ist nicht einfach. Wenn das Endresultat auf dem Würfel oder den Würfeln für den Angriff gerade ist, wird der Angriff normal abgewickelt. Wenn das Endresultat allerdings ungerade ist, erfolgt der Angriff gegen ein zufälliges anderes Ziel in dieser Gruppe von Kämpfenden! Ein Charakter kann sich aus dem Nahkampf lösen, wird dann aber Verwundbar (+2). Dennoch ist es sinnvoll, dass die Helden ihre Aktionen so abstimmen, dass sie nicht auf Gospog feuern, die gerade im Nahkampf mit anderen Gruppenmitgliedern verstrickt sind!</p><h1>Dramatische Probenabwicklung</h1><p>In <em>Torg Eternity</em> kann eine besonders angespannte Situation als dramatische Probenabwicklung gelöst werden. Das Team hat fünf Runden (d.h. fünf Drama-Karten) Zeit, um die Aufgabe zu erfüllen, die aus vier verschiedenen Schritten besteht. Nach fünf Runden ist die dramatische Probenabwicklung gescheitert. Wenn die Gruppe jedoch alle vier Schritte in fünf Runden oder weniger abschließt, ist es erfolgreich. Die Schritte der Aufgabe werden als Schritt A bis Schritt D bezeichnet. Der Spielleiter bestimmt die Art und den Schwierigkeitsgrad jedes Schrittes der Fertigkeitsprobe.</p><blockquote><p><strong>Hinweis zum Foundry-System: </strong>Der Begegnungs-Tracker enthält ein Werkzeug, mit dem du den aktuellen Schritt in der Auflösung einer dramatischen Probenabwicklung verfolgen kannst. Standardmäßig zeigt das Werkzeug \"No DSR\" an. Wenn du auf das Werkzeug klickst, kannst du die DSR zu Schritt A und dann - in der Folge - zu den Schritten B bis D vorrücken.</p></blockquote><p>Starte einen neuen @UUID[.v46rtTLn1xMuJBSz#kampf]{Kampf}, um anzuzeigen, dass die Aufgabe begonnen hat, und verweise auf die entsprechende Konfliktzeile, je nachdem, ob es sich um eine normale oder dramatische Szene handelt. Einige oder alle der Buchstaben A bis D können in dem Block auf der Seite der Karte erscheinen, zusammen mit verschiedenen Problemen, die Dilemmas genannt werden. Während einer DPA darf ein Schritt nur in der Reihenfolge versucht werden, in der er auf der Karte steht. Wenn also Schritt A erscheint, darf ein Storm Knight die Probe machen, die die SL für Schritt A vorgibt.</p><p>Nur ein Storm Knight kann während der Runde einen Schritt versuchen. Andere können helfen, indem sie ihre Aktionen kombinieren. Jeder hat die Wahl: dem führenden Storm Knight einen einfachen Bonus von +1 zu gewähren - oder den Test zu versuchen und bei einem Fehlschlag nichts zu gewähren, bei einem Erfolg einen Bonus von +1, bei einem guten Erfolg einen Bonus von +2 oder bei einem hervorragenden Erfolg einen Bonus von +3. Eine DPA ist eine Begegnung, was bedeutet, dass nur Karten aus dem Aktionspool gespielt werden können. Siehe @UUID[.v46rtTLn1xMuJBSz#kampf]{Kampf} für weitere Details zu den Aktionspools.</p><p>Die Storm Knights sollten entscheiden, wer den Schritt versucht, und den anderen den Vortritt lassen, um Boni zu sammeln oder Unterstützer-Schicksalskarten in ihre Aktionspools zu bekommen. Wenn der Anführer die Fertigkeitsprobe nicht besteht, kann sie in dieser Runde nicht noch einmal durchgeführt werden. In jeder Runde kann ein anderer Charakter die Führung übernehmen.</p><p>Nicht alle DPA verlaufen ungestört. Bedrohungen können die Charaktere angreifen, und eine Kampfrunde kann zur gleichen Zeit wie die DPA stattfinden. Die Karten im Spiel und die Anzahl der Möglichkeiten können sogar wichtiger sein als die Fähigkeiten der Charaktere, also sei flexibel!</p><h3>Mehrere Schritte auf einmal erledigen</h3><p>Wenn mehrere gültige Schritte auf der Karte verfügbar sind, kann der führende Storm Knight auch eine Mehrfachaktion einsetzen, um beide Schritte auf einmal zu absolvieren. Er würfelt dann einmal für den Bonus, der auf beide Proben zur Anwendung kommen wird, erleidet aber auf beide Aktionen einen Malus von –2 für die Mehrfachaktion. Gehen wir davon aus, dass Schritt A bereits erfolgreich beendet wurde. Die nächste Dramakarte zeigt sowohl Schritt B als auch C. Der führende Charakter könnte sich nun dazu entscheiden, einmal zu würfeln und auf jede Probe einen Malus von -2 zu akzeptieren. Damit ermittelt er gleichzeitig ein Ergebnis für die Proben auf <em>Heimlichkeit </em>und <em>Überlebenskunst</em>. Denk daran, dass das Resultat Hast den Charakteren einen zusätzlichen Zug gibt. Das bedeutet, dass sie die zwei Schritte sogar ohne einen Malus im gleichen Zug versuchen können, und verschiedene Charaktere die Führung übernehmen können!</p><h3>Dilemmas</h3><p>Wenn ein Dilemma auf der Karte auftaucht, wird die Karte immer so behandelt, als ob der aktuelle Schritt verfügbar wäre (also beispielsweise A, wenn die Gruppe gerade mit der DPA begonnen hat, B, wenn sie gerade Schritt A beendet hat usw.) Doch diesmal gibt es schwerwiegende Konsequenzen für einen Fehlschlag. Versucht man die Runde zu überspringen und gar nicht erst zu würfeln, so hat dies die gleichen Konsequenzen wie ein Fehlschlag!</p><ul><li><strong>Komplikation: </strong>Es geschieht etwas, das die weiteren Schritte der DPA möglicherweise erschweren könnte. Wenn der Schritt fehlschlägt, erhalten alle zukünftigen Tests für die DPA einen Malus von -1.</li><li><strong>Potenzieller Rückschlag: </strong>Es ist etwas passiert, das die Gruppe dazu zwingt, einen früheren Schritt zu wiederholen. Wenn die Gruppe also den Test für Schritt C in dieser Runde nicht besteht, muss sie stattdessen Schritt B erneut durchführen.</li><li><strong>Kritisches Problem:\_\_</strong>Es passiert etwas, das den Fortschritt der Charaktere komplett zunichte zu machen droht. Wenn sie den Schritt in dieser Runde nicht schaffen, sind alle abgeschlossenen Schritte verloren.</li></ul><h3>Alles auf eine Karte</h3><p>Wenn die fünfte Runde erreicht ist und auf der Karte nicht alle noch nötigen Schritte stehen, ist noch nicht alles verloren. Das Team kann versuchen, Alles auf eine Karte zu setzen. Dies ist eine Mehrfachaktion, in der alle verbleibenden Schritte versucht werden zu bewältigen, und erleidet einen zusätzlichen Malus von –2. Wenn also die Schritte B, C und D noch beendet werden müssen, erleidet der Versuch einen Malus von –6 auf alle drei Proben. Wählt den führenden Charakter für diese verzweifelte Aktion wirklich sorgfältig!</p><h1>Bonustabelle</h1><p>Die Bonuszahl in Torg Eternity wird anhand der Bonustabelle berechnet. Das Foundry-System für Torg Eternity ermittelt automatisch Ihre Bonuszahl auf der Grundlage des Ergebnisses Ihrer Würfelwürfe. Um einen Bonus manuell zu berechnen oder um zu verstehen, wie sich eine zusätzliche Möglichkeit auf Ihre Bonuszahl auswirkt, schaue dir die Tabelle unten an:</p><table border=\"1\"><tbody><tr><th><p style=\"text-align:center\">Würfel-</p><p>wurf</p></th><th><p style=\"text-align:center\">1</p></th><th><p style=\"text-align:center\">2</p></th><th><p style=\"text-align:center\">3</p><p>4</p></th><th><p style=\"text-align:center\">5</p><p>6</p></th><th><p style=\"text-align:center\">7</p><p>8</p></th><th><p style=\"text-align:center\">9</p><p>10</p></th><th><p style=\"text-align:center\">11</p><p>12</p></th><th><p style=\"text-align:center\">13</p><p>14</p></th><th><p style=\"text-align:center\">15</p></th><th><p style=\"text-align:center\">16</p></th><th><p style=\"text-align:center\">17</p></th><th><p style=\"text-align:center\">18</p></th><th><p style=\"text-align:center\">19</p></th><th><p style=\"text-align:center\">20</p></th><th><p style=\"text-align:center\">21</p><p>25</p></th><th><p style=\"text-align:center\">26</p><p>30</p></th><th><p style=\"text-align:center\">31</p><p>35</p></th><th><p style=\"text-align:center\">36</p><p>40</p></th><th><p style=\"text-align:center\">41</p><p>45</p></th><th><p style=\"text-align:center\">46</p><p>50</p></th><th><p style=\"text-align:center\">+5</p></th></tr><tr><td><p style=\"text-align:center\">Ergebnis</p></td><td><p style=\"text-align:center\">-10</p></td><td><p style=\"text-align:center\">-8</p></td><td><p style=\"text-align:center\">-6</p></td><td><p style=\"text-align:center\">-4</p></td><td><p style=\"text-align:center\">-2</p></td><td><p style=\"text-align:center\">-1</p></td><td><p style=\"text-align:center\">0</p></td><td><p style=\"text-align:center\">1</p></td><td><p style=\"text-align:center\">2</p></td><td><p style=\"text-align:center\">3</p></td><td><p style=\"text-align:center\">4</p></td><td><p style=\"text-align:center\">5</p></td><td><p style=\"text-align:center\">6</p></td><td><p style=\"text-align:center\">7</p></td><td><p style=\"text-align:center\">8</p></td><td><p style=\"text-align:center\">9</p></td><td><p style=\"text-align:center\">10</p></td><td><p style=\"text-align:center\">11</p></td><td><p style=\"text-align:center\">12</p></td><td><p style=\"text-align:center\">13</p></td><td><p style=\"text-align:center\">+1</p></td></tr></tbody></table>"
+    video:
+      controls: true
+      volume: 0.5
+    src: null
+    system: {}
+    ownership:
+      default: -1
+      CtisFurQNe9h7ABb: 3
+    flags: {}
+    _stats:
+      systemId: torgeternity
+      systemVersion: 3.1.1
+      coreVersion: '11.308'
+      createdTime: 1694882799084
+      modifiedTime: 1694936890399
+      lastModifiedBy: CtisFurQNe9h7ABb
+    _key: '!journal.pages!ePJekdztsz1JPoT9.v46rtTLn1xMuJBSz'
+  - sort: 400000
+    name: Foundry Integration
+    type: text
+    _id: NtKJ9vOusDzsnH15
+    title:
+      show: false
+      level: 1
+    image: {}
+    text:
+      format: 1
+      content: "<h1>Der Umgang mit Karten</h1><p>Der Umgang mit Spielkarten im Foundry-System ist schnell und einfach. Im Folgenden findest du Anleitungen für Spieler und Spielleiter</p><h2>Anleitung für Spieler</h2><h3>Um deine Handkarten aufzurufen:</h3><ul><li>Klicke auf den \"Open Hand\"- Button oben auf deinem Charakterbogen oder</li><li>Klicke auf die Hand, die den Namen deines Charakters in der Registerkarte Card Stacks in der Seitenleiste anzeigt</li><li>Klicke am linken Rand auf den Torg-Button und danach auf den sichtbaren Hand-Button</li></ul><p>Hinweis: Falls du beim Versuch die Hand zu öffnen eine Fehlermeldung bekommst, dann bedeutet dies, dass dein SL noch keine Kartenhand für dich eingestellt. Bitte deinen SL eine Kartenhand für deinen Charakter einzustellen (siehe @UUID[Compendium.torgeternity.system-de-basisregeln.JournalEntry.ePJekdztsz1JPoT9.JournalEntryPage.NtKJ9vOusDzsnH15#anleitung-fur-die-spielleiterin]{Anleitung für die Spielleiterin})</p><p>Vielleicht möchtest du deine Handkarten während des Spiels offen halten, damit du schneller auf die Karten zugreifen kannst.</p><h3>Um eine Schicksals- oder Cosm-Karte zu ziehen</h3><p>Klicke auf den entsprechenden Button am Ende des Fensters deiner Hand.</p><h3>Um deine Karten anzuschauen</h3><p>Bewege den Mauszeiger über die Miniaturansicht der gewünschten Karte in deiner Hand.</p><h3>Um allen anderen Spielern eine Karte zu zeigen</h3><p>Klicke auf das\_ Symbol \"Übertragung\" neben der entsprechenden Karte.</p><h3>Um eine Karte in deinen Aktionen-Pool zu legen oder zu entfernen</h3><p>Klicke auf das Kontrollkästchen \"Im Aktionenpool?\" neben der entsprechenden Karte.</p><h3>Um eine Karte zu spielen, abzulegen oder weiterzugeben</h3><p>Klicke auf das entsprechende Symbol neben der Karte.</p><h3>Um eine Karte zu sehen, die ein anderer Spieler gespielt oder abgeworfen hat</h3><p>Suche nach einer Chat-Nachricht, die sich auf die Aktion des anderen Spielers bezieht. Bewege dann den Mauszeiger über die Miniaturansicht der Karte.</p><h3>Um Karten in einem anderen Aktionenpool zu sehen</h3><p>Schaue in den Begegnungs- Tracker. Bewege die Maus über den Namen einer Karte, um die Karte zu sehen.</p><h3>Um eine Karte umzudrehen</h3><p>Klicke auf die Pfeile links neben der Karte um sie umzudrehen.</p><h3>Realitätsnahe Darstellung</h3><p>Um Karten während der realitätsnahen Darstellung zu nutzen musst du einfach auf das Kartenbild klicken. Nun stehen alle bereits erklärten Möglichkeiten neben der Karte zur Verfügung.</p><h2>Anleitung für die Spielleitung</h2><p>Hier sind einige grundlegende Tipps/Anweisungen für die Spielleitung:</p><ul><li><p>Das <strong>Dramadeck</strong> wird beim ersten Start der Spielwelt automatisch importiert.</p></li><li><p>Falls du die Kartendecks zurücksetzen willst, musst du unter Spieleinstellungen den Menüpunkt <strong>Spieleinstellungen anpassen</strong> öffnen und dort den Punkt <strong>Kartenpakete installieren</strong> anhaken. Danach muss nur noch die Welt neu geladen werden (F5) und der Kartendeck-Ordner wird neu importiert und zugewiesen. <strong>HINWEIS:</strong> Du musst danach den Haken wieder entfernen, damit das Kartendeck nicht bei jedem neuen Laden zurückgesetzt wird.</p></li><li><p>Du musst die <strong>Standard-Kartenpack-Konfiguration</strong> (erreichbar via S<strong>pieleinstellungen anpassen</strong> oder den <strong>Torg-Button</strong> am linken Rand und danach dem erscheinenden <strong>Zahnradsymbol</strong>) überprüfen. Hier kannst du alle Kartendecks/-hände/-ablagestapel so zuweisen wie du es möchtest. <strong>HINWEIS:</strong> Falls es mit den Einstellungen irgendwelche Probleme gibt, dann wird der Eintrag farblich hervorgehoben und du musst das Problem lösen oder es führt im Spiel zu Problemen.</p></li><li><p><strong>WICHTIG:</strong> Bevor deine Spieler Zugang zu ihren Kartenhänden haben, musst du die Spielerhand einrichten. Siehe hierfür die Anleitung Spielerhand vorbereiten weiter unten.</p></li><li>Du kannst Karten frei zwischen Händen, Ablagestapeln und Decks hin- und herschieben. <strong>HINWEIS:</strong> In der realitätsnahen Darstellung muss bereits eine Karte vorhanden sein um eine andere darauf ziehen zu können.</li><li>Wenn du einen Kampf im Begegnungstracker auslöst (siehe @UUID[.v46rtTLn1xMuJBSz#kampf]{Kampf}), wird automatisch eine neue Drama-Karte gezogen.</li><li>Klicke auf die Schaltfläche \"Neu\" im Begegnungstracker, um eine neue Runde zu beginnen und eine neue Drama-Karte zu ziehen.</li><li>Klicken Sie auf die Schaltfläche \"Behalten\" im Begegnungstracker, um eine neue Runde zu beginnen und die aktuelle Drama-Karte zu behalten.</li><li>Die aktuelle Dramakarte befindet sich immer im \"Active Dramakarte\"- Stapel. Wenn dir ein Fehler unterläuft oder du eine neue Dramakarte für die aktuelle Runde benötigst, ziehe die gewünschte Karte auf den aktiven Dramakartenstapel, verschiebe die falsche Karte an den richtigen Ort (Ablage- oder Deck-Stapel) und drücke die Schaltfläche \"Aktualisieren\" im Begegnungstracker.</li><li style=\"box-sizing:border-box;user-select:text\"><span style=\"font-family:Palatino Linotype\">Wenn du den Inhalt eines Ablagestapels wieder in ein Deck mischen möchtest, klicke auf die Schaltfläche \"<em>Zurück</em>\"</span></li><li><strong>Verwaiste Karten loswerden.</strong> Es wird empfohlen, ein Deck zurückzusetzen, bevor du es löschst. Wenn du dies nicht tust, bleiben alle Karten in den Händen der Spieler und in den Ablagestapeln dieses Decks erhalten, ohne dass sie abgelegt werden können. Derzeit gibt es in Foundry keine Möglichkeit, diese Karten loszuwerden. Hier ist jedoch die empfohlene Abhilfe: Erstelle einen temporären Stapel oder eine temporäre Hand und lege alle \"verwaisten\" Karten dorthin. Lösche dann den temporären Stapel/Hand.</li></ul><h2>Spielerhand vorbereiten</h2><p>Bevor ein Spieler auf seine Handkarten zugreifen kann, muss diese erst vorbereitet werden. Eine Kartenhand vorbereiten ist in zwei Schritte aufgeteilt. Zuerst muss eine Hand für den Spielercharakter erstellt werden. Danach muss dem Spieler die Zugriffsrechte für die Kartenhand gewährt werden.</p><h3>Eine Kartenhand erstellen</h3><p>Der einfachste Weg um eine Kartenhand für einen Charakter zu erstellen ist den Storm Knight Charakterbogen aus einem Kompendium zu importieren. Dies erstellt automatisch eine Kartenhand mit dem passenden Namen und du musst nur noch die Zugriffsrechte anpassen (siehe unten).</p><p>Falls der Storm Knight Charakterbogen bereits importiert ist, kann man auf <strong>Kartenstapel erstellen</strong> klicken, den <strong>Namen</strong> wie gewünscht eintragen und den <strong>Typ</strong> auf <strong>Hand</strong> ändern. Dann schließt man es mit Klick auf <strong>Kartenstapel erstellen</strong> ab.</p><h3>Zugriffsrechte für Spieler anpassen</h3><p>Um die Zugriffsrechte für eine Kartenhand anzupassen ist folgendes zu tun:</p><ul><li>Öffne den Kartenstapel-Reiter</li><li>Rechtsklick auf die Kartenhand die den Namen des Spielercharakters trägt.</li><li>Klicke \"Zugriffsrechte anpassen\"</li><li>Finde den Namen des Spielers und ändere dessen Rechte auf Besitzer.</li><li>Alternativ, falls du willst das alle Spieler die Kartenhand sehen und ändern können, dann kannst du auch \"Alle Spieler\" auf Besitzer ändern.</li></ul><h1>Storm Knight Bogen erklärt</h1><p>Du kannst zwischen den unterschiedlichen Seiten hin und her schalten indem du auf den gewünschten Reiter am rechten Rand des Bogens klickst.</p><h2>Werte</h2><img class=\"imgleft\" src=\"systems/torgeternity/images/deutsch/journal/beispiel_sk1.webp\" /><p>Dies ist die Hauptseite des Charakterbogens.</p><ul><li><p>Im oberen Bereich hast du Zugriff auf deine Kartenhand, kannst dein Volk und Cosm wählen (Axiome werden durch den Cosm automatisch eingestellt) und deine aktuellen Wunden, Schock und Möglichkeiten eintragen.</p></li><li><p>Die Attribute können frei editiert werden.</p></li></ul><p>Durch einen Klick auf den Namen des Attributs kannst du einen Attributstest durchführen.</p><ul><li><p>Die Abgeleiteten Werte werden automatisch ausgefüllt.</p></li></ul><p>Durch einen Klick auf Erschöpfung, kannst du dir den Schockschaden zuweisen.</p><ul><li><p>Durch einen klick auf <strong>FERTIGKEIT</strong> kannst zu zwischen der vollständigen Fertigkeitsliste und der kürzeren Liste, die nur Fertigkeiten anzeigt in denen du Stufen eingetragen hast, umschalten. Du kannst das zugewiesene Attribut, deine Fertigkeitsstufen ändern und einstellen ob der Fertigkeitswurf bevorzugt ist.</p></li></ul><p>Fertigkeitswürfe werden durch einen klick auf den Fertigkeitsnamen gemacht.</p><ul><li><p>Das Charakterbild kann durch einen Klick darauf geändert werden.</p></li><li><p>Durch einen Klick auf <strong>VERTEIDIGUNG</strong> kannst du einen Test für <strong>Aktive Verteidigung</strong> durchführen. Ein weiterer Klick darauf, lässt dich die aktive Verteidigung wieder verlassen. Die verschiedenen Verteidigungswerte sind für deine Information.</p></li><li><p>Unterhalb des Portraits kannst du deine Erfahrungspunkte eintragen.</p></li><li><p>Im Bereich Angriffe erhältst du einen Überblick über all deine würfelbaren Angriffe und Kräfte die du durch Einträge in den anderen Reitern erhältst.</p></li></ul><p>Unbewaffnet und Interaktionsangriffe sind fest einprogrammiert und stehen immer zur Verfügung.</p><ul><li><p>Vorzüge geben dir einfach eine Übersicht über all deine Vorzüge.</p></li></ul><h2 class=\"passagebreak\">Vorzüge</h2><img class=\"imgright\" src=\"systems/torgeternity/images/deutsch/journal/beispiel_sk2.webp\" /><p>Hier siehst du all deine Vorzüge die zu deinem Charakter hinzugefügt wurden.</p><p>Du kannst sie bearbeiten, allerdings kannst du hier keine Effekte bearbeiten. Falls du Effekte hinzufügen/ändern/löschen möchtest, musst du dies unter dem Reiter Effekte tun.</p><h2 class=\"passagebreak\">Ausrüstung</h2><img class=\"imgleft\" src=\"systems/torgeternity/images/deutsch/journal/beispiel_sk3.webp\" /><p>Hier findest du eine vollständige Liste über deine gesamte Ausrüstung.</p><p>Du kannst sie bearbeiten, allerdings kannst du hier keine Effekte bearbeiten. Falls du Effekte hinzufügen/ändern/löschen möchtest, musst du dies unter dem Reiter Effekte tun.</p><p>Du kannst zu jeder Zeit nur eine einzige Rüstung tragen.</p><h2 class=\"passagebreak\">Kräfte</h2><img class=\"imgright\" src=\"systems/torgeternity/images/deutsch/journal/beispiel_sk4.webp\" /><p>Hier findest du alle dir bekannten Zauber, Wunder oder Psikräfte.</p><p>Du kannst sie bearbeiten, allerdings kannst du hier keine Effekte bearbeiten. Falls du Effekte hinzufügen/ändern/löschen möchtest, musst du dies unter dem Reiter Effekte tun.</p><h2 class=\"passagebreak\">Effekte</h2><img class=\"imgleft\" src=\"systems/torgeternity/images/deutsch/journal/beispiel_sk5.webp\" /><p>Hier kannst du Effekte hinzufügen/ändern/löschen die Charakterwerte verändern. Siehe @UUID[.NtKJ9vOusDzsnH15#data-elements]{Data Elements} für mehr Informationen.</p><p><strong>HINWEIS:</strong> Falls du hier Effekte veränderst, werden sich die Einträge im Ursprungselement nicht verändern.</p><h2 class=\"passagebreak\">Notizen</h2><img class=\"imgright\" src=\"systems/torgeternity/images/deutsch/journal/beispiel_sk6.webp\" /><p>Hier kannst du Hintergrundinformationen, Charakterbilder oder andere Dinge eintragen die du gerne notiert haben möchtest.<br />Falls du Charakterbilder hinzufügst, empfehlen wir, diese in einem separaten Handout-Journal abzulegen und dann hierher zu verknüpfen (wie wir es bei den Archetypen gemacht haben). Auf diese Weise kann das Bild, mit Spielern geteilt werden.</p><h2 class=\"passagebreak\">Token Einstellungen</h2><img class=\"imgleft\" src=\"systems/torgeternity/images/deutsch/journal/beispiel_token1.webp\" /><img class=\"imgright shrink20p\" src=\"systems/torgeternity/images/deutsch/journal/beispiel_token2.webp\" /><p>Wenn du am oberen rechten Rand auf <strong>Prototyp-Figur</strong> klickst, erhältst du Zugriff auf die verschiedenen Einstellungen die für den Charaktertoken gemacht werden können.</p><p>Unter Ressourcen können die Leisten ober- und unterhalb des Tokens eingestellt werden. Standardmäßig werden hier die Wunden und Schock angezeigt.</p><h1 class=\"passagebreak\">Bedrohungsbogen erklärt</h1><img class=\"imgleft\" src=\"systems/torgeternity/images/deutsch/journal/beispiel_nsc1.webp\" /><p>Der Bedrohungsbogen wird für Gegner und NSCs verwendet.</p><ul><li><p>Das Bild kann durch einen Klick darauf geändert werden</p></li><li><p>Unterhalb des Charakterbilds hat man einen Überblick über die wichtigsten Werte und kann die aktuellen <strong>Wunden</strong>, <strong>Schock</strong> und <strong>Möglichkeiten</strong> eintragen.</p></li><li><p>Im oberen Bereich können die <strong>Größe</strong>, <strong>Bedrohungsstufe</strong> und das <strong>Möglichkeitsmaximum</strong> eingetragen werden.</p></li><li><p><strong>Attribute</strong> sind frei eintragbar und mit einem Klick auf den Attributsnamen kann ein Attributstest gestartet werden.</p></li><li><p><strong>Aktionen</strong> fasst alle würfelbaren Aktionen zusammen die in den verschiedenen Reitern hinzugefügt wurden. <strong>Waffenloser Kampf</strong> und die <strong>Interaktionsangriffe</strong> die unter Fertigkeit nicht als <strong>Defense Only</strong> eingestellt sind, sind fest einprogrammiert und immer verfügbar.</p></li><li><p><strong>Fertigkeiten</strong> sind hier als kombinierte Werte aus Attribut und Fertigkeitsstufe angegeben. Fertigkeitstests können gemacht werden indem in der Zusammenfassung am oberen Ende auf den Namen geklickt wird. Unter Defense Only? kann man einstellen welche Interaktionsangriffe unter Aktionen angezeigt werden sollen.</p></li></ul><p>Alle anderen Reiter werden gleich gehandhabt wie beim Storm Knight Bogen. Fertigkeiten ersetzt den Reiter Vorzüge.</p><h1 class=\"passagebreak\">Fahrzeugsbogen erklärt</h1><img class=\"imgleft\" src=\"systems/torgeternity/images/deutsch/journal/beispiel_fahrzeug1.webp\" /><p>Der Fahrzeugbogen wird für alle Arten von Fahrzeugen und reitbare Bestien verwendet.</p><ul><li><p>Unter Fahrzeugpilot:in wird einfach nur notiert wer das Fahrzeug steuert und auf welchen Fertigkeitswert er würfelt.</p></li><li><p>Nur Schwere Waffen und Fahrzeuge-Add-Ons können Fahrzeugen zugewiesen werden.</p></li><li><p>Wenn du hier eine schwere Waffe bearbeitest, kannst du im Waffeneintrag einen Schützen für diese Waffe definieren.</p></li></ul><h1 class=\"passagebreak\">Data Elements</h1><p><strong>Hinweis:</strong> Derzeit kannst du keine Effekte in einem Element ändern, sobald es in einen Akteur eingebettet ist. Allerdings kann man die auf die Registrierkarte Effekte des Akteurs übertragenen Effekte editieren, allerdings ändert dies nicht den Eintrag des Ursprungselements.</p><p>Ein wichtiger Punkt ist, sobald du einen Wert am Charakterbogen ändern möchtest (z.B. Attribute/Fertigkeitspunkte durch die Steigerung mittels EP erhöhen), dann musst du alle Effekte auf Inaktiv setzen die diesen Wert beeinflussen könnten. Ansonsten wird die Änderung nicht übernommen.</p><p>Die folgenden Werte können über die Registerkarten Effekte für Gegenstände und Akteure geändert werden.</p><h3>Attribute</h3><p>system.attributes.mindIsFav (Override to 1 for favored)</p><p>This works with each attributes, adding IsFav</p><ul><li>system.attributes.charisma</li><li>system.attributes.dexterity</li><li>system.attributes.mind</li><li>system.attributes.spirit</li><li>system.attributes.strength</li></ul><h3>Fertigkeiten</h3><p>system.skills.[yourSkillHere].adds (z.B. .alteration., or .waterVehicles.)</p><p>system.skills.[yourSkillHere].isFav (Überschreiben auf 0 für nicht Begünstigt und 1 für Begünstigt)</p><ul><li>system.skills.airVehicles</li><li>system.skills.alteration</li><li>system.skills.apportation</li><li>system.skills.beastRiding</li><li>system.skills.computers</li><li>system.skills.conjuration</li><li>system.skills.divination</li><li>system.skills.dodge</li><li>system.skills.energyWeapons</li><li>system.skills.evidenceAnalysis</li><li>system.skills.faith</li><li>system.skills.find</li><li>system.skills.fireCombat</li><li>system.skills.firstAid</li><li>system.skills.heavyWeapons</li><li>system.skills.intimidation</li><li>system.skills.kinesis</li><li>system.skills.landVehicles</li><li>system.skills.language</li><li>system.skills.lockpicking</li><li>system.skills.maneuver</li><li>system.skills.medicine</li><li>system.skills.meleeWeapons</li><li>system.skills.missileWeapons</li><li>system.skills.persuasion</li><li>system.skills.precognition</li><li>system.skills.profession</li><li>system.skills.reality</li><li>system.skills.scholar</li><li>system.skills.science</li><li>system.skills.stealth</li><li>system.skills.streetwise</li><li>system.skills.survival</li><li>system.skills.taunt</li><li>system.skills.telepathy</li><li>system.skills.trick</li><li>system.skills.unarmedCombat</li><li>system.skills.waterVehicles</li><li>system.skills.willpower</li></ul><h3>Verteidigung</h3><ul><li>system.dodgeDefenseMod</li><li>system.meleeWeaponsDefenseMod</li><li>system.unarmedCombatDefenseMod</li><li>system.intimidationDefenseMod</li><li>system.maneuverDefenseMod</li><li>system.tauntDefenseMod</li><li>system.trickDefenseMod</li></ul><h3>Anderes</h3><ul><li>system.other.toughness</li><li>system.other.armor</li><li>system.other.fatigue</li><li>system.shock.max</li><li>system.shock.value</li><li>system.wounds.max</li><li>system.wounds.value</li><li>system.other.cosm</li><li>system.axioms.magic</li><li>system.axioms.social</li><li>system.axioms.spirit</li><li>system.axioms.tech</li><li>system.other.posibilities (not recommended)</li><li>system.xp.unspent</li><li>system.xp.earned</li><li>system.unarmedDamage</li></ul><h3>Bewegung</h3><ul><li>system.other.moveMod</li><li>system.other.runMode</li></ul><h3>Für Fahrzeuge</h3><ul><li>system.passengers</li><li>system.topSpeed.kph</li><li>system.maneuver</li><li>system.toughness</li><li>system.armor</li></ul>"
+    video:
+      controls: true
+      volume: 0.5
+    src: null
+    system: {}
+    ownership:
+      default: -1
+      CtisFurQNe9h7ABb: 3
+    flags: {}
+    _stats:
+      systemId: torgeternity
+      systemVersion: 3.2.1
+      coreVersion: '11.313'
+      createdTime: 1694882812498
+      modifiedTime: 1697351071517
+      lastModifiedBy: he0IPUNV5pNQSTDz
+    _key: '!journal.pages!ePJekdztsz1JPoT9.NtKJ9vOusDzsnH15'
+  - sort: 0
+    name: Lies mich zuerst
+    type: text
+    _id: qpNCgkoE0FyiuK6G
+    title:
+      show: true
+      level: 1
+    image: {}
+    text:
+      format: 1
+      content: "<p>Das Basisregeln-Kompendium enthält abgespickte Regeln für\_<strong>TORG Eternity</strong> und eine Anleitung, wie man auf Foundry VTT spielt. In manchen Belangen sind die Regeln eine verkürzte Version des originalen Spiels (AKA\_ Grundregelwerk). Um mit allen Regeln und Einzelheiten zu spielen, kann das Grundregelwerk - Modul gekauft werden. Wenn die Basisregeln nicht mit den Grundregeln konform gehen, halte dich an die Grundregeln.</p><h2>Storm Knights</h2><p>In Torg Eternity ist jeder Spielercharakter ein @UUID[.v46rtTLn1xMuJBSz#storm-knights]{Storm Knights}. Das Kompendium Archetypen enthält sechzehn verschiedene Charaktere, die für das Spiel mit den Grundregeln verwendet werden können.</p><h2>Die Invasoren</h2><p>Die Abenteuer in Torg Eternty spielen sich in den Monaten nach der Invasion der Erde durch die High Lords ab. Jeder High Lord befehligt eine Realität, die sich dramatisch von unserer eigenen unterscheidet. Diese Realitäten werden \"Cosms\" genannt. Jeder Cosm hat seine eigenen einzigartigen@UUID[.v46rtTLn1xMuJBSz#realitat]{Axiome und Weltgesetze}.</p><h2>Fertigkeitsproben</h2><p>Die Kernmechanik von Torg Eternity ist der Fertigkeitsprobe. Siehe @UUID[.v46rtTLn1xMuJBSz#attributs-und-fertigkeitsproben]{Attributs- und Fertigkeitsproben} für Details, wie man einen Fertigkeits- oder Attributstest im Torg Eternity System für Foundry macht.</p><h2>Karten</h2><p>Torg Eternity verwendet während des Spiels drei verschiedene Arten von Spielkarten:</p><ul><li>@UUID[.v46rtTLn1xMuJBSz#dramakarten]{Dramakarten} werden während einer Kampfsituation verwendet, um die Reihenfolge zu bestimmen, in der die Charaktere handeln, und um verschiedene Umstände in jeder Spielrunde hinzuzufügen.</li><li>\_@UUID[.v46rtTLn1xMuJBSz#schicksalskarten]{Schicksalskarten} werden von den Spielern verwendet, um Fertigkeitsproben zu verändern und die Geschichte des Spiels zu verändern.</li><li>@UUID[.v46rtTLn1xMuJBSz#cosm-karten]{Cosm-Karten} werden von den Spielern benutzt, um Ereignisse auszulösen, die für jeden Cosm einzigartig sind.</li></ul><p>Einzelheiten zur Verwaltung von Spielkarten in Foundry findest du unter @UUID[.NtKJ9vOusDzsnH15#der-umgang-mit-karten]{Der Umgang mit Karten}.</p><h2>Akte, Szenen und Runden: <br />Wie Torg Eternity-Spiele strukturiert sind</h2><p>Torg Eternity spielt sich in einer Reihe von Akten und Szenen ab. In der Regel wird in jeder Sitzung von Torg Eternity ein einziger Akt gespielt. Jede Szene wird entweder als Standard oder als dramatisch eingestuft. Ob eine Szene standard oder dramatisch ist, kann sich auf einige der Spielmechanismen auswirken, insbesondere beim rundenbasierten Spiel. Beim Spielen eines vorgenerierten Abenteuers wird im Text des Abenteuers angegeben, ob eine bestimmte Szene als Standard oder Dramatisch behandelt werden soll.</p><p>In einigen Situationen, wie z.B. beim @UUID[.v46rtTLn1xMuJBSz#kampf]{Kampf} und der @UUID[.v46rtTLn1xMuJBSz#dramatische-probenabwicklung]{Dramatische Probenabwicklung}, gelten strukturierte, rundenbasierte Regeln.</p><h2>Spielsitzung Null</h2><p>Da wir wollen, dass Spielleiterin und Spieler immer eine gute Zeit im\_<em>Torg Eternity</em> haben, liegt dem System nun auch die Kurz-PDF @UUID[.n0yd2gGkGgjElI0T]{Spielsitzung Null} bei.\_</p><h2>Data Elements</h2><p>Für die technisch versierten unter euch findet ihr die Datenlemente hier: @UUID[.NtKJ9vOusDzsnH15#data-elements]{Data Elements (Datenelemente)}</p>"
+    video:
+      controls: true
+      volume: 0.5
+    src: null
+    system: {}
+    ownership:
+      default: -1
+      CtisFurQNe9h7ABb: 3
+    flags: {}
+    _stats:
+      systemId: torgeternity
+      systemVersion: 3.1.1
+      coreVersion: '11.308'
+      createdTime: 1694884123446
+      modifiedTime: 1694884528859
+      lastModifiedBy: CtisFurQNe9h7ABb
+    _key: '!journal.pages!ePJekdztsz1JPoT9.qpNCgkoE0FyiuK6G'
+ownership:
+  default: 0
+  9Q0XnqFwko7hRlvL: 3
+_stats:
+  systemId: torgeternity
+  systemVersion: 3.2.1
+  coreVersion: '11.313'
+  createdTime: 1694882749667
+  modifiedTime: 1697351071517
+  lastModifiedBy: he0IPUNV5pNQSTDz
+_key: '!journal!ePJekdztsz1JPoT9'

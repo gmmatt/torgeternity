@@ -1,0 +1,285 @@
+_id: wC9PKdHJuhDjCwyV
+name: Orrorsh Cosm Deck
+type: deck
+description: ''
+img: systems/torgeternity/images/cards/orrorsh-back.webp
+cards:
+  - _id: XlmaCuwVOR7gnkRt
+    name: Damned
+    description: ''
+    type: cosm
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Damned
+        text: ''
+        img: systems/torgeternity/images/cards/cosm/orrorsh/01.webp
+    face: 0
+    drawn: false
+    origin: 7rhA82uDSE499m1h
+    rotation: 0
+    sort: 4
+    flags: {}
+    system: {}
+    value: null
+    width: null
+    height: null
+    _key: '!cards.cards!wC9PKdHJuhDjCwyV.XlmaCuwVOR7gnkRt'
+    cards: []
+  - _id: Gz0JzUbZy2EKI5pj
+    name: Temptation
+    description: ''
+    type: cosm
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Temptation
+        text: ''
+        img: systems/torgeternity/images/cards/cosm/orrorsh/02.webp
+    face: 0
+    drawn: false
+    origin: 7rhA82uDSE499m1h
+    rotation: 0
+    sort: 2
+    flags: {}
+    system: {}
+    value: null
+    width: null
+    height: null
+    _key: '!cards.cards!wC9PKdHJuhDjCwyV.Gz0JzUbZy2EKI5pj'
+    cards: []
+  - _id: qN8mDG4LEdsjZd74
+    name: Ominous Portents
+    description: ''
+    type: cosm
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Ominous Portents
+        text: ''
+        img: systems/torgeternity/images/cards/cosm/orrorsh/03.webp
+    face: 0
+    drawn: false
+    origin: 7rhA82uDSE499m1h
+    rotation: 0
+    sort: 6
+    flags: {}
+    system: {}
+    value: null
+    width: null
+    height: null
+    _key: '!cards.cards!wC9PKdHJuhDjCwyV.qN8mDG4LEdsjZd74'
+    cards: []
+  - _id: rIHHtSmCa0I8I97A
+    name: Jump Scare
+    description: ''
+    type: cosm
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Jump Scare
+        text: ''
+        img: systems/torgeternity/images/cards/cosm/orrorsh/04.webp
+    face: 0
+    drawn: false
+    origin: 7rhA82uDSE499m1h
+    rotation: 0
+    sort: 3
+    flags: {}
+    system: {}
+    value: null
+    width: null
+    height: null
+    _key: '!cards.cards!wC9PKdHJuhDjCwyV.rIHHtSmCa0I8I97A'
+    cards: []
+  - _id: HW3UEgeUPotKj7of
+    name: Marked for Death
+    description: ''
+    type: cosm
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Marked for Death
+        text: ''
+        img: systems/torgeternity/images/cards/cosm/orrorsh/05.webp
+    face: 0
+    drawn: false
+    origin: 7rhA82uDSE499m1h
+    rotation: 0
+    sort: 1
+    flags: {}
+    system: {}
+    value: null
+    width: null
+    height: null
+    _key: '!cards.cards!wC9PKdHJuhDjCwyV.HW3UEgeUPotKj7of'
+    cards: []
+  - _id: wl0tIhqaqod85qAO
+    name: Sunset?!
+    description: ''
+    type: cosm
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Sunset?!
+        text: ''
+        img: systems/torgeternity/images/cards/cosm/orrorsh/06.webp
+    face: 0
+    drawn: false
+    origin: 7rhA82uDSE499m1h
+    rotation: 0
+    sort: 5
+    flags: {}
+    system: {}
+    value: null
+    width: null
+    height: null
+    _key: '!cards.cards!wC9PKdHJuhDjCwyV.wl0tIhqaqod85qAO'
+    cards: []
+  - _id: jEox603VZMiJDaTj
+    name: Sinister Secrets
+    description: ''
+    type: cosm
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Sinister Secrets
+        text: ''
+        img: systems/torgeternity/images/cards/cosm/orrorsh/07.webp
+    face: 0
+    drawn: false
+    origin: 7rhA82uDSE499m1h
+    rotation: 0
+    sort: 7
+    flags: {}
+    system: {}
+    value: null
+    width: null
+    height: null
+    _key: '!cards.cards!wC9PKdHJuhDjCwyV.jEox603VZMiJDaTj'
+    cards: []
+  - _id: zHzn8MqbEo0nIqrZ
+    name: Unholy Interest
+    description: ''
+    type: cosm
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Unholy Interest
+        text: ''
+        img: systems/torgeternity/images/cards/cosm/orrorsh/08.webp
+    face: 0
+    drawn: false
+    origin: 7rhA82uDSE499m1h
+    rotation: 0
+    sort: 0
+    flags: {}
+    system: {}
+    value: null
+    width: null
+    height: null
+    _key: '!cards.cards!wC9PKdHJuhDjCwyV.zHzn8MqbEo0nIqrZ'
+    cards: []
+  - _id: 5eyMNHFeZWuMiH1q
+    name: Mark of Terror
+    description: ''
+    type: cosm
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Mark of Terror
+        text: ''
+        img: systems/torgeternity/images/cards/cosm/orrorsh/09.webp
+    face: 0
+    drawn: false
+    origin: 7rhA82uDSE499m1h
+    rotation: 0
+    sort: 8
+    flags: {}
+    system: {}
+    value: null
+    width: null
+    height: null
+    _key: '!cards.cards!wC9PKdHJuhDjCwyV.5eyMNHFeZWuMiH1q'
+    cards: []
+  - _id: 2g7r5VZoEnzzCSOC
+    name: Lights Out!
+    description: ''
+    type: cosm
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Lights Out!
+        text: ''
+        img: systems/torgeternity/images/cards/cosm/orrorsh/10.webp
+    face: 0
+    drawn: false
+    origin: 7rhA82uDSE499m1h
+    rotation: 0
+    sort: 9
+    flags: {}
+    system: {}
+    value: null
+    width: null
+    height: null
+    _key: '!cards.cards!wC9PKdHJuhDjCwyV.2g7r5VZoEnzzCSOC'
+    cards: []
+rotation: 0
+displayCount: false
+folder: null
+sort: 0
+flags:
+  exportSource:
+    world: torgv2p2
+    system: torgeternity
+    coreVersion: '9.235'
+    systemVersion: 2.0.5
+  core:
+    sourceId: Cards.7rhA82uDSE499m1h
+  torgeternity:
+    usage: orrorsh
+system: {}
+ownership:
+  default: 0
+  juTas93IuPVP8p5D: 3
+width: null
+height: null
+_stats:
+  systemId: null
+  systemVersion: null
+  coreVersion: null
+  createdTime: null
+  modifiedTime: null
+  lastModifiedBy: null
+_key: '!cards!wC9PKdHJuhDjCwyV'
+

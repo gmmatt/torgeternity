@@ -1,12 +1,14 @@
-import { possibilityByCosm } from "/systems/torgeternity/module/possibilityByCosm.js";
-import GMScreen from "./GMScreen.js";
+import { PossibilityByCosm } from './possibilityByCosm.js';
+/**
+ *
+ */
 export default function createTorgShortcuts() {
-  //creating keyboard shortcuts
-  game.keybindings.register("torgeternity", "openHand", {
-    name: game.i18n.localize("torgeternity.dialogPrompts.openHand"),
+  // creating keyboard shortcuts
+  game.keybindings.register('torgeternity', 'openHand', {
+    name: game.i18n.localize('torgeternity.dialogPrompts.openHand'),
     editable: [
       {
-        key: "KeyH",
+        key: 'KeyH',
       },
     ],
     onDown: (context) => {
@@ -15,11 +17,11 @@ export default function createTorgShortcuts() {
       }
     },
   });
-  game.keybindings.register("torgeternity", "openGMScreen", {
-    name: game.i18n.localize("torgeternity.gmScreen.toggle"),
+  game.keybindings.register('torgeternity', 'openGMScreen', {
+    name: game.i18n.localize('torgeternity.gmScreen.toggle'),
     editable: [
       {
-        key: "KeyG",
+        key: 'KeyG',
       },
     ],
     onDown: (context) => {
@@ -28,23 +30,23 @@ export default function createTorgShortcuts() {
       }
     },
   });
-  game.keybindings.register("torgeternity", "openCosmPoss", {
-    name: "Possibility by cosm", //game.i18n.localize("torgeternity.gmScreen.toggle"),
+  game.keybindings.register('torgeternity', 'openCosmPoss', {
+    name: 'Possibility by cosm', // game.i18n.localize("torgeternity.gmScreen.toggle"),
     editable: [
       {
-        key: "KeyP",
+        key: 'KeyP',
       },
     ],
     onDown: (context) => {
       if (game.user.character) {
-        let windo = Object.values(ui.windows).find(
-          (w) => w.title === game.i18n.localize("torgeternity.sheetLabels.possibilityByCosm")
+        const windo = Object.values(ui.windows).find(
+          (w) => w.title === game.i18n.localize('torgeternity.sheetLabels.possibilityByCosm')
         );
         if (windo) {
           windo.close();
           return;
         }
-        possibilityByCosm.create(game.user.character);
+        PossibilityByCosm.create(game.user.character);
       }
     },
   });

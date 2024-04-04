@@ -1,0 +1,257 @@
+_id: t1aZsCOetwj8Qefx
+name: Paquet Cosm Pan-Pacifica
+type: deck
+description: ''
+img: systems/torgeternity/images/cards/pan-pacifica-back.webp
+data: {}
+cards:
+  - _id: fB2hfqh6msuMesFm
+    name: La vengeance est mienne
+    description: ''
+    type: cosm
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Vengeance is Mine
+        img: systems/torgeternity/images/cards/cosm/pan-pacifica/fr/01.webp
+        text: ''
+    face: 1
+    drawn: false
+    origin: Fc2aShTOMGQgJKDY
+    rotation: 0
+    sort: 0
+    flags: {}
+    number: null
+    _key: '!cards.cards!t1aZsCOetwj8Qefx.fB2hfqh6msuMesFm'
+    cards: []
+  - _id: ZoTVJlKTkyKB6U6K
+    name: Bain de sang
+    description: ''
+    type: cosm
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Bloodbath
+        img: systems/torgeternity/images/cards/cosm/pan-pacifica/fr/02.webp
+        text: ''
+    face: 1
+    drawn: false
+    origin: Fc2aShTOMGQgJKDY
+    rotation: 0
+    sort: 1
+    flags: {}
+    number: null
+    _key: '!cards.cards!t1aZsCOetwj8Qefx.ZoTVJlKTkyKB6U6K'
+    cards: []
+  - _id: WKOkiNA9HlXDGVrP
+    name: Vendetta !
+    description: ''
+    type: cosm
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Feud!
+        img: systems/torgeternity/images/cards/cosm/pan-pacifica/fr/03.webp
+        text: ''
+    face: 1
+    drawn: false
+    origin: Fc2aShTOMGQgJKDY
+    rotation: 0
+    sort: 2
+    flags: {}
+    number: null
+    value: null
+    _key: '!cards.cards!t1aZsCOetwj8Qefx.WKOkiNA9HlXDGVrP'
+    cards: []
+  - _id: q9hGaN0tOeIIotQz
+    name: Mutation
+    description: ''
+    type: cosm
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Mutation
+        img: systems/torgeternity/images/cards/cosm/pan-pacifica/fr/04.webp
+        text: ''
+    face: 1
+    drawn: false
+    origin: Fc2aShTOMGQgJKDY
+    rotation: 0
+    sort: 3
+    flags: {}
+    number: null
+    _key: '!cards.cards!t1aZsCOetwj8Qefx.q9hGaN0tOeIIotQz'
+    cards: []
+  - _id: EaNuwcqfuavqUBO1
+    name: Epidémie
+    description: ''
+    type: cosm
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Outbreak
+        img: systems/torgeternity/images/cards/cosm/pan-pacifica/fr/05.webp
+        text: ''
+    face: 1
+    drawn: false
+    origin: Fc2aShTOMGQgJKDY
+    rotation: 0
+    sort: 4
+    flags: {}
+    number: null
+    _key: '!cards.cards!t1aZsCOetwj8Qefx.EaNuwcqfuavqUBO1'
+    cards: []
+  - _id: qVF8l4QStkr2p94D
+    name: Fureur martiale
+    description: ''
+    type: cosm
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Fists of Fury
+        img: systems/torgeternity/images/cards/cosm/pan-pacifica/fr/06.webp
+        text: ''
+    face: 0
+    drawn: false
+    origin: Fc2aShTOMGQgJKDY
+    rotation: 0
+    sort: 5
+    flags: {}
+    number: null
+    _key: '!cards.cards!t1aZsCOetwj8Qefx.qVF8l4QStkr2p94D'
+    cards: []
+  - _id: aual92UEOmMvajLf
+    name: Est-ce une morsure ?
+    description: ''
+    type: cosm
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Is That a Bite?
+        img: systems/torgeternity/images/cards/cosm/pan-pacifica/fr/07.webp
+        text: ''
+    face: 1
+    drawn: false
+    origin: Fc2aShTOMGQgJKDY
+    rotation: 0
+    sort: 6
+    flags: {}
+    number: null
+    _key: '!cards.cards!t1aZsCOetwj8Qefx.aual92UEOmMvajLf'
+    cards: []
+  - _id: 7VhosrWJ0EP1ApaX
+    name: Vous n'avez pas l'air bien
+    description: ''
+    type: cosm
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: You Don't Look so Good
+        img: systems/torgeternity/images/cards/cosm/pan-pacifica/fr/08.webp
+        text: ''
+    face: 1
+    drawn: false
+    origin: Fc2aShTOMGQgJKDY
+    rotation: 0
+    sort: 7
+    flags: {}
+    number: null
+    value: null
+    _key: '!cards.cards!t1aZsCOetwj8Qefx.7VhosrWJ0EP1ApaX'
+    cards: []
+  - _id: RC0VEjFCBSvfBKTx
+    name: Trahison
+    description: ''
+    type: cosm
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Sold Out
+        img: systems/torgeternity/images/cards/cosm/pan-pacifica/fr/09.webp
+        text: ''
+    face: 1
+    drawn: false
+    origin: Fc2aShTOMGQgJKDY
+    rotation: 0
+    sort: 8
+    flags: {}
+    number: null
+    _key: '!cards.cards!t1aZsCOetwj8Qefx.RC0VEjFCBSvfBKTx'
+    cards: []
+  - _id: rm9449zFoy1q4w1p
+    name: Dur à cuir
+    description: ''
+    type: cosm
+    data: {}
+    suit: ''
+    back:
+      name: ''
+      text: ''
+      img: null
+    faces:
+      - name: Hardboiled
+        img: systems/torgeternity/images/cards/cosm/pan-pacifica/fr/10.webp
+        text: ''
+    face: 1
+    drawn: false
+    origin: Fc2aShTOMGQgJKDY
+    rotation: 0
+    sort: 9
+    flags: {}
+    number: null
+    _key: '!cards.cards!t1aZsCOetwj8Qefx.rm9449zFoy1q4w1p'
+    cards: []
+rotation: 0
+displayCount: false
+folder: null
+sort: 0
+permission:
+  kz1RJu8vrAPmTUwN: 3
+flags:
+  exportSource:
+    world: torgv2p2
+    system: torgeternity
+    coreVersion: '9.235'
+    systemVersion: 2.0.5
+  core:
+    sourceId: Cards.4b8BekWDWpSWF961
+  torgeternity:
+    usage: panPacifica
+_key: '!cards!t1aZsCOetwj8Qefx'
+

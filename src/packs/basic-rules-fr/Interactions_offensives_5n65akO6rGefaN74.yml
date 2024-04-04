@@ -1,0 +1,82 @@
+_id: 5n65akO6rGefaN74
+name: Interactions offensives
+content: >-
+  <p> </p>
+
+  <p class="MsoNormal">Les interactions offensives sont celles qui permettent de
+  déséquilibrer, de fatiguer ou de manoeuvrer un adversaire dans une mauvaise
+  situation, réduisant ainsi son efficacité ou le rendant plus vulnérable. Les
+  interactions offensives utilisent les compétences suivantes : Intimidation,
+  Manoeuvre, Provocation ou Ruse. Le ND de l’attaque est la compétence de
+  l’adversaire ou l’attribut associé, s’il ne dispose pas de la compétence en
+  question. Le ND pour utiliser Intimidation par exemple, est l’Intimidation de
+  l’adversaire ou son Esprit, s’il ne dispose pas de la compétence.</p>
+
+  <blockquote>
+
+  <p class="MsoNormal"><strong style="font-style:italic">Note du système
+  Foundry</strong><span style="font-style:italic"> : Pour faire une attaque
+  d'interaction, sélectionne d'abord ta cible en cliquant sur l'icône Cible dans
+  la partie supérieure gauche de ton écran, puis clique sur la cible souhaitée.
+  Après avoir fait cela, clique ou shift-clique sur l'attaque d'interaction
+  souhaitée dans la partie inférieure droite de ta feuille de personnage. (C'est
+  la façon recommandée d'effectuer une attaque d'interaction. Nous ne
+  recommandons normalement pas de cliquer sur une compétence dans cette
+  situation). Le résultat de ton attaque d'interaction s'affichera dans le
+  chat.</span></p>
+
+  </blockquote>
+
+  <h2 class="MsoNormal">Effets d’interaction</h2>
+
+  <p class="MsoNormal"><strong>Avec un succès Simple lors d’une interaction
+  offensive</strong>, l’attaquant choisit un état (Déstabilisé ou Vulnérable) et
+  deux états pour un succès Supérieur. L’attaquant peut mélanger et cumuler ces
+  résultats comme il le souhaite, mais aucun adversaire ne peut souffrir de plus
+  de deux effets de chaque type, appelés « Très vulnérable » ou « Très
+  déstabilisé ».</p>
+
+  <p class="MsoNormal"><strong>Un succès Spectaculaire</strong> permet également
+  à l’attaquant de provoquer un autre effet, appelé « Choix du joueur » (bien
+  que cela s’applique également aux attaquants qui ne sont pas des personnages
+  joueurs). Voici ce que signifie chaque effet :</p>
+
+  <p class="MsoNormal">• Déstabilisé : l’ennemi subit -2 à toutes ses actions
+  jusqu’à la fin de son prochain tour, ou -4 s’il est Très déstabilisé. Les
+  résultats supplémentaires de type Déstabilisé n’ont aucun autre effet.</p>
+
+  <p class="MsoNormal">• Vulnérable : les actions menées directement contre
+  l’adversaire sont effectuées à +2 jusqu’à la fin de son prochain tour, ou +4
+  s’il est Très vulnérable. Les résultats supplémentaires de type Vulnérable
+  n’ont aucun autre effet.</p>
+
+  <p class="MsoNormal">• Choix du joueur : la cible fait en plus preuve de
+  malchance. Elle peut être poussée d’un rebord, perdre son tour, ou reculer et
+  tenter de fuir la 7 rencontre. Le MJ a le dernier mot, mais cela devrait avoir
+  pour conséquence de mettre hors de combat les ennemis de moindre importance,
+  et au moins la perte d’un tour pour les menaces plus importantes.  </p>
+
+  <p class="MsoNormal"> </p>
+
+  <blockquote>
+
+  <p class="MsoNormal"><strong>Remarque sur le système Foundry</strong> : Si un
+  personnage ou une menace se voit attribuer une condition Détabilisé ou
+  Vulnérable, tu dois faire un clic droit sur son jeton et attribuer l'effet
+  approprié sur le jeton. Cela permettra au système de calculer automatiquement
+  l'effet sur les futurs tests de compétence et d'attaque.</p>
+
+  </blockquote>
+
+  <p> </p>
+folder: null
+sort: 0
+permission:
+  default: 0
+  TK1vCAdCz548vBDu: 3
+flags:
+  core:
+    sourceId: JournalEntry.sFKinwBNA5eTFoNT
+pages: []
+_key: '!journal!5n65akO6rGefaN74'
+
