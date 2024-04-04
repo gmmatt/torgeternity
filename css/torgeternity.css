@@ -4083,7 +4083,7 @@ form.actor-sheet.threat img.profile-img {
 
 .window-content .actor-sheet .threat-sheet .sub-header input[type="text"] {
   border: none;
-  width: 50px;
+  width: 100px;
 }
 
 .window-content .actor-sheet .threat-sheet .defenseCheck {

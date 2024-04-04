@@ -47,6 +47,7 @@ export default class torgeternityDeck extends CardsPile {
             card.data.name
           }</h4>
             </div>`,
+          rollMode: game.user.isGM ? 'selfroll' : game.settings.get('core', 'rollMode'),
         });
         return;
       case 'view':
@@ -68,6 +69,7 @@ export default class torgeternityDeck extends CardsPile {
           }"/><h4 class="card-name">${game.i18n.localize('torgeternity.chatText.discardsCard')} ${
             card.data.name
           }</h4></div>`,
+          rollMode: game.user.isGM ? 'selfroll' : game.settings.get('core', 'rollMode'),
         });
         return;
       case 'drawDestiny':
@@ -85,6 +87,7 @@ export default class torgeternityDeck extends CardsPile {
             }"></span></span><h4 class="card-name">${game.i18n.localize(
               'torgeternity.chatText.drawsCard'
             )} ${destinyDeck.data.name}.</h4></div>`,
+            rollMode: game.user.isGM ? 'selfroll' : game.settings.get('core', 'rollMode'),
           });
         }
         return this.object.draw(destinyDeck);

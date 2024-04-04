@@ -1007,6 +1007,7 @@ Hooks.on('deleteCombat', async (combat, dataUpdate) => {
     .forEach((fighter) => listCombatants.push(fighter.actorId));
   // listing of hands' actors in closing combat
   listCombatants.forEach((i) => {
+    if (game.actors.get(i).type === 'vehicle') return;
     if (!!game.actors.get(i).getDefaultHand()) {
       listHandsReset.push(game.actors.get(i).getDefaultHand());
     }

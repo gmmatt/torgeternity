@@ -21,6 +21,16 @@ export class ThreatData extends CommonActorData {
           choices: Object.keys(torgeternity.sizes),
           required: true,
         }),
+        clearance: new fields.StringField({
+          initial: 'alpha',
+          choices: Object.keys(torgeternity.clearances),
+          required: false,
+        }),
+        possibilityPotential: new fields.StringField({
+          initial: 'Never',
+          required: true,
+          blank: false,
+        }),
       }),
     };
   }
@@ -31,17 +41,24 @@ export class ThreatData extends CommonActorData {
    */
   static migrateData(data) {
     super.migrateData(data);
+    if (data?.details && Object.hasOwn(data?.details, 'possibilitypotential')) {
+      data.details.possibilityPotential = !!data.details?.possibilitypotential
+        ? data.details.possibilitypotential
+        : 'Never';
+    }
     if (data?.details && Object.hasOwn(data?.details, 'sizeBonus')) {
       data.details.sizeBonus = Object.keys(torgeternity.sizes).includes(data.details.sizeBonus)
         ? data.details.sizeBonus
         : 'normal';
     }
-    for (const skill of Object.values(data.skills)) {
-      if (Object.hasOwn(skill, 'adds')) {
-        skill.adds = parseInt(skill.adds) || 0;
-      }
-      if (Object.hasOwn(skill, 'value') && parseInt(skill.value) > 0) {
-        skill.adds = parseInt(skill.value) - parseInt(data.attributes[skill.baseAttribute]);
+    if (data.skills) {
+      for (const skill of Object.values(data.skills)) {
+        if (Object.hasOwn(skill, 'adds')) {
+          skill.adds = parseInt(skill.adds) || 0;
+        }
+        if (Object.hasOwn(skill, 'value') && parseInt(skill.value) > 0) {
+          skill.adds = parseInt(skill.value) - parseInt(data.attributes[skill.baseAttribute]);
+        }
       }
     }
   }

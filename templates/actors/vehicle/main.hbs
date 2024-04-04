@@ -41,7 +41,7 @@
 
       <div>
         <p>{{localize "torgeternity.stats.wounds"}}: </p>
-        <input name="system.wounds.current" type="number" value="{{actor.system.wounds.current}}" data-dtype="Number">
+        <input name="system.wounds.value" type="number" value="{{actor.system.wounds.value}}" data-dtype="Number">
         /
         <input name="system.wounds.max" type="number" value="{{actor.system.wounds.max}}" data-dtye="Number">
       </div>
@@ -85,6 +85,10 @@
             </th>
             <th>
               <a class="attribut-block">
+              </a>
+            </th>
+            <th>
+              <a class="attribut-block">
                 {{localize "torgeternity.gear.price"}}
               </a>
             </th>
@@ -121,6 +125,9 @@
               <input name="system.armor" type="number" value="{{actor.system.armor}}" data-dtype="Number">
             </td>
             <td class="vehicle-stat">
+              <span>{{actor.system.toughness}}&lpar;{{actor.system.armor}}&rpar;</span>
+            </td>
+            <td class="vehicle-stat">
               <input name="system.price.dollars" type="number" value="{{actor.system.price.dollars}}"
                 data-dtype="Number">
               <select name="system.price.magnitude" class="input-box">
@@ -141,7 +148,7 @@
       <table class="groove-borders left-align">
         <tr>
           <th>{{localize "torgeternity.sheetLabels.name"}} <input name="system.operator.name" class="long-text"
-              type="text" value="{{actor.system.operator.name}}" data-dtype="Text"></th>
+              type="text" value="{{actor.system.operator.name}}" data-dtype="text"></th>
           <th>{{localize "torgeternity.sheetLabels.skill"}} <input name="system.operator.skillValue" type="number"
               value="{{actor.system.operator.skillValue}}" data-dtype="Number"></th>
           <th>{{localize "torgeternity.sheetLabels.defense"}} {{actor.system.defense}}</th>

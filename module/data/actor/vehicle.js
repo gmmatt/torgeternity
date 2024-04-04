@@ -47,7 +47,7 @@ export class VehicleData extends foundry.abstract.TypeDataModel {
       toughness: new fields.NumberField({ initial: 5, integer: true, nullable: false }),
       type: new fields.StringField({ initial: 'land' }),
       wounds: new fields.SchemaField({
-        current: new fields.NumberField({ initial: 0, integer: true, nullable: false }),
+        value: new fields.NumberField({ initial: 0, integer: true, nullable: false }),
         max: new fields.NumberField({ initial: 3, integer: true, nullable: false }),
       }),
     };
@@ -69,10 +69,8 @@ export class VehicleData extends foundry.abstract.TypeDataModel {
         ? data.price.magnitude
         : 'other';
     }
-    if (data?.details && Object.hasOwn(data?.details, 'sizeBonus')) {
-      data.details.sizeBonus = Object.keys(torgeternity.sizes).includes(data.details.sizeBonus)
-        ? data.details.sizeBonus
-        : 'normal';
+    if (Object.hasOwn(data.wounds, 'current')) {
+      data.wounds.value = data.wounds.current;
     }
   }
 
@@ -92,10 +90,13 @@ export class VehicleData extends foundry.abstract.TypeDataModel {
     switch (this.price.magnitude) {
       case 'billions':
         convertedPrice = this.price.dollars * 1000;
+        break;
       case 'millions':
         convertedPrice = this.price.dollars * 1000;
+        break;
       case 'thousands':
         convertedPrice = this.price.dollars * 1000;
+        break;
       case 'ones':
       default:
         convertedPrice = this.price.dollars;
@@ -116,6 +117,6 @@ export class VehicleData extends foundry.abstract.TypeDataModel {
     }
     this.topSpeed.penalty = speedPenalty;
 
-    this.defense = parseInt(this.operator.skillValue + this.maneuver);
+    this.defense = parseInt(this.operator.skillValue) + parseInt(this.maneuver);
   }
 }

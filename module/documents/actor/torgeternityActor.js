@@ -69,6 +69,89 @@ export default class TorgeternityActor extends Actor {
       const trickDefenseSkill = skills.trick.value || attributes.mind;
       this.system.trickDefense = trickDefenseSkill + trickDefenseMod;
     }
+    // Apply the moveMod effect for SKs & threats
+    if (this.type === 'stormknight' || this.type === 'threat') {
+      const listChanges = [];
+      let computeMove = this.system.other.move;
+      this.appliedEffects.forEach((ef) =>
+        ef.changes.forEach((k) => {
+          if (k.key === 'system.other.move') listChanges.push(k);
+        })
+      );
+      // Modify +/-
+      listChanges
+        .filter((ef) => ef.mode === 2)
+        .forEach((ef) => {
+          computeMove += parseInt(ef.value);
+        });
+      // Modify x
+      listChanges
+        .filter((ef) => ef.mode === 1)
+        .forEach((ef) => {
+          computeMove = computeMove * parseInt(ef.value);
+        });
+      // Modify minimum
+      listChanges
+        .filter((ef) => ef.mode === 4)
+        .forEach((ef) => {
+          computeMove = Math.max(computeMove, parseInt(ef.value));
+        });
+      // Modify maximum
+      listChanges
+        .filter((ef) => ef.mode === 3)
+        .forEach((ef) => {
+          computeMove = Math.min(computeMove, parseInt(ef.value));
+        });
+      // Modify Fixed
+      listChanges
+        .filter((ef) => ef.mode === 5)
+        .forEach((ef) => {
+          computeMove = parseInt(ef.value);
+        });
+      this.system.other.move = computeMove;
+      //
+      // Apply the runMod effect
+      const listRun = [];
+      let computeRun = this.system.other.run;
+      this.appliedEffects.forEach((ef) =>
+        ef.changes.forEach((k) => {
+          if (k.key === 'system.other.runMod') listRun.push(k);
+        })
+      );
+      // Modify +/-
+      listRun
+        .filter((ef) => ef.mode === 2)
+        .forEach((ef) => {
+          computeRun += parseInt(ef.value);
+        });
+      // Modify x
+      listRun
+        .filter((ef) => ef.mode === 1)
+        .forEach((ef) => {
+          computeRun = computeRun * parseInt(ef.value);
+        });
+      // Modify minimum
+      listRun
+        .filter((ef) => ef.mode === 4)
+        .forEach((ef) => {
+          computeRun = Math.max(computeRun, parseInt(ef.value));
+        });
+      // Modify maximum
+      listRun
+        .filter((ef) => ef.mode === 3)
+        .forEach((ef) => {
+          computeRun = Math.min(computeRun, parseInt(ef.value));
+        });
+      // Modify Fixed
+      listRun
+        .filter((ef) => ef.mode === 5)
+        .forEach((ef) => {
+          computeRun = parseInt(ef.value);
+        });
+      this.system.other.run = computeRun;
+      //
+    } else if (this.type === 'vehicle') {
+    }
   }
 
   /**
