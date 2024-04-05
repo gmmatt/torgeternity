@@ -748,6 +748,7 @@ export async function renderSkillChat(test) {
           name: 'ActiveDefense', // Add an icon to remind the defense, bigger ? Change color of Defense ?
           icon: 'icons/equipment/shield/heater-crystal-blue.webp', // To change I think, taken in Core, should have a dedicated file
           duration: { rounds: 1 },
+          origin: myActor.uuid,
           changes: [
             {
               // Modify all existing "basic" defense in block
@@ -848,6 +849,7 @@ export async function renderSkillChat(test) {
         name: 'ActiveDefense', // Add an icon to remind the defense, bigger ? Change color of Defense ?
         icon: 'icons/equipment/shield/heater-crystal-blue.webp', // To change I think, taken in Core, should have a dedicated file
         duration: { rounds: 1 },
+        origin: myActor.uuid,
         changes: [
           {
             // Modify all existing "basic" defense in block

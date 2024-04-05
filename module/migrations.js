@@ -13,144 +13,148 @@ export async function torgMigration() {
       ui.notifications.info('Premium Content Image Migration Complete');
     }
   } else {
-  // check for new worlds, which don't need migrating, and set their migration version accordingly
-  if (migrationVersion === '1.0.0' && isNewWorld()) {
-    await game.settings.set('torgeternity', 'migrationVersion', currentVersion);
-    console.log('Torg: New World Detected, skipping migration');
-    return;
-  }
-  // show a UI warning
-  ui.notifications.warn('Migrating Torg system version to ' + currentVersion); // TODO: Localize this
-
-  // migrations up to 2.4.0
-  if (isNewerVersion('2.4.0', migrationVersion)) {
-    // code to migrate missile weappon groupName
-    game.actors.forEach(async (act) => {
-      if (act.data.data.skills.missileWeapons.groupName != 'combat') {
-        await act.update({ 'data.skills.missileWeapons.groupName': 'combat' });
-        ui.notifications.info(act.name + ' : migrated');
-      }
-    });
-    // TODO: Add compendium actor migration here?
-
-    // code to migrate new game settings
-    const deckSettings = game.settings.get('torgeternity', 'deckSetting');
-    if (deckSettings.stormknightsHands) {
-      deckSettings.stormknights = deckSettings.stormknightsHands;
-      deckSettings.stormknightsHands = null;
-      await game.settings.set('torgeternity', 'deckSetting', deckSettings);
+    // check for new worlds, which don't need migrating, and set their migration version accordingly
+    if (migrationVersion === '1.0.0' && isNewWorld()) {
+      await game.settings.set('torgeternity', 'migrationVersion', currentVersion);
+      console.log('Torg: New World Detected, skipping migration');
+      return;
     }
-  }
+    // show a UI warning
+    ui.notifications.warn('Migrating Torg system version to ' + currentVersion); // TODO: Localize this
 
-  if (isNewerVersion('2.5.0', migrationVersion)) {
-    // Deck settings migration to use id
-    const deckSetting = game.settings.get('torgeternity', 'deckSetting');
-    const deckKeys = Object.keys(deckSetting);
-    for (const key of deckKeys) {
-      if (key === 'stormknights' || key === 'stormknightsHands') continue;
-      let deck = game.cards.getName(deckSetting[key]);
-      if (!deck) {
-        deck = game.cards.get(deckSetting[key]);
+    // migrations up to 2.4.0
+    if (isNewerVersion('2.4.0', migrationVersion)) {
+      // code to migrate missile weappon groupName
+      game.actors.forEach(async (act) => {
+        if (act.data.data.skills.missileWeapons.groupName != 'combat') {
+          await act.update({ 'data.skills.missileWeapons.groupName': 'combat' });
+          ui.notifications.info(act.name + ' : migrated');
+        }
+      });
+      // TODO: Add compendium actor migration here?
+
+      // code to migrate new game settings
+      const deckSettings = game.settings.get('torgeternity', 'deckSetting');
+      if (deckSettings.stormknightsHands) {
+        deckSettings.stormknights = deckSettings.stormknightsHands;
+        deckSettings.stormknightsHands = null;
+        await game.settings.set('torgeternity', 'deckSetting', deckSettings);
+      }
+    }
+
+    if (isNewerVersion('2.5.0', migrationVersion)) {
+      // Deck settings migration to use id
+      const deckSetting = game.settings.get('torgeternity', 'deckSetting');
+      const deckKeys = Object.keys(deckSetting);
+      for (const key of deckKeys) {
+        if (key === 'stormknights' || key === 'stormknightsHands') continue;
+        let deck = game.cards.getName(deckSetting[key]);
         if (!deck) {
-          delete deckSetting[key];
-          ui.notifications.error(
-            'Torg Eternity: Migrating setting for deck ' +
-              key +
-              'failed.  Deck settings will need to be reconfigured manually'
+          deck = game.cards.get(deckSetting[key]);
+          if (!deck) {
+            delete deckSetting[key];
+            ui.notifications.error(
+              'Torg Eternity: Migrating setting for deck ' +
+                key +
+                'failed.  Deck settings will need to be reconfigured manually'
+            );
+          }
+          continue;
+        }
+        deckSetting[key] = deck.id;
+      }
+      game.settings.set('torgeternity', 'deckSetting', deckSetting);
+
+      await migrateImagestoWebp({ system: true, modules: true });
+    }
+
+    if (isNewerVersion('2.5.1', migrationVersion)) {
+      // quick migration to fix any worlds which imported the incorrect decks in 2.5.0
+      let needsFix = false;
+      for (const deck of game.cards.contents) {
+        if (deck.data?.img?.includes('jpg')) needsFix = true;
+      }
+      if (needsFix) await migrateImagestoWebp({ system: true, modules: false });
+    }
+
+    // migrations up to 3.3.0
+    if (isNewerVersion('3.3.0', migrationVersion)) {
+      // code to migrate heavy weapon groupName
+      game.actors.forEach(async (act) => {
+        if (act.system.skills.missileWeapons.groupName != 'combat') {
+          await act.update({ 'system.skills.missileWeapons.groupName': 'combat' });
+          ui.notifications.info(act.name + ' missile : migrated');
+        }
+      });
+      game.actors.forEach(async (act) => {
+        if (act.system.skills.heavyWeapons.groupName != 'combat') {
+          await act.update({ 'system.skills.heavyWeapons.groupName': 'combat' });
+          ui.notifications.info(act.name + 'heavy : migrated');
+        }
+      });
+    }
+
+    // migrations for 3.7.0
+    if (isNewerVersion('3.7.0', migrationVersion)) {
+      ui.notifications.info('Migrating to 3.7.0');
+      console.log('Migrating to 3.7.0');
+      const badArmorKeys = [
+        'system.other.armor',
+        'system.other.toughness',
+        'system.other.fatigue',
+        'system.fatigue',
+      ];
+      for (const actor of game.actors) {
+        for (const item of actor.items) {
+          if (item.type === 'armor') {
+            await item.update({ 'data.groupName': 'combat' });
+          }
+        }
+        const itemUuids = actor.items.map((item) => item.uuid);
+        const armorUuids = actor.itemTypes.armor.map((item) => item.uuid);
+        let sendMessage = false;
+        const armorsToUpdate = [];
+        for (const effect of actor.effects) {
+          if (effect.origin) {
+            if (!itemUuids.includes(effect.origin) && effect.origin.includes('Item')) {
+              await effect.update({
+                origin: `Actor.${actor.id}.Item.${effect.origin.split('.').at(-1)}`,
+              });
+            }
+            if (
+              !itemUuids.includes(effect.origin) &&
+              effect.origin.includes('Item') &&
+              !effect.disabled
+            ) {
+              effect.update({ disabled: true });
+              sendMessage = true;
+            }
+            if (armorUuids.includes(effect.origin) && !armorsToUpdate.includes(effect.origin)) {
+              armorsToUpdate.push(effect.origin);
+            }
+          }
+        }
+        if (sendMessage) {
+          ui.notifications.info(
+            'Disabled effects on ' + actor.name + ' due to missing origin item'
           );
         }
-        continue;
-      }
-      deckSetting[key] = deck.id;
-    }
-    game.settings.set('torgeternity', 'deckSetting', deckSetting);
-
-    await migrateImagestoWebp({ system: true, modules: true });
-  }
-
-  if (isNewerVersion('2.5.1', migrationVersion)) {
-    // quick migration to fix any worlds which imported the incorrect decks in 2.5.0
-    let needsFix = false;
-    for (const deck of game.cards.contents) {
-      if (deck.data?.img?.includes('jpg')) needsFix = true;
-    }
-    if (needsFix) await migrateImagestoWebp({ system: true, modules: false });
-  }
-
-  // migrations up to 3.3.0
-  if (isNewerVersion('3.3.0', migrationVersion)) {
-    // code to migrate heavy weapon groupName
-    game.actors.forEach(async (act) => {
-      if (act.system.skills.missileWeapons.groupName != 'combat') {
-        await act.update({ 'system.skills.missileWeapons.groupName': 'combat' });
-        ui.notifications.info(act.name + ' missile : migrated');
-      }
-    });
-    game.actors.forEach(async (act) => {
-      if (act.system.skills.heavyWeapons.groupName != 'combat') {
-        await act.update({ 'system.skills.heavyWeapons.groupName': 'combat' });
-        ui.notifications.info(act.name + 'heavy : migrated');
-      }
-    });
-  }
-
-  // migrations for 3.7.0
-  if (isNewerVersion('3.7.0', migrationVersion)) {
-    ui.notifications.info('Migrating to 3.7.0');
-    console.log('Migrating to 3.7.0');
-    const badArmorKeys = [
-      'system.other.armor',
-      'system.other.toughness',
-      'system.other.fatigue',
-      'system.fatigue',
-    ];
-    for (const actor of game.actors) {
-      for (const item of actor.items) {
-        if (item.type === 'armor') {
-          await item.update({ 'data.groupName': 'combat' });
+        for (const armorUuid of armorsToUpdate) {
+          const armor = fromUuidSync(armorUuid);
+          const armorData = armor.toObject();
+          armor.delete();
+          armorData.effects = armorData.effects
+            .map((effect) => {
+              effect.changes = effect.changes.filter((c) => !badArmorKeys.includes(c.key));
+              return effect;
+            })
+            .filter((effect) => effect.changes.length > 0);
+          await actor.createEmbeddedDocuments('Item', [armorData]);
         }
-      }
-      const itemUuids = actor.items.map((item) => item.uuid);
-      const armorUuids = actor.itemTypes.armor.map((item) => item.uuid);
-      let sendMessage = false;
-      const armorsToUpdate = [];
-      for (const effect of actor.effects) {
-        if (!itemUuids.includes(effect.origin) && effect.origin.includes('Item')) {
-          await effect.update({
-            origin: `Actor.${actor.id}.Item.${effect.origin.split('.').at(-1)}`,
-          });
-        }
-        if (
-          !itemUuids.includes(effect.origin) &&
-          effect.origin.includes('Item') &&
-          !effect.disabled
-        ) {
-          effect.update({ disabled: true });
-          sendMessage = true;
-        }
-        if (armorUuids.includes(effect.origin) && !armorsToUpdate.includes(effect.origin)) {
-          armorsToUpdate.push(effect.origin);
-        }
-      }
-      if (sendMessage) {
-        ui.notifications.info('Disabled effects on ' + actor.name + ' due to missing origin item');
-      }
-      for (const armorUuid of armorsToUpdate) {
-        const armor = fromUuidSync(armorUuid);
-        const armorData = armor.toObject();
-        armor.delete();
-        armorData.effects = armorData.effects
-          .map((effect) => {
-            effect.changes = effect.changes.filter((c) => !badArmorKeys.includes(c.key));
-            return effect;
-          })
-          .filter((effect) => effect.changes.length > 0);
-        await actor.createEmbeddedDocuments('Item', [armorData]);
       }
     }
-  }
 
-  /**
+    /**
    ***********************************************************
     New migrations go here.
    
@@ -163,9 +167,9 @@ export async function torgMigration() {
    *************************************************************
    */
 
-  await game.settings.set('torgeternity', 'migrationVersion', currentVersion);
+    await game.settings.set('torgeternity', 'migrationVersion', currentVersion);
 
-  ui.notifications.info('System Migration Complete');
+    ui.notifications.info('System Migration Complete');
   }
 }
 
