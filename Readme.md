@@ -10,11 +10,11 @@
 ### Build the system
 
 1. run `npm ci` in the terminal/command Line of the project
-1. run `npm run build` in the terminal/command Line of the project
+1. run `npm run build` in the terminal/command Line of the project (make yml from packs)
 
 ### commit data
 
-1. run `npm run extract` in the terminal/command Line of the project
+1. run `npm run extract` in the terminal/command Line of the project (make packs from yml)
 1. commit the yml files as usual
 
 it is also possible to directly edit the yml files in src/packs
