@@ -1,5 +1,13 @@
 # TORG Eternity Changelog
 
+## v. 3.7.2
+
+- Better migrations for active defense, that were active in existing worlds
+
+## v. 3.7.1
+
+- New version because release-pipeline didn't work- no changes in the system.
+
 ## v. 3.7.0
 
 - A lot of code-cleanup, refactoring and overdoing
