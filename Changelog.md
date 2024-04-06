@@ -3,6 +3,8 @@
 ## v. 3.7.2
 
 - Better migrations for active defense, that were active in existing worlds
+- Style-Fix for vehicle addon item
+- Style-rearrangement on perk item, prerequisites are now on a more comfortable place
 
 ## v. 3.7.1
 

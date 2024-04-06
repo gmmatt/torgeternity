@@ -40,21 +40,21 @@
                         {{/each}}
                         {{/select}}
                     </select>
-
-                    <p class="item-data-label">
-                        {{localize "torgeternity.perks.prerequisites"}}
-                    </p>
-                    <input name="system.prerequisites" type="text" value="{{item.system.prerequisites}}" class="input-box" />
+                    
                     <p class="item-data-label">
                         {{localize "torgeternity.perks.timestaken"}}
                     </p>
                     <input name="system.timestaken" type="number" value="{{item.system.timestaken}}" class="input-box" />
                 </div>
                 
-                <div class="main-content">
+                <div class="main-content">                    
                     <div name="description" class="item-description-textarea">
                         {{editor description target="system.description" button=true editable=editable}}
                     </div>
+                    <p style="min-height: 22px; height:auto;" class="item-data-label">
+                        {{localize "torgeternity.perks.prerequisites"}}
+                    </p>
+                    <input name="system.prerequisites" type="text" value="{{item.system.prerequisites}}" class="input-box" />
                 </div>
 
             </div>
