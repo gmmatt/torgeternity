@@ -2001,6 +2001,22 @@ p.skill-chat-title.skilled {
   aspect-ratio: 1/1;
 }
 
+.chat-message .generalHeader {
+  border:none;
+  background-color:transparent;
+  display:flex;
+  flex-direction: row;  
+  align-items: center;  
+  justify-content: space-between;
+}
+.chat-message .generalHeader span{
+  display: inline-block;  
+  font-size: large;
+  flex: 1;
+  text-align: center;
+  margin-left: auto;
+}
+
 .chat-message .card-draw .card-name {
   line-height: 20px;
 }
