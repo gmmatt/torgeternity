@@ -1,10 +1,14 @@
 # TORG Eternity Changelog
 
-## v. 3.7.2
+## v. 3.7.3
 
 - Better migrations for active defense, that were active in existing worlds
 - Style-Fix for vehicle addon item
 - Style-rearrangement on perk item, prerequisites are now on a more comfortable place
+
+## v. 3.7.2
+
+- Due to forge, this release was made because of their cashing problems with 3.7.1. There were no changes made whatsoever.
 
 ## v. 3.7.1
 
