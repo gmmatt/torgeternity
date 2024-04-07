@@ -1994,13 +1994,6 @@ p.skill-chat-title.skilled {
   margin-bottom: 7px;
 }
 
-.perk-icon {
-  width:50px;
-  height:50px;
-  border:none;
-  aspect-ratio: 1/1;
-}
-
 .chat-message .generalHeader {
   border:none;
   background-color:transparent;
@@ -2009,6 +2002,14 @@ p.skill-chat-title.skilled {
   align-items: center;  
   justify-content: space-between;
 }
+
+.chat-message .generalHeader img {
+  width:50px;
+  height:50px;
+  border:none;
+  aspect-ratio: 1/1;
+}
+
 .chat-message .generalHeader span{
   display: inline-block;  
   font-size: large;

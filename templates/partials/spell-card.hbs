@@ -1,18 +1,13 @@
 <div
   class="spell-border sheet-card {{system.type}}"
-  data-type="{{system.type}}"
-  style="background-image: url('systems/torgeternity/images/bgparch.webp')"
+  data-type="{{system.type}}"  
 >
-  <table style="border:none;background-color:transparent">
-    <tr style="border:none">
-      <td>
-        <img class="perk-icon" src="{{img}}" title="{{name}}" style="width:50px;height:50px" />
-      </td>
-      <td class="chat-title">
+  <div class="generalHeader">  
+        <img src="{{img}}" title="{{name}}"/>      
+      <span>
         {{name}}
-      </td>
-    </tr>
-  </table>
+      </span>
+  </div>
   <div class="item-description-chat" data-item-id="{{_id}}">
     <div><span style="font-weight:bold">{{localize "torgeternity.powers.axiom"}}:</span>
       <span class="item-dropdown-extras">{{localize "torgeternity.sheetLabels.magic"}} {{system.axiom}}</span></div>
