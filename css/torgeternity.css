@@ -1844,6 +1844,8 @@ div.readme a.compendium {
 
 .chat-message .item-description-chat {
   font-family: Palatino;
+  background-image: none;
+  background-color: transparent;
 }
 
 .chat-message .chat-title {
@@ -1956,10 +1958,6 @@ p.skill-chat-title.skilled {
   text-shadow: 0px 0px 2px grey;
 }
 
-/*.dice-tooltip .dice-rolls .roll.d20 {
-  background-image: url(../images/Torgd20.svg);  
-}*/
-
 .chat-message .skill-roll-damage-label {
   font-family: "Palatino Linotype";
   font-size: 18px;
@@ -1996,17 +1994,29 @@ p.skill-chat-title.skilled {
   margin-bottom: 7px;
 }
 
-/*@media screen and (width > 344px) {
-.chat-message .roll-fav,
-.chat-message .roll-possibility,
-.chat-message .roll-up,
-.chat-message .roll-hero,
-.chat-message .roll-drama,
-.chat-message .add-plus3,
-.chat-message .add-bd {
-    font-size: 8px; 
-  }
-}*/
+.chat-message .generalHeader {
+  border:none;
+  background-color:transparent;
+  display:flex;
+  flex-direction: row;  
+  align-items: center;  
+  justify-content: space-between;
+}
+
+.chat-message .generalHeader img {
+  width:50px;
+  height:50px;
+  border:none;
+  aspect-ratio: 1/1;
+}
+
+.chat-message .generalHeader span{
+  display: inline-block;  
+  font-size: large;
+  flex: 1;
+  text-align: center;
+  margin-left: auto;
+}
 
 .chat-message .card-draw .card-name {
   line-height: 20px;

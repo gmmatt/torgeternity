@@ -3,8 +3,9 @@
 ## v. 3.7.2
 
 - Better migrations for active defense, that were active in existing worlds
-- Style-Fix for vehicle addon item
-- Style-rearrangement on perk item, prerequisites are now on a more comfortable place
+- Style-Fix for vehicle addon item [#383](https://github.com/gmmatt/torgeternity/issues/383)
+- Style-rearrangement on perk item, prerequisites are now on a more comfortable place [#158](https://github.com/gmmatt/torgeternity/issues/158)
+- Style-fix on general Chat-Cards holding item informations [#208](https://github.com/gmmatt/torgeternity/issues/208)
 
 ## v. 3.7.1
 
