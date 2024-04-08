@@ -37,7 +37,7 @@ import initTextEdidor from './initTextEditor.js';
 import { TorgeternityMacros } from './macros.js';
 import { ChatMessageTorg } from './chat/document.js';
 import * as actorDataModels from './data/actor/index.js';
-import * as itemDataModels from './data/actor/index.js';
+import * as itemDataModels from './data/item/index.js';
 import TorgActiveEffect from './documents/active-effect/torgActiveEffect.js';
 
 Hooks.once('init', async function () {
