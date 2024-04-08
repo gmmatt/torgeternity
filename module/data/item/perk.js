@@ -13,6 +13,7 @@ export class PerkItemData extends foundry.abstract.TypeDataModel {
       cosm: new fields.StringField({ initial: '' }),
       description: new fields.HtmlField({ initial: '' }),
       prerequisites: new fields.StringField({ initial: '' }),
+      generalContradiction: new fields.BooleanField({ initial: false }),
       pulpPowers: new fields.SchemaField({
         enhancement01: new fields.SchemaField({
           description: new fields.StringField({ initial: '' }),

@@ -403,7 +403,9 @@
       "cosm": "Cosmos",
       "description": "Descripción",
       "prerequisites": "Prerrequisitos",
-      "timestaken": "Nivel"
+      "timestaken": "Nivel",
+      "generalContradiction": "Contradictions",
+      "generalContradictionTT": "Causes contradictions outside it's cosm."
     },
     "perkTypes": {
       "abomination": "Abominación",

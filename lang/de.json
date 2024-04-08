@@ -396,7 +396,9 @@
       "cosm": "Cosm",
       "description": "Beschreibung",
       "prerequisites": "Vorraussetzung",
-      "timestaken": "Male genommen"
+      "timestaken": "Male genommen",
+      "generalContradiction": "Widersprüche",
+      "generalContradictionTT": "Verursacht Widersprüche außerhalb ihres Cosms"
     },
     "perkTypes": {
       "abomination": "Abscheulichkeit",

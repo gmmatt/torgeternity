@@ -3401,6 +3401,13 @@ form.actor-sheet.threat .tab[data-tab].active .editor {
   margin:unset;
 }
 
+.item .window-content form.item-sheet .asside .perks.generalContradiction {
+  display:flex; 
+  flex-direction:row; 
+  align-items:center;
+  margin: 7px 0;
+}
+
 .item .window-content form.item-sheet .asside input[type="number"] {
   border: none;
   text-align: center;

@@ -403,7 +403,9 @@
       "cosm": "Cosm",
       "description": "Description",
       "prerequisites": "Prérequis",
-      "timestaken": "Nombre de choix"
+      "timestaken": "Nombre de choix",
+      "generalContradiction": "Contradictions",
+      "generalContradictionTT": "Causes contradictions outside it's cosm."
     },
     "perkTypes": {
       "abomination": "Abomination",
