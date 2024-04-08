@@ -249,6 +249,7 @@
       "targetStrength": "Stärke des Ziels",
       "targetTaunt": "Verspotten des Ziels",
       "targetTrick": "Tricksen des Ziels",
+      "targetFind": "Finden des Ziels",
       "targetUnarmedCombat": "Waffenloser Kampf  des Ziels",
       "targetVehicleDefense": "Verteidigung des Zielfahrzeuges",
       "targetWaterVehicles": "Wasserfahrzeuge oder Geschicklichkeit des Ziels",

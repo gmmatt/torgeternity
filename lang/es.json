@@ -256,6 +256,7 @@
       "targetStrength": "Target Strength",
       "targetTaunt": "Target taunt or Charisma",
       "targetTrick": "Target trick or Mind",
+      "targetFind": "Target find or Mind",
       "targetUnarmedCombat": "Target unarmed combat or Dexterity",
       "targetVehicleDefense": "Target Vehicle Defense",
       "targetWaterVehicles": "Target water vehicles or Dexterity",
