@@ -256,6 +256,7 @@
       "targetStrength": "Force de la cible",
       "targetTaunt": "Provocation de la cible",
       "targetTrick": "Ruse de la cible",
+      "targetFind": "Target find or Mind",
       "targetUnarmedCombat": "Combat à mains nues de la cible",
       "targetVehicleDefense": "Défense du véhicule ciblé",
       "targetWaterVehicles": "Véhicules aquatiques ou Dextérité de la cible",

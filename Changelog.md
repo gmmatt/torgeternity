@@ -6,6 +6,7 @@
 - Style-Fix for vehicle addon item [#383](https://github.com/gmmatt/torgeternity/issues/383)
 - Style-rearrangement on perk item, prerequisites are now on a more comfortable place [#158](https://github.com/gmmatt/torgeternity/issues/158)
 - Style-fix on general Chat-Cards holding item informations [#208](https://github.com/gmmatt/torgeternity/issues/208)
+- 'Find' is now available as DN for stealthy tests [#387](https://github.com/gmmatt/torgeternity/issues/387)
 
 ## v. 3.7.2
 

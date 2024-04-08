@@ -155,6 +155,13 @@ export async function renderSkillChat(test) {
           test.DN = target.attributes.spirit;
         }
         break;
+      case 'targetFind':
+        if (target.skills.find.value && target.skills.find.value != '-') {
+          test.DN = target.skills.find.value;
+        } else {
+          test.DN = target.attributes.mind;
+        }
+        break;
       case 'targetIntimidation':
         test.DN = target.defenses.intimidation;
         break;
