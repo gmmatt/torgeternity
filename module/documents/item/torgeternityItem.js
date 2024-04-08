@@ -77,7 +77,7 @@ export default class TorgeternityItem extends Item {
     if (this.img === 'icons/svg/item-bag.svg') {
       const image = TorgeternityItem.DEFAULT_ICONS[data.type] ?? null;
       if (image) {
-        this.updateSource({ img: 'systems/torgeternity/images/icons/' + image });
+        this.update({ img: 'systems/torgeternity/images/icons/' + image });
       }
     }
 
