@@ -419,6 +419,7 @@
       "electricSamurai": "Samurai Eléctrico",
       "elf": "Elfo",
       "faith": "Fe",
+      "groundSloth": "Ground Sloth",
       "hacker": "Hacker",
       "hope": "Esperanza",
       "human": "Humano",
@@ -439,7 +440,8 @@
       "social": "Social",
       "spellcraft": "Conjuros",
       "stalenger": "Stalenger",
-      "theRace": "La Raza"
+      "theRace": "La Raza",
+      "special": "Special/Homebrew"
     },
     "poolToggle": {
       "inPool": "Carta en reserva",

@@ -412,6 +412,7 @@
       "electricSamurai": "Elektrosamurai",
       "elf": "Elf",
       "faith": "Glaube",
+      "groundSloth": "Riesenfaultier",
       "hacker": "Hacker",
       "hope": "Hoffnung",
       "human": "Mensch",
@@ -432,7 +433,8 @@
       "social": "Sozial",
       "spellcraft": "Zauberkunde",
       "stalenger": "Stalenger",
-      "theRace": "Das Volk"
+      "theRace": "Das Volk",
+      "special": "Speziell / Eigen"
     },
     "poolToggle": {
       "inPool": "Karte im Aktionsvorrat",

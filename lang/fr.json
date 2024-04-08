@@ -419,6 +419,7 @@
       "electricSamurai": "Samouraï électrique",
       "elf": "Elfe",
       "faith": "Foi",
+      "groundSloth": "Ground Sloth",
       "hacker": "Hacker",
       "hope": "Espoir",
       "human": "Humain",
@@ -439,7 +440,8 @@
       "social": "Social",
       "spellcraft": "Arts magiques",
       "stalenger": "Stalenger",
-      "theRace": "La Race"
+      "theRace": "La Race",
+      "special": "Special/Homebrew"
     },
     "poolToggle": {
       "inPool": "Carte réservée",

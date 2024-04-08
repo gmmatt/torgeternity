@@ -419,6 +419,7 @@
       "electricSamurai": "Electric Samurai",
       "elf": "Elf",
       "faith": "Faith",
+      "groundSloth": "Ground Sloth",
       "hacker": "Hacker",
       "hope": "Hope",
       "human": "Human",
@@ -439,7 +440,8 @@
       "social": "Social",
       "spellcraft": "Spellcraft",
       "stalenger": "Stalenger",
-      "theRace": "The Race"
+      "theRace": "The Race",
+      "special": "Special/Homebrew"
     },
     "poolToggle": {
       "inPool": "Card in pool",

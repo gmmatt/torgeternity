@@ -145,6 +145,8 @@ torgeternity.perkTypes = {
   powerSuit: 'torgeternity.perkTypes.powerSuit',
   invasion: 'torgeternity.perkTypes.invasion',
   stalenger: 'torgeternity.perkTypes.stalenger',
+  groundSloth: 'torgeternity.perkTypes.groundSloth',
+  special: 'torgeternity.perkTypes.special',
 };
 
 torgeternity.dnTypes = {
