@@ -11,7 +11,7 @@ export class GeneralItemData extends foundry.abstract.TypeDataModel {
     return {
       cosm: new fields.StringField({ initial: '' }),
       description: new fields.HTMLField({ initial: '' }),
-      price: new fields.NumberField({ initial: 0, integer: true }),
+      price: new fields.StringField({ initial: '' }),
       techlevel: new fields.NumberField({ initial: 1, integer: true }),
       value: new fields.NumberField({ initial: 0, integer: true }),
     };
