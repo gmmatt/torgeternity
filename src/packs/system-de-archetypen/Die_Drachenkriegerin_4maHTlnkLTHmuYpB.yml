@@ -734,7 +734,7 @@ items:
         <p>Sofort ausr&uuml;sten, wenn man den Vorzug
         @UUID[Compendium.te001-core-rulebook.grw-de-vorzuverb.nFFJqamKJz86Yrig]{Drachenkrieger}
         w&auml;hlt.</p>
-      price: n/a
+      price: ''
       techlevel: 14
       value: 0
       bonus: 4

@@ -715,7 +715,7 @@ items:
 
         <p>&nbsp;</p>
       techlevel: 26
-      price: 10K
+      price: 10000
       value: 20
       notes: Les points de Choc ignorés sont un bonus au lancement de sorts.
     sort: 600001

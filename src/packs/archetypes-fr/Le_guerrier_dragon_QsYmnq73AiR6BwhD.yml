@@ -925,7 +925,7 @@ items:
 
         <p>&nbsp;</p>
       techlevel: 14
-      price: n/a
+      price: ''
       value: 0
       bonus: 4
       maxDex: 8
