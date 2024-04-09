@@ -8,6 +8,7 @@
 - Style-fix on general Chat-Cards holding item informations [#208](https://github.com/gmmatt/torgeternity/issues/208)
 - 'Find' is now available as DN for stealthy tests [#387](https://github.com/gmmatt/torgeternity/issues/387)
 - Perks now have the "Ground Sloth" & "Special / Homebrew" categories for your own needs
+- Corrections on DataModels
 
 ## v. 3.7.2
 
