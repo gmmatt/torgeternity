@@ -47,22 +47,26 @@ export default class TorgeternityItem extends Item {
   }
 
   static DEFAULT_ICONS = {
+    /*
+    Cyberware	: 'cyberware-icon.webp',
+    Occultech	: 'implant.webp',
+    */
     gear: 'gear-icon.webp',
     eternityshard: 'eternityshard.webp',
     armor: 'armor-icon.webp',
     shield: 'shield.webp',
-    meleeweapon: 'meleeweapon.webp',
-    missileweapon: 'missileweapon.webp',
-    firearm: 'firearm.webp',
+    meleeweapon: 'axe-icon.webp',
+    missileweapon: 'missile-weapon-icon.webp',
+    firearm: 'firearm-icon.webp',
     implant: 'implant.webp',
-    heavyweapon: 'heavyweapon.webp',
+    heavyweapon: 'explosion-icon.webp',
     vehicle: 'vehicle.webp',
-    perk: 'perk.webp',
+    perk: 'reality-icon.webp',
     enhancement: 'enhancement.webp',
-    specialability: 'specialability.webp',
+    specialability: 'torgeternity-icon.webp',
     'specialability-rollable': 'specialability-rollable.webp',
-    spell: 'spell.webp',
-    miracle: 'miracle.webp',
+    spell: 'spell-icon.webp',
+    miracle: 'miracles-icon.webp',
     psionicpower: 'psionicpower.webp',
   };
 

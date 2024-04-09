@@ -19,7 +19,7 @@ export class PowerItemData extends foundry.abstract.TypeDataModel {
       dnType: new fields.StringField({ initial: '' }),
       duration: new fields.StringField({ initial: '' }),
       good: new fields.StringField({ initial: '' }),
-      isAttack: new fields.BooleanField({ initial: '' }),
+      isAttack: new fields.BooleanField({ initial: false }),
       modifier: new fields.StringField({ initial: '' }),
       outstanding: new fields.StringField({ initial: '' }),
       range: new fields.StringField({ initial: '' }),
