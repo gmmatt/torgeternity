@@ -427,12 +427,14 @@ async function applyStym(event) {
   const parentMessageId = event.currentTarget.closest('.chat-message').dataset.messageId;
   const parentMessage = game.messages.find(({ id }) => id === parentMessageId);
   const targetuuid = parentMessage.getFlag('torgeternity', 'currentTarget').uuid;
-  await applyStymiedState(targetuuid);
+  const sourceuuid = parentMessage.getFlag('torgeternity', 'test').actor;
+  await applyStymiedState(targetuuid, sourceuuid);
 }
 
 async function applyVul(event) {
   const parentMessageId = event.currentTarget.closest('.chat-message').dataset.messageId;
   const parentMessage = game.messages.find(({ id }) => id === parentMessageId);
   const targetuuid = parentMessage.getFlag('torgeternity', 'currentTarget').uuid;
-  await applyVulnerableState(targetuuid);
+  const sourceuuid = parentMessage.getFlag('torgeternity', 'test').actor;
+  await applyVulnerableState(targetuuid, sourceuuid);
 }

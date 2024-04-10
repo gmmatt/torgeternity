@@ -65,7 +65,7 @@ export default class torgeternityCardConfig extends CardConfig {
     // Handle the control action
     switch (button.dataset.action) {
       case 'addFace':
-        faces = this.object.data.faces.map((f) => f.object).concat([{}]);
+        faces = this.object.faces.map((f) => f.object).concat([{}]);
         return this.object.update({ faces });
       case 'deleteFace':
         return Dialog.confirm({
@@ -75,7 +75,7 @@ export default class torgeternityCardConfig extends CardConfig {
           )}</p>`,
           yes: () => {
             const i = Number(face.dataset.face);
-            faces = foundry.utils.deepClone(this.object.data.faces);
+            faces = foundry.utils.deepClone(this.object.faces);
             faces.splice(i, 1);
             return this.object.update({ faces });
           },

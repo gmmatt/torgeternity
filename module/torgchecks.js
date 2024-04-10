@@ -543,6 +543,8 @@ export async function renderSkillChat(test) {
             await ownToken.toggleEffect(ef, { active: false });
           }
           const eff = CONFIG.statusEffects.find((e) => e.id === 'veryVulnerable');
+          eff.origin = test.actor;
+          eff.duration = {rounds : 2, turns : 2};
           ownToken.toggleEffect(eff, { active: true });
         }
       }
@@ -1327,7 +1329,7 @@ export async function soakDamages(soaker) {
  *
  * @param targetuuid
  */
-export async function applyStymiedState(targetuuid) {
+export async function applyStymiedState(targetuuid, sourceuuid) {
   const targetToken = canvas.tokens.placeables.find((tok) =>
     tok.document.uuid.includes(targetuuid)
   );
@@ -1341,7 +1343,11 @@ export async function applyStymiedState(targetuuid) {
   } else {
     eff = CONFIG.statusEffects.find((e) => e.id === 'stymied');
   }
-  if (eff) await targetToken.toggleEffect(eff, { active: true });
+  if (eff) {    
+    eff.origin = sourceuuid;
+    eff.duration = {rounds : 1, turns : 1};
+    await targetToken.toggleEffect(eff, { active: true });
+  }
   if (oldEff) await targetToken.toggleEffect(oldEff, { active: false });
 }
 
@@ -1349,7 +1355,7 @@ export async function applyStymiedState(targetuuid) {
  *
  * @param targetuuid
  */
-export async function applyVulnerableState(targetuuid) {
+export async function applyVulnerableState(targetuuid, sourceuuid) {
   const targetToken = canvas.tokens.placeables.find((tok) =>
     targetuuid.includes(tok.document.uuid)
   );
@@ -1363,7 +1369,11 @@ export async function applyVulnerableState(targetuuid) {
   } else {
     eff = CONFIG.statusEffects.find((e) => e.id === 'vulnerable');
   }
-  if (eff) await targetToken.toggleEffect(eff, { active: true });
+  if (eff) {    
+    eff.origin = sourceuuid;
+    eff.duration = {rounds : 1, turns : 1};
+    await targetToken.toggleEffect(eff, { active: true });
+  }
   if (oldEff) await targetToken.toggleEffect(oldEff, { active: false });
 }
 

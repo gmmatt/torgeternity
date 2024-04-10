@@ -5,9 +5,9 @@ export async function setUpCardPiles() {
   const deckSetting = game.settings.get('torgeternity', 'deckSetting');
   const deckPack = game.packs.get(game.i18n.localize('torgeternity.packs.decks'));
   let deckFolder =
-    game.folders.find((folder) => folder.data.flags?.torgeternity?.usage === 'coreCards') ||
+    game.folders.find((folder) => folder.flags?.torgeternity?.usage === 'coreCards') ||
     game.folders.getName(deckPack.title);
-  if (!deckFolder || deckFolder.data.type != 'Cards') {
+  if (!deckFolder || deckFolder.type != 'Cards') {
     deckFolder = await Folder.create({
       name: deckPack.title,
       type: 'Cards',
