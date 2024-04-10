@@ -120,7 +120,8 @@
       "unskilled": "Unskilled",
       "up": "Up",
       "value": "Value",
-      "vehicleBase": "Vehicle Operation Test"
+      "vehicleBase": "Vehicle Operation Test",
+      "mayCauseContradiction": "Perks with this symbol are dependent on their cosm’s World Laws and can cause Contradictions outside that cosm."
     },
     "clearances": {
       "alpha": "Alpha",
@@ -405,7 +406,7 @@
       "prerequisites": "Prerequisites",
       "timestaken": "Times Taken",
       "generalContradiction": "Contradictions",
-      "generalContradictionTT": "Causes contradictions outside it's cosm."
+      "generalContradictionTT": "Cause Contradictions outside of its Cosm."
     },
     "perkTypes": {
       "abomination": "Abomination",

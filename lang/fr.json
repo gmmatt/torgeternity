@@ -120,7 +120,8 @@
       "unskilled": "Incompétent",
       "up": "Un de plus !",
       "value": "Valeur",
-      "vehicleBase": "Test d'Opérateur"
+      "vehicleBase": "Test d'Opérateur",
+      "mayCauseContradiction": "Perks with this symbol are dependent on their cosm’s World Laws and can cause Contradictions outside that cosm."
     },
     "clearances": {
       "alpha": "Alpha",

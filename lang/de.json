@@ -113,7 +113,8 @@
       "unskilled": "ungelernt",
       "up": "Oberhand",
       "value": "Wert",
-      "vehicleBase": "Fahrzeugprobe"
+      "vehicleBase": "Fahrzeugprobe",
+      "mayCauseContradiction": "Vorzüge mit diesem Symbol sind abhängig von den Weltgesetzen ihres Cosm und verursachen außerhalb ihres Cosm Widersprüche."
     },
     "clearances": {
       "alpha": "Alpha",
