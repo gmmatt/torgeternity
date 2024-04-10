@@ -12,7 +12,8 @@ class ChatMessageTorg extends ChatMessage {
       const template = this.flags.template;
       const templateData = this.flags?.torgeternity?.test ?? this.flags.data;
       const renderedTemplate = await renderTemplate(template, templateData);
-      html.querySelector('.message-content').innerHTML = renderedTemplate;
+      const enrichedHTML = await TextEditor.enrichHTML(renderedTemplate);
+      html.querySelector('.message-content').innerHTML = enrichedHTML;
     }
     return $html;
   }
