@@ -9,6 +9,7 @@
 - 'Find' is now available as DN for stealthy tests [#387](https://github.com/gmmatt/torgeternity/issues/387)
 - Perks now have the "Ground Sloth" & "Special / Homebrew" categories for your own needs, and adding a new box for general contradictions that will be displayed in the chat cards [#389](https://github.com/gmmatt/torgeternity/issues/389)
 - Corrections on DataModels
+- Chat cards do have now enriched HTML, as well as item descriptions in character's gear
 
 ## v. 3.7.2
 
