@@ -3,13 +3,18 @@
 ## v. 3.7.3
 
 - Better migrations for active defense, that were active in existing worlds
-- Style-Fix for vehicle addon item [#383](https://github.com/gmmatt/torgeternity/issues/383)
 - Style-rearrangement on perk item, prerequisites are now on a more comfortable place [#158](https://github.com/gmmatt/torgeternity/issues/158)
-- Style-fix on general Chat-Cards holding item informations [#208](https://github.com/gmmatt/torgeternity/issues/208)
 - 'Find' is now available as DN for stealthy tests [#387](https://github.com/gmmatt/torgeternity/issues/387)
 - Perks now have the "Ground Sloth" & "Special / Homebrew" categories for your own needs, and adding a new box for general contradictions that will be displayed in the chat cards [#389](https://github.com/gmmatt/torgeternity/issues/389)
-- Corrections on DataModels
 - Chat cards do have now enriched HTML, as well as item descriptions in character's gear
+- Stymied & vulnerable effects do now have a duration.
+- Bug- and stylefixes:
+  - Style-Fix for vehicle addon item [#383](https://github.com/gmmatt/torgeternity/issues/383)
+  - Style-fix on general Chat-Cards holding item informations [#208](https://github.com/gmmatt/torgeternity/issues/208)
+  - Corrections on DataModels
+  - The equipped item now shows colour again
+  - Size of characters are fixed
+  - Recovered TinyMCE CSS File that got lost on the way
 
 ## v. 3.7.2
 
