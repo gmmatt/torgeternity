@@ -15,6 +15,7 @@
   - The equipped item now shows colour again
   - Size of characters are fixed
   - Recovered TinyMCE CSS File that got lost on the way
+  - Not really a fix, but updated all item editor fields to ProseMirror engine, because TinyMCE won't work anymore correctly and isn't supported anymore
 
 ## v. 3.7.2
 
