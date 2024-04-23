@@ -16,6 +16,7 @@ export async function renderSkillChat(test) {
   } catch (e) {}
   test.applyDebuffLabel = 'display:none';
   test.applyDamLabel = 'display:none';
+  test.backlashLabel = 'display:none';
   for (let i = 0; i < test.targetAll.length; i++) {
     const target = test.targetAll[i];
     test.target = target;
@@ -639,6 +640,9 @@ export async function renderSkillChat(test) {
     if (testDifference < 0) {
       test.outcome = game.i18n.localize('torgeternity.chatText.check.result.failure');
       // test.outcomeColor = "color: red"
+      if (test.testType === 'power') {
+        test.backlashLabel = 'display:inline';
+      }
       if (game.settings.get('torgeternity', 'useColorBlindnessColors')) {
         test.outcomeColor = 'color: red';
       } else {
@@ -704,6 +708,7 @@ export async function renderSkillChat(test) {
         test.resultTextColor +=
           ';text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000, 0px 0px 15px black;';
       }
+      test.backlashLabel = 'display:inline';
       test.actionTotalLabel = 'display:none';
       test.possibilityStyle = 'display:none';
       test.upStyle = 'display:none';
@@ -1284,10 +1289,99 @@ export async function applyDamages(damageObject, targetuuid) {
     ui.notifications.warn(game.i18n.localize('torgeternity.notifications.noTarget'));
   }
 }
-
+//
 /**
  *
- * @param soaker
+ * Apply 1 shock on a targetuuid
+ * @param targetuuid
+ */
+export async function backlash1(targetuuid) {
+  const targetToken = canvas.tokens.placeables.find((tok) =>
+    targetuuid.includes(tok.document.uuid)
+  );
+  // checking if user has target
+  if (targetToken) {
+    if (targetToken.actor.type !== 'vehicle') {
+      // computing new values
+      const newShock = targetToken.actor.system.shock.value + 1;
+      // updating the target token's  actor
+      await targetToken.actor.update({
+        'system.shock.value': newShock,
+      });
+      // too many shocks, apply KO if not dead
+      if (newShock > targetToken.actor.system.shock.max) {
+        if (!targetToken.actor.statuses.find((d) => d === 'unconscious')) {
+          if (!targetToken.actor.statuses.find((d) => d === 'dead')) {
+            const eff = CONFIG.statusEffects.find((e) => e.id === 'unconscious');
+            await targetToken.toggleEffect(eff, { active: true, overlay: true });
+          }
+        }
+      }
+    }
+  } else {
+    ui.notifications.warn(game.i18n.localize('torgeternity.notifications.noTarget'));
+  }
+}
+/**
+ * Apply 2 shocks on a targetuuid
+ * @param targetuuid
+ */
+export async function backlash2(targetuuid) {
+  const targetToken = canvas.tokens.placeables.find((tok) =>
+    targetuuid.includes(tok.document.uuid)
+  );
+  // checking if user has target
+  if (targetToken) {
+    if (targetToken.actor.type !== 'vehicle') {
+      // computing new values
+      const newShock = targetToken.actor.system.shock.value + 2;
+      // updating the target token's  actor
+      await targetToken.actor.update({
+        'system.shock.value': newShock,
+      });
+      // too many shocks, apply KO if not dead
+      if (newShock > targetToken.actor.system.shock.max) {
+        if (!targetToken.actor.statuses.find((d) => d === 'unconscious')) {
+          if (!targetToken.actor.statuses.find((d) => d === 'dead')) {
+            const eff = CONFIG.statusEffects.find((e) => e.id === 'unconscious');
+            await targetToken.toggleEffect(eff, { active: true, overlay: true });
+          }
+        }
+      }
+    }
+  } else {
+    ui.notifications.warn(game.i18n.localize('torgeternity.notifications.noTarget'));
+  }
+}
+/**
+ * Apply veryStymied on a targetuuid
+ * @param targetuuid
+ */
+export async function backlash3(targetuuid) {
+  const targetToken = canvas.tokens.placeables.find((tok) =>
+    targetuuid.includes(tok.document.uuid)
+  );
+  console.log(targetToken);
+  // apply Stymied, or veryStymied
+  let eff;
+  let oldEff;
+  if (targetToken.actor.statuses.find((d) => d === 'veryStymied')) {
+  } else if (targetToken.actor.statuses.find((d) => d === 'stymied')) {
+    oldEff = CONFIG.statusEffects.find((e) => e.id === 'stymied');
+    eff = CONFIG.statusEffects.find((e) => e.id === 'veryStymied');
+  } else {
+    eff = CONFIG.statusEffects.find((e) => e.id === 'veryStymied');
+  }
+  if (eff) {    
+    eff.origin = targetuuid;
+    eff.duration = {rounds : 1, turns : 1};
+    await targetToken.toggleEffect(eff, { active: true });
+  }
+  if (oldEff) await targetToken.toggleEffect(oldEff, { active: false });
+}
+//
+/**
+ *@param soaker
  */
 export async function soakDamages(soaker) {
   const skillName = 'reality';
@@ -1326,7 +1420,7 @@ export async function soakDamages(soaker) {
 }
 
 /**
- *
+ * increase Stymied effect one step, up to VeryStymied
  * @param targetuuid
  */
 export async function applyStymiedState(targetuuid, sourceuuid) {
@@ -1352,7 +1446,7 @@ export async function applyStymiedState(targetuuid, sourceuuid) {
 }
 
 /**
- *
+ * increase Vulnerable effect one step, up to VeryVulnerable
  * @param targetuuid
  */
 export async function applyVulnerableState(targetuuid, sourceuuid) {
