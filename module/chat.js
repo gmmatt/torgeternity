@@ -2,6 +2,9 @@ import { renderSkillChat } from './torgchecks.js';
 import { torgBD } from './torgchecks.js';
 import { torgDamage } from './torgchecks.js';
 import { applyDamages } from './torgchecks.js';
+import { backlash1 } from './torgchecks.js';
+import { backlash2 } from './torgchecks.js';
+import { backlash3 } from './torgchecks.js';
 import { soakDamages } from './torgchecks.js';
 import { applyStymiedState } from './torgchecks.js';
 import { applyVulnerableState } from './torgchecks.js';
@@ -25,6 +28,9 @@ export function addChatListeners(html) {
   html.on('click', 'a.soakDam', soakDam);
   html.on('click', 'a.applyStymied', applyStym);
   html.on('click', 'a.applyVulnerable', applyVul);
+  html.on('click', 'a.backlash1', applyBacklash1);
+  html.on('click', 'a.backlash2', applyBacklash2);
+  html.on('click', 'a.backlash3', applyBacklash3);
 }
 
 async function parentDeleteByTime(oldMsg) {
@@ -348,7 +354,7 @@ async function soakDam(event) {
     return;
   }
   const soaker = fromUuidSync(targetuuid).actor; // game.actors.get(targetid) ?? game.user.character) ?? Array.from(game.user.targets)[0].actor;
-  // ///
+  //
   let possPool = parseInt(soaker.system.other.possibilities);
   // 0 => if GM ask for confirm, or return message "no poss"
   if ((possPool <= 0) & !game.user.isGM) {
@@ -437,4 +443,37 @@ async function applyVul(event) {
   const targetuuid = parentMessage.getFlag('torgeternity', 'currentTarget').uuid;
   const sourceuuid = parentMessage.getFlag('torgeternity', 'test').actor;
   await applyVulnerableState(targetuuid, sourceuuid);
+}
+
+/**
+ * call backlash1 on targetuuid
+ * @param event
+ */
+async function applyBacklash1(event) {
+  const parentMessageId = event.currentTarget.closest('.chat-message').dataset.messageId;
+  const parentMessage = game.messages.find(({ id }) => id === parentMessageId);
+  const targetuuid = parentMessage.getFlag('torgeternity', 'test').actor;
+  await backlash1(targetuuid);
+}
+
+/**
+ * call backlash2 on targetuuid
+ * @param event
+ */
+async function applyBacklash2(event) {
+  const parentMessageId = event.currentTarget.closest('.chat-message').dataset.messageId;
+  const parentMessage = game.messages.find(({ id }) => id === parentMessageId);
+  const targetuuid = parentMessage.getFlag('torgeternity', 'test').actor;
+  await backlash2(targetuuid);
+}
+
+/**
+ * call backlash3 on targetuuid
+ * @param event
+ */
+async function applyBacklash3(event) {
+  const parentMessageId = event.currentTarget.closest('.chat-message').dataset.messageId;
+  const parentMessage = game.messages.find(({ id }) => id === parentMessageId);
+  const targetuuid = parentMessage.getFlag('torgeternity', 'test').actor;
+  await backlash3(targetuuid);
 }
