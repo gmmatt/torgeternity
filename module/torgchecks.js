@@ -546,6 +546,13 @@ export async function renderSkillChat(test) {
           eff.origin = test.actor;
           eff.duration = {rounds : 2, turns : 2};
           ownToken.toggleEffect(eff, { active: true });
+          await ownToken.toggleEffect(eff, { active: true });
+        } else {
+          const eff = CONFIG.statusEffects.find((e) => e.id === 'veryVulnerable');
+          await ownToken.toggleEffect(eff, { active: false });
+          eff.origin = test.actor;
+          eff.duration = { rounds: 2, turns: 2 };
+          await ownToken.toggleEffect(eff, { active: true });
         }
       }
     }
