@@ -1312,7 +1312,7 @@ export async function backlash1(targetuuid) {
   if (targetToken) {
     if (targetToken.actor.type !== 'vehicle') {
       // computing new values
-      const newShock = targetToken.actor.system.shock.value + 1;
+      const newShock = targetToken.actor.system.shock.value + 2;
       // updating the target token's  actor
       await targetToken.actor.update({
         'system.shock.value': newShock,
@@ -1343,7 +1343,7 @@ export async function backlash2(targetuuid) {
   if (targetToken) {
     if (targetToken.actor.type !== 'vehicle') {
       // computing new values
-      const newShock = targetToken.actor.system.shock.value + 2;
+      const newShock = targetToken.actor.system.shock.value + 1;
       // updating the target token's  actor
       await targetToken.actor.update({
         'system.shock.value': newShock,

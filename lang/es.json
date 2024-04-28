@@ -748,8 +748,8 @@
       "backlash1": "Backlash",
       "backlash2": "Reduced Backlash",
       "backlash3": "Headache !",
-      "backlash1Tooltip": "Aplica 1 shock",
-      "backlash2Tooltip": "Aplica 2 shocks",
+      "backlash1Tooltip": "Aplica 2 shocks",
+      "backlash2Tooltip": "Aplica 1 shock",
       "backlash3Tooltip": "Aplica Muy Impedido"
     },
     "sizes": {
