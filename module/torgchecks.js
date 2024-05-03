@@ -1306,7 +1306,7 @@ export async function applyDamages(damageObject, targetuuid) {
  */
 export async function backlash1(targetuuid) {
   const targetToken = canvas.tokens.placeables.find((tok) =>
-    targetuuid.includes(tok.document.uuid)
+    targetuuid.includes(tok.document.actorId)
   );
   // checking if user has target
   if (targetToken) {
@@ -1337,7 +1337,7 @@ export async function backlash1(targetuuid) {
  */
 export async function backlash2(targetuuid) {
   const targetToken = canvas.tokens.placeables.find((tok) =>
-    targetuuid.includes(tok.document.uuid)
+    targetuuid.includes(tok.document.actorId)
   );
   // checking if user has target
   if (targetToken) {
@@ -1368,9 +1368,8 @@ export async function backlash2(targetuuid) {
  */
 export async function backlash3(targetuuid) {
   const targetToken = canvas.tokens.placeables.find((tok) =>
-    targetuuid.includes(tok.document.uuid)
+    targetuuid.includes(tok.document.actorId)
   );
-  console.log(targetToken);
   // apply Stymied, or veryStymied
   let eff;
   let oldEff;
