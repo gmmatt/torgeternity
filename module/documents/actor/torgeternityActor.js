@@ -128,7 +128,7 @@ export default class TorgeternityActor extends Actor {
       listRun
         .filter((ef) => ef.mode === 1)
         .forEach((ef) => {
-          computeRun = parseInt(computeRun * (ef.value);
+          computeRun = parseInt(computeRun * ef.value);
         });
       // Modify minimum
       listRun
