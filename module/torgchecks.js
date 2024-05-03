@@ -544,10 +544,12 @@ export async function renderSkillChat(test) {
           }
           const eff = CONFIG.statusEffects.find((e) => e.id === 'veryVulnerable');
           eff.origin = test.actor;
-          eff.duration = {rounds : 2, turns : 2};
-          ownToken.toggleEffect(eff, { active: true });
+          eff.duration = { rounds: 2, turns: 2 };
           await ownToken.toggleEffect(eff, { active: true });
-        } else {
+        } else if (
+          ownToken.actor.appliedEffects.find((d) => d.statuses.find((e) => e === 'veryVulnerable'))
+            .duration.turns != 2
+        ) {
           const eff = CONFIG.statusEffects.find((e) => e.id === 'veryVulnerable');
           await ownToken.toggleEffect(eff, { active: false });
           eff.origin = test.actor;
@@ -1350,9 +1352,9 @@ export async function applyStymiedState(targetuuid, sourceuuid) {
   } else {
     eff = CONFIG.statusEffects.find((e) => e.id === 'stymied');
   }
-  if (eff) {    
+  if (eff) {
     eff.origin = sourceuuid;
-    eff.duration = {rounds : 1, turns : 1};
+    eff.duration = { rounds: 1, turns: 1 };
     await targetToken.toggleEffect(eff, { active: true });
   }
   if (oldEff) await targetToken.toggleEffect(oldEff, { active: false });
@@ -1376,9 +1378,9 @@ export async function applyVulnerableState(targetuuid, sourceuuid) {
   } else {
     eff = CONFIG.statusEffects.find((e) => e.id === 'vulnerable');
   }
-  if (eff) {    
+  if (eff) {
     eff.origin = sourceuuid;
-    eff.duration = {rounds : 1, turns : 1};
+    eff.duration = { rounds: 1, turns: 1 };
     await targetToken.toggleEffect(eff, { active: true });
   }
   if (oldEff) await targetToken.toggleEffect(oldEff, { active: false });
