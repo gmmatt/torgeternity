@@ -8,6 +8,7 @@
 - Perks now have the "Ground Sloth" & "Special / Homebrew" categories for your own needs, and adding a new box for general contradictions that will be displayed in the chat cards [#389](https://github.com/gmmatt/torgeternity/issues/389)
 - Chat cards do have now enriched HTML, as well as item descriptions in character's gear
 - Stymied & vulnerable effects do now have a duration.
+- Chatcards now will offer backlashes and headaches in case of a failed power test.
 - Bug- and stylefixes:
   - Style-Fix for vehicle addon item [#383](https://github.com/gmmatt/torgeternity/issues/383)
   - Style-fix on general Chat-Cards holding item informations [#208](https://github.com/gmmatt/torgeternity/issues/208)
