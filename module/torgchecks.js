@@ -717,7 +717,7 @@ export async function renderSkillChat(test) {
         test.resultTextColor +=
           ';text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000, 0px 0px 15px black;';
       }
-      test.backlashLabel = 'display:inline';
+      //test.backlashLabel = 'display:inline';
       test.actionTotalLabel = 'display:none';
       test.possibilityStyle = 'display:none';
       test.upStyle = 'display:none';
