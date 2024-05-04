@@ -75,7 +75,7 @@ export default class TorgeternityActor extends Actor {
       let computeMove = this.system.other.move;
       this.appliedEffects.forEach((ef) =>
         ef.changes.forEach((k) => {
-          if (k.key === 'system.other.move') listChanges.push(k);
+          if (k.key === 'system.other.moveMod') listChanges.push(k);
         })
       );
       // Modify +/-
