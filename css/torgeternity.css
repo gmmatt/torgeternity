@@ -1970,12 +1970,17 @@ p.skill-chat-title.skilled {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
+  gap: 5px;
+  flex-flow: wrap;
 }
 
 .applyDam,
 .soakDam,
 .applyStymied,
 .applyVulnerable,
+.backlash1,
+.backlash2,
+.backlash3,
 .chat-message .roll-fav,
 .chat-message .roll-possibility,
 .chat-message .roll-up,

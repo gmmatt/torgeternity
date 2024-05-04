@@ -737,7 +737,13 @@
       "wounds": "Wunden",
       "xp": "EP",
       "xpOnlyGM": "Nur die SL darf das füllen",
-      "toolTipClickToAdd": "klicke, um die Fertigkeit der Zugriffliste hinzuzufügen oder zu löschen"
+      "toolTipClickToAdd": "klicke, um die Fertigkeit der Zugriffliste hinzuzufügen oder zu löschen",
+      "backlash1": "Rückkopplung",
+      "backlash2": "Reduzierte\nRückkopplung",
+      "backlash3": "Kopfschmerzen!",
+      "backlash1Tooltip": "Apply 2 shocks",
+      "backlash2Tooltip": "Apply 1 shock",
+      "backlash3Tooltip": "Apply Very Stymied"
     },
     "sizes": {
       "large": "Groß",

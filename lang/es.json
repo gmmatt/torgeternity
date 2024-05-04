@@ -744,7 +744,13 @@
       "wounds": "Heridas",
       "xp": "PX",
       "xpOnlyGM": "only GM can fill",
-      "toolTipClickToAdd": "pulse para añadir o eliminar la competencia de la lista de acceso"
+      "toolTipClickToAdd": "pulse para añadir o eliminar la competencia de la lista de acceso",
+      "backlash1": "Backlash",
+      "backlash2": "Reduced Backlash",
+      "backlash3": "Headache !",
+      "backlash1Tooltip": "Aplica 2 shocks",
+      "backlash2Tooltip": "Aplica 1 shock",
+      "backlash3Tooltip": "Aplica Muy Impedido"
     },
     "sizes": {
       "large": "Grande",
