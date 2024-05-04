@@ -1970,6 +1970,8 @@ p.skill-chat-title.skilled {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
+  gap: 5px;
+  flex-flow: wrap;
 }
 
 .applyDam,
