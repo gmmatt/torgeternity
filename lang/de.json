@@ -551,6 +551,10 @@
       "welcome": {
         "hint": "Wenn ausgewählt, erscheint beim Laden die Willkommensnachricht",
         "name": "Willkommensnachricht anzeigen"
+      },
+      "uniqueDN": {
+        "hint": "If checked, when a multi-target test is done, will keep the highest DN from all targets to determine outcome, as RAW.",
+        "name": "Unique DN"
       }
     },
     "sheetLabels": {

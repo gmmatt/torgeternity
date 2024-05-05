@@ -558,6 +558,10 @@
       "showCheckDetails": {
         "hint": "Si coché, les détails des tests seront affichés par défaut.",
         "name": "Montrer les détails des tests"
+      },
+      "uniqueDN": {
+        "hint": "Si coché, durant une attaque en multi-cibles, garde le DN le plus élevé pour déterminer le résultat sur toutes les cibles (Règle).",
+        "name": "DN unique"
       }
     },
     "sheetLabels": {
