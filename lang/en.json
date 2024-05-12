@@ -636,6 +636,8 @@
       "implants": "Implants",
       "inactiveEffects": "Inactive Effects",
       "inputExisting": "Input Existing",
+      "inputExistingRdbTitle": "When engaged in multi-actions, check this box to input the bonus number from a previous test.",
+      "inputExistingTitle": "Input BONUS NUMBER from previous test, not die total.",
       "interactionAttacks": "Interaction Attacks",
       "interactionSkills": "Interaction",
       "keep": "Keep",

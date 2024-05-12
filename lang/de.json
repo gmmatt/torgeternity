@@ -629,6 +629,8 @@
       "implants": "Implantate",
       "inactiveEffects": "Inaktive Effekte",
       "inputExisting": "Vorheriger Würfelbonus",
+      "inputExistingRdbTitle": "Bei einer Mehrfachaktion hier auswählen.",
+      "inputExistingTitle": "Hier den vorherigen WÜRFELBONUS eingeben, nicht den Wurf an sich.",
       "interactionAttacks": "Interaktionsangriffe",
       "interactionSkills": "Interaktion",
       "keep": "Behalten",
