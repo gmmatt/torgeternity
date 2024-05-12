@@ -640,6 +640,8 @@
       "implants": "Implantes",
       "inactiveEffects": "Efecto Inactivo",
       "inputExisting": "Valor Directo",
+      "inputExistingTitle": "Input BONUS NUMBER from previous test, not die total.",
+      "inputExistingRdbTitle": "Cuando participe en multiacciones, marque esta casilla para introducir el número de bonificación de una prueba anterior.",
       "interactionAttacks": "Ataque Interacción",
       "interactionSkills": "Interaction",
       "keep": "Misma",

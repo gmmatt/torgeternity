@@ -205,6 +205,17 @@ export class TestDialog extends FormApplication {
   activateListeners(html) {
     html.find('.skill-roll-button').click(this._onRoll.bind(this));
 
+    const bonusText = html[0].querySelector('#bonus-text');
+
+    bonusText.addEventListener('change', (event) => {
+      console.log(document);
+      if (isNaN(parseInt(event.currentTarget.value))) {
+        document.getElementById('roll').checked = true;
+      } else {
+        document.getElementById('previous-bonus').checked = true;
+      }
+    });
+
     super.activateListeners(html);
   }
 
