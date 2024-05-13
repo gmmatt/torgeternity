@@ -171,4 +171,13 @@ export function registerTorgSettings() {
     type: Boolean,
     default: false,
   });
+
+  game.settings.register('torgeternity', 'uniqueDN', {
+    name: 'torgeternity.settingMenu.uniqueDN.name',
+    hint: 'torgeternity.settingMenu.uniqueDN.hint',
+    scope: 'world',
+    config: true,
+    type: Boolean,
+    default: false,
+  });
 }

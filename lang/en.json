@@ -558,6 +558,10 @@
       "showCheckDetails": {
         "hint": "If checked, the details of checks will always be shown.",
         "name": "Show Details in checks"
+      },
+      "uniqueDN": {
+        "hint": "If checked, when a multi-target test is done, will keep the highest DN from all targets to determine outcome, as RAW.",
+        "name": "Unique DN"
       }
     },
     "sheetLabels": {
