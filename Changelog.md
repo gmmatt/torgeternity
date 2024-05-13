@@ -9,6 +9,7 @@
 - Chat cards do have now enriched HTML, as well as item descriptions in character's gear
 - Stymied & vulnerable effects do now have a duration.
 - Chatcards now will offer backlashes and headaches in case of a failed power test.
+- On Roll-dialogues, if a bonus number is entered into the previous roll field, the 'Input existing' radio button will now be automatically checked to support gameflow.
 - Bug- and stylefixes:
   - Style-Fix for vehicle addon item [#383](https://github.com/gmmatt/torgeternity/issues/383)
   - Style-fix on general Chat-Cards holding item informations [#208](https://github.com/gmmatt/torgeternity/issues/208)
