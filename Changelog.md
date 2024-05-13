@@ -10,6 +10,7 @@
 - Stymied & vulnerable effects do now have a duration.
 - Chatcards now will offer backlashes and headaches in case of a failed power test.
 - On Roll-dialogues, if a bonus number is entered into the previous roll field, the 'Input existing' radio button will now be automatically checked to support gameflow.
+- By RAW, the DN on a multi target attack is the highest DN. This is now implemented- as well as an option to toggle that off for houserule purposses.
 - Bug- and stylefixes:
   - Style-Fix for vehicle addon item [#383](https://github.com/gmmatt/torgeternity/issues/383)
   - Style-fix on general Chat-Cards holding item informations [#208](https://github.com/gmmatt/torgeternity/issues/208)
