@@ -208,11 +208,20 @@ export class TestDialog extends FormApplication {
     const bonusText = html[0].querySelector('#bonus-text');
 
     bonusText.addEventListener('change', (event) => {
-      console.log(document);
       if (isNaN(parseInt(event.currentTarget.value))) {
-        document.getElementById('roll').checked = true;
+        const rdb = $(event.currentTarget).parent().find('#roll');
+        const rdbNo = $(event.currentTarget).parent().find('#previous-bonus');
+        if (rdb.length > 0) {
+          rdb.prop('checked', true);
+          rdbNo.prop('checked', false);
+        }
       } else {
-        document.getElementById('previous-bonus').checked = true;
+        const rdb = $(event.currentTarget).parent().find('#previous-bonus');
+        const rdbNo = $(event.currentTarget).parent().find('#roll');
+        if (rdb.length > 0) {
+          rdb.prop('checked', true);
+          rdbNo.prop('checked', false);
+        }
       }
     });
 
