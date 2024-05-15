@@ -6,11 +6,11 @@
 - Style-rearrangement on perk item, prerequisites are now on a more comfortable place [#158](https://github.com/gmmatt/torgeternity/issues/158)
 - 'Find' is now available as DN for stealthy tests [#387](https://github.com/gmmatt/torgeternity/issues/387)
 - Perks now have the "Ground Sloth" & "Special / Homebrew" categories for your own needs, and adding a new box for general contradictions that will be displayed in the chat cards [#389](https://github.com/gmmatt/torgeternity/issues/389)
-- Chat cards do have now enriched HTML, as well as item descriptions in character's gear
+- Chat cards do have now enriched HTML, as well as item descriptions in character's gear [#386](https://github.com/gmmatt/torgeternity/pull/386)
 - Stymied & vulnerable effects do now have a duration.
-- Chatcards now will offer backlashes and headaches in case of a failed power test.
-- On Roll-dialogues, if a bonus number is entered into the previous roll field, the 'Input existing' radio button will now be automatically checked to support gameflow.
-- By RAW, the DN on a multi target attack is the highest DN. This is now implemented- as well as an option to toggle that off for houserule purposses.
+- Chatcards now will offer backlashes and headaches in case of a failed power test. [#392](https://github.com/gmmatt/torgeternity/issues/392)
+- On Roll-dialogues, if a bonus number is entered into the previous roll field, the 'Input existing' radio button will now be automatically checked to support gameflow. [#384](https://github.com/gmmatt/torgeternity/issues/384)
+- By RAW, the DN on a multi target attack is the highest DN. This is now implemented- as well as an option to toggle that off for houserule purposses (as it was implemented until now).
 - Bug- and stylefixes:
   - Style-Fix for vehicle addon item [#383](https://github.com/gmmatt/torgeternity/issues/383)
   - Style-fix on general Chat-Cards holding item informations [#208](https://github.com/gmmatt/torgeternity/issues/208)
