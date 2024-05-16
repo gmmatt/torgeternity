@@ -216,7 +216,7 @@ export class TestDialog extends FormApplication {
    * @param html
    */
   activateListeners(html) {
-    html.find('.skill-roll-button').click(this._onRoll.bind(this));
+    html.find('.test-dialog-rollbutton').click(this._onRoll.bind(this));
 
     const bonusText = html[0].querySelector('#bonus-text');
 
