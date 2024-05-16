@@ -774,6 +774,7 @@
       "disfavored": "Défavorisé",
       "disfavoredTip": "Cochez si le test est défavorisé. Le dé n'explosera sur les 10 et 20",
       "favored": "Favorisé",
+      "favoredanddisfavored": "(Dis-)Favored",
       "favoredTip": "Cochez si le test est favorisé pour une raison ponctuelle."
     },
     "skills": {

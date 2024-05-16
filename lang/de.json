@@ -767,6 +767,7 @@
       "disfavored": "Benachteiligt",
       "disfavoredTip": "Anhaken, wenn der Wurf benachteiligt ist. Der Würfelwurf wird dann nicht auf einer 10 oder 20 explodieren.",
       "favored": "Begünstigt",
+      "favoredanddisfavored": "Begünstigt/Benachteiligt",
       "favoredTip": "Setze hier einen Haken, sofern die Probe aus welchen Gründen auch immer im Nachhinein begünstigt wird."
     },
     "skills": {
