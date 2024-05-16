@@ -57,6 +57,7 @@ export class TestDialog extends FormApplication {
     const myActor = this.test.actor.includes('Token')
       ? fromUuidSync(this.test.actor)
       : fromUuidSync(this.test.actor);
+    data.test.hasModifiers = false;
 
     if (parseInt(myActor.system.wounds.value) <= 3) {
       // The wound penalties are never more than -3, regardless on how many wounds a token can suffer / have. CrB p. 117
@@ -193,6 +194,18 @@ export class TestDialog extends FormApplication {
       data.test.target = {
         present: false,
       };
+    }
+
+    if (
+      data.test?.woundModifier != 0 ||
+      data.test?.stymiedModifier != 0 ||
+      data.test?.darknessModifier != 0 ||
+      data.test?.sizeModifier != 0 ||
+      data.test?.vulnerableModifier != 0 ||
+      data.test?.speedModifier != 0 ||
+      data.test?.maneuverModifier != 0
+    ) {
+      data.test.hasModifiers = true;
     }
 
     return data;
