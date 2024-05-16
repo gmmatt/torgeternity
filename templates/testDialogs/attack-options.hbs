@@ -1,5 +1,5 @@
-<fieldset>
-  <legend>{{localize "torgeternity.sheetLabels.attackOptions"}}</legend>
+<fieldset name="attackOptionsField">
+  <legend for="attackOptionsField">{{localize "torgeternity.sheetLabels.attackOptions"}}</legend>
   <span class="skill-check-options">
     {{localize "torgeternity.sheetLabels.calledShot"}}:
     <input type="radio" id="called-shot-none" name="calledShot" value="0" checked />
@@ -12,7 +12,8 @@
     <label for="called-shot-6">-6</label>
     <input type="checkbox" id="vital-area" title="+4 Damage" name="vitalArea" value="4" />
     <label for="called-shot-damage">{{localize "torgeternity.sheetLabels.vitalArea"}}</label><br />
-
+  </span>
+  <span class="skill-check-options">
     {{localize "torgeternity.sheetLabels.burst"}}:
     <input type="radio" id="burst-none" name="burst" value="0" checked />
     <label for="burst-none">{{localize "torgeternity.sheetLabels.none"}}</label>
@@ -22,7 +23,8 @@
     <label for="burst-long">{{localize "torgeternity.sheetLabels.longBurst"}}</label>
     <input type="radio" id="burst-heavy" name="burst" title="Automatic weapons only" value="6" />
     <label for="burst-heavy">{{localize "torgeternity.sheetLabels.heavyBurst"}}</label><br />
-
+  </span>
+  <span class="skill-check-options">
     <input
       type="checkbox"
       id="all-out"
@@ -42,5 +44,5 @@
       value="trademark"
     />
     <label for="blind-fire">{{localize "torgeternity.sheetLabels.trademark"}}</label>
-  </span>
+  </span>  
 </fieldset>

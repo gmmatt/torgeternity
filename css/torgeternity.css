@@ -3608,9 +3608,57 @@ form.actor-sheet.threat .tab[data-tab].active .editor {
   font-size: 13px;
 }
 
+.test-dialog{
+  display: flex;
+  flex-direction: column;
+  max-width: 530px;
+  min-width: 530px;
+}
+
+.test-dialog > div {
+  display: flex;
+  flex-direction: row;  
+}
+
+.test-dialog > div > fieldset {
+  flex-grow: 1;
+  display:flex;
+  flex-wrap: wrap;
+  align-content: center;
+  align-items: center;
+ 
+}
+.test-dialog > div > fieldset > label {
+  font-family: "Palatino";
+}
+
+.test-dialog > div > fieldset > span {
+  display:flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+.test-dialog > div > fieldset > span > * {
+  justify-content: left;
+}
+
+.test-dialog-rollbutton {
+  margin-top: 1rem;
+  text-shadow: black 1.3px 1.3px 0px, black 1.3px -1.3px 0px, black -1.3px 1.3px 0px, black -1.3px 1.3px 0px;
+  background-image: url(../images/lightning_bar.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: center;
+  color: white;
+  cursor: pointer;
+}
+
 .skill-check-options {
   font-family: Palatino;
   font-size: 13px;
+  max-width: 100%;
 }
 
 .torg-cards-action-icons fas-fa:before {
