@@ -219,9 +219,10 @@ async function migrateAttributeAEs(items, actor = null, pack = undefined) {
     const itemData = item.toObject();
 
     itemData.effects = itemData.effects.map((effect) => {
-      effect.changes = effect.changes.map(
-        (c) => (c.key = badAttributeKeys.includes(c.key) ? c.key + '.value' : c.key)
-      );
+      effect.changes = effect.changes.map((c) => {
+        c.key = badAttributeKeys.includes(c.key) ? c.key + '.value' : c.key;
+        return c;
+      });
       return effect;
     });
     idsToDelete.push(itemData._id);
