@@ -38,35 +38,35 @@ export default class TorgeternityActor extends Actor {
       const attributes = this.system.attributes;
 
       const unarmedDamageMod = this.system.unarmedDamageMod || 0;
-      this.system.unarmedDamage = attributes.strength + unarmedDamageMod;
+      this.system.unarmedDamage = attributes.strength.value + unarmedDamageMod;
 
       // Set Defensive Values based on modified attributes
       const dodgeDefenseMod = this.system.dodgeDefenseMod || 0;
-      const dodgeDefenseSkill = skills.dodge.value || attributes.dexterity;
+      const dodgeDefenseSkill = skills.dodge.value || attributes.dexterity.value;
       this.system.dodgeDefense = dodgeDefenseSkill + dodgeDefenseMod;
 
       const meleeWeaponsDefenseMod = this.system.meleeWeaponsDefenseMod || 0;
-      const meleeWeaponsDefenseSkill = skills.meleeWeapons.value || attributes.dexterity;
+      const meleeWeaponsDefenseSkill = skills.meleeWeapons.value || attributes.dexterity.value;
       this.system.meleeWeaponsDefense = meleeWeaponsDefenseSkill + meleeWeaponsDefenseMod;
 
       const unarmedCombatDefenseMod = this.system.unarmedCombatDefenseMod || 0;
-      const unarmedCombatDefenseSkill = skills.unarmedCombat.value || attributes.dexterity;
+      const unarmedCombatDefenseSkill = skills.unarmedCombat.value || attributes.dexterity.value;
       this.system.unarmedCombatDefense = unarmedCombatDefenseSkill + unarmedCombatDefenseMod;
 
       const intimidationDefenseMod = this.system.intimidationDefenseMod || 0;
-      const intimidationDefenseSkill = skills.intimidation.value || attributes.spirit;
+      const intimidationDefenseSkill = skills.intimidation.value || attributes.spirit.value;
       this.system.intimidationDefense = intimidationDefenseSkill + intimidationDefenseMod;
 
       const maneuverDefenseMod = this.system.maneuverDefenseMod || 0;
-      const maneuverDefenseSkill = skills.maneuver.value || attributes.dexterity;
+      const maneuverDefenseSkill = skills.maneuver.value || attributes.dexterity.value;
       this.system.maneuverDefense = maneuverDefenseSkill + maneuverDefenseMod;
 
       const tauntDefenseMod = this.system.tauntDefenseMod || 0;
-      const tauntDefenseSkill = skills.taunt.value || attributes.charisma;
+      const tauntDefenseSkill = skills.taunt.value || attributes.charisma.value;
       this.system.tauntDefense = tauntDefenseSkill + tauntDefenseMod;
 
       const trickDefenseMod = this.system.trickDefenseMod || 0;
-      const trickDefenseSkill = skills.trick.value || attributes.mind;
+      const trickDefenseSkill = skills.trick.value || attributes.mind.value;
       this.system.trickDefense = trickDefenseSkill + trickDefenseMod;
     }
     // Apply the moveMod effect for SKs & threats

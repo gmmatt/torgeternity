@@ -13,11 +13,21 @@ export class CommonActorData extends foundry.abstract.TypeDataModel {
   static defineSchema() {
     return {
       attributes: new fields.SchemaField({
-        charisma: new fields.NumberField({ initial: 8, integer: true, nullable: false }),
-        dexterity: new fields.NumberField({ initial: 8, integer: true, nullable: false }),
-        mind: new fields.NumberField({ initial: 8, integer: true, nullable: false }),
-        spirit: new fields.NumberField({ initial: 8, integer: true, nullable: false }),
-        strength: new fields.NumberField({ initial: 8, integer: true, nullable: false }),
+        charisma: new fields.SchemaField({
+          base: new fields.NumberField({ initial: 8, integer: true, nullable: false }), // base: The base attribute what is raised with ep and such
+        }),
+        dexterity: new fields.SchemaField({
+          base: new fields.NumberField({ initial: 8, integer: true, nullable: false }),
+        }),
+        mind: new fields.SchemaField({
+          base: new fields.NumberField({ initial: 8, integer: true, nullable: false }),
+        }),
+        spirit: new fields.SchemaField({
+          base: new fields.NumberField({ initial: 8, integer: true, nullable: false }),
+        }),
+        strength: new fields.SchemaField({
+          base: new fields.NumberField({ initial: 8, integer: true, nullable: false }),
+        }),
       }),
       other: new fields.SchemaField({
         cosm: new fields.StringField({
@@ -92,6 +102,12 @@ export class CommonActorData extends foundry.abstract.TypeDataModel {
         ? data.other.cosm
         : 'none';
     }
+
+    for (const attribute of Object.keys(data.attributes)) {
+      if (typeof data?.attributes?.[attribute] === 'number') {
+        data.attributes[attribute] = { base: data.attributes[attribute] };
+      }
+    }
   }
 
   /**
@@ -99,8 +115,13 @@ export class CommonActorData extends foundry.abstract.TypeDataModel {
    */
   prepareBaseData() {
     super.prepareBaseData();
-    this.shock.max = this.attributes.spirit;
-    this.other.toughness = this.attributes.strength;
+    // register value of attributes so we can work further with this
+    for (const attribute of this.attributes) {
+      attribute.value = attribute.base;
+    }
+
+    this.shock.max = this.attributes.spirit.value;
+    this.other.toughness = this.attributes.strength.value;
   }
 
   /**
@@ -108,13 +129,13 @@ export class CommonActorData extends foundry.abstract.TypeDataModel {
    */
   prepareDerivedData() {
     super.prepareDerivedData();
-    this.other.move = this.attributes.dexterity;
-    this.other.run = this.attributes.dexterity * 3;
+    this.other.move = this.attributes.dexterity.value;
+    this.other.run = this.attributes.dexterity.value * 3;
     this.other.toughness += this.other.armor;
     // Derive Skill values for Storm Knights and Threats
     for (const skill of Object.values(this.skills)) {
       const trained = skill.unskilledUse === 1 || skill.adds;
-      skill.value = trained ? this.attributes[skill.baseAttribute] + skill.adds : '';
+      skill.value = trained ? this.attributes[skill.baseAttribute].value + skill.adds : '';
     }
   }
 }

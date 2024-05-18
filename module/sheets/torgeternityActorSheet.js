@@ -201,7 +201,7 @@ export default class TorgeternityActorSheet extends ActorSheet {
     const skill = this.actor.system.skills[skillNameKey];
     const value = skill.value
       ? skill.value
-      : skill.adds + this.actor.system.attributes[skill.baseAttribute];
+      : skill.adds + this.actor.system.attributes[skill.baseAttribute].value;
     const skillAttrData = {
       type: 'interaction',
       data: {
@@ -438,7 +438,7 @@ export default class TorgeternityActorSheet extends ActorSheet {
       if (!!skill) {
         const skillObject = this.actor.system.skills[skill];
         const computedAdds =
-          event.target?.value - this.actor.system.attributes[skillObject?.baseAttribute];
+          event.target?.value - this.actor.system.attributes[skillObject?.baseAttribute].value;
         await this.actor.update({
           [`system.skills.${skill}.adds`]: computedAdds,
           [`system.skills.${skill}.isThreatSkill`]: true,
@@ -583,7 +583,7 @@ export default class TorgeternityActorSheet extends ActorSheet {
       event.currentTarget.dataset.value === 'NaN'
         ? isUnskilledTest
           ? '-'
-          : this.actor.system.attributes[attributeName]
+          : this.actor.system.attributes[attributeName].value
         : event.currentTarget.dataset.value;
     let isFav;
     if (event.currentTarget.dataset.isfav === 'true') {
@@ -803,7 +803,7 @@ export default class TorgeternityActorSheet extends ActorSheet {
     let skillValue = event.currentTarget.getAttribute('data-skill-value');
 
     if (isNaN(skillValue)) {
-      skillValue = this.actor.system.attributes.dexterity;
+      skillValue = this.actor.system.attributes.dexterity.value;
     } else {
       skillValue = event.currentTarget.getAttribute('data-skill-value');
     }
@@ -953,7 +953,7 @@ export default class TorgeternityActorSheet extends ActorSheet {
       skillValue = skillData.value;
       attributes = this.actor.system.attributes;
       if (isNaN(skillValue)) {
-        skillValue = skillData.unskilledUse ? attributes[skillData.baseAttribute] : '-';
+        skillValue = skillData.unskilledUse ? attributes[skillData.baseAttribute].value : '-';
       }
     }
 
@@ -1000,19 +1000,19 @@ export default class TorgeternityActorSheet extends ActorSheet {
         adjustedDamage = weaponDamage;
         break;
       case 'strengthPlus':
-        adjustedDamage = parseInt(attributes.strength) + parseInt(weaponDamage);
+        adjustedDamage = attributes.strength.value + parseInt(weaponDamage);
         break;
       case 'charismaPlus':
-        adjustedDamage = parseInt(attributes.charisma) + parseInt(weaponDamage);
+        adjustedDamage = attributes.charisma.value + parseInt(weaponDamage);
         break;
       case 'dexterityPlus':
-        adjustedDamage = parseInt(attributes.dexterity) + parseInt(weaponDamage);
+        adjustedDamage = attributes.dexterity.value + parseInt(weaponDamage);
         break;
       case 'mindPlus':
-        adjustedDamage = parseInt(attributes.mind) + parseInt(weaponDamage);
+        adjustedDamage = attributes.mind.value + parseInt(weaponDamage);
         break;
       case 'spiritPlus':
-        adjustedDamage = parseInt(attributes.spirit) + parseInt(weaponDamage);
+        adjustedDamage = attributes.spirit.value + parseInt(weaponDamage);
         break;
       default:
         adjustedDamage = parseInt(weaponDamage);
@@ -1029,7 +1029,7 @@ export default class TorgeternityActorSheet extends ActorSheet {
       isAttack: true,
       isFav: skillData?.isFav || false,
       skillName: attackWith,
-      skillValue: Math.max(skillValue, attributes[skillData?.baseAttribute] || 0),
+      skillValue: Math.max(skillValue, attributes[skillData?.baseAttribute].value || 0),
       unskilledUse: true,
       damage: adjustedDamage,
       weaponAP: weaponData.ap,
@@ -1127,7 +1127,10 @@ export default class TorgeternityActorSheet extends ActorSheet {
         'torgeternity.skills.' + event.currentTarget.getAttribute('data-base-attribute')
       ),
       skillAdds: skillData.adds,
-      skillValue: Math.max(skillData.value, this.actor.system.attributes[skillData.baseAttribute]),
+      skillValue: Math.max(
+        skillData.value,
+        this.actor.system.attributes[skillData.baseAttribute].value
+      ),
       unskilledUse: false,
       damage: powerData.damage,
       weaponAP: powerData.ap,

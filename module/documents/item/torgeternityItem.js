@@ -182,7 +182,7 @@ export default class TorgeternityItem extends Item {
 
     const baseDamage =
       this.system.damageType == 'strengthPlus'
-        ? parseInt(this.actor.system.attributes.strength) + parseInt(this.system.damage)
+        ? this.actor.system.attributes.strength.value + parseInt(this.system.damage)
         : this.system.damage;
 
     // Retrieve the applicable skill value from the current actor
