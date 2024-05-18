@@ -29,11 +29,11 @@ torgeternity.viewMode = {
   UI: true,
 };
 torgeternity.attributeTypes = {
-  charisma: 'torgeternity.attributes.charisma',
-  dexterity: 'torgeternity.attributes.dexterity',
-  mind: 'torgeternity.attributes.mind',
-  spirit: 'torgeternity.attributes.spirit',
-  strength: 'torgeternity.attributes.strength',
+  charisma: 'torgeternity.attributes.charisma.value',
+  dexterity: 'torgeternity.attributes.dexterity.value',
+  mind: 'torgeternity.attributes.mind.value',
+  spirit: 'torgeternity.attributes.spirit.value',
+  strength: 'torgeternity.attributes.strength.value',
 };
 
 torgeternity.cosmTypes = {

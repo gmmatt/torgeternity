@@ -57,7 +57,7 @@ export class ThreatData extends CommonActorData {
           skill.adds = parseInt(skill.adds) || 0;
         }
         if (Object.hasOwn(skill, 'value') && parseInt(skill.value) > 0) {
-          skill.adds = parseInt(skill.value) - parseInt(data.attributes[skill.baseAttribute]);
+          skill.adds = parseInt(skill.value) - parseInt(data.attributes[skill.baseAttribute].value);
         }
       }
     }

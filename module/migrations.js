@@ -154,6 +154,32 @@ export async function torgMigration() {
       }
     }
 
+    if (isNewerVersion('3.8.0', migrationVersion)) {
+      for (const actor of game.actors) {
+        migrateAttributeAEs(actor.items, actor); // migrate all items on world actors
+      }
+      migrateAttributeAEs(game.items); // migrate all items in world
+
+      // following: migrate all packs, first actors, then items
+      for (const pack of game.packs.filter((p) => p.documentName === 'Actor')) {
+        const wasLocked = pack.locked;
+        pack.configure({ locked: false });
+        const actorDatas = await pack.getDocuments();
+        for (const actor of actorDatas) {
+          migrateAttributeAEs(actor.items, actor);
+        }
+        pack.configure({ locked: wasLocked });
+      }
+
+      for (const pack of game.packs.filter((p) => p.documentName === 'Item')) {
+        const wasLocked = pack.locked;
+        pack.configure({ locked: false });
+        const itemDatas = await pack.getDocuments();
+        migrateAttributeAEs(itemDatas, null, pack.collection);
+
+        pack.configure({ locked: wasLocked });
+      }
+    }
     /**
    ***********************************************************
     New migrations go here.
@@ -171,6 +197,42 @@ export async function torgMigration() {
 
     ui.notifications.info('System Migration Complete');
   }
+}
+
+async function migrateAttributeAEs(items, actor = null, pack = null) {
+  itemsToCreate = [];
+  idsToDelete = [];
+  const badAttributeKeys = [
+    'system.attributes.charisma',
+    'system.attributes.mind',
+    'system.attributes.strength',
+    'system.attributes.dexterity',
+    'system.attributes.spirit',
+  ];
+
+  for (const item of items) {
+    if (item.effects.some((e) => e.changes.some((c) => !badAttributeKeys.includes(c.key))))
+      continue;
+
+    const itemData = item.toObject();
+
+    itemData.effects = itemData.effects.map((effect) => {
+      effect.changes = effect.changes.map(
+        (c) => (c.key = badAttributeKeys.includes(c.key) ? c.key + '.value' : c.key)
+      );
+      return effect;
+    });
+    idsToDelete.push(itemData._id);
+    itemsToCreate.push(itemData);
+  }
+  if (actor) {
+    await actor.deleteEmbeddedDocuments('Item', idsToDelete);
+    await actor.createEmbeddedDocuments('Item', itemsToCreate, { keepId: true });
+
+    return;
+  }
+
+  await Item.updateDocuments(itemsToCreate, { parent: { pack } });
 }
 
 // Function to test if a world is a new world, to hude my hacky approach under a nice rug
