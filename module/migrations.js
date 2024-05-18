@@ -155,10 +155,12 @@ export async function torgMigration() {
     }
 
     if (isNewerVersion('3.8.0', migrationVersion)) {
+      ui.notifications.info('System Migration running');
+
       for (const actor of game.actors) {
-        migrateAttributeAEs(actor.items, actor); // migrate all items on world actors
+        await migrateAttributeAEs(actor.items, actor); // migrate all items on world actors
       }
-      migrateAttributeAEs(game.items); // migrate all items in world
+      await migrateAttributeAEs(game.items); // migrate all items in world
 
       // following: migrate all packs, first actors, then items
       for (const pack of game.packs.filter((p) => p.documentName === 'Actor')) {
@@ -166,7 +168,7 @@ export async function torgMigration() {
         pack.configure({ locked: false });
         const actorDatas = await pack.getDocuments();
         for (const actor of actorDatas) {
-          migrateAttributeAEs(actor.items, actor);
+          await migrateAttributeAEs(actor.items, actor);
         }
         pack.configure({ locked: wasLocked });
       }
@@ -175,7 +177,7 @@ export async function torgMigration() {
         const wasLocked = pack.locked;
         pack.configure({ locked: false });
         const itemDatas = await pack.getDocuments();
-        migrateAttributeAEs(itemDatas, null, pack.collection);
+        await migrateAttributeAEs(itemDatas, null, pack.collection);
 
         pack.configure({ locked: wasLocked });
       }
@@ -199,9 +201,9 @@ export async function torgMigration() {
   }
 }
 
-async function migrateAttributeAEs(items, actor = null, pack = null) {
-  itemsToCreate = [];
-  idsToDelete = [];
+async function migrateAttributeAEs(items, actor = null, pack = undefined) {
+  const itemsToCreate = [];
+  const idsToDelete = [];
   const badAttributeKeys = [
     'system.attributes.charisma',
     'system.attributes.mind',
@@ -232,7 +234,7 @@ async function migrateAttributeAEs(items, actor = null, pack = null) {
     return;
   }
 
-  await Item.updateDocuments(itemsToCreate, { parent: { pack } });
+  await Item.updateDocuments(itemsToCreate, { pack });
 }
 
 // Function to test if a world is a new world, to hude my hacky approach under a nice rug

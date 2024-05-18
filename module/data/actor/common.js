@@ -116,8 +116,8 @@ export class CommonActorData extends foundry.abstract.TypeDataModel {
   prepareBaseData() {
     super.prepareBaseData();
     // register value of attributes so we can work further with this
-    for (const attribute of this.attributes) {
-      attribute.value = attribute.base;
+    for (const attribute of Object.keys(this.attributes)) {
+      this.attributes[attribute].value = this.attributes[attribute].base;
     }
 
     this.shock.max = this.attributes.spirit.value;
