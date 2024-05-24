@@ -7,8 +7,7 @@
 <ul class="attribut-list">
 
   <!-- iterate each attribute individually to avoid a problem with data structures in sheets created under early versions of system -->
-  <li class="attribut-block">
-    
+  <li class="attribut-block">    
     <a
       class="skill-roll"
       data-testType="attribute"
@@ -19,15 +18,17 @@
       data-unskilledUse="1"
     >
     {{localize "torgeternity.attributes.charisma"}}
-    
-    {{#if actor.flags.torgeternity.editAttributes}}
-    <a class="decreaseAttribute"
-       data-concernedAttribute="charisma"
-    >
-    <i class="fa-solid fa-minus changeAttributeSubstract"></i>
     </a>
+
+    {{#if actor.flags.torgeternity.editAttributes}}
+      <a
+      class="increaseAttribute"
+      data-concernedAttribute="charisma"
+      >
+      <i class="fa-solid fa-plus changeAttributeAdd"></i>
+      </a>
     {{/if}}
-    
+        
     <input
       name="system.attributes.charisma.value"
       type="number"
@@ -35,15 +36,14 @@
       data-dtype="Number"
       readonly="true"
     />
-
     {{#if actor.flags.torgeternity.editAttributes}}
-    <a
-      class="increaseAttribute"
-      data-concernedAttribute="charisma"
+      <a class="decreaseAttribute"
+        data-concernedAttribute="charisma"
       >
-    <i class="fa-solid fa-plus changeAttributeAdd"></i>
+      <i class="fa-solid fa-minus changeAttributeSubstract"></i>
+      </a>
     {{/if}}
-    
+
     </a>
   </li>
 
@@ -57,15 +57,15 @@
       data-adds="0"
       data-unskilledUse="1"
     >
-      {{localize "torgeternity.attributes.dexterity"}}
+    {{localize "torgeternity.attributes.dexterity"}}
     </a>
-
     {{#if actor.flags.torgeternity.editAttributes}}
-    <a class="decreaseAttribute"
-    data-concernedAttribute="dexterity"
-    >
-    <i class="fa-solid fa-minus changeAttributeSubstract"></i>
-    </a>
+      <a
+        class="increaseAttribute"
+        data-concernedAttribute="dexterity"
+        >
+      <i class="fa-solid fa-plus changeAttributeAdd"></i>
+      </a>
     {{/if}}
     
     <input
@@ -77,14 +77,12 @@
     />
 
     {{#if actor.flags.torgeternity.editAttributes}}
-    <a
-      class="increaseAttribute"
+      <a class="decreaseAttribute"
       data-concernedAttribute="dexterity"
       >
-    <i class="fa-solid fa-plus changeAttributeAdd"></i>
-    </a>
-    {{/if}}
-    
+      <i class="fa-solid fa-minus changeAttributeSubstract"></i>
+      </a>
+    {{/if}}    
   </li>
 
   <li class="attribut-block">
@@ -99,17 +97,6 @@
     >
       {{localize "torgeternity.attributes.mind"}}
     </a>
-
-    {{#if actor.flags.torgeternity.editAttributes}}
-    <a class="decreaseAttribute"
-       data-concernedAttribute="mind"
-    >
-    <i class="fa-solid fa-minus changeAttributeSubstract"></i>
-    </a>
-    {{/if}}
-
-    <input name="system.attributes.mind.value" type="number" value="{{actor.system.attributes.mind.value}}" data-dtype="Number" readonly="true"/>
-    
     {{#if actor.flags.torgeternity.editAttributes}}
     <a
       class="increaseAttribute"
@@ -119,6 +106,15 @@
     </a>
     {{/if}}
 
+    <input name="system.attributes.mind.value" type="number" value="{{actor.system.attributes.mind.value}}" data-dtype="Number" readonly="true"/>
+    
+    {{#if actor.flags.torgeternity.editAttributes}}
+    <a class="decreaseAttribute"
+       data-concernedAttribute="mind"
+    >
+    <i class="fa-solid fa-minus changeAttributeSubstract"></i>
+    </a>
+    {{/if}}
   </li>
 
   <li class="attribut-block">
@@ -133,13 +129,13 @@
     >
       {{localize "torgeternity.attributes.spirit"}}
     </a>
-
     {{#if actor.flags.torgeternity.editAttributes}}
-    <a class="decreaseAttribute"
-    data-concernedAttribute="spirit"
-    >
-    <i class="fa-solid fa-minus changeAttributeSubstract"></i>
-    </a>
+      <a
+        class="increaseAttribute"
+        data-concernedAttribute="spirit"
+        >
+      <i class="fa-solid fa-plus changeAttributeAdd"></i>
+      </a>
     {{/if}}
     
     <input
@@ -149,15 +145,14 @@
       data-dtype="Number"
       readonly="true"
     />
-
     {{#if actor.flags.torgeternity.editAttributes}}
-    <a
-      class="increaseAttribute"
+      <a class="decreaseAttribute"
       data-concernedAttribute="spirit"
       >
-    <i class="fa-solid fa-plus changeAttributeAdd"></i>
-    </a>
-    {{/if}}
+      <i class="fa-solid fa-minus changeAttributeSubstract"></i>
+      </a>
+    {{/if}} 
+    
   </li>
 
   <li class="attribut-block">
@@ -172,12 +167,12 @@
     >
       {{localize "torgeternity.attributes.strength"}}
     </a>
-
     {{#if actor.flags.torgeternity.editAttributes}}
-    <a class="decreaseAttribute"
-    data-concernedAttribute="strength"
-    >
-    <i class="fa-solid fa-minus changeAttributeSubstract"></i>
+    <a
+      class="increaseAttribute"
+      data-concernedAttribute="strength"
+      >
+    <i class="fa-solid fa-plus changeAttributeAdd"></i>
     </a>
     {{/if}}
     
@@ -188,16 +183,12 @@
       data-dtype="Number"
       readonly="true"
     />
-
     {{#if actor.flags.torgeternity.editAttributes}}
-    <a
-      class="increaseAttribute"
+      <a class="decreaseAttribute"
       data-concernedAttribute="strength"
       >
-    <i class="fa-solid fa-plus changeAttributeAdd"></i>
-    </a>
+      <i class="fa-solid fa-minus changeAttributeSubstract"></i>
+      </a>
     {{/if}}
-
   </li>
-
 </ul>
