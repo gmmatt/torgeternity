@@ -1,6 +1,6 @@
 # TORG Eternity Changelog
 
-## v. 3.7.3
+## v. 3.8.0
 
 - Better migrations for active defense, that were active in existing worlds
 - Style-rearrangement on perk item, prerequisites are now on a more comfortable place [#158](https://github.com/gmmatt/torgeternity/issues/158)
