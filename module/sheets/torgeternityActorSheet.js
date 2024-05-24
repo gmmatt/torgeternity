@@ -222,133 +222,108 @@ export default class TorgeternityActorSheet extends ActorSheet {
    */
   activateListeners(html) {
     // localizing hardcoded possibility potential value
-    if (this.actor.isOwner)
-      if (this.actor.isOwner) {
-        // Owner-only Listeners
-        let handler = (ev) => this._onDragStart(ev);
-        // Find all items on the character sheet.
-        html.find('a.item-name').each((i, a) => {
-          // Ignore for the header row.
-          if (a.classList.contains('item-header')) return;
+    if (this.actor.isOwner) {
+      // Owner-only Listeners
+      let handler = (ev) => this._onDragStart(ev);
+      // Find all items on the character sheet.
+      html.find('a.item-name').each((i, a) => {
+        // Ignore for the header row.
+        if (a.classList.contains('item-header')) return;
+        // Add draggable attribute and dragstart listener.
+        a.setAttribute('draggable', true);
+        a.addEventListener('dragstart', handler, false);
+      });
+      // Find all attributes on the character sheet.
+      handler = (ev) => this._skillAttrDragStart(ev);
+      html.find('a.skill-roll').each((i, a) => {
+        // Add draggable attribute and dragstart listener.
+        a.setAttribute('draggable', true);
+        a.addEventListener('dragstart', handler, false);
+      });
+      // Find all interactions on the character sheet.
+      handler = (ev) => this._interactionDragStart(ev);
+      html.find('a.interaction-attack').each((i, a) => {
+        // Add draggable attribute and dragstart listener.
+        a.setAttribute('draggable', true);
+        a.addEventListener('dragstart', handler, false);
+      });
+      // listeners for items on front page of threat sheet
+      if (this.object.type === 'threat') {
+        handler = (ev) => this._onDragStart(ev);
+        html.find('a.item').each((i, a) => {
           // Add draggable attribute and dragstart listener.
           a.setAttribute('draggable', true);
           a.addEventListener('dragstart', handler, false);
         });
-        // Find all attributes on the character sheet.
-        handler = (ev) => this._skillAttrDragStart(ev);
-        html.find('a.skill-roll').each((i, a) => {
-          // Add draggable attribute and dragstart listener.
-          a.setAttribute('draggable', true);
-          a.addEventListener('dragstart', handler, false);
-        });
-        // Find all interactions on the character sheet.
-        handler = (ev) => this._interactionDragStart(ev);
-        html.find('a.interaction-attack').each((i, a) => {
-          // Add draggable attribute and dragstart listener.
-          a.setAttribute('draggable', true);
-          a.addEventListener('dragstart', handler, false);
-        });
-        // listeners for items on front page of threat sheet
-        if (this.object.type === 'threat') {
-          handler = (ev) => this._onDragStart(ev);
-          html.find('a.item').each((i, a) => {
-            // Add draggable attribute and dragstart listener.
-            a.setAttribute('draggable', true);
-            a.addEventListener('dragstart', handler, false);
-          });
-        }
       }
 
-    if (this.actor.isOwner) {
       html.find('.skill-roll').click(this._onSkillRoll.bind(this));
-    }
 
-    if (this.actor.isOwner) {
       html.find('.skill-list').click(this._onSkillList.bind(this));
-    }
 
-    if (this.actor.isOwner) {
       // New for skills rolls without values
       html.find('.skill-element-roll').click(this._onSkillElementRoll.bind(this));
-    }
 
-    if (this.actor.isOwner) {
       html.find('.skill-edit-toggle').click(this._onSkillEditToggle.bind(this));
-    }
 
-    // if (this.actor.isOwner) {
-    //  html.find(".possibility-roll").click(this._onPossibilityRoll.bind(this));
-    // }
-
-    if (this.actor.isOwner) {
       html.find('.item-tochat').click(this._onItemChat.bind(this));
-    }
 
-    if (this.actor.isOwner) {
       html.find('.item-attackRoll').click(this._onAttackRoll.bind(this));
-    }
 
-    if (this.actor.isOwner) {
       html.find('.interaction-attack').click(this._onInteractionAttack.bind(this));
-    }
 
-    if (this.actor.isOwner) {
       html.find('.unarmed-attack').click(this._onUnarmedAttack.bind(this));
-    }
 
-    if (this.actor.isOwner) {
       html.find('.item-bonusRoll').click(this._onBonusRoll.bind(this));
-    }
 
-    if (this.actor.isOwner) {
       html.find('.item-powerRoll').click(this._onPowerRoll.bind(this));
-    }
 
-    // if (this.actor.isOwner) {
-    //  html.find(".up-roll").click(this._onUpRoll.bind(this));
-    // }
-
-    if (this.actor.isOwner) {
       html.find('.item-equip').click(this._onItemEquip.bind(this));
-    }
 
-    if (this.actor.isOwner) {
       html.find('.item-create-sa').click(this._onCreateSa.bind(this));
-    }
 
-    if (this.actor.isOwner) {
       html.find('.item-create-rsa').click(this._onCreateSaR.bind(this));
-    }
 
-    if (this.actor.isOwner) {
       html.find('.activeDefense-roll').click(this._onActiveDefenseRoll.bind(this));
-    }
 
-    if (this.actor.isOwner) {
       html.find('.activeDefense-roll-glow').click(this._onActiveDefenseCancel.bind(this));
-    }
 
-    if (this.actor.isOwner) {
       html.find('.effect-control').click((ev) => onManageActiveEffect(ev, this.document));
-    }
 
-    if (this.actor.isOwner) {
       html.find('.chase-roll').click(this._onChaseRoll.bind(this));
-    }
 
-    if (this.actor.isOwner) {
       html.find('.stunt-roll').click(this._onStuntRoll.bind(this));
-    }
 
-    if (this.actor.isOwner) {
       html.find('.base-roll').click(this._onBaseRoll.bind(this));
-    }
 
-    if (this.actor.isOwner) {
       html.find('.apply-fatigue').click((ev) => {
         const newShock =
           parseInt(this.actor.system.shock.value) + parseInt(ev.currentTarget.dataset.fatigue);
         this.actor.update({ 'system.shock.value': newShock });
+      });
+
+      html.find('.changeAttributesToggle').click((ev) => {
+        this.document.setFlag(
+          'torgeternity',
+          'editAttributes',
+          !this.document.getFlag('torgeternity', 'editAttributes')
+        );
+      });
+
+      html.find('.increaseAttribute').click((ev) => {
+        const concernedAttribute = ev.currentTarget.dataset.concernedattribute;
+        const attributeToChange = this.actor.system.attributes[concernedAttribute].base;
+        this.actor.update({
+          [`system.attributes.${concernedAttribute}.base`]: attributeToChange + 1,
+        });
+      });
+
+      html.find('.decreaseAttribute').click((ev) => {
+        const concernedAttribute = ev.currentTarget.dataset.concernedattribute;
+        const attributeToChange = this.actor.system.attributes[concernedAttribute].base;
+        this.actor.update({
+          [`system.attributes.${concernedAttribute}.base`]: attributeToChange - 1,
+        });
       });
     }
 
