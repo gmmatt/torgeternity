@@ -302,6 +302,14 @@ export default class TorgeternityActorSheet extends ActorSheet {
         this.actor.update({ 'system.shock.value': newShock });
       });
 
+      html.find('.attributeValueField').change((ev) => {
+        const concernedAttribute = ev.currentTarget.dataset.baseAttribute;
+
+        this.actor.update({
+          [`system.attributes.${concernedAttribute}.base`]: parseInt(ev.target.value),
+        });
+      });
+
       html.find('.changeAttributesToggle').click((ev) => {
         this.document.setFlag(
           'torgeternity',
