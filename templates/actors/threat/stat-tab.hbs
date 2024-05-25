@@ -1,11 +1,14 @@
 <div class='threat-contents block'>
   <div class='threat-block'>
     <div class='threat-section-attributes'>
-      <div class='section-bar'>
+      <div class='section-bar attributes'>
         {{localize 'torgeternity.sheetLabels.attributes'}}
         <a class="changeAttributesToggle" title="{{localize 'torgeternity.iconeTitles.edit'}}">
           <i class="fas fa-edit"></i>
         </a>
+        {{#if actor.flags.torgeternity.editAttributes}}
+          <h5>{{localize "torgeternity.sheetLabels.alterAttributes"}}</h5>
+        {{/if}}
       </div>
 
       <div class='threat-edit attribut-list-edit'>
@@ -32,7 +35,7 @@
             name='system.attributes.charisma.value'
             type='number'
             class="attributeValueField"
-            data-baseAttribute="charisma" 
+            data-baseAttributeInput="charisma" 
             {{#if actor.flags.torgeternity.editAttributes}}
             value='{{actor.system.attributes.charisma.base}}'
             {{else}}
@@ -76,7 +79,7 @@
             name='system.attributes.dexterity.value'
             type='number'
             class="attributeValueField"
-            data-baseAttribute="dexterity"
+            data-baseAttributeInput="dexterity"
             {{#if actor.flags.torgeternity.editAttributes}}
             value='{{actor.system.attributes.dexterity.base}}'
             {{else}}
@@ -120,7 +123,7 @@
             name='system.attributes.mind.value'
             type='number'
             class="attributeValueField"
-            data-baseAttribute="mind"
+            data-baseAttributeInput="mind"
             {{#if actor.flags.torgeternity.editAttributes}}
             value='{{actor.system.attributes.mind.base}}'
             {{else}}
@@ -164,7 +167,7 @@
             name='system.attributes.spirit.value'
             type='number'
             class="attributeValueField"
-            data-baseAttribute="spirit"
+            data-baseAttributeInput="spirit"
             {{#if actor.flags.torgeternity.editAttributes}}
             value='{{actor.system.attributes.spirit.base}}'
             {{else}}
@@ -208,7 +211,7 @@
             name='system.attributes.strength.value'
             type='number'
             class="attributeValueField"
-            data-baseAttribute="strength"
+            data-baseAttributeInput="strength"
             {{#if actor.flags.torgeternity.editAttributes}}
             value='{{actor.system.attributes.strength.base}}'
             {{else}}

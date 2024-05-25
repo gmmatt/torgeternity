@@ -4101,7 +4101,7 @@ form.actor-sheet.threat img.profile-img {
 
 .window-content .actor-sheet .threat-sheet .section-bar {
   border: 1px black solid;
-  background-color: rgb(28, 28, 179);
+  background-color: var(--torgblue);/*(28, 28, 179);*/
   color: white;
   height: 15px;
   width: 100%;
@@ -4109,6 +4109,22 @@ form.actor-sheet.threat img.profile-img {
   font-family: "Signika";
   font-size: 13px;
   font-weight: bold;
+}
+
+.window-content .actor-sheet .threat-sheet .section-bar.attributes{
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+}
+.window-content .actor-sheet .threat-sheet .section-bar.attributes > *{
+  padding-left: 0.5rem;
+}
+
+.window-content .actor-sheet .threat-sheet .section-bar.attributes > h5 {
+  display: flex;
+  margin: 0;
+  font: inherit; 
 }
 
 .window-content .actor-sheet .threat-sheet .threat-section-attributes {
