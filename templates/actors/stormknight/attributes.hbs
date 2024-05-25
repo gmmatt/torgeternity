@@ -3,7 +3,11 @@
   <a class="changeAttributesToggle" title="{{localize 'torgeternity.iconeTitles.edit'}}">
     <i class="fas fa-edit"></i>
   </a>
+  {{#if actor.flags.torgeternity.editAttributes}}
+    <h5>{{localize "torgeternity.sheetLabels.alterAttributes"}}</h5>
+  {{/if}}
 </div>
+
 <ul class="attribut-list">
 
   <!-- iterate each attribute individually to avoid a problem with data structures in sheets created under early versions of system -->

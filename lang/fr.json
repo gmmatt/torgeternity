@@ -573,6 +573,7 @@
       "adds": "Rang",
       "aimed": "Visée",
       "allOut": "Attaque totale",
+      "alterAttributes": "Tu peux maintenant modifier les attributs",
       "applyDamage": "Appliquer dommages",
       "applyDamageTooltip": "ClickDroit pour ajuster les dommages, ClickGauche pour les appliquer.",
       "applyStymied": "Appliquer Déstabilisé",
