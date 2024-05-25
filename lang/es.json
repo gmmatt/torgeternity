@@ -573,6 +573,7 @@
       "adds": "Adición",
       "aimed": "Apuntado",
       "allOut": "Ataque Total",
+      "alterAttributes": "Ahora puede cambiar los atributos",
       "applyDamage": "Apply damages",
       "applyDamageTooltip": "Right-click to modify applied damages, Left-click to apply.",
       "applyStymied": "Apply Stymied",
