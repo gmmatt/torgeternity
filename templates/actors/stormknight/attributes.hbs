@@ -32,13 +32,17 @@
     <input
       name="system.attributes.charisma.value"
       type="number"
+      class="attributeValueField"
+      data-baseAttribute="charisma"
       {{#if actor.flags.torgeternity.editAttributes}}
       value='{{actor.system.attributes.charisma.base}}'
       {{else}}
       value='{{actor.system.attributes.charisma.value}}'
       {{/if}}
       data-dtype="Number"
+      {{#iffalse actor.flags.torgeternity.editAttributes}}
       readonly="true"
+      {{/iffalse}}
     />
     {{#if actor.flags.torgeternity.editAttributes}}
       <a class="decreaseAttribute"
@@ -75,13 +79,17 @@
     <input
       name="system.attributes.dexterity.value"
       type="number"
+      class="attributeValueField"
+      data-baseAttribute="dexterity"
       {{#if actor.flags.torgeternity.editAttributes}}
       value='{{actor.system.attributes.dexterity.base}}'
       {{else}}
       value='{{actor.system.attributes.dexterity.value}}'
       {{/if}}
       data-dtype="Number"
+      {{#iffalse actor.flags.torgeternity.editAttributes}}
       readonly="true"
+      {{/iffalse}}
     />
 
     {{#if actor.flags.torgeternity.editAttributes}}
@@ -116,14 +124,19 @@
 
     <input 
     name="system.attributes.mind.value" 
-    type="number" 
+    type="number"    
+    class="attributeValueField"
+    data-baseAttribute="mind" 
     {{#if actor.flags.torgeternity.editAttributes}}
     value='{{actor.system.attributes.mind.base}}'
     {{else}}
     value='{{actor.system.attributes.mind.value}}'
     {{/if}}
     data-dtype="Number" 
-    readonly="true"/>
+    {{#iffalse actor.flags.torgeternity.editAttributes}}
+    readonly="true"
+    {{/iffalse}}
+    />
     
     {{#if actor.flags.torgeternity.editAttributes}}
     <a class="decreaseAttribute"
@@ -158,13 +171,17 @@
     <input
       name="system.attributes.spirit.value"
       type="number"
+      class="attributeValueField"
+      data-baseAttribute="spirit" 
       {{#if actor.flags.torgeternity.editAttributes}}
       value='{{actor.system.attributes.spirit.base}}'
       {{else}}
       value='{{actor.system.attributes.spirit.value}}'
       {{/if}}
       data-dtype="Number"
+      {{#iffalse actor.flags.torgeternity.editAttributes}}
       readonly="true"
+      {{/iffalse}}
     />
     {{#if actor.flags.torgeternity.editAttributes}}
       <a class="decreaseAttribute"
@@ -200,13 +217,17 @@
     <input
       name="system.attributes.strength.value"
       type="number"
+      class="attributeValueField"
+      data-baseAttribute="strength" 
       {{#if actor.flags.torgeternity.editAttributes}}
       value='{{actor.system.attributes.strength.base}}'
       {{else}}
       value='{{actor.system.attributes.strength.value}}'
       {{/if}}
       data-dtype="Number"
+      {{#iffalse actor.flags.torgeternity.editAttributes}}
       readonly="true"
+      {{/iffalse}}
     />
     {{#if actor.flags.torgeternity.editAttributes}}
       <a class="decreaseAttribute"

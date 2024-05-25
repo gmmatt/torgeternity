@@ -31,14 +31,18 @@
           <input
             name='system.attributes.charisma.value'
             type='number'
+            class="attributeValueField"
+            data-baseAttribute="charisma" 
             {{#if actor.flags.torgeternity.editAttributes}}
             value='{{actor.system.attributes.charisma.base}}'
             {{else}}
             value='{{actor.system.attributes.charisma.value}}'
             {{/if}}
             data-dtype='Number'
-            class='small-input'
-            readonly='true'
+            class='small-input'            
+            {{#iffalse actor.flags.torgeternity.editAttributes}}
+            readonly="true"
+            {{/iffalse}}
           />
           {{#if actor.flags.torgeternity.editAttributes}}
             <a
@@ -71,6 +75,8 @@
           <input
             name='system.attributes.dexterity.value'
             type='number'
+            class="attributeValueField"
+            data-baseAttribute="dexterity"
             {{#if actor.flags.torgeternity.editAttributes}}
             value='{{actor.system.attributes.dexterity.base}}'
             {{else}}
@@ -78,7 +84,9 @@
             {{/if}}            
             data-dtype='Number'
             class='small-input'
-            readonly='true'
+            {{#iffalse actor.flags.torgeternity.editAttributes}}
+            readonly="true"
+            {{/iffalse}}
           />
           {{#if actor.flags.torgeternity.editAttributes}}
             <a
@@ -111,6 +119,8 @@
           <input
             name='system.attributes.mind.value'
             type='number'
+            class="attributeValueField"
+            data-baseAttribute="mind"
             {{#if actor.flags.torgeternity.editAttributes}}
             value='{{actor.system.attributes.mind.base}}'
             {{else}}
@@ -118,7 +128,9 @@
             {{/if}}            
             data-dtype='Number'
             class='small-input'
-            readonly='true'
+            {{#iffalse actor.flags.torgeternity.editAttributes}}
+            readonly="true"
+            {{/iffalse}}
           />
           {{#if actor.flags.torgeternity.editAttributes}}
             <a
@@ -151,6 +163,8 @@
           <input
             name='system.attributes.spirit.value'
             type='number'
+            class="attributeValueField"
+            data-baseAttribute="spirit"
             {{#if actor.flags.torgeternity.editAttributes}}
             value='{{actor.system.attributes.spirit.base}}'
             {{else}}
@@ -158,7 +172,9 @@
             {{/if}}
             data-dtype='Number'
             class='small-input'
-            readonly='true'
+            {{#iffalse actor.flags.torgeternity.editAttributes}}
+            readonly="true"
+            {{/iffalse}}
           />
           {{#if actor.flags.torgeternity.editAttributes}}
             <a
@@ -191,6 +207,8 @@
           <input
             name='system.attributes.strength.value'
             type='number'
+            class="attributeValueField"
+            data-baseAttribute="strength"
             {{#if actor.flags.torgeternity.editAttributes}}
             value='{{actor.system.attributes.strength.base}}'
             {{else}}
@@ -198,7 +216,9 @@
             {{/if}}
             data-dtype='Number'
             class='small-input'
-            readonly='true'
+            {{#iffalse actor.flags.torgeternity.editAttributes}}
+            readonly="true"
+            {{/iffalse}}
           />
           {{#if actor.flags.torgeternity.editAttributes}}
             <a
