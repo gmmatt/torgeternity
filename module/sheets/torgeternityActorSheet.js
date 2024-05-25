@@ -303,7 +303,7 @@ export default class TorgeternityActorSheet extends ActorSheet {
       });
 
       html.find('.attributeValueField').change((ev) => {
-        const concernedAttribute = ev.currentTarget.dataset.baseAttribute;
+        const concernedAttribute = ev.currentTarget.dataset.baseattributeinput;
 
         this.actor.update({
           [`system.attributes.${concernedAttribute}.base`]: parseInt(ev.target.value),
