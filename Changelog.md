@@ -1,5 +1,9 @@
 # TORG Eternity Changelog
 
+## v. 3.8.1
+- Migration-correction
+- Fixed minDex maxStr check by SKs/ Threats
+
 ## v. 3.8.0
 
 - Better migrations for active defense, that were active in existing worlds
