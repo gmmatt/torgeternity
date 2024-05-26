@@ -22,6 +22,16 @@ export default class TorgeternityActor extends Actor {
       this.system.fatigue = 2 + (this.wornArmor?.system?.fatigue ?? 0);
       this.system.maxDex = this.wornArmor?.system?.maxDex ?? 100;
       this.system.minStr = this.wornArmor?.system?.minStrength ?? 0;
+
+      // by RAW, FIRST you checkout for maxDex, THEN minStr
+      this.system.attributes.dexterity.value > this.system.maxDex
+        ? (this.system.attributes.dexterity.value = this.system.maxDex)
+        : this.system.attributes.dexterity.value;
+
+      this.system.attributes.strength.value < this.system.minStr
+        ? (this.system.attributes.dexterity.value -=
+            this.system.minStr - this.system.attributes.strength.value)
+        : this.system.attributes.dexterity.value;
     }
   }
 
