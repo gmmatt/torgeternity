@@ -153,7 +153,7 @@ export async function torgMigration() {
         }
       }
     }
-
+    // Migration to 3.8.0 where we changed .attributes.x (plain) to attributes.x.base/ .value, migrating all Active Effects (AE) to the new keys
     if (isNewerVersion('3.8.0', migrationVersion)) {
       ui.notifications.info('System Migration running');
 
