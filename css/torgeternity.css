@@ -1844,6 +1844,8 @@ div.readme a.compendium {
 
 .chat-message .item-description-chat {
   font-family: Palatino;
+  background-image: none;
+  background-color: transparent;
 }
 
 .chat-message .chat-title {
@@ -1956,10 +1958,6 @@ p.skill-chat-title.skilled {
   text-shadow: 0px 0px 2px grey;
 }
 
-/*.dice-tooltip .dice-rolls .roll.d20 {
-  background-image: url(../images/Torgd20.svg);  
-}*/
-
 .chat-message .skill-roll-damage-label {
   font-family: "Palatino Linotype";
   font-size: 18px;
@@ -1972,12 +1970,17 @@ p.skill-chat-title.skilled {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
+  gap: 5px;
+  flex-flow: wrap;
 }
 
 .applyDam,
 .soakDam,
 .applyStymied,
 .applyVulnerable,
+.backlash1,
+.backlash2,
+.backlash3,
 .chat-message .roll-fav,
 .chat-message .roll-possibility,
 .chat-message .roll-up,
@@ -1996,17 +1999,29 @@ p.skill-chat-title.skilled {
   margin-bottom: 7px;
 }
 
-/*@media screen and (width > 344px) {
-.chat-message .roll-fav,
-.chat-message .roll-possibility,
-.chat-message .roll-up,
-.chat-message .roll-hero,
-.chat-message .roll-drama,
-.chat-message .add-plus3,
-.chat-message .add-bd {
-    font-size: 8px; 
-  }
-}*/
+.chat-message .generalHeader {
+  border:none;
+  background-color:transparent;
+  display:flex;
+  flex-direction: row;  
+  align-items: center;  
+  justify-content: space-between;
+}
+
+.chat-message .generalHeader img {
+  width:50px;
+  height:50px;
+  border:none;
+  aspect-ratio: 1/1;
+}
+
+.chat-message .generalHeader span{
+  display: inline-block;  
+  font-size: large;
+  flex: 1;
+  text-align: center;
+  margin-left: auto;
+}
 
 .chat-message .card-draw .card-name {
   line-height: 20px;
@@ -2655,6 +2670,37 @@ form.actor-sheet header input[name="name"] {
 .window-content .actor-sheet .weapons ul li.attribut-block a,
 .window-content .actor-sheet .weapons ol li.attribut-block a {
   text-align: center;
+}
+
+.window-content .actor-sheet .attributes.header {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 2;
+}
+
+.window-content .actor-sheet .attributes.header h2{
+  grid-column: 2/3;
+  grid-row: 1/2;
+}
+
+.window-content .actor-sheet .attributes.header h5{
+  grid-column: 1/4;
+  grid-row: 2/3;
+  margin: 0.25rem 0;
+  text-align: center;
+  color: var(--torgred);
+}
+
+.window-content .actor-sheet .attributes.header a{
+  grid-column: 3/4;
+  grid-row: 1/2;
+  align-self: center; 
+  padding-left: 0.5rem;
+}
+
+.window-content .actor-sheet .attributes.header a > i{
+  justify-content: left;
+  align-items: baseline;
 }
 
 .window-content .actor-sheet .skills {
@@ -3391,6 +3437,13 @@ form.actor-sheet.threat .tab[data-tab].active .editor {
   margin:unset;
 }
 
+.item .window-content form.item-sheet .asside .perks.generalContradiction {
+  display:flex; 
+  flex-direction:row; 
+  align-items:center;
+  margin: 7px 0;
+}
+
 .item .window-content form.item-sheet .asside input[type="number"] {
   border: none;
   text-align: center;
@@ -4048,7 +4101,7 @@ form.actor-sheet.threat img.profile-img {
 
 .window-content .actor-sheet .threat-sheet .section-bar {
   border: 1px black solid;
-  background-color: rgb(28, 28, 179);
+  background-color: var(--torgblue);/*(28, 28, 179);*/
   color: white;
   height: 15px;
   width: 100%;
@@ -4056,6 +4109,22 @@ form.actor-sheet.threat img.profile-img {
   font-family: "Signika";
   font-size: 13px;
   font-weight: bold;
+}
+
+.window-content .actor-sheet .threat-sheet .section-bar.attributes{
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+}
+.window-content .actor-sheet .threat-sheet .section-bar.attributes > *{
+  padding-left: 0.5rem;
+}
+
+.window-content .actor-sheet .threat-sheet .section-bar.attributes > h5 {
+  display: flex;
+  margin: 0;
+  font: inherit; 
 }
 
 .window-content .actor-sheet .threat-sheet .threat-section-attributes {

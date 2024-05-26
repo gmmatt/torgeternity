@@ -47,22 +47,25 @@ export default class TorgeternityItem extends Item {
   }
 
   static DEFAULT_ICONS = {
+    //genemod:'genemod-icon.webp',
+    //occultech: 'implant.webp',
+    //cyberware: 'cyberware-icon.webp',
     gear: 'gear-icon.webp',
     eternityshard: 'eternityshard.webp',
     armor: 'armor-icon.webp',
     shield: 'shield.webp',
-    meleeweapon: 'meleeweapon.webp',
-    missileweapon: 'missileweapon.webp',
-    firearm: 'firearm.webp',
+    meleeweapon: 'axe-icon.webp',
+    missileweapon: 'missile-weapon-icon.webp',
+    firearm: 'firearm-icon.webp',
     implant: 'implant.webp',
-    heavyweapon: 'heavyweapon.webp',
+    heavyweapon: 'explosion-icon.webp',
     vehicle: 'vehicle.webp',
-    perk: 'perk.webp',
+    perk: 'reality-icon.webp',
     enhancement: 'enhancement.webp',
-    specialability: 'specialability.webp',
+    specialability: 'torgeternity-icon.webp',
     'specialability-rollable': 'specialability-rollable.webp',
-    spell: 'spell.webp',
-    miracle: 'miracle.webp',
+    spell: 'spell-icon.webp',
+    miracle: 'miracles-icon.webp',
     psionicpower: 'psionicpower.webp',
   };
 
@@ -77,7 +80,7 @@ export default class TorgeternityItem extends Item {
     if (this.img === 'icons/svg/item-bag.svg') {
       const image = TorgeternityItem.DEFAULT_ICONS[data.type] ?? null;
       if (image) {
-        this.updateSource({ img: 'systems/torgeternity/images/icons/' + image });
+        this.update({ img: 'systems/torgeternity/images/icons/' + image });
       }
     }
 
@@ -179,7 +182,7 @@ export default class TorgeternityItem extends Item {
 
     const baseDamage =
       this.system.damageType == 'strengthPlus'
-        ? parseInt(this.actor.system.attributes.strength) + parseInt(this.system.damage)
+        ? this.actor.system.attributes.strength.value + parseInt(this.system.damage)
         : this.system.damage;
 
     // Retrieve the applicable skill value from the current actor

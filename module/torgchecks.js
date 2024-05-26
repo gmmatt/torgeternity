@@ -16,6 +16,7 @@ export async function renderSkillChat(test) {
   } catch (e) {}
   test.applyDebuffLabel = 'display:none';
   test.applyDamLabel = 'display:none';
+  test.backlashLabel = 'display:none';
   for (let i = 0; i < test.targetAll.length; i++) {
     const target = test.targetAll[i];
     test.target = target;
@@ -83,178 +84,10 @@ export async function renderSkillChat(test) {
     //
     // Establish DN for this test based on test.DNDescriptor //
     //
-
-    switch (test.DNDescriptor) {
-      case 'veryEasy':
-        test.DN = 6;
-        break;
-      case 'easy':
-        test.DN = 8;
-        break;
-      case 'standard':
-        test.DN = 10;
-        break;
-      case 'challenging':
-        test.DN = 12;
-        break;
-      case 'hard':
-        test.DN = 14;
-        break;
-      case 'veryHard':
-        test.DN = 16;
-        break;
-      case 'heroic':
-        test.DN = 18;
-        break;
-      case 'nearImpossible':
-        test.DN = 20;
-        break;
-      case 'targetCharisma':
-        test.DN = target.attributes.charisma;
-        break;
-      case 'targetDexterity':
-        test.DN = target.attributes.dexterity;
-        break;
-      case 'targetMind':
-        test.DN = target.attributes.mind;
-        break;
-      case 'targetSpirit':
-        test.DN = target.attributes.spirit;
-        break;
-      case 'targetStrength':
-        test.DN = target.attributes.strength;
-        break;
-      case 'targetAlteration':
-        if (target.skills.alteration.value && target.skills.alteration.value != '-') {
-          test.DN = target.skills.alteration.value;
-        } else {
-          test.DN = target.attributes.mind;
-        }
-        break;
-      case 'targetConjuration':
-        if (target.skills.conjuration.value && target.skills.conjuration.value != '-') {
-          test.DN = target.skills.conjuration.value;
-        } else {
-          test.DN = target.attributes.spirit;
-        }
-        break;
-      case 'targetDivination':
-        if (target.skills.divination.value && target.skills.divination.value != '-') {
-          test.DN = target.skills.divination.value;
-        } else {
-          test.DN = target.attributes.mind;
-        }
-        break;
-      case 'targetDodge':
-        test.DN = target.defenses.dodge;
-        break;
-      case 'targetFaith':
-        if (target.skills.faith.value) {
-          test.DN = target.skills.faith.value;
-        } else {
-          test.DN = target.attributes.spirit;
-        }
-        break;
-      case 'targetIntimidation':
-        test.DN = target.defenses.intimidation;
-        break;
-      case 'targetKinesis':
-        if (target.skills.kinesis.value && target.skills.kinesis.value != '-') {
-          test.DN = target.skills.kinesis.value;
-        } else {
-          test.DN = target.attributes.spirit;
-        }
-        break;
-      case 'targetManeuver':
-        test.DN = target.defenses.maneuver;
-        break;
-      case 'targetMeleeWeapons':
-        test.DN = target.defenses.meleeWeapons;
-        break;
-      case 'targetPrecognition':
-        if (target.skills.precognition.value && target.skills.precognition.value != '-') {
-          test.DN = target.skills.precognition.value;
-        } else {
-          test.DN = target.attributes.mind;
-        }
-        break;
-      case 'targetStealth':
-        if (target.skills.stealth.value) {
-          test.DN = target.skills.stealth.value;
-        } else {
-          test.DN = target.attributes.dexterity;
-        }
-        break;
-      case 'targetTaunt':
-        test.DN = target.defenses.taunt;
-        break;
-      case 'targetTrick':
-        test.DN = target.defenses.trick;
-        break;
-      case 'targetUnarmedCombat':
-        test.DN = target.defenses.unarmedCombat;
-        break;
-      case 'targetWillpower':
-        if (target.skills.willpower.value) {
-          test.DN = target.skills.willpower.value;
-        } else {
-          test.DN = target.attributes.spirit;
-        }
-        break;
-      case 'targetWillpowerMind':
-        if (target.skills.willpower.value) {
-          test.DN =
-            target.skills.willpower.value - target.attributes.spirit + target.attributes.mind;
-        } else {
-          test.DN = target.attributes.mind;
-        }
-        break;
-      case 'targetLandVehicles':
-        if (target.skills.landVehicles.value) {
-          test.DN = target.skills.landVehicles.value;
-        } else {
-          test.DN = target.attributes.dexterity;
-        }
-        break;
-      case 'targetAirVehicles':
-        if (target.skills.airVehicles.value) {
-          test.DN = target.skills.airVehicles.value;
-        } else {
-          test.DN = target.attributes.dexterity;
-        }
-        break;
-      case 'targetWaterVehicles':
-        if (target.skills.waterVehicles.value) {
-          test.DN = target.skills.waterVehicles.value;
-        } else {
-          test.DN = target.attributes.dexterity;
-        }
-        break;
-      case 'highestSpeed':
-        // Find the fastest participant in the active combat
-        const combatants = game.combats.active.turns;
-        const combatantCount = game.combats.active.turns.length;
-        let combatantRun = 0;
-        let combatantSpeed = 0;
-        let highestSpeed = 0;
-        for (let i = 0; i < combatantCount; i++) {
-          if (combatants[i].actor.type === 'vehicle') {
-            combatantSpeed = combatants[i].actor.system.topSpeed.value;
-          } else {
-            combatantRun = combatants[i].actor.system.other.run;
-            combatantSpeed = getTorgValue(combatantRun);
-          }
-          if (combatantSpeed > highestSpeed) {
-            highestSpeed = combatantSpeed;
-          }
-        }
-        test.DN = highestSpeed;
-        break;
-      case 'targetVehicleDefense':
-        test.DN = target.defenses.vehicle;
-        break;
-      default:
-        test.DN = 10;
+    if (game.settings.get('torgeternity', 'uniqueDN')) {
+      await oneDN(test);
+    } else {
+      await manyDN(test, target);
     }
 
     //
@@ -536,7 +369,18 @@ export async function renderSkillChat(test) {
             await ownToken.toggleEffect(ef, { active: false });
           }
           const eff = CONFIG.statusEffects.find((e) => e.id === 'veryVulnerable');
-          ownToken.toggleEffect(eff, { active: true });
+          eff.origin = test.actor;
+          eff.duration = { rounds: 2, turns: 2 };
+          await ownToken.toggleEffect(eff, { active: true });
+        } else if (
+          ownToken.actor.appliedEffects.find((d) => d.statuses.find((e) => e === 'veryVulnerable'))
+            .duration.turns != 2
+        ) {
+          const eff = CONFIG.statusEffects.find((e) => e.id === 'veryVulnerable');
+          await ownToken.toggleEffect(eff, { active: false });
+          eff.origin = test.actor;
+          eff.duration = { rounds: 2, turns: 2 };
+          await ownToken.toggleEffect(eff, { active: true });
         }
       }
     }
@@ -630,6 +474,9 @@ export async function renderSkillChat(test) {
     if (testDifference < 0) {
       test.outcome = game.i18n.localize('torgeternity.chatText.check.result.failure');
       // test.outcomeColor = "color: red"
+      if (test.testType === 'power') {
+        test.backlashLabel = 'display:inline';
+      }
       if (game.settings.get('torgeternity', 'useColorBlindnessColors')) {
         test.outcomeColor = 'color: red';
       } else {
@@ -695,6 +542,7 @@ export async function renderSkillChat(test) {
         test.resultTextColor +=
           ';text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000, 0px 0px 15px black;';
       }
+      //test.backlashLabel = 'display:inline';
       test.actionTotalLabel = 'display:none';
       test.possibilityStyle = 'display:none';
       test.upStyle = 'display:none';
@@ -748,6 +596,7 @@ export async function renderSkillChat(test) {
           name: 'ActiveDefense', // Add an icon to remind the defense, bigger ? Change color of Defense ?
           icon: 'icons/equipment/shield/heater-crystal-blue.webp', // To change I think, taken in Core, should have a dedicated file
           duration: { rounds: 1 },
+          origin: myActor.uuid,
           changes: [
             {
               // Modify all existing "basic" defense in block
@@ -848,6 +697,7 @@ export async function renderSkillChat(test) {
         name: 'ActiveDefense', // Add an icon to remind the defense, bigger ? Change color of Defense ?
         icon: 'icons/equipment/shield/heater-crystal-blue.webp', // To change I think, taken in Core, should have a dedicated file
         duration: { rounds: 1 },
+        origin: myActor.uuid,
         changes: [
           {
             // Modify all existing "basic" defense in block
@@ -1273,10 +1123,98 @@ export async function applyDamages(damageObject, targetuuid) {
     ui.notifications.warn(game.i18n.localize('torgeternity.notifications.noTarget'));
   }
 }
-
+//
 /**
  *
- * @param soaker
+ * Apply 1 shock on a targetuuid
+ * @param targetuuid
+ */
+export async function backlash1(targetuuid) {
+  const targetToken = canvas.tokens.placeables.find((tok) =>
+    targetuuid.includes(tok.document.actorId)
+  );
+  // checking if user has target
+  if (targetToken) {
+    if (targetToken.actor.type !== 'vehicle') {
+      // computing new values
+      const newShock = targetToken.actor.system.shock.value + 2;
+      // updating the target token's  actor
+      await targetToken.actor.update({
+        'system.shock.value': newShock,
+      });
+      // too many shocks, apply KO if not dead
+      if (newShock > targetToken.actor.system.shock.max) {
+        if (!targetToken.actor.statuses.find((d) => d === 'unconscious')) {
+          if (!targetToken.actor.statuses.find((d) => d === 'dead')) {
+            const eff = CONFIG.statusEffects.find((e) => e.id === 'unconscious');
+            await targetToken.toggleEffect(eff, { active: true, overlay: true });
+          }
+        }
+      }
+    }
+  } else {
+    ui.notifications.warn(game.i18n.localize('torgeternity.notifications.noTarget'));
+  }
+}
+/**
+ * Apply 2 shocks on a targetuuid
+ * @param targetuuid
+ */
+export async function backlash2(targetuuid) {
+  const targetToken = canvas.tokens.placeables.find((tok) =>
+    targetuuid.includes(tok.document.actorId)
+  );
+  // checking if user has target
+  if (targetToken) {
+    if (targetToken.actor.type !== 'vehicle') {
+      // computing new values
+      const newShock = targetToken.actor.system.shock.value + 1;
+      // updating the target token's  actor
+      await targetToken.actor.update({
+        'system.shock.value': newShock,
+      });
+      // too many shocks, apply KO if not dead
+      if (newShock > targetToken.actor.system.shock.max) {
+        if (!targetToken.actor.statuses.find((d) => d === 'unconscious')) {
+          if (!targetToken.actor.statuses.find((d) => d === 'dead')) {
+            const eff = CONFIG.statusEffects.find((e) => e.id === 'unconscious');
+            await targetToken.toggleEffect(eff, { active: true, overlay: true });
+          }
+        }
+      }
+    }
+  } else {
+    ui.notifications.warn(game.i18n.localize('torgeternity.notifications.noTarget'));
+  }
+}
+/**
+ * Apply veryStymied on a targetuuid
+ * @param targetuuid
+ */
+export async function backlash3(targetuuid) {
+  const targetToken = canvas.tokens.placeables.find((tok) =>
+    targetuuid.includes(tok.document.actorId)
+  );
+  // apply Stymied, or veryStymied
+  let eff;
+  let oldEff;
+  if (targetToken.actor.statuses.find((d) => d === 'veryStymied')) {
+  } else if (targetToken.actor.statuses.find((d) => d === 'stymied')) {
+    oldEff = CONFIG.statusEffects.find((e) => e.id === 'stymied');
+    eff = CONFIG.statusEffects.find((e) => e.id === 'veryStymied');
+  } else {
+    eff = CONFIG.statusEffects.find((e) => e.id === 'veryStymied');
+  }
+  if (eff) {
+    eff.origin = targetuuid;
+    eff.duration = { rounds: 1, turns: 1 };
+    await targetToken.toggleEffect(eff, { active: true });
+  }
+  if (oldEff) await targetToken.toggleEffect(oldEff, { active: false });
+}
+//
+/**
+ *@param soaker
  */
 export async function soakDamages(soaker) {
   const skillName = 'reality';
@@ -1315,10 +1253,10 @@ export async function soakDamages(soaker) {
 }
 
 /**
- *
+ * increase Stymied effect one step, up to VeryStymied
  * @param targetuuid
  */
-export async function applyStymiedState(targetuuid) {
+export async function applyStymiedState(targetuuid, sourceuuid) {
   const targetToken = canvas.tokens.placeables.find((tok) =>
     tok.document.uuid.includes(targetuuid)
   );
@@ -1332,15 +1270,19 @@ export async function applyStymiedState(targetuuid) {
   } else {
     eff = CONFIG.statusEffects.find((e) => e.id === 'stymied');
   }
-  if (eff) await targetToken.toggleEffect(eff, { active: true });
+  if (eff) {
+    eff.origin = sourceuuid;
+    eff.duration = { rounds: 1, turns: 1 };
+    await targetToken.toggleEffect(eff, { active: true });
+  }
   if (oldEff) await targetToken.toggleEffect(oldEff, { active: false });
 }
 
 /**
- *
+ * increase Vulnerable effect one step, up to VeryVulnerable
  * @param targetuuid
  */
-export async function applyVulnerableState(targetuuid) {
+export async function applyVulnerableState(targetuuid, sourceuuid) {
   const targetToken = canvas.tokens.placeables.find((tok) =>
     targetuuid.includes(tok.document.uuid)
   );
@@ -1354,7 +1296,11 @@ export async function applyVulnerableState(targetuuid) {
   } else {
     eff = CONFIG.statusEffects.find((e) => e.id === 'vulnerable');
   }
-  if (eff) await targetToken.toggleEffect(eff, { active: true });
+  if (eff) {
+    eff.origin = sourceuuid;
+    eff.duration = { rounds: 1, turns: 1 };
+    await targetToken.toggleEffect(eff, { active: true });
+  }
   if (oldEff) await targetToken.toggleEffect(oldEff, { active: false });
 }
 
@@ -1488,4 +1434,472 @@ export function getTorgValue(myNumber) {
     myValue = 59;
   }
   return myValue;
+}
+
+async function manyDN(test, target) {
+  switch (test.DNDescriptor) {
+    case 'veryEasy':
+      test.DN = 6;
+      break;
+    case 'easy':
+      test.DN = 8;
+      break;
+    case 'standard':
+      test.DN = 10;
+      break;
+    case 'challenging':
+      test.DN = 12;
+      break;
+    case 'hard':
+      test.DN = 14;
+      break;
+    case 'veryHard':
+      test.DN = 16;
+      break;
+    case 'heroic':
+      test.DN = 18;
+      break;
+    case 'nearImpossible':
+      test.DN = 20;
+      break;
+    case 'targetCharisma':
+      test.DN = target.attributes.charisma.value;
+      break;
+    case 'targetDexterity':
+      test.DN = target.attributes.dexterity.value;
+      break;
+    case 'targetMind':
+      test.DN = target.attributes.mind.value;
+      break;
+    case 'targetSpirit':
+      test.DN = target.attributes.spirit.value;
+      break;
+    case 'targetStrength':
+      test.DN = target.attributes.strength.value;
+      break;
+    case 'targetAlteration':
+      if (target.skills.alteration.value && target.skills.alteration.value != '-') {
+        test.DN = target.skills.alteration.value;
+      } else {
+        test.DN = target.attributes.mind.value;
+      }
+      break;
+    case 'targetConjuration':
+      if (target.skills.conjuration.value && target.skills.conjuration.value != '-') {
+        test.DN = target.skills.conjuration.value;
+      } else {
+        test.DN = target.attributes.spirit.value;
+      }
+      break;
+    case 'targetDivination':
+      if (target.skills.divination.value && target.skills.divination.value != '-') {
+        test.DN = target.skills.divination.value;
+      } else {
+        test.DN = target.attributes.mind.value;
+      }
+      break;
+    case 'targetDodge':
+      test.DN = target.defenses.dodge;
+      break;
+    case 'targetFaith':
+      if (target.skills.faith.value) {
+        test.DN = target.skills.faith.value;
+      } else {
+        test.DN = target.attributes.spirit.value;
+      }
+      break;
+    case 'targetFind':
+      if (target.skills.find.value && target.skills.find.value != '-') {
+        test.DN = target.skills.find.value;
+      } else {
+        test.DN = target.attributes.mind.value;
+      }
+      break;
+    case 'targetIntimidation':
+      test.DN = target.defenses.intimidation;
+      break;
+    case 'targetKinesis':
+      if (target.skills.kinesis.value && target.skills.kinesis.value != '-') {
+        test.DN = target.skills.kinesis.value;
+      } else {
+        test.DN = target.attributes.spirit.value;
+      }
+      break;
+    case 'targetManeuver':
+      test.DN = target.defenses.maneuver;
+      break;
+    case 'targetMeleeWeapons':
+      test.DN = target.defenses.meleeWeapons;
+      break;
+    case 'targetPrecognition':
+      if (target.skills.precognition.value && target.skills.precognition.value != '-') {
+        test.DN = target.skills.precognition.value;
+      } else {
+        test.DN = target.attributes.mind.value;
+      }
+      break;
+    case 'targetStealth':
+      if (target.skills.stealth.value) {
+        test.DN = target.skills.stealth.value;
+      } else {
+        test.DN = target.attributes.dexterity.value;
+      }
+      break;
+    case 'targetTaunt':
+      test.DN = target.defenses.taunt;
+      break;
+    case 'targetTrick':
+      test.DN = target.defenses.trick;
+      break;
+    case 'targetUnarmedCombat':
+      test.DN = target.defenses.unarmedCombat;
+      break;
+    case 'targetWillpower':
+      if (target.skills.willpower.value) {
+        test.DN = target.skills.willpower.value;
+      } else {
+        test.DN = target.attributes.spirit.value;
+      }
+      break;
+    case 'targetWillpowerMind':
+      if (target.skills.willpower.value) {
+        test.DN =
+          target.skills.willpower.value -
+          target.attributes.spirit.value +
+          target.attributes.mind.value;
+      } else {
+        test.DN = target.attributes.mind.value;
+      }
+      break;
+    case 'targetLandVehicles':
+      if (target.skills.landVehicles.value) {
+        test.DN = target.skills.landVehicles.value;
+      } else {
+        test.DN = target.attributes.dexterity.value;
+      }
+      break;
+    case 'targetAirVehicles':
+      if (target.skills.airVehicles.value) {
+        test.DN = target.skills.airVehicles.value;
+      } else {
+        test.DN = target.attributes.dexterity.value;
+      }
+      break;
+    case 'targetWaterVehicles':
+      if (target.skills.waterVehicles.value) {
+        test.DN = target.skills.waterVehicles.value;
+      } else {
+        test.DN = target.attributes.dexterity.value;
+      }
+      break;
+    case 'highestSpeed':
+      // Find the fastest participant in the active combat
+      const combatants = game.combats.active.turns;
+      const combatantCount = game.combats.active.turns.length;
+      let combatantRun = 0;
+      let combatantSpeed = 0;
+      let highestSpeed = 0;
+      for (let i = 0; i < combatantCount; i++) {
+        if (combatants[i].actor.type === 'vehicle') {
+          combatantSpeed = combatants[i].actor.system.topSpeed.value;
+        } else {
+          combatantRun = combatants[i].actor.system.other.run;
+          combatantSpeed = getTorgValue(combatantRun);
+        }
+        if (combatantSpeed > highestSpeed) {
+          highestSpeed = combatantSpeed;
+        }
+      }
+      test.DN = highestSpeed;
+      break;
+    case 'targetVehicleDefense':
+      test.DN = target.defenses.vehicle;
+      break;
+    default:
+      test.DN = 10;
+  }
+}
+
+async function oneDN(test) {
+  let highestDN = 0;
+  let tempDN;
+  switch (test.DNDescriptor) {
+    case 'veryEasy':
+      test.DN = 6;
+      break;
+    case 'easy':
+      test.DN = 8;
+      break;
+    case 'standard':
+      test.DN = 10;
+      break;
+    case 'challenging':
+      test.DN = 12;
+      break;
+    case 'hard':
+      test.DN = 14;
+      break;
+    case 'veryHard':
+      test.DN = 16;
+      break;
+    case 'heroic':
+      test.DN = 18;
+      break;
+    case 'nearImpossible':
+      test.DN = 20;
+      break;
+    case 'targetCharisma':
+      for (const tar of test.targetAll) {
+        tempDN = tar.attributes.charisma.value;
+        highestDN = Math.max(highestDN, tempDN);
+      }
+      test.DN = highestDN;
+      break;
+    case 'targetDexterity':
+      for (const tar of test.targetAll) {
+        tempDN = tar.attributes.dexterity.value;
+        highestDN = Math.max(highestDN, tempDN);
+      }
+      test.DN = highestDN;
+      break;
+    case 'targetMind':
+      for (const tar of test.targetAll) {
+        tempDN = tar.attributes.mind.value;
+        highestDN = Math.max(highestDN, tempDN);
+      }
+      test.DN = highestDN;
+      break;
+    case 'targetSpirit':
+      for (const tar of test.targetAll) {
+        tempDN = tar.attributes.spirit.value;
+        highestDN = Math.max(highestDN, tempDN);
+      }
+      test.DN = highestDN;
+      break;
+    case 'targetStrength':
+      for (const tar of test.targetAll) {
+        tempDN = tar.attributes.strength.value;
+        highestDN = Math.max(highestDN, tempDN);
+      }
+      test.DN = highestDN;
+      break;
+    case 'targetAlteration':
+      for (const tar of test.targetAll) {
+        if (tar.skills.alteration.value && tar.skills.alteration.value != '-') {
+          tempDN = tar.skills.alteration.value;
+        } else {
+          tempDN = tar.attributes.mind.value;
+        }
+        highestDN = Math.max(highestDN, tempDN);
+      }
+      test.DN = highestDN;
+      break;
+    case 'targetConjuration':
+      for (const tar of test.targetAll) {
+        if (tar.skills.conjuration.value && tar.skills.conjuration.value != '-') {
+          tempDN = tar.skills.conjuration.value;
+        } else {
+          tempDN = tar.attributes.spirit.value;
+        }
+        highestDN = Math.max(highestDN, tempDN);
+      }
+      test.DN = highestDN;
+      break;
+    case 'targetDivination':
+      for (const tar of test.targetAll) {
+        if (tar.skills.divination.value && tar.skills.divination.value != '-') {
+          tempDN = tar.skills.divination.value;
+        } else {
+          tempDN = tar.attributes.mind.value;
+        }
+        highestDN = Math.max(highestDN, tempDN);
+      }
+      test.DN = highestDN;
+      break;
+    case 'targetDodge':
+      for (const tar of test.targetAll) {
+        tempDN = tar.defenses.dodge;
+        highestDN = Math.max(highestDN, tempDN);
+      }
+      test.DN = highestDN;
+      break;
+    case 'targetFaith':
+      for (const tar of test.targetAll) {
+        if (tar.skills.faith.value) {
+          tempDN = tar.skills.faith.value;
+        } else {
+          tempDN = tar.attributes.spirit.value;
+        }
+        highestDN = Math.max(highestDN, tempDN);
+      }
+      test.DN = highestDN;
+      break;
+    case 'targetFind':
+      for (const tar of test.targetAll) {
+        if (tar.skills.find.value && tar.skills.find.value != '-') {
+          tempDN = tar.skills.find.value;
+        } else {
+          tempDN = tar.attributes.mind.value;
+        }
+        highestDN = Math.max(highestDN, tempDN);
+      }
+      test.DN = highestDN;
+      break;
+    case 'targetIntimidation':
+      for (const tar of test.targetAll) {
+        tempDN = tar.defenses.intimidation;
+        highestDN = Math.max(highestDN, tempDN);
+      }
+      test.DN = highestDN;
+      break;
+    case 'targetKinesis':
+      for (const tar of test.targetAll) {
+        if (tar.skills.kinesis.value && tar.skills.kinesis.value != '-') {
+          tempDN = tar.skills.kinesis.value;
+        } else {
+          tempDN = tar.attributes.spirit.value;
+        }
+        highestDN = Math.max(highestDN, tempDN);
+      }
+      test.DN = highestDN;
+      break;
+    case 'targetManeuver':
+      for (const tar of test.targetAll) {
+        tempDN = tar.defenses.maneuver;
+        highestDN = Math.max(highestDN, tempDN);
+      }
+      test.DN = highestDN;
+      break;
+    case 'targetMeleeWeapons':
+      for (const tar of test.targetAll) {
+        tempDN = tar.defenses.meleeWeapons;
+        highestDN = Math.max(highestDN, tempDN);
+      }
+      test.DN = highestDN;
+      break;
+    case 'targetPrecognition':
+      for (const tar of test.targetAll) {
+        if (tar.skills.precognition.value && tar.skills.precognition.value != '-') {
+          tempDN = tar.skills.precognition.value;
+        } else {
+          tempDN = tar.attributes.mind.value;
+        }
+        highestDN = Math.max(highestDN, tempDN);
+      }
+      test.DN = highestDN;
+      break;
+    case 'targetStealth':
+      for (const tar of test.targetAll) {
+        if (tar.skills.stealth.value) {
+          tempDN = tar.skills.stealth.value;
+        } else {
+          tempDN = tar.attributes.dexterity.value;
+        }
+        highestDN = Math.max(highestDN, tempDN);
+      }
+      test.DN = highestDN;
+      break;
+    case 'targetTaunt':
+      for (const tar of test.targetAll) {
+        tempDN = tar.defenses.taunt;
+        highestDN = Math.max(highestDN, tempDN);
+      }
+      test.DN = highestDN;
+      break;
+    case 'targetTrick':
+      for (const tar of test.targetAll) {
+        tempDN = tar.defenses.trick;
+        highestDN = Math.max(highestDN, tempDN);
+      }
+      test.DN = highestDN;
+      break;
+    case 'targetUnarmedCombat':
+      for (const tar of test.targetAll) {
+        tempDN = tar.defenses.unarmedCombat;
+        highestDN = Math.max(highestDN, tempDN);
+      }
+      test.DN = highestDN;
+      break;
+    case 'targetWillpower':
+      for (const tar of test.targetAll) {
+        if (tar.skills.willpower.value) {
+          tempDN = tar.skills.willpower.value;
+        } else {
+          tempDN = tar.attributes.spirit.value;
+        }
+        highestDN = Math.max(highestDN, tempDN);
+      }
+      test.DN = highestDN;
+      break;
+    case 'targetWillpowerMind':
+      for (const tar of test.targetAll) {
+        if (tar.skills.willpower.value) {
+          tempDN =
+            tar.skills.willpower.value - tar.attributes.spirit.value + tar.attributes.mind.value;
+        } else {
+          tempDN = tar.attributes.mind.value;
+        }
+        highestDN = Math.max(highestDN, tempDN);
+      }
+      test.DN = highestDN;
+      break;
+    case 'targetLandVehicles':
+      for (const tar of test.targetAll) {
+        if (tar.skills.landVehicles.value) {
+          tempDN = tar.skills.landVehicles.value;
+        } else {
+          tempDN = tar.attributes.dexterity.value;
+        }
+        highestDN = Math.max(highestDN, tempDN);
+      }
+      test.DN = highestDN;
+      break;
+    case 'targetAirVehicles':
+      for (const tar of test.targetAll) {
+        if (tar.skills.airVehicles.value) {
+          tempDN = tar.skills.airVehicles.value;
+        } else {
+          tempDN = tar.attributes.dexterity.value;
+        }
+        highestDN = Math.max(highestDN, tempDN);
+      }
+      test.DN = highestDN;
+      break;
+    case 'targetWaterVehicles':
+      for (const tar of test.targetAll) {
+        if (tar.skills.waterVehicles.value) {
+          tempDN = tar.skills.waterVehicles.value;
+        } else {
+          tempDN = tar.attributes.dexterity.value;
+        }
+        highestDN = Math.max(highestDN, tempDN);
+      }
+      test.DN = highestDN;
+      break;
+    case 'highestSpeed':
+      // Find the fastest participant in the active combat
+      const combatants = game.combats.active.turns;
+      const combatantCount = game.combats.active.turns.length;
+      let combatantRun = 0;
+      let combatantSpeed = 0;
+      let highestSpeed = 0;
+      for (let i = 0; i < combatantCount; i++) {
+        if (combatants[i].actor.type === 'vehicle') {
+          combatantSpeed = combatants[i].actor.system.topSpeed.value;
+        } else {
+          combatantRun = combatants[i].actor.system.other.run;
+          combatantSpeed = getTorgValue(combatantRun);
+        }
+        if (combatantSpeed > highestSpeed) {
+          highestSpeed = combatantSpeed;
+        }
+      }
+      test.DN = highestSpeed;
+      break;
+    case 'targetVehicleDefense':
+      test.DN = target.defenses.vehicle;
+      break;
+    default:
+      test.DN = 10;
+  }
 }

@@ -15,7 +15,7 @@
       "flags": {}
     }
   ],
-  "version": "3.7.0",
+  "version": "3.7.3",
   "compatibility": {
     "minimum": "11",
     "verified": "11.315"
@@ -213,9 +213,15 @@
           "color": "#960000",
           "folders": [],
           "packs": ["basic-rules-fr", "core-card-set-fr", "archetypes-fr"]
+        },
+        {
+          "name": "Language-neutral",
+          "sorting": "m",
+          "color": "#960000",
+          "folders": [],
+          "packs": ["macros", "core-scenes"]
         }
-      ],
-      "packs": ["macros", "core-scenes"]
+      ]
     }
   ],
   "languages": [

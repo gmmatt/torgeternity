@@ -145,6 +145,8 @@ torgeternity.perkTypes = {
   powerSuit: 'torgeternity.perkTypes.powerSuit',
   invasion: 'torgeternity.perkTypes.invasion',
   stalenger: 'torgeternity.perkTypes.stalenger',
+  groundSloth: 'torgeternity.perkTypes.groundSloth',
+  special: 'torgeternity.perkTypes.special',
 };
 
 torgeternity.dnTypes = {
@@ -177,6 +179,7 @@ torgeternity.dnTypes = {
   targetUnarmedCombat: 'torgeternity.dnTypes.targetUnarmedCombat',
   targetWillpower: 'torgeternity.dnTypes.targetWillpower',
   targetWillpowerMind: 'torgeternity.dnTypes.targetWillpowerMind',
+  targetFind: 'torgeternity.dnTypes.targetFind',
   targetLandVehicles: 'torgeternity.dnTypes.targetLandVehicles',
   targetWaterVehicles: 'torgeternity.dnTypes.targetWaterVehicles',
   targetAirVehicles: 'torgeternity.dnTypes.targetAirVehicles',

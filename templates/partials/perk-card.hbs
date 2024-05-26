@@ -1,19 +1,21 @@
 <div
   class="perk-border sheet-card {{type}}"
-  data-type="{{type}}"
-  style="background-image: url('systems/torgeternity/images/bgparch.webp')"
+  data-type="{{type}}"  
 >
-  <table style="border:none;background-color:transparent">
-    <tr style="border:none">
-      <td>
-        <img class="perk-icon" src="{{img}}" title="{{name}}" style="width:50px;height:50px" />
-      </td>
-      <td class="chat-title">
-        {{name}}
-      </td>
-    </tr>
-  </table>
+<div class="generalHeader">  
+      <img src="{{img}}" title="{{name}}"/>      
+      <span>
+        {{name}} {{#if system.generalContradiction}}&bigstar;{{/if}}
+      </span>
+  </div>
   <div data-item-id="{{_id}}">
-    <div class="item-description-chat">{{{system.description}}}</div>
+    <div class="item-description-chat">{{{system.description}}}
+    {{#if system.generalContradiction}}
+    <span>
+    &bigstar;{{localize "torgeternity.chatText.mayCauseContradiction"}}
+    </span>
+    {{/if}}
+    
+    </div>
   </div>
 </div>

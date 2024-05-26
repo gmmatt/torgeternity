@@ -9,8 +9,7 @@ export class EnhancementItemData extends foundry.abstract.TypeDataModel {
    */
   static defineSchema() {
     return {
-      ...super.defineSchema(),
-      description: new fields.HtmlField({ initial: '' }),
+      description: new fields.HTMLField({ initial: '' }),
       perk: new fields.StringField({ initial: '' }),
     };
   }

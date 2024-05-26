@@ -10,11 +10,11 @@
 ### Build the system
 
 1. run `npm ci` in the terminal/command Line of the project
-1. run `npm run build` in the terminal/command Line of the project
+1. run `npm run build` in the terminal/command Line of the project (make packs from yml)
 
 ### commit data
 
-1. run `npm run extract` in the terminal/command Line of the project
+1. run `npm run extract` in the terminal/command Line of the project (make yml from packs)
 1. commit the yml files as usual
 
 it is also possible to directly edit the yml files in src/packs
@@ -38,15 +38,3 @@ it is also possible to directly edit the yml files in src/packs
   - Package Manifest URL: release-URL with system.json, for example: https://github.com/gmmatt/torgeternity/releases/download/3.6.2/system.json
   - Release Notes: From 3.7.0 it's always https://github.com/gmmatt/torgeternity/blob/master/Changelog.md
   - Foundry-Versions like in system.json
-
-### Release Module
-
-(1) In the module.json file, change "protected" to true  
-(2) Increase the version number  
-(3) Move all of the module files into a zip file with the same name as the module folder  
-(4) Use the Foundry content creator upload tool to upload the zip file  
-(5) Change the "protected" element back to "false" in module.json  
-(6) Push the changes
-
-If you don't have access to the content creator tool, ask Jan or someone in the content creator channel on Torg foundry
-and they can get it for you.

@@ -37,7 +37,7 @@ import initTextEdidor from './initTextEditor.js';
 import { TorgeternityMacros } from './macros.js';
 import { ChatMessageTorg } from './chat/document.js';
 import * as actorDataModels from './data/actor/index.js';
-import * as itemDataModels from './data/actor/index.js';
+import * as itemDataModels from './data/item/index.js';
 import TorgActiveEffect from './documents/active-effect/torgActiveEffect.js';
 
 Hooks.once('init', async function () {
@@ -648,19 +648,19 @@ function rollItemMacro(itemName) {
             adjustedDamage = weaponDamage;
             break;
           case 'strengthPlus':
-            adjustedDamage = parseInt(attributes.strength) + parseInt(weaponDamage);
+            adjustedDamage = attributes.strength.value + parseInt(weaponDamage);
             break;
           case 'charismaPlus':
-            adjustedDamage = parseInt(attributes.charisma) + parseInt(weaponDamage);
+            adjustedDamage = attributes.charisma.value + parseInt(weaponDamage);
             break;
           case 'dexterityPlus':
-            adjustedDamage = parseInt(attributes.dexterity) + parseInt(weaponDamage);
+            adjustedDamage = attributes.dexterity.value + parseInt(weaponDamage);
             break;
           case 'mindPlus':
-            adjustedDamage = parseInt(attributes.mind) + parseInt(weaponDamage);
+            adjustedDamage = attributes.mind.value + parseInt(weaponDamage);
             break;
           case 'spiritPlus':
-            adjustedDamage = parseInt(attributes.spirit) + parseInt(weaponDamage);
+            adjustedDamage = attributes.spirit.value + parseInt(weaponDamage);
             break;
           default:
             adjustedDamage = parseInt(weaponDamage);

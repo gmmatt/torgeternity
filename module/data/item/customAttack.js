@@ -13,7 +13,7 @@ export class CustomAttackItemData extends foundry.abstract.TypeDataModel {
       chatNote: new fields.StringField({ initial: '' }),
       damage: new fields.NumberField({ initial: 0, integer: true }),
       damageType: new fields.StringField({ initial: '' }),
-      description: new fields.HtmlField({ initial: '' }),
+      description: new fields.HTMLField({ initial: '' }),
       notes: new fields.StringField({ initial: '' }),
     };
   }

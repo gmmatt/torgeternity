@@ -1,0 +1,243 @@
+h1 {
+    background-image: URL(../../../systems/torgeternity/images/tab-header.webp);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    overflow: hidden;
+    border: none;
+    margin: 1rem 0px 0.7rem 0px;
+    text-align: center;
+    color: white;
+    text-transform: uppercase;
+  }
+  
+  h2 {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bolder;
+    text-shadow: 0px 0px 15px white;
+    text-transform: uppercase;
+    margin: 1rem 0px 0.7rem 0px;
+    border: none;
+  }
+  
+  h3 {
+    margin: 2px 0px 9px 0px;
+    font-weight: bolder;
+    text-transform: uppercase;
+  }
+  
+  h4 {
+    text-align: center;
+    font-size: 1.5rem;
+    color: white;
+    font-family: Alaska;
+    text-shadow: black 1.3px 1.3px 0px, black 1.3px -1.3px 0px, black -1.3px 1.3px 0px, black -1.3px 1.3px 0px;
+    text-transform: uppercase;
+    margin: 1rem 0px 0.7rem 0px;
+  }
+  
+  hr {
+    background-image: url(../images/separator.webp);
+    /* background-position-y: -8px; */
+    background-repeat: no-repeat;
+    background-size: auto;
+    min-height: 20px;
+    border: none;
+  }
+  
+  blockquote {
+    background-color: rgb(241, 221, 192);
+    margin: 16px 30px;
+    padding: 5px 10px;
+    font-size: 14px;
+    text-align: justify;
+    overflow: hidden;
+    border-left: none;
+    font-style: normal;
+  }
+  
+  blockquote p:first-of-type {
+    text-indent: 0px;
+  }
+  
+  blockquote p + p {
+    text-indent: 0px;
+  }
+  
+  .splotch {
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    width: 50%;
+    display: inline-block;
+    margin-left: 25%;
+    text-align: center;
+  }
+  
+  .splotch p {
+    text-align: center;
+    font-size: 1rem;
+    color: white;
+    font-family: Alaska;
+    text-shadow: black 1.3px 1.3px 0px, black 1.3px -1.3px 0px, black -1.3px 1.3px 0px, black -1.3px 1.3px 0px;
+    text-transform: uppercase;
+    padding: 0 1em;
+    margin-left: 2.2rem;
+  }
+  
+  div.splotch p:only-of-type {
+    margin-top: 1.8em;
+    margin-bottom: 1.8em;
+    padding: inherit;
+  }
+  
+  div.splotch p:first-of-type {
+    margin-top: 1.8em;
+    padding: inherit;
+  }
+  
+  div.splotch p + p:last-of-type {
+    margin-bottom: 1.8em;
+    padding: inherit;
+    text-indent: 0px;
+  }
+  
+  .splotch.right {
+    float: right;
+    margin-left: 0.5rem;
+  }
+  
+  .splotch.left {
+    float: left;
+    margin-right: 0.5rem;
+    margin-left: unset;
+  }
+  
+  .splotch.aysle {
+    background-image: url(../images/Splotch_Aysle.webp);
+  }
+  
+  .splotch.cyber {
+    background-image: url(../images/splotch_cyberpapacy.webp);
+  }
+  
+  .splotch.nile {
+    background-image: url(../images/Splotch_Nile.webp);
+  }
+  
+  .splotch.or {
+    background-image: url(../images/Splotch_Orrorsh.webp);
+  }
+  
+  .splotch.panpa {
+    background-image: url(../images/Splotch_PanPacifica.webp);
+  }
+  
+  .splotch.thark {
+    background-image: url(../images/Splotch_Tharkold.webp);
+  }
+  
+  /*...................................................................*/
+  /*use the background-image for sidenotes, heritage-class for white background*/
+  .sidenote {
+    background-image: url(../images/mapDetailBack.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 10px;
+  }
+  
+  .sidenote :is(h2, h3, h4, ul, table) {
+    background-color: rgba(255, 247, 247, 0.5);
+    margin: 0;
+    padding: 10px;
+  }
+  
+  .sidenote p {
+    background-color: rgba(255, 247, 247, 0.5);
+    margin: 0;
+    padding-bottom: 8px;
+    padding-left: 10px;
+  }
+  
+  .sidenote ul {
+    list-style-position: inside;
+    text-align: justify;
+    padding-right: 10px;
+  }
+  
+  .sidenote :first-of-type {
+    padding-top: 0;
+  }
+  
+  .sidenote.left {
+    float: left;
+    width: 50%;
+    margin-right: 0.5rem;
+  }
+  
+  .sidenote.right {
+    float: right;
+    width: 50%;
+    margin-left: 0.5rem;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #f6e9d7;
+  }
+  
+  tr:nth-child(odd) {
+    background-color: transparent;
+  }
+  
+  a.entity-link,
+  a.content-link,
+  a.inline-roll {
+    background-image: url(../images/lightning_bar.webp);
+    background-repeat: repeat-x;
+    background-size: auto 100%;
+    color: white !important;
+    text-shadow: black 1px 1px 0px, black 1px -1px 0px, black -1px 1px 0px, black -1px 1px 0px;
+    font-size: 14px;
+    text-indent: 0px;
+  }
+  
+  /*...................................................................*/
+  /*Adventures often come with directives from Sebastian. This class is to bring them on the grafic parchments with the right font. Please use an h3 for the headline.*/
+  @font-face {
+    font-family: "gunplay";
+    src: url("../fonts/gunplay_rg.ttf") format("ttf");
+  }
+  
+  .directive1 {
+    background-image: url(../images/parchment1.webp);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    padding: 3rem;
+  }
+  
+  .directive1 :is(p, h3, h4) {
+    font-family: "gunplay";
+    transform: rotate(-3deg);
+    text-indent: 0px;
+  }
+  
+  .directive1 h3 {
+    font-size: 21px;
+  }
+  
+  .directive2 {
+    background-image: url(../images/parchment2.webp);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    padding: 3rem;
+  }
+  
+  .directive2 :is(p, h3, h4) {
+    font-family: "gunplay";
+    transform: rotate(2deg);
+    text-indent: 0px;
+  }
+  
+  .directive2 h3 {
+    font-size: 21px;
+  }

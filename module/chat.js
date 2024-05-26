@@ -2,6 +2,9 @@ import { renderSkillChat } from './torgchecks.js';
 import { torgBD } from './torgchecks.js';
 import { torgDamage } from './torgchecks.js';
 import { applyDamages } from './torgchecks.js';
+import { backlash1 } from './torgchecks.js';
+import { backlash2 } from './torgchecks.js';
+import { backlash3 } from './torgchecks.js';
 import { soakDamages } from './torgchecks.js';
 import { applyStymiedState } from './torgchecks.js';
 import { applyVulnerableState } from './torgchecks.js';
@@ -25,6 +28,9 @@ export function addChatListeners(html) {
   html.on('click', 'a.soakDam', soakDam);
   html.on('click', 'a.applyStymied', applyStym);
   html.on('click', 'a.applyVulnerable', applyVul);
+  html.on('click', 'a.backlash1', applyBacklash1);
+  html.on('click', 'a.backlash2', applyBacklash2);
+  html.on('click', 'a.backlash3', applyBacklash3);
 }
 
 async function parentDeleteByTime(oldMsg) {
@@ -35,7 +41,7 @@ async function parentDeleteByTime(oldMsg) {
   parentMessagesIds.forEach((id) => game.messages.get(id).delete());
 }
 
-function onFavored(event) {
+async function onFavored(event) {
   const parentMessageId = event.currentTarget.closest('.chat-message').dataset.messageId;
   const parentMessage = game.messages.find(({ id }) => id === parentMessageId);
   if (!(parentMessage.user.id === game.user.id) && !game.user.isGM) {
@@ -48,7 +54,7 @@ function onFavored(event) {
   // reRoll because favored
   test.isFavStyle = 'pointer-events:none;color:gray;display:none';
 
-  const diceroll = new Roll('1d20x10x20').evaluate({ async: false });
+  const diceroll = await new Roll('1d20x10x20').evaluate();
   test.diceroll = diceroll;
   test.rollTotal = Math.max(test.diceroll.total, 1.1);
   test.isFav = false;
@@ -138,7 +144,7 @@ async function onPossibility(event) {
     test.possibilityStyle = 'pointer-events:none;color:gray';
   }
 
-  const diceroll = new Roll('1d20x10x20').evaluate({ async: false });
+  const diceroll = await new Roll('1d20x10x20').evaluate();
   if (test.disfavored) {
     test.possibilityTotal = 0.1;
     test.disfavored = false;
@@ -156,7 +162,7 @@ async function onPossibility(event) {
   parentDeleteByTime(parentMessage);
 }
 
-function onUp(event) {
+async function onUp(event) {
   const parentMessageId = event.currentTarget.closest('.chat-message').dataset.messageId;
   const parentMessage = game.messages.find(({ id }) => id === parentMessageId);
   if (!(parentMessage.user.id === game.user.id) && !game.user.isGM) {
@@ -167,7 +173,7 @@ function onUp(event) {
   test.isFavStyle = 'pointer-events:none;color:gray;display:none';
 
   // Roll for Up
-  const diceroll = new Roll('1d20x10x20').evaluate({ async: false });
+  const diceroll = await new Roll('1d20x10x20').evaluate();
   if (test.disfavored) {
     test.upTotal = 0.1;
     test.disfavored = false;
@@ -184,7 +190,7 @@ function onUp(event) {
   parentDeleteByTime(parentMessage);
 }
 
-function onHero(event) {
+async function onHero(event) {
   const parentMessageId = event.currentTarget.closest('.chat-message').dataset.messageId;
   const parentMessage = game.messages.find(({ id }) => id === parentMessageId);
   if (!(parentMessage.user.id === game.user.id) && !game.user.isGM) {
@@ -196,7 +202,7 @@ function onHero(event) {
   test.isFavStyle = 'pointer-events:none;color:gray;display:none';
 
   // Roll for Possibility
-  const diceroll = new Roll('1d20x10x20').evaluate({ async: false });
+  const diceroll = await new Roll('1d20x10x20').evaluate();
   if (test.disfavored) {
     test.heroTotal = 0.1;
     test.disfavored = false;
@@ -215,7 +221,7 @@ function onHero(event) {
   parentDeleteByTime(parentMessage);
 }
 
-function onDrama(event) {
+async function onDrama(event) {
   const parentMessageId = event.currentTarget.closest('.chat-message').dataset.messageId;
   const parentMessage = game.messages.find(({ id }) => id === parentMessageId);
   if (!(parentMessage.user.id === game.user.id) && !game.user.isGM) {
@@ -226,7 +232,7 @@ function onDrama(event) {
   test.isFavStyle = 'pointer-events:none;color:gray;display:none';
 
   // Increase cards played by 1
-  const diceroll = new Roll('1d20x10x20').evaluate({ async: false });
+  const diceroll = await new Roll('1d20x10x20').evaluate();
   if (test.disfavored) {
     test.dramaTotal = 0.1;
     test.disfavored = false;
@@ -348,7 +354,7 @@ async function soakDam(event) {
     return;
   }
   const soaker = fromUuidSync(targetuuid).actor; // game.actors.get(targetid) ?? game.user.character) ?? Array.from(game.user.targets)[0].actor;
-  // ///
+  //
   let possPool = parseInt(soaker.system.other.possibilities);
   // 0 => if GM ask for confirm, or return message "no poss"
   if ((possPool <= 0) & !game.user.isGM) {
@@ -427,12 +433,47 @@ async function applyStym(event) {
   const parentMessageId = event.currentTarget.closest('.chat-message').dataset.messageId;
   const parentMessage = game.messages.find(({ id }) => id === parentMessageId);
   const targetuuid = parentMessage.getFlag('torgeternity', 'currentTarget').uuid;
-  await applyStymiedState(targetuuid);
+  const sourceuuid = parentMessage.getFlag('torgeternity', 'test').actor;
+  await applyStymiedState(targetuuid, sourceuuid);
 }
 
 async function applyVul(event) {
   const parentMessageId = event.currentTarget.closest('.chat-message').dataset.messageId;
   const parentMessage = game.messages.find(({ id }) => id === parentMessageId);
   const targetuuid = parentMessage.getFlag('torgeternity', 'currentTarget').uuid;
-  await applyVulnerableState(targetuuid);
+  const sourceuuid = parentMessage.getFlag('torgeternity', 'test').actor;
+  await applyVulnerableState(targetuuid, sourceuuid);
+}
+
+/**
+ * call backlash1 on targetuuid
+ * @param event
+ */
+async function applyBacklash1(event) {
+  const parentMessageId = event.currentTarget.closest('.chat-message').dataset.messageId;
+  const parentMessage = game.messages.find(({ id }) => id === parentMessageId);
+  const targetuuid = parentMessage.getFlag('torgeternity', 'test').actor;
+  await backlash1(targetuuid);
+}
+
+/**
+ * call backlash2 on targetuuid
+ * @param event
+ */
+async function applyBacklash2(event) {
+  const parentMessageId = event.currentTarget.closest('.chat-message').dataset.messageId;
+  const parentMessage = game.messages.find(({ id }) => id === parentMessageId);
+  const targetuuid = parentMessage.getFlag('torgeternity', 'test').actor;
+  await backlash2(targetuuid);
+}
+
+/**
+ * call backlash3 on targetuuid
+ * @param event
+ */
+async function applyBacklash3(event) {
+  const parentMessageId = event.currentTarget.closest('.chat-message').dataset.messageId;
+  const parentMessage = game.messages.find(({ id }) => id === parentMessageId);
+  const targetuuid = parentMessage.getFlag('torgeternity', 'test').actor;
+  await backlash3(targetuuid);
 }

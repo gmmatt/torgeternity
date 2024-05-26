@@ -1,4 +1,4 @@
-import { GeneralItemData } from './general';
+import { GeneralItemData } from './general.js';
 
 const fields = foundry.data.fields;
 /**

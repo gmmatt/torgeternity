@@ -1,8 +1,14 @@
 <div class='threat-contents block'>
   <div class='threat-block'>
     <div class='threat-section-attributes'>
-      <div class='section-bar'>
+      <div class='section-bar attributes'>
         {{localize 'torgeternity.sheetLabels.attributes'}}
+        <a class="changeAttributesToggle" title="{{localize 'torgeternity.iconeTitles.edit'}}">
+          <i class="fas fa-edit"></i>
+        </a>
+        {{#if actor.flags.torgeternity.editAttributes}}
+          <h5>{{localize "torgeternity.sheetLabels.alterAttributes"}}</h5>
+        {{/if}}
       </div>
 
       <div class='threat-edit attribut-list-edit'>
@@ -10,7 +16,7 @@
           <a
             class='skill-roll'
             data-testType='attribute'
-            data-value='{{actor.system.attributes.charisma}}'
+            data-value='{{actor.system.attributes.charisma.value}}'
             data-name='charisma'
             data-baseAttribute='charisma'
             data-adds='0'
@@ -18,19 +24,43 @@
           >
             {{localize 'torgeternity.attributes.charisma'}}
           </a>
+          {{#if actor.flags.torgeternity.editAttributes}}
+            <a class="decreaseAttribute"
+              data-concernedAttribute="charisma"
+            >
+            <i class="fa-solid fa-minus changeAttributeSubstract"></i>
+            </a>
+          {{/if}}
           <input
-            name='system.attributes.charisma'
+            name='system.attributes.charisma.value'
             type='number'
-            value='{{actor.system.attributes.charisma}}'
+            class="attributeValueField"
+            data-baseAttributeInput="charisma" 
+            {{#if actor.flags.torgeternity.editAttributes}}
+            value='{{actor.system.attributes.charisma.base}}'
+            {{else}}
+            value='{{actor.system.attributes.charisma.value}}'
+            {{/if}}
             data-dtype='Number'
-            class='small-input'
+            class='small-input'            
+            {{#iffalse actor.flags.torgeternity.editAttributes}}
+            readonly="true"
+            {{/iffalse}}
           />
+          {{#if actor.flags.torgeternity.editAttributes}}
+            <a
+            class="increaseAttribute"
+            data-concernedAttribute="charisma"
+            >
+            <i class="fa-solid fa-plus changeAttributeAdd"></i>
+            </a>
+          {{/if}}
         </span>
         <span>
           <a
             class='skill-roll'
             data-testType='attribute'
-            data-value='{{actor.system.attributes.dexterity}}'
+            data-value='{{actor.system.attributes.dexterity.value}}'
             data-name='dexterity'
             data-baseAttribute='dexterity'
             data-adds='0'
@@ -38,19 +68,43 @@
           >
             {{localize 'torgeternity.attributes.dexterity'}}
           </a>
+          {{#if actor.flags.torgeternity.editAttributes}}
+            <a class="decreaseAttribute"
+            data-concernedAttribute="dexterity"
+            >
+            <i class="fa-solid fa-minus changeAttributeSubstract"></i>
+            </a>
+          {{/if}} 
           <input
-            name='system.attributes.dexterity'
+            name='system.attributes.dexterity.value'
             type='number'
-            value='{{actor.system.attributes.dexterity}}'
+            class="attributeValueField"
+            data-baseAttributeInput="dexterity"
+            {{#if actor.flags.torgeternity.editAttributes}}
+            value='{{actor.system.attributes.dexterity.base}}'
+            {{else}}
+            value='{{actor.system.attributes.dexterity.value}}'
+            {{/if}}            
             data-dtype='Number'
             class='small-input'
+            {{#iffalse actor.flags.torgeternity.editAttributes}}
+            readonly="true"
+            {{/iffalse}}
           />
+          {{#if actor.flags.torgeternity.editAttributes}}
+            <a
+              class="increaseAttribute"
+              data-concernedAttribute="dexterity"
+              >
+            <i class="fa-solid fa-plus changeAttributeAdd"></i>
+            </a>
+          {{/if}}
         </span>
         <span>
           <a
             class='skill-roll'
             data-testType='attribute'
-            data-value='{{actor.system.attributes.mind}}'
+            data-value='{{actor.system.attributes.mind.value}}'
             data-name='mind'
             data-baseAttribute='mind'
             data-adds='0'
@@ -58,19 +112,43 @@
           >
             {{localize 'torgeternity.attributes.mind'}}
           </a>
+          {{#if actor.flags.torgeternity.editAttributes}}
+            <a class="decreaseAttribute"
+                data-concernedAttribute="mind"
+            >
+            <i class="fa-solid fa-minus changeAttributeSubstract"></i>
+            </a>
+          {{/if}}
           <input
-            name='system.attributes.mind'
+            name='system.attributes.mind.value'
             type='number'
-            value='{{actor.system.attributes.mind}}'
+            class="attributeValueField"
+            data-baseAttributeInput="mind"
+            {{#if actor.flags.torgeternity.editAttributes}}
+            value='{{actor.system.attributes.mind.base}}'
+            {{else}}
+            value='{{actor.system.attributes.mind.value}}'
+            {{/if}}            
             data-dtype='Number'
             class='small-input'
+            {{#iffalse actor.flags.torgeternity.editAttributes}}
+            readonly="true"
+            {{/iffalse}}
           />
+          {{#if actor.flags.torgeternity.editAttributes}}
+            <a
+              class="increaseAttribute"
+              data-concernedAttribute="mind"
+              >
+            <i class="fa-solid fa-plus changeAttributeAdd"></i>
+            </a>
+          {{/if}}     
         </span>
         <span>
           <a
             class='skill-roll'
             data-testType='attribute'
-            data-value='{{actor.system.attributes.spirit}}'
+            data-value='{{actor.system.attributes.spirit.value}}'
             data-name='spirit'
             data-baseAttribute='spirit'
             data-adds='0'
@@ -78,19 +156,43 @@
           >
             {{localize 'torgeternity.attributes.spirit'}}
           </a>
+          {{#if actor.flags.torgeternity.editAttributes}}
+            <a class="decreaseAttribute"
+            data-concernedAttribute="spirit"
+            >
+            <i class="fa-solid fa-minus changeAttributeSubstract"></i>
+            </a>
+          {{/if}} 
           <input
-            name='system.attributes.spirit'
+            name='system.attributes.spirit.value'
             type='number'
-            value='{{actor.system.attributes.spirit}}'
+            class="attributeValueField"
+            data-baseAttributeInput="spirit"
+            {{#if actor.flags.torgeternity.editAttributes}}
+            value='{{actor.system.attributes.spirit.base}}'
+            {{else}}
+            value='{{actor.system.attributes.spirit.value}}'
+            {{/if}}
             data-dtype='Number'
             class='small-input'
+            {{#iffalse actor.flags.torgeternity.editAttributes}}
+            readonly="true"
+            {{/iffalse}}
           />
+          {{#if actor.flags.torgeternity.editAttributes}}
+            <a
+              class="increaseAttribute"
+              data-concernedAttribute="spirit"
+              >
+            <i class="fa-solid fa-plus changeAttributeAdd"></i>
+            </a>
+          {{/if}}
         </span>
         <span>
           <a
             class='skill-roll'
             data-testType='attribute'
-            data-value='{{actor.system.attributes.strength}}'
+            data-value='{{actor.system.attributes.strength.value}}'
             data-name='strength'
             data-baseAttribute='strength'
             data-adds='0'
@@ -98,13 +200,37 @@
           >
             {{localize 'torgeternity.attributes.strength'}}
           </a>
+          {{#if actor.flags.torgeternity.editAttributes}}
+            <a class="decreaseAttribute"
+            data-concernedAttribute="strength"
+            >
+            <i class="fa-solid fa-minus changeAttributeSubstract"></i>
+            </a>
+          {{/if}}
           <input
-            name='system.attributes.strength'
+            name='system.attributes.strength.value'
             type='number'
-            value='{{actor.system.attributes.strength}}'
+            class="attributeValueField"
+            data-baseAttributeInput="strength"
+            {{#if actor.flags.torgeternity.editAttributes}}
+            value='{{actor.system.attributes.strength.base}}'
+            {{else}}
+            value='{{actor.system.attributes.strength.value}}'
+            {{/if}}
             data-dtype='Number'
             class='small-input'
+            {{#iffalse actor.flags.torgeternity.editAttributes}}
+            readonly="true"
+            {{/iffalse}}
           />
+          {{#if actor.flags.torgeternity.editAttributes}}
+            <a
+              class="increaseAttribute"
+              data-concernedAttribute="strength"
+              >
+            <i class="fa-solid fa-plus changeAttributeAdd"></i>
+            </a>
+          {{/if}}
         </span>
       </div>
     </div>

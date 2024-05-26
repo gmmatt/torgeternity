@@ -201,7 +201,7 @@ export default class TorgeternityActorSheet extends ActorSheet {
     const skill = this.actor.system.skills[skillNameKey];
     const value = skill.value
       ? skill.value
-      : skill.adds + this.actor.system.attributes[skill.baseAttribute];
+      : skill.adds + this.actor.system.attributes[skill.baseAttribute].value;
     const skillAttrData = {
       type: 'interaction',
       data: {
@@ -222,133 +222,116 @@ export default class TorgeternityActorSheet extends ActorSheet {
    */
   activateListeners(html) {
     // localizing hardcoded possibility potential value
-    if (this.actor.isOwner)
-      if (this.actor.isOwner) {
-        // Owner-only Listeners
-        let handler = (ev) => this._onDragStart(ev);
-        // Find all items on the character sheet.
-        html.find('a.item-name').each((i, a) => {
-          // Ignore for the header row.
-          if (a.classList.contains('item-header')) return;
+    if (this.actor.isOwner) {
+      // Owner-only Listeners
+      let handler = (ev) => this._onDragStart(ev);
+      // Find all items on the character sheet.
+      html.find('a.item-name').each((i, a) => {
+        // Ignore for the header row.
+        if (a.classList.contains('item-header')) return;
+        // Add draggable attribute and dragstart listener.
+        a.setAttribute('draggable', true);
+        a.addEventListener('dragstart', handler, false);
+      });
+      // Find all attributes on the character sheet.
+      handler = (ev) => this._skillAttrDragStart(ev);
+      html.find('a.skill-roll').each((i, a) => {
+        // Add draggable attribute and dragstart listener.
+        a.setAttribute('draggable', true);
+        a.addEventListener('dragstart', handler, false);
+      });
+      // Find all interactions on the character sheet.
+      handler = (ev) => this._interactionDragStart(ev);
+      html.find('a.interaction-attack').each((i, a) => {
+        // Add draggable attribute and dragstart listener.
+        a.setAttribute('draggable', true);
+        a.addEventListener('dragstart', handler, false);
+      });
+      // listeners for items on front page of threat sheet
+      if (this.object.type === 'threat') {
+        handler = (ev) => this._onDragStart(ev);
+        html.find('a.item').each((i, a) => {
           // Add draggable attribute and dragstart listener.
           a.setAttribute('draggable', true);
           a.addEventListener('dragstart', handler, false);
         });
-        // Find all attributes on the character sheet.
-        handler = (ev) => this._skillAttrDragStart(ev);
-        html.find('a.skill-roll').each((i, a) => {
-          // Add draggable attribute and dragstart listener.
-          a.setAttribute('draggable', true);
-          a.addEventListener('dragstart', handler, false);
-        });
-        // Find all interactions on the character sheet.
-        handler = (ev) => this._interactionDragStart(ev);
-        html.find('a.interaction-attack').each((i, a) => {
-          // Add draggable attribute and dragstart listener.
-          a.setAttribute('draggable', true);
-          a.addEventListener('dragstart', handler, false);
-        });
-        // listeners for items on front page of threat sheet
-        if (this.object.type === 'threat') {
-          handler = (ev) => this._onDragStart(ev);
-          html.find('a.item').each((i, a) => {
-            // Add draggable attribute and dragstart listener.
-            a.setAttribute('draggable', true);
-            a.addEventListener('dragstart', handler, false);
-          });
-        }
       }
 
-    if (this.actor.isOwner) {
       html.find('.skill-roll').click(this._onSkillRoll.bind(this));
-    }
 
-    if (this.actor.isOwner) {
       html.find('.skill-list').click(this._onSkillList.bind(this));
-    }
 
-    if (this.actor.isOwner) {
       // New for skills rolls without values
       html.find('.skill-element-roll').click(this._onSkillElementRoll.bind(this));
-    }
 
-    if (this.actor.isOwner) {
       html.find('.skill-edit-toggle').click(this._onSkillEditToggle.bind(this));
-    }
 
-    // if (this.actor.isOwner) {
-    //  html.find(".possibility-roll").click(this._onPossibilityRoll.bind(this));
-    // }
-
-    if (this.actor.isOwner) {
       html.find('.item-tochat').click(this._onItemChat.bind(this));
-    }
 
-    if (this.actor.isOwner) {
       html.find('.item-attackRoll').click(this._onAttackRoll.bind(this));
-    }
 
-    if (this.actor.isOwner) {
       html.find('.interaction-attack').click(this._onInteractionAttack.bind(this));
-    }
 
-    if (this.actor.isOwner) {
       html.find('.unarmed-attack').click(this._onUnarmedAttack.bind(this));
-    }
 
-    if (this.actor.isOwner) {
       html.find('.item-bonusRoll').click(this._onBonusRoll.bind(this));
-    }
 
-    if (this.actor.isOwner) {
       html.find('.item-powerRoll').click(this._onPowerRoll.bind(this));
-    }
 
-    // if (this.actor.isOwner) {
-    //  html.find(".up-roll").click(this._onUpRoll.bind(this));
-    // }
-
-    if (this.actor.isOwner) {
       html.find('.item-equip').click(this._onItemEquip.bind(this));
-    }
 
-    if (this.actor.isOwner) {
       html.find('.item-create-sa').click(this._onCreateSa.bind(this));
-    }
 
-    if (this.actor.isOwner) {
       html.find('.item-create-rsa').click(this._onCreateSaR.bind(this));
-    }
 
-    if (this.actor.isOwner) {
       html.find('.activeDefense-roll').click(this._onActiveDefenseRoll.bind(this));
-    }
 
-    if (this.actor.isOwner) {
       html.find('.activeDefense-roll-glow').click(this._onActiveDefenseCancel.bind(this));
-    }
 
-    if (this.actor.isOwner) {
       html.find('.effect-control').click((ev) => onManageActiveEffect(ev, this.document));
-    }
 
-    if (this.actor.isOwner) {
       html.find('.chase-roll').click(this._onChaseRoll.bind(this));
-    }
 
-    if (this.actor.isOwner) {
       html.find('.stunt-roll').click(this._onStuntRoll.bind(this));
-    }
 
-    if (this.actor.isOwner) {
       html.find('.base-roll').click(this._onBaseRoll.bind(this));
-    }
 
-    if (this.actor.isOwner) {
       html.find('.apply-fatigue').click((ev) => {
         const newShock =
           parseInt(this.actor.system.shock.value) + parseInt(ev.currentTarget.dataset.fatigue);
         this.actor.update({ 'system.shock.value': newShock });
+      });
+
+      html.find('.attributeValueField').change((ev) => {
+        const concernedAttribute = ev.currentTarget.dataset.baseattributeinput;
+
+        this.actor.update({
+          [`system.attributes.${concernedAttribute}.base`]: parseInt(ev.target.value),
+        });
+      });
+
+      html.find('.changeAttributesToggle').click((ev) => {
+        this.document.setFlag(
+          'torgeternity',
+          'editAttributes',
+          !this.document.getFlag('torgeternity', 'editAttributes')
+        );
+      });
+
+      html.find('.increaseAttribute').click((ev) => {
+        const concernedAttribute = ev.currentTarget.dataset.concernedattribute;
+        const attributeToChange = this.actor.system.attributes[concernedAttribute].base;
+        this.actor.update({
+          [`system.attributes.${concernedAttribute}.base`]: attributeToChange + 1,
+        });
+      });
+
+      html.find('.decreaseAttribute').click((ev) => {
+        const concernedAttribute = ev.currentTarget.dataset.concernedattribute;
+        const attributeToChange = this.actor.system.attributes[concernedAttribute].base;
+        this.actor.update({
+          [`system.attributes.${concernedAttribute}.base`]: attributeToChange - 1,
+        });
       });
     }
 
@@ -438,7 +421,7 @@ export default class TorgeternityActorSheet extends ActorSheet {
       if (!!skill) {
         const skillObject = this.actor.system.skills[skill];
         const computedAdds =
-          event.target?.value - this.actor.system.attributes[skillObject?.baseAttribute];
+          event.target?.value - this.actor.system.attributes[skillObject?.baseAttribute].value;
         await this.actor.update({
           [`system.skills.${skill}.adds`]: computedAdds,
           [`system.skills.${skill}.isThreatSkill`]: true,
@@ -583,7 +566,7 @@ export default class TorgeternityActorSheet extends ActorSheet {
       event.currentTarget.dataset.value === 'NaN'
         ? isUnskilledTest
           ? '-'
-          : this.actor.system.attributes[attributeName]
+          : this.actor.system.attributes[attributeName].value
         : event.currentTarget.dataset.value;
     let isFav;
     if (event.currentTarget.dataset.isfav === 'true') {
@@ -803,7 +786,7 @@ export default class TorgeternityActorSheet extends ActorSheet {
     let skillValue = event.currentTarget.getAttribute('data-skill-value');
 
     if (isNaN(skillValue)) {
-      skillValue = this.actor.system.attributes.dexterity;
+      skillValue = this.actor.system.attributes.dexterity.value;
     } else {
       skillValue = event.currentTarget.getAttribute('data-skill-value');
     }
@@ -953,7 +936,7 @@ export default class TorgeternityActorSheet extends ActorSheet {
       skillValue = skillData.value;
       attributes = this.actor.system.attributes;
       if (isNaN(skillValue)) {
-        skillValue = skillData.unskilledUse ? attributes[skillData.baseAttribute] : '-';
+        skillValue = skillData.unskilledUse ? attributes[skillData.baseAttribute].value : '-';
       }
     }
 
@@ -1000,19 +983,19 @@ export default class TorgeternityActorSheet extends ActorSheet {
         adjustedDamage = weaponDamage;
         break;
       case 'strengthPlus':
-        adjustedDamage = parseInt(attributes.strength) + parseInt(weaponDamage);
+        adjustedDamage = attributes.strength.value + parseInt(weaponDamage);
         break;
       case 'charismaPlus':
-        adjustedDamage = parseInt(attributes.charisma) + parseInt(weaponDamage);
+        adjustedDamage = attributes.charisma.value + parseInt(weaponDamage);
         break;
       case 'dexterityPlus':
-        adjustedDamage = parseInt(attributes.dexterity) + parseInt(weaponDamage);
+        adjustedDamage = attributes.dexterity.value + parseInt(weaponDamage);
         break;
       case 'mindPlus':
-        adjustedDamage = parseInt(attributes.mind) + parseInt(weaponDamage);
+        adjustedDamage = attributes.mind.value + parseInt(weaponDamage);
         break;
       case 'spiritPlus':
-        adjustedDamage = parseInt(attributes.spirit) + parseInt(weaponDamage);
+        adjustedDamage = attributes.spirit.value + parseInt(weaponDamage);
         break;
       default:
         adjustedDamage = parseInt(weaponDamage);
@@ -1029,7 +1012,7 @@ export default class TorgeternityActorSheet extends ActorSheet {
       isAttack: true,
       isFav: skillData?.isFav || false,
       skillName: attackWith,
-      skillValue: Math.max(skillValue, attributes[skillData?.baseAttribute] || 0),
+      skillValue: Math.max(skillValue, attributes[skillData?.baseAttribute].value || 0),
       unskilledUse: true,
       damage: adjustedDamage,
       weaponAP: weaponData.ap,
@@ -1127,7 +1110,10 @@ export default class TorgeternityActorSheet extends ActorSheet {
         'torgeternity.skills.' + event.currentTarget.getAttribute('data-base-attribute')
       ),
       skillAdds: skillData.adds,
-      skillValue: Math.max(skillData.value, this.actor.system.attributes[skillData.baseAttribute]),
+      skillValue: Math.max(
+        skillData.value,
+        this.actor.system.attributes[skillData.baseAttribute].value
+      ),
       unskilledUse: false,
       damage: powerData.damage,
       weaponAP: powerData.ap,

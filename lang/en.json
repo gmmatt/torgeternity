@@ -120,7 +120,8 @@
       "unskilled": "Unskilled",
       "up": "Up",
       "value": "Value",
-      "vehicleBase": "Vehicle Operation Test"
+      "vehicleBase": "Vehicle Operation Test",
+      "mayCauseContradiction": "Perks with this symbol are dependent on their cosm’s World Laws and can cause Contradictions outside that cosm."
     },
     "clearances": {
       "alpha": "Alpha",
@@ -256,6 +257,7 @@
       "targetStrength": "Target Strength",
       "targetTaunt": "Target taunt or Charisma",
       "targetTrick": "Target trick or Mind",
+      "targetFind": "Target find or Mind",
       "targetUnarmedCombat": "Target unarmed combat or Dexterity",
       "targetVehicleDefense": "Target Vehicle Defense",
       "targetWaterVehicles": "Target water vehicles or Dexterity",
@@ -402,7 +404,9 @@
       "cosm": "Cosm",
       "description": "Description",
       "prerequisites": "Prerequisites",
-      "timestaken": "Times Taken"
+      "timestaken": "Times Taken",
+      "generalContradiction": "Contradictions",
+      "generalContradictionTT": "Cause Contradictions outside of its Cosm."
     },
     "perkTypes": {
       "abomination": "Abomination",
@@ -418,6 +422,7 @@
       "electricSamurai": "Electric Samurai",
       "elf": "Elf",
       "faith": "Faith",
+      "groundSloth": "Ground Sloth",
       "hacker": "Hacker",
       "hope": "Hope",
       "human": "Human",
@@ -438,7 +443,8 @@
       "social": "Social",
       "spellcraft": "Spellcraft",
       "stalenger": "Stalenger",
-      "theRace": "The Race"
+      "theRace": "The Race",
+      "special": "Special/Homebrew"
     },
     "poolToggle": {
       "inPool": "Card in pool",
@@ -552,6 +558,10 @@
       "showCheckDetails": {
         "hint": "If checked, the details of checks will always be shown.",
         "name": "Show Details in checks"
+      },
+      "uniqueDN": {
+        "hint": "If checked, when a multi-target test is done, will keep the highest DN from all targets to determine outcome, as RAW.",
+        "name": "Unique DN"
       }
     },
     "sheetLabels": {
@@ -563,6 +573,7 @@
       "adds": "Adds",
       "aimed": "Aimed",
       "allOut": "All-Out Attack",
+      "alterAttributes": "You can now change the attributes",
       "applyDamage": "Apply damages",
       "applyDamageTooltip": "Right-click to modify applied damages, Left-click to apply.",
       "applyStymied": "Apply Stymied",
@@ -630,6 +641,8 @@
       "implants": "Implants",
       "inactiveEffects": "Inactive Effects",
       "inputExisting": "Input Existing",
+      "inputExistingRdbTitle": "When engaged in multi-actions, check this box to input the bonus number from a previous test.",
+      "inputExistingTitle": "Input BONUS NUMBER from previous test, not die total.",
       "interactionAttacks": "Interaction Attacks",
       "interactionSkills": "Interaction",
       "keep": "Keep",
@@ -730,6 +743,9 @@
       "unspent": "Unspent",
       "up": "Up",
       "update": "Update",
+      "usePreviousBonusLegend": "Choose whether to (1) roll for a bonus number or (2) input a previously generated bonus when attempting a multi-action.",
+      "usePreviousBonustitle": "When engaged in multi-actions, check this box to input the bonus number from a previous test.",
+      "usePreviousBonusText": "Input BONUS NUMBER from previous test, not die total.",
       "vehicle": "Vehicle",
       "vehicles": "Vehicles",
       "vitalArea": "Vital Area",
@@ -738,7 +754,13 @@
       "wounds": "Wounds",
       "xp": "XP",
       "xpOnlyGM": "only GM can fill",
-      "toolTipClickToAdd": "click to add/remove the skill to the access list"
+      "toolTipClickToAdd": "click to add/remove the skill to the access list",
+      "backlash1": "Backlash",
+      "backlash2": "Reduced Backlash",
+      "backlash3": "Headache !",
+      "backlash1Tooltip": "Apply 2 shocks",
+      "backlash2Tooltip": "Apply 1 shock",
+      "backlash3Tooltip": "Apply Very Stymied"
     },
     "sizes": {
       "large": "Large",

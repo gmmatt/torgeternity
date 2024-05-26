@@ -120,7 +120,8 @@
       "unskilled": "Incompétent",
       "up": "Un de plus !",
       "value": "Valeur",
-      "vehicleBase": "Test d'Opérateur"
+      "vehicleBase": "Test d'Opérateur",
+      "mayCauseContradiction": "Perks with this symbol are dependent on their cosm’s World Laws and can cause Contradictions outside that cosm."
     },
     "clearances": {
       "alpha": "Alpha",
@@ -256,6 +257,7 @@
       "targetStrength": "Force de la cible",
       "targetTaunt": "Provocation de la cible",
       "targetTrick": "Ruse de la cible",
+      "targetFind": "Target find or Mind",
       "targetUnarmedCombat": "Combat à mains nues de la cible",
       "targetVehicleDefense": "Défense du véhicule ciblé",
       "targetWaterVehicles": "Véhicules aquatiques ou Dextérité de la cible",
@@ -402,7 +404,9 @@
       "cosm": "Cosm",
       "description": "Description",
       "prerequisites": "Prérequis",
-      "timestaken": "Nombre de choix"
+      "timestaken": "Nombre de choix",
+      "generalContradiction": "Contradictions",
+      "generalContradictionTT": "Causes contradictions outside it's cosm."
     },
     "perkTypes": {
       "abomination": "Abomination",
@@ -418,6 +422,7 @@
       "electricSamurai": "Samouraï électrique",
       "elf": "Elfe",
       "faith": "Foi",
+      "groundSloth": "Ground Sloth",
       "hacker": "Hacker",
       "hope": "Espoir",
       "human": "Humain",
@@ -438,7 +443,8 @@
       "social": "Social",
       "spellcraft": "Arts magiques",
       "stalenger": "Stalenger",
-      "theRace": "La Race"
+      "theRace": "La Race",
+      "special": "Special/Homebrew"
     },
     "poolToggle": {
       "inPool": "Carte réservée",
@@ -552,6 +558,10 @@
       "showCheckDetails": {
         "hint": "Si coché, les détails des tests seront affichés par défaut.",
         "name": "Montrer les détails des tests"
+      },
+      "uniqueDN": {
+        "hint": "Si coché, durant une attaque en multi-cibles, garde le DN le plus élevé pour déterminer le résultat sur toutes les cibles (Règle).",
+        "name": "DN unique"
       }
     },
     "sheetLabels": {
@@ -563,6 +573,7 @@
       "adds": "Rang",
       "aimed": "Visée",
       "allOut": "Attaque totale",
+      "alterAttributes": "Tu peux maintenant modifier les attributs",
       "applyDamage": "Appliquer dommages",
       "applyDamageTooltip": "ClickDroit pour ajuster les dommages, ClickGauche pour les appliquer.",
       "applyStymied": "Appliquer Déstabilisé",
@@ -630,6 +641,8 @@
       "implants": "Implants",
       "inactiveEffects": "Effets inactifs",
       "inputExisting": "Saisie existante",
+      "inputExistingTitle": "Input BONUS NUMBER from previous test, not die total.",
+      "inputExistingRdbTitle": "When engaged in multi-actions, check this box to input the bonus number from a previous test.",
       "interactionAttacks": "Interactions offensives",
       "interactionSkills": "Interactions",
       "keep": "Poursuivre",
@@ -730,6 +743,9 @@
       "unspent": "Disponibles",
       "up": "Un de plus",
       "update": "Mise à jour",
+      "usePreviousBonusLegend": "Choose whether to (1) roll for a bonus number or (2) input a previously generated bonus when attempting a multi-action.",
+      "usePreviousBonustitle": "When engaged in multi-actions, check this box to input the bonus number from a previous test.",
+      "usePreviousBonusText": "Input BONUS NUMBER from previous test, not die total.",
       "vehicle": "Véhicule",
       "vehicles": "Véhicules",
       "vitalArea": "Coup fatal",
@@ -738,7 +754,13 @@
       "wounds": "Blessures",
       "xp": "XP",
       "xpOnlyGM": "Seul le MJ peut remplir",
-      "toolTipClickToAdd": "cliquer pour ajouter/oter la compétence dans la liste du dessus"
+      "toolTipClickToAdd": "cliquer pour ajouter/oter la compétence dans la liste du dessus",
+      "backlash1": "Contrecoup",
+      "backlash2": "Contrecoup réduit",
+      "backlash3": "Aïe la tête !",
+      "backlash1Tooltip": "Applique 2 chocs",
+      "backlash2Tooltip": "Applique 1 choc",
+      "backlash3Tooltip": "Applique Très Déstabilisé"
     },
     "sizes": {
       "large": "grande",

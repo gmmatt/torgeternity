@@ -205,6 +205,26 @@ export class TestDialog extends FormApplication {
   activateListeners(html) {
     html.find('.skill-roll-button').click(this._onRoll.bind(this));
 
+    const bonusText = html[0].querySelector('#bonus-text');
+
+    bonusText.addEventListener('change', (event) => {
+      if (isNaN(parseInt(event.currentTarget.value))) {
+        const rdb = $(event.currentTarget).parent().find('#roll');
+        const rdbNo = $(event.currentTarget).parent().find('#previous-bonus');
+        if (rdb.length > 0) {
+          rdb.prop('checked', true);
+          rdbNo.prop('checked', false);
+        }
+      } else {
+        const rdb = $(event.currentTarget).parent().find('#previous-bonus');
+        const rdbNo = $(event.currentTarget).parent().find('#roll');
+        if (rdb.length > 0) {
+          rdb.prop('checked', true);
+          rdbNo.prop('checked', false);
+        }
+      }
+    });
+
     super.activateListeners(html);
   }
 

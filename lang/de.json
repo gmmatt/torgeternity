@@ -113,7 +113,8 @@
       "unskilled": "ungelernt",
       "up": "Oberhand",
       "value": "Wert",
-      "vehicleBase": "Fahrzeugprobe"
+      "vehicleBase": "Fahrzeugprobe",
+      "mayCauseContradiction": "Vorzüge mit diesem Symbol sind abhängig von den Weltgesetzen ihres Cosm und verursachen außerhalb ihres Cosm Widersprüche."
     },
     "clearances": {
       "alpha": "Alpha",
@@ -249,6 +250,7 @@
       "targetStrength": "Stärke des Ziels",
       "targetTaunt": "Verspotten des Ziels",
       "targetTrick": "Tricksen des Ziels",
+      "targetFind": "Finden des Ziels",
       "targetUnarmedCombat": "Waffenloser Kampf  des Ziels",
       "targetVehicleDefense": "Verteidigung des Zielfahrzeuges",
       "targetWaterVehicles": "Wasserfahrzeuge oder Geschicklichkeit des Ziels",
@@ -395,7 +397,9 @@
       "cosm": "Cosm",
       "description": "Beschreibung",
       "prerequisites": "Vorraussetzung",
-      "timestaken": "Male genommen"
+      "timestaken": "Male genommen",
+      "generalContradiction": "Widersprüche",
+      "generalContradictionTT": "Verursacht Widersprüche außerhalb ihres Cosms"
     },
     "perkTypes": {
       "abomination": "Abscheulichkeit",
@@ -411,6 +415,7 @@
       "electricSamurai": "Elektrosamurai",
       "elf": "Elf",
       "faith": "Glaube",
+      "groundSloth": "Riesenfaultier",
       "hacker": "Hacker",
       "hope": "Hoffnung",
       "human": "Mensch",
@@ -431,7 +436,8 @@
       "social": "Sozial",
       "spellcraft": "Zauberkunde",
       "stalenger": "Stalenger",
-      "theRace": "Das Volk"
+      "theRace": "Das Volk",
+      "special": "Speziell / Eigen"
     },
     "poolToggle": {
       "inPool": "Karte im Aktionsvorrat",
@@ -545,6 +551,10 @@
       "welcome": {
         "hint": "Wenn ausgewählt, erscheint beim Laden die Willkommensnachricht",
         "name": "Willkommensnachricht anzeigen"
+      },
+      "uniqueDN": {
+        "hint": "If checked, when a multi-target test is done, will keep the highest DN from all targets to determine outcome, as RAW.",
+        "name": "Unique DN"
       }
     },
     "sheetLabels": {
@@ -556,6 +566,7 @@
       "adds": "Fertigkeitsstufen",
       "aimed": "Zielen",
       "allOut": "Rücksichtsloser Angriff",
+      "alterAttributes": "Du kannst nun die Attribute ändern",
       "applyDamage": "Schaden anwenden",
       "applyDamageTooltip": "Linksclick zum anwenden, Rechtsklick zum modifizieren.",
       "applyStymied": "Angeschlagen anwenden",
@@ -623,6 +634,8 @@
       "implants": "Implantate",
       "inactiveEffects": "Inaktive Effekte",
       "inputExisting": "Vorheriger Würfelbonus",
+      "inputExistingRdbTitle": "Bei einer Mehrfachaktion hier auswählen.",
+      "inputExistingTitle": "Hier den vorherigen WÜRFELBONUS eingeben, nicht den Wurf an sich.",
       "interactionAttacks": "Interaktionsangriffe",
       "interactionSkills": "Interaktion",
       "keep": "Behalten",
@@ -723,6 +736,9 @@
       "unspent": "nicht ausgegeben",
       "up": "Oberhand",
       "update": "Update",
+      "usePreviousBonusLegend": "Wähle, ob du (1) würfeln willst oder (2) einen zuvor gewürfelten Bonus eingibst, wenn du eine Mehrfachaktion versuchst.",      
+      "usePreviousBonustitle": "Wenn du eine Mehrfachaktion durchführst, setze hier einen Haken und trage den Bonus des letzten Würfelwurfs ein.",
+      "usePreviousBonusText": "Trage den BONUS ein, nicht die Augenzahl des Würfels!",
       "vehicle": "Fahrzeug",
       "vehicles": "Fahrzeuge",
       "vitalArea": "Schwerer Treffer",
@@ -731,7 +747,13 @@
       "wounds": "Wunden",
       "xp": "EP",
       "xpOnlyGM": "Nur die SL darf das füllen",
-      "toolTipClickToAdd": "klicke, um die Fertigkeit der Zugriffliste hinzuzufügen oder zu löschen"
+      "toolTipClickToAdd": "klicke, um die Fertigkeit der Zugriffliste hinzuzufügen oder zu löschen",
+      "backlash1": "Rückkopplung",
+      "backlash2": "Reduzierte\nRückkopplung",
+      "backlash3": "Kopfschmerzen!",
+      "backlash1Tooltip": "Apply 2 shocks",
+      "backlash2Tooltip": "Apply 1 shock",
+      "backlash3Tooltip": "Apply Very Stymied"
     },
     "sizes": {
       "large": "Groß",

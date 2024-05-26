@@ -120,7 +120,8 @@
       "unskilled": "Sin Entrenar",
       "up": "AUMEN",
       "value": "Valor",
-      "vehicleBase": "Vehicle Operation Test"
+      "vehicleBase": "Vehicle Operation Test",
+      "mayCauseContradiction": "Perks with this symbol are dependent on their cosm’s World Laws and can cause Contradictions outside that cosm."
     },
     "clearances": {
       "alpha": "Alfa",
@@ -256,6 +257,7 @@
       "targetStrength": "Target Strength",
       "targetTaunt": "Target taunt or Charisma",
       "targetTrick": "Target trick or Mind",
+      "targetFind": "Target find or Mind",
       "targetUnarmedCombat": "Target unarmed combat or Dexterity",
       "targetVehicleDefense": "Target Vehicle Defense",
       "targetWaterVehicles": "Target water vehicles or Dexterity",
@@ -402,7 +404,9 @@
       "cosm": "Cosmos",
       "description": "Descripción",
       "prerequisites": "Prerrequisitos",
-      "timestaken": "Nivel"
+      "timestaken": "Nivel",
+      "generalContradiction": "Contradictions",
+      "generalContradictionTT": "Causes contradictions outside it's cosm."
     },
     "perkTypes": {
       "abomination": "Abominación",
@@ -418,6 +422,7 @@
       "electricSamurai": "Samurai Eléctrico",
       "elf": "Elfo",
       "faith": "Fe",
+      "groundSloth": "Ground Sloth",
       "hacker": "Hacker",
       "hope": "Esperanza",
       "human": "Humano",
@@ -438,7 +443,8 @@
       "social": "Social",
       "spellcraft": "Conjuros",
       "stalenger": "Stalenger",
-      "theRace": "La Raza"
+      "theRace": "La Raza",
+      "special": "Special/Homebrew"
     },
     "poolToggle": {
       "inPool": "Carta en reserva",
@@ -552,6 +558,10 @@
       "showCheckDetails": {
         "hint": "If checked, the details of checks will always be shown.",
         "name": "Show Details in checks"
+      },
+      "uniqueDN": {
+        "hint": "If checked, when a multi-target test is done, will keep the highest DN from all targets to determine outcome, as RAW.",
+        "name": "Unique DN"
       }
     },
     "sheetLabels": {
@@ -563,6 +573,7 @@
       "adds": "Adición",
       "aimed": "Apuntado",
       "allOut": "Ataque Total",
+      "alterAttributes": "Ahora puede cambiar los atributos",
       "applyDamage": "Apply damages",
       "applyDamageTooltip": "Right-click to modify applied damages, Left-click to apply.",
       "applyStymied": "Apply Stymied",
@@ -630,6 +641,8 @@
       "implants": "Implantes",
       "inactiveEffects": "Efecto Inactivo",
       "inputExisting": "Valor Directo",
+      "inputExistingTitle": "Input BONUS NUMBER from previous test, not die total.",
+      "inputExistingRdbTitle": "Cuando participe en multiacciones, marque esta casilla para introducir el número de bonificación de una prueba anterior.",
       "interactionAttacks": "Ataque Interacción",
       "interactionSkills": "Interaction",
       "keep": "Misma",
@@ -730,6 +743,9 @@
       "unspent": "Libres",
       "up": "Aumento",
       "update": "Actualizar",
+      "usePreviousBonusLegend": "Choose whether to (1) roll for a bonus number or (2) input a previously generated bonus when attempting a multi-action.",
+      "usePreviousBonustitle": "When engaged in multi-actions, check this box to input the bonus number from a previous test.",
+      "usePreviousBonusText": "Input BONUS NUMBER from previous test, not die total.",
       "vehicle": "Vehículo",
       "vehicles": "Vehículos",
       "vitalArea": "Golpe Vital",
@@ -738,7 +754,13 @@
       "wounds": "Heridas",
       "xp": "PX",
       "xpOnlyGM": "only GM can fill",
-      "toolTipClickToAdd": "pulse para añadir o eliminar la competencia de la lista de acceso"
+      "toolTipClickToAdd": "pulse para añadir o eliminar la competencia de la lista de acceso",
+      "backlash1": "Backlash",
+      "backlash2": "Reduced Backlash",
+      "backlash3": "Headache !",
+      "backlash1Tooltip": "Aplica 2 shocks",
+      "backlash2Tooltip": "Aplica 1 shock",
+      "backlash3Tooltip": "Aplica Muy Impedido"
     },
     "sizes": {
       "large": "Grande",
