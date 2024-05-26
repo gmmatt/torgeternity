@@ -41,7 +41,7 @@ async function parentDeleteByTime(oldMsg) {
   parentMessagesIds.forEach((id) => game.messages.get(id).delete());
 }
 
-function onFavored(event) {
+async function onFavored(event) {
   const parentMessageId = event.currentTarget.closest('.chat-message').dataset.messageId;
   const parentMessage = game.messages.find(({ id }) => id === parentMessageId);
   if (!(parentMessage.user.id === game.user.id) && !game.user.isGM) {
@@ -54,7 +54,7 @@ function onFavored(event) {
   // reRoll because favored
   test.isFavStyle = 'pointer-events:none;color:gray;display:none';
 
-  const diceroll = new Roll('1d20x10x20').evaluate({ async: false });
+  const diceroll = await new Roll('1d20x10x20').evaluate();
   test.diceroll = diceroll;
   test.rollTotal = Math.max(test.diceroll.total, 1.1);
   test.isFav = false;
@@ -144,7 +144,7 @@ async function onPossibility(event) {
     test.possibilityStyle = 'pointer-events:none;color:gray';
   }
 
-  const diceroll = new Roll('1d20x10x20').evaluate({ async: false });
+  const diceroll = await new Roll('1d20x10x20').evaluate();
   if (test.disfavored) {
     test.possibilityTotal = 0.1;
     test.disfavored = false;
@@ -162,7 +162,7 @@ async function onPossibility(event) {
   parentDeleteByTime(parentMessage);
 }
 
-function onUp(event) {
+async function onUp(event) {
   const parentMessageId = event.currentTarget.closest('.chat-message').dataset.messageId;
   const parentMessage = game.messages.find(({ id }) => id === parentMessageId);
   if (!(parentMessage.user.id === game.user.id) && !game.user.isGM) {
@@ -173,7 +173,7 @@ function onUp(event) {
   test.isFavStyle = 'pointer-events:none;color:gray;display:none';
 
   // Roll for Up
-  const diceroll = new Roll('1d20x10x20').evaluate({ async: false });
+  const diceroll = await new Roll('1d20x10x20').evaluate();
   if (test.disfavored) {
     test.upTotal = 0.1;
     test.disfavored = false;
@@ -190,7 +190,7 @@ function onUp(event) {
   parentDeleteByTime(parentMessage);
 }
 
-function onHero(event) {
+async function onHero(event) {
   const parentMessageId = event.currentTarget.closest('.chat-message').dataset.messageId;
   const parentMessage = game.messages.find(({ id }) => id === parentMessageId);
   if (!(parentMessage.user.id === game.user.id) && !game.user.isGM) {
@@ -202,7 +202,7 @@ function onHero(event) {
   test.isFavStyle = 'pointer-events:none;color:gray;display:none';
 
   // Roll for Possibility
-  const diceroll = new Roll('1d20x10x20').evaluate({ async: false });
+  const diceroll = await new Roll('1d20x10x20').evaluate();
   if (test.disfavored) {
     test.heroTotal = 0.1;
     test.disfavored = false;
@@ -221,7 +221,7 @@ function onHero(event) {
   parentDeleteByTime(parentMessage);
 }
 
-function onDrama(event) {
+async function onDrama(event) {
   const parentMessageId = event.currentTarget.closest('.chat-message').dataset.messageId;
   const parentMessage = game.messages.find(({ id }) => id === parentMessageId);
   if (!(parentMessage.user.id === game.user.id) && !game.user.isGM) {
@@ -232,7 +232,7 @@ function onDrama(event) {
   test.isFavStyle = 'pointer-events:none;color:gray;display:none';
 
   // Increase cards played by 1
-  const diceroll = new Roll('1d20x10x20').evaluate({ async: false });
+  const diceroll = await new Roll('1d20x10x20').evaluate();
   if (test.disfavored) {
     test.dramaTotal = 0.1;
     test.disfavored = false;
