@@ -11,6 +11,7 @@
 - Chatcards now will offer backlashes and headaches in case of a failed power test. [#392](https://github.com/gmmatt/torgeternity/issues/392)
 - On Roll-dialogues, if a bonus number is entered into the previous roll field, the 'Input existing' radio button will now be automatically checked to support gameflow. [#384](https://github.com/gmmatt/torgeternity/issues/384)
 - By RAW, the DN on a multi target attack is the highest DN. This is now implemented- as well as an option to toggle that off for houserule purposses (as it was implemented until now).
+- Processing now attributes no longer with ``system.attributes.[attribute]``, but with ``system.attributes.[attribute].base`` (please **never** use this for change-purposses) and ``system.attributes.[attribute].value`` (this is the one you want to use). This ensures a safer handling with attribute scores that should not be affecting the ground value of the attribute. Therefore, the attributes now can only be altered by clicking the "Edit" button in the attribute fields. In case you're confused: The values of the fields are changing to their base value, not their current, modified value (if applicable).
 - Bug- and stylefixes:
   - Style-Fix for vehicle addon item [#383](https://github.com/gmmatt/torgeternity/issues/383)
   - Style-fix on general Chat-Cards holding item informations [#208](https://github.com/gmmatt/torgeternity/issues/208)
@@ -19,6 +20,7 @@
   - Size of characters are fixed
   - Recovered TinyMCE CSS File that got lost on the way
   - Not really a fix, but updated all item editor fields to ProseMirror engine, because TinyMCE won't work anymore correctly and isn't supported anymore
+  - Rerolls are now asynchronous, as synchronous rolls are decapricated in V12
 
 ## v. 3.7.2
 
