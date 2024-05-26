@@ -30,17 +30,18 @@ export default class TorgeternityActor extends Actor {
    */
   prepareDerivedData() {
     // Here Effects are applied, whatever follow cannot be directly affected by Effects
-    // by RAW, FIRST you checkout for maxDex, THEN minStr. Doing this into DerivedData means, it takes place after AE's were applied, making sure, this cannot get higher than armor's limitations.
-    this.system.attributes.dexterity.value > this.system.maxDex
-      ? (this.system.attributes.dexterity.value = this.system.maxDex)
-      : this.system.attributes.dexterity.value;
 
-    this.system.attributes.strength.value < this.system.minStr
-      ? (this.system.attributes.dexterity.value -=
-          this.system.minStr - this.system.attributes.strength.value)
-      : this.system.attributes.dexterity.value;
     // Skillsets
     if (['threat', 'stormknight'].includes(this.type)) {
+      // by RAW, FIRST you checkout for maxDex, THEN minStr. Doing this into DerivedData means, it takes place after AE's were applied, making sure, this cannot get higher than armor's limitations.
+      this.system.attributes.dexterity.value > this.system.maxDex
+        ? (this.system.attributes.dexterity.value = this.system.maxDex)
+        : this.system.attributes.dexterity.value;
+
+      this.system.attributes.strength.value < this.system.minStr
+        ? (this.system.attributes.dexterity.value -=
+            this.system.minStr - this.system.attributes.strength.value)
+        : this.system.attributes.dexterity.value;
       // Set base unarmedDamage from interaction
       const skills = this.system.skills;
       const attributes = this.system.attributes;
