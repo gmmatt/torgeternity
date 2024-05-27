@@ -10,11 +10,18 @@ export default class TorgActiveEffect extends ActiveEffect {
   static migrateData(data) {
     super.migrateData(data);
     if (Object.hasOwn(data, 'changes')) {
+      const badAttributeKeys = [
+        'system.attributes.charisma',
+        'system.attributes.mind',
+        'system.attributes.strength',
+        'system.attributes.dexterity',
+        'system.attributes.spirit',
+      ];
       for (const change of data.changes) {
-        // fix up effects that had an action related key
-        //change.key = change.key.replaceAll('system.other.moveMod', 'system.other.move');
-        //change.key = change.key.replaceAll('system.other.runMod', 'system.other.run');
         change.key = change.key.replaceAll('system.other.fatigue', 'system.fatigue');
+        if (badAttributeKeys.includes(change.key)) {
+          change.key = change.key + '.value';
+        }
       }
     }
     return data;
