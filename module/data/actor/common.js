@@ -112,7 +112,7 @@ export class CommonActorData extends foundry.abstract.TypeDataModel {
     for (const skill of Object.values(data.skills)) {
       if (typeof skill.adds !== 'number') {
         let skillAdd = parseInt(skill.adds);
-        skillAdd = isNan(skillAdd) ? 0 : skillAdd;
+        skillAdd = isNaN(skillAdd) ? 0 : skillAdd;
         skill.adds = skillAdd;
       }
     }
