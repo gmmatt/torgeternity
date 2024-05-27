@@ -12,20 +12,21 @@ items:
     effects: []
     folder: null
     system:
-      description: <p>Schaden&nbsp;<em>St&auml;rke</em> +2 (10)</p>
-      attackWith: unarmedCombat
-      damage: 10
       ap: 0
+      attackWith: unarmedCombat
       chatNote: ''
+      damage: '10'
+      description: <p>Schaden&nbsp;<em>St&auml;rke</em> +2 (10)</p>
     ownership:
       default: 0
+      pYSulyhjOdVnRAJt: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
-      createdTime: null
-      modifiedTime: 1694860825482
-      lastModifiedBy: CtisFurQNe9h7ABb
+      systemVersion: 3.8.1
+      coreVersion: '11.315'
+      createdTime: 1716788510616
+      modifiedTime: 1716788609695
+      lastModifiedBy: pYSulyhjOdVnRAJt
     _key: '!actors.items!Hy1XeUQA64WoxKxs.sIrEjkMEuSDzeIk8'
 effects: []
 folder: null
@@ -105,11 +106,12 @@ system:
       unskilledUse: 0
     dodge:
       baseAttribute: dexterity
-      adds: '2'
+      adds: 2
       value: 10
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: true
     energyWeapons:
       baseAttribute: dexterity
       adds: ''
@@ -161,12 +163,13 @@ system:
       unskilledUse: 1
     intimidation:
       baseAttribute: spirit
-      adds: '1'
+      adds: 1
       value: 10
       isFav: false
       groupName: interaction
       unskilledUse: 1
       defenseOnly: 'false'
+      isThreatSkill: true
     kinesis:
       baseAttribute: spirit
       adds: ''
@@ -268,11 +271,12 @@ system:
       unskilledUse: 1
     stealth:
       baseAttribute: dexterity
-      adds: '2'
+      adds: 2
       value: 10
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: true
     streetwise:
       baseAttribute: charisma
       adds: ''
@@ -304,11 +308,12 @@ system:
       unskilledUse: 0
     tracking:
       baseAttribute: mind
-      adds: '3'
+      adds: 3
       value: 8
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: true
     trick:
       baseAttribute: mind
       adds: ''
@@ -319,11 +324,12 @@ system:
       defenseOnly: 'true'
     unarmedCombat:
       baseAttribute: dexterity
-      adds: '2'
+      adds: 2
       value: 10
       isFav: false
       groupName: combat
       unskilledUse: 1
+      isThreatSkill: true
     waterVehicles:
       baseAttribute: dexterity
       adds: ''
@@ -350,7 +356,7 @@ system:
       - Wei&szlig;er Wolf}</p>
     sizeBonus: normal
     clearance: alpha
-  editstate: none
+  editstate: false
   possibilities: null
 ownership:
   default: 0
@@ -414,10 +420,10 @@ prototypeToken:
   detectionModes: []
 _stats:
   systemId: torgeternity
-  systemVersion: 3.1.1
-  coreVersion: '11.308'
+  systemVersion: 3.8.1
+  coreVersion: '11.315'
   createdTime: 1694860825482
-  modifiedTime: 1694893319789
-  lastModifiedBy: CtisFurQNe9h7ABb
+  modifiedTime: 1716789413383
+  lastModifiedBy: VAnYow5sWS9EJzo0
 _key: '!actors!Hy1XeUQA64WoxKxs'
 

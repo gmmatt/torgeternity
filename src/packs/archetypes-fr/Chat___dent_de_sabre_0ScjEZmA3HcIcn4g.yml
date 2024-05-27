@@ -2,7 +2,37 @@ _id: 0ScjEZmA3HcIcn4g
 name: Chat à dent de sabre
 type: threat
 img: systems/torgeternity/images/characters/sabre_tooth_cat.Avatar.webp
-data:
+items:
+  - _id: ePmcuxIjZItJ2qOb
+    name: morsure/griffes
+    type: specialability-rollable
+    sort: 100000
+    flags: {}
+    img: systems/torgeternity/images/icons/specialability-rollable.webp
+    effects: []
+    folder: null
+    system:
+      ap: 0
+      attackWith: unarmedCombat
+      chatNote: ''
+      damage: '9'
+      description: <p><em>Dommages Force +2 (9).</em></p>
+    ownership:
+      default: 0
+      pYSulyhjOdVnRAJt: 3
+    _stats:
+      systemId: torgeternity
+      systemVersion: 3.8.1
+      coreVersion: '11.315'
+      createdTime: 1716788509622
+      modifiedTime: 1716788608892
+      lastModifiedBy: pYSulyhjOdVnRAJt
+    _key: '!actors.items!0ScjEZmA3HcIcn4g.ePmcuxIjZItJ2qOb'
+effects: []
+folder: null
+sort: 100001
+flags: {}
+system:
   shock:
     max: 8
     value: 0
@@ -74,11 +104,12 @@ data:
       unskilledUse: 0
     dodge:
       baseAttribute: dexterity
-      adds: ''
+      adds: 2
       value: 12
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: true
     energyWeapons:
       baseAttribute: dexterity
       adds: ''
@@ -102,11 +133,12 @@ data:
       unskilledUse: 1
     find:
       baseAttribute: mind
-      adds: ''
+      adds: 2
       value: 7
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: true
     fireCombat:
       baseAttribute: dexterity
       adds: ''
@@ -130,11 +162,13 @@ data:
       unskilledUse: 1
     intimidation:
       baseAttribute: spirit
-      adds: ''
+      adds: 1
       value: 9
       isFav: false
       groupName: interaction
       unskilledUse: 1
+      isThreatSkill: true
+      defenseOnly: false
     kinesis:
       baseAttribute: spirit
       adds: ''
@@ -165,11 +199,13 @@ data:
       unskilledUse: 0
     maneuver:
       baseAttribute: dexterity
-      adds: ''
+      adds: 1
       value: 11
       isFav: false
       groupName: interaction
       unskilledUse: 1
+      isThreatSkill: true
+      defenseOnly: false
     medicine:
       baseAttribute: mind
       adds: ''
@@ -235,11 +271,12 @@ data:
       unskilledUse: 1
     stealth:
       baseAttribute: dexterity
-      adds: ''
+      adds: 3
       value: 13
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: true
     streetwise:
       baseAttribute: charisma
       adds: ''
@@ -249,11 +286,12 @@ data:
       unskilledUse: 1
     survival:
       baseAttribute: mind
-      adds: ''
+      adds: 2
       value: 7
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: true
     taunt:
       baseAttribute: charisma
       adds: ''
@@ -261,6 +299,7 @@ data:
       isFav: false
       groupName: interaction
       unskilledUse: 1
+      defenseOnly: true
     telepathy:
       baseAttribute: charisma
       adds: ''
@@ -282,13 +321,15 @@ data:
       isFav: false
       groupName: interaction
       unskilledUse: 1
+      defenseOnly: true
     unarmedCombat:
       baseAttribute: dexterity
-      adds: ''
+      adds: 1
       value: 11
       isFav: false
       groupName: combat
       unskilledUse: 1
+      isThreatSkill: true
     waterVehicles:
       baseAttribute: dexterity
       adds: ''
@@ -307,34 +348,18 @@ data:
     possibilitypotential: Jamais
     description: ''
     sizeBonus: normal
-  editstate: none
-token:
+  editstate: false
+ownership:
+  default: 0
+  A9LyAqagoJJU3gDH: 3
+prototypeToken:
   flags: {}
   name: Chat à dent de sabre
   displayName: 30
-  img: systems/torgeternity/images/characters/sabre_tooth_cat.Token.webp
-  tint: null
   width: 1
   height: 1
-  scale: 1
-  mirrorX: false
-  mirrorY: false
   lockRotation: false
   rotation: 0
-  vision: false
-  dimSight: 0
-  brightSight: 0
-  dimLight: 0
-  brightLight: 0
-  sightAngle: 0
-  lightAngle: 360
-  lightColor: ''
-  lightAlpha: 1
-  lightAnimation:
-    type: ''
-    speed: 5
-    intensity: 5
-  actorId: 0ScjEZmA3HcIcn4g
   actorLink: true
   disposition: 1
   displayBars: 20
@@ -345,17 +370,17 @@ token:
   randomImg: false
   alpha: 1
   light:
-    alpha: 0.5
-    angle: 0
+    alpha: 1
+    angle: 360
     bright: 0
     coloration: 1
     dim: 0
-    gradual: true
     luminosity: 0.5
     saturation: 0
     contrast: 0
     shadows: 0
     animation:
+      type: null
       speed: 5
       intensity: 5
       reverse: false
@@ -363,30 +388,33 @@ token:
       min: 0
       max: 1
     color: null
-items:
-  - _id: ePmcuxIjZItJ2qOb
-    name: morsure/griffes
-    type: specialability-rollable
-    data:
-      description: <p><em>Dommages Force +2 (9).</em></p>
-      attackWith: unarmedCombat
-      damage: 9
-      ap: 0
-      chatNote: ''
-    sort: 100000
-    flags: {}
-    img: systems/torgeternity/images/icons/specialability-rollable.webp
-    effects: []
-    folder: null
-    permission:
-      default: 0
-    _key: '!actors.items!0ScjEZmA3HcIcn4g.ePmcuxIjZItJ2qOb'
-effects: []
-folder: null
-sort: 100001
-permission:
-  default: 0
-  A9LyAqagoJJU3gDH: 3
-flags: {}
+    attenuation: 0.5
+  texture:
+    src: systems/torgeternity/images/characters/sabre_tooth_cat.Token.webp
+    tint: null
+    scaleX: 1
+    scaleY: 1
+    offsetX: 0
+    offsetY: 0
+    rotation: 0
+  sight:
+    angle: 360
+    enabled: false
+    range: 0
+    brightness: 1
+    visionMode: basic
+    attenuation: 0.1
+    saturation: 0
+    contrast: 0
+  appendNumber: false
+  prependAdjective: false
+  detectionModes: []
+_stats:
+  systemId: torgeternity
+  systemVersion: 3.8.1
+  coreVersion: '11.315'
+  createdTime: 1716788509618
+  modifiedTime: 1716789592753
+  lastModifiedBy: VAnYow5sWS9EJzo0
 _key: '!actors!0ScjEZmA3HcIcn4g'
 

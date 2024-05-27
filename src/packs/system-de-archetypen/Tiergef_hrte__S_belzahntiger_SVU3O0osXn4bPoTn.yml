@@ -12,20 +12,21 @@ items:
     effects: []
     folder: null
     system:
-      description: <p><em>St&auml;rke</em> +2 (9)</p>
-      attackWith: unarmedCombat
-      damage: 9
       ap: 0
+      attackWith: unarmedCombat
       chatNote: ''
+      damage: '9'
+      description: <p><em>St&auml;rke</em> +2 (9)</p>
     ownership:
       default: 0
+      pYSulyhjOdVnRAJt: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
-      createdTime: null
-      modifiedTime: 1694860904413
-      lastModifiedBy: CtisFurQNe9h7ABb
+      systemVersion: 3.8.1
+      coreVersion: '11.315'
+      createdTime: 1716788510762
+      modifiedTime: 1716788609786
+      lastModifiedBy: pYSulyhjOdVnRAJt
     _key: '!actors.items!SVU3O0osXn4bPoTn.2Ucc4TZ98XsRBFqK'
 effects: []
 folder: null
@@ -105,11 +106,12 @@ system:
       unskilledUse: 0
     dodge:
       baseAttribute: dexterity
-      adds: '2'
+      adds: 2
       value: 12
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: true
     energyWeapons:
       baseAttribute: dexterity
       adds: ''
@@ -133,11 +135,12 @@ system:
       unskilledUse: 1
     find:
       baseAttribute: mind
-      adds: '2'
+      adds: 2
       value: 7
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: true
     fireCombat:
       baseAttribute: dexterity
       adds: ''
@@ -161,12 +164,13 @@ system:
       unskilledUse: 1
     intimidation:
       baseAttribute: spirit
-      adds: '1'
+      adds: 1
       value: 9
       isFav: false
       groupName: interaction
       unskilledUse: 1
       defenseOnly: 'false'
+      isThreatSkill: true
     kinesis:
       baseAttribute: spirit
       adds: ''
@@ -197,12 +201,13 @@ system:
       unskilledUse: 0
     maneuver:
       baseAttribute: dexterity
-      adds: '1'
+      adds: 1
       value: 11
       isFav: false
       groupName: interaction
       unskilledUse: 1
       defenseOnly: 'false'
+      isThreatSkill: true
     medicine:
       baseAttribute: mind
       adds: ''
@@ -268,11 +273,12 @@ system:
       unskilledUse: 1
     stealth:
       baseAttribute: dexterity
-      adds: '3'
+      adds: 3
       value: 13
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: true
     streetwise:
       baseAttribute: charisma
       adds: ''
@@ -282,11 +288,12 @@ system:
       unskilledUse: 1
     survival:
       baseAttribute: mind
-      adds: '2'
+      adds: 2
       value: 7
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: true
     taunt:
       baseAttribute: charisma
       adds: ''
@@ -319,11 +326,12 @@ system:
       defenseOnly: 'true'
     unarmedCombat:
       baseAttribute: dexterity
-      adds: '1'
+      adds: 1
       value: 11
       isFav: false
       groupName: combat
       unskilledUse: 1
+      isThreatSkill: true
     waterVehicles:
       baseAttribute: dexterity
       adds: ''
@@ -350,7 +358,7 @@ system:
       - S&auml;belzahntiger}</p>
     sizeBonus: normal
     clearance: alpha
-  editstate: none
+  editstate: false
   possibilities: null
 ownership:
   default: 0
@@ -414,10 +422,10 @@ prototypeToken:
   detectionModes: []
 _stats:
   systemId: torgeternity
-  systemVersion: 3.1.1
-  coreVersion: '11.308'
+  systemVersion: 3.8.1
+  coreVersion: '11.315'
   createdTime: 1694860904413
-  modifiedTime: 1694893296816
-  lastModifiedBy: CtisFurQNe9h7ABb
+  modifiedTime: 1716789407198
+  lastModifiedBy: VAnYow5sWS9EJzo0
 _key: '!actors!SVU3O0osXn4bPoTn'
 
