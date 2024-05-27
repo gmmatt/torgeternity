@@ -2,7 +2,565 @@ _id: CefD0chJeL6NrRVJ
 name: La cybersorcière
 type: stormknight
 img: systems/torgeternity/images/characters/Cyberwitch.Avatar.webp
-data:
+items:
+  - _id: ZKurTYCidkV0AVSA
+    name: Implants cybernétiques
+    type: perk
+    sort: 100001
+    flags:
+      core:
+        sourceId: Item.8qfs6BvtH7wTJ09g
+    img: systems/torgeternity/images/icons/perk.webp
+    effects: []
+    folder: null
+    system:
+      category: cyberware
+      cosm: Cyberpapauté
+      description: >-
+        <p class="MsoNormal">Quand il prend cet Atout, le personnage peut
+        choisir des implants cybern&eacute;tiques de la liste page 160 pour une
+        valeur maximale de 10 000 $. Les implants officiellement
+        approuv&eacute;s par l&rsquo;&Eacute;glise sont directement
+        connect&eacute;s au R&eacute;seau Divin et sont &eacute;troitement
+        surveill&eacute;s. Les appareils achet&eacute;s gr&acirc;ce &agrave; cet
+        Atout sont &laquo; pirat&eacute;s &raquo; et ne sont pas
+        connect&eacute;s au R&eacute;seau Divin (&agrave; moins que
+        l&rsquo;utilisateur ne le veuille). L&rsquo;installation est sans
+        risque. Cependant, poss&eacute;der des implants pirat&eacute;s est un
+        crime dans la Cyberpapaut&eacute;. Les h&eacute;ros qui &laquo; chroment
+        &raquo; leur corps feraient bien de se m&eacute;fier de la Police de
+        l&rsquo;&Eacute;glise, elle est toujours vigilante. Nouveaux implants :
+        cet Atout peut &ecirc;tre choisi plus d&rsquo;une fois. &Agrave; chaque
+        fois qu&rsquo;un personnage le choisit apr&egrave;s la premi&egrave;re
+        fois, il accorde de nouveaux implants pour une valeur de 5 000 $.</p>
+      prerequisites: None
+      generalContradiction: false
+      pulpPowers:
+        enhancement01:
+          description: ''
+          taken: false
+          title: ''
+        enhancement02:
+          description: ''
+          taken: false
+          title: ''
+        enhancement03:
+          description: ''
+          taken: false
+          title: ''
+        enhancement04:
+          description: ''
+          taken: false
+          title: ''
+        enhancement05:
+          description: ''
+          taken: false
+          title: ''
+        enhancement06:
+          description: ''
+          taken: false
+          title: ''
+        enhancement07:
+          description: ''
+          taken: false
+          title: ''
+        enhancement08:
+          description: ''
+          taken: false
+          title: ''
+        enhancement09:
+          description: ''
+          taken: false
+          title: ''
+        enhancement10:
+          description: ''
+          taken: false
+          title: ''
+        enhancement11:
+          description: ''
+          taken: false
+          title: ''
+        enhancement12:
+          description: ''
+          taken: false
+          title: ''
+        enhancement13:
+          description: ''
+          taken: false
+          title: ''
+        enhancement14:
+          description: ''
+          taken: false
+          title: ''
+        enhancement15:
+          description: ''
+          taken: false
+          title: ''
+        enhancementNumber: 0
+        limitation01: ''
+        limitation02: ''
+        limitation03: ''
+        limitation04: ''
+        limitation05: ''
+        limitation06: ''
+        limitation07: ''
+        limitation08: ''
+        limitation09: ''
+        limitation10: ''
+        limitationNumber: 0
+      timestaken: '1'
+    ownership:
+      default: 0
+    _stats:
+      systemId: null
+      systemVersion: null
+      coreVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+    _key: '!actors.items!CefD0chJeL6NrRVJ.ZKurTYCidkV0AVSA'
+  - _id: yaftfIz25Ryczaqq
+    name: Lanceur de sorts
+    type: perk
+    sort: 100001
+    flags:
+      core:
+        sourceId: Item.gOZE58k6tfHDbUJ0
+    img: systems/torgeternity/images/icons/perk.webp
+    effects: []
+    folder: null
+    system:
+      category: spellcraft
+      cosm: (Sans cosm)
+      description: >-
+        <p class="MsoNormal"><strong>&bull; Pr&eacute;requis</strong> : au moins
+        un rang en Alt&eacute;ration, Cin&eacute;tique, Conjuration ou
+        Divination.</p>
+
+        <p class="MsoNormal">Ceux qui &eacute;tudient les arts arcaniques sont
+        connus sous de nombreux noms, mages, magiciens, d&eacute;monistes ou
+        sorci&egrave;res pour n&rsquo;en citer que quelques-uns. Quelle que soit
+        leur origine, ils peuvent tous lancer des sorts en utilisant
+        n&rsquo;importe laquelle des quatre comp&eacute;tences magiques de base
+        &mdash; Alt&eacute;ration, Cin&eacute;tique, Conjuration, ou Divination.
+        Quand cet Atout est s&eacute;lectionn&eacute;, le mage a acc&egrave;s
+        &agrave; la Liste de sorts de base de son cosm page 186 et il peut
+        choisir trois sorts de n&rsquo;importe quelle liste &agrave; laquelle il
+        a acc&egrave;s et pour lesquels il poss&egrave;de la comp&eacute;tence
+        minimale requise. Les sorts sont d&eacute;taill&eacute;s dans le
+        chapitre Magie &agrave; partir de la page 184.</p>
+
+        <p class="MsoNormal"><strong> Nouveaux sorts</strong> : cet Atout peut
+        &ecirc;tre choisi plus d&rsquo;une fois. &Agrave; chaque fois
+        apr&egrave;s la premi&egrave;re, le personnage apprend un sort
+        suppl&eacute;mentaire.</p>
+      prerequisites: See description*
+      generalContradiction: false
+      pulpPowers:
+        enhancement01:
+          description: ''
+          taken: false
+          title: ''
+        enhancement02:
+          description: ''
+          taken: false
+          title: ''
+        enhancement03:
+          description: ''
+          taken: false
+          title: ''
+        enhancement04:
+          description: ''
+          taken: false
+          title: ''
+        enhancement05:
+          description: ''
+          taken: false
+          title: ''
+        enhancement06:
+          description: ''
+          taken: false
+          title: ''
+        enhancement07:
+          description: ''
+          taken: false
+          title: ''
+        enhancement08:
+          description: ''
+          taken: false
+          title: ''
+        enhancement09:
+          description: ''
+          taken: false
+          title: ''
+        enhancement10:
+          description: ''
+          taken: false
+          title: ''
+        enhancement11:
+          description: ''
+          taken: false
+          title: ''
+        enhancement12:
+          description: ''
+          taken: false
+          title: ''
+        enhancement13:
+          description: ''
+          taken: false
+          title: ''
+        enhancement14:
+          description: ''
+          taken: false
+          title: ''
+        enhancement15:
+          description: ''
+          taken: false
+          title: ''
+        enhancementNumber: 0
+        limitation01: ''
+        limitation02: ''
+        limitation03: ''
+        limitation04: ''
+        limitation05: ''
+        limitation06: ''
+        limitation07: ''
+        limitation08: ''
+        limitation09: ''
+        limitation10: ''
+        limitationNumber: 1
+      timestaken: ''
+    ownership:
+      default: 0
+    _stats:
+      systemId: null
+      systemVersion: null
+      coreVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+    _key: '!actors.items!CefD0chJeL6NrRVJ.yaftfIz25Ryczaqq'
+  - _id: 4nMDDruOMrPLT1YO
+    name: Hexxer Mk II
+    type: implant
+    sort: 600001
+    flags:
+      core:
+        sourceId: Item.8NEZIXyg4imLfga9
+    img: systems/torgeternity/images/icons/implant.webp
+    effects: []
+    folder: null
+    system:
+      cosm: Cyberpapauté
+      description: >-
+        <p>&nbsp;</p>
+
+        <p class="MsoNormal">Cette am&eacute;lioration d&rsquo;un hexxer permet
+        de stocker l&rsquo;&eacute;nergie lib&eacute;r&eacute;e par un
+        Contrecoup pour que la sorci&egrave;re ou le d&eacute;moniste
+        l&rsquo;utilise pour alimenter ses sorts.</p>
+
+        <p class="MsoNormal">Apr&egrave;s qu&rsquo;un lanceur de sorts a subi un
+        Contrecoup, l&rsquo;Hexxer MK II fonctionne comme le Hexxer Mk I en
+        annulant la moiti&eacute; des points de Choc. De plus, le nombre de
+        points de Choc annul&eacute;s est automatiquement utilis&eacute; comme
+        un bonus au prochain test de lancer de sort du personnage.
+        L&rsquo;&eacute;nergie se dissipe au bout d&rsquo;une minute (six
+        rounds), elle doit donc &ecirc;tre utilis&eacute;e dans cet intervalle
+        de temps ou le bonus est perdu.&nbsp;</p>
+
+        <p>&nbsp;</p>
+      price: '10000'
+      techlevel: 26
+      value: 20
+      notes: Les points de Choc ignorés sont un bonus au lancement de sorts.
+      equippedClass: item-equipped
+    ownership:
+      default: 0
+    _stats:
+      systemId: null
+      systemVersion: null
+      coreVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+    _key: '!actors.items!CefD0chJeL6NrRVJ.4nMDDruOMrPLT1YO'
+  - _id: SFdVeSet2JXoY01t
+    name: Lunettes de soleil
+    type: gear
+    sort: 2200000
+    flags:
+      core:
+        sourceId: Item.Wi4lFW6mtBCZS8EY
+    img: systems/torgeternity/images/icons/gear.webp
+    effects: []
+    folder: null
+    system:
+      cosm: Empire du Nil
+      description: <p>&Eacute;l&eacute;gantes</p>
+      price: '10'
+      techlevel: 20
+      value: 5
+      equippedClass: item-equipped
+    ownership:
+      default: 0
+    _stats:
+      systemId: null
+      systemVersion: null
+      coreVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+    _key: '!actors.items!CefD0chJeL6NrRVJ.SFdVeSet2JXoY01t'
+  - _id: m5mzP31xcN0sfDmc
+    name: Saint-Pierre Express
+    type: firearm
+    sort: 400000
+    flags:
+      core:
+        sourceId: Item.e2Jc6xS0T4XEs8q9
+    img: systems/torgeternity/images/icons/firearm.webp
+    effects: []
+    folder: null
+    system:
+      cosm: Cyberpapauté
+      description: >-
+        <p class="MsoNormal">L&rsquo;arme de poing la plus r&eacute;pandue parmi
+        les agents de la Police de l&rsquo;&Eacute;glise. C&rsquo;est une arme
+        de gros calibre particuli&egrave;rement bruyante. &Agrave;
+        l&rsquo;instar des autres armes GWI, elle est dot&eacute;e d&rsquo;une
+        intelligence artificielle limit&eacute;e non pas pour assister le tireur
+        mais pour d&eacute;sactiver ses fonctions et pr&ecirc;cher la bonne
+        parole aux m&eacute;cr&eacute;ants qui oseraient s&rsquo;en emparer. Si
+        diff&eacute;rents types de munitions sont charg&eacute;s dans
+        l&rsquo;arme, cette derni&egrave;re est m&ecirc;me capable de les
+        s&eacute;lectionner par commande vocale.</p>
+      price: '450'
+      techlevel: 26
+      value: 13
+      ammo:
+        max: 25
+        value: 25
+      ap: 0
+      attackWith: fireCombat
+      chatNote: ''
+      damage: 15
+      damageType: flat
+      equipped: false
+      equippedClass: .item-unequipped
+      notes: '-'
+      range: 10/25/40
+    ownership:
+      default: 0
+    _stats:
+      systemId: null
+      systemVersion: null
+      coreVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+    _key: '!actors.items!CefD0chJeL6NrRVJ.m5mzP31xcN0sfDmc'
+  - _id: SgtqDeoK74N1BlLX
+    name: Diminution
+    type: spell
+    sort: 2300000
+    flags:
+      core:
+        sourceId: Compendium.world.spells.spell-diminish
+    img: systems/torgeternity/images/icons/spell.webp
+    effects: []
+    folder: null
+    system:
+      ap: 0
+      applyArmor: true
+      applySize: true
+      axiom: 10
+      castingtime: 1 action
+      damage: ''
+      description: >-
+        <p class="MsoNormal">Diminution r&eacute;duit de -2 l&rsquo;un des
+        attributs de la cible (choisi au moment de lancer le sort) et les
+        comp&eacute;tences qui lui sont li&eacute;es. Plusieurs utilisations de
+        ce sort peuvent affecter plusieurs attributs.</p>
+
+        <p class="MsoNormal">Le mage mime une action en rapport avec
+        l&rsquo;attribut affect&eacute; au moment de l&rsquo;incantation, se
+        moquant d&rsquo;elle pour r&eacute;duire l&rsquo;Esprit, faisant
+        semblant de tr&eacute;bucher pour r&eacute;duire la
+        Dext&eacute;rit&eacute;, etc.</p>
+
+        <p class="MsoNormal">R&eacute;duire la Force ou l&rsquo;Esprit ne
+        r&eacute;duit pas la R&eacute;sistance ni les points de Choc qu&rsquo;il
+        est possible d&rsquo;encaisser.</p>
+      dn: La Volonté ou l’Esprit de la cible.
+      dnType: ''
+      duration: 3 rounds
+      good: le malus est augmenté à -4.
+      isAttack: false
+      modifier: ''
+      outstanding: >-
+        Comme un succès Supérieur et la cible ne peut relancer ses 20 au dé
+        quand elle utilise l’attribut affecté et les compétences qui lui sont
+        liées.
+      range: 40 mètres
+      skill: alteration
+      skilllevel: '12'
+      targetDefense: ''
+    ownership:
+      default: 0
+    _stats:
+      systemId: null
+      systemVersion: null
+      coreVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+    _key: '!actors.items!CefD0chJeL6NrRVJ.SgtqDeoK74N1BlLX'
+  - _id: uLEvrzm5QIU35Qzs
+    name: Amélioration
+    type: spell
+    sort: 2400000
+    flags:
+      core:
+        sourceId: Compendium.world.spells.spell-enhance
+    img: systems/torgeternity/images/icons/spell.webp
+    effects: []
+    folder: null
+    system:
+      ap: 0
+      applyArmor: true
+      applySize: true
+      axiom: 10
+      castingtime: 1 action
+      damage: ''
+      description: >-
+        <p class="MsoNormal">Ce sort permet d&rsquo;augmenter de +1 un attribut
+        du lanceur de sorts ou d&rsquo;un alli&eacute;. Plusieurs alli&eacute;s
+        peuvent en b&eacute;n&eacute;ficier en m&ecirc;me temps tant
+        qu&rsquo;ils sont tous &agrave; port&eacute;e et que le lanceur de sorts
+        utilise l&rsquo;option Cibles multiples. Le ND est l&rsquo;attribut
+        &agrave; augmenter, plus un individu est fort dans un domaine plus il
+        est difficile qu&rsquo;il le soit encore davantage. Diff&eacute;rents
+        attributs peuvent &ecirc;tre augment&eacute;s en lan&ccedil;ant le sort
+        plusieurs fois.</p>
+
+        <p class="MsoNormal">Si le lanceur de sorts augmente la Force ou
+        l&rsquo;Esprit, cela ne permet pas d&rsquo;augmenter la
+        R&eacute;sistance ou le nombre de points de Choc qu&rsquo;il peut
+        encaisser.</p>
+
+        <p class="MsoNormal">Le mage mime certains aspects de l&rsquo;attribut
+        concern&eacute; pendant qu&rsquo;il incante, en faisant craquer ses
+        phalanges pour am&eacute;liorer la Dext&eacute;rit&eacute;, en
+        assouplissant ses muscles pour la Force, et ainsi de suite.</p>
+      dn: attribut de la cible
+      dnType: ''
+      duration: 3 rounds
+      good: l’attribut est augmenté de +2.
+      isAttack: false
+      modifier: ''
+      outstanding: l’attribut est augmenté de +3
+      range: 40 mètres
+      skill: alteration
+      skilllevel: '12'
+      targetDefense: ''
+    ownership:
+      default: 0
+    _stats:
+      systemId: null
+      systemVersion: null
+      coreVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+    _key: '!actors.items!CefD0chJeL6NrRVJ.uLEvrzm5QIU35Qzs'
+  - _id: ac0BbUkLcRrcrMSj
+    name: Brouillage
+    type: spell
+    sort: 2500000
+    flags:
+      core:
+        sourceId: Compendium.world.spells.spell-scrambler
+    img: systems/torgeternity/images/icons/spell.webp
+    effects: []
+    folder: null
+    system:
+      ap: 0
+      applyArmor: true
+      applySize: true
+      axiom: 9
+      castingtime: 1 action
+      damage: ''
+      description: >-
+        <p>&nbsp;</p>
+
+        <p class="MsoNormal">Principalement utilis&eacute; dans le royaume
+        hautement surveill&eacute; de la Cyberpapaut&eacute;, le sort de
+        Brouillage floute toutes les personnes situ&eacute;es dans la zone
+        d&rsquo;effet contre les syst&egrave;mes de s&eacute;curit&eacute; et de
+        surveillance.</p>
+
+        <p class="MsoNormal">Les images et les sons sont brouill&eacute;s et ils
+        ne peuvent &ecirc;tre identifi&eacute;s par ces appareils ; de plus, les
+        bonus de ciblage des munitions intelligentes et de VTH &agrave;
+        r&eacute;alit&eacute; augment&eacute;e sont annul&eacute;s.</p>
+      dn: Standard (ND10)
+      dnType: ''
+      duration: 10 minutes
+      good: la Portée est augmentée à 100 mètres de rayon.
+      isAttack: false
+      modifier: ''
+      outstanding: >-
+        les images et la voix du lanceur de sort sont purement et simplement
+        effacées et la durée du sort est d’une heure.
+      range: rayon de 50m
+      skill: alteration
+      skilllevel: '10'
+      targetDefense: ''
+    ownership:
+      default: 0
+    _stats:
+      systemId: null
+      systemVersion: null
+      coreVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+    _key: '!actors.items!CefD0chJeL6NrRVJ.ac0BbUkLcRrcrMSj'
+  - _id: AzobLwjp2cbbDXgm
+    name: Attaque à mains nues
+    type: customAttack
+    img: systems/torgeternity/images/icons/fist-icon.webp
+    effects: []
+    folder: null
+    sort: 0
+    flags:
+      core:
+        sourceId: Item.BFGjhDetVDm1xiku
+    system:
+      ap: 0
+      attackWith: unarmedCombat
+      chatNote: ''
+      damage: 0
+      damageType: strengthPlus
+      description: ''
+      notes: ''
+    ownership:
+      default: 0
+      zWX19sSAtAWkeGhp: 3
+    _stats:
+      systemId: null
+      systemVersion: null
+      coreVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+    _key: '!actors.items!CefD0chJeL6NrRVJ.AzobLwjp2cbbDXgm'
+effects: []
+folder: null
+sort: 100001
+flags: {}
+system:
   shock:
     max: 5
     value: 0
@@ -10,300 +568,340 @@ data:
     max: 3
     value: 0
   attributes:
-    charisma: 7
-    dexterity: 8
-    mind: 10
-    spirit: 9
-    strength: 6
+    charisma:
+      base: 7
+    dexterity:
+      base: 8
+    mind:
+      base: 10
+    spirit:
+      base: 9
+    strength:
+      base: 6
   other:
-    move: 5
-    run: 5
-    toughness: 5
-    armor: 0
     cosm: cyberpapacy
     possibilities: 0
-    posibilities: null
   skills:
     airVehicles:
       baseAttribute: dexterity
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 0
+      isThreatSkill: false
+      defenseOnly: false
     alteration:
       baseAttribute: mind
       adds: 3
-      value: 0
       isFav: false
       groupName: other
       unskilledUse: 0
+      isThreatSkill: false
+      defenseOnly: false
     apportation:
       baseAttribute: spirit
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 0
+      isThreatSkill: false
+      defenseOnly: false
     beastRiding:
       baseAttribute: dexterity
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     computers:
       baseAttribute: mind
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     conjuration:
       baseAttribute: spirit
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 0
+      isThreatSkill: false
+      defenseOnly: false
     divination:
       baseAttribute: mind
       adds: 2
-      value: 0
       isFav: false
       groupName: other
       unskilledUse: 0
+      isThreatSkill: false
+      defenseOnly: false
     dodge:
       baseAttribute: dexterity
       adds: 2
-      value: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     energyWeapons:
       baseAttribute: dexterity
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: combat
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     evidenceAnalysis:
       baseAttribute: mind
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     faith:
       baseAttribute: spirit
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     find:
       baseAttribute: mind
       adds: 1
-      value: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     fireCombat:
       baseAttribute: dexterity
       adds: 1
-      value: 0
       isFav: false
       groupName: combat
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     firstAid:
       baseAttribute: mind
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     heavyWeapons:
       baseAttribute: dexterity
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: combat
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     intimidation:
       baseAttribute: spirit
       adds: 1
-      value: 0
       isFav: false
       groupName: interaction
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     kinesis:
       baseAttribute: spirit
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 0
+      isThreatSkill: false
+      defenseOnly: false
     landVehicles:
       baseAttribute: dexterity
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     language:
       baseAttribute: mind
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 0
+      isThreatSkill: false
+      defenseOnly: false
     lockpicking:
       baseAttribute: dexterity
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 0
+      isThreatSkill: false
+      defenseOnly: false
     maneuver:
       baseAttribute: dexterity
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: interaction
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     medicine:
       baseAttribute: mind
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 0
+      isThreatSkill: false
+      defenseOnly: false
     meleeWeapons:
       baseAttribute: dexterity
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: combat
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     missileWeapons:
       baseAttribute: dexterity
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: combat
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     persuasion:
       baseAttribute: charisma
       adds: 1
-      value: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     precognition:
       baseAttribute: mind
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 0
+      isThreatSkill: false
+      defenseOnly: false
     profession:
       baseAttribute: mind
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     reality:
       baseAttribute: spirit
       adds: 1
-      value: 0
       isFav: false
       groupName: other
       unskilledUse: 0
+      isThreatSkill: false
+      defenseOnly: false
     scholar:
       baseAttribute: mind
       adds: 1
-      value: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     science:
       baseAttribute: mind
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     stealth:
       baseAttribute: dexterity
       adds: 1
-      value: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     streetwise:
       baseAttribute: charisma
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     survival:
       baseAttribute: mind
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     taunt:
       baseAttribute: charisma
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: interaction
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     telepathy:
       baseAttribute: charisma
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 0
+      isThreatSkill: false
+      defenseOnly: false
     tracking:
       baseAttribute: mind
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     trick:
       baseAttribute: mind
       adds: 1
-      value: 0
       isFav: false
       groupName: interaction
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     unarmedCombat:
       baseAttribute: dexterity
       adds: 1
-      value: 0
       isFav: false
       groupName: combat
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     waterVehicles:
       baseAttribute: dexterity
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     willpower:
       baseAttribute: spirit
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
   xp:
     unspent: 0
     earned: 0
@@ -313,7 +911,6 @@ data:
     spirit: 16
     tech: 26
   details:
-    clearance: ''
     background: >-
       <h2 class="MsoNormal">Pr&eacute;sentation</h2>
 
@@ -412,35 +1009,20 @@ data:
 
       <h2>&nbsp;</h2>
     race: human
-  editstate: null
-  fatigue: '1'
-token:
+    sizeBonus: normal
+  editstate: true
+ownership:
+  default: 0
+  A9LyAqagoJJU3gDH: 3
+  VAnYow5sWS9EJzo0: 3
+prototypeToken:
   flags: {}
   name: La cybersorcière
   displayName: 30
-  img: systems/torgeternity/images/characters/Cyberwitch.Token.webp
-  tint: null
   width: 1
   height: 1
-  scale: 1
-  mirrorX: false
-  mirrorY: false
   lockRotation: false
   rotation: 0
-  vision: false
-  dimSight: 0
-  brightSight: 0
-  dimLight: 0
-  brightLight: 0
-  sightAngle: 0
-  lightAngle: 360
-  lightColor: ''
-  lightAlpha: 1
-  lightAnimation:
-    type: ''
-    speed: 5
-    intensity: 5
-  actorId: CefD0chJeL6NrRVJ
   actorLink: true
   disposition: 1
   displayBars: 20
@@ -451,17 +1033,17 @@ token:
   randomImg: false
   alpha: 1
   light:
-    alpha: 0.5
-    angle: 0
+    alpha: 1
+    angle: 360
     bright: 0
     coloration: 1
     dim: 0
-    gradual: true
     luminosity: 0.5
     saturation: 0
     contrast: 0
     shadows: 0
     animation:
+      type: null
       speed: 5
       intensity: 5
       reverse: false
@@ -469,479 +1051,33 @@ token:
       min: 0
       max: 1
     color: null
-items:
-  - _id: ZKurTYCidkV0AVSA
-    name: Implants cybernétiques
-    type: perk
-    data:
-      category: cyberware
-      cosm: Cyberpapauté
-      prerequisites: None
-      timestaken: 1
-      description: >-
-        <p class="MsoNormal">Quand il prend cet Atout, le personnage peut
-        choisir des implants cybern&eacute;tiques de la liste page 160 pour une
-        valeur maximale de 10 000 $. Les implants officiellement
-        approuv&eacute;s par l&rsquo;&Eacute;glise sont directement
-        connect&eacute;s au R&eacute;seau Divin et sont &eacute;troitement
-        surveill&eacute;s. Les appareils achet&eacute;s gr&acirc;ce &agrave; cet
-        Atout sont &laquo; pirat&eacute;s &raquo; et ne sont pas
-        connect&eacute;s au R&eacute;seau Divin (&agrave; moins que
-        l&rsquo;utilisateur ne le veuille). L&rsquo;installation est sans
-        risque. Cependant, poss&eacute;der des implants pirat&eacute;s est un
-        crime dans la Cyberpapaut&eacute;. Les h&eacute;ros qui &laquo; chroment
-        &raquo; leur corps feraient bien de se m&eacute;fier de la Police de
-        l&rsquo;&Eacute;glise, elle est toujours vigilante. Nouveaux implants :
-        cet Atout peut &ecirc;tre choisi plus d&rsquo;une fois. &Agrave; chaque
-        fois qu&rsquo;un personnage le choisit apr&egrave;s la premi&egrave;re
-        fois, il accorde de nouveaux implants pour une valeur de 5 000 $.</p>
-      pulpPowers:
-        enhancementNumber: 0
-        enhancement01:
-          title: ''
-          description: ''
-          taken: false
-        enhancement02:
-          title: ''
-          description: ''
-          taken: false
-        enhancement03:
-          title: ''
-          description: ''
-          taken: false
-        enhancement04:
-          title: ''
-          description: ''
-          taken: false
-        enhancement05:
-          title: ''
-          description: ''
-          taken: false
-        enhancement06:
-          title: ''
-          description: ''
-          taken: false
-        enhancement07:
-          title: ''
-          description: ''
-          taken: false
-        enhancement08:
-          title: ''
-          description: ''
-          taken: false
-        enhancement09:
-          title: ''
-          description: ''
-          taken: false
-        enhancement10:
-          title: ''
-          description: ''
-          taken: false
-        enhancement11:
-          title: ''
-          description: ''
-          taken: false
-        enhancement12:
-          title: ''
-          description: ''
-          taken: false
-        enhancement13:
-          title: ''
-          description: ''
-          taken: false
-        enhancement14:
-          title: ''
-          description: ''
-          taken: false
-        enhancement15:
-          title: ''
-          description: ''
-          taken: false
-        limitationNumber: 0
-        limitation01: ''
-        limitation02: ''
-        limitation03: ''
-        limitation04: ''
-        limitation05: ''
-        limitation06: ''
-        limitation07: ''
-        limitation08: ''
-        limitation09: ''
-        limitation10: ''
-    sort: 100001
-    flags:
-      core:
-        sourceId: Item.8qfs6BvtH7wTJ09g
-    img: systems/torgeternity/images/icons/perk.webp
-    effects: []
-    folder: null
-    permission:
-      default: 0
-    _key: '!actors.items!CefD0chJeL6NrRVJ.ZKurTYCidkV0AVSA'
-  - _id: yaftfIz25Ryczaqq
-    name: Lanceur de sorts
-    type: perk
-    data:
-      category: spellcraft
-      cosm: (Sans cosm)
-      prerequisites: See description*
-      timestaken: null
-      description: >-
-        <p class="MsoNormal"><strong>&bull; Pr&eacute;requis</strong> : au moins
-        un rang en Alt&eacute;ration, Cin&eacute;tique, Conjuration ou
-        Divination.</p>
-
-        <p class="MsoNormal">Ceux qui &eacute;tudient les arts arcaniques sont
-        connus sous de nombreux noms, mages, magiciens, d&eacute;monistes ou
-        sorci&egrave;res pour n&rsquo;en citer que quelques-uns. Quelle que soit
-        leur origine, ils peuvent tous lancer des sorts en utilisant
-        n&rsquo;importe laquelle des quatre comp&eacute;tences magiques de base
-        &mdash; Alt&eacute;ration, Cin&eacute;tique, Conjuration, ou Divination.
-        Quand cet Atout est s&eacute;lectionn&eacute;, le mage a acc&egrave;s
-        &agrave; la Liste de sorts de base de son cosm page 186 et il peut
-        choisir trois sorts de n&rsquo;importe quelle liste &agrave; laquelle il
-        a acc&egrave;s et pour lesquels il poss&egrave;de la comp&eacute;tence
-        minimale requise. Les sorts sont d&eacute;taill&eacute;s dans le
-        chapitre Magie &agrave; partir de la page 184.</p>
-
-        <p class="MsoNormal"><strong> Nouveaux sorts</strong> : cet Atout peut
-        &ecirc;tre choisi plus d&rsquo;une fois. &Agrave; chaque fois
-        apr&egrave;s la premi&egrave;re, le personnage apprend un sort
-        suppl&eacute;mentaire.</p>
-      pulpPowers:
-        enhancementNumber: 0
-        enhancement01:
-          title: ''
-          description: ''
-          taken: false
-        enhancement02:
-          title: ''
-          description: ''
-          taken: false
-        enhancement03:
-          title: ''
-          description: ''
-          taken: false
-        enhancement04:
-          title: ''
-          description: ''
-          taken: false
-        enhancement05:
-          title: ''
-          description: ''
-          taken: false
-        enhancement06:
-          title: ''
-          description: ''
-          taken: false
-        enhancement07:
-          title: ''
-          description: ''
-          taken: false
-        enhancement08:
-          title: ''
-          description: ''
-          taken: false
-        enhancement09:
-          title: ''
-          description: ''
-          taken: false
-        enhancement10:
-          title: ''
-          description: ''
-          taken: false
-        enhancement11:
-          title: ''
-          description: ''
-          taken: false
-        enhancement12:
-          title: ''
-          description: ''
-          taken: false
-        enhancement13:
-          title: ''
-          description: ''
-          taken: false
-        enhancement14:
-          title: ''
-          description: ''
-          taken: false
-        enhancement15:
-          title: ''
-          description: ''
-          taken: false
-        limitationNumber: 1
-        limitation01: ''
-        limitation02: ''
-        limitation03: ''
-        limitation04: ''
-        limitation05: ''
-        limitation06: ''
-        limitation07: ''
-        limitation08: ''
-        limitation09: ''
-        limitation10: ''
-    sort: 100001
-    flags:
-      core:
-        sourceId: Item.gOZE58k6tfHDbUJ0
-    img: systems/torgeternity/images/icons/perk.webp
-    effects: []
-    folder: null
-    permission:
-      default: 0
-    _key: '!actors.items!CefD0chJeL6NrRVJ.yaftfIz25Ryczaqq'
-  - _id: 4nMDDruOMrPLT1YO
-    name: Hexxer Mk II
-    type: implant
-    data:
-      cosm: Cyberpapauté
-      description: >-
-        <p>&nbsp;</p>
-
-        <p class="MsoNormal">Cette am&eacute;lioration d&rsquo;un hexxer permet
-        de stocker l&rsquo;&eacute;nergie lib&eacute;r&eacute;e par un
-        Contrecoup pour que la sorci&egrave;re ou le d&eacute;moniste
-        l&rsquo;utilise pour alimenter ses sorts.</p>
-
-        <p class="MsoNormal">Apr&egrave;s qu&rsquo;un lanceur de sorts a subi un
-        Contrecoup, l&rsquo;Hexxer MK II fonctionne comme le Hexxer Mk I en
-        annulant la moiti&eacute; des points de Choc. De plus, le nombre de
-        points de Choc annul&eacute;s est automatiquement utilis&eacute; comme
-        un bonus au prochain test de lancer de sort du personnage.
-        L&rsquo;&eacute;nergie se dissipe au bout d&rsquo;une minute (six
-        rounds), elle doit donc &ecirc;tre utilis&eacute;e dans cet intervalle
-        de temps ou le bonus est perdu.&nbsp;</p>
-
-        <p>&nbsp;</p>
-      techlevel: 26
-      price: 10000
-      value: 20
-      notes: Les points de Choc ignorés sont un bonus au lancement de sorts.
-    sort: 600001
-    flags:
-      core:
-        sourceId: Item.8NEZIXyg4imLfga9
-    img: systems/torgeternity/images/icons/implant.webp
-    effects: []
-    folder: null
-    permission:
-      default: 0
-    _key: '!actors.items!CefD0chJeL6NrRVJ.4nMDDruOMrPLT1YO'
-  - _id: SFdVeSet2JXoY01t
-    name: Lunettes de soleil
-    type: gear
-    data:
-      cosm: Empire du Nil
-      description: <p>&Eacute;l&eacute;gantes</p>
-      techlevel: 20
-      price: '10'
-      value: 5
-    sort: 2200000
-    flags:
-      core:
-        sourceId: Item.Wi4lFW6mtBCZS8EY
-    img: systems/torgeternity/images/icons/gear.webp
-    effects: []
-    folder: null
-    permission:
-      default: 0
-    _key: '!actors.items!CefD0chJeL6NrRVJ.SFdVeSet2JXoY01t'
-  - _id: m5mzP31xcN0sfDmc
-    name: Saint-Pierre Express
-    type: firearm
-    data:
-      cosm: Cyberpapauté
-      description: >-
-        <p class="MsoNormal">L&rsquo;arme de poing la plus r&eacute;pandue parmi
-        les agents de la Police de l&rsquo;&Eacute;glise. C&rsquo;est une arme
-        de gros calibre particuli&egrave;rement bruyante. &Agrave;
-        l&rsquo;instar des autres armes GWI, elle est dot&eacute;e d&rsquo;une
-        intelligence artificielle limit&eacute;e non pas pour assister le tireur
-        mais pour d&eacute;sactiver ses fonctions et pr&ecirc;cher la bonne
-        parole aux m&eacute;cr&eacute;ants qui oseraient s&rsquo;en emparer. Si
-        diff&eacute;rents types de munitions sont charg&eacute;s dans
-        l&rsquo;arme, cette derni&egrave;re est m&ecirc;me capable de les
-        s&eacute;lectionner par commande vocale.</p>
-      techlevel: 26
-      price: '450'
-      value: 13
-      attackWith: fireCombat
-      damageType: flat
-      damage: 15
-      ap: 0
-      ammo:
-        max: 25
-        value: 25
-      range: 10/25/40
-      notes: '-'
-      chatNote: ''
-    sort: 400000
-    flags:
-      core:
-        sourceId: Item.e2Jc6xS0T4XEs8q9
-    img: systems/torgeternity/images/icons/firearm.webp
-    effects: []
-    folder: null
-    permission:
-      default: 0
-    _key: '!actors.items!CefD0chJeL6NrRVJ.m5mzP31xcN0sfDmc'
-  - _id: SgtqDeoK74N1BlLX
-    name: Diminution
-    type: spell
-    data:
-      axiom: 10
-      skill: alteration
-      skilllevel: 12
-      castingtime: 1 action
-      dn: La Volonté ou l’Esprit de la cible.
-      range: 40 mètres
-      duration: 3 rounds
-      description: >-
-        <p class="MsoNormal">Diminution r&eacute;duit de -2 l&rsquo;un des
-        attributs de la cible (choisi au moment de lancer le sort) et les
-        comp&eacute;tences qui lui sont li&eacute;es. Plusieurs utilisations de
-        ce sort peuvent affecter plusieurs attributs.</p>
-
-        <p class="MsoNormal">Le mage mime une action en rapport avec
-        l&rsquo;attribut affect&eacute; au moment de l&rsquo;incantation, se
-        moquant d&rsquo;elle pour r&eacute;duire l&rsquo;Esprit, faisant
-        semblant de tr&eacute;bucher pour r&eacute;duire la
-        Dext&eacute;rit&eacute;, etc.</p>
-
-        <p class="MsoNormal">R&eacute;duire la Force ou l&rsquo;Esprit ne
-        r&eacute;duit pas la R&eacute;sistance ni les points de Choc qu&rsquo;il
-        est possible d&rsquo;encaisser.</p>
-      good: le malus est augmenté à -4.
-      outstanding: >-
-        Comme un succès Supérieur et la cible ne peut relancer ses 20 au dé
-        quand elle utilise l’attribut affecté et les compétences qui lui sont
-        liées.
-      isAttack: 'false'
-      damage: null
-    sort: 2300000
-    flags:
-      core:
-        sourceId: Compendium.world.spells.spell-diminish
-    img: systems/torgeternity/images/icons/spell.webp
-    effects: []
-    folder: null
-    permission:
-      default: 0
-    _key: '!actors.items!CefD0chJeL6NrRVJ.SgtqDeoK74N1BlLX'
-  - _id: uLEvrzm5QIU35Qzs
-    name: Amélioration
-    type: spell
-    data:
-      axiom: 10
-      skill: alteration
-      skilllevel: 12
-      castingtime: 1 action
-      dn: attribut de la cible
-      range: 40 mètres
-      duration: 3 rounds
-      description: >-
-        <p class="MsoNormal">Ce sort permet d&rsquo;augmenter de +1 un attribut
-        du lanceur de sorts ou d&rsquo;un alli&eacute;. Plusieurs alli&eacute;s
-        peuvent en b&eacute;n&eacute;ficier en m&ecirc;me temps tant
-        qu&rsquo;ils sont tous &agrave; port&eacute;e et que le lanceur de sorts
-        utilise l&rsquo;option Cibles multiples. Le ND est l&rsquo;attribut
-        &agrave; augmenter, plus un individu est fort dans un domaine plus il
-        est difficile qu&rsquo;il le soit encore davantage. Diff&eacute;rents
-        attributs peuvent &ecirc;tre augment&eacute;s en lan&ccedil;ant le sort
-        plusieurs fois.</p>
-
-        <p class="MsoNormal">Si le lanceur de sorts augmente la Force ou
-        l&rsquo;Esprit, cela ne permet pas d&rsquo;augmenter la
-        R&eacute;sistance ou le nombre de points de Choc qu&rsquo;il peut
-        encaisser.</p>
-
-        <p class="MsoNormal">Le mage mime certains aspects de l&rsquo;attribut
-        concern&eacute; pendant qu&rsquo;il incante, en faisant craquer ses
-        phalanges pour am&eacute;liorer la Dext&eacute;rit&eacute;, en
-        assouplissant ses muscles pour la Force, et ainsi de suite.</p>
-      good: l’attribut est augmenté de +2.
-      outstanding: l’attribut est augmenté de +3
-      isAttack: 'false'
-      damage: null
-    sort: 2400000
-    flags:
-      core:
-        sourceId: Compendium.world.spells.spell-enhance
-    img: systems/torgeternity/images/icons/spell.webp
-    effects: []
-    folder: null
-    permission:
-      default: 0
-    _key: '!actors.items!CefD0chJeL6NrRVJ.uLEvrzm5QIU35Qzs'
-  - _id: ac0BbUkLcRrcrMSj
-    name: Brouillage
-    type: spell
-    data:
-      axiom: 9
-      skill: alteration
-      skilllevel: 10
-      castingtime: 1 action
-      dn: Standard (ND10)
-      range: rayon de 50m
-      duration: 10 minutes
-      description: >-
-        <p>&nbsp;</p>
-
-        <p class="MsoNormal">Principalement utilis&eacute; dans le royaume
-        hautement surveill&eacute; de la Cyberpapaut&eacute;, le sort de
-        Brouillage floute toutes les personnes situ&eacute;es dans la zone
-        d&rsquo;effet contre les syst&egrave;mes de s&eacute;curit&eacute; et de
-        surveillance.</p>
-
-        <p class="MsoNormal">Les images et les sons sont brouill&eacute;s et ils
-        ne peuvent &ecirc;tre identifi&eacute;s par ces appareils ; de plus, les
-        bonus de ciblage des munitions intelligentes et de VTH &agrave;
-        r&eacute;alit&eacute; augment&eacute;e sont annul&eacute;s.</p>
-      good: la Portée est augmentée à 100 mètres de rayon.
-      outstanding: >-
-        les images et la voix du lanceur de sort sont purement et simplement
-        effacées et la durée du sort est d’une heure.
-      isAttack: 'false'
-      damage: null
-    sort: 2500000
-    flags:
-      core:
-        sourceId: Compendium.world.spells.spell-scrambler
-    img: systems/torgeternity/images/icons/spell.webp
-    effects: []
-    folder: null
-    permission:
-      default: 0
-    _key: '!actors.items!CefD0chJeL6NrRVJ.ac0BbUkLcRrcrMSj'
-  - _id: AzobLwjp2cbbDXgm
-    name: Attaque à mains nues
-    type: customAttack
-    img: systems/torgeternity/images/icons/fist-icon.webp
-    data:
-      description: ''
-      attackWith: unarmedCombat
-      damageType: strengthPlus
-      damage: 0
-      ap: 0
-      notes: ''
-      chatNote: ''
-    effects: []
-    folder: null
-    sort: 0
-    permission:
-      default: 0
-      zWX19sSAtAWkeGhp: 3
-    flags:
-      core:
-        sourceId: Item.BFGjhDetVDm1xiku
-    _key: '!actors.items!CefD0chJeL6NrRVJ.AzobLwjp2cbbDXgm'
-effects: []
-folder: null
-sort: 100001
-permission:
-  default: 0
-  A9LyAqagoJJU3gDH: 3
-flags: {}
+    attenuation: 0.5
+  texture:
+    src: systems/torgeternity/images/characters/Cyberwitch.Token.webp
+    tint: null
+    scaleX: 1
+    scaleY: 1
+    offsetX: 0
+    offsetY: 0
+    rotation: 0
+  sight:
+    angle: 360
+    enabled: false
+    range: 0
+    brightness: 1
+    visionMode: basic
+    attenuation: 0.1
+    saturation: 0
+    contrast: 0
+  appendNumber: false
+  prependAdjective: false
+  detectionModes: []
+_stats:
+  systemId: torgeternity
+  systemVersion: 3.8.1
+  coreVersion: '11.315'
+  createdTime: 1716827809277
+  modifiedTime: 1716827809277
+  lastModifiedBy: VAnYow5sWS9EJzo0
 _key: '!actors!CefD0chJeL6NrRVJ'
 

@@ -4,7 +4,7 @@ type: deck
 description: ''
 img: systems/torgeternity/images/cards/aysle-back.webp
 cards:
-  - _id: 2moJglDnzdLdQ6H5
+  - _id: EGl09gpyycsKDG0Q
     name: Look What I Found!
     description: ''
     type: cosm
@@ -23,13 +23,15 @@ cards:
     rotation: 0
     sort: 0
     flags: {}
-    system: {}
+    system:
+      cosm: ''
+      number: ''
     value: null
     width: null
     height: null
-    _key: '!cards.cards!RvvkWRAVByqOa3vF.2moJglDnzdLdQ6H5'
+    _key: '!cards.cards!RvvkWRAVByqOa3vF.EGl09gpyycsKDG0Q'
     cards: []
-  - _id: kCtl6n8GyHL3Ksss
+  - _id: 6h78BgTHJfOxASrM
     name: Face Me!
     description: ''
     type: cosm
@@ -48,13 +50,15 @@ cards:
     rotation: 0
     sort: 1
     flags: {}
-    system: {}
+    system:
+      cosm: ''
+      number: ''
     value: null
     width: null
     height: null
-    _key: '!cards.cards!RvvkWRAVByqOa3vF.kCtl6n8GyHL3Ksss'
+    _key: '!cards.cards!RvvkWRAVByqOa3vF.6h78BgTHJfOxASrM'
     cards: []
-  - _id: BcvSSr8FneLAwtH4
+  - _id: FHLep967jnt9fPmC
     name: Trap!
     description: ''
     type: cosm
@@ -73,13 +77,15 @@ cards:
     rotation: 0
     sort: 2
     flags: {}
-    system: {}
+    system:
+      cosm: ''
+      number: ''
     value: null
     width: null
     height: null
-    _key: '!cards.cards!RvvkWRAVByqOa3vF.BcvSSr8FneLAwtH4'
+    _key: '!cards.cards!RvvkWRAVByqOa3vF.FHLep967jnt9fPmC'
     cards: []
-  - _id: WbuWhEpaXrl00aNM
+  - _id: Yo8U2WyCZ9iUVSfU
     name: Courtly Intrigue
     description: ''
     type: cosm
@@ -98,13 +104,15 @@ cards:
     rotation: 0
     sort: 3
     flags: {}
-    system: {}
+    system:
+      cosm: ''
+      number: ''
     value: null
     width: null
     height: null
-    _key: '!cards.cards!RvvkWRAVByqOa3vF.WbuWhEpaXrl00aNM'
+    _key: '!cards.cards!RvvkWRAVByqOa3vF.Yo8U2WyCZ9iUVSfU'
     cards: []
-  - _id: 5FU8TA7uRaCF1ALd
+  - _id: 50kUHs3VzMjV5HHr
     name: Courtly Romance
     description: ''
     type: cosm
@@ -123,13 +131,15 @@ cards:
     rotation: 0
     sort: 4
     flags: {}
-    system: {}
+    system:
+      cosm: ''
+      number: ''
     value: null
     width: null
     height: null
-    _key: '!cards.cards!RvvkWRAVByqOa3vF.5FU8TA7uRaCF1ALd'
+    _key: '!cards.cards!RvvkWRAVByqOa3vF.50kUHs3VzMjV5HHr'
     cards: []
-  - _id: t0bwpZp2c25nYEl0
+  - _id: liyp5MkGzXWwqGRz
     name: Wandering Monster
     description: ''
     type: cosm
@@ -148,13 +158,15 @@ cards:
     rotation: 0
     sort: 5
     flags: {}
-    system: {}
+    system:
+      cosm: ''
+      number: ''
     value: null
     width: null
     height: null
-    _key: '!cards.cards!RvvkWRAVByqOa3vF.t0bwpZp2c25nYEl0'
+    _key: '!cards.cards!RvvkWRAVByqOa3vF.liyp5MkGzXWwqGRz'
     cards: []
-  - _id: 6tsYI82XVTuBusyt
+  - _id: yNBQIKh0YWLldp1J
     name: Fickle Magic
     description: ''
     type: cosm
@@ -173,13 +185,15 @@ cards:
     rotation: 0
     sort: 6
     flags: {}
-    system: {}
+    system:
+      cosm: ''
+      number: ''
     value: null
     width: null
     height: null
-    _key: '!cards.cards!RvvkWRAVByqOa3vF.6tsYI82XVTuBusyt'
+    _key: '!cards.cards!RvvkWRAVByqOa3vF.yNBQIKh0YWLldp1J'
     cards: []
-  - _id: FB0N1HcDCcrJy943
+  - _id: gHw0vXhD9Rnqo64J
     name: Loot the Body!
     description: ''
     type: cosm
@@ -198,13 +212,15 @@ cards:
     rotation: 0
     sort: 7
     flags: {}
-    system: {}
+    system:
+      cosm: ''
+      number: ''
     value: null
     width: null
     height: null
-    _key: '!cards.cards!RvvkWRAVByqOa3vF.FB0N1HcDCcrJy943'
+    _key: '!cards.cards!RvvkWRAVByqOa3vF.gHw0vXhD9Rnqo64J'
     cards: []
-  - _id: Q5YTcCrSlYzfIPYq
+  - _id: ziafNZNzp6qUNPSP
     name: Mana Surge
     description: ''
     type: cosm
@@ -223,13 +239,15 @@ cards:
     rotation: 0
     sort: 8
     flags: {}
-    system: {}
+    system:
+      cosm: ''
+      number: ''
     value: null
     width: null
     height: null
-    _key: '!cards.cards!RvvkWRAVByqOa3vF.Q5YTcCrSlYzfIPYq'
+    _key: '!cards.cards!RvvkWRAVByqOa3vF.ziafNZNzp6qUNPSP'
     cards: []
-  - _id: QiF9ZqkcryKctFPt
+  - _id: tsAT14nlal7A6aHH
     name: Finders Keepers
     description: ''
     type: cosm
@@ -248,11 +266,13 @@ cards:
     rotation: 0
     sort: 9
     flags: {}
-    system: {}
+    system:
+      cosm: ''
+      number: ''
     value: null
     width: null
     height: null
-    _key: '!cards.cards!RvvkWRAVByqOa3vF.QiF9ZqkcryKctFPt'
+    _key: '!cards.cards!RvvkWRAVByqOa3vF.tsAT14nlal7A6aHH'
     cards: []
 width: null
 height: null
@@ -274,12 +294,13 @@ system: {}
 ownership:
   default: 0
   juTas93IuPVP8p5D: 3
+  VAnYow5sWS9EJzo0: 3
 _stats:
-  systemId: null
-  systemVersion: null
-  coreVersion: null
-  createdTime: null
-  modifiedTime: null
-  lastModifiedBy: null
+  systemId: torgeternity
+  systemVersion: 3.8.1
+  coreVersion: '11.315'
+  createdTime: 1716827808625
+  modifiedTime: 1716827808625
+  lastModifiedBy: VAnYow5sWS9EJzo0
 _key: '!cards!RvvkWRAVByqOa3vF'
 

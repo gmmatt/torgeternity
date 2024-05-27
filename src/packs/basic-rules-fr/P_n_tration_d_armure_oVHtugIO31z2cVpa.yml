@@ -1,13 +1,48 @@
 _id: oVHtugIO31z2cVpa
 name: Pénétration d'armure
-content: "<p>Le Katana électrique du Guerrier électrique et les cartouches en adamantes du Chasseur de monstres pénètrent les armures. La pénétration d'Armure annule des rang d'armure à la Résistance. Les Guerriers Gospog et Edeinos n'ont pas d'armure, donc il n'y a pas d'effet. Le Tyrannosaure a une armure de 3, donc le katana le réduirait à une résistance de 18, et les cartouches en adamantes à une résistance de 17.</p>\n<p>\_</p>\n<blockquote>\n<p><strong>Note du système Foundry</strong> : Lorsque tu utilises une attaque améliorée, les effets de pénétration d'Armure (PA) seront automatiquement calculés (voir @UUID[Compendium.torgeternity.basic-rules-fr.JournalEntry.ZaVT27zI7lzHCyvA]{gestion des cartes}.)</p>\n</blockquote>"
 folder: null
 sort: 0
-permission:
-  default: 0
-  TK1vCAdCz548vBDu: 3
 flags:
   core:
     sourceId: JournalEntry.N0Qlctx7umJTVEuc
-pages: []
+pages:
+  - name: Pénétration d'armure
+    type: text
+    title:
+      show: false
+      level: 1
+    text:
+      format: 1
+      content: "<p>Le Katana électrique du Guerrier électrique et les cartouches en adamantes du Chasseur de monstres pénètrent les armures. La pénétration d'Armure annule des rang d'armure à la Résistance. Les Guerriers Gospog et Edeinos n'ont pas d'armure, donc il n'y a pas d'effet. Le Tyrannosaure a une armure de 3, donc le katana le réduirait à une résistance de 18, et les cartouches en adamantes à une résistance de 17.</p>\n<p>\_</p>\n<blockquote>\n<p><strong>Note du système Foundry</strong> : Lorsque tu utilises une attaque améliorée, les effets de pénétration d'Armure (PA) seront automatiquement calculés (voir @UUID[Compendium.torgeternity.basic-rules-fr.JournalEntry.ZaVT27zI7lzHCyvA]{gestion des cartes}.)</p>\n</blockquote>"
+    _id: M8KOmI0EqjkY9Tqn
+    image: {}
+    video:
+      controls: true
+      volume: 0.5
+    src: null
+    system: {}
+    sort: 0
+    ownership:
+      default: -1
+    flags: {}
+    _stats:
+      systemId: null
+      systemVersion: null
+      coreVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+    _key: '!journal.pages!oVHtugIO31z2cVpa.M8KOmI0EqjkY9Tqn'
+ownership:
+  default: 0
+  TK1vCAdCz548vBDu: 3
+  VAnYow5sWS9EJzo0: 3
+_stats:
+  systemId: torgeternity
+  systemVersion: 3.8.1
+  coreVersion: '11.315'
+  createdTime: 1716827810339
+  modifiedTime: 1716827810339
+  lastModifiedBy: VAnYow5sWS9EJzo0
 _key: '!journal!oVHtugIO31z2cVpa'
+

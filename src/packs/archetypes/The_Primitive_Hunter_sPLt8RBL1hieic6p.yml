@@ -16,9 +16,10 @@ items:
     system:
       cosm: Living Land
       description: ''
-      techlevel: 2
       price: '5'
+      techlevel: 2
       value: 4
+      equippedClass: item-equipped
     ownership:
       default: 0
     _stats:
@@ -42,9 +43,10 @@ items:
     system:
       cosm: Living Land
       description: <p>Bone carving of Lanala.</p>
-      techlevel: 3
       price: '0'
+      techlevel: 3
       value: 0
+      equippedClass: item-equipped
     ownership:
       default: 0
     _stats:
@@ -68,9 +70,10 @@ items:
     system:
       cosm: Living Land
       description: <p>Red, white, and blue.</p>
-      techlevel: 4
       price: '1'
+      techlevel: 4
       value: 1
+      equippedClass: item-equipped
     ownership:
       default: 0
     _stats:
@@ -94,8 +97,6 @@ items:
     system:
       category: savagery
       cosm: (Keins)
-      prerequisites: Charisma 8+
-      timestaken: 1
       description: >-
         <p>The great tigers of the Living Land are fearsome predators capable of
         taking down all but the largest dinosaurs. A smaller breed exists that
@@ -130,69 +131,70 @@ items:
         </div>
 
         <p>Found in <strong>Core Rules</strong></p>
+      prerequisites: Charisma 8+
+      generalContradiction: false
       pulpPowers:
-        enhancementNumber: 0
         enhancement01:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement02:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement03:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement04:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement05:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement06:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement07:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement08:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement09:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement10:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement11:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement12:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement13:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement14:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement15:
-          title: ''
           description: ''
           taken: false
-        limitationNumber: 0
+          title: ''
+        enhancementNumber: 0
         limitation01: ''
         limitation02: ''
         limitation03: ''
@@ -203,6 +205,8 @@ items:
         limitation08: ''
         limitation09: ''
         limitation10: ''
+        limitationNumber: 0
+      timestaken: '1'
     ownership:
       default: 0
       A9LyAqagoJJU3gDH: 3
@@ -228,8 +232,6 @@ items:
     system:
       category: prowess
       cosm: (None)
-      prerequisites: Strength 10+
-      timestaken: 1
       description: >-
         <p>The most furious fighters put everything they have into their
         blows.</p><p>When the character successfully uses the AllOut Attack
@@ -241,69 +243,70 @@ items:
         <p>&nbsp;</p>
 
         <p>Found in <strong>Core Rules</strong></p>
+      prerequisites: Strength 10+
+      generalContradiction: false
       pulpPowers:
-        enhancementNumber: 0
         enhancement01:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement02:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement03:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement04:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement05:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement06:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement07:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement08:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement09:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement10:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement11:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement12:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement13:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement14:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement15:
-          title: ''
           description: ''
           taken: false
-        limitationNumber: 0
+          title: ''
+        enhancementNumber: 0
         limitation01: ''
         limitation02: ''
         limitation03: ''
@@ -314,6 +317,8 @@ items:
         limitation08: ''
         limitation09: ''
         limitation10: ''
+        limitationNumber: 0
+      timestaken: '1'
     ownership:
       default: 0
       A9LyAqagoJJU3gDH: 3
@@ -350,16 +355,18 @@ items:
         <p>&nbsp;</p>
 
         <p>Found in <strong>Core Rules</strong></p>
-      techlevel: 3
       price: '40'
+      techlevel: 3
       value: 8
-      attackWith: meleeWeapons
-      damageType: strengthPlus
-      damage: 2
       ap: 0
+      attackWith: meleeWeapons
       bonus: 2
-      notes: Thrown
       chatNote: ''
+      damage: 2
+      damageType: strengthPlus
+      equipped: false
+      equippedClass: .item-unequipped
+      notes: Thrown
     ownership:
       default: 0
       A9LyAqagoJJU3gDH: 3
@@ -387,20 +394,22 @@ items:
       description: >-
         <p>Pliable when wet and growing, but hard as iron once cut and dried.
         Often cultivated into straight spears with sharp points.</p>
-      techlevel: 3
       price: '40'
+      techlevel: 3
       value: 8
-      attackWith: missileWeapons
-      damageType: strengthPlus
-      damage: 2
-      ap: 0
       ammo:
         max: 1
         value: 1
-      minStrength: 8
-      range: 10 / 20 / 40
-      notes: Thrown
+      ap: 0
+      attackWith: missileWeapons
       chatNote: ''
+      damage: 2
+      damageType: strengthPlus
+      equipped: false
+      equippedClass: .item-unequipped
+      minStrength: '8'
+      notes: Thrown
+      range: 10 / 20 / 40
     ownership:
       default: 0
       A9LyAqagoJJU3gDH: 3
@@ -436,16 +445,18 @@ items:
         <p>&nbsp;</p>
 
         <p>Found in <strong>Core Rules</strong></p>
-      techlevel: 3
       price: '5'
+      techlevel: 3
       value: 4
-      attackWith: meleeWeapons
-      damageType: strengthPlus
-      damage: 1
       ap: 0
+      attackWith: meleeWeapons
       bonus: 2
-      notes: Fragile, Small
       chatNote: ''
+      damage: 1
+      damageType: strengthPlus
+      equipped: false
+      equippedClass: .item-unequipped
+      notes: Fragile, Small
     ownership:
       default: 0
       A9LyAqagoJJU3gDH: 3
@@ -514,300 +525,340 @@ system:
     max: 3
     value: 0
   attributes:
-    charisma: 8
-    dexterity: 10
-    mind: 5
-    spirit: 7
-    strength: 10
+    charisma:
+      base: 8
+    dexterity:
+      base: 10
+    mind:
+      base: 5
+    spirit:
+      base: 7
+    strength:
+      base: 10
   other:
-    move: 5
-    run: 5
-    toughness: 5
-    armor: 0
     cosm: livingLand
     possibilities: 3
-    posibilities: 3
   skills:
     airVehicles:
       baseAttribute: dexterity
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 0
+      isThreatSkill: false
+      defenseOnly: false
     alteration:
       baseAttribute: mind
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 0
+      isThreatSkill: false
+      defenseOnly: false
     apportation:
       baseAttribute: spirit
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 0
+      isThreatSkill: false
+      defenseOnly: false
     beastRiding:
       baseAttribute: dexterity
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     computers:
       baseAttribute: mind
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     conjuration:
       baseAttribute: spirit
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 0
+      isThreatSkill: false
+      defenseOnly: false
     divination:
       baseAttribute: mind
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 0
+      isThreatSkill: false
+      defenseOnly: false
     dodge:
       baseAttribute: dexterity
       adds: 1
-      value: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     energyWeapons:
       baseAttribute: dexterity
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: combat
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     evidenceAnalysis:
       baseAttribute: mind
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     faith:
       baseAttribute: spirit
       adds: 1
-      value: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     find:
       baseAttribute: mind
       adds: 1
-      value: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     fireCombat:
       baseAttribute: dexterity
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: combat
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     firstAid:
       baseAttribute: mind
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     heavyWeapons:
       baseAttribute: dexterity
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: combat
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     intimidation:
       baseAttribute: spirit
       adds: 1
-      value: 0
       isFav: false
       groupName: interaction
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     kinesis:
       baseAttribute: spirit
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 0
+      isThreatSkill: false
+      defenseOnly: false
     landVehicles:
       baseAttribute: dexterity
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     language:
       baseAttribute: mind
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 0
+      isThreatSkill: false
+      defenseOnly: false
     lockpicking:
       baseAttribute: dexterity
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 0
+      isThreatSkill: false
+      defenseOnly: false
     maneuver:
       baseAttribute: dexterity
       adds: 1
-      value: 0
       isFav: false
       groupName: interaction
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     medicine:
       baseAttribute: mind
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 0
+      isThreatSkill: false
+      defenseOnly: false
     meleeWeapons:
       baseAttribute: dexterity
       adds: 3
-      value: 0
       isFav: false
       groupName: combat
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     missileWeapons:
       baseAttribute: dexterity
       adds: 2
-      value: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     persuasion:
       baseAttribute: charisma
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     precognition:
       baseAttribute: mind
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 0
+      isThreatSkill: false
+      defenseOnly: false
     profession:
       baseAttribute: mind
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     reality:
       baseAttribute: spirit
       adds: 1
-      value: 0
       isFav: false
       groupName: other
       unskilledUse: 0
+      isThreatSkill: false
+      defenseOnly: false
     scholar:
       baseAttribute: mind
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     science:
       baseAttribute: mind
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     stealth:
       baseAttribute: dexterity
       adds: 1
-      value: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     streetwise:
       baseAttribute: charisma
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     survival:
       baseAttribute: mind
       adds: 2
-      value: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     taunt:
       baseAttribute: charisma
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: interaction
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     telepathy:
       baseAttribute: charisma
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 0
+      isThreatSkill: false
+      defenseOnly: false
     tracking:
       baseAttribute: mind
       adds: 1
-      value: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     trick:
       baseAttribute: mind
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: interaction
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     unarmedCombat:
       baseAttribute: dexterity
       adds: 1
-      value: 0
       isFav: false
       groupName: combat
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     waterVehicles:
       baseAttribute: dexterity
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     willpower:
       baseAttribute: spirit
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
   xp:
     unspent: 0
     earned: 0
@@ -817,7 +868,6 @@ system:
     spirit: 24
     tech: 6
   details:
-    clearance: ''
     background: >-
       <p><img class="charimg"
       src="systems/torgeternity/images/characters/Primitive_Hunter.webp" alt=""
@@ -902,11 +952,12 @@ system:
 
       </ul>
     race: human
+    sizeBonus: normal
   editstate: false
-  fatigue: '1'
 ownership:
   default: 0
   A9LyAqagoJJU3gDH: 3
+  VAnYow5sWS9EJzo0: 3
 prototypeToken:
   flags: {}
   name: Primitive Hunter
@@ -966,10 +1017,10 @@ prototypeToken:
   detectionModes: []
 _stats:
   systemId: torgeternity
-  systemVersion: 3.7.0
+  systemVersion: 3.8.1
   coreVersion: '11.315'
   createdTime: 1693912137290
-  modifiedTime: 1711900333287
-  lastModifiedBy: CtisFurQNe9h7ABb
+  modifiedTime: 1716827808083
+  lastModifiedBy: VAnYow5sWS9EJzo0
 _key: '!actors!sPLt8RBL1hieic6p'
 

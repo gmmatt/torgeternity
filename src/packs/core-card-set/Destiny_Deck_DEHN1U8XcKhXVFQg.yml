@@ -4,7 +4,7 @@ type: deck
 description: This is the base deck, consisting of cards 1-40.
 img: systems/torgeternity/images/cards/destiny-back.webp
 cards:
-  - _id: tooR01H13o1OaDyh
+  - _id: 2uah8CYkX7MWpFBb
     name: Adrenaline
     description: ''
     type: destiny
@@ -26,12 +26,13 @@ cards:
       core:
         sheetClass: ''
     value: 1
-    system: {}
+    system:
+      number: ''
     width: null
     height: null
-    _key: '!cards.cards!DEHN1U8XcKhXVFQg.tooR01H13o1OaDyh'
+    _key: '!cards.cards!DEHN1U8XcKhXVFQg.2uah8CYkX7MWpFBb'
     cards: []
-  - _id: 9lWYCjzNjWBrIfFm
+  - _id: yB6GxWgS2fGpvaQj
     name: Adrenaline
     description: ''
     type: destiny
@@ -51,12 +52,13 @@ cards:
     sort: 2700000
     flags: {}
     value: 2
-    system: {}
+    system:
+      number: ''
     width: null
     height: null
-    _key: '!cards.cards!DEHN1U8XcKhXVFQg.9lWYCjzNjWBrIfFm'
+    _key: '!cards.cards!DEHN1U8XcKhXVFQg.yB6GxWgS2fGpvaQj'
     cards: []
-  - _id: yS80vYE6MJBLIs7T
+  - _id: MfwUyQk6UvqqwEgw
     name: Adrenaline
     description: ''
     type: destiny
@@ -76,12 +78,13 @@ cards:
     sort: 6000000
     flags: {}
     value: 3
-    system: {}
+    system:
+      number: ''
     width: null
     height: null
-    _key: '!cards.cards!DEHN1U8XcKhXVFQg.yS80vYE6MJBLIs7T'
+    _key: '!cards.cards!DEHN1U8XcKhXVFQg.MfwUyQk6UvqqwEgw'
     cards: []
-  - _id: f0uz8tcX8gByjBZJ
+  - _id: nj5jtxFv3k0XxCzZ
     name: Adrenaline
     description: ''
     type: destiny
@@ -101,12 +104,13 @@ cards:
     sort: 5600000
     flags: {}
     value: 4
-    system: {}
+    system:
+      number: ''
     width: null
     height: null
-    _key: '!cards.cards!DEHN1U8XcKhXVFQg.f0uz8tcX8gByjBZJ'
+    _key: '!cards.cards!DEHN1U8XcKhXVFQg.nj5jtxFv3k0XxCzZ'
     cards: []
-  - _id: dHyu9u7zH5Rqfbtb
+  - _id: PsvV9DXPOTOeDQOp
     name: Willpower
     description: ''
     type: destiny
@@ -126,12 +130,13 @@ cards:
     sort: 2500000
     flags: {}
     value: 5
-    system: {}
+    system:
+      number: ''
     width: null
     height: null
-    _key: '!cards.cards!DEHN1U8XcKhXVFQg.dHyu9u7zH5Rqfbtb'
+    _key: '!cards.cards!DEHN1U8XcKhXVFQg.PsvV9DXPOTOeDQOp'
     cards: []
-  - _id: 9CAZGKE55iiRTEAt
+  - _id: trrM4np4AsEDnFuK
     name: Willpower
     description: ''
     type: destiny
@@ -151,12 +156,13 @@ cards:
     sort: 900000
     flags: {}
     value: 6
-    system: {}
+    system:
+      number: ''
     width: null
     height: null
-    _key: '!cards.cards!DEHN1U8XcKhXVFQg.9CAZGKE55iiRTEAt'
+    _key: '!cards.cards!DEHN1U8XcKhXVFQg.trrM4np4AsEDnFuK'
     cards: []
-  - _id: o2uShCKMxTLjK9If
+  - _id: HH4DN1Gm6UeU35RW
     name: Willpower
     description: ''
     type: destiny
@@ -176,12 +182,13 @@ cards:
     sort: 3600000
     flags: {}
     value: 7
-    system: {}
+    system:
+      number: ''
     width: null
     height: null
-    _key: '!cards.cards!DEHN1U8XcKhXVFQg.o2uShCKMxTLjK9If'
+    _key: '!cards.cards!DEHN1U8XcKhXVFQg.HH4DN1Gm6UeU35RW'
     cards: []
-  - _id: GTvbFFlxKN8uzrK9
+  - _id: q67OPvE9t0qTEsMf
     name: Willpower
     description: ''
     type: destiny
@@ -201,12 +208,13 @@ cards:
     sort: 4600000
     flags: {}
     value: 8
-    system: {}
+    system:
+      number: ''
     width: null
     height: null
-    _key: '!cards.cards!DEHN1U8XcKhXVFQg.GTvbFFlxKN8uzrK9'
+    _key: '!cards.cards!DEHN1U8XcKhXVFQg.q67OPvE9t0qTEsMf'
     cards: []
-  - _id: VTPDI83v8sgkoC3t
+  - _id: P1uXQm9C2IxqFMCR
     name: Alertness
     description: ''
     type: destiny
@@ -226,12 +234,13 @@ cards:
     sort: 1400000
     flags: {}
     value: 9
-    system: {}
+    system:
+      number: ''
     width: null
     height: null
-    _key: '!cards.cards!DEHN1U8XcKhXVFQg.VTPDI83v8sgkoC3t'
+    _key: '!cards.cards!DEHN1U8XcKhXVFQg.P1uXQm9C2IxqFMCR'
     cards: []
-  - _id: oP3Ssh6wZ2mF0Ibj
+  - _id: iTtFloqyBbEGijL3
     name: Alertness
     description: ''
     type: destiny
@@ -251,12 +260,13 @@ cards:
     sort: 1300000
     flags: {}
     value: 10
-    system: {}
+    system:
+      number: ''
     width: null
     height: null
-    _key: '!cards.cards!DEHN1U8XcKhXVFQg.oP3Ssh6wZ2mF0Ibj'
+    _key: '!cards.cards!DEHN1U8XcKhXVFQg.iTtFloqyBbEGijL3'
     cards: []
-  - _id: dG6mioWMkArYtB4J
+  - _id: PFjElsFLJ1uc8EHy
     name: Martyr
     description: ''
     type: destiny
@@ -275,13 +285,14 @@ cards:
     rotation: 0
     sort: 4500000
     flags: {}
-    system: {}
+    system:
+      number: ''
     value: null
     width: null
     height: null
-    _key: '!cards.cards!DEHN1U8XcKhXVFQg.dG6mioWMkArYtB4J'
+    _key: '!cards.cards!DEHN1U8XcKhXVFQg.PFjElsFLJ1uc8EHy'
     cards: []
-  - _id: oG6Mm7cWFBYlAjGh
+  - _id: 1t6gYJL6gUnQ3GfT
     name: Action
     description: ''
     type: destiny
@@ -300,13 +311,14 @@ cards:
     rotation: 0
     sort: 2900000
     flags: {}
-    system: {}
+    system:
+      number: ''
     value: null
     width: null
     height: null
-    _key: '!cards.cards!DEHN1U8XcKhXVFQg.oG6Mm7cWFBYlAjGh'
+    _key: '!cards.cards!DEHN1U8XcKhXVFQg.1t6gYJL6gUnQ3GfT'
     cards: []
-  - _id: jf5HBQC8tgtetEQ4
+  - _id: qhHxaxPdX0GQTdsC
     name: Action
     description: ''
     type: destiny
@@ -325,13 +337,14 @@ cards:
     rotation: 0
     sort: 5500000
     flags: {}
-    system: {}
+    system:
+      number: ''
     value: null
     width: null
     height: null
-    _key: '!cards.cards!DEHN1U8XcKhXVFQg.jf5HBQC8tgtetEQ4'
+    _key: '!cards.cards!DEHN1U8XcKhXVFQg.qhHxaxPdX0GQTdsC'
     cards: []
-  - _id: OACcY5cnQWOhXzjb
+  - _id: U5Muo3Ty9jW0lg06
     name: Action
     description: ''
     type: destiny
@@ -350,13 +363,14 @@ cards:
     rotation: 0
     sort: 3800000
     flags: {}
-    system: {}
+    system:
+      number: ''
     value: null
     width: null
     height: null
-    _key: '!cards.cards!DEHN1U8XcKhXVFQg.OACcY5cnQWOhXzjb'
+    _key: '!cards.cards!DEHN1U8XcKhXVFQg.U5Muo3Ty9jW0lg06'
     cards: []
-  - _id: 2msHFJXJwQJnJgTW
+  - _id: QUgutjw90w3tdjGE
     name: Action
     description: ''
     type: destiny
@@ -375,13 +389,14 @@ cards:
     rotation: 0
     sort: 1900000
     flags: {}
-    system: {}
+    system:
+      number: ''
     value: null
     width: null
     height: null
-    _key: '!cards.cards!DEHN1U8XcKhXVFQg.2msHFJXJwQJnJgTW'
+    _key: '!cards.cards!DEHN1U8XcKhXVFQg.QUgutjw90w3tdjGE'
     cards: []
-  - _id: bdZ7E1l20RfmPVZY
+  - _id: oWAgDQGdJL8f7ahT
     name: Flurry
     description: ''
     type: destiny
@@ -400,13 +415,14 @@ cards:
     rotation: 0
     sort: 2200000
     flags: {}
-    system: {}
+    system:
+      number: ''
     value: null
     width: null
     height: null
-    _key: '!cards.cards!DEHN1U8XcKhXVFQg.bdZ7E1l20RfmPVZY'
+    _key: '!cards.cards!DEHN1U8XcKhXVFQg.oWAgDQGdJL8f7ahT'
     cards: []
-  - _id: 3crv72fXYtYe3Zec
+  - _id: eYN2qxcLyVH9at1c
     name: Flurry
     description: ''
     type: destiny
@@ -425,13 +441,14 @@ cards:
     rotation: 0
     sort: 3200000
     flags: {}
-    system: {}
+    system:
+      number: ''
     value: null
     width: null
     height: null
-    _key: '!cards.cards!DEHN1U8XcKhXVFQg.3crv72fXYtYe3Zec'
+    _key: '!cards.cards!DEHN1U8XcKhXVFQg.eYN2qxcLyVH9at1c'
     cards: []
-  - _id: j5N2Urx0sl7LFWKg
+  - _id: LITlLacl164Gh57G
     name: Master Plan
     description: ''
     type: destiny
@@ -450,13 +467,14 @@ cards:
     rotation: 0
     sort: 3900000
     flags: {}
-    system: {}
+    system:
+      number: ''
     value: null
     width: null
     height: null
-    _key: '!cards.cards!DEHN1U8XcKhXVFQg.j5N2Urx0sl7LFWKg'
+    _key: '!cards.cards!DEHN1U8XcKhXVFQg.LITlLacl164Gh57G'
     cards: []
-  - _id: aKBFDBh0EWOsN0UV
+  - _id: 0WP5G6eRGoaPWMKV
     name: Master Plan
     description: ''
     type: destiny
@@ -475,13 +493,14 @@ cards:
     rotation: 0
     sort: 3400000
     flags: {}
-    system: {}
+    system:
+      number: ''
     value: null
     width: null
     height: null
-    _key: '!cards.cards!DEHN1U8XcKhXVFQg.aKBFDBh0EWOsN0UV'
+    _key: '!cards.cards!DEHN1U8XcKhXVFQg.0WP5G6eRGoaPWMKV'
     cards: []
-  - _id: 4qNyLd2TlDlgo3Rk
+  - _id: 5HNvuDMjJjmTz4UB
     name: Inspire
     description: ''
     type: destiny
@@ -500,13 +519,14 @@ cards:
     rotation: 0
     sort: 4800000
     flags: {}
-    system: {}
+    system:
+      number: ''
     value: null
     width: null
     height: null
-    _key: '!cards.cards!DEHN1U8XcKhXVFQg.4qNyLd2TlDlgo3Rk'
+    _key: '!cards.cards!DEHN1U8XcKhXVFQg.5HNvuDMjJjmTz4UB'
     cards: []
-  - _id: aFshomPWakzoBmq8
+  - _id: D1WqYn4i5FrbHxzX
     name: Seize Initiative
     description: ''
     type: destiny
@@ -525,13 +545,14 @@ cards:
     rotation: 0
     sort: 4200000
     flags: {}
-    system: {}
+    system:
+      number: ''
     value: null
     width: null
     height: null
-    _key: '!cards.cards!DEHN1U8XcKhXVFQg.aFshomPWakzoBmq8'
+    _key: '!cards.cards!DEHN1U8XcKhXVFQg.D1WqYn4i5FrbHxzX'
     cards: []
-  - _id: 84n08FOaq7SHULFf
+  - _id: 0WtEkS1txWNQ2Fw7
     name: Seize Initiative
     description: ''
     type: destiny
@@ -550,13 +571,14 @@ cards:
     rotation: 0
     sort: 500000
     flags: {}
-    system: {}
+    system:
+      number: ''
     value: null
     width: null
     height: null
-    _key: '!cards.cards!DEHN1U8XcKhXVFQg.84n08FOaq7SHULFf'
+    _key: '!cards.cards!DEHN1U8XcKhXVFQg.0WtEkS1txWNQ2Fw7'
     cards: []
-  - _id: lmrPMjDJaN1udow1
+  - _id: LTR3QHo4eIdSzjUf
     name: Hero
     description: ''
     type: destiny
@@ -575,13 +597,14 @@ cards:
     rotation: 0
     sort: 1700000
     flags: {}
-    system: {}
+    system:
+      number: ''
     value: null
     width: null
     height: null
-    _key: '!cards.cards!DEHN1U8XcKhXVFQg.lmrPMjDJaN1udow1'
+    _key: '!cards.cards!DEHN1U8XcKhXVFQg.LTR3QHo4eIdSzjUf'
     cards: []
-  - _id: H78J8btuLOugZmqc
+  - _id: Pg7LGfyiEG3y8Rju
     name: Hero
     description: ''
     type: destiny
@@ -600,13 +623,14 @@ cards:
     rotation: 0
     sort: 5300000
     flags: {}
-    system: {}
+    system:
+      number: ''
     value: null
     width: null
     height: null
-    _key: '!cards.cards!DEHN1U8XcKhXVFQg.H78J8btuLOugZmqc'
+    _key: '!cards.cards!DEHN1U8XcKhXVFQg.Pg7LGfyiEG3y8Rju'
     cards: []
-  - _id: 8PYacIs5pVeutDTr
+  - _id: ESCKSk4VveaifHE1
     name: Hero
     description: ''
     type: destiny
@@ -625,13 +649,14 @@ cards:
     rotation: 0
     sort: 4300000
     flags: {}
-    system: {}
+    system:
+      number: ''
     value: null
     width: null
     height: null
-    _key: '!cards.cards!DEHN1U8XcKhXVFQg.8PYacIs5pVeutDTr'
+    _key: '!cards.cards!DEHN1U8XcKhXVFQg.ESCKSk4VveaifHE1'
     cards: []
-  - _id: a4VC6W56MmonOQly
+  - _id: FBhwG949Nw71nJCQ
     name: Hero
     description: ''
     type: destiny
@@ -650,13 +675,14 @@ cards:
     rotation: 0
     sort: 1100000
     flags: {}
-    system: {}
+    system:
+      number: ''
     value: null
     width: null
     height: null
-    _key: '!cards.cards!DEHN1U8XcKhXVFQg.a4VC6W56MmonOQly'
+    _key: '!cards.cards!DEHN1U8XcKhXVFQg.FBhwG949Nw71nJCQ'
     cards: []
-  - _id: BBHHuVZyzA7wMDiK
+  - _id: WBfGBlUnzyOXqNOa
     name: Opponent Fails
     description: ''
     type: destiny
@@ -675,13 +701,14 @@ cards:
     rotation: 0
     sort: 1000000
     flags: {}
-    system: {}
+    system:
+      number: ''
     value: null
     width: null
     height: null
-    _key: '!cards.cards!DEHN1U8XcKhXVFQg.BBHHuVZyzA7wMDiK'
+    _key: '!cards.cards!DEHN1U8XcKhXVFQg.WBfGBlUnzyOXqNOa'
     cards: []
-  - _id: 2JLCvcEQcQpmzP4b
+  - _id: ilM20uoQXaUQPkTS
     name: Opponent Fails
     description: ''
     type: destiny
@@ -700,13 +727,14 @@ cards:
     rotation: 0
     sort: 2400000
     flags: {}
-    system: {}
+    system:
+      number: ''
     value: null
     width: null
     height: null
-    _key: '!cards.cards!DEHN1U8XcKhXVFQg.2JLCvcEQcQpmzP4b'
+    _key: '!cards.cards!DEHN1U8XcKhXVFQg.ilM20uoQXaUQPkTS'
     cards: []
-  - _id: tJnaGPkL9w8SvC0z
+  - _id: 26K4rGNpzL423XPo
     name: Rally
     description: ''
     type: destiny
@@ -725,13 +753,14 @@ cards:
     rotation: 0
     sort: 1600000
     flags: {}
-    system: {}
+    system:
+      number: ''
     value: null
     width: null
     height: null
-    _key: '!cards.cards!DEHN1U8XcKhXVFQg.tJnaGPkL9w8SvC0z'
+    _key: '!cards.cards!DEHN1U8XcKhXVFQg.26K4rGNpzL423XPo'
     cards: []
-  - _id: qoMsXQ9rGadL4trn
+  - _id: 2fq6MgWl5j0Mrzes
     name: Second Chance
     description: ''
     type: destiny
@@ -750,13 +779,14 @@ cards:
     rotation: 0
     sort: 2000000
     flags: {}
-    system: {}
+    system:
+      number: ''
     value: null
     width: null
     height: null
-    _key: '!cards.cards!DEHN1U8XcKhXVFQg.qoMsXQ9rGadL4trn'
+    _key: '!cards.cards!DEHN1U8XcKhXVFQg.2fq6MgWl5j0Mrzes'
     cards: []
-  - _id: pI4GmIYWEVSuChh5
+  - _id: dLluc8DLuvm8VC0A
     name: Second Chance
     description: ''
     type: destiny
@@ -775,13 +805,14 @@ cards:
     rotation: 0
     sort: 3100000
     flags: {}
-    system: {}
+    system:
+      number: ''
     value: null
     width: null
     height: null
-    _key: '!cards.cards!DEHN1U8XcKhXVFQg.pI4GmIYWEVSuChh5'
+    _key: '!cards.cards!DEHN1U8XcKhXVFQg.dLluc8DLuvm8VC0A'
     cards: []
-  - _id: u9anvQDVoQB1Lhr4
+  - _id: Duqd9b3M3LbF0up0
     name: Second Chance
     description: ''
     type: destiny
@@ -800,13 +831,14 @@ cards:
     rotation: 0
     sort: 300000
     flags: {}
-    system: {}
+    system:
+      number: ''
     value: null
     width: null
     height: null
-    _key: '!cards.cards!DEHN1U8XcKhXVFQg.u9anvQDVoQB1Lhr4'
+    _key: '!cards.cards!DEHN1U8XcKhXVFQg.Duqd9b3M3LbF0up0'
     cards: []
-  - _id: 3qIhMB680nMG2lvJ
+  - _id: Xthgvhwysj0n9PIr
     name: Connection
     description: ''
     type: destiny
@@ -825,13 +857,14 @@ cards:
     rotation: 0
     sort: 2800000
     flags: {}
-    system: {}
+    system:
+      number: ''
     value: null
     width: null
     height: null
-    _key: '!cards.cards!DEHN1U8XcKhXVFQg.3qIhMB680nMG2lvJ'
+    _key: '!cards.cards!DEHN1U8XcKhXVFQg.Xthgvhwysj0n9PIr'
     cards: []
-  - _id: 5ZKp9GqYgBp417AJ
+  - _id: wjAmQNLBdl6UP4J5
     name: Idea
     description: ''
     type: destiny
@@ -850,13 +883,14 @@ cards:
     rotation: 0
     sort: 3500000
     flags: {}
-    system: {}
+    system:
+      number: ''
     value: null
     width: null
     height: null
-    _key: '!cards.cards!DEHN1U8XcKhXVFQg.5ZKp9GqYgBp417AJ'
+    _key: '!cards.cards!DEHN1U8XcKhXVFQg.wjAmQNLBdl6UP4J5'
     cards: []
-  - _id: MJrlSSWvmqD6Jnei
+  - _id: IEVdLfA6hsT17xzh
     name: Attuned
     description: ''
     type: destiny
@@ -875,13 +909,14 @@ cards:
     rotation: 0
     sort: -200000
     flags: {}
-    system: {}
+    system:
+      number: ''
     value: null
     width: null
     height: null
-    _key: '!cards.cards!DEHN1U8XcKhXVFQg.MJrlSSWvmqD6Jnei'
+    _key: '!cards.cards!DEHN1U8XcKhXVFQg.IEVdLfA6hsT17xzh'
     cards: []
-  - _id: Y3Na4TgaHHuhVBTc
+  - _id: s1VppuNsG5J3TrEs
     name: Glory
     description: ''
     type: destiny
@@ -900,13 +935,14 @@ cards:
     rotation: 0
     sort: 5700000
     flags: {}
-    system: {}
+    system:
+      number: ''
     value: null
     width: null
     height: null
-    _key: '!cards.cards!DEHN1U8XcKhXVFQg.Y3Na4TgaHHuhVBTc'
+    _key: '!cards.cards!DEHN1U8XcKhXVFQg.s1VppuNsG5J3TrEs'
     cards: []
-  - _id: JTNDJF6v8n6rbbtU
+  - _id: y7QHjdb3ke1e2qCn
     name: Glory
     description: ''
     type: destiny
@@ -925,13 +961,14 @@ cards:
     rotation: 0
     sort: 3700000
     flags: {}
-    system: {}
+    system:
+      number: ''
     value: null
     width: null
     height: null
-    _key: '!cards.cards!DEHN1U8XcKhXVFQg.JTNDJF6v8n6rbbtU'
+    _key: '!cards.cards!DEHN1U8XcKhXVFQg.y7QHjdb3ke1e2qCn'
     cards: []
-  - _id: VSpI9h3qZXvprXLv
+  - _id: BVq2PIOe7x4sPCIR
     name: Glory
     description: ''
     type: destiny
@@ -950,13 +987,14 @@ cards:
     rotation: 0
     sort: 2600000
     flags: {}
-    system: {}
+    system:
+      number: ''
     value: null
     width: null
     height: null
-    _key: '!cards.cards!DEHN1U8XcKhXVFQg.VSpI9h3qZXvprXLv'
+    _key: '!cards.cards!DEHN1U8XcKhXVFQg.BVq2PIOe7x4sPCIR'
     cards: []
-  - _id: 17xxRBYoZDFlRc0l
+  - _id: wkzzirxCkKz4PPYC
     name: Glory
     description: ''
     type: destiny
@@ -975,13 +1013,14 @@ cards:
     rotation: 0
     sort: 2300000
     flags: {}
-    system: {}
+    system:
+      number: ''
     value: null
     width: null
     height: null
-    _key: '!cards.cards!DEHN1U8XcKhXVFQg.17xxRBYoZDFlRc0l'
+    _key: '!cards.cards!DEHN1U8XcKhXVFQg.wkzzirxCkKz4PPYC'
     cards: []
-  - _id: 1cLXyBQXuX0D9rPX
+  - _id: 983B9GvZ0yhhf6UX
     name: Coup de Grace
     description: ''
     type: destiny
@@ -1000,13 +1039,14 @@ cards:
     rotation: 0
     sort: 800000
     flags: {}
-    system: {}
+    system:
+      number: ''
     value: null
     width: null
     height: null
-    _key: '!cards.cards!DEHN1U8XcKhXVFQg.1cLXyBQXuX0D9rPX'
+    _key: '!cards.cards!DEHN1U8XcKhXVFQg.983B9GvZ0yhhf6UX'
     cards: []
-  - _id: rOJcfW2hs3SVHzQG
+  - _id: Xj3k2wfOU196P3NK
     name: Coup de Grace
     description: ''
     type: destiny
@@ -1025,13 +1065,14 @@ cards:
     rotation: 0
     sort: 5100000
     flags: {}
-    system: {}
+    system:
+      number: ''
     value: null
     width: null
     height: null
-    _key: '!cards.cards!DEHN1U8XcKhXVFQg.rOJcfW2hs3SVHzQG'
+    _key: '!cards.cards!DEHN1U8XcKhXVFQg.Xj3k2wfOU196P3NK'
     cards: []
-  - _id: eoolekpZ9EYrGTVn
+  - _id: zTTsaABlq74a7MNn
     name: Coup de Grace
     description: ''
     type: destiny
@@ -1050,13 +1091,14 @@ cards:
     rotation: 0
     sort: 1500000
     flags: {}
-    system: {}
+    system:
+      number: ''
     value: null
     width: null
     height: null
-    _key: '!cards.cards!DEHN1U8XcKhXVFQg.eoolekpZ9EYrGTVn'
+    _key: '!cards.cards!DEHN1U8XcKhXVFQg.zTTsaABlq74a7MNn'
     cards: []
-  - _id: ZyQ7scTlA7xXvoI7
+  - _id: q5Xy7L9Uk7ZwE7Gm
     name: Coup de Grace
     description: ''
     type: destiny
@@ -1075,13 +1117,14 @@ cards:
     rotation: 0
     sort: 5200000
     flags: {}
-    system: {}
+    system:
+      number: ''
     value: null
     width: null
     height: null
-    _key: '!cards.cards!DEHN1U8XcKhXVFQg.ZyQ7scTlA7xXvoI7'
+    _key: '!cards.cards!DEHN1U8XcKhXVFQg.q5Xy7L9Uk7ZwE7Gm'
     cards: []
-  - _id: dQNbjTYhOYx3s0HZ
+  - _id: HQGOu7kzFsI1kZtp
     name: Romance
     description: ''
     type: destiny
@@ -1100,13 +1143,14 @@ cards:
     rotation: 0
     sort: 5800000
     flags: {}
-    system: {}
+    system:
+      number: ''
     value: null
     width: null
     height: null
-    _key: '!cards.cards!DEHN1U8XcKhXVFQg.dQNbjTYhOYx3s0HZ'
+    _key: '!cards.cards!DEHN1U8XcKhXVFQg.HQGOu7kzFsI1kZtp'
     cards: []
-  - _id: xh4Xp81l0VE4Vq1y
+  - _id: g0aF2WXcpmjCC8mN
     name: Nemesis
     description: ''
     type: destiny
@@ -1125,13 +1169,14 @@ cards:
     rotation: 0
     sort: 400000
     flags: {}
-    system: {}
+    system:
+      number: ''
     value: null
     width: null
     height: null
-    _key: '!cards.cards!DEHN1U8XcKhXVFQg.xh4Xp81l0VE4Vq1y'
+    _key: '!cards.cards!DEHN1U8XcKhXVFQg.g0aF2WXcpmjCC8mN'
     cards: []
-  - _id: g9qUQ2jo0qACMeNv
+  - _id: kRXWMeWPGzytbyte
     name: Drama
     description: ''
     type: destiny
@@ -1150,13 +1195,14 @@ cards:
     rotation: 0
     sort: 700000
     flags: {}
-    system: {}
+    system:
+      number: ''
     value: null
     width: null
     height: null
-    _key: '!cards.cards!DEHN1U8XcKhXVFQg.g9qUQ2jo0qACMeNv'
+    _key: '!cards.cards!DEHN1U8XcKhXVFQg.kRXWMeWPGzytbyte'
     cards: []
-  - _id: anEAhRPmHhmmPpZe
+  - _id: UXzFF0SF3qQDlEqE
     name: Drama
     description: ''
     type: destiny
@@ -1175,13 +1221,14 @@ cards:
     rotation: 0
     sort: 4400000
     flags: {}
-    system: {}
+    system:
+      number: ''
     value: null
     width: null
     height: null
-    _key: '!cards.cards!DEHN1U8XcKhXVFQg.anEAhRPmHhmmPpZe'
+    _key: '!cards.cards!DEHN1U8XcKhXVFQg.UXzFF0SF3qQDlEqE'
     cards: []
-  - _id: Hyck2tfa6LGNRwhw
+  - _id: 2EmhXYHHAdrvRVoz
     name: Drama
     description: ''
     type: destiny
@@ -1200,13 +1247,14 @@ cards:
     rotation: 0
     sort: 5000000
     flags: {}
-    system: {}
+    system:
+      number: ''
     value: null
     width: null
     height: null
-    _key: '!cards.cards!DEHN1U8XcKhXVFQg.Hyck2tfa6LGNRwhw'
+    _key: '!cards.cards!DEHN1U8XcKhXVFQg.2EmhXYHHAdrvRVoz'
     cards: []
-  - _id: 6OfJ57l24fKq2C6B
+  - _id: huNTAd1issZA2nXS
     name: Drama
     description: ''
     type: destiny
@@ -1225,13 +1273,14 @@ cards:
     rotation: 0
     sort: 4700000
     flags: {}
-    system: {}
+    system:
+      number: ''
     value: null
     width: null
     height: null
-    _key: '!cards.cards!DEHN1U8XcKhXVFQg.6OfJ57l24fKq2C6B'
+    _key: '!cards.cards!DEHN1U8XcKhXVFQg.huNTAd1issZA2nXS'
     cards: []
-  - _id: YPyPURWYqj9KlWtr
+  - _id: WNfeB7Tn5ADgyrKt
     name: Leadership
     description: ''
     type: destiny
@@ -1250,13 +1299,14 @@ cards:
     rotation: 0
     sort: 1200000
     flags: {}
-    system: {}
+    system:
+      number: ''
     value: null
     width: null
     height: null
-    _key: '!cards.cards!DEHN1U8XcKhXVFQg.YPyPURWYqj9KlWtr'
+    _key: '!cards.cards!DEHN1U8XcKhXVFQg.WNfeB7Tn5ADgyrKt'
     cards: []
-  - _id: AIXj0n5Ds6zNDGbp
+  - _id: gROOwOBtzWvi7Ip6
     name: Leadership
     description: ''
     type: destiny
@@ -1275,13 +1325,14 @@ cards:
     rotation: 0
     sort: 5900000
     flags: {}
-    system: {}
+    system:
+      number: ''
     value: null
     width: null
     height: null
-    _key: '!cards.cards!DEHN1U8XcKhXVFQg.AIXj0n5Ds6zNDGbp'
+    _key: '!cards.cards!DEHN1U8XcKhXVFQg.gROOwOBtzWvi7Ip6'
     cards: []
-  - _id: qgdeQ4FZ3YIRflWh
+  - _id: pcr1i9mTnNmVvdQb
     name: Supporter
     description: ''
     type: destiny
@@ -1300,13 +1351,14 @@ cards:
     rotation: 0
     sort: 600000
     flags: {}
-    system: {}
+    system:
+      number: ''
     value: null
     width: null
     height: null
-    _key: '!cards.cards!DEHN1U8XcKhXVFQg.qgdeQ4FZ3YIRflWh'
+    _key: '!cards.cards!DEHN1U8XcKhXVFQg.pcr1i9mTnNmVvdQb'
     cards: []
-  - _id: Cljl8S7bMnpAh1FI
+  - _id: C0QUnAJme6JNXUfQ
     name: Supporter
     description: ''
     type: destiny
@@ -1325,13 +1377,14 @@ cards:
     rotation: 0
     sort: 4900000
     flags: {}
-    system: {}
+    system:
+      number: ''
     value: null
     width: null
     height: null
-    _key: '!cards.cards!DEHN1U8XcKhXVFQg.Cljl8S7bMnpAh1FI'
+    _key: '!cards.cards!DEHN1U8XcKhXVFQg.C0QUnAJme6JNXUfQ'
     cards: []
-  - _id: maVCzNYYrCgmm06S
+  - _id: 96yG4IGw0sGW6gy3
     name: Supporter
     description: ''
     type: destiny
@@ -1350,13 +1403,14 @@ cards:
     rotation: 0
     sort: -100000
     flags: {}
-    system: {}
+    system:
+      number: ''
     value: null
     width: null
     height: null
-    _key: '!cards.cards!DEHN1U8XcKhXVFQg.maVCzNYYrCgmm06S'
+    _key: '!cards.cards!DEHN1U8XcKhXVFQg.96yG4IGw0sGW6gy3'
     cards: []
-  - _id: LFe5eeNIsbfavpPF
+  - _id: ZQ5qJ9kRAOgt89Fg
     name: Supporter
     description: ''
     type: destiny
@@ -1375,13 +1429,14 @@ cards:
     rotation: 0
     sort: 2100000
     flags: {}
-    system: {}
+    system:
+      number: ''
     value: null
     width: null
     height: null
-    _key: '!cards.cards!DEHN1U8XcKhXVFQg.LFe5eeNIsbfavpPF'
+    _key: '!cards.cards!DEHN1U8XcKhXVFQg.ZQ5qJ9kRAOgt89Fg'
     cards: []
-  - _id: cqUwMlbWiTzoMbsF
+  - _id: 0LXWoTrBG1kDKrzK
     name: Second Wind
     description: ''
     type: destiny
@@ -1400,13 +1455,14 @@ cards:
     rotation: 0
     sort: 5400000
     flags: {}
-    system: {}
+    system:
+      number: ''
     value: null
     width: null
     height: null
-    _key: '!cards.cards!DEHN1U8XcKhXVFQg.cqUwMlbWiTzoMbsF'
+    _key: '!cards.cards!DEHN1U8XcKhXVFQg.0LXWoTrBG1kDKrzK'
     cards: []
-  - _id: MzW8XOt0GzDiLpGA
+  - _id: uqmDwi3SiqKpTP1H
     name: Second Wind
     description: ''
     type: destiny
@@ -1425,13 +1481,14 @@ cards:
     rotation: 0
     sort: 3000000
     flags: {}
-    system: {}
+    system:
+      number: ''
     value: null
     width: null
     height: null
-    _key: '!cards.cards!DEHN1U8XcKhXVFQg.MzW8XOt0GzDiLpGA'
+    _key: '!cards.cards!DEHN1U8XcKhXVFQg.uqmDwi3SiqKpTP1H'
     cards: []
-  - _id: j3oLnjR34rdcmVTq
+  - _id: 0Y2T43zG8nrJko21
     name: Transfer
     description: ''
     type: destiny
@@ -1450,13 +1507,14 @@ cards:
     rotation: 0
     sort: 3300000
     flags: {}
-    system: {}
+    system:
+      number: ''
     value: null
     width: null
     height: null
-    _key: '!cards.cards!DEHN1U8XcKhXVFQg.j3oLnjR34rdcmVTq'
+    _key: '!cards.cards!DEHN1U8XcKhXVFQg.0Y2T43zG8nrJko21'
     cards: []
-  - _id: N6uh4TaH1eOJqDbP
+  - _id: hQ4ttcTprTkSwHkw
     name: Reality Surge
     description: ''
     type: destiny
@@ -1475,13 +1533,14 @@ cards:
     rotation: 0
     sort: 4000000
     flags: {}
-    system: {}
+    system:
+      number: ''
     value: null
     width: null
     height: null
-    _key: '!cards.cards!DEHN1U8XcKhXVFQg.N6uh4TaH1eOJqDbP'
+    _key: '!cards.cards!DEHN1U8XcKhXVFQg.hQ4ttcTprTkSwHkw'
     cards: []
-  - _id: wFcShT19jnyHAVWP
+  - _id: o88Ji13RWWxYqKDS
     name: Maelstrom
     description: ''
     type: destiny
@@ -1500,11 +1559,12 @@ cards:
     rotation: 0
     sort: 1800000
     flags: {}
-    system: {}
+    system:
+      number: ''
     value: null
     width: null
     height: null
-    _key: '!cards.cards!DEHN1U8XcKhXVFQg.wFcShT19jnyHAVWP'
+    _key: '!cards.cards!DEHN1U8XcKhXVFQg.o88Ji13RWWxYqKDS'
     cards: []
 rotation: 0
 displayCount: false
@@ -1524,14 +1584,15 @@ system: {}
 ownership:
   default: 0
   juTas93IuPVP8p5D: 3
+  VAnYow5sWS9EJzo0: 3
 width: null
 height: null
 _stats:
   systemId: torgeternity
-  systemVersion: 2.8.1
-  coreVersion: '10.291'
-  createdTime: null
-  modifiedTime: 1674281131192
-  lastModifiedBy: 4kr6bmxq7tmWuB59
+  systemVersion: 3.8.1
+  coreVersion: '11.315'
+  createdTime: 1716827808521
+  modifiedTime: 1716827808521
+  lastModifiedBy: VAnYow5sWS9EJzo0
 _key: '!cards!DEHN1U8XcKhXVFQg'
 

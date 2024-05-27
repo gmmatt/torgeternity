@@ -1,59 +1,97 @@
 _id: J0Yt8ueE280AzxmS
 name: Attaque
-content: >-
-  <p>Une attaque est un
-  @UUID[Compendium.torgeternity.basic-rules-fr.JournalEntry.PBDHuKQtqi1qkvIO]{tests de compétence
-  } comme tout les autres.</p>
-
-  <p>La compétences <strong>armes à feu </strong>  est utilisé pour les armes à
-  feu, <strong>armes de mêlée</strong> pour toute arme de corps à corps,
-  <strong>armes de jet </strong>pour les armes lancées ou les arcs, et
-  <strong>combat à mains nues</strong> pour les attaques à mains nues.</p>
-
-  <p>Le ND d'une attaque n'est pas de 10, mais est plutôt basé sur la
-  <strong>Défense la plus appropriée</strong> de la cible. Pour une attaque à
-  distance (armes à feu, armes à projectiles), le ND est égal à la compétence
-  d'esquive de la cible. Pour une attaque au corps à corps (armes de mêlée,
-  combat à mains nues), la défense appropriée est basée sur les armes de mêlée
-  si le défenseur est armé, ou le combat à mains nues si le défenseur a les
-  mains vides. Une réussite inflige des 
-  @UUID[Compendium.torgeternity.basic-rules-fr.JournalEntry.13SHkU9JCei37ioP]{Dommages}. Un succès
-  supérieur ajoute un dé bonus (+1 DB) aux dégâts, comme décrit dans cette
-  section. Un succès spectaculaire ajoute deux dés de bonus (+2 DB). </p>
-
-  <p> </p>
-
-  <blockquote>
-
-  <p><strong>Remarque sur le système Foundry </strong>: Il y a deux façons
-  d'effectuer une attaque dans le système Foundry. La première consiste à
-  cliquer sur l'icône du dé à côté de l'arme ou de l'attaque indiquée. Le chat
-  affiche alors le total d'action de votre attaque, ainsi que les dégâts de base
-  de l'arme.</p>
-
-  <p>La deuxième façon d'attaquer est de faire une attaque avancée. Il s'agit de
-  la méthode recommandée pour la plupart des attaques. Pour effectuer une
-  attaque avancée, vous devez d'abord sélectionner une cible en cliquant sur
-  l'icône de cible dans la barre d'outils , puis en cliquant sur la cible
-  souhaitée pour votre attaque (ou double click-droit sur la cible). Ensuite,
-  cliquez avec la touche shift sur l'icône du dé à côté de l'arme ou de
-  l'attaque choisie. Une boîte de dialogue apparaît alors. Dans cette boîte de
-  dialogue, choisissez les modificateurs applicables, puis cliquez sur le bouton
-  Lancer. Vous obtiendrez ainsi le résultat de votre attaque et calculerez vos
-  dégâts de base.</p>
-
-  <p> </p>
-
-  </blockquote>
-
-  <p>Pour plus d'informations sur le lancement de dés bonus, voir <span
-  style="font-family:var(--font-primary);font-size:var(--font-size-14)">@UUID[Compendium.torgeternity.basic-rules-fr.JournalEntry.13SHkU9JCei37ioP]{Dommages}</span></p>
 folder: null
 sort: 0
-permission:
-  kz1RJu8vrAPmTUwN: 3
 flags:
   core:
     sourceId: JournalEntry.CV65eczzD5HERVE6
-pages: []
+pages:
+  - name: Attaque
+    type: text
+    title:
+      show: false
+      level: 1
+    text:
+      format: 1
+      content: >-
+        <p>Une attaque est un
+        @UUID[Compendium.torgeternity.basic-rules-fr.JournalEntry.PBDHuKQtqi1qkvIO]{tests
+        de compétence } comme tout les autres.</p>
+
+        <p>La compétences <strong>armes à feu </strong>  est utilisé pour les
+        armes à feu, <strong>armes de mêlée</strong> pour toute arme de corps à
+        corps, <strong>armes de jet </strong>pour les armes lancées ou les arcs,
+        et <strong>combat à mains nues</strong> pour les attaques à mains
+        nues.</p>
+
+        <p>Le ND d'une attaque n'est pas de 10, mais est plutôt basé sur la
+        <strong>Défense la plus appropriée</strong> de la cible. Pour une
+        attaque à distance (armes à feu, armes à projectiles), le ND est égal à
+        la compétence d'esquive de la cible. Pour une attaque au corps à corps
+        (armes de mêlée, combat à mains nues), la défense appropriée est basée
+        sur les armes de mêlée si le défenseur est armé, ou le combat à mains
+        nues si le défenseur a les mains vides. Une réussite inflige des 
+        @UUID[Compendium.torgeternity.basic-rules-fr.JournalEntry.13SHkU9JCei37ioP]{Dommages}.
+        Un succès supérieur ajoute un dé bonus (+1 DB) aux dégâts, comme décrit
+        dans cette section. Un succès spectaculaire ajoute deux dés de bonus (+2
+        DB). </p>
+
+        <p> </p>
+
+        <blockquote>
+
+        <p><strong>Remarque sur le système Foundry </strong>: Il y a deux façons
+        d'effectuer une attaque dans le système Foundry. La première consiste à
+        cliquer sur l'icône du dé à côté de l'arme ou de l'attaque indiquée. Le
+        chat affiche alors le total d'action de votre attaque, ainsi que les
+        dégâts de base de l'arme.</p>
+
+        <p>La deuxième façon d'attaquer est de faire une attaque avancée. Il
+        s'agit de la méthode recommandée pour la plupart des attaques. Pour
+        effectuer une attaque avancée, vous devez d'abord sélectionner une cible
+        en cliquant sur l'icône de cible dans la barre d'outils , puis en
+        cliquant sur la cible souhaitée pour votre attaque (ou double
+        click-droit sur la cible). Ensuite, cliquez avec la touche shift sur
+        l'icône du dé à côté de l'arme ou de l'attaque choisie. Une boîte de
+        dialogue apparaît alors. Dans cette boîte de dialogue, choisissez les
+        modificateurs applicables, puis cliquez sur le bouton Lancer. Vous
+        obtiendrez ainsi le résultat de votre attaque et calculerez vos dégâts
+        de base.</p>
+
+        <p> </p>
+
+        </blockquote>
+
+        <p>Pour plus d'informations sur le lancement de dés bonus, voir <span
+        style="font-family:var(--font-primary);font-size:var(--font-size-14)">@UUID[Compendium.torgeternity.basic-rules-fr.JournalEntry.13SHkU9JCei37ioP]{Dommages}</span></p>
+    _id: GEXGEXA4RiUe3noL
+    image: {}
+    video:
+      controls: true
+      volume: 0.5
+    src: null
+    system: {}
+    sort: 0
+    ownership:
+      default: -1
+    flags: {}
+    _stats:
+      systemId: null
+      systemVersion: null
+      coreVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+    _key: '!journal.pages!J0Yt8ueE280AzxmS.GEXGEXA4RiUe3noL'
+ownership:
+  kz1RJu8vrAPmTUwN: 3
+  VAnYow5sWS9EJzo0: 3
+_stats:
+  systemId: torgeternity
+  systemVersion: 3.8.1
+  coreVersion: '11.315'
+  createdTime: 1716827810174
+  modifiedTime: 1716827810174
+  lastModifiedBy: VAnYow5sWS9EJzo0
 _key: '!journal!J0Yt8ueE280AzxmS'
+

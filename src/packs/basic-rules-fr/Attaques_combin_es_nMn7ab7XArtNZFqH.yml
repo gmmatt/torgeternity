@@ -1,92 +1,126 @@
 name: Attaques combinées
-content: >-
-  <p> </p>
-
-  <p>Vous pouvez utiliser cette méthode plus rapide. C’est particulièrement
-  utile pour lancer des attaques de personnages non joueurs contre les
-  héros.</p>
-
-  <p>Chaque groupe effectue un test unique ; choisissez le personnage qui
-  lancera les dés si des joueurs sont impliqués, qui sera appelé le personnage «
-  principal ». Le résultat de ce test s’applique à l’attribut ou à la compétence
-  moyenne de l’ensemble du groupe. Ajoutez ensuite un bonus en fonction du
-  nombre de participants en utilisant le tableau des actions combinées
-  ci-dessous.</p>
-
-  <h3>TABLE DES ACTIONS COMBINÉES</h3>
-
-  <table style="width:51.2521%" border="1">
-
-  <tbody>
-
-  <tr>
-
-  <td style="width:63.8383%">Participants </td>
-
-  <td style="width:36.1617%">Bonus</td>
-
-  </tr>
-
-  <tr>
-
-  <td style="width:63.8383%">1</td>
-
-  <td style="width:36.1617%">0</td>
-
-  </tr>
-
-  <tr>
-
-  <td style="width:63.8383%">2</td>
-
-  <td style="width:36.1617%">+1</td>
-
-  </tr>
-
-  <tr>
-
-  <td style="width:63.8383%">3</td>
-
-  <td style="width:36.1617%">+2</td>
-
-  </tr>
-
-  <tr>
-
-  <td style="width:63.8383%">4-5</td>
-
-  <td style="width:36.1617%">+3</td>
-
-  </tr>
-
-  <tr>
-
-  <td style="width:63.8383%">6-9</td>
-
-  <td style="width:36.1617%">+4</td>
-
-  </tr>
-
-  <tr>
-
-  <td style="width:63.8383%">10-14</td>
-
-  <td style="width:36.1617%">+5</td>
-
-  </tr>
-
-  </tbody>
-
-  </table>
 folder: null
 sort: 0
-permission:
-  default: 0
-  TK1vCAdCz548vBDu: 3
 flags:
   core:
     sourceId: JournalEntry.Dj1RCzyiYGOsBdTT
 _id: nMn7ab7XArtNZFqH
-pages: []
+pages:
+  - name: Attaques combinées
+    type: text
+    title:
+      show: false
+      level: 1
+    text:
+      format: 1
+      content: >-
+        <p> </p>
+
+        <p>Vous pouvez utiliser cette méthode plus rapide. C’est
+        particulièrement utile pour lancer des attaques de personnages non
+        joueurs contre les héros.</p>
+
+        <p>Chaque groupe effectue un test unique ; choisissez le personnage qui
+        lancera les dés si des joueurs sont impliqués, qui sera appelé le
+        personnage « principal ». Le résultat de ce test s’applique à l’attribut
+        ou à la compétence moyenne de l’ensemble du groupe. Ajoutez ensuite un
+        bonus en fonction du nombre de participants en utilisant le tableau des
+        actions combinées ci-dessous.</p>
+
+        <h3>TABLE DES ACTIONS COMBINÉES</h3>
+
+        <table style="width:51.2521%" border="1">
+
+        <tbody>
+
+        <tr>
+
+        <td style="width:63.8383%">Participants </td>
+
+        <td style="width:36.1617%">Bonus</td>
+
+        </tr>
+
+        <tr>
+
+        <td style="width:63.8383%">1</td>
+
+        <td style="width:36.1617%">0</td>
+
+        </tr>
+
+        <tr>
+
+        <td style="width:63.8383%">2</td>
+
+        <td style="width:36.1617%">+1</td>
+
+        </tr>
+
+        <tr>
+
+        <td style="width:63.8383%">3</td>
+
+        <td style="width:36.1617%">+2</td>
+
+        </tr>
+
+        <tr>
+
+        <td style="width:63.8383%">4-5</td>
+
+        <td style="width:36.1617%">+3</td>
+
+        </tr>
+
+        <tr>
+
+        <td style="width:63.8383%">6-9</td>
+
+        <td style="width:36.1617%">+4</td>
+
+        </tr>
+
+        <tr>
+
+        <td style="width:63.8383%">10-14</td>
+
+        <td style="width:36.1617%">+5</td>
+
+        </tr>
+
+        </tbody>
+
+        </table>
+    _id: Otz38PH1frNcroGk
+    image: {}
+    video:
+      controls: true
+      volume: 0.5
+    src: null
+    system: {}
+    sort: 0
+    ownership:
+      default: -1
+    flags: {}
+    _stats:
+      systemId: null
+      systemVersion: null
+      coreVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+    _key: '!journal.pages!nMn7ab7XArtNZFqH.Otz38PH1frNcroGk'
+ownership:
+  default: 0
+  TK1vCAdCz548vBDu: 3
+  VAnYow5sWS9EJzo0: 3
+_stats:
+  systemId: torgeternity
+  systemVersion: 3.8.1
+  coreVersion: '11.315'
+  createdTime: 1716827810327
+  modifiedTime: 1716827810327
+  lastModifiedBy: VAnYow5sWS9EJzo0
 _key: '!journal!nMn7ab7XArtNZFqH'
 

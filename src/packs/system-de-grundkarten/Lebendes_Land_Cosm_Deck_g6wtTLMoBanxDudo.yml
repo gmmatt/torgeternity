@@ -5,7 +5,7 @@ description: ''
 img: >-
   systems/torgeternity/images/deutsch/cards/Cosmkarten/Das%20lebende%20Land/LZZR%C3%BCckseite.webp
 cards:
-  - _id: VSR1Dod8Xl2Q6lwy
+  - _id: sDZXmtmx3n9wCDHY
     name: Dino-Angriff!
     description: ''
     type: cosm
@@ -25,13 +25,15 @@ cards:
     rotation: 0
     sort: 0
     flags: {}
-    system: {}
+    system:
+      cosm: ''
+      number: ''
     value: null
     width: null
     height: null
-    _key: '!cards.cards!g6wtTLMoBanxDudo.VSR1Dod8Xl2Q6lwy'
+    _key: '!cards.cards!g6wtTLMoBanxDudo.sDZXmtmx3n9wCDHY'
     cards: []
-  - _id: Bz3KJawja9BVkwle
+  - _id: RIDThDvZ9nlukhe3
     name: Gesetz des Verfalls
     description: ''
     type: cosm
@@ -51,13 +53,15 @@ cards:
     rotation: 0
     sort: 0
     flags: {}
-    system: {}
+    system:
+      cosm: ''
+      number: ''
     value: null
     width: null
     height: null
-    _key: '!cards.cards!g6wtTLMoBanxDudo.Bz3KJawja9BVkwle'
+    _key: '!cards.cards!g6wtTLMoBanxDudo.RIDThDvZ9nlukhe3'
     cards: []
-  - _id: NhxwrBX7a06zuC7W
+  - _id: 4jiRCfW7OwJtwdsK
     name: Die beste Verteidigung
     description: ''
     type: cosm
@@ -77,13 +81,15 @@ cards:
     rotation: 0
     sort: 0
     flags: {}
-    system: {}
+    system:
+      cosm: ''
+      number: ''
     value: null
     width: null
     height: null
-    _key: '!cards.cards!g6wtTLMoBanxDudo.NhxwrBX7a06zuC7W'
+    _key: '!cards.cards!g6wtTLMoBanxDudo.4jiRCfW7OwJtwdsK'
     cards: []
-  - _id: d8DueTWeGyLMOvq2
+  - _id: qwef43shBO8UWoWr
     name: Überleben des Tüchtigsten
     description: ''
     type: cosm
@@ -103,13 +109,15 @@ cards:
     rotation: 0
     sort: 0
     flags: {}
-    system: {}
+    system:
+      cosm: ''
+      number: ''
     value: null
     width: null
     height: null
-    _key: '!cards.cards!g6wtTLMoBanxDudo.d8DueTWeGyLMOvq2'
+    _key: '!cards.cards!g6wtTLMoBanxDudo.qwef43shBO8UWoWr'
     cards: []
-  - _id: xEZt51yN6mRJ13FD
+  - _id: fDrlgNSblVRVwMJI
     name: Gefahren des Landes
     description: ''
     type: cosm
@@ -129,13 +137,15 @@ cards:
     rotation: 0
     sort: 0
     flags: {}
-    system: {}
+    system:
+      cosm: ''
+      number: ''
     value: null
     width: null
     height: null
-    _key: '!cards.cards!g6wtTLMoBanxDudo.xEZt51yN6mRJ13FD'
+    _key: '!cards.cards!g6wtTLMoBanxDudo.fDrlgNSblVRVwMJI'
     cards: []
-  - _id: ImHOQjUO0nYAZAPc
+  - _id: RZO2VleOyDzwDIrn
     name: Der tiefe Nebel
     description: ''
     type: cosm
@@ -155,13 +165,15 @@ cards:
     rotation: 0
     sort: 0
     flags: {}
-    system: {}
+    system:
+      cosm: ''
+      number: ''
     value: null
     width: null
     height: null
-    _key: '!cards.cards!g6wtTLMoBanxDudo.ImHOQjUO0nYAZAPc'
+    _key: '!cards.cards!g6wtTLMoBanxDudo.RZO2VleOyDzwDIrn'
     cards: []
-  - _id: rVb185ZRvGlyArW3
+  - _id: 1xWXwGJ4RzdNnFJ4
     name: Gesetz des Lebens
     description: ''
     type: cosm
@@ -181,13 +193,15 @@ cards:
     rotation: 0
     sort: 0
     flags: {}
-    system: {}
+    system:
+      cosm: ''
+      number: ''
     value: null
     width: null
     height: null
-    _key: '!cards.cards!g6wtTLMoBanxDudo.rVb185ZRvGlyArW3'
+    _key: '!cards.cards!g6wtTLMoBanxDudo.1xWXwGJ4RzdNnFJ4'
     cards: []
-  - _id: YqJxnV96EWa2S16u
+  - _id: zv2lW1HoumT7UTnQ
     name: Urinstinkte
     description: ''
     type: cosm
@@ -207,13 +221,15 @@ cards:
     rotation: 0
     sort: 0
     flags: {}
-    system: {}
+    system:
+      cosm: ''
+      number: ''
     value: null
     width: null
     height: null
-    _key: '!cards.cards!g6wtTLMoBanxDudo.YqJxnV96EWa2S16u'
+    _key: '!cards.cards!g6wtTLMoBanxDudo.zv2lW1HoumT7UTnQ'
     cards: []
-  - _id: NyQTEfLCIwqqucUP
+  - _id: JbVLbqNeBG1l4uZ2
     name: Verlorene Schätze
     description: ''
     type: cosm
@@ -233,13 +249,15 @@ cards:
     rotation: 0
     sort: 0
     flags: {}
-    system: {}
+    system:
+      cosm: ''
+      number: ''
     value: null
     width: null
     height: null
-    _key: '!cards.cards!g6wtTLMoBanxDudo.NyQTEfLCIwqqucUP'
+    _key: '!cards.cards!g6wtTLMoBanxDudo.JbVLbqNeBG1l4uZ2'
     cards: []
-  - _id: TvoCQn1loNasodoW
+  - _id: bQFqRwHUyceO8c9h
     name: Gesetz des Verfalls
     description: ''
     type: cosm
@@ -259,11 +277,13 @@ cards:
     rotation: 0
     sort: 0
     flags: {}
-    system: {}
+    system:
+      cosm: ''
+      number: ''
     value: null
     width: null
     height: null
-    _key: '!cards.cards!g6wtTLMoBanxDudo.TvoCQn1loNasodoW'
+    _key: '!cards.cards!g6wtTLMoBanxDudo.bQFqRwHUyceO8c9h'
     cards: []
 rotation: 0
 displayCount: false
@@ -278,14 +298,15 @@ system: {}
 ownership:
   default: 0
   1pSzpSNrhKGYYcib: 3
+  VAnYow5sWS9EJzo0: 3
 width: null
 height: null
 _stats:
   systemId: torgeternity
-  systemVersion: 2.5.1
-  coreVersion: '10.278'
-  createdTime: null
-  modifiedTime: 1660972843937
-  lastModifiedBy: pLf3kUpJuGZH0Ep4
+  systemVersion: 3.8.1
+  coreVersion: '11.315'
+  createdTime: 1716827812320
+  modifiedTime: 1716827812320
+  lastModifiedBy: VAnYow5sWS9EJzo0
 _key: '!cards!g6wtTLMoBanxDudo'
 

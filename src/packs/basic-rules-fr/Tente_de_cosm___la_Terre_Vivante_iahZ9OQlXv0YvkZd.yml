@@ -1,14 +1,46 @@
 _id: iahZ9OQlXv0YvkZd
 name: 'Tente de cosm : la Terre Vivante'
-content: ''
-img: systems/torgeternity/images/cosm-cards/fr/livingLand.webp
 folder: null
 sort: 0
-permission:
-  kz1RJu8vrAPmTUwN: 3
 flags:
   core:
     sourceId: JournalEntry.kbcDGBaYUu20FWSK
-pages: []
+pages:
+  - name: 'Tente de cosm : la Terre Vivante'
+    type: image
+    src: systems/torgeternity/images/cosm-cards/fr/livingLand.webp
+    title:
+      show: false
+      level: 1
+    _id: xL5Ew9sNRBdxSDKW
+    image: {}
+    text:
+      format: 1
+    video:
+      controls: true
+      volume: 0.5
+    system: {}
+    sort: 0
+    ownership:
+      default: -1
+    flags: {}
+    _stats:
+      systemId: null
+      systemVersion: null
+      coreVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+    _key: '!journal.pages!iahZ9OQlXv0YvkZd.xL5Ew9sNRBdxSDKW'
+ownership:
+  kz1RJu8vrAPmTUwN: 3
+  VAnYow5sWS9EJzo0: 3
+_stats:
+  systemId: torgeternity
+  systemVersion: 3.8.1
+  coreVersion: '11.315'
+  createdTime: 1716827810306
+  modifiedTime: 1716827810306
+  lastModifiedBy: VAnYow5sWS9EJzo0
 _key: '!journal!iahZ9OQlXv0YvkZd'
 

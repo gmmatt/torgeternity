@@ -5,7 +5,7 @@ description: ''
 img: >-
   systems/torgeternity/images/deutsch/cards/Cosmkarten/Pan-Pacifika/PZZR%C3%BCckseite.webp
 cards:
-  - _id: ts7JFvfcZ0suxq8Q
+  - _id: NadILnWH1f7Pxfci
     name: Die Rache ist mein!
     description: ''
     type: cosm
@@ -25,13 +25,15 @@ cards:
     rotation: 0
     sort: 0
     flags: {}
-    system: {}
+    system:
+      cosm: ''
+      number: ''
     value: null
     width: null
     height: null
-    _key: '!cards.cards!hxp32qopMknOTFHc.ts7JFvfcZ0suxq8Q'
+    _key: '!cards.cards!hxp32qopMknOTFHc.NadILnWH1f7Pxfci'
     cards: []
-  - _id: 19oCDWJmlAXzJBXO
+  - _id: kgdXLGH9y6ntiU1R
     name: Blutbad
     description: ''
     type: cosm
@@ -51,13 +53,15 @@ cards:
     rotation: 0
     sort: 0
     flags: {}
-    system: {}
+    system:
+      cosm: ''
+      number: ''
     value: null
     width: null
     height: null
-    _key: '!cards.cards!hxp32qopMknOTFHc.19oCDWJmlAXzJBXO'
+    _key: '!cards.cards!hxp32qopMknOTFHc.kgdXLGH9y6ntiU1R'
     cards: []
-  - _id: dciZtzTGMRhapQz8
+  - _id: dkSfn6OR5jJZOKkZ
     name: Fehde
     description: ''
     type: cosm
@@ -77,13 +81,15 @@ cards:
     rotation: 0
     sort: 0
     flags: {}
-    system: {}
+    system:
+      cosm: ''
+      number: ''
     value: null
     width: null
     height: null
-    _key: '!cards.cards!hxp32qopMknOTFHc.dciZtzTGMRhapQz8'
+    _key: '!cards.cards!hxp32qopMknOTFHc.dkSfn6OR5jJZOKkZ'
     cards: []
-  - _id: oPc4Ty1lgGljuPAh
+  - _id: Vq2hoTWMDmuW03sj
     name: Mutation
     description: ''
     type: cosm
@@ -103,13 +109,15 @@ cards:
     rotation: 0
     sort: 0
     flags: {}
-    system: {}
+    system:
+      cosm: ''
+      number: ''
     value: null
     width: null
     height: null
-    _key: '!cards.cards!hxp32qopMknOTFHc.oPc4Ty1lgGljuPAh'
+    _key: '!cards.cards!hxp32qopMknOTFHc.Vq2hoTWMDmuW03sj'
     cards: []
-  - _id: vu97OQmWNEhUuPAG
+  - _id: OYBGdt0q4MyQB5wb
     name: Ausbruch
     description: ''
     type: cosm
@@ -129,13 +137,15 @@ cards:
     rotation: 0
     sort: 0
     flags: {}
-    system: {}
+    system:
+      cosm: ''
+      number: ''
     value: null
     width: null
     height: null
-    _key: '!cards.cards!hxp32qopMknOTFHc.vu97OQmWNEhUuPAG'
+    _key: '!cards.cards!hxp32qopMknOTFHc.OYBGdt0q4MyQB5wb'
     cards: []
-  - _id: sODeBIA3D3YBsPr5
+  - _id: tpLKgWWe9jtmogv4
     name: Fäuste des Zorns
     description: ''
     type: cosm
@@ -155,13 +165,15 @@ cards:
     rotation: 0
     sort: 0
     flags: {}
-    system: {}
+    system:
+      cosm: ''
+      number: ''
     value: null
     width: null
     height: null
-    _key: '!cards.cards!hxp32qopMknOTFHc.sODeBIA3D3YBsPr5'
+    _key: '!cards.cards!hxp32qopMknOTFHc.tpLKgWWe9jtmogv4'
     cards: []
-  - _id: TbAx7uZpO3U9Fkqu
+  - _id: qbkQZURGCfvY75L1
     name: Ist das ein Biss?
     description: ''
     type: cosm
@@ -181,13 +193,15 @@ cards:
     rotation: 0
     sort: 0
     flags: {}
-    system: {}
+    system:
+      cosm: ''
+      number: ''
     value: null
     width: null
     height: null
-    _key: '!cards.cards!hxp32qopMknOTFHc.TbAx7uZpO3U9Fkqu'
+    _key: '!cards.cards!hxp32qopMknOTFHc.qbkQZURGCfvY75L1'
     cards: []
-  - _id: 8lDHK5cKHo11PotE
+  - _id: uFd46ZSaFk0Rqne8
     name: Du siehst kacke aus.
     description: ''
     type: cosm
@@ -207,13 +221,15 @@ cards:
     rotation: 0
     sort: 0
     flags: {}
-    system: {}
+    system:
+      cosm: ''
+      number: ''
     value: null
     width: null
     height: null
-    _key: '!cards.cards!hxp32qopMknOTFHc.8lDHK5cKHo11PotE'
+    _key: '!cards.cards!hxp32qopMknOTFHc.uFd46ZSaFk0Rqne8'
     cards: []
-  - _id: WodLAobYt7vUZuRL
+  - _id: OxwXvrIS6nTCCoXG
     name: Verkauft
     description: ''
     type: cosm
@@ -233,13 +249,15 @@ cards:
     rotation: 0
     sort: 0
     flags: {}
-    system: {}
+    system:
+      cosm: ''
+      number: ''
     value: null
     width: null
     height: null
-    _key: '!cards.cards!hxp32qopMknOTFHc.WodLAobYt7vUZuRL'
+    _key: '!cards.cards!hxp32qopMknOTFHc.OxwXvrIS6nTCCoXG'
     cards: []
-  - _id: kr0M54TqpH5MjWyw
+  - _id: dzYdt41d4Av4pEXg
     name: Abgebrüht
     description: ''
     type: cosm
@@ -259,11 +277,13 @@ cards:
     rotation: 0
     sort: 0
     flags: {}
-    system: {}
+    system:
+      cosm: ''
+      number: ''
     value: null
     width: null
     height: null
-    _key: '!cards.cards!hxp32qopMknOTFHc.kr0M54TqpH5MjWyw'
+    _key: '!cards.cards!hxp32qopMknOTFHc.dzYdt41d4Av4pEXg'
     cards: []
 rotation: 0
 displayCount: false
@@ -278,14 +298,15 @@ system: {}
 ownership:
   default: 0
   1pSzpSNrhKGYYcib: 3
+  VAnYow5sWS9EJzo0: 3
 width: null
 height: null
 _stats:
-  systemId: null
-  systemVersion: null
-  coreVersion: null
-  createdTime: null
-  modifiedTime: null
-  lastModifiedBy: null
+  systemId: torgeternity
+  systemVersion: 3.8.1
+  coreVersion: '11.315'
+  createdTime: 1716827812343
+  modifiedTime: 1716827812343
+  lastModifiedBy: VAnYow5sWS9EJzo0
 _key: '!cards!hxp32qopMknOTFHc'
 

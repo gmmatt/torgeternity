@@ -1,35 +1,70 @@
 _id: ialagbnRGKzWMABZ
 name: Défense active
-content: >-
-  <p>Un personnage peut annoncer une Défense active à n’importe quel moment tant
-  qu’il n’a pas utilisé son action pour ce round. Il sacrifie son tour mais peut
-  cependant effectuer des actions simples (notez qu’un effet Vivacité permet de
-  se défendre activement et d’agir normalement au cours d’un même round). La
-  première fois qu’il est attaqué, il lance un 1d20 sur la Table des Bonus et
-  applique le résultat à toutes ses défenses du round, qu’elles soient
-  physiques, interactives, magiques, etc. Le jet doit être effectué juste avant
-  que ne soit déterminé le premier total d’attaque.</p>
-
-  <p>Notez que si Défendre est une Action approuvée, elle n’est réussie que si
-  la cible est attaquée et manquée. Bonus minimum : une Défense active ne peut
-  rendre une cible plus vulnérable. Considérez tous les bonus inférieurs à +1
-  comme des bonus de +1.</p>
-
-  <blockquote>
-
-  <p><strong>Pour te défendre dans le système Foundry</strong>, clique sur la
-  rubrique "Défenses" de la feuille de personnage, et ton jet de défense sera
-  automatiquement complété et calculé pour toi.</p>
-
-  </blockquote>
 folder: null
 sort: 0
-permission:
-  default: 0
-  TK1vCAdCz548vBDu: 3
 flags:
   core:
     sourceId: JournalEntry.el2TAJ1281IGcBPB
-pages: []
+pages:
+  - name: Défense active
+    type: text
+    title:
+      show: false
+      level: 1
+    text:
+      format: 1
+      content: >-
+        <p>Un personnage peut annoncer une Défense active à n’importe quel
+        moment tant qu’il n’a pas utilisé son action pour ce round. Il sacrifie
+        son tour mais peut cependant effectuer des actions simples (notez qu’un
+        effet Vivacité permet de se défendre activement et d’agir normalement au
+        cours d’un même round). La première fois qu’il est attaqué, il lance un
+        1d20 sur la Table des Bonus et applique le résultat à toutes ses
+        défenses du round, qu’elles soient physiques, interactives, magiques,
+        etc. Le jet doit être effectué juste avant que ne soit déterminé le
+        premier total d’attaque.</p>
+
+        <p>Notez que si Défendre est une Action approuvée, elle n’est réussie
+        que si la cible est attaquée et manquée. Bonus minimum : une Défense
+        active ne peut rendre une cible plus vulnérable. Considérez tous les
+        bonus inférieurs à +1 comme des bonus de +1.</p>
+
+        <blockquote>
+
+        <p><strong>Pour te défendre dans le système Foundry</strong>, clique sur
+        la rubrique "Défenses" de la feuille de personnage, et ton jet de
+        défense sera automatiquement complété et calculé pour toi.</p>
+
+        </blockquote>
+    _id: NUO769ENXyrD1bzb
+    image: {}
+    video:
+      controls: true
+      volume: 0.5
+    src: null
+    system: {}
+    sort: 0
+    ownership:
+      default: -1
+    flags: {}
+    _stats:
+      systemId: null
+      systemVersion: null
+      coreVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+    _key: '!journal.pages!ialagbnRGKzWMABZ.NUO769ENXyrD1bzb'
+ownership:
+  default: 0
+  TK1vCAdCz548vBDu: 3
+  VAnYow5sWS9EJzo0: 3
+_stats:
+  systemId: torgeternity
+  systemVersion: 3.8.1
+  coreVersion: '11.315'
+  createdTime: 1716827810315
+  modifiedTime: 1716827810315
+  lastModifiedBy: VAnYow5sWS9EJzo0
 _key: '!journal!ialagbnRGKzWMABZ'
 

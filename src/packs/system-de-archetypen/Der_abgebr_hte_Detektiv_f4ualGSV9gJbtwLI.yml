@@ -16,9 +16,10 @@ items:
     system:
       cosm: (Keins)
       description: <p>&Ouml;rtliche Polizeiautorit&auml;t</p>
-      techlevel: 22
       price: '0'
+      techlevel: 22
       value: 0
+      equippedClass: item-equipped
     ownership:
       default: 0
       9Q0XnqFwko7hRlvL: 3
@@ -49,9 +50,10 @@ items:
         Gebieten mit niedriger Tech-Stufe m&ouml;glicherweise keinen Empfang
         hat. Realit&auml;tsst&uuml;rme wirken sich ebenfalls sehr negativ auf
         den Empfang aus.</p>
-      techlevel: 23
       price: '700'
+      techlevel: 23
       value: 14
+      equippedClass: item-equipped
     ownership:
       default: 0
       9Q0XnqFwko7hRlvL: 3
@@ -76,9 +78,10 @@ items:
     system:
       cosm: (Keins)
       description: <p>Gut aussehen ist zeitlos!</p>
-      techlevel: 22
       price: '0'
+      techlevel: 22
       value: 0
+      equippedClass: item-equipped
     ownership:
       default: 0
       9Q0XnqFwko7hRlvL: 3
@@ -103,9 +106,10 @@ items:
     system:
       cosm: (Keins)
       description: <p>F&uuml;nfmal Glock nachladen.</p>
-      techlevel: 22
       price: '0'
+      techlevel: 22
       value: 0
+      equippedClass: item-equipped
     ownership:
       default: 0
       9Q0XnqFwko7hRlvL: 3
@@ -128,13 +132,13 @@ items:
       core:
         sourceId: Item.w4b7qWApQXkghQXE
     system:
-      description: ''
-      attackWith: unarmedCombat
-      damageType: strengthPlus
-      damage: 2
       ap: 0
-      notes: ''
+      attackWith: unarmedCombat
       chatNote: ''
+      damage: 2
+      damageType: strengthPlus
+      description: ''
+      notes: ''
     ownership:
       default: 0
       9Q0XnqFwko7hRlvL: 3
@@ -159,76 +163,75 @@ items:
     system:
       category: kiPowers
       cosm: Pan-Pacifica
-      prerequisites: Geist 8+, mindestens 3 Fertigkeitsstufen in Waffenloser Kampf
-      timestaken: null
       description: >-
         <p>Wenn ein Gegner den Charakter mit einem bewaffneten oder
         unbewaffnetem Nahkampfangriff verfehlt, darf dieser freiwillig 1 Schock
         erleiden, um sofort einen eigenen Nahkampfangriff gegen diesen Gegner
         durchzuf&uuml;hren.</p>
+      prerequisites: Geist 8+, mindestens 3 Fertigkeitsstufen in Waffenloser Kampf
+      generalContradiction: false
       pulpPowers:
-        enhancementNumber: 0
         enhancement01:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement02:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement03:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement04:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement05:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement06:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement07:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement08:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement09:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement10:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement11:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement12:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement13:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement14:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement15:
-          title: ''
           description: ''
           taken: false
-        limitationNumber: 0
+          title: ''
+        enhancementNumber: 0
         limitation01: ''
         limitation02: ''
         limitation03: ''
@@ -239,6 +242,8 @@ items:
         limitation08: ''
         limitation09: ''
         limitation10: ''
+        limitationNumber: 0
+      timestaken: ''
     ownership:
       default: 0
       9Q0XnqFwko7hRlvL: 3
@@ -264,8 +269,6 @@ items:
     system:
       category: prowess
       cosm: (Keins)
-      prerequisites: mindestens 2 Fertigkeitsstufen in Waffenloser Kampf
-      timestaken: null
       description: >-
         <p>Der Charakter hat gelernt, hart zuzuschlagen, sei es mithilfe von
         schmutzigen Tricks und einem guten Aufw&auml;rtshaken oder einem
@@ -278,69 +281,70 @@ items:
 
         <p>Fortgeschrittenere und exotischere Techniken k&ouml;nnen in Form der
         Ki-Kr&auml;fte von Pan-Pacifica erlernt werden.</p>
+      prerequisites: mindestens 2 Fertigkeitsstufen in Waffenloser Kampf
+      generalContradiction: false
       pulpPowers:
-        enhancementNumber: 0
         enhancement01:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement02:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement03:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement04:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement05:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement06:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement07:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement08:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement09:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement10:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement11:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement12:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement13:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement14:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement15:
-          title: ''
           description: ''
           taken: false
-        limitationNumber: 0
+          title: ''
+        enhancementNumber: 0
         limitation01: ''
         limitation02: ''
         limitation03: ''
@@ -351,6 +355,8 @@ items:
         limitation08: ''
         limitation09: ''
         limitation10: ''
+        limitationNumber: 0
+      timestaken: ''
     ownership:
       default: 0
       9Q0XnqFwko7hRlvL: 3
@@ -382,19 +388,21 @@ items:
         <p>Eine r&uuml;cksto&szlig;ladende 9 mm Halbautomatik- Pistole, die
         f&uuml;r ihr gro&szlig;es, doppelt gestapeltes Munitionsmagazin bekannt
         ist.</p>
-      techlevel: 22
       price: '250'
+      techlevel: 22
       value: 12
-      attackWith: fireCombat
-      damageType: ''
-      damage: 13
-      ap: 0
       ammo:
         max: 15
         value: 15
-      range: 10/25/40
-      notes: Pistole
+      ap: 0
+      attackWith: fireCombat
       chatNote: ''
+      damage: 13
+      damageType: ''
+      equipped: false
+      equippedClass: .item-unequipped
+      notes: Pistole
+      range: 10/25/40
     ownership:
       default: 0
       9Q0XnqFwko7hRlvL: 3
@@ -426,19 +434,21 @@ items:
         <p>Eine r&uuml;cksto&szlig;ladende 9 mm Halbautomatik- Pistole, die
         f&uuml;r ihr gro&szlig;es, doppelt gestapeltes Munitionsmagazin bekannt
         ist.</p>
-      techlevel: 22
       price: '250'
+      techlevel: 22
       value: 12
-      attackWith: fireCombat
-      damageType: ''
-      damage: 13
-      ap: 0
       ammo:
         max: 15
         value: 15
-      range: 10/25/40
-      notes: Pistole
+      ap: 0
+      attackWith: fireCombat
       chatNote: ''
+      damage: 13
+      damageType: ''
+      equipped: false
+      equippedClass: .item-unequipped
+      notes: Pistole
+      range: 10/25/40
     ownership:
       default: 0
       9Q0XnqFwko7hRlvL: 3
@@ -470,9 +480,10 @@ items:
         Handschellen ge&ouml;ffnet oder aufgebrochen wurden, was einen Angriff
         gegen Robustheit 18 oder eine heldenhafte (MW 18) St&auml;rke-Probe
         erfordert.</p>
-      techlevel: 19
       price: '50'
+      techlevel: 19
       value: 9
+      equippedClass: item-equipped
     ownership:
       default: 0
       9Q0XnqFwko7hRlvL: 3
@@ -498,9 +509,10 @@ items:
     system:
       cosm: Nil-Imperium
       description: <p>Gegen blendendes Licht.</p>
-      techlevel: 20
       price: '25'
+      techlevel: 20
       value: 7
+      equippedClass: item-equipped
     ownership:
       default: 0
       9Q0XnqFwko7hRlvL: 3
@@ -526,9 +538,10 @@ items:
     system:
       cosm: Nil-Imperium
       description: ''
-      techlevel: 20
       price: '10'
+      techlevel: 20
       value: 5
+      equippedClass: item-equipped
     ownership:
       default: 0
       9Q0XnqFwko7hRlvL: 3
@@ -594,300 +607,340 @@ system:
     max: 3
     value: 0
   attributes:
-    charisma: 6
-    dexterity: 10
-    mind: 8
-    spirit: 8
-    strength: 8
+    charisma:
+      base: 6
+    dexterity:
+      base: 10
+    mind:
+      base: 8
+    spirit:
+      base: 8
+    strength:
+      base: 8
   other:
-    move: 10
-    run: 30
-    toughness: 9
-    armor: 1
     cosm: panPacifica
     possibilities: 3
-    posibilities: 3
   skills:
     airVehicles:
       baseAttribute: dexterity
-      adds: null
-      value: '-'
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 0
+      isThreatSkill: false
+      defenseOnly: false
     alteration:
       baseAttribute: mind
-      adds: null
-      value: '-'
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 0
+      isThreatSkill: false
+      defenseOnly: false
     apportation:
       baseAttribute: spirit
-      adds: null
-      value: '-'
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 0
+      isThreatSkill: false
+      defenseOnly: false
     beastRiding:
       baseAttribute: dexterity
-      adds: null
-      value: 10
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     computers:
       baseAttribute: mind
-      adds: null
-      value: 8
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     conjuration:
       baseAttribute: spirit
-      adds: null
-      value: '-'
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 0
+      isThreatSkill: false
+      defenseOnly: false
     divination:
       baseAttribute: mind
-      adds: null
-      value: '-'
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 0
+      isThreatSkill: false
+      defenseOnly: false
     dodge:
       baseAttribute: dexterity
       adds: 2
-      value: 12
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     energyWeapons:
       baseAttribute: dexterity
-      adds: null
-      value: 10
+      adds: 0
       isFav: false
       groupName: combat
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     evidenceAnalysis:
       baseAttribute: mind
       adds: 1
-      value: 9
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     faith:
       baseAttribute: spirit
-      adds: null
-      value: 8
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     find:
       baseAttribute: mind
       adds: 1
-      value: 9
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     fireCombat:
       baseAttribute: dexterity
       adds: 2
-      value: 12
       isFav: false
       groupName: combat
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     firstAid:
       baseAttribute: mind
-      adds: null
-      value: 8
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     heavyWeapons:
       baseAttribute: dexterity
-      adds: null
-      value: 10
+      adds: 0
       isFav: false
       groupName: combat
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     intimidation:
       baseAttribute: spirit
       adds: 1
-      value: 9
       isFav: false
       groupName: interaction
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     kinesis:
       baseAttribute: spirit
-      adds: null
-      value: '-'
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 0
+      isThreatSkill: false
+      defenseOnly: false
     landVehicles:
       baseAttribute: dexterity
       adds: 1
-      value: 11
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     language:
       baseAttribute: mind
-      adds: null
-      value: '-'
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 0
+      isThreatSkill: false
+      defenseOnly: false
     lockpicking:
       baseAttribute: dexterity
       adds: 1
-      value: 11
       isFav: false
       groupName: other
       unskilledUse: 0
+      isThreatSkill: false
+      defenseOnly: false
     maneuver:
       baseAttribute: dexterity
       adds: 1
-      value: 11
       isFav: false
       groupName: interaction
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     medicine:
       baseAttribute: mind
-      adds: null
-      value: '-'
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 0
+      isThreatSkill: false
+      defenseOnly: false
     meleeWeapons:
       baseAttribute: dexterity
-      adds: null
-      value: 10
+      adds: 0
       isFav: false
       groupName: combat
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     missileWeapons:
       baseAttribute: dexterity
-      adds: null
-      value: 10
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     persuasion:
       baseAttribute: charisma
-      adds: null
-      value: 6
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     precognition:
       baseAttribute: mind
-      adds: null
-      value: '-'
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 0
+      isThreatSkill: false
+      defenseOnly: false
     profession:
       baseAttribute: mind
-      adds: null
-      value: 8
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     reality:
       baseAttribute: spirit
       adds: 1
-      value: 9
       isFav: false
       groupName: other
       unskilledUse: 0
+      isThreatSkill: false
+      defenseOnly: false
     scholar:
       baseAttribute: mind
-      adds: null
-      value: 8
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     science:
       baseAttribute: mind
-      adds: null
-      value: 8
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     stealth:
       baseAttribute: dexterity
-      adds: null
-      value: 10
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     streetwise:
       baseAttribute: charisma
       adds: 1
-      value: 7
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     survival:
       baseAttribute: mind
-      adds: null
-      value: 8
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     taunt:
       baseAttribute: charisma
       adds: 1
-      value: 7
       isFav: false
       groupName: interaction
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     telepathy:
       baseAttribute: charisma
-      adds: null
-      value: '-'
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 0
+      isThreatSkill: false
+      defenseOnly: false
     tracking:
       baseAttribute: mind
-      adds: null
-      value: 8
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     trick:
       baseAttribute: mind
-      adds: null
-      value: 8
+      adds: 0
       isFav: false
       groupName: interaction
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     unarmedCombat:
       baseAttribute: dexterity
       adds: 3
-      value: 13
       isFav: false
       groupName: combat
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     waterVehicles:
       baseAttribute: dexterity
-      adds: null
-      value: 10
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     willpower:
       baseAttribute: spirit
-      adds: null
-      value: 8
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
   xp:
     unspent: 0
     earned: 0
@@ -897,7 +950,6 @@ system:
     spirit: 8
     tech: 24
   details:
-    clearance: alpha
     background: >-
       <p><img class="charimg"
       src="systems/torgeternity/images/characters/Hardboiled_Detective.webp"
@@ -993,11 +1045,12 @@ system:
 
       </ul>
     race: human
+    sizeBonus: normal
   editstate: false
-  fatigue: '1'
 ownership:
   default: 0
   9Q0XnqFwko7hRlvL: 3
+  VAnYow5sWS9EJzo0: 3
 prototypeToken:
   flags: {}
   name: Der abgebrühte Detektiv
@@ -1057,10 +1110,10 @@ prototypeToken:
   detectionModes: []
 _stats:
   systemId: torgeternity
-  systemVersion: 3.7.0
+  systemVersion: 3.8.1
   coreVersion: '11.315'
   createdTime: 1694867157183
-  modifiedTime: 1711900111251
-  lastModifiedBy: CtisFurQNe9h7ABb
+  modifiedTime: 1716827811580
+  lastModifiedBy: VAnYow5sWS9EJzo0
 _key: '!actors!f4ualGSV9gJbtwLI'
 

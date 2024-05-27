@@ -1,19 +1,53 @@
 _id: MBnzTaIm6snTRS4j
 name: Défaite
-content: >-
-  <p>Lorsqu’un personnage subit des Blessures égales à son maximum, il doit
-  immédiatement faire un test de Force ou d’Esprit (celui qui est le plus
-  faible) ND 10. Si le test échoue, il meurt. Il a immédiatement droit à une
-  dernière Action dramatique avant de quitter son enveloppe mortelle. Il peut
-  ignorer ses malus de blessure pour ce dernier effort héroïque. Si le test
-  réussit, il est mis KO.</p>
 folder: null
 sort: 0
-permission:
-  kz1RJu8vrAPmTUwN: 3
 flags:
   core:
     sourceId: JournalEntry.337gtgZ4kJr8Z100
-pages: []
+pages:
+  - name: Défaite
+    type: text
+    title:
+      show: false
+      level: 1
+    text:
+      format: 1
+      content: >-
+        <p>Lorsqu’un personnage subit des Blessures égales à son maximum, il
+        doit immédiatement faire un test de Force ou d’Esprit (celui qui est le
+        plus faible) ND 10. Si le test échoue, il meurt. Il a immédiatement
+        droit à une dernière Action dramatique avant de quitter son enveloppe
+        mortelle. Il peut ignorer ses malus de blessure pour ce dernier effort
+        héroïque. Si le test réussit, il est mis KO.</p>
+    _id: CmMaq3cZUnAD4kUj
+    image: {}
+    video:
+      controls: true
+      volume: 0.5
+    src: null
+    system: {}
+    sort: 0
+    ownership:
+      default: -1
+    flags: {}
+    _stats:
+      systemId: null
+      systemVersion: null
+      coreVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+    _key: '!journal.pages!MBnzTaIm6snTRS4j.CmMaq3cZUnAD4kUj'
+ownership:
+  kz1RJu8vrAPmTUwN: 3
+  VAnYow5sWS9EJzo0: 3
+_stats:
+  systemId: torgeternity
+  systemVersion: 3.8.1
+  coreVersion: '11.315'
+  createdTime: 1716827810204
+  modifiedTime: 1716827810204
+  lastModifiedBy: VAnYow5sWS9EJzo0
 _key: '!journal!MBnzTaIm6snTRS4j'
 

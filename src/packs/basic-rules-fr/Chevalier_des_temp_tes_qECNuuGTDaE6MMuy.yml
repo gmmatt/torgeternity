@@ -1,12 +1,47 @@
 _id: qECNuuGTDaE6MMuy
 name: Chevalier des tempêtes
-content: "<p>Les Chevaliers des Tempêtes sont des héros ayant la capacité de manipuler l'énergie des possibilités. Dans Torg Eternity, chaque personnage du joueur est un chevalier de la tempête.</p>\n<p>\_</p>\n<p>Un personnage devient un Chevalier des Tempêtes lorsqu'il vit un @UUID[Compendium.torgeternity.basic-rules-fr.JournalEntry.K1V5bNIiFKxiSkgn]{instant fatidique}. Une fois qu'il est devenu un chevalier de la tempête, le personnage peut puiser dans une réserve spéciale appelée @UUID[Compendium.torgeternity.basic-rules-fr.JournalEntry.IvQQycIVv7OGCYb1]{énergie des possibilités}.</p>\n<p>\_</p>\n<p>Le système Torg Eternity pour Foundry comprend un compendium qui contient un ensemble de 16 archétypes de personnages prêts à jouer. Les règles et autres données nécessaires pour créer vos propres personnages sont incluses dans le module de règles de base de Torg Eternity, qui est disponible à l'achat.</p>\n<p>\_</p>"
 folder: null
 sort: 0
-permission:
-  kz1RJu8vrAPmTUwN: 3
 flags:
   core:
     sourceId: JournalEntry.ov890sgVM2Wig5Tk
-pages: []
+pages:
+  - name: Chevalier des tempêtes
+    type: text
+    title:
+      show: false
+      level: 1
+    text:
+      format: 1
+      content: "<p>Les Chevaliers des Tempêtes sont des héros ayant la capacité de manipuler l'énergie des possibilités. Dans Torg Eternity, chaque personnage du joueur est un chevalier de la tempête.</p>\n<p>\_</p>\n<p>Un personnage devient un Chevalier des Tempêtes lorsqu'il vit un @UUID[Compendium.torgeternity.basic-rules-fr.JournalEntry.K1V5bNIiFKxiSkgn]{instant fatidique}. Une fois qu'il est devenu un chevalier de la tempête, le personnage peut puiser dans une réserve spéciale appelée @UUID[Compendium.torgeternity.basic-rules-fr.JournalEntry.IvQQycIVv7OGCYb1]{énergie des possibilités}.</p>\n<p>\_</p>\n<p>Le système Torg Eternity pour Foundry comprend un compendium qui contient un ensemble de 16 archétypes de personnages prêts à jouer. Les règles et autres données nécessaires pour créer vos propres personnages sont incluses dans le module de règles de base de Torg Eternity, qui est disponible à l'achat.</p>\n<p>\_</p>"
+    _id: QhUn3Ya8qGCwq19d
+    image: {}
+    video:
+      controls: true
+      volume: 0.5
+    src: null
+    system: {}
+    sort: 0
+    ownership:
+      default: -1
+    flags: {}
+    _stats:
+      systemId: null
+      systemVersion: null
+      coreVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+    _key: '!journal.pages!qECNuuGTDaE6MMuy.QhUn3Ya8qGCwq19d'
+ownership:
+  kz1RJu8vrAPmTUwN: 3
+  VAnYow5sWS9EJzo0: 3
+_stats:
+  systemId: torgeternity
+  systemVersion: 3.8.1
+  coreVersion: '11.315'
+  createdTime: 1716827810347
+  modifiedTime: 1716827810347
+  lastModifiedBy: VAnYow5sWS9EJzo0
 _key: '!journal!qECNuuGTDaE6MMuy'
+

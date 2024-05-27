@@ -16,9 +16,10 @@ items:
     system:
       cosm: Das Lebende Land
       description: <p>Knochenschnitzerei von Lanala.</p>
-      techlevel: 5
       price: '0'
+      techlevel: 5
       value: 0
+      equippedClass: item-equipped
     ownership:
       default: 0
     _stats:
@@ -42,76 +43,75 @@ items:
     system:
       category: racial
       cosm: Das Lebende Land
-      prerequisites: 'Volk: Edeinos'
-      timestaken: 1
       description: >-
         <p>Edeinos sind f&uuml;r alle au&szlig;er anderen Edeinos
         Au&szlig;enseiter. Sie erleiden einen Malus von 4 auf &Uuml;berreden-
         Proben gegen&uuml;ber Nicht-Edeinos, und Menschen aus anderen Reichen
         begegnen ihnen oft mit Feindseligkeit.</p>
+      prerequisites: 'Volk: Edeinos'
+      generalContradiction: false
       pulpPowers:
-        enhancementNumber: 0
         enhancement01:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement02:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement03:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement04:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement05:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement06:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement07:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement08:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement09:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement10:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement11:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement12:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement13:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement14:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement15:
-          title: ''
           description: ''
           taken: false
-        limitationNumber: 0
+          title: ''
+        enhancementNumber: 0
         limitation01: ''
         limitation02: ''
         limitation03: ''
@@ -122,6 +122,8 @@ items:
         limitation08: ''
         limitation09: ''
         limitation10: ''
+        limitationNumber: 0
+      timestaken: '1'
     ownership:
       default: 0
       9Q0XnqFwko7hRlvL: 3
@@ -147,8 +149,6 @@ items:
     system:
       category: faith
       cosm: (Keins)
-      prerequisites: Mindestens 1 Fertigkeitsstufe in Glauben
-      timestaken: 1
       description: >-
         <p>Der Held ist mit der F&auml;higkeit gesegnet Wunder zu wirken. Er
         erh&auml;lt Zugriff auf die Liste der Wunder seiner Religion, die nicht
@@ -161,69 +161,70 @@ items:
         <p><strong>Zus&auml;tzliches Wunder:</strong> Dieser Vorzug kann mehr
         als einmal erworben werden. Jedes Mal nach dem ersten erh&auml;lt der
         Charakter ein weiteres Wunder.</p>
+      prerequisites: Mindestens 1 Fertigkeitsstufe in Glauben
+      generalContradiction: false
       pulpPowers:
-        enhancementNumber: 0
         enhancement01:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement02:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement03:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement04:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement05:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement06:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement07:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement08:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement09:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement10:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement11:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement12:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement13:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement14:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement15:
-          title: ''
           description: ''
           taken: false
-        limitationNumber: 0
+          title: ''
+        enhancementNumber: 0
         limitation01: ''
         limitation02: ''
         limitation03: ''
@@ -234,6 +235,8 @@ items:
         limitation08: ''
         limitation09: ''
         limitation10: ''
+        limitationNumber: 0
+      timestaken: '1'
     ownership:
       default: 0
       9Q0XnqFwko7hRlvL: 3
@@ -262,16 +265,18 @@ items:
       description: >-
         <p>Diese "Bewaffnung" bitte automatisch ausr&uuml;sten, wenn Volk =
         Edeinos</p>
-      techlevel: 1
       price: '0'
+      techlevel: 1
       value: 0
-      attackWith: meleeWeapons
-      damageType: strengthPlus
-      damage: 2
       ap: 0
+      attackWith: meleeWeapons
       bonus: 2
-      notes: ''
       chatNote: ''
+      damage: 2
+      damageType: strengthPlus
+      equipped: false
+      equippedClass: .item-unequipped
+      notes: ''
     ownership:
       default: 0
       9Q0XnqFwko7hRlvL: 3
@@ -310,16 +315,18 @@ items:
         Stahl, nachdem sie abgeschnitten und getrocknet wurden. Am
         h&auml;ufigsten trifft man sie in Form von Speeren an, die auch als
         Projektilwaffe geworfen werden k&ouml;nnen.</p>
-      techlevel: 2
       price: '40'
+      techlevel: 2
       value: 8
-      attackWith: meleeWeapons
-      damageType: strengthPlus
-      damage: 2
       ap: 0
+      attackWith: meleeWeapons
       bonus: 2
-      notes: Wurfwaffe
       chatNote: ''
+      damage: 2
+      damageType: strengthPlus
+      equipped: false
+      equippedClass: .item-unequipped
+      notes: Wurfwaffe
     ownership:
       default: 0
       9Q0XnqFwko7hRlvL: 3
@@ -348,20 +355,22 @@ items:
         <p>S.
         @UUID[Compendium.te001-core-rulebook.grw-de-ausruestung.Item.kXL8gB3WmlckpUWD]{Hrockt-Sprossenspeer}
         als Nahkampfwaffe</p>
-      techlevel: 2
       price: '40'
+      techlevel: 2
       value: 8
-      attackWith: missileWeapons
-      damageType: strengthPlus
-      damage: 2
-      ap: 0
       ammo:
         max: 1
         value: 1
-      minStrength: null
-      range: 10/20/40
-      notes: ''
+      ap: 0
+      attackWith: missileWeapons
       chatNote: ''
+      damage: 2
+      damageType: strengthPlus
+      equipped: false
+      equippedClass: .item-unequipped
+      minStrength: ''
+      notes: ''
+      range: 10/20/40
     ownership:
       default: 0
       1pSzpSNrhKGYYcib: 3
@@ -412,8 +421,6 @@ items:
     system:
       category: edeinos
       cosm: Das Lebende Land
-      prerequisites: Edeinos
-      timestaken: 1
       description: >-
         <p>Die Echsenmenschen verwenden ihre Schw&auml;nze haupts&auml;chlich,
         um das Gleichgewicht zu halten, aber einige haben auch gelernt, mit
@@ -422,69 +429,70 @@ items:
         peitschenartige Waffen verwandeln. Wenn ein Edeinos auf diese Weise
         angreift, z&auml;hlt Waffenloser Kampf f&uuml;r ihn als
         Beg&uuml;nstigt.</p>
+      prerequisites: Edeinos
+      generalContradiction: false
       pulpPowers:
-        enhancementNumber: 0
         enhancement01:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement02:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement03:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement04:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement05:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement06:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement07:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement08:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement09:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement10:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement11:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement12:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement13:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement14:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement15:
-          title: ''
           description: ''
           taken: false
-        limitationNumber: 0
+          title: ''
+        enhancementNumber: 0
         limitation01: ''
         limitation02: ''
         limitation03: ''
@@ -495,6 +503,8 @@ items:
         limitation08: ''
         limitation09: ''
         limitation10: ''
+        limitationNumber: 0
+      timestaken: '1'
     ownership:
       default: 0
       9Q0XnqFwko7hRlvL: 3
@@ -518,16 +528,12 @@ items:
       core:
         sourceId: Compendium.te001-core-rulebook.grw-de-kraefte.Item.1UNRGoERfcYtYKW0
     system:
+      ap: 0
+      applyArmor: false
+      applySize: false
       axiom: 12
-      skill: faith
-      skilllevel: 12
       castingtime: 1 Aktion
-      dnType: ''
-      dn: standard
-      targetDefense: ''
-      modifier: null
-      range: Berührung
-      duration: 3 Runden
+      damage: ''
       description: >-
         <p>Manchmal muss selbst der Friedlichste den Stab erheben und dieses
         kraftvolle Wunder erf&uuml;llt die Waffe mit g&ouml;ttlichem Zorn! Der
@@ -544,13 +550,17 @@ items:
         den Kampf gegen Feinde mit &auml;therischen oder &auml;hnlichen
         F&auml;higkeiten, die gegen normale Waffen immun sind, als magische
         Waffe.</p>
+      dn: standard
+      dnType: ''
+      duration: 3 Runden
       good: Schadenswert erhöht sich um +2.
+      isAttack: false
+      modifier: ''
       outstanding: Schadenswert erhöht sich um +3.
-      isAttack: 'false'
-      damage: null
-      ap: 0
-      applySize: 'false'
-      applyArmor: 'false'
+      range: Berührung
+      skill: faith
+      skilllevel: '12'
+      targetDefense: ''
     ownership:
       default: 0
       9Q0XnqFwko7hRlvL: 3
@@ -574,16 +584,12 @@ items:
       core:
         sourceId: Compendium.te001-core-rulebook.grw-de-kraefte.Item.z2F1fYz1l6okzYor
     system:
+      ap: 0
+      applyArmor: false
+      applySize: false
       axiom: 10
-      skill: faith
-      skilllevel: 10
       castingtime: 1 Aktion
-      dnType: ''
-      dn: standard
-      targetDefense: ''
-      modifier: null
-      range: Berührung
-      duration: Sofort
+      damage: ''
       description: >-
         <p>Die vielleicht wichtigste F&auml;higkeit, die ein Wunderwirker einer
         Gruppe von Storm Knights beisteuern kann, ist die F&auml;higkeit zu
@@ -602,13 +608,17 @@ items:
         kann er sie bis zum Beginn der n&auml;chsten Szene nicht mehr heilen. Er
         k&ouml;nnte aber immer noch <em>Erste Hilfe </em>bei ihr anwenden oder
         die anderen Teammitglieder heilen.</p>
+      dn: standard
+      dnType: ''
+      duration: Sofort
       good: 2 Wunden werden geheilt.
+      isAttack: false
+      modifier: ''
       outstanding: 3 Wunden werden geheilt.
-      isAttack: 'false'
-      damage: null
-      ap: 0
-      applySize: 'false'
-      applyArmor: 'false'
+      range: Berührung
+      skill: faith
+      skilllevel: '10'
+      targetDefense: ''
     ownership:
       default: 0
       9Q0XnqFwko7hRlvL: 3
@@ -731,16 +741,12 @@ items:
       core:
         sourceId: Compendium.te001-core-rulebook.grw-de-kraefte.Item.geTWA7krOqHuXpxk
     system:
+      ap: 0
+      applyArmor: false
+      applySize: false
       axiom: 8
-      skill: faith
-      skilllevel: 8
       castingtime: 1 Aktion
-      dnType: ''
-      dn: standard
-      targetDefense: ''
-      modifier: null
-      range: 5 Meter Radius
-      duration: Konzentration
+      damage: ''
       description: >-
         <p><em>Feind abwehren </em>sch&uuml;tzt die Gl&auml;ubigen vor
         &uuml;bernat&uuml;rlichen Wesen, die Menschen jagen oder andersweitig
@@ -763,15 +769,19 @@ items:
         gewirkt werden, die nicht &uuml;ber den Vorzug
         &bdquo;Wunderwirker&ldquo; verf&uuml;gen, solange sie die
         Fertigkeits-Voraussetzung erf&uuml;llen.</p>
+      dn: standard
+      dnType: ''
+      duration: Konzentration
       good: Die Geschützten addieren +2 zu allen Verteidigungen.
+      isAttack: false
+      modifier: ''
       outstanding: >-
         Wie Erfolgsstufe Gut. Außerdem zählen böse übernatürliche Kreaturen, die
         ein so geschütztes Individuum angreifen, danach als Angeschlagen.
-      isAttack: 'false'
-      damage: null
-      ap: 0
-      applySize: 'false'
-      applyArmor: 'false'
+      range: 5 Meter Radius
+      skill: faith
+      skilllevel: '8'
+      targetDefense: ''
     ownership:
       default: 0
       9Q0XnqFwko7hRlvL: 3
@@ -968,300 +978,340 @@ system:
     max: 3
     value: 0
   attributes:
-    charisma: 6
-    dexterity: 8
-    mind: 6
-    spirit: 11
-    strength: 9
+    charisma:
+      base: 6
+    dexterity:
+      base: 8
+    mind:
+      base: 6
+    spirit:
+      base: 11
+    strength:
+      base: 9
   other:
-    move: 5
-    run: 5
-    toughness: 5
-    armor: 0
     cosm: livingLand
     possibilities: 3
-    posibilities: 3
   skills:
     airVehicles:
       baseAttribute: dexterity
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 0
+      isThreatSkill: false
+      defenseOnly: false
     alteration:
       baseAttribute: mind
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 0
+      isThreatSkill: false
+      defenseOnly: false
     apportation:
       baseAttribute: spirit
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 0
+      isThreatSkill: false
+      defenseOnly: false
     beastRiding:
       baseAttribute: dexterity
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     computers:
       baseAttribute: mind
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     conjuration:
       baseAttribute: spirit
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 0
+      isThreatSkill: false
+      defenseOnly: false
     divination:
       baseAttribute: mind
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 0
+      isThreatSkill: false
+      defenseOnly: false
     dodge:
       baseAttribute: dexterity
       adds: 1
-      value: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     energyWeapons:
       baseAttribute: dexterity
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: combat
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     evidenceAnalysis:
       baseAttribute: mind
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     faith:
       baseAttribute: spirit
       adds: 3
-      value: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     find:
       baseAttribute: mind
       adds: 1
-      value: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     fireCombat:
       baseAttribute: dexterity
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: combat
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     firstAid:
       baseAttribute: mind
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     heavyWeapons:
       baseAttribute: dexterity
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: combat
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     intimidation:
       baseAttribute: spirit
       adds: 1
-      value: 0
       isFav: false
       groupName: interaction
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     kinesis:
       baseAttribute: spirit
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 0
+      isThreatSkill: false
+      defenseOnly: false
     landVehicles:
       baseAttribute: dexterity
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     language:
       baseAttribute: mind
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 0
+      isThreatSkill: false
+      defenseOnly: false
     lockpicking:
       baseAttribute: dexterity
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 0
+      isThreatSkill: false
+      defenseOnly: false
     maneuver:
       baseAttribute: dexterity
       adds: 1
-      value: 0
       isFav: false
       groupName: interaction
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     medicine:
       baseAttribute: mind
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 0
+      isThreatSkill: false
+      defenseOnly: false
     meleeWeapons:
       baseAttribute: dexterity
       adds: 2
-      value: 0
       isFav: false
       groupName: combat
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     missileWeapons:
       baseAttribute: dexterity
       adds: 1
-      value: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     persuasion:
       baseAttribute: charisma
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     precognition:
       baseAttribute: mind
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 0
+      isThreatSkill: false
+      defenseOnly: false
     profession:
       baseAttribute: mind
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     reality:
       baseAttribute: spirit
       adds: 1
-      value: 0
       isFav: false
       groupName: other
       unskilledUse: 0
+      isThreatSkill: false
+      defenseOnly: false
     scholar:
       baseAttribute: mind
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     science:
       baseAttribute: mind
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     stealth:
       baseAttribute: dexterity
       adds: 2
-      value: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     streetwise:
       baseAttribute: charisma
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     survival:
       baseAttribute: mind
       adds: 1
-      value: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     taunt:
       baseAttribute: charisma
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: interaction
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     telepathy:
       baseAttribute: charisma
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 0
+      isThreatSkill: false
+      defenseOnly: false
     tracking:
       baseAttribute: mind
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     trick:
       baseAttribute: mind
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: interaction
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     unarmedCombat:
       baseAttribute: dexterity
       adds: 2
-      value: 0
       isFav: false
       groupName: combat
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     waterVehicles:
       baseAttribute: dexterity
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     willpower:
       baseAttribute: spirit
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
   xp:
     unspent: 0
     earned: 0
@@ -1271,7 +1321,6 @@ system:
     spirit: 24
     tech: 6
   details:
-    clearance: ''
     background: >-
       <p><img class="charimg"
       src="systems/torgeternity/images/characters/Edeinos_Optant.webp" alt=""
@@ -1366,11 +1415,12 @@ system:
 
       </ul>
     race: edeinos
+    sizeBonus: normal
   editstate: false
-  fatigue: '1'
 ownership:
   default: 0
   9Q0XnqFwko7hRlvL: 3
+  VAnYow5sWS9EJzo0: 3
 prototypeToken:
   flags: {}
   name: Der Edeinos-Optant
@@ -1430,10 +1480,10 @@ prototypeToken:
   detectionModes: []
 _stats:
   systemId: torgeternity
-  systemVersion: 3.7.0
+  systemVersion: 3.8.1
   coreVersion: '11.315'
   createdTime: 1694867487836
-  modifiedTime: 1711900140120
-  lastModifiedBy: CtisFurQNe9h7ABb
+  modifiedTime: 1716827810950
+  lastModifiedBy: VAnYow5sWS9EJzo0
 _key: '!actors!6Pc9oa7mM6kZkFUi'
 

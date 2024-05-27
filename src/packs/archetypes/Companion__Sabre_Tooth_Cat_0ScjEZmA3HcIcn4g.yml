@@ -40,312 +40,341 @@ system:
     max: 2
     value: 0
   attributes:
-    charisma: 7
-    dexterity: 10
-    mind: 5
-    spirit: 8
-    strength: 7
+    charisma:
+      base: 7
+    dexterity:
+      base: 10
+    mind:
+      base: 5
+    spirit:
+      base: 8
+    strength:
+      base: 7
   other:
-    move: 14
-    run: 5
-    toughness: 7
-    armor: 0
-    cosm: ''
+    cosm: none
     possibilities: 0
   skills:
     airVehicles:
       baseAttribute: dexterity
-      adds: ''
-      value: null
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 0
+      isThreatSkill: false
+      defenseOnly: false
     alteration:
       baseAttribute: mind
-      adds: ''
-      value: null
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 0
+      isThreatSkill: false
+      defenseOnly: false
     apportation:
       baseAttribute: spirit
-      adds: ''
-      value: null
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 0
+      isThreatSkill: false
+      defenseOnly: false
     beastRiding:
       baseAttribute: dexterity
-      adds: ''
-      value: null
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     computers:
       baseAttribute: mind
-      adds: ''
-      value: null
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     conjuration:
       baseAttribute: spirit
-      adds: ''
-      value: null
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 0
+      isThreatSkill: false
+      defenseOnly: false
     divination:
       baseAttribute: mind
-      adds: ''
-      value: null
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 0
+      isThreatSkill: false
+      defenseOnly: false
     dodge:
       baseAttribute: dexterity
       adds: 2
-      value: 12
       isFav: false
       groupName: other
       unskilledUse: 1
       isThreatSkill: true
+      defenseOnly: false
     energyWeapons:
       baseAttribute: dexterity
-      adds: ''
-      value: null
+      adds: 0
       isFav: false
       groupName: combat
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     evidenceAnalysis:
       baseAttribute: mind
-      adds: ''
-      value: null
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     faith:
       baseAttribute: spirit
-      adds: ''
-      value: null
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     find:
       baseAttribute: mind
       adds: 2
-      value: 7
       isFav: false
       groupName: other
       unskilledUse: 1
       isThreatSkill: true
+      defenseOnly: false
     fireCombat:
       baseAttribute: dexterity
-      adds: ''
-      value: null
+      adds: 0
       isFav: false
       groupName: combat
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     firstAid:
       baseAttribute: mind
-      adds: ''
-      value: null
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     heavyWeapons:
       baseAttribute: dexterity
-      adds: ''
-      value: null
+      adds: 0
       isFav: false
       groupName: combat
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     intimidation:
       baseAttribute: spirit
       adds: 1
-      value: 9
       isFav: false
       groupName: interaction
       unskilledUse: 1
-      defenseOnly: 'false'
+      defenseOnly: false
       isThreatSkill: true
     kinesis:
       baseAttribute: spirit
-      adds: ''
-      value: null
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 0
+      isThreatSkill: false
+      defenseOnly: false
     landVehicles:
       baseAttribute: dexterity
-      adds: ''
-      value: null
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     language:
       baseAttribute: mind
-      adds: ''
-      value: null
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 0
+      isThreatSkill: false
+      defenseOnly: false
     lockpicking:
       baseAttribute: dexterity
-      adds: ''
-      value: null
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 0
+      isThreatSkill: false
+      defenseOnly: false
     maneuver:
       baseAttribute: dexterity
       adds: 1
-      value: 11
       isFav: false
       groupName: interaction
       unskilledUse: 1
-      defenseOnly: 'false'
+      defenseOnly: false
       isThreatSkill: true
     medicine:
       baseAttribute: mind
-      adds: ''
-      value: null
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 0
+      isThreatSkill: false
+      defenseOnly: false
     meleeWeapons:
       baseAttribute: dexterity
-      adds: ''
-      value: null
+      adds: 0
       isFav: false
       groupName: combat
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     missileWeapons:
       baseAttribute: dexterity
-      adds: ''
-      value: null
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     persuasion:
       baseAttribute: charisma
-      adds: ''
-      value: null
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     precognition:
       baseAttribute: mind
-      adds: ''
-      value: null
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 0
+      isThreatSkill: false
+      defenseOnly: false
     profession:
       baseAttribute: mind
-      adds: ''
-      value: null
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     reality:
       baseAttribute: spirit
-      adds: ''
-      value: null
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 0
+      isThreatSkill: false
+      defenseOnly: false
     scholar:
       baseAttribute: mind
-      adds: ''
-      value: null
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     science:
       baseAttribute: mind
-      adds: ''
-      value: null
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     stealth:
       baseAttribute: dexterity
       adds: 3
-      value: 13
       isFav: false
       groupName: other
       unskilledUse: 1
       isThreatSkill: true
+      defenseOnly: false
     streetwise:
       baseAttribute: charisma
-      adds: ''
-      value: null
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     survival:
       baseAttribute: mind
       adds: 2
-      value: 7
       isFav: false
       groupName: other
       unskilledUse: 1
       isThreatSkill: true
+      defenseOnly: false
     taunt:
       baseAttribute: charisma
-      adds: ''
-      value: null
+      adds: 0
       isFav: false
       groupName: interaction
       unskilledUse: 1
-      defenseOnly: 'true'
+      defenseOnly: true
+      isThreatSkill: false
     telepathy:
       baseAttribute: charisma
-      adds: ''
-      value: null
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 0
+      isThreatSkill: false
+      defenseOnly: false
     tracking:
       baseAttribute: mind
-      adds: ''
-      value: null
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     trick:
       baseAttribute: mind
-      adds: ''
-      value: null
+      adds: 0
       isFav: false
       groupName: interaction
       unskilledUse: 1
-      defenseOnly: 'true'
+      defenseOnly: true
+      isThreatSkill: false
     unarmedCombat:
       baseAttribute: dexterity
       adds: 1
-      value: 11
       isFav: false
       groupName: combat
       unskilledUse: 1
       isThreatSkill: true
+      defenseOnly: false
     waterVehicles:
       baseAttribute: dexterity
-      adds: ''
-      value: null
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     willpower:
       baseAttribute: spirit
-      adds: ''
-      value: null
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
   details:
-    possibilitypotential: Never
     description: >-
       <p class="moreheight">Companion from
       @UUID[Compendium.torgeternity.archetypes.Actor.sPLt8RBL1hieic6p]{The
@@ -356,11 +385,12 @@ system:
       - Sabre-Tooth Cat}</p>
     sizeBonus: normal
     clearance: alpha
+    possibilityPotential: Never
   editstate: false
-  possibilities: 0
 ownership:
   default: 0
   A9LyAqagoJJU3gDH: 3
+  VAnYow5sWS9EJzo0: 3
 prototypeToken:
   flags: {}
   name: Sabre-Tooth Cat
@@ -423,7 +453,7 @@ _stats:
   systemVersion: 3.8.1
   coreVersion: '11.315'
   createdTime: 1693899250064
-  modifiedTime: 1716789429269
+  modifiedTime: 1716827807299
   lastModifiedBy: VAnYow5sWS9EJzo0
 _key: '!actors!0ScjEZmA3HcIcn4g'
 

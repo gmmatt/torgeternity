@@ -510,13 +510,14 @@ sort: 0
 ownership:
   default: 0
   CtisFurQNe9h7ABb: 3
+  VAnYow5sWS9EJzo0: 3
 flags: {}
 _stats:
   systemId: torgeternity
-  systemVersion: 3.1.1
-  coreVersion: '11.308'
+  systemVersion: 3.8.1
+  coreVersion: '11.315'
   createdTime: 1693885308072
-  modifiedTime: 1693886416650
-  lastModifiedBy: CtisFurQNe9h7ABb
+  modifiedTime: 1716827808382
+  lastModifiedBy: VAnYow5sWS9EJzo0
 _key: '!journal!Knhh8vqtjSylJo5Z'
 

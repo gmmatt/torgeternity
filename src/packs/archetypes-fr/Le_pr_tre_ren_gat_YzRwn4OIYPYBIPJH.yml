@@ -2,7 +2,797 @@ _id: YzRwn4OIYPYBIPJH
 name: Le prêtre renégat
 type: stormknight
 img: systems/torgeternity/images/characters/Renegade_Priest.Avatar.webp
-data:
+items:
+  - _id: ZDlwhpBV9R5FvOoq
+    name: Miracles
+    type: perk
+    sort: 200000
+    flags:
+      core:
+        sourceId: Compendium.world.perks.perk-miracles
+    img: systems/torgeternity/images/icons/perk.webp
+    effects: []
+    folder: null
+    system:
+      category: faith
+      cosm: (Non)
+      description: >-
+        <p class="MsoNormal">Le h&eacute;ros a la capacit&eacute;
+        d&rsquo;invoquer des miracles. Il a acc&egrave;s &agrave; la liste de
+        miracles associ&eacute;e &agrave; sa religion et qui n&rsquo;est pas
+        limit&eacute; &agrave; un autre Atout. Quelques exemples de listes sont
+        donn&eacute;s page 199. Le personnage commence avec Protection contre
+        les ennemis et deux autres miracles qu&rsquo;il choisit dans
+        n&rsquo;importe la liste &agrave; laquelle il a acc&egrave;s. Voir
+        Miracles page 196 pour savoir comment les invoquer et ce qui se passe si
+        l&rsquo;invocation &eacute;choue.</p>
+
+        <p class="MsoNormal"><strong>Nouveaux Miracles</strong> : cet Atout peut
+        &ecirc;tre choisi plus d&rsquo;une fois. &Agrave; chaque fois
+        qu&rsquo;il choisit &agrave; nouveau cet Atout, le personnage gagne un
+        miracle suppl&eacute;mentaire.</p>
+      prerequisites: au moins un rang en Foi
+      generalContradiction: false
+      pulpPowers:
+        enhancement01:
+          description: ''
+          taken: false
+          title: ''
+        enhancement02:
+          description: ''
+          taken: false
+          title: ''
+        enhancement03:
+          description: ''
+          taken: false
+          title: ''
+        enhancement04:
+          description: ''
+          taken: false
+          title: ''
+        enhancement05:
+          description: ''
+          taken: false
+          title: ''
+        enhancement06:
+          description: ''
+          taken: false
+          title: ''
+        enhancement07:
+          description: ''
+          taken: false
+          title: ''
+        enhancement08:
+          description: ''
+          taken: false
+          title: ''
+        enhancement09:
+          description: ''
+          taken: false
+          title: ''
+        enhancement10:
+          description: ''
+          taken: false
+          title: ''
+        enhancement11:
+          description: ''
+          taken: false
+          title: ''
+        enhancement12:
+          description: ''
+          taken: false
+          title: ''
+        enhancement13:
+          description: ''
+          taken: false
+          title: ''
+        enhancement14:
+          description: ''
+          taken: false
+          title: ''
+        enhancement15:
+          description: ''
+          taken: false
+          title: ''
+        enhancementNumber: 0
+        limitation01: ''
+        limitation02: ''
+        limitation03: ''
+        limitation04: ''
+        limitation05: ''
+        limitation06: ''
+        limitation07: ''
+        limitation08: ''
+        limitation09: ''
+        limitation10: ''
+        limitationNumber: 0
+      timestaken: '1'
+    ownership:
+      default: 0
+    _stats:
+      systemId: null
+      systemVersion: null
+      coreVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+    _key: '!actors.items!YzRwn4OIYPYBIPJH.ZDlwhpBV9R5FvOoq'
+  - _id: FH4pTnt4glgNUx3h
+    name: OEil cybernétique Bellevue 20-20
+    type: implant
+    sort: 700000
+    flags:
+      core:
+        sourceId: Item.apWcQPWXR3MWrYa5
+    img: systems/torgeternity/images/icons/implant.webp
+    effects: []
+    folder: null
+    system:
+      cosm: Cyberpapauté
+      description: >-
+        <p>Cette am&eacute;lioration oculaire augmente la pr&eacute;cision des
+        d&eacute;tails et peut m&ecirc;me d&eacute;tecter des sch&eacute;mas ou
+        une rupture dans des sch&eacute;mas. Tout test effectu&eacute; pour
+        d&eacute;tecter ou comprendre des indices visuels,
+        g&eacute;n&eacute;ralement avec les comp&eacute;tences Observation ou
+        Pistage, est Favoris&eacute; (page 109).</p>
+      price: '2000'
+      techlevel: 26
+      value: 16
+      notes: Les tests d’Observation et de Pistage sont Favorisés
+      equippedClass: item-equipped
+    ownership:
+      default: 0
+    _stats:
+      systemId: null
+      systemVersion: null
+      coreVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+    _key: '!actors.items!YzRwn4OIYPYBIPJH.FH4pTnt4glgNUx3h'
+  - _id: EHgbPjUs99WBMdIF
+    name: Vision de nuit Bellevue MKII
+    type: implant
+    sort: 300001
+    flags:
+      core:
+        sourceId: Item.kecMXRAcxTOf9sn4
+    img: systems/torgeternity/images/icons/implant.webp
+    effects: []
+    folder: null
+    system:
+      cosm: Cyberpapauté
+      description: ''
+      price: '1000'
+      techlevel: 26
+      value: 15
+      notes: Malus d’obscurité réduit de 2 points
+      equippedClass: item-equipped
+    ownership:
+      default: 0
+    _stats:
+      systemId: null
+      systemVersion: null
+      coreVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+    _key: '!actors.items!YzRwn4OIYPYBIPJH.EHgbPjUs99WBMdIF'
+  - _id: rU1HD6a5mXVgKb6W
+    name: Cyberdeck
+    type: gear
+    sort: 2200000
+    flags:
+      core:
+        sourceId: Item.xHacesSGQZhNT8BL
+    img: systems/torgeternity/images/icons/gear.webp
+    effects: []
+    folder: null
+    system:
+      cosm: Cyberpapauté
+      description: >-
+        <p class="MsoNormal">Un puissant ordinateur portable connect&eacute;
+        directement aux neurones de son utilisateur. La comp&eacute;tence
+        Informatique de l&rsquo;utilisateur connect&eacute; devient
+        Favoris&eacute;e</p>
+      price: '700'
+      techlevel: 26
+      value: 15
+      equippedClass: item-equipped
+    ownership:
+      default: 0
+    _stats:
+      systemId: null
+      systemVersion: null
+      coreVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+    _key: '!actors.items!YzRwn4OIYPYBIPJH.rU1HD6a5mXVgKb6W'
+  - _id: 8dLYtRllOMXVcq3N
+    name: Bras HardPlas
+    type: implant
+    sort: 500001
+    flags:
+      core:
+        sourceId: Item.nQHIT7jLyfe7LNQ1
+    img: systems/torgeternity/images/icons/implant.webp
+    effects:
+      - _id: F4YhvEE9LfHoZxZ8
+        flags: {}
+        changes:
+          - key: system.attributes.strength.value
+            value: '1'
+            mode: 2
+            priority: null
+        disabled: false
+        duration:
+          startTime: null
+          seconds: null
+          combat: null
+          rounds: null
+          turns: null
+          startRound: null
+          startTurn: null
+        icon: icons/svg/aura.svg
+        origin: Item.nQHIT7jLyfe7LNQ1
+        tint: null
+        transfer: true
+        name: Strength +1
+        description: ''
+        statuses: []
+        _key: >-
+          !actors.items.effects!YzRwn4OIYPYBIPJH.8dLYtRllOMXVcq3N.F4YhvEE9LfHoZxZ8
+    folder: null
+    system:
+      cosm: Cyberpapauté
+      description: >-
+        <p class="MsoNormal">Un des bras du h&eacute;ros est remplac&eacute; par
+        une version cybern&eacute;tique. Ce bras artificiel octroie un bonus de
+        +1 &agrave; ses tests de Force et ajoute un bonus d&rsquo;armure de +2
+        &agrave; ce bras. L&rsquo;armure du bras prot&egrave;ge le torse de son
+        utilisateur s&rsquo;il effectue une D&eacute;fense active. Le bonus en
+        Force ne s&rsquo;applique qu&rsquo;aux tests et attaques
+        effectu&eacute;s avec ce bras.</p>
+      price: '5000'
+      techlevel: 26
+      value: 18
+      notes: 1 en Force avec ce bras.
+      equippedClass: item-equipped
+    ownership:
+      default: 0
+    _stats:
+      systemId: null
+      systemVersion: null
+      coreVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+    _key: '!actors.items!YzRwn4OIYPYBIPJH.8dLYtRllOMXVcq3N'
+  - _id: iymHb9kSwcAnU0fm
+    name: Symbole saint
+    type: gear
+    sort: 2100000
+    flags:
+      core:
+        sourceId: Item.yLlmFt0wyS2ppWTq
+    img: systems/torgeternity/images/icons/gear.webp
+    effects: []
+    folder: null
+    system:
+      cosm: Cyberpapauté
+      description: <p>Croix catholique</p>
+      price: '0'
+      techlevel: 5
+      value: 0
+      equippedClass: item-equipped
+    ownership:
+      default: 0
+    _stats:
+      systemId: null
+      systemVersion: null
+      coreVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+    _key: '!actors.items!YzRwn4OIYPYBIPJH.iymHb9kSwcAnU0fm'
+  - _id: SNqRefdKZ8Z4g0ek
+    name: Tenue IriMesh
+    type: armor
+    sort: 1100000
+    flags:
+      core:
+        sourceId: Item.uBos0D7Tz2MSgxg3
+    img: systems/torgeternity/images/icons/armor.webp
+    effects:
+      - _id: CC6u4jnep56ormZw
+        flags: {}
+        changes:
+          - key: system.other.armor
+            value: '2'
+            mode: 2
+            priority: null
+          - key: system.other.toughness
+            value: '2'
+            mode: 2
+            priority: null
+        disabled: false
+        duration:
+          startTime: null
+          seconds: null
+          combat: null
+          rounds: null
+          turns: null
+          startRound: null
+          startTurn: null
+        icon: icons/svg/aura.svg
+        origin: Item.uBos0D7Tz2MSgxg3
+        tint: null
+        transfer: true
+        name: Armor +2
+        description: ''
+        statuses: []
+        _key: >-
+          !actors.items.effects!YzRwn4OIYPYBIPJH.SNqRefdKZ8Z4g0ek.CC6u4jnep56ormZw
+    folder: null
+    system:
+      cosm: Pan Pacifica
+      description: >-
+        <p class="MsoNormal">Un textile extr&ecirc;mement l&eacute;ger
+        tiss&eacute; par des nano-machines. L&rsquo;IriMesh ressemble &agrave;
+        de la soie et en a la consistance, mais avec une plus grande
+        r&eacute;sistance aux d&eacute;chirures. Il est possible de porter
+        &agrave; un banquet de la haute soci&eacute;t&eacute; une tenue faite
+        avec cette mati&egrave;re sans attirer l&rsquo;attention ou
+        &eacute;veiller les soup&ccedil;ons des services de
+        s&eacute;curit&eacute;.</p>
+      price: '250'
+      techlevel: 24
+      value: 12
+      bonus: 2
+      equipped: false
+      equippedClass: .item-unequipped
+      maxDex: null
+      minStrength: 0
+      notes: ''
+      fatigue: 0
+    ownership:
+      default: 0
+    _stats:
+      systemId: null
+      systemVersion: null
+      coreVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+    _key: '!actors.items!YzRwn4OIYPYBIPJH.SNqRefdKZ8Z4g0ek'
+  - _id: 1cmZRM3QUaceL2m9
+    name: Rayon divin GWI
+    type: firearm
+    sort: 2200000
+    flags:
+      core:
+        sourceId: Compendium.world.firearms.item-gwi-godbeam-laser
+    img: systems/torgeternity/images/icons/firearm.webp
+    effects: []
+    folder: null
+    system:
+      cosm: Cyberpapauté
+      description: >-
+        <p class="MsoNormal">Le Rayon Divin a un long canon, une crosse
+        stabilis&eacute;e et une vis&eacute;e laser. Il &eacute;met un rayon
+        laser bleu mortel. Une vis&eacute;e laser (page 142) est
+        int&eacute;gr&eacute;e et aliment&eacute;e par un rayon &agrave; faible
+        &eacute;nergie g&eacute;n&eacute;r&eacute; par l&rsquo;arme. Toutes les
+        armes GWI sont, par d&eacute;faut, connect&eacute;es au R&eacute;seau
+        Divin, aussi les versions pirat&eacute;es sont rares et
+        on&eacute;reuses.</p>
+      price: '600'
+      techlevel: 26
+      value: 14
+      ammo:
+        max: 15
+        value: 15
+      ap: 0
+      attackWith: energyWeapons
+      chatNote: ''
+      damage: 14
+      damageType: ''
+      equipped: false
+      equippedClass: .item-unequipped
+      notes: Rafale courte, PA 1, intégré dans un Bras HardPlas
+      range: 100 / 500 / 1000
+    ownership:
+      default: 0
+    _stats:
+      systemId: null
+      systemVersion: null
+      coreVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+    _key: '!actors.items!YzRwn4OIYPYBIPJH.1cmZRM3QUaceL2m9'
+  - _id: D9IQmTfXPqSPGrPw
+    name: Bénédiction
+    type: miracle
+    sort: -99999
+    flags:
+      core:
+        sourceId: Compendium.world.miracles.miracle-bless
+    img: systems/torgeternity/images/icons/miracle.webp
+    effects: []
+    folder: null
+    system:
+      ap: 0
+      applyArmor: true
+      applySize: true
+      axiom: 9
+      castingtime: 1 action
+      damage: ''
+      description: >-
+        <p class="MsoNormal">B&eacute;n&eacute;diction enveloppe et
+        impr&egrave;gne l&rsquo;invocateur et ses alli&eacute;s
+        d&rsquo;&eacute;nergie spirituelle qui augmente leurs capacit&eacute;s
+        mentales et physiques. Le pr&ecirc;tre choisit un attribut et demande
+        &agrave; sa divinit&eacute; de l&rsquo;am&eacute;liorer. &laquo; Puisse
+        le seigneur nous donner la force de Daniel dans la tani&egrave;re des
+        lions ! &raquo; augmente la Force, par exemple. Ou &laquo; Que Vishnu
+        nous accorde la clart&eacute; ! &raquo; peut am&eacute;liorer la
+        Raison.</p>
+
+        <p class="MsoNormal">Si le test est r&eacute;ussi, tous les
+        alli&eacute;s &agrave; port&eacute;e gagnent +1 point dans cet attribut.
+        Cependant, augmenter la Force ou l&rsquo;Esprit ne permet pas
+        d&rsquo;augmenter les caract&eacute;ristiques d&eacute;riv&eacute;es de
+        R&eacute;sistance et de Choc.</p>
+      dn: Normal (ND 10)
+      dnType: ''
+      duration: 3 rounds
+      good: la durée est augmentée à 1 minute
+      isAttack: false
+      modifier: ''
+      outstanding: comme avec un succès Supérieur, mais l’attribut est augmenté de +2.
+      range: Rayon de 5 mètres
+      skill: faith
+      skilllevel: '10'
+      targetDefense: ''
+    ownership:
+      default: 0
+    _stats:
+      systemId: null
+      systemVersion: null
+      coreVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+    _key: '!actors.items!YzRwn4OIYPYBIPJH.D9IQmTfXPqSPGrPw'
+  - _id: sMpIpI7t3K7B4ZYp
+    name: Protection contre les ennemis
+    type: miracle
+    sort: 1
+    flags:
+      core:
+        sourceId: Compendium.world.miracles.miracle-ward-enemy
+    img: systems/torgeternity/images/icons/miracle.webp
+    effects: []
+    folder: null
+    system:
+      ap: 0
+      applyArmor: true
+      applySize: true
+      axiom: 8
+      castingtime: 1 action
+      damage: ''
+      description: >-
+        <p class="MsoNormal">Protection contre les ennemis prot&egrave;ge les
+        fid&egrave;les des entit&eacute;s surnaturelles qui veulent nuire
+        &agrave; l&rsquo;humanit&eacute;.</p>
+
+        <p class="MsoNormal">Pour l&rsquo;invoquer, le fid&egrave;le doit
+        brandir un symbole saint, r&eacute;citer des pri&egrave;res ou effectuer
+        toute autre action qui indique clairement qu&rsquo;il en appelle
+        &agrave; la source de son pouvoir, ce qui en fait la cible principale
+        des esprits, des d&eacute;mons et de tout autre antagoniste pouvant
+        &ecirc;tre affect&eacute;.</p>
+
+        <p class="MsoNormal">Tant que la protection est active, tous les
+        alli&eacute;s situ&eacute;s &agrave; 5 m&egrave;tres
+        b&eacute;n&eacute;ficient d&rsquo;un bonus de +1 &agrave; leurs
+        d&eacute;fenses contre les cr&eacute;atures surnaturelles
+        mal&eacute;fiques et leurs attaques. Ce bonus est valable pour les
+        d&eacute;fenses physiques et d&rsquo;interaction.</p>
+
+        <p class="MsoNormal"><strong>Sp&eacute;cial </strong>: Ce miracle peut
+        &ecirc;tre tent&eacute; sans l&rsquo;Atout <span style="font-family:
+        var(--font-primary); font-size: var(--font-size-14);">Miracles si celui
+        qui l&rsquo;invoque a le niveau de Foi requis</span></p>
+
+        <p>&nbsp;</p>
+      dn: Normal (ND 10)
+      dnType: ''
+      duration: Concentration
+      good: ceux qui sont protégés ont un bonus de +2 à toutes leurs défenses
+      isAttack: false
+      modifier: ''
+      outstanding: >-
+        comme pour un succès Supérieur et les créatures surnaturelles maléfiques
+        qui ratent une attaque contre un individu protégé sont Déstabilisées
+      range: Rayon de 5 mètres.
+      skill: faith
+      skilllevel: '8'
+      targetDefense: ''
+    ownership:
+      default: 0
+    _stats:
+      systemId: null
+      systemVersion: null
+      coreVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+    _key: '!actors.items!YzRwn4OIYPYBIPJH.sMpIpI7t3K7B4ZYp'
+  - _id: rRgSLibvwdjK75eO
+    name: Soins
+    type: miracle
+    sort: 1150001
+    flags:
+      core:
+        sourceId: Item.iDFKWtv4WCTrteId
+    img: systems/torgeternity/images/icons/miracle.webp
+    effects: []
+    folder: null
+    system:
+      ap: 0
+      applyArmor: true
+      applySize: true
+      axiom: 10
+      castingtime: 1 action
+      damage: ''
+      description: >-
+        <p class="MsoNormal">Le pouvoir de soigner est peut-&ecirc;tre
+        l&rsquo;une des plus importantes capacit&eacute;s dont un fid&egrave;le
+        peut faire b&eacute;n&eacute;ficier les Chevaliers des Temp&ecirc;tes.
+        Qu&rsquo;il s&rsquo;occupe des blessures de ses compagnons ou
+        qu&rsquo;il soigne des villageois bless&eacute;s, Soins est une
+        comp&eacute;tence vitale.</p>
+
+        <p class="MsoNormal">Le total de l&rsquo;invocateur est modifi&eacute;
+        par les malus de blessures du patient (ainsi que celles de
+        l&rsquo;invocateur s&rsquo;il est bless&eacute;). Un succ&egrave;s
+        soigne 1 Blessure, tous les points de Choc et supprime
+        l&rsquo;&eacute;tat KO.</p>
+
+        <p class="MsoNormal">Soins ne peut &ecirc;tre tent&eacute; qu&rsquo;une
+        fois par Sc&egrave;ne sur un m&ecirc;me individu, choisissez bien ! Si
+        Maru est bless&eacute; au cours d&rsquo;un combat et soign&eacute; par
+        le P&egrave;re Damien, il ne pourra plus la soigner avant la prochaine
+        Sc&egrave;ne. Il pourra toujours utiliser sa comp&eacute;tence Premiers
+        soins sur elle et le miracle Soins sur ses camarades.</p>
+      dn: Normal (ND 10)
+      dnType: ''
+      duration: Instantanée
+      good: 2 Blessures sont soignées.
+      isAttack: false
+      modifier: ''
+      outstanding: 3 Blessures sont soignées.
+      range: Contact
+      skill: faith
+      skilllevel: '10'
+      targetDefense: ''
+    ownership:
+      default: 0
+    _stats:
+      systemId: null
+      systemVersion: null
+      coreVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+    _key: '!actors.items!YzRwn4OIYPYBIPJH.rRgSLibvwdjK75eO'
+  - _id: sP4THOjN48b0gZDL
+    name: Implants cybernétiques
+    type: perk
+    img: systems/torgeternity/images/icons/perk.webp
+    effects: []
+    folder: null
+    sort: 1950000
+    flags:
+      core:
+        sourceId: Item.8qfs6BvtH7wTJ09g
+    system:
+      category: cyberware
+      cosm: Cyberpapauté
+      description: >-
+        <p class="MsoNormal">Quand il prend cet Atout, le personnage peut
+        choisir des implants cybern&eacute;tiques de la liste page 160 pour une
+        valeur maximale de 10 000 $. Les implants officiellement
+        approuv&eacute;s par l&rsquo;&Eacute;glise sont directement
+        connect&eacute;s au R&eacute;seau Divin et sont &eacute;troitement
+        surveill&eacute;s. Les appareils achet&eacute;s gr&acirc;ce &agrave; cet
+        Atout sont &laquo; pirat&eacute;s &raquo; et ne sont pas
+        connect&eacute;s au R&eacute;seau Divin (&agrave; moins que
+        l&rsquo;utilisateur ne le veuille). L&rsquo;installation est sans
+        risque. Cependant, poss&eacute;der des implants pirat&eacute;s est un
+        crime dans la Cyberpapaut&eacute;. Les h&eacute;ros qui &laquo; chroment
+        &raquo; leur corps feraient bien de se m&eacute;fier de la Police de
+        l&rsquo;&Eacute;glise, elle est toujours vigilante. Nouveaux implants :
+        cet Atout peut &ecirc;tre choisi plus d&rsquo;une fois. &Agrave; chaque
+        fois qu&rsquo;un personnage le choisit apr&egrave;s la premi&egrave;re
+        fois, il accorde de nouveaux implants pour une valeur de 5 000 $.</p>
+      prerequisites: None
+      generalContradiction: false
+      pulpPowers:
+        enhancement01:
+          description: ''
+          taken: false
+          title: ''
+        enhancement02:
+          description: ''
+          taken: false
+          title: ''
+        enhancement03:
+          description: ''
+          taken: false
+          title: ''
+        enhancement04:
+          description: ''
+          taken: false
+          title: ''
+        enhancement05:
+          description: ''
+          taken: false
+          title: ''
+        enhancement06:
+          description: ''
+          taken: false
+          title: ''
+        enhancement07:
+          description: ''
+          taken: false
+          title: ''
+        enhancement08:
+          description: ''
+          taken: false
+          title: ''
+        enhancement09:
+          description: ''
+          taken: false
+          title: ''
+        enhancement10:
+          description: ''
+          taken: false
+          title: ''
+        enhancement11:
+          description: ''
+          taken: false
+          title: ''
+        enhancement12:
+          description: ''
+          taken: false
+          title: ''
+        enhancement13:
+          description: ''
+          taken: false
+          title: ''
+        enhancement14:
+          description: ''
+          taken: false
+          title: ''
+        enhancement15:
+          description: ''
+          taken: false
+          title: ''
+        enhancementNumber: 0
+        limitation01: ''
+        limitation02: ''
+        limitation03: ''
+        limitation04: ''
+        limitation05: ''
+        limitation06: ''
+        limitation07: ''
+        limitation08: ''
+        limitation09: ''
+        limitation10: ''
+        limitationNumber: 0
+      timestaken: '1'
+    ownership:
+      default: 0
+      TK1vCAdCz548vBDu: 3
+    _stats:
+      systemId: null
+      systemVersion: null
+      coreVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+    _key: '!actors.items!YzRwn4OIYPYBIPJH.sP4THOjN48b0gZDL'
+  - _id: oET6xeuwJvv023mL
+    name: Attaque à mains nues
+    type: customAttack
+    img: systems/torgeternity/images/icons/fist-icon.webp
+    effects: []
+    folder: null
+    sort: 0
+    flags:
+      core:
+        sourceId: Item.BFGjhDetVDm1xiku
+    system:
+      ap: 0
+      attackWith: unarmedCombat
+      chatNote: ''
+      damage: 0
+      damageType: strengthPlus
+      description: ''
+      notes: ''
+    ownership:
+      default: 0
+      zWX19sSAtAWkeGhp: 3
+    _stats:
+      systemId: null
+      systemVersion: null
+      coreVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+    _key: '!actors.items!YzRwn4OIYPYBIPJH.oET6xeuwJvv023mL'
+effects:
+  - _id: iqpflWpeduToapXb
+    flags: {}
+    changes:
+      - key: system.attributes.strength.value
+        mode: 2
+        value: '1'
+        priority: null
+    disabled: false
+    duration:
+      startTime: 0
+      seconds: null
+      combat: null
+      rounds: null
+      turns: null
+      startRound: null
+      startTurn: null
+    icon: icons/svg/aura.svg
+    origin: Actor.OPDkvGC3D9L64yuc.OwnedItem.8dLYtRllOMXVcq3N
+    tint: null
+    transfer: true
+    name: Force +1
+    description: ''
+    statuses: []
+    _key: '!actors.effects!YzRwn4OIYPYBIPJH.iqpflWpeduToapXb'
+  - _id: vZfKwDPaIzfmIyRT
+    flags: {}
+    changes:
+      - key: system.other.armor
+        mode: 2
+        value: '2'
+        priority: null
+      - key: system.other.toughness
+        mode: 2
+        value: '2'
+        priority: null
+    disabled: false
+    duration:
+      startTime: 0
+      seconds: null
+      combat: null
+      rounds: null
+      turns: null
+      startRound: null
+      startTurn: null
+    icon: icons/svg/aura.svg
+    origin: Actor.OPDkvGC3D9L64yuc.OwnedItem.SNqRefdKZ8Z4g0ek
+    tint: null
+    transfer: true
+    name: Armure +2
+    description: ''
+    statuses: []
+    _key: '!actors.effects!YzRwn4OIYPYBIPJH.vZfKwDPaIzfmIyRT'
+folder: null
+sort: 100001
+flags: {}
+system:
   shock:
     max: 5
     value: 0
@@ -10,300 +800,340 @@ data:
     max: 3
     value: 0
   attributes:
-    charisma: 8
-    dexterity: 7
-    mind: 7
-    spirit: 11
-    strength: 7
+    charisma:
+      base: 8
+    dexterity:
+      base: 7
+    mind:
+      base: 7
+    spirit:
+      base: 11
+    strength:
+      base: 7
   other:
-    move: 5
-    run: 5
-    toughness: 5
-    armor: 0
     cosm: cyberpapacy
     possibilities: 0
-    posibilities: 3
   skills:
     airVehicles:
       baseAttribute: dexterity
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 0
+      isThreatSkill: false
+      defenseOnly: false
     alteration:
       baseAttribute: mind
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 0
+      isThreatSkill: false
+      defenseOnly: false
     apportation:
       baseAttribute: spirit
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 0
+      isThreatSkill: false
+      defenseOnly: false
     beastRiding:
       baseAttribute: dexterity
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     computers:
       baseAttribute: mind
       adds: 1
-      value: 0
       isFav: true
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     conjuration:
       baseAttribute: spirit
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 0
+      isThreatSkill: false
+      defenseOnly: false
     divination:
       baseAttribute: mind
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 0
+      isThreatSkill: false
+      defenseOnly: false
     dodge:
       baseAttribute: dexterity
       adds: 2
-      value: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     energyWeapons:
       baseAttribute: dexterity
       adds: 1
-      value: 0
       isFav: false
       groupName: combat
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     evidenceAnalysis:
       baseAttribute: mind
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     faith:
       baseAttribute: spirit
       adds: 3
-      value: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     find:
       baseAttribute: mind
       adds: 1
-      value: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     fireCombat:
       baseAttribute: dexterity
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: combat
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     firstAid:
       baseAttribute: mind
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     heavyWeapons:
       baseAttribute: dexterity
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: combat
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     intimidation:
       baseAttribute: spirit
       adds: 1
-      value: 0
       isFav: false
       groupName: interaction
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     kinesis:
       baseAttribute: spirit
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 0
+      isThreatSkill: false
+      defenseOnly: false
     landVehicles:
       baseAttribute: dexterity
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     language:
       baseAttribute: mind
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 0
+      isThreatSkill: false
+      defenseOnly: false
     lockpicking:
       baseAttribute: dexterity
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 0
+      isThreatSkill: false
+      defenseOnly: false
     maneuver:
       baseAttribute: dexterity
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: interaction
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     medicine:
       baseAttribute: mind
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 0
+      isThreatSkill: false
+      defenseOnly: false
     meleeWeapons:
       baseAttribute: dexterity
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: combat
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     missileWeapons:
       baseAttribute: dexterity
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: combat
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     persuasion:
       baseAttribute: charisma
       adds: 1
-      value: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     precognition:
       baseAttribute: mind
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 0
+      isThreatSkill: false
+      defenseOnly: false
     profession:
       baseAttribute: mind
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     reality:
       baseAttribute: spirit
       adds: 1
-      value: 0
       isFav: false
       groupName: other
       unskilledUse: 0
+      isThreatSkill: false
+      defenseOnly: false
     scholar:
       baseAttribute: mind
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     science:
       baseAttribute: mind
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     stealth:
       baseAttribute: dexterity
       adds: 1
-      value: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     streetwise:
       baseAttribute: charisma
       adds: 1
-      value: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     survival:
       baseAttribute: mind
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     taunt:
       baseAttribute: charisma
       adds: 2
-      value: 0
       isFav: false
       groupName: interaction
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     telepathy:
       baseAttribute: charisma
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 0
+      isThreatSkill: false
+      defenseOnly: false
     tracking:
       baseAttribute: mind
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     trick:
       baseAttribute: mind
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: interaction
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     unarmedCombat:
       baseAttribute: dexterity
       adds: 1
-      value: 0
       isFav: false
       groupName: combat
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     waterVehicles:
       baseAttribute: dexterity
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     willpower:
       baseAttribute: spirit
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
   xp:
     unspent: 0
     earned: 0
@@ -313,7 +1143,6 @@ data:
     spirit: 16
     tech: 26
   details:
-    clearance: ''
     background: >-
       <h2 class="MsoNormal">Pr&eacute;sentation</h2>
 
@@ -405,35 +1234,20 @@ data:
 
       <p class="MsoNormal">□ (5 PX) Foi +5</p>
     race: human
-  editstate: null
-  fatigue: '1'
-token:
+    sizeBonus: normal
+  editstate: true
+ownership:
+  default: 0
+  A9LyAqagoJJU3gDH: 3
+  VAnYow5sWS9EJzo0: 3
+prototypeToken:
   flags: {}
   name: Le Prêtre renégat
   displayName: 30
-  img: systems/torgeternity/images/characters/Renegade_Priest.Token.webp
-  tint: null
   width: 1
   height: 1
-  scale: 1
-  mirrorX: false
-  mirrorY: false
   lockRotation: false
   rotation: 0
-  vision: false
-  dimSight: 0
-  brightSight: 0
-  dimLight: 0
-  brightLight: 0
-  sightAngle: 0
-  lightAngle: 360
-  lightColor: ''
-  lightAlpha: 1
-  lightAnimation:
-    type: ''
-    speed: 5
-    intensity: 5
-  actorId: YzRwn4OIYPYBIPJH
   actorLink: true
   disposition: 1
   displayBars: 20
@@ -444,17 +1258,17 @@ token:
   randomImg: false
   alpha: 1
   light:
-    alpha: 0.5
-    angle: 0
+    alpha: 1
+    angle: 360
     bright: 0
     coloration: 1
     dim: 0
-    gradual: true
     luminosity: 0.5
     saturation: 0
     contrast: 0
     shadows: 0
     animation:
+      type: null
       speed: 5
       intensity: 5
       reverse: false
@@ -462,699 +1276,33 @@ token:
       min: 0
       max: 1
     color: null
-items:
-  - _id: ZDlwhpBV9R5FvOoq
-    name: Miracles
-    type: perk
-    data:
-      category: faith
-      cosm: (Non)
-      prerequisites: au moins un rang en Foi
-      timestaken: 1
-      description: >-
-        <p class="MsoNormal">Le h&eacute;ros a la capacit&eacute;
-        d&rsquo;invoquer des miracles. Il a acc&egrave;s &agrave; la liste de
-        miracles associ&eacute;e &agrave; sa religion et qui n&rsquo;est pas
-        limit&eacute; &agrave; un autre Atout. Quelques exemples de listes sont
-        donn&eacute;s page 199. Le personnage commence avec Protection contre
-        les ennemis et deux autres miracles qu&rsquo;il choisit dans
-        n&rsquo;importe la liste &agrave; laquelle il a acc&egrave;s. Voir
-        Miracles page 196 pour savoir comment les invoquer et ce qui se passe si
-        l&rsquo;invocation &eacute;choue.</p>
-
-        <p class="MsoNormal"><strong>Nouveaux Miracles</strong> : cet Atout peut
-        &ecirc;tre choisi plus d&rsquo;une fois. &Agrave; chaque fois
-        qu&rsquo;il choisit &agrave; nouveau cet Atout, le personnage gagne un
-        miracle suppl&eacute;mentaire.</p>
-      pulpPowers:
-        enhancementNumber: 0
-        enhancement01:
-          title: ''
-          description: ''
-          taken: false
-        enhancement02:
-          title: ''
-          description: ''
-          taken: false
-        enhancement03:
-          title: ''
-          description: ''
-          taken: false
-        enhancement04:
-          title: ''
-          description: ''
-          taken: false
-        enhancement05:
-          title: ''
-          description: ''
-          taken: false
-        enhancement06:
-          title: ''
-          description: ''
-          taken: false
-        enhancement07:
-          title: ''
-          description: ''
-          taken: false
-        enhancement08:
-          title: ''
-          description: ''
-          taken: false
-        enhancement09:
-          title: ''
-          description: ''
-          taken: false
-        enhancement10:
-          title: ''
-          description: ''
-          taken: false
-        enhancement11:
-          title: ''
-          description: ''
-          taken: false
-        enhancement12:
-          title: ''
-          description: ''
-          taken: false
-        enhancement13:
-          title: ''
-          description: ''
-          taken: false
-        enhancement14:
-          title: ''
-          description: ''
-          taken: false
-        enhancement15:
-          title: ''
-          description: ''
-          taken: false
-        limitationNumber: 0
-        limitation01: ''
-        limitation02: ''
-        limitation03: ''
-        limitation04: ''
-        limitation05: ''
-        limitation06: ''
-        limitation07: ''
-        limitation08: ''
-        limitation09: ''
-        limitation10: ''
-    sort: 200000
-    flags:
-      core:
-        sourceId: Compendium.world.perks.perk-miracles
-    img: systems/torgeternity/images/icons/perk.webp
-    effects: []
-    folder: null
-    permission:
-      default: 0
-    _key: '!actors.items!YzRwn4OIYPYBIPJH.ZDlwhpBV9R5FvOoq'
-  - _id: FH4pTnt4glgNUx3h
-    name: OEil cybernétique Bellevue 20-20
-    type: implant
-    data:
-      cosm: Cyberpapauté
-      description: >-
-        <p>Cette am&eacute;lioration oculaire augmente la pr&eacute;cision des
-        d&eacute;tails et peut m&ecirc;me d&eacute;tecter des sch&eacute;mas ou
-        une rupture dans des sch&eacute;mas. Tout test effectu&eacute; pour
-        d&eacute;tecter ou comprendre des indices visuels,
-        g&eacute;n&eacute;ralement avec les comp&eacute;tences Observation ou
-        Pistage, est Favoris&eacute; (page 109).</p>
-      techlevel: 26
-      price: '2000'
-      value: 16
-      notes: Les tests d’Observation et de Pistage sont Favorisés
-    sort: 700000
-    flags:
-      core:
-        sourceId: Item.apWcQPWXR3MWrYa5
-    img: systems/torgeternity/images/icons/implant.webp
-    effects: []
-    folder: null
-    permission:
-      default: 0
-    _key: '!actors.items!YzRwn4OIYPYBIPJH.FH4pTnt4glgNUx3h'
-  - _id: EHgbPjUs99WBMdIF
-    name: Vision de nuit Bellevue MKII
-    type: implant
-    data:
-      cosm: Cyberpapauté
-      description: ''
-      techlevel: 26
-      price: '1000'
-      value: 15
-      notes: Malus d’obscurité réduit de 2 points
-    sort: 300001
-    flags:
-      core:
-        sourceId: Item.kecMXRAcxTOf9sn4
-    img: systems/torgeternity/images/icons/implant.webp
-    effects: []
-    folder: null
-    permission:
-      default: 0
-    _key: '!actors.items!YzRwn4OIYPYBIPJH.EHgbPjUs99WBMdIF'
-  - _id: rU1HD6a5mXVgKb6W
-    name: Cyberdeck
-    type: gear
-    data:
-      cosm: Cyberpapauté
-      description: >-
-        <p class="MsoNormal">Un puissant ordinateur portable connect&eacute;
-        directement aux neurones de son utilisateur. La comp&eacute;tence
-        Informatique de l&rsquo;utilisateur connect&eacute; devient
-        Favoris&eacute;e</p>
-      techlevel: 26
-      price: '700'
-      value: 15
-    sort: 2200000
-    flags:
-      core:
-        sourceId: Item.xHacesSGQZhNT8BL
-    img: systems/torgeternity/images/icons/gear.webp
-    effects: []
-    folder: null
-    permission:
-      default: 0
-    _key: '!actors.items!YzRwn4OIYPYBIPJH.rU1HD6a5mXVgKb6W'
-  - _id: 8dLYtRllOMXVcq3N
-    name: Bras HardPlas
-    type: implant
-    data:
-      cosm: Cyberpapauté
-      description: >-
-        <p class="MsoNormal">Un des bras du h&eacute;ros est remplac&eacute; par
-        une version cybern&eacute;tique. Ce bras artificiel octroie un bonus de
-        +1 &agrave; ses tests de Force et ajoute un bonus d&rsquo;armure de +2
-        &agrave; ce bras. L&rsquo;armure du bras prot&egrave;ge le torse de son
-        utilisateur s&rsquo;il effectue une D&eacute;fense active. Le bonus en
-        Force ne s&rsquo;applique qu&rsquo;aux tests et attaques
-        effectu&eacute;s avec ce bras.</p>
-      techlevel: 26
-      price: '5000'
-      value: 18
-      notes: 1 en Force avec ce bras.
-    sort: 500001
-    flags:
-      core:
-        sourceId: Item.nQHIT7jLyfe7LNQ1
-    img: systems/torgeternity/images/icons/implant.webp
-    effects:
-      - _id: F4YhvEE9LfHoZxZ8
-        flags: {}
-        changes:
-          - key: data.attributes.strength
-            value: '1'
-            mode: 2
-        disabled: false
-        duration:
-          startTime: null
-        icon: icons/svg/aura.svg
-        label: Strength +1
-        origin: Item.nQHIT7jLyfe7LNQ1
-        tint: null
-        transfer: true
-        _key: >-
-          !actors.items.effects!YzRwn4OIYPYBIPJH.8dLYtRllOMXVcq3N.F4YhvEE9LfHoZxZ8
-    folder: null
-    permission:
-      default: 0
-    _key: '!actors.items!YzRwn4OIYPYBIPJH.8dLYtRllOMXVcq3N'
-  - _id: iymHb9kSwcAnU0fm
-    name: Symbole saint
-    type: gear
-    data:
-      cosm: Cyberpapauté
-      description: <p>Croix catholique</p>
-      techlevel: 5
-      price: '0'
-      value: 0
-    sort: 2100000
-    flags:
-      core:
-        sourceId: Item.yLlmFt0wyS2ppWTq
-    img: systems/torgeternity/images/icons/gear.webp
-    effects: []
-    folder: null
-    permission:
-      default: 0
-    _key: '!actors.items!YzRwn4OIYPYBIPJH.iymHb9kSwcAnU0fm'
-  - _id: SNqRefdKZ8Z4g0ek
-    name: Tenue IriMesh
-    type: armor
-    data:
-      cosm: Pan Pacifica
-      description: >-
-        <p class="MsoNormal">Un textile extr&ecirc;mement l&eacute;ger
-        tiss&eacute; par des nano-machines. L&rsquo;IriMesh ressemble &agrave;
-        de la soie et en a la consistance, mais avec une plus grande
-        r&eacute;sistance aux d&eacute;chirures. Il est possible de porter
-        &agrave; un banquet de la haute soci&eacute;t&eacute; une tenue faite
-        avec cette mati&egrave;re sans attirer l&rsquo;attention ou
-        &eacute;veiller les soup&ccedil;ons des services de
-        s&eacute;curit&eacute;.</p>
-      techlevel: 24
-      price: '250'
-      value: 12
-      bonus: 2
-      maxDex: null
-      minStrength: 0
-      equipped: false
-      equippedClass: .item-unequipped
-      notes: ''
-    sort: 1100000
-    flags:
-      core:
-        sourceId: Item.uBos0D7Tz2MSgxg3
-    img: systems/torgeternity/images/icons/armor.webp
-    effects:
-      - _id: CC6u4jnep56ormZw
-        flags: {}
-        changes:
-          - key: data.other.armor
-            value: '2'
-            mode: 2
-          - key: data.other.toughness
-            value: '2'
-            mode: 2
-        disabled: false
-        duration:
-          startTime: null
-        icon: icons/svg/aura.svg
-        label: Armor +2
-        origin: Item.uBos0D7Tz2MSgxg3
-        tint: null
-        transfer: true
-        _key: >-
-          !actors.items.effects!YzRwn4OIYPYBIPJH.SNqRefdKZ8Z4g0ek.CC6u4jnep56ormZw
-    folder: null
-    permission:
-      default: 0
-    _key: '!actors.items!YzRwn4OIYPYBIPJH.SNqRefdKZ8Z4g0ek'
-  - _id: 1cmZRM3QUaceL2m9
-    name: Rayon divin GWI
-    type: firearm
-    data:
-      cosm: Cyberpapauté
-      description: >-
-        <p class="MsoNormal">Le Rayon Divin a un long canon, une crosse
-        stabilis&eacute;e et une vis&eacute;e laser. Il &eacute;met un rayon
-        laser bleu mortel. Une vis&eacute;e laser (page 142) est
-        int&eacute;gr&eacute;e et aliment&eacute;e par un rayon &agrave; faible
-        &eacute;nergie g&eacute;n&eacute;r&eacute; par l&rsquo;arme. Toutes les
-        armes GWI sont, par d&eacute;faut, connect&eacute;es au R&eacute;seau
-        Divin, aussi les versions pirat&eacute;es sont rares et
-        on&eacute;reuses.</p>
-      techlevel: 26
-      price: '600'
-      value: 14
-      attackWith: energyWeapons
-      damageType: ''
-      damage: 14
-      ap: 0
-      ammo:
-        max: 15
-        value: 15
-      range: 100 / 500 / 1000
-      notes: Rafale courte, PA 1, intégré dans un Bras HardPlas
-      chatNote: ''
-    sort: 2200000
-    flags:
-      core:
-        sourceId: Compendium.world.firearms.item-gwi-godbeam-laser
-    img: systems/torgeternity/images/icons/firearm.webp
-    effects: []
-    folder: null
-    permission:
-      default: 0
-    _key: '!actors.items!YzRwn4OIYPYBIPJH.1cmZRM3QUaceL2m9'
-  - _id: D9IQmTfXPqSPGrPw
-    name: Bénédiction
-    type: miracle
-    data:
-      axiom: 9
-      skill: faith
-      skilllevel: 10
-      castingtime: 1 action
-      dn: Normal (ND 10)
-      range: Rayon de 5 mètres
-      duration: 3 rounds
-      description: >-
-        <p class="MsoNormal">B&eacute;n&eacute;diction enveloppe et
-        impr&egrave;gne l&rsquo;invocateur et ses alli&eacute;s
-        d&rsquo;&eacute;nergie spirituelle qui augmente leurs capacit&eacute;s
-        mentales et physiques. Le pr&ecirc;tre choisit un attribut et demande
-        &agrave; sa divinit&eacute; de l&rsquo;am&eacute;liorer. &laquo; Puisse
-        le seigneur nous donner la force de Daniel dans la tani&egrave;re des
-        lions ! &raquo; augmente la Force, par exemple. Ou &laquo; Que Vishnu
-        nous accorde la clart&eacute; ! &raquo; peut am&eacute;liorer la
-        Raison.</p>
-
-        <p class="MsoNormal">Si le test est r&eacute;ussi, tous les
-        alli&eacute;s &agrave; port&eacute;e gagnent +1 point dans cet attribut.
-        Cependant, augmenter la Force ou l&rsquo;Esprit ne permet pas
-        d&rsquo;augmenter les caract&eacute;ristiques d&eacute;riv&eacute;es de
-        R&eacute;sistance et de Choc.</p>
-      good: la durée est augmentée à 1 minute
-      outstanding: comme avec un succès Supérieur, mais l’attribut est augmenté de +2.
-      isAttack: 'false'
-      damage: null
-    sort: -99999
-    flags:
-      core:
-        sourceId: Compendium.world.miracles.miracle-bless
-    img: systems/torgeternity/images/icons/miracle.webp
-    effects: []
-    folder: null
-    permission:
-      default: 0
-    mce_19: >-
-      <p class="MsoNormal">B&eacute;n&eacute;diction enveloppe et
-      impr&egrave;gne l&rsquo;invocateur et ses alli&eacute;s
-      d&rsquo;&eacute;nergie spirituelle qui augmente leurs capacit&eacute;s
-      mentales et physiques. Le pr&ecirc;tre choisit un attribut et demande
-      &agrave; sa divinit&eacute; de l&rsquo;am&eacute;liorer. &laquo; Puisse le
-      seigneur nous donner la force de Daniel dans la tani&egrave;re des lions !
-      &raquo; augmente la Force, par exemple. Ou &laquo; Que Vishnu nous accorde
-      la clart&eacute; ! &raquo; peut am&eacute;liorer la Raison.</p>
-
-      <p class="MsoNormal">Si le test est r&eacute;ussi, tous les alli&eacute;s
-      &agrave; port&eacute;e gagnent +1 point dans cet attribut. Cependant,
-      augmenter la Force ou l&rsquo;Esprit ne permet pas d&rsquo;augmenter les
-      caract&eacute;ristiques d&eacute;riv&eacute;es de R&eacute;sistance et de
-      Choc.</p>
-    _key: '!actors.items!YzRwn4OIYPYBIPJH.D9IQmTfXPqSPGrPw'
-  - _id: sMpIpI7t3K7B4ZYp
-    name: Protection contre les ennemis
-    type: miracle
-    data:
-      axiom: 8
-      skill: faith
-      skilllevel: 8
-      castingtime: 1 action
-      dn: Normal (ND 10)
-      range: Rayon de 5 mètres.
-      duration: Concentration
-      description: >-
-        <p class="MsoNormal">Protection contre les ennemis prot&egrave;ge les
-        fid&egrave;les des entit&eacute;s surnaturelles qui veulent nuire
-        &agrave; l&rsquo;humanit&eacute;.</p>
-
-        <p class="MsoNormal">Pour l&rsquo;invoquer, le fid&egrave;le doit
-        brandir un symbole saint, r&eacute;citer des pri&egrave;res ou effectuer
-        toute autre action qui indique clairement qu&rsquo;il en appelle
-        &agrave; la source de son pouvoir, ce qui en fait la cible principale
-        des esprits, des d&eacute;mons et de tout autre antagoniste pouvant
-        &ecirc;tre affect&eacute;.</p>
-
-        <p class="MsoNormal">Tant que la protection est active, tous les
-        alli&eacute;s situ&eacute;s &agrave; 5 m&egrave;tres
-        b&eacute;n&eacute;ficient d&rsquo;un bonus de +1 &agrave; leurs
-        d&eacute;fenses contre les cr&eacute;atures surnaturelles
-        mal&eacute;fiques et leurs attaques. Ce bonus est valable pour les
-        d&eacute;fenses physiques et d&rsquo;interaction.</p>
-
-        <p class="MsoNormal"><strong>Sp&eacute;cial </strong>: Ce miracle peut
-        &ecirc;tre tent&eacute; sans l&rsquo;Atout <span style="font-family:
-        var(--font-primary); font-size: var(--font-size-14);">Miracles si celui
-        qui l&rsquo;invoque a le niveau de Foi requis</span></p>
-
-        <p>&nbsp;</p>
-      good: ceux qui sont protégés ont un bonus de +2 à toutes leurs défenses
-      outstanding: >-
-        comme pour un succès Supérieur et les créatures surnaturelles maléfiques
-        qui ratent une attaque contre un individu protégé sont Déstabilisées
-      isAttack: 'false'
-      damage: null
-    sort: 1
-    flags:
-      core:
-        sourceId: Compendium.world.miracles.miracle-ward-enemy
-    img: systems/torgeternity/images/icons/miracle.webp
-    effects: []
-    folder: null
-    permission:
-      default: 0
-    mce_20: >-
-      <p class="MsoNormal">Protection contre les ennemis prot&egrave;ge les
-      fid&egrave;les des entit&eacute;s surnaturelles qui veulent nuire &agrave;
-      l&rsquo;humanit&eacute;.</p>
-
-      <p class="MsoNormal">Pour l&rsquo;invoquer, le fid&egrave;le doit brandir
-      un symbole saint, r&eacute;citer des pri&egrave;res ou effectuer toute
-      autre action qui indique clairement qu&rsquo;il en appelle &agrave; la
-      source de son pouvoir, ce qui en fait la cible principale des esprits, des
-      d&eacute;mons et de tout autre antagoniste pouvant &ecirc;tre
-      affect&eacute;.</p>
-
-      <p class="MsoNormal">Tant que la protection est active, tous les
-      alli&eacute;s situ&eacute;s &agrave; 5 m&egrave;tres
-      b&eacute;n&eacute;ficient d&rsquo;un bonus de +1 &agrave; leurs
-      d&eacute;fenses contre les cr&eacute;atures surnaturelles
-      mal&eacute;fiques et leurs attaques. Ce bonus est valable pour les
-      d&eacute;fenses physiques et d&rsquo;interaction.</p>
-
-      <p class="MsoNormal"><strong>Sp&eacute;cial </strong>: Ce miracle peut
-      &ecirc;tre tent&eacute; sans l&rsquo;Atout <span style="font-family:
-      var(--font-primary); font-size: var(--font-size-14);">Miracles si celui
-      qui l&rsquo;invoque a le niveau de Foi requis</span></p>
-
-      <p>&nbsp;</p>
-    _key: '!actors.items!YzRwn4OIYPYBIPJH.sMpIpI7t3K7B4ZYp'
-  - _id: rRgSLibvwdjK75eO
-    name: Soins
-    type: miracle
-    data:
-      axiom: 10
-      skill: faith
-      skilllevel: 10
-      castingtime: 1 action
-      dn: Normal (ND 10)
-      range: Contact
-      duration: Instantanée
-      description: >-
-        <p class="MsoNormal">Le pouvoir de soigner est peut-&ecirc;tre
-        l&rsquo;une des plus importantes capacit&eacute;s dont un fid&egrave;le
-        peut faire b&eacute;n&eacute;ficier les Chevaliers des Temp&ecirc;tes.
-        Qu&rsquo;il s&rsquo;occupe des blessures de ses compagnons ou
-        qu&rsquo;il soigne des villageois bless&eacute;s, Soins est une
-        comp&eacute;tence vitale.</p>
-
-        <p class="MsoNormal">Le total de l&rsquo;invocateur est modifi&eacute;
-        par les malus de blessures du patient (ainsi que celles de
-        l&rsquo;invocateur s&rsquo;il est bless&eacute;). Un succ&egrave;s
-        soigne 1 Blessure, tous les points de Choc et supprime
-        l&rsquo;&eacute;tat KO.</p>
-
-        <p class="MsoNormal">Soins ne peut &ecirc;tre tent&eacute; qu&rsquo;une
-        fois par Sc&egrave;ne sur un m&ecirc;me individu, choisissez bien ! Si
-        Maru est bless&eacute; au cours d&rsquo;un combat et soign&eacute; par
-        le P&egrave;re Damien, il ne pourra plus la soigner avant la prochaine
-        Sc&egrave;ne. Il pourra toujours utiliser sa comp&eacute;tence Premiers
-        soins sur elle et le miracle Soins sur ses camarades.</p>
-      good: 2 Blessures sont soignées.
-      outstanding: 3 Blessures sont soignées.
-      isAttack: 'false'
-      damage: null
-    sort: 1150001
-    flags:
-      core:
-        sourceId: Item.iDFKWtv4WCTrteId
-    img: systems/torgeternity/images/icons/miracle.webp
-    effects: []
-    folder: null
-    permission:
-      default: 0
-    mce_18: >-
-      <p class="MsoNormal">Le pouvoir de soigner est peut-&ecirc;tre l&rsquo;une
-      des plus importantes capacit&eacute;s dont un fid&egrave;le peut faire
-      b&eacute;n&eacute;ficier les Chevaliers des Temp&ecirc;tes. Qu&rsquo;il
-      s&rsquo;occupe des blessures de ses compagnons ou qu&rsquo;il soigne des
-      villageois bless&eacute;s, Soins est une comp&eacute;tence vitale.</p>
-
-      <p class="MsoNormal">Le total de l&rsquo;invocateur est modifi&eacute; par
-      les malus de blessures du patient (ainsi que celles de l&rsquo;invocateur
-      s&rsquo;il est bless&eacute;). Un succ&egrave;s soigne 1 Blessure, tous
-      les points de Choc et supprime l&rsquo;&eacute;tat KO.</p>
-
-      <p class="MsoNormal">Soins ne peut &ecirc;tre tent&eacute; qu&rsquo;une
-      fois par Sc&egrave;ne sur un m&ecirc;me individu, choisissez bien ! Si
-      Maru est bless&eacute; au cours d&rsquo;un combat et soign&eacute; par le
-      P&egrave;re Damien, il ne pourra plus la soigner avant la prochaine
-      Sc&egrave;ne. Il pourra toujours utiliser sa comp&eacute;tence Premiers
-      soins sur elle et le miracle Soins sur ses camarades.</p>
-    _key: '!actors.items!YzRwn4OIYPYBIPJH.rRgSLibvwdjK75eO'
-  - _id: sP4THOjN48b0gZDL
-    name: Implants cybernétiques
-    type: perk
-    img: systems/torgeternity/images/icons/perk.webp
-    data:
-      category: cyberware
-      cosm: Cyberpapauté
-      prerequisites: None
-      timestaken: 1
-      description: >-
-        <p class="MsoNormal">Quand il prend cet Atout, le personnage peut
-        choisir des implants cybern&eacute;tiques de la liste page 160 pour une
-        valeur maximale de 10 000 $. Les implants officiellement
-        approuv&eacute;s par l&rsquo;&Eacute;glise sont directement
-        connect&eacute;s au R&eacute;seau Divin et sont &eacute;troitement
-        surveill&eacute;s. Les appareils achet&eacute;s gr&acirc;ce &agrave; cet
-        Atout sont &laquo; pirat&eacute;s &raquo; et ne sont pas
-        connect&eacute;s au R&eacute;seau Divin (&agrave; moins que
-        l&rsquo;utilisateur ne le veuille). L&rsquo;installation est sans
-        risque. Cependant, poss&eacute;der des implants pirat&eacute;s est un
-        crime dans la Cyberpapaut&eacute;. Les h&eacute;ros qui &laquo; chroment
-        &raquo; leur corps feraient bien de se m&eacute;fier de la Police de
-        l&rsquo;&Eacute;glise, elle est toujours vigilante. Nouveaux implants :
-        cet Atout peut &ecirc;tre choisi plus d&rsquo;une fois. &Agrave; chaque
-        fois qu&rsquo;un personnage le choisit apr&egrave;s la premi&egrave;re
-        fois, il accorde de nouveaux implants pour une valeur de 5 000 $.</p>
-      pulpPowers:
-        enhancementNumber: 0
-        enhancement01:
-          title: ''
-          description: ''
-          taken: false
-        enhancement02:
-          title: ''
-          description: ''
-          taken: false
-        enhancement03:
-          title: ''
-          description: ''
-          taken: false
-        enhancement04:
-          title: ''
-          description: ''
-          taken: false
-        enhancement05:
-          title: ''
-          description: ''
-          taken: false
-        enhancement06:
-          title: ''
-          description: ''
-          taken: false
-        enhancement07:
-          title: ''
-          description: ''
-          taken: false
-        enhancement08:
-          title: ''
-          description: ''
-          taken: false
-        enhancement09:
-          title: ''
-          description: ''
-          taken: false
-        enhancement10:
-          title: ''
-          description: ''
-          taken: false
-        enhancement11:
-          title: ''
-          description: ''
-          taken: false
-        enhancement12:
-          title: ''
-          description: ''
-          taken: false
-        enhancement13:
-          title: ''
-          description: ''
-          taken: false
-        enhancement14:
-          title: ''
-          description: ''
-          taken: false
-        enhancement15:
-          title: ''
-          description: ''
-          taken: false
-        limitationNumber: 0
-        limitation01: ''
-        limitation02: ''
-        limitation03: ''
-        limitation04: ''
-        limitation05: ''
-        limitation06: ''
-        limitation07: ''
-        limitation08: ''
-        limitation09: ''
-        limitation10: ''
-    effects: []
-    folder: null
-    sort: 1950000
-    permission:
-      default: 0
-      TK1vCAdCz548vBDu: 3
-    flags:
-      core:
-        sourceId: Item.8qfs6BvtH7wTJ09g
-    _key: '!actors.items!YzRwn4OIYPYBIPJH.sP4THOjN48b0gZDL'
-  - _id: oET6xeuwJvv023mL
-    name: Attaque à mains nues
-    type: customAttack
-    img: systems/torgeternity/images/icons/fist-icon.webp
-    data:
-      description: ''
-      attackWith: unarmedCombat
-      damageType: strengthPlus
-      damage: 0
-      ap: 0
-      notes: ''
-      chatNote: ''
-    effects: []
-    folder: null
-    sort: 0
-    permission:
-      default: 0
-      zWX19sSAtAWkeGhp: 3
-    flags:
-      core:
-        sourceId: Item.BFGjhDetVDm1xiku
-    _key: '!actors.items!YzRwn4OIYPYBIPJH.oET6xeuwJvv023mL'
-effects:
-  - _id: iqpflWpeduToapXb
-    flags: {}
-    changes:
-      - key: data.attributes.strength
-        mode: 2
-        value: '1'
-    disabled: false
-    duration:
-      startTime: 0
-    icon: icons/svg/aura.svg
-    label: Force +1
-    origin: Actor.OPDkvGC3D9L64yuc.OwnedItem.8dLYtRllOMXVcq3N
+    attenuation: 0.5
+  texture:
+    src: systems/torgeternity/images/characters/Renegade_Priest.Token.webp
     tint: null
-    transfer: true
-    _key: '!actors.effects!YzRwn4OIYPYBIPJH.iqpflWpeduToapXb'
-  - _id: vZfKwDPaIzfmIyRT
-    flags: {}
-    changes:
-      - key: data.other.armor
-        mode: 2
-        value: '2'
-      - key: data.other.toughness
-        mode: 2
-        value: '2'
-    disabled: false
-    duration:
-      startTime: 0
-    icon: icons/svg/aura.svg
-    label: Armure +2
-    origin: Actor.OPDkvGC3D9L64yuc.OwnedItem.SNqRefdKZ8Z4g0ek
-    tint: ''
-    transfer: true
-    _key: '!actors.effects!YzRwn4OIYPYBIPJH.vZfKwDPaIzfmIyRT'
-folder: null
-sort: 100001
-permission:
-  default: 0
-  A9LyAqagoJJU3gDH: 3
-flags: {}
+    scaleX: 1
+    scaleY: 1
+    offsetX: 0
+    offsetY: 0
+    rotation: 0
+  sight:
+    angle: 360
+    enabled: false
+    range: 0
+    brightness: 1
+    visionMode: basic
+    attenuation: 0.1
+    saturation: 0
+    contrast: 0
+  appendNumber: false
+  prependAdjective: false
+  detectionModes: []
+_stats:
+  systemId: torgeternity
+  systemVersion: 3.8.1
+  coreVersion: '11.315'
+  createdTime: 1716827809520
+  modifiedTime: 1716827809520
+  lastModifiedBy: VAnYow5sWS9EJzo0
 _key: '!actors!YzRwn4OIYPYBIPJH'
 

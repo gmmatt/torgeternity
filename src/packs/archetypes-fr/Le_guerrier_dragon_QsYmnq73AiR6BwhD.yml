@@ -2,7 +2,656 @@ _id: QsYmnq73AiR6BwhD
 name: Le guerrier dragon
 type: stormknight
 img: systems/torgeternity/images/characters/Dragon_Warrior.Avatar.webp
-data:
+items:
+  - _id: 0e2qeJEXy89eDqmQ
+    name: Guerrier dragon
+    type: perk
+    sort: 200000
+    flags:
+      core:
+        sourceId: Item.E4srtrmeNNVxRqHf
+    img: systems/torgeternity/images/icons/perk.webp
+    effects: []
+    folder: null
+    system:
+      category: cyberware
+      cosm: Aysle
+      description: >-
+        <p class="MsoNormal">Les Guerriers dragons sont les derniers champions
+        nains qui ont &eacute;t&eacute; virtuellement annihil&eacute;s &agrave;
+        Aysle. Dans un ultime sursaut, ils ont con&ccedil;u de puissantes
+        armures ensorcel&eacute;es destin&eacute;es &agrave; d&eacute;truire les
+        sbires maudits d&rsquo;Uthorion. La plupart savaient qu&rsquo;elles
+        seraient leur tombeau.</p>
+
+        <p class="MsoNormal">L&rsquo;armure d&rsquo;un Guerrier dragon est
+        dot&eacute;e d&rsquo;incroyables armes, gadgets et appareils qui
+        transforment celui qui la rev&ecirc;t en machine de destruction. Elle
+        compte comme une armure Int&eacute;grale et octroie un bonus de +4 en
+        Armure, limite la Dext&eacute;rit&eacute; &agrave; 8, et inflige deux
+        points de Choc suppl&eacute;mentaires &agrave; chaque phase de Fatigue
+        sur la Ligne de Conflit (page 112).</p>
+
+        <p class="MsoNormal">Quand l&rsquo;Atout Guerrier dragon est choisi, le
+        nain peut s&eacute;lectionner une am&eacute;lioration de la page 90.</p>
+
+        <p class="MsoNormal"><strong>Nouvelles am&eacute;liorations</strong> :
+        cet Atout peut &ecirc;tre choisi plus d&rsquo;une fois. &Agrave; chaque
+        fois il accorde une autre des am&eacute;liorations indiqu&eacute;es
+        ci-dessous. &Agrave; moins que le contraire ne soit indiqu&eacute;,
+        chaque am&eacute;lioration ne peut &ecirc;tre choisie qu&rsquo;une seule
+        fois.</p>
+      prerequisites: Nain, Force10+
+      generalContradiction: false
+      pulpPowers:
+        enhancement01:
+          description: >-
+            le long d’un des poignets se trouve un long tube menant à un
+            réservoir dans le dos de l’armure contenant un carburant sous
+            pression. Quand il est activé avec Armes de jet, le tube crache une
+            langue de feu de 10 mètres de long avec une Zone d’effet limitée
+            (voir Zones d’effet page 124). Tout ce qui se trouve dans la zone
+            d’effet subit 16 points de dommages de feu (voir page 136). Le
+            réservoir contient assez de liquide pour trois tirs. Le réservoir se
+            recharge magiquement à la fin de la Scène ou au cours d’une longue
+            pause d’au moins quelques heures (à la discrétion du MJ).
+          taken: true
+          title: souffle draconique
+        enhancement02:
+          description: >-
+            une série de compresseurs pneumatiques transfèrent de l’air comprimé
+            dans les bras du nain. En conjonction avec des mécanismes
+            astucieusement placés à l’intérieur de l’armure, cette amélioration
+            octroie à sa Force un bonus de +2 pour ses tests et pour déterminer
+            les dommages. Sa Résistance n’est pas modifiée.
+          taken: true
+          title: force de géant
+        enhancement03:
+          description: ''
+          taken: false
+          title: ''
+        enhancement04:
+          description: ''
+          taken: false
+          title: ''
+        enhancement05:
+          description: ''
+          taken: false
+          title: ''
+        enhancement06:
+          description: ''
+          taken: false
+          title: ''
+        enhancement07:
+          description: ''
+          taken: false
+          title: ''
+        enhancement08:
+          description: ''
+          taken: false
+          title: ''
+        enhancement09:
+          description: ''
+          taken: false
+          title: ''
+        enhancement10:
+          description: ''
+          taken: false
+          title: ''
+        enhancement11:
+          description: ''
+          taken: false
+          title: ''
+        enhancement12:
+          description: ''
+          taken: false
+          title: ''
+        enhancement13:
+          description: ''
+          taken: false
+          title: ''
+        enhancement14:
+          description: ''
+          taken: false
+          title: ''
+        enhancement15:
+          description: ''
+          taken: false
+          title: ''
+        enhancementNumber: 2
+        limitation01: ''
+        limitation02: ''
+        limitation03: ''
+        limitation04: ''
+        limitation05: ''
+        limitation06: ''
+        limitation07: ''
+        limitation08: ''
+        limitation09: ''
+        limitation10: ''
+        limitationNumber: 0
+      timestaken: '2'
+    ownership:
+      default: 0
+    _stats:
+      systemId: null
+      systemVersion: null
+      coreVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+    _key: '!actors.items!QsYmnq73AiR6BwhD.0e2qeJEXy89eDqmQ'
+  - _id: kBiGdjd85DU1MtHd
+    name: Dragon Breath
+    type: enhancement
+    sort: 200001
+    flags:
+      core:
+        sourceId: Item.HlSAJi0eR2q7UF8E
+    img: systems/torgeternity/images/icons/enhancement.webp
+    effects: []
+    folder: null
+    system:
+      perk: Dragon Warrior
+      description: >-
+        <p>One of the warrior&rsquo;s bracers is lined with a long tube leading
+        to a chamber of compressed fuel hidden on his back armor. When activated
+        with missile weapons the tube spurts fire in a 10-meter-long stream as a
+        Small Blast. Everything within the blast suffers 16 fire damage. The
+        chamber holds enough fuel for three individual blasts.</p>
+
+        <p>The container magically recharges at the end of the scene or during a
+        long break in the action of a few hours or more (Game Master&rsquo;s
+        discretion).</p>
+    ownership:
+      default: 0
+    _stats:
+      systemId: null
+      systemVersion: null
+      coreVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+    _key: '!actors.items!QsYmnq73AiR6BwhD.kBiGdjd85DU1MtHd'
+  - _id: U0CKtAHQmBDo9ZyF
+    name: Souffle de dragon
+    type: missileweapon
+    sort: 100000
+    flags:
+      core:
+        sourceId: Item.njMZnZIEFvRkHHIS
+    img: systems/torgeternity/images/icons/missileweapon.webp
+    effects: []
+    folder: null
+    system:
+      cosm: Aysle
+      description: >-
+        <p>Acquiers cette arme en prenant l'atoutSouffle de dragon pour le perk
+        Guerrier dragon.</p>
+      price: '0'
+      techlevel: null
+      value: 0
+      ammo:
+        max: 1
+        value: 1
+      ap: 0
+      attackWith: missileWeapons
+      chatNote: ''
+      damage: 16
+      damageType: flat
+      equipped: false
+      equippedClass: .item-unequipped
+      minStrength: ''
+      notes: dommages de feu ; zone d'effet limitée
+      range: 10m
+    ownership:
+      default: 0
+    _stats:
+      systemId: null
+      systemVersion: null
+      coreVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+    _key: '!actors.items!QsYmnq73AiR6BwhD.U0CKtAHQmBDo9ZyF'
+  - _id: NTS6mLpRgHF7WkO4
+    name: Potion de soin
+    type: gear
+    sort: 1200000
+    flags:
+      core:
+        sourceId: Item.sSWLrPCSi2G5jq6S
+    img: systems/torgeternity/images/icons/gear.webp
+    effects: []
+    folder: null
+    system:
+      cosm: Aysle
+      description: |-
+        <p>Requiert axiom Magie 13.&nbsp;</p>
+        <p>Soigne 1 Blessure et 1 DB points de Choc</p>
+      price: '500'
+      techlevel: 12
+      value: 14
+      equippedClass: item-equipped
+    ownership:
+      default: 0
+    _stats:
+      systemId: null
+      systemVersion: null
+      coreVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+    _key: '!actors.items!QsYmnq73AiR6BwhD.NTS6mLpRgHF7WkO4'
+  - _id: vfqnqkIvFw372Nck
+    name: Corde de 10m
+    type: gear
+    sort: 900000
+    flags:
+      core:
+        sourceId: Item.HIzFdoBtoEzc8eaE
+    img: systems/torgeternity/images/icons/gear.webp
+    effects: []
+    folder: null
+    system:
+      cosm: Aysle
+      description: ''
+      price: '25'
+      techlevel: 8
+      value: 7
+      equippedClass: item-equipped
+    ownership:
+      default: 0
+    _stats:
+      systemId: null
+      systemVersion: null
+      coreVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+    _key: '!actors.items!QsYmnq73AiR6BwhD.vfqnqkIvFw372Nck'
+  - _id: F2DgHaQHYRxdQU4b
+    name: Caltrops
+    type: gear
+    sort: 1300000
+    flags:
+      core:
+        sourceId: Item.nszREOuoibD1inHs
+    img: systems/torgeternity/images/icons/gear.webp
+    effects: []
+    folder: null
+    system:
+      cosm: Aysle
+      description: >-
+        <p class="MsoNormal">Plusieurs petites pi&egrave;ces m&eacute;talliques
+        constitu&eacute;es de pointes dont l&rsquo;une d&rsquo;elles est
+        orient&eacute;e vers le haut. Dispers&eacute;es par terre, elles sont
+        pr&eacute;vues pour crever les pneus ou pour que des victimes marchent
+        dessus. Une fois d&eacute;ploy&eacute;es avec une action simple,
+        l&rsquo;interaction Manoeuvre devient Favoris&eacute;e autour des
+        pointes.</p>
+      price: '40'
+      techlevel: 14
+      value: 8
+      equippedClass: item-equipped
+    ownership:
+      default: 0
+    _stats:
+      systemId: null
+      systemVersion: null
+      coreVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+    _key: '!actors.items!QsYmnq73AiR6BwhD.F2DgHaQHYRxdQU4b'
+  - _id: sDhCWgxPaBzw0M2R
+    name: Grande hache
+    type: meleeweapon
+    sort: 200000
+    flags:
+      core:
+        sheetClass: torgeternity.torgeternityItemSheet
+        sourceId: Item.Aan7zdkY9kl0RE7T
+    img: systems/torgeternity/images/icons/meleeweapon.webp
+    effects: []
+    folder: null
+    system:
+      cosm: Aysle
+      description: >-
+        <p class="MsoNormal">La grande hache est la plus terrifiante des armes
+        &laquo; barbares &raquo;. La large lame &agrave; double tranchant permet
+        &agrave; son utilisateur de faucher ses adversaires.</p>
+      price: '300'
+      techlevel: 10
+      value: 12
+      ap: 0
+      attackWith: meleeWeapons
+      bonus: 2
+      chatNote: ''
+      damage: 4
+      damageType: strengthPlus
+      equipped: false
+      equippedClass: .item-unequipped
+      notes: Déséquilibre, Deux mains, Peu maniable
+    ownership:
+      default: 0
+    _stats:
+      systemId: null
+      systemVersion: null
+      coreVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+    _key: '!actors.items!QsYmnq73AiR6BwhD.sDhCWgxPaBzw0M2R'
+  - _id: W80yHGyLWk5wrLJW
+    name: Giant Strength
+    type: enhancement
+    sort: 500001
+    flags:
+      core:
+        sourceId: Item.q3wDWkbSqbWYKVNB
+    img: systems/torgeternity/images/icons/enhancement.webp
+    effects:
+      - _id: 07KQJUY5nlOb5K7Q
+        flags: {}
+        changes:
+          - key: system.attributes.strength.value
+            value: '2'
+            mode: 2
+            priority: null
+        disabled: false
+        duration:
+          startTime: null
+          seconds: null
+          combat: null
+          rounds: null
+          turns: null
+          startRound: null
+          startTurn: null
+        icon: icons/svg/aura.svg
+        origin: Item.q3wDWkbSqbWYKVNB
+        tint: null
+        transfer: true
+        name: Giant Strength
+        description: ''
+        statuses: []
+        _key: >-
+          !actors.items.effects!QsYmnq73AiR6BwhD.W80yHGyLWk5wrLJW.07KQJUY5nlOb5K7Q
+    folder: null
+    system:
+      perk: Dragon Warrior
+      description: >-
+        <p>A series of pneumatic compressors take in air and channel it to the
+        dwarf&rsquo;s arms. Along with cleverly placed levers along the inside
+        of the armor, it increases his Strength by +2 for tests and determining
+        damage. Toughness remains unaffected.</p>
+    ownership:
+      default: 0
+    _stats:
+      systemId: null
+      systemVersion: null
+      coreVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+    _key: '!actors.items!QsYmnq73AiR6BwhD.W80yHGyLWk5wrLJW'
+  - _id: w5ZFXzswpME4OajM
+    name: Vision nocturne
+    type: perk
+    sort: 100001
+    flags:
+      core:
+        sourceId: Item.JCBCYFMvmpQHFWM4
+    img: systems/torgeternity/images/icons/perk.webp
+    effects: []
+    folder: null
+    system:
+      category: dwarf
+      cosm: Aysle
+      description: >-
+        <p class="MsoNormal">Les nains ignorent jusqu&rsquo;&agrave; quatre
+        points de malus li&eacute;s &agrave; l&rsquo;obscurit&eacute; (voir page
+        125).</p>
+      prerequisites: ''
+      generalContradiction: false
+      pulpPowers:
+        enhancement01:
+          description: ''
+          taken: false
+          title: ''
+        enhancement02:
+          description: ''
+          taken: false
+          title: ''
+        enhancement03:
+          description: ''
+          taken: false
+          title: ''
+        enhancement04:
+          description: ''
+          taken: false
+          title: ''
+        enhancement05:
+          description: ''
+          taken: false
+          title: ''
+        enhancement06:
+          description: ''
+          taken: false
+          title: ''
+        enhancement07:
+          description: ''
+          taken: false
+          title: ''
+        enhancement08:
+          description: ''
+          taken: false
+          title: ''
+        enhancement09:
+          description: ''
+          taken: false
+          title: ''
+        enhancement10:
+          description: ''
+          taken: false
+          title: ''
+        enhancement11:
+          description: ''
+          taken: false
+          title: ''
+        enhancement12:
+          description: ''
+          taken: false
+          title: ''
+        enhancement13:
+          description: ''
+          taken: false
+          title: ''
+        enhancement14:
+          description: ''
+          taken: false
+          title: ''
+        enhancement15:
+          description: ''
+          taken: false
+          title: ''
+        enhancementNumber: 0
+        limitation01: ''
+        limitation02: ''
+        limitation03: ''
+        limitation04: ''
+        limitation05: ''
+        limitation06: ''
+        limitation07: ''
+        limitation08: ''
+        limitation09: ''
+        limitation10: ''
+        limitationNumber: 0
+      timestaken: ''
+    ownership:
+      default: 0
+    _stats:
+      systemId: null
+      systemVersion: null
+      coreVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+    _key: '!actors.items!QsYmnq73AiR6BwhD.w5ZFXzswpME4OajM'
+  - _id: RDjcmGM0lIqKpHUO
+    name: Armure draconnique
+    type: armor
+    sort: 900001
+    flags:
+      core:
+        sourceId: Item.yq5AhONJLd10H9EI
+    img: systems/torgeternity/images/icons/armor.webp
+    effects:
+      - _id: PS0f9cwh4yZcYyBo
+        flags: {}
+        changes:
+          - key: system.other.armor
+            value: '4'
+            mode: 2
+            priority: null
+          - key: system.other.toughness
+            value: '4'
+            mode: 2
+            priority: null
+        disabled: false
+        duration:
+          startTime: null
+          seconds: null
+          combat: null
+          rounds: null
+          turns: null
+          startRound: null
+          startTurn: null
+        icon: icons/svg/aura.svg
+        origin: Item.yq5AhONJLd10H9EI
+        tint: null
+        transfer: true
+        name: Armor (+4)
+        description: ''
+        statuses: []
+        _key: >-
+          !actors.items.effects!QsYmnq73AiR6BwhD.RDjcmGM0lIqKpHUO.PS0f9cwh4yZcYyBo
+    folder: null
+    system:
+      cosm: Aysle
+      description: >-
+        <p>Acquiert automatiquement cette armure en prenant l'atout Guerrier
+        Dragon.</p>
+
+        <p>&nbsp;</p>
+      price: ''
+      techlevel: 14
+      value: 0
+      bonus: 4
+      equipped: false
+      equippedClass: .item-unequipped
+      maxDex: 8
+      minStrength: 10
+      notes: Fatigues (2) ; Dex max 8
+      fatigue: 0
+    ownership:
+      default: 0
+    _stats:
+      systemId: null
+      systemVersion: null
+      coreVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+    _key: '!actors.items!QsYmnq73AiR6BwhD.RDjcmGM0lIqKpHUO'
+  - _id: LKxM2YXkNPmaj31J
+    name: Attaque à mains nues
+    type: customAttack
+    img: systems/torgeternity/images/icons/fist-icon.webp
+    effects: []
+    folder: null
+    sort: 0
+    flags:
+      core:
+        sourceId: Item.BFGjhDetVDm1xiku
+    system:
+      ap: 0
+      attackWith: unarmedCombat
+      chatNote: ''
+      damage: 0
+      damageType: strengthPlus
+      description: ''
+      notes: ''
+    ownership:
+      default: 0
+      zWX19sSAtAWkeGhp: 3
+    _stats:
+      systemId: null
+      systemVersion: null
+      coreVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+    _key: '!actors.items!QsYmnq73AiR6BwhD.LKxM2YXkNPmaj31J'
+effects:
+  - _id: xcPZLZIBGvMvU25Z
+    flags: {}
+    changes:
+      - key: system.attributes.strength.value
+        mode: 2
+        value: '2'
+        priority: null
+    disabled: false
+    duration:
+      startTime: 0
+      seconds: null
+      combat: null
+      rounds: null
+      turns: null
+      startRound: null
+      startTurn: null
+    icon: icons/svg/aura.svg
+    origin: Actor.ZAjg9c3hJQtwFKOa.OwnedItem.W80yHGyLWk5wrLJW
+    tint: null
+    transfer: true
+    name: Force de géant (+2)
+    description: ''
+    statuses: []
+    _key: '!actors.effects!QsYmnq73AiR6BwhD.xcPZLZIBGvMvU25Z'
+  - _id: faY4cFOXcFgttCeH
+    flags: {}
+    changes:
+      - key: system.other.armor
+        mode: 2
+        value: '4'
+        priority: null
+      - key: system.other.toughness
+        mode: 2
+        value: '4'
+        priority: null
+    disabled: false
+    duration:
+      startTime: 0
+      seconds: null
+      combat: null
+      rounds: null
+      turns: null
+      startRound: null
+      startTurn: null
+    icon: icons/svg/aura.svg
+    origin: Actor.ZAjg9c3hJQtwFKOa.OwnedItem.RDjcmGM0lIqKpHUO
+    tint: null
+    transfer: true
+    name: Armure (+4)
+    description: ''
+    statuses: []
+    _key: '!actors.effects!QsYmnq73AiR6BwhD.faY4cFOXcFgttCeH'
+folder: null
+sort: 100001
+flags:
+  core:
+    sheetClass: torgeternity.torgeternityActorSheet
+system:
   shock:
     max: 8
     value: 0
@@ -10,300 +659,340 @@ data:
     max: 3
     value: 0
   attributes:
-    charisma: 6
-    dexterity: 8
-    mind: 7
-    spirit: 8
-    strength: 11
+    charisma:
+      base: 6
+    dexterity:
+      base: 8
+    mind:
+      base: 7
+    spirit:
+      base: 8
+    strength:
+      base: 11
   other:
-    move: 8
-    run: '24'
-    toughness: '15'
-    armor: 4
     cosm: aysle
     possibilities: 3
-    posibilities: 3
   skills:
     airVehicles:
       baseAttribute: dexterity
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 0
+      isThreatSkill: false
+      defenseOnly: false
     alteration:
       baseAttribute: mind
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 0
+      isThreatSkill: false
+      defenseOnly: false
     apportation:
       baseAttribute: spirit
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 0
+      isThreatSkill: false
+      defenseOnly: false
     beastRiding:
       baseAttribute: dexterity
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     computers:
       baseAttribute: mind
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     conjuration:
       baseAttribute: spirit
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 0
+      isThreatSkill: false
+      defenseOnly: false
     divination:
       baseAttribute: mind
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 0
+      isThreatSkill: false
+      defenseOnly: false
     dodge:
       baseAttribute: dexterity
       adds: 1
-      value: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     energyWeapons:
       baseAttribute: dexterity
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: combat
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     evidenceAnalysis:
       baseAttribute: mind
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     faith:
       baseAttribute: spirit
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     find:
       baseAttribute: mind
       adds: 1
-      value: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     fireCombat:
       baseAttribute: dexterity
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: combat
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     firstAid:
       baseAttribute: mind
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     heavyWeapons:
       baseAttribute: dexterity
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: combat
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     intimidation:
       baseAttribute: spirit
       adds: 2
-      value: 0
       isFav: false
       groupName: interaction
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     kinesis:
       baseAttribute: spirit
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 0
+      isThreatSkill: false
+      defenseOnly: false
     landVehicles:
       baseAttribute: dexterity
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     language:
       baseAttribute: mind
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 0
+      isThreatSkill: false
+      defenseOnly: false
     lockpicking:
       baseAttribute: dexterity
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 0
+      isThreatSkill: false
+      defenseOnly: false
     maneuver:
       baseAttribute: dexterity
       adds: 1
-      value: 0
       isFav: false
       groupName: interaction
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     medicine:
       baseAttribute: mind
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 0
+      isThreatSkill: false
+      defenseOnly: false
     meleeWeapons:
       baseAttribute: dexterity
       adds: 3
-      value: 0
       isFav: false
       groupName: combat
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     missileWeapons:
       baseAttribute: dexterity
       adds: 2
-      value: 0
       isFav: false
       groupName: combat
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     persuasion:
       baseAttribute: charisma
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     precognition:
       baseAttribute: mind
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 0
+      isThreatSkill: false
+      defenseOnly: false
     profession:
       baseAttribute: mind
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     reality:
       baseAttribute: spirit
       adds: 1
-      value: 0
       isFav: false
       groupName: other
       unskilledUse: 0
+      isThreatSkill: false
+      defenseOnly: false
     scholar:
       baseAttribute: mind
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     science:
       baseAttribute: mind
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     stealth:
       baseAttribute: dexterity
       adds: 1
-      value: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     streetwise:
       baseAttribute: charisma
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     survival:
       baseAttribute: mind
       adds: 1
-      value: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     taunt:
       baseAttribute: charisma
       adds: 2
-      value: 0
       isFav: false
       groupName: interaction
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     telepathy:
       baseAttribute: charisma
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 0
+      isThreatSkill: false
+      defenseOnly: false
     tracking:
       baseAttribute: mind
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     trick:
       baseAttribute: mind
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: interaction
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     unarmedCombat:
       baseAttribute: dexterity
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: combat
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     waterVehicles:
       baseAttribute: dexterity
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     willpower:
       baseAttribute: spirit
       adds: 1
-      value: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
   xp:
     unspent: 0
     earned: 0
@@ -313,7 +1002,6 @@ data:
     spirit: 18
     tech: 14
   details:
-    clearance: alpha
     background: >-
       <h2 class="MsoNormal">Pr&eacute;sentation</h2>
 
@@ -409,35 +1097,20 @@ data:
       <p class="MsoNormal">□ (5 PX) Armes de m&ecirc;l&eacute;e +5 <span
       style="mso-spacerun: yes;">&nbsp;</span></p>
     race: dwarf
-  editstate: null
-  fatigue: '1'
-token:
+    sizeBonus: normal
+  editstate: true
+ownership:
+  default: 0
+  A9LyAqagoJJU3gDH: 3
+  VAnYow5sWS9EJzo0: 3
+prototypeToken:
   flags: {}
   name: Le guerrier Dragon
   displayName: 30
-  img: systems/torgeternity/images/characters/Dragon_Warrior.Token.webp
-  tint: null
   width: 1
   height: 1
-  scale: 1
-  mirrorX: false
-  mirrorY: false
   lockRotation: false
   rotation: 0
-  vision: false
-  dimSight: 0
-  brightSight: 0
-  dimLight: 0
-  brightLight: 0
-  sightAngle: 0
-  lightAngle: 360
-  lightColor: ''
-  lightAlpha: 1
-  lightAnimation:
-    type: ''
-    speed: 5
-    intensity: 5
-  actorId: QsYmnq73AiR6BwhD
   actorLink: true
   disposition: 1
   displayBars: 20
@@ -448,17 +1121,17 @@ token:
   randomImg: false
   alpha: 1
   light:
-    alpha: 0.5
-    angle: 0
+    alpha: 1
+    angle: 360
     bright: 0
     coloration: 1
     dim: 0
-    gradual: true
     luminosity: 0.5
     saturation: 0
     contrast: 0
     shadows: 0
     animation:
+      type: null
       speed: 5
       intensity: 5
       reverse: false
@@ -466,565 +1139,33 @@ token:
       min: 0
       max: 1
     color: null
-items:
-  - _id: 0e2qeJEXy89eDqmQ
-    name: Guerrier dragon
-    type: perk
-    data:
-      category: cyberware
-      cosm: Aysle
-      prerequisites: Nain, Force10+
-      timestaken: 2
-      description: >-
-        <p class="MsoNormal">Les Guerriers dragons sont les derniers champions
-        nains qui ont &eacute;t&eacute; virtuellement annihil&eacute;s &agrave;
-        Aysle. Dans un ultime sursaut, ils ont con&ccedil;u de puissantes
-        armures ensorcel&eacute;es destin&eacute;es &agrave; d&eacute;truire les
-        sbires maudits d&rsquo;Uthorion. La plupart savaient qu&rsquo;elles
-        seraient leur tombeau.</p>
-
-        <p class="MsoNormal">L&rsquo;armure d&rsquo;un Guerrier dragon est
-        dot&eacute;e d&rsquo;incroyables armes, gadgets et appareils qui
-        transforment celui qui la rev&ecirc;t en machine de destruction. Elle
-        compte comme une armure Int&eacute;grale et octroie un bonus de +4 en
-        Armure, limite la Dext&eacute;rit&eacute; &agrave; 8, et inflige deux
-        points de Choc suppl&eacute;mentaires &agrave; chaque phase de Fatigue
-        sur la Ligne de Conflit (page 112).</p>
-
-        <p class="MsoNormal">Quand l&rsquo;Atout Guerrier dragon est choisi, le
-        nain peut s&eacute;lectionner une am&eacute;lioration de la page 90.</p>
-
-        <p class="MsoNormal"><strong>Nouvelles am&eacute;liorations</strong> :
-        cet Atout peut &ecirc;tre choisi plus d&rsquo;une fois. &Agrave; chaque
-        fois il accorde une autre des am&eacute;liorations indiqu&eacute;es
-        ci-dessous. &Agrave; moins que le contraire ne soit indiqu&eacute;,
-        chaque am&eacute;lioration ne peut &ecirc;tre choisie qu&rsquo;une seule
-        fois.</p>
-      pulpPowers:
-        enhancementNumber: 2
-        enhancement01:
-          title: souffle draconique
-          description: >-
-            le long d’un des poignets se trouve un long tube menant à un
-            réservoir dans le dos de l’armure contenant un carburant sous
-            pression. Quand il est activé avec Armes de jet, le tube crache une
-            langue de feu de 10 mètres de long avec une Zone d’effet limitée
-            (voir Zones d’effet page 124). Tout ce qui se trouve dans la zone
-            d’effet subit 16 points de dommages de feu (voir page 136). Le
-            réservoir contient assez de liquide pour trois tirs. Le réservoir se
-            recharge magiquement à la fin de la Scène ou au cours d’une longue
-            pause d’au moins quelques heures (à la discrétion du MJ).
-          taken: true
-        enhancement02:
-          title: force de géant
-          description: >-
-            une série de compresseurs pneumatiques transfèrent de l’air comprimé
-            dans les bras du nain. En conjonction avec des mécanismes
-            astucieusement placés à l’intérieur de l’armure, cette amélioration
-            octroie à sa Force un bonus de +2 pour ses tests et pour déterminer
-            les dommages. Sa Résistance n’est pas modifiée.
-          taken: true
-        enhancement03:
-          title: ''
-          description: ''
-          taken: false
-        enhancement04:
-          title: ''
-          description: ''
-          taken: false
-        enhancement05:
-          title: ''
-          description: ''
-          taken: false
-        enhancement06:
-          title: ''
-          description: ''
-          taken: false
-        enhancement07:
-          title: ''
-          description: ''
-          taken: false
-        enhancement08:
-          title: ''
-          description: ''
-          taken: false
-        enhancement09:
-          title: ''
-          description: ''
-          taken: false
-        enhancement10:
-          title: ''
-          description: ''
-          taken: false
-        enhancement11:
-          title: ''
-          description: ''
-          taken: false
-        enhancement12:
-          title: ''
-          description: ''
-          taken: false
-        enhancement13:
-          title: ''
-          description: ''
-          taken: false
-        enhancement14:
-          title: ''
-          description: ''
-          taken: false
-        enhancement15:
-          title: ''
-          description: ''
-          taken: false
-        limitationNumber: 0
-        limitation01: ''
-        limitation02: ''
-        limitation03: ''
-        limitation04: ''
-        limitation05: ''
-        limitation06: ''
-        limitation07: ''
-        limitation08: ''
-        limitation09: ''
-        limitation10: ''
-    sort: 200000
-    flags:
-      core:
-        sourceId: Item.E4srtrmeNNVxRqHf
-    img: systems/torgeternity/images/icons/perk.webp
-    effects: []
-    folder: null
-    permission:
-      default: 0
-    mce_28: >-
-      <p class="MsoNormal">Les Guerriers dragons sont les derniers champions
-      nains qui ont &eacute;t&eacute; virtuellement annihil&eacute;s &agrave;
-      Aysle. Dans un ultime sursaut, ils ont con&ccedil;u de puissantes armures
-      ensorcel&eacute;es destin&eacute;es &agrave; d&eacute;truire les sbires
-      maudits d&rsquo;Uthorion. La plupart savaient qu&rsquo;elles seraient leur
-      tombeau.</p>
-
-      <p class="MsoNormal">L&rsquo;armure d&rsquo;un Guerrier dragon est
-      dot&eacute;e d&rsquo;incroyables armes, gadgets et appareils qui
-      transforment celui qui la rev&ecirc;t en machine de destruction. Elle
-      compte comme une armure Int&eacute;grale et octroie un bonus de +4 en
-      Armure, limite la Dext&eacute;rit&eacute; &agrave; 8, et inflige deux
-      points de Choc suppl&eacute;mentaires &agrave; chaque phase de Fatigue sur
-      la Ligne de Conflit (page 112).</p>
-
-      <p class="MsoNormal">Quand l&rsquo;Atout Guerrier dragon est choisi, le
-      nain peut s&eacute;lectionner une am&eacute;lioration de la page 90.</p>
-
-      <p class="MsoNormal"><strong>Nouvelles am&eacute;liorations</strong> : cet
-      Atout peut &ecirc;tre choisi plus d&rsquo;une fois. &Agrave; chaque fois
-      il accorde une autre des am&eacute;liorations indiqu&eacute;es ci-dessous.
-      &Agrave; moins que le contraire ne soit indiqu&eacute;, chaque
-      am&eacute;lioration ne peut &ecirc;tre choisie qu&rsquo;une seule
-      fois.</p>
-    _key: '!actors.items!QsYmnq73AiR6BwhD.0e2qeJEXy89eDqmQ'
-  - _id: kBiGdjd85DU1MtHd
-    name: Dragon Breath
-    type: enhancement
-    data:
-      perk: Dragon Warrior
-      description: >-
-        <p>One of the warrior&rsquo;s bracers is lined with a long tube leading
-        to a chamber of compressed fuel hidden on his back armor. When activated
-        with missile weapons the tube spurts fire in a 10-meter-long stream as a
-        Small Blast. Everything within the blast suffers 16 fire damage. The
-        chamber holds enough fuel for three individual blasts.</p>
-
-        <p>The container magically recharges at the end of the scene or during a
-        long break in the action of a few hours or more (Game Master&rsquo;s
-        discretion).</p>
-    sort: 200001
-    flags:
-      core:
-        sourceId: Item.HlSAJi0eR2q7UF8E
-    img: systems/torgeternity/images/icons/enhancement.webp
-    effects: []
-    folder: null
-    permission:
-      default: 0
-    _key: '!actors.items!QsYmnq73AiR6BwhD.kBiGdjd85DU1MtHd'
-  - _id: U0CKtAHQmBDo9ZyF
-    name: Souffle de dragon
-    type: missileweapon
-    data:
-      cosm: Aysle
-      description: >-
-        <p>Acquiers cette arme en prenant l'atoutSouffle de dragon pour le perk
-        Guerrier dragon.</p>
-      techlevel: null
-      price: '0'
-      value: 0
-      attackWith: missileWeapons
-      damageType: flat
-      damage: 16
-      ap: 0
-      ammo:
-        max: 1
-        value: 1
-      minStrength: null
-      range: 10m
-      notes: dommages de feu ; zone d'effet limitée
-      chatNote: ''
-    sort: 100000
-    flags:
-      core:
-        sourceId: Item.njMZnZIEFvRkHHIS
-    img: systems/torgeternity/images/icons/missileweapon.webp
-    effects: []
-    folder: null
-    permission:
-      default: 0
-    _key: '!actors.items!QsYmnq73AiR6BwhD.U0CKtAHQmBDo9ZyF'
-  - _id: NTS6mLpRgHF7WkO4
-    name: Potion de soin
-    type: gear
-    data:
-      cosm: Aysle
-      description: |-
-        <p>Requiert axiom Magie 13.&nbsp;</p>
-        <p>Soigne 1 Blessure et 1 DB points de Choc</p>
-      techlevel: 12
-      price: '500'
-      value: 14
-    sort: 1200000
-    flags:
-      core:
-        sourceId: Item.sSWLrPCSi2G5jq6S
-    img: systems/torgeternity/images/icons/gear.webp
-    effects: []
-    folder: null
-    permission:
-      default: 0
-    _key: '!actors.items!QsYmnq73AiR6BwhD.NTS6mLpRgHF7WkO4'
-  - _id: vfqnqkIvFw372Nck
-    name: Corde de 10m
-    type: gear
-    data:
-      cosm: Aysle
-      description: ''
-      techlevel: 8
-      price: '25'
-      value: 7
-    sort: 900000
-    flags:
-      core:
-        sourceId: Item.HIzFdoBtoEzc8eaE
-    img: systems/torgeternity/images/icons/gear.webp
-    effects: []
-    folder: null
-    permission:
-      default: 0
-    _key: '!actors.items!QsYmnq73AiR6BwhD.vfqnqkIvFw372Nck'
-  - _id: F2DgHaQHYRxdQU4b
-    name: Caltrops
-    type: gear
-    data:
-      cosm: Aysle
-      description: >-
-        <p class="MsoNormal">Plusieurs petites pi&egrave;ces m&eacute;talliques
-        constitu&eacute;es de pointes dont l&rsquo;une d&rsquo;elles est
-        orient&eacute;e vers le haut. Dispers&eacute;es par terre, elles sont
-        pr&eacute;vues pour crever les pneus ou pour que des victimes marchent
-        dessus. Une fois d&eacute;ploy&eacute;es avec une action simple,
-        l&rsquo;interaction Manoeuvre devient Favoris&eacute;e autour des
-        pointes.</p>
-      techlevel: 14
-      price: '40'
-      value: 8
-    sort: 1300000
-    flags:
-      core:
-        sourceId: Item.nszREOuoibD1inHs
-    img: systems/torgeternity/images/icons/gear.webp
-    effects: []
-    folder: null
-    permission:
-      default: 0
-    _key: '!actors.items!QsYmnq73AiR6BwhD.F2DgHaQHYRxdQU4b'
-  - _id: sDhCWgxPaBzw0M2R
-    name: Grande hache
-    type: meleeweapon
-    data:
-      cosm: Aysle
-      description: >-
-        <p class="MsoNormal">La grande hache est la plus terrifiante des armes
-        &laquo; barbares &raquo;. La large lame &agrave; double tranchant permet
-        &agrave; son utilisateur de faucher ses adversaires.</p>
-      techlevel: 10
-      price: '300'
-      value: 12
-      attackWith: meleeWeapons
-      damageType: strengthPlus
-      damage: 4
-      ap: 0
-      bonus: 2
-      notes: Déséquilibre, Deux mains, Peu maniable
-      chatNote: ''
-    sort: 200000
-    flags:
-      core:
-        sheetClass: torgeternity.torgeternityItemSheet
-        sourceId: Item.Aan7zdkY9kl0RE7T
-    img: systems/torgeternity/images/icons/meleeweapon.webp
-    effects: []
-    folder: null
-    permission:
-      default: 0
-    mce_26: >-
-      <p class="MsoNormal">la grande hache est la plus terrifiante des armes
-      &laquo; barbares &raquo;. La large lame &agrave; double tranchant permet
-      &agrave; son utilisateur de faucher ses adversaires.</p>
-    _key: '!actors.items!QsYmnq73AiR6BwhD.sDhCWgxPaBzw0M2R'
-  - _id: W80yHGyLWk5wrLJW
-    name: Giant Strength
-    type: enhancement
-    data:
-      perk: Dragon Warrior
-      description: >-
-        <p>A series of pneumatic compressors take in air and channel it to the
-        dwarf&rsquo;s arms. Along with cleverly placed levers along the inside
-        of the armor, it increases his Strength by +2 for tests and determining
-        damage. Toughness remains unaffected.</p>
-    sort: 500001
-    flags:
-      core:
-        sourceId: Item.q3wDWkbSqbWYKVNB
-    img: systems/torgeternity/images/icons/enhancement.webp
-    effects:
-      - _id: 07KQJUY5nlOb5K7Q
-        flags: {}
-        changes:
-          - key: data.attributes.strength
-            value: '2'
-            mode: 2
-        disabled: false
-        duration:
-          startTime: null
-        icon: icons/svg/aura.svg
-        label: Giant Strength
-        origin: Item.q3wDWkbSqbWYKVNB
-        tint: null
-        transfer: true
-        _key: >-
-          !actors.items.effects!QsYmnq73AiR6BwhD.W80yHGyLWk5wrLJW.07KQJUY5nlOb5K7Q
-    folder: null
-    permission:
-      default: 0
-    _key: '!actors.items!QsYmnq73AiR6BwhD.W80yHGyLWk5wrLJW'
-  - _id: w5ZFXzswpME4OajM
-    name: Vision nocturne
-    type: perk
-    data:
-      category: dwarf
-      cosm: Aysle
-      prerequisites: ''
-      timestaken: null
-      description: >-
-        <p class="MsoNormal">Les nains ignorent jusqu&rsquo;&agrave; quatre
-        points de malus li&eacute;s &agrave; l&rsquo;obscurit&eacute; (voir page
-        125).</p>
-      pulpPowers:
-        enhancementNumber: 0
-        enhancement01:
-          title: ''
-          description: ''
-          taken: false
-        enhancement02:
-          title: ''
-          description: ''
-          taken: false
-        enhancement03:
-          title: ''
-          description: ''
-          taken: false
-        enhancement04:
-          title: ''
-          description: ''
-          taken: false
-        enhancement05:
-          title: ''
-          description: ''
-          taken: false
-        enhancement06:
-          title: ''
-          description: ''
-          taken: false
-        enhancement07:
-          title: ''
-          description: ''
-          taken: false
-        enhancement08:
-          title: ''
-          description: ''
-          taken: false
-        enhancement09:
-          title: ''
-          description: ''
-          taken: false
-        enhancement10:
-          title: ''
-          description: ''
-          taken: false
-        enhancement11:
-          title: ''
-          description: ''
-          taken: false
-        enhancement12:
-          title: ''
-          description: ''
-          taken: false
-        enhancement13:
-          title: ''
-          description: ''
-          taken: false
-        enhancement14:
-          title: ''
-          description: ''
-          taken: false
-        enhancement15:
-          title: ''
-          description: ''
-          taken: false
-        limitationNumber: 0
-        limitation01: ''
-        limitation02: ''
-        limitation03: ''
-        limitation04: ''
-        limitation05: ''
-        limitation06: ''
-        limitation07: ''
-        limitation08: ''
-        limitation09: ''
-        limitation10: ''
-    sort: 100001
-    flags:
-      core:
-        sourceId: Item.JCBCYFMvmpQHFWM4
-    img: systems/torgeternity/images/icons/perk.webp
-    effects: []
-    folder: null
-    permission:
-      default: 0
-    mce_27: >-
-      <p class="MsoNormal">les nains ignorent jusqu&rsquo;&agrave; quatre points
-      de malus li&eacute;s &agrave; l&rsquo;obscurit&eacute; (voir page
-      125).</p>
-    _key: '!actors.items!QsYmnq73AiR6BwhD.w5ZFXzswpME4OajM'
-  - _id: RDjcmGM0lIqKpHUO
-    name: Armure draconnique
-    type: armor
-    data:
-      cosm: Aysle
-      description: >-
-        <p>Acquiert automatiquement cette armure en prenant l'atout Guerrier
-        Dragon.</p>
-
-        <p>&nbsp;</p>
-      techlevel: 14
-      price: ''
-      value: 0
-      bonus: 4
-      maxDex: 8
-      minStrength: 10
-      equipped: false
-      equippedClass: .item-unequipped
-      notes: Fatigues (2) ; Dex max 8
-    sort: 900001
-    flags:
-      core:
-        sourceId: Item.yq5AhONJLd10H9EI
-    img: systems/torgeternity/images/icons/armor.webp
-    effects:
-      - _id: PS0f9cwh4yZcYyBo
-        flags: {}
-        changes:
-          - key: data.other.armor
-            value: '4'
-            mode: 2
-          - key: data.other.toughness
-            value: '4'
-            mode: 2
-        disabled: false
-        duration:
-          startTime: null
-        icon: icons/svg/aura.svg
-        label: Armor (+4)
-        origin: Item.yq5AhONJLd10H9EI
-        tint: null
-        transfer: true
-        _key: >-
-          !actors.items.effects!QsYmnq73AiR6BwhD.RDjcmGM0lIqKpHUO.PS0f9cwh4yZcYyBo
-    folder: null
-    permission:
-      default: 0
-    _key: '!actors.items!QsYmnq73AiR6BwhD.RDjcmGM0lIqKpHUO'
-  - _id: LKxM2YXkNPmaj31J
-    name: Attaque à mains nues
-    type: customAttack
-    img: systems/torgeternity/images/icons/fist-icon.webp
-    data:
-      description: ''
-      attackWith: unarmedCombat
-      damageType: strengthPlus
-      damage: 0
-      ap: 0
-      notes: ''
-      chatNote: ''
-    effects: []
-    folder: null
-    sort: 0
-    permission:
-      default: 0
-      zWX19sSAtAWkeGhp: 3
-    flags:
-      core:
-        sourceId: Item.BFGjhDetVDm1xiku
-    _key: '!actors.items!QsYmnq73AiR6BwhD.LKxM2YXkNPmaj31J'
-effects:
-  - _id: xcPZLZIBGvMvU25Z
-    flags: {}
-    changes:
-      - key: data.attributes.strength
-        mode: 2
-        value: '2'
-    disabled: false
-    duration:
-      startTime: 0
-    icon: icons/svg/aura.svg
-    label: Force de géant (+2)
-    origin: Actor.ZAjg9c3hJQtwFKOa.OwnedItem.W80yHGyLWk5wrLJW
+    attenuation: 0.5
+  texture:
+    src: systems/torgeternity/images/characters/Dragon_Warrior.Token.webp
     tint: null
-    transfer: true
-    _key: '!actors.effects!QsYmnq73AiR6BwhD.xcPZLZIBGvMvU25Z'
-  - _id: faY4cFOXcFgttCeH
-    flags: {}
-    changes:
-      - key: data.other.armor
-        mode: 2
-        value: '4'
-      - key: data.other.toughness
-        mode: 2
-        value: '4'
-    disabled: false
-    duration:
-      startTime: 0
-    icon: icons/svg/aura.svg
-    label: Armure (+4)
-    origin: Actor.ZAjg9c3hJQtwFKOa.OwnedItem.RDjcmGM0lIqKpHUO
-    tint: null
-    transfer: true
-    _key: '!actors.effects!QsYmnq73AiR6BwhD.faY4cFOXcFgttCeH'
-folder: null
-sort: 100001
-permission:
-  default: 0
-  A9LyAqagoJJU3gDH: 3
-flags:
-  core:
-    sheetClass: torgeternity.torgeternityActorSheet
+    scaleX: 1
+    scaleY: 1
+    offsetX: 0
+    offsetY: 0
+    rotation: 0
+  sight:
+    angle: 360
+    enabled: false
+    range: 0
+    brightness: 1
+    visionMode: basic
+    attenuation: 0.1
+    saturation: 0
+    contrast: 0
+  appendNumber: false
+  prependAdjective: false
+  detectionModes: []
+_stats:
+  systemId: torgeternity
+  systemVersion: 3.8.1
+  coreVersion: '11.315'
+  createdTime: 1716827809381
+  modifiedTime: 1716827809381
+  lastModifiedBy: VAnYow5sWS9EJzo0
 _key: '!actors!QsYmnq73AiR6BwhD'
 

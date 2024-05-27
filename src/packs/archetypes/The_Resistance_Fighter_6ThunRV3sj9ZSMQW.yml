@@ -16,9 +16,10 @@ items:
     system:
       cosm: (None)
       description: <p>Five reloads for Thav 9.</p>
-      techlevel: 22
       price: '0'
+      techlevel: 22
       value: 0
+      equippedClass: item-equipped
     ownership:
       default: 0
     _stats:
@@ -42,8 +43,6 @@ items:
     system:
       category: leadership
       cosm: (None)
-      prerequisites: Charisma 8+, at least one add in reality
-      timestaken: 1
       description: >-
         <p>A true leader can empower his allies with a stern gaze, a short
         speech, or some other act that steels their resolve against adverse
@@ -59,69 +58,70 @@ items:
         <p>&nbsp;</p>
 
         <p>Found in <strong>Core Rules</strong></p>
+      prerequisites: Charisma 8+, at least one add in reality
+      generalContradiction: false
       pulpPowers:
-        enhancementNumber: 0
         enhancement01:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement02:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement03:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement04:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement05:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement06:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement07:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement08:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement09:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement10:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement11:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement12:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement13:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement14:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement15:
-          title: ''
           description: ''
           taken: false
-        limitationNumber: 0
+          title: ''
+        enhancementNumber: 0
         limitation01: ''
         limitation02: ''
         limitation03: ''
@@ -132,6 +132,8 @@ items:
         limitation08: ''
         limitation09: ''
         limitation10: ''
+        limitationNumber: 0
+      timestaken: '1'
     ownership:
       default: 0
       A9LyAqagoJJU3gDH: 3
@@ -157,8 +159,6 @@ items:
     system:
       category: psionics
       cosm: Other
-      prerequisites: At least one add in kinesis, precognition, or telepathy
-      timestaken: 1
       description: >-
         <p><strong>Cosms:</strong> Core Earth, Pan-Pacifica, Tharkold</p>
 
@@ -183,69 +183,70 @@ items:
         <p>&nbsp;</p>
 
         <p>Found in <strong>Core Rules</strong></p>
+      prerequisites: At least one add in kinesis, precognition, or telepathy
+      generalContradiction: false
       pulpPowers:
-        enhancementNumber: 0
         enhancement01:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement02:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement03:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement04:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement05:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement06:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement07:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement08:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement09:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement10:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement11:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement12:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement13:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement14:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement15:
-          title: ''
           description: ''
           taken: false
-        limitationNumber: 0
+          title: ''
+        enhancementNumber: 0
         limitation01: ''
         limitation02: ''
         limitation03: ''
@@ -256,6 +257,8 @@ items:
         limitation08: ''
         limitation09: ''
         limitation10: ''
+        limitationNumber: 0
+      timestaken: '1'
     ownership:
       default: 0
       A9LyAqagoJJU3gDH: 3
@@ -291,19 +294,21 @@ items:
         <p>&nbsp;</p>
 
         <p>Found in <strong>Core Rules</strong></p>
-      techlevel: 25
       price: '500'
+      techlevel: 25
       value: 13
-      attackWith: fireCombat
-      damageType: flat
-      damage: 13
-      ap: 0
       ammo:
         max: 60
         value: 60
-      range: 25 / 50 / 100
-      notes: Short Burst
+      ap: 0
+      attackWith: fireCombat
       chatNote: ''
+      damage: 13
+      damageType: flat
+      equipped: false
+      equippedClass: .item-unequipped
+      notes: Short Burst
+      range: 25 / 50 / 100
     ownership:
       default: 0
       A9LyAqagoJJU3gDH: 3
@@ -329,9 +334,10 @@ items:
     system:
       cosm: Nile Empire
       description: <p>Found in <strong>Core Rules</strong></p>
-      techlevel: 20
       price: '5'
+      techlevel: 20
       value: 4
+      equippedClass: item-equipped
     ownership:
       default: 0
       A9LyAqagoJJU3gDH: 3
@@ -364,9 +370,10 @@ items:
         <p>&nbsp;</p>
 
         <p>Found in <strong>Core Rules</strong></p>
-      techlevel: 14
       price: '40'
+      techlevel: 14
       value: 8
+      equippedClass: item-equipped
     ownership:
       default: 0
       A9LyAqagoJJU3gDH: 3
@@ -386,11 +393,11 @@ items:
     effects:
       - _id: Ia7plVLXPnVYMFje
         changes:
-          - key: system.attributes.dexterity
+          - key: system.attributes.dexterity.value
             mode: 2
             value: '1'
             priority: null
-          - key: system.attributes.strength
+          - key: system.attributes.strength.value
             mode: 2
             value: '1'
             priority: null
@@ -415,11 +422,11 @@ items:
           !actors.items.effects!6ThunRV3sj9ZSMQW.oozJV88xl3R690JB.Ia7plVLXPnVYMFje
       - _id: yOhy1VOZFoPTiMO6
         changes:
-          - key: system.attributes.dexterity
+          - key: system.attributes.dexterity.value
             mode: 2
             value: '2'
             priority: null
-          - key: system.attributes.strength
+          - key: system.attributes.strength.value
             mode: 2
             value: '2'
             priority: null
@@ -444,11 +451,11 @@ items:
           !actors.items.effects!6ThunRV3sj9ZSMQW.oozJV88xl3R690JB.yOhy1VOZFoPTiMO6
       - _id: zGcEc05UE1p0DACi
         changes:
-          - key: system.attributes.strength
+          - key: system.attributes.strength.value
             mode: 2
             value: '-2'
             priority: null
-          - key: system.attributes.dexterity
+          - key: system.attributes.dexterity.value
             mode: 2
             value: '-2'
             priority: null
@@ -477,16 +484,12 @@ items:
       core:
         sourceId: Compendium.te001-core-rulebook.Items.E1aOVDM9yrPzXa4p
     system:
+      ap: 0
+      applyArmor: false
+      applySize: false
       axiom: 20
-      skill: kinesis
-      skilllevel: 10
       castingtime: 1 action
-      dnType: ''
-      dn: challenging
-      targetDefense: ''
-      modifier: null
-      range: Self
-      duration: 3 rounds
+      damage: ''
       description: >-
         <p>The psi builds up psychic energy and channels it through his nervous
         system, granting him increased <em>Strength</em> and <em>Dexterity</em>
@@ -502,15 +505,19 @@ items:
         <p>&nbsp;</p>
 
         <p>Found in <strong>Core Rules</strong></p>
+      dn: challenging
+      dnType: ''
+      duration: 3 rounds
       good: Strength and Dexterity increase +2
+      isAttack: false
+      modifier: ''
       outstanding: >-
         Strength and Dexterity increase +2 and the psionicist doesn’t suffer a
         penalty after the duration ends
-      isAttack: 'false'
-      damage: null
-      ap: 0
-      applySize: 'false'
-      applyArmor: 'false'
+      range: Self
+      skill: kinesis
+      skilllevel: '10'
+      targetDefense: ''
     ownership:
       default: 0
       A9LyAqagoJJU3gDH: 3
@@ -534,16 +541,12 @@ items:
       core:
         sourceId: Compendium.te001-core-rulebook.Items.W2UcfbwA52PfFsq0
     system:
+      ap: 0
+      applyArmor: false
+      applySize: false
       axiom: 25
-      skill: kinesis
-      skilllevel: 10
       castingtime: 1 action
-      dnType: ''
-      dn: easy
-      targetDefense: ''
-      modifier: null
-      range: 25 meters
-      duration: Concentration
+      damage: ''
       description: >-
         <p>Telekinesis allows a psi to move objects with her mind. The
         psi&rsquo;s <em>Spirit</em> is her <em>Strength</em> once activated, but
@@ -558,13 +561,17 @@ items:
         <p>&nbsp;</p>
 
         <p>Found in <strong>Tharkold Sourcebook, Core Rules</strong></p>
+      dn: easy
+      dnType: ''
+      duration: Concentration
       good: Range of 50 meters and add +2 to the power’s effective Strength
+      isAttack: false
+      modifier: ''
       outstanding: Range of 50 meters and add +4 to the power’s effective Strength
-      isAttack: 'false'
-      damage: null
-      ap: 0
-      applySize: 'false'
-      applyArmor: 'false'
+      range: 25 meters
+      skill: kinesis
+      skilllevel: '10'
+      targetDefense: ''
     ownership:
       default: 0
       A9LyAqagoJJU3gDH: 3
@@ -588,16 +595,12 @@ items:
       core:
         sourceId: Compendium.te001-core-rulebook.Items.3Z6PGIn3g8uZmqxl
     system:
+      ap: 0
+      applyArmor: false
+      applySize: false
       axiom: 23
-      skill: kinesis
-      skilllevel: 12
       castingtime: 1 action
-      dnType: ''
-      dn: standard
-      targetDefense: ''
-      modifier: null
-      range: Self
-      duration: Concentration
+      damage: ''
       description: >-
         <p>The psionicist wards off incoming attacks with a barrier of raw
         telekinetic energy.</p>
@@ -611,13 +614,17 @@ items:
         <p>&nbsp;</p>
 
         <p>Found in <strong>Core Rules</strong></p>
+      dn: standard
+      dnType: ''
+      duration: Concentration
       good: The bonus is increased to +2
+      isAttack: false
+      modifier: ''
       outstanding: The bonus is increased to +3
-      isAttack: 'false'
-      damage: null
-      ap: 0
-      applySize: 'false'
-      applyArmor: 'false'
+      range: Self
+      skill: kinesis
+      skilllevel: '12'
+      targetDefense: ''
     ownership:
       default: 0
       A9LyAqagoJJU3gDH: 3
@@ -647,9 +654,10 @@ items:
         <p>&nbsp;</p>
 
         <p>Found in <strong>Core Rules</strong></p>
-      techlevel: 25
       price: '100'
+      techlevel: 25
       value: 10
+      equippedClass: item-equipped
     effects: []
     flags:
       core:
@@ -680,6 +688,11 @@ items:
       core:
         sourceId: Compendium.te001-core-rulebook.grw-de-ausruestung.vBsXbuQHBLGfECPi
     system:
+      ap: 0
+      attackWith: unarmedCombat
+      chatNote: ''
+      damage: 1
+      damageType: strengthPlus
       description: >-
         <p>@UUID[Compendium.te001-core-rulebook.rules.pwneQ55M0nnDH0Us.JournalEntryPage.qKdamp4rrcX6TTt0#painful:]{Painful}</p>
 
@@ -692,12 +705,7 @@ items:
         <p>&nbsp;</p>
 
         <p>Found in <strong>Core Rules</strong></p>
-      attackWith: unarmedCombat
-      damageType: strengthPlus
-      damage: 1
-      ap: 0
       notes: Painful, Stagger
-      chatNote: ''
     ownership:
       default: 0
       ZuS1Anc9ORZov40T: 3
@@ -799,68 +807,95 @@ items:
 effects:
   - _id: lCixEDWBVYObydTz
     changes:
-      - key: data.attributes.dexterity
+      - key: system.attributes.dexterity.value
         mode: 2
         value: '1'
-      - key: data.attributes.strength
+        priority: null
+      - key: system.attributes.strength.value
         mode: 2
         value: '1'
+        priority: null
     disabled: true
     duration:
       startTime: 0
       rounds: 3
+      seconds: null
+      combat: null
+      turns: null
+      startRound: null
+      startTurn: null
     icon: icons/svg/aura.svg
-    label: Standard
     origin: Compendium.torgeternity.archetypes.6ThunRV3sj9ZSMQW.Item.HmRShmfFUF4o6cEe
     tint: null
     transfer: false
     flags: {}
+    name: Standard
+    description: ''
+    statuses: []
     _key: '!actors.effects!6ThunRV3sj9ZSMQW.lCixEDWBVYObydTz'
   - _id: Twk0lJfHvvMJ32Db
     changes:
-      - key: data.attributes.dexterity
+      - key: system.attributes.dexterity.value
         mode: 2
         value: '2'
-      - key: data.attributes.strength
+        priority: null
+      - key: system.attributes.strength.value
         mode: 2
         value: '2'
+        priority: null
     disabled: true
     duration:
       startTime: 0
       rounds: 3
+      seconds: null
+      combat: null
+      turns: null
+      startRound: null
+      startTurn: null
     icon: icons/svg/aura.svg
-    label: Good
     origin: Compendium.torgeternity.archetypes.6ThunRV3sj9ZSMQW.Item.HmRShmfFUF4o6cEe
     tint: null
     transfer: false
     flags: {}
+    name: Good
+    description: ''
+    statuses: []
     _key: '!actors.effects!6ThunRV3sj9ZSMQW.Twk0lJfHvvMJ32Db'
   - _id: uOVyiKThlM6HcfOi
     changes:
-      - key: data.attributes.strength
+      - key: system.attributes.strength.value
         mode: 2
         value: '-2'
-      - key: data.attributes.dexterity
+        priority: null
+      - key: system.attributes.dexterity.value
         mode: 2
         value: '-2'
+        priority: null
     disabled: true
     duration:
       startTime: 0
       seconds: 60
+      combat: null
+      rounds: null
+      turns: null
+      startRound: null
+      startTurn: null
     icon: icons/svg/aura.svg
-    label: Penalty
     origin: Compendium.torgeternity.archetypes.6ThunRV3sj9ZSMQW.Item.HmRShmfFUF4o6cEe
     tint: null
     transfer: false
     flags: {}
+    name: Penalty
+    description: ''
+    statuses: []
     _key: '!actors.effects!6ThunRV3sj9ZSMQW.uOVyiKThlM6HcfOi'
   - _id: 8cdSuXxDddYRYpCq
     changes:
-      - key: system.attributes.dexterity
+      - key: system.attributes.dexterity.value
         mode: 2
         value: '1'
         priority: null
-      - key: system.attributes.strength
+      - key: system.attributes.strength.value
         mode: 2
         value: '1'
         priority: null
@@ -885,11 +920,11 @@ effects:
     _key: '!actors.effects!6ThunRV3sj9ZSMQW.8cdSuXxDddYRYpCq'
   - _id: DZuBOyrPlE52fQTP
     changes:
-      - key: system.attributes.dexterity
+      - key: system.attributes.dexterity.value
         mode: 2
         value: '2'
         priority: null
-      - key: system.attributes.strength
+      - key: system.attributes.strength.value
         mode: 2
         value: '2'
         priority: null
@@ -914,11 +949,11 @@ effects:
     _key: '!actors.effects!6ThunRV3sj9ZSMQW.DZuBOyrPlE52fQTP'
   - _id: aC8NLLy68uR2lQl8
     changes:
-      - key: system.attributes.strength
+      - key: system.attributes.strength.value
         mode: 2
         value: '-2'
         priority: null
-      - key: system.attributes.dexterity
+      - key: system.attributes.dexterity.value
         mode: 2
         value: '-2'
         priority: null
@@ -952,300 +987,340 @@ system:
     max: 3
     value: 0
   attributes:
-    charisma: 8
-    dexterity: 8
-    mind: 8
-    spirit: 9
-    strength: 7
+    charisma:
+      base: 8
+    dexterity:
+      base: 8
+    mind:
+      base: 8
+    spirit:
+      base: 9
+    strength:
+      base: 7
   other:
-    move: 8
-    run: 24
-    toughness: 10
-    armor: 3
     cosm: tharkold
     possibilities: 3
-    posibilities: 3
   skills:
     airVehicles:
       baseAttribute: dexterity
-      adds: null
-      value: '-'
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 0
+      isThreatSkill: false
+      defenseOnly: false
     alteration:
       baseAttribute: mind
-      adds: null
-      value: '-'
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 0
+      isThreatSkill: false
+      defenseOnly: false
     apportation:
       baseAttribute: spirit
-      adds: null
-      value: '-'
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 0
+      isThreatSkill: false
+      defenseOnly: false
     beastRiding:
       baseAttribute: dexterity
-      adds: null
-      value: 8
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     computers:
       baseAttribute: mind
-      adds: null
-      value: 8
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     conjuration:
       baseAttribute: spirit
-      adds: null
-      value: '-'
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 0
+      isThreatSkill: false
+      defenseOnly: false
     divination:
       baseAttribute: mind
-      adds: null
-      value: '-'
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 0
+      isThreatSkill: false
+      defenseOnly: false
     dodge:
       baseAttribute: dexterity
       adds: 2
-      value: 10
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     energyWeapons:
       baseAttribute: dexterity
       adds: 1
-      value: 9
       isFav: false
       groupName: combat
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     evidenceAnalysis:
       baseAttribute: mind
-      adds: null
-      value: 8
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     faith:
       baseAttribute: spirit
-      adds: null
-      value: 9
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     find:
       baseAttribute: mind
       adds: 1
-      value: 9
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     fireCombat:
       baseAttribute: dexterity
       adds: 1
-      value: 9
       isFav: false
       groupName: combat
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     firstAid:
       baseAttribute: mind
-      adds: null
-      value: 8
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     heavyWeapons:
       baseAttribute: dexterity
-      adds: null
-      value: 8
+      adds: 0
       isFav: false
       groupName: combat
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     intimidation:
       baseAttribute: spirit
-      adds: null
-      value: 9
+      adds: 0
       isFav: false
       groupName: interaction
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     kinesis:
       baseAttribute: spirit
       adds: 3
-      value: 12
       isFav: false
       groupName: other
       unskilledUse: 0
+      isThreatSkill: false
+      defenseOnly: false
     landVehicles:
       baseAttribute: dexterity
       adds: 1
-      value: 9
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     language:
       baseAttribute: mind
-      adds: null
-      value: '-'
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 0
+      isThreatSkill: false
+      defenseOnly: false
     lockpicking:
       baseAttribute: dexterity
-      adds: null
-      value: '-'
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 0
+      isThreatSkill: false
+      defenseOnly: false
     maneuver:
       baseAttribute: dexterity
-      adds: null
-      value: 8
+      adds: 0
       isFav: false
       groupName: interaction
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     medicine:
       baseAttribute: mind
-      adds: null
-      value: '-'
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 0
+      isThreatSkill: false
+      defenseOnly: false
     meleeWeapons:
       baseAttribute: dexterity
-      adds: null
-      value: 8
+      adds: 0
       isFav: false
       groupName: combat
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     missileWeapons:
       baseAttribute: dexterity
-      adds: null
-      value: 8
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     persuasion:
       baseAttribute: charisma
-      adds: null
-      value: 8
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     precognition:
       baseAttribute: mind
-      adds: null
-      value: '-'
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 0
+      isThreatSkill: false
+      defenseOnly: false
     profession:
       baseAttribute: mind
-      adds: null
-      value: 8
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     reality:
       baseAttribute: spirit
       adds: 2
-      value: 11
       isFav: false
       groupName: other
       unskilledUse: 0
+      isThreatSkill: false
+      defenseOnly: false
     scholar:
       baseAttribute: mind
-      adds: null
-      value: 8
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     science:
       baseAttribute: mind
-      adds: null
-      value: 8
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     stealth:
       baseAttribute: dexterity
-      adds: null
-      value: 8
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     streetwise:
       baseAttribute: charisma
-      adds: null
-      value: 8
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     survival:
       baseAttribute: mind
       adds: 1
-      value: 9
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     taunt:
       baseAttribute: charisma
       adds: 1
-      value: 9
       isFav: false
       groupName: interaction
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     telepathy:
       baseAttribute: charisma
-      adds: null
-      value: '-'
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 0
+      isThreatSkill: false
+      defenseOnly: false
     tracking:
       baseAttribute: mind
-      adds: null
-      value: 8
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     trick:
       baseAttribute: mind
       adds: 1
-      value: 9
       isFav: false
       groupName: interaction
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     unarmedCombat:
       baseAttribute: dexterity
       adds: 1
-      value: 9
       isFav: false
       groupName: combat
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     waterVehicles:
       baseAttribute: dexterity
-      adds: null
-      value: 8
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     willpower:
       baseAttribute: spirit
       adds: 1
-      value: 10
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
   xp:
     unspent: 0
     earned: 0
@@ -1255,7 +1330,6 @@ system:
     spirit: 4
     tech: 25
   details:
-    clearance: alpha
     background: >-
       <p><img class="charimg"
       src="systems/torgeternity/images/characters/Resistance_Fighter.webp"
@@ -1345,11 +1419,12 @@ system:
 
       </ul>
     race: human
+    sizeBonus: normal
   editstate: false
-  fatigue: '1'
 ownership:
   default: 0
   A9LyAqagoJJU3gDH: 3
+  VAnYow5sWS9EJzo0: 3
 prototypeToken:
   flags: {}
   name: Resistance Fighter
@@ -1409,10 +1484,10 @@ prototypeToken:
   detectionModes: []
 _stats:
   systemId: torgeternity
-  systemVersion: 3.7.0
+  systemVersion: 3.8.1
   coreVersion: '11.315'
   createdTime: 1693913842164
-  modifiedTime: 1711900372239
-  lastModifiedBy: CtisFurQNe9h7ABb
+  modifiedTime: 1716827807354
+  lastModifiedBy: VAnYow5sWS9EJzo0
 _key: '!actors!6ThunRV3sj9ZSMQW'
 

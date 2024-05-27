@@ -16,9 +16,10 @@ items:
     system:
       cosm: (Keins)
       description: <p>F&uuml;nfmal Thav-9 nachladen.</p>
-      techlevel: 22
       price: '0'
+      techlevel: 22
       value: 0
+      equippedClass: item-equipped
     ownership:
       default: 0
       9Q0XnqFwko7hRlvL: 3
@@ -43,8 +44,6 @@ items:
     system:
       category: leadership
       cosm: (Keins)
-      prerequisites: Charisma 8+, mindestens 1 Fertigkeitsstufe in Realität
-      timestaken: 1
       description: >-
         <p>Ein echter Anf&uuml;hrer kann seine Verb&uuml;ndeten mit einem
         strengen Blick, eine kurze Ansprache oder einer vergleichbaren Handlung
@@ -57,69 +56,70 @@ items:
         Konfliktzeile f&uuml;r die eigene Seite vollst&auml;ndig, hat aber
         keinen Einfluss auf das Ergebnis der Gegner. Dieser Vorzug kann
         jederzeit eingesetzt werden, solange die Dramakarte noch aktiv ist.</p>
+      prerequisites: Charisma 8+, mindestens 1 Fertigkeitsstufe in Realität
+      generalContradiction: false
       pulpPowers:
-        enhancementNumber: 0
         enhancement01:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement02:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement03:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement04:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement05:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement06:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement07:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement08:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement09:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement10:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement11:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement12:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement13:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement14:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement15:
-          title: ''
           description: ''
           taken: false
-        limitationNumber: 0
+          title: ''
+        enhancementNumber: 0
         limitation01: ''
         limitation02: ''
         limitation03: ''
@@ -130,6 +130,8 @@ items:
         limitation08: ''
         limitation09: ''
         limitation10: ''
+        limitationNumber: 0
+      timestaken: '1'
     ownership:
       default: 0
       9Q0XnqFwko7hRlvL: 3
@@ -155,8 +157,6 @@ items:
     system:
       category: psionics
       cosm: (Keins)
-      prerequisites: mindestens 1 Fertigkeitsstufe in Kinese, Präkognition oder Telepathie
-      timestaken: 1
       description: >-
         <p>Psioniker bedienen sich des kollektiven Bewusstseins &ndash;
         repr&auml;sentiert durch das Sozial-Axiom &ndash;, um unglaubliche
@@ -178,69 +178,70 @@ items:
         <p><strong>Zus&auml;tzliche Psikr&auml;fte:</strong> Dieser Vorzug darf
         mehrmals gew&auml;hlt werden. Jedes Mal nach dem ersten erh&auml;lt der
         Charakter eine zus&auml;tzliche Psikraft.</p>
+      prerequisites: mindestens 1 Fertigkeitsstufe in Kinese, Präkognition oder Telepathie
+      generalContradiction: false
       pulpPowers:
-        enhancementNumber: 0
         enhancement01:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement02:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement03:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement04:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement05:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement06:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement07:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement08:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement09:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement10:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement11:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement12:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement13:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement14:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement15:
-          title: ''
           description: ''
           taken: false
-        limitationNumber: 0
+          title: ''
+        enhancementNumber: 0
         limitation01: ''
         limitation02: ''
         limitation03: ''
@@ -251,6 +252,8 @@ items:
         limitation08: ''
         limitation09: ''
         limitation10: ''
+        limitationNumber: 0
+      timestaken: '1'
     ownership:
       default: 0
       9Q0XnqFwko7hRlvL: 3
@@ -286,19 +289,21 @@ items:
         Durch eine ausgekl&uuml;gelte M&uuml;ndungsbremse wird das Problem des
         &bdquo;steigenden Laufs&ldquo; vermieden, wenn man die Waffe mit einem
         kurzen Feuersto&szlig; abfeuert.</p>
-      techlevel: 25
       price: '500'
+      techlevel: 25
       value: 13
-      attackWith: fireCombat
-      damageType: ''
-      damage: 13
-      ap: 0
       ammo:
         max: 60
         value: 60
-      range: 25/50/100
-      notes: Kurzer FS, Pistole
+      ap: 0
+      attackWith: fireCombat
       chatNote: ''
+      damage: 13
+      damageType: ''
+      equipped: false
+      equippedClass: .item-unequipped
+      notes: Kurzer FS, Pistole
+      range: 25/50/100
     ownership:
       default: 0
       9Q0XnqFwko7hRlvL: 3
@@ -355,9 +360,10 @@ items:
         ausgestreut wurden, z&auml;hlen
         <em>Man&ouml;vrieren</em>-Interaktionsangriffe in ihrem Bereich als
         Beg&uuml;nstigt.</p>
-      techlevel: 14
       price: '40'
+      techlevel: 14
       value: 8
+      equippedClass: item-equipped
     ownership:
       default: 0
       9Q0XnqFwko7hRlvL: 3
@@ -383,9 +389,10 @@ items:
     system:
       cosm: Nil-Imperium
       description: ''
-      techlevel: 20
       price: '5'
+      techlevel: 20
       value: 4
+      equippedClass: item-equipped
     ownership:
       default: 0
       9Q0XnqFwko7hRlvL: 3
@@ -405,11 +412,11 @@ items:
     effects:
       - _id: zP22qP0ffFDY2sDJ
         changes:
-          - key: system.attributes.dexterity
+          - key: system.attributes.dexterity.value
             mode: 2
             value: '1'
             priority: null
-          - key: system.attributes.strength
+          - key: system.attributes.strength.value
             mode: 2
             value: '1'
             priority: null
@@ -434,11 +441,11 @@ items:
           !actors.items.effects!XhPhxBg111Zg5bem.9I5Xe1PkXWZj34bm.zP22qP0ffFDY2sDJ
       - _id: 5XPX5RkazyhzQzWk
         changes:
-          - key: system.attributes.dexterity
+          - key: system.attributes.dexterity.value
             mode: 2
             value: '2'
             priority: null
-          - key: system.attributes.strength
+          - key: system.attributes.strength.value
             mode: 2
             value: '2'
             priority: null
@@ -463,11 +470,11 @@ items:
           !actors.items.effects!XhPhxBg111Zg5bem.9I5Xe1PkXWZj34bm.5XPX5RkazyhzQzWk
       - _id: lJHLUECNRmMVyJAU
         changes:
-          - key: system.attributes.strength
+          - key: system.attributes.strength.value
             mode: 2
             value: '-2'
             priority: null
-          - key: system.attributes.dexterity
+          - key: system.attributes.dexterity.value
             mode: 2
             value: '-2'
             priority: null
@@ -496,16 +503,12 @@ items:
       core:
         sourceId: Compendium.te001-core-rulebook.grw-de-kraefte.Item.mXwjpqF1s2QuXVp1
     system:
+      ap: 0
+      applyArmor: true
+      applySize: true
       axiom: 20
-      skill: kinesis
-      skilllevel: 10
       castingtime: 1 Aktion
-      dnType: ''
-      dn: challenging
-      targetDefense: ''
-      modifier: null
-      range: Selbst
-      duration: 3 Runden
+      damage: ''
       description: >-
         <p>Der Psioniker baut psychische Energie auf und kanalisiert sie durch
         sein Nervensystem, was seine <em>St&auml;rke </em>und
@@ -516,16 +519,20 @@ items:
         erleidet der Psioniker 2 Schock und f&uuml;r die n&auml;chste Minute
         einen Malus von &ndash;2 auf <em>St&auml;rke</em> und
         <em>Geschicklichkeit</em>.</p>
+      dn: challenging
+      dnType: ''
+      duration: 3 Runden
       good: Stärke und Geschicklichkeit erhöhen sich um +2.
+      isAttack: false
+      modifier: ''
       outstanding: >-
         Stärke und Geschicklichkeit erhöhen sich um +2 und der Psioniker
         erleidet nach Ablauf der Dauer zwar immer noch den Schockschaden, aber
         keinen Malus.
-      isAttack: 'false'
-      damage: null
-      ap: 0
-      applySize: 'true'
-      applyArmor: 'true'
+      range: Selbst
+      skill: kinesis
+      skilllevel: '10'
+      targetDefense: ''
     ownership:
       default: 0
       9Q0XnqFwko7hRlvL: 3
@@ -549,16 +556,12 @@ items:
       core:
         sourceId: Compendium.te001-core-rulebook.grw-de-kraefte.Item.OSM7EZI7JqMVUSCk
     system:
+      ap: 0
+      applyArmor: false
+      applySize: false
       axiom: 23
-      skill: kinesis
-      skilllevel: 10
       castingtime: 1 Aktion
-      dnType: ''
-      dn: easy
-      targetDefense: ''
-      modifier: null
-      range: 25 Meter
-      duration: Konzentration
+      damage: ''
       description: >-
         <p><em>Telekinese </em>erm&ouml;glicht es einem Psioniker, mit seinem
         Verstand Dinge zu bewegen. Der <em>Geist </em>des Psionikers ist die
@@ -572,13 +575,17 @@ items:
         eigenes Gewicht zu tragen. Der Psioniker darf auch &bdquo;laufen&ldquo;,
         was im &uuml;blichen Malus von &ndash;2 f&uuml;r alle anderen Aktionen
         resultiert.</p>
+      dn: easy
+      dnType: ''
+      duration: Konzentration
       good: Reichweite von 50 Metern und +2 auf die effektive Stärke der Macht.
+      isAttack: false
+      modifier: ''
       outstanding: Reichweite von 50 Metern und +4 auf die effektive Stärke der Macht.
-      isAttack: 'false'
-      damage: null
-      ap: 0
-      applySize: 'false'
-      applyArmor: 'false'
+      range: 25 Meter
+      skill: kinesis
+      skilllevel: '10'
+      targetDefense: ''
     ownership:
       default: 0
       9Q0XnqFwko7hRlvL: 3
@@ -701,16 +708,12 @@ items:
       core:
         sourceId: Compendium.te001-core-rulebook.grw-de-kraefte.Item.4wHtrSS3RwnpxeXW
     system:
+      ap: 0
+      applyArmor: false
+      applySize: false
       axiom: 23
-      skill: kinesis
-      skilllevel: 12
       castingtime: 1 Aktion
-      dnType: ''
-      dn: standard
-      targetDefense: ''
-      modifier: null
-      range: Selbst
-      duration: Konzentration
+      damage: ''
       description: >-
         <p>Der Psioniker wehrt eingehende Angriffe mit einer Barriere aus purer
         telekinetischer Energie ab.&nbsp;</p>
@@ -721,13 +724,17 @@ items:
         Effekte, sodass ein Charakter, der au&szlig;erdem noch einen echten
         Schild tr&auml;gt, nur vom h&ouml;heren der beiden Bonusse
         profitiert.</p>
+      dn: standard
+      dnType: ''
+      duration: Konzentration
       good: Der Bonus erhöht sich auf +2.
+      isAttack: false
+      modifier: ''
       outstanding: Der Bonus erhöht sich auf +3.
-      isAttack: 'false'
-      damage: null
-      ap: 0
-      applySize: 'false'
-      applyArmor: 'false'
+      range: Selbst
+      skill: kinesis
+      skilllevel: '12'
+      targetDefense: ''
     ownership:
       default: 0
       9Q0XnqFwko7hRlvL: 3
@@ -764,9 +771,10 @@ items:
         Waffenloser Kampf gef&uuml;hrt wird. Solange ein Gegner mit diesem
         Handschuh festgehalten wird, f&uuml;gt er seinen Schaden in jedem
         Spielzug automatisch zu.</p>
-      techlevel: 25
       price: '100'
+      techlevel: 25
       value: 10
+      equippedClass: item-equipped
     ownership:
       default: 0
       9Q0XnqFwko7hRlvL: 3
@@ -791,6 +799,11 @@ items:
         sourceId: >-
           Compendium.te001-core-rulebook.grw-de-ausruestung.Item.6uTlCD96kQQyfU8V
     system:
+      ap: 0
+      attackWith: unarmedCombat
+      chatNote: ''
+      damage: 1
+      damageType: strengthPlus
       description: >-
         <p>Angriff f&uuml;r
         @UUID[Compendium.te001-core-rulebook.grw-de-ausruestung.Item.e270RHGp2PiQIf7Y]{Schmerzhandschuh}</p>
@@ -803,12 +816,7 @@ items:
         Waffenloser Kampf gef&uuml;hrt wird. Solange ein Gegner mit diesem
         Handschuh festgehalten wird, f&uuml;gt er seinen Schaden in jedem
         Spielzug automatisch zu.</p>
-      attackWith: unarmedCombat
-      damageType: strengthPlus
-      damage: 1
-      ap: 0
       notes: Schmerzhaft, Erschüttern
-      chatNote: ''
     ownership:
       default: 0
       CtisFurQNe9h7ABb: 3
@@ -930,11 +938,11 @@ effects:
     _key: '!actors.effects!XhPhxBg111Zg5bem.jjB96dzmOt3gxZvg'
   - _id: IhMSck1yaj2l5x3D
     changes:
-      - key: system.attributes.dexterity
+      - key: system.attributes.dexterity.value
         mode: 2
         value: '1'
         priority: null
-      - key: system.attributes.strength
+      - key: system.attributes.strength.value
         mode: 2
         value: '1'
         priority: null
@@ -959,11 +967,11 @@ effects:
     _key: '!actors.effects!XhPhxBg111Zg5bem.IhMSck1yaj2l5x3D'
   - _id: Dp1dBAwc3uT4TnjM
     changes:
-      - key: system.attributes.dexterity
+      - key: system.attributes.dexterity.value
         mode: 2
         value: '2'
         priority: null
-      - key: system.attributes.strength
+      - key: system.attributes.strength.value
         mode: 2
         value: '2'
         priority: null
@@ -988,11 +996,11 @@ effects:
     _key: '!actors.effects!XhPhxBg111Zg5bem.Dp1dBAwc3uT4TnjM'
   - _id: vChAsfdkvuEFU4Uy
     changes:
-      - key: system.attributes.strength
+      - key: system.attributes.strength.value
         mode: 2
         value: '-2'
         priority: null
-      - key: system.attributes.dexterity
+      - key: system.attributes.dexterity.value
         mode: 2
         value: '-2'
         priority: null
@@ -1127,300 +1135,340 @@ system:
     max: 3
     value: 0
   attributes:
-    charisma: 8
-    dexterity: 8
-    mind: 8
-    spirit: 9
-    strength: 7
+    charisma:
+      base: 8
+    dexterity:
+      base: 8
+    mind:
+      base: 8
+    spirit:
+      base: 9
+    strength:
+      base: 7
   other:
-    move: 8
-    run: 24
-    toughness: 10
-    armor: 3
     cosm: tharkold
     possibilities: 3
-    posibilities: 3
   skills:
     airVehicles:
       baseAttribute: dexterity
-      adds: null
-      value: '-'
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 0
+      isThreatSkill: false
+      defenseOnly: false
     alteration:
       baseAttribute: mind
-      adds: null
-      value: '-'
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 0
+      isThreatSkill: false
+      defenseOnly: false
     apportation:
       baseAttribute: spirit
-      adds: null
-      value: '-'
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 0
+      isThreatSkill: false
+      defenseOnly: false
     beastRiding:
       baseAttribute: dexterity
-      adds: null
-      value: 8
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     computers:
       baseAttribute: mind
-      adds: null
-      value: 8
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     conjuration:
       baseAttribute: spirit
-      adds: null
-      value: '-'
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 0
+      isThreatSkill: false
+      defenseOnly: false
     divination:
       baseAttribute: mind
-      adds: null
-      value: '-'
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 0
+      isThreatSkill: false
+      defenseOnly: false
     dodge:
       baseAttribute: dexterity
       adds: 2
-      value: 10
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     energyWeapons:
       baseAttribute: dexterity
       adds: 1
-      value: 9
       isFav: false
       groupName: combat
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     evidenceAnalysis:
       baseAttribute: mind
-      adds: null
-      value: 8
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     faith:
       baseAttribute: spirit
-      adds: null
-      value: 9
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     find:
       baseAttribute: mind
       adds: 1
-      value: 9
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     fireCombat:
       baseAttribute: dexterity
       adds: 1
-      value: 9
       isFav: false
       groupName: combat
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     firstAid:
       baseAttribute: mind
-      adds: null
-      value: 8
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     heavyWeapons:
       baseAttribute: dexterity
-      adds: null
-      value: 8
+      adds: 0
       isFav: false
       groupName: combat
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     intimidation:
       baseAttribute: spirit
-      adds: null
-      value: 9
+      adds: 0
       isFav: false
       groupName: interaction
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     kinesis:
       baseAttribute: spirit
       adds: 3
-      value: 12
       isFav: false
       groupName: other
       unskilledUse: 0
+      isThreatSkill: false
+      defenseOnly: false
     landVehicles:
       baseAttribute: dexterity
       adds: 1
-      value: 9
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     language:
       baseAttribute: mind
-      adds: null
-      value: '-'
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 0
+      isThreatSkill: false
+      defenseOnly: false
     lockpicking:
       baseAttribute: dexterity
-      adds: null
-      value: '-'
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 0
+      isThreatSkill: false
+      defenseOnly: false
     maneuver:
       baseAttribute: dexterity
-      adds: null
-      value: 8
+      adds: 0
       isFav: false
       groupName: interaction
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     medicine:
       baseAttribute: mind
-      adds: null
-      value: '-'
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 0
+      isThreatSkill: false
+      defenseOnly: false
     meleeWeapons:
       baseAttribute: dexterity
-      adds: null
-      value: 8
+      adds: 0
       isFav: false
       groupName: combat
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     missileWeapons:
       baseAttribute: dexterity
-      adds: null
-      value: 8
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     persuasion:
       baseAttribute: charisma
-      adds: null
-      value: 8
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     precognition:
       baseAttribute: mind
-      adds: null
-      value: '-'
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 0
+      isThreatSkill: false
+      defenseOnly: false
     profession:
       baseAttribute: mind
-      adds: null
-      value: 8
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     reality:
       baseAttribute: spirit
       adds: 2
-      value: 11
       isFav: false
       groupName: other
       unskilledUse: 0
+      isThreatSkill: false
+      defenseOnly: false
     scholar:
       baseAttribute: mind
-      adds: null
-      value: 8
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     science:
       baseAttribute: mind
-      adds: null
-      value: 8
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     stealth:
       baseAttribute: dexterity
-      adds: null
-      value: 8
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     streetwise:
       baseAttribute: charisma
-      adds: null
-      value: 8
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     survival:
       baseAttribute: mind
       adds: 1
-      value: 9
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     taunt:
       baseAttribute: charisma
       adds: 1
-      value: 9
       isFav: false
       groupName: interaction
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     telepathy:
       baseAttribute: charisma
-      adds: null
-      value: '-'
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 0
+      isThreatSkill: false
+      defenseOnly: false
     tracking:
       baseAttribute: mind
-      adds: null
-      value: 8
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     trick:
       baseAttribute: mind
       adds: 1
-      value: 9
       isFav: false
       groupName: interaction
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     unarmedCombat:
       baseAttribute: dexterity
       adds: 1
-      value: 9
       isFav: false
       groupName: combat
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     waterVehicles:
       baseAttribute: dexterity
-      adds: null
-      value: 8
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     willpower:
       baseAttribute: spirit
       adds: 1
-      value: 10
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
   xp:
     unspent: 0
     earned: 0
@@ -1430,7 +1478,6 @@ system:
     spirit: 4
     tech: 25
   details:
-    clearance: alpha
     background: >-
       <p><img class="charimg"
       src="systems/torgeternity/images/characters/Resistance_Fighter.webp"
@@ -1528,11 +1575,12 @@ system:
 
       </ul>
     race: theRace
+    sizeBonus: normal
   editstate: false
-  fatigue: '1'
 ownership:
   default: 0
   9Q0XnqFwko7hRlvL: 3
+  VAnYow5sWS9EJzo0: 3
 prototypeToken:
   flags: {}
   name: Die Widerstandskämpferin
@@ -1592,10 +1640,10 @@ prototypeToken:
   detectionModes: []
 _stats:
   systemId: torgeternity
-  systemVersion: 3.7.0
+  systemVersion: 3.8.1
   coreVersion: '11.315'
   createdTime: 1694863252503
-  modifiedTime: 1711900196711
-  lastModifiedBy: CtisFurQNe9h7ABb
+  modifiedTime: 1716827811522
+  lastModifiedBy: VAnYow5sWS9EJzo0
 _key: '!actors!XhPhxBg111Zg5bem'
 

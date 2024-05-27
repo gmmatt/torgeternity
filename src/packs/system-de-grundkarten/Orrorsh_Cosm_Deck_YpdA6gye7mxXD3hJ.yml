@@ -5,7 +5,7 @@ description: ''
 img: >-
   systems/torgeternity/images/deutsch/cards/Cosmkarten/Orrorsh/OZZR%C3%BCckseite.webp
 cards:
-  - _id: Uy4wGiPo12Tj0MPY
+  - _id: S9w9uqcjPGwGotZe
     name: Verdammt
     description: ''
     type: cosm
@@ -24,13 +24,15 @@ cards:
     rotation: 0
     sort: 0
     flags: {}
-    system: {}
+    system:
+      cosm: ''
+      number: ''
     value: null
     width: null
     height: null
-    _key: '!cards.cards!YpdA6gye7mxXD3hJ.Uy4wGiPo12Tj0MPY'
+    _key: '!cards.cards!YpdA6gye7mxXD3hJ.S9w9uqcjPGwGotZe'
     cards: []
-  - _id: 1SdRNebA8tyvrHXK
+  - _id: hTs3wbke0E89YnQl
     name: Versuchung
     description: ''
     type: cosm
@@ -49,13 +51,15 @@ cards:
     rotation: 0
     sort: 0
     flags: {}
-    system: {}
+    system:
+      cosm: ''
+      number: ''
     value: null
     width: null
     height: null
-    _key: '!cards.cards!YpdA6gye7mxXD3hJ.1SdRNebA8tyvrHXK'
+    _key: '!cards.cards!YpdA6gye7mxXD3hJ.hTs3wbke0E89YnQl'
     cards: []
-  - _id: pZZMvlZrvWD9d5kp
+  - _id: 6VGwzGaAsk61R86J
     name: Ominöse Vorzeichen
     description: ''
     type: cosm
@@ -74,13 +78,15 @@ cards:
     rotation: 0
     sort: 0
     flags: {}
-    system: {}
+    system:
+      cosm: ''
+      number: ''
     value: null
     width: null
     height: null
-    _key: '!cards.cards!YpdA6gye7mxXD3hJ.pZZMvlZrvWD9d5kp'
+    _key: '!cards.cards!YpdA6gye7mxXD3hJ.6VGwzGaAsk61R86J'
     cards: []
-  - _id: jcYoRRQAfMdNGMWg
+  - _id: csgLfMsBdfA9J8De
     name: Schockmoment
     description: ''
     type: cosm
@@ -99,13 +105,15 @@ cards:
     rotation: 0
     sort: 0
     flags: {}
-    system: {}
+    system:
+      cosm: ''
+      number: ''
     value: null
     width: null
     height: null
-    _key: '!cards.cards!YpdA6gye7mxXD3hJ.jcYoRRQAfMdNGMWg'
+    _key: '!cards.cards!YpdA6gye7mxXD3hJ.csgLfMsBdfA9J8De'
     cards: []
-  - _id: 0CFEgYmjYy98FGjY
+  - _id: Ict0us0TvDhXP5JX
     name: Vom Tod Gezeichnet
     description: ''
     type: cosm
@@ -124,13 +132,15 @@ cards:
     rotation: 0
     sort: 0
     flags: {}
-    system: {}
+    system:
+      cosm: ''
+      number: ''
     value: null
     width: null
     height: null
-    _key: '!cards.cards!YpdA6gye7mxXD3hJ.0CFEgYmjYy98FGjY'
+    _key: '!cards.cards!YpdA6gye7mxXD3hJ.Ict0us0TvDhXP5JX'
     cards: []
-  - _id: uI9GwtWbtgcqwAaV
+  - _id: yRxan7yxw5rNjj2w
     name: Sonnenuntergang?
     description: ''
     type: cosm
@@ -149,13 +159,15 @@ cards:
     rotation: 0
     sort: 0
     flags: {}
-    system: {}
+    system:
+      cosm: ''
+      number: ''
     value: null
     width: null
     height: null
-    _key: '!cards.cards!YpdA6gye7mxXD3hJ.uI9GwtWbtgcqwAaV'
+    _key: '!cards.cards!YpdA6gye7mxXD3hJ.yRxan7yxw5rNjj2w'
     cards: []
-  - _id: zurv34bR28iioX9j
+  - _id: G0dlejV9m42ijhpm
     name: Dunkle Geheimnisse
     description: ''
     type: cosm
@@ -174,13 +186,15 @@ cards:
     rotation: 0
     sort: 0
     flags: {}
-    system: {}
+    system:
+      cosm: ''
+      number: ''
     value: null
     width: null
     height: null
-    _key: '!cards.cards!YpdA6gye7mxXD3hJ.zurv34bR28iioX9j'
+    _key: '!cards.cards!YpdA6gye7mxXD3hJ.G0dlejV9m42ijhpm'
     cards: []
-  - _id: dZ5I6j4xnWgs166O
+  - _id: OCr5sWIfgYumM3b7
     name: Unheiliges Interesse
     description: ''
     type: cosm
@@ -199,13 +213,15 @@ cards:
     rotation: 0
     sort: 0
     flags: {}
-    system: {}
+    system:
+      cosm: ''
+      number: ''
     value: null
     width: null
     height: null
-    _key: '!cards.cards!YpdA6gye7mxXD3hJ.dZ5I6j4xnWgs166O'
+    _key: '!cards.cards!YpdA6gye7mxXD3hJ.OCr5sWIfgYumM3b7'
     cards: []
-  - _id: JGXi4VdqSyE3Gghs
+  - _id: FoPTfR6Ve6lTbKYC
     name: Zeichen der Furcht
     description: ''
     type: cosm
@@ -224,13 +240,15 @@ cards:
     rotation: 0
     sort: 0
     flags: {}
-    system: {}
+    system:
+      cosm: ''
+      number: ''
     value: null
     width: null
     height: null
-    _key: '!cards.cards!YpdA6gye7mxXD3hJ.JGXi4VdqSyE3Gghs'
+    _key: '!cards.cards!YpdA6gye7mxXD3hJ.FoPTfR6Ve6lTbKYC'
     cards: []
-  - _id: SdsZVHWDK8ZXg5ps
+  - _id: cjZ1ZjmQujLWlb5m
     name: Licht aus!
     description: ''
     type: cosm
@@ -249,11 +267,13 @@ cards:
     rotation: 0
     sort: 0
     flags: {}
-    system: {}
+    system:
+      cosm: ''
+      number: ''
     value: null
     width: null
     height: null
-    _key: '!cards.cards!YpdA6gye7mxXD3hJ.SdsZVHWDK8ZXg5ps'
+    _key: '!cards.cards!YpdA6gye7mxXD3hJ.cjZ1ZjmQujLWlb5m'
     cards: []
 rotation: 0
 displayCount: false
@@ -268,14 +288,15 @@ system: {}
 ownership:
   default: 0
   1pSzpSNrhKGYYcib: 3
+  VAnYow5sWS9EJzo0: 3
 width: null
 height: null
 _stats:
-  systemId: null
-  systemVersion: null
-  coreVersion: null
-  createdTime: null
-  modifiedTime: null
-  lastModifiedBy: null
+  systemId: torgeternity
+  systemVersion: 3.8.1
+  coreVersion: '11.315'
+  createdTime: 1716827812278
+  modifiedTime: 1716827812278
+  lastModifiedBy: VAnYow5sWS9EJzo0
 _key: '!cards!YpdA6gye7mxXD3hJ'
 

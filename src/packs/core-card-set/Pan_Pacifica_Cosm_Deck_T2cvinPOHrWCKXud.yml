@@ -4,7 +4,7 @@ type: deck
 description: ''
 img: systems/torgeternity/images/cards/pan-pacifica-back.webp
 cards:
-  - _id: 3olSO8sFyEFDZrvq
+  - _id: B4ubfoOu63DSCPxl
     name: Vengeance is Mine
     description: ''
     type: cosm
@@ -23,13 +23,15 @@ cards:
     rotation: 0
     sort: 0
     flags: {}
-    system: {}
+    system:
+      cosm: ''
+      number: ''
     value: null
     width: null
     height: null
-    _key: '!cards.cards!T2cvinPOHrWCKXud.3olSO8sFyEFDZrvq'
+    _key: '!cards.cards!T2cvinPOHrWCKXud.B4ubfoOu63DSCPxl'
     cards: []
-  - _id: vUqyCz9LJDzzqBzf
+  - _id: vdjS2VY9rv3U54ld
     name: Bloodbath
     description: ''
     type: cosm
@@ -48,13 +50,15 @@ cards:
     rotation: 0
     sort: 1
     flags: {}
-    system: {}
+    system:
+      cosm: ''
+      number: ''
     value: null
     width: null
     height: null
-    _key: '!cards.cards!T2cvinPOHrWCKXud.vUqyCz9LJDzzqBzf'
+    _key: '!cards.cards!T2cvinPOHrWCKXud.vdjS2VY9rv3U54ld'
     cards: []
-  - _id: B4ZIJQShlpAe7j0V
+  - _id: 2EWx9NY8NEr0EC6T
     name: Feud!
     description: ''
     type: cosm
@@ -74,12 +78,14 @@ cards:
     sort: 2
     flags: {}
     value: null
-    system: {}
+    system:
+      cosm: ''
+      number: ''
     width: null
     height: null
-    _key: '!cards.cards!T2cvinPOHrWCKXud.B4ZIJQShlpAe7j0V'
+    _key: '!cards.cards!T2cvinPOHrWCKXud.2EWx9NY8NEr0EC6T'
     cards: []
-  - _id: MuhTvZ7HKaglybC4
+  - _id: i3vaSMOVHdu1Eoqe
     name: Mutation
     description: ''
     type: cosm
@@ -98,13 +104,15 @@ cards:
     rotation: 0
     sort: 3
     flags: {}
-    system: {}
+    system:
+      cosm: ''
+      number: ''
     value: null
     width: null
     height: null
-    _key: '!cards.cards!T2cvinPOHrWCKXud.MuhTvZ7HKaglybC4'
+    _key: '!cards.cards!T2cvinPOHrWCKXud.i3vaSMOVHdu1Eoqe'
     cards: []
-  - _id: KjS6Exs0r1wNBJpo
+  - _id: uke6GjbriDC3i5Ur
     name: Outbreak
     description: ''
     type: cosm
@@ -123,13 +131,15 @@ cards:
     rotation: 0
     sort: 4
     flags: {}
-    system: {}
+    system:
+      cosm: ''
+      number: ''
     value: null
     width: null
     height: null
-    _key: '!cards.cards!T2cvinPOHrWCKXud.KjS6Exs0r1wNBJpo'
+    _key: '!cards.cards!T2cvinPOHrWCKXud.uke6GjbriDC3i5Ur'
     cards: []
-  - _id: jO2y2RWjWGNZ9PM5
+  - _id: cYB0KWxphQBi9lJg
     name: Fists of Fury
     description: ''
     type: cosm
@@ -148,13 +158,15 @@ cards:
     rotation: 0
     sort: 5
     flags: {}
-    system: {}
+    system:
+      cosm: ''
+      number: ''
     value: null
     width: null
     height: null
-    _key: '!cards.cards!T2cvinPOHrWCKXud.jO2y2RWjWGNZ9PM5'
+    _key: '!cards.cards!T2cvinPOHrWCKXud.cYB0KWxphQBi9lJg'
     cards: []
-  - _id: fNKYsrS4VvdFS2G6
+  - _id: 7tZ6qjjxKnmtS8hk
     name: Is That a Bite?
     description: ''
     type: cosm
@@ -173,13 +185,15 @@ cards:
     rotation: 0
     sort: 6
     flags: {}
-    system: {}
+    system:
+      cosm: ''
+      number: ''
     value: null
     width: null
     height: null
-    _key: '!cards.cards!T2cvinPOHrWCKXud.fNKYsrS4VvdFS2G6'
+    _key: '!cards.cards!T2cvinPOHrWCKXud.7tZ6qjjxKnmtS8hk'
     cards: []
-  - _id: lsTytXScl2kz411M
+  - _id: AIGkQ6vMbMh57pmS
     name: You Don't Look so Good
     description: ''
     type: cosm
@@ -199,12 +213,14 @@ cards:
     sort: 7
     flags: {}
     value: null
-    system: {}
+    system:
+      cosm: ''
+      number: ''
     width: null
     height: null
-    _key: '!cards.cards!T2cvinPOHrWCKXud.lsTytXScl2kz411M'
+    _key: '!cards.cards!T2cvinPOHrWCKXud.AIGkQ6vMbMh57pmS'
     cards: []
-  - _id: rWGFHmZq3PR6ghn1
+  - _id: fLG6KOrCjCN4Rrgx
     name: Sold Out
     description: ''
     type: cosm
@@ -223,13 +239,15 @@ cards:
     rotation: 0
     sort: 8
     flags: {}
-    system: {}
+    system:
+      cosm: ''
+      number: ''
     value: null
     width: null
     height: null
-    _key: '!cards.cards!T2cvinPOHrWCKXud.rWGFHmZq3PR6ghn1'
+    _key: '!cards.cards!T2cvinPOHrWCKXud.fLG6KOrCjCN4Rrgx'
     cards: []
-  - _id: syIR8XrE7fadAaE3
+  - _id: 4aNNOCE4CgzAqz6S
     name: Hardboiled
     description: ''
     type: cosm
@@ -248,11 +266,13 @@ cards:
     rotation: 0
     sort: 9
     flags: {}
-    system: {}
+    system:
+      cosm: ''
+      number: ''
     value: null
     width: null
     height: null
-    _key: '!cards.cards!T2cvinPOHrWCKXud.syIR8XrE7fadAaE3'
+    _key: '!cards.cards!T2cvinPOHrWCKXud.4aNNOCE4CgzAqz6S'
     cards: []
 rotation: 0
 displayCount: false
@@ -272,14 +292,15 @@ system: {}
 ownership:
   default: 0
   juTas93IuPVP8p5D: 3
+  VAnYow5sWS9EJzo0: 3
 width: null
 height: null
 _stats:
-  systemId: null
-  systemVersion: null
-  coreVersion: null
-  createdTime: null
-  modifiedTime: null
-  lastModifiedBy: null
+  systemId: torgeternity
+  systemVersion: 3.8.1
+  coreVersion: '11.315'
+  createdTime: 1716827808675
+  modifiedTime: 1716827808675
+  lastModifiedBy: VAnYow5sWS9EJzo0
 _key: '!cards!T2cvinPOHrWCKXud'
 

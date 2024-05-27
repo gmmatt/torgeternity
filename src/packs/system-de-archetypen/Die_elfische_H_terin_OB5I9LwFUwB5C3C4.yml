@@ -16,74 +16,73 @@ items:
     system:
       category: racial
       cosm: Aysle
-      prerequisites: 'Volk: Elf oder Zwerg'
-      timestaken: null
       description: >-
         <p>Zwerge und Elfen ignorieren bis zu 4 Punkte an
         @UUID[Compendium.te001-core-rulebook.grw-de-grw.Qlx6yGF0Mmo6Xzrv.JournalEntryPage.41rZYYhaMC2T260D#dunkelheit]{Dunkelheitsmalussen}.</p>
+      prerequisites: 'Volk: Elf oder Zwerg'
+      generalContradiction: false
       pulpPowers:
-        enhancementNumber: 0
         enhancement01:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement02:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement03:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement04:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement05:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement06:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement07:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement08:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement09:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement10:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement11:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement12:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement13:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement14:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement15:
-          title: ''
           description: ''
           taken: false
-        limitationNumber: 0
+          title: ''
+        enhancementNumber: 0
         limitation01: ''
         limitation02: ''
         limitation03: ''
@@ -94,6 +93,8 @@ items:
         limitation08: ''
         limitation09: ''
         limitation10: ''
+        limitationNumber: 0
+      timestaken: ''
     ownership:
       default: 0
       9Q0XnqFwko7hRlvL: 3
@@ -119,8 +120,6 @@ items:
     system:
       category: racial
       cosm: Aysle
-      prerequisites: 'Volk: Elf'
-      timestaken: null
       description: >-
         <p>Elfen sind aus der Magie geboren und leiden ohne sie. Immer wenn sich
         ein Elf in einem Bereich mit einem Magie-Axiom von weniger als 12
@@ -133,69 +132,70 @@ items:
         zu einem Ersch&ouml;pfungs-Ereignis kommt: einen zus&auml;tzlichen
         f&uuml;r die besondere Eigenschaft der R&uuml;stung und einen weiteren
         wegen der Magischen Verbundenheit.</p>
+      prerequisites: 'Volk: Elf'
+      generalContradiction: false
       pulpPowers:
-        enhancementNumber: 0
         enhancement01:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement02:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement03:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement04:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement05:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement06:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement07:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement08:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement09:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement10:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement11:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement12:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement13:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement14:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement15:
-          title: ''
           description: ''
           taken: false
-        limitationNumber: 0
+          title: ''
+        enhancementNumber: 0
         limitation01: ''
         limitation02: ''
         limitation03: ''
@@ -206,6 +206,8 @@ items:
         limitation08: ''
         limitation09: ''
         limitation10: ''
+        limitationNumber: 0
+      timestaken: ''
     ownership:
       default: 0
       9Q0XnqFwko7hRlvL: 3
@@ -231,8 +233,6 @@ items:
     system:
       category: racial
       cosm: Aysle
-      prerequisites: 'Volk: Elf'
-      timestaken: null
       description: >-
         <p>Wenn du eine Probe direkt auf Geschicklichkeit ablegst, gilt diese
         als
@@ -243,69 +243,70 @@ items:
         wie zum Beispiel die Vermeidung von Sturzschaden, die Unterbrechung
         eines Gegners beim Warten oder die Verbesserung der Position bei einer
         Verfolgungsjagd zu Fu&szlig;.</p>
+      prerequisites: 'Volk: Elf'
+      generalContradiction: false
       pulpPowers:
-        enhancementNumber: 0
         enhancement01:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement02:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement03:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement04:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement05:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement06:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement07:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement08:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement09:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement10:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement11:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement12:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement13:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement14:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement15:
-          title: ''
           description: ''
           taken: false
-        limitationNumber: 0
+          title: ''
+        enhancementNumber: 0
         limitation01: ''
         limitation02: ''
         limitation03: ''
@@ -316,6 +317,8 @@ items:
         limitation08: ''
         limitation09: ''
         limitation10: ''
+        limitationNumber: 0
+      timestaken: ''
     ownership:
       default: 0
       9Q0XnqFwko7hRlvL: 3
@@ -370,8 +373,6 @@ items:
     system:
       category: elf
       cosm: Aysle
-      prerequisites: Elf
-      timestaken: 1
       description: >-
         <p>Vor Uthorions Zorn durchstreiften die elfischen W&auml;chter die
         Wildnis von Aysle, immer wachsam gegen&uuml;ber Bedrohungen f&uuml;r die
@@ -391,69 +392,70 @@ items:
         @UUID[Compendium.te001-core-rulebook.grw-de-vorzuverb.Item.K9A5acqvE1fUUeUr]{Tiergef&auml;hrte:
         Weisser Wolf}). Die W&auml;chter d&uuml;rfen Heimlichkeit und
         Spurenlesen als Beg&uuml;nstigte Fertigkeiten einsetzen.</p>
+      prerequisites: Elf
+      generalContradiction: false
       pulpPowers:
-        enhancementNumber: 0
         enhancement01:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement02:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement03:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement04:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement05:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement06:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement07:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement08:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement09:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement10:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement11:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement12:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement13:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement14:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement15:
-          title: ''
           description: ''
           taken: false
-        limitationNumber: 0
+          title: ''
+        enhancementNumber: 0
         limitation01: ''
         limitation02: ''
         limitation03: ''
@@ -464,6 +466,8 @@ items:
         limitation08: ''
         limitation09: ''
         limitation10: ''
+        limitationNumber: 0
+      timestaken: '1'
     ownership:
       default: 0
       9Q0XnqFwko7hRlvL: 3
@@ -489,8 +493,6 @@ items:
     system:
       category: elf
       cosm: Aysle
-      prerequisites: Wächter
-      timestaken: 1
       description: >-
         <p>W&auml;chter haben oft Wei&szlig;e W&ouml;lfe als Gef&auml;hrten
         (nicht als Haustiere), und vom Moment ihres B&uuml;ndnisses an leben,
@@ -525,69 +527,70 @@ items:
 
         <p>@UUID[Compendium.torgeternity.system-de-archetypen.Actor.Hy1XeUQA64WoxKxs]{Tiergef&auml;hrte:
         Wei&szlig;er Wolf}</p>
+      prerequisites: Wächter
+      generalContradiction: false
       pulpPowers:
-        enhancementNumber: 0
         enhancement01:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement02:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement03:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement04:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement05:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement06:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement07:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement08:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement09:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement10:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement11:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement12:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement13:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement14:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement15:
-          title: ''
           description: ''
           taken: false
-        limitationNumber: 0
+          title: ''
+        enhancementNumber: 0
         limitation01: ''
         limitation02: ''
         limitation03: ''
@@ -598,6 +601,8 @@ items:
         limitation08: ''
         limitation09: ''
         limitation10: ''
+        limitationNumber: 0
+      timestaken: '1'
     ownership:
       default: 0
       9Q0XnqFwko7hRlvL: 3
@@ -624,16 +629,18 @@ items:
     system:
       cosm: Aysle
       description: ''
-      techlevel: 9
       price: '120'
+      techlevel: 9
       value: 10
-      attackWith: meleeWeapons
-      damageType: strengthPlus
-      damage: 3
       ap: 0
+      attackWith: meleeWeapons
       bonus: 2
-      notes: ''
       chatNote: ''
+      damage: 3
+      damageType: strengthPlus
+      equipped: false
+      equippedClass: .item-unequipped
+      notes: ''
     ownership:
       default: 0
       9Q0XnqFwko7hRlvL: 3
@@ -666,20 +673,22 @@ items:
         Kompositbogen in seiner tats&auml;chlichen Gr&ouml;&szlig;e dem
         Kurzbogen &auml;hnelt, feuert er Pfeile mit einer h&ouml;heren
         Geschwindigkeit ab.</p>
-      techlevel: 13
       price: '200'
+      techlevel: 13
       value: 11
-      attackWith: missileWeapons
-      damageType: flat
-      damage: 13
-      ap: 0
       ammo:
         max: 1
         value: 1
-      minStrength: 7
-      range: 20/40/80
-      notes: ''
+      ap: 0
+      attackWith: missileWeapons
       chatNote: ''
+      damage: 13
+      damageType: flat
+      equipped: false
+      equippedClass: .item-unequipped
+      minStrength: '7'
+      notes: ''
+      range: 20/40/80
     ownership:
       default: 0
       9Q0XnqFwko7hRlvL: 3
@@ -705,9 +714,10 @@ items:
     system:
       cosm: Aysle
       description: ''
-      techlevel: 8
       price: '15'
+      techlevel: 8
       value: 6
+      equippedClass: item-equipped
     ownership:
       default: 0
       9Q0XnqFwko7hRlvL: 3
@@ -733,9 +743,10 @@ items:
     system:
       cosm: Aysle
       description: ''
-      techlevel: 7
       price: '5'
+      techlevel: 7
       value: 4
+      equippedClass: item-equipped
     ownership:
       default: 0
       9Q0XnqFwko7hRlvL: 3
@@ -765,9 +776,10 @@ items:
         <p>Ben&ouml;tigt ein Magie-Axiom von 13, um zu wirken. Das Trinken des
         Tranks ist eine einfache Aktion und er regeneriert 1 Wunde und
         Schockschaden in H&ouml;he eines Bonusw&uuml;rfels.</p>
-      techlevel: 12
       price: '500'
+      techlevel: 12
       value: 14
+      equippedClass: item-equipped
     ownership:
       default: 0
       9Q0XnqFwko7hRlvL: 3
@@ -835,300 +847,340 @@ system:
     max: 3
     value: 0
   attributes:
-    charisma: 8
-    dexterity: 10
-    mind: 7
-    spirit: 8
-    strength: 7
+    charisma:
+      base: 8
+    dexterity:
+      base: 10
+    mind:
+      base: 7
+    spirit:
+      base: 8
+    strength:
+      base: 7
   other:
-    move: 5
-    run: 5
-    toughness: 5
-    armor: 0
     cosm: aysle
     possibilities: 3
-    posibilities: 3
   skills:
     airVehicles:
       baseAttribute: dexterity
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 0
+      isThreatSkill: false
+      defenseOnly: false
     alteration:
       baseAttribute: mind
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 0
+      isThreatSkill: false
+      defenseOnly: false
     apportation:
       baseAttribute: spirit
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 0
+      isThreatSkill: false
+      defenseOnly: false
     beastRiding:
       baseAttribute: dexterity
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     computers:
       baseAttribute: mind
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     conjuration:
       baseAttribute: spirit
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 0
+      isThreatSkill: false
+      defenseOnly: false
     divination:
       baseAttribute: mind
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 0
+      isThreatSkill: false
+      defenseOnly: false
     dodge:
       baseAttribute: dexterity
       adds: 2
-      value: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     energyWeapons:
       baseAttribute: dexterity
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: combat
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     evidenceAnalysis:
       baseAttribute: mind
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     faith:
       baseAttribute: spirit
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     find:
       baseAttribute: mind
       adds: 2
-      value: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     fireCombat:
       baseAttribute: dexterity
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: combat
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     firstAid:
       baseAttribute: mind
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     heavyWeapons:
       baseAttribute: dexterity
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: combat
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     intimidation:
       baseAttribute: spirit
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: interaction
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     kinesis:
       baseAttribute: spirit
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 0
+      isThreatSkill: false
+      defenseOnly: false
     landVehicles:
       baseAttribute: dexterity
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     language:
       baseAttribute: mind
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 0
+      isThreatSkill: false
+      defenseOnly: false
     lockpicking:
       baseAttribute: dexterity
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 0
+      isThreatSkill: false
+      defenseOnly: false
     maneuver:
       baseAttribute: dexterity
       adds: 1
-      value: 0
       isFav: false
       groupName: interaction
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     medicine:
       baseAttribute: mind
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 0
+      isThreatSkill: false
+      defenseOnly: false
     meleeWeapons:
       baseAttribute: dexterity
       adds: 1
-      value: 0
       isFav: false
       groupName: combat
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     missileWeapons:
       baseAttribute: dexterity
       adds: 3
-      value: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     persuasion:
       baseAttribute: charisma
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     precognition:
       baseAttribute: mind
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 0
+      isThreatSkill: false
+      defenseOnly: false
     profession:
       baseAttribute: mind
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     reality:
       baseAttribute: spirit
       adds: 1
-      value: 0
       isFav: false
       groupName: other
       unskilledUse: 0
+      isThreatSkill: false
+      defenseOnly: false
     scholar:
       baseAttribute: mind
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     science:
       baseAttribute: mind
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     stealth:
       baseAttribute: dexterity
       adds: 2
-      value: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     streetwise:
       baseAttribute: charisma
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     survival:
       baseAttribute: mind
       adds: 1
-      value: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     taunt:
       baseAttribute: charisma
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: interaction
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     telepathy:
       baseAttribute: charisma
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 0
+      isThreatSkill: false
+      defenseOnly: false
     tracking:
       baseAttribute: mind
       adds: 2
-      value: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     trick:
       baseAttribute: mind
       adds: 1
-      value: 0
       isFav: false
       groupName: interaction
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     unarmedCombat:
       baseAttribute: dexterity
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: combat
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     waterVehicles:
       baseAttribute: dexterity
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     willpower:
       baseAttribute: spirit
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
   xp:
     unspent: 0
     earned: 0
@@ -1138,7 +1190,6 @@ system:
     spirit: 18
     tech: 14
   details:
-    clearance: ''
     background: >-
       <p><img class="charimg"
       src="systems/torgeternity/images/characters/Elven_Warden.webp" alt=""
@@ -1236,11 +1287,12 @@ system:
 
       </ul>
     race: elf
+    sizeBonus: normal
   editstate: false
-  fatigue: '1'
 ownership:
   default: 0
   9Q0XnqFwko7hRlvL: 3
+  VAnYow5sWS9EJzo0: 3
 prototypeToken:
   flags: {}
   name: Die elfische Hüterin
@@ -1300,10 +1352,10 @@ prototypeToken:
   detectionModes: []
 _stats:
   systemId: torgeternity
-  systemVersion: 3.7.0
+  systemVersion: 3.8.1
   coreVersion: '11.315'
   createdTime: 1694866454541
-  modifiedTime: 1711900172071
-  lastModifiedBy: CtisFurQNe9h7ABb
+  modifiedTime: 1716827811304
+  lastModifiedBy: VAnYow5sWS9EJzo0
 _key: '!actors!OB5I9LwFUwB5C3C4'
 

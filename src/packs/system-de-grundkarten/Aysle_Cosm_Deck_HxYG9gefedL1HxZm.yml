@@ -5,7 +5,7 @@ description: ''
 img: >-
   systems/torgeternity/images/deutsch/cards/Cosmkarten/Aysle/AZZR%C3%BCckseite.webp
 cards:
-  - _id: e7jtTg7n37QzBiux
+  - _id: mKWzHnVvV1MEKYfb
     name: Glücklicher Fund
     description: ''
     type: cosm
@@ -24,13 +24,15 @@ cards:
     rotation: 0
     sort: 0
     flags: {}
-    system: {}
+    system:
+      cosm: ''
+      number: ''
     value: null
     width: null
     height: null
-    _key: '!cards.cards!HxYG9gefedL1HxZm.e7jtTg7n37QzBiux'
+    _key: '!cards.cards!HxYG9gefedL1HxZm.mKWzHnVvV1MEKYfb'
     cards: []
-  - _id: zyXmaU6Jl08hThOh
+  - _id: z0amJFSuOrPcyiZT
     name: Stell dich mir!
     description: ''
     type: cosm
@@ -49,13 +51,15 @@ cards:
     rotation: 0
     sort: 0
     flags: {}
-    system: {}
+    system:
+      cosm: ''
+      number: ''
     value: null
     width: null
     height: null
-    _key: '!cards.cards!HxYG9gefedL1HxZm.zyXmaU6Jl08hThOh'
+    _key: '!cards.cards!HxYG9gefedL1HxZm.z0amJFSuOrPcyiZT'
     cards: []
-  - _id: yqiGcagjOnu27pax
+  - _id: Cd61yQTdY6UGjbCb
     name: Falle!
     description: ''
     type: cosm
@@ -74,13 +78,15 @@ cards:
     rotation: 0
     sort: 0
     flags: {}
-    system: {}
+    system:
+      cosm: ''
+      number: ''
     value: null
     width: null
     height: null
-    _key: '!cards.cards!HxYG9gefedL1HxZm.yqiGcagjOnu27pax'
+    _key: '!cards.cards!HxYG9gefedL1HxZm.Cd61yQTdY6UGjbCb'
     cards: []
-  - _id: Og42iz1bqSn3ORJB
+  - _id: KaenbfVmrvf7Yyrh
     name: Intrige bei Hofe
     description: ''
     type: cosm
@@ -99,13 +105,15 @@ cards:
     rotation: 0
     sort: 0
     flags: {}
-    system: {}
+    system:
+      cosm: ''
+      number: ''
     value: null
     width: null
     height: null
-    _key: '!cards.cards!HxYG9gefedL1HxZm.Og42iz1bqSn3ORJB'
+    _key: '!cards.cards!HxYG9gefedL1HxZm.KaenbfVmrvf7Yyrh'
     cards: []
-  - _id: vXIkUPM9Azqc3Cnu
+  - _id: mfjpkgcHpnw0Bc9X
     name: Minne
     description: ''
     type: cosm
@@ -124,13 +132,15 @@ cards:
     rotation: 0
     sort: 0
     flags: {}
-    system: {}
+    system:
+      cosm: ''
+      number: ''
     value: null
     width: null
     height: null
-    _key: '!cards.cards!HxYG9gefedL1HxZm.vXIkUPM9Azqc3Cnu'
+    _key: '!cards.cards!HxYG9gefedL1HxZm.mfjpkgcHpnw0Bc9X'
     cards: []
-  - _id: uqFDhVHMpGaK8bLT
+  - _id: tFgqZ7lK0nvh5Kx4
     name: Wütendes Monster
     description: ''
     type: cosm
@@ -149,13 +159,15 @@ cards:
     rotation: 0
     sort: 0
     flags: {}
-    system: {}
+    system:
+      cosm: ''
+      number: ''
     value: null
     width: null
     height: null
-    _key: '!cards.cards!HxYG9gefedL1HxZm.uqFDhVHMpGaK8bLT'
+    _key: '!cards.cards!HxYG9gefedL1HxZm.tFgqZ7lK0nvh5Kx4'
     cards: []
-  - _id: wbzvYbj09UZJaIB9
+  - _id: waKSj1yrSqPpKGuU
     name: Launenhafte Magie
     description: ''
     type: cosm
@@ -174,13 +186,15 @@ cards:
     rotation: 0
     sort: 0
     flags: {}
-    system: {}
+    system:
+      cosm: ''
+      number: ''
     value: null
     width: null
     height: null
-    _key: '!cards.cards!HxYG9gefedL1HxZm.wbzvYbj09UZJaIB9'
+    _key: '!cards.cards!HxYG9gefedL1HxZm.waKSj1yrSqPpKGuU'
     cards: []
-  - _id: jLn5sfSGekQFFJA8
+  - _id: AC1YuA9EsCwazXVg
     name: Plündert die Leiche!
     description: ''
     type: cosm
@@ -199,13 +213,15 @@ cards:
     rotation: 0
     sort: 0
     flags: {}
-    system: {}
+    system:
+      cosm: ''
+      number: ''
     value: null
     width: null
     height: null
-    _key: '!cards.cards!HxYG9gefedL1HxZm.jLn5sfSGekQFFJA8'
+    _key: '!cards.cards!HxYG9gefedL1HxZm.AC1YuA9EsCwazXVg'
     cards: []
-  - _id: QihPQ0IUNoEwAxE6
+  - _id: QePgJmjn8eSTzoj7
     name: Manawelle
     description: ''
     type: cosm
@@ -224,13 +240,15 @@ cards:
     rotation: 0
     sort: 0
     flags: {}
-    system: {}
+    system:
+      cosm: ''
+      number: ''
     value: null
     width: null
     height: null
-    _key: '!cards.cards!HxYG9gefedL1HxZm.QihPQ0IUNoEwAxE6'
+    _key: '!cards.cards!HxYG9gefedL1HxZm.QePgJmjn8eSTzoj7'
     cards: []
-  - _id: 9eJ3DJaRtkMr7czL
+  - _id: G9z6cbNqZyZvS8uq
     name: Finderlohn
     description: ''
     type: cosm
@@ -249,11 +267,13 @@ cards:
     rotation: 0
     sort: 0
     flags: {}
-    system: {}
+    system:
+      cosm: ''
+      number: ''
     value: null
     width: null
     height: null
-    _key: '!cards.cards!HxYG9gefedL1HxZm.9eJ3DJaRtkMr7czL'
+    _key: '!cards.cards!HxYG9gefedL1HxZm.G9z6cbNqZyZvS8uq'
     cards: []
 rotation: 0
 displayCount: false
@@ -268,14 +288,15 @@ system: {}
 ownership:
   default: 0
   1pSzpSNrhKGYYcib: 3
+  VAnYow5sWS9EJzo0: 3
 width: null
 height: null
 _stats:
-  systemId: null
-  systemVersion: null
-  coreVersion: null
-  createdTime: null
-  modifiedTime: null
-  lastModifiedBy: null
+  systemId: torgeternity
+  systemVersion: 3.8.1
+  coreVersion: '11.315'
+  createdTime: 1716827812079
+  modifiedTime: 1716827812079
+  lastModifiedBy: VAnYow5sWS9EJzo0
 _key: '!cards!HxYG9gefedL1HxZm'
 

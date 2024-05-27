@@ -10,7 +10,7 @@ items:
     effects:
       - _id: f2JWdwbhbJvpsKrD
         changes:
-          - key: system.attributes.charisma
+          - key: system.attributes.charisma.value
             mode: 2
             value: '-2'
             priority: null
@@ -35,7 +35,7 @@ items:
           !actors.items.effects!KXfP2nOG8VVWBOtA.qE0o186bev0OqQzx.f2JWdwbhbJvpsKrD
       - _id: VrgAUC1Dbz6Q4Tbv
         changes:
-          - key: system.attributes.charisma
+          - key: system.attributes.charisma.value
             mode: 2
             value: '-4'
             priority: null
@@ -60,7 +60,7 @@ items:
           !actors.items.effects!KXfP2nOG8VVWBOtA.qE0o186bev0OqQzx.VrgAUC1Dbz6Q4Tbv
       - _id: OQZO2ch75NTrTXb8
         changes:
-          - key: system.attributes.dexterity
+          - key: system.attributes.dexterity.value
             mode: 2
             value: '-2'
             priority: null
@@ -85,7 +85,7 @@ items:
           !actors.items.effects!KXfP2nOG8VVWBOtA.qE0o186bev0OqQzx.OQZO2ch75NTrTXb8
       - _id: QbYvk1nwAbB35Bq4
         changes:
-          - key: system.attributes.dexterity
+          - key: system.attributes.dexterity.value
             mode: 2
             value: '-4'
             priority: null
@@ -110,7 +110,7 @@ items:
           !actors.items.effects!KXfP2nOG8VVWBOtA.qE0o186bev0OqQzx.QbYvk1nwAbB35Bq4
       - _id: 12QorISRnTO0FjbA
         changes:
-          - key: system.attributes.spirit
+          - key: system.attributes.spirit.value
             mode: 2
             value: '-2'
             priority: null
@@ -135,7 +135,7 @@ items:
           !actors.items.effects!KXfP2nOG8VVWBOtA.qE0o186bev0OqQzx.12QorISRnTO0FjbA
       - _id: ihtY6Btd2iVH5YsL
         changes:
-          - key: system.attributes.spirit
+          - key: system.attributes.spirit.value
             mode: 2
             value: '-4'
             priority: null
@@ -160,7 +160,7 @@ items:
           !actors.items.effects!KXfP2nOG8VVWBOtA.qE0o186bev0OqQzx.ihtY6Btd2iVH5YsL
       - _id: mLzTECSfDeB90Bjl
         changes:
-          - key: system.attributes.strength
+          - key: system.attributes.strength.value
             mode: 2
             value: '-2'
             priority: null
@@ -185,7 +185,7 @@ items:
           !actors.items.effects!KXfP2nOG8VVWBOtA.qE0o186bev0OqQzx.mLzTECSfDeB90Bjl
       - _id: fBRtfDnee2agz1Q0
         changes:
-          - key: system.attributes.strength
+          - key: system.attributes.strength.value
             mode: 2
             value: '-4'
             priority: null
@@ -210,7 +210,7 @@ items:
           !actors.items.effects!KXfP2nOG8VVWBOtA.qE0o186bev0OqQzx.fBRtfDnee2agz1Q0
       - _id: xNiOrmHBTh7EEMRT
         changes:
-          - key: system.attributes.mind
+          - key: system.attributes.mind.value
             mode: 2
             value: '-2'
             priority: null
@@ -235,7 +235,7 @@ items:
           !actors.items.effects!KXfP2nOG8VVWBOtA.qE0o186bev0OqQzx.xNiOrmHBTh7EEMRT
       - _id: iP4o52UvQgw4HeZb
         changes:
-          - key: system.attributes.mind
+          - key: system.attributes.mind.value
             mode: 2
             value: '-4'
             priority: null
@@ -264,16 +264,12 @@ items:
       core:
         sourceId: Compendium.te001-core-rulebook.grw-de-kraefte.Item.dnvTmgrdRgrEjvo9
     system:
+      ap: 0
+      applyArmor: false
+      applySize: false
       axiom: 10
-      skill: alteration
-      skilllevel: 12
       castingtime: 1 Aktion
-      dnType: ''
-      dn: targetWillpower
-      targetDefense: ''
-      modifier: null
-      range: 40 Meter
-      duration: 3 Runden
+      damage: ''
       description: >-
         <p>Dieser Zauber verringert einen Attributswert des Ziels (das beim
         Wirken des Zauberspruchs ausgew&auml;hlt wird) und alle mit diesem
@@ -288,16 +284,20 @@ items:
 
         <p>Ein Reduzieren von <em>St&auml;rke </em>oder <em>Geist </em>reduziert
         nicht die Robustheit oder die Schock-Obergrenze.</p>
+      dn: targetWillpower
+      dnType: ''
+      duration: 3 Runden
       good: Die Reduktion verbessert sich auf –4.
+      isAttack: false
+      modifier: ''
       outstanding: >-
         Wie Erfolgsstufe Gut. Außerdem darf das Ziel nicht erneut würfeln, wenn
         es bei seinem Würfelwurf auf das betroffene Attribut oder eine damit
         verknüpfte Fertigkeit eine „20“ würfelt.
-      isAttack: 'false'
-      damage: null
-      ap: 0
-      applySize: 'false'
-      applyArmor: 'false'
+      range: 40 Meter
+      skill: alteration
+      skilllevel: '12'
+      targetDefense: ''
     ownership:
       default: 0
       9Q0XnqFwko7hRlvL: 3
@@ -317,7 +317,7 @@ items:
     effects:
       - _id: DXbQbmNucVZeQKYj
         changes:
-          - key: system.attributes.charisma
+          - key: system.attributes.charisma.value
             mode: 2
             value: '1'
             priority: null
@@ -342,7 +342,7 @@ items:
           !actors.items.effects!KXfP2nOG8VVWBOtA.AMJ9OkBjQS4QpLhe.DXbQbmNucVZeQKYj
       - _id: 4dckc260FfpAJPeI
         changes:
-          - key: system.attributes.charisma
+          - key: system.attributes.charisma.value
             mode: 2
             value: '2'
             priority: null
@@ -367,7 +367,7 @@ items:
           !actors.items.effects!KXfP2nOG8VVWBOtA.AMJ9OkBjQS4QpLhe.4dckc260FfpAJPeI
       - _id: 18yyJkHaakz4kNCd
         changes:
-          - key: system.attributes.charisma
+          - key: system.attributes.charisma.value
             mode: 2
             value: '3'
             priority: null
@@ -392,7 +392,7 @@ items:
           !actors.items.effects!KXfP2nOG8VVWBOtA.AMJ9OkBjQS4QpLhe.18yyJkHaakz4kNCd
       - _id: yK7JajJXKT8l0Asp
         changes:
-          - key: system.attributes.spirit
+          - key: system.attributes.spirit.value
             mode: 2
             value: '1'
             priority: null
@@ -417,7 +417,7 @@ items:
           !actors.items.effects!KXfP2nOG8VVWBOtA.AMJ9OkBjQS4QpLhe.yK7JajJXKT8l0Asp
       - _id: S5YDTVPWhviBwmgm
         changes:
-          - key: system.attributes.spirit
+          - key: system.attributes.spirit.value
             mode: 2
             value: '2'
             priority: null
@@ -442,7 +442,7 @@ items:
           !actors.items.effects!KXfP2nOG8VVWBOtA.AMJ9OkBjQS4QpLhe.S5YDTVPWhviBwmgm
       - _id: pj8KEhYaye1rdEXE
         changes:
-          - key: system.attributes.spirit
+          - key: system.attributes.spirit.value
             mode: 2
             value: '3'
             priority: null
@@ -467,7 +467,7 @@ items:
           !actors.items.effects!KXfP2nOG8VVWBOtA.AMJ9OkBjQS4QpLhe.pj8KEhYaye1rdEXE
       - _id: wwX5rq0JRjLhpMqZ
         changes:
-          - key: system.attributes.dexterity
+          - key: system.attributes.dexterity.value
             mode: 2
             value: '1'
             priority: null
@@ -492,7 +492,7 @@ items:
           !actors.items.effects!KXfP2nOG8VVWBOtA.AMJ9OkBjQS4QpLhe.wwX5rq0JRjLhpMqZ
       - _id: QN67oulRfWCrguUa
         changes:
-          - key: system.attributes.dexterity
+          - key: system.attributes.dexterity.value
             mode: 2
             value: '2'
             priority: null
@@ -517,7 +517,7 @@ items:
           !actors.items.effects!KXfP2nOG8VVWBOtA.AMJ9OkBjQS4QpLhe.QN67oulRfWCrguUa
       - _id: K8PH2l1fkPT3QvyS
         changes:
-          - key: system.attributes.dexterity
+          - key: system.attributes.dexterity.value
             mode: 2
             value: '3'
             priority: null
@@ -542,7 +542,7 @@ items:
           !actors.items.effects!KXfP2nOG8VVWBOtA.AMJ9OkBjQS4QpLhe.K8PH2l1fkPT3QvyS
       - _id: DaoN51oDtHCtfdkN
         changes:
-          - key: system.attributes.strength
+          - key: system.attributes.strength.value
             mode: 2
             value: '1'
             priority: null
@@ -567,7 +567,7 @@ items:
           !actors.items.effects!KXfP2nOG8VVWBOtA.AMJ9OkBjQS4QpLhe.DaoN51oDtHCtfdkN
       - _id: VJyQKPPr7FkVXlt1
         changes:
-          - key: system.attributes.strength
+          - key: system.attributes.strength.value
             mode: 2
             value: '2'
             priority: null
@@ -592,7 +592,7 @@ items:
           !actors.items.effects!KXfP2nOG8VVWBOtA.AMJ9OkBjQS4QpLhe.VJyQKPPr7FkVXlt1
       - _id: l48dcM2AUbNvSemz
         changes:
-          - key: system.attributes.strength
+          - key: system.attributes.strength.value
             mode: 2
             value: '3'
             priority: null
@@ -617,7 +617,7 @@ items:
           !actors.items.effects!KXfP2nOG8VVWBOtA.AMJ9OkBjQS4QpLhe.l48dcM2AUbNvSemz
       - _id: JUcjhiMwzUSwf3IX
         changes:
-          - key: system.attributes.mind
+          - key: system.attributes.mind.value
             mode: 2
             value: '1'
             priority: null
@@ -642,7 +642,7 @@ items:
           !actors.items.effects!KXfP2nOG8VVWBOtA.AMJ9OkBjQS4QpLhe.JUcjhiMwzUSwf3IX
       - _id: gsUg3xvOp3OIC9qy
         changes:
-          - key: system.attributes.mind
+          - key: system.attributes.mind.value
             mode: 2
             value: '2'
             priority: null
@@ -667,7 +667,7 @@ items:
           !actors.items.effects!KXfP2nOG8VVWBOtA.AMJ9OkBjQS4QpLhe.gsUg3xvOp3OIC9qy
       - _id: Rn1xkBRucD9PzCMC
         changes:
-          - key: system.attributes.mind
+          - key: system.attributes.mind.value
             mode: 2
             value: '3'
             priority: null
@@ -696,16 +696,12 @@ items:
       core:
         sourceId: Compendium.te001-core-rulebook.grw-de-kraefte.Item.373rRZieSUiFDMNo
     system:
+      ap: 0
+      applyArmor: false
+      applySize: false
       axiom: 10
-      skill: alteration
-      skilllevel: 12
       castingtime: 1 Aktion
-      dnType: ''
-      dn: targetCharisma
-      targetDefense: ''
-      modifier: null
-      range: 40 Meter
-      duration: 3 Runden
+      damage: ''
       description: >-
         <p>Schwierigkeit ist das&nbsp;<strong>Zielattribut!</strong></p>
 
@@ -727,13 +723,17 @@ items:
         Knacken der Kn&ouml;chel, um die <em>Geschicklichkeit </em>zu
         verbessern, ein Spannen der Muskeln, um die St&auml;rke zu erh&ouml;hen,
         und so weiter.</p>
+      dn: targetCharisma
+      dnType: ''
+      duration: 3 Runden
       good: Das Attribut wird um +2 erhöht.
+      isAttack: false
+      modifier: ''
       outstanding: Das Attribut wird um +3 erhöht.
-      isAttack: 'false'
-      damage: null
-      ap: 0
-      applySize: 'false'
-      applyArmor: 'false'
+      range: 40 Meter
+      skill: alteration
+      skilllevel: '12'
+      targetDefense: ''
     ownership:
       default: 0
       9Q0XnqFwko7hRlvL: 3
@@ -757,16 +757,12 @@ items:
       core:
         sourceId: Compendium.te001-core-rulebook.grw-de-kraefte.Item.4Vc4cb3K1prH1zQy
     system:
+      ap: 0
+      applyArmor: false
+      applySize: false
       axiom: 9
-      skill: alteration
-      skilllevel: 10
       castingtime: 1 Aktion
-      dnType: ''
-      dn: standard
-      targetDefense: ''
-      modifier: null
-      range: 50 Meter Radius
-      duration: 10 Minuten
+      damage: ''
       description: >-
         <p>Haupts&auml;chlich im &Uuml;berwachungsstaat des Cyberpontifikates
         eingesetzt, verbirgt der Zerhacker alle Personen in seinem
@@ -775,16 +771,20 @@ items:
         <p>Die Video- und Ton-Aufzeichnungen der betroffenen Ger&auml;te sind
         unscharf und lassen keine Identifizierungen zu, und die Eigenschaften
         von Smartmunition und Augmented-Reality-HUDs werden negiert.</p>
+      dn: standard
+      dnType: ''
+      duration: 10 Minuten
       good: Die Reichweite erhöht sich auf 100 Meter.
+      isAttack: false
+      modifier: ''
       outstanding: >-
         Wie Erfolgsstufe Gut. Außerdem erhöht sich die Dauer auf 1 Stunde und
         die betroffenen Video- und Ton-Aufzeichnungen werden vollständig
         gelöscht.
-      isAttack: 'false'
-      damage: null
-      ap: 0
-      applySize: 'false'
-      applyArmor: 'false'
+      range: 50 Meter Radius
+      skill: alteration
+      skilllevel: '10'
+      targetDefense: ''
     ownership:
       default: 0
       9Q0XnqFwko7hRlvL: 3
@@ -818,19 +818,21 @@ items:
         Dieben eine Predigt zu halten, falls sie gestohlen wird. Die Waffe kann
         per Sprachbefehl dazu veranlasst werden, zwischen verschiedenen
         Munitionstypen zu wechseln, falls mehr als ein Typ geladen ist.</p>
-      techlevel: 26
       price: '450'
+      techlevel: 26
       value: 13
-      attackWith: fireCombat
-      damageType: ''
-      damage: 15
-      ap: 0
       ammo:
         max: 25
         value: 25
-      range: 10/25/40
-      notes: ''
+      ap: 0
+      attackWith: fireCombat
       chatNote: ''
+      damage: 15
+      damageType: ''
+      equipped: false
+      equippedClass: .item-unequipped
+      notes: ''
+      range: 10/25/40
     ownership:
       default: 0
       9Q0XnqFwko7hRlvL: 3
@@ -856,9 +858,10 @@ items:
     system:
       cosm: Nil-Imperium
       description: <p>Gegen blendendes Licht.</p>
-      techlevel: 20
       price: '25'
+      techlevel: 20
       value: 7
+      equippedClass: item-equipped
     ownership:
       default: 0
       9Q0XnqFwko7hRlvL: 3
@@ -899,10 +902,11 @@ items:
         Energie verschwindet sp&auml;testens nach einer Minute (sechs Runden),
         also muss sie innerhalb dieses Zeitraums verbraucht werden, oder der
         Bonus geht verloren.</p>
-      techlevel: 26
       price: '10000'
+      techlevel: 26
       value: 20
       notes: Ignorierter Schock wird zu Proben-Bonus
+      equippedClass: item-equipped
     ownership:
       default: 0
       9Q0XnqFwko7hRlvL: 3
@@ -928,8 +932,6 @@ items:
     system:
       category: cyberware
       cosm: Cyberpontifikat
-      prerequisites: keine
-      timestaken: null
       description: >-
         <p>Wenn dieser Vorzug ausgew&auml;hlt wird, darf der Charakter Cyberware
         im Wert von bis zu 10.000 $ von der
@@ -952,69 +954,70 @@ items:
         <p>Weitere Implantate: Dieser Vorzug kann mehr als einmal erworben
         werden. F&uuml;r jedes weitere Mal nach dem ersten, erh&auml;lt der
         Besitzer Implantate im Wert von weiteren 5.000 $.</p>
+      prerequisites: keine
+      generalContradiction: false
       pulpPowers:
-        enhancementNumber: 0
         enhancement01:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement02:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement03:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement04:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement05:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement06:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement07:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement08:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement09:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement10:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement11:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement12:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement13:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement14:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement15:
-          title: ''
           description: ''
           taken: false
-        limitationNumber: 0
+          title: ''
+        enhancementNumber: 0
         limitation01: ''
         limitation02: ''
         limitation03: ''
@@ -1025,6 +1028,8 @@ items:
         limitation08: ''
         limitation09: ''
         limitation10: ''
+        limitationNumber: 0
+      timestaken: ''
     ownership:
       default: 0
       9Q0XnqFwko7hRlvL: 3
@@ -1050,10 +1055,6 @@ items:
     system:
       category: spellcraft
       cosm: (Keins)
-      prerequisites: >-
-        mindestens 1 Fertigkeitsstufe in Apportation, Beschwörung, Verwandlung
-        oder Wahrsagung
-      timestaken: null
       description: >-
         <p>Diejenigen, die sich in die arkanen K&uuml;nste vertiefen, haben
         viele Namen: Magier, Zauberer, Hexe oder Hexenmeister, um nur ein paar
@@ -1068,69 +1069,72 @@ items:
         von Zauberspr&uuml;chen wird im Kapitel
         @UUID[Compendium.te001-core-rulebook.grw-de-grw.Qlx6yGF0Mmo6Xzrv.JournalEntryPage.02e9AX4pa6YNYFI0]{Kapitel
         7: Magie} genauer erkl&auml;rt.</p>
+      prerequisites: >-
+        mindestens 1 Fertigkeitsstufe in Apportation, Beschwörung, Verwandlung
+        oder Wahrsagung
+      generalContradiction: false
       pulpPowers:
-        enhancementNumber: 0
         enhancement01:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement02:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement03:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement04:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement05:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement06:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement07:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement08:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement09:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement10:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement11:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement12:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement13:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement14:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement15:
-          title: ''
           description: ''
           taken: false
-        limitationNumber: 0
+          title: ''
+        enhancementNumber: 0
         limitation01: ''
         limitation02: ''
         limitation03: ''
@@ -1141,6 +1145,8 @@ items:
         limitation08: ''
         limitation09: ''
         limitation10: ''
+        limitationNumber: 0
+      timestaken: ''
     ownership:
       default: 0
       9Q0XnqFwko7hRlvL: 3
@@ -1198,7 +1204,7 @@ items:
 effects:
   - _id: xNBx8sd8jMvU0rJV
     changes:
-      - key: system.attributes.charisma
+      - key: system.attributes.charisma.value
         mode: 2
         value: '-2'
         priority: null
@@ -1223,7 +1229,7 @@ effects:
     _key: '!actors.effects!KXfP2nOG8VVWBOtA.xNBx8sd8jMvU0rJV'
   - _id: 88SUj651XBtbNOPt
     changes:
-      - key: system.attributes.charisma
+      - key: system.attributes.charisma.value
         mode: 2
         value: '-4'
         priority: null
@@ -1248,7 +1254,7 @@ effects:
     _key: '!actors.effects!KXfP2nOG8VVWBOtA.88SUj651XBtbNOPt'
   - _id: 3hDHHj46iA8IhbrC
     changes:
-      - key: system.attributes.dexterity
+      - key: system.attributes.dexterity.value
         mode: 2
         value: '-2'
         priority: null
@@ -1273,7 +1279,7 @@ effects:
     _key: '!actors.effects!KXfP2nOG8VVWBOtA.3hDHHj46iA8IhbrC'
   - _id: BrfBrUSbwL86eOZi
     changes:
-      - key: system.attributes.dexterity
+      - key: system.attributes.dexterity.value
         mode: 2
         value: '-4'
         priority: null
@@ -1298,7 +1304,7 @@ effects:
     _key: '!actors.effects!KXfP2nOG8VVWBOtA.BrfBrUSbwL86eOZi'
   - _id: EQtWGtlZFRP1NeYn
     changes:
-      - key: system.attributes.spirit
+      - key: system.attributes.spirit.value
         mode: 2
         value: '-2'
         priority: null
@@ -1323,7 +1329,7 @@ effects:
     _key: '!actors.effects!KXfP2nOG8VVWBOtA.EQtWGtlZFRP1NeYn'
   - _id: 9qaOaCelaSnMVKju
     changes:
-      - key: system.attributes.spirit
+      - key: system.attributes.spirit.value
         mode: 2
         value: '-4'
         priority: null
@@ -1348,7 +1354,7 @@ effects:
     _key: '!actors.effects!KXfP2nOG8VVWBOtA.9qaOaCelaSnMVKju'
   - _id: Cnu4exIWwx6TlcoY
     changes:
-      - key: system.attributes.strength
+      - key: system.attributes.strength.value
         mode: 2
         value: '-2'
         priority: null
@@ -1373,7 +1379,7 @@ effects:
     _key: '!actors.effects!KXfP2nOG8VVWBOtA.Cnu4exIWwx6TlcoY'
   - _id: UYHeBeRmWAIiNqJf
     changes:
-      - key: system.attributes.strength
+      - key: system.attributes.strength.value
         mode: 2
         value: '-4'
         priority: null
@@ -1398,7 +1404,7 @@ effects:
     _key: '!actors.effects!KXfP2nOG8VVWBOtA.UYHeBeRmWAIiNqJf'
   - _id: Oy5vGqYTZTSV37eW
     changes:
-      - key: system.attributes.mind
+      - key: system.attributes.mind.value
         mode: 2
         value: '-2'
         priority: null
@@ -1423,7 +1429,7 @@ effects:
     _key: '!actors.effects!KXfP2nOG8VVWBOtA.Oy5vGqYTZTSV37eW'
   - _id: u9sOeiGLb5U9IGgV
     changes:
-      - key: system.attributes.mind
+      - key: system.attributes.mind.value
         mode: 2
         value: '-4'
         priority: null
@@ -1448,7 +1454,7 @@ effects:
     _key: '!actors.effects!KXfP2nOG8VVWBOtA.u9sOeiGLb5U9IGgV'
   - _id: WWe2wAufzDgPK7sQ
     changes:
-      - key: system.attributes.charisma
+      - key: system.attributes.charisma.value
         mode: 2
         value: '1'
         priority: null
@@ -1473,7 +1479,7 @@ effects:
     _key: '!actors.effects!KXfP2nOG8VVWBOtA.WWe2wAufzDgPK7sQ'
   - _id: Xk43fWcYOBwG020y
     changes:
-      - key: system.attributes.charisma
+      - key: system.attributes.charisma.value
         mode: 2
         value: '2'
         priority: null
@@ -1498,7 +1504,7 @@ effects:
     _key: '!actors.effects!KXfP2nOG8VVWBOtA.Xk43fWcYOBwG020y'
   - _id: Pw0a2bMXmcWYgt1y
     changes:
-      - key: system.attributes.charisma
+      - key: system.attributes.charisma.value
         mode: 2
         value: '3'
         priority: null
@@ -1523,7 +1529,7 @@ effects:
     _key: '!actors.effects!KXfP2nOG8VVWBOtA.Pw0a2bMXmcWYgt1y'
   - _id: 0xVZuOBdsTYLt9sj
     changes:
-      - key: system.attributes.spirit
+      - key: system.attributes.spirit.value
         mode: 2
         value: '1'
         priority: null
@@ -1548,7 +1554,7 @@ effects:
     _key: '!actors.effects!KXfP2nOG8VVWBOtA.0xVZuOBdsTYLt9sj'
   - _id: N0xmW4LS6KMpWbt9
     changes:
-      - key: system.attributes.spirit
+      - key: system.attributes.spirit.value
         mode: 2
         value: '2'
         priority: null
@@ -1573,7 +1579,7 @@ effects:
     _key: '!actors.effects!KXfP2nOG8VVWBOtA.N0xmW4LS6KMpWbt9'
   - _id: 7ZwTZIUJqN3ULVde
     changes:
-      - key: system.attributes.spirit
+      - key: system.attributes.spirit.value
         mode: 2
         value: '3'
         priority: null
@@ -1598,7 +1604,7 @@ effects:
     _key: '!actors.effects!KXfP2nOG8VVWBOtA.7ZwTZIUJqN3ULVde'
   - _id: igBoC0cs8B2WN6ko
     changes:
-      - key: system.attributes.dexterity
+      - key: system.attributes.dexterity.value
         mode: 2
         value: '1'
         priority: null
@@ -1623,7 +1629,7 @@ effects:
     _key: '!actors.effects!KXfP2nOG8VVWBOtA.igBoC0cs8B2WN6ko'
   - _id: xK03SnxJtareCXKG
     changes:
-      - key: system.attributes.dexterity
+      - key: system.attributes.dexterity.value
         mode: 2
         value: '2'
         priority: null
@@ -1648,7 +1654,7 @@ effects:
     _key: '!actors.effects!KXfP2nOG8VVWBOtA.xK03SnxJtareCXKG'
   - _id: cU3htfAbj2sGFaWG
     changes:
-      - key: system.attributes.dexterity
+      - key: system.attributes.dexterity.value
         mode: 2
         value: '3'
         priority: null
@@ -1673,7 +1679,7 @@ effects:
     _key: '!actors.effects!KXfP2nOG8VVWBOtA.cU3htfAbj2sGFaWG'
   - _id: yk85FzWpfF8MhZd7
     changes:
-      - key: system.attributes.strength
+      - key: system.attributes.strength.value
         mode: 2
         value: '1'
         priority: null
@@ -1698,7 +1704,7 @@ effects:
     _key: '!actors.effects!KXfP2nOG8VVWBOtA.yk85FzWpfF8MhZd7'
   - _id: E0HdjnJaSOvzjJsI
     changes:
-      - key: system.attributes.strength
+      - key: system.attributes.strength.value
         mode: 2
         value: '2'
         priority: null
@@ -1723,7 +1729,7 @@ effects:
     _key: '!actors.effects!KXfP2nOG8VVWBOtA.E0HdjnJaSOvzjJsI'
   - _id: dcWS78qrXUpVg14s
     changes:
-      - key: system.attributes.strength
+      - key: system.attributes.strength.value
         mode: 2
         value: '3'
         priority: null
@@ -1748,7 +1754,7 @@ effects:
     _key: '!actors.effects!KXfP2nOG8VVWBOtA.dcWS78qrXUpVg14s'
   - _id: l4AQc97dXwvnbYnJ
     changes:
-      - key: system.attributes.mind
+      - key: system.attributes.mind.value
         mode: 2
         value: '1'
         priority: null
@@ -1773,7 +1779,7 @@ effects:
     _key: '!actors.effects!KXfP2nOG8VVWBOtA.l4AQc97dXwvnbYnJ'
   - _id: z2CgckzKKfb7QosU
     changes:
-      - key: system.attributes.mind
+      - key: system.attributes.mind.value
         mode: 2
         value: '2'
         priority: null
@@ -1798,7 +1804,7 @@ effects:
     _key: '!actors.effects!KXfP2nOG8VVWBOtA.z2CgckzKKfb7QosU'
   - _id: C7CvOZhWpth0kQZl
     changes:
-      - key: system.attributes.mind
+      - key: system.attributes.mind.value
         mode: 2
         value: '3'
         priority: null
@@ -1834,300 +1840,340 @@ system:
     max: 3
     value: 0
   attributes:
-    charisma: 7
-    dexterity: 8
-    mind: 10
-    spirit: 9
-    strength: 6
+    charisma:
+      base: 7
+    dexterity:
+      base: 8
+    mind:
+      base: 10
+    spirit:
+      base: 9
+    strength:
+      base: 6
   other:
-    move: 5
-    run: 5
-    toughness: 5
-    armor: 0
     cosm: cyberpapacy
     possibilities: 3
-    posibilities: 3
   skills:
     airVehicles:
       baseAttribute: dexterity
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 0
+      isThreatSkill: false
+      defenseOnly: false
     alteration:
       baseAttribute: mind
       adds: 3
-      value: 0
       isFav: false
       groupName: other
       unskilledUse: 0
+      isThreatSkill: false
+      defenseOnly: false
     apportation:
       baseAttribute: spirit
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 0
+      isThreatSkill: false
+      defenseOnly: false
     beastRiding:
       baseAttribute: dexterity
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     computers:
       baseAttribute: mind
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     conjuration:
       baseAttribute: spirit
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 0
+      isThreatSkill: false
+      defenseOnly: false
     divination:
       baseAttribute: mind
       adds: 2
-      value: 0
       isFav: false
       groupName: other
       unskilledUse: 0
+      isThreatSkill: false
+      defenseOnly: false
     dodge:
       baseAttribute: dexterity
       adds: 2
-      value: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     energyWeapons:
       baseAttribute: dexterity
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: combat
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     evidenceAnalysis:
       baseAttribute: mind
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     faith:
       baseAttribute: spirit
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     find:
       baseAttribute: mind
       adds: 1
-      value: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     fireCombat:
       baseAttribute: dexterity
       adds: 1
-      value: 0
       isFav: false
       groupName: combat
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     firstAid:
       baseAttribute: mind
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     heavyWeapons:
       baseAttribute: dexterity
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: combat
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     intimidation:
       baseAttribute: spirit
       adds: 1
-      value: 0
       isFav: false
       groupName: interaction
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     kinesis:
       baseAttribute: spirit
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 0
+      isThreatSkill: false
+      defenseOnly: false
     landVehicles:
       baseAttribute: dexterity
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     language:
       baseAttribute: mind
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 0
+      isThreatSkill: false
+      defenseOnly: false
     lockpicking:
       baseAttribute: dexterity
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 0
+      isThreatSkill: false
+      defenseOnly: false
     maneuver:
       baseAttribute: dexterity
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: interaction
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     medicine:
       baseAttribute: mind
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 0
+      isThreatSkill: false
+      defenseOnly: false
     meleeWeapons:
       baseAttribute: dexterity
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: combat
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     missileWeapons:
       baseAttribute: dexterity
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     persuasion:
       baseAttribute: charisma
       adds: 1
-      value: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     precognition:
       baseAttribute: mind
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 0
+      isThreatSkill: false
+      defenseOnly: false
     profession:
       baseAttribute: mind
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     reality:
       baseAttribute: spirit
       adds: 1
-      value: 0
       isFav: false
       groupName: other
       unskilledUse: 0
+      isThreatSkill: false
+      defenseOnly: false
     scholar:
       baseAttribute: mind
       adds: 1
-      value: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     science:
       baseAttribute: mind
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     stealth:
       baseAttribute: dexterity
       adds: 1
-      value: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     streetwise:
       baseAttribute: charisma
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     survival:
       baseAttribute: mind
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     taunt:
       baseAttribute: charisma
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: interaction
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     telepathy:
       baseAttribute: charisma
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 0
+      isThreatSkill: false
+      defenseOnly: false
     tracking:
       baseAttribute: mind
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     trick:
       baseAttribute: mind
       adds: 1
-      value: 0
       isFav: false
       groupName: interaction
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     unarmedCombat:
       baseAttribute: dexterity
       adds: 1
-      value: 0
       isFav: false
       groupName: combat
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     waterVehicles:
       baseAttribute: dexterity
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     willpower:
       baseAttribute: spirit
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
   xp:
     unspent: 0
     earned: 0
@@ -2137,7 +2183,6 @@ system:
     spirit: 16
     tech: 26
   details:
-    clearance: ''
     background: >-
       <p><img class="charimg"
       src="systems/torgeternity/images/characters/cyberwitch.webp" alt=""
@@ -2235,11 +2280,12 @@ system:
 
       </ul>
     race: human
+    sizeBonus: normal
   editstate: false
-  fatigue: '1'
 ownership:
   default: 0
   9Q0XnqFwko7hRlvL: 3
+  VAnYow5sWS9EJzo0: 3
 prototypeToken:
   flags: {}
   name: Die Cyber-Hexe
@@ -2299,10 +2345,10 @@ prototypeToken:
   detectionModes: []
 _stats:
   systemId: torgeternity
-  systemVersion: 3.7.0
+  systemVersion: 3.8.1
   coreVersion: '11.315'
   createdTime: 1694865921702
-  modifiedTime: 1711900160807
-  lastModifiedBy: CtisFurQNe9h7ABb
+  modifiedTime: 1716827811166
+  lastModifiedBy: VAnYow5sWS9EJzo0
 _key: '!actors!KXfP2nOG8VVWBOtA'
 

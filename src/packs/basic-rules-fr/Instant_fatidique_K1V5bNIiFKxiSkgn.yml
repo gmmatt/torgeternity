@@ -1,19 +1,53 @@
 _id: K1V5bNIiFKxiSkgn
 name: Instant fatidique
-content: >-
-  <p>Un personnage devient un chevalier des tempêtes lorsqu'il réagit de manière
-  héroïque à un moment de crise. Par exemple, il peut risquer sa vie pour sauver
-  d'autres personnes, ou affronter une créature deux fois plus grande que lui
-  pour sauver la vie de quelqu'un. Lorsque cela se produit, l'énergie brute se
-  déverse dans le héros et il acquiert la capacité de plier la réalité à sa
-  propre volonté.</p>
 folder: null
 sort: 0
-permission:
-  kz1RJu8vrAPmTUwN: 3
 flags:
   core:
     sourceId: JournalEntry.Aoe0PfUhPkuwfiNR
-pages: []
+pages:
+  - name: Instant fatidique
+    type: text
+    title:
+      show: false
+      level: 1
+    text:
+      format: 1
+      content: >-
+        <p>Un personnage devient un chevalier des tempêtes lorsqu'il réagit de
+        manière héroïque à un moment de crise. Par exemple, il peut risquer sa
+        vie pour sauver d'autres personnes, ou affronter une créature deux fois
+        plus grande que lui pour sauver la vie de quelqu'un. Lorsque cela se
+        produit, l'énergie brute se déverse dans le héros et il acquiert la
+        capacité de plier la réalité à sa propre volonté.</p>
+    _id: LvsKmXZtRh1KI02k
+    image: {}
+    video:
+      controls: true
+      volume: 0.5
+    src: null
+    system: {}
+    sort: 0
+    ownership:
+      default: -1
+    flags: {}
+    _stats:
+      systemId: null
+      systemVersion: null
+      coreVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+    _key: '!journal.pages!K1V5bNIiFKxiSkgn.LvsKmXZtRh1KI02k'
+ownership:
+  kz1RJu8vrAPmTUwN: 3
+  VAnYow5sWS9EJzo0: 3
+_stats:
+  systemId: torgeternity
+  systemVersion: 3.8.1
+  coreVersion: '11.315'
+  createdTime: 1716827810190
+  modifiedTime: 1716827810190
+  lastModifiedBy: VAnYow5sWS9EJzo0
 _key: '!journal!K1V5bNIiFKxiSkgn'
 
