@@ -2,7 +2,534 @@ _id: sPLt8RBL1hieic6p
 name: La chasseuse primitive
 type: stormknight
 img: systems/torgeternity/images/characters/Primitive_Hunter.Avatar.webp
-data:
+items:
+  - _id: xNbAv1yLOKLJxM1E
+    name: Compagnon animal (Chat à dents de sabre)
+    type: perk
+    sort: 100001
+    flags:
+      core:
+        sourceId: Item.FqVsqSep5SeNqgM5
+    img: systems/torgeternity/images/icons/perk.webp
+    effects: []
+    folder: null
+    system:
+      category: savagery
+      cosm: Terre vivante
+      description: >-
+        <p>Les grands tigres de la Terre Vivante sont de redoutables
+        pr&eacute;dateurs capables de vaincre n&rsquo;importe quelle
+        cr&eacute;ature &agrave; l&rsquo;exception des plus grands dinosaures.
+        Il existe une sous-esp&egrave;ce un peu plus petite de f&eacute;lins qui
+        semble plus appr&eacute;cier de voyager avec les humains et les edeinos
+        que de les manger.</p>
+
+        <p>Cet Atout octroie au h&eacute;ros un chat &agrave; dents de sabre
+        comme compagnon. Il est aussi intelligent que le chien le mieux
+        dress&eacute;, ce qui signifie qu&rsquo;il peut ob&eacute;ir &agrave;
+        des instructions simples comme attaquer un adversaire
+        d&eacute;sign&eacute;, d&eacute;fendre une personne ou un lieu
+        pr&eacute;cis et attendre ou aller &agrave; un endroit que le personnage
+        a identifi&eacute;.</p>
+
+        <p>Le joueur contr&ocirc;le l&rsquo;animal. Le MJ n&rsquo;en prend le
+        contr&ocirc;le que si l&rsquo;animal est perturb&eacute;,
+        maltrait&eacute; ou qu&rsquo;il agit seul.</p>
+
+        <p>La b&ecirc;te n&rsquo;a pas de Possibilit&eacute;s mais le personnage
+        peut utiliser ses propres Possibilit&eacute;s (et ses Cartes de
+        Destin)&nbsp; pour la cr&eacute;ature m&ecirc;me s&rsquo;ils sont
+        s&eacute;par&eacute;s.</p>
+
+        <p>Si l&rsquo;animal est vaincu, il doit &ecirc;tre
+        consid&eacute;r&eacute; neutralis&eacute; au lieu d&rsquo;&ecirc;tre
+        tu&eacute;. Il revient au d&eacute;but de l&rsquo;Acte suivant.Si sa
+        mort est in&eacute;vitable, le personnage doit revenir dans la Terre
+        Vivante et passer plusieurs nuits dans la jungle pour reforger un lien
+        avec un nouveau compagnon.</p>
+      prerequisites: Charisma 8+
+      generalContradiction: false
+      pulpPowers:
+        enhancement01:
+          description: ''
+          taken: false
+          title: ''
+        enhancement02:
+          description: ''
+          taken: false
+          title: ''
+        enhancement03:
+          description: ''
+          taken: false
+          title: ''
+        enhancement04:
+          description: ''
+          taken: false
+          title: ''
+        enhancement05:
+          description: ''
+          taken: false
+          title: ''
+        enhancement06:
+          description: ''
+          taken: false
+          title: ''
+        enhancement07:
+          description: ''
+          taken: false
+          title: ''
+        enhancement08:
+          description: ''
+          taken: false
+          title: ''
+        enhancement09:
+          description: ''
+          taken: false
+          title: ''
+        enhancement10:
+          description: ''
+          taken: false
+          title: ''
+        enhancement11:
+          description: ''
+          taken: false
+          title: ''
+        enhancement12:
+          description: ''
+          taken: false
+          title: ''
+        enhancement13:
+          description: ''
+          taken: false
+          title: ''
+        enhancement14:
+          description: ''
+          taken: false
+          title: ''
+        enhancement15:
+          description: ''
+          taken: false
+          title: ''
+        enhancementNumber: 0
+        limitation01: ''
+        limitation02: ''
+        limitation03: ''
+        limitation04: ''
+        limitation05: ''
+        limitation06: ''
+        limitation07: ''
+        limitation08: ''
+        limitation09: ''
+        limitation10: ''
+        limitationNumber: 0
+      timestaken: '1'
+    ownership:
+      default: 0
+    _stats:
+      systemId: null
+      systemVersion: null
+      coreVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+    _key: '!actors.items!sPLt8RBL1hieic6p.xNbAv1yLOKLJxM1E'
+  - _id: TXRJ5Hx0I1MN1Ci4
+    name: Implacable
+    type: perk
+    sort: 200001
+    flags:
+      core:
+        sourceId: Item.DsqhT4kTf01FBNRU
+    img: systems/torgeternity/images/icons/perk.webp
+    effects: []
+    folder: null
+    system:
+      category: prowess
+      cosm: (Sans cosm)
+      description: >-
+        <p>Les combattants les plus f&eacute;roces frappent avec toute leur
+        &eacute;nergie.</p>
+
+        <p>Quand un personnage r&eacute;ussit &agrave; utiliser l&rsquo;option
+        Attaque totale en m&ecirc;l&eacute;e, il peut choisir d&rsquo;encaisser
+        3 points de Choc pour ajouter 1 D&eacute; Bonus aux dommages
+        inflig&eacute;s. Cet effet est cumulatif avec les bonus aux dommages
+        normaux accompagnant un succ&egrave;s Sup&eacute;rieur ou Spectaculaire.
+        Le combattant&nbsp; doit pouvoir encaisser les points de Choc&nbsp;
+        suppl&eacute;mentaires pour que cette capacit&eacute; fonctionne.</p>
+      prerequisites: force 10+
+      generalContradiction: false
+      pulpPowers:
+        enhancement01:
+          description: ''
+          taken: false
+          title: ''
+        enhancement02:
+          description: ''
+          taken: false
+          title: ''
+        enhancement03:
+          description: ''
+          taken: false
+          title: ''
+        enhancement04:
+          description: ''
+          taken: false
+          title: ''
+        enhancement05:
+          description: ''
+          taken: false
+          title: ''
+        enhancement06:
+          description: ''
+          taken: false
+          title: ''
+        enhancement07:
+          description: ''
+          taken: false
+          title: ''
+        enhancement08:
+          description: ''
+          taken: false
+          title: ''
+        enhancement09:
+          description: ''
+          taken: false
+          title: ''
+        enhancement10:
+          description: ''
+          taken: false
+          title: ''
+        enhancement11:
+          description: ''
+          taken: false
+          title: ''
+        enhancement12:
+          description: ''
+          taken: false
+          title: ''
+        enhancement13:
+          description: ''
+          taken: false
+          title: ''
+        enhancement14:
+          description: ''
+          taken: false
+          title: ''
+        enhancement15:
+          description: ''
+          taken: false
+          title: ''
+        enhancementNumber: 0
+        limitation01: ''
+        limitation02: ''
+        limitation03: ''
+        limitation04: ''
+        limitation05: ''
+        limitation06: ''
+        limitation07: ''
+        limitation08: ''
+        limitation09: ''
+        limitation10: ''
+        limitationNumber: 0
+      timestaken: '1'
+    ownership:
+      default: 0
+    _stats:
+      systemId: null
+      systemVersion: null
+      coreVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+    _key: '!actors.items!sPLt8RBL1hieic6p.TXRJ5Hx0I1MN1Ci4'
+  - _id: Py9XbkHtiMeVAivQ
+    name: Torche
+    type: gear
+    sort: 2200000
+    flags:
+      core:
+        sourceId: Item.TE2jmWDyTxhRulgk
+    img: systems/torgeternity/images/icons/gear.webp
+    effects: []
+    folder: null
+    system:
+      cosm: Terre-Vivante
+      description: <p>&Eacute;claire</p>
+      price: '5'
+      techlevel: 2
+      value: 4
+      equippedClass: item-equipped
+    ownership:
+      default: 0
+    _stats:
+      systemId: null
+      systemVersion: null
+      coreVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+    _key: '!actors.items!sPLt8RBL1hieic6p.Py9XbkHtiMeVAivQ'
+  - _id: d9AM1AiyTKzB2o6A
+    name: Totem
+    type: gear
+    sort: 2300000
+    flags:
+      core:
+        sourceId: Item.V6vSEnqgNmYQKs4o
+    img: systems/torgeternity/images/icons/gear.webp
+    effects: []
+    folder: null
+    system:
+      cosm: (Sans cosm)
+      description: <p>Statuette en os de Lanala</p>
+      price: '0'
+      techlevel: 3
+      value: 0
+      equippedClass: item-equipped
+    ownership:
+      default: 0
+    _stats:
+      systemId: null
+      systemVersion: null
+      coreVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+    _key: '!actors.items!sPLt8RBL1hieic6p.d9AM1AiyTKzB2o6A'
+  - _id: eoKkKx6JMkRheNol
+    name: Peintures de guerre
+    type: gear
+    sort: 2500000
+    flags:
+      core:
+        sourceId: Item.6g0k6JMCuHpfTB8I
+    img: systems/torgeternity/images/icons/gear.webp
+    effects: []
+    folder: null
+    system:
+      cosm: Terre-Vivante
+      description: <p>Rouges, blanches et bleues.</p>
+      price: '1'
+      techlevel: 4
+      value: 1
+      equippedClass: item-equipped
+    ownership:
+      default: 0
+    _stats:
+      systemId: null
+      systemVersion: null
+      coreVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+    _key: '!actors.items!sPLt8RBL1hieic6p.eoKkKx6JMkRheNol'
+  - _id: J9Nx3xa1SuyivqJt
+    name: Armure de peau et d’os
+    type: armor
+    sort: 1300000
+    flags:
+      core:
+        sourceId: Item.zeffK1HwBwoOyzMS
+    img: systems/torgeternity/images/icons/armor.webp
+    effects:
+      - _id: KMCP74pS3Oni3hU2
+        flags: {}
+        changes:
+          - key: system.other.armor
+            value: '1'
+            mode: 2
+            priority: null
+          - key: system.other.toughness
+            value: '1'
+            mode: 2
+            priority: null
+        disabled: false
+        duration:
+          startTime: null
+          seconds: null
+          combat: null
+          rounds: null
+          turns: null
+          startRound: null
+          startTurn: null
+        icon: icons/svg/aura.svg
+        origin: Item.zeffK1HwBwoOyzMS
+        tint: null
+        transfer: true
+        name: +1 Armor
+        description: ''
+        statuses: []
+        _key: >-
+          !actors.items.effects!sPLt8RBL1hieic6p.J9Nx3xa1SuyivqJt.KMCP74pS3Oni3hU2
+    folder: null
+    system:
+      cosm: (Sans cosm)
+      description: >-
+        <p>Ce sont des armures constitu&eacute;es d&rsquo;ossements&nbsp;
+        sculpt&eacute;s et d&eacute;licatement cousus sur de la peau. Elles sont
+        tr&egrave;s difficiles &agrave; fabriquer car si la couche
+        d&rsquo;ossements ne s&rsquo;accorde pas avec la forme de
+        l&rsquo;utilisateur, elles se brisent facilement en combat</p>
+      price: '50'
+      techlevel: 3
+      value: 8
+      bonus: 1
+      equipped: false
+      equippedClass: .item-unequipped
+      maxDex: 12
+      minStrength: null
+      notes: Torse
+      fatigue: 0
+    ownership:
+      default: 0
+    _stats:
+      systemId: null
+      systemVersion: null
+      coreVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+    _key: '!actors.items!sPLt8RBL1hieic6p.J9Nx3xa1SuyivqJt'
+  - _id: 7ESgSBRK5O5s8qxS
+    name: Lance en bois d’hrockt
+    type: meleeweapon
+    sort: 800000
+    flags:
+      core:
+        sourceId: Item.0ibFEQi66ymd6PnN
+    img: systems/torgeternity/images/icons/melee-weapon-icon.webp
+    effects: []
+    folder: null
+    system:
+      cosm: (Sans cosm)
+      description: >-
+        <p>Le rameau est souple quand il est humide et qu&rsquo;il pousse, mais
+        aussi dur que du fer quand il est coup&eacute; et s&eacute;ch&eacute;.
+        Il est souvent cultiv&eacute; de sorte qu&rsquo;il ait la forme
+        d&rsquo;une lance droite avec une pointe tranchante. Cette lance est
+        commun&eacute;ment utilis&eacute;e comme arme de jet.</p>
+      price: '40'
+      techlevel: 2
+      value: 8
+      ap: 0
+      attackWith: meleeWeapons
+      bonus: 2
+      chatNote: ''
+      damage: 2
+      damageType: strengthPlus
+      equipped: false
+      equippedClass: .item-unequipped
+      notes: lancée
+    ownership:
+      default: 0
+    _stats:
+      systemId: null
+      systemVersion: null
+      coreVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+    _key: '!actors.items!sPLt8RBL1hieic6p.7ESgSBRK5O5s8qxS'
+  - _id: X0LdK9v3c3BUGbM9
+    name: Couteau en os
+    type: meleeweapon
+    sort: 900000
+    flags:
+      core:
+        sourceId: Item.2OZHSyASNn86YGNX
+    img: systems/torgeternity/images/icons/meleeweapon.webp
+    effects: []
+    folder: null
+    system:
+      cosm: Prime Terre
+      description: >-
+        <p>Une arme de m&ecirc;l&eacute;e simple constitu&eacute;e d&rsquo;un
+        manche et d&rsquo;une lame pointue.</p>
+      price: '5'
+      techlevel: 3
+      value: 4
+      ap: 0
+      attackWith: meleeWeapons
+      bonus: 2
+      chatNote: ''
+      damage: 1
+      damageType: strengthPlus
+      equipped: false
+      equippedClass: .item-unequipped
+      notes: Fragile, Discret
+    ownership:
+      default: 0
+    _stats:
+      systemId: null
+      systemVersion: null
+      coreVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+    _key: '!actors.items!sPLt8RBL1hieic6p.X0LdK9v3c3BUGbM9'
+  - _id: YQoorToSdQKjoWmk
+    name: Attaque à mains nues
+    type: customAttack
+    img: systems/torgeternity/images/icons/fist-icon.webp
+    effects: []
+    folder: null
+    sort: 0
+    flags:
+      core:
+        sourceId: Item.BFGjhDetVDm1xiku
+    system:
+      ap: 0
+      attackWith: unarmedCombat
+      chatNote: ''
+      damage: 0
+      damageType: strengthPlus
+      description: ''
+      notes: ''
+    ownership:
+      default: 0
+      zWX19sSAtAWkeGhp: 3
+    _stats:
+      systemId: null
+      systemVersion: null
+      coreVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+    _key: '!actors.items!sPLt8RBL1hieic6p.YQoorToSdQKjoWmk'
+effects:
+  - _id: zNxpmtLv3HaujTQW
+    flags: {}
+    changes:
+      - key: system.other.armor
+        mode: 2
+        value: '1'
+        priority: null
+      - key: system.other.toughness
+        mode: 2
+        value: '1'
+        priority: null
+    disabled: false
+    duration:
+      startTime: 0
+      seconds: null
+      combat: null
+      rounds: null
+      turns: null
+      startRound: null
+      startTurn: null
+    icon: icons/svg/aura.svg
+    origin: Actor.0B2u2NMhtriuOQ8b.OwnedItem.J9Nx3xa1SuyivqJt
+    tint: null
+    transfer: true
+    name: +1 Armure
+    description: ''
+    statuses: []
+    _key: '!actors.effects!sPLt8RBL1hieic6p.zNxpmtLv3HaujTQW'
+folder: null
+sort: 100001
+flags: {}
+system:
   shock:
     max: 5
     value: 0
@@ -10,300 +537,340 @@ data:
     max: 3
     value: 0
   attributes:
-    charisma: 8
-    dexterity: 10
-    mind: 5
-    spirit: 7
-    strength: 10
+    charisma:
+      base: 8
+    dexterity:
+      base: 10
+    mind:
+      base: 5
+    spirit:
+      base: 7
+    strength:
+      base: 10
   other:
-    move: 5
-    run: 5
-    toughness: 5
-    armor: 0
     cosm: livingLand
     possibilities: 0
-    posibilities: 3
   skills:
     airVehicles:
       baseAttribute: dexterity
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 0
+      isThreatSkill: false
+      defenseOnly: false
     alteration:
       baseAttribute: mind
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 0
+      isThreatSkill: false
+      defenseOnly: false
     apportation:
       baseAttribute: spirit
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 0
+      isThreatSkill: false
+      defenseOnly: false
     beastRiding:
       baseAttribute: dexterity
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     computers:
       baseAttribute: mind
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     conjuration:
       baseAttribute: spirit
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 0
+      isThreatSkill: false
+      defenseOnly: false
     divination:
       baseAttribute: mind
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 0
+      isThreatSkill: false
+      defenseOnly: false
     dodge:
       baseAttribute: dexterity
       adds: 1
-      value: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     energyWeapons:
       baseAttribute: dexterity
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: combat
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     evidenceAnalysis:
       baseAttribute: mind
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     faith:
       baseAttribute: spirit
       adds: 1
-      value: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     find:
       baseAttribute: mind
       adds: 1
-      value: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     fireCombat:
       baseAttribute: dexterity
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: combat
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     firstAid:
       baseAttribute: mind
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     heavyWeapons:
       baseAttribute: dexterity
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: combat
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     intimidation:
       baseAttribute: spirit
       adds: 1
-      value: 0
       isFav: false
       groupName: interaction
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     kinesis:
       baseAttribute: spirit
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 0
+      isThreatSkill: false
+      defenseOnly: false
     landVehicles:
       baseAttribute: dexterity
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     language:
       baseAttribute: mind
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 0
+      isThreatSkill: false
+      defenseOnly: false
     lockpicking:
       baseAttribute: dexterity
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 0
+      isThreatSkill: false
+      defenseOnly: false
     maneuver:
       baseAttribute: dexterity
       adds: 1
-      value: 0
       isFav: false
       groupName: interaction
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     medicine:
       baseAttribute: mind
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 0
+      isThreatSkill: false
+      defenseOnly: false
     meleeWeapons:
       baseAttribute: dexterity
       adds: 3
-      value: 0
       isFav: false
       groupName: combat
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     missileWeapons:
       baseAttribute: dexterity
       adds: 2
-      value: 0
       isFav: false
       groupName: combat
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     persuasion:
       baseAttribute: charisma
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     precognition:
       baseAttribute: mind
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 0
+      isThreatSkill: false
+      defenseOnly: false
     profession:
       baseAttribute: mind
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     reality:
       baseAttribute: spirit
       adds: 1
-      value: 0
       isFav: false
       groupName: other
       unskilledUse: 0
+      isThreatSkill: false
+      defenseOnly: false
     scholar:
       baseAttribute: mind
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     science:
       baseAttribute: mind
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     stealth:
       baseAttribute: dexterity
       adds: 1
-      value: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     streetwise:
       baseAttribute: charisma
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     survival:
       baseAttribute: mind
       adds: 2
-      value: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     taunt:
       baseAttribute: charisma
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: interaction
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     telepathy:
       baseAttribute: charisma
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 0
+      isThreatSkill: false
+      defenseOnly: false
     tracking:
       baseAttribute: mind
       adds: 1
-      value: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     trick:
       baseAttribute: mind
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: interaction
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     unarmedCombat:
       baseAttribute: dexterity
       adds: 1
-      value: 0
       isFav: false
       groupName: combat
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     waterVehicles:
       baseAttribute: dexterity
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     willpower:
       baseAttribute: spirit
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
   xp:
     unspent: 0
     earned: 0
@@ -313,7 +880,6 @@ data:
     spirit: 24
     tech: 6
   details:
-    clearance: ''
     background: >-
       <h2 class="MsoNormal">Pr&eacute;sentation</h2>
 
@@ -402,35 +968,20 @@ data:
 
       <p class="MsoNormal">□ (5 PX) Armes de m&ecirc;l&eacute;e +5</p>
     race: human
-  editstate: null
-  fatigue: '1'
-token:
+    sizeBonus: normal
+  editstate: true
+ownership:
+  default: 0
+  A9LyAqagoJJU3gDH: 3
+  VAnYow5sWS9EJzo0: 3
+prototypeToken:
   flags: {}
   name: La chasseuse primitive
   displayName: 30
-  img: systems/torgeternity/images/characters/Primitive_Hunter.Token.webp
-  tint: null
   width: 1
   height: 1
-  scale: 1
-  mirrorX: false
-  mirrorY: false
   lockRotation: false
   rotation: 0
-  vision: false
-  dimSight: 0
-  brightSight: 0
-  dimLight: 0
-  brightLight: 0
-  sightAngle: 0
-  lightAngle: 360
-  lightColor: ''
-  lightAlpha: 1
-  lightAnimation:
-    type: ''
-    speed: 5
-    intensity: 5
-  actorId: sPLt8RBL1hieic6p
   actorLink: true
   disposition: 1
   displayBars: 20
@@ -441,17 +992,17 @@ token:
   randomImg: false
   alpha: 1
   light:
-    alpha: 0.5
-    angle: 0
+    alpha: 1
+    angle: 360
     bright: 0
     coloration: 1
     dim: 0
-    gradual: true
     luminosity: 0.5
     saturation: 0
     contrast: 0
     shadows: 0
     animation:
+      type: null
       speed: 5
       intensity: 5
       reverse: false
@@ -459,442 +1010,33 @@ token:
       min: 0
       max: 1
     color: null
-items:
-  - _id: xNbAv1yLOKLJxM1E
-    name: Compagnon animal (Chat à dents de sabre)
-    type: perk
-    data:
-      category: savagery
-      cosm: Terre vivante
-      prerequisites: Charisma 8+
-      timestaken: 1
-      description: >-
-        <p>Les grands tigres de la Terre Vivante sont de redoutables
-        pr&eacute;dateurs capables de vaincre n&rsquo;importe quelle
-        cr&eacute;ature &agrave; l&rsquo;exception des plus grands dinosaures.
-        Il existe une sous-esp&egrave;ce un peu plus petite de f&eacute;lins qui
-        semble plus appr&eacute;cier de voyager avec les humains et les edeinos
-        que de les manger.</p>
-
-        <p>Cet Atout octroie au h&eacute;ros un chat &agrave; dents de sabre
-        comme compagnon. Il est aussi intelligent que le chien le mieux
-        dress&eacute;, ce qui signifie qu&rsquo;il peut ob&eacute;ir &agrave;
-        des instructions simples comme attaquer un adversaire
-        d&eacute;sign&eacute;, d&eacute;fendre une personne ou un lieu
-        pr&eacute;cis et attendre ou aller &agrave; un endroit que le personnage
-        a identifi&eacute;.</p>
-
-        <p>Le joueur contr&ocirc;le l&rsquo;animal. Le MJ n&rsquo;en prend le
-        contr&ocirc;le que si l&rsquo;animal est perturb&eacute;,
-        maltrait&eacute; ou qu&rsquo;il agit seul.</p>
-
-        <p>La b&ecirc;te n&rsquo;a pas de Possibilit&eacute;s mais le personnage
-        peut utiliser ses propres Possibilit&eacute;s (et ses Cartes de
-        Destin)&nbsp; pour la cr&eacute;ature m&ecirc;me s&rsquo;ils sont
-        s&eacute;par&eacute;s.</p>
-
-        <p>Si l&rsquo;animal est vaincu, il doit &ecirc;tre
-        consid&eacute;r&eacute; neutralis&eacute; au lieu d&rsquo;&ecirc;tre
-        tu&eacute;. Il revient au d&eacute;but de l&rsquo;Acte suivant.Si sa
-        mort est in&eacute;vitable, le personnage doit revenir dans la Terre
-        Vivante et passer plusieurs nuits dans la jungle pour reforger un lien
-        avec un nouveau compagnon.</p>
-      pulpPowers:
-        enhancementNumber: 0
-        enhancement01:
-          title: ''
-          description: ''
-          taken: false
-        enhancement02:
-          title: ''
-          description: ''
-          taken: false
-        enhancement03:
-          title: ''
-          description: ''
-          taken: false
-        enhancement04:
-          title: ''
-          description: ''
-          taken: false
-        enhancement05:
-          title: ''
-          description: ''
-          taken: false
-        enhancement06:
-          title: ''
-          description: ''
-          taken: false
-        enhancement07:
-          title: ''
-          description: ''
-          taken: false
-        enhancement08:
-          title: ''
-          description: ''
-          taken: false
-        enhancement09:
-          title: ''
-          description: ''
-          taken: false
-        enhancement10:
-          title: ''
-          description: ''
-          taken: false
-        enhancement11:
-          title: ''
-          description: ''
-          taken: false
-        enhancement12:
-          title: ''
-          description: ''
-          taken: false
-        enhancement13:
-          title: ''
-          description: ''
-          taken: false
-        enhancement14:
-          title: ''
-          description: ''
-          taken: false
-        enhancement15:
-          title: ''
-          description: ''
-          taken: false
-        limitationNumber: 0
-        limitation01: ''
-        limitation02: ''
-        limitation03: ''
-        limitation04: ''
-        limitation05: ''
-        limitation06: ''
-        limitation07: ''
-        limitation08: ''
-        limitation09: ''
-        limitation10: ''
-    sort: 100001
-    flags:
-      core:
-        sourceId: Item.FqVsqSep5SeNqgM5
-    img: systems/torgeternity/images/icons/perk.webp
-    effects: []
-    folder: null
-    permission:
-      default: 0
-    _key: '!actors.items!sPLt8RBL1hieic6p.xNbAv1yLOKLJxM1E'
-  - _id: TXRJ5Hx0I1MN1Ci4
-    name: Implacable
-    type: perk
-    data:
-      category: prowess
-      cosm: (Sans cosm)
-      prerequisites: force 10+
-      timestaken: 1
-      description: >-
-        <p>Les combattants les plus f&eacute;roces frappent avec toute leur
-        &eacute;nergie.</p>
-
-        <p>Quand un personnage r&eacute;ussit &agrave; utiliser l&rsquo;option
-        Attaque totale en m&ecirc;l&eacute;e, il peut choisir d&rsquo;encaisser
-        3 points de Choc pour ajouter 1 D&eacute; Bonus aux dommages
-        inflig&eacute;s. Cet effet est cumulatif avec les bonus aux dommages
-        normaux accompagnant un succ&egrave;s Sup&eacute;rieur ou Spectaculaire.
-        Le combattant&nbsp; doit pouvoir encaisser les points de Choc&nbsp;
-        suppl&eacute;mentaires pour que cette capacit&eacute; fonctionne.</p>
-      pulpPowers:
-        enhancementNumber: 0
-        enhancement01:
-          title: ''
-          description: ''
-          taken: false
-        enhancement02:
-          title: ''
-          description: ''
-          taken: false
-        enhancement03:
-          title: ''
-          description: ''
-          taken: false
-        enhancement04:
-          title: ''
-          description: ''
-          taken: false
-        enhancement05:
-          title: ''
-          description: ''
-          taken: false
-        enhancement06:
-          title: ''
-          description: ''
-          taken: false
-        enhancement07:
-          title: ''
-          description: ''
-          taken: false
-        enhancement08:
-          title: ''
-          description: ''
-          taken: false
-        enhancement09:
-          title: ''
-          description: ''
-          taken: false
-        enhancement10:
-          title: ''
-          description: ''
-          taken: false
-        enhancement11:
-          title: ''
-          description: ''
-          taken: false
-        enhancement12:
-          title: ''
-          description: ''
-          taken: false
-        enhancement13:
-          title: ''
-          description: ''
-          taken: false
-        enhancement14:
-          title: ''
-          description: ''
-          taken: false
-        enhancement15:
-          title: ''
-          description: ''
-          taken: false
-        limitationNumber: 0
-        limitation01: ''
-        limitation02: ''
-        limitation03: ''
-        limitation04: ''
-        limitation05: ''
-        limitation06: ''
-        limitation07: ''
-        limitation08: ''
-        limitation09: ''
-        limitation10: ''
-    sort: 200001
-    flags:
-      core:
-        sourceId: Item.DsqhT4kTf01FBNRU
-    img: systems/torgeternity/images/icons/perk.webp
-    effects: []
-    folder: null
-    permission:
-      default: 0
-    _key: '!actors.items!sPLt8RBL1hieic6p.TXRJ5Hx0I1MN1Ci4'
-  - _id: Py9XbkHtiMeVAivQ
-    name: Torche
-    type: gear
-    data:
-      cosm: Terre-Vivante
-      description: <p>&Eacute;claire</p>
-      techlevel: 2
-      price: '5'
-      value: 4
-    sort: 2200000
-    flags:
-      core:
-        sourceId: Item.TE2jmWDyTxhRulgk
-    img: systems/torgeternity/images/icons/gear.webp
-    effects: []
-    folder: null
-    permission:
-      default: 0
-    _key: '!actors.items!sPLt8RBL1hieic6p.Py9XbkHtiMeVAivQ'
-  - _id: d9AM1AiyTKzB2o6A
-    name: Totem
-    type: gear
-    data:
-      cosm: (Sans cosm)
-      description: <p>Statuette en os de Lanala</p>
-      techlevel: 3
-      price: '0'
-      value: 0
-    sort: 2300000
-    flags:
-      core:
-        sourceId: Item.V6vSEnqgNmYQKs4o
-    img: systems/torgeternity/images/icons/gear.webp
-    effects: []
-    folder: null
-    permission:
-      default: 0
-    _key: '!actors.items!sPLt8RBL1hieic6p.d9AM1AiyTKzB2o6A'
-  - _id: eoKkKx6JMkRheNol
-    name: Peintures de guerre
-    type: gear
-    data:
-      cosm: Terre-Vivante
-      description: <p>Rouges, blanches et bleues.</p>
-      techlevel: 4
-      price: '1'
-      value: 1
-    sort: 2500000
-    flags:
-      core:
-        sourceId: Item.6g0k6JMCuHpfTB8I
-    img: systems/torgeternity/images/icons/gear.webp
-    effects: []
-    folder: null
-    permission:
-      default: 0
-    _key: '!actors.items!sPLt8RBL1hieic6p.eoKkKx6JMkRheNol'
-  - _id: J9Nx3xa1SuyivqJt
-    name: Armure de peau et d’os
-    type: armor
-    data:
-      cosm: (Sans cosm)
-      description: >-
-        <p>Ce sont des armures constitu&eacute;es d&rsquo;ossements&nbsp;
-        sculpt&eacute;s et d&eacute;licatement cousus sur de la peau. Elles sont
-        tr&egrave;s difficiles &agrave; fabriquer car si la couche
-        d&rsquo;ossements ne s&rsquo;accorde pas avec la forme de
-        l&rsquo;utilisateur, elles se brisent facilement en combat</p>
-      techlevel: 3
-      price: '50'
-      value: 8
-      bonus: 1
-      maxDex: 12
-      minStrength: null
-      equipped: false
-      equippedClass: .item-unequipped
-      notes: Torse
-    sort: 1300000
-    flags:
-      core:
-        sourceId: Item.zeffK1HwBwoOyzMS
-    img: systems/torgeternity/images/icons/armor.webp
-    effects:
-      - _id: KMCP74pS3Oni3hU2
-        flags: {}
-        changes:
-          - key: data.other.armor
-            value: '1'
-            mode: 2
-          - key: data.other.toughness
-            value: '1'
-            mode: 2
-        disabled: false
-        duration:
-          startTime: null
-        icon: icons/svg/aura.svg
-        label: +1 Armor
-        origin: Item.zeffK1HwBwoOyzMS
-        tint: null
-        transfer: true
-        _key: >-
-          !actors.items.effects!sPLt8RBL1hieic6p.J9Nx3xa1SuyivqJt.KMCP74pS3Oni3hU2
-    folder: null
-    permission:
-      default: 0
-    _key: '!actors.items!sPLt8RBL1hieic6p.J9Nx3xa1SuyivqJt'
-  - _id: 7ESgSBRK5O5s8qxS
-    name: Lance en bois d’hrockt
-    type: meleeweapon
-    data:
-      cosm: (Sans cosm)
-      description: >-
-        <p>Le rameau est souple quand il est humide et qu&rsquo;il pousse, mais
-        aussi dur que du fer quand il est coup&eacute; et s&eacute;ch&eacute;.
-        Il est souvent cultiv&eacute; de sorte qu&rsquo;il ait la forme
-        d&rsquo;une lance droite avec une pointe tranchante. Cette lance est
-        commun&eacute;ment utilis&eacute;e comme arme de jet.</p>
-      techlevel: 2
-      price: '40'
-      value: 8
-      attackWith: meleeWeapons
-      damageType: strengthPlus
-      damage: 2
-      ap: 0
-      bonus: 2
-      notes: lancée
-      chatNote: ''
-    sort: 800000
-    flags:
-      core:
-        sourceId: Item.0ibFEQi66ymd6PnN
-    img: systems/torgeternity/images/icons/melee-weapon-icon.webp
-    effects: []
-    folder: null
-    permission:
-      default: 0
-    _key: '!actors.items!sPLt8RBL1hieic6p.7ESgSBRK5O5s8qxS'
-  - _id: X0LdK9v3c3BUGbM9
-    name: Couteau en os
-    type: meleeweapon
-    data:
-      cosm: Prime Terre
-      description: >-
-        <p>Une arme de m&ecirc;l&eacute;e simple constitu&eacute;e d&rsquo;un
-        manche et d&rsquo;une lame pointue.</p>
-      techlevel: 3
-      price: '5'
-      value: 4
-      attackWith: meleeWeapons
-      damageType: strengthPlus
-      damage: 1
-      ap: 0
-      bonus: 2
-      notes: Fragile, Discret
-      chatNote: ''
-    sort: 900000
-    flags:
-      core:
-        sourceId: Item.2OZHSyASNn86YGNX
-    img: systems/torgeternity/images/icons/meleeweapon.webp
-    effects: []
-    folder: null
-    permission:
-      default: 0
-    _key: '!actors.items!sPLt8RBL1hieic6p.X0LdK9v3c3BUGbM9'
-  - _id: YQoorToSdQKjoWmk
-    name: Attaque à mains nues
-    type: customAttack
-    img: systems/torgeternity/images/icons/fist-icon.webp
-    data:
-      description: ''
-      attackWith: unarmedCombat
-      damageType: strengthPlus
-      damage: 0
-      ap: 0
-      notes: ''
-      chatNote: ''
-    effects: []
-    folder: null
-    sort: 0
-    permission:
-      default: 0
-      zWX19sSAtAWkeGhp: 3
-    flags:
-      core:
-        sourceId: Item.BFGjhDetVDm1xiku
-    _key: '!actors.items!sPLt8RBL1hieic6p.YQoorToSdQKjoWmk'
-effects:
-  - _id: zNxpmtLv3HaujTQW
-    flags: {}
-    changes:
-      - key: data.other.armor
-        mode: 2
-        value: '1'
-      - key: data.other.toughness
-        mode: 2
-        value: '1'
-    disabled: false
-    duration:
-      startTime: 0
-    icon: icons/svg/aura.svg
-    label: +1 Armure
-    origin: Actor.0B2u2NMhtriuOQ8b.OwnedItem.J9Nx3xa1SuyivqJt
+    attenuation: 0.5
+  texture:
+    src: systems/torgeternity/images/characters/Primitive_Hunter.Token.webp
     tint: null
-    transfer: true
-    _key: '!actors.effects!sPLt8RBL1hieic6p.zNxpmtLv3HaujTQW'
-folder: null
-sort: 100001
-permission:
-  default: 0
-  A9LyAqagoJJU3gDH: 3
-flags: {}
+    scaleX: 1
+    scaleY: 1
+    offsetX: 0
+    offsetY: 0
+    rotation: 0
+  sight:
+    angle: 360
+    enabled: false
+    range: 0
+    brightness: 1
+    visionMode: basic
+    attenuation: 0.1
+    saturation: 0
+    contrast: 0
+  appendNumber: false
+  prependAdjective: false
+  detectionModes: []
+_stats:
+  systemId: torgeternity
+  systemVersion: 3.8.1
+  coreVersion: '11.315'
+  createdTime: 1716827809787
+  modifiedTime: 1716827809787
+  lastModifiedBy: VAnYow5sWS9EJzo0
 _key: '!actors!sPLt8RBL1hieic6p'
 

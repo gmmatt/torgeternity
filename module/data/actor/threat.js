@@ -37,7 +37,7 @@ export class ThreatData extends CommonActorData {
 
   /**
    *
-   * @param {object} data the data object to migrate
+   * @param {object} data the partial data object to migrate
    */
   static migrateData(data) {
     super.migrateData(data);
@@ -50,16 +50,6 @@ export class ThreatData extends CommonActorData {
       data.details.sizeBonus = Object.keys(torgeternity.sizes).includes(data.details.sizeBonus)
         ? data.details.sizeBonus
         : 'normal';
-    }
-    if (data.skills) {
-      for (const skill of Object.values(data.skills)) {
-        if (Object.hasOwn(skill, 'adds')) {
-          skill.adds = parseInt(skill.adds) || 0;
-        }
-        if (Object.hasOwn(skill, 'value') && parseInt(skill.value) > 0) {
-          skill.adds = parseInt(skill.value) - parseInt(data.attributes[skill.baseAttribute].value);
-        }
-      }
     }
   }
 

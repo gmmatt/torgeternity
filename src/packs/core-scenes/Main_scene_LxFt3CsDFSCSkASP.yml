@@ -2,7 +2,7 @@ name: Main scene
 active: false
 navigation: true
 navOrder: 0
-navName: ""
+navName: ''
 foreground: null
 thumb: systems/torgeternity/images/core-scenes-LxFt3CsDFSCSkASP-thumb.webp
 width: 5797
@@ -10,13 +10,13 @@ height: 3772
 padding: 0
 initial:
   x: 3637
-  "y": 1857
+  'y': 1857
   scale: 0.27
-backgroundColor: "#999999"
+backgroundColor: '#999999'
 grid:
   size: 100
   type: 0
-  color: "#000000"
+  color: '#000000'
   alpha: 0.2
   distance: 1
   units: m
@@ -37,7 +37,7 @@ walls: []
 playlist: null
 playlistSound: null
 journal: null
-weather: ""
+weather: ''
 folder: null
 sort: 0
 flags:
@@ -50,6 +50,7 @@ _id: LxFt3CsDFSCSkASP
 ownership:
   default: 2
   ZuS1Anc9ORZov40T: 3
+  VAnYow5sWS9EJzo0: 3
 background:
   src: systems/torgeternity/images/marble_bg.webp
   offsetX: 0
@@ -61,9 +62,10 @@ foregroundElevation: null
 journalEntryPage: null
 _stats:
   systemId: torgeternity
-  systemVersion: 3.1.1
-  coreVersion: "11.308"
-  createdTime: null
-  modifiedTime: 1693207686322
-  lastModifiedBy: CtisFurQNe9h7ABb
-_key: "!scenes!LxFt3CsDFSCSkASP"
+  systemVersion: 3.8.1
+  coreVersion: '11.315'
+  createdTime: 1716827808907
+  modifiedTime: 1716827808907
+  lastModifiedBy: VAnYow5sWS9EJzo0
+_key: '!scenes!LxFt3CsDFSCSkASP'
+

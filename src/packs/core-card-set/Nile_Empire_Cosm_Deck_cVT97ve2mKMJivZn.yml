@@ -4,7 +4,7 @@ type: deck
 description: ''
 img: systems/torgeternity/images/cards/nile-empire-back.webp
 cards:
-  - _id: g8MnwhG0mtAJZe11
+  - _id: ps8dVU6scsMP6HZO
     name: Parting Shot
     description: ''
     type: cosm
@@ -23,13 +23,15 @@ cards:
     rotation: 0
     sort: 0
     flags: {}
-    system: {}
+    system:
+      cosm: ''
+      number: ''
     value: null
     width: null
     height: null
-    _key: '!cards.cards!cVT97ve2mKMJivZn.g8MnwhG0mtAJZe11'
+    _key: '!cards.cards!cVT97ve2mKMJivZn.ps8dVU6scsMP6HZO'
     cards: []
-  - _id: lE9FX2hrDl5OXyFc
+  - _id: ErIsEsaSBl2SsCrt
     name: In the Crossfire
     description: ''
     type: cosm
@@ -48,13 +50,15 @@ cards:
     rotation: 0
     sort: 1
     flags: {}
-    system: {}
+    system:
+      cosm: ''
+      number: ''
     value: null
     width: null
     height: null
-    _key: '!cards.cards!cVT97ve2mKMJivZn.lE9FX2hrDl5OXyFc'
+    _key: '!cards.cards!cVT97ve2mKMJivZn.ErIsEsaSBl2SsCrt'
     cards: []
-  - _id: WUQA0Z4bnuxwStjz
+  - _id: hTr0QaNfwGW4OHZ3
     name: Captured!
     description: ''
     type: cosm
@@ -74,12 +78,14 @@ cards:
     sort: 2
     flags: {}
     value: null
-    system: {}
+    system:
+      cosm: ''
+      number: ''
     width: null
     height: null
-    _key: '!cards.cards!cVT97ve2mKMJivZn.WUQA0Z4bnuxwStjz'
+    _key: '!cards.cards!cVT97ve2mKMJivZn.hTr0QaNfwGW4OHZ3'
     cards: []
-  - _id: HIcBOmzT3fUPHox4
+  - _id: z9EQbymoafh087TA
     name: Round Two!
     description: ''
     type: cosm
@@ -98,13 +104,15 @@ cards:
     rotation: 0
     sort: 3
     flags: {}
-    system: {}
+    system:
+      cosm: ''
+      number: ''
     value: null
     width: null
     height: null
-    _key: '!cards.cards!cVT97ve2mKMJivZn.HIcBOmzT3fUPHox4'
+    _key: '!cards.cards!cVT97ve2mKMJivZn.z9EQbymoafh087TA'
     cards: []
-  - _id: sCYXh6sDogqzxVTm
+  - _id: k0smu5sKw6fezBwc
     name: Suddenly...
     description: ''
     type: cosm
@@ -123,13 +131,15 @@ cards:
     rotation: 0
     sort: 4
     flags: {}
-    system: {}
+    system:
+      cosm: ''
+      number: ''
     value: null
     width: null
     height: null
-    _key: '!cards.cards!cVT97ve2mKMJivZn.sCYXh6sDogqzxVTm'
+    _key: '!cards.cards!cVT97ve2mKMJivZn.k0smu5sKw6fezBwc'
     cards: []
-  - _id: GQ8rF83u5Y052GOz
+  - _id: AFsdmioDlfVRZiB7
     name: Dramatic Reveal
     description: ''
     type: cosm
@@ -148,13 +158,15 @@ cards:
     rotation: 0
     sort: 5
     flags: {}
-    system: {}
+    system:
+      cosm: ''
+      number: ''
     value: null
     width: null
     height: null
-    _key: '!cards.cards!cVT97ve2mKMJivZn.GQ8rF83u5Y052GOz'
+    _key: '!cards.cards!cVT97ve2mKMJivZn.AFsdmioDlfVRZiB7'
     cards: []
-  - _id: tqXIkcSVofx5ujPs
+  - _id: llly0G0hSRsjGTGx
     name: Temporary Reprieve
     description: ''
     type: cosm
@@ -173,13 +185,15 @@ cards:
     rotation: 0
     sort: 6
     flags: {}
-    system: {}
+    system:
+      cosm: ''
+      number: ''
     value: null
     width: null
     height: null
-    _key: '!cards.cards!cVT97ve2mKMJivZn.tqXIkcSVofx5ujPs'
+    _key: '!cards.cards!cVT97ve2mKMJivZn.llly0G0hSRsjGTGx'
     cards: []
-  - _id: eN1TIajdWGQtlGrV
+  - _id: HDHVd1fFUiRIy0qo
     name: Triumphant Boast
     description: ''
     type: cosm
@@ -199,12 +213,14 @@ cards:
     sort: 7
     flags: {}
     value: null
-    system: {}
+    system:
+      cosm: ''
+      number: ''
     width: null
     height: null
-    _key: '!cards.cards!cVT97ve2mKMJivZn.eN1TIajdWGQtlGrV'
+    _key: '!cards.cards!cVT97ve2mKMJivZn.HDHVd1fFUiRIy0qo'
     cards: []
-  - _id: 9nx36xu1Cdpz9wCn
+  - _id: ASmkrJERu8dUtm2K
     name: Inevitable Return
     description: ''
     type: cosm
@@ -223,13 +239,15 @@ cards:
     rotation: 0
     sort: 8
     flags: {}
-    system: {}
+    system:
+      cosm: ''
+      number: ''
     value: null
     width: null
     height: null
-    _key: '!cards.cards!cVT97ve2mKMJivZn.9nx36xu1Cdpz9wCn'
+    _key: '!cards.cards!cVT97ve2mKMJivZn.ASmkrJERu8dUtm2K'
     cards: []
-  - _id: xIcxbwriPvqbI4Od
+  - _id: b3uU9HIOKb8C75SO
     name: The Law of Action
     description: ''
     type: cosm
@@ -248,11 +266,13 @@ cards:
     rotation: 0
     sort: 9
     flags: {}
-    system: {}
+    system:
+      cosm: ''
+      number: ''
     value: null
     width: null
     height: null
-    _key: '!cards.cards!cVT97ve2mKMJivZn.xIcxbwriPvqbI4Od'
+    _key: '!cards.cards!cVT97ve2mKMJivZn.b3uU9HIOKb8C75SO'
     cards: []
 rotation: 0
 displayCount: false
@@ -272,14 +292,15 @@ system: {}
 ownership:
   default: 0
   juTas93IuPVP8p5D: 3
+  VAnYow5sWS9EJzo0: 3
 width: null
 height: null
 _stats:
-  systemId: null
-  systemVersion: null
-  coreVersion: null
-  createdTime: null
-  modifiedTime: null
-  lastModifiedBy: null
+  systemId: torgeternity
+  systemVersion: 3.8.1
+  coreVersion: '11.315'
+  createdTime: 1716827808775
+  modifiedTime: 1716827808775
+  lastModifiedBy: VAnYow5sWS9EJzo0
 _key: '!cards!cVT97ve2mKMJivZn'
 

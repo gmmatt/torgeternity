@@ -18,9 +18,10 @@ items:
       description: >-
         <p>Ein kleines Ger&auml;t, das seinen Standort an darauf abgestimmte
         Funkempf&auml;nger innerhalb eines Kilometers sendet.</p>
-      techlevel: 20
       price: '150'
+      techlevel: 20
       value: 11
+      equippedClass: item-equipped
     ownership:
       default: 0
       9Q0XnqFwko7hRlvL: 3
@@ -45,8 +46,6 @@ items:
     system:
       category: pulpPowers
       cosm: Nil-Imperium
-      prerequisites: ''
-      timestaken: 1
       description: >-
         <p>Der Held kann einen m&auml;chtigen elektrischen Blitz abfeuern. Er
         greift mit Energiewaffen oder Geschicklichkeit an und verursacht 13
@@ -58,71 +57,72 @@ items:
         starkem Regen oder wenn sich das Ziel bis zu den Kn&ouml;cheln oder
         h&ouml;her im Wasser befindet, erh&ouml;ht sich der Schaden um
         +4.&nbsp;</p>
+      prerequisites: ''
+      generalContradiction: false
       pulpPowers:
-        enhancementNumber: 4
         enhancement01:
-          title: Kleiner Explosionsradius
           description: Der Strahl betrifft alle Ziele in einem kleinen Explosionsradius.
           taken: false
+          title: Kleiner Explosionsradius
         enhancement02:
-          title: Munition
           description: Die Munitionskapazität erhöht sich auf 10.
           taken: false
+          title: Munition
         enhancement03:
-          title: Schaden
           description: Der Schaden erhöht sich auf 15.
           taken: true
+          title: Schaden
         enhancement04:
-          title: Schnellfeuer
           description: >-
             Der Charakter darf beim Einsatz des Stromstrahls die Option „Kurzer
             Waffenstoß“ einsetzen.
           taken: false
+          title: Schnellfeuer
         enhancement05:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement06:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement07:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement08:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement09:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement10:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement11:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement12:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement13:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement14:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement15:
-          title: ''
           description: ''
           taken: false
-        limitationNumber: 1
+          title: ''
+        enhancementNumber: 4
         limitation01: Bei einem Patzer für laufende Szene nicht nutzbar.
         limitation02: ''
         limitation03: ''
@@ -133,6 +133,8 @@ items:
         limitation08: ''
         limitation09: ''
         limitation10: ''
+        limitationNumber: 1
+      timestaken: '1'
     ownership:
       ZuS1Anc9ORZov40T: 3
       CtisFurQNe9h7ABb: 3
@@ -157,8 +159,6 @@ items:
     system:
       category: pulpPowers
       cosm: Nil-Imperium
-      prerequisites: ''
-      timestaken: 1
       description: >-
         <p>Ein Schild aus unsichtbarer Energie umgibt den Helden. Das Kraftfeld
         hat drei &bdquo;Ladungen&ldquo;. Jedes Mal, wenn der Held eine Wunde
@@ -167,71 +167,72 @@ items:
 
         <p>Das Feld l&auml;dt sich mit einer Ladung pro Stunde wieder
         auf.&nbsp;</p>
+      prerequisites: ''
+      generalContradiction: false
       pulpPowers:
-        enhancementNumber: 3
         enhancement01:
-          title: Wiederaufladung
           description: Das Feld erhält alle 10 Minuten eine Ladung zurück.
           taken: false
+          title: Wiederaufladung
         enhancement02:
-          title: Kraft
           description: Das Feld hat 5 Ladungen.
           taken: true
+          title: Kraft
         enhancement03:
-          title: Größe
           description: >-
             Das Feld kann benutzt werden, um einen benachbarten Verbündeten zu
             schützen.
           taken: false
+          title: Größe
         enhancement04:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement05:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement06:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement07:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement08:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement09:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement10:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement11:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement12:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement13:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement14:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement15:
-          title: ''
           description: ''
           taken: false
-        limitationNumber: 1
+          title: ''
+        enhancementNumber: 3
         limitation01: Gerät muss als einfache Aktion aktiviert werden.
         limitation02: ''
         limitation03: ''
@@ -242,6 +243,8 @@ items:
         limitation08: ''
         limitation09: ''
         limitation10: ''
+        limitationNumber: 1
+      timestaken: '1'
     ownership:
       default: 0
       9Q0XnqFwko7hRlvL: 3
@@ -271,19 +274,21 @@ items:
         <p>Ben&ouml;tigt den Vorzug
         "@UUID[Compendium.te001-core-rulebook.grw-de-vorzuverb.0P0XvH8qiYpp8Gun]{Stromstrahl}",
         Erneuert 1 Munition pro Spielzug</p>
-      techlevel: 20
       price: '0'
+      techlevel: 20
       value: 0
-      attackWith: energyWeapons
-      damageType: ''
-      damage: 15
-      ap: 0
       ammo:
         max: 5
         value: 5
-      range: 10/25/50
-      notes: ''
+      ap: 0
+      attackWith: energyWeapons
       chatNote: ''
+      damage: 15
+      damageType: ''
+      equipped: false
+      equippedClass: .item-unequipped
+      notes: ''
+      range: 10/25/50
     ownership:
       default: 0
       9Q0XnqFwko7hRlvL: 3
@@ -309,9 +314,10 @@ items:
     system:
       cosm: Nil-Imperium
       description: ''
-      techlevel: 20
       price: '100'
+      techlevel: 20
       value: 10
+      equippedClass: item-equipped
     ownership:
       default: 0
       9Q0XnqFwko7hRlvL: 3
@@ -337,9 +343,10 @@ items:
     system:
       cosm: Aysle
       description: ''
-      techlevel: 8
       price: '100'
+      techlevel: 8
       value: 10
+      equippedClass: item-equipped
     ownership:
       default: 0
       9Q0XnqFwko7hRlvL: 3
@@ -390,9 +397,10 @@ items:
     system:
       cosm: Zentralerde
       description: <p><em>Erste-Hilfe</em>-Proben sind beg&uuml;nstigt</p>
-      techlevel: 23
       price: '0'
+      techlevel: 23
       value: 0
+      equippedClass: item-equipped
     ownership:
       default: 0
       9Q0XnqFwko7hRlvL: 3
@@ -418,9 +426,10 @@ items:
     system:
       cosm: Nil-Imperium
       description: ''
-      techlevel: 20
       price: '10'
+      techlevel: 20
       value: 5
+      equippedClass: item-equipped
     ownership:
       default: 0
       9Q0XnqFwko7hRlvL: 3
@@ -446,9 +455,10 @@ items:
     system:
       cosm: Nil-Imperium
       description: ''
-      techlevel: 18
       price: '50'
+      techlevel: 18
       value: 9
+      equippedClass: item-equipped
     ownership:
       default: 0
       9Q0XnqFwko7hRlvL: 3
@@ -474,9 +484,10 @@ items:
     system:
       cosm: Orrorsh
       description: ''
-      techlevel: 16
       price: '100'
+      techlevel: 16
       value: 10
+      equippedClass: item-equipped
     ownership:
       default: 0
       9Q0XnqFwko7hRlvL: 3
@@ -565,300 +576,340 @@ system:
     max: 3
     value: 0
   attributes:
-    charisma: 7
-    dexterity: 8
-    mind: 12
-    spirit: 7
-    strength: 6
+    charisma:
+      base: 7
+    dexterity:
+      base: 8
+    mind:
+      base: 12
+    spirit:
+      base: 7
+    strength:
+      base: 6
   other:
-    move: 5
-    run: 5
-    toughness: 5
-    armor: 0
     cosm: nileEmpire
     possibilities: 3
-    posibilities: 3
   skills:
     airVehicles:
       baseAttribute: dexterity
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 0
+      isThreatSkill: false
+      defenseOnly: false
     alteration:
       baseAttribute: mind
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 0
+      isThreatSkill: false
+      defenseOnly: false
     apportation:
       baseAttribute: spirit
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 0
+      isThreatSkill: false
+      defenseOnly: false
     beastRiding:
       baseAttribute: dexterity
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     computers:
       baseAttribute: mind
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     conjuration:
       baseAttribute: spirit
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 0
+      isThreatSkill: false
+      defenseOnly: false
     divination:
       baseAttribute: mind
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 0
+      isThreatSkill: false
+      defenseOnly: false
     dodge:
       baseAttribute: dexterity
       adds: 2
-      value: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     energyWeapons:
       baseAttribute: dexterity
       adds: 2
-      value: 0
       isFav: false
       groupName: combat
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     evidenceAnalysis:
       baseAttribute: mind
       adds: 1
-      value: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     faith:
       baseAttribute: spirit
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     find:
       baseAttribute: mind
       adds: 1
-      value: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     fireCombat:
       baseAttribute: dexterity
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: combat
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     firstAid:
       baseAttribute: mind
       adds: 1
-      value: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     heavyWeapons:
       baseAttribute: dexterity
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: combat
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     intimidation:
       baseAttribute: spirit
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: interaction
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     kinesis:
       baseAttribute: spirit
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 0
+      isThreatSkill: false
+      defenseOnly: false
     landVehicles:
       baseAttribute: dexterity
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     language:
       baseAttribute: mind
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 0
+      isThreatSkill: false
+      defenseOnly: false
     lockpicking:
       baseAttribute: dexterity
       adds: 1
-      value: 0
       isFav: false
       groupName: other
       unskilledUse: 0
+      isThreatSkill: false
+      defenseOnly: false
     maneuver:
       baseAttribute: dexterity
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: interaction
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     medicine:
       baseAttribute: mind
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 0
+      isThreatSkill: false
+      defenseOnly: false
     meleeWeapons:
       baseAttribute: dexterity
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: combat
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     missileWeapons:
       baseAttribute: dexterity
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     persuasion:
       baseAttribute: charisma
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     precognition:
       baseAttribute: mind
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 0
+      isThreatSkill: false
+      defenseOnly: false
     profession:
       baseAttribute: mind
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     reality:
       baseAttribute: spirit
       adds: 2
-      value: 0
       isFav: false
       groupName: other
       unskilledUse: 0
+      isThreatSkill: false
+      defenseOnly: false
     scholar:
       baseAttribute: mind
       adds: 1
-      value: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     science:
       baseAttribute: mind
       adds: 3
-      value: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     stealth:
       baseAttribute: dexterity
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     streetwise:
       baseAttribute: charisma
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     survival:
       baseAttribute: mind
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     taunt:
       baseAttribute: charisma
       adds: 1
-      value: 0
       isFav: false
       groupName: interaction
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     telepathy:
       baseAttribute: charisma
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 0
+      isThreatSkill: false
+      defenseOnly: false
     tracking:
       baseAttribute: mind
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     trick:
       baseAttribute: mind
       adds: 1
-      value: 0
       isFav: false
       groupName: interaction
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     unarmedCombat:
       baseAttribute: dexterity
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: combat
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     waterVehicles:
       baseAttribute: dexterity
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     willpower:
       baseAttribute: spirit
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
   xp:
     unspent: 0
     earned: 0
@@ -868,7 +919,6 @@ system:
     spirit: 18
     tech: 20
   details:
-    clearance: ''
     background: >-
       <p><img class="charimg"
       src="systems/torgeternity/images/characters/Eccentric_Inventor.webp"
@@ -960,11 +1010,12 @@ system:
 
       </ul>
     race: human
+    sizeBonus: normal
   editstate: false
-  fatigue: '1'
 ownership:
   default: 0
   9Q0XnqFwko7hRlvL: 3
+  VAnYow5sWS9EJzo0: 3
 prototypeToken:
   flags: {}
   name: Die exzentrische Erfinderin
@@ -1024,10 +1075,10 @@ prototypeToken:
   detectionModes: []
 _stats:
   systemId: torgeternity
-  systemVersion: 3.7.0
+  systemVersion: 3.8.1
   coreVersion: '11.315'
   createdTime: 1694866736301
-  modifiedTime: 1711900177327
-  lastModifiedBy: CtisFurQNe9h7ABb
+  modifiedTime: 1716827811234
+  lastModifiedBy: VAnYow5sWS9EJzo0
 _key: '!actors!LS1z3a6GAJT83doA'
 

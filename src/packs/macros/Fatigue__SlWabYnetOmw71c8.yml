@@ -1,7 +1,7 @@
 name: Fatigue!
 type: script
 _id: SlWabYnetOmw71c8
-author: s0Eq742Hj4e1Qv9j
+author: VAnYow5sWS9EJzo0
 img: icons/svg/unconscious.svg
 scope: global
 command: |-
@@ -13,13 +13,14 @@ sort: 0
 ownership:
   default: 0
   s0Eq742Hj4e1Qv9j: 3
+  VAnYow5sWS9EJzo0: 3
 flags: {}
 _stats:
   systemId: torgeternity
-  systemVersion: 3.6.0
+  systemVersion: 3.8.1
   coreVersion: '11.315'
   createdTime: 1709974478682
-  modifiedTime: 1710249961102
-  lastModifiedBy: s0Eq742Hj4e1Qv9j
+  modifiedTime: 1716827807236
+  lastModifiedBy: VAnYow5sWS9EJzo0
 _key: '!macros!SlWabYnetOmw71c8'
 

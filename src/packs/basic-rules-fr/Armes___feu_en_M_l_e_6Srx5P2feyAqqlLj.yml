@@ -1,22 +1,57 @@
 name: Armes à feu en Mêlée
-content: >-
-  <p class="MsoNormal">Les personnages en combat rapproché ne peuvent pas tirer
-  avec des arcs, des fusils ou d’autres armes longues sur les ennemis avec
-  lesquels ils sont engagés, mais ils peuvent tirer avec des pistolets ou
-  d’autres armes légères. Le test d’attaque est effectué normalement. Le
-  défenseur doit résister avec sa compétence d’Armes de mêlée (s’il est armé) ou
-  de Combat à mains nues (dans le cas contraire).</p>
-
-  <p class="MsoNormal">Esquive ne s’applique qu’à distance.</p>
 folder: null
 sort: 0
-permission:
-  default: 0
-  TK1vCAdCz548vBDu: 3
 flags:
   core:
     sourceId: JournalEntry.3UWmgP16pWaKSCqG
 _id: 6Srx5P2feyAqqlLj
-pages: []
+pages:
+  - name: Armes à feu en Mêlée
+    type: text
+    title:
+      show: false
+      level: 1
+    text:
+      format: 1
+      content: >-
+        <p class="MsoNormal">Les personnages en combat rapproché ne peuvent pas
+        tirer avec des arcs, des fusils ou d’autres armes longues sur les
+        ennemis avec lesquels ils sont engagés, mais ils peuvent tirer avec des
+        pistolets ou d’autres armes légères. Le test d’attaque est effectué
+        normalement. Le défenseur doit résister avec sa compétence d’Armes de
+        mêlée (s’il est armé) ou de Combat à mains nues (dans le cas
+        contraire).</p>
+
+        <p class="MsoNormal">Esquive ne s’applique qu’à distance.</p>
+    _id: IOp9gq1QsRp686i1
+    image: {}
+    video:
+      controls: true
+      volume: 0.5
+    src: null
+    system: {}
+    sort: 0
+    ownership:
+      default: -1
+    flags: {}
+    _stats:
+      systemId: null
+      systemVersion: null
+      coreVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+    _key: '!journal.pages!6Srx5P2feyAqqlLj.IOp9gq1QsRp686i1'
+ownership:
+  default: 0
+  TK1vCAdCz548vBDu: 3
+  VAnYow5sWS9EJzo0: 3
+_stats:
+  systemId: torgeternity
+  systemVersion: 3.8.1
+  coreVersion: '11.315'
+  createdTime: 1716827810064
+  modifiedTime: 1716827810064
+  lastModifiedBy: VAnYow5sWS9EJzo0
 _key: '!journal!6Srx5P2feyAqqlLj'
 

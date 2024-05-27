@@ -1,22 +1,23 @@
 name: Reconnection
 type: script
 scope: global
-author: s0Eq742Hj4e1Qv9j
+author: VAnYow5sWS9EJzo0
 img: icons/svg/stone-path.svg
 command: game.torgeternity.macros.reconnection();
 folder: null
 ownership:
   default: 2
   s0Eq742Hj4e1Qv9j: 3
+  VAnYow5sWS9EJzo0: 3
 flags:
   core: {}
 _stats:
   systemId: torgeternity
-  systemVersion: 3.6.0
+  systemVersion: 3.8.1
   coreVersion: '11.315'
   createdTime: 1710156350758
-  modifiedTime: 1710662657285
-  lastModifiedBy: s0Eq742Hj4e1Qv9j
+  modifiedTime: 1716827807220
+  lastModifiedBy: VAnYow5sWS9EJzo0
 _id: EPIiO9581zayzktb
 sort: 100000
 _key: '!macros!EPIiO9581zayzktb'

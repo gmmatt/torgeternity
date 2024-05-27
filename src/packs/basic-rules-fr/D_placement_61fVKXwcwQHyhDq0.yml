@@ -1,19 +1,54 @@
 name: Déplacement
-content: >-
-  <p class="MsoNormal">Les personnages peuvent se déplacer jusqu’à leur score
-  d’attribut Dextérité en mètre à chaque round. Ils peuvent aussi courir jusqu’à
-  3 fois leur valeur de Dextérité, mais en subissant un malus de -2 sur tous
-  leurs tests durant le tour. Le déplacement n’est pas une action ; il fait
-  simplement parti du tour du héros.<span style="mso-spacerun:yes">  </span></p>
 folder: null
 sort: 0
-permission:
-  default: 0
-  TK1vCAdCz548vBDu: 3
 flags:
   core:
     sourceId: JournalEntry.JiGP9oyvvLlUCnJr
 _id: 61fVKXwcwQHyhDq0
-pages: []
+pages:
+  - name: Déplacement
+    type: text
+    title:
+      show: false
+      level: 1
+    text:
+      format: 1
+      content: >-
+        <p class="MsoNormal">Les personnages peuvent se déplacer jusqu’à leur
+        score d’attribut Dextérité en mètre à chaque round. Ils peuvent aussi
+        courir jusqu’à 3 fois leur valeur de Dextérité, mais en subissant un
+        malus de -2 sur tous leurs tests durant le tour. Le déplacement n’est
+        pas une action ; il fait simplement parti du tour du héros.<span
+        style="mso-spacerun:yes">  </span></p>
+    _id: J3TRxNI3Rw8hWGPy
+    image: {}
+    video:
+      controls: true
+      volume: 0.5
+    src: null
+    system: {}
+    sort: 0
+    ownership:
+      default: -1
+    flags: {}
+    _stats:
+      systemId: null
+      systemVersion: null
+      coreVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+    _key: '!journal.pages!61fVKXwcwQHyhDq0.J3TRxNI3Rw8hWGPy'
+ownership:
+  default: 0
+  TK1vCAdCz548vBDu: 3
+  VAnYow5sWS9EJzo0: 3
+_stats:
+  systemId: torgeternity
+  systemVersion: 3.8.1
+  coreVersion: '11.315'
+  createdTime: 1716827810050
+  modifiedTime: 1716827810050
+  lastModifiedBy: VAnYow5sWS9EJzo0
 _key: '!journal!61fVKXwcwQHyhDq0'
 

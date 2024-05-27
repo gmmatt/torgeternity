@@ -1,27 +1,63 @@
 _id: ejHK3jBoZcbKJLih
 name: Cibles multiples
-content: >-
-  <p class="MsoNormal">Les personnages peuvent attaquer plusieurs adversaires à
-  la fois avec des attaques physiques ou d’interaction offensives. Chaque cible
-  supplémentaire entraîne un malus de -2 au test. Tirer sur trois cibles, par
-  exemple, soustrait 4 au total de l’attaque. En cas de réussite, toutes les
-  cibles sont touchées et subissent des dommages normalement. </p>
-
-  <blockquote>
-
-  <p><strong>Remarque sur le système Foundry : </strong>si tu fais un test de
-  compétence améliorée, le système calculera automatiquement une pénalité
-  multi-cibles.  (voir
-  @UUID[Compendium.torgeternity.basic-rules-fr.JournalEntry.J0Yt8ueE280AzxmS]{attaque}).</p>
-
-  </blockquote>
 folder: null
 sort: 0
-permission:
-  default: 0
-  TK1vCAdCz548vBDu: 3
 flags:
   core:
     sourceId: JournalEntry.xdrk6Ham3C1W9VNZ
-pages: []
+pages:
+  - name: Cibles multiples
+    type: text
+    title:
+      show: false
+      level: 1
+    text:
+      format: 1
+      content: >-
+        <p class="MsoNormal">Les personnages peuvent attaquer plusieurs
+        adversaires à la fois avec des attaques physiques ou d’interaction
+        offensives. Chaque cible supplémentaire entraîne un malus de -2 au test.
+        Tirer sur trois cibles, par exemple, soustrait 4 au total de l’attaque.
+        En cas de réussite, toutes les cibles sont touchées et subissent des
+        dommages normalement. </p>
+
+        <blockquote>
+
+        <p><strong>Remarque sur le système Foundry : </strong>si tu fais un test
+        de compétence améliorée, le système calculera automatiquement une
+        pénalité multi-cibles.  (voir
+        @UUID[Compendium.torgeternity.basic-rules-fr.JournalEntry.J0Yt8ueE280AzxmS]{attaque}).</p>
+
+        </blockquote>
+    _id: tdakM0F1lZma0efJ
+    image: {}
+    video:
+      controls: true
+      volume: 0.5
+    src: null
+    system: {}
+    sort: 0
+    ownership:
+      default: -1
+    flags: {}
+    _stats:
+      systemId: null
+      systemVersion: null
+      coreVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+    _key: '!journal.pages!ejHK3jBoZcbKJLih.tdakM0F1lZma0efJ'
+ownership:
+  default: 0
+  TK1vCAdCz548vBDu: 3
+  VAnYow5sWS9EJzo0: 3
+_stats:
+  systemId: torgeternity
+  systemVersion: 3.8.1
+  coreVersion: '11.315'
+  createdTime: 1716827810287
+  modifiedTime: 1716827810287
+  lastModifiedBy: VAnYow5sWS9EJzo0
 _key: '!journal!ejHK3jBoZcbKJLih'
+

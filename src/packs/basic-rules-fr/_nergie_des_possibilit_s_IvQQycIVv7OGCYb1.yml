@@ -1,20 +1,55 @@
 _id: IvQQycIVv7OGCYb1
 name: Énergie des possibilités
-content: >-
-  <p>L'énergie de possibilité représente la capacité des Chevaliers desTempêtes
-  à "repousser" une réalité. </p>
-
-  <p> </p>
-
-  <p>La plupart des joueurs commencent une session avec trois (3) possibilités.
-  Les personnages qui ont l'atout Prodige commencent avec quatre.</p>
 folder: null
 sort: 0
-permission:
-  kz1RJu8vrAPmTUwN: 3
 flags:
   core:
     sourceId: JournalEntry.IEYuGSkHmfm5X1ud
-pages: []
+pages:
+  - name: Énergie des possibilités
+    type: text
+    title:
+      show: false
+      level: 1
+    text:
+      format: 1
+      content: >-
+        <p>L'énergie de possibilité représente la capacité des Chevaliers
+        desTempêtes à "repousser" une réalité. </p>
+
+        <p> </p>
+
+        <p>La plupart des joueurs commencent une session avec trois (3)
+        possibilités. Les personnages qui ont l'atout Prodige commencent avec
+        quatre.</p>
+    _id: eBxyS2gJaemDqBmt
+    image: {}
+    video:
+      controls: true
+      volume: 0.5
+    src: null
+    system: {}
+    sort: 0
+    ownership:
+      default: -1
+    flags: {}
+    _stats:
+      systemId: null
+      systemVersion: null
+      coreVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+    _key: '!journal.pages!IvQQycIVv7OGCYb1.eBxyS2gJaemDqBmt'
+ownership:
+  kz1RJu8vrAPmTUwN: 3
+  VAnYow5sWS9EJzo0: 3
+_stats:
+  systemId: torgeternity
+  systemVersion: 3.8.1
+  coreVersion: '11.315'
+  createdTime: 1716827810157
+  modifiedTime: 1716827810157
+  lastModifiedBy: VAnYow5sWS9EJzo0
 _key: '!journal!IvQQycIVv7OGCYb1'
 

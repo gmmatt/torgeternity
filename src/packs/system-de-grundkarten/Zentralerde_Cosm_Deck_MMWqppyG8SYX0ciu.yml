@@ -5,7 +5,7 @@ description: ''
 img: >-
   systems/torgeternity/images/deutsch/cards/Cosmkarten/Zentralerde/ZZZR%C3%BCckseite.webp
 cards:
-  - _id: XWqMEFnSdV2hvVog
+  - _id: krwUNS4x6RTktjTi
     name: Angetrieben
     description: ''
     type: cosm
@@ -25,13 +25,15 @@ cards:
     rotation: 0
     sort: 0
     flags: {}
-    system: {}
+    system:
+      cosm: ''
+      number: ''
     value: null
     width: null
     height: null
-    _key: '!cards.cards!MMWqppyG8SYX0ciu.XWqMEFnSdV2hvVog'
+    _key: '!cards.cards!MMWqppyG8SYX0ciu.krwUNS4x6RTktjTi'
     cards: []
-  - _id: Cc6W8HydjMcsfnMM
+  - _id: KpSErnbH03mvw2Df
     name: Weiterkämpfen
     description: ''
     type: cosm
@@ -51,13 +53,15 @@ cards:
     rotation: 0
     sort: 0
     flags: {}
-    system: {}
+    system:
+      cosm: ''
+      number: ''
     value: null
     width: null
     height: null
-    _key: '!cards.cards!MMWqppyG8SYX0ciu.Cc6W8HydjMcsfnMM'
+    _key: '!cards.cards!MMWqppyG8SYX0ciu.KpSErnbH03mvw2Df'
     cards: []
-  - _id: wik5DXYOt06TEDWq
+  - _id: YgdpQLs6de17owmn
     name: Inspirierende Rede
     description: ''
     type: cosm
@@ -77,13 +81,15 @@ cards:
     rotation: 0
     sort: 0
     flags: {}
-    system: {}
+    system:
+      cosm: ''
+      number: ''
     value: null
     width: null
     height: null
-    _key: '!cards.cards!MMWqppyG8SYX0ciu.wik5DXYOt06TEDWq'
+    _key: '!cards.cards!MMWqppyG8SYX0ciu.YgdpQLs6de17owmn'
     cards: []
-  - _id: BUpc7jQEN6VkO0IP
+  - _id: LXBm6QHoQiCc30mR
     name: Gesetz der Hoffnung
     description: ''
     type: cosm
@@ -103,13 +109,15 @@ cards:
     rotation: 0
     sort: 0
     flags: {}
-    system: {}
+    system:
+      cosm: ''
+      number: ''
     value: null
     width: null
     height: null
-    _key: '!cards.cards!MMWqppyG8SYX0ciu.BUpc7jQEN6VkO0IP'
+    _key: '!cards.cards!MMWqppyG8SYX0ciu.LXBm6QHoQiCc30mR'
     cards: []
-  - _id: DvRMvWWipEt8QOIp
+  - _id: ENSDyxD4NgJnDnSa
     name: Willkommen auf der Erde!
     description: ''
     type: cosm
@@ -129,13 +137,15 @@ cards:
     rotation: 0
     sort: 0
     flags: {}
-    system: {}
+    system:
+      cosm: ''
+      number: ''
     value: null
     width: null
     height: null
-    _key: '!cards.cards!MMWqppyG8SYX0ciu.DvRMvWWipEt8QOIp'
+    _key: '!cards.cards!MMWqppyG8SYX0ciu.ENSDyxD4NgJnDnSa'
     cards: []
-  - _id: 4M1vDbpBjZCFWeGA
+  - _id: T6nOw7lKEW92RJIC
     name: Eskalation!
     description: ''
     type: cosm
@@ -155,13 +165,15 @@ cards:
     rotation: 0
     sort: 0
     flags: {}
-    system: {}
+    system:
+      cosm: ''
+      number: ''
     value: null
     width: null
     height: null
-    _key: '!cards.cards!MMWqppyG8SYX0ciu.4M1vDbpBjZCFWeGA'
+    _key: '!cards.cards!MMWqppyG8SYX0ciu.T6nOw7lKEW92RJIC'
     cards: []
-  - _id: AwtNEUm1TStYbWDQ
+  - _id: ZIi8vHlRQoAhIus4
     name: Es gibt immer Hoffnung
     description: ''
     type: cosm
@@ -181,13 +193,15 @@ cards:
     rotation: 0
     sort: 0
     flags: {}
-    system: {}
+    system:
+      cosm: ''
+      number: ''
     value: null
     width: null
     height: null
-    _key: '!cards.cards!MMWqppyG8SYX0ciu.AwtNEUm1TStYbWDQ'
+    _key: '!cards.cards!MMWqppyG8SYX0ciu.ZIi8vHlRQoAhIus4'
     cards: []
-  - _id: ZBMCEmmYWE3U3P8m
+  - _id: HrrF5tEmHUCryebf
     name: Nutze den Tag!
     description: ''
     type: cosm
@@ -207,13 +221,15 @@ cards:
     rotation: 0
     sort: 0
     flags: {}
-    system: {}
+    system:
+      cosm: ''
+      number: ''
     value: null
     width: null
     height: null
-    _key: '!cards.cards!MMWqppyG8SYX0ciu.ZBMCEmmYWE3U3P8m'
+    _key: '!cards.cards!MMWqppyG8SYX0ciu.HrrF5tEmHUCryebf'
     cards: []
-  - _id: UbmoB2CltVh3ZNIg
+  - _id: z4aTMLfe5Ljn2hPq
     name: Aufbäumen
     description: ''
     type: cosm
@@ -233,13 +249,15 @@ cards:
     rotation: 0
     sort: 0
     flags: {}
-    system: {}
+    system:
+      cosm: ''
+      number: ''
     value: null
     width: null
     height: null
-    _key: '!cards.cards!MMWqppyG8SYX0ciu.UbmoB2CltVh3ZNIg'
+    _key: '!cards.cards!MMWqppyG8SYX0ciu.z4aTMLfe5Ljn2hPq'
     cards: []
-  - _id: jxQief4EE0tbr3p1
+  - _id: 8dDbYNSqVVtsHo12
     name: Glückliche Fügung
     description: ''
     type: cosm
@@ -259,11 +277,13 @@ cards:
     rotation: 0
     sort: 0
     flags: {}
-    system: {}
+    system:
+      cosm: ''
+      number: ''
     value: null
     width: null
     height: null
-    _key: '!cards.cards!MMWqppyG8SYX0ciu.jxQief4EE0tbr3p1'
+    _key: '!cards.cards!MMWqppyG8SYX0ciu.8dDbYNSqVVtsHo12'
     cards: []
 rotation: 0
 displayCount: false
@@ -278,14 +298,15 @@ system: {}
 ownership:
   default: 0
   1pSzpSNrhKGYYcib: 3
+  VAnYow5sWS9EJzo0: 3
 width: null
 height: null
 _stats:
   systemId: torgeternity
-  systemVersion: 2.5.1
-  coreVersion: '10.278'
-  createdTime: null
-  modifiedTime: 1660972044825
-  lastModifiedBy: pLf3kUpJuGZH0Ep4
+  systemVersion: 3.8.1
+  coreVersion: '11.315'
+  createdTime: 1716827812181
+  modifiedTime: 1716827812181
+  lastModifiedBy: VAnYow5sWS9EJzo0
 _key: '!cards!MMWqppyG8SYX0ciu'
 

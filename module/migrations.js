@@ -153,35 +153,7 @@ export async function torgMigration() {
         }
       }
     }
-    // Migration to 3.8.0 where we changed .attributes.x (plain) to attributes.x.base/ .value, migrating all Active Effects (AE) to the new keys
-    if (isNewerVersion('3.8.0', migrationVersion)) {
-      ui.notifications.info('System Migration running');
 
-      for (const actor of game.actors) {
-        await migrateAttributeAEs(actor.items, actor); // migrate all items on world actors
-      }
-      await migrateAttributeAEs(game.items); // migrate all items in world
-
-      // following: migrate all packs, first actors, then items
-      for (const pack of game.packs.filter((p) => p.documentName === 'Actor')) {
-        const wasLocked = pack.locked;
-        pack.configure({ locked: false });
-        const actorDatas = await pack.getDocuments();
-        for (const actor of actorDatas) {
-          await migrateAttributeAEs(actor.items, actor);
-        }
-        pack.configure({ locked: wasLocked });
-      }
-
-      for (const pack of game.packs.filter((p) => p.documentName === 'Item')) {
-        const wasLocked = pack.locked;
-        pack.configure({ locked: false });
-        const itemDatas = await pack.getDocuments();
-        await migrateAttributeAEs(itemDatas, null, pack.collection);
-
-        pack.configure({ locked: wasLocked });
-      }
-    }
     /**
    ***********************************************************
     New migrations go here.
@@ -199,43 +171,6 @@ export async function torgMigration() {
 
     ui.notifications.info('System Migration Complete');
   }
-}
-
-async function migrateAttributeAEs(items, actor = null, pack = undefined) {
-  const itemsToCreate = [];
-  const idsToDelete = [];
-  const badAttributeKeys = [
-    'system.attributes.charisma',
-    'system.attributes.mind',
-    'system.attributes.strength',
-    'system.attributes.dexterity',
-    'system.attributes.spirit',
-  ];
-
-  for (const item of items) {
-    if (item.effects.some((e) => e.changes.some((c) => !badAttributeKeys.includes(c.key))))
-      continue;
-
-    const itemData = item.toObject();
-
-    itemData.effects = itemData.effects.map((effect) => {
-      effect.changes = effect.changes.map((c) => {
-        c.key = badAttributeKeys.includes(c.key) ? c.key + '.value' : c.key;
-        return c;
-      });
-      return effect;
-    });
-    idsToDelete.push(itemData._id);
-    itemsToCreate.push(itemData);
-  }
-  if (actor) {
-    await actor.deleteEmbeddedDocuments('Item', idsToDelete);
-    await actor.createEmbeddedDocuments('Item', itemsToCreate, { keepId: true });
-
-    return;
-  }
-
-  await Item.updateDocuments(itemsToCreate, { pack });
 }
 
 // Function to test if a world is a new world, to hude my hacky approach under a nice rug

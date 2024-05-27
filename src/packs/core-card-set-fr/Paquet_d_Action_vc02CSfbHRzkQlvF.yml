@@ -3,13 +3,11 @@ name: Paquet d'Action
 type: deck
 description: ''
 img: systems/torgeternity/images/cards/drama-back.webp
-data: {}
 cards:
-  - _id: Wz6BA4cy4XE6Gxmj
+  - _id: zlP0JtYGwdnLgMho
     name: Vous tentez de les déborder !
     description: ''
     type: drama
-    data: {}
     suit: ''
     back:
       name: ''
@@ -26,14 +24,26 @@ cards:
     sort: 0
     flags: {}
     value: null
-    number: null
-    _key: '!cards.cards!vc02CSfbHRzkQlvF.Wz6BA4cy4XE6Gxmj'
+    system:
+      approvedActions: ''
+      cosm: ''
+      dsrLine: ''
+      heroesConditionsDramatic: ''
+      heroesConditionsStandard: ''
+      heroesFirstDramatic: true
+      heroesFirstStandard: true
+      number: ''
+      rule: ''
+      villainsConditionsDramatic: ''
+      villainsConditionsStandard: ''
+    width: null
+    height: null
+    _key: '!cards.cards!vc02CSfbHRzkQlvF.zlP0JtYGwdnLgMho'
     cards: []
-  - _id: 7AYNr4QbQGEi0fxf
+  - _id: RLQZsH4n0pzw7dFu
     name: Vous remarquez un point faible!
     description: ''
     type: drama
-    data: {}
     suit: ''
     back:
       name: ''
@@ -50,14 +60,26 @@ cards:
     sort: 1
     flags: {}
     value: null
-    number: null
-    _key: '!cards.cards!vc02CSfbHRzkQlvF.7AYNr4QbQGEi0fxf'
+    system:
+      approvedActions: ''
+      cosm: ''
+      dsrLine: ''
+      heroesConditionsDramatic: ''
+      heroesConditionsStandard: ''
+      heroesFirstDramatic: true
+      heroesFirstStandard: true
+      number: ''
+      rule: ''
+      villainsConditionsDramatic: ''
+      villainsConditionsStandard: ''
+    width: null
+    height: null
+    _key: '!cards.cards!vc02CSfbHRzkQlvF.RLQZsH4n0pzw7dFu'
     cards: []
-  - _id: Zii2WV1HUwsEpUBb
+  - _id: JwMZG1c7f0qfAPOo
     name: Vous êtes repoussés !
     description: ''
     type: drama
-    data: {}
     suit: ''
     back:
       name: ''
@@ -74,14 +96,26 @@ cards:
     sort: 2
     flags: {}
     value: null
-    number: null
-    _key: '!cards.cards!vc02CSfbHRzkQlvF.Zii2WV1HUwsEpUBb'
+    system:
+      approvedActions: ''
+      cosm: ''
+      dsrLine: ''
+      heroesConditionsDramatic: ''
+      heroesConditionsStandard: ''
+      heroesFirstDramatic: true
+      heroesFirstStandard: true
+      number: ''
+      rule: ''
+      villainsConditionsDramatic: ''
+      villainsConditionsStandard: ''
+    width: null
+    height: null
+    _key: '!cards.cards!vc02CSfbHRzkQlvF.JwMZG1c7f0qfAPOo'
     cards: []
-  - _id: GqlKFT6GfsNa2rpl
+  - _id: BEJGHnX33a7ZzifP
     name: Vous cherchez un avantage
     description: ''
     type: drama
-    data: {}
     suit: ''
     back:
       name: ''
@@ -97,14 +131,27 @@ cards:
     rotation: 0
     sort: 3
     flags: {}
-    number: null
-    _key: '!cards.cards!vc02CSfbHRzkQlvF.GqlKFT6GfsNa2rpl'
+    system:
+      approvedActions: ''
+      cosm: ''
+      dsrLine: ''
+      heroesConditionsDramatic: ''
+      heroesConditionsStandard: ''
+      heroesFirstDramatic: true
+      heroesFirstStandard: true
+      number: ''
+      rule: ''
+      villainsConditionsDramatic: ''
+      villainsConditionsStandard: ''
+    value: null
+    width: null
+    height: null
+    _key: '!cards.cards!vc02CSfbHRzkQlvF.BEJGHnX33a7ZzifP'
     cards: []
-  - _id: tigJXXB3pKueyMCf
+  - _id: P6ZjMN7cT3rkll4l
     name: Ils hésitent !
     description: ''
     type: drama
-    data: {}
     suit: ''
     back:
       name: ''
@@ -120,14 +167,27 @@ cards:
     rotation: 0
     sort: 4
     flags: {}
-    number: null
-    _key: '!cards.cards!vc02CSfbHRzkQlvF.tigJXXB3pKueyMCf'
+    system:
+      approvedActions: ''
+      cosm: ''
+      dsrLine: ''
+      heroesConditionsDramatic: ''
+      heroesConditionsStandard: ''
+      heroesFirstDramatic: true
+      heroesFirstStandard: true
+      number: ''
+      rule: ''
+      villainsConditionsDramatic: ''
+      villainsConditionsStandard: ''
+    value: null
+    width: null
+    height: null
+    _key: '!cards.cards!vc02CSfbHRzkQlvF.P6ZjMN7cT3rkll4l'
     cards: []
-  - _id: 5oPRTrRPJmUSKjod
+  - _id: acBFgZu8m73c8mcy
     name: Ils se regroupent !
     description: ''
     type: drama
-    data: {}
     suit: ''
     back:
       name: ''
@@ -143,14 +203,27 @@ cards:
     rotation: 0
     sort: 5
     flags: {}
-    number: null
-    _key: '!cards.cards!vc02CSfbHRzkQlvF.5oPRTrRPJmUSKjod'
+    system:
+      approvedActions: ''
+      cosm: ''
+      dsrLine: ''
+      heroesConditionsDramatic: ''
+      heroesConditionsStandard: ''
+      heroesFirstDramatic: true
+      heroesFirstStandard: true
+      number: ''
+      rule: ''
+      villainsConditionsDramatic: ''
+      villainsConditionsStandard: ''
+    value: null
+    width: null
+    height: null
+    _key: '!cards.cards!vc02CSfbHRzkQlvF.acBFgZu8m73c8mcy'
     cards: []
-  - _id: 5KVJ0THcmjJBIIIp
+  - _id: SS1sdAsIvyo6oU3E
     name: Ils frappent !
     description: ''
     type: drama
-    data: {}
     suit: ''
     back:
       name: ''
@@ -166,14 +239,27 @@ cards:
     rotation: 0
     sort: 6
     flags: {}
-    number: null
-    _key: '!cards.cards!vc02CSfbHRzkQlvF.5KVJ0THcmjJBIIIp'
+    system:
+      approvedActions: ''
+      cosm: ''
+      dsrLine: ''
+      heroesConditionsDramatic: ''
+      heroesConditionsStandard: ''
+      heroesFirstDramatic: true
+      heroesFirstStandard: true
+      number: ''
+      rule: ''
+      villainsConditionsDramatic: ''
+      villainsConditionsStandard: ''
+    value: null
+    width: null
+    height: null
+    _key: '!cards.cards!vc02CSfbHRzkQlvF.SS1sdAsIvyo6oU3E'
     cards: []
-  - _id: 675lbdeLDi8R1Ji4
+  - _id: BxNgOQEpnJEE7Tas
     name: Ca devient dur !
     description: ''
     type: drama
-    data: {}
     suit: ''
     back:
       name: ''
@@ -189,14 +275,27 @@ cards:
     rotation: 0
     sort: 7
     flags: {}
-    number: null
-    _key: '!cards.cards!vc02CSfbHRzkQlvF.675lbdeLDi8R1Ji4'
+    system:
+      approvedActions: ''
+      cosm: ''
+      dsrLine: ''
+      heroesConditionsDramatic: ''
+      heroesConditionsStandard: ''
+      heroesFirstDramatic: true
+      heroesFirstStandard: true
+      number: ''
+      rule: ''
+      villainsConditionsDramatic: ''
+      villainsConditionsStandard: ''
+    value: null
+    width: null
+    height: null
+    _key: '!cards.cards!vc02CSfbHRzkQlvF.BxNgOQEpnJEE7Tas'
     cards: []
-  - _id: i2vYxXYg7bd7ftWP
+  - _id: h23wNi8VU4Tlgf5X
     name: Cette vieille rengaine !
     description: ''
     type: drama
-    data: {}
     suit: ''
     back:
       name: ''
@@ -212,14 +311,27 @@ cards:
     rotation: 0
     sort: 8
     flags: {}
-    number: null
-    _key: '!cards.cards!vc02CSfbHRzkQlvF.i2vYxXYg7bd7ftWP'
+    system:
+      approvedActions: ''
+      cosm: ''
+      dsrLine: ''
+      heroesConditionsDramatic: ''
+      heroesConditionsStandard: ''
+      heroesFirstDramatic: true
+      heroesFirstStandard: true
+      number: ''
+      rule: ''
+      villainsConditionsDramatic: ''
+      villainsConditionsStandard: ''
+    value: null
+    width: null
+    height: null
+    _key: '!cards.cards!vc02CSfbHRzkQlvF.h23wNi8VU4Tlgf5X'
     cards: []
-  - _id: O04725Yax5GGT6c0
+  - _id: 0RdYSSdNAjJHQ8vM
     name: Je n'y suis pas encore !
     description: ''
     type: drama
-    data: {}
     suit: ''
     back:
       name: ''
@@ -235,14 +347,27 @@ cards:
     rotation: 0
     sort: 9
     flags: {}
-    number: null
-    _key: '!cards.cards!vc02CSfbHRzkQlvF.O04725Yax5GGT6c0'
+    system:
+      approvedActions: ''
+      cosm: ''
+      dsrLine: ''
+      heroesConditionsDramatic: ''
+      heroesConditionsStandard: ''
+      heroesFirstDramatic: true
+      heroesFirstStandard: true
+      number: ''
+      rule: ''
+      villainsConditionsDramatic: ''
+      villainsConditionsStandard: ''
+    value: null
+    width: null
+    height: null
+    _key: '!cards.cards!vc02CSfbHRzkQlvF.0RdYSSdNAjJHQ8vM'
     cards: []
-  - _id: 2zG1dK5GzWmYDISg
+  - _id: 8jtMQf5sILOwxGAB
     name: Vous attaquez avec prudence !
     description: ''
     type: drama
-    data: {}
     suit: ''
     back:
       name: ''
@@ -258,14 +383,27 @@ cards:
     rotation: 0
     sort: 10
     flags: {}
-    number: null
-    _key: '!cards.cards!vc02CSfbHRzkQlvF.2zG1dK5GzWmYDISg'
+    system:
+      approvedActions: ''
+      cosm: ''
+      dsrLine: ''
+      heroesConditionsDramatic: ''
+      heroesConditionsStandard: ''
+      heroesFirstDramatic: true
+      heroesFirstStandard: true
+      number: ''
+      rule: ''
+      villainsConditionsDramatic: ''
+      villainsConditionsStandard: ''
+    value: null
+    width: null
+    height: null
+    _key: '!cards.cards!vc02CSfbHRzkQlvF.8jtMQf5sILOwxGAB'
     cards: []
-  - _id: m1XyzPtfAijKoVzA
+  - _id: i0a4Xgmk984qdICm
     name: Le rythme s'accélère !
     description: ''
     type: drama
-    data: {}
     suit: ''
     back:
       name: ''
@@ -281,14 +419,27 @@ cards:
     rotation: 0
     sort: 11
     flags: {}
-    number: null
-    _key: '!cards.cards!vc02CSfbHRzkQlvF.m1XyzPtfAijKoVzA'
+    system:
+      approvedActions: ''
+      cosm: ''
+      dsrLine: ''
+      heroesConditionsDramatic: ''
+      heroesConditionsStandard: ''
+      heroesFirstDramatic: true
+      heroesFirstStandard: true
+      number: ''
+      rule: ''
+      villainsConditionsDramatic: ''
+      villainsConditionsStandard: ''
+    value: null
+    width: null
+    height: null
+    _key: '!cards.cards!vc02CSfbHRzkQlvF.i0a4Xgmk984qdICm'
     cards: []
-  - _id: HVlvW2AJJPjGTIpy
+  - _id: aVVVRXij9sC0dLDk
     name: On a le dessus !
     description: ''
     type: drama
-    data: {}
     suit: ''
     back:
       name: ''
@@ -304,14 +455,27 @@ cards:
     rotation: 0
     sort: 12
     flags: {}
-    number: null
-    _key: '!cards.cards!vc02CSfbHRzkQlvF.HVlvW2AJJPjGTIpy'
+    system:
+      approvedActions: ''
+      cosm: ''
+      dsrLine: ''
+      heroesConditionsDramatic: ''
+      heroesConditionsStandard: ''
+      heroesFirstDramatic: true
+      heroesFirstStandard: true
+      number: ''
+      rule: ''
+      villainsConditionsDramatic: ''
+      villainsConditionsStandard: ''
+    value: null
+    width: null
+    height: null
+    _key: '!cards.cards!vc02CSfbHRzkQlvF.aVVVRXij9sC0dLDk'
     cards: []
-  - _id: Ve4HUstwueK2E9UA
+  - _id: 1XadYnNZ8KvY8h61
     name: Pas comme ça !
     description: ''
     type: drama
-    data: {}
     suit: ''
     back:
       name: ''
@@ -327,14 +491,27 @@ cards:
     rotation: 0
     sort: 13
     flags: {}
-    number: null
-    _key: '!cards.cards!vc02CSfbHRzkQlvF.Ve4HUstwueK2E9UA'
+    system:
+      approvedActions: ''
+      cosm: ''
+      dsrLine: ''
+      heroesConditionsDramatic: ''
+      heroesConditionsStandard: ''
+      heroesFirstDramatic: true
+      heroesFirstStandard: true
+      number: ''
+      rule: ''
+      villainsConditionsDramatic: ''
+      villainsConditionsStandard: ''
+    value: null
+    width: null
+    height: null
+    _key: '!cards.cards!vc02CSfbHRzkQlvF.1XadYnNZ8KvY8h61'
     cards: []
-  - _id: rOsbLG1wgjKxy9Ds
+  - _id: 4ZhSiQspSdKhvdWQ
     name: Attention !
     description: ''
     type: drama
-    data: {}
     suit: ''
     back:
       name: ''
@@ -350,14 +527,27 @@ cards:
     rotation: 0
     sort: 14
     flags: {}
-    number: null
-    _key: '!cards.cards!vc02CSfbHRzkQlvF.rOsbLG1wgjKxy9Ds'
+    system:
+      approvedActions: ''
+      cosm: ''
+      dsrLine: ''
+      heroesConditionsDramatic: ''
+      heroesConditionsStandard: ''
+      heroesFirstDramatic: true
+      heroesFirstStandard: true
+      number: ''
+      rule: ''
+      villainsConditionsDramatic: ''
+      villainsConditionsStandard: ''
+    value: null
+    width: null
+    height: null
+    _key: '!cards.cards!vc02CSfbHRzkQlvF.4ZhSiQspSdKhvdWQ'
     cards: []
-  - _id: f5MFTL4MlYwQNS6V
+  - _id: f4JVZdZRK39FkYlq
     name: Jamais simple !
     description: ''
     type: drama
-    data: {}
     suit: ''
     back:
       name: ''
@@ -373,14 +563,27 @@ cards:
     rotation: 0
     sort: 15
     flags: {}
-    number: null
-    _key: '!cards.cards!vc02CSfbHRzkQlvF.f5MFTL4MlYwQNS6V'
+    system:
+      approvedActions: ''
+      cosm: ''
+      dsrLine: ''
+      heroesConditionsDramatic: ''
+      heroesConditionsStandard: ''
+      heroesFirstDramatic: true
+      heroesFirstStandard: true
+      number: ''
+      rule: ''
+      villainsConditionsDramatic: ''
+      villainsConditionsStandard: ''
+    value: null
+    width: null
+    height: null
+    _key: '!cards.cards!vc02CSfbHRzkQlvF.f4JVZdZRK39FkYlq'
     cards: []
-  - _id: fnOaLXFOdcb3zLx0
+  - _id: COZUvwjMmgKifj8i
     name: Vous ne pourrez pas m'arrêter !
     description: ''
     type: drama
-    data: {}
     suit: ''
     back:
       name: ''
@@ -396,14 +599,27 @@ cards:
     rotation: 0
     sort: 16
     flags: {}
-    number: null
-    _key: '!cards.cards!vc02CSfbHRzkQlvF.fnOaLXFOdcb3zLx0'
+    system:
+      approvedActions: ''
+      cosm: ''
+      dsrLine: ''
+      heroesConditionsDramatic: ''
+      heroesConditionsStandard: ''
+      heroesFirstDramatic: true
+      heroesFirstStandard: true
+      number: ''
+      rule: ''
+      villainsConditionsDramatic: ''
+      villainsConditionsStandard: ''
+    value: null
+    width: null
+    height: null
+    _key: '!cards.cards!vc02CSfbHRzkQlvF.COZUvwjMmgKifj8i'
     cards: []
-  - _id: RXtk5iX3xWx1EuSt
+  - _id: dk8ARxchDuOHDBUg
     name: Sous le feu !
     description: ''
     type: drama
-    data: {}
     suit: ''
     back:
       name: ''
@@ -419,14 +635,27 @@ cards:
     rotation: 0
     sort: 17
     flags: {}
-    number: null
-    _key: '!cards.cards!vc02CSfbHRzkQlvF.RXtk5iX3xWx1EuSt'
+    system:
+      approvedActions: ''
+      cosm: ''
+      dsrLine: ''
+      heroesConditionsDramatic: ''
+      heroesConditionsStandard: ''
+      heroesFirstDramatic: true
+      heroesFirstStandard: true
+      number: ''
+      rule: ''
+      villainsConditionsDramatic: ''
+      villainsConditionsStandard: ''
+    value: null
+    width: null
+    height: null
+    _key: '!cards.cards!vc02CSfbHRzkQlvF.dk8ARxchDuOHDBUg'
     cards: []
-  - _id: B8pqzAPWcr2IVXqc
+  - _id: PP3P1zhfqXfoogKz
     name: Il est temps d'agir !
     description: ''
     type: drama
-    data: {}
     suit: ''
     back:
       name: ''
@@ -442,14 +671,27 @@ cards:
     rotation: 0
     sort: 18
     flags: {}
-    number: null
-    _key: '!cards.cards!vc02CSfbHRzkQlvF.B8pqzAPWcr2IVXqc'
+    system:
+      approvedActions: ''
+      cosm: ''
+      dsrLine: ''
+      heroesConditionsDramatic: ''
+      heroesConditionsStandard: ''
+      heroesFirstDramatic: true
+      heroesFirstStandard: true
+      number: ''
+      rule: ''
+      villainsConditionsDramatic: ''
+      villainsConditionsStandard: ''
+    value: null
+    width: null
+    height: null
+    _key: '!cards.cards!vc02CSfbHRzkQlvF.PP3P1zhfqXfoogKz'
     cards: []
-  - _id: gFOfJugLwFqTRQ7U
+  - _id: G7LwQaHS3dEReNL5
     name: Ils arrivent !
     description: ''
     type: drama
-    data: {}
     suit: ''
     back:
       name: ''
@@ -465,14 +707,27 @@ cards:
     rotation: 0
     sort: 19
     flags: {}
-    number: null
-    _key: '!cards.cards!vc02CSfbHRzkQlvF.gFOfJugLwFqTRQ7U'
+    system:
+      approvedActions: ''
+      cosm: ''
+      dsrLine: ''
+      heroesConditionsDramatic: ''
+      heroesConditionsStandard: ''
+      heroesFirstDramatic: true
+      heroesFirstStandard: true
+      number: ''
+      rule: ''
+      villainsConditionsDramatic: ''
+      villainsConditionsStandard: ''
+    value: null
+    width: null
+    height: null
+    _key: '!cards.cards!vc02CSfbHRzkQlvF.G7LwQaHS3dEReNL5'
     cards: []
-  - _id: F19KAzKEVCZgdruH
+  - _id: jovhQvUY9SlQPOua
     name: Ils s'enfuuient !
     description: ''
     type: drama
-    data: {}
     suit: ''
     back:
       name: ''
@@ -488,14 +743,27 @@ cards:
     rotation: 0
     sort: 20
     flags: {}
-    number: null
-    _key: '!cards.cards!vc02CSfbHRzkQlvF.F19KAzKEVCZgdruH'
+    system:
+      approvedActions: ''
+      cosm: ''
+      dsrLine: ''
+      heroesConditionsDramatic: ''
+      heroesConditionsStandard: ''
+      heroesFirstDramatic: true
+      heroesFirstStandard: true
+      number: ''
+      rule: ''
+      villainsConditionsDramatic: ''
+      villainsConditionsStandard: ''
+    value: null
+    width: null
+    height: null
+    _key: '!cards.cards!vc02CSfbHRzkQlvF.jovhQvUY9SlQPOua'
     cards: []
-  - _id: xvBmC8DegncFxEeq
+  - _id: v7KxwMHfq87Qri0J
     name: De retour !
     description: ''
     type: drama
-    data: {}
     suit: ''
     back:
       name: ''
@@ -511,14 +779,27 @@ cards:
     rotation: 0
     sort: 21
     flags: {}
-    number: null
-    _key: '!cards.cards!vc02CSfbHRzkQlvF.xvBmC8DegncFxEeq'
+    system:
+      approvedActions: ''
+      cosm: ''
+      dsrLine: ''
+      heroesConditionsDramatic: ''
+      heroesConditionsStandard: ''
+      heroesFirstDramatic: true
+      heroesFirstStandard: true
+      number: ''
+      rule: ''
+      villainsConditionsDramatic: ''
+      villainsConditionsStandard: ''
+    value: null
+    width: null
+    height: null
+    _key: '!cards.cards!vc02CSfbHRzkQlvF.v7KxwMHfq87Qri0J'
     cards: []
-  - _id: 0w5EEbkSRs529k3w
+  - _id: ggBIqvUgIT1q4cYL
     name: La victoire est proche !
     description: ''
     type: drama
-    data: {}
     suit: ''
     back:
       name: ''
@@ -534,14 +815,27 @@ cards:
     rotation: 0
     sort: 22
     flags: {}
-    number: null
-    _key: '!cards.cards!vc02CSfbHRzkQlvF.0w5EEbkSRs529k3w'
+    system:
+      approvedActions: ''
+      cosm: ''
+      dsrLine: ''
+      heroesConditionsDramatic: ''
+      heroesConditionsStandard: ''
+      heroesFirstDramatic: true
+      heroesFirstStandard: true
+      number: ''
+      rule: ''
+      villainsConditionsDramatic: ''
+      villainsConditionsStandard: ''
+    value: null
+    width: null
+    height: null
+    _key: '!cards.cards!vc02CSfbHRzkQlvF.ggBIqvUgIT1q4cYL'
     cards: []
-  - _id: kKlFQ4CeQwhMxA2Q
+  - _id: pgcJvIiaiC2IKaq3
     name: Passez à l'action !
     description: ''
     type: drama
-    data: {}
     suit: ''
     back:
       name: ''
@@ -557,14 +851,27 @@ cards:
     rotation: 0
     sort: 23
     flags: {}
-    number: null
-    _key: '!cards.cards!vc02CSfbHRzkQlvF.kKlFQ4CeQwhMxA2Q'
+    system:
+      approvedActions: ''
+      cosm: ''
+      dsrLine: ''
+      heroesConditionsDramatic: ''
+      heroesConditionsStandard: ''
+      heroesFirstDramatic: true
+      heroesFirstStandard: true
+      number: ''
+      rule: ''
+      villainsConditionsDramatic: ''
+      villainsConditionsStandard: ''
+    value: null
+    width: null
+    height: null
+    _key: '!cards.cards!vc02CSfbHRzkQlvF.pgcJvIiaiC2IKaq3'
     cards: []
-  - _id: idyvTOtPgB51l5Xn
+  - _id: xfR2G9Ak7CM7Fxga
     name: Une percée !
     description: ''
     type: drama
-    data: {}
     suit: ''
     back:
       name: ''
@@ -580,14 +887,27 @@ cards:
     rotation: 0
     sort: 24
     flags: {}
-    number: null
-    _key: '!cards.cards!vc02CSfbHRzkQlvF.idyvTOtPgB51l5Xn'
+    system:
+      approvedActions: ''
+      cosm: ''
+      dsrLine: ''
+      heroesConditionsDramatic: ''
+      heroesConditionsStandard: ''
+      heroesFirstDramatic: true
+      heroesFirstStandard: true
+      number: ''
+      rule: ''
+      villainsConditionsDramatic: ''
+      villainsConditionsStandard: ''
+    value: null
+    width: null
+    height: null
+    _key: '!cards.cards!vc02CSfbHRzkQlvF.xfR2G9Ak7CM7Fxga'
     cards: []
-  - _id: dk5kZDjmQBgYknHO
+  - _id: R1dmKE5LHB4eanxE
     name: Malédiction !
     description: ''
     type: drama
-    data: {}
     suit: ''
     back:
       name: ''
@@ -603,14 +923,27 @@ cards:
     rotation: 0
     sort: 25
     flags: {}
-    number: null
-    _key: '!cards.cards!vc02CSfbHRzkQlvF.dk5kZDjmQBgYknHO'
+    system:
+      approvedActions: ''
+      cosm: ''
+      dsrLine: ''
+      heroesConditionsDramatic: ''
+      heroesConditionsStandard: ''
+      heroesFirstDramatic: true
+      heroesFirstStandard: true
+      number: ''
+      rule: ''
+      villainsConditionsDramatic: ''
+      villainsConditionsStandard: ''
+    value: null
+    width: null
+    height: null
+    _key: '!cards.cards!vc02CSfbHRzkQlvF.R1dmKE5LHB4eanxE'
     cards: []
-  - _id: F2QhZ1LXkWaIi8oZ
+  - _id: gsXXUC8tl9j71YBI
     name: Renversement !
     description: ''
     type: drama
-    data: {}
     suit: ''
     back:
       name: ''
@@ -626,14 +959,27 @@ cards:
     rotation: 0
     sort: 26
     flags: {}
-    number: null
-    _key: '!cards.cards!vc02CSfbHRzkQlvF.F2QhZ1LXkWaIi8oZ'
+    system:
+      approvedActions: ''
+      cosm: ''
+      dsrLine: ''
+      heroesConditionsDramatic: ''
+      heroesConditionsStandard: ''
+      heroesFirstDramatic: true
+      heroesFirstStandard: true
+      number: ''
+      rule: ''
+      villainsConditionsDramatic: ''
+      villainsConditionsStandard: ''
+    value: null
+    width: null
+    height: null
+    _key: '!cards.cards!vc02CSfbHRzkQlvF.gsXXUC8tl9j71YBI'
     cards: []
-  - _id: mqpTRGaL02RPLMTW
+  - _id: Klbtg20oVr9EMgQd
     name: A eux d'encaisser !
     description: ''
     type: drama
-    data: {}
     suit: ''
     back:
       name: ''
@@ -649,14 +995,27 @@ cards:
     rotation: 0
     sort: 27
     flags: {}
-    number: null
-    _key: '!cards.cards!vc02CSfbHRzkQlvF.mqpTRGaL02RPLMTW'
+    system:
+      approvedActions: ''
+      cosm: ''
+      dsrLine: ''
+      heroesConditionsDramatic: ''
+      heroesConditionsStandard: ''
+      heroesFirstDramatic: true
+      heroesFirstStandard: true
+      number: ''
+      rule: ''
+      villainsConditionsDramatic: ''
+      villainsConditionsStandard: ''
+    value: null
+    width: null
+    height: null
+    _key: '!cards.cards!vc02CSfbHRzkQlvF.Klbtg20oVr9EMgQd'
     cards: []
-  - _id: QAIoeaCQtDi5BKAd
+  - _id: DT9yLb2970IqucbA
     name: Un répit bienvenu !
     description: ''
     type: drama
-    data: {}
     suit: ''
     back:
       name: ''
@@ -672,14 +1031,27 @@ cards:
     rotation: 0
     sort: 28
     flags: {}
-    number: null
-    _key: '!cards.cards!vc02CSfbHRzkQlvF.QAIoeaCQtDi5BKAd'
+    system:
+      approvedActions: ''
+      cosm: ''
+      dsrLine: ''
+      heroesConditionsDramatic: ''
+      heroesConditionsStandard: ''
+      heroesFirstDramatic: true
+      heroesFirstStandard: true
+      number: ''
+      rule: ''
+      villainsConditionsDramatic: ''
+      villainsConditionsStandard: ''
+    value: null
+    width: null
+    height: null
+    _key: '!cards.cards!vc02CSfbHRzkQlvF.DT9yLb2970IqucbA'
     cards: []
-  - _id: nmxwZ5L2ZcORgKMT
+  - _id: 9DrIG3KMiYZqGcSN
     name: Epreuve de force !
     description: ''
     type: drama
-    data: {}
     suit: ''
     back:
       name: ''
@@ -695,14 +1067,27 @@ cards:
     rotation: 0
     sort: 29
     flags: {}
-    number: null
-    _key: '!cards.cards!vc02CSfbHRzkQlvF.nmxwZ5L2ZcORgKMT'
+    system:
+      approvedActions: ''
+      cosm: ''
+      dsrLine: ''
+      heroesConditionsDramatic: ''
+      heroesConditionsStandard: ''
+      heroesFirstDramatic: true
+      heroesFirstStandard: true
+      number: ''
+      rule: ''
+      villainsConditionsDramatic: ''
+      villainsConditionsStandard: ''
+    value: null
+    width: null
+    height: null
+    _key: '!cards.cards!vc02CSfbHRzkQlvF.9DrIG3KMiYZqGcSN'
     cards: []
-  - _id: 7lhvLNDqTyowcVEo
+  - _id: t68Ew2sIfak0JUCB
     name: Vous cédez du terrain !
     description: ''
     type: drama
-    data: {}
     suit: ''
     back:
       name: ''
@@ -718,14 +1103,27 @@ cards:
     rotation: 0
     sort: 30
     flags: {}
-    number: null
-    _key: '!cards.cards!vc02CSfbHRzkQlvF.7lhvLNDqTyowcVEo'
+    system:
+      approvedActions: ''
+      cosm: ''
+      dsrLine: ''
+      heroesConditionsDramatic: ''
+      heroesConditionsStandard: ''
+      heroesFirstDramatic: true
+      heroesFirstStandard: true
+      number: ''
+      rule: ''
+      villainsConditionsDramatic: ''
+      villainsConditionsStandard: ''
+    value: null
+    width: null
+    height: null
+    _key: '!cards.cards!vc02CSfbHRzkQlvF.t68Ew2sIfak0JUCB'
     cards: []
-  - _id: CenESxdxoabFGqIR
+  - _id: 2263w2glJMIvjpb6
     name: Vous reculez !
     description: ''
     type: drama
-    data: {}
     suit: ''
     back:
       name: ''
@@ -741,14 +1139,27 @@ cards:
     rotation: 0
     sort: 31
     flags: {}
-    number: null
-    _key: '!cards.cards!vc02CSfbHRzkQlvF.CenESxdxoabFGqIR'
+    system:
+      approvedActions: ''
+      cosm: ''
+      dsrLine: ''
+      heroesConditionsDramatic: ''
+      heroesConditionsStandard: ''
+      heroesFirstDramatic: true
+      heroesFirstStandard: true
+      number: ''
+      rule: ''
+      villainsConditionsDramatic: ''
+      villainsConditionsStandard: ''
+    value: null
+    width: null
+    height: null
+    _key: '!cards.cards!vc02CSfbHRzkQlvF.2263w2glJMIvjpb6'
     cards: []
-  - _id: 8XKGhmouwiMwJVbC
+  - _id: 11uM8Y0R1LcBRLtE
     name: Tu es à moi maintenant !
     description: ''
     type: drama
-    data: {}
     suit: ''
     back:
       name: ''
@@ -764,14 +1175,27 @@ cards:
     rotation: 0
     sort: 32
     flags: {}
-    number: null
-    _key: '!cards.cards!vc02CSfbHRzkQlvF.8XKGhmouwiMwJVbC'
+    system:
+      approvedActions: ''
+      cosm: ''
+      dsrLine: ''
+      heroesConditionsDramatic: ''
+      heroesConditionsStandard: ''
+      heroesFirstDramatic: true
+      heroesFirstStandard: true
+      number: ''
+      rule: ''
+      villainsConditionsDramatic: ''
+      villainsConditionsStandard: ''
+    value: null
+    width: null
+    height: null
+    _key: '!cards.cards!vc02CSfbHRzkQlvF.11uM8Y0R1LcBRLtE'
     cards: []
-  - _id: pEZxm70ScVhdw8Ka
+  - _id: rMjKXbpw3xaYrQaQ
     name: La victoire est à moi !
     description: ''
     type: drama
-    data: {}
     suit: ''
     back:
       name: ''
@@ -787,14 +1211,27 @@ cards:
     rotation: 0
     sort: 33
     flags: {}
-    number: null
-    _key: '!cards.cards!vc02CSfbHRzkQlvF.pEZxm70ScVhdw8Ka'
+    system:
+      approvedActions: ''
+      cosm: ''
+      dsrLine: ''
+      heroesConditionsDramatic: ''
+      heroesConditionsStandard: ''
+      heroesFirstDramatic: true
+      heroesFirstStandard: true
+      number: ''
+      rule: ''
+      villainsConditionsDramatic: ''
+      villainsConditionsStandard: ''
+    value: null
+    width: null
+    height: null
+    _key: '!cards.cards!vc02CSfbHRzkQlvF.rMjKXbpw3xaYrQaQ'
     cards: []
-  - _id: dPI5mNwxXA0I6aoh
+  - _id: WAMfXajvCk9y2KlD
     name: Mon triomphe est inéluctable !
     description: ''
     type: drama
-    data: {}
     suit: ''
     back:
       name: ''
@@ -810,14 +1247,27 @@ cards:
     rotation: 0
     sort: 34
     flags: {}
-    number: null
-    _key: '!cards.cards!vc02CSfbHRzkQlvF.dPI5mNwxXA0I6aoh'
+    system:
+      approvedActions: ''
+      cosm: ''
+      dsrLine: ''
+      heroesConditionsDramatic: ''
+      heroesConditionsStandard: ''
+      heroesFirstDramatic: true
+      heroesFirstStandard: true
+      number: ''
+      rule: ''
+      villainsConditionsDramatic: ''
+      villainsConditionsStandard: ''
+    value: null
+    width: null
+    height: null
+    _key: '!cards.cards!vc02CSfbHRzkQlvF.WAMfXajvCk9y2KlD'
     cards: []
-  - _id: IvXylMuqDKT2fBrY
+  - _id: yanSmq77BpQiVi37
     name: Torg !
     description: ''
     type: drama
-    data: {}
     suit: ''
     back:
       name: ''
@@ -833,14 +1283,27 @@ cards:
     rotation: 0
     sort: 35
     flags: {}
-    number: null
-    _key: '!cards.cards!vc02CSfbHRzkQlvF.IvXylMuqDKT2fBrY'
+    system:
+      approvedActions: ''
+      cosm: ''
+      dsrLine: ''
+      heroesConditionsDramatic: ''
+      heroesConditionsStandard: ''
+      heroesFirstDramatic: true
+      heroesFirstStandard: true
+      number: ''
+      rule: ''
+      villainsConditionsDramatic: ''
+      villainsConditionsStandard: ''
+    value: null
+    width: null
+    height: null
+    _key: '!cards.cards!vc02CSfbHRzkQlvF.yanSmq77BpQiVi37'
     cards: []
-  - _id: HIdPvVAqcejtERaX
+  - _id: eWMVhU2RM392W4Vg
     name: Oh Non !
     description: ''
     type: drama
-    data: {}
     suit: ''
     back:
       name: ''
@@ -856,14 +1319,27 @@ cards:
     rotation: 0
     sort: 36
     flags: {}
-    number: null
-    _key: '!cards.cards!vc02CSfbHRzkQlvF.HIdPvVAqcejtERaX'
+    system:
+      approvedActions: ''
+      cosm: ''
+      dsrLine: ''
+      heroesConditionsDramatic: ''
+      heroesConditionsStandard: ''
+      heroesFirstDramatic: true
+      heroesFirstStandard: true
+      number: ''
+      rule: ''
+      villainsConditionsDramatic: ''
+      villainsConditionsStandard: ''
+    value: null
+    width: null
+    height: null
+    _key: '!cards.cards!vc02CSfbHRzkQlvF.eWMVhU2RM392W4Vg'
     cards: []
-  - _id: 08JAcDZoQZTSw6vU
+  - _id: VC8m1gXet94Pp5Km
     name: Fuyez !
     description: ''
     type: drama
-    data: {}
     suit: ''
     back:
       name: ''
@@ -879,14 +1355,27 @@ cards:
     rotation: 0
     sort: 37
     flags: {}
-    number: null
-    _key: '!cards.cards!vc02CSfbHRzkQlvF.08JAcDZoQZTSw6vU'
+    system:
+      approvedActions: ''
+      cosm: ''
+      dsrLine: ''
+      heroesConditionsDramatic: ''
+      heroesConditionsStandard: ''
+      heroesFirstDramatic: true
+      heroesFirstStandard: true
+      number: ''
+      rule: ''
+      villainsConditionsDramatic: ''
+      villainsConditionsStandard: ''
+    value: null
+    width: null
+    height: null
+    _key: '!cards.cards!vc02CSfbHRzkQlvF.VC8m1gXet94Pp5Km'
     cards: []
-  - _id: SBV7Id4GT33UsWXu
+  - _id: gZeuc41X6wrzD006
     name: Quand soudain ...
     description: ''
     type: drama
-    data: {}
     suit: ''
     back:
       name: ''
@@ -902,14 +1391,27 @@ cards:
     rotation: 0
     sort: 38
     flags: {}
-    number: null
-    _key: '!cards.cards!vc02CSfbHRzkQlvF.SBV7Id4GT33UsWXu'
+    system:
+      approvedActions: ''
+      cosm: ''
+      dsrLine: ''
+      heroesConditionsDramatic: ''
+      heroesConditionsStandard: ''
+      heroesFirstDramatic: true
+      heroesFirstStandard: true
+      number: ''
+      rule: ''
+      villainsConditionsDramatic: ''
+      villainsConditionsStandard: ''
+    value: null
+    width: null
+    height: null
+    _key: '!cards.cards!vc02CSfbHRzkQlvF.gZeuc41X6wrzD006'
     cards: []
-  - _id: yKl5l4haeiLTod54
+  - _id: SZW4mMU9S2MsUoZ5
     name: Oh Oh!
     description: ''
     type: drama
-    data: {}
     suit: ''
     back:
       name: ''
@@ -925,15 +1427,27 @@ cards:
     rotation: 0
     sort: 39
     flags: {}
-    number: null
-    _key: '!cards.cards!vc02CSfbHRzkQlvF.yKl5l4haeiLTod54'
+    system:
+      approvedActions: ''
+      cosm: ''
+      dsrLine: ''
+      heroesConditionsDramatic: ''
+      heroesConditionsStandard: ''
+      heroesFirstDramatic: true
+      heroesFirstStandard: true
+      number: ''
+      rule: ''
+      villainsConditionsDramatic: ''
+      villainsConditionsStandard: ''
+    value: null
+    width: null
+    height: null
+    _key: '!cards.cards!vc02CSfbHRzkQlvF.SZW4mMU9S2MsUoZ5'
     cards: []
 rotation: 0
 displayCount: false
 folder: null
 sort: 0
-permission:
-  kz1RJu8vrAPmTUwN: 3
 flags:
   exportSource:
     world: torgv2p2
@@ -944,5 +1458,18 @@ flags:
     sourceId: Cards.5eH9MbgstDaSvEi9
   torgeternity:
     usage: dramaDeck
+system: {}
+ownership:
+  kz1RJu8vrAPmTUwN: 3
+  VAnYow5sWS9EJzo0: 3
+width: null
+height: null
+_stats:
+  systemId: torgeternity
+  systemVersion: 3.8.1
+  coreVersion: '11.315'
+  createdTime: 1716827810726
+  modifiedTime: 1716827810726
+  lastModifiedBy: VAnYow5sWS9EJzo0
 _key: '!cards!vc02CSfbHRzkQlvF'
 

@@ -6,7 +6,14 @@ items:
   - _id: kBiGdjd85DU1MtHd
     name: Dragon Breath
     type: enhancement
-    data:
+    sort: 200001
+    flags:
+      core:
+        sourceId: Item.HlSAJi0eR2q7UF8E
+    img: systems/torgeternity/images/icons/enhancement.webp
+    effects: []
+    folder: null
+    system:
       perk: Dragon Warrior
       description: >-
         <p>One of the warrior&rsquo;s bracers is lined with a long tube leading
@@ -18,15 +25,15 @@ items:
         <p>The container magically recharges at the end of the scene or during a
         long break in the action of a few hours or more (Game Master&rsquo;s
         discretion).</p>
-    sort: 200001
-    flags:
-      core:
-        sourceId: Item.HlSAJi0eR2q7UF8E
-    img: systems/torgeternity/images/icons/enhancement.webp
-    effects: []
-    folder: null
-    permission:
+    ownership:
       default: 0
+    _stats:
+      systemId: null
+      systemVersion: null
+      coreVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
     _key: '!actors.items!QsYmnq73AiR6BwhD.kBiGdjd85DU1MtHd'
   - _id: U0CKtAHQmBDo9ZyF
     name: Dragon Breath (weapon)
@@ -48,20 +55,22 @@ items:
 
         <p>Acquire this weapon when taking the Dragon Breath enhancement for the
         Dragon Warrior perk.</p>
-      techlevel: null
       price: '0'
+      techlevel: null
       value: 0
-      attackWith: missileWeapons
-      damageType: strengthPlus
-      damage: 16
-      ap: 0
       ammo:
         max: 1
         value: 1
-      minStrength: null
-      range: 10m
-      notes: Fire, Small Blast
+      ap: 0
+      attackWith: missileWeapons
       chatNote: ''
+      damage: 16
+      damageType: strengthPlus
+      equipped: false
+      equippedClass: .item-unequipped
+      minStrength: ''
+      notes: Fire, Small Blast
+      range: 10m
     ownership:
       default: 0
     _stats:
@@ -87,9 +96,10 @@ items:
       description: >-
         <p>Requires Magic Axiom 13. Drinking the potion is a simple action that
         restores one Wound and one bonus die of Shock.</p>
-      techlevel: 12
       price: '500'
+      techlevel: 12
       value: 14
+      equippedClass: item-equipped
     ownership:
       default: 0
     _stats:
@@ -113,9 +123,10 @@ items:
     system:
       cosm: Aysle
       description: ''
-      techlevel: 8
       price: '25'
+      techlevel: 8
       value: 7
+      equippedClass: item-equipped
     ownership:
       default: 0
     _stats:
@@ -142,9 +153,10 @@ items:
         <p>A batch of scattered spikes that always land with a point upwards,
         designed to impale feet and tires. Once deployed as a simple action
         maneuver interactions become Favored around the spikes.</p>
-      techlevel: 14
       price: '40'
+      techlevel: 14
       value: 8
+      equippedClass: item-equipped
     ownership:
       default: 0
     _stats:
@@ -158,13 +170,6 @@ items:
   - _id: W80yHGyLWk5wrLJW
     name: Giant Strength
     type: enhancement
-    data:
-      perk: Dragon Warrior
-      description: >-
-        <p>A series of pneumatic compressors take in air and channel it to the
-        dwarf&rsquo;s arms. Along with cleverly placed levers along the inside
-        of the armor, it increases his Strength by +2 for tests and determining
-        damage. Toughness remains unaffected.</p>
     sort: 500001
     flags:
       core:
@@ -174,22 +179,45 @@ items:
       - _id: 07KQJUY5nlOb5K7Q
         flags: {}
         changes:
-          - key: data.attributes.strength
+          - key: system.attributes.strength.value
             value: '2'
             mode: 2
+            priority: null
         disabled: false
         duration:
           startTime: null
+          seconds: null
+          combat: null
+          rounds: null
+          turns: null
+          startRound: null
+          startTurn: null
         icon: icons/svg/aura.svg
-        label: Giant Strength
         origin: Item.q3wDWkbSqbWYKVNB
         tint: null
         transfer: true
+        name: Giant Strength
+        description: ''
+        statuses: []
         _key: >-
           !actors.items.effects!QsYmnq73AiR6BwhD.W80yHGyLWk5wrLJW.07KQJUY5nlOb5K7Q
     folder: null
-    permission:
+    system:
+      perk: Dragon Warrior
+      description: >-
+        <p>A series of pneumatic compressors take in air and channel it to the
+        dwarf&rsquo;s arms. Along with cleverly placed levers along the inside
+        of the armor, it increases his Strength by +2 for tests and determining
+        damage. Toughness remains unaffected.</p>
+    ownership:
       default: 0
+    _stats:
+      systemId: null
+      systemVersion: null
+      coreVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
     _key: '!actors.items!QsYmnq73AiR6BwhD.W80yHGyLWk5wrLJW'
   - _id: 45qccoq0HU8OzZeZ
     name: Darkvision (Dwarf)
@@ -204,75 +232,74 @@ items:
     system:
       category: dwarf
       cosm: Aysle
-      prerequisites: ''
-      timestaken: 1
       description: >-
         <p>Dwarves ignore up to four points of
         @UUID[Compendium.te001-core-rulebook.rules.pwneQ55M0nnDH0Us.JournalEntryPage.EhKa65cpHvodUl2L#darkness]{darkness}
         penalties.</p>
+      prerequisites: ''
+      generalContradiction: false
       pulpPowers:
-        enhancementNumber: 0
         enhancement01:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement02:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement03:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement04:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement05:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement06:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement07:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement08:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement09:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement10:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement11:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement12:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement13:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement14:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement15:
-          title: ''
           description: ''
           taken: false
-        limitationNumber: 0
+          title: ''
+        enhancementNumber: 0
         limitation01: ''
         limitation02: ''
         limitation03: ''
@@ -283,6 +310,8 @@ items:
         limitation08: ''
         limitation09: ''
         limitation10: ''
+        limitationNumber: 0
+      timestaken: '1'
     ownership:
       default: 0
       aSTzyuIvqyDaFHwy: 3
@@ -321,16 +350,18 @@ items:
         <p>&nbsp;</p>
 
         <p>Found in <strong>Core Rules</strong></p>
-      techlevel: 10
       price: '300'
+      techlevel: 10
       value: 12
-      attackWith: meleeWeapons
-      damageType: strengthPlus
-      damage: 4
       ap: 0
+      attackWith: meleeWeapons
       bonus: 2
-      notes: Stagger, Two Handed, Unwieldy
       chatNote: ''
+      damage: 4
+      damageType: strengthPlus
+      equipped: false
+      equippedClass: .item-unequipped
+      notes: Stagger, Two Handed, Unwieldy
     ownership:
       default: 0
       A9LyAqagoJJU3gDH: 3
@@ -404,7 +435,7 @@ items:
         name: Giant Strength (+2)
         _id: JVEhl4LHM1292KmE
         changes:
-          - key: system.attributes.strength
+          - key: system.attributes.strength.value
             mode: 2
             value: '2'
             priority: null
@@ -508,6 +539,7 @@ items:
 
         <p>Found in <strong>Core Rules</strong></p>
       prerequisites: Strength 10+
+      generalContradiction: false
       pulpPowers:
         enhancement01:
           description: >-
@@ -608,7 +640,7 @@ items:
         limitation09: ''
         limitation10: ''
         limitationNumber: 0
-      timestaken: 2
+      timestaken: '2'
     ownership:
       default: 0
       A9LyAqagoJJU3gDH: 3
@@ -637,7 +669,7 @@ effects:
     name: Giant Strength (+2)
     _id: hEeH10DtfU8wxI7z
     changes:
-      - key: system.attributes.strength
+      - key: system.attributes.strength.value
         mode: 2
         value: '2'
         priority: null
@@ -660,300 +692,340 @@ system:
     max: 3
     value: 0
   attributes:
-    charisma: 6
-    dexterity: 8
-    mind: 7
-    spirit: 8
-    strength: 11
+    charisma:
+      base: 6
+    dexterity:
+      base: 8
+    mind:
+      base: 7
+    spirit:
+      base: 8
+    strength:
+      base: 11
   other:
-    move: 8
-    run: '24'
-    toughness: '15'
-    armor: 4
     cosm: aysle
     possibilities: 3
-    posibilities: 3
   skills:
     airVehicles:
       baseAttribute: dexterity
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 0
+      isThreatSkill: false
+      defenseOnly: false
     alteration:
       baseAttribute: mind
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 0
+      isThreatSkill: false
+      defenseOnly: false
     apportation:
       baseAttribute: spirit
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 0
+      isThreatSkill: false
+      defenseOnly: false
     beastRiding:
       baseAttribute: dexterity
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     computers:
       baseAttribute: mind
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     conjuration:
       baseAttribute: spirit
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 0
+      isThreatSkill: false
+      defenseOnly: false
     divination:
       baseAttribute: mind
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 0
+      isThreatSkill: false
+      defenseOnly: false
     dodge:
       baseAttribute: dexterity
       adds: 1
-      value: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     energyWeapons:
       baseAttribute: dexterity
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: combat
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     evidenceAnalysis:
       baseAttribute: mind
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     faith:
       baseAttribute: spirit
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     find:
       baseAttribute: mind
       adds: 1
-      value: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     fireCombat:
       baseAttribute: dexterity
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: combat
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     firstAid:
       baseAttribute: mind
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     heavyWeapons:
       baseAttribute: dexterity
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: combat
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     intimidation:
       baseAttribute: spirit
       adds: 2
-      value: 0
       isFav: false
       groupName: interaction
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     kinesis:
       baseAttribute: spirit
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 0
+      isThreatSkill: false
+      defenseOnly: false
     landVehicles:
       baseAttribute: dexterity
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     language:
       baseAttribute: mind
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 0
+      isThreatSkill: false
+      defenseOnly: false
     lockpicking:
       baseAttribute: dexterity
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 0
+      isThreatSkill: false
+      defenseOnly: false
     maneuver:
       baseAttribute: dexterity
       adds: 1
-      value: 0
       isFav: false
       groupName: interaction
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     medicine:
       baseAttribute: mind
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 0
+      isThreatSkill: false
+      defenseOnly: false
     meleeWeapons:
       baseAttribute: dexterity
       adds: 3
-      value: 0
       isFav: false
       groupName: combat
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     missileWeapons:
       baseAttribute: dexterity
       adds: 2
-      value: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     persuasion:
       baseAttribute: charisma
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     precognition:
       baseAttribute: mind
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 0
+      isThreatSkill: false
+      defenseOnly: false
     profession:
       baseAttribute: mind
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     reality:
       baseAttribute: spirit
       adds: 1
-      value: 0
       isFav: false
       groupName: other
       unskilledUse: 0
+      isThreatSkill: false
+      defenseOnly: false
     scholar:
       baseAttribute: mind
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     science:
       baseAttribute: mind
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     stealth:
       baseAttribute: dexterity
       adds: 1
-      value: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     streetwise:
       baseAttribute: charisma
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     survival:
       baseAttribute: mind
       adds: 1
-      value: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     taunt:
       baseAttribute: charisma
       adds: 2
-      value: 0
       isFav: false
       groupName: interaction
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     telepathy:
       baseAttribute: charisma
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 0
+      isThreatSkill: false
+      defenseOnly: false
     tracking:
       baseAttribute: mind
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     trick:
       baseAttribute: mind
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: interaction
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     unarmedCombat:
       baseAttribute: dexterity
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: combat
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     waterVehicles:
       baseAttribute: dexterity
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     willpower:
       baseAttribute: spirit
       adds: 1
-      value: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
   xp:
     unspent: 0
     earned: 0
@@ -963,7 +1035,6 @@ system:
     spirit: 18
     tech: 14
   details:
-    clearance: alpha
     background: >-
       <p><img class="charimg"
       src="systems/torgeternity/images/characters/Dragon_Warrior.webp" alt=""
@@ -1054,11 +1125,12 @@ system:
 
       </ul>
     race: dwarf
+    sizeBonus: normal
   editstate: false
-  fatigue: '1'
 ownership:
   default: 0
   A9LyAqagoJJU3gDH: 3
+  VAnYow5sWS9EJzo0: 3
 prototypeToken:
   flags: {}
   name: Dragon Warrior
@@ -1118,10 +1190,10 @@ prototypeToken:
   detectionModes: []
 _stats:
   systemId: torgeternity
-  systemVersion: 3.7.0
+  systemVersion: 3.8.1
   coreVersion: '11.315'
   createdTime: 1693900608203
-  modifiedTime: 1711803325334
-  lastModifiedBy: CtisFurQNe9h7ABb
+  modifiedTime: 1716827807732
+  lastModifiedBy: VAnYow5sWS9EJzo0
 _key: '!actors!QsYmnq73AiR6BwhD'
 

@@ -7,7 +7,13 @@ items:
     name: Drachentöter
     type: enhancement
     img: systems/torgeternity/images/icons/enhancement.webp
-    data:
+    effects: []
+    folder: LyasDNAhbLqYWU56
+    sort: 0
+    flags:
+      core:
+        sourceId: Item.2o4uyAarfqhvXsAb
+    system:
       perk: Medaillen
       description: >-
         <p><span style="font-family: 'Palatino Linotype';">Verliehen an
@@ -15,41 +21,55 @@ items:
         haben. Der Charakter darf gegen Gro&szlig;e oder gr&ouml;&szlig;ere
         Kreaturen (nicht Fahrzeuge oder Konstrukte) +1 BW Schaden addieren, wenn
         Angriff eine Anerkannte Aktion ist.&nbsp;</span></p>
-    effects: []
-    folder: LyasDNAhbLqYWU56
-    sort: 0
-    permission:
+    ownership:
       default: 0
       9Q0XnqFwko7hRlvL: 3
-    flags:
-      core:
-        sourceId: Item.2o4uyAarfqhvXsAb
+    _stats:
+      systemId: null
+      systemVersion: null
+      coreVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
     _key: '!actors.items!54xKJBBQREaETwap.l5YztYoW2lLfFuE7'
   - _id: cgOoj7U8q9ElWme8
     name: Weihwasser-Patrone
     type: enhancement
     img: systems/torgeternity/images/icons/enhancement.webp
-    data:
+    effects: []
+    folder: LyasDNAhbLqYWU56
+    sort: 0
+    flags:
+      core:
+        sourceId: Item.ZLEDMBxF7sYYfGDt
+    system:
       perk: Patronenschmied
       description: >-
         <p><span style="font-family: 'Palatino Linotype';">+2 Schaden gegen
         &uuml;bernat&uuml;rlich b&ouml;se Kreaturen, einschlie&szlig;lich
         Gospog, Vampire und Untote.</span></p>
-    effects: []
-    folder: LyasDNAhbLqYWU56
-    sort: 0
-    permission:
+    ownership:
       default: 0
       9Q0XnqFwko7hRlvL: 3
-    flags:
-      core:
-        sourceId: Item.ZLEDMBxF7sYYfGDt
+    _stats:
+      systemId: null
+      systemVersion: null
+      coreVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
     _key: '!actors.items!54xKJBBQREaETwap.cgOoj7U8q9ElWme8'
   - _id: RKUDEuSrme3mIBsL
     name: Adamant-Patrone
     type: enhancement
     img: systems/torgeternity/images/icons/enhancement.webp
-    data:
+    effects: []
+    folder: LyasDNAhbLqYWU56
+    sort: 0
+    flags:
+      core:
+        sourceId: Item.aixA8mnHcAnk2jqP
+    system:
       perk: Patronenschmied
       description: >-
         <p><span style="font-family: 'Palatino Linotype';">Einige der Feinde der
@@ -57,21 +77,28 @@ items:
         manchmal sogar dicken Panzerplatten bedeckt. Diese Patrone ist
         daf&uuml;r ausgelegt, solche R&uuml;stungen zu durchbrechen, sodass ein
         Angriff mit ihr Panzerbrechend 4 erh&auml;lt.&nbsp;</span></p>
-    effects: []
-    folder: LyasDNAhbLqYWU56
-    sort: 0
-    permission:
+    ownership:
       default: 0
       9Q0XnqFwko7hRlvL: 3
-    flags:
-      core:
-        sourceId: Item.aixA8mnHcAnk2jqP
+    _stats:
+      systemId: null
+      systemVersion: null
+      coreVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
     _key: '!actors.items!54xKJBBQREaETwap.RKUDEuSrme3mIBsL'
   - _id: ggMge8q9mNLisoLF
     name: Riesenjäger-Patrone
     type: enhancement
     img: systems/torgeternity/images/icons/enhancement.webp
-    data:
+    effects: []
+    folder: LyasDNAhbLqYWU56
+    sort: 0
+    flags:
+      core:
+        sourceId: Item.bGEJwusZZlTPjJ8E
+    system:
       perk: Patronenschmied
       description: >-
         <p><span style="font-family: 'Palatino Linotype';">Die Viktorianer
@@ -79,15 +106,16 @@ items:
         Schrecken des Hageren Mannes zu besiegen. Sie verursachen +5 Schaden
         gegen Kreaturen, die Gro&szlig; oder gr&ouml;&szlig;er
         sind.&nbsp;</span></p>
-    effects: []
-    folder: LyasDNAhbLqYWU56
-    sort: 0
-    permission:
+    ownership:
       default: 0
       9Q0XnqFwko7hRlvL: 3
-    flags:
-      core:
-        sourceId: Item.bGEJwusZZlTPjJ8E
+    _stats:
+      systemId: null
+      systemVersion: null
+      coreVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
     _key: '!actors.items!54xKJBBQREaETwap.ggMge8q9mNLisoLF'
   - _id: boM8dYbi3L3o5AGN
     name: Silberdolch
@@ -102,20 +130,22 @@ items:
     system:
       cosm: Orrorsh
       description: <p>Verwenden, wenn der Silberdolch geworfen wird.</p>
-      techlevel: 8
       price: '0'
+      techlevel: 8
       value: 0
-      attackWith: missileWeapons
-      damageType: strengthPlus
-      damage: 1
-      ap: 0
       ammo:
         max: 1
         value: 1
-      minStrength: null
-      range: 5/10/15
-      notes: ''
+      ap: 0
+      attackWith: missileWeapons
       chatNote: ''
+      damage: 1
+      damageType: strengthPlus
+      equipped: false
+      equippedClass: .item-unequipped
+      minStrength: ''
+      notes: ''
+      range: 5/10/15
     ownership:
       default: 0
       9Q0XnqFwko7hRlvL: 3
@@ -140,8 +170,6 @@ items:
     system:
       category: occult
       cosm: Orrorsh
-      prerequisites: Siehe die einzelnen Medaillen.
-      timestaken: 1
       description: >-
         <p>Viktorianer sind statusbewusst und verehren ihre Helden mehr als
         alles andere. Die Viktorianer zeigen dies, indem sie den Tapferen, den
@@ -200,34 +228,34 @@ items:
         Gloriana}</li>
 
         </ul>
+      prerequisites: Siehe die einzelnen Medaillen.
+      generalContradiction: false
       pulpPowers:
-        enhancementNumber: 6
         enhancement01:
-          title: Carnifex Princeps
           description: >-
             Die Viktorianer wissen genau, wer der Hagere Mann ist. Diese
             Auszeichnung wird jedem verliehen, der an der Tötung eines Ravagons
             beteiligt ist, seiner gefährlichsten Untergebenen. Der Held bekommt
             zu Beginn jeder dramatischen Szene eine zusätzliche Handkarte.
           taken: false
+          title: Carnifex Princeps
         enhancement02:
-          title: Drachentöter
           description: >-
             Verliehen an diejenigen, die ein Sehr Großes und mächtiges Monster
             besiegt haben. Der Charakter darf gegen Große oder größere Kreaturen
             (nicht Fahrzeuge oder Konstrukte) +1 BW Schaden addieren, wenn
             Angriff eine Anerkannte Aktion ist.
           taken: true
+          title: Drachentöter
         enhancement03:
-          title: Feldzugmedaille der Possibility Wars
           description: >-
             Wird jedem Storm Knight verliehen, der an einem Ruhm-Ereignis
             teilnimmt. Die Medaille wird pro Cosm vergeben und kann einmal pro
             Akt genutzt werden, um Schockschaden in Höhe eines Bonuswürfels zu
             regenerieren. Dies ist jederzeit möglich und erfordert keine Aktion.
           taken: false
+          title: Feldzugmedaille der Possibility Wars
         enhancement04:
-          title: Orden von Cynthia Bartholomäus
           description: >-
             Verliehen für die Unterstützung der Verletzten oder Armen unter
             großer Bedrohung oder für einen längeren Zeitraum. „Ms. Bart“, wie
@@ -236,16 +264,16 @@ items:
             Charakter einen Verbündeten berühren, um bei diesem sofort allen
             Schockschaden zu heilen. Dies ist eine einfache Aktion.
           taken: false
+          title: Orden von Cynthia Bartholomäus
         enhancement05:
-          title: Verteidiger
           description: >-
             Verliehen an diejenigen, die eine beträchtliche Anzahl von Menschen,
             wie eine Schule oder eine Stadt, unter großem persönlichen Risiko
             gerettet oder verteidigt haben. Der Held beginnt jeden Akt mit 1
             zusätzlicher Möglichkeit.
           taken: false
+          title: Verteidiger
         enhancement06:
-          title: Victoria Gloriana
           description: >-
             Verliehen nach dem persönlichen Ausspielen einer Ruhmkarte. Dieses
             prestigeträchtige Abzeichen wird nur den größten Helden des Landes
@@ -255,43 +283,44 @@ items:
             Medaille und Würfeln auf das hierdurch verbesserte Attribut oder
             eine damit verknüpfte Fertigkeit einen Widerspruch auslösen kann.
           taken: false
+          title: Victoria Gloriana
         enhancement07:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement08:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement09:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement10:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement11:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement12:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement13:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement14:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement15:
-          title: ''
           description: ''
           taken: false
-        limitationNumber: 0
+          title: ''
+        enhancementNumber: 6
         limitation01: ''
         limitation02: ''
         limitation03: ''
@@ -302,6 +331,8 @@ items:
         limitation08: ''
         limitation09: ''
         limitation10: ''
+        limitationNumber: 0
+      timestaken: '1'
     ownership:
       default: 0
       9Q0XnqFwko7hRlvL: 3
@@ -327,8 +358,6 @@ items:
     system:
       category: occult
       cosm: Orrorsh
-      prerequisites: mindestens 2 Fertigkeitsstufen in Wissenschaft
-      timestaken: 1
       description: >-
         <p>Abenteurer von Orrorsh lernten vor langer Zeit, dass Bleikugeln und
         Stahlklingen den Schrecken ihres Reiches nicht gewachsen sind. Die
@@ -403,18 +432,18 @@ items:
         <li>@UUID[Compendium.te001-core-rulebook.grw-de-vorzuverb.Item.mgdVFDGal2m8kNzD]{Weihwasser-Patrone}</li>
 
         </ul>
+      prerequisites: mindestens 2 Fertigkeitsstufen in Wissenschaft
+      generalContradiction: false
       pulpPowers:
-        enhancementNumber: 8
         enhancement01:
-          title: Adamant-Patrone
           description: >-
             Einige der Feinde der Viktorianer sind von Kopf bis Fuß mit Metall,
             Schuppen und manchmal sogar dicken Panzerplatten bedeckt. Diese
             Patrone ist dafür ausgelegt, solche Rüstungen zu durchbrechen,
             sodass ein Angriff mit ihr Panzerbrechend 4 erhält.
           taken: true
+          title: Adamant-Patrone
         enhancement02:
-          title: Elektrische Patrone
           description: >-
             Wasserbasierte Kreaturen oder Kreaturen, die im Wasser stehen,
             erleiden einen zusätzlichen Schaden von +4, wenn sie mit einer
@@ -425,35 +454,35 @@ items:
             empfindliche Ausrüstung erleidet einen Kurzschluss, sodass sie 3
             Runden lang nicht eingesetzt werden kann.
           taken: false
+          title: Elektrische Patrone
         enhancement03:
-          title: Explosive Patrone
           description: >-
             Diese Patrone gehört zu den gefährlichsten im Arsenal der
             Patronenschmiede und verursacht 15 Schaden in einem kleinen
             Explosionsradius.
           taken: false
+          title: Explosive Patrone
         enhancement04:
-          title: Phantom-Patrone
           description: >-
             Diese Patronen werden aus verschiedenen Reagenzien wie kaltem Eisen,
             Salz und Weihwasser hergestellt, die es ihnen ermöglichen, Kreaturen
             mit der Fähigkeit „Ätherisch“ normal zu beeinflussen.
           taken: false
+          title: Phantom-Patrone
         enhancement05:
-          title: Riesenjäger-Patrone
           description: >-
             Die Viktorianer entwickelten diese schweren Patronen, um die größten
             Schrecken des Hageren Mannes zu besiegen. Sie verursachen +5 Schaden
             gegen Kreaturen, die Groß oder größer sind.
           taken: true
+          title: Riesenjäger-Patrone
         enhancement06:
-          title: Silber-Patrone
           description: >-
             Kreaturen mit der Fähigkeit „Lykantropie“ erleiden durch
             Silber-Patronen +4 Schaden.
           taken: false
+          title: Silber-Patrone
         enhancement07:
-          title: Sonnen-Patrone
           description: >-
             Diese Patronen enthalten etwas, was die Alchemisten als „flüssiges
             Sonnenlicht“ bezeichnen. Sie explodieren in einem mittleren
@@ -463,41 +492,42 @@ items:
             Kreaturen, die im Dunkeln sehen können, sind von Sonnen-Patronen
             betroffen.
           taken: false
+          title: Sonnen-Patrone
         enhancement08:
-          title: Weihwasser-Patrone
           description: >-
             +2 Schaden gegen übernatürlich böse Kreaturen, einschließlich
             Gospog, Vampire und Untote.
           taken: true
+          title: Weihwasser-Patrone
         enhancement09:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement10:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement11:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement12:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement13:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement14:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement15:
-          title: ''
           description: ''
           taken: false
-        limitationNumber: 0
+          title: ''
+        enhancementNumber: 8
         limitation01: ''
         limitation02: ''
         limitation03: ''
@@ -508,6 +538,8 @@ items:
         limitation08: ''
         limitation09: ''
         limitation10: ''
+        limitationNumber: 0
+      timestaken: '1'
     ownership:
       default: 0
       9Q0XnqFwko7hRlvL: 3
@@ -534,16 +566,18 @@ items:
     system:
       cosm: Orrorsh
       description: ''
-      techlevel: 8
       price: '0'
+      techlevel: 8
       value: 0
-      attackWith: meleeWeapons
-      damageType: strengthPlus
-      damage: 1
       ap: 0
+      attackWith: meleeWeapons
       bonus: 2
-      notes: ''
       chatNote: ''
+      damage: 1
+      damageType: strengthPlus
+      equipped: false
+      equippedClass: .item-unequipped
+      notes: ''
     ownership:
       default: 0
       9Q0XnqFwko7hRlvL: 3
@@ -571,19 +605,21 @@ items:
       cosm: Orrorsh
       description: >-
         <p>@UUID[Compendium.te001-core-rulebook.grw-de-grw.Qlx6yGF0Mmo6Xzrv.JournalEntryPage.7GGUUHzuYIqGPXDO#karabiner:]{Pistole}</p>
-      techlevel: 18
       price: '300'
+      techlevel: 18
       value: 12
-      attackWith: fireCombat
-      damageType: ''
-      damage: 14
-      ap: 0
       ammo:
         max: 6
         value: 6
-      range: 10/25/40
-      notes: ''
+      ap: 0
+      attackWith: fireCombat
       chatNote: Pistole
+      damage: 14
+      damageType: ''
+      equipped: false
+      equippedClass: .item-unequipped
+      notes: ''
+      range: 10/25/40
     ownership:
       default: 0
       9Q0XnqFwko7hRlvL: 3
@@ -611,19 +647,21 @@ items:
       cosm: Orrorsh
       description: >-
         <p>@UUID[Compendium.te001-core-rulebook.grw-de-grw.Qlx6yGF0Mmo6Xzrv.JournalEntryPage.7GGUUHzuYIqGPXDO#karabiner:]{Karabiner}</p>
-      techlevel: 18
       price: '0'
+      techlevel: 18
       value: 0
-      attackWith: fireCombat
-      damageType: ''
-      damage: 14
-      ap: 0
       ammo:
         max: 6
         value: 6
-      range: 50/100/200
-      notes: Karabiner
+      ap: 0
+      attackWith: fireCombat
       chatNote: ''
+      damage: 14
+      damageType: ''
+      equipped: false
+      equippedClass: .item-unequipped
+      notes: Karabiner
+      range: 50/100/200
     ownership:
       default: 0
       9Q0XnqFwko7hRlvL: 3
@@ -680,9 +718,10 @@ items:
         ausgestreut wurden, z&auml;hlen
         <em>Man&ouml;vrieren</em>-Interaktionsangriffe in ihrem Bereich als
         Beg&uuml;nstigt.</p>
-      techlevel: 14
       price: '40'
+      techlevel: 14
       value: 8
+      equippedClass: item-equipped
     ownership:
       default: 0
       9Q0XnqFwko7hRlvL: 3
@@ -708,9 +747,10 @@ items:
     system:
       cosm: Das Lebende Land
       description: ''
-      techlevel: 2
       price: '5'
+      techlevel: 2
       value: 4
+      equippedClass: item-equipped
     ownership:
       default: 0
       9Q0XnqFwko7hRlvL: 3
@@ -803,300 +843,340 @@ system:
     max: 3
     value: 0
   attributes:
-    charisma: 5
-    dexterity: 9
-    mind: 8
-    spirit: 10
-    strength: 8
+    charisma:
+      base: 5
+    dexterity:
+      base: 9
+    mind:
+      base: 8
+    spirit:
+      base: 10
+    strength:
+      base: 8
   other:
-    move: 9
-    run: 27
-    toughness: 10
-    armor: 2
     cosm: orrorsh
     possibilities: 3
-    posibilities: 3
   skills:
     airVehicles:
       baseAttribute: dexterity
-      adds: null
-      value: '-'
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 0
+      isThreatSkill: false
+      defenseOnly: false
     alteration:
       baseAttribute: mind
-      adds: null
-      value: '-'
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 0
+      isThreatSkill: false
+      defenseOnly: false
     apportation:
       baseAttribute: spirit
-      adds: null
-      value: '-'
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 0
+      isThreatSkill: false
+      defenseOnly: false
     beastRiding:
       baseAttribute: dexterity
-      adds: null
-      value: 9
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     computers:
       baseAttribute: mind
-      adds: null
-      value: 8
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     conjuration:
       baseAttribute: spirit
-      adds: null
-      value: '-'
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 0
+      isThreatSkill: false
+      defenseOnly: false
     divination:
       baseAttribute: mind
-      adds: null
-      value: '-'
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 0
+      isThreatSkill: false
+      defenseOnly: false
     dodge:
       baseAttribute: dexterity
       adds: 1
-      value: 10
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     energyWeapons:
       baseAttribute: dexterity
-      adds: null
-      value: 9
+      adds: 0
       isFav: false
       groupName: combat
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     evidenceAnalysis:
       baseAttribute: mind
       adds: 1
-      value: 9
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     faith:
       baseAttribute: spirit
-      adds: null
-      value: 10
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     find:
       baseAttribute: mind
       adds: 1
-      value: 9
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     fireCombat:
       baseAttribute: dexterity
       adds: 3
-      value: 12
       isFav: false
       groupName: combat
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     firstAid:
       baseAttribute: mind
-      adds: null
-      value: 8
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     heavyWeapons:
       baseAttribute: dexterity
-      adds: null
-      value: 9
+      adds: 0
       isFav: false
       groupName: combat
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     intimidation:
       baseAttribute: spirit
       adds: 2
-      value: 12
       isFav: false
       groupName: interaction
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     kinesis:
       baseAttribute: spirit
-      adds: null
-      value: '-'
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 0
+      isThreatSkill: false
+      defenseOnly: false
     landVehicles:
       baseAttribute: dexterity
-      adds: null
-      value: 9
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     language:
       baseAttribute: mind
-      adds: null
-      value: '-'
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 0
+      isThreatSkill: false
+      defenseOnly: false
     lockpicking:
       baseAttribute: dexterity
-      adds: null
-      value: '-'
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 0
+      isThreatSkill: false
+      defenseOnly: false
     maneuver:
       baseAttribute: dexterity
       adds: 1
-      value: 10
       isFav: false
       groupName: interaction
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     medicine:
       baseAttribute: mind
-      adds: null
-      value: '-'
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 0
+      isThreatSkill: false
+      defenseOnly: false
     meleeWeapons:
       baseAttribute: dexterity
       adds: 1
-      value: 10
       isFav: false
       groupName: combat
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     missileWeapons:
       baseAttribute: dexterity
-      adds: null
-      value: 9
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     persuasion:
       baseAttribute: charisma
-      adds: null
-      value: 5
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     precognition:
       baseAttribute: mind
-      adds: null
-      value: '-'
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 0
+      isThreatSkill: false
+      defenseOnly: false
     profession:
       baseAttribute: mind
-      adds: null
-      value: 8
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     reality:
       baseAttribute: spirit
       adds: 1
-      value: 11
       isFav: false
       groupName: other
       unskilledUse: 0
+      isThreatSkill: false
+      defenseOnly: false
     scholar:
       baseAttribute: mind
       adds: 1
-      value: 9
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     science:
       baseAttribute: mind
       adds: 2
-      value: 10
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     stealth:
       baseAttribute: dexterity
-      adds: null
-      value: 9
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     streetwise:
       baseAttribute: charisma
-      adds: null
-      value: 5
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     survival:
       baseAttribute: mind
-      adds: null
-      value: 8
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     taunt:
       baseAttribute: charisma
-      adds: null
-      value: 5
+      adds: 0
       isFav: false
       groupName: interaction
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     telepathy:
       baseAttribute: charisma
-      adds: null
-      value: '-'
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 0
+      isThreatSkill: false
+      defenseOnly: false
     tracking:
       baseAttribute: mind
       adds: 1
-      value: 9
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     trick:
       baseAttribute: mind
-      adds: null
-      value: 8
+      adds: 0
       isFav: false
       groupName: interaction
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     unarmedCombat:
       baseAttribute: dexterity
-      adds: null
-      value: 9
+      adds: 0
       isFav: false
       groupName: combat
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     waterVehicles:
       baseAttribute: dexterity
-      adds: null
-      value: 9
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     willpower:
       baseAttribute: spirit
       adds: 1
-      value: 11
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
   xp:
     unspent: 0
     earned: 0
@@ -1106,7 +1186,6 @@ system:
     spirit: 16
     tech: 18
   details:
-    clearance: alpha
     background: >-
       <p><img class="charimg"
       src="systems/torgeternity/images/characters/Monster_Hunter.webp" alt=""
@@ -1206,11 +1285,12 @@ system:
 
       </ul>
     race: human
+    sizeBonus: normal
   editstate: false
-  fatigue: '1'
 ownership:
   default: 0
   9Q0XnqFwko7hRlvL: 3
+  VAnYow5sWS9EJzo0: 3
 prototypeToken:
   flags: {}
   name: Der Monsterjäger
@@ -1270,10 +1350,10 @@ prototypeToken:
   detectionModes: []
 _stats:
   systemId: torgeternity
-  systemVersion: 3.7.0
+  systemVersion: 3.8.1
   coreVersion: '11.315'
   createdTime: 1694867975270
-  modifiedTime: 1711900150255
-  lastModifiedBy: CtisFurQNe9h7ABb
+  modifiedTime: 1716827810893
+  lastModifiedBy: VAnYow5sWS9EJzo0
 _key: '!actors!54xKJBBQREaETwap'
 

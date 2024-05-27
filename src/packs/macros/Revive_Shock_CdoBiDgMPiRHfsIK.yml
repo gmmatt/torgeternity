@@ -1,22 +1,23 @@
 name: Revive Shock
 type: script
 scope: global
-author: s0Eq742Hj4e1Qv9j
+author: VAnYow5sWS9EJzo0
 img: icons/svg/tankard.svg
 command: game.torgeternity.macros.reviveShock();
 folder: null
 ownership:
   default: 0
   s0Eq742Hj4e1Qv9j: 3
+  VAnYow5sWS9EJzo0: 3
 flags:
   core: {}
 _stats:
   systemId: torgeternity
-  systemVersion: 3.6.0
+  systemVersion: 3.8.1
   coreVersion: '11.315'
   createdTime: 1709236478748
-  modifiedTime: 1710879801459
-  lastModifiedBy: jUCN72TeDHYxGsq0
+  modifiedTime: 1716827807208
+  lastModifiedBy: VAnYow5sWS9EJzo0
 _id: CdoBiDgMPiRHfsIK
 sort: 0
 _key: '!macros!CdoBiDgMPiRHfsIK'

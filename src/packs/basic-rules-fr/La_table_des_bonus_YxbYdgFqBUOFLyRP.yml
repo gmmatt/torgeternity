@@ -1,14 +1,48 @@
 _id: YxbYdgFqBUOFLyRP
 name: La table des bonus
-content: "<p>La valeur du bonus dans Torg Eternity est calculée à l'aide de la table des bonus. Le système Foundry de Torg Eternity cherchera automatiquement ton bonus en fonction du résultat de tes jets de dés. Pour calculer manuellement un bonus, ou pour comprendre comment une possibilité supplémentaire peut affecter ton bonus, consulte le tableau ci-dessous :</p>\n<p style=\"text-align:center;color:white;background:black\"><strong>Table des Bonus</strong></p>\n<table style=\"height:73px;width:99.3356%\" border=\"1\">\n<tbody>\n<tr style=\"background:#f2dfc0\">\n<td style=\"text-align:center;width:6.81282%\">\n<h6>jet de dés</h6>\n</td>\n<td style=\"text-align:center;width:5.6661%\">\n<h6>1</h6>\n</td>\n<td style=\"text-align:center;width:3.6425%\">\n<h6>2</h6>\n</td>\n<td style=\"text-align:center;width:3.6425%\">\n<h6>3</h6>\n<h6>4</h6>\n</td>\n<td style=\"text-align:center;width:3.6425%\">\n<h6>5</h6>\n<h6>6</h6>\n</td>\n<td style=\"text-align:center;width:3.6425%\">\n<h6>7</h6>\n<h6>8</h6>\n</td>\n<td style=\"text-align:center;width:4.31703%\">\n<h6>9</h6>\n<h6>10</h6>\n</td>\n<td style=\"text-align:center;width:4.31703%\">\n<h6>11</h6>\n<h6>12</h6>\n</td>\n<td style=\"text-align:center;width:4.31703%\">\n<h6>13</h6>\n<h6>14</h6>\n</td>\n<td style=\"text-align:center;width:4.31703%\">\n<h6>15</h6>\n</td>\n<td style=\"text-align:center;width:4.31703%\">\n<h6>16</h6>\n</td>\n<td style=\"text-align:center;width:4.31703%\">\n<h6>17</h6>\n</td>\n<td style=\"text-align:center;width:4.31703%\">\n<h6>18</h6>\n</td>\n<td style=\"text-align:center;width:4.31703%\">\n<h6>19</h6>\n</td>\n<td style=\"text-align:center;width:4.31703%\">\n<h6>20</h6>\n</td>\n<td style=\"text-align:center;width:4.31703%\">\n<h6>21</h6>\n<h6>25</h6>\n</td>\n<td style=\"text-align:center;width:4.31703%\">\n<h6>26</h6>\n<h6>30</h6>\n</td>\n<td style=\"text-align:center;width:4.31703%\">\n<h6>31</h6>\n<h6>35</h6>\n</td>\n<td style=\"text-align:center;width:4.31703%\">\n<h6>36</h6>\n<h6>40</h6>\n</td>\n<td style=\"text-align:center;width:4.45194%\">\n<h6>41</h6>\n<h6>45</h6>\n</td>\n<td style=\"text-align:center;width:4.45194%\">\n<h6>46</h6>\n<h6>50</h6>\n</td>\n<td style=\"text-align:center;width:4.45194%\">\n<h6>+5</h6>\n</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:6.81282%\">\n<h6>bonus</h6>\n</td>\n<td style=\"text-align:center;width:5.6661%\">\n<h6>-10</h6>\n</td>\n<td style=\"text-align:center;width:3.6425%\">\n<h6>-8</h6>\n</td>\n<td style=\"text-align:center;width:3.6425%\">\n<h6>-6</h6>\n</td>\n<td style=\"text-align:center;width:3.6425%\">\n<h6>-4</h6>\n</td>\n<td style=\"text-align:center;width:3.6425%\">\n<h6>-2</h6>\n</td>\n<td style=\"text-align:center;width:4.31703%\">\n<h6>-1</h6>\n</td>\n<td style=\"text-align:center;width:4.31703%\">\n<h6>0</h6>\n</td>\n<td style=\"text-align:center;width:4.31703%\">\n<h6>1</h6>\n</td>\n<td style=\"text-align:center;width:4.31703%\">\n<h6>2</h6>\n</td>\n<td style=\"text-align:center;width:4.31703%\">\n<h6>3</h6>\n</td>\n<td style=\"text-align:center;width:4.31703%\">\n<h6>4</h6>\n</td>\n<td style=\"text-align:center;width:4.31703%\">\n<h6>5</h6>\n</td>\n<td style=\"text-align:center;width:4.31703%\">\n<h6>6</h6>\n</td>\n<td style=\"text-align:center;width:4.31703%\">\n<h6>7</h6>\n</td>\n<td style=\"text-align:center;width:4.31703%\">\n<h6>8</h6>\n</td>\n<td style=\"text-align:center;width:4.31703%\">\n<h6>9</h6>\n</td>\n<td style=\"text-align:center;width:4.31703%\">\n<h6>10</h6>\n</td>\n<td style=\"text-align:center;width:4.31703%\">\n<h6>11</h6>\n</td>\n<td style=\"text-align:center;width:4.45194%\">\n<h6>12</h6>\n</td>\n<td style=\"text-align:center;width:4.45194%\">\n<h6>13</h6>\n</td>\n<td style=\"text-align:center;width:4.45194%\">\n<h6>+1</h6>\n</td>\n</tr>\n</tbody>\n</table>\n<p>\_</p>"
 folder: null
 sort: 0
-permission:
-  default: 0
-  TK1vCAdCz548vBDu: 3
 flags:
   core:
     sourceId: JournalEntry.YgNCKbstWNvoJVtS
-pages: []
+pages:
+  - name: La table des bonus
+    type: text
+    title:
+      show: false
+      level: 1
+    text:
+      format: 1
+      content: "<p>La valeur du bonus dans Torg Eternity est calculée à l'aide de la table des bonus. Le système Foundry de Torg Eternity cherchera automatiquement ton bonus en fonction du résultat de tes jets de dés. Pour calculer manuellement un bonus, ou pour comprendre comment une possibilité supplémentaire peut affecter ton bonus, consulte le tableau ci-dessous :</p>\n<p style=\"text-align:center;color:white;background:black\"><strong>Table des Bonus</strong></p>\n<table style=\"height:73px;width:99.3356%\" border=\"1\">\n<tbody>\n<tr style=\"background:#f2dfc0\">\n<td style=\"text-align:center;width:6.81282%\">\n<h6>jet de dés</h6>\n</td>\n<td style=\"text-align:center;width:5.6661%\">\n<h6>1</h6>\n</td>\n<td style=\"text-align:center;width:3.6425%\">\n<h6>2</h6>\n</td>\n<td style=\"text-align:center;width:3.6425%\">\n<h6>3</h6>\n<h6>4</h6>\n</td>\n<td style=\"text-align:center;width:3.6425%\">\n<h6>5</h6>\n<h6>6</h6>\n</td>\n<td style=\"text-align:center;width:3.6425%\">\n<h6>7</h6>\n<h6>8</h6>\n</td>\n<td style=\"text-align:center;width:4.31703%\">\n<h6>9</h6>\n<h6>10</h6>\n</td>\n<td style=\"text-align:center;width:4.31703%\">\n<h6>11</h6>\n<h6>12</h6>\n</td>\n<td style=\"text-align:center;width:4.31703%\">\n<h6>13</h6>\n<h6>14</h6>\n</td>\n<td style=\"text-align:center;width:4.31703%\">\n<h6>15</h6>\n</td>\n<td style=\"text-align:center;width:4.31703%\">\n<h6>16</h6>\n</td>\n<td style=\"text-align:center;width:4.31703%\">\n<h6>17</h6>\n</td>\n<td style=\"text-align:center;width:4.31703%\">\n<h6>18</h6>\n</td>\n<td style=\"text-align:center;width:4.31703%\">\n<h6>19</h6>\n</td>\n<td style=\"text-align:center;width:4.31703%\">\n<h6>20</h6>\n</td>\n<td style=\"text-align:center;width:4.31703%\">\n<h6>21</h6>\n<h6>25</h6>\n</td>\n<td style=\"text-align:center;width:4.31703%\">\n<h6>26</h6>\n<h6>30</h6>\n</td>\n<td style=\"text-align:center;width:4.31703%\">\n<h6>31</h6>\n<h6>35</h6>\n</td>\n<td style=\"text-align:center;width:4.31703%\">\n<h6>36</h6>\n<h6>40</h6>\n</td>\n<td style=\"text-align:center;width:4.45194%\">\n<h6>41</h6>\n<h6>45</h6>\n</td>\n<td style=\"text-align:center;width:4.45194%\">\n<h6>46</h6>\n<h6>50</h6>\n</td>\n<td style=\"text-align:center;width:4.45194%\">\n<h6>+5</h6>\n</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:6.81282%\">\n<h6>bonus</h6>\n</td>\n<td style=\"text-align:center;width:5.6661%\">\n<h6>-10</h6>\n</td>\n<td style=\"text-align:center;width:3.6425%\">\n<h6>-8</h6>\n</td>\n<td style=\"text-align:center;width:3.6425%\">\n<h6>-6</h6>\n</td>\n<td style=\"text-align:center;width:3.6425%\">\n<h6>-4</h6>\n</td>\n<td style=\"text-align:center;width:3.6425%\">\n<h6>-2</h6>\n</td>\n<td style=\"text-align:center;width:4.31703%\">\n<h6>-1</h6>\n</td>\n<td style=\"text-align:center;width:4.31703%\">\n<h6>0</h6>\n</td>\n<td style=\"text-align:center;width:4.31703%\">\n<h6>1</h6>\n</td>\n<td style=\"text-align:center;width:4.31703%\">\n<h6>2</h6>\n</td>\n<td style=\"text-align:center;width:4.31703%\">\n<h6>3</h6>\n</td>\n<td style=\"text-align:center;width:4.31703%\">\n<h6>4</h6>\n</td>\n<td style=\"text-align:center;width:4.31703%\">\n<h6>5</h6>\n</td>\n<td style=\"text-align:center;width:4.31703%\">\n<h6>6</h6>\n</td>\n<td style=\"text-align:center;width:4.31703%\">\n<h6>7</h6>\n</td>\n<td style=\"text-align:center;width:4.31703%\">\n<h6>8</h6>\n</td>\n<td style=\"text-align:center;width:4.31703%\">\n<h6>9</h6>\n</td>\n<td style=\"text-align:center;width:4.31703%\">\n<h6>10</h6>\n</td>\n<td style=\"text-align:center;width:4.31703%\">\n<h6>11</h6>\n</td>\n<td style=\"text-align:center;width:4.45194%\">\n<h6>12</h6>\n</td>\n<td style=\"text-align:center;width:4.45194%\">\n<h6>13</h6>\n</td>\n<td style=\"text-align:center;width:4.45194%\">\n<h6>+1</h6>\n</td>\n</tr>\n</tbody>\n</table>\n<p>\_</p>"
+    _id: R19kMcDbptvI6jE8
+    image: {}
+    video:
+      controls: true
+      volume: 0.5
+    src: null
+    system: {}
+    sort: 0
+    ownership:
+      default: -1
+    flags: {}
+    _stats:
+      systemId: null
+      systemVersion: null
+      coreVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+    _key: '!journal.pages!YxbYdgFqBUOFLyRP.R19kMcDbptvI6jE8'
+ownership:
+  default: 0
+  TK1vCAdCz548vBDu: 3
+  VAnYow5sWS9EJzo0: 3
+_stats:
+  systemId: torgeternity
+  systemVersion: 3.8.1
+  coreVersion: '11.315'
+  createdTime: 1716827810246
+  modifiedTime: 1716827810246
+  lastModifiedBy: VAnYow5sWS9EJzo0
 _key: '!journal!YxbYdgFqBUOFLyRP'
 

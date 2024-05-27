@@ -3,13 +3,11 @@ name: Paquet Cosm Prime Terre
 type: deck
 description: ''
 img: systems/torgeternity/images/cards/earth-back.webp
-data: {}
 cards:
-  - _id: Fxdkt0cX0uQPc7Qc
+  - _id: McQIVoJ57Hlc9AHy
     name: Piqués au vif !
     description: ''
     type: cosm
-    data: {}
     suit: ''
     back:
       name: Core Earth Cosm
@@ -26,14 +24,17 @@ cards:
     sort: 0
     flags: {}
     value: 1
-    number: null
-    _key: '!cards.cards!2OV0sXVI9wM9e6U7.Fxdkt0cX0uQPc7Qc'
+    system:
+      cosm: ''
+      number: ''
+    width: null
+    height: null
+    _key: '!cards.cards!2OV0sXVI9wM9e6U7.McQIVoJ57Hlc9AHy'
     cards: []
-  - _id: dh4M4dQifesj6hVd
+  - _id: FtyaXNVk3sNSNY1c
     name: Continuez le combat
     description: ''
     type: cosm
-    data: {}
     suit: ''
     back:
       name: Unknown (Core Earth Cosm)
@@ -56,14 +57,17 @@ cards:
     sort: 1
     flags: {}
     value: 2
-    number: null
-    _key: '!cards.cards!2OV0sXVI9wM9e6U7.dh4M4dQifesj6hVd'
+    system:
+      cosm: ''
+      number: ''
+    width: null
+    height: null
+    _key: '!cards.cards!2OV0sXVI9wM9e6U7.FtyaXNVk3sNSNY1c'
     cards: []
-  - _id: RIU4il6GbddkAwo7
+  - _id: thIh8WltpvMaJOZ7
     name: Discour stimulant
     description: ''
     type: cosm
-    data: {}
     suit: ''
     back:
       name: Unknown (Core Earth Cosm)
@@ -85,14 +89,17 @@ cards:
     sort: 2
     flags: {}
     value: 3
-    number: null
-    _key: '!cards.cards!2OV0sXVI9wM9e6U7.RIU4il6GbddkAwo7'
+    system:
+      cosm: ''
+      number: ''
+    width: null
+    height: null
+    _key: '!cards.cards!2OV0sXVI9wM9e6U7.thIh8WltpvMaJOZ7'
     cards: []
-  - _id: wpIVNckT7iM8wcc2
+  - _id: e2gg2j0nkF9VGYd9
     name: La loi de l'espoir
     description: ''
     type: cosm
-    data: {}
     suit: ''
     back:
       name: Unknown (Core Earth Cosm)
@@ -111,14 +118,17 @@ cards:
     sort: 3
     flags: {}
     value: 4
-    number: null
-    _key: '!cards.cards!2OV0sXVI9wM9e6U7.wpIVNckT7iM8wcc2'
+    system:
+      cosm: ''
+      number: ''
+    width: null
+    height: null
+    _key: '!cards.cards!2OV0sXVI9wM9e6U7.e2gg2j0nkF9VGYd9'
     cards: []
-  - _id: s8SXtaDYGuvB9l0b
+  - _id: 7ThakchjSdgWmdts
     name: Bienvenue dans notre monde !
     description: ''
     type: cosm
-    data: {}
     suit: ''
     back:
       name: Unknown (Core Earth Cosm)
@@ -137,14 +147,17 @@ cards:
     sort: 4
     flags: {}
     value: 5
-    number: null
-    _key: '!cards.cards!2OV0sXVI9wM9e6U7.s8SXtaDYGuvB9l0b'
+    system:
+      cosm: ''
+      number: ''
+    width: null
+    height: null
+    _key: '!cards.cards!2OV0sXVI9wM9e6U7.7ThakchjSdgWmdts'
     cards: []
-  - _id: TNUZFqhOiVCZqtPA
+  - _id: YwKskq8whX1qXERu
     name: Escalade !
     description: ''
     type: cosm
-    data: {}
     suit: ''
     back:
       name: ''
@@ -168,14 +181,17 @@ cards:
     sort: 5
     flags: {}
     value: 6
-    number: null
-    _key: '!cards.cards!2OV0sXVI9wM9e6U7.TNUZFqhOiVCZqtPA'
+    system:
+      cosm: ''
+      number: ''
+    width: null
+    height: null
+    _key: '!cards.cards!2OV0sXVI9wM9e6U7.YwKskq8whX1qXERu'
     cards: []
-  - _id: 8c8X7RFd7oibsIdI
+  - _id: U16Wzbg7aqdWhqAY
     name: Il y a toujours de l'espoir
     description: ''
     type: cosm
-    data: {}
     suit: ''
     back:
       name: ''
@@ -194,14 +210,17 @@ cards:
     sort: 6
     flags: {}
     value: 7
-    number: null
-    _key: '!cards.cards!2OV0sXVI9wM9e6U7.8c8X7RFd7oibsIdI'
+    system:
+      cosm: ''
+      number: ''
+    width: null
+    height: null
+    _key: '!cards.cards!2OV0sXVI9wM9e6U7.U16Wzbg7aqdWhqAY'
     cards: []
-  - _id: UUVkBBMLuNoFcUwN
+  - _id: xaiV2MhnxLOKwqYW
     name: Saisir l'opportunité
     description: ''
     type: cosm
-    data: {}
     suit: ''
     back:
       name: ''
@@ -220,14 +239,17 @@ cards:
     sort: 7
     flags: {}
     value: 8
-    number: null
-    _key: '!cards.cards!2OV0sXVI9wM9e6U7.UUVkBBMLuNoFcUwN'
+    system:
+      cosm: ''
+      number: ''
+    width: null
+    height: null
+    _key: '!cards.cards!2OV0sXVI9wM9e6U7.xaiV2MhnxLOKwqYW'
     cards: []
-  - _id: JbW9ZRwDhBLHxsXr
+  - _id: uYWx9SKMM3p3jfuS
     name: Le tout pour le tout
     description: ''
     type: cosm
-    data: {}
     suit: ''
     back:
       name: ''
@@ -246,14 +268,17 @@ cards:
     sort: 8
     flags: {}
     value: 9
-    number: null
-    _key: '!cards.cards!2OV0sXVI9wM9e6U7.JbW9ZRwDhBLHxsXr'
+    system:
+      cosm: ''
+      number: ''
+    width: null
+    height: null
+    _key: '!cards.cards!2OV0sXVI9wM9e6U7.uYWx9SKMM3p3jfuS'
     cards: []
-  - _id: anTYTGmOJDE9eVcA
+  - _id: NeAQw6CwRSavpPdt
     name: Un répit bienvenu !
     description: ''
     type: cosm
-    data: {}
     suit: ''
     back:
       name: ''
@@ -270,15 +295,17 @@ cards:
     sort: 9
     flags: {}
     value: 10
-    number: null
-    _key: '!cards.cards!2OV0sXVI9wM9e6U7.anTYTGmOJDE9eVcA'
+    system:
+      cosm: ''
+      number: ''
+    width: null
+    height: null
+    _key: '!cards.cards!2OV0sXVI9wM9e6U7.NeAQw6CwRSavpPdt'
     cards: []
 rotation: 0
 displayCount: false
 folder: null
 sort: 0
-permission:
-  kz1RJu8vrAPmTUwN: 3
 flags:
   exportSource:
     world: torgv2p2
@@ -289,5 +316,18 @@ flags:
     sourceId: Cards.oMOBBSZVVgrH9Dde
   torgeternity:
     usage: coreEarth
+system: {}
+ownership:
+  kz1RJu8vrAPmTUwN: 3
+  VAnYow5sWS9EJzo0: 3
+width: null
+height: null
+_stats:
+  systemId: torgeternity
+  systemVersion: 3.8.1
+  coreVersion: '11.315'
+  createdTime: 1716827810443
+  modifiedTime: 1716827810443
+  lastModifiedBy: VAnYow5sWS9EJzo0
 _key: '!cards!2OV0sXVI9wM9e6U7'
 

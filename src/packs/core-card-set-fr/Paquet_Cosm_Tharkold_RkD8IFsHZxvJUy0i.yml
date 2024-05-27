@@ -3,13 +3,11 @@ name: Paquet Cosm Tharkold
 type: deck
 description: ''
 img: systems/torgeternity/images/cards/tharkold-back.webp
-data: {}
 cards:
-  - _id: wNJ3M7yPmNVjxZyt
+  - _id: FdORdOIapKYVShmm
     name: Ennuis en pperspective
     description: ''
     type: cosm
-    data: {}
     suit: ''
     back:
       name: ''
@@ -25,14 +23,18 @@ cards:
     rotation: 0
     sort: 0
     flags: {}
-    number: null
-    _key: '!cards.cards!RkD8IFsHZxvJUy0i.wNJ3M7yPmNVjxZyt'
+    system:
+      cosm: ''
+      number: ''
+    value: null
+    width: null
+    height: null
+    _key: '!cards.cards!RkD8IFsHZxvJUy0i.FdORdOIapKYVShmm'
     cards: []
-  - _id: oF8lCpeZE8euS6xd
+  - _id: Z9se5RIRv9bT6TqZ
     name: Suprématie
     description: ''
     type: cosm
-    data: {}
     suit: ''
     back:
       name: ''
@@ -48,14 +50,18 @@ cards:
     rotation: 0
     sort: 1
     flags: {}
-    number: null
-    _key: '!cards.cards!RkD8IFsHZxvJUy0i.oF8lCpeZE8euS6xd'
+    system:
+      cosm: ''
+      number: ''
+    value: null
+    width: null
+    height: null
+    _key: '!cards.cards!RkD8IFsHZxvJUy0i.Z9se5RIRv9bT6TqZ'
     cards: []
-  - _id: zXMH54kOpN0ZIuTE
+  - _id: KCUmhPHroyK0RcPc
     name: Calamité
     description: ''
     type: cosm
-    data: {}
     suit: ''
     back:
       name: ''
@@ -71,15 +77,18 @@ cards:
     rotation: 0
     sort: 2
     flags: {}
-    number: null
     value: null
-    _key: '!cards.cards!RkD8IFsHZxvJUy0i.zXMH54kOpN0ZIuTE'
+    system:
+      cosm: ''
+      number: ''
+    width: null
+    height: null
+    _key: '!cards.cards!RkD8IFsHZxvJUy0i.KCUmhPHroyK0RcPc'
     cards: []
-  - _id: jDk8OzgkxoRMxD74
+  - _id: ljAS1i9wugf031We
     name: Irradié
     description: ''
     type: cosm
-    data: {}
     suit: ''
     back:
       name: ''
@@ -95,14 +104,18 @@ cards:
     rotation: 0
     sort: 3
     flags: {}
-    number: null
-    _key: '!cards.cards!RkD8IFsHZxvJUy0i.jDk8OzgkxoRMxD74'
+    system:
+      cosm: ''
+      number: ''
+    value: null
+    width: null
+    height: null
+    _key: '!cards.cards!RkD8IFsHZxvJUy0i.ljAS1i9wugf031We'
     cards: []
-  - _id: 7TpWSEzLSQn9TxmN
+  - _id: tHBKw1hlaQzqVzWo
     name: Cyberpsychose
     description: ''
     type: cosm
-    data: {}
     suit: ''
     back:
       name: ''
@@ -118,14 +131,18 @@ cards:
     rotation: 0
     sort: 4
     flags: {}
-    number: null
-    _key: '!cards.cards!RkD8IFsHZxvJUy0i.7TpWSEzLSQn9TxmN'
+    system:
+      cosm: ''
+      number: ''
+    value: null
+    width: null
+    height: null
+    _key: '!cards.cards!RkD8IFsHZxvJUy0i.tHBKw1hlaQzqVzWo'
     cards: []
-  - _id: S86odic5MG8fe0OO
+  - _id: xnKWZaGXoGTTv3wq
     name: A genoux !
     description: ''
     type: cosm
-    data: {}
     suit: ''
     back:
       name: ''
@@ -141,14 +158,18 @@ cards:
     rotation: 0
     sort: 5
     flags: {}
-    number: null
-    _key: '!cards.cards!RkD8IFsHZxvJUy0i.S86odic5MG8fe0OO'
+    system:
+      cosm: ''
+      number: ''
+    value: null
+    width: null
+    height: null
+    _key: '!cards.cards!RkD8IFsHZxvJUy0i.xnKWZaGXoGTTv3wq'
     cards: []
-  - _id: 6CN91F4kvphjc2Py
+  - _id: 45sVsDSS0vPM0vph
     name: Tu travailles pour moi maintenant
     description: ''
     type: cosm
-    data: {}
     suit: ''
     back:
       name: ''
@@ -164,14 +185,18 @@ cards:
     rotation: 0
     sort: 6
     flags: {}
-    number: null
-    _key: '!cards.cards!RkD8IFsHZxvJUy0i.6CN91F4kvphjc2Py'
+    system:
+      cosm: ''
+      number: ''
+    value: null
+    width: null
+    height: null
+    _key: '!cards.cards!RkD8IFsHZxvJUy0i.45sVsDSS0vPM0vph'
     cards: []
-  - _id: kZWx9WgnZ8xUQjTL
+  - _id: I0r4s6e8yc2JFKCU
     name: Enragé
     description: ''
     type: cosm
-    data: {}
     suit: ''
     back:
       name: ''
@@ -187,15 +212,18 @@ cards:
     rotation: 0
     sort: 7
     flags: {}
-    number: null
     value: null
-    _key: '!cards.cards!RkD8IFsHZxvJUy0i.kZWx9WgnZ8xUQjTL'
+    system:
+      cosm: ''
+      number: ''
+    width: null
+    height: null
+    _key: '!cards.cards!RkD8IFsHZxvJUy0i.I0r4s6e8yc2JFKCU'
     cards: []
-  - _id: Bc7bjxbcaau2x7um
+  - _id: KtWhxsJutxqWwBTb
     name: Récupération !
     description: ''
     type: cosm
-    data: {}
     suit: ''
     back:
       name: ''
@@ -211,14 +239,18 @@ cards:
     rotation: 0
     sort: 8
     flags: {}
-    number: null
-    _key: '!cards.cards!RkD8IFsHZxvJUy0i.Bc7bjxbcaau2x7um'
+    system:
+      cosm: ''
+      number: ''
+    value: null
+    width: null
+    height: null
+    _key: '!cards.cards!RkD8IFsHZxvJUy0i.KtWhxsJutxqWwBTb'
     cards: []
-  - _id: AmYI8JL3Et2jidDa
+  - _id: fI7OxcpjLwkLmMVa
     name: Visions atroces
     description: ''
     type: cosm
-    data: {}
     suit: ''
     back:
       name: ''
@@ -234,15 +266,18 @@ cards:
     rotation: 0
     sort: 9
     flags: {}
-    number: null
-    _key: '!cards.cards!RkD8IFsHZxvJUy0i.AmYI8JL3Et2jidDa'
+    system:
+      cosm: ''
+      number: ''
+    value: null
+    width: null
+    height: null
+    _key: '!cards.cards!RkD8IFsHZxvJUy0i.fI7OxcpjLwkLmMVa'
     cards: []
 rotation: 0
 displayCount: false
 folder: null
 sort: 0
-permission:
-  kz1RJu8vrAPmTUwN: 3
 flags:
   exportSource:
     world: torgv2p2
@@ -253,5 +288,18 @@ flags:
     sourceId: Cards.4b8BekWDWpSWF961
   torgeternity:
     usage: tharkold
+system: {}
+ownership:
+  kz1RJu8vrAPmTUwN: 3
+  VAnYow5sWS9EJzo0: 3
+width: null
+height: null
+_stats:
+  systemId: torgeternity
+  systemVersion: 3.8.1
+  coreVersion: '11.315'
+  createdTime: 1716827810499
+  modifiedTime: 1716827810499
+  lastModifiedBy: VAnYow5sWS9EJzo0
 _key: '!cards!RkD8IFsHZxvJUy0i'
 

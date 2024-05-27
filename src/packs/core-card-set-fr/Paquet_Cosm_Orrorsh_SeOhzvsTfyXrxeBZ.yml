@@ -3,13 +3,11 @@ name: Paquet Cosm Orrorsh
 type: deck
 description: ''
 img: systems/torgeternity/images/cards/orrorsh-back.webp
-data: {}
 cards:
-  - _id: UzBMSJBgXnCqpQwf
+  - _id: MbIP6M5ZN76tPgK1
     name: Damné
     description: ''
     type: cosm
-    data: {}
     suit: ''
     back:
       name: ''
@@ -25,14 +23,18 @@ cards:
     rotation: 0
     sort: 0
     flags: {}
-    number: null
-    _key: '!cards.cards!SeOhzvsTfyXrxeBZ.UzBMSJBgXnCqpQwf'
+    system:
+      cosm: ''
+      number: ''
+    value: null
+    width: null
+    height: null
+    _key: '!cards.cards!SeOhzvsTfyXrxeBZ.MbIP6M5ZN76tPgK1'
     cards: []
-  - _id: tvjkixrm45znnyrh
+  - _id: vPjFCenX7YA47a0y
     name: Tentation
     description: ''
     type: cosm
-    data: {}
     suit: ''
     back:
       name: ''
@@ -48,14 +50,18 @@ cards:
     rotation: 0
     sort: 1
     flags: {}
-    number: null
-    _key: '!cards.cards!SeOhzvsTfyXrxeBZ.tvjkixrm45znnyrh'
+    system:
+      cosm: ''
+      number: ''
+    value: null
+    width: null
+    height: null
+    _key: '!cards.cards!SeOhzvsTfyXrxeBZ.vPjFCenX7YA47a0y'
     cards: []
-  - _id: ZeU0RmCO6n5ujabP
+  - _id: StH31BuXmfe4Gciw
     name: Sombres présages
     description: ''
     type: cosm
-    data: {}
     suit: ''
     back:
       name: ''
@@ -71,14 +77,18 @@ cards:
     rotation: 0
     sort: 2
     flags: {}
-    number: null
-    _key: '!cards.cards!SeOhzvsTfyXrxeBZ.ZeU0RmCO6n5ujabP'
+    system:
+      cosm: ''
+      number: ''
+    value: null
+    width: null
+    height: null
+    _key: '!cards.cards!SeOhzvsTfyXrxeBZ.StH31BuXmfe4Gciw'
     cards: []
-  - _id: KKz9qmHPMlr2Y2e6
+  - _id: 0tI6fakMwD37t9hO
     name: Frayeur
     description: ''
     type: cosm
-    data: {}
     suit: ''
     back:
       name: ''
@@ -94,14 +104,18 @@ cards:
     rotation: 0
     sort: 3
     flags: {}
-    number: null
-    _key: '!cards.cards!SeOhzvsTfyXrxeBZ.KKz9qmHPMlr2Y2e6'
+    system:
+      cosm: ''
+      number: ''
+    value: null
+    width: null
+    height: null
+    _key: '!cards.cards!SeOhzvsTfyXrxeBZ.0tI6fakMwD37t9hO'
     cards: []
-  - _id: Qng9tIy1xstNdWaD
+  - _id: JWkw8880Vlmhb3a4
     name: Marqué par la mort
     description: ''
     type: cosm
-    data: {}
     suit: ''
     back:
       name: ''
@@ -117,14 +131,18 @@ cards:
     rotation: 0
     sort: 4
     flags: {}
-    number: null
-    _key: '!cards.cards!SeOhzvsTfyXrxeBZ.Qng9tIy1xstNdWaD'
+    system:
+      cosm: ''
+      number: ''
+    value: null
+    width: null
+    height: null
+    _key: '!cards.cards!SeOhzvsTfyXrxeBZ.JWkw8880Vlmhb3a4'
     cards: []
-  - _id: lzKfdzYDsv9StzEC
+  - _id: ytvLIKYiinf1ZVzH
     name: Le crépuscule ?!
     description: ''
     type: cosm
-    data: {}
     suit: ''
     back:
       name: ''
@@ -140,14 +158,18 @@ cards:
     rotation: 0
     sort: 5
     flags: {}
-    number: null
-    _key: '!cards.cards!SeOhzvsTfyXrxeBZ.lzKfdzYDsv9StzEC'
+    system:
+      cosm: ''
+      number: ''
+    value: null
+    width: null
+    height: null
+    _key: '!cards.cards!SeOhzvsTfyXrxeBZ.ytvLIKYiinf1ZVzH'
     cards: []
-  - _id: 1RIT9f5rC7YyALzD
+  - _id: BJh0TPgGjqB3blz5
     name: Sinistres secrets
     description: ''
     type: cosm
-    data: {}
     suit: ''
     back:
       name: ''
@@ -163,14 +185,18 @@ cards:
     rotation: 0
     sort: 6
     flags: {}
-    number: null
-    _key: '!cards.cards!SeOhzvsTfyXrxeBZ.1RIT9f5rC7YyALzD'
+    system:
+      cosm: ''
+      number: ''
+    value: null
+    width: null
+    height: null
+    _key: '!cards.cards!SeOhzvsTfyXrxeBZ.BJh0TPgGjqB3blz5'
     cards: []
-  - _id: rkhNR9RzxS2FrfpZ
+  - _id: CYBBCXgPGP51yNJY
     name: Intérêt malsain
     description: ''
     type: cosm
-    data: {}
     suit: ''
     back:
       name: ''
@@ -186,14 +212,18 @@ cards:
     rotation: 0
     sort: 7
     flags: {}
-    number: null
-    _key: '!cards.cards!SeOhzvsTfyXrxeBZ.rkhNR9RzxS2FrfpZ'
+    system:
+      cosm: ''
+      number: ''
+    value: null
+    width: null
+    height: null
+    _key: '!cards.cards!SeOhzvsTfyXrxeBZ.CYBBCXgPGP51yNJY'
     cards: []
-  - _id: PIOIdbKYkEu1z7sc
+  - _id: gG20OfyDxmBsWDoQ
     name: Stigmate de terreur
     description: ''
     type: cosm
-    data: {}
     suit: ''
     back:
       name: ''
@@ -209,14 +239,18 @@ cards:
     rotation: 0
     sort: 8
     flags: {}
-    number: null
-    _key: '!cards.cards!SeOhzvsTfyXrxeBZ.PIOIdbKYkEu1z7sc'
+    system:
+      cosm: ''
+      number: ''
+    value: null
+    width: null
+    height: null
+    _key: '!cards.cards!SeOhzvsTfyXrxeBZ.gG20OfyDxmBsWDoQ'
     cards: []
-  - _id: 4huNs758PKmLt5ie
+  - _id: mm6BJEmXVGn6ANlR
     name: Extinction des feux !
     description: ''
     type: cosm
-    data: {}
     suit: ''
     back:
       name: ''
@@ -232,15 +266,18 @@ cards:
     rotation: 0
     sort: 9
     flags: {}
-    number: null
-    _key: '!cards.cards!SeOhzvsTfyXrxeBZ.4huNs758PKmLt5ie'
+    system:
+      cosm: ''
+      number: ''
+    value: null
+    width: null
+    height: null
+    _key: '!cards.cards!SeOhzvsTfyXrxeBZ.mm6BJEmXVGn6ANlR'
     cards: []
 rotation: 0
 displayCount: false
 folder: null
 sort: 0
-permission:
-  kz1RJu8vrAPmTUwN: 3
 flags:
   exportSource:
     world: torgv2p2
@@ -251,5 +288,18 @@ flags:
     sourceId: Cards.7rhA82uDSE499m1h
   torgeternity:
     usage: orrorsh
+system: {}
+ownership:
+  kz1RJu8vrAPmTUwN: 3
+  VAnYow5sWS9EJzo0: 3
+width: null
+height: null
+_stats:
+  systemId: torgeternity
+  systemVersion: 3.8.1
+  coreVersion: '11.315'
+  createdTime: 1716827810528
+  modifiedTime: 1716827810528
+  lastModifiedBy: VAnYow5sWS9EJzo0
 _key: '!cards!SeOhzvsTfyXrxeBZ'
 

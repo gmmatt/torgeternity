@@ -5,7 +5,7 @@ description: Dies ist das Basis-Schicksalsdeck mit den Karten 1-60.
 img: >-
   systems/torgeternity/images/deutsch/cards/Schicksalskarten/ZZR%C3%BCckseite.webp
 cards:
-  - _id: aXqAZWcvwALjPtqa
+  - _id: JYzGK0UbGIkux9ps
     name: Adrenalin
     description: ''
     type: destiny
@@ -24,13 +24,14 @@ cards:
     rotation: 0
     sort: 0
     flags: {}
-    system: {}
+    system:
+      number: ''
     value: null
     width: null
     height: null
-    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.aXqAZWcvwALjPtqa'
+    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.JYzGK0UbGIkux9ps'
     cards: []
-  - _id: aCtoVfKOXnZUBJHO
+  - _id: CVOb3w0ULQW7kd4Z
     name: Adrenalin
     description: ''
     type: destiny
@@ -49,13 +50,14 @@ cards:
     rotation: 0
     sort: 0
     flags: {}
-    system: {}
+    system:
+      number: ''
     value: null
     width: null
     height: null
-    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.aCtoVfKOXnZUBJHO'
+    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.CVOb3w0ULQW7kd4Z'
     cards: []
-  - _id: 7cLgtXNEWNLmqWn2
+  - _id: bBQW0tikfLJ7sa0w
     name: Adrenalin
     description: ''
     type: destiny
@@ -74,13 +76,14 @@ cards:
     rotation: 0
     sort: 0
     flags: {}
-    system: {}
+    system:
+      number: ''
     value: null
     width: null
     height: null
-    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.7cLgtXNEWNLmqWn2'
+    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.bBQW0tikfLJ7sa0w'
     cards: []
-  - _id: hGeDmk0fTeMXOn09
+  - _id: X02irVt2FNIJ02z3
     name: Adrenalin
     description: ''
     type: destiny
@@ -99,13 +102,14 @@ cards:
     rotation: 0
     sort: 0
     flags: {}
-    system: {}
+    system:
+      number: ''
     value: null
     width: null
     height: null
-    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.hGeDmk0fTeMXOn09'
+    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.X02irVt2FNIJ02z3'
     cards: []
-  - _id: yrqKDOq5prO25SGD
+  - _id: pFEeEs0SZW5X6iT2
     name: Willenskraft
     description: ''
     type: destiny
@@ -124,13 +128,14 @@ cards:
     rotation: 0
     sort: 0
     flags: {}
-    system: {}
+    system:
+      number: ''
     value: null
     width: null
     height: null
-    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.yrqKDOq5prO25SGD'
+    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.pFEeEs0SZW5X6iT2'
     cards: []
-  - _id: wLSWmubGwgH2cnhj
+  - _id: a4HEQ4YqxUAnDy3l
     name: Willenskraft
     description: ''
     type: destiny
@@ -149,13 +154,14 @@ cards:
     rotation: 0
     sort: 0
     flags: {}
-    system: {}
+    system:
+      number: ''
     value: null
     width: null
     height: null
-    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.wLSWmubGwgH2cnhj'
+    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.a4HEQ4YqxUAnDy3l'
     cards: []
-  - _id: 8DtxzWS4A6KWhmGO
+  - _id: Z3lOERY1km6fvQ3D
     name: Willenskraft
     description: ''
     type: destiny
@@ -174,13 +180,14 @@ cards:
     rotation: 0
     sort: 0
     flags: {}
-    system: {}
+    system:
+      number: ''
     value: null
     width: null
     height: null
-    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.8DtxzWS4A6KWhmGO'
+    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.Z3lOERY1km6fvQ3D'
     cards: []
-  - _id: bjbV0IRcB2Obzrnz
+  - _id: VAXK6iO6iW0rK8Iq
     name: Willenskraft
     description: ''
     type: destiny
@@ -199,13 +206,14 @@ cards:
     rotation: 0
     sort: 0
     flags: {}
-    system: {}
+    system:
+      number: ''
     value: null
     width: null
     height: null
-    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.bjbV0IRcB2Obzrnz'
+    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.VAXK6iO6iW0rK8Iq'
     cards: []
-  - _id: 7rKcq8o2pV1YDM7m
+  - _id: i590rrUu9mVlLSY8
     name: Wachsamkeit
     description: ''
     type: destiny
@@ -224,13 +232,14 @@ cards:
     rotation: 0
     sort: 0
     flags: {}
-    system: {}
+    system:
+      number: ''
     value: null
     width: null
     height: null
-    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.7rKcq8o2pV1YDM7m'
+    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.i590rrUu9mVlLSY8'
     cards: []
-  - _id: lduprVrjL5C9Ikew
+  - _id: 51KAGC32qUnz100l
     name: Wachsamkeit
     description: ''
     type: destiny
@@ -249,13 +258,14 @@ cards:
     rotation: 0
     sort: 0
     flags: {}
-    system: {}
+    system:
+      number: ''
     value: null
     width: null
     height: null
-    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.lduprVrjL5C9Ikew'
+    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.51KAGC32qUnz100l'
     cards: []
-  - _id: KJytYyMjRXk5rre6
+  - _id: Q2u078dYJdW8lsOX
     name: Märtyrer
     description: ''
     type: destiny
@@ -274,13 +284,14 @@ cards:
     rotation: 0
     sort: 0
     flags: {}
-    system: {}
+    system:
+      number: ''
     value: null
     width: null
     height: null
-    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.KJytYyMjRXk5rre6'
+    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.Q2u078dYJdW8lsOX'
     cards: []
-  - _id: LkRINHi5vQXjL8WV
+  - _id: dU538niQf18K8bFd
     name: Tatendrang
     description: ''
     type: destiny
@@ -299,13 +310,14 @@ cards:
     rotation: 0
     sort: 0
     flags: {}
-    system: {}
+    system:
+      number: ''
     value: null
     width: null
     height: null
-    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.LkRINHi5vQXjL8WV'
+    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.dU538niQf18K8bFd'
     cards: []
-  - _id: 2EuA3S4IjXCq9yTE
+  - _id: CRLDy8rV4p5tfE7x
     name: Tatendrang
     description: ''
     type: destiny
@@ -324,13 +336,14 @@ cards:
     rotation: 0
     sort: 0
     flags: {}
-    system: {}
+    system:
+      number: ''
     value: null
     width: null
     height: null
-    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.2EuA3S4IjXCq9yTE'
+    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.CRLDy8rV4p5tfE7x'
     cards: []
-  - _id: 65rYngiVuKDZH5hA
+  - _id: 3OST98o9FqnuclPV
     name: Tatendrang
     description: ''
     type: destiny
@@ -349,13 +362,14 @@ cards:
     rotation: 0
     sort: 0
     flags: {}
-    system: {}
+    system:
+      number: ''
     value: null
     width: null
     height: null
-    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.65rYngiVuKDZH5hA'
+    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.3OST98o9FqnuclPV'
     cards: []
-  - _id: Ry5JptU1fobavu2e
+  - _id: 3qyJ6j6m77xmZ0PI
     name: Tatendrang
     description: ''
     type: destiny
@@ -374,13 +388,14 @@ cards:
     rotation: 0
     sort: 0
     flags: {}
-    system: {}
+    system:
+      number: ''
     value: null
     width: null
     height: null
-    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.Ry5JptU1fobavu2e'
+    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.3qyJ6j6m77xmZ0PI'
     cards: []
-  - _id: lrHW12ptQHI7ZSFo
+  - _id: 8AOGRjkybayr3DeY
     name: Hast
     description: ''
     type: destiny
@@ -399,13 +414,14 @@ cards:
     rotation: 0
     sort: 0
     flags: {}
-    system: {}
+    system:
+      number: ''
     value: null
     width: null
     height: null
-    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.lrHW12ptQHI7ZSFo'
+    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.8AOGRjkybayr3DeY'
     cards: []
-  - _id: U9VsDmCFxZEuEvhT
+  - _id: 0tvobbXTePomnFLk
     name: Hast
     description: ''
     type: destiny
@@ -424,13 +440,14 @@ cards:
     rotation: 0
     sort: 0
     flags: {}
-    system: {}
+    system:
+      number: ''
     value: null
     width: null
     height: null
-    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.U9VsDmCFxZEuEvhT'
+    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.0tvobbXTePomnFLk'
     cards: []
-  - _id: RQSujtoVfSbOsDZO
+  - _id: O4jzHvmijTRTbcRN
     name: Meisterhafter Plan
     description: ''
     type: destiny
@@ -449,13 +466,14 @@ cards:
     rotation: 0
     sort: 0
     flags: {}
-    system: {}
+    system:
+      number: ''
     value: null
     width: null
     height: null
-    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.RQSujtoVfSbOsDZO'
+    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.O4jzHvmijTRTbcRN'
     cards: []
-  - _id: zIFI7RtvNZjIDZ5l
+  - _id: 3WES3l69PDK0t6Ow
     name: Meisterhafter Plan
     description: ''
     type: destiny
@@ -474,13 +492,14 @@ cards:
     rotation: 0
     sort: 0
     flags: {}
-    system: {}
+    system:
+      number: ''
     value: null
     width: null
     height: null
-    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.zIFI7RtvNZjIDZ5l'
+    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.3WES3l69PDK0t6Ow'
     cards: []
-  - _id: tB8P1o8XtEddY3bC
+  - _id: o9dl3AD7MQXab7R0
     name: Ansporn
     description: ''
     type: destiny
@@ -499,13 +518,14 @@ cards:
     rotation: 0
     sort: 0
     flags: {}
-    system: {}
+    system:
+      number: ''
     value: null
     width: null
     height: null
-    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.tB8P1o8XtEddY3bC'
+    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.o9dl3AD7MQXab7R0'
     cards: []
-  - _id: B1ZIlttzG8RDHMsM
+  - _id: 9f95nWJKKwaOhzvM
     name: Initiative ergreifen
     description: ''
     type: destiny
@@ -524,13 +544,14 @@ cards:
     rotation: 0
     sort: 0
     flags: {}
-    system: {}
+    system:
+      number: ''
     value: null
     width: null
     height: null
-    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.B1ZIlttzG8RDHMsM'
+    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.9f95nWJKKwaOhzvM'
     cards: []
-  - _id: d2Ogsx4NmJsS7YN8
+  - _id: sYB0RguyOQ9gy2e2
     name: Initiative ergreifen
     description: ''
     type: destiny
@@ -549,13 +570,14 @@ cards:
     rotation: 0
     sort: 0
     flags: {}
-    system: {}
+    system:
+      number: ''
     value: null
     width: null
     height: null
-    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.d2Ogsx4NmJsS7YN8'
+    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.sYB0RguyOQ9gy2e2'
     cards: []
-  - _id: TrfrMnh8hHqfz2Zb
+  - _id: ZeAjkd0P4i7fmZAR
     name: Heldenhaft
     description: ''
     type: destiny
@@ -574,13 +596,14 @@ cards:
     rotation: 0
     sort: 0
     flags: {}
-    system: {}
+    system:
+      number: ''
     value: null
     width: null
     height: null
-    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.TrfrMnh8hHqfz2Zb'
+    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.ZeAjkd0P4i7fmZAR'
     cards: []
-  - _id: fJutw71wxYMh98il
+  - _id: fyisDfPEu9mzJ6To
     name: Heldenhaft
     description: ''
     type: destiny
@@ -599,13 +622,14 @@ cards:
     rotation: 0
     sort: 0
     flags: {}
-    system: {}
+    system:
+      number: ''
     value: null
     width: null
     height: null
-    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.fJutw71wxYMh98il'
+    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.fyisDfPEu9mzJ6To'
     cards: []
-  - _id: 29NQjvdAXdm1tsLU
+  - _id: MLp6PjSkC2ukV9NK
     name: Heldenhaft
     description: ''
     type: destiny
@@ -624,13 +648,14 @@ cards:
     rotation: 0
     sort: 0
     flags: {}
-    system: {}
+    system:
+      number: ''
     value: null
     width: null
     height: null
-    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.29NQjvdAXdm1tsLU'
+    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.MLp6PjSkC2ukV9NK'
     cards: []
-  - _id: ht90eKY89y0PaWnm
+  - _id: hqoF1WXVyH77VEKQ
     name: Heldenhaft
     description: ''
     type: destiny
@@ -649,13 +674,14 @@ cards:
     rotation: 0
     sort: 0
     flags: {}
-    system: {}
+    system:
+      number: ''
     value: null
     width: null
     height: null
-    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.ht90eKY89y0PaWnm'
+    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.hqoF1WXVyH77VEKQ'
     cards: []
-  - _id: UJzNJy4G0m6d8uKE
+  - _id: QMsSTaGNe5rFZsL5
     name: Feind versagt
     description: ''
     type: destiny
@@ -674,13 +700,14 @@ cards:
     rotation: 0
     sort: 0
     flags: {}
-    system: {}
+    system:
+      number: ''
     value: null
     width: null
     height: null
-    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.UJzNJy4G0m6d8uKE'
+    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.QMsSTaGNe5rFZsL5'
     cards: []
-  - _id: SEAfMgE6qvLnVGpk
+  - _id: G7qigbKintKvybcZ
     name: Feind versagt
     description: ''
     type: destiny
@@ -699,13 +726,14 @@ cards:
     rotation: 0
     sort: 0
     flags: {}
-    system: {}
+    system:
+      number: ''
     value: null
     width: null
     height: null
-    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.SEAfMgE6qvLnVGpk'
+    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.G7qigbKintKvybcZ'
     cards: []
-  - _id: QqX7BiLNPiJCxrD5
+  - _id: CnHzyLANl5lNU0UP
     name: Sammeln
     description: ''
     type: destiny
@@ -724,13 +752,14 @@ cards:
     rotation: 0
     sort: 0
     flags: {}
-    system: {}
+    system:
+      number: ''
     value: null
     width: null
     height: null
-    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.QqX7BiLNPiJCxrD5'
+    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.CnHzyLANl5lNU0UP'
     cards: []
-  - _id: FsnhsL8NWOECj4tE
+  - _id: k0IzPzCqBBmzWAV7
     name: Zweite Chance
     description: ''
     type: destiny
@@ -749,13 +778,14 @@ cards:
     rotation: 0
     sort: 0
     flags: {}
-    system: {}
+    system:
+      number: ''
     value: null
     width: null
     height: null
-    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.FsnhsL8NWOECj4tE'
+    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.k0IzPzCqBBmzWAV7'
     cards: []
-  - _id: xOxMJQh4hlHvTQLD
+  - _id: bwa1k6iSeQy07yjq
     name: Zweite Chance
     description: ''
     type: destiny
@@ -774,13 +804,14 @@ cards:
     rotation: 0
     sort: 0
     flags: {}
-    system: {}
+    system:
+      number: ''
     value: null
     width: null
     height: null
-    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.xOxMJQh4hlHvTQLD'
+    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.bwa1k6iSeQy07yjq'
     cards: []
-  - _id: u57pFPgU4cb7glpq
+  - _id: CmHbI4aXOfstubDF
     name: Zweite Chance
     description: ''
     type: destiny
@@ -799,13 +830,14 @@ cards:
     rotation: 0
     sort: 0
     flags: {}
-    system: {}
+    system:
+      number: ''
     value: null
     width: null
     height: null
-    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.u57pFPgU4cb7glpq'
+    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.CmHbI4aXOfstubDF'
     cards: []
-  - _id: pPYiEwUyO5Xltisd
+  - _id: MFgbzhk4WNGHIRcT
     name: Verbindungen
     description: ''
     type: destiny
@@ -824,13 +856,14 @@ cards:
     rotation: 0
     sort: 0
     flags: {}
-    system: {}
+    system:
+      number: ''
     value: null
     width: null
     height: null
-    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.pPYiEwUyO5Xltisd'
+    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.MFgbzhk4WNGHIRcT'
     cards: []
-  - _id: gGh9VSXcirCg5YOu
+  - _id: JbFuReymAfG08xNX
     name: Idee
     description: ''
     type: destiny
@@ -849,13 +882,14 @@ cards:
     rotation: 0
     sort: 0
     flags: {}
-    system: {}
+    system:
+      number: ''
     value: null
     width: null
     height: null
-    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.gGh9VSXcirCg5YOu'
+    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.JbFuReymAfG08xNX'
     cards: []
-  - _id: jMB2iCnjJOR7IJJT
+  - _id: b16o7Mt5YG7qIYQx
     name: Gut eingestimmt
     description: ''
     type: destiny
@@ -874,13 +908,14 @@ cards:
     rotation: 0
     sort: 0
     flags: {}
-    system: {}
+    system:
+      number: ''
     value: null
     width: null
     height: null
-    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.jMB2iCnjJOR7IJJT'
+    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.b16o7Mt5YG7qIYQx'
     cards: []
-  - _id: K8lVv53GEu9CLDpT
+  - _id: NNrcUlvU01YedT4Q
     name: Ruhm
     description: ''
     type: destiny
@@ -899,13 +934,14 @@ cards:
     rotation: 0
     sort: 0
     flags: {}
-    system: {}
+    system:
+      number: ''
     value: null
     width: null
     height: null
-    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.K8lVv53GEu9CLDpT'
+    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.NNrcUlvU01YedT4Q'
     cards: []
-  - _id: 9dceVPSbnpzZmfIP
+  - _id: R6OLLTeDi1n8147e
     name: Ruhm
     description: ''
     type: destiny
@@ -924,13 +960,14 @@ cards:
     rotation: 0
     sort: 0
     flags: {}
-    system: {}
+    system:
+      number: ''
     value: null
     width: null
     height: null
-    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.9dceVPSbnpzZmfIP'
+    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.R6OLLTeDi1n8147e'
     cards: []
-  - _id: dgNu19BMa5pq6keh
+  - _id: R6belGe3D4TAh8Du
     name: Ruhm
     description: ''
     type: destiny
@@ -949,13 +986,14 @@ cards:
     rotation: 0
     sort: 0
     flags: {}
-    system: {}
+    system:
+      number: ''
     value: null
     width: null
     height: null
-    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.dgNu19BMa5pq6keh'
+    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.R6belGe3D4TAh8Du'
     cards: []
-  - _id: KdcQdcYaAUUzZsDp
+  - _id: fICkwZmXGNgpNQPp
     name: Ruhm
     description: ''
     type: destiny
@@ -974,13 +1012,14 @@ cards:
     rotation: 0
     sort: 0
     flags: {}
-    system: {}
+    system:
+      number: ''
     value: null
     width: null
     height: null
-    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.KdcQdcYaAUUzZsDp'
+    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.fICkwZmXGNgpNQPp'
     cards: []
-  - _id: dR0SE3vMbHFNhn4D
+  - _id: OXb05IK8KdRJ3Ury
     name: Gnadenstoß
     description: ''
     type: destiny
@@ -999,13 +1038,14 @@ cards:
     rotation: 0
     sort: 0
     flags: {}
-    system: {}
+    system:
+      number: ''
     value: null
     width: null
     height: null
-    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.dR0SE3vMbHFNhn4D'
+    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.OXb05IK8KdRJ3Ury'
     cards: []
-  - _id: usmbzSQVRn5MjBXQ
+  - _id: n7Q1uhEPhREz36gV
     name: Gnadenstoß
     description: ''
     type: destiny
@@ -1024,13 +1064,14 @@ cards:
     rotation: 0
     sort: 0
     flags: {}
-    system: {}
+    system:
+      number: ''
     value: null
     width: null
     height: null
-    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.usmbzSQVRn5MjBXQ'
+    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.n7Q1uhEPhREz36gV'
     cards: []
-  - _id: epK8fI8SP7IXomxz
+  - _id: kZp7VcNP6fZFRTsa
     name: Gnadenstoß
     description: ''
     type: destiny
@@ -1049,13 +1090,14 @@ cards:
     rotation: 0
     sort: 0
     flags: {}
-    system: {}
+    system:
+      number: ''
     value: null
     width: null
     height: null
-    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.epK8fI8SP7IXomxz'
+    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.kZp7VcNP6fZFRTsa'
     cards: []
-  - _id: PCQ2PVOp7KI2ywFn
+  - _id: BmD3JjALrge4DcIf
     name: Gnadenstoß
     description: ''
     type: destiny
@@ -1074,13 +1116,14 @@ cards:
     rotation: 0
     sort: 0
     flags: {}
-    system: {}
+    system:
+      number: ''
     value: null
     width: null
     height: null
-    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.PCQ2PVOp7KI2ywFn'
+    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.BmD3JjALrge4DcIf'
     cards: []
-  - _id: 1SOQqjlKUaK7DSei
+  - _id: YeSFGHmSfjm3hKIA
     name: Romanze
     description: ''
     type: destiny
@@ -1099,13 +1142,14 @@ cards:
     rotation: 0
     sort: 0
     flags: {}
-    system: {}
+    system:
+      number: ''
     value: null
     width: null
     height: null
-    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.1SOQqjlKUaK7DSei'
+    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.YeSFGHmSfjm3hKIA'
     cards: []
-  - _id: Wo1rI3LT0RWffiwU
+  - _id: fy3YH3x5Utlp1vTz
     name: Nemesis
     description: ''
     type: destiny
@@ -1124,13 +1168,14 @@ cards:
     rotation: 0
     sort: 0
     flags: {}
-    system: {}
+    system:
+      number: ''
     value: null
     width: null
     height: null
-    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.Wo1rI3LT0RWffiwU'
+    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.fy3YH3x5Utlp1vTz'
     cards: []
-  - _id: 64oLDr5oABcnjKUW
+  - _id: g1NH21b0IQCNEDnp
     name: Dramatik
     description: ''
     type: destiny
@@ -1149,13 +1194,14 @@ cards:
     rotation: 0
     sort: 0
     flags: {}
-    system: {}
+    system:
+      number: ''
     value: null
     width: null
     height: null
-    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.64oLDr5oABcnjKUW'
+    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.g1NH21b0IQCNEDnp'
     cards: []
-  - _id: 56PN45Wu5KhzLnrq
+  - _id: kcvqqYlWgDAn3Fnc
     name: Dramatik
     description: ''
     type: destiny
@@ -1174,13 +1220,14 @@ cards:
     rotation: 0
     sort: 0
     flags: {}
-    system: {}
+    system:
+      number: ''
     value: null
     width: null
     height: null
-    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.56PN45Wu5KhzLnrq'
+    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.kcvqqYlWgDAn3Fnc'
     cards: []
-  - _id: aGNfqmEhLuRMuS5V
+  - _id: MBkfUbS8YJC6EQJZ
     name: Dramatik
     description: ''
     type: destiny
@@ -1199,13 +1246,14 @@ cards:
     rotation: 0
     sort: 0
     flags: {}
-    system: {}
+    system:
+      number: ''
     value: null
     width: null
     height: null
-    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.aGNfqmEhLuRMuS5V'
+    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.MBkfUbS8YJC6EQJZ'
     cards: []
-  - _id: 3GvMGNOuITnzL0nJ
+  - _id: utmESMBhbu1gy8MA
     name: Dramatik
     description: ''
     type: destiny
@@ -1224,13 +1272,14 @@ cards:
     rotation: 0
     sort: 0
     flags: {}
-    system: {}
+    system:
+      number: ''
     value: null
     width: null
     height: null
-    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.3GvMGNOuITnzL0nJ'
+    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.utmESMBhbu1gy8MA'
     cards: []
-  - _id: eOvVVsO6vqE2oofv
+  - _id: DyCpdarIjhU7OZiG
     name: Anführer
     description: ''
     type: destiny
@@ -1249,13 +1298,14 @@ cards:
     rotation: 0
     sort: 0
     flags: {}
-    system: {}
+    system:
+      number: ''
     value: null
     width: null
     height: null
-    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.eOvVVsO6vqE2oofv'
+    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.DyCpdarIjhU7OZiG'
     cards: []
-  - _id: WxzytN1DB12hWClF
+  - _id: 6XOztqhWcKNnoere
     name: Anführer
     description: ''
     type: destiny
@@ -1274,13 +1324,14 @@ cards:
     rotation: 0
     sort: 0
     flags: {}
-    system: {}
+    system:
+      number: ''
     value: null
     width: null
     height: null
-    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.WxzytN1DB12hWClF'
+    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.6XOztqhWcKNnoere'
     cards: []
-  - _id: 7oUrViQH4Mrs1IGC
+  - _id: vUTHzNnNaWTOHc9C
     name: Unterstützer
     description: ''
     type: destiny
@@ -1299,13 +1350,14 @@ cards:
     rotation: 0
     sort: 0
     flags: {}
-    system: {}
+    system:
+      number: ''
     value: null
     width: null
     height: null
-    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.7oUrViQH4Mrs1IGC'
+    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.vUTHzNnNaWTOHc9C'
     cards: []
-  - _id: tHRAaTFX2tXXdyNq
+  - _id: emj7ZkRdaWw4W4oj
     name: Unterstützer
     description: ''
     type: destiny
@@ -1324,13 +1376,14 @@ cards:
     rotation: 0
     sort: 0
     flags: {}
-    system: {}
+    system:
+      number: ''
     value: null
     width: null
     height: null
-    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.tHRAaTFX2tXXdyNq'
+    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.emj7ZkRdaWw4W4oj'
     cards: []
-  - _id: DmTwdaB4lDvcSZt3
+  - _id: 7BJMgEKH3OA24eso
     name: Unterstützer
     description: ''
     type: destiny
@@ -1349,13 +1402,14 @@ cards:
     rotation: 0
     sort: 0
     flags: {}
-    system: {}
+    system:
+      number: ''
     value: null
     width: null
     height: null
-    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.DmTwdaB4lDvcSZt3'
+    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.7BJMgEKH3OA24eso'
     cards: []
-  - _id: uuJ2NvWtnWnnAr9P
+  - _id: H9fm4MmRHFDiaU9A
     name: Unterstützer
     description: ''
     type: destiny
@@ -1374,13 +1428,14 @@ cards:
     rotation: 0
     sort: 0
     flags: {}
-    system: {}
+    system:
+      number: ''
     value: null
     width: null
     height: null
-    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.uuJ2NvWtnWnnAr9P'
+    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.H9fm4MmRHFDiaU9A'
     cards: []
-  - _id: bHD27ZpkimTAt5LT
+  - _id: S2LJcj8GpZXLOfv0
     name: Neue Kraft
     description: ''
     type: destiny
@@ -1399,13 +1454,14 @@ cards:
     rotation: 0
     sort: 0
     flags: {}
-    system: {}
+    system:
+      number: ''
     value: null
     width: null
     height: null
-    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.bHD27ZpkimTAt5LT'
+    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.S2LJcj8GpZXLOfv0'
     cards: []
-  - _id: akz4OzGttHGVYSeo
+  - _id: c7ul0KijWK7pbSCS
     name: Neue Kraft
     description: ''
     type: destiny
@@ -1424,13 +1480,14 @@ cards:
     rotation: 0
     sort: 0
     flags: {}
-    system: {}
+    system:
+      number: ''
     value: null
     width: null
     height: null
-    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.akz4OzGttHGVYSeo'
+    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.c7ul0KijWK7pbSCS'
     cards: []
-  - _id: SeuXeAfVDdd4gPjZ
+  - _id: ShCPjgqGJn0hmgeS
     name: Transfer
     description: ''
     type: destiny
@@ -1449,13 +1506,14 @@ cards:
     rotation: 0
     sort: 0
     flags: {}
-    system: {}
+    system:
+      number: ''
     value: null
     width: null
     height: null
-    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.SeuXeAfVDdd4gPjZ'
+    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.ShCPjgqGJn0hmgeS'
     cards: []
-  - _id: A3RgR5VtIFA077gn
+  - _id: nn2AARW6QQ5VQjm8
     name: Realitätswelle
     description: ''
     type: destiny
@@ -1474,13 +1532,14 @@ cards:
     rotation: 0
     sort: 0
     flags: {}
-    system: {}
+    system:
+      number: ''
     value: null
     width: null
     height: null
-    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.A3RgR5VtIFA077gn'
+    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.nn2AARW6QQ5VQjm8'
     cards: []
-  - _id: FST0ZsTEQnLGgoUl
+  - _id: DKIQbGxoRfgkEsPX
     name: Mahlstrom
     description: ''
     type: destiny
@@ -1499,11 +1558,12 @@ cards:
     rotation: 0
     sort: 0
     flags: {}
-    system: {}
+    system:
+      number: ''
     value: null
     width: null
     height: null
-    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.FST0ZsTEQnLGgoUl'
+    _key: '!cards.cards!xaEDfI4ufJ2Z9Mli.DKIQbGxoRfgkEsPX'
     cards: []
 rotation: 0
 displayCount: false
@@ -1518,14 +1578,15 @@ system: {}
 ownership:
   default: 0
   1pSzpSNrhKGYYcib: 3
+  VAnYow5sWS9EJzo0: 3
 width: null
 height: null
 _stats:
   systemId: torgeternity
-  systemVersion: 2.5.1
-  coreVersion: '10.278'
-  createdTime: null
-  modifiedTime: 1660972227943
-  lastModifiedBy: pLf3kUpJuGZH0Ep4
+  systemVersion: 3.8.1
+  coreVersion: '11.315'
+  createdTime: 1716827812384
+  modifiedTime: 1716827812384
+  lastModifiedBy: VAnYow5sWS9EJzo0
 _key: '!cards!xaEDfI4ufJ2Z9Mli'
 

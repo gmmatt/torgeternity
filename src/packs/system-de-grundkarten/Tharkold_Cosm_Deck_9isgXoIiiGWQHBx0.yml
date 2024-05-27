@@ -5,7 +5,7 @@ description: ''
 img: >-
   systems/torgeternity/images/deutsch/cards/Cosmkarten/Tharkold/TZZR%C3%BCckseite.webp
 cards:
-  - _id: 9Dr5MbGYWXIGrLCN
+  - _id: 6sOlpEMYZg1XSLtY
     name: Sieht nach Ärger aus
     description: ''
     type: cosm
@@ -24,13 +24,15 @@ cards:
     rotation: 0
     sort: 0
     flags: {}
-    system: {}
+    system:
+      cosm: ''
+      number: ''
     value: null
     width: null
     height: null
-    _key: '!cards.cards!9isgXoIiiGWQHBx0.9Dr5MbGYWXIGrLCN'
+    _key: '!cards.cards!9isgXoIiiGWQHBx0.6sOlpEMYZg1XSLtY'
     cards: []
-  - _id: 1OHFpLLxqHwMR6Jh
+  - _id: CKd6JMY0YtmAWNER
     name: Überlegenheit
     description: ''
     type: cosm
@@ -49,13 +51,15 @@ cards:
     rotation: 0
     sort: 0
     flags: {}
-    system: {}
+    system:
+      cosm: ''
+      number: ''
     value: null
     width: null
     height: null
-    _key: '!cards.cards!9isgXoIiiGWQHBx0.1OHFpLLxqHwMR6Jh'
+    _key: '!cards.cards!9isgXoIiiGWQHBx0.CKd6JMY0YtmAWNER'
     cards: []
-  - _id: jB1whjA8GJjrF7Jj
+  - _id: 9VGxkUYYVI2S9VNi
     name: Geissel
     description: ''
     type: cosm
@@ -74,13 +78,15 @@ cards:
     rotation: 0
     sort: 0
     flags: {}
-    system: {}
+    system:
+      cosm: ''
+      number: ''
     value: null
     width: null
     height: null
-    _key: '!cards.cards!9isgXoIiiGWQHBx0.jB1whjA8GJjrF7Jj'
+    _key: '!cards.cards!9isgXoIiiGWQHBx0.9VGxkUYYVI2S9VNi'
     cards: []
-  - _id: MpImhG3ExCrk4btW
+  - _id: uF1lXhd939N5lUXJ
     name: Verstrahlt
     description: ''
     type: cosm
@@ -99,13 +105,15 @@ cards:
     rotation: 0
     sort: 0
     flags: {}
-    system: {}
+    system:
+      cosm: ''
+      number: ''
     value: null
     width: null
     height: null
-    _key: '!cards.cards!9isgXoIiiGWQHBx0.MpImhG3ExCrk4btW'
+    _key: '!cards.cards!9isgXoIiiGWQHBx0.uF1lXhd939N5lUXJ'
     cards: []
-  - _id: jQEtI5gp3glnKWfs
+  - _id: nC9KUOy1IW0wYEUj
     name: Cyberpsychose
     description: ''
     type: cosm
@@ -124,13 +132,15 @@ cards:
     rotation: 0
     sort: 0
     flags: {}
-    system: {}
+    system:
+      cosm: ''
+      number: ''
     value: null
     width: null
     height: null
-    _key: '!cards.cards!9isgXoIiiGWQHBx0.jQEtI5gp3glnKWfs'
+    _key: '!cards.cards!9isgXoIiiGWQHBx0.nC9KUOy1IW0wYEUj'
     cards: []
-  - _id: aukxYAq5s2zBC04R
+  - _id: ftRKLfuPxFF3fzHL
     name: Kniet nieder!
     description: ''
     type: cosm
@@ -149,13 +159,15 @@ cards:
     rotation: 0
     sort: 0
     flags: {}
-    system: {}
+    system:
+      cosm: ''
+      number: ''
     value: null
     width: null
     height: null
-    _key: '!cards.cards!9isgXoIiiGWQHBx0.aukxYAq5s2zBC04R'
+    _key: '!cards.cards!9isgXoIiiGWQHBx0.ftRKLfuPxFF3fzHL'
     cards: []
-  - _id: V4iDxdaqsdfzJkAc
+  - _id: m924uNNYuy3ZGj7f
     name: Du arbeitest jetzt für mich!
     description: ''
     type: cosm
@@ -174,13 +186,15 @@ cards:
     rotation: 0
     sort: -100000
     flags: {}
-    system: {}
+    system:
+      cosm: ''
+      number: ''
     value: null
     width: null
     height: null
-    _key: '!cards.cards!9isgXoIiiGWQHBx0.V4iDxdaqsdfzJkAc'
+    _key: '!cards.cards!9isgXoIiiGWQHBx0.m924uNNYuy3ZGj7f'
     cards: []
-  - _id: 3e9I8u0AYv7YRoGr
+  - _id: Q6b1FOiKcYzZK7s8
     name: Erzürnt
     description: ''
     type: cosm
@@ -199,13 +213,15 @@ cards:
     rotation: 0
     sort: 0
     flags: {}
-    system: {}
+    system:
+      cosm: ''
+      number: ''
     value: null
     width: null
     height: null
-    _key: '!cards.cards!9isgXoIiiGWQHBx0.3e9I8u0AYv7YRoGr'
+    _key: '!cards.cards!9isgXoIiiGWQHBx0.Q6b1FOiKcYzZK7s8'
     cards: []
-  - _id: eBBYNXc3g1QBlFCe
+  - _id: Tokw9r5aqy734dHC
     name: Beute!
     description: ''
     type: cosm
@@ -224,13 +240,15 @@ cards:
     rotation: 0
     sort: 0
     flags: {}
-    system: {}
+    system:
+      cosm: ''
+      number: ''
     value: null
     width: null
     height: null
-    _key: '!cards.cards!9isgXoIiiGWQHBx0.eBBYNXc3g1QBlFCe'
+    _key: '!cards.cards!9isgXoIiiGWQHBx0.Tokw9r5aqy734dHC'
     cards: []
-  - _id: AaELmUGQPcpkebEz
+  - _id: XixQ6nJjZ7JoIe01
     name: Quälende Visionen
     description: ''
     type: cosm
@@ -249,11 +267,13 @@ cards:
     rotation: 0
     sort: 0
     flags: {}
-    system: {}
+    system:
+      cosm: ''
+      number: ''
     value: null
     width: null
     height: null
-    _key: '!cards.cards!9isgXoIiiGWQHBx0.AaELmUGQPcpkebEz'
+    _key: '!cards.cards!9isgXoIiiGWQHBx0.XixQ6nJjZ7JoIe01'
     cards: []
 rotation: 0
 displayCount: false
@@ -268,14 +288,15 @@ system: {}
 ownership:
   default: 0
   1pSzpSNrhKGYYcib: 3
+  VAnYow5sWS9EJzo0: 3
 width: null
 height: null
 _stats:
-  systemId: null
-  systemVersion: null
-  coreVersion: null
-  createdTime: null
-  modifiedTime: null
-  lastModifiedBy: null
+  systemId: torgeternity
+  systemVersion: 3.8.1
+  coreVersion: '11.315'
+  createdTime: 1716827812019
+  modifiedTime: 1716827812019
+  lastModifiedBy: VAnYow5sWS9EJzo0
 _key: '!cards!9isgXoIiiGWQHBx0'
 

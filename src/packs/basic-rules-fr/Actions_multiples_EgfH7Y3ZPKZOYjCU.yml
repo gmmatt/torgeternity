@@ -1,39 +1,75 @@
 name: Actions multiples
-content: >-
-  <p class="MsoNormal">Un personnage peut tenter de faire deux choses ou plus en
-  un round en effectuant des actions multiples. Pour ce faire, le joueur déclare
-  toutes les actions que son personnage va tenter et applique un malus de -2
-  pour chaque action supplémentaire.</p>
-
-  <p class="MsoNormal">Si un Chevalier des Tempêtes veut faire trois choses par
-  exemple, il subit un malus de -4 pour chacune d’entre elles. Générez un seul
-  bonus pour toutes les actions, appliquez le malus, puis résolvez chacune
-  d’entre elles dans l’ordre de son choix (ou dans l’ordre le plus logique).</p>
-
-  <p class="MsoNormal"><strong>Autres modificateurs</strong> : les modificateurs
-  autres que le malus d’Actions multiples sont appliqués séparément aux tests
-  concernés. Si vous utilisez Intimidation quelqu’un puis tirez sur lui dans
-  l’obscurité, par exemple, n’appliquez que le malus d’obscurité au total du
-  test d’Armes à feu. </p>
-
-  <blockquote>
-
-  <p><strong>Remarque sur le système Foundry : </strong>si tu fais un test de
-  compétence amélioré, le système calculera automatiquement une pénalité pour
-  les actions multiples.  (voir
-  @UUID[Compendium.torgeternity.basic-rules-fr.JournalEntry.PBDHuKQtqi1qkvIO]{tests de compétence
-  ou d'attribut}  et
-  @UUID[Compendium.torgeternity.basic-rules-fr.JournalEntry.J0Yt8ueE280AzxmS]{attaque}.</p>
-
-  </blockquote>
 folder: null
 sort: 0
-permission:
-  default: 0
-  TK1vCAdCz548vBDu: 3
 flags:
   core:
     sourceId: JournalEntry.VGndHNofrt5cyZqK
 _id: EgfH7Y3ZPKZOYjCU
-pages: []
+pages:
+  - name: Actions multiples
+    type: text
+    title:
+      show: false
+      level: 1
+    text:
+      format: 1
+      content: >-
+        <p class="MsoNormal">Un personnage peut tenter de faire deux choses ou
+        plus en un round en effectuant des actions multiples. Pour ce faire, le
+        joueur déclare toutes les actions que son personnage va tenter et
+        applique un malus de -2 pour chaque action supplémentaire.</p>
+
+        <p class="MsoNormal">Si un Chevalier des Tempêtes veut faire trois
+        choses par exemple, il subit un malus de -4 pour chacune d’entre elles.
+        Générez un seul bonus pour toutes les actions, appliquez le malus, puis
+        résolvez chacune d’entre elles dans l’ordre de son choix (ou dans
+        l’ordre le plus logique).</p>
+
+        <p class="MsoNormal"><strong>Autres modificateurs</strong> : les
+        modificateurs autres que le malus d’Actions multiples sont appliqués
+        séparément aux tests concernés. Si vous utilisez Intimidation quelqu’un
+        puis tirez sur lui dans l’obscurité, par exemple, n’appliquez que le
+        malus d’obscurité au total du test d’Armes à feu. </p>
+
+        <blockquote>
+
+        <p><strong>Remarque sur le système Foundry : </strong>si tu fais un test
+        de compétence amélioré, le système calculera automatiquement une
+        pénalité pour les actions multiples.  (voir
+        @UUID[Compendium.torgeternity.basic-rules-fr.JournalEntry.PBDHuKQtqi1qkvIO]{tests
+        de compétence ou d'attribut}  et
+        @UUID[Compendium.torgeternity.basic-rules-fr.JournalEntry.J0Yt8ueE280AzxmS]{attaque}.</p>
+
+        </blockquote>
+    _id: 1egoHpHQDIOg2r1v
+    image: {}
+    video:
+      controls: true
+      volume: 0.5
+    src: null
+    system: {}
+    sort: 0
+    ownership:
+      default: -1
+    flags: {}
+    _stats:
+      systemId: null
+      systemVersion: null
+      coreVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+    _key: '!journal.pages!EgfH7Y3ZPKZOYjCU.1egoHpHQDIOg2r1v'
+ownership:
+  default: 0
+  TK1vCAdCz548vBDu: 3
+  VAnYow5sWS9EJzo0: 3
+_stats:
+  systemId: torgeternity
+  systemVersion: 3.8.1
+  coreVersion: '11.315'
+  createdTime: 1716827810109
+  modifiedTime: 1716827810109
+  lastModifiedBy: VAnYow5sWS9EJzo0
 _key: '!journal!EgfH7Y3ZPKZOYjCU'
+

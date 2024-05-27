@@ -103,16 +103,16 @@ export class CommonActorData extends foundry.abstract.TypeDataModel {
         : 'none';
     }
 
-    for (const attribute of Object.keys(data.attributes)) {
+    for (const attribute of Object.keys(data.attributes ?? {})) {
       if (typeof data?.attributes?.[attribute] === 'number') {
         data.attributes[attribute] = { base: data.attributes[attribute] };
       }
     }
 
-    for (const skill of Object.values(data.skills)) {
-      if (typeof skill.adds !== 'number') {
+    for (const skill of Object.values(data.skills ?? {})) {
+      if (Object.hasOwn(skill, 'adds') && typeof skill.adds !== 'number') {
         let skillAdd = parseInt(skill.adds);
-        skillAdd = isNan(skillAdd) ? 0 : skillAdd;
+        skillAdd = isNaN(skillAdd) ? 0 : skillAdd;
         skill.adds = skillAdd;
       }
     }

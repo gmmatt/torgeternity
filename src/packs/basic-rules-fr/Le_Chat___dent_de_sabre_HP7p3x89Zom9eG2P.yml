@@ -1,24 +1,60 @@
 name: Le Chat à dent de sabre
-content: >-
-  <p>La Chasseuse primitive a un "animal de compagnie" qui agit à son tour. Le
-  joueur contrôle également le chat et suit ses Chocs et ses Blessures
-  séparément. Le chat n'a pas de Possibilités propres, mais le joueur peut
-  dépenser les Possibilités de la chasseuse primitive pour les tests de la
-  créature ou pour absorber les dégâts qui lui sont infligés.</p>
-
-  <p class="MsoNormal">Votre compagnon Chat à dents de sabre n’a pas la taille
-  d’un véritable tigre mais ses griffes sont mortelles. Utilisez sa Manoeuvre
-  pour préparer vos propres attaques. Prudence avec votre compagnon ; s’il est
-  tué, il peut se passer beaucoup de temps avant qu’un autre ne le remplace.</p>
 folder: null
 sort: 0
-permission:
-  default: 0
-  TK1vCAdCz548vBDu: 3
 flags:
   core:
     sourceId: JournalEntry.INZvazTjjcVtGd1J
 _id: HP7p3x89Zom9eG2P
-pages: []
+pages:
+  - name: Le Chat à dent de sabre
+    type: text
+    title:
+      show: false
+      level: 1
+    text:
+      format: 1
+      content: >-
+        <p>La Chasseuse primitive a un "animal de compagnie" qui agit à son
+        tour. Le joueur contrôle également le chat et suit ses Chocs et ses
+        Blessures séparément. Le chat n'a pas de Possibilités propres, mais le
+        joueur peut dépenser les Possibilités de la chasseuse primitive pour les
+        tests de la créature ou pour absorber les dégâts qui lui sont
+        infligés.</p>
+
+        <p class="MsoNormal">Votre compagnon Chat à dents de sabre n’a pas la
+        taille d’un véritable tigre mais ses griffes sont mortelles. Utilisez sa
+        Manoeuvre pour préparer vos propres attaques. Prudence avec votre
+        compagnon ; s’il est tué, il peut se passer beaucoup de temps avant
+        qu’un autre ne le remplace.</p>
+    _id: 7B6DsZTOfYcl61Xp
+    image: {}
+    video:
+      controls: true
+      volume: 0.5
+    src: null
+    system: {}
+    sort: 0
+    ownership:
+      default: -1
+    flags: {}
+    _stats:
+      systemId: null
+      systemVersion: null
+      coreVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+    _key: '!journal.pages!HP7p3x89Zom9eG2P.7B6DsZTOfYcl61Xp'
+ownership:
+  default: 0
+  TK1vCAdCz548vBDu: 3
+  VAnYow5sWS9EJzo0: 3
+_stats:
+  systemId: torgeternity
+  systemVersion: 3.8.1
+  coreVersion: '11.315'
+  createdTime: 1716827810127
+  modifiedTime: 1716827810127
+  lastModifiedBy: VAnYow5sWS9EJzo0
 _key: '!journal!HP7p3x89Zom9eG2P'
 

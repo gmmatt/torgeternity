@@ -2,7 +2,755 @@ _id: hcdhRCs56U5JrAl4
 name: L’élu edeinos
 type: stormknight
 img: systems/torgeternity/images/characters/Edeinos_Optant.Avatar.webp
-data:
+items:
+  - _id: 5my70YmZnnaeEIRG
+    name: Paria
+    type: perk
+    sort: 400001
+    flags:
+      core:
+        sourceId: Item.9fW6U7drFdMu7bJ9
+    img: systems/torgeternity/images/icons/perk.webp
+    effects: []
+    folder: null
+    system:
+      category: edeinos
+      cosm: (Sans cosm)
+      description: >-
+        <p class="MsoNormal">Les edeinos sont des parias
+        consid&eacute;r&eacute;s avec m&eacute;fiance, sauf par les autres
+        edeinos. Ils subissent un malus de 4 points &agrave; leurs tests de
+        Persuasion quand ils sont confront&eacute;s &agrave; des non-edeinos et
+        sont souvent consid&eacute;r&eacute;s avec hostilit&eacute; par les
+        humains des autres royaumes</p>
+      prerequisites: edeinos
+      generalContradiction: false
+      pulpPowers:
+        enhancement01:
+          description: ''
+          taken: false
+          title: ''
+        enhancement02:
+          description: ''
+          taken: false
+          title: ''
+        enhancement03:
+          description: ''
+          taken: false
+          title: ''
+        enhancement04:
+          description: ''
+          taken: false
+          title: ''
+        enhancement05:
+          description: ''
+          taken: false
+          title: ''
+        enhancement06:
+          description: ''
+          taken: false
+          title: ''
+        enhancement07:
+          description: ''
+          taken: false
+          title: ''
+        enhancement08:
+          description: ''
+          taken: false
+          title: ''
+        enhancement09:
+          description: ''
+          taken: false
+          title: ''
+        enhancement10:
+          description: ''
+          taken: false
+          title: ''
+        enhancement11:
+          description: ''
+          taken: false
+          title: ''
+        enhancement12:
+          description: ''
+          taken: false
+          title: ''
+        enhancement13:
+          description: ''
+          taken: false
+          title: ''
+        enhancement14:
+          description: ''
+          taken: false
+          title: ''
+        enhancement15:
+          description: ''
+          taken: false
+          title: ''
+        enhancementNumber: 0
+        limitation01: ''
+        limitation02: ''
+        limitation03: ''
+        limitation04: ''
+        limitation05: ''
+        limitation06: ''
+        limitation07: ''
+        limitation08: ''
+        limitation09: ''
+        limitation10: ''
+        limitationNumber: 0
+      timestaken: ''
+    ownership:
+      default: 0
+    _stats:
+      systemId: null
+      systemVersion: null
+      coreVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+    _key: '!actors.items!hcdhRCs56U5JrAl4.5my70YmZnnaeEIRG'
+  - _id: fjKbGNOzANmk1Ncb
+    name: Coup de queue
+    type: perk
+    sort: 100001
+    flags:
+      core:
+        sourceId: Item.y88YRPsbrWD62tic
+    img: systems/torgeternity/images/icons/perk.webp
+    effects: []
+    folder: null
+    system:
+      category: edeinos
+      cosm: Terre vivante
+      description: >-
+        <p class="MsoNormal">Les hommes-l&eacute;zards utilisent leur queue pour
+        l&rsquo;&eacute;quilibre mais certains ont appris &agrave; combattre
+        avec en la transformant en une arme longue semblable &agrave; un fouet.
+        La comp&eacute;tence Combat &agrave; mains nues de tels edeinos est
+        Favoris&eacute;e.</p>
+      prerequisites: Edeinos
+      generalContradiction: false
+      pulpPowers:
+        enhancement01:
+          description: ''
+          taken: false
+          title: ''
+        enhancement02:
+          description: ''
+          taken: false
+          title: ''
+        enhancement03:
+          description: ''
+          taken: false
+          title: ''
+        enhancement04:
+          description: ''
+          taken: false
+          title: ''
+        enhancement05:
+          description: ''
+          taken: false
+          title: ''
+        enhancement06:
+          description: ''
+          taken: false
+          title: ''
+        enhancement07:
+          description: ''
+          taken: false
+          title: ''
+        enhancement08:
+          description: ''
+          taken: false
+          title: ''
+        enhancement09:
+          description: ''
+          taken: false
+          title: ''
+        enhancement10:
+          description: ''
+          taken: false
+          title: ''
+        enhancement11:
+          description: ''
+          taken: false
+          title: ''
+        enhancement12:
+          description: ''
+          taken: false
+          title: ''
+        enhancement13:
+          description: ''
+          taken: false
+          title: ''
+        enhancement14:
+          description: ''
+          taken: false
+          title: ''
+        enhancement15:
+          description: ''
+          taken: false
+          title: ''
+        enhancementNumber: 0
+        limitation01: ''
+        limitation02: ''
+        limitation03: ''
+        limitation04: ''
+        limitation05: ''
+        limitation06: ''
+        limitation07: ''
+        limitation08: ''
+        limitation09: ''
+        limitation10: ''
+        limitationNumber: 0
+      timestaken: '1'
+    ownership:
+      default: 0
+    _stats:
+      systemId: null
+      systemVersion: null
+      coreVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+    _key: '!actors.items!hcdhRCs56U5JrAl4.fjKbGNOzANmk1Ncb'
+  - _id: OZvqS64IhCczdFkT
+    name: Totem
+    type: gear
+    sort: 100000
+    flags:
+      core:
+        sourceId: Item.V6vSEnqgNmYQKs4o
+    img: systems/torgeternity/images/icons/gear.webp
+    effects: []
+    folder: null
+    system:
+      cosm: Terre-Vivante
+      description: <p>Statuette en os de Lanala</p>
+      price: '0'
+      techlevel: 5
+      value: 0
+      equippedClass: item-equipped
+    ownership:
+      default: 0
+    _stats:
+      systemId: null
+      systemVersion: null
+      coreVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+    _key: '!actors.items!hcdhRCs56U5JrAl4.OZvqS64IhCczdFkT'
+  - _id: EYZeSgW1bN1FwJ3M
+    name: Armure en racines d’hrockt
+    type: armor
+    sort: 1200000
+    flags:
+      core:
+        sourceId: Item.ReyQMFRMLe44saUX
+    img: systems/torgeternity/images/icons/armor.webp
+    effects:
+      - _id: n01gCYi1zesLMJRk
+        flags: {}
+        changes:
+          - key: system.other.armor
+            value: '2'
+            mode: 2
+            priority: null
+          - key: system.other.toughness
+            value: '2'
+            mode: 2
+            priority: null
+        disabled: false
+        duration:
+          startTime: null
+          seconds: null
+          combat: null
+          rounds: null
+          turns: null
+          startRound: null
+          startTurn: null
+        icon: icons/svg/aura.svg
+        origin: Item.ReyQMFRMLe44saUX
+        tint: null
+        transfer: true
+        name: +2 Armor
+        description: ''
+        statuses: []
+        _key: >-
+          !actors.items.effects!hcdhRCs56U5JrAl4.EYZeSgW1bN1FwJ3M.n01gCYi1zesLMJRk
+    folder: null
+    system:
+      cosm: Terre-Vivante
+      description: >-
+        <p class="MsoNormal">Fabriqu&eacute;e avec les racines tr&egrave;s
+        r&eacute;sistantes de l&rsquo;arbre hrockt, cette armure offre une
+        excellente protection mais sans la volont&eacute; de Lanala, elle
+        devient totalement rigide. Pour qu&rsquo;elle soit utile, celui qui la
+        porte doit &ecirc;tre un jakatt avec au moins un rang en Foi (Keta
+        Kalles) et un Axiome Spirituel d&rsquo;au moins 11. Si l&rsquo;axiome
+        local est inf&eacute;rieur, cette armure provoque une Contradiction</p>
+      price: '400'
+      techlevel: 3
+      value: 13
+      bonus: 2
+      equipped: true
+      equippedClass: .item-unequipped
+      maxDex: 10
+      minStrength: null
+      notes: Torse, Dex Max 10
+      fatigue: 0
+    ownership:
+      default: 0
+    _stats:
+      systemId: null
+      systemVersion: null
+      coreVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+    _key: '!actors.items!hcdhRCs56U5JrAl4.EYZeSgW1bN1FwJ3M'
+  - _id: b4PHFD1K2nhuxwQ7
+    name: Lance en bois d’hrockt
+    type: meleeweapon
+    sort: 800000
+    flags:
+      core:
+        sourceId: Item.0ibFEQi66ymd6PnN
+    img: systems/torgeternity/images/icons/melee-weapon-icon.webp
+    effects: []
+    folder: null
+    system:
+      cosm: (Sans cosm)
+      description: >-
+        <p class="MsoNormal">Le rameau est souple quand il est humide et
+        qu&rsquo;il pousse, mais aussi dur que du fer quand il est coup&eacute;
+        et s&eacute;ch&eacute;. Il est souvent cultiv&eacute; de sorte
+        qu&rsquo;il ait la forme d&rsquo;une lance droite avec une pointe
+        tranchante. Cette lance est commun&eacute;ment utilis&eacute;e comme
+        arme de jet.</p>
+      price: '40'
+      techlevel: 2
+      value: 8
+      ap: 0
+      attackWith: meleeWeapons
+      bonus: 2
+      chatNote: ''
+      damage: 2
+      damageType: strengthPlus
+      equipped: false
+      equippedClass: .item-unequipped
+      notes: Lancée avec Armes de jet
+    ownership:
+      default: 0
+    _stats:
+      systemId: null
+      systemVersion: null
+      coreVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+    _key: '!actors.items!hcdhRCs56U5JrAl4.b4PHFD1K2nhuxwQ7'
+  - _id: IqVsEgZ91RWXgkHw
+    name: Frappe
+    type: miracle
+    sort: 300001
+    flags:
+      core:
+        sourceId: Item.n96Wp0YtxBbpMAJG
+    img: systems/torgeternity/images/icons/miracle.webp
+    effects: []
+    folder: null
+    system:
+      ap: 0
+      applyArmor: true
+      applySize: true
+      axiom: 12
+      castingtime: 1 action
+      damage: ''
+      description: >-
+        <p class="MsoNormal">Parfois m&ecirc;me le plus pacifique des
+        &eacute;lus doit avoir recours &agrave; la force. Ce puissant miracle
+        conf&egrave;re une certaine puissance &agrave; une arme. Frappe affecte
+        une seule arme de m&ecirc;l&eacute;e ou de jet ; l&rsquo;option Cibles
+        multiples n&rsquo;est pas autoris&eacute;e.</p>
+
+        <p class="MsoNormal">Avec Frappe, la valeur de dommages de l&rsquo;arme
+        choisie est augment&eacute;e de +1. Qu&rsquo;il s&rsquo;agisse
+        d&rsquo;une arme &agrave; distance ou d&rsquo;une arme de
+        m&ecirc;l&eacute;e n&rsquo;a aucune importance, ses dommages de base
+        sont augment&eacute;s de +1. Frappe doit &ecirc;tre utilis&eacute; sur
+        une arme, pas sur des munitions.</p>
+
+        <p class="MsoNormal">Une arme b&eacute;nie par le miracle Frappe est
+        consid&eacute;r&eacute;e comme magique pour d&eacute;terminer si elle
+        peut affecter des adversaires ayant la capacit&eacute;
+        &Eacute;th&eacute;r&eacute;e ou une capacit&eacute; similaire qui permet
+        d&rsquo;ignorer les armes normales</p>
+      dn: Normal (ND 10)
+      dnType: ''
+      duration: 3 rounds
+      good: dommages +2.
+      isAttack: false
+      modifier: ''
+      outstanding: dommages +3.
+      range: contact
+      skill: faith
+      skilllevel: '12'
+      targetDefense: ''
+    ownership:
+      default: 0
+    _stats:
+      systemId: null
+      systemVersion: null
+      coreVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+    _key: '!actors.items!hcdhRCs56U5JrAl4.IqVsEgZ91RWXgkHw'
+  - _id: xYEb0MXVrXspQdDt
+    name: Miracles
+    type: perk
+    img: systems/torgeternity/images/icons/perk.webp
+    effects: []
+    folder: null
+    sort: 2600000
+    flags:
+      core:
+        sourceId: Compendium.world.perks.perk-miracles
+    system:
+      category: faith
+      cosm: (Non)
+      description: >-
+        <p class="MsoNormal">Le h&eacute;ros a la capacit&eacute;
+        d&rsquo;invoquer des miracles. Il a acc&egrave;s &agrave; la liste de
+        miracles associ&eacute;e &agrave; sa religion et qui n&rsquo;est pas
+        limit&eacute; &agrave; un autre Atout. Quelques exemples de listes sont
+        donn&eacute;s page 199. Le personnage commence avec Protection contre
+        les ennemis et deux autres miracles qu&rsquo;il choisit dans
+        n&rsquo;importe la liste &agrave; laquelle il a acc&egrave;s. Voir
+        Miracles page 196 pour savoir comment les invoquer et ce qui se passe si
+        l&rsquo;invocation &eacute;choue.</p>
+
+        <p class="MsoNormal"><strong>Nouveaux Miracles</strong> : cet Atout peut
+        &ecirc;tre choisi plus d&rsquo;une fois. &Agrave; chaque fois
+        qu&rsquo;il choisit &agrave; nouveau cet Atout, le personnage gagne un
+        miracle suppl&eacute;mentaire.</p>
+      prerequisites: au moins un rang en Foi
+      generalContradiction: false
+      pulpPowers:
+        enhancement01:
+          description: ''
+          taken: false
+          title: ''
+        enhancement02:
+          description: ''
+          taken: false
+          title: ''
+        enhancement03:
+          description: ''
+          taken: false
+          title: ''
+        enhancement04:
+          description: ''
+          taken: false
+          title: ''
+        enhancement05:
+          description: ''
+          taken: false
+          title: ''
+        enhancement06:
+          description: ''
+          taken: false
+          title: ''
+        enhancement07:
+          description: ''
+          taken: false
+          title: ''
+        enhancement08:
+          description: ''
+          taken: false
+          title: ''
+        enhancement09:
+          description: ''
+          taken: false
+          title: ''
+        enhancement10:
+          description: ''
+          taken: false
+          title: ''
+        enhancement11:
+          description: ''
+          taken: false
+          title: ''
+        enhancement12:
+          description: ''
+          taken: false
+          title: ''
+        enhancement13:
+          description: ''
+          taken: false
+          title: ''
+        enhancement14:
+          description: ''
+          taken: false
+          title: ''
+        enhancement15:
+          description: ''
+          taken: false
+          title: ''
+        enhancementNumber: 0
+        limitation01: ''
+        limitation02: ''
+        limitation03: ''
+        limitation04: ''
+        limitation05: ''
+        limitation06: ''
+        limitation07: ''
+        limitation08: ''
+        limitation09: ''
+        limitation10: ''
+        limitationNumber: 0
+      timestaken: '1'
+    ownership:
+      default: 0
+      TK1vCAdCz548vBDu: 3
+    _stats:
+      systemId: null
+      systemVersion: null
+      coreVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+    _key: '!actors.items!hcdhRCs56U5JrAl4.xYEb0MXVrXspQdDt'
+  - _id: g0cH43XIVTVK0fYY
+    name: morsure/griffes
+    type: specialability-rollable
+    img: systems/torgeternity/images/icons/specialability-rollable.webp
+    effects: []
+    folder: null
+    sort: 0
+    flags:
+      core:
+        sourceId: Compendium.te001-core-rulebook.Items.ZFmi6QH0qgga6sTT
+    system:
+      ap: 0
+      attackWith: unarmedCombat
+      chatNote: ''
+      damage: ''
+      description: >-
+        <p class="MsoNormal">Pour les monstres ayant une attaque de morsure, ou
+        de griffes, une seule valeur de dommages est indiqu&eacute;e telle que :
+        Morsure/griffes : Force +2 (14). Que l&rsquo;attaque soit
+        effectu&eacute;e avec des griffes ou une morsure n&rsquo;a pas vraiment
+        d&rsquo;importance. Si cela a une importance, c&rsquo;est au MJ de
+        d&eacute;cider.</p>
+    ownership:
+      default: 0
+      TK1vCAdCz548vBDu: 3
+    _stats:
+      systemId: null
+      systemVersion: null
+      coreVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+    _key: '!actors.items!hcdhRCs56U5JrAl4.g0cH43XIVTVK0fYY'
+  - _id: mlBKn7lTOYY4sEqu
+    name: morsure/griffes
+    type: meleeweapon
+    img: systems/torgeternity/images/icons/bite-icon.webp
+    effects: []
+    folder: null
+    sort: 2250000
+    flags:
+      core:
+        sheetClass: torgeternity.torgeternityItemSheet
+        sourceId: Item.Aan7zdkY9kl0RE7T
+    system:
+      cosm: (Sans cosm)
+      description: ''
+      price: ''
+      techlevel: null
+      value: null
+      ap: 0
+      attackWith: meleeWeapons
+      bonus: 2
+      chatNote: ''
+      damage: 2
+      damageType: strengthPlus
+      equipped: false
+      equippedClass: .item-unequipped
+      notes: ''
+    ownership:
+      default: 0
+      TK1vCAdCz548vBDu: 3
+    _stats:
+      systemId: null
+      systemVersion: null
+      coreVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+    _key: '!actors.items!hcdhRCs56U5JrAl4.mlBKn7lTOYY4sEqu'
+  - _id: v3Kj5kG8dQiQ0l8i
+    name: Soins
+    type: miracle
+    img: systems/torgeternity/images/icons/miracle.webp
+    effects: []
+    folder: null
+    sort: 2900000
+    flags:
+      core:
+        sourceId: Item.iDFKWtv4WCTrteId
+    system:
+      ap: 0
+      applyArmor: true
+      applySize: true
+      axiom: 10
+      castingtime: 1 action
+      damage: ''
+      description: >-
+        <p class="MsoNormal">Le pouvoir de soigner est peut-&ecirc;tre
+        l&rsquo;une des plus importantes capacit&eacute;s dont un fid&egrave;le
+        peut faire b&eacute;n&eacute;ficier les Chevaliers des Temp&ecirc;tes.
+        Qu&rsquo;il s&rsquo;occupe des blessures de ses compagnons ou
+        qu&rsquo;il soigne des villageois bless&eacute;s, Soins est une
+        comp&eacute;tence vitale.</p>
+
+        <p class="MsoNormal">Le total de l&rsquo;invocateur est modifi&eacute;
+        par les malus de blessures du patient (ainsi que celles de
+        l&rsquo;invocateur s&rsquo;il est bless&eacute;). Un succ&egrave;s
+        soigne 1 Blessure, tous les points de Choc et supprime
+        l&rsquo;&eacute;tat KO.</p>
+
+        <p class="MsoNormal">Soins ne peut &ecirc;tre tent&eacute; qu&rsquo;une
+        fois par Sc&egrave;ne sur un m&ecirc;me individu, choisissez bien ! Si
+        Maru est bless&eacute; au cours d&rsquo;un combat et soign&eacute; par
+        le P&egrave;re Damien, il ne pourra plus la soigner avant la prochaine
+        Sc&egrave;ne. Il pourra toujours utiliser sa comp&eacute;tence Premiers
+        soins sur elle et le miracle Soins sur ses camarades.</p>
+      dn: Normal (ND 10)
+      dnType: ''
+      duration: Instantanée
+      good: 2 Blessures sont soignées.
+      isAttack: false
+      modifier: ''
+      outstanding: 3 Blessures sont soignées.
+      range: Contact
+      skill: faith
+      skilllevel: '10'
+      targetDefense: ''
+    ownership:
+      default: 0
+      TK1vCAdCz548vBDu: 3
+    _stats:
+      systemId: null
+      systemVersion: null
+      coreVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+    _key: '!actors.items!hcdhRCs56U5JrAl4.v3Kj5kG8dQiQ0l8i'
+  - _id: GdJyPlTcYVLbC7rU
+    name: Protection contre les ennemis
+    type: miracle
+    img: systems/torgeternity/images/icons/miracle.webp
+    effects: []
+    folder: null
+    sort: 3000000
+    flags:
+      core:
+        sourceId: Compendium.world.miracles.miracle-ward-enemy
+    system:
+      ap: 0
+      applyArmor: true
+      applySize: true
+      axiom: 8
+      castingtime: 1 action
+      damage: ''
+      description: >-
+        <p class="MsoNormal">Protection contre les ennemis prot&egrave;ge les
+        fid&egrave;les des entit&eacute;s surnaturelles qui veulent nuire
+        &agrave; l&rsquo;humanit&eacute;.</p>
+
+        <p class="MsoNormal">Pour l&rsquo;invoquer, le fid&egrave;le doit
+        brandir un symbole saint, r&eacute;citer des pri&egrave;res ou effectuer
+        toute autre action qui indique clairement qu&rsquo;il en appelle
+        &agrave; la source de son pouvoir, ce qui en fait la cible principale
+        des esprits, des d&eacute;mons et de tout autre antagoniste pouvant
+        &ecirc;tre affect&eacute;.</p>
+
+        <p class="MsoNormal">Tant que la protection est active, tous les
+        alli&eacute;s situ&eacute;s &agrave; 5 m&egrave;tres
+        b&eacute;n&eacute;ficient d&rsquo;un bonus de +1 &agrave; leurs
+        d&eacute;fenses contre les cr&eacute;atures surnaturelles
+        mal&eacute;fiques et leurs attaques. Ce bonus est valable pour les
+        d&eacute;fenses physiques et d&rsquo;interaction.</p>
+
+        <p class="MsoNormal"><strong>Sp&eacute;cial </strong>: Ce miracle peut
+        &ecirc;tre tent&eacute; sans l&rsquo;Atout <span style="font-family:
+        var(--font-primary); font-size: var(--font-size-14);">Miracles si celui
+        qui l&rsquo;invoque a le niveau de Foi requis</span></p>
+
+        <p>&nbsp;</p>
+      dn: Normal (ND 10)
+      dnType: ''
+      duration: Concentration
+      good: ceux qui sont protégés ont un bonus de +2 à toutes leurs défenses
+      isAttack: false
+      modifier: ''
+      outstanding: >-
+        comme pour un succès Supérieur et les créatures surnaturelles maléfiques
+        qui ratent une attaque contre un individu protégé sont Déstabilisées
+      range: Rayon de 5 mètres.
+      skill: faith
+      skilllevel: '8'
+      targetDefense: ''
+    ownership:
+      default: 0
+      TK1vCAdCz548vBDu: 3
+    _stats:
+      systemId: null
+      systemVersion: null
+      coreVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+    _key: '!actors.items!hcdhRCs56U5JrAl4.GdJyPlTcYVLbC7rU'
+effects:
+  - _id: tmMqjv8tqvtHiRnE
+    flags: {}
+    changes:
+      - key: system.other.armor
+        mode: 2
+        value: '2'
+        priority: null
+      - key: system.other.toughness
+        mode: 2
+        value: '2'
+        priority: null
+    disabled: false
+    duration:
+      startTime: 0
+      seconds: null
+      combat: null
+      rounds: null
+      turns: null
+      startRound: null
+      startTurn: null
+    icon: icons/svg/aura.svg
+    origin: Actor.zQf4otdeKEQjCe6e.OwnedItem.EYZeSgW1bN1FwJ3M
+    tint: null
+    transfer: true
+    name: armure +2
+    description: ''
+    statuses: []
+    _key: '!actors.effects!hcdhRCs56U5JrAl4.tmMqjv8tqvtHiRnE'
+folder: null
+sort: 100001
+flags: {}
+system:
   shock:
     max: 5
     value: 0
@@ -10,300 +758,340 @@ data:
     max: 3
     value: 0
   attributes:
-    charisma: 6
-    dexterity: 8
-    mind: 6
-    spirit: 11
-    strength: 9
+    charisma:
+      base: 6
+    dexterity:
+      base: 8
+    mind:
+      base: 6
+    spirit:
+      base: 11
+    strength:
+      base: 9
   other:
-    move: 5
-    run: 5
-    toughness: 5
-    armor: 0
     cosm: livingLand
     possibilities: 0
-    posibilities: 3
   skills:
     airVehicles:
       baseAttribute: dexterity
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 0
+      isThreatSkill: false
+      defenseOnly: false
     alteration:
       baseAttribute: mind
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 0
+      isThreatSkill: false
+      defenseOnly: false
     apportation:
       baseAttribute: spirit
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 0
+      isThreatSkill: false
+      defenseOnly: false
     beastRiding:
       baseAttribute: dexterity
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     computers:
       baseAttribute: mind
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     conjuration:
       baseAttribute: spirit
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 0
+      isThreatSkill: false
+      defenseOnly: false
     divination:
       baseAttribute: mind
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 0
+      isThreatSkill: false
+      defenseOnly: false
     dodge:
       baseAttribute: dexterity
       adds: 1
-      value: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     energyWeapons:
       baseAttribute: dexterity
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: combat
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     evidenceAnalysis:
       baseAttribute: mind
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     faith:
       baseAttribute: spirit
       adds: 3
-      value: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     find:
       baseAttribute: mind
       adds: 1
-      value: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     fireCombat:
       baseAttribute: dexterity
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: combat
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     firstAid:
       baseAttribute: mind
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     heavyWeapons:
       baseAttribute: dexterity
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: combat
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     intimidation:
       baseAttribute: spirit
       adds: 1
-      value: 0
       isFav: false
       groupName: interaction
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     kinesis:
       baseAttribute: spirit
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 0
+      isThreatSkill: false
+      defenseOnly: false
     landVehicles:
       baseAttribute: dexterity
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     language:
       baseAttribute: mind
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 0
+      isThreatSkill: false
+      defenseOnly: false
     lockpicking:
       baseAttribute: dexterity
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 0
+      isThreatSkill: false
+      defenseOnly: false
     maneuver:
       baseAttribute: dexterity
       adds: 1
-      value: 0
       isFav: false
       groupName: interaction
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     medicine:
       baseAttribute: mind
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 0
+      isThreatSkill: false
+      defenseOnly: false
     meleeWeapons:
       baseAttribute: dexterity
       adds: 2
-      value: 0
       isFav: false
       groupName: combat
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     missileWeapons:
       baseAttribute: dexterity
       adds: 1
-      value: 0
       isFav: false
       groupName: combat
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     persuasion:
       baseAttribute: charisma
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     precognition:
       baseAttribute: mind
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 0
+      isThreatSkill: false
+      defenseOnly: false
     profession:
       baseAttribute: mind
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     reality:
       baseAttribute: spirit
       adds: 1
-      value: 0
       isFav: false
       groupName: other
       unskilledUse: 0
+      isThreatSkill: false
+      defenseOnly: false
     scholar:
       baseAttribute: mind
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     science:
       baseAttribute: mind
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     stealth:
       baseAttribute: dexterity
       adds: 2
-      value: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     streetwise:
       baseAttribute: charisma
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     survival:
       baseAttribute: mind
       adds: 1
-      value: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     taunt:
       baseAttribute: charisma
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: interaction
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     telepathy:
       baseAttribute: charisma
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 0
+      isThreatSkill: false
+      defenseOnly: false
     tracking:
       baseAttribute: mind
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     trick:
       baseAttribute: mind
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: interaction
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     unarmedCombat:
       baseAttribute: dexterity
       adds: 2
-      value: 0
       isFav: true
       groupName: combat
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     waterVehicles:
       baseAttribute: dexterity
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
     willpower:
       baseAttribute: spirit
-      adds: null
-      value: 0
+      adds: 0
       isFav: false
       groupName: other
       unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
   xp:
     unspent: 0
     earned: 0
@@ -313,7 +1101,6 @@ data:
     spirit: 24
     tech: 6
   details:
-    clearance: ''
     background: >-
       <h2 class="MsoNormal">Pr&eacute;sentation</h2>
 
@@ -406,35 +1193,20 @@ data:
 
       <p class="MsoNormal" style="tab-stops: 150.75pt;">□ (5 PX) Foi +5</p>
     race: edeinos
-  editstate: null
-  fatigue: '1'
-token:
+    sizeBonus: normal
+  editstate: true
+ownership:
+  default: 0
+  A9LyAqagoJJU3gDH: 3
+  VAnYow5sWS9EJzo0: 3
+prototypeToken:
   flags: {}
   name: L’élu edeinos
   displayName: 30
-  img: systems/torgeternity/images/characters/Edeinos_Optant.Token.webp
-  tint: null
   width: 1
   height: 1
-  scale: 1
-  mirrorX: false
-  mirrorY: false
   lockRotation: false
   rotation: 0
-  vision: false
-  dimSight: 0
-  brightSight: 0
-  dimLight: 0
-  brightLight: 0
-  sightAngle: 0
-  lightAngle: 360
-  lightColor: ''
-  lightAlpha: 1
-  lightAnimation:
-    type: ''
-    speed: 5
-    intensity: 5
-  actorId: hcdhRCs56U5JrAl4
   actorLink: true
   disposition: 1
   displayBars: 20
@@ -445,17 +1217,17 @@ token:
   randomImg: false
   alpha: 1
   light:
-    alpha: 0.5
-    angle: 0
+    alpha: 1
+    angle: 360
     bright: 0
     coloration: 1
     dim: 0
-    gradual: true
     luminosity: 0.5
     saturation: 0
     contrast: 0
     shadows: 0
     animation:
+      type: null
       speed: 5
       intensity: 5
       reverse: false
@@ -463,632 +1235,33 @@ token:
       min: 0
       max: 1
     color: null
-items:
-  - _id: 5my70YmZnnaeEIRG
-    name: Paria
-    type: perk
-    data:
-      category: edeinos
-      cosm: (Sans cosm)
-      prerequisites: edeinos
-      timestaken: null
-      description: >-
-        <p class="MsoNormal">Les edeinos sont des parias
-        consid&eacute;r&eacute;s avec m&eacute;fiance, sauf par les autres
-        edeinos. Ils subissent un malus de 4 points &agrave; leurs tests de
-        Persuasion quand ils sont confront&eacute;s &agrave; des non-edeinos et
-        sont souvent consid&eacute;r&eacute;s avec hostilit&eacute; par les
-        humains des autres royaumes</p>
-      pulpPowers:
-        enhancementNumber: 0
-        enhancement01:
-          title: ''
-          description: ''
-          taken: false
-        enhancement02:
-          title: ''
-          description: ''
-          taken: false
-        enhancement03:
-          title: ''
-          description: ''
-          taken: false
-        enhancement04:
-          title: ''
-          description: ''
-          taken: false
-        enhancement05:
-          title: ''
-          description: ''
-          taken: false
-        enhancement06:
-          title: ''
-          description: ''
-          taken: false
-        enhancement07:
-          title: ''
-          description: ''
-          taken: false
-        enhancement08:
-          title: ''
-          description: ''
-          taken: false
-        enhancement09:
-          title: ''
-          description: ''
-          taken: false
-        enhancement10:
-          title: ''
-          description: ''
-          taken: false
-        enhancement11:
-          title: ''
-          description: ''
-          taken: false
-        enhancement12:
-          title: ''
-          description: ''
-          taken: false
-        enhancement13:
-          title: ''
-          description: ''
-          taken: false
-        enhancement14:
-          title: ''
-          description: ''
-          taken: false
-        enhancement15:
-          title: ''
-          description: ''
-          taken: false
-        limitationNumber: 0
-        limitation01: ''
-        limitation02: ''
-        limitation03: ''
-        limitation04: ''
-        limitation05: ''
-        limitation06: ''
-        limitation07: ''
-        limitation08: ''
-        limitation09: ''
-        limitation10: ''
-    sort: 400001
-    flags:
-      core:
-        sourceId: Item.9fW6U7drFdMu7bJ9
-    img: systems/torgeternity/images/icons/perk.webp
-    effects: []
-    folder: null
-    permission:
-      default: 0
-    _key: '!actors.items!hcdhRCs56U5JrAl4.5my70YmZnnaeEIRG'
-  - _id: fjKbGNOzANmk1Ncb
-    name: Coup de queue
-    type: perk
-    data:
-      category: edeinos
-      cosm: Terre vivante
-      prerequisites: Edeinos
-      timestaken: 1
-      description: >-
-        <p class="MsoNormal">Les hommes-l&eacute;zards utilisent leur queue pour
-        l&rsquo;&eacute;quilibre mais certains ont appris &agrave; combattre
-        avec en la transformant en une arme longue semblable &agrave; un fouet.
-        La comp&eacute;tence Combat &agrave; mains nues de tels edeinos est
-        Favoris&eacute;e.</p>
-      pulpPowers:
-        enhancementNumber: 0
-        enhancement01:
-          title: ''
-          description: ''
-          taken: false
-        enhancement02:
-          title: ''
-          description: ''
-          taken: false
-        enhancement03:
-          title: ''
-          description: ''
-          taken: false
-        enhancement04:
-          title: ''
-          description: ''
-          taken: false
-        enhancement05:
-          title: ''
-          description: ''
-          taken: false
-        enhancement06:
-          title: ''
-          description: ''
-          taken: false
-        enhancement07:
-          title: ''
-          description: ''
-          taken: false
-        enhancement08:
-          title: ''
-          description: ''
-          taken: false
-        enhancement09:
-          title: ''
-          description: ''
-          taken: false
-        enhancement10:
-          title: ''
-          description: ''
-          taken: false
-        enhancement11:
-          title: ''
-          description: ''
-          taken: false
-        enhancement12:
-          title: ''
-          description: ''
-          taken: false
-        enhancement13:
-          title: ''
-          description: ''
-          taken: false
-        enhancement14:
-          title: ''
-          description: ''
-          taken: false
-        enhancement15:
-          title: ''
-          description: ''
-          taken: false
-        limitationNumber: 0
-        limitation01: ''
-        limitation02: ''
-        limitation03: ''
-        limitation04: ''
-        limitation05: ''
-        limitation06: ''
-        limitation07: ''
-        limitation08: ''
-        limitation09: ''
-        limitation10: ''
-    sort: 100001
-    flags:
-      core:
-        sourceId: Item.y88YRPsbrWD62tic
-    img: systems/torgeternity/images/icons/perk.webp
-    effects: []
-    folder: null
-    permission:
-      default: 0
-    _key: '!actors.items!hcdhRCs56U5JrAl4.fjKbGNOzANmk1Ncb'
-  - _id: OZvqS64IhCczdFkT
-    name: Totem
-    type: gear
-    data:
-      cosm: Terre-Vivante
-      description: <p>Statuette en os de Lanala</p>
-      techlevel: 5
-      price: '0'
-      value: 0
-    sort: 100000
-    flags:
-      core:
-        sourceId: Item.V6vSEnqgNmYQKs4o
-    img: systems/torgeternity/images/icons/gear.webp
-    effects: []
-    folder: null
-    permission:
-      default: 0
-    _key: '!actors.items!hcdhRCs56U5JrAl4.OZvqS64IhCczdFkT'
-  - _id: EYZeSgW1bN1FwJ3M
-    name: Armure en racines d’hrockt
-    type: armor
-    data:
-      cosm: Terre-Vivante
-      description: >-
-        <p class="MsoNormal">Fabriqu&eacute;e avec les racines tr&egrave;s
-        r&eacute;sistantes de l&rsquo;arbre hrockt, cette armure offre une
-        excellente protection mais sans la volont&eacute; de Lanala, elle
-        devient totalement rigide. Pour qu&rsquo;elle soit utile, celui qui la
-        porte doit &ecirc;tre un jakatt avec au moins un rang en Foi (Keta
-        Kalles) et un Axiome Spirituel d&rsquo;au moins 11. Si l&rsquo;axiome
-        local est inf&eacute;rieur, cette armure provoque une Contradiction</p>
-      techlevel: 3
-      price: '400'
-      value: 13
-      bonus: 2
-      maxDex: 10
-      minStrength: null
-      equipped: true
-      equippedClass: .item-unequipped
-      notes: Torse, Dex Max 10
-    sort: 1200000
-    flags:
-      core:
-        sourceId: Item.ReyQMFRMLe44saUX
-    img: systems/torgeternity/images/icons/armor.webp
-    effects:
-      - _id: n01gCYi1zesLMJRk
-        flags: {}
-        changes:
-          - key: data.other.armor
-            value: '2'
-            mode: 2
-          - key: data.other.toughness
-            value: '2'
-            mode: 2
-        disabled: false
-        duration:
-          startTime: null
-        icon: icons/svg/aura.svg
-        label: +2 Armor
-        origin: Item.ReyQMFRMLe44saUX
-        tint: null
-        transfer: true
-        _key: >-
-          !actors.items.effects!hcdhRCs56U5JrAl4.EYZeSgW1bN1FwJ3M.n01gCYi1zesLMJRk
-    folder: null
-    permission:
-      default: 0
-    _key: '!actors.items!hcdhRCs56U5JrAl4.EYZeSgW1bN1FwJ3M'
-  - _id: b4PHFD1K2nhuxwQ7
-    name: Lance en bois d’hrockt
-    type: meleeweapon
-    data:
-      cosm: (Sans cosm)
-      description: >-
-        <p class="MsoNormal">Le rameau est souple quand il est humide et
-        qu&rsquo;il pousse, mais aussi dur que du fer quand il est coup&eacute;
-        et s&eacute;ch&eacute;. Il est souvent cultiv&eacute; de sorte
-        qu&rsquo;il ait la forme d&rsquo;une lance droite avec une pointe
-        tranchante. Cette lance est commun&eacute;ment utilis&eacute;e comme
-        arme de jet.</p>
-      techlevel: 2
-      price: '40'
-      value: 8
-      attackWith: meleeWeapons
-      damageType: strengthPlus
-      damage: 2
-      ap: 0
-      bonus: 2
-      notes: Lancée avec Armes de jet
-      chatNote: ''
-    sort: 800000
-    flags:
-      core:
-        sourceId: Item.0ibFEQi66ymd6PnN
-    img: systems/torgeternity/images/icons/melee-weapon-icon.webp
-    effects: []
-    folder: null
-    permission:
-      default: 0
-    _key: '!actors.items!hcdhRCs56U5JrAl4.b4PHFD1K2nhuxwQ7'
-  - _id: IqVsEgZ91RWXgkHw
-    name: Frappe
-    type: miracle
-    data:
-      axiom: 12
-      skill: faith
-      skilllevel: 12
-      castingtime: 1 action
-      dn: Normal (ND 10)
-      range: contact
-      duration: 3 rounds
-      description: >-
-        <p class="MsoNormal">Parfois m&ecirc;me le plus pacifique des
-        &eacute;lus doit avoir recours &agrave; la force. Ce puissant miracle
-        conf&egrave;re une certaine puissance &agrave; une arme. Frappe affecte
-        une seule arme de m&ecirc;l&eacute;e ou de jet ; l&rsquo;option Cibles
-        multiples n&rsquo;est pas autoris&eacute;e.</p>
-
-        <p class="MsoNormal">Avec Frappe, la valeur de dommages de l&rsquo;arme
-        choisie est augment&eacute;e de +1. Qu&rsquo;il s&rsquo;agisse
-        d&rsquo;une arme &agrave; distance ou d&rsquo;une arme de
-        m&ecirc;l&eacute;e n&rsquo;a aucune importance, ses dommages de base
-        sont augment&eacute;s de +1. Frappe doit &ecirc;tre utilis&eacute; sur
-        une arme, pas sur des munitions.</p>
-
-        <p class="MsoNormal">Une arme b&eacute;nie par le miracle Frappe est
-        consid&eacute;r&eacute;e comme magique pour d&eacute;terminer si elle
-        peut affecter des adversaires ayant la capacit&eacute;
-        &Eacute;th&eacute;r&eacute;e ou une capacit&eacute; similaire qui permet
-        d&rsquo;ignorer les armes normales</p>
-      good: dommages +2.
-      outstanding: dommages +3.
-      isAttack: 'false'
-      damage: null
-    sort: 300001
-    flags:
-      core:
-        sourceId: Item.n96Wp0YtxBbpMAJG
-    img: systems/torgeternity/images/icons/miracle.webp
-    effects: []
-    folder: null
-    permission:
-      default: 0
-    _key: '!actors.items!hcdhRCs56U5JrAl4.IqVsEgZ91RWXgkHw'
-  - _id: xYEb0MXVrXspQdDt
-    name: Miracles
-    type: perk
-    img: systems/torgeternity/images/icons/perk.webp
-    data:
-      category: faith
-      cosm: (Non)
-      prerequisites: au moins un rang en Foi
-      timestaken: 1
-      description: >-
-        <p class="MsoNormal">Le h&eacute;ros a la capacit&eacute;
-        d&rsquo;invoquer des miracles. Il a acc&egrave;s &agrave; la liste de
-        miracles associ&eacute;e &agrave; sa religion et qui n&rsquo;est pas
-        limit&eacute; &agrave; un autre Atout. Quelques exemples de listes sont
-        donn&eacute;s page 199. Le personnage commence avec Protection contre
-        les ennemis et deux autres miracles qu&rsquo;il choisit dans
-        n&rsquo;importe la liste &agrave; laquelle il a acc&egrave;s. Voir
-        Miracles page 196 pour savoir comment les invoquer et ce qui se passe si
-        l&rsquo;invocation &eacute;choue.</p>
-
-        <p class="MsoNormal"><strong>Nouveaux Miracles</strong> : cet Atout peut
-        &ecirc;tre choisi plus d&rsquo;une fois. &Agrave; chaque fois
-        qu&rsquo;il choisit &agrave; nouveau cet Atout, le personnage gagne un
-        miracle suppl&eacute;mentaire.</p>
-      pulpPowers:
-        enhancementNumber: 0
-        enhancement01:
-          title: ''
-          description: ''
-          taken: false
-        enhancement02:
-          title: ''
-          description: ''
-          taken: false
-        enhancement03:
-          title: ''
-          description: ''
-          taken: false
-        enhancement04:
-          title: ''
-          description: ''
-          taken: false
-        enhancement05:
-          title: ''
-          description: ''
-          taken: false
-        enhancement06:
-          title: ''
-          description: ''
-          taken: false
-        enhancement07:
-          title: ''
-          description: ''
-          taken: false
-        enhancement08:
-          title: ''
-          description: ''
-          taken: false
-        enhancement09:
-          title: ''
-          description: ''
-          taken: false
-        enhancement10:
-          title: ''
-          description: ''
-          taken: false
-        enhancement11:
-          title: ''
-          description: ''
-          taken: false
-        enhancement12:
-          title: ''
-          description: ''
-          taken: false
-        enhancement13:
-          title: ''
-          description: ''
-          taken: false
-        enhancement14:
-          title: ''
-          description: ''
-          taken: false
-        enhancement15:
-          title: ''
-          description: ''
-          taken: false
-        limitationNumber: 0
-        limitation01: ''
-        limitation02: ''
-        limitation03: ''
-        limitation04: ''
-        limitation05: ''
-        limitation06: ''
-        limitation07: ''
-        limitation08: ''
-        limitation09: ''
-        limitation10: ''
-    effects: []
-    folder: null
-    sort: 2600000
-    permission:
-      default: 0
-      TK1vCAdCz548vBDu: 3
-    flags:
-      core:
-        sourceId: Compendium.world.perks.perk-miracles
-    _key: '!actors.items!hcdhRCs56U5JrAl4.xYEb0MXVrXspQdDt'
-  - _id: g0cH43XIVTVK0fYY
-    name: morsure/griffes
-    type: specialability-rollable
-    img: systems/torgeternity/images/icons/specialability-rollable.webp
-    data:
-      description: >-
-        <p class="MsoNormal">Pour les monstres ayant une attaque de morsure, ou
-        de griffes, une seule valeur de dommages est indiqu&eacute;e telle que :
-        Morsure/griffes : Force +2 (14). Que l&rsquo;attaque soit
-        effectu&eacute;e avec des griffes ou une morsure n&rsquo;a pas vraiment
-        d&rsquo;importance. Si cela a une importance, c&rsquo;est au MJ de
-        d&eacute;cider.</p>
-      attackWith: unarmedCombat
-      damage: null
-      ap: 0
-      chatNote: ''
-    effects: []
-    folder: null
-    sort: 0
-    permission:
-      default: 0
-      TK1vCAdCz548vBDu: 3
-    flags:
-      core:
-        sourceId: Compendium.te001-core-rulebook.Items.ZFmi6QH0qgga6sTT
-    _key: '!actors.items!hcdhRCs56U5JrAl4.g0cH43XIVTVK0fYY'
-  - _id: mlBKn7lTOYY4sEqu
-    name: morsure/griffes
-    type: meleeweapon
-    img: systems/torgeternity/images/icons/bite-icon.webp
-    data:
-      cosm: (Sans cosm)
-      description: ''
-      techlevel: null
-      price: ''
-      value: null
-      attackWith: meleeWeapons
-      damageType: strengthPlus
-      damage: 2
-      ap: 0
-      bonus: 2
-      notes: ''
-      chatNote: ''
-    effects: []
-    folder: null
-    sort: 2250000
-    permission:
-      default: 0
-      TK1vCAdCz548vBDu: 3
-    flags:
-      core:
-        sheetClass: torgeternity.torgeternityItemSheet
-        sourceId: Item.Aan7zdkY9kl0RE7T
-    _key: '!actors.items!hcdhRCs56U5JrAl4.mlBKn7lTOYY4sEqu'
-  - _id: v3Kj5kG8dQiQ0l8i
-    name: Soins
-    type: miracle
-    img: systems/torgeternity/images/icons/miracle.webp
-    data:
-      axiom: 10
-      skill: faith
-      skilllevel: 10
-      castingtime: 1 action
-      dn: Normal (ND 10)
-      range: Contact
-      duration: Instantanée
-      description: >-
-        <p class="MsoNormal">Le pouvoir de soigner est peut-&ecirc;tre
-        l&rsquo;une des plus importantes capacit&eacute;s dont un fid&egrave;le
-        peut faire b&eacute;n&eacute;ficier les Chevaliers des Temp&ecirc;tes.
-        Qu&rsquo;il s&rsquo;occupe des blessures de ses compagnons ou
-        qu&rsquo;il soigne des villageois bless&eacute;s, Soins est une
-        comp&eacute;tence vitale.</p>
-
-        <p class="MsoNormal">Le total de l&rsquo;invocateur est modifi&eacute;
-        par les malus de blessures du patient (ainsi que celles de
-        l&rsquo;invocateur s&rsquo;il est bless&eacute;). Un succ&egrave;s
-        soigne 1 Blessure, tous les points de Choc et supprime
-        l&rsquo;&eacute;tat KO.</p>
-
-        <p class="MsoNormal">Soins ne peut &ecirc;tre tent&eacute; qu&rsquo;une
-        fois par Sc&egrave;ne sur un m&ecirc;me individu, choisissez bien ! Si
-        Maru est bless&eacute; au cours d&rsquo;un combat et soign&eacute; par
-        le P&egrave;re Damien, il ne pourra plus la soigner avant la prochaine
-        Sc&egrave;ne. Il pourra toujours utiliser sa comp&eacute;tence Premiers
-        soins sur elle et le miracle Soins sur ses camarades.</p>
-      good: 2 Blessures sont soignées.
-      outstanding: 3 Blessures sont soignées.
-      isAttack: 'false'
-      damage: null
-    effects: []
-    folder: null
-    sort: 2900000
-    permission:
-      default: 0
-      TK1vCAdCz548vBDu: 3
-    flags:
-      core:
-        sourceId: Item.iDFKWtv4WCTrteId
-    _key: '!actors.items!hcdhRCs56U5JrAl4.v3Kj5kG8dQiQ0l8i'
-  - _id: GdJyPlTcYVLbC7rU
-    name: Protection contre les ennemis
-    type: miracle
-    img: systems/torgeternity/images/icons/miracle.webp
-    data:
-      axiom: 8
-      skill: faith
-      skilllevel: 8
-      castingtime: 1 action
-      dn: Normal (ND 10)
-      range: Rayon de 5 mètres.
-      duration: Concentration
-      description: >-
-        <p class="MsoNormal">Protection contre les ennemis prot&egrave;ge les
-        fid&egrave;les des entit&eacute;s surnaturelles qui veulent nuire
-        &agrave; l&rsquo;humanit&eacute;.</p>
-
-        <p class="MsoNormal">Pour l&rsquo;invoquer, le fid&egrave;le doit
-        brandir un symbole saint, r&eacute;citer des pri&egrave;res ou effectuer
-        toute autre action qui indique clairement qu&rsquo;il en appelle
-        &agrave; la source de son pouvoir, ce qui en fait la cible principale
-        des esprits, des d&eacute;mons et de tout autre antagoniste pouvant
-        &ecirc;tre affect&eacute;.</p>
-
-        <p class="MsoNormal">Tant que la protection est active, tous les
-        alli&eacute;s situ&eacute;s &agrave; 5 m&egrave;tres
-        b&eacute;n&eacute;ficient d&rsquo;un bonus de +1 &agrave; leurs
-        d&eacute;fenses contre les cr&eacute;atures surnaturelles
-        mal&eacute;fiques et leurs attaques. Ce bonus est valable pour les
-        d&eacute;fenses physiques et d&rsquo;interaction.</p>
-
-        <p class="MsoNormal"><strong>Sp&eacute;cial </strong>: Ce miracle peut
-        &ecirc;tre tent&eacute; sans l&rsquo;Atout <span style="font-family:
-        var(--font-primary); font-size: var(--font-size-14);">Miracles si celui
-        qui l&rsquo;invoque a le niveau de Foi requis</span></p>
-
-        <p>&nbsp;</p>
-      good: ceux qui sont protégés ont un bonus de +2 à toutes leurs défenses
-      outstanding: >-
-        comme pour un succès Supérieur et les créatures surnaturelles maléfiques
-        qui ratent une attaque contre un individu protégé sont Déstabilisées
-      isAttack: 'false'
-      damage: null
-    effects: []
-    folder: null
-    sort: 3000000
-    permission:
-      default: 0
-      TK1vCAdCz548vBDu: 3
-    flags:
-      core:
-        sourceId: Compendium.world.miracles.miracle-ward-enemy
-    _key: '!actors.items!hcdhRCs56U5JrAl4.GdJyPlTcYVLbC7rU'
-effects:
-  - _id: tmMqjv8tqvtHiRnE
-    flags: {}
-    changes:
-      - key: data.other.armor
-        mode: 2
-        value: '2'
-      - key: data.other.toughness
-        mode: 2
-        value: '2'
-    disabled: false
-    duration:
-      startTime: 0
-    icon: icons/svg/aura.svg
-    label: armure +2
-    origin: Actor.zQf4otdeKEQjCe6e.OwnedItem.EYZeSgW1bN1FwJ3M
+    attenuation: 0.5
+  texture:
+    src: systems/torgeternity/images/characters/Edeinos_Optant.Token.webp
     tint: null
-    transfer: true
-    _key: '!actors.effects!hcdhRCs56U5JrAl4.tmMqjv8tqvtHiRnE'
-folder: null
-sort: 100001
-permission:
-  default: 0
-  A9LyAqagoJJU3gDH: 3
-flags: {}
+    scaleX: 1
+    scaleY: 1
+    offsetX: 0
+    offsetY: 0
+    rotation: 0
+  sight:
+    angle: 360
+    enabled: false
+    range: 0
+    brightness: 1
+    visionMode: basic
+    attenuation: 0.1
+    saturation: 0
+    contrast: 0
+  appendNumber: false
+  prependAdjective: false
+  detectionModes: []
+_stats:
+  systemId: torgeternity
+  systemVersion: 3.8.1
+  coreVersion: '11.315'
+  createdTime: 1716827809684
+  modifiedTime: 1716827809684
+  lastModifiedBy: VAnYow5sWS9EJzo0
 _key: '!actors!hcdhRCs56U5JrAl4'
 

@@ -2,475 +2,20 @@ _id: QVpKuacd4LKfpJOy
 name: Le samouraï électrique
 type: stormknight
 img: systems/torgeternity/images/characters/Electric_Samurai.Avatar.webp
-data:
-  shock:
-    max: 8
-    value: 0
-  wounds:
-    max: 3
-    value: 0
-  attributes:
-    charisma: 6
-    dexterity: 9
-    mind: 8
-    spirit: 8
-    strength: 9
-  other:
-    move: 9
-    run: 27
-    toughness: 13
-    armor: 4
-    cosm: panPacifica
-    possibilities: 0
-    posibilities: 3
-  skills:
-    airVehicles:
-      baseAttribute: dexterity
-      adds: null
-      value: '-'
-      isFav: false
-      groupName: other
-      unskilledUse: 0
-    alteration:
-      baseAttribute: mind
-      adds: null
-      value: '-'
-      isFav: false
-      groupName: other
-      unskilledUse: 0
-    apportation:
-      baseAttribute: spirit
-      adds: null
-      value: '-'
-      isFav: false
-      groupName: other
-      unskilledUse: 0
-    beastRiding:
-      baseAttribute: dexterity
-      adds: null
-      value: 9
-      isFav: false
-      groupName: other
-      unskilledUse: 1
-    computers:
-      baseAttribute: mind
-      adds: 1
-      value: 9
-      isFav: false
-      groupName: other
-      unskilledUse: 1
-    conjuration:
-      baseAttribute: spirit
-      adds: null
-      value: '-'
-      isFav: false
-      groupName: other
-      unskilledUse: 0
-    divination:
-      baseAttribute: mind
-      adds: null
-      value: '-'
-      isFav: false
-      groupName: other
-      unskilledUse: 0
-    dodge:
-      baseAttribute: dexterity
-      adds: 2
-      value: 11
-      isFav: false
-      groupName: other
-      unskilledUse: 1
-    energyWeapons:
-      baseAttribute: dexterity
-      adds: null
-      value: 9
-      isFav: false
-      groupName: combat
-      unskilledUse: 1
-    evidenceAnalysis:
-      baseAttribute: mind
-      adds: 1
-      value: 9
-      isFav: false
-      groupName: other
-      unskilledUse: 1
-    faith:
-      baseAttribute: spirit
-      adds: null
-      value: 8
-      isFav: false
-      groupName: other
-      unskilledUse: 1
-    find:
-      baseAttribute: mind
-      adds: 1
-      value: 9
-      isFav: false
-      groupName: other
-      unskilledUse: 1
-    fireCombat:
-      baseAttribute: dexterity
-      adds: 1
-      value: 10
-      isFav: false
-      groupName: combat
-      unskilledUse: 1
-    firstAid:
-      baseAttribute: mind
-      adds: null
-      value: 8
-      isFav: false
-      groupName: other
-      unskilledUse: 1
-    heavyWeapons:
-      baseAttribute: dexterity
-      adds: null
-      value: 9
-      isFav: false
-      groupName: combat
-      unskilledUse: 1
-    intimidation:
-      baseAttribute: spirit
-      adds: null
-      value: 8
-      isFav: false
-      groupName: interaction
-      unskilledUse: 1
-    kinesis:
-      baseAttribute: spirit
-      adds: null
-      value: '-'
-      isFav: false
-      groupName: other
-      unskilledUse: 0
-    landVehicles:
-      baseAttribute: dexterity
-      adds: 1
-      value: 10
-      isFav: false
-      groupName: other
-      unskilledUse: 1
-    language:
-      baseAttribute: mind
-      adds: null
-      value: '-'
-      isFav: false
-      groupName: other
-      unskilledUse: 0
-    lockpicking:
-      baseAttribute: dexterity
-      adds: null
-      value: '-'
-      isFav: false
-      groupName: other
-      unskilledUse: 0
-    maneuver:
-      baseAttribute: dexterity
-      adds: 1
-      value: 10
-      isFav: false
-      groupName: interaction
-      unskilledUse: 1
-    medicine:
-      baseAttribute: mind
-      adds: null
-      value: '-'
-      isFav: false
-      groupName: other
-      unskilledUse: 0
-    meleeWeapons:
-      baseAttribute: dexterity
-      adds: 3
-      value: 12
-      isFav: false
-      groupName: combat
-      unskilledUse: 1
-    missileWeapons:
-      baseAttribute: dexterity
-      adds: null
-      value: 9
-      isFav: false
-      groupName: combat
-      unskilledUse: 1
-    persuasion:
-      baseAttribute: charisma
-      adds: null
-      value: 6
-      isFav: false
-      groupName: other
-      unskilledUse: 1
-    precognition:
-      baseAttribute: mind
-      adds: null
-      value: '-'
-      isFav: false
-      groupName: other
-      unskilledUse: 0
-    profession:
-      baseAttribute: mind
-      adds: null
-      value: 8
-      isFav: false
-      groupName: other
-      unskilledUse: 1
-    reality:
-      baseAttribute: spirit
-      adds: 1
-      value: 9
-      isFav: false
-      groupName: other
-      unskilledUse: 0
-    scholar:
-      baseAttribute: mind
-      adds: null
-      value: 8
-      isFav: false
-      groupName: other
-      unskilledUse: 1
-    science:
-      baseAttribute: mind
-      adds: 1
-      value: 9
-      isFav: false
-      groupName: other
-      unskilledUse: 1
-    stealth:
-      baseAttribute: dexterity
-      adds: 1
-      value: 10
-      isFav: false
-      groupName: other
-      unskilledUse: 1
-    streetwise:
-      baseAttribute: charisma
-      adds: null
-      value: 6
-      isFav: false
-      groupName: other
-      unskilledUse: 1
-    survival:
-      baseAttribute: mind
-      adds: null
-      value: 8
-      isFav: false
-      groupName: other
-      unskilledUse: 1
-    taunt:
-      baseAttribute: charisma
-      adds: null
-      value: 6
-      isFav: false
-      groupName: interaction
-      unskilledUse: 1
-    telepathy:
-      baseAttribute: charisma
-      adds: null
-      value: '-'
-      isFav: false
-      groupName: other
-      unskilledUse: 0
-    tracking:
-      baseAttribute: mind
-      adds: null
-      value: 8
-      isFav: false
-      groupName: other
-      unskilledUse: 1
-    trick:
-      baseAttribute: mind
-      adds: 1
-      value: 9
-      isFav: false
-      groupName: interaction
-      unskilledUse: 1
-    unarmedCombat:
-      baseAttribute: dexterity
-      adds: null
-      value: 9
-      isFav: false
-      groupName: combat
-      unskilledUse: 1
-    waterVehicles:
-      baseAttribute: dexterity
-      adds: null
-      value: 9
-      isFav: false
-      groupName: other
-      unskilledUse: 1
-    willpower:
-      baseAttribute: spirit
-      adds: null
-      value: 8
-      isFav: false
-      groupName: other
-      unskilledUse: 1
-  xp:
-    unspent: 0
-    earned: 0
-  axioms:
-    magic: 4
-    social: 24
-    spirit: 8
-    tech: 24
-  details:
-    clearance: alpha
-    background: >-
-      <h2>Pr&eacute;sentation</h2>
-
-      <p class="MsoNormal">Les Samoura&iuml;s &eacute;lectriques sont un groupe
-      de combattants des temps modernes qui suivent le code du Bushido mais en
-      utilisant des armes et des armures ultra-modernes. Les origines de ce
-      mouvement sont obscures, l&rsquo;&eacute;trange rencontre de la culture
-      punk et des traditions perp&eacute;tr&eacute;es par les descendants des
-      anciens samoura&iuml;s. On ne rejoint ce groupe que si on y est
-      invit&eacute; et ces invitations ne sont adress&eacute;es
-      qu&rsquo;&agrave; celles et &agrave; ceux qui se sont montr&eacute;s
-      dignes aussi bien en combat que dans leur vie.</p>
-
-      <p class="MsoNormal">Les Tourmenteurs et d&rsquo;autres adversaires
-      peuvent porter les m&ecirc;mes armures ou utiliser les m&ecirc;mes armes
-      mais ce ne sont pas de v&eacute;ritables samoura&iuml;s. Il est du devoir
-      des &eacute;lus de d&eacute;fier ces imposteurs.</p>
-
-      <h2>Tactiques</h2>
-
-      <p class="MsoNormal">Votre arme principale est le katana &eacute;lectrique
-      qui inflige de terribles d&eacute;g&acirc;ts et perfore les armures. Il
-      n&rsquo;y a aucun d&eacute;shonneur &agrave; &ecirc;tre pragmatique, aussi
-      votre SC Kyogo 144 SMG est utile pour r&eacute;tablir
-      l&rsquo;&eacute;quilibre contre un grand nombre d&rsquo;ennemis plus
-      faibles. Tirez profit du grand nombre de munitions de l&rsquo;arme et
-      utilisez souvent des Rafales longues. La plupart de vos interactions
-      offensives sont fortes, essayez de les utiliser quand il s&rsquo;agit
-      d&rsquo;Actions approuv&eacute;es, &agrave; l&rsquo;exception de
-      Provocation. Les insultes mesquines sont frivoles et
-      r&eacute;pugnantes.</p>
-
-      <h2>Instant fatidique</h2>
-
-      <p class="MsoNormal">Quand la Contagion est apparue, vous &eacute;tiez
-      bio-ing&eacute;nieur sp&eacute;cialis&eacute; dans la recherche
-      g&eacute;n&eacute;tique. Avant que quiconque ne comprenne ce qui
-      &eacute;tait en train de se produire, un jiangshi s&rsquo;est
-      &eacute;chapp&eacute; de son confinement et a commenc&eacute; &agrave;
-      massacrer vos coll&egrave;gues. Peut-&ecirc;tre est-ce vos ann&eacute;es
-      d&rsquo;entra&icirc;nement au kendo qui vous ont permis d&rsquo;affronter
-      la cr&eacute;ature. Ou peut-&ecirc;tre est-ce le calme avec lequel vous
-      avez mis &agrave; l&rsquo;abri les patients et le personnel. Quoi
-      qu&rsquo;il en soit, cela a d&eacute;clench&eacute; quelque chose en vous
-      et attir&eacute; l&rsquo;attention des Samoura&iuml;s
-      &eacute;lectriques.</p>
-
-      <h2>Citation</h2>
-
-      <p class="MsoNormal">&laquo; Je ne souillerai pas ma lame sur un
-      adversaire tel que vous. &raquo;</p>
-
-      <h2>Description</h2>
-
-      <p class="MsoNormal">Le Ion Gusoku et le katana &eacute;lectrique sont les
-      deux signes distinctifs des Samoura&iuml;s &eacute;lectriques. Un
-      contr&ocirc;le total et des moeurs irr&eacute;prochables sont vos
-      id&eacute;aux mais vous ne les avez pas encore tout &agrave; fait
-      atteints.</p>
-
-      <h2>Objectif</h2>
-
-      <p class="MsoNormal">Les huit vertus du Bushido vous imposent de combattre
-      les Pillards de R&eacute;alit&eacute;s et la Contagion et de
-      prot&eacute;ger les innocents. Suivre le code. &Ecirc;tre vertueux,
-      h&eacute;ro&iuml;que, compatissant, poli, honn&ecirc;te,&nbsp; honorable,
-      loyal et disciplin&eacute; m&ecirc;me quand cela est contraignant.</p>
-
-      <h2>Noms</h2>
-
-      <p class="MsoNormal">Akimi, Haruka, Izumi, Jun, Kazumi, Maru, Riku,
-      Shigeri, Tomo</p>
-
-      <h2>Piste de progression (optionnelle)</h2>
-
-      <p class="MsoNormal">□ (5 PX) In&eacute;branlable</p>
-
-      <p class="MsoNormal">□ (7 PX) Ion Gusoku (Rev&ecirc;tement foudroyant)</p>
-
-      <p class="MsoNormal">□ (1 PX) Armes de jet +1</p>
-
-      <p class="MsoNormal">□ (2 PX) R&eacute;alit&eacute; +2</p>
-
-      <p class="MsoNormal">□ (3 PX) Esquive +3</p>
-
-      <p class="MsoNormal">□ (3 PX) V&eacute;hicules terrestres +3</p>
-
-      <p class="MsoNormal">□ (4 PX) Armes de m&ecirc;l&eacute;e +4</p>
-
-      <p class="MsoNormal">□ (5 PX) Armes de m&ecirc;l&eacute;e +5</p>
-    race: human
-  editstate: null
-  fatigue: '1'
-token:
-  flags: {}
-  name: Le samouraï electrique
-  displayName: 30
-  img: systems/torgeternity/images/characters/Electric_Samurai.Token.webp
-  tint: null
-  width: 1
-  height: 1
-  scale: 1
-  mirrorX: false
-  mirrorY: false
-  lockRotation: false
-  rotation: 0
-  vision: false
-  dimSight: 0
-  brightSight: 0
-  dimLight: 0
-  brightLight: 0
-  sightAngle: 0
-  lightAngle: 360
-  lightColor: ''
-  lightAlpha: 1
-  lightAnimation:
-    type: ''
-    speed: 5
-    intensity: 5
-  actorId: QVpKuacd4LKfpJOy
-  actorLink: true
-  disposition: 1
-  displayBars: 20
-  bar1:
-    attribute: shock
-  bar2:
-    attribute: wounds
-  randomImg: false
-  alpha: 1
-  light:
-    alpha: 0.5
-    angle: 0
-    bright: 0
-    coloration: 1
-    dim: 0
-    gradual: true
-    luminosity: 0.5
-    saturation: 0
-    contrast: 0
-    shadows: 0
-    animation:
-      speed: 5
-      intensity: 5
-      reverse: false
-    darkness:
-      min: 0
-      max: 1
-    color: null
 items:
   - _id: XNNnqI7Q5kO7Z7hb
     name: Ion Gusoku
     type: perk
-    data:
+    sort: 300000
+    flags:
+      core:
+        sourceId: Compendium.te001-core-rulebook.Items.NlvMMLc98zfTyvF1
+    img: systems/torgeternity/images/icons/perk.webp
+    effects: []
+    folder: null
+    system:
       category: electricSamurai
       cosm: Pan Pacifica
-      prerequisites: Esprit 8+, au moins deux rangs en Armes de mêlée
-      timestaken: 1
       description: >-
         <p class="MsoNormal">L&rsquo;armure caract&eacute;ristique des
         Samoura&iuml;s &eacute;lectriques<span style="mso-spacerun:
@@ -578,69 +123,70 @@ items:
 
         <p class="MsoNormal"><span style="mso-spacerun: yes;">&nbsp;</span><span
         style="mso-spacerun: yes;">&nbsp;&nbsp; </span></p>
+      prerequisites: Esprit 8+, au moins deux rangs en Armes de mêlée
+      generalContradiction: false
       pulpPowers:
-        enhancementNumber: 0
         enhancement01:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement02:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement03:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement04:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement05:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement06:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement07:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement08:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement09:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement10:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement11:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement12:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement13:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement14:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement15:
-          title: ''
           description: ''
           taken: false
-        limitationNumber: 0
+          title: ''
+        enhancementNumber: 0
         limitation01: ''
         limitation02: ''
         limitation03: ''
@@ -651,126 +197,31 @@ items:
         limitation08: ''
         limitation09: ''
         limitation10: ''
-    sort: 300000
-    flags:
-      core:
-        sourceId: Compendium.te001-core-rulebook.Items.NlvMMLc98zfTyvF1
-    img: systems/torgeternity/images/icons/perk.webp
-    effects: []
-    folder: null
-    permission:
+        limitationNumber: 0
+      timestaken: '1'
+    ownership:
       default: 0
-    mce_21: >-
-      <p class="MsoNormal">L&rsquo;armure caract&eacute;ristique des
-      Samoura&iuml;s &eacute;lectriques<span style="mso-spacerun:
-      yes;">&nbsp;&nbsp; </span>est l&rsquo;Ion Gusoku. Les premi&egrave;res
-      tenues ont &eacute;t&eacute; con&ccedil;ues<span style="mso-spacerun:
-      yes;">&nbsp;&nbsp; </span>&agrave; partir des armures port&eacute;es par
-      les forces de s&eacute;curit&eacute;<span style="mso-spacerun:
-      yes;">&nbsp;&nbsp; </span>d&rsquo;&eacute;lite de Kanawa mais les
-      samoura&iuml;s les ont am&eacute;lior&eacute;es<span style="mso-spacerun:
-      yes;">&nbsp;&nbsp; </span>au fur et &agrave; mesure qu&rsquo;ils
-      parvenaient &agrave; comprendre la<span style="mso-spacerun:
-      yes;">&nbsp;&nbsp; </span>technologie employ&eacute;e par Kanawa.</p>
-
-      <p class="MsoNormal"><span style="mso-spacerun: yes;">&nbsp;
-      </span>L&rsquo;armure en elle-m&ecirc;me est tr&egrave;s moderne et
-      con&ccedil;ue<span style="mso-spacerun: yes;">&nbsp;&nbsp;
-      </span>sp&eacute;cifiquement pour le samoura&iuml; qui est cens&eacute;
-      la<span style="mso-spacerun: yes;">&nbsp;&nbsp; </span>porter. Si
-      quelqu&rsquo;un d&rsquo;autre l&rsquo;utilise, un verrouillage<span
-      style="mso-spacerun: yes;">&nbsp;&nbsp; </span>biom&eacute;trique
-      d&eacute;sactive ses fonctions et retient prisonnier<span
-      style="mso-spacerun: yes;">&nbsp;&nbsp; </span>le voleur. Elle limite
-      &agrave; 10 la Dext&eacute;rit&eacute; de son porteur,<span
-      style="mso-spacerun: yes;">&nbsp;&nbsp; </span>poss&egrave;de un Axiome
-      Technologie de 24, octroie un bonus<span style="mso-spacerun:
-      yes;">&nbsp;&nbsp; </span>de +4 d&rsquo;armure Int&eacute;grale et
-      provoque de la Fatigue.<span style="mso-spacerun: yes;">&nbsp; </span></p>
-
-      <p class="MsoNormal"><span style="mso-spacerun:
-      yes;">&nbsp;</span><strong>Nouvelles am&eacute;liorations</strong> : cet
-      Atout peut &ecirc;tre choisi<span style="mso-spacerun: yes;">&nbsp;&nbsp;
-      </span>plus d&rsquo;une fois. Chaque Atout suppl&eacute;mentaire
-      am&eacute;liore<span style="mso-spacerun: yes;">&nbsp;&nbsp;
-      </span>l&rsquo;armure avec un des syst&egrave;mes ci-dessous. &Agrave;
-      moins que<span style="mso-spacerun: yes;">&nbsp;&nbsp; </span>le contraire
-      ne soit indiqu&eacute;, chaque am&eacute;lioration ne<span
-      style="mso-spacerun: yes;">&nbsp;&nbsp; </span>peut &ecirc;tre choisie
-      qu&rsquo;une seule fois.<span style="mso-spacerun: yes;">&nbsp;
-      </span></p>
-
-      <p class="MsoNormal"><span style="mso-spacerun:
-      yes;">&nbsp;</span><strong>&bull; Alliage ultra-l&eacute;ger</strong> : la
-      l&eacute;g&egrave;ret&eacute; de l&rsquo;armure et son<span
-      style="mso-spacerun: yes;">&nbsp;&nbsp; </span>ajustement parfait
-      permettent d&rsquo;&eacute;liminer le malus<span style="mso-spacerun:
-      yes;">&nbsp;&nbsp; </span>de Fatigue.<span style="mso-spacerun:
-      yes;">&nbsp;&nbsp; </span>&bull; Flash aveuglant : une fois par
-      Sc&egrave;ne, l&rsquo;armure<span style="mso-spacerun: yes;">&nbsp;&nbsp;
-      </span>peut &eacute;mettre un flash de lumi&egrave;re aveuglante<span
-      style="mso-spacerun: yes;">&nbsp;&nbsp; </span>avec une action gratuite.
-      Le flash aveugle<span style="mso-spacerun: yes;">&nbsp;&nbsp;
-      </span>momentan&eacute;ment ceux qui se trouvent dans une<span
-      style="mso-spacerun: yes;">&nbsp;&nbsp; </span>Zone d&rsquo;effet moyenne
-      autour du personnage et ils<span style="mso-spacerun: yes;">&nbsp;&nbsp;
-      </span>sont consid&eacute;r&eacute;s comme Tr&egrave;s
-      D&eacute;stabilis&eacute;s.<span style="mso-spacerun: yes;">&nbsp;
-      </span></p>
-
-      <p class="MsoNormal"><span style="mso-spacerun:
-      yes;">&nbsp;</span><strong>&bull; Kabuto VTH</strong> : le casque de
-      l&rsquo;armure est &eacute;quip&eacute;<span style="mso-spacerun:
-      yes;">&nbsp;&nbsp; </span>d&rsquo;un affichage t&ecirc;te haute
-      int&eacute;gr&eacute; qui annule les<span style="mso-spacerun:
-      yes;">&nbsp;&nbsp; </span>deux premiers points de malus des attaques
-      &agrave;<span style="mso-spacerun: yes;">&nbsp;&nbsp; </span>distance du
-      samoura&iuml;.</p>
-
-      <p class="MsoNormal"><span style="mso-spacerun: yes;">&nbsp;
-      </span><strong>&bull; Rev&ecirc;tement cam&eacute;l&eacute;on</strong> :
-      la surface ext&eacute;rieure de<span style="mso-spacerun:
-      yes;">&nbsp;&nbsp; </span>la Gusoku est couverte de senseurs et de LED
-      qui<span style="mso-spacerun: yes;">&nbsp;&nbsp; </span>peuvent changer de
-      couleur et de luminosit&eacute; afin<span style="mso-spacerun:
-      yes;">&nbsp;&nbsp; </span>d&rsquo;imiter leur environnement quand le
-      samoura&iuml;<span style="mso-spacerun: yes;">&nbsp;&nbsp; </span>est
-      immobile. Tant qu&rsquo;il demeure totalement<span style="mso-spacerun:
-      yes;">&nbsp;&nbsp; </span>immobile (aucune action ni d&eacute;placement),
-      il est<span style="mso-spacerun: yes;">&nbsp;&nbsp; </span>quasi-invisible
-      et ses adversaires ont un malus de<span style="mso-spacerun:
-      yes;">&nbsp;&nbsp; </span>-6 pour le voir avec un test d&rsquo;Observation
-      ou pour<span style="mso-spacerun: yes;">&nbsp;&nbsp; </span>le toucher
-      avec des attaques &agrave; distance.</p>
-
-      <p class="MsoNormal"><strong><span style="mso-spacerun: yes;">&nbsp;
-      </span>&bull; Rev&ecirc;tement foudroyant</strong> : les samoura&iuml;s
-      &eacute;lectriques<span style="mso-spacerun: yes;">&nbsp;&nbsp; </span>ont
-      rapidement compris le danger de l&rsquo;attaque<span style="mso-spacerun:
-      yes;">&nbsp;&nbsp; </span>mortelle de saisie des jiangshis ou celui de
-      se<span style="mso-spacerun: yes;">&nbsp;&nbsp; </span>retrouver
-      submerg&eacute;s par les hordes d&rsquo;infect&eacute;s. Une<span
-      style="mso-spacerun: yes;">&nbsp;&nbsp; </span>fois par Sc&egrave;ne, avec
-      une action gratuite, l&rsquo;armure<span style="mso-spacerun:
-      yes;">&nbsp;&nbsp; </span>peut lib&eacute;rer une puissante
-      d&eacute;charge &eacute;lectrique qui<span style="mso-spacerun:
-      yes;">&nbsp;&nbsp; </span>inflige 12 points de dommages +1 DB &agrave;
-      tout ce qui<span style="mso-spacerun: yes;">&nbsp;&nbsp; </span>est en
-      contact avec elle. Toute cr&eacute;ature ayant saisi<span
-      style="mso-spacerun: yes;">&nbsp;&nbsp; </span>le samoura&iuml;
-      l&acirc;che imm&eacute;diatement prise.</p>
-
-      <p class="MsoNormal"><span style="mso-spacerun: yes;">&nbsp;</span><span
-      style="mso-spacerun: yes;">&nbsp;&nbsp; </span></p>
+    _stats:
+      systemId: null
+      systemVersion: null
+      coreVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
     _key: '!actors.items!QVpKuacd4LKfpJOy.XNNnqI7Q5kO7Z7hb'
   - _id: 1IqkOxn2nuTJbnzP
     name: Arme de prédilection
     type: perk
-    data:
+    sort: 200000
+    flags:
+      core:
+        sourceId: Compendium.te001-core-rulebook.Items.2FajkBwxOxN5v3DR
+    img: systems/torgeternity/images/icons/perk.webp
+    effects: []
+    folder: null
+    system:
       category: prowess
       cosm: (Non)
-      prerequisites: ''
-      timestaken: 1
       description: >-
         <p>Le Chevalier des Temp&ecirc;tes est&nbsp; particuli&egrave;rement
         dou&eacute; avec une arme donn&eacute;e. Quand il
@@ -780,69 +231,70 @@ items:
 
         <p>S&rsquo;il perd son arme, le MJ doit lui permettre de la remplacer,
         g&eacute;n&eacute;ralement au d&eacute;but du prochain Acte</p>
+      prerequisites: ''
+      generalContradiction: false
       pulpPowers:
-        enhancementNumber: 0
         enhancement01:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement02:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement03:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement04:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement05:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement06:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement07:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement08:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement09:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement10:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement11:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement12:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement13:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement14:
-          title: ''
           description: ''
           taken: false
+          title: ''
         enhancement15:
-          title: ''
           description: ''
           taken: false
-        limitationNumber: 0
+          title: ''
+        enhancementNumber: 0
         limitation01: ''
         limitation02: ''
         limitation03: ''
@@ -853,37 +305,21 @@ items:
         limitation08: ''
         limitation09: ''
         limitation10: ''
-    sort: 200000
-    flags:
-      core:
-        sourceId: Compendium.te001-core-rulebook.Items.2FajkBwxOxN5v3DR
-    img: systems/torgeternity/images/icons/perk.webp
-    effects: []
-    folder: null
-    permission:
+        limitationNumber: 0
+      timestaken: '1'
+    ownership:
       default: 0
-    mce_22: >-
-      <p>Le Chevalier des Temp&ecirc;tes est&nbsp; particuli&egrave;rement
-      dou&eacute; avec une arme donn&eacute;e. Quand il b&eacute;n&eacute;ficie
-      de d&eacute;s bonus aux&nbsp; dommages avec cette arme, le joueur peut
-      relancer les 1 et accepter le nouveau r&eacute;sultat.</p>
-
-      <p>S&rsquo;il perd son arme, le MJ doit lui permettre de la remplacer,
-      g&eacute;n&eacute;ralement au d&eacute;but du prochain Acte</p>
+    _stats:
+      systemId: null
+      systemVersion: null
+      coreVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
     _key: '!actors.items!QVpKuacd4LKfpJOy.1IqkOxn2nuTJbnzP'
   - _id: KyvSH0G67CXa05a2
     name: Fumigènes
     type: gear
-    data:
-      cosm: Pan Pacifica
-      description: >-
-        <p>Jetez-le par terre avec une interaction Ruse pour qu&rsquo;il
-        g&eacute;n&egrave;re de la fum&eacute;e (Couvert partiel correspondant
-        &agrave; un malus de -2 pour ceux en-dehors du p&eacute;rim&egrave;tre)
-        dans un rayon de cinq m&egrave;tres.</p>
-      techlevel: 24
-      price: '40'
-      value: 8
     sort: 300000
     flags:
       core:
@@ -891,24 +327,30 @@ items:
     img: systems/torgeternity/images/icons/gear.webp
     effects: []
     folder: null
-    permission:
+    system:
+      cosm: Pan Pacifica
+      description: >-
+        <p>Jetez-le par terre avec une interaction Ruse pour qu&rsquo;il
+        g&eacute;n&egrave;re de la fum&eacute;e (Couvert partiel correspondant
+        &agrave; un malus de -2 pour ceux en-dehors du p&eacute;rim&egrave;tre)
+        dans un rayon de cinq m&egrave;tres.</p>
+      price: '40'
+      techlevel: 24
+      value: 8
+      equippedClass: item-equipped
+    ownership:
       default: 0
+    _stats:
+      systemId: null
+      systemVersion: null
+      coreVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
     _key: '!actors.items!QVpKuacd4LKfpJOy.KyvSH0G67CXa05a2'
   - _id: 6vIlsRdE93ELD2MV
     name: Ion Gusoku
     type: armor
-    data:
-      cosm: Pan Pacifica
-      description: ''
-      techlevel: 24
-      price: '0'
-      value: 0
-      bonus: 4
-      maxDex: 10
-      minStrength: null
-      equipped: false
-      equippedClass: item-unequipped
-      notes: disponible grâce à l'atout "ION GUSOKU"
     sort: 100001
     flags:
       core:
@@ -918,30 +360,67 @@ items:
       - _id: deuJR26c5jsbRHSt
         flags: {}
         changes:
-          - key: data.other.toughness
+          - key: system.other.toughness
             value: '4'
             mode: 2
-          - key: data.other.armor
+            priority: null
+          - key: system.other.armor
             value: '4'
             mode: 2
+            priority: null
         disabled: false
         duration:
           startTime: null
+          seconds: null
+          combat: null
+          rounds: null
+          turns: null
+          startRound: null
+          startTurn: null
         icon: icons/svg/aura.svg
-        label: Armor +4
         origin: Item.DYmLw9hKYR8HEw4V
         tint: null
         transfer: true
+        name: Armor +4
+        description: ''
+        statuses: []
         _key: >-
           !actors.items.effects!QVpKuacd4LKfpJOy.6vIlsRdE93ELD2MV.deuJR26c5jsbRHSt
     folder: null
-    permission:
+    system:
+      cosm: Pan Pacifica
+      description: ''
+      price: '0'
+      techlevel: 24
+      value: 0
+      bonus: 4
+      equipped: false
+      equippedClass: item-unequipped
+      maxDex: 10
+      minStrength: null
+      notes: disponible grâce à l'atout "ION GUSOKU"
+      fatigue: 0
+    ownership:
       default: 0
+    _stats:
+      systemId: null
+      systemVersion: null
+      coreVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
     _key: '!actors.items!QVpKuacd4LKfpJOy.6vIlsRdE93ELD2MV'
   - _id: zkYCDyzIyDecR5fz
     name: Katana électrique
     type: meleeweapon
-    data:
+    sort: 400000
+    flags:
+      core:
+        sourceId: Compendium.te001-core-rulebook.Items.oXC2OfgC7II3et6Z
+    img: systems/torgeternity/images/icons/meleeweapon.webp
+    effects: []
+    folder: null
+    system:
       cosm: Pan Pacifica
       description: >-
         <p>Quand il est activ&eacute;, le circuit ionis&eacute;
@@ -951,57 +430,31 @@ items:
         tout en &eacute;vitant qu&rsquo;elle soit &eacute;mouss&eacute;e. Quand
         elle n&rsquo;est pas activ&eacute;e, l&rsquo;arme peut &ecirc;tre
         utilis&eacute;e comme un katana normal</p>
-      techlevel: 24
       price: '500'
+      techlevel: 24
       value: 13
-      attackWith: meleeWeapons
-      damageType: strengthPlus
-      damage: 4
       ap: 2
+      attackWith: meleeWeapons
       bonus: 2
-      notes: Pénétration d’armure 2
       chatNote: ''
-    sort: 400000
-    flags:
-      core:
-        sourceId: Compendium.te001-core-rulebook.Items.oXC2OfgC7II3et6Z
-    img: systems/torgeternity/images/icons/meleeweapon.webp
-    effects: []
-    folder: null
-    permission:
+      damage: 4
+      damageType: strengthPlus
+      equipped: false
+      equippedClass: .item-unequipped
+      notes: Pénétration d’armure 2
+    ownership:
       default: 0
-    mce_23: >-
-      <p>quand il est activ&eacute;, le circuit ionis&eacute;
-      nano-imprim&eacute; de la lame du katana luit d&rsquo;&eacute;nergie. Le
-      champ g&eacute;n&eacute;r&eacute; &agrave; la surface de la lame augmente
-      son tranchant et la prot&egrave;ge des &eacute;br&eacute;chures tout en
-      &eacute;vitant qu&rsquo;elle soit &eacute;mouss&eacute;e. Quand elle
-      n&rsquo;est pas activ&eacute;e, l&rsquo;arme peut &ecirc;tre
-      utilis&eacute;e comme un katana normal</p>
+    _stats:
+      systemId: null
+      systemVersion: null
+      coreVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
     _key: '!actors.items!QVpKuacd4LKfpJOy.zkYCDyzIyDecR5fz'
   - _id: bEn1gcBGt9V4r48H
     name: SC Kyogo 144 SMG
     type: firearm
-    data:
-      cosm: Pan Pacifica
-      description: >-
-        <p>Pistolet-mitrailleur l&eacute;ger du Pan- Pacifica, le Kyogo est
-        tr&egrave;s pr&eacute;cis pour une arme de ce type et il est tr&egrave;s
-        appr&eacute;ci&eacute; pour sa port&eacute;e&nbsp; exceptionnelle et les
-        dommages qu&rsquo;il inflige</p>
-      techlevel: 24
-      price: '400'
-      value: 13
-      attackWith: fireCombat
-      damageType: flat
-      damage: 13
-      ap: 0
-      ammo:
-        max: 45
-        value: 45
-      range: 20 / 40 / 80
-      notes: Rafale courte
-      chatNote: ''
     sort: 500000
     flags:
       core:
@@ -1009,60 +462,610 @@ items:
     img: systems/torgeternity/images/icons/firearm.webp
     effects: []
     folder: null
-    permission:
+    system:
+      cosm: Pan Pacifica
+      description: >-
+        <p>Pistolet-mitrailleur l&eacute;ger du Pan- Pacifica, le Kyogo est
+        tr&egrave;s pr&eacute;cis pour une arme de ce type et il est tr&egrave;s
+        appr&eacute;ci&eacute; pour sa port&eacute;e&nbsp; exceptionnelle et les
+        dommages qu&rsquo;il inflige</p>
+      price: '400'
+      techlevel: 24
+      value: 13
+      ammo:
+        max: 45
+        value: 45
+      ap: 0
+      attackWith: fireCombat
+      chatNote: ''
+      damage: 13
+      damageType: flat
+      equipped: false
+      equippedClass: .item-unequipped
+      notes: Rafale courte
+      range: 20 / 40 / 80
+    ownership:
       default: 0
-    mce_24: >-
-      <p>pistolet-mitrailleur l&eacute;ger du Pan- Pacifica, le Kyogo est
-      tr&egrave;s pr&eacute;cis pour une arme de ce type et il est tr&egrave;s
-      appr&eacute;ci&eacute; pour sa port&eacute;e&nbsp; exceptionnelle et les
-      dommages qu&rsquo;il inflige</p>
+    _stats:
+      systemId: null
+      systemVersion: null
+      coreVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
     _key: '!actors.items!QVpKuacd4LKfpJOy.bEn1gcBGt9V4r48H'
   - _id: BiMMDksBM9tbqL7R
     name: Attaque à mains nues
     type: customAttack
     img: systems/torgeternity/images/icons/fist-icon.webp
-    data:
-      description: ''
-      attackWith: unarmedCombat
-      damageType: strengthPlus
-      damage: 0
-      ap: 0
-      notes: ''
-      chatNote: ''
     effects: []
     folder: null
     sort: 0
-    permission:
-      default: 0
-      zWX19sSAtAWkeGhp: 3
     flags:
       core:
         sourceId: Item.BFGjhDetVDm1xiku
+    system:
+      ap: 0
+      attackWith: unarmedCombat
+      chatNote: ''
+      damage: 0
+      damageType: strengthPlus
+      description: ''
+      notes: ''
+    ownership:
+      default: 0
+      zWX19sSAtAWkeGhp: 3
+    _stats:
+      systemId: null
+      systemVersion: null
+      coreVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
     _key: '!actors.items!QVpKuacd4LKfpJOy.BiMMDksBM9tbqL7R'
 effects:
   - _id: fnTQB8GZ8ORoh6VK
     flags: {}
     changes:
-      - key: data.other.toughness
+      - key: system.other.toughness
         mode: 2
         value: '4'
-      - key: data.other.armor
+        priority: null
+      - key: system.other.armor
         mode: 2
         value: '4'
+        priority: null
     disabled: false
     duration:
       startTime: 0
+      seconds: null
+      combat: null
+      rounds: null
+      turns: null
+      startRound: null
+      startTurn: null
     icon: icons/svg/aura.svg
-    label: Armure +4
     origin: Actor.mdpEDmHHNs8n0Mi4.OwnedItem.6vIlsRdE93ELD2MV
     tint: null
     transfer: true
+    name: Armure +4
+    description: ''
+    statuses: []
     _key: '!actors.effects!QVpKuacd4LKfpJOy.fnTQB8GZ8ORoh6VK'
 folder: null
 sort: 100001
-permission:
+flags: {}
+system:
+  shock:
+    max: 8
+    value: 0
+  wounds:
+    max: 3
+    value: 0
+  attributes:
+    charisma:
+      base: 6
+    dexterity:
+      base: 9
+    mind:
+      base: 8
+    spirit:
+      base: 8
+    strength:
+      base: 9
+  other:
+    cosm: panPacifica
+    possibilities: 0
+  skills:
+    airVehicles:
+      baseAttribute: dexterity
+      adds: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+      isThreatSkill: false
+      defenseOnly: false
+    alteration:
+      baseAttribute: mind
+      adds: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+      isThreatSkill: false
+      defenseOnly: false
+    apportation:
+      baseAttribute: spirit
+      adds: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+      isThreatSkill: false
+      defenseOnly: false
+    beastRiding:
+      baseAttribute: dexterity
+      adds: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
+    computers:
+      baseAttribute: mind
+      adds: 1
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
+    conjuration:
+      baseAttribute: spirit
+      adds: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+      isThreatSkill: false
+      defenseOnly: false
+    divination:
+      baseAttribute: mind
+      adds: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+      isThreatSkill: false
+      defenseOnly: false
+    dodge:
+      baseAttribute: dexterity
+      adds: 2
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
+    energyWeapons:
+      baseAttribute: dexterity
+      adds: 0
+      isFav: false
+      groupName: combat
+      unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
+    evidenceAnalysis:
+      baseAttribute: mind
+      adds: 1
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
+    faith:
+      baseAttribute: spirit
+      adds: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
+    find:
+      baseAttribute: mind
+      adds: 1
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
+    fireCombat:
+      baseAttribute: dexterity
+      adds: 1
+      isFav: false
+      groupName: combat
+      unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
+    firstAid:
+      baseAttribute: mind
+      adds: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
+    heavyWeapons:
+      baseAttribute: dexterity
+      adds: 0
+      isFav: false
+      groupName: combat
+      unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
+    intimidation:
+      baseAttribute: spirit
+      adds: 0
+      isFav: false
+      groupName: interaction
+      unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
+    kinesis:
+      baseAttribute: spirit
+      adds: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+      isThreatSkill: false
+      defenseOnly: false
+    landVehicles:
+      baseAttribute: dexterity
+      adds: 1
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
+    language:
+      baseAttribute: mind
+      adds: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+      isThreatSkill: false
+      defenseOnly: false
+    lockpicking:
+      baseAttribute: dexterity
+      adds: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+      isThreatSkill: false
+      defenseOnly: false
+    maneuver:
+      baseAttribute: dexterity
+      adds: 1
+      isFav: false
+      groupName: interaction
+      unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
+    medicine:
+      baseAttribute: mind
+      adds: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+      isThreatSkill: false
+      defenseOnly: false
+    meleeWeapons:
+      baseAttribute: dexterity
+      adds: 3
+      isFav: false
+      groupName: combat
+      unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
+    missileWeapons:
+      baseAttribute: dexterity
+      adds: 0
+      isFav: false
+      groupName: combat
+      unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
+    persuasion:
+      baseAttribute: charisma
+      adds: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
+    precognition:
+      baseAttribute: mind
+      adds: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+      isThreatSkill: false
+      defenseOnly: false
+    profession:
+      baseAttribute: mind
+      adds: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
+    reality:
+      baseAttribute: spirit
+      adds: 1
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+      isThreatSkill: false
+      defenseOnly: false
+    scholar:
+      baseAttribute: mind
+      adds: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
+    science:
+      baseAttribute: mind
+      adds: 1
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
+    stealth:
+      baseAttribute: dexterity
+      adds: 1
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
+    streetwise:
+      baseAttribute: charisma
+      adds: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
+    survival:
+      baseAttribute: mind
+      adds: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
+    taunt:
+      baseAttribute: charisma
+      adds: 0
+      isFav: false
+      groupName: interaction
+      unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
+    telepathy:
+      baseAttribute: charisma
+      adds: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 0
+      isThreatSkill: false
+      defenseOnly: false
+    tracking:
+      baseAttribute: mind
+      adds: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
+    trick:
+      baseAttribute: mind
+      adds: 1
+      isFav: false
+      groupName: interaction
+      unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
+    unarmedCombat:
+      baseAttribute: dexterity
+      adds: 0
+      isFav: false
+      groupName: combat
+      unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
+    waterVehicles:
+      baseAttribute: dexterity
+      adds: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
+    willpower:
+      baseAttribute: spirit
+      adds: 0
+      isFav: false
+      groupName: other
+      unskilledUse: 1
+      isThreatSkill: false
+      defenseOnly: false
+  xp:
+    unspent: 0
+    earned: 0
+  axioms:
+    magic: 4
+    social: 24
+    spirit: 8
+    tech: 24
+  details:
+    background: >-
+      <h2>Pr&eacute;sentation</h2>
+
+      <p class="MsoNormal">Les Samoura&iuml;s &eacute;lectriques sont un groupe
+      de combattants des temps modernes qui suivent le code du Bushido mais en
+      utilisant des armes et des armures ultra-modernes. Les origines de ce
+      mouvement sont obscures, l&rsquo;&eacute;trange rencontre de la culture
+      punk et des traditions perp&eacute;tr&eacute;es par les descendants des
+      anciens samoura&iuml;s. On ne rejoint ce groupe que si on y est
+      invit&eacute; et ces invitations ne sont adress&eacute;es
+      qu&rsquo;&agrave; celles et &agrave; ceux qui se sont montr&eacute;s
+      dignes aussi bien en combat que dans leur vie.</p>
+
+      <p class="MsoNormal">Les Tourmenteurs et d&rsquo;autres adversaires
+      peuvent porter les m&ecirc;mes armures ou utiliser les m&ecirc;mes armes
+      mais ce ne sont pas de v&eacute;ritables samoura&iuml;s. Il est du devoir
+      des &eacute;lus de d&eacute;fier ces imposteurs.</p>
+
+      <h2>Tactiques</h2>
+
+      <p class="MsoNormal">Votre arme principale est le katana &eacute;lectrique
+      qui inflige de terribles d&eacute;g&acirc;ts et perfore les armures. Il
+      n&rsquo;y a aucun d&eacute;shonneur &agrave; &ecirc;tre pragmatique, aussi
+      votre SC Kyogo 144 SMG est utile pour r&eacute;tablir
+      l&rsquo;&eacute;quilibre contre un grand nombre d&rsquo;ennemis plus
+      faibles. Tirez profit du grand nombre de munitions de l&rsquo;arme et
+      utilisez souvent des Rafales longues. La plupart de vos interactions
+      offensives sont fortes, essayez de les utiliser quand il s&rsquo;agit
+      d&rsquo;Actions approuv&eacute;es, &agrave; l&rsquo;exception de
+      Provocation. Les insultes mesquines sont frivoles et
+      r&eacute;pugnantes.</p>
+
+      <h2>Instant fatidique</h2>
+
+      <p class="MsoNormal">Quand la Contagion est apparue, vous &eacute;tiez
+      bio-ing&eacute;nieur sp&eacute;cialis&eacute; dans la recherche
+      g&eacute;n&eacute;tique. Avant que quiconque ne comprenne ce qui
+      &eacute;tait en train de se produire, un jiangshi s&rsquo;est
+      &eacute;chapp&eacute; de son confinement et a commenc&eacute; &agrave;
+      massacrer vos coll&egrave;gues. Peut-&ecirc;tre est-ce vos ann&eacute;es
+      d&rsquo;entra&icirc;nement au kendo qui vous ont permis d&rsquo;affronter
+      la cr&eacute;ature. Ou peut-&ecirc;tre est-ce le calme avec lequel vous
+      avez mis &agrave; l&rsquo;abri les patients et le personnel. Quoi
+      qu&rsquo;il en soit, cela a d&eacute;clench&eacute; quelque chose en vous
+      et attir&eacute; l&rsquo;attention des Samoura&iuml;s
+      &eacute;lectriques.</p>
+
+      <h2>Citation</h2>
+
+      <p class="MsoNormal">&laquo; Je ne souillerai pas ma lame sur un
+      adversaire tel que vous. &raquo;</p>
+
+      <h2>Description</h2>
+
+      <p class="MsoNormal">Le Ion Gusoku et le katana &eacute;lectrique sont les
+      deux signes distinctifs des Samoura&iuml;s &eacute;lectriques. Un
+      contr&ocirc;le total et des moeurs irr&eacute;prochables sont vos
+      id&eacute;aux mais vous ne les avez pas encore tout &agrave; fait
+      atteints.</p>
+
+      <h2>Objectif</h2>
+
+      <p class="MsoNormal">Les huit vertus du Bushido vous imposent de combattre
+      les Pillards de R&eacute;alit&eacute;s et la Contagion et de
+      prot&eacute;ger les innocents. Suivre le code. &Ecirc;tre vertueux,
+      h&eacute;ro&iuml;que, compatissant, poli, honn&ecirc;te,&nbsp; honorable,
+      loyal et disciplin&eacute; m&ecirc;me quand cela est contraignant.</p>
+
+      <h2>Noms</h2>
+
+      <p class="MsoNormal">Akimi, Haruka, Izumi, Jun, Kazumi, Maru, Riku,
+      Shigeri, Tomo</p>
+
+      <h2>Piste de progression (optionnelle)</h2>
+
+      <p class="MsoNormal">□ (5 PX) In&eacute;branlable</p>
+
+      <p class="MsoNormal">□ (7 PX) Ion Gusoku (Rev&ecirc;tement foudroyant)</p>
+
+      <p class="MsoNormal">□ (1 PX) Armes de jet +1</p>
+
+      <p class="MsoNormal">□ (2 PX) R&eacute;alit&eacute; +2</p>
+
+      <p class="MsoNormal">□ (3 PX) Esquive +3</p>
+
+      <p class="MsoNormal">□ (3 PX) V&eacute;hicules terrestres +3</p>
+
+      <p class="MsoNormal">□ (4 PX) Armes de m&ecirc;l&eacute;e +4</p>
+
+      <p class="MsoNormal">□ (5 PX) Armes de m&ecirc;l&eacute;e +5</p>
+    race: human
+    sizeBonus: normal
+  editstate: true
+ownership:
   default: 0
   A9LyAqagoJJU3gDH: 3
-flags: {}
+  VAnYow5sWS9EJzo0: 3
+prototypeToken:
+  flags: {}
+  name: Le samouraï electrique
+  displayName: 30
+  width: 1
+  height: 1
+  lockRotation: false
+  rotation: 0
+  actorLink: true
+  disposition: 1
+  displayBars: 20
+  bar1:
+    attribute: shock
+  bar2:
+    attribute: wounds
+  randomImg: false
+  alpha: 1
+  light:
+    alpha: 1
+    angle: 360
+    bright: 0
+    coloration: 1
+    dim: 0
+    luminosity: 0.5
+    saturation: 0
+    contrast: 0
+    shadows: 0
+    animation:
+      type: null
+      speed: 5
+      intensity: 5
+      reverse: false
+    darkness:
+      min: 0
+      max: 1
+    color: null
+    attenuation: 0.5
+  texture:
+    src: systems/torgeternity/images/characters/Electric_Samurai.Token.webp
+    tint: null
+    scaleX: 1
+    scaleY: 1
+    offsetX: 0
+    offsetY: 0
+    rotation: 0
+  sight:
+    angle: 360
+    enabled: false
+    range: 0
+    brightness: 1
+    visionMode: basic
+    attenuation: 0.1
+    saturation: 0
+    contrast: 0
+  appendNumber: false
+  prependAdjective: false
+  detectionModes: []
+_stats:
+  systemId: torgeternity
+  systemVersion: 3.8.1
+  coreVersion: '11.315'
+  createdTime: 1716827809333
+  modifiedTime: 1716827809333
+  lastModifiedBy: VAnYow5sWS9EJzo0
 _key: '!actors!QVpKuacd4LKfpJOy'
 

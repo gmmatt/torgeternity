@@ -4,7 +4,7 @@ type: deck
 description: ''
 img: systems/torgeternity/images/cards/earth-back.webp
 cards:
-  - _id: 9GLH1SiOkFx66qUe
+  - _id: 0WVfvJaPEz0ZuKYG
     name: Escalation!
     description: ''
     type: cosm
@@ -31,12 +31,14 @@ cards:
     sort: 5
     flags: {}
     value: 6
-    system: {}
+    system:
+      cosm: ''
+      number: ''
     width: null
     height: null
-    _key: '!cards.cards!cBTPvBrPQpFTkUcm.9GLH1SiOkFx66qUe'
+    _key: '!cards.cards!cBTPvBrPQpFTkUcm.0WVfvJaPEz0ZuKYG'
     cards: []
-  - _id: wvB3JtrHtnzk4ijq
+  - _id: ZPz9kK6OppYm4oRU
     name: There's Always Hope
     description: ''
     type: cosm
@@ -58,12 +60,14 @@ cards:
     sort: 6
     flags: {}
     value: 7
-    system: {}
+    system:
+      cosm: ''
+      number: ''
     width: null
     height: null
-    _key: '!cards.cards!cBTPvBrPQpFTkUcm.wvB3JtrHtnzk4ijq'
+    _key: '!cards.cards!cBTPvBrPQpFTkUcm.ZPz9kK6OppYm4oRU'
     cards: []
-  - _id: pfC9x14grTLRMPk2
+  - _id: UpVhy5K6093c3CvT
     name: Seize the Day
     description: ''
     type: cosm
@@ -85,12 +89,14 @@ cards:
     sort: 7
     flags: {}
     value: 8
-    system: {}
+    system:
+      cosm: ''
+      number: ''
     width: null
     height: null
-    _key: '!cards.cards!cBTPvBrPQpFTkUcm.pfC9x14grTLRMPk2'
+    _key: '!cards.cards!cBTPvBrPQpFTkUcm.UpVhy5K6093c3CvT'
     cards: []
-  - _id: 4BTlS8ORZnUTbYsc
+  - _id: fcvACYbD2h5kDW2Y
     name: Go for Broke
     description: ''
     type: cosm
@@ -112,12 +118,14 @@ cards:
     sort: 8
     flags: {}
     value: 9
-    system: {}
+    system:
+      cosm: ''
+      number: ''
     width: null
     height: null
-    _key: '!cards.cards!cBTPvBrPQpFTkUcm.4BTlS8ORZnUTbYsc'
+    _key: '!cards.cards!cBTPvBrPQpFTkUcm.fcvACYbD2h5kDW2Y'
     cards: []
-  - _id: 8OCejvGcy7RuhQrC
+  - _id: uSS8yEHAIQWvSjZ0
     name: Lucky Break
     description: ''
     type: cosm
@@ -137,16 +145,20 @@ cards:
     sort: 9
     flags: {}
     value: 10
-    system: {}
+    system:
+      cosm: ''
+      number: ''
     width: null
     height: null
-    _key: '!cards.cards!cBTPvBrPQpFTkUcm.8OCejvGcy7RuhQrC'
+    _key: '!cards.cards!cBTPvBrPQpFTkUcm.uSS8yEHAIQWvSjZ0'
     cards: []
   - name: Spurred On!
     type: cosm
-    _id: 1S7TmNvQ8Cl41CGM
+    _id: HoOsTszTLXIcowdF
     description: ''
-    system: {}
+    system:
+      cosm: ''
+      number: ''
     suit: ''
     value: null
     back:
@@ -165,13 +177,15 @@ cards:
     rotation: 0
     sort: 0
     flags: {}
-    _key: '!cards.cards!cBTPvBrPQpFTkUcm.1S7TmNvQ8Cl41CGM'
+    _key: '!cards.cards!cBTPvBrPQpFTkUcm.HoOsTszTLXIcowdF'
     cards: []
   - name: Keep Fighting
     type: cosm
-    _id: lop40OO2fDJMgTXT
+    _id: zbI1sS7f9Xmz8zf8
     description: ''
-    system: {}
+    system:
+      cosm: ''
+      number: ''
     suit: ''
     value: null
     back:
@@ -190,13 +204,15 @@ cards:
     rotation: 0
     sort: 0
     flags: {}
-    _key: '!cards.cards!cBTPvBrPQpFTkUcm.lop40OO2fDJMgTXT'
+    _key: '!cards.cards!cBTPvBrPQpFTkUcm.zbI1sS7f9Xmz8zf8'
     cards: []
   - name: Rousing Speech
     type: cosm
-    _id: cLBB93NWdEFcCYS3
+    _id: 4hmBO9qVdBjL0mx2
     description: ''
-    system: {}
+    system:
+      cosm: ''
+      number: ''
     suit: ''
     value: null
     back:
@@ -215,13 +231,15 @@ cards:
     rotation: 0
     sort: 0
     flags: {}
-    _key: '!cards.cards!cBTPvBrPQpFTkUcm.cLBB93NWdEFcCYS3'
+    _key: '!cards.cards!cBTPvBrPQpFTkUcm.4hmBO9qVdBjL0mx2'
     cards: []
   - name: The Law of Hope
     type: cosm
-    _id: Sj4lDwYzbh2wELmG
+    _id: UdBW5DzxAqp9rFMO
     description: ''
-    system: {}
+    system:
+      cosm: ''
+      number: ''
     suit: ''
     value: null
     back:
@@ -240,13 +258,15 @@ cards:
     rotation: 0
     sort: 0
     flags: {}
-    _key: '!cards.cards!cBTPvBrPQpFTkUcm.Sj4lDwYzbh2wELmG'
+    _key: '!cards.cards!cBTPvBrPQpFTkUcm.UdBW5DzxAqp9rFMO'
     cards: []
   - name: Welcome to our World!
     type: cosm
-    _id: 8xRtwKfY86pqz1ol
+    _id: dNfYifYx4O4G1yjQ
     description: ''
-    system: {}
+    system:
+      cosm: ''
+      number: ''
     suit: ''
     value: null
     back:
@@ -265,7 +285,7 @@ cards:
     rotation: 0
     sort: 0
     flags: {}
-    _key: '!cards.cards!cBTPvBrPQpFTkUcm.8xRtwKfY86pqz1ol'
+    _key: '!cards.cards!cBTPvBrPQpFTkUcm.dNfYifYx4O4G1yjQ'
     cards: []
 rotation: 0
 displayCount: false
@@ -285,14 +305,15 @@ system: {}
 ownership:
   default: 0
   juTas93IuPVP8p5D: 3
+  VAnYow5sWS9EJzo0: 3
 width: null
 height: null
 _stats:
-  systemId: null
-  systemVersion: null
-  coreVersion: null
-  createdTime: null
-  modifiedTime: null
-  lastModifiedBy: null
+  systemId: torgeternity
+  systemVersion: 3.8.1
+  coreVersion: '11.315'
+  createdTime: 1716827808705
+  modifiedTime: 1716827808705
+  lastModifiedBy: VAnYow5sWS9EJzo0
 _key: '!cards!cBTPvBrPQpFTkUcm'
 

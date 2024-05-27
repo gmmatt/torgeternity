@@ -1,43 +1,80 @@
 _id: 7XVr3UzUcFRv9HHq
 name: Rafales
-content: >-
-  <p>La plupart des armes à feu modernes, comme les revolvers ou les
-  semi-automatiques, peuvent tirer plusieurs cartouches (balles) très
-  rapidement, ce qui ajoute +2 au total de l’attaque et augmente ainsi les
-  chances d’obtenir des dés de dommages bonus. Cela coûte trois balles et
-  augmente la probabilité de Défaillance à 1-2. Une arme capable de fonctionner
-  en mode Rafale longue ajoute +4 au total de l’attaque au prix de sept balles
-  et augmente la probabilité de Défaillance à 1-4.</p>
-
-  <p>Un résultat de 1 signifie que l’attaque n’a pas lieu et que l’arme souffre
-  d’une Défaillance. Une Défaillance avec un score supérieur à 1 indique que
-  l’arme souffre d’un dysfonctionnement après l’attaque (qui peut encore réussir
-  selon la compétence, les Possibilités, etc.) Une Défaillance rend l’arme
-  inutilisable jusqu’à ce que l’attaquant dépense une action (sans test) pour la
-  réparer.</p>
-
-  <p>Cibles multiples : s’il tire sur plusieurs cibles, l’attaquant doit
-  utiliser la même option de tir en rafale pour chacune. Si l’arme ne contient
-  pas assez de munitions, l’attaque ne peut pas être effectuée. Le MJ peut
-  arrondir le nombre de munitions ici ou là pour plus de simplicité. </p>
-
-  <p> </p>
-
-  <blockquote>
-
-  <p><strong>Note du système Foundry : </strong>Si tu effectues une attaque avec
-  une rafale courte, le système calculera automatiquement un bonus (voir
-  @UUID[Compendium.torgeternity.basic-rules-fr.JournalEntry.ejHK3jBoZcbKJLih]{Cibles
-  multiples}).</p>
-
-  </blockquote>
 folder: null
 sort: 0
-permission:
-  default: 0
-  TK1vCAdCz548vBDu: 3
 flags:
   core:
     sourceId: JournalEntry.GaKxs9k9VSIHQadj
-pages: []
+pages:
+  - name: Rafales
+    type: text
+    title:
+      show: false
+      level: 1
+    text:
+      format: 1
+      content: >-
+        <p>La plupart des armes à feu modernes, comme les revolvers ou les
+        semi-automatiques, peuvent tirer plusieurs cartouches (balles) très
+        rapidement, ce qui ajoute +2 au total de l’attaque et augmente ainsi les
+        chances d’obtenir des dés de dommages bonus. Cela coûte trois balles et
+        augmente la probabilité de Défaillance à 1-2. Une arme capable de
+        fonctionner en mode Rafale longue ajoute +4 au total de l’attaque au
+        prix de sept balles et augmente la probabilité de Défaillance à 1-4.</p>
+
+        <p>Un résultat de 1 signifie que l’attaque n’a pas lieu et que l’arme
+        souffre d’une Défaillance. Une Défaillance avec un score supérieur à 1
+        indique que l’arme souffre d’un dysfonctionnement après l’attaque (qui
+        peut encore réussir selon la compétence, les Possibilités, etc.) Une
+        Défaillance rend l’arme inutilisable jusqu’à ce que l’attaquant dépense
+        une action (sans test) pour la réparer.</p>
+
+        <p>Cibles multiples : s’il tire sur plusieurs cibles, l’attaquant doit
+        utiliser la même option de tir en rafale pour chacune. Si l’arme ne
+        contient pas assez de munitions, l’attaque ne peut pas être effectuée.
+        Le MJ peut arrondir le nombre de munitions ici ou là pour plus de
+        simplicité. </p>
+
+        <p> </p>
+
+        <blockquote>
+
+        <p><strong>Note du système Foundry : </strong>Si tu effectues une
+        attaque avec une rafale courte, le système calculera automatiquement un
+        bonus (voir
+        @UUID[Compendium.torgeternity.basic-rules-fr.JournalEntry.ejHK3jBoZcbKJLih]{Cibles
+        multiples}).</p>
+
+        </blockquote>
+    _id: oGmBIG4VM6wXmI8L
+    image: {}
+    video:
+      controls: true
+      volume: 0.5
+    src: null
+    system: {}
+    sort: 0
+    ownership:
+      default: -1
+    flags: {}
+    _stats:
+      systemId: null
+      systemVersion: null
+      coreVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+    _key: '!journal.pages!7XVr3UzUcFRv9HHq.oGmBIG4VM6wXmI8L'
+ownership:
+  default: 0
+  TK1vCAdCz548vBDu: 3
+  VAnYow5sWS9EJzo0: 3
+_stats:
+  systemId: torgeternity
+  systemVersion: 3.8.1
+  coreVersion: '11.315'
+  createdTime: 1716827810080
+  modifiedTime: 1716827810080
+  lastModifiedBy: VAnYow5sWS9EJzo0
 _key: '!journal!7XVr3UzUcFRv9HHq'
+
