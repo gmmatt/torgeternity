@@ -236,7 +236,7 @@ export default class TorgeternityActor extends Actor {
     const setting = game.settings.get('torgeternity', 'deckSetting');
     const handId =
       setting.stormknights[this.id] ??
-      game.cards.find((c) => c.data.flags?.torgeternity?.defaultHand === this.id)?.id;
+      game.cards.find((c) => c.flags?.torgeternity?.defaultHand === this.id)?.id;
     if (handId) {
       return game.cards.get(handId);
     } else {
