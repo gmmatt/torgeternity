@@ -387,11 +387,40 @@ export class TorgeternityMacros {
         );
         break;
       case game.i18n.localize('torgeternity.chatText.check.result.failure'):
-        //ChatMessage.create({content: "<p>Fehlschlag</p>"});
+        // ChatMessage.create({content: "<p>Fehlschlag</p>"});
         break;
       case game.i18n.localize('torgeternity.chatText.check.result.mishape'):
-        //ChatMessage.create({conten: "<p>Patzer, das wird witzig!</p>"});
         break;
+    }
+  }
+
+  async openPacks() {
+    for (const pack of game.packs) {
+      if (pack.value?.metadata.packageName === 'torgeternity') {
+        continue;
+      }
+      await pack.configure({ locked: false });
+      const uuids = pack.index.map((i) => i.uuid);
+
+      for (const uuid of uuids) {
+        const doc = await fromUuid(uuid);
+        const data = doc.toObject();
+        await doc.delete();
+        console.warn('Deleted', doc.name);
+        await doc.constructor.create(data, { keepId: true, pack: pack.collection });
+        console.warn('Recreated', doc.name);
+      }
+      await pack.configure({ locked: true });
+    }
+    ui.notifications.info('Migration complete!');
+  }
+
+  /**
+   *
+   */
+  async deleteAllHands() {
+    for (const card of game.cards) {
+      card.type === 'hand' ? await card.delete() : console.log('no hand');
     }
   }
 }
