@@ -126,7 +126,7 @@ export async function renderSkillChat(test) {
       if (unskilledTest === true) {
         dice = '1d20x10';
       }
-      test.diceroll = new Roll(dice).evaluate({ async: false });
+      test.diceroll = await new Roll(dice).evaluate();
       if (test.isFav && test.disfavored) {
         test.isFav = false;
         test.disfavored = false;
@@ -999,12 +999,12 @@ export function torgBonus(rollTotal) {
  *
  * @param isTrademark
  */
-export function torgBD(isTrademark) {
+export async function torgBD(isTrademark) {
   let diceroll;
   if (isTrademark) {
-    diceroll = new Roll('1d6rr1x6max5').evaluate({ async: false });
+    diceroll = await new Roll('1d6rr1x6max5').evaluate();
   } else {
-    diceroll = new Roll('1d6x6max5').evaluate({ async: false });
+    diceroll = await new Roll('1d6x6max5').evaluate();
   }
 
   return diceroll;
@@ -1220,7 +1220,7 @@ export async function soakDamages(soaker) {
   const skillName = 'reality';
   const attributeName = 'spirit';
   const isAttributeTest = false;
-  const skillValue = soaker.system.skills[skillName]?.value || '-';
+  const skillValue = soaker.system.skills[skillName].value;
 
   // Before calculating roll, check to see if it can be attempted unskilled; exit test if actor doesn't have required skill
   if (checkUnskilled(skillValue, skillName, soaker)) {

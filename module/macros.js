@@ -253,7 +253,7 @@ export class TorgeternityMacros {
         return;
       }
 
-      const diceroll = await new Roll(`${diceAmount}d6x6max5`).evaluate({ async: true });
+      const diceroll = await new Roll(`${diceAmount}d6x6max5`).evaluate();
 
       await game.dice3d?.showForRoll(diceroll);
 

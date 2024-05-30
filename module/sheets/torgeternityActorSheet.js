@@ -1054,29 +1054,10 @@ export default class TorgeternityActorSheet extends ActorSheet {
     const skillData = this.actor.system.skills[skillName];
     // var dnDescriptor = "standard";
     let dnDescriptor = powerData.dn;
-    let isAttack = false;
-    let applyArmor = true;
-    let applySize = true;
+    let isAttack = powerData.isAttack;
+    let applyArmor = powerData.applyArmor;
+    let applySize = powerData.applySize;
     let powerModifier = 0;
-
-    // Convert yes/no options from sheet into boolean values (or else renderSkillChat gets confused)
-    if (powerData.isAttack == 'true') {
-      isAttack = true;
-    } else {
-      isAttack = false;
-    }
-
-    if (powerData.applyArmor == 'true') {
-      applyArmor = true;
-    } else {
-      applyArmor = false;
-    }
-
-    if (powerData.applySize == 'true') {
-      applySize = true;
-    } else {
-      applySize = false;
-    }
 
     // Set modifier for this power
     if (item.system.modifier > 0 || item.system.modifier < 0) {

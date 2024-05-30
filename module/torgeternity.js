@@ -710,29 +710,10 @@ function rollItemMacro(itemName) {
         const skillName = powerData.skill;
         const skillData = actor.system.skills[skillName];
         let dnDescriptor = 'standard';
-        let isAttack = false;
-        let applyArmor = true;
-        let applySize = true;
+        let isAttack = powerData.isAttack;
+        let applyArmor = powerData.applyArmor;
+        let applySize = powerData.applySize;
         let powerModifier = 0;
-
-        // Convert yes/no options from sheet into boolean values (or else renderSkillChat gets confused)
-        if (powerData.isAttack == 'true') {
-          isAttack = true;
-        } else {
-          isAttack = false;
-        }
-
-        if (powerData.applyArmor == 'true') {
-          applyArmor = true;
-        } else {
-          applyArmor = false;
-        }
-
-        if (powerData.applySize == 'true') {
-          applySize = true;
-        } else {
-          applySize = false;
-        }
 
         // Set modifier for this power
         if (item.system.modifier > 0 || item.system.modifier < 0) {
@@ -859,13 +840,13 @@ function rollSkillMacro(skillName, attributeName, isInteractionAttack) {
   // calculate the value using the attribute and skill adds, as the attribute might be different
   //    than the skill's current baseAttribute. This assumes the actor is a stormknight - different
   //    logic is needed for threats, who don't have adds.
-  let skillValue = attribute;
+  let skillValue = attribute.value;
   if (!isAttributeTest) {
     if (actor.type === 'stormknight') {
       skillValue += skill.adds;
     } else if (actor.type == 'threat') {
       const otherAttribute = actor.system.attributes[skill.baseAttribute];
-      skillValue = Math.max(skill.value, otherAttribute);
+      skillValue = Math.max(skill.value, otherAttribute.value);
     }
   }
   // Trigger the skill roll
