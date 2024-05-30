@@ -145,6 +145,28 @@ div.actor ::-webkit-scrollbar {
   color: black;
 }
 
+/* Broken links become normal text */
+a.entity-link.broken,
+a.content-link.broken,
+a.inline-roll.broken {
+	 color: black !important;
+	 text-decoration: inherit;
+	 cursor: text;
+   background: none;
+   border: none;
+   padding:0;
+  text-shadow: none;
+}
+a.entity-link.broken:hover,
+a.content-link.broken:hover,
+a.inline-roll.broken:hover {
+	 text-shadow: none;
+}
+
+.fa-unlink:before {
+  display:none;
+}
+
 /*                                      */
 /* --------Actor/Vehicles Sheet-------- */
 /*                                      */
