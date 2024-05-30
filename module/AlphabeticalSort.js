@@ -7,7 +7,7 @@ function strNoAccent(a) {
     const e = a.substr(i, 1);
     d += b.indexOf(e) !== -1 ? c.substr(b.indexOf(e), 1) : e;
   }
-  return d;
+  return d.trim();
 }
 /**
  *
