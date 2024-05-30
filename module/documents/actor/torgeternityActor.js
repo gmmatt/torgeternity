@@ -173,13 +173,14 @@ export default class TorgeternityActor extends Actor {
 
     if (
       effects.contents.find(
-        (ef) => ef.name === game.i18n.localize(`torgeternity.statusEffects.veryStymied`)
+        (ef) =>
+          ef.name === game.i18n.localize(`torgeternity.statusEffects.veryStymied`) && ef.active
       )
     ) {
       this.system.stymiedModifier = -4;
     } else if (
       effects.contents.find(
-        (ef) => ef.name === game.i18n.localize(`torgeternity.statusEffects.stymied`)
+        (ef) => ef.name === game.i18n.localize(`torgeternity.statusEffects.stymied`) && ef.active
       )
     ) {
       this.system.stymiedModifier = -2;
@@ -187,13 +188,14 @@ export default class TorgeternityActor extends Actor {
 
     if (
       effects.contents.find(
-        (ef) => ef.name === game.i18n.localize(`torgeternity.statusEffects.veryVulnerable`)
+        (ef) =>
+          ef.name === game.i18n.localize(`torgeternity.statusEffects.veryVulnerable`) && ef.active
       )
     ) {
       this.system.vulnerableModifier = 4;
     } else if (
       effects.contents.find(
-        (ef) => ef.name === game.i18n.localize(`torgeternity.statusEffects.vulnerable`)
+        (ef) => ef.name === game.i18n.localize(`torgeternity.statusEffects.vulnerable`) && ef.active
       )
     ) {
       this.system.vulnerableModifier = 2;
@@ -201,19 +203,19 @@ export default class TorgeternityActor extends Actor {
 
     if (
       effects.contents.find(
-        (ef) => ef.name === game.i18n.localize(`torgeternity.statusEffects.pitchBlack`)
+        (ef) => ef.name === game.i18n.localize(`torgeternity.statusEffects.pitchBlack`) && ef.active
       )
     ) {
       this.system.darknessModifier = -6;
     } else if (
       effects.contents.find(
-        (ef) => ef.name === game.i18n.localize(`torgeternity.statusEffects.dark`)
+        (ef) => ef.name === game.i18n.localize(`torgeternity.statusEffects.dark`) && ef.active
       )
     ) {
       this.system.darknessModifier = -4;
     } else if (
       effects.contents.find(
-        (ef) => ef.name === game.i18n.localize(`torgeternity.statusEffects.dim`)
+        (ef) => ef.name === game.i18n.localize(`torgeternity.statusEffects.dim`) && ef.active
       )
     ) {
       this.system.darknessModifier = -2;
