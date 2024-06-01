@@ -754,7 +754,7 @@
       "backlash1Tooltip": "2 Schock anwenden",
       "backlash2Tooltip": "1 Schock anwenden",
       "backlash3Tooltip": "Sehr Angeschlagen anwenden",
-      "additionalDamage": "Additional damage preset",
+      "additionalDamage": "+ Schaden",
       "bonusDice": "BW im Voraus würfeln"
     },
     "sizes": {
