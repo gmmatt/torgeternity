@@ -760,7 +760,9 @@
       "backlash3": "Headache !",
       "backlash1Tooltip": "Apply 2 shocks",
       "backlash2Tooltip": "Apply 1 shock",
-      "backlash3Tooltip": "Apply Very Stymied"
+      "backlash3Tooltip": "Apply Very Stymied",
+      "additionalDamage": "Additional damage preset",
+      "bonusDice": "Rolled Bonus-Dice in advance"
     },
     "sizes": {
       "large": "Large",

@@ -751,9 +751,11 @@
       "backlash1": "Rückkopplung",
       "backlash2": "Reduzierte\nRückkopplung",
       "backlash3": "Kopfschmerzen!",
-      "backlash1Tooltip": "Apply 2 shocks",
-      "backlash2Tooltip": "Apply 1 shock",
-      "backlash3Tooltip": "Apply Very Stymied"
+      "backlash1Tooltip": "2 Schock anwenden",
+      "backlash2Tooltip": "1 Schock anwenden",
+      "backlash3Tooltip": "Sehr Angeschlagen anwenden",
+      "additionalDamage": "Additional damage preset",
+      "bonusDice": "BW im Voraus würfeln"
     },
     "sizes": {
       "large": "Groß",

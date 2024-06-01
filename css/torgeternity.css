@@ -3701,6 +3701,10 @@ form.actor-sheet.threat .tab[data-tab].active .editor {
   align-self: baseline;
 }
 
+.test-dialog > div > fieldset > span > input[type="number"] {
+  width: 3em;
+}
+
 .test-dialog > div > fieldset > span > * {
   justify-content: left;
 }

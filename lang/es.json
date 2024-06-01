@@ -760,7 +760,9 @@
       "backlash3": "Headache !",
       "backlash1Tooltip": "Aplica 2 shocks",
       "backlash2Tooltip": "Aplica 1 shock",
-      "backlash3Tooltip": "Aplica Muy Impedido"
+      "backlash3Tooltip": "Aplica Muy Impedido",
+      "additionalDamage": "Daños adicionales preestablecidos",
+      "bonusDice": "Tirada de dados de bonificación por adelantado"
     },
     "sizes": {
       "large": "Grande",
