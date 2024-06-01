@@ -760,7 +760,9 @@
       "backlash3": "Aïe la tête !",
       "backlash1Tooltip": "Applique 2 chocs",
       "backlash2Tooltip": "Applique 1 choc",
-      "backlash3Tooltip": "Applique Très Déstabilisé"
+      "backlash3Tooltip": "Applique Très Déstabilisé",
+      "additionalDamage": "Additional damage preset",
+      "bonusDice": "Rolled Bonus-Dice in advance"
     },
     "sizes": {
       "large": "grande",
