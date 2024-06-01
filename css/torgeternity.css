@@ -3710,6 +3710,18 @@ form.actor-sheet.threat .tab[data-tab].active .editor {
   width: 100%;
 }
 
+.test-dialog .otherModifiers {
+  display: grid;
+  grid-template-columns: 75% 25%;
+  grid-template-rows: repeat(4 1fr);
+  row-gap: 2px;
+}
+
+.test-dialog .otherModifiers > label{
+  justify-self: center;
+  font-family: 'Alaska';
+}
+
 .test-dialog-rollbutton {
   margin-top: 1rem;
   text-shadow: black 1.3px 1.3px 0px, black 1.3px -1.3px 0px, black -1.3px 1.3px 0px, black -1.3px 1.3px 0px;
