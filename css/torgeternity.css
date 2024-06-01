@@ -3688,13 +3688,26 @@ form.actor-sheet.threat .tab[data-tab].active .editor {
 .test-dialog > div > fieldset > span {
   display:flex;
   flex-direction: row;
-  align-items: center;
+  align-items: baseline;
   justify-content: space-evenly;
   width: 100%;
 }
 
+.test-dialog > div > fieldset > span > input[type="checkbox"] ~ label[for] {
+  align-self: center;
+}
+
+.test-dialog > div > fieldset > span > input[type="radio"] ~ label[for] {
+  align-self: baseline;
+}
+
 .test-dialog > div > fieldset > span > * {
   justify-content: left;
+}
+
+.test-dialog > div > fieldset > hr {
+  border: 1px solid var(--color-border-light-tertiary);
+  width: 100%;
 }
 
 .test-dialog-rollbutton {
