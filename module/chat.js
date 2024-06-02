@@ -301,7 +301,7 @@ async function onBd(event) {
   test.diceroll = finalValue;
 
   test.amountBD += 1;
-  if (test.amountBD === 1) {
+  if (test.amountBD === 1 && !test.addBD) {
     test.chatTitle += ` +${test.amountBD}` + game.i18n.localize('torgeternity.chatText.bonusDice');
   } else if (test.amountBD > 1) {
     test.chatTitle = test.chatTitle.replace(

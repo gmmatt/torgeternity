@@ -813,8 +813,10 @@ export async function renderSkillChat(test) {
               const iteratedRoll = await torgBD(test.trademark);
               await game.dice3d?.showForRoll(iteratedRoll);
               BDsInPromise += iteratedRoll.total;
+              test.amountBD += 1;
             }
-
+            test.chatTitle +=
+              ` +${test.amountBD}` + game.i18n.localize('torgeternity.chatText.bonusDice');
             adjustedDamage += BDsInPromise;
           }
           test.applyDamLabel = 'display:inline';
