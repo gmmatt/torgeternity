@@ -386,6 +386,15 @@ export class TestDialog extends FormApplication {
       } else {
         this.test.coverModifier = 0;
       }
+
+      // Add additional damage and BDs in promise. Null if not applicable
+      this.test.additionalDamage =
+        !isNaN(parseInt(document.getElementById('additional-damage')?.value)) &&
+        parseInt(document.getElementById('additional-damage').value);
+
+      this.test.addBDs =
+        parseInt(document.getElementById('additionalBDSelect').value) > 0 &&
+        parseInt(document.getElementById('additionalBDSelect').value);
     }
 
     // Add other modifier 1
