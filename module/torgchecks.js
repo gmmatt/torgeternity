@@ -807,7 +807,7 @@ export async function renderSkillChat(test) {
           );
         } else {
           // Add BDs in promise if applicable as this should only be rolled if the test is successful
-          if (test.addBDs && test.previousBonus === false) {
+          if (test.addBDs && test.previousBonus === false && !test.BDCall) {
             let BDsInPromise = 0;
             for (let i = 1; i <= test.addBDs; i++) {
               const iteratedRoll = await torgBD(test.trademark);
