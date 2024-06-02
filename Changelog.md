@@ -3,6 +3,8 @@
 ## v. 12.0.1
 
 - Broken links are no longer ugly placeholders, but a glowing effect on hovering remains to signal that there should be something there [#382](https://github.com/gmmatt/torgeternity/issues/382)
+- Reorganized the roll dialog, something prettier
+- It is now possible to roll BDs and add damage in advance, using the dialog window
 - Solved bugs and style issues:
   - BDs on powers weren't shown on a chat card [#406](https://github.com/gmmatt/torgeternity/issues/406)
   - More rolls are asynchronous (as it should've been since a long time and needed for V12)
