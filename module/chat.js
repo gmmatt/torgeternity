@@ -294,6 +294,8 @@ async function onBd(event) {
   parentMessage.setFlag('torgeternity', 'currentTarget');
   test.isFavStyle = 'pointer-events:none;color:gray;display:none';
 
+  test.BDCall = true; // this is necessary due to called rendered card off, add BDs in advance would trigger otherwise
+
   const finalValue = await torgBD(test.trademark);
 
   const newDamage = parseInt(test.damage) + parseInt(finalValue.total);
