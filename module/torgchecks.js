@@ -542,7 +542,6 @@ export async function renderSkillChat(test) {
         test.resultTextColor +=
           ';text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000, 0px 0px 15px black;';
       }
-      //test.backlashLabel = 'display:inline';
       test.actionTotalLabel = 'display:none';
       test.possibilityStyle = 'display:none';
       test.upStyle = 'display:none';
@@ -764,6 +763,10 @@ export async function renderSkillChat(test) {
       if (test.vitalAreaDamageModifier) {
         adjustedDamage = test.damage + test.vitalAreaDamageModifier;
       }
+      // add additional Damage from roll dialogue
+      if (test?.additionalDamage && test.previousBonus === false) {
+        adjustedDamage += test?.additionalDamage;
+      }
       // Check for whether a target is present & turn on display of damage sub-label
       if (test.target.present === true) {
         test.damageSubLabel = 'display:block';
@@ -803,6 +806,17 @@ export async function renderSkillChat(test) {
             'torgeternity.chatText.check.result.attackMissed'
           );
         } else {
+          // Add BDs in promise if applicable as this should only be rolled if the test is successful
+          if (test.addBDs && test.previousBonus === false) {
+            let BDsInPromise = 0;
+            for (let i = 1; i <= test.addBDs; i++) {
+              const iteratedRoll = await torgBD(test.trademark);
+              await game.dice3d?.showForRoll(iteratedRoll);
+              BDsInPromise += iteratedRoll.total;
+            }
+
+            adjustedDamage += BDsInPromise;
+          }
           test.applyDamLabel = 'display:inline';
           test.damageDescription = torgDamage(adjustedDamage, test.targetAdjustedToughness).label;
           test.damageSubDescription =
