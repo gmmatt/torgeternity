@@ -91,7 +91,8 @@
           "resetDefense": "No longer actively defending.",
           "result": "result",
           "standartSuccess": "Standard Success",
-          "toughness": "Toughness"
+          "toughness": "Toughness",
+          "BDDamageSum": "Sum damage of rolled BD"
         },
         "testUnsuccessfull": "Test unsuccessful"
       },

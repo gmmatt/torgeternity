@@ -84,7 +84,8 @@
           "resetDefense": "Nicht mehr länger in aktiver Verteidigung.",
           "result": "Ergebnis",
           "standartSuccess": "Standarderfolg",
-          "toughness": "Robustheit"
+          "toughness": "Robustheit",
+          "BDDamageSum": "Summe des Schadens der BW"
         },
         "testUnsuccessfull": "Probe nicht erfolgreich"
       },
