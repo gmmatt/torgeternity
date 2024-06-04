@@ -298,12 +298,15 @@ async function onBd(event) {
 
   const finalValue = await torgBD(test.trademark);
 
-  const newDamage = parseInt(test.damage) + parseInt(finalValue.total);
+  const newDamage = !test.BDDamageInPromise
+    ? parseInt(test.damage) + parseInt(finalValue.total)
+    : parseInt(test.damage) + parseInt(finalValue.total) + parseInt(test.BDDamageInPromise);
+
   test.damage = newDamage;
   test.diceroll = finalValue;
 
   test.amountBD += 1;
-  if (test.amountBD === 1 && !test.addBD) {
+  if (test.amountBD === 1 && !test.addBDs) {
     test.chatTitle += ` +${test.amountBD}` + game.i18n.localize('torgeternity.chatText.bonusDice');
   } else if (test.amountBD > 1) {
     test.chatTitle = test.chatTitle.replace(
