@@ -61,7 +61,7 @@ async function onFavored(event) {
 
   test.unskilledLabel = 'display:none';
 
-  renderSkillChat(test);
+  await renderSkillChat(test);
   parentDeleteByTime(parentMessage);
 }
 
@@ -158,7 +158,7 @@ async function onPossibility(event) {
   // add chat note "poss spent"
   test.chatNote += game.i18n.localize('torgeternity.sheetLabels.possSpent');
 
-  renderSkillChat(test);
+  await renderSkillChat(test);
   parentDeleteByTime(parentMessage);
 }
 
@@ -186,7 +186,7 @@ async function onUp(event) {
   test.chatTitle += '*';
   test.unskilledLabel = 'display:none';
 
-  renderSkillChat(test);
+  await renderSkillChat(test);
   parentDeleteByTime(parentMessage);
 }
 
@@ -217,7 +217,7 @@ async function onHero(event) {
   test.chatTitle += '*';
   test.unskilledLabel = 'display:none';
 
-  renderSkillChat(test);
+  await renderSkillChat(test);
   parentDeleteByTime(parentMessage);
 }
 
@@ -247,11 +247,11 @@ async function onDrama(event) {
   test.chatTitle += '*';
   test.unskilledLabel = 'display:none';
 
-  renderSkillChat(test);
+  await renderSkillChat(test);
   parentDeleteByTime(parentMessage);
 }
 
-function onPlus3(event) {
+async function onPlus3(event) {
   const parentMessageId = event.currentTarget.closest('.chat-message').dataset.messageId;
   const parentMessage = game.messages.find(({ id }) => id === parentMessageId);
   if (!(parentMessage.user.id === game.user.id) && !game.user.isGM) {
@@ -269,7 +269,7 @@ function onPlus3(event) {
 
   test.unskilledLabel = 'display:none';
 
-  renderSkillChat(test);
+  await renderSkillChat(test);
   parentDeleteByTime(parentMessage);
 }
 
@@ -316,7 +316,7 @@ async function onBd(event) {
 
   test.unskilledLabel = 'display:none';
 
-  renderSkillChat(test);
+  await renderSkillChat(test);
   game.messages.get(parentMessageId).delete();
 }
 
