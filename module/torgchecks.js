@@ -17,6 +17,7 @@ export async function renderSkillChat(test) {
   test.applyDebuffLabel = 'display:none';
   test.applyDamLabel = 'display:none';
   test.backlashLabel = 'display:none';
+
   for (let i = 0; i < test.targetAll.length; i++) {
     const target = test.targetAll[i];
     test.target = target;
@@ -817,8 +818,12 @@ export async function renderSkillChat(test) {
             }
             test.chatTitle +=
               ` +${test.amountBD}` + game.i18n.localize('torgeternity.chatText.bonusDice');
+
+            test.bdDamageLabelStyle = 'display: block';
+            test.bdDamageSum += test.BDDamageInPromise;
             adjustedDamage += test.BDDamageInPromise;
           }
+
           test.applyDamLabel = 'display:inline';
           test.damageDescription = torgDamage(adjustedDamage, test.targetAdjustedToughness).label;
           test.damageSubDescription =
@@ -829,10 +834,6 @@ export async function renderSkillChat(test) {
             test.targetAdjustedToughness +
             ' ' +
             game.i18n.localize('torgeternity.chatText.check.result.toughness');
-          // if auto apply damages == true in settings
-          /* if (game.settings.get("torgeternity", "autoDamages")) {
-                      applyDamages(torgDamage(adjustedDamage, test.targetAdjustedToughness))
-                  }*/
         }
       } else {
         // Basic roll

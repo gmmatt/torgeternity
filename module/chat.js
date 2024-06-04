@@ -293,6 +293,8 @@ async function onBd(event) {
   parentMessage.setFlag('torgeternity', 'test');
   parentMessage.setFlag('torgeternity', 'currentTarget');
   test.isFavStyle = 'pointer-events:none;color:gray;display:none';
+  test.unskilledLabel = 'display:none';
+  test.bdDamageLabelStyle = 'display:block';
 
   test.BDCall = true; // this is necessary due to called rendered card off, add BDs in advance would trigger otherwise
 
@@ -317,7 +319,7 @@ async function onBd(event) {
     ui.notifications.info(game.i18n.localize('torgeternity.notifications.failureBDResolution'));
   }
 
-  test.unskilledLabel = 'display:none';
+  test.bdDamageSum += finalValue.total;
 
   await renderSkillChat(test);
   game.messages.get(parentMessageId).delete();

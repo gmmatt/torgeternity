@@ -697,6 +697,8 @@ function rollItemMacro(itemName) {
           darknessModifier: 0,
           chatNote: weaponData.chatNote,
           movementModifier: 0,
+          bdDamageLabelStyle: 'display:none',
+          bdDamageSum: 0,
         };
 
         new TestDialog(mTest);
@@ -710,9 +712,9 @@ function rollItemMacro(itemName) {
         const skillName = powerData.skill;
         const skillData = actor.system.skills[skillName];
         let dnDescriptor = 'standard';
-        let isAttack = powerData.isAttack;
-        let applyArmor = powerData.applyArmor;
-        let applySize = powerData.applySize;
+        const isAttack = powerData.isAttack;
+        const applyArmor = powerData.applyArmor;
+        const applySize = powerData.applySize;
         let powerModifier = 0;
 
         // Set modifier for this power
@@ -756,6 +758,8 @@ function rollItemMacro(itemName) {
           attackOptions: true,
           rollTotal: 0,
           chatNote: '',
+          bdDamageLabelStyle: 'display:none',
+          bdDamageSum: 0,
         };
 
         new TestDialog(test);
@@ -876,6 +880,8 @@ function rollSkillMacro(skillName, attributeName, isInteractionAttack) {
     darknessModifier: 0, // parseInt(actor.system.darknessModifier),
     type: 'skill',
     movementModifier: 0,
+    bdDamageLabelStyle: 'display:none',
+    bdDamageSum: 0,
   };
   if (isInteractionAttack) {
     test['type'] = 'interactionAttack';
