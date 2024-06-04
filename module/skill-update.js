@@ -52,7 +52,7 @@ export class skillUpdate extends FormApplication {
    * @param event
    * @param html
    */
-  _onUpdate(event, html) {
+  async _onUpdate(event, html) {
     // Add DN
     this.test.isDN = true;
     this.test.DN = document.getElementById('dn-text').value;
@@ -119,7 +119,7 @@ export class skillUpdate extends FormApplication {
 
     this.test.diceroll = null;
 
-    torgchecks.renderSkillChat(this.test, null);
+    await torgchecks.renderSkillChat(this.test, null);
     this.close();
   }
 }

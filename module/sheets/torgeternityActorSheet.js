@@ -871,7 +871,7 @@ export default class TorgeternityActorSheet extends ActorSheet {
    *
    * @param event
    */
-  _onActiveDefenseCancel(event) {
+  async _onActiveDefenseCancel(event) {
     const dnDescriptor = 'standard';
 
     const test = {
@@ -900,7 +900,7 @@ export default class TorgeternityActorSheet extends ActorSheet {
     };
 
     // If cancelling activeDefense, bypass dialog
-    torgchecks.renderSkillChat(test);
+    await torgchecks.renderSkillChat(test);
   }
 
   /**
