@@ -548,6 +548,8 @@ export default class TorgeternityActorSheet extends ActorSheet {
       attackOptions: false,
       chatNote: '',
       rollTotal: 0, // A zero indicates that a rollTotal needs to be generated when renderSkillChat is called //
+      bdDamageLabelStyle: 'display:none',
+      bdDamageSum: 0,
     };
 
     new TestDialog(test);
@@ -600,6 +602,8 @@ export default class TorgeternityActorSheet extends ActorSheet {
       attackOptions: false,
       chatNote: '',
       rollTotal: 0, // A zero indicates that a rollTotal needs to be generated when renderSkillChat is called //
+      bdDamageLabelStyle: 'display:none',
+      bdDamageSum: 0,
     };
 
     new TestDialog(test);
@@ -633,6 +637,8 @@ export default class TorgeternityActorSheet extends ActorSheet {
       chatNote: '',
       vehicleSpeed: event.currentTarget.dataset.speed,
       maneuverModifier: event.currentTarget.dataset.maneuver,
+      bdDamageLabelStyle: 'display:none',
+      bdDamageSum: 0,
     };
 
     new TestDialog(test);
@@ -661,6 +667,8 @@ export default class TorgeternityActorSheet extends ActorSheet {
       chatNote: '',
       vehicleSpeed: event.currentTarget.dataset.speed,
       maneuverModifier: event.currentTarget.dataset.maneuver,
+      bdDamageLabelStyle: 'display:none',
+      bdDamageSum: 0,
     };
 
     new TestDialog(test);
@@ -697,6 +705,8 @@ export default class TorgeternityActorSheet extends ActorSheet {
       chatNote: '',
       vehicleSpeed: event.currentTarget.dataset.speed,
       maneuverModifier: event.currentTarget.dataset.maneuver,
+      bdDamageLabelStyle: 'display:none',
+      bdDamageSum: 0,
     };
 
     new TestDialog(test);
@@ -755,6 +765,8 @@ export default class TorgeternityActorSheet extends ActorSheet {
       rollTotal: 0,
       chatNote: '',
       movementModifier: 0,
+      bdDamageLabelStyle: 'display:none',
+      bdDamageSum: 0,
     };
 
     new TestDialog(test);
@@ -815,6 +827,8 @@ export default class TorgeternityActorSheet extends ActorSheet {
       attackOptions: true,
       rollTotal: 0,
       chatNote: '',
+      bdDamageLabelStyle: 'display:none',
+      bdDamageSum: 0,
     };
 
     new TestDialog(test);
@@ -862,6 +876,8 @@ export default class TorgeternityActorSheet extends ActorSheet {
       movementModifier: 0,
       vulnerableModifierAll: [0],
       sizeModifierAll: [0],
+      bdDamageLabelStyle: 'display:none',
+      bdDamageSum: 0,
     };
 
     new TestDialog(test);
@@ -1026,6 +1042,8 @@ export default class TorgeternityActorSheet extends ActorSheet {
       rollTotal: 0,
       chatNote: weaponData.chatNote,
       movementModifier: 0,
+      bdDamageLabelStyle: 'display:none',
+      bdDamageSum: 0,
     };
 
     new TestDialog(test);
@@ -1108,6 +1126,8 @@ export default class TorgeternityActorSheet extends ActorSheet {
       attackOptions: true,
       rollTotal: 0,
       movementModifier: 0,
+      bdDamageLabelStyle: 'display:none',
+      bdDamageSum: 0,
     };
 
     new TestDialog(test);

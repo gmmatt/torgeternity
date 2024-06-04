@@ -50,6 +50,7 @@
     <p class="skill-roll-action-label" style="{{actionTotalLabel}}">{{actionTotalContent}}</p>
     </summary>         
       <p class="skill-roll-action-label" style="{{damageSubLabel}}">{{damageSubDescription}}</p>
+      <p class="skill-roll-action-label" style="{{bdDamageLabelStyle}}">{{localize "torgeternity.chatText.check.result.BDDamageSum"}}: {{bdDamageSum}}</p>
       <table class="skill-roll-table">
         <tr>
           <td>{{typeLabel}}:</td>
@@ -88,6 +89,8 @@
             <div>{{chatNote}}</div>
           </td>
         </tr>
+
+        
       </table>      
          <!-- full copy from core, d20 fixed for diceform, handle explosion skin or not with ifequal tests -->
       <div class="message-content">
