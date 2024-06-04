@@ -3689,7 +3689,7 @@ form.actor-sheet.threat .tab[data-tab].active .editor {
   display:flex;
   flex-direction: row;
   align-items: baseline;
-  justify-content: space-evenly;
+  justify-content: space-between;
   width: 100%;
 }
 
