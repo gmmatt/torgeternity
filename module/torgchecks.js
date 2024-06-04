@@ -808,16 +808,16 @@ export async function renderSkillChat(test) {
         } else {
           // Add BDs in promise if applicable as this should only be rolled if the test is successful
           if (test.addBDs && test.previousBonus === false && !test.BDCall) {
-            let BDsInPromise = 0;
+            test.BDDamageInPromise = 0;
             for (let i = 1; i <= test.addBDs; i++) {
               const iteratedRoll = await torgBD(test.trademark);
               await game.dice3d?.showForRoll(iteratedRoll);
-              BDsInPromise += iteratedRoll.total;
+              test.BDDamageInPromise += iteratedRoll.total;
               test.amountBD += 1;
             }
             test.chatTitle +=
               ` +${test.amountBD}` + game.i18n.localize('torgeternity.chatText.bonusDice');
-            adjustedDamage += BDsInPromise;
+            adjustedDamage += test.BDDamageInPromise;
           }
           test.applyDamLabel = 'display:inline';
           test.damageDescription = torgDamage(adjustedDamage, test.targetAdjustedToughness).label;
