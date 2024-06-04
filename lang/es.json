@@ -91,7 +91,8 @@
           "resetDefense": "No longer actively defending.",
           "result": "result",
           "standartSuccess": "Éxito Estándar",
-          "toughness": " Resistencia"
+          "toughness": " Resistencia",
+          "BDDamageSum": "Suma de BD laminadas"
         },
         "testUnsuccessfull": "Test unsuccessfull"
       },
