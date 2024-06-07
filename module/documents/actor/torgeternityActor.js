@@ -42,6 +42,16 @@ export default class TorgeternityActor extends Actor {
         ? (this.system.attributes.dexterity.value -=
             this.system.minStr - this.system.attributes.strength.value)
         : this.system.attributes.dexterity.value;
+
+      //
+      this.system.other.move = this.system.attributes.dexterity.value;
+      this.system.other.run = this.system.attributes.dexterity.value * 3;
+      // Derive Skill values for Storm Knights and Threats
+      for (const [name, skill] of Object.entries(this.system.skills)) {
+        const trained = skill.unskilledUse === 1 || this._source.system.skills[name].adds;
+        skill.value = trained ? this.system.attributes[skill.baseAttribute].value + skill.adds : '';
+      }
+      //
       // Set base unarmedDamage from interaction
       const skills = this.system.skills;
       const attributes = this.system.attributes;
