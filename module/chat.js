@@ -298,7 +298,7 @@ async function onBd(event) {
 
   test.BDCall = true; // this is necessary due to called rendered card off, add BDs in advance would trigger otherwise
 
-  const finalValue = await torgBD(test.trademark);
+  const finalValue = await torgBD(test.trademark, 1);
 
   const newDamage = !test.BDDamageInPromise
     ? parseInt(test.damage) + parseInt(finalValue.total)
@@ -319,7 +319,7 @@ async function onBd(event) {
     ui.notifications.info(game.i18n.localize('torgeternity.notifications.failureBDResolution'));
   }
 
-  test.bdDamageSum += finalValue.total;
+  //test.bdDamageSum += finalValue.total;
 
   await renderSkillChat(test);
   game.messages.get(parentMessageId).delete();
