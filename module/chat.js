@@ -72,7 +72,7 @@ async function onPossibility(event) {
     return;
   }
   const test = parentMessage.getFlag('torgeternity', 'test');
-
+  test.BDCall = true;
   // check for actor possibility
   // If vehicle roll, search for a character from the user
   const possOwner = test.actorType === 'vehicle' ? game.user.character?.uuid : test.actor;
@@ -319,7 +319,7 @@ async function onBd(event) {
     ui.notifications.info(game.i18n.localize('torgeternity.notifications.failureBDResolution'));
   }
 
-  //test.bdDamageSum += finalValue.total;
+  test.bdDamageSum += finalValue.total;
 
   await renderSkillChat(test);
   game.messages.get(parentMessageId).delete();

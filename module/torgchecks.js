@@ -811,12 +811,12 @@ export async function renderSkillChat(test) {
           // Add BDs in promise if applicable as this should only be rolled if the test is successful
           if (test.addBDs && test.previousBonus === false && !test.BDCall) {
             test.BDDamageInPromise = 0;
-              iteratedRoll = await torgBD(test.trademark, test.addBDs);
-              test.BDDamageInPromise += iteratedRoll.total;
-              test.diceList = test.diceList.concat(iteratedRoll.dice[0].values);
-              test.amountBD += test.addBDs;
-              test.addBDs = 0;
-            
+            iteratedRoll = await torgBD(test.trademark, test.addBDs);
+            test.BDDamageInPromise += iteratedRoll.total;
+            test.diceList = test.diceList.concat(iteratedRoll.dice[0].values);
+            test.amountBD += test.addBDs;
+            test.addBDs = 0;
+
             test.chatTitle +=
               ` +${test.amountBD}` + game.i18n.localize('torgeternity.chatText.bonusDice');
 
@@ -825,7 +825,7 @@ export async function renderSkillChat(test) {
             test.BDDamageInPromise = 0;
           }
 
-          adjustedDamage += test.bdDamageSum;
+          // adjustedDamage += test.bdDamageSum;
           test.applyDamLabel = 'display:inline';
           test.damageDescription = torgDamage(adjustedDamage, test.targetAdjustedToughness).label;
           test.damageSubDescription =
@@ -1018,18 +1018,11 @@ export function torgBonus(rollTotal) {
 
 /**
  *
- * @param isTrademark
+ * @param isTrademark Is this roll with the perk of trademark weapon?
+ * @param amount The amount of BDs that is ought to roll
  */
-export async function torgBD(isTrademark, n) {
-  let diceroll;
-  const dr=n.toString().concat('d6rr1x6max5');
-  const d=n.toString().concat('d6rr1x6max5');
-  if (isTrademark) {
-    diceroll = await new Roll(d).evaluate();
-  } else {
-    diceroll = await new Roll(dr).evaluate();
-  }
-
+export async function torgBD(isTrademark, amount = 1) {
+  const diceroll = await new Roll(`${amount}d6${isTrademark ? 'rr1' : ''}x6max5`).evaluate();
   return diceroll;
 }
 
