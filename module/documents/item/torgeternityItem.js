@@ -64,6 +64,16 @@ export default class TorgeternityItem extends Item {
     psionicpower: 'psionicpower.webp',
   };
 
+  _preCreate(data, options, user) {
+    super._preCreate(data, options, user);
+    if (this.img === 'icons/svg/item-bag.svg') {
+      const image = TorgeternityItem.DEFAULT_ICONS[data.type] ?? null;
+      if (image) {
+        this.updateSource({ img: 'systems/torgeternity/images/icons/' + image });
+      }
+    }
+  }
+
   /**
    *
    * @param data
@@ -72,22 +82,16 @@ export default class TorgeternityItem extends Item {
    */
   _onCreate(data, options, userId) {
     super._onCreate(data, options, userId);
-    if (this.img === 'icons/svg/item-bag.svg') {
-      const image = TorgeternityItem.DEFAULT_ICONS[data.type] ?? null;
-      if (image) {
-        this.update({ img: 'systems/torgeternity/images/icons/' + image });
-      }
-    }
 
-    if (this.parent !== null && this.system.hasOwnProperty('equipped')) {
+    if (this.parent && ['armor', 'shield'].includes(this.type) && this.system.equipped) {
       const actor = this.parent;
-      const updateEquipped = actor.items
-        .filter((i) => i.id !== this.id && i.system.equipped && i.type === this.type)
-        .map((i) => ({
-          _id: i.id,
-          'system.equipped': false,
-        }));
-      actor.updateEmbeddedDocuments('Item', updateEquipped);
+      const previousEquipped = actor.items.find(
+        (i) => i.id !== this.id && i.system.equipped && i.type === this.type
+      );
+
+      if (previousEquipped) {
+        TorgeternityItem.toggleEquipState(previousEquipped, actor);
+      }
     }
   }
 
@@ -98,7 +102,7 @@ export default class TorgeternityItem extends Item {
    */
   static toggleEquipState(item, actor) {
     const wasEquipped = item.system.equipped;
-    itemUpdates = [
+    const itemUpdates = [
       {
         _id: item.id,
         'system.equipped': !wasEquipped,
@@ -125,9 +129,9 @@ export default class TorgeternityItem extends Item {
               .map((e) => ({ _id: e.id, disabled: true }))
           );
         });
-      actor.updateEmbeddedDocuments('Item', itemUpdates);
-      actor.updateEmbeddedDocuments('ActiveEffect', effectUpdates);
     }
+    actor.updateEmbeddedDocuments('Item', itemUpdates);
+    actor.updateEmbeddedDocuments('ActiveEffect', effectUpdates);
   }
 
   /**
