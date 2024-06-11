@@ -1,146 +1,136 @@
-
 <div class="threat-avatar">
-    <img src="{{actor.img}}" class="profile-img" data-edit="img" title="{{actor.name}}" />
+  <img src="{{actor.img}}" class="profile-img" data-edit="img" title="{{actor.name}}" />
 </div>
 
 <div class="sidebar-stats">
-    <div class="sidebar-statline">
-        <span class="sidebar-statline-left">
-            <i class="fas fa-heart"></i>
-            {{localize "torgeternity.sheetLabels.wounds"}}
-        </span>
-        <span style="display:block">
-            <input name="system.wounds.value" type="number" value="{{actor.system.wounds.value}}" data-dtype="Number"
-                class="small-input" />
-            &sol;
-            <input name="system.wounds.max" type="number" value="{{actor.system.wounds.max}}" data-dtype="Number"
-                class="small-input" />
-        </span>
-    </div>
+  <div class="sidebar-statline">
+    <span class="sidebar-statline-left">
+      <i class="fas fa-heart"></i>
+      {{localize 'torgeternity.sheetLabels.wounds'}}
+    </span>
+    <span style="display: block">
+      <input
+        name="system.wounds.value"
+        type="number"
+        value="{{actor.system.wounds.value}}"
+        data-dtype="Number"
+        class="small-input"
+      />
+      &sol;
+      <input
+        name="system.wounds.max"
+        type="number"
+        value="{{actor.system.wounds.max}}"
+        data-dtype="Number"
+        class="small-input"
+      />
+    </span>
+  </div>
 
-    <hr>
+  <hr />
 
-    <div class="sidebar-statline">
-        <span class="sidebar-statline-left">
-            <i class="fas fa-bolt-lightning"></i>
-            {{localize "torgeternity.sheetLabels.shock"}}
-        </span>
-        <span class="sidebar-statline-right">
-            <input name="system.shock.value" type="number" value="{{actor.system.shock.value}}" data-dtype="Number"
-                class="small-input" />
-            &sol;
-            <span>{{actor.system.shock.max}}</span>
-        </span>
-    </div>
+  <div class="sidebar-statline">
+    <span class="sidebar-statline-left">
+      <i class="fas fa-bolt-lightning"></i>
+      {{localize 'torgeternity.sheetLabels.shock'}}
+    </span>
+    <span class="sidebar-statline-right">
+      <input
+        name="system.shock.value"
+        type="number"
+        value="{{actor.system.shock.value}}"
+        data-dtype="Number"
+        class="small-input"
+      />
+      &sol;
+      <span>{{actor.system.shock.max}}</span>
+    </span>
+  </div>
 
-    <hr>
+  <hr />
 
-    <div class="sidebar-statline">
-        <span class="sidebar-statline-left">
-            <i class="fas fa-signs-post"></i>
-            {{localize "torgeternity.sheetLabels.possibilities"}}
-        </span>
-        <span class="sidebar-statline-right">
-            <input name="system.other.possibilities" type="number" value="{{actor.system.other.possibilities}}" data-dtype="Number"
-                class="small-input" />
-        </span>
-    </div>
+  <div class="sidebar-statline">
+    <span class="sidebar-statline-left">
+      <i class="fas fa-signs-post"></i>
+      {{localize 'torgeternity.sheetLabels.possibilities'}}
+    </span>
+    <span class="sidebar-statline-right">
+      <input
+        name="system.other.possibilities"
+        type="number"
+        value="{{actor.system.other.possibilities}}"
+        data-dtype="Number"
+        class="small-input"
+      />
+    </span>
+  </div>
 
-    <hr>
+  <hr />
 
-    <div class="sidebar-statline">
-        <span class="sidebar-statline-left">
-            <i class="fas fa-hand-fist"></i>
-            {{localize "torgeternity.sheetLabels.toughness"}}
-        </span>
-        <span class="sidebar-statline-right" style="display:block">
-            {{actor.system.other.toughness}}
-            &nbsp;
-            &lpar;{{actor.system.other.armor}}&rpar;            
-        </span>
-    </div>
-    <hr>
+  <div class="sidebar-statline">
+    <span class="sidebar-statline-left">
+      <i class="fas fa-hand-fist"></i>
+      {{localize 'torgeternity.sheetLabels.toughness'}}
+    </span>
+    <span class="sidebar-statline-right" style="display: block">
+      {{actor.defenses.toughness}} &nbsp; &lpar;{{actor.defenses.armor}}&rpar;
+    </span>
+  </div>
+  <hr />
 
-    <div class="sidebar-statline">
-        <span class="sidebar-statline-left">
-            <i class="fas fa-person-running"></i>
-            {{localize "torgeternity.sheetLabels.move"}}
-        </span>
-        <span class="sidebar-statline-right">
-		{{actor.system.other.move}}
-        &sol;
-        {{actor.system.other.run}}
-        </span>
-    </div>
+  <div class="sidebar-statline">
+    <span class="sidebar-statline-left">
+      <i class="fas fa-person-running"></i>
+      {{localize 'torgeternity.sheetLabels.move'}}
+    </span>
+    <span class="sidebar-statline-right">
+      {{actor.system.other.move}} &sol; {{actor.system.other.run}}
+    </span>
+  </div>
 
-    <hr>
+  <hr />
 
-    <div class="sidebar-heading {{#if (detectActiveDefense data)}}activeDefense-roll-glow{{else}}activeDefense-roll{{/if}}">
-        <i class="fas fa-shield" ></i>
-        {{localize "torgeternity.sheetLabels.defenses"}}
-    </div>
+  <div
+    class='sidebar-heading
+      {{ifThen (detectActiveDefense data) "activeDefense-roll-glow" "activeDefense-roll"}}'
+    title='{{localize "torgeternity.sheetLabels.defensesTip"}}'
+  >
+    <i class="fas fa-shield"></i>
+    {{localize 'torgeternity.sheetLabels.defenses'}}
+  </div>
 
-    <div class="sidebar-statline">
-        <span class="sidebar-statline-left">
-            {{localize "torgeternity.sheetLabels.melee"}}
-        </span>
-        <span class="sidebar-statline-right">
-            {{actor.system.meleeWeaponsDefense}}
-        </span>
-    </div>
+  <div class="sidebar-statline">
+    <span class="sidebar-statline-left">{{localize 'torgeternity.sheetLabels.melee'}}</span>
+    <span class="sidebar-statline-right">{{actor.defenses.meleeWeapons.value}}</span>
+  </div>
 
-    <div class="sidebar-statline">
-        <span class="sidebar-statline-left">
-            {{localize "torgeternity.skills.dodge"}}
-        </span>
-        <span class="sidebar-statline-right">
-            {{actor.system.dodgeDefense}}
-        </span>
-    </div>
+  <div class="sidebar-statline">
+    <span class="sidebar-statline-left">{{localize 'torgeternity.skills.dodge'}}</span>
+    <span class="sidebar-statline-right">{{actor.defenses.dodge.value}}</span>
+  </div>
 
-    <div class="sidebar-statline">
-        <span class="sidebar-statline-left">
-            {{localize "torgeternity.sheetLabels.unarmed"}}
-        </span>
-        <span class="sidebar-statline-right">
-            {{actor.system.unarmedCombatDefense}}
-        </span>
-    </div>
+  <div class="sidebar-statline">
+    <span class="sidebar-statline-left">{{localize 'torgeternity.sheetLabels.unarmed'}}</span>
+    <span class="sidebar-statline-right">{{actor.defenses.unarmedCombat.value}}</span>
+  </div>
 
-    <div class="sidebar-statline">
-        <span class="sidebar-statline-left">
-            {{localize "torgeternity.skills.intimidation"}}
-        </span>
-        <span class="sidebar-statline-right">
-            {{actor.system.intimidationDefense}}
-        </span>
-    </div>
+  <div class="sidebar-statline">
+    <span class="sidebar-statline-left">{{localize 'torgeternity.skills.intimidation'}}</span>
+    <span class="sidebar-statline-right">{{actor.defenses.intimidation.value}}</span>
+  </div>
 
-    <div class="sidebar-statline">
-        <span class="sidebar-statline-left">
-            {{localize "torgeternity.skills.maneuver"}}
-        </span>
-        <span class="sidebar-statline-right">
-            {{actor.system.maneuverDefense}}
-        </span>
-    </div>
+  <div class="sidebar-statline">
+    <span class="sidebar-statline-left">{{localize 'torgeternity.skills.maneuver'}}</span>
+    <span class="sidebar-statline-right">{{actor.defenses.maneuver.value}}</span>
+  </div>
 
-    <div class="sidebar-statline">
-        <span class="sidebar-statline-left">
-            {{localize "torgeternity.skills.taunt"}}
-        </span>
-        <span class="sidebar-statline-right">
-            {{actor.system.tauntDefense}}
-        </span>
-    </div>
+  <div class="sidebar-statline">
+    <span class="sidebar-statline-left">{{localize 'torgeternity.skills.taunt'}}</span>
+    <span class="sidebar-statline-right">{{actor.defenses.taunt.value}}</span>
+  </div>
 
-    <div class="sidebar-statline">
-        <span class="sidebar-statline-left">
-            {{localize "torgeternity.skills.trick"}}
-        </span>
-        <span class="sidebar-statline-right">
-            {{actor.system.trickDefense}}
-        </span>
-    </div>
-
+  <div class="sidebar-statline">
+    <span class="sidebar-statline-left">{{localize 'torgeternity.skills.trick'}}</span>
+    <span class="sidebar-statline-right">{{actor.defenses.trick.value}}</span>
+  </div>
 </div>

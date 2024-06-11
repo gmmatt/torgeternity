@@ -47,9 +47,9 @@ export default class TorgeternityItem extends Item {
   }
 
   static DEFAULT_ICONS = {
-    //genemod:'genemod-icon.webp',
-    //occultech: 'implant.webp',
-    //cyberware: 'cyberware-icon.webp',
+    // genemod:'genemod-icon.webp',
+    // occultech: 'implant.webp',
+    // cyberware: 'cyberware-icon.webp',
     gear: 'gear-icon.webp',
     eternityshard: 'eternityshard.webp',
     armor: 'armor-icon.webp',
