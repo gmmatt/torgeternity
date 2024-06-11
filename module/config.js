@@ -341,13 +341,6 @@ torgeternity.statusEffects = [
     _id: 'stymied000000000',
     name: 'torgeternity.statusEffects.stymied',
     duration: { rounds: 1, turns: 1 },
-    changes: [
-      {
-        key: 'statusModifiers.stymied',
-        mode: CONST.ACTIVE_EFFECT_MODES.OVERRIDE,
-        value: -2,
-      },
-    ],
   },
   {
     img: 'systems/torgeternity/images/status-markers/very-stymied.webp',
@@ -355,14 +348,6 @@ torgeternity.statusEffects = [
     _id: 'veryStymied00000',
     name: 'torgeternity.statusEffects.veryStymied',
     duration: { rounds: 1, turns: 1 },
-    changes: [
-      {
-        key: 'statusModifiers.stymied',
-        mode: CONST.ACTIVE_EFFECT_MODES.OVERRIDE,
-        value: -4,
-        priority: 51,
-      },
-    ],
   },
   {
     img: 'systems/torgeternity/images/status-markers/vulnerable.webp',
@@ -370,13 +355,6 @@ torgeternity.statusEffects = [
     _id: 'vulnerable000000',
     name: 'torgeternity.statusEffects.vulnerable',
     duration: { rounds: 1, turns: 1 },
-    changes: [
-      {
-        key: 'statusModifiers.vulnerable',
-        mode: CONST.ACTIVE_EFFECT_MODES.OVERRIDE,
-        value: 2,
-      },
-    ],
   },
   {
     img: 'systems/torgeternity/images/status-markers/very-vulnerable.webp',
@@ -384,14 +362,6 @@ torgeternity.statusEffects = [
     _id: 'veryVulnerable00',
     name: 'torgeternity.statusEffects.veryVulnerable',
     duration: { rounds: 1, turns: 1 },
-    changes: [
-      {
-        key: 'statusModifiers.vulnerable',
-        mode: CONST.ACTIVE_EFFECT_MODES.OVERRIDE,
-        value: 4,
-        priority: 51,
-      },
-    ],
   },
   {
     img: 'systems/torgeternity/images/status-markers/disconnected.webp',
@@ -428,41 +398,18 @@ torgeternity.statusEffects = [
     id: 'dim',
     _id: 'dim0000000000000',
     name: 'torgeternity.statusEffects.dim',
-    changes: [
-      {
-        key: 'statusModifiers.darkness',
-        mode: CONST.ACTIVE_EFFECT_MODES.OVERRIDE,
-        value: -2,
-      },
-    ],
   },
   {
     img: 'systems/torgeternity/images/status-markers/dark-4.webp',
     id: 'dark',
     _id: 'dark000000000000',
     name: 'torgeternity.statusEffects.dark',
-    changes: [
-      {
-        key: 'statusModifiers.darkness',
-        mode: CONST.ACTIVE_EFFECT_MODES.OVERRIDE,
-        value: -4,
-        priority: 51,
-      },
-    ],
   },
   {
     img: 'systems/torgeternity/images/status-markers/dark-6.webp',
     id: 'pitchBlack',
     _id: 'pitchBlack000000',
     name: 'torgeternity.statusEffects.pitchBlack',
-    changes: [
-      {
-        key: 'statusModifiers.darkness',
-        mode: CONST.ACTIVE_EFFECT_MODES.OVERRIDE,
-        value: -6,
-        priority: 52,
-      },
-    ],
   },
   {
     img: 'systems/torgeternity/images/status-markers/waiting.webp',

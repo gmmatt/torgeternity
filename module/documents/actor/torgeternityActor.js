@@ -31,7 +31,7 @@ export default class TorgeternityActor extends Actor {
         armor: this.system.armor,
       };
     }
-    this.status = {
+    this.statusModifiers = {
       stymied: 0,
       vulnerable: 0,
       darkness: 0,
@@ -43,6 +43,27 @@ export default class TorgeternityActor extends Actor {
    */
   prepareDerivedData() {
     // Here Effects are applied, whatever follow cannot be directly affected by Effects
+
+    // apply status effects
+    this.statusModifiers = {
+      stymied: this.statuses.includes('veryStymied')
+        ? -4
+        : this.statuses.includes('stymied')
+        ? -2
+        : 0,
+      vulnerable: this.statuses.includes('veryVulnerable')
+        ? 4
+        : this.statuses.includes('vulnerable')
+        ? 2
+        : 0,
+      darkness: this.statuses.includes('pitchBlack')
+        ? -6
+        : this.statuses.includes('dark')
+        ? -4
+        : this.statuses.includes('dim')
+        ? -2
+        : 0,
+    };
 
     // Skillsets
     if (['threat', 'stormknight'].includes(this.type)) {
