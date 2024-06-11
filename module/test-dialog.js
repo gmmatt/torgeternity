@@ -71,8 +71,8 @@ export class TestDialog extends FormApplication {
       data.test.woundModifier = -3;
     }
 
-    data.test.stymiedModifier = parseInt(myActor.system.stymiedModifier);
-    data.test.darknessModifier = parseInt(myActor.system.darknessModifier);
+    data.test.stymiedModifier = myActor.statusModifiers.stymied;
+    data.test.darknessModifier = myActor.statusModifiers.darkness;
     data.test.sizeModifier = 0;
     data.test.vulnerableModifier = 0;
     data.test.sizeModifierAll = [];
@@ -160,7 +160,7 @@ export class TestDialog extends FormApplication {
               trick: target.defenses.trick.value,
             },
           });
-          data.test.vulnerableModifierAll.push(target.system.vulnerableModifier);
+          data.test.vulnerableModifierAll.push(target.statusModifiers.vulnerable);
         }
         if (this.test.applySize == true) {
           const sizeBonus = target.system.details.sizeBonus;
