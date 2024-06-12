@@ -297,8 +297,7 @@ export default class TorgeternityActorSheet extends ActorSheet {
       html.find('.base-roll').click(this._onBaseRoll.bind(this));
 
       html.find('.apply-fatigue').click((ev) => {
-        const newShock =
-          parseInt(this.actor.system.shock.value) + parseInt(ev.currentTarget.dataset.fatigue);
+        const newShock = this.actor.system.shock.value + parseInt(ev.currentTarget.dataset.fatigue);
         this.actor.update({ 'system.shock.value': newShock });
       });
 
@@ -1054,9 +1053,9 @@ export default class TorgeternityActorSheet extends ActorSheet {
     const skillData = this.actor.system.skills[skillName];
     // var dnDescriptor = "standard";
     let dnDescriptor = powerData.dn;
-    let isAttack = powerData.isAttack;
-    let applyArmor = powerData.applyArmor;
-    let applySize = powerData.applySize;
+    const isAttack = powerData.isAttack;
+    const applyArmor = powerData.applyArmor;
+    const applySize = powerData.applySize;
     let powerModifier = 0;
 
     // Set modifier for this power

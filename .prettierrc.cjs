@@ -3,18 +3,18 @@ module.exports = {
   singleQuote: true,
   overrides: [
     {
-      files: ["*.scss", "*.css"],
+      files: ['*.scss', '*.css'],
       options: {
         requirePragma: false,
-        parser: "scss",
+        parser: 'scss',
       },
     },
     {
-      files: ["*.html"],
+      files: ['*.html', '*.hbs'],
       options: {
         requirePragma: false,
-        parser: "html",
-        htmlWhitespaceSensitivity: "ignore",
+        parser: 'html',
+        htmlWhitespaceSensitivity: 'ignore',
       },
     },
   ],

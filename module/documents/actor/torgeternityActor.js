@@ -9,10 +9,27 @@ export default class TorgeternityActor extends Actor {
     // Here Effects are not yet applied
     if (['threat', 'stormknight'].includes(this.type)) {
       // initialize the worn armor bonus
-      this.system.other.armor = this.wornArmor?.system?.bonus ?? 0;
-      this.system.fatigue = 2 + (this.wornArmor?.system?.fatigue ?? 0);
-      this.system.maxDex = this.wornArmor?.system?.maxDex ?? 100;
-      this.system.minStr = this.wornArmor?.system?.minStrength ?? 0;
+      this.fatigue = 2 + (this.wornArmor?.system?.fatigue ?? 0);
+      this.system.attributes.maxDex = this.wornArmor?.system?.maxDex ?? 0;
+      this.system.attributes.minStr = this.wornArmor?.system?.minStrength ?? 0;
+      this.defenses = {
+        dodge: { value: 0, mod: 0 },
+        meleeWeapons: { value: 0, mod: 0 },
+        unarmedCombat: { value: 0, mod: 0 },
+        intimidation: { value: 0, mod: 0 },
+        maneuver: { value: 0, mod: 0 },
+        taunt: { value: 0, mod: 0 },
+        trick: { value: 0, mod: 0 },
+        toughness: this.system.attributes.strength.value,
+        armor: this.wornArmor?.system?.bonus ?? 0,
+      };
+      this.unarmed = { damage: 0, damageMod: 0 };
+    }
+    if (['vehicle'].includes(this.type)) {
+      this.defenses = {
+        toughness: this.system.toughness,
+        armor: this.system.armor,
+      };
     }
   }
 
@@ -24,63 +41,58 @@ export default class TorgeternityActor extends Actor {
 
     // Skillsets
     if (['threat', 'stormknight'].includes(this.type)) {
+      const skills = this.system.skills;
+      const attributes = this.system.attributes;
       // by RAW, FIRST you checkout for maxDex, THEN minStr. Doing this into DerivedData means, it takes place after AE's were applied, making sure, this cannot get higher than armor's limitations.
-      this.system.attributes.dexterity.value > this.system.maxDex
-        ? (this.system.attributes.dexterity.value = this.system.maxDex)
-        : this.system.attributes.dexterity.value;
+      // only apply if a maxDex value is set
+      attributes.dexterity.value =
+        attributes.maxDex > 0
+          ? Math.min(attributes.dexterity.value, attributes.maxDex)
+          : attributes.dexterity.value;
+      attributes.dexterity.value += Math.min(0, attributes.strength.value - attributes.minStr);
 
-      this.system.attributes.strength.value < this.system.minStr
-        ? (this.system.attributes.dexterity.value -=
-            this.system.minStr - this.system.attributes.strength.value)
-        : this.system.attributes.dexterity.value;
-
-      //
-      this.system.other.move = this.system.attributes.dexterity.value;
-      this.system.other.run = this.system.attributes.dexterity.value * 3;
+      // Calculate Move and Run base values
       // Derive Skill values for Storm Knights and Threats
-      for (const [name, skill] of Object.entries(this.system.skills)) {
+      for (const [name, skill] of Object.entries(skills)) {
         const trained = skill.unskilledUse === 1 || this._source.system.skills[name].adds;
         skill.value = trained ? this.system.attributes[skill.baseAttribute].value + skill.adds : '';
       }
-      //
-      // Set base unarmedDamage from interaction
-      const skills = this.system.skills;
-      const attributes = this.system.attributes;
 
-      const unarmedDamageMod = this.system.unarmedDamageMod || 0;
-      this.system.unarmedDamage = attributes.strength.value + unarmedDamageMod;
+      // Set base unarmed damage
 
-      // Set Defensive Values based on modified attributes
-      const dodgeDefenseMod = this.system.dodgeDefenseMod || 0;
+      this.unarmed.damage = attributes.strength.value + this.unarmed.damageMod;
+
+      // claculate final toughness
+      this.defenses.toughness += this.defenses.armor;
+
+      // Set Defensive Values based on modified skills and attributes
+
       const dodgeDefenseSkill = skills.dodge.value || attributes.dexterity.value;
-      this.system.dodgeDefense = dodgeDefenseSkill + dodgeDefenseMod;
+      this.defenses.dodge.value = dodgeDefenseSkill + this.defenses.dodge.mod;
 
-      const meleeWeaponsDefenseMod = this.system.meleeWeaponsDefenseMod || 0;
       const meleeWeaponsDefenseSkill = skills.meleeWeapons.value || attributes.dexterity.value;
-      this.system.meleeWeaponsDefense = meleeWeaponsDefenseSkill + meleeWeaponsDefenseMod;
+      this.defenses.meleeWeapons.value = meleeWeaponsDefenseSkill + this.defenses.meleeWeapons.mod;
 
-      const unarmedCombatDefenseMod = this.system.unarmedCombatDefenseMod || 0;
       const unarmedCombatDefenseSkill = skills.unarmedCombat.value || attributes.dexterity.value;
-      this.system.unarmedCombatDefense = unarmedCombatDefenseSkill + unarmedCombatDefenseMod;
+      this.defenses.unarmedCombat.value =
+        unarmedCombatDefenseSkill + this.defenses.unarmedCombat.mod;
 
-      const intimidationDefenseMod = this.system.intimidationDefenseMod || 0;
       const intimidationDefenseSkill = skills.intimidation.value || attributes.spirit.value;
-      this.system.intimidationDefense = intimidationDefenseSkill + intimidationDefenseMod;
+      this.defenses.intimidation.value = intimidationDefenseSkill + this.defenses.intimidation.mod;
 
-      const maneuverDefenseMod = this.system.maneuverDefenseMod || 0;
       const maneuverDefenseSkill = skills.maneuver.value || attributes.dexterity.value;
-      this.system.maneuverDefense = maneuverDefenseSkill + maneuverDefenseMod;
+      this.defenses.maneuver.value = maneuverDefenseSkill + this.defenses.maneuver.mod;
 
-      const tauntDefenseMod = this.system.tauntDefenseMod || 0;
       const tauntDefenseSkill = skills.taunt.value || attributes.charisma.value;
-      this.system.tauntDefense = tauntDefenseSkill + tauntDefenseMod;
+      this.defenses.taunt.value = tauntDefenseSkill + this.defenses.taunt.mod;
 
-      const trickDefenseMod = this.system.trickDefenseMod || 0;
       const trickDefenseSkill = skills.trick.value || attributes.mind.value;
-      this.system.trickDefense = trickDefenseSkill + trickDefenseMod;
-    }
-    // Apply the moveMod effect for SKs & threats
-    if (this.type === 'stormknight' || this.type === 'threat') {
+      this.defenses.trick.value = trickDefenseSkill + this.defenses.trick.mod;
+
+      // Apply the moveMod effect for SKs & threats
+      this.system.other.move = this.system.attributes.dexterity.value;
+      this.system.other.run = this.system.attributes.dexterity.value * 3;
+
       const listChanges = [];
       let computeMove = this.system.other.move;
       this.appliedEffects.forEach((ef) =>
@@ -159,8 +171,6 @@ export default class TorgeternityActor extends Actor {
           computeRun = parseInt(ef.value);
         });
       this.system.other.run = computeRun;
-      //
-    } else if (this.type === 'vehicle') {
     }
   }
 
