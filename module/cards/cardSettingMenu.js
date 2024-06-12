@@ -39,9 +39,7 @@ export default class DeckSettingMenu extends FormApplication {
     };
     for (const sk of data.stormknights) {
       if (game.settings.get('torgeternity', 'deckSetting').stormknights) {
-        data.stormknights[sk.id] = game.settings.get('torgeternity', 'deckSetting').stormknights[
-          sk.id
-        ];
+        data.stormknights[sk.id] = sk.getDefaultHand().id;
       }
     }
     return mergeObject(super.getData(), data);
@@ -121,14 +119,26 @@ export default class DeckSettingMenu extends FormApplication {
 
     const actor = game.actors.get(actorId);
     const hand = game.cards.get(handId);
+    const oldHand = actor.getDefaultHand();
 
-    const actorsPerm = actor.ownership;
+    const invalidSelection = html[0]
+      .querySelectorAll(`select:not([name="stormknights.${actorId}"])`)
+      .values()
+      .some((element) =>
+        [handId, oldHand.id].includes(element.options[element.selectedIndex].value)
+      );
+
+    if (invalidSelection || handId === oldHand.id) {
+      return;
+    }
+
+    const actorsPerm = actor.getHandOwnership();
     // assigning same permissions from actor to hand
     hand.update({
-      data: {
-        permissions: actorsPerm,
-      },
+      ownership: actorsPerm,
+      flags: { torgeternity: { defaultHand: actor.id } },
     });
+    oldHand.setFlag('torgeternity', 'defaultHand', null);
   }
   /**
    *
