@@ -675,7 +675,7 @@ export async function renderSkillChat(test) {
       // Delete Existing Active Effects
       fromUuidSync(test.actor)
         .effects.find((a) => a.name === 'ActiveDefense')
-        .delete();
+        ?.delete();
       if (test.bonus < 1) {
         test.bonus = 1;
       }
