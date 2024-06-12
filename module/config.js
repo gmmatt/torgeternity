@@ -49,6 +49,12 @@ torgeternity.cosmTypes = {
   other: 'torgeternity.cosms.other',
 };
 
+torgeternity.zones = {
+  pure: 'torgeternity.cosms.pure',
+  dominant: 'torgeternity.cosms.dominant',
+  mixed: 'torgeternity.cosms.mixed',
+};
+
 torgeternity.axiomByCosm = {
   coreEarth: {
     magic: 9,

@@ -49,7 +49,7 @@ export function explode(modifier, { recursive = true } = {}) {
       explosion.checked++;
 
       if (max !== null && max <= 0) continue;
-      if (DiceTerm.compareResult(r.result, comparison, target)) {
+      if (foundry.dice.terms.DiceTerm.compareResult(r.result, comparison, target)) {
         if (explosion.type === 'explosion') {
           r.exploded = true;
         } else if (explosion.type === 'reroll') {
@@ -110,7 +110,7 @@ export function reroll(modifier, { recursive = false } = {}) {
     if (max !== null && max <= 0) break;
 
     // Determine whether to re-roll the result
-    if (DiceTerm.compareResult(r.result, comparison, target)) {
+    if (foundry.dice.terms.DiceTerm.compareResult(r.result, comparison, target)) {
       r.rerolled = true;
       r.active = false;
       this.roll();

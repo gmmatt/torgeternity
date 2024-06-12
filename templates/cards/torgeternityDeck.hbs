@@ -17,8 +17,7 @@
         <div class="form-group">
             <label>{{ localize "CARDS.Image" }}</label>
             <div class="form-fields">
-                {{filePicker target="img" type="image"}}
-                <input type="text" name="img" placeholder="{{localize 'CARDS.Image'}}" value="{{data.img}}">
+                <file-picker name="img" type="image" value="{{data.img}}"></file-picker>
             </div>
         </div>
 

@@ -235,7 +235,7 @@ export default class TorgeternityActor extends Actor {
    * @returns {object} permission update object for use with the corresponding hand - which has the same owners as the SK, the default as observer, and deletes other permissions
    */
   getHandOwnership() {
-    const handOwnership = duplicate(this.ownership);
+    const handOwnership = foundry.utils.duplicate(this.ownership);
     for (const key of Object.keys(handOwnership)) {
       // remove any permissions that are not owner
       if (handOwnership[key] < CONST.DOCUMENT_OWNERSHIP_LEVELS.OWNER) {

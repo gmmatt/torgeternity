@@ -18,42 +18,85 @@
           <div class="asside">
             <p class="item-data-label">{{localize "torgeternity.gear.cosm"}}</p>
             <select name="system.cosm" class="input-box">
-              {{#select item.system.cosm}} {{#each config.cosmTypes as |name type|}}
-              <option value="{{localize name}}">{{localize name}}</option>
-              {{/each}} {{/select}}
+              {{selectOptions config.cosmTypes selected=item.system.cosm localize=true}}
             </select>
             <p class="item-data-label">{{localize "torgeternity.gear.techlevel"}}</p>
-            <input name="system.techlevel" type="number" value="{{item.system.techlevel}}" class="input-box-small" />
+            <input
+              name="system.techlevel"
+              type="number"
+              value="{{item.system.techlevel}}"
+              class="input-box-small"
+            />
             <p class="item-data-label">{{localize "torgeternity.gear.ammo"}}</p>
-            <input name="system.ammo.value" type="number" value="{{item.system.ammo.value}}" class="input-box-small" />/
-            <input name="system.ammo.max" type="number" value="{{item.system.ammo.max}}" class="input-box-small" />
+            <input
+              name="system.ammo.value"
+              type="number"
+              value="{{item.system.ammo.value}}"
+              class="input-box-small"
+            />
+            /
+            <input
+              name="system.ammo.max"
+              type="number"
+              value="{{item.system.ammo.max}}"
+              class="input-box-small"
+            />
             <p class="item-data-label">{{localize "torgeternity.gear.price"}}/Value</p>
-            <input name="system.price" type="text" value="{{item.system.price}}" class="input-box-small" />
-            <input name="system.value" type="number" value="{{item.system.value}}" class="input-box-small" />
+            <input
+              name="system.price"
+              type="text"
+              value="{{item.system.price}}"
+              class="input-box-small"
+            />
+            <input
+              name="system.value"
+              type="number"
+              value="{{item.system.value}}"
+              class="input-box-small"
+            />
             <p class="item-data-label">{{localize "torgeternity.gear.range"}}</p>
-            <input name="system.range" type="text" value="{{item.system.range}}" class="input-box" />
+            <input
+              name="system.range"
+              type="text"
+              value="{{item.system.range}}"
+              class="input-box"
+            />
             <p class="item-data-label">{{localize "torgeternity.gear.attackWith"}}</p>
             <select name="system.attackWith" class="input-box">
-              {{#select item.system.attackWith}} {{#each config.attackTypes as |name type|}}
-              <option value="{{type}}">{{localize name}}</option>
-              {{/each}} {{/select}}
+              {{selectOptions config.attackTypes selected=item.system.attackWith localize=true}}
             </select>
             <p class="item-data-label">{{localize "torgeternity.gear.damage"}}</p>
-            <input name="system.damage" type="number" value="{{item.system.damage}}" class="input-box" />
+            <input
+              name="system.damage"
+              type="number"
+              value="{{item.system.damage}}"
+              class="input-box"
+            />
             <p class="item-data-label">{{localize "torgeternity.gear.ap"}}</p>
             <input name="system.ap" type="number" value="{{item.system.ap}}" class="input-box" />
           </div>
           <div class="main-content">
             <p class="item-data-label">
               {{localize "torgeternity.gear.notes"}}&nbsp;
-              <input name="system.notes" type="text" value="{{item.system.notes}}" class="input-box" />
+              <input
+                name="system.notes"
+                type="text"
+                value="{{item.system.notes}}"
+                class="input-box"
+              />
             </p>
             <p class="item-data-label">
               {{localize "torgeternity.gear.chatNote"}}
-              <input name="system.chatNote" type="text" value="{{item.system.chatNote}}" class="input-box" />
+              <input
+                name="system.chatNote"
+                type="text"
+                value="{{item.system.chatNote}}"
+                class="input-box"
+              />
             </p>
             <div name="system.description" class="item-description-textarea">
-              {{editor description target="system.description" engine="prosemirror" button=true editable=editable}}
+              {{editor description target="system.description" engine="prosemirror" button=true
+              editable=editable}}
             </div>
           </div>
         </tr>

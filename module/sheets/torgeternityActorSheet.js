@@ -29,7 +29,7 @@ export default class TorgeternityActorSheet extends ActorSheet {
    *
    */
   static get defaultOptions() {
-    return mergeObject(super.defaultOptions, {
+    return foundry.utils.mergeObject(super.defaultOptions, {
       classes: ['torgeternity', 'sheet', 'actor'],
       width: 773,
       height: 860,

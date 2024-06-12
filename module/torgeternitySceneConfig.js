@@ -2,6 +2,18 @@
  *
  */
 export default class torgeternitySceneConfig extends SceneConfig {
+  getData(options = {}) {
+    const context = super.getData(options);
+
+    context.zones = {
+      pure: 'torgeternity.cosms.pure',
+      dominant: 'torgeternity.cosms.dominant',
+      mixed: 'torgeternity.cosms.mixed',
+    };
+
+    return context;
+  }
+
   /**
    *
    */

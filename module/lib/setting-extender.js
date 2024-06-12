@@ -330,7 +330,7 @@
     }
 
     static get defaultOptions() {
-      return mergeObject(super.defaultOptions, {
+      return foundry.utils.mergeObject(super.defaultOptions, {
         baseApplication: 'SettingsConfig',
       });
     }
