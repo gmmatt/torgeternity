@@ -46,21 +46,13 @@ export default class TorgeternityActor extends Actor {
 
     // apply status effects
     this.statusModifiers = {
-      stymied: this.statuses.includes('veryStymied')
-        ? -4
-        : this.statuses.includes('stymied')
-        ? -2
-        : 0,
-      vulnerable: this.statuses.includes('veryVulnerable')
-        ? 4
-        : this.statuses.includes('vulnerable')
-        ? 2
-        : 0,
-      darkness: this.statuses.includes('pitchBlack')
+      stymied: this.statuses.has('veryStymied') ? -4 : this.statuses.has('stymied') ? -2 : 0,
+      vulnerable: this.statuses.has('veryVulnerable') ? 4 : this.statuses.has('vulnerable') ? 2 : 0,
+      darkness: this.statuses.has('pitchBlack')
         ? -6
-        : this.statuses.includes('dark')
+        : this.statuses.has('dark')
         ? -4
-        : this.statuses.includes('dim')
+        : this.statuses.has('dim')
         ? -2
         : 0,
     };
