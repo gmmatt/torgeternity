@@ -7,15 +7,6 @@ export default class TorgeternityActor extends Actor {
    */
   prepareBaseData() {
     // Here Effects are not yet applied
-    // Set armor and shield toggle states
-    if (this.type === 'stormknight') {
-      for (const item of this.itemTypes.armor) {
-        item.system.equippedClass = item.system.equipped ? 'item-equipped' : 'item-unequipped';
-      }
-      for (const item of this.itemTypes.shield) {
-        item.system.equippedClass = item.system.equipped ? 'item-equipped' : 'item-unequipped';
-      }
-    }
     if (['threat', 'stormknight'].includes(this.type)) {
       // initialize the worn armor bonus
       this.system.other.armor = this.wornArmor?.system?.bonus ?? 0;
