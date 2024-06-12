@@ -2,18 +2,18 @@
 initialy created by BadIdeasBureau in his module "chain-reaction" : https://github.com/BadIdeasBureau/chain-reaction
 thanks to him for letting us using his code
 */
-
 /**
+ * Explode the Die, rolling additional results for any values which match the target set.
+ * If no target number is specified, explode the highest possible result.
+ * Explosion can be a "small explode" using a lower-case x or a "big explode" using an upper-case "X"
  *
- * @param modifier
- * @param root0
- * @param root0.recursive
- * @this Die
+ * @param {string} modifier        The matched modifier query
+ * @param {boolean} recursive      Explode recursively, such that new rolls can also explode?
+ * @returns {Promise<false|void>}  False if the modifier was unmatched.
+ * @this {Die}
  */
-export function explode(modifier, { recursive = true } = {}) {
-  if (!this.explosions) this.explosions = [];
-
-  // Match the explode or "explode once" modifier
+export async function explode(modifier, { recursive = true } = {}) {
+  // Match the "explode" or "explode once" modifier
   const rgx = /xo?([0-9]+)?([<>=]+)?([0-9]+)?/i;
   const match = modifier.match(rgx);
   if (!match) return false;
@@ -34,6 +34,7 @@ export function explode(modifier, { recursive = true } = {}) {
     max = 1; // handling the xo operator here passes down the chain nicer, and appears to be equivalent to current behaviour
   }
   const comparisons = { max, comparison, target };
+  this.explosions = this.explosions || [];
   this.explosions.push({ comparisons, checked: 0, type: 'explosion' });
   // Recursively explode until there are no remaining results to explode
   let checked = 0;
@@ -56,7 +57,7 @@ export function explode(modifier, { recursive = true } = {}) {
           r.rerolled = true;
           r.active = false;
         }
-        this.roll();
+        await this.roll();
         if (max !== null) explosion.comparisons.max -= 1;
       }
     }
@@ -71,9 +72,9 @@ export function explode(modifier, { recursive = true } = {}) {
  * @param modifier
  * @param root0
  * @param root0.recursive
- * @this Die
+ * @this {Die}
  */
-export function reroll(modifier, { recursive = false } = {}) {
+export async function reroll(modifier, { recursive = false } = {}) {
   if (!this.explosions) this.explosions = [];
 
   // Match the re-roll modifier
@@ -97,6 +98,7 @@ export function reroll(modifier, { recursive = false } = {}) {
     max = 1; // handling the r operator here passes down the chain nicer, and appears to be equivalent to current behaviour
   }
   const comparisons = { max, comparison, target };
+  this.explosions = this.explosions || [];
   this.explosions.push({ comparisons, checked: 0, type: 'reroll' });
 
   // Recursively reroll until there are no remaining results to reroll
@@ -113,7 +115,7 @@ export function reroll(modifier, { recursive = false } = {}) {
     if (foundry.dice.terms.DiceTerm.compareResult(r.result, comparison, target)) {
       r.rerolled = true;
       r.active = false;
-      this.roll();
+      await this.roll();
       if (max !== null) max -= 1;
     }
 
