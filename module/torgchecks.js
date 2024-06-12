@@ -825,7 +825,6 @@ export async function renderSkillChat(test) {
             test.BDDamageInPromise = 0;
           }
 
-          // adjustedDamage += test.bdDamageSum;
           test.applyDamLabel = 'display:inline';
           test.damageDescription = torgDamage(adjustedDamage, test.targetAdjustedToughness).label;
           test.damageSubDescription =
