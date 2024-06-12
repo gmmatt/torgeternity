@@ -10,17 +10,39 @@ export default class TorgActiveEffect extends ActiveEffect {
   static migrateData(data) {
     super.migrateData(data);
     if (Object.hasOwn(data, 'changes')) {
-      const badAttributeKeys = [
-        'system.attributes.charisma',
-        'system.attributes.mind',
-        'system.attributes.strength',
-        'system.attributes.dexterity',
-        'system.attributes.spirit',
-      ];
+      const migrationDictionary = {
+        // SK and Threat attribute modifiers
+        'system.attributes.charisma': 'system.attributes.charisma.value',
+        'system.attributes.mind': 'system.attributes.mind.value',
+        'system.attributes.strength': 'system.attributes.strength.value',
+        'system.attributes.dexterity': 'system.attributes.dexterity.value',
+        'system.attributes.spirit': 'system.attributes.spirit.value',
+        // SK and Threat general path cleaning
+        'system.other.fatigue': 'fatigue',
+        'system.fatigue': 'fatigue',
+        'system.unarmedDamage': 'unarmed.damageMod',
+        'system.unarmedDamageMod': 'unarmed.damageMod',
+        // SK and Threat defense modifiers
+        'system.dodgeDefenseMod': 'defenses.dodge.mod',
+        'system.meleeWeaponsDefenseMod': 'defenses.meleeWeapons.mod',
+        'system.unarmedCombatDefenseMod': 'defenses.unarmedCombat.mod',
+        'system.intimidationDefenseMod': 'defenses.intimidation.mod',
+        'system.maneuverDefenseMod': 'defenses.maneuver.mod',
+        'system.tauntDefenseMod': 'defenses.taunt.mod',
+        'system.trickDefenseMod': 'defenses.trick.mod',
+        // SK and Threat armor and toughness
+        'system.other.armor': 'defenses.armor',
+        'system.other.toughness': 'defenses.toughness',
+        // Vehicle armor and toughness
+        'system.armor': 'defenses.armor',
+        'system.toughness': 'defenses.toughness',
+        // modify maxDex and minStr
+        'system.maxDex': 'system.attributes.maxDex',
+        'system.minStr': 'system.attributes.minStr',
+      };
       for (const change of data.changes) {
-        change.key = change.key.replaceAll('system.other.fatigue', 'system.fatigue');
-        if (badAttributeKeys.includes(change.key)) {
-          change.key = change.key + '.value';
+        if (Object.hasOwn(migrationDictionary, change.key)) {
+          change.key = migrationDictionary[change.key];
         }
       }
     }

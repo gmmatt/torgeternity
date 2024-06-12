@@ -72,8 +72,8 @@ export class TestDialog extends FormApplication {
       data.test.woundModifier = -3;
     }
 
-    data.test.stymiedModifier = parseInt(myActor.system.stymiedModifier);
-    data.test.darknessModifier = parseInt(myActor.system.darknessModifier);
+    data.test.stymiedModifier = myActor.statusModifiers.stymied;
+    data.test.darknessModifier = myActor.statusModifiers.darkness;
     data.test.sizeModifier = 0;
     data.test.vulnerableModifier = 0;
     data.test.sizeModifierAll = [];
@@ -136,8 +136,8 @@ export class TestDialog extends FormApplication {
               taunt: target.system.defense,
               trick: target.system.defense,
             },
-            toughness: target.system.toughness,
-            armor: target.system.armor,
+            toughness: target.defenses.toughness,
+            armor: target.defenses.armor,
           });
         } else {
           data.test.targetAll.push({
@@ -149,19 +149,19 @@ export class TestDialog extends FormApplication {
             targetName: target.name,
             skills: target.system.skills,
             attributes: target.system.attributes,
-            toughness: target.system.other.toughness,
-            armor: target.system.other.armor,
+            toughness: target.defenses.toughness,
+            armor: target.defenses.armor,
             defenses: {
-              dodge: target.system.dodgeDefense,
-              unarmedCombat: target.system.unarmedCombatDefense,
-              meleeWeapons: target.system.meleeWeaponsDefense,
-              intimidation: target.system.intimidationDefense,
-              maneuver: target.system.maneuverDefense,
-              taunt: target.system.tauntDefense,
-              trick: target.system.trickDefense,
+              dodge: target.defenses.dodge.value,
+              unarmedCombat: target.defenses.unarmedCombat.value,
+              meleeWeapons: target.defenses.meleeWeapons.value,
+              intimidation: target.defenses.intimidation.value,
+              maneuver: target.defenses.maneuver.value,
+              taunt: target.defenses.taunt.value,
+              trick: target.defenses.trick.value,
             },
           });
-          data.test.vulnerableModifierAll.push(target.system.vulnerableModifier);
+          data.test.vulnerableModifierAll.push(target.statusModifiers.vulnerable);
         }
         if (this.test.applySize == true) {
           const sizeBonus = target.system.details.sizeBonus;

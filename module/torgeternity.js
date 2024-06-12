@@ -876,7 +876,7 @@ function rollSkillMacro(skillName, attributeName, isInteractionAttack) {
     unskilledUse: skill.unskilledUse,
     chatNote: '',
     woundModifier: parseInt(-actor.system.wounds.value),
-    stymiedModifier: parseInt(actor.system.stymiedModifier),
+    stymiedModifier: actor.statusModifiers.stymied,
     darknessModifier: 0, // parseInt(actor.system.darknessModifier),
     type: 'skill',
     movementModifier: 0,

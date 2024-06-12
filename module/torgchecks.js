@@ -601,49 +601,49 @@ export async function renderSkillChat(test) {
           changes: [
             {
               // Modify all existing "basic" defense in block
-              key: 'system.dodgeDefenseMod', // Should need other work for defense vs powers
+              key: 'defenses.dodge.mod', // Should need other work for defense vs powers
               value: test.bonus, // that don't target xxDefense
               priority: 20, // Create a data.ADB that store the bonus ?
               mode: 2,
             },
             {
-              key: 'system.intimidationDefenseMod',
+              key: 'defenses.intimidation.mod',
               value: test.bonus,
               priority: 20,
               mode: 2,
             },
             {
-              key: 'system.maneuverDefenseMod',
+              key: 'defenses.maneuver.mod',
               value: test.bonus,
               priority: 20,
               mode: 2,
             },
             {
-              key: 'system.meleeWeaponsDefenseMod',
+              key: 'defenses.meleeWeapons.mod',
               value: test.bonus,
               priority: 20,
               mode: 2,
             },
             {
-              key: 'system.tauntDefenseMod',
+              key: 'defenses.taunt.mod',
               value: test.bonus,
               priority: 20,
               mode: 2,
             },
             {
-              key: 'system.trickDefenseMod',
+              key: 'defenses.trick.mod',
               value: test.bonus,
               priority: 20,
               mode: 2,
             },
             {
-              key: 'system.unarmedCombatDefenseMod',
+              key: 'defenses.unarmedCombat.mod',
               value: test.bonus,
               priority: 20,
               mode: 2,
             },
             {
-              key: 'system.other.toughness',
+              key: 'defenses.toughness',
               value: shieldBonus,
               priority: 20,
               mode: 2,
@@ -676,7 +676,7 @@ export async function renderSkillChat(test) {
       // Delete Existing Active Effects
       fromUuidSync(test.actor)
         .effects.find((a) => a.name === 'ActiveDefense')
-        .delete();
+        ?.delete();
       if (test.bonus < 1) {
         test.bonus = 1;
       }
@@ -702,49 +702,49 @@ export async function renderSkillChat(test) {
         changes: [
           {
             // Modify all existing "basic" defense in block
-            key: 'system.dodgeDefenseMod', // Should need other work for defense vs powers
+            key: 'defenses.dodge.mod', // Should need other work for defense vs powers
             value: test.bonus, // that don't target xxDefense
             priority: 20, // Create a data.ADB that store the bonus ?
             mode: 2,
           },
           {
-            key: 'system.intimidationDefenseMod',
+            key: 'defenses.intimidation.mod',
             value: test.bonus,
             priority: 20,
             mode: 2,
           },
           {
-            key: 'system.maneuverDefenseMod',
+            key: 'defenses.maneuver.mod',
             value: test.bonus,
             priority: 20,
             mode: 2,
           },
           {
-            key: 'system.meleeWeaponsDefenseMod',
+            key: 'defenses.meleeWeapons.mod',
             value: test.bonus,
             priority: 20,
             mode: 2,
           },
           {
-            key: 'system.tauntDefenseMod',
+            key: 'defenses.taunt.mod',
             value: test.bonus,
             priority: 20,
             mode: 2,
           },
           {
-            key: 'system.trickDefenseMod',
+            key: 'defenses.trick.mod',
             value: test.bonus,
             priority: 20,
             mode: 2,
           },
           {
-            key: 'system.unarmedCombatDefenseMod',
+            key: 'defenses.unarmedCombat.mod',
             value: test.bonus,
             priority: 20,
             mode: 2,
           },
           {
-            key: 'system.other.toughness',
+            key: 'defenses.toughness',
             value: shieldBonus,
             priority: 20,
             mode: 2,
@@ -774,26 +774,13 @@ export async function renderSkillChat(test) {
         test.damageSubLabel = 'display:block';
         // If armor and cover can assist, adjust toughness based on AP effects and cover modifier
         if (test.applyArmor === true) {
-          if (test.weaponAP > 0) {
-            if (test.weaponAP <= test.target.armor) {
-              test.targetAdjustedToughness =
-                parseInt(test.target.toughness) -
-                parseInt(test.weaponAP) +
-                parseInt(test.coverModifier);
-            } else {
-              test.targetAdjustedToughness =
-                parseInt(test.target.toughness) -
-                parseInt(test.target.armor) +
-                parseInt(test.coverModifier);
-            }
-          } else {
-            test.targetAdjustedToughness =
-              parseInt(test.target.toughness) + parseInt(test.coverModifier);
-          }
+          test.targetAdjustedToughness =
+            test.target.toughness -
+            Math.min(parseInt(test.weaponAP), test.target.armor) +
+            parseInt(test.coverModifier);
           // Ignore armor and cover
         } else {
-          test.targetAdjustedToughness =
-            parseInt(test.target.toughness) - parseInt(test.target.armor);
+          test.targetAdjustedToughness = test.target.toughness - test.target.armor;
         }
         // Generate damage description and damage sublabel
         if (

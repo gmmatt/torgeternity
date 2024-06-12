@@ -10,7 +10,7 @@
           ({{localize "torgeternity.itemSheetDescriptions.meleeWeapon"}})</a>
         <div class="item-controls">
           <a
-            class="item-control item-equip {{item.system.equippedClass}}"
+            class="item-control item-equip {{ifThen item.system.equipped "item-equipped" : "item-unequipped"}}"
             title="{{localize 'torgeternity.iconeTitles.toggleEquip'}}"
           >
             <i class="fas fa-hand-paper"></i>
@@ -61,7 +61,7 @@
           ({{localize "torgeternity.itemSheetDescriptions.missileWeapon"}})</a>
         <div class="item-controls">
           <a
-            class="item-control item-equip {{item.system.equippedClass}}"
+            class="item-control item-equip {{ifThen item.system.equipped "item-equipped" : "item-unequipped"}}"
             title="{{localize 'torgeternity.iconeTitles.toggleEquip'}}"
           >
             <i class="fas fa-hand-paper"></i>
@@ -121,7 +121,7 @@
           ({{localize "torgeternity.itemSheetDescriptions.firearm"}})</a>
         <div class="item-controls">
           <a
-            class="item-control item-equip {{item.system.equippedClass}}"
+            class="item-control item-equip {{ifThen item.system.equipped "item-equipped" : "item-unequipped"}}"
             title="{{localize 'torgeternity.iconeTitles.toggleEquip'}}"
           >
             <i class="fas fa-hand-paper"></i>
@@ -184,7 +184,7 @@
           }})</a>
         <div class="item-controls">
           <a
-            class="item-control item-equip {{item.system.equippedClass}}"
+            class="item-control item-equip {{ifThen item.system.equipped "item-equipped" : "item-unequipped"}}"
             title="{{localize 'torgeternity.iconeTitles.toggleEquip'}}"
           >
             <i class="fas fa-hand-paper"></i>
@@ -247,7 +247,7 @@
         <a class="item-name">{{item.name}}</a>
         <div class="item-controls">
           <a
-            class="item-control item-equip {{item.system.equippedClass}}"
+            class="item-control item-equip {{ifThen item.system.equipped "item-equipped" : "item-unequipped"}}"
             title="{{localize 'torgeternity.iconeTitles.toggleEquip'}}"
           >
             <i class="fas fa-hand-paper"></i>
@@ -299,7 +299,7 @@
         <a class="item-name">{{item.name}}</a>
         <div class="item-controls">
           <a
-            class="item-control item-equip {{item.system.equippedClass}}"
+            class="item-control item-equip {{ifThen item.system.equipped "item-equipped" : "item-unequipped"}}"
             title="{{localize 'torgeternity.iconeTitles.toggleEquip'}}"
           >
             <i class="fas fa-hand-paper"></i>

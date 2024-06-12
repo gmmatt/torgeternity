@@ -297,8 +297,7 @@ export default class TorgeternityActorSheet extends ActorSheet {
       html.find('.base-roll').click(this._onBaseRoll.bind(this));
 
       html.find('.apply-fatigue').click((ev) => {
-        const newShock =
-          parseInt(this.actor.system.shock.value) + parseInt(ev.currentTarget.dataset.fatigue);
+        const newShock = this.actor.system.shock.value + parseInt(ev.currentTarget.dataset.fatigue);
         this.actor.update({ 'system.shock.value': newShock });
       });
 
@@ -1170,21 +1169,7 @@ export default class TorgeternityActorSheet extends ActorSheet {
   _onItemEquip(event) {
     const itemID = event.currentTarget.closest('.item').getAttribute('data-item-id');
     const item = this.actor.items.get(itemID);
-    const doCheckOtherItems = TorgeternityItem.toggleEquipState(item, this.actor);
-
-    // for armor and shield, ensure there's only one equipped
-    if (doCheckOtherItems && item.system && item.system.hasOwnProperty('equipped')) {
-      const actor = this.actor;
-      actor.items.forEach(function (otherItem) {
-        if (
-          otherItem._id !== item._id &&
-          otherItem.system.equipped &&
-          otherItem.type === item.type
-        ) {
-          TorgeternityItem.toggleEquipState(otherItem, actor);
-        }
-      });
-    }
+    TorgeternityItem.toggleEquipState(item, this.actor);
   }
 }
 

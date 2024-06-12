@@ -1,34 +1,16 @@
-<div
-  class="armor-border sheet-card {{data.type}}"
-  data-type="{{data.type}}"
->
-  <div class="generalHeader">  
-    <img src="{{img}}" title="{{name}}"/>      
-    <span>
-      {{name}}
-    </span>
+<div class="armor-border sheet-card {{data.type}}" data-type="{{data.type}}">
+  <div class="generalHeader">
+    <img src="{{img}}" title="{{name}}" />
+    <span>{{name}}</span>
   </div>
   <div class="item-description-chat" data-item-id="{{_id}}">
     <div class="item-description-chat">{{{system.description}}}</div>
+    <div class="item-dropdown-extras">{{system.cosm}}</div>
+    <div class="item-dropdown-extras">{{system.price}} ({{system.value}})</div>
+    <div class="item-dropdown-extras">{{localize 'torgeternity.gear.tl'}} {{system.techlevel}}</div>
+    <div class="item-dropdown-extras">{{localize 'torgeternity.gear.bonus'}} {{system.bonus}}</div>
     <div class="item-dropdown-extras">
-      {{system.cosm}}
-    </div>
-    <div class="item-dropdown-extras">
-      {{system.price}}
-      ({{system.value}})
-    </div>
-    <div class="item-dropdown-extras">
-      {{localize "torgeternity.gear.tl"}}
-      {{system.techlevel}}
-    </div>
-    <div class="item-dropdown-extras">
-      {{localize "torgeternity.gear.bonus"}}
-      {{system.bonus}}
-    </div>
-    <div class="item-dropdown-extras">
-      {{localize "torgeternity.gear.maxDex"}}
-      {{system.maxDex}}
+      {{localize 'torgeternity.gear.maxDex'}} {{system.maxDex}}
     </div>
   </div>
-
 </div>

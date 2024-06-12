@@ -14,7 +14,6 @@ export class GeneralItemData extends foundry.abstract.TypeDataModel {
       price: new fields.StringField({ initial: '' }),
       techlevel: new fields.NumberField({ initial: 1, integer: true }),
       value: new fields.NumberField({ initial: 0, integer: true }),
-      equippedClass: new fields.StringField({ initial: 'item-equipped' }),
     };
   }
 
