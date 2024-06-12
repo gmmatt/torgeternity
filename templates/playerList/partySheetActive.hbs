@@ -67,15 +67,15 @@
       </p>
     </div>
     <div class="flexrow">
-      {{#if user.character.system.vulnerableModifier}}
+      {{#if user.character.statusModifiers.vulnerable}}
       <p>
         {{localize "torgeternity.vulnerableStates.vulnerable"}} :
-        {{user.character.system.vulnerableModifier}}
+        {{user.character.statusModifiers.vulnerable}}
       </p>
-      {{/if}} {{#if user.character.system.stymiedModifier}}
+      {{/if}} {{#if user.character.statusModifiers.stymied}}
       <p>
         {{localize "torgeternity.stymiedStates.stymied"}} :
-        {{user.character.system.stymiedModifier}}
+        {{user.character.statusModifiers.stymied}}
       </p>
       {{/if}}
     </div>

@@ -31,6 +31,11 @@ export default class TorgeternityActor extends Actor {
         armor: this.system.armor,
       };
     }
+    this.statusModifiers = {
+      stymied: 0,
+      vulnerable: 0,
+      darkness: 0,
+    };
   }
 
   /**
@@ -38,6 +43,27 @@ export default class TorgeternityActor extends Actor {
    */
   prepareDerivedData() {
     // Here Effects are applied, whatever follow cannot be directly affected by Effects
+
+    // apply status effects
+    this.statusModifiers = {
+      stymied: this.statuses.includes('veryStymied')
+        ? -4
+        : this.statuses.includes('stymied')
+        ? -2
+        : 0,
+      vulnerable: this.statuses.includes('veryVulnerable')
+        ? 4
+        : this.statuses.includes('vulnerable')
+        ? 2
+        : 0,
+      darkness: this.statuses.includes('pitchBlack')
+        ? -6
+        : this.statuses.includes('dark')
+        ? -4
+        : this.statuses.includes('dim')
+        ? -2
+        : 0,
+    };
 
     // Skillsets
     if (['threat', 'stormknight'].includes(this.type)) {
@@ -175,65 +201,6 @@ export default class TorgeternityActor extends Actor {
   }
 
   /**
-   *
-   */
-  applyActiveEffects() {
-    super.applyActiveEffects();
-
-    const effects = this.effects;
-
-    if (
-      effects.contents.find(
-        (ef) =>
-          ef.name === game.i18n.localize(`torgeternity.statusEffects.veryStymied`) && ef.active
-      )
-    ) {
-      this.system.stymiedModifier = -4;
-    } else if (
-      effects.contents.find(
-        (ef) => ef.name === game.i18n.localize(`torgeternity.statusEffects.stymied`) && ef.active
-      )
-    ) {
-      this.system.stymiedModifier = -2;
-    } else this.system.stymiedModifier = 0;
-
-    if (
-      effects.contents.find(
-        (ef) =>
-          ef.name === game.i18n.localize(`torgeternity.statusEffects.veryVulnerable`) && ef.active
-      )
-    ) {
-      this.system.vulnerableModifier = 4;
-    } else if (
-      effects.contents.find(
-        (ef) => ef.name === game.i18n.localize(`torgeternity.statusEffects.vulnerable`) && ef.active
-      )
-    ) {
-      this.system.vulnerableModifier = 2;
-    } else this.system.vulnerableModifier = 0;
-
-    if (
-      effects.contents.find(
-        (ef) => ef.name === game.i18n.localize(`torgeternity.statusEffects.pitchBlack`) && ef.active
-      )
-    ) {
-      this.system.darknessModifier = -6;
-    } else if (
-      effects.contents.find(
-        (ef) => ef.name === game.i18n.localize(`torgeternity.statusEffects.dark`) && ef.active
-      )
-    ) {
-      this.system.darknessModifier = -4;
-    } else if (
-      effects.contents.find(
-        (ef) => ef.name === game.i18n.localize(`torgeternity.statusEffects.dim`) && ef.active
-      )
-    ) {
-      this.system.darknessModifier = -2;
-    } else this.system.darknessModifier = 0;
-  }
-
-  /**
    * simple getter for the equipped armor item
    *
    * @returns {Item|null}
@@ -246,10 +213,7 @@ export default class TorgeternityActor extends Actor {
    * @returns {object} the Hand of the actor
    */
   getDefaultHand() {
-    const setting = game.settings.get('torgeternity', 'deckSetting');
-    const handId =
-      setting.stormknights[this.id] ??
-      game.cards.find((c) => c.flags?.torgeternity?.defaultHand === this.id)?.id;
+    const handId = game.cards.find((c) => c.flags?.torgeternity?.defaultHand === this.id)?.id;
     if (handId) {
       return game.cards.get(handId);
     } else {
@@ -270,18 +234,6 @@ export default class TorgeternityActor extends Actor {
       flags: { torgeternity: { defaultHand: this.id } },
     };
     const characterHand = await Cards.create(cardData);
-
-    // getting ids of actor and card hand
-    const actorId = this.id;
-    const handId = characterHand.id;
-
-    // storing ids in game.settings
-    // deprecated, use the flag on the hand itself instead
-    // this can be removed in a future version
-    // reason: can be broken by race condition
-    const settingData = game.settings.get('torgeternity', 'deckSetting');
-    settingData.stormknights[actorId] = handId;
-    await game.settings.set('torgeternity', 'deckSetting', settingData);
 
     // return the hand
     return characterHand;
