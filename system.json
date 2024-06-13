@@ -251,8 +251,10 @@
     }
   ],
   "socket": true,
-  "gridDistance": 1,
-  "gridUnits": "m",
+  "grid": {
+    "distance": 1,
+    "units": "m"
+  },
   "primaryTokenAttribute": "wounds",
   "secondaryTokenAttribute": "shock",
   "url": "https://github.com/gmmatt/torgeternity",

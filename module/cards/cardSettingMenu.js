@@ -36,13 +36,31 @@ export default class DeckSettingMenu extends FormApplication {
       deckList: game.cards.contents,
       object: game.settings.get('torgeternity', 'deckSetting'),
       stormknights: game.actors.filter((act) => act.type == 'stormknight'),
+      piles: game.cards
+        .filter((c) => c.type === 'pile')
+        .reduce((acc, pile) => {
+          acc[pile.id] = pile.name;
+          return acc;
+        }, {}),
+      decks: game.cards
+        .filter((c) => c.type === 'deck')
+        .reduce((acc, pile) => {
+          acc[pile.id] = pile.name;
+          return acc;
+        }, {}),
+      hands: game.cards
+        .filter((c) => c.type === 'hand')
+        .reduce((acc, pile) => {
+          acc[pile.id] = pile.name;
+          return acc;
+        }, {}),
     };
     for (const sk of data.stormknights) {
       if (game.settings.get('torgeternity', 'deckSetting').stormknights) {
         data.stormknights[sk.id] = sk.getDefaultHand().id;
       }
     }
-    return mergeObject(super.getData(), data);
+    return foundry.utils.mergeObject(super.getData(), data);
   }
 
   /**

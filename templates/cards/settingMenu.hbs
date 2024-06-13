@@ -1,230 +1,129 @@
 <form>
+  <div class="flexrow">
+    <div>
+      <h2>{{localize "CARDS.TypeDeck"}} {{localize "torgeternity.cardTypes.destiny"}}</h2>
 
-    <div class="flexrow">
-        <div>
-            <h2>{{localize "CARDS.TypeDeck"}}
-                {{localize "torgeternity.cardTypes.destiny"}}</h2>
+      <div class="form-group">
+        <select name="destinyDeck" class="selectDeck">
+          {{selectOptions decks selected=object.destinyDeck}}
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="destinyDiscard">{{localize "torgeternity.cardTypes.discardPile"}}</label>
+        <select name="destinyDiscard" class="selectDeck">
+          {{selectOptions piles selected=object.destinyDiscard}}
+        </select>
+      </div>
 
-            <div class="form-group">
-                <select name="destinyDeck" class="selectDeck">
-                    {{#each deckList as |deck index|}}
-                    {{#ifequal deck.type "deck"}}
-                    <option value="{{deck.id}}" {{#ifequal deck.id ../object.destinyDeck}} selected {{/ifequal}}>
-                        {{deck.name}}
-                    </option>
-                    {{/ifequal}}
-                    {{/each}}
-                </select>
-            </div>
-            <div class="form-group">
-                <label for="destinyDiscard"> {{localize "torgeternity.cardTypes.discardPile"}}</label>
-                <select name="destinyDiscard" class="selectDeck">
-                    {{#each deckList as |deck index|}}
-                    {{#ifequal deck.type "pile"}}
-                    <option value="{{deck.id}}" {{#ifequal deck.id ../object.destinyDiscard}} selected {{/ifequal}}>
-                        {{deck.name}}
-                    </option>
-                    {{/ifequal}}
-                    {{/each}}
-                </select>
-            </div>
-
-
-            <h2>{{localize "CARDS.TypeDeck"}}
-                {{localize "torgeternity.cardTypes.drama"}}</h2>
-            <div class="form-group">
-                <select name="dramaDeck" class="selectDeck">
-                    {{#each deckList as |deck index|}}
-                    {{#ifequal deck.type "deck"}}
-                    <option value="{{deck.id}}" {{#ifequal deck.id ../object.dramaDeck}} selected {{/ifequal}}>
-                        {{deck.name}}
-                    </option>
-                    {{/ifequal}}
-                    {{/each}}
-                </select>
-            </div>
-            <div class="form-group">
-                <label for="dramaDiscard"> {{localize "torgeternity.cardTypes.discardPile"}}</label>
-                <select name="dramaDiscard" class="selectDeck">
-                    {{#each deckList as |deck index|}}
-                    {{#ifequal deck.type "pile"}}
-                    <option value="{{deck.id}}" {{#ifequal deck.id ../object.dramaDiscard}} selected {{/ifequal}}>
-                        {{deck.name}}
-                    </option>
-                    {{/ifequal}}
-                    {{/each}}
-                </select>
-            </div>
-            <div class="form-group">
-                <label for="dramaActive"> {{localize "torgeternity.cardTypes.activeDrama"}}</label>
-                <select name="dramaActive" class="selectDeck">
-                    {{#each deckList as |deck index|}}
-                    {{#ifequal deck.type "pile"}}
-                    <option value="{{deck.id}}" {{#ifequal deck.id ../object.dramaActive}} selected {{/ifequal}}>
-                        {{deck.name}}
-                    </option>
-                    {{/ifequal}}
-                    {{/each}}
-                </select>
-            </div>
-
-        </div>
-        <div>
-
-
-            <h2>{{localize "CARDS.TypeDeck"}}
-                {{localize "torgeternity.cardTypes.cosm"}}</h2>
-
-
-            <div class="form-group">
-                <label>{{localize "torgeternity.cardTypes.discardPile"}}</label>
-                <select name="cosmDiscard" data-type="String" class="selectDeck formFields">
-                    {{#select deckList}}
-                    {{#each deckList as |deck index|}}
-                    {{#ifequal deck.type "pile"}}
-                    <option value="{{deck.id}}" {{#ifequal deck.id ../object.cosmDiscard}} selected {{/ifequal}}>
-                        {{deck.name}}</option>
-                    {{/ifequal}}
-                    {{/each}}
-                    {{/select}}
-                </select>
-            </div>
-            <div class="form-group">
-                <label>{{localize "torgeternity.cosmDecks.coreEarth"}}</label>
-                <select name="coreEarth" data-type="String" class="selectDeck formFields">
-                    {{#select deckList}}
-                    {{#each deckList as |deck index|}}
-                    {{#ifequal deck.type "deck"}}
-                    <option value="{{deck.id}}" {{#ifequal deck.id ../object.coreEarth}} selected {{/ifequal}}>
-                        {{deck.name}}</option>
-                    {{/ifequal}}
-                    {{/each}}
-                    {{/select}}
-                </select>
-            </div>
-            <div class="form-group">
-                <label>{{localize "torgeternity.cosmDecks.aysle"}}</label>
-                <select name="aysle" data-type="String" class="selectDeck formFields">
-                    {{#each deckList as |deck index|}}
-                    {{#ifequal deck.type "deck"}}
-                    <option value="{{deck.id}}" {{#ifequal deck.id ../object.aysle}} selected {{/ifequal}}>
-                        {{deck.name}}
-                    </option>
-                    {{/ifequal}}
-                    {{/each}}
-                </select>
-            </div>
-            <div class="form-group">
-                <label>{{localize "torgeternity.cosmDecks.cyberpapacy"}}</label>
-                <select name="cyberpapacy" data-type="String" class="selectDeck formFields">
-                    {{#each deckList as |deck index|}}
-                    {{#ifequal deck.type "deck"}}
-                    <option value="{{deck.id}}" {{#ifequal deck.id ../object.cyberpapacy}} selected {{/ifequal}}>
-                        {{deck.name}}
-                    </option>
-                    {{/ifequal}}
-                    {{/each}}
-                </select>
-            </div>
-            <div class="form-group">
-                <label>{{localize "torgeternity.cosmDecks.livingLand"}}</label>
-                <select name="livingLand" data-type="String" class="selectDeck formFields">
-                    {{#each deckList as |deck index|}}
-                    {{#ifequal deck.type "deck"}}
-                    <option value="{{deck.id}}" {{#ifequal deck.id ../object.livingLand}} selected {{/ifequal}}>
-                        {{deck.name}}
-                    </option>
-                    {{/ifequal}}
-                    {{/each}}
-                </select>
-            </div>
-            <div class="form-group">
-                <label>{{localize "torgeternity.cosmDecks.nileEmpire"}}</label>
-                <select name="nileEmpire" data-type="String" class="selectDeck formFields">
-                    {{#each deckList as |deck index|}}
-                    {{#ifequal deck.type "deck"}}
-                    <option value="{{deck.id}}" {{#ifequal deck.id ../object.nileEmpire}} selected {{/ifequal}}>
-                        {{deck.name}}
-                    </option>
-                    {{/ifequal}}
-                    {{/each}}
-                </select>
-            </div>
-            <div class="form-group">
-                <label>{{localize "torgeternity.cosmDecks.orrorsh"}}</label>
-                <select name="orrorsh" data-type="String" class="selectDeck formFields">
-                    {{#each deckList as |deck index|}}
-                    {{#ifequal deck.type "deck"}}
-                    <option value="{{deck.id}}" {{#ifequal deck.id ../object.orrorsh}} selected {{/ifequal}}>
-                        {{deck.name}}
-                    </option>
-                    {{/ifequal}}
-                    {{/each}}
-                </select>
-            </div>
-            <div class="form-group">
-                <label>{{localize "torgeternity.cosmDecks.panPacifica"}}</label>
-                <select name="panPacifica" data-type="String" class="selectDeck formFields">
-                    {{#each deckList as |deck index|}}
-                    {{#ifequal deck.type "deck"}}
-                    <option value="{{deck.id}}" {{#ifequal deck.id ../object.panPacifica}} selected {{/ifequal}}>
-                        {{deck.name}}
-                    </option>
-                    {{/ifequal}}
-                    {{/each}}
-                </select>
-            </div>
-            <div class="form-group">
-                <label>{{localize "torgeternity.cosmDecks.tharkold"}}</label>
-                <select name="tharkold" data-type="String" class="selectDeck formFields">
-                    {{#each deckList as |deck index|}}
-                    {{#ifequal deck.type "deck"}}
-                    <option value="{{deck.id}}" {{#ifequal deck.id ../object.tharkold}} selected {{/ifequal}}>
-                        {{deck.name}}
-                    </option>
-                    {{/ifequal}}
-                    {{/each}}
-                </select>
-            </div>
-        </div>
-
-        <div>
-            <h2>{{localize "torgeternity.sheetLabels.stormknight"}}</h2>
-            <div class="stormknight-list">
-                {{#each stormknights as |stormknight index|}}
-                {{#if stormknight.isOwner}}
-                <div class="formFields flexrow">
-                    <label>{{stormknight.name}}</label>
-                    <select name="stormknights.{{stormknight.id}}" data-type="String"
-                        class="selectDeck formFields stormknightHand">
-                        {{#each ../deckList as |deck index|}}
-
-                        {{#ifequal deck.type "hand"}}
-                        <option value="{{deck.id}}" {{#ifequal (lookup @root/stormknights stormknight.id)
-                            deck.id}}selected {{/ifequal}}>
-                            {{deck.name}}
-                        </option>
-                        {{/ifequal}}
-                        {{/each}}
-                    </select>
-                </div>
-                {{/if}}
-                {{/each}}
-            </div>
-        </div>
-
+      <h2>{{localize "CARDS.TypeDeck"}} {{localize "torgeternity.cardTypes.drama"}}</h2>
+      <div class="form-group">
+        <select name="dramaDeck" class="selectDeck">
+          {{selectOptions decks selected=object.dramaDeck}}
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="dramaDiscard">{{localize "torgeternity.cardTypes.discardPile"}}</label>
+        <select name="dramaDiscard" class="selectDeck">
+          {{selectOptions piles selected=object.dramaDiscard}}
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="dramaActive">{{localize "torgeternity.cardTypes.activeDrama"}}</label>
+        <select name="dramaActive" class="selectDeck">
+          {{selectOptions piles selected=object.dramaActive}}
+        </select>
+      </div>
     </div>
-    <div class="footer flexrow">
-        <button class="createCards"><i class="fas fa-plus"></i>{{localize
-            "DOCUMENT.Cards"}}</button>
+    <div>
+      <h2>{{localize "CARDS.TypeDeck"}} {{localize "torgeternity.cardTypes.cosm"}}</h2>
 
-        <button type="submit" name="submit">
-            <i class="fas fa-check"></i>
-            {{localize "SETTINGS.Save"}}</button>
-        <button type="cancel" name="cancel">
-            <i class="fas fa-ban"></i>
-            {{localize "Cancel"}}</button>
-
-
+      <div class="form-group">
+        <label>{{localize "torgeternity.cardTypes.discardPile"}}</label>
+        <select name="cosmDiscard" data-type="String" class="selectDeck formFields">
+          {{selectOptions piles selected=object.cosmDiscard}}
+        </select>
+      </div>
+      <div class="form-group">
+        <label>{{localize "torgeternity.cosmDecks.coreEarth"}}</label>
+        <select name="coreEarth" data-type="String" class="selectDeck formFields">
+          {{selectOptions decks selected=object.coreEarth}}
+        </select>
+      </div>
+      <div class="form-group">
+        <label>{{localize "torgeternity.cosmDecks.aysle"}}</label>
+        <select name="aysle" data-type="String" class="selectDeck formFields">
+          {{selectOptions decks selected=object.aysle}}
+        </select>
+      </div>
+      <div class="form-group">
+        <label>{{localize "torgeternity.cosmDecks.cyberpapacy"}}</label>
+        <select name="cyberpapacy" data-type="String" class="selectDeck formFields">
+          {{selectOptions decks selected=object.cyberpapacy}}
+        </select>
+      </div>
+      <div class="form-group">
+        <label>{{localize "torgeternity.cosmDecks.livingLand"}}</label>
+        <select name="livingLand" data-type="String" class="selectDeck formFields">
+          {{selectOptions decks selected=object.livingLand}}
+        </select>
+      </div>
+      <div class="form-group">
+        <label>{{localize "torgeternity.cosmDecks.nileEmpire"}}</label>
+        <select name="nileEmpire" data-type="String" class="selectDeck formFields">
+          {{selectOptions decks selected=object.nileEmpire}}
+        </select>
+      </div>
+      <div class="form-group">
+        <label>{{localize "torgeternity.cosmDecks.orrorsh"}}</label>
+        <select name="orrorsh" data-type="String" class="selectDeck formFields">
+          {{selectOptions decks selected=object.orrorsh}}
+        </select>
+      </div>
+      <div class="form-group">
+        <label>{{localize "torgeternity.cosmDecks.panPacifica"}}</label>
+        <select name="panPacifica" data-type="String" class="selectDeck formFields">
+          {{selectOptions decks selected=object.panPacifica}}
+        </select>
+      </div>
+      <div class="form-group">
+        <label>{{localize "torgeternity.cosmDecks.tharkold"}}</label>
+        <select name="tharkold" data-type="String" class="selectDeck formFields">
+          {{selectOptions decks selected=object.tharkold}}
+        </select>
+      </div>
     </div>
+
+    <div>
+      <h2>{{localize "torgeternity.sheetLabels.stormknight"}}</h2>
+      <div class="stormknight-list">
+        {{#each stormknights as |stormknight index|}} {{#if stormknight.isOwner}}
+        <div class="formFields flexrow">
+          <label>{{stormknight.name}}</label>
+          <select
+            name="stormknights.{{stormknight.id}}"
+            data-type="String"
+            class="selectDeck formFields stormknightHand"
+          >
+            {{selectOptions ../hands selected=(lookup @root/stormknights stormknight.id)}}
+          </select>
+        </div>
+        {{/if}} {{/each}}
+      </div>
+    </div>
+  </div>
+  <div class="footer flexrow">
+    <button class="createCards">
+      <i class="fas fa-plus"></i>
+      {{localize "DOCUMENT.Cards"}}
+    </button>
+
+    <button type="submit" name="submit">
+      <i class="fas fa-check"></i>
+      {{localize "SETTINGS.Save"}}
+    </button>
+    <button type="cancel" name="cancel">
+      <i class="fas fa-ban"></i>
+      {{localize "Cancel"}}
+    </button>
+  </div>
 </form>

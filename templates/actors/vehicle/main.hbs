@@ -21,18 +21,14 @@
     <div>
       <p>{{localize "torgeternity.sheetLabels.type"}}:</p>
       <select name="system.type" class="input-box">
-        {{#select actor.system.type}} {{#each config.vehicleTypes as |name type|}}
-        <option value="{{type}}">{{localize name}}</option>
-        {{/each}} {{/select}}
+        {{selectOptions config.vehicleTypes selected=actor.system.type localize=true}}
       </select>
     </div>
 
     <div>
       <p>{{localize "torgeternity.sheetLabels.size"}}:</p>
       <select name="system.details.sizeBonus" class="input-box">
-        {{#select actor.system.details.sizeBonus}} {{#each config.sizes as |name type|}}
-        <option value="{{type}}">{{localize name}}</option>
-        {{/each}} {{/select}}
+        {{selectOptions config.sizes selected=actor.system.details.sizeBonus localize=true}}
       </select>
     </div>
 
@@ -151,9 +147,8 @@
                 data-dtype="Number"
               />
               <select name="system.price.magnitude" class="input-box">
-                {{#select actor.system.price.magnitude}} {{#each config.magnitudes as |name type|}}
-                <option value="{{type}}">{{localize name}}</option>
-                {{/each}} {{/select}}
+                {{selectOptions config.magnitudes selected=actor.system.price.magnitude
+                localize=true}}
               </select>
               ( {{actor.system.price.value}} )
             </td>

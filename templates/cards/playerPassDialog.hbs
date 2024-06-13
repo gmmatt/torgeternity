@@ -1,12 +1,10 @@
 <form class="cards-dialog">
-
   <div class="form-group stacked">
     <label>{{localize "torgeternity.dialogPrompts.playerPassTo"}}</label>
     <div class="form-fields">
       <select name="to">
-        {{selectOptions cards nameAttr="id" labelAttr="name"}}
+        {{selectOptions cards valueAttr="id" labelAttr="name"}}
       </select>
     </div>
   </div>
-
 </form>

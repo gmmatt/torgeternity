@@ -545,33 +545,21 @@
         <div>Defense Only?</div>
         <span>
           {{localize 'torgeternity.skills.intimidation'}}
-          <select name="system.skills.intimidation.defenseOnly" class="input-box">
-            {{#select actor.system.skills.intimidation.defenseOnly}} {{#each config.yesNo as |name
-            type|}}
-            <option value="{{type}}">{{localize name}}</option>
-            {{/each}} {{/select}}
-          </select>
+          <select name="system.skills.intimidation.defenseOnly" class="input-box"></select>
 
           {{localize 'torgeternity.skills.maneuver'}}
-          <select name="system.skills.maneuver.defenseOnly" class="input-box">
-            {{#select actor.system.skills.maneuver.defenseOnly}} {{#each config.yesNo as |name
-            type|}}
-            <option value="{{type}}">{{localize name}}</option>
-            {{/each}} {{/select}}
-          </select>
+          <select name="system.skills.maneuver.defenseOnly" class="input-box"></select>
 
           {{localize 'torgeternity.skills.taunt'}}
           <select name="system.skills.taunt.defenseOnly" class="input-box">
-            {{#select actor.system.skills.taunt.defenseOnly}} {{#each config.yesNo as |name type|}}
-            <option value="{{type}}">{{localize name}}</option>
-            {{/each}} {{/select}}
+            {{selectOptions config.yesNo selected=actor.system.skills.taunt.defenseOnly
+            localize=true}}
           </select>
 
           {{localize 'torgeternity.skills.trick'}}
           <select name="system.skills.trick.defenseOnly" class="input-box">
-            {{#select actor.system.skills.trick.defenseOnly}} {{#each config.yesNo as |name type|}}
-            <option value="{{type}}">{{localize name}}</option>
-            {{/each}} {{/select}}
+            {{selectOptions config.yesNo selected=actor.system.skills.trick.defenseOnly
+            localize=true}}
           </select>
         </span>
       </div>

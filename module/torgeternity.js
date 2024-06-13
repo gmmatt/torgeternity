@@ -187,9 +187,9 @@ Hooks.on('ready', async function () {
 
   sheetResize();
 
-  // modifying explosion methode for dices
-  Die.prototype.explode = explode;
-  Die.prototype.reroll = reroll;
+  // monkey-patch explosion method for die rolls
+  foundry.dice.terms.Die.prototype.explode = explode;
+  foundry.dice.terms.Die.prototype.reroll = reroll;
 
   // adding gmScreen to UI
   ui.GMScreen = new GMScreen();
