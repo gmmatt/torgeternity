@@ -6,7 +6,7 @@ export class PossibilityByCosm extends Application {
    *
    */
   static get defaultOptions() {
-    return mergeObject(super.defaultOptions, {
+    return foundry.utils.mergeObject(super.defaultOptions, {
       template: 'systems/torgeternity/templates/possibilityByCosm.hbs',
       width: 'auto',
       height: 'auto',
