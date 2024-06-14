@@ -250,6 +250,46 @@
       "flags": {}
     }
   ],
+  "documentTypes": {
+    "Actor": {
+      "stormknight": {
+        "htmlFields": ["details.background"]
+      },
+      "threat": {
+        "htmlFields": ["details.description"]
+      },
+      "vehicle": {
+        "htmlFields": ["description"]
+      }
+    },
+    "Card": {
+      "cosm": {},
+      "destiny": {},
+      "drama": {}
+    },
+    "Item": {
+      "armor": { "htmlFields": ["description"] },
+      "customAttack": { "htmlFields": ["description"] },
+      "customSkill": { "htmlFields": ["description"] },
+      "enhancement": { "htmlFields": ["description"] },
+      "eternityshard": { "htmlFields": ["description"] },
+      "firearm": { "htmlFields": ["description"] },
+      "gear": { "htmlFields": ["description"] },
+      "heavyweapon": { "htmlFields": ["description"] },
+      "implant": { "htmlFields": ["description"] },
+      "meleeweapon": { "htmlFields": ["description"] },
+      "miracle": { "htmlFields": ["description"] },
+      "missileweapon": { "htmlFields": ["description"] },
+      "perk": { "htmlFields": ["description"] },
+      "psionicpower": { "htmlFields": ["description"] },
+      "shield": { "htmlFields": ["description"] },
+      "specialability": { "htmlFields": ["description"] },
+      "specialability-rollable": { "htmlFields": ["description"] },
+      "spell": { "htmlFields": ["description"] },
+      "vehicle": { "htmlFields": ["description"] },
+      "vehicleAddOn": { "htmlFields": ["description"] }
+    }
+  },
   "socket": true,
   "grid": {
     "distance": 1,
