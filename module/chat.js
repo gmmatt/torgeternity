@@ -251,7 +251,7 @@ async function onDrama(event) {
   parentDeleteByTime(parentMessage);
 }
 
-function onPlus3(event) {
+async function onPlus3(event) {
   const parentMessageId = event.currentTarget.closest('.chat-message').dataset.messageId;
   const parentMessage = game.messages.find(({ id }) => id === parentMessageId);
   if (!(parentMessage.user.id === game.user.id) && !game.user.isGM) {
@@ -273,7 +273,7 @@ function onPlus3(event) {
   parentDeleteByTime(parentMessage);
 }
 
-function onBd(event) {
+async function onBd(event) {
   const parentMessageId = event.currentTarget.closest('.chat-message').dataset.messageId;
   const parentMessage = game.messages.find(({ id }) => id === parentMessageId);
   if (!(parentMessage.user.id === game.user.id) && !game.user.isGM) {
@@ -294,7 +294,7 @@ function onBd(event) {
   parentMessage.setFlag('torgeternity', 'currentTarget');
   test.isFavStyle = 'pointer-events:none;color:gray;display:none';
 
-  const finalValue = torgBD(test.trademark);
+  const finalValue = await torgBD(test.trademark);
 
   const newDamage = parseInt(test.damage) + parseInt(finalValue.total);
   test.damage = newDamage;
@@ -318,7 +318,7 @@ function onBd(event) {
   game.messages.get(parentMessageId).delete();
 }
 
-function onModifier(event) {
+async function onModifier(event) {
   const parentMessageId = event.currentTarget.closest('.chat-message').dataset.messageId;
   const parentMessage = game.messages.find(({ id }) => id === parentMessageId);
   if (!(parentMessage.user.id === game.user.id) && !game.user.isGM) {

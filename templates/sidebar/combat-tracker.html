@@ -98,7 +98,7 @@
                             <i class="fas fa-skull"></i></a>
                         {{/if}}
 
-                        <a class="player-dsr-counter" {{#unless turns}}disabled{{/unless}}>
+                        <a class="player-dsr-counter" {{#unless turn.isOwner}}disabled{{/unless}}>
                             <span class="player-dsr-token">
                                 <span class="dsr-step">
                                     {{#if flags.torgeternity.dsrStage}}
