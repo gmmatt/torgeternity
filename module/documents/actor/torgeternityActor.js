@@ -207,7 +207,7 @@ export default class TorgeternityActor extends Actor {
   getDefaultHand() {
     const hand = game.cards.find((c) => c.flags?.torgeternity?.defaultHand === this.id);
     if (hand) {
-      return game.cards.get(hand);
+      return hand;
     } else {
       console.error(`no default hand for actor : ${this.name}`);
       return false;

@@ -38,6 +38,7 @@ import { TorgeternityMacros } from './macros.js';
 import { ChatMessageTorg } from './chat/document.js';
 import * as actorDataModels from './data/actor/index.js';
 import * as itemDataModels from './data/item/index.js';
+import * as cardDataModels from './data/card/index.js';
 import TorgActiveEffect from './documents/active-effect/torgActiveEffect.js';
 
 Hooks.once('init', async function () {
@@ -60,6 +61,7 @@ Hooks.once('init', async function () {
   CONFIG.ActiveEffect.documentClass = TorgActiveEffect;
   CONFIG.Actor.dataModels = actorDataModels.config;
   CONFIG.Item.dataModels = itemDataModels.config;
+  CONFIG.Card.dataModels = cardDataModels.config;
   CONFIG.statusEffects = torgeternity.statusEffects;
   CONFIG.attributeTypes = torgeternity.attributeTypes;
 
@@ -1007,7 +1009,7 @@ Hooks.on('deleteCombat', async (combat, dataUpdate) => {
 
 Hooks.on('deleteActor', async (actor, data1, data2) => {
   if (!game.user.isGM || actor.type != 'stormknight') return;
-  actor.getDefaultHand().delete();
+  actor.getDefaultHand()?.delete();
 });
 
 Hooks.on('renderChatLog', (app, html, data) => {
