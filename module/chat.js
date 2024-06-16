@@ -325,7 +325,7 @@ async function onBd(event) {
   game.messages.get(parentMessageId).delete();
 }
 
-function onModifier(event) {
+async function onModifier(event) {
   const parentMessageId = event.currentTarget.closest('.chat-message').dataset.messageId;
   const parentMessage = game.messages.find(({ id }) => id === parentMessageId);
   if (!(parentMessage.user.id === game.user.id) && !game.user.isGM) {

@@ -15,10 +15,10 @@
       "flags": {}
     }
   ],
-  "version": "3.8.2",
+  "version": "12.1.0",
   "compatibility": {
-    "minimum": "11",
-    "verified": "11.315"
+    "minimum": "12",
+    "verified": "12.327"
   },
   "esmodules": ["module/torgeternity.js"],
   "scripts": ["module/lib/setting-extender.js"],
