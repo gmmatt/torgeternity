@@ -1092,9 +1092,10 @@ nav#controls ol .torgHand:before {
   height: 100%;
   border: none;
 }
+
 .tab[data-tab].active.flexrow,
 .tab[data-tab].active.flexcol {
-  overflow-y: scroll;
+  overflow-y: auto;
 }
 
 #sidebar #sidebar-tabs {
