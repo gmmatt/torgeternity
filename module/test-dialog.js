@@ -1,4 +1,4 @@
-import { ChatMessageTorg } from './chat/document.js';
+import { ChatMessageTorg } from './documents/chat/document.js';
 import * as torgchecks from './torgchecks.js';
 
 /**

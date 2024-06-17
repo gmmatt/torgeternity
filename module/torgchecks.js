@@ -1,6 +1,6 @@
 import { TestDialog } from './test-dialog.js';
 import { checkUnskilled } from './sheets/torgeternityActorSheet.js';
-import { ChatMessageTorg } from './chat/document.js';
+import { ChatMessageTorg } from './documents/chat/document.js';
 
 /**
  *
