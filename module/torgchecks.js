@@ -797,9 +797,8 @@ export async function renderSkillChat(test) {
         } else {
           // Add BDs in promise if applicable as this should only be rolled if the test is successful
           if (test.addBDs && test.previousBonus === false && !test.BDCall) {
-            test.BDDamageInPromise = 0;
             iteratedRoll = await torgBD(test.trademark, test.addBDs);
-            test.BDDamageInPromise += iteratedRoll.total;
+            test.BDDamageInPromise = iteratedRoll.total;
             test.diceList = test.diceList.concat(iteratedRoll.dice[0].values);
             test.amountBD += test.addBDs;
             test.addBDs = 0;
@@ -809,10 +808,8 @@ export async function renderSkillChat(test) {
 
             test.bdDamageLabelStyle = 'display: block';
             test.bdDamageSum += test.BDDamageInPromise;
-            test.BDDamageInPromise = 0;
-            adjustedDamage += test.bdDamageSum;
           }
-
+          adjustedDamage += test.BDDamageInPromise ?? 0;
           test.applyDamLabel = 'display:inline';
           test.damageDescription = torgDamage(adjustedDamage, test.targetAdjustedToughness).label;
           test.damageSubDescription =

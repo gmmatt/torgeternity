@@ -300,9 +300,7 @@ async function onBd(event) {
 
   const finalValue = await torgBD(test.trademark, 1);
 
-  const newDamage = !test.BDDamageInPromise
-    ? parseInt(test.damage) + parseInt(finalValue.total)
-    : parseInt(test.damage) + parseInt(finalValue.total) + parseInt(test.BDDamageInPromise);
+  const newDamage = test.damage + finalValue.total;
 
   test.damage = newDamage;
   test.diceroll = finalValue;
