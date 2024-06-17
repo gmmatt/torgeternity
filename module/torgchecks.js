@@ -810,6 +810,7 @@ export async function renderSkillChat(test) {
             test.bdDamageLabelStyle = 'display: block';
             test.bdDamageSum += test.BDDamageInPromise;
             test.BDDamageInPromise = 0;
+            adjustedDamage += test.bdDamageSum;
           }
 
           test.applyDamLabel = 'display:inline';
