@@ -1734,7 +1734,7 @@ nav#controls,
 }
 
 .combat-sidebar #combat-tracker {
-  overflow-y: scroll;
+  overflow-y: auto;
   flex: 2 !important;
 }
 
