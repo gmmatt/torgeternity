@@ -6,7 +6,7 @@
 - Solved bugs and style issues:
   - BDs on powers weren't shown on a chat card [#406](https://github.com/gmmatt/torgeternity/issues/406)
   - More rolls are asynchronous (as it should've been since a long time and needed for V12)
-  - 
+  - Upstyling of the combat tracker
 
 ## v. 3.8.1
 
