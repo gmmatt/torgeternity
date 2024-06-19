@@ -1,8 +1,11 @@
 # TORG Eternity Changelog
 
-## v. 12.0.1
+## v. 12.1.0
 
 - Broken links are no longer ugly placeholders, but a glowing effect on hovering remains to signal that there should be something there [#382](https://github.com/gmmatt/torgeternity/issues/382)
+- It is now possible to roll BDs and add damage in advance, using the dialog window [#123](https://github.com/gmmatt/torgeternity/issues/123). From this work followed:
+  - Reorganized the roll dialog, something prettier
+  - Chatcards now show the sum of damage from BDs in the details (if applicable)
 - Solved bugs and style issues:
   - BDs on powers weren't shown on a chat card [#406](https://github.com/gmmatt/torgeternity/issues/406)
   - More rolls are asynchronous (as it should've been since a long time and needed for V12)

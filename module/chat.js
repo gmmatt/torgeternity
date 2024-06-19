@@ -61,7 +61,7 @@ async function onFavored(event) {
 
   test.unskilledLabel = 'display:none';
 
-  renderSkillChat(test);
+  await renderSkillChat(test);
   parentDeleteByTime(parentMessage);
 }
 
@@ -158,7 +158,7 @@ async function onPossibility(event) {
   // add chat note "poss spent"
   test.chatNote += game.i18n.localize('torgeternity.sheetLabels.possSpent');
 
-  renderSkillChat(test);
+  await renderSkillChat(test);
   parentDeleteByTime(parentMessage);
 }
 
@@ -186,7 +186,7 @@ async function onUp(event) {
   test.chatTitle += '*';
   test.unskilledLabel = 'display:none';
 
-  renderSkillChat(test);
+  await renderSkillChat(test);
   parentDeleteByTime(parentMessage);
 }
 
@@ -217,7 +217,7 @@ async function onHero(event) {
   test.chatTitle += '*';
   test.unskilledLabel = 'display:none';
 
-  renderSkillChat(test);
+  await renderSkillChat(test);
   parentDeleteByTime(parentMessage);
 }
 
@@ -247,7 +247,7 @@ async function onDrama(event) {
   test.chatTitle += '*';
   test.unskilledLabel = 'display:none';
 
-  renderSkillChat(test);
+  await renderSkillChat(test);
   parentDeleteByTime(parentMessage);
 }
 
@@ -269,7 +269,7 @@ async function onPlus3(event) {
 
   test.unskilledLabel = 'display:none';
 
-  renderSkillChat(test);
+  await renderSkillChat(test);
   parentDeleteByTime(parentMessage);
 }
 
@@ -293,15 +293,18 @@ async function onBd(event) {
   parentMessage.setFlag('torgeternity', 'test');
   parentMessage.setFlag('torgeternity', 'currentTarget');
   test.isFavStyle = 'pointer-events:none;color:gray;display:none';
+  test.unskilledLabel = 'display:none';
+  test.bdDamageLabelStyle = 'display:block';
 
-  const finalValue = await torgBD(test.trademark);
+  const finalValue = await torgBD(test.trademark, 1);
 
-  const newDamage = parseInt(test.damage) + parseInt(finalValue.total);
+  const newDamage = test.damage + finalValue.total;
+
   test.damage = newDamage;
   test.diceroll = finalValue;
 
   test.amountBD += 1;
-  if (test.amountBD === 1) {
+  if (test.amountBD === 1 && !test.addBDs) {
     test.chatTitle += ` +${test.amountBD}` + game.i18n.localize('torgeternity.chatText.bonusDice');
   } else if (test.amountBD > 1) {
     test.chatTitle = test.chatTitle.replace(
@@ -312,9 +315,9 @@ async function onBd(event) {
     ui.notifications.info(game.i18n.localize('torgeternity.notifications.failureBDResolution'));
   }
 
-  test.unskilledLabel = 'display:none';
+  test.bdDamageSum += finalValue.total;
 
-  renderSkillChat(test);
+  await renderSkillChat(test);
   game.messages.get(parentMessageId).delete();
 }
 

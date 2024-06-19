@@ -18,6 +18,8 @@ export async function renderSkillChat(test) {
   test.applyDebuffLabel = 'display:none';
   test.applyDamLabel = 'display:none';
   test.backlashLabel = 'display:none';
+  let iteratedRoll;
+
   for (let i = 0; i < test.targetAll.length; i++) {
     const target = test.targetAll[i];
     test.target = target;
@@ -543,7 +545,6 @@ export async function renderSkillChat(test) {
         test.resultTextColor +=
           ';text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000, 0px 0px 15px black;';
       }
-      // test.backlashLabel = 'display:inline';
       test.actionTotalLabel = 'display:none';
       test.possibilityStyle = 'display:none';
       test.upStyle = 'display:none';
@@ -765,6 +766,10 @@ export async function renderSkillChat(test) {
       if (test.vitalAreaDamageModifier) {
         adjustedDamage = test.damage + test.vitalAreaDamageModifier;
       }
+      // add additional Damage from roll dialogue
+      if (test?.additionalDamage && test.previousBonus === false) {
+        adjustedDamage += test?.additionalDamage;
+      }
       // Check for whether a target is present & turn on display of damage sub-label
       if (test.target.present === true) {
         test.damageSubLabel = 'display:block';
@@ -791,6 +796,21 @@ export async function renderSkillChat(test) {
             'torgeternity.chatText.check.result.attackMissed'
           );
         } else {
+          // Add BDs in promise if applicable as this should only be rolled if the test is successful
+          if (test.addBDs && test.previousBonus === false && !test.BDCall) {
+            iteratedRoll = await torgBD(test.trademark, test.addBDs);
+            test.BDDamageInPromise = iteratedRoll.total;
+            test.diceList = test.diceList.concat(iteratedRoll.dice[0].values);
+            test.amountBD += test.addBDs;
+            test.addBDs = 0;
+
+            test.chatTitle +=
+              ` +${test.amountBD}` + game.i18n.localize('torgeternity.chatText.bonusDice');
+
+            test.bdDamageLabelStyle = 'display: block';
+            test.bdDamageSum += test.BDDamageInPromise;
+          }
+          adjustedDamage += test.BDDamageInPromise ?? 0;
           test.applyDamLabel = 'display:inline';
           test.damageDescription = torgDamage(adjustedDamage, test.targetAdjustedToughness).label;
           test.damageSubDescription =
@@ -801,10 +821,7 @@ export async function renderSkillChat(test) {
             test.targetAdjustedToughness +
             ' ' +
             game.i18n.localize('torgeternity.chatText.check.result.toughness');
-          // if auto apply damages == true in settings
-          /* if (game.settings.get("torgeternity", "autoDamages")) {
-                      applyDamages(torgDamage(adjustedDamage, test.targetAdjustedToughness))
-                  }*/
+          test.BDCall = true; // Setting this flag to make sure the BD in advance is called once.
         }
       } else {
         // Basic roll
@@ -923,6 +940,8 @@ export async function renderSkillChat(test) {
   // roll Dice once, and handle the error if DSN is not installed
   try {
     await game.dice3d.showForRoll(test.diceroll, game.user, true);
+    await game.dice3d?.showForRoll(iteratedRoll);
+    iteratedRoll = undefined;
     game.dice3d.messageHookDisabled = false;
   } catch (e) {}
   for (const mData of messageData) {
@@ -988,16 +1007,11 @@ export function torgBonus(rollTotal) {
 
 /**
  *
- * @param isTrademark
+ * @param isTrademark Is this roll with the perk of trademark weapon?
+ * @param amount The amount of BDs that is ought to roll
  */
-export async function torgBD(isTrademark) {
-  let diceroll;
-  if (isTrademark) {
-    diceroll = await new Roll('1d6rr1x6max5').evaluate();
-  } else {
-    diceroll = await new Roll('1d6x6max5').evaluate();
-  }
-
+export async function torgBD(isTrademark, amount = 1) {
+  const diceroll = await new Roll(`${amount}d6${isTrademark ? 'rr1' : ''}x6max5`).evaluate();
   return diceroll;
 }
 
@@ -1612,7 +1626,7 @@ async function manyDN(test, target) {
 }
 
 async function oneDN(test) {
-  let highestDN = 0;
+  let highestDN = test?.DN || 0;
   let tempDN;
   switch (test.DNDescriptor) {
     case 'veryEasy':

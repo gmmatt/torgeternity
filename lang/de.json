@@ -84,7 +84,8 @@
           "resetDefense": "Nicht mehr länger in aktiver Verteidigung.",
           "result": "Ergebnis",
           "standartSuccess": "Standarderfolg",
-          "toughness": "Robustheit"
+          "toughness": "Robustheit",
+          "BDDamageSum": "Summe des Schadens der BW"
         },
         "testUnsuccessfull": "Probe nicht erfolgreich"
       },
@@ -751,9 +752,11 @@
       "backlash1": "Rückkopplung",
       "backlash2": "Reduzierte\nRückkopplung",
       "backlash3": "Kopfschmerzen!",
-      "backlash1Tooltip": "Apply 2 shocks",
-      "backlash2Tooltip": "Apply 1 shock",
-      "backlash3Tooltip": "Apply Very Stymied"
+      "backlash1Tooltip": "2 Schock anwenden",
+      "backlash2Tooltip": "1 Schock anwenden",
+      "backlash3Tooltip": "Sehr Angeschlagen anwenden",
+      "additionalDamage": "+ Schaden",
+      "bonusDice": "BW im Voraus würfeln"
     },
     "sizes": {
       "large": "Groß",
@@ -767,6 +770,7 @@
       "disfavored": "Benachteiligt",
       "disfavoredTip": "Anhaken, wenn der Wurf benachteiligt ist. Der Würfelwurf wird dann nicht auf einer 10 oder 20 explodieren.",
       "favored": "Begünstigt",
+      "favoredanddisfavored": "Begünstigt/Benachteiligt",
       "favoredTip": "Setze hier einen Haken, sofern die Probe aus welchen Gründen auch immer im Nachhinein begünstigt wird."
     },
     "skills": {

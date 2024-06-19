@@ -699,6 +699,8 @@ function rollItemMacro(itemName) {
           darknessModifier: 0,
           chatNote: weaponData.chatNote,
           movementModifier: 0,
+          bdDamageLabelStyle: 'display:none',
+          bdDamageSum: 0,
         };
 
         new TestDialog(mTest);
@@ -758,6 +760,8 @@ function rollItemMacro(itemName) {
           attackOptions: true,
           rollTotal: 0,
           chatNote: '',
+          bdDamageLabelStyle: 'display:none',
+          bdDamageSum: 0,
         };
 
         new TestDialog(test);
@@ -878,6 +882,8 @@ function rollSkillMacro(skillName, attributeName, isInteractionAttack) {
     darknessModifier: 0, // parseInt(actor.system.darknessModifier),
     type: 'skill',
     movementModifier: 0,
+    bdDamageLabelStyle: 'display:none',
+    bdDamageSum: 0,
   };
   if (isInteractionAttack) {
     test['type'] = 'interactionAttack';

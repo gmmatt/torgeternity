@@ -57,6 +57,7 @@ export class TestDialog extends FormApplication {
     const myActor = this.test.actor.includes('Token')
       ? fromUuidSync(this.test.actor)
       : fromUuidSync(this.test.actor);
+    data.test.hasModifiers = false;
 
     if (parseInt(myActor.system.wounds.value) <= 3) {
       // The wound penalties are never more than -3, regardless on how many wounds a token can suffer / have. CrB p. 117
@@ -195,6 +196,18 @@ export class TestDialog extends FormApplication {
       };
     }
 
+    if (
+      data.test?.woundModifier != 0 ||
+      data.test?.stymiedModifier != 0 ||
+      data.test?.darknessModifier != 0 ||
+      data.test?.sizeModifier != 0 ||
+      data.test?.vulnerableModifier != 0 ||
+      data.test?.speedModifier != 0 ||
+      data.test?.maneuverModifier != 0
+    ) {
+      data.test.hasModifiers = true;
+    }
+
     return data;
   }
 
@@ -203,7 +216,7 @@ export class TestDialog extends FormApplication {
    * @param html
    */
   activateListeners(html) {
-    html.find('.skill-roll-button').click(this._onRoll.bind(this));
+    html.find('.test-dialog-rollbutton').click(this._onRoll.bind(this));
 
     const bonusText = html[0].querySelector('#bonus-text');
 
@@ -373,6 +386,15 @@ export class TestDialog extends FormApplication {
       } else {
         this.test.coverModifier = 0;
       }
+
+      // Add additional damage and BDs in promise. Null if not applicable
+      this.test.additionalDamage =
+        !isNaN(parseInt(document.getElementById('additional-damage')?.value)) &&
+        parseInt(document.getElementById('additional-damage').value);
+
+      this.test.addBDs =
+        parseInt(document.getElementById('additionalBDSelect').value) > 0 &&
+        parseInt(document.getElementById('additionalBDSelect').value);
     }
 
     // Add other modifier 1
