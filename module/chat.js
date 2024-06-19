@@ -72,7 +72,7 @@ async function onPossibility(event) {
     return;
   }
   const test = parentMessage.getFlag('torgeternity', 'test');
-  test.BDCall = true;
+
   // check for actor possibility
   // If vehicle roll, search for a character from the user
   const possOwner = test.actorType === 'vehicle' ? game.user.character?.uuid : test.actor;
@@ -295,8 +295,6 @@ async function onBd(event) {
   test.isFavStyle = 'pointer-events:none;color:gray;display:none';
   test.unskilledLabel = 'display:none';
   test.bdDamageLabelStyle = 'display:block';
-
-  test.BDCall = true; // this is necessary due to called rendered card off, add BDs in advance would trigger otherwise
 
   const finalValue = await torgBD(test.trademark, 1);
 

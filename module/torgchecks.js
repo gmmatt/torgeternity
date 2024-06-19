@@ -820,6 +820,7 @@ export async function renderSkillChat(test) {
             test.targetAdjustedToughness +
             ' ' +
             game.i18n.localize('torgeternity.chatText.check.result.toughness');
+          test.BDCall = true; // Setting this flag to make sure the BD in advance is called once.
         }
       } else {
         // Basic roll
