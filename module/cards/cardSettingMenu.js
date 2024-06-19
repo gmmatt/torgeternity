@@ -56,9 +56,7 @@ export default class DeckSettingMenu extends FormApplication {
         }, {}),
     };
     for (const sk of data.stormknights) {
-      if (game.settings.get('torgeternity', 'deckSetting').stormknights) {
-        data.stormknights[sk.id] = sk.getDefaultHand().id;
-      }
+      data.stormknights[sk.id] = sk.getDefaultHand().id;
     }
     return foundry.utils.mergeObject(super.getData(), data);
   }

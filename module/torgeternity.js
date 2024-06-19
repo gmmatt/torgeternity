@@ -35,7 +35,7 @@ import { activateStandartScene } from './activateStandartScene.js';
 import { torgMigration } from './migrations.js';
 import initTextEdidor from './initTextEditor.js';
 import { TorgeternityMacros } from './macros.js';
-import { ChatMessageTorg } from './chat/document.js';
+import { ChatMessageTorg } from './documents/chat/document.js';
 import * as actorDataModels from './data/actor/index.js';
 import * as itemDataModels from './data/item/index.js';
 import * as cardDataModels from './data/card/index.js';

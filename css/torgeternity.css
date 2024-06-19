@@ -1733,8 +1733,26 @@ nav#controls,
   color: #f8f83c;
 }
 
+#combat-round .encounters.flexrow {
+  justify-content: space-between;
+  margin: 0 5px;
+}
+
+#combat-round .encounters.flexrow > * {
+  flex: unset;
+}
+
+#combat-round .encounters.flexrow > h3 {
+  border-bottom: none;
+  margin:unset;
+}
+
+#combat ol li.combatant.active {
+  border-left: 5px solid black;
+}
+
 .combat-sidebar #combat-tracker {
-  overflow-y: scroll;
+  overflow-y: auto;
   flex: 2 !important;
 }
 

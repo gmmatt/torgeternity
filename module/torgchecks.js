@@ -1,6 +1,6 @@
 import { TestDialog } from './test-dialog.js';
 import { checkUnskilled } from './sheets/torgeternityActorSheet.js';
-import { ChatMessageTorg } from './chat/document.js';
+import { ChatMessageTorg } from './documents/chat/document.js';
 
 /**
  *
@@ -8,6 +8,7 @@ import { ChatMessageTorg } from './chat/document.js';
  */
 export async function renderSkillChat(test) {
   const messages = [];
+  const messageData = [];
   if (test?.targetAll.length != 0) {
   } else test.targetAll = [test.target];
   // disable DSN (if used) for 'every' message (want to show only one dice despite many targets)
@@ -921,7 +922,7 @@ export async function renderSkillChat(test) {
     chatData.speaker.actor = test.actor.id;
     chatData.speaker.alias = test.actor.name;
 
-    const messageData = {
+    const messageDataIterated = {
       ...chatData,
       flags: {
         torgeternity: { test, currentTarget },
@@ -929,7 +930,7 @@ export async function renderSkillChat(test) {
       },
     };
 
-    messages.push(await ChatMessageTorg.create(messageData));
+    messageData.push(messageDataIterated);
   }
 
   // reset tokens targeted, they are printed in the chatCard
@@ -943,6 +944,9 @@ export async function renderSkillChat(test) {
     iteratedRoll = undefined;
     game.dice3d.messageHookDisabled = false;
   } catch (e) {}
+  for (const mData of messageData) {
+    messages.push(await ChatMessageTorg.create(mData));
+  }
   return messages;
 }
 
