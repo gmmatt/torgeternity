@@ -797,7 +797,7 @@ export async function renderSkillChat(test) {
           );
         } else {
           // Add BDs in promise if applicable as this should only be rolled if the test is successful
-          if (test.addBDs && test.previousBonus === false && !test.BDCall) {
+          if (test.addBDs && test.previousBonus === false) {
             iteratedRoll = await torgBD(test.trademark, test.addBDs);
             test.BDDamageInPromise = iteratedRoll.total;
             test.diceList = test.diceList.concat(iteratedRoll.dice[0].values);
@@ -821,7 +821,6 @@ export async function renderSkillChat(test) {
             test.targetAdjustedToughness +
             ' ' +
             game.i18n.localize('torgeternity.chatText.check.result.toughness');
-          test.BDCall = true; // Setting this flag to make sure the BD in advance is called once.
         }
       } else {
         // Basic roll
@@ -929,21 +928,25 @@ export async function renderSkillChat(test) {
         template: './systems/torgeternity/templates/partials/skill-card.hbs',
       },
     };
+
+    // roll Dice once, and handle the error if DSN is not installed
+    if (i === 0) {
+      try {
+        await game.dice3d.showForRoll(test.diceroll, game.user, true);
+      } catch (e) {};
+      try {
+        await game.dice3d?.showForRoll(iteratedRoll);
+        iteratedRoll = undefined;
+      } catch (e) {}
+    }
+
     messages.push(await ChatMessageTorg.create(messageDataIterated));
-    messageData.push(messageDataIterated);
   }
 
   // reset tokens targeted, they are printed in the chatCard
   await game.user.updateTokenTargets();
   await game.user.broadcastActivity({ targets: [] });
-
-  // roll Dice once, and handle the error if DSN is not installed
-  try {
-    await game.dice3d.showForRoll(test.diceroll, game.user, true);
-    await game.dice3d?.showForRoll(iteratedRoll);
-    iteratedRoll = undefined;
-    game.dice3d.messageHookDisabled = false;
-  } catch (e) {}
+  game.dice3d.messageHookDisabled = false;
 
   return messages;
 }
