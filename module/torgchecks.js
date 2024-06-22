@@ -929,7 +929,7 @@ export async function renderSkillChat(test) {
         template: './systems/torgeternity/templates/partials/skill-card.hbs',
       },
     };
-
+    messages.push(await ChatMessageTorg.create(messageDataIterated));
     messageData.push(messageDataIterated);
   }
 
@@ -944,9 +944,7 @@ export async function renderSkillChat(test) {
     iteratedRoll = undefined;
     game.dice3d.messageHookDisabled = false;
   } catch (e) {}
-  for (const mData of messageData) {
-    messages.push(await ChatMessageTorg.create(mData));
-  }
+
   return messages;
 }
 
