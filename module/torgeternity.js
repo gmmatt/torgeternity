@@ -604,7 +604,7 @@ function rollItemMacro(itemName) {
         // The following is copied/pasted/adjusted from _onAttackRoll in TorgeternityActorSheet
         const weaponData = item.system;
         const attackWith = weaponData.attackWith;
-        const skillData = actor.system.skills[weaponData.attackWith];
+        const skillData = actor.system.skills?.[weaponData.attackWith] || item.system?.gunner;
         let dnDescriptor = 'standard';
         const damageType = weaponData.damageType;
         const weaponDamage = weaponData.damage;
@@ -682,7 +682,7 @@ function rollItemMacro(itemName) {
           actorName: actor.name,
           skillName: weaponData.attackWith,
           skillBaseAttribute: skillData.baseAttribute,
-          skillValue: skillData.value,
+          skillValue: skillData?.value || skillData?.skillValue,
           skillAdds: skillData.adds,
           unskilledUse: true,
           rollTotal: 0,
