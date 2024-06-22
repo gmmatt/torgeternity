@@ -1027,7 +1027,7 @@ export default class TorgeternityActorSheet extends ActorSheet {
       isAttack: true,
       isFav: skillData?.isFav || false,
       skillName: attackWith,
-      skillValue: Math.max(skillValue, attributes[skillData?.baseAttribute].value || 0),
+      skillValue: Math.max(skillValue, attributes[skillData?.baseAttribute]?.value || 0),
       unskilledUse: true,
       damage: adjustedDamage,
       weaponAP: weaponData.ap,
