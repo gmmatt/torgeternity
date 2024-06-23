@@ -809,8 +809,15 @@ export async function renderSkillChat(test) {
 
             test.bdDamageLabelStyle = 'display: block';
             test.bdDamageSum += test.BDDamageInPromise;
+
+            test.damage += test.BDDamageInPromise;
+            adjustedDamage += test.BDDamageInPromise;
+            test.BDDamageInPromise = 0;
           }
-          adjustedDamage += test.BDDamageInPromise ?? 0;
+          // adjustedDamage is already computed from test.damage
+          // then modify test.damage for following future computation, and modify the adjustedDamage
+          // then the test.BDDamageInPromise is reset
+          
           test.applyDamLabel = 'display:inline';
           test.damageDescription = torgDamage(adjustedDamage, test.targetAdjustedToughness).label;
           test.damageSubDescription =
@@ -934,11 +941,11 @@ export async function renderSkillChat(test) {
       try {
         await game.dice3d.showForRoll(test.diceroll, game.user, true);
       } catch (e) {};
-      try {
-        await game.dice3d?.showForRoll(iteratedRoll);
-        iteratedRoll = undefined;
-      } catch (e) {}
     }
+    try {
+      game.dice3d.showForRoll(iteratedRoll);
+      iteratedRoll = undefined;
+    } catch (e) {};
 
     messages.push(await ChatMessageTorg.create(messageDataIterated));
   }
@@ -946,7 +953,9 @@ export async function renderSkillChat(test) {
   // reset tokens targeted, they are printed in the chatCard
   await game.user.updateTokenTargets();
   await game.user.broadcastActivity({ targets: [] });
-  game.dice3d.messageHookDisabled = false;
+  try {
+    game.dice3d.messageHookDisabled = false;
+  } catch (e) {};
 
   return messages;
 }
