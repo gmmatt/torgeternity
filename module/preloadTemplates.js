@@ -44,6 +44,7 @@ export const preloadTemplates = async function () {
     'systems/torgeternity/templates/testDialogs/modifiers-table.hbs',
     'systems/torgeternity/templates/testDialogs/attack-options.hbs',
     'systems/torgeternity/templates/testDialogs/target-options.hbs',
+    'systems/torgeternity/templates/testDialogs/fixed-modifiers.hbs',
 
     // active effect part:
     'systems/torgeternity/templates/parts/active-effects.hbs',
