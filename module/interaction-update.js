@@ -52,7 +52,7 @@ export class interactionUpdate extends FormApplication {
    * @param event
    * @param html
    */
-  _onModify(event, html) {
+  async _onModify(event, html) {
     // Add DN
     this.test.isDN = true;
     this.test.DN = this.test.targetDefenseValue;
@@ -119,7 +119,7 @@ export class interactionUpdate extends FormApplication {
 
     this.test.diceroll = null;
 
-    torgchecks.renderSkillChat(this.test);
+    await torgchecks.renderSkillChat(this.test);
     this.close();
   }
 }

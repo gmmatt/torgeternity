@@ -8,28 +8,25 @@
 
   <!-- Tab Navigation -->
   <nav class="sheet-tabs tabs" data-group="main">
-    <a class="item" data-tab="details"><i class="fas fa-cogs"></i> {{localize "CARD.HeaderDetails"}}</a>
-    <a class="item" data-tab="faces"><i class="fas fa-id-badge"></i> {{localize "CARD.HeaderFaces"}}</a>
-    <a class="item" data-tab="back"><i class="fas fa-id-badge"></i> {{localize "CARD.HeaderBack"}}</a>
+    <a class="item" data-tab="details">
+      <i class="fas fa-cogs"></i>
+      {{localize "CARD.HeaderDetails"}}
+    </a>
+    <a class="item" data-tab="faces">
+      <i class="fas fa-id-badge"></i>
+      {{localize "CARD.HeaderFaces"}}
+    </a>
+    <a class="item" data-tab="back">
+      <i class="fas fa-id-badge"></i>
+      {{localize "CARD.HeaderBack"}}
+    </a>
   </nav>
 
   <!-- Details Tab -->
   <div class="tab" data-tab="details">
-
-    <div class="form-group">
-      <label>{{localize "CARD.Type"}}</label>
-      <div class="form-fields">
-        <select name="type">
-          {{selectOptions types selected=data.type localize=true}}
-        </select>
-      </div>
-    </div>
-
     <div class="form-group">
       <label>{{localize "torgeternity.sheetLabels.number"}}</label>
-      <div class="form-fields">
-        {{numberInput system.number name="number" step=1}}
-      </div>
+      <div class="form-fields">{{numberInput data.system.number name="system.number" step=1}}</div>
     </div>
 
     <div class="form-group">
@@ -56,54 +53,66 @@
       <label>{{localize "CARD.Face"}}</label>
       <div class="form-fields">
         {{numberInput data.face name="face" min=0 step=1}}
-        <button type="button" class="face-control" title="{{localize 'CARD.FaceAdd'}}" data-action="addFace">
+        <button
+          type="button"
+          class="face-control"
+          title="{{localize 'CARD.FaceAdd'}}"
+          data-action="addFace"
+        >
           <i class="fas fa-plus fa-fw"></i>
         </button>
       </div>
     </div>
     {{#each data.faces as |face i|}}
-      <div class="face" data-face="{{i}}">
-        <div class="form-group">
-          <label>{{localize "CARD.FaceName"}}</label>
-          <div class="form-fields">
-            <input type="text" name="faces.{{i}}.name" value="{{face.name}}" />
-            <button type="button" class="face-control" title="{{localize 'CARD.FaceDelete'}}" data-action="deleteFace">
-              <i class="fas fa-trash fa-fw"></i>
-            </button>
-          </div>
-        </div>
-        <div class="form-group">
-          <label>{{localize "CARD.FaceImage"}}</label>
-          <div class="form-fields">
-            <input type="text" name="faces.{{i}}.img" value="{{face.img}}" />
-            {{filePicker target=(concat "faces." i ".img") type="image"}}
-          </div>
-        </div>
-        <div class="form-group">
-          <label>{{localize "CARD.FaceText"}}</label>
-          <div class="form-fields">
-            <textarea name="faces.{{i}}.text">{{face.text}}</textarea>
-          </div>
+    <div class="face" data-face="{{i}}">
+      <div class="form-group">
+        <label>{{localize "CARD.FaceName"}}</label>
+        <div class="form-fields">
+          <input type="text" name="faces.{{i}}.name" value="{{face.name}}" />
+          <button
+            type="button"
+            class="face-control"
+            title="{{localize 'CARD.FaceDelete'}}"
+            data-action="deleteFace"
+          >
+            <i class="fas fa-trash fa-fw"></i>
+          </button>
         </div>
       </div>
+      <div class="form-group">
+        <label>{{localize "CARD.FaceImage"}}</label>
+        <div class="form-fields">
+          <file-picker name="faces.{{i}}.img" type="image" value="{{face.img}}"></file-picker>
+        </div>
+      </div>
+      <div class="form-group">
+        <label>{{localize "CARD.FaceText"}}</label>
+        <div class="form-fields">
+          <textarea name="faces.{{i}}.text">{{face.text}}</textarea>
+        </div>
+      </div>
+    </div>
     {{/each}}
   </div>
 
   <!-- Back Tab -->
   <div class="tab" data-tab="back">
-
     <div class="form-group">
       <label>{{localize "CARD.BackName"}}</label>
       <div class="form-fields">
-        <input type="text" name="back.name" placeholder="{{localize 'CARD.BackName'}}" value="{{data.back.name}}" />
+        <input
+          type="text"
+          name="back.name"
+          placeholder="{{localize 'CARD.BackName'}}"
+          value="{{data.back.name}}"
+        />
       </div>
     </div>
 
     <div class="form-group">
       <label>{{localize "CARD.BackImage"}}</label>
       <div class="form-fields">
-        {{filePicker target="back.img" type="image"}}
-        <input type="text" name="back.img" placeholder="{{localize 'CARD.BackImage'}}" value="{{data.back.img}}" />
+        <file-picker name="back.img" type="image" value="{{data.back.img}}"></file-picker>
       </div>
     </div>
 
@@ -116,7 +125,10 @@
   <!-- Sheet Footer -->
   <footer class="sheet-footer flexrow">
     {{#if owner}}
-      <button class="submit" type="submit"><i class="fas fa-save"></i> {{localize "CARD.Save"}}</button>
+    <button class="submit" type="submit">
+      <i class="fas fa-save"></i>
+      {{localize "CARD.Save"}}
+    </button>
     {{/if}}
   </footer>
 </form>

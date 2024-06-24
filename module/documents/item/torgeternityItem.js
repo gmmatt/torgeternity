@@ -1,14 +1,9 @@
-import { ChatMessageTorg } from '../../chat/document.js';
+import { ChatMessageTorg } from '../chat/document.js';
 
 /**
  *
  */
 export default class TorgeternityItem extends Item {
-  static equipProp = 'system.equipped';
-  static equipClassProp = 'system.equippedClass';
-  static cssEquipped = 'item-equipped';
-  static cssUnequipped = 'item-unequipped';
-
   static CHAT_TEMPLATE = {
     perk: 'systems/torgeternity/templates/partials/perk-card.hbs',
     attack: 'systems/torgeternity/templates/partials/attack-card.hbs',
@@ -47,9 +42,9 @@ export default class TorgeternityItem extends Item {
   }
 
   static DEFAULT_ICONS = {
-    //genemod:'genemod-icon.webp',
-    //occultech: 'implant.webp',
-    //cyberware: 'cyberware-icon.webp',
+    // genemod:'genemod-icon.webp',
+    // occultech: 'implant.webp',
+    // cyberware: 'cyberware-icon.webp',
     gear: 'gear-icon.webp',
     eternityshard: 'eternityshard.webp',
     armor: 'armor-icon.webp',
@@ -69,6 +64,16 @@ export default class TorgeternityItem extends Item {
     psionicpower: 'psionicpower.webp',
   };
 
+  _preCreate(data, options, user) {
+    super._preCreate(data, options, user);
+    if (this.img === 'icons/svg/item-bag.svg') {
+      const image = TorgeternityItem.DEFAULT_ICONS[data.type] ?? null;
+      if (image) {
+        this.updateSource({ img: 'systems/torgeternity/images/icons/' + image });
+      }
+    }
+  }
+
   /**
    *
    * @param data
@@ -77,61 +82,56 @@ export default class TorgeternityItem extends Item {
    */
   _onCreate(data, options, userId) {
     super._onCreate(data, options, userId);
-    if (this.img === 'icons/svg/item-bag.svg') {
-      const image = TorgeternityItem.DEFAULT_ICONS[data.type] ?? null;
-      if (image) {
-        this.update({ img: 'systems/torgeternity/images/icons/' + image });
-      }
-    }
 
-    if (this.parent !== null && this.system.hasOwnProperty('equipped')) {
-      // set the item to be equipped and un-equip other items of the same type
-      this.update({
-        [TorgeternityItem.equipProp]: true,
-        [TorgeternityItem.equipClassProp]: TorgeternityItem.cssEquipped,
-      });
-
+    if (this.parent && ['armor', 'shield'].includes(this.type) && this.system.equipped) {
       const actor = this.parent;
-      const item = this;
-      actor.items.forEach(function (otherItem, key) {
-        if (
-          otherItem._id !== item._id &&
-          otherItem.system.equipped &&
-          otherItem.type === item.type
-        ) {
-          TorgeternityItem.toggleEquipState(otherItem, actor);
-        }
-      });
+      const previousEquipped = actor.items.find(
+        (i) => i.id !== this.id && i.system.equipped && i.type === this.type
+      );
+
+      if (previousEquipped) {
+        TorgeternityItem.toggleEquipState(previousEquipped, actor);
+      }
     }
   }
 
   /**
    *
-   * @param item
-   * @param actor
-   * @returns {boolean}
+   * @param {Item} item the item that gets equipped or unequipped
+   * @param {Actor} actor the actor that the item belongs to
    */
   static toggleEquipState(item, actor) {
-    const equipped = !getProperty(item, TorgeternityItem.equipProp);
-    const equipClass = equipped ? TorgeternityItem.cssEquipped : TorgeternityItem.cssUnequipped;
-
-    // flip the flag/CSS class
-    item.update({
-      [TorgeternityItem.equipProp]: equipped,
-      [TorgeternityItem.equipClassProp]: equipClass,
-    });
+    const wasEquipped = item.system.equipped;
+    const itemUpdates = [
+      {
+        _id: item.id,
+        'system.equipped': !wasEquipped,
+      },
+    ];
     // enable/disable effects
     const sourceOrigin = 'Item.' + item._id;
-    actor.effects.forEach(function (effect, key) {
-      if (!!effect.origin) {
-        if (effect.origin.endsWith(sourceOrigin)) {
-          effect.update({ disabled: !equipped });
-        }
-      }
-    });
+    const effectUpdates = actor.effects
+      .filter((e) => e.origin && e.origin.endsWith(sourceOrigin))
+      .map((e) => ({ _id: e.id, disabled: wasEquipped }));
 
-    // return true if other items of same type need to be unequipped
-    return equipped;
+    // for armors and shields, ensure that there is only one equipped at a time
+    if (!wasEquipped && ['armor', 'shield'].includes(item.type)) {
+      actor.items
+        .filter((i) => i.id !== item.id && i.system.equipped && i.type === item.type)
+        .forEach((i) => {
+          itemUpdates.push({
+            _id: i.id,
+            'system.equipped': false,
+          });
+          effectUpdates.push(
+            ...actor.effects
+              .filter((e) => e.origin && e.origin.endsWith('Item.' + i._id))
+              .map((e) => ({ _id: e.id, disabled: true }))
+          );
+        });
+    }
+    actor.updateEmbeddedDocuments('Item', itemUpdates);
+    actor.updateEmbeddedDocuments('ActiveEffect', effectUpdates);
   }
 
   /**

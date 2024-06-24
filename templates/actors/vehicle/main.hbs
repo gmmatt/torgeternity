@@ -1,8 +1,6 @@
 <form class="actor-sheet {{cssClass}}" autocomplete="off">
   <h3 class="actor-type">
-    <span>
-      {{localize "torgeternity.sheetLabels.vehicle"}}
-    </span>
+    <span>{{localize "torgeternity.sheetLabels.vehicle"}}</span>
   </h3>
 
   <nav class="sheet-tabs tabs vehicle" data-group="primary">
@@ -12,134 +10,147 @@
   </nav>
 
   <header class="sheet-header-vehicle">
-    <div class="vehicle-header-image"><img src="{{actor.img}}" data-edit="img" title="{{actor.name}}" /></div>
-    <div class="vehicle-header-name"><input name="name" type="text" value="{{actor.name}}" placeholder="Vehicle Name"
-        size="50" /></div>
+    <div class="vehicle-header-image">
+      <img src="{{actor.img}}" data-edit="img" title="{{actor.name}}" />
+    </div>
+    <div class="vehicle-header-name">
+      <input name="name" type="text" value="{{actor.name}}" placeholder="Vehicle Name" size="50" />
+    </div>
   </header>
   <header class="sheet-header-vehicle vehicle-stats">
-      <div>
-        <p>{{localize "torgeternity.sheetLabels.type"}}: </p>
-        <select name="system.type" class="input-box">
-          {{#select actor.system.type}}
-          {{#each config.vehicleTypes as |name type|}}
-          <option value="{{type}}">{{localize name}}</option>
-          {{/each}}
-          {{/select}}
-        </select>
-      </div>
-      
-      <div>
-        <p>{{localize "torgeternity.sheetLabels.size"}}: </p>
-        <select name="system.details.sizeBonus" class="input-box">
-          {{#select actor.system.details.sizeBonus}}
-          {{#each config.sizes as |name type|}}
-          <option value="{{type}}">{{localize name}}</option>
-          {{/each}}
-          {{/select}}
-        </select>
-      </div>
+    <div>
+      <p>{{localize "torgeternity.sheetLabels.type"}}:</p>
+      <select name="system.type" class="input-box">
+        {{selectOptions config.vehicleTypes selected=actor.system.type localize=true}}
+      </select>
+    </div>
 
-      <div>
-        <p>{{localize "torgeternity.stats.wounds"}}: </p>
-        <input name="system.wounds.value" type="number" value="{{actor.system.wounds.value}}" data-dtype="Number">
-        /
-        <input name="system.wounds.max" type="number" value="{{actor.system.wounds.max}}" data-dtye="Number">
-      </div>
+    <div>
+      <p>{{localize "torgeternity.sheetLabels.size"}}:</p>
+      <select name="system.details.sizeBonus" class="input-box">
+        {{selectOptions config.sizes selected=actor.system.details.sizeBonus localize=true}}
+      </select>
+    </div>
+
+    <div>
+      <p>{{localize "torgeternity.stats.wounds"}}:</p>
+      <input
+        name="system.wounds.value"
+        type="number"
+        value="{{actor.system.wounds.value}}"
+        data-dtype="Number"
+      />
+      /
+      <input
+        name="system.wounds.max"
+        type="number"
+        value="{{actor.system.wounds.max}}"
+        data-dtye="Number"
+      />
+    </div>
   </header>
 
   <section class="sheet-body">
     <div class="tab vehicle-tab" data-group="primary" data-tab="stats">
-
       <div>
         <table class="groove-borders">
           <tr>
             <th>
-              <a class="attribut-block">
-                {{localize "torgeternity.gear.techlevel"}}
-              </a>
+              <a class="attribut-block">{{localize "torgeternity.gear.techlevel"}}</a>
             </th>
             <th>
-              <a class="attribut-block">
-                {{localize "torgeternity.gear.topspeed"}}
-              </a>
+              <a class="attribut-block">{{localize "torgeternity.gear.topspeed"}}</a>
             </th>
             <th>
-              <a class="attribut-block">
-                {{localize "torgeternity.gear.passengers"}}
-              </a>
+              <a class="attribut-block">{{localize "torgeternity.gear.passengers"}}</a>
             </th>
             <th>
-              <a class="attribut-block">
-                {{localize "torgeternity.gear.mr"}}
-              </a>
+              <a class="attribut-block">{{localize "torgeternity.gear.mr"}}</a>
             </th>
             <th>
-              <a class="attribut-block">
-                {{localize "torgeternity.gear.toughness"}}
-              </a>
+              <a class="attribut-block">{{localize "torgeternity.gear.toughness"}}</a>
             </th>
             <th>
-              <a class="attribut-block">
-                {{localize "torgeternity.gear.armor"}}
-              </a>
+              <a class="attribut-block">{{localize "torgeternity.gear.armor"}}</a>
             </th>
             <th>
-              <a class="attribut-block">
-              </a>
+              <a class="attribut-block"></a>
             </th>
             <th>
-              <a class="attribut-block">
-                {{localize "torgeternity.gear.price"}}
-              </a>
+              <a class="attribut-block">{{localize "torgeternity.gear.price"}}</a>
             </th>
           </tr>
           <tr>
             <td class="vehicle-stat">
-              <input name="system.axioms.tech" type="number" value="{{actor.system.axioms.tech}}" data-dtype="Number">
+              <input
+                name="system.axioms.tech"
+                type="number"
+                value="{{actor.system.axioms.tech}}"
+                data-dtype="Number"
+              />
             </td>
             <td class="vehicle-stat">
-              <input name="system.topSpeed.kph" type="number" value="{{actor.system.topSpeed.kph}}" data-dtype="Number">
-              (
-              {{actor.system.topSpeed.value}}
-              )
-              {{#ifequal actor.system.topSpeed.penalty "-2"}}
-              {{localize "torgeternity.speeds.fast"}}
-              {{/ifequal}}
-              {{#ifequal actor.system.topSpeed.penalty "-4"}}
-              {{localize "torgeternity.speeds.veryFast"}}
-              {{/ifequal}}
-              {{#ifequal actor.system.topSpeed.penalty "-6"}}
-              {{localize "torgeternity.speeds.ultraFast"}}
-              {{/ifequal}}
+              <input
+                name="system.topSpeed.kph"
+                type="number"
+                value="{{actor.system.topSpeed.kph}}"
+                data-dtype="Number"
+              />
+              ( {{actor.system.topSpeed.value}} ) {{#ifequal actor.system.topSpeed.penalty "-2"}}
+              {{localize "torgeternity.speeds.fast"}} {{/ifequal}} {{#ifequal
+              actor.system.topSpeed.penalty "-4"}} {{localize "torgeternity.speeds.veryFast"}}
+              {{/ifequal}} {{#ifequal actor.system.topSpeed.penalty "-6"}} {{localize
+              "torgeternity.speeds.ultraFast"}} {{/ifequal}}
             </td>
             <td class="vehicle-stat">
-              <input name="system.passengers" type="number" value="{{actor.system.passengers}}" data-dtype="Number">
+              <input
+                name="system.passengers"
+                type="number"
+                value="{{actor.system.passengers}}"
+                data-dtype="Number"
+              />
             </td>
             <td class="vehicle-stat">
-              <input name="system.maneuver" type="number" value="{{actor.system.maneuver}}" data-dtype="Number">
+              <input
+                name="system.maneuver"
+                type="number"
+                value="{{actor.system.maneuver}}"
+                data-dtype="Number"
+              />
             </td>
             <td class="vehicle-stat">
-              <input name="system.toughness" type="number" value="{{actor.system.toughness}}" data-dtype="Number">
+              <input
+                name="system.toughness"
+                type="number"
+                value="{{actor.system.toughness}}"
+                data-dtype="Number"
+                data-tooltip="{{actor.defenses.toughness}}"
+              />
             </td>
             <td class="vehicle-stat">
-              <input name="system.armor" type="number" value="{{actor.system.armor}}" data-dtype="Number">
+              <input
+                name="system.armor"
+                type="number"
+                value="{{actor.system.armor}}"
+                data-dtype="Number"
+                data-tooltip="{{actor.defenses.armor}}"
+              />
             </td>
             <td class="vehicle-stat">
-              <span>{{actor.system.toughness}}&lpar;{{actor.system.armor}}&rpar;</span>
+              <span>{{actor.defenses.toughness}}&lpar;{{actor.defenses.armor}}&rpar;</span>
             </td>
             <td class="vehicle-stat">
-              <input name="system.price.dollars" type="number" value="{{actor.system.price.dollars}}"
-                data-dtype="Number">
+              <input
+                name="system.price.dollars"
+                type="number"
+                value="{{actor.system.price.dollars}}"
+                data-dtype="Number"
+              />
               <select name="system.price.magnitude" class="input-box">
-                {{#select actor.system.price.magnitude}}
-                {{#each config.magnitudes as |name type|}}
-                <option value="{{type}}">{{localize name}}</option>
-                {{/each}}
-                {{/select}}
+                {{selectOptions config.magnitudes selected=actor.system.price.magnitude
+                localize=true}}
               </select>
-              (
-              {{actor.system.price.value}}
-              )
+              ( {{actor.system.price.value}} )
             </td>
           </tr>
         </table>
@@ -147,78 +158,94 @@
       <h2>{{localize "torgeternity.sheetLabels.operator"}}</h2>
       <table class="groove-borders left-align">
         <tr>
-          <th>{{localize "torgeternity.sheetLabels.name"}} <input name="system.operator.name" class="long-text"
-              type="text" value="{{actor.system.operator.name}}" data-dtype="text"></th>
-          <th>{{localize "torgeternity.sheetLabels.skill"}} <input name="system.operator.skillValue" type="number"
-              value="{{actor.system.operator.skillValue}}" data-dtype="Number"></th>
+          <th>
+            {{localize "torgeternity.sheetLabels.name"}}
+            <input
+              name="system.operator.name"
+              class="long-text"
+              type="text"
+              value="{{actor.system.operator.name}}"
+              data-dtype="text"
+            />
+          </th>
+          <th>
+            {{localize "torgeternity.sheetLabels.skill"}}
+            <input
+              name="system.operator.skillValue"
+              type="number"
+              value="{{actor.system.operator.skillValue}}"
+              data-dtype="Number"
+            />
+          </th>
           <th>{{localize "torgeternity.sheetLabels.defense"}} {{actor.system.defense}}</th>
-          <th><button class="base-roll" data-skill-value="{{actor.system.operator.skillValue}}"
-              data-speed="{{actor.system.topSpeed.value}}" data-maneuver="{{actor.system.maneuver}}">
+          <th>
+            <button
+              class="base-roll"
+              data-skill-value="{{actor.system.operator.skillValue}}"
+              data-speed="{{actor.system.topSpeed.value}}"
+              data-maneuver="{{actor.system.maneuver}}"
+            >
               <i class="fas fa-dice-d20"></i>
               {{localize "torgeternity.sheetLabels.baseRoll"}}
-            </button></th>
-          <th><button class="chase-roll" data-skill-value="{{actor.system.operator.skillValue}}"
-              data-speed="{{actor.system.topSpeed.value}}" data-maneuver="{{actor.system.maneuver}}">
+            </button>
+          </th>
+          <th>
+            <button
+              class="chase-roll"
+              data-skill-value="{{actor.system.operator.skillValue}}"
+              data-speed="{{actor.system.topSpeed.value}}"
+              data-maneuver="{{actor.system.maneuver}}"
+            >
               <i class="fas fa-dice-d20"></i>
               {{localize "torgeternity.sheetLabels.chase"}}
-            </button></th>
-          <th><button class="stunt-roll" data-skill-value="{{actor.system.operator.skillValue}}"
-              data-speed="{{actor.system.topSpeed.value}}" data-maneuver="{{actor.system.maneuver}}">
+            </button>
+          </th>
+          <th>
+            <button
+              class="stunt-roll"
+              data-skill-value="{{actor.system.operator.skillValue}}"
+              data-speed="{{actor.system.topSpeed.value}}"
+              data-maneuver="{{actor.system.maneuver}}"
+            >
               <i class="fas fa-dice-d20"></i>
               {{localize "torgeternity.sheetLabels.stunt"}}
-            </button></th>
+            </button>
           </th>
         </tr>
       </table>
       <h2>{{localize "torgeternity.sheetLabels.weapons"}}</h2>
       <div class="item-list">
         <li class="vehicle-weapon-header">
-          <div class="image-header">
-
-          </div>
-          <div class="name-header">
-            {{localize "torgeternity.sheetLabels.name"}}
-          </div>
-          <div class="gunner-header">
-            {{localize "torgeternity.sheetLabels.gunner"}}
-          </div>
-          <div class="skill-header">
-            {{localize "torgeternity.sheetLabels.skill"}}
-          </div>
-          <div class="range-header">
-            {{localize "torgeternity.sheetLabels.range"}}
-          </div>
-          <div class="damage-header">
-            {{localize "torgeternity.sheetLabels.damageAP"}}
-          </div>
-          <div class="controls-header">
-
-          </div>
+          <div class="image-header"></div>
+          <div class="name-header">{{localize "torgeternity.sheetLabels.name"}}</div>
+          <div class="gunner-header">{{localize "torgeternity.sheetLabels.gunner"}}</div>
+          <div class="skill-header">{{localize "torgeternity.sheetLabels.skill"}}</div>
+          <div class="range-header">{{localize "torgeternity.sheetLabels.range"}}</div>
+          <div class="damage-header">{{localize "torgeternity.sheetLabels.damageAP"}}</div>
+          <div class="controls-header"></div>
         </li>
         {{#each heavyweapon as |item id|}}
         <li class="item vehicle-weapon-list" data-item-id="{{item._id}}">
           <div class="vehicle-image"><img src="{{item.img}}" title="{{item.name}}" /></div>
           <div class="name">{{item.name}}</div>
-          <div class="gunner">
-            {{item.system.gunner.name}}
-          </div>
-          <div class="skill">
-            {{item.system.gunner.skillValue}}
-          </div>
-          <div class="range">
-            {{item.system.range}}
-          </div>
-          <div class="damage">
-            {{item.system.damage}} ( {{item.system.ap}} )
-          </div>
+          <div class="gunner">{{item.system.gunner.name}}</div>
+          <div class="skill">{{item.system.gunner.skillValue}}</div>
+          <div class="range">{{item.system.range}}</div>
+          <div class="damage">{{item.system.damage}} ( {{item.system.ap}} )</div>
           <div class="controls">
-            <a class="item-control item-attackRoll" title="{{localize 'torgeternity.iconeTitles.attackRoll'}}">
+            <a
+              class="item-control item-attackRoll"
+              title="{{localize 'torgeternity.iconeTitles.attackRoll'}}"
+            >
               <i class="fas fa-dice-d20"></i>
             </a>
             <a class="item-control item-edit" title="{{localize 'torgeternity.iconeTitles.edit'}}">
               <i class="fas fa-edit"></i>
             </a>
-            <a class="item-control item-delete" title="{{localize 'torgeternity.iconeTitles.delete'}}">
+            <a
+              class="item-control item-delete"
+              title="{{localize 'torgeternity.iconeTitles.delete'}}"
+            >
               <i class="fas fa-trash"></i>
             </a>
           </div>
@@ -228,38 +255,32 @@
       <h2>{{localize "torgeternity.sheetLabels.addOns"}}</h2>
       <div class="item-list">
         <li class="add-on-header">
-          <div class="image-header">
-
-          </div>
-          <div class="name-header">
-            {{localize "torgeternity.sheetLabels.name"}}
-          </div>
-          <div class="description-header">
-            {{localize "torgeternity.sheetLabels.description"}}
-          </div>
-          <div class="controls-header">
-
-          </div>
+          <div class="image-header"></div>
+          <div class="name-header">{{localize "torgeternity.sheetLabels.name"}}</div>
+          <div class="description-header">{{localize "torgeternity.sheetLabels.description"}}</div>
+          <div class="controls-header"></div>
         </li>
         {{#each vehicleAddOn as |item id|}}
         <li class="item vehicle-add-on-list" data-item-id="{{item._id}}">
           <div class="add-on-image">
             <img src="{{item.img}}" title="{{item.name}}" />
           </div>
-          <div class="add-on-name">
-            {{item.name}}
-          </div>
-          <div class="add-on-description">
-            {{item.system.short-description}}
-          </div>
+          <div class="add-on-name">{{item.name}}</div>
+          <div class="add-on-description">{{item.system.short-description}}</div>
           <div class="controls">
-            <a class="item-control item-tochat" title="{{localize 'torgeternity.iconeTitles.sendToChat'}}">
+            <a
+              class="item-control item-tochat"
+              title="{{localize 'torgeternity.iconeTitles.sendToChat'}}"
+            >
               <i class="fas fa-comment"></i>
             </a>
             <a class="item-control item-edit" title="{{localize 'torgeternity.iconeTitles.edit'}}">
               <i class="fas fa-edit"></i>
             </a>
-            <a class="item-control item-delete" title="{{localize 'torgeternity.iconeTitles.delete'}}">
+            <a
+              class="item-control item-delete"
+              title="{{localize 'torgeternity.iconeTitles.delete'}}"
+            >
               <i class="fas fa-trash"></i>
             </a>
           </div>
@@ -275,14 +296,10 @@
     </div>
 
     <div class="tab vehicle-description" data-group="primary" data-tab="description">
-
-      <h1 class="list-section-heading" style="color:white">
+      <h1 class="list-section-heading" style="color: white">
         {{localize "torgeternity.sheetLabels.description"}}
       </h1>
       {{editor enrichedDescription target="system.description" button=true editable=editable}}
-
     </div>
-
-
   </section>
 </form>

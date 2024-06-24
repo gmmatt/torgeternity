@@ -145,6 +145,28 @@ div.actor ::-webkit-scrollbar {
   color: black;
 }
 
+/* Broken links become normal text */
+a.entity-link.broken,
+a.content-link.broken,
+a.inline-roll.broken {
+	 color: black !important;
+	 text-decoration: inherit;
+	 cursor: text;
+   background: none;
+   border: none;
+   padding:0;
+  text-shadow: none;
+}
+a.entity-link.broken:hover,
+a.content-link.broken:hover,
+a.inline-roll.broken:hover {
+	 text-shadow: none;
+}
+
+.fa-unlink:before {
+  display:none;
+}
+
 /*                                      */
 /* --------Actor/Vehicles Sheet-------- */
 /*                                      */
@@ -1070,9 +1092,10 @@ nav#controls ol .torgHand:before {
   height: 100%;
   border: none;
 }
+
 .tab[data-tab].active.flexrow,
 .tab[data-tab].active.flexcol {
-  overflow-y: scroll;
+  overflow-y: auto;
 }
 
 #sidebar #sidebar-tabs {
@@ -1710,8 +1733,26 @@ nav#controls,
   color: #f8f83c;
 }
 
+#combat-round .encounters.flexrow {
+  justify-content: space-between;
+  margin: 0 5px;
+}
+
+#combat-round .encounters.flexrow > * {
+  flex: unset;
+}
+
+#combat-round .encounters.flexrow > h3 {
+  border-bottom: none;
+  margin:unset;
+}
+
+#combat ol li.combatant.active {
+  border-left: 5px solid black;
+}
+
 .combat-sidebar #combat-tracker {
-  overflow-y: scroll;
+  overflow-y: auto;
   flex: 2 !important;
 }
 
@@ -3639,9 +3680,86 @@ form.actor-sheet.threat .tab[data-tab].active .editor {
   font-size: 13px;
 }
 
+.test-dialog{
+  display: flex;
+  flex-direction: column;
+  max-width: 530px;
+  min-width: 530px;
+}
+
+.test-dialog > div {
+  display: flex;
+  flex-direction: row;  
+}
+
+.test-dialog > div > fieldset {
+  flex-grow: 1;
+  display:flex;
+  flex-wrap: wrap;
+  align-content: center;
+  align-items: center;
+ 
+}
+.test-dialog > div > fieldset > label {
+  font-family: "Palatino";
+}
+
+.test-dialog > div > fieldset > span {
+  display:flex;
+  flex-direction: row;
+  align-items: baseline;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.test-dialog > div > fieldset > span > input[type="checkbox"] ~ label[for] {
+  align-self: center;
+}
+
+.test-dialog > div > fieldset > span > input[type="radio"] ~ label[for] {
+  align-self: baseline;
+}
+
+.test-dialog > div > fieldset > span > input[type="number"] {
+  width: 3em;
+}
+
+.test-dialog > div > fieldset > span > * {
+  justify-content: left;
+}
+
+.test-dialog > div > fieldset > hr {
+  border: 1px solid var(--color-border-light-tertiary);
+  width: 100%;
+}
+
+.test-dialog .otherModifiers {
+  display: grid;
+  grid-template-columns: 75% 25%;
+  grid-template-rows: repeat(4 1fr);
+  row-gap: 2px;
+}
+
+.test-dialog .otherModifiers > label{
+  justify-self: center;
+  font-family: 'Alaska';
+}
+
+.test-dialog-rollbutton {
+  margin-top: 1rem;
+  text-shadow: black 1.3px 1.3px 0px, black 1.3px -1.3px 0px, black -1.3px 1.3px 0px, black -1.3px 1.3px 0px;
+  background-image: url(../images/lightning_bar.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: center;
+  color: white;
+  cursor: pointer;
+}
+
 .skill-check-options {
   font-family: Palatino;
   font-size: 13px;
+  max-width: 100%;
 }
 
 .torg-cards-action-icons fas-fa:before {

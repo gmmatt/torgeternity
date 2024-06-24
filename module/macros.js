@@ -69,39 +69,35 @@ export class TorgeternityMacros {
     let chatOutput = `<h2>${game.i18n.localize(
       'torgeternity.sheetLabels.fatigue'
     )}!</h2><p>${game.i18n.localize('torgeternity.macros.fatigueMacroDealtDamage')}</p><ul>`;
-    for (const _target of tokens) {
-      if (_target === undefined) {
+    for (const token of tokens) {
+      if (token === undefined) {
         throw new Error('Exception, token is undefined');
       }
 
-      if (_target.actor.system.shock.value === _target.actor.system.shock.max) {
-        chatOutput += `<li>${_target.actor.name} ${game.i18n.localize(
+      if (token.actor.system.shock.value === token.actor.system.shock.max) {
+        chatOutput += `<li>${token.actor.name} ${game.i18n.localize(
           'torgeternity.macros.fatigueMacroCharAlreadyKO'
         )}</li>`;
         continue;
       }
 
-      const targetShockValue = _target.actor.system.shock.value;
+      const targetShockValue = token.actor.system.shock.value;
 
-      const shockIncrease = _target.actor.system.other.fatigue;
+      const shockIncrease = token.actor.fatigue;
 
-      let shockResult = targetShockValue + shockIncrease;
+      const shockResult = Math.max(targetShockValue + shockIncrease, token.actor.system.shock.max);
 
-      if (shockResult > _target.actor.system.shock.max) {
-        shockResult = parseInt(_target.actor.system.shock.max);
-      }
-
-      await _target.actor.update({ 'system.shock.value': shockResult });
-      chatOutput += `<li>${_target.document.name}: ${shockIncrease} ${game.i18n.localize(
+      await token.actor.update({ 'system.shock.value': shockResult });
+      chatOutput += `<li>${token.document.name}: ${shockIncrease} ${game.i18n.localize(
         'torgeternity.sheetLabels.shock'
       )}`;
       if (
-        parseInt(_target.actor.system.shock.value) >= parseInt(_target.actor.system.shock.max) &&
-        !_target.actor.statuses.find((d) => d === 'unconscious')
+        parseInt(token.actor.system.shock.value) >= parseInt(token.actor.system.shock.max) &&
+        !token.actor.statuses.find((d) => d === 'unconscious')
       ) {
         const eff = CONFIG.statusEffects.find((e) => e.id === 'unconscious');
-        _target.toggleEffect(eff, { active: true, overlay: true });
-        chatOutput += `<br><strong>${_target.document.name}${game.i18n.localize(
+        token.toggleEffect(eff, { active: true, overlay: true });
+        chatOutput += `<br><strong>${token.document.name}${game.i18n.localize(
           'torgeternity.macros.fatigueMacroCharKO'
         )}</strong>`;
       }
@@ -164,41 +160,41 @@ export class TorgeternityMacros {
         'torgeternity.macros.reviveMacroChatHeadline'
       )}</h2><p>${game.i18n.localize('torgeternity.macros.reviveMacroFirst')}<p><ul>`;
 
-      for (const _target of tokens) {
+      for (const token of tokens) {
         // Following block, if a token has a null-value in system.shock.value (happens, if a value is simply deleted by user to set it apperently to 0), set it to 0, but double check it!
-        if (isNaN(_target.actor.system.shock.value)) {
-          await _target.actor.update({ 'system.shock.value': 0 });
+        if (isNaN(token.actor.system.shock.value)) {
+          await token.actor.update({ 'system.shock.value': 0 });
         }
-        const targetShockValue = parseInt(_target.actor.system.shock.value);
+        const targetShockValue = parseInt(token.actor.system.shock.value);
         if (isNaN(targetShockValue)) {
           throw new Error('Shock Value is NaN');
         }
 
         if (targetShockValue === 0) {
-          chatOutput += `<li>${_target.actor.name} ${game.i18n.localize(
+          chatOutput += `<li>${token.actor.name} ${game.i18n.localize(
             'torgeternity.macros.reviveMacroAlreadyFull'
           )}</li>`;
           continue;
         }
 
         if (bolWholeRevive) {
-          await _target.actor.update({ 'system.shock.value': 0 });
-          chatOutput += `<li>${_target.actor.name} ${game.i18n.localize(
+          await token.actor.update({ 'system.shock.value': 0 });
+          chatOutput += `<li>${token.actor.name} ${game.i18n.localize(
             'torgeternity.macros.reviveMacroCharRevived'
           )}`;
         } else {
           const newShockValue = parseInt(targetShockValue) - reviveAmount;
-          await _target.actor.update({ 'system.shock.value': newShockValue });
-          chatOutput += `<li>${_target.actor.name} ${game.i18n.localize(
+          await token.actor.update({ 'system.shock.value': newShockValue });
+          chatOutput += `<li>${token.actor.name} ${game.i18n.localize(
             'torgeternity.macros.reviveMacroCharPartyRevived'
           )}${reviveAmount}`;
         }
 
-        if (_target.actor.statuses.find((d) => d === 'unconscious')) {
+        if (token.actor.statuses.find((d) => d === 'unconscious')) {
           const eff = CONFIG.statusEffects.find((e) => e.id === 'unconscious');
-          _target.toggleEffect(eff, { active: false, overlay: false });
+          token.toggleEffect(eff, { active: false, overlay: false });
           chatOutput += `<br>${game.i18n.localize('torgeternity.macros.reviveMacroCharDeKOed')} ${
-            _target.actor.name
+            token.actor.name
           }`;
         }
         chatOutput += '</li>';
@@ -253,7 +249,7 @@ export class TorgeternityMacros {
         return;
       }
 
-      const diceroll = await new Roll(`${diceAmount}d6x6max5`).evaluate({ async: true });
+      const diceroll = await new Roll(`${diceAmount}d6x6max5`).evaluate();
 
       await game.dice3d?.showForRoll(diceroll);
 
@@ -275,10 +271,7 @@ export class TorgeternityMacros {
       }
       chatOutput += `<ul>`;
       for (const token of targetedTokens) {
-        const tokenDamage = torgchecks.torgDamage(
-          diceroll.total,
-          token.actor.system.other.toughness
-        );
+        const tokenDamage = torgchecks.torgDamage(diceroll.total, token.actor.defenses.toughness);
         if (tokenDamage.shocks > 0) {
           chatOutput += `<li>${game.i18n.localize('torgeternity.macros.bonusDieMacroResult3')} ${
             token.document.name
@@ -348,10 +341,10 @@ export class TorgeternityMacros {
       rollTotal: 0,
       unskilledUse: realitySkill.unskilledUse,
       chatnote: '',
-      woundModifier: parseInt(-_actor.system.wounds.value),
-      stymiedModifier: parseInt(_actor.system.stymiedModifier),
-      vulnerableModifier: parseInt(_actor.system.vulnerableModifier),
-      darknessModifier: parseInt(_actor.system.darknessModifier),
+      woundModifier: -_actor.system.wounds.value,
+      stymiedModifier: _actor.statusModifiers.stymied,
+      vulnerableModifier: _actor.statusModifiers.vulnerable,
+      darknessModifier: _actor.statusModifiers.darkness,
       type: 'skill',
       movementModifier: 0,
       isOther1: game.scenes.active.flags.torgeternity.cosm == 'none' ? false : true,
@@ -387,11 +380,40 @@ export class TorgeternityMacros {
         );
         break;
       case game.i18n.localize('torgeternity.chatText.check.result.failure'):
-        //ChatMessage.create({content: "<p>Fehlschlag</p>"});
+        // ChatMessage.create({content: "<p>Fehlschlag</p>"});
         break;
       case game.i18n.localize('torgeternity.chatText.check.result.mishape'):
-        //ChatMessage.create({conten: "<p>Patzer, das wird witzig!</p>"});
         break;
+    }
+  }
+
+  async openPacks() {
+    for (const pack of game.packs) {
+      if (pack.value?.metadata.packageName === 'torgeternity') {
+        continue;
+      }
+      await pack.configure({ locked: false });
+      const uuids = pack.index.map((i) => i.uuid);
+
+      for (const uuid of uuids) {
+        const doc = await fromUuid(uuid);
+        const data = doc.toObject();
+        await doc.delete();
+        console.warn('Deleted', doc.name);
+        await doc.constructor.create(data, { keepId: true, pack: pack.collection });
+        console.warn('Recreated', doc.name);
+      }
+      await pack.configure({ locked: true });
+    }
+    ui.notifications.info('Migration complete!');
+  }
+
+  /**
+   *
+   */
+  async deleteAllHands() {
+    for (const card of game.cards) {
+      card.type === 'hand' ? await card.delete() : console.log('no hand');
     }
   }
 }

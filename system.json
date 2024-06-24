@@ -15,10 +15,10 @@
       "flags": {}
     }
   ],
-  "version": "3.8.2",
+  "version": "12.1.0",
   "compatibility": {
-    "minimum": "11",
-    "verified": "11.315"
+    "minimum": "12",
+    "verified": "12.327"
   },
   "esmodules": ["module/torgeternity.js"],
   "scripts": ["module/lib/setting-extender.js"],
@@ -250,9 +250,51 @@
       "flags": {}
     }
   ],
+  "documentTypes": {
+    "Actor": {
+      "stormknight": {
+        "htmlFields": ["details.background"]
+      },
+      "threat": {
+        "htmlFields": ["details.description"]
+      },
+      "vehicle": {
+        "htmlFields": ["description"]
+      }
+    },
+    "Card": {
+      "cosm": {},
+      "destiny": {},
+      "drama": {}
+    },
+    "Item": {
+      "armor": { "htmlFields": ["description"] },
+      "customAttack": { "htmlFields": ["description"] },
+      "customSkill": { "htmlFields": ["description"] },
+      "enhancement": { "htmlFields": ["description"] },
+      "eternityshard": { "htmlFields": ["description"] },
+      "firearm": { "htmlFields": ["description"] },
+      "gear": { "htmlFields": ["description"] },
+      "heavyweapon": { "htmlFields": ["description"] },
+      "implant": { "htmlFields": ["description"] },
+      "meleeweapon": { "htmlFields": ["description"] },
+      "miracle": { "htmlFields": ["description"] },
+      "missileweapon": { "htmlFields": ["description"] },
+      "perk": { "htmlFields": ["description"] },
+      "psionicpower": { "htmlFields": ["description"] },
+      "shield": { "htmlFields": ["description"] },
+      "specialability": { "htmlFields": ["description"] },
+      "specialability-rollable": { "htmlFields": ["description"] },
+      "spell": { "htmlFields": ["description"] },
+      "vehicle": { "htmlFields": ["description"] },
+      "vehicleAddOn": { "htmlFields": ["description"] }
+    }
+  },
   "socket": true,
-  "gridDistance": 1,
-  "gridUnits": "m",
+  "grid": {
+    "distance": 1,
+    "units": "m"
+  },
   "primaryTokenAttribute": "wounds",
   "secondaryTokenAttribute": "shock",
   "url": "https://github.com/gmmatt/torgeternity",

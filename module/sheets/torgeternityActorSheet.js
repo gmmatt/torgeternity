@@ -29,7 +29,7 @@ export default class TorgeternityActorSheet extends ActorSheet {
    *
    */
   static get defaultOptions() {
-    return mergeObject(super.defaultOptions, {
+    return foundry.utils.mergeObject(super.defaultOptions, {
       classes: ['torgeternity', 'sheet', 'actor'],
       width: 773,
       height: 860,
@@ -297,8 +297,7 @@ export default class TorgeternityActorSheet extends ActorSheet {
       html.find('.base-roll').click(this._onBaseRoll.bind(this));
 
       html.find('.apply-fatigue').click((ev) => {
-        const newShock =
-          parseInt(this.actor.system.shock.value) + parseInt(ev.currentTarget.dataset.fatigue);
+        const newShock = this.actor.system.shock.value + parseInt(ev.currentTarget.dataset.fatigue);
         this.actor.update({ 'system.shock.value': newShock });
       });
 
@@ -548,6 +547,8 @@ export default class TorgeternityActorSheet extends ActorSheet {
       attackOptions: false,
       chatNote: '',
       rollTotal: 0, // A zero indicates that a rollTotal needs to be generated when renderSkillChat is called //
+      bdDamageLabelStyle: 'display:none',
+      bdDamageSum: 0,
     };
 
     new TestDialog(test);
@@ -600,6 +601,8 @@ export default class TorgeternityActorSheet extends ActorSheet {
       attackOptions: false,
       chatNote: '',
       rollTotal: 0, // A zero indicates that a rollTotal needs to be generated when renderSkillChat is called //
+      bdDamageLabelStyle: 'display:none',
+      bdDamageSum: 0,
     };
 
     new TestDialog(test);
@@ -633,6 +636,8 @@ export default class TorgeternityActorSheet extends ActorSheet {
       chatNote: '',
       vehicleSpeed: event.currentTarget.dataset.speed,
       maneuverModifier: event.currentTarget.dataset.maneuver,
+      bdDamageLabelStyle: 'display:none',
+      bdDamageSum: 0,
     };
 
     new TestDialog(test);
@@ -661,6 +666,8 @@ export default class TorgeternityActorSheet extends ActorSheet {
       chatNote: '',
       vehicleSpeed: event.currentTarget.dataset.speed,
       maneuverModifier: event.currentTarget.dataset.maneuver,
+      bdDamageLabelStyle: 'display:none',
+      bdDamageSum: 0,
     };
 
     new TestDialog(test);
@@ -697,6 +704,8 @@ export default class TorgeternityActorSheet extends ActorSheet {
       chatNote: '',
       vehicleSpeed: event.currentTarget.dataset.speed,
       maneuverModifier: event.currentTarget.dataset.maneuver,
+      bdDamageLabelStyle: 'display:none',
+      bdDamageSum: 0,
     };
 
     new TestDialog(test);
@@ -755,6 +764,8 @@ export default class TorgeternityActorSheet extends ActorSheet {
       rollTotal: 0,
       chatNote: '',
       movementModifier: 0,
+      bdDamageLabelStyle: 'display:none',
+      bdDamageSum: 0,
     };
 
     new TestDialog(test);
@@ -815,6 +826,8 @@ export default class TorgeternityActorSheet extends ActorSheet {
       attackOptions: true,
       rollTotal: 0,
       chatNote: '',
+      bdDamageLabelStyle: 'display:none',
+      bdDamageSum: 0,
     };
 
     new TestDialog(test);
@@ -862,6 +875,8 @@ export default class TorgeternityActorSheet extends ActorSheet {
       movementModifier: 0,
       vulnerableModifierAll: [0],
       sizeModifierAll: [0],
+      bdDamageLabelStyle: 'display:none',
+      bdDamageSum: 0,
     };
 
     new TestDialog(test);
@@ -871,7 +886,7 @@ export default class TorgeternityActorSheet extends ActorSheet {
    *
    * @param event
    */
-  _onActiveDefenseCancel(event) {
+  async _onActiveDefenseCancel(event) {
     const dnDescriptor = 'standard';
 
     const test = {
@@ -900,7 +915,7 @@ export default class TorgeternityActorSheet extends ActorSheet {
     };
 
     // If cancelling activeDefense, bypass dialog
-    torgchecks.renderSkillChat(test);
+    await torgchecks.renderSkillChat(test);
   }
 
   /**
@@ -1012,7 +1027,7 @@ export default class TorgeternityActorSheet extends ActorSheet {
       isAttack: true,
       isFav: skillData?.isFav || false,
       skillName: attackWith,
-      skillValue: Math.max(skillValue, attributes[skillData?.baseAttribute].value || 0),
+      skillValue: Math.max(skillValue, attributes[skillData?.baseAttribute]?.value || 0),
       unskilledUse: true,
       damage: adjustedDamage,
       weaponAP: weaponData.ap,
@@ -1026,6 +1041,8 @@ export default class TorgeternityActorSheet extends ActorSheet {
       rollTotal: 0,
       chatNote: weaponData.chatNote,
       movementModifier: 0,
+      bdDamageLabelStyle: 'display:none',
+      bdDamageSum: 0,
     };
 
     new TestDialog(test);
@@ -1054,29 +1071,10 @@ export default class TorgeternityActorSheet extends ActorSheet {
     const skillData = this.actor.system.skills[skillName];
     // var dnDescriptor = "standard";
     let dnDescriptor = powerData.dn;
-    let isAttack = false;
-    let applyArmor = true;
-    let applySize = true;
+    const isAttack = powerData.isAttack;
+    const applyArmor = powerData.applyArmor;
+    const applySize = powerData.applySize;
     let powerModifier = 0;
-
-    // Convert yes/no options from sheet into boolean values (or else renderSkillChat gets confused)
-    if (powerData.isAttack == 'true') {
-      isAttack = true;
-    } else {
-      isAttack = false;
-    }
-
-    if (powerData.applyArmor == 'true') {
-      applyArmor = true;
-    } else {
-      applyArmor = false;
-    }
-
-    if (powerData.applySize == 'true') {
-      applySize = true;
-    } else {
-      applySize = false;
-    }
 
     // Set modifier for this power
     if (item.system.modifier > 0 || item.system.modifier < 0) {
@@ -1127,6 +1125,8 @@ export default class TorgeternityActorSheet extends ActorSheet {
       attackOptions: true,
       rollTotal: 0,
       movementModifier: 0,
+      bdDamageLabelStyle: 'display:none',
+      bdDamageSum: 0,
     };
 
     new TestDialog(test);
@@ -1169,21 +1169,7 @@ export default class TorgeternityActorSheet extends ActorSheet {
   _onItemEquip(event) {
     const itemID = event.currentTarget.closest('.item').getAttribute('data-item-id');
     const item = this.actor.items.get(itemID);
-    const doCheckOtherItems = TorgeternityItem.toggleEquipState(item, this.actor);
-
-    // for armor and shield, ensure there's only one equipped
-    if (doCheckOtherItems && item.system && item.system.hasOwnProperty('equipped')) {
-      const actor = this.actor;
-      actor.items.forEach(function (otherItem) {
-        if (
-          otherItem._id !== item._id &&
-          otherItem.system.equipped &&
-          otherItem.type === item.type
-        ) {
-          TorgeternityItem.toggleEquipState(otherItem, actor);
-        }
-      });
-    }
+    TorgeternityItem.toggleEquipState(item, this.actor);
   }
 }
 

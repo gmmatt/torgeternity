@@ -35,9 +35,10 @@ import { activateStandartScene } from './activateStandartScene.js';
 import { torgMigration } from './migrations.js';
 import initTextEdidor from './initTextEditor.js';
 import { TorgeternityMacros } from './macros.js';
-import { ChatMessageTorg } from './chat/document.js';
+import { ChatMessageTorg } from './documents/chat/document.js';
 import * as actorDataModels from './data/actor/index.js';
 import * as itemDataModels from './data/item/index.js';
+import * as cardDataModels from './data/card/index.js';
 import TorgActiveEffect from './documents/active-effect/torgActiveEffect.js';
 
 Hooks.once('init', async function () {
@@ -60,6 +61,7 @@ Hooks.once('init', async function () {
   CONFIG.ActiveEffect.documentClass = TorgActiveEffect;
   CONFIG.Actor.dataModels = actorDataModels.config;
   CONFIG.Item.dataModels = itemDataModels.config;
+  CONFIG.Card.dataModels = cardDataModels.config;
   CONFIG.statusEffects = torgeternity.statusEffects;
   CONFIG.attributeTypes = torgeternity.attributeTypes;
 
@@ -187,9 +189,9 @@ Hooks.on('ready', async function () {
 
   sheetResize();
 
-  // modifying explosion methode for dices
-  Die.prototype.explode = explode;
-  Die.prototype.reroll = reroll;
+  // monkey-patch explosion method for die rolls
+  foundry.dice.terms.Die.prototype.explode = explode;
+  foundry.dice.terms.Die.prototype.reroll = reroll;
 
   // adding gmScreen to UI
   ui.GMScreen = new GMScreen();
@@ -602,7 +604,7 @@ function rollItemMacro(itemName) {
         // The following is copied/pasted/adjusted from _onAttackRoll in TorgeternityActorSheet
         const weaponData = item.system;
         const attackWith = weaponData.attackWith;
-        const skillData = actor.system.skills[weaponData.attackWith];
+        const skillData = actor.system.skills?.[weaponData.attackWith] || item.system?.gunner;
         let dnDescriptor = 'standard';
         const damageType = weaponData.damageType;
         const weaponDamage = weaponData.damage;
@@ -680,7 +682,7 @@ function rollItemMacro(itemName) {
           actorName: actor.name,
           skillName: weaponData.attackWith,
           skillBaseAttribute: skillData.baseAttribute,
-          skillValue: skillData.value,
+          skillValue: skillData?.value || skillData?.skillValue,
           skillAdds: skillData.adds,
           unskilledUse: true,
           rollTotal: 0,
@@ -697,6 +699,8 @@ function rollItemMacro(itemName) {
           darknessModifier: 0,
           chatNote: weaponData.chatNote,
           movementModifier: 0,
+          bdDamageLabelStyle: 'display:none',
+          bdDamageSum: 0,
         };
 
         new TestDialog(mTest);
@@ -710,29 +714,10 @@ function rollItemMacro(itemName) {
         const skillName = powerData.skill;
         const skillData = actor.system.skills[skillName];
         let dnDescriptor = 'standard';
-        let isAttack = false;
-        let applyArmor = true;
-        let applySize = true;
+        const isAttack = powerData.isAttack;
+        const applyArmor = powerData.applyArmor;
+        const applySize = powerData.applySize;
         let powerModifier = 0;
-
-        // Convert yes/no options from sheet into boolean values (or else renderSkillChat gets confused)
-        if (powerData.isAttack == 'true') {
-          isAttack = true;
-        } else {
-          isAttack = false;
-        }
-
-        if (powerData.applyArmor == 'true') {
-          applyArmor = true;
-        } else {
-          applyArmor = false;
-        }
-
-        if (powerData.applySize == 'true') {
-          applySize = true;
-        } else {
-          applySize = false;
-        }
 
         // Set modifier for this power
         if (item.system.modifier > 0 || item.system.modifier < 0) {
@@ -775,6 +760,8 @@ function rollItemMacro(itemName) {
           attackOptions: true,
           rollTotal: 0,
           chatNote: '',
+          bdDamageLabelStyle: 'display:none',
+          bdDamageSum: 0,
         };
 
         new TestDialog(test);
@@ -859,13 +846,13 @@ function rollSkillMacro(skillName, attributeName, isInteractionAttack) {
   // calculate the value using the attribute and skill adds, as the attribute might be different
   //    than the skill's current baseAttribute. This assumes the actor is a stormknight - different
   //    logic is needed for threats, who don't have adds.
-  let skillValue = attribute;
+  let skillValue = attribute.value;
   if (!isAttributeTest) {
     if (actor.type === 'stormknight') {
       skillValue += skill.adds;
     } else if (actor.type == 'threat') {
       const otherAttribute = actor.system.attributes[skill.baseAttribute];
-      skillValue = Math.max(skill.value, otherAttribute);
+      skillValue = Math.max(skill.value, otherAttribute.value);
     }
   }
   // Trigger the skill roll
@@ -891,10 +878,12 @@ function rollSkillMacro(skillName, attributeName, isInteractionAttack) {
     unskilledUse: skill.unskilledUse,
     chatNote: '',
     woundModifier: parseInt(-actor.system.wounds.value),
-    stymiedModifier: parseInt(actor.system.stymiedModifier),
+    stymiedModifier: actor.statusModifiers.stymied,
     darknessModifier: 0, // parseInt(actor.system.darknessModifier),
     type: 'skill',
     movementModifier: 0,
+    bdDamageLabelStyle: 'display:none',
+    bdDamageSum: 0,
   };
   if (isInteractionAttack) {
     test['type'] = 'interactionAttack';
@@ -1020,7 +1009,7 @@ Hooks.on('deleteCombat', async (combat, dataUpdate) => {
 
 Hooks.on('deleteActor', async (actor, data1, data2) => {
   if (!game.user.isGM || actor.type != 'stormknight') return;
-  actor.getDefaultHand().delete();
+  actor.getDefaultHand()?.delete();
 });
 
 Hooks.on('renderChatLog', (app, html, data) => {

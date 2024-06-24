@@ -6,7 +6,7 @@ export async function torgMigration() {
   const migrationVersion = game.settings.get('torgeternity', 'migrationVersion');
 
   // if current version is not newer than migration version, nothing to do here aside from maybe some module specific migrations for premium content
-  if (!isNewerVersion(currentVersion, migrationVersion)) {
+  if (!foundry.utils.isNewerVersion(currentVersion, migrationVersion)) {
     // If module images need updating, do that
     if (game.settings.get('torgeternity', 'moduleImageUpdate')) {
       await migrateImagestoWebp({ system: false, modules: true });
@@ -23,7 +23,7 @@ export async function torgMigration() {
     ui.notifications.warn('Migrating Torg system version to ' + currentVersion); // TODO: Localize this
 
     // migrations up to 2.4.0
-    if (isNewerVersion('2.4.0', migrationVersion)) {
+    if (foundry.utils.isNewerVersion('2.4.0', migrationVersion)) {
       // code to migrate missile weappon groupName
       game.actors.forEach(async (act) => {
         if (act.data.data.skills.missileWeapons.groupName != 'combat') {
@@ -42,7 +42,7 @@ export async function torgMigration() {
       }
     }
 
-    if (isNewerVersion('2.5.0', migrationVersion)) {
+    if (foundry.utils.isNewerVersion('2.5.0', migrationVersion)) {
       // Deck settings migration to use id
       const deckSetting = game.settings.get('torgeternity', 'deckSetting');
       const deckKeys = Object.keys(deckSetting);
@@ -68,7 +68,7 @@ export async function torgMigration() {
       await migrateImagestoWebp({ system: true, modules: true });
     }
 
-    if (isNewerVersion('2.5.1', migrationVersion)) {
+    if (foundry.utils.isNewerVersion('2.5.1', migrationVersion)) {
       // quick migration to fix any worlds which imported the incorrect decks in 2.5.0
       let needsFix = false;
       for (const deck of game.cards.contents) {
@@ -78,7 +78,7 @@ export async function torgMigration() {
     }
 
     // migrations up to 3.3.0
-    if (isNewerVersion('3.3.0', migrationVersion)) {
+    if (foundry.utils.isNewerVersion('3.3.0', migrationVersion)) {
       // code to migrate heavy weapon groupName
       game.actors.forEach(async (act) => {
         if (act.system.skills.missileWeapons.groupName != 'combat') {
@@ -95,7 +95,7 @@ export async function torgMigration() {
     }
 
     // migrations for 3.7.0
-    if (isNewerVersion('3.7.0', migrationVersion)) {
+    if (foundry.utils.isNewerVersion('3.7.0', migrationVersion)) {
       ui.notifications.info('Migrating to 3.7.0');
       console.log('Migrating to 3.7.0');
       const badArmorKeys = [
@@ -160,7 +160,7 @@ export async function torgMigration() {
    
     For migration to version X.Y.Z:
    
-    if(isNewerVersion("X.Y.Z", migrationVersion)){
+    if(foundry.utils.isNewerVersion("X.Y.Z", migrationVersion)){
         //whatever migration code is needed from previous version
     }
    
@@ -209,7 +209,7 @@ async function migrateImagestoWebp(options = { system: true, modules: true }) {
     for (const module of modules) {
       const modData = game.modules.get(module.name);
       if (!modData) continue;
-      if (!isNewerVersion(modData.data.version, module.oldVersion)) {
+      if (!foundry.utils.isNewerVersion(modData.data.version, module.oldVersion)) {
         moduleUpdates[module.name] = true;
         continue;
       }

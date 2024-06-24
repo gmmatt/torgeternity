@@ -1,6 +1,6 @@
 import { TestDialog } from './test-dialog.js';
 import { checkUnskilled } from './sheets/torgeternityActorSheet.js';
-import { ChatMessageTorg } from './chat/document.js';
+import { ChatMessageTorg } from './documents/chat/document.js';
 
 /**
  *
@@ -8,6 +8,7 @@ import { ChatMessageTorg } from './chat/document.js';
  */
 export async function renderSkillChat(test) {
   const messages = [];
+  const messageData = [];
   if (test?.targetAll.length != 0) {
   } else test.targetAll = [test.target];
   // disable DSN (if used) for 'every' message (want to show only one dice despite many targets)
@@ -17,6 +18,8 @@ export async function renderSkillChat(test) {
   test.applyDebuffLabel = 'display:none';
   test.applyDamLabel = 'display:none';
   test.backlashLabel = 'display:none';
+  let iteratedRoll;
+
   for (let i = 0; i < test.targetAll.length; i++) {
     const target = test.targetAll[i];
     test.target = target;
@@ -126,7 +129,7 @@ export async function renderSkillChat(test) {
       if (unskilledTest === true) {
         dice = '1d20x10';
       }
-      test.diceroll = new Roll(dice).evaluate({ async: false });
+      test.diceroll = await new Roll(dice).evaluate();
       if (test.isFav && test.disfavored) {
         test.isFav = false;
         test.disfavored = false;
@@ -542,7 +545,6 @@ export async function renderSkillChat(test) {
         test.resultTextColor +=
           ';text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000, 0px 0px 15px black;';
       }
-      //test.backlashLabel = 'display:inline';
       test.actionTotalLabel = 'display:none';
       test.possibilityStyle = 'display:none';
       test.upStyle = 'display:none';
@@ -600,49 +602,49 @@ export async function renderSkillChat(test) {
           changes: [
             {
               // Modify all existing "basic" defense in block
-              key: 'system.dodgeDefenseMod', // Should need other work for defense vs powers
+              key: 'defenses.dodge.mod', // Should need other work for defense vs powers
               value: test.bonus, // that don't target xxDefense
               priority: 20, // Create a data.ADB that store the bonus ?
               mode: 2,
             },
             {
-              key: 'system.intimidationDefenseMod',
+              key: 'defenses.intimidation.mod',
               value: test.bonus,
               priority: 20,
               mode: 2,
             },
             {
-              key: 'system.maneuverDefenseMod',
+              key: 'defenses.maneuver.mod',
               value: test.bonus,
               priority: 20,
               mode: 2,
             },
             {
-              key: 'system.meleeWeaponsDefenseMod',
+              key: 'defenses.meleeWeapons.mod',
               value: test.bonus,
               priority: 20,
               mode: 2,
             },
             {
-              key: 'system.tauntDefenseMod',
+              key: 'defenses.taunt.mod',
               value: test.bonus,
               priority: 20,
               mode: 2,
             },
             {
-              key: 'system.trickDefenseMod',
+              key: 'defenses.trick.mod',
               value: test.bonus,
               priority: 20,
               mode: 2,
             },
             {
-              key: 'system.unarmedCombatDefenseMod',
+              key: 'defenses.unarmedCombat.mod',
               value: test.bonus,
               priority: 20,
               mode: 2,
             },
             {
-              key: 'system.other.toughness',
+              key: 'defenses.toughness',
               value: shieldBonus,
               priority: 20,
               mode: 2,
@@ -675,7 +677,7 @@ export async function renderSkillChat(test) {
       // Delete Existing Active Effects
       fromUuidSync(test.actor)
         .effects.find((a) => a.name === 'ActiveDefense')
-        .delete();
+        ?.delete();
       if (test.bonus < 1) {
         test.bonus = 1;
       }
@@ -701,49 +703,49 @@ export async function renderSkillChat(test) {
         changes: [
           {
             // Modify all existing "basic" defense in block
-            key: 'system.dodgeDefenseMod', // Should need other work for defense vs powers
+            key: 'defenses.dodge.mod', // Should need other work for defense vs powers
             value: test.bonus, // that don't target xxDefense
             priority: 20, // Create a data.ADB that store the bonus ?
             mode: 2,
           },
           {
-            key: 'system.intimidationDefenseMod',
+            key: 'defenses.intimidation.mod',
             value: test.bonus,
             priority: 20,
             mode: 2,
           },
           {
-            key: 'system.maneuverDefenseMod',
+            key: 'defenses.maneuver.mod',
             value: test.bonus,
             priority: 20,
             mode: 2,
           },
           {
-            key: 'system.meleeWeaponsDefenseMod',
+            key: 'defenses.meleeWeapons.mod',
             value: test.bonus,
             priority: 20,
             mode: 2,
           },
           {
-            key: 'system.tauntDefenseMod',
+            key: 'defenses.taunt.mod',
             value: test.bonus,
             priority: 20,
             mode: 2,
           },
           {
-            key: 'system.trickDefenseMod',
+            key: 'defenses.trick.mod',
             value: test.bonus,
             priority: 20,
             mode: 2,
           },
           {
-            key: 'system.unarmedCombatDefenseMod',
+            key: 'defenses.unarmedCombat.mod',
             value: test.bonus,
             priority: 20,
             mode: 2,
           },
           {
-            key: 'system.other.toughness',
+            key: 'defenses.toughness',
             value: shieldBonus,
             priority: 20,
             mode: 2,
@@ -764,31 +766,22 @@ export async function renderSkillChat(test) {
       if (test.vitalAreaDamageModifier) {
         adjustedDamage = test.damage + test.vitalAreaDamageModifier;
       }
+      // add additional Damage from roll dialogue
+      if (test?.additionalDamage && test.previousBonus === false) {
+        adjustedDamage += test?.additionalDamage;
+      }
       // Check for whether a target is present & turn on display of damage sub-label
       if (test.target.present === true) {
         test.damageSubLabel = 'display:block';
         // If armor and cover can assist, adjust toughness based on AP effects and cover modifier
         if (test.applyArmor === true) {
-          if (test.weaponAP > 0) {
-            if (test.weaponAP <= test.target.armor) {
-              test.targetAdjustedToughness =
-                parseInt(test.target.toughness) -
-                parseInt(test.weaponAP) +
-                parseInt(test.coverModifier);
-            } else {
-              test.targetAdjustedToughness =
-                parseInt(test.target.toughness) -
-                parseInt(test.target.armor) +
-                parseInt(test.coverModifier);
-            }
-          } else {
-            test.targetAdjustedToughness =
-              parseInt(test.target.toughness) + parseInt(test.coverModifier);
-          }
+          test.targetAdjustedToughness =
+            test.target.toughness -
+            Math.min(parseInt(test.weaponAP), test.target.armor) +
+            parseInt(test.coverModifier);
           // Ignore armor and cover
         } else {
-          test.targetAdjustedToughness =
-            parseInt(test.target.toughness) - parseInt(test.target.armor);
+          test.targetAdjustedToughness = test.target.toughness - test.target.armor;
         }
         // Generate damage description and damage sublabel
         if (
@@ -803,6 +796,28 @@ export async function renderSkillChat(test) {
             'torgeternity.chatText.check.result.attackMissed'
           );
         } else {
+          // Add BDs in promise if applicable as this should only be rolled if the test is successful
+          if (test.addBDs && test.previousBonus === false) {
+            iteratedRoll = await torgBD(test.trademark, test.addBDs);
+            test.BDDamageInPromise = iteratedRoll.total;
+            test.diceList = test.diceList.concat(iteratedRoll.dice[0].values);
+            test.amountBD += test.addBDs;
+            test.addBDs = 0;
+
+            test.chatTitle +=
+              ` +${test.amountBD}` + game.i18n.localize('torgeternity.chatText.bonusDice');
+
+            test.bdDamageLabelStyle = 'display: block';
+            test.bdDamageSum += test.BDDamageInPromise;
+
+            test.damage += test.BDDamageInPromise;
+            adjustedDamage += test.BDDamageInPromise;
+            test.BDDamageInPromise = 0;
+          }
+          // adjustedDamage is already computed from test.damage
+          // then modify test.damage for following future computation, and modify the adjustedDamage
+          // then the test.BDDamageInPromise is reset
+          
           test.applyDamLabel = 'display:inline';
           test.damageDescription = torgDamage(adjustedDamage, test.targetAdjustedToughness).label;
           test.damageSubDescription =
@@ -813,10 +828,6 @@ export async function renderSkillChat(test) {
             test.targetAdjustedToughness +
             ' ' +
             game.i18n.localize('torgeternity.chatText.check.result.toughness');
-          // if auto apply damages == true in settings
-          /* if (game.settings.get("torgeternity", "autoDamages")) {
-                      applyDamages(torgDamage(adjustedDamage, test.targetAdjustedToughness))
-                  }*/
         }
       } else {
         // Basic roll
@@ -917,7 +928,7 @@ export async function renderSkillChat(test) {
     chatData.speaker.actor = test.actor.id;
     chatData.speaker.alias = test.actor.name;
 
-    const messageData = {
+    const messageDataIterated = {
       ...chatData,
       flags: {
         torgeternity: { test, currentTarget },
@@ -925,18 +936,27 @@ export async function renderSkillChat(test) {
       },
     };
 
-    messages.push(await ChatMessageTorg.create(messageData));
+    // roll Dice once, and handle the error if DSN is not installed
+    if (i === 0) {
+      try {
+        await game.dice3d.showForRoll(test.diceroll, game.user, true);
+      } catch (e) {};
+    }
+    try {
+      game.dice3d.showForRoll(iteratedRoll);
+      iteratedRoll = undefined;
+    } catch (e) {};
+
+    messages.push(await ChatMessageTorg.create(messageDataIterated));
   }
 
   // reset tokens targeted, they are printed in the chatCard
   await game.user.updateTokenTargets();
   await game.user.broadcastActivity({ targets: [] });
-
-  // roll Dice once, and handle the error if DSN is not installed
   try {
-    await game.dice3d.showForRoll(test.diceroll, game.user, true);
     game.dice3d.messageHookDisabled = false;
-  } catch (e) {}
+  } catch (e) {};
+
   return messages;
 }
 
@@ -997,16 +1017,11 @@ export function torgBonus(rollTotal) {
 
 /**
  *
- * @param isTrademark
+ * @param isTrademark Is this roll with the perk of trademark weapon?
+ * @param amount The amount of BDs that is ought to roll
  */
-export function torgBD(isTrademark) {
-  let diceroll;
-  if (isTrademark) {
-    diceroll = new Roll('1d6rr1x6max5').evaluate({ async: false });
-  } else {
-    diceroll = new Roll('1d6x6max5').evaluate({ async: false });
-  }
-
+export async function torgBD(isTrademark, amount = 1) {
+  const diceroll = await new Roll(`${amount}d6${isTrademark ? 'rr1' : ''}x6max5`).evaluate();
   return diceroll;
 }
 
@@ -1220,7 +1235,7 @@ export async function soakDamages(soaker) {
   const skillName = 'reality';
   const attributeName = 'spirit';
   const isAttributeTest = false;
-  const skillValue = soaker.system.skills[skillName]?.value || '-';
+  const skillValue = soaker.system.skills[skillName].value;
 
   // Before calculating roll, check to see if it can be attempted unskilled; exit test if actor doesn't have required skill
   if (checkUnskilled(skillValue, skillName, soaker)) {
@@ -1621,7 +1636,7 @@ async function manyDN(test, target) {
 }
 
 async function oneDN(test) {
-  let highestDN = 0;
+  let highestDN = test?.DN || 0;
   let tempDN;
   switch (test.DNDescriptor) {
     case 'veryEasy':

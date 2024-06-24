@@ -60,7 +60,7 @@ export default class TorgeternityItemSheet extends ItemSheet {
    *
    */
   static get defaultOptions() {
-    return mergeObject(super.defaultOptions, {
+    return foundry.utils.mergeObject(super.defaultOptions, {
       width: 530,
       height: 580,
       classes: ['torgeternity', 'sheet', 'item'],

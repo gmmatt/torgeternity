@@ -24,20 +24,12 @@
             <div class="sub-header">
                 <span class="threat-edit">
                     <select name="system.details.sizeBonus" class="input-box">
-                        {{#select actor.system.details.sizeBonus}}
-                        {{#each config.sizes as |name type|}}
-                        <option value="{{type}}">{{localize name}}</option>
-                        {{/each}}
-                        {{/select}}
+                        {{selectOptions config.sizes selected=actor.system.details.sizeBonus localize=true}}
                     </select>
                 </span>
                 <span class="threat-edit">
                     <select name="system.details.clearance" class="input-box">
-                        {{#select actor.system.details.clearance}}
-                        {{#each config.clearances as |name type|}}
-                        <option value="{{type}}">{{localize name}}</option>
-                        {{/each}}
-                        {{/select}}
+                        {{selectOptions config.clearances selected=actor.system.details.clearance localize=true}}
                     </select>                    
                 </span>
                 <span class="threat-edit">

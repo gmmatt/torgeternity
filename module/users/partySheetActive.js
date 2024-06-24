@@ -6,7 +6,7 @@ export default class PartySheet extends PlayerList {
    *
    */
   static get defaultOptions() {
-    return mergeObject(super.defaultOptions, {
+    return foundry.utils.mergeObject(super.defaultOptions, {
       id: 'party-sheet',
       template: 'systems/torgeternity/templates/playerList/partySheetActive.hbs',
       popOut: true,

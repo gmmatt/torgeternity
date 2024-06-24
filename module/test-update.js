@@ -54,7 +54,7 @@ export class TestUpdate extends FormApplication {
    * @param event
    * @param html
    */
-  _onModify(event, html) {
+  async _onModify(event, html) {
     // Set DN Descriptor
     this.test.DNDescriptor = document.getElementById('difficulty').value;
 
@@ -120,7 +120,7 @@ export class TestUpdate extends FormApplication {
 
     this.test.diceroll = null;
 
-    torgchecks.renderSkillChat(this.test);
+    await torgchecks.renderSkillChat(this.test);
     this.close();
   }
 }

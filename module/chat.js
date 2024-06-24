@@ -44,7 +44,7 @@ async function parentDeleteByTime(oldMsg) {
 async function onFavored(event) {
   const parentMessageId = event.currentTarget.closest('.chat-message').dataset.messageId;
   const parentMessage = game.messages.find(({ id }) => id === parentMessageId);
-  if (!(parentMessage.user.id === game.user.id) && !game.user.isGM) {
+  if (!(parentMessage.author.id === game.user.id) && !game.user.isGM) {
     return;
   }
   const test = parentMessage.getFlag('torgeternity', 'test');
@@ -61,14 +61,14 @@ async function onFavored(event) {
 
   test.unskilledLabel = 'display:none';
 
-  renderSkillChat(test);
+  await renderSkillChat(test);
   parentDeleteByTime(parentMessage);
 }
 
 async function onPossibility(event) {
   const parentMessageId = event.currentTarget.closest('.chat-message').dataset.messageId;
   const parentMessage = game.messages.find(({ id }) => id === parentMessageId);
-  if (!(parentMessage.user.id === game.user.id) && !game.user.isGM) {
+  if (!(parentMessage.author.id === game.user.id) && !game.user.isGM) {
     return;
   }
   const test = parentMessage.getFlag('torgeternity', 'test');
@@ -144,6 +144,7 @@ async function onPossibility(event) {
     test.possibilityStyle = 'pointer-events:none;color:gray';
   }
 
+  parentDeleteByTime(parentMessage);
   const diceroll = await new Roll('1d20x10x20').evaluate();
   if (test.disfavored) {
     test.possibilityTotal = 0.1;
@@ -158,14 +159,13 @@ async function onPossibility(event) {
   // add chat note "poss spent"
   test.chatNote += game.i18n.localize('torgeternity.sheetLabels.possSpent');
 
-  renderSkillChat(test);
-  parentDeleteByTime(parentMessage);
+  await renderSkillChat(test);
 }
 
 async function onUp(event) {
   const parentMessageId = event.currentTarget.closest('.chat-message').dataset.messageId;
   const parentMessage = game.messages.find(({ id }) => id === parentMessageId);
-  if (!(parentMessage.user.id === game.user.id) && !game.user.isGM) {
+  if (!(parentMessage.author.id === game.user.id) && !game.user.isGM) {
     return;
   }
   const test = parentMessage.getFlag('torgeternity', 'test');
@@ -173,6 +173,7 @@ async function onUp(event) {
   test.isFavStyle = 'pointer-events:none;color:gray;display:none';
 
   // Roll for Up
+  parentDeleteByTime(parentMessage);
   const diceroll = await new Roll('1d20x10x20').evaluate();
   if (test.disfavored) {
     test.upTotal = 0.1;
@@ -186,14 +187,13 @@ async function onUp(event) {
   test.chatTitle += '*';
   test.unskilledLabel = 'display:none';
 
-  renderSkillChat(test);
-  parentDeleteByTime(parentMessage);
+  await renderSkillChat(test);
 }
 
 async function onHero(event) {
   const parentMessageId = event.currentTarget.closest('.chat-message').dataset.messageId;
   const parentMessage = game.messages.find(({ id }) => id === parentMessageId);
-  if (!(parentMessage.user.id === game.user.id) && !game.user.isGM) {
+  if (!(parentMessage.author.id === game.user.id) && !game.user.isGM) {
     return;
   }
   const test = parentMessage.getFlag('torgeternity', 'test');
@@ -202,6 +202,7 @@ async function onHero(event) {
   test.isFavStyle = 'pointer-events:none;color:gray;display:none';
 
   // Roll for Possibility
+  parentDeleteByTime(parentMessage);
   const diceroll = await new Roll('1d20x10x20').evaluate();
   if (test.disfavored) {
     test.heroTotal = 0.1;
@@ -217,14 +218,13 @@ async function onHero(event) {
   test.chatTitle += '*';
   test.unskilledLabel = 'display:none';
 
-  renderSkillChat(test);
-  parentDeleteByTime(parentMessage);
+  await renderSkillChat(test);
 }
 
 async function onDrama(event) {
   const parentMessageId = event.currentTarget.closest('.chat-message').dataset.messageId;
   const parentMessage = game.messages.find(({ id }) => id === parentMessageId);
-  if (!(parentMessage.user.id === game.user.id) && !game.user.isGM) {
+  if (!(parentMessage.author.id === game.user.id) && !game.user.isGM) {
     return;
   }
   const test = parentMessage.getFlag('torgeternity', 'test');
@@ -232,6 +232,7 @@ async function onDrama(event) {
   test.isFavStyle = 'pointer-events:none;color:gray;display:none';
 
   // Increase cards played by 1
+  parentDeleteByTime(parentMessage);
   const diceroll = await new Roll('1d20x10x20').evaluate();
   if (test.disfavored) {
     test.dramaTotal = 0.1;
@@ -247,14 +248,13 @@ async function onDrama(event) {
   test.chatTitle += '*';
   test.unskilledLabel = 'display:none';
 
-  renderSkillChat(test);
-  parentDeleteByTime(parentMessage);
+  await renderSkillChat(test);
 }
 
-function onPlus3(event) {
+async function onPlus3(event) {
   const parentMessageId = event.currentTarget.closest('.chat-message').dataset.messageId;
   const parentMessage = game.messages.find(({ id }) => id === parentMessageId);
-  if (!(parentMessage.user.id === game.user.id) && !game.user.isGM) {
+  if (!(parentMessage.author.id === game.user.id) && !game.user.isGM) {
     return;
   }
   const test = parentMessage.getFlag('torgeternity', 'test');
@@ -268,15 +268,15 @@ function onPlus3(event) {
   test.diceroll = null;
 
   test.unskilledLabel = 'display:none';
-
-  renderSkillChat(test);
   parentDeleteByTime(parentMessage);
+
+  await renderSkillChat(test);
 }
 
-function onBd(event) {
+async function onBd(event) {
   const parentMessageId = event.currentTarget.closest('.chat-message').dataset.messageId;
   const parentMessage = game.messages.find(({ id }) => id === parentMessageId);
-  if (!(parentMessage.user.id === game.user.id) && !game.user.isGM) {
+  if (!(parentMessage.author.id === game.user.id) && !game.user.isGM) {
     return;
   }
   const currentTarget = parentMessage.getFlag('torgeternity', 'currentTarget');
@@ -293,15 +293,18 @@ function onBd(event) {
   parentMessage.setFlag('torgeternity', 'test');
   parentMessage.setFlag('torgeternity', 'currentTarget');
   test.isFavStyle = 'pointer-events:none;color:gray;display:none';
+  test.unskilledLabel = 'display:none';
+  test.bdDamageLabelStyle = 'display:block';
 
-  const finalValue = torgBD(test.trademark);
+  const finalValue = await torgBD(test.trademark, 1);
 
-  const newDamage = parseInt(test.damage) + parseInt(finalValue.total);
+  const newDamage = test.damage + finalValue.total;
+
   test.damage = newDamage;
   test.diceroll = finalValue;
 
   test.amountBD += 1;
-  if (test.amountBD === 1) {
+  if (test.amountBD === 1 && !test.addBDs) {
     test.chatTitle += ` +${test.amountBD}` + game.i18n.localize('torgeternity.chatText.bonusDice');
   } else if (test.amountBD > 1) {
     test.chatTitle = test.chatTitle.replace(
@@ -312,16 +315,16 @@ function onBd(event) {
     ui.notifications.info(game.i18n.localize('torgeternity.notifications.failureBDResolution'));
   }
 
-  test.unskilledLabel = 'display:none';
-
-  renderSkillChat(test);
+  test.bdDamageSum += finalValue.total;
   game.messages.get(parentMessageId).delete();
+
+  await renderSkillChat(test);
 }
 
-function onModifier(event) {
+async function onModifier(event) {
   const parentMessageId = event.currentTarget.closest('.chat-message').dataset.messageId;
   const parentMessage = game.messages.find(({ id }) => id === parentMessageId);
-  if (!(parentMessage.user.id === game.user.id) && !game.user.isGM) {
+  if (!(parentMessage.author.id === game.user.id) && !game.user.isGM) {
     return;
   }
   const test = parentMessage.getFlag('torgeternity', 'test');

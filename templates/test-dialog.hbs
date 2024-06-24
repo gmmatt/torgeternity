@@ -1,101 +1,40 @@
 <div>
-    <form>
-    <table>
-        <tr>
-            <td>
-                <table>
-                    <tr>
-                        {{#if (activeDefenseRoll test)}}{{else}}
-                        <td>
-                            {{> "systems/torgeternity/templates/testDialogs/difficulty-selector.hbs"}}
-                        </td>
-                        {{/if}}
-                        <td>
-                            {{> "systems/torgeternity/templates/testDialogs/bonus-selector.hbs"}}                            
-                        </td>
-                    </tr>
-                </table>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <table>
-                    <tr>
-                        <td>
-                            {{> "systems/torgeternity/templates/testDialogs/disfavored.hbs"}}
-                        </td>
-                        <td>
-                            {{> "systems/torgeternity/templates/testDialogs/favored.hbs"}}
-                        </td>
-                        <td>
-                            {{> "systems/torgeternity/templates/testDialogs/movement-penalty-selector.hbs"}}
-                        </td>
-                    </tr>
-                </table>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                {{> "systems/torgeternity/templates/testDialogs/multi-action-selector.hbs"}}
-            </td>
-        </tr>
-        <tr>
-            <td>
-                {{> "systems/torgeternity/templates/testDialogs/multi-target-selector.hbs"}}
-            </td>
-        </tr>
+    <form class="test-dialog">
+        <div>                    
+            {{#if (activeDefenseRoll test)}}{{else}}
+                {{> "systems/torgeternity/templates/testDialogs/difficulty-selector.hbs"}}
+            {{/if}}
+                {{> "systems/torgeternity/templates/testDialogs/bonus-selector.hbs"}}                            
+        </div>
+        <div>            
+            {{> "systems/torgeternity/templates/testDialogs/favored.hbs"}}
+            {{> "systems/torgeternity/templates/testDialogs/movement-penalty-selector.hbs"}}
+        </div>
+        <div>
+            {{> "systems/torgeternity/templates/testDialogs/multi-action-selector.hbs"}}
+        </div>
+        <div>
+            {{> "systems/torgeternity/templates/testDialogs/multi-target-selector.hbs"}}
+        </div>
         {{#if test.attackOptions}}
-        <tr>
-            <td>
-                {{> "systems/torgeternity/templates/testDialogs/attack-options.hbs"}}
-            </td>
-        </tr>
-        <tr>
-            <td>
-                {{> "systems/torgeternity/templates/testDialogs/target-options.hbs"}}
-            </td>
-        </tr>
+        <div>
+            {{> "systems/torgeternity/templates/testDialogs/attack-options.hbs"}}
+        </div>
+        <div>
+            {{> "systems/torgeternity/templates/testDialogs/target-options.hbs"}}
+        </div>
         {{/if}}
-        <tr>
-            <td>
-                {{> "systems/torgeternity/templates/testDialogs/modifiers-table.hbs"}}
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <fieldset>
-                    <legend>{{localize "torgeternity.sheetLabels.statusEffects"}}</legend>
-                    <div class="skill-check-dialog-status-effects">
-							{{#if test.stymiedModifier}}
-								{{localize "torgeternity.statusEffects.stymied"}}:
-								{{test.stymiedModifier}}<br>
-							{{/if}}
-							{{#if test.darknessModifier}}
-								{{localize "torgeternity.statusEffects.darkness"}}:
-								{{test.darknessModifier}}<br>
-							{{/if}}
-							{{#if test.woundModifier}}
-								{{localize "torgeternity.stats.wounds"}}:
-								{{test.woundModifier}}
-								<br>
-							{{/if}}
-							{{#if test.sizeModifier}}
-								{{localize "torgeternity.statusEffects.targetSize"}}: {{test.sizeModifier}}
-								<br>
-							{{/if}}
-							{{#if test.vulnerableModifier}}
-								{{localize "torgeternity.statusEffects.targetVulnerability"}}: +{{test.vulnerableModifier}}<br>
-							{{/if}}
-                            {{#if test.speedModifier}}
-                                {{localize "torgeternity.stats.speedModifier"}}: {{test.speedModifier}}<br>
-                            {{/if}}
-                            {{#if test.maneuverModifier}}
-                                {{localize "torgeternity.stats.maneuverModifier"}}: {{test.maneuverModifier}}<br>
-                            {{/if}}
-                    </div>
-                </fieldset>
-            </td>
-    </table>
-    </form>
-    <button class="skill-roll-button"><i class="fas fa-dice-d20"></i>{{localize "torgeternity.sheetLabels.roll"}}</button>
+        <div>
+            {{> "systems/torgeternity/templates/testDialogs/modifiers-table.hbs"}}
+        </div>
+
+        {{#if test.hasModifiers}}
+        <div>
+            {{> "systems/torgeternity/templates/testDialogs/fixed-modifiers.hbs"}}
+        </div>
+        {{/if}}
+    </form>    
+</div>
+<div>
+    <button class="test-dialog-rollbutton"><i class="fas fa-dice-d20"></i>{{localize "torgeternity.sheetLabels.roll"}}</button>
 </div>

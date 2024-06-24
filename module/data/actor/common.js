@@ -129,7 +129,6 @@ export class CommonActorData extends foundry.abstract.TypeDataModel {
     }
 
     this.shock.max = this.attributes.spirit.value;
-    this.other.toughness = this.attributes.strength.value;
   }
 
   /**
@@ -139,10 +138,9 @@ export class CommonActorData extends foundry.abstract.TypeDataModel {
     super.prepareDerivedData();
     this.other.move = this.attributes.dexterity.value;
     this.other.run = this.attributes.dexterity.value * 3;
-    this.other.toughness += this.other.armor;
     // Derive Skill values for Storm Knights and Threats
-    for (const skill of Object.values(this.skills)) {
-      const trained = skill.unskilledUse === 1 || skill.adds;
+    for (const [name, skill] of Object.entries(this.skills)) {
+      const trained = skill.unskilledUse === 1 || this._source.skills[name].adds;
       skill.value = trained ? this.attributes[skill.baseAttribute].value + skill.adds : '';
     }
   }

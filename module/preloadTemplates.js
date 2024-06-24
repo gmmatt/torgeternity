@@ -36,7 +36,6 @@ export const preloadTemplates = async function () {
     // Test Dialogs
     'systems/torgeternity/templates/testDialogs/attack-difficulty.hbs',
     'systems/torgeternity/templates/testDialogs/difficulty-selector.hbs',
-    'systems/torgeternity/templates/testDialogs/disfavored.hbs',
     'systems/torgeternity/templates/testDialogs/favored.hbs',
     'systems/torgeternity/templates/testDialogs/bonus-selector.hbs',
     'systems/torgeternity/templates/testDialogs/movement-penalty-selector.hbs',
@@ -45,6 +44,7 @@ export const preloadTemplates = async function () {
     'systems/torgeternity/templates/testDialogs/modifiers-table.hbs',
     'systems/torgeternity/templates/testDialogs/attack-options.hbs',
     'systems/torgeternity/templates/testDialogs/target-options.hbs',
+    'systems/torgeternity/templates/testDialogs/fixed-modifiers.hbs',
 
     // active effect part:
     'systems/torgeternity/templates/parts/active-effects.hbs',
