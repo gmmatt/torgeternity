@@ -17,31 +17,7 @@
     </div>
     {{#if test.hasModifiers}}
     <div>    
-        <fieldset>
-        <legend>{{localize "torgeternity.sheetLabels.statusEffects"}}</legend>
-        <div class="skill-check-dialog-status-effects">
-                {{#if test.stymiedModifier}}
-                    {{localize "torgeternity.statusEffects.stymied"}}:
-                    {{test.stymiedModifier}}<br>
-                {{/if}}
-                {{#if test.darknessModifier}}
-                    {{localize "torgeternity.statusEffects.darkness"}}:
-                    {{test.darknessModifier}}<br>
-                {{/if}}
-                {{#if test.woundModifier}}
-                    {{localize "torgeternity.stats.wounds"}}:
-                    {{test.woundModifier}}
-                    <br>
-                {{/if}}
-                {{#if test.sizeModifier}}
-                    {{localize "torgeternity.statusEffects.targetSize"}}: +{{test.sizeModifier}}
-                    <br>
-                {{/if}}
-                {{#if test.vulnerableModifier}}
-                    {{localize "torgeternity.statusEffects.targetVulnerability"}}: +{{test.vulnerableModifier}}<br>
-                {{/if}}
-        </div>
-        </fieldset>        
+       {{> "systems/torgeternity/templates/testDialogs/fixed-modifiers.hbs"}}
     </div>    
     {{/if}}
     </form>
