@@ -2,6 +2,7 @@
 
 ## v. 12.1.0
 
+- v12 compatibility is here! From now on, the system follows the foundry version in it's _major_ part of the version number.
 - Broken links are no longer ugly placeholders, but a glowing effect on hovering remains to signal that there should be something there [#382](https://github.com/gmmatt/torgeternity/issues/382)
 - It is now possible to roll BDs and add damage in advance, using the dialog window [#123](https://github.com/gmmatt/torgeternity/issues/123). From this work followed:
   - Reorganized the roll dialog, something prettier
