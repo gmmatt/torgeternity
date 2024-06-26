@@ -306,7 +306,7 @@ export default class TorgeternityItem extends Item {
   /**
    * Does the weapon have ammo?
    *
-   * @returns {Boolean} Does the weapon have ammo? True/False
+   * @returns {boolean} Does the weapon have ammo? True/False
    */
   hasAmmo() {
     const weapon = this;
@@ -316,27 +316,12 @@ export default class TorgeternityItem extends Item {
   /**
    * Does the weapon have sufficient ammo? Will only be important for burst attacks.
    *
-   * @param {Number} BurstModifier The Burstmodifier whereas the amount of bullets are calculated from
-   * @returns {Boolean} True/False if the check is ok
+   * @param {number} burstModifier The Burstmodifier whereas the amount of bullets are calculated from
+   * @returns {boolean} True/False if the check is ok
    */
-  hasSufficientAmmo(BurstModifier) {
+  hasSufficientAmmo(burstModifier) {
     const currentAmmo = this.system.ammo.value;
-    let bulletAmount;
-
-    switch (BurstModifier) {
-      case 2:
-        bulletAmount = 3;
-        break;
-      case 4:
-        bulletAmount = 7;
-        break;
-      case 6:
-        bulletAmount = 50;
-        break;
-      default:
-        bulletAmount = 1;
-        break;
-    }
+    const bulletAmount = this._estimateBulletLoss(burstModifier);
 
     return currentAmmo < bulletAmount ? false : true;
   }
@@ -344,15 +329,34 @@ export default class TorgeternityItem extends Item {
   /**
    * Reduces the ammo of a weapon
    *
-   * @param {Integer} bulletAmount the amount of bullets that are fired
-   * @returns {Object} The altered weapon as item object
+   * @param {number} burstModifier the amount of bullets that are fired
    */
-  reduceAmmo(bulletAmount) {
-    const alteredWeapon = this;
-    const currentAmmo = alteredWeapon.system.ammo.value;
+  reduceAmmo(burstModifier) {
+    const currentAmmo = this.system.ammo.value;
 
-    alteredWeapon.system.ammo.value = currentAmmo - bulletAmount;
+    this.system.ammo.value = currentAmmo - this._estimateBulletLoss(burstModifier);
+  }
 
-    return alteredWeapon;
+  /**
+   * Estimates the number of used bullets. Private.
+   *
+   * @param {number} burstModifier The modifier of the burst (on no burst, this will be 0 per Standard)
+   * @returns {number} The amount of bullets that are used
+   */
+  _estimateBulletLoss(burstModifier) {
+    switch (burstModifier) {
+      case 2:
+        return 3;
+
+      case 4:
+        return 7;
+
+      case 6:
+        return 50;
+
+      case 0:
+      default:
+        return 1;
+    }
   }
 }

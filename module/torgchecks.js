@@ -26,6 +26,8 @@ export async function renderSkillChat(test) {
     return;
   }
 
+  test?.usedWeapon.reduceAmmo(test.burstModifier);
+
   test.applyDebuffLabel = 'display:none';
   test.applyDamLabel = 'display:none';
   test.backlashLabel = 'display:none';
