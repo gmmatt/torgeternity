@@ -292,4 +292,39 @@ export default class TorgeternityItem extends Item {
 
     return ChatMessageTorg.create(chatData);
   }
+  /**
+   * Does the weapon have ammo?
+   *
+   * @returns {Boolean} Does the weapon have ammo? True/False
+   */
+  hasAmmo() {
+    const weapon = this;
+    if (weapon.system?.ammo.value > 0) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
+  /**
+   * Reduces the ammo of a weapon
+   *
+   * @param {object} item The weapon as item object
+   * @param {Integer} bulletAmount the amount of bullets that are fired
+   * @returns {Object} The altered weapon as item object
+   */
+  reduceAmmo(item, bulletAmount) {
+    const alteredWeapon = item;
+    const currentAmmo = alteredWeapon.system.ammo.value;
+
+    if (currentAmmo < bulletAmount && this.hasAmmo(item._id) === true) {
+      return 'Warning, not enough bullets'; // TODO: Will this point on burst attack? Should we procede it otherwise?
+    } else if (currentAmmo > bulletAmount && this.hasAmmo(alteredWeapon._id) === false) {
+      return 'This weapon does not have any bullets at all.';
+    }
+
+    alteredWeapon.system.ammo.value = currentAmmo - bulletAmount;
+
+    return alteredWeapon;
+  }
 }

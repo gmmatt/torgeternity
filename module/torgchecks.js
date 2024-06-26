@@ -8,13 +8,15 @@ import { ChatMessageTorg } from './documents/chat/document.js';
  */
 export async function renderSkillChat(test) {
   const messages = [];
-  const messageData = [];
+
   if (test?.targetAll.length != 0) {
   } else test.targetAll = [test.target];
+
   // disable DSN (if used) for 'every' message (want to show only one dice despite many targets)
   try {
     game.dice3d.messageHookDisabled = true;
   } catch (e) {}
+
   test.applyDebuffLabel = 'display:none';
   test.applyDamLabel = 'display:none';
   test.backlashLabel = 'display:none';
@@ -817,7 +819,7 @@ export async function renderSkillChat(test) {
           // adjustedDamage is already computed from test.damage
           // then modify test.damage for following future computation, and modify the adjustedDamage
           // then the test.BDDamageInPromise is reset
-          
+
           test.applyDamLabel = 'display:inline';
           test.damageDescription = torgDamage(adjustedDamage, test.targetAdjustedToughness).label;
           test.damageSubDescription =
@@ -940,12 +942,12 @@ export async function renderSkillChat(test) {
     if (i === 0) {
       try {
         await game.dice3d.showForRoll(test.diceroll, game.user, true);
-      } catch (e) {};
+      } catch (e) {}
     }
     try {
       game.dice3d.showForRoll(iteratedRoll);
       iteratedRoll = undefined;
-    } catch (e) {};
+    } catch (e) {}
 
     messages.push(await ChatMessageTorg.create(messageDataIterated));
   }
@@ -955,7 +957,7 @@ export async function renderSkillChat(test) {
   await game.user.broadcastActivity({ targets: [] });
   try {
     game.dice3d.messageHookDisabled = false;
-  } catch (e) {};
+  } catch (e) {}
 
   return messages;
 }

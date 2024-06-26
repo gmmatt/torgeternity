@@ -943,6 +943,19 @@ export default class TorgeternityActorSheet extends ActorSheet {
     const weaponDamage = weaponData.damage;
     let skillValue;
     let skillData;
+
+    switch (item.type) {
+      case 'firearm':
+      case 'heavyweapon':
+      case 'missileweapon':
+        if (item.hasAmmo() === false) {
+          ChatMessage.create({
+            content: 'Failed to fire your weapon because there are no bullets!',
+          }); // TODO: Localize and nicer
+          return;
+        }
+    }
+
     if (this.actor.type === 'vehicle') {
       skillValue = item.system.gunner.skillValue;
       attributes = 0;
