@@ -17,16 +17,16 @@ export async function renderSkillChat(test) {
     game.dice3d.messageHookDisabled = true;
   } catch (e) {}
 
-  if (!test?.usedWeapon.hasSufficientAmmo(test.burstModifier)) {
+  if (test.usedWeapon?.weaponWithAmmo && !test?.usedWeapon.hasSufficientAmmo(test.burstModifier)) {
     ChatMessage.create({
       content:
         'You do not have a sufficent amount of bullets in your weapon to use a burst attack, this test cannot be performed.',
       speaker: ChatMessage.getSpeaker(),
     }); // TODO: Localize and nicer!
     return;
+  } else if (test.usedWeapon?.weaponWithAmmo) {
+    test?.usedWeapon.reduceAmmo(test.burstModifier);
   }
-
-  test?.usedWeapon.reduceAmmo(test.burstModifier);
 
   test.applyDebuffLabel = 'display:none';
   test.applyDamLabel = 'display:none';

@@ -944,7 +944,7 @@ export default class TorgeternityActorSheet extends ActorSheet {
     let skillValue;
     let skillData;
 
-    if (item.weaponWithAmmo && item.hasAmmo() === false) {
+    if (item.weaponWithAmmo && !item.hasAmmo) {
       ChatMessage.create({
         speaker: ChatMessage.getSpeaker(),
         content: 'Failed to fire your weapon because there are no bullets!',

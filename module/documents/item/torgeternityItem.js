@@ -308,9 +308,8 @@ export default class TorgeternityItem extends Item {
    *
    * @returns {boolean} Does the weapon have ammo? True/False
    */
-  hasAmmo() {
-    const weapon = this;
-    return weapon.system?.ammo.value > 0 ? true : false;
+  get hasAmmo() {
+    return this.system?.ammo.value > 0 ? true : false;
   }
 
   /**
