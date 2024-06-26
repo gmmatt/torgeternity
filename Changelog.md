@@ -1,6 +1,12 @@
 # TORG Eternity Changelog
 
+## v. 12.2.0
+
+- Ammunition is now handled. The value of a weapon with ammo is now reduced according to the amount of bullets a shot takes (i.e. burst shots). A weapon can now be equipped with a general gear item like an _Ammo Belt_ that will be consumed if you click the reload button on the weapon. [#36](https://github.com/gmmatt/torgeternity/issues/36)
+  - On this cause we've thrown the BD button on each item out. It was a relic from the old days that is no longer needed because of the handling by chat cards.
+
 ## v. 12.1.1
+
 - Hotfix for custom skills. These should work again. In their own special treatment ;)
 
 ## v. 12.1.0
