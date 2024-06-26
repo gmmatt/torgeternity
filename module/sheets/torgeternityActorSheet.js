@@ -274,7 +274,7 @@ export default class TorgeternityActorSheet extends ActorSheet {
 
       html.find('.unarmed-attack').click(this._onUnarmedAttack.bind(this));
 
-      html.find('.item-bonusRoll').click(this._onBonusRoll.bind(this));
+      // html.find('.item-bonusRoll').click(this._onBonusRoll.bind(this));
 
       html.find('.item-powerRoll').click(this._onPowerRoll.bind(this));
 
@@ -1058,16 +1058,13 @@ export default class TorgeternityActorSheet extends ActorSheet {
     new TestDialog(test);
   }
 
-  /**
-   *
-   * @param event
-   */
-  _onBonusRoll(event) {
+  /* I've commented that out because it shouldn't be needed anymore but I don't know yet :D
+    _onBonusRoll(event) {
     const itemID = event.currentTarget.closest('.item').dataset.itemId;
     const item = this.actor.items.get(itemID);
 
     item.bonus();
-  }
+  }*/
 
   /**
    *

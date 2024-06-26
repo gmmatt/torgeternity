@@ -228,10 +228,8 @@ export default class TorgeternityItem extends Item {
     return ChatMessageTorg.create(chatData);
   }
 
-  /**
-   *
-   */
-  async bonus() {
+  // Commented that out because I don't think it's needed anymore but I don't know yet :D
+  /* async bonus() {
     const rollResult = new Roll('1d6x6max5').roll({ async: false });
 
     const chatData = {
@@ -244,7 +242,7 @@ export default class TorgeternityItem extends Item {
     chatData.content = await rollResult.render();
 
     return ChatMessage.create(chatData);
-  }
+  }*/
 
   /**
    *
