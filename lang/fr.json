@@ -377,6 +377,7 @@
       "defaultAction": "Action par défaut, équipement par exemple.",
       "dramaDeckEmpty": "Le paquet de cartes Action est vide. Réinitialisez-le.",
       "macroTypeWarning": "Vous ne pouvez créer des macros que pour vos objets, attributs ou compétences",
+      "migrationRunning": "Migration de la version du système Torg à ",
       "moduleNotActive": "Description disponible dans le module correspondant.",
       "noActiveEffectInOwnedItem": "Configurer les effets actifs à l'intérieur des objets possédés n'est pas encore possible.",
       "noAttrNamed": "L'acteur que vous contrôlez n'a pas d'attribut nommé ",
