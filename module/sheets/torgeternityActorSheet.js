@@ -944,16 +944,12 @@ export default class TorgeternityActorSheet extends ActorSheet {
     let skillValue;
     let skillData;
 
-    switch (item.type) {
-      case 'firearm':
-      case 'heavyweapon':
-      case 'missileweapon':
-        if (item.hasAmmo() === false) {
-          ChatMessage.create({
-            content: 'Failed to fire your weapon because there are no bullets!',
-          }); // TODO: Localize and nicer
-          return;
-        }
+    if (item.weaponWithAmmo && item.hasAmmo() === false) {
+      ChatMessage.create({
+        speaker: ChatMessage.getSpeaker(),
+        content: 'Failed to fire your weapon because there are no bullets!',
+      }); // TODO: Localize and nicer.
+      return;
     }
 
     if (this.actor.type === 'vehicle') {
@@ -1056,6 +1052,7 @@ export default class TorgeternityActorSheet extends ActorSheet {
       movementModifier: 0,
       bdDamageLabelStyle: 'display:none',
       bdDamageSum: 0,
+      usedWeapon: item,
     };
 
     new TestDialog(test);

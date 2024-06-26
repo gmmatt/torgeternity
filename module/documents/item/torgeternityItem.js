@@ -64,6 +64,16 @@ export default class TorgeternityItem extends Item {
     psionicpower: 'psionicpower.webp',
   };
 
+  /**
+   * Getter for a weapon that might have ammo or not (meelee weapons don't have ammo)
+   *  @returns true/false
+   */
+  get weaponWithAmmo() {
+    return this.type === 'firearm' || this.type === 'heavyweapon' || this.type === 'missileweapon'
+      ? true
+      : false;
+  }
+
   _preCreate(data, options, user) {
     super._preCreate(data, options, user);
     if (this.img === 'icons/svg/item-bag.svg') {
@@ -292,6 +302,7 @@ export default class TorgeternityItem extends Item {
 
     return ChatMessageTorg.create(chatData);
   }
+
   /**
    * Does the weapon have ammo?
    *
@@ -299,29 +310,46 @@ export default class TorgeternityItem extends Item {
    */
   hasAmmo() {
     const weapon = this;
-    if (weapon.system?.ammo.value > 0) {
-      return true;
-    } else {
-      return false;
+    return weapon.system?.ammo.value > 0 ? true : false;
+  }
+
+  /**
+   * Does the weapon have sufficient ammo? Will only be important for burst attacks.
+   *
+   * @param {Number} BurstModifier The Burstmodifier whereas the amount of bullets are calculated from
+   * @returns {Boolean} True/False if the check is ok
+   */
+  hasSufficientAmmo(BurstModifier) {
+    const currentAmmo = this.system.ammo.value;
+    let bulletAmount;
+
+    switch (BurstModifier) {
+      case 2:
+        bulletAmount = 3;
+        break;
+      case 4:
+        bulletAmount = 7;
+        break;
+      case 6:
+        bulletAmount = 50;
+        break;
+      default:
+        bulletAmount = 1;
+        break;
     }
+
+    return currentAmmo < bulletAmount ? false : true;
   }
 
   /**
    * Reduces the ammo of a weapon
    *
-   * @param {object} item The weapon as item object
    * @param {Integer} bulletAmount the amount of bullets that are fired
    * @returns {Object} The altered weapon as item object
    */
-  reduceAmmo(item, bulletAmount) {
-    const alteredWeapon = item;
+  reduceAmmo(bulletAmount) {
+    const alteredWeapon = this;
     const currentAmmo = alteredWeapon.system.ammo.value;
-
-    if (currentAmmo < bulletAmount && this.hasAmmo(item._id) === true) {
-      return 'Warning, not enough bullets'; // TODO: Will this point on burst attack? Should we procede it otherwise?
-    } else if (currentAmmo > bulletAmount && this.hasAmmo(alteredWeapon._id) === false) {
-      return 'This weapon does not have any bullets at all.';
-    }
 
     alteredWeapon.system.ammo.value = currentAmmo - bulletAmount;
 
