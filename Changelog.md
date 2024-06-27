@@ -1,5 +1,8 @@
 # TORG Eternity Changelog
 
+## v. 12.1.1
+- Hotfix for custom skills. These should work again. In their own special treatment ;)
+
 ## v. 12.1.0
 
 - v12 compatibility is here! From now on, the system follows the foundry version in it's _major_ part of the version number.
