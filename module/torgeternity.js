@@ -701,6 +701,7 @@ function rollItemMacro(itemName) {
           movementModifier: 0,
           bdDamageLabelStyle: 'display:none',
           bdDamageSum: 0,
+          usedWeapon: item,
         };
 
         new TestDialog(mTest);
