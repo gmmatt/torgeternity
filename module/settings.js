@@ -63,17 +63,17 @@ export function registerTorgSettings() {
     onChange: () => window.location.reload(),
   });
 
-  /* //Show always details in Chatcards or keep it tugged in
-  game.settings.register("torgeternity", "showCheckDetails", {
-    name: "torgeternity.settingMenu.showCheckDetails.name",
-    hint: "torgeternity.settingMenu.showCheckDetails.hint",
-    scope: "world",
+  // Show always details in Chatcards or keep it tugged in
+  game.settings.register('torgeternity', 'showCheckDetails', {
+    name: 'torgeternity.settingMenu.showCheckDetails.name',
+    hint: 'torgeternity.settingMenu.showCheckDetails.hint',
+    scope: 'client',
     config: true,
-    requiresReload: true,    
+    requiresReload: true,
     type: Boolean,
-    default: false,    
+    default: false,
     onChange: () => window.location.reload(),
-  });*/
+  });
 
   game.settings.register('torgeternity', 'useColorBlindnessColors', {
     name: 'torgeternity.settingMenu.useColorBlindnessColors.name',
