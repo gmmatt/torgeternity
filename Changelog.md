@@ -2,6 +2,8 @@
 
 ## v. 12.2.0
 
+- Fixing spent possibilities on a soak that should only be spent _after_ the roll [#421](https://github.com/gmmatt/torgeternity/issues/421)
+- A new option has been added to determine whether the details of the chat cards should be automatically expanded or not. [#420](https://github.com/gmmatt/torgeternity/issues/420)
 - Ammunition is now handled. The value of a weapon with ammo is now reduced according to the amount of bullets a shot takes (i.e. burst shots). A weapon can now be equipped with a general gear item like an _Ammo Belt_ that will be consumed if you click the reload button on the weapon. [#36](https://github.com/gmmatt/torgeternity/issues/36)
   - On this cause we've thrown the BD button on each item out. It was a relic from the old days that is no longer needed because of the handling by chat cards.
 

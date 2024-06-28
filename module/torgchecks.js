@@ -8,7 +8,6 @@ import { ChatMessageTorg } from './documents/chat/document.js';
  */
 export async function renderSkillChat(test) {
   const messages = [];
-
   if (test?.targetAll.length != 0) {
   } else test.targetAll = [test.target];
 
@@ -74,6 +73,8 @@ export async function renderSkillChat(test) {
           break;
         case 'soak':
           test.chatTitle = game.i18n.localize('torgeternity.sheetLabels.soakRoll') + ' ';
+          const possPool = await fromUuidSync(test.actor).system.other.possibilities;
+          await fromUuidSync(test.actor).update({ 'system.other.possibilities': possPool - 1 });
           break;
         case 'activeDefense':
           test.chatTitle = game.i18n.localize('torgeternity.sheetLabels.activeDefense') + ' ';
