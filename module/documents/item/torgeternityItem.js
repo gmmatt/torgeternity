@@ -106,6 +106,33 @@ export default class TorgeternityItem extends Item {
   }
 
   /**
+   * See API https://foundryvtt.com/api/classes/foundry.abstract.Document.html#_preUpdate
+   *
+   * @param {any} changes
+   * @param {any} options
+   * @param {object} user Default: Base user
+   * @returns
+   */
+  async _preUpdate(changes, options, user) {
+    if ((await super._preUpdate(changes, options, user)) === false) return false;
+
+    if (
+      foundry.utils.getProperty(changes, 'system.ammo') &&
+      changes.system.ammo.value > this.system.ammo.max
+    ) {
+      changes.system.ammo.value = await Math.clamp(
+        changes.system.ammo.value ?? this.system.ammo.value,
+        0,
+        changes.system.ammo.max ?? this.system.ammo.max
+      );
+
+      ui.notifications.warn(
+        `The actual ammo value of the weapon ${this.name} exceeds it's max value. The value will be reduced to it's maximum.`
+      ); // TODO: Localize
+    }
+  }
+
+  /**
    *
    * @param {Item} item the item that gets equipped or unequipped
    * @param {Actor} actor the actor that the item belongs to
