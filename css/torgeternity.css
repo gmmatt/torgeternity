@@ -3517,10 +3517,8 @@ form.actor-sheet.threat .tab[data-tab].active .editor {
 .item .window-content form.item-sheet .editor {
   /*width: 400px;*/
   min-height: 400px;
-  background: url(../images/bckg-hex.webp);
-  background-size: 110% 110%;
-  padding: 20px;
-  background-position: center;
+    border: 15px solid transparent;
+  border-image: url('../images/frameWithoutFilling.svg') 30 / 2rem;
 }
 
 .item .window-content form.item-sheet nav.tabs {
@@ -3666,10 +3664,11 @@ form.actor-sheet.threat .tab[data-tab].active .editor {
 
 .item .window-content form fieldset.ammofield {
   border: 15px solid transparent;
-  border-image-source: url('../images/frameWithoutFilling.svg');
+  border-image: url('../images/frameWithoutFilling.svg') 30 / 5rem;
+  /*border-image-source: url('../images/frameWithoutFilling.svg');
   border-image-width: 5rem;
   border-image-repeat: unset;
-  border-image-slice: 30;
+  border-image-slice: 30;*/
 }
 
 .item .window-content form fieldset.ammofield legend{
