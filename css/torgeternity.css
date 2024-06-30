@@ -3664,6 +3664,30 @@ form.actor-sheet.threat .tab[data-tab].active .editor {
   padding: 5px;
 }
 
+.item .window-content form fieldset.ammofield {
+  border: 15px solid transparent;
+  border-image-source: url('../images/frameWithoutFilling.svg');
+  border-image-width: 5rem;
+  border-image-repeat: unset;
+  border-image-slice: 30;
+}
+
+.item .window-content form fieldset.ammofield legend{
+  font-family: 'Alaska';
+  font-size: 14px;
+}
+
+.item .window-content form fieldset.ammofield ul{
+  font: 13px 'Signika';
+  list-style-type: none;
+  padding: 0;
+}
+
+.item .window-content form fieldset.ammofield ul > li{
+  border-bottom: #000 thin solid;
+  margin-bottom: 3px;
+}
+
 .app.window-app.torgeternity.sheet.item {
   height: auto !important;
 }
