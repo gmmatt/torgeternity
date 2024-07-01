@@ -24,6 +24,7 @@ export class MissileWeaponItemData extends GeneralItemData {
       minStrength: new fields.StringField({ initial: '' }),
       notes: new fields.StringField({ initial: '' }),
       range: new fields.StringField({ initial: '' }),
+      ammunitionIds: new fields.DocumentUUIDField({ initial: null }),
     };
   }
 

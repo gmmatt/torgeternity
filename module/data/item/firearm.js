@@ -23,6 +23,7 @@ export class FirearmItemData extends GeneralItemData {
       equipped: new fields.BooleanField({ initial: false }),
       notes: new fields.StringField({ initial: '' }),
       range: new fields.StringField({ initial: '' }),
+      ammunitionIds: new fields.DocumentUUIDField({ initial: null }),
     };
   }
 
