@@ -1126,6 +1126,7 @@ export default class TorgeternityActorSheet extends ActorSheet {
       rollTotal: 0,
       movementModifier: 0,
       bdDamageLabelStyle: 'display:none',
+      amountBD: 0,
       bdDamageSum: 0,
     };
 
