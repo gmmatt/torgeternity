@@ -1113,7 +1113,7 @@ export default class TorgeternityActorSheet extends ActorSheet {
         this.actor.system.attributes[skillData.baseAttribute].value
       ),
       unskilledUse: false,
-      damage: powerData.damage,
+      damage: parseInt(powerData.damage),
       weaponAP: powerData.ap,
       applyArmor: applyArmor,
       darknessModifier: 0,
