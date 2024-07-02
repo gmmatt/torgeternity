@@ -1,6 +1,6 @@
 <form class="{{cssClass}}" autocomplete="off">
   <header class="sheet-header flexrow">
-    <img class="card-face" src="{{document.img}}" title="{{data.name}}" />
+    <img class="card-face" src="{{document.img}}" data-tooltip="{{data.name}}" />
     <h1 class="name">
       <input type="text" name="name" value="{{data.name}}" placeholder="{{localize 'Name'}}" />
     </h1>
@@ -56,7 +56,7 @@
         <button
           type="button"
           class="face-control"
-          title="{{localize 'CARD.FaceAdd'}}"
+          data-tooltip="{{localize 'CARD.FaceAdd'}}"
           data-action="addFace"
         >
           <i class="fas fa-plus fa-fw"></i>
@@ -72,7 +72,7 @@
           <button
             type="button"
             class="face-control"
-            title="{{localize 'CARD.FaceDelete'}}"
+            data-tooltip="{{localize 'CARD.FaceDelete'}}"
             data-action="deleteFace"
           >
             <i class="fas fa-trash fa-fw"></i>

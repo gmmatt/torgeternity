@@ -1,3 +1,4 @@
+<!--hbs preloaded but never used-->
 <div
   class="bonus-card sheet-card"
   data-type="{{data.type}}"
@@ -6,7 +7,7 @@
   <table style="border:none;background-color:transparent">
     <tr style="border:none">
       <td>
-        <img class="actor-icon" src="{{img}}" title="{{name}}"/>
+        <img class="actor-icon" src="{{img}}" data-tooltip="{{name}}"/>
       </td>
       <td class="chat-title" style="font-size:20px">
         {{name}}
@@ -20,7 +21,7 @@
         x
         {{explosions}}
       </span>
-      <img class="chat-bonus-die" src={{lastDieImage}} title="bonus die" />
+      <img class="chat-bonus-die" src={{lastDieImage}} data-tooltip="bonus die" />
     </td>
     <td>
       +
@@ -28,4 +29,4 @@
       {{localize "torgeternity.chatText.bonus"}}
     </td>
   </table>
-</div>
+</div>*/

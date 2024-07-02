@@ -8,7 +8,7 @@
 	<div class="flexrow">
 		<h2 class="areaTitles">
 			{{localize 'torgeternity.cardTypes.destiny'}}
-			<span class="card-control" type="button" title="{{localize 'torgeternity.dialogPrompts.drawDestiny'}}"
+			<span class="card-control" type="button" data-tooltip="{{localize 'torgeternity.dialogPrompts.drawDestiny'}}"
 				data-action="drawDestiny">
 				<i class="fas fa-plus"></i>
 			</span>
@@ -16,7 +16,7 @@
 
 		<h2 class="areaTitles">
 			{{localize 'torgeternity.cardTypes.cosm'}}
-			<span class="card-control" type="button" title="{{localize 'torgeternity.dialogPrompts.drawCosm'}}"
+			<span class="card-control" type="button" data-tooltip="{{localize 'torgeternity.dialogPrompts.drawCosm'}}"
 				data-action="drawCosm">
 				<i class="fas fa-plus"></i>
 			</span>
@@ -34,28 +34,28 @@
 
 				<div class="torg-card-controls flexcol">
 					<div class="card-faces flexrow">
-						<a class="card-control" title="{{localize 'CARD.FaceNext'}}" data-action="nextFace" {{#unless
+						<a class="card-control" data-tooltip="{{localize 'CARD.FaceNext'}}" data-action="nextFace" {{#unless
 							card.hasNextFace}} disabled {{/unless}}>
 							<i class="fas fa-caret-up"></i>
 						</a>
-						<a class="card-control" title="{{localize 'CARD.FacePrevious'}}" data-action="prevFace"
+						<a class="card-control" data-tooltip="{{localize 'CARD.FacePrevious'}}" data-action="prevFace"
 							{{#unless card.hasPreviousFace}} disabled {{/unless}}>
 							<i class="fas fa-caret-down"></i>
 						</a>
 					</div>
-					<a class="card-control" title="{{localize 'torgeternity.dialogPrompts.playCard'}}" data-action="play">
+					<a class="card-control" data-tooltip="{{localize 'torgeternity.dialogPrompts.playCard'}}" data-action="play">
 						<i class="fas fa-play-circle" style="color:white"></i>
 					</a>
-					<!-- <a class="card-control" title="View Card" data-action="view"><i class="fas fa-eye" style="color:white"></i></a> not needed with thumbnail? -->
-					<a class="card-control" title="{{localize 'torgeternity.dialogPrompts.showToPlayers'}}"
+					<!-- <a class="card-control" data-tooltip="View Card" data-action="view"><i class="fas fa-eye" style="color:white"></i></a> not needed with thumbnail? -->
+					<a class="card-control" data-tooltip="{{localize 'torgeternity.dialogPrompts.showToPlayers'}}"
 						data-action="display">
 						<i class="fas fa-broadcast-tower" style="color:white"></i>
 					</a>
-					<a class="card-control" title="{{localize 'torgeternity.dialogPrompts.playerPassTo'}}"
+					<a class="card-control" data-tooltip="{{localize 'torgeternity.dialogPrompts.playerPassTo'}}"
 						data-action="pass">
 						<i class="fas fa-share-square" style="color:white"></i>
 					</a>
-					<a class="card-control" title="{{localize 'torgeternity.dialogPrompts.discardCard'}}"
+					<a class="card-control" data-tooltip="{{localize 'torgeternity.dialogPrompts.discardCard'}}"
 						data-action="discard">
 						<i class="fas fa-inbox" style="color:white"></i>
 					</a>
@@ -82,26 +82,26 @@
 				<img class="card-face" src="{{card.img}}" alt="{{card.name}}" height="48">
 				<div class="torg-card-controls flexcol">
 					<div class="card-faces flexrow">
-						<a class="card-control" title="{{localize 'CARD.FaceNext'}}" data-action="nextFace" {{#unless
+						<a class="card-control" data-tooltip="{{localize 'CARD.FaceNext'}}" data-action="nextFace" {{#unless
 							card.hasNextFace}} disabled {{/unless}}>
 							<i class="fas fa-caret-up"></i>
 						</a>
-						<a class="card-control" title="{{localize 'CARD.FacePrevious'}}" data-action="prevFace"
+						<a class="card-control" data-tooltip="{{localize 'CARD.FacePrevious'}}" data-action="prevFace"
 							{{#unless card.hasPreviousFace}} disabled {{/unless}}>
 							<i class="fas fa-caret-down"></i>
 						</a>
 					</div>
-					<a class="card-control" title="{{localize 'torgeternity.dialogPrompts.playCard'}}" data-action="play">
+					<a class="card-control" data-tooltip="{{localize 'torgeternity.dialogPrompts.playCard'}}" data-action="play">
 						<i class="fas fa-play-circle" style="color:white"></i>
 					</a>
-					<!-- <a class="card-control" title="View Card" data-action="view"><i class="fas fa-eye" style="color:white"></i></a> not needed with thumbnail? -->
-					<a class="card-control" title="{{localize 'torgeternity.dialogPrompts.showToPlayers'}}" data-action="display">
+					<!-- <a class="card-control" data-tooltip="View Card" data-action="view"><i class="fas fa-eye" style="color:white"></i></a> not needed with thumbnail? -->
+					<a class="card-control" data-tooltip="{{localize 'torgeternity.dialogPrompts.showToPlayers'}}" data-action="display">
 						<i class="fas fa-broadcast-tower" style="color:white"></i>
 					</a>
-					<a class="card-control" title="{{localize 'torgeternity.dialogPrompts.playerPassTo'}}" data-action="pass">
+					<a class="card-control" data-tooltip="{{localize 'torgeternity.dialogPrompts.playerPassTo'}}" data-action="pass">
 						<i class="fas fa-share-square" style="color:white"></i>
 					</a>
-					<a class="card-control" title="{{localize 'torgeternity.dialogPrompts.discardCard'}}" data-action="discard">
+					<a class="card-control" data-tooltip="{{localize 'torgeternity.dialogPrompts.discardCard'}}" data-action="discard">
 						<i class="fas fa-inbox" style="color:white"></i>
 					</a>
 				</div>

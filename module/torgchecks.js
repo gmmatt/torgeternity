@@ -17,7 +17,6 @@ export async function renderSkillChat(test) {
   test.applyDebuffLabel = 'display:none';
   test.applyDamLabel = 'display:none';
   test.backlashLabel = 'display:none';
-  test.bdDamageLabelStyle = test.bdDamageSum ? 'display:block' : 'display:none';
   let iteratedRoll;
 
   for (let i = 0; i < test.targetAll.length; i++) {
@@ -61,8 +60,6 @@ export async function renderSkillChat(test) {
           break;
         case 'soak':
           test.chatTitle = game.i18n.localize('torgeternity.sheetLabels.soakRoll') + ' ';
-          const possPool = await fromUuidSync(test.actor).system.other.possibilities;
-          await fromUuidSync(test.actor).update({ 'system.other.possibilities': possPool - 1 });
           break;
         case 'activeDefense':
           test.chatTitle = game.i18n.localize('torgeternity.sheetLabels.activeDefense') + ' ';

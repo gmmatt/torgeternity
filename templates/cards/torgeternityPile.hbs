@@ -16,10 +16,10 @@
 			{{#each cards as |card|}}
 				<li class="card flexrow" data-card-id="{{card.id}}">
 					<div class="card-faces flexcol">
-						<a class="card-control" title="{{localize 'CARD.FaceNext'}}" data-action="nextFace" {{#unless card.hasNextFace}} disabled {{/unless}}>
+						<a class="card-control" data-tooltip="{{localize 'CARD.FaceNext'}}" data-action="nextFace" {{#unless card.hasNextFace}} disabled {{/unless}}>
 							<i class="fas fa-caret-up"></i>
 						</a>
-						<a class="card-control" title="{{localize 'CARD.FacePrevious'}}" data-action="prevFace" {{#unless card.hasPreviousFace}} disabled {{/unless}}>
+						<a class="card-control" data-tooltip="{{localize 'CARD.FacePrevious'}}" data-action="prevFace" {{#unless card.hasPreviousFace}} disabled {{/unless}}>
 							<i class="fas fa-caret-down"></i>
 						</a>
 					</div>
@@ -51,7 +51,7 @@
 				<i class="fas fa-share-square"></i>
 				{{localize "CARDS.Pass"}}
 			</button>
-			<button class="card-control" type="button" title="{{localize 'torgeternity.dialogPrompts.return'}}" data-action="return">
+			<button class="card-control" type="button" data-tooltip="{{localize 'torgeternity.dialogPrompts.return'}}" data-action="return">
 				<i class="fas fa-recycle"></i>
 				{{localize "torgeternity.sheetLabels.return"}}
 			</button>

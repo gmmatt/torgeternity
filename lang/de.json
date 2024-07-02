@@ -3,6 +3,13 @@
     "discard": "Wegwerfen",
     "display": "Zeige diese Karte den anderen Spielern"
   },
+  "TYPES": {
+    "Card": {
+      "destiny": "Schicksal",
+      "drama": "Drama",
+      "cosm": "Cosm"
+    }
+  },
   "torgeternity": {
     "attackTypes": {
       "energyWeapons": "Energiewaffen",
@@ -128,7 +135,10 @@
       "dramaBack": "systems/torgeternity/images/cards/drama-back.webp",
       "endMyTurn": "Zug beenden",
       "nextKeep": "Neue Runde (aktuelle Karte behalten)",
-      "nextNew": "neue Runde (neue Dramakarte)"
+      "nextNew": "neue Runde (neue Dramakarte)",
+      "herosTooltip": "heros first",
+      "vilainsTooltip": "vilains first",
+      "hasPlayedTooltip": "Check when character's turn is complete"
     },
     "cosmDecks": {
       "aysle": "Aysle Cosm-Deck",
@@ -326,6 +336,8 @@
       "openParty": "Öffnet die Gruppenübersicht",
       "psionicRoll": "Psionischer Wurf",
       "resetPossibilities": "Möglichkeiten zurücksetzen",
+      "GMPoss": "GM's possibility pool",
+      "SKPoss": "character's possibilities",
       "sendToChat": "An Chat senden",
       "spellRoll": "Zauberwurf",
       "toggle": "Umschalten auf",
@@ -566,7 +578,9 @@
       "addOns": "Add-Ons",
       "adds": "Fertigkeitsstufen",
       "aimed": "Zielen",
+      "aimedTooltip": "Aimed Shot (ranged attacks only)",
       "allOut": "Rücksichtsloser Angriff",
+      "allOutTooltip": "+4 Bonus/Very Vulnerable (Melee and unarmed attacks only)",
       "alterAttributes": "Du kannst nun die Attribute ändern",
       "applyDamage": "Schaden anwenden",
       "applyDamageTooltip": "Linksclick zum anwenden, Rechtsklick zum modifizieren.",
@@ -587,7 +601,9 @@
       "baseAttribute": "Basisattribut",
       "baseRoll": "Basisprobe",
       "blindFire": "Blindes Feuern",
+      "blindFireTooltip": "Location of target only generally known",
       "burst": "Schnellfeuer",
+      "burstTooltip": "Automatic weapons only",
       "calledShot": "Gezielter Angriff",
       "chase": "Verfolgung",
       "chooseDamage": "Wähle den anzuwendenden Schaden.",
@@ -597,6 +613,7 @@
       "concealment": "Deckung",
       "cosm": "Cosm",
       "coverBonus": "Deckungsbonus",
+      "coverBonusTooltip": "Bonus added to target toughness as a result of cover",
       "customSkill": "Eigene Fertigkeiten können im Vorzüge-Tab geändert werden",
       "customSkills": "Eigene Fertigkeiten",
       "damageAP": "Schaden (PB)",
@@ -616,11 +633,15 @@
       "end": "Ende",
       "enhancement": "Verbesserung",
       "enhancements": "Verbesserungen",
+      "enhancementTooltip": "Check if enhancement has been selected by Storm Knight",
+      "enhancementRemoveTooltip": "Remove last available enhancement",
+      "enhancementAddTooltip": "Add available enhancement to end of list",
       "equipment": "Ausrüstung",
       "eternityShard": "Ewigkeitssplitter",
       "explosionCancelled": "Du bist benachteiligt, der erste Bonuswürfel wurde nicht angerechnet, bist aber nicht länger benachteiligt. ",
       "explosives": "Sprengstoffe",
       "fatigue": "Erschöpfung",
+      "fatigueTooltip": "Click to apply fatigue",
       "favDis": "Bevorzugt & benachteiligt heben sich gegeneinander auf.",
       "favored": "Bevorzugt",
       "firearms": "Feuerwaffen",
@@ -635,6 +656,7 @@
       "implants": "Implantate",
       "inactiveEffects": "Inaktive Effekte",
       "inputExisting": "Vorheriger Würfelbonus",
+      "inputExistingTooltip": "Choose whether to (1) roll for a bonus number or (2) input a previously generated bonus when attempting a multi-action.",
       "inputExistingRdbTitle": "Bei einer Mehrfachaktion hier auswählen.",
       "inputExistingTitle": "Hier den vorherigen WÜRFELBONUS eingeben, nicht den Wurf an sich.",
       "interactionAttacks": "Interaktionsangriffe",
@@ -644,6 +666,8 @@
       "lastPossMess": "<h3>Dies ist deine letzte Möglichkeit, willst du sie wirklich ausgeben?<br>Are You sure ?</h3>",
       "lastSpent": "Letzte Möglichkeit ausgegeben!",
       "limitations": "Einschränkungen",
+      "limitationsAddTooltip": "Add available limitation to end of list",
+      "limitationsRemoveTooltip": "Remove last available limitation",
       "longBurst": "Lang (+4)",
       "magic": "Magie",
       "melee": "Bewaffneter Kampf",
@@ -679,6 +703,7 @@
       "possibilityByCosm": "Möglichkeiten nach Cosm",
       "possibilitypotential": "Möglichkeiten (Potential)",
       "possSpent": " Möglichkeit ausgegeben.",
+      "possGrant": " You grant a possibility !",
       "powers": "Kräfte",
       "psionic": "Psionisch",
       "psionicPower": "Psikraft",
@@ -697,7 +722,7 @@
       "size": "Größe",
       "skill": "Fertigkeit",
       "skillAdds": "Fertigkeitsstufen",
-      "skillRollHint": "Umschalt-Klick für erweiterten Fähigkeitstest",
+      "skillRollHint": "Click for Skill Test",
       "skills": "Fertigkeit",
       "skillValue": "Fertigkeitswert",
       "soakAll": "Du steckst alle Wunden und Schock weg.",
@@ -743,6 +768,7 @@
       "vehicle": "Fahrzeug",
       "vehicles": "Fahrzeuge",
       "vitalArea": "Schwerer Treffer",
+      "vitalAreaTooltip": "+4 Damage",
       "walking": "Gehen (keine)",
       "weapons": "Waffen",
       "wounds": "Wunden",
@@ -771,7 +797,8 @@
       "disfavoredTip": "Anhaken, wenn der Wurf benachteiligt ist. Der Würfelwurf wird dann nicht auf einer 10 oder 20 explodieren.",
       "favored": "Begünstigt",
       "favoredanddisfavored": "Begünstigt/Benachteiligt",
-      "favoredTip": "Setze hier einen Haken, sofern die Probe aus welchen Gründen auch immer im Nachhinein begünstigt wird."
+      "favoredTip": "Setze hier einen Haken, sofern die Probe aus welchen Gründen auch immer im Nachhinein begünstigt wird.",
+      "favoredChoice": "Favored or not"
     },
     "skills": {
       "airVehicles": "Luftfahrzeuge",
@@ -937,10 +964,10 @@
       "commonMacroNoChatMessageFound": "Es konnte keine Chatnachricht abgefangen werden, die weitere Verarbeitung wird abgegbrochen.",
       "fatigueMacroDealtDamage": "Folgenden Charakteren wurden Schock zugefügt:",
       "fatigueMacroCharKO": " ist damit K.O.!",
+      "fatigueMacroCharAlreadyKO": " ist bereits K.O.! Mehr Schock geht nicht.",
       "reviveMacroChatHeadline": "Schock-Erholung!",
       "reviveMacroWindowLabel1": "Wie viel Schock soll zurückgewonnen werden?",
       "reviveMacroError1": "In das Feld für die Menge wurde nichts eingegeben und auch das Kontrollkästchen war nicht aktiviert. Was soll ich tun? Abbruch.",
-      "fatigueMacroCharAlreadyKO": " ist bereits K.O.! Mehr Schock geht nicht.",
       "reviveMacroFirst": "Die folgenden Charaktere erholen sich vom Schock: ",
       "reviveMacroAlreadyFull": " ist bereits wohlauf und hat keinen Schock!",
       "reviveMacroCharRevived": " ist vollständig wiederhergestellt.",
@@ -965,13 +992,6 @@
       "reconnectMacroZoneModifierNotDetectedTitle": "Kein Zonenmodifikator",
       "reconnectMacroZoneModifierNotDetected": "Ein Zonenmodifikator konnte nicht festgestellt werden, da die aktive Szene keine Zonen konfiguriert hat. Ändere den Modifikator im Ergebnis.",
       "reconnectMacroStatusLiftet": "Entkoppelt-Status nach einer erfolgreichen Realitätsprobe aufgehoben."
-    }
-  },
-  "TYPES": {
-    "Card": {
-      "destiny": "Schicksal",
-      "drama": "Drama",
-      "cosm": "Cosm"
     }
   }
 }

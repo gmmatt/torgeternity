@@ -9,7 +9,6 @@
   - For powers, the result of BDs were concated instead of added. Happend that test.damage was a string in this case. [#426](https://github.com/gmmatt/torgeternity/issues/426)
 
 ## v. 12.1.1
-
 - Hotfix for custom skills. These should work again. In their own special treatment ;)
 
 ## v. 12.1.0

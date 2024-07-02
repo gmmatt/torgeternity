@@ -1,6 +1,6 @@
 <fieldset>
   <legend
-    title="Choose whether to (1) roll for a bonus number or (2) input a previously generated bonus when attempting a multi-action."
+    data-tooltip="{{localize "torgeternity.sheetLabels.inputExistingTooltip"}}"
   >Bonus</legend>
   <span class="skill-check-options">
     <input 
@@ -14,7 +14,7 @@
     <input
       type="radio"
       id="previous-bonus"
-      title= {{localize "torgeternity.sheetLabels.inputExistingRdbTitle"}}
+      data-tooltip= {{localize "torgeternity.sheetLabels.inputExistingRdbTitle"}}
       name="prevbonus"
       value="1"
     />
@@ -22,7 +22,7 @@
     <input
       type="number"
       id="bonus-text"
-      title={{localize "torgeternity.sheetLabels.inputExistingTitle"}}
+      data-tooltip={{localize "torgeternity.sheetLabels.inputExistingTitle"}}
       placeholder="0"
     />
   </span>
