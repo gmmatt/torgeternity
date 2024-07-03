@@ -26,7 +26,6 @@ export class HeavyWeaponItemData extends GeneralItemData {
       }),
       notes: new fields.StringField({ initial: '' }),
       range: new fields.StringField({ initial: '' }),
-      ammunitionIds: new fields.DocumentUUIDField({ initial: null }),
     };
   }
 
