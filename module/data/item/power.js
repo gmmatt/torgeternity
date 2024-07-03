@@ -13,7 +13,7 @@ export class PowerItemData extends foundry.abstract.TypeDataModel {
       applySize: new fields.BooleanField({ initial: true }),
       axiom: new fields.NumberField({ initial: 0, integer: true }),
       castingtime: new fields.StringField({ initial: '' }),
-      damage: new fields.StringField({ initial: '' }),
+      damage: new fields.NumberField({ initial: '', integer: true }),
       description: new fields.HTMLField({ initial: '' }),
       dn: new fields.StringField({ initial: '' }),
       dnType: new fields.StringField({ initial: '' }),
