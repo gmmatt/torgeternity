@@ -333,6 +333,7 @@
     },
     "itemSheetDescriptions": {
       "armor": "Rüstung",
+      "ammunition": "Munition",
       "customAttack": "Individueller Angriff",
       "customSkill": "Eigene Fertigkeit",
       "enhancement": "Verbesserung",

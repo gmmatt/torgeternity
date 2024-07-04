@@ -3665,10 +3665,8 @@ form.actor-sheet.threat .tab[data-tab].active .editor {
 .item .window-content form fieldset.ammofield {
   border: 15px solid transparent;
   border-image: url('../images/frameWithoutFilling.svg') 30 / 5rem;
-  /*border-image-source: url('../images/frameWithoutFilling.svg');
-  border-image-width: 5rem;
-  border-image-repeat: unset;
-  border-image-slice: 30;*/
+  max-height: 150px;
+  overflow-y: scroll;
 }
 
 .item .window-content form fieldset.ammofield legend{
@@ -3685,6 +3683,11 @@ form.actor-sheet.threat .tab[data-tab].active .editor {
 .item .window-content form fieldset.ammofield ul > li{
   border-bottom: #000 thin solid;
   margin-bottom: 3px;
+  display: grid;
+  grid-template-columns: 80% 10% 10%;
+  gap: 3px;
+  justify-items: baseline;
+  align-items: baseline;
 }
 
 .app.window-app.torgeternity.sheet.item {

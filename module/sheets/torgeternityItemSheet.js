@@ -101,6 +101,8 @@ export default class TorgeternityItemSheet extends ItemSheet {
 
     data.description = await TextEditor.enrichHTML(this.object.system.description, { async: true });
 
+    data.ammunition = this.document.actor?.itemTypes?.ammunition ?? [];
+
     return data;
   }
 

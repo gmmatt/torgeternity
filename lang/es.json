@@ -340,6 +340,7 @@
     },
     "itemSheetDescriptions": {
       "armor": "Armadura",
+      "ammunition": "Ammunition",
       "customAttack": "Ataque Personalizado",
       "customSkill": "Hab. Personalizada",
       "enhancement": "Mejoras",

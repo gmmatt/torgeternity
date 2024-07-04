@@ -284,6 +284,7 @@
     },
     "gear": {
       "ammo": "Ammo",
+      "ammunition": "Ammunition",
       "ap": "AP",
       "armor": "Armor",
       "attackWith": "Attack With",
@@ -340,6 +341,7 @@
     },
     "itemSheetDescriptions": {
       "armor": "Armor",
+      "ammunition": "Ammunition",
       "customAttack": "Custom Attack",
       "customSkill": "Custom Skill",
       "enhancement": "Enhancement",
@@ -575,6 +577,7 @@
       "aimed": "Aimed",
       "allOut": "All-Out Attack",
       "alterAttributes": "You can now change the attributes",
+      "APMod": "AP Modifier",
       "applyDamage": "Apply damages",
       "applyDamageTooltip": "Right-click to modify applied damages, Left-click to apply.",
       "applyStymied": "Apply Stymied",
@@ -593,6 +596,7 @@
       "backgroundDescription": "Background",
       "baseAttribute": "Base Attribute",
       "baseRoll": "Roll",
+      "blastRadius": "Blast Radius",
       "blindFire": "Blind Fire",
       "burst": "Burst",
       "calledShot": "Called Shot",
@@ -607,6 +611,7 @@
       "customSkill": "Custom skills can be edited in the Perks tab",
       "customSkills": "Custom Skills",
       "damageAP": "Dmg (AP)",
+      "damageMod": "Damagemodifier",
       "defense": "Defense",
       "defenses": "Defenses",
       "defensesTip": "Click to roll for/disable active defenses",
@@ -631,6 +636,7 @@
       "favDis": "Favored & Disfavored cancel each other.",
       "favored": "Favored",
       "firearms": "Firearms",
+      "firedamage": "Causes Firedamage",
       "freePoss": " GM grants a possibility!",
       "gear": "Gear",
       "generalGear": "General Gear",
@@ -773,6 +779,21 @@
       "veryLarge": "Very Large",
       "verySmall": "Very Small"
     },
+    "blastRadi": {
+      "small": "Small",
+      "medium": "Medium",
+      "large": "Large",
+      "veryLarge": "Very Large",
+      "huge": "Huge"
+    },
+    "levelDifferences": {
+      "1+": "One level more",
+      "2+": "Two levels more",
+      "3+": "Three levels more",
+      "1-": "One level less",
+      "2-": "Two levels less",
+      "3-": "Three levels less"
+    },
     "skillDialogs": {
       "disfavored": "Disfavored",
       "disfavoredTip": "Check if this test is disfavored. The die roll will not explode on a 10 or 20.",
@@ -900,6 +921,11 @@
       "veryVulnerable": "Very Vulnerable",
       "vulnerable": "Vulnerable",
       "waiting": "Waiting"
+    },
+    "darknessModifiers": {
+      "dim": "Dim",
+      "dark": "Dark",
+      "pitchBlack": "Pitch Black"
     },
     "stymiedStates": {
       "none": "Not Stymied",

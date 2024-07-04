@@ -1,14 +1,14 @@
+{{#if ammunition.length}}
 <fieldset class="ammofield"> <!--TODO: Localize the whole thing-->
     <legend>Ammunition</legend>
     <ul>
+        {{#each ammunition}}
         <li>
-            1
+            <p>{{name}}</p>
+            <a><i class="fa-solid fa-bullseye"></i></a>
+            <a><i class="fa-solid fa-trash"></i></a>
         </li>
-        <li>
-            2
-        </li>
-        <li>
-            3
-        </li>
+        {{/each}}
     </ul>
 </fieldset>
+{{/if}}

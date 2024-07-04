@@ -18,6 +18,7 @@ import { SpecialAbilityRollableItemData } from './specialability-rollable.js';
 import { EternityShardItemData } from './eternityshard.js';
 import { CustomAttackItemData } from './customAttack.js';
 import { CustomSkillItemData } from './customSkill.js';
+import { AmmunitionItemData } from './ammunition.js';
 
 export { GeneralItemData } from './general.js';
 export { GearItemData } from './gear.js';
@@ -42,6 +43,7 @@ export { SpecialAbilityRollableItemData } from './specialability-rollable.js';
 export { EternityShardItemData } from './eternityshard.js';
 export { CustomAttackItemData } from './customAttack.js';
 export { CustomSkillItemData } from './customSkill.js';
+export { AmmunitionItemData } from './ammunition.js';
 
 export const config = {
   gear: GearItemData,
@@ -64,4 +66,5 @@ export const config = {
   psionicpower: PsionicpowerItemData,
   customSkill: CustomSkillItemData,
   vehicleAddOn: VehicleAddOnItemData,
+  ammunition: AmmunitionItemData,
 };
