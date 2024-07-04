@@ -1,9 +1,18 @@
 <div class="list-section-heading">
 	{{localize "torgeternity.sheetLabels.weapons"}}
 </div>
+{{#if ammunition.length}}
+<h2>{{localize "torgeternity.sheetLabels.ammunition"}}</h2>
+<ol class="item-list">
+	{{#each ammunition as |item id|}}
+	
+	{{/each}}
+</ol>
+{{/if}}
 {{#if meleeweapons}}
 <h2>{{localize "torgeternity.sheetLabels.meleeWeapons"}}</h2>
 <ol class="item-list">
+	
 	{{#each meleeweapons as |item id|}}
 	<li class="item block" data-item-id="{{item._id}}">
 		<div class="item-row flexrow">

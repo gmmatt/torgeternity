@@ -23,6 +23,14 @@
               class="input-box-small"
             />
 
+            <p class="item-data-label">{{localize "torgeternity.sheetLabels.quantity"}}</p>
+            <input
+                name="system.quantity"
+                type="number"
+                value="{{item.system.quantity}}"
+                class="input-box-small"
+            />
+
             <p class="item-data-label">{{localize "torgeternity.sheetLabels.damageMod"}}</p>
             <input
                 name="system.damageMod"
@@ -43,7 +51,6 @@
             <input 
                 name="system.fireDamage"
                 type="checkbox"
-                value="{{item.system.fireDamage}}"
                 {{checked item.system.fireDamage}}
             />
 
@@ -57,7 +64,7 @@
               {{selectOptions config.levelDifferences selected=item.system.darknessMod localize=true}}
             </select>
         </div>
-        
+
         <div class="main-content">            
             <div name="system.description" class="item-description-textarea">
               {{editor description target="system.description" engine="prosemirror" button=true

@@ -391,7 +391,8 @@
       "openDiscord": "Your browser will open a new page to join us on our discord server ",
       "openIssue": "Your browser will open a new page to complete an issue",
       "openUlisses": "Your browser will open a new tab to join Ulisses website",
-      "failureBDResolution": "The system failed to resolute the BD"
+      "failureBDResolution": "The system failed to resolute the BD",
+      "ammoValueExceedsMax": "The actual ammo value of the weapon {a} exceeds it's max value. The value will be reduced to it's maximum."
     },
     "packs": {
       "basicRules": "torgeternity.basic-rules",
@@ -577,6 +578,7 @@
       "aimed": "Aimed",
       "allOut": "All-Out Attack",
       "alterAttributes": "You can now change the attributes",
+      "ammunition": "Ammunition",
       "APMod": "AP Modifier",
       "applyDamage": "Apply damages",
       "applyDamageTooltip": "Right-click to modify applied damages, Left-click to apply.",
@@ -696,6 +698,7 @@
       "psionic": "Psionic",
       "psionicPower": "Psionic Power",
       "psionicPowers": "Psionic Powers",
+      "quantity": "Quantity",
       "race": "Race",
       "range": "Range",
       "return": "Return",

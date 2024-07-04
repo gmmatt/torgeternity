@@ -4,6 +4,7 @@ import { ChatMessageTorg } from '../chat/document.js';
  *
  */
 export default class TorgeternityItem extends Item {
+  // TODO: Chatcardtemplate for ammunitions
   static CHAT_TEMPLATE = {
     perk: 'systems/torgeternity/templates/partials/perk-card.hbs',
     attack: 'systems/torgeternity/templates/partials/attack-card.hbs',
@@ -45,6 +46,7 @@ export default class TorgeternityItem extends Item {
     // genemod:'genemod-icon.webp',
     // occultech: 'implant.webp',
     // cyberware: 'cyberware-icon.webp',
+    // ammunition: 'ammunition-icon.webp',
     gear: 'gear-icon.webp',
     eternityshard: 'eternityshard.webp',
     armor: 'armor-icon.webp',
@@ -127,8 +129,8 @@ export default class TorgeternityItem extends Item {
       );
 
       ui.notifications.warn(
-        `The actual ammo value of the weapon ${this.name} exceeds it's max value. The value will be reduced to it's maximum.`
-      ); // TODO: Localize
+        game.i18n.format('torgeternity.notifications.ammoValueExceedsMax', { a: this.name })
+      );
     }
   }
 
