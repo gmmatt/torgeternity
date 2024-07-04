@@ -85,7 +85,10 @@ export class TorgeternityMacros {
 
       const shockIncrease = token.actor.fatigue;
 
-      const shockResult = Math.max(targetShockValue + shockIncrease, token.actor.system.shock.max);
+      const shockResult =
+        targetShockValue + shockIncrease >= token.actor.system.shock.max
+          ? token.actor.system.shock.max
+          : targetShockValue + shockIncrease;
 
       await token.actor.update({ 'system.shock.value': shockResult });
       chatOutput += `<li>${token.document.name}: ${shockIncrease} ${game.i18n.localize(
