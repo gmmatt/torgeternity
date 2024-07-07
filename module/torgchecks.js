@@ -18,10 +18,9 @@ export async function renderSkillChat(test) {
 
   if (test.usedWeapon?.weaponWithAmmo && !test?.usedWeapon.hasSufficientAmmo(test.burstModifier)) {
     ChatMessage.create({
-      content:
-        'You do not have a sufficent amount of bullets in your weapon to use a burst attack, this test cannot be performed.',
+      content: game.i18n.localize('torgeternity.chatText.notSufficientAmmo'),
       speaker: ChatMessage.getSpeaker(),
-    }); // TODO: Localize and nicer!
+    });
     return;
   } else if (test.usedWeapon?.weaponWithAmmo) {
     test?.usedWeapon.reduceAmmo(test.burstModifier);

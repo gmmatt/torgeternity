@@ -108,6 +108,7 @@
       "hideDetails": "Hide Details",
       "modifiers": "Modifiers",
       "noAmmo": "Failed to fire your weapon, no bullets left.",
+      "notSufficientAmmo": "You do not have a sufficent amount of bullets in your weapon to use this burst attack, this test cannot be performed.",
       "notes": "Notes",
       "passesCard1": "Passes",
       "passesCard2": "to",
@@ -377,6 +378,7 @@
       "play": "Play this card"
     },
     "notifications": {
+      "beginningMigration": "Migrating Torg system version to ",
       "defaultAction": "Default action, Gear for example",
       "dramaDeckEmpty": "The Drama Deck is empty. Reset the Drama Deck to continue.",
       "macroTypeWarning": "You can only create macro buttons for owned Items and Attributes/Skills",
