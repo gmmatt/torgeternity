@@ -1,14 +1,6 @@
 <div class="list-section-heading">
 	{{localize "torgeternity.sheetLabels.weapons"}}
 </div>
-{{#if ammunition.length}}
-<h2>{{localize "torgeternity.sheetLabels.ammunition"}}</h2>
-<ol class="item-list">
-	{{#each ammunition as |item id|}}
-	
-	{{/each}}
-</ol>
-{{/if}}
 {{#if meleeweapons}}
 <h2>{{localize "torgeternity.sheetLabels.meleeWeapons"}}</h2>
 <ol class="item-list">
@@ -470,6 +462,50 @@
 			</div>
 		</div>
 	</li>
+	{{/each}}
+</ol>
+{{/if}}
+{{#if ammunitions}}
+<h2>{{localize "torgeternity.sheetLabels.ammunition"}}</h2>
+<ol class="item-list">
+	{{#each ammunitions as |item id|}}
+		<li class="item block" data-item-id="{{item._id}}">
+			<div class="item-row flexrow">
+				<img src="{{item.img}}" title="{{item.name}}" />
+				<a class="item-name">{{item.name}}
+					({{localize 'torgeternity.sheetLabels.ammunition'}})</a>
+				<div class="item-controls">
+					<a class="item-control item-edit" title="{{localize 'torgeternity.iconeTitles.edit'}}">
+						<i class="fas fa-edit"></i>
+					</a>
+					<a class="item-control item-delete" title="{{localize 'torgeternity.iconeTitles.delete'}}">
+						<i class="fas fa-trash"></i>
+					</a>
+				</div>
+			</div>
+
+			<div class="item-detail">
+				<div class="item-dropdown-description">
+					{{{enrich item.system.description}}}
+					<p></p>
+					<div class="item-dropdown-extras">
+						{{localize 'torgeternity.sheetLabels.quantity'}}
+						{{item.system.quantity}}
+					</div>
+					<div class="item-dropdown-extras">
+						{{localize 'torgeternity.gear.tl'}}
+						{{item.system.techlevel}}
+					</div>
+					<div class="item-dropdown-extras">
+						{{item.system.price}}
+						({{item.system.value}})
+					</div>
+					<div class="item-dropdown-extras">
+						{{item.system.notes}}
+					</div>
+				</div>
+			</div>
+		</li>		
 	{{/each}}
 </ol>
 {{/if}}

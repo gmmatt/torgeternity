@@ -128,6 +128,9 @@ export default class TorgeternityActorSheet extends ActorSheet {
     data.vehicleAddOn = data.items.filter(function (item) {
       return item.type == 'vehicleAddOn';
     });
+    data.ammunitions = data.items.filter(function (item) {
+      return item.type == 'ammunition';
+    });
 
     // Enrich Text Editors
     switch (this.object.type) {
@@ -945,8 +948,8 @@ export default class TorgeternityActorSheet extends ActorSheet {
     if (item.weaponWithAmmo && !item.hasAmmo) {
       ChatMessage.create({
         speaker: ChatMessage.getSpeaker(),
-        content: 'Failed to fire your weapon because there are no bullets!',
-      }); // TODO: Localize and nicer.
+        content: game.i18n.localize('torgeternity.chatText.noAmmo'),
+      });
       return;
     }
 

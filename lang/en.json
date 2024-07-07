@@ -107,6 +107,7 @@
       "heroCard": "Hero Card",
       "hideDetails": "Hide Details",
       "modifiers": "Modifiers",
+      "noAmmo": "Failed to fire your weapon, no bullets left.",
       "notes": "Notes",
       "passesCard1": "Passes",
       "passesCard2": "to",
