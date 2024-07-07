@@ -37,10 +37,9 @@
           <input
             type="checkbox"
             name="system.isFav"
-            {{checked
-            item.system.isFav}}
-            title="Favored or not" 
-          /> <!--TODO: Localize-->
+            {{checked item.system.isFav}}
+            title={{localize "torgeternity.sheetLabels.favoredTitle"}}
+          /> 
         </div>
         <div class="main-content">
           <div name="system.description" class="item-description-textarea">
