@@ -149,5 +149,15 @@ export default class TorgeternityItemSheet extends ItemSheet {
       const newShown = 0 < currentShown ? currentShown - 1 : currentShown;
       this.item.update({ 'system.pulpPowers.limitationNumber': newShown });
     });
+
+    html.find('.fa-bullseye').click((ev) => {
+      if (this.object.system.ammo.value === this.object.system.ammo.max) {
+        return;
+      }
+      this.item.update({ 'system.ammo.value': this.object.system.ammo.max });
+
+      console.log(ev);
+      console.log(this);
+    });
   }
 }
