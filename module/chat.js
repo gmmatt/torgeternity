@@ -361,7 +361,7 @@ async function soakDam(event) {
   let possPool = parseInt(soaker.system.other.possibilities);
   // 0 => if GM ask for confirm, or return message "no poss"
   if ((possPool <= 0) & !game.user.isGM) {
-    ui.notifications.warn(' No possibility !'); // TODO: Localize
+    ui.notifications.warn(game.i18n.localize('torgeternity.notifications.noPossibility'));
     return;
   }
 
