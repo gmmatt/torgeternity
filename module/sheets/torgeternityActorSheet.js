@@ -2,6 +2,7 @@ import * as torgchecks from '../torgchecks.js';
 import { onManageActiveEffect, prepareActiveEffectCategories } from '../effects.js';
 import { TestDialog } from '../test-dialog.js';
 import TorgeternityItem from '../documents/item/torgeternityItem.js';
+import { reloadAmmo } from './torgeternityItemSheet.js';
 import { PossibilityByCosm } from '../possibilityByCosm.js';
 
 /**
@@ -380,6 +381,13 @@ export default class TorgeternityActorSheet extends ActorSheet {
           }
         },
       }).render(true);
+    });
+
+    html.find('.fa-bullseye').click((ev) => {
+      const li = $(ev.currentTarget).parents('.item');
+      const weapon = this.actor.items.get(li.data('itemId'));
+
+      reloadAmmo(this.actor, weapon);
     });
 
     // Toggle Item Detail Visibility

@@ -151,13 +151,35 @@ export default class TorgeternityItemSheet extends ItemSheet {
     });
 
     html.find('.fa-bullseye').click((ev) => {
-      if (this.object.system.ammo.value === this.object.system.ammo.max) {
-        return;
-      }
-      this.item.update({ 'system.ammo.value': this.object.system.ammo.max });
-
       console.log(ev);
       console.log(this);
+
+      console.log($(ev.currentTarget).parents('.fa.bull'));
+
+      const usedAmmo = $(ev.currentTarget).parents('.item');
+
+      reloadAmmo(this.actor, this.object, usedAmmo);
     });
   }
 }
+
+/**
+ * Reload a weapon with an actor's ammunition item
+ *
+ * @param {TorgeternityActor} actor The actor who holds the weapon
+ * @param {TorgeternityItem} item The used weapon
+ * @param {object} usedAmmo The Ammo that is used
+ */
+function reloadAmmo(actor, item, usedAmmo) {
+  // if (item.system.ammo.value === item.system.ammo.max) return; TODO: Uncomment this on PR!
+  console.log(actor);
+  console.log(item);
+  console.log(usedAmmo);
+  if (!usedAmmo) {
+    // TODO: Add dialogfield if a reload is selected in attack tab on actors sheet (as we don't know which ammo should be used)
+  }
+
+  item.update({ 'system.ammo.value': item.system.ammo.max });
+}
+
+export { reloadAmmo };
