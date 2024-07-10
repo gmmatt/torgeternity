@@ -12,9 +12,9 @@
 
 	{{#if self.isGM}}
 	<p class=" flexrow">
-		<i class="players-popout far fa-window-restore" title="{{localize
+		<i class="players-popout far fa-window-restore" data-tooltip="{{localize
 			'torgeternity.iconeTitles.openParty'}}"></i>
-		<i class="fas fa-bolt possReset" title="{{localize
+		<i class="fas fa-bolt possReset" data-tooltip="{{localize
 			'torgeternity.iconeTitles.resetPossibilities'}}"></i>
 	</p>
 	{{/if}}
@@ -38,8 +38,9 @@
 			</span>
 
 			<span class="possibilities"
-				title="{{#if user.isGM}}GM's possibility pool
-				{{else}}character's possibilities{{/if}}">
+				data-tooltip="{{#if user.isGM}}{{localize
+			'torgeternity.iconeTitles.GMPoss'}}
+				{{else}}{{localize 'torgeternity.iconeTitles.SKPoss'}}{{/if}}">
 
 				<em class="possValue">
 					{{#if user.character}}

@@ -214,7 +214,7 @@
         const target = $input.attr('name');
         const type = $input.data('dtype').substring(base.length).toLowerCase();
         const $filePickerButton = $(
-          `<button type=button class=file-picker title="Browse Files" tabindex=-1>` +
+          `<button type=button class=file-picker data-tooltip="Browse Files" tabindex=-1>` +
             `<i class="fas fa-file-import fa-fw"></i></button>`
         );
         $filePickerButton.attr('data-type', type);
@@ -274,7 +274,7 @@
       $directoryPickers.each((idx, input) => {
         const $input = $(input);
         const $browseButton = $(
-          `<button type=button title="Browse Directories" tabindex=-1>` +
+          `<button type=button data-tooltip="Browse Directories" tabindex=-1>` +
             `<i class="fas fa-file-import fa-fw"></i></button>`
         );
         $browseButton.css('flex', '0 0 24px');

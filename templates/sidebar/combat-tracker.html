@@ -3,21 +3,21 @@
         {{#if user.isGM}}
 
         <nav class="encounters flexrow">
-            <a class="combat-create" title="{{localize 'COMBAT.Create'}}">
+            <a class="combat-create" data-tooltip="{{localize 'COMBAT.Create'}}">
                 <i class="fas fa-plus"></i>
             </a>
             {{#if combatCount}}
-            <a class="combat-cycle" title="{{localize 'COMBAT.EncounterPrevious'}}" {{#if
+            <a class="combat-cycle" data-tooltip="{{localize 'COMBAT.EncounterPrevious'}}" {{#if
                 previousId}}data-combat-id="{{previousId}}" {{else}}disabled{{/if}}>
                 <i class="fas fa-caret-left"></i>
             </a>
             <h4 class="encounter">{{localize "COMBAT.Encounter"}} {{currentIndex}} / {{combatCount}}</h4>
-            <a class="combat-cycle" title="{{localize 'COMBAT.EncounterNext'}}" {{#if
+            <a class="combat-cycle" data-tooltip="{{localize 'COMBAT.EncounterNext'}}" {{#if
                 nextId}}data-combat-id="{{nextId}}" {{else}}disabled{{/if}}>
                 <i class="fas fa-caret-right"></i>
             </a>
             {{/if}}
-            <a class="combat-control" title="{{localize 'COMBAT.Delete'}}" data-control="endCombat" {{#unless
+            <a class="combat-control" data-tooltip="{{localize 'COMBAT.Delete'}}" data-control="endCombat" {{#unless
                 combatCount}}disabled{{/unless}}>
                 <i class="fas fa-trash"></i>
             </a>
@@ -32,10 +32,10 @@
         <!-- <img src="systems/torgeternity/images/cards/drama-back.jpg" id="active-drama-card" style="object-fit:contain"> -->
         <nav class="encounters flexrow">
             {{#if user.isGM}}
-            <a class="heros-first" title="heros first" {{#unless turns}}disabled{{/unless}}>
+            <a class="heros-first" data-tooltip="{{localize 'toreternity.combat.herosTooltip'}}" {{#unless turns}}disabled{{/unless}}>
                 <i class="fas fa-users" style="color:rgb(132, 132, 255)"></i>
             </a>
-            <a class="vilains-first" title="vilains first" {{#unless turns}}disabled{{/unless}}>
+            <a class="vilains-first" data-tooltip="{{localize 'toreternity.combat.vilainsTooltip'}}" {{#unless turns}}disabled{{/unless}}>
                 <i class="fas fa-users" style="color:rgb(253, 148, 148)"></i>
             </a>
             {{/if}}
@@ -62,11 +62,11 @@
             {{/if}} {{else}}
             <h3>{{localize "COMBAT.None"}}</h3>
             {{/if}} {{#if @root.user.isGM}}
-            <a class="combat-control" title="{{localize 'COMBAT.InitiativeReset'}}" data-control="resetAll" {{#unless
+            <a class="combat-control" data-tooltip="{{localize 'COMBAT.InitiativeReset'}}" data-control="resetAll" {{#unless
                 hasCombat}}disabled{{/unless}}>
                 <i class="fas fa-undo"></i>
             </a>
-            <a class="combat-settings" title="{{localize 'COMBAT.Settings'}}" data-control="trackerSettings">
+            <a class="combat-settings" data-tooltip="{{localize 'COMBAT.Settings'}}" data-control="trackerSettings">
                 <i class="fas fa-cog"></i>
             </a>
             {{/if}}
@@ -84,17 +84,17 @@
             </div>
         -->
             <div class="flexrow">
-                <img class="token-image" data-src="{{turn.img}}" title="{{turn.name}}" />
+                <img class="token-image" data-src="{{turn.img}}" data-tooltip="{{turn.name}}" />
                 <div class="token-name flexcol">
                     <h4 style="color:white">{{turn.name}}</h4>
                     <div class="combatant-controls flexrow">
                         {{#if ../user.isGM}}
                         <a class="has-played" style="margin: 0px 5px 0px 0px"
-                            title="Check when character's turn is complete"><i {{#if turn.flags.world.turnTaken}}
+                            data-tooltip="{{localize 'torgeternity.combat.hasPlayedTooltip'}}"><i {{#if turn.flags.world.turnTaken}}
                                 class="fas fa-check" style="color:green" {{else}} class="fas fa-check"
                                 style="color:gray" {{/if}}></i></a>
                         <a class="combatant-control {{#if turn.defeated}}active{{/if}}"
-                            title="{{localize 'COMBAT.ToggleDead'}}" data-control="toggleDefeated">
+                            data-tooltip="{{localize 'COMBAT.ToggleDead'}}" data-control="toggleDefeated">
                             <i class="fas fa-skull"></i></a>
                         {{/if}}
 
@@ -146,19 +146,19 @@
 
     <nav id="combat-controls" class="directory-footer flexrow">
         {{#if hasCombat}} {{#if user.isGM}} {{#if round}}
-        <a class="combat-control" title="{{localize 'torgeternity.combat.nextNew'}}" data-control="nextRound"><i
+        <a class="combat-control" data-tooltip="{{localize 'torgeternity.combat.nextNew'}}" data-control="nextRound"><i
                 class="fas fa-step-forward"></i> {{localize "torgeternity.sheetLabels.new"}}</a>
 
-        <a class="combat-control" title="{{localize 'torgeternity.combat.nextKeep'}}" data-control="nextRoundKeep"><i
+        <a class="combat-control" data-tooltip="{{localize 'torgeternity.combat.nextKeep'}}" data-control="nextRoundKeep"><i
                 class="fas fa-step-forward"></i> {{localize "torgeternity.sheetLabels.keep"}}</a>
 
-        <a class="combat-control" title="{{localize 'COMBAT.End'}}" data-control="endCombat"><i class="fas fa-stop"></i>
+        <a class="combat-control" data-tooltip="{{localize 'COMBAT.End'}}" data-control="endCombat"><i class="fas fa-stop"></i>
             {{localize "torgeternity.sheetLabels.end"}}</a>
         {{else}}
-        <a class="combat-control center" title="{{localize 'COMBAT.Begin'}}" data-control="startCombat">{{localize
+        <a class="combat-control center" data-tooltip="{{localize 'COMBAT.Begin'}}" data-control="startCombat">{{localize
             'COMBAT.Begin'}}</a> {{/if}} {{else}}
             {{#if round}}
-            <a class="combat-finish center" {{#if (hasfinish this)}} style="display:none" {{/if}} title="{{localize 'torgeternity.combat.endMyTurn'}}"> {{localize "torgeternity.combat.endMyTurn"}} 
+            <a class="combat-finish center" {{#if (hasfinish this)}} style="display:none" {{/if}} data-tooltip="{{localize 'torgeternity.combat.endMyTurn'}}"> {{localize "torgeternity.combat.endMyTurn"}} 
             </a>{{/if}} {{/if}} {{/if}}
     </nav>
 </section>

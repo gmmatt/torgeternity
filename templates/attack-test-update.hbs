@@ -86,26 +86,26 @@
 							<label for="called-shot-4">-4</label>
 							<input type="radio" id="called-shot-6" name="calledShot" value="-6">
 							<label for="called-shot-6">-6</label>
-							<input type="checkbox" id="vital-area" title="+4 Damage" name="vitalArea" value="4">
+							<input type="checkbox" id="vital-area" data-tooltip="{{localize "torgeternity.sheetLabels.vitalAreaTooltip"}}" name="vitalArea" value="4">
 							<label for="called-shot-damage">{{localize "torgeternity.sheetLabels.vitalArea"}}</label><br>
 
 							{{localize "torgeternity.sheetLabels.burst"}}:
 							<input type="radio" id="burst-none" name="burst" value="0" checked>
 							<label for="burst-none">{{localize "torgeternity.sheetLabels.none"}}</label>
-							<input type="radio" id="burst-short" name="burst" title="Automatic weapons only" value="2">
+							<input type="radio" id="burst-short" name="burst" data-tooltip="{{localize "torgeternity.sheetLabels.burstTooltip"}}" value="2">
 							<label for="burst-short">{{localize "torgeternity.sheetLabels.shortBurst"}}</label>
-							<input type="radio" id="burst-long" name="burst" title="Automatic weapons only" value="4">
+							<input type="radio" id="burst-long" name="burst" data-tooltip="{{localize "torgeternity.sheetLabels.burstTooltip"}}" value="4">
 							<label for="burst-long">{{localize "torgeternity.sheetLabels.longBurst"}}</label>
-							<input type="radio" id="burst-heavy" name="burst" title="Automatic weapons only" value="6">
+							<input type="radio" id="burst-heavy" name="burst" data-tooltip="{{localize "torgeternity.sheetLabels.burstTooltip"}}" value="6">
 							<label for="burst-heavy">{{localize "torgeternity.sheetLabels.heavyBurst"}}</label><br>
 
-							<input type="checkbox" id="all-out" name="all-out" title="+4 Bonus/Very Vulnerable (Melee and unarmed attacks only)" value="4">
+							<input type="checkbox" id="all-out" name="all-out" data-tooltip="{{localize "torgeternity.sheetLabels.allOutTooltip"}}" value="4">
 							<label for="all-out">{{localize "torgeternity.sheetLabels.allOut"}}</label>
-							<input type="checkbox" id="aimed" name="aimed" title="Aimed Shot (ranged attacks only)" value="4">
+							<input type="checkbox" id="aimed" name="aimed" data-tooltip="{{localize "torgeternity.sheetLabels.aimedTooltip"}}" value="4">
 							<label for="aimed">{{localize "torgeternity.sheetLabels.aimed"}}</label>
-							<input type="checkbox" id="blind-fire" title="Location of target only generally known" value="-6">
+							<input type="checkbox" id="blind-fire" data-tooltip="{{localize "torgeternity.sheetLabels.blindFireTooltip"}}" value="-6">
 							<label for="blind-fire">{{localize "torgeternity.sheetLabels.blindFire"}}</label>
-							<input type="checkbox" id="trademark-weapon" title={{localize "torgeternity.sheetLabels.trademarkHint"}} value="trademark">
+							<input type="checkbox" id="trademark-weapon" data-tooltip={{localize "torgeternity.sheetLabels.trademarkHint"}} value="trademark">
 							<label for="blind-fire">{{localize "torgeternity.sheetLabels.trademark"}}</label>
 						</span>
 					</fieldset>
@@ -127,7 +127,7 @@
 							<label for="concealment-6">-6</label>
 							|
 							{{localize "torgeternity.sheetLabels.coverBonus"}}
-							<input type="text" id="cover" name="cover" title="Bonus added to target toughness as a result of cover" style="width:3em" value="0">
+							<input type="text" id="cover" name="cover" data-tooltip="{{localize "torgeternity.sheetLabels.coverBonusTooltip"}}" style="width:3em" value="0">
 						</span>
 					</fieldset>
 				</td>

@@ -3,7 +3,7 @@
     <div class="threat-section-attributes">
       <div class="section-bar attributes">
         {{localize 'torgeternity.sheetLabels.attributes'}}
-        <a class="changeAttributesToggle" title="{{localize 'torgeternity.iconeTitles.edit'}}">
+        <a class="changeAttributesToggle" data-tooltip="{{localize 'torgeternity.iconeTitles.edit'}}">
           <i class="fas fa-edit"></i>
         </a>
         {{#if actor.flags.torgeternity.editAttributes}}
@@ -220,28 +220,28 @@
         {{#each meleeweapons as |item id|}}
         <li class="item" data-item-id="{{item._id}}">
           <div>
-            <img src="{{item.img}}" title="{{item.name}}" />
+            <img src="{{item.img}}" data-tooltip="{{item.name}}" />
           </div>
           <span class="item-name">{{item.name}}</span>
           <div class="item-controls">
             <a
               class="item-control item-attackRoll"
-              title='{{localize "torgeternity.iconeTitles.attackRoll"}}'
+              data-tooltip='{{localize "torgeternity.iconeTitles.attackRoll"}}'
             >
               <i class="fas fa-dice-d20"></i>
             </a>
             <a
               class="item-control item-bonusRoll"
-              title='{{localize "torgeternity.iconeTitles.bonusRoll"}}'
+              data-tooltip='{{localize "torgeternity.iconeTitles.bonusRoll"}}'
             >
               <i class="fas fa-dice-d6"></i>
             </a>
-            <a class="item-control item-edit" title='{{localize "torgeternity.iconeTitles.edit"}}'>
+            <a class="item-control item-edit" data-tooltip='{{localize "torgeternity.iconeTitles.edit"}}'>
               <i class="fas fa-edit"></i>
             </a>
             <a
               class="item-control item-delete"
-              title='{{localize "torgeternity.iconeTitles.delete"}}'
+              data-tooltip='{{localize "torgeternity.iconeTitles.delete"}}'
             >
               <i class="fas fa-trash"></i>
             </a>
@@ -250,28 +250,28 @@
         {{/each}} {{#each missileweapon as |item id|}}
         <li class="item" data-item-id="{{item._id}}">
           <div>
-            <img src="{{item.img}}" title="{{item.name}}" />
+            <img src="{{item.img}}" data-tooltip="{{item.name}}" />
           </div>
           <span class="item-name">{{item.name}}</span>
           <div class="item-controls">
             <a
               class="item-control item-attackRoll"
-              title='{{localize "torgeternity.iconeTitles.attackRoll"}}'
+              data-tooltip='{{localize "torgeternity.iconeTitles.attackRoll"}}'
             >
               <i class="fas fa-dice-d20"></i>
             </a>
             <a
               class="item-control item-bonusRoll"
-              title='{{localize "torgeternity.iconeTitles.bonusRoll"}}'
+              data-tooltip='{{localize "torgeternity.iconeTitles.bonusRoll"}}'
             >
               <i class="fas fa-dice-d6"></i>
             </a>
-            <a class="item-control item-edit" title='{{localize "torgeternity.iconeTitles.edit"}}'>
+            <a class="item-control item-edit" data-tooltip='{{localize "torgeternity.iconeTitles.edit"}}'>
               <i class="fas fa-edit"></i>
             </a>
             <a
               class="item-control item-delete"
-              title='{{localize "torgeternity.iconeTitles.delete"}}'
+              data-tooltip='{{localize "torgeternity.iconeTitles.delete"}}'
             >
               <i class="fas fa-trash"></i>
             </a>
@@ -280,28 +280,28 @@
         {{/each}} {{#each firearm as |item id|}}
         <li class="item" data-item-id="{{item._id}}">
           <div>
-            <img src="{{item.img}}" title="{{item.name}}" />
+            <img src="{{item.img}}" data-tooltip="{{item.name}}" />
           </div>
           <span class="item-name">{{item.name}}</span>
           <div class="item-controls">
             <a
               class="item-control item-attackRoll"
-              title='{{localize "torgeternity.iconeTitles.attackRoll"}}'
+              data-tooltip='{{localize "torgeternity.iconeTitles.attackRoll"}}'
             >
               <i class="fas fa-dice-d20"></i>
             </a>
             <a
               class="item-control item-bonusRoll"
-              title='{{localize "torgeternity.iconeTitles.bonusRoll"}}'
+              data-tooltip='{{localize "torgeternity.iconeTitles.bonusRoll"}}'
             >
               <i class="fas fa-dice-d6"></i>
             </a>
-            <a class="item-control item-edit" title='{{localize "torgeternity.iconeTitles.edit"}}'>
+            <a class="item-control item-edit" data-tooltip='{{localize "torgeternity.iconeTitles.edit"}}'>
               <i class="fas fa-edit"></i>
             </a>
             <a
               class="item-control item-delete"
-              title='{{localize "torgeternity.iconeTitles.delete"}}'
+              data-tooltip='{{localize "torgeternity.iconeTitles.delete"}}'
             >
               <i class="fas fa-trash"></i>
             </a>
@@ -310,28 +310,28 @@
         {{/each}} {{#each heavyweapon as |item id|}}
         <li class="item" data-item-id="{{item._id}}">
           <div>
-            <img src="{{item.img}}" title="{{item.name}}" />
+            <img src="{{item.img}}" data-tooltip="{{item.name}}" />
           </div>
           <span class="item-name">{{item.name}}</span>
           <div class="item-controls">
             <a
               class="item-control item-attackRoll"
-              title='{{localize "torgeternity.iconeTitles.attackRoll"}}'
+              data-tooltip='{{localize "torgeternity.iconeTitles.attackRoll"}}'
             >
               <i class="fas fa-dice-d20"></i>
             </a>
             <a
               class="item-control item-bonusRoll"
-              title='{{localize "torgeternity.iconeTitles.bonusRoll"}}'
+              data-tooltip='{{localize "torgeternity.iconeTitles.bonusRoll"}}'
             >
               <i class="fas fa-dice-d6"></i>
             </a>
-            <a class="item-control item-edit" title='{{localize "torgeternity.iconeTitles.edit"}}'>
+            <a class="item-control item-edit" data-tooltip='{{localize "torgeternity.iconeTitles.edit"}}'>
               <i class="fas fa-edit"></i>
             </a>
             <a
               class="item-control item-delete"
-              title='{{localize "torgeternity.iconeTitles.delete"}}'
+              data-tooltip='{{localize "torgeternity.iconeTitles.delete"}}'
             >
               <i class="fas fa-trash"></i>
             </a>
@@ -340,28 +340,28 @@
         {{/each}} {{#each spell as |item id|}}
         <li class="item" data-item-id="{{item._id}}">
           <div>
-            <img src="{{item.img}}" title="{{item.name}}" />
+            <img src="{{item.img}}" data-tooltip="{{item.name}}" />
           </div>
           <span class="item-name">{{item.name}}</span>
           <div class="item-controls">
             <a
               class="item-control item-powerRoll"
-              title='{{localize "torgeternity.iconeTitles.spellRoll"}}'
+              data-tooltip='{{localize "torgeternity.iconeTitles.spellRoll"}}'
             >
               <i class="fas fa-dice-d20"></i>
             </a>
             <a
               class="item-control item-bonusRoll"
-              title='{{localize "torgeternity.iconeTitles.bonusRoll"}}'
+              data-tooltip='{{localize "torgeternity.iconeTitles.bonusRoll"}}'
             >
               <i class="fas fa-dice-d6"></i>
             </a>
-            <a class="item-control item-edit" title='{{localize "torgeternity.iconeTitles.edit"}}'>
+            <a class="item-control item-edit" data-tooltip='{{localize "torgeternity.iconeTitles.edit"}}'>
               <i class="fas fa-edit"></i>
             </a>
             <a
               class="item-control item-delete"
-              title='{{localize "torgeternity.iconeTitles.delete"}}'
+              data-tooltip='{{localize "torgeternity.iconeTitles.delete"}}'
             >
               <i class="fas fa-trash"></i>
             </a>
@@ -370,28 +370,28 @@
         {{/each}} {{#each miracle as |item id|}}
         <li class="item" data-item-id="{{item._id}}">
           <div>
-            <img src="{{item.img}}" title="{{item.name}}" />
+            <img src="{{item.img}}" data-tooltip="{{item.name}}" />
           </div>
           <span class="item-name">{{item.name}}</span>
           <div class="item-controls">
             <a
               class="item-control item-powerRoll"
-              title='{{localize "torgeternity.iconeTitles.miracleRoll"}}'
+              data-tooltip='{{localize "torgeternity.iconeTitles.miracleRoll"}}'
             >
               <i class="fas fa-dice-d20"></i>
             </a>
             <a
               class="item-control item-bonusRoll"
-              title='{{localize "torgeternity.iconeTitles.bonusRoll"}}'
+              data-tooltip='{{localize "torgeternity.iconeTitles.bonusRoll"}}'
             >
               <i class="fas fa-dice-d6"></i>
             </a>
-            <a class="item-control item-edit" title='{{localize "torgeternity.iconeTitles.edit"}}'>
+            <a class="item-control item-edit" data-tooltip='{{localize "torgeternity.iconeTitles.edit"}}'>
               <i class="fas fa-edit"></i>
             </a>
             <a
               class="item-control item-delete"
-              title='{{localize "torgeternity.iconeTitles.delete"}}'
+              data-tooltip='{{localize "torgeternity.iconeTitles.delete"}}'
             >
               <i class="fas fa-trash"></i>
             </a>
@@ -400,28 +400,28 @@
         {{/each}} {{#each psionicpower as |item id|}}
         <li class="item" data-item-id="{{item._id}}">
           <div>
-            <img src="{{item.img}}" title="{{item.name}}" />
+            <img src="{{item.img}}" data-tooltip="{{item.name}}" />
           </div>
           <span class="item-name">{{item.name}}</span>
           <div class="item-controls">
             <a
               class="item-control item-powerRoll"
-              title='{{localize "torgeternity.iconeTitles.psionicRoll"}}'
+              data-tooltip='{{localize "torgeternity.iconeTitles.psionicRoll"}}'
             >
               <i class="fas fa-dice-d20"></i>
             </a>
             <a
               class="item-control item-bonusRoll"
-              title='{{localize "torgeternity.iconeTitles.bonusRoll"}}'
+              data-tooltip='{{localize "torgeternity.iconeTitles.bonusRoll"}}'
             >
               <i class="fas fa-dice-d6"></i>
             </a>
-            <a class="item-control item-edit" title='{{localize "torgeternity.iconeTitles.edit"}}'>
+            <a class="item-control item-edit" data-tooltip='{{localize "torgeternity.iconeTitles.edit"}}'>
               <i class="fas fa-edit"></i>
             </a>
             <a
               class="item-control item-delete"
-              title='{{localize "torgeternity.iconeTitles.delete"}}'
+              data-tooltip='{{localize "torgeternity.iconeTitles.delete"}}'
             >
               <i class="fas fa-trash"></i>
             </a>
@@ -430,28 +430,28 @@
         {{/each}} {{#each specialabilityRollable as |item id|}}
         <li class="item" data-item-id="{{item._id}}">
           <div>
-            <img src="{{item.img}}" title="{{item.name}}" width="30" height="30" />
+            <img src="{{item.img}}" data-tooltip="{{item.name}}" width="30" height="30" />
           </div>
           <span class="item-name">{{item.name}}</span>
           <div class="item-controls">
             <a
               class="item-control item-attackRoll"
-              title='{{localize "torgeternity.iconeTitles.attackRoll"}}'
+              data-tooltip='{{localize "torgeternity.iconeTitles.attackRoll"}}'
             >
               <i class="fas fa-dice-d20"></i>
             </a>
             <a
               class="item-control item-bonusRoll"
-              title='{{localize "torgeternity.iconeTitles.bonusRoll"}}'
+              data-tooltip='{{localize "torgeternity.iconeTitles.bonusRoll"}}'
             >
               <i class="fas fa-dice-d6"></i>
             </a>
-            <a class="item-control item-edit" title='{{localize "torgeternity.iconeTitles.edit"}}'>
+            <a class="item-control item-edit" data-tooltip='{{localize "torgeternity.iconeTitles.edit"}}'>
               <i class="fas fa-edit"></i>
             </a>
             <a
               class="item-control item-delete"
-              title='{{localize "torgeternity.iconeTitles.delete"}}'
+              data-tooltip='{{localize "torgeternity.iconeTitles.delete"}}'
             >
               <i class="fas fa-trash"></i>
             </a>
@@ -576,21 +576,21 @@
       {{#each perk as |item id|}}
       <li class="item" data-item-id="{{item._id}}">
         <div class="item-row flexrow">
-          <img src="{{item.img}}" title="{{item.name}}" width="30" height="30" />
+          <img src="{{item.img}}" data-tooltip="{{item.name}}" width="30" height="30" />
           <a class="item-name">{{item.name}}</a>
           <div class="item-controls">
             <a
               class="item-control item-tochat"
-              title='{{localize "torgeternity.iconeTitles.sendToChat"}}'
+              data-tooltip='{{localize "torgeternity.iconeTitles.sendToChat"}}'
             >
               <i class="fas fa-comment"></i>
             </a>
-            <a class="item-control item-edit" title='{{localize "torgeternity.iconeTitles.edit"}}'>
+            <a class="item-control item-edit" data-tooltip='{{localize "torgeternity.iconeTitles.edit"}}'>
               <i class="fas fa-edit"></i>
             </a>
             <a
               class="item-control item-delete"
-              title='{{localize "torgeternity.iconeTitles.delete"}}'
+              data-tooltip='{{localize "torgeternity.iconeTitles.delete"}}'
             >
               <i class="fas fa-trash"></i>
             </a>
@@ -615,21 +615,21 @@
       {{#each specialability as |item id|}}
       <li class="item" data-item-id="{{item._id}}">
         <div class="item-row flexrow">
-          <img src="{{item.img}}" title="{{item.name}}" />
+          <img src="{{item.img}}" data-tooltip="{{item.name}}" />
           <a class="item-name">{{item.name}}</a>
           <div class="item-controls">
             <a
               class="item-control item-tochat"
-              title='{{localize "torgeternity.iconeTitles.sendToChat"}}'
+              data-tooltip='{{localize "torgeternity.iconeTitles.sendToChat"}}'
             >
               <i class="fas fa-comment"></i>
             </a>
-            <a class="item-control item-edit" title='{{localize "torgeternity.iconeTitles.edit"}}'>
+            <a class="item-control item-edit" data-tooltip='{{localize "torgeternity.iconeTitles.edit"}}'>
               <i class="fas fa-edit"></i>
             </a>
             <a
               class="item-control item-delete"
-              title='{{localize "torgeternity.iconeTitles.delete"}}'
+              data-tooltip='{{localize "torgeternity.iconeTitles.delete"}}'
             >
               <i class="fas fa-trash"></i>
             </a>
