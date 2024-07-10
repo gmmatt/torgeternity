@@ -383,9 +383,10 @@ export default class TorgeternityActorSheet extends ActorSheet {
       }).render(true);
     });
 
-    html.find('.fa-bullseye').click((ev) => {
-      const li = $(ev.currentTarget).parents('.item');
-      const weapon = this.actor.items.get(li.data('itemId'));
+    // reload-function for weapons with ammunition, directly from the actors sheet.
+    html.find('.reload-weapon').click((ev) => {
+      const button = ev.currentTarget.closest('[data-item-id]');
+      const weapon = this.actor.items.get(button.dataset.itemId);
 
       reloadAmmo(this.actor, weapon);
     });

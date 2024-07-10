@@ -150,13 +150,9 @@ export default class TorgeternityItemSheet extends ItemSheet {
       this.item.update({ 'system.pulpPowers.limitationNumber': newShown });
     });
 
-    html.find('.fa-bullseye').click((ev) => {
-      console.log(ev);
-      console.log(this);
-
-      console.log($(ev.currentTarget).parents('.fa.bull'));
-
-      const usedAmmo = $(ev.currentTarget).parents('.item');
+    html.find('.reload-weapon').click((ev) => {
+      const button = ev.currentTarget.closest('[data-item-id]');
+      const usedAmmo = this?.actor.items.get(button.dataset.itemId);
 
       reloadAmmo(this.actor, this.object, usedAmmo);
     });
@@ -166,20 +162,82 @@ export default class TorgeternityItemSheet extends ItemSheet {
 /**
  * Reload a weapon with an actor's ammunition item
  *
- * @param {TorgeternityActor} actor The actor who holds the weapon
- * @param {TorgeternityItem} item The used weapon
+ * @param {object} actor The actor who holds the weapon
+ * @param {object} weapon The used weapon
  * @param {object} usedAmmo The Ammo that is used
  */
-function reloadAmmo(actor, item, usedAmmo) {
-  // if (item.system.ammo.value === item.system.ammo.max) return; TODO: Uncomment this on PR!
-  console.log(actor);
-  console.log(item);
-  console.log(usedAmmo);
-  if (!usedAmmo) {
-    // TODO: Add dialogfield if a reload is selected in attack tab on actors sheet (as we don't know which ammo should be used)
+async function reloadAmmo(actor, weapon, usedAmmo) {
+  if (weapon.system.ammo.value === weapon.system.ammo.max) {
+    ChatMessage.create({
+      content: `${game.i18n.format('torgeternity.chatText.ammoFull', { a: weapon.name })}`,
+      speaker: ChatMessage.getSpeaker(),
+    });
+    return;
   }
 
-  item.update({ 'system.ammo.value': item.system.ammo.max });
+  if (!usedAmmo) {
+    // called from the main actor sheet, it's not known what ammo item is used.
+    const ammoArray = [];
+    for (const item of actor.items) {
+      item.type === 'ammunition' && ammoArray.push(item);
+    }
+    if (ammoArray.length === 0) {
+      ChatMessage.create({
+        content: `${game.i18n.localize('torgeternity.chatText.noAmmoPosessing')}`,
+        speaker: ChatMessage.getSpeaker(),
+      });
+      return;
+    }
+
+    if (ammoArray.length === 1) {
+      usedAmmo = ammoArray[0];
+    } else {
+      let dialogContent =
+        '<p>' +
+        game.i18n.localize('torgeternity.dialogWindow.chooseAmmo.maintext') +
+        '</p><form><div style="display:flex;flex-direction: column; list-style: none; align-items:center; gap=3px">';
+
+      for (const ammo of ammoArray) {
+        dialogContent += `<span><input id="${ammo.id}" name="chooseAmmoRdb" data-chosen-id="${ammo.id}" type="radio"/>
+      <label for="${ammo.id}">${ammo.name}</label>
+      </span>`;
+      }
+
+      dialogContent += '</form></div>';
+
+      await Dialog.wait({
+        title: game.i18n.localize('torgeternity.dialogWindow.chooseAmmo.windowTitle'),
+        content: dialogContent,
+        buttons: {
+          ok: {
+            label: `${game.i18n.localize('torgeternity.submit.OK')}`,
+            callback: (html) => {
+              const rdbElements = html[0].getElementsByTagName('input');
+              for (const rdb of rdbElements) {
+                if (rdb.checked) {
+                  usedAmmo = actor.items.get(rdb.dataset.chosenId);
+                  return;
+                }
+              }
+            },
+          },
+          abort: {
+            label: `${game.i18n.localize('torgeternity.submit.cancel')}`,
+            callback: () => {
+              return;
+            },
+          },
+        },
+        default: 'ok',
+      });
+    }
+  }
+
+  weapon.update({ 'system.ammo.value': weapon.system.ammo.max });
+
+  usedAmmo.system.quantity === 1
+    ? actor.deleteEmbeddedDocuments('Item', [usedAmmo.id])
+    : usedAmmo.update({ 'system.quantity': system.quantity - 1 });
 }
 
 export { reloadAmmo };

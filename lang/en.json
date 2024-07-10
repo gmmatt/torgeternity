@@ -108,6 +108,7 @@
       "hideDetails": "Hide Details",
       "modifiers": "Modifiers",
       "noAmmo": "Failed to fire your weapon, no bullets left.",
+      "noAmmoPosessing": "You do not have any ammunitions in your inventory. Failed to proceed.",
       "notSufficientAmmo": "You do not have a sufficent amount of bullets in your weapon to use this burst attack, this test cannot be performed.",
       "notes": "Notes",
       "passesCard1": "Passes",
@@ -124,7 +125,8 @@
       "up": "Up",
       "value": "Value",
       "vehicleBase": "Vehicle Operation Test",
-      "mayCauseContradiction": "Perks with this symbol are dependent on their cosm’s World Laws and can cause Contradictions outside that cosm."
+      "mayCauseContradiction": "Perks with this symbol are dependent on their cosm’s World Laws and can cause Contradictions outside that cosm.",
+      "ammoFull": "The weapon \"{a}\" is already fully loaded."
     },
     "clearances": {
       "alpha": "Alpha",
@@ -230,6 +232,10 @@
       "buttons": {
         "execute": "Execute",
         "ok": "OK"
+      },
+      "chooseAmmo": {
+        "maintext": "Please choose the ammunition you want to use to reload your weapon.",
+        "windowTitle": "Choose ammo"
       }
     },
     "dnTypes": {
