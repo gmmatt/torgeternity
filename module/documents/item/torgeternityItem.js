@@ -356,13 +356,15 @@ export default class TorgeternityItem extends Item {
   /**
    * Reduces the ammo of a weapon
    *
-   * @param {number} burstModifier the amount of bullets that are fired
+   * @param {number} burstModifier the burst mode to estimate the bullets
    * @param {number} targets The quantity of targets
    */
   async reduceAmmo(burstModifier, targets = 1) {
     const currentAmmo = this.system.ammo.value;
 
-    this.system.ammo.value = currentAmmo - this._estimateBulletLoss(burstModifier) * targets;
+    this.update({
+      'system.ammo.value': currentAmmo - this._estimateBulletLoss(burstModifier) * targets,
+    });
   }
 
   /**
