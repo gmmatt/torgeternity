@@ -362,7 +362,7 @@ export default class TorgeternityItem extends Item {
   async reduceAmmo(burstModifier, targets = 1) {
     const currentAmmo = this.system.ammo.value;
 
-    this.update({
+    await this.update({
       'system.ammo.value': currentAmmo - this._estimateBulletLoss(burstModifier) * targets,
     });
   }

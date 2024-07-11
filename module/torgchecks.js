@@ -21,6 +21,7 @@ export async function renderSkillChat(test) {
   test.backlashLabel = 'display:none';
   test.bdDamageLabelStyle = test.bdDamageSum ? 'display:block' : 'display:none';
   let iteratedRoll;
+
   // Handle ammo. First, check if there is enough ammo, then reduce it.
   if (
     test.item?.weaponWithAmmo &&
