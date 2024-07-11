@@ -95,6 +95,7 @@ Hooks.once('init', async function () {
     vehicle: game.i18n.localize('torgeternity.sheetLabels.vehicle'),
   };
   CONFIG.Item.typeLabels = {
+    ammunition: game.i18n.localize('torgeternity.itemSheetDescriptions.ammunition'),
     gear: game.i18n.localize('torgeternity.itemSheetDescriptions.generalGear'),
     eternityshard: game.i18n.localize('torgeternity.itemSheetDescriptions.eternityshard'),
     armor: game.i18n.localize('torgeternity.itemSheetDescriptions.armor'),
@@ -105,7 +106,7 @@ Hooks.once('init', async function () {
     firearm: game.i18n.localize('torgeternity.itemSheetDescriptions.firearm'),
     implant: game.i18n.localize('torgeternity.itemSheetDescriptions.implant'),
     heavyweapon: game.i18n.localize('torgeternity.itemSheetDescriptions.heavyWeapon'),
-    vehicle: game.i18n.localize('torgeternity.itemSheetDescriptions.vehicule'),
+    vehicle: game.i18n.localize('torgeternity.itemSheetDescriptions.vehicle'),
     perk: game.i18n.localize('torgeternity.itemSheetDescriptions.perk'),
     enhancement: game.i18n.localize('torgeternity.itemSheetDescriptions.enhancement'),
     specialability: game.i18n.localize('torgeternity.itemSheetDescriptions.specialability'),
