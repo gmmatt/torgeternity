@@ -343,28 +343,30 @@ export default class TorgeternityItem extends Item {
    * Does the weapon have sufficient ammo? Will only be important for burst attacks.
    *
    * @param {number} burstModifier The Burstmodifier whereas the amount of bullets are calculated from
+   * @param {number} targets The amount of targets
    * @returns {boolean} True/False if the check is ok
    */
-  hasSufficientAmmo(burstModifier) {
+  hasSufficientAmmo(burstModifier, targets = 1) {
     const currentAmmo = this.system.ammo.value;
     const bulletAmount = this._estimateBulletLoss(burstModifier);
 
-    return currentAmmo < bulletAmount ? false : true;
+    return currentAmmo < bulletAmount * targets ? false : true;
   }
 
   /**
    * Reduces the ammo of a weapon
    *
    * @param {number} burstModifier the amount of bullets that are fired
+   * @param {number} targets The quantity of targets
    */
-  reduceAmmo(burstModifier) {
+  async reduceAmmo(burstModifier, targets = 1) {
     const currentAmmo = this.system.ammo.value;
 
-    this.system.ammo.value = currentAmmo - this._estimateBulletLoss(burstModifier);
+    this.system.ammo.value = currentAmmo - this._estimateBulletLoss(burstModifier) * targets;
   }
 
   /**
-   * Estimates the number of used bullets. Private.
+   * Estimates the number of used bullets.
    *
    * @param {number} burstModifier The modifier of the burst (on no burst, this will be 0 per Standard)
    * @returns {number} The amount of bullets that are used

@@ -195,7 +195,7 @@ async function reloadAmmo(actor, weapon, usedAmmo) {
       let dialogContent =
         '<p>' +
         game.i18n.localize('torgeternity.dialogWindow.chooseAmmo.maintext') +
-        '</p><form><div style="display:flex;flex-direction: column; list-style: none; align-items:center; gap=3px">';
+        '</p><form style="margin-bottom: 1rem"><div style="display:flex;flex-direction: column; list-style: none; align-items:center; gap=3px">';
 
       for (const ammo of ammoArray) {
         dialogContent += `<span><input id="${ammo.id}" name="chooseAmmoRdb" data-chosen-id="${ammo.id}" type="radio"/>
@@ -237,7 +237,12 @@ async function reloadAmmo(actor, weapon, usedAmmo) {
 
   usedAmmo.system.quantity === 1
     ? actor.deleteEmbeddedDocuments('Item', [usedAmmo.id])
-    : usedAmmo.update({ 'system.quantity': system.quantity - 1 });
+    : usedAmmo.update({ 'system.quantity': usedAmmo.system.quantity - 1 });
+
+  await ChatMessage.create({
+    content: game.i18n.format('torgeternity.chatText.reloaded', { a: weapon.name }),
+    speaker: ChatMessage.getSpeaker(),
+  });
 }
 
 export { reloadAmmo };

@@ -16,21 +16,27 @@ export async function renderSkillChat(test) {
     game.dice3d.messageHookDisabled = true;
   } catch (e) {}
 
-  if (test.usedWeapon?.weaponWithAmmo && !test?.usedWeapon.hasSufficientAmmo(test.burstModifier)) {
+  test.applyDebuffLabel = 'display:none';
+  test.applyDamLabel = 'display:none';
+  test.backlashLabel = 'display:none';
+  test.bdDamageLabelStyle = test.bdDamageSum ? 'display:block' : 'display:none';
+  let iteratedRoll;
+  // Handle ammo. First, check if there is enough ammo, then reduce it.
+  if (
+    test.usedWeapon?.weaponWithAmmo &&
+    !test?.usedWeapon.hasSufficientAmmo(test.burstModifier, test.targetAll.length)
+  ) {
     ChatMessage.create({
       content: game.i18n.localize('torgeternity.chatText.notSufficientAmmo'),
       speaker: ChatMessage.getSpeaker(),
     });
     return;
   } else if (test.usedWeapon?.weaponWithAmmo) {
-    test?.usedWeapon.reduceAmmo(test.burstModifier);
+    await test?.usedWeapon.reduceAmmo(test.burstModifier, test.targetAll.length);
+    test.ammoLabel = 'display:table-row';
+  } else {
+    test.ammoLabel = 'display:none';
   }
-
-  test.applyDebuffLabel = 'display:none';
-  test.applyDamLabel = 'display:none';
-  test.backlashLabel = 'display:none';
-  test.bdDamageLabelStyle = test.bdDamageSum ? 'display:block' : 'display:none';
-  let iteratedRoll;
 
   for (let i = 0; i < test.targetAll.length; i++) {
     const target = test.targetAll[i];
