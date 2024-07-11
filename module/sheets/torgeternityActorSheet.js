@@ -1062,7 +1062,7 @@ export default class TorgeternityActorSheet extends ActorSheet {
       movementModifier: 0,
       bdDamageLabelStyle: 'display:none',
       bdDamageSum: 0,
-      usedWeapon: item,
+      item: item,
     };
 
     new TestDialog(test);
