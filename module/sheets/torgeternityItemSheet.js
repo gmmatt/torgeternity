@@ -233,7 +233,7 @@ async function reloadAmmo(actor, weapon, usedAmmo) {
     }
   }
 
-  weapon.update({ 'system.ammo.value': weapon.system.ammo.max });
+  await weapon.update({ 'system.ammo.value': weapon.system.ammo.max });
 
   usedAmmo.system.quantity === 1
     ? await actor.deleteEmbeddedDocuments('Item', [usedAmmo.id])
