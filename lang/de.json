@@ -3,6 +3,13 @@
     "discard": "Wegwerfen",
     "display": "Zeige diese Karte den anderen Spielern"
   },
+  "TYPES": {
+    "Card": {
+      "destiny": "Schicksal",
+      "drama": "Drama",
+      "cosm": "Cosm"
+    }
+  },
   "torgeternity": {
     "attackTypes": {
       "energyWeapons": "Energiewaffen",
@@ -100,6 +107,11 @@
       "heroCard": "Heldenhaft-Karte",
       "hideDetails": "Verstecke Details",
       "modifiers": "Modifikator",
+      "noAmmo": "Waffe nicht abgefeuert, keine Kugeln mehr übrig.",
+      "noAmmoPosessing": "Du hast keine Munition in deinem Inventar. Nachladen nicht möglich.",
+      "notSufficientAmmo": "Du hast nicht genügend Kugeln in deiner Waffe, um diesen Feuerstoß zu verwenden, daher kann diese Probe nicht durchgeführt werden.",
+      "reloaded": "Du hast deine Waffe {a} nachgeladen.",
+      "ammoLabel": "Kugeln übrig",
       "notes": "Notizen",
       "passesCard1": "Gibt",
       "passesCard2": "an",
@@ -115,7 +127,8 @@
       "up": "Oberhand",
       "value": "Wert",
       "vehicleBase": "Fahrzeugprobe",
-      "mayCauseContradiction": "Vorzüge mit diesem Symbol sind abhängig von den Weltgesetzen ihres Cosm und verursachen außerhalb ihres Cosm Widersprüche."
+      "mayCauseContradiction": "Vorzüge mit diesem Symbol sind abhängig von den Weltgesetzen ihres Cosm und verursachen außerhalb ihres Cosm Widersprüche.",
+      "ammoFull": "Die Waffe \"{a}\" ist bereits vollständig geladen."
     },
     "clearances": {
       "alpha": "Alpha",
@@ -221,6 +234,10 @@
       "buttons": {
         "execute": "Ausführen",
         "ok": "OK"
+      },
+      "chooseAmmo": {
+        "maintext": "Bitte wähle die Munition aus, die du zum Nachladen deiner Waffe verwenden möchtest.",
+        "windowTitle": "Munition wählen"
       }
     },
     "dnTypes": {
@@ -277,6 +294,7 @@
     },
     "gear": {
       "ammo": "Munition",
+      "ammunition": "Munition",
       "ap": "PB",
       "armor": "Rüstung",
       "attackWith": "Angriff mit",
@@ -325,6 +343,7 @@
       "miracleRoll": "Wunder-wurf",
       "openParty": "Öffnet die Gruppenübersicht",
       "psionicRoll": "Psionischer Wurf",
+      "reload": "Waffe nachladen",
       "resetPossibilities": "Möglichkeiten zurücksetzen",
       "sendToChat": "An Chat senden",
       "spellRoll": "Zauberwurf",
@@ -368,6 +387,7 @@
       "play": "Diese Karte ausspielen"
     },
     "notifications": {
+      "beginningMigration": "Migration der Torg-Systemversion auf ",
       "defaultAction": "Standardaktion, Ausrüstung z. Bsp.",
       "dramaDeckEmpty": "Das Dramadeck ist aufgebraucht. Bitte das Dramadeck zurücksetzen.",
       "failureBDResolution": "Das System konnte die BW nicht berechnen.",
@@ -383,7 +403,9 @@
       "onlyReservedCard": "Bitte nur Karten aus dem Aktionenpool spielen.",
       "openDiscord": "Dein Browser wird einen neuen Tab öffnen, der dich zum Discord-Server weiterleitet.",
       "openIssue": "Dein Browser wird einen neuen Tab öffnen, um diese Aufgabe durchzuführen.",
-      "openUlisses": "Dein Browser wird einen neuen Tab öffnen und dich auf die Ulisses-Webseite weiterleiten."
+      "openUlisses": "Dein Browser wird einen neuen Tab öffnen und dich auf die Ulisses-Webseite weiterleiten.",
+      "ammoValueExceedsMax": "Der aktuelle Munitionswert der Waffe {a} übersteigt seinen Maximalwert. Der Wert wird auf sein Maximum reduziert.",
+      "noPossibility": "Es sind keine Möglichkeiten mehr übrig."
     },
     "packs": {
       "basicRules": "torgeternity.system-de-basisregeln",
@@ -539,7 +561,7 @@
         "name": "Pausenbild"
       },
       "playerHandBottom": {
-        "hint": "Player hands open at the bottom right of the screen, and cards will appear above the player hand window. Requires screen refresh (F5) to take effect.",
+        "hint": "Die Hände der Spieler werden unten rechts auf dem Bildschirm geöffnet, und die Karten werden über dem Fenster mit den Spielerhänden angezeigt. Erfordert eine Bildschirmaktualisierung (F5), um wirksam zu werden.",
         "name": "Anzeige der Spielerhand am unteren Bildschirmrand"
       },
       "setupCards": {
@@ -555,7 +577,7 @@
         "name": "Willkommensnachricht anzeigen"
       },
       "uniqueDN": {
-        "hint": "If checked, when a multi-target test is done, will keep the highest DN from all targets to determine outcome, as RAW.",
+        "hint": "Wenn diese Option aktiviert ist, wird bei einem Test mit mehreren Zielen der höchste DN aller Ziele zur Bestimmung des Ergebnisses beibehalten, wie von den Regeln vorgesehen.",
         "name": "Unique DN"
       }
     },
@@ -569,6 +591,8 @@
       "aimed": "Zielen",
       "allOut": "Rücksichtsloser Angriff",
       "alterAttributes": "Du kannst nun die Attribute ändern",
+      "ammunition": "Munition",
+      "APMod": "PB Modifikator",
       "applyDamage": "Schaden anwenden",
       "applyDamageTooltip": "Linksclick zum anwenden, Rechtsklick zum modifizieren.",
       "applyStymied": "Angeschlagen anwenden",
@@ -587,6 +611,7 @@
       "backgroundDescription": "Hintergrund",
       "baseAttribute": "Basisattribut",
       "baseRoll": "Basisprobe",
+      "blastRadius": "Explosionsradius",
       "blindFire": "Blindes Feuern",
       "burst": "Schnellfeuer",
       "calledShot": "Gezielter Angriff",
@@ -601,6 +626,7 @@
       "customSkill": "Eigene Fertigkeiten können im Vorzüge-Tab geändert werden",
       "customSkills": "Eigene Fertigkeiten",
       "damageAP": "Schaden (PB)",
+      "damageMod": "Schadensmodifikator",
       "defense": "Verteidigung",
       "defenses": "Verteidigung",
       "defensesTip": "Klicke, um eine aktive Verteidigung durchzuführen",
@@ -624,7 +650,9 @@
       "fatigue": "Erschöpfung",
       "favDis": "Bevorzugt & benachteiligt heben sich gegeneinander auf.",
       "favored": "Bevorzugt",
+      "favoredTitle": "Markiere dies, wenn die Fertigkeit begünstigt ist",
       "firearms": "Feuerwaffen",
+      "firedamage": "Verursacht Feuerschaden",
       "freePoss": "SL schenkt dir eine Möglichkeit!",
       "gear": "Ausrüstung",
       "generalGear": "Allgemeine Ausrüstung",
@@ -684,6 +712,7 @@
       "psionic": "Psionisch",
       "psionicPower": "Psikraft",
       "psionicPowers": "Psikräfte",
+      "quantity": "Quantity",
       "race": "Volk",
       "range": "Reichweite",
       "return": "Zurück",
@@ -699,7 +728,7 @@
       "skill": "Fertigkeit",
       "skillAdds": "Fertigkeitsstufen",
       "skillRollHint": "Umschalt-Klick für erweiterten Fähigkeitstest",
-      "skills": "Fertigkeit",
+      "skills": "Fertigkeiten",
       "skillValue": "Fertigkeitswert",
       "soakAll": "Du steckst alle Wunden und Schock weg.",
       "soakDamage": "Schaden wegstecken",
@@ -766,6 +795,21 @@
       "tiny": "Winzig",
       "veryLarge": "Sehr groß",
       "verySmall": "Sehr klein"
+    },
+    "blastRadi": {
+      "small": "Klein",
+      "medium": "Mittel",
+      "large": "Groß",
+      "veryLarge": "Sehr Groß",
+      "huge": "Riesig"
+    },
+    "levelDifferences": {
+      "1+": "Eine Stufe mehr",
+      "2+": "Zwei Stufen mehr",
+      "3+": "Drei Stufen mehr",
+      "1-": "Eine Stufe weniger",
+      "2-": "Zwei Stufen weniger",
+      "3-": "Drei Stufen weniger"
     },
     "skillDialogs": {
       "disfavored": "Benachteiligt",
@@ -895,6 +939,11 @@
       "vulnerable": "Verwundbar",
       "waiting": "Warten"
     },
+    "darknessModifiers": {
+      "dim": "Dämmrig",
+      "dark": "Dunkel",
+      "pitchBlack": "Pechschwarze Dunkelheit"
+    },
     "stymiedStates": {
       "none": "Nicht Angeschlagen",
       "stymied": "Angeschlagen",
@@ -966,13 +1015,6 @@
       "reconnectMacroZoneModifierNotDetectedTitle": "Kein Zonenmodifikator",
       "reconnectMacroZoneModifierNotDetected": "Ein Zonenmodifikator konnte nicht festgestellt werden, da die aktive Szene keine Zonen konfiguriert hat. Ändere den Modifikator im Ergebnis.",
       "reconnectMacroStatusLiftet": "Entkoppelt-Status nach einer erfolgreichen Realitätsprobe aufgehoben."
-    }
-  },
-  "TYPES": {
-    "Card": {
-      "destiny": "Schicksal",
-      "drama": "Drama",
-      "cosm": "Cosm"
     }
   }
 }
