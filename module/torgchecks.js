@@ -23,16 +23,7 @@ export async function renderSkillChat(test) {
   let iteratedRoll;
 
   // Handle ammo. First, check if there is enough ammo, then reduce it.
-  if (
-    test.item?.weaponWithAmmo &&
-    !test?.item.hasSufficientAmmo(test.burstModifier, test.targetAll.length)
-  ) {
-    ChatMessage.create({
-      content: game.i18n.localize('torgeternity.chatText.notSufficientAmmo'),
-      speaker: ChatMessage.getSpeaker(),
-    });
-    return;
-  } else if (test.item?.weaponWithAmmo) {
+  if (test.item?.weaponWithAmmo) {
     await test?.item.reduceAmmo(test.burstModifier, test.targetAll.length);
     test.ammoLabel = 'display:table-row';
   } else {

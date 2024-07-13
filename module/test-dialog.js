@@ -196,7 +196,7 @@ export class TestDialog extends FormApplication {
       };
     }
 
-    if (
+    data.test.hasModifiers =
       data.test?.woundModifier != 0 ||
       data.test?.stymiedModifier != 0 ||
       data.test?.darknessModifier != 0 ||
@@ -204,9 +204,8 @@ export class TestDialog extends FormApplication {
       data.test?.vulnerableModifier != 0 ||
       data.test?.speedModifier != 0 ||
       data.test?.maneuverModifier != 0
-    ) {
-      data.test.hasModifiers = true;
-    }
+        ? true
+        : false;
 
     return data;
   }
@@ -339,6 +338,15 @@ export class TestDialog extends FormApplication {
         this.test.burstModifier = 4;
       } else if (document.getElementById('burst-heavy').checked) {
         this.test.burstModifier = 6;
+      }
+
+      if (
+        this.test.item.weaponWithAmmo &&
+        this.test.burstModifier > 0 &&
+        !this.test.item.hasSufficientAmmo(this.test.burstModifier, this.test?.targetAll.length)
+      ) {
+        ui.notifications.warn(game.i18n.localize('torgeternity.chatText.notSufficientAmmo'));
+        return;
       }
 
       // Add All-Out Attack
