@@ -954,11 +954,8 @@ export default class TorgeternityActorSheet extends ActorSheet {
     let skillValue;
     let skillData;
 
-    if (item.weaponWithAmmo && !item.hasAmmo) {
-      ChatMessage.create({
-        speaker: ChatMessage.getSpeaker(),
-        content: game.i18n.localize('torgeternity.chatText.noAmmo'),
-      });
+    if (item?.weaponWithAmmo && !item.hasAmmo) {
+      ui.notifications.warn(game.i18n.localize('torgeternity.chatText.noAmmo'));
       return;
     }
 

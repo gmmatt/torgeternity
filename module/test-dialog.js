@@ -341,7 +341,7 @@ export class TestDialog extends FormApplication {
       }
 
       if (
-        this.test.item.weaponWithAmmo &&
+        this.test.item?.weaponWithAmmo &&
         this.test.burstModifier > 0 &&
         !this.test.item.hasSufficientAmmo(this.test.burstModifier, this.test?.targetAll.length)
       ) {
