@@ -4,6 +4,7 @@
 
 - Ammunition is now handled. The value of a weapon with ammo is now reduced according to the amount of bullets a shot takes (i.e. burst shots). A weapon can now be equipped with a general gear item like an _Ammo Belt_ that will be consumed if you click the reload button on the weapon. [#36](https://github.com/gmmatt/torgeternity/issues/36). Please be aware that the values in the ammunition item don't have any effects _yet_, as this is an [issue](https://github.com/gmmatt/torgeternity/issues/428) for later.
   - On this cause we've thrown the BD button on each item out. It was a relic from the old days that is no longer needed because of the handling by chat cards.
+- A secondary axiom is now selectable on most items [#46](https://github.com/gmmatt/torgeternity/issues/46)
 
 ## v. 12.1.2
 
@@ -14,6 +15,7 @@
   - For powers, the result of BDs were concated instead of added. Happend that test.damage was a string in this case. [#426](https://github.com/gmmatt/torgeternity/issues/426)
 
 ## v. 12.1.1
+
 - Hotfix for custom skills. These should work again. In their own special treatment ;)
 
 ## v. 12.1.0
