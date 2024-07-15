@@ -1,11 +1,14 @@
 # TORG Eternity Changelog
 
+## v. 12.2.0
+
+- Ammunition is now handled. The value of a weapon with ammo is now reduced according to the amount of bullets a shot takes (i.e. burst shots). A weapon can now be equipped with a general gear item like an _Ammo Belt_ that will be consumed if you click the reload button on the weapon. [#36](https://github.com/gmmatt/torgeternity/issues/36). Please be aware that the values in the ammunition item don't have any effects _yet_, as this is an [issue](https://github.com/gmmatt/torgeternity/issues/428) for later.
+  - On this cause we've thrown the BD button on each item out. It was a relic from the old days that is no longer needed because of the handling by chat cards.
+
 ## v. 12.1.2
 
 - Fixing spent possibilities on a soak that should only be spent _after_ the roll [#421](https://github.com/gmmatt/torgeternity/issues/421)
 - A new option has been added to determine whether the details of the chat cards should be automatically expanded or not. [#420](https://github.com/gmmatt/torgeternity/issues/420)
-- Ammunition is now handled. The value of a weapon with ammo is now reduced according to the amount of bullets a shot takes (i.e. burst shots). A weapon can now be equipped with a general gear item like an _Ammo Belt_ that will be consumed if you click the reload button on the weapon. [#36](https://github.com/gmmatt/torgeternity/issues/36)
-  - On this cause we've thrown the BD button on each item out. It was a relic from the old days that is no longer needed because of the handling by chat cards.
 - Bug squishing and style issues:
   - In fatigue macro, there was some wierd thing going on with the Math.max method, so changed this. [#425](https://github.com/gmmatt/torgeternity/issues/425)
   - For powers, the result of BDs were concated instead of added. Happend that test.damage was a string in this case. [#426](https://github.com/gmmatt/torgeternity/issues/426)
