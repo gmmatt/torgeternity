@@ -1,6 +1,6 @@
 # TORG Eternity Changelog
 
-## v. 12.2.0
+## v. 12.1.2
 
 - Fixing spent possibilities on a soak that should only be spent _after_ the roll [#421](https://github.com/gmmatt/torgeternity/issues/421)
 - A new option has been added to determine whether the details of the chat cards should be automatically expanded or not. [#420](https://github.com/gmmatt/torgeternity/issues/420)
