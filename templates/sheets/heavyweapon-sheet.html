@@ -4,7 +4,7 @@
   </h3>
 
   <header class="sheet-header">
-    <img src="{{item.img}}" data-edit="img" title="{{item.name}}" />
+    <img src="{{item.img}}" data-edit="img" data-tooltip="{{item.name}}" />
     <h1><input name="name" type="text" value="{{item.name}}" placeholder="heavy weapon Name" /></h1>
   </header>
 
@@ -96,6 +96,7 @@
             {{editor description target="system.description" engine="prosemirror" button=true
             editable=editable}}
           </div>
+          {{> "systems/torgeternity/templates/sheets/ammunition-field.hbs"}}
         </div>
         <div class="heavy-weapon-footer">
           <p class="heavy-weapon-gunners">

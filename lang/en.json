@@ -107,6 +107,11 @@
       "heroCard": "Hero Card",
       "hideDetails": "Hide Details",
       "modifiers": "Modifiers",
+      "noAmmo": "Failed to fire your weapon, no bullets left.",
+      "noAmmoPosessing": "You do not have any ammunitions in your inventory. Failed to proceed.",
+      "notSufficientAmmo": "You do not have a sufficent amount of bullets in your weapon to use this burst attack, this test cannot be performed.",
+      "reloaded": "You have reloaded your weapon {a}.",
+      "ammoLabel": "Bullets left",
       "notes": "Notes",
       "passesCard1": "Passes",
       "passesCard2": "to",
@@ -122,7 +127,8 @@
       "up": "Up",
       "value": "Value",
       "vehicleBase": "Vehicle Operation Test",
-      "mayCauseContradiction": "Perks with this symbol are dependent on their cosm’s World Laws and can cause Contradictions outside that cosm."
+      "mayCauseContradiction": "Perks with this symbol are dependent on their cosm’s World Laws and can cause Contradictions outside that cosm.",
+      "ammoFull": "The weapon \"{a}\" is already fully loaded."
     },
     "clearances": {
       "alpha": "Alpha",
@@ -135,7 +141,10 @@
       "dramaBack": "systems/torgeternity/images/cards/drama-back.webp",
       "endMyTurn": "Done",
       "nextKeep": "Next Round (Keep Current Card)",
-      "nextNew": "Next Round (New Card)"
+      "nextNew": "Next Round (New Card)",
+      "herosTooltip": "heros first",
+      "vilainsTooltip": "vilains first",
+      "hasPlayedTooltip": "Check when character's turn is complete"
     },
     "cosmDecks": {
       "aysle": "Aysle Cosm Deck",
@@ -228,6 +237,10 @@
       "buttons": {
         "execute": "Execute",
         "ok": "OK"
+      },
+      "chooseAmmo": {
+        "maintext": "Please choose the ammunition you want to use to reload your weapon.",
+        "windowTitle": "Choose ammo"
       }
     },
     "dnTypes": {
@@ -284,6 +297,7 @@
     },
     "gear": {
       "ammo": "Ammo",
+      "ammunition": "Ammunition",
       "ap": "AP",
       "armor": "Armor",
       "attackWith": "Attack With",
@@ -332,7 +346,10 @@
       "miracleRoll": "Miracle Roll",
       "openParty": "Open the party sheet",
       "psionicRoll": "Psionic Power Roll",
+      "reload": "Reload weapon",
       "resetPossibilities": "Reset Storm Knight Possibilities",
+      "GMPoss": "GM's possibility pool",
+      "SKPoss": "character's possibilities",
       "sendToChat": "Send to Chat",
       "spellRoll": "Spell Roll",
       "toggle": "Toggle",
@@ -340,6 +357,7 @@
     },
     "itemSheetDescriptions": {
       "armor": "Armor",
+      "ammunition": "Ammunition",
       "customAttack": "Custom Attack",
       "customSkill": "Custom Skill",
       "enhancement": "Enhancement",
@@ -374,6 +392,7 @@
       "play": "Play this card"
     },
     "notifications": {
+      "beginningMigration": "Migrating Torg system version to ",
       "defaultAction": "Default action, Gear for example",
       "dramaDeckEmpty": "The Drama Deck is empty. Reset the Drama Deck to continue.",      
       "macroTypeWarning": "You can only create macro buttons for owned Items and Attributes/Skills",
@@ -389,7 +408,9 @@
       "openDiscord": "Your browser will open a new page to join us on our discord server ",
       "openIssue": "Your browser will open a new page to complete an issue",
       "openUlisses": "Your browser will open a new tab to join Ulisses website",
-      "failureBDResolution": "The system failed to resolute the BD"
+      "failureBDResolution": "The system failed to resolute the BD",
+      "ammoValueExceedsMax": "The actual ammo value of the weapon {a} exceeds it's max value. The value will be reduced to it's maximum.",
+      "noPossibility": "There is no possibility left"
     },
     "packs": {
       "basicRules": "torgeternity.basic-rules",
@@ -573,8 +594,12 @@
       "addOns": "Add-Ons",
       "adds": "Adds",
       "aimed": "Aimed",
+      "aimedTooltip": "Aimed Shot (ranged attacks only)",
       "allOut": "All-Out Attack",
+      "allOutTooltip": "+4 Bonus/Very Vulnerable (Melee and unarmed attacks only)",
       "alterAttributes": "You can now change the attributes",
+      "ammunition": "Ammunition",
+      "APMod": "AP Modifier",
       "applyDamage": "Apply damages",
       "applyDamageTooltip": "Right-click to modify applied damages, Left-click to apply.",
       "applyStymied": "Apply Stymied",
@@ -593,8 +618,11 @@
       "backgroundDescription": "Background",
       "baseAttribute": "Base Attribute",
       "baseRoll": "Roll",
+      "blastRadius": "Blast Radius",
       "blindFire": "Blind Fire",
+      "blindFireTooltip": "Location of target only generally known",
       "burst": "Burst",
+      "burstTooltip": "Automatic weapons only",
       "calledShot": "Called Shot",
       "chase": "Chase",
       "chooseDamage": "Choose damages inflicted.",
@@ -604,9 +632,11 @@
       "concealment": "Concealment",
       "cosm": "Cosm",
       "coverBonus": "Cover Bonus",
+      "coverBonusTooltip": "Bonus added to target toughness as a result of cover",
       "customSkill": "Custom skills can be edited in the Perks tab",
       "customSkills": "Custom Skills",
       "damageAP": "Dmg (AP)",
+      "damageMod": "Damagemodifier",
       "defense": "Defense",
       "defenses": "Defenses",
       "defensesTip": "Click to roll for/disable active defenses",
@@ -623,15 +653,20 @@
       "end": "End",
       "enhancement": "Enhancement",
       "enhancements": "Enhancements",
+      "enhancementTooltip": "Check if enhancement has been selected by Storm Knight",
+      "enhancementRemoveTooltip": "Remove last available enhancement",
+      "enhancementAddTooltip": "Add available enhancement to end of list",
       "equipment": "Equipment",
       "eternityShard": "Eternity Shard",
       "explosionCancelled": "You were disfavored, first bonus die has been cancelled, but you're no more disfavored. ",
       "explosives": "Explosives",
       "fatigue": "Fatigue",
+      "fatigueTooltip": "Click to apply fatigue",
       "favDis": "Favored & Disfavored cancel each other.",
       "favored": "Favored",
       "favoredTitle": "Check this if the skill is favored",
       "firearms": "Firearms",
+      "firedamage": "Causes Firedamage",
       "freePoss": " GM grants a possibility!",
       "gear": "Gear",
       "generalGear": "General Gear",
@@ -643,6 +678,7 @@
       "implants": "Implants",
       "inactiveEffects": "Inactive Effects",
       "inputExisting": "Input Existing",
+      "inputExistingTooltip": "Choose whether to (1) roll for a bonus number or (2) input a previously generated bonus when attempting a multi-action.",
       "inputExistingRdbTitle": "When engaged in multi-actions, check this box to input the bonus number from a previous test.",
       "inputExistingTitle": "Input BONUS NUMBER from previous test, not die total.",
       "interactionAttacks": "Interaction Attacks",
@@ -652,6 +688,8 @@
       "lastPossMess": "<h3> This is your last possibility, do you confirm ?<br>Are You sure ?</h3>",
       "lastSpent": " Last possibility spent!",
       "limitations": "Limitations",
+      "limitationsAddTooltip": "Add available limitation to end of list",
+      "limitationsRemoveTooltip": "Remove last available limitation",
       "longBurst": "Long (+4)",
       "magic": "Magic",
       "melee": "Melee",
@@ -687,10 +725,12 @@
       "possibilityByCosm": "Possibilities by Cosm",
       "possibilitypotential": "Possibilities (Potential)",
       "possSpent": " Possibility spent.",
+      "possGrant": " You grant a possibility !",
       "powers": "Powers",
       "psionic": "Psionic",
       "psionicPower": "Psionic Power",
       "psionicPowers": "Psionic Powers",
+      "quantity": "Quantity",
       "race": "Race",
       "range": "Range",
       "return": "Return",
@@ -705,7 +745,7 @@
       "size": "Size",
       "skill": "Skill",
       "skillAdds": "Adds",
-      "skillRollHint": "Shift-click for enhanced skill test",
+      "skillRollHint": "Click for Skill Test",
       "skills": "Skills",
       "skillValue": "Skill Value",
       "soakAll": "You will soak all wounds and shocks.",
@@ -751,6 +791,7 @@
       "vehicle": "Vehicle",
       "vehicles": "Vehicles",
       "vitalArea": "Vital Area",
+      "vitalAreaTooltip": "+4 Damage",
       "walking": "Walking (None)",
       "weapons": "Weapons",
       "wounds": "Wounds",
@@ -774,12 +815,28 @@
       "veryLarge": "Very Large",
       "verySmall": "Very Small"
     },
+    "blastRadi": {
+      "small": "Small",
+      "medium": "Medium",
+      "large": "Large",
+      "veryLarge": "Very Large",
+      "huge": "Huge"
+    },
+    "levelDifferences": {
+      "1+": "One level more",
+      "2+": "Two levels more",
+      "3+": "Three levels more",
+      "1-": "One level less",
+      "2-": "Two levels less",
+      "3-": "Three levels less"
+    },
     "skillDialogs": {
       "disfavored": "Disfavored",
       "disfavoredTip": "Check if this test is disfavored. The die roll will not explode on a 10 or 20.",
       "favored": "Favored",
       "favoredanddisfavored": "(Dis-)Favored",
-      "favoredTip": "Check if this test is favored for some unexpected reason."
+      "favoredTip": "Check if this test is favored for some unexpected reason.",
+      "favoredChoice": "Favored or not"
     },
     "skills": {
       "airVehicles": "Air Vehicles",
@@ -901,6 +958,11 @@
       "veryVulnerable": "Very Vulnerable",
       "vulnerable": "Vulnerable",
       "waiting": "Waiting"
+    },
+    "darknessModifiers": {
+      "dim": "Dim",
+      "dark": "Dark",
+      "pitchBlack": "Pitch Black"
     },
     "stymiedStates": {
       "none": "Not Stymied",

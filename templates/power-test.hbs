@@ -9,13 +9,13 @@
 								{{> "systems/torgeternity/templates/testDialogs/difficulty-selector.hbs"}}
 							<td>
 								<fieldset>
-									<legend title={{localize "torgeternity.sheetLabels.usePreviousBonusLegend"}}>Bonus</legend>
+									<legend data-tooltip={{localize "torgeternity.sheetLabels.usePreviousBonusLegend"}}>Bonus</legend>
 									<span class="skill-check-options">
 										<input type="radio" id="roll" name="bonus" value="0" checked>
 										<label for="roll">{{localize 'torgeternity.sheetLabels.roll'}}</label>
-										<input type="radio" id="previous-bonus" title={{localize "torgeternity.sheetLabels.usePreviousBonustitle"}} name="bonus" value="1">
+										<input type="radio" id="previous-bonus" data-tooltip={{localize "torgeternity.sheetLabels.usePreviousBonustitle"}} name="bonus" value="1">
 										<label for="input">{{localize "torgeternity.sheetLabels.inputExisting"}}</label>
-										<input type="number" id="bonus-text" title={{localize "torgeternity.sheetLabels.usePreviousBonustitle"}} style="width:3em">
+										<input type="number" id="bonus-text" data-tooltip={{localize "torgeternity.sheetLabels.usePreviousBonustitle"}} style="width:3em">
 									</span>
 								</fieldset>
 							</td>
@@ -96,7 +96,7 @@
 							<label for="called-shot-4">-4</label>
 							<input type="radio" id="called-shot-6" name="calledShot" value="-6">
 							<label for="called-shot-6">-6</label>
-							<input type="checkbox" id="vital-area" title="+4 Damage" name="vitalArea" value="4">
+							<input type="checkbox" id="vital-area" data-tooltip="{{localize "torgeternity.sheetLabels.vitalAreaTooltip"}}" name="vitalArea" value="4">
 							<label for="called-shot-damage">{{localize "torgeternity.sheetLabels.vitalArea"}}</label><br>
 						</span>
 					</fieldset>
@@ -118,7 +118,7 @@
 							<label for="concealment-6">-6</label>
 							|
 							{{localize "torgeternity.sheetLabels.coverBonus"}}
-							<input type="text" id="cover" name="cover" title="Bonus added to target toughness as a result of cover" style="width:3em" value="0">
+							<input type="text" id="cover" name="cover" data-tooltip="{{localize "torgeternity.sheetLabels.coverBonusTooltip"}}" style="width:3em" value="0">
 						</span>
 					</fieldset>
 				</td>

@@ -20,7 +20,9 @@ export async function torgMigration() {
       return;
     }
     // show a UI warning
-    ui.notifications.warn('Migrating Torg system version to ' + currentVersion); // TODO: Localize this
+    ui.notifications.warn(
+      game.i18n.localize('torgeternity.notifications.beginningMigration') + currentVersion
+    );
 
     // migrations up to 2.4.0
     if (foundry.utils.isNewerVersion('2.4.0', migrationVersion)) {

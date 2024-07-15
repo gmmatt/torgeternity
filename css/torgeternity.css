@@ -836,7 +836,7 @@ button:focus {
 }
 
 a:hover,
-span.open-poss:hover {
+.sksheet.header.possyheadline.open-poss:hover {
   text-shadow: 0 0 10px #3bb3b3;
   cursor: pointer;
 }
@@ -2501,12 +2501,12 @@ form.actor-sheet header input[name="name"] {
 
 .window-content .actor-sheet a.skill-roll:hover,
 .window-content .actor-sheet a.skill-roll:active {
-  text-shadow: 0px 0px 10px #474a68;
+  text-shadow: 0px 0px 10px var(--torgblue);
 }
 
 .window-content .actor-sheet a.skill-list:hover,
 .window-content .actor-sheet a.skill-list:active {
-  text-shadow: 0px 0px 10px #474a68;
+  text-shadow: 0px 0px 10px var(--torgblue);
 }
 
 .window-content .actor-sheet .item-name {
@@ -3517,10 +3517,8 @@ form.actor-sheet.threat .tab[data-tab].active .editor {
 .item .window-content form.item-sheet .editor {
   /*width: 400px;*/
   min-height: 400px;
-  background: url(../images/bckg-hex.webp);
-  background-size: 110% 110%;
-  padding: 20px;
-  background-position: center;
+    border: 15px solid transparent;
+  border-image: url('../images/frameWithoutFilling.svg') 30 / 2rem;
 }
 
 .item .window-content form.item-sheet nav.tabs {
@@ -3662,6 +3660,38 @@ form.actor-sheet.threat .tab[data-tab].active .editor {
 .item .window-content form.item-sheet .effects .effect-edit,
 .item .window-content form.item-sheet .effects .effect-delete {
   padding: 5px;
+}
+
+.item .window-content form fieldset.ammofield {
+  border: 15px solid transparent;
+  border-image: url('../images/frameWithoutFilling.svg') 30 / 5rem;
+  max-height: 150px;
+  overflow-y: scroll;
+}
+
+.item .window-content form fieldset.ammofield legend{
+  font-family: 'Alaska';
+  font-size: 14px;
+}
+
+.item .window-content form fieldset.ammofield ul{
+  font: 13px 'Signika';
+  list-style-type: none;
+  padding: 0;
+}
+
+.item .window-content form fieldset.ammofield ul > li{
+  border-bottom: #000 thin solid;
+  margin-bottom: 3px;
+  display: grid;
+  grid-template-columns: 80% 10% 10%;
+  gap: 3px;
+  justify-items: baseline;
+  align-items: baseline;
+}
+
+.app.window-app.torgeternity.sheet.item {
+  height: auto !important;
 }
 
 .threat-block {

@@ -4,6 +4,7 @@ import { ChatMessageTorg } from '../chat/document.js';
  *
  */
 export default class TorgeternityItem extends Item {
+  // TODO: Chatcardtemplate for ammunitions
   static CHAT_TEMPLATE = {
     perk: 'systems/torgeternity/templates/partials/perk-card.hbs',
     attack: 'systems/torgeternity/templates/partials/attack-card.hbs',
@@ -45,6 +46,7 @@ export default class TorgeternityItem extends Item {
     // genemod:'genemod-icon.webp',
     // occultech: 'implant.webp',
     // cyberware: 'cyberware-icon.webp',
+    ammunition: 'ammo-icon.webp',
     gear: 'gear-icon.webp',
     eternityshard: 'eternityshard.webp',
     armor: 'armor-icon.webp',
@@ -63,6 +65,16 @@ export default class TorgeternityItem extends Item {
     miracle: 'miracles-icon.webp',
     psionicpower: 'psionicpower.webp',
   };
+
+  /**
+   * Getter for a weapon that might have ammo or not (meelee weapons don't have ammo)
+   *  @returns true/false
+   */
+  get weaponWithAmmo() {
+    return this.type === 'firearm' || this.type === 'heavyweapon' || this.type === 'missileweapon'
+      ? true
+      : false;
+  }
 
   _preCreate(data, options, user) {
     super._preCreate(data, options, user);
@@ -92,6 +104,33 @@ export default class TorgeternityItem extends Item {
       if (previousEquipped) {
         TorgeternityItem.toggleEquipState(previousEquipped, actor);
       }
+    }
+  }
+
+  /**
+   * See API https://foundryvtt.com/api/classes/foundry.abstract.Document.html#_preUpdate
+   *
+   * @param {any} changes
+   * @param {any} options
+   * @param {object} user Default: Base user
+   * @returns
+   */
+  async _preUpdate(changes, options, user) {
+    if ((await super._preUpdate(changes, options, user)) === false) return false;
+
+    if (
+      foundry.utils.getProperty(changes, 'system.ammo') &&
+      changes.system.ammo.value > this.system.ammo.max
+    ) {
+      changes.system.ammo.value = await Math.clamp(
+        changes.system.ammo.value ?? this.system.ammo.value,
+        0,
+        changes.system.ammo.max ?? this.system.ammo.max
+      );
+
+      ui.notifications.warn(
+        game.i18n.format('torgeternity.notifications.ammoValueExceedsMax', { a: this.name })
+      );
     }
   }
 
@@ -218,10 +257,8 @@ export default class TorgeternityItem extends Item {
     return ChatMessageTorg.create(chatData);
   }
 
-  /**
-   *
-   */
-  async bonus() {
+  // Commented that out because I don't think it's needed anymore but I don't know yet :D
+  /* async bonus() {
     const rollResult = new Roll('1d6x6max5').roll({ async: false });
 
     const chatData = {
@@ -234,7 +271,7 @@ export default class TorgeternityItem extends Item {
     chatData.content = await rollResult.render();
 
     return ChatMessage.create(chatData);
-  }
+  }*/
 
   /**
    *
@@ -291,5 +328,65 @@ export default class TorgeternityItem extends Item {
     chatData.power = true;
 
     return ChatMessageTorg.create(chatData);
+  }
+
+  /**
+   * Does the weapon have ammo?
+   *
+   * @returns {boolean} Does the weapon have ammo? True/False
+   */
+  get hasAmmo() {
+    return this.system?.ammo.value > 0 ? true : false;
+  }
+
+  /**
+   * Does the weapon have sufficient ammo? Will only be important for burst attacks.
+   *
+   * @param {number} burstModifier The Burstmodifier whereas the amount of bullets are calculated from
+   * @param {number} targets The amount of targets
+   * @returns {boolean} True/False if the check is ok
+   */
+  hasSufficientAmmo(burstModifier, targets = 1) {
+    const currentAmmo = this.system.ammo.value;
+    const bulletAmount = this._estimateBulletLoss(burstModifier);
+
+    return currentAmmo < bulletAmount * targets ? false : true;
+  }
+
+  /**
+   * Reduces the ammo of a weapon
+   *
+   * @param {number} burstModifier the burst mode to estimate the bullets
+   * @param {number} targets The quantity of targets
+   */
+  async reduceAmmo(burstModifier, targets = 1) {
+    const currentAmmo = this.system.ammo.value;
+
+    await this.update({
+      'system.ammo.value': currentAmmo - this._estimateBulletLoss(burstModifier) * targets,
+    });
+  }
+
+  /**
+   * Estimates the number of used bullets.
+   *
+   * @param {number} burstModifier The modifier of the burst (on no burst, this will be 0 per Standard)
+   * @returns {number} The amount of bullets that are used
+   */
+  _estimateBulletLoss(burstModifier) {
+    switch (burstModifier) {
+      case 2:
+        return 3;
+
+      case 4:
+        return 7;
+
+      case 6:
+        return 50;
+
+      case 0:
+      default:
+        return 1;
+    }
   }
 }
