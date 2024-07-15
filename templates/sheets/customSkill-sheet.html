@@ -4,7 +4,7 @@
   </h3>
 
   <header class="sheet-header">
-    <img src="{{item.img}}" data-edit="img" title="{{item.name}}" />
+    <img src="{{item.img}}" data-edit="img" data-tooltip="{{item.name}}" />
     <h1><input name="name" type="text" value="{{item.name}}" placeholder="Custom Skill Name" /></h1>
   </header>
 
@@ -37,9 +37,10 @@
           <input
             type="checkbox"
             name="system.isFav"
-            {{checked item.system.isFav}}
-            title={{localize "torgeternity.sheetLabels.favoredTitle"}}
-          /> 
+            {{checked
+            item.system.isFav}}
+            data-tooltip="{{localize 'torgeternity.skillDialogs.favoredChoice'}}"
+          />
         </div>
         <div class="main-content">
           <div name="system.description" class="item-description-textarea">

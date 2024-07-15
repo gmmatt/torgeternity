@@ -11,7 +11,7 @@
 
   <header class="sheet-header-vehicle">
     <div class="vehicle-header-image">
-      <img src="{{actor.img}}" data-edit="img" title="{{actor.name}}" />
+      <img src="{{actor.img}}" data-edit="img" data-tooltip="{{actor.name}}" />
     </div>
     <div class="vehicle-header-name">
       <input name="name" type="text" value="{{actor.name}}" placeholder="Vehicle Name" size="50" />
@@ -226,7 +226,7 @@
         </li>
         {{#each heavyweapon as |item id|}}
         <li class="item vehicle-weapon-list" data-item-id="{{item._id}}">
-          <div class="vehicle-image"><img src="{{item.img}}" title="{{item.name}}" /></div>
+          <div class="vehicle-image"><img src="{{item.img}}" data-tooltip="{{item.name}}" /></div>
           <div class="name">{{item.name}}</div>
           <div class="gunner">{{item.system.gunner.name}}</div>
           <div class="skill">{{item.system.gunner.skillValue}}</div>
@@ -235,16 +235,16 @@
           <div class="controls">
             <a
               class="item-control item-attackRoll"
-              title="{{localize 'torgeternity.iconeTitles.attackRoll'}}"
+              data-tooltip="{{localize 'torgeternity.iconeTitles.attackRoll'}}"
             >
               <i class="fas fa-dice-d20"></i>
             </a>
-            <a class="item-control item-edit" title="{{localize 'torgeternity.iconeTitles.edit'}}">
+            <a class="item-control item-edit" data-tooltip="{{localize 'torgeternity.iconeTitles.edit'}}">
               <i class="fas fa-edit"></i>
             </a>
             <a
               class="item-control item-delete"
-              title="{{localize 'torgeternity.iconeTitles.delete'}}"
+              data-tooltip="{{localize 'torgeternity.iconeTitles.delete'}}"
             >
               <i class="fas fa-trash"></i>
             </a>
@@ -263,23 +263,23 @@
         {{#each vehicleAddOn as |item id|}}
         <li class="item vehicle-add-on-list" data-item-id="{{item._id}}">
           <div class="add-on-image">
-            <img src="{{item.img}}" title="{{item.name}}" />
+            <img src="{{item.img}}" data-tooltip="{{item.name}}" />
           </div>
           <div class="add-on-name">{{item.name}}</div>
           <div class="add-on-description">{{item.system.short-description}}</div>
           <div class="controls">
             <a
               class="item-control item-tochat"
-              title="{{localize 'torgeternity.iconeTitles.sendToChat'}}"
+              data-tooltip="{{localize 'torgeternity.iconeTitles.sendToChat'}}"
             >
               <i class="fas fa-comment"></i>
             </a>
-            <a class="item-control item-edit" title="{{localize 'torgeternity.iconeTitles.edit'}}">
+            <a class="item-control item-edit" data-tooltip="{{localize 'torgeternity.iconeTitles.edit'}}">
               <i class="fas fa-edit"></i>
             </a>
             <a
               class="item-control item-delete"
-              title="{{localize 'torgeternity.iconeTitles.delete'}}"
+              data-tooltip="{{localize 'torgeternity.iconeTitles.delete'}}"
             >
               <i class="fas fa-trash"></i>
             </a>

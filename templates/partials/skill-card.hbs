@@ -1,6 +1,6 @@
 <div class="skill-card sheet-card" data-type="{{data.type}}">
   <div class="torgeternity-message-header">
-    <img class="message-header torgeternity-actor-icon" src="{{actorPic}}" title="{{actorName}}" />
+    <img class="message-header torgeternity-actor-icon" src="{{actorPic}}" data-tooltip="{{actorName}}" />
 
       <div  class="message-header torgeternity-skill-description">
           {{#if unskilledTest}}
@@ -12,7 +12,7 @@
       </div>
       
       {{#if target.present}}
-      <img class="message-header torgeternity-target-icon" src="{{target.targetPic}}" title="{{target.targetName}}" />
+      <img class="message-header torgeternity-target-icon" src="{{target.targetPic}}" data-tooltip="{{target.targetName}}" />
       {{/if}}
     </div>    
   <div class="chat-text" style="padding:0px">
@@ -24,24 +24,24 @@
     <p class="skill-roll-damage-label" style="{{damageLabel}}">
     {{damageDescription}}</p>
     <p class="applyButtons">
-      <a class="applyDam" style="{{applyDamLabel}}" title="{{localize 'torgeternity.sheetLabels.applyDamageTooltip'}}">
+      <a class="applyDam" style="{{applyDamLabel}}" data-tooltip="{{localize 'torgeternity.sheetLabels.applyDamageTooltip'}}">
       {{localize "torgeternity.sheetLabels.applyDamage"}}</a>
       <!--<span style="{{applyDamLabel}}">&nbsp;&bull;&nbsp;</span>-->
-      <a class="soakDam" style="{{applyDamLabel}}" title="{{localize 'torgeternity.sheetLabels.soakDamageTooltip'}}">
+      <a class="soakDam" style="{{applyDamLabel}}" data-tooltip="{{localize 'torgeternity.sheetLabels.soakDamageTooltip'}}">
       {{localize "torgeternity.sheetLabels.soakDamage"}}</a>
-      <a class="applyStymied" style="{{applyDebuffLabel}}" title="{{localize 'torgeternity.sheetLabels.applyStymiedTooltip'}}">
+      <a class="applyStymied" style="{{applyDebuffLabel}}" data-tooltip="{{localize 'torgeternity.sheetLabels.applyStymiedTooltip'}}">
       {{localize 'torgeternity.sheetLabels.applyStymied'}}</a>
       <!--<span style="{{applyDebuffLabel}}">&nbsp;&bull;&nbsp;</span>-->
-      <a class="applyVulnerable" style="{{applyDebuffLabel}}" title="{{localize 'torgeternity.sheetLabels.applyVulnerableTooltip'}}">
+      <a class="applyVulnerable" style="{{applyDebuffLabel}}" data-tooltip="{{localize 'torgeternity.sheetLabels.applyVulnerableTooltip'}}">
       {{localize 'torgeternity.sheetLabels.applyVulnerable'}}</a>
-      <a class="backlash1" style="{{backlashLabel}}" title="{{localize 'torgeternity.sheetLabels.backlash1Tooltip'}}">
+      <a class="backlash1" style="{{backlashLabel}}" data-tooltip="{{localize 'torgeternity.sheetLabels.backlash1Tooltip'}}">
       {{localize "torgeternity.sheetLabels.backlash1"}}</a>
-      <a class="backlash2" style="{{backlashLabel}}" title="{{localize 'torgeternity.sheetLabels.backlash2Tooltip'}}">
+      <a class="backlash2" style="{{backlashLabel}}" data-tooltip="{{localize 'torgeternity.sheetLabels.backlash2Tooltip'}}">
       {{localize "torgeternity.sheetLabels.backlash2"}}</a>
-      <a class="backlash3" style="{{backlashLabel}}" title="{{localize 'torgeternity.sheetLabels.backlash3Tooltip'}}">
+      <a class="backlash3" style="{{backlashLabel}}" data-tooltip="{{localize 'torgeternity.sheetLabels.backlash3Tooltip'}}">
       {{localize "torgeternity.sheetLabels.backlash3"}}</a>
     </p>    
-    <details class="chatCardDetailsELement" {{#if (getOptionBoolean "showCheckDetails")}}open{{/if}}>
+    <details class="chatCardDetailsELement">
     <summary class="skillcardSummaryElement"
         data-open="{{localize 'torgeternity.chatText.hideDetails'}}"
         data-close="{{localize 'torgeternity.chatText.showDetails'}}"
@@ -69,7 +69,7 @@
             <a class="modifier-label">{{localize "torgeternity.chatText.modifiers"}}</a>:
           </td>
           <td>
-            <div title="{{modifierText}}" style="display:block"><span style="{{modifierPlusLabel}}">+</span>{{modifiers}}</div>
+            <div data-tooltip="{{modifierText}}" style="display:block"><span style="{{modifierPlusLabel}}">+</span>{{modifiers}}</div>
           </td>
         </tr>
         <tr style="{{cardsPlayedLabel}}">

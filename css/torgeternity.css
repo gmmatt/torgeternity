@@ -836,7 +836,7 @@ button:focus {
 }
 
 a:hover,
-span.open-poss:hover {
+.sksheet.header.possyheadline.open-poss:hover {
   text-shadow: 0 0 10px #3bb3b3;
   cursor: pointer;
 }
@@ -2501,12 +2501,12 @@ form.actor-sheet header input[name="name"] {
 
 .window-content .actor-sheet a.skill-roll:hover,
 .window-content .actor-sheet a.skill-roll:active {
-  text-shadow: 0px 0px 10px #474a68;
+  text-shadow: 0px 0px 10px var(--torgblue);
 }
 
 .window-content .actor-sheet a.skill-list:hover,
 .window-content .actor-sheet a.skill-list:active {
-  text-shadow: 0px 0px 10px #474a68;
+  text-shadow: 0px 0px 10px var(--torgblue);
 }
 
 .window-content .actor-sheet .item-name {
