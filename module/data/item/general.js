@@ -14,6 +14,10 @@ export class GeneralItemData extends foundry.abstract.TypeDataModel {
       price: new fields.StringField({ initial: '' }),
       techlevel: new fields.NumberField({ initial: 1, integer: true }),
       value: new fields.NumberField({ initial: 0, integer: true }),
+      secondaryAxiom: new fields.SchemaField({
+        selected: new fields.StringField({ initial: 'none' }),
+        value: new fields.NumberField({ initial: null, integer: true }),
+      }),
     };
   }
 

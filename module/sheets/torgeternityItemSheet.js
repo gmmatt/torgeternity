@@ -103,6 +103,9 @@ export default class TorgeternityItemSheet extends ItemSheet {
 
     data.ammunition = this.document.actor?.itemTypes?.ammunition ?? [];
 
+    data.displaySecondaryAxiomValue =
+      this.document.system.secondaryAxiom.selected === 'none' ? false : true;
+
     return data;
   }
 
@@ -155,6 +158,11 @@ export default class TorgeternityItemSheet extends ItemSheet {
       const usedAmmo = this?.actor.items.get(button.dataset.itemId);
 
       reloadAmmo(this.actor, this.object, usedAmmo);
+    });
+
+    html.find('.selectSecondaryAxiom').click((ev) => {
+      ev.currentTarget.value === 'none' &&
+        this.item.update({ 'system.secondaryAxiom.value': null });
     });
   }
 }

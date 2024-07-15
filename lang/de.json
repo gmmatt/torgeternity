@@ -26,6 +26,12 @@
       "spirit": "Geist",
       "strength": "Stärke"
     },
+    "axioms": {      
+      "magic": "Magie",
+      "social": "Sozial",
+      "spirit": "Spiritualität",
+      "tech": "Tech"      
+    },
     "cardTypes": {
       "activeDrama": "Aktive Dramakarte",
       "cosm": "Cosm",
@@ -737,6 +743,7 @@
       "roll": "Würfeln",
       "run": "Laufen",
       "running": "Laufen (-2)",
+      "secondaryAxiom": "Sekundäres Axiom",
       "secondaryCosm": "Sekundäres Cosm",
       "shield": "Schild",
       "shields": "Schilde",
