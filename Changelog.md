@@ -7,6 +7,10 @@
 - Bug quishing and style issues:
   - Fixed the archetypes' missile weapon category
 
+## v. 12.1.4
+
+- Fixing a bug where the damage of powers weren't processed correctly
+
 ## v. 12.1.3
 
 - Fixing a bug where rollable specialities weren't processed correctly
