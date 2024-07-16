@@ -41,7 +41,7 @@
       <a class="backlash3" style="{{backlashLabel}}" title="{{localize 'torgeternity.sheetLabels.backlash3Tooltip'}}">
       {{localize "torgeternity.sheetLabels.backlash3"}}</a>
     </p>    
-    <details class="chatCardDetailsELement">
+    <details class="chatCardDetailsELement" {{#if (getOptionBoolean "showCheckDetails")}}open{{/if}}>
     <summary class="skillcardSummaryElement"
         data-open="{{localize 'torgeternity.chatText.hideDetails'}}"
         data-close="{{localize 'torgeternity.chatText.showDetails'}}"

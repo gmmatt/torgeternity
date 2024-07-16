@@ -1,5 +1,17 @@
 # TORG Eternity Changelog
 
+## v. 12.1.2
+
+- Fixing spent possibilities on a soak that should only be spent _after_ the roll [#421](https://github.com/gmmatt/torgeternity/issues/421)
+- A new option has been added to determine whether the details of the chat cards should be automatically expanded or not. [#420](https://github.com/gmmatt/torgeternity/issues/420)
+- Bug squishing and style issues:
+  - In fatigue macro, there was some wierd thing going on with the Math.max method, so changed this. [#425](https://github.com/gmmatt/torgeternity/issues/425)
+  - For powers, the result of BDs were concated instead of added. Happend that test.damage was a string in this case. [#426](https://github.com/gmmatt/torgeternity/issues/426)
+
+## v. 12.1.1
+
+- Hotfix for custom skills. These should work again. In their own special treatment ;)
+
 ## v. 12.1.0
 
 - v12 compatibility is here! From now on, the system follows the foundry version in it's _major_ part of the version number.

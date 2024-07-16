@@ -794,13 +794,10 @@ export default class TorgeternityActorSheet extends ActorSheet {
     } else {
       dnDescriptor = 'standard';
     }
-    let skillValue = event.currentTarget.getAttribute('data-skill-value');
 
-    if (isNaN(skillValue)) {
-      skillValue = this.actor.system.attributes.dexterity.value;
-    } else {
-      skillValue = event.currentTarget.getAttribute('data-skill-value');
-    }
+    const skillValue = isNaN(event.currentTarget.getAttribute('data-skill-value'))
+      ? this.actor.system.attributes.dexterity.value
+      : event.currentTarget.getAttribute('data-skill-value');
 
     const test = {
       testType: 'attack',
@@ -815,7 +812,7 @@ export default class TorgeternityActorSheet extends ActorSheet {
       skillValue: skillValue,
       isFav: this.actor.system.skills.unarmedCombat.isFav,
       unskilledUse: true,
-      damage: event.currentTarget.getAttribute('data-damage'),
+      damage: parseInt(event.currentTarget.getAttribute('data-damage')),
       weaponAP: 0,
       applyArmor: true,
       darknessModifier: 0,
@@ -828,6 +825,7 @@ export default class TorgeternityActorSheet extends ActorSheet {
       chatNote: '',
       bdDamageLabelStyle: 'display:none',
       bdDamageSum: 0,
+      amountBD: 0,
     };
 
     new TestDialog(test);
@@ -1126,6 +1124,7 @@ export default class TorgeternityActorSheet extends ActorSheet {
       rollTotal: 0,
       movementModifier: 0,
       bdDamageLabelStyle: 'display:none',
+      amountBD: 0,
       bdDamageSum: 0,
     };
 
