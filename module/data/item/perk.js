@@ -104,6 +104,10 @@ export class PerkItemData extends foundry.abstract.TypeDataModel {
         limitationNumber: new fields.NumberField({ initial: 0, integer: true }),
       }),
       timestaken: new fields.StringField({ initial: '' }),
+      secondaryAxiom: new fields.SchemaField({
+        selected: new fields.StringField({ initial: 'none' }),
+        value: new fields.NumberField({ initial: null, integer: true }),
+      }),
     };
   }
 

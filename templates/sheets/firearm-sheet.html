@@ -74,9 +74,9 @@
             />
             <p class="item-data-label">{{localize "torgeternity.gear.ap"}}</p>
             <input name="system.ap" type="number" value="{{item.system.ap}}" class="input-box" />
-            <label class="item-data-label" style="grid-column: 1/3" for="system.secondaryAxiom">
+            <p class="item-data-label" style="grid-column: 1/3">
               {{localize "torgeternity.sheetLabels.secondaryAxiom"}}
-            </label>
+            </p>
   
             <select style="grid-column: 1/3" name="system.secondaryAxiom.selected" class="input-box selectSecondaryAxiom">
               <option value="none">{{localize "torgeternity.sheetLabels.none"}}</option>
@@ -84,7 +84,7 @@
             </select>
   
             {{#if displaySecondaryAxiomValue}}
-              <label for="system.secondaryAxiom.value" class="item-data-label" style="grid-column: 1/2">{{localize "torgeternity.gear.value"}}</label>
+              <p class="item-data-label" style="grid-column: 1/2">{{localize "torgeternity.gear.value"}}</p>
               <input
                 name="system.secondaryAxiom.value"
                 type="number"

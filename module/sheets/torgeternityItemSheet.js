@@ -104,7 +104,10 @@ export default class TorgeternityItemSheet extends ItemSheet {
     data.ammunition = this.document.actor?.itemTypes?.ammunition ?? [];
 
     data.displaySecondaryAxiomValue =
-      this.document.system.secondaryAxiom.selected === 'none' ? false : true;
+      !this.document.system?.secondaryAxiom ||
+      this.document.system?.secondaryAxiom.selected === 'none'
+        ? false
+        : true;
 
     return data;
   }
