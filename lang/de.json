@@ -403,6 +403,7 @@
       "dramaDeckEmpty": "Das Dramadeck ist aufgebraucht. Bitte das Dramadeck zurücksetzen.",
       "failureBDResolution": "Das System konnte die BW nicht berechnen.",
       "macroTypeWarning": "Du kannst nur Makro-Buttons für Items/Attribute/Fertigkeiten kreieren, die dir gehören.",
+      "migrationRunning": "Migriere Torg-Systemversion auf Version ",
       "moduleNotActive": "Activate the module to see desscription.",
       "noActiveEffectInOwnedItem": "Das Ändern von aktiven Effekten innerhalb eines Items mit Besitzrechten ist zur Zeit noch nicht implementiert.",
       "noAttrNamed": "Dein Kontrollierter Charakter hat kein Attribut, das heißt: ",
