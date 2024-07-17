@@ -8,17 +8,17 @@
   <div class="sksheet header CRSbox">
     <span>{{localize "torgeternity.gear.cosm"}}</span>
     <select style="width: 100%" name="system.other.cosm" class="input-box">
-      {{selectOptions config.cosmTypes selected=actor.system.other.cosm localize=true}}
+      {{selectOptions config.cosmTypes selected=actor.system.other.cosm localize=true sort=true}}
     </select>
 
     <span>{{localize "torgeternity.sheetLabels.race"}}</span>
     <select style="width: 100%" name="system.details.race" class="input-box">
-      {{selectOptions config.races selected=actor.system.details.race localize=true}}
+      {{selectOptions config.races selected=actor.system.details.race localize=true sort=true}}
     </select>
 
     <span>{{localize "torgeternity.sheetLabels.size"}}</span>
     <select style="width: 100%" name="system.details.sizeBonus" class="input-box">
-      {{selectOptions config.sizes selected=actor.system.details.sizeBonus localize=true}}
+      {{selectOptions config.sizes selected=actor.system.details.sizeBonus localize=true sort=true}}
     </select>
   </div>
 

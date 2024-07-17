@@ -13,7 +13,7 @@
           {{localize "torgeternity.powers.skill"}}/{{localize "torgeternity.powers.skilllevel"}}
         </p>
         <select name="system.skill" class="input-box">
-          {{selectOptions config.powerSkills selected=item.system.skill localize=true}}
+          {{selectOptions config.powerSkills selected=item.system.skill localize=true sort=true}}
         </select>
         <input
           name="system.skilllevel"
@@ -23,7 +23,7 @@
         />
         <p class="item-data-label">{{localize "torgeternity.powers.dn"}}</p>
         <select name="system.dn" class="input-box">
-          {{selectOptions config.dnTypes selected=item.system.dn localize=true}}
+          {{selectOptions config.dnTypes selected=item.system.dn localize=true sort=true}}
         </select>
         <p class="item-data-label">{{localize "torgeternity.powers.modifier"}}</p>
         <input
@@ -53,7 +53,7 @@
           {{localize "torgeternity.powers.ap"}}
         </p>
         <select name="system.isAttack" class="input-box-small" default="false">
-          {{selectOptions config.yesNo selected=item.system.isAttack localize=true}}
+          {{selectOptions config.yesNo selected=item.system.isAttack localize=true sort=true}}
         </select>
         <input
           name="system.damage"
@@ -67,10 +67,10 @@
           "torgeternity.powers.applyArmor"}}
         </p>
         <select name="system.applySize" class="input-box-small" default="false">
-          {{selectOptions config.yesNo selected=item.system.applySize localize=true}}
+          {{selectOptions config.yesNo selected=item.system.applySize localize=true sort=true}}
         </select>
         <select name="system.applyArmor" class="input-box-small" default="false">
-          {{selectOptions config.yesNo selected=item.system.applyArmor localize=true}}
+          {{selectOptions config.yesNo selected=item.system.applyArmor localize=true sort=true}}
         </select>
       </div>
       <div class="main-content">

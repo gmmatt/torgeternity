@@ -552,13 +552,13 @@
 
           {{localize 'torgeternity.skills.taunt'}}
           <select name="system.skills.taunt.defenseOnly" class="input-box">
-            {{selectOptions config.yesNo selected=actor.system.skills.taunt.defenseOnly
+            {{selectOptions config.yesNo selected=actor.system.skills.taunt.defenseOnly sort=true
             localize=true}}
           </select>
 
           {{localize 'torgeternity.skills.trick'}}
           <select name="system.skills.trick.defenseOnly" class="input-box">
-            {{selectOptions config.yesNo selected=actor.system.skills.trick.defenseOnly
+            {{selectOptions config.yesNo selected=actor.system.skills.trick.defenseOnly sort=true
             localize=true}}
           </select>
         </span>

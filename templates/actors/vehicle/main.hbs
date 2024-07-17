@@ -21,14 +21,14 @@
     <div>
       <p>{{localize "torgeternity.sheetLabels.type"}}:</p>
       <select name="system.type" class="input-box">
-        {{selectOptions config.vehicleTypes selected=actor.system.type localize=true}}
+        {{selectOptions config.vehicleTypes selected=actor.system.type localize=true sort=true}}
       </select>
     </div>
 
     <div>
       <p>{{localize "torgeternity.sheetLabels.size"}}:</p>
       <select name="system.details.sizeBonus" class="input-box">
-        {{selectOptions config.sizes selected=actor.system.details.sizeBonus localize=true}}
+        {{selectOptions config.sizes selected=actor.system.details.sizeBonus localize=true sort=true}}
       </select>
     </div>
 
@@ -147,7 +147,7 @@
                 data-dtype="Number"
               />
               <select name="system.price.magnitude" class="input-box">
-                {{selectOptions config.magnitudes selected=actor.system.price.magnitude
+                {{selectOptions config.magnitudes selected=actor.system.price.magnitude sort=true
                 localize=true}}
               </select>
               ( {{actor.system.price.value}} )
