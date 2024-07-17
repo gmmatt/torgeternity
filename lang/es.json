@@ -26,6 +26,12 @@
       "spirit": "Espíritu",
       "strength": "Fuerza"
     },
+    "axioms": {      
+      "magic": "Mágico",
+      "social": "Social",
+      "spirit": "Espiritual",
+      "tech": "Tecno."      
+    },
     "cardTypes": {
       "activeDrama": "Active Drama Card",
       "cosm": "Cosmos",
@@ -107,6 +113,11 @@
       "heroCard": "Carta Héroe",
       "hideDetails": "Hide Details",
       "modifiers": "Modificadores",
+      "noAmmo": "Failed to fire your weapon, no bullets left.",
+      "noAmmoPosessing": "You do not have any ammunitions in your inventory. Failed to proceed.",
+      "notSufficientAmmo": "You do not have a sufficent amount of bullets in your weapon to use this burst attack, this test cannot be performed.",
+      "reloaded": "You have reloaded your weapon {a}.",
+      "ammoLabel": "Bullets left",
       "notes": "Notas",
       "passesCard1": "Passes",
       "passesCard2": "to",
@@ -122,7 +133,8 @@
       "up": "AUMEN",
       "value": "Valor",
       "vehicleBase": "Vehicle Operation Test",
-      "mayCauseContradiction": "Perks with this symbol are dependent on their cosm’s World Laws and can cause Contradictions outside that cosm."
+      "mayCauseContradiction": "Perks with this symbol are dependent on their cosm’s World Laws and can cause Contradictions outside that cosm.",
+      "ammoFull": "The weapon \"{a}\" is already fully loaded."
     },
     "clearances": {
       "alpha": "Alfa",
@@ -231,6 +243,10 @@
       "buttons": {
         "execute": "Ejecute",
         "ok": "OK"
+      },
+      "chooseAmmo": {
+        "maintext": "Please choose the ammunition you want to use to reload your weapon.",
+        "windowTitle": "Choose ammo"
       }
     },
     "dnTypes": {
@@ -287,6 +303,7 @@
     },
     "gear": {
       "ammo": "Munición",
+      "ammunition": "Munición",
       "ap": "PA",
       "armor": "Armor",
       "attackWith": "Ataca con",
@@ -335,6 +352,7 @@
       "miracleRoll": "Tirar Milagro",
       "openParty": "Abrir hoja de grupo",
       "psionicRoll": "Tirar poder Psiónico",
+      "reload": "Reload weapon",
       "resetPossibilities": "Reiniciar posibilidad Caballeros",
       "GMPoss": "GM's possibility pool",
       "SKPoss": "character's possibilities",
@@ -380,6 +398,7 @@
       "play": "Jugar carta"
     },
     "notifications": {
+      "beginningMigration": "Migrating Torg system version to ",
       "defaultAction": "Default action, Gear for example",
       "dramaDeckEmpty": "The Drama Deck is empty. Reset the Drama Deck to continue.",
       "macroTypeWarning": "You can only create macro buttons for owned Items and Attributes/Skills",
@@ -396,7 +415,9 @@
       "openDiscord": "Your browser will open a new page to join us on our discord server ",
       "openIssue": "Your browser will open a new page to complete an issue",
       "openUlisses": "Your browser will open a new tab to join Ulisses website",
-      "failureBDResolution": "The system failed to resolute the BD"
+      "failureBDResolution": "The system failed to resolute the BD",
+      "ammoValueExceedsMax": "The actual ammo value of the weapon {a} exceeds it's max value. The value will be reduced to it's maximum.",
+      "noPossibility": "There is no possibility left"
     },
     "packs": {
       "basicRules": "torgeternity.basic-rules",
@@ -584,6 +605,8 @@
       "allOut": "Ataque Total",
       "allOutTooltip": "+4 Bonus/Very Vulnerable (Melee and unarmed attacks only)",
       "alterAttributes": "Ahora puede cambiar los atributos",
+      "ammunition": "Ammunition",
+      "APMod": "AP Modifier",
       "applyDamage": "Apply damages",
       "applyDamageTooltip": "Right-click to modify applied damages, Left-click to apply.",
       "applyStymied": "Apply Stymied",
@@ -602,6 +625,7 @@
       "backgroundDescription": "Trasfondo",
       "baseAttribute": "Atrib. Base",
       "baseRoll": "Roll",
+      "blastRadius": "Blast Radius",
       "blindFire": "Fuego a Ciegas",
       "blindFireTooltip": "Location of target only generally known",
       "burst": "Ráfaga",
@@ -619,6 +643,7 @@
       "customSkill": "Custom skills can be edited in the Perks tab",
       "customSkills": "Hab. Personalizada",
       "damageAP": "Dmg (AP)",
+      "damageMod": "Damagemodifier",
       "defense": "Defense",
       "defenses": "Defensa",
       "defensesTip": "Click to roll for/disable active defenses",
@@ -646,7 +671,9 @@
       "fatigueTooltip": "Click to apply fatigue",
       "favDis": "Favored & Disfavored cancel each other.",
       "favored": "Preferente",
+      "favoredTitle": "Check this if the skill is favored",
       "firearms": "Armas Fuego",
+      "firedamage": "Causes Firedamage",
       "freePoss": " GM grants a possibility!",
       "gear": "Equipo",
       "generalGear": "Equipo",
@@ -710,6 +737,7 @@
       "psionic": "Psiónica",
       "psionicPower": "Poder Psiónico",
       "psionicPowers": "Poderes Psiónicos",
+      "quantity": "Quantity",
       "race": "Raza",
       "range": "Range",
       "return": "Retornar",
@@ -794,6 +822,21 @@
       "tiny": "Diminuto",
       "veryLarge": "Muy Grande",
       "verySmall": "Muy Pequeño"
+    },
+    "blastRadi": {
+      "small": "Small",
+      "medium": "Medium",
+      "large": "Large",
+      "veryLarge": "Very Large",
+      "huge": "Huge"
+    },
+    "levelDifferences": {
+      "1+": "One level more",
+      "2+": "Two levels more",
+      "3+": "Three levels more",
+      "1-": "One level less",
+      "2-": "Two levels less",
+      "3-": "Three levels less"
     },
     "skillDialogs": {
       "disfavored": "Disfavored",
@@ -923,6 +966,11 @@
       "veryVulnerable": "Muy Vulnerable",
       "vulnerable": "Vulnerable",
       "waiting": "Espera"
+    },
+    "darknessModifiers": {
+      "dim": "Dim",
+      "dark": "Dark",
+      "pitchBlack": "Pitch Black"
     },
     "stymiedStates": {
       "none": "No Impedido",

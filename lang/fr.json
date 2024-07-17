@@ -26,6 +26,12 @@
       "spirit": "Esprit",
       "strength": "Force"
     },
+    "axioms": {      
+      "magic": "Magie",
+      "social": "Social",
+      "spirit": "Spirituel",
+      "tech": "Tech"      
+    },
     "cardTypes": {
       "activeDrama": "Carte Action active",
       "cosm": "Cosm",
@@ -107,6 +113,11 @@
       "heroCard": "Carte Héros",
       "hideDetails": "Cacher détails",
       "modifiers": "Modificateurs",
+      "noAmmo": "Le chargeur de votre arme est vide, vous ne pouvez pas faire feu.",
+      "noAmmoPosessing": "Pas de munitions dans votre inventaire. Rechargement impossible.",
+      "notSufficientAmmo": "Votre chargeur ne contient pas la quantité de munitions suffisantes pour effectuer ce tir 'en rafale', ce tir n'est pas possible.",
+      "reloaded": "Vous avez rechargé votre arme {a}.",
+      "ammoLabel": "Balles restantes",
       "notes": "Notes",
       "passesCard1": "Passe",
       "passesCard2": "à",
@@ -122,7 +133,8 @@
       "up": "Un de plus !",
       "value": "Valeur",
       "vehicleBase": "Test d'Opérateur",
-      "mayCauseContradiction": "Perks with this symbol are dependent on their cosm’s World Laws and can cause Contradictions outside that cosm."
+      "mayCauseContradiction": "Perks with this symbol are dependent on their cosm’s World Laws and can cause Contradictions outside that cosm.",
+      "ammoFull": "Le chargeur de votre \"{a}\" est plein."
     },
     "clearances": {
       "alpha": "Alpha",
@@ -231,6 +243,10 @@
       "buttons": {
         "execute": "Confirmer",
         "ok": "OK"
+      },
+      "chooseAmmo": {
+        "maintext": "Choisissez les munitions à utiliser pour recharger votre arme.",
+        "windowTitle": "Choix des munitions"
       }
     },
     "dnTypes": {
@@ -287,6 +303,7 @@
     },
     "gear": {
       "ammo": "Munitions",
+      "ammunition": "Munitions",
       "ap": "PA",
       "armor": "Armure",
       "attackWith": "Attaque avec",
@@ -335,6 +352,7 @@
       "miracleRoll": "Jet de miracle",
       "openParty": "Ouvrir la fiche du groupe",
       "psionicRoll": "Jet de pouvoir psionique",
+      "reload": "Rechargement de l'arme",
       "resetPossibilities": "Rétablir les possibilités des Chevaliers des Tempêtes",
       "GMPoss": "réserve de possibilités du GM",
       "SKPoss": "possibilités du personnage",
@@ -345,7 +363,7 @@
     },
     "itemSheetDescriptions": {
       "armor": "Armure",
-      "ammunition": "Ammunition",
+      "ammunition": "Munitions",
       "customAttack": "Attaque personnalisée",
       "customSkill": "Compétence personnalisée",
       "enhancement": "Amélioration",
@@ -380,6 +398,7 @@
       "play": "Jouer cette carte"
     },
     "notifications": {
+      "beginningMigration": "Migrating Torg system version to ",
       "defaultAction": "Action par défaut, équipement par exemple.",
       "dramaDeckEmpty": "Le paquet de cartes Action est vide. Réinitialisez-le.",
       "macroTypeWarning": "Vous ne pouvez créer des macros que pour vos objets, attributs ou compétences",
@@ -396,7 +415,9 @@
       "openDiscord": "Votre navigateur va ouvrir un onglet pour rejoindre Discord.",
       "openIssue": "Votre navigateur va ouvrir un onglet pour signaler un problème.",
       "openUlisses": "Votre navigateur va ouvrir le site d’Ulisses Spiele.",
-      "failureBDResolution": "Echec de résolution avec le BD"
+      "failureBDResolution": "Echec de résolution avec le BD",
+      "ammoValueExceedsMax": "La quantité de munitions dépasse la capacité du chargeur dans l'arme {a}. La valeur va être réduite à son maximum.",
+      "noPossibility": "Pas de possibilités disponibles"
     },
     "packs": {
       "basicRules": "torgeternity.basic-rules-fr",
@@ -584,6 +605,8 @@
       "allOut": "Attaque totale",
       "allOutTooltip": "+4 Bonus/Very Vulnerable (Melee and unarmed attacks only)",
       "alterAttributes": "Tu peux maintenant modifier les attributs",
+      "ammunition": "Ammunition",
+      "APMod": "AP Modifier",
       "applyDamage": "Appliquer dommages",
       "applyDamageTooltip": "ClickDroit pour ajuster les dommages, ClickGauche pour les appliquer.",
       "applyStymied": "Appliquer Déstabilisé",
@@ -602,6 +625,7 @@
       "backgroundDescription": "Description",
       "baseAttribute": "Attribut",
       "baseRoll": "Lancer",
+      "blastRadius": "Zone d'explosion",
       "blindFire": "Tir au jugé",
       "blindFireTooltip": "Position de la cible seulement approximative",
       "burst": "Rafale",
@@ -619,6 +643,7 @@
       "customSkill": "Les compétences personnalisées sont modifiables dans l'onglet Atouts",
       "customSkills": "Compétences personnalisées",
       "damageAP": "Dmg (AP)",
+      "damageMod": "Modificateur dommages",
       "defense": "Défense",
       "defenses": "Défenses",
       "defensesTip": "Cliquer pour faire un jet de défense active ou pour désactiver",
@@ -646,7 +671,9 @@
       "fatigueTooltip": "Cliquer pour appliquer la fatigue",
       "favDis": "Favorisé & Défavorisé s'annulent mutuellement.",
       "favored": "Favorisé",
+      "favoredTitle": "Check this if the skill is favored",
       "firearms": "Armes à feu",
+      "firedamage": "Applique des dommages de feu",
       "freePoss": " Le GM offre une possibilité!",
       "gear": "Équipement",
       "generalGear": "Équipement général",
@@ -710,6 +737,7 @@
       "psionic": "Psionique",
       "psionicPower": "Pouvoir psionique",
       "psionicPowers": "Pouvoirs psioniques",
+      "quantity": "Quantité",
       "race": "Race",
       "range": "Portée",
       "return": "Retour",
@@ -794,6 +822,21 @@
       "tiny": "minuscule",
       "veryLarge": "très grande",
       "verySmall": "très petite"
+    },
+    "blastRadi": {
+      "small": "Petit",
+      "medium": "Moyen",
+      "large": "Grand",
+      "veryLarge": "Très grand",
+      "huge": "Enorme"
+    },
+    "levelDifferences": {
+      "1+": "Un cran de plus",
+      "2+": "Deux cran de plus",
+      "3+": "Trois cran de plus",
+      "1-": "Un cran de moins",
+      "2-": "Deux cran de moins",
+      "3-": "Trois cran de moins"
     },
     "skillDialogs": {
       "disfavored": "Défavorisé",
@@ -923,6 +966,11 @@
       "veryVulnerable": "Très vulnérable",
       "vulnerable": "Vulnérable",
       "waiting": "Attendre"
+    },
+    "darknessModifiers": {
+      "dim": "Pénombre",
+      "dark": "Sombre",
+      "pitchBlack": "Noir complet"
     },
     "stymiedStates": {
       "none": "Non déstabilisé",
