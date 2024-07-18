@@ -55,6 +55,13 @@ torgeternity.zones = {
   mixed: 'torgeternity.cosms.mixed',
 };
 
+torgeternity.axioms = {
+  tech: 'torgeternity.axioms.tech',
+  social: 'torgeternity.axioms.social',
+  spirit: 'torgeternity.axioms.spirit',
+  magic: 'torgeternity.axioms.magic',
+};
+
 torgeternity.axiomByCosm = {
   coreEarth: {
     magic: 9,

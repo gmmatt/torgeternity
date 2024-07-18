@@ -406,6 +406,7 @@ form.actor-sheet header.sheet-header-vehicle {
   display: flex;
   grid-column: 2 / span 3;
   margin: auto;
+  justify-content: space-around;
 }
 
 .item .window-content form.item-sheet .heavy-weapon-footer p {
