@@ -27,11 +27,11 @@
   <div class="tab" data-tab="cosm">
     <div class="form-group cosm-primary">
       <select name="flags.torgeternity.cosm" class="cosm" data-dtype="String">
-        {{selectOptions (cosmList) selected=data.flags.torgeternity.cosm localize=true}}
+        {{selectOptions (cosmList) selected=data.flags.torgeternity.cosm localize=true sort=true}}
       </select>
 
       <select name="flags.torgeternity.zone" class="zone-type" data-dtype="String">
-        {{selectOptions zones selected=data.flags.torgeternity.zone localize=true}}
+        {{selectOptions zones selected=data.flags.torgeternity.zone localize=true sort=true}}
       </select>
     </div>
 
@@ -39,7 +39,7 @@
     <div class="form-group cosm-secondary">
       <label>{{localize "torgeternity.sheetLabels.secondaryCosm"}}</label>
       <select name="flags.torgeternity.cosm2" class="cosm-secondary" data-dtype="String">
-        {{selectOptions (cosmList) selected=data.flags.torgeternity.cosm2 localize=true}}
+        {{selectOptions (cosmList) selected=data.flags.torgeternity.cosm2 localize=true sort=true}}
       </select>
     </div>
     {{/if}}
@@ -61,7 +61,7 @@
           <input type="checkbox" name="navigation" {{checked data.navigation}} />
         </label>
         <select name="ownership.default" data-dtype="Number">
-          {{selectOptions ownerships selected=data.ownership.default localize=true}}
+          {{selectOptions ownerships selected=data.ownership.default localize=true sort=true}}
         </select>
       </div>
     </div>
@@ -151,7 +151,7 @@
           <i class="fas fa-ruler-combined"></i>
         </button>
         <select name="grid.type" data-dtype="Number">
-          {{ selectOptions gridTypes selected=data.grid.type localize=true }}
+          {{ selectOptions gridTypes selected=data.grid.type localize=true sort=true}}
         </select>
       </div>
     </div>
@@ -234,7 +234,7 @@
       <label>{{localize "SCENES.GridStyle"}}</label>
       <div class="form-fields">
         <select name="grid.style">
-          {{ selectOptions gridStyles selected=data.grid.style labelAttr="label" localize=true }}
+          {{ selectOptions gridStyles selected=data.grid.style labelAttr="label" localize=true sort=true}}
         </select>
       </div>
     </div>
