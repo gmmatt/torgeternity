@@ -8,6 +8,7 @@
 - Alphabetical sorting of <select> <option>s [#160](https://github.com/gmmatt/torgeternity/issues/160)
 - Bug quishing and style issues:
   - Fixed the archetypes' missile weapon category
+  - used async enrichment for description fields [#429](https://github.com/gmmatt/torgeternity/issues/429)
 
 ## v. 12.1.4
 
