@@ -211,9 +211,4 @@ export function registerHelpers() {
   Handlebars.registerHelper('getOptionBoolean', function (optionName) {
     return game.settings.get('torgeternity', optionName);
   });
-  // Enrich html content for having beautiful links instead of raw @UUID things
-  Handlebars.registerHelper('enrich', function (content) {
-    const enriched = TextEditor.enrichHTML(content, { async: false });
-    return new Handlebars.SafeString(enriched);
-  });
 }

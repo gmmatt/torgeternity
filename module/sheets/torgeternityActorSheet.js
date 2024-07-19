@@ -133,6 +133,38 @@ export default class TorgeternityActorSheet extends ActorSheet {
       return item.type == 'ammunition';
     });
 
+    for (const type of [
+      'meleeweapons',
+      'customAttack',
+      'customSkill',
+      'gear',
+      'eternityshard',
+      'armor',
+      'shield',
+      'missileweapon',
+      'firearm',
+      'implant',
+      'heavyweapon',
+      'vehicle',
+      'perk',
+      'spell',
+      'miracle',
+      'psionicpower',
+      'specialability',
+      'specialabilityRollable',
+      'enhancement',
+      'dramaCard',
+      'destinyCard',
+      'cosmCard',
+      'vehicleAddOn',
+    ]) {
+      for (const item of data[type]) {
+        item.description = await TextEditor.enrichHTML(item.system.description, {
+          async: true,
+        });
+      }
+    }
+
     // Enrich Text Editors
     switch (this.object.type) {
       case 'stormknight':
