@@ -146,14 +146,14 @@ export function registerHelpers() {
               ', ' +
               '<span class="pool-tooltip">' +
               hand.contents[i].name +
-              "<span><img src='" +
+              "<span class='pool-tooltip-spanimage'><img src='" +
               hand.contents[i].img +
               "'></span></span>";
           } else {
             poolList =
               "<span class='pool-tooltip'>" +
               hand.contents[i].name +
-              "<span><img src='" +
+              "<span class='pool-tooltip-image'><img src='" +
               hand.contents[i].img +
               "'></span></span>";
             // poolList = hand.document.availableCards[i].data.name;

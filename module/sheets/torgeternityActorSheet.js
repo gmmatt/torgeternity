@@ -157,7 +157,6 @@ export default class TorgeternityActorSheet extends ActorSheet {
       'destinyCard',
       'cosmCard',
       'vehicleAddOn',
-      'ammunition',
     ]) {
       for (const item of data[type]) {
         item.description = await TextEditor.enrichHTML(item.system.description, {
