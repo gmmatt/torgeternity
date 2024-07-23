@@ -19,7 +19,7 @@ export class MeleeWeaponItemData extends GeneralItemData {
       damageType: new fields.StringField({ initial: '' }),
       equipped: new fields.BooleanField({ initial: false }),
       notes: new fields.StringField({ initial: '' }),
-      minStr: new fields.NumberField({ initial: null, integer: true }),
+      minStrength: new fields.NumberField({ initial: null, integer: true }),
     };
   }
 
