@@ -5,7 +5,7 @@
 - Ammunition is now handled. The value of a weapon with ammo is now reduced according to the amount of bullets a shot takes (i.e. burst shots). A weapon can now be equipped with a general gear item like an _Ammo Belt_ that will be consumed if you click the reload button on the weapon. [#36](https://github.com/gmmatt/torgeternity/issues/36). Please be aware that the values in the ammunition item don't have any effects _yet_, as this is an [issue](https://github.com/gmmatt/torgeternity/issues/428) for later.
   - On this cause we've thrown the BD button on each item out. It was a relic from the old days that is no longer needed because of the handling by chat cards.
 - A secondary axiom is now selectable on most items [#46](https://github.com/gmmatt/torgeternity/issues/46)
-- Alphabetical sorting of <select> <option>s [#160](https://github.com/gmmatt/torgeternity/issues/160)
+- Alphabetical sorting of HTML select & options tag [#160](https://github.com/gmmatt/torgeternity/issues/160)
 - Bug quishing and style issues:
   - Fixed the archetypes' missile weapon category
   - used async enrichment for description fields [#429](https://github.com/gmmatt/torgeternity/issues/429)
