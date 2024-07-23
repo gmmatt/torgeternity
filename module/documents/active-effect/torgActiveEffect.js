@@ -37,8 +37,8 @@ export default class TorgActiveEffect extends ActiveEffect {
         'system.armor': 'defenses.armor',
         'system.toughness': 'defenses.toughness',
         // modify maxDex and minStr
-        'system.maxDex': 'system.attributes.maxDex',
-        'system.minStr': 'system.attributes.minStr',
+        'system.maxDex': 'system.other.maxDex',
+        'system.minStr': 'system.other.minStr',
       };
       for (const change of data.changes) {
         if (Object.hasOwn(migrationDictionary, change.key)) {

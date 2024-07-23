@@ -10,8 +10,8 @@ export default class TorgeternityActor extends Actor {
     if (['threat', 'stormknight'].includes(this.type)) {
       // initialize the worn armor bonus
       this.fatigue = 2 + (this.wornArmor?.system?.fatigue ?? 0);
-      this.system.attributes.maxDex = this.wornArmor?.system?.maxDex ?? 0;
-      this.system.attributes.minStr = this.wornArmor?.system?.minStrength ?? 0;
+      this.system.other.maxDex = this.wornArmor?.system?.maxDex ?? 0;
+      this.system.other.minStr = this.wornArmor?.system?.minStrength ?? 0;
       this.defenses = {
         dodge: { value: 0, mod: 0 },
         meleeWeapons: { value: 0, mod: 0 },
@@ -64,10 +64,13 @@ export default class TorgeternityActor extends Actor {
       // by RAW, FIRST you checkout for maxDex, THEN minStr. Doing this into DerivedData means, it takes place after AE's were applied, making sure, this cannot get higher than armor's limitations.
       // only apply if a maxDex value is set
       attributes.dexterity.value =
-        attributes.maxDex > 0
-          ? Math.min(attributes.dexterity.value, attributes.maxDex)
+        this.system.other.maxDex > 0
+          ? Math.min(attributes.dexterity.value, this.system.other.maxDex)
           : attributes.dexterity.value;
-      attributes.dexterity.value += Math.min(0, attributes.strength.value - attributes.minStr);
+      attributes.dexterity.value += Math.min(
+        0,
+        attributes.strength.value - this.system.other.minStr
+      );
 
       // Calculate Move and Run base values
       // Derive Skill values for Storm Knights and Threats
