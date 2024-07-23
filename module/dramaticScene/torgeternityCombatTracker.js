@@ -13,7 +13,7 @@ export default class torgeternityCombatTracker extends CombatTracker {
    *
    * @param html
    */
-  activateListeners(html) {
+  async activateListeners(html) {
     super.activateListeners(html);
     html.find('input.combatant-init').change(this._onUpdateInit.bind(this));
     html.find('a.init-up').click(this._onInitUp.bind(this));
@@ -25,6 +25,27 @@ export default class torgeternityCombatTracker extends CombatTracker {
     html.find('a.player-dsr-counter').click(this._playerDsrCounter.bind(this));
     html.find('a.combat-finish.center').click(this._hasFinished.bind(this));
     // html.find(".fa-check-circle").click(this._toggleCheck.bind(this));
+    for (const element of document.querySelectorAll('.pool-tooltip')) {
+      await element.addEventListener('mouseenter', this._notOutOfBounds);
+    }
+  }
+
+  /**
+   * Making sure, that mouseover card display isn't out of bounds
+   *
+   * @param {object} ev The event
+   */
+  async _notOutOfBounds(ev) {
+    const tooltipSpanImage = ev.target.children[0];
+    const rect = tooltipSpanImage.getBoundingClientRect();
+
+    if (rect.left < 246) {
+      tooltipSpanImage.style.left = 'auto';
+      tooltipSpanImage.style.right = '-250px';
+    } else {
+      tooltipSpanImage.style.left = '-250px';
+      tooltipSpanImage.style.right = '30px';
+    }
   }
 
   /**
