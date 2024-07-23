@@ -2000,6 +2000,14 @@ p.skill-chat-title.skilled {
   text-shadow: 0px 0px 2px grey;
 }
 
+.dice-roll-torg {
+  display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    justify-content: space-around;
+}
+
 .chat-message .skill-roll-damage-label {
   font-family: "Palatino Linotype";
   font-size: 18px;
@@ -3850,8 +3858,7 @@ form.actor-sheet.threat .tab[data-tab].active .editor {
 }
 
 .pool-tooltip span img {
-  float: left;
-  margin: 0px 8px 8px 0;
+  float: left;  
 }
 
 .pool-tooltip:hover span {
@@ -3859,14 +3866,15 @@ form.actor-sheet.threat .tab[data-tab].active .editor {
   position: absolute;
   top: 30px;
   right: 30px;
+  left: -250px;
   z-index: 0;
   max-width: 246px;
   min-height: 99px;
-  border: 1px solid black;
+  /*border: 1px solid black;
   margin-top: 2px;
   margin-left: 2px;
   overflow: hidden;
-  padding: 8px;
+  padding: 8px;*/
 }
 
 .card-chat-tooltip {
