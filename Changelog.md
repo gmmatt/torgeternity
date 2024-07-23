@@ -6,6 +6,7 @@
   - On this cause we've thrown the BD button on each item out. It was a relic from the old days that is no longer needed because of the handling by chat cards.
 - A secondary axiom is now selectable on most items [#46](https://github.com/gmmatt/torgeternity/issues/46)
 - Alphabetical sorting of <select> <option>s [#160](https://github.com/gmmatt/torgeternity/issues/160)
+- Weapons do now have a minimum strength value, that is computed alongside minStr of armor items. [#116](https://github.com/gmmatt/torgeternity/issues/116)
 - Bug quishing and style issues:
   - Fixed the archetypes' missile weapon category
   - used async enrichment for description fields [#429](https://github.com/gmmatt/torgeternity/issues/429)
