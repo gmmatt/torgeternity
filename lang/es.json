@@ -247,6 +247,10 @@
       "chooseAmmo": {
         "maintext": "Please choose the ammunition you want to use to reload your weapon.",
         "windowTitle": "Choose ammo"
+      },
+      "dragDropDriver": {
+        "maintext": "Does this character want to drive this vehicle?",
+        "windowTitle": "Set a driver"
       }
     },
     "dnTypes": {
@@ -417,7 +421,8 @@
       "openUlisses": "Your browser will open a new tab to join Ulisses website",
       "failureBDResolution": "The system failed to resolute the BD",
       "ammoValueExceedsMax": "The actual ammo value of the weapon {a} exceeds it's max value. The value will be reduced to it's maximum.",
-      "noPossibility": "There is no possibility left"
+      "noPossibility": "There is no possibility left",
+      "noCapacity": "{a} can't pilote this kind of vehicle!"
     },
     "packs": {
       "basicRules": "torgeternity.basic-rules",
@@ -1043,6 +1048,34 @@
       "reconnectMacroZoneModifierNotDetectedTitle": "Sin modificador de zona",
       "reconnectMacroZoneModifierNotDetected": "No se ha podido detectar un modificador de zona porque la escena activa no tiene zonas configuradas. Cambie el modificador en el resultado.",
       "reconnectMacroStatusLiftet": "Estado desacoplado cancelado tras una comprobación de la realidad satisfactoria."
-    }
+    },
+    "EffectMacroTorg": {
+      "AD": "Active Defense Bonus",
+      "charisma": "Carisma",
+      "dexterity": "Destreza",
+      "mind": "Mente",
+      "spirit": "Espíritu",
+      "strength": "Fuerza",
+      "defense": "Defenses",
+      "physicalDefense" : "Physical defenses",
+      "apply": "Aplicar",
+      "nbCards": "Quantity of cards",
+      "nbCardsValue": "Number of cards to show to player",
+      "choice": "Your choice",
+      "choose": "Which attribute do you want to modify ?",
+      "bonusTitle" : "Input the bonus/malus's value",
+      "value": "Choose the value for the bonus",
+      "time": "Choose the duration in round(s)",
+      "timeLabel": "Duration choice",
+      "mod": "Bonus modification according to a max or min effect",
+      "recipient": "Choice of whisper's recipient",
+      "whisper": "Whisper to checked active player",
+      "noFight": "No activefight, or not started",
+      "show": "Next card(s)",
+      "curse": "Every attributes",
+      "cardBack" : "Card goes back after missplay",
+      "cardOwner" : "Who will get the card back ?",
+      "cancel" : "Cancel effects"
+  }
   }
 }

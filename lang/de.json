@@ -247,6 +247,10 @@
       "chooseAmmo": {
         "maintext": "Bitte wähle die Munition aus, die du zum Nachladen deiner Waffe verwenden möchtest.",
         "windowTitle": "Munition wählen"
+      },
+      "dragDropDriver": {
+        "maintext": "Möchte dieser Charakter dieses Fahrzeug fahren?",
+        "windowTitle": "Bestimme einen Fahrer"
       }
     },
     "dnTypes": {
@@ -417,7 +421,8 @@
       "openIssue": "Dein Browser wird einen neuen Tab öffnen, um diese Aufgabe durchzuführen.",
       "openUlisses": "Dein Browser wird einen neuen Tab öffnen und dich auf die Ulisses-Webseite weiterleiten.",
       "ammoValueExceedsMax": "Der aktuelle Munitionswert der Waffe {a} übersteigt seinen Maximalwert. Der Wert wird auf sein Maximum reduziert.",
-      "noPossibility": "Es sind keine Möglichkeiten mehr übrig."
+      "noPossibility": "Es sind keine Möglichkeiten mehr übrig.",
+      "noCapacity": "{a} kann diese Art von Fahrzeug nicht steuern!"
     },
     "packs": {
       "basicRules": "torgeternity.system-de-basisregeln",
@@ -1043,6 +1048,35 @@
       "reconnectMacroZoneModifierNotDetectedTitle": "Kein Zonenmodifikator",
       "reconnectMacroZoneModifierNotDetected": "Ein Zonenmodifikator konnte nicht festgestellt werden, da die aktive Szene keine Zonen konfiguriert hat. Ändere den Modifikator im Ergebnis.",
       "reconnectMacroStatusLiftet": "Entkoppelt-Status nach einer erfolgreichen Realitätsprobe aufgehoben."
-    }
+    },
+    "EffectMacroTorg": {
+      "AD": "Bonus der aktiven Verteidigung",
+      "charisma": "Charisma",
+      "dexterity": "Geschicklichkeit",
+      "mind": "Verstand",
+      "spirit": "Geist",
+      "strength": "Stärke",
+      "defense": "Verteidigungen",
+      "physicalDefense" : "Physische Verteidigung",
+      "apply": "Anwenden",
+      "nbCards": "Kartenmenge",
+      "nbCardsValue": "Menge der Karten, die Spieler gezeigt werden sollen",
+      "choice": "Deine Wahl",
+      "choose": "Welches Attribut soll modifiziert werden?",
+      "bonusTitle" : "Eingabe Bonus/Malus",
+      "value": "Wähle die Höhe des Bonus",
+      "time": "Wähle die Dauer in Runden",
+      "timeLabel": "Wahl der Dauer",
+      "mod": "Bonus-Modifikation der maximalen/minimalen Höhe des Effektes",
+      "recipient": "Zielperson zum flüstern",
+      "whisper": "An markierte Spieler flüstern",
+      "noFight": "Kein aktiver Kampf, oder noch nicht gestartet",
+      "show": "Nächste Karte(n)",
+      "curse": "Alle Attribute",
+      "cardBack" : "Die Karte wandert nach einem Irrtum zurück",
+      "cardOwner" : "Wer bekommt diese Karte zurück?",
+      "newDriver" : "Bestimme einen Fahrer",
+      "cancel" : "Effekte beenden"
+  }
   }
 }

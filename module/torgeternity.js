@@ -1017,3 +1017,42 @@ Hooks.on('renderChatLog', (app, html, data) => {
   // ----chat messages listeners
   Chat.addChatListeners(html);
 });
+
+// When a "non-vehicle actor" is drop on a "vehicle actor", proposes to replace the driver and his skill value
+Hooks.on('dropActorSheetData', async (myVehicle, mySheet, myPassenger) => {
+  if (myVehicle.type !== 'vehicle' || fromUuidSync(myPassenger.uuid).type === 'vehicle') return;
+  const driver = fromUuidSync(myPassenger.uuid);
+  const skill = myVehicle.system.type.toLowerCase();
+  const skillValue = driver.system.skills[skill + 'Vehicles'].value;
+  if (skillValue > 0) {
+    myVehicle.update({
+      'system.operator.name': driver.name,
+      'system.operator.skillValue': skillValue,
+    });
+  } else {
+    ui.notifications.warn(
+      await game.i18n.format('torgeternity.notifications.noCapacity', { a: driver.name })
+    );
+  }
+  /* await Dialog.confirm({
+    title: game.i18n.localize('torgeternity.dialogWindow.dragDropDriver.windowTitle'),
+    content: game.i18n.localize('torgeternity.dialogWindow.dragDropDriver.maintext'),
+    yes: async () => {
+      if (skillValue > 0) {
+        myVehicle.update({
+          'system.operator.name': driver.name,
+          'system.operator.skillValue': skillValue,
+        });
+      } else {
+        ui.notifications.warn(
+          await game.i18n.format('torgeternity.notifications.noCapacity', { a: driver.name })
+        );
+        return;
+      }
+    },
+    no: () => {},
+    render: () => {},
+    defaultYes: true,
+    rejectClose: false,
+  });*/
+});
