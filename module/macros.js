@@ -412,12 +412,11 @@ export class TorgeternityMacros {
     const dramaActive = game.cards.get(
       game.settings.get('torgeternity', 'deckSetting').dramaActive
     );
-    let restoreOldActive = Array.from(dramaDiscard.cards).pop();
-    let removeActiveCard = Array.from(dramaActive.cards).pop();
+    const restoreOldActive = Array.from(dramaDiscard.cards).pop();
+    const removeActiveCard = Array.from(dramaActive.cards).pop();
     removeActiveCard.pass(dramaDeck);
     restoreOldActive.pass(dramaActive);
-    let activeCard = dramaActive.cards.contents[0];
-    let activeImage = restoreOldActive.faces[0].img;
+    const activeImage = restoreOldActive.faces[0].img;
     game.combats.active.setFlag('torgeternity', 'activeCard', activeImage);
   }
   // #endregion
@@ -546,22 +545,23 @@ export class TorgeternityMacros {
     }
   }
 
-  //If you need to cancel a card a player just played
-  //works if the card to get back is the last message in ChatLog, and if player owns only one hand
+  // If you need to cancel a card a player just played
+  // works if the card to get back is the last message in ChatLog, and if player owns only one hand
   async playerPlayback() {
     if (!game.user.isGM) {
       return;
     }
     let applyChanges = false;
-    let users = game.users.filter((user) => user.active && !user.isGM);
+    const users = game.users.filter((user) => user.active && !user.isGM);
     let checkOptions = '';
-    let playerTokenIds = users.map((u) => u.character?.id).filter((id) => id !== undefined);
-    let selectedPlayerIds = canvas.tokens.controlled.map((token) => {
+    const playerTokenIds = users.map((u) => u.character?.id).filter((id) => id !== undefined);
+    const selectedPlayerIds = canvas.tokens.controlled.map((token) => {
       if (playerTokenIds.includes(token.actor.id)) return token.actor.id;
     });
     // Build checkbox list for all active players
     users.forEach((user) => {
-      let checked = !!user.character && selectedPlayerIds.includes(user.character.id) && 'checked';
+      const checked =
+        !!user.character && selectedPlayerIds.includes(user.character.id) && 'checked';
       checkOptions += `
             <br>
             <input type="checkbox" name="${user.id}" id="${user.id}" value="${user.name}" ${checked}>\n
@@ -584,7 +584,7 @@ export class TorgeternityMacros {
     function createMessage(html) {
       let target;
       // build list of selected players ids for whispers target
-      for (let user of users) {
+      for (const user of users) {
         if (html.find('[name="' + user.id + '"]')[0].checked) {
           applyChanges = true;
           target = user;
@@ -599,8 +599,8 @@ export class TorgeternityMacros {
         const lastCard = destinyDiscard.cards.contents.pop();
         const parentHand = target.character.getDefaultHand();
         const listMessage = game.messages.contents;
-        let filtre = listMessage.filter((m) => m._source.user === target.id);
-        let lastMessage = filtre.pop();
+        const filtre = listMessage.filter((m) => m._source.user === target.id);
+        const lastMessage = filtre.pop();
         lastCard.pass(parentHand);
         if (lastCard) {
           ChatMessage.deleteDocuments([lastMessage.id]);
@@ -609,13 +609,11 @@ export class TorgeternityMacros {
     }
   }
 
-  //create effects related with your choice, Defense/specific Attribute/All attributes
-  //if any value change (attribute or add or limitation) erase the effects and redo it
+  // create effects related with your choice, Defense/specific Attribute/All attributes
+  // if any value change (attribute or add or limitation) erase the effects and redo it
   async torgBuff() {
-    //target is the selected token, mandatory for the GM, or the player's character if no selection
-    let actorID = _token?.actor ?? game.user.character;
-
-    let attr, bonu, dur; //the attribute key, the bonus expected, the duration expected
+    // target is the selected token, mandatory for the GM, or the player's character if no selection
+    const actorID = _token?.actor ?? game.user.character;
 
     // Choose the attribute you want to modify
     const mychoice = new Promise((resolve, reject) => {
@@ -680,20 +678,20 @@ export class TorgeternityMacros {
         },
       }).render(true);
     });
-    attr = await mychoice.then((attr) => {
+    const attr = await mychoice.then((attr) => {
       return attr;
     });
 
     if (attr === 'cancel') {
       ui.notifications.warn('MacroEffects removed');
-      let delEffects = actorID.effects
+      const delEffects = actorID.effects
         .filter((e) => e.name.includes('rd(s)'))
         .filter((e) => e.name.includes(' / '));
       delEffects.forEach((e) => e.delete());
       return;
     }
 
-    //choose the bonus you expect
+    // choose the bonus you expect
     const mybonus = new Promise((resolve, reject) => {
       new Dialog({
         title: game.i18n.localize('torgeternity.dialogWindow.buffMacro.bonusTitle'),
@@ -704,18 +702,18 @@ export class TorgeternityMacros {
           1: {
             label: game.i18n.localize('torgeternity.dialogWindow.showingDramaCards.apply'),
             callback: (html) => {
-              let bonu = parseInt(html.find('[name=bonu]')[0].value);
+              const bonu = parseInt(html.find('[name=bonu]')[0].value);
               resolve(bonu);
             },
           },
         },
       }).render(true);
     });
-    bonu = await mybonus.then((bonu) => {
+    const bonu = await mybonus.then((bonu) => {
       return bonu;
     });
 
-    //choose the duration of the effect
+    // choose the duration of the effect
     const mytime = new Promise((resolve, reject) => {
       new Dialog({
         title: game.i18n.localize('torgeternity.dialogWindow.buffMacro.timeLabel'),
@@ -726,20 +724,20 @@ export class TorgeternityMacros {
           1: {
             label: game.i18n.localize('torgeternity.dialogWindow.showingDramaCards.apply'),
             callback: (html) => {
-              let dur = parseInt(html.find('[name=dur]')[0].value);
+              const dur = parseInt(html.find('[name=dur]')[0].value);
               resolve(dur);
             },
           },
         },
       }).render(true);
     });
-    dur = await mytime.then((dur) => {
+    const dur = await mytime.then((dur) => {
       return dur;
     });
 
     if (attr === 'defense') {
-      //only Defenses, but ALL defenses
-      let newEffect = {
+      // only Defenses, but ALL defenses
+      const newEffect = {
         name:
           game.i18n.localize('torgeternity.dialogWindow.buffMacro.defense') +
           ' / ' +
@@ -798,10 +796,10 @@ export class TorgeternityMacros {
           newEffect.icon = 'icons/svg/upgrade.svg';
       }
       await actorID.createEmbeddedDocuments('ActiveEffect', [newEffect]);
-    } /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    } // ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     else if (attr === 'physicalDefense') {
-      //only physical Defenses
-      let newEffect = {
+      // only physical Defenses
+      const newEffect = {
         name:
           game.i18n.localize('torgeternity.dialogWindow.buffMacro.defense') +
           ' / ' +
@@ -840,10 +838,10 @@ export class TorgeternityMacros {
           newEffect.icon = 'icons/svg/upgrade.svg';
       }
       await actorID.createEmbeddedDocuments('ActiveEffect', [newEffect]);
-    } /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    } // ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     else if (attr === 'all') {
-      //preparation of attribute effect
-      let newEffect = {
+      // preparation of attribute effect
+      const newEffect = {
         name:
           game.i18n.localize('torgeternity.dialogWindow.buffMacro.allAtrubtes') +
           ' / ' +
@@ -892,12 +890,12 @@ export class TorgeternityMacros {
           newEffect.icon = 'icons/svg/upgrade.svg';
       }
 
-      //at last, create the effect
+      // at last, create the effect
       await actorID.createEmbeddedDocuments('ActiveEffect', [newEffect]);
     } else {
-      //One attribute
-      //preparation of attribute effect
-      let newEffect = {
+      // One attribute
+      // preparation of attribute effect
+      const newEffect = {
         name:
           game.i18n.localize('torgeternity.attributes.' + attr) +
           ' / ' +
@@ -927,7 +925,7 @@ export class TorgeternityMacros {
           newEffect.icon = 'icons/svg/upgrade.svg';
       }
 
-      //at least, create the effect
+      // at least, create the effect
       await actorID.createEmbeddedDocuments('ActiveEffect', [newEffect]);
     }
   }
