@@ -10,6 +10,7 @@
 - It is now possible to drag & drop "non-vehicle-actors" on vehicles to set the actor as the driver of the vehicle (with all values).
 - By clicking on the "Done" button as a player during a combat in the combat tracker, active effects are now handled and taken off automaticaly. Threats can be treated in the same way if you're ticking the checkmark in the combat tracker as the gm! [#351](https://github.com/gmmatt/torgeternity/issues/351)
 - New macro for showing the next 1-3 cards per chat whisper to player(s) [#351](https://github.com/gmmatt/torgeternity/issues/351)
+- New macro for getting back the previous drama card (in case if the player plays a "Seize initiative" card when you've picked already a new drama card) [#351](https://github.com/gmmatt/torgeternity/issues/351)
 - Bug quishing and style issues:
   - Fixed the archetypes' missile weapon category
   - used async enrichment for description fields [#429](https://github.com/gmmatt/torgeternity/issues/429)

@@ -400,6 +400,26 @@ export class TorgeternityMacros {
       }
     }
   }
+
+  async dramaFlashback() {
+    if (!game.user.isGM) {
+      return;
+    }
+    const dramaDeck = game.cards.get(game.settings.get('torgeternity', 'deckSetting').dramaDeck);
+    const dramaDiscard = game.cards.get(
+      game.settings.get('torgeternity', 'deckSetting').dramaDiscard
+    );
+    const dramaActive = game.cards.get(
+      game.settings.get('torgeternity', 'deckSetting').dramaActive
+    );
+    let restoreOldActive = Array.from(dramaDiscard.cards).pop();
+    let removeActiveCard = Array.from(dramaActive.cards).pop();
+    removeActiveCard.pass(dramaDeck);
+    restoreOldActive.pass(dramaActive);
+    let activeCard = dramaActive.cards.contents[0];
+    let activeImage = restoreOldActive.faces[0].img;
+    game.combats.active.setFlag('torgeternity', 'activeCard', activeImage);
+  }
   // #endregion
   /**
    *
