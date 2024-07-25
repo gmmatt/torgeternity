@@ -608,4 +608,327 @@ export class TorgeternityMacros {
       }
     }
   }
+
+  //create effects related with your choice, Defense/specific Attribute/All attributes
+  //if any value change (attribute or add or limitation) erase the effects and redo it
+  async torgBuff() {
+    //target is the selected token, mandatory for the GM, or the player's character if no selection
+    let actorID = _token?.actor ?? game.user.character;
+
+    let attr, bonu, dur; //the attribute key, the bonus expected, the duration expected
+
+    // Choose the attribute you want to modify
+    const mychoice = new Promise((resolve, reject) => {
+      new Dialog({
+        title: game.i18n.localize('torgeternity.dialogWindow.buffMacro.choice'),
+        content: game.i18n.localize('torgeternity.dialogWindow.buffMacro.choose'),
+        buttons: {
+          mind: {
+            label: game.i18n.localize('torgeternity.attributes.mind'),
+            callback: async (html) => {
+              resolve('mind');
+            },
+          },
+          strength: {
+            label: game.i18n.localize('torgeternity.attributes.strength'),
+            callback: async (html) => {
+              resolve('strength');
+            },
+          },
+          charisma: {
+            label: game.i18n.localize('torgeternity.attributes.charisma'),
+            callback: async (html) => {
+              resolve('charisma');
+            },
+          },
+          spirit: {
+            label: game.i18n.localize('torgeternity.attributes.spirit'),
+            callback: async (html) => {
+              resolve('spirit');
+            },
+          },
+          dexterity: {
+            label: game.i18n.localize('torgeternity.attributes.dexterity'),
+            callback: async (html) => {
+              resolve('dexterity');
+            },
+          },
+          curse: {
+            label: game.i18n.localize('torgeternity.dialogWindow.buffMacro.allAttributes'),
+            callback: async (html) => {
+              resolve('all');
+            },
+          },
+          physicalDefense: {
+            label: game.i18n.localize('torgeternity.dialogWindow.buffMacro.physicalDefenses'),
+            callback: async (html) => {
+              resolve('physicalDefense');
+            },
+          },
+          defense: {
+            label: game.i18n.localize('torgeternity.sheetLabels.defenses'),
+            callback: async (html) => {
+              resolve('defense');
+            },
+          },
+          cancel: {
+            label: game.i18n.localize('torgeternity.dialogWindow.buffMacro.cancelEffects'),
+            callback: async (html) => {
+              resolve('cancel');
+            },
+          },
+        },
+      }).render(true);
+    });
+    attr = await mychoice.then((attr) => {
+      return attr;
+    });
+
+    if (attr === 'cancel') {
+      ui.notifications.warn('MacroEffects removed');
+      let delEffects = actorID.effects
+        .filter((e) => e.name.includes('rd(s)'))
+        .filter((e) => e.name.includes(' / '));
+      delEffects.forEach((e) => e.delete());
+      return;
+    }
+
+    //choose the bonus you expect
+    const mybonus = new Promise((resolve, reject) => {
+      new Dialog({
+        title: game.i18n.localize('torgeternity.dialogWindow.buffMacro.bonusTitle'),
+        content: `<div>${game.i18n.localize(
+          'torgeternity.dialogWindow.buffMacro.value'
+        )} <input name="bonu" value=1 style="width:50px"/></div>`,
+        buttons: {
+          1: {
+            label: game.i18n.localize('torgeternity.dialogWindow.showingDramaCards.apply'),
+            callback: (html) => {
+              let bonu = parseInt(html.find('[name=bonu]')[0].value);
+              resolve(bonu);
+            },
+          },
+        },
+      }).render(true);
+    });
+    bonu = await mybonus.then((bonu) => {
+      return bonu;
+    });
+
+    //choose the duration of the effect
+    const mytime = new Promise((resolve, reject) => {
+      new Dialog({
+        title: game.i18n.localize('torgeternity.dialogWindow.buffMacro.timeLabel'),
+        content: `<div>${game.i18n.localize(
+          'torgeternity.dialogWindow.buffMacro.time'
+        )} <input name="dur" value=1 style="width:50px"/></div>`,
+        buttons: {
+          1: {
+            label: game.i18n.localize('torgeternity.dialogWindow.showingDramaCards.apply'),
+            callback: (html) => {
+              let dur = parseInt(html.find('[name=dur]')[0].value);
+              resolve(dur);
+            },
+          },
+        },
+      }).render(true);
+    });
+    dur = await mytime.then((dur) => {
+      return dur;
+    });
+
+    if (attr === 'defense') {
+      //only Defenses, but ALL defenses
+      let newEffect = {
+        name:
+          game.i18n.localize('torgeternity.dialogWindow.buffMacro.defense') +
+          ' / ' +
+          bonu +
+          ' / ' +
+          dur +
+          'rd(s)',
+        duration: { rounds: dur, turns: dur },
+        changes: [
+          {
+            key: 'system.dodgeDefenseMod',
+            value: bonu,
+            mode: 2,
+          },
+          {
+            key: 'system.meleeWeaponsDefenseMod',
+            value: bonu,
+            mode: 2,
+          },
+          {
+            key: 'system.unarmedCombatDefenseMod',
+            value: bonu,
+            mode: 2,
+          },
+          {
+            key: 'system.intimidationDefenseMod',
+            value: bonu,
+            mode: 2,
+          },
+          {
+            key: 'system.maneuverDefenseMod',
+            value: bonu,
+            mode: 2,
+          },
+          {
+            key: 'system.tauntDefenseMod',
+            value: bonu,
+            mode: 2,
+          },
+          {
+            key: 'system.trickDefenseMod',
+            value: bonu,
+            mode: 2,
+          },
+        ],
+        disabled: false,
+      };
+      // Aspect modifications related to bonus/malus
+      switch (bonu < 0) {
+        case true:
+          newEffect.tint = '#ff0000';
+          newEffect.icon = 'icons/svg/downgrade.svg';
+          break;
+        default:
+          newEffect.tint = '#00ff00';
+          newEffect.icon = 'icons/svg/upgrade.svg';
+      }
+      await actorID.createEmbeddedDocuments('ActiveEffect', [newEffect]);
+    } /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    else if (attr === 'physicalDefense') {
+      //only physical Defenses
+      let newEffect = {
+        name:
+          game.i18n.localize('torgeternity.dialogWindow.buffMacro.defense') +
+          ' / ' +
+          bonu +
+          ' / ' +
+          dur +
+          'rd(s)',
+        duration: { rounds: dur, turns: dur },
+        changes: [
+          {
+            key: 'system.dodgeDefenseMod',
+            value: bonu,
+            mode: 2,
+          },
+          {
+            key: 'system.meleeWeaponsDefenseMod',
+            value: bonu,
+            mode: 2,
+          },
+          {
+            key: 'system.unarmedCombatDefenseMod',
+            value: bonu,
+            mode: 2,
+          },
+        ],
+        disabled: false,
+      };
+      // Aspect modifications related to bonus/malus
+      switch (bonu < 0) {
+        case true:
+          newEffect.tint = '#ff0000';
+          newEffect.icon = 'icons/svg/downgrade.svg';
+          break;
+        default:
+          newEffect.tint = '#00ff00';
+          newEffect.icon = 'icons/svg/upgrade.svg';
+      }
+      await actorID.createEmbeddedDocuments('ActiveEffect', [newEffect]);
+    } /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    else if (attr === 'all') {
+      //preparation of attribute effect
+      let newEffect = {
+        name:
+          game.i18n.localize('torgeternity.dialogWindow.buffMacro.allAtrubtes') +
+          ' / ' +
+          bonu +
+          ' / ' +
+          dur +
+          'rd(s)',
+        duration: { rounds: dur, turns: dur },
+        changes: [
+          {
+            key: 'system.attributes.mind.value',
+            value: bonu,
+            mode: 2,
+          },
+          {
+            key: 'system.attributes.spirit.value',
+            value: bonu,
+            mode: 2,
+          },
+          {
+            key: 'system.attributes.strength.value',
+            value: bonu,
+            mode: 2,
+          },
+          {
+            key: 'system.attributes.dexterity.value',
+            value: bonu,
+            mode: 2,
+          },
+          {
+            key: 'system.attributes.charisma.value',
+            value: bonu,
+            mode: 2,
+          },
+        ],
+        disabled: false,
+      };
+      // Aspect modifications related to bonus/malus
+      switch (bonu < 0) {
+        case true:
+          newEffect.tint = '#ff0000';
+          newEffect.icon = 'icons/svg/downgrade.svg';
+          break;
+        default:
+          newEffect.tint = '#00ff00';
+          newEffect.icon = 'icons/svg/upgrade.svg';
+      }
+
+      //at last, create the effect
+      await actorID.createEmbeddedDocuments('ActiveEffect', [newEffect]);
+    } else {
+      //One attribute
+      //preparation of attribute effect
+      let newEffect = {
+        name:
+          game.i18n.localize('torgeternity.attributes.' + attr) +
+          ' / ' +
+          bonu +
+          ' / ' +
+          dur +
+          'rd(s)',
+        duration: { rounds: dur, turns: dur },
+        changes: [
+          {
+            key: 'system.attributes.' + attr + '.value',
+            value: bonu,
+            mode: 2,
+          },
+        ],
+        disabled: false,
+      };
+
+      // Aspect modifications related to bonus/malus
+      switch (bonu < 0) {
+        case true:
+          newEffect.tint = '#ff0000';
+          newEffect.icon = 'icons/svg/downgrade.svg';
+          break;
+        default:
+          newEffect.tint = '#00ff00';
+          newEffect.icon = 'icons/svg/upgrade.svg';
+      }
+
+      //at least, create the effect
+      await actorID.createEmbeddedDocuments('ActiveEffect', [newEffect]);
+    }
+  }
 }

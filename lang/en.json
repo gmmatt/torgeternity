@@ -263,6 +263,17 @@
       "cardRetour": {
         "cardBack":"Card goes back after missplay",
         "cardOwner":"Who will get the the last played card back ?"        
+      },
+      "buffMacro": {
+        "choice":"Your choice",
+        "choose":"Which attribute do you want to modify ?",
+        "allAttributes":"All attributes",
+        "physicalDefenses" : "Physical defenses",
+        "cancelEffects": "Cancel effects",
+        "bonusTitle":"Input the bonus/malus's value",
+        "value":"Choose the value for the bonus",
+        "timeLabel":"Duration choice",
+        "time":"Choose the duration in round(s)"
       }
     },
     "dnTypes": {
@@ -1061,34 +1072,6 @@
       "reconnectMacroZoneModifierNotDetectedTitle": "No zone modifier",
       "reconnectMacroZoneModifierNotDetected": "Couldn't resolve a zone modifier, because the active scene has no cosm configured. Change the result's modifier by hand.",
       "reconnectMacroStatusLiftet": "Disconnection-Status liftet after a successful Reconnect-Roll."
-    },
-    "EffectMacroTorg": {
-      "AD": "Active Defense Bonus",
-      "charisma": "Charisma",
-      "dexterity": "Dexterity",
-      "mind": "Mind",
-      "spirit": "Spirit",
-      "strength": "Strength",
-      "defense": "Defenses",
-      "physicalDefense" : "Physical defenses",
-      "apply": "Apply",
-      "nbCards": "Quantity of cards",
-      "nbCardsValue": "Number of cards to show to player",
-      "choice": "Your choice",
-      "choose": "Which attribute do you want to modify ?",
-      "bonusTitle" : "Input the bonus/malus's value",
-      "value": "Choose the value for the bonus",
-      "time": "Choose the duration in round(s)",
-      "timeLabel": "Duration choice",
-      "mod": "Bonus modification according to a max or min effect",
-      "recipient": "Choice of whisper's recipient",
-      "whisper": "Whisper to checked active player",
-      "noFight": "No activefight, or not started",
-      "show": "Next card(s)",
-      "curse": "Every attributes",
-      "cardBack" : "Card goes back after missplay",
-      "cardOwner" : "Who will get the card back ?",
-      "cancel" : "Cancel effects"
     }
   }
 }

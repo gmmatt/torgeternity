@@ -8,10 +8,12 @@
 - Weapons do now have a minimum strength value, that is computed alongside minStr of armor items. [#116](https://github.com/gmmatt/torgeternity/issues/116)
 - Alphabetical sorting of HTML select & options tag [#160](https://github.com/gmmatt/torgeternity/issues/160)
 - It is now possible to drag & drop "non-vehicle-actors" on vehicles to set the actor as the driver of the vehicle (with all values).
-- By clicking on the "Done" button as a player during a combat in the combat tracker, active effects are now handled and taken off automaticaly. Threats can be treated in the same way if you're ticking the checkmark in the combat tracker as the gm! [#351](https://github.com/gmmatt/torgeternity/issues/351)
-- New macro for showing the next 1-3 cards per chat whisper to player(s) [#351](https://github.com/gmmatt/torgeternity/issues/351)
-- New macro for getting back the previous drama card (in case if the player plays a "Seize initiative" card when you've picked already a new drama card) [#351](https://github.com/gmmatt/torgeternity/issues/351)
+- By clicking on the "Done" button as a player during a combat in the combat tracker, active effects are now handled and taken off automaticaly. Threats can be treated in the same way if you're ticking the checkmark in the combat tracker as the gm!
+- New macro for showing the next 1-3 cards per chat whisper to player(s)
+- New macro for getting back the previous drama card (in case if the player plays a "Seize initiative" card when you've picked already a new drama card)
 - New macro to give a player the **last** played card back.
+- A new buff macro that will easily choose an effect, that will be applied to your character for a specific amount of rounds.
+  (All of the above concerned issue [#351](https://github.com/gmmatt/torgeternity/issues/351))
 - Bug quishing and style issues:
   - Fixed the archetypes' missile weapon category
   - used async enrichment for description fields [#429](https://github.com/gmmatt/torgeternity/issues/429)

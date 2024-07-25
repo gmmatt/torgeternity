@@ -263,6 +263,17 @@
       "cardRetour": {
         "cardBack":"Restitution d'une carte jouée",
         "cardOwner":"A qui rendre la carte ?"        
+      },
+      "buffMacro": {
+        "choice":"Votre choix",
+        "choose":"Quel attribut souhaitez vous modifier ?",
+        "allAttributes": "Tous les attributs",
+        "physicalDefenses":"Défenses physiques",
+        "cancelEffects":"Annuler les effets",
+        "bonusTitle":"Saisie de la valeur du bonus/malus",
+        "value":"Choisissez la valeur de la modification",
+        "timeLabel":"Choix de la durée",
+        "time":"Saisissez la durée en round(s)"
       }
     },
     "dnTypes": {
@@ -1061,34 +1072,6 @@
       "reconnectMacroZoneModifierNotDetectedTitle": "Aucun modificateur de zone",
       "reconnectMacroZoneModifierNotDetected": "Un modificateur de zone n'a pas pu être détecté car la scène active n'a aucune zone configurée. Modifiez le modificateur dans le résultat.",
       "reconnectMacroStatusLiftet": "Statut non lié levé après un test de réalité réussi."
-    },
-    "EffectMacroTorg": {
-        "AD": "Bonus de défense",
-        "charisma": "Charisme",
-        "dexterity": "Dexterité",
-        "mind": "Raison",
-        "spirit": "Esprit",
-        "strength": "Force",
-        "defense": "Défenses",
-        "physicalDefense" : "Défenses physiques",
-        "apply": "Valider",
-        "nbCards": "Choix des cartes",
-        "nbCardsValue": "Nombre de cartes à montrer au(x) joueur(s)",
-        "choice": "Votre choix",
-        "choose": "Quel attribut souhaitez vous modifier ?",
-        "bonusTitle" : "Saisie de la valeur du bonus/malus",
-        "value": "Choisissez la valeur de la modification",
-        "time": "Saisissez la durée en round(s)",
-        "timeLabel": "Choix de la durée",
-        "mod": "Modification du bonus saisi pour respecter un effet de max ou min",
-        "recipient": "Destinataire(s) du message privé",
-        "whisper": "Nombre de cartes",
-        "noFight": "Pas de rencontre active, ou initiée",
-        "show": "Carte(s) suivante(s)",
-        "curse": "Tous les attributs",
-        "cardBack" : "Restitution d'une carte jouée",
-        "cardOwner" : "A qui rendre la carte ?",
-        "cancel" : "Annuler les effets"
-    }
+    }    
   }
 }

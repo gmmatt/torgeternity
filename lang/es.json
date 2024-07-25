@@ -263,6 +263,17 @@
       "cardRetour": {
         "cardBack":"Card goes back after missplay",
         "cardOwner":"Who will get the card back ?"        
+      },
+      "buffMacro": {
+        "choice":"Your choice",
+        "choose":"Which attribute do you want to modify ?",
+        "allAttributes":"All attributes",
+        "physicalDefenses" : "Physical defenses",
+        "cancelEffects": "Cancel effects",
+        "bonusTitle":"Input the bonus/malus's value",
+        "value":"Choose the value for the bonus",
+        "timeLabel":"Duration choice",
+        "time":"Choose the duration in round(s)"
       }
     },
     "dnTypes": {
