@@ -1057,11 +1057,11 @@ Hooks.on('dropActorSheetData', async (myVehicle, mySheet, myPassenger) => {
   });*/
 });
 
-//When the turn taken button is hit, delete "until end of turn" effects (stymied/vulnerable)
+// When the turn taken button is hit, delete "until end of turn" effects (stymied/vulnerable)
 Hooks.on('updateCombatant', async (torgCombatant, dataFlags, dataDiff, userId) => {
   if (game.user.hasRole(4)) {
     if (dataFlags.flags.world.turnTaken) {
-      let myActor = torgCombatant.actor;
+      const myActor = torgCombatant.actor;
       for (const ef of myActor.effects.filter((e) => e.duration.type === 'turns')) {
         await myActor.updateEmbeddedDocuments('ActiveEffect', [
           {
