@@ -8,7 +8,7 @@
 - Weapons do now have a minimum strength value, that is computed alongside minStr of armor items. [#116](https://github.com/gmmatt/torgeternity/issues/116)
 - Alphabetical sorting of HTML select & options tag [#160](https://github.com/gmmatt/torgeternity/issues/160)
 - It is now possible to drag & drop "non-vehicle-actors" on vehicles to set the actor as the driver of the vehicle (with all values).
-- By clicking on the "Done" button as a player during a combat in the combat tracker, active effects are now handled and taken off automaticaly. Threats, however can't be treated like that- look out, GMs!
+- By clicking on the "Done" button as a player during a combat in the combat tracker, active effects are now handled and taken off automaticaly. Threats can be treated in the same way if you're ticking the checkmark in the combat tracker as the gm!
 - New macro for showing the next 1-3 cards per chat whisper to player(s)
 - Bug quishing and style issues:
   - Fixed the archetypes' missile weapon category
