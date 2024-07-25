@@ -251,6 +251,14 @@
       "dragDropDriver": {
         "maintext": "Möchte dieser Charakter dieses Fahrzeug fahren?",
         "windowTitle": "Bestimme einen Fahrer"
+      },
+      "showingDramaCards": {
+        "nbCards":"Anzahl der Karten",
+        "nbCardsValue":"Menge der Karten, die Spieler gezeigt werden sollen",
+        "recipient":"Zielperson zum flüstern",
+        "whisper":"An markierte Spieler flüstern",
+        "apply":"Anwenden",
+        "show":"Nächste Karte(n)"
       }
     },
     "dnTypes": {
@@ -422,7 +430,8 @@
       "openUlisses": "Dein Browser wird einen neuen Tab öffnen und dich auf die Ulisses-Webseite weiterleiten.",
       "ammoValueExceedsMax": "Der aktuelle Munitionswert der Waffe {a} übersteigt seinen Maximalwert. Der Wert wird auf sein Maximum reduziert.",
       "noPossibility": "Es sind keine Möglichkeiten mehr übrig.",
-      "noCapacity": "{a} kann diese Art von Fahrzeug nicht steuern!"
+      "noCapacity": "{a} kann diese Art von Fahrzeug nicht steuern!",
+      "noFight":"Kein aktiver Kampf, oder noch nicht gestartet"
     },
     "packs": {
       "basicRules": "torgeternity.system-de-basisregeln",

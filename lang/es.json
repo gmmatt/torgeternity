@@ -251,6 +251,14 @@
       "dragDropDriver": {
         "maintext": "Does this character want to drive this vehicle?",
         "windowTitle": "Set a driver"
+      },
+      "showingDramaCards": {
+        "nbCards":"Quantity of cards",
+        "nbCardsValue":"Number of cards to show to player",
+        "recipient":"Choice of whisper's recipient",
+        "whisper":"Whisper to checked active player",
+        "apply":"Apply",
+        "show":"Next card(s)"
       }
     },
     "dnTypes": {
@@ -422,7 +430,8 @@
       "failureBDResolution": "The system failed to resolute the BD",
       "ammoValueExceedsMax": "The actual ammo value of the weapon {a} exceeds it's max value. The value will be reduced to it's maximum.",
       "noPossibility": "There is no possibility left",
-      "noCapacity": "{a} can't pilote this kind of vehicle!"
+      "noCapacity": "{a} can't pilote this kind of vehicle!",
+      "noFight": "No activefight, or not started"
     },
     "packs": {
       "basicRules": "torgeternity.basic-rules",

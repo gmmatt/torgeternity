@@ -8,6 +8,7 @@
 - Weapons do now have a minimum strength value, that is computed alongside minStr of armor items. [#116](https://github.com/gmmatt/torgeternity/issues/116)
 - Alphabetical sorting of HTML select & options tag [#160](https://github.com/gmmatt/torgeternity/issues/160)
 - It is now possible to drag & drop "non-vehicle-actors" on vehicles to set the actor as the driver of the vehicle (with all values).
+- New macro for showing the next 1-3 cards per chat whisper to player(s)
 - Bug quishing and style issues:
   - Fixed the archetypes' missile weapon category
   - used async enrichment for description fields [#429](https://github.com/gmmatt/torgeternity/issues/429)
