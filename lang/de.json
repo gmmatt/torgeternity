@@ -259,6 +259,10 @@
         "whisper":"An markierte Spieler flüstern",
         "apply":"Anwenden",
         "show":"Nächste Karte(n)"
+      },
+      "cardRetour": {
+        "cardBack":"Die Karte wandert nach einem Irrtum zurück",
+        "cardOwner":"Wer bekommt die zuletzt ausgespielte Karte zurück?"
       }
     },
     "dnTypes": {

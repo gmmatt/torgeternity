@@ -259,6 +259,10 @@
         "whisper":"Nombre de cartes",
         "apply":"Appliquer",
         "show":"Carte(s) suivante(s)"
+      },
+      "cardRetour": {
+        "cardBack":"Restitution d'une carte jouée",
+        "cardOwner":"A qui rendre la carte ?"        
       }
     },
     "dnTypes": {

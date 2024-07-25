@@ -259,6 +259,10 @@
         "whisper":"Whisper to checked active player",
         "apply":"Apply",
         "show":"Next card(s)"
+      },
+      "cardRetour": {
+        "cardBack":"Card goes back after missplay",
+        "cardOwner":"Who will get the card back ?"        
       }
     },
     "dnTypes": {

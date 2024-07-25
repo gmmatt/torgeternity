@@ -545,4 +545,67 @@ export class TorgeternityMacros {
       card.type === 'hand' ? await card.delete() : console.log('no hand');
     }
   }
+
+  //If you need to cancel a card a player just played
+  //works if the card to get back is the last message in ChatLog, and if player owns only one hand
+  async playerPlayback() {
+    if (!game.user.isGM) {
+      return;
+    }
+    let applyChanges = false;
+    let users = game.users.filter((user) => user.active && !user.isGM);
+    let checkOptions = '';
+    let playerTokenIds = users.map((u) => u.character?.id).filter((id) => id !== undefined);
+    let selectedPlayerIds = canvas.tokens.controlled.map((token) => {
+      if (playerTokenIds.includes(token.actor.id)) return token.actor.id;
+    });
+    // Build checkbox list for all active players
+    users.forEach((user) => {
+      let checked = !!user.character && selectedPlayerIds.includes(user.character.id) && 'checked';
+      checkOptions += `
+            <br>
+            <input type="checkbox" name="${user.id}" id="${user.id}" value="${user.name}" ${checked}>\n
+            <label for="${user.id}">${user.name}</label>
+        `;
+    });
+    new Dialog({
+      title: game.i18n.localize('torgeternity.dialogWindow.cardRetour.cardBack'),
+      content: `${game.i18n.localize(
+        'torgeternity.dialogWindow.cardRetour.cardOwner'
+      )} ${checkOptions} <br>`,
+      buttons: {
+        whisper: {
+          label: game.i18n.localize('torgeternity.dialogWindow.showingDramaCards.apply'),
+          callback: (html) => createMessage(html),
+        },
+      },
+    }).render(true);
+
+    function createMessage(html) {
+      let target;
+      // build list of selected players ids for whispers target
+      for (let user of users) {
+        if (html.find('[name="' + user.id + '"]')[0].checked) {
+          applyChanges = true;
+          target = user;
+        }
+      }
+      if (!applyChanges) {
+        return;
+      } else {
+        const destinyDiscard = game.cards.get(
+          game.settings.get('torgeternity', 'deckSetting').destinyDiscard
+        );
+        const lastCard = destinyDiscard.cards.contents.pop();
+        const parentHand = target.character.getDefaultHand();
+        const listMessage = game.messages.contents;
+        let filtre = listMessage.filter((m) => m._source.user === target.id);
+        let lastMessage = filtre.pop();
+        lastCard.pass(parentHand);
+        if (lastCard) {
+          ChatMessage.deleteDocuments([lastMessage.id]);
+        }
+      }
+    }
+  }
 }
