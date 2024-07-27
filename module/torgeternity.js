@@ -40,6 +40,7 @@ import * as actorDataModels from './data/actor/index.js';
 import * as itemDataModels from './data/item/index.js';
 import * as cardDataModels from './data/card/index.js';
 import TorgActiveEffect from './documents/active-effect/torgActiveEffect.js';
+import MacroHub from './MacroHub.js';
 
 Hooks.once('init', async function () {
   console.log('torgeternity | Initializing Torg Eternity System');
@@ -121,6 +122,7 @@ Hooks.once('init', async function () {
   };
 
   ui.GMScreen = new GMScreen();
+  ui.macroHub = new MacroHub();
   // all settings after config
   registerTorgSettings();
   // ---register items and actors

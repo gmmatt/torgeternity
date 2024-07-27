@@ -46,6 +46,15 @@ export default function initTorgControlButtons() {
           onClick: () => {
             new DeckSettingMenu().render(true);
           },
+        },
+        {
+          name: game.i18n.localize('torgeternity.macros.macroHub.buttonTitle'),
+          title: game.i18n.localize('torgeternity.macros.macroHub.buttonTitle'),
+          icon: 'fa-solid fa-bottle-water',
+          button: true,
+          onClick: () => {
+            ui.macroHub.toggleRender();
+          },
         }
       );
     }

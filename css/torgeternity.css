@@ -4315,3 +4315,29 @@ form.actor-sheet.threat img.profile-img {
 .window-content .actor-sheet .threat-sheet .defenseCheck {
   opacity: 1;
 }
+
+.window-content .macroHubComplete {
+  display: flex;
+  flex-direction: column;
+  min-width: 100%;
+  min-height: 100%;
+  font-size: 14px;
+  row-gap: 5px;
+}
+
+.window-content .macroHubComplete .macroHubSpan{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.window-content .macroHubComplete .macroHubSpan > img{
+  width: 50px;
+  height: 50px;
+}
+
+.window-content .macroHubComplete .macroHubSpan > h2{
+  border: none;
+  padding: 0 0 0 10px;
+  margin: 0;
+}

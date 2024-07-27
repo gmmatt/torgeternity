@@ -1071,7 +1071,11 @@
       "reconnectMacroZoneModifier": "Zone modifier",
       "reconnectMacroZoneModifierNotDetectedTitle": "No zone modifier",
       "reconnectMacroZoneModifierNotDetected": "Couldn't resolve a zone modifier, because the active scene has no cosm configured. Change the result's modifier by hand.",
-      "reconnectMacroStatusLiftet": "Disconnection-Status liftet after a successful Reconnect-Roll."
+      "reconnectMacroStatusLiftet": "Disconnection-Status liftet after a successful Reconnect-Roll.",
+      "macroHub": {
+        "buttonTitle": "MacroHub",
+        "title":"The Torg Eternity Macro Hub"
+      }
     }
   }
 }

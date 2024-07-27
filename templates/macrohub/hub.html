@@ -1,0 +1,8 @@
+<div id="macroHub" class="macroHubComplete">
+    {{#each macros as | macro |}}
+        <a data-macro-id="{{macro._id}}" class="macroHubSpan">
+            <img src="{{macro.img}}">
+            <h2>{{macro.name}}</h2>
+        </a>
+    {{/each}}
+</div>
