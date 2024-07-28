@@ -13,7 +13,7 @@ export class AmmunitionItemData extends GeneralItemData {
       damageMod: new fields.NumberField({ integer: true, initial: 0 }),
       apMod: new fields.NumberField({ integer: true, initial: 0 }),
       fireDamage: new fields.BooleanField({ initial: false }),
-      blastRadius: new fields.StringField({ initial: 'Medium' }),
+      blastRadius: new fields.StringField({ initial: 'None' }),
       darknessMod: new fields.StringField({ initial: 'None' }),
       reach: new fields.StringField({ initial: '' }),
     };
