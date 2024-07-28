@@ -739,7 +739,7 @@ export class TorgeternityMacros {
       // only Defenses, but ALL defenses
       const newEffect = {
         name:
-          game.i18n.localize('torgeternity.dialogWindow.buffMacro.defense') +
+          game.i18n.localize('torgeternity.dialogWindow.buffMacro.defenses') +
           ' / ' +
           bonu +
           ' / ' +
@@ -801,7 +801,7 @@ export class TorgeternityMacros {
       // only physical Defenses
       const newEffect = {
         name:
-          game.i18n.localize('torgeternity.dialogWindow.buffMacro.defense') +
+          game.i18n.localize('torgeternity.dialogWindow.buffMacro.physicalDefenses') +
           ' / ' +
           bonu +
           ' / ' +
@@ -843,7 +843,7 @@ export class TorgeternityMacros {
       // preparation of attribute effect
       const newEffect = {
         name:
-          game.i18n.localize('torgeternity.dialogWindow.buffMacro.allAtrubtes') +
+          game.i18n.localize('torgeternity.dialogWindow.buffMacro.allAttributes') +
           ' / ' +
           bonu +
           ' / ' +

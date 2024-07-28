@@ -268,6 +268,7 @@
         "choice":"Your choice",
         "choose":"Which attribute do you want to modify ?",
         "allAttributes":"All attributes",
+        "defenses":"Defenses",
         "physicalDefenses" : "Physical defenses",
         "cancelEffects": "Cancel effects",
         "bonusTitle":"Input the bonus/malus's value",
