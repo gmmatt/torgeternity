@@ -10,15 +10,25 @@ export async function renderSkillChat(test) {
   const messages = [];
   if (test?.targetAll.length != 0) {
   } else test.targetAll = [test.target];
+
   // disable DSN (if used) for 'every' message (want to show only one dice despite many targets)
   try {
     game.dice3d.messageHookDisabled = true;
   } catch (e) {}
+
   test.applyDebuffLabel = 'display:none';
   test.applyDamLabel = 'display:none';
   test.backlashLabel = 'display:none';
   test.bdDamageLabelStyle = test.bdDamageSum ? 'display:block' : 'display:none';
   let iteratedRoll;
+
+  // Handle ammo. First, check if there is enough ammo, then reduce it.
+  if (test.item?.weaponWithAmmo) {
+    await test?.item.reduceAmmo(test.burstModifier, test.targetAll.length);
+    test.ammoLabel = 'display:table-row';
+  } else {
+    test.ammoLabel = 'display:none';
+  }
 
   for (let i = 0; i < test.targetAll.length; i++) {
     const target = test.targetAll[i];

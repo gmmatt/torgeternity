@@ -2,6 +2,7 @@ import * as torgchecks from '../torgchecks.js';
 import { onManageActiveEffect, prepareActiveEffectCategories } from '../effects.js';
 import { TestDialog } from '../test-dialog.js';
 import TorgeternityItem from '../documents/item/torgeternityItem.js';
+import { reloadAmmo } from './torgeternityItemSheet.js';
 import { PossibilityByCosm } from '../possibilityByCosm.js';
 
 /**
@@ -128,6 +129,41 @@ export default class TorgeternityActorSheet extends ActorSheet {
     data.vehicleAddOn = data.items.filter(function (item) {
       return item.type == 'vehicleAddOn';
     });
+    data.ammunitions = data.items.filter(function (item) {
+      return item.type == 'ammunition';
+    });
+
+    for (const type of [
+      'meleeweapons',
+      'customAttack',
+      'customSkill',
+      'gear',
+      'eternityshard',
+      'armor',
+      'shield',
+      'missileweapon',
+      'firearm',
+      'implant',
+      'heavyweapon',
+      'vehicle',
+      'perk',
+      'spell',
+      'miracle',
+      'psionicpower',
+      'specialability',
+      'specialabilityRollable',
+      'enhancement',
+      'dramaCard',
+      'destinyCard',
+      'cosmCard',
+      'vehicleAddOn',
+    ]) {
+      for (const item of data[type]) {
+        item.description = await TextEditor.enrichHTML(item.system.description, {
+          async: true,
+        });
+      }
+    }
 
     // Enrich Text Editors
     switch (this.object.type) {
@@ -274,7 +310,7 @@ export default class TorgeternityActorSheet extends ActorSheet {
 
       html.find('.unarmed-attack').click(this._onUnarmedAttack.bind(this));
 
-      html.find('.item-bonusRoll').click(this._onBonusRoll.bind(this));
+      // html.find('.item-bonusRoll').click(this._onBonusRoll.bind(this));
 
       html.find('.item-powerRoll').click(this._onPowerRoll.bind(this));
 
@@ -377,6 +413,14 @@ export default class TorgeternityActorSheet extends ActorSheet {
           }
         },
       }).render(true);
+    });
+
+    // reload-function for weapons with ammunition, directly from the actors sheet.
+    html.find('.reload-weapon').click((ev) => {
+      const button = ev.currentTarget.closest('[data-item-id]');
+      const weapon = this.actor.items.get(button.dataset.itemId);
+
+      reloadAmmo(this.actor, weapon);
     });
 
     // Toggle Item Detail Visibility
@@ -941,6 +985,12 @@ export default class TorgeternityActorSheet extends ActorSheet {
     const weaponDamage = weaponData.damage;
     let skillValue;
     let skillData;
+
+    if (item?.weaponWithAmmo && !item.hasAmmo) {
+      ui.notifications.warn(game.i18n.localize('torgeternity.chatText.noAmmo'));
+      return;
+    }
+
     if (this.actor.type === 'vehicle') {
       skillValue = item.system.gunner.skillValue;
       attributes = 0;
@@ -1041,21 +1091,19 @@ export default class TorgeternityActorSheet extends ActorSheet {
       movementModifier: 0,
       bdDamageLabelStyle: 'display:none',
       bdDamageSum: 0,
+      item: item,
     };
 
     new TestDialog(test);
   }
 
-  /**
-   *
-   * @param event
-   */
-  _onBonusRoll(event) {
+  /* I've commented that out because it shouldn't be needed anymore but I don't know yet :D
+    _onBonusRoll(event) {
     const itemID = event.currentTarget.closest('.item').dataset.itemId;
     const item = this.actor.items.get(itemID);
 
     item.bonus();
-  }
+  }*/
 
   /**
    *

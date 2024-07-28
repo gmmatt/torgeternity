@@ -2,23 +2,23 @@
   <h1 class="sksheet header nameinput">
     <input name="name" type="text" value="{{actor.name}}" placeholder="Name" />
   </h1>
-  <img class="open-hand" src="systems/torgeternity/images/icons/cardhand.webp" title="{{localize
+  <img class="open-hand" src="systems/torgeternity/images/icons/cardhand.webp" data-tooltip="{{localize
   "torgeternity.dialogPrompts.openHand"}}">
 
   <div class="sksheet header CRSbox">
     <span>{{localize "torgeternity.gear.cosm"}}</span>
     <select style="width: 100%" name="system.other.cosm" class="input-box">
-      {{selectOptions config.cosmTypes selected=actor.system.other.cosm localize=true}}
+      {{selectOptions config.cosmTypes selected=actor.system.other.cosm localize=true sort=true}}
     </select>
 
     <span>{{localize "torgeternity.sheetLabels.race"}}</span>
     <select style="width: 100%" name="system.details.race" class="input-box">
-      {{selectOptions config.races selected=actor.system.details.race localize=true}}
+      {{selectOptions config.races selected=actor.system.details.race localize=true sort=true}}
     </select>
 
     <span>{{localize "torgeternity.sheetLabels.size"}}</span>
     <select style="width: 100%" name="system.details.sizeBonus" class="input-box">
-      {{selectOptions config.sizes selected=actor.system.details.sizeBonus localize=true}}
+      {{selectOptions config.sizes selected=actor.system.details.sizeBonus localize=true sort=true}}
     </select>
   </div>
 
@@ -98,7 +98,7 @@
     />
   </div>
 
-  <h2 class="sksheet header possyheadline">
+  <h2 class="sksheet header possyheadline open-poss">
     {{localize "torgeternity.sheetLabels.possibilities"}}
   </h2>
   <div class="sksheet header possybox">

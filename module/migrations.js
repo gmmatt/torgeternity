@@ -21,7 +21,7 @@ export async function torgMigration() {
     }
     // show a UI warning
     ui.notifications.warn(
-      game.i18n.localize('torgeternity.notifications.migrationRunning') + currentVersion
+      game.i18n.localize('torgeternity.notifications.beginningMigration') + currentVersion
     );
 
     // migrations up to 2.4.0

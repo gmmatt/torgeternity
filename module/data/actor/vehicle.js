@@ -69,7 +69,7 @@ export class VehicleData extends foundry.abstract.TypeDataModel {
         ? data.price.magnitude
         : 'other';
     }
-    if (Object.hasOwn(data.wounds, 'current')) {
+    if (data?.wounds && Object.hasOwn(data?.wounds, 'current')) {
       data.wounds.value = data.wounds.current;
     }
   }

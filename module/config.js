@@ -55,6 +55,13 @@ torgeternity.zones = {
   mixed: 'torgeternity.cosms.mixed',
 };
 
+torgeternity.axioms = {
+  tech: 'torgeternity.axioms.tech',
+  social: 'torgeternity.axioms.social',
+  spirit: 'torgeternity.axioms.spirit',
+  magic: 'torgeternity.axioms.magic',
+};
+
 torgeternity.axiomByCosm = {
   coreEarth: {
     magic: 9,
@@ -114,6 +121,23 @@ torgeternity.actionLawCosms = {
 torgeternity.actionLawCosms = {
   nileEmpire: 'torgeternity.cosms.nileEmpire',
   other: 'torgeternity.cosms.other',
+};
+
+torgeternity.darknessModifiers = {
+  none: 'torgeternity.sheetLabels.none',
+  dim: 'torgeternity.darknessModifiers.dim',
+  diark: 'torgeternity.darknessModifiers.dark',
+  pitchBlack: 'torgeternity.darknessModifiers.pitchBlack',
+};
+
+torgeternity.levelDifferences = {
+  none: 'torgeternity.sheetLabels.none',
+  onePlus: 'torgeternity.levelDifferences.1+',
+  twoPlus: 'torgeternity.levelDifferences.2+',
+  threePlus: 'torgeternity.levelDifferences.3+',
+  oneminus: 'torgeternity.levelDifferences.1-',
+  twoMinus: 'torgeternity.levelDifferences.2-',
+  threeMinus: 'torgeternity.levelDifferences.3-',
 };
 
 torgeternity.perkTypes = {
@@ -319,6 +343,14 @@ torgeternity.sizes = {
   normal: 'torgeternity.sizes.normal',
   large: 'torgeternity.sizes.large',
   veryLarge: 'torgeternity.sizes.veryLarge',
+};
+
+torgeternity.blastRadius = {
+  small: 'torgeternity.blastRadi.small',
+  medium: 'torgeternity.blastRadi.medium',
+  large: 'torgeternity.blastRadi.large',
+  veryLarge: 'torgeternity.blastRadi.veryLarge',
+  huge: 'torgeternity.blastRadi.huge',
 };
 
 torgeternity.speeds = {

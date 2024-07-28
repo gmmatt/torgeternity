@@ -2,7 +2,7 @@
   <h3 class="item-type"><span>{{localize "torgeternity.itemSheetDescriptions.vehicleAddOn"}}</span></h3>
 
   <header class="sheet-header">
-    <img src="{{item.img}}" data-edit="img" title="{{item.name}}" />
+    <img src="{{item.img}}" data-edit="img" data-tooltip="{{item.name}}" />
     <h1><input name="name" type="text" value="{{item.name}}" placeholder="Custom Skill Name" /></h1>
   </header>
 
@@ -14,7 +14,7 @@
   <section class="sheet-body">
     <div class="tab stats" data-group="primary" data-tab="stats">
       <div class="main-content">
-        <div class="sheet-content">
+        <div class="sheet-content" style="display:block">
           <div style="grid-column: 1/5" class="item-description-textarea">
             <p class="item-data-label">
               {{localize "torgeternity.gear.short-description"}}&nbsp;

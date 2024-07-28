@@ -27,11 +27,11 @@
   <div class="tab" data-tab="cosm">
     <div class="form-group cosm-primary">
       <select name="flags.torgeternity.cosm" class="cosm" data-dtype="String">
-        {{selectOptions (cosmList) selected=data.flags.torgeternity.cosm localize=true}}
+        {{selectOptions (cosmList) selected=data.flags.torgeternity.cosm localize=true sort=true}}
       </select>
 
       <select name="flags.torgeternity.zone" class="zone-type" data-dtype="String">
-        {{selectOptions zones selected=data.flags.torgeternity.zone localize=true}}
+        {{selectOptions zones selected=data.flags.torgeternity.zone localize=true sort=true}}
       </select>
     </div>
 
@@ -39,7 +39,7 @@
     <div class="form-group cosm-secondary">
       <label>{{localize "torgeternity.sheetLabels.secondaryCosm"}}</label>
       <select name="flags.torgeternity.cosm2" class="cosm-secondary" data-dtype="String">
-        {{selectOptions (cosmList) selected=data.flags.torgeternity.cosm2 localize=true}}
+        {{selectOptions (cosmList) selected=data.flags.torgeternity.cosm2 localize=true sort=true}}
       </select>
     </div>
     {{/if}}
@@ -48,27 +48,27 @@
   <div class="tab" data-group="main" data-tab="basic">
     <div class="form-group">
       <label>{{localize "SCENES.SceneName"}}</label>
-      <div class="form-fields">
+      <div class="form-fields torgeternityFormFields">
         <input type="text" name="name" placeholder="{{localize 'Name'}}" value="{{data.name}}" />
       </div>
     </div>
 
     <div class="form-group">
       <label>{{localize "SCENES.Accessibility"}}</label>
-      <div class="form-fields">
+      <div class="form-fields torgeternityFormFields">
         <label class="checkbox">
           {{localize "SCENES.ShowNav"}}
           <input type="checkbox" name="navigation" {{checked data.navigation}} />
         </label>
         <select name="ownership.default" data-dtype="Number">
-          {{selectOptions ownerships selected=data.ownership.default localize=true}}
+          {{selectOptions ownerships selected=data.ownership.default localize=true sort=true}}
         </select>
       </div>
     </div>
 
     <div class="form-group">
       <label>{{localize "SCENES.NavName"}}</label>
-      <div class="form-fields">
+      <div class="form-fields torgeternityFormFields">
         <input type="text" name="navName" value="{{data.navName}}" />
       </div>
       <p class="notes">{{localize "SCENES.NavNameHint"}}</p>
@@ -77,7 +77,7 @@
 
     <div class="form-group">
       <label>{{localize "SCENES.BackgroundImage"}}</label>
-      <div class="form-fields">
+      <div class="form-fields torgeternityFormFields">
         <file-picker
           name="background.src"
           type="imagevideo"
@@ -89,7 +89,7 @@
 
     <div class="form-group">
       <label>{{localize "SCENES.ForegroundImage"}}</label>
-      <div class="form-fields">
+      <div class="form-fields torgeternityFormFields">
         <file-picker name="foreground" type="imagevideo" value="{{data.foreground}}"></file-picker>
       </div>
       <p class="notes">{{localize "SCENES.ForegroundImageHint"}}</p>
@@ -98,14 +98,14 @@
 
     <div class="form-group">
       <label>{{localize "SCENES.BackgroundColor"}}</label>
-      <div class="form-fields">
+      <div class="form-fields torgeternityFormFields">
         <color-picker name="backgroundColor" value="{{data.backgroundColor}}"></color-picker>
       </div>
     </div>
 
     <div class="form-group">
       <label>{{localize "SCENES.ForegroundElevation"}}</label>
-      <div class="form-fields">
+      <div class="form-fields torgeternityFormFields">
         {{numberInput data.foregroundElevation name="foregroundElevation" min=1 step=1}}
       </div>
       <p class="notes">{{localize "SCENES.ForegroundElevationHint"}}</p>
@@ -113,7 +113,7 @@
 
     <div class="form-group initial-position">
       <label>{{localize "SCENES.InitialView"}}</label>
-      <div class="form-fields">
+      <div class="form-fields torgeternityFormFields">
         <button
           class="capture-position"
           type="button"
@@ -142,7 +142,7 @@
   <div class="tab" data-group="main" data-tab="grid">
     <div class="form-group">
       <label>{{localize "SCENES.GridType"}}</label>
-      <div class="form-fields">
+      <div class="form-fields torgeternityFormFields">
         <button
           type="button"
           class="grid-config"
@@ -151,7 +151,7 @@
           <i class="fas fa-ruler-combined"></i>
         </button>
         <select name="grid.type" data-dtype="Number">
-          {{ selectOptions gridTypes selected=data.grid.type localize=true }}
+          {{ selectOptions gridTypes selected=data.grid.type localize=true sort=true}}
         </select>
       </div>
     </div>
@@ -161,7 +161,7 @@
         {{localize "SCENES.GridSize"}}
         <span class="units">({{localize "SCENES.Pixels"}})</span>
       </label>
-      <div class="form-fields">
+      <div class="form-fields torgeternityFormFields">
         {{numberInput data.grid.size name="grid.size" placeholder=(localize "SCENES.Pixels")
         min=minGrid step=1}}
       </div>
@@ -173,7 +173,7 @@
         {{localize "SCENES.Dimensions"}}
         <span class="units">({{localize "SCENES.Pixels"}})</span>
       </label>
-      <div class="form-fields">
+      <div class="form-fields torgeternityFormFields">
         <label>{{localize "Width"}}</label>
         {{numberInput data.width name="width"}}
         <button
@@ -191,7 +191,7 @@
 
     <div class="form-group">
       <label>{{localize "SCENES.Padding"}}</label>
-      <div class="form-fields">
+      <div class="form-fields torgeternityFormFields">
         <range-picker
           name="padding"
           value="{{data.padding}}"
@@ -208,7 +208,7 @@
         {{localize "SCENES.ShiftBG"}}
         <span class="units">({{localize "SCENES.Pixels"}})</span>
       </label>
-      <div class="form-fields">
+      <div class="form-fields torgeternityFormFields">
         <label class="grid-label">{{localize "SCENES.ShiftHorizontal"}}</label>
         {{numberInput data.background.offsetX name="background.offsetX" placeholder=(localize
         "SCENES.Pixels")}}
@@ -221,7 +221,7 @@
 
     <div class="form-group">
       <label>{{localize "SCENES.GridScale"}}</label>
-      <div class="form-fields">
+      <div class="form-fields torgeternityFormFields">
         <label class="grid-label">{{localize "SCENES.GridDistance"}}</label>
         {{numberInput data.grid.distance name="grid.distance" placeholder=1}}
         <label class="grid-label">{{localize "SCENES.GridUnits"}}</label>
@@ -232,30 +232,30 @@
 
     <div class="form-group">
       <label>{{localize "SCENES.GridStyle"}}</label>
-      <div class="form-fields">
+      <div class="form-fields torgeternityFormFields">
         <select name="grid.style">
-          {{ selectOptions gridStyles selected=data.grid.style labelAttr="label" localize=true }}
+          {{ selectOptions gridStyles selected=data.grid.style labelAttr="label" localize=true sort=true}}
         </select>
       </div>
     </div>
 
     <div class="form-group">
       <label>{{localize "SCENES.GridThickness"}}</label>
-      <div class="form-fields">
+      <div class="form-fields torgeternityFormFields">
         {{numberInput data.grid.thickness name="grid.thickness" placeholder=1}}
       </div>
     </div>
 
     <div class="form-group">
       <label>{{localize "SCENES.GridColor"}}</label>
-      <div class="form-fields">
+      <div class="form-fields torgeternityFormFields">
         <color-picker name="grid.color" value="{{data.grid.color}}"></color-picker>
       </div>
     </div>
 
     <div class="form-group">
       <label>{{localize "SCENES.GridOpacity"}}</label>
-      <div class="form-fields">
+      <div class="form-fields torgeternityFormFields">
         <range-picker
           name="grid.alpha"
           value="{{data.grid.alpha}}"
@@ -283,7 +283,7 @@
 
     <div class="form-group">
       <label>{{localize "SCENES.FogOverlay"}}</label>
-      <div class="form-fields">
+      <div class="form-fields torgeternityFormFields">
         <file-picker
           name="fog.overlay"
           type="imagevideo"
@@ -295,7 +295,7 @@
 
     <div class="form-group">
       <label>{{localize "SCENES.FogUnexploredColor"}}</label>
-      <div class="form-fields">
+      <div class="form-fields torgeternityFormFields">
         <color-picker
           name="fog.colors.unexplored"
           value="{{data.fog.colors.unexplored}}"
@@ -306,7 +306,7 @@
 
     <div class="form-group">
       <label>{{localize "SCENES.FogExploredColor"}}</label>
-      <div class="form-fields">
+      <div class="form-fields torgeternityFormFields">
         <color-picker
           name="fog.colors.explored"
           value="{{data.fog.colors.explored}}"
@@ -329,7 +329,7 @@
 
     <div class="form-group">
       <label>{{localize "SCENES.GlobalLightThreshold"}}</label>
-      <div class="form-fields">
+      <div class="form-fields torgeternityFormFields">
         <range-picker
           name="environment.globalLight.darkness.max"
           value="{{data.environment.globalLight.darkness.max}}"
@@ -343,7 +343,7 @@
 
     <div class="form-group">
       <label>{{localize "SCENES.Darkness"}}</label>
-      <div class="form-fields">
+      <div class="form-fields torgeternityFormFields">
         <range-picker
           name="environment.darknessLevel"
           value="{{data.environment.darknessLevel}}"

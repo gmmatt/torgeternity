@@ -3,6 +3,13 @@
     "discard": "Wegwerfen",
     "display": "Zeige diese Karte den anderen Spielern"
   },
+  "TYPES": {
+    "Card": {
+      "destiny": "Schicksal",
+      "drama": "Drama",
+      "cosm": "Cosm"
+    }
+  },
   "torgeternity": {
     "attackTypes": {
       "energyWeapons": "Energiewaffen",
@@ -18,6 +25,12 @@
       "mind": "Verstand",
       "spirit": "Geist",
       "strength": "Stärke"
+    },
+    "axioms": {      
+      "magic": "Magie",
+      "social": "Sozial",
+      "spirit": "Spiritualität",
+      "tech": "Tech"      
     },
     "cardTypes": {
       "activeDrama": "Aktive Dramakarte",
@@ -100,6 +113,11 @@
       "heroCard": "Heldenhaft-Karte",
       "hideDetails": "Verstecke Details",
       "modifiers": "Modifikator",
+      "noAmmo": "Waffe nicht abgefeuert, keine Kugeln mehr übrig.",
+      "noAmmoPosessing": "Du hast keine Munition in deinem Inventar. Nachladen nicht möglich.",
+      "notSufficientAmmo": "Du hast nicht genügend Kugeln in deiner Waffe, um diesen Feuerstoß zu verwenden, daher kann diese Probe nicht durchgeführt werden.",
+      "reloaded": "Du hast deine Waffe {a} nachgeladen.",
+      "ammoLabel": "Kugeln übrig",
       "notes": "Notizen",
       "passesCard1": "Gibt",
       "passesCard2": "an",
@@ -115,7 +133,8 @@
       "up": "Oberhand",
       "value": "Wert",
       "vehicleBase": "Fahrzeugprobe",
-      "mayCauseContradiction": "Vorzüge mit diesem Symbol sind abhängig von den Weltgesetzen ihres Cosm und verursachen außerhalb ihres Cosm Widersprüche."
+      "mayCauseContradiction": "Vorzüge mit diesem Symbol sind abhängig von den Weltgesetzen ihres Cosm und verursachen außerhalb ihres Cosm Widersprüche.",
+      "ammoFull": "Die Waffe \"{a}\" ist bereits vollständig geladen."
     },
     "clearances": {
       "alpha": "Alpha",
@@ -128,7 +147,10 @@
       "dramaBack": "systems/torgeternity/images/cards/drama-back.webp",
       "endMyTurn": "Zug beenden",
       "nextKeep": "Neue Runde (aktuelle Karte behalten)",
-      "nextNew": "neue Runde (neue Dramakarte)"
+      "nextNew": "neue Runde (neue Dramakarte)",
+      "herosTooltip": "heros first",
+      "vilainsTooltip": "vilains first",
+      "hasPlayedTooltip": "Check when character's turn is complete"
     },
     "cosmDecks": {
       "aysle": "Aysle Cosm-Deck",
@@ -221,6 +243,37 @@
       "buttons": {
         "execute": "Ausführen",
         "ok": "OK"
+      },
+      "chooseAmmo": {
+        "maintext": "Bitte wähle die Munition aus, die du zum Nachladen deiner Waffe verwenden möchtest.",
+        "windowTitle": "Munition wählen"
+      },
+      "dragDropDriver": {
+        "maintext": "Möchte dieser Charakter dieses Fahrzeug fahren?",
+        "windowTitle": "Bestimme einen Fahrer"
+      },
+      "showingDramaCards": {
+        "nbCards":"Anzahl der Karten",
+        "nbCardsValue":"Menge der Karten, die Spieler gezeigt werden sollen",
+        "recipient":"Zielperson zum flüstern",
+        "whisper":"An markierte Spieler flüstern",
+        "apply":"Anwenden",
+        "show":"Nächste Karte(n)"
+      },
+      "cardRetour": {
+        "cardBack":"Die Karte wandert nach einem Irrtum zurück",
+        "cardOwner":"Wer bekommt die zuletzt ausgespielte Karte zurück?"
+      },
+      "buffMacro": {
+        "choice":"Deine Wahl",
+        "choose":"Welches Attribut soll modifiziert werden?",
+        "allAttributes":"Alle Attribute",
+        "physicalDefenses": "Physische Verteidigungen",
+        "cancelEffects": "Effekte aufheben",
+        "bonusTitle":"Eingabe Bonus/Malus",
+        "value":"Wähle die Höhe des Bonus",
+        "timeLabel":"Wahl der Dauer",
+        "time":"Wähle die Dauer in Runden"
       }
     },
     "dnTypes": {
@@ -277,6 +330,7 @@
     },
     "gear": {
       "ammo": "Munition",
+      "ammunition": "Munition",
       "ap": "PB",
       "armor": "Rüstung",
       "attackWith": "Angriff mit",
@@ -325,7 +379,10 @@
       "miracleRoll": "Wunder-wurf",
       "openParty": "Öffnet die Gruppenübersicht",
       "psionicRoll": "Psionischer Wurf",
+      "reload": "Waffe nachladen",
       "resetPossibilities": "Möglichkeiten zurücksetzen",
+      "GMPoss": "GM's possibility pool",
+      "SKPoss": "character's possibilities",
       "sendToChat": "An Chat senden",
       "spellRoll": "Zauberwurf",
       "toggle": "Umschalten auf",
@@ -333,6 +390,7 @@
     },
     "itemSheetDescriptions": {
       "armor": "Rüstung",
+      "ammunition": "Munition",
       "customAttack": "Individueller Angriff",
       "customSkill": "Eigene Fertigkeit",
       "enhancement": "Verbesserung",
@@ -367,23 +425,28 @@
       "play": "Diese Karte ausspielen"
     },
     "notifications": {
+      "beginningMigration": "Migration der Torg-Systemversion auf ",
       "defaultAction": "Standardaktion, Ausrüstung z. Bsp.",
       "dramaDeckEmpty": "Das Dramadeck ist aufgebraucht. Bitte das Dramadeck zurücksetzen.",
       "failureBDResolution": "Das System konnte die BW nicht berechnen.",
       "macroTypeWarning": "Du kannst nur Makro-Buttons für Items/Attribute/Fertigkeiten kreieren, die dir gehören.",
       "migrationRunning": "Migriere Torg-Systemversion auf Version ",
-      "moduleNotActive": "Activate the module to see desscription.",
+      "moduleNotActive": "Modul muss aktiviert werden, um die Beschreibung anzeigen zu können.",
       "noActiveEffectInOwnedItem": "Das Ändern von aktiven Effekten innerhalb eines Items mit Besitzrechten ist zur Zeit noch nicht implementiert.",
       "noAttrNamed": "Dein Kontrollierter Charakter hat kein Attribut, das heißt: ",
       "noHands": "Keine Kartenhand verfügbar!",
       "noItemNamed": "Dein Kontrollierter Charakter hat keinen Gegenstand der heißt: ",
       "noSkillNamed": "Dein Kontrollierter Charakter hat keine Fertigkeit, die heißt: ",
-      "noTarget": "Kein valides Token im Ziel",
+      "noTarget": "Kein valides Token anvisiert",
       "notImplemented": "Aktuell noch nicht implementiert",
       "onlyReservedCard": "Bitte nur Karten aus dem Aktionenpool spielen.",
       "openDiscord": "Dein Browser wird einen neuen Tab öffnen, der dich zum Discord-Server weiterleitet.",
       "openIssue": "Dein Browser wird einen neuen Tab öffnen, um diese Aufgabe durchzuführen.",
-      "openUlisses": "Dein Browser wird einen neuen Tab öffnen und dich auf die Ulisses-Webseite weiterleiten."
+      "openUlisses": "Dein Browser wird einen neuen Tab öffnen und dich auf die Ulisses-Webseite weiterleiten.",
+      "ammoValueExceedsMax": "Der aktuelle Munitionswert der Waffe {a} übersteigt seinen Maximalwert. Der Wert wird auf sein Maximum reduziert.",
+      "noPossibility": "Es sind keine Möglichkeiten mehr übrig.",
+      "noCapacity": "{a} kann diese Art von Fahrzeug nicht steuern!",
+      "noFight":"Kein aktiver Kampf, oder noch nicht gestartet"
     },
     "packs": {
       "basicRules": "torgeternity.system-de-basisregeln",
@@ -539,7 +602,7 @@
         "name": "Pausenbild"
       },
       "playerHandBottom": {
-        "hint": "Player hands open at the bottom right of the screen, and cards will appear above the player hand window. Requires screen refresh (F5) to take effect.",
+        "hint": "Die Hände der Spieler werden unten rechts auf dem Bildschirm geöffnet, und die Karten werden über dem Fenster mit den Spielerhänden angezeigt. Erfordert eine Bildschirmaktualisierung (F5), um wirksam zu werden.",
         "name": "Anzeige der Spielerhand am unteren Bildschirmrand"
       },
       "setupCards": {
@@ -555,7 +618,7 @@
         "name": "Willkommensnachricht anzeigen"
       },
       "uniqueDN": {
-        "hint": "If checked, when a multi-target test is done, will keep the highest DN from all targets to determine outcome, as RAW.",
+        "hint": "Wenn diese Option aktiviert ist, wird bei einem Test mit mehreren Zielen der höchste DN aller Ziele zur Bestimmung des Ergebnisses beibehalten, wie von den Regeln vorgesehen.",
         "name": "Unique DN"
       }
     },
@@ -567,8 +630,12 @@
       "addOns": "Add-Ons",
       "adds": "Fertigkeitsstufen",
       "aimed": "Zielen",
+      "aimedTooltip": "Aimed Shot (ranged attacks only)",
       "allOut": "Rücksichtsloser Angriff",
+      "allOutTooltip": "+4 Bonus/Very Vulnerable (Melee and unarmed attacks only)",
       "alterAttributes": "Du kannst nun die Attribute ändern",
+      "ammunition": "Munition",
+      "APMod": "PB Modifikator",
       "applyDamage": "Schaden anwenden",
       "applyDamageTooltip": "Linksclick zum anwenden, Rechtsklick zum modifizieren.",
       "applyStymied": "Angeschlagen anwenden",
@@ -587,8 +654,11 @@
       "backgroundDescription": "Hintergrund",
       "baseAttribute": "Basisattribut",
       "baseRoll": "Basisprobe",
+      "blastRadius": "Explosionsradius",
       "blindFire": "Blindes Feuern",
+      "blindFireTooltip": "Position des Ziels nur wage bekannt",
       "burst": "Schnellfeuer",
+      "burstTooltip": "Nur automatische Waffen",
       "calledShot": "Gezielter Angriff",
       "chase": "Verfolgung",
       "chooseDamage": "Wähle den anzuwendenden Schaden.",
@@ -598,9 +668,11 @@
       "concealment": "Deckung",
       "cosm": "Cosm",
       "coverBonus": "Deckungsbonus",
+      "coverBonusTooltip": "Bonus, der als Resultat der Deckung auf die Zähigkeit addiert wird",
       "customSkill": "Eigene Fertigkeiten können im Vorzüge-Tab geändert werden",
       "customSkills": "Eigene Fertigkeiten",
       "damageAP": "Schaden (PB)",
+      "damageMod": "Schadensmodifikator",
       "defense": "Verteidigung",
       "defenses": "Verteidigung",
       "defensesTip": "Klicke, um eine aktive Verteidigung durchzuführen",
@@ -617,14 +689,20 @@
       "end": "Ende",
       "enhancement": "Verbesserung",
       "enhancements": "Verbesserungen",
+      "enhancementTooltip": "Anklicken, wenn die Erweiterung gewählt wurde",
+      "enhancementRemoveTooltip": "Lösche die letzte Erweiterung",
+      "enhancementAddTooltip": "Füge eine Erweiterung hinzu",
       "equipment": "Ausrüstung",
       "eternityShard": "Ewigkeitssplitter",
       "explosionCancelled": "Du bist benachteiligt, der erste Bonuswürfel wurde nicht angerechnet, bist aber nicht länger benachteiligt. ",
       "explosives": "Sprengstoffe",
       "fatigue": "Erschöpfung",
+      "fatigueTooltip": "Anklicken, um Ermüdungsschaden anzuwenden",
       "favDis": "Bevorzugt & benachteiligt heben sich gegeneinander auf.",
       "favored": "Bevorzugt",
+      "favoredTitle": "Markiere dies, wenn die Fertigkeit begünstigt ist",
       "firearms": "Feuerwaffen",
+      "firedamage": "Verursacht Feuerschaden",
       "freePoss": "SL schenkt dir eine Möglichkeit!",
       "gear": "Ausrüstung",
       "generalGear": "Allgemeine Ausrüstung",
@@ -636,6 +714,7 @@
       "implants": "Implantate",
       "inactiveEffects": "Inaktive Effekte",
       "inputExisting": "Vorheriger Würfelbonus",
+      "inputExistingTooltip": "Wähle, ob du (1) für einen Bonus würfeln oder (2) einen zuvor generierten Bonus eingeben willst, wenn du eine Mehrfachaktion versuchst.",
       "inputExistingRdbTitle": "Bei einer Mehrfachaktion hier auswählen.",
       "inputExistingTitle": "Hier den vorherigen WÜRFELBONUS eingeben, nicht den Wurf an sich.",
       "interactionAttacks": "Interaktionsangriffe",
@@ -645,6 +724,8 @@
       "lastPossMess": "<h3>Dies ist deine letzte Möglichkeit, willst du sie wirklich ausgeben?<br>Are You sure ?</h3>",
       "lastSpent": "Letzte Möglichkeit ausgegeben!",
       "limitations": "Einschränkungen",
+      "limitationsAddTooltip": "Verfügbare Einschränkung am Ende der Liste hinzufügen",
+      "limitationsRemoveTooltip": "Letzte verfügbare Beschränkung entfernen",
       "longBurst": "Lang (+4)",
       "magic": "Magie",
       "melee": "Bewaffneter Kampf",
@@ -680,16 +761,19 @@
       "possibilityByCosm": "Möglichkeiten nach Cosm",
       "possibilitypotential": "Möglichkeiten (Potential)",
       "possSpent": " Möglichkeit ausgegeben.",
+      "possGrant": "Du gewährst eine Möglichkeit!",
       "powers": "Kräfte",
       "psionic": "Psionisch",
       "psionicPower": "Psikraft",
       "psionicPowers": "Psikräfte",
+      "quantity": "Anzahl",
       "race": "Volk",
       "range": "Reichweite",
       "return": "Zurück",
       "roll": "Würfeln",
       "run": "Laufen",
       "running": "Laufen (-2)",
+      "secondaryAxiom": "Sekundäres Axiom",
       "secondaryCosm": "Sekundäres Cosm",
       "shield": "Schild",
       "shields": "Schilde",
@@ -698,8 +782,8 @@
       "size": "Größe",
       "skill": "Fertigkeit",
       "skillAdds": "Fertigkeitsstufen",
-      "skillRollHint": "Umschalt-Klick für erweiterten Fähigkeitstest",
-      "skills": "Fertigkeit",
+      "skillRollHint": "Click für eine Probe",
+      "skills": "Fertigkeiten",
       "skillValue": "Fertigkeitswert",
       "soakAll": "Du steckst alle Wunden und Schock weg.",
       "soakDamage": "Schaden wegstecken",
@@ -737,13 +821,14 @@
       "unarmed": "Unbewaffnet",
       "unspent": "nicht ausgegeben",
       "up": "Oberhand",
-      "update": "Update",
+      "update": "Aktualisieren",
       "usePreviousBonusLegend": "Wähle, ob du (1) würfeln willst oder (2) einen zuvor gewürfelten Bonus eingibst, wenn du eine Mehrfachaktion versuchst.",      
       "usePreviousBonustitle": "Wenn du eine Mehrfachaktion durchführst, setze hier einen Haken und trage den Bonus des letzten Würfelwurfs ein.",
       "usePreviousBonusText": "Trage den BONUS ein, nicht die Augenzahl des Würfels!",
       "vehicle": "Fahrzeug",
       "vehicles": "Fahrzeuge",
       "vitalArea": "Schwerer Treffer",
+      "vitalAreaTooltip": "+4 Damage",
       "walking": "Gehen (keine)",
       "weapons": "Waffen",
       "wounds": "Wunden",
@@ -767,12 +852,28 @@
       "veryLarge": "Sehr groß",
       "verySmall": "Sehr klein"
     },
+    "blastRadi": {
+      "small": "Klein",
+      "medium": "Mittel",
+      "large": "Groß",
+      "veryLarge": "Sehr Groß",
+      "huge": "Riesig"
+    },
+    "levelDifferences": {
+      "1+": "Eine Stufe mehr",
+      "2+": "Zwei Stufen mehr",
+      "3+": "Drei Stufen mehr",
+      "1-": "Eine Stufe weniger",
+      "2-": "Zwei Stufen weniger",
+      "3-": "Drei Stufen weniger"
+    },
     "skillDialogs": {
       "disfavored": "Benachteiligt",
       "disfavoredTip": "Anhaken, wenn der Wurf benachteiligt ist. Der Würfelwurf wird dann nicht auf einer 10 oder 20 explodieren.",
       "favored": "Begünstigt",
       "favoredanddisfavored": "Begünstigt/Benachteiligt",
-      "favoredTip": "Setze hier einen Haken, sofern die Probe aus welchen Gründen auch immer im Nachhinein begünstigt wird."
+      "favoredTip": "Setze hier einen Haken, sofern die Probe aus welchen Gründen auch immer im Nachhinein begünstigt wird.",
+      "favoredChoice": "Bevorzugt oder nicht"
     },
     "skills": {
       "airVehicles": "Luftfahrzeuge",
@@ -895,6 +996,11 @@
       "vulnerable": "Verwundbar",
       "waiting": "Warten"
     },
+    "darknessModifiers": {
+      "dim": "Dämmrig",
+      "dark": "Dunkel",
+      "pitchBlack": "Pechschwarze Dunkelheit"
+    },
     "stymiedStates": {
       "none": "Nicht Angeschlagen",
       "stymied": "Angeschlagen",
@@ -938,10 +1044,10 @@
       "commonMacroNoChatMessageFound": "Es konnte keine Chatnachricht abgefangen werden, die weitere Verarbeitung wird abgegbrochen.",
       "fatigueMacroDealtDamage": "Folgenden Charakteren wurden Schock zugefügt:",
       "fatigueMacroCharKO": " ist damit K.O.!",
+      "fatigueMacroCharAlreadyKO": " ist bereits K.O.! Mehr Schock geht nicht.",
       "reviveMacroChatHeadline": "Schock-Erholung!",
       "reviveMacroWindowLabel1": "Wie viel Schock soll zurückgewonnen werden?",
       "reviveMacroError1": "In das Feld für die Menge wurde nichts eingegeben und auch das Kontrollkästchen war nicht aktiviert. Was soll ich tun? Abbruch.",
-      "fatigueMacroCharAlreadyKO": " ist bereits K.O.! Mehr Schock geht nicht.",
       "reviveMacroFirst": "Die folgenden Charaktere erholen sich vom Schock: ",
       "reviveMacroAlreadyFull": " ist bereits wohlauf und hat keinen Schock!",
       "reviveMacroCharRevived": " ist vollständig wiederhergestellt.",
@@ -965,14 +1071,11 @@
       "reconnectMacroZoneModifier": "Zonenmodifikator",
       "reconnectMacroZoneModifierNotDetectedTitle": "Kein Zonenmodifikator",
       "reconnectMacroZoneModifierNotDetected": "Ein Zonenmodifikator konnte nicht festgestellt werden, da die aktive Szene keine Zonen konfiguriert hat. Ändere den Modifikator im Ergebnis.",
-      "reconnectMacroStatusLiftet": "Entkoppelt-Status nach einer erfolgreichen Realitätsprobe aufgehoben."
-    }
-  },
-  "TYPES": {
-    "Card": {
-      "destiny": "Schicksal",
-      "drama": "Drama",
-      "cosm": "Cosm"
-    }
+      "reconnectMacroStatusLiftet": "Entkoppelt-Status nach einer erfolgreichen Realitätsprobe aufgehoben.",
+      "macroHub": {
+        "buttonTitle": "MacroHub",
+        "title":"Der Torg Eternity Macro Hub"
+      }
+    }    
   }
 }

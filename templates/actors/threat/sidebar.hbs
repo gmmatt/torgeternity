@@ -1,5 +1,5 @@
 <div class="threat-avatar">
-  <img src="{{actor.img}}" class="profile-img" data-edit="img" title="{{actor.name}}" />
+  <img src="{{actor.img}}" class="profile-img" data-edit="img" data-tooltip="{{actor.name}}" />
 </div>
 
 <div class="sidebar-stats">
@@ -93,7 +93,7 @@
   <div
     class='sidebar-heading
       {{ifThen (detectActiveDefense data) "activeDefense-roll-glow" "activeDefense-roll"}}'
-    title='{{localize "torgeternity.sheetLabels.defensesTip"}}'
+    data-tooltip='{{localize "torgeternity.sheetLabels.defensesTip"}}'
   >
     <i class="fas fa-shield"></i>
     {{localize 'torgeternity.sheetLabels.defenses'}}

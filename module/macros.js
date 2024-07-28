@@ -294,6 +294,131 @@ export class TorgeternityMacros {
       ui.notifications.error(e.message);
     }
   }
+
+  // Show next 1-3 drama cards to a selection of players (much of this code is stolen in others macros)
+  async dramaVision() {
+    if (!game.user.isGM) {
+      return;
+    }
+    if (game.combats.map((ccc) => ccc.round === 0)[0] || game.combats.size === 0) {
+      return ui.notifications.warn(game.i18n.localize('torgeternity.notifications.noFight'));
+    }
+
+    let applyChanges = false;
+    const users = game.users.filter((user) => user.active && !user.isGM);
+    let checkOptions = '';
+    const playerTokenIds = users.map((u) => u.character?.id).filter((id) => id !== undefined);
+    const selectedPlayerIds = canvas.tokens.controlled.map((token) => {
+      if (playerTokenIds.includes(token.actor.id)) return token.actor.id;
+    });
+
+    // Build checkbox list for all active players
+    users.forEach((user) => {
+      const checked =
+        !!user.character && selectedPlayerIds.includes(user.character.id) && 'checked';
+      checkOptions += `
+        <br>
+        <input type="checkbox" name="${user.id}" id="${user.id}" value="${user.name}" ${checked}>\n
+        <label for="${user.id}">${user.name}</label>
+    `;
+    });
+
+    // Choose the nb of cards to show
+    const mychoice = new Promise((resolve, reject) => {
+      new Dialog({
+        title: game.i18n.localize('torgeternity.dialogWindow.showingDramaCards.nbCards'),
+        content: game.i18n.localize('torgeternity.dialogWindow.showingDramaCards.nbCardsValue'),
+        buttons: {
+          1: {
+            label: 1,
+            callback: async (html) => {
+              resolve(1);
+            },
+          },
+          2: {
+            label: 2,
+            callback: async (html) => {
+              resolve(2);
+            },
+          },
+          3: {
+            label: 3,
+            callback: async (html) => {
+              resolve(3);
+            },
+          },
+        },
+      }).render(true);
+    });
+
+    const nbc = await mychoice.then((nbc) => {
+      return nbc;
+    });
+
+    // Find the Drama Deck
+    const dram = game.cards.get(game.settings.get('torgeternity', 'deckSetting').dramaDeck);
+    // Find ?? the index of the Active Drama Card in the Drama Deck
+    const ind = game.cards.get(game.settings.get('torgeternity', 'deckSetting').dramaActive)._source
+      .cards[0].sort;
+
+    new Dialog({
+      title: game.i18n.localize('torgeternity.dialogWindow.showingDramaCards.recipient'),
+      content: `${game.i18n.localize(
+        'torgeternity.dialogWindow.showingDramaCards.whisper'
+      )} ${checkOptions} <br>`,
+      buttons: {
+        whisper: {
+          label: game.i18n.localize('torgeternity.dialogWindow.showingDramaCards.apply'),
+          callback: (html) => createMessage(html),
+        },
+      },
+    }).render(true);
+
+    function createMessage(html) {
+      const targets = [];
+      // build list of selected players ids for whispers target
+      for (const user of users) {
+        if (html.find('[name="' + user.id + '"]')[0].checked) {
+          applyChanges = true;
+          targets.push(user.id);
+        }
+      }
+      if (!applyChanges) return;
+      for (let j = 0; j < nbc; j++) {
+        const card = dram.cards.find((i) => i.sort === ind + j + 1);
+        ChatMessage.create({
+          whisper: targets,
+          content: `<div class="card-draw flexrow"><span class="card-chat-tooltip"><img class="card-face" src="${
+            card.img
+          }"/><span><img src="${
+            card.img
+          }"></span></span><span class="card-name"> ${game.i18n.localize(
+            'torgeternity.dialogWindow.showingDramaCards.show'
+          )} ${card.name}</span>
+                    </div>`,
+        });
+      }
+    }
+  }
+
+  async dramaFlashback() {
+    if (!game.user.isGM) {
+      return;
+    }
+    const dramaDeck = game.cards.get(game.settings.get('torgeternity', 'deckSetting').dramaDeck);
+    const dramaDiscard = game.cards.get(
+      game.settings.get('torgeternity', 'deckSetting').dramaDiscard
+    );
+    const dramaActive = game.cards.get(
+      game.settings.get('torgeternity', 'deckSetting').dramaActive
+    );
+    const restoreOldActive = Array.from(dramaDiscard.cards).pop();
+    const removeActiveCard = Array.from(dramaActive.cards).pop();
+    removeActiveCard.pass(dramaDeck);
+    restoreOldActive.pass(dramaActive);
+    const activeImage = restoreOldActive.faces[0].img;
+    game.combats.active.setFlag('torgeternity', 'activeCard', activeImage);
+  }
   // #endregion
   /**
    *
@@ -417,6 +542,391 @@ export class TorgeternityMacros {
   async deleteAllHands() {
     for (const card of game.cards) {
       card.type === 'hand' ? await card.delete() : console.log('no hand');
+    }
+  }
+
+  // If you need to cancel a card a player just played
+  // works if the card to get back is the last message in ChatLog, and if player owns only one hand
+  async playerPlayback() {
+    if (!game.user.isGM) {
+      return;
+    }
+    let applyChanges = false;
+    const users = game.users.filter((user) => user.active && !user.isGM);
+    let checkOptions = '';
+    const playerTokenIds = users.map((u) => u.character?.id).filter((id) => id !== undefined);
+    const selectedPlayerIds = canvas.tokens.controlled.map((token) => {
+      if (playerTokenIds.includes(token.actor.id)) return token.actor.id;
+    });
+    // Build checkbox list for all active players
+    users.forEach((user) => {
+      const checked =
+        !!user.character && selectedPlayerIds.includes(user.character.id) && 'checked';
+      checkOptions += `
+            <br>
+            <input type="checkbox" name="${user.id}" id="${user.id}" value="${user.name}" ${checked}>\n
+            <label for="${user.id}">${user.name}</label>
+        `;
+    });
+    new Dialog({
+      title: game.i18n.localize('torgeternity.dialogWindow.cardRetour.cardBack'),
+      content: `${game.i18n.localize(
+        'torgeternity.dialogWindow.cardRetour.cardOwner'
+      )} ${checkOptions} <br>`,
+      buttons: {
+        whisper: {
+          label: game.i18n.localize('torgeternity.dialogWindow.showingDramaCards.apply'),
+          callback: (html) => createMessage(html),
+        },
+      },
+    }).render(true);
+
+    function createMessage(html) {
+      let target;
+      // build list of selected players ids for whispers target
+      for (const user of users) {
+        if (html.find('[name="' + user.id + '"]')[0].checked) {
+          applyChanges = true;
+          target = user;
+        }
+      }
+      if (!applyChanges) {
+        return;
+      } else {
+        const destinyDiscard = game.cards.get(
+          game.settings.get('torgeternity', 'deckSetting').destinyDiscard
+        );
+        const lastCard = destinyDiscard.cards.contents.pop();
+        const parentHand = target.character.getDefaultHand();
+        const listMessage = game.messages.contents;
+        const filtre = listMessage.filter((m) => m._source.user === target.id);
+        const lastMessage = filtre.pop();
+        lastCard.pass(parentHand);
+        if (lastCard) {
+          ChatMessage.deleteDocuments([lastMessage.id]);
+        }
+      }
+    }
+  }
+
+  // create effects related with your choice, Defense/specific Attribute/All attributes
+  // if any value change (attribute or add or limitation) erase the effects and redo it
+  async torgBuff() {
+    // target is the selected token, mandatory for the GM, or the player's character if no selection
+    const actorID = _token?.actor ?? game.user.character;
+
+    // Choose the attribute you want to modify
+    const mychoice = new Promise((resolve, reject) => {
+      new Dialog({
+        title: game.i18n.localize('torgeternity.dialogWindow.buffMacro.choice'),
+        content: game.i18n.localize('torgeternity.dialogWindow.buffMacro.choose'),
+        buttons: {
+          mind: {
+            label: game.i18n.localize('torgeternity.attributes.mind'),
+            callback: async (html) => {
+              resolve('mind');
+            },
+          },
+          strength: {
+            label: game.i18n.localize('torgeternity.attributes.strength'),
+            callback: async (html) => {
+              resolve('strength');
+            },
+          },
+          charisma: {
+            label: game.i18n.localize('torgeternity.attributes.charisma'),
+            callback: async (html) => {
+              resolve('charisma');
+            },
+          },
+          spirit: {
+            label: game.i18n.localize('torgeternity.attributes.spirit'),
+            callback: async (html) => {
+              resolve('spirit');
+            },
+          },
+          dexterity: {
+            label: game.i18n.localize('torgeternity.attributes.dexterity'),
+            callback: async (html) => {
+              resolve('dexterity');
+            },
+          },
+          curse: {
+            label: game.i18n.localize('torgeternity.dialogWindow.buffMacro.allAttributes'),
+            callback: async (html) => {
+              resolve('all');
+            },
+          },
+          physicalDefense: {
+            label: game.i18n.localize('torgeternity.dialogWindow.buffMacro.physicalDefenses'),
+            callback: async (html) => {
+              resolve('physicalDefense');
+            },
+          },
+          defense: {
+            label: game.i18n.localize('torgeternity.sheetLabels.defenses'),
+            callback: async (html) => {
+              resolve('defense');
+            },
+          },
+          cancel: {
+            label: game.i18n.localize('torgeternity.dialogWindow.buffMacro.cancelEffects'),
+            callback: async (html) => {
+              resolve('cancel');
+            },
+          },
+        },
+      }).render(true);
+    });
+    const attr = await mychoice.then((attr) => {
+      return attr;
+    });
+
+    if (attr === 'cancel') {
+      ui.notifications.warn('MacroEffects removed');
+      const delEffects = actorID.effects
+        .filter((e) => e.name.includes('rd(s)'))
+        .filter((e) => e.name.includes(' / '));
+      delEffects.forEach((e) => e.delete());
+      return;
+    }
+
+    // choose the bonus you expect
+    const mybonus = new Promise((resolve, reject) => {
+      new Dialog({
+        title: game.i18n.localize('torgeternity.dialogWindow.buffMacro.bonusTitle'),
+        content: `<div>${game.i18n.localize(
+          'torgeternity.dialogWindow.buffMacro.value'
+        )} <input name="bonu" value=1 style="width:50px"/></div>`,
+        buttons: {
+          1: {
+            label: game.i18n.localize('torgeternity.dialogWindow.showingDramaCards.apply'),
+            callback: (html) => {
+              const bonu = parseInt(html.find('[name=bonu]')[0].value);
+              resolve(bonu);
+            },
+          },
+        },
+      }).render(true);
+    });
+    const bonu = await mybonus.then((bonu) => {
+      return bonu;
+    });
+
+    // choose the duration of the effect
+    const mytime = new Promise((resolve, reject) => {
+      new Dialog({
+        title: game.i18n.localize('torgeternity.dialogWindow.buffMacro.timeLabel'),
+        content: `<div>${game.i18n.localize(
+          'torgeternity.dialogWindow.buffMacro.time'
+        )} <input name="dur" value=1 style="width:50px"/></div>`,
+        buttons: {
+          1: {
+            label: game.i18n.localize('torgeternity.dialogWindow.showingDramaCards.apply'),
+            callback: (html) => {
+              const dur = parseInt(html.find('[name=dur]')[0].value);
+              resolve(dur);
+            },
+          },
+        },
+      }).render(true);
+    });
+    const dur = await mytime.then((dur) => {
+      return dur;
+    });
+
+    if (attr === 'defense') {
+      // only Defenses, but ALL defenses
+      const newEffect = {
+        name:
+          game.i18n.localize('torgeternity.dialogWindow.buffMacro.defense') +
+          ' / ' +
+          bonu +
+          ' / ' +
+          dur +
+          'rd(s)',
+        duration: { rounds: dur, turns: dur },
+        changes: [
+          {
+            key: 'system.dodgeDefenseMod',
+            value: bonu,
+            mode: 2,
+          },
+          {
+            key: 'system.meleeWeaponsDefenseMod',
+            value: bonu,
+            mode: 2,
+          },
+          {
+            key: 'system.unarmedCombatDefenseMod',
+            value: bonu,
+            mode: 2,
+          },
+          {
+            key: 'system.intimidationDefenseMod',
+            value: bonu,
+            mode: 2,
+          },
+          {
+            key: 'system.maneuverDefenseMod',
+            value: bonu,
+            mode: 2,
+          },
+          {
+            key: 'system.tauntDefenseMod',
+            value: bonu,
+            mode: 2,
+          },
+          {
+            key: 'system.trickDefenseMod',
+            value: bonu,
+            mode: 2,
+          },
+        ],
+        disabled: false,
+      };
+      // Aspect modifications related to bonus/malus
+      switch (bonu < 0) {
+        case true:
+          newEffect.tint = '#ff0000';
+          newEffect.icon = 'icons/svg/downgrade.svg';
+          break;
+        default:
+          newEffect.tint = '#00ff00';
+          newEffect.icon = 'icons/svg/upgrade.svg';
+      }
+      await actorID.createEmbeddedDocuments('ActiveEffect', [newEffect]);
+    } // ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    else if (attr === 'physicalDefense') {
+      // only physical Defenses
+      const newEffect = {
+        name:
+          game.i18n.localize('torgeternity.dialogWindow.buffMacro.defense') +
+          ' / ' +
+          bonu +
+          ' / ' +
+          dur +
+          'rd(s)',
+        duration: { rounds: dur, turns: dur },
+        changes: [
+          {
+            key: 'system.dodgeDefenseMod',
+            value: bonu,
+            mode: 2,
+          },
+          {
+            key: 'system.meleeWeaponsDefenseMod',
+            value: bonu,
+            mode: 2,
+          },
+          {
+            key: 'system.unarmedCombatDefenseMod',
+            value: bonu,
+            mode: 2,
+          },
+        ],
+        disabled: false,
+      };
+      // Aspect modifications related to bonus/malus
+      switch (bonu < 0) {
+        case true:
+          newEffect.tint = '#ff0000';
+          newEffect.icon = 'icons/svg/downgrade.svg';
+          break;
+        default:
+          newEffect.tint = '#00ff00';
+          newEffect.icon = 'icons/svg/upgrade.svg';
+      }
+      await actorID.createEmbeddedDocuments('ActiveEffect', [newEffect]);
+    } // ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    else if (attr === 'all') {
+      // preparation of attribute effect
+      const newEffect = {
+        name:
+          game.i18n.localize('torgeternity.dialogWindow.buffMacro.allAtrubtes') +
+          ' / ' +
+          bonu +
+          ' / ' +
+          dur +
+          'rd(s)',
+        duration: { rounds: dur, turns: dur },
+        changes: [
+          {
+            key: 'system.attributes.mind.value',
+            value: bonu,
+            mode: 2,
+          },
+          {
+            key: 'system.attributes.spirit.value',
+            value: bonu,
+            mode: 2,
+          },
+          {
+            key: 'system.attributes.strength.value',
+            value: bonu,
+            mode: 2,
+          },
+          {
+            key: 'system.attributes.dexterity.value',
+            value: bonu,
+            mode: 2,
+          },
+          {
+            key: 'system.attributes.charisma.value',
+            value: bonu,
+            mode: 2,
+          },
+        ],
+        disabled: false,
+      };
+      // Aspect modifications related to bonus/malus
+      switch (bonu < 0) {
+        case true:
+          newEffect.tint = '#ff0000';
+          newEffect.icon = 'icons/svg/downgrade.svg';
+          break;
+        default:
+          newEffect.tint = '#00ff00';
+          newEffect.icon = 'icons/svg/upgrade.svg';
+      }
+
+      // at last, create the effect
+      await actorID.createEmbeddedDocuments('ActiveEffect', [newEffect]);
+    } else {
+      // One attribute
+      // preparation of attribute effect
+      const newEffect = {
+        name:
+          game.i18n.localize('torgeternity.attributes.' + attr) +
+          ' / ' +
+          bonu +
+          ' / ' +
+          dur +
+          'rd(s)',
+        duration: { rounds: dur, turns: dur },
+        changes: [
+          {
+            key: 'system.attributes.' + attr + '.value',
+            value: bonu,
+            mode: 2,
+          },
+        ],
+        disabled: false,
+      };
+
+      // Aspect modifications related to bonus/malus
+      switch (bonu < 0) {
+        case true:
+          newEffect.tint = '#ff0000';
+          newEffect.icon = 'icons/svg/downgrade.svg';
+          break;
+        default:
+          newEffect.tint = '#00ff00';
+          newEffect.icon = 'icons/svg/upgrade.svg';
+      }
+
+      // at least, create the effect
+      await actorID.createEmbeddedDocuments('ActiveEffect', [newEffect]);
     }
   }
 }

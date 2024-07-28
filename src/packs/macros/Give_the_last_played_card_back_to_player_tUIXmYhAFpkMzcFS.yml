@@ -1,0 +1,24 @@
+name: Give the last played card back to player
+type: script
+command: game.torgeternity.macros.playerPlayback()
+img: icons/svg/up.svg
+author: RqPNkwrogJP7Mmsh
+scope: global
+folder: null
+ownership:
+  default: 0
+  RqPNkwrogJP7Mmsh: 3
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '12.327'
+  systemId: torgeternity
+  systemVersion: 12.2.0
+  createdTime: 1721906215674
+  modifiedTime: 1721906215674
+  lastModifiedBy: RqPNkwrogJP7Mmsh
+_id: tUIXmYhAFpkMzcFS
+sort: 0
+_key: '!macros!tUIXmYhAFpkMzcFS'
+

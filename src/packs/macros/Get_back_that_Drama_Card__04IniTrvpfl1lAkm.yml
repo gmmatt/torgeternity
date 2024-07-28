@@ -1,0 +1,24 @@
+name: Get back that Drama Card!
+type: script
+command: game.torgeternity.macros.dramaFlashback()
+img: icons/svg/direction.svg
+author: RqPNkwrogJP7Mmsh
+scope: global
+folder: null
+ownership:
+  default: 0
+  RqPNkwrogJP7Mmsh: 3
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '12.327'
+  systemId: torgeternity
+  systemVersion: 12.2.0
+  createdTime: 1721902818586
+  modifiedTime: 1721902818605
+  lastModifiedBy: RqPNkwrogJP7Mmsh
+_id: 04IniTrvpfl1lAkm
+sort: 500000
+_key: '!macros!04IniTrvpfl1lAkm'
+

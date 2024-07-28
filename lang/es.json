@@ -26,6 +26,12 @@
       "spirit": "Espíritu",
       "strength": "Fuerza"
     },
+    "axioms": {      
+      "magic": "Mágico",
+      "social": "Social",
+      "spirit": "Espiritual",
+      "tech": "Tecno."      
+    },
     "cardTypes": {
       "activeDrama": "Active Drama Card",
       "cosm": "Cosmos",
@@ -107,6 +113,11 @@
       "heroCard": "Carta Héroe",
       "hideDetails": "Hide Details",
       "modifiers": "Modificadores",
+      "noAmmo": "Failed to fire your weapon, no bullets left.",
+      "noAmmoPosessing": "You do not have any ammunitions in your inventory. Failed to proceed.",
+      "notSufficientAmmo": "You do not have a sufficent amount of bullets in your weapon to use this burst attack, this test cannot be performed.",
+      "reloaded": "You have reloaded your weapon {a}.",
+      "ammoLabel": "Bullets left",
       "notes": "Notas",
       "passesCard1": "Passes",
       "passesCard2": "to",
@@ -122,7 +133,8 @@
       "up": "AUMEN",
       "value": "Valor",
       "vehicleBase": "Vehicle Operation Test",
-      "mayCauseContradiction": "Perks with this symbol are dependent on their cosm’s World Laws and can cause Contradictions outside that cosm."
+      "mayCauseContradiction": "Perks with this symbol are dependent on their cosm’s World Laws and can cause Contradictions outside that cosm.",
+      "ammoFull": "The weapon \"{a}\" is already fully loaded."
     },
     "clearances": {
       "alpha": "Alfa",
@@ -135,7 +147,10 @@
       "dramaBack": "systems/torgeternity/images/cards/drama-back.webp",
       "endMyTurn": "Done",
       "nextKeep": "Sigu. Turno (Mantener Carta)",
-      "nextNew": "Sigu. Turno (Nueva Carta)"
+      "nextNew": "Sigu. Turno (Nueva Carta)",
+      "herosTooltip": "heros first",
+      "vilainsTooltip": "vilains first",
+      "hasPlayedTooltip": "Check when character's turn is complete"
     },
     "cosmDecks": {
       "aysle": "Mazo Cosmos Aysle",
@@ -228,6 +243,37 @@
       "buttons": {
         "execute": "Ejecute",
         "ok": "OK"
+      },
+      "chooseAmmo": {
+        "maintext": "Please choose the ammunition you want to use to reload your weapon.",
+        "windowTitle": "Choose ammo"
+      },
+      "dragDropDriver": {
+        "maintext": "Does this character want to drive this vehicle?",
+        "windowTitle": "Set a driver"
+      },
+      "showingDramaCards": {
+        "nbCards":"Quantity of cards",
+        "nbCardsValue":"Number of cards to show to player",
+        "recipient":"Choice of whisper's recipient",
+        "whisper":"Whisper to checked active player",
+        "apply":"Apply",
+        "show":"Next card(s)"
+      },
+      "cardRetour": {
+        "cardBack":"Card goes back after missplay",
+        "cardOwner":"Who will get the card back ?"        
+      },
+      "buffMacro": {
+        "choice":"Your choice",
+        "choose":"Which attribute do you want to modify ?",
+        "allAttributes":"All attributes",
+        "physicalDefenses" : "Physical defenses",
+        "cancelEffects": "Cancel effects",
+        "bonusTitle":"Input the bonus/malus's value",
+        "value":"Choose the value for the bonus",
+        "timeLabel":"Duration choice",
+        "time":"Choose the duration in round(s)"
       }
     },
     "dnTypes": {
@@ -284,6 +330,7 @@
     },
     "gear": {
       "ammo": "Munición",
+      "ammunition": "Munición",
       "ap": "PA",
       "armor": "Armor",
       "attackWith": "Ataca con",
@@ -332,7 +379,10 @@
       "miracleRoll": "Tirar Milagro",
       "openParty": "Abrir hoja de grupo",
       "psionicRoll": "Tirar poder Psiónico",
+      "reload": "Reload weapon",
       "resetPossibilities": "Reiniciar posibilidad Caballeros",
+      "GMPoss": "GM's possibility pool",
+      "SKPoss": "character's possibilities",
       "sendToChat": "Enviar al Chat",
       "spellRoll": "Tirar Conjuro",
       "toggle": "Cambiar",
@@ -340,6 +390,7 @@
     },
     "itemSheetDescriptions": {
       "armor": "Armadura",
+      "ammunition": "Ammunition",
       "customAttack": "Ataque Personalizado",
       "customSkill": "Hab. Personalizada",
       "enhancement": "Mejoras",
@@ -374,6 +425,7 @@
       "play": "Jugar carta"
     },
     "notifications": {
+      "beginningMigration": "Migrating Torg system version to ",
       "defaultAction": "Default action, Gear for example",
       "dramaDeckEmpty": "The Drama Deck is empty. Reset the Drama Deck to continue.",
       "macroTypeWarning": "You can only create macro buttons for owned Items and Attributes/Skills",
@@ -390,7 +442,11 @@
       "openDiscord": "Your browser will open a new page to join us on our discord server ",
       "openIssue": "Your browser will open a new page to complete an issue",
       "openUlisses": "Your browser will open a new tab to join Ulisses website",
-      "failureBDResolution": "The system failed to resolute the BD"
+      "failureBDResolution": "The system failed to resolute the BD",
+      "ammoValueExceedsMax": "The actual ammo value of the weapon {a} exceeds it's max value. The value will be reduced to it's maximum.",
+      "noPossibility": "There is no possibility left",
+      "noCapacity": "{a} can't pilote this kind of vehicle!",
+      "noFight": "No activefight, or not started"
     },
     "packs": {
       "basicRules": "torgeternity.basic-rules",
@@ -574,8 +630,12 @@
       "addOns": "Add-Ons",
       "adds": "Adición",
       "aimed": "Apuntado",
+      "aimedTooltip": "Aimed Shot (ranged attacks only)",
       "allOut": "Ataque Total",
+      "allOutTooltip": "+4 Bonus/Very Vulnerable (Melee and unarmed attacks only)",
       "alterAttributes": "Ahora puede cambiar los atributos",
+      "ammunition": "Ammunition",
+      "APMod": "AP Modifier",
       "applyDamage": "Apply damages",
       "applyDamageTooltip": "Right-click to modify applied damages, Left-click to apply.",
       "applyStymied": "Apply Stymied",
@@ -594,8 +654,11 @@
       "backgroundDescription": "Trasfondo",
       "baseAttribute": "Atrib. Base",
       "baseRoll": "Roll",
+      "blastRadius": "Blast Radius",
       "blindFire": "Fuego a Ciegas",
+      "blindFireTooltip": "Location of target only generally known",
       "burst": "Ráfaga",
+      "burstTooltip": "Automatic weapons only",
       "calledShot": "Tiro Preciso",
       "chase": "Chase",
       "chooseDamage": "Choose damages inflicted.",
@@ -605,9 +668,11 @@
       "concealment": "Cobertura",
       "cosm": "Cosmos",
       "coverBonus": "Mod. Cobertura",
+      "coverBonusTooltip": "Bonus added to target toughness as a result of cover",
       "customSkill": "Custom skills can be edited in the Perks tab",
       "customSkills": "Hab. Personalizada",
       "damageAP": "Dmg (AP)",
+      "damageMod": "Damagemodifier",
       "defense": "Defense",
       "defenses": "Defensa",
       "defensesTip": "Click to roll for/disable active defenses",
@@ -624,14 +689,20 @@
       "end": "Fin",
       "enhancement": "Mejora",
       "enhancements": "Mejoras",
+      "enhancementTooltip": "Check if enhancement has been selected by Storm Knight",
+      "enhancementRemoveTooltip": "Remove last available enhancement",
+      "enhancementAddTooltip": "Add available enhancement to end of list",
       "equipment": "Equipo",
       "eternityShard": "Fragmento Eternidad",
       "explosionCancelled": "You were disfavored, first bonus die has been cancelled, but you're no more disfavored. ",
       "explosives": "Explosivos",
       "fatigue": "Fatiga",
+      "fatigueTooltip": "Click to apply fatigue",
       "favDis": "Favored & Disfavored cancel each other.",
       "favored": "Preferente",
+      "favoredTitle": "Check this if the skill is favored",
       "firearms": "Armas Fuego",
+      "firedamage": "Causes Firedamage",
       "freePoss": " GM grants a possibility!",
       "gear": "Equipo",
       "generalGear": "Equipo",
@@ -643,6 +714,7 @@
       "implants": "Implantes",
       "inactiveEffects": "Efecto Inactivo",
       "inputExisting": "Valor Directo",
+      "inputExistingTooltip": "Choose whether to (1) roll for a bonus number or (2) input a previously generated bonus when attempting a multi-action.",
       "inputExistingTitle": "Input BONUS NUMBER from previous test, not die total.",
       "inputExistingRdbTitle": "Cuando participe en multiacciones, marque esta casilla para introducir el número de bonificación de una prueba anterior.",
       "interactionAttacks": "Ataque Interacción",
@@ -652,6 +724,8 @@
       "lastPossMess": "<h3> This is your last possibility, do you confirm ?<br>Are You Sure ?</h3>",
       "lastSpent": " Last possibility spent!",
       "limitations": "Limitaciones",
+      "limitationsAddTooltip": "Add available limitation to end of list",
+      "limitationsRemoveTooltip": "Remove last available limitation",
       "longBurst": "Larga (+4)",
       "magic": "Mágico",
       "melee": "Cuerpo a Cuerpo",
@@ -687,16 +761,19 @@
       "possibilityByCosm": "Cosmos posibilidades",
       "possibilitypotential": "Posibilidad (Potencial)",
       "possSpent": " Possibility spent.",
+      "possGrant": " You grant a possibility !",
       "powers": "Poderes",
       "psionic": "Psiónica",
       "psionicPower": "Poder Psiónico",
       "psionicPowers": "Poderes Psiónicos",
+      "quantity": "Quantity",
       "race": "Raza",
       "range": "Range",
       "return": "Retornar",
       "roll": "Tirar",
       "run": "Carrera",
       "running": "Correr (-2)",
+      "secondaryAxiom": "Secondary Axiom",
       "secondaryCosm": "Cosmos Secundario",
       "shield": "Escudo",
       "shields": "Escudos",
@@ -705,7 +782,7 @@
       "size": "Tamaño",
       "skill": "Skill",
       "skillAdds": "Adición",
-      "skillRollHint": "Clic Izq. tirada avanzada",
+      "skillRollHint": "Click for Skill Test",
       "skills": "Habilidades",
       "skillValue": "Valor Hab.",
       "soakAll": "You will soak all wounds and shocks.",
@@ -751,6 +828,7 @@
       "vehicle": "Vehículo",
       "vehicles": "Vehículos",
       "vitalArea": "Golpe Vital",
+      "vitalAreaTooltip": "+4 Daño",
       "walking": "Normal (0)",
       "weapons": "Armas",
       "wounds": "Heridas",
@@ -774,12 +852,28 @@
       "veryLarge": "Muy Grande",
       "verySmall": "Muy Pequeño"
     },
+    "blastRadi": {
+      "small": "Small",
+      "medium": "Medium",
+      "large": "Large",
+      "veryLarge": "Very Large",
+      "huge": "Huge"
+    },
+    "levelDifferences": {
+      "1+": "One level more",
+      "2+": "Two levels more",
+      "3+": "Three levels more",
+      "1-": "One level less",
+      "2-": "Two levels less",
+      "3-": "Three levels less"
+    },
     "skillDialogs": {
       "disfavored": "Disfavored",
       "disfavoredTip": "Check if this test is disfavored. The die roll will not explode on a 10 or 20.",
       "favored": "Favored",
       "favoredanddisfavored": "(Dis-)Favored",
-      "favoredTip": "Check if this test is favored for some unexpected reason."
+      "favoredTip": "Check if this test is favored for some unexpected reason.",
+      "favoredChoice": "Favored or not"
     },
     "skills": {
       "airVehicles": "Vehículos Aéreos",
@@ -902,6 +996,11 @@
       "vulnerable": "Vulnerable",
       "waiting": "Espera"
     },
+    "darknessModifiers": {
+      "dim": "Dim",
+      "dark": "Dark",
+      "pitchBlack": "Pitch Black"
+    },
     "stymiedStates": {
       "none": "No Impedido",
       "stymied": "Impedido",
@@ -945,10 +1044,10 @@
       "commonMacroNoChatMessageFound": "No se ha podido interceptar ningún mensaje de chat, se cancela el procesamiento posterior.",
       "fatigueMacroDealtDamage": "Los siguientes personajes han sufrido un shock:",
       "fatigueMacroCharKO": " está noqueado!",
+      "fatigueMacroCharAlreadyKO": " ¡ya está noqueado! Más choque no es posible.",
       "reviveMacroChatHeadline": "¡Recuperación de choque!",
       "reviveMacroWindowLabel1": "c¿Cuánto choque debe recuperarse?",
       "reviveMacroError1": "No se ha introducido nada en el campo de la cantidad y la casilla de verificación no está marcada. ¿Qué debo hacer? Cancelar.",
-      "fatigueMacroCharAlreadyKO": " ¡ya está noqueado! Más choque no es posible.",
       "reviveMacroFirst": "Los siguientes personajes se recuperan del shock: ",
       "reviveMacroAlreadyFull": " ¡ya está bien y no tiene sobresaltos!",
       "reviveMacroCharRevived": " está totalmente restablecido.",
@@ -972,7 +1071,11 @@
       "reconnectMacroZoneModifier": "Modificador de zona",
       "reconnectMacroZoneModifierNotDetectedTitle": "Sin modificador de zona",
       "reconnectMacroZoneModifierNotDetected": "No se ha podido detectar un modificador de zona porque la escena activa no tiene zonas configuradas. Cambie el modificador en el resultado.",
-      "reconnectMacroStatusLiftet": "Estado desacoplado cancelado tras una comprobación de la realidad satisfactoria."
-    }
+      "reconnectMacroStatusLiftet": "Estado desacoplado cancelado tras una comprobación de la realidad satisfactoria.",
+      "macroHub": {
+        "buttonTitle": "MacroHub",
+        "title":"The Torg Eternity Macro Hub"
+      }
+    }    
   }
 }

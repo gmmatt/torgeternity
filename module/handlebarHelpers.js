@@ -146,14 +146,14 @@ export function registerHelpers() {
               ', ' +
               '<span class="pool-tooltip">' +
               hand.contents[i].name +
-              "<span><img src='" +
+              "<span class='pool-tooltip-spanimage'><img src='" +
               hand.contents[i].img +
               "'></span></span>";
           } else {
             poolList =
               "<span class='pool-tooltip'>" +
               hand.contents[i].name +
-              "<span><img src='" +
+              "<span class='pool-tooltip-image'><img src='" +
               hand.contents[i].img +
               "'></span></span>";
             // poolList = hand.document.availableCards[i].data.name;
@@ -210,10 +210,5 @@ export function registerHelpers() {
 
   Handlebars.registerHelper('getOptionBoolean', function (optionName) {
     return game.settings.get('torgeternity', optionName);
-  });
-  // Enrich html content for having beautiful links instead of raw @UUID things
-  Handlebars.registerHelper('enrich', function (content) {
-    const enriched = TextEditor.enrichHTML(content, { async: false });
-    return new Handlebars.SafeString(enriched);
   });
 }

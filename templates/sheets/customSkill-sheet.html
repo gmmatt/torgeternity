@@ -4,7 +4,7 @@
   </h3>
 
   <header class="sheet-header">
-    <img src="{{item.img}}" data-edit="img" title="{{item.name}}" />
+    <img src="{{item.img}}" data-edit="img" data-tooltip="{{item.name}}" />
     <h1><input name="name" type="text" value="{{item.name}}" placeholder="Custom Skill Name" /></h1>
   </header>
 
@@ -30,7 +30,7 @@
 
           <p class="item-data-label">{{localize "torgeternity.sheetLabels.baseAttribute"}}</p>
           <select name="system.baseAttribute" class="input-box">
-            {{selectOptions config.attributeTypes selected=item.system.baseAttribute localize=true}}
+            {{selectOptions config.attributeTypes selected=item.system.baseAttribute localize=true sort=true}}
           </select>
 
           <p class="item-data-label">{{localize "torgeternity.sheetLabels.favored"}}</p>
@@ -39,8 +39,8 @@
             name="system.isFav"
             {{checked
             item.system.isFav}}
-            title="Favored or not" 
-          /> <!--TODO: Localize-->
+            data-tooltip="{{localize 'torgeternity.skillDialogs.favoredChoice'}}"
+          />
         </div>
         <div class="main-content">
           <div name="system.description" class="item-description-textarea">

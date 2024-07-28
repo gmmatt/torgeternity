@@ -1,5 +1,27 @@
 # TORG Eternity Changelog
 
+## v. 12.2.0
+
+- Ammunition is now handled. The value of a weapon with ammo is now reduced according to the amount of bullets a shot takes (i.e. burst shots). A weapon can now be equipped with a general gear item like an _Ammo Belt_ that will be consumed if you click the reload button on the weapon. [#36](https://github.com/gmmatt/torgeternity/issues/36). Please be aware that the values in the ammunition item don't have any effects _yet_, as this is an [issue](https://github.com/gmmatt/torgeternity/issues/428) for later.
+  - On this cause we've thrown the BD button on each item out. It was a relic from the old days that is no longer needed because of the handling by chat cards.
+- A secondary axiom is now selectable on most items [#46](https://github.com/gmmatt/torgeternity/issues/46)
+- Weapons do now have a minimum strength value, that is computed alongside minStr of armor items. [#116](https://github.com/gmmatt/torgeternity/issues/116)
+- Alphabetical sorting of HTML select & options tag [#160](https://github.com/gmmatt/torgeternity/issues/160)
+- It is now possible to drag & drop "non-vehicle-actors" on vehicles to set the actor as the driver of the vehicle (with all values).
+- By clicking on the "Done" button as a player during a combat in the combat tracker, active effects are now handled and taken off automaticaly. Threats can be treated in the same way if you're ticking the checkmark in the combat tracker as the gm!
+- New macro for showing the next 1-3 cards per chat whisper to player(s)
+- New macro for getting back the previous drama card (in case if the player plays a "Seize initiative" card when you've picked already a new drama card)
+- New macro to give a player the **last** played card back.
+- A new buff macro that will easily choose an effect, that will be applied to your character for a specific amount of rounds.
+  (All of the above concerned issue [#351](https://github.com/gmmatt/torgeternity/issues/351))
+- Bug quishing and style issues:
+  - Fixed the archetypes' missile weapon category
+  - used async enrichment for description fields [#429](https://github.com/gmmatt/torgeternity/issues/429)
+  - Moved the hover pooled card in combat tracker out to the left edge that might give a better view on the combat tracker itself [[#131](https://github.com/gmmatt/torgeternity/issues/131)]
+  - Relocated where minStr and maxDex are stored to keep the partysheet clean [#433](https://github.com/gmmatt/torgeternity/issues/433)
+  - Clicking the dice images in a chatcard no longer hides them [#433](https://github.com/gmmatt/torgeternity/issues/334)
+  - Corrected a classhandling with foundry form fields [#436](https://github.com/gmmatt/torgeternity/issues/436)
+
 ## v. 12.1.4
 
 - Fixing a bug where the damage of powers weren't processed correctly

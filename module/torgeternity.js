@@ -40,6 +40,7 @@ import * as actorDataModels from './data/actor/index.js';
 import * as itemDataModels from './data/item/index.js';
 import * as cardDataModels from './data/card/index.js';
 import TorgActiveEffect from './documents/active-effect/torgActiveEffect.js';
+import MacroHub from './MacroHub.js';
 
 Hooks.once('init', async function () {
   console.log('torgeternity | Initializing Torg Eternity System');
@@ -95,6 +96,7 @@ Hooks.once('init', async function () {
     vehicle: game.i18n.localize('torgeternity.sheetLabels.vehicle'),
   };
   CONFIG.Item.typeLabels = {
+    ammunition: game.i18n.localize('torgeternity.itemSheetDescriptions.ammunition'),
     gear: game.i18n.localize('torgeternity.itemSheetDescriptions.generalGear'),
     eternityshard: game.i18n.localize('torgeternity.itemSheetDescriptions.eternityshard'),
     armor: game.i18n.localize('torgeternity.itemSheetDescriptions.armor'),
@@ -105,7 +107,7 @@ Hooks.once('init', async function () {
     firearm: game.i18n.localize('torgeternity.itemSheetDescriptions.firearm'),
     implant: game.i18n.localize('torgeternity.itemSheetDescriptions.implant'),
     heavyweapon: game.i18n.localize('torgeternity.itemSheetDescriptions.heavyWeapon'),
-    vehicle: game.i18n.localize('torgeternity.itemSheetDescriptions.vehicule'),
+    vehicle: game.i18n.localize('torgeternity.itemSheetDescriptions.vehicle'),
     perk: game.i18n.localize('torgeternity.itemSheetDescriptions.perk'),
     enhancement: game.i18n.localize('torgeternity.itemSheetDescriptions.enhancement'),
     specialability: game.i18n.localize('torgeternity.itemSheetDescriptions.specialability'),
@@ -120,6 +122,7 @@ Hooks.once('init', async function () {
   };
 
   ui.GMScreen = new GMScreen();
+  ui.macroHub = new MacroHub();
   // all settings after config
   registerTorgSettings();
   // ---register items and actors
@@ -1015,4 +1018,62 @@ Hooks.on('deleteActor', async (actor, data1, data2) => {
 Hooks.on('renderChatLog', (app, html, data) => {
   // ----chat messages listeners
   Chat.addChatListeners(html);
+});
+
+// When a "non-vehicle actor" is drop on a "vehicle actor", proposes to replace the driver and his skill value
+Hooks.on('dropActorSheetData', async (myVehicle, mySheet, myPassenger) => {
+  if (myVehicle.type !== 'vehicle' || fromUuidSync(myPassenger.uuid).type === 'vehicle') return;
+  const driver = fromUuidSync(myPassenger.uuid);
+  const skill = myVehicle.system.type.toLowerCase();
+  const skillValue = driver.system.skills[skill + 'Vehicles'].value;
+  if (skillValue > 0) {
+    myVehicle.update({
+      'system.operator.name': driver.name,
+      'system.operator.skillValue': skillValue,
+    });
+  } else {
+    ui.notifications.warn(
+      await game.i18n.format('torgeternity.notifications.noCapacity', { a: driver.name })
+    );
+  }
+  /* await Dialog.confirm({
+    title: game.i18n.localize('torgeternity.dialogWindow.dragDropDriver.windowTitle'),
+    content: game.i18n.localize('torgeternity.dialogWindow.dragDropDriver.maintext'),
+    yes: async () => {
+      if (skillValue > 0) {
+        myVehicle.update({
+          'system.operator.name': driver.name,
+          'system.operator.skillValue': skillValue,
+        });
+      } else {
+        ui.notifications.warn(
+          await game.i18n.format('torgeternity.notifications.noCapacity', { a: driver.name })
+        );
+        return;
+      }
+    },
+    no: () => {},
+    render: () => {},
+    defaultYes: true,
+    rejectClose: false,
+  });*/
+});
+
+// When the turn taken button is hit, delete "until end of turn" effects (stymied/vulnerable)
+Hooks.on('updateCombatant', async (torgCombatant, dataFlags, dataDiff, userId) => {
+  if (game.user.hasRole(4)) {
+    if (dataFlags.flags.world.turnTaken) {
+      const myActor = torgCombatant.actor;
+      for (const ef of myActor.effects.filter((e) => e.duration.type === 'turns')) {
+        await myActor.updateEmbeddedDocuments('ActiveEffect', [
+          {
+            _id: ef.id,
+            'duration.turns': ef.duration.turns - 1,
+            'duration.rounds': ef.duration.rounds - 1,
+          },
+        ]);
+        if (!ef.duration.remaining) await ef.delete();
+      }
+    }
+  }
 });

@@ -1,9 +1,9 @@
 <div class="skills">
-  <h2 class="skill-edit-toggle" title="{{localize 'torgeternity.sheetLabels.toggleSkillDisplay'}}">
+  <h2 class="skill-edit-toggle" data-tooltip="{{localize 'torgeternity.sheetLabels.toggleSkillDisplay'}}">
     <a>{{localize "torgeternity.sheetLabels.skills"}}</a>
   </h2>
   {{#*inline "skillRow" content name attrTypes}}
-  <li title="Click for Skill Test">
+  <li data-tooltip="{{localize 'torgeternity.sheetLabels.skillRollHint'}}">
     <span>
       <a
         class="skill-roll"
@@ -20,7 +20,7 @@
     </span>
     <span class="skill-line skillAttr">
       <select name="system.skills.{{name}}.baseAttribute" class="input-box">
-        {{selectOptions attrTypes selected=content.baseAttribute localize=true}}
+        {{selectOptions attrTypes selected=content.baseAttribute localize=true sort=true}}
       </select>
     </span>
     <span class="skillAdd">
@@ -47,7 +47,7 @@
     </span>
   </li>
   {{/inline}} {{#*inline "customSkillRow" content name}}
-  <li title="{{localize 'torgeternity.sheetLabels.customSkill'}}">
+  <li data-tooltip="{{localize 'torgeternity.sheetLabels.customSkill'}}">
     <span>
       <a
         class="skill-roll"

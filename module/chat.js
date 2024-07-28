@@ -361,29 +361,30 @@ async function soakDam(event) {
   let possPool = parseInt(soaker.system.other.possibilities);
   // 0 => if GM ask for confirm, or return message "no poss"
   if ((possPool <= 0) & !game.user.isGM) {
-    ui.notifications.warn(' No possibility !'); // TODO: Localize
+    ui.notifications.warn(game.i18n.localize('torgeternity.sheetLabels.noPoss'));
     return;
   }
 
   // 1=> pop up warning, confirm "spend last poss?"
   if (possPool === 1) {
     const confirm = await Dialog.confirm({
-      title: 'Last possibility !',
-      content: `<h4>This is your last possibility, do you confirm ?<br>Are You Sure</h4>`,
+      title: game.i18n.localize('torgeternity.sheetLabels.lastPoss'),
+      content: game.i18n.localize('torgeternity.sheetLabels.lastPossMess'),
     });
     if (!confirm) return;
   } // GM can grant an on the fly possibilty if he does the roll
   else if ((possPool === 0) & game.user.isGM) {
     const confirm = await Dialog.confirm({
-      title: 'No possibility !',
-      content: `<h4> This actor has no possibility, do you confirm ?<br>Are You Sure</h4>`,
+      title: game.i18n.localize('torgeternity.sheetLabels.noPoss'),
+      content: game.i18n.localize('torgeternity.sheetLabels.noPossFree'),
     });
     if (!confirm) return;
-    ui.notifications.warn(' You grant a possibility !');
+    ui.notifications.warn(game.i18n.localize('torgeternity.sheetLabels.possGrant'));
     possPool += 1;
   }
 
   soakDamages(soaker);
+  await soaker.update({ 'system.other.possibilities': possPool - 1 });
 }
 
 async function adjustDam(event) {
@@ -404,11 +405,11 @@ async function adjustDam(event) {
     <div class="form-group"><label for="nw">${game.i18n.localize(
       'torgeternity.sheetLabels.modifyWounds'
     )}</label>
-    <div class="form-fields"><input type="number" id="nw" value=${oldWounds}></input></div></div>
+    <div class="form-fields torgeternityFormFields"><input type="number" id="nw" value=${oldWounds}></input></div></div>
     <div class="form-group"><label for="ns">${game.i18n.localize(
       'torgeternity.sheetLabels.modifyShocks'
     )}</label>
-    <div class="form-fields"><input type="number" id="ns" value=${oldShocks}></input></div></div>
+    <div class="form-fields torgeternityFormFields"><input type="number" id="ns" value=${oldShocks}></input></div></div>
     </form>`;
   await new Dialog({
     content,

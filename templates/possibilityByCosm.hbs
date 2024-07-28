@@ -3,7 +3,7 @@
         <div style="display:grid; grid-template-columns: auto auto auto; grid-template-rows:auto auto auto; grid-column-gap: 1.5em;grid-row-gap:2em;text-align:center; text-wrap: wrap; align-items:center; justify-items: center;">
 
             <div class="possibilitiesByCosmWindow eachDiversion {{#if this.actorPoss.ayslePoss}}{{else}}hide{{/if}}"
-                title="{{localize "torgeternity.cosms.aysle"}}"> 
+                data-tooltip="{{localize "torgeternity.cosms.aysle"}}"> 
                 <a class="content-link"
                     data-uuid="{{localize "torgeternity.cosms.ayslePossLink"}}"
                     data-hash="{{localize "torgeternity.cosms.ayslePossLink2"}}">
@@ -15,7 +15,7 @@
                     style="{{#if this.actorPoss.ayslePoss}};filter:grayscale(0){{/if}}">
                 <img src="systems\torgeternity\images\cosm-icons\aysle.webp" 
                     class="possibilitiesByCosmWindow imagesShown"
-                    title="No Module"
+                    data-tooltip="No Module"
                     style="{{#if this.actorPoss.ayslePoss}};filter:grayscale(0){{/if}}">
                 </object>
                 <input class="possibilitiesByCosmWindow inputField" 
@@ -26,7 +26,7 @@
             </div>
 
             <div class="possibilitiesByCosmWindow eachDiversion {{#if this.actor.system.other.possibilities}}{{else}}hide{{/if}}"
-                title="{{localize "torgeternity.cosms.coreEarth"}}"> 
+                data-tooltip="{{localize "torgeternity.cosms.coreEarth"}}"> 
                 <a class="content-link" 
                     data-uuid="{{localize "torgeternity.cosms.coreEarthPossLink"}}" 
                     data-hash="{{localize "torgeternity.cosms.coreEarthPossLink2"}}">
@@ -42,7 +42,7 @@
             </div>
 
             <div class="possibilitiesByCosmWindow eachDiversion {{#if this.actorPoss.cyberpapacyPoss}}{{else}}hide{{/if}}"
-                title="{{localize "torgeternity.cosms.cyberpapacy"}}"> 
+                data-tooltip="{{localize "torgeternity.cosms.cyberpapacy"}}"> 
                 <a class="content-link" 
                     data-uuid="{{localize "torgeternity.cosms.cyberpapacyPossLink"}}" 
                     data-hash="{{localize "torgeternity.cosms.cyberpapacyPossLink2"}}">
@@ -53,7 +53,7 @@
                     class="possibilitiesByCosmWindow imagesShown">
                 <img src="systems\torgeternity\images\cosm-icons\cyberpapacy.webp" 
                     class="possibilitiesByCosmWindow imagesShown"
-                    title="No Module">
+                    data-tooltip="No Module">
                 </object>
                 <input class="possibilitiesByCosmWindow inputField"
                     id="cyberpapacyPoss" 
@@ -63,7 +63,7 @@
             </div>
 
             <div class="possibilitiesByCosmWindow eachDiversion {{#if this.actorPoss.livingLandPoss}}{{else}}hide{{/if}}"
-                title="{{localize "torgeternity.cosms.livingLand"}}"> 
+                data-tooltip="{{localize "torgeternity.cosms.livingLand"}}"> 
                 <a class="content-link" 
                     data-uuid="{{localize "torgeternity.cosms.livingLandPossLink"}}" 
                     data-hash="{{localize "torgeternity.cosms.livingLandPossLink2"}}">
@@ -74,7 +74,7 @@
                     class="possibilitiesByCosmWindow imagesShown">
                 <img src="systems\torgeternity\images\cosm-icons\livingLand.webp" 
                     class="possibilitiesByCosmWindow imagesShown"
-                    title="No Module">
+                    data-tooltip="No Module">
                 </object>
                 <input class="possibilitiesByCosmWindow inputField"
                     id="livingLandPoss" 
@@ -84,7 +84,7 @@
             </div>
 
             <div class="possibilitiesByCosmWindow eachDiversion {{#if this.actorPoss.nileEmpirePoss}}{{else}}hide{{/if}}"
-                title="{{localize "torgeternity.cosms.nileEmpire"}}"> 
+                data-tooltip="{{localize "torgeternity.cosms.nileEmpire"}}"> 
                 <a class="content-link" 
                     data-uuid="{{localize "torgeternity.cosms.nileEmpirePossLink"}}" 
                     data-hash="{{localize "torgeternity.cosms.nileEmpirePossLink2"}}">
@@ -95,7 +95,7 @@
                     class="possibilitiesByCosmWindow imagesShown">
                 <img src="systems\torgeternity\images\cosm-icons\nileEmpire.webp" 
                     class="possibilitiesByCosmWindow imagesShown"
-                    title="No Module">
+                    data-tooltip="No Module">
                 </object>
                 <input class="possibilitiesByCosmWindow inputField" 
                 id="nileEmpirePoss" 
@@ -105,7 +105,7 @@
             </div>
 
             <div class="possibilitiesByCosmWindow eachDiversion {{#if this.actorPoss.orrorshPoss}}{{else}}hide{{/if}}"
-                title="{{localize "torgeternity.cosms.orrorsh"}}"> 
+                data-tooltip="{{localize "torgeternity.cosms.orrorsh"}}"> 
                 <a class="content-link" 
                     data-uuid="{{localize "torgeternity.cosms.orrorshPossLink"}}" 
                     data-hash="{{localize "torgeternity.cosms.orrorshPossLink2"}}">
@@ -116,7 +116,7 @@
                     class="possibilitiesByCosmWindow imagesShown">
                 <img src="systems\torgeternity\images\cosm-icons\orrorsh.webp" 
                     class="possibilitiesByCosmWindow imagesShown"
-                    title="No Module">
+                    data-tooltip="No Module">
                 </object>
                 <input class="possibilitiesByCosmWindow inputField"
                     id="orrorshPoss" 
@@ -126,7 +126,7 @@
             </div>
 
             <div class="possibilitiesByCosmWindow eachDiversion {{#if this.actorPoss.panPacificaPoss}}{{else}}hide{{/if}}"
-                title="{{localize "torgeternity.cosms.panPacifica"}}"> 
+                data-tooltip="{{localize "torgeternity.cosms.panPacifica"}}"> 
                 <a class="content-link" 
                     data-uuid="{{localize "torgeternity.cosms.panPacificaPossLink"}}" 
                     data-hash="{{localize "torgeternity.cosms.panPacificaPossLink2"}}">
@@ -137,7 +137,7 @@
                     class="possibilitiesByCosmWindow imagesShown">
                 <img src="systems\torgeternity\images\cosm-icons\panPacifica.webp" 
                     class="possibilitiesByCosmWindow imagesShown"
-                    title="No Module">
+                    data-tooltip="No Module">
                     </object>
                 <input class="possibilitiesByCosmWindow inputField"
                     id="panPacificaPoss" 
@@ -147,7 +147,7 @@
             </div>
 
             <div class="possibilitiesByCosmWindow eachDiversion {{#if this.actorPoss.tharkoldPoss}}{{else}}hide{{/if}}"
-                title="{{localize "torgeternity.cosms.tharkold"}}"> 
+                data-tooltip="{{localize "torgeternity.cosms.tharkold"}}"> 
                 <a class="content-link" 
                     data-uuid="{{localize "torgeternity.cosms.tharkoldPossLink"}}" 
                     data-hash="{{localize "torgeternity.cosms.tharkoldPossLink2"}}">
@@ -158,7 +158,7 @@
                 class="possibilitiesByCosmWindow imagesShown">
                 <img src="systems\torgeternity\images\cosm-icons\tharkold.webp" 
                     class="possibilitiesByCosmWindow imagesShown" 
-                    title="No Module">
+                    data-tooltip="No Module">
                 </object>
                 <input class="possibilitiesByCosmWindow inputField"
                     id="tharkoldPoss" 
@@ -168,7 +168,7 @@
             </div>
 
             <div class="possibilitiesByCosmWindow eachDiversion {{#if this.actorPoss.otherPoss}}{{else}}hide{{/if}}"
-                title="{{localize "torgeternity.cosms.otherPoss"}}"> 
+                data-tooltip="{{localize "torgeternity.cosms.otherPoss"}}"> 
                 <a class="content-link" 
                     style="margin:0rem" 
                     data-uuid="{{localize "torgeternity.cosms.otherPossLink"}}" 
