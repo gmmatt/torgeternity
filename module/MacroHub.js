@@ -18,7 +18,7 @@ export default class MacroHub extends Application {
   activateListeners(html) {
     super.activateListeners();
 
-    html[0].querySelector('a.macroHubSpan').addEventListener('click', this.executeMacro());
+    html[0].querySelector('a.macroHubSpan').addEventListener('click', this.executeMacro);
   }
 
   /**
@@ -28,7 +28,25 @@ export default class MacroHub extends Application {
   async getData() {
     const data = super.getData();
 
-    data.macros = await game.packs.get('torgeternity.macros').index;
+    const macros = await game.packs.get('torgeternity.macros').index;
+    const sortable = [];
+
+    for (const macro of macros) {
+      sortable.push(macro);
+    }
+
+    sortable.sort((a, b) => {
+      if (a.name < b.name) {
+        return -1;
+      } else if (a.name === b.name) {
+        return 0;
+      } else {
+        return 1;
+      }
+    });
+
+    data.macros = {};
+    Object.assign(data.macros, sortable);
 
     return data;
   }
