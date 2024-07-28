@@ -38,10 +38,12 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: null
+      coreVersion: '12.330'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
+      compendiumSource: Item.IFfIxQewwnxkWg6m
+      duplicateSource: null
     _key: '!actors.items!4maHTlnkLTHmuYpB.3KPh7gkb97UOb3Ek'
   - _id: c66bzP2ZNUUu5WBa
     name: Riesenstärke
@@ -63,14 +65,26 @@ items:
           turns: null
           startRound: null
           startTurn: null
-        icon: icons/svg/aura.svg
         origin: Item.y2OJLdEpjDrwNjfl
         transfer: true
         flags: {}
-        tint: null
+        tint: '#ffffff'
         name: Riesenstärke (+2)
         description: ''
         statuses: []
+        _stats:
+          coreVersion: '12.330'
+          systemId: null
+          systemVersion: null
+          createdTime: null
+          modifiedTime: null
+          lastModifiedBy: null
+          compendiumSource: null
+          duplicateSource: null
+        img: icons/svg/aura.svg
+        type: base
+        system: {}
+        sort: 0
         _key: >-
           !actors.items.effects!4maHTlnkLTHmuYpB.c66bzP2ZNUUu5WBa.8FWHopcsJXmoM3Ce
     folder: LyasDNAhbLqYWU56
@@ -95,10 +109,12 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: null
+      coreVersion: '12.330'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
+      compendiumSource: Item.y2OJLdEpjDrwNjfl
+      duplicateSource: null
     _key: '!actors.items!4maHTlnkLTHmuYpB.c66bzP2ZNUUu5WBa'
   - _id: Sjldpfpz6Okry3oO
     name: Dunkelsicht (Volk)
@@ -112,7 +128,7 @@ items:
         sourceId: Compendium.te001-core-rulebook.grw-de-vorzuverb.Item.ZatdKThAEeXYAA9r
     system:
       category: racial
-      cosm: Aysle
+      cosm: aysle
       description: >-
         <p>Zwerge und Elfen ignorieren bis zu 4 Punkte an
         @UUID[Compendium.te001-core-rulebook.grw-de-grw.Qlx6yGF0Mmo6Xzrv.JournalEntryPage.41rZYYhaMC2T260D#dunkelheit]{Dunkelheitsmalussen}.</p>
@@ -191,18 +207,20 @@ items:
         limitation09: ''
         limitation10: ''
         limitationNumber: 0
-      timestaken: ''
+      timestaken: '1'
     ownership:
       default: 0
       9Q0XnqFwko7hRlvL: 3
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: 1694866071614
-      modifiedTime: 1694866071614
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722164291861
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Compendium.te001-core-rulebook.grw-de-vorzuverb.Item.ZatdKThAEeXYAA9r
+      duplicateSource: null
     _key: '!actors.items!4maHTlnkLTHmuYpB.Sjldpfpz6Okry3oO'
   - _id: VjsyhTT3vri7wmLm
     name: 'Größe (Volk: Zwerg)'
@@ -216,7 +234,7 @@ items:
         sourceId: Compendium.te001-core-rulebook.grw-de-vorzuverb.Item.2HuUHQu0KKRrJhTR
     system:
       category: racial
-      cosm: Aysle
+      cosm: aysle
       description: >-
         <p>Zwerge k&ouml;nnen keine R&uuml;stung oder Kleidung tragen, die
         f&uuml;r normale Menschen oder Elfen bestimmt ist &ndash; sie muss auf
@@ -296,18 +314,20 @@ items:
         limitation09: ''
         limitation10: ''
         limitationNumber: 0
-      timestaken: ''
+      timestaken: '1'
     ownership:
       default: 0
       9Q0XnqFwko7hRlvL: 3
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: 1694866080338
-      modifiedTime: 1694868763402
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722164301333
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Compendium.te001-core-rulebook.grw-de-vorzuverb.Item.2HuUHQu0KKRrJhTR
+      duplicateSource: null
     _key: '!actors.items!4maHTlnkLTHmuYpB.VjsyhTT3vri7wmLm'
   - _id: IajpoVCzUSfcdAIq
     name: Zweihandaxt
@@ -321,7 +341,7 @@ items:
         sourceId: >-
           Compendium.te001-core-rulebook.grw-de-ausruestung.Item.6BdTFBJxHYmRe9Zd
     system:
-      cosm: Aysle
+      cosm: aysle
       description: >-
         <p>@UUID[Compendium.te001-core-rulebook.grw-de-grw.Qlx6yGF0Mmo6Xzrv.JournalEntryPage.7GGUUHzuYIqGPXDO#erschuttern:]{Ersch&uuml;ttern}</p>
 
@@ -351,11 +371,13 @@ items:
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: 1694866227322
-      modifiedTime: 1694866227322
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722164730292
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Compendium.te001-core-rulebook.grw-de-ausruestung.Item.6BdTFBJxHYmRe9Zd
+      duplicateSource: null
     _key: '!actors.items!4maHTlnkLTHmuYpB.IajpoVCzUSfcdAIq'
   - _id: iL4S4nxhhjsBQrfc
     name: Drachenodem (Waffe)
@@ -369,16 +391,12 @@ items:
         sourceId: >-
           Compendium.te001-core-rulebook.grw-de-ausruestung.Item.ofRqgHBidUIMKc4g
     system:
-      cosm: Aysle
+      cosm: aysle
       description: >-
-        <p>Automatisch ausr&uuml;sten bei Wahl der Drachenodem-Waffe im Vorzug
-        @UUID[Compendium.te001-core-rulebook.grw-de-vorzuverb.nFFJqamKJz86Yrig]{Drachenkrieger}.</p>
-
-        <p>@UUID[Compendium.te001-core-rulebook.grw-de-grw.Qlx6yGF0Mmo6Xzrv.JournalEntryPage.41rZYYhaMC2T260D#flachenangriffe]{Fl&auml;chenangriffe}</p>
-
-        <p>@UUID[Compendium.te001-core-rulebook.grw-de-grw.Qlx6yGF0Mmo6Xzrv.JournalEntryPage.41rZYYhaMC2T260D#feuerschaden]{Feuerschaden}</p>
+        <p>Automatisch ausrüsten bei Wahl der Drachenodem-Waffe im Vorzug
+        @UUID[Compendium.torgeternity.system-de-archetypen.Actor.4maHTlnkLTHmuYpB.Item.nmQAeA0glsafwmCM]{Drachenkrieger}.</p><p>@UUID[Compendium.te001-core-rulebook.grw-de-grw.Qlx6yGF0Mmo6Xzrv.JournalEntryPage.41rZYYhaMC2T260D#flachenangriffe]{Flächenangriffe}</p><p>@UUID[Compendium.te001-core-rulebook.grw-de-grw.Qlx6yGF0Mmo6Xzrv.JournalEntryPage.41rZYYhaMC2T260D#feuerschaden]{Feuerschaden}</p>
       price: '0'
-      techlevel: null
+      techlevel: 14
       value: 0
       ammo:
         max: 3
@@ -399,11 +417,13 @@ items:
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: 1694866234201
-      modifiedTime: 1694866234201
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722164809219
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Compendium.te001-core-rulebook.grw-de-ausruestung.Item.ofRqgHBidUIMKc4g
+      duplicateSource: null
     _key: '!actors.items!4maHTlnkLTHmuYpB.iL4S4nxhhjsBQrfc'
   - name: Hanfseil, 10 Meter
     type: gear
@@ -416,7 +436,7 @@ items:
         sourceId: Item.UqBpg4NYAUDXT2Yr
     _id: n1NNukUx9SJZa7FI
     system:
-      cosm: Aysle
+      cosm: aysle
       description: ''
       price: '15'
       techlevel: 8
@@ -428,45 +448,14 @@ items:
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: 1694866242946
-      modifiedTime: 1694866272310
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722164710484
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Item.UqBpg4NYAUDXT2Yr
+      duplicateSource: null
     _key: '!actors.items!4maHTlnkLTHmuYpB.n1NNukUx9SJZa7FI'
-  - _id: uEoXCkYdo1K26BAP
-    name: Trank der Heilung
-    type: gear
-    img: systems/torgeternity/images/icons/gear-icon.webp
-    effects: []
-    folder: null
-    sort: 24600000
-    flags:
-      core:
-        sourceId: >-
-          Compendium.te001-core-rulebook.grw-de-ausruestung.Item.kiWS8lQLXbtS6FYE
-    system:
-      cosm: Aysle
-      description: >-
-        <p>Ben&ouml;tigt ein Magie-Axiom von 13, um zu wirken. Das Trinken des
-        Tranks ist eine einfache Aktion und er regeneriert 1 Wunde und
-        Schockschaden in H&ouml;he eines Bonusw&uuml;rfels.</p>
-      price: '500'
-      techlevel: 12
-      value: 14
-      equippedClass: item-equipped
-    ownership:
-      default: 0
-      9Q0XnqFwko7hRlvL: 3
-      CtisFurQNe9h7ABb: 3
-    _stats:
-      systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
-      createdTime: 1694866248082
-      modifiedTime: 1694866248082
-      lastModifiedBy: CtisFurQNe9h7ABb
-    _key: '!actors.items!4maHTlnkLTHmuYpB.uEoXCkYdo1K26BAP'
   - _id: GLGvMUxF3Aydcn8g
     name: Krähenfüße
     type: gear
@@ -487,14 +476,26 @@ items:
           turns: null
           startRound: null
           startTurn: null
-        icon: icons/svg/aura.svg
         origin: Compendium.te001-core-rulebook.grw-de-ausruestung.GPs2FHE83EfpBIfZ
         transfer: true
         flags: {}
-        tint: null
+        tint: '#ffffff'
         name: Fertigkeitsbegünstigung
         description: ''
         statuses: []
+        _stats:
+          coreVersion: '12.330'
+          systemId: null
+          systemVersion: null
+          createdTime: null
+          modifiedTime: null
+          lastModifiedBy: null
+          compendiumSource: null
+          duplicateSource: null
+        img: icons/svg/aura.svg
+        type: base
+        system: {}
+        sort: 0
         _key: >-
           !actors.items.effects!4maHTlnkLTHmuYpB.GLGvMUxF3Aydcn8g.UBMPRmdexcJIvmed
     folder: null
@@ -503,7 +504,7 @@ items:
       core:
         sourceId: Item.prL9HtFgNGaw1Szz
     system:
-      cosm: Aysle
+      cosm: aysle
       description: >-
         <p>Vierzackige Metallsterne zum Ausstreuen, die immer mit einem Stachel
         nach oben weisen, und dadurch F&uuml;&szlig;e und Reifen
@@ -521,18 +522,19 @@ items:
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: 1694866252810
-      modifiedTime: 1694866252810
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722164702036
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Item.prL9HtFgNGaw1Szz
+      duplicateSource: null
     _key: '!actors.items!4maHTlnkLTHmuYpB.GLGvMUxF3Aydcn8g'
   - name: Drachenkrieger
     type: perk
     img: systems/torgeternity/images/icons/reality-icon.webp
     effects:
-      - icon: icons/svg/aura.svg
-        origin: Item.fP8d1gY9yh84MoDS
+      - origin: Item.fP8d1gY9yh84MoDS
         duration:
           startTime: null
           seconds: null
@@ -553,7 +555,20 @@ items:
         transfer: true
         statuses: []
         flags: {}
-        tint: null
+        tint: '#ffffff'
+        _stats:
+          coreVersion: '12.330'
+          systemId: null
+          systemVersion: null
+          createdTime: null
+          modifiedTime: null
+          lastModifiedBy: null
+          compendiumSource: null
+          duplicateSource: null
+        img: icons/svg/aura.svg
+        type: base
+        system: {}
+        sort: 0
         _key: >-
           !actors.items.effects!4maHTlnkLTHmuYpB.nmQAeA0glsafwmCM.1neFAbeguyScHPSz
     folder: null
@@ -562,52 +577,9 @@ items:
         sourceId: Compendium.te001-core-rulebook.grw-de-vorzuverb.Item.nFFJqamKJz86Yrig
     system:
       category: dwarf
-      cosm: Aysle
-      description: >-
-        <p>Die Drachenkrieger sind die letzten verbliebenen Champions der
-        Zwerge, die in Aysle so gut wie ausgel&ouml;scht wurden. Als letzte
-        verzweifelte Ma&szlig;nahme konstruierten sie m&auml;chtige arkane
-        R&uuml;stungen, mit dem Ziel, die verhassten Diener Uthurions zu
-        t&ouml;ten. Die meisten von ihnen sind sich vollkommen der Tatsache
-        bewusst, dass sie vermutlich in diesen R&uuml;stungen sterben
-        werden.&nbsp;</p>
-
-        <p>Drachenkrieger-@Compendium[te001-core-rulebook.grw-de-ausruestung.JDuvJIY9Q03Pq1Fh]{R&uuml;stungen)}
-        sind mit erstaunlichen Waffen und Ausr&uuml;stungsteilen versehen, die
-        ihren Tr&auml;ger in eine Vernichtungsmaschine verwandeln. Sie
-        z&auml;hlen als Vollk&ouml;rperr&uuml;stung, verleihen R&uuml;stung +4,
-        begrenzen die <em>Geschicklichkeit </em>des Tr&auml;gers auf 8 und
-        verursachen 2 zus&auml;tzliche Punkte Schockschaden bei einem
-        @UUID[Compendium.te001-core-rulebook.grw-de-grw.Qlx6yGF0Mmo6Xzrv.JournalEntryPage.7GGUUHzuYIqGPXDO#ermudung:]{Erm&uuml;dungseffekt}.&nbsp;</p>
-
-        <p>Wenn er den Drachenkrieger-Vorzug erwirbt, darf der Zwerg aus der
-        nachfolgenden Liste eine Verbesserung ausw&auml;hlen.&nbsp;</p>
-
-        <p><strong>Weitere Verbesserungen: </strong>Dieser Vorzug darf mehr als
-        einmal gew&auml;hlt werden. Jedes Mal nach dem ersten gew&auml;hrt er
-        eine weitere der unten aufgef&uuml;hrten Verbesserungen. Sofern nichts
-        anderes angegeben ist, darf jede Verbesserung nur einmal ausgew&auml;hlt
-        werden.&nbsp;</p>
-
-        <ul>
-
-        <li>@Compendium[te001-core-rulebook.grw-de-vorzuverb.MfpVMbDHTuvuwo8j]{Bolzenwerfer}</li>
-
-        <li>@Compendium[te001-core-rulebook.grw-de-vorzuverb.NRvv8hNRTjw4tSlN]{Drachenodem}</li>
-
-        <li>@Compendium[te001-core-rulebook.grw-de-vorzuverb.XrnJpjkipFXcRksh]{Drachenklauen}</li>
-
-        <li>@Compendium[te001-core-rulebook.grw-de-vorzuverb.GTCoSWZvAlA566FM]{Drachenschuppen}</li>
-
-        <li>@Compendium[te001-core-rulebook.grw-de-vorzuverb.b398hO52pkRbpmSY]{Riesenst&auml;rke}</li>
-
-        <li>@Compendium[te001-core-rulebook.grw-de-vorzuverb.NVPWpgmvmaiAHUhY]{Rune
-        der Erholung}</li>
-
-        <li>@Compendium[te001-core-rulebook.grw-de-vorzuverb.22qQLGkOWUm0LRLt]{Sprungd&uuml;senstiefel}</li>
-
-        </ul>
-      prerequisites: Zwerg, Stärke 10+
+      cosm: aysle
+      description: "<p>Die Drachenkrieger sind die letzten verbliebenen Champions der Zwerge, die in Aysle so gut wie ausgelöscht wurden. Als letzte verzweifelte Maßnahme konstruierten sie mächtige arkane Rüstungen, mit dem Ziel, die verhassten Diener Uthurions zu töten. Die meisten von ihnen sind sich vollkommen der Tatsache bewusst, dass sie vermutlich in diesen Rüstungen sterben werden.\_</p><p>Drachenkrieger-@Compendium[te001-core-rulebook.grw-de-ausruestung.JDuvJIY9Q03Pq1Fh]{Rüstungen} sind mit erstaunlichen Waffen und Ausrüstungsteilen versehen, die ihren Träger in eine Vernichtungsmaschine verwandeln. Sie zählen als Vollkörperrüstung, verleihen Rüstung +4, begrenzen die <em>Geschicklichkeit </em>des Trägers auf 8 und verursachen 2 zusätzliche Punkte Schockschaden bei einem @UUID[Compendium.te001-core-rulebook.grw-de-grw.Qlx6yGF0Mmo6Xzrv.JournalEntryPage.7GGUUHzuYIqGPXDO#ermudung:]{Ermüdungseffekt}.\_</p><p>Wenn er den Drachenkrieger-Vorzug erwirbt, darf der Zwerg aus der nachfolgenden Liste eine Verbesserung auswählen.\_</p><p><strong>Weitere Verbesserungen: </strong>Dieser Vorzug darf mehr als einmal gewählt werden. Jedes Mal nach dem ersten gewährt er eine weitere der unten aufgeführten Verbesserungen. Sofern nichts anderes angegeben ist, darf jede Verbesserung nur einmal ausgewählt werden.\_</p><ul><li><strong>Bolzenwerfer:</strong> Ein Fach im Unterarm der Rüstung enthält sechs tödliche Eisenbolzen. Die Bolzen werden mit Projektilwaffen eingesetzt, verursachen 13 Schaden, haben Reichweite 10/20/40 und dürfen als Kurzer Feuerstoß abgefeuert werden (siehe Schnellfeuer, Seite 126). Weitere Fächer in der Rüstung enthalten 12 zusätzliche Bolzen. Jeder Zwerg, der diese Verbesserung besitzt, weiß, wie er aus Metallstücken weitere Bolzen herstellen kann. Die Waffen- und Munitionsfächer werden zwischen zwei Akten normalerweise automatisch aufgefüllt, und auch während eines Aktes, wenn die Spielleiterin entscheidet, dass dem Trä- ger dafür genügend Zeit zur Verfügung steht. Im anderen Arm der Rüstung darf ein zweiter Bolzenwerfer eingebaut werden (einschließlich eines weiteren zusätzlichen Munitionsfachs), wenn der Zwerg diese Verbesserung ein zweites Mal auswählt.</li><li><strong>Drachenodem:</strong> An einer der Armschienen der Rüstung ist eine lange Röhre befestigt, die zu einer verstecken Kammer mit komprimiertem Brennstoff auf dem Rücken führt. Wenn sie mit Projektilwaffen eingesetzt wird, verschießt die Röhre einen Feuerstrahl mit einer Reichweite von 10 Metern und einem kleinen Explosionsradius (siehe Seite 120). Alle getroffenen Ziele erleidet 16 Punkte Feuerschaden (siehe Seite 136). Die Kammer enthält genug Brennstoff für drei Angriffe. Der Behälter lädt sich am Ende jeder Szene oder während einer langen Rast, die mindestens einige Stunden dauert (Spielleiterentscheidung), automatisch auf.</li><li><strong>Drachenklauen:</strong> Einer der Panzerhandschuhe endet in einer mit Diamanten besetzten Klaue. Der Handschuh lässt sich im Waffenlosen Kampf einsetzen und verursacht Stärke +3 Schaden (Panzerbrechend 2).</li><li><strong>Drachenschuppen:</strong> Die Rüstung ist mit magischen Runen verzaubert, sodass sie gegen Feuerschaden +10 Rüstung (statt +4) gewährt.</li><li><strong>Riesenstärke:</strong> Eine Reihe von Druckluftkompressoren saugen die Luft an und leiten sie zu den Armen der Rüstung. Zusammen mit geschickt platzierten Hebeln entlang der Innenseite der Rüstung erhöht dies seine Stärke bei Proben und für die Ermittlung von Schaden um +2. Die Robustheit wird dadurch nicht beeinflusst.</li><li><strong>Rune der Erholung:</strong> Die Rüstung verursacht bei einem Ermüdungs-Effekt nur 1 zusätzlichen Punkt Schockschaden, und gibt dem Träger bei einem Inspiration-Effekt 1 zusätzlichen Punkt Schock zurück.</li><li><strong>Sprungdüsenstiefel:</strong> In den Absätzen der schweren Stiefel der Rüstung sind Zylinder aus magisch komprimiertem Gas untergebracht. Wenn sie aktiviert werden, lösen sie einen Feuerstoß aus, der den Zwerg in die Luft schleudert und ihm dadurch einen Sprung mit einer Höhe von bis zu 10 Metern und einer Weite von bis zu 30 Metern erlaubt. Wenn dies in Verbindung mit einem Rücksichtslosem Angriff geschieht, erhält der Zwerg einen zusätzlichen Bonus von +2 auf sein Angriffsergebnis. Die Sprungdüsenstiefen laden sich alle 24 Stunden magisch auf.</li></ul>"
+      prerequisites: Stärke 10+
       generalContradiction: false
       pulpPowers:
         enhancement01:
@@ -738,11 +710,13 @@ items:
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.7.0
-      coreVersion: '11.315'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: 1711705561309
-      modifiedTime: 1711705738831
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722164665010
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Compendium.te001-core-rulebook.grw-de-vorzuverb.Item.nFFJqamKJz86Yrig
+      duplicateSource: null
     _id: nmQAeA0glsafwmCM
     sort: 200000
     _key: '!actors.items!4maHTlnkLTHmuYpB.nmQAeA0glsafwmCM'
@@ -758,15 +732,12 @@ items:
         sourceId: >-
           Compendium.te001-core-rulebook.grw-de-ausruestung.Item.JDuvJIY9Q03Pq1Fh
     system:
-      cosm: Aysle
+      cosm: aysle
       description: >-
-        <p>@UUID[Compendium.te001-core-rulebook.grw-de-grw.Qlx6yGF0Mmo6Xzrv.JournalEntryPage.7GGUUHzuYIqGPXDO#ermudung:]{Erm&uuml;dung}</p>
-
-        <p>@UUID[Compendium.te001-core-rulebook.grw-de-grw.Qlx6yGF0Mmo6Xzrv.JournalEntryPage.7GGUUHzuYIqGPXDO#ganzkorper/torso:]{Ganzk&ouml;rper}</p>
-
-        <p>Sofort ausr&uuml;sten, wenn man den Vorzug
-        @UUID[Compendium.te001-core-rulebook.grw-de-vorzuverb.nFFJqamKJz86Yrig]{Drachenkrieger}
-        w&auml;hlt.</p>
+        <p>@UUID[Compendium.te001-core-rulebook.grw-de-grw.Qlx6yGF0Mmo6Xzrv.JournalEntryPage.7GGUUHzuYIqGPXDO#ermudung:]{Ermüdung}</p><p>@UUID[Compendium.te001-core-rulebook.grw-de-grw.Qlx6yGF0Mmo6Xzrv.JournalEntryPage.7GGUUHzuYIqGPXDO#ganzkorper/torso:]{Ganzkörper}</p><p>Sofort
+        ausrüsten, wenn man den Vorzug
+        @UUID[Compendium.torgeternity.system-de-archetypen.Actor.4maHTlnkLTHmuYpB.Item.nmQAeA0glsafwmCM]{Drachenkrieger}
+        wählt.</p>
       price: ''
       techlevel: 14
       value: 0
@@ -782,12 +753,52 @@ items:
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.7.0
-      coreVersion: '11.315'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: 1711562366100
-      modifiedTime: 1711705759456
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722164796708
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Compendium.te001-core-rulebook.grw-de-ausruestung.Item.JDuvJIY9Q03Pq1Fh
+      duplicateSource: null
     _key: '!actors.items!4maHTlnkLTHmuYpB.KDVr1QVp8TeWnNDX'
+  - _id: 0odWHYdsahjtVTrK
+    name: Trank der Heilung
+    type: gear
+    img: systems/torgeternity/images/icons/gear-icon.webp
+    effects: []
+    folder: null
+    sort: 24600000
+    flags:
+      core:
+        sourceId: >-
+          Compendium.te001-core-rulebook.grw-de-ausruestung.Item.kiWS8lQLXbtS6FYE
+    system:
+      cosm: aysle
+      description: >-
+        <p>Benötigt ein Magie-Axiom von 13, um zu wirken. Das Trinken des Tranks
+        ist eine einfache Aktion und er regeneriert 1 Wunde und Schockschaden in
+        Höhe eines [[/r 1d6x6max5]]{BW}.</p>
+      price: '500'
+      techlevel: 12
+      value: 14
+      secondaryAxiom:
+        selected: magic
+        value: 13
+    ownership:
+      default: 0
+      9Q0XnqFwko7hRlvL: 3
+      CtisFurQNe9h7ABb: 3
+      93AMwcGe6H37rcPA: 3
+    _stats:
+      compendiumSource: Compendium.te001-core-rulebook.grw-de-ausruestung.Item.kiWS8lQLXbtS6FYE
+      duplicateSource: null
+      coreVersion: '12.330'
+      systemId: torgeternity
+      systemVersion: 12.2.0
+      createdTime: 1722164695803
+      modifiedTime: 1722164695803
+      lastModifiedBy: 93AMwcGe6H37rcPA
+    _key: '!actors.items!4maHTlnkLTHmuYpB.0odWHYdsahjtVTrK'
 effects:
   - _id: bu5b1s7EBLwA1DXY
     changes:
@@ -804,18 +815,29 @@ effects:
       turns: null
       startRound: null
       startTurn: null
-    icon: icons/svg/aura.svg
     origin: >-
       Compendium.torgeternity.system-de-archetypen.Actor.4maHTlnkLTHmuYpB.Item.GLGvMUxF3Aydcn8g
     transfer: false
     flags: {}
-    tint: null
+    tint: '#ffffff'
     name: Fertigkeitsbegünstigung
     description: ''
     statuses: []
+    _stats:
+      coreVersion: '12.330'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+    img: icons/svg/aura.svg
+    type: base
+    system: {}
+    sort: 0
     _key: '!actors.effects!4maHTlnkLTHmuYpB.bu5b1s7EBLwA1DXY'
-  - icon: icons/svg/aura.svg
-    origin: >-
+  - origin: >-
       Compendium.torgeternity.system-de-archetypen.Actor.4maHTlnkLTHmuYpB.Item.nmQAeA0glsafwmCM
     duration:
       startTime: 0
@@ -837,7 +859,20 @@ effects:
     transfer: false
     statuses: []
     flags: {}
-    tint: null
+    tint: '#ffffff'
+    _stats:
+      coreVersion: '12.330'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+    img: icons/svg/aura.svg
+    type: base
+    system: {}
+    sort: 0
     _key: '!actors.effects!4maHTlnkLTHmuYpB.o0V97Y3flrsep0au'
 folder: null
 sort: 0
@@ -1055,7 +1090,7 @@ system:
       baseAttribute: dexterity
       adds: 2
       isFav: false
-      groupName: combat
+      groupName: other
       unskilledUse: 1
       isThreatSkill: false
       defenseOnly: false
@@ -1335,14 +1370,20 @@ prototypeToken:
       min: 0
       max: 1
     attenuation: 0.5
+    negative: false
+    priority: 0
   texture:
     src: systems/torgeternity/images/characters/dragon_warrior.Token.webp
-    tint: null
+    tint: '#ffffff'
     scaleX: 1
     scaleY: 1
     offsetX: 0
     offsetY: 0
     rotation: 0
+    anchorX: 0.5
+    anchorY: 0.5
+    fit: contain
+    alphaThreshold: 0.75
   sight:
     angle: 360
     enabled: true
@@ -1352,14 +1393,30 @@ prototypeToken:
     attenuation: 0.1
     saturation: 0
     contrast: 0
+    color: null
   appendNumber: false
   prependAdjective: false
   detectionModes: []
+  hexagonalShape: 0
+  occludable:
+    radius: 0
+  ring:
+    enabled: false
+    colors:
+      ring: null
+      background: null
+    effects: 1
+    subject:
+      scale: 1
+      texture: null
 _stats:
   systemId: torgeternity
   systemVersion: 3.8.1
-  coreVersion: '11.315'
+  coreVersion: '12.330'
   createdTime: 1694866052812
   modifiedTime: 1716827810840
   lastModifiedBy: VAnYow5sWS9EJzo0
+  compendiumSource: Compendium.torgeternity.archetypes.QsYmnq73AiR6BwhD
+  duplicateSource: null
 _key: '!actors!4maHTlnkLTHmuYpB'
+

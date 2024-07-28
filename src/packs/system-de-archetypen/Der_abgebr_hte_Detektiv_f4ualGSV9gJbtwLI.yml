@@ -14,7 +14,7 @@ items:
       core:
         sourceId: Item.nPZyQyNBzc62zWh7
     system:
-      cosm: (Keins)
+      cosm: coreEarth
       description: <p>&Ouml;rtliche Polizeiautorit&auml;t</p>
       price: '0'
       techlevel: 22
@@ -25,11 +25,13 @@ items:
       9Q0XnqFwko7hRlvL: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: null
-      modifiedTime: 1694869588488
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722161490227
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Item.nPZyQyNBzc62zWh7
+      duplicateSource: null
     _key: '!actors.items!f4ualGSV9gJbtwLI.3oIUNQEve7fSs3Ei'
   - _id: VYhy5tju01eTVrOM
     name: Smartphone
@@ -42,7 +44,7 @@ items:
       core:
         sourceId: Item.ELZyQ5vEHcMPe2tX
     system:
-      cosm: Zentralerde
+      cosm: coreEarth
       description: >-
         <p>Extras wie GPS und eine Taschenlampe sind im Lieferumfang enthalten.
         Die meisten Handys m&uuml;ssen sich in ausreichender N&auml;he zu einem
@@ -59,11 +61,13 @@ items:
       9Q0XnqFwko7hRlvL: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: null
-      modifiedTime: 1694869588488
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722161496843
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Item.ELZyQ5vEHcMPe2tX
+      duplicateSource: null
     _key: '!actors.items!f4ualGSV9gJbtwLI.VYhy5tju01eTVrOM'
   - _id: WbsMVXW3Az6DGO1P
     name: Stilvolle Kleidung
@@ -88,39 +92,13 @@ items:
     _stats:
       systemId: torgeternity
       systemVersion: 3.1.1
-      coreVersion: '11.308'
+      coreVersion: '12.330'
       createdTime: null
       modifiedTime: 1694869588488
       lastModifiedBy: CtisFurQNe9h7ABb
+      compendiumSource: Item.mTsiRJl8NOEUjAKV
+      duplicateSource: null
     _key: '!actors.items!f4ualGSV9gJbtwLI.WbsMVXW3Az6DGO1P'
-  - _id: ujVSjEcO7QAlswul
-    name: Extra-Magazine
-    type: gear
-    img: systems/torgeternity/images/icons/gear-icon.webp
-    effects: []
-    folder: YrLpjzkzDZxqWzUw
-    sort: 100000
-    flags:
-      core:
-        sourceId: Item.9VjiNmOA2TB62Xej
-    system:
-      cosm: (Keins)
-      description: <p>F&uuml;nfmal Glock nachladen.</p>
-      price: '0'
-      techlevel: 22
-      value: 0
-      equippedClass: item-equipped
-    ownership:
-      default: 0
-      9Q0XnqFwko7hRlvL: 3
-    _stats:
-      systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
-      createdTime: null
-      modifiedTime: 1694869588488
-      lastModifiedBy: CtisFurQNe9h7ABb
-    _key: '!actors.items!f4ualGSV9gJbtwLI.ujVSjEcO7QAlswul'
   - _id: 3gQNZCXm93gEdOwb
     name: Waffenlos
     type: customAttack
@@ -145,10 +123,12 @@ items:
     _stats:
       systemId: torgeternity
       systemVersion: 3.1.1
-      coreVersion: '11.308'
+      coreVersion: '12.330'
       createdTime: null
       modifiedTime: 1694867177709
       lastModifiedBy: CtisFurQNe9h7ABb
+      compendiumSource: Item.w4b7qWApQXkghQXE
+      duplicateSource: null
     _key: '!actors.items!f4ualGSV9gJbtwLI.3gQNZCXm93gEdOwb'
   - _id: vqndyczWncWn7olt
     name: Gegenschlag
@@ -162,14 +142,14 @@ items:
         sourceId: Compendium.te001-core-rulebook.grw-de-vorzuverb.Item.WxifoHdJt9UdFAfO
     system:
       category: kiPowers
-      cosm: Pan-Pacifica
+      cosm: panPacifica
       description: >-
         <p>Wenn ein Gegner den Charakter mit einem bewaffneten oder
         unbewaffnetem Nahkampfangriff verfehlt, darf dieser freiwillig 1 Schock
         erleiden, um sofort einen eigenen Nahkampfangriff gegen diesen Gegner
         durchzuf&uuml;hren.</p>
       prerequisites: Geist 8+, mindestens 3 Fertigkeitsstufen in Waffenloser Kampf
-      generalContradiction: false
+      generalContradiction: true
       pulpPowers:
         enhancement01:
           description: ''
@@ -243,18 +223,20 @@ items:
         limitation09: ''
         limitation10: ''
         limitationNumber: 0
-      timestaken: ''
+      timestaken: '1'
     ownership:
       default: 0
       9Q0XnqFwko7hRlvL: 3
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: 1694869458824
-      modifiedTime: 1694869458824
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722161202292
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Compendium.te001-core-rulebook.grw-de-vorzuverb.Item.WxifoHdJt9UdFAfO
+      duplicateSource: null
     _key: '!actors.items!f4ualGSV9gJbtwLI.vqndyczWncWn7olt'
   - _id: Rqb1AKS8SWxi1xqM
     name: Schläger
@@ -268,7 +250,7 @@ items:
         sourceId: Compendium.te001-core-rulebook.grw-de-vorzuverb.Item.sWRXWBwLHBCcTUOJ
     system:
       category: prowess
-      cosm: (Keins)
+      cosm: none
       description: >-
         <p>Der Charakter hat gelernt, hart zuzuschlagen, sei es mithilfe von
         schmutzigen Tricks und einem guten Aufw&auml;rtshaken oder einem
@@ -356,18 +338,20 @@ items:
         limitation09: ''
         limitation10: ''
         limitationNumber: 0
-      timestaken: ''
+      timestaken: '1'
     ownership:
       default: 0
       9Q0XnqFwko7hRlvL: 3
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: 1694869464696
-      modifiedTime: 1694869464696
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722161208164
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Compendium.te001-core-rulebook.grw-de-vorzuverb.Item.sWRXWBwLHBCcTUOJ
+      duplicateSource: null
     _key: '!actors.items!f4ualGSV9gJbtwLI.Rqb1AKS8SWxi1xqM'
   - _id: bIfNWj1FDQwDsqZG
     name: Glock 9mm
@@ -381,7 +365,7 @@ items:
         sourceId: >-
           Compendium.te001-core-rulebook.grw-de-ausruestung.Item.uS5bsDS4zQkN7NTj
     system:
-      cosm: Zentralerde
+      cosm: coreEarth
       description: >-
         <p>@UUID[Compendium.te001-core-rulebook.grw-de-grw.Qlx6yGF0Mmo6Xzrv.JournalEntryPage.7GGUUHzuYIqGPXDO#karabiner:]{Pistole}</p>
 
@@ -409,11 +393,13 @@ items:
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: 1694869489370
-      modifiedTime: 1694869489370
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722161388820
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Compendium.te001-core-rulebook.grw-de-ausruestung.Item.uS5bsDS4zQkN7NTj
+      duplicateSource: null
     _key: '!actors.items!f4ualGSV9gJbtwLI.bIfNWj1FDQwDsqZG'
   - _id: RCMHOsLlvVdprXvr
     name: Glock 9mm
@@ -427,7 +413,7 @@ items:
         sourceId: >-
           Compendium.te001-core-rulebook.grw-de-ausruestung.Item.uS5bsDS4zQkN7NTj
     system:
-      cosm: Zentralerde
+      cosm: coreEarth
       description: >-
         <p>@UUID[Compendium.te001-core-rulebook.grw-de-grw.Qlx6yGF0Mmo6Xzrv.JournalEntryPage.7GGUUHzuYIqGPXDO#karabiner:]{Pistole}</p>
 
@@ -455,11 +441,13 @@ items:
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: 1694869490779
-      modifiedTime: 1694869490779
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722161457156
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Compendium.te001-core-rulebook.grw-de-ausruestung.Item.uS5bsDS4zQkN7NTj
+      duplicateSource: null
     _key: '!actors.items!f4ualGSV9gJbtwLI.RCMHOsLlvVdprXvr'
   - _id: GzLZEYOYkSHaZqOu
     name: Handschellen
@@ -472,7 +460,7 @@ items:
       core:
         sourceId: Item.sh2tcK6G0tcScgwq
     system:
-      cosm: Nil-Imperium
+      cosm: nileEmpire
       description: >-
         <p>Das Anbringen von Handschellen erfordert einen guten Erfolg bei einem
         @UUID[Compendium.te001-core-rulebook.grw-de-grw.Qlx6yGF0Mmo6Xzrv.JournalEntryPage.41rZYYhaMC2T260D#ringen]{Ringen}-Angriff.
@@ -490,11 +478,13 @@ items:
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: 1694869506448
-      modifiedTime: 1694869588488
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722161485564
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Item.sh2tcK6G0tcScgwq
+      duplicateSource: null
     _key: '!actors.items!f4ualGSV9gJbtwLI.GzLZEYOYkSHaZqOu'
   - name: Sonnenbrille
     type: gear
@@ -507,7 +497,7 @@ items:
         sourceId: Item.5wtRULBzLY17nU2s
     _id: l5EJRkGXrWCJNyEg
     system:
-      cosm: Nil-Imperium
+      cosm: nileEmpire
       description: <p>Gegen blendendes Licht.</p>
       price: '25'
       techlevel: 20
@@ -519,11 +509,13 @@ items:
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: 1694869515392
-      modifiedTime: 1694869588488
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722161500947
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Item.5wtRULBzLY17nU2s
+      duplicateSource: null
     _key: '!actors.items!f4ualGSV9gJbtwLI.l5EJRkGXrWCJNyEg'
   - name: Taschenlampe
     type: gear
@@ -536,7 +528,7 @@ items:
         sourceId: Item.ghYEu90Et15IioVa
     _id: H6HBbufEIw9Miatd
     system:
-      cosm: Nil-Imperium
+      cosm: nileEmpire
       description: ''
       price: '10'
       techlevel: 20
@@ -548,11 +540,13 @@ items:
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: 1694869528799
-      modifiedTime: 1694869588488
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722161507307
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Item.ghYEu90Et15IioVa
+      duplicateSource: null
     _key: '!actors.items!f4ualGSV9gJbtwLI.H6HBbufEIw9Miatd'
   - _id: rFy5ucB7V1HgwoVj
     name: Lederjacke
@@ -566,7 +560,7 @@ items:
         sourceId: >-
           Compendium.te001-core-rulebook.grw-de-ausruestung.Item.ibQvaehrqx24DxvU
     system:
-      cosm: Zentralerde
+      cosm: nileEmpire
       description: >-
         <p>@UUID[Compendium.te001-core-rulebook.grw-de-grw.Qlx6yGF0Mmo6Xzrv.JournalEntryPage.7GGUUHzuYIqGPXDO#ganzkorper/torso:]{Torso}</p>
 
@@ -587,12 +581,54 @@ items:
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.7.0
-      coreVersion: '11.315'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: 1711562366193
-      modifiedTime: 1711706309755
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722161468203
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Compendium.te001-core-rulebook.grw-de-ausruestung.Item.ibQvaehrqx24DxvU
+      duplicateSource: null
     _key: '!actors.items!f4ualGSV9gJbtwLI.rFy5ucB7V1HgwoVj'
+  - name: Extra-Magazine
+    type: ammunition
+    img: systems/torgeternity/images/icons/ammo-icon.webp
+    system:
+      cosm: ''
+      description: >-
+        <p><span style="font-family:'Palatino Linotype'">Fünfmal Glock
+        nachladen.</span></p>
+      price: ''
+      techlevel: 21
+      value: 0
+      secondaryAxiom:
+        selected: none
+        value: null
+      type: ''
+      quantity: 5
+      damageMod: 0
+      apMod: 0
+      fireDamage: false
+      blastRadius: Keiner
+      darknessMod: none
+      reach: ''
+    effects: []
+    folder: null
+    sort: 0
+    ownership:
+      default: 0
+      93AMwcGe6H37rcPA: 3
+    flags: {}
+    _stats:
+      compendiumSource: Item.TptgnUCwWM2QZCaK
+      duplicateSource: Item.KRYQ71jof26XeGEv
+      coreVersion: '12.330'
+      systemId: torgeternity
+      systemVersion: 12.2.0
+      createdTime: 1722161378739
+      modifiedTime: 1722167125877
+      lastModifiedBy: 93AMwcGe6H37rcPA
+    _id: rcW2fFiZ2TLjiQsg
+    _key: '!actors.items!f4ualGSV9gJbtwLI.rcW2fFiZ2TLjiQsg'
 effects: []
 folder: null
 sort: 0
@@ -809,7 +845,7 @@ system:
       baseAttribute: dexterity
       adds: 0
       isFav: false
-      groupName: combat
+      groupName: other
       unskilledUse: 1
       isThreatSkill: false
       defenseOnly: false
@@ -1088,14 +1124,20 @@ prototypeToken:
       min: 0
       max: 1
     attenuation: 0.5
+    negative: false
+    priority: 0
   texture:
     src: systems/torgeternity/images/characters/hardboiled_detective.Token.webp
-    tint: null
+    tint: '#ffffff'
     scaleX: 1
     scaleY: 1
     offsetX: 0
     offsetY: 0
     rotation: 0
+    anchorX: 0.5
+    anchorY: 0.5
+    fit: contain
+    alphaThreshold: 0.75
   sight:
     angle: 360
     enabled: true
@@ -1105,14 +1147,30 @@ prototypeToken:
     attenuation: 0.1
     saturation: 0
     contrast: 0
+    color: null
   appendNumber: false
   prependAdjective: false
   detectionModes: []
+  hexagonalShape: 0
+  occludable:
+    radius: 0
+  ring:
+    enabled: false
+    colors:
+      ring: null
+      background: null
+    effects: 1
+    subject:
+      scale: 1
+      texture: null
 _stats:
   systemId: torgeternity
   systemVersion: 3.8.1
-  coreVersion: '11.315'
+  coreVersion: '12.330'
   createdTime: 1694867157183
   modifiedTime: 1716827811580
   lastModifiedBy: VAnYow5sWS9EJzo0
+  compendiumSource: Compendium.torgeternity.archetypes.8YH1e6xGG3IHb1Mm
+  duplicateSource: null
 _key: '!actors!f4ualGSV9gJbtwLI'
+

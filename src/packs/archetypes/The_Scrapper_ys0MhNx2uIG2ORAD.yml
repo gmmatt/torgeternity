@@ -15,7 +15,7 @@ items:
         sourceId: Compendium.te001-core-rulebook.Items.z7Zj7CEp6QKU15aW
     system:
       category: occultech
-      cosm: Tharkold
+      cosm: none
       description: >-
         <p>When the character takes this Perk, she may choose up to $10 000
         worth of occultech. These implants have been properly exorcised of any
@@ -30,7 +30,7 @@ items:
 
         <p>Found in <strong>Core Rules</strong></p>
       prerequisites: Strength 8+
-      generalContradiction: false
+      generalContradiction: true
       pulpPowers:
         enhancement01:
           description: ''
@@ -104,18 +104,20 @@ items:
         limitation09: ''
         limitation10: ''
         limitationNumber: 0
-      timestaken: ''
+      timestaken: '1'
     ownership:
       default: 0
       A9LyAqagoJJU3gDH: 3
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: 1693914389548
-      modifiedTime: 1693914389548
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722153652301
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Compendium.te001-core-rulebook.Items.z7Zj7CEp6QKU15aW
+      duplicateSource: null
     _key: '!actors.items!ys0MhNx2uIG2ORAD.TwU5pg3OXKknzNFA'
   - _id: fF3wo6bNS33bnk31
     name: Whirlwind
@@ -129,7 +131,7 @@ items:
         sourceId: Compendium.te001-core-rulebook.Items.Jk0kUgblznvJQrsI
     system:
       category: prowess
-      cosm: (None)
+      cosm: none
       description: >-
         <p>The warrior has trained to hit a large number of foes in a single
         dance of death. He ignores the first two points of the
@@ -214,18 +216,20 @@ items:
         limitation09: ''
         limitation10: ''
         limitationNumber: 0
-      timestaken: ''
+      timestaken: '1'
     ownership:
       default: 0
       A9LyAqagoJJU3gDH: 3
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: 1693914394476
-      modifiedTime: 1693914402276
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722153640878
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Compendium.te001-core-rulebook.Items.Jk0kUgblznvJQrsI
+      duplicateSource: null
     _key: '!actors.items!ys0MhNx2uIG2ORAD.fF3wo6bNS33bnk31'
   - _id: YstxDnzfvEu7Fqm3
     name: Impact Hammer
@@ -238,21 +242,8 @@ items:
       core:
         sourceId: Compendium.te001-core-rulebook.Items.07pjHDJDrK1pESkv
     system:
-      cosm: Tharkold
-      description: >-
-        <p>@UUID[Compendium.te001-core-rulebook.rules.pwneQ55M0nnDH0Us.JournalEntryPage.qKdamp4rrcX6TTt0#stagger:]{Stagger}</p>
-
-        <p>@UUID[Compendium.te001-core-rulebook.rules.pwneQ55M0nnDH0Us.JournalEntryPage.qKdamp4rrcX6TTt0#two-handed:]{Two-Handed}</p>
-
-        <p>The heavy head contains a pneumatic mechanism that adds a burst of
-        thrust to the swing and drives a spike forward at the point of impact to
-        greatly increase the force directed at the impact point&mdash;if a
-        wielder is strong enough to get the hammer moving in the first
-        place.</p>
-
-        <p>&nbsp;</p>
-
-        <p>Found in <strong>Core Rules</strong></p>
+      cosm: tharkold
+      description: "<p>@UUID[Compendium.te001-core-rulebook.rules.pwneQ55M0nnDH0Us.JournalEntryPage.qKdamp4rrcX6TTt0#stagger:]{Stagger}</p><p>@UUID[Compendium.te001-core-rulebook.rules.pwneQ55M0nnDH0Us.JournalEntryPage.qKdamp4rrcX6TTt0#two-handed:]{Two-Handed}</p><p>The heavy head contains a pneumatic mechanism that adds a burst of thrust to the swing and drives a spike forward at the point of impact to greatly increase the force directed at the impact point—if a wielder is strong enough to get the hammer moving in the first place.</p><p><em>Damage included +2 Strength from Digan CyberArm</em></p><p>\_</p><p>Found in <strong>Core Rules</strong></p>"
       price: '300'
       techlevel: 25
       value: 13
@@ -260,7 +251,7 @@ items:
       attackWith: meleeWeapons
       bonus: 2
       chatNote: ''
-      damage: 4
+      damage: 6
       damageType: strengthPlus
       equipped: false
       equippedClass: .item-unequipped
@@ -271,11 +262,13 @@ items:
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: 1693914415715
-      modifiedTime: 1693914415715
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722158182874
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Compendium.te001-core-rulebook.Items.07pjHDJDrK1pESkv
+      duplicateSource: null
     _key: '!actors.items!ys0MhNx2uIG2ORAD.YstxDnzfvEu7Fqm3'
   - _id: 3cpjqoL7Qu1R3hNm
     name: Net Launcher
@@ -288,7 +281,7 @@ items:
       core:
         sourceId: Compendium.te001-core-rulebook.Items.t5x6s1AwFy1qZBpF
     system:
-      cosm: Tharkold
+      cosm: tharkold
       description: >-
         <p>@UUID[Compendium.te001-core-rulebook.rules.pwneQ55M0nnDH0Us.JournalEntryPage.qKdamp4rrcX6TTt0#blas:]{Blast}</p>
 
@@ -308,8 +301,8 @@ items:
       techlevel: 25
       value: 10
       ammo:
-        max: 0
-        value: 0
+        max: 1
+        value: 1
       ap: 0
       attackWith: missileWeapons
       chatNote: ''
@@ -326,11 +319,13 @@ items:
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: 1693914426740
-      modifiedTime: 1693914426740
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722158221388
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Compendium.te001-core-rulebook.Items.t5x6s1AwFy1qZBpF
+      duplicateSource: null
     _key: '!actors.items!ys0MhNx2uIG2ORAD.3cpjqoL7Qu1R3hNm'
   - _id: y7Vavfy3rgxzs0mG
     name: Filter Mask
@@ -343,7 +338,7 @@ items:
       core:
         sourceId: Compendium.te001-core-rulebook.Items.WP88DoYjrypNKL22
     system:
-      cosm: Pan-Pacifica
+      cosm: panPacifica
       description: >-
         <p>Advanced microfibers screen particles from the air, making the wearer
         immune to inhaled poisons and toxins.</p>
@@ -361,11 +356,13 @@ items:
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: 1693914445650
-      modifiedTime: 1693914471715
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722158284036
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Compendium.te001-core-rulebook.Items.WP88DoYjrypNKL22
+      duplicateSource: null
     _key: '!actors.items!ys0MhNx2uIG2ORAD.y7Vavfy3rgxzs0mG'
   - _id: UKW0uwOazYvkWwEK
     name: Flares
@@ -378,7 +375,7 @@ items:
       core:
         sourceId: Compendium.te001-core-rulebook.Items.wOSsT4wHWPEcX85E
     system:
-      cosm: Nile Empire
+      cosm: nileEmpire
       description: <p>Found in <strong>Core Rules</strong></p>
       price: '5'
       techlevel: 20
@@ -390,11 +387,13 @@ items:
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: 1693914453148
-      modifiedTime: 1693914473060
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722158293548
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Compendium.te001-core-rulebook.Items.wOSsT4wHWPEcX85E
+      duplicateSource: null
     _key: '!actors.items!ys0MhNx2uIG2ORAD.UKW0uwOazYvkWwEK'
   - _id: qJ5eghHKWM2cg5ig
     name: Radiation Detector
@@ -407,7 +406,7 @@ items:
       core:
         sourceId: Compendium.te001-core-rulebook.Items.6CYd0HCZf6RrM4JB
     system:
-      cosm: Core Earth
+      cosm: coreEarth
       description: >-
         <p>Also known as a Geiger counter. When switched on it automatically
         alerts the user of dangerous radiation levels. Grants a +4 bonus to find
@@ -426,11 +425,13 @@ items:
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: 1693914458276
-      modifiedTime: 1693914458276
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722158307107
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Compendium.te001-core-rulebook.Items.6CYd0HCZf6RrM4JB
+      duplicateSource: null
     _key: '!actors.items!ys0MhNx2uIG2ORAD.qJ5eghHKWM2cg5ig'
   - _id: S2Lgu82VZjuG0Q0M
     name: Thav Radiation Filter MK II
@@ -443,7 +444,7 @@ items:
       core:
         sourceId: Compendium.te001-core-rulebook.Items.hkVo701Qmh9NUKVg
     system:
-      cosm: Tharkold
+      cosm: tharkold
       description: <p>Found in <strong>Core Rules</strong></p>
       price: 2,000
       techlevel: 25
@@ -456,19 +457,20 @@ items:
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: 1693914511570
-      modifiedTime: 1693914634493
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722158258204
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Compendium.te001-core-rulebook.Items.hkVo701Qmh9NUKVg
+      duplicateSource: null
     _key: '!actors.items!ys0MhNx2uIG2ORAD.S2Lgu82VZjuG0Q0M'
   - _id: 6QxM5pY3h7MRaTHM
     name: Digan CyberArm
     type: implant
     img: systems/torgeternity/images/icons/implant.webp
     effects:
-      - icon: icons/svg/aura.svg
-        origin: Item.JJ2UFjTvYy6vtWzR
+      - origin: Item.JJ2UFjTvYy6vtWzR
         duration:
           startTime: null
           seconds: null
@@ -489,11 +491,23 @@ items:
         transfer: true
         statuses: []
         flags: {}
-        tint: null
+        tint: '#ffffff'
+        _stats:
+          coreVersion: '12.330'
+          systemId: null
+          systemVersion: null
+          createdTime: null
+          modifiedTime: null
+          lastModifiedBy: null
+          compendiumSource: null
+          duplicateSource: null
+        img: icons/svg/aura.svg
+        type: base
+        system: {}
+        sort: 0
         _key: >-
           !actors.items.effects!ys0MhNx2uIG2ORAD.6QxM5pY3h7MRaTHM.e2sP6LcZtQlgO4DP
-      - icon: icons/svg/aura.svg
-        origin: Item.JJ2UFjTvYy6vtWzR
+      - origin: Item.JJ2UFjTvYy6vtWzR
         duration:
           startTime: null
           seconds: null
@@ -518,7 +532,20 @@ items:
         transfer: true
         statuses: []
         flags: {}
-        tint: null
+        tint: '#ffffff'
+        _stats:
+          coreVersion: '12.330'
+          systemId: null
+          systemVersion: null
+          createdTime: null
+          modifiedTime: null
+          lastModifiedBy: null
+          compendiumSource: null
+          duplicateSource: null
+        img: icons/svg/aura.svg
+        type: base
+        system: {}
+        sort: 0
         _key: >-
           !actors.items.effects!ys0MhNx2uIG2ORAD.6QxM5pY3h7MRaTHM.LcMXSEQ8O4i1pjMt
     folder: null
@@ -527,7 +554,7 @@ items:
       core:
         sourceId: Compendium.te001-core-rulebook.Items.eqLYuyoAdwVRcQrQ
     system:
-      cosm: Tharkold
+      cosm: tharkold
       description: >-
         <p>Digan constructions are bulky but powerful, and this modular
         replacement arm is no exception. It increases <em>Strength</em> tests
@@ -550,11 +577,13 @@ items:
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: 1693914499180
-      modifiedTime: 1693914625530
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722158255468
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Compendium.te001-core-rulebook.Items.eqLYuyoAdwVRcQrQ
+      duplicateSource: null
     _key: '!actors.items!ys0MhNx2uIG2ORAD.6QxM5pY3h7MRaTHM'
   - _id: ryISQSHD5wRghm0e
     name: Diffrax Plate
@@ -567,7 +596,7 @@ items:
       core:
         sourceId: Compendium.te001-core-rulebook.Items.Item.wP7vzluooDeOtebZ
     system:
-      cosm: Tharkold
+      cosm: tharkold
       description: >-
         <p>@UUID[Compendium.te001-core-rulebook.rules.pwneQ55M0nnDH0Us.JournalEntryPage.qKdamp4rrcX6TTt0#fatigues:]{Fatigues}</p>
 
@@ -595,15 +624,16 @@ items:
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.7.0
-      coreVersion: '11.315'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: 1711551146924
-      modifiedTime: 1711705159429
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722158231404
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Compendium.te001-core-rulebook.Items.Item.wP7vzluooDeOtebZ
+      duplicateSource: null
     _key: '!actors.items!ys0MhNx2uIG2ORAD.ryISQSHD5wRghm0e'
 effects:
-  - icon: icons/svg/aura.svg
-    origin: >-
+  - origin: >-
       Compendium.torgeternity.archetypes.Actor.ys0MhNx2uIG2ORAD.Item.6QxM5pY3h7MRaTHM
     duration:
       startTime: 0
@@ -625,10 +655,22 @@ effects:
     transfer: false
     statuses: []
     flags: {}
-    tint: null
+    tint: '#ffffff'
+    _stats:
+      coreVersion: '12.330'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+    img: icons/svg/aura.svg
+    type: base
+    system: {}
+    sort: 0
     _key: '!actors.effects!ys0MhNx2uIG2ORAD.hJopDtTRygZm4OjO'
-  - icon: icons/svg/aura.svg
-    origin: >-
+  - origin: >-
       Compendium.torgeternity.archetypes.Actor.ys0MhNx2uIG2ORAD.Item.6QxM5pY3h7MRaTHM
     duration:
       startTime: 0
@@ -650,7 +692,20 @@ effects:
     transfer: false
     statuses: []
     flags: {}
-    tint: null
+    tint: '#ffffff'
+    _stats:
+      coreVersion: '12.330'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+    img: icons/svg/aura.svg
+    type: base
+    system: {}
+    sort: 0
     _key: '!actors.effects!ys0MhNx2uIG2ORAD.tfdPfqnwELylRgKR'
 folder: null
 sort: 100001
@@ -865,7 +920,7 @@ system:
       baseAttribute: dexterity
       adds: 1
       isFav: false
-      groupName: combat
+      groupName: other
       unskilledUse: 1
       isThreatSkill: false
       defenseOnly: false
@@ -1132,14 +1187,20 @@ prototypeToken:
       max: 1
     color: null
     attenuation: 0.5
+    negative: false
+    priority: 0
   texture:
     src: systems/torgeternity/images/characters/scrapper.Token.webp
-    tint: null
+    tint: '#ffffff'
     scaleX: 1
     scaleY: 1
     offsetX: 0
     offsetY: 0
     rotation: 0
+    anchorX: 0.5
+    anchorY: 0.5
+    fit: contain
+    alphaThreshold: 0.75
   sight:
     angle: 360
     enabled: false
@@ -1149,14 +1210,30 @@ prototypeToken:
     attenuation: 0.1
     saturation: 0
     contrast: 0
+    color: null
   appendNumber: false
   prependAdjective: false
   detectionModes: []
+  hexagonalShape: 0
+  occludable:
+    radius: 0
+  ring:
+    enabled: false
+    colors:
+      ring: null
+      background: null
+    effects: 1
+    subject:
+      scale: 1
+      texture: null
 _stats:
   systemId: torgeternity
   systemVersion: 3.8.1
-  coreVersion: '11.315'
+  coreVersion: '12.330'
   createdTime: 1693914389548
   modifiedTime: 1716827808188
   lastModifiedBy: VAnYow5sWS9EJzo0
+  compendiumSource: null
+  duplicateSource: null
 _key: '!actors!ys0MhNx2uIG2ORAD'
+

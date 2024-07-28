@@ -14,12 +14,10 @@ items:
     effects: []
     folder: null
     system:
-      cosm: Orrorsh
-      description: |-
-        <p>Adamant Shells (2 shots, AP 4)</p>
-        <p>Holy Water Shells (2 shots, +2 dmg vs evil)</p>
-        <p>Giant Killer Shells (+5 damage v large or larger creatures)</p>
-        <p>Slayer's Gun Shells (12 shots, standard 14 dmg)</p>
+      cosm: orrorsh
+      description: >-
+        <p>@UUID[Compendium.torgeternity.archetypes.Actor.8KlJAaxeijOcrJKN.Item.d9Bzjb00u4cjYSiu]{Bulletsmith}</p><p>@UUID[Compendium.torgeternity.archetypes.Actor.8KlJAaxeijOcrJKN.Item.wbWDSIYhAgGrPHBz]{Slayer's
+        Bandoleer}</p>
       price: '0'
       techlevel: 18
       value: 0
@@ -39,11 +37,13 @@ items:
       default: 0
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: null
-      modifiedTime: 1693912070049
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722156872255
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Item.fW9IrnHVWRXgCWEx
+      duplicateSource: null
     _key: '!actors.items!8KlJAaxeijOcrJKN.gfxtCXojsN3PMaUK'
   - _id: P5v3znC9UTPMRB7J
     name: Silver Dagger
@@ -56,14 +56,8 @@ items:
     effects: []
     folder: null
     system:
-      cosm: Aysle
-      description: >-
-        <p>short-bladed weapon between 15 and 30 centimeters in length. Daggers
-        can be easily concealed and drawn in close quarters.</p>
-
-        <p>&nbsp;</p>
-
-        <p>Found in <strong>Core Rules</strong></p>
+      cosm: aysle
+      description: "<p>@UUID[Compendium.te001-core-rulebook.rules.pwneQ55M0nnDH0Us.JournalEntryPage.qKdamp4rrcX6TTt0#small:]{Small}</p><p>A short-bladed weapon between 15 and 30 centimeters in length. Daggers can be easily concealed and drawn in close quarters.</p><p>\_</p><p>Found in <strong>Core Rules</strong></p>"
       price: '25'
       techlevel: 8
       value: 7
@@ -75,18 +69,18 @@ items:
       damageType: strengthPlus
       equipped: false
       equippedClass: .item-unequipped
-      notes: >-
-        The item is relatively small and easy to hide. Searches suffer a –2
-        penalty to find the weapon if it's hidden.
+      notes: Small
     ownership:
       default: 0
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: null
-      modifiedTime: 1693895876765
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722157017118
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: null
+      duplicateSource: null
     _key: '!actors.items!8KlJAaxeijOcrJKN.P5v3znC9UTPMRB7J'
   - _id: 7DX5OkocFjEmYTOv
     name: Webley Revolver
@@ -99,7 +93,7 @@ items:
       core:
         sourceId: Compendium.te001-core-rulebook.Items.n63WoEGQsRLKfkBa
     system:
-      cosm: Orrorsh
+      cosm: orrorsh
       description: <p>Found in <strong>Core Rules</strong></p>
       price: '300'
       techlevel: 18
@@ -122,11 +116,13 @@ items:
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: 1693911912230
-      modifiedTime: 1693911912230
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722156887470
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Compendium.te001-core-rulebook.Items.n63WoEGQsRLKfkBa
+      duplicateSource: null
     _key: '!actors.items!8KlJAaxeijOcrJKN.7DX5OkocFjEmYTOv'
   - _id: d9Bzjb00u4cjYSiu
     name: Bulletsmith
@@ -140,7 +136,7 @@ items:
         sourceId: Compendium.te001-core-rulebook.Items.iKjiXUHRWLiyQY3S
     system:
       category: occult
-      cosm: Orrorsh
+      cosm: orrorsh
       description: >-
         <p>Adventurers of Orrorsh long ago learned lead bullets and steel blades
         were no match for the horrors of their realm. Alchemy proved a great
@@ -202,40 +198,66 @@ items:
 
         <p>Found in <strong>Core Rules</strong></p>
       prerequisites: At least 2 adds in science
-      generalContradiction: false
+      generalContradiction: true
       pulpPowers:
         enhancement01:
-          description: ''
-          taken: false
-          title: ''
+          description: >-
+            Some of the Victorians’ foes are armored from head to toe with
+            metal, scales, or even a carapace. These shells are designed to cut
+            through them, causing Armor Piercing 4.
+          taken: true
+          title: Adamant Shell
         enhancement02:
-          description: ''
+          description: >-
+            Water-based creatures or creatures standing in water take an
+            additional +4 damage when hit by electric shells. A previously
+            unknown side-effect of these rounds is that they can cause glitches
+            in high-tech electronic equipment. Robots and machines take the
+            extra damage, and sensitive equipment shorts out and is inoperable
+            for three rounds.
           taken: false
-          title: ''
+          title: Electric Shell
         enhancement03:
-          description: ''
+          description: >-
+            The most dangerous of the Bullet Smith’s shells causes damage 15 in
+            a Small Blast Radius.
           taken: false
-          title: ''
+          title: Explosive Shell
         enhancement04:
-          description: ''
-          taken: false
-          title: ''
+          description: >-
+            The Victorians developed these heavy shells to take down the Gaunt
+            Man’s biggest horrors. They cause +5 damage against Large or greater
+            creatures.
+          taken: true
+          title: Giant Killer Shell
         enhancement05:
-          description: ''
-          taken: false
-          title: ''
+          description: >-
+            +2 damage versus any supernaturally evil creature, including gospog,
+            vampires, and undead.
+          taken: true
+          title: Holy Water Shell
         enhancement06:
-          description: ''
+          description: >-
+            These rounds are made from various reagents such as cold iron, salt,
+            and holy water that allows them to affect ethereal creatures
+            normally.
           taken: false
-          title: ''
+          title: Phantom Shell
         enhancement07:
-          description: ''
+          description: >-
+            Creatures with the Lycanthrope Special Ability take +4 damage from
+            silver shells.
           taken: false
-          title: ''
+          title: Silver Shell
         enhancement08:
-          description: ''
+          description: >-
+            These rounds contain something the alchemists call “liquid
+            sunlight.“ They explode with ultraviolet light in a Medium Blast,
+            causing any creatures “hit“ by them to be Very Vulnerable if they
+            have a sensitivity to light or sunlight. Most creatures that can see
+            in darkness are affected by sun shells.
           taken: false
-          title: ''
+          title: Sun Shell
         enhancement09:
           description: ''
           taken: false
@@ -264,7 +286,7 @@ items:
           description: ''
           taken: false
           title: ''
-        enhancementNumber: 0
+        enhancementNumber: 8
         limitation01: ''
         limitation02: ''
         limitation03: ''
@@ -283,11 +305,13 @@ items:
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: 1693911979828
-      modifiedTime: 1693912033418
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722154268019
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Compendium.te001-core-rulebook.Items.iKjiXUHRWLiyQY3S
+      duplicateSource: null
     _key: '!actors.items!8KlJAaxeijOcrJKN.d9Bzjb00u4cjYSiu'
   - _id: KgWICNPz8lNZiFIB
     name: Medals (Dragon Slayer)
@@ -301,131 +325,60 @@ items:
         sourceId: Compendium.te001-core-rulebook.Items.MevCMs1Mc6Ck02PP
     system:
       category: occult
-      cosm: Orrorsh
-      description: >-
-        <p>Victorians are status conscious, and few are held in higher esteem
-        than their heroes. The Victorians show this regard by awarding medals to
-        the brave, the ingenious, and the intrepid. Sometimes the medals become
-        imbued with their intent and aid the recipient in their quest to save
-        Gaea.</p>
-
-        <p><strong>New Medals:</strong> This Perk may be taken as desired during
-        character creation. Afterwards, it may be taken multiple times, but only
-        after completing the event described in the individual awards. The
-        Dragon Slayer, for example, is awarded only after dealing the final blow
-        to a huge monster.</p>
-
-        <p>Medals don&rsquo;t arrive instantly, of course, but may be delivered
-        by courier after the Home Office receives dispatches testifying to the
-        deed, a loved one receives letters, or the press announces it to the
-        world. The Delphi Council understands the mystical nature of these
-        awards, however, and assists the Victorians in delivering them when
-        possible. Work with the Game Master to figure out the timing of the
-        medal itself, but it should generally occur no later than the act after
-        it was earned. The Perk may be purchased once the medal itself is in
-        hand.</p>
-
-        <p>A medal must be awarded <em>and</em> worn to grant its power. They
-        grant no bonuses to others.</p>
-
-        <p>Medals may be awarded to outsiders from other cosms, but only have
-        powers for those of Orrorsh&rsquo;s reality.</p>
-
-        <p>Unless an award says otherwise, it is never granted more than
-        once.</p>
-
-        <ul>
-
-        <li><strong>Carnifex Princeps:</strong> The Victorians know exactly who
-        the Gaunt Man is. This award is granted to anyone who takes part in the
-        killing of a ravagon, his fiercest lieutenants. The hero draws and adds
-        an additional card to his hand at the start of any Dramatic Scene</li>
-
-        <li><strong>Defender:</strong> Awarded to those who rescue or defend a
-        significant number of people, such as a school or town, at great
-        personal risk. The hero starts each act with one additional
-        @UUID[Compendium.te001-core-rulebook.rules.pwneQ55M0nnDH0Us.JournalEntryPage.kYP18QiA72P6PlUi#possibilities]{Possibility}</li>
-
-        <li><strong>Dragon Slayer:</strong> Awarded to those who defeat a very
-        large and powerful monster. The character adds +1 BD to all damage
-        totals against all Large or greater-sized creatures (not vehicles or
-        constructs) when Attack is an Approved Action</li>
-
-        <li><strong>Order of Cynthia Bartholomew:</strong> Awarded for helping
-        the injured or poor under great threat or for an extended period. <q>Ms.
-        Bart,</q> as the poor called her, was a Victorian humanitarian who
-        always helped the poor and downtrodden. Once per act, the recipient can
-        touch an ally to remove all shock. This is a simple action</li>
-
-        <li><strong>Victoria Gloriana:</strong> Awarded after personally playing
-        a Glory card. This prestigious award is only granted to the
-        country&rsquo;s greatest heroes. The medal grants a +1 bonus to any one
-        attribute and its linked skills, chosen when the medal is awarded. Note
-        that if the medal is worn and the attribute or linked skill is used, it
-        does cause a Contradiction</li>
-
-        <li><strong>Possibility Wars Campaign Medal:</strong> Awarded to any
-        Storm Knight who participates in a Glory event. The medal is awarded per
-        cosm, and may be used once per act to restore 1 BD of shock. This does
-        not require an action and may be used at any time</li>
-
-        <li><strong>Sole Survivor Medal:</strong> Awarded to the one person to
-        return from an otherwise doomed expedition. The Sole Survivor medal
-        cancels the effects of The Law of Perseverance and its recipient may
-        Soak damage normally in Orrorsh.</li>
-
-        <li><strong>India Campaign Medal:</strong> Awarded to any Storm Knight
-        who recovers an Eternity Shard inside Orrorsh. Once per act, the wearer
-        may play a Destiny Card into her own Action Pool or the pool of an ally
-        as a free reaction during any turn.</li>
-
-        <li><strong>Order Vestigium:</strong> Awarded to those who defeat a
-        Nightmare. <em>Evidence analysis</em> tests become Favored, and the
-        character is automatically aware if any clue to a Nightmare&rsquo;s
-        origin is nearby. This doesn&rsquo;t tell them what the clue is or where
-        it can be found, just that something is afoot.</li>
-
-        <li><strong>Order of the New Dawn:</strong> This medal is awarded to
-        those who have been cursed, but managed to eliminate the being or force
-        that cursed them. This award is a mixed blessing, as its presence also
-        alerts Victorians that the wearer is cursed, which may lead to trust
-        issues. The wearer&rsquo;s Corruption tests become Favored, and when a
-        test fails the medal may be <q>burned</q> instead of losing Charisma. It
-        still counts as a possessed Perk when determining the cost for buying
-        new ones, but no longer has any other effect if burned.</li>
-
-        </ul>
-
-        <p>&nbsp;</p>
-
-        <p>Found in <strong>Core Rules</strong></p>
+      cosm: orrorsh
+      description: "<p>Victorians are status conscious, and few are held in higher esteem than their heroes. The Victorians show this regard by awarding medals to the brave, the ingenious, and the intrepid. Sometimes the medals become imbued with their intent and aid the recipient in their quest to save Gaea.</p><p><strong>New Medals:</strong> This Perk may be taken as desired during character creation. Afterwards, it may be taken multiple times, but only after completing the event described in the individual awards. The Dragon Slayer, for example, is awarded only after dealing the final blow to a huge monster.</p><p>Medals don’t arrive instantly, of course, but may be delivered by courier after the Home Office receives dispatches testifying to the deed, a loved one receives letters, or the press announces it to the world. The Delphi Council understands the mystical nature of these awards, however, and assists the Victorians in delivering them when possible. Work with the Game Master to figure out the timing of the medal itself, but it should generally occur no later than the act after it was earned. The Perk may be purchased once the medal itself is in hand.</p><p>A medal must be awarded <em>and</em> worn to grant its power. They grant no bonuses to others.</p><p>Medals may be awarded to outsiders from other cosms, but only have powers for those of Orrorsh’s reality.</p><p>Unless an award says otherwise, it is never granted more than once.</p><ul><li><strong>Carnifex Princeps:</strong> The Victorians know exactly who the Gaunt Man is. This award is granted to anyone who takes part in the killing of a ravagon, his fiercest lieutenants. The hero draws and adds an additional card to his hand at the start of any Dramatic Scene.</li><li><strong>Defender:</strong> Awarded to those who rescue or defend a significant number of people, such as a school or town, at great personal risk. The hero starts each act with one additional @UUID[Compendium.te001-core-rulebook.rules.pwneQ55M0nnDH0Us.JournalEntryPage.kYP18QiA72P6PlUi#possibilities]{Possibility}.</li><li><strong>Dragon Slayer:</strong> Awarded to those who defeat a very large and powerful monster. The character adds +1 BD to all damage totals against all Large or greater-sized creatures (not vehicles or constructs) when Attack is an Approved Action.</li><li><p><strong>Order of Cynthia Bartholomew:</strong> Awarded for helping the injured or poor under great threat or for an extended period. <q>Ms. Bart,</q> as the poor called her, was a Victorian humanitarian who always helped the poor and downtrodden. Once per act, the recipient can touch an ally to remove all shock. This is a simple action.</p></li><li><strong>Victoria Gloriana:</strong> Awarded after personally playing a Glory card. This prestigious award is only granted to the country’s greatest heroes. The medal grants a +1 bonus to any one attribute and its linked skills, chosen when the medal is awarded. Note that if the medal is worn and the attribute or linked skill is used, it does cause a Contradiction.</li><li><strong>Possibility Wars Campaign Medal:</strong> Awarded to any Storm Knight who participates in a Glory event. The medal is awarded per cosm, and may be used once per act to restore 1 BD of shock. This does not require an action and may be used at any time.</li></ul><p>\_</p><p>Found in <strong>Core Rules</strong></p>"
       prerequisites: See the individual medals
-      generalContradiction: false
+      generalContradiction: true
       pulpPowers:
         enhancement01:
-          description: ''
+          description: >-
+            The Victorians know exactly who the Gaunt Man is. This award is
+            granted to anyone who takes part in the killing of a ravagon, his
+            fiercest lieutenants. The hero draws and adds an additional card to
+            his hand at the start of any Dramatic Scene.
           taken: false
-          title: ''
+          title: Carnifex Princeps
         enhancement02:
-          description: ''
+          description: >-
+            Awarded to those who rescue or defend a significant number of
+            people, such as a school or town, at great personal risk. The hero
+            starts each act with one additional Possibility.
           taken: false
-          title: ''
+          title: Defender
         enhancement03:
-          description: ''
-          taken: false
-          title: ''
+          description: >-
+            Awarded to those who defeat a very large and powerful monster. The
+            character adds +1 BD to all damage totals against all Large or
+            greater-sized creatures (not vehicles or constructs) when Attack is
+            an Approved Action.
+          taken: true
+          title: Dragon Slayer
         enhancement04:
-          description: ''
+          description: >-
+            Awarded for helping the injured or poor under great threat or for an
+            extended period. Ms. Bart, as the poor called her, was a Victorian
+            humanitarian who always helped the poor and downtrodden. Once per
+            act, the recipient can touch an ally to remove all shock. This is a
+            simple action.
           taken: false
-          title: ''
+          title: Order of Cynthia Bartholomew
         enhancement05:
-          description: ''
+          description: >-
+            Awarded after personally playing a Glory card. This prestigious
+            award is only granted to the country’s greatest heroes. The medal
+            grants a +1 bonus to any one attribute and its linked skills, chosen
+            when the medal is awarded. Note that if the medal is worn and the
+            attribute or linked skill is used, it does cause a Contradiction.
           taken: false
-          title: ''
+          title: Victoria Gloriana
         enhancement06:
-          description: ''
+          description: >-
+            Awarded to any Storm Knight who participates in a Glory event. The
+            medal is awarded per cosm, and may be used once per act to restore 1
+            BD of shock. This does not require an action and may be used at any
+            time.
           taken: false
-          title: ''
+          title: Possibility Wars Campaign Medal
         enhancement07:
           description: ''
           taken: false
@@ -462,7 +415,7 @@ items:
           description: ''
           taken: false
           title: ''
-        enhancementNumber: 0
+        enhancementNumber: 6
         limitation01: ''
         limitation02: ''
         limitation03: ''
@@ -481,11 +434,13 @@ items:
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: 1693911984563
-      modifiedTime: 1693912045162
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722156800664
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Compendium.te001-core-rulebook.Items.MevCMs1Mc6Ck02PP
+      duplicateSource: null
     _key: '!actors.items!8KlJAaxeijOcrJKN.KgWICNPz8lNZiFIB'
   - _id: keq7EUhw9cRhwFpt
     name: Caltrops
@@ -498,7 +453,7 @@ items:
       core:
         sourceId: Compendium.te001-core-rulebook.Items.KKJPrdjO5sFkhZzF
     system:
-      cosm: Aysle
+      cosm: aysle
       description: >-
         <p>A batch of scattered spikes that always land with a point upwards,
         designed to impale feet and tires. Once deployed as a simple action
@@ -517,11 +472,13 @@ items:
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: 1693912105771
-      modifiedTime: 1693912105771
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722156840222
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Compendium.te001-core-rulebook.Items.KKJPrdjO5sFkhZzF
+      duplicateSource: null
     _key: '!actors.items!8KlJAaxeijOcrJKN.keq7EUhw9cRhwFpt'
   - _id: rojDSaAJcWsl7TIO
     name: Torch
@@ -534,7 +491,7 @@ items:
       core:
         sourceId: Compendium.te001-core-rulebook.Items.R4N0t7lhhqM2uJO9
     system:
-      cosm: Living Land
+      cosm: livingLand
       description: <p>Found in <strong>Core Rules</strong></p>
       price: '5'
       techlevel: 2
@@ -546,11 +503,13 @@ items:
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: 1693912110937
-      modifiedTime: 1693912110937
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722156848703
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Compendium.te001-core-rulebook.Items.R4N0t7lhhqM2uJO9
+      duplicateSource: null
     _key: '!actors.items!8KlJAaxeijOcrJKN.rojDSaAJcWsl7TIO'
   - _id: PUXI2Ww7Tkw5WtJm
     name: Monster Hide Duster
@@ -563,7 +522,7 @@ items:
       core:
         sourceId: Compendium.te001-core-rulebook.Items.Item.RMjiwdeeAr3kBkLK
     system:
-      cosm: Orrorsh
+      cosm: orrorsh
       description: >-
         <p>@UUID[Compendium.te001-core-rulebook.rules.pwneQ55M0nnDH0Us.JournalEntryPage.qKdamp4rrcX6TTt0#fatigues:]{Fatigues}</p>
 
@@ -590,12 +549,56 @@ items:
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.7.0
-      coreVersion: '11.315'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: 1711551146791
-      modifiedTime: 1711704878844
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722156861270
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Compendium.te001-core-rulebook.Items.Item.RMjiwdeeAr3kBkLK
+      duplicateSource: null
     _key: '!actors.items!8KlJAaxeijOcrJKN.PUXI2Ww7Tkw5WtJm'
+  - name: Slayer's Bandoleer
+    type: ammunition
+    _id: wbWDSIYhAgGrPHBz
+    img: systems/torgeternity/images/icons/ammo-icon.webp
+    system:
+      cosm: ''
+      description: >-
+        <p>@UUID[Compendium.torgeternity.archetypes.Actor.8KlJAaxeijOcrJKN.Item.d9Bzjb00u4cjYSiu]{Bulletsmith}</p><p>Adamant
+        Shells (2 shots, AP 4)</p><p>Holy Water Shells (2 shots, +2 dmg vs
+        evil)</p><p>Giant Killer Shells (2 shots, +5 damage v large or larger
+        creatures)</p><p>Slayer's Gun Shells (12 shots, standard 14 dmg)</p>
+      price: ''
+      techlevel: 18
+      value: 0
+      secondaryAxiom:
+        selected: none
+        value: null
+      type: ''
+      quantity: 2
+      damageMod: 0
+      apMod: 0
+      fireDamage: false
+      blastRadius: None
+      darknessMod: none
+      reach: ''
+    effects: []
+    folder: null
+    sort: 0
+    ownership:
+      default: 0
+      93AMwcGe6H37rcPA: 3
+    flags: {}
+    _stats:
+      compendiumSource: Item.KRYQ71jof26XeGEv
+      duplicateSource: null
+      coreVersion: '12.330'
+      systemId: torgeternity
+      systemVersion: 12.2.0
+      createdTime: 1722154361280
+      modifiedTime: 1722154473668
+      lastModifiedBy: 93AMwcGe6H37rcPA
+    _key: '!actors.items!8KlJAaxeijOcrJKN.wbWDSIYhAgGrPHBz'
 effects: []
 folder: null
 sort: 100001
@@ -810,7 +813,7 @@ system:
       baseAttribute: dexterity
       adds: 0
       isFav: false
-      groupName: combat
+      groupName: other
       unskilledUse: 1
       isThreatSkill: false
       defenseOnly: false
@@ -1086,14 +1089,20 @@ prototypeToken:
       max: 1
     color: null
     attenuation: 0.5
+    negative: false
+    priority: 0
   texture:
     src: systems/torgeternity/images/characters/monster_hunter.Token.webp
-    tint: null
+    tint: '#ffffff'
     scaleX: 1
     scaleY: 1
     offsetX: 0
     offsetY: 0
     rotation: 0
+    anchorX: 0.5
+    anchorY: 0.5
+    fit: contain
+    alphaThreshold: 0.75
   sight:
     angle: 360
     enabled: false
@@ -1103,14 +1112,30 @@ prototypeToken:
     attenuation: 0.1
     saturation: 0
     contrast: 0
+    color: null
   appendNumber: false
   prependAdjective: false
   detectionModes: []
+  hexagonalShape: 0
+  occludable:
+    radius: 0
+  ring:
+    enabled: false
+    colors:
+      ring: null
+      background: null
+    effects: 1
+    subject:
+      scale: 1
+      texture: null
 _stats:
   systemId: torgeternity
   systemVersion: 3.8.1
-  coreVersion: '11.315'
+  coreVersion: '12.330'
   createdTime: 1693895859465
   modifiedTime: 1716827807404
   lastModifiedBy: VAnYow5sWS9EJzo0
+  compendiumSource: null
+  duplicateSource: null
 _key: '!actors!8KlJAaxeijOcrJKN'
+

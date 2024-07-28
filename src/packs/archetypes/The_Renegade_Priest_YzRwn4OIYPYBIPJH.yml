@@ -14,7 +14,7 @@ items:
     effects: []
     folder: null
     system:
-      cosm: Cyberpapacy
+      cosm: livingLand
       description: <p>Catholic cross</p>
       price: '0'
       techlevel: 5
@@ -24,11 +24,13 @@ items:
       default: 0
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: null
-      modifiedTime: 1693913459309
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722157582192
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Item.yLlmFt0wyS2ppWTq
+      duplicateSource: null
     _key: '!actors.items!YzRwn4OIYPYBIPJH.iymHb9kSwcAnU0fm'
   - _id: Okd70pnwBHGmywFu
     name: Cyberware Implants
@@ -42,7 +44,7 @@ items:
         sourceId: Compendium.te001-core-rulebook.Items.8LBHAgahJO6xorta
     system:
       category: cyberware
-      cosm: Cyberpapacy
+      cosm: cyberpapacy
       description: >-
         <p>When this Perk is selected, the character may choose up to $10 000
         worth of Cyberware from the lists on page 160.</p>
@@ -145,11 +147,13 @@ items:
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: 1693913394557
-      modifiedTime: 1693913413260
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722153554456
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Compendium.te001-core-rulebook.Items.8LBHAgahJO6xorta
+      duplicateSource: null
     _key: '!actors.items!YzRwn4OIYPYBIPJH.Okd70pnwBHGmywFu'
   - _id: gTf43bBWAsmksuZv
     name: Miracles
@@ -163,7 +167,7 @@ items:
         sourceId: Compendium.te001-core-rulebook.Items.W6HcoYyOqi6pGGfD
     system:
       category: faith
-      cosm: Other
+      cosm: other
       description: >-
         <p><strong>Cosms:</strong> Core Earth, Aysle, Cyberpapacy, Living Land,
         Nile Empire, Orrorsh</p>
@@ -268,11 +272,13 @@ items:
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: 1693913398922
-      modifiedTime: 1693913407972
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722153538593
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Compendium.te001-core-rulebook.Items.W6HcoYyOqi6pGGfD
+      duplicateSource: null
     _key: '!actors.items!YzRwn4OIYPYBIPJH.gTf43bBWAsmksuZv'
   - _id: Jyr9qESO0watn4r5
     name: GWI GodBeam Laser
@@ -285,7 +291,7 @@ items:
       core:
         sourceId: Compendium.te001-core-rulebook.Items.3G2SVFJnklgCOnmw
     system:
-      cosm: Cyberpapacy
+      cosm: cyberpapacy
       description: >-
         <p>@UUID[Compendium.te001-core-rulebook.rules.pwneQ55M0nnDH0Us.JournalEntryPage.qKdamp4rrcX6TTt0#short-burst:]{Short
         Burst}</p>
@@ -320,11 +326,13 @@ items:
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: 1693913428828
-      modifiedTime: 1693913428828
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722157603887
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Compendium.te001-core-rulebook.Items.3G2SVFJnklgCOnmw
+      duplicateSource: null
     _key: '!actors.items!YzRwn4OIYPYBIPJH.Jyr9qESO0watn4r5'
   - _id: SYeOq9KXKESjLZZR
     name: Cyberdeck
@@ -337,7 +345,7 @@ items:
       core:
         sourceId: Compendium.te001-core-rulebook.Items.eYpjJYTmQUROTCDZ
     system:
-      cosm: Cyberpapacy
+      cosm: cyberpapacy
       description: >-
         <p>The most common design of cyberdeck available through the black
         market is the First Seal, which allows a person equipped with a neural
@@ -358,11 +366,13 @@ items:
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: 1693913451892
-      modifiedTime: 1693913451892
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722157591927
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Compendium.te001-core-rulebook.Items.eYpjJYTmQUROTCDZ
+      duplicateSource: null
     _key: '!actors.items!YzRwn4OIYPYBIPJH.SYeOq9KXKESjLZZR'
   - _id: aHnSTe0A1LIq28ea
     name: BelleView 20-20 Cyber Eye
@@ -389,13 +399,25 @@ items:
           turns: null
           startRound: null
           startTurn: null
-        icon: icons/svg/aura.svg
         origin: Item.XwKMqZyw8Ykv12a8
-        tint: null
+        tint: '#ffffff'
         transfer: true
         name: Find and Tracking Favored
         description: ''
         statuses: []
+        _stats:
+          coreVersion: '12.330'
+          systemId: null
+          systemVersion: null
+          createdTime: null
+          modifiedTime: null
+          lastModifiedBy: null
+          compendiumSource: null
+          duplicateSource: null
+        img: icons/svg/aura.svg
+        type: base
+        system: {}
+        sort: 0
         _key: >-
           !actors.items.effects!YzRwn4OIYPYBIPJH.aHnSTe0A1LIq28ea.fr4HPRlgg1TaUMWt
     folder: null
@@ -404,7 +426,7 @@ items:
       core:
         sourceId: Compendium.te001-core-rulebook.Items.PKBgi2Obr2zhhCLX
     system:
-      cosm: Cyberpapacy
+      cosm: cyberpapacy
       description: >-
         <p>This eye enhancement increases fine detail and can even detect
         patterns or breaks in patterns. Any test made to detect and comprehend
@@ -427,11 +449,13 @@ items:
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: 1693913490442
-      modifiedTime: 1693913514308
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722157568328
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Compendium.te001-core-rulebook.Items.PKBgi2Obr2zhhCLX
+      duplicateSource: null
     _key: '!actors.items!YzRwn4OIYPYBIPJH.aHnSTe0A1LIq28ea'
   - _id: SCn5yulik1qI2JKh
     name: BelleView Low-Light MK II
@@ -444,7 +468,7 @@ items:
       core:
         sourceId: Compendium.te001-core-rulebook.Items.brQSx8v2pebz9LT1
     system:
-      cosm: Cyberpapacy
+      cosm: cyberpapacy
       description: |-
         <p>updated in Cyberpapacy Sourcebook</p>
         <p>&nbsp;</p>
@@ -460,19 +484,20 @@ items:
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: 1693913497179
-      modifiedTime: 1693913515323
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722157571431
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Compendium.te001-core-rulebook.Items.brQSx8v2pebz9LT1
+      duplicateSource: null
     _key: '!actors.items!YzRwn4OIYPYBIPJH.SCn5yulik1qI2JKh'
   - _id: B2Ogv5Qea09CaOiw
     name: HardPlas Arm
     type: implant
     img: systems/torgeternity/images/icons/cyberware-icon.webp
     effects:
-      - icon: icons/svg/aura.svg
-        origin: Item.9yaicAAj48dbaybS
+      - origin: Item.9yaicAAj48dbaybS
         duration:
           startTime: null
           seconds: null
@@ -493,11 +518,23 @@ items:
         transfer: true
         statuses: []
         flags: {}
-        tint: null
+        tint: '#ffffff'
+        _stats:
+          coreVersion: '12.330'
+          systemId: null
+          systemVersion: null
+          createdTime: null
+          modifiedTime: null
+          lastModifiedBy: null
+          compendiumSource: null
+          duplicateSource: null
+        img: icons/svg/aura.svg
+        type: base
+        system: {}
+        sort: 0
         _key: >-
           !actors.items.effects!YzRwn4OIYPYBIPJH.B2Ogv5Qea09CaOiw.4icpSmCFpseeAB0D
-      - icon: icons/svg/aura.svg
-        origin: Item.9yaicAAj48dbaybS
+      - origin: Item.9yaicAAj48dbaybS
         duration:
           startTime: null
           seconds: null
@@ -522,7 +559,20 @@ items:
         transfer: true
         statuses: []
         flags: {}
-        tint: null
+        tint: '#ffffff'
+        _stats:
+          coreVersion: '12.330'
+          systemId: null
+          systemVersion: null
+          createdTime: null
+          modifiedTime: null
+          lastModifiedBy: null
+          compendiumSource: null
+          duplicateSource: null
+        img: icons/svg/aura.svg
+        type: base
+        system: {}
+        sort: 0
         _key: >-
           !actors.items.effects!YzRwn4OIYPYBIPJH.B2Ogv5Qea09CaOiw.8eNrGmL5ettF6ZQv
     folder: null
@@ -531,7 +581,7 @@ items:
       core:
         sourceId: Compendium.te001-core-rulebook.Items.Kge40uOXKJH20nk6
     system:
-      cosm: (Keins)
+      cosm: cyberpapacy
       description: >-
         <p>One of the hero’s arms is replaced by a cybernetic version. It
         increases <em>Strength</em> tests by +1 and has +2 Armor on that limb
@@ -553,11 +603,13 @@ items:
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: 1693913502475
-      modifiedTime: 1694867340056
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722157574783
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Compendium.te001-core-rulebook.Items.Kge40uOXKJH20nk6
+      duplicateSource: null
     _key: '!actors.items!YzRwn4OIYPYBIPJH.B2Ogv5Qea09CaOiw'
   - _id: h8Pjmy5xh9xAKe3M
     name: Healing
@@ -613,10 +665,12 @@ items:
     _stats:
       systemId: torgeternity
       systemVersion: 3.1.1
-      coreVersion: '11.308'
+      coreVersion: '12.330'
       createdTime: 1693913699020
       modifiedTime: 1693913699020
       lastModifiedBy: CtisFurQNe9h7ABb
+      compendiumSource: Compendium.te001-core-rulebook.Items.UpTgsybNJ1srMK4o
+      duplicateSource: null
     _key: '!actors.items!YzRwn4OIYPYBIPJH.h8Pjmy5xh9xAKe3M'
   - _id: vmkCvyPe5aUFaIT3
     name: Bless
@@ -638,14 +692,26 @@ items:
           turns: null
           startRound: null
           startTurn: null
-        icon: icons/svg/aura.svg
         origin: Compendium.te001-core-rulebook.Items.se2mx9JyDViZfTFt
         transfer: true
         flags: {}
-        tint: null
+        tint: '#ffffff'
         name: Charisma standard
         description: ''
         statuses: []
+        _stats:
+          coreVersion: '12.330'
+          systemId: null
+          systemVersion: null
+          createdTime: null
+          modifiedTime: null
+          lastModifiedBy: null
+          compendiumSource: null
+          duplicateSource: null
+        img: icons/svg/aura.svg
+        type: base
+        system: {}
+        sort: 0
         _key: >-
           !actors.items.effects!YzRwn4OIYPYBIPJH.vmkCvyPe5aUFaIT3.ejsHxyVSYc4H584m
       - _id: UEJxiEVAmMFSgV3V
@@ -663,14 +729,26 @@ items:
           turns: null
           startRound: null
           startTurn: null
-        icon: icons/svg/aura.svg
         origin: Compendium.te001-core-rulebook.Items.se2mx9JyDViZfTFt
         transfer: true
         flags: {}
-        tint: null
+        tint: '#ffffff'
         name: Charisma good
         description: ''
         statuses: []
+        _stats:
+          coreVersion: '12.330'
+          systemId: null
+          systemVersion: null
+          createdTime: null
+          modifiedTime: null
+          lastModifiedBy: null
+          compendiumSource: null
+          duplicateSource: null
+        img: icons/svg/aura.svg
+        type: base
+        system: {}
+        sort: 0
         _key: >-
           !actors.items.effects!YzRwn4OIYPYBIPJH.vmkCvyPe5aUFaIT3.UEJxiEVAmMFSgV3V
       - _id: 7hLkPnWQ3Cz4sIvx
@@ -688,14 +766,26 @@ items:
           turns: null
           startRound: null
           startTurn: null
-        icon: icons/svg/aura.svg
         origin: Compendium.te001-core-rulebook.Items.se2mx9JyDViZfTFt
         transfer: true
         flags: {}
-        tint: null
+        tint: '#ffffff'
         name: Charisma outstanding
         description: ''
         statuses: []
+        _stats:
+          coreVersion: '12.330'
+          systemId: null
+          systemVersion: null
+          createdTime: null
+          modifiedTime: null
+          lastModifiedBy: null
+          compendiumSource: null
+          duplicateSource: null
+        img: icons/svg/aura.svg
+        type: base
+        system: {}
+        sort: 0
         _key: >-
           !actors.items.effects!YzRwn4OIYPYBIPJH.vmkCvyPe5aUFaIT3.7hLkPnWQ3Cz4sIvx
       - _id: Gk4Dt9zemEPdV4Lf
@@ -713,14 +803,26 @@ items:
           turns: null
           startRound: null
           startTurn: null
-        icon: icons/svg/aura.svg
         origin: Compendium.te001-core-rulebook.Items.se2mx9JyDViZfTFt
         transfer: true
         flags: {}
-        tint: null
+        tint: '#ffffff'
         name: Dexterity standard
         description: ''
         statuses: []
+        _stats:
+          coreVersion: '12.330'
+          systemId: null
+          systemVersion: null
+          createdTime: null
+          modifiedTime: null
+          lastModifiedBy: null
+          compendiumSource: null
+          duplicateSource: null
+        img: icons/svg/aura.svg
+        type: base
+        system: {}
+        sort: 0
         _key: >-
           !actors.items.effects!YzRwn4OIYPYBIPJH.vmkCvyPe5aUFaIT3.Gk4Dt9zemEPdV4Lf
       - _id: hjgrSJkvynzfz1B7
@@ -738,14 +840,26 @@ items:
           turns: null
           startRound: null
           startTurn: null
-        icon: icons/svg/aura.svg
         origin: Compendium.te001-core-rulebook.Items.se2mx9JyDViZfTFt
         transfer: true
         flags: {}
-        tint: null
+        tint: '#ffffff'
         name: Dexterity good
         description: ''
         statuses: []
+        _stats:
+          coreVersion: '12.330'
+          systemId: null
+          systemVersion: null
+          createdTime: null
+          modifiedTime: null
+          lastModifiedBy: null
+          compendiumSource: null
+          duplicateSource: null
+        img: icons/svg/aura.svg
+        type: base
+        system: {}
+        sort: 0
         _key: >-
           !actors.items.effects!YzRwn4OIYPYBIPJH.vmkCvyPe5aUFaIT3.hjgrSJkvynzfz1B7
       - _id: 4vENwA8ULwUdWZuL
@@ -763,14 +877,26 @@ items:
           turns: null
           startRound: null
           startTurn: null
-        icon: icons/svg/aura.svg
         origin: Compendium.te001-core-rulebook.Items.se2mx9JyDViZfTFt
         transfer: true
         flags: {}
-        tint: null
+        tint: '#ffffff'
         name: Dexterity outstanding
         description: ''
         statuses: []
+        _stats:
+          coreVersion: '12.330'
+          systemId: null
+          systemVersion: null
+          createdTime: null
+          modifiedTime: null
+          lastModifiedBy: null
+          compendiumSource: null
+          duplicateSource: null
+        img: icons/svg/aura.svg
+        type: base
+        system: {}
+        sort: 0
         _key: >-
           !actors.items.effects!YzRwn4OIYPYBIPJH.vmkCvyPe5aUFaIT3.4vENwA8ULwUdWZuL
       - _id: ZagMGUXj56KZTy70
@@ -788,14 +914,26 @@ items:
           turns: null
           startRound: null
           startTurn: null
-        icon: icons/svg/aura.svg
         origin: Compendium.te001-core-rulebook.Items.se2mx9JyDViZfTFt
         transfer: true
         flags: {}
-        tint: null
+        tint: '#ffffff'
         name: Mind standard
         description: ''
         statuses: []
+        _stats:
+          coreVersion: '12.330'
+          systemId: null
+          systemVersion: null
+          createdTime: null
+          modifiedTime: null
+          lastModifiedBy: null
+          compendiumSource: null
+          duplicateSource: null
+        img: icons/svg/aura.svg
+        type: base
+        system: {}
+        sort: 0
         _key: >-
           !actors.items.effects!YzRwn4OIYPYBIPJH.vmkCvyPe5aUFaIT3.ZagMGUXj56KZTy70
       - _id: 8bq7UJUETHyFo1gM
@@ -813,14 +951,26 @@ items:
           turns: null
           startRound: null
           startTurn: null
-        icon: icons/svg/aura.svg
         origin: Compendium.te001-core-rulebook.Items.se2mx9JyDViZfTFt
         transfer: true
         flags: {}
-        tint: null
+        tint: '#ffffff'
         name: Mind good
         description: ''
         statuses: []
+        _stats:
+          coreVersion: '12.330'
+          systemId: null
+          systemVersion: null
+          createdTime: null
+          modifiedTime: null
+          lastModifiedBy: null
+          compendiumSource: null
+          duplicateSource: null
+        img: icons/svg/aura.svg
+        type: base
+        system: {}
+        sort: 0
         _key: >-
           !actors.items.effects!YzRwn4OIYPYBIPJH.vmkCvyPe5aUFaIT3.8bq7UJUETHyFo1gM
       - _id: Tt7MWjXGciRG35AL
@@ -838,14 +988,26 @@ items:
           turns: null
           startRound: null
           startTurn: null
-        icon: icons/svg/aura.svg
         origin: Compendium.te001-core-rulebook.Items.se2mx9JyDViZfTFt
         transfer: true
         flags: {}
-        tint: null
+        tint: '#ffffff'
         name: Mind outstanding
         description: ''
         statuses: []
+        _stats:
+          coreVersion: '12.330'
+          systemId: null
+          systemVersion: null
+          createdTime: null
+          modifiedTime: null
+          lastModifiedBy: null
+          compendiumSource: null
+          duplicateSource: null
+        img: icons/svg/aura.svg
+        type: base
+        system: {}
+        sort: 0
         _key: >-
           !actors.items.effects!YzRwn4OIYPYBIPJH.vmkCvyPe5aUFaIT3.Tt7MWjXGciRG35AL
       - _id: vTigaxKhfG399XAn
@@ -863,14 +1025,26 @@ items:
           turns: null
           startRound: null
           startTurn: null
-        icon: icons/svg/aura.svg
         origin: Compendium.te001-core-rulebook.Items.se2mx9JyDViZfTFt
         transfer: true
         flags: {}
-        tint: null
+        tint: '#ffffff'
         name: Spirit standard
         description: ''
         statuses: []
+        _stats:
+          coreVersion: '12.330'
+          systemId: null
+          systemVersion: null
+          createdTime: null
+          modifiedTime: null
+          lastModifiedBy: null
+          compendiumSource: null
+          duplicateSource: null
+        img: icons/svg/aura.svg
+        type: base
+        system: {}
+        sort: 0
         _key: >-
           !actors.items.effects!YzRwn4OIYPYBIPJH.vmkCvyPe5aUFaIT3.vTigaxKhfG399XAn
       - _id: 3GQjjcjSdCrfSuFw
@@ -888,14 +1062,26 @@ items:
           turns: null
           startRound: null
           startTurn: null
-        icon: icons/svg/aura.svg
         origin: Compendium.te001-core-rulebook.Items.se2mx9JyDViZfTFt
         transfer: true
         flags: {}
-        tint: null
+        tint: '#ffffff'
         name: Spirit good
         description: ''
         statuses: []
+        _stats:
+          coreVersion: '12.330'
+          systemId: null
+          systemVersion: null
+          createdTime: null
+          modifiedTime: null
+          lastModifiedBy: null
+          compendiumSource: null
+          duplicateSource: null
+        img: icons/svg/aura.svg
+        type: base
+        system: {}
+        sort: 0
         _key: >-
           !actors.items.effects!YzRwn4OIYPYBIPJH.vmkCvyPe5aUFaIT3.3GQjjcjSdCrfSuFw
       - _id: ROpBOp9qzrFAkanv
@@ -913,14 +1099,26 @@ items:
           turns: null
           startRound: null
           startTurn: null
-        icon: icons/svg/aura.svg
         origin: Compendium.te001-core-rulebook.Items.se2mx9JyDViZfTFt
         transfer: true
         flags: {}
-        tint: null
+        tint: '#ffffff'
         name: Spirit outstanding
         description: ''
         statuses: []
+        _stats:
+          coreVersion: '12.330'
+          systemId: null
+          systemVersion: null
+          createdTime: null
+          modifiedTime: null
+          lastModifiedBy: null
+          compendiumSource: null
+          duplicateSource: null
+        img: icons/svg/aura.svg
+        type: base
+        system: {}
+        sort: 0
         _key: >-
           !actors.items.effects!YzRwn4OIYPYBIPJH.vmkCvyPe5aUFaIT3.ROpBOp9qzrFAkanv
       - _id: AQOnDabxLTdMzsol
@@ -938,14 +1136,26 @@ items:
           turns: null
           startRound: null
           startTurn: null
-        icon: icons/svg/aura.svg
         origin: Compendium.te001-core-rulebook.Items.se2mx9JyDViZfTFt
         transfer: true
         flags: {}
-        tint: null
+        tint: '#ffffff'
         name: Strength standard
         description: ''
         statuses: []
+        _stats:
+          coreVersion: '12.330'
+          systemId: null
+          systemVersion: null
+          createdTime: null
+          modifiedTime: null
+          lastModifiedBy: null
+          compendiumSource: null
+          duplicateSource: null
+        img: icons/svg/aura.svg
+        type: base
+        system: {}
+        sort: 0
         _key: >-
           !actors.items.effects!YzRwn4OIYPYBIPJH.vmkCvyPe5aUFaIT3.AQOnDabxLTdMzsol
       - _id: VBZlldbwSpYM8gzS
@@ -963,14 +1173,26 @@ items:
           turns: null
           startRound: null
           startTurn: null
-        icon: icons/svg/aura.svg
         origin: Compendium.te001-core-rulebook.Items.se2mx9JyDViZfTFt
         transfer: true
         flags: {}
-        tint: null
+        tint: '#ffffff'
         name: Strength good
         description: ''
         statuses: []
+        _stats:
+          coreVersion: '12.330'
+          systemId: null
+          systemVersion: null
+          createdTime: null
+          modifiedTime: null
+          lastModifiedBy: null
+          compendiumSource: null
+          duplicateSource: null
+        img: icons/svg/aura.svg
+        type: base
+        system: {}
+        sort: 0
         _key: >-
           !actors.items.effects!YzRwn4OIYPYBIPJH.vmkCvyPe5aUFaIT3.VBZlldbwSpYM8gzS
       - _id: ztjlxv8a1LnAkd47
@@ -988,14 +1210,26 @@ items:
           turns: null
           startRound: null
           startTurn: null
-        icon: icons/svg/aura.svg
         origin: Compendium.te001-core-rulebook.Items.se2mx9JyDViZfTFt
         transfer: true
         flags: {}
-        tint: null
+        tint: '#ffffff'
         name: Strength outstanding
         description: ''
         statuses: []
+        _stats:
+          coreVersion: '12.330'
+          systemId: null
+          systemVersion: null
+          createdTime: null
+          modifiedTime: null
+          lastModifiedBy: null
+          compendiumSource: null
+          duplicateSource: null
+        img: icons/svg/aura.svg
+        type: base
+        system: {}
+        sort: 0
         _key: >-
           !actors.items.effects!YzRwn4OIYPYBIPJH.vmkCvyPe5aUFaIT3.ztjlxv8a1LnAkd47
     folder: null
@@ -1043,10 +1277,12 @@ items:
     _stats:
       systemId: torgeternity
       systemVersion: 3.1.1
-      coreVersion: '11.308'
+      coreVersion: '12.330'
       createdTime: 1693913704324
       modifiedTime: 1693913704324
       lastModifiedBy: CtisFurQNe9h7ABb
+      compendiumSource: Compendium.te001-core-rulebook.Items.se2mx9JyDViZfTFt
+      duplicateSource: null
     _key: '!actors.items!YzRwn4OIYPYBIPJH.vmkCvyPe5aUFaIT3'
   - _id: 9kYPQ0EfSd09tUbr
     name: Ward Enemy
@@ -1112,10 +1348,12 @@ items:
     _stats:
       systemId: torgeternity
       systemVersion: 3.1.1
-      coreVersion: '11.308'
+      coreVersion: '12.330'
       createdTime: 1693913707540
       modifiedTime: 1693913707540
       lastModifiedBy: CtisFurQNe9h7ABb
+      compendiumSource: Compendium.te001-core-rulebook.Items.u8AtVmCMnPyP3Ewx
+      duplicateSource: null
     _key: '!actors.items!YzRwn4OIYPYBIPJH.9kYPQ0EfSd09tUbr'
   - _id: tDH3SHtwnezxojKa
     name: IriMesh Clothing
@@ -1128,7 +1366,7 @@ items:
       core:
         sourceId: Compendium.te001-core-rulebook.Items.Item.iqqKO58UXvYX0BOU
     system:
-      cosm: (None)
+      cosm: panPacifica
       description: >-
         <p>A light textile woven by nano-machines. IriMesh looks and feels
         similar to silk, but with even more tensile strength. IriMesh can be
@@ -1154,11 +1392,13 @@ items:
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.7.0
-      coreVersion: '11.315'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: 1711551146882
-      modifiedTime: 1711704624283
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722157598047
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Compendium.te001-core-rulebook.Items.Item.iqqKO58UXvYX0BOU
+      duplicateSource: null
     _key: '!actors.items!YzRwn4OIYPYBIPJH.tDH3SHtwnezxojKa'
 effects:
   - _id: OD88OO0fEVgzqpzV
@@ -1181,17 +1421,28 @@ effects:
       turns: null
       startRound: null
       startTurn: null
-    icon: icons/svg/aura.svg
     origin: >-
       Compendium.torgeternity.archetypes.Actor.YzRwn4OIYPYBIPJH.Item.aHnSTe0A1LIq28ea
-    tint: null
+    tint: '#ffffff'
     transfer: false
     name: Find and Tracking Favored
     description: ''
     statuses: []
+    _stats:
+      coreVersion: '12.330'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+    img: icons/svg/aura.svg
+    type: base
+    system: {}
+    sort: 0
     _key: '!actors.effects!YzRwn4OIYPYBIPJH.OD88OO0fEVgzqpzV'
-  - icon: icons/svg/aura.svg
-    origin: >-
+  - origin: >-
       Compendium.torgeternity.archetypes.Actor.YzRwn4OIYPYBIPJH.Item.B2Ogv5Qea09CaOiw
     duration:
       startTime: 0
@@ -1213,10 +1464,22 @@ effects:
     transfer: false
     statuses: []
     flags: {}
-    tint: null
+    tint: '#ffffff'
+    _stats:
+      coreVersion: '12.330'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+    img: icons/svg/aura.svg
+    type: base
+    system: {}
+    sort: 0
     _key: '!actors.effects!YzRwn4OIYPYBIPJH.lIHi5gkAKFhcgaZZ'
-  - icon: icons/svg/aura.svg
-    origin: >-
+  - origin: >-
       Compendium.torgeternity.archetypes.Actor.YzRwn4OIYPYBIPJH.Item.B2Ogv5Qea09CaOiw
     duration:
       startTime: 0
@@ -1238,7 +1501,20 @@ effects:
     transfer: false
     statuses: []
     flags: {}
-    tint: null
+    tint: '#ffffff'
+    _stats:
+      coreVersion: '12.330'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+    img: icons/svg/aura.svg
+    type: base
+    system: {}
+    sort: 0
     _key: '!actors.effects!YzRwn4OIYPYBIPJH.YKngU3ubKoGSC8GM'
   - _id: QU7Y7tvCFUQIRGab
     changes:
@@ -1255,15 +1531,27 @@ effects:
       turns: null
       startRound: null
       startTurn: null
-    icon: icons/svg/aura.svg
     origin: >-
       Compendium.torgeternity.archetypes.Actor.YzRwn4OIYPYBIPJH.Item.vmkCvyPe5aUFaIT3
     transfer: false
     flags: {}
-    tint: null
+    tint: '#ffffff'
     name: Charisma standard
     description: ''
     statuses: []
+    _stats:
+      coreVersion: '12.330'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+    img: icons/svg/aura.svg
+    type: base
+    system: {}
+    sort: 0
     _key: '!actors.effects!YzRwn4OIYPYBIPJH.QU7Y7tvCFUQIRGab'
   - _id: tL9YoN5AIbDPBg3T
     changes:
@@ -1280,15 +1568,27 @@ effects:
       turns: null
       startRound: null
       startTurn: null
-    icon: icons/svg/aura.svg
     origin: >-
       Compendium.torgeternity.archetypes.Actor.YzRwn4OIYPYBIPJH.Item.vmkCvyPe5aUFaIT3
     transfer: false
     flags: {}
-    tint: null
+    tint: '#ffffff'
     name: Charisma good
     description: ''
     statuses: []
+    _stats:
+      coreVersion: '12.330'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+    img: icons/svg/aura.svg
+    type: base
+    system: {}
+    sort: 0
     _key: '!actors.effects!YzRwn4OIYPYBIPJH.tL9YoN5AIbDPBg3T'
   - _id: MZUVwOduYomIV7FK
     changes:
@@ -1305,15 +1605,27 @@ effects:
       turns: null
       startRound: null
       startTurn: null
-    icon: icons/svg/aura.svg
     origin: >-
       Compendium.torgeternity.archetypes.Actor.YzRwn4OIYPYBIPJH.Item.vmkCvyPe5aUFaIT3
     transfer: false
     flags: {}
-    tint: null
+    tint: '#ffffff'
     name: Charisma outstanding
     description: ''
     statuses: []
+    _stats:
+      coreVersion: '12.330'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+    img: icons/svg/aura.svg
+    type: base
+    system: {}
+    sort: 0
     _key: '!actors.effects!YzRwn4OIYPYBIPJH.MZUVwOduYomIV7FK'
   - _id: RXEhVfQuRDwvK9au
     changes:
@@ -1330,15 +1642,27 @@ effects:
       turns: null
       startRound: null
       startTurn: null
-    icon: icons/svg/aura.svg
     origin: >-
       Compendium.torgeternity.archetypes.Actor.YzRwn4OIYPYBIPJH.Item.vmkCvyPe5aUFaIT3
     transfer: false
     flags: {}
-    tint: null
+    tint: '#ffffff'
     name: Dexterity standard
     description: ''
     statuses: []
+    _stats:
+      coreVersion: '12.330'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+    img: icons/svg/aura.svg
+    type: base
+    system: {}
+    sort: 0
     _key: '!actors.effects!YzRwn4OIYPYBIPJH.RXEhVfQuRDwvK9au'
   - _id: E34ShANgpX7eCDyu
     changes:
@@ -1355,15 +1679,27 @@ effects:
       turns: null
       startRound: null
       startTurn: null
-    icon: icons/svg/aura.svg
     origin: >-
       Compendium.torgeternity.archetypes.Actor.YzRwn4OIYPYBIPJH.Item.vmkCvyPe5aUFaIT3
     transfer: false
     flags: {}
-    tint: null
+    tint: '#ffffff'
     name: Dexterity good
     description: ''
     statuses: []
+    _stats:
+      coreVersion: '12.330'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+    img: icons/svg/aura.svg
+    type: base
+    system: {}
+    sort: 0
     _key: '!actors.effects!YzRwn4OIYPYBIPJH.E34ShANgpX7eCDyu'
   - _id: Ukg3IkXqEjHsLB9o
     changes:
@@ -1380,15 +1716,27 @@ effects:
       turns: null
       startRound: null
       startTurn: null
-    icon: icons/svg/aura.svg
     origin: >-
       Compendium.torgeternity.archetypes.Actor.YzRwn4OIYPYBIPJH.Item.vmkCvyPe5aUFaIT3
     transfer: false
     flags: {}
-    tint: null
+    tint: '#ffffff'
     name: Dexterity outstanding
     description: ''
     statuses: []
+    _stats:
+      coreVersion: '12.330'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+    img: icons/svg/aura.svg
+    type: base
+    system: {}
+    sort: 0
     _key: '!actors.effects!YzRwn4OIYPYBIPJH.Ukg3IkXqEjHsLB9o'
   - _id: 5XmKUEiNKuZNC8L3
     changes:
@@ -1405,15 +1753,27 @@ effects:
       turns: null
       startRound: null
       startTurn: null
-    icon: icons/svg/aura.svg
     origin: >-
       Compendium.torgeternity.archetypes.Actor.YzRwn4OIYPYBIPJH.Item.vmkCvyPe5aUFaIT3
     transfer: false
     flags: {}
-    tint: null
+    tint: '#ffffff'
     name: Mind standard
     description: ''
     statuses: []
+    _stats:
+      coreVersion: '12.330'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+    img: icons/svg/aura.svg
+    type: base
+    system: {}
+    sort: 0
     _key: '!actors.effects!YzRwn4OIYPYBIPJH.5XmKUEiNKuZNC8L3'
   - _id: W7iYq44oBHSxG2rY
     changes:
@@ -1430,15 +1790,27 @@ effects:
       turns: null
       startRound: null
       startTurn: null
-    icon: icons/svg/aura.svg
     origin: >-
       Compendium.torgeternity.archetypes.Actor.YzRwn4OIYPYBIPJH.Item.vmkCvyPe5aUFaIT3
     transfer: false
     flags: {}
-    tint: null
+    tint: '#ffffff'
     name: Mind good
     description: ''
     statuses: []
+    _stats:
+      coreVersion: '12.330'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+    img: icons/svg/aura.svg
+    type: base
+    system: {}
+    sort: 0
     _key: '!actors.effects!YzRwn4OIYPYBIPJH.W7iYq44oBHSxG2rY'
   - _id: YkbdysdtcaOkPbiq
     changes:
@@ -1455,15 +1827,27 @@ effects:
       turns: null
       startRound: null
       startTurn: null
-    icon: icons/svg/aura.svg
     origin: >-
       Compendium.torgeternity.archetypes.Actor.YzRwn4OIYPYBIPJH.Item.vmkCvyPe5aUFaIT3
     transfer: false
     flags: {}
-    tint: null
+    tint: '#ffffff'
     name: Mind outstanding
     description: ''
     statuses: []
+    _stats:
+      coreVersion: '12.330'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+    img: icons/svg/aura.svg
+    type: base
+    system: {}
+    sort: 0
     _key: '!actors.effects!YzRwn4OIYPYBIPJH.YkbdysdtcaOkPbiq'
   - _id: Hh0XlZcy25ngK8aW
     changes:
@@ -1480,15 +1864,27 @@ effects:
       turns: null
       startRound: null
       startTurn: null
-    icon: icons/svg/aura.svg
     origin: >-
       Compendium.torgeternity.archetypes.Actor.YzRwn4OIYPYBIPJH.Item.vmkCvyPe5aUFaIT3
     transfer: false
     flags: {}
-    tint: null
+    tint: '#ffffff'
     name: Spirit standard
     description: ''
     statuses: []
+    _stats:
+      coreVersion: '12.330'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+    img: icons/svg/aura.svg
+    type: base
+    system: {}
+    sort: 0
     _key: '!actors.effects!YzRwn4OIYPYBIPJH.Hh0XlZcy25ngK8aW'
   - _id: J3TFqUJ4uxMYhGeI
     changes:
@@ -1505,15 +1901,27 @@ effects:
       turns: null
       startRound: null
       startTurn: null
-    icon: icons/svg/aura.svg
     origin: >-
       Compendium.torgeternity.archetypes.Actor.YzRwn4OIYPYBIPJH.Item.vmkCvyPe5aUFaIT3
     transfer: false
     flags: {}
-    tint: null
+    tint: '#ffffff'
     name: Spirit good
     description: ''
     statuses: []
+    _stats:
+      coreVersion: '12.330'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+    img: icons/svg/aura.svg
+    type: base
+    system: {}
+    sort: 0
     _key: '!actors.effects!YzRwn4OIYPYBIPJH.J3TFqUJ4uxMYhGeI'
   - _id: pVc8p8Op6ffNTk8e
     changes:
@@ -1530,15 +1938,27 @@ effects:
       turns: null
       startRound: null
       startTurn: null
-    icon: icons/svg/aura.svg
     origin: >-
       Compendium.torgeternity.archetypes.Actor.YzRwn4OIYPYBIPJH.Item.vmkCvyPe5aUFaIT3
     transfer: false
     flags: {}
-    tint: null
+    tint: '#ffffff'
     name: Spirit outstanding
     description: ''
     statuses: []
+    _stats:
+      coreVersion: '12.330'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+    img: icons/svg/aura.svg
+    type: base
+    system: {}
+    sort: 0
     _key: '!actors.effects!YzRwn4OIYPYBIPJH.pVc8p8Op6ffNTk8e'
   - _id: oSsqZJgLvvECHxW3
     changes:
@@ -1555,15 +1975,27 @@ effects:
       turns: null
       startRound: null
       startTurn: null
-    icon: icons/svg/aura.svg
     origin: >-
       Compendium.torgeternity.archetypes.Actor.YzRwn4OIYPYBIPJH.Item.vmkCvyPe5aUFaIT3
     transfer: false
     flags: {}
-    tint: null
+    tint: '#ffffff'
     name: Strength standard
     description: ''
     statuses: []
+    _stats:
+      coreVersion: '12.330'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+    img: icons/svg/aura.svg
+    type: base
+    system: {}
+    sort: 0
     _key: '!actors.effects!YzRwn4OIYPYBIPJH.oSsqZJgLvvECHxW3'
   - _id: n6Z0C2GLi17WJTgR
     changes:
@@ -1580,15 +2012,27 @@ effects:
       turns: null
       startRound: null
       startTurn: null
-    icon: icons/svg/aura.svg
     origin: >-
       Compendium.torgeternity.archetypes.Actor.YzRwn4OIYPYBIPJH.Item.vmkCvyPe5aUFaIT3
     transfer: false
     flags: {}
-    tint: null
+    tint: '#ffffff'
     name: Strength good
     description: ''
     statuses: []
+    _stats:
+      coreVersion: '12.330'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+    img: icons/svg/aura.svg
+    type: base
+    system: {}
+    sort: 0
     _key: '!actors.effects!YzRwn4OIYPYBIPJH.n6Z0C2GLi17WJTgR'
   - _id: BJQHsQZEQhtNEsl3
     changes:
@@ -1605,15 +2049,27 @@ effects:
       turns: null
       startRound: null
       startTurn: null
-    icon: icons/svg/aura.svg
     origin: >-
       Compendium.torgeternity.archetypes.Actor.YzRwn4OIYPYBIPJH.Item.vmkCvyPe5aUFaIT3
     transfer: false
     flags: {}
-    tint: null
+    tint: '#ffffff'
     name: Strength outstanding
     description: ''
     statuses: []
+    _stats:
+      coreVersion: '12.330'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+    img: icons/svg/aura.svg
+    type: base
+    system: {}
+    sort: 0
     _key: '!actors.effects!YzRwn4OIYPYBIPJH.BJQHsQZEQhtNEsl3'
 folder: null
 sort: 100001
@@ -1828,7 +2284,7 @@ system:
       baseAttribute: dexterity
       adds: 0
       isFav: false
-      groupName: combat
+      groupName: other
       unskilledUse: 1
       isThreatSkill: false
       defenseOnly: false
@@ -2101,14 +2557,20 @@ prototypeToken:
       max: 1
     color: null
     attenuation: 0.5
+    negative: false
+    priority: 0
   texture:
     src: systems/torgeternity/images/characters/renegade_priest.Token.webp
-    tint: null
+    tint: '#ffffff'
     scaleX: 1
     scaleY: 1
     offsetX: 0
     offsetY: 0
     rotation: 0
+    anchorX: 0.5
+    anchorY: 0.5
+    fit: contain
+    alphaThreshold: 0.75
   sight:
     angle: 360
     enabled: false
@@ -2118,14 +2580,30 @@ prototypeToken:
     attenuation: 0.1
     saturation: 0
     contrast: 0
+    color: null
   appendNumber: false
   prependAdjective: false
   detectionModes: []
+  hexagonalShape: 0
+  occludable:
+    radius: 0
+  ring:
+    enabled: false
+    colors:
+      ring: null
+      background: null
+    effects: 1
+    subject:
+      scale: 1
+      texture: null
 _stats:
   systemId: torgeternity
   systemVersion: 3.8.1
-  coreVersion: '11.315'
+  coreVersion: '12.330'
   createdTime: 1693913382916
   modifiedTime: 1716827807849
   lastModifiedBy: VAnYow5sWS9EJzo0
+  compendiumSource: null
+  duplicateSource: null
 _key: '!actors!YzRwn4OIYPYBIPJH'
+

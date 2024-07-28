@@ -3,33 +3,6 @@ name: The Unstoppable Cop
 type: stormknight
 img: systems/torgeternity/images/characters/Unstoppable_Cop.Avatar.webp
 items:
-  - _id: FO6D5TLpZiLFO2dm
-    name: Extra Magazines (5)
-    type: gear
-    sort: 1500000
-    flags:
-      core:
-        sourceId: Item.qZuQoegFPBYC6tEB
-    img: systems/torgeternity/images/icons/gear-icon.webp
-    effects: []
-    folder: null
-    system:
-      cosm: Core Earth
-      description: <p>Five reloads for Glock 9mm</p>
-      price: '20'
-      techlevel: 22
-      value: 6
-      equippedClass: item-equipped
-    ownership:
-      default: 0
-    _stats:
-      systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
-      createdTime: null
-      modifiedTime: 1693914912805
-      lastModifiedBy: CtisFurQNe9h7ABb
-    _key: '!actors.items!non4XwpfJLE9GiST.FO6D5TLpZiLFO2dm'
   - _id: IWuewwOZhaOsjEZt
     name: Police Badge
     type: gear
@@ -41,7 +14,7 @@ items:
     effects: []
     folder: null
     system:
-      cosm: Core Earth
+      cosm: coreEarth
       description: ''
       price: '0'
       techlevel: 22
@@ -51,11 +24,13 @@ items:
       default: 0
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: null
-      modifiedTime: 1693914920140
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722158355475
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Item.fgtK79BumQwmkPzK
+      duplicateSource: null
     _key: '!actors.items!non4XwpfJLE9GiST.IWuewwOZhaOsjEZt'
   - _id: 60Hn7sxT2ytPIWI9
     name: Baton
@@ -68,8 +43,9 @@ items:
     effects: []
     folder: null
     system:
-      cosm: Core Earth
-      description: ''
+      cosm: coreEarth
+      description: >-
+        <p>@UUID[Compendium.te001-core-rulebook.rules.pwneQ55M0nnDH0Us.JournalEntryPage.EhKa65cpHvodUl2L#grappling]{Grappling}</p>
       price: '20'
       techlevel: 22
       value: 6
@@ -86,11 +62,13 @@ items:
       default: 0
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: null
-      modifiedTime: 1693914708441
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722158438088
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Item.NwUEzGCgHe2GgC6N
+      duplicateSource: null
     _key: '!actors.items!non4XwpfJLE9GiST.60Hn7sxT2ytPIWI9'
   - _id: foEY3vdIO3IYdKLF
     name: Situational Awareness
@@ -104,7 +82,7 @@ items:
         sourceId: Compendium.te001-core-rulebook.Items.VolVbsElAMc8KiPt
     system:
       category: prowess
-      cosm: (None)
+      cosm: none
       description: >-
         <p>Veteran Storm Knights become hyper-aware of their surroundings when
         danger nears, marking exits, reading their foes’ intent, and knowing
@@ -190,18 +168,20 @@ items:
         limitation09: ''
         limitation10: ''
         limitationNumber: 0
-      timestaken: ''
+      timestaken: '1'
     ownership:
       default: 0
       A9LyAqagoJJU3gDH: 3
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: 1693914682084
-      modifiedTime: 1693914682084
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722153737285
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Compendium.te001-core-rulebook.Items.VolVbsElAMc8KiPt
+      duplicateSource: null
     _key: '!actors.items!non4XwpfJLE9GiST.foEY3vdIO3IYdKLF'
   - _id: 850Io47ql85dGtYF
     name: Negation
@@ -215,7 +195,7 @@ items:
         sourceId: Compendium.te001-core-rulebook.Items.uNmrQFTiSe5b1FXp
     system:
       category: reality
-      cosm: Core Earth
+      cosm: coreEarth
       description: >-
         <p>When an enemy attempts to spend a Possibility for an attribute or
         skill test, the Storm Knight may spend her own Possibility&nbsp;to
@@ -303,18 +283,20 @@ items:
         limitation09: ''
         limitation10: ''
         limitationNumber: 0
-      timestaken: ''
+      timestaken: '1'
     ownership:
       default: 0
       A9LyAqagoJJU3gDH: 3
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: 1693914688523
-      modifiedTime: 1693914688523
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722153712093
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Compendium.te001-core-rulebook.Items.uNmrQFTiSe5b1FXp
+      duplicateSource: null
     _key: '!actors.items!non4XwpfJLE9GiST.850Io47ql85dGtYF'
   - _id: um7IpTMm9O9yoHyJ
     name: Glock 9mm
@@ -327,7 +309,7 @@ items:
       core:
         sourceId: Compendium.te001-core-rulebook.Items.36zun3ZNNpg6Al8g
     system:
-      cosm: Core Earth
+      cosm: coreEarth
       description: >-
         <p>A recoil-operated 9mm semiautomatic. Notable for its large,
         doublestacked ammo magazine.</p>
@@ -356,11 +338,13 @@ items:
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: 1693914872301
-      modifiedTime: 1693914872301
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722158381211
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Compendium.te001-core-rulebook.Items.36zun3ZNNpg6Al8g
+      duplicateSource: null
     _key: '!actors.items!non4XwpfJLE9GiST.um7IpTMm9O9yoHyJ'
   - _id: RCKN2Q1yd7kkWeRT
     name: Multi-Tool
@@ -373,7 +357,7 @@ items:
       core:
         sourceId: Compendium.te001-core-rulebook.Items.HzAmhij6mdm2Zac6
     system:
-      cosm: Core Earth
+      cosm: coreEarth
       description: >-
         <p>A handy device that combines clippers, screwdrivers, a wrench, and
         other small tools into a single fold-out tool.</p>
@@ -391,11 +375,13 @@ items:
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: 1693914887003
-      modifiedTime: 1693914931164
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722158350907
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Compendium.te001-core-rulebook.Items.HzAmhij6mdm2Zac6
+      duplicateSource: null
     _key: '!actors.items!non4XwpfJLE9GiST.RCKN2Q1yd7kkWeRT'
   - _id: nIDSxLm272ubu5xH
     name: Flares (3)
@@ -408,7 +394,7 @@ items:
       core:
         sourceId: Compendium.te001-core-rulebook.Items.wOSsT4wHWPEcX85E
     system:
-      cosm: Nile Empire
+      cosm: nileEmpire
       description: <p>Found in <strong>Core Rules</strong></p>
       price: '5'
       techlevel: 20
@@ -420,11 +406,13 @@ items:
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: 1693914896396
-      modifiedTime: 1693914937564
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722158339595
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Compendium.te001-core-rulebook.Items.wOSsT4wHWPEcX85E
+      duplicateSource: null
     _key: '!actors.items!non4XwpfJLE9GiST.nIDSxLm272ubu5xH'
   - _id: WCcrMD3PJGI2XPWL
     name: Flashlight
@@ -437,7 +425,7 @@ items:
       core:
         sourceId: Compendium.te001-core-rulebook.Items.tEnSd1UUK2wTfebw
     system:
-      cosm: Nile Empire
+      cosm: nileEmpire
       description: <p>Found in <strong>Core Rules</strong></p>
       price: '10'
       techlevel: 20
@@ -449,11 +437,13 @@ items:
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: 1693914926964
-      modifiedTime: 1693914933348
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722158346163
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Compendium.te001-core-rulebook.Items.tEnSd1UUK2wTfebw
+      duplicateSource: null
     _key: '!actors.items!non4XwpfJLE9GiST.WCcrMD3PJGI2XPWL'
   - _id: 1jhdApzFS5pZJkoZ
     name: Ballistic/Kevlar Vest
@@ -466,7 +456,7 @@ items:
       core:
         sourceId: Compendium.te001-core-rulebook.Items.Item.lUVVQi2BmucoAM0E
     system:
-      cosm: Core Earth
+      cosm: coreEarth
       description: >-
         <p>@UUID[Compendium.te001-core-rulebook.rules.pwneQ55M0nnDH0Us.JournalEntryPage.qKdamp4rrcX6TTt0#full-body/torso:]{Torso}</p>
 
@@ -495,12 +485,54 @@ items:
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.7.0
-      coreVersion: '11.315'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: 1711551146882
-      modifiedTime: 1711704217229
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722158364507
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Compendium.te001-core-rulebook.Items.Item.lUVVQi2BmucoAM0E
+      duplicateSource: null
     _key: '!actors.items!non4XwpfJLE9GiST.1jhdApzFS5pZJkoZ'
+  - name: Extra Magazines
+    type: ammunition
+    _id: LZhzeSpPiVcOepk9
+    img: systems/torgeternity/images/icons/ammo-icon.webp
+    system:
+      cosm: ''
+      description: >-
+        <p><span style="font-family:'Palatino Linotype'">Five extra Glock
+        magazines.</span></p>
+      price: ''
+      techlevel: 21
+      value: 0
+      secondaryAxiom:
+        selected: none
+        value: null
+      type: ''
+      quantity: 5
+      damageMod: 0
+      apMod: 0
+      fireDamage: false
+      blastRadius: None
+      darknessMod: none
+      reach: ''
+    effects: []
+    folder: null
+    sort: 0
+    ownership:
+      default: 0
+      93AMwcGe6H37rcPA: 3
+    flags: {}
+    _stats:
+      compendiumSource: Item.KRYQ71jof26XeGEv
+      duplicateSource: null
+      coreVersion: '12.330'
+      systemId: torgeternity
+      systemVersion: 12.2.0
+      createdTime: 1722109384299
+      modifiedTime: 1722158376442
+      lastModifiedBy: 93AMwcGe6H37rcPA
+    _key: '!actors.items!non4XwpfJLE9GiST.LZhzeSpPiVcOepk9'
 effects: []
 folder: null
 sort: 100001
@@ -715,7 +747,7 @@ system:
       baseAttribute: dexterity
       adds: 0
       isFav: false
-      groupName: combat
+      groupName: other
       unskilledUse: 1
       isThreatSkill: false
       defenseOnly: false
@@ -988,14 +1020,20 @@ prototypeToken:
       max: 1
     color: null
     attenuation: 0.5
+    negative: false
+    priority: 0
   texture:
     src: systems/torgeternity/images/characters/unstoppable_cop.Token.webp
-    tint: null
+    tint: '#ffffff'
     scaleX: 1
     scaleY: 1
     offsetX: 0
     offsetY: 0
     rotation: 0
+    anchorX: 0.5
+    anchorY: 0.5
+    fit: contain
+    alphaThreshold: 0.75
   sight:
     angle: 360
     enabled: false
@@ -1005,14 +1043,30 @@ prototypeToken:
     attenuation: 0.1
     saturation: 0
     contrast: 0
+    color: null
   appendNumber: false
   prependAdjective: false
   detectionModes: []
+  hexagonalShape: 0
+  occludable:
+    radius: 0
+  ring:
+    enabled: false
+    colors:
+      ring: null
+      background: null
+    effects: 1
+    subject:
+      scale: 1
+      texture: null
 _stats:
   systemId: torgeternity
   systemVersion: 3.8.1
-  coreVersion: '11.315'
+  coreVersion: '12.330'
   createdTime: 1693914682084
   modifiedTime: 1716827808044
   lastModifiedBy: VAnYow5sWS9EJzo0
+  compendiumSource: null
+  duplicateSource: null
 _key: '!actors!non4XwpfJLE9GiST'
+

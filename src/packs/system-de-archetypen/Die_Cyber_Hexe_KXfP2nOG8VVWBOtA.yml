@@ -23,14 +23,26 @@ items:
           turns: null
           startRound: null
           startTurn: null
-        icon: icons/svg/aura.svg
         origin: Compendium.te001-core-rulebook.grw-de-kraefte.dnvTmgrdRgrEjvo9
         transfer: true
         flags: {}
-        tint: null
+        tint: '#ffffff'
         name: Charisma Standard
         description: ''
         statuses: []
+        _stats:
+          coreVersion: '12.330'
+          systemId: null
+          systemVersion: null
+          createdTime: null
+          modifiedTime: null
+          lastModifiedBy: null
+          compendiumSource: null
+          duplicateSource: null
+        img: icons/svg/aura.svg
+        type: base
+        system: {}
+        sort: 0
         _key: >-
           !actors.items.effects!KXfP2nOG8VVWBOtA.qE0o186bev0OqQzx.f2JWdwbhbJvpsKrD
       - _id: VrgAUC1Dbz6Q4Tbv
@@ -48,14 +60,26 @@ items:
           turns: null
           startRound: null
           startTurn: null
-        icon: icons/svg/aura.svg
         origin: Compendium.te001-core-rulebook.grw-de-kraefte.dnvTmgrdRgrEjvo9
         transfer: true
         flags: {}
-        tint: null
+        tint: '#ffffff'
         name: Charisma gut
         description: ''
         statuses: []
+        _stats:
+          coreVersion: '12.330'
+          systemId: null
+          systemVersion: null
+          createdTime: null
+          modifiedTime: null
+          lastModifiedBy: null
+          compendiumSource: null
+          duplicateSource: null
+        img: icons/svg/aura.svg
+        type: base
+        system: {}
+        sort: 0
         _key: >-
           !actors.items.effects!KXfP2nOG8VVWBOtA.qE0o186bev0OqQzx.VrgAUC1Dbz6Q4Tbv
       - _id: OQZO2ch75NTrTXb8
@@ -73,14 +97,26 @@ items:
           turns: null
           startRound: null
           startTurn: null
-        icon: icons/svg/aura.svg
         origin: Compendium.te001-core-rulebook.grw-de-kraefte.dnvTmgrdRgrEjvo9
         transfer: true
         flags: {}
-        tint: null
+        tint: '#ffffff'
         name: Geschicklichkeit standard
         description: ''
         statuses: []
+        _stats:
+          coreVersion: '12.330'
+          systemId: null
+          systemVersion: null
+          createdTime: null
+          modifiedTime: null
+          lastModifiedBy: null
+          compendiumSource: null
+          duplicateSource: null
+        img: icons/svg/aura.svg
+        type: base
+        system: {}
+        sort: 0
         _key: >-
           !actors.items.effects!KXfP2nOG8VVWBOtA.qE0o186bev0OqQzx.OQZO2ch75NTrTXb8
       - _id: QbYvk1nwAbB35Bq4
@@ -98,14 +134,26 @@ items:
           turns: null
           startRound: null
           startTurn: null
-        icon: icons/svg/aura.svg
         origin: Compendium.te001-core-rulebook.grw-de-kraefte.dnvTmgrdRgrEjvo9
         transfer: true
         flags: {}
-        tint: null
+        tint: '#ffffff'
         name: Geschicklichkeit gut
         description: ''
         statuses: []
+        _stats:
+          coreVersion: '12.330'
+          systemId: null
+          systemVersion: null
+          createdTime: null
+          modifiedTime: null
+          lastModifiedBy: null
+          compendiumSource: null
+          duplicateSource: null
+        img: icons/svg/aura.svg
+        type: base
+        system: {}
+        sort: 0
         _key: >-
           !actors.items.effects!KXfP2nOG8VVWBOtA.qE0o186bev0OqQzx.QbYvk1nwAbB35Bq4
       - _id: 12QorISRnTO0FjbA
@@ -123,14 +171,26 @@ items:
           turns: null
           startRound: null
           startTurn: null
-        icon: icons/svg/aura.svg
         origin: Compendium.te001-core-rulebook.grw-de-kraefte.dnvTmgrdRgrEjvo9
         transfer: true
         flags: {}
-        tint: null
+        tint: '#ffffff'
         name: Geist standard
         description: ''
         statuses: []
+        _stats:
+          coreVersion: '12.330'
+          systemId: null
+          systemVersion: null
+          createdTime: null
+          modifiedTime: null
+          lastModifiedBy: null
+          compendiumSource: null
+          duplicateSource: null
+        img: icons/svg/aura.svg
+        type: base
+        system: {}
+        sort: 0
         _key: >-
           !actors.items.effects!KXfP2nOG8VVWBOtA.qE0o186bev0OqQzx.12QorISRnTO0FjbA
       - _id: ihtY6Btd2iVH5YsL
@@ -148,14 +208,26 @@ items:
           turns: null
           startRound: null
           startTurn: null
-        icon: icons/svg/aura.svg
         origin: Compendium.te001-core-rulebook.grw-de-kraefte.dnvTmgrdRgrEjvo9
         transfer: true
         flags: {}
-        tint: null
+        tint: '#ffffff'
         name: Geist gut
         description: ''
         statuses: []
+        _stats:
+          coreVersion: '12.330'
+          systemId: null
+          systemVersion: null
+          createdTime: null
+          modifiedTime: null
+          lastModifiedBy: null
+          compendiumSource: null
+          duplicateSource: null
+        img: icons/svg/aura.svg
+        type: base
+        system: {}
+        sort: 0
         _key: >-
           !actors.items.effects!KXfP2nOG8VVWBOtA.qE0o186bev0OqQzx.ihtY6Btd2iVH5YsL
       - _id: mLzTECSfDeB90Bjl
@@ -173,14 +245,26 @@ items:
           turns: null
           startRound: null
           startTurn: null
-        icon: icons/svg/aura.svg
         origin: Compendium.te001-core-rulebook.grw-de-kraefte.dnvTmgrdRgrEjvo9
         transfer: true
         flags: {}
-        tint: null
+        tint: '#ffffff'
         name: Stärke Standard
         description: ''
         statuses: []
+        _stats:
+          coreVersion: '12.330'
+          systemId: null
+          systemVersion: null
+          createdTime: null
+          modifiedTime: null
+          lastModifiedBy: null
+          compendiumSource: null
+          duplicateSource: null
+        img: icons/svg/aura.svg
+        type: base
+        system: {}
+        sort: 0
         _key: >-
           !actors.items.effects!KXfP2nOG8VVWBOtA.qE0o186bev0OqQzx.mLzTECSfDeB90Bjl
       - _id: fBRtfDnee2agz1Q0
@@ -198,14 +282,26 @@ items:
           turns: null
           startRound: null
           startTurn: null
-        icon: icons/svg/aura.svg
         origin: Compendium.te001-core-rulebook.grw-de-kraefte.dnvTmgrdRgrEjvo9
         transfer: true
         flags: {}
-        tint: null
+        tint: '#ffffff'
         name: Stärke gut
         description: ''
         statuses: []
+        _stats:
+          coreVersion: '12.330'
+          systemId: null
+          systemVersion: null
+          createdTime: null
+          modifiedTime: null
+          lastModifiedBy: null
+          compendiumSource: null
+          duplicateSource: null
+        img: icons/svg/aura.svg
+        type: base
+        system: {}
+        sort: 0
         _key: >-
           !actors.items.effects!KXfP2nOG8VVWBOtA.qE0o186bev0OqQzx.fBRtfDnee2agz1Q0
       - _id: xNiOrmHBTh7EEMRT
@@ -223,14 +319,26 @@ items:
           turns: null
           startRound: null
           startTurn: null
-        icon: icons/svg/aura.svg
         origin: Compendium.te001-core-rulebook.grw-de-kraefte.dnvTmgrdRgrEjvo9
         transfer: true
         flags: {}
-        tint: null
+        tint: '#ffffff'
         name: Verstand standard
         description: ''
         statuses: []
+        _stats:
+          coreVersion: '12.330'
+          systemId: null
+          systemVersion: null
+          createdTime: null
+          modifiedTime: null
+          lastModifiedBy: null
+          compendiumSource: null
+          duplicateSource: null
+        img: icons/svg/aura.svg
+        type: base
+        system: {}
+        sort: 0
         _key: >-
           !actors.items.effects!KXfP2nOG8VVWBOtA.qE0o186bev0OqQzx.xNiOrmHBTh7EEMRT
       - _id: iP4o52UvQgw4HeZb
@@ -248,14 +356,26 @@ items:
           turns: null
           startRound: null
           startTurn: null
-        icon: icons/svg/aura.svg
         origin: Compendium.te001-core-rulebook.grw-de-kraefte.dnvTmgrdRgrEjvo9
         transfer: true
         flags: {}
-        tint: null
+        tint: '#ffffff'
         name: Verstand gut
         description: ''
         statuses: []
+        _stats:
+          coreVersion: '12.330'
+          systemId: null
+          systemVersion: null
+          createdTime: null
+          modifiedTime: null
+          lastModifiedBy: null
+          compendiumSource: null
+          duplicateSource: null
+        img: icons/svg/aura.svg
+        type: base
+        system: {}
+        sort: 0
         _key: >-
           !actors.items.effects!KXfP2nOG8VVWBOtA.qE0o186bev0OqQzx.iP4o52UvQgw4HeZb
     folder: null
@@ -305,10 +425,12 @@ items:
     _stats:
       systemId: torgeternity
       systemVersion: 3.1.1
-      coreVersion: '11.308'
+      coreVersion: '12.330'
       createdTime: 1694865936018
       modifiedTime: 1694865936018
       lastModifiedBy: CtisFurQNe9h7ABb
+      compendiumSource: Compendium.te001-core-rulebook.grw-de-kraefte.Item.dnvTmgrdRgrEjvo9
+      duplicateSource: null
     _key: '!actors.items!KXfP2nOG8VVWBOtA.qE0o186bev0OqQzx'
   - _id: AMJ9OkBjQS4QpLhe
     name: Verbesserung
@@ -330,14 +452,26 @@ items:
           turns: null
           startRound: null
           startTurn: null
-        icon: icons/svg/aura.svg
         origin: Compendium.te001-core-rulebook.grw-de-kraefte.373rRZieSUiFDMNo
         transfer: true
         flags: {}
-        tint: null
+        tint: '#ffffff'
         name: Charisma Standard
         description: ''
         statuses: []
+        _stats:
+          coreVersion: '12.330'
+          systemId: null
+          systemVersion: null
+          createdTime: null
+          modifiedTime: null
+          lastModifiedBy: null
+          compendiumSource: null
+          duplicateSource: null
+        img: icons/svg/aura.svg
+        type: base
+        system: {}
+        sort: 0
         _key: >-
           !actors.items.effects!KXfP2nOG8VVWBOtA.AMJ9OkBjQS4QpLhe.DXbQbmNucVZeQKYj
       - _id: 4dckc260FfpAJPeI
@@ -355,14 +489,26 @@ items:
           turns: null
           startRound: null
           startTurn: null
-        icon: icons/svg/aura.svg
         origin: Compendium.te001-core-rulebook.grw-de-kraefte.373rRZieSUiFDMNo
         transfer: true
         flags: {}
-        tint: null
+        tint: '#ffffff'
         name: Charisma Gut
         description: ''
         statuses: []
+        _stats:
+          coreVersion: '12.330'
+          systemId: null
+          systemVersion: null
+          createdTime: null
+          modifiedTime: null
+          lastModifiedBy: null
+          compendiumSource: null
+          duplicateSource: null
+        img: icons/svg/aura.svg
+        type: base
+        system: {}
+        sort: 0
         _key: >-
           !actors.items.effects!KXfP2nOG8VVWBOtA.AMJ9OkBjQS4QpLhe.4dckc260FfpAJPeI
       - _id: 18yyJkHaakz4kNCd
@@ -380,14 +526,26 @@ items:
           turns: null
           startRound: null
           startTurn: null
-        icon: icons/svg/aura.svg
         origin: Compendium.te001-core-rulebook.grw-de-kraefte.373rRZieSUiFDMNo
         transfer: true
         flags: {}
-        tint: null
+        tint: '#ffffff'
         name: Charisma Hervorragend
         description: ''
         statuses: []
+        _stats:
+          coreVersion: '12.330'
+          systemId: null
+          systemVersion: null
+          createdTime: null
+          modifiedTime: null
+          lastModifiedBy: null
+          compendiumSource: null
+          duplicateSource: null
+        img: icons/svg/aura.svg
+        type: base
+        system: {}
+        sort: 0
         _key: >-
           !actors.items.effects!KXfP2nOG8VVWBOtA.AMJ9OkBjQS4QpLhe.18yyJkHaakz4kNCd
       - _id: yK7JajJXKT8l0Asp
@@ -405,14 +563,26 @@ items:
           turns: null
           startRound: null
           startTurn: null
-        icon: icons/svg/aura.svg
         origin: Compendium.te001-core-rulebook.grw-de-kraefte.373rRZieSUiFDMNo
         transfer: true
         flags: {}
-        tint: null
+        tint: '#ffffff'
         name: Geist Standard
         description: ''
         statuses: []
+        _stats:
+          coreVersion: '12.330'
+          systemId: null
+          systemVersion: null
+          createdTime: null
+          modifiedTime: null
+          lastModifiedBy: null
+          compendiumSource: null
+          duplicateSource: null
+        img: icons/svg/aura.svg
+        type: base
+        system: {}
+        sort: 0
         _key: >-
           !actors.items.effects!KXfP2nOG8VVWBOtA.AMJ9OkBjQS4QpLhe.yK7JajJXKT8l0Asp
       - _id: S5YDTVPWhviBwmgm
@@ -430,14 +600,26 @@ items:
           turns: null
           startRound: null
           startTurn: null
-        icon: icons/svg/aura.svg
         origin: Compendium.te001-core-rulebook.grw-de-kraefte.373rRZieSUiFDMNo
         transfer: true
         flags: {}
-        tint: null
+        tint: '#ffffff'
         name: Geist Gut
         description: ''
         statuses: []
+        _stats:
+          coreVersion: '12.330'
+          systemId: null
+          systemVersion: null
+          createdTime: null
+          modifiedTime: null
+          lastModifiedBy: null
+          compendiumSource: null
+          duplicateSource: null
+        img: icons/svg/aura.svg
+        type: base
+        system: {}
+        sort: 0
         _key: >-
           !actors.items.effects!KXfP2nOG8VVWBOtA.AMJ9OkBjQS4QpLhe.S5YDTVPWhviBwmgm
       - _id: pj8KEhYaye1rdEXE
@@ -455,14 +637,26 @@ items:
           turns: null
           startRound: null
           startTurn: null
-        icon: icons/svg/aura.svg
         origin: Compendium.te001-core-rulebook.grw-de-kraefte.373rRZieSUiFDMNo
         transfer: true
         flags: {}
-        tint: null
+        tint: '#ffffff'
         name: Geist Hervorragend
         description: ''
         statuses: []
+        _stats:
+          coreVersion: '12.330'
+          systemId: null
+          systemVersion: null
+          createdTime: null
+          modifiedTime: null
+          lastModifiedBy: null
+          compendiumSource: null
+          duplicateSource: null
+        img: icons/svg/aura.svg
+        type: base
+        system: {}
+        sort: 0
         _key: >-
           !actors.items.effects!KXfP2nOG8VVWBOtA.AMJ9OkBjQS4QpLhe.pj8KEhYaye1rdEXE
       - _id: wwX5rq0JRjLhpMqZ
@@ -480,14 +674,26 @@ items:
           turns: null
           startRound: null
           startTurn: null
-        icon: icons/svg/aura.svg
         origin: Compendium.te001-core-rulebook.grw-de-kraefte.373rRZieSUiFDMNo
         transfer: true
         flags: {}
-        tint: null
+        tint: '#ffffff'
         name: Geschicklichkeit Standard
         description: ''
         statuses: []
+        _stats:
+          coreVersion: '12.330'
+          systemId: null
+          systemVersion: null
+          createdTime: null
+          modifiedTime: null
+          lastModifiedBy: null
+          compendiumSource: null
+          duplicateSource: null
+        img: icons/svg/aura.svg
+        type: base
+        system: {}
+        sort: 0
         _key: >-
           !actors.items.effects!KXfP2nOG8VVWBOtA.AMJ9OkBjQS4QpLhe.wwX5rq0JRjLhpMqZ
       - _id: QN67oulRfWCrguUa
@@ -505,14 +711,26 @@ items:
           turns: null
           startRound: null
           startTurn: null
-        icon: icons/svg/aura.svg
         origin: Compendium.te001-core-rulebook.grw-de-kraefte.373rRZieSUiFDMNo
         transfer: true
         flags: {}
-        tint: null
+        tint: '#ffffff'
         name: Geschicklichkeit Gut
         description: ''
         statuses: []
+        _stats:
+          coreVersion: '12.330'
+          systemId: null
+          systemVersion: null
+          createdTime: null
+          modifiedTime: null
+          lastModifiedBy: null
+          compendiumSource: null
+          duplicateSource: null
+        img: icons/svg/aura.svg
+        type: base
+        system: {}
+        sort: 0
         _key: >-
           !actors.items.effects!KXfP2nOG8VVWBOtA.AMJ9OkBjQS4QpLhe.QN67oulRfWCrguUa
       - _id: K8PH2l1fkPT3QvyS
@@ -530,14 +748,26 @@ items:
           turns: null
           startRound: null
           startTurn: null
-        icon: icons/svg/aura.svg
         origin: Compendium.te001-core-rulebook.grw-de-kraefte.373rRZieSUiFDMNo
         transfer: true
         flags: {}
-        tint: null
+        tint: '#ffffff'
         name: Geschicklichkeit Hervorragend
         description: ''
         statuses: []
+        _stats:
+          coreVersion: '12.330'
+          systemId: null
+          systemVersion: null
+          createdTime: null
+          modifiedTime: null
+          lastModifiedBy: null
+          compendiumSource: null
+          duplicateSource: null
+        img: icons/svg/aura.svg
+        type: base
+        system: {}
+        sort: 0
         _key: >-
           !actors.items.effects!KXfP2nOG8VVWBOtA.AMJ9OkBjQS4QpLhe.K8PH2l1fkPT3QvyS
       - _id: DaoN51oDtHCtfdkN
@@ -555,14 +785,26 @@ items:
           turns: null
           startRound: null
           startTurn: null
-        icon: icons/svg/aura.svg
         origin: Compendium.te001-core-rulebook.grw-de-kraefte.373rRZieSUiFDMNo
         transfer: true
         flags: {}
-        tint: null
+        tint: '#ffffff'
         name: Stärke Standard
         description: ''
         statuses: []
+        _stats:
+          coreVersion: '12.330'
+          systemId: null
+          systemVersion: null
+          createdTime: null
+          modifiedTime: null
+          lastModifiedBy: null
+          compendiumSource: null
+          duplicateSource: null
+        img: icons/svg/aura.svg
+        type: base
+        system: {}
+        sort: 0
         _key: >-
           !actors.items.effects!KXfP2nOG8VVWBOtA.AMJ9OkBjQS4QpLhe.DaoN51oDtHCtfdkN
       - _id: VJyQKPPr7FkVXlt1
@@ -580,14 +822,26 @@ items:
           turns: null
           startRound: null
           startTurn: null
-        icon: icons/svg/aura.svg
         origin: Compendium.te001-core-rulebook.grw-de-kraefte.373rRZieSUiFDMNo
         transfer: true
         flags: {}
-        tint: null
+        tint: '#ffffff'
         name: Stärke Gut
         description: ''
         statuses: []
+        _stats:
+          coreVersion: '12.330'
+          systemId: null
+          systemVersion: null
+          createdTime: null
+          modifiedTime: null
+          lastModifiedBy: null
+          compendiumSource: null
+          duplicateSource: null
+        img: icons/svg/aura.svg
+        type: base
+        system: {}
+        sort: 0
         _key: >-
           !actors.items.effects!KXfP2nOG8VVWBOtA.AMJ9OkBjQS4QpLhe.VJyQKPPr7FkVXlt1
       - _id: l48dcM2AUbNvSemz
@@ -605,14 +859,26 @@ items:
           turns: null
           startRound: null
           startTurn: null
-        icon: icons/svg/aura.svg
         origin: Compendium.te001-core-rulebook.grw-de-kraefte.373rRZieSUiFDMNo
         transfer: true
         flags: {}
-        tint: null
+        tint: '#ffffff'
         name: Stärke Hervorragend
         description: ''
         statuses: []
+        _stats:
+          coreVersion: '12.330'
+          systemId: null
+          systemVersion: null
+          createdTime: null
+          modifiedTime: null
+          lastModifiedBy: null
+          compendiumSource: null
+          duplicateSource: null
+        img: icons/svg/aura.svg
+        type: base
+        system: {}
+        sort: 0
         _key: >-
           !actors.items.effects!KXfP2nOG8VVWBOtA.AMJ9OkBjQS4QpLhe.l48dcM2AUbNvSemz
       - _id: JUcjhiMwzUSwf3IX
@@ -630,14 +896,26 @@ items:
           turns: null
           startRound: null
           startTurn: null
-        icon: icons/svg/aura.svg
         origin: Compendium.te001-core-rulebook.grw-de-kraefte.373rRZieSUiFDMNo
         transfer: true
         flags: {}
-        tint: null
+        tint: '#ffffff'
         name: Verstand Standard
         description: ''
         statuses: []
+        _stats:
+          coreVersion: '12.330'
+          systemId: null
+          systemVersion: null
+          createdTime: null
+          modifiedTime: null
+          lastModifiedBy: null
+          compendiumSource: null
+          duplicateSource: null
+        img: icons/svg/aura.svg
+        type: base
+        system: {}
+        sort: 0
         _key: >-
           !actors.items.effects!KXfP2nOG8VVWBOtA.AMJ9OkBjQS4QpLhe.JUcjhiMwzUSwf3IX
       - _id: gsUg3xvOp3OIC9qy
@@ -655,14 +933,26 @@ items:
           turns: null
           startRound: null
           startTurn: null
-        icon: icons/svg/aura.svg
         origin: Compendium.te001-core-rulebook.grw-de-kraefte.373rRZieSUiFDMNo
         transfer: true
         flags: {}
-        tint: null
+        tint: '#ffffff'
         name: Verstand Gut
         description: ''
         statuses: []
+        _stats:
+          coreVersion: '12.330'
+          systemId: null
+          systemVersion: null
+          createdTime: null
+          modifiedTime: null
+          lastModifiedBy: null
+          compendiumSource: null
+          duplicateSource: null
+        img: icons/svg/aura.svg
+        type: base
+        system: {}
+        sort: 0
         _key: >-
           !actors.items.effects!KXfP2nOG8VVWBOtA.AMJ9OkBjQS4QpLhe.gsUg3xvOp3OIC9qy
       - _id: Rn1xkBRucD9PzCMC
@@ -680,14 +970,26 @@ items:
           turns: null
           startRound: null
           startTurn: null
-        icon: icons/svg/aura.svg
         origin: Compendium.te001-core-rulebook.grw-de-kraefte.373rRZieSUiFDMNo
         transfer: true
         flags: {}
-        tint: null
+        tint: '#ffffff'
         name: Verstand Hervorragend
         description: ''
         statuses: []
+        _stats:
+          coreVersion: '12.330'
+          systemId: null
+          systemVersion: null
+          createdTime: null
+          modifiedTime: null
+          lastModifiedBy: null
+          compendiumSource: null
+          duplicateSource: null
+        img: icons/svg/aura.svg
+        type: base
+        system: {}
+        sort: 0
         _key: >-
           !actors.items.effects!KXfP2nOG8VVWBOtA.AMJ9OkBjQS4QpLhe.Rn1xkBRucD9PzCMC
     folder: null
@@ -741,10 +1043,12 @@ items:
     _stats:
       systemId: torgeternity
       systemVersion: 3.1.1
-      coreVersion: '11.308'
+      coreVersion: '12.330'
       createdTime: 1694865940541
       modifiedTime: 1694865940541
       lastModifiedBy: CtisFurQNe9h7ABb
+      compendiumSource: Compendium.te001-core-rulebook.grw-de-kraefte.Item.373rRZieSUiFDMNo
+      duplicateSource: null
     _key: '!actors.items!KXfP2nOG8VVWBOtA.AMJ9OkBjQS4QpLhe'
   - _id: J3s8JBqYUJjIfz7Y
     name: Zerhacker
@@ -792,10 +1096,12 @@ items:
     _stats:
       systemId: torgeternity
       systemVersion: 3.1.1
-      coreVersion: '11.308'
+      coreVersion: '12.330'
       createdTime: 1694865946306
       modifiedTime: 1694865946306
       lastModifiedBy: CtisFurQNe9h7ABb
+      compendiumSource: Compendium.te001-core-rulebook.grw-de-kraefte.Item.4Vc4cb3K1prH1zQy
+      duplicateSource: null
     _key: '!actors.items!KXfP2nOG8VVWBOtA.J3s8JBqYUJjIfz7Y'
   - name: GWI GodMeeter
     type: firearm
@@ -809,7 +1115,7 @@ items:
           Compendium.te001-core-rulebook.grw-de-ausruestung.Item.UmGmfErD1dmV7GuL
     _id: KiKe4Jru8egaH7t1
     system:
-      cosm: Cyberpontifikat
+      cosm: cyberpapacy
       description: >-
         <p>Die gebr&auml;uchlichste Seitenwaffe der Kirchenpolizei ist eine
         hochkalibrige und sehr laute Feuerwaffe. Wie bei anderen GWI-Waffen ist
@@ -839,11 +1145,13 @@ items:
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: 1694865974402
-      modifiedTime: 1694865974402
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722164227136
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Compendium.te001-core-rulebook.grw-de-ausruestung.Item.UmGmfErD1dmV7GuL
+      duplicateSource: null
     _key: '!actors.items!KXfP2nOG8VVWBOtA.KiKe4Jru8egaH7t1'
   - name: Sonnenbrille
     type: gear
@@ -856,7 +1164,7 @@ items:
         sourceId: Item.5wtRULBzLY17nU2s
     _id: BvHZj9Qn7Qr8Gn3E
     system:
-      cosm: Nil-Imperium
+      cosm: nileEmpire
       description: <p>Gegen blendendes Licht.</p>
       price: '25'
       techlevel: 20
@@ -868,11 +1176,13 @@ items:
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: 1694865991923
-      modifiedTime: 1694865991923
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722164249047
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Item.5wtRULBzLY17nU2s
+      duplicateSource: null
     _key: '!actors.items!KXfP2nOG8VVWBOtA.BvHZj9Qn7Qr8Gn3E'
   - _id: iw9csUusobEHCcSK
     name: Hexxer MK II
@@ -886,7 +1196,7 @@ items:
         sourceId: >-
           Compendium.te001-core-rulebook.grw-de-ausruestung.Item.jcdVu7MTTKxF02Vx
     system:
-      cosm: Cyberpontifikat
+      cosm: cyberpapacy
       description: >-
         <p>Dieses Upgrade f&uuml;r das Hexxer-Implantat speichert die Energie
         aus einer R&uuml;ckkopplung und erlaubt es Hexern und Hexen, sie
@@ -913,11 +1223,13 @@ items:
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: 1694865998659
-      modifiedTime: 1694865998659
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722164218338
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Compendium.te001-core-rulebook.grw-de-ausruestung.Item.jcdVu7MTTKxF02Vx
+      duplicateSource: null
     _key: '!actors.items!KXfP2nOG8VVWBOtA.iw9csUusobEHCcSK'
   - _id: i9PYOXT6J8N1W9AN
     name: Cyberware-Implantate
@@ -931,7 +1243,7 @@ items:
         sourceId: Compendium.te001-core-rulebook.grw-de-vorzuverb.Item.DI70dRyfP5h47btG
     system:
       category: cyberware
-      cosm: Cyberpontifikat
+      cosm: cyberpapacy
       description: >-
         <p>Wenn dieser Vorzug ausgew&auml;hlt wird, darf der Charakter Cyberware
         im Wert von bis zu 10.000 $ von der
@@ -1029,18 +1341,20 @@ items:
         limitation09: ''
         limitation10: ''
         limitationNumber: 0
-      timestaken: ''
+      timestaken: '1'
     ownership:
       default: 0
       9Q0XnqFwko7hRlvL: 3
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: 1694866008612
-      modifiedTime: 1694866008612
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722164209815
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Compendium.te001-core-rulebook.grw-de-vorzuverb.Item.DI70dRyfP5h47btG
+      duplicateSource: null
     _key: '!actors.items!KXfP2nOG8VVWBOtA.i9PYOXT6J8N1W9AN'
   - _id: GLjFsTAZK3JW5cJo
     name: Zauberkundiger
@@ -1054,21 +1368,8 @@ items:
         sourceId: Compendium.te001-core-rulebook.grw-de-vorzuverb.Item.96Uk1RoSQ6jUkoK6
     system:
       category: spellcraft
-      cosm: (Keins)
-      description: >-
-        <p>Diejenigen, die sich in die arkanen K&uuml;nste vertiefen, haben
-        viele Namen: Magier, Zauberer, Hexe oder Hexenmeister, um nur ein paar
-        zu nennen. Unabh&auml;ngig von ihrem jeweiligen Hintergrund geh&ouml;ren
-        alle Zauberspr&uuml;che zu einer von vier Fertigkeits-Kategorien:
-        <em>Apportation, Beschw&ouml;rung, Verwandlung</em> oder
-        <em>Wahrsagung</em>.&nbsp;</p>
-
-        <p>Wenn dieser Vorzug gew&auml;hlt wird, darf der Charakter drei
-        beliebige Zauberspr&uuml;che aus der zu seinem Cosm geh&ouml;renden
-        Listen ausw&auml;hlen, deren Bedingungen er erf&uuml;llt. Der Einsatz
-        von Zauberspr&uuml;chen wird im Kapitel
-        @UUID[Compendium.te001-core-rulebook.grw-de-grw.Qlx6yGF0Mmo6Xzrv.JournalEntryPage.02e9AX4pa6YNYFI0]{Kapitel
-        7: Magie} genauer erkl&auml;rt.</p>
+      cosm: none
+      description: "<p><strong>Cosm:</strong> Aysle, Cyberpontifikat, Nil-Imperium, Orrorsh, Tharkold, Zentralerde</p><p>Diejenigen, die sich in die arkanen Künste vertiefen, haben viele Namen: Magier, Zauberer, Hexe oder Hexenmeister, um nur ein paar zu nennen. Unabhängig von ihrem jeweiligen Hintergrund gehören alle Zaubersprüche zu einer von vier Fertigkeits-Kategorien: <em>Apportation, Beschwörung, Verwandlung</em> oder <em>Wahrsagung</em>.\_</p><p>Wenn dieser Vorzug gewählt wird, darf der Charakter drei beliebige Zaubersprüche aus der zu seinem Cosm gehörenden Listen auswählen, deren Bedingungen er erfüllt (siehe @UUID[Compendium.te001-core-rulebook.grw-de-grw.JournalEntry.Qlx6yGF0Mmo6Xzrv.JournalEntryPage.02e9AX4pa6YNYFI0#verfugbare-zauber]{Verfügbare Zauber}). Der Einsatz von Zaubersprüchen wird im Kapitel @UUID[Compendium.te001-core-rulebook.grw-de-grw.Qlx6yGF0Mmo6Xzrv.JournalEntryPage.02e9AX4pa6YNYFI0]{Kapitel 7: Magie} genauer erklärt.</p>"
       prerequisites: >-
         mindestens 1 Fertigkeitsstufe in Apportation, Beschwörung, Verwandlung
         oder Wahrsagung
@@ -1146,18 +1447,20 @@ items:
         limitation09: ''
         limitation10: ''
         limitationNumber: 0
-      timestaken: ''
+      timestaken: '1'
     ownership:
       default: 0
       9Q0XnqFwko7hRlvL: 3
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: 1694866014076
-      modifiedTime: 1694866014076
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722164191224
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Compendium.te001-core-rulebook.grw-de-vorzuverb.Item.96Uk1RoSQ6jUkoK6
+      duplicateSource: null
     _key: '!actors.items!KXfP2nOG8VVWBOtA.GLjFsTAZK3JW5cJo'
   - name: IriMesh-Kleidung
     type: armor
@@ -1171,7 +1474,7 @@ items:
           Compendium.te001-core-rulebook.grw-de-ausruestung.Item.5hPro8JFEq4iFcUH
     _id: Z4nC236F0vnt4Neo
     system:
-      cosm: Pan-Pacifica
+      cosm: panPacifica
       description: >-
         <p>Ein leichtes Gewebe, das mithilfe von Nano-Maschinen gewebt wurde.
         IriMesh sieht und f&uuml;hlt sich &auml;hnlich wie Seide an, aber mit
@@ -1195,11 +1498,13 @@ items:
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.7.0
-      coreVersion: '11.315'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: 1711562366100
-      modifiedTime: 1711705964689
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722164235328
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Compendium.te001-core-rulebook.grw-de-ausruestung.Item.5hPro8JFEq4iFcUH
+      duplicateSource: null
     _key: '!actors.items!KXfP2nOG8VVWBOtA.Z4nC236F0vnt4Neo'
 effects:
   - _id: xNBx8sd8jMvU0rJV
@@ -1217,15 +1522,27 @@ effects:
       turns: null
       startRound: null
       startTurn: null
-    icon: icons/svg/aura.svg
     origin: >-
       Compendium.torgeternity.system-de-archetypen.Actor.KXfP2nOG8VVWBOtA.Item.qE0o186bev0OqQzx
     transfer: false
     flags: {}
-    tint: null
+    tint: '#ffffff'
     name: Charisma Standard
     description: ''
     statuses: []
+    _stats:
+      coreVersion: '12.330'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+    img: icons/svg/aura.svg
+    type: base
+    system: {}
+    sort: 0
     _key: '!actors.effects!KXfP2nOG8VVWBOtA.xNBx8sd8jMvU0rJV'
   - _id: 88SUj651XBtbNOPt
     changes:
@@ -1242,15 +1559,27 @@ effects:
       turns: null
       startRound: null
       startTurn: null
-    icon: icons/svg/aura.svg
     origin: >-
       Compendium.torgeternity.system-de-archetypen.Actor.KXfP2nOG8VVWBOtA.Item.qE0o186bev0OqQzx
     transfer: false
     flags: {}
-    tint: null
+    tint: '#ffffff'
     name: Charisma gut
     description: ''
     statuses: []
+    _stats:
+      coreVersion: '12.330'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+    img: icons/svg/aura.svg
+    type: base
+    system: {}
+    sort: 0
     _key: '!actors.effects!KXfP2nOG8VVWBOtA.88SUj651XBtbNOPt'
   - _id: 3hDHHj46iA8IhbrC
     changes:
@@ -1267,15 +1596,27 @@ effects:
       turns: null
       startRound: null
       startTurn: null
-    icon: icons/svg/aura.svg
     origin: >-
       Compendium.torgeternity.system-de-archetypen.Actor.KXfP2nOG8VVWBOtA.Item.qE0o186bev0OqQzx
     transfer: false
     flags: {}
-    tint: null
+    tint: '#ffffff'
     name: Geschicklichkeit standard
     description: ''
     statuses: []
+    _stats:
+      coreVersion: '12.330'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+    img: icons/svg/aura.svg
+    type: base
+    system: {}
+    sort: 0
     _key: '!actors.effects!KXfP2nOG8VVWBOtA.3hDHHj46iA8IhbrC'
   - _id: BrfBrUSbwL86eOZi
     changes:
@@ -1292,15 +1633,27 @@ effects:
       turns: null
       startRound: null
       startTurn: null
-    icon: icons/svg/aura.svg
     origin: >-
       Compendium.torgeternity.system-de-archetypen.Actor.KXfP2nOG8VVWBOtA.Item.qE0o186bev0OqQzx
     transfer: false
     flags: {}
-    tint: null
+    tint: '#ffffff'
     name: Geschicklichkeit gut
     description: ''
     statuses: []
+    _stats:
+      coreVersion: '12.330'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+    img: icons/svg/aura.svg
+    type: base
+    system: {}
+    sort: 0
     _key: '!actors.effects!KXfP2nOG8VVWBOtA.BrfBrUSbwL86eOZi'
   - _id: EQtWGtlZFRP1NeYn
     changes:
@@ -1317,15 +1670,27 @@ effects:
       turns: null
       startRound: null
       startTurn: null
-    icon: icons/svg/aura.svg
     origin: >-
       Compendium.torgeternity.system-de-archetypen.Actor.KXfP2nOG8VVWBOtA.Item.qE0o186bev0OqQzx
     transfer: false
     flags: {}
-    tint: null
+    tint: '#ffffff'
     name: Geist standard
     description: ''
     statuses: []
+    _stats:
+      coreVersion: '12.330'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+    img: icons/svg/aura.svg
+    type: base
+    system: {}
+    sort: 0
     _key: '!actors.effects!KXfP2nOG8VVWBOtA.EQtWGtlZFRP1NeYn'
   - _id: 9qaOaCelaSnMVKju
     changes:
@@ -1342,15 +1707,27 @@ effects:
       turns: null
       startRound: null
       startTurn: null
-    icon: icons/svg/aura.svg
     origin: >-
       Compendium.torgeternity.system-de-archetypen.Actor.KXfP2nOG8VVWBOtA.Item.qE0o186bev0OqQzx
     transfer: false
     flags: {}
-    tint: null
+    tint: '#ffffff'
     name: Geist gut
     description: ''
     statuses: []
+    _stats:
+      coreVersion: '12.330'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+    img: icons/svg/aura.svg
+    type: base
+    system: {}
+    sort: 0
     _key: '!actors.effects!KXfP2nOG8VVWBOtA.9qaOaCelaSnMVKju'
   - _id: Cnu4exIWwx6TlcoY
     changes:
@@ -1367,15 +1744,27 @@ effects:
       turns: null
       startRound: null
       startTurn: null
-    icon: icons/svg/aura.svg
     origin: >-
       Compendium.torgeternity.system-de-archetypen.Actor.KXfP2nOG8VVWBOtA.Item.qE0o186bev0OqQzx
     transfer: false
     flags: {}
-    tint: null
+    tint: '#ffffff'
     name: Stärke Standard
     description: ''
     statuses: []
+    _stats:
+      coreVersion: '12.330'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+    img: icons/svg/aura.svg
+    type: base
+    system: {}
+    sort: 0
     _key: '!actors.effects!KXfP2nOG8VVWBOtA.Cnu4exIWwx6TlcoY'
   - _id: UYHeBeRmWAIiNqJf
     changes:
@@ -1392,15 +1781,27 @@ effects:
       turns: null
       startRound: null
       startTurn: null
-    icon: icons/svg/aura.svg
     origin: >-
       Compendium.torgeternity.system-de-archetypen.Actor.KXfP2nOG8VVWBOtA.Item.qE0o186bev0OqQzx
     transfer: false
     flags: {}
-    tint: null
+    tint: '#ffffff'
     name: Stärke gut
     description: ''
     statuses: []
+    _stats:
+      coreVersion: '12.330'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+    img: icons/svg/aura.svg
+    type: base
+    system: {}
+    sort: 0
     _key: '!actors.effects!KXfP2nOG8VVWBOtA.UYHeBeRmWAIiNqJf'
   - _id: Oy5vGqYTZTSV37eW
     changes:
@@ -1417,15 +1818,27 @@ effects:
       turns: null
       startRound: null
       startTurn: null
-    icon: icons/svg/aura.svg
     origin: >-
       Compendium.torgeternity.system-de-archetypen.Actor.KXfP2nOG8VVWBOtA.Item.qE0o186bev0OqQzx
     transfer: false
     flags: {}
-    tint: null
+    tint: '#ffffff'
     name: Verstand standard
     description: ''
     statuses: []
+    _stats:
+      coreVersion: '12.330'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+    img: icons/svg/aura.svg
+    type: base
+    system: {}
+    sort: 0
     _key: '!actors.effects!KXfP2nOG8VVWBOtA.Oy5vGqYTZTSV37eW'
   - _id: u9sOeiGLb5U9IGgV
     changes:
@@ -1442,15 +1855,27 @@ effects:
       turns: null
       startRound: null
       startTurn: null
-    icon: icons/svg/aura.svg
     origin: >-
       Compendium.torgeternity.system-de-archetypen.Actor.KXfP2nOG8VVWBOtA.Item.qE0o186bev0OqQzx
     transfer: false
     flags: {}
-    tint: null
+    tint: '#ffffff'
     name: Verstand gut
     description: ''
     statuses: []
+    _stats:
+      coreVersion: '12.330'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+    img: icons/svg/aura.svg
+    type: base
+    system: {}
+    sort: 0
     _key: '!actors.effects!KXfP2nOG8VVWBOtA.u9sOeiGLb5U9IGgV'
   - _id: WWe2wAufzDgPK7sQ
     changes:
@@ -1467,15 +1892,27 @@ effects:
       turns: null
       startRound: null
       startTurn: null
-    icon: icons/svg/aura.svg
     origin: >-
       Compendium.torgeternity.system-de-archetypen.Actor.KXfP2nOG8VVWBOtA.Item.AMJ9OkBjQS4QpLhe
     transfer: false
     flags: {}
-    tint: null
+    tint: '#ffffff'
     name: Charisma Standard
     description: ''
     statuses: []
+    _stats:
+      coreVersion: '12.330'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+    img: icons/svg/aura.svg
+    type: base
+    system: {}
+    sort: 0
     _key: '!actors.effects!KXfP2nOG8VVWBOtA.WWe2wAufzDgPK7sQ'
   - _id: Xk43fWcYOBwG020y
     changes:
@@ -1492,15 +1929,27 @@ effects:
       turns: null
       startRound: null
       startTurn: null
-    icon: icons/svg/aura.svg
     origin: >-
       Compendium.torgeternity.system-de-archetypen.Actor.KXfP2nOG8VVWBOtA.Item.AMJ9OkBjQS4QpLhe
     transfer: false
     flags: {}
-    tint: null
+    tint: '#ffffff'
     name: Charisma Gut
     description: ''
     statuses: []
+    _stats:
+      coreVersion: '12.330'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+    img: icons/svg/aura.svg
+    type: base
+    system: {}
+    sort: 0
     _key: '!actors.effects!KXfP2nOG8VVWBOtA.Xk43fWcYOBwG020y'
   - _id: Pw0a2bMXmcWYgt1y
     changes:
@@ -1517,15 +1966,27 @@ effects:
       turns: null
       startRound: null
       startTurn: null
-    icon: icons/svg/aura.svg
     origin: >-
       Compendium.torgeternity.system-de-archetypen.Actor.KXfP2nOG8VVWBOtA.Item.AMJ9OkBjQS4QpLhe
     transfer: false
     flags: {}
-    tint: null
+    tint: '#ffffff'
     name: Charisma Hervorragend
     description: ''
     statuses: []
+    _stats:
+      coreVersion: '12.330'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+    img: icons/svg/aura.svg
+    type: base
+    system: {}
+    sort: 0
     _key: '!actors.effects!KXfP2nOG8VVWBOtA.Pw0a2bMXmcWYgt1y'
   - _id: 0xVZuOBdsTYLt9sj
     changes:
@@ -1542,15 +2003,27 @@ effects:
       turns: null
       startRound: null
       startTurn: null
-    icon: icons/svg/aura.svg
     origin: >-
       Compendium.torgeternity.system-de-archetypen.Actor.KXfP2nOG8VVWBOtA.Item.AMJ9OkBjQS4QpLhe
     transfer: false
     flags: {}
-    tint: null
+    tint: '#ffffff'
     name: Geist Standard
     description: ''
     statuses: []
+    _stats:
+      coreVersion: '12.330'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+    img: icons/svg/aura.svg
+    type: base
+    system: {}
+    sort: 0
     _key: '!actors.effects!KXfP2nOG8VVWBOtA.0xVZuOBdsTYLt9sj'
   - _id: N0xmW4LS6KMpWbt9
     changes:
@@ -1567,15 +2040,27 @@ effects:
       turns: null
       startRound: null
       startTurn: null
-    icon: icons/svg/aura.svg
     origin: >-
       Compendium.torgeternity.system-de-archetypen.Actor.KXfP2nOG8VVWBOtA.Item.AMJ9OkBjQS4QpLhe
     transfer: false
     flags: {}
-    tint: null
+    tint: '#ffffff'
     name: Geist Gut
     description: ''
     statuses: []
+    _stats:
+      coreVersion: '12.330'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+    img: icons/svg/aura.svg
+    type: base
+    system: {}
+    sort: 0
     _key: '!actors.effects!KXfP2nOG8VVWBOtA.N0xmW4LS6KMpWbt9'
   - _id: 7ZwTZIUJqN3ULVde
     changes:
@@ -1592,15 +2077,27 @@ effects:
       turns: null
       startRound: null
       startTurn: null
-    icon: icons/svg/aura.svg
     origin: >-
       Compendium.torgeternity.system-de-archetypen.Actor.KXfP2nOG8VVWBOtA.Item.AMJ9OkBjQS4QpLhe
     transfer: false
     flags: {}
-    tint: null
+    tint: '#ffffff'
     name: Geist Hervorragend
     description: ''
     statuses: []
+    _stats:
+      coreVersion: '12.330'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+    img: icons/svg/aura.svg
+    type: base
+    system: {}
+    sort: 0
     _key: '!actors.effects!KXfP2nOG8VVWBOtA.7ZwTZIUJqN3ULVde'
   - _id: igBoC0cs8B2WN6ko
     changes:
@@ -1617,15 +2114,27 @@ effects:
       turns: null
       startRound: null
       startTurn: null
-    icon: icons/svg/aura.svg
     origin: >-
       Compendium.torgeternity.system-de-archetypen.Actor.KXfP2nOG8VVWBOtA.Item.AMJ9OkBjQS4QpLhe
     transfer: false
     flags: {}
-    tint: null
+    tint: '#ffffff'
     name: Geschicklichkeit Standard
     description: ''
     statuses: []
+    _stats:
+      coreVersion: '12.330'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+    img: icons/svg/aura.svg
+    type: base
+    system: {}
+    sort: 0
     _key: '!actors.effects!KXfP2nOG8VVWBOtA.igBoC0cs8B2WN6ko'
   - _id: xK03SnxJtareCXKG
     changes:
@@ -1642,15 +2151,27 @@ effects:
       turns: null
       startRound: null
       startTurn: null
-    icon: icons/svg/aura.svg
     origin: >-
       Compendium.torgeternity.system-de-archetypen.Actor.KXfP2nOG8VVWBOtA.Item.AMJ9OkBjQS4QpLhe
     transfer: false
     flags: {}
-    tint: null
+    tint: '#ffffff'
     name: Geschicklichkeit Gut
     description: ''
     statuses: []
+    _stats:
+      coreVersion: '12.330'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+    img: icons/svg/aura.svg
+    type: base
+    system: {}
+    sort: 0
     _key: '!actors.effects!KXfP2nOG8VVWBOtA.xK03SnxJtareCXKG'
   - _id: cU3htfAbj2sGFaWG
     changes:
@@ -1667,15 +2188,27 @@ effects:
       turns: null
       startRound: null
       startTurn: null
-    icon: icons/svg/aura.svg
     origin: >-
       Compendium.torgeternity.system-de-archetypen.Actor.KXfP2nOG8VVWBOtA.Item.AMJ9OkBjQS4QpLhe
     transfer: false
     flags: {}
-    tint: null
+    tint: '#ffffff'
     name: Geschicklichkeit Hervorragend
     description: ''
     statuses: []
+    _stats:
+      coreVersion: '12.330'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+    img: icons/svg/aura.svg
+    type: base
+    system: {}
+    sort: 0
     _key: '!actors.effects!KXfP2nOG8VVWBOtA.cU3htfAbj2sGFaWG'
   - _id: yk85FzWpfF8MhZd7
     changes:
@@ -1692,15 +2225,27 @@ effects:
       turns: null
       startRound: null
       startTurn: null
-    icon: icons/svg/aura.svg
     origin: >-
       Compendium.torgeternity.system-de-archetypen.Actor.KXfP2nOG8VVWBOtA.Item.AMJ9OkBjQS4QpLhe
     transfer: false
     flags: {}
-    tint: null
+    tint: '#ffffff'
     name: Stärke Standard
     description: ''
     statuses: []
+    _stats:
+      coreVersion: '12.330'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+    img: icons/svg/aura.svg
+    type: base
+    system: {}
+    sort: 0
     _key: '!actors.effects!KXfP2nOG8VVWBOtA.yk85FzWpfF8MhZd7'
   - _id: E0HdjnJaSOvzjJsI
     changes:
@@ -1717,15 +2262,27 @@ effects:
       turns: null
       startRound: null
       startTurn: null
-    icon: icons/svg/aura.svg
     origin: >-
       Compendium.torgeternity.system-de-archetypen.Actor.KXfP2nOG8VVWBOtA.Item.AMJ9OkBjQS4QpLhe
     transfer: false
     flags: {}
-    tint: null
+    tint: '#ffffff'
     name: Stärke Gut
     description: ''
     statuses: []
+    _stats:
+      coreVersion: '12.330'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+    img: icons/svg/aura.svg
+    type: base
+    system: {}
+    sort: 0
     _key: '!actors.effects!KXfP2nOG8VVWBOtA.E0HdjnJaSOvzjJsI'
   - _id: dcWS78qrXUpVg14s
     changes:
@@ -1742,15 +2299,27 @@ effects:
       turns: null
       startRound: null
       startTurn: null
-    icon: icons/svg/aura.svg
     origin: >-
       Compendium.torgeternity.system-de-archetypen.Actor.KXfP2nOG8VVWBOtA.Item.AMJ9OkBjQS4QpLhe
     transfer: false
     flags: {}
-    tint: null
+    tint: '#ffffff'
     name: Stärke Hervorragend
     description: ''
     statuses: []
+    _stats:
+      coreVersion: '12.330'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+    img: icons/svg/aura.svg
+    type: base
+    system: {}
+    sort: 0
     _key: '!actors.effects!KXfP2nOG8VVWBOtA.dcWS78qrXUpVg14s'
   - _id: l4AQc97dXwvnbYnJ
     changes:
@@ -1767,15 +2336,27 @@ effects:
       turns: null
       startRound: null
       startTurn: null
-    icon: icons/svg/aura.svg
     origin: >-
       Compendium.torgeternity.system-de-archetypen.Actor.KXfP2nOG8VVWBOtA.Item.AMJ9OkBjQS4QpLhe
     transfer: false
     flags: {}
-    tint: null
+    tint: '#ffffff'
     name: Verstand Standard
     description: ''
     statuses: []
+    _stats:
+      coreVersion: '12.330'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+    img: icons/svg/aura.svg
+    type: base
+    system: {}
+    sort: 0
     _key: '!actors.effects!KXfP2nOG8VVWBOtA.l4AQc97dXwvnbYnJ'
   - _id: z2CgckzKKfb7QosU
     changes:
@@ -1792,15 +2373,27 @@ effects:
       turns: null
       startRound: null
       startTurn: null
-    icon: icons/svg/aura.svg
     origin: >-
       Compendium.torgeternity.system-de-archetypen.Actor.KXfP2nOG8VVWBOtA.Item.AMJ9OkBjQS4QpLhe
     transfer: false
     flags: {}
-    tint: null
+    tint: '#ffffff'
     name: Verstand Gut
     description: ''
     statuses: []
+    _stats:
+      coreVersion: '12.330'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+    img: icons/svg/aura.svg
+    type: base
+    system: {}
+    sort: 0
     _key: '!actors.effects!KXfP2nOG8VVWBOtA.z2CgckzKKfb7QosU'
   - _id: C7CvOZhWpth0kQZl
     changes:
@@ -1817,15 +2410,27 @@ effects:
       turns: null
       startRound: null
       startTurn: null
-    icon: icons/svg/aura.svg
     origin: >-
       Compendium.torgeternity.system-de-archetypen.Actor.KXfP2nOG8VVWBOtA.Item.AMJ9OkBjQS4QpLhe
     transfer: false
     flags: {}
-    tint: null
+    tint: '#ffffff'
     name: Verstand Hervorragend
     description: ''
     statuses: []
+    _stats:
+      coreVersion: '12.330'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+    img: icons/svg/aura.svg
+    type: base
+    system: {}
+    sort: 0
     _key: '!actors.effects!KXfP2nOG8VVWBOtA.C7CvOZhWpth0kQZl'
 folder: null
 sort: 0
@@ -2042,7 +2647,7 @@ system:
       baseAttribute: dexterity
       adds: 0
       isFav: false
-      groupName: combat
+      groupName: other
       unskilledUse: 1
       isThreatSkill: false
       defenseOnly: false
@@ -2323,14 +2928,20 @@ prototypeToken:
       min: 0
       max: 1
     attenuation: 0.5
+    negative: false
+    priority: 0
   texture:
     src: systems/torgeternity/images/characters/cyberwitch.Token.webp
-    tint: null
+    tint: '#ffffff'
     scaleX: 1
     scaleY: 1
     offsetX: 0
     offsetY: 0
     rotation: 0
+    anchorX: 0.5
+    anchorY: 0.5
+    fit: contain
+    alphaThreshold: 0.75
   sight:
     angle: 360
     enabled: true
@@ -2340,14 +2951,30 @@ prototypeToken:
     attenuation: 0.1
     saturation: 0
     contrast: 0
+    color: null
   appendNumber: false
   prependAdjective: false
   detectionModes: []
+  hexagonalShape: 0
+  occludable:
+    radius: 0
+  ring:
+    enabled: false
+    colors:
+      ring: null
+      background: null
+    effects: 1
+    subject:
+      scale: 1
+      texture: null
 _stats:
   systemId: torgeternity
   systemVersion: 3.8.1
-  coreVersion: '11.315'
+  coreVersion: '12.330'
   createdTime: 1694865921702
   modifiedTime: 1716827811166
   lastModifiedBy: VAnYow5sWS9EJzo0
+  compendiumSource: Compendium.torgeternity.archetypes.CefD0chJeL6NrRVJ
+  duplicateSource: null
 _key: '!actors!KXfP2nOG8VVWBOtA'
+

@@ -3,33 +3,6 @@ name: The Resistance Fighter
 type: stormknight
 img: systems/torgeternity/images/characters/Resistance_Fighter.Avatar.webp
 items:
-  - _id: pA1qE5qRPfyGtF7k
-    name: Extra Magazines
-    type: gear
-    sort: 36450000
-    flags:
-      core:
-        sourceId: Item.0EHW4xd7uD68qmYy
-    img: systems/torgeternity/images/icons/gear-icon.webp
-    effects: []
-    folder: null
-    system:
-      cosm: (None)
-      description: <p>Five reloads for Thav 9.</p>
-      price: '0'
-      techlevel: 22
-      value: 0
-      equippedClass: item-equipped
-    ownership:
-      default: 0
-    _stats:
-      systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
-      createdTime: null
-      modifiedTime: 1693913950940
-      lastModifiedBy: CtisFurQNe9h7ABb
-    _key: '!actors.items!6ThunRV3sj9ZSMQW.pA1qE5qRPfyGtF7k'
   - _id: 1EwZ557khUp8utQa
     name: Bolster
     type: perk
@@ -42,7 +15,7 @@ items:
         sourceId: Compendium.te001-core-rulebook.Items.V0Jmybz7WGytQmIM
     system:
       category: leadership
-      cosm: (None)
+      cosm: none
       description: >-
         <p>A true leader can empower his allies with a stern gaze, a short
         speech, or some other act that steels their resolve against adverse
@@ -140,11 +113,13 @@ items:
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: 1693913842164
-      modifiedTime: 1693914312677
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722153610438
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Compendium.te001-core-rulebook.Items.V0Jmybz7WGytQmIM
+      duplicateSource: null
     _key: '!actors.items!6ThunRV3sj9ZSMQW.1EwZ557khUp8utQa'
   - _id: e88odLPHtr64Fe6g
     name: Psionic
@@ -158,7 +133,7 @@ items:
         sourceId: Compendium.te001-core-rulebook.Items.4ZtIS4h8WRGarKIV
     system:
       category: psionics
-      cosm: Other
+      cosm: other
       description: >-
         <p><strong>Cosms:</strong> Core Earth, Pan-Pacifica, Tharkold</p>
 
@@ -265,11 +240,13 @@ items:
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: 1693913847779
-      modifiedTime: 1693914317533
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722153617503
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Compendium.te001-core-rulebook.Items.4ZtIS4h8WRGarKIV
+      duplicateSource: null
     _key: '!actors.items!6ThunRV3sj9ZSMQW.e88odLPHtr64Fe6g'
   - _id: 4D9jNE3QVpfIK5ju
     name: Thav-9 SMG
@@ -282,7 +259,7 @@ items:
       core:
         sourceId: Compendium.te001-core-rulebook.Items.KlM3lZyDwImrJsGR
     system:
-      cosm: Tharkold
+      cosm: tharkold
       description: >-
         <p>@UUID[Compendium.te001-core-rulebook.rules.pwneQ55M0nnDH0Us.JournalEntryPage.qKdamp4rrcX6TTt0#short-burst:]{Short
         Burst}</p>
@@ -315,11 +292,13 @@ items:
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: 1693913890908
-      modifiedTime: 1693913890908
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722158040021
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Compendium.te001-core-rulebook.Items.KlM3lZyDwImrJsGR
+      duplicateSource: null
     _key: '!actors.items!6ThunRV3sj9ZSMQW.4D9jNE3QVpfIK5ju'
   - _id: 8oEBq0nCbKQZBYmI
     name: Flares
@@ -332,7 +311,7 @@ items:
       core:
         sourceId: Compendium.te001-core-rulebook.Items.wOSsT4wHWPEcX85E
     system:
-      cosm: Nile Empire
+      cosm: nileEmpire
       description: <p>Found in <strong>Core Rules</strong></p>
       price: '5'
       techlevel: 20
@@ -344,11 +323,13 @@ items:
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: 1693913935699
-      modifiedTime: 1693913935699
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722157688222
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Compendium.te001-core-rulebook.Items.wOSsT4wHWPEcX85E
+      duplicateSource: null
     _key: '!actors.items!6ThunRV3sj9ZSMQW.8oEBq0nCbKQZBYmI'
   - _id: a17Cby9zL92bKPu6
     name: Caltrops
@@ -361,7 +342,7 @@ items:
       core:
         sourceId: Compendium.te001-core-rulebook.Items.KKJPrdjO5sFkhZzF
     system:
-      cosm: Aysle
+      cosm: aysle
       description: >-
         <p>A batch of scattered spikes that always land with a point upwards,
         designed to impale feet and tires. Once deployed as a simple action
@@ -380,11 +361,13 @@ items:
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: 1693913945299
-      modifiedTime: 1693913945299
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722157682053
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Compendium.te001-core-rulebook.Items.KKJPrdjO5sFkhZzF
+      duplicateSource: null
     _key: '!actors.items!6ThunRV3sj9ZSMQW.a17Cby9zL92bKPu6'
   - _id: oozJV88xl3R690JB
     name: Energize
@@ -410,14 +393,26 @@ items:
           turns: null
           startRound: null
           startTurn: null
-        icon: icons/svg/aura.svg
         origin: Compendium.te001-core-rulebook.Items.E1aOVDM9yrPzXa4p
         transfer: true
         flags: {}
-        tint: null
+        tint: '#ffffff'
         name: Standard
         description: ''
         statuses: []
+        _stats:
+          coreVersion: '12.330'
+          systemId: null
+          systemVersion: null
+          createdTime: null
+          modifiedTime: null
+          lastModifiedBy: null
+          compendiumSource: null
+          duplicateSource: null
+        img: icons/svg/aura.svg
+        type: base
+        system: {}
+        sort: 0
         _key: >-
           !actors.items.effects!6ThunRV3sj9ZSMQW.oozJV88xl3R690JB.Ia7plVLXPnVYMFje
       - _id: yOhy1VOZFoPTiMO6
@@ -439,14 +434,26 @@ items:
           turns: null
           startRound: null
           startTurn: null
-        icon: icons/svg/aura.svg
         origin: Compendium.te001-core-rulebook.Items.E1aOVDM9yrPzXa4p
         transfer: true
         flags: {}
-        tint: null
+        tint: '#ffffff'
         name: Good
         description: ''
         statuses: []
+        _stats:
+          coreVersion: '12.330'
+          systemId: null
+          systemVersion: null
+          createdTime: null
+          modifiedTime: null
+          lastModifiedBy: null
+          compendiumSource: null
+          duplicateSource: null
+        img: icons/svg/aura.svg
+        type: base
+        system: {}
+        sort: 0
         _key: >-
           !actors.items.effects!6ThunRV3sj9ZSMQW.oozJV88xl3R690JB.yOhy1VOZFoPTiMO6
       - _id: zGcEc05UE1p0DACi
@@ -468,14 +475,26 @@ items:
           turns: null
           startRound: null
           startTurn: null
-        icon: icons/svg/aura.svg
         origin: Compendium.te001-core-rulebook.Items.E1aOVDM9yrPzXa4p
         transfer: true
         flags: {}
-        tint: null
+        tint: '#ffffff'
         name: Penalty
         description: ''
         statuses: []
+        _stats:
+          coreVersion: '12.330'
+          systemId: null
+          systemVersion: null
+          createdTime: null
+          modifiedTime: null
+          lastModifiedBy: null
+          compendiumSource: null
+          duplicateSource: null
+        img: icons/svg/aura.svg
+        type: base
+        system: {}
+        sort: 0
         _key: >-
           !actors.items.effects!6ThunRV3sj9ZSMQW.oozJV88xl3R690JB.zGcEc05UE1p0DACi
     folder: null
@@ -525,10 +544,12 @@ items:
     _stats:
       systemId: torgeternity
       systemVersion: 3.1.1
-      coreVersion: '11.308'
+      coreVersion: '12.330'
       createdTime: 1693913977126
       modifiedTime: 1693914327172
       lastModifiedBy: CtisFurQNe9h7ABb
+      compendiumSource: Compendium.te001-core-rulebook.Items.E1aOVDM9yrPzXa4p
+      duplicateSource: null
     _key: '!actors.items!6ThunRV3sj9ZSMQW.oozJV88xl3R690JB'
   - _id: lP1gDobehm2cIDnI
     name: Telekinesis
@@ -579,10 +600,12 @@ items:
     _stats:
       systemId: torgeternity
       systemVersion: 3.1.1
-      coreVersion: '11.308'
+      coreVersion: '12.330'
       createdTime: 1693913984781
       modifiedTime: 1693914330460
       lastModifiedBy: CtisFurQNe9h7ABb
+      compendiumSource: Compendium.te001-core-rulebook.Items.W2UcfbwA52PfFsq0
+      duplicateSource: null
     _key: '!actors.items!6ThunRV3sj9ZSMQW.lP1gDobehm2cIDnI'
   - _id: uqdS5oGcIL2Cdzdn
     name: Telekinetic Barrier
@@ -632,16 +655,18 @@ items:
     _stats:
       systemId: torgeternity
       systemVersion: 3.1.1
-      coreVersion: '11.308'
+      coreVersion: '12.330'
       createdTime: 1693913993707
       modifiedTime: 1693913993707
       lastModifiedBy: CtisFurQNe9h7ABb
+      compendiumSource: Compendium.te001-core-rulebook.Items.3Z6PGIn3g8uZmqxl
+      duplicateSource: null
     _key: '!actors.items!6ThunRV3sj9ZSMQW.uqdS5oGcIL2Cdzdn'
   - name: Pain Gauntlet
     type: gear
     img: systems/torgeternity/images/icons/axe-icon.webp
     system:
-      cosm: Tharkold
+      cosm: tharkold
       description: >-
         <p>@UUID[Compendium.te001-core-rulebook.rules.pwneQ55M0nnDH0Us.JournalEntryPage.qKdamp4rrcX6TTt0#painful:]{Painful}</p>
 
@@ -664,11 +689,13 @@ items:
         sourceId: Item.c7mhvOuz4vnS6b90
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: 1672746275492
-      modifiedTime: 1694864078670
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722157673590
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Item.c7mhvOuz4vnS6b90
+      duplicateSource: null
     _id: zIlXHS2RoCnoapn6
     folder: null
     sort: 0
@@ -713,10 +740,12 @@ items:
     _stats:
       systemId: torgeternity
       systemVersion: 3.1.1
-      coreVersion: '11.308'
+      coreVersion: '12.330'
       createdTime: 1672297398089
       modifiedTime: 1693914254765
       lastModifiedBy: CtisFurQNe9h7ABb
+      compendiumSource: Compendium.te001-core-rulebook.grw-de-ausruestung.vBsXbuQHBLGfECPi
+      duplicateSource: null
     _key: '!actors.items!6ThunRV3sj9ZSMQW.Uv3ApXgF1UfEH3ay'
   - _id: i45pPCUAHmPwtlVJ
     name: Stab Vest
@@ -729,7 +758,7 @@ items:
       core:
         sourceId: Compendium.te001-core-rulebook.Items.Item.G9m8o4kbueF7EWdt
     system:
-      cosm: Core Earth
+      cosm: coreEarth
       description: >-
         <p>@UUID[Compendium.te001-core-rulebook.rules.pwneQ55M0nnDH0Us.JournalEntryPage.qKdamp4rrcX6TTt0#full-body/torso:]{Torso}</p>
 
@@ -756,11 +785,13 @@ items:
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.7.0
-      coreVersion: '11.315'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: 1711551146747
-      modifiedTime: 1711705121625
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722157722733
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Compendium.te001-core-rulebook.Items.Item.G9m8o4kbueF7EWdt
+      duplicateSource: null
     _key: '!actors.items!6ThunRV3sj9ZSMQW.i45pPCUAHmPwtlVJ'
   - _id: foI6JV88RYV10i7V
     name: Leather Armor
@@ -773,7 +804,7 @@ items:
       core:
         sourceId: Compendium.te001-core-rulebook.Items.Item.6GTnNpLUtydDJVi1
     system:
-      cosm: Aysle
+      cosm: aysle
       description: >-
         <p>Animal hides tanned or boiled to a stiffer, more durable finish, then
         reinforced with studs or stitched seams. Found in some form in every
@@ -798,12 +829,54 @@ items:
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.7.0
-      coreVersion: '11.315'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: 1711551146690
-      modifiedTime: 1711705121628
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722157716477
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Compendium.te001-core-rulebook.Items.Item.6GTnNpLUtydDJVi1
+      duplicateSource: null
     _key: '!actors.items!6ThunRV3sj9ZSMQW.foI6JV88RYV10i7V'
+  - name: Extra Magazines
+    type: ammunition
+    _id: HxDE38fw5P5C3piX
+    img: systems/torgeternity/images/icons/ammo-icon.webp
+    system:
+      cosm: ''
+      description: >-
+        <p><span style="font-family:'Palatino Linotype'">Five extra Thav-9
+        magazines.</span></p>
+      price: ''
+      techlevel: null
+      value: 0
+      secondaryAxiom:
+        selected: none
+        value: null
+      type: ''
+      quantity: 5
+      damageMod: 0
+      apMod: 0
+      fireDamage: false
+      blastRadius: None
+      darknessMod: none
+      reach: ''
+    effects: []
+    folder: null
+    sort: 0
+    ownership:
+      default: 0
+      93AMwcGe6H37rcPA: 3
+    flags: {}
+    _stats:
+      compendiumSource: Item.KRYQ71jof26XeGEv
+      duplicateSource: null
+      coreVersion: '12.330'
+      systemId: torgeternity
+      systemVersion: 12.2.0
+      createdTime: 1722109312435
+      modifiedTime: 1722157728294
+      lastModifiedBy: 93AMwcGe6H37rcPA
+    _key: '!actors.items!6ThunRV3sj9ZSMQW.HxDE38fw5P5C3piX'
 effects:
   - _id: lCixEDWBVYObydTz
     changes:
@@ -824,14 +897,26 @@ effects:
       turns: null
       startRound: null
       startTurn: null
-    icon: icons/svg/aura.svg
     origin: Compendium.torgeternity.archetypes.6ThunRV3sj9ZSMQW.Item.HmRShmfFUF4o6cEe
-    tint: null
+    tint: '#ffffff'
     transfer: false
     flags: {}
     name: Standard
     description: ''
     statuses: []
+    _stats:
+      coreVersion: '12.330'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+    img: icons/svg/aura.svg
+    type: base
+    system: {}
+    sort: 0
     _key: '!actors.effects!6ThunRV3sj9ZSMQW.lCixEDWBVYObydTz'
   - _id: Twk0lJfHvvMJ32Db
     changes:
@@ -852,14 +937,26 @@ effects:
       turns: null
       startRound: null
       startTurn: null
-    icon: icons/svg/aura.svg
     origin: Compendium.torgeternity.archetypes.6ThunRV3sj9ZSMQW.Item.HmRShmfFUF4o6cEe
-    tint: null
+    tint: '#ffffff'
     transfer: false
     flags: {}
     name: Good
     description: ''
     statuses: []
+    _stats:
+      coreVersion: '12.330'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+    img: icons/svg/aura.svg
+    type: base
+    system: {}
+    sort: 0
     _key: '!actors.effects!6ThunRV3sj9ZSMQW.Twk0lJfHvvMJ32Db'
   - _id: uOVyiKThlM6HcfOi
     changes:
@@ -880,14 +977,26 @@ effects:
       turns: null
       startRound: null
       startTurn: null
-    icon: icons/svg/aura.svg
     origin: Compendium.torgeternity.archetypes.6ThunRV3sj9ZSMQW.Item.HmRShmfFUF4o6cEe
-    tint: null
+    tint: '#ffffff'
     transfer: false
     flags: {}
     name: Penalty
     description: ''
     statuses: []
+    _stats:
+      coreVersion: '12.330'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+    img: icons/svg/aura.svg
+    type: base
+    system: {}
+    sort: 0
     _key: '!actors.effects!6ThunRV3sj9ZSMQW.uOVyiKThlM6HcfOi'
   - _id: 8cdSuXxDddYRYpCq
     changes:
@@ -908,15 +1017,27 @@ effects:
       turns: null
       startRound: null
       startTurn: null
-    icon: icons/svg/aura.svg
     origin: >-
       Compendium.torgeternity.archetypes.Actor.6ThunRV3sj9ZSMQW.Item.oozJV88xl3R690JB
     transfer: false
     flags: {}
-    tint: null
+    tint: '#ffffff'
     name: Standard
     description: ''
     statuses: []
+    _stats:
+      coreVersion: '12.330'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+    img: icons/svg/aura.svg
+    type: base
+    system: {}
+    sort: 0
     _key: '!actors.effects!6ThunRV3sj9ZSMQW.8cdSuXxDddYRYpCq'
   - _id: DZuBOyrPlE52fQTP
     changes:
@@ -937,15 +1058,27 @@ effects:
       turns: null
       startRound: null
       startTurn: null
-    icon: icons/svg/aura.svg
     origin: >-
       Compendium.torgeternity.archetypes.Actor.6ThunRV3sj9ZSMQW.Item.oozJV88xl3R690JB
     transfer: false
     flags: {}
-    tint: null
+    tint: '#ffffff'
     name: Good
     description: ''
     statuses: []
+    _stats:
+      coreVersion: '12.330'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+    img: icons/svg/aura.svg
+    type: base
+    system: {}
+    sort: 0
     _key: '!actors.effects!6ThunRV3sj9ZSMQW.DZuBOyrPlE52fQTP'
   - _id: aC8NLLy68uR2lQl8
     changes:
@@ -966,15 +1099,27 @@ effects:
       turns: null
       startRound: null
       startTurn: null
-    icon: icons/svg/aura.svg
     origin: >-
       Compendium.torgeternity.archetypes.Actor.6ThunRV3sj9ZSMQW.Item.oozJV88xl3R690JB
     transfer: false
     flags: {}
-    tint: null
+    tint: '#ffffff'
     name: Penalty
     description: ''
     statuses: []
+    _stats:
+      coreVersion: '12.330'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+    img: icons/svg/aura.svg
+    type: base
+    system: {}
+    sort: 0
     _key: '!actors.effects!6ThunRV3sj9ZSMQW.aC8NLLy68uR2lQl8'
 folder: null
 sort: 100001
@@ -1189,7 +1334,7 @@ system:
       baseAttribute: dexterity
       adds: 0
       isFav: false
-      groupName: combat
+      groupName: other
       unskilledUse: 1
       isThreatSkill: false
       defenseOnly: false
@@ -1462,14 +1607,20 @@ prototypeToken:
       max: 1
     color: null
     attenuation: 0.5
+    negative: false
+    priority: 0
   texture:
     src: systems/torgeternity/images/characters/resistance_fighter.Token.webp
-    tint: null
+    tint: '#ffffff'
     scaleX: 1
     scaleY: 1
     offsetX: 0
     offsetY: 0
     rotation: 0
+    anchorX: 0.5
+    anchorY: 0.5
+    fit: contain
+    alphaThreshold: 0.75
   sight:
     angle: 360
     enabled: false
@@ -1479,14 +1630,30 @@ prototypeToken:
     attenuation: 0.1
     saturation: 0
     contrast: 0
+    color: null
   appendNumber: false
   prependAdjective: false
   detectionModes: []
+  hexagonalShape: 0
+  occludable:
+    radius: 0
+  ring:
+    enabled: false
+    colors:
+      ring: null
+      background: null
+    effects: 1
+    subject:
+      scale: 1
+      texture: null
 _stats:
   systemId: torgeternity
   systemVersion: 3.8.1
-  coreVersion: '11.315'
+  coreVersion: '12.330'
   createdTime: 1693913842164
   modifiedTime: 1716827807354
   lastModifiedBy: VAnYow5sWS9EJzo0
+  compendiumSource: null
+  duplicateSource: null
 _key: '!actors!6ThunRV3sj9ZSMQW'
+

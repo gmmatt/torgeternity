@@ -14,7 +14,7 @@ items:
       core:
         sourceId: Item.hnzAJpMqPZrjYrX8
     system:
-      cosm: Nil-Imperium
+      cosm: nileEmpire
       description: >-
         <p>Ein kleines Ger&auml;t, das seinen Standort an darauf abgestimmte
         Funkempf&auml;nger innerhalb eines Kilometers sendet.</p>
@@ -27,11 +27,13 @@ items:
       9Q0XnqFwko7hRlvL: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: null
-      modifiedTime: 1694869709465
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722166703718
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Item.hnzAJpMqPZrjYrX8
+      duplicateSource: null
     _key: '!actors.items!LS1z3a6GAJT83doA.oYpHjuMGhIsNv8XC'
   - _id: Ld5AIx57YpaDZE4T
     name: Stromstrahl
@@ -45,7 +47,7 @@ items:
         sourceId: Compendium.te001-core-rulebook.grw-de-vorzuverb.Oow5hug0e0C5BCNH
     system:
       category: pulpPowers
-      cosm: Nil-Imperium
+      cosm: nileEmpire
       description: >-
         <p>Der Held kann einen m&auml;chtigen elektrischen Blitz abfeuern. Er
         greift mit Energiewaffen oder Geschicklichkeit an und verursacht 13
@@ -58,7 +60,7 @@ items:
         h&ouml;her im Wasser befindet, erh&ouml;ht sich der Schaden um
         +4.&nbsp;</p>
       prerequisites: ''
-      generalContradiction: false
+      generalContradiction: true
       pulpPowers:
         enhancement01:
           description: Der Strahl betrifft alle Ziele in einem kleinen Explosionsradius.
@@ -140,11 +142,13 @@ items:
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: 1694866747115
-      modifiedTime: 1694868789721
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722166533974
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Compendium.te001-core-rulebook.grw-de-vorzuverb.Oow5hug0e0C5BCNH
+      duplicateSource: null
     _key: '!actors.items!LS1z3a6GAJT83doA.Ld5AIx57YpaDZE4T'
   - _id: 33139H5tzkxx6FAx
     name: Kraftfeld
@@ -158,7 +162,7 @@ items:
         sourceId: Compendium.te001-core-rulebook.grw-de-vorzuverb.Item.RUqkRcpgyDXQXRi2
     system:
       category: pulpPowers
-      cosm: Nil-Imperium
+      cosm: nileEmpire
       description: >-
         <p>Ein Schild aus unsichtbarer Energie umgibt den Helden. Das Kraftfeld
         hat drei &bdquo;Ladungen&ldquo;. Jedes Mal, wenn der Held eine Wunde
@@ -168,7 +172,7 @@ items:
         <p>Das Feld l&auml;dt sich mit einer Ladung pro Stunde wieder
         auf.&nbsp;</p>
       prerequisites: ''
-      generalContradiction: false
+      generalContradiction: true
       pulpPowers:
         enhancement01:
           description: Das Feld erhält alle 10 Minuten eine Ladung zurück.
@@ -251,11 +255,13 @@ items:
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: 1694866751899
-      modifiedTime: 1694866959782
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722166540912
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Compendium.te001-core-rulebook.grw-de-vorzuverb.Item.RUqkRcpgyDXQXRi2
+      duplicateSource: null
     _key: '!actors.items!LS1z3a6GAJT83doA.33139H5tzkxx6FAx'
   - _id: ILlukSLFB0oP3oxR
     name: Stromstrahl (Waffe)
@@ -269,7 +275,7 @@ items:
         sourceId: >-
           Compendium.te001-core-rulebook.grw-de-ausruestung.Item.jDYOf9wwFysGXhkN
     system:
-      cosm: Nil-Imperium
+      cosm: nileEmpire
       description: >-
         <p>Ben&ouml;tigt den Vorzug
         "@UUID[Compendium.te001-core-rulebook.grw-de-vorzuverb.0P0XvH8qiYpp8Gun]{Stromstrahl}",
@@ -295,11 +301,13 @@ items:
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: 1694866995356
-      modifiedTime: 1694867008591
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722166724463
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Compendium.te001-core-rulebook.grw-de-ausruestung.Item.jDYOf9wwFysGXhkN
+      duplicateSource: null
     _key: '!actors.items!LS1z3a6GAJT83doA.ILlukSLFB0oP3oxR'
   - name: Mikro-Audiosender
     type: gear
@@ -312,7 +320,7 @@ items:
         sourceId: Item.oQDasq1tsV2C1xba
     _id: z5kuKXicHCTjagsy
     system:
-      cosm: Nil-Imperium
+      cosm: nileEmpire
       description: ''
       price: '100'
       techlevel: 20
@@ -324,11 +332,13 @@ items:
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: 1694867036963
-      modifiedTime: 1694867119047
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722166672015
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Item.oQDasq1tsV2C1xba
+      duplicateSource: null
     _key: '!actors.items!LS1z3a6GAJT83doA.z5kuKXicHCTjagsy'
   - name: Rucksack
     type: gear
@@ -341,7 +351,7 @@ items:
         sourceId: Item.9OFC7IM8K9EMljbZ
     _id: 4aD1KQ5M35j8LPLG
     system:
-      cosm: Aysle
+      cosm: aysle
       description: ''
       price: '100'
       techlevel: 8
@@ -353,11 +363,13 @@ items:
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: 1694867043890
-      modifiedTime: 1694867043890
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722166708031
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Item.9OFC7IM8K9EMljbZ
+      duplicateSource: null
     _key: '!actors.items!LS1z3a6GAJT83doA.4aD1KQ5M35j8LPLG'
   - _id: vsz0ZonowO3k7bcL
     name: Erste-Hilfe-Kasten
@@ -379,14 +391,26 @@ items:
           turns: null
           startRound: null
           startTurn: null
-        icon: icons/svg/aura.svg
         origin: Compendium.te001-core-rulebook.grw-de-ausruestung.ccAyQ6SPYCK8IWQS
         transfer: true
         flags: {}
-        tint: null
+        tint: '#ffffff'
         name: Fertigkeitsbegünstigung
         description: ''
         statuses: []
+        _stats:
+          coreVersion: '12.330'
+          systemId: null
+          systemVersion: null
+          createdTime: null
+          modifiedTime: null
+          lastModifiedBy: null
+          compendiumSource: null
+          duplicateSource: null
+        img: icons/svg/aura.svg
+        type: base
+        system: {}
+        sort: 0
         _key: >-
           !actors.items.effects!LS1z3a6GAJT83doA.vsz0ZonowO3k7bcL.4O95ViFk7K3rqW7i
     folder: null
@@ -395,11 +419,11 @@ items:
       core:
         sourceId: Item.qfuqdyayux9JCd6l
     system:
-      cosm: Zentralerde
+      cosm: nileEmpire
       description: <p><em>Erste-Hilfe</em>-Proben sind beg&uuml;nstigt</p>
-      price: '0'
-      techlevel: 23
-      value: 0
+      price: '50'
+      techlevel: 19
+      value: 9
       equippedClass: item-equipped
     ownership:
       default: 0
@@ -407,11 +431,13 @@ items:
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: 1694867047131
-      modifiedTime: 1694867114123
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722166698774
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Item.qfuqdyayux9JCd6l
+      duplicateSource: null
     _key: '!actors.items!LS1z3a6GAJT83doA.vsz0ZonowO3k7bcL'
   - name: Taschenlampe
     type: gear
@@ -424,7 +450,7 @@ items:
         sourceId: Item.ghYEu90Et15IioVa
     _id: A3zASEYHS3ksPNvh
     system:
-      cosm: Nil-Imperium
+      cosm: nileEmpire
       description: ''
       price: '10'
       techlevel: 20
@@ -436,11 +462,13 @@ items:
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: 1694867051051
-      modifiedTime: 1694867121383
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722166711399
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Item.ghYEu90Et15IioVa
+      duplicateSource: null
     _key: '!actors.items!LS1z3a6GAJT83doA.A3zASEYHS3ksPNvh'
   - name: Funkempfänger
     type: gear
@@ -453,7 +481,7 @@ items:
         sourceId: Item.CBYudRRbDHQzC9F2
     _id: 5V8SDuZZgyq8hEge
     system:
-      cosm: Nil-Imperium
+      cosm: nileEmpire
       description: ''
       price: '50'
       techlevel: 18
@@ -465,11 +493,13 @@ items:
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: 1694867074874
-      modifiedTime: 1694867115799
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722166667591
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Item.CBYudRRbDHQzC9F2
+      duplicateSource: null
     _key: '!actors.items!LS1z3a6GAJT83doA.5V8SDuZZgyq8hEge'
   - name: Werkzeuggürtel
     type: gear
@@ -482,7 +512,7 @@ items:
         sourceId: Item.NDVbTsJFnguLs4Bx
     _id: JOEXCC8y8rElWHrS
     system:
-      cosm: Orrorsh
+      cosm: nileEmpire
       description: ''
       price: '100'
       techlevel: 16
@@ -494,11 +524,13 @@ items:
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: 1694867083090
-      modifiedTime: 1694867083090
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722166716056
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Item.NDVbTsJFnguLs4Bx
+      duplicateSource: null
     _key: '!actors.items!LS1z3a6GAJT83doA.JOEXCC8y8rElWHrS'
   - name: Ledermantel
     type: armor
@@ -512,7 +544,7 @@ items:
           Compendium.te001-core-rulebook.grw-de-ausruestung.Item.s0uhujKKdqpJw210
     _id: 8FoodSadABORHrmX
     system:
-      cosm: Nil-Imperium
+      cosm: nileEmpire
       description: >-
         <p>@UUID[Compendium.te001-core-rulebook.grw-de-grw.Qlx6yGF0Mmo6Xzrv.JournalEntryPage.7GGUUHzuYIqGPXDO#ganzkorper/torso:]{Torso}</p>
       price: '100'
@@ -531,11 +563,13 @@ items:
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.7.0
-      coreVersion: '11.315'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: 1711562366193
-      modifiedTime: 1711706120829
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722166728591
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Compendium.te001-core-rulebook.grw-de-ausruestung.Item.s0uhujKKdqpJw210
+      duplicateSource: null
     _key: '!actors.items!LS1z3a6GAJT83doA.8FoodSadABORHrmX'
 effects:
   - _id: cyPKID3tHRDIqS44
@@ -553,15 +587,27 @@ effects:
       turns: null
       startRound: null
       startTurn: null
-    icon: icons/svg/aura.svg
     origin: >-
       Compendium.torgeternity.system-de-archetypen.Actor.LS1z3a6GAJT83doA.Item.vsz0ZonowO3k7bcL
     transfer: false
     flags: {}
-    tint: null
+    tint: '#ffffff'
     name: Fertigkeitsbegünstigung
     description: ''
     statuses: []
+    _stats:
+      coreVersion: '12.330'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+    img: icons/svg/aura.svg
+    type: base
+    system: {}
+    sort: 0
     _key: '!actors.effects!LS1z3a6GAJT83doA.cyPKID3tHRDIqS44'
 folder: null
 sort: 0
@@ -778,7 +824,7 @@ system:
       baseAttribute: dexterity
       adds: 0
       isFav: false
-      groupName: combat
+      groupName: other
       unskilledUse: 1
       isThreatSkill: false
       defenseOnly: false
@@ -1053,14 +1099,20 @@ prototypeToken:
       min: 0
       max: 1
     attenuation: 0.5
+    negative: false
+    priority: 0
   texture:
     src: systems/torgeternity/images/characters/eccentric_inventor.Token.webp
-    tint: null
+    tint: '#ffffff'
     scaleX: 1
     scaleY: 1
     offsetX: 0
     offsetY: 0
     rotation: 0
+    anchorX: 0.5
+    anchorY: 0.5
+    fit: contain
+    alphaThreshold: 0.75
   sight:
     angle: 360
     enabled: true
@@ -1070,14 +1122,30 @@ prototypeToken:
     attenuation: 0.1
     saturation: 0
     contrast: 0
+    color: null
   appendNumber: false
   prependAdjective: false
   detectionModes: []
+  hexagonalShape: 0
+  occludable:
+    radius: 0
+  ring:
+    enabled: false
+    colors:
+      ring: null
+      background: null
+    effects: 1
+    subject:
+      scale: 1
+      texture: null
 _stats:
   systemId: torgeternity
   systemVersion: 3.8.1
-  coreVersion: '11.315'
+  coreVersion: '12.330'
   createdTime: 1694866736301
   modifiedTime: 1716827811234
   lastModifiedBy: VAnYow5sWS9EJzo0
+  compendiumSource: Compendium.torgeternity.archetypes.Aq6ZhdfGe9SMQxwv
+  duplicateSource: null
 _key: '!actors!LS1z3a6GAJT83doA'
+

@@ -14,7 +14,7 @@ items:
       core:
         sourceId: Item.YPwj95vVULBwePmN
     system:
-      cosm: Das Lebende Land
+      cosm: livingLand
       description: <p>Rot, wei&szlig; und blau. Lehre deinen Feinden das F&uuml;rchten!</p>
       price: '0'
       techlevel: 4
@@ -25,11 +25,13 @@ items:
       9Q0XnqFwko7hRlvL: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: null
-      modifiedTime: 1694869775524
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722167441564
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Item.YPwj95vVULBwePmN
+      duplicateSource: null
     _key: '!actors.items!pGJE5A6rJMK7Za84.RTFA8GGOPi8crymC'
   - _id: ObSFboHHSLAndid6
     name: Totem
@@ -42,7 +44,7 @@ items:
       core:
         sourceId: Item.XNd1hm8Qf4RNfaKE
     system:
-      cosm: Das Lebende Land
+      cosm: livingLand
       description: ''
       price: '25'
       techlevel: 5
@@ -53,11 +55,13 @@ items:
       9Q0XnqFwko7hRlvL: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: null
-      modifiedTime: 1694869768268
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722167444693
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Item.XNd1hm8Qf4RNfaKE
+      duplicateSource: null
     _key: '!actors.items!pGJE5A6rJMK7Za84.ObSFboHHSLAndid6'
   - _id: C57Br0iAfeRJhhiH
     name: Tiergefährte (Säbelzahntiger)
@@ -71,7 +75,7 @@ items:
         sourceId: Compendium.te001-core-rulebook.grw-de-vorzuverb.Item.sAnjais7Ifne0Gxn
     system:
       category: savagery
-      cosm: Das Lebende Land
+      cosm: livingLand
       description: >-
         <p>Dinosauriern aufnehmen k&ouml;nnen. Aber es gibt auch eine kleinere
         Unterart, die gl&uuml;cklicherweise daran interessiert ist, an der Seite
@@ -183,11 +187,13 @@ items:
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: 1694861927004
-      modifiedTime: 1694868665089
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722167369685
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Compendium.te001-core-rulebook.grw-de-vorzuverb.Item.sAnjais7Ifne0Gxn
+      duplicateSource: null
     _key: '!actors.items!pGJE5A6rJMK7Za84.C57Br0iAfeRJhhiH'
   - _id: U9r4bGF9Qf9Y2tdX
     name: Unnachgiebig (Kampfkraft)
@@ -201,7 +207,7 @@ items:
         sourceId: Compendium.te001-core-rulebook.grw-de-vorzuverb.Item.HPYtbg4vPrY05AQ6
     system:
       category: prowess
-      cosm: (Keins)
+      cosm: none
       description: >-
         <p>Die zornigsten K&auml;mpfer stecken alles, was in ihnen steckt, in
         ihre Schl&auml;ge. Wenn der Charakter die Option
@@ -296,11 +302,13 @@ items:
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: 1694861933004
-      modifiedTime: 1694868661889
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722167365204
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Compendium.te001-core-rulebook.grw-de-vorzuverb.Item.HPYtbg4vPrY05AQ6
+      duplicateSource: null
     _key: '!actors.items!pGJE5A6rJMK7Za84.U9r4bGF9Qf9Y2tdX'
   - _id: OhNaScW1ac7A8p4t
     name: Hrockt-Sprossenspeer
@@ -314,7 +322,7 @@ items:
         sourceId: >-
           Compendium.te001-core-rulebook.grw-de-ausruestung.Item.kXL8gB3WmlckpUWD
     system:
-      cosm: Das Lebende Land
+      cosm: livingLand
       description: >-
         <p style="box-sizing: border-box; user-select: text; font-family:
         Palatino; font-size: 12px;"><strong style="box-sizing: border-box;
@@ -346,11 +354,13 @@ items:
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: 1694862006764
-      modifiedTime: 1694862006764
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722167400045
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Compendium.te001-core-rulebook.grw-de-ausruestung.Item.kXL8gB3WmlckpUWD
+      duplicateSource: null
     _key: '!actors.items!pGJE5A6rJMK7Za84.OhNaScW1ac7A8p4t'
   - _id: XpHJRYxPODTcXOC7
     name: Hrockt-Sprossenspeer
@@ -363,13 +373,13 @@ items:
       core:
         sourceId: Item.ovHCUOiZApDGqjH8
     system:
-      cosm: Das Lebende Land
+      cosm: livingLand
       description: >-
         <p>S.
         @UUID[Compendium.te001-core-rulebook.grw-de-ausruestung.Item.kXL8gB3WmlckpUWD]{Hrockt-Sprossenspeer}
         als Nahkampfwaffe</p>
       price: '40'
-      techlevel: 2
+      techlevel: 3
       value: 8
       ammo:
         max: 1
@@ -390,11 +400,13 @@ items:
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: 1694862011324
-      modifiedTime: 1694862011324
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722167419251
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Item.ovHCUOiZApDGqjH8
+      duplicateSource: null
     _key: '!actors.items!pGJE5A6rJMK7Za84.XpHJRYxPODTcXOC7'
   - _id: PUNnBfqB6aI6XuN0
     name: Knochenmesser
@@ -408,7 +420,7 @@ items:
         sourceId: >-
           Compendium.te001-core-rulebook.grw-de-ausruestung.Item.AgXzt07RwyGh98ej
     system:
-      cosm: Das Lebende Land
+      cosm: livingLand
       description: >-
         <p>@UUID[Compendium.te001-core-rulebook.grw-de-grw.Qlx6yGF0Mmo6Xzrv.JournalEntryPage.7GGUUHzuYIqGPXDO#zerbrechlich:]{Zerbrechlich}</p>
 
@@ -434,11 +446,13 @@ items:
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: 1694862023179
-      modifiedTime: 1694862023179
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722167411725
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Compendium.te001-core-rulebook.grw-de-ausruestung.Item.AgXzt07RwyGh98ej
+      duplicateSource: null
     _key: '!actors.items!pGJE5A6rJMK7Za84.PUNnBfqB6aI6XuN0'
   - name: Fackel
     type: gear
@@ -451,7 +465,7 @@ items:
         sourceId: Item.EVp5rwRYSGcx7uFV
     _id: YidgqgRHWHRc1NCw
     system:
-      cosm: Das Lebende Land
+      cosm: livingLand
       description: ''
       price: '5'
       techlevel: 2
@@ -463,11 +477,13 @@ items:
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: 1694862039292
-      modifiedTime: 1694862047031
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722167429885
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Item.EVp5rwRYSGcx7uFV
+      duplicateSource: null
     _key: '!actors.items!pGJE5A6rJMK7Za84.YidgqgRHWHRc1NCw'
   - _id: 1oyv8fqmX1WIiSaF
     name: Knochen und Fell
@@ -481,7 +497,7 @@ items:
         sourceId: >-
           Compendium.te001-core-rulebook.grw-de-ausruestung.Item.tDUAjI78Wk2mAV6s
     system:
-      cosm: Das Lebende Land
+      cosm: livingLand
       description: >-
         <p>@UUID[Compendium.te001-core-rulebook.grw-de-grw.Qlx6yGF0Mmo6Xzrv.JournalEntryPage.7GGUUHzuYIqGPXDO#ganzkorper/torso:]{Torso}</p>
 
@@ -506,11 +522,13 @@ items:
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.7.0
-      coreVersion: '11.315'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: 1711562366193
-      modifiedTime: 1711706036325
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722167425309
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Compendium.te001-core-rulebook.grw-de-ausruestung.Item.tDUAjI78Wk2mAV6s
+      duplicateSource: null
     _key: '!actors.items!pGJE5A6rJMK7Za84.1oyv8fqmX1WIiSaF'
 effects: []
 folder: null
@@ -728,7 +746,7 @@ system:
       baseAttribute: dexterity
       adds: 2
       isFav: false
-      groupName: combat
+      groupName: other
       unskilledUse: 1
       isThreatSkill: false
       defenseOnly: false
@@ -1006,14 +1024,20 @@ prototypeToken:
       min: 0
       max: 1
     attenuation: 0.5
+    negative: false
+    priority: 0
   texture:
     src: systems/torgeternity/images/characters/primitive_hunter.Token.webp
-    tint: null
+    tint: '#ffffff'
     scaleX: 1
     scaleY: 1
     offsetX: 0
     offsetY: 0
     rotation: 0
+    anchorX: 0.5
+    anchorY: 0.5
+    fit: contain
+    alphaThreshold: 0.75
   sight:
     angle: 360
     enabled: true
@@ -1023,14 +1047,30 @@ prototypeToken:
     attenuation: 0.1
     saturation: 0
     contrast: 0
+    color: null
   appendNumber: false
   prependAdjective: false
   detectionModes: []
+  hexagonalShape: 0
+  occludable:
+    radius: 0
+  ring:
+    enabled: false
+    colors:
+      ring: null
+      background: null
+    effects: 1
+    subject:
+      scale: 1
+      texture: null
 _stats:
   systemId: torgeternity
   systemVersion: 3.8.1
-  coreVersion: '11.315'
+  coreVersion: '12.330'
   createdTime: 1694861916375
   modifiedTime: 1716827811638
   lastModifiedBy: VAnYow5sWS9EJzo0
+  compendiumSource: Compendium.torgeternity.archetypes.sPLt8RBL1hieic6p
+  duplicateSource: null
 _key: '!actors!pGJE5A6rJMK7Za84'
+

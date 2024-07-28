@@ -14,7 +14,7 @@ items:
     effects: []
     folder: null
     system:
-      cosm: Nile Empire
+      cosm: nileEmpire
       description: >-
         <p>If energy weapons test is a Mishap device stops functioning for the
         scene.</p>
@@ -37,11 +37,13 @@ items:
       default: 0
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: null
-      modifiedTime: 1693902505392
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722154981890
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Item.W8ZARSxZdHHv4JZN
+      duplicateSource: null
     _key: '!actors.items!Aq6ZhdfGe9SMQxwv.E6JiAtIrHBIrc4Hp'
   - _id: el7ijfFcwh1cCRcR
     name: Electro-Ray
@@ -55,7 +57,7 @@ items:
         sourceId: Compendium.te001-core-rulebook.Items.OMSbysWG7R7kHKnY
     system:
       category: pulpPowers
-      cosm: (Keins)
+      cosm: nileEmpire
       description: >-
         <p>The hero can fire a powerful bolt of electricity at a target. It has
         a maximum range of 10/25/50 meters and causes 13 damage. The ray
@@ -70,7 +72,7 @@ items:
 
         <p>Found in <strong>Core Rules</strong></p>
       prerequisites: ''
-      generalContradiction: false
+      generalContradiction: true
       pulpPowers:
         enhancement01:
           description: The damage is increased to 15.
@@ -155,11 +157,13 @@ items:
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: 1693901087967
-      modifiedTime: 1694866875694
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722152785951
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Compendium.te001-core-rulebook.Items.OMSbysWG7R7kHKnY
+      duplicateSource: null
     _key: '!actors.items!Aq6ZhdfGe9SMQxwv.el7ijfFcwh1cCRcR'
   - _id: uk7sK6sWfxJIbulc
     name: Force Field
@@ -173,7 +177,7 @@ items:
         sourceId: Compendium.te001-core-rulebook.Items.r3NzZGyQ04yQNJXc
     system:
       category: pulpPowers
-      cosm: (Keins)
+      cosm: nileEmpire
       description: >-
         <p>A shield of invisible energy surrounds the hero.</p>
 
@@ -186,7 +190,7 @@ items:
 
         <p>Found in <strong>Core Rules</strong></p>
       prerequisites: ''
-      generalContradiction: false
+      generalContradiction: true
       pulpPowers:
         enhancement01:
           description: The field has 5 charges.
@@ -267,11 +271,13 @@ items:
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: 1693901168472
-      modifiedTime: 1694866828222
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722152797064
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Compendium.te001-core-rulebook.Items.r3NzZGyQ04yQNJXc
+      duplicateSource: null
     _key: '!actors.items!Aq6ZhdfGe9SMQxwv.uk7sK6sWfxJIbulc'
   - _id: NWapUa2jcALYy3AO
     name: Flashlight
@@ -284,7 +290,7 @@ items:
       core:
         sourceId: Compendium.te001-core-rulebook.Items.tEnSd1UUK2wTfebw
     system:
-      cosm: Nile Empire
+      cosm: nileEmpire
       description: <p>Found in <strong>Core Rules</strong></p>
       price: '10'
       techlevel: 20
@@ -296,11 +302,13 @@ items:
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: 1693901305711
-      modifiedTime: 1693901411423
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722155672355
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Compendium.te001-core-rulebook.Items.tEnSd1UUK2wTfebw
+      duplicateSource: null
     _key: '!actors.items!Aq6ZhdfGe9SMQxwv.NWapUa2jcALYy3AO'
   - _id: sURNPsJD7MBaiuoE
     name: Tracking Device
@@ -313,7 +321,7 @@ items:
       core:
         sourceId: Compendium.te001-core-rulebook.Items.06c6JoWaPqyNzpRv
     system:
-      cosm: Nile Empire
+      cosm: nileEmpire
       description: >-
         <p>A beacon that broadcasts its location to any attuned radio receiver
         within one kilometer.</p>
@@ -331,11 +339,13 @@ items:
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: 1693901311210
-      modifiedTime: 1693901406734
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722155628777
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Compendium.te001-core-rulebook.Items.06c6JoWaPqyNzpRv
+      duplicateSource: null
     _key: '!actors.items!Aq6ZhdfGe9SMQxwv.sURNPsJD7MBaiuoE'
   - _id: 36umQpiNEdaUN7yk
     name: Micro Audio Transmitter
@@ -348,7 +358,7 @@ items:
       core:
         sourceId: Compendium.te001-core-rulebook.Items.cae3PZicII8jW148
     system:
-      cosm: Nile Empire
+      cosm: nileEmpire
       description: |-
         <p>Relays sound to any attuned radio receivers within 400 meters.</p>
         <p>&nbsp;</p>
@@ -363,11 +373,13 @@ items:
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: 1693901326287
-      modifiedTime: 1693901401203
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722155689761
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Compendium.te001-core-rulebook.Items.cae3PZicII8jW148
+      duplicateSource: null
     _key: '!actors.items!Aq6ZhdfGe9SMQxwv.36umQpiNEdaUN7yk'
   - _id: cVUn4Bk2Dzitb68n
     name: Backpack
@@ -380,7 +392,7 @@ items:
       core:
         sourceId: Compendium.te001-core-rulebook.Items.RSnCZO6bMZqc5e1X
     system:
-      cosm: Aysle
+      cosm: aysle
       description: <p>Found in <strong>Core Rules</strong></p>
       price: '100'
       techlevel: 8
@@ -392,11 +404,13 @@ items:
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: 1693901332502
-      modifiedTime: 1693901401203
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722155658417
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Compendium.te001-core-rulebook.Items.RSnCZO6bMZqc5e1X
+      duplicateSource: null
     _key: '!actors.items!Aq6ZhdfGe9SMQxwv.cVUn4Bk2Dzitb68n'
   - _id: ng5dPcLuc7LPWsYP
     name: First Aid Kit
@@ -409,7 +423,7 @@ items:
       core:
         sourceId: Compendium.te001-core-rulebook.Items.1TCaPKKRqqbJFApZ
     system:
-      cosm: Nile Empire
+      cosm: nileEmpire
       description: |-
         <p>Makes first aid tests Favored.</p>
         <p>&nbsp;</p>
@@ -424,11 +438,13 @@ items:
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: 1693901342007
-      modifiedTime: 1693901401203
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722155665832
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Compendium.te001-core-rulebook.Items.1TCaPKKRqqbJFApZ
+      duplicateSource: null
     _key: '!actors.items!Aq6ZhdfGe9SMQxwv.ng5dPcLuc7LPWsYP'
   - _id: bnlZswmHuUmFCgDL
     name: Lock Picks
@@ -441,7 +457,7 @@ items:
       core:
         sourceId: Compendium.te001-core-rulebook.Items.lyBSUlh3gT1qYamL
     system:
-      cosm: Aysle
+      cosm: aysle
       description: <p>Found in <strong>Core Rules</strong></p>
       price: '10'
       techlevel: 10
@@ -453,11 +469,13 @@ items:
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: 1693901350757
-      modifiedTime: 1693901402503
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722155682712
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Compendium.te001-core-rulebook.Items.lyBSUlh3gT1qYamL
+      duplicateSource: null
     _key: '!actors.items!Aq6ZhdfGe9SMQxwv.bnlZswmHuUmFCgDL'
   - _id: d7byAJpKPH7u0yYz
     name: Radio Receiver
@@ -470,7 +488,7 @@ items:
       core:
         sourceId: Compendium.te001-core-rulebook.Items.EyJpTkom5GEE706E
     system:
-      cosm: Nile Empire
+      cosm: nileEmpire
       description: <p>Found in <strong>Core Rules</strong></p>
       price: '50'
       techlevel: 18
@@ -482,11 +500,13 @@ items:
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: 1693901357439
-      modifiedTime: 1693901401203
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722155697833
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Compendium.te001-core-rulebook.Items.EyJpTkom5GEE706E
+      duplicateSource: null
     _key: '!actors.items!Aq6ZhdfGe9SMQxwv.d7byAJpKPH7u0yYz'
   - _id: AHDH6vseOwIBIwfs
     name: Tool Belt
@@ -499,7 +519,7 @@ items:
       core:
         sourceId: Compendium.te001-core-rulebook.Items.L3NJPS1akDMAqkPK
     system:
-      cosm: Orrorsh
+      cosm: orrorsh
       description: <p>Found in <strong>Core Rules</strong></p>
       price: '100'
       techlevel: 16
@@ -511,11 +531,13 @@ items:
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: 1693901366464
-      modifiedTime: 1693901401203
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722155722881
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Compendium.te001-core-rulebook.Items.L3NJPS1akDMAqkPK
+      duplicateSource: null
     _key: '!actors.items!Aq6ZhdfGe9SMQxwv.AHDH6vseOwIBIwfs'
   - _id: gKZOg5vmIgArnWQj
     name: Leather Coat
@@ -528,7 +550,7 @@ items:
       core:
         sourceId: Compendium.te001-core-rulebook.Items.Item.34ioFwhBc4c39YFU
     system:
-      cosm: Nile Empire
+      cosm: nileEmpire
       description: >-
         <p>@UUID[Compendium.te001-core-rulebook.rules.pwneQ55M0nnDH0Us.JournalEntryPage.qKdamp4rrcX6TTt0#full-body/torso:]{Torso}</p>
       price: '100'
@@ -547,11 +569,13 @@ items:
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.7.0
-      coreVersion: '11.315'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: 1711551146690
-      modifiedTime: 1711704852287
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722155014075
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Compendium.te001-core-rulebook.Items.Item.34ioFwhBc4c39YFU
+      duplicateSource: null
     _key: '!actors.items!Aq6ZhdfGe9SMQxwv.gKZOg5vmIgArnWQj'
 effects: []
 folder: null
@@ -767,7 +791,7 @@ system:
       baseAttribute: dexterity
       adds: 0
       isFav: false
-      groupName: combat
+      groupName: other
       unskilledUse: 1
       isThreatSkill: false
       defenseOnly: false
@@ -1035,14 +1059,20 @@ prototypeToken:
       max: 1
     color: null
     attenuation: 0.5
+    negative: false
+    priority: 0
   texture:
     src: systems/torgeternity/images/characters/eccentric_inventor.Token.webp
-    tint: null
+    tint: '#ffffff'
     scaleX: 1
     scaleY: 1
     offsetX: 0
     offsetY: 0
     rotation: 0
+    anchorX: 0.5
+    anchorY: 0.5
+    fit: contain
+    alphaThreshold: 0.75
   sight:
     angle: 360
     enabled: false
@@ -1052,14 +1082,30 @@ prototypeToken:
     attenuation: 0.1
     saturation: 0
     contrast: 0
+    color: null
   appendNumber: false
   prependAdjective: false
   detectionModes: []
+  hexagonalShape: 0
+  occludable:
+    radius: 0
+  ring:
+    enabled: false
+    colors:
+      ring: null
+      background: null
+    effects: 1
+    subject:
+      scale: 1
+      texture: null
 _stats:
   systemId: torgeternity
   systemVersion: 3.8.1
-  coreVersion: '11.315'
+  coreVersion: '12.330'
   createdTime: 1693901061941
   modifiedTime: 1716827807504
   lastModifiedBy: VAnYow5sWS9EJzo0
+  compendiumSource: null
+  duplicateSource: null
 _key: '!actors!Aq6ZhdfGe9SMQxwv'
+

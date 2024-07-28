@@ -14,7 +14,7 @@ items:
     effects: []
     folder: null
     system:
-      cosm: Das Lebende Land
+      cosm: livingLand
       description: <p>Knochenschnitzerei von Lanala.</p>
       price: '0'
       techlevel: 5
@@ -24,11 +24,13 @@ items:
       default: 0
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: null
-      modifiedTime: 1694867582630
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722161827659
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Item.V6vSEnqgNmYQKs4o
+      duplicateSource: null
     _key: '!actors.items!6Pc9oa7mM6kZkFUi.OZvqS64IhCczdFkT'
   - _id: g1WmDBXHJYqPug3u
     name: 'Außenseiter (Volk: Edeinos)'
@@ -42,7 +44,7 @@ items:
         sourceId: Compendium.te001-core-rulebook.grw-de-vorzuverb.Item.0p0JoCsh5Rc4x9uS
     system:
       category: racial
-      cosm: Das Lebende Land
+      cosm: livingLand
       description: >-
         <p>Edeinos sind f&uuml;r alle au&szlig;er anderen Edeinos
         Au&szlig;enseiter. Sie erleiden einen Malus von 4 auf &Uuml;berreden-
@@ -130,11 +132,13 @@ items:
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: 1694867487836
-      modifiedTime: 1694867507664
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722161760684
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Compendium.te001-core-rulebook.grw-de-vorzuverb.Item.0p0JoCsh5Rc4x9uS
+      duplicateSource: null
     _key: '!actors.items!6Pc9oa7mM6kZkFUi.g1WmDBXHJYqPug3u'
   - _id: LUl3AUfakBmFSMuk
     name: Wunderwirker
@@ -148,19 +152,18 @@ items:
         sourceId: Compendium.te001-core-rulebook.grw-de-vorzuverb.Item.D1RJR3lXmVGDsPJr
     system:
       category: faith
-      cosm: (Keins)
+      cosm: other
       description: >-
-        <p>Der Held ist mit der F&auml;higkeit gesegnet Wunder zu wirken. Er
-        erh&auml;lt Zugriff auf die Liste der Wunder seiner Religion, die nicht
-        durch einen anderen Vorzug eingeschr&auml;nkt werden. Er erh&auml;lt
-        Feind abwehren und zwei weitere Wunder aus den zur Auswahl stehenden
-        Listen unter
+        <p><strong>Cosm:</strong> Aysle, Cyberpontifikat, Lebendes Land,
+        Nil-Imperium, Orrorsh, Zentralerde</p><p>Der Held ist mit der Fähigkeit
+        gesegnet Wunder zu wirken. Er erhält Zugriff auf die Liste der Wunder
+        seiner Religion, die nicht durch einen anderen Vorzug eingeschränkt
+        werden. Er erhält Feind abwehren und zwei weitere Wunder aus den zur
+        Auswahl stehenden Listen unter
         @UUID[Compendium.te001-core-rulebook.grw-de-grw.Qlx6yGF0Mmo6Xzrv.JournalEntryPage.awo3Mvf0MS2OG4Y8]{Kapitel
-        8: Wunder}.</p>
-
-        <p><strong>Zus&auml;tzliches Wunder:</strong> Dieser Vorzug kann mehr
-        als einmal erworben werden. Jedes Mal nach dem ersten erh&auml;lt der
-        Charakter ein weiteres Wunder.</p>
+        8: Wunder}.</p><p><strong>Zusätzliches Wunder:</strong> Dieser Vorzug
+        kann mehr als einmal erworben werden. Jedes Mal nach dem ersten erhält
+        der Charakter ein weiteres Wunder.</p>
       prerequisites: Mindestens 1 Fertigkeitsstufe in Glauben
       generalContradiction: false
       pulpPowers:
@@ -243,11 +246,13 @@ items:
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: 1694867497648
-      modifiedTime: 1694867607000
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722161741535
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Compendium.te001-core-rulebook.grw-de-vorzuverb.Item.D1RJR3lXmVGDsPJr
+      duplicateSource: null
     _key: '!actors.items!6Pc9oa7mM6kZkFUi.LUl3AUfakBmFSMuk'
   - name: Krallen und Zähne (Edeinos)
     type: meleeweapon
@@ -261,7 +266,7 @@ items:
           Compendium.te001-core-rulebook.grw-de-ausruestung.Item.yJzV2lq3AG5aCwkF
     _id: p0kfnzrQyXHI0B42
     system:
-      cosm: Das Lebende Land
+      cosm: livingLand
       description: >-
         <p>Diese "Bewaffnung" bitte automatisch ausr&uuml;sten, wenn Volk =
         Edeinos</p>
@@ -283,11 +288,13 @@ items:
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: 1694867530166
-      modifiedTime: 1694867530166
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722161862076
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Compendium.te001-core-rulebook.grw-de-ausruestung.Item.yJzV2lq3AG5aCwkF
+      duplicateSource: null
     _key: '!actors.items!6Pc9oa7mM6kZkFUi.p0kfnzrQyXHI0B42'
   - _id: sfdqntTFBwxSTT3g
     name: Hrockt-Sprossenspeer
@@ -301,7 +308,7 @@ items:
         sourceId: >-
           Compendium.te001-core-rulebook.grw-de-ausruestung.Item.kXL8gB3WmlckpUWD
     system:
-      cosm: Das Lebende Land
+      cosm: livingLand
       description: >-
         <p style="box-sizing: border-box; user-select: text; font-family:
         Palatino; font-size: 12px;"><strong style="box-sizing: border-box;
@@ -333,11 +340,13 @@ items:
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: 1694867543147
-      modifiedTime: 1694867543147
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722161854011
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Compendium.te001-core-rulebook.grw-de-ausruestung.Item.kXL8gB3WmlckpUWD
+      duplicateSource: null
     _key: '!actors.items!6Pc9oa7mM6kZkFUi.sfdqntTFBwxSTT3g'
   - _id: GPnCFO3NpK92uEqj
     name: Hrockt-Sprossenspeer
@@ -350,13 +359,13 @@ items:
       core:
         sourceId: Item.ovHCUOiZApDGqjH8
     system:
-      cosm: Das Lebende Land
+      cosm: livingLand
       description: >-
         <p>S.
         @UUID[Compendium.te001-core-rulebook.grw-de-ausruestung.Item.kXL8gB3WmlckpUWD]{Hrockt-Sprossenspeer}
         als Nahkampfwaffe</p>
       price: '40'
-      techlevel: 2
+      techlevel: 3
       value: 8
       ammo:
         max: 1
@@ -377,11 +386,13 @@ items:
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: 1694867544363
-      modifiedTime: 1694867544363
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722161902210
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Item.ovHCUOiZApDGqjH8
+      duplicateSource: null
     _key: '!actors.items!6Pc9oa7mM6kZkFUi.GPnCFO3NpK92uEqj'
   - _id: pj0EqVly0EhHxRF2
     name: Peitschenschwanz
@@ -403,14 +414,26 @@ items:
           turns: null
           startRound: null
           startTurn: null
-        icon: icons/svg/aura.svg
         origin: Compendium.te001-core-rulebook.grw-de-vorzuverb.hwrzWawaqs7kKuHI
         transfer: true
         flags: {}
-        tint: null
+        tint: '#ffffff'
         name: Fertigkeitsbegünstigung
         description: ''
         statuses: []
+        _stats:
+          coreVersion: '12.330'
+          systemId: null
+          systemVersion: null
+          createdTime: null
+          modifiedTime: null
+          lastModifiedBy: null
+          compendiumSource: null
+          duplicateSource: null
+        img: icons/svg/aura.svg
+        type: base
+        system: {}
+        sort: 0
         _key: >-
           !actors.items.effects!6Pc9oa7mM6kZkFUi.pj0EqVly0EhHxRF2.teB2PeOhHTmrmVGb
     folder: null
@@ -420,7 +443,7 @@ items:
         sourceId: Compendium.te001-core-rulebook.grw-de-vorzuverb.Item.hwrzWawaqs7kKuHI
     system:
       category: edeinos
-      cosm: Das Lebende Land
+      cosm: livingLand
       description: >-
         <p>Die Echsenmenschen verwenden ihre Schw&auml;nze haupts&auml;chlich,
         um das Gleichgewicht zu halten, aber einige haben auch gelernt, mit
@@ -511,11 +534,13 @@ items:
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: 1694867606000
-      modifiedTime: 1694867609368
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722161754220
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Compendium.te001-core-rulebook.grw-de-vorzuverb.Item.hwrzWawaqs7kKuHI
+      duplicateSource: null
     _key: '!actors.items!6Pc9oa7mM6kZkFUi.pj0EqVly0EhHxRF2'
   - _id: S4nEXXlDkjQCu2k3
     name: Waffensegen
@@ -568,10 +593,12 @@ items:
     _stats:
       systemId: torgeternity
       systemVersion: 3.1.1
-      coreVersion: '11.308'
+      coreVersion: '12.330'
       createdTime: 1694867621482
       modifiedTime: 1694867637048
       lastModifiedBy: CtisFurQNe9h7ABb
+      compendiumSource: Compendium.te001-core-rulebook.grw-de-kraefte.Item.1UNRGoERfcYtYKW0
+      duplicateSource: null
     _key: '!actors.items!6Pc9oa7mM6kZkFUi.S4nEXXlDkjQCu2k3'
   - _id: v2vh6Mp1Uleuo29h
     name: Heilung
@@ -626,10 +653,12 @@ items:
     _stats:
       systemId: torgeternity
       systemVersion: 3.1.1
-      coreVersion: '11.308'
+      coreVersion: '12.330'
       createdTime: 1694867628032
       modifiedTime: 1694867635719
       lastModifiedBy: CtisFurQNe9h7ABb
+      compendiumSource: Compendium.te001-core-rulebook.grw-de-kraefte.Item.z2F1fYz1l6okzYor
+      duplicateSource: null
     _key: '!actors.items!6Pc9oa7mM6kZkFUi.v2vh6Mp1Uleuo29h'
   - _id: UzYif4jabH5Y4b4j
     name: Feind abwehren
@@ -659,14 +688,26 @@ items:
           turns: null
           startRound: null
           startTurn: null
-        icon: icons/svg/aura.svg
         origin: Compendium.te001-core-rulebook.grw-de-kraefte.geTWA7krOqHuXpxk
         transfer: true
         flags: {}
-        tint: null
+        tint: '#ffffff'
         name: Standard
         description: ''
         statuses: []
+        _stats:
+          coreVersion: '12.330'
+          systemId: null
+          systemVersion: null
+          createdTime: null
+          modifiedTime: null
+          lastModifiedBy: null
+          compendiumSource: null
+          duplicateSource: null
+        img: icons/svg/aura.svg
+        type: base
+        system: {}
+        sort: 0
         _key: >-
           !actors.items.effects!6Pc9oa7mM6kZkFUi.UzYif4jabH5Y4b4j.ecbVOFBMML58Ojlw
       - _id: RiLW8E5gMhnrThkX
@@ -692,14 +733,26 @@ items:
           turns: null
           startRound: null
           startTurn: null
-        icon: icons/svg/aura.svg
         origin: Compendium.te001-core-rulebook.grw-de-kraefte.geTWA7krOqHuXpxk
         transfer: true
         flags: {}
-        tint: null
+        tint: '#ffffff'
         name: Gut
         description: ''
         statuses: []
+        _stats:
+          coreVersion: '12.330'
+          systemId: null
+          systemVersion: null
+          createdTime: null
+          modifiedTime: null
+          lastModifiedBy: null
+          compendiumSource: null
+          duplicateSource: null
+        img: icons/svg/aura.svg
+        type: base
+        system: {}
+        sort: 0
         _key: >-
           !actors.items.effects!6Pc9oa7mM6kZkFUi.UzYif4jabH5Y4b4j.RiLW8E5gMhnrThkX
       - _id: b6m8CEDITRqrCBzU
@@ -725,14 +778,26 @@ items:
           turns: null
           startRound: null
           startTurn: null
-        icon: icons/svg/aura.svg
         origin: Compendium.te001-core-rulebook.grw-de-kraefte.geTWA7krOqHuXpxk
         transfer: true
         flags: {}
-        tint: null
+        tint: '#ffffff'
         name: Hervorragend
         description: ''
         statuses: []
+        _stats:
+          coreVersion: '12.330'
+          systemId: null
+          systemVersion: null
+          createdTime: null
+          modifiedTime: null
+          lastModifiedBy: null
+          compendiumSource: null
+          duplicateSource: null
+        img: icons/svg/aura.svg
+        type: base
+        system: {}
+        sort: 0
         _key: >-
           !actors.items.effects!6Pc9oa7mM6kZkFUi.UzYif4jabH5Y4b4j.b6m8CEDITRqrCBzU
     folder: null
@@ -789,10 +854,12 @@ items:
     _stats:
       systemId: torgeternity
       systemVersion: 3.1.1
-      coreVersion: '11.308'
+      coreVersion: '12.330'
       createdTime: 1694867632361
       modifiedTime: 1694867635719
       lastModifiedBy: CtisFurQNe9h7ABb
+      compendiumSource: Compendium.te001-core-rulebook.grw-de-kraefte.Item.geTWA7krOqHuXpxk
+      duplicateSource: null
     _key: '!actors.items!6Pc9oa7mM6kZkFUi.UzYif4jabH5Y4b4j'
   - _id: j47RejnFxrA6drwg
     name: Hrockt-Wurzelrüstung
@@ -806,7 +873,7 @@ items:
         sourceId: >-
           Compendium.te001-core-rulebook.grw-de-ausruestung.Item.GY0pNAesiNYc1UXL
     system:
-      cosm: Das Lebende Land
+      cosm: livingLand
       description: >-
         <p>@UUID[Compendium.te001-core-rulebook.grw-de-grw.Qlx6yGF0Mmo6Xzrv.JournalEntryPage.7GGUUHzuYIqGPXDO#ganzkorper/torso:]{Torso}</p>
 
@@ -828,17 +895,22 @@ items:
       minStrength: null
       notes: Torso, nur Jakats
       fatigue: null
+      secondaryAxiom:
+        selected: spirit
+        value: 11
     ownership:
       default: 0
       9Q0XnqFwko7hRlvL: 3
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.7.0
-      coreVersion: '11.315'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: 1711562366100
-      modifiedTime: 1711705985856
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722161839484
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Compendium.te001-core-rulebook.grw-de-ausruestung.Item.GY0pNAesiNYc1UXL
+      duplicateSource: null
     _key: '!actors.items!6Pc9oa7mM6kZkFUi.j47RejnFxrA6drwg'
 effects:
   - _id: 25RZkES3T4G6Qmnw
@@ -856,15 +928,27 @@ effects:
       turns: null
       startRound: null
       startTurn: null
-    icon: icons/svg/aura.svg
     origin: >-
       Compendium.torgeternity.system-de-archetypen.Actor.6Pc9oa7mM6kZkFUi.Item.pj0EqVly0EhHxRF2
     transfer: false
     flags: {}
-    tint: null
+    tint: '#ffffff'
     name: Fertigkeitsbegünstigung
     description: ''
     statuses: []
+    _stats:
+      coreVersion: '12.330'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+    img: icons/svg/aura.svg
+    type: base
+    system: {}
+    sort: 0
     _key: '!actors.effects!6Pc9oa7mM6kZkFUi.25RZkES3T4G6Qmnw'
   - _id: locN3jDZmlBnjbRz
     changes:
@@ -889,15 +973,27 @@ effects:
       turns: null
       startRound: null
       startTurn: null
-    icon: icons/svg/aura.svg
     origin: >-
       Compendium.torgeternity.system-de-archetypen.Actor.6Pc9oa7mM6kZkFUi.Item.UzYif4jabH5Y4b4j
     transfer: false
     flags: {}
-    tint: null
+    tint: '#ffffff'
     name: Standard
     description: ''
     statuses: []
+    _stats:
+      coreVersion: '12.330'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+    img: icons/svg/aura.svg
+    type: base
+    system: {}
+    sort: 0
     _key: '!actors.effects!6Pc9oa7mM6kZkFUi.locN3jDZmlBnjbRz'
   - _id: oz3wcobLXLhJhDC7
     changes:
@@ -922,15 +1018,27 @@ effects:
       turns: null
       startRound: null
       startTurn: null
-    icon: icons/svg/aura.svg
     origin: >-
       Compendium.torgeternity.system-de-archetypen.Actor.6Pc9oa7mM6kZkFUi.Item.UzYif4jabH5Y4b4j
     transfer: false
     flags: {}
-    tint: null
+    tint: '#ffffff'
     name: Gut
     description: ''
     statuses: []
+    _stats:
+      coreVersion: '12.330'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+    img: icons/svg/aura.svg
+    type: base
+    system: {}
+    sort: 0
     _key: '!actors.effects!6Pc9oa7mM6kZkFUi.oz3wcobLXLhJhDC7'
   - _id: Y2stX1eroc0NnIkk
     changes:
@@ -955,15 +1063,27 @@ effects:
       turns: null
       startRound: null
       startTurn: null
-    icon: icons/svg/aura.svg
     origin: >-
       Compendium.torgeternity.system-de-archetypen.Actor.6Pc9oa7mM6kZkFUi.Item.UzYif4jabH5Y4b4j
     transfer: false
     flags: {}
-    tint: null
+    tint: '#ffffff'
     name: Hervorragend
     description: ''
     statuses: []
+    _stats:
+      coreVersion: '12.330'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+    img: icons/svg/aura.svg
+    type: base
+    system: {}
+    sort: 0
     _key: '!actors.effects!6Pc9oa7mM6kZkFUi.Y2stX1eroc0NnIkk'
 folder: null
 sort: 0
@@ -1180,7 +1300,7 @@ system:
       baseAttribute: dexterity
       adds: 1
       isFav: false
-      groupName: combat
+      groupName: other
       unskilledUse: 1
       isThreatSkill: false
       defenseOnly: false
@@ -1458,14 +1578,20 @@ prototypeToken:
       min: 0
       max: 1
     attenuation: 0.5
+    negative: false
+    priority: 0
   texture:
     src: systems/torgeternity/images/characters/edeinos_optant.Token.webp
-    tint: null
+    tint: '#ffffff'
     scaleX: 1
     scaleY: 1
     offsetX: 0
     offsetY: 0
     rotation: 0
+    anchorX: 0.5
+    anchorY: 0.5
+    fit: contain
+    alphaThreshold: 0.75
   sight:
     angle: 360
     enabled: true
@@ -1475,14 +1601,30 @@ prototypeToken:
     attenuation: 0.1
     saturation: 0
     contrast: 0
+    color: null
   appendNumber: false
   prependAdjective: false
   detectionModes: []
+  hexagonalShape: 0
+  occludable:
+    radius: 0
+  ring:
+    enabled: false
+    colors:
+      ring: null
+      background: null
+    effects: 1
+    subject:
+      scale: 1
+      texture: null
 _stats:
   systemId: torgeternity
   systemVersion: 3.8.1
-  coreVersion: '11.315'
+  coreVersion: '12.330'
   createdTime: 1694867487836
   modifiedTime: 1716827810950
   lastModifiedBy: VAnYow5sWS9EJzo0
+  compendiumSource: Compendium.torgeternity.archetypes.hcdhRCs56U5JrAl4
+  duplicateSource: null
 _key: '!actors!6Pc9oa7mM6kZkFUi'
+

@@ -15,7 +15,7 @@ items:
         sourceId: Compendium.te001-core-rulebook.grw-de-vorzuverb.Item.ZatdKThAEeXYAA9r
     system:
       category: racial
-      cosm: Aysle
+      cosm: aysle
       description: >-
         <p>Zwerge und Elfen ignorieren bis zu 4 Punkte an
         @UUID[Compendium.te001-core-rulebook.grw-de-grw.Qlx6yGF0Mmo6Xzrv.JournalEntryPage.41rZYYhaMC2T260D#dunkelheit]{Dunkelheitsmalussen}.</p>
@@ -94,18 +94,20 @@ items:
         limitation09: ''
         limitation10: ''
         limitationNumber: 0
-      timestaken: ''
+      timestaken: '1'
     ownership:
       default: 0
       9Q0XnqFwko7hRlvL: 3
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: 1694866611394
-      modifiedTime: 1694866644950
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722166056256
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Compendium.te001-core-rulebook.grw-de-vorzuverb.Item.ZatdKThAEeXYAA9r
+      duplicateSource: null
     _key: '!actors.items!OB5I9LwFUwB5C3C4.wfMjjNl2iS6JqR7G'
   - _id: No6Ooy2t0DJTxMnU
     name: Magische Verbundenheit (Volk)
@@ -119,7 +121,7 @@ items:
         sourceId: Compendium.te001-core-rulebook.grw-de-vorzuverb.Item.ykkjArshIIcq4HuK
     system:
       category: racial
-      cosm: Aysle
+      cosm: aysle
       description: >-
         <p>Elfen sind aus der Magie geboren und leiden ohne sie. Immer wenn sich
         ein Elf in einem Bereich mit einem Magie-Axiom von weniger als 12
@@ -207,18 +209,20 @@ items:
         limitation09: ''
         limitation10: ''
         limitationNumber: 0
-      timestaken: ''
+      timestaken: '1'
     ownership:
       default: 0
       9Q0XnqFwko7hRlvL: 3
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: 1694866617548
-      modifiedTime: 1694866644950
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722166037408
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Compendium.te001-core-rulebook.grw-de-vorzuverb.Item.ykkjArshIIcq4HuK
+      duplicateSource: null
     _key: '!actors.items!OB5I9LwFUwB5C3C4.No6Ooy2t0DJTxMnU'
   - _id: LNDQWIEA7bWA7KA2
     name: Graziös (Volk)
@@ -232,7 +236,7 @@ items:
         sourceId: Compendium.te001-core-rulebook.grw-de-vorzuverb.Item.xWyXQEExiFy8Mmwj
     system:
       category: racial
-      cosm: Aysle
+      cosm: aysle
       description: >-
         <p>Wenn du eine Probe direkt auf Geschicklichkeit ablegst, gilt diese
         als
@@ -318,18 +322,20 @@ items:
         limitation09: ''
         limitation10: ''
         limitationNumber: 0
-      timestaken: ''
+      timestaken: '1'
     ownership:
       default: 0
       9Q0XnqFwko7hRlvL: 3
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: 1694866621795
-      modifiedTime: 1694866644950
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722166050759
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Compendium.te001-core-rulebook.grw-de-vorzuverb.Item.xWyXQEExiFy8Mmwj
+      duplicateSource: null
     _key: '!actors.items!OB5I9LwFUwB5C3C4.LNDQWIEA7bWA7KA2'
   - _id: eAg0oK25V14HTe7u
     name: Wächter
@@ -355,14 +361,26 @@ items:
           turns: null
           startRound: null
           startTurn: null
-        icon: icons/svg/aura.svg
         origin: Compendium.te001-core-rulebook.grw-de-vorzuverb.jgTek2ORzUYzW7VR
         transfer: true
         flags: {}
-        tint: null
+        tint: '#ffffff'
         name: Fertigkeitsbegünstigung
         description: ''
         statuses: []
+        _stats:
+          coreVersion: '12.330'
+          systemId: null
+          systemVersion: null
+          createdTime: null
+          modifiedTime: null
+          lastModifiedBy: null
+          compendiumSource: null
+          duplicateSource: null
+        img: icons/svg/aura.svg
+        type: base
+        system: {}
+        sort: 0
         _key: >-
           !actors.items.effects!OB5I9LwFUwB5C3C4.eAg0oK25V14HTe7u.FNj9yLmDXWAA0VSx
     folder: null
@@ -372,7 +390,7 @@ items:
         sourceId: Compendium.te001-core-rulebook.grw-de-vorzuverb.Item.jgTek2ORzUYzW7VR
     system:
       category: elf
-      cosm: Aysle
+      cosm: aysle
       description: >-
         <p>Vor Uthorions Zorn durchstreiften die elfischen W&auml;chter die
         Wildnis von Aysle, immer wachsam gegen&uuml;ber Bedrohungen f&uuml;r die
@@ -474,11 +492,13 @@ items:
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: 1694866626691
-      modifiedTime: 1694866666430
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722166068169
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Compendium.te001-core-rulebook.grw-de-vorzuverb.Item.jgTek2ORzUYzW7VR
+      duplicateSource: null
     _key: '!actors.items!OB5I9LwFUwB5C3C4.eAg0oK25V14HTe7u'
   - _id: bK9FTMS5YhLFH13I
     name: Tiergefährte (Weisser Wolf)
@@ -492,7 +512,7 @@ items:
         sourceId: Compendium.te001-core-rulebook.grw-de-vorzuverb.Item.K9A5acqvE1fUUeUr
     system:
       category: elf
-      cosm: Aysle
+      cosm: aysle
       description: >-
         <p>W&auml;chter haben oft Wei&szlig;e W&ouml;lfe als Gef&auml;hrten
         (nicht als Haustiere), und vom Moment ihres B&uuml;ndnisses an leben,
@@ -609,11 +629,13 @@ items:
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: 1694866631347
-      modifiedTime: 1694866661726
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722166081560
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Compendium.te001-core-rulebook.grw-de-vorzuverb.Item.K9A5acqvE1fUUeUr
+      duplicateSource: null
     _key: '!actors.items!OB5I9LwFUwB5C3C4.bK9FTMS5YhLFH13I'
   - name: Langschwert
     type: meleeweapon
@@ -627,7 +649,7 @@ items:
           Compendium.te001-core-rulebook.grw-de-ausruestung.Item.3YH7UaaVOmI5NACl
     _id: yMSKWEoWqjj6uJ7h
     system:
-      cosm: Aysle
+      cosm: aysle
       description: ''
       price: '120'
       techlevel: 9
@@ -647,11 +669,13 @@ items:
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: 1694866678858
-      modifiedTime: 1694866678858
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722166461591
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Compendium.te001-core-rulebook.grw-de-ausruestung.Item.3YH7UaaVOmI5NACl
+      duplicateSource: null
     _key: '!actors.items!OB5I9LwFUwB5C3C4.yMSKWEoWqjj6uJ7h'
   - name: Kompositlangbogen
     type: missileweapon
@@ -665,7 +689,7 @@ items:
           Compendium.te001-core-rulebook.grw-de-ausruestung.Item.jbnyGq61BgeKPjNL
     _id: xFxiSrb1dOBKtdz9
     system:
-      cosm: Aysle
+      cosm: aysle
       description: >-
         <p>Eine verst&auml;rkte Version des Langbogens, die aus drei
         &uuml;bereinandergelegten Materialien besteht, die miteinander verbunden
@@ -678,7 +702,7 @@ items:
       value: 11
       ammo:
         max: 1
-        value: 1
+        value: 0
       ap: 0
       attackWith: missileWeapons
       chatNote: ''
@@ -695,11 +719,13 @@ items:
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: 1694866689090
-      modifiedTime: 1694866689090
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722166441302
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Compendium.te001-core-rulebook.grw-de-ausruestung.Item.jbnyGq61BgeKPjNL
+      duplicateSource: null
     _key: '!actors.items!OB5I9LwFUwB5C3C4.xFxiSrb1dOBKtdz9'
   - name: Hanfseil, 10 Meter
     type: gear
@@ -712,7 +738,7 @@ items:
         sourceId: Item.UqBpg4NYAUDXT2Yr
     _id: IduEEQ2qynnSB3rk
     system:
-      cosm: Aysle
+      cosm: aysle
       description: ''
       price: '15'
       techlevel: 8
@@ -724,74 +750,14 @@ items:
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: 1694866705662
-      modifiedTime: 1694866705662
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722166406760
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Item.UqBpg4NYAUDXT2Yr
+      duplicateSource: null
     _key: '!actors.items!OB5I9LwFUwB5C3C4.IduEEQ2qynnSB3rk'
-  - name: Köcher
-    type: gear
-    img: systems/torgeternity/images/icons/gear-icon.webp
-    effects: []
-    folder: null
-    sort: 16650000
-    flags:
-      core:
-        sourceId: Item.AYgLHhrMBAZq1JJ0
-    _id: ax4IMauksDDbmdw2
-    system:
-      cosm: Aysle
-      description: ''
-      price: '5'
-      techlevel: 7
-      value: 4
-      equippedClass: item-equipped
-    ownership:
-      default: 0
-      9Q0XnqFwko7hRlvL: 3
-      CtisFurQNe9h7ABb: 3
-    _stats:
-      systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
-      createdTime: 1694866710650
-      modifiedTime: 1694866725799
-      lastModifiedBy: CtisFurQNe9h7ABb
-    _key: '!actors.items!OB5I9LwFUwB5C3C4.ax4IMauksDDbmdw2'
-  - _id: 6QA3wRjkA4tJRkRK
-    name: Trank der Heilung
-    type: gear
-    img: systems/torgeternity/images/icons/gear-icon.webp
-    effects: []
-    folder: null
-    sort: 24600000
-    flags:
-      core:
-        sourceId: >-
-          Compendium.te001-core-rulebook.grw-de-ausruestung.Item.kiWS8lQLXbtS6FYE
-    system:
-      cosm: Aysle
-      description: >-
-        <p>Ben&ouml;tigt ein Magie-Axiom von 13, um zu wirken. Das Trinken des
-        Tranks ist eine einfache Aktion und er regeneriert 1 Wunde und
-        Schockschaden in H&ouml;he eines Bonusw&uuml;rfels.</p>
-      price: '500'
-      techlevel: 12
-      value: 14
-      equippedClass: item-equipped
-    ownership:
-      default: 0
-      9Q0XnqFwko7hRlvL: 3
-      CtisFurQNe9h7ABb: 3
-    _stats:
-      systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
-      createdTime: 1694866716591
-      modifiedTime: 1694866716591
-      lastModifiedBy: CtisFurQNe9h7ABb
-    _key: '!actors.items!OB5I9LwFUwB5C3C4.6QA3wRjkA4tJRkRK'
   - _id: f4vHwajpFSfAwKNx
     name: Lederweste
     type: armor
@@ -804,7 +770,7 @@ items:
         sourceId: >-
           Compendium.te001-core-rulebook.grw-de-ausruestung.Item.xWI54mxsNNqaWXsX
     system:
-      cosm: Aysle
+      cosm: aysle
       description: >-
         <p>@UUID[Compendium.te001-core-rulebook.grw-de-grw.Qlx6yGF0Mmo6Xzrv.JournalEntryPage.7GGUUHzuYIqGPXDO#ganzkorper/torso:]{Torso}</p>
 
@@ -827,12 +793,90 @@ items:
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.7.0
-      coreVersion: '11.315'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: 1711562366229
-      modifiedTime: 1711705809069
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722166431256
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Compendium.te001-core-rulebook.grw-de-ausruestung.Item.xWI54mxsNNqaWXsX
+      duplicateSource: null
     _key: '!actors.items!OB5I9LwFUwB5C3C4.f4vHwajpFSfAwKNx'
+  - name: Köcher
+    type: ammunition
+    _id: iDIFCRUIEmbD3ZIW
+    img: systems/torgeternity/images/icons/ammo-icon.webp
+    system:
+      cosm: ''
+      description: <p>Ein Behälter mit 20 Pfeilen.</p>
+      price: ''
+      techlevel: 7
+      value: 0
+      secondaryAxiom:
+        selected: none
+        value: null
+      type: ''
+      quantity: 20
+      damageMod: 0
+      apMod: 0
+      fireDamage: false
+      blastRadius: Keiner
+      darknessMod: none
+      reach: ''
+    effects: []
+    folder: null
+    sort: 0
+    ownership:
+      default: 0
+      93AMwcGe6H37rcPA: 3
+    flags: {}
+    _stats:
+      compendiumSource: Item.5ksMgyuK1eouSxnA
+      duplicateSource: null
+      coreVersion: '12.330'
+      systemId: torgeternity
+      systemVersion: 12.2.0
+      createdTime: 1722166143740
+      modifiedTime: 1722166204655
+      lastModifiedBy: 93AMwcGe6H37rcPA
+    _key: '!actors.items!OB5I9LwFUwB5C3C4.iDIFCRUIEmbD3ZIW'
+  - _id: kKgCKpt5xVSLK4NX
+    name: Trank der Heilung
+    type: gear
+    img: systems/torgeternity/images/icons/gear-icon.webp
+    effects: []
+    folder: null
+    sort: 24600000
+    flags:
+      core:
+        sourceId: >-
+          Compendium.te001-core-rulebook.grw-de-ausruestung.Item.kiWS8lQLXbtS6FYE
+    system:
+      cosm: aysle
+      description: >-
+        <p>Benötigt ein Magie-Axiom von 13, um zu wirken. Das Trinken des Tranks
+        ist eine einfache Aktion und er regeneriert 1 Wunde und Schockschaden in
+        Höhe eines [[/r 1d6x6max5]]{BW}.</p>
+      price: '500'
+      techlevel: 12
+      value: 14
+      secondaryAxiom:
+        selected: magic
+        value: 13
+    ownership:
+      default: 0
+      9Q0XnqFwko7hRlvL: 3
+      CtisFurQNe9h7ABb: 3
+      93AMwcGe6H37rcPA: 3
+    _stats:
+      compendiumSource: Compendium.te001-core-rulebook.grw-de-ausruestung.Item.kiWS8lQLXbtS6FYE
+      duplicateSource: null
+      coreVersion: '12.330'
+      systemId: torgeternity
+      systemVersion: 12.2.0
+      createdTime: 1722166418564
+      modifiedTime: 1722166418564
+      lastModifiedBy: 93AMwcGe6H37rcPA
+    _key: '!actors.items!OB5I9LwFUwB5C3C4.kKgCKpt5xVSLK4NX'
 effects: []
 folder: null
 sort: 0
@@ -1049,7 +1093,7 @@ system:
       baseAttribute: dexterity
       adds: 3
       isFav: false
-      groupName: combat
+      groupName: other
       unskilledUse: 1
       isThreatSkill: false
       defenseOnly: false
@@ -1330,14 +1374,20 @@ prototypeToken:
       min: 0
       max: 1
     attenuation: 0.5
+    negative: false
+    priority: 0
   texture:
     src: systems/torgeternity/images/characters/elven_warden.Token.webp
-    tint: null
+    tint: '#ffffff'
     scaleX: 1
     scaleY: 1
     offsetX: 0
     offsetY: 0
     rotation: 0
+    anchorX: 0.5
+    anchorY: 0.5
+    fit: contain
+    alphaThreshold: 0.75
   sight:
     angle: 360
     enabled: true
@@ -1347,14 +1397,30 @@ prototypeToken:
     attenuation: 0.1
     saturation: 0
     contrast: 0
+    color: null
   appendNumber: false
   prependAdjective: false
   detectionModes: []
+  hexagonalShape: 0
+  occludable:
+    radius: 0
+  ring:
+    enabled: false
+    colors:
+      ring: null
+      background: null
+    effects: 1
+    subject:
+      scale: 1
+      texture: null
 _stats:
   systemId: torgeternity
   systemVersion: 3.8.1
-  coreVersion: '11.315'
+  coreVersion: '12.330'
   createdTime: 1694866454541
   modifiedTime: 1716827811304
   lastModifiedBy: VAnYow5sWS9EJzo0
+  compendiumSource: Compendium.torgeternity.archetypes.cdSvyJHbG0GbFzkh
+  duplicateSource: null
 _key: '!actors!OB5I9LwFUwB5C3C4'
+

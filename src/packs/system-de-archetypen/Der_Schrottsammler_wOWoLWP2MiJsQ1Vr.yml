@@ -14,7 +14,7 @@ items:
       core:
         sourceId: Item.byDMEsJSaBUHDi5V
     system:
-      cosm: Tharkold
+      cosm: coreEarth
       description: <p>+4&nbsp;<em>Finden</em> von radioaktiven Stoffen.</p>
       price: '0'
       techlevel: 21
@@ -25,11 +25,13 @@ items:
       9Q0XnqFwko7hRlvL: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: null
-      modifiedTime: 1694868259394
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722163431055
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Item.byDMEsJSaBUHDi5V
+      duplicateSource: null
     _key: '!actors.items!wOWoLWP2MiJsQ1Vr.sOJ9aOihM9D7wkYP'
   - _id: x1JhUA2XJSYkaLfr
     name: Aufprallhammer
@@ -43,17 +45,14 @@ items:
         sourceId: >-
           Compendium.te001-core-rulebook.grw-de-ausruestung.Item.UnO4Ubrqpn348wrx
     system:
-      cosm: Tharkold
+      cosm: tharkold
       description: >-
-        <p>@UUID[Compendium.te001-core-rulebook.grw-de-grw.Qlx6yGF0Mmo6Xzrv.JournalEntryPage.7GGUUHzuYIqGPXDO#erschuttern:]{Ersch&uuml;ttern}</p>
-
-        <p>@UUID[Compendium.te001-core-rulebook.grw-de-grw.Qlx6yGF0Mmo6Xzrv.JournalEntryPage.7GGUUHzuYIqGPXDO#zweihandig:]{Zweih&auml;ndig}</p>
-
-        <p>Der schwere Kopf dieses Hammers enth&auml;lt einen pneumatischen
-        Mechanismus, der dem Schwung einen Sto&szlig; hinzuf&uuml;gt und den
-        Hammer am Auftreffpunkt in das Ziel treibt &ndash; vorausgesetzt der
-        Tr&auml;ger ist stark genug, den Hammer &uuml;berhaupt erst in Schwung
-        zu bringen.</p>
+        <p>@UUID[Compendium.te001-core-rulebook.grw-de-grw.Qlx6yGF0Mmo6Xzrv.JournalEntryPage.7GGUUHzuYIqGPXDO#erschuttern:]{Erschüttern}</p><p>@UUID[Compendium.te001-core-rulebook.grw-de-grw.Qlx6yGF0Mmo6Xzrv.JournalEntryPage.7GGUUHzuYIqGPXDO#zweihandig:]{Zweihändig}</p><p>Der
+        schwere Kopf dieses Hammers enthält einen pneumatischen Mechanismus, der
+        dem Schwung einen Stoß hinzufügt und den Hammer am Auftreffpunkt in das
+        Ziel treibt – vorausgesetzt der Träger ist stark genug, den Hammer
+        überhaupt erst in Schwung zu bringen.</p><p><em>Schaden beinhaltet +2
+        Stärke von Digan Cyberarm</em></p>
       price: '300'
       techlevel: 25
       value: 13
@@ -61,7 +60,7 @@ items:
       attackWith: meleeWeapons
       bonus: 2
       chatNote: ''
-      damage: 4
+      damage: 6
       damageType: strengthPlus
       equipped: false
       equippedClass: .item-unequipped
@@ -72,11 +71,13 @@ items:
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: 1694868208996
-      modifiedTime: 1694868208996
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722163632879
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Compendium.te001-core-rulebook.grw-de-ausruestung.Item.UnO4Ubrqpn348wrx
+      duplicateSource: null
     _key: '!actors.items!wOWoLWP2MiJsQ1Vr.x1JhUA2XJSYkaLfr'
   - _id: fTrf5YWN4AHjo5Rd
     name: Netzwerfer
@@ -90,7 +91,7 @@ items:
         sourceId: >-
           Compendium.te001-core-rulebook.grw-de-ausruestung.Item.ZoLSdDqVUue06Zsh
     system:
-      cosm: Tharkold
+      cosm: tharkold
       description: >-
         <p>@UUID[Compendium.te001-core-rulebook.grw-de-grw.Qlx6yGF0Mmo6Xzrv.JournalEntryPage.41rZYYhaMC2T260D#flachenangriffe]{Fl&auml;chenangriffe}</p>
 
@@ -130,11 +131,13 @@ items:
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: 1694868215692
-      modifiedTime: 1694868215692
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722163453575
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Compendium.te001-core-rulebook.grw-de-ausruestung.Item.ZoLSdDqVUue06Zsh
+      duplicateSource: null
     _key: '!actors.items!wOWoLWP2MiJsQ1Vr.fTrf5YWN4AHjo5Rd'
   - name: Filtermaske
     type: gear
@@ -147,7 +150,7 @@ items:
         sourceId: Item.L5Lrdvhfc08MOsKu
     _id: zSRHzUyGqRNCVKI5
     system:
-      cosm: Pan-Pacifica
+      cosm: panPacifica
       description: >-
         <p>Fortschrittliche Mikrofasern filtern sch&auml;dliche Partikel aus der
         Luft und machen den Tr&auml;ger immun gegen inhalierte Gifte und andere
@@ -162,11 +165,13 @@ items:
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: 1694868233363
-      modifiedTime: 1694868233363
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722163438647
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Item.L5Lrdvhfc08MOsKu
+      duplicateSource: null
     _key: '!actors.items!wOWoLWP2MiJsQ1Vr.zSRHzUyGqRNCVKI5'
   - name: Leuchtfackel
     type: gear
@@ -179,7 +184,7 @@ items:
         sourceId: Item.Uc1pL9fqLa4cfonl
     _id: 82b6WBPl4IkH9bYe
     system:
-      cosm: Nil-Imperium
+      cosm: nileEmpire
       description: ''
       price: '5'
       techlevel: 20
@@ -191,11 +196,13 @@ items:
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: 1694868254328
-      modifiedTime: 1694868254328
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722163435032
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Item.Uc1pL9fqLa4cfonl
+      duplicateSource: null
     _key: '!actors.items!wOWoLWP2MiJsQ1Vr.82b6WBPl4IkH9bYe'
   - name: Digan Cyberarm
     type: implant
@@ -216,18 +223,29 @@ items:
           turns: null
           startRound: null
           startTurn: null
-        icon: icons/svg/aura.svg
         origin: Item.QysjEB4L1IrUlgve
         transfer: true
         flags: {}
-        tint: null
+        tint: '#ffffff'
         name: Stärke +2 (Arm)
         description: ''
         statuses: []
+        _stats:
+          coreVersion: '12.330'
+          systemId: null
+          systemVersion: null
+          createdTime: null
+          modifiedTime: null
+          lastModifiedBy: null
+          compendiumSource: null
+          duplicateSource: null
+        img: icons/svg/aura.svg
+        type: base
+        system: {}
+        sort: 0
         _key: >-
           !actors.items.effects!wOWoLWP2MiJsQ1Vr.PH0fnq5a93BlVCbC.xv8YcVKQNS2B70W6
-      - icon: icons/svg/aura.svg
-        origin: >-
+      - origin: >-
           Compendium.te001-core-rulebook.grw-de-ausruestung.Item.EiR06Y2MYEbSMgTZ
         duration:
           startTime: null
@@ -253,7 +271,20 @@ items:
         transfer: true
         statuses: []
         flags: {}
-        tint: null
+        tint: '#ffffff'
+        _stats:
+          coreVersion: '12.330'
+          systemId: null
+          systemVersion: null
+          createdTime: null
+          modifiedTime: null
+          lastModifiedBy: null
+          compendiumSource: null
+          duplicateSource: null
+        img: icons/svg/aura.svg
+        type: base
+        system: {}
+        sort: 0
         _key: >-
           !actors.items.effects!wOWoLWP2MiJsQ1Vr.PH0fnq5a93BlVCbC.77CTUjM5RubOjoJX
     folder: null
@@ -264,7 +295,7 @@ items:
           Compendium.te001-core-rulebook.grw-de-ausruestung.Item.EiR06Y2MYEbSMgTZ
     _id: PH0fnq5a93BlVCbC
     system:
-      cosm: Tharkold
+      cosm: tharkold
       description: >-
         <p>Digan-Konstruktionen sind sperrig, aber leistungsstark, und dieser
         modulare Ersatzarm ist keine Ausnahme. Er verleiht einen Bonus von +2
@@ -285,11 +316,13 @@ items:
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: 1694868434753
-      modifiedTime: 1694868434753
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722163415658
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Compendium.te001-core-rulebook.grw-de-ausruestung.Item.EiR06Y2MYEbSMgTZ
+      duplicateSource: null
     _key: '!actors.items!wOWoLWP2MiJsQ1Vr.PH0fnq5a93BlVCbC'
   - name: Thav Strahlungsfilter MK II
     type: implant
@@ -303,7 +336,7 @@ items:
           Compendium.te001-core-rulebook.grw-de-ausruestung.Item.rjyA5DdemvG61FxZ
     _id: ps6rvCLzCHfBjtZ7
     system:
-      cosm: Tharkold
+      cosm: tharkold
       description: ''
       price: '2000'
       techlevel: 25
@@ -316,11 +349,13 @@ items:
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: 1694868444300
-      modifiedTime: 1694868444300
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722163410955
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Compendium.te001-core-rulebook.grw-de-ausruestung.Item.rjyA5DdemvG61FxZ
+      duplicateSource: null
     _key: '!actors.items!wOWoLWP2MiJsQ1Vr.ps6rvCLzCHfBjtZ7'
   - _id: n1jJDaY6pxmXQSSn
     name: Okkultech-Implantate
@@ -334,7 +369,7 @@ items:
         sourceId: Compendium.te001-core-rulebook.grw-de-vorzuverb.Item.KZgfynKpQDBjiQfK
     system:
       category: occultech
-      cosm: Tharkold
+      cosm: tharkold
       description: >-
         <p>Wenn der Charakter diesen Vorzug ausw&auml;hlt, darf er
         Okkultech-Implantate mit einem Gesamtwert von 10.000 $
@@ -359,7 +394,7 @@ items:
         Tharkold begeben, um sich die Implantate in einer Cyberwerkstatt
         einbauen zu lassen.</p>
       prerequisites: Stärke 8+
-      generalContradiction: false
+      generalContradiction: true
       pulpPowers:
         enhancement01:
           description: ''
@@ -440,11 +475,13 @@ items:
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: 1694868478814
-      modifiedTime: 1694868492456
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722163390047
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Compendium.te001-core-rulebook.grw-de-vorzuverb.Item.KZgfynKpQDBjiQfK
+      duplicateSource: null
     _key: '!actors.items!wOWoLWP2MiJsQ1Vr.n1jJDaY6pxmXQSSn'
   - _id: o4fLdHCWhNgkpRht
     name: Wirbelwind
@@ -458,7 +495,7 @@ items:
         sourceId: Compendium.te001-core-rulebook.grw-de-vorzuverb.Item.fXcdeTQWWiPGEybU
     system:
       category: prowess
-      cosm: (Keins)
+      cosm: none
       description: >-
         <p>Der Krieger hat daf&uuml;r trainiert, in einem Tanz des Todes auf
         einen Schlag eine gro&szlig;e Zahl von Feinden zu treffen. Er darf beim
@@ -548,11 +585,13 @@ items:
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: 1694868482856
-      modifiedTime: 1694868489377
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722163384215
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Compendium.te001-core-rulebook.grw-de-vorzuverb.Item.fXcdeTQWWiPGEybU
+      duplicateSource: null
     _key: '!actors.items!wOWoLWP2MiJsQ1Vr.o4fLdHCWhNgkpRht'
   - _id: 9ZH2I54xOn8z9G0M
     name: Diffraxplattenrüstung
@@ -566,7 +605,7 @@ items:
         sourceId: >-
           Compendium.te001-core-rulebook.grw-de-ausruestung.Item.lAjH7TpknFEg0r9V
     system:
-      cosm: Tharkold
+      cosm: tharkold
       description: >-
         <p>@UUID[Compendium.te001-core-rulebook.grw-de-grw.Qlx6yGF0Mmo6Xzrv.JournalEntryPage.7GGUUHzuYIqGPXDO#ermudung:]{Erm&uuml;dung}</p>
 
@@ -591,11 +630,13 @@ items:
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.7.0
-      coreVersion: '11.315'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: 1711562366193
-      modifiedTime: 1711706363197
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722163446600
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Compendium.te001-core-rulebook.grw-de-ausruestung.Item.lAjH7TpknFEg0r9V
+      duplicateSource: null
     _key: '!actors.items!wOWoLWP2MiJsQ1Vr.9ZH2I54xOn8z9G0M'
 effects:
   - _id: Rhb58OAkOKdswdXy
@@ -613,18 +654,29 @@ effects:
       turns: null
       startRound: null
       startTurn: null
-    icon: icons/svg/aura.svg
     origin: >-
       Compendium.torgeternity.system-de-archetypen.Actor.wOWoLWP2MiJsQ1Vr.Item.PH0fnq5a93BlVCbC
     transfer: false
     flags: {}
-    tint: null
+    tint: '#ffffff'
     name: Stärke +2 (Arm)
     description: ''
     statuses: []
+    _stats:
+      coreVersion: '12.330'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+    img: icons/svg/aura.svg
+    type: base
+    system: {}
+    sort: 0
     _key: '!actors.effects!wOWoLWP2MiJsQ1Vr.Rhb58OAkOKdswdXy'
-  - icon: icons/svg/aura.svg
-    origin: >-
+  - origin: >-
       Compendium.torgeternity.system-de-archetypen.Actor.wOWoLWP2MiJsQ1Vr.Item.PH0fnq5a93BlVCbC
     duration:
       startTime: 0
@@ -646,7 +698,20 @@ effects:
     transfer: false
     statuses: []
     flags: {}
-    tint: null
+    tint: '#ffffff'
+    _stats:
+      coreVersion: '12.330'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+    img: icons/svg/aura.svg
+    type: base
+    system: {}
+    sort: 0
     _key: '!actors.effects!wOWoLWP2MiJsQ1Vr.uRIouIuG7d9Ub2mD'
 folder: null
 sort: 0
@@ -863,7 +928,7 @@ system:
       baseAttribute: dexterity
       adds: 1
       isFav: false
-      groupName: combat
+      groupName: other
       unskilledUse: 1
       isThreatSkill: false
       defenseOnly: false
@@ -1140,14 +1205,20 @@ prototypeToken:
       min: 0
       max: 1
     attenuation: 0.5
+    negative: false
+    priority: 0
   texture:
     src: systems/torgeternity/images/characters/scrapper.Token.webp
-    tint: null
+    tint: '#ffffff'
     scaleX: 1
     scaleY: 1
     offsetX: 0
     offsetY: 0
     rotation: 0
+    anchorX: 0.5
+    anchorY: 0.5
+    fit: contain
+    alphaThreshold: 0.75
   sight:
     angle: 360
     enabled: true
@@ -1157,14 +1228,30 @@ prototypeToken:
     attenuation: 0.1
     saturation: 0
     contrast: 0
+    color: null
   appendNumber: false
   prependAdjective: false
   detectionModes: []
+  hexagonalShape: 0
+  occludable:
+    radius: 0
+  ring:
+    enabled: false
+    colors:
+      ring: null
+      background: null
+    effects: 1
+    subject:
+      scale: 1
+      texture: null
 _stats:
   systemId: torgeternity
   systemVersion: 3.8.1
-  coreVersion: '11.315'
+  coreVersion: '12.330'
   createdTime: 1694868197071
   modifiedTime: 1716827811808
   lastModifiedBy: VAnYow5sWS9EJzo0
+  compendiumSource: Compendium.torgeternity.archetypes.ys0MhNx2uIG2ORAD
+  duplicateSource: null
 _key: '!actors!wOWoLWP2MiJsQ1Vr'
+

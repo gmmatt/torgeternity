@@ -30,10 +30,12 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: null
+      coreVersion: '12.330'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
+      compendiumSource: Item.HlSAJi0eR2q7UF8E
+      duplicateSource: null
     _key: '!actors.items!QsYmnq73AiR6BwhD.kBiGdjd85DU1MtHd'
   - _id: U0CKtAHQmBDo9ZyF
     name: Dragon Breath (weapon)
@@ -46,21 +48,19 @@ items:
     effects: []
     folder: null
     system:
-      cosm: Aysle
+      cosm: aysle
       description: >-
-        <p>@UUID[Compendium.te001-core-rulebook.rules.pwneQ55M0nnDH0Us.JournalEntryPage.EhKa65cpHvodUl2L#explosives-and-area-effect-attacks]{Blast}</p>
-
-        <p>@UUID[Compendium.te001-core-rulebook.rules.pwneQ55M0nnDH0Us.JournalEntryPage.EhKa65cpHvodUl2L#fire]{Fire
-        damage}</p>
-
-        <p>Acquire this weapon when taking the Dragon Breath enhancement for the
-        Dragon Warrior perk.</p>
+        <p>@UUID[Compendium.te001-core-rulebook.rules.pwneQ55M0nnDH0Us.JournalEntryPage.EhKa65cpHvodUl2L#explosives-and-area-effect-attacks]{Blast}</p><p>@UUID[Compendium.te001-core-rulebook.rules.pwneQ55M0nnDH0Us.JournalEntryPage.EhKa65cpHvodUl2L#fire]{Fire
+        damage}</p><p>Acquire this weapon when taking the Dragon Breath
+        enhancement for the
+        @UUID[Compendium.torgeternity.archetypes.Actor.QsYmnq73AiR6BwhD.Item.NTS9DWGhHsYfxJGC]{Dragon
+        Warrior} perk.</p>
       price: '0'
       techlevel: null
       value: 0
       ammo:
-        max: 1
-        value: 1
+        max: 3
+        value: 3
       ap: 0
       attackWith: missileWeapons
       chatNote: ''
@@ -75,11 +75,13 @@ items:
       default: 0
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: null
-      modifiedTime: 1693900742775
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722154839275
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Item.njMZnZIEFvRkHHIS
+      duplicateSource: null
     _key: '!actors.items!QsYmnq73AiR6BwhD.U0CKtAHQmBDo9ZyF'
   - _id: NTS6mLpRgHF7WkO4
     name: Healing Potion
@@ -92,23 +94,26 @@ items:
     effects: []
     folder: null
     system:
-      cosm: Aysle
-      description: >-
-        <p>Requires Magic Axiom 13. Drinking the potion is a simple action that
-        restores one Wound and one bonus die of Shock.</p>
+      cosm: none
+      description: "<p>Drinking this thick, clear liquid heals one wound and restores a [[/r 1d6x6max5]]{BD} of shock.</p><p>\_</p><p>Found in <strong>Core Rules, Aysle Sourcebook</strong></p>"
       price: '500'
       techlevel: 12
       value: 14
       equippedClass: item-equipped
+      secondaryAxiom:
+        selected: magic
+        value: 13
     ownership:
       default: 0
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: null
-      modifiedTime: 1693900916304
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722156163021
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Item.sSWLrPCSi2G5jq6S
+      duplicateSource: null
     _key: '!actors.items!QsYmnq73AiR6BwhD.NTS6mLpRgHF7WkO4'
   - _id: vfqnqkIvFw372Nck
     name: Rope, 10 meters
@@ -121,7 +126,7 @@ items:
     effects: []
     folder: null
     system:
-      cosm: Aysle
+      cosm: aysle
       description: ''
       price: '25'
       techlevel: 8
@@ -131,11 +136,13 @@ items:
       default: 0
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: null
-      modifiedTime: 1693900904951
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722154878275
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Item.HIzFdoBtoEzc8eaE
+      duplicateSource: null
     _key: '!actors.items!QsYmnq73AiR6BwhD.vfqnqkIvFw372Nck'
   - _id: F2DgHaQHYRxdQU4b
     name: Caltrops
@@ -148,7 +155,7 @@ items:
     effects: []
     folder: null
     system:
-      cosm: Aysle
+      cosm: aysle
       description: >-
         <p>A batch of scattered spikes that always land with a point upwards,
         designed to impale feet and tires. Once deployed as a simple action
@@ -161,11 +168,13 @@ items:
       default: 0
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: null
-      modifiedTime: 1693900912016
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722154886540
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Item.nszREOuoibD1inHs
+      duplicateSource: null
     _key: '!actors.items!QsYmnq73AiR6BwhD.F2DgHaQHYRxdQU4b'
   - _id: W80yHGyLWk5wrLJW
     name: Giant Strength
@@ -192,13 +201,25 @@ items:
           turns: null
           startRound: null
           startTurn: null
-        icon: icons/svg/aura.svg
         origin: Item.q3wDWkbSqbWYKVNB
-        tint: null
+        tint: '#ffffff'
         transfer: true
         name: Giant Strength
         description: ''
         statuses: []
+        _stats:
+          coreVersion: '12.330'
+          systemId: null
+          systemVersion: null
+          createdTime: null
+          modifiedTime: null
+          lastModifiedBy: null
+          compendiumSource: null
+          duplicateSource: null
+        img: icons/svg/aura.svg
+        type: base
+        system: {}
+        sort: 0
         _key: >-
           !actors.items.effects!QsYmnq73AiR6BwhD.W80yHGyLWk5wrLJW.07KQJUY5nlOb5K7Q
     folder: null
@@ -214,10 +235,12 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: null
+      coreVersion: '12.330'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
+      compendiumSource: Item.q3wDWkbSqbWYKVNB
+      duplicateSource: null
     _key: '!actors.items!QsYmnq73AiR6BwhD.W80yHGyLWk5wrLJW'
   - _id: 45qccoq0HU8OzZeZ
     name: Darkvision (Dwarf)
@@ -319,10 +342,12 @@ items:
     _stats:
       systemId: torgeternity
       systemVersion: 3.1.1
-      coreVersion: '11.308'
+      coreVersion: '12.330'
       createdTime: 1693900608203
       modifiedTime: 1693910487924
       lastModifiedBy: CtisFurQNe9h7ABb
+      compendiumSource: Item.JCBCYFMvmpQHFWM4
+      duplicateSource: null
     _key: '!actors.items!QsYmnq73AiR6BwhD.45qccoq0HU8OzZeZ'
   - _id: vvOcq2YtdmDi6tiY
     name: Great Axe
@@ -335,7 +360,7 @@ items:
       core:
         sourceId: Compendium.te001-core-rulebook.Items.N6G6v7wgDhnpsIiQ
     system:
-      cosm: Aysle
+      cosm: aysle
       description: >-
         <p>@UUID[Compendium.te001-core-rulebook.rules.pwneQ55M0nnDH0Us.JournalEntryPage.qKdamp4rrcX6TTt0#stagger:]{Stagger}</p>
 
@@ -368,11 +393,13 @@ items:
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: 1693900634311
-      modifiedTime: 1693900634311
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722154788109
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Compendium.te001-core-rulebook.Items.N6G6v7wgDhnpsIiQ
+      duplicateSource: null
     _key: '!actors.items!QsYmnq73AiR6BwhD.vvOcq2YtdmDi6tiY'
   - name: Dragon Warrior Armor
     type: armor
@@ -383,15 +410,12 @@ items:
       core:
         sourceId: Compendium.te001-core-rulebook.Items.Item.kKfw6Od1PySvYsOs
     system:
-      cosm: Aysle
+      cosm: aysle
       description: >-
         <p>Provided by
-        @UUID[Compendium.te001-core-rulebook.Items.Item.eItDWecF1ue7Hvp0]{Dragon
-        Warrior} Perk</p>
-
-        <p>@UUID[Compendium.te001-core-rulebook.rules.pwneQ55M0nnDH0Us.JournalEntryPage.qKdamp4rrcX6TTt0#fatigues:]{Fatigues}</p>
-
-        <p>@UUID[Compendium.te001-core-rulebook.rules.pwneQ55M0nnDH0Us.JournalEntryPage.qKdamp4rrcX6TTt0#full-body/torso:]{Full
+        @UUID[Compendium.torgeternity.archetypes.Actor.QsYmnq73AiR6BwhD.Item.NTS9DWGhHsYfxJGC]{Dragon
+        Warrior}
+        Perk</p><p>@UUID[Compendium.te001-core-rulebook.rules.pwneQ55M0nnDH0Us.JournalEntryPage.qKdamp4rrcX6TTt0#fatigues:]{Fatigues}</p><p>@UUID[Compendium.te001-core-rulebook.rules.pwneQ55M0nnDH0Us.JournalEntryPage.qKdamp4rrcX6TTt0#full-body/torso:]{Full
         Body Armor}</p>
       price: ''
       techlevel: 12
@@ -405,11 +429,13 @@ items:
       fatigue: 2
     _stats:
       systemId: torgeternity
-      systemVersion: 3.7.0
-      coreVersion: '11.315'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: 1711551146690
-      modifiedTime: 1711704264408
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722154966379
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Compendium.te001-core-rulebook.Items.Item.kKfw6Od1PySvYsOs
+      duplicateSource: null
     _id: mi1BCKboWCKq3gqY
     sort: 0
     ownership:
@@ -421,8 +447,7 @@ items:
     type: perk
     img: systems/torgeternity/images/icons/reality-icon.webp
     effects:
-      - icon: icons/svg/aura.svg
-        origin: Item.Pnm7y2vAqU8OZGTr
+      - origin: Item.Pnm7y2vAqU8OZGTr
         duration:
           startTime: null
           seconds: null
@@ -443,7 +468,20 @@ items:
         transfer: true
         statuses: []
         flags: {}
-        tint: null
+        tint: '#ffffff'
+        _stats:
+          coreVersion: '12.330'
+          systemId: null
+          systemVersion: null
+          createdTime: null
+          modifiedTime: null
+          lastModifiedBy: null
+          compendiumSource: null
+          duplicateSource: null
+        img: icons/svg/aura.svg
+        type: base
+        system: {}
+        sort: 0
         _key: >-
           !actors.items.effects!QsYmnq73AiR6BwhD.NTS9DWGhHsYfxJGC.JVEhl4LHM1292KmE
     folder: null
@@ -453,7 +491,7 @@ items:
         sourceId: Compendium.te001-core-rulebook.Items.Item.eItDWecF1ue7Hvp0
     system:
       category: dwarf
-      cosm: Aysle
+      cosm: aysle
       description: >-
         <p>Dragon Warriors are the last champions of the dwarves who were
         virtually annihilated in Aysle. As a final desperate measure, they built
@@ -539,7 +577,7 @@ items:
 
         <p>Found in <strong>Core Rules</strong></p>
       prerequisites: Strength 10+
-      generalContradiction: false
+      generalContradiction: true
       pulpPowers:
         enhancement01:
           description: >-
@@ -647,15 +685,16 @@ items:
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.7.0
-      coreVersion: '11.315'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: 1711551146835
-      modifiedTime: 1711704454915
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722152718080
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Compendium.te001-core-rulebook.Items.Item.eItDWecF1ue7Hvp0
+      duplicateSource: null
     _key: '!actors.items!QsYmnq73AiR6BwhD.NTS9DWGhHsYfxJGC'
 effects:
-  - icon: icons/svg/aura.svg
-    origin: >-
+  - origin: >-
       Compendium.torgeternity.archetypes.Actor.QsYmnq73AiR6BwhD.Item.NTS9DWGhHsYfxJGC
     duration:
       startTime: 0
@@ -677,7 +716,20 @@ effects:
     transfer: false
     statuses: []
     flags: {}
-    tint: null
+    tint: '#ffffff'
+    _stats:
+      coreVersion: '12.330'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+    img: icons/svg/aura.svg
+    type: base
+    system: {}
+    sort: 0
     _key: '!actors.effects!QsYmnq73AiR6BwhD.hEeH10DtfU8wxI7z'
 folder: null
 sort: 100001
@@ -894,7 +946,7 @@ system:
       baseAttribute: dexterity
       adds: 2
       isFav: false
-      groupName: combat
+      groupName: other
       unskilledUse: 1
       isThreatSkill: false
       defenseOnly: false
@@ -1168,14 +1220,20 @@ prototypeToken:
       max: 1
     color: null
     attenuation: 0.5
+    negative: false
+    priority: 0
   texture:
     src: systems/torgeternity/images/characters/dragon_warrior.Token.webp
-    tint: null
+    tint: '#ffffff'
     scaleX: 1
     scaleY: 1
     offsetX: 0
     offsetY: 0
     rotation: 0
+    anchorX: 0.5
+    anchorY: 0.5
+    fit: contain
+    alphaThreshold: 0.75
   sight:
     angle: 360
     enabled: false
@@ -1185,14 +1243,30 @@ prototypeToken:
     attenuation: 0.1
     saturation: 0
     contrast: 0
+    color: null
   appendNumber: false
   prependAdjective: false
   detectionModes: []
+  hexagonalShape: 0
+  occludable:
+    radius: 0
+  ring:
+    enabled: false
+    colors:
+      ring: null
+      background: null
+    effects: 1
+    subject:
+      scale: 1
+      texture: null
 _stats:
   systemId: torgeternity
   systemVersion: 3.8.1
-  coreVersion: '11.315'
+  coreVersion: '12.330'
   createdTime: 1693900608203
   modifiedTime: 1716827807732
   lastModifiedBy: VAnYow5sWS9EJzo0
+  compendiumSource: null
+  duplicateSource: null
 _key: '!actors!QsYmnq73AiR6BwhD'
+

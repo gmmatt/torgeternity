@@ -27,10 +27,12 @@ items:
     _stats:
       systemId: torgeternity
       systemVersion: 3.1.1
-      coreVersion: '11.308'
+      coreVersion: '12.330'
       createdTime: null
       modifiedTime: 1694868187854
       lastModifiedBy: CtisFurQNe9h7ABb
+      compendiumSource: Item.w4b7qWApQXkghQXE
+      duplicateSource: null
     _key: '!actors.items!92W36cwQtstg8MQ3.eu1fNLOkaeAxVTKf'
   - _id: aMOK1Bd8rFpUkhIL
     name: Mantel und Maske
@@ -43,7 +45,7 @@ items:
       core:
         sourceId: Item.UuCLymRLTqUajZYc
     system:
-      cosm: Nil-Imperium
+      cosm: nileEmpire
       description: <p>Geheimnisvoll!</p>
       price: '0'
       techlevel: 15
@@ -54,40 +56,14 @@ items:
       9Q0XnqFwko7hRlvL: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: null
-      modifiedTime: 1694867901744
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722161959410
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Item.UuCLymRLTqUajZYc
+      duplicateSource: null
     _key: '!actors.items!92W36cwQtstg8MQ3.aMOK1Bd8rFpUkhIL'
-  - _id: 75Sn04Vgl3qiBCVP
-    name: Extra-Magazine
-    type: gear
-    img: systems/torgeternity/images/icons/gear-icon.webp
-    effects: []
-    folder: YrLpjzkzDZxqWzUw
-    sort: 0
-    flags:
-      core:
-        sourceId: Item.9VjiNmOA2TB62Xej
-    system:
-      cosm: (Keins)
-      description: <p>5x Mauser nachladen</p>
-      price: '0'
-      techlevel: 20
-      value: 0
-      equippedClass: item-equipped
-    ownership:
-      default: 0
-      9Q0XnqFwko7hRlvL: 3
-    _stats:
-      systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
-      createdTime: null
-      modifiedTime: 1694867921328
-      lastModifiedBy: CtisFurQNe9h7ABb
-    _key: '!actors.items!92W36cwQtstg8MQ3.75Sn04Vgl3qiBCVP'
   - _id: y4woDXhqG1YWPcpB
     name: Leuchtfackel
     type: gear
@@ -99,7 +75,7 @@ items:
       core:
         sourceId: Item.Uc1pL9fqLa4cfonl
     system:
-      cosm: Nil-Imperium
+      cosm: nileEmpire
       description: ''
       price: '5'
       techlevel: 20
@@ -110,11 +86,13 @@ items:
       9Q0XnqFwko7hRlvL: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: null
-      modifiedTime: 1694867933032
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722162008122
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Item.Uc1pL9fqLa4cfonl
+      duplicateSource: null
     _key: '!actors.items!92W36cwQtstg8MQ3.y4woDXhqG1YWPcpB'
   - _id: 9EFl6ObKOnDr8PqP
     name: Handschellen
@@ -127,7 +105,7 @@ items:
       core:
         sourceId: Item.sh2tcK6G0tcScgwq
     system:
-      cosm: Nil-Imperium
+      cosm: nileEmpire
       description: >-
         <p>Das Anbringen von Handschellen erfordert einen guten Erfolg bei einem
         Ringen-Angriff (siehe Seite 125). Die H&auml;nde des festgehaltenen
@@ -143,11 +121,13 @@ items:
       9Q0XnqFwko7hRlvL: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: null
-      modifiedTime: 1694867945568
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722162012666
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Item.sh2tcK6G0tcScgwq
+      duplicateSource: null
     _key: '!actors.items!92W36cwQtstg8MQ3.9EFl6ObKOnDr8PqP'
   - _id: XbOqDjoqDkDk2Coa
     name: Peilsender
@@ -160,7 +140,7 @@ items:
       core:
         sourceId: Item.hnzAJpMqPZrjYrX8
     system:
-      cosm: Nil-Imperium
+      cosm: nileEmpire
       description: >-
         <p>Ein kleines Ger&auml;t, das seinen Standort an darauf abgestimmte
         Funkempf&auml;nger innerhalb eines Kilometers sendet.</p>
@@ -173,11 +153,13 @@ items:
       9Q0XnqFwko7hRlvL: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: null
-      modifiedTime: 1694867959912
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722162016154
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Item.hnzAJpMqPZrjYrX8
+      duplicateSource: null
     _key: '!actors.items!92W36cwQtstg8MQ3.XbOqDjoqDkDk2Coa'
   - _id: 2Ek4UPEwzb1actmc
     name: Schläger
@@ -191,7 +173,7 @@ items:
         sourceId: Compendium.te001-core-rulebook.grw-de-vorzuverb.Item.sWRXWBwLHBCcTUOJ
     system:
       category: prowess
-      cosm: (Keins)
+      cosm: none
       description: >-
         <p>Der Charakter hat gelernt, hart zuzuschlagen, sei es mithilfe von
         schmutzigen Tricks und einem guten Aufw&auml;rtshaken oder einem
@@ -286,19 +268,20 @@ items:
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: 1694867682420
-      modifiedTime: 1694867767024
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722161941737
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Compendium.te001-core-rulebook.grw-de-vorzuverb.Item.sWRXWBwLHBCcTUOJ
+      duplicateSource: null
     _key: '!actors.items!92W36cwQtstg8MQ3.2Ek4UPEwzb1actmc'
   - _id: eoP2vnMCxD3yRNJS
     name: Super-Fertigkeit (Einschüchtern)
     type: perk
     img: systems/torgeternity/images/icons/reality-icon.webp
     effects:
-      - icon: icons/svg/aura.svg
-        origin: Item.NP52D0TMUBVKQK7d
+      - origin: Item.NP52D0TMUBVKQK7d
         duration:
           startTime: null
           seconds: null
@@ -319,7 +302,20 @@ items:
         transfer: true
         statuses: []
         flags: {}
-        tint: null
+        tint: '#ffffff'
+        _stats:
+          coreVersion: '12.330'
+          systemId: null
+          systemVersion: null
+          createdTime: null
+          modifiedTime: null
+          lastModifiedBy: null
+          compendiumSource: null
+          duplicateSource: null
+        img: icons/svg/aura.svg
+        type: base
+        system: {}
+        sort: 0
         _key: >-
           !actors.items.effects!92W36cwQtstg8MQ3.eoP2vnMCxD3yRNJS.1VTOsm0M13fBNOeh
     folder: null
@@ -329,7 +325,7 @@ items:
         sourceId: Compendium.te001-core-rulebook.Items.ohmish0RVlju7Qbk
     system:
       category: pulpPowers
-      cosm: Nil-Imperium
+      cosm: nileEmpire
       description: >-
         <p>Der Pulp-Held ist au&szlig;ergew&ouml;hnlich gut in etwas.
         M&ouml;glicherweise ist er ein Ass im Umgang mit Feuerwaffen, oder ein
@@ -350,7 +346,7 @@ items:
         Charakter nur maximal einmal ausgew&auml;hlt werden. Er darf diese
         Superkraft nicht mehrmals besitzen.</p>
       prerequisites: mindestens 3 Fertigkeitsstufen in der ausgewählten Fertigkeit
-      generalContradiction: false
+      generalContradiction: true
       pulpPowers:
         enhancement01:
           description: Die ausgewählte Fertigkeit zählt für den Charakter als Begünstigt.
@@ -431,11 +427,13 @@ items:
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: 1694867691972
-      modifiedTime: 1694867865088
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722161935963
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Compendium.te001-core-rulebook.Items.ohmish0RVlju7Qbk
+      duplicateSource: null
     _key: '!actors.items!92W36cwQtstg8MQ3.eoP2vnMCxD3yRNJS'
   - name: Mauser Pistole
     type: firearm
@@ -449,7 +447,7 @@ items:
           Compendium.te001-core-rulebook.grw-de-ausruestung.Item.ajZNYaj0VhtUFIjl
     _id: 5uhBz0KDWgG5ye1v
     system:
-      cosm: Nil-Imperium
+      cosm: nileEmpire
       description: >-
         <p>Ein oft kopiertes Design mit hoher M&uuml;ndungsgeschwindigkeit und
         exzellenter Schadenswirkung, sowie einem markanten Boxmagazin vor dem
@@ -476,11 +474,13 @@ items:
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: 1694867881572
-      modifiedTime: 1694867881572
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722162025386
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Compendium.te001-core-rulebook.grw-de-ausruestung.Item.ajZNYaj0VhtUFIjl
+      duplicateSource: null
     _key: '!actors.items!92W36cwQtstg8MQ3.5uhBz0KDWgG5ye1v'
   - _id: b7Tc9x2NPJN6ghs2
     name: Lederweste
@@ -494,7 +494,7 @@ items:
         sourceId: >-
           Compendium.te001-core-rulebook.grw-de-ausruestung.Item.xWI54mxsNNqaWXsX
     system:
-      cosm: Nil-Imperium
+      cosm: nileEmpire
       description: >-
         <p>@UUID[Compendium.te001-core-rulebook.grw-de-grw.Qlx6yGF0Mmo6Xzrv.JournalEntryPage.7GGUUHzuYIqGPXDO#ganzkorper/torso:]{Torso}</p>
       price: '100'
@@ -513,15 +513,56 @@ items:
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.7.0
-      coreVersion: '11.315'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: 1711562366229
-      modifiedTime: 1711706089365
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722162030018
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Compendium.te001-core-rulebook.grw-de-ausruestung.Item.xWI54mxsNNqaWXsX
+      duplicateSource: null
     _key: '!actors.items!92W36cwQtstg8MQ3.b7Tc9x2NPJN6ghs2'
+  - name: Extra-Magazine
+    type: ammunition
+    img: systems/torgeternity/images/icons/ammo-icon.webp
+    system:
+      cosm: ''
+      description: >-
+        <p><span style="font-family:'Palatino Linotype'">Fünfmal Mauser
+        nachladen.</span></p>
+      price: ''
+      techlevel: 20
+      value: 0
+      secondaryAxiom:
+        selected: none
+        value: null
+      type: ''
+      quantity: 5
+      damageMod: 0
+      apMod: 0
+      fireDamage: false
+      blastRadius: Keiner
+      darknessMod: none
+      reach: ''
+    effects: []
+    folder: null
+    sort: 0
+    ownership:
+      default: 0
+      93AMwcGe6H37rcPA: 3
+    flags: {}
+    _stats:
+      compendiumSource: Item.TptgnUCwWM2QZCaK
+      duplicateSource: Item.KRYQ71jof26XeGEv
+      coreVersion: '12.330'
+      systemId: torgeternity
+      systemVersion: 12.2.0
+      createdTime: 1722161972831
+      modifiedTime: 1722167137485
+      lastModifiedBy: 93AMwcGe6H37rcPA
+    _id: CMUZ3Qyku3JcWe0h
+    _key: '!actors.items!92W36cwQtstg8MQ3.CMUZ3Qyku3JcWe0h'
 effects:
-  - icon: icons/svg/aura.svg
-    origin: >-
+  - origin: >-
       Compendium.torgeternity.system-de-archetypen.Actor.92W36cwQtstg8MQ3.Item.eoP2vnMCxD3yRNJS
     duration:
       startTime: 0
@@ -543,7 +584,20 @@ effects:
     transfer: false
     statuses: []
     flags: {}
-    tint: null
+    tint: '#ffffff'
+    _stats:
+      coreVersion: '12.330'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+    img: icons/svg/aura.svg
+    type: base
+    system: {}
+    sort: 0
     _key: '!actors.effects!92W36cwQtstg8MQ3.oqkPZlkIP6uxPf3N'
 folder: null
 sort: 0
@@ -760,7 +814,7 @@ system:
       baseAttribute: dexterity
       adds: 0
       isFav: false
-      groupName: combat
+      groupName: other
       unskilledUse: 1
       isThreatSkill: false
       defenseOnly: false
@@ -1039,14 +1093,20 @@ prototypeToken:
       min: 0
       max: 1
     attenuation: 0.5
+    negative: false
+    priority: 0
   texture:
     src: systems/torgeternity/images/characters/masked_crusader.Token.webp
-    tint: null
+    tint: '#ffffff'
     scaleX: 1
     scaleY: 1
     offsetX: 0
     offsetY: 0
     rotation: 0
+    anchorX: 0.5
+    anchorY: 0.5
+    fit: contain
+    alphaThreshold: 0.75
   sight:
     angle: 360
     enabled: true
@@ -1056,14 +1116,30 @@ prototypeToken:
     attenuation: 0.1
     saturation: 0
     contrast: 0
+    color: null
   appendNumber: false
   prependAdjective: false
   detectionModes: []
+  hexagonalShape: 0
+  occludable:
+    radius: 0
+  ring:
+    enabled: false
+    colors:
+      ring: null
+      background: null
+    effects: 1
+    subject:
+      scale: 1
+      texture: null
 _stats:
   systemId: torgeternity
   systemVersion: 3.8.1
-  coreVersion: '11.315'
+  coreVersion: '12.330'
   createdTime: 1694867673206
   modifiedTime: 1716827810996
   lastModifiedBy: VAnYow5sWS9EJzo0
+  compendiumSource: Compendium.torgeternity.archetypes.REeNzywr6VElHSWZ
+  duplicateSource: null
 _key: '!actors!92W36cwQtstg8MQ3'
+

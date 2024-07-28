@@ -14,7 +14,7 @@ items:
       core:
         sourceId: Item.vK8vzkKB1kMvWNsB
     system:
-      cosm: Zentralerde
+      cosm: aysle
       description: <p>Zum Schwingen und Klettern.</p>
       price: '0'
       techlevel: 10
@@ -25,11 +25,13 @@ items:
       9Q0XnqFwko7hRlvL: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: null
-      modifiedTime: 1694869720989
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722167016990
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Item.vK8vzkKB1kMvWNsB
+      duplicateSource: null
     _key: '!actors.items!sThfpHelpOeE3Ipz.vB16mDqzwGbLhKwc'
   - _id: 2DL9H0cKLvt6BP6t
     name: Smartphone
@@ -42,7 +44,7 @@ items:
       core:
         sourceId: Item.ELZyQ5vEHcMPe2tX
     system:
-      cosm: Zentralerde
+      cosm: coreEarth
       description: >-
         <p>Extras wie GPS und eine Taschenlampe sind im Lieferumfang enthalten.
         Die meisten Handys m&uuml;ssen sich in ausreichender N&auml;he zu einem
@@ -59,40 +61,14 @@ items:
       9Q0XnqFwko7hRlvL: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: null
-      modifiedTime: 1694869734492
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722167033902
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Item.ELZyQ5vEHcMPe2tX
+      duplicateSource: null
     _key: '!actors.items!sThfpHelpOeE3Ipz.2DL9H0cKLvt6BP6t'
-  - _id: 36LCPKaz6JIqD1zn
-    name: Extra-Magazine
-    type: gear
-    img: systems/torgeternity/images/icons/gear-icon.webp
-    effects: []
-    folder: YrLpjzkzDZxqWzUw
-    sort: 150000
-    flags:
-      core:
-        sourceId: Item.9VjiNmOA2TB62Xej
-    system:
-      cosm: (Keins)
-      description: <p>F&uuml;nf zus&auml;tzliche Magazine.</p>
-      price: '0'
-      techlevel: 22
-      value: 0
-      equippedClass: item-equipped
-    ownership:
-      default: 0
-      9Q0XnqFwko7hRlvL: 3
-    _stats:
-      systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
-      createdTime: null
-      modifiedTime: 1694869727172
-      lastModifiedBy: CtisFurQNe9h7ABb
-    _key: '!actors.items!sThfpHelpOeE3Ipz.36LCPKaz6JIqD1zn'
   - _id: PlwsU5FNqM93PzIQ
     name: Hartnäckig
     type: perk
@@ -105,7 +81,7 @@ items:
         sourceId: Compendium.te001-core-rulebook.grw-de-vorzuverb.Item.Nb8xOGBjmWt9E7vK
     system:
       category: reality
-      cosm: Zentralerde
+      cosm: coreEarth
       description: >-
         <p>Nichts kann den Helden lange am Boden halten. Seine&nbsp;Proben beim
         Wegstecken von Schaden sind Beg&uuml;nstigt.</p>
@@ -191,11 +167,13 @@ items:
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: 1694861180309
-      modifiedTime: 1694868647105
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722166767959
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Compendium.te001-core-rulebook.grw-de-vorzuverb.Item.Nb8xOGBjmWt9E7vK
+      duplicateSource: null
     _key: '!actors.items!sThfpHelpOeE3Ipz.PlwsU5FNqM93PzIQ'
   - _id: 7HbIyllEQKWpARe3
     name: Unbeugsam
@@ -209,7 +187,7 @@ items:
         sourceId: Compendium.te001-core-rulebook.grw-de-vorzuverb.Item.hmgsI717UyWYslVA
     system:
       category: prowess
-      cosm: (Keins)
+      cosm: none
       description: >-
         <p>Wenn der Charakter eine Aktive Verteidigung unternimmt, z&auml;hlt
         die Probe als Beg&uuml;nstigt.</p>
@@ -295,11 +273,13 @@ items:
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: 1694861188083
-      modifiedTime: 1694868643969
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722166750038
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Compendium.te001-core-rulebook.grw-de-vorzuverb.Item.hmgsI717UyWYslVA
+      duplicateSource: null
     _key: '!actors.items!sThfpHelpOeE3Ipz.7HbIyllEQKWpARe3'
   - _id: Mt7Lc6QAGGXYT2hK
     name: Machete
@@ -321,14 +301,26 @@ items:
           turns: null
           startRound: null
           startTurn: null
-        icon: icons/svg/aura.svg
         origin: Compendium.te001-core-rulebook.grw-de-ausruestung.b6nZOz177J3nWcLF
         transfer: true
         flags: {}
-        tint: null
+        tint: '#ffffff'
         name: Begünstigung Überleben
         description: ''
         statuses: []
+        _stats:
+          coreVersion: '12.330'
+          systemId: null
+          systemVersion: null
+          createdTime: null
+          modifiedTime: null
+          lastModifiedBy: null
+          compendiumSource: null
+          duplicateSource: null
+        img: icons/svg/aura.svg
+        type: base
+        system: {}
+        sort: 0
         _key: >-
           !actors.items.effects!sThfpHelpOeE3Ipz.Mt7Lc6QAGGXYT2hK.sFPcVAMnyhyPeTzH
     folder: null
@@ -338,7 +330,7 @@ items:
         sourceId: >-
           Compendium.te001-core-rulebook.grw-de-ausruestung.Item.b6nZOz177J3nWcLF
     system:
-      cosm: Zentralerde
+      cosm: coreEarth
       description: >-
         <p>Diese mittelgro&szlig;e, einschneidige Klinge ist bestens f&uuml;r
         das Entfernen dichten Gestr&uuml;pps ausbalanciert und eignet sich auch
@@ -363,11 +355,13 @@ items:
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: 1694861213124
-      modifiedTime: 1694861213124
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722167102614
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Compendium.te001-core-rulebook.grw-de-ausruestung.Item.b6nZOz177J3nWcLF
+      duplicateSource: null
     _key: '!actors.items!sThfpHelpOeE3Ipz.Mt7Lc6QAGGXYT2hK'
   - _id: yo0jeFjW3zbtMlmk
     name: Glock 9mm
@@ -381,7 +375,7 @@ items:
         sourceId: >-
           Compendium.te001-core-rulebook.grw-de-ausruestung.Item.uS5bsDS4zQkN7NTj
     system:
-      cosm: Zentralerde
+      cosm: coreEarth
       description: >-
         <p>@UUID[Compendium.te001-core-rulebook.grw-de-grw.Qlx6yGF0Mmo6Xzrv.JournalEntryPage.7GGUUHzuYIqGPXDO#karabiner:]{Pistole}</p>
 
@@ -409,11 +403,13 @@ items:
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: 1694861223835
-      modifiedTime: 1694861223835
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722167097942
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Compendium.te001-core-rulebook.grw-de-ausruestung.Item.uS5bsDS4zQkN7NTj
+      duplicateSource: null
     _key: '!actors.items!sThfpHelpOeE3Ipz.yo0jeFjW3zbtMlmk'
   - _id: pkS48dk1kJwUySzc
     name: Glock 9mm
@@ -427,7 +423,7 @@ items:
         sourceId: >-
           Compendium.te001-core-rulebook.grw-de-ausruestung.Item.uS5bsDS4zQkN7NTj
     system:
-      cosm: Zentralerde
+      cosm: coreEarth
       description: >-
         <p>@UUID[Compendium.te001-core-rulebook.grw-de-grw.Qlx6yGF0Mmo6Xzrv.JournalEntryPage.7GGUUHzuYIqGPXDO#karabiner:]{Pistole}</p>
 
@@ -455,11 +451,13 @@ items:
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: 1694861228288
-      modifiedTime: 1694861228288
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722167093526
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Compendium.te001-core-rulebook.grw-de-ausruestung.Item.uS5bsDS4zQkN7NTj
+      duplicateSource: null
     _key: '!actors.items!sThfpHelpOeE3Ipz.pkS48dk1kJwUySzc'
   - name: Nylonseil, 30 Meter
     type: gear
@@ -472,7 +470,7 @@ items:
         sourceId: Item.DFbZ3PM0PEsBi2Mq
     _id: fbOTTyFZwUvZ0eo9
     system:
-      cosm: Zentralerde
+      cosm: coreEarth
       description: ''
       price: '25'
       techlevel: 22
@@ -484,11 +482,13 @@ items:
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: 1694861249282
-      modifiedTime: 1694861343063
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722167027582
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Item.DFbZ3PM0PEsBi2Mq
+      duplicateSource: null
     _key: '!actors.items!sThfpHelpOeE3Ipz.fbOTTyFZwUvZ0eo9'
   - name: Fackel
     type: gear
@@ -501,7 +501,7 @@ items:
         sourceId: Item.EVp5rwRYSGcx7uFV
     _id: fCqNcPSt8Vg04p3x
     system:
-      cosm: Das Lebende Land
+      cosm: livingLand
       description: ''
       price: '5'
       techlevel: 2
@@ -513,11 +513,13 @@ items:
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: 1694861276548
-      modifiedTime: 1694861333968
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722167020774
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Item.EVp5rwRYSGcx7uFV
+      duplicateSource: null
     _key: '!actors.items!sThfpHelpOeE3Ipz.fCqNcPSt8Vg04p3x'
   - name: Kletterausrüstung
     type: gear
@@ -530,7 +532,7 @@ items:
         sourceId: Item.dkcmq8YzJ1NKxRvv
     _id: VhD9TjE4HRc86Dgj
     system:
-      cosm: Zentralerde
+      cosm: coreEarth
       description: ''
       price: '100'
       techlevel: 23
@@ -542,11 +544,13 @@ items:
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: 1694861282331
-      modifiedTime: 1694861340735
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722167024110
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Item.dkcmq8YzJ1NKxRvv
+      duplicateSource: null
     _key: '!actors.items!sThfpHelpOeE3Ipz.VhD9TjE4HRc86Dgj'
   - name: Rucksack
     type: gear
@@ -559,7 +563,7 @@ items:
         sourceId: Item.9OFC7IM8K9EMljbZ
     _id: uIerRFa2G8HaDvCL
     system:
-      cosm: Aysle
+      cosm: aysle
       description: ''
       price: '100'
       techlevel: 8
@@ -571,11 +575,13 @@ items:
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: 1694861287979
-      modifiedTime: 1694861345511
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722167031015
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Item.9OFC7IM8K9EMljbZ
+      duplicateSource: null
     _key: '!actors.items!sThfpHelpOeE3Ipz.uIerRFa2G8HaDvCL'
   - _id: dTA20on8ymXQO4js
     name: Schalldämper
@@ -588,7 +594,7 @@ items:
       core:
         sourceId: Item.iEYWjxoR1snKtXUi
     system:
-      cosm: Nil-Imperium
+      cosm: coreEarth
       description: >-
         <p>Ein Schalld&auml;mpfer ist eine Vorrichtung am Lauf einer Waffe, die
         den L&auml;rmpegel beim Abfeuern unterdr&uuml;ckt. Dies verringert den
@@ -608,11 +614,13 @@ items:
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: 1694861305363
-      modifiedTime: 1694861333968
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722167038046
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Item.iEYWjxoR1snKtXUi
+      duplicateSource: null
     _key: '!actors.items!sThfpHelpOeE3Ipz.dTA20on8ymXQO4js'
   - _id: zPmSTPA4NrsRGeWN
     name: Lederjacke
@@ -626,7 +634,7 @@ items:
         sourceId: >-
           Compendium.te001-core-rulebook.grw-de-ausruestung.Item.ibQvaehrqx24DxvU
     system:
-      cosm: Zentralerde
+      cosm: nileEmpire
       description: >-
         <p>@UUID[Compendium.te001-core-rulebook.grw-de-grw.Qlx6yGF0Mmo6Xzrv.JournalEntryPage.7GGUUHzuYIqGPXDO#ganzkorper/torso:]{Torso}</p>
 
@@ -647,12 +655,54 @@ items:
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.7.0
-      coreVersion: '11.315'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: 1711562366193
-      modifiedTime: 1711706181562
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722167045143
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Compendium.te001-core-rulebook.grw-de-ausruestung.Item.ibQvaehrqx24DxvU
+      duplicateSource: null
     _key: '!actors.items!sThfpHelpOeE3Ipz.zPmSTPA4NrsRGeWN'
+  - name: Extra-Magazine
+    type: ammunition
+    img: systems/torgeternity/images/icons/ammo-icon.webp
+    system:
+      cosm: ''
+      description: >-
+        <p><span style="font-family:'Palatino Linotype'">Fünfmal Glock
+        nachladen.</span></p>
+      price: ''
+      techlevel: 21
+      value: 0
+      secondaryAxiom:
+        selected: none
+        value: null
+      type: ''
+      quantity: 5
+      damageMod: 0
+      apMod: 0
+      fireDamage: false
+      blastRadius: Keiner
+      darknessMod: none
+      reach: ''
+    effects: []
+    folder: null
+    sort: 0
+    ownership:
+      default: 0
+      93AMwcGe6H37rcPA: 3
+    flags: {}
+    _stats:
+      compendiumSource: Item.TptgnUCwWM2QZCaK
+      duplicateSource: Item.KRYQ71jof26XeGEv
+      coreVersion: '12.330'
+      systemId: torgeternity
+      systemVersion: 12.2.0
+      createdTime: 1722166993617
+      modifiedTime: 1722167079085
+      lastModifiedBy: 93AMwcGe6H37rcPA
+    _id: a85jDXcicp1xAwRS
+    _key: '!actors.items!sThfpHelpOeE3Ipz.a85jDXcicp1xAwRS'
 effects:
   - _id: uelyEowJpJCeEOCW
     changes:
@@ -669,15 +719,27 @@ effects:
       turns: null
       startRound: null
       startTurn: null
-    icon: icons/svg/aura.svg
     origin: >-
       Compendium.torgeternity.system-de-archetypen.Actor.sThfpHelpOeE3Ipz.Item.Mt7Lc6QAGGXYT2hK
     transfer: false
     flags: {}
-    tint: null
+    tint: '#ffffff'
     name: Begünstigung Überleben
     description: ''
     statuses: []
+    _stats:
+      coreVersion: '12.330'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+    img: icons/svg/aura.svg
+    type: base
+    system: {}
+    sort: 0
     _key: '!actors.effects!sThfpHelpOeE3Ipz.uelyEowJpJCeEOCW'
 folder: null
 sort: 0
@@ -894,7 +956,7 @@ system:
       baseAttribute: dexterity
       adds: 0
       isFav: false
-      groupName: combat
+      groupName: other
       unskilledUse: 1
       isThreatSkill: false
       defenseOnly: false
@@ -1174,14 +1236,20 @@ prototypeToken:
       min: 0
       max: 1
     attenuation: 0.5
+    negative: false
+    priority: 0
   texture:
     src: systems/torgeternity/images/characters/relic_raider.Token.webp
-    tint: null
+    tint: '#ffffff'
     scaleX: 1
     scaleY: 1
     offsetX: 0
     offsetY: 0
     rotation: 0
+    anchorX: 0.5
+    anchorY: 0.5
+    fit: contain
+    alphaThreshold: 0.75
   sight:
     angle: 360
     enabled: true
@@ -1191,14 +1259,30 @@ prototypeToken:
     attenuation: 0.1
     saturation: 0
     contrast: 0
+    color: null
   appendNumber: false
   prependAdjective: false
   detectionModes: []
+  hexagonalShape: 0
+  occludable:
+    radius: 0
+  ring:
+    enabled: false
+    colors:
+      ring: null
+      background: null
+    effects: 1
+    subject:
+      scale: 1
+      texture: null
 _stats:
   systemId: torgeternity
   systemVersion: 3.8.1
-  coreVersion: '11.315'
+  coreVersion: '12.330'
   createdTime: 1694861141351
   modifiedTime: 1716827811704
   lastModifiedBy: VAnYow5sWS9EJzo0
+  compendiumSource: Compendium.torgeternity.archetypes.tbqGzMeQeCA3n1Mt
+  duplicateSource: null
 _key: '!actors!sThfpHelpOeE3Ipz'
+

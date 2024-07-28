@@ -14,7 +14,7 @@ items:
     effects: []
     folder: null
     system:
-      cosm: Aysle
+      cosm: aysle
       description: ''
       price: '25'
       techlevel: 8
@@ -24,11 +24,13 @@ items:
       default: 0
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: null
-      modifiedTime: 1693910172992
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722156112824
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Item.gzQRZhlLKWBaS49M
+      duplicateSource: null
     _key: '!actors.items!cdSvyJHbG0GbFzkh.ppzqLywwc7NrsWMn'
   - _id: haZJ2A3wPH74aOBw
     name: Composite Longbow
@@ -41,7 +43,7 @@ items:
       core:
         sourceId: Compendium.te001-core-rulebook.Items.RXXesFyswYwzjRCS
     system:
-      cosm: Aysle
+      cosm: aysle
       description: >-
         <p>A more powerful version of the long bow, this weapon is made up of
         three different materials, combined to enhance the elastic properties of
@@ -55,7 +57,7 @@ items:
       techlevel: 13
       value: 11
       ammo:
-        max: 0
+        max: 1
         value: 0
       ap: 0
       attackWith: missileWeapons
@@ -73,11 +75,13 @@ items:
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: 1693910151043
-      modifiedTime: 1693910151043
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722156241312
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Compendium.te001-core-rulebook.Items.RXXesFyswYwzjRCS
+      duplicateSource: null
     _key: '!actors.items!cdSvyJHbG0GbFzkh.haZJ2A3wPH74aOBw'
   - _id: tKdZdnj59nY0KkvJ
     name: Longsword
@@ -90,7 +94,7 @@ items:
       core:
         sourceId: Compendium.te001-core-rulebook.Items.qbarQFM2pTUrRfsB
     system:
-      cosm: Aysle
+      cosm: aysle
       description: <p>Found in <strong>Core Rules</strong></p>
       price: '120'
       techlevel: 9
@@ -110,11 +114,13 @@ items:
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: 1693910157203
-      modifiedTime: 1693910157203
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722156233872
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Compendium.te001-core-rulebook.Items.qbarQFM2pTUrRfsB
+      duplicateSource: null
     _key: '!actors.items!cdSvyJHbG0GbFzkh.tKdZdnj59nY0KkvJ'
   - _id: FMilBhNnYxRQwnGG
     name: Healing Potion
@@ -127,62 +133,29 @@ items:
       core:
         sourceId: Compendium.te001-core-rulebook.Items.cyc4yMjoj7ve1Tj5
     system:
-      cosm: Aysle
-      description: >-
-        <p>Drinking this thick, clear liquid heals one wound and restores a [[/r
-        1d6x6max5]]{BD} of shock.</p>
-
-        <p>&nbsp;</p>
-
-        <p>Found in <strong>Core Rules, Aysle Sourcebook</strong></p>
+      cosm: aysle
+      description: "<p>Drinking this thick, clear liquid heals one wound and restores a [[/r 1d6x6max5]]{BD} of shock.</p><p>\_</p><p>Found in <strong>Core Rules, Aysle Sourcebook</strong></p>"
       price: '500'
       techlevel: 12
       value: 13
       equippedClass: item-equipped
+      secondaryAxiom:
+        selected: magic
+        value: 13
     ownership:
       default: 0
       A9LyAqagoJJU3gDH: 3
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: 1693910183323
-      modifiedTime: 1693910200323
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722156167775
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Compendium.te001-core-rulebook.Items.cyc4yMjoj7ve1Tj5
+      duplicateSource: null
     _key: '!actors.items!cdSvyJHbG0GbFzkh.FMilBhNnYxRQwnGG'
-  - _id: KyHmoPq98GSEdHYd
-    name: Quiver
-    type: gear
-    img: systems/torgeternity/images/icons/gear-icon.webp
-    effects: []
-    folder: null
-    sort: 800000
-    flags:
-      core:
-        sourceId: Compendium.te001-core-rulebook.Items.OAfwe6wKuFsbkLCM
-    system:
-      cosm: Aysle
-      description: |-
-        <p>A container that holds 20 arrows (included).</p>
-        <p>&nbsp;</p>
-        <p>Found in <strong>Core Rules</strong></p>
-      price: '5'
-      techlevel: 7
-      value: 4
-      equippedClass: item-equipped
-    ownership:
-      default: 0
-      A9LyAqagoJJU3gDH: 3
-      CtisFurQNe9h7ABb: 3
-    _stats:
-      systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
-      createdTime: 1693910188155
-      modifiedTime: 1693910199105
-      lastModifiedBy: CtisFurQNe9h7ABb
-    _key: '!actors.items!cdSvyJHbG0GbFzkh.KyHmoPq98GSEdHYd'
   - _id: Cj581kLC5ZCD650p
     name: Warden
     type: perk
@@ -195,7 +168,7 @@ items:
         sourceId: Compendium.te001-core-rulebook.Items.C53zQKf33q28slDw
     system:
       category: elf
-      cosm: Aysle
+      cosm: aysle
       description: >-
         <p>Elven wardens roamed the wilderness of Aysle before Uthorion&rsquo;s
         Rage, always alert for threats to the good folk. After the Dark
@@ -300,11 +273,13 @@ items:
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: 1693910211276
-      modifiedTime: 1693910377227
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722152945296
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Compendium.te001-core-rulebook.Items.C53zQKf33q28slDw
+      duplicateSource: null
     _key: '!actors.items!cdSvyJHbG0GbFzkh.Cj581kLC5ZCD650p'
   - _id: IgA82b3Hb4MWoyhh
     name: Darkvision (Elf)
@@ -318,7 +293,7 @@ items:
         sourceId: Item.JCBCYFMvmpQHFWM4
     system:
       category: elf
-      cosm: Aysle
+      cosm: aysle
       description: >-
         <p>Elves ignore up to four points of
         @UUID[Compendium.te001-core-rulebook.rules.pwneQ55M0nnDH0Us.JournalEntryPage.EhKa65cpHvodUl2L#darkness]{Darkness
@@ -405,11 +380,13 @@ items:
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: 1693910230372
-      modifiedTime: 1693910388827
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722152974304
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Item.JCBCYFMvmpQHFWM4
+      duplicateSource: null
     _key: '!actors.items!cdSvyJHbG0GbFzkh.IgA82b3Hb4MWoyhh'
   - _id: yXXiJ8DCGJ90EQ0s
     name: White Wolf
@@ -423,7 +400,7 @@ items:
         sourceId: Compendium.te001-core-rulebook.Items.j1cM05PejztjGAjk
     system:
       category: elf
-      cosm: Aysle
+      cosm: aysle
       description: >-
         <p>Elven wardens often take white wolves as companions (not pets), and
         the two live, fight, and die together from the moment of bonding on.</p>
@@ -540,11 +517,13 @@ items:
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: 1693910331627
-      modifiedTime: 1693912168277
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722152936223
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Compendium.te001-core-rulebook.Items.j1cM05PejztjGAjk
+      duplicateSource: null
     _key: '!actors.items!cdSvyJHbG0GbFzkh.yXXiJ8DCGJ90EQ0s'
   - _id: GBcFR2rXuLgPNisK
     name: Graceful (Elf)
@@ -558,7 +537,7 @@ items:
         sourceId: Item.JCBCYFMvmpQHFWM4
     system:
       category: elf
-      cosm: Aysle
+      cosm: aysle
       description: >-
         <p>When rolling directly against <em>Dexterity</em>, treat the test as
         @UUID[Compendium.te001-core-rulebook.rules.pwneQ55M0nnDH0Us.JournalEntryPage.EhKa65cpHvodUl2L#favored-skills]{Favored}.
@@ -648,11 +627,13 @@ items:
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: 1693910344069
-      modifiedTime: 1693910385363
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722152969519
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Item.JCBCYFMvmpQHFWM4
+      duplicateSource: null
     _key: '!actors.items!cdSvyJHbG0GbFzkh.GBcFR2rXuLgPNisK'
   - _id: jYmAGel8tlmPept4
     name: Magical Affinity (Elf)
@@ -666,7 +647,7 @@ items:
         sourceId: Item.JCBCYFMvmpQHFWM4
     system:
       category: elf
-      cosm: Aysle
+      cosm: aysle
       description: >-
         <p>Elves are born and bred of magic and suffer without it. Any time an
         elf is in a realm with a Magic Axiom less than 12, any Fatigue result
@@ -758,11 +739,13 @@ items:
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: 1693910351093
-      modifiedTime: 1693910381587
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722152954720
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Item.JCBCYFMvmpQHFWM4
+      duplicateSource: null
     _key: '!actors.items!cdSvyJHbG0GbFzkh.jYmAGel8tlmPept4'
   - _id: 21KNmkaBFbvVkPRY
     name: Leather Jerkin
@@ -775,7 +758,7 @@ items:
       core:
         sourceId: Compendium.te001-core-rulebook.Items.Item.34ioFwhBc4c39YFU
     system:
-      cosm: Aysle
+      cosm: aysle
       description: >-
         <p>@UUID[Compendium.te001-core-rulebook.rules.pwneQ55M0nnDH0Us.JournalEntryPage.qKdamp4rrcX6TTt0#full-body/torso:]{Torso}</p>
 
@@ -802,12 +785,52 @@ items:
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.7.0
-      coreVersion: '11.315'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: 1711551146690
-      modifiedTime: 1711704505534
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722156189944
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Compendium.te001-core-rulebook.Items.Item.34ioFwhBc4c39YFU
+      duplicateSource: null
     _key: '!actors.items!cdSvyJHbG0GbFzkh.21KNmkaBFbvVkPRY'
+  - name: Quiver
+    type: ammunition
+    _id: wCLRJT1H9YSdxQOi
+    img: systems/torgeternity/images/icons/ammo-icon.webp
+    system:
+      cosm: ''
+      description: <p>A container that holds 20 arrows.</p>
+      price: ''
+      techlevel: 7
+      value: 0
+      secondaryAxiom:
+        selected: none
+        value: null
+      type: ''
+      quantity: 20
+      damageMod: 0
+      apMod: 0
+      fireDamage: false
+      blastRadius: None
+      darknessMod: none
+      reach: ''
+    effects: []
+    folder: null
+    sort: 0
+    ownership:
+      default: 0
+      93AMwcGe6H37rcPA: 3
+    flags: {}
+    _stats:
+      compendiumSource: Item.5ksMgyuK1eouSxnA
+      duplicateSource: null
+      coreVersion: '12.330'
+      systemId: torgeternity
+      systemVersion: 12.2.0
+      createdTime: 1722108884240
+      modifiedTime: 1722156467671
+      lastModifiedBy: 93AMwcGe6H37rcPA
+    _key: '!actors.items!cdSvyJHbG0GbFzkh.wCLRJT1H9YSdxQOi'
 effects: []
 folder: null
 sort: 100001
@@ -1022,7 +1045,7 @@ system:
       baseAttribute: dexterity
       adds: 3
       isFav: false
-      groupName: combat
+      groupName: other
       unskilledUse: 1
       isThreatSkill: false
       defenseOnly: false
@@ -1295,14 +1318,20 @@ prototypeToken:
       max: 1
     color: null
     attenuation: 0.5
+    negative: false
+    priority: 0
   texture:
     src: systems/torgeternity/images/characters/elven_warden.Token.webp
-    tint: null
+    tint: '#ffffff'
     scaleX: 1
     scaleY: 1
     offsetX: 0
     offsetY: 0
     rotation: 0
+    anchorX: 0.5
+    anchorY: 0.5
+    fit: contain
+    alphaThreshold: 0.75
   sight:
     angle: 360
     enabled: false
@@ -1312,14 +1341,30 @@ prototypeToken:
     attenuation: 0.1
     saturation: 0
     contrast: 0
+    color: null
   appendNumber: false
   prependAdjective: false
   detectionModes: []
+  hexagonalShape: 0
+  occludable:
+    radius: 0
+  ring:
+    enabled: false
+    colors:
+      ring: null
+      background: null
+    effects: 1
+    subject:
+      scale: 1
+      texture: null
 _stats:
   systemId: torgeternity
   systemVersion: 3.8.1
-  coreVersion: '11.315'
+  coreVersion: '12.330'
   createdTime: 1693910130714
   modifiedTime: 1716827807942
   lastModifiedBy: VAnYow5sWS9EJzo0
+  compendiumSource: null
+  duplicateSource: null
 _key: '!actors!cdSvyJHbG0GbFzkh'
+

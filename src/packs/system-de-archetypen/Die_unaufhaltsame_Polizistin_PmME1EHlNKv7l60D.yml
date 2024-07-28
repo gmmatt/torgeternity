@@ -26,39 +26,13 @@ items:
     _stats:
       systemId: torgeternity
       systemVersion: 3.1.1
-      coreVersion: '11.308'
+      coreVersion: '12.330'
       createdTime: null
       modifiedTime: 1694869755700
       lastModifiedBy: CtisFurQNe9h7ABb
+      compendiumSource: Item.nPZyQyNBzc62zWh7
+      duplicateSource: null
     _key: '!actors.items!PmME1EHlNKv7l60D.7gNOS0FFR9cTw6Ne'
-  - _id: iq2B0D76k7kPnsBz
-    name: Extra-Magazine
-    type: gear
-    img: systems/torgeternity/images/icons/gear-icon.webp
-    effects: []
-    folder: YrLpjzkzDZxqWzUw
-    sort: 100000
-    flags:
-      core:
-        sourceId: Item.9VjiNmOA2TB62Xej
-    system:
-      cosm: (Keins)
-      description: <p>5 volle Magazine Glock 9mm</p>
-      price: '0'
-      techlevel: 22
-      value: 0
-      equippedClass: item-equipped
-    ownership:
-      default: 0
-      9Q0XnqFwko7hRlvL: 3
-    _stats:
-      systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
-      createdTime: null
-      modifiedTime: 1694869746476
-      lastModifiedBy: CtisFurQNe9h7ABb
-    _key: '!actors.items!PmME1EHlNKv7l60D.iq2B0D76k7kPnsBz'
   - _id: GueHBl4GQ4sTVI0B
     name: Schlagstock
     type: meleeweapon
@@ -71,11 +45,12 @@ items:
         sourceId: >-
           Compendium.te001-core-rulebook.grw-de-ausruestung.Item.NnKJxu8DDBFJftYn
     system:
-      cosm: Zentralerde
+      cosm: coreEarth
       description: >-
-        <p>Ein moderner Schlagstock aus fortschrittlichen Materialien und
-        speziell ausgewogen und gewichtet. Viele Versionen haben einen
-        ausklappbaren Schl&auml;gerkopf oder sind zusammenklappbar.</p>
+        <p>@UUID[Compendium.te001-core-rulebook.grw-de-grw.Qlx6yGF0Mmo6Xzrv.JournalEntryPage.41rZYYhaMC2T260D#ringen]{Ringen}</p><p>Ein
+        moderner Schlagstock aus fortschrittlichen Materialien und speziell
+        ausgewogen und gewichtet. Viele Versionen haben einen ausklappbaren
+        Schlägerkopf oder sind zusammenklappbar.</p>
       price: '120'
       techlevel: 21
       value: 11
@@ -87,18 +62,20 @@ items:
       damageType: strengthPlus
       equipped: false
       equippedClass: .item-unequipped
-      notes: ''
+      notes: Kann für Ringen eingesetzt werden.
     ownership:
       default: 0
       9Q0XnqFwko7hRlvL: 3
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: 1694861621122
-      modifiedTime: 1694861621122
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722167322258
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Compendium.te001-core-rulebook.grw-de-ausruestung.Item.NnKJxu8DDBFJftYn
+      duplicateSource: null
     _key: '!actors.items!PmME1EHlNKv7l60D.GueHBl4GQ4sTVI0B'
   - _id: HuIrLDybaRtHlt4V
     name: Glock 9mm
@@ -112,7 +89,7 @@ items:
         sourceId: >-
           Compendium.te001-core-rulebook.grw-de-ausruestung.Item.uS5bsDS4zQkN7NTj
     system:
-      cosm: Zentralerde
+      cosm: coreEarth
       description: >-
         <p>@UUID[Compendium.te001-core-rulebook.grw-de-grw.Qlx6yGF0Mmo6Xzrv.JournalEntryPage.7GGUUHzuYIqGPXDO#karabiner:]{Pistole}</p>
 
@@ -140,11 +117,13 @@ items:
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: 1694861633799
-      modifiedTime: 1694861633799
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722167238389
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Compendium.te001-core-rulebook.grw-de-ausruestung.Item.uS5bsDS4zQkN7NTj
+      duplicateSource: null
     _key: '!actors.items!PmME1EHlNKv7l60D.HuIrLDybaRtHlt4V'
   - _id: Ynxd3b9UZ4Da98TI
     name: Handschellen
@@ -157,14 +136,13 @@ items:
       core:
         sourceId: Item.sh2tcK6G0tcScgwq
     system:
-      cosm: Nil-Imperium
+      cosm: nileEmpire
       description: >-
         <p>Das Anbringen von Handschellen erfordert einen guten Erfolg bei einem
         @UUID[Compendium.te001-core-rulebook.grw-de-grw.Qlx6yGF0Mmo6Xzrv.JournalEntryPage.41rZYYhaMC2T260D#ringen]{Ringen}-Angriff.
-        Die H&auml;nde des festgehaltenen Ziels werden zusammengebunden, bis die
-        Handschellen ge&ouml;ffnet oder aufgebrochen wurden, was einen Angriff
-        gegen Robustheit 18 oder eine heldenhafte (MW 18) St&auml;rke-Probe
-        erfordert.</p>
+        Die Hände des festgehaltenen Ziels werden zusammengebunden, bis die
+        Handschellen geöffnet oder aufgebrochen wurden, was einen Angriff gegen
+        Robustheit 18 oder eine heldenhafte (MW 18) Stärke-Probe erfordert.</p>
       price: '50'
       techlevel: 19
       value: 9
@@ -175,11 +153,13 @@ items:
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: 1694861660187
-      modifiedTime: 1694861716524
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722167291165
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Item.sh2tcK6G0tcScgwq
+      duplicateSource: null
     _key: '!actors.items!PmME1EHlNKv7l60D.Ynxd3b9UZ4Da98TI'
   - name: Leuchtfackel (3)
     type: gear
@@ -192,7 +172,7 @@ items:
         sourceId: Item.Uc1pL9fqLa4cfonl
     _id: t98xXigzyoXr0hbV
     system:
-      cosm: Nil-Imperium
+      cosm: nileEmpire
       description: ''
       price: '5'
       techlevel: 20
@@ -204,11 +184,13 @@ items:
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: 1694861668235
-      modifiedTime: 1694861716524
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722167206997
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Item.Uc1pL9fqLa4cfonl
+      duplicateSource: null
     _key: '!actors.items!PmME1EHlNKv7l60D.t98xXigzyoXr0hbV'
   - name: Multitool
     type: gear
@@ -236,10 +218,12 @@ items:
     _stats:
       systemId: torgeternity
       systemVersion: 3.1.1
-      coreVersion: '11.308'
+      coreVersion: '12.330'
       createdTime: 1694861674818
       modifiedTime: 1694861716524
       lastModifiedBy: CtisFurQNe9h7ABb
+      compendiumSource: Item.G0KmopPlr7jWlbXo
+      duplicateSource: null
     _key: '!actors.items!PmME1EHlNKv7l60D.AGsVQVpg17a8b1rA'
   - name: Taschenlampe
     type: gear
@@ -265,10 +249,12 @@ items:
     _stats:
       systemId: torgeternity
       systemVersion: 3.1.1
-      coreVersion: '11.308'
+      coreVersion: '12.330'
       createdTime: 1694861679923
       modifiedTime: 1694861716524
       lastModifiedBy: CtisFurQNe9h7ABb
+      compendiumSource: Item.ghYEu90Et15IioVa
+      duplicateSource: null
     _key: '!actors.items!PmME1EHlNKv7l60D.XWkY6R2YL7gELPPp'
   - _id: jvZbj7wmWthOyli0
     name: Auffassungsgabe
@@ -282,7 +268,7 @@ items:
         sourceId: Compendium.te001-core-rulebook.grw-de-vorzuverb.Item.gFG6Tw4tAMtkXfYr
     system:
       category: prowess
-      cosm: (Keins)
+      cosm: none
       description: >-
         <p>Veteranen-Storm Knights sind sich ihrer Umgebung sehr bewusst. Sie
         wissen, wenn sich Gefahr n&auml;hert, sie haben immer m&ouml;gliche
@@ -375,11 +361,13 @@ items:
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: 1694861727938
-      modifiedTime: 1694868656057
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722167197716
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Compendium.te001-core-rulebook.grw-de-vorzuverb.Item.gFG6Tw4tAMtkXfYr
+      duplicateSource: null
     _key: '!actors.items!PmME1EHlNKv7l60D.jvZbj7wmWthOyli0'
   - _id: bZ0ymfbNEtDGRdqq
     name: Negation
@@ -393,7 +381,7 @@ items:
         sourceId: Compendium.te001-core-rulebook.grw-de-vorzuverb.Item.dpciXn2ZI7ZzCAMt
     system:
       category: reality
-      cosm: Zentralerde
+      cosm: coreEarth
       description: >-
         <p>Wenn ein Gegner versucht, eine M&ouml;glichkeit f&uuml;r eine
         Attributs- oder Fertigkeitsprobe auszugeben, darf der Storm Knight eine
@@ -484,11 +472,13 @@ items:
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: 1694861733419
-      modifiedTime: 1694868652521
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722167191805
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Compendium.te001-core-rulebook.grw-de-vorzuverb.Item.dpciXn2ZI7ZzCAMt
+      duplicateSource: null
     _key: '!actors.items!PmME1EHlNKv7l60D.bZ0ymfbNEtDGRdqq'
   - _id: GCZ1wJSh7G4VsnIg
     name: Ballistische/Kevlarweste
@@ -502,7 +492,7 @@ items:
         sourceId: >-
           Compendium.te001-core-rulebook.grw-de-ausruestung.Item.wT9t85wtxun9qe9w
     system:
-      cosm: Zentralerde
+      cosm: coreEarth
       description: >-
         <p>@UUID[Compendium.te001-core-rulebook.grw-de-grw.Qlx6yGF0Mmo6Xzrv.JournalEntryPage.7GGUUHzuYIqGPXDO#ermudung:]{Erm&uuml;dung}</p>
 
@@ -527,12 +517,54 @@ items:
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.7.0
-      coreVersion: '11.315'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: 1711562366229
-      modifiedTime: 1711705830406
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722167228717
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Compendium.te001-core-rulebook.grw-de-ausruestung.Item.wT9t85wtxun9qe9w
+      duplicateSource: null
     _key: '!actors.items!PmME1EHlNKv7l60D.GCZ1wJSh7G4VsnIg'
+  - name: Extra-Magazine
+    type: ammunition
+    img: systems/torgeternity/images/icons/ammo-icon.webp
+    system:
+      cosm: ''
+      description: >-
+        <p><span style="font-family:'Palatino Linotype'">Fünfmal Glock
+        nachladen.</span></p>
+      price: ''
+      techlevel: 21
+      value: 0
+      secondaryAxiom:
+        selected: none
+        value: null
+      type: ''
+      quantity: 5
+      damageMod: 0
+      apMod: 0
+      fireDamage: false
+      blastRadius: Keiner
+      darknessMod: none
+      reach: ''
+    effects: []
+    folder: null
+    sort: 0
+    ownership:
+      default: 0
+      93AMwcGe6H37rcPA: 3
+    flags: {}
+    _stats:
+      compendiumSource: Item.TptgnUCwWM2QZCaK
+      duplicateSource: Item.KRYQ71jof26XeGEv
+      coreVersion: '12.330'
+      systemId: torgeternity
+      systemVersion: 12.2.0
+      createdTime: 1722167214257
+      modifiedTime: 1722167214257
+      lastModifiedBy: 93AMwcGe6H37rcPA
+    _id: GNYOoTx6oVLwq8pY
+    _key: '!actors.items!PmME1EHlNKv7l60D.GNYOoTx6oVLwq8pY'
 effects: []
 folder: null
 sort: 0
@@ -749,7 +781,7 @@ system:
       baseAttribute: dexterity
       adds: 0
       isFav: false
-      groupName: combat
+      groupName: other
       unskilledUse: 1
       isThreatSkill: false
       defenseOnly: false
@@ -1032,14 +1064,20 @@ prototypeToken:
       min: 0
       max: 1
     attenuation: 0.5
+    negative: false
+    priority: 0
   texture:
     src: systems/torgeternity/images/characters/unstoppable_cop.Token.webp
-    tint: null
+    tint: '#ffffff'
     scaleX: 1
     scaleY: 1
     offsetX: 0
     offsetY: 0
     rotation: 0
+    anchorX: 0.5
+    anchorY: 0.5
+    fit: contain
+    alphaThreshold: 0.75
   sight:
     angle: 360
     enabled: true
@@ -1049,14 +1087,30 @@ prototypeToken:
     attenuation: 0.1
     saturation: 0
     contrast: 0
+    color: null
   appendNumber: false
   prependAdjective: false
   detectionModes: []
+  hexagonalShape: 0
+  occludable:
+    radius: 0
+  ring:
+    enabled: false
+    colors:
+      ring: null
+      background: null
+    effects: 1
+    subject:
+      scale: 1
+      texture: null
 _stats:
   systemId: torgeternity
   systemVersion: 3.8.1
-  coreVersion: '11.315'
+  coreVersion: '12.330'
   createdTime: 1694861600031
   modifiedTime: 1716827811377
   lastModifiedBy: VAnYow5sWS9EJzo0
+  compendiumSource: Compendium.torgeternity.archetypes.non4XwpfJLE9GiST
+  duplicateSource: null
 _key: '!actors!PmME1EHlNKv7l60D'
+

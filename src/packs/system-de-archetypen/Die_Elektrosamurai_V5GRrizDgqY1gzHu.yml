@@ -15,7 +15,7 @@ items:
         sourceId: Compendium.te001-core-rulebook.grw-de-vorzuverb.Item.WR4mGlmM1EdIyHUW
     system:
       category: prowess
-      cosm: (Keins)
+      cosm: none
       description: >-
         <p>Dieser Storm Knight ist f&uuml;r eine bestimmte Waffe bekannt. Wenn
         ein Angriff mit der Waffe dazu f&uuml;hrt, dass er bei der
@@ -108,11 +108,13 @@ items:
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: 1694866298554
-      modifiedTime: 1694866555606
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722164869738
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Compendium.te001-core-rulebook.grw-de-vorzuverb.Item.WR4mGlmM1EdIyHUW
+      duplicateSource: null
     _key: '!actors.items!V5GRrizDgqY1gzHu.kSLUifL30SjjsOrA'
   - _id: kX73wRdLxfe0Sbz0
     name: Elektrokatana
@@ -126,7 +128,7 @@ items:
         sourceId: >-
           Compendium.te001-core-rulebook.grw-de-ausruestung.Item.blwojapRBKk4M4Xg
     system:
-      cosm: Pan-Pacifica
+      cosm: panPacifica
       description: >-
         <p>Die in der Klinge untergebrachte Ionenschaltung leuchtet bei der
         Aktivierung mit Energie. Das Feld, das direkt &uuml;ber der
@@ -152,11 +154,13 @@ items:
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: 1694866320665
-      modifiedTime: 1694866320665
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722164918416
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Compendium.te001-core-rulebook.grw-de-ausruestung.Item.blwojapRBKk4M4Xg
+      duplicateSource: null
     _key: '!actors.items!V5GRrizDgqY1gzHu.kX73wRdLxfe0Sbz0'
   - name: Rauchkugeln
     type: gear
@@ -169,7 +173,7 @@ items:
         sourceId: Item.M1wtMEqhkMKt7zPa
     _id: IrcoBjk02YCM7KTS
     system:
-      cosm: Pan-Pacifica
+      cosm: panPacifica
       description: >-
         <p>Kann als Tricksen-Interaktionsangriff auf den Boden geworfen werden
         und hinterl&auml;sst dabei Rauch (Deckungsmalus &ndash;2) in einem
@@ -184,11 +188,13 @@ items:
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: 1694866345041
-      modifiedTime: 1694866345041
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722164907484
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Item.M1wtMEqhkMKt7zPa
+      duplicateSource: null
     _key: '!actors.items!V5GRrizDgqY1gzHu.IrcoBjk02YCM7KTS'
   - _id: tHnol0Anh6GtJ72e
     name: SC Kyogo 144 SMG
@@ -202,7 +208,7 @@ items:
         sourceId: >-
           Compendium.te001-core-rulebook.grw-de-ausruestung.Item.HM1hHISeFvyErmvU
     system:
-      cosm: Pan-Pacifica
+      cosm: panPacifica
       description: >-
         <p>@UUID[Compendium.te001-core-rulebook.grw-de-grw.Qlx6yGF0Mmo6Xzrv.JournalEntryPage.7GGUUHzuYIqGPXDO#kurzer-fs:]{Kurzer
         Feuersto&szlig;}</p>
@@ -233,11 +239,13 @@ items:
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: 1694866439177
-      modifiedTime: 1694866439177
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722164912883
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Compendium.te001-core-rulebook.grw-de-ausruestung.Item.HM1hHISeFvyErmvU
+      duplicateSource: null
     _key: '!actors.items!V5GRrizDgqY1gzHu.tHnol0Anh6GtJ72e'
   - _id: qxjS47DIU0aTw16e
     name: Ionengusoku
@@ -251,46 +259,8 @@ items:
         sourceId: Compendium.te001-core-rulebook.grw-de-vorzuverb.Item.5ILSmFBkAJ0HDq1v
     system:
       category: electricSamurai
-      cosm: Pan-Pacifica
-      description: >-
-        <p>Die charakteristische R&uuml;stung der Elektrosamurai ist der
-        Ionengusoku. Die ersten R&uuml;stungen orientierten sich an den
-        Kampfr&uuml;stungen der Elite-Sicherheitskr&auml;fte von Kanawa, aber im
-        Laufe der Zeit kamen viele Anpassungen und Verbesserungen hinzu, als die
-        Samurai die Technologie von Kanawa f&uuml;r sich nutzten.&nbsp;</p>
-
-        <p>Die R&uuml;stung selbst ist hochentwickelt und f&uuml;r ihren
-        Tr&auml;ger ma&szlig;geschneidert. Ein Bio-Scanner sorgt daf&uuml;r,
-        dass sich die R&uuml;stung automatisch abschaltet und in Starre
-        verf&auml;llt, wenn sie von jemand anderem angelegt wird. Sie begrenzt
-        die Geschicklichkeit ihres Tr&auml;gers auf 10, hat ein Tech-Axiom von
-        24, liefert +4 R&uuml;stung am gesamten K&ouml;rper und verursacht
-        Erm&uuml;dung.</p>
-
-        <p>Bei Wahl des Vorzuges
-        @Compendium[te001-core-rulebook.grw-de-ausruestung.KL5fs0ulvsqCVcwr]{Ionengusoku
-        (R&uuml;stung)} ausr&uuml;sten.&nbsp;</p>
-
-        <ul>
-
-        <li>Neue Verbesserungen: Dieser Vorzug darf mehr als einmal erworben
-        werden. Mit jedem zus&auml;tzlichen Erwerb wird die R&uuml;stung um eine
-        der unten aufgef&uuml;hrten Verbesserungen erweitert. Sofern nichts
-        anderes angegeben ist, darf jede Verbesserung nur einmal ausgew&auml;hlt
-        werden&nbsp;</li>
-
-        <li>@Compendium[te001-core-rulebook.grw-de-vorzuverb.Rk32103yeVzF2tTc]{Blendblitz}</li>
-
-        <li>@Compendium[te001-core-rulebook.grw-de-vorzuverb.Sgekb3d5Yw9To2KE]{Blitzh&uuml;lle}</li>
-
-        <li>@Compendium[te001-core-rulebook.grw-de-vorzuverb.n36LEGfrj6f4X4qR]{Cham&auml;leonplatten}</li>
-
-        <li>@Compendium[te001-core-rulebook.grw-de-vorzuverb.xPjDp0egw00ew40H]{Kabuto
-        HUD}</li>
-
-        <li>@Compendium[te001-core-rulebook.grw-de-vorzuverb.CZWjBkTqdE1WMK1k]{Ultraleicht-Legierung}</li>
-
-        </ul>
+      cosm: panPacifica
+      description: "<p>Die charakteristische Rüstung der Elektrosamurai ist der Ionengusoku. Die ersten Rüstungen orientierten sich an den Kampfrüstungen der Elite-Sicherheitskräfte von Kanawa, aber im Laufe der Zeit kamen viele Anpassungen und Verbesserungen hinzu, als die Samurai die Technologie von Kanawa für sich nutzten.\_</p><p>Die Rüstung selbst ist hochentwickelt und für ihren Träger maßgeschneidert. Ein Bio-Scanner sorgt dafür, dass sich die Rüstung automatisch abschaltet und in Starre verfällt, wenn sie von jemand anderem angelegt wird. Sie begrenzt die Geschicklichkeit ihres Trägers auf 10, hat ein Tech-Axiom von 24, liefert +4 Rüstung am gesamten Körper und verursacht Ermüdung.</p><p>Bei Wahl des Vorzuges @Compendium[te001-core-rulebook.grw-de-ausruestung.KL5fs0ulvsqCVcwr]{Ionengusoku (Rüstung)} ausrüsten.\_</p><p><strong>Neue Verbesserungen:</strong> Dieser Vorzug darf mehr als einmal erworben werden. Mit jedem zusätzlichen Erwerb wird die Rüstung um eine der unten aufgeführten Verbesserungen erweitert. Sofern nichts anderes angegeben ist, darf jede Verbesserung nur einmal ausgewählt werden.</p><ul><li><strong>Blendblitz:</strong> Einmal pro Szene darf die Rüstung als freie Aktion einen blendenden Lichtblitz abstrahlen. Das Licht blendet augenblicklich alle Personen in einem mittleren Explosionsradius um den Charakter und macht sie Sehr Angeschlagen.</li><li><strong>Blitzhülle:</strong> Die Elektrosamurai erkannten schnell die Gefahr, die von Horden aus Infizierten oder dem tödlichen Klammerangriff der Jiang Shi ausgeht. Einmal pro Szene darf der Träger als freie Aktion eine elektrische Entladung auslösen, was 12 Schaden + 1 BW bei allem verursacht, das die Rüstung berührt. Alles, was den Samurai umklammert hält, löst diese Umklammerung automatisch auf.</li><li><strong>Chamäleonplatten:</strong> Die gesamte äußere Schicht der Gusoku ist mit Sensoren und LEDs bedeckt, die Farbe und Helligkeit verändern, um die Umgebung nachzuahmen, wenn der Samurai stillsteht. Solange er völlig bewegungslos bleibt (keine Aktionen oder Bewegungen), ist er effektiv unsichtbar und die Gegner erleiden beim Versuch, ihn zu finden oder mit Fernkampfangriffen zu treffen, einen Malus von –6.</li><li><strong>Kabuto HUD:</strong> Der Helm der Rüstung verfügt über ein integriertes Display, das es dem Träger erlaubt, bei seinen Fernkampfangriffen 2 Punkte Malus zu ignorieren.</li><li><strong>Ultraleicht-Legierung:</strong> Das geringe Gewicht der Rüstung und die perfekte Passform sorgen dafür, dass der Träger bei einem Ermüdungs-Effekt keinen zusätzlichen Schockschaden erleidet.</li></ul>"
       prerequisites: Geist 8+, mindestens 2 Fertigkeitsstufen in Nahkampfwaffen
       generalContradiction: false
       pulpPowers:
@@ -395,11 +365,13 @@ items:
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.7.0
-      coreVersion: '11.315'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: 1711706232065
-      modifiedTime: 1711706262758
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722165991520
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Compendium.te001-core-rulebook.grw-de-vorzuverb.Item.5ILSmFBkAJ0HDq1v
+      duplicateSource: null
     _key: '!actors.items!V5GRrizDgqY1gzHu.qxjS47DIU0aTw16e'
   - name: Ionengusoku (Rüstung)
     type: armor
@@ -413,14 +385,12 @@ items:
           Compendium.te001-core-rulebook.grw-de-ausruestung.Item.KL5fs0ulvsqCVcwr
     _id: wh1XEzDQhhm5obr3
     system:
-      cosm: Pan-Pacifica
+      cosm: panPacifica
       description: >-
-        <p>@UUID[Compendium.te001-core-rulebook.grw-de-grw.Qlx6yGF0Mmo6Xzrv.JournalEntryPage.7GGUUHzuYIqGPXDO#ermudung:]{Erm&uuml;dung}</p>
-
-        <p>@UUID[Compendium.te001-core-rulebook.grw-de-grw.Qlx6yGF0Mmo6Xzrv.JournalEntryPage.7GGUUHzuYIqGPXDO#ganzkorper/torso:]{Ganzk&ouml;rper}</p>
-
-        <p>Du erh&auml;lst diese R&uuml;stung automatisch, sobald du den Vorzug
-        "Ionengusoku" w&auml;hlst.</p>
+        <p>@UUID[Compendium.te001-core-rulebook.grw-de-grw.Qlx6yGF0Mmo6Xzrv.JournalEntryPage.7GGUUHzuYIqGPXDO#ermudung:]{Ermüdung}</p><p>@UUID[Compendium.te001-core-rulebook.grw-de-grw.Qlx6yGF0Mmo6Xzrv.JournalEntryPage.7GGUUHzuYIqGPXDO#ganzkorper/torso:]{Ganzkörper}</p><p>Du
+        erhälst diese Rüstung automatisch, sobald du den Vorzug
+        @UUID[Compendium.torgeternity.system-de-archetypen.Actor.V5GRrizDgqY1gzHu.Item.qxjS47DIU0aTw16e]{Ionengusoku}
+        wählst.</p>
       price: '0'
       techlevel: 24
       value: 0
@@ -437,11 +407,13 @@ items:
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.7.0
-      coreVersion: '11.315'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: 1711562366100
-      modifiedTime: 1711706276641
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722164895227
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Compendium.te001-core-rulebook.grw-de-ausruestung.Item.KL5fs0ulvsqCVcwr
+      duplicateSource: null
     _key: '!actors.items!V5GRrizDgqY1gzHu.wh1XEzDQhhm5obr3'
 effects: []
 folder: null
@@ -659,7 +631,7 @@ system:
       baseAttribute: dexterity
       adds: 0
       isFav: false
-      groupName: combat
+      groupName: other
       unskilledUse: 1
       isThreatSkill: false
       defenseOnly: false
@@ -940,14 +912,20 @@ prototypeToken:
       min: 0
       max: 1
     attenuation: 0.5
+    negative: false
+    priority: 0
   texture:
     src: systems/torgeternity/images/characters/electric_samurai.Token.webp
-    tint: null
+    tint: '#ffffff'
     scaleX: 1
     scaleY: 1
     offsetX: 0
     offsetY: 0
     rotation: 0
+    anchorX: 0.5
+    anchorY: 0.5
+    fit: contain
+    alphaThreshold: 0.75
   sight:
     angle: 360
     enabled: true
@@ -957,14 +935,30 @@ prototypeToken:
     attenuation: 0.1
     saturation: 0
     contrast: 0
+    color: null
   appendNumber: false
   prependAdjective: false
   detectionModes: []
+  hexagonalShape: 0
+  occludable:
+    radius: 0
+  ring:
+    enabled: false
+    colors:
+      ring: null
+      background: null
+    effects: 1
+    subject:
+      scale: 1
+      texture: null
 _stats:
   systemId: torgeternity
   systemVersion: 3.8.1
-  coreVersion: '11.315'
+  coreVersion: '12.330'
   createdTime: 1694866294442
   modifiedTime: 1716827811466
   lastModifiedBy: VAnYow5sWS9EJzo0
+  compendiumSource: Compendium.torgeternity.archetypes.QVpKuacd4LKfpJOy
+  duplicateSource: null
 _key: '!actors!V5GRrizDgqY1gzHu'
+

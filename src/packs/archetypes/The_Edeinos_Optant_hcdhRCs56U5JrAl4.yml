@@ -15,7 +15,7 @@ items:
         sourceId: Item.JCBCYFMvmpQHFWM4
     system:
       category: edeinos
-      cosm: (None)
+      cosm: livingLand
       description: >-
         <p>Edeinos are outsiders to everyone but other edeinos. They subtract 4
         from&nbsp;<em>persuasion&nbsp;</em>tests with non-edeinos, and are often
@@ -102,11 +102,13 @@ items:
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: 1693909340629
-      modifiedTime: 1693910509875
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722152836049
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Item.JCBCYFMvmpQHFWM4
+      duplicateSource: null
     _key: '!actors.items!hcdhRCs56U5JrAl4.hUiTDA9Qcfrvg8kJ'
   - _id: WiPheHr3LGK9czpN
     name: Miracles
@@ -120,7 +122,7 @@ items:
         sourceId: Compendium.te001-core-rulebook.Items.W6HcoYyOqi6pGGfD
     system:
       category: faith
-      cosm: Other
+      cosm: other
       description: >-
         <p><strong>Cosms:</strong> Core Earth, Aysle, Cyberpapacy, Living Land,
         Nile Empire, Orrorsh</p>
@@ -225,11 +227,13 @@ items:
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: 1693909346878
-      modifiedTime: 1693910505963
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722152859504
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Compendium.te001-core-rulebook.Items.W6HcoYyOqi6pGGfD
+      duplicateSource: null
     _key: '!actors.items!hcdhRCs56U5JrAl4.WiPheHr3LGK9czpN'
   - _id: FSUnYxN1ETbZhCeI
     name: Whip Tail
@@ -243,7 +247,7 @@ items:
         sourceId: Compendium.te001-core-rulebook.Items.MLrktsSHLMM5n7g9
     system:
       category: edeinos
-      cosm: Living Land
+      cosm: livingLand
       description: >-
         <p>The lizard-folk use their tails primarily for balance, but some have
         learned to fight with them as well, performing complicated spins and
@@ -335,11 +339,13 @@ items:
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: 1693909353421
-      modifiedTime: 1693910502795
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722152824648
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Compendium.te001-core-rulebook.Items.MLrktsSHLMM5n7g9
+      duplicateSource: null
     _key: '!actors.items!hcdhRCs56U5JrAl4.FSUnYxN1ETbZhCeI'
   - _id: UvpwyN3UJzkXnCPJ
     name: Hrockt Shoot Spear
@@ -352,7 +358,7 @@ items:
       core:
         sourceId: Compendium.te001-core-rulebook.Items.ammMtd4GDTZAbVQx
     system:
-      cosm: Living Land
+      cosm: livingLand
       description: >-
         <p>@UUID[Compendium.te001-core-rulebook.rules.pwneQ55M0nnDH0Us.JournalEntryPage.qKdamp4rrcX6TTt0#thrown:]{Thrown}</p>
 
@@ -366,7 +372,7 @@ items:
 
         <p>Found in <strong>Core Rules</strong></p>
       price: '40'
-      techlevel: 3
+      techlevel: 2
       value: 8
       ap: 0
       attackWith: meleeWeapons
@@ -374,7 +380,7 @@ items:
       chatNote: ''
       damage: 2
       damageType: strengthPlus
-      equipped: false
+      equipped: true
       equippedClass: .item-unequipped
       notes: Thrown
     ownership:
@@ -383,11 +389,13 @@ items:
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: 1693909378930
-      modifiedTime: 1693909378930
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722155909304
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Compendium.te001-core-rulebook.Items.ammMtd4GDTZAbVQx
+      duplicateSource: null
     _key: '!actors.items!hcdhRCs56U5JrAl4.UvpwyN3UJzkXnCPJ'
   - _id: OgvvLI102HQqibWo
     name: Totem
@@ -400,7 +408,7 @@ items:
       core:
         sourceId: Compendium.te001-core-rulebook.Items.5o1m7pL2fi5LABQw
     system:
-      cosm: Living Land
+      cosm: livingLand
       description: <p>Bone carving of Lanala</p>
       price: '25'
       techlevel: 5
@@ -412,11 +420,13 @@ items:
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: 1693909398173
-      modifiedTime: 1693909421451
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722155751457
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Compendium.te001-core-rulebook.Items.5o1m7pL2fi5LABQw
+      duplicateSource: null
     _key: '!actors.items!hcdhRCs56U5JrAl4.OgvvLI102HQqibWo'
   - _id: 7wCbJyGmL99AlFqc
     name: Hrockt Shoot Spear (Thrown)
@@ -429,7 +439,7 @@ items:
       core:
         sourceId: Compendium.te001-core-rulebook.Items.ifZclb6BhuIsPfjt
     system:
-      cosm: Living Land
+      cosm: livingLand
       description: >-
         <p>Pliable when wet and growing, but hard as iron once cut and dried.
         Often cultivated into straight spears with sharp points.</p>
@@ -455,11 +465,13 @@ items:
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: 1693909485506
-      modifiedTime: 1693909664846
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722155801849
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Compendium.te001-core-rulebook.Items.ifZclb6BhuIsPfjt
+      duplicateSource: null
     _key: '!actors.items!hcdhRCs56U5JrAl4.7wCbJyGmL99AlFqc'
   - _id: j4bd2LSc9RyWGvDr
     name: Healing
@@ -515,10 +527,12 @@ items:
     _stats:
       systemId: torgeternity
       systemVersion: 3.1.1
-      coreVersion: '11.308'
+      coreVersion: '12.330'
       createdTime: 1693909676811
       modifiedTime: 1693909676811
       lastModifiedBy: CtisFurQNe9h7ABb
+      compendiumSource: Compendium.te001-core-rulebook.Items.UpTgsybNJ1srMK4o
+      duplicateSource: null
     _key: '!actors.items!hcdhRCs56U5JrAl4.j4bd2LSc9RyWGvDr'
   - _id: bVioii8rx0LCXrcH
     name: Strike
@@ -573,10 +587,12 @@ items:
     _stats:
       systemId: torgeternity
       systemVersion: 3.1.1
-      coreVersion: '11.308'
+      coreVersion: '12.330'
       createdTime: 1693909681228
       modifiedTime: 1693909681228
       lastModifiedBy: CtisFurQNe9h7ABb
+      compendiumSource: Compendium.te001-core-rulebook.Items.mtNAkQHSz276enpC
+      duplicateSource: null
     _key: '!actors.items!hcdhRCs56U5JrAl4.bVioii8rx0LCXrcH'
   - _id: Xc2qo0WjOqwKb1qy
     name: Ward Enemy
@@ -642,10 +658,12 @@ items:
     _stats:
       systemId: torgeternity
       systemVersion: 3.1.1
-      coreVersion: '11.308'
+      coreVersion: '12.330'
       createdTime: 1693909685043
       modifiedTime: 1693909685043
       lastModifiedBy: CtisFurQNe9h7ABb
+      compendiumSource: Compendium.te001-core-rulebook.Items.u8AtVmCMnPyP3Ewx
+      duplicateSource: null
     _key: '!actors.items!hcdhRCs56U5JrAl4.Xc2qo0WjOqwKb1qy'
   - _id: gjqT8qHAzPDsvKBD
     name: Hrockt Root Armor
@@ -658,7 +676,7 @@ items:
       core:
         sourceId: Compendium.te001-core-rulebook.Items.Item.zKjrA8syOmpNbuNS
     system:
-      cosm: Living Land
+      cosm: livingLand
       description: >-
         <p>@UUID[Compendium.te001-core-rulebook.rules.pwneQ55M0nnDH0Us.JournalEntryPage.qKdamp4rrcX6TTt0#full-body/torso:]{Torso}</p>
 
@@ -681,17 +699,22 @@ items:
       minStrength: null
       notes: Torso, Jakatts only
       fatigue: null
+      secondaryAxiom:
+        selected: spirit
+        value: 11
     ownership:
       default: 0
       A9LyAqagoJJU3gDH: 3
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.7.0
-      coreVersion: '11.315'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: 1711551146924
-      modifiedTime: 1711704747798
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722155790760
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Compendium.te001-core-rulebook.Items.Item.zKjrA8syOmpNbuNS
+      duplicateSource: null
     _key: '!actors.items!hcdhRCs56U5JrAl4.gjqT8qHAzPDsvKBD'
 effects: []
 folder: null
@@ -907,7 +930,7 @@ system:
       baseAttribute: dexterity
       adds: 1
       isFav: false
-      groupName: combat
+      groupName: other
       unskilledUse: 1
       isThreatSkill: false
       defenseOnly: false
@@ -1177,14 +1200,20 @@ prototypeToken:
       max: 1
     color: null
     attenuation: 0.5
+    negative: false
+    priority: 0
   texture:
     src: systems/torgeternity/images/characters/edeinos_optant.Token.webp
-    tint: null
+    tint: '#ffffff'
     scaleX: 1
     scaleY: 1
     offsetX: 0
     offsetY: 0
     rotation: 0
+    anchorX: 0.5
+    anchorY: 0.5
+    fit: contain
+    alphaThreshold: 0.75
   sight:
     angle: 360
     enabled: false
@@ -1194,14 +1223,30 @@ prototypeToken:
     attenuation: 0.1
     saturation: 0
     contrast: 0
+    color: null
   appendNumber: false
   prependAdjective: false
   detectionModes: []
+  hexagonalShape: 0
+  occludable:
+    radius: 0
+  ring:
+    enabled: false
+    colors:
+      ring: null
+      background: null
+    effects: 1
+    subject:
+      scale: 1
+      texture: null
 _stats:
   systemId: torgeternity
   systemVersion: 3.8.1
-  coreVersion: '11.315'
+  coreVersion: '12.330'
   createdTime: 1693901456910
   modifiedTime: 1716827807995
   lastModifiedBy: VAnYow5sWS9EJzo0
+  compendiumSource: null
+  duplicateSource: null
 _key: '!actors!hcdhRCs56U5JrAl4'
+

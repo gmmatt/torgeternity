@@ -3,34 +3,6 @@ name: Der Weltenläufer
 type: stormknight
 img: systems/torgeternity/images/characters/Realm_Runner.Avatar.webp
 items:
-  - _id: Ls0L5wiAmyGrWu92
-    name: Extra-Magazine
-    type: gear
-    img: systems/torgeternity/images/icons/gear-icon.webp
-    effects: []
-    folder: YrLpjzkzDZxqWzUw
-    sort: 0
-    flags:
-      core:
-        sourceId: Item.9VjiNmOA2TB62Xej
-    system:
-      cosm: (Keins)
-      description: <p>F&uuml;nfmal Glock 9mm nachladen</p>
-      price: '0'
-      techlevel: 22
-      value: 0
-      equippedClass: item-equipped
-    ownership:
-      default: 0
-      9Q0XnqFwko7hRlvL: 3
-    _stats:
-      systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
-      createdTime: null
-      modifiedTime: 1694868586263
-      lastModifiedBy: CtisFurQNe9h7ABb
-    _key: '!actors.items!tzZ99BGG1WkwkQMO.Ls0L5wiAmyGrWu92'
   - _id: N0NOWg4w2Hgj95hF
     name: Weltenläufer
     type: perk
@@ -43,7 +15,7 @@ items:
         sourceId: Compendium.te001-core-rulebook.grw-de-vorzuverb.Item.DKa7TaWUVZibh2yn
     system:
       category: reality
-      cosm: Zentralerde
+      cosm: coreEarth
       description: >-
         <p>Der Storm Knight hat ein nat&uuml;rliches Gesp&uuml;r f&uuml;r die
         Manipulation der Realit&auml;t. Er ignoriert 4 Punkte vom Malus auf
@@ -124,18 +96,20 @@ items:
         limitation09: ''
         limitation10: ''
         limitationNumber: 0
-      timestaken: ''
+      timestaken: '1'
     ownership:
       default: 0
       9Q0XnqFwko7hRlvL: 3
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: 1694868513566
-      modifiedTime: 1694868513566
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722163680855
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Compendium.te001-core-rulebook.grw-de-vorzuverb.Item.DKa7TaWUVZibh2yn
+      duplicateSource: null
     _key: '!actors.items!tzZ99BGG1WkwkQMO.N0NOWg4w2Hgj95hF'
   - _id: 7jS3c05xSw5MIrlf
     name: Wunderkind
@@ -157,14 +131,26 @@ items:
           turns: null
           startRound: null
           startTurn: null
-        icon: icons/svg/aura.svg
         origin: Item.1Sy4iM9TBdoYsfLy
         transfer: true
         flags: {}
-        tint: null
+        tint: '#ffffff'
         name: Wunderkind
         description: ''
         statuses: []
+        _stats:
+          coreVersion: '12.330'
+          systemId: null
+          systemVersion: null
+          createdTime: null
+          modifiedTime: null
+          lastModifiedBy: null
+          compendiumSource: null
+          duplicateSource: null
+        img: icons/svg/aura.svg
+        type: base
+        system: {}
+        sort: 0
         _key: >-
           !actors.items.effects!tzZ99BGG1WkwkQMO.7jS3c05xSw5MIrlf.PKrDOXEu7d3UCZMo
     folder: null
@@ -174,7 +160,7 @@ items:
         sourceId: Compendium.te001-core-rulebook.grw-de-vorzuverb.Item.5NH1DrMFKWCJIHKn
     system:
       category: reality
-      cosm: Zentralerde
+      cosm: coreEarth
       description: >-
         <p>Der Charakter ist reich an M&ouml;glichkeitsenergie. Er&nbsp;beginnt
         jeden Akt mit einer zus&auml;tzlichen M&ouml;glichkeit.&nbsp;Dies
@@ -255,18 +241,20 @@ items:
         limitation09: ''
         limitation10: ''
         limitationNumber: 0
-      timestaken: ''
+      timestaken: '1'
     ownership:
       default: 0
       9Q0XnqFwko7hRlvL: 3
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: 1694868518647
-      modifiedTime: 1694868518647
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722163673702
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Compendium.te001-core-rulebook.grw-de-vorzuverb.Item.5NH1DrMFKWCJIHKn
+      duplicateSource: null
     _key: '!actors.items!tzZ99BGG1WkwkQMO.7jS3c05xSw5MIrlf'
   - _id: I8A1GlS1ktRNssiT
     name: Machete
@@ -288,14 +276,26 @@ items:
           turns: null
           startRound: null
           startTurn: null
-        icon: icons/svg/aura.svg
         origin: Compendium.te001-core-rulebook.grw-de-ausruestung.b6nZOz177J3nWcLF
         transfer: true
         flags: {}
-        tint: null
+        tint: '#ffffff'
         name: Begünstigung Überleben
         description: ''
         statuses: []
+        _stats:
+          coreVersion: '12.330'
+          systemId: null
+          systemVersion: null
+          createdTime: null
+          modifiedTime: null
+          lastModifiedBy: null
+          compendiumSource: null
+          duplicateSource: null
+        img: icons/svg/aura.svg
+        type: base
+        system: {}
+        sort: 0
         _key: >-
           !actors.items.effects!tzZ99BGG1WkwkQMO.I8A1GlS1ktRNssiT.sFPcVAMnyhyPeTzH
     folder: null
@@ -331,10 +331,12 @@ items:
     _stats:
       systemId: torgeternity
       systemVersion: 3.1.1
-      coreVersion: '11.308'
+      coreVersion: '12.330'
       createdTime: 1694868536613
       modifiedTime: 1694868536613
       lastModifiedBy: CtisFurQNe9h7ABb
+      compendiumSource: Compendium.te001-core-rulebook.grw-de-ausruestung.Item.b6nZOz177J3nWcLF
+      duplicateSource: null
     _key: '!actors.items!tzZ99BGG1WkwkQMO.I8A1GlS1ktRNssiT'
   - _id: fZ2i8jtev3Zxzgzk
     name: Disruptorgranate
@@ -384,10 +386,12 @@ items:
     _stats:
       systemId: torgeternity
       systemVersion: 3.1.1
-      coreVersion: '11.308'
+      coreVersion: '12.330'
       createdTime: 1694868543565
       modifiedTime: 1694868543565
       lastModifiedBy: CtisFurQNe9h7ABb
+      compendiumSource: Compendium.te001-core-rulebook.grw-de-ausruestung.Item.YEMCChtf6jhno2TS
+      duplicateSource: null
     _key: '!actors.items!tzZ99BGG1WkwkQMO.fZ2i8jtev3Zxzgzk'
   - _id: OgeIr0GPjdO21ell
     name: Glock 9mm
@@ -401,7 +405,7 @@ items:
         sourceId: >-
           Compendium.te001-core-rulebook.grw-de-ausruestung.Item.uS5bsDS4zQkN7NTj
     system:
-      cosm: Zentralerde
+      cosm: coreEarth
       description: >-
         <p>@UUID[Compendium.te001-core-rulebook.grw-de-grw.Qlx6yGF0Mmo6Xzrv.JournalEntryPage.7GGUUHzuYIqGPXDO#karabiner:]{Pistole}</p>
 
@@ -429,11 +433,13 @@ items:
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: 1694868550013
-      modifiedTime: 1694868550013
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722163851478
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Compendium.te001-core-rulebook.grw-de-ausruestung.Item.uS5bsDS4zQkN7NTj
+      duplicateSource: null
     _key: '!actors.items!tzZ99BGG1WkwkQMO.OgeIr0GPjdO21ell'
   - name: Multitool
     type: gear
@@ -446,7 +452,7 @@ items:
         sourceId: Item.G0KmopPlr7jWlbXo
     _id: FFUsBNHLuKjWCfNW
     system:
-      cosm: Zentralerde
+      cosm: coreEarth
       description: >-
         <p>N&uuml;tzlich f&uuml;r Reparaturen, funktioniert wie ein
         Dietrich.</p>
@@ -460,11 +466,13 @@ items:
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: 1694868564181
-      modifiedTime: 1694868564181
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722163750022
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Item.G0KmopPlr7jWlbXo
+      duplicateSource: null
     _key: '!actors.items!tzZ99BGG1WkwkQMO.FFUsBNHLuKjWCfNW'
   - name: Taschenlampe
     type: gear
@@ -477,7 +485,7 @@ items:
         sourceId: Item.ghYEu90Et15IioVa
     _id: yyssBr6H3JoILMf8
     system:
-      cosm: Nil-Imperium
+      cosm: nileEmpire
       description: ''
       price: '10'
       techlevel: 20
@@ -489,11 +497,13 @@ items:
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: 1694868568884
-      modifiedTime: 1694868590753
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722163753174
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Item.ghYEu90Et15IioVa
+      duplicateSource: null
     _key: '!actors.items!tzZ99BGG1WkwkQMO.yyssBr6H3JoILMf8'
   - _id: ohO82JzysApayR0C
     name: Trank der Heilung
@@ -507,26 +517,31 @@ items:
         sourceId: >-
           Compendium.te001-core-rulebook.grw-de-ausruestung.Item.kiWS8lQLXbtS6FYE
     system:
-      cosm: Aysle
+      cosm: aysle
       description: >-
-        <p>Ben&ouml;tigt ein Magie-Axiom von 13, um zu wirken. Das Trinken des
-        Tranks ist eine einfache Aktion und er regeneriert 1 Wunde und
-        Schockschaden in H&ouml;he eines Bonusw&uuml;rfels.</p>
+        <p>Benötigt ein Magie-Axiom von 13, um zu wirken. Das Trinken des Tranks
+        ist eine einfache Aktion und er regeneriert 1 Wunde und Schockschaden in
+        Höhe eines [[/r 1d6x6max5]]{BW}.</p>
       price: '500'
       techlevel: 12
       value: 14
       equippedClass: item-equipped
+      secondaryAxiom:
+        selected: magic
+        value: 13
     ownership:
       default: 0
       9Q0XnqFwko7hRlvL: 3
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: 1694868573414
-      modifiedTime: 1694868573414
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722163826279
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Compendium.te001-core-rulebook.grw-de-ausruestung.Item.kiWS8lQLXbtS6FYE
+      duplicateSource: null
     _key: '!actors.items!tzZ99BGG1WkwkQMO.ohO82JzysApayR0C'
   - _id: 4AmydcIKkXPHFyFx
     name: Lederjacke
@@ -540,7 +555,7 @@ items:
         sourceId: >-
           Compendium.te001-core-rulebook.grw-de-ausruestung.Item.ibQvaehrqx24DxvU
     system:
-      cosm: Zentralerde
+      cosm: nileEmpire
       description: >-
         <p>@UUID[Compendium.te001-core-rulebook.grw-de-grw.Qlx6yGF0Mmo6Xzrv.JournalEntryPage.7GGUUHzuYIqGPXDO#ganzkorper/torso:]{Torso}</p>
 
@@ -561,12 +576,54 @@ items:
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.7.0
-      coreVersion: '11.315'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: 1711562366193
-      modifiedTime: 1711705856750
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722163844991
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Compendium.te001-core-rulebook.grw-de-ausruestung.Item.ibQvaehrqx24DxvU
+      duplicateSource: null
     _key: '!actors.items!tzZ99BGG1WkwkQMO.4AmydcIKkXPHFyFx'
+  - name: Extra-Magazine
+    type: ammunition
+    img: systems/torgeternity/images/icons/ammo-icon.webp
+    system:
+      cosm: ''
+      description: >-
+        <p><span style="font-family:'Palatino Linotype'">Fünfmal Glock
+        nachladen.</span></p>
+      price: ''
+      techlevel: 21
+      value: 0
+      secondaryAxiom:
+        selected: none
+        value: null
+      type: ''
+      quantity: 5
+      damageMod: 0
+      apMod: 0
+      fireDamage: false
+      blastRadius: Keiner
+      darknessMod: none
+      reach: ''
+    effects: []
+    folder: null
+    sort: 0
+    ownership:
+      default: 0
+      93AMwcGe6H37rcPA: 3
+    flags: {}
+    _stats:
+      compendiumSource: Item.TptgnUCwWM2QZCaK
+      duplicateSource: Item.KRYQ71jof26XeGEv
+      coreVersion: '12.330'
+      systemId: torgeternity
+      systemVersion: 12.2.0
+      createdTime: 1722163712378
+      modifiedTime: 1722167154501
+      lastModifiedBy: 93AMwcGe6H37rcPA
+    _id: xijwVjoJ01mJoTD1
+    _key: '!actors.items!tzZ99BGG1WkwkQMO.xijwVjoJ01mJoTD1'
 effects:
   - _id: 9T2SgSGgiUkXHNdR
     changes:
@@ -583,15 +640,27 @@ effects:
       turns: null
       startRound: null
       startTurn: null
-    icon: icons/svg/aura.svg
     origin: >-
       Compendium.torgeternity.system-de-archetypen.Actor.tzZ99BGG1WkwkQMO.Item.I8A1GlS1ktRNssiT
     transfer: false
     flags: {}
-    tint: null
+    tint: '#ffffff'
     name: Begünstigung Überleben
     description: ''
     statuses: []
+    _stats:
+      coreVersion: '12.330'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+    img: icons/svg/aura.svg
+    type: base
+    system: {}
+    sort: 0
     _key: '!actors.effects!tzZ99BGG1WkwkQMO.9T2SgSGgiUkXHNdR'
 folder: null
 sort: 0
@@ -808,7 +877,7 @@ system:
       baseAttribute: dexterity
       adds: 0
       isFav: false
-      groupName: combat
+      groupName: other
       unskilledUse: 1
       isThreatSkill: false
       defenseOnly: false
@@ -1087,14 +1156,20 @@ prototypeToken:
       min: 0
       max: 1
     attenuation: 0.5
+    negative: false
+    priority: 0
   texture:
     src: systems/torgeternity/images/characters/realm_runner.Token.webp
-    tint: null
+    tint: '#ffffff'
     scaleX: 1
     scaleY: 1
     offsetX: 0
     offsetY: 0
     rotation: 0
+    anchorX: 0.5
+    anchorY: 0.5
+    fit: contain
+    alphaThreshold: 0.75
   sight:
     angle: 360
     enabled: true
@@ -1104,14 +1179,30 @@ prototypeToken:
     attenuation: 0.1
     saturation: 0
     contrast: 0
+    color: null
   appendNumber: false
   prependAdjective: false
   detectionModes: []
+  hexagonalShape: 0
+  occludable:
+    radius: 0
+  ring:
+    enabled: false
+    colors:
+      ring: null
+      background: null
+    effects: 1
+    subject:
+      scale: 1
+      texture: null
 _stats:
   systemId: torgeternity
   systemVersion: 3.8.1
-  coreVersion: '11.315'
+  coreVersion: '12.330'
   createdTime: 1694868498745
   modifiedTime: 1716827811752
   lastModifiedBy: VAnYow5sWS9EJzo0
+  compendiumSource: Compendium.torgeternity.archetypes.BpClx5rBCesWUzIN
+  duplicateSource: null
 _key: '!actors!tzZ99BGG1WkwkQMO'
+

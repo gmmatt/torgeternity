@@ -14,7 +14,7 @@ items:
     effects: []
     folder: null
     system:
-      cosm: Pan-Pacifica
+      cosm: panPacifica
       description: >-
         <p>Can be thrown to the ground as a trick interaction, and leaves behind
         smoke (−2 Concealment penalty) in a five-meter radius.</p>
@@ -30,11 +30,13 @@ items:
       default: 0
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: null
-      modifiedTime: 1693910024116
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722156084472
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Compendium.te001-core-rulebook.Items.yCG51H4lsZOyJjhO
+      duplicateSource: null
     _key: '!actors.items!QVpKuacd4LKfpJOy.KyvSH0G67CXa05a2'
   - _id: Q3AEnYDnCuWdHQJw
     name: Trademark Weapon (Electric Katana)
@@ -48,7 +50,7 @@ items:
         sourceId: Compendium.te001-core-rulebook.Items.2FajkBwxOxN5v3DR
     system:
       category: prowess
-      cosm: (None)
+      cosm: none
       description: >-
         <p>The Storm Knight is known for one particular weapon. When an attack
         with the weapon results in bonus damage, the player may reroll any 1s
@@ -141,11 +143,13 @@ items:
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: 1693909771387
-      modifiedTime: 1693909807394
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722152912839
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Compendium.te001-core-rulebook.Items.2FajkBwxOxN5v3DR
+      duplicateSource: null
     _key: '!actors.items!QVpKuacd4LKfpJOy.Q3AEnYDnCuWdHQJw'
   - _id: hgQ7xfsFIFCuvCv8
     name: Electric Katana
@@ -158,7 +162,7 @@ items:
       core:
         sourceId: Compendium.te001-core-rulebook.Items.oXC2OfgC7II3et6Z
     system:
-      cosm: Pan-Pacifica
+      cosm: panPacifica
       description: >-
         <p>The ion circuitry nano-imprinted into the katana’s blade glows with
         energy when activated. The field generated just over the surface cuts
@@ -177,7 +181,7 @@ items:
       chatNote: ''
       damage: 4
       damageType: strengthPlus
-      equipped: false
+      equipped: true
       equippedClass: .item-unequipped
       notes: ''
     ownership:
@@ -186,11 +190,13 @@ items:
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: 1693909861972
-      modifiedTime: 1693909861972
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722155948464
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Compendium.te001-core-rulebook.Items.oXC2OfgC7II3et6Z
+      duplicateSource: null
     _key: '!actors.items!QVpKuacd4LKfpJOy.hgQ7xfsFIFCuvCv8'
   - _id: yoJKfoP1BFsr65l9
     name: SC Kyogo 144 SMG
@@ -203,7 +209,7 @@ items:
       core:
         sourceId: Compendium.te001-core-rulebook.Items.TD2iH8mU5NxIyQKy
     system:
-      cosm: Pan-Pacifica
+      cosm: panPacifica
       description: >-
         <p>@UUID[Compendium.te001-core-rulebook.rules.pwneQ55M0nnDH0Us.JournalEntryPage.qKdamp4rrcX6TTt0#short-burst:]{Short
         Burst}</p>
@@ -226,7 +232,7 @@ items:
       chatNote: ''
       damage: 13
       damageType: flat
-      equipped: false
+      equipped: true
       equippedClass: .item-unequipped
       notes: Short Burst
       range: 20 / 40 / 80
@@ -236,18 +242,20 @@ items:
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: 1693909870243
-      modifiedTime: 1693909870243
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722155971096
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Compendium.te001-core-rulebook.Items.TD2iH8mU5NxIyQKy
+      duplicateSource: null
     _key: '!actors.items!QVpKuacd4LKfpJOy.yoJKfoP1BFsr65l9'
   - name: Ion Gusoku
     type: perk
     img: systems/torgeternity/images/icons/reality-icon.webp
     system:
       category: electricSamurai
-      cosm: Pan-Pacifica
+      cosm: panPacifica
       description: >-
         <p>The distinctive armor of the Electric Samurai is the Ion Gusoku. The
         first suits were adapted from the armor worn by Kanawa&rsquo;s elite
@@ -397,11 +405,13 @@ items:
         sourceId: Compendium.te001-core-rulebook.Items.Item.vW54lUFBIwEtpPKL
     _stats:
       systemId: torgeternity
-      systemVersion: 3.7.0
-      coreVersion: '11.315'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: 1675505758859
-      modifiedTime: 1711705011193
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722152889992
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Compendium.te001-core-rulebook.Items.Item.vW54lUFBIwEtpPKL
+      duplicateSource: null
     folder: null
     ownership:
       default: 0
@@ -420,15 +430,12 @@ items:
       core:
         sourceId: Compendium.te001-core-rulebook.Items.Item.NlvMMLc98zfTyvF1
     system:
-      cosm: Pan-Pacifica
+      cosm: panPacifica
       description: >-
         <p>Provided by
-        @UUID[Compendium.te001-core-rulebook.Items.Item.vW54lUFBIwEtpPKL]{Ion
-        Gusoku} Perk</p>
-
-        <p>@UUID[Compendium.te001-core-rulebook.rules.pwneQ55M0nnDH0Us.JournalEntryPage.qKdamp4rrcX6TTt0#fatigues:]{Fatigues}</p>
-
-        <p>@UUID[Compendium.te001-core-rulebook.rules.pwneQ55M0nnDH0Us.JournalEntryPage.qKdamp4rrcX6TTt0#full-body/torso:]{Full
+        @UUID[Compendium.torgeternity.archetypes.Actor.QVpKuacd4LKfpJOy.Item.0UWlo3flUkxiA1rj]{Ion
+        Gusoku}
+        Perk</p><p>@UUID[Compendium.te001-core-rulebook.rules.pwneQ55M0nnDH0Us.JournalEntryPage.qKdamp4rrcX6TTt0#fatigues:]{Fatigues}</p><p>@UUID[Compendium.te001-core-rulebook.rules.pwneQ55M0nnDH0Us.JournalEntryPage.qKdamp4rrcX6TTt0#full-body/torso:]{Full
         Body Armor}</p>
       price: ''
       techlevel: 24
@@ -446,11 +453,13 @@ items:
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.7.0
-      coreVersion: '11.315'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: 1711551146690
-      modifiedTime: 1711705007684
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722156064288
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Compendium.te001-core-rulebook.Items.Item.NlvMMLc98zfTyvF1
+      duplicateSource: null
     _key: '!actors.items!QVpKuacd4LKfpJOy.19I6fIErltEo3Hqw'
 effects: []
 folder: null
@@ -666,7 +675,7 @@ system:
       baseAttribute: dexterity
       adds: 0
       isFav: false
-      groupName: combat
+      groupName: other
       unskilledUse: 1
       isThreatSkill: false
       defenseOnly: false
@@ -936,14 +945,20 @@ prototypeToken:
       max: 1
     color: null
     attenuation: 0.5
+    negative: false
+    priority: 0
   texture:
     src: systems/torgeternity/images/characters/electric_samurai.Token.webp
-    tint: null
+    tint: '#ffffff'
     scaleX: 1
     scaleY: 1
     offsetX: 0
     offsetY: 0
     rotation: 0
+    anchorX: 0.5
+    anchorY: 0.5
+    fit: contain
+    alphaThreshold: 0.75
   sight:
     angle: 360
     enabled: false
@@ -953,14 +968,30 @@ prototypeToken:
     attenuation: 0.1
     saturation: 0
     contrast: 0
+    color: null
   appendNumber: false
   prependAdjective: false
   detectionModes: []
+  hexagonalShape: 0
+  occludable:
+    radius: 0
+  ring:
+    enabled: false
+    colors:
+      ring: null
+      background: null
+    effects: 1
+    subject:
+      scale: 1
+      texture: null
 _stats:
   systemId: torgeternity
   systemVersion: 3.8.1
-  coreVersion: '11.315'
+  coreVersion: '12.330'
   createdTime: 1693909765954
   modifiedTime: 1716827807686
   lastModifiedBy: VAnYow5sWS9EJzo0
+  compendiumSource: null
+  duplicateSource: null
 _key: '!actors!QVpKuacd4LKfpJOy'
+

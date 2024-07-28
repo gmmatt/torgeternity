@@ -14,7 +14,7 @@ items:
     effects: []
     folder: null
     system:
-      cosm: Living Land
+      cosm: livingLand
       description: ''
       price: '5'
       techlevel: 2
@@ -24,11 +24,13 @@ items:
       default: 0
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: null
-      modifiedTime: 1693912271466
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722157050558
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Item.TE2jmWDyTxhRulgk
+      duplicateSource: null
     _key: '!actors.items!sPLt8RBL1hieic6p.Py9XbkHtiMeVAivQ'
   - _id: d9AM1AiyTKzB2o6A
     name: Totem
@@ -41,7 +43,7 @@ items:
     effects: []
     folder: null
     system:
-      cosm: Living Land
+      cosm: livingLand
       description: <p>Bone carving of Lanala.</p>
       price: '0'
       techlevel: 3
@@ -51,11 +53,13 @@ items:
       default: 0
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: null
-      modifiedTime: 1693912265602
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722157047326
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Item.V6vSEnqgNmYQKs4o
+      duplicateSource: null
     _key: '!actors.items!sPLt8RBL1hieic6p.d9AM1AiyTKzB2o6A'
   - _id: eoKkKx6JMkRheNol
     name: War Paint
@@ -68,7 +72,7 @@ items:
     effects: []
     folder: null
     system:
-      cosm: Living Land
+      cosm: livingLand
       description: <p>Red, white, and blue.</p>
       price: '1'
       techlevel: 4
@@ -78,11 +82,13 @@ items:
       default: 0
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: null
-      modifiedTime: 1693912280491
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722157053446
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Item.6g0k6JMCuHpfTB8I
+      duplicateSource: null
     _key: '!actors.items!sPLt8RBL1hieic6p.eoKkKx6JMkRheNol'
   - _id: buudvAP0bQpbvIvj
     name: Animal Companion (Sabre-Tooth Cat)
@@ -96,7 +102,7 @@ items:
         sourceId: Compendium.te001-core-rulebook.Items.0dFkF4uWXXNOCRQ0
     system:
       category: savagery
-      cosm: (Keins)
+      cosm: livingLand
       description: >-
         <p>The great tigers of the Living Land are fearsome predators capable of
         taking down all but the largest dinosaurs. A smaller breed exists that
@@ -213,11 +219,13 @@ items:
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: 1693912137290
-      modifiedTime: 1694861954132
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722153407326
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Compendium.te001-core-rulebook.Items.0dFkF4uWXXNOCRQ0
+      duplicateSource: null
     _key: '!actors.items!sPLt8RBL1hieic6p.buudvAP0bQpbvIvj'
   - _id: 4yiDEmxDFxwBzdiF
     name: Relentless
@@ -231,7 +239,7 @@ items:
         sourceId: Compendium.te001-core-rulebook.Items.u8mNCguZj1SbAIVd
     system:
       category: prowess
-      cosm: (None)
+      cosm: none
       description: >-
         <p>The most furious fighters put everything they have into their
         blows.</p><p>When the character successfully uses the AllOut Attack
@@ -325,11 +333,13 @@ items:
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: 1693912142691
-      modifiedTime: 1693912204577
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722153429829
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Compendium.te001-core-rulebook.Items.u8mNCguZj1SbAIVd
+      duplicateSource: null
     _key: '!actors.items!sPLt8RBL1hieic6p.4yiDEmxDFxwBzdiF'
   - _id: F6B05RvuOdlBJZPX
     name: Hrockt Shoot Spear
@@ -342,7 +352,7 @@ items:
       core:
         sourceId: Compendium.te001-core-rulebook.Items.ammMtd4GDTZAbVQx
     system:
-      cosm: Living Land
+      cosm: livingLand
       description: >-
         <p>@UUID[Compendium.te001-core-rulebook.rules.pwneQ55M0nnDH0Us.JournalEntryPage.qKdamp4rrcX6TTt0#thrown:]{Thrown}</p>
 
@@ -356,7 +366,7 @@ items:
 
         <p>Found in <strong>Core Rules</strong></p>
       price: '40'
-      techlevel: 3
+      techlevel: 2
       value: 8
       ap: 0
       attackWith: meleeWeapons
@@ -373,11 +383,13 @@ items:
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: 1693909378930
-      modifiedTime: 1693912233169
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722157097661
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Compendium.te001-core-rulebook.Items.ammMtd4GDTZAbVQx
+      duplicateSource: null
     _key: '!actors.items!sPLt8RBL1hieic6p.F6B05RvuOdlBJZPX'
   - _id: gxWQJats4GkgCdjH
     name: Hrockt Shoot Spear (Thrown)
@@ -390,7 +402,7 @@ items:
       core:
         sourceId: Compendium.te001-core-rulebook.Items.ifZclb6BhuIsPfjt
     system:
-      cosm: Living Land
+      cosm: livingLand
       description: >-
         <p>Pliable when wet and growing, but hard as iron once cut and dried.
         Often cultivated into straight spears with sharp points.</p>
@@ -416,11 +428,13 @@ items:
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: 1693909485506
-      modifiedTime: 1693912234578
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722157075494
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Compendium.te001-core-rulebook.Items.ifZclb6BhuIsPfjt
+      duplicateSource: null
     _key: '!actors.items!sPLt8RBL1hieic6p.gxWQJats4GkgCdjH'
   - _id: JJc7a0Avc4bXfsDP
     name: Bone Knife
@@ -433,7 +447,7 @@ items:
       core:
         sourceId: Compendium.te001-core-rulebook.Items.9AgUL9MMDkCf2WT9
     system:
-      cosm: Living Land
+      cosm: livingLand
       description: >-
         <p>@UUID[Compendium.te001-core-rulebook.rules.pwneQ55M0nnDH0Us.JournalEntryPage.qKdamp4rrcX6TTt0#fragile:]{Fragile}</p>
 
@@ -463,11 +477,13 @@ items:
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: 1693912255642
-      modifiedTime: 1693912255642
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722157083414
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Compendium.te001-core-rulebook.Items.9AgUL9MMDkCf2WT9
+      duplicateSource: null
     _key: '!actors.items!sPLt8RBL1hieic6p.JJc7a0Avc4bXfsDP'
   - _id: R3UtYJxpc9sgFYTK
     name: Bone and Hide
@@ -480,7 +496,7 @@ items:
       core:
         sourceId: Compendium.te001-core-rulebook.Items.Item.1KCcsTDnBSqBMA8h
     system:
-      cosm: Living Land
+      cosm: livingLand
       description: >-
         <p>@UUID[Compendium.te001-core-rulebook.rules.pwneQ55M0nnDH0Us.JournalEntryPage.qKdamp4rrcX6TTt0#full-body/torso:]{Torso}</p>
 
@@ -507,11 +523,13 @@ items:
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.7.0
-      coreVersion: '11.315'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: 1711551146690
-      modifiedTime: 1711704776902
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722157061222
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Compendium.te001-core-rulebook.Items.Item.1KCcsTDnBSqBMA8h
+      duplicateSource: null
     _key: '!actors.items!sPLt8RBL1hieic6p.R3UtYJxpc9sgFYTK'
 effects: []
 folder: null
@@ -727,7 +745,7 @@ system:
       baseAttribute: dexterity
       adds: 2
       isFav: false
-      groupName: combat
+      groupName: other
       unskilledUse: 1
       isThreatSkill: false
       defenseOnly: false
@@ -995,14 +1013,20 @@ prototypeToken:
       max: 1
     color: null
     attenuation: 0.5
+    negative: false
+    priority: 0
   texture:
     src: systems/torgeternity/images/characters/primitive_hunter.Token.webp
-    tint: null
+    tint: '#ffffff'
     scaleX: 1
     scaleY: 1
     offsetX: 0
     offsetY: 0
     rotation: 0
+    anchorX: 0.5
+    anchorY: 0.5
+    fit: contain
+    alphaThreshold: 0.75
   sight:
     angle: 360
     enabled: false
@@ -1012,14 +1036,30 @@ prototypeToken:
     attenuation: 0.1
     saturation: 0
     contrast: 0
+    color: null
   appendNumber: false
   prependAdjective: false
   detectionModes: []
+  hexagonalShape: 0
+  occludable:
+    radius: 0
+  ring:
+    enabled: false
+    colors:
+      ring: null
+      background: null
+    effects: 1
+    subject:
+      scale: 1
+      texture: null
 _stats:
   systemId: torgeternity
   systemVersion: 3.8.1
-  coreVersion: '11.315'
+  coreVersion: '12.330'
   createdTime: 1693912137290
   modifiedTime: 1716827808083
   lastModifiedBy: VAnYow5sWS9EJzo0
+  compendiumSource: null
+  duplicateSource: null
 _key: '!actors!sPLt8RBL1hieic6p'
+
