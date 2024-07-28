@@ -1065,6 +1065,7 @@ Hooks.on('updateCombatant', async (torgCombatant, dataFlags, dataDiff, userId) =
     if (dataFlags.flags.world.turnTaken) {
       const myActor = torgCombatant.actor;
       for (const ef of myActor.effects.filter((e) => e.duration.type === 'turns')) {
+        if (ef.name === 'ActiveDefense') continue;
         await myActor.updateEmbeddedDocuments('ActiveEffect', [
           {
             _id: ef.id,
