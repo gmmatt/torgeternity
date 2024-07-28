@@ -1,5 +1,9 @@
 # TORG Eternity Changelog
 
+## v. 12.2.1
+
+- With the new hook on end of turn in ct, active defense was deleted as well. Squished that (it's about the end of the round, this will be part of 12.3.0)
+
 ## v. 12.2.0
 
 - Ammunition is now handled. The value of a weapon with ammo is now reduced according to the amount of bullets a shot takes (i.e. burst shots). A weapon can now be equipped with a general gear item like an _Ammo Belt_ that will be consumed if you click the reload button on the weapon. [#36](https://github.com/gmmatt/torgeternity/issues/36). Please be aware that the values in the ammunition item don't have any effects _yet_, as this is an [issue](https://github.com/gmmatt/torgeternity/issues/428) for later.
