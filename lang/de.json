@@ -1071,7 +1071,11 @@
       "reconnectMacroZoneModifier": "Zonenmodifikator",
       "reconnectMacroZoneModifierNotDetectedTitle": "Kein Zonenmodifikator",
       "reconnectMacroZoneModifierNotDetected": "Ein Zonenmodifikator konnte nicht festgestellt werden, da die aktive Szene keine Zonen konfiguriert hat. Ändere den Modifikator im Ergebnis.",
-      "reconnectMacroStatusLiftet": "Entkoppelt-Status nach einer erfolgreichen Realitätsprobe aufgehoben."
+      "reconnectMacroStatusLiftet": "Entkoppelt-Status nach einer erfolgreichen Realitätsprobe aufgehoben.",
+      "macroHub": {
+        "buttonTitle": "MacroHub",
+        "title":"Der Torg Eternity Macro Hub"
+      }
     }    
   }
 }
