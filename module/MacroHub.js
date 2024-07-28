@@ -18,11 +18,9 @@ export default class MacroHub extends Application {
   activateListeners(html) {
     super.activateListeners();
 
-    const spans = html[0].querySelectorAll('a.macroHubSpan');
-
-    for (const spanM of spans) {
-      spanM.addEventListener('click', this._executeMacro.bind(this));
-    }
+    html[0]
+      .querySelectorAll('a.macroHubSpan')
+      .forEach((spanM) => spanM.addEventListener('click', this._executeMacro.bind(this)));
   }
 
   /**
