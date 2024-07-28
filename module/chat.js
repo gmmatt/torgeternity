@@ -405,11 +405,11 @@ async function adjustDam(event) {
     <div class="form-group"><label for="nw">${game.i18n.localize(
       'torgeternity.sheetLabels.modifyWounds'
     )}</label>
-    <div class="form-fields"><input type="number" id="nw" value=${oldWounds}></input></div></div>
+    <div class="form-fields torgeternityFormFields"><input type="number" id="nw" value=${oldWounds}></input></div></div>
     <div class="form-group"><label for="ns">${game.i18n.localize(
       'torgeternity.sheetLabels.modifyShocks'
     )}</label>
-    <div class="form-fields"><input type="number" id="ns" value=${oldShocks}></input></div></div>
+    <div class="form-fields torgeternityFormFields"><input type="number" id="ns" value=${oldShocks}></input></div></div>
     </form>`;
   await new Dialog({
     content,

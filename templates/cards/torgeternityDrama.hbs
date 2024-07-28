@@ -26,12 +26,12 @@
   <div class="tab" data-tab="details">
     <div class="form-group">
       <label>{{localize "torgeternity.sheetLabels.number"}}</label>
-      <div class="form-fields">{{numberInput data.system.number name="system.number" step=1}}</div>
+      <div class="form-fields torgeternityFormFields">{{numberInput data.system.number name="system.number" step=1}}</div>
     </div>
 
     <div class="form-group">
       <label>{{localize "CARD.Dimensions"}}</label>
-      <div class="form-fields">
+      <div class="form-fields torgeternityFormFields">
         <label>{{localize "Width"}}</label>
         {{numberInput data.width name="width" step=1}}
         <label>{{localize "Height"}}</label>
@@ -51,7 +51,7 @@
   <div class="tab" data-tab="faces">
     <div class="form-group">
       <label>{{localize "CARD.Face"}}</label>
-      <div class="form-fields">
+      <div class="form-fields torgeternityFormFields">
         {{numberInput data.face name="face" min=0 step=1}}
         <button
           type="button"
@@ -67,7 +67,7 @@
     <div class="face" data-face="{{i}}">
       <div class="form-group">
         <label>{{localize "CARD.FaceName"}}</label>
-        <div class="form-fields">
+        <div class="form-fields torgeternityFormFields">
           <input type="text" name="faces.{{i}}.name" value="{{face.name}}" />
           <button
             type="button"
@@ -81,13 +81,13 @@
       </div>
       <div class="form-group">
         <label>{{localize "CARD.FaceImage"}}</label>
-        <div class="form-fields">
+        <div class="form-fields torgeternityFormFields">
           <file-picker name="faces.{{i}}.img" type="image" value="{{face.img}}"></file-picker>
         </div>
       </div>
       <div class="form-group">
         <label>{{localize "CARD.FaceText"}}</label>
-        <div class="form-fields">
+        <div class="form-fields torgeternityFormFields">
           <textarea name="faces.{{i}}.text">{{face.text}}</textarea>
         </div>
       </div>
@@ -99,7 +99,7 @@
   <div class="tab" data-tab="back">
     <div class="form-group">
       <label>{{localize "CARD.BackName"}}</label>
-      <div class="form-fields">
+      <div class="form-fields torgeternityFormFields">
         <input
           type="text"
           name="back.name"
@@ -111,7 +111,7 @@
 
     <div class="form-group">
       <label>{{localize "CARD.BackImage"}}</label>
-      <div class="form-fields">
+      <div class="form-fields torgeternityFormFields">
         <file-picker name="back.img" type="image" value="{{data.back.img}}"></file-picker>
       </div>
     </div>

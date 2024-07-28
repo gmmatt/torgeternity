@@ -708,7 +708,7 @@ form.actor-sheet header.sheet-header-vehicle {
   background-color: rgba(0, 0, 0, 0.68);
 }
 
-form .form-group .form-fields > * {
+form .form-group .form-fields.torgeternityFormFields > * {
   background-color: rgba(128, 128, 128, 0.301);
   color: white;
 }
