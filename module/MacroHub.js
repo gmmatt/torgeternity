@@ -18,7 +18,11 @@ export default class MacroHub extends Application {
   activateListeners(html) {
     super.activateListeners();
 
-    html[0].querySelector('a.macroHubSpan').addEventListener('click', this.executeMacro);
+    const spans = html[0].querySelectorAll('a.macroHubSpan');
+
+    for (const spanM of spans) {
+      spanM.addEventListener('click', this._executeMacro.bind(this));
+    }
   }
 
   /**
@@ -58,7 +62,10 @@ export default class MacroHub extends Application {
     } else return this.render(true);
   }
 
-  executeMacro(event) {
-    console.log(event);
+  async _executeMacro(event) {
+    console.log('abcd');
+    const macroPack = await game.packs.get('torgeternity.macros');
+    const macroId = event.currentTarget.closest('.macroHubSpan').dataset.macroId;
+    await macroPack.getDocument(macroId).then((m) => m.execute());
   }
 }
