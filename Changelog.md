@@ -20,6 +20,7 @@
   - Moved the hover pooled card in combat tracker out to the left edge that might give a better view on the combat tracker itself [[#131](https://github.com/gmmatt/torgeternity/issues/131)]
   - Relocated where minStr and maxDex are stored to keep the partysheet clean [#433](https://github.com/gmmatt/torgeternity/issues/433)
   - Clicking the dice images in a chatcard no longer hides them [#433](https://github.com/gmmatt/torgeternity/issues/334)
+  - Corrected a classhandling with foundry form fields [#436](https://github.com/gmmatt/torgeternity/issues/436)
 
 ## v. 12.1.4
 
