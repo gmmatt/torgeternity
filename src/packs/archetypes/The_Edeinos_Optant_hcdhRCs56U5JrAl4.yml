@@ -15,11 +15,8 @@ items:
         sourceId: Item.JCBCYFMvmpQHFWM4
     system:
       category: edeinos
-      cosm: (None)
-      description: >-
-        <p>Edeinos are outsiders to everyone but other edeinos. They subtract 4
-        from&nbsp;<em>persuasion&nbsp;</em>tests with non-edeinos, and are often
-        treated with hostility by humans from other realms.</p>
+      cosm: livingLand
+      description: "<p>Edeinos are outsiders to everyone but other edeinos. They subtract 4 from\_<em>persuasion\_</em>tests with non-edeinos, and are often treated with hostility by humans from other realms.</p>"
       prerequisites: ''
       generalContradiction: false
       pulpPowers:
@@ -96,53 +93,239 @@ items:
         limitation10: ''
         limitationNumber: 0
       timestaken: '1'
+      secondaryAxiom:
+        selected: none
+        value: null
     ownership:
       default: 0
       aSTzyuIvqyDaFHwy: 3
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: 1693909340629
-      modifiedTime: 1693910509875
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722152836049
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Item.JCBCYFMvmpQHFWM4
+      duplicateSource: null
     _key: '!actors.items!hcdhRCs56U5JrAl4.hUiTDA9Qcfrvg8kJ'
-  - _id: WiPheHr3LGK9czpN
-    name: Miracles
-    type: perk
-    img: systems/torgeternity/images/icons/reality-icon.webp
+  - _id: OgvvLI102HQqibWo
+    name: Totem
+    type: gear
+    img: systems/torgeternity/images/icons/gear-icon.webp
     effects: []
     folder: null
     sort: 0
     flags:
       core:
-        sourceId: Compendium.te001-core-rulebook.Items.W6HcoYyOqi6pGGfD
+        sourceId: Compendium.te001-core-rulebook.Items.5o1m7pL2fi5LABQw
+    system:
+      cosm: livingLand
+      description: <p>Bone carving of Lanala</p>
+      price: '25'
+      techlevel: 5
+      value: 7
+      secondaryAxiom:
+        selected: none
+        value: null
+    ownership:
+      default: 0
+      A9LyAqagoJJU3gDH: 3
+      CtisFurQNe9h7ABb: 3
+    _stats:
+      systemId: torgeternity
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
+      createdTime: 1693909398173
+      modifiedTime: 1722155751457
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Compendium.te001-core-rulebook.Items.5o1m7pL2fi5LABQw
+      duplicateSource: null
+    _key: '!actors.items!hcdhRCs56U5JrAl4.OgvvLI102HQqibWo'
+  - _id: j4bd2LSc9RyWGvDr
+    name: Healing
+    type: miracle
+    img: systems/torgeternity/images/icons/miracles-icon.webp
+    effects: []
+    folder: null
+    sort: 0
+    flags:
+      core:
+        sourceId: Compendium.te001-core-rulebook.Items.UpTgsybNJ1srMK4o
+    system:
+      ap: 0
+      applyArmor: false
+      applySize: false
+      axiom: 10
+      castingtime: 1 action
+      damage: 0
+      description: "<p>Perhaps the most important ability a chosen one brings to a band of Storm Knights is her ability to heal. Whether she’s patching up her teammate’s Wounds\_or winning over injured villagers, <em>healing</em> is a critical skill.</p>\n<p>The invoker’s total is modified by the target’s Wound penalties (as well as the caster’s if he happens to be Wounded). A success heals 1 Wound, all Shock, and removes KO.</p>\n<p><em>Healing</em> may only be attempted on a single individual once per scene—choose wisely! If Maru is injured in a fight and healed by Father Damien, he won’t be able to heal her again until the next scene. He could still use <em>first aid</em> on her, and may use <em>healing</em> on his other comrades.</p>\n<p>\_</p>\n<p>Found in <strong>Core Rules</strong></p>"
+      dn: standard
+      dnType: ''
+      duration: Instant
+      good: 2 Wounds are healed
+      isAttack: false
+      modifier: ''
+      outstanding: 3 Wounds are healed
+      range: Touch
+      skill: faith
+      skilllevel: '10'
+      targetDefense: ''
+    ownership:
+      default: 0
+      A9LyAqagoJJU3gDH: 3
+      CtisFurQNe9h7ABb: 3
+    _stats:
+      systemId: torgeternity
+      systemVersion: 3.1.1
+      coreVersion: '12.330'
+      createdTime: 1693909676811
+      modifiedTime: 1693909676811
+      lastModifiedBy: CtisFurQNe9h7ABb
+      compendiumSource: Compendium.te001-core-rulebook.Items.UpTgsybNJ1srMK4o
+      duplicateSource: null
+    _key: '!actors.items!hcdhRCs56U5JrAl4.j4bd2LSc9RyWGvDr'
+  - _id: bVioii8rx0LCXrcH
+    name: Strike
+    type: miracle
+    img: systems/torgeternity/images/icons/miracles-icon.webp
+    effects: []
+    folder: null
+    sort: 0
+    flags:
+      core:
+        sourceId: Compendium.te001-core-rulebook.Items.mtNAkQHSz276enpC
+    system:
+      ap: 0
+      applyArmor: false
+      applySize: false
+      axiom: 12
+      castingtime: 1 action
+      damage: 0
+      description: "<p>Sometimes even the most peaceful of the chosen must pick up the staff. This powerful miracle makes sure that staff packs a punch. <em>Strike</em> affects a single melee or missile weapon, no Multi-Targeting is allowed.</p>\n<p><em>Strike</em> increases the damage value of a weapon by +1. It doesn’t matter if the weapon is ranged or designed for melee—its base damage is still increased. <em>Strike</em> must be cast on a weapon, not ammunition.</p>\n<p>A weapon blessed with <em>strike</em> counts as magical for purposes of affecting foes with the Ethereal or similar abilities that generally ignore normal weapons.</p>\n<p>\_</p>\n<p>Found in <strong>Core Rules</strong></p>"
+      dn: standard
+      dnType: ''
+      duration: 3 rounds
+      good: Damage +2
+      isAttack: false
+      modifier: ''
+      outstanding: Damage +3
+      range: Touch
+      skill: faith
+      skilllevel: '12'
+      targetDefense: ''
+    ownership:
+      default: 0
+      A9LyAqagoJJU3gDH: 3
+      CtisFurQNe9h7ABb: 3
+    _stats:
+      systemId: torgeternity
+      systemVersion: 3.1.1
+      coreVersion: '12.330'
+      createdTime: 1693909681228
+      modifiedTime: 1693909681228
+      lastModifiedBy: CtisFurQNe9h7ABb
+      compendiumSource: Compendium.te001-core-rulebook.Items.mtNAkQHSz276enpC
+      duplicateSource: null
+    _key: '!actors.items!hcdhRCs56U5JrAl4.bVioii8rx0LCXrcH'
+  - _id: Xc2qo0WjOqwKb1qy
+    name: Ward Enemy
+    type: miracle
+    img: systems/torgeternity/images/icons/miracles-icon.webp
+    effects: []
+    folder: null
+    sort: 0
+    flags:
+      core:
+        sourceId: Compendium.te001-core-rulebook.Items.u8AtVmCMnPyP3Ewx
+    system:
+      ap: 0
+      applyArmor: false
+      applySize: false
+      axiom: 8
+      castingtime: 1 action
+      damage: 0
+      description: "<p><em>Ward enemy</em> protects the faithful from supernatural beings that prey on or seek to harm humanity.</p>\n<p>To cast, the invoker must brandish a holy symbol, recite prayers, or otherwise clearly call on the source of his power, making him an obvious target for the taunts of spirits, demons, or other antagonists likely to be affected.</p>\n<p>While the ward is active, all allies within five meters add +1 to their defenses versus @UUID[Compendium.te001-core-rulebook.rules.pwneQ55M0nnDH0Us.JournalEntryPage.Pu4XsglS98BqDRgX#supernatural-evil]{supernaturally evil} creatures and their attacks. The bonus counts toward both physical and interaction defenses.</p>\n<p><strong>Special:</strong> This miracle may be attempted without the Miracles Perk if the <em>faith</em> prerequisite is met.</p>\n<p>In the Cyberpapacy faith, witches and other spellcasters are considered supernatural enemies of the faith. In addition to supernaturally evil creatures, the ward enemy miracle invoked by a worshiper of the Cyberpapacy functions against any character with any Spellcaster Perk or spellcasting Special Ability.</p>\n<p>\_</p>\n<p>Found in <strong>Core Rules</strong></p>"
+      dn: standard
+      dnType: ''
+      duration: Concentration
+      good: Those protected add +2 to all defenses
+      isAttack: false
+      modifier: ''
+      outstanding: >-
+        As the Good result, and supernaturally evil creatures who fail an attack
+        against any of the protected individuals are Stymied
+      range: 5 meter radius
+      skill: faith
+      skilllevel: '8'
+      targetDefense: ''
+    ownership:
+      default: 0
+      A9LyAqagoJJU3gDH: 3
+      CtisFurQNe9h7ABb: 3
+    _stats:
+      systemId: torgeternity
+      systemVersion: 3.1.1
+      coreVersion: '12.330'
+      createdTime: 1693909685043
+      modifiedTime: 1693909685043
+      lastModifiedBy: CtisFurQNe9h7ABb
+      compendiumSource: Compendium.te001-core-rulebook.Items.u8AtVmCMnPyP3Ewx
+      duplicateSource: null
+    _key: '!actors.items!hcdhRCs56U5JrAl4.Xc2qo0WjOqwKb1qy'
+  - _id: gjqT8qHAzPDsvKBD
+    name: Hrockt Root Armor
+    type: armor
+    img: systems/torgeternity/images/icons/armor-icon.webp
+    effects: []
+    folder: null
+    sort: 54800000
+    flags:
+      core:
+        sourceId: Compendium.te001-core-rulebook.Items.Item.zKjrA8syOmpNbuNS
+    system:
+      cosm: livingLand
+      description: "<p>@UUID[Compendium.te001-core-rulebook.rules.pwneQ55M0nnDH0Us.JournalEntryPage.qKdamp4rrcX6TTt0#full-body/torso:]{Torso}</p>\n<p>Crafted from the extremely durable roots of the hrockt tree, this armor is highly protective but also immobile without the will of Lanala. To be of any use the wearer must be a jakatt, with one or more adds in faith (Keta Kalles) and a Spirit Axiom of 11 or more. If the local axiom is lower this armor does cause a Contradiction.</p>\n<p>\_</p>\n<p>Found in <strong>Core Rules</strong></p>"
+      price: '400'
+      techlevel: 3
+      value: 13
+      bonus: 2
+      equipped: true
+      maxDex: 10
+      minStrength: null
+      notes: Torso, Jakatts only
+      fatigue: null
+      secondaryAxiom:
+        selected: spirit
+        value: 11
+    ownership:
+      default: 0
+      A9LyAqagoJJU3gDH: 3
+      CtisFurQNe9h7ABb: 3
+    _stats:
+      systemId: torgeternity
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
+      createdTime: 1711551146924
+      modifiedTime: 1722155790760
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Compendium.te001-core-rulebook.Items.Item.zKjrA8syOmpNbuNS
+      duplicateSource: null
+    _key: '!actors.items!hcdhRCs56U5JrAl4.gjqT8qHAzPDsvKBD'
+  - _id: dNmKxJaFaTINQHBa
+    name: Miracles
+    type: perk
+    img: systems/torgeternity/images/icons/reality-icon.webp
+    effects: []
+    folder: null
+    sort: 207813
+    flags:
+      core: {}
     system:
       category: faith
-      cosm: Other
-      description: >-
-        <p><strong>Cosms:</strong> Core Earth, Aysle, Cyberpapacy, Living Land,
-        Nile Empire, Orrorsh</p>
-
-        <p>The hero is blessed with the ability to call forth miracles. He gains
-        access to any Miracle List that is associated with his religion, and is
-        not specified by another Perk. Some example lists are given on page
-        199.</p>
-
-        <p>She gains <em>ward enemy</em> any two miracles chosen from any list
-        she knows. See
-        @UUID[Compendium.te001-core-rulebook.rules.pwneQ55M0nnDH0Us.JournalEntryPage.0yCTjO5Wj0tFVzBW]{Miracles}&nbsp;to
-        find out how to invoke them and what happens should the invocation
-        fail.</p>
-
-        <p><strong>New Miracles:</strong> This Perk may be taken more than once.
-        Each time after the first, it grants the user one additional
-        miracle.</p>
-
-        <p>&nbsp;</p>
-
-        <p>Found in <strong>Core Rules</strong></p>
+      cosm: other
+      description: "<p><strong>Cosms:</strong> Core Earth, Aysle, Cyberpapacy, Living Land, Nile Empire, Orrorsh</p><p>The hero is blessed with the ability to call forth miracles. He gains access to any Miracle List that is associated with his religion, and is not specified by another Perk. Here are some @UUID[Compendium.te001-core-rulebook.rules.JournalEntry.pwneQ55M0nnDH0Us.JournalEntryPage.0yCTjO5Wj0tFVzBW#example-miracle-lists]{Example miracle lists} given.<br />The Core Earth Religions supplement provide some expanded @UUID[Compendium.te001-core-rulebook.rules.JournalEntry.uTwRLGOalhiSSWeA.JournalEntryPage.r4Txsus7j2Xabtw0#miracle-lists]{Miracle Lists}.</p><p>She gains <em>ward enemy</em> any two miracles chosen from any list she knows. See @UUID[Compendium.te001-core-rulebook.rules.pwneQ55M0nnDH0Us.JournalEntryPage.0yCTjO5Wj0tFVzBW]{Miracles}\_to find out how to invoke them and what happens should the invocation fail.</p><p><strong>New Miracles:</strong> This Perk may be taken more than once. Each time after the first, it grants the user one additional miracle.</p><p>\_</p><p>Found in <strong>Core Rules</strong></p>"
       prerequisites: At least one add in faith
       generalContradiction: false
       pulpPowers:
@@ -218,41 +401,75 @@ items:
         limitation09: ''
         limitation10: ''
         limitationNumber: 0
-      timestaken: '1'
+      timestaken: ''
+      secondaryAxiom:
+        selected: none
+        value: null
     ownership:
       default: 0
       A9LyAqagoJJU3gDH: 3
-      CtisFurQNe9h7ABb: 3
+      VAnYow5sWS9EJzo0: 3
+      93AMwcGe6H37rcPA: 3
     _stats:
+      compendiumSource: Compendium.te001-core-rulebook.Items.Item.W6HcoYyOqi6pGGfD
+      duplicateSource: null
+      coreVersion: '12.330'
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
-      createdTime: 1693909346878
-      modifiedTime: 1693910505963
-      lastModifiedBy: CtisFurQNe9h7ABb
-    _key: '!actors.items!hcdhRCs56U5JrAl4.WiPheHr3LGK9czpN'
-  - _id: FSUnYxN1ETbZhCeI
+      systemVersion: 12.2.0
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+    _key: '!actors.items!hcdhRCs56U5JrAl4.dNmKxJaFaTINQHBa'
+  - _id: yAe9TWoKpqHEnno9
     name: Whip Tail
     type: perk
     img: systems/torgeternity/images/icons/reality-icon.webp
-    effects: []
-    folder: null
-    sort: 0
+    effects:
+      - origin: Compendium.te001-core-rulebook.Items.Item.MLrktsSHLMM5n7g9
+        duration:
+          rounds: null
+          startTime: null
+          seconds: null
+          combat: null
+          turns: null
+          startRound: null
+          startTurn: null
+        disabled: false
+        name: Unarmed Combat is Fav
+        img: icons/svg/aura.svg
+        _id: 050BsL6MF5PErpeT
+        type: base
+        system: {}
+        changes:
+          - key: ystem.skills.unarmedCombat.isFav
+            mode: 5
+            value: 'true'
+            priority: null
+        description: ''
+        tint: '#ffffff'
+        transfer: true
+        statuses: []
+        sort: 0
+        flags: {}
+        _stats:
+          compendiumSource: null
+          duplicateSource: null
+          coreVersion: '12.330'
+          systemId: torgeternity
+          systemVersion: 12.2.0
+          createdTime: null
+          modifiedTime: null
+          lastModifiedBy: null
+        _key: >-
+          !actors.items.effects!hcdhRCs56U5JrAl4.yAe9TWoKpqHEnno9.050BsL6MF5PErpeT
+    folder: gjZiCPX5knOIpsHd
+    sort: 415625
     flags:
-      core:
-        sourceId: Compendium.te001-core-rulebook.Items.MLrktsSHLMM5n7g9
+      core: {}
     system:
       category: edeinos
-      cosm: Living Land
-      description: >-
-        <p>The lizard-folk use their tails primarily for balance, but some have
-        learned to fight with them as well, performing complicated spins and
-        flips that turn their tails into long, whip-like weapons. <em>Unarmed
-        combat</em> becomes Favored.</p>
-
-        <p>&nbsp;</p>
-
-        <p>Found in <strong>Core Rules</strong></p>
+      cosm: livingLand
+      description: "<p>The lizard-folk use their tails primarily for balance, but some have learned to fight with them as well, performing complicated spins and flips that turn their tails into long, whip-like weapons. <em>Unarmed combat</em> becomes Favored.</p>\n<p>\_</p>\n<p>Found in <strong>Core Rules</strong></p>"
       prerequisites: ''
       generalContradiction: false
       pulpPowers:
@@ -328,45 +545,39 @@ items:
         limitation09: ''
         limitation10: ''
         limitationNumber: 0
-      timestaken: '1'
+      timestaken: ''
+      secondaryAxiom:
+        selected: none
+        value: null
     ownership:
       default: 0
       A9LyAqagoJJU3gDH: 3
-      CtisFurQNe9h7ABb: 3
+      VAnYow5sWS9EJzo0: 3
+      93AMwcGe6H37rcPA: 3
     _stats:
+      compendiumSource: Compendium.te001-core-rulebook.Items.Item.MLrktsSHLMM5n7g9
+      duplicateSource: null
+      coreVersion: '12.330'
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
-      createdTime: 1693909353421
-      modifiedTime: 1693910502795
-      lastModifiedBy: CtisFurQNe9h7ABb
-    _key: '!actors.items!hcdhRCs56U5JrAl4.FSUnYxN1ETbZhCeI'
-  - _id: UvpwyN3UJzkXnCPJ
+      systemVersion: 12.2.0
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+    _key: '!actors.items!hcdhRCs56U5JrAl4.yAe9TWoKpqHEnno9'
+  - _id: dhZt4ogIENT8UrvV
     name: Hrockt Shoot Spear
     type: meleeweapon
     img: systems/torgeternity/images/icons/axe-icon.webp
     effects: []
     folder: null
-    sort: 0
+    sort: 36200000
     flags:
-      core:
-        sourceId: Compendium.te001-core-rulebook.Items.ammMtd4GDTZAbVQx
+      core: {}
     system:
-      cosm: Living Land
-      description: >-
-        <p>@UUID[Compendium.te001-core-rulebook.rules.pwneQ55M0nnDH0Us.JournalEntryPage.qKdamp4rrcX6TTt0#thrown:]{Thrown}</p>
-
-        <p>Pliable when wet and growing, but hard as iron once cut and dried.
-        Often cultivated into straight spears with sharp points. Also commonly
-        thrown as a missile weapon.</p>
-
-        <p>In the missile weapons table this weapon has Tech Axiom 3.</p>
-
-        <p>&nbsp;</p>
-
-        <p>Found in <strong>Core Rules</strong></p>
+      cosm: livingLand
+      description: "<p>@UUID[Compendium.te001-core-rulebook.rules.pwneQ55M0nnDH0Us.JournalEntryPage.qKdamp4rrcX6TTt0#thrown:]{Thrown}</p><p>For use as missile weapon see @UUID[Actor.hcdhRCs56U5JrAl4.Item.GQGV7PufpwLZ9DdV]{Hrockt Shoot Spear}</p><p>Pliable when wet and growing, but hard as iron once cut and dried. Often cultivated into straight spears with sharp points. Also commonly thrown as a missile weapon.</p><p>In the missile weapons table this weapon has Tech Axiom 3.</p><p>\_</p><p>Found in <strong>Core Rules</strong></p>"
       price: '40'
-      techlevel: 3
+      techlevel: 2
       value: 8
       ap: 0
       attackWith: meleeWeapons
@@ -375,67 +586,43 @@ items:
       damage: 2
       damageType: strengthPlus
       equipped: false
-      equippedClass: .item-unequipped
       notes: Thrown
+      secondaryAxiom:
+        selected: none
+        value: null
+      minStrength: null
     ownership:
       default: 0
       A9LyAqagoJJU3gDH: 3
-      CtisFurQNe9h7ABb: 3
+      VAnYow5sWS9EJzo0: 3
+      93AMwcGe6H37rcPA: 3
     _stats:
+      compendiumSource: Compendium.te001-core-rulebook.Items.Item.ammMtd4GDTZAbVQx
+      duplicateSource: null
+      coreVersion: '12.330'
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
-      createdTime: 1693909378930
-      modifiedTime: 1693909378930
-      lastModifiedBy: CtisFurQNe9h7ABb
-    _key: '!actors.items!hcdhRCs56U5JrAl4.UvpwyN3UJzkXnCPJ'
-  - _id: OgvvLI102HQqibWo
-    name: Totem
-    type: gear
-    img: systems/torgeternity/images/icons/gear-icon.webp
-    effects: []
-    folder: null
-    sort: 0
-    flags:
-      core:
-        sourceId: Compendium.te001-core-rulebook.Items.5o1m7pL2fi5LABQw
-    system:
-      cosm: Living Land
-      description: <p>Bone carving of Lanala</p>
-      price: '25'
-      techlevel: 5
-      value: 7
-      equippedClass: item-equipped
-    ownership:
-      default: 0
-      A9LyAqagoJJU3gDH: 3
-      CtisFurQNe9h7ABb: 3
-    _stats:
-      systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
-      createdTime: 1693909398173
-      modifiedTime: 1693909421451
-      lastModifiedBy: CtisFurQNe9h7ABb
-    _key: '!actors.items!hcdhRCs56U5JrAl4.OgvvLI102HQqibWo'
-  - _id: 7wCbJyGmL99AlFqc
-    name: Hrockt Shoot Spear (Thrown)
+      systemVersion: 12.2.0
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+    _key: '!actors.items!hcdhRCs56U5JrAl4.dhZt4ogIENT8UrvV'
+  - name: Hrockt Shoot Spear
     type: missileweapon
     img: systems/torgeternity/images/icons/missile-weapon-icon.webp
-    effects: []
-    folder: null
-    sort: 0
-    flags:
-      core:
-        sourceId: Compendium.te001-core-rulebook.Items.ifZclb6BhuIsPfjt
     system:
-      cosm: Living Land
+      cosm: livingLand
       description: >-
-        <p>Pliable when wet and growing, but hard as iron once cut and dried.
-        Often cultivated into straight spears with sharp points.</p>
+        <p>For use as melee weapon see
+        @UUID[Actor.hcdhRCs56U5JrAl4.Item.dhZt4ogIENT8UrvV]{Hrockt Shoot
+        Spear}</p><p>Pliable when wet and growing, but hard as iron once cut and
+        dried. Often cultivated into straight spears with sharp points. Also
+        commonly thrown as a missile weapon.</p>
       price: '40'
       techlevel: 3
       value: 8
+      secondaryAxiom:
+        selected: none
+        value: null
       ammo:
         max: 1
         value: 1
@@ -445,255 +632,64 @@ items:
       damage: 2
       damageType: strengthPlus
       equipped: false
-      equippedClass: .item-unequipped
-      minStrength: '8'
-      notes: Thrown
-      range: 10 / 20 / 40
-    ownership:
-      default: 0
-      A9LyAqagoJJU3gDH: 3
-      CtisFurQNe9h7ABb: 3
-    _stats:
-      systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
-      createdTime: 1693909485506
-      modifiedTime: 1693909664846
-      lastModifiedBy: CtisFurQNe9h7ABb
-    _key: '!actors.items!hcdhRCs56U5JrAl4.7wCbJyGmL99AlFqc'
-  - _id: j4bd2LSc9RyWGvDr
-    name: Healing
-    type: miracle
-    img: systems/torgeternity/images/icons/miracles-icon.webp
+      minStrength: ''
+      notes: ''
+      range: 10/20/40
     effects: []
     folder: null
+    ownership:
+      default: 0
+      93AMwcGe6H37rcPA: 3
+    flags: {}
+    _stats:
+      compendiumSource: Compendium.te001-core-rulebook.Items.Item.6Pb5rtY0QdIMTbRF
+      duplicateSource: null
+      coreVersion: '12.330'
+      systemId: torgeternity
+      systemVersion: 12.2.0
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+    _id: GQGV7PufpwLZ9DdV
     sort: 0
-    flags:
-      core:
-        sourceId: Compendium.te001-core-rulebook.Items.UpTgsybNJ1srMK4o
-    system:
-      ap: 0
-      applyArmor: false
-      applySize: false
-      axiom: 10
-      castingtime: 1 action
-      damage: ''
-      description: >-
-        <p>Perhaps the most important ability a chosen one brings to a band of
-        Storm Knights is her ability to heal. Whether she&rsquo;s patching up
-        her teammate&rsquo;s Wounds&nbsp;or winning over injured villagers,
-        <em>healing</em> is a critical skill.</p>
-
-        <p>The invoker&rsquo;s total is modified by the target&rsquo;s Wound
-        penalties (as well as the caster&rsquo;s if he happens to be Wounded). A
-        success heals 1 Wound, all Shock, and removes KO.</p>
-
-        <p><em>Healing</em> may only be attempted on a single individual once
-        per scene&mdash;choose wisely! If Maru is injured in a fight and healed
-        by Father Damien, he won&rsquo;t be able to heal her again until the
-        next scene. He could still use <em>first aid</em> on her, and may use
-        <em>healing</em> on his other comrades.</p>
-
-        <p>&nbsp;</p>
-
-        <p>Found in <strong>Core Rules</strong></p>
-      dn: standard
-      dnType: ''
-      duration: Instant
-      good: 2 Wounds are healed
-      isAttack: false
-      modifier: ''
-      outstanding: 3 Wounds are healed
-      range: Touch
-      skill: faith
-      skilllevel: '10'
-      targetDefense: ''
-    ownership:
-      default: 0
-      A9LyAqagoJJU3gDH: 3
-      CtisFurQNe9h7ABb: 3
-    _stats:
-      systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
-      createdTime: 1693909676811
-      modifiedTime: 1693909676811
-      lastModifiedBy: CtisFurQNe9h7ABb
-    _key: '!actors.items!hcdhRCs56U5JrAl4.j4bd2LSc9RyWGvDr'
-  - _id: bVioii8rx0LCXrcH
-    name: Strike
-    type: miracle
-    img: systems/torgeternity/images/icons/miracles-icon.webp
-    effects: []
-    folder: null
+    _key: '!actors.items!hcdhRCs56U5JrAl4.GQGV7PufpwLZ9DdV'
+effects:
+  - origin: Actor.hcdhRCs56U5JrAl4.Item.yAe9TWoKpqHEnno9
+    duration:
+      rounds: null
+      startTime: 0
+      seconds: null
+      combat: null
+      turns: null
+      startRound: null
+      startTurn: null
+    disabled: false
+    name: Unarmed Combat is Fav
+    img: icons/svg/aura.svg
+    _id: I1ZQfHgB1zhqV1it
+    type: base
+    system: {}
+    changes:
+      - key: ystem.skills.unarmedCombat.isFav
+        mode: 5
+        value: 'true'
+        priority: null
+    description: ''
+    tint: '#ffffff'
+    transfer: false
+    statuses: []
     sort: 0
-    flags:
-      core:
-        sourceId: Compendium.te001-core-rulebook.Items.mtNAkQHSz276enpC
-    system:
-      ap: 0
-      applyArmor: false
-      applySize: false
-      axiom: 12
-      castingtime: 1 action
-      damage: ''
-      description: >-
-        <p>Sometimes even the most peaceful of the chosen must pick up the
-        staff. This powerful miracle makes sure that staff packs a punch.
-        <em>Strike</em> affects a single melee or missile weapon, no
-        Multi-Targeting is allowed.</p>
-
-        <p><em>Strike</em> increases the damage value of a weapon by +1. It
-        doesn&rsquo;t matter if the weapon is ranged or designed for
-        melee&mdash;its base damage is still increased. <em>Strike</em> must be
-        cast on a weapon, not ammunition.</p>
-
-        <p>A weapon blessed with <em>strike</em> counts as magical for purposes
-        of affecting foes with the Ethereal or similar abilities that generally
-        ignore normal weapons.</p>
-
-        <p>&nbsp;</p>
-
-        <p>Found in <strong>Core Rules</strong></p>
-      dn: standard
-      dnType: ''
-      duration: 3 rounds
-      good: Damage +2
-      isAttack: false
-      modifier: ''
-      outstanding: Damage +3
-      range: Touch
-      skill: faith
-      skilllevel: '12'
-      targetDefense: ''
-    ownership:
-      default: 0
-      A9LyAqagoJJU3gDH: 3
-      CtisFurQNe9h7ABb: 3
+    flags: {}
     _stats:
+      compendiumSource: null
+      duplicateSource: null
+      coreVersion: '12.330'
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
-      createdTime: 1693909681228
-      modifiedTime: 1693909681228
-      lastModifiedBy: CtisFurQNe9h7ABb
-    _key: '!actors.items!hcdhRCs56U5JrAl4.bVioii8rx0LCXrcH'
-  - _id: Xc2qo0WjOqwKb1qy
-    name: Ward Enemy
-    type: miracle
-    img: systems/torgeternity/images/icons/miracles-icon.webp
-    effects: []
-    folder: null
-    sort: 0
-    flags:
-      core:
-        sourceId: Compendium.te001-core-rulebook.Items.u8AtVmCMnPyP3Ewx
-    system:
-      ap: 0
-      applyArmor: false
-      applySize: false
-      axiom: 8
-      castingtime: 1 action
-      damage: ''
-      description: >-
-        <p><em>Ward enemy</em> protects the faithful from supernatural beings
-        that prey on or seek to harm humanity.</p>
-
-        <p>To cast, the invoker must brandish a holy symbol, recite prayers, or
-        otherwise clearly call on the source of his power, making him an obvious
-        target for the taunts of spirits, demons, or other antagonists likely to
-        be affected.</p>
-
-        <p>While the ward is active, all allies within five meters add +1 to
-        their defenses versus
-        @UUID[Compendium.te001-core-rulebook.rules.pwneQ55M0nnDH0Us.JournalEntryPage.Pu4XsglS98BqDRgX#supernatural-evil]{supernaturally
-        evil} creatures and their attacks. The bonus counts toward both physical
-        and interaction defenses.</p>
-
-        <p><strong>Special:</strong> This miracle may be attempted without the
-        Miracles Perk if the <em>faith</em> prerequisite is met.</p>
-
-        <p>In the Cyberpapacy faith, witches and other spellcasters are
-        considered supernatural enemies of the faith. In addition to
-        supernaturally evil creatures, the ward enemy miracle invoked by a
-        worshiper of the Cyberpapacy functions against any character with any
-        Spellcaster Perk or spellcasting Special Ability.</p>
-
-        <p>&nbsp;</p>
-
-        <p>Found in <strong>Core Rules</strong></p>
-      dn: standard
-      dnType: ''
-      duration: Concentration
-      good: Those protected add +2 to all defenses
-      isAttack: false
-      modifier: ''
-      outstanding: >-
-        As the Good result, and supernaturally evil creatures who fail an attack
-        against any of the protected individuals are Stymied
-      range: 5 meter radius
-      skill: faith
-      skilllevel: '8'
-      targetDefense: ''
-    ownership:
-      default: 0
-      A9LyAqagoJJU3gDH: 3
-      CtisFurQNe9h7ABb: 3
-    _stats:
-      systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
-      createdTime: 1693909685043
-      modifiedTime: 1693909685043
-      lastModifiedBy: CtisFurQNe9h7ABb
-    _key: '!actors.items!hcdhRCs56U5JrAl4.Xc2qo0WjOqwKb1qy'
-  - _id: gjqT8qHAzPDsvKBD
-    name: Hrockt Root Armor
-    type: armor
-    img: systems/torgeternity/images/icons/armor-icon.webp
-    effects: []
-    folder: null
-    sort: 54800000
-    flags:
-      core:
-        sourceId: Compendium.te001-core-rulebook.Items.Item.zKjrA8syOmpNbuNS
-    system:
-      cosm: Living Land
-      description: >-
-        <p>@UUID[Compendium.te001-core-rulebook.rules.pwneQ55M0nnDH0Us.JournalEntryPage.qKdamp4rrcX6TTt0#full-body/torso:]{Torso}</p>
-
-        <p>Crafted from the extremely durable roots of the hrockt tree, this
-        armor is highly protective but also immobile without the will of Lanala.
-        To be of any use the wearer must be a jakatt, with one or more adds in
-        faith (Keta Kalles) and a Spirit Axiom of 11 or more. If the local axiom
-        is lower this armor does cause a Contradiction.</p>
-
-        <p>&nbsp;</p>
-
-        <p>Found in <strong>Core Rules</strong></p>
-      price: '400'
-      techlevel: 3
-      value: 13
-      bonus: 2
-      equipped: true
-      equippedClass: item-equipped
-      maxDex: 10
-      minStrength: null
-      notes: Torso, Jakatts only
-      fatigue: null
-    ownership:
-      default: 0
-      A9LyAqagoJJU3gDH: 3
-      CtisFurQNe9h7ABb: 3
-    _stats:
-      systemId: torgeternity
-      systemVersion: 3.7.0
-      coreVersion: '11.315'
-      createdTime: 1711551146924
-      modifiedTime: 1711704747798
-      lastModifiedBy: CtisFurQNe9h7ABb
-    _key: '!actors.items!hcdhRCs56U5JrAl4.gjqT8qHAzPDsvKBD'
-effects: []
+      systemVersion: 12.2.0
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+    _key: '!actors.effects!hcdhRCs56U5JrAl4.I1ZQfHgB1zhqV1it'
 folder: null
 sort: 100001
 flags: {}
@@ -1051,7 +1047,7 @@ system:
     background: >-
       <p><img class="charimg"
       src="systems/torgeternity/images/characters/Edeinos_Optant.webp" alt=""
-      width="1723" height="2375"></p>
+      width="1723" height="2375" /></p>
 
       <p
       class="moreheight">@UUID[Compendium.torgeternity.handouts.JournalEntry.Knhh8vqtjSylJo5Z.JournalEntryPage.S9ZpLno9HjlxRrmV]{Archetype
@@ -1064,46 +1060,44 @@ system:
       creatures, and giant carnivores. The edeinos see no contradiction in
       bringing death to their foes in the name of Lanala, the goddess of life.
       Death begets life. Decay seeds the soil which brings forth new growth.
-      Optants are priests who embody Lanala&rsquo;s way, known as &ldquo;Keta
-      Kalles.&ldquo;</p>
+      Optants are priests who embody Lanala’s way, known as “Keta Kalles.“</p>
 
       <p>Most optants remain loyal to Baruk Kaah, but some believe the High Lord
-      has actually abandoned Keta Kalles, and Lanala&rsquo;s faithful must now
-      rise against him.</p>
+      has actually abandoned Keta Kalles, and Lanala’s faithful must now rise
+      against him.</p>
 
       <h3>Tactics</h3>
 
-      <p>Your strong arm and sharp &ldquo;hrockt shoot&ldquo; spear are enough
-      to dispatch most foes. The strike miracle may enhance your spear when
-      faced with a particularly tenacious foe. Intimidation interactions are
-      also useful for softening up opposition. Your defenses are mediocre
-      (taunts and tricks are your particular vulnerabilities), but with a high
-      reality you can Soak most damage.</p>
+      <p>Your strong arm and sharp “hrockt shoot“ spear are enough to dispatch
+      most foes. The strike miracle may enhance your spear when faced with a
+      particularly tenacious foe. Intimidation interactions are also useful for
+      softening up opposition. Your defenses are mediocre (taunts and tricks are
+      your particular vulnerabilities), but with a high reality you can Soak
+      most damage.</p>
 
       <h3>Moment of Crisis</h3>
 
       <p>Lanala commanded the edeinos to bring life to dead places in other
-      worlds&mdash;or so Baruk Kaah said. In practice though, the sensations of
-      war felt wrong to you, an affront to Lanala rather than an exultation of
-      her. The feeling proved true when turning against Kaah triggered your
+      worlds—or so Baruk Kaah said. In practice though, the sensations of war
+      felt wrong to you, an affront to Lanala rather than an exultation of her.
+      The feeling proved true when turning against Kaah triggered your
       transcendence.</p>
 
       <h3>Quote</h3>
 
-      <p>&ldquo;I almost envy the pain you are about to experience.&ldquo;</p>
+      <p>“I almost envy the pain you are about to experience.“</p>
 
       <h3>Description</h3>
 
       <p>It may seem odd for a priest of life to wear a dinosaur skull and many
-      bones, but death and decay are just another part of life. These
-      aren&rsquo;t dead things&mdash; things of stone and metal that were never
-      touched by Lanala&mdash;they were once alive. Like most edeinos you are
-      informal, lacking the manners and social boundaries humans take for
-      granted.</p>
+      bones, but death and decay are just another part of life. These aren’t
+      dead things— things of stone and metal that were never touched by
+      Lanala—they were once alive. Like most edeinos you are informal, lacking
+      the manners and social boundaries humans take for granted.</p>
 
       <h3>Agenda</h3>
 
-      <p>The path to Lanala is through the experience of sensation&mdash;pain,
+      <p>The path to Lanala is through the experience of sensation—pain,
       pleasure, and rare feelings beyond both. Baruk Kaah and the High Lords are
       threats to Lanala, but the most important thing is to feel.</p>
 
@@ -1177,14 +1171,20 @@ prototypeToken:
       max: 1
     color: null
     attenuation: 0.5
+    negative: false
+    priority: 0
   texture:
     src: systems/torgeternity/images/characters/edeinos_optant.Token.webp
-    tint: null
+    tint: '#ffffff'
     scaleX: 1
     scaleY: 1
     offsetX: 0
     offsetY: 0
     rotation: 0
+    anchorX: 0.5
+    anchorY: 0.5
+    fit: contain
+    alphaThreshold: 0.75
   sight:
     angle: 360
     enabled: false
@@ -1194,14 +1194,29 @@ prototypeToken:
     attenuation: 0.1
     saturation: 0
     contrast: 0
+    color: null
   appendNumber: false
   prependAdjective: false
   detectionModes: []
+  hexagonalShape: 0
+  occludable:
+    radius: 0
+  ring:
+    enabled: false
+    colors:
+      ring: null
+      background: null
+    effects: 1
+    subject:
+      scale: 1
+      texture: null
 _stats:
   systemId: torgeternity
-  systemVersion: 3.8.1
-  coreVersion: '11.315'
+  systemVersion: 12.2.0
+  coreVersion: '12.330'
   createdTime: 1693901456910
-  modifiedTime: 1716827807995
-  lastModifiedBy: VAnYow5sWS9EJzo0
+  modifiedTime: 1722355493847
+  lastModifiedBy: 93AMwcGe6H37rcPA
+  compendiumSource: null
+  duplicateSource: null
 _key: '!actors!hcdhRCs56U5JrAl4'

@@ -14,22 +14,26 @@ items:
       core:
         sourceId: Item.nPZyQyNBzc62zWh7
     system:
-      cosm: (Keins)
-      description: <p>&Ouml;rtliche Polizeiautorit&auml;t</p>
+      cosm: coreEarth
+      description: <p>Örtliche Polizeiautorität</p>
       price: '0'
       techlevel: 22
       value: 0
-      equippedClass: item-equipped
+      secondaryAxiom:
+        selected: none
+        value: null
     ownership:
       default: 0
       9Q0XnqFwko7hRlvL: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: null
-      modifiedTime: 1694869588488
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722161490227
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Item.nPZyQyNBzc62zWh7
+      duplicateSource: null
     _key: '!actors.items!f4ualGSV9gJbtwLI.3oIUNQEve7fSs3Ei'
   - _id: VYhy5tju01eTVrOM
     name: Smartphone
@@ -42,28 +46,32 @@ items:
       core:
         sourceId: Item.ELZyQ5vEHcMPe2tX
     system:
-      cosm: Zentralerde
+      cosm: coreEarth
       description: >-
         <p>Extras wie GPS und eine Taschenlampe sind im Lieferumfang enthalten.
-        Die meisten Handys m&uuml;ssen sich in ausreichender N&auml;he zu einem
+        Die meisten Handys müssen sich in ausreichender Nähe zu einem
         Mobilfunkturm befinden, um ein Signal zu erhalten, sodass ein Telefon in
-        Gebieten mit niedriger Tech-Stufe m&ouml;glicherweise keinen Empfang
-        hat. Realit&auml;tsst&uuml;rme wirken sich ebenfalls sehr negativ auf
-        den Empfang aus.</p>
+        Gebieten mit niedriger Tech-Stufe möglicherweise keinen Empfang hat.
+        Realitätsstürme wirken sich ebenfalls sehr negativ auf den Empfang
+        aus.</p>
       price: '700'
       techlevel: 23
       value: 14
-      equippedClass: item-equipped
+      secondaryAxiom:
+        selected: none
+        value: null
     ownership:
       default: 0
       9Q0XnqFwko7hRlvL: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: null
-      modifiedTime: 1694869588488
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722161496843
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Item.ELZyQ5vEHcMPe2tX
+      duplicateSource: null
     _key: '!actors.items!f4ualGSV9gJbtwLI.VYhy5tju01eTVrOM'
   - _id: WbsMVXW3Az6DGO1P
     name: Stilvolle Kleidung
@@ -81,46 +89,22 @@ items:
       price: '0'
       techlevel: 22
       value: 0
-      equippedClass: item-equipped
+      secondaryAxiom:
+        selected: none
+        value: null
     ownership:
       default: 0
       9Q0XnqFwko7hRlvL: 3
     _stats:
       systemId: torgeternity
       systemVersion: 3.1.1
-      coreVersion: '11.308'
+      coreVersion: '12.330'
       createdTime: null
       modifiedTime: 1694869588488
       lastModifiedBy: CtisFurQNe9h7ABb
+      compendiumSource: Item.mTsiRJl8NOEUjAKV
+      duplicateSource: null
     _key: '!actors.items!f4ualGSV9gJbtwLI.WbsMVXW3Az6DGO1P'
-  - _id: ujVSjEcO7QAlswul
-    name: Extra-Magazine
-    type: gear
-    img: systems/torgeternity/images/icons/gear-icon.webp
-    effects: []
-    folder: YrLpjzkzDZxqWzUw
-    sort: 100000
-    flags:
-      core:
-        sourceId: Item.9VjiNmOA2TB62Xej
-    system:
-      cosm: (Keins)
-      description: <p>F&uuml;nfmal Glock nachladen.</p>
-      price: '0'
-      techlevel: 22
-      value: 0
-      equippedClass: item-equipped
-    ownership:
-      default: 0
-      9Q0XnqFwko7hRlvL: 3
-    _stats:
-      systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
-      createdTime: null
-      modifiedTime: 1694869588488
-      lastModifiedBy: CtisFurQNe9h7ABb
-    _key: '!actors.items!f4ualGSV9gJbtwLI.ujVSjEcO7QAlswul'
   - _id: 3gQNZCXm93gEdOwb
     name: Waffenlos
     type: customAttack
@@ -145,10 +129,12 @@ items:
     _stats:
       systemId: torgeternity
       systemVersion: 3.1.1
-      coreVersion: '11.308'
+      coreVersion: '12.330'
       createdTime: null
       modifiedTime: 1694867177709
       lastModifiedBy: CtisFurQNe9h7ABb
+      compendiumSource: Item.w4b7qWApQXkghQXE
+      duplicateSource: null
     _key: '!actors.items!f4ualGSV9gJbtwLI.3gQNZCXm93gEdOwb'
   - _id: vqndyczWncWn7olt
     name: Gegenschlag
@@ -162,14 +148,14 @@ items:
         sourceId: Compendium.te001-core-rulebook.grw-de-vorzuverb.Item.WxifoHdJt9UdFAfO
     system:
       category: kiPowers
-      cosm: Pan-Pacifica
+      cosm: panPacifica
       description: >-
         <p>Wenn ein Gegner den Charakter mit einem bewaffneten oder
         unbewaffnetem Nahkampfangriff verfehlt, darf dieser freiwillig 1 Schock
         erleiden, um sofort einen eigenen Nahkampfangriff gegen diesen Gegner
-        durchzuf&uuml;hren.</p>
+        durchzuführen.</p>
       prerequisites: Geist 8+, mindestens 3 Fertigkeitsstufen in Waffenloser Kampf
-      generalContradiction: false
+      generalContradiction: true
       pulpPowers:
         enhancement01:
           description: ''
@@ -243,18 +229,23 @@ items:
         limitation09: ''
         limitation10: ''
         limitationNumber: 0
-      timestaken: ''
+      timestaken: '1'
+      secondaryAxiom:
+        selected: none
+        value: null
     ownership:
       default: 0
       9Q0XnqFwko7hRlvL: 3
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: 1694869458824
-      modifiedTime: 1694869458824
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722161202292
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Compendium.te001-core-rulebook.grw-de-vorzuverb.Item.WxifoHdJt9UdFAfO
+      duplicateSource: null
     _key: '!actors.items!f4ualGSV9gJbtwLI.vqndyczWncWn7olt'
   - _id: Rqb1AKS8SWxi1xqM
     name: Schläger
@@ -268,19 +259,8 @@ items:
         sourceId: Compendium.te001-core-rulebook.grw-de-vorzuverb.Item.sWRXWBwLHBCcTUOJ
     system:
       category: prowess
-      cosm: (Keins)
-      description: >-
-        <p>Der Charakter hat gelernt, hart zuzuschlagen, sei es mithilfe von
-        schmutzigen Tricks und einem guten Aufw&auml;rtshaken oder einem
-        umfangreichen Training in Karate, Jujitsu, Tae Kwon Do oder
-        &auml;hnlichen Kampfstilen. Charaktere mit diesem Bonus verursachen bei
-        Waffenloser- Kampf-Angriffen mit ihren blo&szlig;en H&auml;nden
-        St&auml;rke +2 Schaden. Dies darf mit anderen Bonussen kombiniert
-        werden, zum Beispiel den Nat&uuml;rlichen Waffen eines
-        Edeinos.&nbsp;</p>
-
-        <p>Fortgeschrittenere und exotischere Techniken k&ouml;nnen in Form der
-        Ki-Kr&auml;fte von Pan-Pacifica erlernt werden.</p>
+      cosm: none
+      description: "<p>Der Charakter hat gelernt, hart zuzuschlagen, sei es mithilfe von schmutzigen Tricks und einem guten Aufwärtshaken oder einem umfangreichen Training in Karate, Jujitsu, Tae Kwon Do oder ähnlichen Kampfstilen. Charaktere mit diesem Bonus verursachen bei Waffenloser- Kampf-Angriffen mit ihren bloßen Händen Stärke +2 Schaden. Dies darf mit anderen Bonussen kombiniert werden, zum Beispiel den Natürlichen Waffen eines Edeinos.\_</p>\n<p>Fortgeschrittenere und exotischere Techniken können in Form der Ki-Kräfte von Pan-Pacifica erlernt werden.</p>"
       prerequisites: mindestens 2 Fertigkeitsstufen in Waffenloser Kampf
       generalContradiction: false
       pulpPowers:
@@ -356,18 +336,23 @@ items:
         limitation09: ''
         limitation10: ''
         limitationNumber: 0
-      timestaken: ''
+      timestaken: '1'
+      secondaryAxiom:
+        selected: none
+        value: null
     ownership:
       default: 0
       9Q0XnqFwko7hRlvL: 3
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: 1694869464696
-      modifiedTime: 1694869464696
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722161208164
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Compendium.te001-core-rulebook.grw-de-vorzuverb.Item.sWRXWBwLHBCcTUOJ
+      duplicateSource: null
     _key: '!actors.items!f4ualGSV9gJbtwLI.Rqb1AKS8SWxi1xqM'
   - _id: bIfNWj1FDQwDsqZG
     name: Glock 9mm
@@ -381,13 +366,12 @@ items:
         sourceId: >-
           Compendium.te001-core-rulebook.grw-de-ausruestung.Item.uS5bsDS4zQkN7NTj
     system:
-      cosm: Zentralerde
+      cosm: coreEarth
       description: >-
         <p>@UUID[Compendium.te001-core-rulebook.grw-de-grw.Qlx6yGF0Mmo6Xzrv.JournalEntryPage.7GGUUHzuYIqGPXDO#karabiner:]{Pistole}</p>
 
-        <p>Eine r&uuml;cksto&szlig;ladende 9 mm Halbautomatik- Pistole, die
-        f&uuml;r ihr gro&szlig;es, doppelt gestapeltes Munitionsmagazin bekannt
-        ist.</p>
+        <p>Eine rückstoßladende 9 mm Halbautomatik- Pistole, die für ihr großes,
+        doppelt gestapeltes Munitionsmagazin bekannt ist.</p>
       price: '250'
       techlevel: 22
       value: 12
@@ -400,20 +384,24 @@ items:
       damage: 13
       damageType: ''
       equipped: false
-      equippedClass: .item-unequipped
       notes: Pistole
       range: 10/25/40
+      secondaryAxiom:
+        selected: none
+        value: null
     ownership:
       default: 0
       9Q0XnqFwko7hRlvL: 3
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: 1694869489370
-      modifiedTime: 1694869489370
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722161388820
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Compendium.te001-core-rulebook.grw-de-ausruestung.Item.uS5bsDS4zQkN7NTj
+      duplicateSource: null
     _key: '!actors.items!f4ualGSV9gJbtwLI.bIfNWj1FDQwDsqZG'
   - _id: RCMHOsLlvVdprXvr
     name: Glock 9mm
@@ -427,13 +415,12 @@ items:
         sourceId: >-
           Compendium.te001-core-rulebook.grw-de-ausruestung.Item.uS5bsDS4zQkN7NTj
     system:
-      cosm: Zentralerde
+      cosm: coreEarth
       description: >-
         <p>@UUID[Compendium.te001-core-rulebook.grw-de-grw.Qlx6yGF0Mmo6Xzrv.JournalEntryPage.7GGUUHzuYIqGPXDO#karabiner:]{Pistole}</p>
 
-        <p>Eine r&uuml;cksto&szlig;ladende 9 mm Halbautomatik- Pistole, die
-        f&uuml;r ihr gro&szlig;es, doppelt gestapeltes Munitionsmagazin bekannt
-        ist.</p>
+        <p>Eine rückstoßladende 9 mm Halbautomatik- Pistole, die für ihr großes,
+        doppelt gestapeltes Munitionsmagazin bekannt ist.</p>
       price: '250'
       techlevel: 22
       value: 12
@@ -446,20 +433,24 @@ items:
       damage: 13
       damageType: ''
       equipped: false
-      equippedClass: .item-unequipped
       notes: Pistole
       range: 10/25/40
+      secondaryAxiom:
+        selected: none
+        value: null
     ownership:
       default: 0
       9Q0XnqFwko7hRlvL: 3
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: 1694869490779
-      modifiedTime: 1694869490779
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722161457156
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Compendium.te001-core-rulebook.grw-de-ausruestung.Item.uS5bsDS4zQkN7NTj
+      duplicateSource: null
     _key: '!actors.items!f4ualGSV9gJbtwLI.RCMHOsLlvVdprXvr'
   - _id: GzLZEYOYkSHaZqOu
     name: Handschellen
@@ -472,29 +463,32 @@ items:
       core:
         sourceId: Item.sh2tcK6G0tcScgwq
     system:
-      cosm: Nil-Imperium
+      cosm: nileEmpire
       description: >-
         <p>Das Anbringen von Handschellen erfordert einen guten Erfolg bei einem
         @UUID[Compendium.te001-core-rulebook.grw-de-grw.Qlx6yGF0Mmo6Xzrv.JournalEntryPage.41rZYYhaMC2T260D#ringen]{Ringen}-Angriff.
-        Die H&auml;nde des festgehaltenen Ziels werden zusammengebunden, bis die
-        Handschellen ge&ouml;ffnet oder aufgebrochen wurden, was einen Angriff
-        gegen Robustheit 18 oder eine heldenhafte (MW 18) St&auml;rke-Probe
-        erfordert.</p>
+        Die Hände des festgehaltenen Ziels werden zusammengebunden, bis die
+        Handschellen geöffnet oder aufgebrochen wurden, was einen Angriff gegen
+        Robustheit 18 oder eine heldenhafte (MW 18) Stärke-Probe erfordert.</p>
       price: '50'
       techlevel: 19
       value: 9
-      equippedClass: item-equipped
+      secondaryAxiom:
+        selected: none
+        value: null
     ownership:
       default: 0
       9Q0XnqFwko7hRlvL: 3
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: 1694869506448
-      modifiedTime: 1694869588488
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722161485564
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Item.sh2tcK6G0tcScgwq
+      duplicateSource: null
     _key: '!actors.items!f4ualGSV9gJbtwLI.GzLZEYOYkSHaZqOu'
   - name: Sonnenbrille
     type: gear
@@ -507,23 +501,27 @@ items:
         sourceId: Item.5wtRULBzLY17nU2s
     _id: l5EJRkGXrWCJNyEg
     system:
-      cosm: Nil-Imperium
+      cosm: nileEmpire
       description: <p>Gegen blendendes Licht.</p>
       price: '25'
       techlevel: 20
       value: 7
-      equippedClass: item-equipped
+      secondaryAxiom:
+        selected: none
+        value: null
     ownership:
       default: 0
       9Q0XnqFwko7hRlvL: 3
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: 1694869515392
-      modifiedTime: 1694869588488
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722161500947
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Item.5wtRULBzLY17nU2s
+      duplicateSource: null
     _key: '!actors.items!f4ualGSV9gJbtwLI.l5EJRkGXrWCJNyEg'
   - name: Taschenlampe
     type: gear
@@ -536,23 +534,27 @@ items:
         sourceId: Item.ghYEu90Et15IioVa
     _id: H6HBbufEIw9Miatd
     system:
-      cosm: Nil-Imperium
+      cosm: nileEmpire
       description: ''
       price: '10'
       techlevel: 20
       value: 5
-      equippedClass: item-equipped
+      secondaryAxiom:
+        selected: none
+        value: null
     ownership:
       default: 0
       9Q0XnqFwko7hRlvL: 3
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: 1694869528799
-      modifiedTime: 1694869588488
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722161507307
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Item.ghYEu90Et15IioVa
+      duplicateSource: null
     _key: '!actors.items!f4ualGSV9gJbtwLI.H6HBbufEIw9Miatd'
   - _id: rFy5ucB7V1HgwoVj
     name: Lederjacke
@@ -566,7 +568,7 @@ items:
         sourceId: >-
           Compendium.te001-core-rulebook.grw-de-ausruestung.Item.ibQvaehrqx24DxvU
     system:
-      cosm: Zentralerde
+      cosm: nileEmpire
       description: >-
         <p>@UUID[Compendium.te001-core-rulebook.grw-de-grw.Qlx6yGF0Mmo6Xzrv.JournalEntryPage.7GGUUHzuYIqGPXDO#ganzkorper/torso:]{Torso}</p>
 
@@ -576,23 +578,67 @@ items:
       value: 10
       bonus: 1
       equipped: true
-      equippedClass: item-equipped
       maxDex: 12
       minStrength: null
       notes: Torso
       fatigue: null
+      secondaryAxiom:
+        selected: none
+        value: null
     ownership:
       default: 0
       9Q0XnqFwko7hRlvL: 3
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.7.0
-      coreVersion: '11.315'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: 1711562366193
-      modifiedTime: 1711706309755
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722161468203
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Compendium.te001-core-rulebook.grw-de-ausruestung.Item.ibQvaehrqx24DxvU
+      duplicateSource: null
     _key: '!actors.items!f4ualGSV9gJbtwLI.rFy5ucB7V1HgwoVj'
+  - name: Extra-Magazine
+    type: ammunition
+    img: systems/torgeternity/images/icons/ammo-icon.webp
+    system:
+      cosm: ''
+      description: >-
+        <p><span style="font-family:'Palatino Linotype'">Fünfmal Glock
+        nachladen.</span></p>
+      price: ''
+      techlevel: 21
+      value: 0
+      secondaryAxiom:
+        selected: none
+        value: null
+      type: ''
+      quantity: 5
+      damageMod: 0
+      apMod: 0
+      fireDamage: false
+      blastRadius: Keiner
+      darknessMod: none
+      reach: ''
+    effects: []
+    folder: null
+    sort: 0
+    ownership:
+      default: 0
+      93AMwcGe6H37rcPA: 3
+    flags: {}
+    _stats:
+      compendiumSource: Item.TptgnUCwWM2QZCaK
+      duplicateSource: Item.KRYQ71jof26XeGEv
+      coreVersion: '12.330'
+      systemId: torgeternity
+      systemVersion: 12.2.0
+      createdTime: 1722161378739
+      modifiedTime: 1722167125877
+      lastModifiedBy: 93AMwcGe6H37rcPA
+    _id: rcW2fFiZ2TLjiQsg
+    _key: '!actors.items!f4ualGSV9gJbtwLI.rcW2fFiZ2TLjiQsg'
 effects: []
 folder: null
 sort: 0
@@ -953,71 +999,67 @@ system:
     background: >-
       <p><img class="charimg"
       src="systems/torgeternity/images/characters/Hardboiled_Detective.webp"
-      alt="" width="1424" height="1858"></p>
+      alt="" width="1424" height="1858" /></p>
 
       <p
       class="moreheight">@UUID[Compendium.torgeternity.system-de-handouts.JournalEntry.DLLvnXpv7RFhRgHu.JournalEntryPage.jGMEVr72h0Jjm3CQ]{Archetyp
-      - Der abgebr&uuml;hte Detektiv}</p>
+      - Der abgebrühte Detektiv}</p>
 
-      <h3>&Uuml;berblick</h3>
+      <h3>Überblick</h3>
 
-      <p>Jahre auf den Stra&szlig;en von Hongkong haben dich zu einer
-      t&ouml;dlichen Waffe werden lassen. Die Verwandlung in einen Storm Knight
-      hat deine F&auml;higkeiten nur noch weiter verbessert. In erster Linie
-      untersuchst du Verbrechen. Du wurdest ausgebildet, Spuren zu folgen,
-      Zeugen zu befragen und Recht und Ordnung aufrechtzuerhalten. Nur wenn die
-      Schurken sich der Verhaftung widersetzen &ndash; und sie widersetzen sich
-      fast immer &ndash;, dann werden die Dinge gewaltt&auml;tig und deine
-      anderen F&auml;higkeiten kommen ins Spiel.</p>
+      <p>Jahre auf den Straßen von Hongkong haben dich zu einer tödlichen Waffe
+      werden lassen. Die Verwandlung in einen Storm Knight hat deine Fähigkeiten
+      nur noch weiter verbessert. In erster Linie untersuchst du Verbrechen. Du
+      wurdest ausgebildet, Spuren zu folgen, Zeugen zu befragen und Recht und
+      Ordnung aufrechtzuerhalten. Nur wenn die Schurken sich der Verhaftung
+      widersetzen – und sie widersetzen sich fast immer –, dann werden die Dinge
+      gewalttätig und deine anderen Fähigkeiten kommen ins Spiel.</p>
 
       <h3>Taktiken</h3>
 
-      <p>Du bist ein Meistersch&uuml;tze und hast die Feuerkraft einer kleinen
-      Armee, wenn du mit deinen beiden 9mm-Pistolen draufh&auml;ltst. Dein hoher
+      <p>Du bist ein Meisterschütze und hast die Feuerkraft einer kleinen Armee,
+      wenn du mit deinen beiden 9mm-Pistolen draufhältst. Dein hoher
       <em>Ausweichen</em>-Wert und <em>Waffenloser Kampf </em>bieten auf alle
-      Entfernungen eine solide Verteidigung. <em>Man&ouml;vrieren</em> ist deine
-      st&auml;rkste Interaktion. Versuche sie zu nutzen, wenn es sich um eine
+      Entfernungen eine solide Verteidigung. <em>Manövrieren</em> ist deine
+      stärkste Interaktion. Versuche sie zu nutzen, wenn es sich um eine
       Anerkannte Aktion handelt. Mit dem Gegenschlag-Vorteil kannst du
       Nahkampfangreifern, die daneben schlagen, eine sofortige Abreibung
-      verpassen &ndash; solange du noch Schock &uuml;brig hast! Du darfst auch
-      dann waffenlose Angriffe ausf&uuml;hren, wenn du zwei Pistolen
-      h&auml;ltst; du trittst oder schl&auml;gst mit deinen Ellbogen zu.</p>
+      verpassen – solange du noch Schock übrig hast! Du darfst auch dann
+      waffenlose Angriffe ausführen, wenn du zwei Pistolen hältst; du trittst
+      oder schlägst mit deinen Ellbogen zu.</p>
 
       <h3>Moment der Krise</h3>
 
-      <p>Etwas Gro&szlig;es ging vor sich, und eine Unternehmensgruppe namens
-      "Kanawa" stand im Mittelpunkt. Deine Vorgesetzten befahlen dir unter
-      Androhung der Suspendierung, nicht weiter gegen das Unternehmen zu
-      ermitteln. Jemand hat sogar versucht, dich zu t&ouml;ten. Du aber bliebst
-      an dem Fall dran, selbst nach Ausbruch der Seuche, und deine
-      hartn&auml;ckigen Ermittlungen l&ouml;sten eine subtile Transformation
-      aus. Alternativ k&ouml;nnte die Transzendenz auch geschehen sein, als du
-      eine Gruppe angeblich infizierter Fl&uuml;chtlinge vor einem
-      m&ouml;rderischen "Eind&auml;mmungs-Team" der Kanawa Corporation
-      verteidigt hast.</p>
+      <p>Etwas Großes ging vor sich, und eine Unternehmensgruppe namens "Kanawa"
+      stand im Mittelpunkt. Deine Vorgesetzten befahlen dir unter Androhung der
+      Suspendierung, nicht weiter gegen das Unternehmen zu ermitteln. Jemand hat
+      sogar versucht, dich zu töten. Du aber bliebst an dem Fall dran, selbst
+      nach Ausbruch der Seuche, und deine hartnäckigen Ermittlungen lösten eine
+      subtile Transformation aus. Alternativ könnte die Transzendenz auch
+      geschehen sein, als du eine Gruppe angeblich infizierter Flüchtlinge vor
+      einem mörderischen "Eindämmungs-Team" der Kanawa Corporation verteidigt
+      hast.</p>
 
       <h3>Zitat</h3>
 
       <p>"Ob es nun Jiang Shi, Kriminelle oder Eindringlinge aus einer anderen
-      Realit&auml;t sind, eine Kugel kann immer noch einen Unterschied
-      machen."</p>
+      Realität sind, eine Kugel kann immer noch einen Unterschied machen."</p>
 
       <h3>Beschreibung</h3>
 
-      <p>Andere m&ouml;gen &uuml;ber deine Lederjacke spotten, aber es ist ein
-      wirklich zeitloses Accessoire. Au&szlig;erdem hilft sie, deine beiden
-      Schulterholster zu verbergen. Deine Polizeimarke ist in Hongkong
-      n&uuml;tzlich, wo du die Zust&auml;ndigkeit hast, aber sie kann auch
-      anderswo in Pan-Pacifica funktionieren, solange die Leute nicht zu genau
-      hinschauen. Du duldest keine Respektlosigkeit gegen&uuml;ber dir oder
-      deiner Marke.</p>
+      <p>Andere mögen über deine Lederjacke spotten, aber es ist ein wirklich
+      zeitloses Accessoire. Außerdem hilft sie, deine beiden Schulterholster zu
+      verbergen. Deine Polizeimarke ist in Hongkong nützlich, wo du die
+      Zuständigkeit hast, aber sie kann auch anderswo in Pan-Pacifica
+      funktionieren, solange die Leute nicht zu genau hinschauen. Du duldest
+      keine Respektlosigkeit gegenüber dir oder deiner Marke.</p>
 
       <h3>Agenda</h3>
 
       <p>Die Kanawa Corporation verbirgt etwas, eine Verbindung zu den anderen
-      Realit&auml;tsr&auml;ubern oder der Seuche. Was auch immer hier vor sich
-      geht, es k&ouml;nnte ganz Pan-Pacifica ersch&uuml;ttern. Wohl oder
-      &uuml;bel ist es dein Job, die Wahrheit aufzudecken.</p>
+      Realitätsräubern oder der Seuche. Was auch immer hier vor sich geht, es
+      könnte ganz Pan-Pacifica erschüttern. Wohl oder übel ist es dein Job, die
+      Wahrheit aufzudecken.</p>
 
       <h3>Namen</h3>
 
@@ -1031,9 +1073,9 @@ system:
 
       <li>(7 EP) KI-Schlag</li>
 
-      <li>(1 EP) <em>&Uuml;berreden</em> +1</li>
+      <li>(1 EP) <em>Überreden</em> +1</li>
 
-      <li>(2 EP) <em>Realit&auml;t</em> +2</li>
+      <li>(2 EP) <em>Realität</em> +2</li>
 
       <li>(3 EP) <em>Ausweichen</em> +3</li>
 
@@ -1088,14 +1130,20 @@ prototypeToken:
       min: 0
       max: 1
     attenuation: 0.5
+    negative: false
+    priority: 0
   texture:
     src: systems/torgeternity/images/characters/hardboiled_detective.Token.webp
-    tint: null
+    tint: '#ffffff'
     scaleX: 1
     scaleY: 1
     offsetX: 0
     offsetY: 0
     rotation: 0
+    anchorX: 0.5
+    anchorY: 0.5
+    fit: contain
+    alphaThreshold: 0.75
   sight:
     angle: 360
     enabled: true
@@ -1105,14 +1153,29 @@ prototypeToken:
     attenuation: 0.1
     saturation: 0
     contrast: 0
+    color: null
   appendNumber: false
   prependAdjective: false
   detectionModes: []
+  hexagonalShape: 0
+  occludable:
+    radius: 0
+  ring:
+    enabled: false
+    colors:
+      ring: null
+      background: null
+    effects: 1
+    subject:
+      scale: 1
+      texture: null
 _stats:
   systemId: torgeternity
-  systemVersion: 3.8.1
-  coreVersion: '11.315'
+  systemVersion: 12.2.0
+  coreVersion: '12.330'
   createdTime: 1694867157183
-  modifiedTime: 1716827811580
-  lastModifiedBy: VAnYow5sWS9EJzo0
+  modifiedTime: 1722359278656
+  lastModifiedBy: 93AMwcGe6H37rcPA
+  compendiumSource: Compendium.torgeternity.archetypes.8YH1e6xGG3IHb1Mm
+  duplicateSource: null
 _key: '!actors!f4ualGSV9gJbtwLI'

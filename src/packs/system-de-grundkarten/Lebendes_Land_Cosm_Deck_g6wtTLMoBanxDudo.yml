@@ -31,8 +31,8 @@ cards:
     value: null
     width: null
     height: null
-    _key: '!cards.cards!g6wtTLMoBanxDudo.sDZXmtmx3n9wCDHY'
     cards: []
+    _key: '!cards.cards!g6wtTLMoBanxDudo.sDZXmtmx3n9wCDHY'
   - _id: RIDThDvZ9nlukhe3
     name: Gesetz des Verfalls
     description: ''
@@ -59,8 +59,8 @@ cards:
     value: null
     width: null
     height: null
-    _key: '!cards.cards!g6wtTLMoBanxDudo.RIDThDvZ9nlukhe3'
     cards: []
+    _key: '!cards.cards!g6wtTLMoBanxDudo.RIDThDvZ9nlukhe3'
   - _id: 4jiRCfW7OwJtwdsK
     name: Die beste Verteidigung
     description: ''
@@ -87,8 +87,8 @@ cards:
     value: null
     width: null
     height: null
-    _key: '!cards.cards!g6wtTLMoBanxDudo.4jiRCfW7OwJtwdsK'
     cards: []
+    _key: '!cards.cards!g6wtTLMoBanxDudo.4jiRCfW7OwJtwdsK'
   - _id: qwef43shBO8UWoWr
     name: Überleben des Tüchtigsten
     description: ''
@@ -115,8 +115,8 @@ cards:
     value: null
     width: null
     height: null
-    _key: '!cards.cards!g6wtTLMoBanxDudo.qwef43shBO8UWoWr'
     cards: []
+    _key: '!cards.cards!g6wtTLMoBanxDudo.qwef43shBO8UWoWr'
   - _id: fDrlgNSblVRVwMJI
     name: Gefahren des Landes
     description: ''
@@ -143,8 +143,8 @@ cards:
     value: null
     width: null
     height: null
-    _key: '!cards.cards!g6wtTLMoBanxDudo.fDrlgNSblVRVwMJI'
     cards: []
+    _key: '!cards.cards!g6wtTLMoBanxDudo.fDrlgNSblVRVwMJI'
   - _id: RZO2VleOyDzwDIrn
     name: Der tiefe Nebel
     description: ''
@@ -171,8 +171,8 @@ cards:
     value: null
     width: null
     height: null
-    _key: '!cards.cards!g6wtTLMoBanxDudo.RZO2VleOyDzwDIrn'
     cards: []
+    _key: '!cards.cards!g6wtTLMoBanxDudo.RZO2VleOyDzwDIrn'
   - _id: 1xWXwGJ4RzdNnFJ4
     name: Gesetz des Lebens
     description: ''
@@ -199,8 +199,8 @@ cards:
     value: null
     width: null
     height: null
-    _key: '!cards.cards!g6wtTLMoBanxDudo.1xWXwGJ4RzdNnFJ4'
     cards: []
+    _key: '!cards.cards!g6wtTLMoBanxDudo.1xWXwGJ4RzdNnFJ4'
   - _id: zv2lW1HoumT7UTnQ
     name: Urinstinkte
     description: ''
@@ -227,8 +227,8 @@ cards:
     value: null
     width: null
     height: null
-    _key: '!cards.cards!g6wtTLMoBanxDudo.zv2lW1HoumT7UTnQ'
     cards: []
+    _key: '!cards.cards!g6wtTLMoBanxDudo.zv2lW1HoumT7UTnQ'
   - _id: JbVLbqNeBG1l4uZ2
     name: Verlorene Schätze
     description: ''
@@ -255,8 +255,8 @@ cards:
     value: null
     width: null
     height: null
-    _key: '!cards.cards!g6wtTLMoBanxDudo.JbVLbqNeBG1l4uZ2'
     cards: []
+    _key: '!cards.cards!g6wtTLMoBanxDudo.JbVLbqNeBG1l4uZ2'
   - _id: bQFqRwHUyceO8c9h
     name: Gesetz des Verfalls
     description: ''
@@ -283,8 +283,8 @@ cards:
     value: null
     width: null
     height: null
-    _key: '!cards.cards!g6wtTLMoBanxDudo.bQFqRwHUyceO8c9h'
     cards: []
+    _key: '!cards.cards!g6wtTLMoBanxDudo.bQFqRwHUyceO8c9h'
 rotation: 0
 displayCount: false
 folder: null

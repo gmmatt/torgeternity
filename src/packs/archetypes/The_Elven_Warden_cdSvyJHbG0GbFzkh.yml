@@ -14,21 +14,25 @@ items:
     effects: []
     folder: null
     system:
-      cosm: Aysle
+      cosm: aysle
       description: ''
       price: '25'
       techlevel: 8
       value: 7
-      equippedClass: item-equipped
+      secondaryAxiom:
+        selected: none
+        value: null
     ownership:
       default: 0
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: null
-      modifiedTime: 1693910172992
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722156112824
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Item.gzQRZhlLKWBaS49M
+      duplicateSource: null
     _key: '!actors.items!cdSvyJHbG0GbFzkh.ppzqLywwc7NrsWMn'
   - _id: haZJ2A3wPH74aOBw
     name: Composite Longbow
@@ -41,21 +45,13 @@ items:
       core:
         sourceId: Compendium.te001-core-rulebook.Items.RXXesFyswYwzjRCS
     system:
-      cosm: Aysle
-      description: >-
-        <p>A more powerful version of the long bow, this weapon is made up of
-        three different materials, combined to enhance the elastic properties of
-        each. While actually closer in size to the short bow, the composite bow
-        fires arrows at a greater velocity.</p>
-
-        <p>&nbsp;</p>
-
-        <p>Found in <strong>Core Rules</strong></p>
+      cosm: aysle
+      description: "<p>A more powerful version of the long bow, this weapon is made up of three different materials, combined to enhance the elastic properties of each. While actually closer in size to the short bow, the composite bow fires arrows at a greater velocity.</p>\n<p>\_</p>\n<p>Found in <strong>Core Rules</strong></p>"
       price: '200'
       techlevel: 13
       value: 11
       ammo:
-        max: 0
+        max: 1
         value: 0
       ap: 0
       attackWith: missileWeapons
@@ -63,21 +59,25 @@ items:
       damage: 13
       damageType: flat
       equipped: false
-      equippedClass: .item-unequipped
       minStrength: '7'
       notes: ''
       range: 20 / 40 / 80
+      secondaryAxiom:
+        selected: none
+        value: null
     ownership:
       default: 0
       A9LyAqagoJJU3gDH: 3
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: 1693910151043
-      modifiedTime: 1693910151043
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722156241312
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Compendium.te001-core-rulebook.Items.RXXesFyswYwzjRCS
+      duplicateSource: null
     _key: '!actors.items!cdSvyJHbG0GbFzkh.haZJ2A3wPH74aOBw'
   - _id: tKdZdnj59nY0KkvJ
     name: Longsword
@@ -90,7 +90,7 @@ items:
       core:
         sourceId: Compendium.te001-core-rulebook.Items.qbarQFM2pTUrRfsB
     system:
-      cosm: Aysle
+      cosm: aysle
       description: <p>Found in <strong>Core Rules</strong></p>
       price: '120'
       techlevel: 9
@@ -102,19 +102,24 @@ items:
       damage: 3
       damageType: strengthPlus
       equipped: false
-      equippedClass: .item-unequipped
       notes: ''
+      secondaryAxiom:
+        selected: none
+        value: null
+      minStrength: null
     ownership:
       default: 0
       A9LyAqagoJJU3gDH: 3
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: 1693910157203
-      modifiedTime: 1693910157203
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722156233872
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Compendium.te001-core-rulebook.Items.qbarQFM2pTUrRfsB
+      duplicateSource: null
     _key: '!actors.items!cdSvyJHbG0GbFzkh.tKdZdnj59nY0KkvJ'
   - _id: FMilBhNnYxRQwnGG
     name: Healing Potion
@@ -127,198 +132,41 @@ items:
       core:
         sourceId: Compendium.te001-core-rulebook.Items.cyc4yMjoj7ve1Tj5
     system:
-      cosm: Aysle
-      description: >-
-        <p>Drinking this thick, clear liquid heals one wound and restores a [[/r
-        1d6x6max5]]{BD} of shock.</p>
-
-        <p>&nbsp;</p>
-
-        <p>Found in <strong>Core Rules, Aysle Sourcebook</strong></p>
+      cosm: aysle
+      description: "<p>Drinking this thick, clear liquid heals one wound and restores a [[/r 1d6x6max5]]{BD} of shock.</p><p>\_</p><p>Found in <strong>Core Rules, Aysle Sourcebook</strong></p>"
       price: '500'
       techlevel: 12
       value: 13
-      equippedClass: item-equipped
+      secondaryAxiom:
+        selected: magic
+        value: 13
     ownership:
       default: 0
       A9LyAqagoJJU3gDH: 3
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: 1693910183323
-      modifiedTime: 1693910200323
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722156167775
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Compendium.te001-core-rulebook.Items.cyc4yMjoj7ve1Tj5
+      duplicateSource: null
     _key: '!actors.items!cdSvyJHbG0GbFzkh.FMilBhNnYxRQwnGG'
-  - _id: KyHmoPq98GSEdHYd
-    name: Quiver
-    type: gear
-    img: systems/torgeternity/images/icons/gear-icon.webp
-    effects: []
-    folder: null
-    sort: 800000
-    flags:
-      core:
-        sourceId: Compendium.te001-core-rulebook.Items.OAfwe6wKuFsbkLCM
-    system:
-      cosm: Aysle
-      description: |-
-        <p>A container that holds 20 arrows (included).</p>
-        <p>&nbsp;</p>
-        <p>Found in <strong>Core Rules</strong></p>
-      price: '5'
-      techlevel: 7
-      value: 4
-      equippedClass: item-equipped
-    ownership:
-      default: 0
-      A9LyAqagoJJU3gDH: 3
-      CtisFurQNe9h7ABb: 3
-    _stats:
-      systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
-      createdTime: 1693910188155
-      modifiedTime: 1693910199105
-      lastModifiedBy: CtisFurQNe9h7ABb
-    _key: '!actors.items!cdSvyJHbG0GbFzkh.KyHmoPq98GSEdHYd'
-  - _id: Cj581kLC5ZCD650p
-    name: Warden
-    type: perk
-    img: systems/torgeternity/images/icons/reality-icon.webp
-    effects: []
-    folder: null
-    sort: 27850000
-    flags:
-      core:
-        sourceId: Compendium.te001-core-rulebook.Items.C53zQKf33q28slDw
-    system:
-      category: elf
-      cosm: Aysle
-      description: >-
-        <p>Elven wardens roamed the wilderness of Aysle before Uthorion&rsquo;s
-        Rage, always alert for threats to the good folk. After the Dark
-        One&rsquo;s hordes marched through their forests, the wardens&rsquo;
-        numbers went from thousands to less than a hundred.</p>
-
-        <p>Strangely, most of those survivors came to Earth. They are
-        tight-lipped as to why, but seem to bear some secret shame over their
-        people&rsquo;s inability to stop the High Lord before his attention
-        shifted to Core Earth.</p>
-
-        <p>Wardens are independent, stealthy, and cunning, and many are
-        accompanied by animals they have befriended in the wild (see
-        @UUID[Compendium.te001-core-rulebook.Items.j1cM05PejztjGAjk]{White
-        Wolf}).</p>
-
-        <p>Wardens treat <em>stealth</em> and <em>tracking</em> as Favored
-        skills.</p>
-
-        <p>&nbsp;</p>
-
-        <p>Found in <strong>Core Rules</strong></p>
-      prerequisites: ''
-      generalContradiction: false
-      pulpPowers:
-        enhancement01:
-          description: ''
-          taken: false
-          title: ''
-        enhancement02:
-          description: ''
-          taken: false
-          title: ''
-        enhancement03:
-          description: ''
-          taken: false
-          title: ''
-        enhancement04:
-          description: ''
-          taken: false
-          title: ''
-        enhancement05:
-          description: ''
-          taken: false
-          title: ''
-        enhancement06:
-          description: ''
-          taken: false
-          title: ''
-        enhancement07:
-          description: ''
-          taken: false
-          title: ''
-        enhancement08:
-          description: ''
-          taken: false
-          title: ''
-        enhancement09:
-          description: ''
-          taken: false
-          title: ''
-        enhancement10:
-          description: ''
-          taken: false
-          title: ''
-        enhancement11:
-          description: ''
-          taken: false
-          title: ''
-        enhancement12:
-          description: ''
-          taken: false
-          title: ''
-        enhancement13:
-          description: ''
-          taken: false
-          title: ''
-        enhancement14:
-          description: ''
-          taken: false
-          title: ''
-        enhancement15:
-          description: ''
-          taken: false
-          title: ''
-        enhancementNumber: 0
-        limitation01: ''
-        limitation02: ''
-        limitation03: ''
-        limitation04: ''
-        limitation05: ''
-        limitation06: ''
-        limitation07: ''
-        limitation08: ''
-        limitation09: ''
-        limitation10: ''
-        limitationNumber: 0
-      timestaken: '1'
-    ownership:
-      default: 0
-      A9LyAqagoJJU3gDH: 3
-      CtisFurQNe9h7ABb: 3
-    _stats:
-      systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
-      createdTime: 1693910211276
-      modifiedTime: 1693910377227
-      lastModifiedBy: CtisFurQNe9h7ABb
-    _key: '!actors.items!cdSvyJHbG0GbFzkh.Cj581kLC5ZCD650p'
   - _id: IgA82b3Hb4MWoyhh
     name: Darkvision (Elf)
     type: perk
     img: systems/torgeternity/images/icons/reality-icon.webp
     effects: []
     folder: null
-    sort: 13000000
+    sort: 318750
     flags:
       core:
         sourceId: Item.JCBCYFMvmpQHFWM4
     system:
       category: elf
-      cosm: Aysle
+      cosm: aysle
       description: >-
         <p>Elves ignore up to four points of
         @UUID[Compendium.te001-core-rulebook.rules.pwneQ55M0nnDH0Us.JournalEntryPage.EhKa65cpHvodUl2L#darkness]{Darkness
@@ -399,17 +247,22 @@ items:
         limitation10: ''
         limitationNumber: 0
       timestaken: '1'
+      secondaryAxiom:
+        selected: none
+        value: null
     ownership:
       default: 0
       aSTzyuIvqyDaFHwy: 3
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: 1693910230372
-      modifiedTime: 1693910388827
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722152974304
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Item.JCBCYFMvmpQHFWM4
+      duplicateSource: null
     _key: '!actors.items!cdSvyJHbG0GbFzkh.IgA82b3Hb4MWoyhh'
   - _id: yXXiJ8DCGJ90EQ0s
     name: White Wolf
@@ -423,41 +276,8 @@ items:
         sourceId: Compendium.te001-core-rulebook.Items.j1cM05PejztjGAjk
     system:
       category: elf
-      cosm: Aysle
-      description: >-
-        <p>Elven wardens often take white wolves as companions (not pets), and
-        the two live, fight, and die together from the moment of bonding on.</p>
-
-        <p>This Perk grants an elven warden a loyal white wolf who follows basic
-        commands and fights to the death to defend his master. The animal is as
-        smart as the most well-trained dog of Core Earth, meaning it can select
-        targets intelligently, defend a particular person or location, or
-        retrieve an object if it&rsquo;s seen it before. The owner can also
-        designate <q>rally spots</q> the wolf can go to or wait, though this
-        must be done ahead of time with a hand signal or command at the
-        particular location. This is useful for those times a warden must go
-        into a city or place the wolf might be unwelcome or endangered.</p>
-
-        <p>In game terms, the player should control the wolf most of the time,
-        choosing his targets, rolling his attacks, and so forth.</p>
-
-        <p>White wolves do not have
-        @UUID[Compendium.te001-core-rulebook.rules.pwneQ55M0nnDH0Us.JournalEntryPage.kYP18QiA72P6PlUi#possibilities]{Possibilities},
-        but the warden can spend <em>his</em> Possibilities&nbsp;(and Destiny
-        cards) for the creature&mdash;even if they are separated.</p>
-
-        <p>When a white wolf is slain, its spirit goes into a shadowy nether
-        realm, gathering power and form until it can return to the land of the
-        living at the beginning of the next act.</p>
-
-        <p>If the wolf&rsquo;s master falls, it permanently loses a point of
-        shock every 24 hours until it fades away to the spirit world, never to
-        return.</p>
-
-        <p>@UUID[Compendium.torgeternity.archetypes.Actor.azyXdSKJRLmriHz6]{Companion:
-        White Wolf}</p>
-
-        <p>Found in <strong>Core Rules</strong></p>
+      cosm: aysle
+      description: "<p>Elven wardens often take white wolves as companions (not pets), and the two live, fight, and die together from the moment of bonding on.</p>\n<p>This Perk grants an elven warden a loyal white wolf who follows basic commands and fights to the death to defend his master. The animal is as smart as the most well-trained dog of Core Earth, meaning it can select targets intelligently, defend a particular person or location, or retrieve an object if it’s seen it before. The owner can also designate <q>rally spots</q> the wolf can go to or wait, though this must be done ahead of time with a hand signal or command at the particular location. This is useful for those times a warden must go into a city or place the wolf might be unwelcome or endangered.</p>\n<p>In game terms, the player should control the wolf most of the time, choosing his targets, rolling his attacks, and so forth.</p>\n<p>White wolves do not have @UUID[Compendium.te001-core-rulebook.rules.pwneQ55M0nnDH0Us.JournalEntryPage.kYP18QiA72P6PlUi#possibilities]{Possibilities}, but the warden can spend <em>his</em> Possibilities\_(and Destiny cards) for the creature—even if they are separated.</p>\n<p>When a white wolf is slain, its spirit goes into a shadowy nether realm, gathering power and form until it can return to the land of the living at the beginning of the next act.</p>\n<p>If the wolf’s master falls, it permanently loses a point of shock every 24 hours until it fades away to the spirit world, never to return.</p>\n<p>@UUID[Compendium.torgeternity.archetypes.Actor.azyXdSKJRLmriHz6]{Companion: White Wolf}</p>\n<p>Found in <strong>Core Rules</strong></p>"
       prerequisites: Warden
       generalContradiction: false
       pulpPowers:
@@ -534,126 +354,23 @@ items:
         limitation10: ''
         limitationNumber: 0
       timestaken: '1'
+      secondaryAxiom:
+        selected: none
+        value: null
     ownership:
       default: 0
       A9LyAqagoJJU3gDH: 3
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: 1693910331627
-      modifiedTime: 1693912168277
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722152936223
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Compendium.te001-core-rulebook.Items.j1cM05PejztjGAjk
+      duplicateSource: null
     _key: '!actors.items!cdSvyJHbG0GbFzkh.yXXiJ8DCGJ90EQ0s'
-  - _id: GBcFR2rXuLgPNisK
-    name: Graceful (Elf)
-    type: perk
-    img: systems/torgeternity/images/icons/reality-icon.webp
-    effects: []
-    folder: null
-    sort: 13700000
-    flags:
-      core:
-        sourceId: Item.JCBCYFMvmpQHFWM4
-    system:
-      category: elf
-      cosm: Aysle
-      description: >-
-        <p>When rolling directly against <em>Dexterity</em>, treat the test as
-        @UUID[Compendium.te001-core-rulebook.rules.pwneQ55M0nnDH0Us.JournalEntryPage.EhKa65cpHvodUl2L#favored-skills]{Favored}.
-        ​​Unskilled tests based on <em>Dexterity </em>don&rsquo;t count, only
-        those that directly call for a <em>Dexterity </em>test, such as reducing
-        falling damage, interrupting a foe while Waiting, or gaining position in
-        a foot chase.</p>
-      prerequisites: ''
-      generalContradiction: false
-      pulpPowers:
-        enhancement01:
-          description: ''
-          taken: false
-          title: ''
-        enhancement02:
-          description: ''
-          taken: false
-          title: ''
-        enhancement03:
-          description: ''
-          taken: false
-          title: ''
-        enhancement04:
-          description: ''
-          taken: false
-          title: ''
-        enhancement05:
-          description: ''
-          taken: false
-          title: ''
-        enhancement06:
-          description: ''
-          taken: false
-          title: ''
-        enhancement07:
-          description: ''
-          taken: false
-          title: ''
-        enhancement08:
-          description: ''
-          taken: false
-          title: ''
-        enhancement09:
-          description: ''
-          taken: false
-          title: ''
-        enhancement10:
-          description: ''
-          taken: false
-          title: ''
-        enhancement11:
-          description: ''
-          taken: false
-          title: ''
-        enhancement12:
-          description: ''
-          taken: false
-          title: ''
-        enhancement13:
-          description: ''
-          taken: false
-          title: ''
-        enhancement14:
-          description: ''
-          taken: false
-          title: ''
-        enhancement15:
-          description: ''
-          taken: false
-          title: ''
-        enhancementNumber: 0
-        limitation01: ''
-        limitation02: ''
-        limitation03: ''
-        limitation04: ''
-        limitation05: ''
-        limitation06: ''
-        limitation07: ''
-        limitation08: ''
-        limitation09: ''
-        limitation10: ''
-        limitationNumber: 0
-      timestaken: '1'
-    ownership:
-      default: 0
-      aSTzyuIvqyDaFHwy: 3
-      CtisFurQNe9h7ABb: 3
-    _stats:
-      systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
-      createdTime: 1693910344069
-      modifiedTime: 1693910385363
-      lastModifiedBy: CtisFurQNe9h7ABb
-    _key: '!actors.items!cdSvyJHbG0GbFzkh.GBcFR2rXuLgPNisK'
   - _id: jYmAGel8tlmPept4
     name: Magical Affinity (Elf)
     type: perk
@@ -666,7 +383,7 @@ items:
         sourceId: Item.JCBCYFMvmpQHFWM4
     system:
       category: elf
-      cosm: Aysle
+      cosm: aysle
       description: >-
         <p>Elves are born and bred of magic and suffer without it. Any time an
         elf is in a realm with a Magic Axiom less than 12, any Fatigue result
@@ -752,17 +469,22 @@ items:
         limitation10: ''
         limitationNumber: 0
       timestaken: '1'
+      secondaryAxiom:
+        selected: none
+        value: null
     ownership:
       default: 0
       aSTzyuIvqyDaFHwy: 3
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: 1693910351093
-      modifiedTime: 1693910381587
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722152954720
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Item.JCBCYFMvmpQHFWM4
+      duplicateSource: null
     _key: '!actors.items!cdSvyJHbG0GbFzkh.jYmAGel8tlmPept4'
   - _id: 21KNmkaBFbvVkPRY
     name: Leather Jerkin
@@ -775,40 +497,448 @@ items:
       core:
         sourceId: Compendium.te001-core-rulebook.Items.Item.34ioFwhBc4c39YFU
     system:
-      cosm: Aysle
-      description: >-
-        <p>@UUID[Compendium.te001-core-rulebook.rules.pwneQ55M0nnDH0Us.JournalEntryPage.qKdamp4rrcX6TTt0#full-body/torso:]{Torso}</p>
-
-        <p>Animal hides tanned or boiled to a stiffer, more durable finish, then
-        reinforced with studs or stitched seams. Found in some form in every
-        cosm.</p>
-
-        <p>&nbsp;</p>
-
-        <p>Found in <strong>Core Rules</strong></p>
+      cosm: aysle
+      description: "<p>@UUID[Compendium.te001-core-rulebook.rules.pwneQ55M0nnDH0Us.JournalEntryPage.qKdamp4rrcX6TTt0#full-body/torso:]{Torso}</p>\n<p>Animal hides tanned or boiled to a stiffer, more durable finish, then reinforced with studs or stitched seams. Found in some form in every cosm.</p>\n<p>\_</p>\n<p>Found in <strong>Core Rules</strong></p>"
       price: '100'
       techlevel: 8
       value: 10
       bonus: 1
       equipped: true
-      equippedClass: item-equipped
       maxDex: 12
       minStrength: null
       notes: Torso
       fatigue: null
+      secondaryAxiom:
+        selected: none
+        value: null
     ownership:
       default: 0
       A9LyAqagoJJU3gDH: 3
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.7.0
-      coreVersion: '11.315'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: 1711551146690
-      modifiedTime: 1711704505534
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722156189944
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Compendium.te001-core-rulebook.Items.Item.34ioFwhBc4c39YFU
+      duplicateSource: null
     _key: '!actors.items!cdSvyJHbG0GbFzkh.21KNmkaBFbvVkPRY'
-effects: []
+  - name: Quiver
+    type: ammunition
+    _id: wCLRJT1H9YSdxQOi
+    img: systems/torgeternity/images/icons/ammo-icon.webp
+    system:
+      cosm: ''
+      description: <p>A container that holds 20 arrows.</p>
+      price: ''
+      techlevel: 7
+      value: 0
+      secondaryAxiom:
+        selected: none
+        value: null
+      type: ''
+      quantity: 20
+      damageMod: 0
+      apMod: 0
+      fireDamage: false
+      blastRadius: None
+      darknessMod: none
+      reach: ''
+    effects: []
+    folder: null
+    sort: 0
+    ownership:
+      default: 0
+      93AMwcGe6H37rcPA: 3
+    flags: {}
+    _stats:
+      compendiumSource: Item.5ksMgyuK1eouSxnA
+      duplicateSource: null
+      coreVersion: '12.330'
+      systemId: torgeternity
+      systemVersion: 12.2.0
+      createdTime: 1722108884240
+      modifiedTime: 1722156467671
+      lastModifiedBy: 93AMwcGe6H37rcPA
+    _key: '!actors.items!cdSvyJHbG0GbFzkh.wCLRJT1H9YSdxQOi'
+  - _id: zLqqXAUExJoLHgji
+    name: Warden
+    type: perk
+    img: systems/torgeternity/images/icons/reality-icon.webp
+    effects:
+      - origin: Compendium.te001-core-rulebook.Items.Item.C53zQKf33q28slDw
+        duration:
+          rounds: null
+          startTime: null
+          seconds: null
+          combat: null
+          turns: null
+          startRound: null
+          startTurn: null
+        disabled: false
+        name: Stealth/Tracking Favored
+        img: icons/svg/aura.svg
+        _id: 5oFKyciCaTJSwu99
+        type: base
+        system: {}
+        changes:
+          - key: system.skills.stealth.isFav
+            mode: 5
+            value: 'true'
+            priority: null
+          - key: system.skills.tracking.isFav
+            mode: 5
+            value: 'true'
+            priority: null
+        description: ''
+        tint: '#ffffff'
+        transfer: true
+        statuses: []
+        sort: 0
+        flags: {}
+        _stats:
+          compendiumSource: null
+          duplicateSource: null
+          coreVersion: '12.330'
+          systemId: torgeternity
+          systemVersion: 12.2.0
+          createdTime: null
+          modifiedTime: null
+          lastModifiedBy: null
+        _key: >-
+          !actors.items.effects!cdSvyJHbG0GbFzkh.zLqqXAUExJoLHgji.5oFKyciCaTJSwu99
+    folder: gjZiCPX5knOIpsHd
+    sort: 27850000
+    flags:
+      core: {}
+    system:
+      category: elf
+      cosm: aysle
+      description: "<p>Elven wardens roamed the wilderness of Aysle before Uthorion’s Rage, always alert for threats to the good folk. After the Dark One’s hordes marched through their forests, the wardens’ numbers went from thousands to less than a hundred.</p>\n<p>Strangely, most of those survivors came to Earth. They are tight-lipped as to why, but seem to bear some secret shame over their people’s inability to stop the High Lord before his attention shifted to Core Earth.</p>\n<p>Wardens are independent, stealthy, and cunning, and many are accompanied by animals they have befriended in the wild (see @UUID[Compendium.te001-core-rulebook.Items.j1cM05PejztjGAjk]{White Wolf}).</p>\n<p>Wardens treat <em>stealth</em> and <em>tracking</em> as Favored skills.</p>\n<p>\_</p>\n<p>Found in <strong>Core Rules</strong></p>"
+      prerequisites: ''
+      generalContradiction: false
+      pulpPowers:
+        enhancement01:
+          description: ''
+          taken: false
+          title: ''
+        enhancement02:
+          description: ''
+          taken: false
+          title: ''
+        enhancement03:
+          description: ''
+          taken: false
+          title: ''
+        enhancement04:
+          description: ''
+          taken: false
+          title: ''
+        enhancement05:
+          description: ''
+          taken: false
+          title: ''
+        enhancement06:
+          description: ''
+          taken: false
+          title: ''
+        enhancement07:
+          description: ''
+          taken: false
+          title: ''
+        enhancement08:
+          description: ''
+          taken: false
+          title: ''
+        enhancement09:
+          description: ''
+          taken: false
+          title: ''
+        enhancement10:
+          description: ''
+          taken: false
+          title: ''
+        enhancement11:
+          description: ''
+          taken: false
+          title: ''
+        enhancement12:
+          description: ''
+          taken: false
+          title: ''
+        enhancement13:
+          description: ''
+          taken: false
+          title: ''
+        enhancement14:
+          description: ''
+          taken: false
+          title: ''
+        enhancement15:
+          description: ''
+          taken: false
+          title: ''
+        enhancementNumber: 0
+        limitation01: ''
+        limitation02: ''
+        limitation03: ''
+        limitation04: ''
+        limitation05: ''
+        limitation06: ''
+        limitation07: ''
+        limitation08: ''
+        limitation09: ''
+        limitation10: ''
+        limitationNumber: 0
+      timestaken: ''
+      secondaryAxiom:
+        selected: none
+        value: null
+    ownership:
+      default: 0
+      A9LyAqagoJJU3gDH: 3
+      VAnYow5sWS9EJzo0: 3
+      93AMwcGe6H37rcPA: 3
+    _stats:
+      compendiumSource: Compendium.te001-core-rulebook.Items.Item.C53zQKf33q28slDw
+      duplicateSource: null
+      coreVersion: '12.330'
+      systemId: torgeternity
+      systemVersion: 12.2.0
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+    _key: '!actors.items!cdSvyJHbG0GbFzkh.zLqqXAUExJoLHgji'
+  - _id: yUrDm5bnBMSFn1e9
+    name: Graceful (Elf)
+    type: perk
+    img: systems/torgeternity/images/icons/reality-icon.webp
+    effects:
+      - origin: Item.gQtNmQDtl2UZefwe
+        duration:
+          rounds: null
+          startTime: null
+          seconds: null
+          combat: null
+          turns: null
+          startRound: null
+          startTurn: null
+        disabled: false
+        name: Dexterity is Favored
+        img: icons/svg/aura.svg
+        _id: PNWy6cf9hbrNiVIr
+        type: base
+        system: {}
+        changes:
+          - key: system.attributes.dexterityIsFav
+            mode: 5
+            value: 'true'
+            priority: null
+        description: ''
+        tint: '#ffffff'
+        transfer: true
+        statuses: []
+        sort: 0
+        flags: {}
+        _stats:
+          compendiumSource: null
+          duplicateSource: null
+          coreVersion: '12.330'
+          systemId: torgeternity
+          systemVersion: 12.2.0
+          createdTime: null
+          modifiedTime: null
+          lastModifiedBy: null
+        _key: >-
+          !actors.items.effects!cdSvyJHbG0GbFzkh.yUrDm5bnBMSFn1e9.PNWy6cf9hbrNiVIr
+    folder: gjZiCPX5knOIpsHd
+    sort: 418750
+    flags:
+      core:
+        sourceId: Item.JCBCYFMvmpQHFWM4
+    system:
+      category: elf
+      cosm: aysle
+      description: >-
+        <p>When rolling directly against <em>Dexterity</em>, treat the test as
+        @UUID[Compendium.te001-core-rulebook.rules.pwneQ55M0nnDH0Us.JournalEntryPage.EhKa65cpHvodUl2L#favored-skills]{Favored}.
+        ​​Unskilled tests based on <em>Dexterity </em>don’t count, only those
+        that directly call for a <em>Dexterity </em>test, such as reducing
+        falling damage, interrupting a foe while Waiting, or gaining position in
+        a foot chase.</p>
+      prerequisites: ''
+      generalContradiction: false
+      pulpPowers:
+        enhancement01:
+          description: ''
+          taken: false
+          title: ''
+        enhancement02:
+          description: ''
+          taken: false
+          title: ''
+        enhancement03:
+          description: ''
+          taken: false
+          title: ''
+        enhancement04:
+          description: ''
+          taken: false
+          title: ''
+        enhancement05:
+          description: ''
+          taken: false
+          title: ''
+        enhancement06:
+          description: ''
+          taken: false
+          title: ''
+        enhancement07:
+          description: ''
+          taken: false
+          title: ''
+        enhancement08:
+          description: ''
+          taken: false
+          title: ''
+        enhancement09:
+          description: ''
+          taken: false
+          title: ''
+        enhancement10:
+          description: ''
+          taken: false
+          title: ''
+        enhancement11:
+          description: ''
+          taken: false
+          title: ''
+        enhancement12:
+          description: ''
+          taken: false
+          title: ''
+        enhancement13:
+          description: ''
+          taken: false
+          title: ''
+        enhancement14:
+          description: ''
+          taken: false
+          title: ''
+        enhancement15:
+          description: ''
+          taken: false
+          title: ''
+        enhancementNumber: 0
+        limitation01: ''
+        limitation02: ''
+        limitation03: ''
+        limitation04: ''
+        limitation05: ''
+        limitation06: ''
+        limitation07: ''
+        limitation08: ''
+        limitation09: ''
+        limitation10: ''
+        limitationNumber: 0
+      timestaken: '1'
+      secondaryAxiom:
+        selected: none
+        value: null
+    ownership:
+      default: 0
+      aSTzyuIvqyDaFHwy: 3
+      CtisFurQNe9h7ABb: 3
+      93AMwcGe6H37rcPA: 3
+    _stats:
+      compendiumSource: Item.JCBCYFMvmpQHFWM4
+      duplicateSource: null
+      coreVersion: '12.330'
+      systemId: torgeternity
+      systemVersion: 12.2.0
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+    _key: '!actors.items!cdSvyJHbG0GbFzkh.yUrDm5bnBMSFn1e9'
+effects:
+  - origin: Actor.cdSvyJHbG0GbFzkh.Item.zLqqXAUExJoLHgji
+    duration:
+      rounds: null
+      startTime: 0
+      seconds: null
+      combat: null
+      turns: null
+      startRound: null
+      startTurn: null
+    disabled: false
+    name: Stealth/Tracking Favored
+    img: icons/svg/aura.svg
+    _id: cV8YXWqajAED1Car
+    type: base
+    system: {}
+    changes:
+      - key: system.skills.stealth.isFav
+        mode: 5
+        value: 'true'
+        priority: null
+      - key: system.skills.tracking.isFav
+        mode: 5
+        value: 'true'
+        priority: null
+    description: ''
+    tint: '#ffffff'
+    transfer: false
+    statuses: []
+    sort: 0
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      coreVersion: '12.330'
+      systemId: torgeternity
+      systemVersion: 12.2.0
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+    _key: '!actors.effects!cdSvyJHbG0GbFzkh.cV8YXWqajAED1Car'
+  - origin: Actor.cdSvyJHbG0GbFzkh.Item.yUrDm5bnBMSFn1e9
+    duration:
+      rounds: null
+      startTime: 0
+      seconds: null
+      combat: null
+      turns: null
+      startRound: null
+      startTurn: null
+    disabled: false
+    name: Dexterity is Favored
+    img: icons/svg/aura.svg
+    _id: 9R097xVyhquN9Z0X
+    type: base
+    system: {}
+    changes:
+      - key: system.attributes.dexterityIsFav
+        mode: 5
+        value: 'true'
+        priority: null
+    description: ''
+    tint: '#ffffff'
+    transfer: false
+    statuses: []
+    sort: 0
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      coreVersion: '12.330'
+      systemId: torgeternity
+      systemVersion: 12.2.0
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+    _key: '!actors.effects!cdSvyJHbG0GbFzkh.9R097xVyhquN9Z0X'
 folder: null
 sort: 100001
 flags: {}
@@ -1166,7 +1296,7 @@ system:
     background: >-
       <p><img class="charimg"
       src="systems/torgeternity/images/characters/Elven_Warden.webp" alt=""
-      width="1190" height="1942"></p>
+      width="1190" height="1942" /></p>
 
       <p
       class="moreheight">@UUID[Compendium.torgeternity.handouts.JournalEntry.Knhh8vqtjSylJo5Z.JournalEntryPage.Y5Ywt3WpLVzwhwnm]{Archetype
@@ -1181,9 +1311,9 @@ system:
 
       <h3>Tactics</h3>
 
-      <p>You&rsquo;re a ranged combatant through and through. The longsword is
-      available in a pinch, but it&rsquo;s usually better to hang back and focus
-      on your bow. Drawing an arrow is a simple action, so you can target two or
+      <p>You’re a ranged combatant through and through. The longsword is
+      available in a pinch, but it’s usually better to hang back and focus on
+      your bow. Drawing an arrow is a simple action, so you can target two or
       three opponents with a single attack.</p>
 
       <p>One tactic wardens find useful is to keep your wolf out of direct
@@ -1202,14 +1332,14 @@ system:
       <p>Though the Wardens protect the forests of Aysle from dark forces, very
       few become Storm Knights. Your crisis likely came after following Lady
       Ardinay on her foolish quest to Earth. Facing the old foe in such a
-      different place stirred something that defending the woods did not.
-      It&rsquo;s also possible you abandoned duty to save a dwarf or human, and
-      in that selfless moment transformed.</p>
+      different place stirred something that defending the woods did not. It’s
+      also possible you abandoned duty to save a dwarf or human, and in that
+      selfless moment transformed.</p>
 
       <h3>Quote</h3>
 
-      <p>&ldquo;In the woods, all creatures are either hunters or prey. I assure
-      you I am not prey.&ldquo;</p>
+      <p>“In the woods, all creatures are either hunters or prey. I assure you I
+      am not prey.“</p>
 
       <h3>Description</h3>
 
@@ -1295,14 +1425,20 @@ prototypeToken:
       max: 1
     color: null
     attenuation: 0.5
+    negative: false
+    priority: 0
   texture:
     src: systems/torgeternity/images/characters/elven_warden.Token.webp
-    tint: null
+    tint: '#ffffff'
     scaleX: 1
     scaleY: 1
     offsetX: 0
     offsetY: 0
     rotation: 0
+    anchorX: 0.5
+    anchorY: 0.5
+    fit: contain
+    alphaThreshold: 0.75
   sight:
     angle: 360
     enabled: false
@@ -1312,14 +1448,29 @@ prototypeToken:
     attenuation: 0.1
     saturation: 0
     contrast: 0
+    color: null
   appendNumber: false
   prependAdjective: false
   detectionModes: []
+  hexagonalShape: 0
+  occludable:
+    radius: 0
+  ring:
+    enabled: false
+    colors:
+      ring: null
+      background: null
+    effects: 1
+    subject:
+      scale: 1
+      texture: null
 _stats:
   systemId: torgeternity
-  systemVersion: 3.8.1
-  coreVersion: '11.315'
+  systemVersion: 12.2.0
+  coreVersion: '12.330'
   createdTime: 1693910130714
-  modifiedTime: 1716827807942
-  lastModifiedBy: VAnYow5sWS9EJzo0
+  modifiedTime: 1722355493847
+  lastModifiedBy: 93AMwcGe6H37rcPA
+  compendiumSource: null
+  duplicateSource: null
 _key: '!actors!cdSvyJHbG0GbFzkh'

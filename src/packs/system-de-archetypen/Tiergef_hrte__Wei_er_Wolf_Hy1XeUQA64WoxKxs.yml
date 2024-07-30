@@ -15,18 +15,20 @@ items:
       ap: 0
       attackWith: unarmedCombat
       chatNote: ''
-      damage: '10'
-      description: <p>Schaden&nbsp;<em>St&auml;rke</em> +2 (10)</p>
+      damage: 10
+      description: "<p>Schaden\_<em>Stärke</em> +2 (10)</p>"
     ownership:
       default: 0
       pYSulyhjOdVnRAJt: 3
     _stats:
       systemId: torgeternity
       systemVersion: 3.8.1
-      coreVersion: '11.315'
+      coreVersion: '12.330'
       createdTime: 1716788510616
       modifiedTime: 1716788609695
       lastModifiedBy: pYSulyhjOdVnRAJt
+      compendiumSource: null
+      duplicateSource: null
     _key: '!actors.items!Hy1XeUQA64WoxKxs.sIrEjkMEuSDzeIk8'
 effects: []
 folder: null
@@ -378,13 +380,13 @@ system:
       defenseOnly: false
   details:
     description: >-
-      <p class="moreheight">Tiergef&auml;hrte von
+      <p class="moreheight">Tiergefährte von
       @UUID[Compendium.torgeternity.system-de-archetypen.Actor.OB5I9LwFUwB5C3C4]{Die
-      elfische H&uuml;terin}</p>
+      elfische Hüterin}</p>
 
       <p
-      class="moreheight">@UUID[Compendium.torgeternity.system-de-handouts.JournalEntry.DLLvnXpv7RFhRgHu.JournalEntryPage.ItABNBtu0A2pm0Dc]{Tiergef&auml;hrte
-      - Wei&szlig;er Wolf}</p>
+      class="moreheight">@UUID[Compendium.torgeternity.system-de-handouts.JournalEntry.DLLvnXpv7RFhRgHu.JournalEntryPage.ItABNBtu0A2pm0Dc]{Tiergefährte
+      - Weißer Wolf}</p>
     sizeBonus: normal
     clearance: alpha
     possibilityPotential: Niemals
@@ -430,14 +432,20 @@ prototypeToken:
       min: 0
       max: 1
     attenuation: 0.5
+    negative: false
+    priority: 0
   texture:
     src: systems/torgeternity/images/characters/white_wolf.Token.webp
-    tint: null
+    tint: '#ffffff'
     scaleX: 1
     scaleY: 1
     offsetX: 0
     offsetY: 0
     rotation: 0
+    anchorX: 0.5
+    anchorY: 0.5
+    fit: contain
+    alphaThreshold: 0.75
   sight:
     angle: 360
     enabled: true
@@ -447,14 +455,29 @@ prototypeToken:
     attenuation: 0.1
     saturation: 0
     contrast: 0
+    color: null
   appendNumber: false
   prependAdjective: false
   detectionModes: []
+  hexagonalShape: 0
+  occludable:
+    radius: 0
+  ring:
+    enabled: false
+    colors:
+      ring: null
+      background: null
+    effects: 1
+    subject:
+      scale: 1
+      texture: null
 _stats:
   systemId: torgeternity
-  systemVersion: 3.8.1
-  coreVersion: '11.315'
+  systemVersion: 12.2.0
+  coreVersion: '12.330'
   createdTime: 1694860825482
-  modifiedTime: 1716827811101
-  lastModifiedBy: VAnYow5sWS9EJzo0
+  modifiedTime: 1722359278656
+  lastModifiedBy: 93AMwcGe6H37rcPA
+  compendiumSource: Compendium.te001-core-rulebook.Actors.fImZbwzh0jbEYGN5
+  duplicateSource: null
 _key: '!actors!Hy1XeUQA64WoxKxs'

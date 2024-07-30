@@ -14,21 +14,25 @@ items:
     effects: []
     folder: null
     system:
-      cosm: Das Lebende Land
+      cosm: livingLand
       description: <p>Knochenschnitzerei von Lanala.</p>
       price: '0'
       techlevel: 5
       value: 0
-      equippedClass: item-equipped
+      secondaryAxiom:
+        selected: none
+        value: null
     ownership:
       default: 0
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: null
-      modifiedTime: 1694867582630
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722161827659
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Item.V6vSEnqgNmYQKs4o
+      duplicateSource: null
     _key: '!actors.items!6Pc9oa7mM6kZkFUi.OZvqS64IhCczdFkT'
   - _id: g1WmDBXHJYqPug3u
     name: 'Außenseiter (Volk: Edeinos)'
@@ -42,12 +46,11 @@ items:
         sourceId: Compendium.te001-core-rulebook.grw-de-vorzuverb.Item.0p0JoCsh5Rc4x9uS
     system:
       category: racial
-      cosm: Das Lebende Land
+      cosm: livingLand
       description: >-
-        <p>Edeinos sind f&uuml;r alle au&szlig;er anderen Edeinos
-        Au&szlig;enseiter. Sie erleiden einen Malus von 4 auf &Uuml;berreden-
-        Proben gegen&uuml;ber Nicht-Edeinos, und Menschen aus anderen Reichen
-        begegnen ihnen oft mit Feindseligkeit.</p>
+        <p>Edeinos sind für alle außer anderen Edeinos Außenseiter. Sie erleiden
+        einen Malus von 4 auf Überreden- Proben gegenüber Nicht-Edeinos, und
+        Menschen aus anderen Reichen begegnen ihnen oft mit Feindseligkeit.</p>
       prerequisites: 'Volk: Edeinos'
       generalContradiction: false
       pulpPowers:
@@ -124,131 +127,23 @@ items:
         limitation10: ''
         limitationNumber: 0
       timestaken: '1'
+      secondaryAxiom:
+        selected: none
+        value: null
     ownership:
       default: 0
       9Q0XnqFwko7hRlvL: 3
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: 1694867487836
-      modifiedTime: 1694867507664
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722161760684
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Compendium.te001-core-rulebook.grw-de-vorzuverb.Item.0p0JoCsh5Rc4x9uS
+      duplicateSource: null
     _key: '!actors.items!6Pc9oa7mM6kZkFUi.g1WmDBXHJYqPug3u'
-  - _id: LUl3AUfakBmFSMuk
-    name: Wunderwirker
-    type: perk
-    img: systems/torgeternity/images/icons/reality-icon.webp
-    effects: []
-    folder: null
-    sort: 100000
-    flags:
-      core:
-        sourceId: Compendium.te001-core-rulebook.grw-de-vorzuverb.Item.D1RJR3lXmVGDsPJr
-    system:
-      category: faith
-      cosm: (Keins)
-      description: >-
-        <p>Der Held ist mit der F&auml;higkeit gesegnet Wunder zu wirken. Er
-        erh&auml;lt Zugriff auf die Liste der Wunder seiner Religion, die nicht
-        durch einen anderen Vorzug eingeschr&auml;nkt werden. Er erh&auml;lt
-        Feind abwehren und zwei weitere Wunder aus den zur Auswahl stehenden
-        Listen unter
-        @UUID[Compendium.te001-core-rulebook.grw-de-grw.Qlx6yGF0Mmo6Xzrv.JournalEntryPage.awo3Mvf0MS2OG4Y8]{Kapitel
-        8: Wunder}.</p>
-
-        <p><strong>Zus&auml;tzliches Wunder:</strong> Dieser Vorzug kann mehr
-        als einmal erworben werden. Jedes Mal nach dem ersten erh&auml;lt der
-        Charakter ein weiteres Wunder.</p>
-      prerequisites: Mindestens 1 Fertigkeitsstufe in Glauben
-      generalContradiction: false
-      pulpPowers:
-        enhancement01:
-          description: ''
-          taken: false
-          title: ''
-        enhancement02:
-          description: ''
-          taken: false
-          title: ''
-        enhancement03:
-          description: ''
-          taken: false
-          title: ''
-        enhancement04:
-          description: ''
-          taken: false
-          title: ''
-        enhancement05:
-          description: ''
-          taken: false
-          title: ''
-        enhancement06:
-          description: ''
-          taken: false
-          title: ''
-        enhancement07:
-          description: ''
-          taken: false
-          title: ''
-        enhancement08:
-          description: ''
-          taken: false
-          title: ''
-        enhancement09:
-          description: ''
-          taken: false
-          title: ''
-        enhancement10:
-          description: ''
-          taken: false
-          title: ''
-        enhancement11:
-          description: ''
-          taken: false
-          title: ''
-        enhancement12:
-          description: ''
-          taken: false
-          title: ''
-        enhancement13:
-          description: ''
-          taken: false
-          title: ''
-        enhancement14:
-          description: ''
-          taken: false
-          title: ''
-        enhancement15:
-          description: ''
-          taken: false
-          title: ''
-        enhancementNumber: 0
-        limitation01: ''
-        limitation02: ''
-        limitation03: ''
-        limitation04: ''
-        limitation05: ''
-        limitation06: ''
-        limitation07: ''
-        limitation08: ''
-        limitation09: ''
-        limitation10: ''
-        limitationNumber: 0
-      timestaken: '1'
-    ownership:
-      default: 0
-      9Q0XnqFwko7hRlvL: 3
-      CtisFurQNe9h7ABb: 3
-    _stats:
-      systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
-      createdTime: 1694867497648
-      modifiedTime: 1694867607000
-      lastModifiedBy: CtisFurQNe9h7ABb
-    _key: '!actors.items!6Pc9oa7mM6kZkFUi.LUl3AUfakBmFSMuk'
   - name: Krallen und Zähne (Edeinos)
     type: meleeweapon
     img: systems/torgeternity/images/icons/axe-icon.webp
@@ -261,9 +156,9 @@ items:
           Compendium.te001-core-rulebook.grw-de-ausruestung.Item.yJzV2lq3AG5aCwkF
     _id: p0kfnzrQyXHI0B42
     system:
-      cosm: Das Lebende Land
+      cosm: livingLand
       description: >-
-        <p>Diese "Bewaffnung" bitte automatisch ausr&uuml;sten, wenn Volk =
+        <p>Diese "Bewaffnung" bitte automatisch ausrüsten, wenn Volk =
         Edeinos</p>
       price: '0'
       techlevel: 1
@@ -275,114 +170,25 @@ items:
       damage: 2
       damageType: strengthPlus
       equipped: false
-      equippedClass: .item-unequipped
       notes: ''
+      secondaryAxiom:
+        selected: none
+        value: null
+      minStrength: null
     ownership:
       default: 0
       9Q0XnqFwko7hRlvL: 3
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: 1694867530166
-      modifiedTime: 1694867530166
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722161862076
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Compendium.te001-core-rulebook.grw-de-ausruestung.Item.yJzV2lq3AG5aCwkF
+      duplicateSource: null
     _key: '!actors.items!6Pc9oa7mM6kZkFUi.p0kfnzrQyXHI0B42'
-  - _id: sfdqntTFBwxSTT3g
-    name: Hrockt-Sprossenspeer
-    type: meleeweapon
-    img: systems/torgeternity/images/icons/axe-icon.webp
-    effects: []
-    folder: null
-    sort: 24500000
-    flags:
-      core:
-        sourceId: >-
-          Compendium.te001-core-rulebook.grw-de-ausruestung.Item.kXL8gB3WmlckpUWD
-    system:
-      cosm: Das Lebende Land
-      description: >-
-        <p style="box-sizing: border-box; user-select: text; font-family:
-        Palatino; font-size: 12px;"><strong style="box-sizing: border-box;
-        user-select: text;">Wurfwaffe:&nbsp;</strong>Der Gegenstand z&auml;hlt
-        zus&auml;tzlich als Wurfwaffe und kann mit der
-        Projektilwaffen-Fertigkeit auf eine Reichweite von 10/20/40 geworfen
-        werden. Zum Ausr&uuml;sten s.
-        @UUID[Compendium.te001-core-rulebook.grw-de-ausruestung.Item.VRuK7Un8bvtpUk3s]{Hrockt-Sprossenspeer}</p>
-
-        <p>Die Sprossen sind im Wachstum weich und biegsam, werden aber hart wie
-        Stahl, nachdem sie abgeschnitten und getrocknet wurden. Am
-        h&auml;ufigsten trifft man sie in Form von Speeren an, die auch als
-        Projektilwaffe geworfen werden k&ouml;nnen.</p>
-      price: '40'
-      techlevel: 2
-      value: 8
-      ap: 0
-      attackWith: meleeWeapons
-      bonus: 2
-      chatNote: ''
-      damage: 2
-      damageType: strengthPlus
-      equipped: false
-      equippedClass: .item-unequipped
-      notes: Wurfwaffe
-    ownership:
-      default: 0
-      9Q0XnqFwko7hRlvL: 3
-      CtisFurQNe9h7ABb: 3
-    _stats:
-      systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
-      createdTime: 1694867543147
-      modifiedTime: 1694867543147
-      lastModifiedBy: CtisFurQNe9h7ABb
-    _key: '!actors.items!6Pc9oa7mM6kZkFUi.sfdqntTFBwxSTT3g'
-  - _id: GPnCFO3NpK92uEqj
-    name: Hrockt-Sprossenspeer
-    type: missileweapon
-    img: systems/torgeternity/images/icons/missile-weapon-icon.webp
-    effects: []
-    folder: null
-    sort: 15600000
-    flags:
-      core:
-        sourceId: Item.ovHCUOiZApDGqjH8
-    system:
-      cosm: Das Lebende Land
-      description: >-
-        <p>S.
-        @UUID[Compendium.te001-core-rulebook.grw-de-ausruestung.Item.kXL8gB3WmlckpUWD]{Hrockt-Sprossenspeer}
-        als Nahkampfwaffe</p>
-      price: '40'
-      techlevel: 2
-      value: 8
-      ammo:
-        max: 1
-        value: 1
-      ap: 0
-      attackWith: missileWeapons
-      chatNote: ''
-      damage: 2
-      damageType: strengthPlus
-      equipped: false
-      equippedClass: .item-unequipped
-      minStrength: ''
-      notes: ''
-      range: 10/20/40
-    ownership:
-      default: 0
-      1pSzpSNrhKGYYcib: 3
-      CtisFurQNe9h7ABb: 3
-    _stats:
-      systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
-      createdTime: 1694867544363
-      modifiedTime: 1694867544363
-      lastModifiedBy: CtisFurQNe9h7ABb
-    _key: '!actors.items!6Pc9oa7mM6kZkFUi.GPnCFO3NpK92uEqj'
   - _id: pj0EqVly0EhHxRF2
     name: Peitschenschwanz
     type: perk
@@ -403,14 +209,26 @@ items:
           turns: null
           startRound: null
           startTurn: null
-        icon: icons/svg/aura.svg
         origin: Compendium.te001-core-rulebook.grw-de-vorzuverb.hwrzWawaqs7kKuHI
         transfer: true
         flags: {}
-        tint: null
+        tint: '#ffffff'
         name: Fertigkeitsbegünstigung
         description: ''
         statuses: []
+        _stats:
+          coreVersion: '12.330'
+          systemId: null
+          systemVersion: null
+          createdTime: null
+          modifiedTime: null
+          lastModifiedBy: null
+          compendiumSource: null
+          duplicateSource: null
+        img: icons/svg/aura.svg
+        type: base
+        system: {}
+        sort: 0
         _key: >-
           !actors.items.effects!6Pc9oa7mM6kZkFUi.pj0EqVly0EhHxRF2.teB2PeOhHTmrmVGb
     folder: null
@@ -420,15 +238,14 @@ items:
         sourceId: Compendium.te001-core-rulebook.grw-de-vorzuverb.Item.hwrzWawaqs7kKuHI
     system:
       category: edeinos
-      cosm: Das Lebende Land
+      cosm: livingLand
       description: >-
-        <p>Die Echsenmenschen verwenden ihre Schw&auml;nze haupts&auml;chlich,
-        um das Gleichgewicht zu halten, aber einige haben auch gelernt, mit
-        ihnen zu k&auml;mpfen, indem sie komplizierte Kreisbewegungen und
-        Spr&uuml;nge ausf&uuml;hren, die ihre Schw&auml;nze in lange,
-        peitschenartige Waffen verwandeln. Wenn ein Edeinos auf diese Weise
-        angreift, z&auml;hlt Waffenloser Kampf f&uuml;r ihn als
-        Beg&uuml;nstigt.</p>
+        <p>Die Echsenmenschen verwenden ihre Schwänze hauptsächlich, um das
+        Gleichgewicht zu halten, aber einige haben auch gelernt, mit ihnen zu
+        kämpfen, indem sie komplizierte Kreisbewegungen und Sprünge ausführen,
+        die ihre Schwänze in lange, peitschenartige Waffen verwandeln. Wenn ein
+        Edeinos auf diese Weise angreift, zählt Waffenloser Kampf für ihn als
+        Begünstigt.</p>
       prerequisites: Edeinos
       generalContradiction: false
       pulpPowers:
@@ -505,17 +322,22 @@ items:
         limitation10: ''
         limitationNumber: 0
       timestaken: '1'
+      secondaryAxiom:
+        selected: none
+        value: null
     ownership:
       default: 0
       9Q0XnqFwko7hRlvL: 3
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: 1694867606000
-      modifiedTime: 1694867609368
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722161754220
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Compendium.te001-core-rulebook.grw-de-vorzuverb.Item.hwrzWawaqs7kKuHI
+      duplicateSource: null
     _key: '!actors.items!6Pc9oa7mM6kZkFUi.pj0EqVly0EhHxRF2'
   - _id: S4nEXXlDkjQCu2k3
     name: Waffensegen
@@ -533,23 +355,8 @@ items:
       applySize: false
       axiom: 12
       castingtime: 1 Aktion
-      damage: ''
-      description: >-
-        <p>Manchmal muss selbst der Friedlichste den Stab erheben und dieses
-        kraftvolle Wunder erf&uuml;llt die Waffe mit g&ouml;ttlichem Zorn! Der
-        <em>Waffensegen </em>betrifft nur eine einzelne Waffe, es ist keine
-        Mehrfach-Zielauswahl erlaubt.&nbsp;</p>
-
-        <p>Dieses Wunder erh&ouml;ht den Schadenswert der Waffe um +1. Es spielt
-        keine Rolle, ob die Waffe f&uuml;r den Nahkampf oder Fernkampf ausgelegt
-        ist &ndash; ihr Grundschaden wird in beiden F&auml;llen erh&ouml;ht. Der
-        <em>Waffensegen </em>wird auf die Waffe gewirkt, und nicht auf ihre
-        Munition.&nbsp;</p>
-
-        <p>Eine Waffe, die mit <em>Waffensegen </em>gesegnet ist, gilt f&uuml;r
-        den Kampf gegen Feinde mit &auml;therischen oder &auml;hnlichen
-        F&auml;higkeiten, die gegen normale Waffen immun sind, als magische
-        Waffe.</p>
+      damage: 0
+      description: "<p>Manchmal muss selbst der Friedlichste den Stab erheben und dieses kraftvolle Wunder erfüllt die Waffe mit göttlichem Zorn! Der <em>Waffensegen </em>betrifft nur eine einzelne Waffe, es ist keine Mehrfach-Zielauswahl erlaubt.\_</p>\n<p>Dieses Wunder erhöht den Schadenswert der Waffe um +1. Es spielt keine Rolle, ob die Waffe für den Nahkampf oder Fernkampf ausgelegt ist – ihr Grundschaden wird in beiden Fällen erhöht. Der <em>Waffensegen </em>wird auf die Waffe gewirkt, und nicht auf ihre Munition.\_</p>\n<p>Eine Waffe, die mit <em>Waffensegen </em>gesegnet ist, gilt für den Kampf gegen Feinde mit ätherischen oder ähnlichen Fähigkeiten, die gegen normale Waffen immun sind, als magische Waffe.</p>"
       dn: standard
       dnType: ''
       duration: 3 Runden
@@ -568,10 +375,12 @@ items:
     _stats:
       systemId: torgeternity
       systemVersion: 3.1.1
-      coreVersion: '11.308'
+      coreVersion: '12.330'
       createdTime: 1694867621482
       modifiedTime: 1694867637048
       lastModifiedBy: CtisFurQNe9h7ABb
+      compendiumSource: Compendium.te001-core-rulebook.grw-de-kraefte.Item.1UNRGoERfcYtYKW0
+      duplicateSource: null
     _key: '!actors.items!6Pc9oa7mM6kZkFUi.S4nEXXlDkjQCu2k3'
   - _id: v2vh6Mp1Uleuo29h
     name: Heilung
@@ -589,25 +398,8 @@ items:
       applySize: false
       axiom: 10
       castingtime: 1 Aktion
-      damage: ''
-      description: >-
-        <p>Die vielleicht wichtigste F&auml;higkeit, die ein Wunderwirker einer
-        Gruppe von Storm Knights beisteuern kann, ist die F&auml;higkeit zu
-        heilen. Egal ob er die Wunden eines Teamkollegen versorgt oder verletzte
-        Dorfbewohner auf seine Seite zieht, <em>Heilung </em>ist eine
-        entscheidende F&auml;higkeit.&nbsp;</p>
-
-        <p>Das Probenergebnis des Wunderwirkers wird durch den Verwundungs-Malus
-        des Ziels (sowie des Wunderwirkers, falls er verwundet wurde)
-        modifiziert. Ein Standard-Erfolg heilt 1 Wunde sowie allen Schockschaden
-        und weckt das Ziel aus dem K.O.-Zustand.&nbsp;</p>
-
-        <p>Die <em>Heilung</em> darf von jeder Person nur einmal pro Szene
-        versucht werden &ndash; also w&auml;hlt den Zeitpunkt weise! Falls Maru
-        in einem Kampf verletzt und umgehend von Pater Damien geheilt wird, dann
-        kann er sie bis zum Beginn der n&auml;chsten Szene nicht mehr heilen. Er
-        k&ouml;nnte aber immer noch <em>Erste Hilfe </em>bei ihr anwenden oder
-        die anderen Teammitglieder heilen.</p>
+      damage: 0
+      description: "<p>Die vielleicht wichtigste Fähigkeit, die ein Wunderwirker einer Gruppe von Storm Knights beisteuern kann, ist die Fähigkeit zu heilen. Egal ob er die Wunden eines Teamkollegen versorgt oder verletzte Dorfbewohner auf seine Seite zieht, <em>Heilung </em>ist eine entscheidende Fähigkeit.\_</p>\n<p>Das Probenergebnis des Wunderwirkers wird durch den Verwundungs-Malus des Ziels (sowie des Wunderwirkers, falls er verwundet wurde) modifiziert. Ein Standard-Erfolg heilt 1 Wunde sowie allen Schockschaden und weckt das Ziel aus dem K.O.-Zustand.\_</p>\n<p>Die <em>Heilung</em> darf von jeder Person nur einmal pro Szene versucht werden – also wählt den Zeitpunkt weise! Falls Maru in einem Kampf verletzt und umgehend von Pater Damien geheilt wird, dann kann er sie bis zum Beginn der nächsten Szene nicht mehr heilen. Er könnte aber immer noch <em>Erste Hilfe </em>bei ihr anwenden oder die anderen Teammitglieder heilen.</p>"
       dn: standard
       dnType: ''
       duration: Sofort
@@ -626,10 +418,12 @@ items:
     _stats:
       systemId: torgeternity
       systemVersion: 3.1.1
-      coreVersion: '11.308'
+      coreVersion: '12.330'
       createdTime: 1694867628032
       modifiedTime: 1694867635719
       lastModifiedBy: CtisFurQNe9h7ABb
+      compendiumSource: Compendium.te001-core-rulebook.grw-de-kraefte.Item.z2F1fYz1l6okzYor
+      duplicateSource: null
     _key: '!actors.items!6Pc9oa7mM6kZkFUi.v2vh6Mp1Uleuo29h'
   - _id: UzYif4jabH5Y4b4j
     name: Feind abwehren
@@ -659,14 +453,26 @@ items:
           turns: null
           startRound: null
           startTurn: null
-        icon: icons/svg/aura.svg
         origin: Compendium.te001-core-rulebook.grw-de-kraefte.geTWA7krOqHuXpxk
         transfer: true
         flags: {}
-        tint: null
+        tint: '#ffffff'
         name: Standard
         description: ''
         statuses: []
+        _stats:
+          coreVersion: '12.330'
+          systemId: null
+          systemVersion: null
+          createdTime: null
+          modifiedTime: null
+          lastModifiedBy: null
+          compendiumSource: null
+          duplicateSource: null
+        img: icons/svg/aura.svg
+        type: base
+        system: {}
+        sort: 0
         _key: >-
           !actors.items.effects!6Pc9oa7mM6kZkFUi.UzYif4jabH5Y4b4j.ecbVOFBMML58Ojlw
       - _id: RiLW8E5gMhnrThkX
@@ -692,14 +498,26 @@ items:
           turns: null
           startRound: null
           startTurn: null
-        icon: icons/svg/aura.svg
         origin: Compendium.te001-core-rulebook.grw-de-kraefte.geTWA7krOqHuXpxk
         transfer: true
         flags: {}
-        tint: null
+        tint: '#ffffff'
         name: Gut
         description: ''
         statuses: []
+        _stats:
+          coreVersion: '12.330'
+          systemId: null
+          systemVersion: null
+          createdTime: null
+          modifiedTime: null
+          lastModifiedBy: null
+          compendiumSource: null
+          duplicateSource: null
+        img: icons/svg/aura.svg
+        type: base
+        system: {}
+        sort: 0
         _key: >-
           !actors.items.effects!6Pc9oa7mM6kZkFUi.UzYif4jabH5Y4b4j.RiLW8E5gMhnrThkX
       - _id: b6m8CEDITRqrCBzU
@@ -725,14 +543,26 @@ items:
           turns: null
           startRound: null
           startTurn: null
-        icon: icons/svg/aura.svg
         origin: Compendium.te001-core-rulebook.grw-de-kraefte.geTWA7krOqHuXpxk
         transfer: true
         flags: {}
-        tint: null
+        tint: '#ffffff'
         name: Hervorragend
         description: ''
         statuses: []
+        _stats:
+          coreVersion: '12.330'
+          systemId: null
+          systemVersion: null
+          createdTime: null
+          modifiedTime: null
+          lastModifiedBy: null
+          compendiumSource: null
+          duplicateSource: null
+        img: icons/svg/aura.svg
+        type: base
+        system: {}
+        sort: 0
         _key: >-
           !actors.items.effects!6Pc9oa7mM6kZkFUi.UzYif4jabH5Y4b4j.b6m8CEDITRqrCBzU
     folder: null
@@ -746,29 +576,8 @@ items:
       applySize: false
       axiom: 8
       castingtime: 1 Aktion
-      damage: ''
-      description: >-
-        <p><em>Feind abwehren </em>sch&uuml;tzt die Gl&auml;ubigen vor
-        &uuml;bernat&uuml;rlichen Wesen, die Menschen jagen oder andersweitig
-        versuchen ihnen zu schaden.&nbsp;</p>
-
-        <p>Um <em>Feind abwehren </em>zu wirken, muss der Wunderwirker ein
-        heiliges Symbol erheben, Gebete rezitieren oder auf andere Weise die
-        Quelle seiner Macht offenbaren, was ihn zu einem offensichtlichen Ziel
-        f&uuml;r den Spott von Geistern, D&auml;monen oder anderen Gegnern
-        macht, die von der Wirkung betroffen sein k&ouml;nnten.&nbsp;</p>
-
-        <p>W&auml;hrend die Abwehr aktiv ist, d&uuml;rfen alle Verb&uuml;ndeten
-        innerhalb von f&uuml;nf Metern +1 zu ihrer Verteidigung gegen
-        @UUID[Compendium.te001-core-rulebook.grw-de-grw.Qlx6yGF0Mmo6Xzrv.JournalEntryPage.35aMxQmdrQ7RDr63#ubernaturliches-boses]{b&ouml;se
-        &uuml;bernat&uuml;rliche Kreaturen} und deren Angriffe addieren. Der
-        Bonus z&auml;hlt sowohl f&uuml;r die physische Verteidigung als auch
-        gegen Interaktionsangriffe.&nbsp;</p>
-
-        <p><strong>Spezial:</strong> Dieses Wunder darf auch von Charakteren
-        gewirkt werden, die nicht &uuml;ber den Vorzug
-        &bdquo;Wunderwirker&ldquo; verf&uuml;gen, solange sie die
-        Fertigkeits-Voraussetzung erf&uuml;llen.</p>
+      damage: 0
+      description: "<p><em>Feind abwehren </em>schützt die Gläubigen vor übernatürlichen Wesen, die Menschen jagen oder andersweitig versuchen ihnen zu schaden.\_</p>\n<p>Um <em>Feind abwehren </em>zu wirken, muss der Wunderwirker ein heiliges Symbol erheben, Gebete rezitieren oder auf andere Weise die Quelle seiner Macht offenbaren, was ihn zu einem offensichtlichen Ziel für den Spott von Geistern, Dämonen oder anderen Gegnern macht, die von der Wirkung betroffen sein könnten.\_</p>\n<p>Während die Abwehr aktiv ist, dürfen alle Verbündeten innerhalb von fünf Metern +1 zu ihrer Verteidigung gegen @UUID[Compendium.te001-core-rulebook.grw-de-grw.Qlx6yGF0Mmo6Xzrv.JournalEntryPage.35aMxQmdrQ7RDr63#ubernaturliches-boses]{böse übernatürliche Kreaturen} und deren Angriffe addieren. Der Bonus zählt sowohl für die physische Verteidigung als auch gegen Interaktionsangriffe.\_</p>\n<p><strong>Spezial:</strong> Dieses Wunder darf auch von Charakteren gewirkt werden, die nicht über den Vorzug „Wunderwirker“ verfügen, solange sie die Fertigkeits-Voraussetzung erfüllen.</p>"
       dn: standard
       dnType: ''
       duration: Konzentration
@@ -789,10 +598,12 @@ items:
     _stats:
       systemId: torgeternity
       systemVersion: 3.1.1
-      coreVersion: '11.308'
+      coreVersion: '12.330'
       createdTime: 1694867632361
       modifiedTime: 1694867635719
       lastModifiedBy: CtisFurQNe9h7ABb
+      compendiumSource: Compendium.te001-core-rulebook.grw-de-kraefte.Item.geTWA7krOqHuXpxk
+      duplicateSource: null
     _key: '!actors.items!6Pc9oa7mM6kZkFUi.UzYif4jabH5Y4b4j'
   - _id: j47RejnFxrA6drwg
     name: Hrockt-Wurzelrüstung
@@ -806,40 +617,260 @@ items:
         sourceId: >-
           Compendium.te001-core-rulebook.grw-de-ausruestung.Item.GY0pNAesiNYc1UXL
     system:
-      cosm: Das Lebende Land
+      cosm: livingLand
       description: >-
         <p>@UUID[Compendium.te001-core-rulebook.grw-de-grw.Qlx6yGF0Mmo6Xzrv.JournalEntryPage.7GGUUHzuYIqGPXDO#ganzkorper/torso:]{Torso}</p>
 
-        <p>Diese R&uuml;stung wurde aus den extrem haltbaren Wurzeln des
+        <p>Diese Rüstung wurde aus den extrem haltbaren Wurzeln des
         Hrockt-Baumes hergestellt. Sie hat eine hohe Schutzwirkung, ist jedoch
-        ohne den Willen von Lanala ann&auml;hernd unbeweglich. Um sich in ihr
-        vern&uuml;nftig bewegen zu k&ouml;nnen, muss der Tr&auml;ger ein
-        Gl&auml;ubiger Lanalas sein, der &uuml;ber mindestens 1 Fertigkeitsstufe
-        in Glauben (Keta Kalles) und einem Spiritual-Axiom von 11 oder
-        h&ouml;her verf&uuml;gt. Sollte das &ouml;rtliche Spiritual-Axiom
-        niedriger sein, so verursacht diese R&uuml;stung einen Widerspruch.</p>
+        ohne den Willen von Lanala annähernd unbeweglich. Um sich in ihr
+        vernünftig bewegen zu können, muss der Träger ein Gläubiger Lanalas
+        sein, der über mindestens 1 Fertigkeitsstufe in Glauben (Keta Kalles)
+        und einem Spiritual-Axiom von 11 oder höher verfügt. Sollte das örtliche
+        Spiritual-Axiom niedriger sein, so verursacht diese Rüstung einen
+        Widerspruch.</p>
       price: '400'
       techlevel: 3
       value: 13
       bonus: 2
       equipped: true
-      equippedClass: item-equipped
       maxDex: 10
       minStrength: null
       notes: Torso, nur Jakats
       fatigue: null
+      secondaryAxiom:
+        selected: spirit
+        value: 11
     ownership:
       default: 0
       9Q0XnqFwko7hRlvL: 3
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.7.0
-      coreVersion: '11.315'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: 1711562366100
-      modifiedTime: 1711705985856
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722161839484
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Compendium.te001-core-rulebook.grw-de-ausruestung.Item.GY0pNAesiNYc1UXL
+      duplicateSource: null
     _key: '!actors.items!6Pc9oa7mM6kZkFUi.j47RejnFxrA6drwg'
+  - _id: vvTNXAsidaocnOLN
+    name: Wunderwirker
+    type: perk
+    img: systems/torgeternity/images/icons/reality-icon.webp
+    effects: []
+    folder: null
+    sort: 0
+    flags: {}
+    system:
+      category: faith
+      cosm: other
+      description: >-
+        <p><strong>Cosm:</strong> Aysle, Cyberpontifikat, Lebendes Land,
+        Nil-Imperium, Orrorsh,
+        Zentralerde</p><p>@UUID[Compendium.te001-core-rulebook.grw-de-grw.JournalEntry.Qlx6yGF0Mmo6Xzrv.JournalEntryPage.awo3Mvf0MS2OG4Y8#wunder-eigenschaften]{Wunder-Eigenschaften}</p><p>Der
+        Held ist mit der Fähigkeit gesegnet Wunder zu wirken. Er erhält Zugriff
+        auf die Liste der Wunder seiner Religion, die nicht durch einen anderen
+        Vorzug eingeschränkt werden. Er erhält Feind abwehren und zwei weitere
+        Wunder der aus den zur Auswahl stehenden Listen unter
+        @UUID[Compendium.te001-core-rulebook.grw-de-grw.JournalEntry.Qlx6yGF0Mmo6Xzrv.JournalEntryPage.awo3Mvf0MS2OG4Y8#beispiel-wunderauswahl]{Beispiel-Wunderauswahl}.</p><p>In
+        Religionen der Zentralerde stehen erweiterte
+        @UUID[Compendium.te001-core-rulebook.grw-de-grw.JournalEntry.jmVlWbWJgG0p3qQe.JournalEntryPage.NzX1nPg0WK3GQmPC#wunderlisten]{Wunderlisten}
+        zur Verfügung.</p><p><strong>Zusätzliches Wunder:</strong> Dieser Vorzug
+        kann mehr als einmal erworben werden. Jedes Mal nach dem ersten erhält
+        der Charakter ein weiteres Wunder.</p>
+      prerequisites: Mindestens 1 Fertigkeitsstufe in Glauben
+      generalContradiction: false
+      pulpPowers:
+        enhancement01:
+          description: ''
+          taken: false
+          title: ''
+        enhancement02:
+          description: ''
+          taken: false
+          title: ''
+        enhancement03:
+          description: ''
+          taken: false
+          title: ''
+        enhancement04:
+          description: ''
+          taken: false
+          title: ''
+        enhancement05:
+          description: ''
+          taken: false
+          title: ''
+        enhancement06:
+          description: ''
+          taken: false
+          title: ''
+        enhancement07:
+          description: ''
+          taken: false
+          title: ''
+        enhancement08:
+          description: ''
+          taken: false
+          title: ''
+        enhancement09:
+          description: ''
+          taken: false
+          title: ''
+        enhancement10:
+          description: ''
+          taken: false
+          title: ''
+        enhancement11:
+          description: ''
+          taken: false
+          title: ''
+        enhancement12:
+          description: ''
+          taken: false
+          title: ''
+        enhancement13:
+          description: ''
+          taken: false
+          title: ''
+        enhancement14:
+          description: ''
+          taken: false
+          title: ''
+        enhancement15:
+          description: ''
+          taken: false
+          title: ''
+        enhancementNumber: 0
+        limitation01: ''
+        limitation02: ''
+        limitation03: ''
+        limitation04: ''
+        limitation05: ''
+        limitation06: ''
+        limitation07: ''
+        limitation08: ''
+        limitation09: ''
+        limitation10: ''
+        limitationNumber: 0
+      timestaken: ''
+      secondaryAxiom:
+        selected: none
+        value: null
+    ownership:
+      default: 0
+      9Q0XnqFwko7hRlvL: 3
+      VAnYow5sWS9EJzo0: 3
+      93AMwcGe6H37rcPA: 3
+    _stats:
+      compendiumSource: Compendium.te001-core-rulebook.grw-de-vorzuverb.Item.D1RJR3lXmVGDsPJr
+      duplicateSource: null
+      coreVersion: '12.330'
+      systemId: torgeternity
+      systemVersion: 12.2.0
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+    _key: '!actors.items!6Pc9oa7mM6kZkFUi.vvTNXAsidaocnOLN'
+  - name: Hrockt-Sprossenspeer
+    type: missileweapon
+    img: systems/torgeternity/images/icons/missile-weapon-icon.webp
+    system:
+      cosm: livingLand
+      description: >-
+        <p>Zum Ausrüsten als Nahkampfwaffe s.
+        @UUID[Actor.6Pc9oa7mM6kZkFUi.Item.bsYMg4OVWpTV2Ixt]{Hrockt-Sprossenspeer}</p><p>Die
+        Sprossen sind im Wachstum weich und biegsam, werden aber hart wie Stahl,
+        nachdem sie abgeschnitten und getrocknet wurden. Am häufigsten trifft
+        man sie in Form von Speeren an, die auch als Projektilwaffe geworfen
+        werden können.</p>
+      price: '40'
+      techlevel: 3
+      value: 8
+      secondaryAxiom:
+        selected: none
+        value: null
+      ammo:
+        max: 1
+        value: 1
+      ap: 0
+      attackWith: missileWeapons
+      chatNote: ''
+      damage: 2
+      damageType: strengthPlus
+      equipped: false
+      minStrength: ''
+      notes: ''
+      range: 10/20/40
+    effects: []
+    folder: null
+    ownership:
+      default: 0
+      93AMwcGe6H37rcPA: 3
+    flags: {}
+    _stats:
+      compendiumSource: Compendium.te001-core-rulebook.grw-de-ausruestung.Item.oA1Elm4eVdBcBSn2
+      duplicateSource: null
+      coreVersion: '12.330'
+      systemId: torgeternity
+      systemVersion: 12.2.0
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+    _id: z1qqBadmQ8CgUUel
+    sort: 0
+    _key: '!actors.items!6Pc9oa7mM6kZkFUi.z1qqBadmQ8CgUUel'
+  - _id: bsYMg4OVWpTV2Ixt
+    name: Hrockt-Sprossenspeer
+    type: meleeweapon
+    img: systems/torgeternity/images/icons/axe-icon.webp
+    effects: []
+    folder: null
+    sort: 18200000
+    flags:
+      core: {}
+    system:
+      cosm: livingLand
+      description: >-
+        <p>@UUID[Compendium.te001-core-rulebook.grw-de-grw.JournalEntry.Qlx6yGF0Mmo6Xzrv.JournalEntryPage.7GGUUHzuYIqGPXDO#wurfwaffe:]{Wurfwaffe}</p><p>Zum
+        Ausrüsten als Projektilwaffe s.
+        @UUID[Actor.6Pc9oa7mM6kZkFUi.Item.z1qqBadmQ8CgUUel]{Hrockt-Sprossenspeer}</p><p>Die
+        Sprossen sind im Wachstum weich und biegsam, werden aber hart wie Stahl,
+        nachdem sie abgeschnitten und getrocknet wurden. Am häufigsten trifft
+        man sie in Form von Speeren an, die auch als Projektilwaffe geworfen
+        werden können.</p>
+      price: '40'
+      techlevel: 2
+      value: 8
+      ap: 0
+      attackWith: meleeWeapons
+      bonus: 2
+      chatNote: ''
+      damage: 2
+      damageType: strengthPlus
+      equipped: false
+      notes: Wurfwaffe
+      secondaryAxiom:
+        selected: none
+        value: null
+      minStrength: null
+    ownership:
+      default: 0
+      1pSzpSNrhKGYYcib: 3
+      VAnYow5sWS9EJzo0: 3
+      93AMwcGe6H37rcPA: 3
+    _stats:
+      compendiumSource: Compendium.te001-core-rulebook.grw-de-ausruestung.Item.VRuK7Un8bvtpUk3s
+      duplicateSource: null
+      coreVersion: '12.330'
+      systemId: torgeternity
+      systemVersion: 12.2.0
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+    _key: '!actors.items!6Pc9oa7mM6kZkFUi.bsYMg4OVWpTV2Ixt'
 effects:
   - _id: 25RZkES3T4G6Qmnw
     changes:
@@ -856,15 +887,26 @@ effects:
       turns: null
       startRound: null
       startTurn: null
-    icon: icons/svg/aura.svg
-    origin: >-
-      Compendium.torgeternity.system-de-archetypen.Actor.6Pc9oa7mM6kZkFUi.Item.pj0EqVly0EhHxRF2
+    origin: Actor.6Pc9oa7mM6kZkFUi.Item.pj0EqVly0EhHxRF2
     transfer: false
     flags: {}
-    tint: null
+    tint: '#ffffff'
     name: Fertigkeitsbegünstigung
     description: ''
     statuses: []
+    _stats:
+      coreVersion: '12.330'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+    img: icons/svg/aura.svg
+    type: base
+    system: {}
+    sort: 0
     _key: '!actors.effects!6Pc9oa7mM6kZkFUi.25RZkES3T4G6Qmnw'
   - _id: locN3jDZmlBnjbRz
     changes:
@@ -889,15 +931,26 @@ effects:
       turns: null
       startRound: null
       startTurn: null
-    icon: icons/svg/aura.svg
-    origin: >-
-      Compendium.torgeternity.system-de-archetypen.Actor.6Pc9oa7mM6kZkFUi.Item.UzYif4jabH5Y4b4j
+    origin: Actor.6Pc9oa7mM6kZkFUi.Item.UzYif4jabH5Y4b4j
     transfer: false
     flags: {}
-    tint: null
+    tint: '#ffffff'
     name: Standard
     description: ''
     statuses: []
+    _stats:
+      coreVersion: '12.330'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+    img: icons/svg/aura.svg
+    type: base
+    system: {}
+    sort: 0
     _key: '!actors.effects!6Pc9oa7mM6kZkFUi.locN3jDZmlBnjbRz'
   - _id: oz3wcobLXLhJhDC7
     changes:
@@ -922,15 +975,26 @@ effects:
       turns: null
       startRound: null
       startTurn: null
-    icon: icons/svg/aura.svg
-    origin: >-
-      Compendium.torgeternity.system-de-archetypen.Actor.6Pc9oa7mM6kZkFUi.Item.UzYif4jabH5Y4b4j
+    origin: Actor.6Pc9oa7mM6kZkFUi.Item.UzYif4jabH5Y4b4j
     transfer: false
     flags: {}
-    tint: null
+    tint: '#ffffff'
     name: Gut
     description: ''
     statuses: []
+    _stats:
+      coreVersion: '12.330'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+    img: icons/svg/aura.svg
+    type: base
+    system: {}
+    sort: 0
     _key: '!actors.effects!6Pc9oa7mM6kZkFUi.oz3wcobLXLhJhDC7'
   - _id: Y2stX1eroc0NnIkk
     changes:
@@ -955,15 +1019,26 @@ effects:
       turns: null
       startRound: null
       startTurn: null
-    icon: icons/svg/aura.svg
-    origin: >-
-      Compendium.torgeternity.system-de-archetypen.Actor.6Pc9oa7mM6kZkFUi.Item.UzYif4jabH5Y4b4j
+    origin: Actor.6Pc9oa7mM6kZkFUi.Item.UzYif4jabH5Y4b4j
     transfer: false
     flags: {}
-    tint: null
+    tint: '#ffffff'
     name: Hervorragend
     description: ''
     statuses: []
+    _stats:
+      coreVersion: '12.330'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+    img: icons/svg/aura.svg
+    type: base
+    system: {}
+    sort: 0
     _key: '!actors.effects!6Pc9oa7mM6kZkFUi.Y2stX1eroc0NnIkk'
 folder: null
 sort: 0
@@ -1321,99 +1396,7 @@ system:
     spirit: 24
     tech: 6
   details:
-    background: >-
-      <p><img class="charimg"
-      src="systems/torgeternity/images/characters/Edeinos_Optant.webp" alt=""
-      width="1723" height="2375"></p>
-
-      <p
-      class="moreheight">@UUID[Compendium.torgeternity.system-de-handouts.JournalEntry.DLLvnXpv7RFhRgHu.JournalEntryPage.S9ZpLno9HjlxRrmV]{Archetyp
-      - Der Edeinos-Optant}</p>
-
-      <h3>&Uuml;berblick</h3>
-
-      <p>Die reptilischen Bewohner von Takta Ker sind urzeitliche, wilde
-      Krieger. Ihre Umwelt ist brutal, voller fleischfressender Pflanzen,
-      feindlicher Kreaturen und riesigen Raubtieren. Die Edeinos sehen keinen
-      Widerspruch darin, ihren Feinden im Namen von Lanala, der G&ouml;ttin des
-      Lebens, den Tod zu bringen. Der Tod erweckt das Leben. F&auml;ulnis
-      s&auml;t den Boden, der neues Wachstum hervorbringt. Optanten sind
-      Priester, die Lanalas Weg verk&ouml;rpern, bekannt als "Keta
-      Kalles".&nbsp;</p>
-
-      <p>Die meisten Gl&auml;ubigen bleiben Baruk Kaah treu, aber einige
-      glauben, dass der High Lord nicht mehr auf Lanalas Weg wandelt und sich
-      ihre Gl&auml;ubigen gegen ihn erheben m&uuml;ssen.</p>
-
-      <h3>Taktiken</h3>
-
-      <p>Dein starker Arm und dein scharfer Hrockt-Sprossen-Speer reichen aus,
-      um die meisten Feinde zu eliminieren. Der <em>Waffensegen </em>kann deinen
-      Speer verbessern, wenn du mit einem besonders hartn&auml;ckigen Feind
-      konfrontiert wirst. <em>Einsch&uuml;chtern</em>-Interaktionsangriffe sind
-      ebenfalls n&uuml;tzlich, um den feindlichen Widerstand zu brechen. Deine
-      Verteidigung ist mittelm&auml;&szlig;ig (besonders verwundbar bist du
-      gegen Verspotten und Tricksen), aber mit deiner hohen
-      Realit&auml;t-Fertigkeit kannst du den gr&ouml;bsten Schaden
-      wegstecken.</p>
-
-      <h3>Moment der Krise</h3>
-
-      <p>Lanala befahl den Edeinos, das Leben zu den toten Orten in anderen
-      Welten zu bringen &ndash; das behauptete Baruk Kaah jedenfalls. In der
-      Praxis f&uuml;hlt sich dieser Krieg jedoch falsch f&uuml;r dich an, wie
-      eine Beleidigung f&uuml;r Lanala und nicht ein Dienst an ihr. Deine
-      Eingebung erwies sich als wahr, denn als du dich gegen Kaah wandtest,
-      l&ouml;ste dies deine Transzendenz aus.</p>
-
-      <h3>Zitat</h3>
-
-      <p>"Ich beneide dich fast um den Schmerz, den du gleich erleben
-      wirst."</p>
-
-      <h3>Beschreibung</h3>
-
-      <p>Es mag f&uuml;r einen Priester des Lebens seltsam erscheinen, einen
-      Dinosaurier-Sch&auml;del und viele Knochen zu tragen, aber Tod und Verfall
-      sind nur ein weiterer Teil des Lebens. Die Knochen sind keine toten Dinge,
-      weil sie einst lebendig waren. Nur die Dinge aus Stein und Metall, die nie
-      von Lanala ber&uuml;hrt wurden, sind wirklich tot. Wie die meisten Edeinos
-      bist du sehr geradlinig und es fehlt dir an Manieren und sozialen
-      Grundregeln, die Menschen f&uuml;r selbstverst&auml;ndlich halten.</p>
-
-      <h3>Agenda</h3>
-
-      <p>Der Weg nach Lanala f&uuml;hrt durch die Erfahrung von Empfindungen:
-      Schmerzen, Vergn&uuml;gen und die seltenen Gef&uuml;hlen jenseits von
-      beidem. Baruk Kaah und die High Lords sind Bedrohungen f&uuml;r Lanala,
-      aber das Wichtigste ist, zu f&uuml;hlen.</p>
-
-      <h3>Namen</h3>
-
-      <p>Blutkralle, Dathil, Langkiefer, Mondl&auml;ufer, Klingenzahn, Riscaran,
-      Sturmpeitsche, Wildauge</p>
-
-      <h3>Vorgeschlagener Aufstieg (Optional)</h3>
-
-      <ul>
-
-      <li>(5 EP) Steinhaut</li>
-
-      <li>(7 EP) Gesch&uuml;tzt</li>
-
-      <li>(1 EP) <em>Spurenlesen</em> +1</li>
-
-      <li>(2 EP) <em>Ausweichen</em> +2</li>
-
-      <li>(3 EP) <em>Heimlichkeit</em> +3</li>
-
-      <li>(3 EP) <em>Nahkampfwaffen</em> +3</li>
-
-      <li>(4 EP) <em>Glaube</em> +4</li>
-
-      <li>(5 EP) <em>Glaube</em> +5</li>
-
-      </ul>
+    background: "<p><img class=\"charimg\" src=\"systems/torgeternity/images/characters/Edeinos_Optant.webp\" alt=\"\" width=\"1723\" height=\"2375\" /></p>\n<p class=\"moreheight\">@UUID[Compendium.torgeternity.system-de-handouts.JournalEntry.DLLvnXpv7RFhRgHu.JournalEntryPage.S9ZpLno9HjlxRrmV]{Archetyp - Der Edeinos-Optant}</p>\n<h3>Überblick</h3>\n<p>Die reptilischen Bewohner von Takta Ker sind urzeitliche, wilde Krieger. Ihre Umwelt ist brutal, voller fleischfressender Pflanzen, feindlicher Kreaturen und riesigen Raubtieren. Die Edeinos sehen keinen Widerspruch darin, ihren Feinden im Namen von Lanala, der Göttin des Lebens, den Tod zu bringen. Der Tod erweckt das Leben. Fäulnis sät den Boden, der neues Wachstum hervorbringt. Optanten sind Priester, die Lanalas Weg verkörpern, bekannt als \"Keta Kalles\".\_</p>\n<p>Die meisten Gläubigen bleiben Baruk Kaah treu, aber einige glauben, dass der High Lord nicht mehr auf Lanalas Weg wandelt und sich ihre Gläubigen gegen ihn erheben müssen.</p>\n<h3>Taktiken</h3>\n<p>Dein starker Arm und dein scharfer Hrockt-Sprossen-Speer reichen aus, um die meisten Feinde zu eliminieren. Der <em>Waffensegen </em>kann deinen Speer verbessern, wenn du mit einem besonders hartnäckigen Feind konfrontiert wirst. <em>Einschüchtern</em>-Interaktionsangriffe sind ebenfalls nützlich, um den feindlichen Widerstand zu brechen. Deine Verteidigung ist mittelmäßig (besonders verwundbar bist du gegen Verspotten und Tricksen), aber mit deiner hohen Realität-Fertigkeit kannst du den gröbsten Schaden wegstecken.</p>\n<h3>Moment der Krise</h3>\n<p>Lanala befahl den Edeinos, das Leben zu den toten Orten in anderen Welten zu bringen – das behauptete Baruk Kaah jedenfalls. In der Praxis fühlt sich dieser Krieg jedoch falsch für dich an, wie eine Beleidigung für Lanala und nicht ein Dienst an ihr. Deine Eingebung erwies sich als wahr, denn als du dich gegen Kaah wandtest, löste dies deine Transzendenz aus.</p>\n<h3>Zitat</h3>\n<p>\"Ich beneide dich fast um den Schmerz, den du gleich erleben wirst.\"</p>\n<h3>Beschreibung</h3>\n<p>Es mag für einen Priester des Lebens seltsam erscheinen, einen Dinosaurier-Schädel und viele Knochen zu tragen, aber Tod und Verfall sind nur ein weiterer Teil des Lebens. Die Knochen sind keine toten Dinge, weil sie einst lebendig waren. Nur die Dinge aus Stein und Metall, die nie von Lanala berührt wurden, sind wirklich tot. Wie die meisten Edeinos bist du sehr geradlinig und es fehlt dir an Manieren und sozialen Grundregeln, die Menschen für selbstverständlich halten.</p>\n<h3>Agenda</h3>\n<p>Der Weg nach Lanala führt durch die Erfahrung von Empfindungen: Schmerzen, Vergnügen und die seltenen Gefühlen jenseits von beidem. Baruk Kaah und die High Lords sind Bedrohungen für Lanala, aber das Wichtigste ist, zu fühlen.</p>\n<h3>Namen</h3>\n<p>Blutkralle, Dathil, Langkiefer, Mondläufer, Klingenzahn, Riscaran, Sturmpeitsche, Wildauge</p>\n<h3>Vorgeschlagener Aufstieg (Optional)</h3>\n<ul>\n<li>(5 EP) Steinhaut</li>\n<li>(7 EP) Geschützt</li>\n<li>(1 EP) <em>Spurenlesen</em> +1</li>\n<li>(2 EP) <em>Ausweichen</em> +2</li>\n<li>(3 EP) <em>Heimlichkeit</em> +3</li>\n<li>(3 EP) <em>Nahkampfwaffen</em> +3</li>\n<li>(4 EP) <em>Glaube</em> +4</li>\n<li>(5 EP) <em>Glaube</em> +5</li>\n</ul>"
     race: edeinos
     sizeBonus: normal
   editstate: false
@@ -1458,14 +1441,20 @@ prototypeToken:
       min: 0
       max: 1
     attenuation: 0.5
+    negative: false
+    priority: 0
   texture:
     src: systems/torgeternity/images/characters/edeinos_optant.Token.webp
-    tint: null
+    tint: '#ffffff'
     scaleX: 1
     scaleY: 1
     offsetX: 0
     offsetY: 0
     rotation: 0
+    anchorX: 0.5
+    anchorY: 0.5
+    fit: contain
+    alphaThreshold: 0.75
   sight:
     angle: 360
     enabled: true
@@ -1475,14 +1464,29 @@ prototypeToken:
     attenuation: 0.1
     saturation: 0
     contrast: 0
+    color: null
   appendNumber: false
   prependAdjective: false
   detectionModes: []
+  hexagonalShape: 0
+  occludable:
+    radius: 0
+  ring:
+    enabled: false
+    colors:
+      ring: null
+      background: null
+    effects: 1
+    subject:
+      scale: 1
+      texture: null
 _stats:
   systemId: torgeternity
-  systemVersion: 3.8.1
-  coreVersion: '11.315'
+  systemVersion: 12.2.0
+  coreVersion: '12.330'
   createdTime: 1694867487836
-  modifiedTime: 1716827810950
-  lastModifiedBy: VAnYow5sWS9EJzo0
+  modifiedTime: 1722359278656
+  lastModifiedBy: 93AMwcGe6H37rcPA
+  compendiumSource: Compendium.torgeternity.archetypes.hcdhRCs56U5JrAl4
+  duplicateSource: null
 _key: '!actors!6Pc9oa7mM6kZkFUi'

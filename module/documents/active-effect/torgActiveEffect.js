@@ -47,6 +47,11 @@ export default class TorgActiveEffect extends ActiveEffect {
           change.key = migrationDictionary[change.key];
         }
       }
+      for (const change of data.changes) {
+        if (change.key.includes('.isFav') && (change.value === '1' || change.value === '0')) {
+          change.value = change.value === '1' ? 'true' : 'false';
+        }
+      }
     }
     return data;
   }

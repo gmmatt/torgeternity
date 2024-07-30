@@ -27,10 +27,12 @@ items:
     _stats:
       systemId: torgeternity
       systemVersion: 3.1.1
-      coreVersion: '11.308'
+      coreVersion: '12.330'
       createdTime: null
       modifiedTime: 1694868187854
       lastModifiedBy: CtisFurQNe9h7ABb
+      compendiumSource: Item.w4b7qWApQXkghQXE
+      duplicateSource: null
     _key: '!actors.items!92W36cwQtstg8MQ3.eu1fNLOkaeAxVTKf'
   - _id: aMOK1Bd8rFpUkhIL
     name: Mantel und Maske
@@ -43,51 +45,27 @@ items:
       core:
         sourceId: Item.UuCLymRLTqUajZYc
     system:
-      cosm: Nil-Imperium
+      cosm: nileEmpire
       description: <p>Geheimnisvoll!</p>
       price: '0'
       techlevel: 15
       value: 0
-      equippedClass: item-equipped
+      secondaryAxiom:
+        selected: none
+        value: null
     ownership:
       default: 0
       9Q0XnqFwko7hRlvL: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: null
-      modifiedTime: 1694867901744
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722161959410
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Item.UuCLymRLTqUajZYc
+      duplicateSource: null
     _key: '!actors.items!92W36cwQtstg8MQ3.aMOK1Bd8rFpUkhIL'
-  - _id: 75Sn04Vgl3qiBCVP
-    name: Extra-Magazine
-    type: gear
-    img: systems/torgeternity/images/icons/gear-icon.webp
-    effects: []
-    folder: YrLpjzkzDZxqWzUw
-    sort: 0
-    flags:
-      core:
-        sourceId: Item.9VjiNmOA2TB62Xej
-    system:
-      cosm: (Keins)
-      description: <p>5x Mauser nachladen</p>
-      price: '0'
-      techlevel: 20
-      value: 0
-      equippedClass: item-equipped
-    ownership:
-      default: 0
-      9Q0XnqFwko7hRlvL: 3
-    _stats:
-      systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
-      createdTime: null
-      modifiedTime: 1694867921328
-      lastModifiedBy: CtisFurQNe9h7ABb
-    _key: '!actors.items!92W36cwQtstg8MQ3.75Sn04Vgl3qiBCVP'
   - _id: y4woDXhqG1YWPcpB
     name: Leuchtfackel
     type: gear
@@ -99,22 +77,26 @@ items:
       core:
         sourceId: Item.Uc1pL9fqLa4cfonl
     system:
-      cosm: Nil-Imperium
+      cosm: nileEmpire
       description: ''
       price: '5'
       techlevel: 20
       value: 4
-      equippedClass: item-equipped
+      secondaryAxiom:
+        selected: none
+        value: null
     ownership:
       default: 0
       9Q0XnqFwko7hRlvL: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: null
-      modifiedTime: 1694867933032
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722162008122
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Item.Uc1pL9fqLa4cfonl
+      duplicateSource: null
     _key: '!actors.items!92W36cwQtstg8MQ3.y4woDXhqG1YWPcpB'
   - _id: 9EFl6ObKOnDr8PqP
     name: Handschellen
@@ -127,27 +109,31 @@ items:
       core:
         sourceId: Item.sh2tcK6G0tcScgwq
     system:
-      cosm: Nil-Imperium
+      cosm: nileEmpire
       description: >-
         <p>Das Anbringen von Handschellen erfordert einen guten Erfolg bei einem
-        Ringen-Angriff (siehe Seite 125). Die H&auml;nde des festgehaltenen
-        Ziels werden zusammengebunden, bis die Handschellen ge&ouml;ffnet oder
-        aufgebrochen wurden, was einen Angriff gegen Robustheit 18 oder eine
-        heldenhafte (MW 18) St&auml;rke-Probe erfordert.</p>
+        Ringen-Angriff (siehe Seite 125). Die Hände des festgehaltenen Ziels
+        werden zusammengebunden, bis die Handschellen geöffnet oder aufgebrochen
+        wurden, was einen Angriff gegen Robustheit 18 oder eine heldenhafte (MW
+        18) Stärke-Probe erfordert.</p>
       price: '50'
       techlevel: 19
       value: 9
-      equippedClass: item-equipped
+      secondaryAxiom:
+        selected: none
+        value: null
     ownership:
       default: 0
       9Q0XnqFwko7hRlvL: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: null
-      modifiedTime: 1694867945568
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722162012666
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Item.sh2tcK6G0tcScgwq
+      duplicateSource: null
     _key: '!actors.items!92W36cwQtstg8MQ3.9EFl6ObKOnDr8PqP'
   - _id: XbOqDjoqDkDk2Coa
     name: Peilsender
@@ -160,24 +146,28 @@ items:
       core:
         sourceId: Item.hnzAJpMqPZrjYrX8
     system:
-      cosm: Nil-Imperium
+      cosm: nileEmpire
       description: >-
-        <p>Ein kleines Ger&auml;t, das seinen Standort an darauf abgestimmte
-        Funkempf&auml;nger innerhalb eines Kilometers sendet.</p>
+        <p>Ein kleines Gerät, das seinen Standort an darauf abgestimmte
+        Funkempfänger innerhalb eines Kilometers sendet.</p>
       price: '150'
       techlevel: 20
       value: 11
-      equippedClass: item-equipped
+      secondaryAxiom:
+        selected: none
+        value: null
     ownership:
       default: 0
       9Q0XnqFwko7hRlvL: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: null
-      modifiedTime: 1694867959912
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722162016154
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Item.hnzAJpMqPZrjYrX8
+      duplicateSource: null
     _key: '!actors.items!92W36cwQtstg8MQ3.XbOqDjoqDkDk2Coa'
   - _id: 2Ek4UPEwzb1actmc
     name: Schläger
@@ -191,19 +181,8 @@ items:
         sourceId: Compendium.te001-core-rulebook.grw-de-vorzuverb.Item.sWRXWBwLHBCcTUOJ
     system:
       category: prowess
-      cosm: (Keins)
-      description: >-
-        <p>Der Charakter hat gelernt, hart zuzuschlagen, sei es mithilfe von
-        schmutzigen Tricks und einem guten Aufw&auml;rtshaken oder einem
-        umfangreichen Training in Karate, Jujitsu, Tae Kwon Do oder
-        &auml;hnlichen Kampfstilen. Charaktere mit diesem Bonus verursachen bei
-        Waffenloser- Kampf-Angriffen mit ihren blo&szlig;en H&auml;nden
-        St&auml;rke +2 Schaden. Dies darf mit anderen Bonussen kombiniert
-        werden, zum Beispiel den Nat&uuml;rlichen Waffen eines
-        Edeinos.&nbsp;</p>
-
-        <p>Fortgeschrittenere und exotischere Techniken k&ouml;nnen in Form der
-        Ki-Kr&auml;fte von Pan-Pacifica erlernt werden.</p>
+      cosm: none
+      description: "<p>Der Charakter hat gelernt, hart zuzuschlagen, sei es mithilfe von schmutzigen Tricks und einem guten Aufwärtshaken oder einem umfangreichen Training in Karate, Jujitsu, Tae Kwon Do oder ähnlichen Kampfstilen. Charaktere mit diesem Bonus verursachen bei Waffenloser- Kampf-Angriffen mit ihren bloßen Händen Stärke +2 Schaden. Dies darf mit anderen Bonussen kombiniert werden, zum Beispiel den Natürlichen Waffen eines Edeinos.\_</p>\n<p>Fortgeschrittenere und exotischere Techniken können in Form der Ki-Kräfte von Pan-Pacifica erlernt werden.</p>"
       prerequisites: mindestens 2 Fertigkeitsstufen in Waffenloser Kampf
       generalContradiction: false
       pulpPowers:
@@ -280,25 +259,159 @@ items:
         limitation10: ''
         limitationNumber: 0
       timestaken: '1'
+      secondaryAxiom:
+        selected: none
+        value: null
     ownership:
       default: 0
       9Q0XnqFwko7hRlvL: 3
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: 1694867682420
-      modifiedTime: 1694867767024
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722161941737
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Compendium.te001-core-rulebook.grw-de-vorzuverb.Item.sWRXWBwLHBCcTUOJ
+      duplicateSource: null
     _key: '!actors.items!92W36cwQtstg8MQ3.2Ek4UPEwzb1actmc'
-  - _id: eoP2vnMCxD3yRNJS
+  - name: Mauser Pistole
+    type: firearm
+    img: systems/torgeternity/images/icons/firearm-icon.webp
+    effects: []
+    folder: null
+    sort: 18200000
+    flags:
+      core:
+        sourceId: >-
+          Compendium.te001-core-rulebook.grw-de-ausruestung.Item.ajZNYaj0VhtUFIjl
+    _id: 5uhBz0KDWgG5ye1v
+    system:
+      cosm: nileEmpire
+      description: >-
+        <p>Ein oft kopiertes Design mit hoher Mündungsgeschwindigkeit und
+        exzellenter Schadenswirkung, sowie einem markanten Boxmagazin vor dem
+        Abzug. Im Nil-Imperium, wo noch immer verschiedene Nachahmer-Modelle
+        hergestellt werden, erfreut sie sich großer Beliebtheit.</p>
+      price: '250'
+      techlevel: 20
+      value: 12
+      ammo:
+        max: 10
+        value: 10
+      ap: 0
+      attackWith: fireCombat
+      chatNote: ''
+      damage: 13
+      damageType: ''
+      equipped: false
+      notes: ''
+      range: 10/25/40
+      secondaryAxiom:
+        selected: none
+        value: null
+    ownership:
+      default: 0
+      9Q0XnqFwko7hRlvL: 3
+      CtisFurQNe9h7ABb: 3
+    _stats:
+      systemId: torgeternity
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
+      createdTime: 1694867881572
+      modifiedTime: 1722162025386
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Compendium.te001-core-rulebook.grw-de-ausruestung.Item.ajZNYaj0VhtUFIjl
+      duplicateSource: null
+    _key: '!actors.items!92W36cwQtstg8MQ3.5uhBz0KDWgG5ye1v'
+  - _id: b7Tc9x2NPJN6ghs2
+    name: Lederweste
+    type: armor
+    img: systems/torgeternity/images/icons/armor-icon.webp
+    effects: []
+    folder: null
+    sort: 32400000
+    flags:
+      core:
+        sourceId: >-
+          Compendium.te001-core-rulebook.grw-de-ausruestung.Item.xWI54mxsNNqaWXsX
+    system:
+      cosm: nileEmpire
+      description: >-
+        <p>@UUID[Compendium.te001-core-rulebook.grw-de-grw.Qlx6yGF0Mmo6Xzrv.JournalEntryPage.7GGUUHzuYIqGPXDO#ganzkorper/torso:]{Torso}</p>
+      price: '100'
+      techlevel: 19
+      value: 10
+      bonus: 1
+      equipped: true
+      maxDex: 12
+      minStrength: null
+      notes: Torso
+      fatigue: null
+      secondaryAxiom:
+        selected: none
+        value: null
+    ownership:
+      default: 0
+      9Q0XnqFwko7hRlvL: 3
+      CtisFurQNe9h7ABb: 3
+    _stats:
+      systemId: torgeternity
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
+      createdTime: 1711562366229
+      modifiedTime: 1722162030018
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Compendium.te001-core-rulebook.grw-de-ausruestung.Item.xWI54mxsNNqaWXsX
+      duplicateSource: null
+    _key: '!actors.items!92W36cwQtstg8MQ3.b7Tc9x2NPJN6ghs2'
+  - name: Extra-Magazine
+    type: ammunition
+    img: systems/torgeternity/images/icons/ammo-icon.webp
+    system:
+      cosm: ''
+      description: >-
+        <p><span style="font-family:'Palatino Linotype'">Fünfmal Mauser
+        nachladen.</span></p>
+      price: ''
+      techlevel: 20
+      value: 0
+      secondaryAxiom:
+        selected: none
+        value: null
+      type: ''
+      quantity: 5
+      damageMod: 0
+      apMod: 0
+      fireDamage: false
+      blastRadius: Keiner
+      darknessMod: none
+      reach: ''
+    effects: []
+    folder: null
+    sort: 0
+    ownership:
+      default: 0
+      93AMwcGe6H37rcPA: 3
+    flags: {}
+    _stats:
+      compendiumSource: Item.TptgnUCwWM2QZCaK
+      duplicateSource: Item.KRYQ71jof26XeGEv
+      coreVersion: '12.330'
+      systemId: torgeternity
+      systemVersion: 12.2.0
+      createdTime: 1722161972831
+      modifiedTime: 1722167137485
+      lastModifiedBy: 93AMwcGe6H37rcPA
+    _id: CMUZ3Qyku3JcWe0h
+    _key: '!actors.items!92W36cwQtstg8MQ3.CMUZ3Qyku3JcWe0h'
+  - _id: DmmM7o5UHBdJ8zzW
     name: Super-Fertigkeit (Einschüchtern)
     type: perk
     img: systems/torgeternity/images/icons/reality-icon.webp
     effects:
-      - icon: icons/svg/aura.svg
-        origin: Item.NP52D0TMUBVKQK7d
+      - origin: Item.NP52D0TMUBVKQK7d
         duration:
           startTime: null
           seconds: null
@@ -319,38 +432,70 @@ items:
         transfer: true
         statuses: []
         flags: {}
-        tint: null
+        tint: '#ffffff'
+        _stats:
+          compendiumSource: null
+          duplicateSource: null
+          coreVersion: '12.330'
+          systemId: torgeternity
+          systemVersion: 12.2.0
+          createdTime: null
+          modifiedTime: null
+          lastModifiedBy: null
+        img: icons/svg/aura.svg
+        type: base
+        system: {}
+        sort: 0
         _key: >-
-          !actors.items.effects!92W36cwQtstg8MQ3.eoP2vnMCxD3yRNJS.1VTOsm0M13fBNOeh
-    folder: null
-    sort: 150000
+          !actors.items.effects!92W36cwQtstg8MQ3.DmmM7o5UHBdJ8zzW.1VTOsm0M13fBNOeh
+      - origin: Item.Myu6hZG5b1X1vkR6
+        duration:
+          rounds: null
+          startTime: null
+          seconds: null
+          combat: null
+          turns: null
+          startRound: null
+          startTurn: null
+        disabled: false
+        name: Einschüchtern begünstigt
+        img: icons/svg/aura.svg
+        _id: SODFj28k0zgdMyCx
+        type: base
+        system: {}
+        changes:
+          - key: system.skills.intimidation.isFav
+            mode: 5
+            value: 'true'
+            priority: null
+        description: ''
+        tint: '#ffffff'
+        transfer: true
+        statuses: []
+        sort: 0
+        flags: {}
+        _stats:
+          compendiumSource: null
+          duplicateSource: null
+          coreVersion: '12.330'
+          systemId: torgeternity
+          systemVersion: 12.2.0
+          createdTime: null
+          modifiedTime: null
+          lastModifiedBy: null
+        _key: >-
+          !actors.items.effects!92W36cwQtstg8MQ3.DmmM7o5UHBdJ8zzW.SODFj28k0zgdMyCx
+    folder: WDvJC2MufxrqwbzV
+    sort: 500000
     flags:
       core:
         sourceId: Compendium.te001-core-rulebook.Items.ohmish0RVlju7Qbk
     system:
       category: pulpPowers
-      cosm: Nil-Imperium
-      description: >-
-        <p>Der Pulp-Held ist au&szlig;ergew&ouml;hnlich gut in etwas.
-        M&ouml;glicherweise ist er ein Ass im Umgang mit Feuerwaffen, oder ein
-        Genie der Wissenschaft, oder er vermag andere Einzusch&uuml;chtern wie
-        kein Zweiter.&nbsp;</p>
-
-        <p>Wenn die Superfertigkeit ausgew&auml;hlt wird, erh&auml;lt der
-        Charakter in einer Fertigkeit seiner Wahl 2 zus&auml;tzliche
-        Fertigkeitsstufen. Er darf dabei das &uuml;bliche Maximum von +5
-        &uuml;berschreiten, ohne den Meisterschaft-Vorzug erwerben zu
-        m&uuml;ssen. (Falls er den Meisterschaft-Vorzug besitzt, addieren sich
-        die Wirkungen der beiden.) Dies z&auml;hlt zus&auml;tzlich zu anderen
-        Erh&ouml;hungen des Fertigkeitswerts und erlaubt es einem Pulp-Helden,
-        eine &uuml;bermenschliche Kompetenz weit jenseits des normal
-        m&ouml;glichen zu erreichen.&nbsp;</p>
-
-        <p>Wie beim Superattribut darf auch die Superfertigkeit von einem
-        Charakter nur maximal einmal ausgew&auml;hlt werden. Er darf diese
-        Superkraft nicht mehrmals besitzen.</p>
+      cosm: nileEmpire
+      description: "<p>Der Pulp-Held ist außergewöhnlich gut in etwas. Möglicherweise ist er ein Ass im Umgang mit Feuerwaffen, oder ein Genie der Wissenschaft, oder er vermag andere Einzuschüchtern wie kein Zweiter.\_</p>\n<p>Wenn die Superfertigkeit ausgewählt wird, erhält der Charakter in einer Fertigkeit seiner Wahl 2 zusätzliche Fertigkeitsstufen. Er darf dabei das übliche Maximum von +5 überschreiten, ohne den Meisterschaft-Vorzug erwerben zu müssen. (Falls er den Meisterschaft-Vorzug besitzt, addieren sich die Wirkungen der beiden.) Dies zählt zusätzlich zu anderen Erhöhungen des Fertigkeitswerts und erlaubt es einem Pulp-Helden, eine übermenschliche Kompetenz weit jenseits des normal möglichen zu erreichen.\_</p>\n<p>Wie beim Superattribut darf auch die Superfertigkeit von einem Charakter nur maximal einmal ausgewählt werden. Er darf diese Superkraft nicht mehrmals besitzen.</p>"
       prerequisites: mindestens 3 Fertigkeitsstufen in der ausgewählten Fertigkeit
-      generalContradiction: false
+      generalContradiction: true
       pulpPowers:
         enhancement01:
           description: Die ausgewählte Fertigkeit zählt für den Charakter als Begünstigt.
@@ -425,104 +570,62 @@ items:
         limitation10: ''
         limitationNumber: 1
       timestaken: '1'
+      secondaryAxiom:
+        selected: none
+        value: null
     ownership:
       default: 0
       9Q0XnqFwko7hRlvL: 3
       CtisFurQNe9h7ABb: 3
+      93AMwcGe6H37rcPA: 3
     _stats:
+      compendiumSource: Compendium.te001-core-rulebook.Items.ohmish0RVlju7Qbk
+      duplicateSource: null
+      coreVersion: '12.330'
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
-      createdTime: 1694867691972
-      modifiedTime: 1694867865088
-      lastModifiedBy: CtisFurQNe9h7ABb
-    _key: '!actors.items!92W36cwQtstg8MQ3.eoP2vnMCxD3yRNJS'
-  - name: Mauser Pistole
-    type: firearm
-    img: systems/torgeternity/images/icons/firearm-icon.webp
-    effects: []
-    folder: null
-    sort: 18200000
-    flags:
-      core:
-        sourceId: >-
-          Compendium.te001-core-rulebook.grw-de-ausruestung.Item.ajZNYaj0VhtUFIjl
-    _id: 5uhBz0KDWgG5ye1v
-    system:
-      cosm: Nil-Imperium
-      description: >-
-        <p>Ein oft kopiertes Design mit hoher M&uuml;ndungsgeschwindigkeit und
-        exzellenter Schadenswirkung, sowie einem markanten Boxmagazin vor dem
-        Abzug. Im Nil-Imperium, wo noch immer verschiedene Nachahmer-Modelle
-        hergestellt werden, erfreut sie sich gro&szlig;er Beliebtheit.</p>
-      price: '250'
-      techlevel: 20
-      value: 12
-      ammo:
-        max: 10
-        value: 10
-      ap: 0
-      attackWith: fireCombat
-      chatNote: ''
-      damage: 13
-      damageType: ''
-      equipped: false
-      equippedClass: .item-unequipped
-      notes: ''
-      range: 10/25/40
-    ownership:
-      default: 0
-      9Q0XnqFwko7hRlvL: 3
-      CtisFurQNe9h7ABb: 3
-    _stats:
-      systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
-      createdTime: 1694867881572
-      modifiedTime: 1694867881572
-      lastModifiedBy: CtisFurQNe9h7ABb
-    _key: '!actors.items!92W36cwQtstg8MQ3.5uhBz0KDWgG5ye1v'
-  - _id: b7Tc9x2NPJN6ghs2
-    name: Lederweste
-    type: armor
-    img: systems/torgeternity/images/icons/armor-icon.webp
-    effects: []
-    folder: null
-    sort: 32400000
-    flags:
-      core:
-        sourceId: >-
-          Compendium.te001-core-rulebook.grw-de-ausruestung.Item.xWI54mxsNNqaWXsX
-    system:
-      cosm: Nil-Imperium
-      description: >-
-        <p>@UUID[Compendium.te001-core-rulebook.grw-de-grw.Qlx6yGF0Mmo6Xzrv.JournalEntryPage.7GGUUHzuYIqGPXDO#ganzkorper/torso:]{Torso}</p>
-      price: '100'
-      techlevel: 19
-      value: 10
-      bonus: 1
-      equipped: true
-      equippedClass: item-equipped
-      maxDex: 12
-      minStrength: null
-      notes: Torso
-      fatigue: null
-    ownership:
-      default: 0
-      9Q0XnqFwko7hRlvL: 3
-      CtisFurQNe9h7ABb: 3
-    _stats:
-      systemId: torgeternity
-      systemVersion: 3.7.0
-      coreVersion: '11.315'
-      createdTime: 1711562366229
-      modifiedTime: 1711706089365
-      lastModifiedBy: CtisFurQNe9h7ABb
-    _key: '!actors.items!92W36cwQtstg8MQ3.b7Tc9x2NPJN6ghs2'
+      systemVersion: 12.2.0
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+    _key: '!actors.items!92W36cwQtstg8MQ3.DmmM7o5UHBdJ8zzW'
 effects:
-  - icon: icons/svg/aura.svg
-    origin: >-
-      Compendium.torgeternity.system-de-archetypen.Actor.92W36cwQtstg8MQ3.Item.eoP2vnMCxD3yRNJS
+  - origin: Actor.92W36cwQtstg8MQ3.Item.DmmM7o5UHBdJ8zzW
+    duration:
+      rounds: null
+      startTime: 0
+      seconds: null
+      combat: null
+      turns: null
+      startRound: null
+      startTurn: null
+    disabled: false
+    name: Einschüchtern begünstigt
+    img: icons/svg/aura.svg
+    _id: DqVIEZY6NNam3X8S
+    type: base
+    system: {}
+    changes:
+      - key: system.skills.intimidation.isFav
+        mode: 5
+        value: 'true'
+        priority: null
+    description: ''
+    tint: '#ffffff'
+    transfer: false
+    statuses: []
+    sort: 0
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      coreVersion: '12.330'
+      systemId: torgeternity
+      systemVersion: 12.2.0
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+    _key: '!actors.effects!92W36cwQtstg8MQ3.DqVIEZY6NNam3X8S'
+  - origin: Actor.92W36cwQtstg8MQ3.Item.DmmM7o5UHBdJ8zzW
     duration:
       startTime: 0
       seconds: null
@@ -533,7 +636,7 @@ effects:
       startTurn: null
     disabled: false
     name: Einschüchtern +2
-    _id: oqkPZlkIP6uxPf3N
+    _id: gvdY0ZPFlf5ZtfYo
     changes:
       - key: system.skills.intimidation.adds
         mode: 2
@@ -543,8 +646,21 @@ effects:
     transfer: false
     statuses: []
     flags: {}
-    tint: null
-    _key: '!actors.effects!92W36cwQtstg8MQ3.oqkPZlkIP6uxPf3N'
+    tint: '#ffffff'
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      coreVersion: '12.330'
+      systemId: torgeternity
+      systemVersion: 12.2.0
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+    img: icons/svg/aura.svg
+    type: base
+    system: {}
+    sort: 0
+    _key: '!actors.effects!92W36cwQtstg8MQ3.gvdY0ZPFlf5ZtfYo'
 folder: null
 sort: 0
 flags:
@@ -901,100 +1017,7 @@ system:
     spirit: 18
     tech: 20
   details:
-    background: >-
-      <p><img class="charimg"
-      src="systems/torgeternity/images/characters/Masked_Crusader.webp" alt=""
-      width="1189" height="1924"></p>
-
-      <p
-      class="moreheight">@UUID[Compendium.torgeternity.system-de-handouts.JournalEntry.DLLvnXpv7RFhRgHu.JournalEntryPage.4XMfQXpiBN5gsUNL]{Archetyp
-      - Der maskierte Vigilant}</p>
-
-      <h3>&Uuml;berblick</h3>
-
-      <p>Eine Gruppe geheimnisvoller M&auml;nner und Frauen hat sich
-      zusammengeschlossen, um die Schreckensherrschaft des Pharao M&ouml;bius zu
-      beenden. Diese Helden haben ihren Sitz in Kairo, reisen aber um die ganze
-      Welt, um das B&ouml;se zu bek&auml;mpfen. Die Masken und das Geheimnis,
-      das sie umgibt, dienen dazu, ihre Liebsten zu sch&uuml;tzen oder das
-      Nachstellen durch M&ouml;bius' Geheimpolizei zu vereiteln. Ein Held zu
-      sein ist eine gef&auml;hrliche Berufung, besonders in einer Welt, die von
-      Schurken regiert wird. Einige seltene Vigilanten kommen aus Terra, der
-      Heimat der Invasoren, aber die meisten sind verwandelte B&uuml;rger der
-      Zentralerde.</p>
-
-      <h3>Taktiken</h3>
-
-      <p>Du bist ein Meistersch&uuml;tze und kennst dich auch mit
-      Faustk&auml;mpfen aus. Allerdings ist das <em>Einsch&uuml;chtern
-      </em>deine wahre Waffe. Dein hoher Wert f&uuml;hrt oft zu einem
-      "Spielerentscheidung"- Ergebnis, das mindestens die n&auml;chste Aktion
-      eines B&ouml;sewichts verhindert und bestenfalls dazu f&uuml;hrt, dass ein
-      Feind schreiend davonl&auml;uft. Deine hohe
-      <em>Realit&auml;t</em>-Fertigkeit erlaubt es dir, Schaden
-      wegzustecken.&nbsp;</p>
-
-      <p>Unter der Maske bist du ein ehrenhafter Detektiv. Wenn deine
-      ver&auml;ngstigten Feinde nicht reden, k&ouml;nnen dein <em>Gassenwissen
-      </em>und deine <em>Beweisanalyse </em>wichtige Hinweise liefern.</p>
-
-      <h3>Moment der Krise</h3>
-
-      <p>Einst warst du ein gew&ouml;hnlicher B&uuml;rger, aber das gleiche
-      Ereignis, das deine Kr&auml;fte erweckt hat, war auch der Wendepunkt in
-      deinem Moment der Krise. Vielleicht warst du zur richtigen Zeit am
-      richtigen Ort, um M&ouml;bius' Diener daran zu hindern, ein Grab in der
-      N&auml;he von Kairo zu pl&uuml;ndern &ndash; ein Grab, das ein Grabtuch
-      enthielt, das du heute als Umhang tr&auml;gst. Oder vielleicht ist ein
-      vorheriger Held gefallen, und du hast seinen Mantel aufgehoben, um ihn zu
-      r&auml;chen.</p>
-
-      <h3>Zitat</h3>
-
-      <p>&ldquo;Wovor hast du Angst?&ldquo;</p>
-
-      <h3>Beschreibung</h3>
-
-      <p>Eine schwarze Maske und ein zerkl&uuml;fteter Umhang sind
-      Pflichtkleidung - es sei denn, du bewegst dich in deiner wirklichen
-      Identit&auml;t. Verschiedene Gegenst&auml;nde bieten sich als magische
-      Quelle deiner schrecklichen Macht an, oder vielleicht ist es ein
-      Ger&auml;t an deinem G&uuml;rtel, das ein Angst erzeugendes Feld
-      ausstrahlt? Du sprichst normalerweise mit einer leisen, ernsten Stimme und
-      h&auml;ltst eine grimmige Fassade aufrecht. Das ist jedoch alles nur
-      Berechnung, und deine gelegentliche Witze erinnern jeden daran, dass sich
-      ein Mensch unter der Maske befindet.</p>
-
-      <h3>Agenda</h3>
-
-      <p>Gerechtigkeit ist dein Ziel. Egal ob es sich nun um die Verbrechen von
-      Kleinkriminellen handelt oder um die Grausamkeit der High Lords, das
-      B&ouml;se muss bek&auml;mpft und die Schuldigen bestraft werden.</p>
-
-      <h3>Namen</h3>
-
-      <p>Captain Phantom, Crimson Wraith, Nachtschrecken, Rotes Gespenst, Das
-      Grabtuch</p>
-
-      <h3>Vorgeschlagener Aufstieg (Optional)</h3>
-
-      <ul>
-
-      <li>(5 EP) Superattribut (Geist)</li>
-
-      <li>(7 EP) Lieblingswaffe (Mauser-Pistole)</li>
-
-      <li>(2 EP) <em>Realit&auml;t</em> +2</li>
-
-      <li>(3 EP) <em>Feuerwaffen</em> +3</li>
-
-      <li>(3 EP) <em>Waffenloser Kampf</em> +3</li>
-
-      <li>(4 EP) <em>Feuerwaffen</em> +4</li>
-
-      <li>(4 EP) <em>Einsch&uuml;chtern</em> +4</li>
-
-      </ul>
+    background: "<p><img class=\"charimg\" src=\"systems/torgeternity/images/characters/Masked_Crusader.webp\" alt=\"\" width=\"1189\" height=\"1924\" /></p>\n<p class=\"moreheight\">@UUID[Compendium.torgeternity.system-de-handouts.JournalEntry.DLLvnXpv7RFhRgHu.JournalEntryPage.4XMfQXpiBN5gsUNL]{Archetyp - Der maskierte Vigilant}</p>\n<h3>Überblick</h3>\n<p>Eine Gruppe geheimnisvoller Männer und Frauen hat sich zusammengeschlossen, um die Schreckensherrschaft des Pharao Möbius zu beenden. Diese Helden haben ihren Sitz in Kairo, reisen aber um die ganze Welt, um das Böse zu bekämpfen. Die Masken und das Geheimnis, das sie umgibt, dienen dazu, ihre Liebsten zu schützen oder das Nachstellen durch Möbius' Geheimpolizei zu vereiteln. Ein Held zu sein ist eine gefährliche Berufung, besonders in einer Welt, die von Schurken regiert wird. Einige seltene Vigilanten kommen aus Terra, der Heimat der Invasoren, aber die meisten sind verwandelte Bürger der Zentralerde.</p>\n<h3>Taktiken</h3>\n<p>Du bist ein Meisterschütze und kennst dich auch mit Faustkämpfen aus. Allerdings ist das <em>Einschüchtern </em>deine wahre Waffe. Dein hoher Wert führt oft zu einem \"Spielerentscheidung\"- Ergebnis, das mindestens die nächste Aktion eines Bösewichts verhindert und bestenfalls dazu führt, dass ein Feind schreiend davonläuft. Deine hohe <em>Realität</em>-Fertigkeit erlaubt es dir, Schaden wegzustecken.\_</p>\n<p>Unter der Maske bist du ein ehrenhafter Detektiv. Wenn deine verängstigten Feinde nicht reden, können dein <em>Gassenwissen </em>und deine <em>Beweisanalyse </em>wichtige Hinweise liefern.</p>\n<h3>Moment der Krise</h3>\n<p>Einst warst du ein gewöhnlicher Bürger, aber das gleiche Ereignis, das deine Kräfte erweckt hat, war auch der Wendepunkt in deinem Moment der Krise. Vielleicht warst du zur richtigen Zeit am richtigen Ort, um Möbius' Diener daran zu hindern, ein Grab in der Nähe von Kairo zu plündern – ein Grab, das ein Grabtuch enthielt, das du heute als Umhang trägst. Oder vielleicht ist ein vorheriger Held gefallen, und du hast seinen Mantel aufgehoben, um ihn zu rächen.</p>\n<h3>Zitat</h3>\n<p>“Wovor hast du Angst?“</p>\n<h3>Beschreibung</h3>\n<p>Eine schwarze Maske und ein zerklüfteter Umhang sind Pflichtkleidung - es sei denn, du bewegst dich in deiner wirklichen Identität. Verschiedene Gegenstände bieten sich als magische Quelle deiner schrecklichen Macht an, oder vielleicht ist es ein Gerät an deinem Gürtel, das ein Angst erzeugendes Feld ausstrahlt? Du sprichst normalerweise mit einer leisen, ernsten Stimme und hältst eine grimmige Fassade aufrecht. Das ist jedoch alles nur Berechnung, und deine gelegentliche Witze erinnern jeden daran, dass sich ein Mensch unter der Maske befindet.</p>\n<h3>Agenda</h3>\n<p>Gerechtigkeit ist dein Ziel. Egal ob es sich nun um die Verbrechen von Kleinkriminellen handelt oder um die Grausamkeit der High Lords, das Böse muss bekämpft und die Schuldigen bestraft werden.</p>\n<h3>Namen</h3>\n<p>Captain Phantom, Crimson Wraith, Nachtschrecken, Rotes Gespenst, Das Grabtuch</p>\n<h3>Vorgeschlagener Aufstieg (Optional)</h3>\n<ul>\n<li>(5 EP) Superattribut (Geist)</li>\n<li>(7 EP) Lieblingswaffe (Mauser-Pistole)</li>\n<li>(2 EP) <em>Realität</em> +2</li>\n<li>(3 EP) <em>Feuerwaffen</em> +3</li>\n<li>(3 EP) <em>Waffenloser Kampf</em> +3</li>\n<li>(4 EP) <em>Feuerwaffen</em> +4</li>\n<li>(4 EP) <em>Einschüchtern</em> +4</li>\n</ul>"
     race: human
     sizeBonus: normal
   editstate: false
@@ -1039,14 +1062,20 @@ prototypeToken:
       min: 0
       max: 1
     attenuation: 0.5
+    negative: false
+    priority: 0
   texture:
     src: systems/torgeternity/images/characters/masked_crusader.Token.webp
-    tint: null
+    tint: '#ffffff'
     scaleX: 1
     scaleY: 1
     offsetX: 0
     offsetY: 0
     rotation: 0
+    anchorX: 0.5
+    anchorY: 0.5
+    fit: contain
+    alphaThreshold: 0.75
   sight:
     angle: 360
     enabled: true
@@ -1056,14 +1085,29 @@ prototypeToken:
     attenuation: 0.1
     saturation: 0
     contrast: 0
+    color: null
   appendNumber: false
   prependAdjective: false
   detectionModes: []
+  hexagonalShape: 0
+  occludable:
+    radius: 0
+  ring:
+    enabled: false
+    colors:
+      ring: null
+      background: null
+    effects: 1
+    subject:
+      scale: 1
+      texture: null
 _stats:
   systemId: torgeternity
-  systemVersion: 3.8.1
-  coreVersion: '11.315'
+  systemVersion: 12.2.0
+  coreVersion: '12.330'
   createdTime: 1694867673206
-  modifiedTime: 1716827810996
-  lastModifiedBy: VAnYow5sWS9EJzo0
+  modifiedTime: 1722359278656
+  lastModifiedBy: 93AMwcGe6H37rcPA
+  compendiumSource: Compendium.torgeternity.archetypes.REeNzywr6VElHSWZ
+  duplicateSource: null
 _key: '!actors!92W36cwQtstg8MQ3'

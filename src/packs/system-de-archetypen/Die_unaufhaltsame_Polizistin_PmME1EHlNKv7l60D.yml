@@ -15,50 +15,26 @@ items:
         sourceId: Item.nPZyQyNBzc62zWh7
     system:
       cosm: (Keins)
-      description: <p>&Ouml;rtliche Polizeiautorit&auml;t</p>
+      description: <p>Örtliche Polizeiautorität</p>
       price: '0'
       techlevel: 22
       value: 0
-      equippedClass: item-equipped
+      secondaryAxiom:
+        selected: none
+        value: null
     ownership:
       default: 0
       9Q0XnqFwko7hRlvL: 3
     _stats:
       systemId: torgeternity
       systemVersion: 3.1.1
-      coreVersion: '11.308'
+      coreVersion: '12.330'
       createdTime: null
       modifiedTime: 1694869755700
       lastModifiedBy: CtisFurQNe9h7ABb
+      compendiumSource: Item.nPZyQyNBzc62zWh7
+      duplicateSource: null
     _key: '!actors.items!PmME1EHlNKv7l60D.7gNOS0FFR9cTw6Ne'
-  - _id: iq2B0D76k7kPnsBz
-    name: Extra-Magazine
-    type: gear
-    img: systems/torgeternity/images/icons/gear-icon.webp
-    effects: []
-    folder: YrLpjzkzDZxqWzUw
-    sort: 100000
-    flags:
-      core:
-        sourceId: Item.9VjiNmOA2TB62Xej
-    system:
-      cosm: (Keins)
-      description: <p>5 volle Magazine Glock 9mm</p>
-      price: '0'
-      techlevel: 22
-      value: 0
-      equippedClass: item-equipped
-    ownership:
-      default: 0
-      9Q0XnqFwko7hRlvL: 3
-    _stats:
-      systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
-      createdTime: null
-      modifiedTime: 1694869746476
-      lastModifiedBy: CtisFurQNe9h7ABb
-    _key: '!actors.items!PmME1EHlNKv7l60D.iq2B0D76k7kPnsBz'
   - _id: GueHBl4GQ4sTVI0B
     name: Schlagstock
     type: meleeweapon
@@ -71,11 +47,12 @@ items:
         sourceId: >-
           Compendium.te001-core-rulebook.grw-de-ausruestung.Item.NnKJxu8DDBFJftYn
     system:
-      cosm: Zentralerde
+      cosm: coreEarth
       description: >-
-        <p>Ein moderner Schlagstock aus fortschrittlichen Materialien und
-        speziell ausgewogen und gewichtet. Viele Versionen haben einen
-        ausklappbaren Schl&auml;gerkopf oder sind zusammenklappbar.</p>
+        <p>@UUID[Compendium.te001-core-rulebook.grw-de-grw.Qlx6yGF0Mmo6Xzrv.JournalEntryPage.41rZYYhaMC2T260D#ringen]{Ringen}</p><p>Ein
+        moderner Schlagstock aus fortschrittlichen Materialien und speziell
+        ausgewogen und gewichtet. Viele Versionen haben einen ausklappbaren
+        Schlägerkopf oder sind zusammenklappbar.</p>
       price: '120'
       techlevel: 21
       value: 11
@@ -86,19 +63,24 @@ items:
       damage: 2
       damageType: strengthPlus
       equipped: false
-      equippedClass: .item-unequipped
-      notes: ''
+      notes: Kann für Ringen eingesetzt werden.
+      secondaryAxiom:
+        selected: none
+        value: null
+      minStrength: null
     ownership:
       default: 0
       9Q0XnqFwko7hRlvL: 3
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: 1694861621122
-      modifiedTime: 1694861621122
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722167322258
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Compendium.te001-core-rulebook.grw-de-ausruestung.Item.NnKJxu8DDBFJftYn
+      duplicateSource: null
     _key: '!actors.items!PmME1EHlNKv7l60D.GueHBl4GQ4sTVI0B'
   - _id: HuIrLDybaRtHlt4V
     name: Glock 9mm
@@ -112,13 +94,12 @@ items:
         sourceId: >-
           Compendium.te001-core-rulebook.grw-de-ausruestung.Item.uS5bsDS4zQkN7NTj
     system:
-      cosm: Zentralerde
+      cosm: coreEarth
       description: >-
         <p>@UUID[Compendium.te001-core-rulebook.grw-de-grw.Qlx6yGF0Mmo6Xzrv.JournalEntryPage.7GGUUHzuYIqGPXDO#karabiner:]{Pistole}</p>
 
-        <p>Eine r&uuml;cksto&szlig;ladende 9 mm Halbautomatik- Pistole, die
-        f&uuml;r ihr gro&szlig;es, doppelt gestapeltes Munitionsmagazin bekannt
-        ist.</p>
+        <p>Eine rückstoßladende 9 mm Halbautomatik- Pistole, die für ihr großes,
+        doppelt gestapeltes Munitionsmagazin bekannt ist.</p>
       price: '250'
       techlevel: 22
       value: 12
@@ -131,20 +112,24 @@ items:
       damage: 13
       damageType: ''
       equipped: false
-      equippedClass: .item-unequipped
       notes: Pistole
       range: 10/25/40
+      secondaryAxiom:
+        selected: none
+        value: null
     ownership:
       default: 0
       9Q0XnqFwko7hRlvL: 3
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: 1694861633799
-      modifiedTime: 1694861633799
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722167238389
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Compendium.te001-core-rulebook.grw-de-ausruestung.Item.uS5bsDS4zQkN7NTj
+      duplicateSource: null
     _key: '!actors.items!PmME1EHlNKv7l60D.HuIrLDybaRtHlt4V'
   - _id: Ynxd3b9UZ4Da98TI
     name: Handschellen
@@ -157,29 +142,32 @@ items:
       core:
         sourceId: Item.sh2tcK6G0tcScgwq
     system:
-      cosm: Nil-Imperium
+      cosm: nileEmpire
       description: >-
         <p>Das Anbringen von Handschellen erfordert einen guten Erfolg bei einem
         @UUID[Compendium.te001-core-rulebook.grw-de-grw.Qlx6yGF0Mmo6Xzrv.JournalEntryPage.41rZYYhaMC2T260D#ringen]{Ringen}-Angriff.
-        Die H&auml;nde des festgehaltenen Ziels werden zusammengebunden, bis die
-        Handschellen ge&ouml;ffnet oder aufgebrochen wurden, was einen Angriff
-        gegen Robustheit 18 oder eine heldenhafte (MW 18) St&auml;rke-Probe
-        erfordert.</p>
+        Die Hände des festgehaltenen Ziels werden zusammengebunden, bis die
+        Handschellen geöffnet oder aufgebrochen wurden, was einen Angriff gegen
+        Robustheit 18 oder eine heldenhafte (MW 18) Stärke-Probe erfordert.</p>
       price: '50'
       techlevel: 19
       value: 9
-      equippedClass: item-equipped
+      secondaryAxiom:
+        selected: none
+        value: null
     ownership:
       default: 0
       9Q0XnqFwko7hRlvL: 3
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: 1694861660187
-      modifiedTime: 1694861716524
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722167291165
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Item.sh2tcK6G0tcScgwq
+      duplicateSource: null
     _key: '!actors.items!PmME1EHlNKv7l60D.Ynxd3b9UZ4Da98TI'
   - name: Leuchtfackel (3)
     type: gear
@@ -192,23 +180,27 @@ items:
         sourceId: Item.Uc1pL9fqLa4cfonl
     _id: t98xXigzyoXr0hbV
     system:
-      cosm: Nil-Imperium
+      cosm: nileEmpire
       description: ''
       price: '5'
       techlevel: 20
       value: 4
-      equippedClass: item-equipped
+      secondaryAxiom:
+        selected: none
+        value: null
     ownership:
       default: 0
       9Q0XnqFwko7hRlvL: 3
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: 1694861668235
-      modifiedTime: 1694861716524
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722167206997
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Item.Uc1pL9fqLa4cfonl
+      duplicateSource: null
     _key: '!actors.items!PmME1EHlNKv7l60D.t98xXigzyoXr0hbV'
   - name: Multitool
     type: gear
@@ -222,13 +214,13 @@ items:
     _id: AGsVQVpg17a8b1rA
     system:
       cosm: Zentralerde
-      description: >-
-        <p>N&uuml;tzlich f&uuml;r Reparaturen, funktioniert wie ein
-        Dietrich.</p>
+      description: <p>Nützlich für Reparaturen, funktioniert wie ein Dietrich.</p>
       price: '40'
       techlevel: 22
       value: 8
-      equippedClass: item-equipped
+      secondaryAxiom:
+        selected: none
+        value: null
     ownership:
       default: 0
       9Q0XnqFwko7hRlvL: 3
@@ -236,10 +228,12 @@ items:
     _stats:
       systemId: torgeternity
       systemVersion: 3.1.1
-      coreVersion: '11.308'
+      coreVersion: '12.330'
       createdTime: 1694861674818
       modifiedTime: 1694861716524
       lastModifiedBy: CtisFurQNe9h7ABb
+      compendiumSource: Item.G0KmopPlr7jWlbXo
+      duplicateSource: null
     _key: '!actors.items!PmME1EHlNKv7l60D.AGsVQVpg17a8b1rA'
   - name: Taschenlampe
     type: gear
@@ -257,7 +251,9 @@ items:
       price: '10'
       techlevel: 20
       value: 5
-      equippedClass: item-equipped
+      secondaryAxiom:
+        selected: none
+        value: null
     ownership:
       default: 0
       9Q0XnqFwko7hRlvL: 3
@@ -265,10 +261,12 @@ items:
     _stats:
       systemId: torgeternity
       systemVersion: 3.1.1
-      coreVersion: '11.308'
+      coreVersion: '12.330'
       createdTime: 1694861679923
       modifiedTime: 1694861716524
       lastModifiedBy: CtisFurQNe9h7ABb
+      compendiumSource: Item.ghYEu90Et15IioVa
+      duplicateSource: null
     _key: '!actors.items!PmME1EHlNKv7l60D.XWkY6R2YL7gELPPp'
   - _id: jvZbj7wmWthOyli0
     name: Auffassungsgabe
@@ -282,17 +280,8 @@ items:
         sourceId: Compendium.te001-core-rulebook.grw-de-vorzuverb.Item.gFG6Tw4tAMtkXfYr
     system:
       category: prowess
-      cosm: (Keins)
-      description: >-
-        <p>Veteranen-Storm Knights sind sich ihrer Umgebung sehr bewusst. Sie
-        wissen, wenn sich Gefahr n&auml;hert, sie haben immer m&ouml;gliche
-        Fluchtwege im Blick, lesen die Absicht ihrer Feinde in deren Gesichtern
-        ab und wissen, wann und wohin sie als n&auml;chstes ihre Position
-        wechseln m&uuml;ssen.&nbsp;</p>
-
-        <p>Einmal pro Szene darf ein Charakter mit Auffassungsgabe eine einzelne
-        Schicksalskarte direkt von seiner Hand in den Aktionsvorrat legen (und
-        dann sofort einsetzen, wenn er m&ouml;chte).</p>
+      cosm: none
+      description: "<p>Veteranen-Storm Knights sind sich ihrer Umgebung sehr bewusst. Sie wissen, wenn sich Gefahr nähert, sie haben immer mögliche Fluchtwege im Blick, lesen die Absicht ihrer Feinde in deren Gesichtern ab und wissen, wann und wohin sie als nächstes ihre Position wechseln müssen.\_</p>\n<p>Einmal pro Szene darf ein Charakter mit Auffassungsgabe eine einzelne Schicksalskarte direkt von seiner Hand in den Aktionsvorrat legen (und dann sofort einsetzen, wenn er möchte).</p>"
       prerequisites: Verstand 8+
       generalContradiction: false
       pulpPowers:
@@ -369,17 +358,22 @@ items:
         limitation10: ''
         limitationNumber: 0
       timestaken: '1'
+      secondaryAxiom:
+        selected: none
+        value: null
     ownership:
       default: 0
       9Q0XnqFwko7hRlvL: 3
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: 1694861727938
-      modifiedTime: 1694868656057
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722167197716
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Compendium.te001-core-rulebook.grw-de-vorzuverb.Item.gFG6Tw4tAMtkXfYr
+      duplicateSource: null
     _key: '!actors.items!PmME1EHlNKv7l60D.jvZbj7wmWthOyli0'
   - _id: bZ0ymfbNEtDGRdqq
     name: Negation
@@ -393,15 +387,14 @@ items:
         sourceId: Compendium.te001-core-rulebook.grw-de-vorzuverb.Item.dpciXn2ZI7ZzCAMt
     system:
       category: reality
-      cosm: Zentralerde
+      cosm: coreEarth
       description: >-
-        <p>Wenn ein Gegner versucht, eine M&ouml;glichkeit f&uuml;r eine
-        Attributs- oder Fertigkeitsprobe auszugeben, darf der Storm Knight eine
-        eigene M&ouml;glichkeit ausgeben, um dieses sofort zu unterbinden. Dies
-        ist eine freie Aktion, die ausgef&uuml;hrt werden darf, solange sich der
-        Charakter der Aktion seines Rivalen bewusst ist. Negation darf nicht
-        benutzt werden, um einen Feind davon abzuhalten, Wunden
-        wegzustecken.</p>
+        <p>Wenn ein Gegner versucht, eine Möglichkeit für eine Attributs- oder
+        Fertigkeitsprobe auszugeben, darf der Storm Knight eine eigene
+        Möglichkeit ausgeben, um dieses sofort zu unterbinden. Dies ist eine
+        freie Aktion, die ausgeführt werden darf, solange sich der Charakter der
+        Aktion seines Rivalen bewusst ist. Negation darf nicht benutzt werden,
+        um einen Feind davon abzuhalten, Wunden wegzustecken.</p>
       prerequisites: ''
       generalContradiction: false
       pulpPowers:
@@ -478,17 +471,22 @@ items:
         limitation10: ''
         limitationNumber: 0
       timestaken: '1'
+      secondaryAxiom:
+        selected: none
+        value: null
     ownership:
       default: 0
       9Q0XnqFwko7hRlvL: 3
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: 1694861733419
-      modifiedTime: 1694868652521
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722167191805
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Compendium.te001-core-rulebook.grw-de-vorzuverb.Item.dpciXn2ZI7ZzCAMt
+      duplicateSource: null
     _key: '!actors.items!PmME1EHlNKv7l60D.bZ0ymfbNEtDGRdqq'
   - _id: GCZ1wJSh7G4VsnIg
     name: Ballistische/Kevlarweste
@@ -502,37 +500,81 @@ items:
         sourceId: >-
           Compendium.te001-core-rulebook.grw-de-ausruestung.Item.wT9t85wtxun9qe9w
     system:
-      cosm: Zentralerde
+      cosm: coreEarth
       description: >-
-        <p>@UUID[Compendium.te001-core-rulebook.grw-de-grw.Qlx6yGF0Mmo6Xzrv.JournalEntryPage.7GGUUHzuYIqGPXDO#ermudung:]{Erm&uuml;dung}</p>
+        <p>@UUID[Compendium.te001-core-rulebook.grw-de-grw.Qlx6yGF0Mmo6Xzrv.JournalEntryPage.7GGUUHzuYIqGPXDO#ermudung:]{Ermüdung}</p>
 
         <p>@UUID[Compendium.te001-core-rulebook.grw-de-grw.Qlx6yGF0Mmo6Xzrv.JournalEntryPage.7GGUUHzuYIqGPXDO#ganzkorper/torso:]{Torso}</p>
 
         <p>Auch als kugelsichere Westen oder Kevlarwesten bekannt. Hergestellt
         aus synthetischem Material, das die Energie von auftreffenden Kugeln
-        &uuml;ber mehrere Schutzschichten verteilt.</p>
+        über mehrere Schutzschichten verteilt.</p>
       price: '250'
       techlevel: 22
       value: 12
       bonus: 4
       equipped: true
-      equippedClass: item-equipped
       maxDex: 10
       minStrength: null
       notes: Torso, Ermüdung
       fatigue: 1
+      secondaryAxiom:
+        selected: none
+        value: null
     ownership:
       default: 0
       9Q0XnqFwko7hRlvL: 3
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.7.0
-      coreVersion: '11.315'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: 1711562366229
-      modifiedTime: 1711705830406
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722167228717
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Compendium.te001-core-rulebook.grw-de-ausruestung.Item.wT9t85wtxun9qe9w
+      duplicateSource: null
     _key: '!actors.items!PmME1EHlNKv7l60D.GCZ1wJSh7G4VsnIg'
+  - name: Extra-Magazine
+    type: ammunition
+    img: systems/torgeternity/images/icons/ammo-icon.webp
+    system:
+      cosm: ''
+      description: >-
+        <p><span style="font-family:'Palatino Linotype'">Fünfmal Glock
+        nachladen.</span></p>
+      price: ''
+      techlevel: 21
+      value: 0
+      secondaryAxiom:
+        selected: none
+        value: null
+      type: ''
+      quantity: 5
+      damageMod: 0
+      apMod: 0
+      fireDamage: false
+      blastRadius: Keiner
+      darknessMod: none
+      reach: ''
+    effects: []
+    folder: null
+    sort: 0
+    ownership:
+      default: 0
+      93AMwcGe6H37rcPA: 3
+    flags: {}
+    _stats:
+      compendiumSource: Item.TptgnUCwWM2QZCaK
+      duplicateSource: Item.KRYQ71jof26XeGEv
+      coreVersion: '12.330'
+      systemId: torgeternity
+      systemVersion: 12.2.0
+      createdTime: 1722167214257
+      modifiedTime: 1722167214257
+      lastModifiedBy: 93AMwcGe6H37rcPA
+    _id: GNYOoTx6oVLwq8pY
+    _key: '!actors.items!PmME1EHlNKv7l60D.GNYOoTx6oVLwq8pY'
 effects: []
 folder: null
 sort: 0
@@ -890,104 +932,7 @@ system:
     spirit: 10
     tech: 23
   details:
-    background: >-
-      <p><img class="charimg"
-      src="systems/torgeternity/images/characters/Unstoppable_Cop.webp" alt=""
-      width="758" height="2000"></p>
-
-      <p
-      class="moreheight">@UUID[Compendium.torgeternity.system-de-handouts.JournalEntry.DLLvnXpv7RFhRgHu.JournalEntryPage.j7NJZCO90CI0aetf]{Archetyp
-      - Die unaufhaltsame Polizistin}</p>
-
-      <h3>&Uuml;berblick</h3>
-
-      <p>Schon bevor die High Lords einmarschierten, hatte die Zentralerde
-      Helden, die zu erstaunlichen Leistungen f&auml;hig waren. Einige gerieten
-      beim Kampf gegen Gruppen von Kriminellen, S&ouml;ldnern oder Psychopathen
-      immer wieder in Schwierigkeiten. Du warst einer dieser Helden, und die
-      eigenh&auml;ndige Vernichtung kleiner Armeen aus Schurken war nur ein Teil
-      deines Jobs.&nbsp;</p>
-
-      <p>Die Realit&auml;tspl&uuml;nderer stellen eine Bedrohung von v&ouml;llig
-      neuen Ausma&szlig;en dar. Gangs, Kartelle und selbst ein korrupter
-      Verschw&ouml;rungsring konnten dich bislang nicht aufhalten, also warum
-      jetzt aufh&ouml;ren? Wie dein (ehemaliger) Partner einmal sagte: Du bist
-      unaufhaltsam.</p>
-
-      <h3>Taktiken</h3>
-
-      <p>Schusswechsel sind kein Fremdwort f&uuml;r dich und du bist robust
-      genug, um auch ernsthafte Schl&auml;ge zu verkraften, ohne sie wegstecken
-      zu m&uuml;ssen &ndash; was ebenfalls dein Metier ist. Wenn du in den
-      Nahkampf gezwungen wirst, versuche Gegner beim Ringen zu &uuml;berwinden,
-      anstatt auf direkten Schaden zu setzen.&nbsp;</p>
-
-      <p>Negierung ist deine Geheimwaffe. Die F&auml;higkeit eines Stormers,
-      Angriffe zu verst&auml;rken und zu blockieren, ist nicht von schlechten
-      Eltern und kann schnell &uuml;ber den Ausgang eines Kampfes entscheiden.
-      Benutze <em>Einsch&uuml;chtern</em>, um deine Feinde m&uuml;rbe zu machen.
-      Angeschlagen reduziert ihre Wurfergebnisse und Verwundbar verbessert deine
-      eigenen.</p>
-
-      <h3>Moment der Krise</h3>
-
-      <p>Dutzende von Vorf&auml;llen k&ouml;nnen dich vom Helden zum Storm
-      Knight erhoben haben. Es k&ouml;nnte der abtr&uuml;nnige Stormer gewesen
-      sein, der seine Kr&auml;fte nutzte, um ein neues Drogenkartell aufzubauen.
-      Oder es k&ouml;nnte der Moment gewesen sein, in der du einen zornigen
-      Raptor niedergerungen und ihm Handschellen angelegt hast &ndash; die Leute
-      reden immer noch dar&uuml;ber.</p>
-
-      <h3>Zitat</h3>
-
-      <p>"Leg das seltsam leuchtende Ding auf den Boden und nimm die H&auml;nde
-      hoch!"</p>
-
-      <h3>Beschreibung</h3>
-
-      <p>Es ist wichtig, die Uniform zu tragen, auch au&szlig;erhalb deiner
-      Zust&auml;ndigkeit und an Orten, die umgewandelt wurden. Es vermittelt
-      Normalit&auml;t und Autorit&auml;t, und die kugelsichere Weste kann auch
-      nicht schaden. Nicht jeder mag oder respektiert die Polizei, aber der
-      blo&szlig;e Anblick einer Uniform und einer Polizeimarke gen&uuml;gt
-      bereits, um viele Menschen zur&uuml;ck auf den Boden der Tatsachen zu
-      holen. Ein sover&auml;nes Auftreten und ein harter Blick verst&auml;rken
-      diese Demonstration der St&auml;rke.</p>
-
-      <h3>Agenda</h3>
-
-      <p>Die unaufhaltsame Polizistin will die Dinge einfach wieder in Ordnung
-      bringen. Die Realit&auml;t selbst hat ihre Rechte, und diese Eindringlinge
-      versto&szlig;en dagegen. Gehe gegen diesen Wahnsinn vor, stoppe die
-      Schurken und sch&uuml;tze die Unschuldigen, die im Kreuzfeuer dieser
-      Ereignisse gefangen sind.</p>
-
-      <h3>Namen</h3>
-
-      <p>Alta, Carmen, Cristian, Dani, Gabriel, Jaide, Lani, Marvel, Paz, Rio,
-      Sal</p>
-
-      <h3>Vorgeschlagener Aufstieg (Optional)</h3>
-
-      <ul>
-
-      <li>(5 EP) Starker Wille</li>
-
-      <li>(7 EP) Schwer zu t&ouml;ten</li>
-
-      <li>(1 EP) <em>Schl&ouml;sserknacken</em> +1</li>
-
-      <li>(2 EP) <em>Gassenwissen</em> +2</li>
-
-      <li>(3 EP) <em>Feuerwaffen</em> +3</li>
-
-      <li>(3 EP) <em>Realit&auml;t</em> +3</li>
-
-      <li>(4 EP) <em>Feuerwaffen</em> +4</li>
-
-      <li>(5 EP) <em>Feuerwaffen</em> +5</li>
-
-      </ul>
+    background: "<p><img class=\"charimg\" src=\"systems/torgeternity/images/characters/Unstoppable_Cop.webp\" alt=\"\" width=\"758\" height=\"2000\" /></p>\n<p class=\"moreheight\">@UUID[Compendium.torgeternity.system-de-handouts.JournalEntry.DLLvnXpv7RFhRgHu.JournalEntryPage.j7NJZCO90CI0aetf]{Archetyp - Die unaufhaltsame Polizistin}</p>\n<h3>Überblick</h3>\n<p>Schon bevor die High Lords einmarschierten, hatte die Zentralerde Helden, die zu erstaunlichen Leistungen fähig waren. Einige gerieten beim Kampf gegen Gruppen von Kriminellen, Söldnern oder Psychopathen immer wieder in Schwierigkeiten. Du warst einer dieser Helden, und die eigenhändige Vernichtung kleiner Armeen aus Schurken war nur ein Teil deines Jobs.\_</p>\n<p>Die Realitätsplünderer stellen eine Bedrohung von völlig neuen Ausmaßen dar. Gangs, Kartelle und selbst ein korrupter Verschwörungsring konnten dich bislang nicht aufhalten, also warum jetzt aufhören? Wie dein (ehemaliger) Partner einmal sagte: Du bist unaufhaltsam.</p>\n<h3>Taktiken</h3>\n<p>Schusswechsel sind kein Fremdwort für dich und du bist robust genug, um auch ernsthafte Schläge zu verkraften, ohne sie wegstecken zu müssen – was ebenfalls dein Metier ist. Wenn du in den Nahkampf gezwungen wirst, versuche Gegner beim Ringen zu überwinden, anstatt auf direkten Schaden zu setzen.\_</p>\n<p>Negierung ist deine Geheimwaffe. Die Fähigkeit eines Stormers, Angriffe zu verstärken und zu blockieren, ist nicht von schlechten Eltern und kann schnell über den Ausgang eines Kampfes entscheiden. Benutze <em>Einschüchtern</em>, um deine Feinde mürbe zu machen. Angeschlagen reduziert ihre Wurfergebnisse und Verwundbar verbessert deine eigenen.</p>\n<h3>Moment der Krise</h3>\n<p>Dutzende von Vorfällen können dich vom Helden zum Storm Knight erhoben haben. Es könnte der abtrünnige Stormer gewesen sein, der seine Kräfte nutzte, um ein neues Drogenkartell aufzubauen. Oder es könnte der Moment gewesen sein, in der du einen zornigen Raptor niedergerungen und ihm Handschellen angelegt hast – die Leute reden immer noch darüber.</p>\n<h3>Zitat</h3>\n<p>\"Leg das seltsam leuchtende Ding auf den Boden und nimm die Hände hoch!\"</p>\n<h3>Beschreibung</h3>\n<p>Es ist wichtig, die Uniform zu tragen, auch außerhalb deiner Zuständigkeit und an Orten, die umgewandelt wurden. Es vermittelt Normalität und Autorität, und die kugelsichere Weste kann auch nicht schaden. Nicht jeder mag oder respektiert die Polizei, aber der bloße Anblick einer Uniform und einer Polizeimarke genügt bereits, um viele Menschen zurück auf den Boden der Tatsachen zu holen. Ein soveränes Auftreten und ein harter Blick verstärken diese Demonstration der Stärke.</p>\n<h3>Agenda</h3>\n<p>Die unaufhaltsame Polizistin will die Dinge einfach wieder in Ordnung bringen. Die Realität selbst hat ihre Rechte, und diese Eindringlinge verstoßen dagegen. Gehe gegen diesen Wahnsinn vor, stoppe die Schurken und schütze die Unschuldigen, die im Kreuzfeuer dieser Ereignisse gefangen sind.</p>\n<h3>Namen</h3>\n<p>Alta, Carmen, Cristian, Dani, Gabriel, Jaide, Lani, Marvel, Paz, Rio, Sal</p>\n<h3>Vorgeschlagener Aufstieg (Optional)</h3>\n<ul>\n<li>(5 EP) Starker Wille</li>\n<li>(7 EP) Schwer zu töten</li>\n<li>(1 EP) <em>Schlösserknacken</em> +1</li>\n<li>(2 EP) <em>Gassenwissen</em> +2</li>\n<li>(3 EP) <em>Feuerwaffen</em> +3</li>\n<li>(3 EP) <em>Realität</em> +3</li>\n<li>(4 EP) <em>Feuerwaffen</em> +4</li>\n<li>(5 EP) <em>Feuerwaffen</em> +5</li>\n</ul>"
     race: human
     sizeBonus: normal
   editstate: false
@@ -1032,14 +977,20 @@ prototypeToken:
       min: 0
       max: 1
     attenuation: 0.5
+    negative: false
+    priority: 0
   texture:
     src: systems/torgeternity/images/characters/unstoppable_cop.Token.webp
-    tint: null
+    tint: '#ffffff'
     scaleX: 1
     scaleY: 1
     offsetX: 0
     offsetY: 0
     rotation: 0
+    anchorX: 0.5
+    anchorY: 0.5
+    fit: contain
+    alphaThreshold: 0.75
   sight:
     angle: 360
     enabled: true
@@ -1049,14 +1000,29 @@ prototypeToken:
     attenuation: 0.1
     saturation: 0
     contrast: 0
+    color: null
   appendNumber: false
   prependAdjective: false
   detectionModes: []
+  hexagonalShape: 0
+  occludable:
+    radius: 0
+  ring:
+    enabled: false
+    colors:
+      ring: null
+      background: null
+    effects: 1
+    subject:
+      scale: 1
+      texture: null
 _stats:
   systemId: torgeternity
-  systemVersion: 3.8.1
-  coreVersion: '11.315'
+  systemVersion: 12.2.0
+  coreVersion: '12.330'
   createdTime: 1694861600031
-  modifiedTime: 1716827811377
-  lastModifiedBy: VAnYow5sWS9EJzo0
+  modifiedTime: 1722359278656
+  lastModifiedBy: 93AMwcGe6H37rcPA
+  compendiumSource: Compendium.torgeternity.archetypes.non4XwpfJLE9GiST
+  duplicateSource: null
 _key: '!actors!PmME1EHlNKv7l60D'

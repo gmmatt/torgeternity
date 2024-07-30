@@ -15,18 +15,20 @@ items:
       ap: 0
       attackWith: unarmedCombat
       chatNote: ''
-      damage: '9'
-      description: <p><em>St&auml;rke</em> +2 (9)</p>
+      damage: 9
+      description: <p><em>Stärke</em> +2 (9)</p>
     ownership:
       default: 0
       pYSulyhjOdVnRAJt: 3
     _stats:
       systemId: torgeternity
       systemVersion: 3.8.1
-      coreVersion: '11.315'
+      coreVersion: '12.330'
       createdTime: 1716788510762
       modifiedTime: 1716788609786
       lastModifiedBy: pYSulyhjOdVnRAJt
+      compendiumSource: null
+      duplicateSource: null
     _key: '!actors.items!SVU3O0osXn4bPoTn.2Ucc4TZ98XsRBFqK'
 effects: []
 folder: null
@@ -378,13 +380,13 @@ system:
       defenseOnly: false
   details:
     description: >-
-      <p class="moreheight">Tiergef&auml;hrte von
+      <p class="moreheight">Tiergefährte von
       @UUID[Compendium.torgeternity.system-de-archetypen.Actor.pGJE5A6rJMK7Za84]{Die
-      urzeitliche J&auml;gerin}</p>
+      urzeitliche Jägerin}</p>
 
       <p
-      class="moreheight">@UUID[Compendium.torgeternity.system-de-handouts.JournalEntry.DLLvnXpv7RFhRgHu.JournalEntryPage.oSp48783apDZJbHt]{Tiergef&auml;hrte
-      - S&auml;belzahntiger}</p>
+      class="moreheight">@UUID[Compendium.torgeternity.system-de-handouts.JournalEntry.DLLvnXpv7RFhRgHu.JournalEntryPage.oSp48783apDZJbHt]{Tiergefährte
+      - Säbelzahntiger}</p>
     sizeBonus: normal
     clearance: alpha
     possibilityPotential: Niemals
@@ -430,14 +432,20 @@ prototypeToken:
       min: 0
       max: 1
     attenuation: 0.5
+    negative: false
+    priority: 0
   texture:
     src: systems/torgeternity/images/characters/sabre_tooth_cat.Token.webp
-    tint: null
+    tint: '#ffffff'
     scaleX: 1
     scaleY: 1
     offsetX: 0
     offsetY: 0
     rotation: 0
+    anchorX: 0.5
+    anchorY: 0.5
+    fit: contain
+    alphaThreshold: 0.75
   sight:
     angle: 360
     enabled: true
@@ -447,14 +455,29 @@ prototypeToken:
     attenuation: 0.1
     saturation: 0
     contrast: 0
+    color: null
   appendNumber: false
   prependAdjective: false
   detectionModes: []
+  hexagonalShape: 0
+  occludable:
+    radius: 0
+  ring:
+    enabled: false
+    colors:
+      ring: null
+      background: null
+    effects: 1
+    subject:
+      scale: 1
+      texture: null
 _stats:
   systemId: torgeternity
-  systemVersion: 3.8.1
-  coreVersion: '11.315'
+  systemVersion: 12.2.0
+  coreVersion: '12.330'
   createdTime: 1694860904413
-  modifiedTime: 1716827811422
-  lastModifiedBy: VAnYow5sWS9EJzo0
+  modifiedTime: 1722359278656
+  lastModifiedBy: 93AMwcGe6H37rcPA
+  compendiumSource: Compendium.te001-core-rulebook.Actors.JVgXLLgQQX0sFr9g
+  duplicateSource: null
 _key: '!actors!SVU3O0osXn4bPoTn'

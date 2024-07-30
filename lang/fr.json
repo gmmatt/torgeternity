@@ -32,6 +32,12 @@
       "spirit": "Spirituel",
       "tech": "Tech"      
     },
+    "axioms": {      
+      "magic": "Magie",
+      "social": "Social",
+      "spirit": "Spirituel",
+      "tech": "Tech"      
+    },
     "cardTypes": {
       "activeDrama": "Carte Action active",
       "cosm": "Cosm",
@@ -268,6 +274,7 @@
         "choice":"Votre choix",
         "choose":"Quel attribut souhaitez vous modifier ?",
         "allAttributes": "Tous les attributs",
+        "defenses":"Défenses",
         "physicalDefenses":"Défenses physiques",
         "cancelEffects":"Annuler les effets",
         "bonusTitle":"Saisie de la valeur du bonus/malus",
