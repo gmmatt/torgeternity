@@ -30,9 +30,11 @@ items:
       damage: 15
       damageType: ''
       equipped: false
-      equippedClass: .item-unequipped
       notes: Requires Electro-Ray perk, Replinishes 1 ammo per round
       range: 10/25/50
+      secondaryAxiom:
+        selected: none
+        value: null
     ownership:
       default: 0
     _stats:
@@ -58,19 +60,7 @@ items:
     system:
       category: pulpPowers
       cosm: nileEmpire
-      description: >-
-        <p>The hero can fire a powerful bolt of electricity at a target. It has
-        a maximum range of 10/25/50 meters and causes 13 damage. The ray
-        contains five shots, and regenerates one shot each round. Attacking with
-        the Ray uses <em>energy weapons</em>.</p>
-
-        <p><strong>Dangerous When Wet:</strong> Increase the damage by +2 in
-        light rain or if the target is standing in a puddle, and +4 in heavy
-        rain or if the target is in water up to his ankles or higher.</p>
-
-        <p>&nbsp;</p>
-
-        <p>Found in <strong>Core Rules</strong></p>
+      description: "<p>The hero can fire a powerful bolt of electricity at a target. It has a maximum range of 10/25/50 meters and causes 13 damage. The ray contains five shots, and regenerates one shot each round. Attacking with the Ray uses <em>energy weapons</em>.</p>\n<p><strong>Dangerous When Wet:</strong> Increase the damage by +2 in light rain or if the target is standing in a puddle, and +4 in heavy rain or if the target is in water up to his ankles or higher.</p>\n<p>\_</p>\n<p>Found in <strong>Core Rules</strong></p>"
       prerequisites: ''
       generalContradiction: true
       pulpPowers:
@@ -151,6 +141,9 @@ items:
         limitation10: ''
         limitationNumber: 1
       timestaken: '1'
+      secondaryAxiom:
+        selected: none
+        value: null
     ownership:
       default: 0
       A9LyAqagoJJU3gDH: 3
@@ -178,17 +171,7 @@ items:
     system:
       category: pulpPowers
       cosm: nileEmpire
-      description: >-
-        <p>A shield of invisible energy surrounds the hero.</p>
-
-        <p>The force field has three <q>charges.</q> Each time the hero suffers
-        a wound, the field expends a charge to block the wound and 2 shock.</p>
-
-        <p>The field recharges at the rate of one charge per hour.</p>
-
-        <p>&nbsp;</p>
-
-        <p>Found in <strong>Core Rules</strong></p>
+      description: "<p>A shield of invisible energy surrounds the hero.</p>\n<p>The force field has three <q>charges.</q> Each time the hero suffers a wound, the field expends a charge to block the wound and 2 shock.</p>\n<p>The field recharges at the rate of one charge per hour.</p>\n<p>\_</p>\n<p>Found in <strong>Core Rules</strong></p>"
       prerequisites: ''
       generalContradiction: true
       pulpPowers:
@@ -265,6 +248,9 @@ items:
         limitation10: ''
         limitationNumber: 1
       timestaken: '1'
+      secondaryAxiom:
+        selected: none
+        value: null
     ownership:
       default: 0
       A9LyAqagoJJU3gDH: 3
@@ -295,7 +281,9 @@ items:
       price: '10'
       techlevel: 20
       value: 5
-      equippedClass: item-equipped
+      secondaryAxiom:
+        selected: none
+        value: null
     ownership:
       default: 0
       A9LyAqagoJJU3gDH: 3
@@ -322,17 +310,13 @@ items:
         sourceId: Compendium.te001-core-rulebook.Items.06c6JoWaPqyNzpRv
     system:
       cosm: nileEmpire
-      description: >-
-        <p>A beacon that broadcasts its location to any attuned radio receiver
-        within one kilometer.</p>
-
-        <p>&nbsp;</p>
-
-        <p>Found in <strong>Core Rules</strong></p>
+      description: "<p>A beacon that broadcasts its location to any attuned radio receiver within one kilometer.</p>\n<p>\_</p>\n<p>Found in <strong>Core Rules</strong></p>"
       price: '150'
       techlevel: 20
       value: 11
-      equippedClass: item-equipped
+      secondaryAxiom:
+        selected: none
+        value: null
     ownership:
       default: 0
       A9LyAqagoJJU3gDH: 3
@@ -359,14 +343,13 @@ items:
         sourceId: Compendium.te001-core-rulebook.Items.cae3PZicII8jW148
     system:
       cosm: nileEmpire
-      description: |-
-        <p>Relays sound to any attuned radio receivers within 400 meters.</p>
-        <p>&nbsp;</p>
-        <p>Found in <strong>Core Rules</strong></p>
+      description: "<p>Relays sound to any attuned radio receivers within 400 meters.</p>\n<p>\_</p>\n<p>Found in <strong>Core Rules</strong></p>"
       price: '100'
       techlevel: 20
       value: 10
-      equippedClass: item-equipped
+      secondaryAxiom:
+        selected: none
+        value: null
     ownership:
       default: 0
       A9LyAqagoJJU3gDH: 3
@@ -397,7 +380,9 @@ items:
       price: '100'
       techlevel: 8
       value: 10
-      equippedClass: item-equipped
+      secondaryAxiom:
+        selected: none
+        value: null
     ownership:
       default: 0
       A9LyAqagoJJU3gDH: 3
@@ -412,40 +397,6 @@ items:
       compendiumSource: Compendium.te001-core-rulebook.Items.RSnCZO6bMZqc5e1X
       duplicateSource: null
     _key: '!actors.items!Aq6ZhdfGe9SMQxwv.cVUn4Bk2Dzitb68n'
-  - _id: ng5dPcLuc7LPWsYP
-    name: First Aid Kit
-    type: gear
-    img: systems/torgeternity/images/icons/gear-icon.webp
-    effects: []
-    folder: null
-    sort: 400000
-    flags:
-      core:
-        sourceId: Compendium.te001-core-rulebook.Items.1TCaPKKRqqbJFApZ
-    system:
-      cosm: nileEmpire
-      description: |-
-        <p>Makes first aid tests Favored.</p>
-        <p>&nbsp;</p>
-        <p>Found in <strong>Core Rules</strong></p>
-      price: '50'
-      techlevel: 19
-      value: 9
-      equippedClass: item-equipped
-    ownership:
-      default: 0
-      A9LyAqagoJJU3gDH: 3
-      CtisFurQNe9h7ABb: 3
-    _stats:
-      systemId: torgeternity
-      systemVersion: 12.2.0
-      coreVersion: '12.330'
-      createdTime: 1693901342007
-      modifiedTime: 1722155665832
-      lastModifiedBy: 93AMwcGe6H37rcPA
-      compendiumSource: Compendium.te001-core-rulebook.Items.1TCaPKKRqqbJFApZ
-      duplicateSource: null
-    _key: '!actors.items!Aq6ZhdfGe9SMQxwv.ng5dPcLuc7LPWsYP'
   - _id: bnlZswmHuUmFCgDL
     name: Lock Picks
     type: gear
@@ -462,7 +413,9 @@ items:
       price: '10'
       techlevel: 10
       value: 5
-      equippedClass: item-equipped
+      secondaryAxiom:
+        selected: none
+        value: null
     ownership:
       default: 0
       A9LyAqagoJJU3gDH: 3
@@ -493,7 +446,9 @@ items:
       price: '50'
       techlevel: 18
       value: 9
-      equippedClass: item-equipped
+      secondaryAxiom:
+        selected: none
+        value: null
     ownership:
       default: 0
       A9LyAqagoJJU3gDH: 3
@@ -524,7 +479,9 @@ items:
       price: '100'
       techlevel: 16
       value: 10
-      equippedClass: item-equipped
+      secondaryAxiom:
+        selected: none
+        value: null
     ownership:
       default: 0
       A9LyAqagoJJU3gDH: 3
@@ -558,11 +515,13 @@ items:
       value: 10
       bonus: 1
       equipped: true
-      equippedClass: item-equipped
       maxDex: 12
       minStrength: null
       notes: Torso
       fatigue: null
+      secondaryAxiom:
+        selected: none
+        value: null
     ownership:
       default: 0
       A9LyAqagoJJU3gDH: 3
@@ -577,7 +536,114 @@ items:
       compendiumSource: Compendium.te001-core-rulebook.Items.Item.34ioFwhBc4c39YFU
       duplicateSource: null
     _key: '!actors.items!Aq6ZhdfGe9SMQxwv.gKZOg5vmIgArnWQj'
-effects: []
+  - _id: BioSWECX8OLQhqht
+    name: First Aid Kit
+    type: gear
+    img: systems/torgeternity/images/icons/gear-icon.webp
+    effects:
+      - origin: Item.z0TSDETi3Y76NoVh
+        duration:
+          rounds: null
+          startTime: null
+          seconds: null
+          combat: null
+          turns: null
+          startRound: null
+          startTurn: null
+        disabled: false
+        name: First Aid Favored
+        img: icons/svg/aura.svg
+        _id: tf0VK9CsMozw0bUh
+        type: base
+        system: {}
+        changes:
+          - key: system.skills.firstAid.isFav
+            mode: 5
+            value: 'true'
+            priority: null
+        description: ''
+        tint: '#ffffff'
+        transfer: true
+        statuses: []
+        sort: 0
+        flags: {}
+        _stats:
+          compendiumSource: null
+          duplicateSource: null
+          coreVersion: '12.330'
+          systemId: torgeternity
+          systemVersion: 12.2.0
+          createdTime: null
+          modifiedTime: null
+          lastModifiedBy: null
+        _key: >-
+          !actors.items.effects!Aq6ZhdfGe9SMQxwv.BioSWECX8OLQhqht.tf0VK9CsMozw0bUh
+    folder: gjZiCPX5knOIpsHd
+    sort: 362500
+    flags:
+      core:
+        sourceId: Compendium.te001-core-rulebook.Items.1TCaPKKRqqbJFApZ
+    system:
+      cosm: nileEmpire
+      description: "<p>Makes first aid tests Favored.</p>\n<p>\_</p>\n<p>Found in <strong>Core Rules</strong></p>"
+      price: '50'
+      techlevel: 19
+      value: 9
+      secondaryAxiom:
+        selected: none
+        value: null
+    ownership:
+      default: 0
+      A9LyAqagoJJU3gDH: 3
+      CtisFurQNe9h7ABb: 3
+      93AMwcGe6H37rcPA: 3
+    _stats:
+      compendiumSource: Compendium.te001-core-rulebook.Items.1TCaPKKRqqbJFApZ
+      duplicateSource: null
+      coreVersion: '12.330'
+      systemId: torgeternity
+      systemVersion: 12.2.0
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+    _key: '!actors.items!Aq6ZhdfGe9SMQxwv.BioSWECX8OLQhqht'
+effects:
+  - origin: Actor.Aq6ZhdfGe9SMQxwv.Item.BioSWECX8OLQhqht
+    duration:
+      rounds: null
+      startTime: 0
+      seconds: null
+      combat: null
+      turns: null
+      startRound: null
+      startTurn: null
+    disabled: false
+    name: First Aid Favored
+    img: icons/svg/aura.svg
+    _id: mQorDXPsnkJYGih3
+    type: base
+    system: {}
+    changes:
+      - key: system.skills.firstAid.isFav
+        mode: 5
+        value: 'true'
+        priority: null
+    description: ''
+    tint: '#ffffff'
+    transfer: false
+    statuses: []
+    sort: 0
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      coreVersion: '12.330'
+      systemId: torgeternity
+      systemVersion: 12.2.0
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+    _key: '!actors.effects!Aq6ZhdfGe9SMQxwv.mQorDXPsnkJYGih3'
 folder: null
 sort: 100001
 flags: {}
@@ -935,7 +1001,7 @@ system:
     background: >-
       <p><img class="charimg"
       src="systems/torgeternity/images/characters/Eccentric_Inventor.webp"
-      alt="" width="1125" height="2052"></p>
+      alt="" width="1125" height="2052" /></p>
 
       <p
       class="moreheight">@UUID[Compendium.torgeternity.handouts.JournalEntry.Knhh8vqtjSylJo5Z.JournalEntryPage.59zUF4TrfxfdMfhs]{Archetype
@@ -954,16 +1020,16 @@ system:
 
       <p>Your Electro-Ray is effective, but it can run out of charges if used on
       too many targets too quickly. Your trick interaction is especially
-      devastating. Many opponents are weak against trick, and a
-      &ldquo;Player&rsquo;s Call&ldquo; result might eliminate even stronger
-      foes when the circumstances support it.</p>
+      devastating. Many opponents are weak against trick, and a “Player’s Call“
+      result might eliminate even stronger foes when the circumstances support
+      it.</p>
 
       <p>While your Force Field is operational you can use its charges to Soak
-      Wounds. It can block two Shock even if there&rsquo;s no Wound, but
-      it&rsquo;s better to save those charges. Once the Force Field is depleted,
-      or if an untimely disconnection disables it, you are extremely susceptible
-      to damage. If possible, hang on to a Destiny card like Willpower or Action
-      to help reconnect if you get into a tight spot.</p>
+      Wounds. It can block two Shock even if there’s no Wound, but it’s better
+      to save those charges. Once the Force Field is depleted, or if an untimely
+      disconnection disables it, you are extremely susceptible to damage. If
+      possible, hang on to a Destiny card like Willpower or Action to help
+      reconnect if you get into a tight spot.</p>
 
       <h3>Moment of Crisis</h3>
 
@@ -976,15 +1042,15 @@ system:
 
       <h3>Quote</h3>
 
-      <p>&ldquo;Whoa, who could have predicted a sudden polarity inversion would
-      cause an explosion like that. I mean, other than me. Because I totally
-      called that.&ldquo;</p>
+      <p>“Whoa, who could have predicted a sudden polarity inversion would cause
+      an explosion like that. I mean, other than me. Because I totally called
+      that.“</p>
 
       <h3>Description</h3>
 
-      <p>Your vulcanized rubber lab coat is for work, but underneath that
-      you&rsquo;re always ready for a good party. Your goggles are fashionable
-      in any situation. You are highly intelligent and well-schooled. You are
+      <p>Your vulcanized rubber lab coat is for work, but underneath that you’re
+      always ready for a good party. Your goggles are fashionable in any
+      situation. You are highly intelligent and well-schooled. You are
       confident, happy, and unapologetically weird.</p>
 
       <h3>Agenda</h3>
@@ -1100,11 +1166,11 @@ prototypeToken:
       texture: null
 _stats:
   systemId: torgeternity
-  systemVersion: 3.8.1
+  systemVersion: 12.2.0
   coreVersion: '12.330'
   createdTime: 1693901061941
-  modifiedTime: 1716827807504
-  lastModifiedBy: VAnYow5sWS9EJzo0
+  modifiedTime: 1722355493847
+  lastModifiedBy: 93AMwcGe6H37rcPA
   compendiumSource: null
   duplicateSource: null
 _key: '!actors!Aq6ZhdfGe9SMQxwv'

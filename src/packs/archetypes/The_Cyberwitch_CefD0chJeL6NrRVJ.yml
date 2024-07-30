@@ -3,115 +3,25 @@ name: The Cyberwitch
 type: stormknight
 img: systems/torgeternity/images/characters/Cyberwitch.Avatar.webp
 items:
-  - _id: ZKurTYCidkV0AVSA
-    name: Cyberware Implants
-    type: perk
-    sort: 100001
+  - _id: SFdVeSet2JXoY01t
+    name: Sunglasses
+    type: gear
+    sort: 2200000
     flags:
       core:
-        sourceId: Item.8qfs6BvtH7wTJ09g
-    img: systems/torgeternity/images/icons/reality-icon.webp
+        sourceId: Item.Wi4lFW6mtBCZS8EY
+    img: systems/torgeternity/images/icons/gear-icon.webp
     effects: []
     folder: null
     system:
-      category: cyberware
-      cosm: cyberpapacy
-      description: >-
-        <p>When this Perk is selected, the character may choose up to $10 000
-        worth of Cyberware from the lists on page 160.</p>
-
-        <p>Official Church-approved cyberware is linked directly to the GodNet
-        and carefully monitored. Devices bought via this Perk are <q>hacked</q>
-        and don&rsquo;t link to the GodNet (unless the wearer wants it to for
-        some reason). Its installation is safe and free from risk of injury.</p>
-
-        <p>Hacked cyberware is a crime in the Cyberpapacy, however. Heroes who
-        <q>chrome</q> their bodies best beware of the Church Police&mdash;they
-        are <em>always</em> watching.</p>
-
-        <p><strong>New Implants:</strong> This Perk may be taken more than once.
-        Each time after the first, it grants the user another $5 000 worth of
-        implants.</p>
-
-        <p>&nbsp;</p>
-
-        <p>Found in <strong>Core Rules</strong></p>
-      prerequisites: ''
-      generalContradiction: false
-      pulpPowers:
-        enhancement01:
-          description: ''
-          taken: false
-          title: ''
-        enhancement02:
-          description: ''
-          taken: false
-          title: ''
-        enhancement03:
-          description: ''
-          taken: false
-          title: ''
-        enhancement04:
-          description: ''
-          taken: false
-          title: ''
-        enhancement05:
-          description: ''
-          taken: false
-          title: ''
-        enhancement06:
-          description: ''
-          taken: false
-          title: ''
-        enhancement07:
-          description: ''
-          taken: false
-          title: ''
-        enhancement08:
-          description: ''
-          taken: false
-          title: ''
-        enhancement09:
-          description: ''
-          taken: false
-          title: ''
-        enhancement10:
-          description: ''
-          taken: false
-          title: ''
-        enhancement11:
-          description: ''
-          taken: false
-          title: ''
-        enhancement12:
-          description: ''
-          taken: false
-          title: ''
-        enhancement13:
-          description: ''
-          taken: false
-          title: ''
-        enhancement14:
-          description: ''
-          taken: false
-          title: ''
-        enhancement15:
-          description: ''
-          taken: false
-          title: ''
-        enhancementNumber: 0
-        limitation01: ''
-        limitation02: ''
-        limitation03: ''
-        limitation04: ''
-        limitation05: ''
-        limitation06: ''
-        limitation07: ''
-        limitation08: ''
-        limitation09: ''
-        limitation10: ''
-        limitationNumber: 0
-      timestaken: '1'
+      cosm: nileEmpire
+      description: ''
+      price: '10'
+      techlevel: 20
+      value: 5
+      secondaryAxiom:
+        selected: none
+        value: null
     ownership:
       default: 0
     _stats:
@@ -119,46 +29,186 @@ items:
       systemVersion: 12.2.0
       coreVersion: '12.330'
       createdTime: null
-      modifiedTime: 1722152347611
+      modifiedTime: 1722154587766
       lastModifiedBy: 93AMwcGe6H37rcPA
-      compendiumSource: Item.8qfs6BvtH7wTJ09g
+      compendiumSource: Item.Wi4lFW6mtBCZS8EY
       duplicateSource: null
-    _key: '!actors.items!CefD0chJeL6NrRVJ.ZKurTYCidkV0AVSA'
-  - _id: yaftfIz25Ryczaqq
-    name: Spellcaster
-    type: perk
-    sort: 100001
+    _key: '!actors.items!CefD0chJeL6NrRVJ.SFdVeSet2JXoY01t'
+  - _id: hAArbMfImIilyKBK
+    name: GWI GodMeeter
+    type: firearm
+    img: systems/torgeternity/images/icons/firearm-icon.webp
+    effects: []
+    folder: null
+    sort: 0
     flags:
       core:
-        sourceId: Item.gOZE58k6tfHDbUJ0
+        sourceId: Compendium.te001-core-rulebook.Items.pBPp45py3ynKoMI1
+    system:
+      cosm: cyberpapacy
+      description: "<p>The most common sidearm in use by the Church Police. It’s a high caliber and very loud firearm. Like other GWI weapons it has a limited artificial intelligence built in—not to assist with firing but to disable functions and preach at miscreants if the weapon falls into the wrong hands. The gun is also capable of selecting between different types of ammunition by vocal command if more than one type is loaded.</p>\n<p>\_</p>\n<p>Found in <strong>Core Rules</strong></p>"
+      price: '450'
+      techlevel: 26
+      value: 13
+      ammo:
+        max: 25
+        value: 25
+      ap: 0
+      attackWith: fireCombat
+      chatNote: ''
+      damage: 15
+      damageType: flat
+      equipped: true
+      notes: ''
+      range: 10 / 25 / 40
+      secondaryAxiom:
+        selected: none
+        value: null
+    ownership:
+      default: 0
+      A9LyAqagoJJU3gDH: 3
+      CtisFurQNe9h7ABb: 3
+    _stats:
+      systemId: torgeternity
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
+      createdTime: 1693900431785
+      modifiedTime: 1722108680119
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Compendium.te001-core-rulebook.Items.pBPp45py3ynKoMI1
+      duplicateSource: null
+    _key: '!actors.items!CefD0chJeL6NrRVJ.hAArbMfImIilyKBK'
+  - _id: ptj1Hps6YOKo6uRC
+    name: Hexxer MK II
+    type: implant
+    img: systems/torgeternity/images/icons/cyberware-icon.webp
+    effects: []
+    folder: null
+    sort: 0
+    flags:
+      core:
+        sourceId: Compendium.te001-core-rulebook.Items.ThXFhhCEysLaKu33
+    system:
+      cosm: cyberpapacy
+      description: "<p>An upgrade to the hexxer stores the energy from Backlash and allows the warlock or witch to actually <em>use</em> it in powering her own spells.</p><p>After a spellcaster suffers Backlash, the hexxer MK II works like a MK I above, negating half the shock from a failed spell. In addition, the amount of shock negated is automatically applied as a bonus on the character’s next spellcasting test. The energy dissipates after one minute (six rounds), so it must be used within that time frame or the bonus is lost.</p>\n<p>updated in Cyberpapacy Sourcebook</p>\n<p>\_</p>\n<p>Found in <strong>Core Rules, Cyberpapacy Sourcebook</strong></p>"
+      price: 10K
+      techlevel: 26
+      value: 20
+      notes: ''
+      secondaryAxiom:
+        selected: none
+        value: null
+    ownership:
+      default: 0
+      A9LyAqagoJJU3gDH: 3
+      CtisFurQNe9h7ABb: 3
+    _stats:
+      systemId: torgeternity
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
+      createdTime: 1693900468752
+      modifiedTime: 1722154648375
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Compendium.te001-core-rulebook.Items.ThXFhhCEysLaKu33
+      duplicateSource: null
+    _key: '!actors.items!CefD0chJeL6NrRVJ.ptj1Hps6YOKo6uRC'
+  - _id: qscZR782i9ypoNW4
+    name: Scrambler
+    type: spell
+    img: systems/torgeternity/images/icons/spell-icon.webp
+    effects: []
+    folder: null
+    sort: 675000
+    flags:
+      core:
+        sourceId: Compendium.te001-core-rulebook.Items.CJz3Fe0Ld1tsBRYc
+    system:
+      ap: 0
+      applyArmor: false
+      applySize: false
+      axiom: 9
+      castingtime: 1 action
+      damage: 0
+      description: "<p>Used primarily in the watchdog regime of the Cyberpapacy, <em>scrambler</em> obscures everyone in the affected area from all security and surveillance systems.</p>\n<p>Captured video and voices become blurry and unidentifiable to such devices, and targeting bonuses from smart ammunition and augmented reality HUDs are negated.</p>\n<p>\_</p>\n<p>Found in <strong>Core Rules</strong></p>"
+      dn: standard
+      dnType: ''
+      duration: 10 minutes
+      good: The Range is increased to a 100-meter radius
+      isAttack: false
+      modifier: ''
+      outstanding: >-
+        The caster’s video and voice are completely erased and the duration
+        increases to an last hour
+      range: 50 meters radius
+      skill: alteration
+      skilllevel: '10'
+      targetDefense: ''
+    ownership:
+      default: 0
+      A9LyAqagoJJU3gDH: 3
+      CtisFurQNe9h7ABb: 3
+    _stats:
+      systemId: torgeternity
+      systemVersion: 3.1.1
+      coreVersion: '12.330'
+      createdTime: 1693900486816
+      modifiedTime: 1693900486816
+      lastModifiedBy: CtisFurQNe9h7ABb
+      compendiumSource: Compendium.te001-core-rulebook.Items.CJz3Fe0Ld1tsBRYc
+      duplicateSource: null
+    _key: '!actors.items!CefD0chJeL6NrRVJ.qscZR782i9ypoNW4'
+  - _id: MXjTP0iOJzjmjAP2
+    name: IriMesh Clothing
+    type: armor
+    img: systems/torgeternity/images/icons/armor-icon.webp
+    effects: []
+    folder: null
+    sort: 40100000
+    flags:
+      core:
+        sourceId: Compendium.te001-core-rulebook.Items.Item.iqqKO58UXvYX0BOU
+    system:
+      cosm: panPacifica
+      description: "<p>A light textile woven by nano-machines. IriMesh looks and feels similar to silk, but with even more tensile strength. IriMesh can be worn at elegant banquets without looking out of place, and doesn’t raise security concerns at checkpoints.</p>\n<p>\_</p>\n<p>Found in <strong>Core Rules</strong></p>"
+      price: '250'
+      techlevel: 24
+      value: 12
+      bonus: 2
+      equipped: true
+      maxDex: null
+      minStrength: null
+      notes: ''
+      fatigue: null
+      secondaryAxiom:
+        selected: none
+        value: null
+    ownership:
+      default: 0
+      A9LyAqagoJJU3gDH: 3
+      CtisFurQNe9h7ABb: 3
+    _stats:
+      systemId: torgeternity
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
+      createdTime: 1711551146882
+      modifiedTime: 1722154620846
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Compendium.te001-core-rulebook.Items.Item.iqqKO58UXvYX0BOU
+      duplicateSource: null
+    _key: '!actors.items!CefD0chJeL6NrRVJ.MXjTP0iOJzjmjAP2'
+  - _id: 8N90vcxtBELt25E3
+    name: Spellcaster
+    type: perk
     img: systems/torgeternity/images/icons/reality-icon.webp
     effects: []
     folder: null
+    sort: 54800000
+    flags:
+      core: {}
     system:
       category: spellcraft
-      cosm: Other
-      description: >-
-        <p><strong>Cosms:</strong> Aysle, Core Earth, Cyberpapacy, Nile Empire,
-        Orrorsh, Tharkold</p>
-
-        <p>Those who delve into the arcane arts go by many names &mdash; mage,
-        wizard, witch, or warlock to name a few. Regardless of their particular
-        background, all can cast spells using any of the four primary types of
-        magical skill &mdash; <em>alteration</em>, <em>apportation</em>,
-        <em>conjuration</em>, or <em>divination magic</em>.</p>
-
-        <p>When this Perk is taken, the mage may choose any three spells from
-        her cosm&rsquo;s Spell List on page 186 for which she meets the minimum
-        skill. Spell details are explained in
-        @UUID[Compendium.te001-core-rulebook.rules.pwneQ55M0nnDH0Us.JournalEntryPage.PjteC3KQ7SI4gobV]{Magic}.</p>
-
-        <p><strong>New Spells:</strong> This Perk may be taken more than once.
-        Each time after the first, the character learns one additional
-        spell.</p>
-
-        <p>&nbsp;</p>
-
-        <p>Found in <strong>Core Rules</strong></p>
+      cosm: other
+      description: "<p><strong>Cosms:</strong> Aysle, Core Earth, Cyberpapacy, Nile Empire, Orrorsh, Tharkold</p><p>Those who delve into the arcane arts go by many names — mage, wizard, witch, or warlock to name a few. Regardless of their particular background, all can cast spells using any of the four primary types of magical skill — <em>alteration</em>, <em>apportation</em>, <em>conjuration</em>, or <em>divination magic</em>.</p><p>When this Perk is taken, the mage may choose any three spells from her cosm’s @UUID[Compendium.te001-core-rulebook.rules.JournalEntry.pwneQ55M0nnDH0Us.JournalEntryPage.PjteC3KQ7SI4gobV#available-spells]{Spell List} for which she meets the minimum skill.</p><p>The Core Earth Magic supplement provide some expanded @UUID[Compendium.te001-core-rulebook.rules.JournalEntry.VuPeUtSmf98Gws42.JournalEntryPage.aWRVocNcmjkxV1tL#available-spells]{Spell Lists}.</p><p>Spell details are explained in @UUID[Compendium.te001-core-rulebook.rules.pwneQ55M0nnDH0Us.JournalEntryPage.PjteC3KQ7SI4gobV]{Magic}.</p><p><strong>New Spells:</strong> This Perk may be taken more than once. Each time after the first, the character learns one additional spell.</p><p>\_</p><p>Found in <strong>Core Rules</strong></p>"
       prerequisites: At least one add in alteration, apportation, conjuration, or divination
       generalContradiction: false
       pulpPowers:
@@ -234,580 +284,139 @@ items:
         limitation09: ''
         limitation10: ''
         limitationNumber: 0
-      timestaken: '1'
+      timestaken: ''
+      secondaryAxiom:
+        selected: none
+        value: null
     ownership:
       default: 0
+      A9LyAqagoJJU3gDH: 3
+      VAnYow5sWS9EJzo0: 3
+      93AMwcGe6H37rcPA: 3
     _stats:
-      systemId: torgeternity
-      systemVersion: 3.1.1
+      compendiumSource: Compendium.te001-core-rulebook.Items.Item.veILcJaF0ucF9xAA
+      duplicateSource: null
       coreVersion: '12.330'
+      systemId: torgeternity
+      systemVersion: 12.2.0
       createdTime: null
-      modifiedTime: 1693900355593
-      lastModifiedBy: CtisFurQNe9h7ABb
-      compendiumSource: Item.gOZE58k6tfHDbUJ0
-      duplicateSource: null
-    _key: '!actors.items!CefD0chJeL6NrRVJ.yaftfIz25Ryczaqq'
-  - _id: SFdVeSet2JXoY01t
-    name: Sunglasses
-    type: gear
-    sort: 2200000
-    flags:
-      core:
-        sourceId: Item.Wi4lFW6mtBCZS8EY
-    img: systems/torgeternity/images/icons/gear-icon.webp
+      modifiedTime: null
+      lastModifiedBy: null
+    _key: '!actors.items!CefD0chJeL6NrRVJ.8N90vcxtBELt25E3'
+  - _id: w5jnKX7ZPYxR0WDO
+    name: Cyberware Implants
+    type: perk
+    img: systems/torgeternity/images/icons/reality-icon.webp
     effects: []
     folder: null
+    sort: 13100000
+    flags:
+      core: {}
     system:
-      cosm: nileEmpire
-      description: ''
-      price: '10'
-      techlevel: 20
-      value: 5
-      equippedClass: item-equipped
+      category: cyberware
+      cosm: cyberpapacy
+      description: "<p>When this Perk is selected, the character may choose up to $10 000 worth of @UUID[Compendium.te001-core-rulebook.rules.JournalEntry.pwneQ55M0nnDH0Us.JournalEntryPage.qKdamp4rrcX6TTt0#cyberware]{Cyberware}.</p><p>Official Church-approved cyberware is linked directly to the GodNet and carefully monitored. Devices bought via this Perk are <q>hacked</q> and don’t link to the GodNet (unless the wearer wants it to for some reason). Its installation is safe and free from risk of injury.</p><p>Hacked cyberware is a crime in the Cyberpapacy, however. Heroes who <q>chrome</q> their bodies best beware of the Church Police—they are <em>always</em> watching.</p><p><strong>New Implants:</strong> This Perk may be taken more than once. Each time after the first, it grants the user another $5 000 worth of implants.</p><p>\_</p><p>Found in <strong>Core Rules</strong></p>"
+      prerequisites: ''
+      generalContradiction: false
+      pulpPowers:
+        enhancement01:
+          description: ''
+          taken: false
+          title: ''
+        enhancement02:
+          description: ''
+          taken: false
+          title: ''
+        enhancement03:
+          description: ''
+          taken: false
+          title: ''
+        enhancement04:
+          description: ''
+          taken: false
+          title: ''
+        enhancement05:
+          description: ''
+          taken: false
+          title: ''
+        enhancement06:
+          description: ''
+          taken: false
+          title: ''
+        enhancement07:
+          description: ''
+          taken: false
+          title: ''
+        enhancement08:
+          description: ''
+          taken: false
+          title: ''
+        enhancement09:
+          description: ''
+          taken: false
+          title: ''
+        enhancement10:
+          description: ''
+          taken: false
+          title: ''
+        enhancement11:
+          description: ''
+          taken: false
+          title: ''
+        enhancement12:
+          description: ''
+          taken: false
+          title: ''
+        enhancement13:
+          description: ''
+          taken: false
+          title: ''
+        enhancement14:
+          description: ''
+          taken: false
+          title: ''
+        enhancement15:
+          description: ''
+          taken: false
+          title: ''
+        enhancementNumber: 0
+        limitation01: ''
+        limitation02: ''
+        limitation03: ''
+        limitation04: ''
+        limitation05: ''
+        limitation06: ''
+        limitation07: ''
+        limitation08: ''
+        limitation09: ''
+        limitation10: ''
+        limitationNumber: 0
+      timestaken: ''
+      secondaryAxiom:
+        selected: none
+        value: null
     ownership:
       default: 0
+      A9LyAqagoJJU3gDH: 3
+      VAnYow5sWS9EJzo0: 3
+      93AMwcGe6H37rcPA: 3
     _stats:
+      compendiumSource: Compendium.te001-core-rulebook.Items.Item.8LBHAgahJO6xorta
+      duplicateSource: null
+      coreVersion: '12.330'
       systemId: torgeternity
       systemVersion: 12.2.0
-      coreVersion: '12.330'
       createdTime: null
-      modifiedTime: 1722154587766
-      lastModifiedBy: 93AMwcGe6H37rcPA
-      compendiumSource: Item.Wi4lFW6mtBCZS8EY
-      duplicateSource: null
-    _key: '!actors.items!CefD0chJeL6NrRVJ.SFdVeSet2JXoY01t'
-  - _id: hAArbMfImIilyKBK
-    name: GWI GodMeeter
-    type: firearm
-    img: systems/torgeternity/images/icons/firearm-icon.webp
-    effects: []
-    folder: null
-    sort: 0
-    flags:
-      core:
-        sourceId: Compendium.te001-core-rulebook.Items.pBPp45py3ynKoMI1
-    system:
-      cosm: cyberpapacy
-      description: >-
-        <p>The most common sidearm in use by the Church Police. It’s a high
-        caliber and very loud firearm. Like other GWI weapons it has a limited
-        artificial intelligence built in—not to assist with firing but to
-        disable functions and preach at miscreants if the weapon falls into the
-        wrong hands. The gun is also capable of selecting between different
-        types of ammunition by vocal command if more than one type is
-        loaded.</p>
-
-        <p>&nbsp;</p>
-
-        <p>Found in <strong>Core Rules</strong></p>
-      price: '450'
-      techlevel: 26
-      value: 13
-      ammo:
-        max: 25
-        value: 25
-      ap: 0
-      attackWith: fireCombat
-      chatNote: ''
-      damage: 15
-      damageType: flat
-      equipped: true
-      equippedClass: .item-unequipped
-      notes: ''
-      range: 10 / 25 / 40
-    ownership:
-      default: 0
-      A9LyAqagoJJU3gDH: 3
-      CtisFurQNe9h7ABb: 3
-    _stats:
-      systemId: torgeternity
-      systemVersion: 12.2.0
-      coreVersion: '12.330'
-      createdTime: 1693900431785
-      modifiedTime: 1722108680119
-      lastModifiedBy: 93AMwcGe6H37rcPA
-      compendiumSource: Compendium.te001-core-rulebook.Items.pBPp45py3ynKoMI1
-      duplicateSource: null
-    _key: '!actors.items!CefD0chJeL6NrRVJ.hAArbMfImIilyKBK'
-  - _id: ptj1Hps6YOKo6uRC
-    name: Hexxer MK II
-    type: implant
-    img: systems/torgeternity/images/icons/cyberware-icon.webp
-    effects: []
-    folder: null
-    sort: 0
-    flags:
-      core:
-        sourceId: Compendium.te001-core-rulebook.Items.ThXFhhCEysLaKu33
-    system:
-      cosm: cyberpapacy
-      description: >-
-        <p>An upgrade to the hexxer stores the energy from Backlash and allows
-        the warlock or witch to actually <em>use</em> it in powering her own
-        spells.</p><p>After a spellcaster suffers Backlash, the hexxer MK II
-        works like a MK I above, negating half the shock from a failed spell. In
-        addition, the amount of shock negated is automatically applied as a
-        bonus on the character’s next spellcasting test. The energy dissipates
-        after one minute (six rounds), so it must be used within that time frame
-        or the bonus is lost.</p>
-
-        <p>updated in Cyberpapacy Sourcebook</p>
-
-        <p>&nbsp;</p>
-
-        <p>Found in <strong>Core Rules, Cyberpapacy Sourcebook</strong></p>
-      price: 10K
-      techlevel: 26
-      value: 20
-      notes: ''
-      equippedClass: item-equipped
-    ownership:
-      default: 0
-      A9LyAqagoJJU3gDH: 3
-      CtisFurQNe9h7ABb: 3
-    _stats:
-      systemId: torgeternity
-      systemVersion: 12.2.0
-      coreVersion: '12.330'
-      createdTime: 1693900468752
-      modifiedTime: 1722154648375
-      lastModifiedBy: 93AMwcGe6H37rcPA
-      compendiumSource: Compendium.te001-core-rulebook.Items.ThXFhhCEysLaKu33
-      duplicateSource: null
-    _key: '!actors.items!CefD0chJeL6NrRVJ.ptj1Hps6YOKo6uRC'
-  - _id: qscZR782i9ypoNW4
-    name: Scrambler
-    type: spell
-    img: systems/torgeternity/images/icons/spell-icon.webp
-    effects: []
-    folder: null
-    sort: 0
-    flags:
-      core:
-        sourceId: Compendium.te001-core-rulebook.Items.CJz3Fe0Ld1tsBRYc
-    system:
-      ap: 0
-      applyArmor: false
-      applySize: false
-      axiom: 9
-      castingtime: 1 action
-      damage: ''
-      description: >-
-        <p>Used primarily in the watchdog regime of the Cyberpapacy,
-        <em>scrambler</em> obscures everyone in the affected area from all
-        security and surveillance systems.</p>
-
-        <p>Captured video and voices become blurry and unidentifiable to such
-        devices, and targeting bonuses from smart ammunition and augmented
-        reality HUDs are negated.</p>
-
-        <p>&nbsp;</p>
-
-        <p>Found in <strong>Core Rules</strong></p>
-      dn: standard
-      dnType: ''
-      duration: 10 minutes
-      good: The Range is increased to a 100-meter radius
-      isAttack: false
-      modifier: ''
-      outstanding: >-
-        The caster’s video and voice are completely erased and the duration
-        increases to an last hour
-      range: 50 meters radius
-      skill: alteration
-      skilllevel: '10'
-      targetDefense: ''
-    ownership:
-      default: 0
-      A9LyAqagoJJU3gDH: 3
-      CtisFurQNe9h7ABb: 3
-    _stats:
-      systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '12.330'
-      createdTime: 1693900486816
-      modifiedTime: 1693900486816
-      lastModifiedBy: CtisFurQNe9h7ABb
-      compendiumSource: Compendium.te001-core-rulebook.Items.CJz3Fe0Ld1tsBRYc
-      duplicateSource: null
-    _key: '!actors.items!CefD0chJeL6NrRVJ.qscZR782i9ypoNW4'
-  - _id: VSTa5ELcl9p7EBkP
+      modifiedTime: null
+      lastModifiedBy: null
+    _key: '!actors.items!CefD0chJeL6NrRVJ.w5jnKX7ZPYxR0WDO'
+  - _id: XuKxoZ61AaEax8wH
     name: Diminish
     type: spell
     img: systems/torgeternity/images/icons/spell-icon.webp
-    effects:
-      - _id: omNOzZ0XMUcWG8ug
-        changes:
-          - key: system.attributes.charisma.value
-            mode: 2
-            value: '-2'
-            priority: null
-        disabled: true
-        duration:
-          startTime: null
-          rounds: 3
-          seconds: null
-          combat: null
-          turns: null
-          startRound: null
-          startTurn: null
-        origin: Compendium.te001-core-rulebook.Items.864xQmuyAFxvr1yc
-        transfer: true
-        flags: {}
-        tint: '#ffffff'
-        name: Charisma standard
-        description: ''
-        statuses: []
-        _stats:
-          coreVersion: '12.330'
-          systemId: null
-          systemVersion: null
-          createdTime: null
-          modifiedTime: null
-          lastModifiedBy: null
-          compendiumSource: null
-          duplicateSource: null
-        img: icons/svg/aura.svg
-        type: base
-        system: {}
-        sort: 0
-        _key: >-
-          !actors.items.effects!CefD0chJeL6NrRVJ.VSTa5ELcl9p7EBkP.omNOzZ0XMUcWG8ug
-      - _id: VHZng4yudWMRSOSt
-        changes:
-          - key: system.attributes.charisma.value
-            mode: 2
-            value: '-4'
-            priority: null
-        disabled: true
-        duration:
-          startTime: null
-          rounds: 3
-          seconds: null
-          combat: null
-          turns: null
-          startRound: null
-          startTurn: null
-        origin: Compendium.te001-core-rulebook.Items.864xQmuyAFxvr1yc
-        transfer: true
-        flags: {}
-        tint: '#ffffff'
-        name: Charisma good
-        description: ''
-        statuses: []
-        _stats:
-          coreVersion: '12.330'
-          systemId: null
-          systemVersion: null
-          createdTime: null
-          modifiedTime: null
-          lastModifiedBy: null
-          compendiumSource: null
-          duplicateSource: null
-        img: icons/svg/aura.svg
-        type: base
-        system: {}
-        sort: 0
-        _key: >-
-          !actors.items.effects!CefD0chJeL6NrRVJ.VSTa5ELcl9p7EBkP.VHZng4yudWMRSOSt
-      - _id: qhrqwAtBu5WsfpkR
-        changes:
-          - key: system.attributes.dexterity.value
-            mode: 2
-            value: '-2'
-            priority: null
-        disabled: true
-        duration:
-          startTime: null
-          rounds: 3
-          seconds: null
-          combat: null
-          turns: null
-          startRound: null
-          startTurn: null
-        origin: Compendium.te001-core-rulebook.Items.864xQmuyAFxvr1yc
-        transfer: true
-        flags: {}
-        tint: '#ffffff'
-        name: Dexterity standard
-        description: ''
-        statuses: []
-        _stats:
-          coreVersion: '12.330'
-          systemId: null
-          systemVersion: null
-          createdTime: null
-          modifiedTime: null
-          lastModifiedBy: null
-          compendiumSource: null
-          duplicateSource: null
-        img: icons/svg/aura.svg
-        type: base
-        system: {}
-        sort: 0
-        _key: >-
-          !actors.items.effects!CefD0chJeL6NrRVJ.VSTa5ELcl9p7EBkP.qhrqwAtBu5WsfpkR
-      - _id: 8yjaFmg1SWqPCtvK
-        changes:
-          - key: system.attributes.dexterity.value
-            mode: 2
-            value: '-4'
-            priority: null
-        disabled: true
-        duration:
-          startTime: null
-          rounds: 3
-          seconds: null
-          combat: null
-          turns: null
-          startRound: null
-          startTurn: null
-        origin: Compendium.te001-core-rulebook.Items.864xQmuyAFxvr1yc
-        transfer: true
-        flags: {}
-        tint: '#ffffff'
-        name: Dexterity good
-        description: ''
-        statuses: []
-        _stats:
-          coreVersion: '12.330'
-          systemId: null
-          systemVersion: null
-          createdTime: null
-          modifiedTime: null
-          lastModifiedBy: null
-          compendiumSource: null
-          duplicateSource: null
-        img: icons/svg/aura.svg
-        type: base
-        system: {}
-        sort: 0
-        _key: >-
-          !actors.items.effects!CefD0chJeL6NrRVJ.VSTa5ELcl9p7EBkP.8yjaFmg1SWqPCtvK
-      - _id: oa9aYvLCKtjaMWbv
-        changes:
-          - key: system.attributes.mind.value
-            mode: 2
-            value: '-2'
-            priority: null
-        disabled: true
-        duration:
-          startTime: null
-          rounds: 3
-          seconds: null
-          combat: null
-          turns: null
-          startRound: null
-          startTurn: null
-        origin: Compendium.te001-core-rulebook.Items.864xQmuyAFxvr1yc
-        transfer: true
-        flags: {}
-        tint: '#ffffff'
-        name: Mind standard
-        description: ''
-        statuses: []
-        _stats:
-          coreVersion: '12.330'
-          systemId: null
-          systemVersion: null
-          createdTime: null
-          modifiedTime: null
-          lastModifiedBy: null
-          compendiumSource: null
-          duplicateSource: null
-        img: icons/svg/aura.svg
-        type: base
-        system: {}
-        sort: 0
-        _key: >-
-          !actors.items.effects!CefD0chJeL6NrRVJ.VSTa5ELcl9p7EBkP.oa9aYvLCKtjaMWbv
-      - _id: peLEnVC6yzMlvmZN
-        changes:
-          - key: system.attributes.mind.value
-            mode: 2
-            value: '-4'
-            priority: null
-        disabled: true
-        duration:
-          startTime: null
-          rounds: 3
-          seconds: null
-          combat: null
-          turns: null
-          startRound: null
-          startTurn: null
-        origin: Compendium.te001-core-rulebook.Items.864xQmuyAFxvr1yc
-        transfer: true
-        flags: {}
-        tint: '#ffffff'
-        name: Mind good
-        description: ''
-        statuses: []
-        _stats:
-          coreVersion: '12.330'
-          systemId: null
-          systemVersion: null
-          createdTime: null
-          modifiedTime: null
-          lastModifiedBy: null
-          compendiumSource: null
-          duplicateSource: null
-        img: icons/svg/aura.svg
-        type: base
-        system: {}
-        sort: 0
-        _key: >-
-          !actors.items.effects!CefD0chJeL6NrRVJ.VSTa5ELcl9p7EBkP.peLEnVC6yzMlvmZN
-      - _id: taDmPAZDplG5xhM5
-        changes:
-          - key: system.attributes.spirit.value
-            mode: 2
-            value: '-2'
-            priority: null
-        disabled: true
-        duration:
-          startTime: null
-          rounds: 3
-          seconds: null
-          combat: null
-          turns: null
-          startRound: null
-          startTurn: null
-        origin: Compendium.te001-core-rulebook.Items.864xQmuyAFxvr1yc
-        transfer: true
-        flags: {}
-        tint: '#ffffff'
-        name: Spirit standard
-        description: ''
-        statuses: []
-        _stats:
-          coreVersion: '12.330'
-          systemId: null
-          systemVersion: null
-          createdTime: null
-          modifiedTime: null
-          lastModifiedBy: null
-          compendiumSource: null
-          duplicateSource: null
-        img: icons/svg/aura.svg
-        type: base
-        system: {}
-        sort: 0
-        _key: >-
-          !actors.items.effects!CefD0chJeL6NrRVJ.VSTa5ELcl9p7EBkP.taDmPAZDplG5xhM5
-      - _id: 2k82dCe5wlPw759X
-        changes:
-          - key: system.attributes.spirit.value
-            mode: 2
-            value: '-4'
-            priority: null
-        disabled: true
-        duration:
-          startTime: null
-          rounds: 3
-          seconds: null
-          combat: null
-          turns: null
-          startRound: null
-          startTurn: null
-        origin: Compendium.te001-core-rulebook.Items.864xQmuyAFxvr1yc
-        transfer: true
-        flags: {}
-        tint: '#ffffff'
-        name: Spirit good
-        description: ''
-        statuses: []
-        _stats:
-          coreVersion: '12.330'
-          systemId: null
-          systemVersion: null
-          createdTime: null
-          modifiedTime: null
-          lastModifiedBy: null
-          compendiumSource: null
-          duplicateSource: null
-        img: icons/svg/aura.svg
-        type: base
-        system: {}
-        sort: 0
-        _key: >-
-          !actors.items.effects!CefD0chJeL6NrRVJ.VSTa5ELcl9p7EBkP.2k82dCe5wlPw759X
-      - _id: UWNKSBTmF1KnYxjr
-        changes:
-          - key: system.attributes.strength.value
-            mode: 2
-            value: '-2'
-            priority: null
-        disabled: true
-        duration:
-          startTime: null
-          rounds: 3
-          seconds: null
-          combat: null
-          turns: null
-          startRound: null
-          startTurn: null
-        origin: Compendium.te001-core-rulebook.Items.864xQmuyAFxvr1yc
-        transfer: true
-        flags: {}
-        tint: '#ffffff'
-        name: Strength standard
-        description: ''
-        statuses: []
-        _stats:
-          coreVersion: '12.330'
-          systemId: null
-          systemVersion: null
-          createdTime: null
-          modifiedTime: null
-          lastModifiedBy: null
-          compendiumSource: null
-          duplicateSource: null
-        img: icons/svg/aura.svg
-        type: base
-        system: {}
-        sort: 0
-        _key: >-
-          !actors.items.effects!CefD0chJeL6NrRVJ.VSTa5ELcl9p7EBkP.UWNKSBTmF1KnYxjr
-      - _id: lFZRn74jzOnGXXt6
-        changes:
-          - key: system.attributes.strength.value
-            mode: 2
-            value: '-4'
-            priority: null
-        disabled: true
-        duration:
-          startTime: null
-          rounds: 3
-          seconds: null
-          combat: null
-          turns: null
-          startRound: null
-          startTurn: null
-        origin: Compendium.te001-core-rulebook.Items.864xQmuyAFxvr1yc
-        transfer: true
-        flags: {}
-        tint: '#ffffff'
-        name: Strength good
-        description: ''
-        statuses: []
-        _stats:
-          coreVersion: '12.330'
-          systemId: null
-          systemVersion: null
-          createdTime: null
-          modifiedTime: null
-          lastModifiedBy: null
-          compendiumSource: null
-          duplicateSource: null
-        img: icons/svg/aura.svg
-        type: base
-        system: {}
-        sort: 0
-        _key: >-
-          !actors.items.effects!CefD0chJeL6NrRVJ.VSTa5ELcl9p7EBkP.lFZRn74jzOnGXXt6
-    folder: null
-    sort: -100000
+    effects: []
+    folder: gjZiCPX5knOIpsHd
+    sort: 406250
     flags:
       core:
         sourceId: Compendium.te001-core-rulebook.Items.864xQmuyAFxvr1yc
@@ -817,22 +426,8 @@ items:
       applySize: false
       axiom: 10
       castingtime: 1 action
-      damage: ''
-      description: >-
-        <p><em>Diminish</em> reduces one of the opponent&rsquo;s attributes
-        (chosen when the spell is cast) and related skills by &minus;2. Separate
-        castings may affect multiple attributes.</p>
-
-        <p>Spellcasters mime an action related to the affected attribute while
-        casting&mdash;sneering to reduce <em>Spirit</em>, pretending to stumble
-        if reducing <em>Dexterity</em>, etc.</p>
-
-        <p>Reducing <em>Strength</em> or <em>Spirit</em> does <em>not</em>
-        reduce Toughness or Shock.</p>
-
-        <p>&nbsp;</p>
-
-        <p>Found in <strong>Core Rules</strong></p>
+      damage: 0
+      description: "<p><em>Diminish</em> reduces one of the opponent’s attributes (chosen when the spell is cast) and related skills by −2. Separate castings may affect multiple attributes.</p><p>Spellcasters mime an action related to the affected attribute while casting—sneering to reduce <em>Spirit</em>, pretending to stumble if reducing <em>Dexterity</em>, etc.</p><p>Reducing <em>Strength</em> or <em>Spirit</em> does <em>not</em> reduce Toughness or Shock.</p><p>@UUID[Compendium.torgeternity.macros.Macro.sZsA7sBGVaCJTzz0]{Buff!}</p><p>\_</p><p>Found in <strong>Core Rules</strong></p>"
       dn: targetWillpower
       dnType: ''
       duration: 3 rounds
@@ -850,576 +445,22 @@ items:
       default: 0
       A9LyAqagoJJU3gDH: 3
       CtisFurQNe9h7ABb: 3
+      93AMwcGe6H37rcPA: 3
     _stats:
-      systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '12.330'
-      createdTime: 1693900556128
-      modifiedTime: 1693900565655
-      lastModifiedBy: CtisFurQNe9h7ABb
       compendiumSource: Compendium.te001-core-rulebook.Items.864xQmuyAFxvr1yc
       duplicateSource: null
-    _key: '!actors.items!CefD0chJeL6NrRVJ.VSTa5ELcl9p7EBkP'
+      coreVersion: '12.330'
+      systemId: torgeternity
+      systemVersion: 12.2.0
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+    _key: '!actors.items!CefD0chJeL6NrRVJ.XuKxoZ61AaEax8wH'
   - name: Enhance
     type: spell
     img: systems/torgeternity/images/icons/spell-icon.webp
-    effects:
-      - _id: 9WViMPq2XDvvDtoC
-        changes:
-          - key: system.attributes.charisma.value
-            mode: 2
-            value: '1'
-            priority: null
-        disabled: true
-        duration:
-          startTime: null
-          rounds: 3
-          seconds: null
-          combat: null
-          turns: null
-          startRound: null
-          startTurn: null
-        origin: Compendium.te001-core-rulebook.Items.wFtHQvjizwV4c8U5
-        transfer: true
-        flags: {}
-        tint: '#ffffff'
-        name: Charisma standard
-        description: ''
-        statuses: []
-        _stats:
-          coreVersion: '12.330'
-          systemId: null
-          systemVersion: null
-          createdTime: null
-          modifiedTime: null
-          lastModifiedBy: null
-          compendiumSource: null
-          duplicateSource: null
-        img: icons/svg/aura.svg
-        type: base
-        system: {}
-        sort: 0
-        _key: >-
-          !actors.items.effects!CefD0chJeL6NrRVJ.340u8OZL2dvf6ySh.9WViMPq2XDvvDtoC
-      - _id: EOfmZf7RvStkQNQl
-        changes:
-          - key: system.attributes.charisma.value
-            mode: 2
-            value: '2'
-            priority: null
-        disabled: true
-        duration:
-          startTime: null
-          rounds: 3
-          seconds: null
-          combat: null
-          turns: null
-          startRound: null
-          startTurn: null
-        origin: Compendium.te001-core-rulebook.Items.wFtHQvjizwV4c8U5
-        transfer: true
-        flags: {}
-        tint: '#ffffff'
-        name: Charisma good
-        description: ''
-        statuses: []
-        _stats:
-          coreVersion: '12.330'
-          systemId: null
-          systemVersion: null
-          createdTime: null
-          modifiedTime: null
-          lastModifiedBy: null
-          compendiumSource: null
-          duplicateSource: null
-        img: icons/svg/aura.svg
-        type: base
-        system: {}
-        sort: 0
-        _key: >-
-          !actors.items.effects!CefD0chJeL6NrRVJ.340u8OZL2dvf6ySh.EOfmZf7RvStkQNQl
-      - _id: Rf1YMPXldcl5GFk6
-        changes:
-          - key: system.attributes.charisma.value
-            mode: 2
-            value: '3'
-            priority: null
-        disabled: true
-        duration:
-          startTime: null
-          rounds: 3
-          seconds: null
-          combat: null
-          turns: null
-          startRound: null
-          startTurn: null
-        origin: Compendium.te001-core-rulebook.Items.wFtHQvjizwV4c8U5
-        transfer: true
-        flags: {}
-        tint: '#ffffff'
-        name: Charisma outstanding
-        description: ''
-        statuses: []
-        _stats:
-          coreVersion: '12.330'
-          systemId: null
-          systemVersion: null
-          createdTime: null
-          modifiedTime: null
-          lastModifiedBy: null
-          compendiumSource: null
-          duplicateSource: null
-        img: icons/svg/aura.svg
-        type: base
-        system: {}
-        sort: 0
-        _key: >-
-          !actors.items.effects!CefD0chJeL6NrRVJ.340u8OZL2dvf6ySh.Rf1YMPXldcl5GFk6
-      - _id: jArJX8xDC1VVOkKF
-        changes:
-          - key: system.attributes.dexterity.value
-            mode: 2
-            value: '1'
-            priority: null
-        disabled: true
-        duration:
-          startTime: null
-          rounds: 3
-          seconds: null
-          combat: null
-          turns: null
-          startRound: null
-          startTurn: null
-        origin: Compendium.te001-core-rulebook.Items.wFtHQvjizwV4c8U5
-        transfer: true
-        flags: {}
-        tint: '#ffffff'
-        name: Dex standard
-        description: ''
-        statuses: []
-        _stats:
-          coreVersion: '12.330'
-          systemId: null
-          systemVersion: null
-          createdTime: null
-          modifiedTime: null
-          lastModifiedBy: null
-          compendiumSource: null
-          duplicateSource: null
-        img: icons/svg/aura.svg
-        type: base
-        system: {}
-        sort: 0
-        _key: >-
-          !actors.items.effects!CefD0chJeL6NrRVJ.340u8OZL2dvf6ySh.jArJX8xDC1VVOkKF
-      - _id: 8jHTk6h17MLViNar
-        changes:
-          - key: system.attributes.dexterity.value
-            mode: 2
-            value: '2'
-            priority: null
-        disabled: true
-        duration:
-          startTime: null
-          rounds: 3
-          seconds: null
-          combat: null
-          turns: null
-          startRound: null
-          startTurn: null
-        origin: Compendium.te001-core-rulebook.Items.wFtHQvjizwV4c8U5
-        transfer: true
-        flags: {}
-        tint: '#ffffff'
-        name: Dex good
-        description: ''
-        statuses: []
-        _stats:
-          coreVersion: '12.330'
-          systemId: null
-          systemVersion: null
-          createdTime: null
-          modifiedTime: null
-          lastModifiedBy: null
-          compendiumSource: null
-          duplicateSource: null
-        img: icons/svg/aura.svg
-        type: base
-        system: {}
-        sort: 0
-        _key: >-
-          !actors.items.effects!CefD0chJeL6NrRVJ.340u8OZL2dvf6ySh.8jHTk6h17MLViNar
-      - _id: W50hdNXwrRoOkugd
-        changes:
-          - key: system.attributes.dexterity.value
-            mode: 2
-            value: '3'
-            priority: null
-        disabled: true
-        duration:
-          startTime: null
-          rounds: 3
-          seconds: null
-          combat: null
-          turns: null
-          startRound: null
-          startTurn: null
-        origin: Compendium.te001-core-rulebook.Items.wFtHQvjizwV4c8U5
-        transfer: true
-        flags: {}
-        tint: '#ffffff'
-        name: Dex outstanding
-        description: ''
-        statuses: []
-        _stats:
-          coreVersion: '12.330'
-          systemId: null
-          systemVersion: null
-          createdTime: null
-          modifiedTime: null
-          lastModifiedBy: null
-          compendiumSource: null
-          duplicateSource: null
-        img: icons/svg/aura.svg
-        type: base
-        system: {}
-        sort: 0
-        _key: >-
-          !actors.items.effects!CefD0chJeL6NrRVJ.340u8OZL2dvf6ySh.W50hdNXwrRoOkugd
-      - _id: sWXTVS7t5OJfQ6bg
-        changes:
-          - key: system.attributes.mind.value
-            mode: 2
-            value: '1'
-            priority: null
-        disabled: true
-        duration:
-          startTime: null
-          rounds: 3
-          seconds: null
-          combat: null
-          turns: null
-          startRound: null
-          startTurn: null
-        origin: Compendium.te001-core-rulebook.Items.wFtHQvjizwV4c8U5
-        transfer: true
-        flags: {}
-        tint: '#ffffff'
-        name: Mind standard
-        description: ''
-        statuses: []
-        _stats:
-          coreVersion: '12.330'
-          systemId: null
-          systemVersion: null
-          createdTime: null
-          modifiedTime: null
-          lastModifiedBy: null
-          compendiumSource: null
-          duplicateSource: null
-        img: icons/svg/aura.svg
-        type: base
-        system: {}
-        sort: 0
-        _key: >-
-          !actors.items.effects!CefD0chJeL6NrRVJ.340u8OZL2dvf6ySh.sWXTVS7t5OJfQ6bg
-      - _id: nm3S04xM3BYBf2Gj
-        changes:
-          - key: system.attributes.mind.value
-            mode: 2
-            value: '2'
-            priority: null
-        disabled: true
-        duration:
-          startTime: null
-          rounds: 3
-          seconds: null
-          combat: null
-          turns: null
-          startRound: null
-          startTurn: null
-        origin: Compendium.te001-core-rulebook.Items.wFtHQvjizwV4c8U5
-        transfer: true
-        flags: {}
-        tint: '#ffffff'
-        name: Mind good
-        description: ''
-        statuses: []
-        _stats:
-          coreVersion: '12.330'
-          systemId: null
-          systemVersion: null
-          createdTime: null
-          modifiedTime: null
-          lastModifiedBy: null
-          compendiumSource: null
-          duplicateSource: null
-        img: icons/svg/aura.svg
-        type: base
-        system: {}
-        sort: 0
-        _key: >-
-          !actors.items.effects!CefD0chJeL6NrRVJ.340u8OZL2dvf6ySh.nm3S04xM3BYBf2Gj
-      - _id: h7iOh9fcE3It0nTN
-        changes:
-          - key: system.attributes.mind.value
-            mode: 2
-            value: '3'
-            priority: null
-        disabled: true
-        duration:
-          startTime: null
-          rounds: 3
-          seconds: null
-          combat: null
-          turns: null
-          startRound: null
-          startTurn: null
-        origin: Compendium.te001-core-rulebook.Items.wFtHQvjizwV4c8U5
-        transfer: true
-        flags: {}
-        tint: '#ffffff'
-        name: Mind outstanding
-        description: ''
-        statuses: []
-        _stats:
-          coreVersion: '12.330'
-          systemId: null
-          systemVersion: null
-          createdTime: null
-          modifiedTime: null
-          lastModifiedBy: null
-          compendiumSource: null
-          duplicateSource: null
-        img: icons/svg/aura.svg
-        type: base
-        system: {}
-        sort: 0
-        _key: >-
-          !actors.items.effects!CefD0chJeL6NrRVJ.340u8OZL2dvf6ySh.h7iOh9fcE3It0nTN
-      - _id: YqLTJzhU3xcKHVL3
-        changes:
-          - key: system.attributes.spirit.value
-            mode: 2
-            value: '1'
-            priority: null
-        disabled: true
-        duration:
-          startTime: null
-          rounds: 3
-          seconds: null
-          combat: null
-          turns: null
-          startRound: null
-          startTurn: null
-        origin: Compendium.te001-core-rulebook.Items.wFtHQvjizwV4c8U5
-        transfer: true
-        flags: {}
-        tint: '#ffffff'
-        name: Spirit standard
-        description: ''
-        statuses: []
-        _stats:
-          coreVersion: '12.330'
-          systemId: null
-          systemVersion: null
-          createdTime: null
-          modifiedTime: null
-          lastModifiedBy: null
-          compendiumSource: null
-          duplicateSource: null
-        img: icons/svg/aura.svg
-        type: base
-        system: {}
-        sort: 0
-        _key: >-
-          !actors.items.effects!CefD0chJeL6NrRVJ.340u8OZL2dvf6ySh.YqLTJzhU3xcKHVL3
-      - _id: lMcXTiaLaNhiMFJR
-        changes:
-          - key: system.attributes.spirit.value
-            mode: 2
-            value: '2'
-            priority: null
-        disabled: true
-        duration:
-          startTime: null
-          rounds: 3
-          seconds: null
-          combat: null
-          turns: null
-          startRound: null
-          startTurn: null
-        origin: Compendium.te001-core-rulebook.Items.wFtHQvjizwV4c8U5
-        transfer: true
-        flags: {}
-        tint: '#ffffff'
-        name: Spirit good
-        description: ''
-        statuses: []
-        _stats:
-          coreVersion: '12.330'
-          systemId: null
-          systemVersion: null
-          createdTime: null
-          modifiedTime: null
-          lastModifiedBy: null
-          compendiumSource: null
-          duplicateSource: null
-        img: icons/svg/aura.svg
-        type: base
-        system: {}
-        sort: 0
-        _key: >-
-          !actors.items.effects!CefD0chJeL6NrRVJ.340u8OZL2dvf6ySh.lMcXTiaLaNhiMFJR
-      - _id: 234dh0okpYsA8BzI
-        changes:
-          - key: system.attributes.spirit.value
-            mode: 2
-            value: '3'
-            priority: null
-        disabled: true
-        duration:
-          startTime: null
-          rounds: 3
-          seconds: null
-          combat: null
-          turns: null
-          startRound: null
-          startTurn: null
-        origin: Compendium.te001-core-rulebook.Items.wFtHQvjizwV4c8U5
-        transfer: true
-        flags: {}
-        tint: '#ffffff'
-        name: Spirit outstanding
-        description: ''
-        statuses: []
-        _stats:
-          coreVersion: '12.330'
-          systemId: null
-          systemVersion: null
-          createdTime: null
-          modifiedTime: null
-          lastModifiedBy: null
-          compendiumSource: null
-          duplicateSource: null
-        img: icons/svg/aura.svg
-        type: base
-        system: {}
-        sort: 0
-        _key: >-
-          !actors.items.effects!CefD0chJeL6NrRVJ.340u8OZL2dvf6ySh.234dh0okpYsA8BzI
-      - _id: xRct8r66mTLWj6Tl
-        changes:
-          - key: system.attributes.strength.value
-            mode: 2
-            value: '1'
-            priority: null
-        disabled: true
-        duration:
-          startTime: null
-          rounds: 3
-          seconds: null
-          combat: null
-          turns: null
-          startRound: null
-          startTurn: null
-        origin: Compendium.te001-core-rulebook.Items.wFtHQvjizwV4c8U5
-        transfer: true
-        flags: {}
-        tint: '#ffffff'
-        name: Strength standard
-        description: ''
-        statuses: []
-        _stats:
-          coreVersion: '12.330'
-          systemId: null
-          systemVersion: null
-          createdTime: null
-          modifiedTime: null
-          lastModifiedBy: null
-          compendiumSource: null
-          duplicateSource: null
-        img: icons/svg/aura.svg
-        type: base
-        system: {}
-        sort: 0
-        _key: >-
-          !actors.items.effects!CefD0chJeL6NrRVJ.340u8OZL2dvf6ySh.xRct8r66mTLWj6Tl
-      - _id: hSW5iNqiiN3c04gL
-        changes:
-          - key: system.attributes.strength.value
-            mode: 2
-            value: '2'
-            priority: null
-        disabled: true
-        duration:
-          startTime: null
-          rounds: 3
-          seconds: null
-          combat: null
-          turns: null
-          startRound: null
-          startTurn: null
-        origin: Compendium.te001-core-rulebook.Items.wFtHQvjizwV4c8U5
-        transfer: true
-        flags: {}
-        tint: '#ffffff'
-        name: Strength good
-        description: ''
-        statuses: []
-        _stats:
-          coreVersion: '12.330'
-          systemId: null
-          systemVersion: null
-          createdTime: null
-          modifiedTime: null
-          lastModifiedBy: null
-          compendiumSource: null
-          duplicateSource: null
-        img: icons/svg/aura.svg
-        type: base
-        system: {}
-        sort: 0
-        _key: >-
-          !actors.items.effects!CefD0chJeL6NrRVJ.340u8OZL2dvf6ySh.hSW5iNqiiN3c04gL
-      - _id: 5KieVd3U508KPbuu
-        changes:
-          - key: system.attributes.strength.value
-            mode: 2
-            value: '3'
-            priority: null
-        disabled: true
-        duration:
-          startTime: null
-          rounds: 3
-          seconds: null
-          combat: null
-          turns: null
-          startRound: null
-          startTurn: null
-        origin: Compendium.te001-core-rulebook.Items.wFtHQvjizwV4c8U5
-        transfer: true
-        flags: {}
-        tint: '#ffffff'
-        name: Strength outstanding
-        description: ''
-        statuses: []
-        _stats:
-          coreVersion: '12.330'
-          systemId: null
-          systemVersion: null
-          createdTime: null
-          modifiedTime: null
-          lastModifiedBy: null
-          compendiumSource: null
-          duplicateSource: null
-        img: icons/svg/aura.svg
-        type: base
-        system: {}
-        sort: 0
-        _key: >-
-          !actors.items.effects!CefD0chJeL6NrRVJ.340u8OZL2dvf6ySh.5KieVd3U508KPbuu
-    folder: null
+    effects: []
+    folder: gjZiCPX5knOIpsHd
     flags:
       core:
         sourceId: Compendium.te001-core-rulebook.Items.Item.wFtHQvjizwV4c8U5
@@ -1429,24 +470,8 @@ items:
       applySize: false
       axiom: 10
       castingtime: 1 action
-      damage: ''
-      description: >-
-        <p>This spell enhances a single attribute of the caster or an ally by
-        +1. Multiple allies may be enhanced at the same time so long as all are
-        within range and the caster uses the Multi-Target option. The DN is the
-        attribute to be affected&mdash;the better someone&rsquo;s ability, the
-        harder it is to improve on it. Different attributes may be increased
-        with separate castings.</p>
-
-        <p>If the caster increases <em>Strength</em> or <em>Spirit</em>, it does
-        <em>not</em> increase Toughness or Shock. Mages pantomime some aspect of
-        the attribute to be increased while casting&mdash;cracking their
-        knuckles to improve <em>Dexterity</em>, flexing their muscles to enhance
-        <em>Strength</em>, and so on.</p>
-
-        <p>&nbsp;</p>
-
-        <p>Found in <strong>Core Rules</strong></p>
+      damage: 0
+      description: "<p>This spell enhances a single attribute of the caster or an ally by +1. Multiple allies may be enhanced at the same time so long as all are within range and the caster uses the Multi-Target option. The DN is the attribute to be affected—the better someone’s ability, the harder it is to improve on it. Different attributes may be increased with separate castings.</p><p>If the caster increases <em>Strength</em> or <em>Spirit</em>, it does <em>not</em> increase Toughness or Shock. Mages pantomime some aspect of the attribute to be increased while casting—cracking their knuckles to improve <em>Dexterity</em>, flexing their muscles to enhance <em>Strength</em>, and so on.</p><p>@UUID[Compendium.torgeternity.macros.Macro.sZsA7sBGVaCJTzz0]{Buff!}</p><p>\_</p><p>Found in <strong>Core Rules</strong></p>"
       dn: targetCharisma
       dnType: ''
       duration: 3 rounds
@@ -1461,989 +486,20 @@ items:
     ownership:
       default: 0
       CtisFurQNe9h7ABb: 3
+      93AMwcGe6H37rcPA: 3
     _stats:
-      systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '12.330'
-      createdTime: 1693900551625
-      modifiedTime: 1693900567608
-      lastModifiedBy: CtisFurQNe9h7ABb
       compendiumSource: Compendium.te001-core-rulebook.Items.Item.wFtHQvjizwV4c8U5
       duplicateSource: null
-    _id: 340u8OZL2dvf6ySh
-    sort: -50000
-    _key: '!actors.items!CefD0chJeL6NrRVJ.340u8OZL2dvf6ySh'
-  - _id: MXjTP0iOJzjmjAP2
-    name: IriMesh Clothing
-    type: armor
-    img: systems/torgeternity/images/icons/armor-icon.webp
-    effects: []
-    folder: null
-    sort: 40100000
-    flags:
-      core:
-        sourceId: Compendium.te001-core-rulebook.Items.Item.iqqKO58UXvYX0BOU
-    system:
-      cosm: panPacifica
-      description: >-
-        <p>A light textile woven by nano-machines. IriMesh looks and feels
-        similar to silk, but with even more tensile strength. IriMesh can be
-        worn at elegant banquets without looking out of place, and doesn’t raise
-        security concerns at checkpoints.</p>
-
-        <p>&nbsp;</p>
-
-        <p>Found in <strong>Core Rules</strong></p>
-      price: '250'
-      techlevel: 24
-      value: 12
-      bonus: 2
-      equipped: true
-      equippedClass: item-equipped
-      maxDex: null
-      minStrength: null
-      notes: ''
-      fatigue: null
-    ownership:
-      default: 0
-      A9LyAqagoJJU3gDH: 3
-      CtisFurQNe9h7ABb: 3
-    _stats:
+      coreVersion: '12.330'
       systemId: torgeternity
       systemVersion: 12.2.0
-      coreVersion: '12.330'
-      createdTime: 1711551146882
-      modifiedTime: 1722154620846
-      lastModifiedBy: 93AMwcGe6H37rcPA
-      compendiumSource: Compendium.te001-core-rulebook.Items.Item.iqqKO58UXvYX0BOU
-      duplicateSource: null
-    _key: '!actors.items!CefD0chJeL6NrRVJ.MXjTP0iOJzjmjAP2'
-effects:
-  - _id: HBek5YSnVCsIigXg
-    changes:
-      - key: system.attributes.charisma.value
-        mode: 2
-        value: '-2'
-        priority: null
-    disabled: true
-    duration:
-      startTime: 0
-      rounds: 3
-      seconds: null
-      combat: null
-      turns: null
-      startRound: null
-      startTurn: null
-    origin: >-
-      Compendium.torgeternity.archetypes.Actor.CefD0chJeL6NrRVJ.Item.VSTa5ELcl9p7EBkP
-    transfer: false
-    flags: {}
-    tint: '#ffffff'
-    name: Charisma standard
-    description: ''
-    statuses: []
-    _stats:
-      coreVersion: '12.330'
-      systemId: null
-      systemVersion: null
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-    img: icons/svg/aura.svg
-    type: base
-    system: {}
-    sort: 0
-    _key: '!actors.effects!CefD0chJeL6NrRVJ.HBek5YSnVCsIigXg'
-  - _id: N5ybUsmnQ0LbILwO
-    changes:
-      - key: system.attributes.charisma.value
-        mode: 2
-        value: '-4'
-        priority: null
-    disabled: true
-    duration:
-      startTime: 0
-      rounds: 3
-      seconds: null
-      combat: null
-      turns: null
-      startRound: null
-      startTurn: null
-    origin: >-
-      Compendium.torgeternity.archetypes.Actor.CefD0chJeL6NrRVJ.Item.VSTa5ELcl9p7EBkP
-    transfer: false
-    flags: {}
-    tint: '#ffffff'
-    name: Charisma good
-    description: ''
-    statuses: []
-    _stats:
-      coreVersion: '12.330'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-    img: icons/svg/aura.svg
-    type: base
-    system: {}
-    sort: 0
-    _key: '!actors.effects!CefD0chJeL6NrRVJ.N5ybUsmnQ0LbILwO'
-  - _id: DeLIx2twFFhFIqbH
-    changes:
-      - key: system.attributes.dexterity.value
-        mode: 2
-        value: '-2'
-        priority: null
-    disabled: true
-    duration:
-      startTime: 0
-      rounds: 3
-      seconds: null
-      combat: null
-      turns: null
-      startRound: null
-      startTurn: null
-    origin: >-
-      Compendium.torgeternity.archetypes.Actor.CefD0chJeL6NrRVJ.Item.VSTa5ELcl9p7EBkP
-    transfer: false
-    flags: {}
-    tint: '#ffffff'
-    name: Dexterity standard
-    description: ''
-    statuses: []
-    _stats:
-      coreVersion: '12.330'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-    img: icons/svg/aura.svg
-    type: base
-    system: {}
-    sort: 0
-    _key: '!actors.effects!CefD0chJeL6NrRVJ.DeLIx2twFFhFIqbH'
-  - _id: TTFJLjDvFI2BE0F7
-    changes:
-      - key: system.attributes.dexterity.value
-        mode: 2
-        value: '-4'
-        priority: null
-    disabled: true
-    duration:
-      startTime: 0
-      rounds: 3
-      seconds: null
-      combat: null
-      turns: null
-      startRound: null
-      startTurn: null
-    origin: >-
-      Compendium.torgeternity.archetypes.Actor.CefD0chJeL6NrRVJ.Item.VSTa5ELcl9p7EBkP
-    transfer: false
-    flags: {}
-    tint: '#ffffff'
-    name: Dexterity good
-    description: ''
-    statuses: []
-    _stats:
-      coreVersion: '12.330'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-    img: icons/svg/aura.svg
-    type: base
-    system: {}
-    sort: 0
-    _key: '!actors.effects!CefD0chJeL6NrRVJ.TTFJLjDvFI2BE0F7'
-  - _id: L5b2R8sSi7O2nc0D
-    changes:
-      - key: system.attributes.mind.value
-        mode: 2
-        value: '-2'
-        priority: null
-    disabled: true
-    duration:
-      startTime: 0
-      rounds: 3
-      seconds: null
-      combat: null
-      turns: null
-      startRound: null
-      startTurn: null
-    origin: >-
-      Compendium.torgeternity.archetypes.Actor.CefD0chJeL6NrRVJ.Item.VSTa5ELcl9p7EBkP
-    transfer: false
-    flags: {}
-    tint: '#ffffff'
-    name: Mind standard
-    description: ''
-    statuses: []
-    _stats:
-      coreVersion: '12.330'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-    img: icons/svg/aura.svg
-    type: base
-    system: {}
-    sort: 0
-    _key: '!actors.effects!CefD0chJeL6NrRVJ.L5b2R8sSi7O2nc0D'
-  - _id: KpBDEMaPGfzK4hh6
-    changes:
-      - key: system.attributes.mind.value
-        mode: 2
-        value: '-4'
-        priority: null
-    disabled: true
-    duration:
-      startTime: 0
-      rounds: 3
-      seconds: null
-      combat: null
-      turns: null
-      startRound: null
-      startTurn: null
-    origin: >-
-      Compendium.torgeternity.archetypes.Actor.CefD0chJeL6NrRVJ.Item.VSTa5ELcl9p7EBkP
-    transfer: false
-    flags: {}
-    tint: '#ffffff'
-    name: Mind good
-    description: ''
-    statuses: []
-    _stats:
-      coreVersion: '12.330'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-    img: icons/svg/aura.svg
-    type: base
-    system: {}
-    sort: 0
-    _key: '!actors.effects!CefD0chJeL6NrRVJ.KpBDEMaPGfzK4hh6'
-  - _id: M8MPq89yQufKh3NX
-    changes:
-      - key: system.attributes.spirit.value
-        mode: 2
-        value: '-2'
-        priority: null
-    disabled: true
-    duration:
-      startTime: 0
-      rounds: 3
-      seconds: null
-      combat: null
-      turns: null
-      startRound: null
-      startTurn: null
-    origin: >-
-      Compendium.torgeternity.archetypes.Actor.CefD0chJeL6NrRVJ.Item.VSTa5ELcl9p7EBkP
-    transfer: false
-    flags: {}
-    tint: '#ffffff'
-    name: Spirit standard
-    description: ''
-    statuses: []
-    _stats:
-      coreVersion: '12.330'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-    img: icons/svg/aura.svg
-    type: base
-    system: {}
-    sort: 0
-    _key: '!actors.effects!CefD0chJeL6NrRVJ.M8MPq89yQufKh3NX'
-  - _id: 1d4MWhBO7MF4VMrA
-    changes:
-      - key: system.attributes.spirit.value
-        mode: 2
-        value: '-4'
-        priority: null
-    disabled: true
-    duration:
-      startTime: 0
-      rounds: 3
-      seconds: null
-      combat: null
-      turns: null
-      startRound: null
-      startTurn: null
-    origin: >-
-      Compendium.torgeternity.archetypes.Actor.CefD0chJeL6NrRVJ.Item.VSTa5ELcl9p7EBkP
-    transfer: false
-    flags: {}
-    tint: '#ffffff'
-    name: Spirit good
-    description: ''
-    statuses: []
-    _stats:
-      coreVersion: '12.330'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-    img: icons/svg/aura.svg
-    type: base
-    system: {}
-    sort: 0
-    _key: '!actors.effects!CefD0chJeL6NrRVJ.1d4MWhBO7MF4VMrA'
-  - _id: pZAjwuc0ddr0s9kk
-    changes:
-      - key: system.attributes.strength.value
-        mode: 2
-        value: '-2'
-        priority: null
-    disabled: true
-    duration:
-      startTime: 0
-      rounds: 3
-      seconds: null
-      combat: null
-      turns: null
-      startRound: null
-      startTurn: null
-    origin: >-
-      Compendium.torgeternity.archetypes.Actor.CefD0chJeL6NrRVJ.Item.VSTa5ELcl9p7EBkP
-    transfer: false
-    flags: {}
-    tint: '#ffffff'
-    name: Strength standard
-    description: ''
-    statuses: []
-    _stats:
-      coreVersion: '12.330'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-    img: icons/svg/aura.svg
-    type: base
-    system: {}
-    sort: 0
-    _key: '!actors.effects!CefD0chJeL6NrRVJ.pZAjwuc0ddr0s9kk'
-  - _id: gjqkgZcTeuSmtr3C
-    changes:
-      - key: system.attributes.strength.value
-        mode: 2
-        value: '-4'
-        priority: null
-    disabled: true
-    duration:
-      startTime: 0
-      rounds: 3
-      seconds: null
-      combat: null
-      turns: null
-      startRound: null
-      startTurn: null
-    origin: >-
-      Compendium.torgeternity.archetypes.Actor.CefD0chJeL6NrRVJ.Item.VSTa5ELcl9p7EBkP
-    transfer: false
-    flags: {}
-    tint: '#ffffff'
-    name: Strength good
-    description: ''
-    statuses: []
-    _stats:
-      coreVersion: '12.330'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-    img: icons/svg/aura.svg
-    type: base
-    system: {}
-    sort: 0
-    _key: '!actors.effects!CefD0chJeL6NrRVJ.gjqkgZcTeuSmtr3C'
-  - _id: 5XPrGYRkPNzOAryz
-    changes:
-      - key: system.attributes.charisma.value
-        mode: 2
-        value: '1'
-        priority: null
-    disabled: true
-    duration:
-      startTime: 0
-      rounds: 3
-      seconds: null
-      combat: null
-      turns: null
-      startRound: null
-      startTurn: null
-    origin: >-
-      Compendium.torgeternity.archetypes.Actor.CefD0chJeL6NrRVJ.Item.340u8OZL2dvf6ySh
-    transfer: false
-    flags: {}
-    tint: '#ffffff'
-    name: Charisma standard
-    description: ''
-    statuses: []
-    _stats:
-      coreVersion: '12.330'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-    img: icons/svg/aura.svg
-    type: base
-    system: {}
-    sort: 0
-    _key: '!actors.effects!CefD0chJeL6NrRVJ.5XPrGYRkPNzOAryz'
-  - _id: mEgXopEsLWY7Sdpl
-    changes:
-      - key: system.attributes.charisma.value
-        mode: 2
-        value: '2'
-        priority: null
-    disabled: true
-    duration:
-      startTime: 0
-      rounds: 3
-      seconds: null
-      combat: null
-      turns: null
-      startRound: null
-      startTurn: null
-    origin: >-
-      Compendium.torgeternity.archetypes.Actor.CefD0chJeL6NrRVJ.Item.340u8OZL2dvf6ySh
-    transfer: false
-    flags: {}
-    tint: '#ffffff'
-    name: Charisma good
-    description: ''
-    statuses: []
-    _stats:
-      coreVersion: '12.330'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-    img: icons/svg/aura.svg
-    type: base
-    system: {}
-    sort: 0
-    _key: '!actors.effects!CefD0chJeL6NrRVJ.mEgXopEsLWY7Sdpl'
-  - _id: ML83x3ER1Ctg3igD
-    changes:
-      - key: system.attributes.charisma.value
-        mode: 2
-        value: '3'
-        priority: null
-    disabled: true
-    duration:
-      startTime: 0
-      rounds: 3
-      seconds: null
-      combat: null
-      turns: null
-      startRound: null
-      startTurn: null
-    origin: >-
-      Compendium.torgeternity.archetypes.Actor.CefD0chJeL6NrRVJ.Item.340u8OZL2dvf6ySh
-    transfer: false
-    flags: {}
-    tint: '#ffffff'
-    name: Charisma outstanding
-    description: ''
-    statuses: []
-    _stats:
-      coreVersion: '12.330'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-    img: icons/svg/aura.svg
-    type: base
-    system: {}
-    sort: 0
-    _key: '!actors.effects!CefD0chJeL6NrRVJ.ML83x3ER1Ctg3igD'
-  - _id: cgBZ8t2jqBFXlMUn
-    changes:
-      - key: system.attributes.dexterity.value
-        mode: 2
-        value: '1'
-        priority: null
-    disabled: true
-    duration:
-      startTime: 0
-      rounds: 3
-      seconds: null
-      combat: null
-      turns: null
-      startRound: null
-      startTurn: null
-    origin: >-
-      Compendium.torgeternity.archetypes.Actor.CefD0chJeL6NrRVJ.Item.340u8OZL2dvf6ySh
-    transfer: false
-    flags: {}
-    tint: '#ffffff'
-    name: Dex standard
-    description: ''
-    statuses: []
-    _stats:
-      coreVersion: '12.330'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-    img: icons/svg/aura.svg
-    type: base
-    system: {}
-    sort: 0
-    _key: '!actors.effects!CefD0chJeL6NrRVJ.cgBZ8t2jqBFXlMUn'
-  - _id: A3LRWUNy1Nn1DfPR
-    changes:
-      - key: system.attributes.dexterity.value
-        mode: 2
-        value: '2'
-        priority: null
-    disabled: true
-    duration:
-      startTime: 0
-      rounds: 3
-      seconds: null
-      combat: null
-      turns: null
-      startRound: null
-      startTurn: null
-    origin: >-
-      Compendium.torgeternity.archetypes.Actor.CefD0chJeL6NrRVJ.Item.340u8OZL2dvf6ySh
-    transfer: false
-    flags: {}
-    tint: '#ffffff'
-    name: Dex good
-    description: ''
-    statuses: []
-    _stats:
-      coreVersion: '12.330'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-    img: icons/svg/aura.svg
-    type: base
-    system: {}
-    sort: 0
-    _key: '!actors.effects!CefD0chJeL6NrRVJ.A3LRWUNy1Nn1DfPR'
-  - _id: 2pVAOX2vqC9kKJdu
-    changes:
-      - key: system.attributes.dexterity.value
-        mode: 2
-        value: '3'
-        priority: null
-    disabled: true
-    duration:
-      startTime: 0
-      rounds: 3
-      seconds: null
-      combat: null
-      turns: null
-      startRound: null
-      startTurn: null
-    origin: >-
-      Compendium.torgeternity.archetypes.Actor.CefD0chJeL6NrRVJ.Item.340u8OZL2dvf6ySh
-    transfer: false
-    flags: {}
-    tint: '#ffffff'
-    name: Dex outstanding
-    description: ''
-    statuses: []
-    _stats:
-      coreVersion: '12.330'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-    img: icons/svg/aura.svg
-    type: base
-    system: {}
-    sort: 0
-    _key: '!actors.effects!CefD0chJeL6NrRVJ.2pVAOX2vqC9kKJdu'
-  - _id: iJr858xk0nATQPfH
-    changes:
-      - key: system.attributes.mind.value
-        mode: 2
-        value: '1'
-        priority: null
-    disabled: true
-    duration:
-      startTime: 0
-      rounds: 3
-      seconds: null
-      combat: null
-      turns: null
-      startRound: null
-      startTurn: null
-    origin: >-
-      Compendium.torgeternity.archetypes.Actor.CefD0chJeL6NrRVJ.Item.340u8OZL2dvf6ySh
-    transfer: false
-    flags: {}
-    tint: '#ffffff'
-    name: Mind standard
-    description: ''
-    statuses: []
-    _stats:
-      coreVersion: '12.330'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-    img: icons/svg/aura.svg
-    type: base
-    system: {}
-    sort: 0
-    _key: '!actors.effects!CefD0chJeL6NrRVJ.iJr858xk0nATQPfH'
-  - _id: kwFRwKX7z1BPOlI8
-    changes:
-      - key: system.attributes.mind.value
-        mode: 2
-        value: '2'
-        priority: null
-    disabled: true
-    duration:
-      startTime: 0
-      rounds: 3
-      seconds: null
-      combat: null
-      turns: null
-      startRound: null
-      startTurn: null
-    origin: >-
-      Compendium.torgeternity.archetypes.Actor.CefD0chJeL6NrRVJ.Item.340u8OZL2dvf6ySh
-    transfer: false
-    flags: {}
-    tint: '#ffffff'
-    name: Mind good
-    description: ''
-    statuses: []
-    _stats:
-      coreVersion: '12.330'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-    img: icons/svg/aura.svg
-    type: base
-    system: {}
-    sort: 0
-    _key: '!actors.effects!CefD0chJeL6NrRVJ.kwFRwKX7z1BPOlI8'
-  - _id: t6DckcVa5QT41ufr
-    changes:
-      - key: system.attributes.mind.value
-        mode: 2
-        value: '3'
-        priority: null
-    disabled: true
-    duration:
-      startTime: 0
-      rounds: 3
-      seconds: null
-      combat: null
-      turns: null
-      startRound: null
-      startTurn: null
-    origin: >-
-      Compendium.torgeternity.archetypes.Actor.CefD0chJeL6NrRVJ.Item.340u8OZL2dvf6ySh
-    transfer: false
-    flags: {}
-    tint: '#ffffff'
-    name: Mind outstanding
-    description: ''
-    statuses: []
-    _stats:
-      coreVersion: '12.330'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-    img: icons/svg/aura.svg
-    type: base
-    system: {}
-    sort: 0
-    _key: '!actors.effects!CefD0chJeL6NrRVJ.t6DckcVa5QT41ufr'
-  - _id: hKUVE4AMJmeHU4Ui
-    changes:
-      - key: system.attributes.spirit.value
-        mode: 2
-        value: '1'
-        priority: null
-    disabled: true
-    duration:
-      startTime: 0
-      rounds: 3
-      seconds: null
-      combat: null
-      turns: null
-      startRound: null
-      startTurn: null
-    origin: >-
-      Compendium.torgeternity.archetypes.Actor.CefD0chJeL6NrRVJ.Item.340u8OZL2dvf6ySh
-    transfer: false
-    flags: {}
-    tint: '#ffffff'
-    name: Spirit standard
-    description: ''
-    statuses: []
-    _stats:
-      coreVersion: '12.330'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-    img: icons/svg/aura.svg
-    type: base
-    system: {}
-    sort: 0
-    _key: '!actors.effects!CefD0chJeL6NrRVJ.hKUVE4AMJmeHU4Ui'
-  - _id: gdFMoFrd2bvESeYD
-    changes:
-      - key: system.attributes.spirit.value
-        mode: 2
-        value: '2'
-        priority: null
-    disabled: true
-    duration:
-      startTime: 0
-      rounds: 3
-      seconds: null
-      combat: null
-      turns: null
-      startRound: null
-      startTurn: null
-    origin: >-
-      Compendium.torgeternity.archetypes.Actor.CefD0chJeL6NrRVJ.Item.340u8OZL2dvf6ySh
-    transfer: false
-    flags: {}
-    tint: '#ffffff'
-    name: Spirit good
-    description: ''
-    statuses: []
-    _stats:
-      coreVersion: '12.330'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-    img: icons/svg/aura.svg
-    type: base
-    system: {}
-    sort: 0
-    _key: '!actors.effects!CefD0chJeL6NrRVJ.gdFMoFrd2bvESeYD'
-  - _id: F5wjbOu8aWYpDnA9
-    changes:
-      - key: system.attributes.spirit.value
-        mode: 2
-        value: '3'
-        priority: null
-    disabled: true
-    duration:
-      startTime: 0
-      rounds: 3
-      seconds: null
-      combat: null
-      turns: null
-      startRound: null
-      startTurn: null
-    origin: >-
-      Compendium.torgeternity.archetypes.Actor.CefD0chJeL6NrRVJ.Item.340u8OZL2dvf6ySh
-    transfer: false
-    flags: {}
-    tint: '#ffffff'
-    name: Spirit outstanding
-    description: ''
-    statuses: []
-    _stats:
-      coreVersion: '12.330'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-    img: icons/svg/aura.svg
-    type: base
-    system: {}
-    sort: 0
-    _key: '!actors.effects!CefD0chJeL6NrRVJ.F5wjbOu8aWYpDnA9'
-  - _id: wRyn59BaQ91ihj7Z
-    changes:
-      - key: system.attributes.strength.value
-        mode: 2
-        value: '1'
-        priority: null
-    disabled: true
-    duration:
-      startTime: 0
-      rounds: 3
-      seconds: null
-      combat: null
-      turns: null
-      startRound: null
-      startTurn: null
-    origin: >-
-      Compendium.torgeternity.archetypes.Actor.CefD0chJeL6NrRVJ.Item.340u8OZL2dvf6ySh
-    transfer: false
-    flags: {}
-    tint: '#ffffff'
-    name: Strength standard
-    description: ''
-    statuses: []
-    _stats:
-      coreVersion: '12.330'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-    img: icons/svg/aura.svg
-    type: base
-    system: {}
-    sort: 0
-    _key: '!actors.effects!CefD0chJeL6NrRVJ.wRyn59BaQ91ihj7Z'
-  - _id: Ebqbdbcus8TSUqqK
-    changes:
-      - key: system.attributes.strength.value
-        mode: 2
-        value: '2'
-        priority: null
-    disabled: true
-    duration:
-      startTime: 0
-      rounds: 3
-      seconds: null
-      combat: null
-      turns: null
-      startRound: null
-      startTurn: null
-    origin: >-
-      Compendium.torgeternity.archetypes.Actor.CefD0chJeL6NrRVJ.Item.340u8OZL2dvf6ySh
-    transfer: false
-    flags: {}
-    tint: '#ffffff'
-    name: Strength good
-    description: ''
-    statuses: []
-    _stats:
-      coreVersion: '12.330'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-    img: icons/svg/aura.svg
-    type: base
-    system: {}
-    sort: 0
-    _key: '!actors.effects!CefD0chJeL6NrRVJ.Ebqbdbcus8TSUqqK'
-  - _id: zH5itX5bUeCJ54CH
-    changes:
-      - key: system.attributes.strength.value
-        mode: 2
-        value: '3'
-        priority: null
-    disabled: true
-    duration:
-      startTime: 0
-      rounds: 3
-      seconds: null
-      combat: null
-      turns: null
-      startRound: null
-      startTurn: null
-    origin: >-
-      Compendium.torgeternity.archetypes.Actor.CefD0chJeL6NrRVJ.Item.340u8OZL2dvf6ySh
-    transfer: false
-    flags: {}
-    tint: '#ffffff'
-    name: Strength outstanding
-    description: ''
-    statuses: []
-    _stats:
-      coreVersion: '12.330'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-    img: icons/svg/aura.svg
-    type: base
-    system: {}
-    sort: 0
-    _key: '!actors.effects!CefD0chJeL6NrRVJ.zH5itX5bUeCJ54CH'
+    _id: EPad9pMZNZO483aP
+    sort: 575000
+    _key: '!actors.items!CefD0chJeL6NrRVJ.EPad9pMZNZO483aP'
+effects: []
 folder: null
 sort: 100001
 flags: {}
@@ -2798,98 +854,7 @@ system:
     spirit: 16
     tech: 26
   details:
-    background: >-
-      <p><img class="charimg"
-      src="systems/torgeternity/images/characters/Cyberwitch.webp" alt=""
-      width="828" height="2010"></p>
-
-      <p class="moreheight"><a class="content-link" draggable="true"
-      data-uuid="Compendium.torgeternity.handouts.JournalEntry.Knhh8vqtjSylJo5Z.JournalEntryPage.v8EhlvFjQYGClORG"
-      data-id="v8EhlvFjQYGClORG" data-type="JournalEntryPage"
-      data-pack="torgeternity.handouts" data-tooltip="Image Page">Archetype -
-      The Cyberwitch</a></p>
-
-      <h3>Overview</h3>
-
-      <p>Witches come from a variety of backgrounds and belief systems
-      throughout Europe, but some have truly managed to harness the latent
-      Magical Axiom and cast spells far beyond anything Core Earth might have
-      supported.</p>
-
-      <p>Such power is a threat to Malraux, who has declared all practitioners
-      of magic &ldquo;blasphemous.&ldquo; You agree, and have decided to use
-      your power to protect the oppressed and topple the tyrannical
-      Antipope.</p>
-
-      <p>Of course, a little help from all this modern technology won&rsquo;t
-      hurt.</p>
-
-      <h3>Tactics</h3>
-
-      <p><em>Enhance </em>is a powerful and flexible spell. Boosting your
-      allies&rsquo; <em>Strength </em>increases melee damage,
-      while&nbsp;<em>Dexterity </em>improves both attacks and defenses.
-      Likewise, <em>diminish </em>is a bane to your foes, hampering attacks or
-      reducing their resistance to further spells.</p>
-
-      <p><em>Intimidation </em>and <em>trick </em>are your go-to interactions.
-      Take advantage of the Cyberpapacy&rsquo;s high Tech Axiom by using
-      powerful handguns and armor to supplement your magic. The Hexxer helps
-      mitigate the Cyberpapacy&rsquo;s powerful backlash, and even turns it into
-      an advantage.</p>
-
-      <h3>Moment of Crisis</h3>
-
-      <p>Malraux&rsquo;s regime oppresses all those who don&rsquo;t agree with
-      his dictates. Many resisted, and some came to harm from his legions of
-      corrupt Church Police. You stood against them, and somewhere along the way
-      transformed from a rebel to a hero to a Storm Knight.</p>
-
-      <h3>Quote</h3>
-
-      <p>&ldquo;<em>Abracadabra </em>might be the last thing you ever hear, mon
-      ami.&ldquo;</p>
-
-      <h3>Description</h3>
-
-      <p>You hide in crowds or shadows when you can. If examined closely your
-      Hexxer is a dead giveaway. It&rsquo;s an illegal implant with only one
-      purpose: to defy Malraux&rsquo;s ban on sorcery!</p>
-
-      <p>Once your disguise or cowl is dropped, however, your unrestrained power
-      is a true terror to behold.</p>
-
-      <h3>Agenda</h3>
-
-      <p>You fight for personal freedom and lash out at
-      authoritarianism&mdash;especially Malraux&rsquo;s oppressive and
-      self-righteous regime.</p>
-
-      <h3>Names</h3>
-
-      <p>Aure, Blaize, Faye, Gaea, Jean, Marion, Nicola, Paige, Sable, Viola</p>
-
-      <h3>Advancement Track (Optional)</h3>
-
-      <ul>
-
-      <li>(5 XP) Spellcaster (scry)</li>
-
-      <li>(7 XP) Spellcaster (pathfinder)</li>
-
-      <li>(1 XP) <em>taunt</em> +1</li>
-
-      <li>(2 XP) <em>unarmed combat</em> +2</li>
-
-      <li>(3 XP) <em>divination</em> +3</li>
-
-      <li>(3 XP) <em>dodge</em> +3</li>
-
-      <li>(4 XP) <em>alteration</em> +4</li>
-
-      <li>(5 XP) <em>alteration</em> +5</li>
-
-      </ul>
+    background: "<p><img class=\"charimg\" src=\"systems/torgeternity/images/characters/Cyberwitch.webp\" alt=\"\" width=\"828\" height=\"2010\" /></p>\n<p class=\"moreheight\"><a class=\"content-link\" draggable=\"true\" data-uuid=\"Compendium.torgeternity.handouts.JournalEntry.Knhh8vqtjSylJo5Z.JournalEntryPage.v8EhlvFjQYGClORG\" data-id=\"v8EhlvFjQYGClORG\" data-type=\"JournalEntryPage\" data-pack=\"torgeternity.handouts\" data-tooltip=\"Image Page\">Archetype - The Cyberwitch</a></p>\n<h3>Overview</h3>\n<p>Witches come from a variety of backgrounds and belief systems throughout Europe, but some have truly managed to harness the latent Magical Axiom and cast spells far beyond anything Core Earth might have supported.</p>\n<p>Such power is a threat to Malraux, who has declared all practitioners of magic “blasphemous.“ You agree, and have decided to use your power to protect the oppressed and topple the tyrannical Antipope.</p>\n<p>Of course, a little help from all this modern technology won’t hurt.</p>\n<h3>Tactics</h3>\n<p><em>Enhance </em>is a powerful and flexible spell. Boosting your allies’ <em>Strength </em>increases melee damage, while\_<em>Dexterity </em>improves both attacks and defenses. Likewise, <em>diminish </em>is a bane to your foes, hampering attacks or reducing their resistance to further spells.</p>\n<p><em>Intimidation </em>and <em>trick </em>are your go-to interactions. Take advantage of the Cyberpapacy’s high Tech Axiom by using powerful handguns and armor to supplement your magic. The Hexxer helps mitigate the Cyberpapacy’s powerful backlash, and even turns it into an advantage.</p>\n<h3>Moment of Crisis</h3>\n<p>Malraux’s regime oppresses all those who don’t agree with his dictates. Many resisted, and some came to harm from his legions of corrupt Church Police. You stood against them, and somewhere along the way transformed from a rebel to a hero to a Storm Knight.</p>\n<h3>Quote</h3>\n<p>“<em>Abracadabra </em>might be the last thing you ever hear, mon ami.“</p>\n<h3>Description</h3>\n<p>You hide in crowds or shadows when you can. If examined closely your Hexxer is a dead giveaway. It’s an illegal implant with only one purpose: to defy Malraux’s ban on sorcery!</p>\n<p>Once your disguise or cowl is dropped, however, your unrestrained power is a true terror to behold.</p>\n<h3>Agenda</h3>\n<p>You fight for personal freedom and lash out at authoritarianism—especially Malraux’s oppressive and self-righteous regime.</p>\n<h3>Names</h3>\n<p>Aure, Blaize, Faye, Gaea, Jean, Marion, Nicola, Paige, Sable, Viola</p>\n<h3>Advancement Track (Optional)</h3>\n<ul>\n<li>(5 XP) Spellcaster (scry)</li>\n<li>(7 XP) Spellcaster (pathfinder)</li>\n<li>(1 XP) <em>taunt</em> +1</li>\n<li>(2 XP) <em>unarmed combat</em> +2</li>\n<li>(3 XP) <em>divination</em> +3</li>\n<li>(3 XP) <em>dodge</em> +3</li>\n<li>(4 XP) <em>alteration</em> +4</li>\n<li>(5 XP) <em>alteration</em> +5</li>\n</ul>"
     race: human
     sizeBonus: normal
   editstate: false
@@ -2975,11 +940,11 @@ prototypeToken:
       texture: null
 _stats:
   systemId: torgeternity
-  systemVersion: 3.8.1
+  systemVersion: 12.2.0
   coreVersion: '12.330'
   createdTime: 1693893984135
-  modifiedTime: 1716827807628
-  lastModifiedBy: VAnYow5sWS9EJzo0
+  modifiedTime: 1722355493847
+  lastModifiedBy: 93AMwcGe6H37rcPA
   compendiumSource: null
   duplicateSource: null
 _key: '!actors!CefD0chJeL6NrRVJ'

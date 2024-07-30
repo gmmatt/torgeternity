@@ -19,7 +19,9 @@ items:
       price: ''
       techlevel: 15
       value: null
-      equippedClass: item-equipped
+      secondaryAxiom:
+        selected: none
+        value: null
     ownership:
       default: 0
     _stats:
@@ -48,7 +50,9 @@ items:
       price: '5'
       techlevel: 20
       value: 4
-      equippedClass: item-equipped
+      secondaryAxiom:
+        selected: none
+        value: null
     ownership:
       default: 0
     _stats:
@@ -77,7 +81,9 @@ items:
       price: '100'
       techlevel: 19
       value: 10
-      equippedClass: item-equipped
+      secondaryAxiom:
+        selected: none
+        value: null
     ownership:
       default: 0
     _stats:
@@ -108,7 +114,9 @@ items:
       price: '150'
       techlevel: 20
       value: 11
-      equippedClass: item-equipped
+      secondaryAxiom:
+        selected: none
+        value: null
     ownership:
       default: 0
     _stats:
@@ -121,128 +129,6 @@ items:
       compendiumSource: Item.zGj5mxLW7ygVnIKC
       duplicateSource: null
     _key: '!actors.items!REeNzywr6VElHSWZ.YNsCLlOR3zgPCtdI'
-  - _id: byweBvtHDmzgwQDj
-    name: Super Skill (Intimidation)
-    type: perk
-    img: systems/torgeternity/images/icons/reality-icon.webp
-    effects: []
-    folder: null
-    sort: 45700000
-    flags:
-      core:
-        sourceId: Compendium.te001-core-rulebook.Items.ohmish0RVlju7Qbk
-    system:
-      category: pulpPowers
-      cosm: nileEmpire
-      description: >-
-        <p>The pulp hero is exceptionally good at something. Maybe he&rsquo;s a
-        crack shot in <em>fire combat</em>, a mind unrivaled in
-        <em>science</em>, or has a wit that cuts his foes to the bone via
-        <em>taunt</em>.</p>
-
-        <p>When Super Skill is taken, the character increases any one skill by
-        two adds. She may exceed the usual maximum of +5 adds without taking the
-        Mastery Perk. (If the character has the Mastery Perk, it stacks with
-        Super Skill.) This stacks with all other skill increases and allows a
-        pulp hero to reach superhuman levels of competency far faster than
-        most.</p>
-
-        <p>Like Super Attribute, the champion may only take this Perk once
-        &mdash; she cannot have more than one Super Skill.</p>
-
-        <p>&nbsp;</p>
-
-        <p>Found in <strong>Core Rules</strong></p>
-      prerequisites: At least three adds in the selected skill
-      generalContradiction: true
-      pulpPowers:
-        enhancement01:
-          description: The skill is considered Favored.
-          taken: false
-          title: Favored
-        enhancement02:
-          description: The skill is increased to +4 adds.
-          taken: false
-          title: Power
-        enhancement03:
-          description: ''
-          taken: false
-          title: ''
-        enhancement04:
-          description: ''
-          taken: false
-          title: ''
-        enhancement05:
-          description: ''
-          taken: false
-          title: ''
-        enhancement06:
-          description: ''
-          taken: false
-          title: ''
-        enhancement07:
-          description: ''
-          taken: false
-          title: ''
-        enhancement08:
-          description: ''
-          taken: false
-          title: ''
-        enhancement09:
-          description: ''
-          taken: false
-          title: ''
-        enhancement10:
-          description: ''
-          taken: false
-          title: ''
-        enhancement11:
-          description: ''
-          taken: false
-          title: ''
-        enhancement12:
-          description: ''
-          taken: false
-          title: ''
-        enhancement13:
-          description: ''
-          taken: false
-          title: ''
-        enhancement14:
-          description: ''
-          taken: false
-          title: ''
-        enhancement15:
-          description: ''
-          taken: false
-          title: ''
-        enhancementNumber: 2
-        limitation01: ''
-        limitation02: ''
-        limitation03: ''
-        limitation04: ''
-        limitation05: ''
-        limitation06: ''
-        limitation07: ''
-        limitation08: ''
-        limitation09: ''
-        limitation10: ''
-        limitationNumber: 0
-      timestaken: '1'
-    ownership:
-      default: 0
-      A9LyAqagoJJU3gDH: 3
-      CtisFurQNe9h7ABb: 3
-    _stats:
-      systemId: torgeternity
-      systemVersion: 12.2.0
-      coreVersion: '12.330'
-      createdTime: 1693911046341
-      modifiedTime: 1722153193135
-      lastModifiedBy: 93AMwcGe6H37rcPA
-      compendiumSource: Compendium.te001-core-rulebook.Items.ohmish0RVlju7Qbk
-      duplicateSource: null
-    _key: '!actors.items!REeNzywr6VElHSWZ.byweBvtHDmzgwQDj'
   - _id: F5aP7JJO0Up7FJLN
     name: Mauser Pistol
     type: firearm
@@ -255,15 +141,7 @@ items:
         sourceId: Compendium.te001-core-rulebook.Items.IM84bwdaJWaAVAIj
     system:
       cosm: nileEmpire
-      description: >-
-        <p>An often-copied design that features a high muzzle velocity and
-        excellent penetration and a distinctive box magazine in front of the
-        trigger. It remains extremely popular in the Nile Empire, where
-        knock-offs are still manufactured.</p>
-
-        <p>&nbsp;</p>
-
-        <p>Found in <strong>Core Rules</strong></p>
+      description: "<p>An often-copied design that features a high muzzle velocity and excellent penetration and a distinctive box magazine in front of the trigger. It remains extremely popular in the Nile Empire, where knock-offs are still manufactured.</p>\n<p>\_</p>\n<p>Found in <strong>Core Rules</strong></p>"
       price: '250'
       techlevel: 20
       value: 12
@@ -276,9 +154,11 @@ items:
       damage: 13
       damageType: flat
       equipped: false
-      equippedClass: .item-unequipped
       notes: ''
       range: 10 / 25 / 40
+      secondaryAxiom:
+        selected: none
+        value: null
     ownership:
       default: 0
       A9LyAqagoJJU3gDH: 3
@@ -343,11 +223,13 @@ items:
       value: 10
       bonus: 1
       equipped: true
-      equippedClass: item-equipped
       maxDex: 12
       minStrength: null
       notes: Torso
       fatigue: null
+      secondaryAxiom:
+        selected: none
+        value: null
     ownership:
       default: 0
       A9LyAqagoJJU3gDH: 3
@@ -510,43 +392,263 @@ items:
       modifiedTime: 1722156409095
       lastModifiedBy: 93AMwcGe6H37rcPA
     _key: '!actors.items!REeNzywr6VElHSWZ.uGeVAUPHf5j4e5Gu'
+  - _id: A0o61qpmZKYS0Enn
+    name: Super Skill (Intimidation)
+    type: perk
+    img: systems/torgeternity/images/icons/reality-icon.webp
+    effects:
+      - origin: Item.c1L1ioMuPK1NLBN0
+        duration:
+          rounds: null
+          startTime: null
+          seconds: null
+          combat: null
+          turns: null
+          startRound: null
+          startTurn: null
+        disabled: false
+        name: Intimidation +2
+        img: icons/svg/aura.svg
+        _id: FhLvfZqxa0xs4Ay2
+        type: base
+        system: {}
+        changes:
+          - key: system.skills.intimidation.adds
+            mode: 2
+            value: '2'
+            priority: null
+        description: ''
+        tint: '#ffffff'
+        transfer: true
+        statuses: []
+        sort: 0
+        flags: {}
+        _stats:
+          compendiumSource: null
+          duplicateSource: null
+          coreVersion: '12.330'
+          systemId: torgeternity
+          systemVersion: 12.2.0
+          createdTime: null
+          modifiedTime: null
+          lastModifiedBy: null
+        _key: >-
+          !actors.items.effects!REeNzywr6VElHSWZ.A0o61qpmZKYS0Enn.FhLvfZqxa0xs4Ay2
+      - origin: Item.c1L1ioMuPK1NLBN0
+        duration:
+          rounds: null
+          startTime: null
+          seconds: null
+          combat: null
+          turns: null
+          startRound: null
+          startTurn: null
+        disabled: false
+        name: Intimidation Favored
+        img: icons/svg/aura.svg
+        _id: D9VJayk42Xb85aV0
+        type: base
+        system: {}
+        changes:
+          - key: system.skills.intimidation.isFav
+            mode: 5
+            value: 'true'
+            priority: null
+        description: ''
+        tint: '#ffffff'
+        transfer: true
+        statuses: []
+        sort: 0
+        flags: {}
+        _stats:
+          compendiumSource: null
+          duplicateSource: null
+          coreVersion: '12.330'
+          systemId: torgeternity
+          systemVersion: 12.2.0
+          createdTime: null
+          modifiedTime: null
+          lastModifiedBy: null
+        _key: >-
+          !actors.items.effects!REeNzywr6VElHSWZ.A0o61qpmZKYS0Enn.D9VJayk42Xb85aV0
+    folder: gjZiCPX5knOIpsHd
+    sort: 425000
+    flags:
+      core:
+        sourceId: Compendium.te001-core-rulebook.Items.ohmish0RVlju7Qbk
+    system:
+      category: pulpPowers
+      cosm: nileEmpire
+      description: "<p>The pulp hero is exceptionally good at something. Maybe he’s a crack shot in <em>fire combat</em>, a mind unrivaled in <em>science</em>, or has a wit that cuts his foes to the bone via <em>taunt</em>.</p>\n<p>When Super Skill is taken, the character increases any one skill by two adds. She may exceed the usual maximum of +5 adds without taking the Mastery Perk. (If the character has the Mastery Perk, it stacks with Super Skill.) This stacks with all other skill increases and allows a pulp hero to reach superhuman levels of competency far faster than most.</p>\n<p>Like Super Attribute, the champion may only take this Perk once — she cannot have more than one Super Skill.</p>\n<p>\_</p>\n<p>Found in <strong>Core Rules</strong></p>"
+      prerequisites: At least three adds in the selected skill
+      generalContradiction: true
+      pulpPowers:
+        enhancement01:
+          description: The skill is considered Favored.
+          taken: true
+          title: Favored
+        enhancement02:
+          description: The skill is increased to +4 adds.
+          taken: false
+          title: Power
+        enhancement03:
+          description: ''
+          taken: false
+          title: ''
+        enhancement04:
+          description: ''
+          taken: false
+          title: ''
+        enhancement05:
+          description: ''
+          taken: false
+          title: ''
+        enhancement06:
+          description: ''
+          taken: false
+          title: ''
+        enhancement07:
+          description: ''
+          taken: false
+          title: ''
+        enhancement08:
+          description: ''
+          taken: false
+          title: ''
+        enhancement09:
+          description: ''
+          taken: false
+          title: ''
+        enhancement10:
+          description: ''
+          taken: false
+          title: ''
+        enhancement11:
+          description: ''
+          taken: false
+          title: ''
+        enhancement12:
+          description: ''
+          taken: false
+          title: ''
+        enhancement13:
+          description: ''
+          taken: false
+          title: ''
+        enhancement14:
+          description: ''
+          taken: false
+          title: ''
+        enhancement15:
+          description: ''
+          taken: false
+          title: ''
+        enhancementNumber: 2
+        limitation01: based on device, range 20 meters
+        limitation02: ''
+        limitation03: ''
+        limitation04: ''
+        limitation05: ''
+        limitation06: ''
+        limitation07: ''
+        limitation08: ''
+        limitation09: ''
+        limitation10: ''
+        limitationNumber: 1
+      timestaken: '1'
+      secondaryAxiom:
+        selected: none
+        value: null
+    ownership:
+      default: 0
+      A9LyAqagoJJU3gDH: 3
+      CtisFurQNe9h7ABb: 3
+      93AMwcGe6H37rcPA: 3
+    _stats:
+      compendiumSource: Compendium.te001-core-rulebook.Items.ohmish0RVlju7Qbk
+      duplicateSource: null
+      coreVersion: '12.330'
+      systemId: torgeternity
+      systemVersion: 12.2.0
+      createdTime: 1722358614372
+      modifiedTime: 1722358614372
+      lastModifiedBy: 93AMwcGe6H37rcPA
+    _key: '!actors.items!REeNzywr6VElHSWZ.A0o61qpmZKYS0Enn'
 effects:
-  - _id: 35ZydiYloB6XEGzz
-    flags: {}
+  - origin: >-
+      Compendium.torgeternity.archetypes.Actor.REeNzywr6VElHSWZ.Item.A0o61qpmZKYS0Enn
+    duration:
+      rounds: null
+      startTime: 0
+      seconds: null
+      combat: null
+      turns: null
+      startRound: null
+      startTurn: null
+    disabled: false
+    name: Intimidation +2
+    img: icons/svg/aura.svg
+    _id: a1A2szfBznmjFxeY
+    type: base
+    system: {}
     changes:
       - key: system.skills.intimidation.adds
         mode: 2
         value: '2'
         priority: null
-    disabled: false
+    description: ''
+    tint: '#ffffff'
+    transfer: false
+    statuses: []
+    sort: 0
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      coreVersion: '12.330'
+      systemId: torgeternity
+      systemVersion: 12.2.0
+      createdTime: 1722358614376
+      modifiedTime: 1722358614376
+      lastModifiedBy: 93AMwcGe6H37rcPA
+    _key: '!actors.effects!REeNzywr6VElHSWZ.a1A2szfBznmjFxeY'
+  - origin: >-
+      Compendium.torgeternity.archetypes.Actor.REeNzywr6VElHSWZ.Item.A0o61qpmZKYS0Enn
     duration:
+      rounds: null
       startTime: 0
       seconds: null
       combat: null
-      rounds: null
       turns: null
       startRound: null
       startTurn: null
-    origin: Actor.LGH3vMNa0jMnMboU.Item.RpNrke9ubLEc5xWb
-    tint: '#ffffff'
-    transfer: true
-    name: Intimidation +2
-    description: ''
-    statuses: []
-    _stats:
-      coreVersion: '12.330'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
+    disabled: false
+    name: Intimidation Favored
     img: icons/svg/aura.svg
+    _id: YSR6jOqg0EuB5Ulf
     type: base
     system: {}
+    changes:
+      - key: system.skills.intimidation.isFav
+        mode: 5
+        value: 'true'
+        priority: null
+    description: ''
+    tint: '#ffffff'
+    transfer: false
+    statuses: []
     sort: 0
-    _key: '!actors.effects!REeNzywr6VElHSWZ.35ZydiYloB6XEGzz'
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      coreVersion: '12.330'
+      systemId: torgeternity
+      systemVersion: 12.2.0
+      createdTime: 1722358614376
+      modifiedTime: 1722358614376
+      lastModifiedBy: 93AMwcGe6H37rcPA
+    _key: '!actors.effects!REeNzywr6VElHSWZ.YSR6jOqg0EuB5Ulf'
 folder: null
 sort: 100001
 flags: {}
@@ -904,7 +1006,7 @@ system:
     background: >-
       <p><img class="charimg"
       src="systems/torgeternity/images/characters/Masked_Crusader.webp" alt=""
-      width="1189" height="1924"></p>
+      width="1189" height="1924" /></p>
 
       <p
       class="moreheight">@UUID[Compendium.torgeternity.handouts.JournalEntry.Knhh8vqtjSylJo5Z.JournalEntryPage.4XMfQXpiBN5gsUNL]{Archetype
@@ -913,48 +1015,47 @@ system:
       <h3>Overview</h3>
 
       <p>A group of mysterious men and women have banded together to end Pharaoh
-      Mobius&rsquo;s reign of tyranny. These heroes are based in Cairo, but
-      travel across the globe to fight evil. The masks and mystery surrounding
-      them are to protect their loved ones, or to foil Mobius&rsquo;s secret
-      police. Being a hero is a deadly calling, especially in a world ruled by
-      villains. A few rare crusaders hail from Terra, the home of the invaders,
-      but most are transformed citizens of Core Earth.</p>
+      Mobius’s reign of tyranny. These heroes are based in Cairo, but travel
+      across the globe to fight evil. The masks and mystery surrounding them are
+      to protect their loved ones, or to foil Mobius’s secret police. Being a
+      hero is a deadly calling, especially in a world ruled by villains. A few
+      rare crusaders hail from Terra, the home of the invaders, but most are
+      transformed citizens of Core Earth.</p>
 
       <h3>Tactics</h3>
 
       <p>You are a crack shot and no stranger to fist fights. However,
-      intimidation is your true weapon. Such a high value makes a
-      &ldquo;Player&rsquo;s Call&ldquo; result common, which at worst eliminates
-      a villain&rsquo;s next action and at best might cause a foe to run
-      screaming into the night. Your good reality skill lets you Soak damage
-      well.</p>
+      intimidation is your true weapon. Such a high value makes a “Player’s
+      Call“ result common, which at worst eliminates a villain’s next action and
+      at best might cause a foe to run screaming into the night. Your good
+      reality skill lets you Soak damage well.</p>
 
-      <p>Underneath the mask you&rsquo;re a decent detective. If your frightened
-      foes aren&rsquo;t talking, your streetwise or evidence analysis may
-      provide any missing clues. Moment of Crisis Once you were an ordinary
-      citizen, but the same event that catalyzed your powers was also the
-      tipping point for your</p>
+      <p>Underneath the mask you’re a decent detective. If your frightened foes
+      aren’t talking, your streetwise or evidence analysis may provide any
+      missing clues. Moment of Crisis Once you were an ordinary citizen, but the
+      same event that catalyzed your powers was also the tipping point for
+      your</p>
 
       <h3>Moment of Crisis.</h3>
 
-      <p>Perhaps you were in the right place at the right time to stop
-      Mobius&rsquo;s minions from pillaging a tomb near Cairo&mdash;a tomb that
-      contained a burial shroud now worn as a cape. Or maybe an older hero fell,
-      and you picked up his mantle to avenge him.</p>
+      <p>Perhaps you were in the right place at the right time to stop Mobius’s
+      minions from pillaging a tomb near Cairo—a tomb that contained a burial
+      shroud now worn as a cape. Or maybe an older hero fell, and you picked up
+      his mantle to avenge him.</p>
 
       <h3>Quote</h3>
 
-      <p>&ldquo;What do you fear?&ldquo;</p>
+      <p>“What do you fear?“</p>
 
       <h3>Description</h3>
 
-      <p>A black mask and ragged cape are required apparel&mdash; unless
-      you&rsquo;re in your secret identity. Either item may be the magical
-      source of your frightful power, or perhaps a gadget on your utility belt
-      broadcasts some kind of fear-inducing field. You usually speak in a low,
-      serious voice and keep up a grim facade. That&rsquo;s all for a calculated
-      effect though, and your occasional quip or joke reminds everyone a human
-      being is under that mask.</p>
+      <p>A black mask and ragged cape are required apparel— unless you’re in
+      your secret identity. Either item may be the magical source of your
+      frightful power, or perhaps a gadget on your utility belt broadcasts some
+      kind of fear-inducing field. You usually speak in a low, serious voice and
+      keep up a grim facade. That’s all for a calculated effect though, and your
+      occasional quip or joke reminds everyone a human being is under that
+      mask.</p>
 
       <h3>Agenda</h3>
 
@@ -1071,11 +1172,11 @@ prototypeToken:
       texture: null
 _stats:
   systemId: torgeternity
-  systemVersion: 3.8.1
+  systemVersion: 12.2.0
   coreVersion: '12.330'
   createdTime: 1693911035741
-  modifiedTime: 1716827807782
-  lastModifiedBy: VAnYow5sWS9EJzo0
+  modifiedTime: 1722355493847
+  lastModifiedBy: 93AMwcGe6H37rcPA
   compendiumSource: null
   duplicateSource: null
 _key: '!actors!REeNzywr6VElHSWZ'

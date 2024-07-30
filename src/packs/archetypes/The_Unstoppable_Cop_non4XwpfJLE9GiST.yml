@@ -19,7 +19,9 @@ items:
       price: '0'
       techlevel: 22
       value: 0
-      equippedClass: item-equipped
+      secondaryAxiom:
+        selected: none
+        value: null
     ownership:
       default: 0
     _stats:
@@ -56,8 +58,11 @@ items:
       damage: 2
       damageType: strengthPlus
       equipped: false
-      equippedClass: .item-unequipped
       notes: May use to grapple
+      secondaryAxiom:
+        selected: none
+        value: null
+      minStrength: null
     ownership:
       default: 0
     _stats:
@@ -83,16 +88,7 @@ items:
     system:
       category: prowess
       cosm: none
-      description: >-
-        <p>Veteran Storm Knights become hyper-aware of their surroundings when
-        danger nears, marking exits, reading their foes’ intent, and knowing
-        when and where to maneuver next.</p><p>Once per scene, a character with
-        Situational Awareness may play a single card directly from her hand into
-        her pool (and use it immediately if desired).</p>
-
-        <p>&nbsp;</p>
-
-        <p>Found in <strong>Core Rules</strong></p>
+      description: "<p>Veteran Storm Knights become hyper-aware of their surroundings when danger nears, marking exits, reading their foes’ intent, and knowing when and where to maneuver next.</p><p>Once per scene, a character with Situational Awareness may play a single card directly from her hand into her pool (and use it immediately if desired).</p>\n<p>\_</p>\n<p>Found in <strong>Core Rules</strong></p>"
       prerequisites: Mind 8+
       generalContradiction: false
       pulpPowers:
@@ -169,6 +165,9 @@ items:
         limitation10: ''
         limitationNumber: 0
       timestaken: '1'
+      secondaryAxiom:
+        selected: none
+        value: null
     ownership:
       default: 0
       A9LyAqagoJJU3gDH: 3
@@ -196,18 +195,7 @@ items:
     system:
       category: reality
       cosm: coreEarth
-      description: >-
-        <p>When an enemy attempts to spend a Possibility for an attribute or
-        skill test, the Storm Knight may spend her own Possibility&nbsp;to
-        instantly negate it. This is a free action she can perform as long as
-        she&rsquo;s aware of the rival&rsquo;s action.</p>
-
-        <p>Negation may <em>not</em> be used to stop a foe from spending
-        Possibilities&nbsp;to activate abilitise (such as Soak Damage).</p>
-
-        <p>&nbsp;</p>
-
-        <p>Found in <strong>Core Rules</strong></p>
+      description: "<p>When an enemy attempts to spend a Possibility for an attribute or skill test, the Storm Knight may spend her own Possibility\_to instantly negate it. This is a free action she can perform as long as she’s aware of the rival’s action.</p>\n<p>Negation may <em>not</em> be used to stop a foe from spending Possibilities\_to activate abilitise (such as Soak Damage).</p>\n<p>\_</p>\n<p>Found in <strong>Core Rules</strong></p>"
       prerequisites: ''
       generalContradiction: false
       pulpPowers:
@@ -284,6 +272,9 @@ items:
         limitation10: ''
         limitationNumber: 0
       timestaken: '1'
+      secondaryAxiom:
+        selected: none
+        value: null
     ownership:
       default: 0
       A9LyAqagoJJU3gDH: 3
@@ -310,13 +301,7 @@ items:
         sourceId: Compendium.te001-core-rulebook.Items.36zun3ZNNpg6Al8g
     system:
       cosm: coreEarth
-      description: >-
-        <p>A recoil-operated 9mm semiautomatic. Notable for its large,
-        doublestacked ammo magazine.</p>
-
-        <p>&nbsp;</p>
-
-        <p>Found in <strong>Core Rules</strong></p>
+      description: "<p>A recoil-operated 9mm semiautomatic. Notable for its large, doublestacked ammo magazine.</p>\n<p>\_</p>\n<p>Found in <strong>Core Rules</strong></p>"
       price: '250'
       techlevel: 22
       value: 12
@@ -329,9 +314,11 @@ items:
       damage: 13
       damageType: flat
       equipped: false
-      equippedClass: .item-unequipped
       notes: ''
       range: 10 / 25 / 40
+      secondaryAxiom:
+        selected: none
+        value: null
     ownership:
       default: 0
       A9LyAqagoJJU3gDH: 3
@@ -358,17 +345,13 @@ items:
         sourceId: Compendium.te001-core-rulebook.Items.HzAmhij6mdm2Zac6
     system:
       cosm: coreEarth
-      description: >-
-        <p>A handy device that combines clippers, screwdrivers, a wrench, and
-        other small tools into a single fold-out tool.</p>
-
-        <p>&nbsp;</p>
-
-        <p>Found in <strong>Core Rules</strong></p>
+      description: "<p>A handy device that combines clippers, screwdrivers, a wrench, and other small tools into a single fold-out tool.</p>\n<p>\_</p>\n<p>Found in <strong>Core Rules</strong></p>"
       price: '40'
       techlevel: 22
       value: 8
-      equippedClass: item-equipped
+      secondaryAxiom:
+        selected: none
+        value: null
     ownership:
       default: 0
       A9LyAqagoJJU3gDH: 3
@@ -399,7 +382,9 @@ items:
       price: '5'
       techlevel: 20
       value: 4
-      equippedClass: item-equipped
+      secondaryAxiom:
+        selected: none
+        value: null
     ownership:
       default: 0
       A9LyAqagoJJU3gDH: 3
@@ -430,7 +415,9 @@ items:
       price: '10'
       techlevel: 20
       value: 5
-      equippedClass: item-equipped
+      secondaryAxiom:
+        selected: none
+        value: null
     ownership:
       default: 0
       A9LyAqagoJJU3gDH: 3
@@ -457,28 +444,19 @@ items:
         sourceId: Compendium.te001-core-rulebook.Items.Item.lUVVQi2BmucoAM0E
     system:
       cosm: coreEarth
-      description: >-
-        <p>@UUID[Compendium.te001-core-rulebook.rules.pwneQ55M0nnDH0Us.JournalEntryPage.qKdamp4rrcX6TTt0#full-body/torso:]{Torso}</p>
-
-        <p>@UUID[Compendium.te001-core-rulebook.rules.pwneQ55M0nnDH0Us.JournalEntryPage.qKdamp4rrcX6TTt0#fatigues:]{Fatigues}</p>
-
-        <p>Also known as bulletproof vests or Kevlar armor. Made of synthetic
-        material designed to catch and stop bullets as they spin into different
-        protective layers.</p>
-
-        <p>&nbsp;</p>
-
-        <p>Found in <strong>Core Rules</strong></p>
+      description: "<p>@UUID[Compendium.te001-core-rulebook.rules.pwneQ55M0nnDH0Us.JournalEntryPage.qKdamp4rrcX6TTt0#full-body/torso:]{Torso}</p>\n<p>@UUID[Compendium.te001-core-rulebook.rules.pwneQ55M0nnDH0Us.JournalEntryPage.qKdamp4rrcX6TTt0#fatigues:]{Fatigues}</p>\n<p>Also known as bulletproof vests or Kevlar armor. Made of synthetic material designed to catch and stop bullets as they spin into different protective layers.</p>\n<p>\_</p>\n<p>Found in <strong>Core Rules</strong></p>"
       price: '250'
       techlevel: 22
       value: 12
       bonus: 4
       equipped: true
-      equippedClass: item-equipped
       maxDex: 10
       minStrength: null
       notes: Torso, Fatigues
       fatigue: 1
+      secondaryAxiom:
+        selected: none
+        value: null
     ownership:
       default: 0
       A9LyAqagoJJU3gDH: 3
@@ -891,7 +869,7 @@ system:
     background: >-
       <p><img class="charimg"
       src="systems/torgeternity/images/characters/Unstoppable_Cop.webp" alt=""
-      width="758" height="2000"></p>
+      width="758" height="2000" /></p>
 
       <p
       class="moreheight">@UUID[Compendium.torgeternity.handouts.JournalEntry.Knhh8vqtjSylJo5Z.JournalEntryPage.j7NJZCO90CI0aetf]{Archetype
@@ -905,20 +883,20 @@ system:
       dispatching small armies of bad guys was just part of your job.</p>
 
       <p>The Possibility Raiders represent a threat on a whole new scale. Gangs,
-      cartels, and even a corrupt conspiracy ring didn&rsquo;t make you back
-      down, so why quit now? Like your (former) partner said once, you&rsquo;re
+      cartels, and even a corrupt conspiracy ring didn’t make you back down, so
+      why quit now? Like your (former) partner said once, you’re
       unstoppable.</p>
 
       <h3>Tactics</h3>
 
-      <p>You&rsquo;re no stranger to gunplay and are tough enough to take some
-      serious hits without resorting to soaking damage&mdash;which you excel at.
-      If forced into melee combat, try grappling to restrain opponents rather
-      than depending on straight damage.</p>
+      <p>You’re no stranger to gunplay and are tough enough to take some serious
+      hits without resorting to soaking damage—which you excel at. If forced
+      into melee combat, try grappling to restrain opponents rather than
+      depending on straight damage.</p>
 
-      <p>Negation is your secret weapon. Blocking a Stormer&rsquo;s ability to
-      boost attacks is nothing to scoff at, and can quickly turn the momentum of
-      any battle. Use intimidation to soften up your foes. Stymie subtracts from
+      <p>Negation is your secret weapon. Blocking a Stormer’s ability to boost
+      attacks is nothing to scoff at, and can quickly turn the momentum of any
+      battle. Use intimidation to soften up your foes. Stymie subtracts from
       their total and Vulnerable adds to yours. Since Negation requires a
       contest of reality you can take advantage of both!</p>
 
@@ -927,21 +905,21 @@ system:
       <p>Dozens of incidents may have pushed you from hero to Storm Knight. It
       might have been the renegade Stormer using his powers to build a new drug
       cartel. Or it could have been the time you pinned and cuffed a rampaging
-      raptor&mdash;people are still talking about that one.</p>
+      raptor—people are still talking about that one.</p>
 
       <h3>Quote</h3>
 
-      <p>&ldquo;Put the weird glowing thing down on the ground and place your
-      hands on your head.&ldquo;</p>
+      <p>“Put the weird glowing thing down on the ground and place your hands on
+      your head.“</p>
 
       <h3>Description</h3>
 
-      <p>It&rsquo;s important to still wear the uniform, even out of
-      jurisdiction or in places that have been transformed. It projects normalcy
-      and authority, and the bulletproof vest doesn&rsquo;t hurt either. Not
-      everyone likes or respects the police, but just seeing the blue and the
-      badge still snaps most people back to reality. Brusque manners and an
-      intense gaze reinforce that sense of strength.</p>
+      <p>It’s important to still wear the uniform, even out of jurisdiction or
+      in places that have been transformed. It projects normalcy and authority,
+      and the bulletproof vest doesn’t hurt either. Not everyone likes or
+      respects the police, but just seeing the blue and the badge still snaps
+      most people back to reality. Brusque manners and an intense gaze reinforce
+      that sense of strength.</p>
 
       <h3>Agenda</h3>
 
@@ -1061,11 +1039,11 @@ prototypeToken:
       texture: null
 _stats:
   systemId: torgeternity
-  systemVersion: 3.8.1
+  systemVersion: 12.2.0
   coreVersion: '12.330'
   createdTime: 1693914682084
-  modifiedTime: 1716827808044
-  lastModifiedBy: VAnYow5sWS9EJzo0
+  modifiedTime: 1722355493847
+  lastModifiedBy: 93AMwcGe6H37rcPA
   compendiumSource: null
   duplicateSource: null
 _key: '!actors!non4XwpfJLE9GiST'

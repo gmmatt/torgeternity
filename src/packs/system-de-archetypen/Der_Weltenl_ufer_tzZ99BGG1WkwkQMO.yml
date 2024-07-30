@@ -17,10 +17,10 @@ items:
       category: reality
       cosm: coreEarth
       description: >-
-        <p>Der Storm Knight hat ein nat&uuml;rliches Gesp&uuml;r f&uuml;r die
-        Manipulation der Realit&auml;t. Er ignoriert 4 Punkte vom Malus auf
-        Realit&auml;ts-Proben, wenn er versucht, sich neu anzukoppeln, und er
-        darf in jedem Akt das erste Entkoppeln ignorieren.</p>
+        <p>Der Storm Knight hat ein natürliches Gespür für die Manipulation der
+        Realität. Er ignoriert 4 Punkte vom Malus auf Realitäts-Proben, wenn er
+        versucht, sich neu anzukoppeln, und er darf in jedem Akt das erste
+        Entkoppeln ignorieren.</p>
       prerequisites: ''
       generalContradiction: false
       pulpPowers:
@@ -97,6 +97,9 @@ items:
         limitation10: ''
         limitationNumber: 0
       timestaken: '1'
+      secondaryAxiom:
+        selected: none
+        value: null
     ownership:
       default: 0
       9Q0XnqFwko7hRlvL: 3
@@ -161,11 +164,7 @@ items:
     system:
       category: reality
       cosm: coreEarth
-      description: >-
-        <p>Der Charakter ist reich an M&ouml;glichkeitsenergie. Er&nbsp;beginnt
-        jeden Akt mit einer zus&auml;tzlichen M&ouml;glichkeit.&nbsp;Dies
-        addiert sich mit anderen F&auml;higkeiten, die zus&auml;tzliche
-        M&ouml;glichkeiten zur Verf&uuml;gung stellen.</p>
+      description: "<p>Der Charakter ist reich an Möglichkeitsenergie. Er\_beginnt jeden Akt mit einer zusätzlichen Möglichkeit.\_Dies addiert sich mit anderen Fähigkeiten, die zusätzliche Möglichkeiten zur Verfügung stellen.</p>"
       prerequisites: ''
       generalContradiction: false
       pulpPowers:
@@ -242,6 +241,9 @@ items:
         limitation10: ''
         limitationNumber: 0
       timestaken: '1'
+      secondaryAxiom:
+        selected: none
+        value: null
     ownership:
       default: 0
       9Q0XnqFwko7hRlvL: 3
@@ -256,88 +258,6 @@ items:
       compendiumSource: Compendium.te001-core-rulebook.grw-de-vorzuverb.Item.5NH1DrMFKWCJIHKn
       duplicateSource: null
     _key: '!actors.items!tzZ99BGG1WkwkQMO.7jS3c05xSw5MIrlf'
-  - _id: I8A1GlS1ktRNssiT
-    name: Machete
-    type: meleeweapon
-    img: systems/torgeternity/images/icons/axe-icon.webp
-    effects:
-      - _id: sFPcVAMnyhyPeTzH
-        changes:
-          - key: system.skills.survival.isFav
-            mode: 5
-            value: '1'
-            priority: null
-        disabled: false
-        duration:
-          startTime: null
-          seconds: null
-          combat: null
-          rounds: null
-          turns: null
-          startRound: null
-          startTurn: null
-        origin: Compendium.te001-core-rulebook.grw-de-ausruestung.b6nZOz177J3nWcLF
-        transfer: true
-        flags: {}
-        tint: '#ffffff'
-        name: Begünstigung Überleben
-        description: ''
-        statuses: []
-        _stats:
-          coreVersion: '12.330'
-          systemId: null
-          systemVersion: null
-          createdTime: null
-          modifiedTime: null
-          lastModifiedBy: null
-          compendiumSource: null
-          duplicateSource: null
-        img: icons/svg/aura.svg
-        type: base
-        system: {}
-        sort: 0
-        _key: >-
-          !actors.items.effects!tzZ99BGG1WkwkQMO.I8A1GlS1ktRNssiT.sFPcVAMnyhyPeTzH
-    folder: null
-    sort: 18500000
-    flags:
-      core:
-        sourceId: >-
-          Compendium.te001-core-rulebook.grw-de-ausruestung.Item.b6nZOz177J3nWcLF
-    system:
-      cosm: Zentralerde
-      description: >-
-        <p>Diese mittelgro&szlig;e, einschneidige Klinge ist bestens f&uuml;r
-        das Entfernen dichten Gestr&uuml;pps ausbalanciert und eignet sich auch
-        hervorragend zum Zerteilen von Fleisch. Moderne Macheten haben in den
-        Griff eingebautes &Uuml;berlebenswerkzeug, wodurch &Uuml;berlebenskunst-
-        Proben als Beg&uuml;nstigt z&auml;hlen.</p>
-      price: '40'
-      techlevel: 22
-      value: 8
-      ap: 0
-      attackWith: meleeWeapons
-      bonus: 2
-      chatNote: ''
-      damage: 2
-      damageType: strengthPlus
-      equipped: false
-      equippedClass: .item-unequipped
-      notes: Überlebenskunst-Proben werden Begünstigt
-    ownership:
-      default: 0
-      9Q0XnqFwko7hRlvL: 3
-      CtisFurQNe9h7ABb: 3
-    _stats:
-      systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '12.330'
-      createdTime: 1694868536613
-      modifiedTime: 1694868536613
-      lastModifiedBy: CtisFurQNe9h7ABb
-      compendiumSource: Compendium.te001-core-rulebook.grw-de-ausruestung.Item.b6nZOz177J3nWcLF
-      duplicateSource: null
-    _key: '!actors.items!tzZ99BGG1WkwkQMO.I8A1GlS1ktRNssiT'
   - _id: fZ2i8jtev3Zxzgzk
     name: Disruptorgranate
     type: missileweapon
@@ -352,17 +272,17 @@ items:
     system:
       cosm: Cyberpontifikat
       description: >-
-        <p>@UUID[Compendium.te001-core-rulebook.grw-de-grw.Qlx6yGF0Mmo6Xzrv.JournalEntryPage.41rZYYhaMC2T260D#nicht-todlicher-schaden]{Nicht-t&ouml;dlicher
+        <p>@UUID[Compendium.te001-core-rulebook.grw-de-grw.Qlx6yGF0Mmo6Xzrv.JournalEntryPage.41rZYYhaMC2T260D#nicht-todlicher-schaden]{Nicht-tödlicher
         Schaden}</p>
 
-        <p>@UUID[Compendium.te001-core-rulebook.grw-de-grw.Qlx6yGF0Mmo6Xzrv.JournalEntryPage.41rZYYhaMC2T260D#flachenangriffe]{Fl&auml;chenangriffe}</p>
+        <p>@UUID[Compendium.te001-core-rulebook.grw-de-grw.Qlx6yGF0Mmo6Xzrv.JournalEntryPage.41rZYYhaMC2T260D#flachenangriffe]{Flächenangriffe}</p>
 
-        <p>Diese Granate &auml;hnelt einer flachen Wurfscheibe. Wenn sie auf den
+        <p>Diese Granate ähnelt einer flachen Wurfscheibe. Wenn sie auf den
         Boden oder auf ein Ziel trifft, sendet sie einen starken Impuls aus, der
-        jeden in der N&auml;he au&szlig;er Gefecht setzen soll. Einige
-        Disruptoren verwenden elektrische Impulse, andere verwenden
-        Schallwellen, aber beide haben die gleiche Wirkung auf die
-        Ungl&uuml;cklichen, die in ihren Impuls geraten.</p>
+        jeden in der Nähe außer Gefecht setzen soll. Einige Disruptoren
+        verwenden elektrische Impulse, andere verwenden Schallwellen, aber beide
+        haben die gleiche Wirkung auf die Unglücklichen, die in ihren Impuls
+        geraten.</p>
       price: '100'
       techlevel: 26
       value: 11
@@ -375,10 +295,12 @@ items:
       damage: 16
       damageType: flat
       equipped: false
-      equippedClass: .item-unequipped
       minStrength: ''
       notes: Nicht-tödlich, Mittlere Explosion
       range: 10/20/30
+      secondaryAxiom:
+        selected: none
+        value: null
     ownership:
       default: 0
       9Q0XnqFwko7hRlvL: 3
@@ -409,9 +331,8 @@ items:
       description: >-
         <p>@UUID[Compendium.te001-core-rulebook.grw-de-grw.Qlx6yGF0Mmo6Xzrv.JournalEntryPage.7GGUUHzuYIqGPXDO#karabiner:]{Pistole}</p>
 
-        <p>Eine r&uuml;cksto&szlig;ladende 9 mm Halbautomatik- Pistole, die
-        f&uuml;r ihr gro&szlig;es, doppelt gestapeltes Munitionsmagazin bekannt
-        ist.</p>
+        <p>Eine rückstoßladende 9 mm Halbautomatik- Pistole, die für ihr großes,
+        doppelt gestapeltes Munitionsmagazin bekannt ist.</p>
       price: '250'
       techlevel: 22
       value: 12
@@ -424,9 +345,11 @@ items:
       damage: 13
       damageType: ''
       equipped: false
-      equippedClass: .item-unequipped
       notes: Pistole
       range: 10/25/40
+      secondaryAxiom:
+        selected: none
+        value: null
     ownership:
       default: 0
       9Q0XnqFwko7hRlvL: 3
@@ -453,13 +376,13 @@ items:
     _id: FFUsBNHLuKjWCfNW
     system:
       cosm: coreEarth
-      description: >-
-        <p>N&uuml;tzlich f&uuml;r Reparaturen, funktioniert wie ein
-        Dietrich.</p>
+      description: <p>Nützlich für Reparaturen, funktioniert wie ein Dietrich.</p>
       price: '40'
       techlevel: 22
       value: 8
-      equippedClass: item-equipped
+      secondaryAxiom:
+        selected: none
+        value: null
     ownership:
       default: 0
       9Q0XnqFwko7hRlvL: 3
@@ -490,7 +413,9 @@ items:
       price: '10'
       techlevel: 20
       value: 5
-      equippedClass: item-equipped
+      secondaryAxiom:
+        selected: none
+        value: null
     ownership:
       default: 0
       9Q0XnqFwko7hRlvL: 3
@@ -525,7 +450,6 @@ items:
       price: '500'
       techlevel: 12
       value: 14
-      equippedClass: item-equipped
       secondaryAxiom:
         selected: magic
         value: 13
@@ -565,11 +489,13 @@ items:
       value: 10
       bonus: 1
       equipped: true
-      equippedClass: item-equipped
       maxDex: 12
       minStrength: null
       notes: Torso
       fatigue: null
+      secondaryAxiom:
+        selected: none
+        value: null
     ownership:
       default: 0
       9Q0XnqFwko7hRlvL: 3
@@ -624,12 +550,98 @@ items:
       lastModifiedBy: 93AMwcGe6H37rcPA
     _id: xijwVjoJ01mJoTD1
     _key: '!actors.items!tzZ99BGG1WkwkQMO.xijwVjoJ01mJoTD1'
+  - _id: y1UR3kyIL5JTouJL
+    name: Machete
+    type: meleeweapon
+    img: systems/torgeternity/images/icons/axe-icon.webp
+    effects:
+      - _id: sFPcVAMnyhyPeTzH
+        changes:
+          - key: system.skills.survival.isFav
+            mode: 5
+            value: 'true'
+            priority: null
+        disabled: false
+        duration:
+          startTime: null
+          seconds: null
+          combat: null
+          rounds: null
+          turns: null
+          startRound: null
+          startTurn: null
+        origin: Compendium.te001-core-rulebook.grw-de-ausruestung.b6nZOz177J3nWcLF
+        transfer: true
+        flags: {}
+        tint: '#ffffff'
+        name: Begünstigung Überleben
+        description: ''
+        statuses: []
+        _stats:
+          compendiumSource: null
+          duplicateSource: null
+          coreVersion: '12.330'
+          systemId: torgeternity
+          systemVersion: 12.2.0
+          createdTime: null
+          modifiedTime: null
+          lastModifiedBy: null
+        img: icons/svg/aura.svg
+        type: base
+        system: {}
+        sort: 0
+        _key: >-
+          !actors.items.effects!tzZ99BGG1WkwkQMO.y1UR3kyIL5JTouJL.sFPcVAMnyhyPeTzH
+    folder: WDvJC2MufxrqwbzV
+    sort: 250000
+    flags:
+      core:
+        sourceId: >-
+          Compendium.te001-core-rulebook.grw-de-ausruestung.Item.b6nZOz177J3nWcLF
+    system:
+      cosm: coreEarth
+      description: >-
+        <p>Diese mittelgroße, einschneidige Klinge ist bestens für das Entfernen
+        dichten Gestrüpps ausbalanciert und eignet sich auch hervorragend zum
+        Zerteilen von Fleisch. Moderne Macheten haben in den Griff eingebautes
+        Überlebenswerkzeug, wodurch Überlebenskunst- Proben als Begünstigt
+        zählen.</p>
+      price: '40'
+      techlevel: 22
+      value: 8
+      ap: 0
+      attackWith: meleeWeapons
+      bonus: 2
+      chatNote: ''
+      damage: 2
+      damageType: strengthPlus
+      equipped: false
+      notes: Überlebenskunst-Proben werden Begünstigt
+      secondaryAxiom:
+        selected: none
+        value: null
+      minStrength: null
+    ownership:
+      default: 0
+      9Q0XnqFwko7hRlvL: 3
+      CtisFurQNe9h7ABb: 3
+      93AMwcGe6H37rcPA: 3
+    _stats:
+      compendiumSource: Compendium.te001-core-rulebook.grw-de-ausruestung.Item.b6nZOz177J3nWcLF
+      duplicateSource: null
+      coreVersion: '12.330'
+      systemId: torgeternity
+      systemVersion: 12.2.0
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+    _key: '!actors.items!tzZ99BGG1WkwkQMO.y1UR3kyIL5JTouJL'
 effects:
-  - _id: 9T2SgSGgiUkXHNdR
+  - _id: NUb8BR6LolLrKlNY
     changes:
       - key: system.skills.survival.isFav
         mode: 5
-        value: '1'
+        value: 'true'
         priority: null
     disabled: false
     duration:
@@ -640,8 +652,7 @@ effects:
       turns: null
       startRound: null
       startTurn: null
-    origin: >-
-      Compendium.torgeternity.system-de-archetypen.Actor.tzZ99BGG1WkwkQMO.Item.I8A1GlS1ktRNssiT
+    origin: Actor.tzZ99BGG1WkwkQMO.Item.y1UR3kyIL5JTouJL
     transfer: false
     flags: {}
     tint: '#ffffff'
@@ -649,19 +660,19 @@ effects:
     description: ''
     statuses: []
     _stats:
+      compendiumSource: null
+      duplicateSource: null
       coreVersion: '12.330'
-      systemId: null
-      systemVersion: null
+      systemId: torgeternity
+      systemVersion: 12.2.0
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
     img: icons/svg/aura.svg
     type: base
     system: {}
     sort: 0
-    _key: '!actors.effects!tzZ99BGG1WkwkQMO.9T2SgSGgiUkXHNdR'
+    _key: '!actors.effects!tzZ99BGG1WkwkQMO.NUb8BR6LolLrKlNY'
 folder: null
 sort: 0
 flags:
@@ -1018,100 +1029,7 @@ system:
     spirit: 10
     tech: 23
   details:
-    background: >-
-      <p><img class="charimg"
-      src="systems/torgeternity/images/characters/Realm_Runner.webp" alt=""
-      width="1027" height="2094"></p>
-
-      <p
-      class="moreheight">@UUID[Compendium.torgeternity.system-de-handouts.JournalEntry.DLLvnXpv7RFhRgHu.JournalEntryPage.RLk67atzGeIrJ9Ml]{Archetyp
-      - Der Weltenl&auml;ufer}</p>
-
-      <h3>&Uuml;berblick</h3>
-
-      <p>Weltenl&auml;ufer sind Menschen von der Erde, die ein starkes,
-      intuitives Verst&auml;ndnis der Realit&auml;t haben. Nicht nur die
-      Realit&auml;t der Zentralerde, sondern auch die der eindringenden Cosms.
-      Solche Individuen sind &auml;u&szlig;erst anpassungsf&auml;hig, reisen mit
-      relativer Leichtigkeit durch die eindringenden Reiche und eignen sich den
-      Umgang mit Werkzeugen und Konzepte an, die bei anderen Leuten zu
-      Widerspr&uuml;chen f&uuml;hren w&uuml;rden. Dieses Ph&auml;nomen scheint
-      einzigartig f&uuml;r die Zentralerde zu sein.</p>
-
-      <h3>Taktiken</h3>
-
-      <p>Du bist ein Allesk&ouml;nner: ziemlich geschickt mit den meisten
-      Waffen, aber auch ohne. Andererseits ist jede Waffe und jeder Gegenstand,
-      den du in irgendeiner Realit&auml;t findest, f&uuml;r dich akzeptabel.
-      Scheue dich nicht, m&auml;chtige Werkzeuge aus anderen Realit&auml;ten
-      auszuprobieren und zu nutzen, selbst wenn sie Widerspr&uuml;che
-      verursachen k&ouml;nnten. Entkopplungen treten auch bei dir nicht so
-      h&auml;ufig auf und es f&auml;llt dir leichter, dich wieder anzukoppeln,
-      selbst in einer reinen Zone.&nbsp;</p>
-
-      <p>Benutze alle anerkannten Interaktionen (beim Tricksen bist du am
-      st&auml;rksten), um Gegner angeschlagen oder verwundbar zu machen. Erfolg
-      bringt dir eine Schicksalskarte und hilft dem Team &ndash; und es
-      erh&ouml;ht sogar deine eigenen Chancen bei einem Gegenangriff. Mit deiner
-      hohen Realit&auml;t-Fertigkeit kannst du Schaden sehr zuverl&auml;ssig
-      wegstecken, sodass du viel h&auml;rter bist als du aussiehst.</p>
-
-      <h3>Moment der Krise</h3>
-
-      <p>Vor der Invasion war jeder Tag eine ziemliche Routine. Dann wurde die
-      Welt ersch&uuml;ttert und du vor eine t&ouml;dliche Wahl gestellt: in
-      Angst und Schrecken zu geraten wie alle anderen oder ein Monster davon
-      abzuhalten, einen Unschuldigen zu verschlingen. Irgendwie hattest du das
-      Gl&uuml;ck auf deiner Seite, das Opfer wurde gerettet, und ein Storm
-      Knight wurde geboren.</p>
-
-      <h3>Zitat</h3>
-
-      <p>"Keine Sorge, Leute, ich schaffe das!"</p>
-
-      <h3>Beschreibung</h3>
-
-      <p>Schlank und agil, ist dein Markenzeichen ein Sammelsurium von allem,
-      was wirkt. Jeans, Lederjacke und ein b&ouml;sartiges Grinsen sind
-      gleichbleibende Konstanten. Alles andere, von fortgeschrittenen
-      Ger&auml;ten bis hin zu magischen Totems, sammelst du auf Reisen in
-      verschiedene Reiche an.</p>
-
-      <h3>Agenda</h3>
-
-      <p>Oberfl&auml;chlich betrachtet wirkst du so, als w&uuml;rdest du nur
-      herumalberst und die gef&auml;hrlichen Situationen vielleicht nicht ernst
-      genug nehmen. Insgeheim bist du aber zutiefst besorgt um die Personen, die
-      inmitten der Possibility Wars gefangen sind. Diese Menschen vor
-      unmittelbarer Gefahr zu bewahren und ihre Stimmung aufrechtzuerhalten, ist
-      deine eigentliche Priorit&auml;t &ndash; Spa&szlig; zu haben, w&auml;hrend
-      du es tust, ist nur ein Bonus.</p>
-
-      <h3>Namen</h3>
-
-      <p>Adison, Aidan, Cody, Daryl, Jamie, Lee, Leslie, Regan, Sean, Terry</p>
-
-      <h3>Vorgeschlagener Aufstieg (Optional)</h3>
-
-      <ul>
-
-      <li>(5 EP) Anpassungsf&auml;hig</li>
-
-      <li>(7 EP) Hartn&auml;ckig</li>
-
-      <li>(1 EP) <em>Gassenwissen</em> +1</li>
-
-      <li>(2 EP) <em>Tricksen</em> +2</li>
-
-      <li>(3 EP) <em>Ausweichen</em> +3</li>
-
-      <li>(3 EP) <em>Tricksen</em> +3</li>
-
-      <li>(4 EP) <em>Realit&auml;t</em> +4</li>
-
-      <li>(5 EP) <em>Realit&auml;t</em> +5</li>
-
-      </ul>
+    background: "<p><img class=\"charimg\" src=\"systems/torgeternity/images/characters/Realm_Runner.webp\" alt=\"\" width=\"1027\" height=\"2094\" /></p>\n<p class=\"moreheight\">@UUID[Compendium.torgeternity.system-de-handouts.JournalEntry.DLLvnXpv7RFhRgHu.JournalEntryPage.RLk67atzGeIrJ9Ml]{Archetyp - Der Weltenläufer}</p>\n<h3>Überblick</h3>\n<p>Weltenläufer sind Menschen von der Erde, die ein starkes, intuitives Verständnis der Realität haben. Nicht nur die Realität der Zentralerde, sondern auch die der eindringenden Cosms. Solche Individuen sind äußerst anpassungsfähig, reisen mit relativer Leichtigkeit durch die eindringenden Reiche und eignen sich den Umgang mit Werkzeugen und Konzepte an, die bei anderen Leuten zu Widersprüchen führen würden. Dieses Phänomen scheint einzigartig für die Zentralerde zu sein.</p>\n<h3>Taktiken</h3>\n<p>Du bist ein Alleskönner: ziemlich geschickt mit den meisten Waffen, aber auch ohne. Andererseits ist jede Waffe und jeder Gegenstand, den du in irgendeiner Realität findest, für dich akzeptabel. Scheue dich nicht, mächtige Werkzeuge aus anderen Realitäten auszuprobieren und zu nutzen, selbst wenn sie Widersprüche verursachen könnten. Entkopplungen treten auch bei dir nicht so häufig auf und es fällt dir leichter, dich wieder anzukoppeln, selbst in einer reinen Zone.\_</p>\n<p>Benutze alle anerkannten Interaktionen (beim Tricksen bist du am stärksten), um Gegner angeschlagen oder verwundbar zu machen. Erfolg bringt dir eine Schicksalskarte und hilft dem Team – und es erhöht sogar deine eigenen Chancen bei einem Gegenangriff. Mit deiner hohen Realität-Fertigkeit kannst du Schaden sehr zuverlässig wegstecken, sodass du viel härter bist als du aussiehst.</p>\n<h3>Moment der Krise</h3>\n<p>Vor der Invasion war jeder Tag eine ziemliche Routine. Dann wurde die Welt erschüttert und du vor eine tödliche Wahl gestellt: in Angst und Schrecken zu geraten wie alle anderen oder ein Monster davon abzuhalten, einen Unschuldigen zu verschlingen. Irgendwie hattest du das Glück auf deiner Seite, das Opfer wurde gerettet, und ein Storm Knight wurde geboren.</p>\n<h3>Zitat</h3>\n<p>\"Keine Sorge, Leute, ich schaffe das!\"</p>\n<h3>Beschreibung</h3>\n<p>Schlank und agil, ist dein Markenzeichen ein Sammelsurium von allem, was wirkt. Jeans, Lederjacke und ein bösartiges Grinsen sind gleichbleibende Konstanten. Alles andere, von fortgeschrittenen Geräten bis hin zu magischen Totems, sammelst du auf Reisen in verschiedene Reiche an.</p>\n<h3>Agenda</h3>\n<p>Oberflächlich betrachtet wirkst du so, als würdest du nur herumalberst und die gefährlichen Situationen vielleicht nicht ernst genug nehmen. Insgeheim bist du aber zutiefst besorgt um die Personen, die inmitten der Possibility Wars gefangen sind. Diese Menschen vor unmittelbarer Gefahr zu bewahren und ihre Stimmung aufrechtzuerhalten, ist deine eigentliche Priorität – Spaß zu haben, während du es tust, ist nur ein Bonus.</p>\n<h3>Namen</h3>\n<p>Adison, Aidan, Cody, Daryl, Jamie, Lee, Leslie, Regan, Sean, Terry</p>\n<h3>Vorgeschlagener Aufstieg (Optional)</h3>\n<ul>\n<li>(5 EP) Anpassungsfähig</li>\n<li>(7 EP) Hartnäckig</li>\n<li>(1 EP) <em>Gassenwissen</em> +1</li>\n<li>(2 EP) <em>Tricksen</em> +2</li>\n<li>(3 EP) <em>Ausweichen</em> +3</li>\n<li>(3 EP) <em>Tricksen</em> +3</li>\n<li>(4 EP) <em>Realität</em> +4</li>\n<li>(5 EP) <em>Realität</em> +5</li>\n</ul>"
     race: human
     sizeBonus: normal
   editstate: false
@@ -1197,11 +1115,11 @@ prototypeToken:
       texture: null
 _stats:
   systemId: torgeternity
-  systemVersion: 3.8.1
+  systemVersion: 12.2.0
   coreVersion: '12.330'
   createdTime: 1694868498745
-  modifiedTime: 1716827811752
-  lastModifiedBy: VAnYow5sWS9EJzo0
+  modifiedTime: 1722359278656
+  lastModifiedBy: 93AMwcGe6H37rcPA
   compendiumSource: Compendium.torgeternity.archetypes.BpClx5rBCesWUzIN
   duplicateSource: null
 _key: '!actors!tzZ99BGG1WkwkQMO'

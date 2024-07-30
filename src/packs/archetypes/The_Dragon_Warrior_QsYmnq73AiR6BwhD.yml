@@ -16,14 +16,14 @@ items:
     system:
       perk: Dragon Warrior
       description: >-
-        <p>One of the warrior&rsquo;s bracers is lined with a long tube leading
-        to a chamber of compressed fuel hidden on his back armor. When activated
-        with missile weapons the tube spurts fire in a 10-meter-long stream as a
+        <p>One of the warrior’s bracers is lined with a long tube leading to a
+        chamber of compressed fuel hidden on his back armor. When activated with
+        missile weapons the tube spurts fire in a 10-meter-long stream as a
         Small Blast. Everything within the blast suffers 16 fire damage. The
         chamber holds enough fuel for three individual blasts.</p>
 
         <p>The container magically recharges at the end of the scene or during a
-        long break in the action of a few hours or more (Game Master&rsquo;s
+        long break in the action of a few hours or more (Game Master’s
         discretion).</p>
     ownership:
       default: 0
@@ -67,10 +67,12 @@ items:
       damage: 16
       damageType: flat
       equipped: false
-      equippedClass: .item-unequipped
       minStrength: ''
       notes: Fire, Small Blast
       range: 10m
+      secondaryAxiom:
+        selected: none
+        value: null
     ownership:
       default: 0
     _stats:
@@ -99,7 +101,6 @@ items:
       price: '500'
       techlevel: 12
       value: 14
-      equippedClass: item-equipped
       secondaryAxiom:
         selected: magic
         value: 13
@@ -131,7 +132,9 @@ items:
       price: '25'
       techlevel: 8
       value: 7
-      equippedClass: item-equipped
+      secondaryAxiom:
+        selected: none
+        value: null
     ownership:
       default: 0
     _stats:
@@ -144,38 +147,6 @@ items:
       compendiumSource: Item.HIzFdoBtoEzc8eaE
       duplicateSource: null
     _key: '!actors.items!QsYmnq73AiR6BwhD.vfqnqkIvFw372Nck'
-  - _id: F2DgHaQHYRxdQU4b
-    name: Caltrops
-    type: gear
-    sort: 1300000
-    flags:
-      core:
-        sourceId: Item.nszREOuoibD1inHs
-    img: systems/torgeternity/images/icons/gear-icon.webp
-    effects: []
-    folder: null
-    system:
-      cosm: aysle
-      description: >-
-        <p>A batch of scattered spikes that always land with a point upwards,
-        designed to impale feet and tires. Once deployed as a simple action
-        maneuver interactions become Favored around the spikes.</p>
-      price: '40'
-      techlevel: 14
-      value: 8
-      equippedClass: item-equipped
-    ownership:
-      default: 0
-    _stats:
-      systemId: torgeternity
-      systemVersion: 12.2.0
-      coreVersion: '12.330'
-      createdTime: null
-      modifiedTime: 1722154886540
-      lastModifiedBy: 93AMwcGe6H37rcPA
-      compendiumSource: Item.nszREOuoibD1inHs
-      duplicateSource: null
-    _key: '!actors.items!QsYmnq73AiR6BwhD.F2DgHaQHYRxdQU4b'
   - _id: W80yHGyLWk5wrLJW
     name: Giant Strength
     type: enhancement
@@ -227,9 +198,9 @@ items:
       perk: Dragon Warrior
       description: >-
         <p>A series of pneumatic compressors take in air and channel it to the
-        dwarf&rsquo;s arms. Along with cleverly placed levers along the inside
-        of the armor, it increases his Strength by +2 for tests and determining
-        damage. Toughness remains unaffected.</p>
+        dwarf’s arms. Along with cleverly placed levers along the inside of the
+        armor, it increases his Strength by +2 for tests and determining damage.
+        Toughness remains unaffected.</p>
     ownership:
       default: 0
     _stats:
@@ -335,6 +306,9 @@ items:
         limitation10: ''
         limitationNumber: 0
       timestaken: '1'
+      secondaryAxiom:
+        selected: none
+        value: null
     ownership:
       default: 0
       aSTzyuIvqyDaFHwy: 3
@@ -361,20 +335,7 @@ items:
         sourceId: Compendium.te001-core-rulebook.Items.N6G6v7wgDhnpsIiQ
     system:
       cosm: aysle
-      description: >-
-        <p>@UUID[Compendium.te001-core-rulebook.rules.pwneQ55M0nnDH0Us.JournalEntryPage.qKdamp4rrcX6TTt0#stagger:]{Stagger}</p>
-
-        <p>@UUID[Compendium.te001-core-rulebook.rules.pwneQ55M0nnDH0Us.JournalEntryPage.qKdamp4rrcX6TTt0#two-handed:]{Two-Handed}</p>
-
-        <p>@UUID[Compendium.te001-core-rulebook.rules.pwneQ55M0nnDH0Us.JournalEntryPage.qKdamp4rrcX6TTt0#unwieldy:]{Unwieldy}</p>
-
-        <p>The most terrifying of the <q>barbarian</q> weapons is the great axe.
-        The double-edged blade and wide arc cuts swaths through the
-        wielder&rsquo;s foes.</p>
-
-        <p>&nbsp;</p>
-
-        <p>Found in <strong>Core Rules</strong></p>
+      description: "<p>@UUID[Compendium.te001-core-rulebook.rules.pwneQ55M0nnDH0Us.JournalEntryPage.qKdamp4rrcX6TTt0#stagger:]{Stagger}</p>\n<p>@UUID[Compendium.te001-core-rulebook.rules.pwneQ55M0nnDH0Us.JournalEntryPage.qKdamp4rrcX6TTt0#two-handed:]{Two-Handed}</p>\n<p>@UUID[Compendium.te001-core-rulebook.rules.pwneQ55M0nnDH0Us.JournalEntryPage.qKdamp4rrcX6TTt0#unwieldy:]{Unwieldy}</p>\n<p>The most terrifying of the <q>barbarian</q> weapons is the great axe. The double-edged blade and wide arc cuts swaths through the wielder’s foes.</p>\n<p>\_</p>\n<p>Found in <strong>Core Rules</strong></p>"
       price: '300'
       techlevel: 10
       value: 12
@@ -384,9 +345,12 @@ items:
       chatNote: ''
       damage: 4
       damageType: strengthPlus
-      equipped: false
-      equippedClass: .item-unequipped
+      equipped: true
       notes: Stagger, Two Handed, Unwieldy
+      secondaryAxiom:
+        selected: none
+        value: null
+      minStrength: null
     ownership:
       default: 0
       A9LyAqagoJJU3gDH: 3
@@ -422,11 +386,13 @@ items:
       value: null
       bonus: 4
       equipped: true
-      equippedClass: item-equipped
       maxDex: 8
       minStrength: 10
       notes: Fatigues, Full Body
       fatigue: 2
+      secondaryAxiom:
+        selected: none
+        value: null
     _stats:
       systemId: torgeternity
       systemVersion: 12.2.0
@@ -492,90 +458,7 @@ items:
     system:
       category: dwarf
       cosm: aysle
-      description: >-
-        <p>Dragon Warriors are the last champions of the dwarves who were
-        virtually annihilated in Aysle. As a final desperate measure, they built
-        suits of powerful, arcane armor designed to slay Uthorion&rsquo;s hated
-        minions. Most knew they would perish in them.</p>
-
-        <p>@UUID[Compendium.te001-core-rulebook.Items.Item.kKfw6Od1PySvYsOs]{Dragon
-        Warrior Armor} contains incredible weapons, gadgets, and devices that
-        transform the wearer into an engine of vengeance. It counts as Full Body
-        armor, adds Armor +4, limits the wearer&rsquo;s Dexterity to 8, and
-        causes two extra points of shock any time
-        @UUID[Compendium.te001-core-rulebook.rules.pwneQ55M0nnDH0Us.JournalEntryPage.EhKa65cpHvodUl2L#fatigued:]{fatigued}
-        comes up on the Conflict Line.</p>
-
-        <p>When Dragon Warrior is taken, the dwarf can choose one enhancement
-        from the list below.</p>
-
-        <p><strong>New Enhancements:</strong> This Perk may be taken more than
-        once. Each time after the first it grants another one of the
-        enhancements listed below. Unless it says otherwise, each enhancement
-        may only be taken once.</p>
-
-        <ul>
-
-        <li><strong>Dart Thrower:</strong> A compartment on one of the
-        dwarf&rsquo;s forearms contains six deadly iron darts. Each dart deals
-        13 damage, range 10/20/40, may use a Short Burst (see
-        @UUID[Compendium.te001-core-rulebook.rules.pwneQ55M0nnDH0Us.JournalEntryPage.EhKa65cpHvodUl2L#rapid-fire]{rapid
-        fire}), and uses <em>missile weapons</em> to hit<br>Compartments in the
-        armor hold 12 additional darts. Any dwarf who has this Perk knows how to
-        make more from metal scraps. Assume the weapon and ammunition
-        compartment are replenished between acts or whenever the Game Master
-        feels the wearer has sufficient time to do so.<br>A second dart thrower
-        may be placed on the dwarf&rsquo;s&nbsp;<em style="font-family:
-        var(--font-primary); font-size: var(--font-size-14);">other</em><span
-        style="font-family: var(--font-primary); font-size:
-        var(--font-size-14);"> arm by taking this enhancement a second time (as
-        well as a second compartment).</span></li>
-
-        </ul>
-
-        <ul>
-
-        <li><strong>Dragon Breath:</strong> One of the warrior&rsquo;s bracers
-        is lined with a long tube leading to a chamber of compressed fuel hidden
-        on his back armor. When activated with missile weapons the tube spurts
-        fire in a 10-meter-long stream as a
-        @UUID[Compendium.te001-core-rulebook.rules.pwneQ55M0nnDH0Us.JournalEntryPage.EhKa65cpHvodUl2L#explosives-and-area-effect-attacks]{Small
-        Blast}. Everything within the blast suffers 16
-        @UUID[Compendium.te001-core-rulebook.rules.pwneQ55M0nnDH0Us.JournalEntryPage.EhKa65cpHvodUl2L#fire]{Fire
-        damage}. The chamber holds enough fuel for three individual blasts. The
-        container magically recharges at the end of the scene or during a long
-        break in the action of a few hours or more (Game Master&rsquo;s
-        discretion)</li>
-
-        <li><strong>Dragon Claws:</strong> One of the gauntlets ends in a claw
-        tipped with diamonds. The gauntlet uses <em>unarmed combat</em> to hit,
-        and causes <em>Strength</em> +3, Armor Piercing 2 damage</li>
-
-        <li><strong>Dragon Scales:</strong> The armor is enchanted with magical
-        runes that grant it +10 Armor versus fire (instead of +4)</li>
-
-        <li><strong>Giant Strength:</strong> A series of pneumatic compressors
-        take in air and channel it to the dwarf&rsquo;s arms. Along with
-        cleverly placed levers along the inside of the armor, it increases his
-        <em>Strength</em> by +2 for tests and determining damage. Toughness
-        remains unaffected</li>
-
-        <li><strong>Mad Jacks:</strong> Cylinders of magically compressed gas
-        are hidden in compartments of the dwarf&rsquo;s heavy boots. When
-        activated, gouts of fire propel her into the air, allowing her to jump
-        up to 10 meters vertically and 30 meters horizontally. If used in
-        conjunction with an All-Out attack, the dwarf gains an additional +2 to
-        his action total. Mad Jacks magically recharge once every 24 hours</li>
-
-        <li><strong>Rune of Replenishment:</strong> The armor only deals one
-        extra shock when Fatigue appears on the Conflict Line, and the wearer
-        recovers an extra shock when Inspiration appears</li>
-
-        </ul>
-
-        <p>&nbsp;</p>
-
-        <p>Found in <strong>Core Rules</strong></p>
+      description: "<p>Dragon Warriors are the last champions of the dwarves who were virtually annihilated in Aysle. As a final desperate measure, they built suits of powerful, arcane armor designed to slay Uthorion’s hated minions. Most knew they would perish in them.</p>\n<p>@UUID[Compendium.te001-core-rulebook.Items.Item.kKfw6Od1PySvYsOs]{Dragon Warrior Armor} contains incredible weapons, gadgets, and devices that transform the wearer into an engine of vengeance. It counts as Full Body armor, adds Armor +4, limits the wearer’s Dexterity to 8, and causes two extra points of shock any time @UUID[Compendium.te001-core-rulebook.rules.pwneQ55M0nnDH0Us.JournalEntryPage.EhKa65cpHvodUl2L#fatigued:]{fatigued} comes up on the Conflict Line.</p>\n<p>When Dragon Warrior is taken, the dwarf can choose one enhancement from the list below.</p>\n<p><strong>New Enhancements:</strong> This Perk may be taken more than once. Each time after the first it grants another one of the enhancements listed below. Unless it says otherwise, each enhancement may only be taken once.</p>\n<ul>\n<li><strong>Dart Thrower:</strong> A compartment on one of the dwarf’s forearms contains six deadly iron darts. Each dart deals 13 damage, range 10/20/40, may use a Short Burst (see @UUID[Compendium.te001-core-rulebook.rules.pwneQ55M0nnDH0Us.JournalEntryPage.EhKa65cpHvodUl2L#rapid-fire]{rapid fire}), and uses <em>missile weapons</em> to hit<br />Compartments in the armor hold 12 additional darts. Any dwarf who has this Perk knows how to make more from metal scraps. Assume the weapon and ammunition compartment are replenished between acts or whenever the Game Master feels the wearer has sufficient time to do so.<br />A second dart thrower may be placed on the dwarf’s\_<em style=\"font-family:var(--font-primary);font-size:var(--font-size-14)\">other</em><span style=\"font-family:var(--font-primary);font-size:var(--font-size-14)\"> arm by taking this enhancement a second time (as well as a second compartment).</span></li>\n</ul>\n<ul>\n<li><strong>Dragon Breath:</strong> One of the warrior’s bracers is lined with a long tube leading to a chamber of compressed fuel hidden on his back armor. When activated with missile weapons the tube spurts fire in a 10-meter-long stream as a @UUID[Compendium.te001-core-rulebook.rules.pwneQ55M0nnDH0Us.JournalEntryPage.EhKa65cpHvodUl2L#explosives-and-area-effect-attacks]{Small Blast}. Everything within the blast suffers 16 @UUID[Compendium.te001-core-rulebook.rules.pwneQ55M0nnDH0Us.JournalEntryPage.EhKa65cpHvodUl2L#fire]{Fire damage}. The chamber holds enough fuel for three individual blasts. The container magically recharges at the end of the scene or during a long break in the action of a few hours or more (Game Master’s discretion)</li>\n<li><strong>Dragon Claws:</strong> One of the gauntlets ends in a claw tipped with diamonds. The gauntlet uses <em>unarmed combat</em> to hit, and causes <em>Strength</em> +3, Armor Piercing 2 damage</li>\n<li><strong>Dragon Scales:</strong> The armor is enchanted with magical runes that grant it +10 Armor versus fire (instead of +4)</li>\n<li><strong>Giant Strength:</strong> A series of pneumatic compressors take in air and channel it to the dwarf’s arms. Along with cleverly placed levers along the inside of the armor, it increases his <em>Strength</em> by +2 for tests and determining damage. Toughness remains unaffected</li>\n<li><strong>Mad Jacks:</strong> Cylinders of magically compressed gas are hidden in compartments of the dwarf’s heavy boots. When activated, gouts of fire propel her into the air, allowing her to jump up to 10 meters vertically and 30 meters horizontally. If used in conjunction with an All-Out attack, the dwarf gains an additional +2 to his action total. Mad Jacks magically recharge once every 24 hours</li>\n<li><strong>Rune of Replenishment:</strong> The armor only deals one extra shock when Fatigue appears on the Conflict Line, and the wearer recovers an extra shock when Inspiration appears</li>\n</ul>\n<p>\_</p>\n<p>Found in <strong>Core Rules</strong></p>"
       prerequisites: Strength 10+
       generalContradiction: true
       pulpPowers:
@@ -679,6 +562,9 @@ items:
         limitation10: ''
         limitationNumber: 0
       timestaken: '2'
+      secondaryAxiom:
+        selected: none
+        value: null
     ownership:
       default: 0
       A9LyAqagoJJU3gDH: 3
@@ -693,9 +579,78 @@ items:
       compendiumSource: Compendium.te001-core-rulebook.Items.Item.eItDWecF1ue7Hvp0
       duplicateSource: null
     _key: '!actors.items!QsYmnq73AiR6BwhD.NTS9DWGhHsYfxJGC'
+  - _id: NKhj8CtGws6Adv8j
+    name: Caltrops
+    type: gear
+    img: systems/torgeternity/images/icons/gear-icon.webp
+    effects:
+      - origin: Compendium.te001-core-rulebook.Items.Item.KKJPrdjO5sFkhZzF
+        duration:
+          startTime: null
+          seconds: null
+          combat: null
+          rounds: null
+          turns: null
+          startRound: null
+          startTurn: null
+        disabled: true
+        name: Maneuver Fav
+        _id: qNNSmAnRkG0Ot2Yf
+        changes:
+          - key: system.skills.maneuver.isFav
+            mode: 5
+            value: '1'
+            priority: null
+        description: ''
+        transfer: true
+        statuses: []
+        flags: {}
+        tint: '#ffffff'
+        _stats:
+          compendiumSource: null
+          duplicateSource: null
+          coreVersion: '12.330'
+          systemId: torgeternity
+          systemVersion: 12.2.0
+          createdTime: null
+          modifiedTime: null
+          lastModifiedBy: null
+        img: icons/svg/aura.svg
+        type: base
+        system: {}
+        sort: 0
+        _key: >-
+          !actors.items.effects!QsYmnq73AiR6BwhD.NKhj8CtGws6Adv8j.qNNSmAnRkG0Ot2Yf
+    folder: gjZiCPX5knOIpsHd
+    sort: 650000
+    flags:
+      core: {}
+    system:
+      cosm: aysle
+      description: "<p>A batch of scattered spikes that always land with a point upwards, designed to impale feet and tires. Once deployed as a simple action maneuver interactions become Favored around the spikes.</p>\n<p>\_</p>\n<p>Found in <strong>Core Rules</strong></p>"
+      price: '40'
+      techlevel: 14
+      value: 8
+      secondaryAxiom:
+        selected: none
+        value: null
+    ownership:
+      default: 0
+      A9LyAqagoJJU3gDH: 3
+      VAnYow5sWS9EJzo0: 3
+      93AMwcGe6H37rcPA: 3
+    _stats:
+      compendiumSource: Compendium.te001-core-rulebook.Items.Item.KKJPrdjO5sFkhZzF
+      duplicateSource: null
+      coreVersion: '12.330'
+      systemId: torgeternity
+      systemVersion: 12.2.0
+      createdTime: 1722357677030
+      modifiedTime: 1722357677030
+      lastModifiedBy: 93AMwcGe6H37rcPA
+    _key: '!actors.items!QsYmnq73AiR6BwhD.NKhj8CtGws6Adv8j'
 effects:
-  - origin: >-
-      Compendium.torgeternity.archetypes.Actor.QsYmnq73AiR6BwhD.Item.NTS9DWGhHsYfxJGC
+  - origin: Actor.QsYmnq73AiR6BwhD.Item.NTS9DWGhHsYfxJGC
     duration:
       startTime: 0
       seconds: null
@@ -704,7 +659,7 @@ effects:
       turns: null
       startRound: null
       startTurn: null
-    disabled: true
+    disabled: false
     name: Giant Strength (+2)
     _id: hEeH10DtfU8wxI7z
     changes:
@@ -731,6 +686,43 @@ effects:
     system: {}
     sort: 0
     _key: '!actors.effects!QsYmnq73AiR6BwhD.hEeH10DtfU8wxI7z'
+  - origin: >-
+      Compendium.torgeternity.archetypes.Actor.QsYmnq73AiR6BwhD.Item.NKhj8CtGws6Adv8j
+    duration:
+      startTime: 0
+      seconds: null
+      combat: null
+      rounds: null
+      turns: null
+      startRound: null
+      startTurn: null
+    disabled: true
+    name: Maneuver Fav
+    _id: 51EL4wizIGdagglw
+    changes:
+      - key: system.skills.maneuver.isFav
+        mode: 5
+        value: '1'
+        priority: null
+    description: ''
+    transfer: false
+    statuses: []
+    flags: {}
+    tint: '#ffffff'
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      coreVersion: '12.330'
+      systemId: torgeternity
+      systemVersion: 12.2.0
+      createdTime: 1722357677036
+      modifiedTime: 1722357677036
+      lastModifiedBy: 93AMwcGe6H37rcPA
+    img: icons/svg/aura.svg
+    type: base
+    system: {}
+    sort: 0
+    _key: '!actors.effects!QsYmnq73AiR6BwhD.51EL4wizIGdagglw'
 folder: null
 sort: 100001
 flags:
@@ -1087,95 +1079,7 @@ system:
     spirit: 18
     tech: 14
   details:
-    background: >-
-      <p><img class="charimg"
-      src="systems/torgeternity/images/characters/Dragon_Warrior.webp" alt=""
-      width="1088" height="1743"></p>
-
-      <p
-      class="moreheight">@UUID[Compendium.torgeternity.handouts.JournalEntry.Knhh8vqtjSylJo5Z.JournalEntryPage.wyqIUAZMhqAUvoD6]{Archetype
-      - The Dragon Warrior}</p>
-
-      <h3>Overview</h3>
-
-      <p>The dwarves of Aysle were nearly exterminated by Uthorian&rsquo;s dark
-      forces. The few who remain carry the bitterness and rage of a dying
-      people, and the martial prowess to do something about it. The champions of
-      dwarven-kind, the best of the best, wear special armor to protect and
-      avenge their people.</p>
-
-      <p>Dragon Warrior armor is the ultimate expression of your people&rsquo;s
-      magic and ingenuity. Each suit is unique, painstakingly forged from rare
-      metals, inscribed with runes, and loaded with advanced weapons and
-      gadgets. The dwarves consider dragons embodiments of rage and power, so
-      it&rsquo;s no accident these suits are stylized with draconic images and
-      symbols.&nbsp;</p>
-
-      <h3>Tactics</h3>
-
-      <p>You&rsquo;re a heavy-duty front-line fighter. The extremely high
-      Toughness insures many foes can&rsquo;t even deal Shock damage without a
-      lucky hit or Armor Piercing effects. The great axe makes short work of
-      most&nbsp;enemies, and Dragon&rsquo;s Breath is devastating against groups
-      of opponents with low dodge defenses. Lean on intimidation to make a foe
-      Vulnerable if hitting is difficult, or whenever it&rsquo;s an Approved
-      Action to gain powerful Destiny cards.</p>
-
-      <h3>Moment of Crisis</h3>
-
-      <p>You&rsquo;ve likely been a Storm Knight for some time. The crisis may
-      have come during one of the endless battles against Uthorian&rsquo;s
-      horde, a moment where all seemed lost but you stood fast and held the line
-      against the onslaught. Or perhaps it was a more personal crisis when a
-      clan member or loved one was in dire need of a seemingly impossible
-      rescue.</p>
-
-      <h3>Quote</h3>
-
-      <p>&ldquo;Actually, most problems can be solved with a battle axe. Let me
-      show you how it works.&ldquo;</p>
-
-      <h3>Description</h3>
-
-      <p>The dwarf inside the armor is likely scarred mentally and
-      physically&mdash;though the armor never comes off for anyone to see.
-      Unkempt hair and rough manners are common expressions of the sense of
-      defeat and failure that pervades their shattered culture, leaving most
-      dwarves grim, fatalistic, and rude.</p>
-
-      <h3>Agenda</h3>
-
-      <p>Where other Storm Knights usually fight for freedom or ideals,
-      you&rsquo;re consumed with revenge. Your people are beyond saving, at
-      least as far as most dwarves are concerned, but there&rsquo;s still time
-      for payback.</p>
-
-      <h3>Names</h3>
-
-      <p>Artala, Bran, Gudrun, Gunnar, Isode, Juki the Red, Karn of Ungbar,
-      Milla, Tworek, Zisa</p>
-
-      <h3>Advancement Track (Optional)</h3>
-
-      <ul>
-
-      <li>(5 XP) Forsaken</li>
-
-      <li>(7 XP) Braided</li>
-
-      <li>(1 XP) <em>first aid</em> +1</li>
-
-      <li>(2 XP) <em>reality</em> +2</li>
-
-      <li>(3 XP) <em>reality</em> +3</li>
-
-      <li>(3 XP) <em>missile weapons</em> +3</li>
-
-      <li>(4 XP) <em>melee weapons</em> +4</li>
-
-      <li>(5 XP) <em>melee weapons</em> +5</li>
-
-      </ul>
+    background: "<p><img class=\"charimg\" src=\"systems/torgeternity/images/characters/Dragon_Warrior.webp\" alt=\"\" width=\"1088\" height=\"1743\" /></p>\n<p class=\"moreheight\">@UUID[Compendium.torgeternity.handouts.JournalEntry.Knhh8vqtjSylJo5Z.JournalEntryPage.wyqIUAZMhqAUvoD6]{Archetype - The Dragon Warrior}</p>\n<h3>Overview</h3>\n<p>The dwarves of Aysle were nearly exterminated by Uthorian’s dark forces. The few who remain carry the bitterness and rage of a dying people, and the martial prowess to do something about it. The champions of dwarven-kind, the best of the best, wear special armor to protect and avenge their people.</p>\n<p>Dragon Warrior armor is the ultimate expression of your people’s magic and ingenuity. Each suit is unique, painstakingly forged from rare metals, inscribed with runes, and loaded with advanced weapons and gadgets. The dwarves consider dragons embodiments of rage and power, so it’s no accident these suits are stylized with draconic images and symbols.\_</p>\n<h3>Tactics</h3>\n<p>You’re a heavy-duty front-line fighter. The extremely high Toughness insures many foes can’t even deal Shock damage without a lucky hit or Armor Piercing effects. The great axe makes short work of most\_enemies, and Dragon’s Breath is devastating against groups of opponents with low dodge defenses. Lean on intimidation to make a foe Vulnerable if hitting is difficult, or whenever it’s an Approved Action to gain powerful Destiny cards.</p>\n<h3>Moment of Crisis</h3>\n<p>You’ve likely been a Storm Knight for some time. The crisis may have come during one of the endless battles against Uthorian’s horde, a moment where all seemed lost but you stood fast and held the line against the onslaught. Or perhaps it was a more personal crisis when a clan member or loved one was in dire need of a seemingly impossible rescue.</p>\n<h3>Quote</h3>\n<p>“Actually, most problems can be solved with a battle axe. Let me show you how it works.“</p>\n<h3>Description</h3>\n<p>The dwarf inside the armor is likely scarred mentally and physically—though the armor never comes off for anyone to see. Unkempt hair and rough manners are common expressions of the sense of defeat and failure that pervades their shattered culture, leaving most dwarves grim, fatalistic, and rude.</p>\n<h3>Agenda</h3>\n<p>Where other Storm Knights usually fight for freedom or ideals, you’re consumed with revenge. Your people are beyond saving, at least as far as most dwarves are concerned, but there’s still time for payback.</p>\n<h3>Names</h3>\n<p>Artala, Bran, Gudrun, Gunnar, Isode, Juki the Red, Karn of Ungbar, Milla, Tworek, Zisa</p>\n<h3>Advancement Track (Optional)</h3>\n<ul>\n<li>(5 XP) Forsaken</li>\n<li>(7 XP) Braided</li>\n<li>(1 XP) <em>first aid</em> +1</li>\n<li>(2 XP) <em>reality</em> +2</li>\n<li>(3 XP) <em>reality</em> +3</li>\n<li>(3 XP) <em>missile weapons</em> +3</li>\n<li>(4 XP) <em>melee weapons</em> +4</li>\n<li>(5 XP) <em>melee weapons</em> +5</li>\n</ul>"
     race: dwarf
     sizeBonus: normal
   editstate: false
@@ -1261,11 +1165,11 @@ prototypeToken:
       texture: null
 _stats:
   systemId: torgeternity
-  systemVersion: 3.8.1
+  systemVersion: 12.2.0
   coreVersion: '12.330'
   createdTime: 1693900608203
-  modifiedTime: 1716827807732
-  lastModifiedBy: VAnYow5sWS9EJzo0
+  modifiedTime: 1722355493847
+  lastModifiedBy: 93AMwcGe6H37rcPA
   compendiumSource: null
   duplicateSource: null
 _key: '!actors!QsYmnq73AiR6BwhD'

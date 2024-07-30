@@ -15,17 +15,13 @@ items:
     folder: null
     system:
       cosm: panPacifica
-      description: >-
-        <p>Can be thrown to the ground as a trick interaction, and leaves behind
-        smoke (−2 Concealment penalty) in a five-meter radius.</p>
-
-        <p>&nbsp;</p>
-
-        <p>Found in <strong>Core Rules</strong></p>
+      description: "<p>Can be thrown to the ground as a trick interaction, and leaves behind smoke (−2 Concealment penalty) in a five-meter radius.</p>\n<p>\_</p>\n<p>Found in <strong>Core Rules</strong></p>"
       price: '40'
       techlevel: 24
       value: 8
-      equippedClass: item-equipped
+      secondaryAxiom:
+        selected: none
+        value: null
     ownership:
       default: 0
     _stats:
@@ -51,16 +47,7 @@ items:
     system:
       category: prowess
       cosm: none
-      description: >-
-        <p>The Storm Knight is known for one particular weapon. When an attack
-        with the weapon results in bonus damage, the player may reroll any 1s
-        and accept the new result.</p><p>If the weapon is ever lost, the Game
-        Master should eventually allow him to replace it, usually at the start
-        of the next act.</p>
-
-        <p>&nbsp;</p>
-
-        <p>Found in <strong>Core Rules</strong></p>
+      description: "<p>The Storm Knight is known for one particular weapon. When an attack with the weapon results in bonus damage, the player may reroll any 1s and accept the new result.</p><p>If the weapon is ever lost, the Game Master should eventually allow him to replace it, usually at the start of the next act.</p>\n<p>\_</p>\n<p>Found in <strong>Core Rules</strong></p>"
       prerequisites: ''
       generalContradiction: false
       pulpPowers:
@@ -137,6 +124,9 @@ items:
         limitation10: ''
         limitationNumber: 0
       timestaken: '1'
+      secondaryAxiom:
+        selected: none
+        value: null
     ownership:
       default: 0
       A9LyAqagoJJU3gDH: 3
@@ -163,15 +153,7 @@ items:
         sourceId: Compendium.te001-core-rulebook.Items.oXC2OfgC7II3et6Z
     system:
       cosm: panPacifica
-      description: >-
-        <p>The ion circuitry nano-imprinted into the katana’s blade glows with
-        energy when activated. The field generated just over the surface cuts
-        even sharper, and protects the metal underneath from chipping or
-        dulling. May be used as a normal katana when not energized.</p>
-
-        <p>&nbsp;</p>
-
-        <p>Found in <strong>Core Rules</strong></p>
+      description: "<p>The ion circuitry nano-imprinted into the katana’s blade glows with energy when activated. The field generated just over the surface cuts even sharper, and protects the metal underneath from chipping or dulling. May be used as a normal katana when not energized.</p>\n<p>\_</p>\n<p>Found in <strong>Core Rules</strong></p>"
       price: '500'
       techlevel: 24
       value: 13
@@ -182,8 +164,11 @@ items:
       damage: 4
       damageType: strengthPlus
       equipped: true
-      equippedClass: .item-unequipped
       notes: ''
+      secondaryAxiom:
+        selected: none
+        value: null
+      minStrength: null
     ownership:
       default: 0
       A9LyAqagoJJU3gDH: 3
@@ -210,17 +195,7 @@ items:
         sourceId: Compendium.te001-core-rulebook.Items.TD2iH8mU5NxIyQKy
     system:
       cosm: panPacifica
-      description: >-
-        <p>@UUID[Compendium.te001-core-rulebook.rules.pwneQ55M0nnDH0Us.JournalEntryPage.qKdamp4rrcX6TTt0#short-burst:]{Short
-        Burst}</p>
-
-        <p>A lightweight submachine gun from Pan-Pacifica, the Kyogo is
-        unusually accurate for a submachine gun and is quite popular due to its
-        exceptional range and damage.</p>
-
-        <p>&nbsp;</p>
-
-        <p>Found in <strong>Core Rules</strong></p>
+      description: "<p>@UUID[Compendium.te001-core-rulebook.rules.pwneQ55M0nnDH0Us.JournalEntryPage.qKdamp4rrcX6TTt0#short-burst:]{Short Burst}</p>\n<p>A lightweight submachine gun from Pan-Pacifica, the Kyogo is unusually accurate for a submachine gun and is quite popular due to its exceptional range and damage.</p>\n<p>\_</p>\n<p>Found in <strong>Core Rules</strong></p>"
       price: '400'
       techlevel: 24
       value: 13
@@ -233,9 +208,11 @@ items:
       damage: 13
       damageType: flat
       equipped: true
-      equippedClass: .item-unequipped
       notes: Short Burst
       range: 20 / 40 / 80
+      secondaryAxiom:
+        selected: none
+        value: null
     ownership:
       default: 0
       A9LyAqagoJJU3gDH: 3
@@ -258,17 +235,17 @@ items:
       cosm: panPacifica
       description: >-
         <p>The distinctive armor of the Electric Samurai is the Ion Gusoku. The
-        first suits were adapted from the armor worn by Kanawa&rsquo;s elite
-        security forces, but many adaptations and improvements were added as the
-        samurai reverse-engineered Kanawa&rsquo;s technology.</p>
+        first suits were adapted from the armor worn by Kanawa’s elite security
+        forces, but many adaptations and improvements were added as the samurai
+        reverse-engineered Kanawa’s technology.</p>
 
         <p>The
         @UUID[Compendium.te001-core-rulebook.Items.Item.NlvMMLc98zfTyvF1]{Ion
         Gusoku Armor} itself is highly advanced and built specifically for the
         samurai intended to wear it. A bio-scan lock shuts down functions and
-        seizes up when anyone else puts it on. It limits its wearer&rsquo;s
-        Dexterity to 10, is Tech Axiom 24, provides +4 Full Body Armor, and
-        causes Fatigue.</p>
+        seizes up when anyone else puts it on. It limits its wearer’s Dexterity
+        to 10, is Tech Axiom 24, provides +4 Full Body Armor, and causes
+        Fatigue.</p>
 
         <p><strong>New Enhancements:</strong> This Perk may be taken more than
         once. Each additional Perk enhances the armor with one of the systems
@@ -281,28 +258,27 @@ items:
         gusoku is covered in sensors and LEDs that shift color and brightness to
         mimic the surrounding area when the samurai stands still. So long as she
         remains completely still (no actions or movement) she is effectively
-        invisible, and opponents suffer a &ndash;6 penalty on attempts to find
-        her or hit her with ranged attacks.</li>
+        invisible, and opponents suffer a –6 penalty on attempts to find her or
+        hit her with ranged attacks.</li>
 
         <li><strong>Flash Burst:</strong> Once per scene the armor may unleash a
         blinding flash of light as a free action. The light momentarily dazzles
         individuals within a Medium Blast around the character, rendering each
         Very Stymied.</li>
 
-        <li><strong>Kabuto HUD:</strong> The armor&rsquo;s helmet features an
+        <li><strong>Kabuto HUD:</strong> The armor’s helmet features an
         integrated display that removes the first two points of penalties from
-        the samurai&rsquo;s ranged attacks.</li>
+        the samurai’s ranged attacks.</li>
 
         <li><strong>Lightning Sheath:</strong> Electric samurai quickly learned
-        the dangers of being overwhelmed by hordes of infected or the
-        jiangshi&rsquo;s deadly grappling attack. Once a scene, the armor may
-        discharge an electric blast as a free action, causing 12 damage +1BD to
-        anything touching the armor. Anything grabbing the samurai automatically
-        releases its hold.</li>
+        the dangers of being overwhelmed by hordes of infected or the jiangshi’s
+        deadly grappling attack. Once a scene, the armor may discharge an
+        electric blast as a free action, causing 12 damage +1BD to anything
+        touching the armor. Anything grabbing the samurai automatically releases
+        its hold.</li>
 
-        <li><strong>Ultra-Light Alloys:</strong> The armor&rsquo;s low weight
-        and perfect fit combine to eliminate the suit&rsquo;s Fatigue
-        penalty.</li>
+        <li><strong>Ultra-Light Alloys:</strong> The armor’s low weight and
+        perfect fit combine to eliminate the suit’s Fatigue penalty.</li>
 
         </ul>
       prerequisites: Spirit 8+, at least two adds in melee weapons
@@ -399,6 +375,9 @@ items:
         limitation10: ''
         limitationNumber: 0
       timestaken: '1'
+      secondaryAxiom:
+        selected: none
+        value: null
     effects: []
     flags:
       core:
@@ -442,11 +421,13 @@ items:
       value: null
       bonus: 4
       equipped: true
-      equippedClass: item-equipped
       maxDex: 10
       minStrength: null
       notes: Fatigues, Full Body
       fatigue: 1
+      secondaryAxiom:
+        selected: none
+        value: null
     ownership:
       default: 0
       A9LyAqagoJJU3gDH: 3
@@ -816,91 +797,7 @@ system:
     spirit: 8
     tech: 24
   details:
-    background: >-
-      <p><img class="charimg"
-      src="systems/torgeternity/images/characters/Electric_Samurai.webp" alt=""
-      width="1015" height="1963"></p>
-
-      <p
-      class="moreheight">@UUID[Compendium.torgeternity.handouts.JournalEntry.Knhh8vqtjSylJo5Z.JournalEntryPage.JrsdRBb5FF01sg6B]{Archetype
-      - The Electric Samurai}</p>
-
-      <h3>Overview</h3>
-
-      <p>The Electric Samurai are a group of modern-day warriors who follow the
-      ancient code of Bushido, but using ultra-modern weapons and armor. The
-      origins&nbsp;of the movement are muddled, a strange meeting of punk youth
-      culture and the staid descendants of the the original samurai. Membership
-      is by invitation only, and invitations are only extended to those who
-      prove themselves worthy both in and out of battle.</p>
-
-      <p>Stormers and other foes may wear the same armor or wield similar
-      weapons, but they are not true samurai. It is the duty of the chosen to
-      challenge such pretenders.</p>
-
-      <h3>Tactics</h3>
-
-      <p>Your primary weapon is your electric katana, which deals amazing damage
-      and pierces armor. There&rsquo;s no dishonor in being practical, so your
-      SC Kyogo 144 SMG is useful for evening the odds against large numbers of
-      weaker opponents. Take advantage of the submachinegun&rsquo;s huge
-      ammunition clip and use Long Bursts often. Most of your interactions are
-      strong, try to use them when they&rsquo;re Approved Actions&mdash;except
-      for taunt. Petty insults are frivolous and distasteful.</p>
-
-      <h3>Moment of Crisis</h3>
-
-      <p>When the Contagion first appeared you worked as a bio-engineer, with a
-      specialty in genetic research. Before anyone understood what was happening
-      a jiangshi broke containment and began slaughtering your co-workers.
-      Perhaps it was the years of Kendo lessons that helped you fight off the
-      creature. Or maybe it was the calm and methodical way you rescued the
-      patients and personnel nearby. Either way, it triggered a change in you,
-      and also drew the attention of the Electric Samurai movement.</p>
-
-      <h3>Quote</h3>
-
-      <p>&ldquo;I wouldn&rsquo;t soil my blade on a foe such as you.&ldquo;</p>
-
-      <h3>Description</h3>
-
-      <p>The ion gusoku and electric katana are the unmistakable trademarks of
-      the Electric Samurai. Rigid control and impeccable manners are ideals you
-      strive for, but have never quite attained.</p>
-
-      <h3>Agenda</h3>
-
-      <p>The eight virtues of Bushido compel you to battle the Possibility
-      Raiders and the Contagion&mdash;and to protect the innocent people
-      threatened by both. Follow the code. Be righteous, heroic, compassionate,
-      polite, honest, honorable, loyal, and disciplined&mdash; even when
-      it&rsquo;s inconvenient.</p>
-
-      <h3>Names</h3>
-
-      <p>Akimi, Haruka, Izumi, Jun, Kazumi, Maru, Riku, Shigeri, Tomo</p>
-
-      <h3>Advancement Track (Optional)</h3>
-
-      <ul>
-
-      <li>(5 XP) Unflinching</li>
-
-      <li>(7 XP) Ion Gusoku (Lightning Sheath)</li>
-
-      <li>(1 XP) <em>missile weapons</em> +1</li>
-
-      <li>(2 XP) <em>reality</em> +2</li>
-
-      <li>(3 XP) <em>dodge</em> +3</li>
-
-      <li>(3 XP) <em>land vehicles</em> +3</li>
-
-      <li>(4 XP) <em>melee weapons</em> +4</li>
-
-      <li>(5 XP) <em>melee weapons</em> +5</li>
-
-      </ul>
+    background: "<p><img class=\"charimg\" src=\"systems/torgeternity/images/characters/Electric_Samurai.webp\" alt=\"\" width=\"1015\" height=\"1963\" /></p>\n<p class=\"moreheight\">@UUID[Compendium.torgeternity.handouts.JournalEntry.Knhh8vqtjSylJo5Z.JournalEntryPage.JrsdRBb5FF01sg6B]{Archetype - The Electric Samurai}</p>\n<h3>Overview</h3>\n<p>The Electric Samurai are a group of modern-day warriors who follow the ancient code of Bushido, but using ultra-modern weapons and armor. The origins\_of the movement are muddled, a strange meeting of punk youth culture and the staid descendants of the the original samurai. Membership is by invitation only, and invitations are only extended to those who prove themselves worthy both in and out of battle.</p>\n<p>Stormers and other foes may wear the same armor or wield similar weapons, but they are not true samurai. It is the duty of the chosen to challenge such pretenders.</p>\n<h3>Tactics</h3>\n<p>Your primary weapon is your electric katana, which deals amazing damage and pierces armor. There’s no dishonor in being practical, so your SC Kyogo 144 SMG is useful for evening the odds against large numbers of weaker opponents. Take advantage of the submachinegun’s huge ammunition clip and use Long Bursts often. Most of your interactions are strong, try to use them when they’re Approved Actions—except for taunt. Petty insults are frivolous and distasteful.</p>\n<h3>Moment of Crisis</h3>\n<p>When the Contagion first appeared you worked as a bio-engineer, with a specialty in genetic research. Before anyone understood what was happening a jiangshi broke containment and began slaughtering your co-workers. Perhaps it was the years of Kendo lessons that helped you fight off the creature. Or maybe it was the calm and methodical way you rescued the patients and personnel nearby. Either way, it triggered a change in you, and also drew the attention of the Electric Samurai movement.</p>\n<h3>Quote</h3>\n<p>“I wouldn’t soil my blade on a foe such as you.“</p>\n<h3>Description</h3>\n<p>The ion gusoku and electric katana are the unmistakable trademarks of the Electric Samurai. Rigid control and impeccable manners are ideals you strive for, but have never quite attained.</p>\n<h3>Agenda</h3>\n<p>The eight virtues of Bushido compel you to battle the Possibility Raiders and the Contagion—and to protect the innocent people threatened by both. Follow the code. Be righteous, heroic, compassionate, polite, honest, honorable, loyal, and disciplined— even when it’s inconvenient.</p>\n<h3>Names</h3>\n<p>Akimi, Haruka, Izumi, Jun, Kazumi, Maru, Riku, Shigeri, Tomo</p>\n<h3>Advancement Track (Optional)</h3>\n<ul>\n<li>(5 XP) Unflinching</li>\n<li>(7 XP) Ion Gusoku (Lightning Sheath)</li>\n<li>(1 XP) <em>missile weapons</em> +1</li>\n<li>(2 XP) <em>reality</em> +2</li>\n<li>(3 XP) <em>dodge</em> +3</li>\n<li>(3 XP) <em>land vehicles</em> +3</li>\n<li>(4 XP) <em>melee weapons</em> +4</li>\n<li>(5 XP) <em>melee weapons</em> +5</li>\n</ul>"
     race: human
     sizeBonus: normal
   editstate: false
@@ -986,11 +883,11 @@ prototypeToken:
       texture: null
 _stats:
   systemId: torgeternity
-  systemVersion: 3.8.1
+  systemVersion: 12.2.0
   coreVersion: '12.330'
   createdTime: 1693909765954
-  modifiedTime: 1716827807686
-  lastModifiedBy: VAnYow5sWS9EJzo0
+  modifiedTime: 1722355493847
+  lastModifiedBy: 93AMwcGe6H37rcPA
   compendiumSource: null
   duplicateSource: null
 _key: '!actors!QVpKuacd4LKfpJOy'

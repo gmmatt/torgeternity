@@ -15,7 +15,7 @@ items:
       ap: 0
       attackWith: unarmedCombat
       chatNote: ''
-      damage: '10'
+      damage: 10
       description: <p><em>Strength </em>+2.</p>
     ownership:
       default: 0
@@ -471,11 +471,11 @@ prototypeToken:
       texture: null
 _stats:
   systemId: torgeternity
-  systemVersion: 3.8.1
+  systemVersion: 12.2.0
   coreVersion: '12.330'
   createdTime: 1693899262797
-  modifiedTime: 1716827807901
-  lastModifiedBy: VAnYow5sWS9EJzo0
+  modifiedTime: 1722355493847
+  lastModifiedBy: 93AMwcGe6H37rcPA
   compendiumSource: null
   duplicateSource: null
 _key: '!actors!azyXdSKJRLmriHz6'

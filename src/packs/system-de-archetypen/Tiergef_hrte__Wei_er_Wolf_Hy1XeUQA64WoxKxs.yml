@@ -15,8 +15,8 @@ items:
       ap: 0
       attackWith: unarmedCombat
       chatNote: ''
-      damage: '10'
-      description: <p>Schaden&nbsp;<em>St&auml;rke</em> +2 (10)</p>
+      damage: 10
+      description: "<p>Schaden\_<em>Stärke</em> +2 (10)</p>"
     ownership:
       default: 0
       pYSulyhjOdVnRAJt: 3
@@ -380,13 +380,13 @@ system:
       defenseOnly: false
   details:
     description: >-
-      <p class="moreheight">Tiergef&auml;hrte von
+      <p class="moreheight">Tiergefährte von
       @UUID[Compendium.torgeternity.system-de-archetypen.Actor.OB5I9LwFUwB5C3C4]{Die
-      elfische H&uuml;terin}</p>
+      elfische Hüterin}</p>
 
       <p
-      class="moreheight">@UUID[Compendium.torgeternity.system-de-handouts.JournalEntry.DLLvnXpv7RFhRgHu.JournalEntryPage.ItABNBtu0A2pm0Dc]{Tiergef&auml;hrte
-      - Wei&szlig;er Wolf}</p>
+      class="moreheight">@UUID[Compendium.torgeternity.system-de-handouts.JournalEntry.DLLvnXpv7RFhRgHu.JournalEntryPage.ItABNBtu0A2pm0Dc]{Tiergefährte
+      - Weißer Wolf}</p>
     sizeBonus: normal
     clearance: alpha
     possibilityPotential: Niemals
@@ -473,11 +473,11 @@ prototypeToken:
       texture: null
 _stats:
   systemId: torgeternity
-  systemVersion: 3.8.1
+  systemVersion: 12.2.0
   coreVersion: '12.330'
   createdTime: 1694860825482
-  modifiedTime: 1716827811101
-  lastModifiedBy: VAnYow5sWS9EJzo0
+  modifiedTime: 1722359278656
+  lastModifiedBy: 93AMwcGe6H37rcPA
   compendiumSource: Compendium.te001-core-rulebook.Actors.fImZbwzh0jbEYGN5
   duplicateSource: null
 _key: '!actors!Hy1XeUQA64WoxKxs'

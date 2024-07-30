@@ -15,11 +15,13 @@ items:
         sourceId: Item.YPwj95vVULBwePmN
     system:
       cosm: livingLand
-      description: <p>Rot, wei&szlig; und blau. Lehre deinen Feinden das F&uuml;rchten!</p>
+      description: <p>Rot, weiß und blau. Lehre deinen Feinden das Fürchten!</p>
       price: '0'
       techlevel: 4
       value: 0
-      equippedClass: item-equipped
+      secondaryAxiom:
+        selected: none
+        value: null
     ownership:
       default: 0
       9Q0XnqFwko7hRlvL: 3
@@ -49,7 +51,9 @@ items:
       price: '25'
       techlevel: 5
       value: 7
-      equippedClass: item-equipped
+      secondaryAxiom:
+        selected: none
+        value: null
     ownership:
       default: 0
       9Q0XnqFwko7hRlvL: 3
@@ -76,35 +80,7 @@ items:
     system:
       category: savagery
       cosm: livingLand
-      description: >-
-        <p>Dinosauriern aufnehmen k&ouml;nnen. Aber es gibt auch eine kleinere
-        Unterart, die gl&uuml;cklicherweise daran interessiert ist, an der Seite
-        der Menschen und Eideinos zu reisen, anstatt sie zu
-        verspeisen.&nbsp;</p>
-
-        <p>Dieser Vorzug stellt dem Helden einen S&auml;belzahntiger als
-        Begleiter zur Seite. Er ist so intelligent wie ein sehr gut trainierter
-        Hund, sodass er grundlegenden Befehlen folgen kann, wie zum Beispiel
-        einen bestimmten Feind anzugreifen, eine Person oder einen Ort zu
-        sch&uuml;tzen oder zu einem vertrauten Ort gehen, der zuvor von seinem
-        Herrn markiert wurde.&nbsp;</p>
-
-        <p>In den meisten F&auml;llen wird der Tiger direkt vom Spieler
-        gesteuert. Die Spielleiterin &uuml;bernimmt nur dann, wenn das Tier
-        verwirrt ist, missbraucht wird oder auf sich allein gestellt ist. Der
-        Tiger hat keine eigenen M&ouml;glichkeiten, aber der Charakter kann
-        seine M&ouml;glichkeiten (und Schicksalskarten) f&uuml;r ihn ausgeben,
-        selbst wenn sie voneinander getrennt sind.&nbsp;</p>
-
-        <p>Wenn der Tiger ausgeschaltet wird, betrachtet ihr ihn am besten als
-        kampfunf&auml;hig, aber am Leben. Er darf dann zu Beginn des
-        n&auml;chsten Aktes zur&uuml;ckkehren. Falls er wirklich und
-        unbestreitbar get&ouml;tet wurde, so muss der Charakter das Lebende Land
-        besuchen und mehrere N&auml;chte im Dschungel verbringen, um einen neuen
-        Gef&auml;hrten zu finden.</p>
-
-        <p>@UUID[Compendium.torgeternity.system-de-archetypen.Actor.SVU3O0osXn4bPoTn]{Tiergef&auml;hrte:
-        S&auml;belzahntiger}</p>
+      description: "<p>Dinosauriern aufnehmen können. Aber es gibt auch eine kleinere Unterart, die glücklicherweise daran interessiert ist, an der Seite der Menschen und Eideinos zu reisen, anstatt sie zu verspeisen.\_</p>\n<p>Dieser Vorzug stellt dem Helden einen Säbelzahntiger als Begleiter zur Seite. Er ist so intelligent wie ein sehr gut trainierter Hund, sodass er grundlegenden Befehlen folgen kann, wie zum Beispiel einen bestimmten Feind anzugreifen, eine Person oder einen Ort zu schützen oder zu einem vertrauten Ort gehen, der zuvor von seinem Herrn markiert wurde.\_</p>\n<p>In den meisten Fällen wird der Tiger direkt vom Spieler gesteuert. Die Spielleiterin übernimmt nur dann, wenn das Tier verwirrt ist, missbraucht wird oder auf sich allein gestellt ist. Der Tiger hat keine eigenen Möglichkeiten, aber der Charakter kann seine Möglichkeiten (und Schicksalskarten) für ihn ausgeben, selbst wenn sie voneinander getrennt sind.\_</p>\n<p>Wenn der Tiger ausgeschaltet wird, betrachtet ihr ihn am besten als kampfunfähig, aber am Leben. Er darf dann zu Beginn des nächsten Aktes zurückkehren. Falls er wirklich und unbestreitbar getötet wurde, so muss der Charakter das Lebende Land besuchen und mehrere Nächte im Dschungel verbringen, um einen neuen Gefährten zu finden.</p>\n<p>@UUID[Compendium.torgeternity.system-de-archetypen.Actor.SVU3O0osXn4bPoTn]{Tiergefährte: Säbelzahntiger}</p>"
       prerequisites: Charisma 8+
       generalContradiction: false
       pulpPowers:
@@ -181,6 +157,9 @@ items:
         limitation10: ''
         limitationNumber: 0
       timestaken: '1'
+      secondaryAxiom:
+        selected: none
+        value: null
     ownership:
       default: 0
       9Q0XnqFwko7hRlvL: 3
@@ -208,18 +187,7 @@ items:
     system:
       category: prowess
       cosm: none
-      description: >-
-        <p>Die zornigsten K&auml;mpfer stecken alles, was in ihnen steckt, in
-        ihre Schl&auml;ge. Wenn der Charakter die Option
-        &bdquo;@UUID[Compendium.te001-core-rulebook.grw-de-grw.Qlx6yGF0Mmo6Xzrv.JournalEntryPage.41rZYYhaMC2T260D#rucksichtsloser-angriff]{R&uuml;cksichtsloser
-        Angriff}&ldquo; erfolgreich im Nahkampf einsetzt, dann darf er 3 Punkte
-        Schock erleiden, um dem Schaden einen zus&auml;tzlichen Bonusw&uuml;rfel
-        hinzuzuf&uuml;gen. Dieser addiert sich zum &uuml;blichen Bonusschaden
-        f&uuml;r ein gutes oder hervorragendes Probenergebnis. Der Krieger darf
-        durch den freiwillig erlittenen Schock nicht K.O. gehen, denn dann
-        funktioniert der Vorzug nicht.</p>
-
-        <p>&nbsp;</p>
+      description: "<p>Die zornigsten Kämpfer stecken alles, was in ihnen steckt, in ihre Schläge. Wenn der Charakter die Option „@UUID[Compendium.te001-core-rulebook.grw-de-grw.Qlx6yGF0Mmo6Xzrv.JournalEntryPage.41rZYYhaMC2T260D#rucksichtsloser-angriff]{Rücksichtsloser Angriff}“ erfolgreich im Nahkampf einsetzt, dann darf er 3 Punkte Schock erleiden, um dem Schaden einen zusätzlichen Bonuswürfel hinzuzufügen. Dieser addiert sich zum üblichen Bonusschaden für ein gutes oder hervorragendes Probenergebnis. Der Krieger darf durch den freiwillig erlittenen Schock nicht K.O. gehen, denn dann funktioniert der Vorzug nicht.</p>\n<p>\_</p>"
       prerequisites: Stärke 10+
       generalContradiction: false
       pulpPowers:
@@ -296,6 +264,9 @@ items:
         limitation10: ''
         limitationNumber: 0
       timestaken: '1'
+      secondaryAxiom:
+        selected: none
+        value: null
     ownership:
       default: 0
       9Q0XnqFwko7hRlvL: 3
@@ -310,104 +281,6 @@ items:
       compendiumSource: Compendium.te001-core-rulebook.grw-de-vorzuverb.Item.HPYtbg4vPrY05AQ6
       duplicateSource: null
     _key: '!actors.items!pGJE5A6rJMK7Za84.U9r4bGF9Qf9Y2tdX'
-  - _id: OhNaScW1ac7A8p4t
-    name: Hrockt-Sprossenspeer
-    type: meleeweapon
-    img: systems/torgeternity/images/icons/axe-icon.webp
-    effects: []
-    folder: null
-    sort: 0
-    flags:
-      core:
-        sourceId: >-
-          Compendium.te001-core-rulebook.grw-de-ausruestung.Item.kXL8gB3WmlckpUWD
-    system:
-      cosm: livingLand
-      description: >-
-        <p style="box-sizing: border-box; user-select: text; font-family:
-        Palatino; font-size: 12px;"><strong style="box-sizing: border-box;
-        user-select: text;">Wurfwaffe:&nbsp;</strong>Der Gegenstand z&auml;hlt
-        zus&auml;tzlich als Wurfwaffe und kann mit der
-        Projektilwaffen-Fertigkeit auf eine Reichweite von 10/20/40 geworfen
-        werden. Zum Ausr&uuml;sten s.
-        @UUID[Compendium.te001-core-rulebook.grw-de-ausruestung.Item.VRuK7Un8bvtpUk3s]{Hrockt-Sprossenspeer}</p>
-
-        <p>Die Sprossen sind im Wachstum weich und biegsam, werden aber hart wie
-        Stahl, nachdem sie abgeschnitten und getrocknet wurden. Am
-        h&auml;ufigsten trifft man sie in Form von Speeren an, die auch als
-        Projektilwaffe geworfen werden k&ouml;nnen.</p>
-      price: '40'
-      techlevel: 2
-      value: 8
-      ap: 0
-      attackWith: meleeWeapons
-      bonus: 2
-      chatNote: ''
-      damage: 2
-      damageType: strengthPlus
-      equipped: false
-      equippedClass: .item-unequipped
-      notes: Wurfwaffe
-    ownership:
-      default: 0
-      9Q0XnqFwko7hRlvL: 3
-      CtisFurQNe9h7ABb: 3
-    _stats:
-      systemId: torgeternity
-      systemVersion: 12.2.0
-      coreVersion: '12.330'
-      createdTime: 1694862006764
-      modifiedTime: 1722167400045
-      lastModifiedBy: 93AMwcGe6H37rcPA
-      compendiumSource: Compendium.te001-core-rulebook.grw-de-ausruestung.Item.kXL8gB3WmlckpUWD
-      duplicateSource: null
-    _key: '!actors.items!pGJE5A6rJMK7Za84.OhNaScW1ac7A8p4t'
-  - _id: XpHJRYxPODTcXOC7
-    name: Hrockt-Sprossenspeer
-    type: missileweapon
-    img: systems/torgeternity/images/icons/missile-weapon-icon.webp
-    effects: []
-    folder: null
-    sort: 0
-    flags:
-      core:
-        sourceId: Item.ovHCUOiZApDGqjH8
-    system:
-      cosm: livingLand
-      description: >-
-        <p>S.
-        @UUID[Compendium.te001-core-rulebook.grw-de-ausruestung.Item.kXL8gB3WmlckpUWD]{Hrockt-Sprossenspeer}
-        als Nahkampfwaffe</p>
-      price: '40'
-      techlevel: 3
-      value: 8
-      ammo:
-        max: 1
-        value: 1
-      ap: 0
-      attackWith: missileWeapons
-      chatNote: ''
-      damage: 2
-      damageType: strengthPlus
-      equipped: false
-      equippedClass: .item-unequipped
-      minStrength: ''
-      notes: ''
-      range: 10/20/40
-    ownership:
-      default: 0
-      1pSzpSNrhKGYYcib: 3
-      CtisFurQNe9h7ABb: 3
-    _stats:
-      systemId: torgeternity
-      systemVersion: 12.2.0
-      coreVersion: '12.330'
-      createdTime: 1694862011324
-      modifiedTime: 1722167419251
-      lastModifiedBy: 93AMwcGe6H37rcPA
-      compendiumSource: Item.ovHCUOiZApDGqjH8
-      duplicateSource: null
-    _key: '!actors.items!pGJE5A6rJMK7Za84.XpHJRYxPODTcXOC7'
   - _id: PUNnBfqB6aI6XuN0
     name: Knochenmesser
     type: meleeweapon
@@ -438,8 +311,11 @@ items:
       damage: 1
       damageType: strengthPlus
       equipped: false
-      equippedClass: .item-unequipped
       notes: Zerbrechlich, klein
+      secondaryAxiom:
+        selected: none
+        value: null
+      minStrength: null
     ownership:
       default: 0
       9Q0XnqFwko7hRlvL: 3
@@ -470,7 +346,9 @@ items:
       price: '5'
       techlevel: 2
       value: 4
-      equippedClass: item-equipped
+      secondaryAxiom:
+        selected: none
+        value: null
     ownership:
       default: 0
       9Q0XnqFwko7hRlvL: 3
@@ -501,21 +379,23 @@ items:
       description: >-
         <p>@UUID[Compendium.te001-core-rulebook.grw-de-grw.Qlx6yGF0Mmo6Xzrv.JournalEntryPage.7GGUUHzuYIqGPXDO#ganzkorper/torso:]{Torso}</p>
 
-        <p>Die R&uuml;stung besteht aus fein polierten Knochenst&uuml;cken, die
-        sorgf&auml;ltig in die darunterliegende Fellkleidung eingen&auml;ht
-        sind. Sie ist sehr aufwendig in der Herstellung, denn wenn die
-        Knochenschicht nicht an den K&ouml;rper des Benutzers anpasst wurde,
-        kann sie in einem Kampf leicht brechen.</p>
+        <p>Die Rüstung besteht aus fein polierten Knochenstücken, die sorgfältig
+        in die darunterliegende Fellkleidung eingenäht sind. Sie ist sehr
+        aufwendig in der Herstellung, denn wenn die Knochenschicht nicht an den
+        Körper des Benutzers anpasst wurde, kann sie in einem Kampf leicht
+        brechen.</p>
       price: '50'
       techlevel: 3
       value: 8
       bonus: 1
       equipped: true
-      equippedClass: item-equipped
       maxDex: 12
       minStrength: null
       notes: Torso
       fatigue: null
+      secondaryAxiom:
+        selected: none
+        value: null
     ownership:
       default: 0
       9Q0XnqFwko7hRlvL: 3
@@ -530,6 +410,103 @@ items:
       compendiumSource: Compendium.te001-core-rulebook.grw-de-ausruestung.Item.tDUAjI78Wk2mAV6s
       duplicateSource: null
     _key: '!actors.items!pGJE5A6rJMK7Za84.1oyv8fqmX1WIiSaF'
+  - _id: LQlc5m0bbPHAdLiG
+    name: Hrockt-Sprossenspeer
+    type: meleeweapon
+    img: systems/torgeternity/images/icons/axe-icon.webp
+    effects: []
+    folder: null
+    sort: -100000
+    flags:
+      core: {}
+    system:
+      cosm: livingLand
+      description: >-
+        <p>@UUID[Compendium.te001-core-rulebook.grw-de-grw.JournalEntry.Qlx6yGF0Mmo6Xzrv.JournalEntryPage.7GGUUHzuYIqGPXDO#wurfwaffe:]{Wurfwaffe}</p><p>Zum
+        Ausrüsten als Projektilwaffe s.
+        @UUID[Actor.pGJE5A6rJMK7Za84.Item.dtM8WTZFd7JOeKMr]{Hrockt-Sprossenspeer}</p><p>Die
+        Sprossen sind im Wachstum weich und biegsam, werden aber hart wie Stahl,
+        nachdem sie abgeschnitten und getrocknet wurden. Am häufigsten trifft
+        man sie in Form von Speeren an, die auch als Projektilwaffe geworfen
+        werden können.</p>
+      price: '40'
+      techlevel: 2
+      value: 8
+      ap: 0
+      attackWith: meleeWeapons
+      bonus: 2
+      chatNote: ''
+      damage: 2
+      damageType: strengthPlus
+      equipped: true
+      notes: Wurfwaffe
+      secondaryAxiom:
+        selected: none
+        value: null
+      minStrength: null
+    ownership:
+      default: 0
+      1pSzpSNrhKGYYcib: 3
+      VAnYow5sWS9EJzo0: 3
+      93AMwcGe6H37rcPA: 3
+    _stats:
+      compendiumSource: Compendium.te001-core-rulebook.grw-de-ausruestung.Item.VRuK7Un8bvtpUk3s
+      duplicateSource: null
+      coreVersion: '12.330'
+      systemId: torgeternity
+      systemVersion: 12.2.0
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+    _key: '!actors.items!pGJE5A6rJMK7Za84.LQlc5m0bbPHAdLiG'
+  - name: Hrockt-Sprossenspeer
+    type: missileweapon
+    img: systems/torgeternity/images/icons/missile-weapon-icon.webp
+    system:
+      cosm: livingLand
+      description: >-
+        <p>Zum Ausrüsten als Nahkampfwaffe s.
+        @UUID[Actor.pGJE5A6rJMK7Za84.Item.LQlc5m0bbPHAdLiG]{Hrockt-Sprossenspeer}</p><p>Die
+        Sprossen sind im Wachstum weich und biegsam, werden aber hart wie Stahl,
+        nachdem sie abgeschnitten und getrocknet wurden. Am häufigsten trifft
+        man sie in Form von Speeren an, die auch als Projektilwaffe geworfen
+        werden können.</p>
+      price: '40'
+      techlevel: 3
+      value: 8
+      secondaryAxiom:
+        selected: none
+        value: null
+      ammo:
+        max: 1
+        value: 1
+      ap: 0
+      attackWith: missileWeapons
+      chatNote: ''
+      damage: 2
+      damageType: strengthPlus
+      equipped: false
+      minStrength: ''
+      notes: ''
+      range: 10/20/40
+    effects: []
+    folder: null
+    ownership:
+      default: 0
+      93AMwcGe6H37rcPA: 3
+    flags: {}
+    _stats:
+      compendiumSource: Compendium.te001-core-rulebook.grw-de-ausruestung.Item.oA1Elm4eVdBcBSn2
+      duplicateSource: null
+      coreVersion: '12.330'
+      systemId: torgeternity
+      systemVersion: 12.2.0
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+    _id: dtM8WTZFd7JOeKMr
+    sort: 0
+    _key: '!actors.items!pGJE5A6rJMK7Za84.dtM8WTZFd7JOeKMr'
 effects: []
 folder: null
 sort: 0
@@ -887,99 +864,7 @@ system:
     spirit: 24
     tech: 6
   details:
-    background: >-
-      <p><img class="charimg"
-      src="systems/torgeternity/images/characters/Primitive_Hunter.webp" alt=""
-      width="1449" height="1801"></p>
-
-      <p
-      class="moreheight">@UUID[Compendium.torgeternity.system-de-handouts.JournalEntry.DLLvnXpv7RFhRgHu.JournalEntryPage.XE6X141rfpUROtgY]{Archetyp
-      - Die urzeitliche J&auml;gerin}</p>
-
-      <h3>&Uuml;berblick</h3>
-
-      <p>Menschen, die in die Realit&auml;t des Lebendigen Landes verwandelt
-      wurden, werden dadurch nicht zu Neandertalern, wie einige Ger&uuml;chte
-      behaupten. Sie bleiben v&ouml;llig menschlich, sind aber jetzt perfekt an
-      die raue physische Umgebung und ein niedriges Sozial-Axiom angepasst, das
-      bestimmte Gedanken widerspr&uuml;chlich macht. Verwirrende Erinnerungen an
-      ihr Leben vor der Transformation bleiben bestehen, aber die meisten
-      ergeben einfach keinen Sinn mehr.&nbsp;</p>
-
-      <p>Diese Menschen h&ouml;ren auch die Stimme von Lanala und verehren sie
-      genauso wie die Edeinos. Diese Gl&auml;ubigen sind bekannt als "Jakkats",
-      Anh&auml;nger der Wege von Keta Kalles. Jakkats praktizieren ihre
-      Religion, indem sie jedes Gef&uuml;hl genie&szlig;en, das das Leben zu
-      bieten hat.</p>
-
-      <h3>Taktiken</h3>
-
-      <p>Normalerweise gehst du einfach in den Nahkampf und schl&auml;gst deine
-      Feinde nieder, bis sie aufh&ouml;ren, sich zu bewegen. In den seltenen
-      F&auml;llen, in denen du nicht an deine Gegner herankommst, kannst du
-      deinen Speer auch werfen. Der R&uuml;cksichtslose Angriff ist in der Regel
-      eine gute Option, sei es um den Unnachgiebig-Vorzug auszul&ouml;sen oder
-      das Gesetz der Wildheit zu nutzen, wenn es in Kraft ist. Man&ouml;vrieren
-      ist deine bevorzugte Interaktion, wobei Einsch&uuml;chtern in einem
-      Notfall ebefalls funktioniert.&nbsp;</p>
-
-      <p>Dein S&auml;belzahntiger-Tierbegleiter ist kein ausgewachsenes
-      Exemplar, aber seine Krallen sind t&ouml;dlich. Benutze sein
-      Man&ouml;vrieren, um deine eigenen Angriffe zu unterst&uuml;tzen. Gehe
-      sorgsam mit deinem vierbeinigen Freund um; wenn er get&ouml;tet wird, kann
-      es eine Weile dauern, bis ein anderer kommt.</p>
-
-      <h3>Moment der Krise</h3>
-
-      <p>Bevor die Mahlstrombr&uuml;cken landeten, lebtest du ein normales Leben
-      in einem Job, den du liebtest. Nach der Transformation blieb ein Funke
-      deiner Unabh&auml;ngigkeit zur&uuml;ck. Als die schwachen und weichen
-      Menschen aus deinem alten Leben angegriffen wurden, hast du gehandelt und
-      bist zu mehr geworden. Es ist auch m&ouml;glich, dass du dich als direkte
-      Folge deiner heldenhaften Tat verwandelt hast, als ob Lanala oder eine
-      andere Kraft w&uuml;sste, dass du mehr St&auml;rke und t&ouml;dliche
-      F&auml;higkeiten brauchst, um deinen Kampf zu den High Lords zu
-      tragen.</p>
-
-      <h3>Zitat</h3>
-
-      <p>"Wie kannst du nur k&auml;mpfen, mit all diesen ... Dingen
-      beh&auml;ngt?"</p>
-
-      <h3>Beschreibung</h3>
-
-      <p>Jakkats tragen nicht viel Kleidung. Leder, Z&auml;hne und Knochen
-      werden bevorzugt, da diese Dinge fr&uuml;her einmal lebendig waren. Du
-      magst auch K&ouml;rperfarben, die dich irgendwie an dein fr&uuml;heres
-      Leben erinnern. Die meisten Menschen finden dich aggressiv und stumpf,
-      aber k&ouml;rperlich bemerkenswert.</p>
-
-      <h3>Agenda</h3>
-
-      <p>Kriege, Politik und Organisationen machen einfach keinen Sinn. Es gibt
-      nur den Kampf gegen den Feind hier und jetzt. Die Folgen sind
-      komplizierte, ungewisse Dinge, die am besten den G&ouml;ttern und
-      Zauberern &uuml;berlassen werden.</p>
-
-      <h3>Namen</h3>
-
-      <p>Andar, Burly, Honda, Leena, Maka, Merron, Novan, Rayan, Vanna</p>
-
-      <h3>Vorgeschlagener Aufstieg (Optional)</h3>
-
-      <ul>
-
-      <li>(5 EP) Ausdauer</li>
-
-      <li>(7 EP) Wirbelwind</li>
-
-      <li>(9 EP) Schwer zu t&ouml;ten</li>
-
-      <li>(4 EP) <em>Nahkampfwaffen</em> +4</li>
-
-      <li>(5 EP) <em>Nahkampfwaffen</em> +5</li>
-
-      </ul>
+    background: "<p><img class=\"charimg\" src=\"systems/torgeternity/images/characters/Primitive_Hunter.webp\" alt=\"\" width=\"1449\" height=\"1801\" /></p>\n<p class=\"moreheight\">@UUID[Compendium.torgeternity.system-de-handouts.JournalEntry.DLLvnXpv7RFhRgHu.JournalEntryPage.XE6X141rfpUROtgY]{Archetyp - Die urzeitliche Jägerin}</p>\n<h3>Überblick</h3>\n<p>Menschen, die in die Realität des Lebendigen Landes verwandelt wurden, werden dadurch nicht zu Neandertalern, wie einige Gerüchte behaupten. Sie bleiben völlig menschlich, sind aber jetzt perfekt an die raue physische Umgebung und ein niedriges Sozial-Axiom angepasst, das bestimmte Gedanken widersprüchlich macht. Verwirrende Erinnerungen an ihr Leben vor der Transformation bleiben bestehen, aber die meisten ergeben einfach keinen Sinn mehr.\_</p>\n<p>Diese Menschen hören auch die Stimme von Lanala und verehren sie genauso wie die Edeinos. Diese Gläubigen sind bekannt als \"Jakkats\", Anhänger der Wege von Keta Kalles. Jakkats praktizieren ihre Religion, indem sie jedes Gefühl genießen, das das Leben zu bieten hat.</p>\n<h3>Taktiken</h3>\n<p>Normalerweise gehst du einfach in den Nahkampf und schlägst deine Feinde nieder, bis sie aufhören, sich zu bewegen. In den seltenen Fällen, in denen du nicht an deine Gegner herankommst, kannst du deinen Speer auch werfen. Der Rücksichtslose Angriff ist in der Regel eine gute Option, sei es um den Unnachgiebig-Vorzug auszulösen oder das Gesetz der Wildheit zu nutzen, wenn es in Kraft ist. Manövrieren ist deine bevorzugte Interaktion, wobei Einschüchtern in einem Notfall ebefalls funktioniert.\_</p>\n<p>Dein Säbelzahntiger-Tierbegleiter ist kein ausgewachsenes Exemplar, aber seine Krallen sind tödlich. Benutze sein Manövrieren, um deine eigenen Angriffe zu unterstützen. Gehe sorgsam mit deinem vierbeinigen Freund um; wenn er getötet wird, kann es eine Weile dauern, bis ein anderer kommt.</p>\n<h3>Moment der Krise</h3>\n<p>Bevor die Mahlstrombrücken landeten, lebtest du ein normales Leben in einem Job, den du liebtest. Nach der Transformation blieb ein Funke deiner Unabhängigkeit zurück. Als die schwachen und weichen Menschen aus deinem alten Leben angegriffen wurden, hast du gehandelt und bist zu mehr geworden. Es ist auch möglich, dass du dich als direkte Folge deiner heldenhaften Tat verwandelt hast, als ob Lanala oder eine andere Kraft wüsste, dass du mehr Stärke und tödliche Fähigkeiten brauchst, um deinen Kampf zu den High Lords zu tragen.</p>\n<h3>Zitat</h3>\n<p>\"Wie kannst du nur kämpfen, mit all diesen ... Dingen behängt?\"</p>\n<h3>Beschreibung</h3>\n<p>Jakkats tragen nicht viel Kleidung. Leder, Zähne und Knochen werden bevorzugt, da diese Dinge früher einmal lebendig waren. Du magst auch Körperfarben, die dich irgendwie an dein früheres Leben erinnern. Die meisten Menschen finden dich aggressiv und stumpf, aber körperlich bemerkenswert.</p>\n<h3>Agenda</h3>\n<p>Kriege, Politik und Organisationen machen einfach keinen Sinn. Es gibt nur den Kampf gegen den Feind hier und jetzt. Die Folgen sind komplizierte, ungewisse Dinge, die am besten den Göttern und Zauberern überlassen werden.</p>\n<h3>Namen</h3>\n<p>Andar, Burly, Honda, Leena, Maka, Merron, Novan, Rayan, Vanna</p>\n<h3>Vorgeschlagener Aufstieg (Optional)</h3>\n<ul>\n<li>(5 EP) Ausdauer</li>\n<li>(7 EP) Wirbelwind</li>\n<li>(9 EP) Schwer zu töten</li>\n<li>(4 EP) <em>Nahkampfwaffen</em> +4</li>\n<li>(5 EP) <em>Nahkampfwaffen</em> +5</li>\n</ul>"
     race: human
     sizeBonus: normal
   editstate: false
@@ -1065,11 +950,11 @@ prototypeToken:
       texture: null
 _stats:
   systemId: torgeternity
-  systemVersion: 3.8.1
+  systemVersion: 12.2.0
   coreVersion: '12.330'
   createdTime: 1694861916375
-  modifiedTime: 1716827811638
-  lastModifiedBy: VAnYow5sWS9EJzo0
+  modifiedTime: 1722359278656
+  lastModifiedBy: 93AMwcGe6H37rcPA
   compendiumSource: Compendium.torgeternity.archetypes.sPLt8RBL1hieic6p
   duplicateSource: null
 _key: '!actors!pGJE5A6rJMK7Za84'

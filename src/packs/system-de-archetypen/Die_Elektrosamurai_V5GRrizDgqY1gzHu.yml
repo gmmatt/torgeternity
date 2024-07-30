@@ -16,16 +16,7 @@ items:
     system:
       category: prowess
       cosm: none
-      description: >-
-        <p>Dieser Storm Knight ist f&uuml;r eine bestimmte Waffe bekannt. Wenn
-        ein Angriff mit der Waffe dazu f&uuml;hrt, dass er bei der
-        Schadensermittlung Bonusw&uuml;rfel werfen darf, so darf der Spieler
-        jedes Wurfergebnis von &bdquo;1&ldquo; einmal wiederholen und das neue
-        Ergebnis w&auml;hlen.&nbsp;</p>
-
-        <p>Falls die Waffe verloren geht, sollte die Spielleiterin es dem
-        Charakter erlauben, einen Ersatz f&uuml;r sie zu finden, normalerweise
-        zu Beginn des n&auml;chsten Aktes.</p>
+      description: "<p>Dieser Storm Knight ist für eine bestimmte Waffe bekannt. Wenn ein Angriff mit der Waffe dazu führt, dass er bei der Schadensermittlung Bonuswürfel werfen darf, so darf der Spieler jedes Wurfergebnis von „1“ einmal wiederholen und das neue Ergebnis wählen.\_</p>\n<p>Falls die Waffe verloren geht, sollte die Spielleiterin es dem Charakter erlauben, einen Ersatz für sie zu finden, normalerweise zu Beginn des nächsten Aktes.</p>"
       prerequisites: ''
       generalContradiction: false
       pulpPowers:
@@ -102,6 +93,9 @@ items:
         limitation10: ''
         limitationNumber: 0
       timestaken: '1'
+      secondaryAxiom:
+        selected: none
+        value: null
     ownership:
       default: 0
       9Q0XnqFwko7hRlvL: 3
@@ -131,11 +125,10 @@ items:
       cosm: panPacifica
       description: >-
         <p>Die in der Klinge untergebrachte Ionenschaltung leuchtet bei der
-        Aktivierung mit Energie. Das Feld, das direkt &uuml;ber der
-        Oberfl&auml;che der Klinge erzeugt wird, schneidet noch sch&auml;rfer
-        und sch&uuml;tzt das darunter liegende Metall vor dem Abstumpfen. Kann
-        als normales Katana verwendet werden, wenn es nicht unter Strom
-        steht.</p>
+        Aktivierung mit Energie. Das Feld, das direkt über der Oberfläche der
+        Klinge erzeugt wird, schneidet noch schärfer und schützt das darunter
+        liegende Metall vor dem Abstumpfen. Kann als normales Katana verwendet
+        werden, wenn es nicht unter Strom steht.</p>
       price: '500'
       techlevel: 24
       value: 13
@@ -146,8 +139,11 @@ items:
       damage: 4
       damageType: strengthPlus
       equipped: false
-      equippedClass: .item-unequipped
       notes: ''
+      secondaryAxiom:
+        selected: none
+        value: null
+      minStrength: null
     ownership:
       default: 0
       9Q0XnqFwko7hRlvL: 3
@@ -176,12 +172,14 @@ items:
       cosm: panPacifica
       description: >-
         <p>Kann als Tricksen-Interaktionsangriff auf den Boden geworfen werden
-        und hinterl&auml;sst dabei Rauch (Deckungsmalus &ndash;2) in einem
-        Umkreis von f&uuml;nf Metern.</p>
+        und hinterlässt dabei Rauch (Deckungsmalus –2) in einem Umkreis von fünf
+        Metern.</p>
       price: '40'
       techlevel: 24
       value: 8
-      equippedClass: item-equipped
+      secondaryAxiom:
+        selected: none
+        value: null
     ownership:
       default: 0
       9Q0XnqFwko7hRlvL: 3
@@ -211,13 +209,13 @@ items:
       cosm: panPacifica
       description: >-
         <p>@UUID[Compendium.te001-core-rulebook.grw-de-grw.Qlx6yGF0Mmo6Xzrv.JournalEntryPage.7GGUUHzuYIqGPXDO#kurzer-fs:]{Kurzer
-        Feuersto&szlig;}</p>
+        Feuerstoß}</p>
 
         <p>@UUID[Compendium.te001-core-rulebook.grw-de-grw.Qlx6yGF0Mmo6Xzrv.JournalEntryPage.7GGUUHzuYIqGPXDO#karabiner:]{Pistole}</p>
 
         <p>Diese leichte Maschinenpistole aus Pan-Pacifica ist im Vergleich mit
-        anderen Maschinenpistolen sehr pr&auml;zise und ist auch aufgrund ihrer
-        hohen Reichweite und Durchschlagskraft sehr beliebt.</p>
+        anderen Maschinenpistolen sehr präzise und ist auch aufgrund ihrer hohen
+        Reichweite und Durchschlagskraft sehr beliebt.</p>
       price: '400'
       techlevel: 24
       value: 13
@@ -230,9 +228,11 @@ items:
       damage: 13
       damageType: ''
       equipped: false
-      equippedClass: .item-unequipped
       notes: Kurzer FS, Pistole
       range: 20/40/80
+      secondaryAxiom:
+        selected: none
+        value: null
     ownership:
       default: 0
       9Q0XnqFwko7hRlvL: 3
@@ -359,6 +359,9 @@ items:
         limitation10: ''
         limitationNumber: 0
       timestaken: '1'
+      secondaryAxiom:
+        selected: none
+        value: null
     ownership:
       default: 0
       9Q0XnqFwko7hRlvL: 3
@@ -396,11 +399,13 @@ items:
       value: 0
       bonus: 4
       equipped: true
-      equippedClass: item-equipped
       maxDex: 10
       minStrength: null
       notes: Ermüdend, Ganzkörper
       fatigue: 1
+      secondaryAxiom:
+        selected: none
+        value: null
     ownership:
       default: 0
       9Q0XnqFwko7hRlvL: 3
@@ -772,102 +777,7 @@ system:
     spirit: 8
     tech: 24
   details:
-    background: >-
-      <p><img class="charimg"
-      src="systems/torgeternity/images/characters/Electric_Samurai.webp" alt=""
-      width="1015" height="1963"></p>
-
-      <p
-      class="moreheight">@UUID[Compendium.torgeternity.system-de-handouts.JournalEntry.DLLvnXpv7RFhRgHu.JournalEntryPage.JrsdRBb5FF01sg6B]{Archetyp
-      - Die Elektrosamurai}</p>
-
-      <h3>&Uuml;berblick</h3>
-
-      <p>Die Elektrosamurai sind eine Gruppe moderner Krieger, die dem alten
-      Kodex des Bushido folgen, aber hochmoderne Waffen und R&uuml;stungen
-      einsetzen. Die Urspr&uuml;nge der Bewegung sind verworren, ein seltsames
-      Zusammentreffen der Punk-Jugendkultur und der treuen Nachkommen der
-      urspr&uuml;nglichen Samurai. Die Mitgliedschaft ist nur auf Einladung
-      m&ouml;glich, und die Einladungen werden nur an diejenigen gerichtet, die
-      sich im und au&szlig;erhalb des Kampfes als w&uuml;rdig
-      erweisen.&nbsp;</p>
-
-      <p>Stormer und andere Feinde k&ouml;nnen die gleiche R&uuml;stung tragen
-      und &auml;hnliche Waffen f&uuml;hren, aber sie sind keine echten Samurai.
-      Es ist die Pflicht jedes Auserw&auml;hlten, solche Heuchler
-      herauszufordern.</p>
-
-      <h3>Taktiken</h3>
-
-      <p>Deine Hauptwaffe ist dein Elektrokatana, das erstaunlich schweren
-      Schaden anrichtet und R&uuml;stungen durchbohrt. Es ist keine Schande
-      praktisch vorzugehen, also tr&auml;gst du dein SC Kyogo 144 SMG bei dir,
-      um deine Chancen gegen eine gro&szlig;e Anzahl schw&auml;cherer Gegner
-      auszugleichen. Nutze die Vorteile des riesigen Munitionsclips der
-      Maschinenpistole, indem du lange Feuerst&ouml;&szlig;e einsetzt. Die
-      meisten deiner Interaktionsangriffe sind ziemlich gut. Greife deshalb auf
-      sie zur&uuml;ck, wenn sie Anerkannte Aktionen sind &ndash; abgesehen vom
-      <em>Verspotten</em>. Kleinliche Beleidigungen empfindest du als
-      leichtfertig und geschmacklos.</p>
-
-      <h3>Moment der Krise</h3>
-
-      <p>Als die Seuche zum ersten Mal auftauchte, hast du als Bio-Ingenieurin
-      gearbeitet, mit einem Schwerpunkt in der Genforschung. Bevor jemand
-      verstand, was geschah, brach ein Jiang Shi durch die Einz&auml;unung und
-      begann, deine Mitarbeiter umzubringen. Vielleicht waren es die langen
-      Jahre des Kendo-Unterrichts, die dir geholfen haben, die Kreatur zu
-      besiegen. Oder vielleicht war es die ruhige und methodische Art, mit der
-      du die Patienten und das Krankenhauspersonal gerettet hast. So oder so, es
-      l&ouml;ste eine Ver&auml;nderung in dir aus und lenkte die Aufmerksamkeit
-      der Elektrosamurai- Bewegung auf dich.</p>
-
-      <h3>Zitat</h3>
-
-      <p>"Ich w&uuml;rde meine Klinge nicht mit einem Feind wie dir
-      beschmutzen."</p>
-
-      <h3>Beschreibung</h3>
-
-      <p>Der Ionen-Gusoku und das Elektrokatana sind die unverwechselbaren
-      Markenzeichen der Elektrosamurai. Starre Selbstkontrolle und einwandfreie
-      Umgangsformen sind Ideale, die du anstrebst, aber nie ganz erreicht
-      hast.</p>
-
-      <h3>Agenda</h3>
-
-      <p>Die acht Tugenden des Bushido zwingen dich, die
-      Realit&auml;tsr&auml;uber und die Seuche zu bek&auml;mpfen und die
-      unschuldigen Menschen zu sch&uuml;tzen, die von beiden bedroht werden.
-      Folge dem Kodex! Sei rechtschaffen, heldenhaft, mitf&uuml;hlend,
-      h&ouml;flich, ehrlich, ehrenhaft, loyal und diszipliniert &ndash; auch
-      wenn es manchmal schwierig ist.</p>
-
-      <h3>Namen</h3>
-
-      <p>Akimi, Haruka, Izumi, Jun, Kazumi, Maru, Riku, Shigeri, Tomo</p>
-
-      <h3>Vorgeschlagener Aufstieg (Optional)</h3>
-
-      <ul>
-
-      <li>(5 EP) Unnachgiebig (Elektrosamurai)</li>
-
-      <li>(7 EP) Ionengusoku: Blitzh&uuml;lle</li>
-
-      <li>(1 EP) <em>Projektilwaffen</em> +1</li>
-
-      <li>(2 EP) <em>Realit&auml;t</em> +2</li>
-
-      <li>(3 EP) <em>Ausweichen</em> +3</li>
-
-      <li>(3 EP) <em>Landfahrzeuge</em> +3</li>
-
-      <li>(4 EP) <em>Nahkampfwaffen</em> +4</li>
-
-      <li>(5 EP) <em>Nahkampfwaffen</em> +5</li>
-
-      </ul>
+    background: "<p><img class=\"charimg\" src=\"systems/torgeternity/images/characters/Electric_Samurai.webp\" alt=\"\" width=\"1015\" height=\"1963\" /></p>\n<p class=\"moreheight\">@UUID[Compendium.torgeternity.system-de-handouts.JournalEntry.DLLvnXpv7RFhRgHu.JournalEntryPage.JrsdRBb5FF01sg6B]{Archetyp - Die Elektrosamurai}</p>\n<h3>Überblick</h3>\n<p>Die Elektrosamurai sind eine Gruppe moderner Krieger, die dem alten Kodex des Bushido folgen, aber hochmoderne Waffen und Rüstungen einsetzen. Die Ursprünge der Bewegung sind verworren, ein seltsames Zusammentreffen der Punk-Jugendkultur und der treuen Nachkommen der ursprünglichen Samurai. Die Mitgliedschaft ist nur auf Einladung möglich, und die Einladungen werden nur an diejenigen gerichtet, die sich im und außerhalb des Kampfes als würdig erweisen.\_</p>\n<p>Stormer und andere Feinde können die gleiche Rüstung tragen und ähnliche Waffen führen, aber sie sind keine echten Samurai. Es ist die Pflicht jedes Auserwählten, solche Heuchler herauszufordern.</p>\n<h3>Taktiken</h3>\n<p>Deine Hauptwaffe ist dein Elektrokatana, das erstaunlich schweren Schaden anrichtet und Rüstungen durchbohrt. Es ist keine Schande praktisch vorzugehen, also trägst du dein SC Kyogo 144 SMG bei dir, um deine Chancen gegen eine große Anzahl schwächerer Gegner auszugleichen. Nutze die Vorteile des riesigen Munitionsclips der Maschinenpistole, indem du lange Feuerstöße einsetzt. Die meisten deiner Interaktionsangriffe sind ziemlich gut. Greife deshalb auf sie zurück, wenn sie Anerkannte Aktionen sind – abgesehen vom <em>Verspotten</em>. Kleinliche Beleidigungen empfindest du als leichtfertig und geschmacklos.</p>\n<h3>Moment der Krise</h3>\n<p>Als die Seuche zum ersten Mal auftauchte, hast du als Bio-Ingenieurin gearbeitet, mit einem Schwerpunkt in der Genforschung. Bevor jemand verstand, was geschah, brach ein Jiang Shi durch die Einzäunung und begann, deine Mitarbeiter umzubringen. Vielleicht waren es die langen Jahre des Kendo-Unterrichts, die dir geholfen haben, die Kreatur zu besiegen. Oder vielleicht war es die ruhige und methodische Art, mit der du die Patienten und das Krankenhauspersonal gerettet hast. So oder so, es löste eine Veränderung in dir aus und lenkte die Aufmerksamkeit der Elektrosamurai- Bewegung auf dich.</p>\n<h3>Zitat</h3>\n<p>\"Ich würde meine Klinge nicht mit einem Feind wie dir beschmutzen.\"</p>\n<h3>Beschreibung</h3>\n<p>Der Ionen-Gusoku und das Elektrokatana sind die unverwechselbaren Markenzeichen der Elektrosamurai. Starre Selbstkontrolle und einwandfreie Umgangsformen sind Ideale, die du anstrebst, aber nie ganz erreicht hast.</p>\n<h3>Agenda</h3>\n<p>Die acht Tugenden des Bushido zwingen dich, die Realitätsräuber und die Seuche zu bekämpfen und die unschuldigen Menschen zu schützen, die von beiden bedroht werden. Folge dem Kodex! Sei rechtschaffen, heldenhaft, mitfühlend, höflich, ehrlich, ehrenhaft, loyal und diszipliniert – auch wenn es manchmal schwierig ist.</p>\n<h3>Namen</h3>\n<p>Akimi, Haruka, Izumi, Jun, Kazumi, Maru, Riku, Shigeri, Tomo</p>\n<h3>Vorgeschlagener Aufstieg (Optional)</h3>\n<ul>\n<li>(5 EP) Unnachgiebig (Elektrosamurai)</li>\n<li>(7 EP) Ionengusoku: Blitzhülle</li>\n<li>(1 EP) <em>Projektilwaffen</em> +1</li>\n<li>(2 EP) <em>Realität</em> +2</li>\n<li>(3 EP) <em>Ausweichen</em> +3</li>\n<li>(3 EP) <em>Landfahrzeuge</em> +3</li>\n<li>(4 EP) <em>Nahkampfwaffen</em> +4</li>\n<li>(5 EP) <em>Nahkampfwaffen</em> +5</li>\n</ul>"
     race: human
     sizeBonus: normal
   editstate: false
@@ -953,11 +863,11 @@ prototypeToken:
       texture: null
 _stats:
   systemId: torgeternity
-  systemVersion: 3.8.1
+  systemVersion: 12.2.0
   coreVersion: '12.330'
   createdTime: 1694866294442
-  modifiedTime: 1716827811466
-  lastModifiedBy: VAnYow5sWS9EJzo0
+  modifiedTime: 1722359278656
+  lastModifiedBy: 93AMwcGe6H37rcPA
   compendiumSource: Compendium.torgeternity.archetypes.QVpKuacd4LKfpJOy
   duplicateSource: null
 _key: '!actors!V5GRrizDgqY1gzHu'

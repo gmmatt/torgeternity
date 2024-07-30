@@ -15,12 +15,7 @@ items:
         sourceId: Item.2o4uyAarfqhvXsAb
     system:
       perk: Medaillen
-      description: >-
-        <p><span style="font-family: 'Palatino Linotype';">Verliehen an
-        diejenigen, die ein Sehr Gro&szlig;es und m&auml;chtiges Monster besiegt
-        haben. Der Charakter darf gegen Gro&szlig;e oder gr&ouml;&szlig;ere
-        Kreaturen (nicht Fahrzeuge oder Konstrukte) +1 BW Schaden addieren, wenn
-        Angriff eine Anerkannte Aktion ist.&nbsp;</span></p>
+      description: "<p><span style=\"font-family:'Palatino Linotype'\">Verliehen an diejenigen, die ein Sehr Großes und mächtiges Monster besiegt haben. Der Charakter darf gegen Große oder größere Kreaturen (nicht Fahrzeuge oder Konstrukte) +1 BW Schaden addieren, wenn Angriff eine Anerkannte Aktion ist.\_</span></p>"
     ownership:
       default: 0
       9Q0XnqFwko7hRlvL: 3
@@ -47,9 +42,9 @@ items:
     system:
       perk: Patronenschmied
       description: >-
-        <p><span style="font-family: 'Palatino Linotype';">+2 Schaden gegen
-        &uuml;bernat&uuml;rlich b&ouml;se Kreaturen, einschlie&szlig;lich
-        Gospog, Vampire und Untote.</span></p>
+        <p><span style="font-family:'Palatino Linotype'">+2 Schaden gegen
+        übernatürlich böse Kreaturen, einschließlich Gospog, Vampire und
+        Untote.</span></p>
     ownership:
       default: 0
       9Q0XnqFwko7hRlvL: 3
@@ -75,12 +70,7 @@ items:
         sourceId: Item.aixA8mnHcAnk2jqP
     system:
       perk: Patronenschmied
-      description: >-
-        <p><span style="font-family: 'Palatino Linotype';">Einige der Feinde der
-        Viktorianer sind von Kopf bis Fu&szlig; mit Metall, Schuppen und
-        manchmal sogar dicken Panzerplatten bedeckt. Diese Patrone ist
-        daf&uuml;r ausgelegt, solche R&uuml;stungen zu durchbrechen, sodass ein
-        Angriff mit ihr Panzerbrechend 4 erh&auml;lt.&nbsp;</span></p>
+      description: "<p><span style=\"font-family:'Palatino Linotype'\">Einige der Feinde der Viktorianer sind von Kopf bis Fuß mit Metall, Schuppen und manchmal sogar dicken Panzerplatten bedeckt. Diese Patrone ist dafür ausgelegt, solche Rüstungen zu durchbrechen, sodass ein Angriff mit ihr Panzerbrechend 4 erhält.\_</span></p>"
     ownership:
       default: 0
       9Q0XnqFwko7hRlvL: 3
@@ -106,12 +96,7 @@ items:
         sourceId: Item.bGEJwusZZlTPjJ8E
     system:
       perk: Patronenschmied
-      description: >-
-        <p><span style="font-family: 'Palatino Linotype';">Die Viktorianer
-        entwickelten diese schweren Patronen, um die gr&ouml;&szlig;ten
-        Schrecken des Hageren Mannes zu besiegen. Sie verursachen +5 Schaden
-        gegen Kreaturen, die Gro&szlig; oder gr&ouml;&szlig;er
-        sind.&nbsp;</span></p>
+      description: "<p><span style=\"font-family:'Palatino Linotype'\">Die Viktorianer entwickelten diese schweren Patronen, um die größten Schrecken des Hageren Mannes zu besiegen. Sie verursachen +5 Schaden gegen Kreaturen, die Groß oder größer sind.\_</span></p>"
     ownership:
       default: 0
       9Q0XnqFwko7hRlvL: 3
@@ -244,6 +229,9 @@ items:
         limitation10: ''
         limitationNumber: 0
       timestaken: '1'
+      secondaryAxiom:
+        selected: none
+        value: null
     ownership:
       default: 0
       9Q0XnqFwko7hRlvL: 3
@@ -380,6 +368,9 @@ items:
         limitation10: ''
         limitationNumber: 0
       timestaken: '1'
+      secondaryAxiom:
+        selected: none
+        value: null
     ownership:
       default: 0
       9Q0XnqFwko7hRlvL: 3
@@ -422,8 +413,11 @@ items:
       damage: 1
       damageType: strengthPlus
       equipped: false
-      equippedClass: .item-unequipped
       notes: Klein
+      secondaryAxiom:
+        selected: none
+        value: null
+      minStrength: null
     ownership:
       default: 0
       9Q0XnqFwko7hRlvL: 3
@@ -465,9 +459,11 @@ items:
       damage: 14
       damageType: ''
       equipped: false
-      equippedClass: .item-unequipped
       notes: ''
       range: 10/25/40
+      secondaryAxiom:
+        selected: none
+        value: null
     ownership:
       default: 0
       9Q0XnqFwko7hRlvL: 3
@@ -502,16 +498,18 @@ items:
       value: 0
       ammo:
         max: 6
-        value: 6
+        value: 0
       ap: 0
       attackWith: fireCombat
       chatNote: ''
       damage: 14
       damageType: ''
       equipped: false
-      equippedClass: .item-unequipped
       notes: Karabiner, nutzt spezielle Patronen
       range: 50/100/200
+      secondaryAxiom:
+        selected: none
+        value: null
     ownership:
       default: 0
       9Q0XnqFwko7hRlvL: 3
@@ -577,15 +575,16 @@ items:
       cosm: aysle
       description: >-
         <p>Vierzackige Metallsterne zum Ausstreuen, die immer mit einem Stachel
-        nach oben weisen, und dadurch F&uuml;&szlig;e und Reifen
-        aufspie&szlig;en k&ouml;nnen. Nachdem sie mit einer einfachen Aktion
-        ausgestreut wurden, z&auml;hlen
-        <em>Man&ouml;vrieren</em>-Interaktionsangriffe in ihrem Bereich als
-        Beg&uuml;nstigt.</p>
+        nach oben weisen, und dadurch Füße und Reifen aufspießen können. Nachdem
+        sie mit einer einfachen Aktion ausgestreut wurden, zählen
+        <em>Manövrieren</em>-Interaktionsangriffe in ihrem Bereich als
+        Begünstigt.</p>
       price: '40'
       techlevel: 14
       value: 8
-      equippedClass: item-equipped
+      secondaryAxiom:
+        selected: none
+        value: null
     ownership:
       default: 0
       9Q0XnqFwko7hRlvL: 3
@@ -616,7 +615,9 @@ items:
       price: '5'
       techlevel: 2
       value: 4
-      equippedClass: item-equipped
+      secondaryAxiom:
+        selected: none
+        value: null
     ownership:
       default: 0
       9Q0XnqFwko7hRlvL: 3
@@ -645,7 +646,7 @@ items:
     system:
       cosm: orrorsh
       description: >-
-        <p>@UUID[Compendium.te001-core-rulebook.grw-de-grw.Qlx6yGF0Mmo6Xzrv.JournalEntryPage.7GGUUHzuYIqGPXDO#ermudung:]{Erm&uuml;dung}</p>
+        <p>@UUID[Compendium.te001-core-rulebook.grw-de-grw.Qlx6yGF0Mmo6Xzrv.JournalEntryPage.7GGUUHzuYIqGPXDO#ermudung:]{Ermüdung}</p>
 
         <p>Ein langer Mantel aus den behandelten Fellen verschiedener Tiere, die
         einst die Unschuldigen terrorisiert haben. Die Monster von Orrorsh sind
@@ -655,11 +656,13 @@ items:
       value: 12
       bonus: 2
       equipped: true
-      equippedClass: item-equipped
       maxDex: 10
       minStrength: null
       notes: Ermüdung
       fatigue: 1
+      secondaryAxiom:
+        selected: none
+        value: null
     ownership:
       default: 0
       9Q0XnqFwko7hRlvL: 3
@@ -717,7 +720,7 @@ items:
         selected: none
         value: null
       type: ''
-      quantity: 2
+      quantity: 3
       damageMod: 0
       apMod: 0
       fireDamage: false
@@ -758,8 +761,7 @@ effects:
       turns: null
       startRound: null
       startTurn: null
-    origin: >-
-      Compendium.torgeternity.system-de-archetypen.Actor.54xKJBBQREaETwap.Item.lntlAp4VUb9lNjTJ
+    origin: Actor.54xKJBBQREaETwap.Item.lntlAp4VUb9lNjTJ
     transfer: false
     flags: {}
     tint: '#ffffff'
@@ -1136,104 +1138,7 @@ system:
     spirit: 16
     tech: 18
   details:
-    background: >-
-      <p><img class="charimg"
-      src="systems/torgeternity/images/characters/Monster_Hunter.webp" alt=""
-      width="1139" height="1982"></p>
-
-      <p
-      class="moreheight">@UUID[Compendium.torgeternity.system-de-handouts.JournalEntry.DLLvnXpv7RFhRgHu.JournalEntryPage.XuZD3GOezHrsiAbQ]{Archetyp
-      - Der Monsterj&auml;ger}</p>
-
-      <h3>&Uuml;berblick</h3>
-
-      <p>Du bist ein Viktorianer, und deine Welt Gaea ist im Griff der Schrecken
-      des Hageren Mannes. Du aber hast dich nicht damit zufrieden gegeben, vom
-      Entsetzen regiert zu werden, also hast du dich gewehrt. Entgegen aller
-      Wahrscheinlichkeit hast du &uuml;berlebt, und die verschiedenen Tricks,
-      Gegenst&auml;nde und Spezialwaffen, die du dir &uuml;ber Jahre hinweg im
-      Kampf gegen das B&ouml;se angeeignet hast, haben die Chancen erheblich
-      verbessert.&nbsp;</p>
-
-      <p>Als der Hagere Mann seine dunklen Kr&auml;fte sammelte, um &uuml;ber
-      die Mahlstrombr&uuml;cken zu reisen und seine Kreaturen auf die
-      Zentralerde loszulassen, folgtest du ihnen, um sie zu jagen, so wie du es
-      schon immer getan hast.</p>
-
-      <h3>Taktiken</h3>
-
-      <p>Die speziellen Patronen in deinem Jagdrevolvergewehr verleihen dir
-      Kraft und Vielseitigkeit gegen verschiedene Feinde, auch au&szlig;erhalb
-      von Orrorsh. Wann immer du kannst, solltest du versuchen, herauszufinden,
-      mit welchen Feinden du es wahrscheinlich zu tun bekommst, und eine dazu
-      passende Sammlung von Patronen vorbereiten. Weihwasser- Patronen sind sehr
-      effektiv gegen die Gospog, die von allen High Lords ins Feld gef&uuml;hrt
-      werden. Und selbst wenn du bereits alle Spezialgeschosse verbraucht hast,
-      hat auch deine Standardmunition noch odentlich Wumms.&nbsp;</p>
-
-      <p>Du bist sehr resistent gegen Angst und Einsch&uuml;chterung, aber sehr
-      anf&auml;llig f&uuml;r <em>Verspotten</em>-Interaktionsangriffe. Die
-      Viktorianer sind bekanntlich hochm&uuml;tig und intolerant gegen&uuml;ber
-      Beleidigungen!</p>
-
-      <h3>Moment der Krise</h3>
-
-      <p>Deine Krise geschah vor langer Zeit auf Gaea. Vielleicht war es ein
-      Werwolf, oder vielleicht war es ein Vampir. Was auch immer es war, es war
-      eine Kreatur des Hageren Mannes. Sie bis zu ihrem Versteck
-      zur&uuml;ckzuverfolgen war tollk&uuml;hn, aber dein Versuch l&ouml;ste
-      eine Ver&auml;nderung in dir aus. Als Storm Knight hattest du endlich die
-      Macht, dich zu wehren.</p>
-
-      <h3>Zitat</h3>
-
-      <p>"Es ist einfacher, seine Angst vor einer Kreatur zu
-      &uuml;berwinden,&nbsp;wenn man die Macht hat, sie zu zerst&ouml;ren."</p>
-
-      <h3>Beschreibung</h3>
-
-      <p>Der Kampf gegen Monster ist ein gef&auml;hrlicher Beruf, und du hast
-      zahlreiche Narben, die diese Tatsache belegen. Nur einige dieser Narben
-      sind sichtbar. Die Viktorianer bevorzugen stilvolle Kleidung, auch bei
-      extremer Hitze, und du bist da keine Ausnahme. Dein unverwechselbarer
-      Mantel aus seltsamem Leder und dein kunstvoll verziertes,
-      &uuml;berdimensionales Jagdrevolvergewehr lassen deine Berufung
-      erahnen.</p>
-
-      <h3>Agenda</h3>
-
-      <p>Die Zerst&ouml;rung des B&ouml;sen ist ein Gebot der Stunde. Wenn man
-      sie am Leben l&auml;sst, werden diese Monster nur noch abscheulicher und
-      m&auml;chtiger. Und die High Lords, trotz all ihrer Tricks und Masken,
-      sind am Ende auch nur Monster, die du verfolgen und ausschalten
-      kannst.</p>
-
-      <h3>Namen</h3>
-
-      <p>Ashton, Aubrey, Eli, Harper, Marion, Prester, Tanner, Thomas,
-      Winter</p>
-
-      <h3>Vorgeschlagener Aufstieg (Optional)</h3>
-
-      <ul>
-
-      <li>(5 EP) Scharfsch&uuml;tze</li>
-
-      <li>(7 EP) Patronenschmied (explosive Patrone)</li>
-
-      <li>(1 EP) <em>Tricksen</em> +1</li>
-
-      <li>(2 EP) <em>Man&ouml;vrieren</em> +2</li>
-
-      <li>(3 EP) <em>Einsch&uuml;chtern</em> +3</li>
-
-      <li>(3 EP) <em>Nahkampfwaffen</em> +3</li>
-
-      <li>(4 EP) <em>Feuerwaffen</em> +4</li>
-
-      <li>(5 EP) <em>Feuerwaffen</em> +5</li>
-
-      </ul>
+    background: "<p><img class=\"charimg\" src=\"systems/torgeternity/images/characters/Monster_Hunter.webp\" alt=\"\" width=\"1139\" height=\"1982\" /></p>\n<p class=\"moreheight\">@UUID[Compendium.torgeternity.system-de-handouts.JournalEntry.DLLvnXpv7RFhRgHu.JournalEntryPage.XuZD3GOezHrsiAbQ]{Archetyp - Der Monsterjäger}</p>\n<h3>Überblick</h3>\n<p>Du bist ein Viktorianer, und deine Welt Gaea ist im Griff der Schrecken des Hageren Mannes. Du aber hast dich nicht damit zufrieden gegeben, vom Entsetzen regiert zu werden, also hast du dich gewehrt. Entgegen aller Wahrscheinlichkeit hast du überlebt, und die verschiedenen Tricks, Gegenstände und Spezialwaffen, die du dir über Jahre hinweg im Kampf gegen das Böse angeeignet hast, haben die Chancen erheblich verbessert.\_</p>\n<p>Als der Hagere Mann seine dunklen Kräfte sammelte, um über die Mahlstrombrücken zu reisen und seine Kreaturen auf die Zentralerde loszulassen, folgtest du ihnen, um sie zu jagen, so wie du es schon immer getan hast.</p>\n<h3>Taktiken</h3>\n<p>Die speziellen Patronen in deinem Jagdrevolvergewehr verleihen dir Kraft und Vielseitigkeit gegen verschiedene Feinde, auch außerhalb von Orrorsh. Wann immer du kannst, solltest du versuchen, herauszufinden, mit welchen Feinden du es wahrscheinlich zu tun bekommst, und eine dazu passende Sammlung von Patronen vorbereiten. Weihwasser- Patronen sind sehr effektiv gegen die Gospog, die von allen High Lords ins Feld geführt werden. Und selbst wenn du bereits alle Spezialgeschosse verbraucht hast, hat auch deine Standardmunition noch odentlich Wumms.\_</p>\n<p>Du bist sehr resistent gegen Angst und Einschüchterung, aber sehr anfällig für <em>Verspotten</em>-Interaktionsangriffe. Die Viktorianer sind bekanntlich hochmütig und intolerant gegenüber Beleidigungen!</p>\n<h3>Moment der Krise</h3>\n<p>Deine Krise geschah vor langer Zeit auf Gaea. Vielleicht war es ein Werwolf, oder vielleicht war es ein Vampir. Was auch immer es war, es war eine Kreatur des Hageren Mannes. Sie bis zu ihrem Versteck zurückzuverfolgen war tollkühn, aber dein Versuch löste eine Veränderung in dir aus. Als Storm Knight hattest du endlich die Macht, dich zu wehren.</p>\n<h3>Zitat</h3>\n<p>\"Es ist einfacher, seine Angst vor einer Kreatur zu überwinden,\_wenn man die Macht hat, sie zu zerstören.\"</p>\n<h3>Beschreibung</h3>\n<p>Der Kampf gegen Monster ist ein gefährlicher Beruf, und du hast zahlreiche Narben, die diese Tatsache belegen. Nur einige dieser Narben sind sichtbar. Die Viktorianer bevorzugen stilvolle Kleidung, auch bei extremer Hitze, und du bist da keine Ausnahme. Dein unverwechselbarer Mantel aus seltsamem Leder und dein kunstvoll verziertes, überdimensionales Jagdrevolvergewehr lassen deine Berufung erahnen.</p>\n<h3>Agenda</h3>\n<p>Die Zerstörung des Bösen ist ein Gebot der Stunde. Wenn man sie am Leben lässt, werden diese Monster nur noch abscheulicher und mächtiger. Und die High Lords, trotz all ihrer Tricks und Masken, sind am Ende auch nur Monster, die du verfolgen und ausschalten kannst.</p>\n<h3>Namen</h3>\n<p>Ashton, Aubrey, Eli, Harper, Marion, Prester, Tanner, Thomas, Winter</p>\n<h3>Vorgeschlagener Aufstieg (Optional)</h3>\n<ul>\n<li>(5 EP) Scharfschütze</li>\n<li>(7 EP) Patronenschmied (explosive Patrone)</li>\n<li>(1 EP) <em>Tricksen</em> +1</li>\n<li>(2 EP) <em>Manövrieren</em> +2</li>\n<li>(3 EP) <em>Einschüchtern</em> +3</li>\n<li>(3 EP) <em>Nahkampfwaffen</em> +3</li>\n<li>(4 EP) <em>Feuerwaffen</em> +4</li>\n<li>(5 EP) <em>Feuerwaffen</em> +5</li>\n</ul>"
     race: human
     sizeBonus: normal
   editstate: false
@@ -1319,11 +1224,11 @@ prototypeToken:
       texture: null
 _stats:
   systemId: torgeternity
-  systemVersion: 3.8.1
+  systemVersion: 12.2.0
   coreVersion: '12.330'
   createdTime: 1694867975270
-  modifiedTime: 1716827810893
-  lastModifiedBy: VAnYow5sWS9EJzo0
+  modifiedTime: 1722359278656
+  lastModifiedBy: 93AMwcGe6H37rcPA
   compendiumSource: Compendium.torgeternity.archetypes.8KlJAaxeijOcrJKN
   duplicateSource: null
 _key: '!actors!54xKJBBQREaETwap'

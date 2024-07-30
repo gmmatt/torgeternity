@@ -3,1060 +3,13 @@ name: Die Cyber-Hexe
 type: stormknight
 img: systems/torgeternity/images/characters/Cyberwitch.Avatar.webp
 items:
-  - _id: qE0o186bev0OqQzx
-    name: Reduzieren
-    type: spell
-    img: systems/torgeternity/images/icons/spell-icon.webp
-    effects:
-      - _id: f2JWdwbhbJvpsKrD
-        changes:
-          - key: system.attributes.charisma.value
-            mode: 2
-            value: '-2'
-            priority: null
-        disabled: true
-        duration:
-          startTime: null
-          rounds: 3
-          seconds: null
-          combat: null
-          turns: null
-          startRound: null
-          startTurn: null
-        origin: Compendium.te001-core-rulebook.grw-de-kraefte.dnvTmgrdRgrEjvo9
-        transfer: true
-        flags: {}
-        tint: '#ffffff'
-        name: Charisma Standard
-        description: ''
-        statuses: []
-        _stats:
-          coreVersion: '12.330'
-          systemId: null
-          systemVersion: null
-          createdTime: null
-          modifiedTime: null
-          lastModifiedBy: null
-          compendiumSource: null
-          duplicateSource: null
-        img: icons/svg/aura.svg
-        type: base
-        system: {}
-        sort: 0
-        _key: >-
-          !actors.items.effects!KXfP2nOG8VVWBOtA.qE0o186bev0OqQzx.f2JWdwbhbJvpsKrD
-      - _id: VrgAUC1Dbz6Q4Tbv
-        changes:
-          - key: system.attributes.charisma.value
-            mode: 2
-            value: '-4'
-            priority: null
-        disabled: true
-        duration:
-          startTime: null
-          rounds: 3
-          seconds: null
-          combat: null
-          turns: null
-          startRound: null
-          startTurn: null
-        origin: Compendium.te001-core-rulebook.grw-de-kraefte.dnvTmgrdRgrEjvo9
-        transfer: true
-        flags: {}
-        tint: '#ffffff'
-        name: Charisma gut
-        description: ''
-        statuses: []
-        _stats:
-          coreVersion: '12.330'
-          systemId: null
-          systemVersion: null
-          createdTime: null
-          modifiedTime: null
-          lastModifiedBy: null
-          compendiumSource: null
-          duplicateSource: null
-        img: icons/svg/aura.svg
-        type: base
-        system: {}
-        sort: 0
-        _key: >-
-          !actors.items.effects!KXfP2nOG8VVWBOtA.qE0o186bev0OqQzx.VrgAUC1Dbz6Q4Tbv
-      - _id: OQZO2ch75NTrTXb8
-        changes:
-          - key: system.attributes.dexterity.value
-            mode: 2
-            value: '-2'
-            priority: null
-        disabled: true
-        duration:
-          startTime: null
-          rounds: 3
-          seconds: null
-          combat: null
-          turns: null
-          startRound: null
-          startTurn: null
-        origin: Compendium.te001-core-rulebook.grw-de-kraefte.dnvTmgrdRgrEjvo9
-        transfer: true
-        flags: {}
-        tint: '#ffffff'
-        name: Geschicklichkeit standard
-        description: ''
-        statuses: []
-        _stats:
-          coreVersion: '12.330'
-          systemId: null
-          systemVersion: null
-          createdTime: null
-          modifiedTime: null
-          lastModifiedBy: null
-          compendiumSource: null
-          duplicateSource: null
-        img: icons/svg/aura.svg
-        type: base
-        system: {}
-        sort: 0
-        _key: >-
-          !actors.items.effects!KXfP2nOG8VVWBOtA.qE0o186bev0OqQzx.OQZO2ch75NTrTXb8
-      - _id: QbYvk1nwAbB35Bq4
-        changes:
-          - key: system.attributes.dexterity.value
-            mode: 2
-            value: '-4'
-            priority: null
-        disabled: true
-        duration:
-          startTime: null
-          rounds: 3
-          seconds: null
-          combat: null
-          turns: null
-          startRound: null
-          startTurn: null
-        origin: Compendium.te001-core-rulebook.grw-de-kraefte.dnvTmgrdRgrEjvo9
-        transfer: true
-        flags: {}
-        tint: '#ffffff'
-        name: Geschicklichkeit gut
-        description: ''
-        statuses: []
-        _stats:
-          coreVersion: '12.330'
-          systemId: null
-          systemVersion: null
-          createdTime: null
-          modifiedTime: null
-          lastModifiedBy: null
-          compendiumSource: null
-          duplicateSource: null
-        img: icons/svg/aura.svg
-        type: base
-        system: {}
-        sort: 0
-        _key: >-
-          !actors.items.effects!KXfP2nOG8VVWBOtA.qE0o186bev0OqQzx.QbYvk1nwAbB35Bq4
-      - _id: 12QorISRnTO0FjbA
-        changes:
-          - key: system.attributes.spirit.value
-            mode: 2
-            value: '-2'
-            priority: null
-        disabled: true
-        duration:
-          startTime: null
-          rounds: 3
-          seconds: null
-          combat: null
-          turns: null
-          startRound: null
-          startTurn: null
-        origin: Compendium.te001-core-rulebook.grw-de-kraefte.dnvTmgrdRgrEjvo9
-        transfer: true
-        flags: {}
-        tint: '#ffffff'
-        name: Geist standard
-        description: ''
-        statuses: []
-        _stats:
-          coreVersion: '12.330'
-          systemId: null
-          systemVersion: null
-          createdTime: null
-          modifiedTime: null
-          lastModifiedBy: null
-          compendiumSource: null
-          duplicateSource: null
-        img: icons/svg/aura.svg
-        type: base
-        system: {}
-        sort: 0
-        _key: >-
-          !actors.items.effects!KXfP2nOG8VVWBOtA.qE0o186bev0OqQzx.12QorISRnTO0FjbA
-      - _id: ihtY6Btd2iVH5YsL
-        changes:
-          - key: system.attributes.spirit.value
-            mode: 2
-            value: '-4'
-            priority: null
-        disabled: true
-        duration:
-          startTime: null
-          rounds: 3
-          seconds: null
-          combat: null
-          turns: null
-          startRound: null
-          startTurn: null
-        origin: Compendium.te001-core-rulebook.grw-de-kraefte.dnvTmgrdRgrEjvo9
-        transfer: true
-        flags: {}
-        tint: '#ffffff'
-        name: Geist gut
-        description: ''
-        statuses: []
-        _stats:
-          coreVersion: '12.330'
-          systemId: null
-          systemVersion: null
-          createdTime: null
-          modifiedTime: null
-          lastModifiedBy: null
-          compendiumSource: null
-          duplicateSource: null
-        img: icons/svg/aura.svg
-        type: base
-        system: {}
-        sort: 0
-        _key: >-
-          !actors.items.effects!KXfP2nOG8VVWBOtA.qE0o186bev0OqQzx.ihtY6Btd2iVH5YsL
-      - _id: mLzTECSfDeB90Bjl
-        changes:
-          - key: system.attributes.strength.value
-            mode: 2
-            value: '-2'
-            priority: null
-        disabled: true
-        duration:
-          startTime: null
-          rounds: 3
-          seconds: null
-          combat: null
-          turns: null
-          startRound: null
-          startTurn: null
-        origin: Compendium.te001-core-rulebook.grw-de-kraefte.dnvTmgrdRgrEjvo9
-        transfer: true
-        flags: {}
-        tint: '#ffffff'
-        name: Stärke Standard
-        description: ''
-        statuses: []
-        _stats:
-          coreVersion: '12.330'
-          systemId: null
-          systemVersion: null
-          createdTime: null
-          modifiedTime: null
-          lastModifiedBy: null
-          compendiumSource: null
-          duplicateSource: null
-        img: icons/svg/aura.svg
-        type: base
-        system: {}
-        sort: 0
-        _key: >-
-          !actors.items.effects!KXfP2nOG8VVWBOtA.qE0o186bev0OqQzx.mLzTECSfDeB90Bjl
-      - _id: fBRtfDnee2agz1Q0
-        changes:
-          - key: system.attributes.strength.value
-            mode: 2
-            value: '-4'
-            priority: null
-        disabled: true
-        duration:
-          startTime: null
-          rounds: 3
-          seconds: null
-          combat: null
-          turns: null
-          startRound: null
-          startTurn: null
-        origin: Compendium.te001-core-rulebook.grw-de-kraefte.dnvTmgrdRgrEjvo9
-        transfer: true
-        flags: {}
-        tint: '#ffffff'
-        name: Stärke gut
-        description: ''
-        statuses: []
-        _stats:
-          coreVersion: '12.330'
-          systemId: null
-          systemVersion: null
-          createdTime: null
-          modifiedTime: null
-          lastModifiedBy: null
-          compendiumSource: null
-          duplicateSource: null
-        img: icons/svg/aura.svg
-        type: base
-        system: {}
-        sort: 0
-        _key: >-
-          !actors.items.effects!KXfP2nOG8VVWBOtA.qE0o186bev0OqQzx.fBRtfDnee2agz1Q0
-      - _id: xNiOrmHBTh7EEMRT
-        changes:
-          - key: system.attributes.mind.value
-            mode: 2
-            value: '-2'
-            priority: null
-        disabled: true
-        duration:
-          startTime: null
-          rounds: 3
-          seconds: null
-          combat: null
-          turns: null
-          startRound: null
-          startTurn: null
-        origin: Compendium.te001-core-rulebook.grw-de-kraefte.dnvTmgrdRgrEjvo9
-        transfer: true
-        flags: {}
-        tint: '#ffffff'
-        name: Verstand standard
-        description: ''
-        statuses: []
-        _stats:
-          coreVersion: '12.330'
-          systemId: null
-          systemVersion: null
-          createdTime: null
-          modifiedTime: null
-          lastModifiedBy: null
-          compendiumSource: null
-          duplicateSource: null
-        img: icons/svg/aura.svg
-        type: base
-        system: {}
-        sort: 0
-        _key: >-
-          !actors.items.effects!KXfP2nOG8VVWBOtA.qE0o186bev0OqQzx.xNiOrmHBTh7EEMRT
-      - _id: iP4o52UvQgw4HeZb
-        changes:
-          - key: system.attributes.mind.value
-            mode: 2
-            value: '-4'
-            priority: null
-        disabled: true
-        duration:
-          startTime: null
-          rounds: 3
-          seconds: null
-          combat: null
-          turns: null
-          startRound: null
-          startTurn: null
-        origin: Compendium.te001-core-rulebook.grw-de-kraefte.dnvTmgrdRgrEjvo9
-        transfer: true
-        flags: {}
-        tint: '#ffffff'
-        name: Verstand gut
-        description: ''
-        statuses: []
-        _stats:
-          coreVersion: '12.330'
-          systemId: null
-          systemVersion: null
-          createdTime: null
-          modifiedTime: null
-          lastModifiedBy: null
-          compendiumSource: null
-          duplicateSource: null
-        img: icons/svg/aura.svg
-        type: base
-        system: {}
-        sort: 0
-        _key: >-
-          !actors.items.effects!KXfP2nOG8VVWBOtA.qE0o186bev0OqQzx.iP4o52UvQgw4HeZb
-    folder: null
-    sort: 0
-    flags:
-      core:
-        sourceId: Compendium.te001-core-rulebook.grw-de-kraefte.Item.dnvTmgrdRgrEjvo9
-    system:
-      ap: 0
-      applyArmor: false
-      applySize: false
-      axiom: 10
-      castingtime: 1 Aktion
-      damage: ''
-      description: >-
-        <p>Dieser Zauber verringert einen Attributswert des Ziels (das beim
-        Wirken des Zauberspruchs ausgew&auml;hlt wird) und alle mit diesem
-        Attribut verkn&uuml;pften Fertigkeiten um &ndash;2. Durch mehrfaches
-        Zaubern k&ouml;nnen mehrere verschiedene Attribute beeinflusst
-        werden.&nbsp;</p>
-
-        <p>Der Zaubernde mimt eine Handlung, die sich auf das betroffene
-        Attribut bezieht: Eine abwertende Geste, um den Geist zu reduzieren, ein
-        Vorgeben zu Stolpern, wenn <em>Geschicklichkeit </em>reduziert wird,
-        usw.&nbsp;</p>
-
-        <p>Ein Reduzieren von <em>St&auml;rke </em>oder <em>Geist </em>reduziert
-        nicht die Robustheit oder die Schock-Obergrenze.</p>
-      dn: targetWillpower
-      dnType: ''
-      duration: 3 Runden
-      good: Die Reduktion verbessert sich auf –4.
-      isAttack: false
-      modifier: ''
-      outstanding: >-
-        Wie Erfolgsstufe Gut. Außerdem darf das Ziel nicht erneut würfeln, wenn
-        es bei seinem Würfelwurf auf das betroffene Attribut oder eine damit
-        verknüpfte Fertigkeit eine „20“ würfelt.
-      range: 40 Meter
-      skill: alteration
-      skilllevel: '12'
-      targetDefense: ''
-    ownership:
-      default: 0
-      9Q0XnqFwko7hRlvL: 3
-      CtisFurQNe9h7ABb: 3
-    _stats:
-      systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '12.330'
-      createdTime: 1694865936018
-      modifiedTime: 1694865936018
-      lastModifiedBy: CtisFurQNe9h7ABb
-      compendiumSource: Compendium.te001-core-rulebook.grw-de-kraefte.Item.dnvTmgrdRgrEjvo9
-      duplicateSource: null
-    _key: '!actors.items!KXfP2nOG8VVWBOtA.qE0o186bev0OqQzx'
-  - _id: AMJ9OkBjQS4QpLhe
-    name: Verbesserung
-    type: spell
-    img: systems/torgeternity/images/icons/spell-icon.webp
-    effects:
-      - _id: DXbQbmNucVZeQKYj
-        changes:
-          - key: system.attributes.charisma.value
-            mode: 2
-            value: '1'
-            priority: null
-        disabled: true
-        duration:
-          startTime: null
-          rounds: 3
-          seconds: null
-          combat: null
-          turns: null
-          startRound: null
-          startTurn: null
-        origin: Compendium.te001-core-rulebook.grw-de-kraefte.373rRZieSUiFDMNo
-        transfer: true
-        flags: {}
-        tint: '#ffffff'
-        name: Charisma Standard
-        description: ''
-        statuses: []
-        _stats:
-          coreVersion: '12.330'
-          systemId: null
-          systemVersion: null
-          createdTime: null
-          modifiedTime: null
-          lastModifiedBy: null
-          compendiumSource: null
-          duplicateSource: null
-        img: icons/svg/aura.svg
-        type: base
-        system: {}
-        sort: 0
-        _key: >-
-          !actors.items.effects!KXfP2nOG8VVWBOtA.AMJ9OkBjQS4QpLhe.DXbQbmNucVZeQKYj
-      - _id: 4dckc260FfpAJPeI
-        changes:
-          - key: system.attributes.charisma.value
-            mode: 2
-            value: '2'
-            priority: null
-        disabled: true
-        duration:
-          startTime: null
-          rounds: 3
-          seconds: null
-          combat: null
-          turns: null
-          startRound: null
-          startTurn: null
-        origin: Compendium.te001-core-rulebook.grw-de-kraefte.373rRZieSUiFDMNo
-        transfer: true
-        flags: {}
-        tint: '#ffffff'
-        name: Charisma Gut
-        description: ''
-        statuses: []
-        _stats:
-          coreVersion: '12.330'
-          systemId: null
-          systemVersion: null
-          createdTime: null
-          modifiedTime: null
-          lastModifiedBy: null
-          compendiumSource: null
-          duplicateSource: null
-        img: icons/svg/aura.svg
-        type: base
-        system: {}
-        sort: 0
-        _key: >-
-          !actors.items.effects!KXfP2nOG8VVWBOtA.AMJ9OkBjQS4QpLhe.4dckc260FfpAJPeI
-      - _id: 18yyJkHaakz4kNCd
-        changes:
-          - key: system.attributes.charisma.value
-            mode: 2
-            value: '3'
-            priority: null
-        disabled: true
-        duration:
-          startTime: null
-          rounds: 3
-          seconds: null
-          combat: null
-          turns: null
-          startRound: null
-          startTurn: null
-        origin: Compendium.te001-core-rulebook.grw-de-kraefte.373rRZieSUiFDMNo
-        transfer: true
-        flags: {}
-        tint: '#ffffff'
-        name: Charisma Hervorragend
-        description: ''
-        statuses: []
-        _stats:
-          coreVersion: '12.330'
-          systemId: null
-          systemVersion: null
-          createdTime: null
-          modifiedTime: null
-          lastModifiedBy: null
-          compendiumSource: null
-          duplicateSource: null
-        img: icons/svg/aura.svg
-        type: base
-        system: {}
-        sort: 0
-        _key: >-
-          !actors.items.effects!KXfP2nOG8VVWBOtA.AMJ9OkBjQS4QpLhe.18yyJkHaakz4kNCd
-      - _id: yK7JajJXKT8l0Asp
-        changes:
-          - key: system.attributes.spirit.value
-            mode: 2
-            value: '1'
-            priority: null
-        disabled: true
-        duration:
-          startTime: null
-          rounds: 3
-          seconds: null
-          combat: null
-          turns: null
-          startRound: null
-          startTurn: null
-        origin: Compendium.te001-core-rulebook.grw-de-kraefte.373rRZieSUiFDMNo
-        transfer: true
-        flags: {}
-        tint: '#ffffff'
-        name: Geist Standard
-        description: ''
-        statuses: []
-        _stats:
-          coreVersion: '12.330'
-          systemId: null
-          systemVersion: null
-          createdTime: null
-          modifiedTime: null
-          lastModifiedBy: null
-          compendiumSource: null
-          duplicateSource: null
-        img: icons/svg/aura.svg
-        type: base
-        system: {}
-        sort: 0
-        _key: >-
-          !actors.items.effects!KXfP2nOG8VVWBOtA.AMJ9OkBjQS4QpLhe.yK7JajJXKT8l0Asp
-      - _id: S5YDTVPWhviBwmgm
-        changes:
-          - key: system.attributes.spirit.value
-            mode: 2
-            value: '2'
-            priority: null
-        disabled: true
-        duration:
-          startTime: null
-          rounds: 3
-          seconds: null
-          combat: null
-          turns: null
-          startRound: null
-          startTurn: null
-        origin: Compendium.te001-core-rulebook.grw-de-kraefte.373rRZieSUiFDMNo
-        transfer: true
-        flags: {}
-        tint: '#ffffff'
-        name: Geist Gut
-        description: ''
-        statuses: []
-        _stats:
-          coreVersion: '12.330'
-          systemId: null
-          systemVersion: null
-          createdTime: null
-          modifiedTime: null
-          lastModifiedBy: null
-          compendiumSource: null
-          duplicateSource: null
-        img: icons/svg/aura.svg
-        type: base
-        system: {}
-        sort: 0
-        _key: >-
-          !actors.items.effects!KXfP2nOG8VVWBOtA.AMJ9OkBjQS4QpLhe.S5YDTVPWhviBwmgm
-      - _id: pj8KEhYaye1rdEXE
-        changes:
-          - key: system.attributes.spirit.value
-            mode: 2
-            value: '3'
-            priority: null
-        disabled: true
-        duration:
-          startTime: null
-          rounds: 3
-          seconds: null
-          combat: null
-          turns: null
-          startRound: null
-          startTurn: null
-        origin: Compendium.te001-core-rulebook.grw-de-kraefte.373rRZieSUiFDMNo
-        transfer: true
-        flags: {}
-        tint: '#ffffff'
-        name: Geist Hervorragend
-        description: ''
-        statuses: []
-        _stats:
-          coreVersion: '12.330'
-          systemId: null
-          systemVersion: null
-          createdTime: null
-          modifiedTime: null
-          lastModifiedBy: null
-          compendiumSource: null
-          duplicateSource: null
-        img: icons/svg/aura.svg
-        type: base
-        system: {}
-        sort: 0
-        _key: >-
-          !actors.items.effects!KXfP2nOG8VVWBOtA.AMJ9OkBjQS4QpLhe.pj8KEhYaye1rdEXE
-      - _id: wwX5rq0JRjLhpMqZ
-        changes:
-          - key: system.attributes.dexterity.value
-            mode: 2
-            value: '1'
-            priority: null
-        disabled: true
-        duration:
-          startTime: null
-          rounds: 3
-          seconds: null
-          combat: null
-          turns: null
-          startRound: null
-          startTurn: null
-        origin: Compendium.te001-core-rulebook.grw-de-kraefte.373rRZieSUiFDMNo
-        transfer: true
-        flags: {}
-        tint: '#ffffff'
-        name: Geschicklichkeit Standard
-        description: ''
-        statuses: []
-        _stats:
-          coreVersion: '12.330'
-          systemId: null
-          systemVersion: null
-          createdTime: null
-          modifiedTime: null
-          lastModifiedBy: null
-          compendiumSource: null
-          duplicateSource: null
-        img: icons/svg/aura.svg
-        type: base
-        system: {}
-        sort: 0
-        _key: >-
-          !actors.items.effects!KXfP2nOG8VVWBOtA.AMJ9OkBjQS4QpLhe.wwX5rq0JRjLhpMqZ
-      - _id: QN67oulRfWCrguUa
-        changes:
-          - key: system.attributes.dexterity.value
-            mode: 2
-            value: '2'
-            priority: null
-        disabled: true
-        duration:
-          startTime: null
-          rounds: 3
-          seconds: null
-          combat: null
-          turns: null
-          startRound: null
-          startTurn: null
-        origin: Compendium.te001-core-rulebook.grw-de-kraefte.373rRZieSUiFDMNo
-        transfer: true
-        flags: {}
-        tint: '#ffffff'
-        name: Geschicklichkeit Gut
-        description: ''
-        statuses: []
-        _stats:
-          coreVersion: '12.330'
-          systemId: null
-          systemVersion: null
-          createdTime: null
-          modifiedTime: null
-          lastModifiedBy: null
-          compendiumSource: null
-          duplicateSource: null
-        img: icons/svg/aura.svg
-        type: base
-        system: {}
-        sort: 0
-        _key: >-
-          !actors.items.effects!KXfP2nOG8VVWBOtA.AMJ9OkBjQS4QpLhe.QN67oulRfWCrguUa
-      - _id: K8PH2l1fkPT3QvyS
-        changes:
-          - key: system.attributes.dexterity.value
-            mode: 2
-            value: '3'
-            priority: null
-        disabled: true
-        duration:
-          startTime: null
-          rounds: 3
-          seconds: null
-          combat: null
-          turns: null
-          startRound: null
-          startTurn: null
-        origin: Compendium.te001-core-rulebook.grw-de-kraefte.373rRZieSUiFDMNo
-        transfer: true
-        flags: {}
-        tint: '#ffffff'
-        name: Geschicklichkeit Hervorragend
-        description: ''
-        statuses: []
-        _stats:
-          coreVersion: '12.330'
-          systemId: null
-          systemVersion: null
-          createdTime: null
-          modifiedTime: null
-          lastModifiedBy: null
-          compendiumSource: null
-          duplicateSource: null
-        img: icons/svg/aura.svg
-        type: base
-        system: {}
-        sort: 0
-        _key: >-
-          !actors.items.effects!KXfP2nOG8VVWBOtA.AMJ9OkBjQS4QpLhe.K8PH2l1fkPT3QvyS
-      - _id: DaoN51oDtHCtfdkN
-        changes:
-          - key: system.attributes.strength.value
-            mode: 2
-            value: '1'
-            priority: null
-        disabled: true
-        duration:
-          startTime: null
-          rounds: 3
-          seconds: null
-          combat: null
-          turns: null
-          startRound: null
-          startTurn: null
-        origin: Compendium.te001-core-rulebook.grw-de-kraefte.373rRZieSUiFDMNo
-        transfer: true
-        flags: {}
-        tint: '#ffffff'
-        name: Stärke Standard
-        description: ''
-        statuses: []
-        _stats:
-          coreVersion: '12.330'
-          systemId: null
-          systemVersion: null
-          createdTime: null
-          modifiedTime: null
-          lastModifiedBy: null
-          compendiumSource: null
-          duplicateSource: null
-        img: icons/svg/aura.svg
-        type: base
-        system: {}
-        sort: 0
-        _key: >-
-          !actors.items.effects!KXfP2nOG8VVWBOtA.AMJ9OkBjQS4QpLhe.DaoN51oDtHCtfdkN
-      - _id: VJyQKPPr7FkVXlt1
-        changes:
-          - key: system.attributes.strength.value
-            mode: 2
-            value: '2'
-            priority: null
-        disabled: true
-        duration:
-          startTime: null
-          rounds: 3
-          seconds: null
-          combat: null
-          turns: null
-          startRound: null
-          startTurn: null
-        origin: Compendium.te001-core-rulebook.grw-de-kraefte.373rRZieSUiFDMNo
-        transfer: true
-        flags: {}
-        tint: '#ffffff'
-        name: Stärke Gut
-        description: ''
-        statuses: []
-        _stats:
-          coreVersion: '12.330'
-          systemId: null
-          systemVersion: null
-          createdTime: null
-          modifiedTime: null
-          lastModifiedBy: null
-          compendiumSource: null
-          duplicateSource: null
-        img: icons/svg/aura.svg
-        type: base
-        system: {}
-        sort: 0
-        _key: >-
-          !actors.items.effects!KXfP2nOG8VVWBOtA.AMJ9OkBjQS4QpLhe.VJyQKPPr7FkVXlt1
-      - _id: l48dcM2AUbNvSemz
-        changes:
-          - key: system.attributes.strength.value
-            mode: 2
-            value: '3'
-            priority: null
-        disabled: true
-        duration:
-          startTime: null
-          rounds: 3
-          seconds: null
-          combat: null
-          turns: null
-          startRound: null
-          startTurn: null
-        origin: Compendium.te001-core-rulebook.grw-de-kraefte.373rRZieSUiFDMNo
-        transfer: true
-        flags: {}
-        tint: '#ffffff'
-        name: Stärke Hervorragend
-        description: ''
-        statuses: []
-        _stats:
-          coreVersion: '12.330'
-          systemId: null
-          systemVersion: null
-          createdTime: null
-          modifiedTime: null
-          lastModifiedBy: null
-          compendiumSource: null
-          duplicateSource: null
-        img: icons/svg/aura.svg
-        type: base
-        system: {}
-        sort: 0
-        _key: >-
-          !actors.items.effects!KXfP2nOG8VVWBOtA.AMJ9OkBjQS4QpLhe.l48dcM2AUbNvSemz
-      - _id: JUcjhiMwzUSwf3IX
-        changes:
-          - key: system.attributes.mind.value
-            mode: 2
-            value: '1'
-            priority: null
-        disabled: true
-        duration:
-          startTime: null
-          rounds: 3
-          seconds: null
-          combat: null
-          turns: null
-          startRound: null
-          startTurn: null
-        origin: Compendium.te001-core-rulebook.grw-de-kraefte.373rRZieSUiFDMNo
-        transfer: true
-        flags: {}
-        tint: '#ffffff'
-        name: Verstand Standard
-        description: ''
-        statuses: []
-        _stats:
-          coreVersion: '12.330'
-          systemId: null
-          systemVersion: null
-          createdTime: null
-          modifiedTime: null
-          lastModifiedBy: null
-          compendiumSource: null
-          duplicateSource: null
-        img: icons/svg/aura.svg
-        type: base
-        system: {}
-        sort: 0
-        _key: >-
-          !actors.items.effects!KXfP2nOG8VVWBOtA.AMJ9OkBjQS4QpLhe.JUcjhiMwzUSwf3IX
-      - _id: gsUg3xvOp3OIC9qy
-        changes:
-          - key: system.attributes.mind.value
-            mode: 2
-            value: '2'
-            priority: null
-        disabled: true
-        duration:
-          startTime: null
-          rounds: 3
-          seconds: null
-          combat: null
-          turns: null
-          startRound: null
-          startTurn: null
-        origin: Compendium.te001-core-rulebook.grw-de-kraefte.373rRZieSUiFDMNo
-        transfer: true
-        flags: {}
-        tint: '#ffffff'
-        name: Verstand Gut
-        description: ''
-        statuses: []
-        _stats:
-          coreVersion: '12.330'
-          systemId: null
-          systemVersion: null
-          createdTime: null
-          modifiedTime: null
-          lastModifiedBy: null
-          compendiumSource: null
-          duplicateSource: null
-        img: icons/svg/aura.svg
-        type: base
-        system: {}
-        sort: 0
-        _key: >-
-          !actors.items.effects!KXfP2nOG8VVWBOtA.AMJ9OkBjQS4QpLhe.gsUg3xvOp3OIC9qy
-      - _id: Rn1xkBRucD9PzCMC
-        changes:
-          - key: system.attributes.mind.value
-            mode: 2
-            value: '3'
-            priority: null
-        disabled: true
-        duration:
-          startTime: null
-          rounds: 3
-          seconds: null
-          combat: null
-          turns: null
-          startRound: null
-          startTurn: null
-        origin: Compendium.te001-core-rulebook.grw-de-kraefte.373rRZieSUiFDMNo
-        transfer: true
-        flags: {}
-        tint: '#ffffff'
-        name: Verstand Hervorragend
-        description: ''
-        statuses: []
-        _stats:
-          coreVersion: '12.330'
-          systemId: null
-          systemVersion: null
-          createdTime: null
-          modifiedTime: null
-          lastModifiedBy: null
-          compendiumSource: null
-          duplicateSource: null
-        img: icons/svg/aura.svg
-        type: base
-        system: {}
-        sort: 0
-        _key: >-
-          !actors.items.effects!KXfP2nOG8VVWBOtA.AMJ9OkBjQS4QpLhe.Rn1xkBRucD9PzCMC
-    folder: null
-    sort: 0
-    flags:
-      core:
-        sourceId: Compendium.te001-core-rulebook.grw-de-kraefte.Item.373rRZieSUiFDMNo
-    system:
-      ap: 0
-      applyArmor: false
-      applySize: false
-      axiom: 10
-      castingtime: 1 Aktion
-      damage: ''
-      description: >-
-        <p>Schwierigkeit ist das&nbsp;<strong>Zielattribut!</strong></p>
-
-        <p>Dieser Zauber erh&ouml;ht ein einzelnes Attribut des Zaubernden oder
-        eines Verb&uuml;ndeten um +1. Es d&uuml;rfen auch mehrere
-        Verb&uuml;ndete gleichzeitig verbessert werden, solange sich alle
-        innerhalb der Reichweite befinden und der Anwender die Option
-        &bdquo;Mehrfach-Zielauswahl&ldquo; benutzt. Der MW ist der Wert des
-        Attributs, das verbessert werden soll &ndash; je besser jemand ist,
-        desto schwieriger ist es, ihn weiter zu verbessern. Durch separate
-        Anwendungen des Zaubers k&ouml;nnen andere Attribute ebenfalls
-        verbessert werden.&nbsp;</p>
-
-        <p>Ein Verbessern von <em>St&auml;rke </em>oder <em>Geist
-        </em>erh&ouml;ht nicht die Robustheit oder die
-        Schock-Obergrenze.&nbsp;</p>
-
-        <p>Der Zaubernde ahmt beim Zaubern einen Aspekt des Attributs nach: Ein
-        Knacken der Kn&ouml;chel, um die <em>Geschicklichkeit </em>zu
-        verbessern, ein Spannen der Muskeln, um die St&auml;rke zu erh&ouml;hen,
-        und so weiter.</p>
-      dn: targetCharisma
-      dnType: ''
-      duration: 3 Runden
-      good: Das Attribut wird um +2 erhöht.
-      isAttack: false
-      modifier: ''
-      outstanding: Das Attribut wird um +3 erhöht.
-      range: 40 Meter
-      skill: alteration
-      skilllevel: '12'
-      targetDefense: ''
-    ownership:
-      default: 0
-      9Q0XnqFwko7hRlvL: 3
-      CtisFurQNe9h7ABb: 3
-    _stats:
-      systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '12.330'
-      createdTime: 1694865940541
-      modifiedTime: 1694865940541
-      lastModifiedBy: CtisFurQNe9h7ABb
-      compendiumSource: Compendium.te001-core-rulebook.grw-de-kraefte.Item.373rRZieSUiFDMNo
-      duplicateSource: null
-    _key: '!actors.items!KXfP2nOG8VVWBOtA.AMJ9OkBjQS4QpLhe'
   - _id: J3s8JBqYUJjIfz7Y
     name: Zerhacker
     type: spell
     img: systems/torgeternity/images/icons/spell-icon.webp
     effects: []
     folder: null
-    sort: 0
+    sort: 300000
     flags:
       core:
         sourceId: Compendium.te001-core-rulebook.grw-de-kraefte.Item.4Vc4cb3K1prH1zQy
@@ -1066,15 +19,8 @@ items:
       applySize: false
       axiom: 9
       castingtime: 1 Aktion
-      damage: ''
-      description: >-
-        <p>Haupts&auml;chlich im &Uuml;berwachungsstaat des Cyberpontifikates
-        eingesetzt, verbirgt der Zerhacker alle Personen in seinem
-        Wirkungsradius vor Sicherheits- und &Uuml;berwachungssystemen.&nbsp;</p>
-
-        <p>Die Video- und Ton-Aufzeichnungen der betroffenen Ger&auml;te sind
-        unscharf und lassen keine Identifizierungen zu, und die Eigenschaften
-        von Smartmunition und Augmented-Reality-HUDs werden negiert.</p>
+      damage: 0
+      description: "<p>Hauptsächlich im Überwachungsstaat des Cyberpontifikates eingesetzt, verbirgt der Zerhacker alle Personen in seinem Wirkungsradius vor Sicherheits- und Überwachungssystemen.\_</p>\n<p>Die Video- und Ton-Aufzeichnungen der betroffenen Geräte sind unscharf und lassen keine Identifizierungen zu, und die Eigenschaften von Smartmunition und Augmented-Reality-HUDs werden negiert.</p>"
       dn: standard
       dnType: ''
       duration: 10 Minuten
@@ -1117,12 +63,12 @@ items:
     system:
       cosm: cyberpapacy
       description: >-
-        <p>Die gebr&auml;uchlichste Seitenwaffe der Kirchenpolizei ist eine
+        <p>Die gebräuchlichste Seitenwaffe der Kirchenpolizei ist eine
         hochkalibrige und sehr laute Feuerwaffe. Wie bei anderen GWI-Waffen ist
-        eine begrenzte k&uuml;nstliche Intelligenz eingebaut &ndash; nicht um
-        beim Abfeuern zu helfen, sondern um die Pistole zu deaktivieren und den
-        Dieben eine Predigt zu halten, falls sie gestohlen wird. Die Waffe kann
-        per Sprachbefehl dazu veranlasst werden, zwischen verschiedenen
+        eine begrenzte künstliche Intelligenz eingebaut – nicht um beim Abfeuern
+        zu helfen, sondern um die Pistole zu deaktivieren und den Dieben eine
+        Predigt zu halten, falls sie gestohlen wird. Die Waffe kann per
+        Sprachbefehl dazu veranlasst werden, zwischen verschiedenen
         Munitionstypen zu wechseln, falls mehr als ein Typ geladen ist.</p>
       price: '450'
       techlevel: 26
@@ -1136,9 +82,11 @@ items:
       damage: 15
       damageType: ''
       equipped: false
-      equippedClass: .item-unequipped
       notes: ''
       range: 10/25/40
+      secondaryAxiom:
+        selected: none
+        value: null
     ownership:
       default: 0
       9Q0XnqFwko7hRlvL: 3
@@ -1169,7 +117,9 @@ items:
       price: '25'
       techlevel: 20
       value: 7
-      equippedClass: item-equipped
+      secondaryAxiom:
+        selected: none
+        value: null
     ownership:
       default: 0
       9Q0XnqFwko7hRlvL: 3
@@ -1197,26 +147,14 @@ items:
           Compendium.te001-core-rulebook.grw-de-ausruestung.Item.jcdVu7MTTKxF02Vx
     system:
       cosm: cyberpapacy
-      description: >-
-        <p>Dieses Upgrade f&uuml;r das Hexxer-Implantat speichert die Energie
-        aus einer R&uuml;ckkopplung und erlaubt es Hexern und Hexen, sie
-        sp&auml;ter zu benutzen, um ihre eigenen Zauber zu
-        verst&auml;rken.&nbsp;</p>
-
-        <p>Wenn ein Zauberkundiger eine R&uuml;ckkopplung erleidet, funktioniert
-        der Hexxer MK II wie die MK-I-Version (siehe
-        @UUID[Compendium.te001-core-rulebook.grw-de-ausruestung.Item.DKGshzXtDwEg4nQj]{Hexxer
-        MK I}) und negiert die H&auml;lfte des Schockschadens. Dar&uuml;ber
-        hinaus werden die auf diese Weise negierten Schockpunkte automatisch als
-        Bonus auf den n&auml;chsten Zauberspruch des Charakters angewendet. Die
-        Energie verschwindet sp&auml;testens nach einer Minute (sechs Runden),
-        also muss sie innerhalb dieses Zeitraums verbraucht werden, oder der
-        Bonus geht verloren.</p>
+      description: "<p>Dieses Upgrade für das Hexxer-Implantat speichert die Energie aus einer Rückkopplung und erlaubt es Hexern und Hexen, sie später zu benutzen, um ihre eigenen Zauber zu verstärken.\_</p>\n<p>Wenn ein Zauberkundiger eine Rückkopplung erleidet, funktioniert der Hexxer MK II wie die MK-I-Version (siehe @UUID[Compendium.te001-core-rulebook.grw-de-ausruestung.Item.DKGshzXtDwEg4nQj]{Hexxer MK I}) und negiert die Hälfte des Schockschadens. Darüber hinaus werden die auf diese Weise negierten Schockpunkte automatisch als Bonus auf den nächsten Zauberspruch des Charakters angewendet. Die Energie verschwindet spätestens nach einer Minute (sechs Runden), also muss sie innerhalb dieses Zeitraums verbraucht werden, oder der Bonus geht verloren.</p>"
       price: '10000'
       techlevel: 26
       value: 20
       notes: Ignorierter Schock wird zu Proben-Bonus
-      equippedClass: item-equipped
+      secondaryAxiom:
+        selected: none
+        value: null
     ownership:
       default: 0
       9Q0XnqFwko7hRlvL: 3
@@ -1244,28 +182,7 @@ items:
     system:
       category: cyberware
       cosm: cyberpapacy
-      description: >-
-        <p>Wenn dieser Vorzug ausgew&auml;hlt wird, darf der Charakter Cyberware
-        im Wert von bis zu 10.000 $ von der
-        @UUID[Compendium.te001-core-rulebook.grw-de-grw.Qlx6yGF0Mmo6Xzrv.JournalEntryPage.7GGUUHzuYIqGPXDO#cyberware]{Liste}
-        ausw&auml;hlen.&nbsp;</p>
-
-        <p>Offizielle, von der Kirche anerkannte, Cyberware ist direkt mit dem
-        GodNet verbunden und wird sorgf&auml;ltig &uuml;berwacht. Ger&auml;te,
-        die mithilfe dieses Vorzugs erworben werden, sind dagegen
-        &bdquo;gehackt&ldquo; und verbinden sich nicht mit dem GodNet
-        (au&szlig;er wenn der Tr&auml;ger dies aus irgendeinem Grund
-        w&uuml;nscht). Die Implantation ist ungef&auml;hrlich und verursacht
-        keine Verletzungen beim Charakter.&nbsp;</p>
-
-        <p>Die Nutzung gehackter Cyberware ist allerdings im Cyberpontifikat ein
-        Verbrechen. Helden, die ihre K&ouml;rper &bdquo;verchromt&ldquo; haben,
-        nehmen sich am besten vor der stets wachsamen Kirchenpolizei in
-        Acht.&nbsp;</p>
-
-        <p>Weitere Implantate: Dieser Vorzug kann mehr als einmal erworben
-        werden. F&uuml;r jedes weitere Mal nach dem ersten, erh&auml;lt der
-        Besitzer Implantate im Wert von weiteren 5.000 $.</p>
+      description: "<p>Wenn dieser Vorzug ausgewählt wird, darf der Charakter Cyberware im Wert von bis zu 10.000 $ von der @UUID[Compendium.te001-core-rulebook.grw-de-grw.Qlx6yGF0Mmo6Xzrv.JournalEntryPage.7GGUUHzuYIqGPXDO#cyberware]{Liste} auswählen.\_</p>\n<p>Offizielle, von der Kirche anerkannte, Cyberware ist direkt mit dem GodNet verbunden und wird sorgfältig überwacht. Geräte, die mithilfe dieses Vorzugs erworben werden, sind dagegen „gehackt“ und verbinden sich nicht mit dem GodNet (außer wenn der Träger dies aus irgendeinem Grund wünscht). Die Implantation ist ungefährlich und verursacht keine Verletzungen beim Charakter.\_</p>\n<p>Die Nutzung gehackter Cyberware ist allerdings im Cyberpontifikat ein Verbrechen. Helden, die ihre Körper „verchromt“ haben, nehmen sich am besten vor der stets wachsamen Kirchenpolizei in Acht.\_</p>\n<p>Weitere Implantate: Dieser Vorzug kann mehr als einmal erworben werden. Für jedes weitere Mal nach dem ersten, erhält der Besitzer Implantate im Wert von weiteren 5.000 $.</p>"
       prerequisites: keine
       generalContradiction: false
       pulpPowers:
@@ -1342,6 +259,9 @@ items:
         limitation10: ''
         limitationNumber: 0
       timestaken: '1'
+      secondaryAxiom:
+        selected: none
+        value: null
     ownership:
       default: 0
       9Q0XnqFwko7hRlvL: 3
@@ -1356,20 +276,63 @@ items:
       compendiumSource: Compendium.te001-core-rulebook.grw-de-vorzuverb.Item.DI70dRyfP5h47btG
       duplicateSource: null
     _key: '!actors.items!KXfP2nOG8VVWBOtA.i9PYOXT6J8N1W9AN'
-  - _id: GLjFsTAZK3JW5cJo
+  - name: IriMesh-Kleidung
+    type: armor
+    img: systems/torgeternity/images/icons/armor-icon.webp
+    effects: []
+    folder: null
+    sort: 2900000
+    flags:
+      core:
+        sourceId: >-
+          Compendium.te001-core-rulebook.grw-de-ausruestung.Item.5hPro8JFEq4iFcUH
+    _id: Z4nC236F0vnt4Neo
+    system:
+      cosm: panPacifica
+      description: >-
+        <p>Ein leichtes Gewebe, das mithilfe von Nano-Maschinen gewebt wurde.
+        IriMesh sieht und fühlt sich ähnlich wie Seide an, aber mit einer noch
+        größeren Reißfestigkeit. Die Kleidung kann auf eleganten Empfängen
+        getragen werden, ohne fehl am Platz zu wirken, und erregt auch an
+        Kontrollpunkten keine unerwünschte Aufmerksamkeit.</p>
+      price: '250'
+      techlevel: 24
+      value: 12
+      bonus: 2
+      equipped: true
+      maxDex: null
+      minStrength: null
+      notes: ''
+      fatigue: null
+      secondaryAxiom:
+        selected: none
+        value: null
+    ownership:
+      default: 0
+      9Q0XnqFwko7hRlvL: 3
+      CtisFurQNe9h7ABb: 3
+    _stats:
+      systemId: torgeternity
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
+      createdTime: 1711562366100
+      modifiedTime: 1722164235328
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Compendium.te001-core-rulebook.grw-de-ausruestung.Item.5hPro8JFEq4iFcUH
+      duplicateSource: null
+    _key: '!actors.items!KXfP2nOG8VVWBOtA.Z4nC236F0vnt4Neo'
+  - _id: 01LpjUm29w7H335H
     name: Zauberkundiger
     type: perk
     img: systems/torgeternity/images/icons/reality-icon.webp
     effects: []
     folder: null
     sort: 0
-    flags:
-      core:
-        sourceId: Compendium.te001-core-rulebook.grw-de-vorzuverb.Item.96Uk1RoSQ6jUkoK6
+    flags: {}
     system:
       category: spellcraft
-      cosm: none
-      description: "<p><strong>Cosm:</strong> Aysle, Cyberpontifikat, Nil-Imperium, Orrorsh, Tharkold, Zentralerde</p><p>Diejenigen, die sich in die arkanen Künste vertiefen, haben viele Namen: Magier, Zauberer, Hexe oder Hexenmeister, um nur ein paar zu nennen. Unabhängig von ihrem jeweiligen Hintergrund gehören alle Zaubersprüche zu einer von vier Fertigkeits-Kategorien: <em>Apportation, Beschwörung, Verwandlung</em> oder <em>Wahrsagung</em>.\_</p><p>Wenn dieser Vorzug gewählt wird, darf der Charakter drei beliebige Zaubersprüche aus der zu seinem Cosm gehörenden Listen auswählen, deren Bedingungen er erfüllt (siehe @UUID[Compendium.te001-core-rulebook.grw-de-grw.JournalEntry.Qlx6yGF0Mmo6Xzrv.JournalEntryPage.02e9AX4pa6YNYFI0#verfugbare-zauber]{Verfügbare Zauber}). Der Einsatz von Zaubersprüchen wird im Kapitel @UUID[Compendium.te001-core-rulebook.grw-de-grw.Qlx6yGF0Mmo6Xzrv.JournalEntryPage.02e9AX4pa6YNYFI0]{Kapitel 7: Magie} genauer erklärt.</p>"
+      cosm: other
+      description: "<p><strong>Cosm:</strong> Aysle, Cyberpontifikat, Nil-Imperium, Orrorsh, Tharkold, Zentralerde</p><p>Diejenigen, die sich in die arkanen Künste vertiefen, haben viele Namen: Magier, Zauberer, Hexe oder Hexenmeister, um nur ein paar zu nennen. Unabhängig von ihrem jeweiligen Hintergrund gehören alle Zaubersprüche zu einer von vier Fertigkeits-Kategorien: <em>Apportation, Beschwörung, Verwandlung</em> oder <em>Wahrsagung</em>.\_</p><p>Wenn dieser Vorzug gewählt wird, darf der Charakter drei beliebige Zaubersprüche aus der zu seinem Cosm gehörenden @UUID[Compendium.te001-core-rulebook.grw-de-grw.JournalEntry.Qlx6yGF0Mmo6Xzrv.JournalEntryPage.02e9AX4pa6YNYFI0#verfugbare-zauber]{Listen} auswählen, deren Bedingungen er erfüllt.</p><p>In Magie der Zentralerde stehen erweiterte @UUID[Compendium.te001-core-rulebook.grw-de-grw.JournalEntry.itGjEmAvCg62umuj.JournalEntryPage.AR1LS0Y4Domxofvk#verfugbare-zauber]{Zauberlisten} zur Verfügung.</p><p>Der Einsatz von Zaubersprüchen wird im Kapitel @UUID[Compendium.te001-core-rulebook.grw-de-grw.Qlx6yGF0Mmo6Xzrv.JournalEntryPage.02e9AX4pa6YNYFI0]{Kapitel 7: Magie} genauer erklärt.</p>"
       prerequisites: >-
         mindestens 1 Fertigkeitsstufe in Apportation, Beschwörung, Verwandlung
         oder Wahrsagung
@@ -1447,991 +410,113 @@ items:
         limitation09: ''
         limitation10: ''
         limitationNumber: 0
-      timestaken: '1'
+      timestaken: ''
+      secondaryAxiom:
+        selected: none
+        value: null
     ownership:
       default: 0
       9Q0XnqFwko7hRlvL: 3
-      CtisFurQNe9h7ABb: 3
+      VAnYow5sWS9EJzo0: 3
+      93AMwcGe6H37rcPA: 3
     _stats:
-      systemId: torgeternity
-      systemVersion: 12.2.0
-      coreVersion: '12.330'
-      createdTime: 1694866014076
-      modifiedTime: 1722164191224
-      lastModifiedBy: 93AMwcGe6H37rcPA
       compendiumSource: Compendium.te001-core-rulebook.grw-de-vorzuverb.Item.96Uk1RoSQ6jUkoK6
       duplicateSource: null
-    _key: '!actors.items!KXfP2nOG8VVWBOtA.GLjFsTAZK3JW5cJo'
-  - name: IriMesh-Kleidung
-    type: armor
-    img: systems/torgeternity/images/icons/armor-icon.webp
+      coreVersion: '12.330'
+      systemId: torgeternity
+      systemVersion: 12.2.0
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+    _key: '!actors.items!KXfP2nOG8VVWBOtA.01LpjUm29w7H335H'
+  - _id: gg7xWRG5lWcaA4jA
+    name: Reduzieren
+    type: spell
+    img: systems/torgeternity/images/icons/spell-icon.webp
     effects: []
     folder: null
-    sort: 2900000
-    flags:
-      core:
-        sourceId: >-
-          Compendium.te001-core-rulebook.grw-de-ausruestung.Item.5hPro8JFEq4iFcUH
-    _id: Z4nC236F0vnt4Neo
+    sort: -100000
+    flags: {}
     system:
-      cosm: panPacifica
-      description: >-
-        <p>Ein leichtes Gewebe, das mithilfe von Nano-Maschinen gewebt wurde.
-        IriMesh sieht und f&uuml;hlt sich &auml;hnlich wie Seide an, aber mit
-        einer noch gr&ouml;&szlig;eren Rei&szlig;festigkeit. Die Kleidung kann
-        auf eleganten Empf&auml;ngen getragen werden, ohne fehl am Platz zu
-        wirken, und erregt auch an Kontrollpunkten keine unerw&uuml;nschte
-        Aufmerksamkeit.</p>
-      price: '250'
-      techlevel: 24
-      value: 12
-      bonus: 2
-      equipped: true
-      equippedClass: item-equipped
-      maxDex: null
-      minStrength: null
-      notes: ''
-      fatigue: null
+      ap: 0
+      applyArmor: false
+      applySize: false
+      axiom: 10
+      castingtime: 1 Aktion
+      damage: 0
+      description: "<p>Dieser Zauber verringert einen Attributswert des Ziels (das beim Wirken des Zauberspruchs ausgewählt wird) und alle mit diesem Attribut verknüpften Fertigkeiten um –2. Durch mehrfaches Zaubern können mehrere verschiedene Attribute beeinflusst werden.\_</p><p>Der Zaubernde mimt eine Handlung, die sich auf das betroffene Attribut bezieht: Eine abwertende Geste, um den Geist zu reduzieren, ein Vorgeben zu Stolpern, wenn <em>Geschicklichkeit </em>reduziert wird, usw.\_</p><p>Ein Reduzieren von <em>Stärke </em>oder <em>Geist </em>reduziert nicht die Robustheit oder die Schock-Obergrenze.</p><p>@UUID[Compendium.torgeternity.macros.Macro.sZsA7sBGVaCJTzz0]{Buff!}</p>"
+      dn: targetWillpower
+      dnType: ''
+      duration: 3 Runden
+      good: Die Reduktion verbessert sich auf –4.
+      isAttack: false
+      modifier: ''
+      outstanding: >-
+        Wie Erfolgsstufe Gut. Außerdem darf das Ziel nicht erneut würfeln, wenn
+        es bei seinem Würfelwurf auf das betroffene Attribut oder eine damit
+        verknüpfte Fertigkeit eine „20“ würfelt.
+      range: 40 Meter
+      skill: alteration
+      skilllevel: '12'
+      targetDefense: ''
     ownership:
       default: 0
       9Q0XnqFwko7hRlvL: 3
-      CtisFurQNe9h7ABb: 3
+      VAnYow5sWS9EJzo0: 3
+      93AMwcGe6H37rcPA: 3
     _stats:
+      compendiumSource: Compendium.te001-core-rulebook.grw-de-kraefte.Item.dnvTmgrdRgrEjvo9
+      duplicateSource: null
+      coreVersion: '12.330'
       systemId: torgeternity
       systemVersion: 12.2.0
-      coreVersion: '12.330'
-      createdTime: 1711562366100
-      modifiedTime: 1722164235328
-      lastModifiedBy: 93AMwcGe6H37rcPA
-      compendiumSource: Compendium.te001-core-rulebook.grw-de-ausruestung.Item.5hPro8JFEq4iFcUH
-      duplicateSource: null
-    _key: '!actors.items!KXfP2nOG8VVWBOtA.Z4nC236F0vnt4Neo'
-effects:
-  - _id: xNBx8sd8jMvU0rJV
-    changes:
-      - key: system.attributes.charisma.value
-        mode: 2
-        value: '-2'
-        priority: null
-    disabled: true
-    duration:
-      startTime: 0
-      rounds: 3
-      seconds: null
-      combat: null
-      turns: null
-      startRound: null
-      startTurn: null
-    origin: >-
-      Compendium.torgeternity.system-de-archetypen.Actor.KXfP2nOG8VVWBOtA.Item.qE0o186bev0OqQzx
-    transfer: false
-    flags: {}
-    tint: '#ffffff'
-    name: Charisma Standard
-    description: ''
-    statuses: []
-    _stats:
-      coreVersion: '12.330'
-      systemId: null
-      systemVersion: null
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-    img: icons/svg/aura.svg
-    type: base
-    system: {}
+    _key: '!actors.items!KXfP2nOG8VVWBOtA.gg7xWRG5lWcaA4jA'
+  - _id: QG9VdMEKPS1pFJUA
+    name: Verbesserung
+    type: spell
+    img: systems/torgeternity/images/icons/spell-icon.webp
+    effects: []
+    folder: null
     sort: 0
-    _key: '!actors.effects!KXfP2nOG8VVWBOtA.xNBx8sd8jMvU0rJV'
-  - _id: 88SUj651XBtbNOPt
-    changes:
-      - key: system.attributes.charisma.value
-        mode: 2
-        value: '-4'
-        priority: null
-    disabled: true
-    duration:
-      startTime: 0
-      rounds: 3
-      seconds: null
-      combat: null
-      turns: null
-      startRound: null
-      startTurn: null
-    origin: >-
-      Compendium.torgeternity.system-de-archetypen.Actor.KXfP2nOG8VVWBOtA.Item.qE0o186bev0OqQzx
-    transfer: false
     flags: {}
-    tint: '#ffffff'
-    name: Charisma gut
-    description: ''
-    statuses: []
+    system:
+      ap: 0
+      applyArmor: false
+      applySize: false
+      axiom: 10
+      castingtime: 1 Aktion
+      damage: 0
+      description: "<p>Schwierigkeit ist das\_<strong>Zielattribut!</strong></p><p>Dieser Zauber erhöht ein einzelnes Attribut des Zaubernden oder eines Verbündeten um +1. Es dürfen auch mehrere Verbündete gleichzeitig verbessert werden, solange sich alle innerhalb der Reichweite befinden und der Anwender die Option „Mehrfach-Zielauswahl“ benutzt. Der MW ist der Wert des Attributs, das verbessert werden soll – je besser jemand ist, desto schwieriger ist es, ihn weiter zu verbessern. Durch separate Anwendungen des Zaubers können andere Attribute ebenfalls verbessert werden.\_</p><p>Ein Verbessern von <em>Stärke </em>oder <em>Geist </em>erhöht nicht die Robustheit oder die Schock-Obergrenze.\_</p><p>Der Zaubernde ahmt beim Zaubern einen Aspekt des Attributs nach: Ein Knacken der Knöchel, um die <em>Geschicklichkeit </em>zu verbessern, ein Spannen der Muskeln, um die Stärke zu erhöhen, und so weiter.</p><p>@UUID[Compendium.torgeternity.macros.Macro.sZsA7sBGVaCJTzz0]{Buff!}</p>"
+      dn: targetCharisma
+      dnType: ''
+      duration: 3 Runden
+      good: Das Attribut wird um +2 erhöht.
+      isAttack: false
+      modifier: ''
+      outstanding: Das Attribut wird um +3 erhöht.
+      range: 40 Meter
+      skill: alteration
+      skilllevel: '12'
+      targetDefense: ''
+    ownership:
+      default: 0
+      9Q0XnqFwko7hRlvL: 3
+      VAnYow5sWS9EJzo0: 3
+      93AMwcGe6H37rcPA: 3
     _stats:
+      compendiumSource: Compendium.te001-core-rulebook.grw-de-kraefte.Item.373rRZieSUiFDMNo
+      duplicateSource: null
       coreVersion: '12.330'
-      systemId: null
-      systemVersion: null
+      systemId: torgeternity
+      systemVersion: 12.2.0
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-    img: icons/svg/aura.svg
-    type: base
-    system: {}
-    sort: 0
-    _key: '!actors.effects!KXfP2nOG8VVWBOtA.88SUj651XBtbNOPt'
-  - _id: 3hDHHj46iA8IhbrC
-    changes:
-      - key: system.attributes.dexterity.value
-        mode: 2
-        value: '-2'
-        priority: null
-    disabled: true
-    duration:
-      startTime: 0
-      rounds: 3
-      seconds: null
-      combat: null
-      turns: null
-      startRound: null
-      startTurn: null
-    origin: >-
-      Compendium.torgeternity.system-de-archetypen.Actor.KXfP2nOG8VVWBOtA.Item.qE0o186bev0OqQzx
-    transfer: false
-    flags: {}
-    tint: '#ffffff'
-    name: Geschicklichkeit standard
-    description: ''
-    statuses: []
-    _stats:
-      coreVersion: '12.330'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-    img: icons/svg/aura.svg
-    type: base
-    system: {}
-    sort: 0
-    _key: '!actors.effects!KXfP2nOG8VVWBOtA.3hDHHj46iA8IhbrC'
-  - _id: BrfBrUSbwL86eOZi
-    changes:
-      - key: system.attributes.dexterity.value
-        mode: 2
-        value: '-4'
-        priority: null
-    disabled: true
-    duration:
-      startTime: 0
-      rounds: 3
-      seconds: null
-      combat: null
-      turns: null
-      startRound: null
-      startTurn: null
-    origin: >-
-      Compendium.torgeternity.system-de-archetypen.Actor.KXfP2nOG8VVWBOtA.Item.qE0o186bev0OqQzx
-    transfer: false
-    flags: {}
-    tint: '#ffffff'
-    name: Geschicklichkeit gut
-    description: ''
-    statuses: []
-    _stats:
-      coreVersion: '12.330'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-    img: icons/svg/aura.svg
-    type: base
-    system: {}
-    sort: 0
-    _key: '!actors.effects!KXfP2nOG8VVWBOtA.BrfBrUSbwL86eOZi'
-  - _id: EQtWGtlZFRP1NeYn
-    changes:
-      - key: system.attributes.spirit.value
-        mode: 2
-        value: '-2'
-        priority: null
-    disabled: true
-    duration:
-      startTime: 0
-      rounds: 3
-      seconds: null
-      combat: null
-      turns: null
-      startRound: null
-      startTurn: null
-    origin: >-
-      Compendium.torgeternity.system-de-archetypen.Actor.KXfP2nOG8VVWBOtA.Item.qE0o186bev0OqQzx
-    transfer: false
-    flags: {}
-    tint: '#ffffff'
-    name: Geist standard
-    description: ''
-    statuses: []
-    _stats:
-      coreVersion: '12.330'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-    img: icons/svg/aura.svg
-    type: base
-    system: {}
-    sort: 0
-    _key: '!actors.effects!KXfP2nOG8VVWBOtA.EQtWGtlZFRP1NeYn'
-  - _id: 9qaOaCelaSnMVKju
-    changes:
-      - key: system.attributes.spirit.value
-        mode: 2
-        value: '-4'
-        priority: null
-    disabled: true
-    duration:
-      startTime: 0
-      rounds: 3
-      seconds: null
-      combat: null
-      turns: null
-      startRound: null
-      startTurn: null
-    origin: >-
-      Compendium.torgeternity.system-de-archetypen.Actor.KXfP2nOG8VVWBOtA.Item.qE0o186bev0OqQzx
-    transfer: false
-    flags: {}
-    tint: '#ffffff'
-    name: Geist gut
-    description: ''
-    statuses: []
-    _stats:
-      coreVersion: '12.330'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-    img: icons/svg/aura.svg
-    type: base
-    system: {}
-    sort: 0
-    _key: '!actors.effects!KXfP2nOG8VVWBOtA.9qaOaCelaSnMVKju'
-  - _id: Cnu4exIWwx6TlcoY
-    changes:
-      - key: system.attributes.strength.value
-        mode: 2
-        value: '-2'
-        priority: null
-    disabled: true
-    duration:
-      startTime: 0
-      rounds: 3
-      seconds: null
-      combat: null
-      turns: null
-      startRound: null
-      startTurn: null
-    origin: >-
-      Compendium.torgeternity.system-de-archetypen.Actor.KXfP2nOG8VVWBOtA.Item.qE0o186bev0OqQzx
-    transfer: false
-    flags: {}
-    tint: '#ffffff'
-    name: Stärke Standard
-    description: ''
-    statuses: []
-    _stats:
-      coreVersion: '12.330'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-    img: icons/svg/aura.svg
-    type: base
-    system: {}
-    sort: 0
-    _key: '!actors.effects!KXfP2nOG8VVWBOtA.Cnu4exIWwx6TlcoY'
-  - _id: UYHeBeRmWAIiNqJf
-    changes:
-      - key: system.attributes.strength.value
-        mode: 2
-        value: '-4'
-        priority: null
-    disabled: true
-    duration:
-      startTime: 0
-      rounds: 3
-      seconds: null
-      combat: null
-      turns: null
-      startRound: null
-      startTurn: null
-    origin: >-
-      Compendium.torgeternity.system-de-archetypen.Actor.KXfP2nOG8VVWBOtA.Item.qE0o186bev0OqQzx
-    transfer: false
-    flags: {}
-    tint: '#ffffff'
-    name: Stärke gut
-    description: ''
-    statuses: []
-    _stats:
-      coreVersion: '12.330'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-    img: icons/svg/aura.svg
-    type: base
-    system: {}
-    sort: 0
-    _key: '!actors.effects!KXfP2nOG8VVWBOtA.UYHeBeRmWAIiNqJf'
-  - _id: Oy5vGqYTZTSV37eW
-    changes:
-      - key: system.attributes.mind.value
-        mode: 2
-        value: '-2'
-        priority: null
-    disabled: true
-    duration:
-      startTime: 0
-      rounds: 3
-      seconds: null
-      combat: null
-      turns: null
-      startRound: null
-      startTurn: null
-    origin: >-
-      Compendium.torgeternity.system-de-archetypen.Actor.KXfP2nOG8VVWBOtA.Item.qE0o186bev0OqQzx
-    transfer: false
-    flags: {}
-    tint: '#ffffff'
-    name: Verstand standard
-    description: ''
-    statuses: []
-    _stats:
-      coreVersion: '12.330'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-    img: icons/svg/aura.svg
-    type: base
-    system: {}
-    sort: 0
-    _key: '!actors.effects!KXfP2nOG8VVWBOtA.Oy5vGqYTZTSV37eW'
-  - _id: u9sOeiGLb5U9IGgV
-    changes:
-      - key: system.attributes.mind.value
-        mode: 2
-        value: '-4'
-        priority: null
-    disabled: true
-    duration:
-      startTime: 0
-      rounds: 3
-      seconds: null
-      combat: null
-      turns: null
-      startRound: null
-      startTurn: null
-    origin: >-
-      Compendium.torgeternity.system-de-archetypen.Actor.KXfP2nOG8VVWBOtA.Item.qE0o186bev0OqQzx
-    transfer: false
-    flags: {}
-    tint: '#ffffff'
-    name: Verstand gut
-    description: ''
-    statuses: []
-    _stats:
-      coreVersion: '12.330'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-    img: icons/svg/aura.svg
-    type: base
-    system: {}
-    sort: 0
-    _key: '!actors.effects!KXfP2nOG8VVWBOtA.u9sOeiGLb5U9IGgV'
-  - _id: WWe2wAufzDgPK7sQ
-    changes:
-      - key: system.attributes.charisma.value
-        mode: 2
-        value: '1'
-        priority: null
-    disabled: true
-    duration:
-      startTime: 0
-      rounds: 3
-      seconds: null
-      combat: null
-      turns: null
-      startRound: null
-      startTurn: null
-    origin: >-
-      Compendium.torgeternity.system-de-archetypen.Actor.KXfP2nOG8VVWBOtA.Item.AMJ9OkBjQS4QpLhe
-    transfer: false
-    flags: {}
-    tint: '#ffffff'
-    name: Charisma Standard
-    description: ''
-    statuses: []
-    _stats:
-      coreVersion: '12.330'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-    img: icons/svg/aura.svg
-    type: base
-    system: {}
-    sort: 0
-    _key: '!actors.effects!KXfP2nOG8VVWBOtA.WWe2wAufzDgPK7sQ'
-  - _id: Xk43fWcYOBwG020y
-    changes:
-      - key: system.attributes.charisma.value
-        mode: 2
-        value: '2'
-        priority: null
-    disabled: true
-    duration:
-      startTime: 0
-      rounds: 3
-      seconds: null
-      combat: null
-      turns: null
-      startRound: null
-      startTurn: null
-    origin: >-
-      Compendium.torgeternity.system-de-archetypen.Actor.KXfP2nOG8VVWBOtA.Item.AMJ9OkBjQS4QpLhe
-    transfer: false
-    flags: {}
-    tint: '#ffffff'
-    name: Charisma Gut
-    description: ''
-    statuses: []
-    _stats:
-      coreVersion: '12.330'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-    img: icons/svg/aura.svg
-    type: base
-    system: {}
-    sort: 0
-    _key: '!actors.effects!KXfP2nOG8VVWBOtA.Xk43fWcYOBwG020y'
-  - _id: Pw0a2bMXmcWYgt1y
-    changes:
-      - key: system.attributes.charisma.value
-        mode: 2
-        value: '3'
-        priority: null
-    disabled: true
-    duration:
-      startTime: 0
-      rounds: 3
-      seconds: null
-      combat: null
-      turns: null
-      startRound: null
-      startTurn: null
-    origin: >-
-      Compendium.torgeternity.system-de-archetypen.Actor.KXfP2nOG8VVWBOtA.Item.AMJ9OkBjQS4QpLhe
-    transfer: false
-    flags: {}
-    tint: '#ffffff'
-    name: Charisma Hervorragend
-    description: ''
-    statuses: []
-    _stats:
-      coreVersion: '12.330'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-    img: icons/svg/aura.svg
-    type: base
-    system: {}
-    sort: 0
-    _key: '!actors.effects!KXfP2nOG8VVWBOtA.Pw0a2bMXmcWYgt1y'
-  - _id: 0xVZuOBdsTYLt9sj
-    changes:
-      - key: system.attributes.spirit.value
-        mode: 2
-        value: '1'
-        priority: null
-    disabled: true
-    duration:
-      startTime: 0
-      rounds: 3
-      seconds: null
-      combat: null
-      turns: null
-      startRound: null
-      startTurn: null
-    origin: >-
-      Compendium.torgeternity.system-de-archetypen.Actor.KXfP2nOG8VVWBOtA.Item.AMJ9OkBjQS4QpLhe
-    transfer: false
-    flags: {}
-    tint: '#ffffff'
-    name: Geist Standard
-    description: ''
-    statuses: []
-    _stats:
-      coreVersion: '12.330'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-    img: icons/svg/aura.svg
-    type: base
-    system: {}
-    sort: 0
-    _key: '!actors.effects!KXfP2nOG8VVWBOtA.0xVZuOBdsTYLt9sj'
-  - _id: N0xmW4LS6KMpWbt9
-    changes:
-      - key: system.attributes.spirit.value
-        mode: 2
-        value: '2'
-        priority: null
-    disabled: true
-    duration:
-      startTime: 0
-      rounds: 3
-      seconds: null
-      combat: null
-      turns: null
-      startRound: null
-      startTurn: null
-    origin: >-
-      Compendium.torgeternity.system-de-archetypen.Actor.KXfP2nOG8VVWBOtA.Item.AMJ9OkBjQS4QpLhe
-    transfer: false
-    flags: {}
-    tint: '#ffffff'
-    name: Geist Gut
-    description: ''
-    statuses: []
-    _stats:
-      coreVersion: '12.330'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-    img: icons/svg/aura.svg
-    type: base
-    system: {}
-    sort: 0
-    _key: '!actors.effects!KXfP2nOG8VVWBOtA.N0xmW4LS6KMpWbt9'
-  - _id: 7ZwTZIUJqN3ULVde
-    changes:
-      - key: system.attributes.spirit.value
-        mode: 2
-        value: '3'
-        priority: null
-    disabled: true
-    duration:
-      startTime: 0
-      rounds: 3
-      seconds: null
-      combat: null
-      turns: null
-      startRound: null
-      startTurn: null
-    origin: >-
-      Compendium.torgeternity.system-de-archetypen.Actor.KXfP2nOG8VVWBOtA.Item.AMJ9OkBjQS4QpLhe
-    transfer: false
-    flags: {}
-    tint: '#ffffff'
-    name: Geist Hervorragend
-    description: ''
-    statuses: []
-    _stats:
-      coreVersion: '12.330'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-    img: icons/svg/aura.svg
-    type: base
-    system: {}
-    sort: 0
-    _key: '!actors.effects!KXfP2nOG8VVWBOtA.7ZwTZIUJqN3ULVde'
-  - _id: igBoC0cs8B2WN6ko
-    changes:
-      - key: system.attributes.dexterity.value
-        mode: 2
-        value: '1'
-        priority: null
-    disabled: true
-    duration:
-      startTime: 0
-      rounds: 3
-      seconds: null
-      combat: null
-      turns: null
-      startRound: null
-      startTurn: null
-    origin: >-
-      Compendium.torgeternity.system-de-archetypen.Actor.KXfP2nOG8VVWBOtA.Item.AMJ9OkBjQS4QpLhe
-    transfer: false
-    flags: {}
-    tint: '#ffffff'
-    name: Geschicklichkeit Standard
-    description: ''
-    statuses: []
-    _stats:
-      coreVersion: '12.330'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-    img: icons/svg/aura.svg
-    type: base
-    system: {}
-    sort: 0
-    _key: '!actors.effects!KXfP2nOG8VVWBOtA.igBoC0cs8B2WN6ko'
-  - _id: xK03SnxJtareCXKG
-    changes:
-      - key: system.attributes.dexterity.value
-        mode: 2
-        value: '2'
-        priority: null
-    disabled: true
-    duration:
-      startTime: 0
-      rounds: 3
-      seconds: null
-      combat: null
-      turns: null
-      startRound: null
-      startTurn: null
-    origin: >-
-      Compendium.torgeternity.system-de-archetypen.Actor.KXfP2nOG8VVWBOtA.Item.AMJ9OkBjQS4QpLhe
-    transfer: false
-    flags: {}
-    tint: '#ffffff'
-    name: Geschicklichkeit Gut
-    description: ''
-    statuses: []
-    _stats:
-      coreVersion: '12.330'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-    img: icons/svg/aura.svg
-    type: base
-    system: {}
-    sort: 0
-    _key: '!actors.effects!KXfP2nOG8VVWBOtA.xK03SnxJtareCXKG'
-  - _id: cU3htfAbj2sGFaWG
-    changes:
-      - key: system.attributes.dexterity.value
-        mode: 2
-        value: '3'
-        priority: null
-    disabled: true
-    duration:
-      startTime: 0
-      rounds: 3
-      seconds: null
-      combat: null
-      turns: null
-      startRound: null
-      startTurn: null
-    origin: >-
-      Compendium.torgeternity.system-de-archetypen.Actor.KXfP2nOG8VVWBOtA.Item.AMJ9OkBjQS4QpLhe
-    transfer: false
-    flags: {}
-    tint: '#ffffff'
-    name: Geschicklichkeit Hervorragend
-    description: ''
-    statuses: []
-    _stats:
-      coreVersion: '12.330'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-    img: icons/svg/aura.svg
-    type: base
-    system: {}
-    sort: 0
-    _key: '!actors.effects!KXfP2nOG8VVWBOtA.cU3htfAbj2sGFaWG'
-  - _id: yk85FzWpfF8MhZd7
-    changes:
-      - key: system.attributes.strength.value
-        mode: 2
-        value: '1'
-        priority: null
-    disabled: true
-    duration:
-      startTime: 0
-      rounds: 3
-      seconds: null
-      combat: null
-      turns: null
-      startRound: null
-      startTurn: null
-    origin: >-
-      Compendium.torgeternity.system-de-archetypen.Actor.KXfP2nOG8VVWBOtA.Item.AMJ9OkBjQS4QpLhe
-    transfer: false
-    flags: {}
-    tint: '#ffffff'
-    name: Stärke Standard
-    description: ''
-    statuses: []
-    _stats:
-      coreVersion: '12.330'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-    img: icons/svg/aura.svg
-    type: base
-    system: {}
-    sort: 0
-    _key: '!actors.effects!KXfP2nOG8VVWBOtA.yk85FzWpfF8MhZd7'
-  - _id: E0HdjnJaSOvzjJsI
-    changes:
-      - key: system.attributes.strength.value
-        mode: 2
-        value: '2'
-        priority: null
-    disabled: true
-    duration:
-      startTime: 0
-      rounds: 3
-      seconds: null
-      combat: null
-      turns: null
-      startRound: null
-      startTurn: null
-    origin: >-
-      Compendium.torgeternity.system-de-archetypen.Actor.KXfP2nOG8VVWBOtA.Item.AMJ9OkBjQS4QpLhe
-    transfer: false
-    flags: {}
-    tint: '#ffffff'
-    name: Stärke Gut
-    description: ''
-    statuses: []
-    _stats:
-      coreVersion: '12.330'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-    img: icons/svg/aura.svg
-    type: base
-    system: {}
-    sort: 0
-    _key: '!actors.effects!KXfP2nOG8VVWBOtA.E0HdjnJaSOvzjJsI'
-  - _id: dcWS78qrXUpVg14s
-    changes:
-      - key: system.attributes.strength.value
-        mode: 2
-        value: '3'
-        priority: null
-    disabled: true
-    duration:
-      startTime: 0
-      rounds: 3
-      seconds: null
-      combat: null
-      turns: null
-      startRound: null
-      startTurn: null
-    origin: >-
-      Compendium.torgeternity.system-de-archetypen.Actor.KXfP2nOG8VVWBOtA.Item.AMJ9OkBjQS4QpLhe
-    transfer: false
-    flags: {}
-    tint: '#ffffff'
-    name: Stärke Hervorragend
-    description: ''
-    statuses: []
-    _stats:
-      coreVersion: '12.330'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-    img: icons/svg/aura.svg
-    type: base
-    system: {}
-    sort: 0
-    _key: '!actors.effects!KXfP2nOG8VVWBOtA.dcWS78qrXUpVg14s'
-  - _id: l4AQc97dXwvnbYnJ
-    changes:
-      - key: system.attributes.mind.value
-        mode: 2
-        value: '1'
-        priority: null
-    disabled: true
-    duration:
-      startTime: 0
-      rounds: 3
-      seconds: null
-      combat: null
-      turns: null
-      startRound: null
-      startTurn: null
-    origin: >-
-      Compendium.torgeternity.system-de-archetypen.Actor.KXfP2nOG8VVWBOtA.Item.AMJ9OkBjQS4QpLhe
-    transfer: false
-    flags: {}
-    tint: '#ffffff'
-    name: Verstand Standard
-    description: ''
-    statuses: []
-    _stats:
-      coreVersion: '12.330'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-    img: icons/svg/aura.svg
-    type: base
-    system: {}
-    sort: 0
-    _key: '!actors.effects!KXfP2nOG8VVWBOtA.l4AQc97dXwvnbYnJ'
-  - _id: z2CgckzKKfb7QosU
-    changes:
-      - key: system.attributes.mind.value
-        mode: 2
-        value: '2'
-        priority: null
-    disabled: true
-    duration:
-      startTime: 0
-      rounds: 3
-      seconds: null
-      combat: null
-      turns: null
-      startRound: null
-      startTurn: null
-    origin: >-
-      Compendium.torgeternity.system-de-archetypen.Actor.KXfP2nOG8VVWBOtA.Item.AMJ9OkBjQS4QpLhe
-    transfer: false
-    flags: {}
-    tint: '#ffffff'
-    name: Verstand Gut
-    description: ''
-    statuses: []
-    _stats:
-      coreVersion: '12.330'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-    img: icons/svg/aura.svg
-    type: base
-    system: {}
-    sort: 0
-    _key: '!actors.effects!KXfP2nOG8VVWBOtA.z2CgckzKKfb7QosU'
-  - _id: C7CvOZhWpth0kQZl
-    changes:
-      - key: system.attributes.mind.value
-        mode: 2
-        value: '3'
-        priority: null
-    disabled: true
-    duration:
-      startTime: 0
-      rounds: 3
-      seconds: null
-      combat: null
-      turns: null
-      startRound: null
-      startTurn: null
-    origin: >-
-      Compendium.torgeternity.system-de-archetypen.Actor.KXfP2nOG8VVWBOtA.Item.AMJ9OkBjQS4QpLhe
-    transfer: false
-    flags: {}
-    tint: '#ffffff'
-    name: Verstand Hervorragend
-    description: ''
-    statuses: []
-    _stats:
-      coreVersion: '12.330'
-      systemId: null
-      systemVersion: null
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-    img: icons/svg/aura.svg
-    type: base
-    system: {}
-    sort: 0
-    _key: '!actors.effects!KXfP2nOG8VVWBOtA.C7CvOZhWpth0kQZl'
+    _key: '!actors.items!KXfP2nOG8VVWBOtA.QG9VdMEKPS1pFJUA'
+effects: []
 folder: null
 sort: 0
 flags:
@@ -2788,102 +873,7 @@ system:
     spirit: 16
     tech: 26
   details:
-    background: >-
-      <p><img class="charimg"
-      src="systems/torgeternity/images/characters/cyberwitch.webp" alt=""
-      width="828" height="2010"></p>
-
-      <p
-      class="moreheight">@UUID[Compendium.torgeternity.system-de-handouts.JournalEntry.DLLvnXpv7RFhRgHu.JournalEntryPage.v8EhlvFjQYGClORG]{Archetyp
-      - Die Cyber-Hexe}</p>
-
-      <h3>&Uuml;berblick</h3>
-
-      <p>Hexen kommen aus einer Vielzahl von Hintergr&uuml;nden und
-      Glaubenssystemen in ganz Europa, aber einige haben es tats&auml;chlich
-      geschafft, das latente magische Axiom zu nutzen und Zauber zu wirken, die
-      weit &uuml;ber alles hinausgehen, was die Zentralerde zugelassen
-      h&auml;tte.&nbsp;</p>
-
-      <p>Diese Macht ist eine Bedrohung f&uuml;r Malraux, der alle Zauberwirker
-      zu "Gottesl&auml;sterern" erkl&auml;rt hat. Du stimmst ihm zu und hast
-      beschlossen, deine Macht zu nutzen, um die Unterdr&uuml;ckten zu
-      sch&uuml;tzen und den tyrannischen Gegenpapst zu st&uuml;rzen.&nbsp;</p>
-
-      <p>Nat&uuml;rlich kann die Hilfe modernen Technologie dabei nicht
-      schaden.</p>
-
-      <h3>Taktiken</h3>
-
-      <p><em>Verbesserung </em>ist ein m&auml;chtiger und vielseitiger Zauber.
-      Das Anheben der <em>St&auml;rke</em> deiner Verb&uuml;ndeten erh&ouml;ht
-      deren Nahkampfschaden, w&auml;hrend die&nbsp;<em>Geschicklichkeit
-      </em>sowohl Angriff als auch Verteidigung verbessert. Im selben Ma&szlig;e
-      ist <em>Reduzieren </em>ein Fluch f&uuml;r deine Feinde, indem es ihre
-      Angriffe behindert oder ihren Widerstand gegen weitere Zauber
-      verringert.&nbsp;</p>
-
-      <p><em>Einsch&uuml;chtern </em>und <em>Tricksen </em>sind deine
-      bevorzugten Interaktionen. Du kannst au&szlig;erdem die Vorteile des hohen
-      Tech-Axioms des Cyberpontifikats nutzen, um deine Magie durch
-      leistungsstarke Handfeuerwaffen und R&uuml;stungen zu erg&auml;nzen. Das
-      Hexxer-Implantat hilft, den magischen Widerstand des Pontifikats
-      abzumildern und ihn sogar zu deinem Vorteil zu nutzen.</p>
-
-      <h3>Moment der Krise</h3>
-
-      <p>Das Regime von Malraux unterdr&uuml;ckt all jene, die mit seinem Diktat
-      nicht einverstanden sind. Viele widersetzten sich, und einige kamen durch
-      seine Legionen korrupter Kirchenpolizisten zu Schaden. Du hast dich gegen
-      sie gestellt und dich irgendwo auf dem Weg vom Rebellen zum Helden zu
-      einem Storm Knight gemausert.</p>
-
-      <h3>Zitat</h3>
-
-      <p>"<em>Abrakadabra </em>k&ouml;nnte das Letzte sein, was du jemals
-      h&ouml;ren&nbsp;wirst, mon ami."</p>
-
-      <h3>Beschreibung</h3>
-
-      <p>Du versteckst dich in Menschenmengen oder im Schatten, wenn du kannst.
-      Bei genauerer Betrachtung ist dein Hexxer- Implantat allerdings ein
-      eindeutiges Zeichen. Es ist illegal und hat nur ein Ziel: Malraux' Verbot
-      der Zauberei zu trotzen!&nbsp;</p>
-
-      <p>Sobald du deine Verkleidung fallen l&auml;sst, ist deine
-      ungez&uuml;gelte Macht ein wahrer Schrecken f&uuml;r deine Feinde.</p>
-
-      <h3>Agenda</h3>
-
-      <p>Du k&auml;mpfst f&uuml;r die Freiheit und die Selbstbestimmung und
-      erwehrst dich gegen den Autoritarismus &ndash; insbesondere gegen das
-      repressive und selbstgerechte Regime von Malraux.</p>
-
-      <h3>Namen</h3>
-
-      <p>Aure, Blaize, Faye, Gaea, Jean, Marion, Nicola, Paige, Viola, Zobel</p>
-
-      <h3>Vorgeschlagener Aufstieg (Optional)</h3>
-
-      <ul>
-
-      <li>(5 EP) Beobachten</li>
-
-      <li>(7 EP) Pfadfinder</li>
-
-      <li>(1 EP) <em>Verspotten</em> +1</li>
-
-      <li>(2 EP) <em>Waffenloser Kampf</em> +2</li>
-
-      <li>(3 EP) <em>Ausweichen</em> +3</li>
-
-      <li>(3 EP) <em>Weissagung</em> +3</li>
-
-      <li>(4 EP) <em>Verwandlung</em> +4</li>
-
-      <li>(5 EP) <em>Verwandlung</em> +5</li>
-
-      </ul>
+    background: "<p><img class=\"charimg\" src=\"systems/torgeternity/images/characters/cyberwitch.webp\" alt=\"\" width=\"828\" height=\"2010\" /></p>\n<p class=\"moreheight\">@UUID[Compendium.torgeternity.system-de-handouts.JournalEntry.DLLvnXpv7RFhRgHu.JournalEntryPage.v8EhlvFjQYGClORG]{Archetyp - Die Cyber-Hexe}</p>\n<h3>Überblick</h3>\n<p>Hexen kommen aus einer Vielzahl von Hintergründen und Glaubenssystemen in ganz Europa, aber einige haben es tatsächlich geschafft, das latente magische Axiom zu nutzen und Zauber zu wirken, die weit über alles hinausgehen, was die Zentralerde zugelassen hätte.\_</p>\n<p>Diese Macht ist eine Bedrohung für Malraux, der alle Zauberwirker zu \"Gotteslästerern\" erklärt hat. Du stimmst ihm zu und hast beschlossen, deine Macht zu nutzen, um die Unterdrückten zu schützen und den tyrannischen Gegenpapst zu stürzen.\_</p>\n<p>Natürlich kann die Hilfe modernen Technologie dabei nicht schaden.</p>\n<h3>Taktiken</h3>\n<p><em>Verbesserung </em>ist ein mächtiger und vielseitiger Zauber. Das Anheben der <em>Stärke</em> deiner Verbündeten erhöht deren Nahkampfschaden, während die\_<em>Geschicklichkeit </em>sowohl Angriff als auch Verteidigung verbessert. Im selben Maße ist <em>Reduzieren </em>ein Fluch für deine Feinde, indem es ihre Angriffe behindert oder ihren Widerstand gegen weitere Zauber verringert.\_</p>\n<p><em>Einschüchtern </em>und <em>Tricksen </em>sind deine bevorzugten Interaktionen. Du kannst außerdem die Vorteile des hohen Tech-Axioms des Cyberpontifikats nutzen, um deine Magie durch leistungsstarke Handfeuerwaffen und Rüstungen zu ergänzen. Das Hexxer-Implantat hilft, den magischen Widerstand des Pontifikats abzumildern und ihn sogar zu deinem Vorteil zu nutzen.</p>\n<h3>Moment der Krise</h3>\n<p>Das Regime von Malraux unterdrückt all jene, die mit seinem Diktat nicht einverstanden sind. Viele widersetzten sich, und einige kamen durch seine Legionen korrupter Kirchenpolizisten zu Schaden. Du hast dich gegen sie gestellt und dich irgendwo auf dem Weg vom Rebellen zum Helden zu einem Storm Knight gemausert.</p>\n<h3>Zitat</h3>\n<p>\"<em>Abrakadabra </em>könnte das Letzte sein, was du jemals hören\_wirst, mon ami.\"</p>\n<h3>Beschreibung</h3>\n<p>Du versteckst dich in Menschenmengen oder im Schatten, wenn du kannst. Bei genauerer Betrachtung ist dein Hexxer- Implantat allerdings ein eindeutiges Zeichen. Es ist illegal und hat nur ein Ziel: Malraux' Verbot der Zauberei zu trotzen!\_</p>\n<p>Sobald du deine Verkleidung fallen lässt, ist deine ungezügelte Macht ein wahrer Schrecken für deine Feinde.</p>\n<h3>Agenda</h3>\n<p>Du kämpfst für die Freiheit und die Selbstbestimmung und erwehrst dich gegen den Autoritarismus – insbesondere gegen das repressive und selbstgerechte Regime von Malraux.</p>\n<h3>Namen</h3>\n<p>Aure, Blaize, Faye, Gaea, Jean, Marion, Nicola, Paige, Viola, Zobel</p>\n<h3>Vorgeschlagener Aufstieg (Optional)</h3>\n<ul>\n<li>(5 EP) Beobachten</li>\n<li>(7 EP) Pfadfinder</li>\n<li>(1 EP) <em>Verspotten</em> +1</li>\n<li>(2 EP) <em>Waffenloser Kampf</em> +2</li>\n<li>(3 EP) <em>Ausweichen</em> +3</li>\n<li>(3 EP) <em>Weissagung</em> +3</li>\n<li>(4 EP) <em>Verwandlung</em> +4</li>\n<li>(5 EP) <em>Verwandlung</em> +5</li>\n</ul>"
     race: human
     sizeBonus: normal
   editstate: false
@@ -2969,11 +959,11 @@ prototypeToken:
       texture: null
 _stats:
   systemId: torgeternity
-  systemVersion: 3.8.1
+  systemVersion: 12.2.0
   coreVersion: '12.330'
   createdTime: 1694865921702
-  modifiedTime: 1716827811166
-  lastModifiedBy: VAnYow5sWS9EJzo0
+  modifiedTime: 1722359278656
+  lastModifiedBy: 93AMwcGe6H37rcPA
   compendiumSource: Compendium.torgeternity.archetypes.CefD0chJeL6NrRVJ
   duplicateSource: null
 _key: '!actors!KXfP2nOG8VVWBOtA'

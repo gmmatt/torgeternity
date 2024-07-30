@@ -15,8 +15,8 @@ items:
       ap: 0
       attackWith: unarmedCombat
       chatNote: ''
-      damage: '9'
-      description: <p><em>St&auml;rke</em> +2 (9)</p>
+      damage: 9
+      description: <p><em>Stärke</em> +2 (9)</p>
     ownership:
       default: 0
       pYSulyhjOdVnRAJt: 3
@@ -380,13 +380,13 @@ system:
       defenseOnly: false
   details:
     description: >-
-      <p class="moreheight">Tiergef&auml;hrte von
+      <p class="moreheight">Tiergefährte von
       @UUID[Compendium.torgeternity.system-de-archetypen.Actor.pGJE5A6rJMK7Za84]{Die
-      urzeitliche J&auml;gerin}</p>
+      urzeitliche Jägerin}</p>
 
       <p
-      class="moreheight">@UUID[Compendium.torgeternity.system-de-handouts.JournalEntry.DLLvnXpv7RFhRgHu.JournalEntryPage.oSp48783apDZJbHt]{Tiergef&auml;hrte
-      - S&auml;belzahntiger}</p>
+      class="moreheight">@UUID[Compendium.torgeternity.system-de-handouts.JournalEntry.DLLvnXpv7RFhRgHu.JournalEntryPage.oSp48783apDZJbHt]{Tiergefährte
+      - Säbelzahntiger}</p>
     sizeBonus: normal
     clearance: alpha
     possibilityPotential: Niemals
@@ -473,11 +473,11 @@ prototypeToken:
       texture: null
 _stats:
   systemId: torgeternity
-  systemVersion: 3.8.1
+  systemVersion: 12.2.0
   coreVersion: '12.330'
   createdTime: 1694860904413
-  modifiedTime: 1716827811422
-  lastModifiedBy: VAnYow5sWS9EJzo0
+  modifiedTime: 1722359278656
+  lastModifiedBy: 93AMwcGe6H37rcPA
   compendiumSource: Compendium.te001-core-rulebook.Actors.JVgXLLgQQX0sFr9g
   duplicateSource: null
 _key: '!actors!SVU3O0osXn4bPoTn'

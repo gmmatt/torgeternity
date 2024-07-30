@@ -15,23 +15,7 @@ items:
         sourceId: Item.IFfIxQewwnxkWg6m
     system:
       perk: Drachenkrieger
-      description: >-
-        <p><span style="font-family: 'Palatino Linotype';">An einer der
-        Armschienen der R&uuml;stung ist eine lange R&ouml;hre befestigt, die zu
-        einer verstecken Kammer mit komprimiertem Brennstoff auf dem R&uuml;cken
-        f&uuml;hrt. Wenn sie mit </span><em style="box-sizing: border-box;
-        user-select: text; font-family: 'Palatino
-        Linotype';">Projektilwaffen&nbsp;</em><span style="font-family:
-        'Palatino Linotype';">eingesetzt wird, verschie&szlig;t die R&ouml;hre
-        einen Feuerstrahl mit einer Reichweite von 10 Metern und einem kleinen
-        Explosionsradius (siehe Seite 120). Alle getroffenen Ziele erleidet 16
-        Punkte Feuerschaden (siehe Seite 136). Die Kammer enth&auml;lt genug
-        Brennstoff f&uuml;r drei Angriffe.&nbsp;</span><br style="box-sizing:
-        border-box; user-select: text; font-family: 'Palatino Linotype';"
-        /><span style="font-family: 'Palatino Linotype';">Der Beh&auml;lter
-        l&auml;dt sich am Ende jeder Szene oder w&auml;hrend einer langen Rast,
-        die mindestens einige Stunden dauert (Spielleiterentscheidung),
-        automatisch auf.</span></p>
+      description: "<p><span style=\"font-family:'Palatino Linotype'\">An einer der Armschienen der Rüstung ist eine lange Röhre befestigt, die zu einer verstecken Kammer mit komprimiertem Brennstoff auf dem Rücken führt. Wenn sie mit </span><em style=\"box-sizing:border-box;user-select:text;font-family:'Palatino Linotype'\">Projektilwaffen\_</em><span style=\"font-family:'Palatino Linotype'\">eingesetzt wird, verschießt die Röhre einen Feuerstrahl mit einer Reichweite von 10 Metern und einem kleinen Explosionsradius (siehe Seite 120). Alle getroffenen Ziele erleidet 16 Punkte Feuerschaden (siehe Seite 136). Die Kammer enthält genug Brennstoff für drei Angriffe.\_</span><br style=\"box-sizing:border-box;user-select:text;font-family:'Palatino Linotype'\" /><span style=\"font-family:'Palatino Linotype'\">Der Behälter lädt sich am Ende jeder Szene oder während einer langen Rast, die mindestens einige Stunden dauert (Spielleiterentscheidung), automatisch auf.</span></p>"
     ownership:
       default: 0
       9Q0XnqFwko7hRlvL: 3
@@ -94,15 +78,7 @@ items:
         sourceId: Item.y2OJLdEpjDrwNjfl
     system:
       perk: Drachenkrieger
-      description: >-
-        <p><span style="font-family: 'Palatino Linotype';">Eine Reihe von
-        Druckluftkompressoren saugen die Luft an und leiten sie zu den Armen der
-        R&uuml;stung. Zusammen mit geschickt platzierten Hebeln entlang der
-        Innenseite der R&uuml;stung erh&ouml;ht dies seine&nbsp;</span><em
-        style="box-sizing: border-box; user-select: text; font-family: 'Palatino
-        Linotype';">St&auml;rke&nbsp;</em><span style="font-family: 'Palatino
-        Linotype';">bei Proben und f&uuml;r die Ermittlung von Schaden um +2.
-        Die Robustheit wird dadurch nicht beeinflusst.&nbsp;</span></p>
+      description: "<p><span style=\"font-family:'Palatino Linotype'\">Eine Reihe von Druckluftkompressoren saugen die Luft an und leiten sie zu den Armen der Rüstung. Zusammen mit geschickt platzierten Hebeln entlang der Innenseite der Rüstung erhöht dies seine\_</span><em style=\"box-sizing:border-box;user-select:text;font-family:'Palatino Linotype'\">Stärke\_</em><span style=\"font-family:'Palatino Linotype'\">bei Proben und für die Ermittlung von Schaden um +2. Die Robustheit wird dadurch nicht beeinflusst.\_</span></p>"
     ownership:
       default: 0
       9Q0XnqFwko7hRlvL: 3
@@ -122,7 +98,7 @@ items:
     img: systems/torgeternity/images/icons/reality-icon.webp
     effects: []
     folder: null
-    sort: 0
+    sort: 100000
     flags:
       core:
         sourceId: Compendium.te001-core-rulebook.grw-de-vorzuverb.Item.ZatdKThAEeXYAA9r
@@ -208,6 +184,9 @@ items:
         limitation10: ''
         limitationNumber: 0
       timestaken: '1'
+      secondaryAxiom:
+        selected: none
+        value: null
     ownership:
       default: 0
       9Q0XnqFwko7hRlvL: 3
@@ -228,7 +207,7 @@ items:
     img: systems/torgeternity/images/icons/reality-icon.webp
     effects: []
     folder: null
-    sort: 100000
+    sort: 200000
     flags:
       core:
         sourceId: Compendium.te001-core-rulebook.grw-de-vorzuverb.Item.2HuUHQu0KKRrJhTR
@@ -236,9 +215,9 @@ items:
       category: racial
       cosm: aysle
       description: >-
-        <p>Zwerge k&ouml;nnen keine R&uuml;stung oder Kleidung tragen, die
-        f&uuml;r normale Menschen oder Elfen bestimmt ist &ndash; sie muss auf
-        ihre gedrungene Form zugeschnitten sein.</p>
+        <p>Zwerge können keine Rüstung oder Kleidung tragen, die für normale
+        Menschen oder Elfen bestimmt ist – sie muss auf ihre gedrungene Form
+        zugeschnitten sein.</p>
       prerequisites: 'Volk: Zwerg'
       generalContradiction: false
       pulpPowers:
@@ -315,6 +294,9 @@ items:
         limitation10: ''
         limitationNumber: 0
       timestaken: '1'
+      secondaryAxiom:
+        selected: none
+        value: null
     ownership:
       default: 0
       9Q0XnqFwko7hRlvL: 3
@@ -343,16 +325,15 @@ items:
     system:
       cosm: aysle
       description: >-
-        <p>@UUID[Compendium.te001-core-rulebook.grw-de-grw.Qlx6yGF0Mmo6Xzrv.JournalEntryPage.7GGUUHzuYIqGPXDO#erschuttern:]{Ersch&uuml;ttern}</p>
+        <p>@UUID[Compendium.te001-core-rulebook.grw-de-grw.Qlx6yGF0Mmo6Xzrv.JournalEntryPage.7GGUUHzuYIqGPXDO#erschuttern:]{Erschüttern}</p>
 
-        <p>@UUID[Compendium.te001-core-rulebook.grw-de-grw.Qlx6yGF0Mmo6Xzrv.JournalEntryPage.7GGUUHzuYIqGPXDO#zweihandig:]{Zweih&auml;ndig}</p>
+        <p>@UUID[Compendium.te001-core-rulebook.grw-de-grw.Qlx6yGF0Mmo6Xzrv.JournalEntryPage.7GGUUHzuYIqGPXDO#zweihandig:]{Zweihändig}</p>
 
         <p>@UUID[Compendium.te001-core-rulebook.grw-de-grw.Qlx6yGF0Mmo6Xzrv.JournalEntryPage.7GGUUHzuYIqGPXDO#unhandlich:]{Unhandlich}</p>
 
-        <p>Diese gro&szlig;e Axt z&auml;hlt zu den schrecklichsten aller
-        &bdquo;barbarischen&ldquo; Waffen. Die zweischneidige Klinge wird im
-        weiten Bogen geschwungen, um die Feinde des Tr&auml;gers in zwei Teile
-        zu spalten.</p>
+        <p>Diese große Axt zählt zu den schrecklichsten aller „barbarischen“
+        Waffen. Die zweischneidige Klinge wird im weiten Bogen geschwungen, um
+        die Feinde des Trägers in zwei Teile zu spalten.</p>
       price: '300'
       techlevel: 10
       value: 12
@@ -363,8 +344,11 @@ items:
       damage: 4
       damageType: strengthPlus
       equipped: false
-      equippedClass: .item-unequipped
       notes: Erschüttern, Zweihändig, Unhandlich
+      secondaryAxiom:
+        selected: none
+        value: null
+      minStrength: null
     ownership:
       default: 0
       9Q0XnqFwko7hRlvL: 3
@@ -407,10 +391,12 @@ items:
       damage: 16
       damageType: flat
       equipped: false
-      equippedClass: .item-unequipped
       minStrength: ''
       notes: ''
       range: 10m
+      secondaryAxiom:
+        selected: none
+        value: null
     ownership:
       default: 0
       9Q0XnqFwko7hRlvL: 3
@@ -441,7 +427,9 @@ items:
       price: '15'
       techlevel: 8
       value: 6
-      equippedClass: item-equipped
+      secondaryAxiom:
+        selected: none
+        value: null
     ownership:
       default: 0
       9Q0XnqFwko7hRlvL: 3
@@ -507,15 +495,16 @@ items:
       cosm: aysle
       description: >-
         <p>Vierzackige Metallsterne zum Ausstreuen, die immer mit einem Stachel
-        nach oben weisen, und dadurch F&uuml;&szlig;e und Reifen
-        aufspie&szlig;en k&ouml;nnen. Nachdem sie mit einer einfachen Aktion
-        ausgestreut wurden, z&auml;hlen
-        <em>Man&ouml;vrieren</em>-Interaktionsangriffe in ihrem Bereich als
-        Beg&uuml;nstigt.</p>
+        nach oben weisen, und dadurch Füße und Reifen aufspießen können. Nachdem
+        sie mit einer einfachen Aktion ausgestreut wurden, zählen
+        <em>Manövrieren</em>-Interaktionsangriffe in ihrem Bereich als
+        Begünstigt.</p>
       price: '40'
       techlevel: 14
       value: 8
-      equippedClass: item-equipped
+      secondaryAxiom:
+        selected: none
+        value: null
     ownership:
       default: 0
       9Q0XnqFwko7hRlvL: 3
@@ -530,56 +519,137 @@ items:
       compendiumSource: Item.prL9HtFgNGaw1Szz
       duplicateSource: null
     _key: '!actors.items!4maHTlnkLTHmuYpB.GLGvMUxF3Aydcn8g'
-  - name: Drachenkrieger
+  - _id: KDVr1QVp8TeWnNDX
+    name: Drachenrüstung (Rüstung)
+    type: armor
+    img: systems/torgeternity/images/icons/armor-icon.webp
+    effects: []
+    folder: null
+    sort: 9100000
+    flags:
+      core:
+        sourceId: >-
+          Compendium.te001-core-rulebook.grw-de-ausruestung.Item.JDuvJIY9Q03Pq1Fh
+    system:
+      cosm: aysle
+      description: >-
+        <p>@UUID[Compendium.te001-core-rulebook.grw-de-grw.Qlx6yGF0Mmo6Xzrv.JournalEntryPage.7GGUUHzuYIqGPXDO#ermudung:]{Ermüdung}</p><p>@UUID[Compendium.te001-core-rulebook.grw-de-grw.Qlx6yGF0Mmo6Xzrv.JournalEntryPage.7GGUUHzuYIqGPXDO#ganzkorper/torso:]{Ganzkörper}</p><p>Sofort
+        ausrüsten, wenn man den Vorzug
+        @UUID[Compendium.torgeternity.system-de-archetypen.Actor.4maHTlnkLTHmuYpB.Item.nmQAeA0glsafwmCM]{Drachenkrieger}
+        wählt.</p>
+      price: ''
+      techlevel: 14
+      value: 0
+      bonus: 4
+      equipped: true
+      maxDex: 8
+      minStrength: 10
+      notes: Ermüdend (2), Ganzkörper
+      fatigue: 2
+      secondaryAxiom:
+        selected: none
+        value: null
+    ownership:
+      ZuS1Anc9ORZov40T: 3
+      CtisFurQNe9h7ABb: 3
+    _stats:
+      systemId: torgeternity
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
+      createdTime: 1711562366100
+      modifiedTime: 1722164796708
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Compendium.te001-core-rulebook.grw-de-ausruestung.Item.JDuvJIY9Q03Pq1Fh
+      duplicateSource: null
+    _key: '!actors.items!4maHTlnkLTHmuYpB.KDVr1QVp8TeWnNDX'
+  - _id: 0odWHYdsahjtVTrK
+    name: Trank der Heilung
+    type: gear
+    img: systems/torgeternity/images/icons/gear-icon.webp
+    effects: []
+    folder: null
+    sort: 24600000
+    flags:
+      core:
+        sourceId: >-
+          Compendium.te001-core-rulebook.grw-de-ausruestung.Item.kiWS8lQLXbtS6FYE
+    system:
+      cosm: aysle
+      description: >-
+        <p>Benötigt ein Magie-Axiom von 13, um zu wirken. Das Trinken des Tranks
+        ist eine einfache Aktion und er regeneriert 1 Wunde und Schockschaden in
+        Höhe eines [[/r 1d6x6max5]]{BW}.</p>
+      price: '500'
+      techlevel: 12
+      value: 14
+      secondaryAxiom:
+        selected: magic
+        value: 13
+    ownership:
+      default: 0
+      9Q0XnqFwko7hRlvL: 3
+      CtisFurQNe9h7ABb: 3
+      93AMwcGe6H37rcPA: 3
+    _stats:
+      compendiumSource: Compendium.te001-core-rulebook.grw-de-ausruestung.Item.kiWS8lQLXbtS6FYE
+      duplicateSource: null
+      coreVersion: '12.330'
+      systemId: torgeternity
+      systemVersion: 12.2.0
+      createdTime: 1722164695803
+      modifiedTime: 1722164695803
+      lastModifiedBy: 93AMwcGe6H37rcPA
+    _key: '!actors.items!4maHTlnkLTHmuYpB.0odWHYdsahjtVTrK'
+  - _id: rWgkIw6gm37tEUAA
+    name: Drachenkrieger
     type: perk
     img: systems/torgeternity/images/icons/reality-icon.webp
     effects:
-      - origin: Item.fP8d1gY9yh84MoDS
+      - origin: Item.jrbssxZ0HSmDCIH0
         duration:
+          rounds: null
           startTime: null
           seconds: null
           combat: null
-          rounds: null
           turns: null
           startRound: null
           startTurn: null
-        disabled: true
+        disabled: false
         name: Riesenstärke (+2)
-        _id: 1neFAbeguyScHPSz
+        img: icons/svg/aura.svg
+        _id: SzDN8V4WPZxKsfKs
+        type: base
+        system: {}
         changes:
           - key: system.attributes.strength.value
             mode: 2
             value: '2'
             priority: null
         description: ''
+        tint: '#ffffff'
         transfer: true
         statuses: []
+        sort: 0
         flags: {}
-        tint: '#ffffff'
         _stats:
+          compendiumSource: null
+          duplicateSource: null
           coreVersion: '12.330'
-          systemId: null
-          systemVersion: null
+          systemId: torgeternity
+          systemVersion: 12.2.0
           createdTime: null
           modifiedTime: null
           lastModifiedBy: null
-          compendiumSource: null
-          duplicateSource: null
-        img: icons/svg/aura.svg
-        type: base
-        system: {}
-        sort: 0
         _key: >-
-          !actors.items.effects!4maHTlnkLTHmuYpB.nmQAeA0glsafwmCM.1neFAbeguyScHPSz
+          !actors.items.effects!4maHTlnkLTHmuYpB.rWgkIw6gm37tEUAA.SzDN8V4WPZxKsfKs
     folder: null
-    flags:
-      core:
-        sourceId: Compendium.te001-core-rulebook.grw-de-vorzuverb.Item.nFFJqamKJz86Yrig
+    sort: 200000
+    flags: {}
     system:
       category: dwarf
       cosm: aysle
-      description: "<p>Die Drachenkrieger sind die letzten verbliebenen Champions der Zwerge, die in Aysle so gut wie ausgelöscht wurden. Als letzte verzweifelte Maßnahme konstruierten sie mächtige arkane Rüstungen, mit dem Ziel, die verhassten Diener Uthurions zu töten. Die meisten von ihnen sind sich vollkommen der Tatsache bewusst, dass sie vermutlich in diesen Rüstungen sterben werden.\_</p><p>Drachenkrieger-@Compendium[te001-core-rulebook.grw-de-ausruestung.JDuvJIY9Q03Pq1Fh]{Rüstungen} sind mit erstaunlichen Waffen und Ausrüstungsteilen versehen, die ihren Träger in eine Vernichtungsmaschine verwandeln. Sie zählen als Vollkörperrüstung, verleihen Rüstung +4, begrenzen die <em>Geschicklichkeit </em>des Trägers auf 8 und verursachen 2 zusätzliche Punkte Schockschaden bei einem @UUID[Compendium.te001-core-rulebook.grw-de-grw.Qlx6yGF0Mmo6Xzrv.JournalEntryPage.7GGUUHzuYIqGPXDO#ermudung:]{Ermüdungseffekt}.\_</p><p>Wenn er den Drachenkrieger-Vorzug erwirbt, darf der Zwerg aus der nachfolgenden Liste eine Verbesserung auswählen.\_</p><p><strong>Weitere Verbesserungen: </strong>Dieser Vorzug darf mehr als einmal gewählt werden. Jedes Mal nach dem ersten gewährt er eine weitere der unten aufgeführten Verbesserungen. Sofern nichts anderes angegeben ist, darf jede Verbesserung nur einmal ausgewählt werden.\_</p><ul><li><strong>Bolzenwerfer:</strong> Ein Fach im Unterarm der Rüstung enthält sechs tödliche Eisenbolzen. Die Bolzen werden mit Projektilwaffen eingesetzt, verursachen 13 Schaden, haben Reichweite 10/20/40 und dürfen als Kurzer Feuerstoß abgefeuert werden (siehe Schnellfeuer, Seite 126). Weitere Fächer in der Rüstung enthalten 12 zusätzliche Bolzen. Jeder Zwerg, der diese Verbesserung besitzt, weiß, wie er aus Metallstücken weitere Bolzen herstellen kann. Die Waffen- und Munitionsfächer werden zwischen zwei Akten normalerweise automatisch aufgefüllt, und auch während eines Aktes, wenn die Spielleiterin entscheidet, dass dem Trä- ger dafür genügend Zeit zur Verfügung steht. Im anderen Arm der Rüstung darf ein zweiter Bolzenwerfer eingebaut werden (einschließlich eines weiteren zusätzlichen Munitionsfachs), wenn der Zwerg diese Verbesserung ein zweites Mal auswählt.</li><li><strong>Drachenodem:</strong> An einer der Armschienen der Rüstung ist eine lange Röhre befestigt, die zu einer verstecken Kammer mit komprimiertem Brennstoff auf dem Rücken führt. Wenn sie mit Projektilwaffen eingesetzt wird, verschießt die Röhre einen Feuerstrahl mit einer Reichweite von 10 Metern und einem kleinen Explosionsradius (siehe Seite 120). Alle getroffenen Ziele erleidet 16 Punkte Feuerschaden (siehe Seite 136). Die Kammer enthält genug Brennstoff für drei Angriffe. Der Behälter lädt sich am Ende jeder Szene oder während einer langen Rast, die mindestens einige Stunden dauert (Spielleiterentscheidung), automatisch auf.</li><li><strong>Drachenklauen:</strong> Einer der Panzerhandschuhe endet in einer mit Diamanten besetzten Klaue. Der Handschuh lässt sich im Waffenlosen Kampf einsetzen und verursacht Stärke +3 Schaden (Panzerbrechend 2).</li><li><strong>Drachenschuppen:</strong> Die Rüstung ist mit magischen Runen verzaubert, sodass sie gegen Feuerschaden +10 Rüstung (statt +4) gewährt.</li><li><strong>Riesenstärke:</strong> Eine Reihe von Druckluftkompressoren saugen die Luft an und leiten sie zu den Armen der Rüstung. Zusammen mit geschickt platzierten Hebeln entlang der Innenseite der Rüstung erhöht dies seine Stärke bei Proben und für die Ermittlung von Schaden um +2. Die Robustheit wird dadurch nicht beeinflusst.</li><li><strong>Rune der Erholung:</strong> Die Rüstung verursacht bei einem Ermüdungs-Effekt nur 1 zusätzlichen Punkt Schockschaden, und gibt dem Träger bei einem Inspiration-Effekt 1 zusätzlichen Punkt Schock zurück.</li><li><strong>Sprungdüsenstiefel:</strong> In den Absätzen der schweren Stiefel der Rüstung sind Zylinder aus magisch komprimiertem Gas untergebracht. Wenn sie aktiviert werden, lösen sie einen Feuerstoß aus, der den Zwerg in die Luft schleudert und ihm dadurch einen Sprung mit einer Höhe von bis zu 10 Metern und einer Weite von bis zu 30 Metern erlaubt. Wenn dies in Verbindung mit einem Rücksichtslosem Angriff geschieht, erhält der Zwerg einen zusätzlichen Bonus von +2 auf sein Angriffsergebnis. Die Sprungdüsenstiefen laden sich alle 24 Stunden magisch auf.</li></ul>"
-      prerequisites: Stärke 10+
+      description: "<p>Die Drachenkrieger sind die letzten verbliebenen Champions der Zwerge, die in Aysle so gut wie ausgelöscht wurden. Als letzte verzweifelte Maßnahme konstruierten sie mächtige arkane Rüstungen, mit dem Ziel, die verhassten Diener Uthurions zu töten. Die meisten von ihnen sind sich vollkommen der Tatsache bewusst, dass sie vermutlich in diesen Rüstungen sterben werden.\_</p><p>@UUID[Compendium.te001-core-rulebook.grw-de-ausruestung.Item.JDuvJIY9Q03Pq1Fh]{Drachenkrieger-Rüstung} sind mit erstaunlichen Waffen und Ausrüstungsteilen versehen, die ihren Träger in eine Vernichtungsmaschine verwandeln. Sie zählen als Vollkörperrüstung, verleihen Rüstung +4, begrenzen die <em>Geschicklichkeit </em>des Trägers auf 8 und verursachen 2 zusätzliche Punkte Schockschaden bei einem @UUID[Compendium.te001-core-rulebook.grw-de-grw.Qlx6yGF0Mmo6Xzrv.JournalEntryPage.7GGUUHzuYIqGPXDO#ermudung:]{Ermüdungseffekt}.\_</p><p>Wenn er den Drachenkrieger-Vorzug erwirbt, darf der Zwerg aus der nachfolgenden Liste eine Verbesserung auswählen.\_</p><p><strong>Weitere Verbesserungen: </strong>Dieser Vorzug darf mehr als einmal gewählt werden. Jedes Mal nach dem ersten gewährt er eine weitere der unten aufgeführten Verbesserungen. Sofern nichts anderes angegeben ist, darf jede Verbesserung nur einmal ausgewählt werden.\_</p><ul><li><p><strong>@UUID[Compendium.te001-core-rulebook.grw-de-ausruestung.Item.IO6ZOrU4LR2993T9]{Bolzenwerfer}:</strong> Ein Fach im Unterarm der Rüstung enthält sechs tödliche Eisenbolzen. Die Bolzen werden mit\_<em>Projektilwaffen\_</em>eingesetzt, verursachen 13 Schaden, haben Reichweite 10/20/40 und dürfen als Kurzer Feuerstoß abgefeuert werden (siehe @UUID[Compendium.te001-core-rulebook.grw-de-grw.Qlx6yGF0Mmo6Xzrv.JournalEntryPage.41rZYYhaMC2T260D#schnellfeuer]{Schnellfeuer}).\_<br />@UUID[Compendium.te001-core-rulebook.grw-de-ausruestung.Item.Ff6aYMcV2lnQsun8]{Weitere Fächer} in der Rüstung enthalten 12 zusätzliche Bolzen. Jeder Zwerg, der diese Verbesserung besitzt, weiß, wie er aus Metallstücken weitere Bolzen herstellen kann. Die Waffen- und Munitionsfächer werden zwischen zwei Akten normalerweise automatisch aufgefüllt, und auch während eines Aktes, wenn die Spielleiterin entscheidet, dass dem Träger dafür genügend Zeit zur Verfügung steht. Im anderen Arm der Rüstung darf ein zweiter Bolzenwerfer eingebaut werden (einschließlich eines weiteren zusätzlichen Munitionsfachs), wenn der Zwerg diese Verbesserung ein zweites Mal auswählt.</p></li><li><p><strong>@UUID[Compendium.te001-core-rulebook.grw-de-ausruestung.Item.ofRqgHBidUIMKc4g]{Drachenodem}:</strong> An einer der Armschienen der Rüstung ist eine lange Röhre befestigt, die zu einer verstecken Kammer mit komprimiertem Brennstoff auf dem Rücken führt. Wenn sie mit\_<em>Projektilwaffen\_</em>eingesetzt wird, verschießt die Röhre einen Feuerstrahl mit einer Reichweite von 10 Metern und einem kleinen @UUID[Compendium.te001-core-rulebook.grw-de-grw.Qlx6yGF0Mmo6Xzrv.JournalEntryPage.41rZYYhaMC2T260D#flachenangriffe]{Explosionsradius}. Alle getroffenen Ziele erleidet 16 Punkte @UUID[Compendium.te001-core-rulebook.grw-de-grw.Qlx6yGF0Mmo6Xzrv.JournalEntryPage.41rZYYhaMC2T260D#feuerschaden]{Feuerschaden}. Die Kammer enthält genug Brennstoff für drei Angriffe.\_<br />Der Behälter lädt sich am Ende jeder Szene oder während einer langen Rast, die mindestens einige Stunden dauert (Spielleiterentscheidung), automatisch auf.\_</p></li><li><strong>@UUID[Compendium.te001-core-rulebook.grw-de-ausruestung.Item.sJ959rApcp8eMkkZ]{Drachenklauen}:</strong> Einer der Panzerhandschuhe endet in einer mit Diamanten besetzten Klaue. Der Handschuh lässt sich im Waffenlosen Kampf einsetzen und verursacht Stärke +3 Schaden (Panzerbrechend 2).</li><li><strong>Drachenschuppen:</strong> Die Rüstung ist mit magischen Runen verzaubert, sodass sie gegen Feuerschaden +10 Rüstung (statt +4) gewährt.</li><li><strong>Riesenstärke:</strong> Eine Reihe von Druckluftkompressoren saugen die Luft an und leiten sie zu den Armen der Rüstung. Zusammen mit geschickt platzierten Hebeln entlang der Innenseite der Rüstung erhöht dies seine Stärke bei Proben und für die Ermittlung von Schaden um +2. Die Robustheit wird dadurch nicht beeinflusst.</li><li><strong>Rune der Erholung:</strong> Die Rüstung verursacht bei einem Ermüdungs-Effekt nur 1 zusätzlichen Punkt Schockschaden, und gibt dem Träger bei einem Inspiration- Effekt 1 zusätzlichen Punkt Schock zurück.</li><li><strong>Sprungdüsenstiefel:</strong> In den Absätzen der schweren Stiefel der Rüstung sind Zylinder aus magisch komprimiertem Gas untergebracht. Wenn sie aktiviert werden, lösen sie einen Feuerstoß aus, der den Zwerg in die Luft schleudert und ihm dadurch einen Sprung mit einer Höhe von bis zu 10 Metern und einer Weite von bis zu 30 Metern erlaubt. Wenn dies in Verbindung mit einem Rücksichtslosem Angriff geschieht, erhält der Zwerg einen zusätzlichen Bonus von +2 auf sein Angriffsergebnis. Die Sprungdüsenstiefen laden sich alle 24 Stunden magisch auf.</li></ul>"
+      prerequisites: Zwerg, Stärke 10+
       generalContradiction: false
       pulpPowers:
         enhancement01:
@@ -600,7 +670,7 @@ items:
             eingebaut werden (einschließlich eines weiteren zusätzlichen
             Munitionsfachs), wenn der Zwerg diese Verbesserung ein zweites Mal
             auswählt.
-          taken: false
+          taken: true
           title: Bolzenwerfer
         enhancement02:
           description: >-
@@ -617,7 +687,7 @@ items:
             Der Behälter lädt sich am Ende jeder Szene oder während einer langen
             Rast, die mindestens einige Stunden dauert
             (Spielleiterentscheidung), automatisch auf.
-          taken: true
+          taken: false
           title: Drachenodem
         enhancement03:
           description: >-
@@ -704,101 +774,25 @@ items:
         limitation09: ''
         limitation10: ''
         limitationNumber: 0
-      timestaken: '2'
-    ownership:
-      default: 0
-      CtisFurQNe9h7ABb: 3
-    _stats:
-      systemId: torgeternity
-      systemVersion: 12.2.0
-      coreVersion: '12.330'
-      createdTime: 1711705561309
-      modifiedTime: 1722164665010
-      lastModifiedBy: 93AMwcGe6H37rcPA
-      compendiumSource: Compendium.te001-core-rulebook.grw-de-vorzuverb.Item.nFFJqamKJz86Yrig
-      duplicateSource: null
-    _id: nmQAeA0glsafwmCM
-    sort: 200000
-    _key: '!actors.items!4maHTlnkLTHmuYpB.nmQAeA0glsafwmCM'
-  - _id: KDVr1QVp8TeWnNDX
-    name: Drachenrüstung (Rüstung)
-    type: armor
-    img: systems/torgeternity/images/icons/armor-icon.webp
-    effects: []
-    folder: null
-    sort: 9100000
-    flags:
-      core:
-        sourceId: >-
-          Compendium.te001-core-rulebook.grw-de-ausruestung.Item.JDuvJIY9Q03Pq1Fh
-    system:
-      cosm: aysle
-      description: >-
-        <p>@UUID[Compendium.te001-core-rulebook.grw-de-grw.Qlx6yGF0Mmo6Xzrv.JournalEntryPage.7GGUUHzuYIqGPXDO#ermudung:]{Ermüdung}</p><p>@UUID[Compendium.te001-core-rulebook.grw-de-grw.Qlx6yGF0Mmo6Xzrv.JournalEntryPage.7GGUUHzuYIqGPXDO#ganzkorper/torso:]{Ganzkörper}</p><p>Sofort
-        ausrüsten, wenn man den Vorzug
-        @UUID[Compendium.torgeternity.system-de-archetypen.Actor.4maHTlnkLTHmuYpB.Item.nmQAeA0glsafwmCM]{Drachenkrieger}
-        wählt.</p>
-      price: ''
-      techlevel: 14
-      value: 0
-      bonus: 4
-      equipped: true
-      equippedClass: item-equipped
-      maxDex: 8
-      minStrength: 10
-      notes: Ermüdend (2), Ganzkörper
-      fatigue: 2
-    ownership:
-      ZuS1Anc9ORZov40T: 3
-      CtisFurQNe9h7ABb: 3
-    _stats:
-      systemId: torgeternity
-      systemVersion: 12.2.0
-      coreVersion: '12.330'
-      createdTime: 1711562366100
-      modifiedTime: 1722164796708
-      lastModifiedBy: 93AMwcGe6H37rcPA
-      compendiumSource: Compendium.te001-core-rulebook.grw-de-ausruestung.Item.JDuvJIY9Q03Pq1Fh
-      duplicateSource: null
-    _key: '!actors.items!4maHTlnkLTHmuYpB.KDVr1QVp8TeWnNDX'
-  - _id: 0odWHYdsahjtVTrK
-    name: Trank der Heilung
-    type: gear
-    img: systems/torgeternity/images/icons/gear-icon.webp
-    effects: []
-    folder: null
-    sort: 24600000
-    flags:
-      core:
-        sourceId: >-
-          Compendium.te001-core-rulebook.grw-de-ausruestung.Item.kiWS8lQLXbtS6FYE
-    system:
-      cosm: aysle
-      description: >-
-        <p>Benötigt ein Magie-Axiom von 13, um zu wirken. Das Trinken des Tranks
-        ist eine einfache Aktion und er regeneriert 1 Wunde und Schockschaden in
-        Höhe eines [[/r 1d6x6max5]]{BW}.</p>
-      price: '500'
-      techlevel: 12
-      value: 14
+      timestaken: ''
       secondaryAxiom:
-        selected: magic
-        value: 13
+        selected: none
+        value: null
     ownership:
       default: 0
       9Q0XnqFwko7hRlvL: 3
-      CtisFurQNe9h7ABb: 3
+      VAnYow5sWS9EJzo0: 3
       93AMwcGe6H37rcPA: 3
     _stats:
-      compendiumSource: Compendium.te001-core-rulebook.grw-de-ausruestung.Item.kiWS8lQLXbtS6FYE
+      compendiumSource: Compendium.te001-core-rulebook.grw-de-vorzuverb.Item.nFFJqamKJz86Yrig
       duplicateSource: null
       coreVersion: '12.330'
       systemId: torgeternity
       systemVersion: 12.2.0
-      createdTime: 1722164695803
-      modifiedTime: 1722164695803
-      lastModifiedBy: 93AMwcGe6H37rcPA
-    _key: '!actors.items!4maHTlnkLTHmuYpB.0odWHYdsahjtVTrK'
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+    _key: '!actors.items!4maHTlnkLTHmuYpB.rWgkIw6gm37tEUAA'
 effects:
   - _id: bu5b1s7EBLwA1DXY
     changes:
@@ -815,8 +809,7 @@ effects:
       turns: null
       startRound: null
       startTurn: null
-    origin: >-
-      Compendium.torgeternity.system-de-archetypen.Actor.4maHTlnkLTHmuYpB.Item.GLGvMUxF3Aydcn8g
+    origin: Actor.4maHTlnkLTHmuYpB.Item.GLGvMUxF3Aydcn8g
     transfer: false
     flags: {}
     tint: '#ffffff'
@@ -837,43 +830,42 @@ effects:
     system: {}
     sort: 0
     _key: '!actors.effects!4maHTlnkLTHmuYpB.bu5b1s7EBLwA1DXY'
-  - origin: >-
-      Compendium.torgeternity.system-de-archetypen.Actor.4maHTlnkLTHmuYpB.Item.nmQAeA0glsafwmCM
+  - origin: Actor.4maHTlnkLTHmuYpB.Item.rWgkIw6gm37tEUAA
     duration:
+      rounds: null
       startTime: 0
       seconds: null
       combat: null
-      rounds: null
       turns: null
       startRound: null
       startTurn: null
-    disabled: true
+    disabled: false
     name: Riesenstärke (+2)
-    _id: o0V97Y3flrsep0au
+    img: icons/svg/aura.svg
+    _id: 7HWVbiQCr8G0cZFO
+    type: base
+    system: {}
     changes:
       - key: system.attributes.strength.value
         mode: 2
         value: '2'
         priority: null
     description: ''
+    tint: '#ffffff'
     transfer: false
     statuses: []
+    sort: 0
     flags: {}
-    tint: '#ffffff'
     _stats:
+      compendiumSource: null
+      duplicateSource: null
       coreVersion: '12.330'
-      systemId: null
-      systemVersion: null
+      systemId: torgeternity
+      systemVersion: 12.2.0
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
-    img: icons/svg/aura.svg
-    type: base
-    system: {}
-    sort: 0
-    _key: '!actors.effects!4maHTlnkLTHmuYpB.o0V97Y3flrsep0au'
+    _key: '!actors.effects!4maHTlnkLTHmuYpB.7HWVbiQCr8G0cZFO'
 folder: null
 sort: 0
 flags:
@@ -1231,101 +1223,7 @@ system:
     spirit: 18
     tech: 14
   details:
-    background: >-
-      <p><img class="charimg"
-      src="systems/torgeternity/images/characters/Dragon_Warrior.webp" alt=""
-      width="1088" height="1743"></p>
-
-      <p
-      class="moreheight">@UUID[Compendium.torgeternity.system-de-handouts.JournalEntry.DLLvnXpv7RFhRgHu.JournalEntryPage.wyqIUAZMhqAUvoD6]{Archetyp
-      - Die Drachenkriegerin}</p>
-
-      <h3>&Uuml;berblick</h3>
-
-      <p>Die Zwerge von Aysle wurden von den dunklen M&auml;chten Uthorions fast
-      ausgerottet. Die wenigen, die &uuml;brig blieben, tragen die Bitterkeit
-      und Wut eines sterbenden Volkes in sich, sowie die Kampfkraft, etwas
-      dagegen zu unternehmen. Die Champions der Zwerge, die Besten der Besten,
-      tragen spezielle R&uuml;stungen, um ihr Volk zu sch&uuml;tzen und zu
-      r&auml;chen.&nbsp;</p>
-
-      <p>Die Drachenkriegerr&uuml;stung ist der ultimative Ausdruck der Magie
-      und des Einfallsreichtums deines Volkes. Jeder Anzug ist einzigartig,
-      sorgf&auml;ltig aus seltenen Metallen geschmiedet, mit Runen beschriftet
-      und mit fortschrittlichen Waffen und Ausr&uuml;stung best&uuml;cken. Die
-      Zwerge betrachten Drachen als Verk&ouml;rperungen von Wut und Macht,
-      sodass es kein Zufall ist, dass diese Anz&uuml;ge mit Drachenbildern und
-      -symbolen verziert sind.</p>
-
-      <h3>Taktiken</h3>
-
-      <p>Du bist ein starker Frontk&auml;mpfer. Deine extrem hohe Robustheit
-      stellt sicher, dass viele Feinde dir ohne einen Gl&uuml;ckstreffer oder
-      panzerbrechende F&auml;higkeiten nicht einmal Schockschaden zuf&uuml;gen
-      k&ouml;nnen. Deine zweih&auml;ndige Axt macht mit den meisten Feinden
-      kurzen Prozess, und der Drachenodem ist verheerend gegen Gruppen von
-      Gegnern mit geringer <em>Ausweichen</em>-Verteidigung. Wenn deine Gegner
-      schwer zu treffen sind, verlege dich aufs <em>Einsch&uuml;chtern</em>, um
-      sie verwundbar zu machen, oder um eine m&auml;chtige Schicksalskarte zu
-      ergattern, wenn es eine anerkannte Aktion ist.</p>
-
-      <h3>Moment der Krise</h3>
-
-      <p>Du bist wahrscheinlich schon seit einiger Zeit ein Storm Knight. Die
-      Krise k&ouml;nnte w&auml;hrend eines der endlosen K&auml;mpfe gegen die
-      Horden Uthorions gekommen sein, ein Moment, in dem alles verloren schien,
-      aber du standfest bliebst und die Verteidigungslinie gehalten hast. Oder
-      vielleicht war es eine pers&ouml;nlichere Krise, als ein Clanmitglied oder
-      eine geliebte Person dringend eine scheinbar unm&ouml;gliche Rettung
-      brauchte.</p>
-
-      <h3>Zitat</h3>
-
-      <p>"Die meisten Probleme lassen sich mit einer Kampfaxt
-      l&ouml;sen.&nbsp;Ich zeige dir, wie es funktioniert."</p>
-
-      <h3>Beschreibung</h3>
-
-      <p>Die Zwergin in der R&uuml;stung ist vermutlich seelisch und
-      k&ouml;rperlich vernarbt &ndash; was niemals sichtbar wird, weil sie die
-      R&uuml;stung niemals ablegt. Ungepflegte Haare und grobe Manieren sind
-      g&auml;ngige Ausdrucksformen eines Gef&uuml;hls von Niederlage und
-      Versagen, das die zerst&ouml;rte Kultur der Zwerge durchdringt und die
-      meisten von ihnen sind grimmig, fatalistisch und unh&ouml;flich.</p>
-
-      <h3>Agenda</h3>
-
-      <p>Wo andere Storm Knight normalerweise f&uuml;r Freiheit oder Ideale
-      k&auml;mpfen, wirst du von Rachegel&uuml;sten angetrieben. Eure Leute sind
-      nicht mehr zu retten, zumindest was die meisten Zwerge betrifft, aber es
-      gibt immer noch genug Gelegenheit, es den T&auml;tern heimzuzahlen.</p>
-
-      <h3>Namen</h3>
-
-      <p>Artala, Bran, Gudrun, Gunnar, Isode, Juki der Rote, Karn von Ungbar,
-      Milla, Tworek, Zisa</p>
-
-      <h3>Vorgeschlagener Aufstieg (Optional)</h3>
-
-      <ul>
-
-      <li>(5 EP) G&ouml;tterverlassen</li>
-
-      <li>(7 EP) Geflochtener Zopf</li>
-
-      <li>(1 EP) <em>Erste Hilfe</em> +1</li>
-
-      <li>(2 EP) <em>Realit&auml;t</em> +2</li>
-
-      <li>(3 EP) <em>Einsch&uuml;chtern</em> +3</li>
-
-      <li>(3 EP) <em>Projektilwaffen</em> +3</li>
-
-      <li>(4 EP) <em>Nahkampfwaffen</em> +4</li>
-
-      <li>(5 EP) <em>Nahkampfwaffen</em> +5</li>
-
-      </ul>
+    background: "<p><img class=\"charimg\" src=\"systems/torgeternity/images/characters/Dragon_Warrior.webp\" alt=\"\" width=\"1088\" height=\"1743\" /></p>\n<p class=\"moreheight\">@UUID[Compendium.torgeternity.system-de-handouts.JournalEntry.DLLvnXpv7RFhRgHu.JournalEntryPage.wyqIUAZMhqAUvoD6]{Archetyp - Die Drachenkriegerin}</p>\n<h3>Überblick</h3>\n<p>Die Zwerge von Aysle wurden von den dunklen Mächten Uthorions fast ausgerottet. Die wenigen, die übrig blieben, tragen die Bitterkeit und Wut eines sterbenden Volkes in sich, sowie die Kampfkraft, etwas dagegen zu unternehmen. Die Champions der Zwerge, die Besten der Besten, tragen spezielle Rüstungen, um ihr Volk zu schützen und zu rächen.\_</p>\n<p>Die Drachenkriegerrüstung ist der ultimative Ausdruck der Magie und des Einfallsreichtums deines Volkes. Jeder Anzug ist einzigartig, sorgfältig aus seltenen Metallen geschmiedet, mit Runen beschriftet und mit fortschrittlichen Waffen und Ausrüstung bestücken. Die Zwerge betrachten Drachen als Verkörperungen von Wut und Macht, sodass es kein Zufall ist, dass diese Anzüge mit Drachenbildern und -symbolen verziert sind.</p>\n<h3>Taktiken</h3>\n<p>Du bist ein starker Frontkämpfer. Deine extrem hohe Robustheit stellt sicher, dass viele Feinde dir ohne einen Glückstreffer oder panzerbrechende Fähigkeiten nicht einmal Schockschaden zufügen können. Deine zweihändige Axt macht mit den meisten Feinden kurzen Prozess, und der Drachenodem ist verheerend gegen Gruppen von Gegnern mit geringer <em>Ausweichen</em>-Verteidigung. Wenn deine Gegner schwer zu treffen sind, verlege dich aufs <em>Einschüchtern</em>, um sie verwundbar zu machen, oder um eine mächtige Schicksalskarte zu ergattern, wenn es eine anerkannte Aktion ist.</p>\n<h3>Moment der Krise</h3>\n<p>Du bist wahrscheinlich schon seit einiger Zeit ein Storm Knight. Die Krise könnte während eines der endlosen Kämpfe gegen die Horden Uthorions gekommen sein, ein Moment, in dem alles verloren schien, aber du standfest bliebst und die Verteidigungslinie gehalten hast. Oder vielleicht war es eine persönlichere Krise, als ein Clanmitglied oder eine geliebte Person dringend eine scheinbar unmögliche Rettung brauchte.</p>\n<h3>Zitat</h3>\n<p>\"Die meisten Probleme lassen sich mit einer Kampfaxt lösen.\_Ich zeige dir, wie es funktioniert.\"</p>\n<h3>Beschreibung</h3>\n<p>Die Zwergin in der Rüstung ist vermutlich seelisch und körperlich vernarbt – was niemals sichtbar wird, weil sie die Rüstung niemals ablegt. Ungepflegte Haare und grobe Manieren sind gängige Ausdrucksformen eines Gefühls von Niederlage und Versagen, das die zerstörte Kultur der Zwerge durchdringt und die meisten von ihnen sind grimmig, fatalistisch und unhöflich.</p>\n<h3>Agenda</h3>\n<p>Wo andere Storm Knight normalerweise für Freiheit oder Ideale kämpfen, wirst du von Rachegelüsten angetrieben. Eure Leute sind nicht mehr zu retten, zumindest was die meisten Zwerge betrifft, aber es gibt immer noch genug Gelegenheit, es den Tätern heimzuzahlen.</p>\n<h3>Namen</h3>\n<p>Artala, Bran, Gudrun, Gunnar, Isode, Juki der Rote, Karn von Ungbar, Milla, Tworek, Zisa</p>\n<h3>Vorgeschlagener Aufstieg (Optional)</h3>\n<ul>\n<li>(5 EP) Götterverlassen</li>\n<li>(7 EP) Geflochtener Zopf</li>\n<li>(1 EP) <em>Erste Hilfe</em> +1</li>\n<li>(2 EP) <em>Realität</em> +2</li>\n<li>(3 EP) <em>Einschüchtern</em> +3</li>\n<li>(3 EP) <em>Projektilwaffen</em> +3</li>\n<li>(4 EP) <em>Nahkampfwaffen</em> +4</li>\n<li>(5 EP) <em>Nahkampfwaffen</em> +5</li>\n</ul>"
     race: dwarf
     sizeBonus: normal
   editstate: false
@@ -1411,11 +1309,11 @@ prototypeToken:
       texture: null
 _stats:
   systemId: torgeternity
-  systemVersion: 3.8.1
+  systemVersion: 12.2.0
   coreVersion: '12.330'
   createdTime: 1694866052812
-  modifiedTime: 1716827810840
-  lastModifiedBy: VAnYow5sWS9EJzo0
+  modifiedTime: 1722359278656
+  lastModifiedBy: 93AMwcGe6H37rcPA
   compendiumSource: Compendium.torgeternity.archetypes.QsYmnq73AiR6BwhD
   duplicateSource: null
 _key: '!actors!4maHTlnkLTHmuYpB'

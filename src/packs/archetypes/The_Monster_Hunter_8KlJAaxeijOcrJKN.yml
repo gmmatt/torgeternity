@@ -23,16 +23,18 @@ items:
       value: 0
       ammo:
         max: 6
-        value: 6
+        value: 0
       ap: 0
       attackWith: fireCombat
       chatNote: ''
       damage: 14
       damageType: ''
       equipped: false
-      equippedClass: .item-unequipped
       notes: Uses special shells
       range: 50/100/200
+      secondaryAxiom:
+        selected: none
+        value: null
     ownership:
       default: 0
     _stats:
@@ -68,8 +70,11 @@ items:
       damage: 1
       damageType: strengthPlus
       equipped: false
-      equippedClass: .item-unequipped
       notes: Small
+      secondaryAxiom:
+        selected: none
+        value: null
+      minStrength: null
     ownership:
       default: 0
     _stats:
@@ -107,9 +112,11 @@ items:
       damage: 14
       damageType: flat
       equipped: false
-      equippedClass: .item-unequipped
       notes: ''
       range: 10 / 25 / 40
+      secondaryAxiom:
+        selected: none
+        value: null
     ownership:
       default: 0
       A9LyAqagoJJU3gDH: 3
@@ -137,66 +144,7 @@ items:
     system:
       category: occult
       cosm: orrorsh
-      description: >-
-        <p>Adventurers of Orrorsh long ago learned lead bullets and steel blades
-        were no match for the horrors of their realm. Alchemy proved a great
-        help to their cause, and some intrepid souls eventually combined that
-        arcane craft with the more practical skill of marksmanship.</p><p>When
-        this Perk is taken, the user has a <q>slayer’s gun</q> and knows how to
-        create various rounds for it. He receives his weapon and the knowledge
-        to make basic metal slugs (damage 14) and any three of the specialized
-        rounds below. Crafted for close encounters, the short-barrel carbine
-        design of the slayer’s gun allows it to be used in melee like a
-        pistol.</p><p>Because the bullets are necessarily large and require
-        exacting specifications, monster hunters who make use of them have
-        standardized a sixchambered, carbine-style gun to fire them—the rounds
-        don’t work in any other kind of weapon.</p><ul><li><strong>Slayer’s
-        Gun:</strong> Range 50/100/200, damage 14, Shots
-        6</li></ul><p>Bulletsmiths can keep and maintain up to six special
-        bullets as long as they have access to their gear (which always contains
-        a small bullet-making kit). If more rounds are created, they lose the
-        magical essence the Bulletsmith inherently provides and act as regular
-        slugs (damage 14). Replacement rounds may be created between scenes, or
-        during downtime if the Game Master feels it’s
-        appropriate.</p><p>Slayer’s guns are designed to rotate quickly and so
-        can fire any one of their preloaded six chambers (specified before use).
-        Swapping or reloading up to three rounds is an
-        action.</p><p><strong>Slayer’s Bandoleer:</strong> Monster hunters wear
-        a specialized bandoleer designed to hold 18 shells total (12 regular
-        shells and their six special rounds).</p><p><strong>Extra
-        Shells:</strong> This Perk may be taken more than once. Each time after
-        the first the Bulletsmith learns to make a new type of shell and may
-        maintain two more special rounds at a time.</p><p>Here are some of the
-        shells Bulletsmiths have thus far discovered:</p><ul><li><strong>Adamant
-        Shell:</strong> Some of the Victorians’ foes are armored from head to
-        toe with metal, scales, or even a carapace. These shells are designed to
-        cut through them, causing Armor Piercing 4</li><li><strong>Electric
-        Shell:</strong> Water-based creatures or creatures standing in water
-        take an additional +4 damage when hit by electric shells. A previously
-        unknown side-effect of these rounds is that they can cause glitches in
-        high-tech <em>electronic</em> equipment. Robots and machines take the
-        extra damage, and sensitive equipment shorts out and is inoperable for
-        three rounds</li><li><strong>Explosive Shell:</strong> The most
-        dangerous of the Bullet Smith’s shells causes damage 15 in a Small Blast
-        Radius</li><li><strong>Giant Killer Shell:</strong> The Victorians
-        developed these heavy shells to take down the Gaunt Man’s biggest
-        horrors. They cause +5 damage against Large or greater
-        creatures</li><li><strong>Holy Water Shell:</strong> +2 damage versus
-        any supernaturally evil creature, including gospog, vampires, and
-        undead</li><li><strong>Phantom Shell:</strong> These rounds are made
-        from various reagents such as cold iron, salt, and holy water that
-        allows them to affect ethereal creatures normally</li><li><strong>Silver
-        Shell:</strong> Creatures with the Lycanthrope Special Ability take +4
-        damage from silver shells</li><li><strong>Sun Shell:</strong> These
-        rounds contain something the alchemists call <q>liquid sunlight.</q>
-        They explode with ultraviolet light in a Medium Blast, causing any
-        creatures <q>hit</q> by them to be Very Vulnerable if they have a
-        sensitivity to light or sunlight. Most creatures that can see in
-        darkness are affected by sun shells</li></ul>
-
-        <p>&nbsp;</p>
-
-        <p>Found in <strong>Core Rules</strong></p>
+      description: "<p>Adventurers of Orrorsh long ago learned lead bullets and steel blades were no match for the horrors of their realm. Alchemy proved a great help to their cause, and some intrepid souls eventually combined that arcane craft with the more practical skill of marksmanship.</p><p>When this Perk is taken, the user has a <q>slayer’s gun</q> and knows how to create various rounds for it. He receives his weapon and the knowledge to make basic metal slugs (damage 14) and any three of the specialized rounds below. Crafted for close encounters, the short-barrel carbine design of the slayer’s gun allows it to be used in melee like a pistol.</p><p>Because the bullets are necessarily large and require exacting specifications, monster hunters who make use of them have standardized a sixchambered, carbine-style gun to fire them—the rounds don’t work in any other kind of weapon.</p><ul><li><strong>Slayer’s Gun:</strong> Range 50/100/200, damage 14, Shots 6</li></ul><p>Bulletsmiths can keep and maintain up to six special bullets as long as they have access to their gear (which always contains a small bullet-making kit). If more rounds are created, they lose the magical essence the Bulletsmith inherently provides and act as regular slugs (damage 14). Replacement rounds may be created between scenes, or during downtime if the Game Master feels it’s appropriate.</p><p>Slayer’s guns are designed to rotate quickly and so can fire any one of their preloaded six chambers (specified before use). Swapping or reloading up to three rounds is an action.</p><p><strong>Slayer’s Bandoleer:</strong> Monster hunters wear a specialized bandoleer designed to hold 18 shells total (12 regular shells and their six special rounds).</p><p><strong>Extra Shells:</strong> This Perk may be taken more than once. Each time after the first the Bulletsmith learns to make a new type of shell and may maintain two more special rounds at a time.</p><p>Here are some of the shells Bulletsmiths have thus far discovered:</p><ul><li><strong>Adamant Shell:</strong> Some of the Victorians’ foes are armored from head to toe with metal, scales, or even a carapace. These shells are designed to cut through them, causing Armor Piercing 4</li><li><strong>Electric Shell:</strong> Water-based creatures or creatures standing in water take an additional +4 damage when hit by electric shells. A previously unknown side-effect of these rounds is that they can cause glitches in high-tech <em>electronic</em> equipment. Robots and machines take the extra damage, and sensitive equipment shorts out and is inoperable for three rounds</li><li><strong>Explosive Shell:</strong> The most dangerous of the Bullet Smith’s shells causes damage 15 in a Small Blast Radius</li><li><strong>Giant Killer Shell:</strong> The Victorians developed these heavy shells to take down the Gaunt Man’s biggest horrors. They cause +5 damage against Large or greater creatures</li><li><strong>Holy Water Shell:</strong> +2 damage versus any supernaturally evil creature, including gospog, vampires, and undead</li><li><strong>Phantom Shell:</strong> These rounds are made from various reagents such as cold iron, salt, and holy water that allows them to affect ethereal creatures normally</li><li><strong>Silver Shell:</strong> Creatures with the Lycanthrope Special Ability take +4 damage from silver shells</li><li><strong>Sun Shell:</strong> These rounds contain something the alchemists call <q>liquid sunlight.</q> They explode with ultraviolet light in a Medium Blast, causing any creatures <q>hit</q> by them to be Very Vulnerable if they have a sensitivity to light or sunlight. Most creatures that can see in darkness are affected by sun shells</li></ul>\n<p>\_</p>\n<p>Found in <strong>Core Rules</strong></p>"
       prerequisites: At least 2 adds in science
       generalContradiction: true
       pulpPowers:
@@ -299,6 +247,9 @@ items:
         limitation10: ''
         limitationNumber: 0
       timestaken: '1'
+      secondaryAxiom:
+        selected: none
+        value: null
     ownership:
       default: 0
       A9LyAqagoJJU3gDH: 3
@@ -428,6 +379,9 @@ items:
         limitation10: ''
         limitationNumber: 0
       timestaken: '1'
+      secondaryAxiom:
+        selected: none
+        value: null
     ownership:
       default: 0
       A9LyAqagoJJU3gDH: 3
@@ -442,44 +396,6 @@ items:
       compendiumSource: Compendium.te001-core-rulebook.Items.MevCMs1Mc6Ck02PP
       duplicateSource: null
     _key: '!actors.items!8KlJAaxeijOcrJKN.KgWICNPz8lNZiFIB'
-  - _id: keq7EUhw9cRhwFpt
-    name: Caltrops
-    type: gear
-    img: systems/torgeternity/images/icons/gear-icon.webp
-    effects: []
-    folder: null
-    sort: 20500000
-    flags:
-      core:
-        sourceId: Compendium.te001-core-rulebook.Items.KKJPrdjO5sFkhZzF
-    system:
-      cosm: aysle
-      description: >-
-        <p>A batch of scattered spikes that always land with a point upwards,
-        designed to impale feet and tires. Once deployed as a simple action
-        maneuver interactions become Favored around the spikes.</p>
-
-        <p>&nbsp;</p>
-
-        <p>Found in <strong>Core Rules</strong></p>
-      price: '40'
-      techlevel: 14
-      value: 8
-      equippedClass: item-equipped
-    ownership:
-      default: 0
-      A9LyAqagoJJU3gDH: 3
-      CtisFurQNe9h7ABb: 3
-    _stats:
-      systemId: torgeternity
-      systemVersion: 12.2.0
-      coreVersion: '12.330'
-      createdTime: 1693912105771
-      modifiedTime: 1722156840222
-      lastModifiedBy: 93AMwcGe6H37rcPA
-      compendiumSource: Compendium.te001-core-rulebook.Items.KKJPrdjO5sFkhZzF
-      duplicateSource: null
-    _key: '!actors.items!8KlJAaxeijOcrJKN.keq7EUhw9cRhwFpt'
   - _id: rojDSaAJcWsl7TIO
     name: Torch
     type: gear
@@ -496,7 +412,9 @@ items:
       price: '5'
       techlevel: 2
       value: 4
-      equippedClass: item-equipped
+      secondaryAxiom:
+        selected: none
+        value: null
     ownership:
       default: 0
       A9LyAqagoJJU3gDH: 3
@@ -523,26 +441,19 @@ items:
         sourceId: Compendium.te001-core-rulebook.Items.Item.RMjiwdeeAr3kBkLK
     system:
       cosm: orrorsh
-      description: >-
-        <p>@UUID[Compendium.te001-core-rulebook.rules.pwneQ55M0nnDH0Us.JournalEntryPage.qKdamp4rrcX6TTt0#fatigues:]{Fatigues}</p>
-
-        <p>A long overcoat made from the treated skins of various beasts that
-        once terrorized the innocent. The monsters of Orrorsh are notoriously
-        hardy, so leather made from their hides is especially durable.</p>
-
-        <p>&nbsp;</p>
-
-        <p>Found in <strong>Core Rules</strong></p>
+      description: "<p>@UUID[Compendium.te001-core-rulebook.rules.pwneQ55M0nnDH0Us.JournalEntryPage.qKdamp4rrcX6TTt0#fatigues:]{Fatigues}</p>\n<p>A long overcoat made from the treated skins of various beasts that once terrorized the innocent. The monsters of Orrorsh are notoriously hardy, so leather made from their hides is especially durable.</p>\n<p>\_</p>\n<p>Found in <strong>Core Rules</strong></p>"
       price: '350'
       techlevel: 16
       value: 12
       bonus: 2
       equipped: true
-      equippedClass: item-equipped
       maxDex: 10
       minStrength: null
       notes: Fatigues
       fatigue: 1
+      secondaryAxiom:
+        selected: none
+        value: null
     ownership:
       default: 0
       A9LyAqagoJJU3gDH: 3
@@ -575,7 +486,7 @@ items:
         selected: none
         value: null
       type: ''
-      quantity: 2
+      quantity: 3
       damageMod: 0
       apMod: 0
       fireDamage: false
@@ -599,7 +510,114 @@ items:
       modifiedTime: 1722154473668
       lastModifiedBy: 93AMwcGe6H37rcPA
     _key: '!actors.items!8KlJAaxeijOcrJKN.wbWDSIYhAgGrPHBz'
-effects: []
+  - _id: 0reE7AXEREP0lHJD
+    name: Caltrops
+    type: gear
+    img: systems/torgeternity/images/icons/gear-icon.webp
+    effects:
+      - origin: Compendium.te001-core-rulebook.Items.Item.KKJPrdjO5sFkhZzF
+        duration:
+          startTime: null
+          seconds: null
+          combat: null
+          rounds: null
+          turns: null
+          startRound: null
+          startTurn: null
+        disabled: true
+        name: Maneuver Fav
+        _id: qNNSmAnRkG0Ot2Yf
+        changes:
+          - key: system.skills.maneuver.isFav
+            mode: 5
+            value: '1'
+            priority: null
+        description: ''
+        transfer: true
+        statuses: []
+        flags: {}
+        tint: '#ffffff'
+        _stats:
+          compendiumSource: null
+          duplicateSource: null
+          coreVersion: '12.330'
+          systemId: torgeternity
+          systemVersion: 12.2.0
+          createdTime: null
+          modifiedTime: null
+          lastModifiedBy: null
+        img: icons/svg/aura.svg
+        type: base
+        system: {}
+        sort: 0
+        _key: >-
+          !actors.items.effects!8KlJAaxeijOcrJKN.0reE7AXEREP0lHJD.qNNSmAnRkG0Ot2Yf
+    folder: gjZiCPX5knOIpsHd
+    sort: 650000
+    flags:
+      core: {}
+    system:
+      cosm: aysle
+      description: "<p>A batch of scattered spikes that always land with a point upwards, designed to impale feet and tires. Once deployed as a simple action maneuver interactions become Favored around the spikes.</p>\n<p>\_</p>\n<p>Found in <strong>Core Rules</strong></p>"
+      price: '40'
+      techlevel: 14
+      value: 8
+      secondaryAxiom:
+        selected: none
+        value: null
+    ownership:
+      default: 0
+      A9LyAqagoJJU3gDH: 3
+      VAnYow5sWS9EJzo0: 3
+      93AMwcGe6H37rcPA: 3
+    _stats:
+      compendiumSource: Compendium.te001-core-rulebook.Items.Item.KKJPrdjO5sFkhZzF
+      duplicateSource: null
+      coreVersion: '12.330'
+      systemId: torgeternity
+      systemVersion: 12.2.0
+      createdTime: 1722358319260
+      modifiedTime: 1722358319260
+      lastModifiedBy: 93AMwcGe6H37rcPA
+    _key: '!actors.items!8KlJAaxeijOcrJKN.0reE7AXEREP0lHJD'
+effects:
+  - origin: >-
+      Compendium.torgeternity.archetypes.Actor.8KlJAaxeijOcrJKN.Item.0reE7AXEREP0lHJD
+    duration:
+      startTime: 0
+      seconds: null
+      combat: null
+      rounds: null
+      turns: null
+      startRound: null
+      startTurn: null
+    disabled: true
+    name: Maneuver Fav
+    _id: rDPOIxXM6ZrFBcLR
+    changes:
+      - key: system.skills.maneuver.isFav
+        mode: 5
+        value: '1'
+        priority: null
+    description: ''
+    transfer: false
+    statuses: []
+    flags: {}
+    tint: '#ffffff'
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      coreVersion: '12.330'
+      systemId: torgeternity
+      systemVersion: 12.2.0
+      createdTime: 1722358319265
+      modifiedTime: 1722358319265
+      lastModifiedBy: 93AMwcGe6H37rcPA
+    img: icons/svg/aura.svg
+    type: base
+    system: {}
+    sort: 0
+    _key: '!actors.effects!8KlJAaxeijOcrJKN.rDPOIxXM6ZrFBcLR'
 folder: null
 sort: 100001
 flags: {}
@@ -957,7 +975,7 @@ system:
     background: >-
       <p><img class="charimg"
       src="systems/torgeternity/images/characters/Monster_Hunter.webp" alt=""
-      width="1139" height="1982"></p>
+      width="1139" height="1982" /></p>
 
       <p class="moreheight"><a class="content-link" draggable="true"
       data-uuid="Compendium.torgeternity.handouts.JournalEntry.Knhh8vqtjSylJo5Z.JournalEntryPage.XuZD3GOezHrsiAbQ"
@@ -1130,11 +1148,11 @@ prototypeToken:
       texture: null
 _stats:
   systemId: torgeternity
-  systemVersion: 3.8.1
+  systemVersion: 12.2.0
   coreVersion: '12.330'
   createdTime: 1693895859465
-  modifiedTime: 1716827807404
-  lastModifiedBy: VAnYow5sWS9EJzo0
+  modifiedTime: 1722355493847
+  lastModifiedBy: 93AMwcGe6H37rcPA
   compendiumSource: null
   duplicateSource: null
 _key: '!actors!8KlJAaxeijOcrJKN'

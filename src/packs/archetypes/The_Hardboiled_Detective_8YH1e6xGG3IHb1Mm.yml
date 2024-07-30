@@ -19,7 +19,9 @@ items:
       price: '10'
       techlevel: 20
       value: 5
-      equippedClass: item-equipped
+      secondaryAxiom:
+        selected: none
+        value: null
     ownership:
       default: 0
     _stats:
@@ -48,7 +50,9 @@ items:
       price: '0'
       techlevel: 22
       value: 0
-      equippedClass: item-equipped
+      secondaryAxiom:
+        selected: none
+        value: null
     ownership:
       default: 0
     _stats:
@@ -73,19 +77,13 @@ items:
     folder: null
     system:
       cosm: coreEarth
-      description: >-
-        <p>Applications like GPS and a flashlight are included. Most cellphones
-        require signal boosting towers to get signal, so in low technology areas
-        a phone may still not have reception. Reality storms play havoc with
-        signals as well.</p>
-
-        <p>&nbsp;</p>
-
-        <p>Found in <strong>Core Rules</strong></p>
+      description: "<p>Applications like GPS and a flashlight are included. Most cellphones require signal boosting towers to get signal, so in low technology areas a phone may still not have reception. Reality storms play havoc with signals as well.</p>\n<p>\_</p>\n<p>Found in <strong>Core Rules</strong></p>"
       price: '300'
       techlevel: 23
       value: 13
-      equippedClass: item-equipped
+      secondaryAxiom:
+        selected: none
+        value: null
     ownership:
       default: 0
     _stats:
@@ -110,19 +108,13 @@ items:
     folder: null
     system:
       cosm: nileEmpire
-      description: >-
-        <p>Sometimes called speedcuffs. Attaching handcuffs requires a Good
-        Grapple result (see page 123). A cuffed target’s hands are restrained
-        until the cuffs are unlocked or broken — Toughness 18 or a Heroic (DN
-        18) Strength test.</p>
-
-        <p>&nbsp;</p>
-
-        <p>Found in <strong>Core Rules</strong></p>
+      description: "<p>Sometimes called speedcuffs. Attaching handcuffs requires a Good Grapple result (see page 123). A cuffed target’s hands are restrained until the cuffs are unlocked or broken — Toughness 18 or a Heroic (DN 18) Strength test.</p>\n<p>\_</p>\n<p>Found in <strong>Core Rules</strong></p>"
       price: '50'
       techlevel: 19
       value: 9
-      equippedClass: item-equipped
+      secondaryAxiom:
+        selected: none
+        value: null
     ownership:
       default: 0
     _stats:
@@ -151,7 +143,9 @@ items:
       price: '25'
       techlevel: 20
       value: 7
-      equippedClass: item-equipped
+      secondaryAxiom:
+        selected: none
+        value: null
     ownership:
       default: 0
     _stats:
@@ -180,7 +174,9 @@ items:
       price: '0'
       techlevel: 22
       value: 0
-      equippedClass: item-equipped
+      secondaryAxiom:
+        selected: none
+        value: null
     ownership:
       default: 0
     _stats:
@@ -236,14 +232,7 @@ items:
     system:
       category: kiPowers
       cosm: panPacifica
-      description: >-
-        <p>When a foe misses the martial artist with a melee attack, she may
-        take one shock to immediately make a melee attack of her own against
-        that opponent.</p>
-
-        <p>&nbsp;</p>
-
-        <p>Found in <strong>Core Rules</strong></p>
+      description: "<p>When a foe misses the martial artist with a melee attack, she may take one shock to immediately make a melee attack of her own against that opponent.</p>\n<p>\_</p>\n<p>Found in <strong>Core Rules</strong></p>"
       prerequisites: Spirit 8+, at least three adds in unarmed combat
       generalContradiction: true
       pulpPowers:
@@ -320,6 +309,9 @@ items:
         limitation10: ''
         limitationNumber: 0
       timestaken: '1'
+      secondaryAxiom:
+        selected: none
+        value: null
     ownership:
       default: 0
       A9LyAqagoJJU3gDH: 3
@@ -346,13 +338,7 @@ items:
         sourceId: Compendium.te001-core-rulebook.Items.36zun3ZNNpg6Al8g
     system:
       cosm: coreEarth
-      description: >-
-        <p>A recoil-operated 9mm semiautomatic. Notable for its large,
-        doublestacked ammo magazine.</p>
-
-        <p>&nbsp;</p>
-
-        <p>Found in <strong>Core Rules</strong></p>
+      description: "<p>A recoil-operated 9mm semiautomatic. Notable for its large, doublestacked ammo magazine.</p>\n<p>\_</p>\n<p>Found in <strong>Core Rules</strong></p>"
       price: '250'
       techlevel: 22
       value: 12
@@ -365,9 +351,11 @@ items:
       damage: 13
       damageType: flat
       equipped: false
-      equippedClass: .item-unequipped
       notes: ''
       range: 10 / 25 / 40
+      secondaryAxiom:
+        selected: none
+        value: null
     ownership:
       default: 0
       A9LyAqagoJJU3gDH: 3
@@ -394,13 +382,7 @@ items:
         sourceId: Compendium.te001-core-rulebook.Items.36zun3ZNNpg6Al8g
     system:
       cosm: coreEarth
-      description: >-
-        <p>A recoil-operated 9mm semiautomatic. Notable for its large,
-        doublestacked ammo magazine.</p>
-
-        <p>&nbsp;</p>
-
-        <p>Found in <strong>Core Rules</strong></p>
+      description: "<p>A recoil-operated 9mm semiautomatic. Notable for its large, doublestacked ammo magazine.</p>\n<p>\_</p>\n<p>Found in <strong>Core Rules</strong></p>"
       price: '250'
       techlevel: 22
       value: 12
@@ -413,9 +395,11 @@ items:
       damage: 13
       damageType: flat
       equipped: false
-      equippedClass: .item-unequipped
       notes: ''
       range: 10 / 25 / 40
+      secondaryAxiom:
+        selected: none
+        value: null
     ownership:
       default: 0
       A9LyAqagoJJU3gDH: 3
@@ -449,11 +433,13 @@ items:
       value: 10
       bonus: 1
       equipped: true
-      equippedClass: item-equipped
       maxDex: 12
       minStrength: null
       notes: Torso
       fatigue: null
+      secondaryAxiom:
+        selected: none
+        value: null
     ownership:
       default: 0
       A9LyAqagoJJU3gDH: 3
@@ -974,7 +960,7 @@ system:
     background: >-
       <p><img class="charimg"
       src="systems/torgeternity/images/characters/Hardboiled_Detective.webp"
-      alt="" width="1424" height="1858"></p>
+      alt="" width="1424" height="1858" /></p>
 
       <p
       class="moreheight">@UUID[Compendium.torgeternity.handouts.JournalEntry.Knhh8vqtjSylJo5Z.JournalEntryPage.jGMEVr72h0Jjm3CQ]{Archetype
@@ -984,10 +970,10 @@ system:
 
       <p>Years on the mean streets of Hong Kong have hardened you into a lethal
       weapon. Transcending into a Storm Knight only heightened your abilities.
-      First and foremost, you investigate crimes. You&rsquo;ve been trained to
-      follow leads, question witnesses, and uphold law and order. When the bad
-      guys resist arrest, and they always resist arrest, things get violent and
-      your other skills come into play.</p>
+      First and foremost, you investigate crimes. You’ve been trained to follow
+      leads, question witnesses, and uphold law and order. When the bad guys
+      resist arrest, and they always resist arrest, things get violent and your
+      other skills come into play.</p>
 
       <h3>Tactics</h3>
 
@@ -995,35 +981,34 @@ system:
       blazing away with your two 9mm pistols. Your high <em>dodge </em>and
       <em>unarmed combat</em> provide solid defenses against opponents at any
       distance. <em>Maneuver </em>is your strong interaction, try to use it
-      whenever it&rsquo;s an Approved Action. The Block Strike Perk lets you
-      punish a melee attacker who misses you&mdash;so long as you have the Shock
-      to burn. You may use an unarmed attack even while both pistols are
-      equipped; you just kick or strike with your elbows.</p>
+      whenever it’s an Approved Action. The Block Strike Perk lets you punish a
+      melee attacker who misses you—so long as you have the Shock to burn. You
+      may use an unarmed attack even while both pistols are equipped; you just
+      kick or strike with your elbows.</p>
 
       <h3>Moment of Crisis</h3>
 
-      <p>Something big was going down, and some corporate type named
-      &ldquo;Kanawa&ldquo; was at the center of it. You were threatened with
-      suspension and asked to let it go by your superiors. Someone even tried to
-      kill you. You stayed on the case, even after the Contagion began, and your
-      stubborn pursuit triggered a subtle transformation. Alternatively, the
-      change may have come when you defended a group of supposedly infected
-      refugees from a murderous Kanawa Corporation &ldquo;Containment
-      Team.&ldquo;</p>
+      <p>Something big was going down, and some corporate type named “Kanawa“
+      was at the center of it. You were threatened with suspension and asked to
+      let it go by your superiors. Someone even tried to kill you. You stayed on
+      the case, even after the Contagion began, and your stubborn pursuit
+      triggered a subtle transformation. Alternatively, the change may have come
+      when you defended a group of supposedly infected refugees from a murderous
+      Kanawa Corporation “Containment Team.“</p>
 
       <h3>Quote</h3>
 
-      <p>&ldquo;Whether it&rsquo;s jiangshi, criminals, or invaders from another
-      reality, one bullet can still make a difference.&ldquo;</p>
+      <p>“Whether it’s jiangshi, criminals, or invaders from another reality,
+      one bullet can still make a difference.“</p>
 
       <h3>Description</h3>
 
-      <p>Others may scoff at your leather jacket, but it&rsquo;s truly a
-      timeless fashion accessory. Plus it hides your two shoulder holsters very
-      well. Your badge is useful in Hong Kong where you have jurisdiction, but
-      it may work elsewhere in Pan-Pacifica so long as people don&rsquo;t look
-      at it too closely! You are intense, and don&rsquo;t tolerate disrespect
-      toward you or your badge.</p>
+      <p>Others may scoff at your leather jacket, but it’s truly a timeless
+      fashion accessory. Plus it hides your two shoulder holsters very well.
+      Your badge is useful in Hong Kong where you have jurisdiction, but it may
+      work elsewhere in Pan-Pacifica so long as people don’t look at it too
+      closely! You are intense, and don’t tolerate disrespect toward you or your
+      badge.</p>
 
       <h3>Agenda</h3>
 
@@ -1141,11 +1126,11 @@ prototypeToken:
       texture: null
 _stats:
   systemId: torgeternity
-  systemVersion: 3.8.1
+  systemVersion: 12.2.0
   coreVersion: '12.330'
   createdTime: 1693910524596
-  modifiedTime: 1716827807456
-  lastModifiedBy: VAnYow5sWS9EJzo0
+  modifiedTime: 1722355493847
+  lastModifiedBy: 93AMwcGe6H37rcPA
   compendiumSource: null
   duplicateSource: null
 _key: '!actors!8YH1e6xGG3IHb1Mm'

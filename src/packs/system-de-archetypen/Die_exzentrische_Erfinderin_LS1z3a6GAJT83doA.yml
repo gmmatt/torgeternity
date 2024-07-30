@@ -16,12 +16,14 @@ items:
     system:
       cosm: nileEmpire
       description: >-
-        <p>Ein kleines Ger&auml;t, das seinen Standort an darauf abgestimmte
-        Funkempf&auml;nger innerhalb eines Kilometers sendet.</p>
+        <p>Ein kleines Gerät, das seinen Standort an darauf abgestimmte
+        Funkempfänger innerhalb eines Kilometers sendet.</p>
       price: '150'
       techlevel: 20
       value: 11
-      equippedClass: item-equipped
+      secondaryAxiom:
+        selected: none
+        value: null
     ownership:
       default: 0
       9Q0XnqFwko7hRlvL: 3
@@ -48,17 +50,7 @@ items:
     system:
       category: pulpPowers
       cosm: nileEmpire
-      description: >-
-        <p>Der Held kann einen m&auml;chtigen elektrischen Blitz abfeuern. Er
-        greift mit Energiewaffen oder Geschicklichkeit an und verursacht 13
-        Schaden. Der Strahl hat eine Reichweite von 10/25/50, Munition 5 und
-        regeneriert 1 Schuss pro Runde.&nbsp;</p>
-
-        <p>Gef&auml;hrlich bei N&auml;sse: Bei leichtem Regen oder wenn das Ziel
-        in einer Pf&uuml;tze steht, erh&ouml;ht sich der Schaden um +2. Bei
-        starkem Regen oder wenn sich das Ziel bis zu den Kn&ouml;cheln oder
-        h&ouml;her im Wasser befindet, erh&ouml;ht sich der Schaden um
-        +4.&nbsp;</p>
+      description: "<p>Der Held kann einen mächtigen elektrischen Blitz abfeuern. Er greift mit Energiewaffen oder Geschicklichkeit an und verursacht 13 Schaden. Der Strahl hat eine Reichweite von 10/25/50, Munition 5 und regeneriert 1 Schuss pro Runde.\_</p>\n<p>Gefährlich bei Nässe: Bei leichtem Regen oder wenn das Ziel in einer Pfütze steht, erhöht sich der Schaden um +2. Bei starkem Regen oder wenn sich das Ziel bis zu den Knöcheln oder höher im Wasser befindet, erhöht sich der Schaden um +4.\_</p>"
       prerequisites: ''
       generalContradiction: true
       pulpPowers:
@@ -137,6 +129,9 @@ items:
         limitation10: ''
         limitationNumber: 1
       timestaken: '1'
+      secondaryAxiom:
+        selected: none
+        value: null
     ownership:
       ZuS1Anc9ORZov40T: 3
       CtisFurQNe9h7ABb: 3
@@ -163,14 +158,7 @@ items:
     system:
       category: pulpPowers
       cosm: nileEmpire
-      description: >-
-        <p>Ein Schild aus unsichtbarer Energie umgibt den Helden. Das Kraftfeld
-        hat drei &bdquo;Ladungen&ldquo;. Jedes Mal, wenn der Held eine Wunde
-        erleidet, verbraucht das Feld eine Ladung, um die Wunde und 2 Punkte
-        Schockschaden zu blockieren.&nbsp;</p>
-
-        <p>Das Feld l&auml;dt sich mit einer Ladung pro Stunde wieder
-        auf.&nbsp;</p>
+      description: "<p>Ein Schild aus unsichtbarer Energie umgibt den Helden. Das Kraftfeld hat drei „Ladungen“. Jedes Mal, wenn der Held eine Wunde erleidet, verbraucht das Feld eine Ladung, um die Wunde und 2 Punkte Schockschaden zu blockieren.\_</p>\n<p>Das Feld lädt sich mit einer Ladung pro Stunde wieder auf.\_</p>"
       prerequisites: ''
       generalContradiction: true
       pulpPowers:
@@ -249,6 +237,9 @@ items:
         limitation10: ''
         limitationNumber: 1
       timestaken: '1'
+      secondaryAxiom:
+        selected: none
+        value: null
     ownership:
       default: 0
       9Q0XnqFwko7hRlvL: 3
@@ -277,7 +268,7 @@ items:
     system:
       cosm: nileEmpire
       description: >-
-        <p>Ben&ouml;tigt den Vorzug
+        <p>Benötigt den Vorzug
         "@UUID[Compendium.te001-core-rulebook.grw-de-vorzuverb.0P0XvH8qiYpp8Gun]{Stromstrahl}",
         Erneuert 1 Munition pro Spielzug</p>
       price: '0'
@@ -292,9 +283,11 @@ items:
       damage: 15
       damageType: ''
       equipped: false
-      equippedClass: .item-unequipped
       notes: ''
       range: 10/25/50
+      secondaryAxiom:
+        selected: none
+        value: null
     ownership:
       default: 0
       9Q0XnqFwko7hRlvL: 3
@@ -325,7 +318,9 @@ items:
       price: '100'
       techlevel: 20
       value: 10
-      equippedClass: item-equipped
+      secondaryAxiom:
+        selected: none
+        value: null
     ownership:
       default: 0
       9Q0XnqFwko7hRlvL: 3
@@ -356,7 +351,9 @@ items:
       price: '100'
       techlevel: 8
       value: 10
-      equippedClass: item-equipped
+      secondaryAxiom:
+        selected: none
+        value: null
     ownership:
       default: 0
       9Q0XnqFwko7hRlvL: 3
@@ -420,11 +417,13 @@ items:
         sourceId: Item.qfuqdyayux9JCd6l
     system:
       cosm: nileEmpire
-      description: <p><em>Erste-Hilfe</em>-Proben sind beg&uuml;nstigt</p>
+      description: <p><em>Erste-Hilfe</em>-Proben sind begünstigt</p>
       price: '50'
       techlevel: 19
       value: 9
-      equippedClass: item-equipped
+      secondaryAxiom:
+        selected: none
+        value: null
     ownership:
       default: 0
       9Q0XnqFwko7hRlvL: 3
@@ -455,7 +454,9 @@ items:
       price: '10'
       techlevel: 20
       value: 5
-      equippedClass: item-equipped
+      secondaryAxiom:
+        selected: none
+        value: null
     ownership:
       default: 0
       9Q0XnqFwko7hRlvL: 3
@@ -486,7 +487,9 @@ items:
       price: '50'
       techlevel: 18
       value: 9
-      equippedClass: item-equipped
+      secondaryAxiom:
+        selected: none
+        value: null
     ownership:
       default: 0
       9Q0XnqFwko7hRlvL: 3
@@ -517,7 +520,9 @@ items:
       price: '100'
       techlevel: 16
       value: 10
-      equippedClass: item-equipped
+      secondaryAxiom:
+        selected: none
+        value: null
     ownership:
       default: 0
       9Q0XnqFwko7hRlvL: 3
@@ -552,11 +557,13 @@ items:
       value: 10
       bonus: 1
       equipped: true
-      equippedClass: item-equipped
       maxDex: 12
       minStrength: null
       notes: Torso
       fatigue: null
+      secondaryAxiom:
+        selected: none
+        value: null
     ownership:
       default: 0
       9Q0XnqFwko7hRlvL: 3
@@ -587,8 +594,7 @@ effects:
       turns: null
       startRound: null
       startTurn: null
-    origin: >-
-      Compendium.torgeternity.system-de-archetypen.Actor.LS1z3a6GAJT83doA.Item.vsz0ZonowO3k7bcL
+    origin: Actor.LS1z3a6GAJT83doA.Item.vsz0ZonowO3k7bcL
     transfer: false
     flags: {}
     tint: '#ffffff'
@@ -965,96 +971,7 @@ system:
     spirit: 18
     tech: 20
   details:
-    background: >-
-      <p><img class="charimg"
-      src="systems/torgeternity/images/characters/Eccentric_Inventor.webp"
-      alt="" width="1125" height="2052"></p>
-
-      <p
-      class="moreheight">@UUID[Compendium.torgeternity.system-de-handouts.JournalEntry.DLLvnXpv7RFhRgHu.JournalEntryPage.59zUF4TrfxfdMfhs]{Archetyp
-      - Die exzentrische Erfinderin}</p>
-
-      <h3>&Uuml;berblick</h3>
-
-      <p>Du warst brillant und vielleicht ein bisschen seltsam, schon bevor die
-      Possibility Wars begannen. Nachdem du dich in die Pulp-Realit&auml;t des
-      Nil-Imperiums verwandelt hast, wurde alles m&ouml;glich.
-      Unver&auml;nderliche Gesetze der Physik sind heute nur noch Richtlinien.
-      Du treibst diese neue Freiheit an ihre Grenzen, erfindest wundersame
-      elektronische Ger&auml;te und benutzt sie dann gegen die
-      Realit&auml;tsr&auml;uber.</p>
-
-      <h3>Taktiken</h3>
-
-      <p>Dein Stromstrahl ist effektiv, aber es k&ouml;nnen ihm die Ladungen
-      ausgehen, wenn er zu oft auf zu viele Zielen abgefeuert wird. Deine
-      <em>Tricksen</em>- Interaktion ist besonders verheerend. Viele Gegner sind
-      schwach gegen <em>Tricksen</em>, und ein "Spielerentscheidung"- Ergebnis
-      k&ouml;nnte selbst st&auml;rkere Feinde eliminieren, wenn die
-      Umst&auml;nde es m&ouml;glich machen.&nbsp;</p>
-
-      <p>W&auml;hrend dein Kraftfeld einsatzbereit ist, kannst du seine Ladungen
-      zum Einstecken von Wunden verwenden. Es kann zwei Schocks absorbieren,
-      selbst wenn keine Wunde verursacht wird, aber es ist besser, diese
-      Ladungen aufzusparen. Sobald das Kraftfeld ersch&ouml;pft ist oder wenn
-      eine vorzeitige Entkopplung es deaktiviert, bist du extrem anf&auml;llig
-      f&uuml;r Schaden. Bewahre dir deshalb m&ouml;glichst eine Schicksalskarte
-      wie Willenskraft oder Tatendrang auf, um das Ankoppeln zu erleichtern,
-      falls du in die Enge ger&auml;tst.</p>
-
-      <h3>Moment der Krise</h3>
-
-      <p>Im Angesicht des Ansturms von Eindringlingen in Kairo hast du auf die
-      Wissenschaft zur&uuml;ckgegriffen, um dich zu wehren, und in einem Moment
-      unbeschreiblicher Inspiration (und Krise) bautest du ein Telefon, eine
-      Lavalampe und einen F&ouml;hn zu einem t&ouml;dlichen Energieprojektor
-      zusammen. Alternativ k&ouml;nntest du dich verwandelt haben, als du einige
-      deiner Erfindungen und Pl&auml;ne zerst&ouml;rtest, bevor sie in die
-      H&auml;nde von M&ouml;bius und seinen Horden fallen konnten.</p>
-
-      <h3>Zitat</h3>
-
-      <p>"Whoa, wer h&auml;tte gedacht, dass eine pl&ouml;tzliche
-      Polarit&auml;tsumkehr eine solche Explosion verursachen k&ouml;nnte. Ich
-      meine, au&szlig;er mir. Weil ich das so nat&uuml;rlich genau so geplant
-      habe."</p>
-
-      <h3>Beschreibung</h3>
-
-      <p>Dein Hartgummi-Laborkittel ist f&uuml;r die Arbeit gedacht, aber
-      darunter bist du immer bereit f&uuml;r eine gute Party. Deine Brille ist
-      in jeder Situation modisch. Du bist sehr intelligent und gebildet. Du bist
-      selbstbewusst, gl&uuml;cklich und schamlos seltsam.</p>
-
-      <h3>Agenda</h3>
-
-      <p>Wissen ist der einzige Weg zum wahren Sieg, und manchmal m&uuml;ssen
-      daf&uuml;r Opfer gebracht werden. Menschen zu retten und Spa&szlig; zu
-      haben steht auf deiner Priorit&auml;tenliste, aber die Wissenschaft steht
-      immer ganz oben.</p>
-
-      <h3>Namen</h3>
-
-      <p>Kapit&auml;n Kondensator, Dr. Blitz, Joy Buzzer, Professor Diode, Der
-      Funkek</p>
-
-      <h3>Vorgeschlagener Aufstieg (Optional)</h3>
-
-      <ul>
-
-      <li>(5 EP) Auffassungsgabe</li>
-
-      <li>(7 EP) Kraftfeld</li>
-
-      <li>(9 EP) Stromstrahl (10 Ladungen)</li>
-
-      <li>(3 EP) <em>Ausweichen</em> +3</li>
-
-      <li>(3 EP) <em>Energiewaffen</em> +3</li>
-
-      <li>(3 EP) <em>Realit&auml;t</em> +3</li>
-
-      </ul>
+    background: "<p><img class=\"charimg\" src=\"systems/torgeternity/images/characters/Eccentric_Inventor.webp\" alt=\"\" width=\"1125\" height=\"2052\" /></p>\n<p class=\"moreheight\">@UUID[Compendium.torgeternity.system-de-handouts.JournalEntry.DLLvnXpv7RFhRgHu.JournalEntryPage.59zUF4TrfxfdMfhs]{Archetyp - Die exzentrische Erfinderin}</p>\n<h3>Überblick</h3>\n<p>Du warst brillant und vielleicht ein bisschen seltsam, schon bevor die Possibility Wars begannen. Nachdem du dich in die Pulp-Realität des Nil-Imperiums verwandelt hast, wurde alles möglich. Unveränderliche Gesetze der Physik sind heute nur noch Richtlinien. Du treibst diese neue Freiheit an ihre Grenzen, erfindest wundersame elektronische Geräte und benutzt sie dann gegen die Realitätsräuber.</p>\n<h3>Taktiken</h3>\n<p>Dein Stromstrahl ist effektiv, aber es können ihm die Ladungen ausgehen, wenn er zu oft auf zu viele Zielen abgefeuert wird. Deine <em>Tricksen</em>- Interaktion ist besonders verheerend. Viele Gegner sind schwach gegen <em>Tricksen</em>, und ein \"Spielerentscheidung\"- Ergebnis könnte selbst stärkere Feinde eliminieren, wenn die Umstände es möglich machen.\_</p>\n<p>Während dein Kraftfeld einsatzbereit ist, kannst du seine Ladungen zum Einstecken von Wunden verwenden. Es kann zwei Schocks absorbieren, selbst wenn keine Wunde verursacht wird, aber es ist besser, diese Ladungen aufzusparen. Sobald das Kraftfeld erschöpft ist oder wenn eine vorzeitige Entkopplung es deaktiviert, bist du extrem anfällig für Schaden. Bewahre dir deshalb möglichst eine Schicksalskarte wie Willenskraft oder Tatendrang auf, um das Ankoppeln zu erleichtern, falls du in die Enge gerätst.</p>\n<h3>Moment der Krise</h3>\n<p>Im Angesicht des Ansturms von Eindringlingen in Kairo hast du auf die Wissenschaft zurückgegriffen, um dich zu wehren, und in einem Moment unbeschreiblicher Inspiration (und Krise) bautest du ein Telefon, eine Lavalampe und einen Föhn zu einem tödlichen Energieprojektor zusammen. Alternativ könntest du dich verwandelt haben, als du einige deiner Erfindungen und Pläne zerstörtest, bevor sie in die Hände von Möbius und seinen Horden fallen konnten.</p>\n<h3>Zitat</h3>\n<p>\"Whoa, wer hätte gedacht, dass eine plötzliche Polaritätsumkehr eine solche Explosion verursachen könnte. Ich meine, außer mir. Weil ich das so natürlich genau so geplant habe.\"</p>\n<h3>Beschreibung</h3>\n<p>Dein Hartgummi-Laborkittel ist für die Arbeit gedacht, aber darunter bist du immer bereit für eine gute Party. Deine Brille ist in jeder Situation modisch. Du bist sehr intelligent und gebildet. Du bist selbstbewusst, glücklich und schamlos seltsam.</p>\n<h3>Agenda</h3>\n<p>Wissen ist der einzige Weg zum wahren Sieg, und manchmal müssen dafür Opfer gebracht werden. Menschen zu retten und Spaß zu haben steht auf deiner Prioritätenliste, aber die Wissenschaft steht immer ganz oben.</p>\n<h3>Namen</h3>\n<p>Kapitän Kondensator, Dr. Blitz, Joy Buzzer, Professor Diode, Der Funkek</p>\n<h3>Vorgeschlagener Aufstieg (Optional)</h3>\n<ul>\n<li>(5 EP) Auffassungsgabe</li>\n<li>(7 EP) Kraftfeld</li>\n<li>(9 EP) Stromstrahl (10 Ladungen)</li>\n<li>(3 EP) <em>Ausweichen</em> +3</li>\n<li>(3 EP) <em>Energiewaffen</em> +3</li>\n<li>(3 EP) <em>Realität</em> +3</li>\n</ul>"
     race: human
     sizeBonus: normal
   editstate: false
@@ -1140,11 +1057,11 @@ prototypeToken:
       texture: null
 _stats:
   systemId: torgeternity
-  systemVersion: 3.8.1
+  systemVersion: 12.2.0
   coreVersion: '12.330'
   createdTime: 1694866736301
-  modifiedTime: 1716827811234
-  lastModifiedBy: VAnYow5sWS9EJzo0
+  modifiedTime: 1722359278656
+  lastModifiedBy: 93AMwcGe6H37rcPA
   compendiumSource: Compendium.torgeternity.archetypes.Aq6ZhdfGe9SMQxwv
   duplicateSource: null
 _key: '!actors!LS1z3a6GAJT83doA'

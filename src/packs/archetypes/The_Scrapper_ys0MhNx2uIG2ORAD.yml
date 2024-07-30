@@ -16,19 +16,7 @@ items:
     system:
       category: occultech
       cosm: none
-      description: >-
-        <p>When the character takes this Perk, she may choose up to $10 000
-        worth of occultech. These implants have been properly exorcised of any
-        demonic influence. See the list of Tharkoldu
-        @UUID[Compendium.te001-core-rulebook.rules.pwneQ55M0nnDH0Us.JournalEntryPage.qKdamp4rrcX6TTt0#occultech]{Occultech}.</p>
-
-        <p><strong>New Implants:</strong> This Perk may be taken more than once.
-        Each time after the first, it grants the user another $5 000 worth of
-        implants.</p>
-
-        <p>&nbsp;</p>
-
-        <p>Found in <strong>Core Rules</strong></p>
+      description: "<p>When the character takes this Perk, she may choose up to $10 000 worth of occultech. These implants have been properly exorcised of any demonic influence. See the list of Tharkoldu @UUID[Compendium.te001-core-rulebook.rules.pwneQ55M0nnDH0Us.JournalEntryPage.qKdamp4rrcX6TTt0#occultech]{Occultech}.</p>\n<p><strong>New Implants:</strong> This Perk may be taken more than once. Each time after the first, it grants the user another $5 000 worth of implants.</p>\n<p>\_</p>\n<p>Found in <strong>Core Rules</strong></p>"
       prerequisites: Strength 8+
       generalContradiction: true
       pulpPowers:
@@ -105,6 +93,9 @@ items:
         limitation10: ''
         limitationNumber: 0
       timestaken: '1'
+      secondaryAxiom:
+        selected: none
+        value: null
     ownership:
       default: 0
       A9LyAqagoJJU3gDH: 3
@@ -132,15 +123,7 @@ items:
     system:
       category: prowess
       cosm: none
-      description: >-
-        <p>The warrior has trained to hit a large number of foes in a single
-        dance of death. He ignores the first two points of the
-        @UUID[Compendium.te001-core-rulebook.rules.pwneQ55M0nnDH0Us.JournalEntryPage.EhKa65cpHvodUl2L#multi-targeting]{Multi-Targeting}
-        penalty when using melee weapons.</p>
-
-        <p>&nbsp;</p>
-
-        <p>Found in <strong>Core Rules</strong></p>
+      description: "<p>The warrior has trained to hit a large number of foes in a single dance of death. He ignores the first two points of the @UUID[Compendium.te001-core-rulebook.rules.pwneQ55M0nnDH0Us.JournalEntryPage.EhKa65cpHvodUl2L#multi-targeting]{Multi-Targeting} penalty when using melee weapons.</p>\n<p>\_</p>\n<p>Found in <strong>Core Rules</strong></p>"
       prerequisites: Dexterity 8+
       generalContradiction: false
       pulpPowers:
@@ -217,6 +200,9 @@ items:
         limitation10: ''
         limitationNumber: 0
       timestaken: '1'
+      secondaryAxiom:
+        selected: none
+        value: null
     ownership:
       default: 0
       A9LyAqagoJJU3gDH: 3
@@ -243,7 +229,7 @@ items:
         sourceId: Compendium.te001-core-rulebook.Items.07pjHDJDrK1pESkv
     system:
       cosm: tharkold
-      description: "<p>@UUID[Compendium.te001-core-rulebook.rules.pwneQ55M0nnDH0Us.JournalEntryPage.qKdamp4rrcX6TTt0#stagger:]{Stagger}</p><p>@UUID[Compendium.te001-core-rulebook.rules.pwneQ55M0nnDH0Us.JournalEntryPage.qKdamp4rrcX6TTt0#two-handed:]{Two-Handed}</p><p>The heavy head contains a pneumatic mechanism that adds a burst of thrust to the swing and drives a spike forward at the point of impact to greatly increase the force directed at the impact point—if a wielder is strong enough to get the hammer moving in the first place.</p><p><em>Damage included +2 Strength from Digan CyberArm</em></p><p>\_</p><p>Found in <strong>Core Rules</strong></p>"
+      description: "<p>@UUID[Compendium.te001-core-rulebook.rules.pwneQ55M0nnDH0Us.JournalEntryPage.qKdamp4rrcX6TTt0#stagger:]{Stagger}</p><p>@UUID[Compendium.te001-core-rulebook.rules.pwneQ55M0nnDH0Us.JournalEntryPage.qKdamp4rrcX6TTt0#two-handed:]{Two-Handed}</p><p>The heavy head contains a pneumatic mechanism that adds a burst of thrust to the swing and drives a spike forward at the point of impact to greatly increase the force directed at the impact point—if a wielder is strong enough to get the hammer moving in the first place.</p><p>\_</p><p>Found in <strong>Core Rules</strong></p>"
       price: '300'
       techlevel: 25
       value: 13
@@ -251,11 +237,14 @@ items:
       attackWith: meleeWeapons
       bonus: 2
       chatNote: ''
-      damage: 6
+      damage: 4
       damageType: strengthPlus
       equipped: false
-      equippedClass: .item-unequipped
       notes: Stagger, Two Handed
+      secondaryAxiom:
+        selected: none
+        value: null
+      minStrength: null
     ownership:
       default: 0
       A9LyAqagoJJU3gDH: 3
@@ -282,21 +271,7 @@ items:
         sourceId: Compendium.te001-core-rulebook.Items.t5x6s1AwFy1qZBpF
     system:
       cosm: tharkold
-      description: >-
-        <p>@UUID[Compendium.te001-core-rulebook.rules.pwneQ55M0nnDH0Us.JournalEntryPage.qKdamp4rrcX6TTt0#blas:]{Blast}</p>
-
-        <p>A weighted net fits into a tube launcher powered by a tightly wound
-        torsion spring. A mechanical engine is needed to wind the spring or
-        recover the net after it&rsquo;s been launched. The net acts just like a
-        Grappling attempt (page 123), with a hit dealing &minus;2 damage. A Good
-        hit restrains the target temporarily and does full damage. An
-        Outstanding hit restrains and Stymies the target. Technodemons often
-        employ a special version of this weapon that deploys a net with the same
-        properties as a pain gauntlet.</p>
-
-        <p>&nbsp;</p>
-
-        <p>Found in <strong>Core Rules</strong></p>
+      description: "<p>@UUID[Compendium.te001-core-rulebook.rules.pwneQ55M0nnDH0Us.JournalEntryPage.qKdamp4rrcX6TTt0#blas:]{Blast}</p>\n<p>A weighted net fits into a tube launcher powered by a tightly wound torsion spring. A mechanical engine is needed to wind the spring or recover the net after it’s been launched. The net acts just like a Grappling attempt (page 123), with a hit dealing −2 damage. A Good hit restrains the target temporarily and does full damage. An Outstanding hit restrains and Stymies the target. Technodemons often employ a special version of this weapon that deploys a net with the same properties as a pain gauntlet.</p>\n<p>\_</p>\n<p>Found in <strong>Core Rules</strong></p>"
       price: '100'
       techlevel: 25
       value: 10
@@ -309,10 +284,12 @@ items:
       damage: 5
       damageType: flat
       equipped: false
-      equippedClass: .item-unequipped
       minStrength: ''
       notes: Small Blast
       range: 5 / 10 / 15
+      secondaryAxiom:
+        selected: none
+        value: null
     ownership:
       default: 0
       A9LyAqagoJJU3gDH: 3
@@ -339,17 +316,13 @@ items:
         sourceId: Compendium.te001-core-rulebook.Items.WP88DoYjrypNKL22
     system:
       cosm: panPacifica
-      description: >-
-        <p>Advanced microfibers screen particles from the air, making the wearer
-        immune to inhaled poisons and toxins.</p>
-
-        <p>&nbsp;</p>
-
-        <p>Found in <strong>Core Rules</strong></p>
+      description: "<p>Advanced microfibers screen particles from the air, making the wearer immune to inhaled poisons and toxins.</p>\n<p>\_</p>\n<p>Found in <strong>Core Rules</strong></p>"
       price: '60'
       techlevel: 24
       value: 9
-      equippedClass: item-equipped
+      secondaryAxiom:
+        selected: none
+        value: null
     ownership:
       default: 0
       A9LyAqagoJJU3gDH: 3
@@ -380,7 +353,9 @@ items:
       price: '5'
       techlevel: 20
       value: 4
-      equippedClass: item-equipped
+      secondaryAxiom:
+        selected: none
+        value: null
     ownership:
       default: 0
       A9LyAqagoJJU3gDH: 3
@@ -407,18 +382,13 @@ items:
         sourceId: Compendium.te001-core-rulebook.Items.6CYd0HCZf6RrM4JB
     system:
       cosm: coreEarth
-      description: >-
-        <p>Also known as a Geiger counter. When switched on it automatically
-        alerts the user of dangerous radiation levels. Grants a +4 bonus to find
-        items that are more radioactive than the background area.</p>
-
-        <p>&nbsp;</p>
-
-        <p>Found in <strong>Core Rules</strong></p>
+      description: "<p>Also known as a Geiger counter. When switched on it automatically alerts the user of dangerous radiation levels. Grants a +4 bonus to find items that are more radioactive than the background area.</p>\n<p>\_</p>\n<p>Found in <strong>Core Rules</strong></p>"
       price: '120'
       techlevel: 21
       value: 11
-      equippedClass: item-equipped
+      secondaryAxiom:
+        selected: none
+        value: null
     ownership:
       default: 0
       A9LyAqagoJJU3gDH: 3
@@ -445,12 +415,14 @@ items:
         sourceId: Compendium.te001-core-rulebook.Items.hkVo701Qmh9NUKVg
     system:
       cosm: tharkold
-      description: <p>Found in <strong>Core Rules</strong></p>
+      description: <p>Wounds from radiation heal normally.</p>
       price: 2,000
       techlevel: 25
       value: 17
       notes: ''
-      equippedClass: item-equipped
+      secondaryAxiom:
+        selected: none
+        value: null
     ownership:
       default: 0
       A9LyAqagoJJU3gDH: 3
@@ -520,11 +492,11 @@ items:
         name: Armor +3 (Arm)
         _id: LcMXSEQ8O4i1pjMt
         changes:
-          - key: system.other.toughness
+          - key: defenses.toughness
             mode: 2
             value: '3'
             priority: null
-          - key: system.other.armor
+          - key: defenses.armor
             mode: 2
             value: '3'
             priority: null
@@ -555,22 +527,14 @@ items:
         sourceId: Compendium.te001-core-rulebook.Items.eqLYuyoAdwVRcQrQ
     system:
       cosm: tharkold
-      description: >-
-        <p>Digan constructions are bulky but powerful, and this modular
-        replacement arm is no exception. It increases <em>Strength</em> tests
-        and damage by +2 , and has +3 Armor on that limb only. The arm’s Armor
-        protects the character’s torso if he takes an Active Defense. The
-        <em>Strength</em> increase applies only to tests and attacks made with
-        that limb.</p>
-
-        <p>&nbsp;</p>
-
-        <p>Found in <strong>Core Rules</strong></p>
+      description: "<p>Digan constructions are bulky but powerful, and this modular replacement arm is no exception. It increases <em>Strength</em> tests and damage by +2 , and has +3 Armor on that limb only. The arm’s Armor protects the character’s torso if he takes an Active Defense. The <em>Strength</em> increase applies only to tests and attacks made with that limb.</p>\n<p>\_</p>\n<p>Found in <strong>Core Rules</strong></p>"
       price: 8,000
       techlevel: 25
       value: 19
       notes: ''
-      equippedClass: item-equipped
+      secondaryAxiom:
+        selected: none
+        value: null
     ownership:
       default: 0
       A9LyAqagoJJU3gDH: 3
@@ -597,27 +561,19 @@ items:
         sourceId: Compendium.te001-core-rulebook.Items.Item.wP7vzluooDeOtebZ
     system:
       cosm: tharkold
-      description: >-
-        <p>@UUID[Compendium.te001-core-rulebook.rules.pwneQ55M0nnDH0Us.JournalEntryPage.qKdamp4rrcX6TTt0#fatigues:]{Fatigues}</p>
-
-        <p>Black metallic armor cobbled together from energy-diffusing salvage.
-        It resembles obsidian, and energy skitters across its surface, sizzling
-        and popping until it coalesces and re-emerges projected at some
-        different angle.</p>
-
-        <p>&nbsp;</p>
-
-        <p>Found in <strong>Core Rules</strong></p>
+      description: "<p>@UUID[Compendium.te001-core-rulebook.rules.pwneQ55M0nnDH0Us.JournalEntryPage.qKdamp4rrcX6TTt0#fatigues:]{Fatigues}</p>\n<p>Black metallic armor cobbled together from energy-diffusing salvage. It resembles obsidian, and energy skitters across its surface, sizzling and popping until it coalesces and re-emerges projected at some different angle.</p>\n<p>\_</p>\n<p>Found in <strong>Core Rules</strong></p>"
       price: '500'
       techlevel: 25
       value: 13
       bonus: 3
       equipped: true
-      equippedClass: item-equipped
       maxDex: 8
       minStrength: 8
       notes: Fatigues, bonus adds to dodge vs. energy weapons
       fatigue: 1
+      secondaryAxiom:
+        selected: none
+        value: null
     ownership:
       default: 0
       A9LyAqagoJJU3gDH: 3
@@ -633,8 +589,7 @@ items:
       duplicateSource: null
     _key: '!actors.items!ys0MhNx2uIG2ORAD.ryISQSHD5wRghm0e'
 effects:
-  - origin: >-
-      Compendium.torgeternity.archetypes.Actor.ys0MhNx2uIG2ORAD.Item.6QxM5pY3h7MRaTHM
+  - origin: Actor.ys0MhNx2uIG2ORAD.Item.6QxM5pY3h7MRaTHM
     duration:
       startTime: 0
       seconds: null
@@ -643,7 +598,7 @@ effects:
       turns: null
       startRound: null
       startTurn: null
-    disabled: true
+    disabled: false
     name: Strength +2 (Arm)
     _id: hJopDtTRygZm4OjO
     changes:
@@ -670,8 +625,7 @@ effects:
     system: {}
     sort: 0
     _key: '!actors.effects!ys0MhNx2uIG2ORAD.hJopDtTRygZm4OjO'
-  - origin: >-
-      Compendium.torgeternity.archetypes.Actor.ys0MhNx2uIG2ORAD.Item.6QxM5pY3h7MRaTHM
+  - origin: Actor.ys0MhNx2uIG2ORAD.Item.6QxM5pY3h7MRaTHM
     duration:
       startTime: 0
       seconds: null
@@ -684,7 +638,7 @@ effects:
     name: Armor +3 (Arm)
     _id: tfdPfqnwELylRgKR
     changes:
-      - key: system.other.armor
+      - key: defenses.armor
         mode: 2
         value: '3'
         priority: null
@@ -1064,7 +1018,7 @@ system:
     background: >-
       <p><img class="charimg"
       src="systems/torgeternity/images/characters/Scrapper.webp" alt=""
-      width="1155" height="2061"></p>
+      width="1155" height="2061" /></p>
 
       <p
       class="moreheight">@UUID[Compendium.torgeternity.handouts.JournalEntry.Knhh8vqtjSylJo5Z.JournalEntryPage.KlL26KhVUnkWipzG]{Archetype
@@ -1076,7 +1030,7 @@ system:
       technodemon machinery to salvage, sell, or use.</p>
 
       <p>You were once a soldier in the Russian army, but the horror of the
-      Battle of Moscow and the crushing disappointment of the government&rsquo;s
+      Battle of Moscow and the crushing disappointment of the government’s
       cooperation with the demons after the battle put an end to those days.</p>
 
       <h3>Tactics</h3>
@@ -1084,10 +1038,10 @@ system:
       <p>Your impact hammer is an extremely powerful weapon, especially when
       wielded with your high <em>Strength</em>. Your best plan is usually to get
       into the middle of the bad guys and start swinging! Your CyberArm adds
-      even more <em>Strength </em>to the attack. Your interactions aren&rsquo;t
-      very strong compared to your hammer, but are worth a try when they are
-      Approved Actions. If your opponents remain out of reach, try to find
-      discarded firearms or use intimidation on them.</p>
+      even more <em>Strength </em>to the attack. Your interactions aren’t very
+      strong compared to your hammer, but are worth a try when they are Approved
+      Actions. If your opponents remain out of reach, try to find discarded
+      firearms or use intimidation on them.</p>
 
       <h3>Moment of Crisis</h3>
 
@@ -1100,23 +1054,23 @@ system:
 
       <h3>Quote</h3>
 
-      <p>&ldquo;There is Russian saying: &rsquo;revenge is dish best served
-      cold.&rsquo; It is very cold in Russia, mudak.&ldquo;</p>
+      <p>“There is Russian saying: ’revenge is dish best served cold.’ It is
+      very cold in Russia, mudak.“</p>
 
       <h3>Description</h3>
 
       <p>You are tall, broad-shouldered, and built like a tank. Everyone in the
-      Blasted Land wears similar apparel&mdash; made from whatever mismatched
-      clothing and armor is handy or resilient enough to last. You pretend to be
-      cynical and sarcastic, but underneath you are actually optimistic and
-      idealistic. Your impact hammer is always obvious, an oversized device made
-      for technodemons. Even at rest it hums with sinister energy.</p>
+      Blasted Land wears similar apparel— made from whatever mismatched clothing
+      and armor is handy or resilient enough to last. You pretend to be cynical
+      and sarcastic, but underneath you are actually optimistic and idealistic.
+      Your impact hammer is always obvious, an oversized device made for
+      technodemons. Even at rest it hums with sinister energy.</p>
 
       <h3>Agenda</h3>
 
-      <p>Friendship and loyalty are at the heart of your actions&mdash;not that
-      you allow anyone to discover that. You use a pretense of greed to hide
-      your soft heart.</p>
+      <p>Friendship and loyalty are at the heart of your actions—not that you
+      allow anyone to discover that. You use a pretense of greed to hide your
+      soft heart.</p>
 
       <h3>Names</h3>
 
@@ -1228,11 +1182,11 @@ prototypeToken:
       texture: null
 _stats:
   systemId: torgeternity
-  systemVersion: 3.8.1
+  systemVersion: 12.2.0
   coreVersion: '12.330'
   createdTime: 1693914389548
-  modifiedTime: 1716827808188
-  lastModifiedBy: VAnYow5sWS9EJzo0
+  modifiedTime: 1722355493847
+  lastModifiedBy: 93AMwcGe6H37rcPA
   compendiumSource: null
   duplicateSource: null
 _key: '!actors!ys0MhNx2uIG2ORAD'

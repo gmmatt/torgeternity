@@ -19,7 +19,9 @@ items:
       price: '100'
       techlevel: 8
       value: 10
-      equippedClass: item-equipped
+      secondaryAxiom:
+        selected: none
+        value: null
     ownership:
       default: 0
     _stats:
@@ -48,7 +50,9 @@ items:
       price: '0'
       techlevel: 10
       value: 0
-      equippedClass: item-equipped
+      secondaryAxiom:
+        selected: none
+        value: null
     ownership:
       default: 0
     _stats:
@@ -74,14 +78,7 @@ items:
     system:
       category: prowess
       cosm: none
-      description: >-
-        <p>When the character attempts an
-        @UUID[Compendium.te001-core-rulebook.rules.pwneQ55M0nnDH0Us.JournalEntryPage.EhKa65cpHvodUl2L#active-defense]{Active
-        Defense} the test is Favored.</p>
-
-        <p>&nbsp;</p>
-
-        <p>Found in <strong>Core Rules</strong></p>
+      description: "<p>When the character attempts an @UUID[Compendium.te001-core-rulebook.rules.pwneQ55M0nnDH0Us.JournalEntryPage.EhKa65cpHvodUl2L#active-defense]{Active Defense} the test is Favored.</p>\n<p>\_</p>\n<p>Found in <strong>Core Rules</strong></p>"
       prerequisites: ''
       generalContradiction: false
       pulpPowers:
@@ -158,6 +155,9 @@ items:
         limitation10: ''
         limitationNumber: 0
       timestaken: '1'
+      secondaryAxiom:
+        selected: none
+        value: null
     ownership:
       default: 0
       A9LyAqagoJJU3gDH: 3
@@ -185,13 +185,7 @@ items:
     system:
       category: reality
       cosm: coreEarth
-      description: >-
-        <p>Nothing seems to keep the hero down for long. Her tests to Soak
-        damage become Favored.</p>
-
-        <p>&nbsp;</p>
-
-        <p>Found in <strong>Core Rules</strong></p>
+      description: "<p>Nothing seems to keep the hero down for long. Her tests to Soak damage become Favored.</p>\n<p>\_</p>\n<p>Found in <strong>Core Rules</strong></p>"
       prerequisites: Spirit 8+
       generalContradiction: false
       pulpPowers:
@@ -268,6 +262,9 @@ items:
         limitation10: ''
         limitationNumber: 0
       timestaken: '1'
+      secondaryAxiom:
+        selected: none
+        value: null
     ownership:
       default: 0
       A9LyAqagoJJU3gDH: 3
@@ -282,90 +279,6 @@ items:
       compendiumSource: Compendium.te001-core-rulebook.Items.WeYvQBnwAWkLdvyR
       duplicateSource: null
     _key: '!actors.items!tbqGzMeQeCA3n1Mt.WNyng6MMW4TRC8gY'
-  - _id: 8qOE1DuycnNVQNNq
-    name: Machete
-    type: meleeweapon
-    img: systems/torgeternity/images/icons/axe-icon.webp
-    effects:
-      - origin: Compendium.te001-core-rulebook.Items.r116QllfSDV3jAJs
-        duration:
-          startTime: null
-          seconds: null
-          combat: null
-          rounds: null
-          turns: null
-          startRound: null
-          startTurn: null
-        disabled: false
-        _id: 8snMeIc4dX1nteBx
-        changes:
-          - key: system.skills.survival.isFav
-            mode: 4
-            value: '1'
-            priority: null
-        tint: '#ffffff'
-        transfer: true
-        flags: {}
-        name: Survival favored
-        description: ''
-        statuses: []
-        _stats:
-          coreVersion: '12.330'
-          systemId: null
-          systemVersion: null
-          createdTime: null
-          modifiedTime: null
-          lastModifiedBy: null
-          compendiumSource: null
-          duplicateSource: null
-        img: icons/svg/aura.svg
-        type: base
-        system: {}
-        sort: 0
-        _key: >-
-          !actors.items.effects!tbqGzMeQeCA3n1Mt.8qOE1DuycnNVQNNq.8snMeIc4dX1nteBx
-    folder: null
-    sort: 47500000
-    flags:
-      core:
-        sourceId: Compendium.te001-core-rulebook.Items.r116QllfSDV3jAJs
-    system:
-      cosm: coreEarth
-      description: >-
-        <p>Designed for cutting through thick foliage, these mid-sized,
-        single-edged blades are also perfectly useful for cutting flesh. Modern
-        machetes have builtin tools and features that make <em>survival</em>
-        tests Favored.</p>
-
-        <p>&nbsp;</p>
-
-        <p>Found in <strong>Core Rules</strong></p>
-      price: '40'
-      techlevel: 22
-      value: 8
-      ap: 0
-      attackWith: meleeWeapons
-      bonus: 2
-      chatNote: ''
-      damage: 2
-      damageType: strengthPlus
-      equipped: false
-      equippedClass: .item-unequipped
-      notes: Survival tests Favored
-    ownership:
-      default: 0
-      A9LyAqagoJJU3gDH: 3
-      CtisFurQNe9h7ABb: 3
-    _stats:
-      systemId: torgeternity
-      systemVersion: 12.2.0
-      coreVersion: '12.330'
-      createdTime: 1693912905652
-      modifiedTime: 1722157288934
-      lastModifiedBy: 93AMwcGe6H37rcPA
-      compendiumSource: Compendium.te001-core-rulebook.Items.r116QllfSDV3jAJs
-      duplicateSource: null
-    _key: '!actors.items!tbqGzMeQeCA3n1Mt.8qOE1DuycnNVQNNq'
   - _id: as5X028z0AGrj3Xz
     name: Glock 9mm
     type: firearm
@@ -378,13 +291,7 @@ items:
         sourceId: Compendium.te001-core-rulebook.Items.36zun3ZNNpg6Al8g
     system:
       cosm: coreEarth
-      description: >-
-        <p>A recoil-operated 9mm semiautomatic. Notable for its large,
-        doublestacked ammo magazine.</p>
-
-        <p>&nbsp;</p>
-
-        <p>Found in <strong>Core Rules</strong></p>
+      description: "<p>A recoil-operated 9mm semiautomatic. Notable for its large, doublestacked ammo magazine.</p>\n<p>\_</p>\n<p>Found in <strong>Core Rules</strong></p>"
       price: '250'
       techlevel: 22
       value: 12
@@ -396,10 +303,12 @@ items:
       chatNote: ''
       damage: 13
       damageType: flat
-      equipped: false
-      equippedClass: .item-unequipped
+      equipped: true
       notes: ''
       range: 10 / 25 / 40
+      secondaryAxiom:
+        selected: none
+        value: null
     ownership:
       default: 0
       A9LyAqagoJJU3gDH: 3
@@ -426,13 +335,7 @@ items:
         sourceId: Compendium.te001-core-rulebook.Items.36zun3ZNNpg6Al8g
     system:
       cosm: coreEarth
-      description: >-
-        <p>A recoil-operated 9mm semiautomatic. Notable for its large,
-        doublestacked ammo magazine.</p>
-
-        <p>&nbsp;</p>
-
-        <p>Found in <strong>Core Rules</strong></p>
+      description: "<p>A recoil-operated 9mm semiautomatic. Notable for its large, doublestacked ammo magazine.</p>\n<p>\_</p>\n<p>Found in <strong>Core Rules</strong></p>"
       price: '250'
       techlevel: 22
       value: 12
@@ -445,9 +348,11 @@ items:
       damage: 13
       damageType: flat
       equipped: false
-      equippedClass: .item-unequipped
       notes: ''
       range: 10 / 25 / 40
+      secondaryAxiom:
+        selected: none
+        value: null
     ownership:
       default: 0
       A9LyAqagoJJU3gDH: 3
@@ -474,18 +379,13 @@ items:
         sourceId: Compendium.te001-core-rulebook.Items.RclieVCtP5HgeKO5
     system:
       cosm: coreEarth
-      description: >-
-        <p>Climbing gear and safety measures take several minutes to set up, but
-        once done the character may use Dexterity in place of Strength to
-        climb.</p>
-
-        <p>&nbsp;</p>
-
-        <p>Found in <strong>Core Rules</strong></p>
+      description: "<p>Climbing gear and safety measures take several minutes to set up, but once done the character may use Dexterity in place of Strength to climb.</p>\n<p>\_</p>\n<p>Found in <strong>Core Rules</strong></p>"
       price: '100'
       techlevel: 23
       value: 10
-      equippedClass: item-equipped
+      secondaryAxiom:
+        selected: none
+        value: null
     ownership:
       default: 0
       A9LyAqagoJJU3gDH: 3
@@ -512,19 +412,13 @@ items:
         sourceId: Compendium.te001-core-rulebook.Items.4XLIEkO0JxOkiTxR
     system:
       cosm: coreEarth
-      description: >-
-        <p>Applications like GPS and a flashlight are included. Most cellphones
-        require signal boosting towers to get signal, so in low technology areas
-        a phone may still not have reception. Reality storms play havoc with
-        signals as well.</p>
-
-        <p>&nbsp;</p>
-
-        <p>Found in <strong>Core Rules</strong></p>
+      description: "<p>Applications like GPS and a flashlight are included. Most cellphones require signal boosting towers to get signal, so in low technology areas a phone may still not have reception. Reality storms play havoc with signals as well.</p>\n<p>\_</p>\n<p>Found in <strong>Core Rules</strong></p>"
       price: '300'
       techlevel: 23
       value: 13
-      equippedClass: item-equipped
+      secondaryAxiom:
+        selected: none
+        value: null
     ownership:
       default: 0
       A9LyAqagoJJU3gDH: 3
@@ -555,7 +449,9 @@ items:
       price: '15'
       techlevel: 8
       value: 6
-      equippedClass: item-equipped
+      secondaryAxiom:
+        selected: none
+        value: null
     ownership:
       default: 0
       A9LyAqagoJJU3gDH: 3
@@ -582,21 +478,13 @@ items:
         sourceId: Compendium.te001-core-rulebook.Items.OpsZKEBRm3gU5yXO
     system:
       cosm: coreEarth
-      description: >-
-        <p>A silencer is a tube or baffle added to the barrel of a weapon that
-        suppresses the amount of noise it makes when fired. This lowers the
-        damage value of the firearm by two, but reduces the sound of most
-        weapons by enough that firing doesn’t automatically give away a hidden
-        character’s position. Silenced weapons can only be fired out to Medium
-        range.</p>
-
-        <p>&nbsp;</p>
-
-        <p>Found in <strong>Core Rules</strong></p>
+      description: "<p>A silencer is a tube or baffle added to the barrel of a weapon that suppresses the amount of noise it makes when fired. This lowers the damage value of the firearm by two, but reduces the sound of most weapons by enough that firing doesn’t automatically give away a hidden character’s position. Silenced weapons can only be fired out to Medium range.</p>\n<p>\_</p>\n<p>Found in <strong>Core Rules</strong></p>"
       price: '60'
       techlevel: 21
       value: 9
-      equippedClass: item-equipped
+      secondaryAxiom:
+        selected: none
+        value: null
     ownership:
       default: 0
       A9LyAqagoJJU3gDH: 3
@@ -627,7 +515,9 @@ items:
       price: '5'
       techlevel: 2
       value: 4
-      equippedClass: item-equipped
+      secondaryAxiom:
+        selected: none
+        value: null
     ownership:
       default: 0
       A9LyAqagoJJU3gDH: 3
@@ -661,11 +551,13 @@ items:
       value: 10
       bonus: 1
       equipped: true
-      equippedClass: item-equipped
       maxDex: 12
       minStrength: null
       notes: Torso
       fatigue: null
+      secondaryAxiom:
+        selected: none
+        value: null
     ownership:
       default: 0
       A9LyAqagoJJU3gDH: 3
@@ -720,9 +612,88 @@ items:
       modifiedTime: 1722157277822
       lastModifiedBy: 93AMwcGe6H37rcPA
     _key: '!actors.items!tbqGzMeQeCA3n1Mt.6IVrXK6F4zKSRhbh'
+  - _id: KgPr4gJpKrjSjjIj
+    name: Machete
+    type: meleeweapon
+    img: systems/torgeternity/images/icons/axe-icon.webp
+    effects:
+      - origin: Compendium.te001-core-rulebook.Items.r116QllfSDV3jAJs
+        duration:
+          startTime: null
+          seconds: null
+          combat: null
+          rounds: null
+          turns: null
+          startRound: null
+          startTurn: null
+        disabled: false
+        _id: 8snMeIc4dX1nteBx
+        changes:
+          - key: system.skills.survival.isFav
+            mode: 5
+            value: 'true'
+            priority: null
+        tint: '#ffffff'
+        transfer: true
+        flags: {}
+        name: Survival Favored
+        description: ''
+        statuses: []
+        _stats:
+          compendiumSource: null
+          duplicateSource: null
+          coreVersion: '12.330'
+          systemId: torgeternity
+          systemVersion: 12.2.0
+          createdTime: null
+          modifiedTime: null
+          lastModifiedBy: null
+        img: icons/svg/aura.svg
+        type: base
+        system: {}
+        sort: 0
+        _key: >-
+          !actors.items.effects!tbqGzMeQeCA3n1Mt.KgPr4gJpKrjSjjIj.8snMeIc4dX1nteBx
+    folder: gjZiCPX5knOIpsHd
+    sort: 450000
+    flags:
+      core:
+        sourceId: Compendium.te001-core-rulebook.Items.r116QllfSDV3jAJs
+    system:
+      cosm: coreEarth
+      description: "<p>Designed for cutting through thick foliage, these mid-sized, single-edged blades are also perfectly useful for cutting flesh. Modern machetes have builtin tools and features that make <em>survival</em> tests Favored.</p>\n<p>\_</p>\n<p>Found in <strong>Core Rules</strong></p>"
+      price: '40'
+      techlevel: 22
+      value: 8
+      ap: 0
+      attackWith: meleeWeapons
+      bonus: 2
+      chatNote: ''
+      damage: 2
+      damageType: strengthPlus
+      equipped: true
+      notes: Survival tests Favored
+      secondaryAxiom:
+        selected: none
+        value: null
+      minStrength: null
+    ownership:
+      default: 0
+      A9LyAqagoJJU3gDH: 3
+      CtisFurQNe9h7ABb: 3
+      93AMwcGe6H37rcPA: 3
+    _stats:
+      compendiumSource: Compendium.te001-core-rulebook.Items.r116QllfSDV3jAJs
+      duplicateSource: null
+      coreVersion: '12.330'
+      systemId: torgeternity
+      systemVersion: 12.2.0
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+    _key: '!actors.items!tbqGzMeQeCA3n1Mt.KgPr4gJpKrjSjjIj'
 effects:
-  - origin: >-
-      Compendium.torgeternity.archetypes.Actor.tbqGzMeQeCA3n1Mt.Item.8qOE1DuycnNVQNNq
+  - origin: Actor.tbqGzMeQeCA3n1Mt.Item.KgPr4gJpKrjSjjIj
     duration:
       startTime: 0
       seconds: null
@@ -732,32 +703,32 @@ effects:
       startRound: null
       startTurn: null
     disabled: false
-    _id: zlNXxh3cq6A1F3Bm
+    _id: sLA9F9GQy1j6PpQ9
     changes:
       - key: system.skills.survival.isFav
-        mode: 4
-        value: '1'
+        mode: 5
+        value: 'true'
         priority: null
     tint: '#ffffff'
     transfer: false
     flags: {}
-    name: Survival favored
+    name: Survival Favored
     description: ''
     statuses: []
     _stats:
+      compendiumSource: null
+      duplicateSource: null
       coreVersion: '12.330'
-      systemId: null
-      systemVersion: null
+      systemId: torgeternity
+      systemVersion: 12.2.0
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
-      compendiumSource: null
-      duplicateSource: null
     img: icons/svg/aura.svg
     type: base
     system: {}
     sort: 0
-    _key: '!actors.effects!tbqGzMeQeCA3n1Mt.zlNXxh3cq6A1F3Bm'
+    _key: '!actors.effects!tbqGzMeQeCA3n1Mt.sLA9F9GQy1j6PpQ9'
 folder: null
 sort: 100001
 flags: {}
@@ -1115,7 +1086,7 @@ system:
     background: >-
       <p><img class="charimg"
       src="systems/torgeternity/images/characters/Relic_Raider.webp" alt=""
-      width="1138" height="1707"></p>
+      width="1138" height="1707" /></p>
 
       <p
       class="moreheight">@UUID[Compendium.torgeternity.handouts.JournalEntry.Knhh8vqtjSylJo5Z.JournalEntryPage.tuOeVEYqdKLQkea4]{Archetype
@@ -1124,28 +1095,28 @@ system:
       <h3>Overview</h3>
 
       <p>Before the Possibility Wars you were interested in archeology, but it
-      wasn&rsquo;t your career. As the world began to change, the tombs, crypts,
-      and shrines across the planet changed into sources of danger and power.
-      You changed too, and now you&rsquo;re quick, clever, and bold enough to
-      find the relics hidden within such sites.</p>
+      wasn’t your career. As the world began to change, the tombs, crypts, and
+      shrines across the planet changed into sources of danger and power. You
+      changed too, and now you’re quick, clever, and bold enough to find the
+      relics hidden within such sites.</p>
 
       <p>The rewards of such expeditions are worth the risk. Some dark places
       hide information about the Possibility Raiders or the monsters who serve
       them. Others contain treasures, and the most valuable are artifacts called
-      Eternity Shards&mdash;desperately sought by both the Delphi Council and
-      the High Lords.</p>
+      Eternity Shards—desperately sought by both the Delphi Council and the High
+      Lords.</p>
 
       <h3>Tactics</h3>
 
       <p>Your high <em>Dexterity </em>and <em>dodge </em>allow you to take huge
-      risks and usually escape unscathed. Your defenses in melee aren&rsquo;t as
-      good, so keep your distance whenever possible. Your machete is a weapon of
-      last resort, but is handy when drawn along with a pistol to gain your
-      melee weapons defense against nearby foes. The other option is blazing
-      away with two pistols at a time, which gives a +2 bonus to hit!</p>
+      risks and usually escape unscathed. Your defenses in melee aren’t as good,
+      so keep your distance whenever possible. Your machete is a weapon of last
+      resort, but is handy when drawn along with a pistol to gain your melee
+      weapons defense against nearby foes. The other option is blazing away with
+      two pistols at a time, which gives a +2 bonus to hit!</p>
 
-      <p>Use <em>maneuver </em>to set up an opponent, especially if it&rsquo;s
-      an Approved Action.</p>
+      <p>Use <em>maneuver </em>to set up an opponent, especially if it’s an
+      Approved Action.</p>
 
       <h3>Moment of Crisis</h3>
 
@@ -1157,8 +1128,8 @@ system:
 
       <h3>Quote</h3>
 
-      <p>&ldquo;It belongs in a museum! Well, perhaps not, but there&rsquo;s no
-      way I&rsquo;m letting you have it!&ldquo;</p>
+      <p>“It belongs in a museum! Well, perhaps not, but there’s no way I’m
+      letting you have it!“</p>
 
       <h3>Description</h3>
 
@@ -1283,11 +1254,11 @@ prototypeToken:
       texture: null
 _stats:
   systemId: torgeternity
-  systemVersion: 3.8.1
+  systemVersion: 12.2.0
   coreVersion: '12.330'
   createdTime: 1693912855771
-  modifiedTime: 1716827808133
-  lastModifiedBy: VAnYow5sWS9EJzo0
+  modifiedTime: 1722355493847
+  lastModifiedBy: 93AMwcGe6H37rcPA
   compendiumSource: null
   duplicateSource: null
 _key: '!actors!tbqGzMeQeCA3n1Mt'
