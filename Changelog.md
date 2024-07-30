@@ -3,6 +3,7 @@
 ## v. 12.2.1
 
 - With the new hook on end of turn in ct, active defense was deleted as well. Squished that (it's about the end of the round, this will be part of 12.3.0)
+- Migration for active effects that set isFav to 1 (it's boolean now) [#439](https://github.com/gmmatt/torgeternity/issues/439)
 
 ## v. 12.2.0
 
