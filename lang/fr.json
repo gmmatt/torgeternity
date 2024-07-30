@@ -32,6 +32,12 @@
       "spirit": "Spirituel",
       "tech": "Tech"      
     },
+    "axioms": {      
+      "magic": "Magie",
+      "social": "Social",
+      "spirit": "Spirituel",
+      "tech": "Tech"      
+    },
     "cardTypes": {
       "activeDrama": "Carte Action active",
       "cosm": "Cosm",

@@ -10,6 +10,13 @@
       "cosm": "Cosm"
     }
   },
+  "TYPES": {
+    "Card": {
+      "destiny": "Schicksal",
+      "drama": "Drama",
+      "cosm": "Cosm"
+    }
+  },
   "torgeternity": {
     "attackTypes": {
       "energyWeapons": "Energiewaffen",
@@ -25,6 +32,12 @@
       "mind": "Verstand",
       "spirit": "Geist",
       "strength": "Stärke"
+    },
+    "axioms": {      
+      "magic": "Magie",
+      "social": "Sozial",
+      "spirit": "Spiritualität",
+      "tech": "Tech"      
     },
     "axioms": {      
       "magic": "Magie",

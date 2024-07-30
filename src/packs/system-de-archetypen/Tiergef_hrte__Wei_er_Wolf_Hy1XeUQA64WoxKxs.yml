@@ -246,7 +246,7 @@ system:
       baseAttribute: dexterity
       adds: 0
       isFav: false
-      groupName: other
+      groupName: combat
       unskilledUse: 1
       isThreatSkill: false
       defenseOnly: false
@@ -481,4 +481,3 @@ _stats:
   compendiumSource: Compendium.te001-core-rulebook.Actors.fImZbwzh0jbEYGN5
   duplicateSource: null
 _key: '!actors!Hy1XeUQA64WoxKxs'
-

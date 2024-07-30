@@ -791,7 +791,7 @@ system:
       baseAttribute: dexterity
       adds: 0
       isFav: false
-      groupName: other
+      groupName: combat
       unskilledUse: 1
       isThreatSkill: false
       defenseOnly: false
@@ -1026,4 +1026,3 @@ _stats:
   compendiumSource: Compendium.torgeternity.archetypes.non4XwpfJLE9GiST
   duplicateSource: null
 _key: '!actors!PmME1EHlNKv7l60D'
-
