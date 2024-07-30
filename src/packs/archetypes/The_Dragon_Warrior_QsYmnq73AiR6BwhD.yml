@@ -65,7 +65,7 @@ items:
       attackWith: missileWeapons
       chatNote: ''
       damage: 16
-      damageType: strengthPlus
+      damageType: flat
       equipped: false
       equippedClass: .item-unequipped
       minStrength: ''
@@ -78,7 +78,7 @@ items:
       systemVersion: 12.2.0
       coreVersion: '12.330'
       createdTime: null
-      modifiedTime: 1722154839275
+      modifiedTime: 1722347753223
       lastModifiedBy: 93AMwcGe6H37rcPA
       compendiumSource: Item.njMZnZIEFvRkHHIS
       duplicateSource: null
