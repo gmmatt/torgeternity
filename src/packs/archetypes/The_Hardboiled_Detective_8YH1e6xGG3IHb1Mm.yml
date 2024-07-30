@@ -3,33 +3,6 @@ name: The Hardboiled Detective
 type: stormknight
 img: systems/torgeternity/images/characters/Hardboiled_Detective.Avatar.webp
 items:
-  - _id: ihUuZFFwHUH4NiZg
-    name: Extra Magazines
-    type: gear
-    sort: 100001
-    flags:
-      core:
-        sourceId: Item.0EHW4xd7uD68qmYy
-    img: systems/torgeternity/images/icons/gear-icon.webp
-    effects: []
-    folder: null
-    system:
-      cosm: (None)
-      description: <p>Five extra Glock magazines.</p>
-      price: '0'
-      techlevel: 22
-      value: 0
-      equippedClass: item-equipped
-    ownership:
-      default: 0
-    _stats:
-      systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
-      createdTime: null
-      modifiedTime: 1693910800285
-      lastModifiedBy: CtisFurQNe9h7ABb
-    _key: '!actors.items!8YH1e6xGG3IHb1Mm.ihUuZFFwHUH4NiZg'
   - _id: jWuf9aAkgGTwsYnG
     name: Flashlight
     type: gear
@@ -41,21 +14,25 @@ items:
     effects: []
     folder: null
     system:
-      cosm: Nile Empire
+      cosm: nileEmpire
       description: <p>Found in <strong>Core Rules</strong></p>
       price: '10'
       techlevel: 20
       value: 5
-      equippedClass: item-equipped
+      secondaryAxiom:
+        selected: none
+        value: null
     ownership:
       default: 0
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: null
-      modifiedTime: 1693910817573
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722156316072
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Compendium.te001-core-rulebook.Items.tEnSd1UUK2wTfebw
+      duplicateSource: null
     _key: '!actors.items!8YH1e6xGG3IHb1Mm.jWuf9aAkgGTwsYnG'
   - _id: zgecpNvWeMZKsMos
     name: Police Badge
@@ -68,21 +45,25 @@ items:
     effects: []
     folder: null
     system:
-      cosm: (None)
+      cosm: coreEarth
       description: <p>Local legal authority.</p>
       price: '0'
       techlevel: 22
       value: 0
-      equippedClass: item-equipped
+      secondaryAxiom:
+        selected: none
+        value: null
     ownership:
       default: 0
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: null
-      modifiedTime: 1693910805956
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722156306520
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Item.oxtzxXGFWhIVh6hL
+      duplicateSource: null
     _key: '!actors.items!8YH1e6xGG3IHb1Mm.zgecpNvWeMZKsMos'
   - _id: qcmldTNf04jWAjjL
     name: Mobile Phone
@@ -95,29 +76,25 @@ items:
     effects: []
     folder: null
     system:
-      cosm: Core Earth
-      description: >-
-        <p>Applications like GPS and a flashlight are included. Most cellphones
-        require signal boosting towers to get signal, so in low technology areas
-        a phone may still not have reception. Reality storms play havoc with
-        signals as well.</p>
-
-        <p>&nbsp;</p>
-
-        <p>Found in <strong>Core Rules</strong></p>
+      cosm: coreEarth
+      description: "<p>Applications like GPS and a flashlight are included. Most cellphones require signal boosting towers to get signal, so in low technology areas a phone may still not have reception. Reality storms play havoc with signals as well.</p>\n<p>\_</p>\n<p>Found in <strong>Core Rules</strong></p>"
       price: '300'
       techlevel: 23
       value: 13
-      equippedClass: item-equipped
+      secondaryAxiom:
+        selected: none
+        value: null
     ownership:
       default: 0
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: null
-      modifiedTime: 1693910837612
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722156320023
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Compendium.te001-core-rulebook.Items.4XLIEkO0JxOkiTxR
+      duplicateSource: null
     _key: '!actors.items!8YH1e6xGG3IHb1Mm.qcmldTNf04jWAjjL'
   - _id: mFcHmwVkp1gSZn98
     name: Handcuffs/Speedcuffs
@@ -130,29 +107,25 @@ items:
     effects: []
     folder: null
     system:
-      cosm: Nile Empire
-      description: >-
-        <p>Sometimes called speedcuffs. Attaching handcuffs requires a Good
-        Grapple result (see page 123). A cuffed target’s hands are restrained
-        until the cuffs are unlocked or broken — Toughness 18 or a Heroic (DN
-        18) Strength test.</p>
-
-        <p>&nbsp;</p>
-
-        <p>Found in <strong>Core Rules</strong></p>
+      cosm: nileEmpire
+      description: "<p>Sometimes called speedcuffs. Attaching handcuffs requires a Good Grapple result (see page 123). A cuffed target’s hands are restrained until the cuffs are unlocked or broken — Toughness 18 or a Heroic (DN 18) Strength test.</p>\n<p>\_</p>\n<p>Found in <strong>Core Rules</strong></p>"
       price: '50'
       techlevel: 19
       value: 9
-      equippedClass: item-equipped
+      secondaryAxiom:
+        selected: none
+        value: null
     ownership:
       default: 0
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: null
-      modifiedTime: 1693910843421
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722156331367
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Compendium.te001-core-rulebook.Items.UAnNKmonb2gzDB1j
+      duplicateSource: null
     _key: '!actors.items!8YH1e6xGG3IHb1Mm.mFcHmwVkp1gSZn98'
   - _id: ZMdLrD4bgdBjoV7j
     name: Sunglasses
@@ -165,21 +138,25 @@ items:
     effects: []
     folder: null
     system:
-      cosm: Nile Empire
+      cosm: nileEmpire
       description: <p>Found in <strong>Core Rules</strong></p>
       price: '25'
       techlevel: 20
       value: 7
-      equippedClass: item-equipped
+      secondaryAxiom:
+        selected: none
+        value: null
     ownership:
       default: 0
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: null
-      modifiedTime: 1693910849357
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722156335680
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Compendium.te001-core-rulebook.Items.lmrP9mPgvki7BNrL
+      duplicateSource: null
     _key: '!actors.items!8YH1e6xGG3IHb1Mm.ZMdLrD4bgdBjoV7j'
   - _id: KpWgjWWFgY2tXQbG
     name: Stylish Clothing
@@ -192,21 +169,25 @@ items:
     effects: []
     folder: null
     system:
-      cosm: Core Earth
+      cosm: coreEarth
       description: <p>Looking good has no quitting time.</p>
       price: '0'
       techlevel: 22
       value: 0
-      equippedClass: item-equipped
+      secondaryAxiom:
+        selected: none
+        value: null
     ownership:
       default: 0
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: null
-      modifiedTime: 1693910823613
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722156311392
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Item.2JInMXbRcbRiQo0P
+      duplicateSource: null
     _key: '!actors.items!8YH1e6xGG3IHb1Mm.KpWgjWWFgY2tXQbG'
   - _id: NTpPoGBgrWUXPP8s
     name: Fist
@@ -231,10 +212,12 @@ items:
     _stats:
       systemId: torgeternity
       systemVersion: 3.1.1
-      coreVersion: '11.308'
+      coreVersion: '12.330'
       createdTime: null
       modifiedTime: 1694869367347
       lastModifiedBy: CtisFurQNe9h7ABb
+      compendiumSource: Item.ewfPYWfFRJSZ1FOs
+      duplicateSource: null
     _key: '!actors.items!8YH1e6xGG3IHb1Mm.NTpPoGBgrWUXPP8s'
   - _id: Bk7zje6BZXFbkWfa
     name: Block Strike
@@ -248,17 +231,10 @@ items:
         sourceId: Compendium.te001-core-rulebook.Items.6yvgujLe6KwpQj8J
     system:
       category: kiPowers
-      cosm: Pan-Pacifica
-      description: >-
-        <p>When a foe misses the martial artist with a melee attack, she may
-        take one shock to immediately make a melee attack of her own against
-        that opponent.</p>
-
-        <p>&nbsp;</p>
-
-        <p>Found in <strong>Core Rules</strong></p>
+      cosm: panPacifica
+      description: "<p>When a foe misses the martial artist with a melee attack, she may take one shock to immediately make a melee attack of her own against that opponent.</p>\n<p>\_</p>\n<p>Found in <strong>Core Rules</strong></p>"
       prerequisites: Spirit 8+, at least three adds in unarmed combat
-      generalContradiction: false
+      generalContradiction: true
       pulpPowers:
         enhancement01:
           description: ''
@@ -333,48 +309,196 @@ items:
         limitation10: ''
         limitationNumber: 0
       timestaken: '1'
+      secondaryAxiom:
+        selected: none
+        value: null
     ownership:
       default: 0
       A9LyAqagoJJU3gDH: 3
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: 1693910524596
-      modifiedTime: 1693910539996
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722153046441
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Compendium.te001-core-rulebook.Items.6yvgujLe6KwpQj8J
+      duplicateSource: null
     _key: '!actors.items!8YH1e6xGG3IHb1Mm.Bk7zje6BZXFbkWfa'
-  - _id: IjNwvOSJXZejSwQ2
+  - _id: Myu554tiwfKlmiJo
+    name: Glock 9mm
+    type: firearm
+    img: systems/torgeternity/images/icons/firearm-icon.webp
+    effects: []
+    folder: null
+    sort: 3400000
+    flags:
+      core:
+        sourceId: Compendium.te001-core-rulebook.Items.36zun3ZNNpg6Al8g
+    system:
+      cosm: coreEarth
+      description: "<p>A recoil-operated 9mm semiautomatic. Notable for its large, doublestacked ammo magazine.</p>\n<p>\_</p>\n<p>Found in <strong>Core Rules</strong></p>"
+      price: '250'
+      techlevel: 22
+      value: 12
+      ammo:
+        max: 15
+        value: 15
+      ap: 0
+      attackWith: fireCombat
+      chatNote: ''
+      damage: 13
+      damageType: flat
+      equipped: false
+      notes: ''
+      range: 10 / 25 / 40
+      secondaryAxiom:
+        selected: none
+        value: null
+    ownership:
+      default: 0
+      A9LyAqagoJJU3gDH: 3
+      CtisFurQNe9h7ABb: 3
+    _stats:
+      systemId: torgeternity
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
+      createdTime: 1693910723284
+      modifiedTime: 1722156396480
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Compendium.te001-core-rulebook.Items.36zun3ZNNpg6Al8g
+      duplicateSource: null
+    _key: '!actors.items!8YH1e6xGG3IHb1Mm.Myu554tiwfKlmiJo'
+  - _id: Hsza99OCeUWSYmQq
+    name: Glock 9mm
+    type: firearm
+    img: systems/torgeternity/images/icons/firearm-icon.webp
+    effects: []
+    folder: null
+    sort: 3400000
+    flags:
+      core:
+        sourceId: Compendium.te001-core-rulebook.Items.36zun3ZNNpg6Al8g
+    system:
+      cosm: coreEarth
+      description: "<p>A recoil-operated 9mm semiautomatic. Notable for its large, doublestacked ammo magazine.</p>\n<p>\_</p>\n<p>Found in <strong>Core Rules</strong></p>"
+      price: '250'
+      techlevel: 22
+      value: 12
+      ammo:
+        max: 15
+        value: 15
+      ap: 0
+      attackWith: fireCombat
+      chatNote: ''
+      damage: 13
+      damageType: flat
+      equipped: false
+      notes: ''
+      range: 10 / 25 / 40
+      secondaryAxiom:
+        selected: none
+        value: null
+    ownership:
+      default: 0
+      A9LyAqagoJJU3gDH: 3
+      CtisFurQNe9h7ABb: 3
+    _stats:
+      systemId: torgeternity
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
+      createdTime: 1693910724556
+      modifiedTime: 1722156354199
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Compendium.te001-core-rulebook.Items.36zun3ZNNpg6Al8g
+      duplicateSource: null
+    _key: '!actors.items!8YH1e6xGG3IHb1Mm.Hsza99OCeUWSYmQq'
+  - _id: mfuWfRMGqxapJsWP
+    name: Leather Jacket
+    type: armor
+    img: systems/torgeternity/images/icons/armor-icon.webp
+    effects: []
+    folder: null
+    sort: 200000
+    flags:
+      core:
+        sourceId: Compendium.te001-core-rulebook.Items.Item.34ioFwhBc4c39YFU
+    system:
+      cosm: nileEmpire
+      description: >-
+        <p>@UUID[Compendium.te001-core-rulebook.rules.pwneQ55M0nnDH0Us.JournalEntryPage.qKdamp4rrcX6TTt0#full-body/torso:]{Torso}</p>
+      price: '100'
+      techlevel: 19
+      value: 10
+      bonus: 1
+      equipped: true
+      maxDex: 12
+      minStrength: null
+      notes: Torso
+      fatigue: null
+      secondaryAxiom:
+        selected: none
+        value: null
+    ownership:
+      default: 0
+      A9LyAqagoJJU3gDH: 3
+      CtisFurQNe9h7ABb: 3
+    _stats:
+      systemId: torgeternity
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
+      createdTime: 1711551146690
+      modifiedTime: 1722156341711
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Compendium.te001-core-rulebook.Items.Item.34ioFwhBc4c39YFU
+      duplicateSource: null
+    _key: '!actors.items!8YH1e6xGG3IHb1Mm.mfuWfRMGqxapJsWP'
+  - name: Extra Magazines
+    type: ammunition
+    _id: ia236qUPeDlZZwHq
+    img: systems/torgeternity/images/icons/ammo-icon.webp
+    system:
+      cosm: ''
+      description: >-
+        <p><span style="font-family:'Palatino Linotype'">Five extra Glock
+        magazines.</span></p>
+      price: ''
+      techlevel: 21
+      value: 0
+      secondaryAxiom:
+        selected: none
+        value: null
+      type: ''
+      quantity: 5
+      damageMod: 0
+      apMod: 0
+      fireDamage: false
+      blastRadius: None
+      darknessMod: none
+      reach: ''
+    effects: []
+    folder: null
+    sort: 0
+    ownership:
+      default: 0
+      93AMwcGe6H37rcPA: 3
+    flags: {}
+    _stats:
+      compendiumSource: Item.KRYQ71jof26XeGEv
+      duplicateSource: null
+      coreVersion: '12.330'
+      systemId: torgeternity
+      systemVersion: 12.2.0
+      createdTime: 1722108966625
+      modifiedTime: 1722156457727
+      lastModifiedBy: 93AMwcGe6H37rcPA
+    _key: '!actors.items!8YH1e6xGG3IHb1Mm.ia236qUPeDlZZwHq'
+  - _id: zclFg3b3Wpe9rero
     name: Brawler
     type: perk
     img: systems/torgeternity/images/icons/reality-icon.webp
-    effects:
-      - icon: icons/svg/aura.svg
-        origin: Item.WDcZathUzQ5AKAu9
-        duration:
-          startTime: null
-          seconds: null
-          combat: null
-          rounds: null
-          turns: null
-          startRound: null
-          startTurn: null
-        disabled: false
-        name: Unarmed Damage +2
-        _id: QQCo7NoEqsyECuj2
-        changes:
-          - key: system.unarmedDamage
-            mode: 2
-            value: '2'
-            priority: null
-        description: ''
-        transfer: true
-        statuses: []
-        flags: {}
-        tint: null
-        _key: >-
-          !actors.items.effects!8YH1e6xGG3IHb1Mm.IjNwvOSJXZejSwQ2.QQCo7NoEqsyECuj2
+    effects: []
     folder: null
     sort: 100000
     flags:
@@ -382,20 +506,8 @@ items:
         sourceId: Compendium.te001-core-rulebook.Items.8DjcKPmDCOTdObL6
     system:
       category: prowess
-      cosm: (None)
-      description: >-
-        <p>The fighter hits hard thanks to anything from dirty tricks and a good
-        uppercut to training in karate, jujitsu, tae kwon do, or similar
-        hand-tohand fighting styles. Characters with this Perk cause
-        <em>Strength</em> +2 damage with their bare hands when attacking with
-        <em>unarmed combat</em>. This stacks with any other <em>unarmed
-        combat</em> bonuses such as an edeinos’s claw attack.</p><p>More
-        advanced and exotic techniques are taught in Pan-Pacifica under the
-        <strong>Ki Powers Perks</strong>.</p>
-
-        <p>&nbsp;</p>
-
-        <p>Found in <strong>Core Rules</strong></p>
+      cosm: none
+      description: "<p>The fighter hits hard thanks to anything from dirty tricks and a good uppercut to training in karate, jujitsu, tae kwon do, or similar hand-tohand fighting styles. Characters with this Perk cause <em>Strength</em> +2 damage with their bare hands when attacking with <em>unarmed combat</em>. This stacks with any other <em>unarmed combat</em> bonuses such as an edeinos’s claw attack.</p><p>More advanced and exotic techniques are taught in Pan-Pacifica under the <strong>Ki Powers Perks</strong>.</p>\n<p>\_</p>\n<p>Found in <strong>Core Rules</strong></p>"
       prerequisites: At least two adds in unarmed combat
       generalContradiction: false
       pulpPowers:
@@ -472,172 +584,25 @@ items:
         limitation10: ''
         limitationNumber: 0
       timestaken: '1'
+      secondaryAxiom:
+        selected: none
+        value: null
     ownership:
       default: 0
       A9LyAqagoJJU3gDH: 3
       CtisFurQNe9h7ABb: 3
+      93AMwcGe6H37rcPA: 3
     _stats:
+      compendiumSource: Compendium.te001-core-rulebook.Items.8DjcKPmDCOTdObL6
+      duplicateSource: null
+      coreVersion: '12.330'
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
-      createdTime: 1693910528940
-      modifiedTime: 1693910661261
-      lastModifiedBy: CtisFurQNe9h7ABb
-    _key: '!actors.items!8YH1e6xGG3IHb1Mm.IjNwvOSJXZejSwQ2'
-  - _id: Myu554tiwfKlmiJo
-    name: Glock 9mm
-    type: firearm
-    img: systems/torgeternity/images/icons/firearm-icon.webp
-    effects: []
-    folder: null
-    sort: 3400000
-    flags:
-      core:
-        sourceId: Compendium.te001-core-rulebook.Items.36zun3ZNNpg6Al8g
-    system:
-      cosm: Core Earth
-      description: >-
-        <p>A recoil-operated 9mm semiautomatic. Notable for its large,
-        doublestacked ammo magazine.</p>
-
-        <p>&nbsp;</p>
-
-        <p>Found in <strong>Core Rules</strong></p>
-      price: '250'
-      techlevel: 22
-      value: 12
-      ammo:
-        max: 15
-        value: 15
-      ap: 0
-      attackWith: fireCombat
-      chatNote: ''
-      damage: 13
-      damageType: flat
-      equipped: false
-      equippedClass: .item-unequipped
-      notes: ''
-      range: 10 / 25 / 40
-    ownership:
-      default: 0
-      A9LyAqagoJJU3gDH: 3
-      CtisFurQNe9h7ABb: 3
-    _stats:
-      systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
-      createdTime: 1693910723284
-      modifiedTime: 1693910723284
-      lastModifiedBy: CtisFurQNe9h7ABb
-    _key: '!actors.items!8YH1e6xGG3IHb1Mm.Myu554tiwfKlmiJo'
-  - _id: Hsza99OCeUWSYmQq
-    name: Glock 9mm
-    type: firearm
-    img: systems/torgeternity/images/icons/firearm-icon.webp
-    effects: []
-    folder: null
-    sort: 3400000
-    flags:
-      core:
-        sourceId: Compendium.te001-core-rulebook.Items.36zun3ZNNpg6Al8g
-    system:
-      cosm: Core Earth
-      description: >-
-        <p>A recoil-operated 9mm semiautomatic. Notable for its large,
-        doublestacked ammo magazine.</p>
-
-        <p>&nbsp;</p>
-
-        <p>Found in <strong>Core Rules</strong></p>
-      price: '250'
-      techlevel: 22
-      value: 12
-      ammo:
-        max: 15
-        value: 15
-      ap: 0
-      attackWith: fireCombat
-      chatNote: ''
-      damage: 13
-      damageType: flat
-      equipped: false
-      equippedClass: .item-unequipped
-      notes: ''
-      range: 10 / 25 / 40
-    ownership:
-      default: 0
-      A9LyAqagoJJU3gDH: 3
-      CtisFurQNe9h7ABb: 3
-    _stats:
-      systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
-      createdTime: 1693910724556
-      modifiedTime: 1693910724556
-      lastModifiedBy: CtisFurQNe9h7ABb
-    _key: '!actors.items!8YH1e6xGG3IHb1Mm.Hsza99OCeUWSYmQq'
-  - _id: mfuWfRMGqxapJsWP
-    name: Leather Jacket
-    type: armor
-    img: systems/torgeternity/images/icons/armor-icon.webp
-    effects: []
-    folder: null
-    sort: 200000
-    flags:
-      core:
-        sourceId: Compendium.te001-core-rulebook.Items.Item.34ioFwhBc4c39YFU
-    system:
-      cosm: Core Earth
-      description: >-
-        <p>@UUID[Compendium.te001-core-rulebook.rules.pwneQ55M0nnDH0Us.JournalEntryPage.qKdamp4rrcX6TTt0#full-body/torso:]{Torso}</p>
-      price: '100'
-      techlevel: 19
-      value: 10
-      bonus: 1
-      equipped: true
-      equippedClass: item-equipped
-      maxDex: 12
-      minStrength: null
-      notes: Torso
-      fatigue: null
-    ownership:
-      default: 0
-      A9LyAqagoJJU3gDH: 3
-      CtisFurQNe9h7ABb: 3
-    _stats:
-      systemId: torgeternity
-      systemVersion: 3.7.0
-      coreVersion: '11.315'
-      createdTime: 1711551146690
-      modifiedTime: 1711705040447
-      lastModifiedBy: CtisFurQNe9h7ABb
-    _key: '!actors.items!8YH1e6xGG3IHb1Mm.mfuWfRMGqxapJsWP'
-effects:
-  - icon: icons/svg/aura.svg
-    origin: >-
-      Compendium.torgeternity.archetypes.Actor.8YH1e6xGG3IHb1Mm.Item.IjNwvOSJXZejSwQ2
-    duration:
-      startTime: 0
-      seconds: null
-      combat: null
-      rounds: null
-      turns: null
-      startRound: null
-      startTurn: null
-    disabled: true
-    name: Unarmed Damage +2
-    _id: gyrdPX6sl8dtPIem
-    changes:
-      - key: system.unarmedDamage
-        mode: 2
-        value: '2'
-        priority: null
-    description: ''
-    transfer: false
-    statuses: []
-    flags: {}
-    tint: null
-    _key: '!actors.effects!8YH1e6xGG3IHb1Mm.gyrdPX6sl8dtPIem'
+      systemVersion: 12.2.0
+      createdTime: 1722156271303
+      modifiedTime: 1722156271303
+      lastModifiedBy: 93AMwcGe6H37rcPA
+    _key: '!actors.items!8YH1e6xGG3IHb1Mm.zclFg3b3Wpe9rero'
+effects: []
 folder: null
 sort: 100001
 flags: {}
@@ -995,7 +960,7 @@ system:
     background: >-
       <p><img class="charimg"
       src="systems/torgeternity/images/characters/Hardboiled_Detective.webp"
-      alt="" width="1424" height="1858"></p>
+      alt="" width="1424" height="1858" /></p>
 
       <p
       class="moreheight">@UUID[Compendium.torgeternity.handouts.JournalEntry.Knhh8vqtjSylJo5Z.JournalEntryPage.jGMEVr72h0Jjm3CQ]{Archetype
@@ -1005,10 +970,10 @@ system:
 
       <p>Years on the mean streets of Hong Kong have hardened you into a lethal
       weapon. Transcending into a Storm Knight only heightened your abilities.
-      First and foremost, you investigate crimes. You&rsquo;ve been trained to
-      follow leads, question witnesses, and uphold law and order. When the bad
-      guys resist arrest, and they always resist arrest, things get violent and
-      your other skills come into play.</p>
+      First and foremost, you investigate crimes. You’ve been trained to follow
+      leads, question witnesses, and uphold law and order. When the bad guys
+      resist arrest, and they always resist arrest, things get violent and your
+      other skills come into play.</p>
 
       <h3>Tactics</h3>
 
@@ -1016,35 +981,34 @@ system:
       blazing away with your two 9mm pistols. Your high <em>dodge </em>and
       <em>unarmed combat</em> provide solid defenses against opponents at any
       distance. <em>Maneuver </em>is your strong interaction, try to use it
-      whenever it&rsquo;s an Approved Action. The Block Strike Perk lets you
-      punish a melee attacker who misses you&mdash;so long as you have the Shock
-      to burn. You may use an unarmed attack even while both pistols are
-      equipped; you just kick or strike with your elbows.</p>
+      whenever it’s an Approved Action. The Block Strike Perk lets you punish a
+      melee attacker who misses you—so long as you have the Shock to burn. You
+      may use an unarmed attack even while both pistols are equipped; you just
+      kick or strike with your elbows.</p>
 
       <h3>Moment of Crisis</h3>
 
-      <p>Something big was going down, and some corporate type named
-      &ldquo;Kanawa&ldquo; was at the center of it. You were threatened with
-      suspension and asked to let it go by your superiors. Someone even tried to
-      kill you. You stayed on the case, even after the Contagion began, and your
-      stubborn pursuit triggered a subtle transformation. Alternatively, the
-      change may have come when you defended a group of supposedly infected
-      refugees from a murderous Kanawa Corporation &ldquo;Containment
-      Team.&ldquo;</p>
+      <p>Something big was going down, and some corporate type named “Kanawa“
+      was at the center of it. You were threatened with suspension and asked to
+      let it go by your superiors. Someone even tried to kill you. You stayed on
+      the case, even after the Contagion began, and your stubborn pursuit
+      triggered a subtle transformation. Alternatively, the change may have come
+      when you defended a group of supposedly infected refugees from a murderous
+      Kanawa Corporation “Containment Team.“</p>
 
       <h3>Quote</h3>
 
-      <p>&ldquo;Whether it&rsquo;s jiangshi, criminals, or invaders from another
-      reality, one bullet can still make a difference.&ldquo;</p>
+      <p>“Whether it’s jiangshi, criminals, or invaders from another reality,
+      one bullet can still make a difference.“</p>
 
       <h3>Description</h3>
 
-      <p>Others may scoff at your leather jacket, but it&rsquo;s truly a
-      timeless fashion accessory. Plus it hides your two shoulder holsters very
-      well. Your badge is useful in Hong Kong where you have jurisdiction, but
-      it may work elsewhere in Pan-Pacifica so long as people don&rsquo;t look
-      at it too closely! You are intense, and don&rsquo;t tolerate disrespect
-      toward you or your badge.</p>
+      <p>Others may scoff at your leather jacket, but it’s truly a timeless
+      fashion accessory. Plus it hides your two shoulder holsters very well.
+      Your badge is useful in Hong Kong where you have jurisdiction, but it may
+      work elsewhere in Pan-Pacifica so long as people don’t look at it too
+      closely! You are intense, and don’t tolerate disrespect toward you or your
+      badge.</p>
 
       <h3>Agenda</h3>
 
@@ -1121,14 +1085,20 @@ prototypeToken:
       max: 1
     color: null
     attenuation: 0.5
+    negative: false
+    priority: 0
   texture:
     src: systems/torgeternity/images/characters/hardboiled_detective.Token.webp
-    tint: null
+    tint: '#ffffff'
     scaleX: 1
     scaleY: 1
     offsetX: 0
     offsetY: 0
     rotation: 0
+    anchorX: 0.5
+    anchorY: 0.5
+    fit: contain
+    alphaThreshold: 0.75
   sight:
     angle: 360
     enabled: false
@@ -1138,14 +1108,29 @@ prototypeToken:
     attenuation: 0.1
     saturation: 0
     contrast: 0
+    color: null
   appendNumber: false
   prependAdjective: false
   detectionModes: []
+  hexagonalShape: 0
+  occludable:
+    radius: 0
+  ring:
+    enabled: false
+    colors:
+      ring: null
+      background: null
+    effects: 1
+    subject:
+      scale: 1
+      texture: null
 _stats:
   systemId: torgeternity
-  systemVersion: 3.8.1
-  coreVersion: '11.315'
+  systemVersion: 12.2.0
+  coreVersion: '12.330'
   createdTime: 1693910524596
-  modifiedTime: 1716827807456
-  lastModifiedBy: VAnYow5sWS9EJzo0
+  modifiedTime: 1722355493847
+  lastModifiedBy: 93AMwcGe6H37rcPA
+  compendiumSource: null
+  duplicateSource: null
 _key: '!actors!8YH1e6xGG3IHb1Mm'

@@ -3,33 +3,6 @@ name: The Realm Runner
 type: stormknight
 img: systems/torgeternity/images/characters/Realm_Runner.Avatar.webp
 items:
-  - _id: DIBDRwUDfClPEtey
-    name: Extra Magazines
-    type: gear
-    sort: 1500000
-    flags:
-      core:
-        sourceId: Item.qZuQoegFPBYC6tEB
-    img: systems/torgeternity/images/icons/gear-icon.webp
-    effects: []
-    folder: null
-    system:
-      cosm: Core Earth
-      description: <p>Five reloads for Glock 9mm</p>
-      price: '20'
-      techlevel: 22
-      value: 6
-      equippedClass: item-equipped
-    ownership:
-      default: 0
-    _stats:
-      systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
-      createdTime: null
-      modifiedTime: 1693912519082
-      lastModifiedBy: CtisFurQNe9h7ABb
-    _key: '!actors.items!BpClx5rBCesWUzIN.DIBDRwUDfClPEtey'
   - _id: uwfWU4r0b3wdHGiX
     name: Realm Runner
     type: perk
@@ -42,15 +15,8 @@ items:
         sourceId: Compendium.te001-core-rulebook.Items.ADQgF3E47pmCCHys
     system:
       category: reality
-      cosm: Core Earth
-      description: >-
-        <p>The Storm Knight has a natural feel for manipulating reality. He
-        ignores four points of reality penalties when attempting to reconnect,
-        and may ignore disconnection the first time it happens in each act.</p>
-
-        <p>&nbsp;</p>
-
-        <p>Found in <strong>Core Rules</strong></p>
+      cosm: coreEarth
+      description: "<p>The Storm Knight has a natural feel for manipulating reality. He ignores four points of reality penalties when attempting to reconnect, and may ignore disconnection the first time it happens in each act.</p>\n<p>\_</p>\n<p>Found in <strong>Core Rules</strong></p>"
       prerequisites: ''
       generalContradiction: false
       pulpPowers:
@@ -126,89 +92,24 @@ items:
         limitation09: ''
         limitation10: ''
         limitationNumber: 0
-      timestaken: ''
+      timestaken: '1'
+      secondaryAxiom:
+        selected: none
+        value: null
     ownership:
       default: 0
       A9LyAqagoJJU3gDH: 3
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: 1693912370274
-      modifiedTime: 1693912370274
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722153459702
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Compendium.te001-core-rulebook.Items.ADQgF3E47pmCCHys
+      duplicateSource: null
     _key: '!actors.items!BpClx5rBCesWUzIN.uwfWU4r0b3wdHGiX'
-  - _id: ZE772oOuX6mg6EOc
-    name: Machete
-    type: meleeweapon
-    img: systems/torgeternity/images/icons/axe-icon.webp
-    effects:
-      - icon: icons/svg/aura.svg
-        origin: Compendium.te001-core-rulebook.Items.r116QllfSDV3jAJs
-        duration:
-          startTime: null
-          seconds: null
-          combat: null
-          rounds: null
-          turns: null
-          startRound: null
-          startTurn: null
-        disabled: false
-        _id: 8snMeIc4dX1nteBx
-        changes:
-          - key: system.skills.survival.isFav
-            mode: 4
-            value: '1'
-            priority: null
-        tint: null
-        transfer: true
-        flags: {}
-        name: Survival favored
-        description: ''
-        statuses: []
-        _key: >-
-          !actors.items.effects!BpClx5rBCesWUzIN.ZE772oOuX6mg6EOc.8snMeIc4dX1nteBx
-    folder: null
-    sort: 47500000
-    flags:
-      core:
-        sourceId: Compendium.te001-core-rulebook.Items.r116QllfSDV3jAJs
-    system:
-      cosm: Core Earth
-      description: >-
-        <p>Designed for cutting through thick foliage, these mid-sized,
-        single-edged blades are also perfectly useful for cutting flesh. Modern
-        machetes have builtin tools and features that make <em>survival</em>
-        tests Favored.</p>
-
-        <p>&nbsp;</p>
-
-        <p>Found in <strong>Core Rules</strong></p>
-      price: '40'
-      techlevel: 22
-      value: 8
-      ap: 0
-      attackWith: meleeWeapons
-      bonus: 2
-      chatNote: ''
-      damage: 2
-      damageType: strengthPlus
-      equipped: false
-      equippedClass: .item-unequipped
-      notes: Survival tests Favored
-    ownership:
-      default: 0
-      A9LyAqagoJJU3gDH: 3
-      CtisFurQNe9h7ABb: 3
-    _stats:
-      systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
-      createdTime: 1693912383426
-      modifiedTime: 1693912383426
-      lastModifiedBy: CtisFurQNe9h7ABb
-    _key: '!actors.items!BpClx5rBCesWUzIN.ZE772oOuX6mg6EOc'
   - _id: jDFKgbIvzl6CsXOY
     name: MAS Disruptor Grenade
     type: missileweapon
@@ -220,23 +121,8 @@ items:
       core:
         sourceId: Compendium.te001-core-rulebook.Items.gcwGTAcBHXmDUney
     system:
-      cosm: Cyberpapacy
-      description: >-
-        <p>@UUID[Compendium.te001-core-rulebook.rules.pwneQ55M0nnDH0Us.JournalEntryPage.EhKa65cpHvodUl2L#non-lethal-damage]{Non-Lethal}</p>
-
-        <p>@UUID[Compendium.te001-core-rulebook.rules.pwneQ55M0nnDH0Us.JournalEntryPage.EhKa65cpHvodUl2L#explosives-and-area-effect-attacks]{Blast}</p>
-
-        <p>Each grenade resembles a flat throwing disc. When it strikes the
-        ground or a target it emits a strong pulse meant to incapacitate anyone
-        nearby. Some disruptors use electric pulses, others use sonic waves, but
-        either has the same effect on those unfortunate enough to be caught
-        within the pulse!</p>
-
-        <p>updated in Cyberpapacy Sourcebook</p>
-
-        <p>&nbsp;</p>
-
-        <p>Found in <strong>Core Rules, Cyberpapacy Sourcebook</strong></p>
+      cosm: cyberpapacy
+      description: "<p>@UUID[Compendium.te001-core-rulebook.rules.pwneQ55M0nnDH0Us.JournalEntryPage.EhKa65cpHvodUl2L#non-lethal-damage]{Non-Lethal}</p>\n<p>@UUID[Compendium.te001-core-rulebook.rules.pwneQ55M0nnDH0Us.JournalEntryPage.EhKa65cpHvodUl2L#explosives-and-area-effect-attacks]{Blast}</p>\n<p>Each grenade resembles a flat throwing disc. When it strikes the ground or a target it emits a strong pulse meant to incapacitate anyone nearby. Some disruptors use electric pulses, others use sonic waves, but either has the same effect on those unfortunate enough to be caught within the pulse!</p>\n<p>updated in Cyberpapacy Sourcebook</p>\n<p>\_</p>\n<p>Found in <strong>Core Rules, Cyberpapacy Sourcebook</strong></p>"
       price: '100'
       techlevel: 26
       value: 10
@@ -249,21 +135,25 @@ items:
       damage: 16
       damageType: flat
       equipped: false
-      equippedClass: .item-unequipped
       minStrength: ''
       notes: Non-lethal, Medium Blast
       range: '-/2/50'
+      secondaryAxiom:
+        selected: none
+        value: null
     ownership:
       default: 0
       A9LyAqagoJJU3gDH: 3
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: 1693912407562
-      modifiedTime: 1693912407562
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722157170262
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Compendium.te001-core-rulebook.Items.gcwGTAcBHXmDUney
+      duplicateSource: null
     _key: '!actors.items!BpClx5rBCesWUzIN.jDFKgbIvzl6CsXOY'
   - _id: RxDRpiVQ29xDGiGX
     name: Glock 9mm
@@ -276,14 +166,8 @@ items:
       core:
         sourceId: Compendium.te001-core-rulebook.Items.36zun3ZNNpg6Al8g
     system:
-      cosm: Core Earth
-      description: >-
-        <p>A recoil-operated 9mm semiautomatic. Notable for its large,
-        doublestacked ammo magazine.</p>
-
-        <p>&nbsp;</p>
-
-        <p>Found in <strong>Core Rules</strong></p>
+      cosm: coreEarth
+      description: "<p>A recoil-operated 9mm semiautomatic. Notable for its large, doublestacked ammo magazine.</p>\n<p>\_</p>\n<p>Found in <strong>Core Rules</strong></p>"
       price: '250'
       techlevel: 22
       value: 12
@@ -295,21 +179,25 @@ items:
       chatNote: ''
       damage: 13
       damageType: flat
-      equipped: false
-      equippedClass: .item-unequipped
+      equipped: true
       notes: ''
       range: 10 / 25 / 40
+      secondaryAxiom:
+        selected: none
+        value: null
     ownership:
       default: 0
       A9LyAqagoJJU3gDH: 3
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: 1693912420479
-      modifiedTime: 1693912420479
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722157126694
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Compendium.te001-core-rulebook.Items.36zun3ZNNpg6Al8g
+      duplicateSource: null
     _key: '!actors.items!BpClx5rBCesWUzIN.RxDRpiVQ29xDGiGX'
   - _id: ZlZ8dDR8qO6ZyF9z
     name: Multi-Tool
@@ -322,29 +210,27 @@ items:
       core:
         sourceId: Compendium.te001-core-rulebook.Items.HzAmhij6mdm2Zac6
     system:
-      cosm: Core Earth
-      description: >-
-        <p>A handy device that combines clippers, screwdrivers, a wrench, and
-        other small tools into a single fold-out tool.</p>
-
-        <p>&nbsp;</p>
-
-        <p>Found in <strong>Core Rules</strong></p>
+      cosm: coreEarth
+      description: "<p>A handy device that combines clippers, screwdrivers, a wrench, and other small tools into a single fold-out tool.</p>\n<p>\_</p>\n<p>Found in <strong>Core Rules</strong></p>"
       price: '40'
       techlevel: 22
       value: 8
-      equippedClass: item-equipped
+      secondaryAxiom:
+        selected: none
+        value: null
     ownership:
       default: 0
       A9LyAqagoJJU3gDH: 3
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: 1693912492200
-      modifiedTime: 1693912492200
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722157230461
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Compendium.te001-core-rulebook.Items.HzAmhij6mdm2Zac6
+      duplicateSource: null
     _key: '!actors.items!BpClx5rBCesWUzIN.ZlZ8dDR8qO6ZyF9z'
   - _id: 9sBYXuMbD1Wt9ACk
     name: Healing Potion
@@ -357,29 +243,27 @@ items:
       core:
         sourceId: Compendium.te001-core-rulebook.Items.cyc4yMjoj7ve1Tj5
     system:
-      cosm: Aysle
-      description: >-
-        <p>Drinking this thick, clear liquid heals one wound and restores a [[/r
-        1d6x6max5]]{BD} of shock.</p>
-
-        <p>&nbsp;</p>
-
-        <p>Found in <strong>Core Rules, Aysle Sourcebook</strong></p>
+      cosm: aysle
+      description: "<p>Drinking this thick, clear liquid heals one wound and restores a [[/r 1d6x6max5]]{BD} of shock.</p>\n<p>\_</p>\n<p>Found in <strong>Core Rules, Aysle Sourcebook</strong></p>"
       price: '500'
       techlevel: 12
       value: 13
-      equippedClass: item-equipped
+      secondaryAxiom:
+        selected: magic
+        value: 13
     ownership:
       default: 0
       A9LyAqagoJJU3gDH: 3
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: 1693912497883
-      modifiedTime: 1693912514962
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722157244141
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Compendium.te001-core-rulebook.Items.cyc4yMjoj7ve1Tj5
+      duplicateSource: null
     _key: '!actors.items!BpClx5rBCesWUzIN.9sBYXuMbD1Wt9ACk'
   - _id: KjgBml4EdUym5Ebu
     name: Flashlight
@@ -392,23 +276,27 @@ items:
       core:
         sourceId: Compendium.te001-core-rulebook.Items.tEnSd1UUK2wTfebw
     system:
-      cosm: Nile Empire
+      cosm: nileEmpire
       description: <p>Found in <strong>Core Rules</strong></p>
       price: '10'
       techlevel: 20
       value: 5
-      equippedClass: item-equipped
+      secondaryAxiom:
+        selected: none
+        value: null
     ownership:
       default: 0
       A9LyAqagoJJU3gDH: 3
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: 1693912503154
-      modifiedTime: 1693912513658
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722157226086
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Compendium.te001-core-rulebook.Items.tEnSd1UUK2wTfebw
+      duplicateSource: null
     _key: '!actors.items!BpClx5rBCesWUzIN.KjgBml4EdUym5Ebu'
   - name: Prodigy
     type: perk
@@ -420,15 +308,8 @@ items:
         sourceId: Compendium.te001-core-rulebook.Items.Item.dT11RqKEyVnWbEHw
     system:
       category: reality
-      cosm: Core Earth
-      description: >-
-        <p>The character is filled with Possibility Energy. She begins each act
-        with an extra Possibiilty. This stacks with any other ability that
-        grants additional Possibilities.</p>
-
-        <p>&nbsp;</p>
-
-        <p>Found in <strong>Core Rules</strong></p>
+      cosm: coreEarth
+      description: "<p>The character is filled with Possibility Energy. She begins each act with an extra Possibiilty. This stacks with any other ability that grants additional Possibilities.</p>\n<p>\_</p>\n<p>Found in <strong>Core Rules</strong></p>"
       prerequisites: ''
       generalContradiction: false
       pulpPowers:
@@ -504,17 +385,22 @@ items:
         limitation09: ''
         limitation10: ''
         limitationNumber: 0
-      timestaken: ''
+      timestaken: '1'
+      secondaryAxiom:
+        selected: none
+        value: null
     ownership:
       default: 0
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: 1693912314258
-      modifiedTime: 1693913296275
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722153455822
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Compendium.te001-core-rulebook.Items.Item.dT11RqKEyVnWbEHw
+      duplicateSource: null
     _id: kT4xT1ZyGgyvWg9q
     sort: 300000
     _key: '!actors.items!BpClx5rBCesWUzIN.kT4xT1ZyGgyvWg9q'
@@ -529,7 +415,7 @@ items:
       core:
         sourceId: Compendium.te001-core-rulebook.Items.Item.34ioFwhBc4c39YFU
     system:
-      cosm: Core Earth
+      cosm: nileEmpire
       description: >-
         <p>@UUID[Compendium.te001-core-rulebook.rules.pwneQ55M0nnDH0Us.JournalEntryPage.qKdamp4rrcX6TTt0#full-body/torso:]{Torso}</p>
       price: '100'
@@ -537,27 +423,149 @@ items:
       value: 10
       bonus: 1
       equipped: true
-      equippedClass: item-equipped
       maxDex: 12
       minStrength: null
       notes: Torso
       fatigue: null
+      secondaryAxiom:
+        selected: none
+        value: null
     ownership:
       default: 0
       A9LyAqagoJJU3gDH: 3
       CtisFurQNe9h7ABb: 3
     _stats:
       systemId: torgeternity
-      systemVersion: 3.7.0
-      coreVersion: '11.315'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: 1711551146690
-      modifiedTime: 1711704588570
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722157209806
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Compendium.te001-core-rulebook.Items.Item.34ioFwhBc4c39YFU
+      duplicateSource: null
     _key: '!actors.items!BpClx5rBCesWUzIN.H4lAQvvvcSaBwk3A'
+  - name: Extra Magazines
+    type: ammunition
+    _id: pbkdXjZUi93kO25A
+    img: systems/torgeternity/images/icons/ammo-icon.webp
+    system:
+      cosm: ''
+      description: >-
+        <p><span style="font-family:'Palatino Linotype'">Five extra Glock
+        magazines.</span></p>
+      price: ''
+      techlevel: 21
+      value: 0
+      secondaryAxiom:
+        selected: none
+        value: null
+      type: ''
+      quantity: 5
+      damageMod: 0
+      apMod: 0
+      fireDamage: false
+      blastRadius: None
+      darknessMod: none
+      reach: ''
+    effects: []
+    folder: null
+    sort: 0
+    ownership:
+      default: 0
+      93AMwcGe6H37rcPA: 3
+    flags: {}
+    _stats:
+      compendiumSource: Item.KRYQ71jof26XeGEv
+      duplicateSource: null
+      coreVersion: '12.330'
+      systemId: torgeternity
+      systemVersion: 12.2.0
+      createdTime: 1722109253990
+      modifiedTime: 1722157119685
+      lastModifiedBy: 93AMwcGe6H37rcPA
+    _key: '!actors.items!BpClx5rBCesWUzIN.pbkdXjZUi93kO25A'
+  - _id: AI8XhF4PDkjEWg1o
+    name: Machete
+    type: meleeweapon
+    img: systems/torgeternity/images/icons/axe-icon.webp
+    effects:
+      - origin: Compendium.te001-core-rulebook.Items.r116QllfSDV3jAJs
+        duration:
+          startTime: null
+          seconds: null
+          combat: null
+          rounds: null
+          turns: null
+          startRound: null
+          startTurn: null
+        disabled: false
+        _id: 8snMeIc4dX1nteBx
+        changes:
+          - key: system.skills.survival.isFav
+            mode: 5
+            value: 'true'
+            priority: null
+        tint: '#ffffff'
+        transfer: true
+        flags: {}
+        name: Survival Favored
+        description: ''
+        statuses: []
+        _stats:
+          compendiumSource: null
+          duplicateSource: null
+          coreVersion: '12.330'
+          systemId: torgeternity
+          systemVersion: 12.2.0
+          createdTime: null
+          modifiedTime: null
+          lastModifiedBy: null
+        img: icons/svg/aura.svg
+        type: base
+        system: {}
+        sort: 0
+        _key: >-
+          !actors.items.effects!BpClx5rBCesWUzIN.AI8XhF4PDkjEWg1o.8snMeIc4dX1nteBx
+    folder: gjZiCPX5knOIpsHd
+    sort: 450000
+    flags:
+      core:
+        sourceId: Compendium.te001-core-rulebook.Items.r116QllfSDV3jAJs
+    system:
+      cosm: coreEarth
+      description: "<p>Designed for cutting through thick foliage, these mid-sized, single-edged blades are also perfectly useful for cutting flesh. Modern machetes have builtin tools and features that make <em>survival</em> tests Favored.</p>\n<p>\_</p>\n<p>Found in <strong>Core Rules</strong></p>"
+      price: '40'
+      techlevel: 22
+      value: 8
+      ap: 0
+      attackWith: meleeWeapons
+      bonus: 2
+      chatNote: ''
+      damage: 2
+      damageType: strengthPlus
+      equipped: true
+      notes: Survival tests Favored
+      secondaryAxiom:
+        selected: none
+        value: null
+      minStrength: null
+    ownership:
+      default: 0
+      A9LyAqagoJJU3gDH: 3
+      CtisFurQNe9h7ABb: 3
+      93AMwcGe6H37rcPA: 3
+    _stats:
+      compendiumSource: Compendium.te001-core-rulebook.Items.r116QllfSDV3jAJs
+      duplicateSource: null
+      coreVersion: '12.330'
+      systemId: torgeternity
+      systemVersion: 12.2.0
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+    _key: '!actors.items!BpClx5rBCesWUzIN.AI8XhF4PDkjEWg1o'
 effects:
-  - icon: icons/svg/aura.svg
-    origin: >-
-      Compendium.torgeternity.archetypes.Actor.BpClx5rBCesWUzIN.Item.ZE772oOuX6mg6EOc
+  - origin: Actor.BpClx5rBCesWUzIN.Item.AI8XhF4PDkjEWg1o
     duration:
       startTime: 0
       seconds: null
@@ -567,19 +575,32 @@ effects:
       startRound: null
       startTurn: null
     disabled: false
-    _id: CtNuycNaTFDgpixo
+    _id: 7p09BcntFLfX1dco
     changes:
       - key: system.skills.survival.isFav
-        mode: 4
-        value: '1'
+        mode: 5
+        value: 'true'
         priority: null
-    tint: null
+    tint: '#ffffff'
     transfer: false
     flags: {}
-    name: Survival favored
+    name: Survival Favored
     description: ''
     statuses: []
-    _key: '!actors.effects!BpClx5rBCesWUzIN.CtNuycNaTFDgpixo'
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      coreVersion: '12.330'
+      systemId: torgeternity
+      systemVersion: 12.2.0
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+    img: icons/svg/aura.svg
+    type: base
+    system: {}
+    sort: 0
+    _key: '!actors.effects!BpClx5rBCesWUzIN.7p09BcntFLfX1dco'
 folder: null
 sort: 100001
 flags: {}
@@ -937,7 +958,7 @@ system:
     background: >-
       <p><img class="charimg"
       src="systems/torgeternity/images/characters/Realm_Runner.webp" alt=""
-      width="1027" height="2094"></p>
+      width="1027" height="2094" /></p>
 
       <p class="moreheight"><a class="content-link" draggable="true"
       data-uuid="Compendium.torgeternity.handouts.JournalEntry.Knhh8vqtjSylJo5Z.JournalEntryPage.RLk67atzGeIrJ9Ml"
@@ -958,16 +979,16 @@ system:
 
       <p>You are a jack-of-all-trades: reasonably proficient with most weapons
       but a master of none. Then again, any weapon or item you find in any
-      reality is fair game. Don&rsquo;t be afraid to try out and use powerful
-      tools from other realities, even if they might cause Contradictions.
-      Disconnections still happen, but not as often and it&rsquo;s easy for you
-      to reconnect, even in a Pure Zone.</p>
+      reality is fair game. Don’t be afraid to try out and use powerful tools
+      from other realities, even if they might cause Contradictions.
+      Disconnections still happen, but not as often and it’s easy for you to
+      reconnect, even in a Pure Zone.</p>
 
       <p>Use any Approved interaction (trick is strongest) to Stymie opponents
       or make them Vulnerable. Success gains you a Destiny card and helps out
-      the team&mdash;or enhances your own chances for a successful followup
-      attack. Your high reality skill lets you Soak damage very reliably, so
-      you&rsquo;re much tougher than you look.</p>
+      the team—or enhances your own chances for a successful followup attack.
+      Your high reality skill lets you Soak damage very reliably, so you’re much
+      tougher than you look.</p>
 
       <h3>Moment of Crisis</h3>
 
@@ -979,7 +1000,7 @@ system:
 
       <h3>Quote</h3>
 
-      <p>&ldquo;Don&rsquo;t worry guys, I got this!&ldquo;</p>
+      <p>“Don’t worry guys, I got this!“</p>
 
       <h3>Description</h3>
 
@@ -994,8 +1015,8 @@ system:
       not taking these dangerous situations seriously enough. Under that
       exterior, however, you are deeply concerned for the individuals caught in
       the middle of the Possibility Wars. Saving these people from immediate
-      danger and keeping their spirits up is your real priority&mdash;having fun
-      while you do it is just a bonus.</p>
+      danger and keeping their spirits up is your real priority—having fun while
+      you do it is just a bonus.</p>
 
       <h3>Names</h3>
 
@@ -1066,14 +1087,20 @@ prototypeToken:
       max: 1
     color: null
     attenuation: 0.5
+    negative: false
+    priority: 0
   texture:
     src: systems/torgeternity/images/characters/realm_runner.Token.webp
-    tint: null
+    tint: '#ffffff'
     scaleX: 1
     scaleY: 1
     offsetX: 0
     offsetY: 0
     rotation: 0
+    anchorX: 0.5
+    anchorY: 0.5
+    fit: contain
+    alphaThreshold: 0.75
   sight:
     angle: 360
     enabled: false
@@ -1083,14 +1110,29 @@ prototypeToken:
     attenuation: 0.1
     saturation: 0
     contrast: 0
+    color: null
   appendNumber: false
   prependAdjective: false
   detectionModes: []
+  hexagonalShape: 0
+  occludable:
+    radius: 0
+  ring:
+    enabled: false
+    colors:
+      ring: null
+      background: null
+    effects: 1
+    subject:
+      scale: 1
+      texture: null
 _stats:
   systemId: torgeternity
-  systemVersion: 3.8.1
-  coreVersion: '11.315'
+  systemVersion: 12.2.0
+  coreVersion: '12.330'
   createdTime: 1693912355058
-  modifiedTime: 1716827807560
-  lastModifiedBy: VAnYow5sWS9EJzo0
+  modifiedTime: 1722355493847
+  lastModifiedBy: 93AMwcGe6H37rcPA
+  compendiumSource: null
+  duplicateSource: null
 _key: '!actors!BpClx5rBCesWUzIN'

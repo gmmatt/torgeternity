@@ -419,6 +419,131 @@ export class TorgeternityMacros {
     const activeImage = restoreOldActive.faces[0].img;
     game.combats.active.setFlag('torgeternity', 'activeCard', activeImage);
   }
+
+  // Show next 1-3 drama cards to a selection of players (much of this code is stolen in others macros)
+  async dramaVision() {
+    if (!game.user.isGM) {
+      return;
+    }
+    if (game.combats.map((ccc) => ccc.round === 0)[0] || game.combats.size === 0) {
+      return ui.notifications.warn(game.i18n.localize('torgeternity.notifications.noFight'));
+    }
+
+    let applyChanges = false;
+    const users = game.users.filter((user) => user.active && !user.isGM);
+    let checkOptions = '';
+    const playerTokenIds = users.map((u) => u.character?.id).filter((id) => id !== undefined);
+    const selectedPlayerIds = canvas.tokens.controlled.map((token) => {
+      if (playerTokenIds.includes(token.actor.id)) return token.actor.id;
+    });
+
+    // Build checkbox list for all active players
+    users.forEach((user) => {
+      const checked =
+        !!user.character && selectedPlayerIds.includes(user.character.id) && 'checked';
+      checkOptions += `
+        <br>
+        <input type="checkbox" name="${user.id}" id="${user.id}" value="${user.name}" ${checked}>\n
+        <label for="${user.id}">${user.name}</label>
+    `;
+    });
+
+    // Choose the nb of cards to show
+    const mychoice = new Promise((resolve, reject) => {
+      new Dialog({
+        title: game.i18n.localize('torgeternity.dialogWindow.showingDramaCards.nbCards'),
+        content: game.i18n.localize('torgeternity.dialogWindow.showingDramaCards.nbCardsValue'),
+        buttons: {
+          1: {
+            label: 1,
+            callback: async (html) => {
+              resolve(1);
+            },
+          },
+          2: {
+            label: 2,
+            callback: async (html) => {
+              resolve(2);
+            },
+          },
+          3: {
+            label: 3,
+            callback: async (html) => {
+              resolve(3);
+            },
+          },
+        },
+      }).render(true);
+    });
+
+    const nbc = await mychoice.then((nbc) => {
+      return nbc;
+    });
+
+    // Find the Drama Deck
+    const dram = game.cards.get(game.settings.get('torgeternity', 'deckSetting').dramaDeck);
+    // Find ?? the index of the Active Drama Card in the Drama Deck
+    const ind = game.cards.get(game.settings.get('torgeternity', 'deckSetting').dramaActive)._source
+      .cards[0].sort;
+
+    new Dialog({
+      title: game.i18n.localize('torgeternity.dialogWindow.showingDramaCards.recipient'),
+      content: `${game.i18n.localize(
+        'torgeternity.dialogWindow.showingDramaCards.whisper'
+      )} ${checkOptions} <br>`,
+      buttons: {
+        whisper: {
+          label: game.i18n.localize('torgeternity.dialogWindow.showingDramaCards.apply'),
+          callback: (html) => createMessage(html),
+        },
+      },
+    }).render(true);
+
+    function createMessage(html) {
+      const targets = [];
+      // build list of selected players ids for whispers target
+      for (const user of users) {
+        if (html.find('[name="' + user.id + '"]')[0].checked) {
+          applyChanges = true;
+          targets.push(user.id);
+        }
+      }
+      if (!applyChanges) return;
+      for (let j = 0; j < nbc; j++) {
+        const card = dram.cards.find((i) => i.sort === ind + j + 1);
+        ChatMessage.create({
+          whisper: targets,
+          content: `<div class="card-draw flexrow"><span class="card-chat-tooltip"><img class="card-face" src="${
+            card.img
+          }"/><span><img src="${
+            card.img
+          }"></span></span><span class="card-name"> ${game.i18n.localize(
+            'torgeternity.dialogWindow.showingDramaCards.show'
+          )} ${card.name}</span>
+                    </div>`,
+        });
+      }
+    }
+  }
+
+  async dramaFlashback() {
+    if (!game.user.isGM) {
+      return;
+    }
+    const dramaDeck = game.cards.get(game.settings.get('torgeternity', 'deckSetting').dramaDeck);
+    const dramaDiscard = game.cards.get(
+      game.settings.get('torgeternity', 'deckSetting').dramaDiscard
+    );
+    const dramaActive = game.cards.get(
+      game.settings.get('torgeternity', 'deckSetting').dramaActive
+    );
+    const restoreOldActive = Array.from(dramaDiscard.cards).pop();
+    const removeActiveCard = Array.from(dramaActive.cards).pop();
+    removeActiveCard.pass(dramaDeck);
+    restoreOldActive.pass(dramaActive);
+    const activeImage = restoreOldActive.faces[0].img;
+    game.combats.active.setFlag('torgeternity', 'activeCard', activeImage);
+  }
   // #endregion
   /**
    *
@@ -739,7 +864,7 @@ export class TorgeternityMacros {
       // only Defenses, but ALL defenses
       const newEffect = {
         name:
-          game.i18n.localize('torgeternity.dialogWindow.buffMacro.defense') +
+          game.i18n.localize('torgeternity.dialogWindow.buffMacro.defenses') +
           ' / ' +
           bonu +
           ' / ' +
@@ -801,7 +926,7 @@ export class TorgeternityMacros {
       // only physical Defenses
       const newEffect = {
         name:
-          game.i18n.localize('torgeternity.dialogWindow.buffMacro.defense') +
+          game.i18n.localize('torgeternity.dialogWindow.buffMacro.physicalDefenses') +
           ' / ' +
           bonu +
           ' / ' +
@@ -843,7 +968,7 @@ export class TorgeternityMacros {
       // preparation of attribute effect
       const newEffect = {
         name:
-          game.i18n.localize('torgeternity.dialogWindow.buffMacro.allAtrubtes') +
+          game.i18n.localize('torgeternity.dialogWindow.buffMacro.allAttributes') +
           ' / ' +
           bonu +
           ' / ' +

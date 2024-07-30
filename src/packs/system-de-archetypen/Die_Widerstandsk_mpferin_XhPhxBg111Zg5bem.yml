@@ -3,34 +3,6 @@ name: Die Widerstandskämpferin
 type: stormknight
 img: systems/torgeternity/images/characters/Resistance_Fighter.Avatar.webp
 items:
-  - _id: pzqymxjmburr9xRd
-    name: Extra-Magazine
-    type: gear
-    img: systems/torgeternity/images/icons/gear-icon.webp
-    effects: []
-    folder: YrLpjzkzDZxqWzUw
-    sort: 0
-    flags:
-      core:
-        sourceId: Item.9VjiNmOA2TB62Xej
-    system:
-      cosm: (Keins)
-      description: <p>F&uuml;nfmal Thav-9 nachladen.</p>
-      price: '0'
-      techlevel: 22
-      value: 0
-      equippedClass: item-equipped
-    ownership:
-      default: 0
-      9Q0XnqFwko7hRlvL: 3
-    _stats:
-      systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
-      createdTime: null
-      modifiedTime: 1694869786629
-      lastModifiedBy: CtisFurQNe9h7ABb
-    _key: '!actors.items!XhPhxBg111Zg5bem.pzqymxjmburr9xRd'
   - _id: knG1Ixfdk4rQWGKn
     name: Anfeuern
     type: perk
@@ -44,18 +16,7 @@ items:
     system:
       category: leadership
       cosm: (Keins)
-      description: >-
-        <p>Ein echter Anf&uuml;hrer kann seine Verb&uuml;ndeten mit einem
-        strengen Blick, eine kurze Ansprache oder einer vergleichbaren Handlung
-        zu gr&ouml;&szlig;erer Entschlossenheit gegen widrige Umst&auml;nde
-        verhelfen.&nbsp;</p>
-
-        <p>Charaktere mit diesem Vorzug k&ouml;nnen 1 M&ouml;glichkeit nutzen,
-        um alle in der Konfliktzeile der aktuellen Dramakarte f&uuml;r ihre
-        Seite aufgef&uuml;hrten Nachteile aufzuheben. Dies negiert die
-        Konfliktzeile f&uuml;r die eigene Seite vollst&auml;ndig, hat aber
-        keinen Einfluss auf das Ergebnis der Gegner. Dieser Vorzug kann
-        jederzeit eingesetzt werden, solange die Dramakarte noch aktiv ist.</p>
+      description: "<p>Ein echter Anführer kann seine Verbündeten mit einem strengen Blick, eine kurze Ansprache oder einer vergleichbaren Handlung zu größerer Entschlossenheit gegen widrige Umstände verhelfen.\_</p>\n<p>Charaktere mit diesem Vorzug können 1 Möglichkeit nutzen, um alle in der Konfliktzeile der aktuellen Dramakarte für ihre Seite aufgeführten Nachteile aufzuheben. Dies negiert die Konfliktzeile für die eigene Seite vollständig, hat aber keinen Einfluss auf das Ergebnis der Gegner. Dieser Vorzug kann jederzeit eingesetzt werden, solange die Dramakarte noch aktiv ist.</p>"
       prerequisites: Charisma 8+, mindestens 1 Fertigkeitsstufe in Realität
       generalContradiction: false
       pulpPowers:
@@ -132,6 +93,9 @@ items:
         limitation10: ''
         limitationNumber: 0
       timestaken: '1'
+      secondaryAxiom:
+        selected: none
+        value: null
     ownership:
       default: 0
       9Q0XnqFwko7hRlvL: 3
@@ -139,45 +103,616 @@ items:
     _stats:
       systemId: torgeternity
       systemVersion: 3.1.1
-      coreVersion: '11.308'
+      coreVersion: '12.330'
       createdTime: 1694863252503
       modifiedTime: 1694868674578
       lastModifiedBy: CtisFurQNe9h7ABb
+      compendiumSource: Compendium.te001-core-rulebook.grw-de-vorzuverb.Item.IOXf33JRTvf1ADNE
+      duplicateSource: null
     _key: '!actors.items!XhPhxBg111Zg5bem.knG1Ixfdk4rQWGKn'
-  - _id: nkBGPhSvlmcB1E0R
+  - _id: XxAQ2D8TP4ijh9wf
+    name: Thav-9 SMG
+    type: firearm
+    img: systems/torgeternity/images/icons/firearm-icon.webp
+    effects: []
+    folder: null
+    sort: 0
+    flags:
+      core:
+        sourceId: >-
+          Compendium.te001-core-rulebook.grw-de-ausruestung.Item.d8gh3MANb1ueXyVW
+    system:
+      cosm: tharkold
+      description: >-
+        <p>@UUID[Compendium.te001-core-rulebook.grw-de-grw.Qlx6yGF0Mmo6Xzrv.JournalEntryPage.7GGUUHzuYIqGPXDO#kurzer-fs:]{Kurzer
+        Feuerstoß}</p>
+
+        <p>@UUID[Compendium.te001-core-rulebook.grw-de-grw.Qlx6yGF0Mmo6Xzrv.JournalEntryPage.7GGUUHzuYIqGPXDO#karabiner:]{Pistole}</p>
+
+        <p>Eine Standard-Maschinenpistole, die in Tharkold zu Einsatz kommt.
+        Durch eine ausgeklügelte Mündungsbremse wird das Problem des „steigenden
+        Laufs“ vermieden, wenn man die Waffe mit einem kurzen Feuerstoß
+        abfeuert.</p>
+      price: '500'
+      techlevel: 25
+      value: 13
+      ammo:
+        max: 60
+        value: 60
+      ap: 0
+      attackWith: fireCombat
+      chatNote: ''
+      damage: 13
+      damageType: ''
+      equipped: false
+      notes: Kurzer FS, Pistole
+      range: 25/50/100
+      secondaryAxiom:
+        selected: none
+        value: null
+    ownership:
+      default: 0
+      9Q0XnqFwko7hRlvL: 3
+      CtisFurQNe9h7ABb: 3
+    _stats:
+      systemId: torgeternity
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
+      createdTime: 1694863291067
+      modifiedTime: 1722167592933
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Compendium.te001-core-rulebook.grw-de-ausruestung.Item.d8gh3MANb1ueXyVW
+      duplicateSource: null
+    _key: '!actors.items!XhPhxBg111Zg5bem.XxAQ2D8TP4ijh9wf'
+  - _id: xTmq5Ts7LszCQJFh
+    name: Krähenfüße
+    type: gear
+    img: systems/torgeternity/images/icons/gear-icon.webp
+    effects:
+      - _id: UBMPRmdexcJIvmed
+        changes:
+          - key: system.skills.maneuver.isFav
+            mode: 5
+            value: '1'
+            priority: null
+        disabled: true
+        duration:
+          startTime: null
+          seconds: null
+          combat: null
+          rounds: null
+          turns: null
+          startRound: null
+          startTurn: null
+        origin: Compendium.te001-core-rulebook.grw-de-ausruestung.GPs2FHE83EfpBIfZ
+        transfer: true
+        flags: {}
+        tint: '#ffffff'
+        name: Fertigkeitsbegünstigung
+        description: ''
+        statuses: []
+        _stats:
+          coreVersion: '12.330'
+          systemId: null
+          systemVersion: null
+          createdTime: null
+          modifiedTime: null
+          lastModifiedBy: null
+          compendiumSource: null
+          duplicateSource: null
+        img: icons/svg/aura.svg
+        type: base
+        system: {}
+        sort: 0
+        _key: >-
+          !actors.items.effects!XhPhxBg111Zg5bem.xTmq5Ts7LszCQJFh.UBMPRmdexcJIvmed
+    folder: null
+    sort: 0
+    flags:
+      core:
+        sourceId: Item.prL9HtFgNGaw1Szz
+    system:
+      cosm: aysle
+      description: >-
+        <p>Vierzackige Metallsterne zum Ausstreuen, die immer mit einem Stachel
+        nach oben weisen, und dadurch Füße und Reifen aufspießen können. Nachdem
+        sie mit einer einfachen Aktion ausgestreut wurden, zählen
+        <em>Manövrieren</em>-Interaktionsangriffe in ihrem Bereich als
+        Begünstigt.</p>
+      price: '40'
+      techlevel: 14
+      value: 8
+      secondaryAxiom:
+        selected: none
+        value: null
+    ownership:
+      default: 0
+      9Q0XnqFwko7hRlvL: 3
+      CtisFurQNe9h7ABb: 3
+    _stats:
+      systemId: torgeternity
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
+      createdTime: 1694863371374
+      modifiedTime: 1722167562693
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Item.prL9HtFgNGaw1Szz
+      duplicateSource: null
+    _key: '!actors.items!XhPhxBg111Zg5bem.xTmq5Ts7LszCQJFh'
+  - name: Leuchtfackel
+    type: gear
+    img: systems/torgeternity/images/icons/gear-icon.webp
+    effects: []
+    folder: null
+    sort: 0
+    flags:
+      core:
+        sourceId: Item.Uc1pL9fqLa4cfonl
+    _id: BcE2kgmCzDfiL7K7
+    system:
+      cosm: nileEmpire
+      description: ''
+      price: '5'
+      techlevel: 20
+      value: 4
+      secondaryAxiom:
+        selected: none
+        value: null
+    ownership:
+      default: 0
+      9Q0XnqFwko7hRlvL: 3
+      CtisFurQNe9h7ABb: 3
+    _stats:
+      systemId: torgeternity
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
+      createdTime: 1694863377157
+      modifiedTime: 1722167566069
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Item.Uc1pL9fqLa4cfonl
+      duplicateSource: null
+    _key: '!actors.items!XhPhxBg111Zg5bem.BcE2kgmCzDfiL7K7'
+  - _id: 9I5Xe1PkXWZj34bm
+    name: Aufladen
+    type: psionicpower
+    img: systems/torgeternity/images/icons/psionicpower.webp
+    effects:
+      - _id: zP22qP0ffFDY2sDJ
+        changes:
+          - key: system.attributes.dexterity.value
+            mode: 2
+            value: '1'
+            priority: null
+          - key: system.attributes.strength.value
+            mode: 2
+            value: '1'
+            priority: null
+        disabled: true
+        duration:
+          startTime: null
+          rounds: 3
+          seconds: null
+          combat: null
+          turns: null
+          startRound: null
+          startTurn: null
+        origin: Compendium.te001-core-rulebook.grw-de-kraefte.mXwjpqF1s2QuXVp1
+        transfer: true
+        flags: {}
+        tint: '#ffffff'
+        name: Standard
+        description: ''
+        statuses: []
+        _stats:
+          coreVersion: '12.330'
+          systemId: null
+          systemVersion: null
+          createdTime: null
+          modifiedTime: null
+          lastModifiedBy: null
+          compendiumSource: null
+          duplicateSource: null
+        img: icons/svg/aura.svg
+        type: base
+        system: {}
+        sort: 0
+        _key: >-
+          !actors.items.effects!XhPhxBg111Zg5bem.9I5Xe1PkXWZj34bm.zP22qP0ffFDY2sDJ
+      - _id: 5XPX5RkazyhzQzWk
+        changes:
+          - key: system.attributes.dexterity.value
+            mode: 2
+            value: '2'
+            priority: null
+          - key: system.attributes.strength.value
+            mode: 2
+            value: '2'
+            priority: null
+        disabled: true
+        duration:
+          startTime: null
+          rounds: 3
+          seconds: null
+          combat: null
+          turns: null
+          startRound: null
+          startTurn: null
+        origin: Compendium.te001-core-rulebook.grw-de-kraefte.mXwjpqF1s2QuXVp1
+        transfer: true
+        flags: {}
+        tint: '#ffffff'
+        name: Gut
+        description: ''
+        statuses: []
+        _stats:
+          coreVersion: '12.330'
+          systemId: null
+          systemVersion: null
+          createdTime: null
+          modifiedTime: null
+          lastModifiedBy: null
+          compendiumSource: null
+          duplicateSource: null
+        img: icons/svg/aura.svg
+        type: base
+        system: {}
+        sort: 0
+        _key: >-
+          !actors.items.effects!XhPhxBg111Zg5bem.9I5Xe1PkXWZj34bm.5XPX5RkazyhzQzWk
+      - _id: lJHLUECNRmMVyJAU
+        changes:
+          - key: system.attributes.strength.value
+            mode: 2
+            value: '-2'
+            priority: null
+          - key: system.attributes.dexterity.value
+            mode: 2
+            value: '-2'
+            priority: null
+        disabled: true
+        duration:
+          startTime: null
+          rounds: 6
+          seconds: null
+          combat: null
+          turns: null
+          startRound: null
+          startTurn: null
+        origin: Compendium.te001-core-rulebook.grw-de-kraefte.mXwjpqF1s2QuXVp1
+        transfer: true
+        flags: {}
+        tint: '#ffffff'
+        name: Strafe
+        description: ''
+        statuses: []
+        _stats:
+          coreVersion: '12.330'
+          systemId: null
+          systemVersion: null
+          createdTime: null
+          modifiedTime: null
+          lastModifiedBy: null
+          compendiumSource: null
+          duplicateSource: null
+        img: icons/svg/aura.svg
+        type: base
+        system: {}
+        sort: 0
+        _key: >-
+          !actors.items.effects!XhPhxBg111Zg5bem.9I5Xe1PkXWZj34bm.lJHLUECNRmMVyJAU
+    folder: null
+    sort: 0
+    flags:
+      core:
+        sourceId: Compendium.te001-core-rulebook.grw-de-kraefte.Item.mXwjpqF1s2QuXVp1
+    system:
+      ap: 0
+      applyArmor: true
+      applySize: true
+      axiom: 20
+      castingtime: 1 Aktion
+      damage: 0
+      description: "<p>Der Psioniker baut psychische Energie auf und kanalisiert sie durch sein Nervensystem, was seine <em>Stärke </em>und <em>Geschicklichkeit </em>um +1 erhöht, solange die Kraft anhält.\_</p><p>Diese Psikraft ist jedoch sehr anstrengend. Sobald die Kraft endet, erleidet der Psioniker 2 Schock und für die nächste Minute einen Malus von –2 auf <em>Stärke</em> und <em>Geschicklichkeit</em>.</p><p>@UUID[Compendium.torgeternity.macros.Macro.sZsA7sBGVaCJTzz0]{Buff!}</p>"
+      dn: challenging
+      dnType: ''
+      duration: 3 Runden
+      good: Stärke und Geschicklichkeit erhöhen sich um +2.
+      isAttack: false
+      modifier: ''
+      outstanding: >-
+        Stärke und Geschicklichkeit erhöhen sich um +2 und der Psioniker
+        erleidet nach Ablauf der Dauer zwar immer noch den Schockschaden, aber
+        keinen Malus.
+      range: Selbst
+      skill: kinesis
+      skilllevel: '10'
+      targetDefense: ''
+    ownership:
+      default: 0
+      9Q0XnqFwko7hRlvL: 3
+      CtisFurQNe9h7ABb: 3
+    _stats:
+      systemId: torgeternity
+      systemVersion: 3.1.1
+      coreVersion: '12.330'
+      createdTime: 1694863426083
+      modifiedTime: 1694863426083
+      lastModifiedBy: CtisFurQNe9h7ABb
+      compendiumSource: Compendium.te001-core-rulebook.grw-de-kraefte.Item.mXwjpqF1s2QuXVp1
+      duplicateSource: null
+    _key: '!actors.items!XhPhxBg111Zg5bem.9I5Xe1PkXWZj34bm'
+  - _id: SxID5jEelBSICE6Z
+    name: Telekinese
+    type: psionicpower
+    img: systems/torgeternity/images/icons/psionicpower.webp
+    effects: []
+    folder: null
+    sort: 0
+    flags:
+      core:
+        sourceId: Compendium.te001-core-rulebook.grw-de-kraefte.Item.OSM7EZI7JqMVUSCk
+    system:
+      ap: 0
+      applyArmor: false
+      applySize: false
+      axiom: 23
+      castingtime: 1 Aktion
+      damage: 0
+      description: "<p><em>Telekinese </em>ermöglicht es einem Psioniker, mit seinem Verstand Dinge zu bewegen. Der <em>Geist </em>des Psionikers ist die <em>Stärke</em>, mit der er seine Telekinese einsetzt, während er ansonsten wie gewohnt auf seine normalen Fertigkeiten zurückgreift.\_</p>\n<p>Ein Psioniker kann <em>Telekinese </em>benutzen, um mit Geh-Geschwindigkeit zu „fliegen“, vorausgesetzt, seine effektive „Stärke“ ist groß genug, um sein eigenes Gewicht zu tragen. Der Psioniker darf auch „laufen“, was im üblichen Malus von –2 für alle anderen Aktionen resultiert.</p>"
+      dn: easy
+      dnType: ''
+      duration: Konzentration
+      good: Reichweite von 50 Metern und +2 auf die effektive Stärke der Macht.
+      isAttack: false
+      modifier: ''
+      outstanding: Reichweite von 50 Metern und +4 auf die effektive Stärke der Macht.
+      range: 25 Meter
+      skill: kinesis
+      skilllevel: '10'
+      targetDefense: ''
+    ownership:
+      default: 0
+      9Q0XnqFwko7hRlvL: 3
+      CtisFurQNe9h7ABb: 3
+    _stats:
+      systemId: torgeternity
+      systemVersion: 3.1.1
+      coreVersion: '12.330'
+      createdTime: 1694863432357
+      modifiedTime: 1694863432357
+      lastModifiedBy: CtisFurQNe9h7ABb
+      compendiumSource: Compendium.te001-core-rulebook.grw-de-kraefte.Item.OSM7EZI7JqMVUSCk
+      duplicateSource: null
+    _key: '!actors.items!XhPhxBg111Zg5bem.SxID5jEelBSICE6Z'
+  - name: Schmerzhandschuh
+    type: gear
+    img: systems/torgeternity/images/icons/axe-icon.webp
+    effects: []
+    folder: null
+    flags:
+      core:
+        sourceId: >-
+          Compendium.te001-core-rulebook.grw-de-ausruestung.Item.e270RHGp2PiQIf7Y
+    system:
+      cosm: tharkold
+      description: >-
+        <p>Angriff mit
+        @UUID[Compendium.te001-core-rulebook.grw-de-ausruestung.Item.6uTlCD96kQQyfU8V]{Schmerzhandschuh
+        (Angriff)}</p>
+
+        <p>@UUID[Compendium.te001-core-rulebook.grw-de-grw.Qlx6yGF0Mmo6Xzrv.JournalEntryPage.7GGUUHzuYIqGPXDO#schmerzhaft:]{Schmerzhaft}</p>
+
+        <p>@UUID[Compendium.te001-core-rulebook.grw-de-grw.Qlx6yGF0Mmo6Xzrv.JournalEntryPage.7GGUUHzuYIqGPXDO#erschuttern:]{Erschüttern}</p>
+
+        <p>Ein gepanzerter Handschuh mit Technodämonen-Technologie, der mit
+        Waffenloser Kampf geführt wird. Solange ein Gegner mit diesem Handschuh
+        festgehalten wird, fügt er seinen Schaden in jedem Spielzug automatisch
+        zu.</p>
+      price: '100'
+      techlevel: 25
+      value: 10
+      secondaryAxiom:
+        selected: none
+        value: null
+    ownership:
+      default: 0
+      9Q0XnqFwko7hRlvL: 3
+      CtisFurQNe9h7ABb: 3
+    _stats:
+      systemId: torgeternity
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
+      createdTime: 1694863636445
+      modifiedTime: 1722167569974
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Compendium.te001-core-rulebook.grw-de-ausruestung.Item.e270RHGp2PiQIf7Y
+      duplicateSource: null
+    _id: euk996uGhGrXTEN3
+    sort: 8600000
+    _key: '!actors.items!XhPhxBg111Zg5bem.euk996uGhGrXTEN3'
+  - name: Schmerzhandschuh (Angriff)
+    type: customAttack
+    img: systems/torgeternity/images/icons/melee-weapon-icon.webp
+    effects: []
+    folder: null
+    flags:
+      core:
+        sourceId: >-
+          Compendium.te001-core-rulebook.grw-de-ausruestung.Item.6uTlCD96kQQyfU8V
+    system:
+      ap: 0
+      attackWith: unarmedCombat
+      chatNote: ''
+      damage: 1
+      damageType: strengthPlus
+      description: >-
+        <p>Angriff für
+        @UUID[Compendium.te001-core-rulebook.grw-de-ausruestung.Item.e270RHGp2PiQIf7Y]{Schmerzhandschuh}</p>
+
+        <p>@UUID[Compendium.te001-core-rulebook.grw-de-grw.Qlx6yGF0Mmo6Xzrv.JournalEntryPage.7GGUUHzuYIqGPXDO#schmerzhaft:]{Schmerzhaft}</p>
+
+        <p>@UUID[Compendium.te001-core-rulebook.grw-de-grw.Qlx6yGF0Mmo6Xzrv.JournalEntryPage.7GGUUHzuYIqGPXDO#erschuttern:]{Erschüttern}</p>
+
+        <p>Ein gepanzerter Handschuh mit Technodämonen-Technologie, der mit
+        Waffenloser Kampf geführt wird. Solange ein Gegner mit diesem Handschuh
+        festgehalten wird, fügt er seinen Schaden in jedem Spielzug automatisch
+        zu.</p>
+      notes: Schmerzhaft, Erschüttern
+    ownership:
+      default: 0
+      CtisFurQNe9h7ABb: 3
+    _stats:
+      systemId: torgeternity
+      systemVersion: 3.1.1
+      coreVersion: '12.330'
+      createdTime: 1694863583939
+      modifiedTime: 1694863858235
+      lastModifiedBy: CtisFurQNe9h7ABb
+      compendiumSource: Compendium.te001-core-rulebook.grw-de-ausruestung.Item.6uTlCD96kQQyfU8V
+      duplicateSource: null
+    _id: nhRhAawVMBao1keF
+    sort: 0
+    _key: '!actors.items!XhPhxBg111Zg5bem.nhRhAawVMBao1keF'
+  - name: Lederrüstung
+    type: armor
+    img: systems/torgeternity/images/icons/armor-icon.webp
+    effects: []
+    folder: null
+    sort: 7300000
+    flags:
+      core:
+        sourceId: >-
+          Compendium.te001-core-rulebook.grw-de-ausruestung.Item.Fut420hs61X914Gu
+    _id: H4hQ7REH5pEiSwwx
+    system:
+      cosm: aysle
+      description: >-
+        <p>Tierhäute wurden zu einer steifen, haltbaren Oberfläche gegerbt oder
+        gekocht und danach mit Nieten oder Steppnähten verstärkt. Lässt sich in
+        allen Cosms antreffen.</p>
+      price: '150'
+      techlevel: 8
+      value: 11
+      bonus: 1
+      equipped: false
+      maxDex: 10
+      minStrength: null
+      notes: ''
+      fatigue: null
+      secondaryAxiom:
+        selected: none
+        value: null
+    ownership:
+      default: 0
+      9Q0XnqFwko7hRlvL: 3
+      CtisFurQNe9h7ABb: 3
+    _stats:
+      systemId: torgeternity
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
+      createdTime: 1711562366100
+      modifiedTime: 1722167580741
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Compendium.te001-core-rulebook.grw-de-ausruestung.Item.Fut420hs61X914Gu
+      duplicateSource: null
+    _key: '!actors.items!XhPhxBg111Zg5bem.H4hQ7REH5pEiSwwx'
+  - _id: 57qzhW5zh4ntWJ4l
+    name: Stichschutzweste
+    type: armor
+    img: systems/torgeternity/images/icons/armor-icon.webp
+    effects: []
+    folder: null
+    sort: 11600000
+    flags:
+      core:
+        sourceId: >-
+          Compendium.te001-core-rulebook.grw-de-ausruestung.Item.NS8rwrLbP6hgW4VF
+    system:
+      cosm: coreEarth
+      description: >-
+        <p>@UUID[Compendium.te001-core-rulebook.grw-de-grw.Qlx6yGF0Mmo6Xzrv.JournalEntryPage.7GGUUHzuYIqGPXDO#ganzkorper/torso:]{Torso}</p>
+
+        <p>Leichter und bequemer als eine Flakweste und vor allem dafür
+        ausgelegt, die Schneidund Stichwirkung von Nahkampfwaffen zu stoppen.
+        Wirkt aber auch gegen Kugeln.</p>
+      price: '200'
+      techlevel: 23
+      value: 11
+      bonus: 3
+      equipped: true
+      maxDex: 10
+      minStrength: null
+      notes: Torso
+      fatigue: null
+      secondaryAxiom:
+        selected: none
+        value: null
+    ownership:
+      default: 0
+      9Q0XnqFwko7hRlvL: 3
+      CtisFurQNe9h7ABb: 3
+    _stats:
+      systemId: torgeternity
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
+      createdTime: 1711562366153
+      modifiedTime: 1722167585925
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Compendium.te001-core-rulebook.grw-de-ausruestung.Item.NS8rwrLbP6hgW4VF
+      duplicateSource: null
+    _key: '!actors.items!XhPhxBg111Zg5bem.57qzhW5zh4ntWJ4l'
+  - name: Extra-Magazine
+    type: ammunition
+    img: systems/torgeternity/images/icons/ammo-icon.webp
+    system:
+      cosm: ''
+      description: >-
+        <p><span style="font-family:'Palatino Linotype'">Fünfmal Thav-9
+        nachladen.</span></p>
+      price: ''
+      techlevel: 21
+      value: 0
+      secondaryAxiom:
+        selected: none
+        value: null
+      type: ''
+      quantity: 5
+      damageMod: 0
+      apMod: 0
+      fireDamage: false
+      blastRadius: Keiner
+      darknessMod: none
+      reach: ''
+    effects: []
+    folder: null
+    sort: 0
+    ownership:
+      default: 0
+      93AMwcGe6H37rcPA: 3
+    flags: {}
+    _stats:
+      compendiumSource: Item.TptgnUCwWM2QZCaK
+      duplicateSource: Item.KRYQ71jof26XeGEv
+      coreVersion: '12.330'
+      systemId: torgeternity
+      systemVersion: 12.2.0
+      createdTime: 1722167540897
+      modifiedTime: 1722167554831
+      lastModifiedBy: 93AMwcGe6H37rcPA
+    _id: jXZCeKKFyfue3FAb
+    _key: '!actors.items!XhPhxBg111Zg5bem.jXZCeKKFyfue3FAb'
+  - _id: 1sE1Buxmchw55y8A
     name: Psioniker
     type: perk
     img: systems/torgeternity/images/icons/reality-icon.webp
     effects: []
     folder: null
     sort: 0
-    flags:
-      core:
-        sourceId: Compendium.te001-core-rulebook.grw-de-vorzuverb.Item.97bmpA9MVEpoWcAS
+    flags: {}
     system:
       category: psionics
-      cosm: (Keins)
-      description: >-
-        <p>Psioniker bedienen sich des kollektiven Bewusstseins &ndash;
-        repr&auml;sentiert durch das Sozial-Axiom &ndash;, um unglaubliche
-        Kr&auml;fte zu manifestieren. Sie k&ouml;nnen mithilfe dieser
-        Kr&auml;fte Gedanken lesen, Materie und Energie bewegen und manchmal
-        sogar Aspekte der Zukunft vorhersagen. Psioniker k&ouml;nnen
-        &uuml;berall entstehen, wo das Sozial- Axiom hoch genug ist, aber wie
-        bei Magie und Wundern gilt, dass es nur dazu kommen kann, aber nicht
-        muss.&nbsp;</p>
-
-        <p>Wenn ein Charakter diesen Vorzug ausw&auml;hlt, darf er aus der
-        @UUID[Compendium.te001-core-rulebook.grw-de-grw.Qlx6yGF0Mmo6Xzrv.JournalEntryPage.ImZiAS08zR9NoF4R#verfugbare-psikrafte]{Liste}
-        der Psikr&auml;fte seines Cosm drei beliebige Kr&auml;fte
-        ausw&auml;hlen, deren Vorraussetzungen er erf&uuml;llt. Die Beschreibung
-        der Psikr&auml;fte und wie man sie manifestiert, werden im Kapitel
-        @UUID[Compendium.te001-core-rulebook.grw-de-grw.Qlx6yGF0Mmo6Xzrv.JournalEntryPage.ImZiAS08zR9NoF4R]{Kapitel
-        9: Psionik} erkl&auml;rt.&nbsp;</p>
-
-        <p><strong>Zus&auml;tzliche Psikr&auml;fte:</strong> Dieser Vorzug darf
-        mehrmals gew&auml;hlt werden. Jedes Mal nach dem ersten erh&auml;lt der
-        Charakter eine zus&auml;tzliche Psikraft.</p>
+      cosm: other
+      description: "<p><strong>Cosm:</strong> Pan-Pacifica, Tharkold, Zentralerde</p><p>Psioniker bedienen sich des kollektiven Bewusstseins – repräsentiert durch das Sozial-Axiom –, um unglaubliche Kräfte zu manifestieren. Sie können mithilfe dieser Kräfte Gedanken lesen, Materie und Energie bewegen und manchmal sogar Aspekte der Zukunft vorhersagen. Psioniker können überall entstehen, wo das Sozial- Axiom hoch genug ist, aber wie bei Magie und Wundern gilt, dass es nur dazu kommen kann, aber nicht muss.\_</p><p>Wenn ein Charakter diesen Vorzug auswählt, darf er aus der @UUID[Compendium.te001-core-rulebook.grw-de-grw.Qlx6yGF0Mmo6Xzrv.JournalEntryPage.ImZiAS08zR9NoF4R#verfugbare-psikrafte]{Liste} der Psikräfte seines Cosm drei beliebige Kräfte auswählen, deren Vorraussetzungen er erfüllt.</p><p>In Psioniker der Zentralerde stehen erweiterte @UUID[Compendium.te001-core-rulebook.grw-de-grw.JournalEntry.cbpKKK9fHVhzZG9D.JournalEntryPage.cApN1RD5J17QCDZ3#verfugbare-psikrafte]{Listen für Psikräfte} zur Verfügung</p><p>Die Beschreibung der Psikräfte und wie man sie manifestiert, werden im Kapitel @UUID[Compendium.te001-core-rulebook.grw-de-grw.Qlx6yGF0Mmo6Xzrv.JournalEntryPage.ImZiAS08zR9NoF4R]{Kapitel 9: Psionik} erklärt.\_</p><p><strong>Zusätzliche Psikräfte:</strong> Dieser Vorzug darf mehrmals gewählt werden. Jedes Mal nach dem ersten erhält der Charakter eine zusätzliche Psikraft.</p>"
       prerequisites: mindestens 1 Fertigkeitsstufe in Kinese, Präkognition oder Telepathie
       generalContradiction: false
       pulpPowers:
@@ -253,477 +788,41 @@ items:
         limitation09: ''
         limitation10: ''
         limitationNumber: 0
-      timestaken: '1'
+      timestaken: ''
+      secondaryAxiom:
+        selected: none
+        value: null
     ownership:
       default: 0
       9Q0XnqFwko7hRlvL: 3
-      CtisFurQNe9h7ABb: 3
+      VAnYow5sWS9EJzo0: 3
+      93AMwcGe6H37rcPA: 3
     _stats:
+      compendiumSource: Compendium.te001-core-rulebook.grw-de-vorzuverb.Item.97bmpA9MVEpoWcAS
+      duplicateSource: null
+      coreVersion: '12.330'
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
-      createdTime: 1694863258543
-      modifiedTime: 1694868671090
-      lastModifiedBy: CtisFurQNe9h7ABb
-    _key: '!actors.items!XhPhxBg111Zg5bem.nkBGPhSvlmcB1E0R'
-  - _id: XxAQ2D8TP4ijh9wf
-    name: Thav-9 SMG
-    type: firearm
-    img: systems/torgeternity/images/icons/firearm-icon.webp
-    effects: []
-    folder: null
-    sort: 0
-    flags:
-      core:
-        sourceId: >-
-          Compendium.te001-core-rulebook.grw-de-ausruestung.Item.d8gh3MANb1ueXyVW
-    system:
-      cosm: Tharkold
-      description: >-
-        <p>@UUID[Compendium.te001-core-rulebook.grw-de-grw.Qlx6yGF0Mmo6Xzrv.JournalEntryPage.7GGUUHzuYIqGPXDO#kurzer-fs:]{Kurzer
-        Feuersto&szlig;}</p>
-
-        <p>@UUID[Compendium.te001-core-rulebook.grw-de-grw.Qlx6yGF0Mmo6Xzrv.JournalEntryPage.7GGUUHzuYIqGPXDO#karabiner:]{Pistole}</p>
-
-        <p>Eine Standard-Maschinenpistole, die in Tharkold zu Einsatz kommt.
-        Durch eine ausgekl&uuml;gelte M&uuml;ndungsbremse wird das Problem des
-        &bdquo;steigenden Laufs&ldquo; vermieden, wenn man die Waffe mit einem
-        kurzen Feuersto&szlig; abfeuert.</p>
-      price: '500'
-      techlevel: 25
-      value: 13
-      ammo:
-        max: 60
-        value: 60
-      ap: 0
-      attackWith: fireCombat
-      chatNote: ''
-      damage: 13
-      damageType: ''
-      equipped: false
-      equippedClass: .item-unequipped
-      notes: Kurzer FS, Pistole
-      range: 25/50/100
-    ownership:
-      default: 0
-      9Q0XnqFwko7hRlvL: 3
-      CtisFurQNe9h7ABb: 3
-    _stats:
-      systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
-      createdTime: 1694863291067
-      modifiedTime: 1694863291067
-      lastModifiedBy: CtisFurQNe9h7ABb
-    _key: '!actors.items!XhPhxBg111Zg5bem.XxAQ2D8TP4ijh9wf'
-  - _id: xTmq5Ts7LszCQJFh
-    name: Krähenfüße
-    type: gear
-    img: systems/torgeternity/images/icons/gear-icon.webp
-    effects:
-      - _id: UBMPRmdexcJIvmed
-        changes:
-          - key: system.skills.maneuver.isFav
-            mode: 5
-            value: '1'
-            priority: null
-        disabled: true
-        duration:
-          startTime: null
-          seconds: null
-          combat: null
-          rounds: null
-          turns: null
-          startRound: null
-          startTurn: null
-        icon: icons/svg/aura.svg
-        origin: Compendium.te001-core-rulebook.grw-de-ausruestung.GPs2FHE83EfpBIfZ
-        transfer: true
-        flags: {}
-        tint: null
-        name: Fertigkeitsbegünstigung
-        description: ''
-        statuses: []
-        _key: >-
-          !actors.items.effects!XhPhxBg111Zg5bem.xTmq5Ts7LszCQJFh.UBMPRmdexcJIvmed
-    folder: null
-    sort: 0
-    flags:
-      core:
-        sourceId: Item.prL9HtFgNGaw1Szz
-    system:
-      cosm: Aysle
-      description: >-
-        <p>Vierzackige Metallsterne zum Ausstreuen, die immer mit einem Stachel
-        nach oben weisen, und dadurch F&uuml;&szlig;e und Reifen
-        aufspie&szlig;en k&ouml;nnen. Nachdem sie mit einer einfachen Aktion
-        ausgestreut wurden, z&auml;hlen
-        <em>Man&ouml;vrieren</em>-Interaktionsangriffe in ihrem Bereich als
-        Beg&uuml;nstigt.</p>
-      price: '40'
-      techlevel: 14
-      value: 8
-      equippedClass: item-equipped
-    ownership:
-      default: 0
-      9Q0XnqFwko7hRlvL: 3
-      CtisFurQNe9h7ABb: 3
-    _stats:
-      systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
-      createdTime: 1694863371374
-      modifiedTime: 1694863371374
-      lastModifiedBy: CtisFurQNe9h7ABb
-    _key: '!actors.items!XhPhxBg111Zg5bem.xTmq5Ts7LszCQJFh'
-  - name: Leuchtfackel
-    type: gear
-    img: systems/torgeternity/images/icons/gear-icon.webp
-    effects: []
-    folder: null
-    sort: 0
-    flags:
-      core:
-        sourceId: Item.Uc1pL9fqLa4cfonl
-    _id: BcE2kgmCzDfiL7K7
-    system:
-      cosm: Nil-Imperium
-      description: ''
-      price: '5'
-      techlevel: 20
-      value: 4
-      equippedClass: item-equipped
-    ownership:
-      default: 0
-      9Q0XnqFwko7hRlvL: 3
-      CtisFurQNe9h7ABb: 3
-    _stats:
-      systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
-      createdTime: 1694863377157
-      modifiedTime: 1694863377157
-      lastModifiedBy: CtisFurQNe9h7ABb
-    _key: '!actors.items!XhPhxBg111Zg5bem.BcE2kgmCzDfiL7K7'
-  - _id: 9I5Xe1PkXWZj34bm
-    name: Aufladen
-    type: psionicpower
-    img: systems/torgeternity/images/icons/psionicpower.webp
-    effects:
-      - _id: zP22qP0ffFDY2sDJ
-        changes:
-          - key: system.attributes.dexterity.value
-            mode: 2
-            value: '1'
-            priority: null
-          - key: system.attributes.strength.value
-            mode: 2
-            value: '1'
-            priority: null
-        disabled: true
-        duration:
-          startTime: null
-          rounds: 3
-          seconds: null
-          combat: null
-          turns: null
-          startRound: null
-          startTurn: null
-        icon: icons/svg/aura.svg
-        origin: Compendium.te001-core-rulebook.grw-de-kraefte.mXwjpqF1s2QuXVp1
-        transfer: true
-        flags: {}
-        tint: null
-        name: Standard
-        description: ''
-        statuses: []
-        _key: >-
-          !actors.items.effects!XhPhxBg111Zg5bem.9I5Xe1PkXWZj34bm.zP22qP0ffFDY2sDJ
-      - _id: 5XPX5RkazyhzQzWk
-        changes:
-          - key: system.attributes.dexterity.value
-            mode: 2
-            value: '2'
-            priority: null
-          - key: system.attributes.strength.value
-            mode: 2
-            value: '2'
-            priority: null
-        disabled: true
-        duration:
-          startTime: null
-          rounds: 3
-          seconds: null
-          combat: null
-          turns: null
-          startRound: null
-          startTurn: null
-        icon: icons/svg/aura.svg
-        origin: Compendium.te001-core-rulebook.grw-de-kraefte.mXwjpqF1s2QuXVp1
-        transfer: true
-        flags: {}
-        tint: null
-        name: Gut
-        description: ''
-        statuses: []
-        _key: >-
-          !actors.items.effects!XhPhxBg111Zg5bem.9I5Xe1PkXWZj34bm.5XPX5RkazyhzQzWk
-      - _id: lJHLUECNRmMVyJAU
-        changes:
-          - key: system.attributes.strength.value
-            mode: 2
-            value: '-2'
-            priority: null
-          - key: system.attributes.dexterity.value
-            mode: 2
-            value: '-2'
-            priority: null
-        disabled: true
-        duration:
-          startTime: null
-          rounds: 6
-          seconds: null
-          combat: null
-          turns: null
-          startRound: null
-          startTurn: null
-        icon: icons/svg/aura.svg
-        origin: Compendium.te001-core-rulebook.grw-de-kraefte.mXwjpqF1s2QuXVp1
-        transfer: true
-        flags: {}
-        tint: null
-        name: Strafe
-        description: ''
-        statuses: []
-        _key: >-
-          !actors.items.effects!XhPhxBg111Zg5bem.9I5Xe1PkXWZj34bm.lJHLUECNRmMVyJAU
-    folder: null
-    sort: 0
-    flags:
-      core:
-        sourceId: Compendium.te001-core-rulebook.grw-de-kraefte.Item.mXwjpqF1s2QuXVp1
-    system:
-      ap: 0
-      applyArmor: true
-      applySize: true
-      axiom: 20
-      castingtime: 1 Aktion
-      damage: ''
-      description: >-
-        <p>Der Psioniker baut psychische Energie auf und kanalisiert sie durch
-        sein Nervensystem, was seine <em>St&auml;rke </em>und
-        <em>Geschicklichkeit </em>um +1 erh&ouml;ht, solange die Kraft
-        anh&auml;lt.&nbsp;</p>
-
-        <p>Diese Psikraft ist jedoch sehr anstrengend. Sobald die Kraft endet,
-        erleidet der Psioniker 2 Schock und f&uuml;r die n&auml;chste Minute
-        einen Malus von &ndash;2 auf <em>St&auml;rke</em> und
-        <em>Geschicklichkeit</em>.</p>
-      dn: challenging
-      dnType: ''
-      duration: 3 Runden
-      good: Stärke und Geschicklichkeit erhöhen sich um +2.
-      isAttack: false
-      modifier: ''
-      outstanding: >-
-        Stärke und Geschicklichkeit erhöhen sich um +2 und der Psioniker
-        erleidet nach Ablauf der Dauer zwar immer noch den Schockschaden, aber
-        keinen Malus.
-      range: Selbst
-      skill: kinesis
-      skilllevel: '10'
-      targetDefense: ''
-    ownership:
-      default: 0
-      9Q0XnqFwko7hRlvL: 3
-      CtisFurQNe9h7ABb: 3
-    _stats:
-      systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
-      createdTime: 1694863426083
-      modifiedTime: 1694863426083
-      lastModifiedBy: CtisFurQNe9h7ABb
-    _key: '!actors.items!XhPhxBg111Zg5bem.9I5Xe1PkXWZj34bm'
-  - _id: SxID5jEelBSICE6Z
-    name: Telekinese
-    type: psionicpower
-    img: systems/torgeternity/images/icons/psionicpower.webp
-    effects: []
-    folder: null
-    sort: 0
-    flags:
-      core:
-        sourceId: Compendium.te001-core-rulebook.grw-de-kraefte.Item.OSM7EZI7JqMVUSCk
-    system:
-      ap: 0
-      applyArmor: false
-      applySize: false
-      axiom: 23
-      castingtime: 1 Aktion
-      damage: ''
-      description: >-
-        <p><em>Telekinese </em>erm&ouml;glicht es einem Psioniker, mit seinem
-        Verstand Dinge zu bewegen. Der <em>Geist </em>des Psionikers ist die
-        <em>St&auml;rke</em>, mit der er seine Telekinese einsetzt, w&auml;hrend
-        er ansonsten wie gewohnt auf seine normalen Fertigkeiten
-        zur&uuml;ckgreift.&nbsp;</p>
-
-        <p>Ein Psioniker kann <em>Telekinese </em>benutzen, um mit
-        Geh-Geschwindigkeit zu &bdquo;fliegen&ldquo;, vorausgesetzt, seine
-        effektive &bdquo;St&auml;rke&ldquo; ist gro&szlig; genug, um sein
-        eigenes Gewicht zu tragen. Der Psioniker darf auch &bdquo;laufen&ldquo;,
-        was im &uuml;blichen Malus von &ndash;2 f&uuml;r alle anderen Aktionen
-        resultiert.</p>
-      dn: easy
-      dnType: ''
-      duration: Konzentration
-      good: Reichweite von 50 Metern und +2 auf die effektive Stärke der Macht.
-      isAttack: false
-      modifier: ''
-      outstanding: Reichweite von 50 Metern und +4 auf die effektive Stärke der Macht.
-      range: 25 Meter
-      skill: kinesis
-      skilllevel: '10'
-      targetDefense: ''
-    ownership:
-      default: 0
-      9Q0XnqFwko7hRlvL: 3
-      CtisFurQNe9h7ABb: 3
-    _stats:
-      systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
-      createdTime: 1694863432357
-      modifiedTime: 1694863432357
-      lastModifiedBy: CtisFurQNe9h7ABb
-    _key: '!actors.items!XhPhxBg111Zg5bem.SxID5jEelBSICE6Z'
-  - _id: gYp5XNCGUhgrvNFc
+      systemVersion: 12.2.0
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+    _key: '!actors.items!XhPhxBg111Zg5bem.1sE1Buxmchw55y8A'
+  - _id: isJZ0la0LRORnKER
     name: Telekinetische Barriere
     type: psionicpower
     img: systems/torgeternity/images/icons/psionicpower.webp
-    effects:
-      - _id: Qu6P3HUsqqySQzoB
-        changes:
-          - key: system.dodgeDefense
-            mode: 2
-            value: '1'
-            priority: null
-          - key: system.meleeWeaponsDefense
-            mode: 2
-            value: '1'
-            priority: null
-          - key: system.unarmedCombatDefense
-            mode: 2
-            value: '1'
-            priority: null
-        disabled: true
-        duration:
-          startTime: null
-          seconds: null
-          combat: null
-          rounds: null
-          turns: null
-          startRound: null
-          startTurn: null
-        icon: icons/svg/aura.svg
-        origin: Item.1sZEein0hx5fqs2r
-        transfer: true
-        flags: {}
-        tint: null
-        name: Tel.Bar.Standard
-        description: ''
-        statuses: []
-        _key: >-
-          !actors.items.effects!XhPhxBg111Zg5bem.gYp5XNCGUhgrvNFc.Qu6P3HUsqqySQzoB
-      - _id: xzCPXf6upNsJCCN9
-        changes:
-          - key: system.dodgeDefense
-            mode: 2
-            value: '2'
-            priority: null
-          - key: system.meleeWeaponsDefense
-            mode: 2
-            value: '2'
-            priority: null
-          - key: system.unarmedCombatDefense
-            mode: 2
-            value: '2'
-            priority: null
-        disabled: true
-        duration:
-          startTime: null
-          seconds: null
-          combat: null
-          rounds: null
-          turns: null
-          startRound: null
-          startTurn: null
-        icon: icons/svg/aura.svg
-        origin: Item.1sZEein0hx5fqs2r
-        transfer: true
-        flags: {}
-        tint: null
-        name: Tel.Bar.Gut
-        description: ''
-        statuses: []
-        _key: >-
-          !actors.items.effects!XhPhxBg111Zg5bem.gYp5XNCGUhgrvNFc.xzCPXf6upNsJCCN9
-      - _id: UfAWb35v5OnY3cwH
-        changes:
-          - key: system.dodgeDefense
-            mode: 2
-            value: '3'
-            priority: null
-          - key: system.meleeWeaponsDefense
-            mode: 2
-            value: '3'
-            priority: null
-          - key: system.unarmedCombatDefense
-            mode: 2
-            value: '3'
-            priority: null
-        disabled: true
-        duration:
-          startTime: null
-          seconds: null
-          combat: null
-          rounds: null
-          turns: null
-          startRound: null
-          startTurn: null
-        icon: icons/svg/aura.svg
-        origin: Item.1sZEein0hx5fqs2r
-        transfer: true
-        flags: {}
-        tint: null
-        name: Tel.Bar.Hervorragend
-        description: ''
-        statuses: []
-        _key: >-
-          !actors.items.effects!XhPhxBg111Zg5bem.gYp5XNCGUhgrvNFc.UfAWb35v5OnY3cwH
+    effects: []
     folder: null
     sort: 0
-    flags:
-      core:
-        sourceId: Compendium.te001-core-rulebook.grw-de-kraefte.Item.4wHtrSS3RwnpxeXW
+    flags: {}
     system:
       ap: 0
       applyArmor: false
       applySize: false
       axiom: 23
       castingtime: 1 Aktion
-      damage: ''
-      description: >-
-        <p>Der Psioniker wehrt eingehende Angriffe mit einer Barriere aus purer
-        telekinetischer Energie ab.&nbsp;</p>
-
-        <p>Ein Standard-Erfolg f&uuml;gt +1 zu allen Verteidigungswerten des
-        Psionikers (Ausweichen, Nahkampf und Waffenloser Kampf) hinzu. F&uuml;r
-        diesen Bonus gelten die &uuml;blichen Regeln f&uuml;r kumulative
-        Effekte, sodass ein Charakter, der au&szlig;erdem noch einen echten
-        Schild tr&auml;gt, nur vom h&ouml;heren der beiden Bonusse
-        profitiert.</p>
+      damage: 0
+      description: "<p>Der Psioniker wehrt eingehende Angriffe mit einer Barriere aus purer telekinetischer Energie ab.\_</p>\n<p>Ein Standard-Erfolg fügt +1 zu allen Verteidigungswerten des Psionikers (Ausweichen, Nahkampf und Waffenloser Kampf) hinzu. Für diesen Bonus gelten die üblichen Regeln für kumulative Effekte, sodass ein Charakter, der außerdem noch einen echten Schild trägt, nur vom höheren der beiden Bonusse profitiert.</p>"
       dn: standard
       dnType: ''
       duration: Konzentration
@@ -738,178 +837,18 @@ items:
     ownership:
       default: 0
       9Q0XnqFwko7hRlvL: 3
-      CtisFurQNe9h7ABb: 3
+      VAnYow5sWS9EJzo0: 3
+      93AMwcGe6H37rcPA: 3
     _stats:
+      compendiumSource: Compendium.te001-core-rulebook.grw-de-kraefte.Item.4wHtrSS3RwnpxeXW
+      duplicateSource: null
+      coreVersion: '12.330'
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
-      createdTime: 1694863433678
-      modifiedTime: 1694863433678
-      lastModifiedBy: CtisFurQNe9h7ABb
-    _key: '!actors.items!XhPhxBg111Zg5bem.gYp5XNCGUhgrvNFc'
-  - name: Schmerzhandschuh
-    type: gear
-    img: systems/torgeternity/images/icons/axe-icon.webp
-    effects: []
-    folder: null
-    flags:
-      core:
-        sourceId: >-
-          Compendium.te001-core-rulebook.grw-de-ausruestung.Item.e270RHGp2PiQIf7Y
-    system:
-      cosm: Tharkold
-      description: >-
-        <p>Angriff mit
-        @UUID[Compendium.te001-core-rulebook.grw-de-ausruestung.Item.6uTlCD96kQQyfU8V]{Schmerzhandschuh
-        (Angriff)}</p>
-
-        <p>@UUID[Compendium.te001-core-rulebook.grw-de-grw.Qlx6yGF0Mmo6Xzrv.JournalEntryPage.7GGUUHzuYIqGPXDO#schmerzhaft:]{Schmerzhaft}</p>
-
-        <p>@UUID[Compendium.te001-core-rulebook.grw-de-grw.Qlx6yGF0Mmo6Xzrv.JournalEntryPage.7GGUUHzuYIqGPXDO#erschuttern:]{Ersch&uuml;ttern}</p>
-
-        <p>Ein gepanzerter Handschuh mit Technod&auml;monen-Technologie, der mit
-        Waffenloser Kampf gef&uuml;hrt wird. Solange ein Gegner mit diesem
-        Handschuh festgehalten wird, f&uuml;gt er seinen Schaden in jedem
-        Spielzug automatisch zu.</p>
-      price: '100'
-      techlevel: 25
-      value: 10
-      equippedClass: item-equipped
-    ownership:
-      default: 0
-      9Q0XnqFwko7hRlvL: 3
-      CtisFurQNe9h7ABb: 3
-    _stats:
-      systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
-      createdTime: 1694863636445
-      modifiedTime: 1694863848947
-      lastModifiedBy: CtisFurQNe9h7ABb
-    _id: euk996uGhGrXTEN3
-    sort: 8600000
-    _key: '!actors.items!XhPhxBg111Zg5bem.euk996uGhGrXTEN3'
-  - name: Schmerzhandschuh (Angriff)
-    type: customAttack
-    img: systems/torgeternity/images/icons/melee-weapon-icon.webp
-    effects: []
-    folder: null
-    flags:
-      core:
-        sourceId: >-
-          Compendium.te001-core-rulebook.grw-de-ausruestung.Item.6uTlCD96kQQyfU8V
-    system:
-      ap: 0
-      attackWith: unarmedCombat
-      chatNote: ''
-      damage: 1
-      damageType: strengthPlus
-      description: >-
-        <p>Angriff f&uuml;r
-        @UUID[Compendium.te001-core-rulebook.grw-de-ausruestung.Item.e270RHGp2PiQIf7Y]{Schmerzhandschuh}</p>
-
-        <p>@UUID[Compendium.te001-core-rulebook.grw-de-grw.Qlx6yGF0Mmo6Xzrv.JournalEntryPage.7GGUUHzuYIqGPXDO#schmerzhaft:]{Schmerzhaft}</p>
-
-        <p>@UUID[Compendium.te001-core-rulebook.grw-de-grw.Qlx6yGF0Mmo6Xzrv.JournalEntryPage.7GGUUHzuYIqGPXDO#erschuttern:]{Ersch&uuml;ttern}</p>
-
-        <p>Ein gepanzerter Handschuh mit Technod&auml;monen-Technologie, der mit
-        Waffenloser Kampf gef&uuml;hrt wird. Solange ein Gegner mit diesem
-        Handschuh festgehalten wird, f&uuml;gt er seinen Schaden in jedem
-        Spielzug automatisch zu.</p>
-      notes: Schmerzhaft, Erschüttern
-    ownership:
-      default: 0
-      CtisFurQNe9h7ABb: 3
-    _stats:
-      systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
-      createdTime: 1694863583939
-      modifiedTime: 1694863858235
-      lastModifiedBy: CtisFurQNe9h7ABb
-    _id: nhRhAawVMBao1keF
-    sort: 0
-    _key: '!actors.items!XhPhxBg111Zg5bem.nhRhAawVMBao1keF'
-  - name: Lederrüstung
-    type: armor
-    img: systems/torgeternity/images/icons/armor-icon.webp
-    effects: []
-    folder: null
-    sort: 7300000
-    flags:
-      core:
-        sourceId: >-
-          Compendium.te001-core-rulebook.grw-de-ausruestung.Item.Fut420hs61X914Gu
-    _id: H4hQ7REH5pEiSwwx
-    system:
-      cosm: Aysle
-      description: >-
-        <p>Tierh&auml;ute wurden zu einer steifen, haltbaren Oberfl&auml;che
-        gegerbt oder gekocht und danach mit Nieten oder Steppn&auml;hten
-        verst&auml;rkt. L&auml;sst sich in allen Cosms antreffen.</p>
-      price: '150'
-      techlevel: 8
-      value: 11
-      bonus: 1
-      equipped: false
-      equippedClass: item-unequipped
-      maxDex: 10
-      minStrength: null
-      notes: ''
-      fatigue: null
-    ownership:
-      default: 0
-      9Q0XnqFwko7hRlvL: 3
-      CtisFurQNe9h7ABb: 3
-    _stats:
-      systemId: torgeternity
-      systemVersion: 3.7.0
-      coreVersion: '11.315'
-      createdTime: 1711562366100
-      modifiedTime: 1711706337786
-      lastModifiedBy: CtisFurQNe9h7ABb
-    _key: '!actors.items!XhPhxBg111Zg5bem.H4hQ7REH5pEiSwwx'
-  - _id: 57qzhW5zh4ntWJ4l
-    name: Stichschutzweste
-    type: armor
-    img: systems/torgeternity/images/icons/armor-icon.webp
-    effects: []
-    folder: null
-    sort: 11600000
-    flags:
-      core:
-        sourceId: >-
-          Compendium.te001-core-rulebook.grw-de-ausruestung.Item.NS8rwrLbP6hgW4VF
-    system:
-      cosm: Zentralerde
-      description: >-
-        <p>@UUID[Compendium.te001-core-rulebook.grw-de-grw.Qlx6yGF0Mmo6Xzrv.JournalEntryPage.7GGUUHzuYIqGPXDO#ganzkorper/torso:]{Torso}</p>
-
-        <p>Leichter und bequemer als eine Flakweste und vor allem daf&uuml;r
-        ausgelegt, die Schneidund Stichwirkung von Nahkampfwaffen zu stoppen.
-        Wirkt aber auch gegen Kugeln.</p>
-      price: '200'
-      techlevel: 23
-      value: 11
-      bonus: 3
-      equipped: true
-      equippedClass: item-equipped
-      maxDex: 10
-      minStrength: null
-      notes: Torso
-      fatigue: null
-    ownership:
-      default: 0
-      9Q0XnqFwko7hRlvL: 3
-      CtisFurQNe9h7ABb: 3
-    _stats:
-      systemId: torgeternity
-      systemVersion: 3.7.0
-      coreVersion: '11.315'
-      createdTime: 1711562366153
-      modifiedTime: 1711706337784
-      lastModifiedBy: CtisFurQNe9h7ABb
-    _key: '!actors.items!XhPhxBg111Zg5bem.57qzhW5zh4ntWJ4l'
+      systemVersion: 12.2.0
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+    _key: '!actors.items!XhPhxBg111Zg5bem.isJZ0la0LRORnKER'
 effects:
   - _id: jjB96dzmOt3gxZvg
     changes:
@@ -926,202 +865,27 @@ effects:
       turns: null
       startRound: null
       startTurn: null
-    icon: icons/svg/aura.svg
-    origin: >-
-      Compendium.torgeternity.system-de-archetypen.Actor.XhPhxBg111Zg5bem.Item.xTmq5Ts7LszCQJFh
+    origin: Actor.XhPhxBg111Zg5bem.Item.xTmq5Ts7LszCQJFh
     transfer: false
     flags: {}
-    tint: null
+    tint: '#ffffff'
     name: Fertigkeitsbegünstigung
     description: ''
     statuses: []
+    _stats:
+      coreVersion: '12.330'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+    img: icons/svg/aura.svg
+    type: base
+    system: {}
+    sort: 0
     _key: '!actors.effects!XhPhxBg111Zg5bem.jjB96dzmOt3gxZvg'
-  - _id: IhMSck1yaj2l5x3D
-    changes:
-      - key: system.attributes.dexterity.value
-        mode: 2
-        value: '1'
-        priority: null
-      - key: system.attributes.strength.value
-        mode: 2
-        value: '1'
-        priority: null
-    disabled: true
-    duration:
-      startTime: 0
-      rounds: 3
-      seconds: null
-      combat: null
-      turns: null
-      startRound: null
-      startTurn: null
-    icon: icons/svg/aura.svg
-    origin: >-
-      Compendium.torgeternity.system-de-archetypen.Actor.XhPhxBg111Zg5bem.Item.9I5Xe1PkXWZj34bm
-    transfer: false
-    flags: {}
-    tint: null
-    name: Standard
-    description: ''
-    statuses: []
-    _key: '!actors.effects!XhPhxBg111Zg5bem.IhMSck1yaj2l5x3D'
-  - _id: Dp1dBAwc3uT4TnjM
-    changes:
-      - key: system.attributes.dexterity.value
-        mode: 2
-        value: '2'
-        priority: null
-      - key: system.attributes.strength.value
-        mode: 2
-        value: '2'
-        priority: null
-    disabled: true
-    duration:
-      startTime: 0
-      rounds: 3
-      seconds: null
-      combat: null
-      turns: null
-      startRound: null
-      startTurn: null
-    icon: icons/svg/aura.svg
-    origin: >-
-      Compendium.torgeternity.system-de-archetypen.Actor.XhPhxBg111Zg5bem.Item.9I5Xe1PkXWZj34bm
-    transfer: false
-    flags: {}
-    tint: null
-    name: Gut
-    description: ''
-    statuses: []
-    _key: '!actors.effects!XhPhxBg111Zg5bem.Dp1dBAwc3uT4TnjM'
-  - _id: vChAsfdkvuEFU4Uy
-    changes:
-      - key: system.attributes.strength.value
-        mode: 2
-        value: '-2'
-        priority: null
-      - key: system.attributes.dexterity.value
-        mode: 2
-        value: '-2'
-        priority: null
-    disabled: true
-    duration:
-      startTime: 0
-      rounds: 6
-      seconds: null
-      combat: null
-      turns: null
-      startRound: null
-      startTurn: null
-    icon: icons/svg/aura.svg
-    origin: >-
-      Compendium.torgeternity.system-de-archetypen.Actor.XhPhxBg111Zg5bem.Item.9I5Xe1PkXWZj34bm
-    transfer: false
-    flags: {}
-    tint: null
-    name: Strafe
-    description: ''
-    statuses: []
-    _key: '!actors.effects!XhPhxBg111Zg5bem.vChAsfdkvuEFU4Uy'
-  - _id: jGmOvhxlZnFUarSU
-    changes:
-      - key: system.dodgeDefense
-        mode: 2
-        value: '1'
-        priority: null
-      - key: system.meleeWeaponsDefense
-        mode: 2
-        value: '1'
-        priority: null
-      - key: system.unarmedCombatDefense
-        mode: 2
-        value: '1'
-        priority: null
-    disabled: true
-    duration:
-      startTime: 0
-      seconds: null
-      combat: null
-      rounds: null
-      turns: null
-      startRound: null
-      startTurn: null
-    icon: icons/svg/aura.svg
-    origin: >-
-      Compendium.torgeternity.system-de-archetypen.Actor.XhPhxBg111Zg5bem.Item.gYp5XNCGUhgrvNFc
-    transfer: false
-    flags: {}
-    tint: null
-    name: Tel.Bar.Standard
-    description: ''
-    statuses: []
-    _key: '!actors.effects!XhPhxBg111Zg5bem.jGmOvhxlZnFUarSU'
-  - _id: M7OQE4PvKuQdf1BD
-    changes:
-      - key: system.dodgeDefense
-        mode: 2
-        value: '2'
-        priority: null
-      - key: system.meleeWeaponsDefense
-        mode: 2
-        value: '2'
-        priority: null
-      - key: system.unarmedCombatDefense
-        mode: 2
-        value: '2'
-        priority: null
-    disabled: true
-    duration:
-      startTime: 0
-      seconds: null
-      combat: null
-      rounds: null
-      turns: null
-      startRound: null
-      startTurn: null
-    icon: icons/svg/aura.svg
-    origin: >-
-      Compendium.torgeternity.system-de-archetypen.Actor.XhPhxBg111Zg5bem.Item.gYp5XNCGUhgrvNFc
-    transfer: false
-    flags: {}
-    tint: null
-    name: Tel.Bar.Gut
-    description: ''
-    statuses: []
-    _key: '!actors.effects!XhPhxBg111Zg5bem.M7OQE4PvKuQdf1BD'
-  - _id: nQbcFRpCzYKVqntf
-    changes:
-      - key: system.dodgeDefense
-        mode: 2
-        value: '3'
-        priority: null
-      - key: system.meleeWeaponsDefense
-        mode: 2
-        value: '3'
-        priority: null
-      - key: system.unarmedCombatDefense
-        mode: 2
-        value: '3'
-        priority: null
-    disabled: true
-    duration:
-      startTime: 0
-      seconds: null
-      combat: null
-      rounds: null
-      turns: null
-      startRound: null
-      startTurn: null
-    icon: icons/svg/aura.svg
-    origin: >-
-      Compendium.torgeternity.system-de-archetypen.Actor.XhPhxBg111Zg5bem.Item.gYp5XNCGUhgrvNFc
-    transfer: false
-    flags: {}
-    tint: null
-    name: Tel.Bar.Hervorragend
-    description: ''
-    statuses: []
-    _key: '!actors.effects!XhPhxBg111Zg5bem.nQbcFRpCzYKVqntf'
 folder: null
 sort: 0
 flags:
@@ -1478,102 +1242,7 @@ system:
     spirit: 4
     tech: 25
   details:
-    background: >-
-      <p><img class="charimg"
-      src="systems/torgeternity/images/characters/Resistance_Fighter.webp"
-      alt="" width="982" height="2004"></p>
-
-      <p
-      class="moreheight">@UUID[Compendium.torgeternity.system-de-handouts.JournalEntry.DLLvnXpv7RFhRgHu.JournalEntryPage.pZZTcePrdVDCeCeF]{Archetyp
-      - Die Widerstandsk&auml;mpferin}</p>
-
-      <h3>&Uuml;berblick</h3>
-
-      <p>Das Volk sind Menschen aus Tharkold. Sie stehen dort seit Jahrhunderten
-      unter der Knechtschaft der Technod&auml;monen. Seit der Unterwerfung des
-      Volkes regt sich der Widerstand in vielen verschiedenen Formen, aber die
-      Macht und die M&ouml;glichkeiten der Technod&auml;monen beschr&auml;nkte
-      die Widerst&auml;ndler auf den nackten &Uuml;berlebenskampf &ndash;
-      jedenfalls bis jetzt. Tharkolds missgl&uuml;ckter Angriff auf die
-      Zentralerde schuf eine Gelegenheit, und jetzt nutzen die Mitglieder des
-      Widerstands den Augenblick und versuchen, das Beste daraus zu machen.</p>
-
-      <h3>Taktiken</h3>
-
-      <p>Deine Thav-9 ist eine t&ouml;dliche Maschinenpistole, dessen Feuerkraft
-      deine relative Unerfahrenheit damit wieder ausgleicht. Die Psionik ist
-      dagegen deine herausragende F&auml;higkeit. <em>Aufladen </em>ist
-      ersch&ouml;pfend, aber der Schub f&uuml;r deine <em>Geschicklichkeit
-      </em>verbessert alle deine Angriffe und Verteidigungen, und der Schub
-      f&uuml;r <em>St&auml;rke </em>erh&ouml;ht deine Robustheit und deinen
-      Nahkampfschaden. Die Max Ges deiner R&uuml;stung ist hoch genug, um dir
-      den vollen Nutzen aus beiden Boni zu erlauben. Die <em>Telekinese
-      </em>bietet Vielseitigkeit und erm&ouml;glicht es dir, mit deinem
-      Schmerzhandschuh auf Distanz anzugreifen, wodurch du <em>Kinese </em>als
-      Angriffs-Fertigkeit benutzen darfst und deinen <em>Verstand </em>anstelle
-      von <em>St&auml;rke</em>, um den Schaden zu berechnen.&nbsp;</p>
-
-      <p>Deine Geheimwaffe ist dein F&uuml;hrungspotenzial. Anfeuern kann
-      sch&auml;dliche Effekte einer Drama-Karte (wie Verwirrtheit,
-      M&uuml;digkeit oder sogar eine Welle) beseitigen und den Ausgang eines
-      Kampfes zu deinen Gunsten entscheiden.</p>
-
-      <h3>Moment der Krise</h3>
-
-      <p>Deine lebenslange Knechtschaft ging zu Ende, als du dich f&uuml;r einen
-      Mitsklaven eingesetzt hast und zum ersten Mal "Nein!" zu den
-      Technod&auml;monen sagtest. In diesem Moment wurden auch deine psionischen
-      Kr&auml;fte freigesetzt, die es euch erm&ouml;glichten zu &uuml;berleben!
-      Alternativ k&ouml;nnte der Moment gekommen sein, als du auf der
-      Zentralerde ankamst und das niedrige Tech-Axiom dein Sklavenhalsband
-      deaktivierte, sodass du eine kleine Rebellion ausl&ouml;sen konntest.</p>
-
-      <h3>Zitat</h3>
-
-      <p>"Legt eure Fesseln ab und k&auml;mpft! K&auml;mpft mit euren Gedanken,
-      mit euren Waffen oder mit blo&szlig;en H&auml;nden, wenn es sein
-      muss."</p>
-
-      <h3>Beschreibung</h3>
-
-      <p>Mitglieder der Widerstandsgruppe tragen R&uuml;stungen, die aus vielen
-      verschiedenen Fundst&uuml;cken zusammengesetzt sind. In Tharkold sind die
-      Ressourcen knapp, und auf der Erde ist die Situation nicht viel besser.
-      Was deinem Outfit an chic fehlt, macht es durch praktischen Schutz wett.
-      Du hast eine stolze Haltung und eine intensive Leidenschaft, die die
-      Menschen dazu bringt, dich ernst zu nehmen.</p>
-
-      <h3>Agenda</h3>
-
-      <p>Das ultimative Ziel des Widerstandes ist die Freiheit f&uuml;r das Volk
-      und alle Menschen, jetzt und f&uuml;r immer. Die High Lords sind
-      Hindernisse auf dem Weg zu diesem Ziel.</p>
-
-      <h3>Namen</h3>
-
-      <p>Aren, Caron, Dalia, Ibis, Kellan, Leya, Mani, Sabra, Theta, Zoya</p>
-
-      <h3>Advancement Track (Optional)</h3>
-
-      <ul>
-
-      <li>(5 EP) Psioniker (Quetschen)</li>
-
-      <li>(7 EP) Geborener Anf&uuml;hrer</li>
-
-      <li>(1 EP) <em>&Uuml;berzeugen</em> +1</li>
-
-      <li>(2 EP) <em>Feuerwaffen</em> +2</li>
-
-      <li>(3 EP) <em>Feuerwaffen</em> +3</li>
-
-      <li>(3 EP) <em>Realit&auml;t</em> +3</li>
-
-      <li>(4 EP) <em>Kinese</em> +4</li>
-
-      <li>(5 EP) <em>Kinese</em> +5</li>
-
-      </ul>
+    background: "<p><img class=\"charimg\" src=\"systems/torgeternity/images/characters/Resistance_Fighter.webp\" alt=\"\" width=\"982\" height=\"2004\" /></p>\n<p class=\"moreheight\">@UUID[Compendium.torgeternity.system-de-handouts.JournalEntry.DLLvnXpv7RFhRgHu.JournalEntryPage.pZZTcePrdVDCeCeF]{Archetyp - Die Widerstandskämpferin}</p>\n<h3>Überblick</h3>\n<p>Das Volk sind Menschen aus Tharkold. Sie stehen dort seit Jahrhunderten unter der Knechtschaft der Technodämonen. Seit der Unterwerfung des Volkes regt sich der Widerstand in vielen verschiedenen Formen, aber die Macht und die Möglichkeiten der Technodämonen beschränkte die Widerständler auf den nackten Überlebenskampf – jedenfalls bis jetzt. Tharkolds missglückter Angriff auf die Zentralerde schuf eine Gelegenheit, und jetzt nutzen die Mitglieder des Widerstands den Augenblick und versuchen, das Beste daraus zu machen.</p>\n<h3>Taktiken</h3>\n<p>Deine Thav-9 ist eine tödliche Maschinenpistole, dessen Feuerkraft deine relative Unerfahrenheit damit wieder ausgleicht. Die Psionik ist dagegen deine herausragende Fähigkeit. <em>Aufladen </em>ist erschöpfend, aber der Schub für deine <em>Geschicklichkeit </em>verbessert alle deine Angriffe und Verteidigungen, und der Schub für <em>Stärke </em>erhöht deine Robustheit und deinen Nahkampfschaden. Die Max Ges deiner Rüstung ist hoch genug, um dir den vollen Nutzen aus beiden Boni zu erlauben. Die <em>Telekinese </em>bietet Vielseitigkeit und ermöglicht es dir, mit deinem Schmerzhandschuh auf Distanz anzugreifen, wodurch du <em>Kinese </em>als Angriffs-Fertigkeit benutzen darfst und deinen <em>Verstand </em>anstelle von <em>Stärke</em>, um den Schaden zu berechnen.\_</p>\n<p>Deine Geheimwaffe ist dein Führungspotenzial. Anfeuern kann schädliche Effekte einer Drama-Karte (wie Verwirrtheit, Müdigkeit oder sogar eine Welle) beseitigen und den Ausgang eines Kampfes zu deinen Gunsten entscheiden.</p>\n<h3>Moment der Krise</h3>\n<p>Deine lebenslange Knechtschaft ging zu Ende, als du dich für einen Mitsklaven eingesetzt hast und zum ersten Mal \"Nein!\" zu den Technodämonen sagtest. In diesem Moment wurden auch deine psionischen Kräfte freigesetzt, die es euch ermöglichten zu überleben! Alternativ könnte der Moment gekommen sein, als du auf der Zentralerde ankamst und das niedrige Tech-Axiom dein Sklavenhalsband deaktivierte, sodass du eine kleine Rebellion auslösen konntest.</p>\n<h3>Zitat</h3>\n<p>\"Legt eure Fesseln ab und kämpft! Kämpft mit euren Gedanken, mit euren Waffen oder mit bloßen Händen, wenn es sein muss.\"</p>\n<h3>Beschreibung</h3>\n<p>Mitglieder der Widerstandsgruppe tragen Rüstungen, die aus vielen verschiedenen Fundstücken zusammengesetzt sind. In Tharkold sind die Ressourcen knapp, und auf der Erde ist die Situation nicht viel besser. Was deinem Outfit an chic fehlt, macht es durch praktischen Schutz wett. Du hast eine stolze Haltung und eine intensive Leidenschaft, die die Menschen dazu bringt, dich ernst zu nehmen.</p>\n<h3>Agenda</h3>\n<p>Das ultimative Ziel des Widerstandes ist die Freiheit für das Volk und alle Menschen, jetzt und für immer. Die High Lords sind Hindernisse auf dem Weg zu diesem Ziel.</p>\n<h3>Namen</h3>\n<p>Aren, Caron, Dalia, Ibis, Kellan, Leya, Mani, Sabra, Theta, Zoya</p>\n<h3>Advancement Track (Optional)</h3>\n<ul>\n<li>(5 EP) Psioniker (Quetschen)</li>\n<li>(7 EP) Geborener Anführer</li>\n<li>(1 EP) <em>Überzeugen</em> +1</li>\n<li>(2 EP) <em>Feuerwaffen</em> +2</li>\n<li>(3 EP) <em>Feuerwaffen</em> +3</li>\n<li>(3 EP) <em>Realität</em> +3</li>\n<li>(4 EP) <em>Kinese</em> +4</li>\n<li>(5 EP) <em>Kinese</em> +5</li>\n</ul>"
     race: theRace
     sizeBonus: normal
   editstate: false
@@ -1618,14 +1287,20 @@ prototypeToken:
       min: 0
       max: 1
     attenuation: 0.5
+    negative: false
+    priority: 0
   texture:
     src: systems/torgeternity/images/characters/resistance_fighter.Token.webp
-    tint: null
+    tint: '#ffffff'
     scaleX: 1
     scaleY: 1
     offsetX: 0
     offsetY: 0
     rotation: 0
+    anchorX: 0.5
+    anchorY: 0.5
+    fit: contain
+    alphaThreshold: 0.75
   sight:
     angle: 360
     enabled: true
@@ -1635,14 +1310,29 @@ prototypeToken:
     attenuation: 0.1
     saturation: 0
     contrast: 0
+    color: null
   appendNumber: false
   prependAdjective: false
   detectionModes: []
+  hexagonalShape: 0
+  occludable:
+    radius: 0
+  ring:
+    enabled: false
+    colors:
+      ring: null
+      background: null
+    effects: 1
+    subject:
+      scale: 1
+      texture: null
 _stats:
   systemId: torgeternity
-  systemVersion: 3.8.1
-  coreVersion: '11.315'
+  systemVersion: 12.2.0
+  coreVersion: '12.330'
   createdTime: 1694863252503
-  modifiedTime: 1716827811522
-  lastModifiedBy: VAnYow5sWS9EJzo0
+  modifiedTime: 1722359278656
+  lastModifiedBy: 93AMwcGe6H37rcPA
+  compendiumSource: Compendium.torgeternity.archetypes.6ThunRV3sj9ZSMQW
+  duplicateSource: null
 _key: '!actors!XhPhxBg111Zg5bem'

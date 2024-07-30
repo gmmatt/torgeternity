@@ -14,49 +14,26 @@ items:
     effects: []
     folder: null
     system:
-      cosm: Nile Empire
+      cosm: nileEmpire
       description: <p>Mysterious!</p>
       price: ''
       techlevel: 15
       value: null
-      equippedClass: item-equipped
+      secondaryAxiom:
+        selected: none
+        value: null
     ownership:
       default: 0
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: null
-      modifiedTime: 1693911255301
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722156505479
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Item.wl0B9YS9kJ0vhxwg
+      duplicateSource: null
     _key: '!actors.items!REeNzywr6VElHSWZ.WfpWhmXMDhdsA6VN'
-  - _id: k26h6SWta4Tt3pRB
-    name: Extra Magazines
-    type: gear
-    sort: 1500000
-    flags:
-      core:
-        sourceId: Item.qZuQoegFPBYC6tEB
-    img: systems/torgeternity/images/icons/gear-icon.webp
-    effects: []
-    folder: null
-    system:
-      cosm: Core Earth
-      description: <p>Five reloads for Mauser</p>
-      price: '20'
-      techlevel: 22
-      value: 6
-      equippedClass: item-equipped
-    ownership:
-      default: 0
-    _stats:
-      systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
-      createdTime: null
-      modifiedTime: 1693911161157
-      lastModifiedBy: CtisFurQNe9h7ABb
-    _key: '!actors.items!REeNzywr6VElHSWZ.k26h6SWta4Tt3pRB'
   - _id: 8r2D7ws1w2oTQZv6
     name: Flares (3)
     type: gear
@@ -68,21 +45,25 @@ items:
     effects: []
     folder: null
     system:
-      cosm: Nile Empire
+      cosm: nileEmpire
       description: <p>Provide light</p>
       price: '5'
       techlevel: 20
       value: 4
-      equippedClass: item-equipped
+      secondaryAxiom:
+        selected: none
+        value: null
     ownership:
       default: 0
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: null
-      modifiedTime: 1693911223429
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722156519367
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Item.JniN3c3c6HNv7cSp
+      duplicateSource: null
     _key: '!actors.items!REeNzywr6VElHSWZ.8r2D7ws1w2oTQZv6'
   - _id: tYj1sE2cK5Dqrc5r
     name: Handcuffs
@@ -95,21 +76,25 @@ items:
     effects: []
     folder: null
     system:
-      cosm: (Keins)
+      cosm: nileEmpire
       description: <p>Restrain a captured foe.</p>
       price: '100'
       techlevel: 19
       value: 10
-      equippedClass: item-equipped
+      secondaryAxiom:
+        selected: none
+        value: null
     ownership:
       default: 0
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: null
-      modifiedTime: 1694869220875
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722156523631
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Item.ByDipt9PRxbFf96I
+      duplicateSource: null
     _key: '!actors.items!REeNzywr6VElHSWZ.tYj1sE2cK5Dqrc5r'
   - _id: YNsCLlOR3zgPCtdI
     name: Tracking Device
@@ -122,54 +107,188 @@ items:
     effects: []
     folder: null
     system:
-      cosm: Nile Empire
+      cosm: nileEmpire
       description: >-
         <p>A beacon that broadcasts its location to any attuned radio receiver
         within one kilometer.</p>
       price: '150'
       techlevel: 20
       value: 11
-      equippedClass: item-equipped
+      secondaryAxiom:
+        selected: none
+        value: null
     ownership:
       default: 0
     _stats:
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
       createdTime: null
-      modifiedTime: 1693911248538
-      lastModifiedBy: CtisFurQNe9h7ABb
+      modifiedTime: 1722156527207
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Item.zGj5mxLW7ygVnIKC
+      duplicateSource: null
     _key: '!actors.items!REeNzywr6VElHSWZ.YNsCLlOR3zgPCtdI'
-  - _id: XNUafwX2EZjBlhkK
+  - _id: F5aP7JJO0Up7FJLN
+    name: Mauser Pistol
+    type: firearm
+    img: systems/torgeternity/images/icons/firearm-icon.webp
+    effects: []
+    folder: null
+    sort: 18300000
+    flags:
+      core:
+        sourceId: Compendium.te001-core-rulebook.Items.IM84bwdaJWaAVAIj
+    system:
+      cosm: nileEmpire
+      description: "<p>An often-copied design that features a high muzzle velocity and excellent penetration and a distinctive box magazine in front of the trigger. It remains extremely popular in the Nile Empire, where knock-offs are still manufactured.</p>\n<p>\_</p>\n<p>Found in <strong>Core Rules</strong></p>"
+      price: '250'
+      techlevel: 20
+      value: 12
+      ammo:
+        max: 10
+        value: 10
+      ap: 0
+      attackWith: fireCombat
+      chatNote: ''
+      damage: 13
+      damageType: flat
+      equipped: false
+      notes: ''
+      range: 10 / 25 / 40
+      secondaryAxiom:
+        selected: none
+        value: null
+    ownership:
+      default: 0
+      A9LyAqagoJJU3gDH: 3
+      CtisFurQNe9h7ABb: 3
+    _stats:
+      systemId: torgeternity
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
+      createdTime: 1693911089244
+      modifiedTime: 1722156447519
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Compendium.te001-core-rulebook.Items.IM84bwdaJWaAVAIj
+      duplicateSource: null
+    _key: '!actors.items!REeNzywr6VElHSWZ.F5aP7JJO0Up7FJLN'
+  - _id: gz6ZDd5HIAYQOsyC
+    name: Fist
+    type: customAttack
+    sort: 1000000
+    flags:
+      core:
+        sourceId: Item.ewfPYWfFRJSZ1FOs
+    img: systems/torgeternity/images/icons/fist-icon.webp
+    effects: []
+    folder: null
+    system:
+      ap: 0
+      attackWith: unarmedCombat
+      chatNote: ''
+      damage: 2
+      damageType: strengthPlus
+      description: ''
+      notes: ''
+    ownership:
+      default: 0
+      CtisFurQNe9h7ABb: 3
+    _stats:
+      systemId: torgeternity
+      systemVersion: 3.1.1
+      coreVersion: '12.330'
+      createdTime: 1694869337163
+      modifiedTime: 1694869355340
+      lastModifiedBy: CtisFurQNe9h7ABb
+      compendiumSource: Item.ewfPYWfFRJSZ1FOs
+      duplicateSource: null
+    _key: '!actors.items!REeNzywr6VElHSWZ.gz6ZDd5HIAYQOsyC'
+  - _id: UfhSHSsuH4nExjRt
+    name: Leather Vest
+    type: armor
+    img: systems/torgeternity/images/icons/armor-icon.webp
+    effects: []
+    folder: null
+    sort: 200000
+    flags:
+      core:
+        sourceId: Compendium.te001-core-rulebook.Items.Item.34ioFwhBc4c39YFU
+    system:
+      cosm: nileEmpire
+      description: >-
+        <p>@UUID[Compendium.te001-core-rulebook.rules.pwneQ55M0nnDH0Us.JournalEntryPage.qKdamp4rrcX6TTt0#full-body/torso:]{Torso}</p>
+      price: '100'
+      techlevel: 19
+      value: 10
+      bonus: 1
+      equipped: true
+      maxDex: 12
+      minStrength: null
+      notes: Torso
+      fatigue: null
+      secondaryAxiom:
+        selected: none
+        value: null
+    ownership:
+      default: 0
+      A9LyAqagoJJU3gDH: 3
+      CtisFurQNe9h7ABb: 3
+    _stats:
+      systemId: torgeternity
+      systemVersion: 12.2.0
+      coreVersion: '12.330'
+      createdTime: 1711551146690
+      modifiedTime: 1722156497255
+      lastModifiedBy: 93AMwcGe6H37rcPA
+      compendiumSource: Compendium.te001-core-rulebook.Items.Item.34ioFwhBc4c39YFU
+      duplicateSource: null
+    _key: '!actors.items!REeNzywr6VElHSWZ.UfhSHSsuH4nExjRt'
+  - name: Extra Magazines
+    type: ammunition
+    _id: gBsngeXIOkpN6rC4
+    img: systems/torgeternity/images/icons/ammo-icon.webp
+    system:
+      cosm: ''
+      description: >-
+        <p><span style="font-family:'Palatino Linotype'">Five reloads for
+        Mauser</span></p>
+      price: ''
+      techlevel: 20
+      value: 0
+      secondaryAxiom:
+        selected: none
+        value: null
+      type: ''
+      quantity: 5
+      damageMod: 0
+      apMod: 0
+      fireDamage: false
+      blastRadius: None
+      darknessMod: none
+      reach: ''
+    effects: []
+    folder: null
+    sort: 0
+    ownership:
+      default: 0
+      93AMwcGe6H37rcPA: 3
+    flags: {}
+    _stats:
+      compendiumSource: Item.KRYQ71jof26XeGEv
+      duplicateSource: null
+      coreVersion: '12.330'
+      systemId: torgeternity
+      systemVersion: 12.2.0
+      createdTime: 1722109055958
+      modifiedTime: 1722156440727
+      lastModifiedBy: 93AMwcGe6H37rcPA
+    _key: '!actors.items!REeNzywr6VElHSWZ.gBsngeXIOkpN6rC4'
+  - _id: uGeVAUPHf5j4e5Gu
     name: Brawler
     type: perk
     img: systems/torgeternity/images/icons/reality-icon.webp
-    effects:
-      - icon: icons/svg/aura.svg
-        origin: Item.WDcZathUzQ5AKAu9
-        duration:
-          startTime: null
-          seconds: null
-          combat: null
-          rounds: null
-          turns: null
-          startRound: null
-          startTurn: null
-        disabled: false
-        name: Unarmed Damage +2
-        _id: QQCo7NoEqsyECuj2
-        changes:
-          - key: system.unarmedDamage
-            mode: 2
-            value: '2'
-            priority: null
-        description: ''
-        transfer: true
-        statuses: []
-        flags: {}
-        tint: null
-        _key: >-
-          !actors.items.effects!REeNzywr6VElHSWZ.XNUafwX2EZjBlhkK.QQCo7NoEqsyECuj2
+    effects: []
     folder: null
     sort: 100000
     flags:
@@ -177,20 +296,8 @@ items:
         sourceId: Compendium.te001-core-rulebook.Items.8DjcKPmDCOTdObL6
     system:
       category: prowess
-      cosm: (None)
-      description: >-
-        <p>The fighter hits hard thanks to anything from dirty tricks and a good
-        uppercut to training in karate, jujitsu, tae kwon do, or similar
-        hand-tohand fighting styles. Characters with this Perk cause
-        <em>Strength</em> +2 damage with their bare hands when attacking with
-        <em>unarmed combat</em>. This stacks with any other <em>unarmed
-        combat</em> bonuses such as an edeinos’s claw attack.</p><p>More
-        advanced and exotic techniques are taught in Pan-Pacifica under the
-        <strong>Ki Powers Perks</strong>.</p>
-
-        <p>&nbsp;</p>
-
-        <p>Found in <strong>Core Rules</strong></p>
+      cosm: none
+      description: "<p>The fighter hits hard thanks to anything from dirty tricks and a good uppercut to training in karate, jujitsu, tae kwon do, or similar hand-tohand fighting styles. Characters with this Perk cause <em>Strength</em> +2 damage with their bare hands when attacking with <em>unarmed combat</em>. This stacks with any other <em>unarmed combat</em> bonuses such as an edeinos’s claw attack.</p><p>More advanced and exotic techniques are taught in Pan-Pacifica under the <strong>Ki Powers Perks</strong>.</p>\n<p>\_</p>\n<p>Found in <strong>Core Rules</strong></p>"
       prerequisites: At least two adds in unarmed combat
       generalContradiction: false
       pulpPowers:
@@ -267,56 +374,118 @@ items:
         limitation10: ''
         limitationNumber: 0
       timestaken: '1'
+      secondaryAxiom:
+        selected: none
+        value: null
     ownership:
       default: 0
       A9LyAqagoJJU3gDH: 3
       CtisFurQNe9h7ABb: 3
+      93AMwcGe6H37rcPA: 3
     _stats:
+      compendiumSource: Compendium.te001-core-rulebook.Items.8DjcKPmDCOTdObL6
+      duplicateSource: null
+      coreVersion: '12.330'
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
-      createdTime: 1693910528940
-      modifiedTime: 1693911036732
-      lastModifiedBy: CtisFurQNe9h7ABb
-    _key: '!actors.items!REeNzywr6VElHSWZ.XNUafwX2EZjBlhkK'
-  - _id: byweBvtHDmzgwQDj
+      systemVersion: 12.2.0
+      createdTime: 1722156409095
+      modifiedTime: 1722156409095
+      lastModifiedBy: 93AMwcGe6H37rcPA
+    _key: '!actors.items!REeNzywr6VElHSWZ.uGeVAUPHf5j4e5Gu'
+  - _id: A0o61qpmZKYS0Enn
     name: Super Skill (Intimidation)
     type: perk
     img: systems/torgeternity/images/icons/reality-icon.webp
-    effects: []
-    folder: null
-    sort: 45700000
+    effects:
+      - origin: Item.c1L1ioMuPK1NLBN0
+        duration:
+          rounds: null
+          startTime: null
+          seconds: null
+          combat: null
+          turns: null
+          startRound: null
+          startTurn: null
+        disabled: false
+        name: Intimidation +2
+        img: icons/svg/aura.svg
+        _id: FhLvfZqxa0xs4Ay2
+        type: base
+        system: {}
+        changes:
+          - key: system.skills.intimidation.adds
+            mode: 2
+            value: '2'
+            priority: null
+        description: ''
+        tint: '#ffffff'
+        transfer: true
+        statuses: []
+        sort: 0
+        flags: {}
+        _stats:
+          compendiumSource: null
+          duplicateSource: null
+          coreVersion: '12.330'
+          systemId: torgeternity
+          systemVersion: 12.2.0
+          createdTime: null
+          modifiedTime: null
+          lastModifiedBy: null
+        _key: >-
+          !actors.items.effects!REeNzywr6VElHSWZ.A0o61qpmZKYS0Enn.FhLvfZqxa0xs4Ay2
+      - origin: Item.c1L1ioMuPK1NLBN0
+        duration:
+          rounds: null
+          startTime: null
+          seconds: null
+          combat: null
+          turns: null
+          startRound: null
+          startTurn: null
+        disabled: false
+        name: Intimidation Favored
+        img: icons/svg/aura.svg
+        _id: D9VJayk42Xb85aV0
+        type: base
+        system: {}
+        changes:
+          - key: system.skills.intimidation.isFav
+            mode: 5
+            value: 'true'
+            priority: null
+        description: ''
+        tint: '#ffffff'
+        transfer: true
+        statuses: []
+        sort: 0
+        flags: {}
+        _stats:
+          compendiumSource: null
+          duplicateSource: null
+          coreVersion: '12.330'
+          systemId: torgeternity
+          systemVersion: 12.2.0
+          createdTime: null
+          modifiedTime: null
+          lastModifiedBy: null
+        _key: >-
+          !actors.items.effects!REeNzywr6VElHSWZ.A0o61qpmZKYS0Enn.D9VJayk42Xb85aV0
+    folder: gjZiCPX5knOIpsHd
+    sort: 425000
     flags:
       core:
         sourceId: Compendium.te001-core-rulebook.Items.ohmish0RVlju7Qbk
     system:
       category: pulpPowers
-      cosm: Nile Empire
-      description: >-
-        <p>The pulp hero is exceptionally good at something. Maybe he&rsquo;s a
-        crack shot in <em>fire combat</em>, a mind unrivaled in
-        <em>science</em>, or has a wit that cuts his foes to the bone via
-        <em>taunt</em>.</p>
-
-        <p>When Super Skill is taken, the character increases any one skill by
-        two adds. She may exceed the usual maximum of +5 adds without taking the
-        Mastery Perk. (If the character has the Mastery Perk, it stacks with
-        Super Skill.) This stacks with all other skill increases and allows a
-        pulp hero to reach superhuman levels of competency far faster than
-        most.</p>
-
-        <p>Like Super Attribute, the champion may only take this Perk once
-        &mdash; she cannot have more than one Super Skill.</p>
-
-        <p>&nbsp;</p>
-
-        <p>Found in <strong>Core Rules</strong></p>
+      cosm: nileEmpire
+      description: "<p>The pulp hero is exceptionally good at something. Maybe he’s a crack shot in <em>fire combat</em>, a mind unrivaled in <em>science</em>, or has a wit that cuts his foes to the bone via <em>taunt</em>.</p>\n<p>When Super Skill is taken, the character increases any one skill by two adds. She may exceed the usual maximum of +5 adds without taking the Mastery Perk. (If the character has the Mastery Perk, it stacks with Super Skill.) This stacks with all other skill increases and allows a pulp hero to reach superhuman levels of competency far faster than most.</p>\n<p>Like Super Attribute, the champion may only take this Perk once — she cannot have more than one Super Skill.</p>\n<p>\_</p>\n<p>Found in <strong>Core Rules</strong></p>"
       prerequisites: At least three adds in the selected skill
-      generalContradiction: false
+      generalContradiction: true
       pulpPowers:
         enhancement01:
           description: The skill is considered Favored.
-          taken: false
+          taken: true
           title: Favored
         enhancement02:
           description: The skill is increased to +4 adds.
@@ -375,7 +544,7 @@ items:
           taken: false
           title: ''
         enhancementNumber: 2
-        limitation01: ''
+        limitation01: based on device, range 20 meters
         limitation02: ''
         limitation03: ''
         limitation04: ''
@@ -385,183 +554,101 @@ items:
         limitation08: ''
         limitation09: ''
         limitation10: ''
-        limitationNumber: 0
+        limitationNumber: 1
       timestaken: '1'
+      secondaryAxiom:
+        selected: none
+        value: null
     ownership:
       default: 0
       A9LyAqagoJJU3gDH: 3
       CtisFurQNe9h7ABb: 3
+      93AMwcGe6H37rcPA: 3
     _stats:
+      compendiumSource: Compendium.te001-core-rulebook.Items.ohmish0RVlju7Qbk
+      duplicateSource: null
+      coreVersion: '12.330'
       systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
-      createdTime: 1693911046341
-      modifiedTime: 1693911073060
-      lastModifiedBy: CtisFurQNe9h7ABb
-    _key: '!actors.items!REeNzywr6VElHSWZ.byweBvtHDmzgwQDj'
-  - _id: F5aP7JJO0Up7FJLN
-    name: Mauser Pistol
-    type: firearm
-    img: systems/torgeternity/images/icons/firearm-icon.webp
-    effects: []
-    folder: null
-    sort: 18300000
-    flags:
-      core:
-        sourceId: Compendium.te001-core-rulebook.Items.IM84bwdaJWaAVAIj
-    system:
-      cosm: Nile Empire
-      description: >-
-        <p>An often-copied design that features a high muzzle velocity and
-        excellent penetration and a distinctive box magazine in front of the
-        trigger. It remains extremely popular in the Nile Empire, where
-        knock-offs are still manufactured.</p>
-
-        <p>&nbsp;</p>
-
-        <p>Found in <strong>Core Rules</strong></p>
-      price: '250'
-      techlevel: 20
-      value: 12
-      ammo:
-        max: 10
-        value: 10
-      ap: 0
-      attackWith: fireCombat
-      chatNote: ''
-      damage: 13
-      damageType: flat
-      equipped: false
-      equippedClass: .item-unequipped
-      notes: ''
-      range: 10 / 25 / 40
-    ownership:
-      default: 0
-      A9LyAqagoJJU3gDH: 3
-      CtisFurQNe9h7ABb: 3
-    _stats:
-      systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
-      createdTime: 1693911089244
-      modifiedTime: 1693911089244
-      lastModifiedBy: CtisFurQNe9h7ABb
-    _key: '!actors.items!REeNzywr6VElHSWZ.F5aP7JJO0Up7FJLN'
-  - _id: gz6ZDd5HIAYQOsyC
-    name: Fist
-    type: customAttack
-    sort: 1000000
-    flags:
-      core:
-        sourceId: Item.ewfPYWfFRJSZ1FOs
-    img: systems/torgeternity/images/icons/fist-icon.webp
-    effects: []
-    folder: null
-    system:
-      ap: 0
-      attackWith: unarmedCombat
-      chatNote: ''
-      damage: 2
-      damageType: strengthPlus
-      description: ''
-      notes: ''
-    ownership:
-      default: 0
-      CtisFurQNe9h7ABb: 3
-    _stats:
-      systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '11.308'
-      createdTime: 1694869337163
-      modifiedTime: 1694869355340
-      lastModifiedBy: CtisFurQNe9h7ABb
-    _key: '!actors.items!REeNzywr6VElHSWZ.gz6ZDd5HIAYQOsyC'
-  - _id: UfhSHSsuH4nExjRt
-    name: Leather Vest
-    type: armor
-    img: systems/torgeternity/images/icons/armor-icon.webp
-    effects: []
-    folder: null
-    sort: 200000
-    flags:
-      core:
-        sourceId: Compendium.te001-core-rulebook.Items.Item.34ioFwhBc4c39YFU
-    system:
-      cosm: Nile Empire
-      description: >-
-        <p>@UUID[Compendium.te001-core-rulebook.rules.pwneQ55M0nnDH0Us.JournalEntryPage.qKdamp4rrcX6TTt0#full-body/torso:]{Torso}</p>
-      price: '100'
-      techlevel: 19
-      value: 10
-      bonus: 1
-      equipped: true
-      equippedClass: item-equipped
-      maxDex: 12
-      minStrength: null
-      notes: Torso
-      fatigue: null
-    ownership:
-      default: 0
-      A9LyAqagoJJU3gDH: 3
-      CtisFurQNe9h7ABb: 3
-    _stats:
-      systemId: torgeternity
-      systemVersion: 3.7.0
-      coreVersion: '11.315'
-      createdTime: 1711551146690
-      modifiedTime: 1711704818790
-      lastModifiedBy: CtisFurQNe9h7ABb
-    _key: '!actors.items!REeNzywr6VElHSWZ.UfhSHSsuH4nExjRt'
+      systemVersion: 12.2.0
+      createdTime: 1722358614372
+      modifiedTime: 1722358614372
+      lastModifiedBy: 93AMwcGe6H37rcPA
+    _key: '!actors.items!REeNzywr6VElHSWZ.A0o61qpmZKYS0Enn'
 effects:
-  - _id: 35ZydiYloB6XEGzz
-    flags: {}
+  - origin: >-
+      Compendium.torgeternity.archetypes.Actor.REeNzywr6VElHSWZ.Item.A0o61qpmZKYS0Enn
+    duration:
+      rounds: null
+      startTime: 0
+      seconds: null
+      combat: null
+      turns: null
+      startRound: null
+      startTurn: null
+    disabled: false
+    name: Intimidation +2
+    img: icons/svg/aura.svg
+    _id: a1A2szfBznmjFxeY
+    type: base
+    system: {}
     changes:
       - key: system.skills.intimidation.adds
         mode: 2
         value: '2'
         priority: null
-    disabled: false
-    duration:
-      startTime: 0
-      seconds: null
-      combat: null
-      rounds: null
-      turns: null
-      startRound: null
-      startTurn: null
-    icon: icons/svg/aura.svg
-    origin: Actor.LGH3vMNa0jMnMboU.OwnedItem.RpNrke9ubLEc5xWb
-    tint: null
-    transfer: true
-    name: Intimidation +2
     description: ''
-    statuses: []
-    _key: '!actors.effects!REeNzywr6VElHSWZ.35ZydiYloB6XEGzz'
-  - icon: icons/svg/aura.svg
-    origin: >-
-      Compendium.torgeternity.archetypes.Actor.REeNzywr6VElHSWZ.Item.XNUafwX2EZjBlhkK
-    duration:
-      startTime: 0
-      seconds: null
-      combat: null
-      rounds: null
-      turns: null
-      startRound: null
-      startTurn: null
-    disabled: true
-    name: Unarmed Damage +2
-    _id: n5egjO1XNzsIX32J
-    changes:
-      - key: system.unarmedDamage
-        mode: 2
-        value: '2'
-        priority: null
-    description: ''
+    tint: '#ffffff'
     transfer: false
     statuses: []
+    sort: 0
     flags: {}
-    tint: null
-    _key: '!actors.effects!REeNzywr6VElHSWZ.n5egjO1XNzsIX32J'
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      coreVersion: '12.330'
+      systemId: torgeternity
+      systemVersion: 12.2.0
+      createdTime: 1722358614376
+      modifiedTime: 1722358614376
+      lastModifiedBy: 93AMwcGe6H37rcPA
+    _key: '!actors.effects!REeNzywr6VElHSWZ.a1A2szfBznmjFxeY'
+  - origin: >-
+      Compendium.torgeternity.archetypes.Actor.REeNzywr6VElHSWZ.Item.A0o61qpmZKYS0Enn
+    duration:
+      rounds: null
+      startTime: 0
+      seconds: null
+      combat: null
+      turns: null
+      startRound: null
+      startTurn: null
+    disabled: false
+    name: Intimidation Favored
+    img: icons/svg/aura.svg
+    _id: YSR6jOqg0EuB5Ulf
+    type: base
+    system: {}
+    changes:
+      - key: system.skills.intimidation.isFav
+        mode: 5
+        value: 'true'
+        priority: null
+    description: ''
+    tint: '#ffffff'
+    transfer: false
+    statuses: []
+    sort: 0
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      coreVersion: '12.330'
+      systemId: torgeternity
+      systemVersion: 12.2.0
+      createdTime: 1722358614376
+      modifiedTime: 1722358614376
+      lastModifiedBy: 93AMwcGe6H37rcPA
+    _key: '!actors.effects!REeNzywr6VElHSWZ.YSR6jOqg0EuB5Ulf'
 folder: null
 sort: 100001
 flags: {}
@@ -919,7 +1006,7 @@ system:
     background: >-
       <p><img class="charimg"
       src="systems/torgeternity/images/characters/Masked_Crusader.webp" alt=""
-      width="1189" height="1924"></p>
+      width="1189" height="1924" /></p>
 
       <p
       class="moreheight">@UUID[Compendium.torgeternity.handouts.JournalEntry.Knhh8vqtjSylJo5Z.JournalEntryPage.4XMfQXpiBN5gsUNL]{Archetype
@@ -928,48 +1015,47 @@ system:
       <h3>Overview</h3>
 
       <p>A group of mysterious men and women have banded together to end Pharaoh
-      Mobius&rsquo;s reign of tyranny. These heroes are based in Cairo, but
-      travel across the globe to fight evil. The masks and mystery surrounding
-      them are to protect their loved ones, or to foil Mobius&rsquo;s secret
-      police. Being a hero is a deadly calling, especially in a world ruled by
-      villains. A few rare crusaders hail from Terra, the home of the invaders,
-      but most are transformed citizens of Core Earth.</p>
+      Mobius’s reign of tyranny. These heroes are based in Cairo, but travel
+      across the globe to fight evil. The masks and mystery surrounding them are
+      to protect their loved ones, or to foil Mobius’s secret police. Being a
+      hero is a deadly calling, especially in a world ruled by villains. A few
+      rare crusaders hail from Terra, the home of the invaders, but most are
+      transformed citizens of Core Earth.</p>
 
       <h3>Tactics</h3>
 
       <p>You are a crack shot and no stranger to fist fights. However,
-      intimidation is your true weapon. Such a high value makes a
-      &ldquo;Player&rsquo;s Call&ldquo; result common, which at worst eliminates
-      a villain&rsquo;s next action and at best might cause a foe to run
-      screaming into the night. Your good reality skill lets you Soak damage
-      well.</p>
+      intimidation is your true weapon. Such a high value makes a “Player’s
+      Call“ result common, which at worst eliminates a villain’s next action and
+      at best might cause a foe to run screaming into the night. Your good
+      reality skill lets you Soak damage well.</p>
 
-      <p>Underneath the mask you&rsquo;re a decent detective. If your frightened
-      foes aren&rsquo;t talking, your streetwise or evidence analysis may
-      provide any missing clues. Moment of Crisis Once you were an ordinary
-      citizen, but the same event that catalyzed your powers was also the
-      tipping point for your</p>
+      <p>Underneath the mask you’re a decent detective. If your frightened foes
+      aren’t talking, your streetwise or evidence analysis may provide any
+      missing clues. Moment of Crisis Once you were an ordinary citizen, but the
+      same event that catalyzed your powers was also the tipping point for
+      your</p>
 
       <h3>Moment of Crisis.</h3>
 
-      <p>Perhaps you were in the right place at the right time to stop
-      Mobius&rsquo;s minions from pillaging a tomb near Cairo&mdash;a tomb that
-      contained a burial shroud now worn as a cape. Or maybe an older hero fell,
-      and you picked up his mantle to avenge him.</p>
+      <p>Perhaps you were in the right place at the right time to stop Mobius’s
+      minions from pillaging a tomb near Cairo—a tomb that contained a burial
+      shroud now worn as a cape. Or maybe an older hero fell, and you picked up
+      his mantle to avenge him.</p>
 
       <h3>Quote</h3>
 
-      <p>&ldquo;What do you fear?&ldquo;</p>
+      <p>“What do you fear?“</p>
 
       <h3>Description</h3>
 
-      <p>A black mask and ragged cape are required apparel&mdash; unless
-      you&rsquo;re in your secret identity. Either item may be the magical
-      source of your frightful power, or perhaps a gadget on your utility belt
-      broadcasts some kind of fear-inducing field. You usually speak in a low,
-      serious voice and keep up a grim facade. That&rsquo;s all for a calculated
-      effect though, and your occasional quip or joke reminds everyone a human
-      being is under that mask.</p>
+      <p>A black mask and ragged cape are required apparel— unless you’re in
+      your secret identity. Either item may be the magical source of your
+      frightful power, or perhaps a gadget on your utility belt broadcasts some
+      kind of fear-inducing field. You usually speak in a low, serious voice and
+      keep up a grim facade. That’s all for a calculated effect though, and your
+      occasional quip or joke reminds everyone a human being is under that
+      mask.</p>
 
       <h3>Agenda</h3>
 
@@ -1045,14 +1131,20 @@ prototypeToken:
       max: 1
     color: null
     attenuation: 0.5
+    negative: false
+    priority: 0
   texture:
     src: systems/torgeternity/images/characters/masked_crusader.Token.webp
-    tint: null
+    tint: '#ffffff'
     scaleX: 1
     scaleY: 1
     offsetX: 0
     offsetY: 0
     rotation: 0
+    anchorX: 0.5
+    anchorY: 0.5
+    fit: contain
+    alphaThreshold: 0.75
   sight:
     angle: 360
     enabled: false
@@ -1062,14 +1154,29 @@ prototypeToken:
     attenuation: 0.1
     saturation: 0
     contrast: 0
+    color: null
   appendNumber: false
   prependAdjective: false
   detectionModes: []
+  hexagonalShape: 0
+  occludable:
+    radius: 0
+  ring:
+    enabled: false
+    colors:
+      ring: null
+      background: null
+    effects: 1
+    subject:
+      scale: 1
+      texture: null
 _stats:
   systemId: torgeternity
-  systemVersion: 3.8.1
-  coreVersion: '11.315'
+  systemVersion: 12.2.0
+  coreVersion: '12.330'
   createdTime: 1693911035741
-  modifiedTime: 1716827807782
-  lastModifiedBy: VAnYow5sWS9EJzo0
+  modifiedTime: 1722355493847
+  lastModifiedBy: 93AMwcGe6H37rcPA
+  compendiumSource: null
+  duplicateSource: null
 _key: '!actors!REeNzywr6VElHSWZ'
