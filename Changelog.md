@@ -1,5 +1,9 @@
 # TORG Eternity Changelog
 
+## v. 12.3.0
+
+- Active Defense will now automatically be disposed, when the combat round is over or the combat ends. [#438](https://github.com/gmmatt/torgeternity/issues/438)
+
 ## v. 12.2.2
 
 - Added ammunition handling to vehicles (and some other item handling)

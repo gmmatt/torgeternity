@@ -1008,6 +1008,7 @@ Hooks.on('deleteCombat', async (combat, dataUpdate) => {
   listHandsReset.forEach((hand) =>
     hand.cards.forEach((card) => card.unsetFlag('torgeternity', 'pooled'))
   );
+  await deleteActiveDefense(combat);
 });
 
 Hooks.on('deleteActor', async (actor, data1, data2) => {
@@ -1083,3 +1084,19 @@ Hooks.on('updateCombatant', async (torgCombatant, dataFlags, dataDiff, userId) =
     }
   }
 });
+
+// deactivate active defense when the combat round is progressed. End of combat is in the hook above, 'deleteCombat'
+Hooks.on('combatRound', await deleteActiveDefense);
+
+async function deleteActiveDefense(...args) {
+  if (!game.user.isGM) return;
+
+  const combatants = args[0].combatants;
+
+  for (const combatant of combatants) {
+    const activeDefenseEffect = combatant.actor.appliedEffects.find(
+      (eff) => eff.name === 'ActiveDefense'
+    );
+    if (activeDefenseEffect) await activeDefenseEffect.delete();
+  }
+}
