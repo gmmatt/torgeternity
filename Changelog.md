@@ -4,6 +4,12 @@
 
 - Active Defense will now automatically be disposed, when the combat round is over or the combat ends. [#438](https://github.com/gmmatt/torgeternity/issues/438)
 
+## v. 12.2.2
+
+- Added ammunition handling to vehicles (and some other item handling)
+- More migrations for active effects (values of _True_ won't be handled)
+- Item drop on vehicles were somewhat messy
+
 ## v. 12.2.1
 
 - With the new hook on end of turn in ct, active defense was deleted as well. Squished that (it's about the end of the round, this will be part of 12.3.0)

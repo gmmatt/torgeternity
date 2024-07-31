@@ -156,11 +156,12 @@ export default class TorgeternityItemSheet extends ItemSheet {
       this.item.update({ 'system.pulpPowers.limitationNumber': newShown });
     });
 
-    html.find('.reload-weapon').click((ev) => {
+    html.find('.reload-weapon').click(async (ev) => {
       const button = ev.currentTarget.closest('[data-item-id]');
       const usedAmmo = this?.actor.items.get(button.dataset.itemId);
 
-      reloadAmmo(this.actor, this.object, usedAmmo);
+      await reloadAmmo(this.actor, this.object, usedAmmo, this);
+      this.render(true);
     });
 
     html.find('.selectSecondaryAxiom').click((ev) => {

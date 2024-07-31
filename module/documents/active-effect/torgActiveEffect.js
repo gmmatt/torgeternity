@@ -50,6 +50,11 @@ export default class TorgActiveEffect extends ActiveEffect {
       for (const change of data.changes) {
         if (change.key.includes('.isFav') && (change.value === '1' || change.value === '0')) {
           change.value = change.value === '1' ? 'true' : 'false';
+        } else if (
+          change.key.includes('.isFav') &&
+          (change.value === 'True' || change.value === 'False')
+        ) {
+          change.value = change.value.toLowerCase();
         }
       }
     }
