@@ -119,6 +119,7 @@ Hooks.once('init', async function () {
     psionicpower: game.i18n.localize('torgeternity.itemSheetDescriptions.psionicpower'),
     customSkill: game.i18n.localize('torgeternity.itemSheetDescriptions.customSkill'),
     vehicleAddOn: game.i18n.localize('torgeternity.itemSheetDescriptions.vehicleAddOn'),
+    race: game.i18n.localize('torgeternity.itemSheetDescriptions.race'),
   };
 
   ui.GMScreen = new GMScreen();
