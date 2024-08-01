@@ -283,6 +283,7 @@
       "missileweapon": { "htmlFields": ["description"] },
       "perk": { "htmlFields": ["description"] },
       "psionicpower": { "htmlFields": ["description"] },
+      "race": {"htmlFields": ["description"]},
       "shield": { "htmlFields": ["description"] },
       "specialability": { "htmlFields": ["description"] },
       "specialability-rollable": { "htmlFields": ["description"] },

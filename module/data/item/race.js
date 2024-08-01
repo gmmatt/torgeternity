@@ -4,6 +4,7 @@ import { torgeternity } from '../../config.js';
  * @inheritdoc
  */
 export class RaceItemData extends foundry.abstract.TypeDataModel {
+  /** @inheritdoc */
   static defineSchema() {
     const fields = foundry.data.fields;
     return {

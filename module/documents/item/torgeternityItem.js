@@ -4,7 +4,7 @@ import { ChatMessageTorg } from '../chat/document.js';
  *
  */
 export default class TorgeternityItem extends Item {
-  // TODO: Chatcardtemplate for ammunitions
+  // TODO: Chatcardtemplate for ammunitions & race
   static CHAT_TEMPLATE = {
     perk: 'systems/torgeternity/templates/partials/perk-card.hbs',
     attack: 'systems/torgeternity/templates/partials/attack-card.hbs',
@@ -64,7 +64,7 @@ export default class TorgeternityItem extends Item {
     spell: 'spell-icon.webp',
     miracle: 'miracles-icon.webp',
     psionicpower: 'psionicpower.webp',
-    race: 'gear-icon.webp',
+    race: 'race-icon.webp',
   };
 
   /**
