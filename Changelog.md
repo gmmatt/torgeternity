@@ -1,5 +1,9 @@
 # TORG Eternity Changelog
 
+## v. 12.2.3
+
+- Added optional chaining in updateCombatant, for a .world property might not be accessible
+
 ## v. 12.2.2
 
 - Added ammunition handling to vehicles (and some other item handling)
