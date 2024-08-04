@@ -3,6 +3,7 @@
 ## v. 12.2.3
 
 - Added optional chaining in updateCombatant, for a .world property might not be accessible
+- Restored selectOptions of maneuver and intimidation defenseOnly on threat character sheet (wonder where this got lost)
 
 ## v. 12.2.2
 
