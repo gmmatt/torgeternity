@@ -545,11 +545,15 @@
         <div>Defense Only?</div>
         <span>
           {{localize 'torgeternity.skills.intimidation'}}
-          <select name="system.skills.intimidation.defenseOnly" class="input-box"></select>
-
+          <select name="system.skills.intimidation.defenseOnly" class="input-box">
+            {{selectOptions config.yesNo selected=actor.system.skills.intimidation.defenseOnly sort=true
+            localize=true}}
+          </select>
           {{localize 'torgeternity.skills.maneuver'}}
-          <select name="system.skills.maneuver.defenseOnly" class="input-box"></select>
-
+          <select name="system.skills.maneuver.defenseOnly" class="input-box">
+            {{selectOptions config.yesNo selected=actor.system.skills.maneuver.defenseOnly sort=true
+            localize=true}}
+          </select>
           {{localize 'torgeternity.skills.taunt'}}
           <select name="system.skills.taunt.defenseOnly" class="input-box">
             {{selectOptions config.yesNo selected=actor.system.skills.taunt.defenseOnly sort=true
