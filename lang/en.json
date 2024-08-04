@@ -32,12 +32,6 @@
       "spirit": "Spirituality",      
       "tech": "Tech"
     },
-    "axioms": {
-      "magic": "Magic",
-      "social": "Social",
-      "spirit": "Spirituality",      
-      "tech": "Tech"
-    },
     "cardTypes": {
       "activeDrama": "Active Drama Card",
       "cosm": "Cosm",
@@ -655,6 +649,7 @@
       "attackOptions": "Attack Options",
       "attacks": "Attacks and Powers",
       "attribute": "Attribute",
+      "attributeMaximum": "Attribute maximum",
       "attributes": "Attributes",
       "availableEnhancements": "Available Enhancements",
       "background": "Background",
@@ -716,6 +711,7 @@
       "generalGear": "General Gear",
       "goodResult": "Good Result",
       "gunner": "Gunner",
+      "hardcode": "Hardcode",
       "heavyBurst": "Heavy (+6)",
       "heavyWeapons": "Heavy Weapons",
       "implant": "Implant",

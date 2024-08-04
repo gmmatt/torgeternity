@@ -3470,6 +3470,44 @@ form.actor-sheet.threat .tab[data-tab].active .editor {
   column-gap: 0.5em;
 }
 
+.item .window-content form.item-sheet .raceAttributes {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+/*.item .window-content form.item-sheet .raceAttributes > * {
+
+}*/
+
+.item .window-content form.item-sheet .raceAttributes > h1 {
+  grid-row: 1/2;
+  grid-column: 1/6;
+  color: black;
+  border:none;
+}
+
+.item .window-content form.item-sheet .raceAttributes > label {
+  grid-row: 2/3;
+  color:black;
+}
+
+.item .window-content form.item-sheet .raceAttributes > input {
+  grid-row: 3/4;
+  border: none;
+  text-align: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 15px;
+  background: url(../images/roundBack.webp);
+  background-size: cover;
+  color: black;
+}
+
 .item .window-content form.item-sheet .asside {
   grid-row: 1/4;
   grid-column: 1/2;
@@ -3494,7 +3532,8 @@ form.actor-sheet.threat .tab[data-tab].active .editor {
   margin: 7px 0;
 }
 
-.item .window-content form.item-sheet .asside input[type="number"] {
+.item .window-content form.item-sheet .asside input[type="number"]
+ {
   border: none;
   text-align: center;
   width: 40px;

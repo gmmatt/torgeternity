@@ -32,12 +32,6 @@
       "spirit": "Espiritual",
       "tech": "Tecno."      
     },
-    "axioms": {      
-      "magic": "Mágico",
-      "social": "Social",
-      "spirit": "Espiritual",
-      "tech": "Tecno."      
-    },
     "cardTypes": {
       "activeDrama": "Active Drama Card",
       "cosm": "Cosmos",
@@ -655,6 +649,7 @@
       "attackOptions": "Opciones Ataque",
       "attacks": "Ataques",
       "attribute": "Atributo",
+      "attributeMaximum": "Atributo máximo",
       "attributes": "Atributos",
       "availableEnhancements": "Mejoras Disponibles",
       "background": "Trasfondo",
@@ -716,6 +711,7 @@
       "generalGear": "Equipo",
       "goodResult": "Buen Resultado",
       "gunner": "Gunner",
+      "hardcode": "Hardcode",
       "heavyBurst": "Continua (+6)",
       "heavyWeapons": "Armas Pesadas",
       "implant": "Implante",

@@ -10,13 +10,6 @@
       "cosm": "Cosm"
     }
   },
-  "TYPES": {
-    "Card": {
-      "destiny": "Schicksal",
-      "drama": "Drama",
-      "cosm": "Cosm"
-    }
-  },
   "torgeternity": {
     "attackTypes": {
       "energyWeapons": "Energiewaffen",
@@ -32,12 +25,6 @@
       "mind": "Verstand",
       "spirit": "Geist",
       "strength": "Stärke"
-    },
-    "axioms": {      
-      "magic": "Magie",
-      "social": "Sozial",
-      "spirit": "Spiritualität",
-      "tech": "Tech"      
     },
     "axioms": {      
       "magic": "Magie",
@@ -662,6 +649,7 @@
       "attackOptions": "Angriffsoptionen",
       "attacks": "Angriffe",
       "attribute": "Attribute",
+      "attributeMaximum": "Maximum der Attribute",
       "attributes": "Attribute",
       "availableEnhancements": "Verfügbare Verbesserungen",
       "background": "Hintergrund",
@@ -723,6 +711,7 @@
       "generalGear": "Allgemeine Ausrüstung",
       "goodResult": "Gut",
       "gunner": "Schütze",
+      "hardcode": "Hardcode",
       "heavyBurst": "Schwer (+6)",
       "heavyWeapons": "Schwere Waffen",
       "implant": "Implantat",

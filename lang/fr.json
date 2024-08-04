@@ -32,12 +32,6 @@
       "spirit": "Spirituel",
       "tech": "Tech"      
     },
-    "axioms": {      
-      "magic": "Magie",
-      "social": "Social",
-      "spirit": "Spirituel",
-      "tech": "Tech"      
-    },
     "cardTypes": {
       "activeDrama": "Carte Action active",
       "cosm": "Cosm",
@@ -655,6 +649,7 @@
       "attackOptions": "Options d'attaque",
       "attacks": "Attaques",
       "attribute": "Attribut",
+      "attributeMaximum": "Attributs maximum",
       "attributes": "Attributs",
       "availableEnhancements": "Améliorations disponibles",
       "background": "Historique",
@@ -716,7 +711,8 @@
       "generalGear": "Équipement général",
       "goodResult": "Résultat supérieur",
       "gunner": "Artilleur",
-      "heavyBurst": "Nourrie (+6)",
+      "hardcode": "Hardcode",
+      "heavyBurst": "Nourrie (+6)",      
       "heavyWeapons": "Armes lourdes",
       "implant": "Implant",
       "implants": "Implants",
