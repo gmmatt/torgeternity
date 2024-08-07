@@ -2,8 +2,9 @@
 
 ## v. 12.2.3
 
-- Added optional chaining in updateCombatant, for a .world property might not be accessible
-- Restored selectOptions of maneuver and intimidation defenseOnly on threat character sheet (wonder where this got lost)
+- Added optional chaining in updateCombatant, for a .world property might not be accessible [#448](https://github.com/gmmatt/torgeternity/issues/448)
+- Restored selectOptions of maneuver and intimidation defenseOnly on threat character sheet (wonder where this got lost) [#445](https://github.com/gmmatt/torgeternity/issues/445)
+- Corrected some wierd things on cosm entry of items, that didn't store correctly [#447](https://github.com/gmmatt/torgeternity/issues/447)
 
 ## v. 12.2.2
 
