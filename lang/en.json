@@ -153,7 +153,10 @@
       "hasPlayedTooltip": "Check when character's turn is complete"
     },
     "contextMenu": {
-      "characterInfo": "Show character information"
+      "characterInfo": {
+        "contextMenuTitle":"Show character information",
+        "windowTitle": "Notes and Backgrounds from {a}"
+      }
     },
     "cosmDecks": {
       "aysle": "Aysle Cosm Deck",
