@@ -2241,6 +2241,12 @@ form.actor-sheet header input[name="name"] {
   height: 100%;
 }
 
+.window-content .actor-sheet .tab[data-tab="vehicleGear"].active {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
 .window-content .actor-sheet .tab.threat-block-tab[data-tab].active {
   display: inline;
 }
