@@ -4,6 +4,13 @@
 
 - Active Defense will now automatically be disposed, when the combat round is over or the combat ends. [#438](https://github.com/gmmatt/torgeternity/issues/438)
 
+## v. 12.2.3
+
+- Added optional chaining in updateCombatant, for a .world property might not be accessible [#448](https://github.com/gmmatt/torgeternity/issues/448)
+- Restored selectOptions of maneuver and intimidation defenseOnly on threat character sheet (wonder where this got lost) [#445](https://github.com/gmmatt/torgeternity/issues/445)
+- Corrected some wierd things on cosm entry of items, that didn't store correctly [#447](https://github.com/gmmatt/torgeternity/issues/447)
+- missplaced gear in vehicles are fixed [#452](https://github.com/gmmatt/torgeternity/issues/452)
+
 ## v. 12.2.2
 
 - Added ammunition handling to vehicles (and some other item handling)

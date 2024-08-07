@@ -61,7 +61,6 @@ export default class MacroHub extends Application {
   }
 
   async _executeMacro(event) {
-    console.log('abcd');
     const macroPack = await game.packs.get('torgeternity.macros');
     const macroId = event.currentTarget.closest('.macroHubSpan').dataset.macroId;
     await macroPack.getDocument(macroId).then((m) => m.execute());
