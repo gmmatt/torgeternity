@@ -152,6 +152,13 @@
       "vilainsTooltip": "vilains first",
       "hasPlayedTooltip": "Check when character's turn is complete"
     },
+    "contextMenu": {
+      "characterInfo": {
+        "contextMenuTitle":"Show character information",
+        "windowTitle": "Notes and Backgrounds from {a}",
+        "createChatCard": "Mache eine Chatkarte"
+      }
+    },
     "cosmDecks": {
       "aysle": "Aysle Cosm-Deck",
       "coreEarth": "Zentralerde Cosm-Deck",

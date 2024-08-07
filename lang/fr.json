@@ -152,6 +152,13 @@
       "vilainsTooltip": "initiative aux méchants",
       "hasPlayedTooltip": "Cocher quand le tour du personnage est fini"
     },
+    "contextMenu": {
+      "characterInfo": {
+        "contextMenuTitle":"Show character information",
+        "windowTitle": "Notes and Backgrounds from {a}",
+        "createChatCard": "Create chat card"
+      }
+    },
     "cosmDecks": {
       "aysle": "Cartes Cosm Aysle",
       "coreEarth": "Cartes Cosm Prime-Terre",

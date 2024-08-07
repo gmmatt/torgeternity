@@ -1068,20 +1068,18 @@ Hooks.on('dropActorSheetData', async (myVehicle, mySheet, dropItem) => {
 
 // When the turn taken button is hit, delete "until end of turn" effects (stymied/vulnerable)
 Hooks.on('updateCombatant', async (torgCombatant, dataFlags, dataDiff, userId) => {
-  if (game.user.hasRole(4)) {
-    if (dataFlags.flags.world.turnTaken) {
-      const myActor = torgCombatant.actor;
-      for (const ef of myActor.effects.filter((e) => e.duration.type === 'turns')) {
-        if (ef.name === 'ActiveDefense') continue;
-        await myActor.updateEmbeddedDocuments('ActiveEffect', [
-          {
-            _id: ef.id,
-            'duration.turns': ef.duration.turns - 1,
-            'duration.rounds': ef.duration.rounds - 1,
-          },
-        ]);
-        if (!ef.duration.remaining) await ef.delete();
-      }
+  if (game.user.hasRole(4) && dataFlags.flags?.world.turnTaken) {
+    const myActor = torgCombatant.actor;
+    for (const ef of myActor.effects.filter((e) => e.duration.type === 'turns')) {
+      if (ef.name === 'ActiveDefense') continue;
+      await myActor.updateEmbeddedDocuments('ActiveEffect', [
+        {
+          _id: ef.id,
+          'duration.turns': ef.duration.turns - 1,
+          'duration.rounds': ef.duration.rounds - 1,
+        },
+      ]);
+      if (!ef.duration.remaining) await ef.delete();
     }
   }
 });
@@ -1101,3 +1099,47 @@ async function deleteActiveDefense(...args) {
     if (activeDefenseEffect) await activeDefenseEffect.delete();
   }
 }
+
+Hooks.on('getActorDirectoryEntryContext', async (html, options) => {
+  const newOptions = [];
+
+  newOptions.push({
+    name: 'torgeternity.contextMenu.characterInfo.contextMenuTitle',
+    icon: '<i class="fa-regular fa-circle-info"></i>',
+    callback: async (li) => {
+      const actor = game.actors.get(li.data('documentId'));
+
+      const description =
+        '<div class="charInfoOutput">' + actor.system.details.background ??
+        actor.system.details.description ??
+        actor.system.description ??
+        '' + '</div>';
+
+      new Dialog(
+        {
+          title: game.i18n.format('torgeternity.contextMenu.characterInfo.windowTitle', {
+            a: actor.name,
+          }),
+          content: await TextEditor.enrichHTML(description),
+          buttons: {
+            ok: {
+              label: game.i18n.localize('torgeternity.dialogWindow.buttons.ok'),
+              callback: () => {},
+            },
+            showPlayers: {
+              label: game.i18n.localize('torgeternity.dialogPrompts.showToPlayers'),
+              callback: (html) => {
+                ChatMessage.create({
+                  content: html[0].querySelector('.charInfoOutput').outerHTML,
+                });
+              },
+            },
+          },
+        },
+        { width: 800 }
+      ).render(true);
+    },
+  });
+
+  options.splice(0, 0, ...newOptions);
+});
