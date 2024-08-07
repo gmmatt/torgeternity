@@ -155,7 +155,8 @@
     "contextMenu": {
       "characterInfo": {
         "contextMenuTitle":"Mostrar información del personaje",
-        "windowTitle": "Notes and Backgrounds from {a}"
+        "windowTitle": "Notes and Backgrounds from {a}",
+        "createChatCard": "Create chat card"
       }
     },
     "cosmDecks": {

@@ -1107,7 +1107,6 @@ Hooks.on('getActorDirectoryEntryContext', async (html, options) => {
     icon: '<i class="fa-regular fa-circle-info"></i>',
     callback: async (li) => {
       const actor = game.actors.get(li.data('documentId'));
-      console.log(actor);
 
       const description =
         '<div class="charInfoOutput">' + actor.system.details.background ??
@@ -1125,6 +1124,14 @@ Hooks.on('getActorDirectoryEntryContext', async (html, options) => {
             ok: {
               label: game.i18n.localize('torgeternity.dialogWindow.buttons.ok'),
               callback: () => {},
+            },
+            showPlayers: {
+              label: game.i18n.localize('torgeternity.dialogPrompts.showToPlayers'),
+              callback: (html) => {
+                ChatMessage.create({
+                  content: html[0].querySelector('.charInfoOutput').outerHTML,
+                });
+              },
             },
           },
         },
