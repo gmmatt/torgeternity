@@ -30,13 +30,7 @@
       "magic": "Mágico",
       "social": "Social",
       "spirit": "Espiritual",
-      "tech": "Tecno."      
-    },
-    "axioms": {      
-      "magic": "Mágico",
-      "social": "Social",
-      "spirit": "Espiritual",
-      "tech": "Tecno."      
+      "tech": "Tecno." 
     },
     "cardTypes": {
       "activeDrama": "Active Drama Card",
@@ -157,6 +151,9 @@
       "herosTooltip": "heros first",
       "vilainsTooltip": "vilains first",
       "hasPlayedTooltip": "Check when character's turn is complete"
+    },
+    "contextMenu": {
+      "characterInfo": "Mostrar información del personaje"
     },
     "cosmDecks": {
       "aysle": "Mazo Cosmos Aysle",

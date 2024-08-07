@@ -32,12 +32,6 @@
       "spirit": "Spirituel",
       "tech": "Tech"      
     },
-    "axioms": {      
-      "magic": "Magie",
-      "social": "Social",
-      "spirit": "Spirituel",
-      "tech": "Tech"      
-    },
     "cardTypes": {
       "activeDrama": "Carte Action active",
       "cosm": "Cosm",
@@ -157,6 +151,9 @@
       "herosTooltip": "initiative aux heros",
       "vilainsTooltip": "initiative aux méchants",
       "hasPlayedTooltip": "Cocher quand le tour du personnage est fini"
+    },
+    "contextMenu": {
+      "characterInfo": "Show character information"
     },
     "cosmDecks": {
       "aysle": "Cartes Cosm Aysle",

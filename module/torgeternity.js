@@ -1098,3 +1098,14 @@ async function deleteActiveDefense(...args) {
     if (activeDefenseEffect) await activeDefenseEffect.delete();
   }
 }
+
+Hooks.on('getActorDirectoryEntryContext', async (html, options) => {
+  const newOptions = [];
+
+  newOptions.push({
+    name: 'torgeternity.contextMenu.characterInfo',
+    icon: '<i class="fa-regular fa-circle-info"></i>',
+  });
+
+  options.splice(0, 0, ...newOptions);
+});
