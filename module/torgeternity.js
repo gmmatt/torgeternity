@@ -1098,3 +1098,47 @@ async function deleteActiveDefense(...args) {
     if (activeDefenseEffect) await activeDefenseEffect.delete();
   }
 }
+
+Hooks.on('getActorDirectoryEntryContext', async (html, options) => {
+  const newOptions = [];
+
+  newOptions.push({
+    name: 'torgeternity.contextMenu.characterInfo.contextMenuTitle',
+    icon: '<i class="fa-regular fa-circle-info"></i>',
+    callback: async (li) => {
+      const actor = game.actors.get(li.data('documentId'));
+
+      const description =
+        '<div class="charInfoOutput">' + actor.system.details.background ??
+        actor.system.details.description ??
+        actor.system.description ??
+        '' + '</div>';
+
+      new Dialog(
+        {
+          title: game.i18n.format('torgeternity.contextMenu.characterInfo.windowTitle', {
+            a: actor.name,
+          }),
+          content: await TextEditor.enrichHTML(description),
+          buttons: {
+            ok: {
+              label: game.i18n.localize('torgeternity.dialogWindow.buttons.ok'),
+              callback: () => {},
+            },
+            showPlayers: {
+              label: game.i18n.localize('torgeternity.dialogPrompts.showToPlayers'),
+              callback: (html) => {
+                ChatMessage.create({
+                  content: html[0].querySelector('.charInfoOutput').outerHTML,
+                });
+              },
+            },
+          },
+        },
+        { width: 800 }
+      ).render(true);
+    },
+  });
+
+  options.splice(0, 0, ...newOptions);
+});

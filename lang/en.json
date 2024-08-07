@@ -32,12 +32,6 @@
       "spirit": "Spirituality",      
       "tech": "Tech"
     },
-    "axioms": {
-      "magic": "Magic",
-      "social": "Social",
-      "spirit": "Spirituality",      
-      "tech": "Tech"
-    },
     "cardTypes": {
       "activeDrama": "Active Drama Card",
       "cosm": "Cosm",
@@ -157,6 +151,13 @@
       "herosTooltip": "heros first",
       "vilainsTooltip": "vilains first",
       "hasPlayedTooltip": "Check when character's turn is complete"
+    },
+    "contextMenu": {
+      "characterInfo": {
+        "contextMenuTitle":"Show character information",
+        "windowTitle": "Notes and Backgrounds from {a}",
+        "createChatCard": "Create chat card"
+      }
     },
     "cosmDecks": {
       "aysle": "Aysle Cosm Deck",

@@ -3536,6 +3536,16 @@ form.actor-sheet.threat .tab[data-tab].active .editor {
   border-image: url('../images/frameWithoutFilling.svg') 30 / 2rem;
 }
 
+.window-content .dialog-content .charInfoOutput {
+  background-color: rgba(255, 247, 247, 0.25);
+  padding-top: 20px;
+  padding-left: 10px
+}
+
+.window-content .dialog-content .charInfoOutput > h3 {
+  border: none;  
+}
+
 .item .window-content form.item-sheet nav.tabs {
   display: flex;
   flex-direction: row;

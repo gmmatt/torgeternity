@@ -10,13 +10,6 @@
       "cosm": "Cosm"
     }
   },
-  "TYPES": {
-    "Card": {
-      "destiny": "Schicksal",
-      "drama": "Drama",
-      "cosm": "Cosm"
-    }
-  },
   "torgeternity": {
     "attackTypes": {
       "energyWeapons": "Energiewaffen",
@@ -32,12 +25,6 @@
       "mind": "Verstand",
       "spirit": "Geist",
       "strength": "Stärke"
-    },
-    "axioms": {      
-      "magic": "Magie",
-      "social": "Sozial",
-      "spirit": "Spiritualität",
-      "tech": "Tech"      
     },
     "axioms": {      
       "magic": "Magie",
@@ -164,6 +151,13 @@
       "herosTooltip": "heros first",
       "vilainsTooltip": "vilains first",
       "hasPlayedTooltip": "Check when character's turn is complete"
+    },
+    "contextMenu": {
+      "characterInfo": {
+        "contextMenuTitle":"Show character information",
+        "windowTitle": "Notes and Backgrounds from {a}",
+        "createChatCard": "Mache eine Chatkarte"
+      }
     },
     "cosmDecks": {
       "aysle": "Aysle Cosm-Deck",
