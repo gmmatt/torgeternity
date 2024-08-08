@@ -64,7 +64,7 @@ export default class TorgeternityItem extends Item {
     spell: 'spell-icon.webp',
     miracle: 'miracles-icon.webp',
     psionicpower: 'psionicpower.webp',
-    race: 'gear-icon.webp',
+    race: 'race-icon.webp',
   };
 
   /**
