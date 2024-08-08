@@ -16,6 +16,7 @@
         <div class="tab stats" data-group="primary" data-tab="stats">
             <div class="sheet-content">
                  <div class="main-content" style="grid-column:1/5;">
+                 <h1 class="raceDescriptionHeadline">{{localize "torgeternity.sheetLabels.description"}}</h1>
                     <div name="description" class="item-description-textarea">
                         {{editor description target="system.description" engine="prosemirror" button=true editable=editable}}
                     </div>
@@ -68,6 +69,15 @@
                     value="{{item.system.attributeMaximum.strength}}"
                     class="input-box"
                 />
+            </div>
+            <hr>
+            <div class="raceCosm">
+                <label for="system.cosm" class="item-data-label">
+                    {{localize "torgeternity.gear.cosm"}}
+                </label>
+                <select name="system.cosm" class="input-box">
+                    {{selectOptions config.cosmTypes selected=item.system.cosm localize=true sort=true}}
+                </select>
             </div>
         </div>
     </section>

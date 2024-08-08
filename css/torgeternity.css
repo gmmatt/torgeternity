@@ -3476,6 +3476,13 @@ form.actor-sheet.threat .tab[data-tab].active .editor {
   column-gap: 0.5em;
 }
 
+.item .window-content form.item-sheet .raceDescriptionHeadline {
+  text-align: center;
+  color: black;
+  border:none;
+  font-weight: bold;
+}
+
 .item .window-content form.item-sheet .raceAttributes {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
@@ -3486,15 +3493,12 @@ form.actor-sheet.threat .tab[data-tab].active .editor {
   margin-bottom: 1rem;
 }
 
-/*.item .window-content form.item-sheet .raceAttributes > * {
-
-}*/
-
 .item .window-content form.item-sheet .raceAttributes > h1 {
   grid-row: 1/2;
   grid-column: 1/6;
   color: black;
   border:none;
+  font-weight: bold;
 }
 
 .item .window-content form.item-sheet .raceAttributes > label {
@@ -3512,6 +3516,34 @@ form.actor-sheet.threat .tab[data-tab].active .editor {
   background: url(../images/roundBack.webp);
   background-size: cover;
   color: black;
+}
+
+.item .window-content form.item-sheet .raceAttributes + hr {
+  background-image: url(../images/separator.webp);
+  /* background-position-y: -8px; */
+  background-repeat: no-repeat;
+  background-size: auto;
+  min-height: 20px;
+  height: 3rem;
+  width: auto;
+  border: none;
+  transform: scaleY(0.5);
+  margin: -15px 10px -15px 0px;
+}
+
+.item .window-content form.item-sheet .raceCosm {
+  color: black;
+  display: flex;
+  flex-direction: row;
+  margin: 15px;
+  justify-content: center;
+  column-gap: 15px;  
+}
+
+.item .window-content form.item-sheet .raceCosm > label {
+  font-family: Palatino;
+  font-size: 2em;
+  font-weight: bold;
 }
 
 .item .window-content form.item-sheet .asside {
