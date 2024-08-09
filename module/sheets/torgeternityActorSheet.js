@@ -197,6 +197,21 @@ export default class TorgeternityActorSheet extends ActorSheet {
       data.disableXP = false;
     }
 
+    for (const [skill, value] of Object.entries(data.data.system.skills)) {
+      data.data.system.skills[skill].baseAttributeLoc = game.i18n.localize(
+        `torgeternity.attributes.${value.baseAttribute}`
+      );
+    }
+
+    for (const [entry, value] of Object.entries(data?.customSkill)) {
+      console.log(entry);
+      console.log(value);
+
+      data.customSkill[entry].system.baseAttributeLoc = game.i18n.localize(
+        `torgeternity.attributes.${value.system.baseAttribute}`
+      );
+    }
+
     return data;
   }
 

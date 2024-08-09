@@ -86,7 +86,7 @@
         <ul>
           {{#each user.character.system.attributes as |attr key|}}
           <li class="attribut-block">
-            <span>{{localize (concatAttributeName key) }}</span>
+            <span>{{localizedAttribute}}</span>
             <span>: {{attr.value}}</span>
           </li>
           {{/each}}

@@ -20,6 +20,15 @@ export default class PartySheet extends PlayerList {
   getData() {
     const data = super.getData();
     data.users = game.users;
+    for (const user of data.users) {
+      if (user.role >= 4 || !user.character) continue;
+
+      for (const attribute of Object.keys(user.character.system.attributes)) {
+        user.character.system.attributes[attribute].localizedAttribute = game.i18n.localize(
+          `torgeternity.attributes.${attribute}`
+        );
+      }
+    }
     return data;
   }
   /**

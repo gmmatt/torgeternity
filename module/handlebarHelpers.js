@@ -1,13 +1,7 @@
-import { torgeternity } from './config.js';
-
 /**
  * Register Handlebar helpers
  */
 export function registerHelpers() {
-  Handlebars.registerHelper('concatAttributeName', function (attributeName) {
-    const localName = 'torgeternity.attributes.' + attributeName;
-    return localName;
-  });
   Handlebars.registerHelper('concatPerkType', function (type) {
     const localName = 'torgeternity.perkTypes.' + type;
     return localName;
