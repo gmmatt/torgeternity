@@ -4,6 +4,7 @@ import { TestDialog } from '../test-dialog.js';
 import TorgeternityItem from '../documents/item/torgeternityItem.js';
 import { reloadAmmo } from './torgeternityItemSheet.js';
 import { PossibilityByCosm } from '../possibilityByCosm.js';
+import { ChatMessageTorg } from '../documents/chat/document.js';
 
 /**
  *
@@ -964,11 +965,19 @@ export default class TorgeternityActorSheet extends ActorSheet {
    *
    * @param event
    */
-  _onItemChat(event) {
+  async _onItemChat(event) {
     const itemID = event.currentTarget.closest('.item').dataset.itemId;
     const item = this.actor.items.get(itemID);
+    const chatData = {
+      user: game.user._id,
+      speaker: ChatMessage.getSpeaker(),
+      flags: {
+        data: item,
+        template: TorgeternityItem.CHAT_TEMPLATE[item.type],
+      },
+    };
 
-    item.roll();
+    return ChatMessageTorg.create(chatData);
   }
 
   /**

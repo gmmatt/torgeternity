@@ -4,29 +4,6 @@ import { torgeternity } from './config.js';
  * Register Handlebar helpers
  */
 export function registerHelpers() {
-  Handlebars.registerHelper('concatPowerDN', function (dnValue) {
-    // some power DNs are part of a localization key, some are plain text
-    const dnStrings = [
-      'veryEasy',
-      'easy',
-      'standard',
-      'challenging',
-      'hard',
-      'veryHard',
-      'heroic',
-      'nearImpossible',
-    ];
-    if (dnStrings.includes(dnValue) || dnValue.startsWith('target')) {
-      return 'torgeternity.dnTypes.' + dnValue;
-    }
-    return dnValue;
-  });
-
-  Handlebars.registerHelper('concatSkillValue', function (skillName) {
-    const skillValue = '{{system.skills.' + skillName + '.value}}';
-    return skillValue;
-  });
-
   Handlebars.registerHelper('concatAttributeName', function (attributeName) {
     const localName = 'torgeternity.attributes.' + attributeName;
     return localName;
@@ -40,10 +17,6 @@ export function registerHelpers() {
     const localName = 'torgeternity.skills.' + skillName;
     return localName;
   });
-  Handlebars.registerHelper('concatPerkType', function (type) {
-    const localName = 'torgeternity.perkTypes.' + type;
-    return localName;
-  });
 
   Handlebars.registerHelper('concatClearanceLevel', function (clearance) {
     const localClearance = 'torgeternity.clearances.' + clearance;
@@ -53,16 +26,6 @@ export function registerHelpers() {
   Handlebars.registerHelper('concatCardType', function (cardType) {
     const localCardType = 'torgeternity.cardTypes.' + cardType;
     return localCardType;
-  });
-
-  Handlebars.registerHelper('concatSpecialAbility', function (description) {
-    // Removes <p> and </p> from the beginning and end of special ability descriptions so that they appear inline on threat sheet
-    if (description.startsWith('<p>')) {
-      const updatedDescription = description.replace('<p>', '').replace('</p>', '');
-      return updatedDescription;
-    } else {
-      return description;
-    }
   });
 
   // Is this actor actively defending right now?
@@ -111,24 +74,6 @@ export function registerHelpers() {
       // eslint-disable-next-line no-invalid-this
       return options.inverse(this);
     }
-  });
-
-  Handlebars.registerHelper('ifnotequal', function (a, b, options) {
-    if (a != b) {
-      // eslint-disable-next-line no-invalid-this
-      return options.fn(this);
-    }
-    // eslint-disable-next-line no-invalid-this
-    return options.inverse(this);
-  });
-
-  Handlebars.registerHelper('isNaN', function (a, options) {
-    if (isNaN(a)) {
-      // eslint-disable-next-line no-invalid-this
-      return options.fn(this);
-    }
-    // eslint-disable-next-line no-invalid-this
-    return options.inverse(this);
   });
 
   Handlebars.registerHelper('poolList', function (actorId) {
@@ -191,12 +136,6 @@ export function registerHelpers() {
     return skill.groupName === 'other';
   });
 
-  Handlebars.registerHelper('log', function (message) {
-    console.log(message);
-  });
-  Handlebars.registerHelper('cosmList', function () {
-    return torgeternity.cosmTypes;
-  });
   Handlebars.registerHelper('hasfinish', function (that) {
     let finished;
     try {

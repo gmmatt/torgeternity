@@ -1,3 +1,5 @@
+import { torgeternity } from '../../config.js';
+
 /**
  * ChatMessage Implementation for Torg Eternity
  * renders the chatMessage from data every time the HTML is rendered
@@ -11,6 +13,14 @@ class ChatMessageTorg extends ChatMessage {
     if (this.flags?.template && (this.flags?.data || this.flags?.torgeternity?.test)) {
       const template = this.flags.template;
       const templateData = this.flags?.torgeternity?.test ?? this.flags.data;
+      if (templateData.system?.dn.length > 0 && templateData.system?.dnType.length === 0) {
+        for (const [key, value] of Object.entries(torgeternity.dnTypes)) {
+          if (key === templateData.system?.dn) {
+            templateData.system.dnType = game.i18n.localize(value);
+            break;
+          }
+        }
+      }
       const renderedTemplate = await renderTemplate(template, templateData);
       const enrichedHTML = await TextEditor.enrichHTML(renderedTemplate);
       html.querySelector('.message-content').innerHTML = enrichedHTML;
