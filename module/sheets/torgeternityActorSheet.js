@@ -217,6 +217,12 @@ export default class TorgeternityActorSheet extends ActorSheet {
         game.i18n.localize(`torgeternity.cosms.${value.system.cosm}`) ?? null;
     }
 
+    for (const skill of Object.keys(data.actor.system.skills)) {
+      data.actor.system.skills[skill].translatedSkill = game.i18n.localize(
+        `torgeternity.skills.${skill}`
+      );
+    }
+
     return data;
   }
 

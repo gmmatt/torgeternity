@@ -28,6 +28,12 @@ export default class PartySheet extends PlayerList {
           `torgeternity.attributes.${attribute}`
         );
       }
+
+      for (const skill of Object.keys(user.character.system.skills)) {
+        user.character.system.skills[skill].localizedSkill = game.i18n.localize(
+          `torgeternity.skills.${skill}`
+        );
+      }
     }
     return data;
   }

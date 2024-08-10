@@ -13,6 +13,7 @@ class ChatMessageTorg extends ChatMessage {
     if (this.flags?.template && (this.flags?.data || this.flags?.torgeternity?.test)) {
       const template = this.flags.template;
       const templateData = this.flags?.torgeternity?.test ?? this.flags.data;
+
       if (templateData.system?.dn.length > 0 && templateData.system?.dnType.length === 0) {
         for (const [key, value] of Object.entries(torgeternity.dnTypes)) {
           if (key === templateData.system?.dn) {
@@ -21,6 +22,11 @@ class ChatMessageTorg extends ChatMessage {
           }
         }
       }
+
+      templateData.system.translatedSkill = game.i18n.localize(
+        `torgeternity.skills.${templateData.system.skill}`
+      );
+
       const renderedTemplate = await renderTemplate(template, templateData);
       const enrichedHTML = await TextEditor.enrichHTML(renderedTemplate);
       html.querySelector('.message-content').innerHTML = enrichedHTML;

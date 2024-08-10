@@ -485,7 +485,7 @@
             data-unskilleduse="{{content.unskilledUse}}"
             data-name="{{name}}"
           >
-            {{localize (concatSkillName name)}}
+            {{content.translatedSkill}}
           </a>
           {{#if content.isFav}}
           <a class="toggleFav checked">
@@ -514,7 +514,7 @@
             data-name="{{key}}"
             data-tooltip='{{localize "torgeternity.sheetLabels.toolTipClickToAdd"}}'
           >
-            {{localize (concatSkillName key)}}
+            {{skill.translatedSkill}}
           </span>
           <span class="inputsFav">
             <input

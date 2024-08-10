@@ -2,11 +2,6 @@
  * Register Handlebar helpers
  */
 export function registerHelpers() {
-  Handlebars.registerHelper('concatSkillName', function (skillName) {
-    const localName = 'torgeternity.skills.' + skillName;
-    return localName;
-  });
-
   Handlebars.registerHelper('concatClearanceLevel', function (clearance) {
     const localClearance = 'torgeternity.clearances.' + clearance;
     return localClearance;
