@@ -198,18 +198,23 @@ export default class TorgeternityActorSheet extends ActorSheet {
     }
 
     for (const [skill, value] of Object.entries(data.data.system.skills)) {
+      // localise the base attribute in skills
       data.data.system.skills[skill].baseAttributeLoc = game.i18n.localize(
         `torgeternity.attributes.${value.baseAttribute}`
       );
     }
 
     for (const [entry, value] of Object.entries(data?.customSkill)) {
-      console.log(entry);
-      console.log(value);
-
+      // localise the base attribute in custom skills
       data.customSkill[entry].system.baseAttributeLoc = game.i18n.localize(
         `torgeternity.attributes.${value.system.baseAttribute}`
       );
+    }
+
+    for (const [item, value] of Object.entries(data.data.items)) {
+      // translate every item's cosm of the actor
+      data.data.items[item].system.cosmTranslated =
+        game.i18n.localize(`torgeternity.cosms.${value.system.cosm}`) ?? null;
     }
 
     return data;

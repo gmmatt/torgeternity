@@ -2,11 +2,6 @@
  * Register Handlebar helpers
  */
 export function registerHelpers() {
-  Handlebars.registerHelper('concatPerkType', function (type) {
-    const localName = 'torgeternity.perkTypes.' + type;
-    return localName;
-  });
-
   Handlebars.registerHelper('concatSkillName', function (skillName) {
     const localName = 'torgeternity.skills.' + skillName;
     return localName;
