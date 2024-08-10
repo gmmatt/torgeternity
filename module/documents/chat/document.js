@@ -23,9 +23,10 @@ class ChatMessageTorg extends ChatMessage {
         }
       }
 
-      templateData.system.translatedSkill =
-        game.i18n.localize(`torgeternity.skills.${templateData.system.skill}`) ??
-        templateData.system.skill;
+      if (this.flags?.torgeternity?.test && templateData.system?.skill)
+        templateData.system.translatedSkill = game.i18n.localize(
+          `torgeternity.skills.${templateData.system?.skill}`
+        );
 
       const renderedTemplate = await renderTemplate(template, templateData);
       const enrichedHTML = await TextEditor.enrichHTML(renderedTemplate);
