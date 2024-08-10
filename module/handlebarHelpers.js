@@ -2,11 +2,6 @@
  * Register Handlebar helpers
  */
 export function registerHelpers() {
-  Handlebars.registerHelper('concatClearanceLevel', function (clearance) {
-    const localClearance = 'torgeternity.clearances.' + clearance;
-    return localClearance;
-  });
-
   Handlebars.registerHelper('concatCardType', function (cardType) {
     const localCardType = 'torgeternity.cardTypes.' + cardType;
     return localCardType;

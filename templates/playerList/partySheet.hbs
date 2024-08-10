@@ -96,7 +96,7 @@
           {{#each user.character.system.skills as |skill key|}} {{#if skill.adds}}
 
           <li class="attribut-block">
-            <span>{{localize (concatSkillName key) }}</span>
+            <span>{{skill.localizedSkill}}</span>
             <span>: {{skill.value}}</span>
             {{#if skill.isFav}}
             <i class="far fa-star"></i>

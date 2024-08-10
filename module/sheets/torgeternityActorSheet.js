@@ -218,10 +218,15 @@ export default class TorgeternityActorSheet extends ActorSheet {
     }
 
     for (const skill of Object.keys(data.actor.system.skills)) {
+      // translate every skill
       data.actor.system.skills[skill].translatedSkill = game.i18n.localize(
         `torgeternity.skills.${skill}`
       );
     }
+
+    data.actor.system.details.clearanceTranslated = game.i18n.localize(
+      `torgeternity.clearances.${data.actor.system.details.clearance}`
+    );
 
     return data;
   }
