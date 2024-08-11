@@ -42,7 +42,7 @@
 				</span>
 				<h4 class="card-name">{{card.name}}</h4>
 				<!-- {{#if card.showFace}} -->
-				<span class="card-type">{{localize (concatCardType card.type)}}</span>
+				<span class="card-type">{{card.typeLoc}}</span>
 				{{#ifequal card.type "destiny"}}
 				<span class="card-pooled">
 					<input name="data.flags.torgeternity.pooled" class="toggle" data-action="poolToggle" type="checkbox"

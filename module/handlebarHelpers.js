@@ -2,11 +2,6 @@
  * Register Handlebar helpers
  */
 export function registerHelpers() {
-  Handlebars.registerHelper('concatCardType', function (cardType) {
-    const localCardType = 'torgeternity.cardTypes.' + cardType;
-    return localCardType;
-  });
-
   // Is this actor actively defending right now?
   Handlebars.registerHelper('detectActiveDefense', function (data) {
     let i;
