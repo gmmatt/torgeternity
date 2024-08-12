@@ -2,14 +2,6 @@
  * Register Handlebar helpers
  */
 export function registerHelpers() {
-  // Is this test an active defense roll?
-  Handlebars.registerHelper('activeDefenseRoll', function (data) {
-    if (data.testType === 'activeDefense') {
-      return true;
-    }
-    return false;
-  });
-
   // Is at least one target available in this test?
   Handlebars.registerHelper('targetAvailable', function (data) {
     if (Array.from(data.targets).length > 0) {

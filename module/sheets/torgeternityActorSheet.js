@@ -938,6 +938,7 @@ export default class TorgeternityActorSheet extends ActorSheet {
       actorPic: this.actor.img,
       actorName: this.actor.name,
       actorType: this.actor.type,
+      isActiveDefenseRoll: true,
       isAttack: false,
       skillName: 'activeDefense',
       skillBaseAttribute: 0,
