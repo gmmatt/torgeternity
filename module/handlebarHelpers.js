@@ -2,18 +2,6 @@
  * Register Handlebar helpers
  */
 export function registerHelpers() {
-  // Is this actor actively defending right now?
-  Handlebars.registerHelper('detectActiveDefense', function (data) {
-    let i;
-    const effects = data.effects;
-    for (i = 0; i < effects.length; i++) {
-      if (effects[i].name === 'ActiveDefense') {
-        return true;
-      }
-    }
-    return false;
-  });
-
   // Is this test an active defense roll?
   Handlebars.registerHelper('activeDefenseRoll', function (data) {
     if (data.testType === 'activeDefense') {

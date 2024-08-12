@@ -228,6 +228,13 @@ export default class TorgeternityActorSheet extends ActorSheet {
       `torgeternity.clearances.${data.actor.system.details.clearance}`
     );
 
+    // is the actor actively defending at the moment?
+    data.actor.defenses.isActivelyDefending = this.actor.effects.find(
+      (e) => e.name === 'ActiveDefense'
+    )
+      ? true
+      : false;
+
     return data;
   }
 
