@@ -2,15 +2,6 @@
  * Register Handlebar helpers
  */
 export function registerHelpers() {
-  // Is at least one target available in this test?
-  Handlebars.registerHelper('targetAvailable', function (data) {
-    if (Array.from(data.targets).length > 0) {
-      return true;
-    } else {
-      return false;
-    }
-  });
-
   Handlebars.registerHelper('ifequal', function (a, b, options) {
     if (a == b) {
       // eslint-disable-next-line no-invalid-this
