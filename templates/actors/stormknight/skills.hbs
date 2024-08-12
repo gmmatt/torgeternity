@@ -93,9 +93,15 @@
       <span>{{localize "torgeternity.sheetLabels.total"}}</span>
       <span>{{localize "torgeternity.sheetLabels.favored"}}</span>
     </li>
-    {{#each actor.system.skills as |content name|}} {{#if (displaySkill ../actor.system.editstate
-    content)}} {{#if (skillIsCombat content)}} {{> skillRow content=content name=name
-    attrTypes=../config.attributeTypes}} {{/if}} {{/if}} {{/each}}
+    {{#each actor.system.skills as |content name|}} 
+    {{#if (displaySkill ../actor.system.editstate content)}} 
+    {{#if content.isCombat}}
+    
+      {{> skillRow content=content name=name attrTypes=../config.attributeTypes}} 
+    
+    {{/if}} 
+    {{/if}} 
+    {{/each}}
   </ul>
   <ul class="skill-list">
     <!-- Interaction skills -->
@@ -107,7 +113,7 @@
       <span>{{localize "torgeternity.sheetLabels.favored"}}</span>
     </li>
     {{#each actor.system.skills as |content name|}} {{#if (displaySkill ../actor.system.editstate
-    content)}} {{#if (skillIsInteraction content)}} {{> skillRow content=content name=name
+    content)}} {{#if content.isInteraction}} {{> skillRow content=content name=name
     attrTypes=../config.attributeTypes}} {{/if}} {{/if}} {{/each}}
   </ul>
   <ul class="skill-list">
@@ -120,7 +126,7 @@
       <span>{{localize "torgeternity.sheetLabels.favored"}}</span>
     </li>
     {{#each actor.system.skills as |content name|}} {{#if (displaySkill ../actor.system.editstate
-    content)}} {{#if (skillIsOther content)}} {{> skillRow content=content name=name
+    content)}} {{#if content.isOther}} {{> skillRow content=content name=name
     attrTypes=../config.attributeTypes}} {{/if}} {{/if}} {{/each}} {{#each customSkill as | content
     name|}} {{> customSkillRow content=content name=name attrTypes=../config.attributeTypes}}
     {{/each}}

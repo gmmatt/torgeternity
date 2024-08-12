@@ -202,6 +202,14 @@ export default class TorgeternityActorSheet extends ActorSheet {
       data.data.system.skills[skill].baseAttributeLoc = game.i18n.localize(
         `torgeternity.attributes.${value.baseAttribute}`
       );
+
+      // for displaying issues, give the skill an attribute for combat/interaction/other
+      data.actor.system.skills[skill].isCombat =
+        data.actor.system.skills[skill].groupName === 'combat' ? true : false;
+      data.actor.system.skills[skill].isInteraction =
+        data.actor.system.skills[skill].groupName === 'interaction' ? true : false;
+      data.actor.system.skills[skill].isOther =
+        data.actor.system.skills[skill].groupName === 'other' ? true : false;
     }
 
     for (const [entry, value] of Object.entries(data?.customSkill)) {
