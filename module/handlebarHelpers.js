@@ -79,8 +79,4 @@ export function registerHelpers() {
     }
     return finished;
   });
-
-  Handlebars.registerHelper('getOptionBoolean', function (optionName) {
-    return game.settings.get('torgeternity', optionName);
-  });
 }

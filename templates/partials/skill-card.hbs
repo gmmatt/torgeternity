@@ -111,7 +111,7 @@
                     {{#each diceList}} <!-- Array created in torgcheck -->
                     <li
                       class="roll die d20 {{#ifequal this 20}}exploded{{/ifequal}} {{#ifequal this 10}}exploded{{/ifequal}}"
-                      {{#if (getOptionBoolean "useRenderedTorgDice")}}style="background-image: url(systems/torgeternity/images/Torgd20.svg);" {{/if}}>
+                      {{#if @root.torgDiceStyle}}style="background-image: url(systems/torgeternity/images/Torgd20.svg);" {{/if}}>
                       {{this}}</li>
                     {{/each}}
                   </ol>
