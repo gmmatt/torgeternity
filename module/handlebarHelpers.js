@@ -2,16 +2,6 @@
  * Register Handlebar helpers
  */
 export function registerHelpers() {
-  Handlebars.registerHelper('iffalse', function (a, options) {
-    if ((a == 'false') | (a == false)) {
-      // eslint-disable-next-line no-invalid-this
-      return options.fn(this);
-    } else {
-      // eslint-disable-next-line no-invalid-this
-      return options.inverse(this);
-    }
-  });
-
   Handlebars.registerHelper('poolList', function (actorId) {
     let poolList = '';
     const actor = game.actors.get(actorId);
