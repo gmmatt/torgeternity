@@ -45,15 +45,15 @@ export default class torgeternityCombatTracker extends CombatTracker {
    * @param {object} ev The event
    */
   async _notOutOfBounds(ev) {
-    const tooltipSpanImage = ev.target.children[0];
-    const rect = tooltipSpanImage.getBoundingClientRect();
+    const tooltipImage = ev.target.children[0];
+    const rect = tooltipImage.getBoundingClientRect();
 
-    if (rect.left < 246) {
-      tooltipSpanImage.style.left = 'auto';
-      tooltipSpanImage.style.right = '-250px';
-    } else {
-      tooltipSpanImage.style.left = '-250px';
-      tooltipSpanImage.style.right = '30px';
+    if (rect.left < 0) {
+      tooltipImage.style.left = 'auto';
+      tooltipImage.style.right = '-250px';
+    } else if (rect.right > window.innerWidth) {
+      tooltipImage.style.left = '-250px';
+      tooltipImage.style.right = '30px';
     }
   }
 

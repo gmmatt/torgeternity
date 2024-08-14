@@ -3,39 +3,23 @@
  */
 export function registerHelpers() {
   Handlebars.registerHelper('poolList', function (actorId) {
-    let poolList = '';
+    const poolList = [];
     const actor = game.actors.get(actorId);
-    if (actor.getDefaultHand()) {
-      const stack = actor.getDefaultHand();
-      const hand = stack.cards;
-      let i = 0;
-      let firstItemExists = false;
-      for (i = 0; i < hand.size; i++) {
-        if (hand.contents[i].flags?.torgeternity?.pooled === true) {
-          if (firstItemExists === true) {
-            poolList +=
-              ', ' +
-              '<span class="pool-tooltip">' +
-              hand.contents[i].name +
-              "<span class='pool-tooltip-spanimage'><img src='" +
-              hand.contents[i].img +
-              "'></span></span>";
-          } else {
-            poolList =
-              "<span class='pool-tooltip'>" +
-              hand.contents[i].name +
-              "<span class='pool-tooltip-image'><img src='" +
-              hand.contents[i].img +
-              "'></span></span>";
-            // poolList = hand.document.availableCards[i].data.name;
-            firstItemExists = true;
-          }
-        }
+    const hand = actor.getDefaultHand();
+    if (!hand) return game.i18n.localize('torgeternity.notifications.noHands');
+
+    for (const card of hand.cards) {
+      if (card.flags?.torgeternity?.pooled === true) {
+        poolList.push(
+          "<span class='pool-tooltip'>" +
+            card.name +
+            "<span class='pool-tooltip-image'><img src='" +
+            card.img +
+            "'></span></span>"
+        );
       }
-      return poolList;
-    } else {
-      return game.i18n.localize('torgeternity.notifications.noHands');
     }
+    return poolList.join(', ');
   });
 
   Handlebars.registerHelper('hideElement', function (displayTo, current) {
