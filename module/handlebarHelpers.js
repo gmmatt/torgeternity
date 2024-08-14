@@ -68,15 +68,4 @@ export function registerHelpers() {
   Handlebars.registerHelper('displaySkill', function (editstate, skill) {
     return editstate || skill.adds;
   });
-
-  Handlebars.registerHelper('hasfinish', function (that) {
-    let finished;
-    try {
-      finished = that.combat.combatants.find((c) => c.actorId === game.user.character.id).flags
-        .world.turnTaken;
-    } catch (e) {
-      finished = true;
-    }
-    return finished;
-  });
 }

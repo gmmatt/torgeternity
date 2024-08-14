@@ -9,6 +9,15 @@ export default class torgeternityCombatTracker extends CombatTracker {
     return 'systems/torgeternity/templates/sidebar/combat-tracker.html';
   }
 
+  async getData(options) {
+    const data = await super.getData(options);
+    data.hasTurn = this.viewed.combatants.some((c) => {
+      const returnValue = !c.turnTaken && c.isOwner && !!data.round;
+      return returnValue;
+    });
+    return data;
+  }
+
   /**
    *
    * @param html
@@ -63,7 +72,7 @@ export default class torgeternityCombatTracker extends CombatTracker {
    * @param ev
    */
   async _hasFinished(ev) {
-    this.viewed.combatants
+    await this.viewed.combatants
       .find((c) => c.actorId === game.user.character.id)
       .setFlag('world', 'turnTaken', true);
   }
@@ -73,17 +82,13 @@ export default class torgeternityCombatTracker extends CombatTracker {
    * @param ev
    */
   async _hasPlayed(ev) {
-    const check = ev.currentTarget;
-    // check.toggleClass('fa-check-square fa-minus-circle')
-
-    const li = check.closest('.combatant');
-    const c = this.viewed.combatants.get(li.dataset.combatantId);
-    if (c.flags.world.turnTaken === false) {
-      await c.setFlag('world', 'turnTaken', true);
-    } else {
-      await c.setFlag('world', 'turnTaken', false);
-    }
+    const combatantId = ev.currentTarget.closest('[data-combatant-id]').dataset.combatantId;
+    const combatant = this.viewed.combatants.get(combatantId);
+    if (!combatant.isOwner) return;
+    const turnTaken = combatant.getFlag('world', 'turnTaken');
+    await combatant.setFlag('world', 'turnTaken', !turnTaken);
   }
+
   /**
    *
    * @param ev
@@ -236,5 +241,10 @@ export default class torgeternityCombatTracker extends CombatTracker {
         c.setFlag('torgeternity', 'dsrStage', '');
         break;
     }
+  }
+
+  finishTurn() {
+    const combatant = this.viewed.combatants.find(combatant.turnTaken && combatant.isOwner);
+    combatant.setFlag('world', 'turnTaken', true);
   }
 }

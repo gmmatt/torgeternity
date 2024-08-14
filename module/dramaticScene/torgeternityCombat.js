@@ -32,6 +32,12 @@ export default class TorgCombat extends Combat {
       } else {
         ui.notifications.info(game.i18n.localize('torgeternity.notifications.dramaDeckEmpty'));
       }
+
+      this.updateEmbeddedDocuments(
+        'Combatant',
+        this.combatants.map((c) => ({ 'flags.world.turnTaken': false })),
+        { updateAll: true }
+      );
     }
     await super.nextRound();
   }
