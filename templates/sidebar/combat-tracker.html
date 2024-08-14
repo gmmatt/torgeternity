@@ -76,7 +76,7 @@
     <ol id="combat-tracker" class="directory-list" style="flex:3">
         {{#each combat.turns as |turn id|}}
         <li class="combatant actor directory-item flexrow dispo{{turn.token.disposition}}
-            {{#ifequal ../this.combat.current.turn id}} active{{/ifequal}}
+            {{#if (not turn.turnTaken)}} active{{/if}}
             " data-combatant-id="{{turn.id}}">
             <!--
             <div class="token-initiative">
@@ -122,13 +122,13 @@
                             <img class="token-effect" src="{{this}}" /> {{/each}}
                         </div>
                     </div>
-                    {{#ifequal turn.actor.type "stormknight"}}
+                    {{#if (eq turn.actor.type "stormknight")}}
                     <ul style="margin: 0 0 0.5em 0">
                         {{localize "torgeternity.sheetLabels.pool"}}:
                         <span class="pool-list">{{{poolList turn.actor.id}}}</span>
 
                     </ul>
-                    {{/ifequal}}
+                    {{/if}}
                 </div>
 
             </div>

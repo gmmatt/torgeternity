@@ -2,15 +2,6 @@
  * Register Handlebar helpers
  */
 export function registerHelpers() {
-  Handlebars.registerHelper('ifequal', function (a, b, options) {
-    if (a == b) {
-      // eslint-disable-next-line no-invalid-this
-      return options.fn(this);
-    }
-    // eslint-disable-next-line no-invalid-this
-    return options.inverse(this);
-  });
-
   Handlebars.registerHelper('iffalse', function (a, options) {
     if ((a == 'false') | (a == false)) {
       // eslint-disable-next-line no-invalid-this
