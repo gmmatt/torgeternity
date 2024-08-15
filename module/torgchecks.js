@@ -962,9 +962,10 @@ export async function renderSkillChat(test) {
     messages.push(await ChatMessageTorg.create(messageDataIterated));
   }
 
-  // reset tokens targeted, they are printed in the chatCard
-  await game.user.updateTokenTargets();
-  await game.user.broadcastActivity({ targets: [] });
+  if (game.settings.get('torgeternity', 'unTarget')) {
+    await game.user.updateTokenTargets();
+    await game.user.broadcastActivity({ targets: [] });
+  }
   try {
     game.dice3d.messageHookDisabled = false;
   } catch (e) {}

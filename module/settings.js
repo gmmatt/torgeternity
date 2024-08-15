@@ -180,4 +180,13 @@ export function registerTorgSettings() {
     type: Boolean,
     default: false,
   });
+
+  game.settings.register('torgeternity', 'unTarget', {
+    name: 'torgeternity.settingMenu.unTarget.name',
+    hint: 'torgeternity.settingMenu.unTarget.hint',
+    scope: 'client',
+    config: true,
+    type: Boolean,
+    default: true,
+  });
 }
