@@ -213,11 +213,6 @@ export default class TorgeternityActorSheet extends ActorSheet {
           game.i18n.localize(`torgeternity.cosms.${value.system.cosm}`) ?? null;
       }
     }
-    if (data.document.type === 'stormknight') {
-      data.actor.system.details.clearanceTranslated = game.i18n.localize(
-        `torgeternity.clearances.${data.actor.system.details.clearance}`
-      );
-    }
     // is the actor actively defending at the moment?
     data.actor.defenses.isActivelyDefending = this.actor.effects.find(
       (e) => e.name === 'ActiveDefense'
