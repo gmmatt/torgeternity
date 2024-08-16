@@ -7,12 +7,12 @@ foreground: null
 thumb: systems/torgeternity/images/core-scenes-LxFt3CsDFSCSkASP-thumb.webp
 width: 5797
 height: 3772
-padding: 0
+padding: 0.25
 initial:
   x: 3637
   'y': 1857
   scale: 0.27
-backgroundColor: '#999999'
+backgroundColor: '#000000'
 grid:
   size: 100
   type: 0
@@ -68,4 +68,3 @@ _stats:
   modifiedTime: 1716827808907
   lastModifiedBy: VAnYow5sWS9EJzo0
 _key: '!scenes!LxFt3CsDFSCSkASP'
-
