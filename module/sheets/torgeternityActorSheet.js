@@ -198,12 +198,7 @@ export default class TorgeternityActorSheet extends ActorSheet {
     }
 
     if (['stormknight', 'threat'].includes(data.document.type)) {
-      for (const [skill, value] of Object.entries(data.data.system.skills)) {
-        // localise the base attribute in skills
-        data.data.system.skills[skill].baseAttributeLoc = game.i18n.localize(
-          `torgeternity.attributes.${value.baseAttribute}`
-        );
-
+      for (const skill of Object.keys(data.data.system.skills)) {
         // for displaying issues, give the skill an attribute for combat/interaction/other
         data.actor.system.skills[skill].isCombat =
           data.actor.system.skills[skill].groupName === 'combat' ? true : false;
@@ -212,14 +207,6 @@ export default class TorgeternityActorSheet extends ActorSheet {
         data.actor.system.skills[skill].isOther =
           data.actor.system.skills[skill].groupName === 'other' ? true : false;
       }
-
-      for (const [entry, value] of Object.entries(data?.customSkill)) {
-        // localise the base attribute in custom skills
-        data.customSkill[entry].system.baseAttributeLoc = game.i18n.localize(
-          `torgeternity.attributes.${value.system.baseAttribute}`
-        );
-      }
-
       for (const [item, value] of Object.entries(data.data.items)) {
         // translate every item's cosm of the actor
         data.data.items[item].system.cosmTranslated =
