@@ -1,5 +1,9 @@
 # TORG Eternity Changelog
 
+## v. 12.2.4
+
+- Corrected a bug that substracted a possibility on a soak roll twice.
+
 ## v. 12.2.3
 
 - Added optional chaining in updateCombatant, for a .world property might not be accessible [#448](https://github.com/gmmatt/torgeternity/issues/448)
