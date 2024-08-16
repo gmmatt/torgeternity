@@ -198,15 +198,6 @@ export default class TorgeternityActorSheet extends ActorSheet {
     }
 
     if (['stormknight', 'threat'].includes(data.document.type)) {
-      for (const skill of Object.keys(data.data.system.skills)) {
-        // for displaying issues, give the skill an attribute for combat/interaction/other
-        data.actor.system.skills[skill].isCombat =
-          data.actor.system.skills[skill].groupName === 'combat' ? true : false;
-        data.actor.system.skills[skill].isInteraction =
-          data.actor.system.skills[skill].groupName === 'interaction' ? true : false;
-        data.actor.system.skills[skill].isOther =
-          data.actor.system.skills[skill].groupName === 'other' ? true : false;
-      }
       for (const [item, value] of Object.entries(data.data.items)) {
         // translate every item's cosm of the actor
         data.data.items[item].system.cosmTranslated =

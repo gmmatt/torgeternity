@@ -95,7 +95,7 @@
       <span>{{localize "torgeternity.sheetLabels.favored"}}</span>
     </li>
     {{#each actor.system.skills as |content name|}} 
-      {{#if (displaySkill ../actor.system.editstate content)}} {{#if content.isCombat}}
+      {{#if (displaySkill ../actor.system.editstate content)}} {{#if (eq content.groupName "combat")}}
         {{> skillRow content=content name=name attrTypes=../config.attributeTypes}} 
       {{/if}} {{/if}} 
     {{/each}}
@@ -110,7 +110,7 @@
       <span>{{localize "torgeternity.sheetLabels.favored"}}</span>
     </li>
     {{#each actor.system.skills as |content name|}} 
-      {{#if (displaySkill ../actor.system.editstate content)}} {{#if content.isInteraction}} 
+      {{#if (displaySkill ../actor.system.editstate content)}} {{#if (eq content.groupName "interaction")}} 
         {{> skillRow content=content name=name attrTypes=../config.attributeTypes}} 
       {{/if}} {{/if}} 
     {{/each}}
@@ -125,7 +125,7 @@
       <span>{{localize "torgeternity.sheetLabels.favored"}}</span>
     </li>
     {{#each actor.system.skills as |content name|}} 
-      {{#if (displaySkill ../actor.system.editstate content)}} {{#if content.isOther}} 
+      {{#if (displaySkill ../actor.system.editstate content)}} {{#if (eq content.groupName "other")}} 
         {{> skillRow content=content name=name attrTypes=../config.attributeTypes}} 
       {{/if}} {{/if}} 
     {{/each}} 
