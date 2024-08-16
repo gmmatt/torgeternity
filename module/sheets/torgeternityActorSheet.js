@@ -197,13 +197,6 @@ export default class TorgeternityActorSheet extends ActorSheet {
       data.disableXP = false;
     }
 
-    if (['stormknight', 'threat'].includes(data.document.type)) {
-      for (const [item, value] of Object.entries(data.data.items)) {
-        // translate every item's cosm of the actor
-        data.data.items[item].system.cosmTranslated =
-          game.i18n.localize(`torgeternity.cosms.${value.system.cosm}`) ?? null;
-      }
-    }
     // is the actor actively defending at the moment?
     data.actor.defenses.isActivelyDefending = this.actor.effects.find(
       (e) => e.name === 'ActiveDefense'
