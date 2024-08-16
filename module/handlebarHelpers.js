@@ -21,8 +21,4 @@ export function registerHelpers() {
     }
     return poolList.join(', ');
   });
-
-  Handlebars.registerHelper('concat', function (...params) {
-    return params.slice(0, -1).join('');
-  });
 }
