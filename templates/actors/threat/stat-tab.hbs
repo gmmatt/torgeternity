@@ -485,7 +485,7 @@
             data-unskilleduse="{{content.unskilledUse}}"
             data-name="{{name}}"
           >
-            {{content.translatedSkill}}
+            {{localize (concat 'torgeternity.skills.' name)}}
           </a>
           {{#if content.isFav}}
           <a class="toggleFav checked">

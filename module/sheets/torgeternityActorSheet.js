@@ -197,45 +197,47 @@ export default class TorgeternityActorSheet extends ActorSheet {
       data.disableXP = false;
     }
 
-    for (const [skill, value] of Object.entries(data.data.system.skills)) {
-      // localise the base attribute in skills
-      data.data.system.skills[skill].baseAttributeLoc = game.i18n.localize(
-        `torgeternity.attributes.${value.baseAttribute}`
+    if (data.document.type === 'stormknight' && data.document.type === 'threat') {
+      for (const [skill, value] of Object.entries(data.data.system.skills)) {
+        // localise the base attribute in skills
+        data.data.system.skills[skill].baseAttributeLoc = game.i18n.localize(
+          `torgeternity.attributes.${value.baseAttribute}`
+        );
+
+        // for displaying issues, give the skill an attribute for combat/interaction/other
+        data.actor.system.skills[skill].isCombat =
+          data.actor.system.skills[skill].groupName === 'combat' ? true : false;
+        data.actor.system.skills[skill].isInteraction =
+          data.actor.system.skills[skill].groupName === 'interaction' ? true : false;
+        data.actor.system.skills[skill].isOther =
+          data.actor.system.skills[skill].groupName === 'other' ? true : false;
+      }
+
+      for (const [entry, value] of Object.entries(data?.customSkill)) {
+        // localise the base attribute in custom skills
+        data.customSkill[entry].system.baseAttributeLoc = game.i18n.localize(
+          `torgeternity.attributes.${value.system.baseAttribute}`
+        );
+      }
+
+      for (const [item, value] of Object.entries(data.data.items)) {
+        // translate every item's cosm of the actor
+        data.data.items[item].system.cosmTranslated =
+          game.i18n.localize(`torgeternity.cosms.${value.system.cosm}`) ?? null;
+      }
+
+      for (const skill of Object.keys(data.actor.system.skills)) {
+        // translate every skill
+        data.actor.system.skills[skill].translatedSkill = game.i18n.localize(
+          `torgeternity.skills.${skill}`
+        );
+      }
+    }
+    if (data.document.type === 'stormknight') {
+      data.actor.system.details.clearanceTranslated = game.i18n.localize(
+        `torgeternity.clearances.${data.actor.system.details.clearance}`
       );
-
-      // for displaying issues, give the skill an attribute for combat/interaction/other
-      data.actor.system.skills[skill].isCombat =
-        data.actor.system.skills[skill].groupName === 'combat' ? true : false;
-      data.actor.system.skills[skill].isInteraction =
-        data.actor.system.skills[skill].groupName === 'interaction' ? true : false;
-      data.actor.system.skills[skill].isOther =
-        data.actor.system.skills[skill].groupName === 'other' ? true : false;
     }
-
-    for (const [entry, value] of Object.entries(data?.customSkill)) {
-      // localise the base attribute in custom skills
-      data.customSkill[entry].system.baseAttributeLoc = game.i18n.localize(
-        `torgeternity.attributes.${value.system.baseAttribute}`
-      );
-    }
-
-    for (const [item, value] of Object.entries(data.data.items)) {
-      // translate every item's cosm of the actor
-      data.data.items[item].system.cosmTranslated =
-        game.i18n.localize(`torgeternity.cosms.${value.system.cosm}`) ?? null;
-    }
-
-    for (const skill of Object.keys(data.actor.system.skills)) {
-      // translate every skill
-      data.actor.system.skills[skill].translatedSkill = game.i18n.localize(
-        `torgeternity.skills.${skill}`
-      );
-    }
-
-    data.actor.system.details.clearanceTranslated = game.i18n.localize(
-      `torgeternity.clearances.${data.actor.system.details.clearance}`
-    );
-
     // is the actor actively defending at the moment?
     data.actor.defenses.isActivelyDefending = this.actor.effects.find(
       (e) => e.name === 'ActiveDefense'

@@ -11,7 +11,7 @@ export default class torgeternityCombatTracker extends CombatTracker {
 
   async getData(options) {
     const data = await super.getData(options);
-    data.hasTurn = this.viewed.combatants.some((c) => {
+    data.hasTurn = this.viewed?.combatants?.some((c) => {
       const returnValue = !c.turnTaken && c.isOwner && !!data.round;
       return returnValue;
     });
@@ -72,7 +72,7 @@ export default class torgeternityCombatTracker extends CombatTracker {
    * @param ev
    */
   async _hasFinished(ev) {
-    await this.viewed.combatants
+    await this.viewed?.combatants
       .find((c) => c.actorId === game.user.character.id)
       .setFlag('world', 'turnTaken', true);
   }
@@ -83,7 +83,7 @@ export default class torgeternityCombatTracker extends CombatTracker {
    */
   async _hasPlayed(ev) {
     const combatantId = ev.currentTarget.closest('[data-combatant-id]').dataset.combatantId;
-    const combatant = this.viewed.combatants.get(combatantId);
+    const combatant = this.viewed?.combatants.get(combatantId);
     if (!combatant.isOwner) return;
     const turnTaken = combatant.getFlag('world', 'turnTaken');
     await combatant.setFlag('world', 'turnTaken', !turnTaken);
@@ -96,8 +96,8 @@ export default class torgeternityCombatTracker extends CombatTracker {
   async _onUpdateInit(ev) {
     const input = ev.currentTarget;
     const li = input.closest('.combatant');
-    const c = this.viewed.combatants.get(li.dataset.combatantId);
-    await this.viewed.combatant.update({
+    const c = this.viewed?.combatants.get(li.dataset.combatantId);
+    await this.viewed?.combatant.update({
       _id: c._id,
       ['initiative']: input.value,
     });
@@ -112,8 +112,8 @@ export default class torgeternityCombatTracker extends CombatTracker {
   async _onInitUp(ev) {
     const btn = ev.currentTarget;
     const li = btn.closest('.combatant');
-    const c = this.viewed.combatants.get(li.dataset.combatantId); // hope this works!
-    await this.viewed.combatant.update({
+    const c = this.viewed?.combatants.get(li.dataset.combatantId); // hope this works!
+    await this.viewed?.combatant.update({
       _id: c.id,
       ['initiative']: c.initiative + 1,
     });
@@ -126,8 +126,8 @@ export default class torgeternityCombatTracker extends CombatTracker {
   async _onInitDown(ev) {
     const btn = ev.currentTarget;
     const li = btn.closest('li.combatant');
-    const c = this.viewed.combatants.get(li.dataset.combatantId); // hope this works!
-    await this.viewed.combatant.update({
+    const c = this.viewed?.combatants.get(li.dataset.combatantId); // hope this works!
+    await this.viewed?.combatant.update({
       _id: c.id,
       ['initiative']: c.initiative - 1,
     });
@@ -138,18 +138,18 @@ export default class torgeternityCombatTracker extends CombatTracker {
    *
    */
   async _sortVilainsFirst() {
-    await this.viewed.resetAll();
+    await this.viewed?.resetAll();
     let combatantArray = null;
     let i = 0;
-    for (combatantArray = this.viewed.turns; i < combatantArray.length; i++) {
-      if (this.viewed.turns[i].token.disposition < 1) {
+    for (combatantArray = this.viewed?.turns; i < combatantArray.length; i++) {
+      if (this.viewed?.turns[i].token.disposition < 1) {
         // token disposition is neutral or hostile (0 or -1)
-        await this.viewed.turns[i].update({
+        await this.viewed?.turns[i].update({
           initiative: 2,
         });
       } else {
         // token disposition is frinedly 1
-        await this.viewed.turns[i].update({
+        await this.viewed?.turns[i].update({
           initiative: 1,
         });
       }
@@ -161,23 +161,23 @@ export default class torgeternityCombatTracker extends CombatTracker {
    *
    */
   async _sortHeroesFirst() {
-    await this.viewed.resetAll();
+    await this.viewed?.resetAll();
     let combatantArray = null;
     let i = 0;
-    for (combatantArray = this.viewed.turns; i < combatantArray.length; i++) {
-      if (this.viewed.turns[i].token.disposition < 1) {
+    for (combatantArray = this.viewed?.turns; i < combatantArray.length; i++) {
+      if (this.viewed?.turns[i].token.disposition < 1) {
         // token disposition is neutral or hostile (0 or -1)
-        await this.viewed.turns[i].update({
+        await this.viewed?.turns[i].update({
           initiative: 1,
         });
       } else {
         // token disposition is frinedly 1
-        await this.viewed.turns[i].update({
+        await this.viewed?.turns[i].update({
           initiative: 2,
         });
       }
     }
-    // await this.viewed.setupTurns()
+    // await this.viewed?.setupTurns()
     this.render();
   }
 
@@ -186,26 +186,26 @@ export default class torgeternityCombatTracker extends CombatTracker {
    * @param ev
    */
   async _dsrCounter(ev) {
-    const currentStep = this.viewed.getFlag('torgeternity', 'dsrStage');
+    const currentStep = this.viewed?.getFlag('torgeternity', 'dsrStage');
 
     switch (currentStep) {
       case undefined:
-        this.viewed.setFlag('torgeternity', 'dsrStage', 'A');
+        this.viewed?.setFlag('torgeternity', 'dsrStage', 'A');
         break;
       case '':
-        this.viewed.setFlag('torgeternity', 'dsrStage', 'A');
+        this.viewed?.setFlag('torgeternity', 'dsrStage', 'A');
         break;
       case 'A':
-        this.viewed.setFlag('torgeternity', 'dsrStage', 'B');
+        this.viewed?.setFlag('torgeternity', 'dsrStage', 'B');
         break;
       case 'B':
-        this.viewed.setFlag('torgeternity', 'dsrStage', 'C');
+        this.viewed?.setFlag('torgeternity', 'dsrStage', 'C');
         break;
       case 'C':
-        this.viewed.setFlag('torgeternity', 'dsrStage', 'D');
+        this.viewed?.setFlag('torgeternity', 'dsrStage', 'D');
         break;
       case 'D':
-        this.viewed.setFlag('torgeternity', 'dsrStage', '');
+        this.viewed?.setFlag('torgeternity', 'dsrStage', '');
         break;
     }
   }
@@ -217,7 +217,7 @@ export default class torgeternityCombatTracker extends CombatTracker {
   async _playerDsrCounter(ev) {
     const btn = ev.currentTarget;
     const li = btn.closest('li.combatant');
-    const c = this.viewed.combatants.get(li.dataset.combatantId);
+    const c = this.viewed?.combatants.get(li.dataset.combatantId);
 
     const currentStep = c.getFlag('torgeternity', 'dsrStage');
 
@@ -244,7 +244,7 @@ export default class torgeternityCombatTracker extends CombatTracker {
   }
 
   finishTurn() {
-    const combatant = this.viewed.combatants.find(combatant.turnTaken && combatant.isOwner);
+    const combatant = this.viewed?.combatants.find(combatant.turnTaken && combatant.isOwner);
     combatant.setFlag('world', 'turnTaken', true);
   }
 }

@@ -22,12 +22,8 @@ export function registerHelpers() {
     return poolList.join(', ');
   });
 
-  Handlebars.registerHelper('hideElement', function (displayTo, current) {
-    if (parseInt(current) > parseInt(displayTo)) {
-      return 'hidden';
-    } else {
-      return '';
-    }
+  Handlebars.registerHelper('concat', function (...params) {
+    return params.slice(0, -1).join('');
   });
 
   Handlebars.registerHelper('displaySkill', function (editstate, skill) {

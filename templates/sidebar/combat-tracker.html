@@ -76,14 +76,15 @@
     <ol id="combat-tracker" class="directory-list" style="flex:3">
         {{#each combat.turns as |turn id|}}
         <li class="combatant actor directory-item flexrow dispo{{turn.token.disposition}}
-            {{#if (not turn.turnTaken)}} active{{/if}}
-            " data-combatant-id="{{turn.id}}">
+            {{#if turn.turnTaken}} turnDone {{else}} active{{/if}}" 
+            style="align-items:center"
+            data-combatant-id="{{turn.id}}">
             <!--
             <div class="token-initiative">
                 <span>{{turn.initiative}}</span>
             </div>
         -->
-            <div class="flexrow">
+            <div class="flexrow" style="align-items:center;">
                 <img class="token-image" data-src="{{turn.img}}" data-tooltip="{{turn.name}}" />
                 <div class="token-name flexcol">
                     <h4 style="color:white">{{turn.name}}</h4>
