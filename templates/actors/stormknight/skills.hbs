@@ -95,9 +95,11 @@
       <span>{{localize "torgeternity.sheetLabels.favored"}}</span>
     </li>
     {{#each actor.system.skills as |content name|}} 
-      {{#if (displaySkill ../actor.system.editstate content)}} {{#if (eq content.groupName "combat")}}
-        {{> skillRow content=content name=name attrTypes=../config.attributeTypes}} 
-      {{/if}} {{/if}} 
+      {{#if (eq content.groupName "combat")}}
+        {{#if (displaySkill ../actor.system.editstate content)}} 
+          {{> skillRow content=content name=name attrTypes=../config.attributeTypes}} 
+        {{/if}} 
+      {{/if}} 
     {{/each}}
   </ul>
   <ul class="skill-list">
@@ -110,9 +112,11 @@
       <span>{{localize "torgeternity.sheetLabels.favored"}}</span>
     </li>
     {{#each actor.system.skills as |content name|}} 
-      {{#if (displaySkill ../actor.system.editstate content)}} {{#if (eq content.groupName "interaction")}} 
-        {{> skillRow content=content name=name attrTypes=../config.attributeTypes}} 
-      {{/if}} {{/if}} 
+      {{#if (eq content.groupName "interaction")}} 
+        {{#if (displaySkill ../actor.system.editstate content)}}
+          {{> skillRow content=content name=name attrTypes=../config.attributeTypes}} 
+        {{/if}} 
+      {{/if}} 
     {{/each}}
   </ul>
   <ul class="skill-list">
@@ -125,9 +129,11 @@
       <span>{{localize "torgeternity.sheetLabels.favored"}}</span>
     </li>
     {{#each actor.system.skills as |content name|}} 
-      {{#if (displaySkill ../actor.system.editstate content)}} {{#if (eq content.groupName "other")}} 
-        {{> skillRow content=content name=name attrTypes=../config.attributeTypes}} 
-      {{/if}} {{/if}} 
+      {{#if (eq content.groupName "other")}} 
+        {{#if (displaySkill ../actor.system.editstate content)}} 
+          {{> skillRow content=content name=name attrTypes=../config.attributeTypes}} 
+        {{/if}} 
+      {{/if}} 
     {{/each}} 
     {{#each customSkill as | content name|}} 
       {{> customSkillRow content=content name=name attrTypes=../config.attributeTypes}}
