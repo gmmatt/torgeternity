@@ -25,8 +25,4 @@ export function registerHelpers() {
   Handlebars.registerHelper('concat', function (...params) {
     return params.slice(0, -1).join('');
   });
-
-  Handlebars.registerHelper('displaySkill', function (editstate, skill) {
-    return editstate || skill.adds;
-  });
 }

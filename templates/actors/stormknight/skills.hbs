@@ -96,7 +96,7 @@
     </li>
     {{#each actor.system.skills as |content name|}} 
       {{#if (eq content.groupName "combat")}}
-        {{#if (displaySkill ../actor.system.editstate content)}} 
+        {{#if (or ../actor.system.editstate content.adds)}}
           {{> skillRow content=content name=name attrTypes=../config.attributeTypes}} 
         {{/if}} 
       {{/if}} 
@@ -113,7 +113,7 @@
     </li>
     {{#each actor.system.skills as |content name|}} 
       {{#if (eq content.groupName "interaction")}} 
-        {{#if (displaySkill ../actor.system.editstate content)}}
+        {{#if (or ../actor.system.editstate content.adds)}}
           {{> skillRow content=content name=name attrTypes=../config.attributeTypes}} 
         {{/if}} 
       {{/if}} 
@@ -130,7 +130,7 @@
     </li>
     {{#each actor.system.skills as |content name|}} 
       {{#if (eq content.groupName "other")}} 
-        {{#if (displaySkill ../actor.system.editstate content)}} 
+        {{#if (or ../actor.system.editstate content.adds)}}
           {{> skillRow content=content name=name attrTypes=../config.attributeTypes}} 
         {{/if}} 
       {{/if}} 
