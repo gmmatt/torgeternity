@@ -27,7 +27,7 @@
 
 		<ol class="cards destinyCards">
 			{{#each cards as |card|}}
-			{{#ifequal card.type "destiny"}}
+			{{#if (eq card.type "destiny")}}
 			<li class="card flexrow {{#if card.flags.torgeternity.pooled}}pooled{{/if}}"
 				data-card-id="{{card.id}}">
 				<img class="card-face" src="{{card.img}}" alt="{{card.name}}" height="48">
@@ -68,7 +68,7 @@
 					</span>
 				</div>
 			</li>
-			{{/ifequal}}
+			{{/if}}
 			{{/each}}
 
 
@@ -76,7 +76,7 @@
 
 		<ol class="cards  cosmCards">
 			{{#each cards as |card|}}
-			{{#ifequal card.type "cosm"}}
+			{{#if (eq card.type "cosm")}}
 
 			<li class="card flexrow" data-card-id="{{card.id}}">
 				<img class="card-face" src="{{card.img}}" alt="{{card.name}}" height="48">
@@ -106,7 +106,7 @@
 					</a>
 				</div>
 			</li>
-			{{/ifequal}}
+			{{/if}}
 			{{/each}}
 		</ol>
 	</div>

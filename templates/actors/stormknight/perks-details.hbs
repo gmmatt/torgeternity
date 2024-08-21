@@ -24,14 +24,13 @@
           {{{item.description}}}
         </div>
         <div class="item-dropdown-extras">
-          {{localize (concatPerkType item.system.category)}}
-        </div>
-        <div class="item-dropdown-extras">
-          {{item.system.cosm}}
-        </div>
+          {{localize (concat "torgeternity.cosms." item.system.cosm)}}
+        </div>        
+        {{#if item.system.timestaken}}
         <div class="item-dropdown-extras">
           {{item.system.timestaken}}x
         </div>
+        {{/if}}        
       </div>
 
     </li>

@@ -15,7 +15,7 @@
         data-unskilleduse="{{content.unskilledUse}}"
         data-name="{{name}}"
       >
-        {{localize (concatSkillName name)}}
+        {{localize (concat 'torgeternity.skills.' name)}}
       </a>
     </span>
     <span class="skill-line skillAttr">
@@ -46,42 +46,43 @@
       />
     </span>
   </li>
-  {{/inline}} {{#*inline "customSkillRow" content name}}
-  <li data-tooltip="{{localize 'torgeternity.sheetLabels.customSkill'}}">
-    <span>
-      <a
-        class="skill-roll"
-        data-testtype="skill"
-        data-customskill="true"
-        data-baseattribute="{{content.system.baseAttribute}}"
-        data-adds="{{content.system.adds}}"
-        data-value="{{content.system.value}}"
-        data-unskilleduse="0"
-        data-name="{{content.name}}"
-        data-isfav="{{content.system.isFav}}"
-      >
-        {{content.name}}
-      </a>
-    </span>
-    <span class="skill-line skillAttr" style="width: 365px">
-      {{localize (concatAttributeName content.system.baseAttribute)}}
-    </span>
-    <span class="skillAdd">{{content.system.adds}}</span>
-    <span class="skill-line">{{content.system.value}}</span>
-    <span>
-      <a class="toggleFav {{#if content.system.isFav}}checked{{/if}}">
-        <i class="far fa-star"></i>
-      </a>
-      <input
-        class="favCheck"
-        type="checkbox"
-        name="content.system.isFav"
-        {{checked
-        content.system.isFav}}
-        data-dtype="Boolean"
-      />
-    </span>
-  </li>
+  {{/inline}} 
+  {{#*inline "customSkillRow" content name}}
+    <li data-tooltip="{{localize 'torgeternity.sheetLabels.customSkill'}}">
+      <span>
+        <a
+          class="skill-roll"
+          data-testtype="skill"
+          data-customskill="true"
+          data-baseattribute="{{content.system.baseAttribute}}"
+          data-adds="{{content.system.adds}}"
+          data-value="{{content.system.value}}"
+          data-unskilleduse="0"
+          data-name="{{content.name}}"
+          data-isfav="{{content.system.isFav}}"
+        >
+          {{content.name}}
+        </a>
+      </span>
+      <span class="skill-line skillAttr" style="width: 365px">
+        {{localize (concat 'torgeternity.attributes.' content.system.baseAttribute)}}
+      </span>
+      <span class="skillAdd">{{content.system.adds}}</span>
+      <span class="skill-line">{{content.system.value}}</span>
+      <span>
+        <a class="toggleFav {{#if content.system.isFav}}checked{{/if}}">
+          <i class="far fa-star"></i>
+        </a>
+        <input
+          class="favCheck"
+          type="checkbox"
+          name="content.system.isFav"
+          {{checked
+          content.system.isFav}}
+          data-dtype="Boolean"
+        />
+      </span>
+    </li>
   {{/inline}}
 
   <!-- Combat skills -->
@@ -93,9 +94,13 @@
       <span>{{localize "torgeternity.sheetLabels.total"}}</span>
       <span>{{localize "torgeternity.sheetLabels.favored"}}</span>
     </li>
-    {{#each actor.system.skills as |content name|}} {{#if (displaySkill ../actor.system.editstate
-    content)}} {{#if (skillIsCombat content)}} {{> skillRow content=content name=name
-    attrTypes=../config.attributeTypes}} {{/if}} {{/if}} {{/each}}
+    {{#each actor.system.skills as |content name|}} 
+      {{#if (eq content.groupName "combat")}}
+        {{#if (or ../actor.system.editstate content.adds)}}
+          {{> skillRow content=content name=name attrTypes=../config.attributeTypes}} 
+        {{/if}} 
+      {{/if}} 
+    {{/each}}
   </ul>
   <ul class="skill-list">
     <!-- Interaction skills -->
@@ -106,9 +111,13 @@
       <span>{{localize "torgeternity.sheetLabels.total"}}</span>
       <span>{{localize "torgeternity.sheetLabels.favored"}}</span>
     </li>
-    {{#each actor.system.skills as |content name|}} {{#if (displaySkill ../actor.system.editstate
-    content)}} {{#if (skillIsInteraction content)}} {{> skillRow content=content name=name
-    attrTypes=../config.attributeTypes}} {{/if}} {{/if}} {{/each}}
+    {{#each actor.system.skills as |content name|}} 
+      {{#if (eq content.groupName "interaction")}} 
+        {{#if (or ../actor.system.editstate content.adds)}}
+          {{> skillRow content=content name=name attrTypes=../config.attributeTypes}} 
+        {{/if}} 
+      {{/if}} 
+    {{/each}}
   </ul>
   <ul class="skill-list">
     <!-- Other skills (and custom skills) -->
@@ -119,10 +128,15 @@
       <span>{{localize "torgeternity.sheetLabels.total"}}</span>
       <span>{{localize "torgeternity.sheetLabels.favored"}}</span>
     </li>
-    {{#each actor.system.skills as |content name|}} {{#if (displaySkill ../actor.system.editstate
-    content)}} {{#if (skillIsOther content)}} {{> skillRow content=content name=name
-    attrTypes=../config.attributeTypes}} {{/if}} {{/if}} {{/each}} {{#each customSkill as | content
-    name|}} {{> customSkillRow content=content name=name attrTypes=../config.attributeTypes}}
+    {{#each actor.system.skills as |content name|}} 
+      {{#if (eq content.groupName "other")}} 
+        {{#if (or ../actor.system.editstate content.adds)}}
+          {{> skillRow content=content name=name attrTypes=../config.attributeTypes}} 
+        {{/if}} 
+      {{/if}} 
+    {{/each}} 
+    {{#each customSkill as | content name|}} 
+      {{> customSkillRow content=content name=name attrTypes=../config.attributeTypes}}
     {{/each}}
   </ul>
 </div>

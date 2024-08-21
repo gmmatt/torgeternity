@@ -1,7 +1,7 @@
 /**
  *
  */
-export default class torgCombatant extends Combatant {
+export default class TorgCombatant extends Combatant {
   /**
    *
    * @param data
@@ -14,5 +14,9 @@ export default class torgCombatant extends Combatant {
     }
 
     await super._onCreate(data, options, user);
+  }
+
+  get turnTaken() {
+    return this.getFlag('world', 'turnTaken');
   }
 }

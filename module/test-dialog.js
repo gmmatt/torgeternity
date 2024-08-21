@@ -106,6 +106,7 @@ export class TestDialog extends FormApplication {
     //
     const allID = [];
     const allUUID = [];
+    data.test.targetPresent = data.test.targets.length > 0 ? true : false;
     if ((data.test.targets.length > 0) & (data.test.testType !== 'soak')) {
       // Identify the first target
       // var target = Array.from(data.test.targets)[0].actor;
@@ -190,10 +191,6 @@ export class TestDialog extends FormApplication {
           data.test.sizeModifierAll.push(data.test.sizeModifier);
         }
       });
-    } else {
-      data.test.target = {
-        present: false,
-      };
     }
 
     data.test.hasModifiers =
