@@ -39,6 +39,20 @@ export default class torgeternityPlayerHand extends CardsHand {
 
   /**
    *
+   * @inheritdoc
+   */
+  async getData(data) {
+    data = await super.getData();
+
+    for (const card of data?.cards) {
+      card.typeLoc = game.i18n.localize(`torgeternity.cardTypes.${card.type}`);
+    }
+
+    return data;
+  }
+
+  /**
+   *
    * @param html
    */
   async activateListeners(html) {

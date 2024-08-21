@@ -17,7 +17,7 @@ import torgeternityNav from './torgeternityNav.js';
 import { registerTorgSettings } from './settings.js';
 import { modifyTokenBars } from './tokenBars.js';
 import { registerHelpers } from './handlebarHelpers.js';
-import torgCombatant from './dramaticScene/torgeternityCombatant.js';
+import TorgCombatant from './dramaticScene/torgeternityCombatant.js';
 import { registerDiceSoNice } from './dice-so-nice.js';
 import torgeternityPlayerHand from './cards/torgeternityPlayerHand.js';
 import torgeternityPile from './cards/torgeternityPile.js';
@@ -70,7 +70,7 @@ Hooks.once('init', async function () {
   CONFIG.Combat.initiative.formula = '1';
   CONFIG.Combat.documentClass = torgeternityCombat;
   CONFIG.ui.combat = torgeternityCombatTracker;
-  CONFIG.Combatant.documentClass = torgCombatant;
+  CONFIG.Combatant.documentClass = TorgCombatant;
   CONFIG.ChatMessage.documentClass = ChatMessageTorg;
 
   // ----scenes
@@ -1067,9 +1067,9 @@ Hooks.on('dropActorSheetData', async (myVehicle, mySheet, dropItem) => {
 });
 
 // When the turn taken button is hit, delete "until end of turn" effects (stymied/vulnerable)
-Hooks.on('updateCombatant', async (torgCombatant, dataFlags, dataDiff, userId) => {
+Hooks.on('updateCombatant', async (combatant, dataFlags, dataDiff, userId) => {
   if (game.user.hasRole(4) && dataFlags.flags?.world.turnTaken) {
-    const myActor = torgCombatant.actor;
+    const myActor = combatant.actor;
     for (const ef of myActor.effects.filter((e) => e.duration.type === 'turns')) {
       if (ef.name === 'ActiveDefense') continue;
       await myActor.updateEmbeddedDocuments('ActiveEffect', [

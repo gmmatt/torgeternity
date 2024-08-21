@@ -1711,6 +1711,10 @@ nav#controls,
   border-left: 8px solid rgba(255, 255, 0, 0.836);
 }
 
+#combat ol li.combatant.turnDone {
+  background-color: darkgreen;
+}
+
 #combat ol a.has-played {
   color: rgba(238, 238, 238, 0.739);
   text-shadow: 0px 0px 6px black;

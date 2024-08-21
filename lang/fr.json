@@ -511,6 +511,7 @@
       "spellcraft": "Arts magiques",
       "stalenger": "Stalenger",
       "theRace": "La Race",
+      "legend": "Legend",
       "special": "Special/Homebrew"
     },
     "poolToggle": {
@@ -629,6 +630,10 @@
       "uniqueDN": {
         "hint": "Si coché, durant une attaque en multi-cibles, garde le DN le plus élevé pour déterminer le résultat sur toutes les cibles (Règle).",
         "name": "DN unique"
+      },
+      "unTarget": {
+        "hint": "Par défaut, vos cibles sont perdues après une attaque. Décochez si vous voulez garder le ciblage.",
+        "name": "Annulation du ciblage"
       }
     },
     "sheetLabels": {

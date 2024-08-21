@@ -100,7 +100,7 @@
 
         
       </table>      
-         <!-- full copy from core, d20 fixed for diceform, handle explosion skin or not with ifequal tests -->
+         <!-- full copy from core, d20 fixed for diceform, handle explosion skin or not with if equal tests -->
       <div class="message-content">
         <div class="dice-roll-torg">
           <div class="dice-result">
@@ -110,8 +110,8 @@
                   <ol class="dice-rolls">
                     {{#each diceList}} <!-- Array created in torgcheck -->
                     <li
-                      class="roll die d20 {{#ifequal this 20}}exploded{{/ifequal}} {{#ifequal this 10}}exploded{{/ifequal}}"
-                      {{#if (getOptionBoolean "useRenderedTorgDice")}}style="background-image: url(systems/torgeternity/images/Torgd20.svg);" {{/if}}>
+                      class="roll die d20 {{#if (eq this 20)}}exploded{{/if}} {{#if (eq this 10)}}exploded{{/if}}"
+                      {{#if @root.torgDiceStyle}}style="background-image: url(systems/torgeternity/images/Torgd20.svg);" {{/if}}>
                       {{this}}</li>
                     {{/each}}
                   </ol>

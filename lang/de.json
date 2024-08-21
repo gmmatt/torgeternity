@@ -511,6 +511,7 @@
       "spellcraft": "Zauberkunde",
       "stalenger": "Stalenger",
       "theRace": "Das Volk",
+      "legend": "Legende",
       "special": "Speziell / Eigen"
     },
     "poolToggle": {
@@ -629,6 +630,10 @@
       "uniqueDN": {
         "hint": "Wenn diese Option aktiviert ist, wird bei einem Test mit mehreren Zielen der höchste DN aller Ziele zur Bestimmung des Ergebnisses beibehalten, wie von den Regeln vorgesehen.",
         "name": "Unique DN"
+      },
+      "unTarget": {
+        "hint": "Targets are reseted after an attack by default. Uncheck if you want to keep them.",
+        "name": "Cancel targeting"
       }
     },
     "sheetLabels": {

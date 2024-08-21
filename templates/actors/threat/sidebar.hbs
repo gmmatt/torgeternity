@@ -91,8 +91,7 @@
   <hr />
 
   <div
-    class='sidebar-heading
-      {{ifThen (detectActiveDefense data) "activeDefense-roll-glow" "activeDefense-roll"}}'
+  class="sidebar-heading activeDefense-roll{{#if actor.defenses.isActivelyDefending}}-glow{{/if}}"    
     data-tooltip='{{localize "torgeternity.sheetLabels.defensesTip"}}'
   >
     <i class="fas fa-shield"></i>

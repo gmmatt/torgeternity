@@ -97,11 +97,11 @@
                 value="{{actor.system.topSpeed.kph}}"
                 data-dtype="Number"
               />
-              ( {{actor.system.topSpeed.value}} ) {{#ifequal actor.system.topSpeed.penalty "-2"}}
-              {{localize "torgeternity.speeds.fast"}} {{/ifequal}} {{#ifequal
-              actor.system.topSpeed.penalty "-4"}} {{localize "torgeternity.speeds.veryFast"}}
-              {{/ifequal}} {{#ifequal actor.system.topSpeed.penalty "-6"}} {{localize
-              "torgeternity.speeds.ultraFast"}} {{/ifequal}}
+              ( {{actor.system.topSpeed.value}} ) {{#if (eq actor.system.topSpeed.penalty "-2")}}
+              {{localize "torgeternity.speeds.fast"}} {{/if}} {{#if (eq
+              actor.system.topSpeed.penalty "-4")}} {{localize "torgeternity.speeds.veryFast"}}
+              {{/if}} {{#if (eq actor.system.topSpeed.penalty "-6")}} {{localize
+              "torgeternity.speeds.ultraFast"}} {{/if}}
             </td>
             <td class="vehicle-stat">
               <input

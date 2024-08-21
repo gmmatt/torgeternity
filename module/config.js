@@ -177,6 +177,7 @@ torgeternity.perkTypes = {
   stalenger: 'torgeternity.perkTypes.stalenger',
   groundSloth: 'torgeternity.perkTypes.groundSloth',
   special: 'torgeternity.perkTypes.special',
+  legend: 'torgeternity.perkTypes.legend',
 };
 
 torgeternity.dnTypes = {

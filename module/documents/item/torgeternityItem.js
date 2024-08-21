@@ -1,4 +1,5 @@
 import { ChatMessageTorg } from '../chat/document.js';
+import { torgeternity } from '../../config.js';
 
 /**
  *
@@ -39,6 +40,13 @@ export default class TorgeternityItem extends Item {
     } else {
       this.system.navStyle = 'right:-110px;top:115px';
       this.system.extendedNav = false;
+    }
+
+    for (const [key, value] of Object.entries(torgeternity.dnTypes)) {
+      if (key === this.system?.dn) {
+        this.system.dnType = game.i18n.localize(value);
+        break;
+      }
     }
   }
 

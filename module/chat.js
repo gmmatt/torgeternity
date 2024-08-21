@@ -9,6 +9,7 @@ import { soakDamages } from './torgchecks.js';
 import { applyStymiedState } from './torgchecks.js';
 import { applyVulnerableState } from './torgchecks.js';
 import { TestUpdate } from './test-update.js';
+import { checkForDiscon } from './torgchecks.js';
 
 /**
  *
@@ -357,6 +358,13 @@ async function soakDam(event) {
     return;
   }
   const soaker = fromUuidSync(targetuuid).actor; // game.actors.get(targetid) ?? game.user.character) ?? Array.from(game.user.targets)[0].actor;
+  if (checkForDiscon(soaker)) {
+    await ChatMessage.create({
+      speaker: ChatMessage.getSpeaker(),
+      content: game.i18n.localize('torgeternity.chatText.check.cantUseRealityWhileDisconnected'),
+    });
+    return;
+  }
   //
   let possPool = parseInt(soaker.system.other.possibilities);
   // 0 => if GM ask for confirm, or return message "no poss"

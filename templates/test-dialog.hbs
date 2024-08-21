@@ -1,7 +1,7 @@
 <div>
     <form class="test-dialog">
         <div>                    
-            {{#if (activeDefenseRoll test)}}{{else}}
+            {{#if test.isActiveDefenseRoll}}{{else}}
                 {{> "systems/torgeternity/templates/testDialogs/difficulty-selector.hbs"}}
             {{/if}}
                 {{> "systems/torgeternity/templates/testDialogs/bonus-selector.hbs"}}                            

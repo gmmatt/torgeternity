@@ -44,9 +44,10 @@
       value='{{actor.system.attributes.charisma.value}}'
       {{/if}}
       data-dtype="Number"
-      {{#iffalse actor.flags.torgeternity.editAttributes}}
-      readonly="true"
-      {{/iffalse}}
+      {{#if actor.flags.torgeternity.editAttributes}}
+        {{else}}
+        readonly="true"
+      {{/if}}
     />
     {{#if actor.flags.torgeternity.editAttributes}}
       <a class="decreaseAttribute"
@@ -91,9 +92,9 @@
       value='{{actor.system.attributes.dexterity.value}}'
       {{/if}}
       data-dtype="Number"
-      {{#iffalse actor.flags.torgeternity.editAttributes}}
+      {{#if actor.flags.torgeternity.editAttributes}}{{else}}
       readonly="true"
-      {{/iffalse}}
+      {{/if}}
     />
 
     {{#if actor.flags.torgeternity.editAttributes}}
@@ -137,9 +138,9 @@
     value='{{actor.system.attributes.mind.value}}'
     {{/if}}
     data-dtype="Number" 
-    {{#iffalse actor.flags.torgeternity.editAttributes}}
+    {{#if actor.flags.torgeternity.editAttributes}}{{else}}
     readonly="true"
-    {{/iffalse}}
+    {{/if}}
     />
     
     {{#if actor.flags.torgeternity.editAttributes}}
@@ -183,9 +184,9 @@
       value='{{actor.system.attributes.spirit.value}}'
       {{/if}}
       data-dtype="Number"
-      {{#iffalse actor.flags.torgeternity.editAttributes}}
+      {{#if actor.flags.torgeternity.editAttributes}}{{else}}
       readonly="true"
-      {{/iffalse}}
+      {{/if}}
     />
     {{#if actor.flags.torgeternity.editAttributes}}
       <a class="decreaseAttribute"
@@ -229,9 +230,9 @@
       value='{{actor.system.attributes.strength.value}}'
       {{/if}}
       data-dtype="Number"
-      {{#iffalse actor.flags.torgeternity.editAttributes}}
+      {{#if actor.flags.torgeternity.editAttributes}}{{else}}
       readonly="true"
-      {{/iffalse}}
+      {{/if}}
     />
     {{#if actor.flags.torgeternity.editAttributes}}
       <a class="decreaseAttribute"

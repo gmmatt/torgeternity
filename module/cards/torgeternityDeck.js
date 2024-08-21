@@ -23,6 +23,20 @@ export default class torgeternityDeck extends CardsPile {
 
   /**
    *
+   * @inheritdoc
+   */
+  async getData(data) {
+    data = await super.getData();
+
+    for (const card of data?.cards) {
+      card.typeLoc = game.i18n.localize(`torgeternity.cardTypes.${card.type}`);
+    }
+
+    return data;
+  }
+
+  /**
+   *
    * @param {Event} event The event object.
    */
   async _onCardControl(event) {

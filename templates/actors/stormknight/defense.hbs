@@ -1,6 +1,6 @@
 <h2>
   <a
-    class='{{ifThen (detectActiveDefense data) "activeDefense-roll-glow" "activeDefense-roll"}}'
+    class="activeDefense-roll{{#if actor.defenses.isActivelyDefending}}-glow{{/if}}"
     data-tooltip='{{localize "torgeternity.sheetLabels.defensesTip"}}'
   >
     {{localize 'torgeternity.sheetLabels.defenses'}}
