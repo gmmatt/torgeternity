@@ -8,6 +8,10 @@
 - Threats do now show ammunitions as well
 - Races are now as items and can be dragged onto the character. This influences the attribute maximums and adds race-related perks. [#52](https://github.com/gmmatt/torgeternity/issues/52)
 
+## v. 12.2.5
+
+- The _"View 1-3 drama cards"_ got a little change to check if there's a combat running or not- now, it checks if the viewed combat is running (in case of multiple combats) [#464](https://github.com/gmmatt/torgeternity/issues/464)
+
 ## v. 12.2.4
 
 - Corrected a bug that substracted a possibility on a soak roll twice.
