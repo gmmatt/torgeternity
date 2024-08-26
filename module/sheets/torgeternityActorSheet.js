@@ -457,10 +457,16 @@ export default class TorgeternityActorSheet extends ActorSheet {
         return;
       }
       await Dialog.confirm({
-        title: game.i18n.localize('torgeternity.dialogWindow.itemDeletion.title'),
-        content: game.i18n.localize('torgeternity.dialogWindow.itemDeletion.content'),
+        title: game.i18n.localize('torgeternity.dialogWindow.raceDeletion.title'),
+        content: game.i18n.localize('torgeternity.dialogWindow.raceDeletion.content'),
         yes: async () => {
           await raceItem.delete();
+
+          for (const racePerk of this.actor.items.filter(
+            (i) => i.type === 'perk' && i.system.category === 'racial'
+          )) {
+            await racePerk.delete();
+          }
         },
         no: () => {
           return;
