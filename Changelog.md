@@ -7,6 +7,10 @@
 - Introducing perk category _legend_ [#463](https://github.com/gmmatt/torgeternity/issues/463)
 - Threats do now show ammunitions as well
 
+## v. 12.2.5
+
+- The _"View 1-3 drama cards"_ got a little change to check if there's a combat running or not- now, it checks if the viewed combat is running (in case of multiple combats) [#464](https://github.com/gmmatt/torgeternity/issues/464)
+
 ## v. 12.2.4
 
 - Corrected a bug that substracted a possibility on a soak roll twice.
