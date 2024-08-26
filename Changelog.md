@@ -4,6 +4,9 @@
 
 - Active Defense will now automatically be disposed, when the combat round is over or the combat ends. [#438](https://github.com/gmmatt/torgeternity/issues/438)
 - Character informations can now be shown by a right-click-context-menu on an actor. [#229](https://github.com/gmmatt/torgeternity/issues/229)
+
+## v. 12.2.6
+
 - Introducing perk category _legend_ [#463](https://github.com/gmmatt/torgeternity/issues/463)
 - Threats do now show ammunitions as well
 
