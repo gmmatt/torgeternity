@@ -22,7 +22,7 @@ export class RaceItemData extends foundry.abstract.TypeDataModel {
         choices: Object.keys(torgeternity.cosmTypes),
         required: true,
       }),
-      hardCoded: new fields.StringField({ initial: '' }),
+      hardCoded: new fields.JavaScriptField({ initial: '', trim: true }, { async: true }),
     };
   }
 

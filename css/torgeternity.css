@@ -3550,6 +3550,11 @@ form.actor-sheet.threat .tab[data-tab].active .editor {
   font-weight: bold;
 }
 
+.item .window-content form.item-sheet .raceHardcode {
+  min-height:200px;
+  margin-top: 10px;
+}
+
 .item .window-content form.item-sheet .asside {
   grid-row: 1/4;
   grid-column: 1/2;
