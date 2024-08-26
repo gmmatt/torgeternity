@@ -456,7 +456,16 @@ export default class TorgeternityActorSheet extends ActorSheet {
         ui.notifications.error(game.i18n.localize('torgeternity.notifications.noRaceToDelete'));
         return;
       }
-      await raceItem.delete();
+      await Dialog.confirm({
+        title: game.i18n.localize('torgeternity.dialogWindow.itemDeletion.title'),
+        content: game.i18n.localize('torgeternity.dialogWindow.itemDeletion.content'),
+        yes: async () => {
+          await raceItem.delete();
+        },
+        no: () => {
+          return;
+        },
+      });
     });
 
     // compute adds from total for threats
