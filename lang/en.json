@@ -461,7 +461,8 @@
       "ammoValueExceedsMax": "The actual ammo value of the weapon {a} exceeds it's max value. The value will be reduced to it's maximum.",
       "noPossibility": "There is no possibility left",
       "noCapacity": "{a} can't pilote this kind of vehicle!",
-      "noFight":"No active combat, or not started"
+      "noFight":"No active combat, or not started",
+      "raceExistent": "You have already chosen a race."
     },
     "packs": {
       "basicRules": "torgeternity.basic-rules",

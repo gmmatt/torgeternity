@@ -85,13 +85,21 @@ export default class TorgeternityItem extends Item {
       : false;
   }
 
-  _preCreate(data, options, user) {
+  async _preCreate(data, options, user) {
     super._preCreate(data, options, user);
     if (this.img === 'icons/svg/item-bag.svg') {
       const image = TorgeternityItem.DEFAULT_ICONS[data.type] ?? null;
       if (image) {
-        this.updateSource({ img: 'systems/torgeternity/images/icons/' + image });
+        await this.updateSource({ img: 'systems/torgeternity/images/icons/' + image });
       }
+    }
+
+    if (
+      this.actor.system.details.race !== game.i18n.localize('torgeternity.sheetLabels.noRace') &&
+      data.type === 'race'
+    ) {
+      ui.notifications.error(game.i18n.localize('torgeternity.notifications.raceExistent'));
+      return false;
     }
   }
 
