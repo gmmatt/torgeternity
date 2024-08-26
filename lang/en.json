@@ -394,7 +394,8 @@
       "sendToChat": "Send to Chat",
       "spellRoll": "Spell Roll",
       "toggle": "Toggle",
-      "toggleEquip": "Toggle Equip"
+      "toggleEquip": "Toggle Equip",
+      "deleteRace": "Delete Race"
     },
     "itemSheetDescriptions": {
       "armor": "Armor",
@@ -444,6 +445,7 @@
       "noAttrNamed": "Your controlled Actor does not have an attribute named ",
       "noHands": "No hands available!",
       "noItemNamed": "Your controlled Actor does not have an item named ",
+      "noRaceToDelete": "There is no race to delete.",
       "noSkillNamed": "Your controlled Actor does not have a skill named ",
       "noTarget": "No valid Target Token",
       "notImplemented": "Not implemented at this moment",
@@ -550,15 +552,6 @@
       "kinesis": "Kinesis",
       "precognition": "Precognition",
       "telepathy": "Telepathy"
-    },
-    "races": {
-      "aspirants": "Aspirants",
-      "dwarf": "Dwarf",
-      "edeinos": "Edeinos",
-      "elf": "Elf",
-      "human": "Human",
-      "other": "Other",
-      "theRace": "The Race"
     },
     "scenes": {
       "HeaderAmbienceHint": "Configure Other Enviornmental Options.",
@@ -761,6 +754,7 @@
       "none": "None",
       "noPoss": " No Possibility!",
       "noPossFree": "No possibility !<br>Do you confirm the gift ?",
+      "noRace": "No race added",
       "notes": "Notes",
       "number": "Number",
       "operator": "Operator",

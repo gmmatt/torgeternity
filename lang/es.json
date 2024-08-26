@@ -394,7 +394,8 @@
       "sendToChat": "Enviar al Chat",
       "spellRoll": "Tirar Conjuro",
       "toggle": "Cambiar",
-      "toggleEquip": "Toggle Equip"
+      "toggleEquip": "Toggle Equip",
+      "deleteRace": "Suprimir carrera"
     },
     "itemSheetDescriptions": {
       "armor": "Armadura",
@@ -445,6 +446,7 @@
       "noHands": "No hands available!",
       "noItemNamed": "Your controlled Actor does not have an item named ",
       "noSkillNamed": "Your controlled Actor does not have a skill named ",
+      "noRaceToDelete": "There is no race to delete.",
       "noTarget": "No valid Target Token",
       "notImplemented": "Not implemented at this moment",
       "onlyReservedCard": "Please play a reserved card while playing a dramatic scene",
@@ -550,15 +552,6 @@
       "kinesis": "Kinesis",
       "precognition": "Precognición",
       "telepathy": "Telepatía"
-    },
-    "races": {
-      "aspirants": "Aspirantes",
-      "dwarf": "Enano",
-      "edeinos": "Edeino",
-      "elf": "Elfo",
-      "human": "Humano",
-      "other": "Otra",
-      "theRace": "La Raza"
     },
     "scenes": {
       "HeaderAmbienceHint": "Configura Otras Opciones Ambientales.",
@@ -761,6 +754,7 @@
       "none": "No",
       "noPoss": " No Possibility!",
       "noPossFree": "No possibility !<br>Do you confirm the gift ?",
+      "noRace": "Sin raza añadida",
       "notes": "Notas",
       "number": "Número",
       "operator": "Operator",

@@ -394,7 +394,8 @@
       "sendToChat": "An Chat senden",
       "spellRoll": "Zauberwurf",
       "toggle": "Umschalten auf",
-      "toggleEquip": "Ausgerüstet?"
+      "toggleEquip": "Ausgerüstet?",
+      "deleteRace": "Volk löschen"
     },
     "itemSheetDescriptions": {
       "armor": "Rüstung",
@@ -445,6 +446,7 @@
       "noAttrNamed": "Dein Kontrollierter Charakter hat kein Attribut, das heißt: ",
       "noHands": "Keine Kartenhand verfügbar!",
       "noItemNamed": "Dein Kontrollierter Charakter hat keinen Gegenstand der heißt: ",
+      "noRaceToDelete": "Es gibt kein Volk zum löschen.",
       "noSkillNamed": "Dein Kontrollierter Charakter hat keine Fertigkeit, die heißt: ",
       "noTarget": "Kein valides Token anvisiert",
       "notImplemented": "Aktuell noch nicht implementiert",
@@ -550,15 +552,6 @@
       "kinesis": "Kinese",
       "precognition": "Präkognition",
       "telepathy": "Telepatie"
-    },
-    "races": {
-      "aspirants": "Aspirant",
-      "dwarf": "Zwerg",
-      "edeinos": "Edeinos",
-      "elf": "Elf",
-      "human": "Mensch",
-      "other": "Andere",
-      "theRace": "Das Volk"
     },
     "scenes": {
       "HeaderAmbienceHint": "Konfiguriere zusätzliche Integrierungen zwischen dieser Szene und Journaleinträgen, Audio-Playlists oder Wettereffekten.",
@@ -761,6 +754,7 @@
       "none": "Keiner",
       "noPoss": " Keine Möglichkeit übrig!",
       "noPossFree": "Keine Möglichkeit!<br>Möchtest du eine Möglichkeit schenken?",
+      "noRace": "Kein Volk hinzugefügt",
       "notes": "Notizen",
       "number": "Nummer",
       "operator": "Fahrzeugpilot:in",

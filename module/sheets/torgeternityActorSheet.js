@@ -204,6 +204,10 @@ export default class TorgeternityActorSheet extends ActorSheet {
       ? true
       : false;
 
+    data.actor.system.details.race =
+      this.actor.items.find((i) => i.type === 'race')?.name ??
+      game.i18n.localize('torgeternity.sheetLabels.noRace');
+
     return data;
   }
 
@@ -445,16 +449,22 @@ export default class TorgeternityActorSheet extends ActorSheet {
       }
     });
 
-    // Toggle Skill Edit Visibility
-    // html.find('.skill-list-edit').click(ev => {
-    //    let detail =
-    // });
+    // Delete a race of an actor
+    html.find('a.deleteRaceButton').click(async () => {
+      const raceItem = this.actor.items.find((i) => i.type === 'race');
+      if (!raceItem) {
+        ui.notifications.error(game.i18n.localize('torgeternity.notifications.noRaceToDelete'));
+        return;
+      }
+      await raceItem.delete();
+    });
 
     // compute adds from total for threats
     if (this.actor.type == 'threat') {
       html.find('.skill-element-edit .inputsFav').change(this.setThreatAdds.bind(this));
     }
   }
+
   /**
    *
    * @param event

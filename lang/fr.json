@@ -394,7 +394,8 @@
       "sendToChat": "Envoyer dans la discussion",
       "spellRoll": "Jet de sort",
       "toggle": "Activer/désactiver",
-      "toggleEquip": "Équiper/Déséquiper"
+      "toggleEquip": "Équiper/Déséquiper",
+      "deleteRace": "Delete Race"
     },
     "itemSheetDescriptions": {
       "armor": "Armure",
@@ -444,6 +445,7 @@
       "noAttrNamed": "L'acteur que vous contrôlez n'a pas d'attribut nommé ",
       "noHands": "Pas de main de carte disponible!",
       "noItemNamed": "L'acteur que vous contrôlez n'a pas d'objet nommé ",
+      "noRaceToDelete": "There is no race to delete.",
       "noSkillNamed": "L'acteur que vous contrôlez n'a pas de compétence nommée ",
       "noTarget": "Pas de token cible valide.",
       "notImplemented": "Pas encore implémenté.",
@@ -550,15 +552,6 @@
       "kinesis": "Kinésie",
       "precognition": "Précognition",
       "telepathy": "Télépathie"
-    },
-    "races": {
-      "aspirants": "Aspirant",
-      "dwarf": "Nain",
-      "edeinos": "Edeinos",
-      "elf": "Elfe",
-      "human": "Humain",
-      "other": "Autre",
-      "theRace": "La Race"
     },
     "scenes": {
       "HeaderAmbienceHint": "Configure les intégrations supplémentaires entre la scène et les articles, les playlists ou les effets météo.",
@@ -761,6 +754,7 @@
       "none": "Non",
       "noPoss": " Pas de Possibilité!",
       "noPossFree": "Pas de possibilité !<br>Confirmez le don ?",
+      "noRace": "No race added",
       "notes": "Notes",
       "number": "Nombre",
       "operator": "Opérateur",
