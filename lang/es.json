@@ -445,6 +445,7 @@
       "noItemNamed": "Your controlled Actor does not have an item named ",
       "noSkillNamed": "Your controlled Actor does not have a skill named ",
       "noTarget": "No valid Target Token",
+      "noVehicleOperator": "The targeted vehicle {a} doesn't have an operator. The test cannot proceed.",
       "notImplemented": "Not implemented at this moment",
       "onlyReservedCard": "Please play a reserved card while playing a dramatic scene",
       "openDiscord": "Your browser will open a new page to join us on our discord server ",
