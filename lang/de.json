@@ -446,6 +446,7 @@
       "noItemNamed": "Dein Kontrollierter Charakter hat keinen Gegenstand der heißt: ",
       "noSkillNamed": "Dein Kontrollierter Charakter hat keine Fertigkeit, die heißt: ",
       "noTarget": "Kein valides Token anvisiert",
+      "noTokenNorActor": "Keine Token ausgewählt und kein zugewiesener Charakter gefunden, das Makro kann nicht fortgesetzt werden.",
       "notImplemented": "Aktuell noch nicht implementiert",
       "onlyReservedCard": "Bitte nur Karten aus dem Aktionenpool spielen.",
       "openDiscord": "Dein Browser wird einen neuen Tab öffnen, der dich zum Discord-Server weiterleitet.",
