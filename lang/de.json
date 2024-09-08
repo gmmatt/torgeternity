@@ -452,6 +452,7 @@
       "noItemNamed": "Dein Kontrollierter Charakter hat keinen Gegenstand der heißt: ",
       "noSkillNamed": "Dein Kontrollierter Charakter hat keine Fertigkeit, die heißt: ",
       "noTarget": "Kein valides Token anvisiert",
+      "noVehicleOperator": "Das anvisierte Fahrzeug {a} hat keinen Fahrer. Der Test kann nicht fortgesetzt werden.",
       "notImplemented": "Aktuell noch nicht implementiert",
       "onlyReservedCard": "Bitte nur Karten aus dem Aktionenpool spielen.",
       "openDiscord": "Dein Browser wird einen neuen Tab öffnen, der dich zum Discord-Server weiterleitet.",

@@ -444,6 +444,7 @@
       "noItemNamed": "L'acteur que vous contrôlez n'a pas d'objet nommé ",
       "noSkillNamed": "L'acteur que vous contrôlez n'a pas de compétence nommée ",
       "noTarget": "Pas de token cible valide.",
+      "noVehicleOperator": "Le véhicule {a} ciblé n'a pas d'opérateur. Le test ne peut pas avoir lieu.",
       "notImplemented": "Pas encore implémenté.",
       "onlyReservedCard": "Vous ne pouvez jouer que les cartes en réserve durant une scène dramatique.",
       "openDiscord": "Votre navigateur va ouvrir un onglet pour rejoindre Discord.",
