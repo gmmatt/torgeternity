@@ -23,6 +23,15 @@ export async function renderSkillChat(test) {
   test.bdDamageLabelStyle = test.bdDamageSum ? 'display:block' : 'display:none';
   let iteratedRoll;
 
+  for (const target of test.targetAll) {
+    if (target.present && target.type === 'vehicle' && isNaN(target.defenses.dodge)) {
+      ui.notifications.error(
+        game.i18n.format('torgeternity.notifications.noVehicleOperator', { a: target.targetName })
+      );
+      return;
+    }
+  }
+
   // Handle ammo. First, check if there is enough ammo, then reduce it.
   if (test.item?.weaponWithAmmo) {
     await test?.item.reduceAmmo(test.burstModifier, test.targetAll.length);

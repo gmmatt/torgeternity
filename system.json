@@ -18,7 +18,7 @@
   "version": "12.3.0",
   "compatibility": {
     "minimum": "12",
-    "verified": "12"
+    "verified": "12.331"
   },
   "esmodules": ["module/torgeternity.js"],
   "scripts": ["module/lib/setting-extender.js"],

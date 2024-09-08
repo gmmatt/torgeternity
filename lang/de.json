@@ -453,6 +453,8 @@
       "noRaceToDelete": "Es gibt kein Volk zum löschen.",
       "noSkillNamed": "Dein Kontrollierter Charakter hat keine Fertigkeit, die heißt: ",
       "noTarget": "Kein valides Token anvisiert",
+      "noVehicleOperator": "Das anvisierte Fahrzeug {a} hat keinen Fahrer. Der Test kann nicht fortgesetzt werden.",
+      "noTokenNorActor": "Keine Token ausgewählt und kein zugewiesener Charakter gefunden, das Makro kann nicht fortgesetzt werden.",
       "notImplemented": "Aktuell noch nicht implementiert",
       "onlyReservedCard": "Bitte nur Karten aus dem Aktionenpool spielen.",
       "openDiscord": "Dein Browser wird einen neuen Tab öffnen, der dich zum Discord-Server weiterleitet.",

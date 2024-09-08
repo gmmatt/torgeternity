@@ -4,6 +4,9 @@
 
 - Active Defense will now automatically be disposed, when the combat round is over or the combat ends. [#438](https://github.com/gmmatt/torgeternity/issues/438)
 - Character informations can now be shown by a right-click-context-menu on an actor. [#229](https://github.com/gmmatt/torgeternity/issues/229)
+- Option for not automatically untarged token after attack [#459](https://github.com/gmmatt/torgeternity/issues/459)
+- refactoring the handlebarHelpers [#455](https://github.com/gmmatt/torgeternity/issues/455)
+- The buff macro now handles more than 1 selected token (especially good for gms!) [#468](https://github.com/gmmatt/torgeternity/issues/468)
 - Races are now as items and can be dragged onto the character. This influences the attribute maximums and adds race-related perks. [#52](https://github.com/gmmatt/torgeternity/issues/52)
 
 ## v. 12.2.6
