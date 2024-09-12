@@ -9,6 +9,10 @@
 - The buff macro now handles more than 1 selected token (especially good for gms!) [#468](https://github.com/gmmatt/torgeternity/issues/468)
 - Races are now as items and can be dragged onto the character. This influences the attribute maximums and adds race-related perks. [#52](https://github.com/gmmatt/torgeternity/issues/52)
 
+## v. 12.2.7
+
+- Determined a bug that concerned attacking vehicles [#470](https://github.com/gmmatt/torgeternity/issues/470)
+
 ## v. 12.2.6
 
 - Introducing perk category _legend_ [#463](https://github.com/gmmatt/torgeternity/issues/463)
