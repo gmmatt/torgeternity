@@ -9,7 +9,7 @@ import { ChatMessageTorg } from './documents/chat/document.js';
 export async function renderSkillChat(test) {
   const messages = [];
   if (test?.targetAll.length != 0) {
-  } else test.targetAll = [test.target];
+  } else test.targetAll = [test.targets];
 
   // disable DSN (if used) for 'every' message (want to show only one dice despite many targets)
   try {
@@ -672,7 +672,7 @@ export async function renderSkillChat(test) {
           ],
           disabled: false,
         };
-        fromUuidSync(test.actor).createEmbeddedDocuments('ActiveEffect', [NewActiveDefense]);
+        await fromUuid(test.actor).createEmbeddedDocuments('ActiveEffect', [NewActiveDefense]);
         test.testType = 'activeDefenseUpdate';
         test.resultText = '+ ' + test.bonus;
         test.actionTotalLabel = 'display:none';
@@ -1933,7 +1933,10 @@ async function oneDN(test) {
       test.DN = highestSpeed;
       break;
     case 'targetVehicleDefense':
-      test.DN = target.defenses.vehicle;
+      for (const tar of test.targetAll) {
+        highestDN = Math.max(highestDN, tar?.defenses?.vehicle ?? 0);
+      }
+      test.DN = highestDN;
       break;
     default:
       test.DN = 10;
