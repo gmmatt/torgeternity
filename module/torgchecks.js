@@ -671,7 +671,9 @@ export async function renderSkillChat(test) {
           ],
           disabled: false,
         };
-        await fromUuid(test.actor).createEmbeddedDocuments('ActiveEffect', [NewActiveDefense]);
+        await fromUuid(test.actor).then(
+          async (a) => await a.createEmbeddedDocuments('ActiveEffect', [NewActiveDefense])
+        );
         test.testType = 'activeDefenseUpdate';
         test.resultText = '+ ' + test.bonus;
         test.actionTotalLabel = 'display:none';
