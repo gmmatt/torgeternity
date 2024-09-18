@@ -8,6 +8,10 @@
 - refactoring the handlebarHelpers [#455](https://github.com/gmmatt/torgeternity/issues/455)
 - The buff macro now handles more than 1 selected token (especially good for gms!) [#468](https://github.com/gmmatt/torgeternity/issues/468)
 
+## v. 12.2.8
+
+- Fixing a bug on active defense.
+
 ## v. 12.2.7
 
 - Determined a bug that concerned attacking vehicles [#470](https://github.com/gmmatt/torgeternity/issues/470)
