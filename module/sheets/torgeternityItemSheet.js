@@ -71,45 +71,55 @@ export default class TorgeternityItemSheet extends ItemSheet {
           initial: 'stats',
         },
       ],
-      scrollY: ['.stats', '.effects', '.background'],
-      dragdrop: [
+      dragDrop: [
         {
           dragSelector: '.item-list .item',
           dropSelector: null,
         },
       ],
+      scrollY: ['.stats', '.effects', '.background'],
     });
   }
 
-  /**
-   *
-   */
-  get template() {
-    return `systems/torgeternity/templates/sheets/${this.item.type}-sheet.html`;
+  /** @inheritdoc */
+  _canDragStart(selector) {
+    console.log(selector);
+    return this.isEditable;
   }
 
-  /**
+  /** @inheritdoc */
+  _canDragDrop(selector) {
+    console.log(selector);
+    return this.isEditable;
+  }
+
+  /** @inheritdoc
    *
-   * @param options
+   * won't be activated due to
    */
-  async getData(options) {
-    const data = await super.getData(options);
 
-    data.effects = prepareActiveEffectCategories(this.document.effects);
+  _onDragStart(event) {
+    console.log(event);
+  }
 
-    data.config = CONFIG.torgeternity;
+  _onDrag(event) {
+    console.log(event);
+  }
 
-    data.description = await TextEditor.enrichHTML(this.object.system.description, { async: true });
+  /** @inheritdoc */
+  async _onDrop(event) {
+    const data = TextEditor.getDragEventData(event);
+    const perk = await fromUuid(data.uuid);
 
-    data.ammunition = this.document.actor?.itemTypes?.ammunition ?? [];
+    if (perk.type !== 'perk' && perk.system.category !== 'racial') return;
 
-    data.displaySecondaryAxiomValue =
-      !this.document.system?.secondaryAxiom ||
-      this.document.system?.secondaryAxiom.selected === 'none'
-        ? false
-        : true;
+    this.item.system.perksData.push(data.uuid);
+    Object.assign(this.item.system.perksDataMore, perk);
 
-    return data;
+    for (const [key, value] of Object.entries(this.item.system.perksDataMore)) {
+      console.log(key);
+      console.log(value);
+    }
   }
 
   /**
@@ -168,6 +178,37 @@ export default class TorgeternityItemSheet extends ItemSheet {
       ev.currentTarget.value === 'none' &&
         this.item.update({ 'system.secondaryAxiom.value': null });
     });
+  }
+
+  /**
+   *
+   */
+  get template() {
+    return `systems/torgeternity/templates/sheets/${this.item.type}-sheet.html`;
+  }
+
+  /**
+   *
+   * @param options
+   */
+  async getData(options) {
+    const data = await super.getData(options);
+
+    data.effects = prepareActiveEffectCategories(this.document.effects);
+
+    data.config = CONFIG.torgeternity;
+
+    data.description = await TextEditor.enrichHTML(this.object.system.description, { async: true });
+
+    data.ammunition = this.document.actor?.itemTypes?.ammunition ?? [];
+
+    data.displaySecondaryAxiomValue =
+      !this.document.system?.secondaryAxiom ||
+      this.document.system?.secondaryAxiom.selected === 'none'
+        ? false
+        : true;
+
+    return data;
   }
 }
 

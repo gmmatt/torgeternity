@@ -95,7 +95,8 @@ export default class TorgeternityItem extends Item {
     }
 
     if (
-      this.actor.system.details.race !== game.i18n.localize('torgeternity.sheetLabels.noRace') &&
+      this.actor &&
+      this?.actor?.system.details.race !== game.i18n.localize('torgeternity.sheetLabels.noRace') &&
       data.type === 'race'
     ) {
       ui.notifications.error(game.i18n.localize('torgeternity.notifications.raceExistent'));

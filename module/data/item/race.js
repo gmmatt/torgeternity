@@ -1,4 +1,5 @@
 import { torgeternity } from '../../config.js';
+import { PerkItemData } from './perk.js';
 
 /**
  * @inheritdoc
@@ -23,6 +24,8 @@ export class RaceItemData extends foundry.abstract.TypeDataModel {
         required: true,
       }),
       hardCoded: new fields.JavaScriptField({ initial: '', trim: true }, { async: true }),
+      perksData: new fields.ArrayField(new fields.DocumentUUIDField({ initial: null })),
+      perksDataMore: new fields.TypeDataField({ document: PerkItemData }),
     };
   }
 
