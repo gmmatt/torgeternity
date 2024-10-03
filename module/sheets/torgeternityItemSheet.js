@@ -83,13 +83,11 @@ export default class TorgeternityItemSheet extends ItemSheet {
 
   /** @inheritdoc */
   _canDragStart(selector) {
-    console.log(selector);
     return this.isEditable;
   }
 
   /** @inheritdoc */
   _canDragDrop(selector) {
-    console.log(selector);
     return this.isEditable;
   }
 
@@ -111,15 +109,14 @@ export default class TorgeternityItemSheet extends ItemSheet {
     const data = TextEditor.getDragEventData(event);
     const perk = await fromUuid(data.uuid);
 
-    if (perk.type !== 'perk' && perk.system.category !== 'racial') return;
+    if (perk.type != 'perk' || perk.system.category != 'racial') return;
 
-    this.item.system.perksData.push(data.uuid);
-    Object.assign(this.item.system.perksDataMore, perk);
+    const currentPerks =
+      this.item.system.perksData instanceof Set ? this.item.system.perksData : new Set();
 
-    for (const [key, value] of Object.entries(this.item.system.perksDataMore)) {
-      console.log(key);
-      console.log(value);
-    }
+    currentPerks.add(perk);
+
+    await this.item.update({ 'system.perksData': Array.from(currentPerks) });
   }
 
   /**
