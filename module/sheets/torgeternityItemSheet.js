@@ -107,9 +107,21 @@ export default class TorgeternityItemSheet extends ItemSheet {
   /** @inheritdoc */
   async _onDrop(event) {
     const data = TextEditor.getDragEventData(event);
-    const perk = await fromUuid(data.uuid);
+    const dropedObject = await fromUuid(data.uuid);
 
-    if (perk.type != 'perk' || perk.system.category != 'racial') return;
+    if (dropedObject.type === 'perk' && this.item.type === 'race')
+      await this.dropPerkOnRace(dropedObject);
+  }
+
+  async dropPerkOnRace(perk) {
+    if (perk.system.category != 'racial') {
+      ui.notifications.error(
+        game.i18n.format('torgeternity.notifications.notAPerkItem', {
+          a: game.i18n.localize('torgeternity.perkTypes.' + perk.system.category),
+        })
+      );
+      return;
+    }
 
     const currentPerks =
       this.item.system.perksData instanceof Set ? this.item.system.perksData : new Set();

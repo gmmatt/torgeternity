@@ -464,7 +464,8 @@
       "noPossibility": "Pas de possibilités disponibles",
       "noCapacity": "{a} ne sait pas piloter ce type véhicule !",
       "noFight": "Pas de rencontre active, ou initiée",
-      "raceExistent": "You have already chosen a race."
+      "raceExistent": "You have already chosen a race.",
+      "notAPerkItem": "Vous avez tenté d'attribuer un avantage de la catégorie {a} à cette race, mais il doit appartenir à la catégorie raciale. L'action a été annulée."
     },
     "packs": {
       "basicRules": "torgeternity.basic-rules-fr",
