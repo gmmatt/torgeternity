@@ -9,6 +9,7 @@
 
     <nav class="sheet-tabs item-tabs tabs" data-group="primary" style="{{item.system.navStyle}}">
         <a class="item" data-tab="stats" >{{localize "torgeternity.sheetLabels.stats"}}</a>
+        <a class="item" data-tab="racialPerks" >{{localize "torgeternity.sheetLabels.racialPerks"}}</a>
         <a class="item" data-tab="hardcode" >{{localize "torgeternity.sheetLabels.hardcode"}}</a>
     </nav>
 
@@ -79,6 +80,38 @@
                     {{selectOptions config.cosmTypes selected=item.system.cosm localize=true sort=true}}
                 </select>
             </div>
+        </div>
+        <div class="tab raceHardcode" data-group="primary", data-tab="racialPerks">
+            {{#if item.system.perksData}}
+            <ol class="race perks-list">
+                {{#each item.system.perksData as |perk|}}
+                    <li class="item block" data-item-id="{{perk.system.transferenceID}}"> 
+                        <div class="item-row flexrow">
+                            <img src="{{perk.img}}" data-tooltip="{{perk.name}}">
+                            <a class="item-name">{{perk.name}}</a>
+                            <div class="item-controls">
+                                <a class="item-control item-delete" data-tooltip="{{localize 'torgeternity.iconeTitles.delete'}}">
+                                    <i class="fas fa-trash"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="item-detail">
+                            <div class="item-dropdown-description">
+                                {{{perk.description}}}
+                                <p></p>
+                                <div class="item-dropdown-extras">
+                                    {{localize "torgeternity.gear.cosm"}}: {{localize (concat "torgeternity.cosms." perk.system.cosm)}}
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                {{/each}}
+            </ol>
+            {{else}}
+                <p style="color:black">No perks added</p>
+            {{/if}}
+
         </div>
         <div class="tab" data-group="primary" data-tab="hardcode">
             <textarea class="raceHardcode" name="system.hardCoded">

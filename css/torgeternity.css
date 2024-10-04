@@ -4110,6 +4110,49 @@ form.actor-sheet.threat .tab[data-tab].active .editor {
   padding: 0 0 0 0;
 }
 
+.item-sheet ol.race.perks-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.item-sheet ol.race.perks-list li {
+  color: black;
+  list-style: none;
+  margin: 5px;
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid black;
+  flex-direction: column;
+  border: solid 4px;
+  -o-border-image: url(../images/separator.webp);
+  border-image: url(../images/separator.webp);
+  border-image-slice: 50;
+  box-shadow: 2px 2px 15px #9e9686;
+  transition: all 0.3s cubic-bezier(0.6, -0.07, 0.56, 1.52) 0.2s;
+  overflow: auto;
+  padding: 0px 0px 5px 0px;
+}
+
+.item-sheet ol.race.perks-list > .item.block  > .item-row.flexrow {
+  display: flex;
+  justify-content: space-evenly;
+
+}
+
+.item-sheet ol.race.perks-list > .item.block  > .item-row.flexrow > img{
+  max-width: 60px;
+  max-height: 60px;
+  border:none;
+}
+
+.item-sheet ol.race.perks-list > .item.block  > .item-details >  {
+  overflow: scroll;
+  position: relative;
+  z-index: 1000;
+  max-height: 0px;
+}
+
 .enhancement-check {
   flex: 10%;
   color: black;

@@ -187,6 +187,38 @@ export default class TorgeternityItemSheet extends ItemSheet {
       ev.currentTarget.value === 'none' &&
         this.item.update({ 'system.secondaryAxiom.value': null });
     });
+
+    html.find('.item-name').click((ev) => {
+      const section = ev.currentTarget.closest('.item');
+      const detail = $(section).find('.item-detail');
+      const content = detail.get(0);
+      if (content != undefined && content.style.maxHeight) {
+        content.style.maxHeight = null;
+      } else {
+        if (content) {
+          content.style.maxHeight = content.scrollHeight + 'px';
+        }
+      }
+    });
+
+    html.find('.item-control.item-delete').click((ev) => {
+      if (this.item.type === 'race') {
+        const id = $(ev.currentTarget.closest('.item')).attr('data-item-id');
+        const raceItem = this.item;
+        const allPerksOfRaceItem = raceItem.system.perksData;
+
+        if (!allPerksOfRaceItem) return; // just for safety
+
+        for (const racePerk of allPerksOfRaceItem) {
+          if (racePerk.system.transferenceID === id) {
+            allPerksOfRaceItem.delete(racePerk);
+            break;
+          }
+        }
+
+        raceItem.update({ 'system.perksData': Array.from(allPerksOfRaceItem) });
+      }
+    });
   }
 
   /**

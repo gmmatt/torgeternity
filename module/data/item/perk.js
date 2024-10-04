@@ -108,6 +108,7 @@ export class PerkItemData extends foundry.abstract.TypeDataModel {
         selected: new fields.StringField({ initial: 'none' }),
         value: new fields.NumberField({ initial: null, integer: true }),
       }),
+      transferenceID: new fields.DocumentIdField({ initial: null }), // necessary for saving perks data in race items
     };
   }
 

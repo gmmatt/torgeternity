@@ -34,12 +34,18 @@ export default class TorgeternityItem extends Item {
    */
   prepareBaseData() {
     // Handle perk-related data
-    if (this.type === 'perk') {
-      this.system.navStyle = 'right:-210px;top:210px';
-      this.system.extendedNav = true;
-    } else {
-      this.system.navStyle = 'right:-110px;top:115px';
-      this.system.extendedNav = false;
+    switch (this.type) {
+      case 'perk':
+        this.system.navStyle = 'right:-210px;top:210px';
+        this.system.extendedNav = true;
+        break;
+      case 'race':
+        this.system.navStyle = 'right:-160px;top:160px';
+        this.system.extendedNav = true;
+        break;
+      default:
+        this.system.navStyle = 'right:-110px;top:115px';
+        this.system.extendedNav = false;
     }
 
     for (const [key, value] of Object.entries(torgeternity.dnTypes)) {
@@ -110,7 +116,7 @@ export default class TorgeternityItem extends Item {
    * @param options
    * @param userId
    */
-  _onCreate(data, options, userId) {
+  async _onCreate(data, options, userId) {
     super._onCreate(data, options, userId);
 
     if (this.parent && ['armor', 'shield'].includes(this.type) && this.system.equipped) {
@@ -122,6 +128,10 @@ export default class TorgeternityItem extends Item {
       if (previousEquipped) {
         TorgeternityItem.toggleEquipState(previousEquipped, actor);
       }
+    }
+
+    if (this.type === 'perk') {
+      await this.update({ 'system.transferenceID': this.id }); // necessary for saving perks data in race items
     }
   }
 
