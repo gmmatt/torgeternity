@@ -3362,7 +3362,8 @@ form.actor-sheet.threat .tab[data-tab].active ol.item-list li .item-detail .item
   max-height: inherit;
 }
 
-form.actor-sheet.threat .tab[data-tab].active ol.item-list li .item-detail .item-dropdown-extras {
+form.actor-sheet.threat .tab[data-tab].active ol.item-list li .item-detail .item-dropdown-extras,
+.item-sheet ol.race.perks-list > .item.block  > .item-detail > .item-dropdown-description .item-dropdown-extras {
   font-style: italic;
   border: 1px solid grey;
   text-align: center;
@@ -4154,19 +4155,23 @@ form.actor-sheet.threat .tab[data-tab].active .editor {
   justify-self: end;
 }
 
-.item-sheet ol.race.perks-list > .item.block  > .item-detail {
+.item-sheet ol.race.perks-list .item.block .item-detail {
   display:none;
+  max-height:300px;
 }
 
-.item-sheet ol.race.perks-list > .item.block  > .item-detail > * {
+.item-sheet ol.race.perks-list .item.block .item-detail > * {
   overflow: auto;
   position: relative;
-  z-index: 1000;
-  
+  z-index: 1000;  
 }
 
 .item-sheet ol.race.perks-list > .item.block  > .item-detail > .item-dropdown-description {
   font-size:14px;
+}
+
+.item-sheet ol.race.perks-list > .item.block  > .item-detail > .item-dropdown-description .item-dropdown-extras{
+
 }
 
 .enhancement-check {
