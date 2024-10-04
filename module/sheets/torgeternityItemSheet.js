@@ -190,15 +190,13 @@ export default class TorgeternityItemSheet extends ItemSheet {
 
     html.find('.item-name').click((ev) => {
       const section = ev.currentTarget.closest('.item');
-      const detail = $(section).find('.item-detail');
-      const content = detail.get(0);
-      if (content != undefined && content.style.maxHeight) {
-        content.style.maxHeight = null;
-      } else {
-        if (content) {
-          content.style.maxHeight = content.scrollHeight + 'px';
-        }
-      }
+      const detail = $(section).find('.item-detail').get(0);
+
+      if (!detail) return;
+      detail.style.display =
+        detail.style.display === 'none' || !detail.style.display
+          ? (detail.style.display = 'block')
+          : (detail.style.display = 'none');
     });
 
     html.find('.item-control.item-delete').click((ev) => {

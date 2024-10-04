@@ -82,7 +82,7 @@
             </div>
         </div>
         <div class="tab raceHardcode" data-group="primary", data-tab="racialPerks">
-            {{#if item.system.perksData}}
+            {{#if (ne item.system.perksData.size 0)}}
             <ol class="race perks-list">
                 {{#each item.system.perksData as |perk|}}
                     <li class="item block" data-item-id="{{perk.system.transferenceID}}"> 
@@ -98,8 +98,7 @@
 
                         <div class="item-detail">
                             <div class="item-dropdown-description">
-                                {{{perk.description}}}
-                                <p></p>
+                                {{{perk.system.description}}}
                                 <div class="item-dropdown-extras">
                                     {{localize "torgeternity.gear.cosm"}}: {{localize (concat "torgeternity.cosms." perk.system.cosm)}}
                                 </div>
@@ -109,7 +108,7 @@
                 {{/each}}
             </ol>
             {{else}}
-                <p style="color:black">No perks added</p>
+                <h1 style="color:black">No perks added</h1>
             {{/if}}
 
         </div>
