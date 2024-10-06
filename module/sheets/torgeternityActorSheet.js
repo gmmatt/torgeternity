@@ -377,6 +377,12 @@ export default class TorgeternityActorSheet extends ActorSheet {
       html.find('.increaseAttribute').click((ev) => {
         const concernedAttribute = ev.currentTarget.dataset.concernedattribute;
         const attributeToChange = this.actor.system.attributes[concernedAttribute].base;
+        if (attributeToChange + 1 > this.actor.system.attributes[concernedAttribute]?.maximum) {
+          ui.notifications.error(
+            game.i18n.localize('torgeternity.notifications.reachedMaximumAttr')
+          );
+          return;
+        }
         this.actor.update({
           [`system.attributes.${concernedAttribute}.base`]: attributeToChange + 1,
         });
@@ -492,24 +498,43 @@ export default class TorgeternityActorSheet extends ActorSheet {
   /** @inheritdoc */
   async _onDrop(event) {
     super._onDrop(event);
+    if (this.object.type !== 'stormknight') return;
     const data = TextEditor.getDragEventData(event);
     const dropedObject = await fromUuid(data.uuid);
 
-    if (dropedObject.type === 'race') await this._addRacePerks(dropedObject);
-  }
+    if (dropedObject.type === 'race' && !this.actor.items.find((i) => i.type === 'race')) {
+      for (const perkData of dropedObject.system.perksData) {
+        const perk = new TorgeternityItem(perkData);
+        await this.actor.createEmbeddedDocuments('Item', [perk]);
+        ui.notifications.info(
+          game.i18n.format('torgeternity.notifications.addedRacePerkToActor', {
+            perkName: perk.name,
+          })
+        );
+      }
 
-  /**
-   * Adds all perk items to the actor, coming form a droped race item.
-   *
-   * @param {object} race The race Item Object
-   */
-  async _addRacePerks(race) {
-    for (const perkData of race.system.perksData) {
-      const perk = new TorgeternityItem(perkData);
-      await this.actor.createEmbeddedDocuments('Item', [perk]);
-      ui.notifications.info(
-        game.i18n.format('torgeternity.notifications.addedRacePerkToActor', { perkName: perk.name })
-      );
+      for (const [key, value] of Object.entries(dropedObject.system.attributeMaximum)) {
+        if (this.actor.system.attributes[key].base <= value) continue;
+
+        const proceed = await foundry.applications.api.DialogV2.confirm({
+          window: {
+            title: await game.i18n.localize(
+              'torgeternity.dialogWindow.raceDiminishAttribute.title'
+            ),
+          },
+          content: await game.i18n.format(
+            'torgeternity.dialogWindow.raceDiminishAttribute.maintext',
+            {
+              attribute: await game.i18n.localize('torgeternity.attributes.' + key),
+            }
+          ),
+          rejectClose: false,
+          modal: true,
+        });
+        if (!proceed) continue;
+
+        await this.actor.update({ [`system.attributes.${key}.base`]: value });
+      }
     }
   }
 

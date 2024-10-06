@@ -286,6 +286,10 @@
         "value":"Wähle die Höhe des Bonus",
         "timeLabel":"Wahl der Dauer",
         "time":"Wähle die Dauer in Runden"
+      },
+      "raceDiminishAttribute": {
+        "maintext": "Das Attribut {attribute} ist größer als das Volksmaximum. Soll das Attribut auf das Volksmaximum gesetzt werden?",
+        "title": "Warnung, Attributsmaximum"
       }
     },
     "dnTypes": {
@@ -466,7 +470,8 @@
       "noFight":"Kein aktiver Kampf, oder noch nicht gestartet",
       "raceExistent": "Du hast dich bereits für ein Volk entschieden.",
       "notAPerkItem": "Du hast versucht, diesem Volk einen Vorteil aus der Kategorie {a} zuzuweisen, aber er muss zur Kategorie Volksfähigkeit gehören. Aktion wurde abgebrochen.",
-      "addedRacePerkToActor": "{perkName}-Vorzug dem Charakter hinzugefügt."
+      "addedRacePerkToActor": "{perkName}-Vorzug dem Charakter hinzugefügt.",
+      "reachedMaximumAttr": "Du hast das Attributsmaximum, dass dein Volk vorgibt, erreicht. Eine weitere Erhöhung ist nicht möglich."
     },
     "packs": {
       "basicRules": "torgeternity.system-de-basisregeln",

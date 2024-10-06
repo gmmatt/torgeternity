@@ -286,6 +286,10 @@
         "value":"Choose the value for the bonus",
         "timeLabel":"Duration choice",
         "time":"Choose the duration in round(s)"
+      },
+      "raceDiminishAttribute": {
+        "maintext": "The attribute {attribute} is greater than the race maximum. Should the attribute be set to the race maximum?",
+        "title": "Warning, attribute maximum"
       }
     },
     "dnTypes": {
@@ -466,7 +470,8 @@
       "noFight":"No active combat, or not started",
       "raceExistent": "You have already chosen a race.",
       "notAPerkItem": "You attempted to assign a perk from the {a} category to this race, but it must belong to the racial category. Action has been aborted.",
-      "addedRacePerkToActor": "Added {perkName}-perk to actor."
+      "addedRacePerkToActor": "Added {perkName}-perk to actor.",
+      "reachedMaximumAttr": "You have reached the attribute maximum specified by your race. A further increase is not possible."
     },
     "packs": {
       "basicRules": "torgeternity.basic-rules",

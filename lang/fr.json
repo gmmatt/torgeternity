@@ -286,6 +286,10 @@
         "value":"Choisissez la valeur de la modification",
         "timeLabel":"Choix de la durée",
         "time":"Saisissez la durée en round(s)"
+      },
+      "raceDiminishAttribute": {
+        "maintext": "L'attribut {attribute} est plus grand que le maximum de population. Doit-on définir l'attribut sur le maximum de population?",
+        "title": "Avertissement, attribut maximum"
       }
     },
     "dnTypes": {
@@ -466,7 +470,8 @@
       "noFight": "Pas de rencontre active, ou initiée",
       "raceExistent": "You have already chosen a race.",
       "notAPerkItem": "Vous avez tenté d'attribuer un avantage de la catégorie {a} à cette race, mais il doit appartenir à la catégorie raciale. L'action a été annulée.",
-      "addedRacePerkToActor": "Ajouté {perkName}-perk à l'acteur."
+      "addedRacePerkToActor": "Ajouté {perkName}-perk à l'acteur.",
+      "reachedMaximumAttr" : "Tu as atteint le maximum d'attributs que ton peuple a défini. Une augmentation supplémentaire n'est pas possible."
     },
     "packs": {
       "basicRules": "torgeternity.basic-rules-fr",

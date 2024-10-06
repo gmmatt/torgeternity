@@ -286,6 +286,10 @@
         "value":"Choose the value for the bonus",
         "timeLabel":"Duration choice",
         "time":"Choose the duration in round(s)"
+      },
+      "raceDiminishAttribute": {
+        "maintext": "El atributo {attribute} es mayor que el máximo poblacional. ¿Debe fijarse el atributo en el máximo poblacional?",
+        "title": "Advertencia, atributo máximo"
       }
     },
     "dnTypes": {
@@ -465,8 +469,8 @@
       "noFight": "No activefight, or not started",
       "raceExistent": "You have already chosen a race.",
       "notAPerkItem": "Has intentado asignar una ventaja de la categoría {a} a esta raza, pero debe pertenecer a la categoría racial. La acción ha sido abortada.",
-      "addedRacePerkToActor": "Añadido {perkName}-perk al actor."
-    },
+      "addedRacePerkToActor": "Añadido {perkName}-perk al actor.",
+      "reachedMaximumAttr": "Has alcanzado el máximo de atributo especificado por tu raza. No es posible aumentar más"    },
     "packs": {
       "basicRules": "torgeternity.basic-rules",
       "decks": "torgeternity.core-card-set"
