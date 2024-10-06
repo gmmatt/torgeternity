@@ -480,6 +480,25 @@ export default class TorgeternityActorSheet extends ActorSheet {
     }
   }
 
+  /** @inheritdoc */
+  async _onDrop(event) {
+    super._onDrop(event);
+    const data = TextEditor.getDragEventData(event);
+    const dropedObject = await fromUuid(data.uuid);
+
+    if (dropedObject.type === 'race') await this._addRacePerks(dropedObject);
+  }
+
+  async _addRacePerks(race) {
+    for (const perkData of race.system.perksData) {
+      const perk = new TorgeternityItem(perkData);
+      await this.actor.createEmbeddedDocuments('Item', [perk]);
+      ui.notifications.info(
+        game.i18n.format('torgeternity.notifications.addedRacePerkToActor', { perkName: perk.name })
+      );
+    }
+  }
+
   /**
    *
    * @param event

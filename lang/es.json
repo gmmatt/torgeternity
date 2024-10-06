@@ -464,7 +464,8 @@
       "noCapacity": "{a} can't pilote this kind of vehicle!",
       "noFight": "No activefight, or not started",
       "raceExistent": "You have already chosen a race.",
-      "notAPerkItem": "Has intentado asignar una ventaja de la categoría {a} a esta raza, pero debe pertenecer a la categoría racial. La acción ha sido abortada."
+      "notAPerkItem": "Has intentado asignar una ventaja de la categoría {a} a esta raza, pero debe pertenecer a la categoría racial. La acción ha sido abortada.",
+      "addedRacePerkToActor": "Añadido {perkName}-perk al actor."
     },
     "packs": {
       "basicRules": "torgeternity.basic-rules",

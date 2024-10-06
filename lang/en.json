@@ -465,7 +465,8 @@
       "noCapacity": "{a} can't pilote this kind of vehicle!",
       "noFight":"No active combat, or not started",
       "raceExistent": "You have already chosen a race.",
-      "notAPerkItem": "You attempted to assign a perk from the {a} category to this race, but it must belong to the racial category. Action has been aborted."
+      "notAPerkItem": "You attempted to assign a perk from the {a} category to this race, but it must belong to the racial category. Action has been aborted.",
+      "addedRacePerkToActor": "Added {perkName}-perk to actor."
     },
     "packs": {
       "basicRules": "torgeternity.basic-rules",
