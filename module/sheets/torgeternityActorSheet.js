@@ -204,6 +204,25 @@ export default class TorgeternityActorSheet extends ActorSheet {
       ? true
       : false;
 
+    // handling race data
+    if (this.actor.items.find((i) => i.type === 'race')) {
+      const raceItem = this.actor.items.find((i) => i.type === 'race');
+
+      data.actor.system.details.race = raceItem.name;
+
+      for (const attribute of Object.keys(raceItem.system.attributeMaximum)) {
+        const attrMaxAE = this.actor.effects.find((e) => {
+          const v = e.changes.find((k) => k.key === `system.attributes.${attribute}.maximum`);
+          return parseInt(v?.value) ?? 0;
+        });
+
+        data.actor.system.attributes[attribute].maximum =
+          raceItem.system.attributeMaximum[attribute] + attrMaxAE?.changes.find((c) => c.value);
+      }
+    } else {
+      data.actor.system.details.race = game.i18n.localize('torgeternity.sheetLabels.noRace');
+    }
+
     return data;
   }
 
