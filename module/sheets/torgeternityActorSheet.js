@@ -204,25 +204,6 @@ export default class TorgeternityActorSheet extends ActorSheet {
       ? true
       : false;
 
-    // handling race data
-    if (this.actor.items.find((i) => i.type === 'race')) {
-      const raceItem = this.actor.items.find((i) => i.type === 'race');
-
-      data.actor.system.details.race = raceItem.name;
-
-      for (const attribute of Object.keys(raceItem.system.attributeMaximum)) {
-        const attrMaxAE = this.actor.effects.find((e) => {
-          const v = e.changes.find((k) => k.key === `system.attributes.${attribute}.maximum`);
-          return parseInt(v?.value) ?? 0;
-        });
-
-        data.actor.system.attributes[attribute].maximum =
-          raceItem.system.attributeMaximum[attribute] + attrMaxAE?.changes.find((c) => c.value);
-      }
-    } else {
-      data.actor.system.details.race = game.i18n.localize('torgeternity.sheetLabels.noRace');
-    }
-
     return data;
   }
 
@@ -383,12 +364,6 @@ export default class TorgeternityActorSheet extends ActorSheet {
       html.find('.increaseAttribute').click((ev) => {
         const concernedAttribute = ev.currentTarget.dataset.concernedattribute;
         const attributeToChange = this.actor.system.attributes[concernedAttribute].base;
-        if (attributeToChange + 1 > this.actor.system.attributes[concernedAttribute]?.maximum) {
-          ui.notifications.error(
-            game.i18n.localize('torgeternity.notifications.reachedMaximumAttr')
-          );
-          return;
-        }
         this.actor.update({
           [`system.attributes.${concernedAttribute}.base`]: attributeToChange + 1,
         });
@@ -481,13 +456,12 @@ export default class TorgeternityActorSheet extends ActorSheet {
         title: game.i18n.localize('torgeternity.dialogWindow.raceDeletion.title'),
         content: game.i18n.localize('torgeternity.dialogWindow.raceDeletion.content'),
         yes: async () => {
-          await raceItem.delete();
-
-          for (const racePerk of this.actor.items.filter(
-            (i) => i.type === 'perk' && i.system.category === 'racial'
-          )) {
-            await racePerk.delete();
-          }
+          await this.actor.deleteEmbeddedDocuments('Item', [
+            raceItem.id,
+            ...this.actor.items
+              .filter((i) => i.type === 'perk' && i.system.category === 'racial')
+              .map((i) => i.id),
+          ]);
         },
         no: () => {
           return;
@@ -503,21 +477,20 @@ export default class TorgeternityActorSheet extends ActorSheet {
 
   /** @inheritdoc */
   async _onDrop(event) {
-    super._onDrop(event);
     if (this.object.type !== 'stormknight') return;
     const data = TextEditor.getDragEventData(event);
     const dropedObject = await fromUuid(data.uuid);
+    if (dropedObject.type === 'race') {
+      const raceItem = this.actor.items.find((i) => i.type === 'race');
+      await this.actor.deleteEmbeddedDocuments('Item', [
+        raceItem.id,
+        ...this.actor.items
+          .filter((i) => i.type === 'perk' && i.system.category === 'racial')
+          .map((i) => i.id),
+      ]);
+      await super._onDrop(event);
 
-    if (dropedObject.type === 'race' && !this.actor.items.find((i) => i.type === 'race')) {
-      for (const perkData of dropedObject.system.perksData) {
-        const perk = new TorgeternityItem(perkData);
-        await this.actor.createEmbeddedDocuments('Item', [perk]);
-        ui.notifications.info(
-          game.i18n.format('torgeternity.notifications.addedRacePerkToActor', {
-            perkName: perk.name,
-          })
-        );
-      }
+      await this.actor.createEmbeddedDocuments('Item', [...dropedObject.system.perksData]);
 
       for (const [key, value] of Object.entries(dropedObject.system.attributeMaximum)) {
         if (this.actor.system.attributes[key].base <= value) continue;
@@ -542,6 +515,7 @@ export default class TorgeternityActorSheet extends ActorSheet {
         await this.actor.update({ [`system.attributes.${key}.base`]: value });
       }
     }
+    super._onDrop(event);
   }
 
   /**
