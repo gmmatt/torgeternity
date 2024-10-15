@@ -982,7 +982,7 @@ ownership:
 prototypeToken:
   flags: {}
   name: Die exzentrische Erfinderin
-  displayName: 0
+  displayName: 30
   width: 1
   height: 1
   lockRotation: true
@@ -1051,17 +1051,18 @@ prototypeToken:
     colors:
       ring: null
       background: null
-    effects: 1
+    effects: 0
     subject:
       scale: 1
       texture: null
 _stats:
   systemId: torgeternity
   systemVersion: 12.2.0
-  coreVersion: '12.330'
+  coreVersion: '12.331'
   createdTime: 1694866736301
-  modifiedTime: 1722359278656
-  lastModifiedBy: 93AMwcGe6H37rcPA
+  modifiedTime: 1729013588594
+  lastModifiedBy: d8YcfsxBOP7RAazk
   compendiumSource: Compendium.torgeternity.archetypes.Aq6ZhdfGe9SMQxwv
   duplicateSource: null
 _key: '!actors!LS1z3a6GAJT83doA'
+

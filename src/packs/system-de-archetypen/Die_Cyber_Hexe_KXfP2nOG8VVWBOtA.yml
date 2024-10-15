@@ -884,7 +884,7 @@ ownership:
 prototypeToken:
   flags: {}
   name: Die Cyber-Hexe
-  displayName: 0
+  displayName: 30
   width: 1
   height: 1
   lockRotation: true
@@ -953,17 +953,18 @@ prototypeToken:
     colors:
       ring: null
       background: null
-    effects: 1
+    effects: 0
     subject:
       scale: 1
       texture: null
 _stats:
   systemId: torgeternity
   systemVersion: 12.2.0
-  coreVersion: '12.330'
+  coreVersion: '12.331'
   createdTime: 1694865921702
-  modifiedTime: 1722359278656
-  lastModifiedBy: 93AMwcGe6H37rcPA
+  modifiedTime: 1729013568444
+  lastModifiedBy: d8YcfsxBOP7RAazk
   compendiumSource: Compendium.torgeternity.archetypes.CefD0chJeL6NrRVJ
   duplicateSource: null
 _key: '!actors!KXfP2nOG8VVWBOtA'
+
