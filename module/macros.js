@@ -911,4 +911,181 @@ export class TorgeternityMacros {
       await actor?.createEmbeddedDocuments('ActiveEffect', [newEffect]);
     }
   }
+
+  async periculum(source = '', value = 10, bds = 0) {
+    let victims = Array.from(game.user.targets);
+    if (!(victims.length > 0))
+      return ui.notifications.warn(game.i18n.localize('torgeternity.notifications.noTarget'));
+
+    //add options for AP and bypass the window
+
+    let info = await foundry.applications.api.DialogV2.prompt({
+      window: { title: 'Periculum' },
+      content: `
+          <label>Damage source<br><input style="color:black" name="source" type="string" value="${source}"></label>
+          <label>Damage value<input name="damageBase" type="number" value=${value} autofocus></label>
+          <label>Add BDs<input name="plusBD" type="number" value=${bds}></label>
+          <label>Apply armor<br><input name="armor" type="checkbox"></label>
+          `,
+      ok: {
+        label: 'Submit Effect',
+        callback: (event, button, dialog) => [
+          button.form.elements.damageBase.valueAsNumber,
+          button.form.elements.source.value,
+          button.form.elements.armor.checked,
+          button.form.elements.plusBD.value,
+        ],
+      },
+    });
+
+    const allID = [];
+    const allUUID = [];
+    const targetAll = [];
+    victims.forEach((t) => {
+      allID.push(t.actor.id);
+      allUUID.push(t.document.uuid);
+    });
+    victims.forEach((t) => {
+      const target = t.actor;
+      // Set vehicle defense if needed
+      if (target.type === 'vehicle') {
+        targetAll.push({
+          present: true,
+          type: 'vehicle',
+          id: target.id,
+          uuid: t.document.uuid,
+          targetPic: target.img,
+          targetName: target.name,
+          defenses: {
+            vehicle: target.system.defense,
+            dodge: target.system.defense,
+            unarmedCombat: target.system.defense,
+            meleeWeapons: target.system.defense,
+            intimidation: target.system.defense,
+            maneuver: target.system.defense,
+            taunt: target.system.defense,
+            trick: target.system.defense,
+          },
+          toughness: target.defenses.toughness,
+          armor: target.defenses.armor,
+        });
+      } else {
+        targetAll.push({
+          present: true,
+          type: target.type,
+          id: target.id,
+          uuid: t.document.uuid,
+          targetPic: target.img,
+          targetName: target.name,
+          skills: target.system.skills,
+          attributes: target.system.attributes,
+          toughness: target.defenses.toughness,
+          armor: target.defenses.armor,
+          defenses: {
+            dodge: target.defenses.dodge.value,
+            unarmedCombat: target.defenses.unarmedCombat.value,
+            meleeWeapons: target.defenses.meleeWeapons.value,
+            intimidation: target.defenses.intimidation.value,
+            maneuver: target.defenses.maneuver.value,
+            taunt: target.defenses.taunt.value,
+            trick: target.defenses.trick.value,
+          },
+        });
+      }
+    });
+
+    let test = {
+      testType: 'custom',
+      actor: 'Actor.KTwwUX7BKCXxKh4c',
+      actorPic: 'systems/torgeternity/images/tokens/vulnerable.webp',
+      actorName: 'Quid',
+      actorType: 'threat',
+      addBDs: parseInt(info[3]),
+      amountBD: 0,
+      isAttack: true,
+      skillName: info[1],
+      skillValue: '10',
+      isFav: false,
+      unskilledUse: true,
+      damage: parseInt(info[0]),
+      weaponAP: 0,
+      applyArmor: info[2],
+      darknessModifier: 0,
+      DNDescriptor: 'standard',
+      type: 'attack',
+      targets: victims,
+      applySize: false,
+      attackOptions: true,
+      rollTotal: 11,
+      chatNote: '',
+      bdDamageSum: 0,
+      hasModifiers: false,
+      woundModifier: 0,
+      stymiedModifier: 0,
+      sizeModifier: 0,
+      vulnerableModifier: 0,
+      sizeModifierAll: [0],
+      vulnerableModifierAll: [0],
+      targetAll: targetAll,
+      targetsAllID: allID,
+      targetsAllUUID: allUUID,
+      disfavored: false,
+      previousBonus: false,
+      bonus: 0,
+      bdStyle: 'display:block',
+      upStyle: 'display:none',
+      possibilityStyle: 'display:none',
+      movementModifier: 0,
+      multiModifier: 0,
+      targetsModifier: 0,
+      calledShotModifier: 0,
+      vitalAreaDamageModifier: 0,
+      burstModifier: 0,
+      allOutModifier: 0,
+      aimedModifier: 0,
+      blindFireModifier: 0,
+      trademark: false,
+      concealmentModifier: 0,
+      coverModifier: '0',
+      additionalDamage: false,
+      isOther1: false,
+      isOther2: false,
+      isOther3: false,
+      applyDebuffLabel: 'display:none',
+      applyDamLabel: 'display:inline',
+      backlashLabel: 'display:true',
+      ammoLabel: 'display:none',
+      target: victims[0],
+      chatTitle: '',
+      DN: 9,
+      unskilledLabel: 'display:none',
+      diceroll: null,
+      isFavStyle: 'pointer-events:none;color:gray;display:none',
+      unskilledTest: false,
+      diceList: [10],
+      combinedRollTotal: 10,
+      bonusPlusLabel: 'display:none',
+      displayModifiers: true,
+      modifiers: 0,
+      modifierText: '',
+      modifierLabel: 'display:',
+      cardsPlayed: 0,
+      rollResult: 11,
+      outcome: '',
+      actionTotalContent: '',
+      outcomeColor:
+        'display:none;color: green;text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000, 0px 0px 15px black;',
+      modifierPlusLabel: 'display:none',
+      resultText: '',
+      resultTextColor:
+        'display:none;color: green;text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000, 0px 0px 15px black;',
+      damageLabel: 'display: block',
+      damageSubLabel: 'display:block',
+      disconnectLabel: 'display:none',
+      typeLabel: 'Valeur de compétence',
+      cardsPlayedLabel: 'display:none',
+      notesLabel: 'display:none',
+    };
+    await torgchecks.renderSkillChat(test);
+  }
 }

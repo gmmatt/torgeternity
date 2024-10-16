@@ -98,6 +98,9 @@ export async function renderSkillChat(test) {
         case 'vehicleBase':
           test.chatTitle = game.i18n.localize('torgeternity.chatText.vehicleBase') + ' ';
           break;
+        case 'custom':
+          test.chatTitle = test.skillName;
+          break;
         default:
           test.chatTitle =
             test.skillName + ' ' + game.i18n.localize('torgeternity.chatText.test') + ' ';
@@ -888,6 +891,11 @@ export async function renderSkillChat(test) {
       } else {
         test.bdStyle = 'display:none';
       }
+    } else if (test.testType === 'custom') {
+      test.outcomeColor = 'display:none;';
+      test.resultTextColor = 'display:none;';
+      test.bdStyle = 'display:block';
+      test.upStyle = 'display:none';
     } else {
       test.typeLabel = `${game.i18n.localize('torgeternity.chatText.attributeTestLabel')}`;
       test.bdStyle = 'display:none';
