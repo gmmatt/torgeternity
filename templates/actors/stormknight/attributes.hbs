@@ -58,8 +58,14 @@
       >
       <i class="fa-solid fa-minus changeAttributeSubstract"></i>
       </a>
-    {{/if}}
 
+      <i 
+        {{#if (eq actor.system.details.race (localize "torgeternity.sheetLabels.noRace"))}}
+          style="visibility:hidden"
+        {{/if}}> 
+        {{localize "torgeternity.sheetLabels.max"}} {{actor.system.attributes.charisma.maximum}}
+      </i>
+    {{/if}}
   </li>
 
   <li class="attribut-block">
@@ -108,6 +114,13 @@
       >
       <i class="fa-solid fa-minus changeAttributeSubstract"></i>
       </a>
+      <i 
+        {{#if (eq actor.system.details.race (localize "torgeternity.sheetLabels.noRace"))}}
+          style="visibility:hidden"
+        {{/if}}
+      > 
+        {{localize "torgeternity.sheetLabels.max"}} {{actor.system.attributes.dexterity.maximum}}
+      </i>
     {{/if}}    
   </li>
 
@@ -157,6 +170,13 @@
     >
     <i class="fa-solid fa-minus changeAttributeSubstract"></i>
     </a>
+          <i 
+        {{#if (eq actor.system.details.race (localize "torgeternity.sheetLabels.noRace"))}}
+          style="visibility:hidden"
+        {{/if}}
+      > 
+        {{localize "torgeternity.sheetLabels.max"}} {{actor.system.attributes.mind.maximum}}
+      </i>
     {{/if}}
   </li>
 
@@ -205,6 +225,13 @@
       >
       <i class="fa-solid fa-minus changeAttributeSubstract"></i>
       </a>
+      <i 
+        {{#if (eq actor.system.details.race (localize "torgeternity.sheetLabels.noRace"))}}
+          style="visibility:hidden"
+        {{/if}}
+      > 
+        {{localize "torgeternity.sheetLabels.max"}} {{actor.system.attributes.spirit.maximum}}
+      </i>
     {{/if}} 
     
   </li>
@@ -254,6 +281,13 @@
       >
       <i class="fa-solid fa-minus changeAttributeSubstract"></i>
       </a>
+      <i 
+        {{#if (eq actor.system.details.race (localize "torgeternity.sheetLabels.noRace"))}}
+          style="visibility:hidden"
+        {{/if}}
+      > 
+        {{localize "torgeternity.sheetLabels.max"}} {{actor.system.attributes.strength.maximum}}
+      </i>
     {{/if}}
   </li>
 </ul>
