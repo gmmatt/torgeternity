@@ -922,10 +922,11 @@ export class TorgeternityMacros {
     let info = await foundry.applications.api.DialogV2.prompt({
       window: { title: 'Periculum' },
       content: `
-          <label>Damage source<br><input style="color:black" name="source" type="string" value="${source}"></label>
-          <label>Damage value<input name="damageBase" type="number" value=${value} autofocus></label>
-          <label>Add BDs<input name="plusBD" type="number" value=${bds}></label>
-          <label>Apply armor<br><input name="armor" type="checkbox"></label>
+          <label>Damage source<br><input data-tooltip="Input the source of damage" placeholder="Describe the source " style="color:black" name="source" type="string" value="${source}"></label>
+          <label>Damage value<input name="damageBase" type="number" value=${value} autofocus style="width:50px"></label>
+          <label>Add BDs<input name="plusBD" type="number" value=${bds} style="width:30px"></label>
+          <label>Apply armor<input name="armor" type="checkbox"></label>
+          <label>Armor Piercing value<input name="aP" type="number" style="width:30px"></label>
           `,
       ok: {
         label: 'Submit Effect',
