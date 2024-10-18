@@ -993,10 +993,10 @@ export class TorgeternityMacros {
         });
       }
     });
-
+    let validuuid = Array.from(game.actors)[0].uuid;
     let test = {
       testType: 'custom',
-      actor: 'Actor.KTwwUX7BKCXxKh4c',
+      actor: validuuid,
       actorPic: 'systems/torgeternity/images/tokens/vulnerable.webp',
       actorName: 'Quid',
       actorType: 'threat',
