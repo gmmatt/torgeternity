@@ -482,12 +482,14 @@ export default class TorgeternityActorSheet extends ActorSheet {
     const dropedObject = await fromUuid(data.uuid);
     if (dropedObject.type === 'race') {
       const raceItem = this.actor.items.find((i) => i.type === 'race');
-      await this.actor.deleteEmbeddedDocuments('Item', [
-        raceItem.id,
-        ...this.actor.items
-          .filter((i) => i.type === 'perk' && i.system.category === 'racial')
-          .map((i) => i.id),
-      ]);
+      if (raceItem) {
+        await this.actor.deleteEmbeddedDocuments('Item', [
+          raceItem.id,
+          ...this.actor.items
+            .filter((i) => i.type === 'perk' && i.system.category === 'racial')
+            .map((i) => i.id),
+        ]);
+      }
       await super._onDrop(event);
 
       await this.actor.createEmbeddedDocuments('Item', [...dropedObject.system.perksData]);
