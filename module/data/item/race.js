@@ -1,5 +1,6 @@
 import { torgeternity } from '../../config.js';
 import { PerkItemData } from './perk.js';
+import { CustomAttackItemData } from './customAttack.js';
 
 /**
  * @inheritdoc
@@ -25,6 +26,9 @@ export class RaceItemData extends foundry.abstract.TypeDataModel {
       }),
       hardCoded: new fields.JavaScriptField({ initial: '', trim: true }, { async: true }),
       perksData: new fields.SetField(new fields.TypeDataField({ document: PerkItemData })),
+      customAttackData: new fields.SetField(
+        new fields.TypeDataField({ document: CustomAttackItemData })
+      ),
     };
   }
 

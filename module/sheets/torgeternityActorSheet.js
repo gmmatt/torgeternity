@@ -497,6 +497,8 @@ export default class TorgeternityActorSheet extends ActorSheet {
 
       await this.actor.createEmbeddedDocuments('Item', [...dropedObject.system.perksData]);
 
+      await this.actor.createEmbeddedDocuments('Item', [...dropedObject.system.customAttackData]);
+
       for (const [key, value] of Object.entries(dropedObject.system.attributeMaximum)) {
         if (this.actor.system.attributes[key].base <= value) continue;
 

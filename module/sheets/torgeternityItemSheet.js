@@ -111,6 +111,8 @@ export default class TorgeternityItemSheet extends ItemSheet {
 
     if (dropedObject.type === 'perk' && this.item.type === 'race')
       await this.dropPerkOnRace(dropedObject);
+    if (dropedObject.type === 'customAttack' && this.item.type === 'race')
+      await this.dropAttackOnRace(dropedObject);
   }
 
   async dropPerkOnRace(perk) {
@@ -129,6 +131,17 @@ export default class TorgeternityItemSheet extends ItemSheet {
     currentPerks.add(perk);
 
     await this.item.update({ 'system.perksData': Array.from(currentPerks) });
+  }
+
+  async dropAttackOnRace(attack) {
+    const currentAttacks =
+      this.item.system.customAttackData instanceof Set
+        ? this.item.system.customAttackData
+        : new Set();
+
+    currentAttacks.add(attack);
+
+    await this.item.update({ 'system.customAttackData': Array.from(currentAttacks) });
   }
 
   /**
@@ -201,20 +214,25 @@ export default class TorgeternityItemSheet extends ItemSheet {
 
     html.find('.item-control.item-delete').click((ev) => {
       if (this.item.type === 'race') {
+        const inheritedType = $(ev.currentTarget.closest('.item')).attr('data-inheritedType');
         const id = $(ev.currentTarget.closest('.item')).attr('data-item-id');
         const raceItem = this.item;
-        const allPerksOfRaceItem = raceItem.system.perksData;
+        const allThingsOfRaceItem =
+          inheritedType === 'perk' ? raceItem.system.perksData : raceItem.system.customAttackData;
 
-        if (!allPerksOfRaceItem) return; // just for safety
+        if (!allThingsOfRaceItem) return; // just for safety
 
-        for (const racePerk of allPerksOfRaceItem) {
-          if (racePerk.system.transferenceID === id) {
-            allPerksOfRaceItem.delete(racePerk);
+        for (const thing of allThingsOfRaceItem) {
+          if (thing.system.transferenceID === id) {
+            allThingsOfRaceItem.delete(thing);
             break;
           }
         }
-
-        raceItem.update({ 'system.perksData': Array.from(allPerksOfRaceItem) });
+        if (inheritedType === 'perk') {
+          raceItem.update({ 'system.perksData': Array.from(allThingsOfRaceItem) });
+        } else {
+          raceItem.update({ 'system.customAttackData': Array.from(allThingsOfRaceItem) });
+        }
       }
     });
   }

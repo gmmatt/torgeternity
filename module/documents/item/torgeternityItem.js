@@ -130,8 +130,8 @@ export default class TorgeternityItem extends Item {
       }
     }
 
-    if (this.type === 'perk') {
-      await this.update({ 'system.transferenceID': this.id }); // necessary for saving perks data in race items
+    if (this.type === 'perk' || this.type === 'customAttack') {
+      await this.update({ 'system.transferenceID': this.id }); // necessary for saving perks or custom attack data in race items
     }
   }
 
