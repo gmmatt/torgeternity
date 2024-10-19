@@ -477,7 +477,10 @@ export default class TorgeternityActorSheet extends ActorSheet {
 
   /** @inheritdoc */
   async _onDrop(event) {
-    if (this.object.type !== 'stormknight') return;
+    if (this.object.type !== 'stormknight') {
+      await super._onDrop(event);
+      return;
+    }
     const data = TextEditor.getDragEventData(event);
     const dropedObject = await fromUuid(data.uuid);
     if (dropedObject.type === 'race') {
