@@ -204,10 +204,12 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: null
+      coreVersion: '12.331'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
+      compendiumSource: Compendium.te001-core-rulebook.Items.NlvMMLc98zfTyvF1
+      duplicateSource: null
     _key: '!actors.items!QVpKuacd4LKfpJOy.XNNnqI7Q5kO7Z7hb'
   - _id: 1IqkOxn2nuTJbnzP
     name: Arme de prédilection
@@ -312,10 +314,12 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: null
+      coreVersion: '12.331'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
+      compendiumSource: Compendium.te001-core-rulebook.Items.2FajkBwxOxN5v3DR
+      duplicateSource: null
     _key: '!actors.items!QVpKuacd4LKfpJOy.1IqkOxn2nuTJbnzP'
   - _id: KyvSH0G67CXa05a2
     name: Fumigènes
@@ -343,10 +347,12 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: null
+      coreVersion: '12.331'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
+      compendiumSource: Compendium.te001-core-rulebook.Items.yCG51H4lsZOyJjhO
+      duplicateSource: null
     _key: '!actors.items!QVpKuacd4LKfpJOy.KyvSH0G67CXa05a2'
   - _id: 6vIlsRdE93ELD2MV
     name: Ion Gusoku
@@ -377,13 +383,25 @@ items:
           turns: null
           startRound: null
           startTurn: null
-        icon: icons/svg/aura.svg
         origin: Item.DYmLw9hKYR8HEw4V
-        tint: null
+        tint: '#ffffff'
         transfer: true
         name: Armor +4
         description: ''
         statuses: []
+        _stats:
+          coreVersion: '12.331'
+          systemId: null
+          systemVersion: null
+          createdTime: null
+          modifiedTime: null
+          lastModifiedBy: null
+          compendiumSource: null
+          duplicateSource: null
+        img: icons/svg/aura.svg
+        type: base
+        system: {}
+        sort: 0
         _key: >-
           !actors.items.effects!QVpKuacd4LKfpJOy.6vIlsRdE93ELD2MV.deuJR26c5jsbRHSt
     folder: null
@@ -405,10 +423,12 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: null
+      coreVersion: '12.331'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
+      compendiumSource: Item.DYmLw9hKYR8HEw4V
+      duplicateSource: null
     _key: '!actors.items!QVpKuacd4LKfpJOy.6vIlsRdE93ELD2MV'
   - _id: zkYCDyzIyDecR5fz
     name: Katana électrique
@@ -447,10 +467,12 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: null
+      coreVersion: '12.331'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
+      compendiumSource: Compendium.te001-core-rulebook.Items.oXC2OfgC7II3et6Z
+      duplicateSource: null
     _key: '!actors.items!QVpKuacd4LKfpJOy.zkYCDyzIyDecR5fz'
   - _id: bEn1gcBGt9V4r48H
     name: SC Kyogo 144 SMG
@@ -489,10 +511,12 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: null
+      coreVersion: '12.331'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
+      compendiumSource: Compendium.te001-core-rulebook.Items.TD2iH8mU5NxIyQKy
+      duplicateSource: null
     _key: '!actors.items!QVpKuacd4LKfpJOy.bEn1gcBGt9V4r48H'
   - _id: BiMMDksBM9tbqL7R
     name: Attaque à mains nues
@@ -518,10 +542,12 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: null
+      coreVersion: '12.331'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
+      compendiumSource: Item.BFGjhDetVDm1xiku
+      duplicateSource: null
     _key: '!actors.items!QVpKuacd4LKfpJOy.BiMMDksBM9tbqL7R'
 effects:
   - _id: fnTQB8GZ8ORoh6VK
@@ -544,13 +570,25 @@ effects:
       turns: null
       startRound: null
       startTurn: null
-    icon: icons/svg/aura.svg
-    origin: Actor.mdpEDmHHNs8n0Mi4.OwnedItem.6vIlsRdE93ELD2MV
-    tint: null
+    origin: Actor.mdpEDmHHNs8n0Mi4.Item.6vIlsRdE93ELD2MV
+    tint: '#ffffff'
     transfer: true
     name: Armure +4
     description: ''
     statuses: []
+    _stats:
+      coreVersion: '12.331'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+    img: icons/svg/aura.svg
+    type: base
+    system: {}
+    sort: 0
     _key: '!actors.effects!QVpKuacd4LKfpJOy.fnTQB8GZ8ORoh6VK'
 folder: null
 sort: 100001
@@ -1040,14 +1078,20 @@ prototypeToken:
       max: 1
     color: null
     attenuation: 0.5
+    negative: false
+    priority: 0
   texture:
     src: systems/torgeternity/images/characters/Electric_Samurai.Token.webp
-    tint: null
+    tint: '#ffffff'
     scaleX: 1
     scaleY: 1
     offsetX: 0
     offsetY: 0
     rotation: 0
+    anchorX: 0.5
+    anchorY: 0.5
+    fit: contain
+    alphaThreshold: 0.75
   sight:
     angle: 360
     enabled: false
@@ -1057,15 +1101,30 @@ prototypeToken:
     attenuation: 0.1
     saturation: 0
     contrast: 0
+    color: null
   appendNumber: false
   prependAdjective: false
   detectionModes: []
+  hexagonalShape: 0
+  occludable:
+    radius: 0
+  ring:
+    enabled: false
+    colors:
+      ring: null
+      background: null
+    effects: 1
+    subject:
+      scale: 1
+      texture: null
 _stats:
   systemId: torgeternity
   systemVersion: 3.8.1
-  coreVersion: '11.315'
+  coreVersion: '12.331'
   createdTime: 1716827809333
   modifiedTime: 1716827809333
   lastModifiedBy: VAnYow5sWS9EJzo0
+  compendiumSource: null
+  duplicateSource: null
 _key: '!actors!QVpKuacd4LKfpJOy'
 

@@ -106,10 +106,12 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: null
+      coreVersion: '12.331'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
+      compendiumSource: Item.qxJvzeASZsfyHgHj
+      duplicateSource: null
     _key: '!actors.items!non4XwpfJLE9GiST.Bh5BKWwn5ZCR10rX'
   - _id: W0Q0w7oeP6a464AI
     name: Conscience environnementale
@@ -216,10 +218,12 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: null
+      coreVersion: '12.331'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
+      compendiumSource: Item.04E7lm4oz4EZGlSs
+      duplicateSource: null
     _key: '!actors.items!non4XwpfJLE9GiST.W0Q0w7oeP6a464AI'
   - _id: FO6D5TLpZiLFO2dm
     name: Chargeurs supplémentaires (5)
@@ -243,10 +247,12 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: null
+      coreVersion: '12.331'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
+      compendiumSource: Item.qZuQoegFPBYC6tEB
+      duplicateSource: null
     _key: '!actors.items!non4XwpfJLE9GiST.FO6D5TLpZiLFO2dm'
   - _id: coAYdlmiRPR2SErV
     name: Fusées éclairantes (3)
@@ -270,10 +276,12 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: null
+      coreVersion: '12.331'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
+      compendiumSource: Item.JniN3c3c6HNv7cSp
+      duplicateSource: null
     _key: '!actors.items!non4XwpfJLE9GiST.coAYdlmiRPR2SErV'
   - _id: ikOnhbUEDPap417o
     name: Lampe torche
@@ -297,10 +305,12 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: null
+      coreVersion: '12.331'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
+      compendiumSource: Item.tktQLV7z5tnNkEqr
+      duplicateSource: null
     _key: '!actors.items!non4XwpfJLE9GiST.ikOnhbUEDPap417o'
   - _id: E3S7lZD9oDPdNwVO
     name: Outil polyvalent
@@ -327,10 +337,12 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: null
+      coreVersion: '12.331'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
+      compendiumSource: Item.qclakuW3FUv87ufW
+      duplicateSource: null
     _key: '!actors.items!non4XwpfJLE9GiST.E3S7lZD9oDPdNwVO'
   - _id: IWuewwOZhaOsjEZt
     name: Insigne de police
@@ -354,10 +366,12 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: null
+      coreVersion: '12.331'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
+      compendiumSource: Item.fgtK79BumQwmkPzK
+      duplicateSource: null
     _key: '!actors.items!non4XwpfJLE9GiST.IWuewwOZhaOsjEZt'
   - _id: RUMcCWACZRv1vpoO
     name: Veste balistique
@@ -388,13 +402,25 @@ items:
           turns: null
           startRound: null
           startTurn: null
-        icon: icons/svg/shield.svg
         origin: Item.hRA2cLvVL3HWJxlu
-        tint: null
+        tint: '#ffffff'
         transfer: true
         name: +4 armor
         description: ''
         statuses: []
+        _stats:
+          coreVersion: '12.331'
+          systemId: null
+          systemVersion: null
+          createdTime: null
+          modifiedTime: null
+          lastModifiedBy: null
+          compendiumSource: null
+          duplicateSource: null
+        img: icons/svg/shield.svg
+        type: base
+        system: {}
+        sort: 0
         _key: >-
           !actors.items.effects!non4XwpfJLE9GiST.RUMcCWACZRv1vpoO.eCfGs5VS46PUaxI8
     folder: null
@@ -421,10 +447,12 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: null
+      coreVersion: '12.331'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
+      compendiumSource: Item.hRA2cLvVL3HWJxlu
+      duplicateSource: null
     _key: '!actors.items!non4XwpfJLE9GiST.RUMcCWACZRv1vpoO'
   - _id: 60Hn7sxT2ytPIWI9
     name: Matraque
@@ -459,10 +487,12 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: null
+      coreVersion: '12.331'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
+      compendiumSource: Item.NwUEzGCgHe2GgC6N
+      duplicateSource: null
     _key: '!actors.items!non4XwpfJLE9GiST.60Hn7sxT2ytPIWI9'
   - _id: 0zgpX8TP92cI60QP
     name: Glock 9mm
@@ -500,10 +530,12 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: null
+      coreVersion: '12.331'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
+      compendiumSource: Item.iOnl5BiGmVFaCzma
+      duplicateSource: null
     _key: '!actors.items!non4XwpfJLE9GiST.0zgpX8TP92cI60QP'
   - _id: bnn1lL9T1zV8c9wP
     name: Menottes rapides
@@ -528,10 +560,12 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: null
+      coreVersion: '12.331'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
+      compendiumSource: Item.YUDCGkWXWHejH49G
+      duplicateSource: null
     _key: '!actors.items!non4XwpfJLE9GiST.bnn1lL9T1zV8c9wP'
   - _id: zlCFLaObdqm1Pt1P
     name: Attaque à mains nues
@@ -557,10 +591,12 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: null
+      coreVersion: '12.331'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
+      compendiumSource: Item.BFGjhDetVDm1xiku
+      duplicateSource: null
     _key: '!actors.items!non4XwpfJLE9GiST.zlCFLaObdqm1Pt1P'
 effects:
   - _id: G3bURQ2VTFKNrIcf
@@ -583,13 +619,25 @@ effects:
       turns: null
       startRound: null
       startTurn: null
-    icon: icons/svg/shield.svg
-    origin: Actor.SZAUvb28VxAD8Xw8.OwnedItem.RUMcCWACZRv1vpoO
-    tint: null
+    origin: Actor.SZAUvb28VxAD8Xw8.Item.RUMcCWACZRv1vpoO
+    tint: '#ffffff'
     transfer: true
     name: +4 armure
     description: ''
     statuses: []
+    _stats:
+      coreVersion: '12.331'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+    img: icons/svg/shield.svg
+    type: base
+    system: {}
+    sort: 0
     _key: '!actors.effects!non4XwpfJLE9GiST.G3bURQ2VTFKNrIcf'
 folder: null
 sort: 100001
@@ -1083,14 +1131,20 @@ prototypeToken:
       max: 1
     color: null
     attenuation: 0.5
+    negative: false
+    priority: 0
   texture:
     src: systems/torgeternity/images/characters/Unstoppable_Cop.Token.webp
-    tint: null
+    tint: '#ffffff'
     scaleX: 1
     scaleY: 1
     offsetX: 0
     offsetY: 0
     rotation: 0
+    anchorX: 0.5
+    anchorY: 0.5
+    fit: contain
+    alphaThreshold: 0.75
   sight:
     angle: 360
     enabled: false
@@ -1100,15 +1154,30 @@ prototypeToken:
     attenuation: 0.1
     saturation: 0
     contrast: 0
+    color: null
   appendNumber: false
   prependAdjective: false
   detectionModes: []
+  hexagonalShape: 0
+  occludable:
+    radius: 0
+  ring:
+    enabled: false
+    colors:
+      ring: null
+      background: null
+    effects: 1
+    subject:
+      scale: 1
+      texture: null
 _stats:
   systemId: torgeternity
   systemVersion: 3.8.1
-  coreVersion: '11.315'
+  coreVersion: '12.331'
   createdTime: 1716827809742
   modifiedTime: 1716827809742
   lastModifiedBy: VAnYow5sWS9EJzo0
+  compendiumSource: null
+  duplicateSource: null
 _key: '!actors!non4XwpfJLE9GiST'
 

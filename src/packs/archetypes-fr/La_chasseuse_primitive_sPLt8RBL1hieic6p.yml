@@ -128,10 +128,12 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: null
+      coreVersion: '12.331'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
+      compendiumSource: Item.FqVsqSep5SeNqgM5
+      duplicateSource: null
     _key: '!actors.items!sPLt8RBL1hieic6p.xNbAv1yLOKLJxM1E'
   - _id: TXRJ5Hx0I1MN1Ci4
     name: Implacable
@@ -238,10 +240,12 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: null
+      coreVersion: '12.331'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
+      compendiumSource: Item.DsqhT4kTf01FBNRU
+      duplicateSource: null
     _key: '!actors.items!sPLt8RBL1hieic6p.TXRJ5Hx0I1MN1Ci4'
   - _id: Py9XbkHtiMeVAivQ
     name: Torche
@@ -265,10 +269,12 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: null
+      coreVersion: '12.331'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
+      compendiumSource: Item.TE2jmWDyTxhRulgk
+      duplicateSource: null
     _key: '!actors.items!sPLt8RBL1hieic6p.Py9XbkHtiMeVAivQ'
   - _id: d9AM1AiyTKzB2o6A
     name: Totem
@@ -292,10 +298,12 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: null
+      coreVersion: '12.331'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
+      compendiumSource: Item.V6vSEnqgNmYQKs4o
+      duplicateSource: null
     _key: '!actors.items!sPLt8RBL1hieic6p.d9AM1AiyTKzB2o6A'
   - _id: eoKkKx6JMkRheNol
     name: Peintures de guerre
@@ -319,10 +327,12 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: null
+      coreVersion: '12.331'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
+      compendiumSource: Item.6g0k6JMCuHpfTB8I
+      duplicateSource: null
     _key: '!actors.items!sPLt8RBL1hieic6p.eoKkKx6JMkRheNol'
   - _id: J9Nx3xa1SuyivqJt
     name: Armure de peau et d’os
@@ -353,13 +363,25 @@ items:
           turns: null
           startRound: null
           startTurn: null
-        icon: icons/svg/aura.svg
         origin: Item.zeffK1HwBwoOyzMS
-        tint: null
+        tint: '#ffffff'
         transfer: true
         name: +1 Armor
         description: ''
         statuses: []
+        _stats:
+          coreVersion: '12.331'
+          systemId: null
+          systemVersion: null
+          createdTime: null
+          modifiedTime: null
+          lastModifiedBy: null
+          compendiumSource: null
+          duplicateSource: null
+        img: icons/svg/aura.svg
+        type: base
+        system: {}
+        sort: 0
         _key: >-
           !actors.items.effects!sPLt8RBL1hieic6p.J9Nx3xa1SuyivqJt.KMCP74pS3Oni3hU2
     folder: null
@@ -386,10 +408,12 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: null
+      coreVersion: '12.331'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
+      compendiumSource: Item.zeffK1HwBwoOyzMS
+      duplicateSource: null
     _key: '!actors.items!sPLt8RBL1hieic6p.J9Nx3xa1SuyivqJt'
   - _id: 7ESgSBRK5O5s8qxS
     name: Lance en bois d’hrockt
@@ -426,10 +450,12 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: null
+      coreVersion: '12.331'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
+      compendiumSource: Item.0ibFEQi66ymd6PnN
+      duplicateSource: null
     _key: '!actors.items!sPLt8RBL1hieic6p.7ESgSBRK5O5s8qxS'
   - _id: X0LdK9v3c3BUGbM9
     name: Couteau en os
@@ -463,10 +489,12 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: null
+      coreVersion: '12.331'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
+      compendiumSource: Item.2OZHSyASNn86YGNX
+      duplicateSource: null
     _key: '!actors.items!sPLt8RBL1hieic6p.X0LdK9v3c3BUGbM9'
   - _id: YQoorToSdQKjoWmk
     name: Attaque à mains nues
@@ -492,10 +520,12 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: null
+      coreVersion: '12.331'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
+      compendiumSource: Item.BFGjhDetVDm1xiku
+      duplicateSource: null
     _key: '!actors.items!sPLt8RBL1hieic6p.YQoorToSdQKjoWmk'
 effects:
   - _id: zNxpmtLv3HaujTQW
@@ -518,13 +548,25 @@ effects:
       turns: null
       startRound: null
       startTurn: null
-    icon: icons/svg/aura.svg
-    origin: Actor.0B2u2NMhtriuOQ8b.OwnedItem.J9Nx3xa1SuyivqJt
-    tint: null
+    origin: Actor.0B2u2NMhtriuOQ8b.Item.J9Nx3xa1SuyivqJt
+    tint: '#ffffff'
     transfer: true
     name: +1 Armure
     description: ''
     statuses: []
+    _stats:
+      coreVersion: '12.331'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+    img: icons/svg/aura.svg
+    type: base
+    system: {}
+    sort: 0
     _key: '!actors.effects!sPLt8RBL1hieic6p.zNxpmtLv3HaujTQW'
 folder: null
 sort: 100001
@@ -1011,14 +1053,20 @@ prototypeToken:
       max: 1
     color: null
     attenuation: 0.5
+    negative: false
+    priority: 0
   texture:
     src: systems/torgeternity/images/characters/Primitive_Hunter.Token.webp
-    tint: null
+    tint: '#ffffff'
     scaleX: 1
     scaleY: 1
     offsetX: 0
     offsetY: 0
     rotation: 0
+    anchorX: 0.5
+    anchorY: 0.5
+    fit: contain
+    alphaThreshold: 0.75
   sight:
     angle: 360
     enabled: false
@@ -1028,15 +1076,30 @@ prototypeToken:
     attenuation: 0.1
     saturation: 0
     contrast: 0
+    color: null
   appendNumber: false
   prependAdjective: false
   detectionModes: []
+  hexagonalShape: 0
+  occludable:
+    radius: 0
+  ring:
+    enabled: false
+    colors:
+      ring: null
+      background: null
+    effects: 1
+    subject:
+      scale: 1
+      texture: null
 _stats:
   systemId: torgeternity
   systemVersion: 3.8.1
-  coreVersion: '11.315'
+  coreVersion: '12.331'
   createdTime: 1716827809787
   modifiedTime: 1716827809787
   lastModifiedBy: VAnYow5sWS9EJzo0
+  compendiumSource: null
+  duplicateSource: null
 _key: '!actors!sPLt8RBL1hieic6p'
 

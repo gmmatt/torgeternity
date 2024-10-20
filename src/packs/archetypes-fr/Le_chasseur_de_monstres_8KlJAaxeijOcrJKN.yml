@@ -120,10 +120,12 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: null
+      coreVersion: '12.331'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
     _key: '!actors.items!8KlJAaxeijOcrJKN.9Kmq8C81nIIjwSdi'
   - _id: UTEYkvqTcKLhFHtX
     name: Caltrops (en argent)
@@ -154,10 +156,12 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: null
+      coreVersion: '12.331'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
     _key: '!actors.items!8KlJAaxeijOcrJKN.UTEYkvqTcKLhFHtX'
   - _id: gfxtCXojsN3PMaUK
     name: Fusil tueur
@@ -204,10 +208,12 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: null
+      coreVersion: '12.331'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
+      compendiumSource: Item.fW9IrnHVWRXgCWEx
+      duplicateSource: null
     _key: '!actors.items!8KlJAaxeijOcrJKN.gfxtCXojsN3PMaUK'
   - _id: P5v3znC9UTPMRB7J
     name: Dague en argent
@@ -242,10 +248,12 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: null
+      coreVersion: '12.331'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
     _key: '!actors.items!8KlJAaxeijOcrJKN.P5v3znC9UTPMRB7J'
   - _id: JUgj5Cmj63HzgDek
     name: Revolver Webley
@@ -280,10 +288,12 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: null
+      coreVersion: '12.331'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
     _key: '!actors.items!8KlJAaxeijOcrJKN.JUgj5Cmj63HzgDek'
   - _id: RUsXW2vMzlcDbzM4
     name: Manteau en peau de monstre
@@ -314,13 +324,25 @@ items:
           turns: null
           startRound: null
           startTurn: null
-        icon: icons/svg/aura.svg
         origin: Item.Lr8qGqk2VWGODo7S
-        tint: null
+        tint: '#ffffff'
         transfer: true
         name: Armor +2
         description: ''
         statuses: []
+        _stats:
+          coreVersion: '12.331'
+          systemId: null
+          systemVersion: null
+          createdTime: null
+          modifiedTime: null
+          lastModifiedBy: null
+          compendiumSource: null
+          duplicateSource: null
+        img: icons/svg/aura.svg
+        type: base
+        system: {}
+        sort: 0
         _key: >-
           !actors.items.effects!8KlJAaxeijOcrJKN.RUsXW2vMzlcDbzM4.1oM56g3yX2h8ox2M
     folder: null
@@ -346,10 +368,12 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: null
+      coreVersion: '12.331'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
+      compendiumSource: Item.Lr8qGqk2VWGODo7S
+      duplicateSource: null
     _key: '!actors.items!8KlJAaxeijOcrJKN.RUsXW2vMzlcDbzM4'
   - _id: k5oxi4S2Vf0lhwIa
     name: Médaille (Tueur de dragon)
@@ -502,10 +526,12 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: null
+      coreVersion: '12.331'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
     _key: '!actors.items!8KlJAaxeijOcrJKN.k5oxi4S2Vf0lhwIa'
   - _id: rj0VDXqmToHXvSNg
     name: Torche
@@ -530,10 +556,12 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: null
+      coreVersion: '12.331'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
+      compendiumSource: Item.TE2jmWDyTxhRulgk
+      duplicateSource: null
     _key: '!actors.items!8KlJAaxeijOcrJKN.rj0VDXqmToHXvSNg'
   - _id: hQZcOgojBbDcCCfe
     name: Attaque à mains nues
@@ -559,10 +587,12 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: null
+      coreVersion: '12.331'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
+      compendiumSource: Item.BFGjhDetVDm1xiku
+      duplicateSource: null
     _key: '!actors.items!8KlJAaxeijOcrJKN.hQZcOgojBbDcCCfe'
 effects:
   - _id: 4CnECaHDlW4TJfe7
@@ -585,13 +615,25 @@ effects:
       combat: null
       rounds: null
       turns: null
-    icon: icons/svg/aura.svg
-    origin: Actor.jvm80YhOFmKEp0Zy.OwnedItem.RUsXW2vMzlcDbzM4
-    tint: null
+    origin: Actor.jvm80YhOFmKEp0Zy.Item.RUsXW2vMzlcDbzM4
+    tint: '#ffffff'
     transfer: true
     name: Armor +2
     description: ''
     statuses: []
+    _stats:
+      coreVersion: '12.331'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+    img: icons/svg/aura.svg
+    type: base
+    system: {}
+    sort: 0
     _key: '!actors.effects!8KlJAaxeijOcrJKN.4CnECaHDlW4TJfe7'
 folder: null
 sort: 100001
@@ -1102,14 +1144,20 @@ prototypeToken:
       max: 1
     color: null
     attenuation: 0.5
+    negative: false
+    priority: 0
   texture:
     src: systems/torgeternity/images/characters/Monster_Hunter.Token.webp
-    tint: null
+    tint: '#ffffff'
     scaleX: 1
     scaleY: 1
     offsetX: 0
     offsetY: 0
     rotation: 0
+    anchorX: 0.5
+    anchorY: 0.5
+    fit: contain
+    alphaThreshold: 0.75
   sight:
     angle: 360
     enabled: false
@@ -1119,15 +1167,30 @@ prototypeToken:
     attenuation: 0.1
     saturation: 0
     contrast: 0
+    color: null
   appendNumber: false
   prependAdjective: false
   detectionModes: []
+  hexagonalShape: 0
+  occludable:
+    radius: 0
+  ring:
+    enabled: false
+    colors:
+      ring: null
+      background: null
+    effects: 1
+    subject:
+      scale: 1
+      texture: null
 _stats:
   systemId: torgeternity
   systemVersion: 3.8.1
-  coreVersion: '11.315'
+  coreVersion: '12.331'
   createdTime: 1716827809076
   modifiedTime: 1716827809076
   lastModifiedBy: VAnYow5sWS9EJzo0
+  compendiumSource: null
+  duplicateSource: null
 _key: '!actors!8KlJAaxeijOcrJKN'
 
