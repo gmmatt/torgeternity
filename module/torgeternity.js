@@ -1025,9 +1025,9 @@ Hooks.on('renderChatLog', (app, html, data) => {
 Hooks.on('dropActorSheetData', async (myActor, mySheet, dropItem) => {
   // When a "non-vehicle actor" is dropped on a "vehicle actor", proposes to replace the driver and his skill value
   if (
-    (myActor.type === 'vehicle' && fromUuidSync(dropItem.uuid).type === 'stormknight') ||
-    (fromUuidSync(dropItem.uuid).type === 'threat' &&
-      fromUuidSync(dropItem.uuid).type !== 'vehicle')
+    (myActor.type === 'vehicle' && (await fromUuidSync(dropItem.uuid)?.type) === 'stormknight') ||
+    ((await fromUuidSync(dropItem.uuid)?.type) === 'threat' &&
+      (await fromUuidSync(dropItem.uuid)?.type) !== 'vehicle')
   ) {
     const myVehicle = myActor;
     const driver = fromUuidSync(dropItem.uuid);

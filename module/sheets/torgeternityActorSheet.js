@@ -521,6 +521,7 @@ export default class TorgeternityActorSheet extends ActorSheet {
 
         await this.actor.update({ [`system.attributes.${key}.base`]: value });
       }
+      await this.actor.update({ 'system.details.sizeBonus': dropedObject.system.size });
     }
     super._onDrop(event);
   }

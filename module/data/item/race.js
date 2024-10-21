@@ -19,12 +19,11 @@ export class RaceItemData extends foundry.abstract.TypeDataModel {
         spirit: new fields.NumberField({ initial: 13, integer: true, nullable: false }),
         strength: new fields.NumberField({ initial: 13, integer: true, nullable: false }),
       }),
-      cosm: new fields.StringField({
-        initial: 'none',
-        choices: Object.keys(torgeternity.cosmTypes),
+      size: new fields.StringField({
+        initial: 'normal',
+        choices: Object.keys(torgeternity.sizes),
         required: true,
       }),
-      hardCoded: new fields.JavaScriptField({ initial: '', trim: true }, { async: true }),
       perksData: new fields.SetField(new fields.TypeDataField({ document: PerkItemData })),
       customAttackData: new fields.SetField(
         new fields.TypeDataField({ document: CustomAttackItemData })

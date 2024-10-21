@@ -3562,7 +3562,7 @@ form.actor-sheet.threat .tab[data-tab].active .editor {
   margin: -15px 10px -15px 0px;
 }
 
-.item .window-content form.item-sheet .raceCosm {
+.item .window-content form.item-sheet .raceSpecs {
   color: black;
   display: flex;
   flex-direction: row;
@@ -3571,7 +3571,7 @@ form.actor-sheet.threat .tab[data-tab].active .editor {
   column-gap: 15px;  
 }
 
-.item .window-content form.item-sheet .raceCosm > label {
+.item .window-content form.item-sheet .raceSpecs > label {
   font-family: Palatino;
   font-size: 2em;
   font-weight: bold;

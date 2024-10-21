@@ -1,4 +1,4 @@
-import { RaceItemData } from './data/item/race';
+import { RaceItemData } from './data/item/race.js';
 
 /**
  *
