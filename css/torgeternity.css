@@ -3725,6 +3725,10 @@ form.actor-sheet.threat .tab[data-tab].active .editor {
   padding: 5px 5px;
 }
 
+.item .window-content form.item-sheet .item-description-textarea[name="prerequisites"] > div {
+  min-height: 150px;  
+}
+
 .item .window-content form.item-sheet .effects .item-list {
   padding: 0px;
 }

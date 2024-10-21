@@ -69,9 +69,7 @@
                         class="input-box"
                         />
                     {{/if}}
-
-                </div>
-                
+                </div>                
                 <div class="main-content">                    
                     <div name="description" class="item-description-textarea">
                         {{editor description target="system.description" engine="prosemirror" button=true editable=editable}}
@@ -79,9 +77,10 @@
                     <p style="min-height: 22px; height:auto;" class="item-data-label">
                         {{localize "torgeternity.perks.prerequisites"}}
                     </p>
-                    <input name="system.prerequisites" type="text" value="{{item.system.prerequisites}}" class="input-box" />
+                    <div name="prerequisites" class="item-description-textarea">
+                        {{editor prerequisites target="system.prerequisites" engine="prosemirror" button=true editable=editable}}                    
+                    </div>                    
                 </div>
-
             </div>
         </div>
         
