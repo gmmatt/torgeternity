@@ -119,6 +119,7 @@ Hooks.once('init', async function () {
     psionicpower: game.i18n.localize('torgeternity.itemSheetDescriptions.psionicpower'),
     customSkill: game.i18n.localize('torgeternity.itemSheetDescriptions.customSkill'),
     vehicleAddOn: game.i18n.localize('torgeternity.itemSheetDescriptions.vehicleAddOn'),
+    race: game.i18n.localize('torgeternity.itemSheetDescriptions.race'),
   };
 
   ui.GMScreen = new GMScreen();
@@ -1021,13 +1022,14 @@ Hooks.on('renderChatLog', (app, html, data) => {
   Chat.addChatListeners(html);
 });
 
-// When a "non-vehicle actor" is drop on a "vehicle actor", proposes to replace the driver and his skill value
-Hooks.on('dropActorSheetData', async (myVehicle, mySheet, dropItem) => {
+Hooks.on('dropActorSheetData', async (myActor, mySheet, dropItem) => {
+  // When a "non-vehicle actor" is dropped on a "vehicle actor", proposes to replace the driver and his skill value
   if (
-    (myVehicle.type === 'vehicle' && fromUuidSync(dropItem.uuid).type === 'stormknight') ||
-    (fromUuidSync(dropItem.uuid).type === 'threat' &&
-      fromUuidSync(dropItem.uuid).type !== 'vehicle')
+    (myActor.type === 'vehicle' && (await fromUuidSync(dropItem.uuid)?.type) === 'stormknight') ||
+    ((await fromUuidSync(dropItem.uuid)?.type) === 'threat' &&
+      (await fromUuidSync(dropItem.uuid)?.type) !== 'vehicle')
   ) {
+    const myVehicle = myActor;
     const driver = fromUuidSync(dropItem.uuid);
     const skill = myVehicle.system.type.toLowerCase();
     const skillValue = driver?.system?.skills[skill + 'Vehicles']?.value ?? 0;
@@ -1041,28 +1043,8 @@ Hooks.on('dropActorSheetData', async (myVehicle, mySheet, dropItem) => {
         await game.i18n.format('torgeternity.notifications.noCapacity', { a: driver.name })
       );
     }
+    return;
   }
-  /* await Dialog.confirm({
-    title: game.i18n.localize('torgeternity.dialogWindow.dragDropDriver.windowTitle'),
-    content: game.i18n.localize('torgeternity.dialogWindow.dragDropDriver.maintext'),
-    yes: async () => {
-      if (skillValue > 0) {
-        myVehicle.update({
-          'system.operator.name': driver.name,
-          'system.operator.skillValue': skillValue,
-        });
-      } else {
-        ui.notifications.warn(
-          await game.i18n.format('torgeternity.notifications.noCapacity', { a: driver.name })
-        );
-        return;
-      }
-    },
-    no: () => {},
-    render: () => {},
-    defaultYes: true,
-    rejectClose: false,
-  });*/
 });
 
 // When the turn taken button is hit, delete "until end of turn" effects (stymied/vulnerable)

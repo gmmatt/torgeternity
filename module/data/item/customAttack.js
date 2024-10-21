@@ -15,6 +15,7 @@ export class CustomAttackItemData extends foundry.abstract.TypeDataModel {
       damageType: new fields.StringField({ initial: '' }),
       description: new fields.HTMLField({ initial: '' }),
       notes: new fields.StringField({ initial: '' }),
+      transferenceID: new fields.DocumentIdField({ initial: null }), // necessary for saving perks data in race items
     };
   }
 

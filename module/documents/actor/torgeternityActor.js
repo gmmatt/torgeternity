@@ -2,6 +2,35 @@
  *
  */
 export default class TorgeternityActor extends Actor {
+  /* -------------------------------------------- */
+  /*  Getters                                     */
+  /* -------------------------------------------- */
+
+  /**
+   * simple getter for the equipped armor item
+   *
+   * @returns {Item|null}
+   */
+  get wornArmor() {
+    return this.itemTypes.armor.find((a) => a.system.equipped) ?? null;
+  }
+
+  get equippedMelee() {
+    return this.itemTypes.meleeweapon.find((a) => a.system.equipped) ?? null;
+  }
+
+  get equippedMelees() {
+    return this.itemTypes.meleeweapon.filter((a) => a.system.equipped) ?? null;
+  }
+
+  get race() {
+    return this.itemTypes.race[0] ?? null;
+  }
+
+  /* -------------------------------------------- */
+  /*  Data Preparation                            */
+  /* -------------------------------------------- */
+
   /**
    * @inheritdoc
    */
@@ -29,6 +58,16 @@ export default class TorgeternityActor extends Actor {
         armor: this.wornArmor?.system?.bonus ?? 0,
       };
       this.unarmed = { damage: 0, damageMod: 0 };
+    }
+    if (['stormknight'].includes(this.type)) {
+      if (this.race) {
+        for (const attribute of Object.keys(this.race.system.attributeMaximum)) {
+          this.system.attributes[attribute].maximum = this.race.system.attributeMaximum[attribute];
+        }
+        this.system.details.race = this.race.name;
+      } else {
+        this.system.details.race = game.i18n.localize('torgeternity.sheetLabels.noRace');
+      }
     }
     if (['vehicle'].includes(this.type)) {
       this.defenses = {
@@ -200,21 +239,27 @@ export default class TorgeternityActor extends Actor {
     }
   }
 
-  /**
-   * simple getter for the equipped armor item
-   *
-   * @returns {Item|null}
-   */
-  get wornArmor() {
-    return this.itemTypes.armor.find((a) => a.system.equipped) ?? null;
-  }
+  async _preUpdate(changed, options, user) {
+    const isFullReplace = !((options.diff ?? true) && (options.recursive ?? true));
+    if (!changed.system || isFullReplace) {
+      return super._preUpdate(changed, options, user);
+    }
 
-  get equippedMelee() {
-    return this.itemTypes.meleeweapon.find((a) => a.system.equipped) ?? null;
-  }
+    // Apply attribute maximums
+    for (const [attribute, { maximum }] of Object.entries(this.system.attributes)) {
+      const changedAttribute = changed.system.attributes?.[attribute];
+      if (typeof changedAttribute?.base === 'number') {
+        const clampedAttribute = Math.clamp(changedAttribute.base, 0, maximum);
+        if (changedAttribute.base > clampedAttribute) {
+          changedAttribute.base = clampedAttribute;
+          ui.notifications.error(
+            game.i18n.localize('torgeternity.notifications.reachedMaximumAttr')
+          );
+        }
+      }
+    }
 
-  get equippedMelees() {
-    return this.itemTypes.meleeweapon.filter((a) => a.system.equipped) ?? null;
+    return super._preUpdate(changed, options, user);
   }
 
   /**

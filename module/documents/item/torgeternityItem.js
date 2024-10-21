@@ -5,7 +5,7 @@ import { torgeternity } from '../../config.js';
  *
  */
 export default class TorgeternityItem extends Item {
-  // TODO: Chatcardtemplate for ammunitions
+  // TODO: Chatcardtemplate for ammunitions & race
   static CHAT_TEMPLATE = {
     perk: 'systems/torgeternity/templates/partials/perk-card.hbs',
     attack: 'systems/torgeternity/templates/partials/attack-card.hbs',
@@ -34,12 +34,18 @@ export default class TorgeternityItem extends Item {
    */
   prepareBaseData() {
     // Handle perk-related data
-    if (this.type === 'perk') {
-      this.system.navStyle = 'right:-210px;top:210px';
-      this.system.extendedNav = true;
-    } else {
-      this.system.navStyle = 'right:-110px;top:115px';
-      this.system.extendedNav = false;
+    switch (this.type) {
+      case 'perk':
+        this.system.navStyle = 'right:-210px;top:210px';
+        this.system.extendedNav = true;
+        break;
+      case 'race':
+        this.system.navStyle = 'right:-160px;top:160px';
+        this.system.extendedNav = true;
+        break;
+      default:
+        this.system.navStyle = 'right:-110px;top:115px';
+        this.system.extendedNav = false;
     }
 
     for (const [key, value] of Object.entries(torgeternity.dnTypes)) {
@@ -72,6 +78,7 @@ export default class TorgeternityItem extends Item {
     spell: 'spell-icon.webp',
     miracle: 'miracles-icon.webp',
     psionicpower: 'psionicpower.webp',
+    race: 'race-icon.webp',
   };
 
   /**
@@ -84,13 +91,22 @@ export default class TorgeternityItem extends Item {
       : false;
   }
 
-  _preCreate(data, options, user) {
+  async _preCreate(data, options, user) {
     super._preCreate(data, options, user);
     if (this.img === 'icons/svg/item-bag.svg') {
       const image = TorgeternityItem.DEFAULT_ICONS[data.type] ?? null;
       if (image) {
-        this.updateSource({ img: 'systems/torgeternity/images/icons/' + image });
+        await this.updateSource({ img: 'systems/torgeternity/images/icons/' + image });
       }
+    }
+
+    if (
+      this.actor &&
+      this?.actor?.system.details.race !== game.i18n.localize('torgeternity.sheetLabels.noRace') &&
+      data.type === 'race'
+    ) {
+      ui.notifications.error(game.i18n.localize('torgeternity.notifications.raceExistent'));
+      return false;
     }
   }
 
@@ -100,7 +116,7 @@ export default class TorgeternityItem extends Item {
    * @param options
    * @param userId
    */
-  _onCreate(data, options, userId) {
+  async _onCreate(data, options, userId) {
     super._onCreate(data, options, userId);
 
     if (this.parent && ['armor', 'shield'].includes(this.type) && this.system.equipped) {
@@ -112,6 +128,10 @@ export default class TorgeternityItem extends Item {
       if (previousEquipped) {
         TorgeternityItem.toggleEquipState(previousEquipped, actor);
       }
+    }
+
+    if (this.type === 'perk' || this.type === 'customAttack') {
+      await this.update({ 'system.transferenceID': this.id }); // necessary for saving perks or custom attack data in race items
     }
   }
 

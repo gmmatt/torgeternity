@@ -8,6 +8,7 @@
 - refactoring the handlebarHelpers [#455](https://github.com/gmmatt/torgeternity/issues/455)
 - The buff macro now handles more than 1 selected token (especially good for gms!) [#468](https://github.com/gmmatt/torgeternity/issues/468)
 - New token frames! These will be used in modules and our archetypes here.
+- Races are now as items and can be dragged onto the character. This influences the attribute maximums and adds race-related perks. [#52](https://github.com/gmmatt/torgeternity/issues/52)
 
 ## v. 12.2.8
 
