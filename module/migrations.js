@@ -1,3 +1,5 @@
+import { RaceItemData } from './data/item/race';
+
 /**
  *
  */
@@ -153,6 +155,17 @@ export async function torgMigration() {
             .filter((effect) => effect.changes.length > 0);
           await actor.createEmbeddedDocuments('Item', [armorData]);
         }
+      }
+    }
+
+    // migrations for 12.3.0
+    if (foundry.utils.isNewerVersion('12.3.0', migrationVersion)) {
+      for (const actor of game.actors) {
+        if (actor.type !== 'stormknight' && actor.system?.details.race !== 'human') continue;
+
+        const humanRace = new RaceItemData();
+        humanRace.name = game.i18n.localize('torgeternity.perkTypes.human');
+        await actor.createEmbeddedDocuments('Item', [humanRace]);
       }
     }
 
