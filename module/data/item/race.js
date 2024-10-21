@@ -24,6 +24,7 @@ export class RaceItemData extends foundry.abstract.TypeDataModel {
         choices: Object.keys(torgeternity.sizes),
         required: true,
       }),
+      darkvision: new fields.BooleanField({ initial: false }),
       perksData: new fields.SetField(new fields.TypeDataField({ document: PerkItemData })),
       customAttackData: new fields.SetField(
         new fields.TypeDataField({ document: CustomAttackItemData })

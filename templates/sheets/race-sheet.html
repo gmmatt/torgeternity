@@ -9,8 +9,7 @@
 
     <nav class="sheet-tabs item-tabs tabs" data-group="primary" style="{{item.system.navStyle}}">
         <a class="item" data-tab="stats" >{{localize "torgeternity.sheetLabels.stats"}}</a>
-        <a class="item" data-tab="racialPerks" >{{localize "torgeternity.sheetLabels.racialPerks"}}</a>
-        <a class="item" data-tab="hardcode" >{{localize "torgeternity.sheetLabels.hardcode"}}</a>
+        <a class="item" data-tab="racialPerks" >{{localize "torgeternity.sheetLabels.racialPerks"}}</a>      
     </nav>
 
     <section class="sheet-body">
@@ -79,6 +78,14 @@
                 <select name="system.size" class="input-box">
                     {{selectOptions config.sizes selected=item.system.size localize=true}}
                 </select>
+                <label for="system.darkvision" class="item-data-label">
+                    {{localize "torgeternity.sheetLabels.darkvision"}}
+                </label>
+                <input name="system.darkvision"
+                id="system.darkvision"
+                type="checkbox"
+                {{checked item.system.darkvision}}
+                data-dtype="Boolean">
             </div>
         </div>
         <div class="tab raceHardcode" data-group="primary", data-tab="racialPerks">

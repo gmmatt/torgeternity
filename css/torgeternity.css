@@ -3568,6 +3568,7 @@ form.actor-sheet.threat .tab[data-tab].active .editor {
   flex-direction: row;
   margin: 15px;
   justify-content: center;
+  align-items: center;
   column-gap: 15px;  
 }
 
