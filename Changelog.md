@@ -7,6 +7,7 @@
 - Option for not automatically untarged token after attack [#459](https://github.com/gmmatt/torgeternity/issues/459)
 - refactoring the handlebarHelpers [#455](https://github.com/gmmatt/torgeternity/issues/455)
 - The buff macro now handles more than 1 selected token (especially good for gms!) [#468](https://github.com/gmmatt/torgeternity/issues/468)
+- New token frames! These will be used in modules and our archetypes here.
 
 ## v. 12.2.8
 
