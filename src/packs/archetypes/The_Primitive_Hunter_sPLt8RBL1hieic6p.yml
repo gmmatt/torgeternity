@@ -961,10 +961,10 @@ ownership:
 prototypeToken:
   flags: {}
   name: Primitive Hunter
-  displayName: 0
+  displayName: 30
   width: 1
   height: 1
-  lockRotation: false
+  lockRotation: true
   rotation: 0
   actorLink: true
   disposition: 1
@@ -1030,17 +1030,18 @@ prototypeToken:
     colors:
       ring: null
       background: null
-    effects: 1
+    effects: 0
     subject:
       scale: 1
       texture: null
 _stats:
   systemId: torgeternity
   systemVersion: 12.2.0
-  coreVersion: '12.330'
+  coreVersion: '12.331'
   createdTime: 1693912137290
-  modifiedTime: 1722355493847
-  lastModifiedBy: 93AMwcGe6H37rcPA
+  modifiedTime: 1729013458520
+  lastModifiedBy: d8YcfsxBOP7RAazk
   compendiumSource: null
   duplicateSource: null
 _key: '!actors!sPLt8RBL1hieic6p'
+

@@ -107,10 +107,12 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: null
+      coreVersion: '12.331'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
+      compendiumSource: Compendium.te001-core-rulebook.Items.z7Zj7CEp6QKU15aW
+      duplicateSource: null
     _key: '!actors.items!ys0MhNx2uIG2ORAD.qUHZROO7MDSYrE22'
   - _id: QYQEspVVTZEymOIB
     name: Tornade
@@ -212,10 +214,12 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: null
+      coreVersion: '12.331'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
+      compendiumSource: Compendium.te001-core-rulebook.Items.Jk0kUgblznvJQrsI
+      duplicateSource: null
     _key: '!actors.items!ys0MhNx2uIG2ORAD.QYQEspVVTZEymOIB'
   - _id: Q7vlH8umJd4bOHBM
     name: Masque filtrant
@@ -242,10 +246,12 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: null
+      coreVersion: '12.331'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
+      compendiumSource: Compendium.te001-core-rulebook.Items.WP88DoYjrypNKL22
+      duplicateSource: null
     _key: '!actors.items!ys0MhNx2uIG2ORAD.Q7vlH8umJd4bOHBM'
   - _id: srMyfnmVhfDsJSUK
     name: Détecteur de radiations
@@ -274,10 +280,12 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: null
+      coreVersion: '12.331'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
+      compendiumSource: Compendium.te001-core-rulebook.Items.6CYd0HCZf6RrM4JB
+      duplicateSource: null
     _key: '!actors.items!ys0MhNx2uIG2ORAD.srMyfnmVhfDsJSUK'
   - _id: rQ7DWxblZWWkGToo
     name: Armure Diffrax
@@ -308,13 +316,25 @@ items:
           turns: null
           startRound: null
           startTurn: null
-        icon: icons/svg/aura.svg
         origin: Item.yLttY1L9GtJZF6rr
-        tint: null
+        tint: '#ffffff'
         transfer: true
         name: Armor +3
         description: ''
         statuses: []
+        _stats:
+          coreVersion: '12.331'
+          systemId: null
+          systemVersion: null
+          createdTime: null
+          modifiedTime: null
+          lastModifiedBy: null
+          compendiumSource: null
+          duplicateSource: null
+        img: icons/svg/aura.svg
+        type: base
+        system: {}
+        sort: 0
         _key: >-
           !actors.items.effects!ys0MhNx2uIG2ORAD.rQ7DWxblZWWkGToo.ZG2C28w8MthXs0or
     folder: null
@@ -342,10 +362,12 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: null
+      coreVersion: '12.331'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
+      compendiumSource: Compendium.te001-core-rulebook.Items.wP7vzluooDeOtebZ
+      duplicateSource: null
     _key: '!actors.items!ys0MhNx2uIG2ORAD.rQ7DWxblZWWkGToo'
   - _id: u2NFOtUKGPgIR7Fq
     name: Marteau d’impact
@@ -382,10 +404,12 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: null
+      coreVersion: '12.331'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
+      compendiumSource: Compendium.te001-core-rulebook.Items.07pjHDJDrK1pESkv
+      duplicateSource: null
     _key: '!actors.items!ys0MhNx2uIG2ORAD.u2NFOtUKGPgIR7Fq'
   - _id: qifJLVAOLXSqLdpj
     name: Lance-file
@@ -434,10 +458,12 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: null
+      coreVersion: '12.331'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
+      compendiumSource: Compendium.te001-core-rulebook.Items.t5x6s1AwFy1qZBpF
+      duplicateSource: null
     _key: '!actors.items!ys0MhNx2uIG2ORAD.qifJLVAOLXSqLdpj'
   - _id: azsoG7dNaW6VWHpI
     name: Fusées éclairantes (3)
@@ -462,10 +488,12 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: null
+      coreVersion: '12.331'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
+      compendiumSource: Item.JniN3c3c6HNv7cSp
+      duplicateSource: null
     _key: '!actors.items!ys0MhNx2uIG2ORAD.azsoG7dNaW6VWHpI'
   - _id: NXiqH2pxdolCPhCN
     name: Bras cybernétique Digan
@@ -498,10 +526,12 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: null
+      coreVersion: '12.331'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
+      compendiumSource: Item.6FZjcXn7upA7dc5e
+      duplicateSource: null
     _key: '!actors.items!ys0MhNx2uIG2ORAD.NXiqH2pxdolCPhCN'
   - _id: fhryOmVxfrYte9hX
     name: Filtre anti-radiations Thav MK II
@@ -527,10 +557,12 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: null
+      coreVersion: '12.331'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
+      compendiumSource: Item.tcO09AGsDX0Yw8ES
+      duplicateSource: null
     _key: '!actors.items!ys0MhNx2uIG2ORAD.fhryOmVxfrYte9hX'
   - _id: Iz1xvDoWWKYTU3MM
     name: Attaque à mains nues
@@ -556,10 +588,12 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: null
+      coreVersion: '12.331'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
+      compendiumSource: Item.BFGjhDetVDm1xiku
+      duplicateSource: null
     _key: '!actors.items!ys0MhNx2uIG2ORAD.Iz1xvDoWWKYTU3MM'
 effects:
   - _id: 2ij72RECreoaVaXW
@@ -582,13 +616,25 @@ effects:
       turns: null
       startRound: null
       startTurn: null
-    icon: icons/svg/aura.svg
-    origin: Actor.chzudnRjyqBBngw2.OwnedItem.rQ7DWxblZWWkGToo
-    tint: null
+    origin: Actor.chzudnRjyqBBngw2.Item.rQ7DWxblZWWkGToo
+    tint: '#ffffff'
     transfer: true
     name: Armure +3
     description: ''
     statuses: []
+    _stats:
+      coreVersion: '12.331'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+    img: icons/svg/aura.svg
+    type: base
+    system: {}
+    sort: 0
     _key: '!actors.effects!ys0MhNx2uIG2ORAD.2ij72RECreoaVaXW'
 folder: null
 sort: 100001
@@ -1079,14 +1125,20 @@ prototypeToken:
       max: 1
     color: null
     attenuation: 0.5
+    negative: false
+    priority: 0
   texture:
     src: systems/torgeternity/images/characters/Scrapper.Token.webp
-    tint: null
+    tint: '#ffffff'
     scaleX: 1
     scaleY: 1
     offsetX: 0
     offsetY: 0
     rotation: 0
+    anchorX: 0.5
+    anchorY: 0.5
+    fit: contain
+    alphaThreshold: 0.75
   sight:
     angle: 360
     enabled: false
@@ -1096,15 +1148,30 @@ prototypeToken:
     attenuation: 0.1
     saturation: 0
     contrast: 0
+    color: null
   appendNumber: false
   prependAdjective: false
   detectionModes: []
+  hexagonalShape: 0
+  occludable:
+    radius: 0
+  ring:
+    enabled: false
+    colors:
+      ring: null
+      background: null
+    effects: 1
+    subject:
+      scale: 1
+      texture: null
 _stats:
   systemId: torgeternity
   systemVersion: 3.8.1
-  coreVersion: '11.315'
+  coreVersion: '12.331'
   createdTime: 1716827809898
   modifiedTime: 1716827809898
   lastModifiedBy: VAnYow5sWS9EJzo0
+  compendiumSource: null
+  duplicateSource: null
 _key: '!actors!ys0MhNx2uIG2ORAD'
 

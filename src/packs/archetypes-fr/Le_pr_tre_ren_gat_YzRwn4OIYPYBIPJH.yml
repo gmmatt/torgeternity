@@ -112,10 +112,12 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: null
+      coreVersion: '12.331'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
     _key: '!actors.items!YzRwn4OIYPYBIPJH.ZDlwhpBV9R5FvOoq'
   - _id: FH4pTnt4glgNUx3h
     name: OEil cybernétique Bellevue 20-20
@@ -146,10 +148,12 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: null
+      coreVersion: '12.331'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
+      compendiumSource: Item.apWcQPWXR3MWrYa5
+      duplicateSource: null
     _key: '!actors.items!YzRwn4OIYPYBIPJH.FH4pTnt4glgNUx3h'
   - _id: EHgbPjUs99WBMdIF
     name: Vision de nuit Bellevue MKII
@@ -174,10 +178,12 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: null
+      coreVersion: '12.331'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
+      compendiumSource: Item.kecMXRAcxTOf9sn4
+      duplicateSource: null
     _key: '!actors.items!YzRwn4OIYPYBIPJH.EHgbPjUs99WBMdIF'
   - _id: rU1HD6a5mXVgKb6W
     name: Cyberdeck
@@ -205,10 +211,12 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: null
+      coreVersion: '12.331'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
+      compendiumSource: Item.xHacesSGQZhNT8BL
+      duplicateSource: null
     _key: '!actors.items!YzRwn4OIYPYBIPJH.rU1HD6a5mXVgKb6W'
   - _id: 8dLYtRllOMXVcq3N
     name: Bras HardPlas
@@ -235,13 +243,25 @@ items:
           turns: null
           startRound: null
           startTurn: null
-        icon: icons/svg/aura.svg
         origin: Item.nQHIT7jLyfe7LNQ1
-        tint: null
+        tint: '#ffffff'
         transfer: true
         name: Strength +1
         description: ''
         statuses: []
+        _stats:
+          coreVersion: '12.331'
+          systemId: null
+          systemVersion: null
+          createdTime: null
+          modifiedTime: null
+          lastModifiedBy: null
+          compendiumSource: null
+          duplicateSource: null
+        img: icons/svg/aura.svg
+        type: base
+        system: {}
+        sort: 0
         _key: >-
           !actors.items.effects!YzRwn4OIYPYBIPJH.8dLYtRllOMXVcq3N.F4YhvEE9LfHoZxZ8
     folder: null
@@ -265,10 +285,12 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: null
+      coreVersion: '12.331'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
+      compendiumSource: Item.nQHIT7jLyfe7LNQ1
+      duplicateSource: null
     _key: '!actors.items!YzRwn4OIYPYBIPJH.8dLYtRllOMXVcq3N'
   - _id: iymHb9kSwcAnU0fm
     name: Symbole saint
@@ -292,10 +314,12 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: null
+      coreVersion: '12.331'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
+      compendiumSource: Item.yLlmFt0wyS2ppWTq
+      duplicateSource: null
     _key: '!actors.items!YzRwn4OIYPYBIPJH.iymHb9kSwcAnU0fm'
   - _id: SNqRefdKZ8Z4g0ek
     name: Tenue IriMesh
@@ -326,13 +350,25 @@ items:
           turns: null
           startRound: null
           startTurn: null
-        icon: icons/svg/aura.svg
         origin: Item.uBos0D7Tz2MSgxg3
-        tint: null
+        tint: '#ffffff'
         transfer: true
         name: Armor +2
         description: ''
         statuses: []
+        _stats:
+          coreVersion: '12.331'
+          systemId: null
+          systemVersion: null
+          createdTime: null
+          modifiedTime: null
+          lastModifiedBy: null
+          compendiumSource: null
+          duplicateSource: null
+        img: icons/svg/aura.svg
+        type: base
+        system: {}
+        sort: 0
         _key: >-
           !actors.items.effects!YzRwn4OIYPYBIPJH.SNqRefdKZ8Z4g0ek.CC6u4jnep56ormZw
     folder: null
@@ -362,10 +398,12 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: null
+      coreVersion: '12.331'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
+      compendiumSource: Item.uBos0D7Tz2MSgxg3
+      duplicateSource: null
     _key: '!actors.items!YzRwn4OIYPYBIPJH.SNqRefdKZ8Z4g0ek'
   - _id: 1cmZRM3QUaceL2m9
     name: Rayon divin GWI
@@ -408,10 +446,12 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: null
+      coreVersion: '12.331'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
     _key: '!actors.items!YzRwn4OIYPYBIPJH.1cmZRM3QUaceL2m9'
   - _id: D9IQmTfXPqSPGrPw
     name: Bénédiction
@@ -462,10 +502,12 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: null
+      coreVersion: '12.331'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
     _key: '!actors.items!YzRwn4OIYPYBIPJH.D9IQmTfXPqSPGrPw'
   - _id: sMpIpI7t3K7B4ZYp
     name: Protection contre les ennemis
@@ -527,10 +569,12 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: null
+      coreVersion: '12.331'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
     _key: '!actors.items!YzRwn4OIYPYBIPJH.sMpIpI7t3K7B4ZYp'
   - _id: rRgSLibvwdjK75eO
     name: Soins
@@ -585,10 +629,12 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: null
+      coreVersion: '12.331'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
+      compendiumSource: Item.iDFKWtv4WCTrteId
+      duplicateSource: null
     _key: '!actors.items!YzRwn4OIYPYBIPJH.rRgSLibvwdjK75eO'
   - _id: sP4THOjN48b0gZDL
     name: Implants cybernétiques
@@ -702,10 +748,12 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: null
+      coreVersion: '12.331'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
+      compendiumSource: Item.8qfs6BvtH7wTJ09g
+      duplicateSource: null
     _key: '!actors.items!YzRwn4OIYPYBIPJH.sP4THOjN48b0gZDL'
   - _id: oET6xeuwJvv023mL
     name: Attaque à mains nues
@@ -731,10 +779,12 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: null
+      coreVersion: '12.331'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
+      compendiumSource: Item.BFGjhDetVDm1xiku
+      duplicateSource: null
     _key: '!actors.items!YzRwn4OIYPYBIPJH.oET6xeuwJvv023mL'
 effects:
   - _id: iqpflWpeduToapXb
@@ -753,13 +803,25 @@ effects:
       turns: null
       startRound: null
       startTurn: null
-    icon: icons/svg/aura.svg
-    origin: Actor.OPDkvGC3D9L64yuc.OwnedItem.8dLYtRllOMXVcq3N
-    tint: null
+    origin: Actor.OPDkvGC3D9L64yuc.Item.8dLYtRllOMXVcq3N
+    tint: '#ffffff'
     transfer: true
     name: Force +1
     description: ''
     statuses: []
+    _stats:
+      coreVersion: '12.331'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+    img: icons/svg/aura.svg
+    type: base
+    system: {}
+    sort: 0
     _key: '!actors.effects!YzRwn4OIYPYBIPJH.iqpflWpeduToapXb'
   - _id: vZfKwDPaIzfmIyRT
     flags: {}
@@ -781,13 +843,25 @@ effects:
       turns: null
       startRound: null
       startTurn: null
-    icon: icons/svg/aura.svg
-    origin: Actor.OPDkvGC3D9L64yuc.OwnedItem.SNqRefdKZ8Z4g0ek
-    tint: null
+    origin: Actor.OPDkvGC3D9L64yuc.Item.SNqRefdKZ8Z4g0ek
+    tint: '#ffffff'
     transfer: true
     name: Armure +2
     description: ''
     statuses: []
+    _stats:
+      coreVersion: '12.331'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+    img: icons/svg/aura.svg
+    type: base
+    system: {}
+    sort: 0
     _key: '!actors.effects!YzRwn4OIYPYBIPJH.vZfKwDPaIzfmIyRT'
 folder: null
 sort: 100001
@@ -1277,14 +1351,20 @@ prototypeToken:
       max: 1
     color: null
     attenuation: 0.5
+    negative: false
+    priority: 0
   texture:
     src: systems/torgeternity/images/characters/Renegade_Priest.Token.webp
-    tint: null
+    tint: '#ffffff'
     scaleX: 1
     scaleY: 1
     offsetX: 0
     offsetY: 0
     rotation: 0
+    anchorX: 0.5
+    anchorY: 0.5
+    fit: contain
+    alphaThreshold: 0.75
   sight:
     angle: 360
     enabled: false
@@ -1294,15 +1374,30 @@ prototypeToken:
     attenuation: 0.1
     saturation: 0
     contrast: 0
+    color: null
   appendNumber: false
   prependAdjective: false
   detectionModes: []
+  hexagonalShape: 0
+  occludable:
+    radius: 0
+  ring:
+    enabled: false
+    colors:
+      ring: null
+      background: null
+    effects: 1
+    subject:
+      scale: 1
+      texture: null
 _stats:
   systemId: torgeternity
   systemVersion: 3.8.1
-  coreVersion: '11.315'
+  coreVersion: '12.331'
   createdTime: 1716827809520
   modifiedTime: 1716827809520
   lastModifiedBy: VAnYow5sWS9EJzo0
+  compendiumSource: null
+  duplicateSource: null
 _key: '!actors!YzRwn4OIYPYBIPJH'
 

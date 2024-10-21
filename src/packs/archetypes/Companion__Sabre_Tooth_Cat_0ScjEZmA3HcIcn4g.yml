@@ -396,13 +396,13 @@ ownership:
 prototypeToken:
   flags: {}
   name: Sabre-Tooth Cat
-  displayName: 0
+  displayName: 30
   width: 1
   height: 1
-  lockRotation: false
+  lockRotation: true
   rotation: 0
   actorLink: false
-  disposition: -1
+  disposition: 1
   displayBars: 40
   bar1:
     attribute: wounds
@@ -465,17 +465,18 @@ prototypeToken:
     colors:
       ring: null
       background: null
-    effects: 1
+    effects: 0
     subject:
       scale: 1
       texture: null
 _stats:
   systemId: torgeternity
   systemVersion: 12.2.0
-  coreVersion: '12.330'
+  coreVersion: '12.331'
   createdTime: 1693899250064
-  modifiedTime: 1722355493847
-  lastModifiedBy: 93AMwcGe6H37rcPA
+  modifiedTime: 1729013649847
+  lastModifiedBy: d8YcfsxBOP7RAazk
   compendiumSource: null
   duplicateSource: null
 _key: '!actors!0ScjEZmA3HcIcn4g'
+

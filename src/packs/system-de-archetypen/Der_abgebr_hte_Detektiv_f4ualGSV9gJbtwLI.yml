@@ -1096,7 +1096,7 @@ ownership:
 prototypeToken:
   flags: {}
   name: Der abgebrühte Detektiv
-  displayName: 0
+  displayName: 30
   width: 1
   height: 1
   lockRotation: true
@@ -1165,17 +1165,18 @@ prototypeToken:
     colors:
       ring: null
       background: null
-    effects: 1
+    effects: 0
     subject:
       scale: 1
       texture: null
 _stats:
   systemId: torgeternity
   systemVersion: 12.2.0
-  coreVersion: '12.330'
+  coreVersion: '12.331'
   createdTime: 1694867157183
-  modifiedTime: 1722359278656
-  lastModifiedBy: 93AMwcGe6H37rcPA
+  modifiedTime: 1729013533222
+  lastModifiedBy: d8YcfsxBOP7RAazk
   compendiumSource: Compendium.torgeternity.archetypes.8YH1e6xGG3IHb1Mm
   duplicateSource: null
 _key: '!actors!f4ualGSV9gJbtwLI'
+

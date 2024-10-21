@@ -109,10 +109,12 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: null
+      coreVersion: '12.331'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
     _key: '!actors.items!REeNzywr6VElHSWZ.wY0gJqukmhoR1ar5'
   - _id: RpNrke9ubLEc5xWb
     name: Super Compétence (intimidation)
@@ -139,13 +141,25 @@ items:
           turns: null
           startRound: null
           startTurn: null
-        icon: icons/svg/aura.svg
         origin: Item.AtEMebfVHcb25baY
-        tint: null
+        tint: '#ffffff'
         transfer: true
         name: Intimidation +2
         description: ''
         statuses: []
+        _stats:
+          coreVersion: '12.331'
+          systemId: null
+          systemVersion: null
+          createdTime: null
+          modifiedTime: null
+          lastModifiedBy: null
+          compendiumSource: null
+          duplicateSource: null
+        img: icons/svg/aura.svg
+        type: base
+        system: {}
+        sort: 0
         _key: >-
           !actors.items.effects!REeNzywr6VElHSWZ.RpNrke9ubLEc5xWb.dXpzXzrjw9UvaNpT
     folder: null
@@ -261,10 +275,12 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: null
+      coreVersion: '12.331'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
+      compendiumSource: Item.AtEMebfVHcb25baY
+      duplicateSource: null
     _key: '!actors.items!REeNzywr6VElHSWZ.RpNrke9ubLEc5xWb'
   - _id: S67kDdh9ssjgwSK7
     name: Veste en cuir
@@ -295,13 +311,25 @@ items:
           turns: null
           startRound: null
           startTurn: null
-        icon: icons/svg/aura.svg
         origin: Item.2rrg1qTCfjdHFtKl
-        tint: null
+        tint: '#ffffff'
         transfer: true
         name: Armor +1
         description: ''
         statuses: []
+        _stats:
+          coreVersion: '12.331'
+          systemId: null
+          systemVersion: null
+          createdTime: null
+          modifiedTime: null
+          lastModifiedBy: null
+          compendiumSource: null
+          duplicateSource: null
+        img: icons/svg/aura.svg
+        type: base
+        system: {}
+        sort: 0
         _key: >-
           !actors.items.effects!REeNzywr6VElHSWZ.S67kDdh9ssjgwSK7.m4QT8vQ1gc6L97GC
     folder: null
@@ -323,10 +351,12 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: null
+      coreVersion: '12.331'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
+      compendiumSource: Item.Ih77xAUJLZwOROR7
+      duplicateSource: null
     _key: '!actors.items!REeNzywr6VElHSWZ.S67kDdh9ssjgwSK7'
   - _id: 7ReWsx8LjYqyPMEx
     name: Pistolet Mauser
@@ -367,10 +397,12 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: null
+      coreVersion: '12.331'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
     _key: '!actors.items!REeNzywr6VElHSWZ.7ReWsx8LjYqyPMEx'
   - _id: WfpWhmXMDhdsA6VN
     name: Cape et masque
@@ -394,10 +426,12 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: null
+      coreVersion: '12.331'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
+      compendiumSource: Item.wl0B9YS9kJ0vhxwg
+      duplicateSource: null
     _key: '!actors.items!REeNzywr6VElHSWZ.WfpWhmXMDhdsA6VN'
   - _id: YNsCLlOR3zgPCtdI
     name: Dispositif de pistage
@@ -424,10 +458,12 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: null
+      coreVersion: '12.331'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
+      compendiumSource: Item.zGj5mxLW7ygVnIKC
+      duplicateSource: null
     _key: '!actors.items!REeNzywr6VElHSWZ.YNsCLlOR3zgPCtdI'
   - _id: y0B6HPYsSspYtVvE
     name: Chargeurs supplémentaires (5)
@@ -453,10 +489,12 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: null
+      coreVersion: '12.331'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
+      compendiumSource: Item.qZuQoegFPBYC6tEB
+      duplicateSource: null
     _key: '!actors.items!REeNzywr6VElHSWZ.y0B6HPYsSspYtVvE'
   - _id: YfdvUQUHc7i4GNmh
     name: Fusées éclairantes (3)
@@ -481,10 +519,12 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: null
+      coreVersion: '12.331'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
+      compendiumSource: Item.JniN3c3c6HNv7cSp
+      duplicateSource: null
     _key: '!actors.items!REeNzywr6VElHSWZ.YfdvUQUHc7i4GNmh'
   - _id: Ry951V53ZbMo7DVq
     name: Menottes
@@ -510,10 +550,12 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: null
+      coreVersion: '12.331'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
+      compendiumSource: Item.YUDCGkWXWHejH49G
+      duplicateSource: null
     _key: '!actors.items!REeNzywr6VElHSWZ.Ry951V53ZbMo7DVq'
   - _id: aPOfL2ECIo5XDkjo
     name: Attaque à mains nues (+2)
@@ -539,10 +581,12 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: null
+      coreVersion: '12.331'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
+      compendiumSource: Item.BFGjhDetVDm1xiku
+      duplicateSource: null
     _key: '!actors.items!REeNzywr6VElHSWZ.aPOfL2ECIo5XDkjo'
 effects:
   - _id: 35ZydiYloB6XEGzz
@@ -561,13 +605,25 @@ effects:
       turns: null
       startRound: null
       startTurn: null
-    icon: icons/svg/aura.svg
-    origin: Actor.LGH3vMNa0jMnMboU.OwnedItem.RpNrke9ubLEc5xWb
-    tint: null
+    origin: Actor.LGH3vMNa0jMnMboU.Item.RpNrke9ubLEc5xWb
+    tint: '#ffffff'
     transfer: true
     name: Intimidation +2
     description: ''
     statuses: []
+    _stats:
+      coreVersion: '12.331'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+    img: icons/svg/aura.svg
+    type: base
+    system: {}
+    sort: 0
     _key: '!actors.effects!REeNzywr6VElHSWZ.35ZydiYloB6XEGzz'
   - _id: yyrjyKyzFRpnZC4T
     flags: {}
@@ -589,13 +645,25 @@ effects:
       turns: null
       startRound: null
       startTurn: null
-    icon: icons/svg/aura.svg
-    origin: Actor.LGH3vMNa0jMnMboU.OwnedItem.S67kDdh9ssjgwSK7
-    tint: null
+    origin: Actor.LGH3vMNa0jMnMboU.Item.S67kDdh9ssjgwSK7
+    tint: '#ffffff'
     transfer: true
     name: Armure +1
     description: ''
     statuses: []
+    _stats:
+      coreVersion: '12.331'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+    img: icons/svg/aura.svg
+    type: base
+    system: {}
+    sort: 0
     _key: '!actors.effects!REeNzywr6VElHSWZ.yyrjyKyzFRpnZC4T'
 folder: null
 sort: 100001
@@ -1117,14 +1185,20 @@ prototypeToken:
       max: 1
     color: null
     attenuation: 0.5
+    negative: false
+    priority: 0
   texture:
     src: systems/torgeternity/images/characters/Masked_Crusader.Token.webp
-    tint: null
+    tint: '#ffffff'
     scaleX: 1
     scaleY: 1
     offsetX: 0
     offsetY: 0
     rotation: 0
+    anchorX: 0.5
+    anchorY: 0.5
+    fit: contain
+    alphaThreshold: 0.75
   sight:
     angle: 360
     enabled: false
@@ -1134,15 +1208,30 @@ prototypeToken:
     attenuation: 0.1
     saturation: 0
     contrast: 0
+    color: null
   appendNumber: false
   prependAdjective: false
   detectionModes: []
+  hexagonalShape: 0
+  occludable:
+    radius: 0
+  ring:
+    enabled: false
+    colors:
+      ring: null
+      background: null
+    effects: 1
+    subject:
+      scale: 1
+      texture: null
 _stats:
   systemId: torgeternity
   systemVersion: 3.8.1
-  coreVersion: '11.315'
+  coreVersion: '12.331'
   createdTime: 1716827809436
   modifiedTime: 1716827809436
   lastModifiedBy: VAnYow5sWS9EJzo0
+  compendiumSource: null
+  duplicateSource: null
 _key: '!actors!REeNzywr6VElHSWZ'
 

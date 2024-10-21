@@ -102,10 +102,12 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: null
+      coreVersion: '12.331'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
+      compendiumSource: Compendium.te001-core-rulebook.Items.6yvgujLe6KwpQj8J
+      duplicateSource: null
     _key: '!actors.items!8YH1e6xGG3IHb1Mm.nHyY0U6fVQiVDVyn'
   - _id: KpWgjWWFgY2tXQbG
     name: Vêtements raffinés
@@ -131,10 +133,12 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: null
+      coreVersion: '12.331'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
+      compendiumSource: Item.2JInMXbRcbRiQo0P
+      duplicateSource: null
     _key: '!actors.items!8YH1e6xGG3IHb1Mm.KpWgjWWFgY2tXQbG'
   - _id: WQEeARuIk5dWxWCC
     name: Glock 9mm
@@ -173,10 +177,12 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: null
+      coreVersion: '12.331'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
+      compendiumSource: Item.iOnl5BiGmVFaCzma
+      duplicateSource: null
     _key: '!actors.items!8YH1e6xGG3IHb1Mm.WQEeARuIk5dWxWCC'
   - _id: tQXpaYu7WFDR2pYc
     name: Glock 9mm
@@ -215,10 +221,12 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: null
+      coreVersion: '12.331'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
+      compendiumSource: Item.iOnl5BiGmVFaCzma
+      duplicateSource: null
     _key: '!actors.items!8YH1e6xGG3IHb1Mm.tQXpaYu7WFDR2pYc'
   - _id: tc8NY79Kdx6Kda2K
     name: Bagarreur
@@ -327,10 +335,12 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: null
+      coreVersion: '12.331'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
     _key: '!actors.items!8YH1e6xGG3IHb1Mm.tc8NY79Kdx6Kda2K'
   - _id: RQQULXqFcG4khx3v
     name: Chargeurs supplémentaires (5)
@@ -355,10 +365,12 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: null
+      coreVersion: '12.331'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
+      compendiumSource: Item.qZuQoegFPBYC6tEB
+      duplicateSource: null
     _key: '!actors.items!8YH1e6xGG3IHb1Mm.RQQULXqFcG4khx3v'
   - _id: Lc1K5kWq3eCwHeM5
     name: Insigne de police
@@ -383,10 +395,12 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: null
+      coreVersion: '12.331'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
+      compendiumSource: Item.fgtK79BumQwmkPzK
+      duplicateSource: null
     _key: '!actors.items!8YH1e6xGG3IHb1Mm.Lc1K5kWq3eCwHeM5'
   - _id: shbOrxTn1RVzXEcf
     name: Téléphone portable
@@ -417,10 +431,12 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: null
+      coreVersion: '12.331'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
+      compendiumSource: Compendium.te001-core-rulebook.Items.4XLIEkO0JxOkiTxR
+      duplicateSource: null
     _key: '!actors.items!8YH1e6xGG3IHb1Mm.shbOrxTn1RVzXEcf'
   - _id: Qlh7pQzLxy6K5QNk
     name: Lampe torche
@@ -445,10 +461,12 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: null
+      coreVersion: '12.331'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
+      compendiumSource: Item.tktQLV7z5tnNkEqr
+      duplicateSource: null
     _key: '!actors.items!8YH1e6xGG3IHb1Mm.Qlh7pQzLxy6K5QNk'
   - _id: 3Q7pQRHtUJQLwBoN
     name: Lunettes de soleil
@@ -473,10 +491,12 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: null
+      coreVersion: '12.331'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
+      compendiumSource: Item.Wi4lFW6mtBCZS8EY
+      duplicateSource: null
     _key: '!actors.items!8YH1e6xGG3IHb1Mm.3Q7pQRHtUJQLwBoN'
   - _id: kPWYETAaWgKsBoqG
     name: Menottes rapides
@@ -502,10 +522,12 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: null
+      coreVersion: '12.331'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
+      compendiumSource: Item.YUDCGkWXWHejH49G
+      duplicateSource: null
     _key: '!actors.items!8YH1e6xGG3IHb1Mm.kPWYETAaWgKsBoqG'
   - _id: PZxTNQSw6DWLKpxb
     name: Veste en cuir
@@ -532,13 +554,25 @@ items:
           turns: null
           startRound: null
           startTurn: null
-        icon: icons/svg/aura.svg
         origin: Item.2rrg1qTCfjdHFtKl
-        tint: null
+        tint: '#ffffff'
         transfer: true
         name: Armor +1
         description: ''
         statuses: []
+        _stats:
+          coreVersion: '12.331'
+          systemId: null
+          systemVersion: null
+          createdTime: null
+          modifiedTime: null
+          lastModifiedBy: null
+          compendiumSource: null
+          duplicateSource: null
+        img: icons/svg/aura.svg
+        type: base
+        system: {}
+        sort: 0
         _key: >-
           !actors.items.effects!8YH1e6xGG3IHb1Mm.PZxTNQSw6DWLKpxb.m4QT8vQ1gc6L97GC
     folder: null
@@ -565,10 +599,12 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: null
+      coreVersion: '12.331'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
+      compendiumSource: Item.Ih77xAUJLZwOROR7
+      duplicateSource: null
     _key: '!actors.items!8YH1e6xGG3IHb1Mm.PZxTNQSw6DWLKpxb'
   - _id: cPqgeosGBc2dqDWm
     name: Attaque à mains nues (+2)
@@ -594,10 +630,12 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: null
+      coreVersion: '12.331'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
+      compendiumSource: Item.BFGjhDetVDm1xiku
+      duplicateSource: null
     _key: '!actors.items!8YH1e6xGG3IHb1Mm.cPqgeosGBc2dqDWm'
 effects:
   - _id: yyVL5akSwrj5jb44
@@ -619,15 +657,27 @@ effects:
       turns: null
       startRound: null
       startTurn: null
-    icon: icons/svg/aura.svg
     origin: >-
       Compendium.torgeternity.archetypes-fr.8YH1e6xGG3IHb1Mm.Item.PZxTNQSw6DWLKpxb
-    tint: null
+    tint: '#ffffff'
     transfer: false
     flags: {}
     name: Armure +1
     description: ''
     statuses: []
+    _stats:
+      coreVersion: '12.331'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+    img: icons/svg/aura.svg
+    type: base
+    system: {}
+    sort: 0
     _key: '!actors.effects!8YH1e6xGG3IHb1Mm.yyVL5akSwrj5jb44'
 folder: null
 sort: 100001
@@ -1123,14 +1173,20 @@ prototypeToken:
       max: 1
     color: null
     attenuation: 0.5
+    negative: false
+    priority: 0
   texture:
     src: systems/torgeternity/images/characters/Hardboiled_Detective.Token.webp
-    tint: null
+    tint: '#ffffff'
     scaleX: 1
     scaleY: 1
     offsetX: 0
     offsetY: 0
     rotation: 0
+    anchorX: 0.5
+    anchorY: 0.5
+    fit: contain
+    alphaThreshold: 0.75
   sight:
     angle: 360
     enabled: false
@@ -1140,15 +1196,30 @@ prototypeToken:
     attenuation: 0.1
     saturation: 0
     contrast: 0
+    color: null
   appendNumber: false
   prependAdjective: false
   detectionModes: []
+  hexagonalShape: 0
+  occludable:
+    radius: 0
+  ring:
+    enabled: false
+    colors:
+      ring: null
+      background: null
+    effects: 1
+    subject:
+      scale: 1
+      texture: null
 _stats:
   systemId: torgeternity
   systemVersion: 3.8.1
-  coreVersion: '11.315'
+  coreVersion: '12.331'
   createdTime: 1716827809136
   modifiedTime: 1716827809136
   lastModifiedBy: VAnYow5sWS9EJzo0
+  compendiumSource: null
+  duplicateSource: null
 _key: '!actors!8YH1e6xGG3IHb1Mm'
 
