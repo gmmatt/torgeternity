@@ -28,8 +28,11 @@
       <a
       class="increaseAttribute"
       data-concernedAttribute="charisma"
+      {{#if (gte actor.system.attributes.charisma.base actor.system.attributes.charisma.maximum)}}
+      style="visibility:hidden"
+      {{/if}}
       >
-      <i class="fa-solid fa-plus changeAttributeAdd"></i>
+        <i class="fa-solid fa-plus changeAttributeAdd"></i>
       </a>
     {{/if}}
         
@@ -55,9 +58,14 @@
       >
       <i class="fa-solid fa-minus changeAttributeSubstract"></i>
       </a>
-    {{/if}}
 
-    </a>
+      <i 
+        {{#if (eq actor.system.details.race (localize "torgeternity.sheetLabels.noRace"))}}
+          style="visibility:hidden"
+        {{/if}}> 
+        {{localize "torgeternity.sheetLabels.max"}} {{actor.system.attributes.charisma.maximum}}
+      </i>
+    {{/if}}
   </li>
 
   <li class="attribut-block">
@@ -76,6 +84,9 @@
       <a
         class="increaseAttribute"
         data-concernedAttribute="dexterity"
+        {{#if (gte actor.system.attributes.dexterity.base actor.system.attributes.dexterity.maximum)}}
+        style="visibility:hidden"
+        {{/if}}
         >
       <i class="fa-solid fa-plus changeAttributeAdd"></i>
       </a>
@@ -103,6 +114,13 @@
       >
       <i class="fa-solid fa-minus changeAttributeSubstract"></i>
       </a>
+      <i 
+        {{#if (eq actor.system.details.race (localize "torgeternity.sheetLabels.noRace"))}}
+          style="visibility:hidden"
+        {{/if}}
+      > 
+        {{localize "torgeternity.sheetLabels.max"}} {{actor.system.attributes.dexterity.maximum}}
+      </i>
     {{/if}}    
   </li>
 
@@ -122,6 +140,9 @@
     <a
       class="increaseAttribute"
       data-concernedAttribute="mind"
+      {{#if (gte actor.system.attributes.mind.base actor.system.attributes.mind.maximum)}}
+      style="visibility:hidden"
+      {{/if}}
       >
     <i class="fa-solid fa-plus changeAttributeAdd"></i>
     </a>
@@ -149,6 +170,13 @@
     >
     <i class="fa-solid fa-minus changeAttributeSubstract"></i>
     </a>
+          <i 
+        {{#if (eq actor.system.details.race (localize "torgeternity.sheetLabels.noRace"))}}
+          style="visibility:hidden"
+        {{/if}}
+      > 
+        {{localize "torgeternity.sheetLabels.max"}} {{actor.system.attributes.mind.maximum}}
+      </i>
     {{/if}}
   </li>
 
@@ -168,6 +196,9 @@
       <a
         class="increaseAttribute"
         data-concernedAttribute="spirit"
+        {{#if (gte actor.system.attributes.spirit.base actor.system.attributes.spirit.maximum)}}
+        style="visibility:hidden"
+        {{/if}}
         >
       <i class="fa-solid fa-plus changeAttributeAdd"></i>
       </a>
@@ -194,6 +225,13 @@
       >
       <i class="fa-solid fa-minus changeAttributeSubstract"></i>
       </a>
+      <i 
+        {{#if (eq actor.system.details.race (localize "torgeternity.sheetLabels.noRace"))}}
+          style="visibility:hidden"
+        {{/if}}
+      > 
+        {{localize "torgeternity.sheetLabels.max"}} {{actor.system.attributes.spirit.maximum}}
+      </i>
     {{/if}} 
     
   </li>
@@ -214,6 +252,9 @@
     <a
       class="increaseAttribute"
       data-concernedAttribute="strength"
+      {{#if (gte actor.system.attributes.strength.base actor.system.attributes.strength.maximum)}}
+      style="visibility:hidden"
+      {{/if}}
       >
     <i class="fa-solid fa-plus changeAttributeAdd"></i>
     </a>
@@ -240,6 +281,13 @@
       >
       <i class="fa-solid fa-minus changeAttributeSubstract"></i>
       </a>
+      <i 
+        {{#if (eq actor.system.details.race (localize "torgeternity.sheetLabels.noRace"))}}
+          style="visibility:hidden"
+        {{/if}}
+      > 
+        {{localize "torgeternity.sheetLabels.max"}} {{actor.system.attributes.strength.maximum}}
+      </i>
     {{/if}}
   </li>
 </ul>
