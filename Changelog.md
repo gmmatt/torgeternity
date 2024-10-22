@@ -8,6 +8,9 @@
 - refactoring the handlebarHelpers [#455](https://github.com/gmmatt/torgeternity/issues/455)
 - The buff macro now handles more than 1 selected token (especially good for gms!) [#468](https://github.com/gmmatt/torgeternity/issues/468)
 - New token frames! These will be used in modules and our archetypes here.
+- Ammo will not be deleted after it's value reached 0, but will not be used unless there are bullits in the clip! [#428](https://github.com/gmmatt/torgeternity/issues/428)
+- Old PNG and JPEG files were deleted to reduce the amount of data the system is using (they were replaced by .webp images way before) [#457](https://github.com/gmmatt/torgeternity/issues/457)
+- The prerequisites of a perk is now a textarea and not longer a textfield (this makes it possible to increase size and having a better overview) [#254](https://github.com/gmmatt/torgeternity/issues/254)
 - Races are now as items and can be dragged onto the character. This influences the attribute maximums and adds race-related perks. [#52](https://github.com/gmmatt/torgeternity/issues/52)
 
 ## v. 12.2.8

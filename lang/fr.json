@@ -471,7 +471,8 @@
       "raceExistent": "You have already chosen a race.",
       "notAPerkItem": "Vous avez tenté d'attribuer un avantage de la catégorie {a} à cette race, mais il doit appartenir à la catégorie raciale. L'action a été annulée.",
       "addedRacePerkToActor": "Ajouté {perkName}-perk à l'acteur.",
-      "reachedMaximumAttr" : "Tu as atteint le maximum d'attributs que ton peuple a défini. Une augmentation supplémentaire n'est pas possible."
+      "reachedMaximumAttr" : "Tu as atteint le maximum d'attributs que ton peuple a défini. Une augmentation supplémentaire n'est pas possible.",
+      "clipEmpty": "Ces munitions sont vides et ne peuvent pas être utilisées pour recharger."
     },
     "packs": {
       "basicRules": "torgeternity.basic-rules-fr",

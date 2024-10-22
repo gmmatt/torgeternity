@@ -471,7 +471,8 @@
       "raceExistent": "Du hast dich bereits für ein Volk entschieden.",
       "notAPerkItem": "Du hast versucht, diesem Volk einen Vorteil aus der Kategorie {a} zuzuweisen, aber er muss zur Kategorie Volksfähigkeit gehören. Aktion wurde abgebrochen.",
       "addedRacePerkToActor": "{perkName}-Vorzug dem Charakter hinzugefügt.",
-      "reachedMaximumAttr": "Du hast das Attributsmaximum, dass dein Volk vorgibt, erreicht. Eine weitere Erhöhung ist nicht möglich."
+      "reachedMaximumAttr": "Du hast das Attributsmaximum, dass dein Volk vorgibt, erreicht. Eine weitere Erhöhung ist nicht möglich.",
+      "clipEmpty": "Diese Munition ist leer und kann nicht zum Nachladen verwendet werden."
     },
     "packs": {
       "basicRules": "torgeternity.system-de-basisregeln",
