@@ -912,8 +912,9 @@ export class TorgeternityMacros {
     }
   }
 
-  async periculum(source = '', value = 10, bds = 0) {
+  async periculum(source = '', value = 10, bds = 0, armored = false, ap = 0) {
     let victims = Array.from(game.user.targets);
+    if (armored) armored="checked";
     if (!(victims.length > 0))
       return ui.notifications.warn(game.i18n.localize('torgeternity.notifications.noTarget'));
 
@@ -922,19 +923,20 @@ export class TorgeternityMacros {
     let info = await foundry.applications.api.DialogV2.prompt({
       window: { title: 'Periculum' },
       content: `
-          <label>Damage source<br><input data-tooltip="Input the source of damage" placeholder="Describe the source " style="color:black" name="source" type="string" value="${source}"></label>
-          <label>Damage value<input name="damageBase" type="number" value=${value} autofocus style="width:50px"></label>
-          <label>Add BDs<input name="plusBD" type="number" value=${bds} style="width:30px"></label>
-          <label>Apply armor<input name="armor" type="checkbox"></label>
-          <label>Armor Piercing value<input name="aP" type="number" style="width:30px"></label>
+          <label>`+game.i18n.localize('torgeternity.macros.periculumSourceName')+`<br><input placeholder=`+game.i18n.localize('torgeternity.macros.periculumSourcePlaceHolder')+` style="color:black" name="source" type="string" value="${source}"></label>
+          <label>`+game.i18n.localize('torgeternity.macros.periculumDamageValue')+`<input name="damageBase" type="number" value=${value} autofocus style="width:35px"></label>
+          <label>`+game.i18n.localize('torgeternity.macros.periculumBds')+`<input name="plusBD" type="number" value=${bds} style="width:35px"></label>
+          <label>`+game.i18n.localize('torgeternity.macros.periculumArmor')+`<input name="armor" type="checkbox" ${armored}></label>
+          <label>`+game.i18n.localize('torgeternity.macros.periculumAp')+`<input name="ap" type="number" style="width:35px" value=${ap}></label>
           `,
       ok: {
-        label: 'Submit Effect',
+        label: game.i18n.localize('torgeternity.dialogWindow.buttons.execute'),//'Submit Effect',
         callback: (event, button, dialog) => [
-          button.form.elements.damageBase.valueAsNumber,
           button.form.elements.source.value,
-          button.form.elements.armor.checked,
+          button.form.elements.damageBase.valueAsNumber,
           button.form.elements.plusBD.value,
+          button.form.elements.armor.checked,
+          button.form.elements.ap.value,
         ],
       },
     });
@@ -1001,16 +1003,16 @@ export class TorgeternityMacros {
       actorPic: 'systems/torgeternity/images/tokens/vulnerable.webp',
       actorName: 'Quid',
       actorType: 'threat',
-      addBDs: parseInt(info[3]),
+      addBDs: parseInt(info[2]),
       amountBD: 0,
       isAttack: true,
-      skillName: info[1],
+      skillName: info[0],
       skillValue: '10',
       isFav: false,
       unskilledUse: true,
-      damage: parseInt(info[0]),
-      weaponAP: 0,
-      applyArmor: info[2],
+      damage: parseInt(info[1]),
+      weaponAP: parseInt(info[4]),
+      applyArmor: info[3],
       darknessModifier: 0,
       DNDescriptor: 'standard',
       type: 'attack',
@@ -1074,8 +1076,6 @@ export class TorgeternityMacros {
       rollResult: 11,
       outcome: '',
       actionTotalContent: '',
-      outcomeColor:
-        'display:none;color: green;text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000, 0px 0px 15px black;',
       modifierPlusLabel: 'display:none',
       resultText: '',
       resultTextColor:
@@ -1083,7 +1083,6 @@ export class TorgeternityMacros {
       damageLabel: 'display: block',
       damageSubLabel: 'display:block',
       disconnectLabel: 'display:none',
-      typeLabel: 'Valeur de compétence',
       cardsPlayedLabel: 'display:none',
       notesLabel: 'display:none',
     };

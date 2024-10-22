@@ -1087,6 +1087,12 @@
       "reconnectMacroZoneModifierNotDetectedTitle": "No zone modifier",
       "reconnectMacroZoneModifierNotDetected": "Couldn't resolve a zone modifier, because the active scene has no cosm configured. Change the result's modifier by hand.",
       "reconnectMacroStatusLiftet": "Disconnection-Status liftet after a successful Reconnect-Roll.",
+      "periculumSourceName":"Source's damages",
+      "periculumSourcePlaceHolder":"Describe the hazard",
+      "periculumDamageValue":"Base damage ",
+      "periculumBds":"BDs modifiers ",
+      "periculumArmor":"Apply armor ? ",
+      "periculumAp":"Armor piercing value ",
       "macroHub": {
         "buttonTitle": "MacroHub",
         "title":"The Torg Eternity Macro Hub"

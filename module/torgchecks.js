@@ -892,6 +892,7 @@ export async function renderSkillChat(test) {
         test.bdStyle = 'display:none';
       }
     } else if (test.testType === 'custom') {
+      test.typeLabel = `${game.i18n.localize('torgeternity.chatText.skillTestLabel')}`;
       test.outcomeColor = 'display:none;';
       test.resultTextColor = 'display:none;';
       test.bdStyle = 'display:block';
