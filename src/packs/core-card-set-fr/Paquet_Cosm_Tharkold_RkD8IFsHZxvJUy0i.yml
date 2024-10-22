@@ -29,8 +29,17 @@ cards:
     value: null
     width: null
     height: null
-    cards: []
+    _stats:
+      coreVersion: '12.331'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
     _key: '!cards.cards!RkD8IFsHZxvJUy0i.FdORdOIapKYVShmm'
+    cards: []
   - _id: Z9se5RIRv9bT6TqZ
     name: Suprématie
     description: ''
@@ -56,8 +65,17 @@ cards:
     value: null
     width: null
     height: null
-    cards: []
+    _stats:
+      coreVersion: '12.331'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
     _key: '!cards.cards!RkD8IFsHZxvJUy0i.Z9se5RIRv9bT6TqZ'
+    cards: []
   - _id: KCUmhPHroyK0RcPc
     name: Calamité
     description: ''
@@ -83,8 +101,17 @@ cards:
       number: ''
     width: null
     height: null
-    cards: []
+    _stats:
+      coreVersion: '12.331'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
     _key: '!cards.cards!RkD8IFsHZxvJUy0i.KCUmhPHroyK0RcPc'
+    cards: []
   - _id: ljAS1i9wugf031We
     name: Irradié
     description: ''
@@ -110,8 +137,17 @@ cards:
     value: null
     width: null
     height: null
-    cards: []
+    _stats:
+      coreVersion: '12.331'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
     _key: '!cards.cards!RkD8IFsHZxvJUy0i.ljAS1i9wugf031We'
+    cards: []
   - _id: tHBKw1hlaQzqVzWo
     name: Cyberpsychose
     description: ''
@@ -137,8 +173,17 @@ cards:
     value: null
     width: null
     height: null
-    cards: []
+    _stats:
+      coreVersion: '12.331'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
     _key: '!cards.cards!RkD8IFsHZxvJUy0i.tHBKw1hlaQzqVzWo'
+    cards: []
   - _id: xnKWZaGXoGTTv3wq
     name: A genoux !
     description: ''
@@ -164,8 +209,17 @@ cards:
     value: null
     width: null
     height: null
-    cards: []
+    _stats:
+      coreVersion: '12.331'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
     _key: '!cards.cards!RkD8IFsHZxvJUy0i.xnKWZaGXoGTTv3wq'
+    cards: []
   - _id: 45sVsDSS0vPM0vph
     name: Tu travailles pour moi maintenant
     description: ''
@@ -191,8 +245,17 @@ cards:
     value: null
     width: null
     height: null
-    cards: []
+    _stats:
+      coreVersion: '12.331'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
     _key: '!cards.cards!RkD8IFsHZxvJUy0i.45sVsDSS0vPM0vph'
+    cards: []
   - _id: I0r4s6e8yc2JFKCU
     name: Enragé
     description: ''
@@ -218,8 +281,17 @@ cards:
       number: ''
     width: null
     height: null
-    cards: []
+    _stats:
+      coreVersion: '12.331'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
     _key: '!cards.cards!RkD8IFsHZxvJUy0i.I0r4s6e8yc2JFKCU'
+    cards: []
   - _id: KtWhxsJutxqWwBTb
     name: Récupération !
     description: ''
@@ -245,8 +317,17 @@ cards:
     value: null
     width: null
     height: null
-    cards: []
+    _stats:
+      coreVersion: '12.331'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
     _key: '!cards.cards!RkD8IFsHZxvJUy0i.KtWhxsJutxqWwBTb'
+    cards: []
   - _id: fI7OxcpjLwkLmMVa
     name: Visions atroces
     description: ''
@@ -272,8 +353,17 @@ cards:
     value: null
     width: null
     height: null
-    cards: []
+    _stats:
+      coreVersion: '12.331'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
     _key: '!cards.cards!RkD8IFsHZxvJUy0i.fI7OxcpjLwkLmMVa'
+    cards: []
 rotation: 0
 displayCount: false
 folder: null
@@ -297,9 +387,11 @@ height: null
 _stats:
   systemId: torgeternity
   systemVersion: 3.8.1
-  coreVersion: '11.315'
+  coreVersion: '12.331'
   createdTime: 1716827810499
   modifiedTime: 1716827810499
   lastModifiedBy: VAnYow5sWS9EJzo0
+  compendiumSource: Cards.4b8BekWDWpSWF961
+  duplicateSource: null
 _key: '!cards!RkD8IFsHZxvJUy0i'
 

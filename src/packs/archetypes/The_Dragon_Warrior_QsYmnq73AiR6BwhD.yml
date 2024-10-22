@@ -213,116 +213,6 @@ items:
       compendiumSource: Item.q3wDWkbSqbWYKVNB
       duplicateSource: null
     _key: '!actors.items!QsYmnq73AiR6BwhD.W80yHGyLWk5wrLJW'
-  - _id: 45qccoq0HU8OzZeZ
-    name: Darkvision (Dwarf)
-    type: perk
-    img: systems/torgeternity/images/icons/reality-icon.webp
-    effects: []
-    folder: null
-    sort: 0
-    flags:
-      core:
-        sourceId: Item.JCBCYFMvmpQHFWM4
-    system:
-      category: dwarf
-      cosm: Aysle
-      description: >-
-        <p>Dwarves ignore up to four points of
-        @UUID[Compendium.te001-core-rulebook.rules.pwneQ55M0nnDH0Us.JournalEntryPage.EhKa65cpHvodUl2L#darkness]{darkness}
-        penalties.</p>
-      prerequisites: ''
-      generalContradiction: false
-      pulpPowers:
-        enhancement01:
-          description: ''
-          taken: false
-          title: ''
-        enhancement02:
-          description: ''
-          taken: false
-          title: ''
-        enhancement03:
-          description: ''
-          taken: false
-          title: ''
-        enhancement04:
-          description: ''
-          taken: false
-          title: ''
-        enhancement05:
-          description: ''
-          taken: false
-          title: ''
-        enhancement06:
-          description: ''
-          taken: false
-          title: ''
-        enhancement07:
-          description: ''
-          taken: false
-          title: ''
-        enhancement08:
-          description: ''
-          taken: false
-          title: ''
-        enhancement09:
-          description: ''
-          taken: false
-          title: ''
-        enhancement10:
-          description: ''
-          taken: false
-          title: ''
-        enhancement11:
-          description: ''
-          taken: false
-          title: ''
-        enhancement12:
-          description: ''
-          taken: false
-          title: ''
-        enhancement13:
-          description: ''
-          taken: false
-          title: ''
-        enhancement14:
-          description: ''
-          taken: false
-          title: ''
-        enhancement15:
-          description: ''
-          taken: false
-          title: ''
-        enhancementNumber: 0
-        limitation01: ''
-        limitation02: ''
-        limitation03: ''
-        limitation04: ''
-        limitation05: ''
-        limitation06: ''
-        limitation07: ''
-        limitation08: ''
-        limitation09: ''
-        limitation10: ''
-        limitationNumber: 0
-      timestaken: '1'
-      secondaryAxiom:
-        selected: none
-        value: null
-    ownership:
-      default: 0
-      aSTzyuIvqyDaFHwy: 3
-      CtisFurQNe9h7ABb: 3
-    _stats:
-      systemId: torgeternity
-      systemVersion: 3.1.1
-      coreVersion: '12.330'
-      createdTime: 1693900608203
-      modifiedTime: 1693910487924
-      lastModifiedBy: CtisFurQNe9h7ABb
-      compendiumSource: Item.JCBCYFMvmpQHFWM4
-      duplicateSource: null
-    _key: '!actors.items!QsYmnq73AiR6BwhD.45qccoq0HU8OzZeZ'
   - _id: vvOcq2YtdmDi6tiY
     name: Great Axe
     type: meleeweapon
@@ -649,6 +539,476 @@ items:
       modifiedTime: 1722357677030
       lastModifiedBy: 93AMwcGe6H37rcPA
     _key: '!actors.items!QsYmnq73AiR6BwhD.NKhj8CtGws6Adv8j'
+  - name: Dwarf
+    type: race
+    img: systems/torgeternity/images/icons/dwarf-icon.webp
+    system:
+      name: ''
+      description: "<img class=\"charimg\" src=\"modules/te001-core-rulebook/images/tworek.webp\" /><p>Uthorion’s rampage through the Land Between devastated the hardy dwarves. Fell beasts and dark magic ravaged their armies and collapsed their cities.</p><p>The most veteran dwarven warriors died in furious last stands to allow the younger heroes to lead the survivors to the surface, retreating in humiliation before the unstoppable onslaught.\_</p><p>The remaining dwarves sheltered their injured and children in conclaves around Aysle and pledged a grim quest. They formed the Order of the Dragon and vowed to destroy Uthorion, his lieutenants, and all those who served him. Every last one. They would have their vengeance.</p><p>Dwarves of Aysle have a grim and cynical sense of humor, laced with the inevitability of their own demise - which most hope will be a literal blaze of glory.</p><p>@UUID[Compendium.te001-core-rulebook.rules.JournalEntry.pwneQ55M0nnDH0Us.JournalEntryPage.kYP18QiA72P6PlUi#dwarf]{More Details}</p><p>@UUID[Compendium.te001-core-rulebook.rules.JournalEntry.pwneQ55M0nnDH0Us.JournalEntryPage.kYP18QiA72P6PlUi#dwarf$1]{Dwarf Perks - Core Rulebook}</p><p>@UUID[Compendium.te008-aysle.aysle-journals.JournalEntry.PQRWfK8bsqZ10lY1.JournalEntryPage.ROfd2xSuhDFMpcir#dwarf]{Dwarf Perks - Aysle Sourcebook}</p>"
+      attributeMaximum:
+        charisma: 12
+        dexterity: 12
+        mind: 13
+        spirit: 13
+        strength: 14
+      perksData:
+        - name: Darkvision (Dwarf)
+          type: perk
+          img: systems/torgeternity/images/icons/reality-icon.webp
+          system:
+            category: racial
+            cosm: none
+            description: >-
+              <p>Dwarves ignore up to four points of
+              @UUID[Compendium.te001-core-rulebook.rules.pwneQ55M0nnDH0Us.JournalEntryPage.EhKa65cpHvodUl2L#darkness]{darkness}
+              penalties.</p>
+            prerequisites: >-
+              <p>@UUID[Compendium.te001-core-rulebook.Items.Item.2AQ87OBFRFvaPeuX]{Dwarf}</p>
+            generalContradiction: false
+            pulpPowers:
+              enhancement01:
+                description: ''
+                taken: false
+                title: ''
+              enhancement02:
+                description: ''
+                taken: false
+                title: ''
+              enhancement03:
+                description: ''
+                taken: false
+                title: ''
+              enhancement04:
+                description: ''
+                taken: false
+                title: ''
+              enhancement05:
+                description: ''
+                taken: false
+                title: ''
+              enhancement06:
+                description: ''
+                taken: false
+                title: ''
+              enhancement07:
+                description: ''
+                taken: false
+                title: ''
+              enhancement08:
+                description: ''
+                taken: false
+                title: ''
+              enhancement09:
+                description: ''
+                taken: false
+                title: ''
+              enhancement10:
+                description: ''
+                taken: false
+                title: ''
+              enhancement11:
+                description: ''
+                taken: false
+                title: ''
+              enhancement12:
+                description: ''
+                taken: false
+                title: ''
+              enhancement13:
+                description: ''
+                taken: false
+                title: ''
+              enhancement14:
+                description: ''
+                taken: false
+                title: ''
+              enhancement15:
+                description: ''
+                taken: false
+                title: ''
+              enhancementNumber: 0
+              limitation01: ''
+              limitation02: ''
+              limitation03: ''
+              limitation04: ''
+              limitation05: ''
+              limitation06: ''
+              limitation07: ''
+              limitation08: ''
+              limitation09: ''
+              limitation10: ''
+              limitationNumber: 0
+            timestaken: ''
+            secondaryAxiom:
+              selected: none
+              value: null
+            transferenceID: kACGlbXl9VWYQLWs
+          sort: 100000
+          ownership:
+            default: 0
+            aSTzyuIvqyDaFHwy: 3
+            VAnYow5sWS9EJzo0: 3
+          flags:
+            core: {}
+          _stats:
+            coreVersion: '12.331'
+            systemId: torgeternity
+            systemVersion: 12.3.0
+            createdTime: 1711551146882
+            modifiedTime: 1729581856153
+            lastModifiedBy: d8YcfsxBOP7RAazk
+            compendiumSource: null
+            duplicateSource: null
+        - name: Size (Dwarf)
+          type: perk
+          img: systems/torgeternity/images/icons/reality-icon.webp
+          system:
+            category: racial
+            cosm: none
+            description: >-
+              <p>Dwarves cannot wear armor or clothing designed for normal
+              humans or elves - it must be tailored to their squat form.</p>
+            prerequisites: >-
+              <p>@UUID[Compendium.te001-core-rulebook.Items.Item.2AQ87OBFRFvaPeuX]{Dwarf}</p>
+            generalContradiction: false
+            pulpPowers:
+              enhancement01:
+                description: ''
+                taken: false
+                title: ''
+              enhancement02:
+                description: ''
+                taken: false
+                title: ''
+              enhancement03:
+                description: ''
+                taken: false
+                title: ''
+              enhancement04:
+                description: ''
+                taken: false
+                title: ''
+              enhancement05:
+                description: ''
+                taken: false
+                title: ''
+              enhancement06:
+                description: ''
+                taken: false
+                title: ''
+              enhancement07:
+                description: ''
+                taken: false
+                title: ''
+              enhancement08:
+                description: ''
+                taken: false
+                title: ''
+              enhancement09:
+                description: ''
+                taken: false
+                title: ''
+              enhancement10:
+                description: ''
+                taken: false
+                title: ''
+              enhancement11:
+                description: ''
+                taken: false
+                title: ''
+              enhancement12:
+                description: ''
+                taken: false
+                title: ''
+              enhancement13:
+                description: ''
+                taken: false
+                title: ''
+              enhancement14:
+                description: ''
+                taken: false
+                title: ''
+              enhancement15:
+                description: ''
+                taken: false
+                title: ''
+              enhancementNumber: 0
+              limitation01: ''
+              limitation02: ''
+              limitation03: ''
+              limitation04: ''
+              limitation05: ''
+              limitation06: ''
+              limitation07: ''
+              limitation08: ''
+              limitation09: ''
+              limitation10: ''
+              limitationNumber: 0
+            timestaken: ''
+            secondaryAxiom:
+              selected: none
+              value: null
+            transferenceID: KlGB2QRA7GajSmPw
+          sort: 200000
+          ownership:
+            default: 0
+            aSTzyuIvqyDaFHwy: 3
+            VAnYow5sWS9EJzo0: 3
+          flags:
+            core: {}
+          _stats:
+            coreVersion: '12.331'
+            systemId: torgeternity
+            systemVersion: 12.3.0
+            createdTime: 1711551146747
+            modifiedTime: 1729581842829
+            lastModifiedBy: d8YcfsxBOP7RAazk
+            compendiumSource: null
+            duplicateSource: null
+      darkvision: true
+      size: normal
+      customAttackData: []
+    effects: []
+    folder: TwzEDO2AmeaaSwtn
+    ownership:
+      default: 0
+      d8YcfsxBOP7RAazk: 3
+    flags: {}
+    _stats:
+      compendiumSource: Compendium.te001-core-rulebook.Items.Item.2AQ87OBFRFvaPeuX
+      duplicateSource: null
+      coreVersion: '12.331'
+      systemId: torgeternity
+      systemVersion: 12.3.0
+      createdTime: 1729582100916
+      modifiedTime: 1729582100916
+      lastModifiedBy: d8YcfsxBOP7RAazk
+    _id: 0sDfrrvToWzIqF30
+    sort: 200000
+    _key: '!actors.items!QsYmnq73AiR6BwhD.0sDfrrvToWzIqF30'
+  - name: Darkvision (Dwarf)
+    type: perk
+    img: systems/torgeternity/images/icons/reality-icon.webp
+    system:
+      category: racial
+      cosm: none
+      description: >-
+        <p>Dwarves ignore up to four points of
+        @UUID[Compendium.te001-core-rulebook.rules.pwneQ55M0nnDH0Us.JournalEntryPage.EhKa65cpHvodUl2L#darkness]{darkness}
+        penalties.</p>
+      prerequisites: >-
+        <p>@UUID[Compendium.te001-core-rulebook.Items.Item.2AQ87OBFRFvaPeuX]{Dwarf}</p>
+      generalContradiction: false
+      pulpPowers:
+        enhancement01:
+          description: ''
+          taken: false
+          title: ''
+        enhancement02:
+          description: ''
+          taken: false
+          title: ''
+        enhancement03:
+          description: ''
+          taken: false
+          title: ''
+        enhancement04:
+          description: ''
+          taken: false
+          title: ''
+        enhancement05:
+          description: ''
+          taken: false
+          title: ''
+        enhancement06:
+          description: ''
+          taken: false
+          title: ''
+        enhancement07:
+          description: ''
+          taken: false
+          title: ''
+        enhancement08:
+          description: ''
+          taken: false
+          title: ''
+        enhancement09:
+          description: ''
+          taken: false
+          title: ''
+        enhancement10:
+          description: ''
+          taken: false
+          title: ''
+        enhancement11:
+          description: ''
+          taken: false
+          title: ''
+        enhancement12:
+          description: ''
+          taken: false
+          title: ''
+        enhancement13:
+          description: ''
+          taken: false
+          title: ''
+        enhancement14:
+          description: ''
+          taken: false
+          title: ''
+        enhancement15:
+          description: ''
+          taken: false
+          title: ''
+        enhancementNumber: 0
+        limitation01: ''
+        limitation02: ''
+        limitation03: ''
+        limitation04: ''
+        limitation05: ''
+        limitation06: ''
+        limitation07: ''
+        limitation08: ''
+        limitation09: ''
+        limitation10: ''
+        limitationNumber: 0
+      timestaken: ''
+      secondaryAxiom:
+        selected: none
+        value: null
+      transferenceID: yfVfnVzvsVpYoWpA
+    sort: 100000
+    ownership:
+      default: 0
+      aSTzyuIvqyDaFHwy: 3
+      VAnYow5sWS9EJzo0: 3
+      d8YcfsxBOP7RAazk: 3
+    flags:
+      core: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      coreVersion: '12.331'
+      systemId: torgeternity
+      systemVersion: 12.3.0
+      createdTime: 1729582100923
+      modifiedTime: 1729582101054
+      lastModifiedBy: d8YcfsxBOP7RAazk
+    _id: yfVfnVzvsVpYoWpA
+    effects: []
+    folder: null
+    _key: '!actors.items!QsYmnq73AiR6BwhD.yfVfnVzvsVpYoWpA'
+  - name: Size (Dwarf)
+    type: perk
+    img: systems/torgeternity/images/icons/reality-icon.webp
+    system:
+      category: racial
+      cosm: none
+      description: >-
+        <p>Dwarves cannot wear armor or clothing designed for normal humans or
+        elves - it must be tailored to their squat form.</p>
+      prerequisites: >-
+        <p>@UUID[Compendium.te001-core-rulebook.Items.Item.2AQ87OBFRFvaPeuX]{Dwarf}</p>
+      generalContradiction: false
+      pulpPowers:
+        enhancement01:
+          description: ''
+          taken: false
+          title: ''
+        enhancement02:
+          description: ''
+          taken: false
+          title: ''
+        enhancement03:
+          description: ''
+          taken: false
+          title: ''
+        enhancement04:
+          description: ''
+          taken: false
+          title: ''
+        enhancement05:
+          description: ''
+          taken: false
+          title: ''
+        enhancement06:
+          description: ''
+          taken: false
+          title: ''
+        enhancement07:
+          description: ''
+          taken: false
+          title: ''
+        enhancement08:
+          description: ''
+          taken: false
+          title: ''
+        enhancement09:
+          description: ''
+          taken: false
+          title: ''
+        enhancement10:
+          description: ''
+          taken: false
+          title: ''
+        enhancement11:
+          description: ''
+          taken: false
+          title: ''
+        enhancement12:
+          description: ''
+          taken: false
+          title: ''
+        enhancement13:
+          description: ''
+          taken: false
+          title: ''
+        enhancement14:
+          description: ''
+          taken: false
+          title: ''
+        enhancement15:
+          description: ''
+          taken: false
+          title: ''
+        enhancementNumber: 0
+        limitation01: ''
+        limitation02: ''
+        limitation03: ''
+        limitation04: ''
+        limitation05: ''
+        limitation06: ''
+        limitation07: ''
+        limitation08: ''
+        limitation09: ''
+        limitation10: ''
+        limitationNumber: 0
+      timestaken: ''
+      secondaryAxiom:
+        selected: none
+        value: null
+      transferenceID: Rmja4NJZMvFXuQm0
+    sort: 200000
+    ownership:
+      default: 0
+      aSTzyuIvqyDaFHwy: 3
+      VAnYow5sWS9EJzo0: 3
+      d8YcfsxBOP7RAazk: 3
+    flags:
+      core: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      coreVersion: '12.331'
+      systemId: torgeternity
+      systemVersion: 12.3.0
+      createdTime: 1729582100923
+      modifiedTime: 1729582101056
+      lastModifiedBy: d8YcfsxBOP7RAazk
+    _id: Rmja4NJZMvFXuQm0
+    effects: []
+    folder: null
+    _key: '!actors.items!QsYmnq73AiR6BwhD.Rmja4NJZMvFXuQm0'
 effects:
   - origin: Actor.QsYmnq73AiR6BwhD.Item.NTS9DWGhHsYfxJGC
     duration:
@@ -1143,7 +1503,7 @@ prototypeToken:
     enabled: false
     range: 0
     brightness: 1
-    visionMode: basic
+    visionMode: darkvision
     attenuation: 0.1
     saturation: 0
     contrast: 0
@@ -1168,7 +1528,7 @@ _stats:
   systemVersion: 12.2.0
   coreVersion: '12.331'
   createdTime: 1693900608203
-  modifiedTime: 1729013383995
+  modifiedTime: 1729582101393
   lastModifiedBy: d8YcfsxBOP7RAazk
   compendiumSource: null
   duplicateSource: null

@@ -29,8 +29,17 @@ cards:
     value: null
     width: null
     height: null
-    cards: []
+    _stats:
+      coreVersion: '12.331'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
     _key: '!cards.cards!t1aZsCOetwj8Qefx.BGAHeGLtM0KaNahb'
+    cards: []
   - _id: KHp81YJBU2bZfKba
     name: Bain de sang
     description: ''
@@ -56,8 +65,17 @@ cards:
     value: null
     width: null
     height: null
-    cards: []
+    _stats:
+      coreVersion: '12.331'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
     _key: '!cards.cards!t1aZsCOetwj8Qefx.KHp81YJBU2bZfKba'
+    cards: []
   - _id: Ks0UKWLkdUrwOvpC
     name: Vendetta !
     description: ''
@@ -83,8 +101,17 @@ cards:
       number: ''
     width: null
     height: null
-    cards: []
+    _stats:
+      coreVersion: '12.331'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
     _key: '!cards.cards!t1aZsCOetwj8Qefx.Ks0UKWLkdUrwOvpC'
+    cards: []
   - _id: 1foN3VxlNR5W5gFW
     name: Mutation
     description: ''
@@ -110,8 +137,17 @@ cards:
     value: null
     width: null
     height: null
-    cards: []
+    _stats:
+      coreVersion: '12.331'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
     _key: '!cards.cards!t1aZsCOetwj8Qefx.1foN3VxlNR5W5gFW'
+    cards: []
   - _id: 1B6LTKOlXP4JZOFh
     name: Epidémie
     description: ''
@@ -137,8 +173,17 @@ cards:
     value: null
     width: null
     height: null
-    cards: []
+    _stats:
+      coreVersion: '12.331'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
     _key: '!cards.cards!t1aZsCOetwj8Qefx.1B6LTKOlXP4JZOFh'
+    cards: []
   - _id: 71Rp05audwakzfHC
     name: Fureur martiale
     description: ''
@@ -164,8 +209,17 @@ cards:
     value: null
     width: null
     height: null
-    cards: []
+    _stats:
+      coreVersion: '12.331'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
     _key: '!cards.cards!t1aZsCOetwj8Qefx.71Rp05audwakzfHC'
+    cards: []
   - _id: Zo2mzbMMO7hE4ug4
     name: Est-ce une morsure ?
     description: ''
@@ -191,8 +245,17 @@ cards:
     value: null
     width: null
     height: null
-    cards: []
+    _stats:
+      coreVersion: '12.331'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
     _key: '!cards.cards!t1aZsCOetwj8Qefx.Zo2mzbMMO7hE4ug4'
+    cards: []
   - _id: psWpy8OiGF9gEiYp
     name: Vous n'avez pas l'air bien
     description: ''
@@ -218,8 +281,17 @@ cards:
       number: ''
     width: null
     height: null
-    cards: []
+    _stats:
+      coreVersion: '12.331'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
     _key: '!cards.cards!t1aZsCOetwj8Qefx.psWpy8OiGF9gEiYp'
+    cards: []
   - _id: ze5HePytnar3TlI4
     name: Trahison
     description: ''
@@ -245,8 +317,17 @@ cards:
     value: null
     width: null
     height: null
-    cards: []
+    _stats:
+      coreVersion: '12.331'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
     _key: '!cards.cards!t1aZsCOetwj8Qefx.ze5HePytnar3TlI4'
+    cards: []
   - _id: fo5BtqrRVMqDXYaF
     name: Dur à cuir
     description: ''
@@ -272,8 +353,17 @@ cards:
     value: null
     width: null
     height: null
-    cards: []
+    _stats:
+      coreVersion: '12.331'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
     _key: '!cards.cards!t1aZsCOetwj8Qefx.fo5BtqrRVMqDXYaF'
+    cards: []
 rotation: 0
 displayCount: false
 folder: null
@@ -297,9 +387,11 @@ height: null
 _stats:
   systemId: torgeternity
   systemVersion: 3.8.1
-  coreVersion: '11.315'
+  coreVersion: '12.331'
   createdTime: 1716827810596
   modifiedTime: 1716827810596
   lastModifiedBy: VAnYow5sWS9EJzo0
+  compendiumSource: Cards.4b8BekWDWpSWF961
+  duplicateSource: null
 _key: '!cards!t1aZsCOetwj8Qefx'
 

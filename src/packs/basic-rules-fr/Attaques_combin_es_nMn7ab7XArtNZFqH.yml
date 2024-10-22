@@ -106,10 +106,12 @@ pages:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: null
+      coreVersion: '12.331'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
     _key: '!journal.pages!nMn7ab7XArtNZFqH.Otz38PH1frNcroGk'
 ownership:
   default: 0
@@ -118,9 +120,11 @@ ownership:
 _stats:
   systemId: torgeternity
   systemVersion: 3.8.1
-  coreVersion: '11.315'
+  coreVersion: '12.331'
   createdTime: 1716827810327
   modifiedTime: 1716827810327
   lastModifiedBy: VAnYow5sWS9EJzo0
+  compendiumSource: JournalEntry.Dj1RCzyiYGOsBdTT
+  duplicateSource: null
 _key: '!journal!nMn7ab7XArtNZFqH'
 

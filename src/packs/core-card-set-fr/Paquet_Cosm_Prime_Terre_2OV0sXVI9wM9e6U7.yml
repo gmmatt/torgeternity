@@ -29,8 +29,17 @@ cards:
       number: ''
     width: null
     height: null
-    cards: []
+    _stats:
+      coreVersion: '12.331'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
     _key: '!cards.cards!2OV0sXVI9wM9e6U7.McQIVoJ57Hlc9AHy'
+    cards: []
   - _id: FtyaXNVk3sNSNY1c
     name: Continuez le combat
     description: ''
@@ -62,8 +71,17 @@ cards:
       number: ''
     width: null
     height: null
-    cards: []
+    _stats:
+      coreVersion: '12.331'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
     _key: '!cards.cards!2OV0sXVI9wM9e6U7.FtyaXNVk3sNSNY1c'
+    cards: []
   - _id: thIh8WltpvMaJOZ7
     name: Discour stimulant
     description: ''
@@ -94,8 +112,17 @@ cards:
       number: ''
     width: null
     height: null
-    cards: []
+    _stats:
+      coreVersion: '12.331'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
     _key: '!cards.cards!2OV0sXVI9wM9e6U7.thIh8WltpvMaJOZ7'
+    cards: []
   - _id: e2gg2j0nkF9VGYd9
     name: La loi de l'espoir
     description: ''
@@ -123,8 +150,17 @@ cards:
       number: ''
     width: null
     height: null
-    cards: []
+    _stats:
+      coreVersion: '12.331'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
     _key: '!cards.cards!2OV0sXVI9wM9e6U7.e2gg2j0nkF9VGYd9'
+    cards: []
   - _id: 7ThakchjSdgWmdts
     name: Bienvenue dans notre monde !
     description: ''
@@ -152,8 +188,17 @@ cards:
       number: ''
     width: null
     height: null
-    cards: []
+    _stats:
+      coreVersion: '12.331'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
     _key: '!cards.cards!2OV0sXVI9wM9e6U7.7ThakchjSdgWmdts'
+    cards: []
   - _id: YwKskq8whX1qXERu
     name: Escalade !
     description: ''
@@ -186,8 +231,17 @@ cards:
       number: ''
     width: null
     height: null
-    cards: []
+    _stats:
+      coreVersion: '12.331'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
     _key: '!cards.cards!2OV0sXVI9wM9e6U7.YwKskq8whX1qXERu'
+    cards: []
   - _id: U16Wzbg7aqdWhqAY
     name: Il y a toujours de l'espoir
     description: ''
@@ -215,8 +269,17 @@ cards:
       number: ''
     width: null
     height: null
-    cards: []
+    _stats:
+      coreVersion: '12.331'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
     _key: '!cards.cards!2OV0sXVI9wM9e6U7.U16Wzbg7aqdWhqAY'
+    cards: []
   - _id: xaiV2MhnxLOKwqYW
     name: Saisir l'opportunité
     description: ''
@@ -244,8 +307,17 @@ cards:
       number: ''
     width: null
     height: null
-    cards: []
+    _stats:
+      coreVersion: '12.331'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
     _key: '!cards.cards!2OV0sXVI9wM9e6U7.xaiV2MhnxLOKwqYW'
+    cards: []
   - _id: uYWx9SKMM3p3jfuS
     name: Le tout pour le tout
     description: ''
@@ -273,8 +345,17 @@ cards:
       number: ''
     width: null
     height: null
-    cards: []
+    _stats:
+      coreVersion: '12.331'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
     _key: '!cards.cards!2OV0sXVI9wM9e6U7.uYWx9SKMM3p3jfuS'
+    cards: []
   - _id: NeAQw6CwRSavpPdt
     name: Un répit bienvenu !
     description: ''
@@ -300,8 +381,17 @@ cards:
       number: ''
     width: null
     height: null
-    cards: []
+    _stats:
+      coreVersion: '12.331'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
     _key: '!cards.cards!2OV0sXVI9wM9e6U7.NeAQw6CwRSavpPdt'
+    cards: []
 rotation: 0
 displayCount: false
 folder: null
@@ -325,9 +415,11 @@ height: null
 _stats:
   systemId: torgeternity
   systemVersion: 3.8.1
-  coreVersion: '11.315'
+  coreVersion: '12.331'
   createdTime: 1716827810443
   modifiedTime: 1716827810443
   lastModifiedBy: VAnYow5sWS9EJzo0
+  compendiumSource: Cards.oMOBBSZVVgrH9Dde
+  duplicateSource: null
 _key: '!cards!2OV0sXVI9wM9e6U7'
 

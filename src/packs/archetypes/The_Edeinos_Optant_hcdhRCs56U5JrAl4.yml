@@ -3,113 +3,6 @@ name: The Edeinos Optant
 type: stormknight
 img: systems/torgeternity/images/characters/Edeinos_Optant.Avatar.webp
 items:
-  - _id: hUiTDA9Qcfrvg8kJ
-    name: Outsider (Edeinos)
-    type: perk
-    img: systems/torgeternity/images/icons/reality-icon.webp
-    effects: []
-    folder: null
-    sort: 0
-    flags:
-      core:
-        sourceId: Item.JCBCYFMvmpQHFWM4
-    system:
-      category: edeinos
-      cosm: livingLand
-      description: "<p>Edeinos are outsiders to everyone but other edeinos. They subtract 4 from\_<em>persuasion\_</em>tests with non-edeinos, and are often treated with hostility by humans from other realms.</p>"
-      prerequisites: ''
-      generalContradiction: false
-      pulpPowers:
-        enhancement01:
-          description: ''
-          taken: false
-          title: ''
-        enhancement02:
-          description: ''
-          taken: false
-          title: ''
-        enhancement03:
-          description: ''
-          taken: false
-          title: ''
-        enhancement04:
-          description: ''
-          taken: false
-          title: ''
-        enhancement05:
-          description: ''
-          taken: false
-          title: ''
-        enhancement06:
-          description: ''
-          taken: false
-          title: ''
-        enhancement07:
-          description: ''
-          taken: false
-          title: ''
-        enhancement08:
-          description: ''
-          taken: false
-          title: ''
-        enhancement09:
-          description: ''
-          taken: false
-          title: ''
-        enhancement10:
-          description: ''
-          taken: false
-          title: ''
-        enhancement11:
-          description: ''
-          taken: false
-          title: ''
-        enhancement12:
-          description: ''
-          taken: false
-          title: ''
-        enhancement13:
-          description: ''
-          taken: false
-          title: ''
-        enhancement14:
-          description: ''
-          taken: false
-          title: ''
-        enhancement15:
-          description: ''
-          taken: false
-          title: ''
-        enhancementNumber: 0
-        limitation01: ''
-        limitation02: ''
-        limitation03: ''
-        limitation04: ''
-        limitation05: ''
-        limitation06: ''
-        limitation07: ''
-        limitation08: ''
-        limitation09: ''
-        limitation10: ''
-        limitationNumber: 0
-      timestaken: '1'
-      secondaryAxiom:
-        selected: none
-        value: null
-    ownership:
-      default: 0
-      aSTzyuIvqyDaFHwy: 3
-      CtisFurQNe9h7ABb: 3
-    _stats:
-      systemId: torgeternity
-      systemVersion: 12.2.0
-      coreVersion: '12.330'
-      createdTime: 1693909340629
-      modifiedTime: 1722152836049
-      lastModifiedBy: 93AMwcGe6H37rcPA
-      compendiumSource: Item.JCBCYFMvmpQHFWM4
-      duplicateSource: null
-    _key: '!actors.items!hcdhRCs56U5JrAl4.hUiTDA9Qcfrvg8kJ'
   - _id: OgvvLI102HQqibWo
     name: Totem
     type: gear
@@ -653,6 +546,328 @@ items:
     _id: GQGV7PufpwLZ9DdV
     sort: 0
     _key: '!actors.items!hcdhRCs56U5JrAl4.GQGV7PufpwLZ9DdV'
+  - name: Edeinos
+    type: race
+    img: systems/torgeternity/images/icons/edeinos-icon.webp
+    system:
+      name: ''
+      description: >-
+        <img class="charimg"
+        src="modules/te001-core-rulebook/images/moonwalker.webp" /><p>The lizard
+        men of the Living Land are fierce and savage warriors. They must be, for
+        they dwell in a brutal environment of carnivorous plants, hostile
+        creatures, and giant creatures hungry for their flesh.</p><p>They also
+        have an innate and overwhelming sense of wonder. Their world is a
+        stunning collection of titanic arches, towering cliffs, dense jungles,
+        and great rolling plains covered by a staggering variety of creatures -
+        and they are never jaded by its astounding
+        beauty.</p><p>@UUID[Compendium.te001-core-rulebook.rules.JournalEntry.pwneQ55M0nnDH0Us.JournalEntryPage.kYP18QiA72P6PlUi#edeinos]{More
+        Details}</p><p>@UUID[Compendium.te001-core-rulebook.rules.JournalEntry.pwneQ55M0nnDH0Us.JournalEntryPage.kYP18QiA72P6PlUi#edeinos$1]{Edeinos
+        Perks - Core
+        Rulebook}</p><p>@UUID[Compendium.te004-living-land.living-land-journals.JournalEntry.uQWRKs5SphHFQtn0.JournalEntryPage.swxidOfsq5XXsXQI#edeinos]{Edeinos
+        Perks - The Living Land Sourcebook}</p>
+      attributeMaximum:
+        charisma: 10
+        dexterity: 14
+        mind: 10
+        spirit: 15
+        strength: 13
+      perksData:
+        - name: Outsider (Edeinos)
+          type: perk
+          img: systems/torgeternity/images/icons/reality-icon.webp
+          system:
+            category: racial
+            cosm: none
+            description: "<p>Edeinos are outsiders to everyone but other edeinos. They subtract 4 from\_<em>persuasion\_</em>tests with non-edeinos, and are often treated with hostility by humans from other realms.</p>"
+            prerequisites: >-
+              <p>@UUID[Compendium.te001-core-rulebook.Items.Item.R7iwjAD49l0zullR]{Edeinos}</p>
+            generalContradiction: false
+            pulpPowers:
+              enhancement01:
+                description: ''
+                taken: false
+                title: ''
+              enhancement02:
+                description: ''
+                taken: false
+                title: ''
+              enhancement03:
+                description: ''
+                taken: false
+                title: ''
+              enhancement04:
+                description: ''
+                taken: false
+                title: ''
+              enhancement05:
+                description: ''
+                taken: false
+                title: ''
+              enhancement06:
+                description: ''
+                taken: false
+                title: ''
+              enhancement07:
+                description: ''
+                taken: false
+                title: ''
+              enhancement08:
+                description: ''
+                taken: false
+                title: ''
+              enhancement09:
+                description: ''
+                taken: false
+                title: ''
+              enhancement10:
+                description: ''
+                taken: false
+                title: ''
+              enhancement11:
+                description: ''
+                taken: false
+                title: ''
+              enhancement12:
+                description: ''
+                taken: false
+                title: ''
+              enhancement13:
+                description: ''
+                taken: false
+                title: ''
+              enhancement14:
+                description: ''
+                taken: false
+                title: ''
+              enhancement15:
+                description: ''
+                taken: false
+                title: ''
+              enhancementNumber: 0
+              limitation01: ''
+              limitation02: ''
+              limitation03: ''
+              limitation04: ''
+              limitation05: ''
+              limitation06: ''
+              limitation07: ''
+              limitation08: ''
+              limitation09: ''
+              limitation10: ''
+              limitationNumber: 0
+            timestaken: ''
+            secondaryAxiom:
+              selected: none
+              value: null
+            transferenceID: bfO7HL7Ytyfjw7g6
+          sort: 400000
+          ownership:
+            default: 0
+            aSTzyuIvqyDaFHwy: 3
+            VAnYow5sWS9EJzo0: 3
+          flags:
+            core: {}
+          _stats:
+            coreVersion: '12.331'
+            systemId: torgeternity
+            systemVersion: 12.3.0
+            createdTime: 1711551146690
+            modifiedTime: 1729581895024
+            lastModifiedBy: d8YcfsxBOP7RAazk
+            compendiumSource: null
+            duplicateSource: null
+      customAttackData:
+        - name: Natural Weapons (Edeinos)
+          type: customAttack
+          img: systems/torgeternity/images/icons/bite-icon.webp
+          system:
+            ap: 0
+            attackWith: unarmedCombat
+            chatNote: ''
+            damage: 2
+            damageType: strengthPlus
+            description: "<p>Edeinos have natural claws and teeth that cause\_<em>Strength</em> +2 damage in\_<em>unarmed combat</em>.</p>"
+            notes: ''
+            transferenceID: KUuPAAiuuqZxnuqm
+          sort: 300000
+          ownership:
+            default: 0
+            aSTzyuIvqyDaFHwy: 3
+            VAnYow5sWS9EJzo0: 3
+          flags:
+            core: {}
+          _stats:
+            coreVersion: '12.331'
+            systemId: torgeternity
+            systemVersion: 12.3.0
+            createdTime: 1711551146690
+            modifiedTime: 1729581761901
+            lastModifiedBy: d8YcfsxBOP7RAazk
+            compendiumSource: null
+            duplicateSource: null
+      size: normal
+      darkvision: false
+    effects: []
+    folder: TwzEDO2AmeaaSwtn
+    ownership:
+      default: 0
+      d8YcfsxBOP7RAazk: 3
+    flags: {}
+    _stats:
+      compendiumSource: Compendium.te001-core-rulebook.Items.Item.R7iwjAD49l0zullR
+      duplicateSource: null
+      coreVersion: '12.331'
+      systemId: torgeternity
+      systemVersion: 12.3.0
+      createdTime: 1729582129107
+      modifiedTime: 1729582129107
+      lastModifiedBy: d8YcfsxBOP7RAazk
+    _id: lepxKAfPcxH7cEuk
+    sort: 250000
+    _key: '!actors.items!hcdhRCs56U5JrAl4.lepxKAfPcxH7cEuk'
+  - name: Outsider (Edeinos)
+    type: perk
+    img: systems/torgeternity/images/icons/reality-icon.webp
+    system:
+      category: racial
+      cosm: none
+      description: "<p>Edeinos are outsiders to everyone but other edeinos. They subtract 4 from\_<em>persuasion\_</em>tests with non-edeinos, and are often treated with hostility by humans from other realms.</p>"
+      prerequisites: >-
+        <p>@UUID[Compendium.te001-core-rulebook.Items.Item.R7iwjAD49l0zullR]{Edeinos}</p>
+      generalContradiction: false
+      pulpPowers:
+        enhancement01:
+          description: ''
+          taken: false
+          title: ''
+        enhancement02:
+          description: ''
+          taken: false
+          title: ''
+        enhancement03:
+          description: ''
+          taken: false
+          title: ''
+        enhancement04:
+          description: ''
+          taken: false
+          title: ''
+        enhancement05:
+          description: ''
+          taken: false
+          title: ''
+        enhancement06:
+          description: ''
+          taken: false
+          title: ''
+        enhancement07:
+          description: ''
+          taken: false
+          title: ''
+        enhancement08:
+          description: ''
+          taken: false
+          title: ''
+        enhancement09:
+          description: ''
+          taken: false
+          title: ''
+        enhancement10:
+          description: ''
+          taken: false
+          title: ''
+        enhancement11:
+          description: ''
+          taken: false
+          title: ''
+        enhancement12:
+          description: ''
+          taken: false
+          title: ''
+        enhancement13:
+          description: ''
+          taken: false
+          title: ''
+        enhancement14:
+          description: ''
+          taken: false
+          title: ''
+        enhancement15:
+          description: ''
+          taken: false
+          title: ''
+        enhancementNumber: 0
+        limitation01: ''
+        limitation02: ''
+        limitation03: ''
+        limitation04: ''
+        limitation05: ''
+        limitation06: ''
+        limitation07: ''
+        limitation08: ''
+        limitation09: ''
+        limitation10: ''
+        limitationNumber: 0
+      timestaken: ''
+      secondaryAxiom:
+        selected: none
+        value: null
+      transferenceID: il3Z7vPAt1moqpxZ
+    sort: 400000
+    ownership:
+      default: 0
+      aSTzyuIvqyDaFHwy: 3
+      VAnYow5sWS9EJzo0: 3
+      d8YcfsxBOP7RAazk: 3
+    flags:
+      core: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      coreVersion: '12.331'
+      systemId: torgeternity
+      systemVersion: 12.3.0
+      createdTime: 1729582129117
+      modifiedTime: 1729582129232
+      lastModifiedBy: d8YcfsxBOP7RAazk
+    _id: il3Z7vPAt1moqpxZ
+    effects: []
+    folder: null
+    _key: '!actors.items!hcdhRCs56U5JrAl4.il3Z7vPAt1moqpxZ'
+  - name: Natural Weapons (Edeinos)
+    type: customAttack
+    img: systems/torgeternity/images/icons/bite-icon.webp
+    system:
+      ap: 0
+      attackWith: unarmedCombat
+      chatNote: ''
+      damage: 2
+      damageType: strengthPlus
+      description: "<p>Edeinos have natural claws and teeth that cause\_<em>Strength</em> +2 damage in\_<em>unarmed combat</em>.</p>"
+      notes: ''
+      transferenceID: 99I93QMkOyDEUng1
+    sort: 300000
+    ownership:
+      default: 0
+      aSTzyuIvqyDaFHwy: 3
+      VAnYow5sWS9EJzo0: 3
+      d8YcfsxBOP7RAazk: 3
+    flags:
+      core: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      coreVersion: '12.331'
+      systemId: torgeternity
+      systemVersion: 12.3.0
+      createdTime: 1729582129234
+      modifiedTime: 1729582129427
+      lastModifiedBy: d8YcfsxBOP7RAazk
+    _id: 99I93QMkOyDEUng1
+    effects: []
+    folder: null
+    _key: '!actors.items!hcdhRCs56U5JrAl4.99I93QMkOyDEUng1'
 effects:
   - origin: Actor.hcdhRCs56U5JrAl4.Item.yAe9TWoKpqHEnno9
     duration:

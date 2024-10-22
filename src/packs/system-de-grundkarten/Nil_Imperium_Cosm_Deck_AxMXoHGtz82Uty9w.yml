@@ -31,8 +31,17 @@ cards:
     value: null
     width: null
     height: null
-    cards: []
+    _stats:
+      coreVersion: '12.331'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
     _key: '!cards.cards!AxMXoHGtz82Uty9w.SY6JVJZLXwWFGbKs'
+    cards: []
   - _id: uvHdyvHUDq8DSuo5
     name: Im Kreuzfeuer
     description: ''
@@ -59,8 +68,17 @@ cards:
     value: null
     width: null
     height: null
-    cards: []
+    _stats:
+      coreVersion: '12.331'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
     _key: '!cards.cards!AxMXoHGtz82Uty9w.uvHdyvHUDq8DSuo5'
+    cards: []
   - _id: Z16Cj6bd6bRN4pdU
     name: Gefangen!
     description: ''
@@ -87,8 +105,17 @@ cards:
     value: null
     width: null
     height: null
-    cards: []
+    _stats:
+      coreVersion: '12.331'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
     _key: '!cards.cards!AxMXoHGtz82Uty9w.Z16Cj6bd6bRN4pdU'
+    cards: []
   - _id: pZbKy3zyHEAe5Rkl
     name: In die Verlängerung
     description: ''
@@ -115,8 +142,17 @@ cards:
     value: null
     width: null
     height: null
-    cards: []
+    _stats:
+      coreVersion: '12.331'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
     _key: '!cards.cards!AxMXoHGtz82Uty9w.pZbKy3zyHEAe5Rkl'
+    cards: []
   - _id: Mo50Wz4H7Wg7tUnu
     name: Plötzlich...
     description: ''
@@ -143,8 +179,17 @@ cards:
     value: null
     width: null
     height: null
-    cards: []
+    _stats:
+      coreVersion: '12.331'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
     _key: '!cards.cards!AxMXoHGtz82Uty9w.Mo50Wz4H7Wg7tUnu'
+    cards: []
   - _id: hvEtnMfprOp0VcJ2
     name: Dramatische Offenbarung
     description: ''
@@ -171,8 +216,17 @@ cards:
     value: null
     width: null
     height: null
-    cards: []
+    _stats:
+      coreVersion: '12.331'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
     _key: '!cards.cards!AxMXoHGtz82Uty9w.hvEtnMfprOp0VcJ2'
+    cards: []
   - _id: mjbfcxAoiVj3YAMk
     name: Vorzeitiger Rückzug
     description: ''
@@ -199,8 +253,17 @@ cards:
     value: null
     width: null
     height: null
-    cards: []
+    _stats:
+      coreVersion: '12.331'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
     _key: '!cards.cards!AxMXoHGtz82Uty9w.mjbfcxAoiVj3YAMk'
+    cards: []
   - _id: WJRfHGz8fLtHFDqa
     name: Triumphierende Rede
     description: ''
@@ -227,8 +290,17 @@ cards:
     value: null
     width: null
     height: null
-    cards: []
+    _stats:
+      coreVersion: '12.331'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
     _key: '!cards.cards!AxMXoHGtz82Uty9w.WJRfHGz8fLtHFDqa'
+    cards: []
   - _id: FhaqRHDn7h5Dn5SN
     name: Unvermeidbare Rückkehr
     description: ''
@@ -255,8 +327,17 @@ cards:
     value: null
     width: null
     height: null
-    cards: []
+    _stats:
+      coreVersion: '12.331'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
     _key: '!cards.cards!AxMXoHGtz82Uty9w.FhaqRHDn7h5Dn5SN'
+    cards: []
   - _id: hjYDzFSHVBChEyHo
     name: Gesetz der Action
     description: ''
@@ -283,8 +364,17 @@ cards:
     value: null
     width: null
     height: null
-    cards: []
+    _stats:
+      coreVersion: '12.331'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
     _key: '!cards.cards!AxMXoHGtz82Uty9w.hjYDzFSHVBChEyHo'
+    cards: []
 rotation: 0
 displayCount: false
 folder: null
@@ -304,9 +394,11 @@ height: null
 _stats:
   systemId: torgeternity
   systemVersion: 3.8.1
-  coreVersion: '11.315'
+  coreVersion: '12.331'
   createdTime: 1716827812048
   modifiedTime: 1716827812048
   lastModifiedBy: VAnYow5sWS9EJzo0
+  compendiumSource: Cards.VPYV2jqR3aAc2Mzj
+  duplicateSource: null
 _key: '!cards!AxMXoHGtz82Uty9w'
 

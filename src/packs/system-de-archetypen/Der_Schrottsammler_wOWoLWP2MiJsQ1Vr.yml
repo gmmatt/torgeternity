@@ -638,6 +638,45 @@ items:
       compendiumSource: Compendium.te001-core-rulebook.grw-de-ausruestung.Item.lAjH7TpknFEg0r9V
       duplicateSource: null
     _key: '!actors.items!wOWoLWP2MiJsQ1Vr.9ZH2I54xOn8z9G0M'
+  - name: Mensch
+    type: race
+    img: systems/torgeternity/images/icons/human-icon.webp
+    system:
+      name: ''
+      description: >-
+        <img class="charimg" src="modules/te001-core-rulebook/images/aidan.webp"
+        /><p>Die meisten Charaktere in den Possibility Wars sind Menschen von
+        der Zentralerde oder einem der sieben
+        Kosmen.</p><p>@UUID[Compendium.te001-core-rulebook.grw-de-grw.JournalEntry.c5yocLtQQUdZQeJ4.JournalEntryPage.wjPJxCrVJriZ61Wq#mensch]{Vorzüge:
+        Mensch}</p>
+      attributeMaximum:
+        charisma: 13
+        dexterity: 13
+        mind: 13
+        spirit: 13
+        strength: 13
+      perksData: []
+      size: normal
+      darkvision: false
+      customAttackData: []
+    effects: []
+    folder: GM4GiQo3OB1a9yUY
+    flags: {}
+    _stats:
+      compendiumSource: Compendium.te001-core-rulebook.grw-de-vorzuverb.Item.33iJGyN9gPsr4jr6
+      duplicateSource: null
+      coreVersion: '12.331'
+      systemId: torgeternity
+      systemVersion: 12.3.0
+      createdTime: 1729599402072
+      modifiedTime: 1729599402072
+      lastModifiedBy: d8YcfsxBOP7RAazk
+    _id: OnT3Wlcrq6cdccRu
+    sort: 0
+    ownership:
+      default: 0
+      d8YcfsxBOP7RAazk: 3
+    _key: '!actors.items!wOWoLWP2MiJsQ1Vr.OnT3Wlcrq6cdccRu'
 effects:
   - _id: Rhb58OAkOKdswdXy
     changes:

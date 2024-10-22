@@ -29,8 +29,17 @@ cards:
     value: null
     width: null
     height: null
-    cards: []
+    _stats:
+      coreVersion: '12.331'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
     _key: '!cards.cards!Mcct61buQ9qPeJ6Z.aBTk5iY69BuB3gA8'
+    cards: []
   - _id: cFo0NGc5S8PYqfef
     name: The Law of Decay
     description: ''
@@ -56,8 +65,17 @@ cards:
     value: null
     width: null
     height: null
-    cards: []
+    _stats:
+      coreVersion: '12.331'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
     _key: '!cards.cards!Mcct61buQ9qPeJ6Z.cFo0NGc5S8PYqfef'
+    cards: []
   - _id: aCR3hwFKzZ6vAjZi
     name: The Best Defense
     description: ''
@@ -83,8 +101,17 @@ cards:
     value: null
     width: null
     height: null
-    cards: []
+    _stats:
+      coreVersion: '12.331'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
     _key: '!cards.cards!Mcct61buQ9qPeJ6Z.aCR3hwFKzZ6vAjZi'
+    cards: []
   - _id: Ad5LtrrjMzecOkAj
     name: Survival of the Fittest
     description: ''
@@ -110,8 +137,17 @@ cards:
     value: null
     width: null
     height: null
-    cards: []
+    _stats:
+      coreVersion: '12.331'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
     _key: '!cards.cards!Mcct61buQ9qPeJ6Z.Ad5LtrrjMzecOkAj'
+    cards: []
   - _id: dtGywaiJN9nNgIxW
     name: Perils of the Living Land
     description: ''
@@ -137,8 +173,17 @@ cards:
     value: null
     width: null
     height: null
-    cards: []
+    _stats:
+      coreVersion: '12.331'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
     _key: '!cards.cards!Mcct61buQ9qPeJ6Z.dtGywaiJN9nNgIxW'
+    cards: []
   - _id: n2b1pgyrXaJUyQqb
     name: The Deep Mist
     description: ''
@@ -164,8 +209,17 @@ cards:
     value: null
     width: null
     height: null
-    cards: []
+    _stats:
+      coreVersion: '12.331'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
     _key: '!cards.cards!Mcct61buQ9qPeJ6Z.n2b1pgyrXaJUyQqb'
+    cards: []
   - _id: 1Kc80KPMm7Itda5D
     name: The Law of Life
     description: ''
@@ -191,8 +245,17 @@ cards:
     value: null
     width: null
     height: null
-    cards: []
+    _stats:
+      coreVersion: '12.331'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
     _key: '!cards.cards!Mcct61buQ9qPeJ6Z.1Kc80KPMm7Itda5D'
+    cards: []
   - _id: ReYOiljNtVLqZE1V
     name: Primal Instincts
     description: ''
@@ -218,8 +281,17 @@ cards:
       number: ''
     width: null
     height: null
-    cards: []
+    _stats:
+      coreVersion: '12.331'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
     _key: '!cards.cards!Mcct61buQ9qPeJ6Z.ReYOiljNtVLqZE1V'
+    cards: []
   - _id: BTbYcz71rD4IfJ1a
     name: Lost Treasure
     description: ''
@@ -245,8 +317,17 @@ cards:
     value: null
     width: null
     height: null
-    cards: []
+    _stats:
+      coreVersion: '12.331'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
     _key: '!cards.cards!Mcct61buQ9qPeJ6Z.BTbYcz71rD4IfJ1a'
+    cards: []
   - _id: 0LscVrRTzQVQ9w07
     name: The Law of Decay
     description: ''
@@ -272,8 +353,17 @@ cards:
     value: null
     width: null
     height: null
-    cards: []
+    _stats:
+      coreVersion: '12.331'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
     _key: '!cards.cards!Mcct61buQ9qPeJ6Z.0LscVrRTzQVQ9w07'
+    cards: []
 rotation: 0
 displayCount: false
 folder: null
@@ -298,9 +388,11 @@ height: null
 _stats:
   systemId: torgeternity
   systemVersion: 3.8.1
-  coreVersion: '11.315'
+  coreVersion: '12.331'
   createdTime: 1716827808579
   modifiedTime: 1716827808579
   lastModifiedBy: VAnYow5sWS9EJzo0
+  compendiumSource: Cards.4b8BekWDWpSWF961
+  duplicateSource: null
 _key: '!cards!Mcct61buQ9qPeJ6Z'
 

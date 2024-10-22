@@ -29,8 +29,17 @@ cards:
     value: null
     width: null
     height: null
-    cards: []
+    _stats:
+      coreVersion: '12.331'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
     _key: '!cards.cards!08JHFiMFJy4yssmg.5aRVFHAPlIIyX5Ir'
+    cards: []
   - _id: O4REfwmqEcPFD0of
     name: Pris entre deux feux
     description: ''
@@ -56,8 +65,17 @@ cards:
     value: null
     width: null
     height: null
-    cards: []
+    _stats:
+      coreVersion: '12.331'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
     _key: '!cards.cards!08JHFiMFJy4yssmg.O4REfwmqEcPFD0of'
+    cards: []
   - _id: 98XTH1Ru0CpZQbSE
     name: Capturé !
     description: ''
@@ -83,8 +101,17 @@ cards:
       number: ''
     width: null
     height: null
-    cards: []
+    _stats:
+      coreVersion: '12.331'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
     _key: '!cards.cards!08JHFiMFJy4yssmg.98XTH1Ru0CpZQbSE'
+    cards: []
   - _id: Nej9gGHiFHQp2WCG
     name: Deuxième round !
     description: ''
@@ -110,8 +137,17 @@ cards:
     value: null
     width: null
     height: null
-    cards: []
+    _stats:
+      coreVersion: '12.331'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
     _key: '!cards.cards!08JHFiMFJy4yssmg.Nej9gGHiFHQp2WCG'
+    cards: []
   - _id: 9da5ESwm9Z8b33M2
     name: Soudain ...
     description: ''
@@ -137,8 +173,17 @@ cards:
     value: null
     width: null
     height: null
-    cards: []
+    _stats:
+      coreVersion: '12.331'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
     _key: '!cards.cards!08JHFiMFJy4yssmg.9da5ESwm9Z8b33M2'
+    cards: []
   - _id: exAfcwhEqsKWGjqP
     name: Révélation dramatique
     description: ''
@@ -164,8 +209,17 @@ cards:
     value: null
     width: null
     height: null
-    cards: []
+    _stats:
+      coreVersion: '12.331'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
     _key: '!cards.cards!08JHFiMFJy4yssmg.exAfcwhEqsKWGjqP'
+    cards: []
   - _id: nBckGRaX71l87E1i
     name: Sursit temporaire
     description: ''
@@ -191,8 +245,17 @@ cards:
     value: null
     width: null
     height: null
-    cards: []
+    _stats:
+      coreVersion: '12.331'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
     _key: '!cards.cards!08JHFiMFJy4yssmg.nBckGRaX71l87E1i'
+    cards: []
   - _id: JkR4WTRido0EnqJR
     name: Vantardise triomphante
     description: ''
@@ -218,8 +281,17 @@ cards:
       number: ''
     width: null
     height: null
-    cards: []
+    _stats:
+      coreVersion: '12.331'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
     _key: '!cards.cards!08JHFiMFJy4yssmg.JkR4WTRido0EnqJR'
+    cards: []
   - _id: lZQroaoAPprFr2oz
     name: L'inévitable retour
     description: ''
@@ -245,8 +317,17 @@ cards:
     value: null
     width: null
     height: null
-    cards: []
+    _stats:
+      coreVersion: '12.331'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
     _key: '!cards.cards!08JHFiMFJy4yssmg.lZQroaoAPprFr2oz'
+    cards: []
   - _id: 3x18tci1A40OyRoM
     name: La loi de l'action
     description: ''
@@ -272,8 +353,17 @@ cards:
     value: null
     width: null
     height: null
-    cards: []
+    _stats:
+      coreVersion: '12.331'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
     _key: '!cards.cards!08JHFiMFJy4yssmg.3x18tci1A40OyRoM'
+    cards: []
 rotation: 0
 displayCount: false
 folder: null
@@ -297,9 +387,11 @@ height: null
 _stats:
   systemId: torgeternity
   systemVersion: 3.8.1
-  coreVersion: '11.315'
+  coreVersion: '12.331'
   createdTime: 1716827810417
   modifiedTime: 1716827810417
   lastModifiedBy: VAnYow5sWS9EJzo0
+  compendiumSource: Cards.4b8BekWDWpSWF961
+  duplicateSource: null
 _key: '!cards!08JHFiMFJy4yssmg'
 

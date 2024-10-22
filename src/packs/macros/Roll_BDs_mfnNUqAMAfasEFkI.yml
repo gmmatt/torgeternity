@@ -14,10 +14,12 @@ flags:
 _stats:
   systemId: torgeternity
   systemVersion: 3.8.1
-  coreVersion: '11.315'
+  coreVersion: '12.331'
   createdTime: 1710250047195
   modifiedTime: 1716827807243
   lastModifiedBy: VAnYow5sWS9EJzo0
+  compendiumSource: null
+  duplicateSource: null
 _id: mfnNUqAMAfasEFkI
 sort: 0
 _key: '!macros!mfnNUqAMAfasEFkI'

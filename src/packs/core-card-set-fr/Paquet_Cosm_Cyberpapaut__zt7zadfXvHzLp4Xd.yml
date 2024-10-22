@@ -29,8 +29,17 @@ cards:
     value: null
     width: null
     height: null
-    cards: []
+    _stats:
+      coreVersion: '12.331'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
     _key: '!cards.cards!zt7zadfXvHzLp4Xd.NjMFOSDhuMFl0iJh'
+    cards: []
   - _id: lLcqSYVKLd0H7bxT
     name: La Résistance !
     description: ''
@@ -56,8 +65,17 @@ cards:
     value: null
     width: null
     height: null
-    cards: []
+    _stats:
+      coreVersion: '12.331'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
     _key: '!cards.cards!zt7zadfXvHzLp4Xd.lLcqSYVKLd0H7bxT'
+    cards: []
   - _id: tK3DDkMkLvlL96a4
     name: Conjunction
     description: ''
@@ -83,8 +101,17 @@ cards:
     value: null
     width: null
     height: null
-    cards: []
+    _stats:
+      coreVersion: '12.331'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
     _key: '!cards.cards!zt7zadfXvHzLp4Xd.tK3DDkMkLvlL96a4'
+    cards: []
   - _id: 02E1CVWWPbveXslC
     name: Magie hérétique
     description: ''
@@ -110,8 +137,17 @@ cards:
     value: null
     width: null
     height: null
-    cards: []
+    _stats:
+      coreVersion: '12.331'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
     _key: '!cards.cards!zt7zadfXvHzLp4Xd.02E1CVWWPbveXslC'
+    cards: []
   - _id: qsAxiVcYA0ybDmRz
     name: La fureur de Malraux
     description: ''
@@ -137,8 +173,17 @@ cards:
     value: null
     width: null
     height: null
-    cards: []
+    _stats:
+      coreVersion: '12.331'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
     _key: '!cards.cards!zt7zadfXvHzLp4Xd.qsAxiVcYA0ybDmRz'
+    cards: []
   - _id: TJZ83NeE6JEQixJj
     name: Paranoïa exacerbée
     description: ''
@@ -164,8 +209,17 @@ cards:
     value: null
     width: null
     height: null
-    cards: []
+    _stats:
+      coreVersion: '12.331'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
     _key: '!cards.cards!zt7zadfXvHzLp4Xd.TJZ83NeE6JEQixJj'
+    cards: []
   - _id: kRmt9YLxSuhQmcLh
     name: Dénonciation
     description: ''
@@ -191,8 +245,17 @@ cards:
     value: null
     width: null
     height: null
-    cards: []
+    _stats:
+      coreVersion: '12.331'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
     _key: '!cards.cards!zt7zadfXvHzLp4Xd.kRmt9YLxSuhQmcLh'
+    cards: []
   - _id: BZDOkEh7srPTsQPC
     name: Avis de recherche
     description: ''
@@ -218,8 +281,17 @@ cards:
     value: null
     width: null
     height: null
-    cards: []
+    _stats:
+      coreVersion: '12.331'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
     _key: '!cards.cards!zt7zadfXvHzLp4Xd.BZDOkEh7srPTsQPC'
+    cards: []
   - _id: pfg9gbHGZGKsE7a3
     name: Mise à jour impérative
     description: ''
@@ -245,8 +317,17 @@ cards:
     value: null
     width: null
     height: null
-    cards: []
+    _stats:
+      coreVersion: '12.331'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
     _key: '!cards.cards!zt7zadfXvHzLp4Xd.pfg9gbHGZGKsE7a3'
+    cards: []
   - _id: U9v0fSceNBGzj0Na
     name: Rage
     description: ''
@@ -272,8 +353,17 @@ cards:
     value: null
     width: null
     height: null
-    cards: []
+    _stats:
+      coreVersion: '12.331'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
     _key: '!cards.cards!zt7zadfXvHzLp4Xd.U9v0fSceNBGzj0Na'
+    cards: []
 rotation: 0
 displayCount: false
 folder: null
@@ -297,9 +387,11 @@ height: null
 _stats:
   systemId: torgeternity
   systemVersion: 3.8.1
-  coreVersion: '11.315'
+  coreVersion: '12.331'
   createdTime: 1716827810771
   modifiedTime: 1716827810771
   lastModifiedBy: VAnYow5sWS9EJzo0
+  compendiumSource: Cards.4b8BekWDWpSWF961
+  duplicateSource: null
 _key: '!cards!zt7zadfXvHzLp4Xd'
 
