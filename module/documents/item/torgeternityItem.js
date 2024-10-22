@@ -39,10 +39,6 @@ export default class TorgeternityItem extends Item {
         this.system.navStyle = 'right:-210px;top:210px';
         this.system.extendedNav = true;
         break;
-      case 'race':
-        this.system.navStyle = 'right:-160px;top:160px';
-        this.system.extendedNav = true;
-        break;
       default:
         this.system.navStyle = 'right:-110px;top:115px';
         this.system.extendedNav = false;
