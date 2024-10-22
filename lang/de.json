@@ -642,6 +642,10 @@
       "unTarget": {
         "hint": "Targets are reseted after an attack by default. Uncheck if you want to keep them.",
         "name": "Cancel targeting"
+      },
+      "useYear1PPTent": {
+        "hint": "Verwende den Pan-Pacifica Tischaufsteller nach Jahr 1.",
+        "name": "Jahr-1 PP Aufsteller"
       }
     },
     "sheetLabels": {

@@ -641,6 +641,10 @@
       "unTarget": {
         "hint": "Targets are reseted after an attack by default. Uncheck if you want to keep them.",
         "name": "Cancel targeting"
+      },
+      "useYear1PPTent": {
+        "hint": "Use the Pan-Pacifica tabletent after year 1.",
+        "name": "Year-1 PP TT"
       }
     },
     "sheetLabels": {

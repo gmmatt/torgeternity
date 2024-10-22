@@ -1271,6 +1271,11 @@ Base english tent cards images
   background-size: 100% 100%;
 }
 
+#navigation .cosm-card.panPacificaY1 {
+  background: url(../images/cosm-cards/panPpacifica_Year1.webp);
+  background-size: 100% 100%;
+}
+
 #navigation .cosm-card.orrorsh {
   background: url(../images/cosm-cards/orrorsh.webp);
   background-size: 100% 100%;
@@ -1406,6 +1411,11 @@ german tent cards images
 
 #navigation .de.cosm-card.panPacifica {
   background: url(../images/deutsch/cosm-tabletents/Pan-Pacifica.webp);
+  background-size: 100% 100%;
+}
+
+#navigation .de.cosm-card.panPacificaY1 {
+  background: url(../images/deutsch/cosm-tabletents/Pan-Pacifica-Jahrr1.webp);
   background-size: 100% 100%;
 }
 

@@ -15,7 +15,7 @@
 				{{/if}}
 				{{{this.name}}}
 				<div class="cosm-icone {{this.flags.torgeternity.cosm}}">
-					<div class="{{../lang}} cosm-card {{this.flags.torgeternity.cosm}}"></div>
+					<div class="{{../lang}} cosm-card {{this.flags.torgeternity.cosm}}{{#if (and ../y1pp (eq this.flags.torgeternity.cosm "panPacifica") (or (eq ../lang "en") (eq ../lang "de")))}}Y1{{/if}}"></div>
 				</div>
 				{{#if this.flags.torgeternity.displayCosm2}}
 				<div

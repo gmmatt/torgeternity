@@ -12,6 +12,7 @@
 - Old PNG and JPEG files were deleted to reduce the amount of data the system is using (they were replaced by .webp images way before) [#457](https://github.com/gmmatt/torgeternity/issues/457)
 - The prerequisites of a perk is now a textarea and not longer a textfield (this makes it possible to increase size and having a better overview) [#254](https://github.com/gmmatt/torgeternity/issues/254)
 - Races are now as items and can be dragged onto the character. This influences the attribute maximums and adds race-related perks. [#52](https://github.com/gmmatt/torgeternity/issues/52)
+- Option for using Pan-Pacifica tabletents after year 1 [#467](https://github.com/gmmatt/torgeternity/issues/467)
 
 ## v. 12.2.8
 

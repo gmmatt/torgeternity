@@ -642,6 +642,10 @@
       "unTarget": {
         "hint": "Par défaut, vos cibles sont perdues après une attaque. Décochez si vous voulez garder le ciblage.",
         "name": "Annulation du ciblage"
+      },
+      "useYear1PPTent": {
+        "hint": "Use the Pan-Pacifica tabletent after year 1.",
+        "name": "Year-1 PP TT"
       }
     },
     "sheetLabels": {
