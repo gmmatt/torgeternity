@@ -1,4 +1,5 @@
 import { RaceItemData } from './data/item/race.js';
+import TorgeternityItem from './documents/item/torgeternityItem.js';
 
 /**
  *
@@ -163,11 +164,14 @@ export async function torgMigration() {
       // Give humans a Human race item, other races, well, bah humbug!
       for (const actor of game.actors) {
         if (actor.type !== 'stormknight' && actor.system?.details.race !== 'human') continue;
+        const raceItem = new TorgeternityItem({
+          type: 'race',
+          name: game.i18n.localize('torgeternity.perkTypes.human'),
+        });
 
-        const humanRace = new RaceItemData();
-        humanRace.name = game.i18n.localize('torgeternity.perkTypes.human');
-        await actor.createEmbeddedDocuments('Item', [humanRace]);
+        await actor.createEmbeddedDocuments('Item', [raceItem]);
       }
+
       // If an actor has as avatar image an old standard path, replace it with the new one (and tokens)
       const badActorPictureKeys = [
         'systems\\torgeternity\\images\\icons\\threat.webp',
