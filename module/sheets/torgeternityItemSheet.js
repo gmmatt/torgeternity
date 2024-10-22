@@ -345,12 +345,13 @@ async function reloadAmmo(actor, weapon, usedAmmo) {
       });
     }
   }
-
+  if (usedAmmo.system.quantity <= 0) {
+    ui.notifications.error(game.i18n.localize('torgeternity.notifications.clipEmpty'));
+    return;
+  }
   await weapon.update({ 'system.ammo.value': weapon.system.ammo.max });
 
-  usedAmmo.system.quantity === 1
-    ? await actor.deleteEmbeddedDocuments('Item', [usedAmmo.id])
-    : await usedAmmo.update({ 'system.quantity': usedAmmo.system.quantity - 1 });
+  await usedAmmo.update({ 'system.quantity': usedAmmo.system.quantity - 1 });
 
   await ChatMessage.create({
     content: game.i18n.format('torgeternity.chatText.reloaded', { a: weapon.name }),

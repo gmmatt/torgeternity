@@ -1,4 +1,5 @@
 import { RaceItemData } from './data/item/race.js';
+import TorgeternityItem from './documents/item/torgeternityItem.js';
 
 /**
  *
@@ -160,12 +161,58 @@ export async function torgMigration() {
 
     // migrations for 12.3.0
     if (foundry.utils.isNewerVersion('12.3.0', migrationVersion)) {
+      // Give humans a Human race item, other races, well, bah humbug!
       for (const actor of game.actors) {
         if (actor.type !== 'stormknight' && actor.system?.details.race !== 'human') continue;
+        const raceItem = new TorgeternityItem({
+          type: 'race',
+          name: game.i18n.localize('torgeternity.perkTypes.human'),
+        });
 
-        const humanRace = new RaceItemData();
-        humanRace.name = game.i18n.localize('torgeternity.perkTypes.human');
-        await actor.createEmbeddedDocuments('Item', [humanRace]);
+        await actor.createEmbeddedDocuments('Item', [raceItem]);
+      }
+
+      // If an actor has as avatar image an old standard path, replace it with the new one (and tokens)
+      const badActorPictureKeys = [
+        'systems\\torgeternity\\images\\icons\\threat.webp',
+        'systems\\torgeternity\\images\\icons\\vehicle-aircraft.webp',
+        'systems\\torgeternity\\images\\icons\\vehicle-beast.webp',
+        'systems\\torgeternity\\images\\icons\\vehicle-land.webp',
+        'systems\\torgeternity\\images\\icons\\vehicle-ship.webp',
+      ];
+
+      const badActorTokenKeys = [
+        'systems\\torgeternity\\images\\icons\\threat.Token.webp',
+        'systems\\torgeternity\\images\\icons\\vehicle-aircraft-Token.webp',
+        'systems\\torgeternity\\images\\icons\\vehicle-beast-Token.webp',
+        'systems\\torgeternity\\images\\icons\\vehicle-land-Token.webp',
+        'systems\\torgeternity\\images\\icons\\vehicle-ship-Token.webp',
+      ];
+
+      for (const actor of game.actors) {
+        for (const key of badActorPictureKeys) {
+          if (actor.img.includes(key)) {
+            const goodKey = key.replace('\\icons\\', '\\characters\\');
+            await actor.update({ img: goodKey });
+          }
+        }
+
+        for (const key of badActorTokenKeys) {
+          if (
+            key === 'systems\\torgeternity\\images\\icons\\threat.Token.webp' &&
+            actor.prototypeToken.texture.src ===
+              'systems\\torgeternity\\images\\icons\\threat.Token.webp'
+          ) {
+            const goodKey = 'systems\\torgeternity\\images\\characters\\threat-generic.Token.webp';
+            await actor.update({ 'prototypeToken.texture.src': goodKey });
+            continue;
+          }
+
+          if (actor.prototypeToken.texture.src.includes(key)) {
+            const goodKey = key.replace('\\icons\\', '\\characters\\');
+            await actor.update({ 'prototypeToken.texture.src': goodKey });
+          }
+        }
       }
     }
 

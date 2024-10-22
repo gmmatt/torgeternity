@@ -16,6 +16,16 @@ export function registerTorgSettings() {
     default: true, // The default value for the setting
   });
 
+  game.settings.register('torgeternity', 'y1pp', {
+    name: 'torgeternity.settingMenu.useYear1PPTent.name',
+    hint: 'torgeternity.settingMenu.useYear1PPTent.hint',
+    scope: 'world',
+    config: true,
+    type: Boolean,
+    default: false,
+    onChange: () => window.location.reload(),
+  });
+
   // ---------Set up Cards
   game.settings.register('torgeternity', 'setUpCards', {
     name: 'torgeternity.settingMenu.setupCards.name', // Register a module setting with checkbox

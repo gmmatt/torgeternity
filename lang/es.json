@@ -470,7 +470,9 @@
       "raceExistent": "You have already chosen a race.",
       "notAPerkItem": "Has intentado asignar una ventaja de la categoría {a} a esta raza, pero debe pertenecer a la categoría racial. La acción ha sido abortada.",
       "addedRacePerkToActor": "Añadido {perkName}-perk al actor.",
-      "reachedMaximumAttr": "Has alcanzado el máximo de atributo especificado por tu raza. No es posible aumentar más"    },
+      "reachedMaximumAttr": "Has alcanzado el máximo de atributo especificado por tu raza. No es posible aumentar más",
+      "clipEmpty": "Esta munición está vacía y no puede utilizarse para recargar."
+    },
     "packs": {
       "basicRules": "torgeternity.basic-rules",
       "decks": "torgeternity.core-card-set"
@@ -639,6 +641,10 @@
       "unTarget": {
         "hint": "Targets are reseted after an attack by default. Uncheck if you want to keep them.",
         "name": "Cancel targeting"
+      },
+      "useYear1PPTent": {
+        "hint": "Use the Pan-Pacifica tabletent after year 1.",
+        "name": "Year-1 PP TT"
       }
     },
     "sheetLabels": {
