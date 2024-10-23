@@ -104,10 +104,12 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: null
+      coreVersion: '12.331'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
+      compendiumSource: Item.9fW6U7drFdMu7bJ9
+      duplicateSource: null
     _key: '!actors.items!hcdhRCs56U5JrAl4.5my70YmZnnaeEIRG'
   - _id: fjKbGNOzANmk1Ncb
     name: Coup de queue
@@ -209,10 +211,12 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: null
+      coreVersion: '12.331'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
+      compendiumSource: Item.y88YRPsbrWD62tic
+      duplicateSource: null
     _key: '!actors.items!hcdhRCs56U5JrAl4.fjKbGNOzANmk1Ncb'
   - _id: OZvqS64IhCczdFkT
     name: Totem
@@ -236,10 +240,12 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: null
+      coreVersion: '12.331'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
+      compendiumSource: Item.V6vSEnqgNmYQKs4o
+      duplicateSource: null
     _key: '!actors.items!hcdhRCs56U5JrAl4.OZvqS64IhCczdFkT'
   - _id: EYZeSgW1bN1FwJ3M
     name: Armure en racines d’hrockt
@@ -270,13 +276,25 @@ items:
           turns: null
           startRound: null
           startTurn: null
-        icon: icons/svg/aura.svg
         origin: Item.ReyQMFRMLe44saUX
-        tint: null
+        tint: '#ffffff'
         transfer: true
         name: +2 Armor
         description: ''
         statuses: []
+        _stats:
+          coreVersion: '12.331'
+          systemId: null
+          systemVersion: null
+          createdTime: null
+          modifiedTime: null
+          lastModifiedBy: null
+          compendiumSource: null
+          duplicateSource: null
+        img: icons/svg/aura.svg
+        type: base
+        system: {}
+        sort: 0
         _key: >-
           !actors.items.effects!hcdhRCs56U5JrAl4.EYZeSgW1bN1FwJ3M.n01gCYi1zesLMJRk
     folder: null
@@ -305,10 +323,12 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: null
+      coreVersion: '12.331'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
+      compendiumSource: Item.ReyQMFRMLe44saUX
+      duplicateSource: null
     _key: '!actors.items!hcdhRCs56U5JrAl4.EYZeSgW1bN1FwJ3M'
   - _id: b4PHFD1K2nhuxwQ7
     name: Lance en bois d’hrockt
@@ -346,10 +366,12 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: null
+      coreVersion: '12.331'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
+      compendiumSource: Item.0ibFEQi66ymd6PnN
+      duplicateSource: null
     _key: '!actors.items!hcdhRCs56U5JrAl4.b4PHFD1K2nhuxwQ7'
   - _id: IqVsEgZ91RWXgkHw
     name: Frappe
@@ -403,10 +425,12 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: null
+      coreVersion: '12.331'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
+      compendiumSource: Item.n96Wp0YtxBbpMAJG
+      duplicateSource: null
     _key: '!actors.items!hcdhRCs56U5JrAl4.IqVsEgZ91RWXgkHw'
   - _id: xYEb0MXVrXspQdDt
     name: Miracles
@@ -518,10 +542,12 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: null
+      coreVersion: '12.331'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
     _key: '!actors.items!hcdhRCs56U5JrAl4.xYEb0MXVrXspQdDt'
   - _id: g0cH43XIVTVK0fYY
     name: morsure/griffes
@@ -551,10 +577,12 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: null
+      coreVersion: '12.331'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
+      compendiumSource: Compendium.te001-core-rulebook.Items.ZFmi6QH0qgga6sTT
+      duplicateSource: null
     _key: '!actors.items!hcdhRCs56U5JrAl4.g0cH43XIVTVK0fYY'
   - _id: mlBKn7lTOYY4sEqu
     name: morsure/griffes
@@ -588,10 +616,12 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: null
+      coreVersion: '12.331'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
+      compendiumSource: Item.Aan7zdkY9kl0RE7T
+      duplicateSource: null
     _key: '!actors.items!hcdhRCs56U5JrAl4.mlBKn7lTOYY4sEqu'
   - _id: v3Kj5kG8dQiQ0l8i
     name: Soins
@@ -647,10 +677,12 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: null
+      coreVersion: '12.331'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
+      compendiumSource: Item.iDFKWtv4WCTrteId
+      duplicateSource: null
     _key: '!actors.items!hcdhRCs56U5JrAl4.v3Kj5kG8dQiQ0l8i'
   - _id: GdJyPlTcYVLbC7rU
     name: Protection contre les ennemis
@@ -713,10 +745,12 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: null
+      coreVersion: '12.331'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
     _key: '!actors.items!hcdhRCs56U5JrAl4.GdJyPlTcYVLbC7rU'
 effects:
   - _id: tmMqjv8tqvtHiRnE
@@ -739,13 +773,25 @@ effects:
       turns: null
       startRound: null
       startTurn: null
-    icon: icons/svg/aura.svg
-    origin: Actor.zQf4otdeKEQjCe6e.OwnedItem.EYZeSgW1bN1FwJ3M
-    tint: null
+    origin: Actor.zQf4otdeKEQjCe6e.Item.EYZeSgW1bN1FwJ3M
+    tint: '#ffffff'
     transfer: true
     name: armure +2
     description: ''
     statuses: []
+    _stats:
+      coreVersion: '12.331'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+    img: icons/svg/aura.svg
+    type: base
+    system: {}
+    sort: 0
     _key: '!actors.effects!hcdhRCs56U5JrAl4.tmMqjv8tqvtHiRnE'
 folder: null
 sort: 100001
@@ -1236,14 +1282,20 @@ prototypeToken:
       max: 1
     color: null
     attenuation: 0.5
+    negative: false
+    priority: 0
   texture:
     src: systems/torgeternity/images/characters/Edeinos_Optant.Token.webp
-    tint: null
+    tint: '#ffffff'
     scaleX: 1
     scaleY: 1
     offsetX: 0
     offsetY: 0
     rotation: 0
+    anchorX: 0.5
+    anchorY: 0.5
+    fit: contain
+    alphaThreshold: 0.75
   sight:
     angle: 360
     enabled: false
@@ -1253,14 +1305,30 @@ prototypeToken:
     attenuation: 0.1
     saturation: 0
     contrast: 0
+    color: null
   appendNumber: false
   prependAdjective: false
   detectionModes: []
+  hexagonalShape: 0
+  occludable:
+    radius: 0
+  ring:
+    enabled: false
+    colors:
+      ring: null
+      background: null
+    effects: 1
+    subject:
+      scale: 1
+      texture: null
 _stats:
   systemId: torgeternity
   systemVersion: 3.8.1
-  coreVersion: '11.315'
+  coreVersion: '12.331'
   createdTime: 1716827809684
   modifiedTime: 1716827809684
   lastModifiedBy: VAnYow5sWS9EJzo0
+  compendiumSource: null
+  duplicateSource: null
 _key: '!actors!hcdhRCs56U5JrAl4'
+

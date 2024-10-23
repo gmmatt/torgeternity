@@ -30,10 +30,12 @@ pages:
     _stats:
       systemId: torgeternity
       systemVersion: 3.1.1
-      coreVersion: '11.308'
+      coreVersion: '12.331'
       createdTime: null
       modifiedTime: 1693853249989
       lastModifiedBy: CtisFurQNe9h7ABb
+      compendiumSource: null
+      duplicateSource: null
     _key: '!journal.pages!EDI95jBrQruLzDXr.vKRDjVnjWqsowkYt'
   - name: About the Basic Rules
     type: text
@@ -75,10 +77,12 @@ pages:
     _stats:
       systemId: torgeternity
       systemVersion: 3.1.1
-      coreVersion: '11.308'
+      coreVersion: '12.331'
       createdTime: 1693843540184
       modifiedTime: 1694873179279
       lastModifiedBy: CtisFurQNe9h7ABb
+      compendiumSource: null
+      duplicateSource: null
     _key: '!journal.pages!EDI95jBrQruLzDXr.naFySvEhP2Ky4wyx'
   - name: Session Zero
     type: text
@@ -105,10 +109,12 @@ pages:
     _stats:
       systemId: torgeternity
       systemVersion: 3.1.1
-      coreVersion: '11.308'
+      coreVersion: '12.331'
       createdTime: 1693843544137
       modifiedTime: 1694873164137
       lastModifiedBy: CtisFurQNe9h7ABb
+      compendiumSource: null
+      duplicateSource: null
     _key: '!journal.pages!EDI95jBrQruLzDXr.351aQbej1BLlJwOd'
   - sort: 400000
     name: Basic Rules
@@ -136,10 +142,12 @@ pages:
     _stats:
       systemId: torgeternity
       systemVersion: 3.1.1
-      coreVersion: '11.308'
+      coreVersion: '12.331'
       createdTime: 1693219957671
       modifiedTime: 1694885800455
       lastModifiedBy: CtisFurQNe9h7ABb
+      compendiumSource: null
+      duplicateSource: null
     _key: '!journal.pages!EDI95jBrQruLzDXr.Xp1tet83kHrezpIU'
   - name: Foundry Integration
     type: text
@@ -167,10 +175,12 @@ pages:
     _stats:
       systemId: torgeternity
       systemVersion: 3.2.1
-      coreVersion: '11.313'
+      coreVersion: '12.331'
       createdTime: 1693843560168
       modifiedTime: 1697350980652
       lastModifiedBy: he0IPUNV5pNQSTDz
+      compendiumSource: null
+      duplicateSource: null
     _key: '!journal.pages!EDI95jBrQruLzDXr.JVIgUlHyiBLmAwf4'
 ownership:
   default: 0
@@ -179,10 +189,12 @@ ownership:
 _stats:
   systemId: torgeternity
   systemVersion: 3.8.1
-  coreVersion: '11.315'
+  coreVersion: '12.331'
   createdTime: 1692695797064
   modifiedTime: 1716827808273
   lastModifiedBy: VAnYow5sWS9EJzo0
+  compendiumSource: Compendium.torgeternity.basic-rules.JournalEntry.EDI95jBrQruLzDXr
+  duplicateSource: null
 sort: 100000
 _key: '!journal!EDI95jBrQruLzDXr'
 

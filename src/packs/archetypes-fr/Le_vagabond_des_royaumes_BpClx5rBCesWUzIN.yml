@@ -103,10 +103,12 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: null
+      coreVersion: '12.331'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
+      compendiumSource: Item.xXE09FeMfKBjV4uE
+      duplicateSource: null
     _key: '!actors.items!BpClx5rBCesWUzIN.kDR688PEiU9j0oUd'
   - _id: FXRnJ7s4n9TlajKU
     name: Vagabond des royaumes
@@ -208,10 +210,12 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: null
+      coreVersion: '12.331'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
+      compendiumSource: Item.DJAlj7BkFtkJ8GmN
+      duplicateSource: null
     _key: '!actors.items!BpClx5rBCesWUzIN.FXRnJ7s4n9TlajKU'
   - _id: 2p6hVKXGKxFiYmjT
     name: Blouson d’aviateur
@@ -242,13 +246,25 @@ items:
           turns: null
           startRound: null
           startTurn: null
-        icon: icons/svg/aura.svg
         origin: Item.2rrg1qTCfjdHFtKl
-        tint: null
+        tint: '#ffffff'
         transfer: true
         name: Armor +1
         description: ''
         statuses: []
+        _stats:
+          coreVersion: '12.331'
+          systemId: null
+          systemVersion: null
+          createdTime: null
+          modifiedTime: null
+          lastModifiedBy: null
+          compendiumSource: null
+          duplicateSource: null
+        img: icons/svg/aura.svg
+        type: base
+        system: {}
+        sort: 0
         _key: >-
           !actors.items.effects!BpClx5rBCesWUzIN.2p6hVKXGKxFiYmjT.m4QT8vQ1gc6L97GC
     folder: null
@@ -270,10 +286,12 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: null
+      coreVersion: '12.331'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
+      compendiumSource: Item.Ih77xAUJLZwOROR7
+      duplicateSource: null
     _key: '!actors.items!BpClx5rBCesWUzIN.2p6hVKXGKxFiYmjT'
   - _id: 0z1Kf0KY2aBw5QDV
     name: Machette
@@ -311,10 +329,12 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: null
+      coreVersion: '12.331'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
+      compendiumSource: Item.Of0q2y9B0BpfAByr
+      duplicateSource: null
     _key: '!actors.items!BpClx5rBCesWUzIN.0z1Kf0KY2aBw5QDV'
   - _id: kRW5blcdeOEP8xRp
     name: Grenade à disruption
@@ -356,10 +376,12 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: null
+      coreVersion: '12.331'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
+      compendiumSource: Item.hvK73rLc7gT5pQIA
+      duplicateSource: null
     _key: '!actors.items!BpClx5rBCesWUzIN.kRW5blcdeOEP8xRp'
   - _id: HaOi3fVkKquJiWrR
     name: Glock 9mm
@@ -398,10 +420,12 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: null
+      coreVersion: '12.331'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
+      compendiumSource: Item.iOnl5BiGmVFaCzma
+      duplicateSource: null
     _key: '!actors.items!BpClx5rBCesWUzIN.HaOi3fVkKquJiWrR'
   - _id: nB4dr3hVirizxtBL
     name: Outil polyvalent
@@ -429,10 +453,12 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: null
+      coreVersion: '12.331'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
+      compendiumSource: Item.qclakuW3FUv87ufW
+      duplicateSource: null
     _key: '!actors.items!BpClx5rBCesWUzIN.nB4dr3hVirizxtBL'
   - _id: kran1rL5Py2M7ZKo
     name: Lampe torche
@@ -457,10 +483,12 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: null
+      coreVersion: '12.331'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
+      compendiumSource: Item.tktQLV7z5tnNkEqr
+      duplicateSource: null
     _key: '!actors.items!BpClx5rBCesWUzIN.kran1rL5Py2M7ZKo'
   - _id: XuhiHJMpwJmi9Us2
     name: Chargeurs supplémentaires (5)
@@ -485,10 +513,12 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: null
+      coreVersion: '12.331'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
+      compendiumSource: Item.qZuQoegFPBYC6tEB
+      duplicateSource: null
     _key: '!actors.items!BpClx5rBCesWUzIN.XuhiHJMpwJmi9Us2'
   - _id: kXukzOgxxMCFYLCC
     name: Potion de soin
@@ -516,10 +546,12 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: null
+      coreVersion: '12.331'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
+      compendiumSource: Item.sSWLrPCSi2G5jq6S
+      duplicateSource: null
     _key: '!actors.items!BpClx5rBCesWUzIN.kXukzOgxxMCFYLCC'
   - _id: k4qzTZV4hihR1LmC
     name: Attaque à mains nues
@@ -545,10 +577,12 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: null
+      coreVersion: '12.331'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
+      compendiumSource: Item.BFGjhDetVDm1xiku
+      duplicateSource: null
     _key: '!actors.items!BpClx5rBCesWUzIN.k4qzTZV4hihR1LmC'
 effects:
   - _id: pklu4BLFg7hviXaT
@@ -571,13 +605,25 @@ effects:
       turns: null
       startRound: null
       startTurn: null
-    icon: icons/svg/aura.svg
-    origin: Actor.HoTJjMNPZ1dmNnqZ.OwnedItem.2p6hVKXGKxFiYmjT
-    tint: null
+    origin: Actor.HoTJjMNPZ1dmNnqZ.Item.2p6hVKXGKxFiYmjT
+    tint: '#ffffff'
     transfer: true
     name: Armure +1
     description: ''
     statuses: []
+    _stats:
+      coreVersion: '12.331'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+    img: icons/svg/aura.svg
+    type: base
+    system: {}
+    sort: 0
     _key: '!actors.effects!BpClx5rBCesWUzIN.pklu4BLFg7hviXaT'
 folder: null
 sort: 100001
@@ -1069,14 +1115,20 @@ prototypeToken:
       max: 1
     color: null
     attenuation: 0.5
+    negative: false
+    priority: 0
   texture:
     src: systems/torgeternity/images/characters/Realm_Runner.Token.webp
-    tint: null
+    tint: '#ffffff'
     scaleX: 1
     scaleY: 1
     offsetX: 0
     offsetY: 0
     rotation: 0
+    anchorX: 0.5
+    anchorY: 0.5
+    fit: contain
+    alphaThreshold: 0.75
   sight:
     angle: 360
     enabled: false
@@ -1086,15 +1138,30 @@ prototypeToken:
     attenuation: 0.1
     saturation: 0
     contrast: 0
+    color: null
   appendNumber: false
   prependAdjective: false
   detectionModes: []
+  hexagonalShape: 0
+  occludable:
+    radius: 0
+  ring:
+    enabled: false
+    colors:
+      ring: null
+      background: null
+    effects: 1
+    subject:
+      scale: 1
+      texture: null
 _stats:
   systemId: torgeternity
   systemVersion: 3.8.1
-  coreVersion: '11.315'
+  coreVersion: '12.331'
   createdTime: 1716827809233
   modifiedTime: 1716827809233
   lastModifiedBy: VAnYow5sWS9EJzo0
+  compendiumSource: null
+  duplicateSource: null
 _key: '!actors!BpClx5rBCesWUzIN'
 

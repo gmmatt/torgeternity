@@ -29,8 +29,17 @@ cards:
     value: null
     width: null
     height: null
-    cards: []
+    _stats:
+      coreVersion: '12.331'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
     _key: '!cards.cards!SeOhzvsTfyXrxeBZ.MbIP6M5ZN76tPgK1'
+    cards: []
   - _id: vPjFCenX7YA47a0y
     name: Tentation
     description: ''
@@ -56,8 +65,17 @@ cards:
     value: null
     width: null
     height: null
-    cards: []
+    _stats:
+      coreVersion: '12.331'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
     _key: '!cards.cards!SeOhzvsTfyXrxeBZ.vPjFCenX7YA47a0y'
+    cards: []
   - _id: StH31BuXmfe4Gciw
     name: Sombres présages
     description: ''
@@ -83,8 +101,17 @@ cards:
     value: null
     width: null
     height: null
-    cards: []
+    _stats:
+      coreVersion: '12.331'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
     _key: '!cards.cards!SeOhzvsTfyXrxeBZ.StH31BuXmfe4Gciw'
+    cards: []
   - _id: 0tI6fakMwD37t9hO
     name: Frayeur
     description: ''
@@ -110,8 +137,17 @@ cards:
     value: null
     width: null
     height: null
-    cards: []
+    _stats:
+      coreVersion: '12.331'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
     _key: '!cards.cards!SeOhzvsTfyXrxeBZ.0tI6fakMwD37t9hO'
+    cards: []
   - _id: JWkw8880Vlmhb3a4
     name: Marqué par la mort
     description: ''
@@ -137,8 +173,17 @@ cards:
     value: null
     width: null
     height: null
-    cards: []
+    _stats:
+      coreVersion: '12.331'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
     _key: '!cards.cards!SeOhzvsTfyXrxeBZ.JWkw8880Vlmhb3a4'
+    cards: []
   - _id: ytvLIKYiinf1ZVzH
     name: Le crépuscule ?!
     description: ''
@@ -164,8 +209,17 @@ cards:
     value: null
     width: null
     height: null
-    cards: []
+    _stats:
+      coreVersion: '12.331'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
     _key: '!cards.cards!SeOhzvsTfyXrxeBZ.ytvLIKYiinf1ZVzH'
+    cards: []
   - _id: BJh0TPgGjqB3blz5
     name: Sinistres secrets
     description: ''
@@ -191,8 +245,17 @@ cards:
     value: null
     width: null
     height: null
-    cards: []
+    _stats:
+      coreVersion: '12.331'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
     _key: '!cards.cards!SeOhzvsTfyXrxeBZ.BJh0TPgGjqB3blz5'
+    cards: []
   - _id: CYBBCXgPGP51yNJY
     name: Intérêt malsain
     description: ''
@@ -218,8 +281,17 @@ cards:
     value: null
     width: null
     height: null
-    cards: []
+    _stats:
+      coreVersion: '12.331'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
     _key: '!cards.cards!SeOhzvsTfyXrxeBZ.CYBBCXgPGP51yNJY'
+    cards: []
   - _id: gG20OfyDxmBsWDoQ
     name: Stigmate de terreur
     description: ''
@@ -245,8 +317,17 @@ cards:
     value: null
     width: null
     height: null
-    cards: []
+    _stats:
+      coreVersion: '12.331'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
     _key: '!cards.cards!SeOhzvsTfyXrxeBZ.gG20OfyDxmBsWDoQ'
+    cards: []
   - _id: mm6BJEmXVGn6ANlR
     name: Extinction des feux !
     description: ''
@@ -272,8 +353,17 @@ cards:
     value: null
     width: null
     height: null
-    cards: []
+    _stats:
+      coreVersion: '12.331'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
     _key: '!cards.cards!SeOhzvsTfyXrxeBZ.mm6BJEmXVGn6ANlR'
+    cards: []
 rotation: 0
 displayCount: false
 folder: null
@@ -297,9 +387,11 @@ height: null
 _stats:
   systemId: torgeternity
   systemVersion: 3.8.1
-  coreVersion: '11.315'
+  coreVersion: '12.331'
   createdTime: 1716827810528
   modifiedTime: 1716827810528
   lastModifiedBy: VAnYow5sWS9EJzo0
+  compendiumSource: Cards.7rhA82uDSE499m1h
+  duplicateSource: null
 _key: '!cards!SeOhzvsTfyXrxeBZ'
 

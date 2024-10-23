@@ -575,6 +575,45 @@ items:
       lastModifiedBy: 93AMwcGe6H37rcPA
     _id: GNYOoTx6oVLwq8pY
     _key: '!actors.items!PmME1EHlNKv7l60D.GNYOoTx6oVLwq8pY'
+  - name: Mensch
+    type: race
+    img: systems/torgeternity/images/icons/human-icon.webp
+    system:
+      name: ''
+      description: >-
+        <img class="charimg" src="modules/te001-core-rulebook/images/aidan.webp"
+        /><p>Die meisten Charaktere in den Possibility Wars sind Menschen von
+        der Zentralerde oder einem der sieben
+        Kosmen.</p><p>@UUID[Compendium.te001-core-rulebook.grw-de-grw.JournalEntry.c5yocLtQQUdZQeJ4.JournalEntryPage.wjPJxCrVJriZ61Wq#mensch]{Vorzüge:
+        Mensch}</p>
+      attributeMaximum:
+        charisma: 13
+        dexterity: 13
+        mind: 13
+        spirit: 13
+        strength: 13
+      perksData: []
+      size: normal
+      darkvision: false
+      customAttackData: []
+    effects: []
+    folder: GM4GiQo3OB1a9yUY
+    flags: {}
+    _stats:
+      compendiumSource: Compendium.te001-core-rulebook.grw-de-vorzuverb.Item.33iJGyN9gPsr4jr6
+      duplicateSource: null
+      coreVersion: '12.331'
+      systemId: torgeternity
+      systemVersion: 12.3.0
+      createdTime: 1729599489959
+      modifiedTime: 1729599489959
+      lastModifiedBy: d8YcfsxBOP7RAazk
+    _id: VP6295YnlTDZZPXC
+    sort: 0
+    ownership:
+      default: 0
+      d8YcfsxBOP7RAazk: 3
+    _key: '!actors.items!PmME1EHlNKv7l60D.VP6295YnlTDZZPXC'
 effects: []
 folder: null
 sort: 0
@@ -943,7 +982,7 @@ ownership:
 prototypeToken:
   flags: {}
   name: Die unaufhaltsame Polizistin
-  displayName: 0
+  displayName: 30
   width: 1
   height: 1
   lockRotation: true
@@ -1012,17 +1051,18 @@ prototypeToken:
     colors:
       ring: null
       background: null
-    effects: 1
+    effects: 0
     subject:
       scale: 1
       texture: null
 _stats:
   systemId: torgeternity
   systemVersion: 12.2.0
-  coreVersion: '12.330'
+  coreVersion: '12.331'
   createdTime: 1694861600031
-  modifiedTime: 1722359278656
-  lastModifiedBy: 93AMwcGe6H37rcPA
+  modifiedTime: 1729013597233
+  lastModifiedBy: d8YcfsxBOP7RAazk
   compendiumSource: Compendium.torgeternity.archetypes.non4XwpfJLE9GiST
   duplicateSource: null
 _key: '!actors!PmME1EHlNKv7l60D'
+

@@ -110,10 +110,12 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: null
+      coreVersion: '12.331'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
+      compendiumSource: Item.XCIWjW6xVzFfafSU
+      duplicateSource: null
     _key: '!actors.items!Aq6ZhdfGe9SMQxwv.80rM8r1q1ZuSjmNW'
   - _id: GGNr7g7vMSTPaehJ
     name: Champ de force
@@ -219,10 +221,12 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: null
+      coreVersion: '12.331'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
+      compendiumSource: Item.K6kYBttafWPIdNQs
+      duplicateSource: null
     _key: '!actors.items!Aq6ZhdfGe9SMQxwv.GGNr7g7vMSTPaehJ'
   - _id: YTn3DwXQRjQmHiv8
     name: Mini transmetteur audio
@@ -248,10 +252,12 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: null
+      coreVersion: '12.331'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
+      compendiumSource: Item.j3maRwDVRJPYt1wO
+      duplicateSource: null
     _key: '!actors.items!Aq6ZhdfGe9SMQxwv.YTn3DwXQRjQmHiv8'
   - _id: ULLKqlRuslVlrPkq
     name: Sac à dos
@@ -275,10 +281,12 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: null
+      coreVersion: '12.331'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
+      compendiumSource: Item.th671TeucbJU9ZOl
+      duplicateSource: null
     _key: '!actors.items!Aq6ZhdfGe9SMQxwv.ULLKqlRuslVlrPkq'
   - _id: D9xL4vD2vlmk43xR
     name: Kit de premiers soins
@@ -302,10 +310,12 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: null
+      coreVersion: '12.331'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
+      compendiumSource: Item.HsanlzQCJP0vTtEy
+      duplicateSource: null
     _key: '!actors.items!Aq6ZhdfGe9SMQxwv.D9xL4vD2vlmk43xR'
   - _id: xThbbxSuvzYe2PyQ
     name: Outils de crochetage
@@ -329,10 +339,12 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: null
+      coreVersion: '12.331'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
+      compendiumSource: Item.xSw6gIp8xiCT1yXM
+      duplicateSource: null
     _key: '!actors.items!Aq6ZhdfGe9SMQxwv.xThbbxSuvzYe2PyQ'
   - _id: 1Hl7YPPwsY9etNJl
     name: Poste radio
@@ -356,10 +368,12 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: null
+      coreVersion: '12.331'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
+      compendiumSource: Item.X4B9Ye2030sICMCa
+      duplicateSource: null
     _key: '!actors.items!Aq6ZhdfGe9SMQxwv.1Hl7YPPwsY9etNJl'
   - _id: 5DKkp05nGxK833lv
     name: Ceinture à outils
@@ -383,10 +397,12 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: null
+      coreVersion: '12.331'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
+      compendiumSource: Item.CvZU96RR15BnScXb
+      duplicateSource: null
     _key: '!actors.items!Aq6ZhdfGe9SMQxwv.5DKkp05nGxK833lv'
   - _id: MV07jQ3ZSwt0XVAu
     name: Dispositif de pistage
@@ -413,10 +429,12 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: null
+      coreVersion: '12.331'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
+      compendiumSource: Item.zGj5mxLW7ygVnIKC
+      duplicateSource: null
     _key: '!actors.items!Aq6ZhdfGe9SMQxwv.MV07jQ3ZSwt0XVAu'
   - _id: E6JiAtIrHBIrc4Hp
     name: Électro-rayon
@@ -451,10 +469,12 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: null
+      coreVersion: '12.331'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
+      compendiumSource: Item.W8ZARSxZdHHv4JZN
+      duplicateSource: null
     _key: '!actors.items!Aq6ZhdfGe9SMQxwv.E6JiAtIrHBIrc4Hp'
   - _id: m4UNIQgIVWh0ofrr
     name: Lampe torche
@@ -481,10 +501,12 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: null
+      coreVersion: '12.331'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
+      compendiumSource: Item.tktQLV7z5tnNkEqr
+      duplicateSource: null
     _key: '!actors.items!Aq6ZhdfGe9SMQxwv.m4UNIQgIVWh0ofrr'
   - _id: JtXllaXMDuTpHTWT
     name: Manteau en cuir
@@ -511,13 +533,25 @@ items:
           turns: null
           startRound: null
           startTurn: null
-        icon: icons/svg/aura.svg
         origin: Item.2rrg1qTCfjdHFtKl
-        tint: null
+        tint: '#ffffff'
         transfer: true
         name: Armor +1
         description: ''
         statuses: []
+        _stats:
+          coreVersion: '12.331'
+          systemId: null
+          systemVersion: null
+          createdTime: null
+          modifiedTime: null
+          lastModifiedBy: null
+          compendiumSource: null
+          duplicateSource: null
+        img: icons/svg/aura.svg
+        type: base
+        system: {}
+        sort: 0
         _key: >-
           !actors.items.effects!Aq6ZhdfGe9SMQxwv.JtXllaXMDuTpHTWT.m4QT8vQ1gc6L97GC
     folder: null
@@ -544,10 +578,12 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: null
+      coreVersion: '12.331'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
+      compendiumSource: Item.Ih77xAUJLZwOROR7
+      duplicateSource: null
     _key: '!actors.items!Aq6ZhdfGe9SMQxwv.JtXllaXMDuTpHTWT'
   - _id: oHBqOwXO2ED4k0wN
     name: Attaque à mains nues
@@ -573,10 +609,12 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: null
+      coreVersion: '12.331'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
+      compendiumSource: Item.BFGjhDetVDm1xiku
+      duplicateSource: null
     _key: '!actors.items!Aq6ZhdfGe9SMQxwv.oHBqOwXO2ED4k0wN'
 effects:
   - _id: 0cb20uUutlrniHzZ
@@ -598,15 +636,27 @@ effects:
       turns: null
       startRound: null
       startTurn: null
-    icon: icons/svg/aura.svg
     origin: >-
       Compendium.torgeternity.archetypes-fr.Aq6ZhdfGe9SMQxwv.Item.JtXllaXMDuTpHTWT
-    tint: null
+    tint: '#ffffff'
     transfer: false
     flags: {}
     name: Armure +1
     description: ''
     statuses: []
+    _stats:
+      coreVersion: '12.331'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+    img: icons/svg/aura.svg
+    type: base
+    system: {}
+    sort: 0
     _key: '!actors.effects!Aq6ZhdfGe9SMQxwv.0cb20uUutlrniHzZ'
 folder: null
 sort: 100001
@@ -1099,15 +1149,21 @@ prototypeToken:
       max: 1
     color: null
     attenuation: 0.5
+    negative: false
+    priority: 0
   texture:
     src: >-
       systems/torgeternity/images/characters/Eccentric_Inventor.Token.webp?1615058361679
-    tint: null
+    tint: '#ffffff'
     scaleX: 1
     scaleY: 1
     offsetX: 0
     offsetY: 0
     rotation: 0
+    anchorX: 0.5
+    anchorY: 0.5
+    fit: contain
+    alphaThreshold: 0.75
   sight:
     angle: 360
     enabled: false
@@ -1117,14 +1173,30 @@ prototypeToken:
     attenuation: 0.1
     saturation: 0
     contrast: 0
+    color: null
   appendNumber: false
   prependAdjective: false
   detectionModes: []
+  hexagonalShape: 0
+  occludable:
+    radius: 0
+  ring:
+    enabled: false
+    colors:
+      ring: null
+      background: null
+    effects: 1
+    subject:
+      scale: 1
+      texture: null
 _stats:
   systemId: torgeternity
   systemVersion: 3.8.1
-  coreVersion: '11.315'
+  coreVersion: '12.331'
   createdTime: 1716827809182
   modifiedTime: 1716827809182
   lastModifiedBy: VAnYow5sWS9EJzo0
+  compendiumSource: null
+  duplicateSource: null
 _key: '!actors!Aq6ZhdfGe9SMQxwv'
+

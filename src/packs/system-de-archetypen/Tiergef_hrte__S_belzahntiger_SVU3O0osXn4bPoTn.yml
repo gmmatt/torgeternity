@@ -398,13 +398,13 @@ ownership:
 prototypeToken:
   flags: {}
   name: Säbelzahntiger
-  displayName: 0
+  displayName: 30
   width: 1
   height: 1
   lockRotation: true
   rotation: 0
   actorLink: false
-  disposition: 0
+  disposition: 1
   displayBars: 40
   bar1:
     attribute: wounds
@@ -467,17 +467,18 @@ prototypeToken:
     colors:
       ring: null
       background: null
-    effects: 1
+    effects: 0
     subject:
       scale: 1
       texture: null
 _stats:
   systemId: torgeternity
   systemVersion: 12.2.0
-  coreVersion: '12.330'
+  coreVersion: '12.331'
   createdTime: 1694860904413
-  modifiedTime: 1722359278656
-  lastModifiedBy: 93AMwcGe6H37rcPA
+  modifiedTime: 1729013619239
+  lastModifiedBy: d8YcfsxBOP7RAazk
   compendiumSource: Compendium.te001-core-rulebook.Actors.JVgXLLgQQX0sFr9g
   duplicateSource: null
 _key: '!actors!SVU3O0osXn4bPoTn'
+

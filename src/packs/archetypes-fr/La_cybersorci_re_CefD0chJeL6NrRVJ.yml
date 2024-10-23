@@ -114,10 +114,12 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: null
+      coreVersion: '12.331'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
+      compendiumSource: Item.8qfs6BvtH7wTJ09g
+      duplicateSource: null
     _key: '!actors.items!CefD0chJeL6NrRVJ.ZKurTYCidkV0AVSA'
   - _id: yaftfIz25Ryczaqq
     name: Lanceur de sorts
@@ -235,10 +237,12 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: null
+      coreVersion: '12.331'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
+      compendiumSource: Item.gOZE58k6tfHDbUJ0
+      duplicateSource: null
     _key: '!actors.items!CefD0chJeL6NrRVJ.yaftfIz25Ryczaqq'
   - _id: 4nMDDruOMrPLT1YO
     name: Hexxer Mk II
@@ -280,10 +284,12 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: null
+      coreVersion: '12.331'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
+      compendiumSource: Item.8NEZIXyg4imLfga9
+      duplicateSource: null
     _key: '!actors.items!CefD0chJeL6NrRVJ.4nMDDruOMrPLT1YO'
   - _id: SFdVeSet2JXoY01t
     name: Lunettes de soleil
@@ -307,10 +313,12 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: null
+      coreVersion: '12.331'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
+      compendiumSource: Item.Wi4lFW6mtBCZS8EY
+      duplicateSource: null
     _key: '!actors.items!CefD0chJeL6NrRVJ.SFdVeSet2JXoY01t'
   - _id: m5mzP31xcN0sfDmc
     name: Saint-Pierre Express
@@ -355,10 +363,12 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: null
+      coreVersion: '12.331'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
+      compendiumSource: Item.e2Jc6xS0T4XEs8q9
+      duplicateSource: null
     _key: '!actors.items!CefD0chJeL6NrRVJ.m5mzP31xcN0sfDmc'
   - _id: SgtqDeoK74N1BlLX
     name: Diminution
@@ -411,10 +421,12 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: null
+      coreVersion: '12.331'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
     _key: '!actors.items!CefD0chJeL6NrRVJ.SgtqDeoK74N1BlLX'
   - _id: uLEvrzm5QIU35Qzs
     name: Amélioration
@@ -469,10 +481,12 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: null
+      coreVersion: '12.331'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
     _key: '!actors.items!CefD0chJeL6NrRVJ.uLEvrzm5QIU35Qzs'
   - _id: ac0BbUkLcRrcrMSj
     name: Brouillage
@@ -522,10 +536,12 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: null
+      coreVersion: '12.331'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
     _key: '!actors.items!CefD0chJeL6NrRVJ.ac0BbUkLcRrcrMSj'
   - _id: AzobLwjp2cbbDXgm
     name: Attaque à mains nues
@@ -551,10 +567,12 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: null
+      coreVersion: '12.331'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
+      compendiumSource: Item.BFGjhDetVDm1xiku
+      duplicateSource: null
     _key: '!actors.items!CefD0chJeL6NrRVJ.AzobLwjp2cbbDXgm'
 effects: []
 folder: null
@@ -1052,14 +1070,20 @@ prototypeToken:
       max: 1
     color: null
     attenuation: 0.5
+    negative: false
+    priority: 0
   texture:
     src: systems/torgeternity/images/characters/Cyberwitch.Token.webp
-    tint: null
+    tint: '#ffffff'
     scaleX: 1
     scaleY: 1
     offsetX: 0
     offsetY: 0
     rotation: 0
+    anchorX: 0.5
+    anchorY: 0.5
+    fit: contain
+    alphaThreshold: 0.75
   sight:
     angle: 360
     enabled: false
@@ -1069,15 +1093,30 @@ prototypeToken:
     attenuation: 0.1
     saturation: 0
     contrast: 0
+    color: null
   appendNumber: false
   prependAdjective: false
   detectionModes: []
+  hexagonalShape: 0
+  occludable:
+    radius: 0
+  ring:
+    enabled: false
+    colors:
+      ring: null
+      background: null
+    effects: 1
+    subject:
+      scale: 1
+      texture: null
 _stats:
   systemId: torgeternity
   systemVersion: 3.8.1
-  coreVersion: '11.315'
+  coreVersion: '12.331'
   createdTime: 1716827809277
   modifiedTime: 1716827809277
   lastModifiedBy: VAnYow5sWS9EJzo0
+  compendiumSource: null
+  duplicateSource: null
 _key: '!actors!CefD0chJeL6NrRVJ'
 

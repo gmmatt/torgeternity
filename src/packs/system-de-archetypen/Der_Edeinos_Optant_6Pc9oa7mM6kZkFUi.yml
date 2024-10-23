@@ -34,161 +34,6 @@ items:
       compendiumSource: Item.V6vSEnqgNmYQKs4o
       duplicateSource: null
     _key: '!actors.items!6Pc9oa7mM6kZkFUi.OZvqS64IhCczdFkT'
-  - _id: g1WmDBXHJYqPug3u
-    name: 'Außenseiter (Volk: Edeinos)'
-    type: perk
-    img: systems/torgeternity/images/icons/reality-icon.webp
-    effects: []
-    folder: null
-    sort: 0
-    flags:
-      core:
-        sourceId: Compendium.te001-core-rulebook.grw-de-vorzuverb.Item.0p0JoCsh5Rc4x9uS
-    system:
-      category: racial
-      cosm: livingLand
-      description: >-
-        <p>Edeinos sind für alle außer anderen Edeinos Außenseiter. Sie erleiden
-        einen Malus von 4 auf Überreden- Proben gegenüber Nicht-Edeinos, und
-        Menschen aus anderen Reichen begegnen ihnen oft mit Feindseligkeit.</p>
-      prerequisites: 'Volk: Edeinos'
-      generalContradiction: false
-      pulpPowers:
-        enhancement01:
-          description: ''
-          taken: false
-          title: ''
-        enhancement02:
-          description: ''
-          taken: false
-          title: ''
-        enhancement03:
-          description: ''
-          taken: false
-          title: ''
-        enhancement04:
-          description: ''
-          taken: false
-          title: ''
-        enhancement05:
-          description: ''
-          taken: false
-          title: ''
-        enhancement06:
-          description: ''
-          taken: false
-          title: ''
-        enhancement07:
-          description: ''
-          taken: false
-          title: ''
-        enhancement08:
-          description: ''
-          taken: false
-          title: ''
-        enhancement09:
-          description: ''
-          taken: false
-          title: ''
-        enhancement10:
-          description: ''
-          taken: false
-          title: ''
-        enhancement11:
-          description: ''
-          taken: false
-          title: ''
-        enhancement12:
-          description: ''
-          taken: false
-          title: ''
-        enhancement13:
-          description: ''
-          taken: false
-          title: ''
-        enhancement14:
-          description: ''
-          taken: false
-          title: ''
-        enhancement15:
-          description: ''
-          taken: false
-          title: ''
-        enhancementNumber: 0
-        limitation01: ''
-        limitation02: ''
-        limitation03: ''
-        limitation04: ''
-        limitation05: ''
-        limitation06: ''
-        limitation07: ''
-        limitation08: ''
-        limitation09: ''
-        limitation10: ''
-        limitationNumber: 0
-      timestaken: '1'
-      secondaryAxiom:
-        selected: none
-        value: null
-    ownership:
-      default: 0
-      9Q0XnqFwko7hRlvL: 3
-      CtisFurQNe9h7ABb: 3
-    _stats:
-      systemId: torgeternity
-      systemVersion: 12.2.0
-      coreVersion: '12.330'
-      createdTime: 1694867487836
-      modifiedTime: 1722161760684
-      lastModifiedBy: 93AMwcGe6H37rcPA
-      compendiumSource: Compendium.te001-core-rulebook.grw-de-vorzuverb.Item.0p0JoCsh5Rc4x9uS
-      duplicateSource: null
-    _key: '!actors.items!6Pc9oa7mM6kZkFUi.g1WmDBXHJYqPug3u'
-  - name: Krallen und Zähne (Edeinos)
-    type: meleeweapon
-    img: systems/torgeternity/images/icons/axe-icon.webp
-    effects: []
-    folder: null
-    sort: 32800000
-    flags:
-      core:
-        sourceId: >-
-          Compendium.te001-core-rulebook.grw-de-ausruestung.Item.yJzV2lq3AG5aCwkF
-    _id: p0kfnzrQyXHI0B42
-    system:
-      cosm: livingLand
-      description: >-
-        <p>Diese "Bewaffnung" bitte automatisch ausrüsten, wenn Volk =
-        Edeinos</p>
-      price: '0'
-      techlevel: 1
-      value: 0
-      ap: 0
-      attackWith: meleeWeapons
-      bonus: 2
-      chatNote: ''
-      damage: 2
-      damageType: strengthPlus
-      equipped: false
-      notes: ''
-      secondaryAxiom:
-        selected: none
-        value: null
-      minStrength: null
-    ownership:
-      default: 0
-      9Q0XnqFwko7hRlvL: 3
-      CtisFurQNe9h7ABb: 3
-    _stats:
-      systemId: torgeternity
-      systemVersion: 12.2.0
-      coreVersion: '12.330'
-      createdTime: 1694867530166
-      modifiedTime: 1722161862076
-      lastModifiedBy: 93AMwcGe6H37rcPA
-      compendiumSource: Compendium.te001-core-rulebook.grw-de-ausruestung.Item.yJzV2lq3AG5aCwkF
-      duplicateSource: null
-    _key: '!actors.items!6Pc9oa7mM6kZkFUi.p0kfnzrQyXHI0B42'
   - _id: pj0EqVly0EhHxRF2
     name: Peitschenschwanz
     type: perk
@@ -871,6 +716,342 @@ items:
       modifiedTime: null
       lastModifiedBy: null
     _key: '!actors.items!6Pc9oa7mM6kZkFUi.bsYMg4OVWpTV2Ixt'
+  - name: Edeinos
+    type: race
+    img: systems/torgeternity/images/icons/edeinos-icon.webp
+    system:
+      name: ''
+      description: >-
+        <img class="charimg"
+        src="modules/te001-core-rulebook/images/moonwalker.webp" /><p>Die
+        Echsenmenschen des Lebenden Landes sind wilde Krieger. Sie müssen es
+        sein, denn sie leben in einer brutalen Umgebung aus fleischfressenden
+        Pflanzen, grausamen Raubtieren und riesigen Kreaturen, die nach ihrem
+        Fleisch hungern.</p><p>Sie verfügen zudem über einen starken,
+        angeborenen Sinn für das Staunen und die Aufgeschlossenheit gegenüber
+        allem Neuen. Ihre Welt ist eine atemberaubende Sammlung aus gewaltigen
+        Felsbögen, hoch aufragenden Klippen, dichten Urwäldern und großen
+        Ebenen, die mit einer unglaublichen Vielfalt von Kreaturen gefüllt sind
+        – und sie haben niemals verlernt, diese atemberaubende Schönheit zu
+        bewundern.</p><p>@UUID[Compendium.te001-core-rulebook.grw-de-grw.JournalEntry.Qlx6yGF0Mmo6Xzrv.JournalEntryPage.LJglegioBEQ6vpeh#edeinos]{Weitere
+        Details}</p><p>@UUID[Compendium.te001-core-rulebook.grw-de-grw.JournalEntry.Qlx6yGF0Mmo6Xzrv.JournalEntryPage.LJglegioBEQ6vpeh#edeinos$1]{Vorzüge:
+        Edeinos -
+        Grundregelwerk}</p><p>@UUID[Compendium.te004-living-land.lebendes-land-notizbuch.JournalEntry.rArdHHvvlKUJ276L.JournalEntryPage.rNXOI5XKuFNIR5t5#edeinos]{Vorzüge:
+        Edeinos - Lebendes
+        Land}</p><p>@UUID[Compendium.te004-living-land.lebendes-land-notizbuch.JournalEntry.bahlRrVEuk7Opvml.JournalEntryPage.NwTyKesThOwP9GAQ#edeinos]{Vorzüge:
+        Edeinos - Ruinen des Lebenden Landes}</p>
+      attributeMaximum:
+        charisma: 10
+        dexterity: 14
+        mind: 10
+        spirit: 15
+        strength: 13
+      perksData:
+        - name: Außenseiter (Edeinos)
+          type: perk
+          img: systems/torgeternity/images/icons/reality-icon.webp
+          system:
+            category: racial
+            cosm: none
+            description: >-
+              <p>Edeinos sind für alle außer anderen Edeinos Außenseiter. Sie
+              erleiden einen Malus von 4 auf Überreden- Proben gegenüber
+              Nicht-Edeinos, und Menschen aus anderen Reichen begegnen ihnen oft
+              mit Feindseligkeit.</p>
+            prerequisites: >-
+              <p>@UUID[Compendium.te001-core-rulebook.grw-de-vorzuverb.Item.BvoukFhiu0Mz7E2D]{Edeinos}</p>
+            generalContradiction: false
+            pulpPowers:
+              enhancement01:
+                description: ''
+                taken: false
+                title: ''
+              enhancement02:
+                description: ''
+                taken: false
+                title: ''
+              enhancement03:
+                description: ''
+                taken: false
+                title: ''
+              enhancement04:
+                description: ''
+                taken: false
+                title: ''
+              enhancement05:
+                description: ''
+                taken: false
+                title: ''
+              enhancement06:
+                description: ''
+                taken: false
+                title: ''
+              enhancement07:
+                description: ''
+                taken: false
+                title: ''
+              enhancement08:
+                description: ''
+                taken: false
+                title: ''
+              enhancement09:
+                description: ''
+                taken: false
+                title: ''
+              enhancement10:
+                description: ''
+                taken: false
+                title: ''
+              enhancement11:
+                description: ''
+                taken: false
+                title: ''
+              enhancement12:
+                description: ''
+                taken: false
+                title: ''
+              enhancement13:
+                description: ''
+                taken: false
+                title: ''
+              enhancement14:
+                description: ''
+                taken: false
+                title: ''
+              enhancement15:
+                description: ''
+                taken: false
+                title: ''
+              enhancementNumber: 0
+              limitation01: ''
+              limitation02: ''
+              limitation03: ''
+              limitation04: ''
+              limitation05: ''
+              limitation06: ''
+              limitation07: ''
+              limitation08: ''
+              limitation09: ''
+              limitation10: ''
+              limitationNumber: 0
+            timestaken: ''
+            secondaryAxiom:
+              selected: none
+              value: null
+            transferenceID: 0p0JoCsh5Rc4x9uS
+          sort: 300000
+          ownership:
+            default: 0
+            9Q0XnqFwko7hRlvL: 3
+            VAnYow5sWS9EJzo0: 3
+          flags: {}
+          _stats:
+            coreVersion: '12.331'
+            systemId: torgeternity
+            systemVersion: 12.3.0
+            createdTime: 1716871244345
+            modifiedTime: 1729596572317
+            lastModifiedBy: d8YcfsxBOP7RAazk
+            compendiumSource: null
+            duplicateSource: null
+      customAttackData:
+        - name: Natürliche Waffen (Edeinos)
+          type: customAttack
+          img: systems/torgeternity/images/icons/bite-icon.webp
+          system:
+            ap: 0
+            attackWith: unarmedCombat
+            chatNote: ''
+            damage: 2
+            damageType: strengthPlus
+            description: >-
+              <p>Edeinos haben natürliche Krallen und Zähne, Die im
+              <em>Waffenlosen Kampf</em> Schaden in Höhe von <em>Stärke</em> +2
+              verursachen.</p>
+            notes: ''
+            transferenceID: y4ObQbOH7Du1RQB0
+          sort: 400000
+          ownership:
+            default: 0
+            9Q0XnqFwko7hRlvL: 3
+            VAnYow5sWS9EJzo0: 3
+          flags:
+            core: {}
+          _stats:
+            coreVersion: '12.331'
+            systemId: torgeternity
+            systemVersion: 12.3.0
+            createdTime: 1716871248517
+            modifiedTime: 1729596375436
+            lastModifiedBy: d8YcfsxBOP7RAazk
+            compendiumSource: null
+            duplicateSource: null
+      size: normal
+      darkvision: false
+    effects: []
+    folder: GM4GiQo3OB1a9yUY
+    flags: {}
+    _stats:
+      compendiumSource: Compendium.te001-core-rulebook.grw-de-vorzuverb.Item.BvoukFhiu0Mz7E2D
+      duplicateSource: null
+      coreVersion: '12.331'
+      systemId: torgeternity
+      systemVersion: 12.3.0
+      createdTime: 1729599382656
+      modifiedTime: 1729599382656
+      lastModifiedBy: d8YcfsxBOP7RAazk
+    _id: Rf6mjm5jZFCPB5AP
+    sort: 100000
+    ownership:
+      default: 0
+      d8YcfsxBOP7RAazk: 3
+    _key: '!actors.items!6Pc9oa7mM6kZkFUi.Rf6mjm5jZFCPB5AP'
+  - name: Außenseiter (Edeinos)
+    type: perk
+    img: systems/torgeternity/images/icons/reality-icon.webp
+    system:
+      category: racial
+      cosm: none
+      description: >-
+        <p>Edeinos sind für alle außer anderen Edeinos Außenseiter. Sie erleiden
+        einen Malus von 4 auf Überreden- Proben gegenüber Nicht-Edeinos, und
+        Menschen aus anderen Reichen begegnen ihnen oft mit Feindseligkeit.</p>
+      prerequisites: >-
+        <p>@UUID[Compendium.te001-core-rulebook.grw-de-vorzuverb.Item.BvoukFhiu0Mz7E2D]{Edeinos}</p>
+      generalContradiction: false
+      pulpPowers:
+        enhancement01:
+          description: ''
+          taken: false
+          title: ''
+        enhancement02:
+          description: ''
+          taken: false
+          title: ''
+        enhancement03:
+          description: ''
+          taken: false
+          title: ''
+        enhancement04:
+          description: ''
+          taken: false
+          title: ''
+        enhancement05:
+          description: ''
+          taken: false
+          title: ''
+        enhancement06:
+          description: ''
+          taken: false
+          title: ''
+        enhancement07:
+          description: ''
+          taken: false
+          title: ''
+        enhancement08:
+          description: ''
+          taken: false
+          title: ''
+        enhancement09:
+          description: ''
+          taken: false
+          title: ''
+        enhancement10:
+          description: ''
+          taken: false
+          title: ''
+        enhancement11:
+          description: ''
+          taken: false
+          title: ''
+        enhancement12:
+          description: ''
+          taken: false
+          title: ''
+        enhancement13:
+          description: ''
+          taken: false
+          title: ''
+        enhancement14:
+          description: ''
+          taken: false
+          title: ''
+        enhancement15:
+          description: ''
+          taken: false
+          title: ''
+        enhancementNumber: 0
+        limitation01: ''
+        limitation02: ''
+        limitation03: ''
+        limitation04: ''
+        limitation05: ''
+        limitation06: ''
+        limitation07: ''
+        limitation08: ''
+        limitation09: ''
+        limitation10: ''
+        limitationNumber: 0
+      timestaken: ''
+      secondaryAxiom:
+        selected: none
+        value: null
+      transferenceID: eEJth3GcmS7oNeFM
+    sort: 300000
+    ownership:
+      default: 0
+      9Q0XnqFwko7hRlvL: 3
+      VAnYow5sWS9EJzo0: 3
+      d8YcfsxBOP7RAazk: 3
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      coreVersion: '12.331'
+      systemId: torgeternity
+      systemVersion: 12.3.0
+      createdTime: 1729599382683
+      modifiedTime: 1729599382807
+      lastModifiedBy: d8YcfsxBOP7RAazk
+    _id: eEJth3GcmS7oNeFM
+    effects: []
+    folder: null
+    _key: '!actors.items!6Pc9oa7mM6kZkFUi.eEJth3GcmS7oNeFM'
+  - name: Natürliche Waffen (Edeinos)
+    type: customAttack
+    img: systems/torgeternity/images/icons/bite-icon.webp
+    system:
+      ap: 0
+      attackWith: unarmedCombat
+      chatNote: ''
+      damage: 2
+      damageType: strengthPlus
+      description: >-
+        <p>Edeinos haben natürliche Krallen und Zähne, Die im <em>Waffenlosen
+        Kampf</em> Schaden in Höhe von <em>Stärke</em> +2 verursachen.</p>
+      notes: ''
+      transferenceID: GPiq4BtMLhEG67BA
+    sort: 400000
+    ownership:
+      default: 0
+      9Q0XnqFwko7hRlvL: 3
+      VAnYow5sWS9EJzo0: 3
+      d8YcfsxBOP7RAazk: 3
+    flags:
+      core: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      coreVersion: '12.331'
+      systemId: torgeternity
+      systemVersion: 12.3.0
+      createdTime: 1729599382809
+      modifiedTime: 1729599382983
+      lastModifiedBy: d8YcfsxBOP7RAazk
+    _id: GPiq4BtMLhEG67BA
+    effects: []
+    folder: null
+    _key: '!actors.items!6Pc9oa7mM6kZkFUi.GPiq4BtMLhEG67BA'
 effects:
   - _id: 25RZkES3T4G6Qmnw
     changes:
@@ -1407,7 +1588,7 @@ ownership:
 prototypeToken:
   flags: {}
   name: Der Edeinos-Optant
-  displayName: 0
+  displayName: 30
   width: 1
   height: 1
   lockRotation: true
@@ -1476,17 +1657,18 @@ prototypeToken:
     colors:
       ring: null
       background: null
-    effects: 1
+    effects: 0
     subject:
       scale: 1
       texture: null
 _stats:
   systemId: torgeternity
   systemVersion: 12.2.0
-  coreVersion: '12.330'
+  coreVersion: '12.331'
   createdTime: 1694867487836
-  modifiedTime: 1722359278656
-  lastModifiedBy: 93AMwcGe6H37rcPA
+  modifiedTime: 1729013545546
+  lastModifiedBy: d8YcfsxBOP7RAazk
   compendiumSource: Compendium.torgeternity.archetypes.hcdhRCs56U5JrAl4
   duplicateSource: null
 _key: '!actors!6Pc9oa7mM6kZkFUi'
+

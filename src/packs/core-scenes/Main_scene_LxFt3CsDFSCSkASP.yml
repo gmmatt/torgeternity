@@ -20,12 +20,9 @@ grid:
   alpha: 0.2
   distance: 1
   units: m
+  style: solidLines
+  thickness: 1
 tokenVision: false
-fogExploration: false
-fogReset: 1653458405012
-globalLight: true
-globalLightThreshold: null
-darkness: 0
 drawings: []
 tokens: []
 lights: []
@@ -58,13 +55,58 @@ background:
   scaleX: 1
   scaleY: 1
   rotation: 0
+  anchorX: 0
+  anchorY: 0
+  fit: fill
+  tint: '#ffffff'
+  alphaThreshold: 0
 foregroundElevation: null
 journalEntryPage: null
 _stats:
   systemId: torgeternity
   systemVersion: 3.8.1
-  coreVersion: '11.315'
+  coreVersion: '12.331'
   createdTime: 1716827808907
   modifiedTime: 1716827808907
   lastModifiedBy: VAnYow5sWS9EJzo0
+  compendiumSource: Scene.wB8N2w9glm6jjIWK
+  duplicateSource: null
+regions: []
+environment:
+  globalLight:
+    luminosity: 0
+    enabled: true
+    darkness:
+      max: 1
+      min: 0
+    alpha: 0.5
+    bright: false
+    color: null
+    coloration: 1
+    saturation: 0
+    contrast: 0
+    shadows: 0
+  darknessLevel: 0
+  darknessLock: false
+  cycle: true
+  base:
+    hue: 0
+    intensity: 0
+    luminosity: 0
+    saturation: 0
+    shadows: 0
+  dark:
+    hue: 0.7138888888888889
+    intensity: 0
+    luminosity: -0.25
+    saturation: 0
+    shadows: 0
+fog:
+  exploration: false
+  reset: 1653458405012
+  overlay: null
+  colors:
+    explored: null
+    unexplored: null
 _key: '!scenes!LxFt3CsDFSCSkASP'
+

@@ -154,116 +154,6 @@ items:
       compendiumSource: Compendium.te001-core-rulebook.Items.cyc4yMjoj7ve1Tj5
       duplicateSource: null
     _key: '!actors.items!cdSvyJHbG0GbFzkh.FMilBhNnYxRQwnGG'
-  - _id: IgA82b3Hb4MWoyhh
-    name: Darkvision (Elf)
-    type: perk
-    img: systems/torgeternity/images/icons/reality-icon.webp
-    effects: []
-    folder: null
-    sort: 318750
-    flags:
-      core:
-        sourceId: Item.JCBCYFMvmpQHFWM4
-    system:
-      category: elf
-      cosm: aysle
-      description: >-
-        <p>Elves ignore up to four points of
-        @UUID[Compendium.te001-core-rulebook.rules.pwneQ55M0nnDH0Us.JournalEntryPage.EhKa65cpHvodUl2L#darkness]{Darkness
-        Penalties.}</p>
-      prerequisites: ''
-      generalContradiction: false
-      pulpPowers:
-        enhancement01:
-          description: ''
-          taken: false
-          title: ''
-        enhancement02:
-          description: ''
-          taken: false
-          title: ''
-        enhancement03:
-          description: ''
-          taken: false
-          title: ''
-        enhancement04:
-          description: ''
-          taken: false
-          title: ''
-        enhancement05:
-          description: ''
-          taken: false
-          title: ''
-        enhancement06:
-          description: ''
-          taken: false
-          title: ''
-        enhancement07:
-          description: ''
-          taken: false
-          title: ''
-        enhancement08:
-          description: ''
-          taken: false
-          title: ''
-        enhancement09:
-          description: ''
-          taken: false
-          title: ''
-        enhancement10:
-          description: ''
-          taken: false
-          title: ''
-        enhancement11:
-          description: ''
-          taken: false
-          title: ''
-        enhancement12:
-          description: ''
-          taken: false
-          title: ''
-        enhancement13:
-          description: ''
-          taken: false
-          title: ''
-        enhancement14:
-          description: ''
-          taken: false
-          title: ''
-        enhancement15:
-          description: ''
-          taken: false
-          title: ''
-        enhancementNumber: 0
-        limitation01: ''
-        limitation02: ''
-        limitation03: ''
-        limitation04: ''
-        limitation05: ''
-        limitation06: ''
-        limitation07: ''
-        limitation08: ''
-        limitation09: ''
-        limitation10: ''
-        limitationNumber: 0
-      timestaken: '1'
-      secondaryAxiom:
-        selected: none
-        value: null
-    ownership:
-      default: 0
-      aSTzyuIvqyDaFHwy: 3
-      CtisFurQNe9h7ABb: 3
-    _stats:
-      systemId: torgeternity
-      systemVersion: 12.2.0
-      coreVersion: '12.330'
-      createdTime: 1693910230372
-      modifiedTime: 1722152974304
-      lastModifiedBy: 93AMwcGe6H37rcPA
-      compendiumSource: Item.JCBCYFMvmpQHFWM4
-      duplicateSource: null
-    _key: '!actors.items!cdSvyJHbG0GbFzkh.IgA82b3Hb4MWoyhh'
   - _id: yXXiJ8DCGJ90EQ0s
     name: White Wolf
     type: perk
@@ -371,121 +261,6 @@ items:
       compendiumSource: Compendium.te001-core-rulebook.Items.j1cM05PejztjGAjk
       duplicateSource: null
     _key: '!actors.items!cdSvyJHbG0GbFzkh.yXXiJ8DCGJ90EQ0s'
-  - _id: jYmAGel8tlmPept4
-    name: Magical Affinity (Elf)
-    type: perk
-    img: systems/torgeternity/images/icons/reality-icon.webp
-    effects: []
-    folder: null
-    sort: 15100000
-    flags:
-      core:
-        sourceId: Item.JCBCYFMvmpQHFWM4
-    system:
-      category: elf
-      cosm: aysle
-      description: >-
-        <p>Elves are born and bred of magic and suffer without it. Any time an
-        elf is in a realm with a Magic Axiom less than 12, any Fatigue result
-        causes an extra point of Shock.</p>
-
-        <p>For example, an elf wearing plate mail in a low-magic zone would
-        suffer four Shock if a Fatigue result came up on the Conflict Line (see
-        The Drama Deck): one extra due to the special property of the armor and
-        another thanks to Magical Affinity.</p>
-      prerequisites: ''
-      generalContradiction: false
-      pulpPowers:
-        enhancement01:
-          description: ''
-          taken: false
-          title: ''
-        enhancement02:
-          description: ''
-          taken: false
-          title: ''
-        enhancement03:
-          description: ''
-          taken: false
-          title: ''
-        enhancement04:
-          description: ''
-          taken: false
-          title: ''
-        enhancement05:
-          description: ''
-          taken: false
-          title: ''
-        enhancement06:
-          description: ''
-          taken: false
-          title: ''
-        enhancement07:
-          description: ''
-          taken: false
-          title: ''
-        enhancement08:
-          description: ''
-          taken: false
-          title: ''
-        enhancement09:
-          description: ''
-          taken: false
-          title: ''
-        enhancement10:
-          description: ''
-          taken: false
-          title: ''
-        enhancement11:
-          description: ''
-          taken: false
-          title: ''
-        enhancement12:
-          description: ''
-          taken: false
-          title: ''
-        enhancement13:
-          description: ''
-          taken: false
-          title: ''
-        enhancement14:
-          description: ''
-          taken: false
-          title: ''
-        enhancement15:
-          description: ''
-          taken: false
-          title: ''
-        enhancementNumber: 0
-        limitation01: ''
-        limitation02: ''
-        limitation03: ''
-        limitation04: ''
-        limitation05: ''
-        limitation06: ''
-        limitation07: ''
-        limitation08: ''
-        limitation09: ''
-        limitation10: ''
-        limitationNumber: 0
-      timestaken: '1'
-      secondaryAxiom:
-        selected: none
-        value: null
-    ownership:
-      default: 0
-      aSTzyuIvqyDaFHwy: 3
-      CtisFurQNe9h7ABb: 3
-    _stats:
-      systemId: torgeternity
-      systemVersion: 12.2.0
-      coreVersion: '12.330'
-      createdTime: 1693910351093
-      modifiedTime: 1722152954720
-      lastModifiedBy: 93AMwcGe6H37rcPA
-      compendiumSource: Item.JCBCYFMvmpQHFWM4
-      duplicateSource: null
-    _key: '!actors.items!cdSvyJHbG0GbFzkh.jYmAGel8tlmPept4'
   - _id: 21KNmkaBFbvVkPRY
     name: Leather Jerkin
     type: armor
@@ -711,64 +486,397 @@ items:
       modifiedTime: null
       lastModifiedBy: null
     _key: '!actors.items!cdSvyJHbG0GbFzkh.zLqqXAUExJoLHgji'
-  - _id: yUrDm5bnBMSFn1e9
-    name: Graceful (Elf)
+  - name: Elf
+    type: race
+    img: systems/torgeternity/images/icons/elf-icon.webp
+    system:
+      name: ''
+      description: >-
+        <img class="charimg"
+        src="systems/torgeternity/images/characters/Elven_Warden.webp" /><p>The
+        elves were once one of the mightiest bulwarks against the dark forces of
+        Aysle. Then Uthorion’s rampage put many of their great alabaster cities
+        to ruin, or burned to cinders the mighty forests that once supported
+        their incredible treetop villages. After years of bloody fighting, the
+        elven nations were reduced to a quarter of their original
+        population.</p><p>Just as the Dark One was about to press for their
+        final destruction, he ceased his attacks. Some wonder if this fortuitous
+        timing was brought about by the fair folk - or was just a fortunate
+        coincidence.</p><p>@UUID[Compendium.te001-core-rulebook.rules.JournalEntry.pwneQ55M0nnDH0Us.JournalEntryPage.kYP18QiA72P6PlUi#elf]{More
+        Details}</p><p>@UUID[Compendium.te001-core-rulebook.rules.JournalEntry.pwneQ55M0nnDH0Us.JournalEntryPage.kYP18QiA72P6PlUi#elf$1]{Elf
+        Perks - Core
+        Rulebook}</p><p>@UUID[Compendium.te008-aysle.aysle-journals.JournalEntry.PQRWfK8bsqZ10lY1.JournalEntryPage.ROfd2xSuhDFMpcir#elf]{Elf
+        Perks - Aysle Sourcebook}</p>
+      attributeMaximum:
+        charisma: 15
+        dexterity: 15
+        mind: 15
+        spirit: 14
+        strength: 11
+      perksData:
+        - name: Darkvision (Elf)
+          type: perk
+          img: systems/torgeternity/images/icons/reality-icon.webp
+          system:
+            category: racial
+            cosm: none
+            description: >-
+              <p>Elves ignore up to four points of
+              @UUID[Compendium.te001-core-rulebook.rules.pwneQ55M0nnDH0Us.JournalEntryPage.EhKa65cpHvodUl2L#darkness]{Darkness
+              Penalties.}</p>
+            prerequisites: >-
+              <p>@UUID[Compendium.te001-core-rulebook.Items.Item.ntqopmBBhU5nzwGn]{Elf}</p><p></p>
+            generalContradiction: false
+            pulpPowers:
+              enhancement01:
+                description: ''
+                taken: false
+                title: ''
+              enhancement02:
+                description: ''
+                taken: false
+                title: ''
+              enhancement03:
+                description: ''
+                taken: false
+                title: ''
+              enhancement04:
+                description: ''
+                taken: false
+                title: ''
+              enhancement05:
+                description: ''
+                taken: false
+                title: ''
+              enhancement06:
+                description: ''
+                taken: false
+                title: ''
+              enhancement07:
+                description: ''
+                taken: false
+                title: ''
+              enhancement08:
+                description: ''
+                taken: false
+                title: ''
+              enhancement09:
+                description: ''
+                taken: false
+                title: ''
+              enhancement10:
+                description: ''
+                taken: false
+                title: ''
+              enhancement11:
+                description: ''
+                taken: false
+                title: ''
+              enhancement12:
+                description: ''
+                taken: false
+                title: ''
+              enhancement13:
+                description: ''
+                taken: false
+                title: ''
+              enhancement14:
+                description: ''
+                taken: false
+                title: ''
+              enhancement15:
+                description: ''
+                taken: false
+                title: ''
+              enhancementNumber: 0
+              limitation01: ''
+              limitation02: ''
+              limitation03: ''
+              limitation04: ''
+              limitation05: ''
+              limitation06: ''
+              limitation07: ''
+              limitation08: ''
+              limitation09: ''
+              limitation10: ''
+              limitationNumber: 0
+            timestaken: ''
+            secondaryAxiom:
+              selected: none
+              value: null
+            transferenceID: 5iDUft2dYlcGRzdY
+          sort: 500000
+          ownership:
+            default: 0
+            aSTzyuIvqyDaFHwy: 3
+            VAnYow5sWS9EJzo0: 3
+          flags:
+            core: {}
+          _stats:
+            coreVersion: '12.331'
+            systemId: torgeternity
+            systemVersion: 12.3.0
+            createdTime: 1711551146882
+            modifiedTime: 1729581956703
+            lastModifiedBy: d8YcfsxBOP7RAazk
+            compendiumSource: null
+            duplicateSource: null
+        - name: Graceful (Elf)
+          type: perk
+          img: systems/torgeternity/images/icons/reality-icon.webp
+          system:
+            category: racial
+            cosm: none
+            description: >-
+              <p>When rolling directly against <em>Dexterity</em>, treat the
+              test as
+              @UUID[Compendium.te001-core-rulebook.rules.pwneQ55M0nnDH0Us.JournalEntryPage.EhKa65cpHvodUl2L#favored-skills]{Favored}.
+              ​​Unskilled tests based on <em>Dexterity </em>don’t count, only
+              those that directly call for a <em>Dexterity </em>test, such as
+              reducing falling damage, interrupting a foe while Waiting, or
+              gaining position in a foot chase.</p>
+            prerequisites: >-
+              <p>@UUID[Compendium.te001-core-rulebook.Items.Item.ntqopmBBhU5nzwGn]{Elf}</p>
+            generalContradiction: false
+            pulpPowers:
+              enhancement01:
+                description: ''
+                taken: false
+                title: ''
+              enhancement02:
+                description: ''
+                taken: false
+                title: ''
+              enhancement03:
+                description: ''
+                taken: false
+                title: ''
+              enhancement04:
+                description: ''
+                taken: false
+                title: ''
+              enhancement05:
+                description: ''
+                taken: false
+                title: ''
+              enhancement06:
+                description: ''
+                taken: false
+                title: ''
+              enhancement07:
+                description: ''
+                taken: false
+                title: ''
+              enhancement08:
+                description: ''
+                taken: false
+                title: ''
+              enhancement09:
+                description: ''
+                taken: false
+                title: ''
+              enhancement10:
+                description: ''
+                taken: false
+                title: ''
+              enhancement11:
+                description: ''
+                taken: false
+                title: ''
+              enhancement12:
+                description: ''
+                taken: false
+                title: ''
+              enhancement13:
+                description: ''
+                taken: false
+                title: ''
+              enhancement14:
+                description: ''
+                taken: false
+                title: ''
+              enhancement15:
+                description: ''
+                taken: false
+                title: ''
+              enhancementNumber: 0
+              limitation01: ''
+              limitation02: ''
+              limitation03: ''
+              limitation04: ''
+              limitation05: ''
+              limitation06: ''
+              limitation07: ''
+              limitation08: ''
+              limitation09: ''
+              limitation10: ''
+              limitationNumber: 0
+            timestaken: ''
+            secondaryAxiom:
+              selected: none
+              value: null
+            transferenceID: 7ZJYUeW3fj0EkFds
+          sort: 600000
+          ownership:
+            default: 0
+            aSTzyuIvqyDaFHwy: 3
+            VAnYow5sWS9EJzo0: 3
+          flags:
+            core: {}
+          _stats:
+            coreVersion: '12.331'
+            systemId: torgeternity
+            systemVersion: 12.3.0
+            createdTime: 1711551146747
+            modifiedTime: 1729581945353
+            lastModifiedBy: d8YcfsxBOP7RAazk
+            compendiumSource: null
+            duplicateSource: null
+        - name: Magical Affinity (Elf)
+          type: perk
+          img: systems/torgeternity/images/icons/reality-icon.webp
+          system:
+            category: racial
+            cosm: none
+            description: >-
+              <p>Elves are born and bred of magic and suffer without it. Any
+              time an elf is in a realm with a Magic Axiom less than 12, any
+              Fatigue result causes an extra point of Shock.</p>
+
+              <p>For example, an elf wearing plate mail in a low-magic zone
+              would suffer four Shock if a Fatigue result came up on the
+              Conflict Line (see The Drama Deck): one extra due to the special
+              property of the armor and another thanks to Magical Affinity.</p>
+            prerequisites: >-
+              <p>@UUID[Compendium.te001-core-rulebook.Items.Item.ntqopmBBhU5nzwGn]{Elf}</p>
+            generalContradiction: false
+            pulpPowers:
+              enhancement01:
+                description: ''
+                taken: false
+                title: ''
+              enhancement02:
+                description: ''
+                taken: false
+                title: ''
+              enhancement03:
+                description: ''
+                taken: false
+                title: ''
+              enhancement04:
+                description: ''
+                taken: false
+                title: ''
+              enhancement05:
+                description: ''
+                taken: false
+                title: ''
+              enhancement06:
+                description: ''
+                taken: false
+                title: ''
+              enhancement07:
+                description: ''
+                taken: false
+                title: ''
+              enhancement08:
+                description: ''
+                taken: false
+                title: ''
+              enhancement09:
+                description: ''
+                taken: false
+                title: ''
+              enhancement10:
+                description: ''
+                taken: false
+                title: ''
+              enhancement11:
+                description: ''
+                taken: false
+                title: ''
+              enhancement12:
+                description: ''
+                taken: false
+                title: ''
+              enhancement13:
+                description: ''
+                taken: false
+                title: ''
+              enhancement14:
+                description: ''
+                taken: false
+                title: ''
+              enhancement15:
+                description: ''
+                taken: false
+                title: ''
+              enhancementNumber: 0
+              limitation01: ''
+              limitation02: ''
+              limitation03: ''
+              limitation04: ''
+              limitation05: ''
+              limitation06: ''
+              limitation07: ''
+              limitation08: ''
+              limitation09: ''
+              limitation10: ''
+              limitationNumber: 0
+            timestaken: ''
+            secondaryAxiom:
+              selected: magic
+              value: 12
+            transferenceID: 5CaFLE4xvUVkPKLO
+          sort: 700000
+          ownership:
+            default: 0
+            aSTzyuIvqyDaFHwy: 3
+            VAnYow5sWS9EJzo0: 3
+          flags:
+            core: {}
+          _stats:
+            coreVersion: '12.331'
+            systemId: torgeternity
+            systemVersion: 12.3.0
+            createdTime: 1711551146747
+            modifiedTime: 1729581970137
+            lastModifiedBy: d8YcfsxBOP7RAazk
+            compendiumSource: null
+            duplicateSource: null
+      darkvision: true
+      size: normal
+      customAttackData: []
+    effects: []
+    folder: TwzEDO2AmeaaSwtn
+    ownership:
+      default: 0
+      d8YcfsxBOP7RAazk: 3
+    flags: {}
+    _stats:
+      compendiumSource: Compendium.te001-core-rulebook.Items.Item.ntqopmBBhU5nzwGn
+      duplicateSource: null
+      coreVersion: '12.331'
+      systemId: torgeternity
+      systemVersion: 12.3.0
+      createdTime: 1729582166779
+      modifiedTime: 1729582166779
+      lastModifiedBy: d8YcfsxBOP7RAazk
+    _id: DtJdgrfeaXuwXG8K
+    sort: 275000
+    _key: '!actors.items!cdSvyJHbG0GbFzkh.DtJdgrfeaXuwXG8K'
+  - name: Darkvision (Elf)
     type: perk
     img: systems/torgeternity/images/icons/reality-icon.webp
-    effects:
-      - origin: Item.gQtNmQDtl2UZefwe
-        duration:
-          rounds: null
-          startTime: null
-          seconds: null
-          combat: null
-          turns: null
-          startRound: null
-          startTurn: null
-        disabled: false
-        name: Dexterity is Favored
-        img: icons/svg/aura.svg
-        _id: PNWy6cf9hbrNiVIr
-        type: base
-        system: {}
-        changes:
-          - key: system.attributes.dexterityIsFav
-            mode: 5
-            value: 'true'
-            priority: null
-        description: ''
-        tint: '#ffffff'
-        transfer: true
-        statuses: []
-        sort: 0
-        flags: {}
-        _stats:
-          compendiumSource: null
-          duplicateSource: null
-          coreVersion: '12.330'
-          systemId: torgeternity
-          systemVersion: 12.2.0
-          createdTime: null
-          modifiedTime: null
-          lastModifiedBy: null
-        _key: >-
-          !actors.items.effects!cdSvyJHbG0GbFzkh.yUrDm5bnBMSFn1e9.PNWy6cf9hbrNiVIr
-    folder: gjZiCPX5knOIpsHd
-    sort: 418750
-    flags:
-      core:
-        sourceId: Item.JCBCYFMvmpQHFWM4
     system:
-      category: elf
-      cosm: aysle
+      category: racial
+      cosm: none
       description: >-
-        <p>When rolling directly against <em>Dexterity</em>, treat the test as
-        @UUID[Compendium.te001-core-rulebook.rules.pwneQ55M0nnDH0Us.JournalEntryPage.EhKa65cpHvodUl2L#favored-skills]{Favored}.
-        ​​Unskilled tests based on <em>Dexterity </em>don’t count, only those
-        that directly call for a <em>Dexterity </em>test, such as reducing
-        falling damage, interrupting a foe while Waiting, or gaining position in
-        a foot chase.</p>
-      prerequisites: ''
+        <p>Elves ignore up to four points of
+        @UUID[Compendium.te001-core-rulebook.rules.pwneQ55M0nnDH0Us.JournalEntryPage.EhKa65cpHvodUl2L#darkness]{Darkness
+        Penalties.}</p>
+      prerequisites: >-
+        <p>@UUID[Compendium.te001-core-rulebook.Items.Item.ntqopmBBhU5nzwGn]{Elf}</p><p></p>
       generalContradiction: false
       pulpPowers:
         enhancement01:
@@ -843,25 +951,264 @@ items:
         limitation09: ''
         limitation10: ''
         limitationNumber: 0
-      timestaken: '1'
+      timestaken: ''
       secondaryAxiom:
         selected: none
         value: null
+      transferenceID: lwq2I5tEFyCBeDmL
+    sort: 500000
     ownership:
       default: 0
       aSTzyuIvqyDaFHwy: 3
-      CtisFurQNe9h7ABb: 3
-      93AMwcGe6H37rcPA: 3
+      VAnYow5sWS9EJzo0: 3
+      d8YcfsxBOP7RAazk: 3
+    flags:
+      core: {}
     _stats:
-      compendiumSource: Item.JCBCYFMvmpQHFWM4
+      compendiumSource: null
       duplicateSource: null
-      coreVersion: '12.330'
+      coreVersion: '12.331'
       systemId: torgeternity
-      systemVersion: 12.2.0
-      createdTime: null
-      modifiedTime: null
-      lastModifiedBy: null
-    _key: '!actors.items!cdSvyJHbG0GbFzkh.yUrDm5bnBMSFn1e9'
+      systemVersion: 12.3.0
+      createdTime: 1729582166798
+      modifiedTime: 1729582166904
+      lastModifiedBy: d8YcfsxBOP7RAazk
+    _id: lwq2I5tEFyCBeDmL
+    effects: []
+    folder: null
+    _key: '!actors.items!cdSvyJHbG0GbFzkh.lwq2I5tEFyCBeDmL'
+  - name: Graceful (Elf)
+    type: perk
+    img: systems/torgeternity/images/icons/reality-icon.webp
+    system:
+      category: racial
+      cosm: none
+      description: >-
+        <p>When rolling directly against <em>Dexterity</em>, treat the test as
+        @UUID[Compendium.te001-core-rulebook.rules.pwneQ55M0nnDH0Us.JournalEntryPage.EhKa65cpHvodUl2L#favored-skills]{Favored}.
+        ​​Unskilled tests based on <em>Dexterity </em>don’t count, only those
+        that directly call for a <em>Dexterity </em>test, such as reducing
+        falling damage, interrupting a foe while Waiting, or gaining position in
+        a foot chase.</p>
+      prerequisites: >-
+        <p>@UUID[Compendium.te001-core-rulebook.Items.Item.ntqopmBBhU5nzwGn]{Elf}</p>
+      generalContradiction: false
+      pulpPowers:
+        enhancement01:
+          description: ''
+          taken: false
+          title: ''
+        enhancement02:
+          description: ''
+          taken: false
+          title: ''
+        enhancement03:
+          description: ''
+          taken: false
+          title: ''
+        enhancement04:
+          description: ''
+          taken: false
+          title: ''
+        enhancement05:
+          description: ''
+          taken: false
+          title: ''
+        enhancement06:
+          description: ''
+          taken: false
+          title: ''
+        enhancement07:
+          description: ''
+          taken: false
+          title: ''
+        enhancement08:
+          description: ''
+          taken: false
+          title: ''
+        enhancement09:
+          description: ''
+          taken: false
+          title: ''
+        enhancement10:
+          description: ''
+          taken: false
+          title: ''
+        enhancement11:
+          description: ''
+          taken: false
+          title: ''
+        enhancement12:
+          description: ''
+          taken: false
+          title: ''
+        enhancement13:
+          description: ''
+          taken: false
+          title: ''
+        enhancement14:
+          description: ''
+          taken: false
+          title: ''
+        enhancement15:
+          description: ''
+          taken: false
+          title: ''
+        enhancementNumber: 0
+        limitation01: ''
+        limitation02: ''
+        limitation03: ''
+        limitation04: ''
+        limitation05: ''
+        limitation06: ''
+        limitation07: ''
+        limitation08: ''
+        limitation09: ''
+        limitation10: ''
+        limitationNumber: 0
+      timestaken: ''
+      secondaryAxiom:
+        selected: none
+        value: null
+      transferenceID: ru0BFpRazwilktPG
+    sort: 600000
+    ownership:
+      default: 0
+      aSTzyuIvqyDaFHwy: 3
+      VAnYow5sWS9EJzo0: 3
+      d8YcfsxBOP7RAazk: 3
+    flags:
+      core: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      coreVersion: '12.331'
+      systemId: torgeternity
+      systemVersion: 12.3.0
+      createdTime: 1729582166798
+      modifiedTime: 1729582166906
+      lastModifiedBy: d8YcfsxBOP7RAazk
+    _id: ru0BFpRazwilktPG
+    effects: []
+    folder: null
+    _key: '!actors.items!cdSvyJHbG0GbFzkh.ru0BFpRazwilktPG'
+  - name: Magical Affinity (Elf)
+    type: perk
+    img: systems/torgeternity/images/icons/reality-icon.webp
+    system:
+      category: racial
+      cosm: none
+      description: >-
+        <p>Elves are born and bred of magic and suffer without it. Any time an
+        elf is in a realm with a Magic Axiom less than 12, any Fatigue result
+        causes an extra point of Shock.</p>
+
+        <p>For example, an elf wearing plate mail in a low-magic zone would
+        suffer four Shock if a Fatigue result came up on the Conflict Line (see
+        The Drama Deck): one extra due to the special property of the armor and
+        another thanks to Magical Affinity.</p>
+      prerequisites: >-
+        <p>@UUID[Compendium.te001-core-rulebook.Items.Item.ntqopmBBhU5nzwGn]{Elf}</p>
+      generalContradiction: false
+      pulpPowers:
+        enhancement01:
+          description: ''
+          taken: false
+          title: ''
+        enhancement02:
+          description: ''
+          taken: false
+          title: ''
+        enhancement03:
+          description: ''
+          taken: false
+          title: ''
+        enhancement04:
+          description: ''
+          taken: false
+          title: ''
+        enhancement05:
+          description: ''
+          taken: false
+          title: ''
+        enhancement06:
+          description: ''
+          taken: false
+          title: ''
+        enhancement07:
+          description: ''
+          taken: false
+          title: ''
+        enhancement08:
+          description: ''
+          taken: false
+          title: ''
+        enhancement09:
+          description: ''
+          taken: false
+          title: ''
+        enhancement10:
+          description: ''
+          taken: false
+          title: ''
+        enhancement11:
+          description: ''
+          taken: false
+          title: ''
+        enhancement12:
+          description: ''
+          taken: false
+          title: ''
+        enhancement13:
+          description: ''
+          taken: false
+          title: ''
+        enhancement14:
+          description: ''
+          taken: false
+          title: ''
+        enhancement15:
+          description: ''
+          taken: false
+          title: ''
+        enhancementNumber: 0
+        limitation01: ''
+        limitation02: ''
+        limitation03: ''
+        limitation04: ''
+        limitation05: ''
+        limitation06: ''
+        limitation07: ''
+        limitation08: ''
+        limitation09: ''
+        limitation10: ''
+        limitationNumber: 0
+      timestaken: ''
+      secondaryAxiom:
+        selected: magic
+        value: 12
+      transferenceID: nmHMp4N1KLo9RdnC
+    sort: 700000
+    ownership:
+      default: 0
+      aSTzyuIvqyDaFHwy: 3
+      VAnYow5sWS9EJzo0: 3
+      d8YcfsxBOP7RAazk: 3
+    flags:
+      core: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      coreVersion: '12.331'
+      systemId: torgeternity
+      systemVersion: 12.3.0
+      createdTime: 1729582166798
+      modifiedTime: 1729582166908
+      lastModifiedBy: d8YcfsxBOP7RAazk
+    _id: nmHMp4N1KLo9RdnC
+    effects: []
+    folder: null
+    _key: '!actors.items!cdSvyJHbG0GbFzkh.nmHMp4N1KLo9RdnC'
 effects:
   - origin: Actor.cdSvyJHbG0GbFzkh.Item.zLqqXAUExJoLHgji
     duration:
@@ -941,7 +1288,9 @@ effects:
     _key: '!actors.effects!cdSvyJHbG0GbFzkh.9R097xVyhquN9Z0X'
 folder: null
 sort: 100001
-flags: {}
+flags:
+  torgeternity:
+    editAttributes: false
 system:
   shock:
     max: 5
@@ -1391,10 +1740,10 @@ ownership:
 prototypeToken:
   flags: {}
   name: Elven Warden
-  displayName: 0
+  displayName: 30
   width: 1
   height: 1
-  lockRotation: false
+  lockRotation: true
   rotation: 0
   actorLink: true
   disposition: 1
@@ -1444,7 +1793,7 @@ prototypeToken:
     enabled: false
     range: 0
     brightness: 1
-    visionMode: basic
+    visionMode: darkvision
     attenuation: 0.1
     saturation: 0
     contrast: 0
@@ -1460,17 +1809,18 @@ prototypeToken:
     colors:
       ring: null
       background: null
-    effects: 1
+    effects: 0
     subject:
       scale: 1
       texture: null
 _stats:
   systemId: torgeternity
-  systemVersion: 12.2.0
-  coreVersion: '12.330'
+  systemVersion: 12.3.0
+  coreVersion: '12.331'
   createdTime: 1693910130714
-  modifiedTime: 1722355493847
-  lastModifiedBy: 93AMwcGe6H37rcPA
+  modifiedTime: 1729582171650
+  lastModifiedBy: d8YcfsxBOP7RAazk
   compendiumSource: null
   duplicateSource: null
 _key: '!actors!cdSvyJHbG0GbFzkh'
+

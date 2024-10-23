@@ -14,7 +14,11 @@ class ChatMessageTorg extends ChatMessage {
       const template = this.flags.template;
       const templateData = this.flags?.torgeternity?.test ?? this.flags.data;
 
-      if (templateData.system?.dn.length > 0 && templateData.system?.dnType.length === 0) {
+      if (
+        templateData.system?.dnType?.length &&
+        templateData.system?.dn.length > 0 &&
+        templateData.system?.dnType?.length === 0
+      ) {
         for (const [key, value] of Object.entries(torgeternity.dnTypes)) {
           if (key === templateData.system?.dn) {
             templateData.system.dnType = game.i18n.localize(value);

@@ -136,10 +136,12 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: null
+      coreVersion: '12.331'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
+      compendiumSource: Item.E4srtrmeNNVxRqHf
+      duplicateSource: null
     _key: '!actors.items!QsYmnq73AiR6BwhD.0e2qeJEXy89eDqmQ'
   - _id: kBiGdjd85DU1MtHd
     name: Dragon Breath
@@ -168,10 +170,12 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: null
+      coreVersion: '12.331'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
+      compendiumSource: Item.HlSAJi0eR2q7UF8E
+      duplicateSource: null
     _key: '!actors.items!QsYmnq73AiR6BwhD.kBiGdjd85DU1MtHd'
   - _id: U0CKtAHQmBDo9ZyF
     name: Souffle de dragon
@@ -209,10 +213,12 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: null
+      coreVersion: '12.331'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
+      compendiumSource: Item.njMZnZIEFvRkHHIS
+      duplicateSource: null
     _key: '!actors.items!QsYmnq73AiR6BwhD.U0CKtAHQmBDo9ZyF'
   - _id: NTS6mLpRgHF7WkO4
     name: Potion de soin
@@ -238,10 +244,12 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: null
+      coreVersion: '12.331'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
+      compendiumSource: Item.sSWLrPCSi2G5jq6S
+      duplicateSource: null
     _key: '!actors.items!QsYmnq73AiR6BwhD.NTS6mLpRgHF7WkO4'
   - _id: vfqnqkIvFw372Nck
     name: Corde de 10m
@@ -265,10 +273,12 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: null
+      coreVersion: '12.331'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
+      compendiumSource: Item.HIzFdoBtoEzc8eaE
+      duplicateSource: null
     _key: '!actors.items!QsYmnq73AiR6BwhD.vfqnqkIvFw372Nck'
   - _id: F2DgHaQHYRxdQU4b
     name: Caltrops
@@ -299,10 +309,12 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: null
+      coreVersion: '12.331'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
+      compendiumSource: Item.nszREOuoibD1inHs
+      duplicateSource: null
     _key: '!actors.items!QsYmnq73AiR6BwhD.F2DgHaQHYRxdQU4b'
   - _id: sDhCWgxPaBzw0M2R
     name: Grande hache
@@ -338,10 +350,12 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: null
+      coreVersion: '12.331'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
+      compendiumSource: Item.Aan7zdkY9kl0RE7T
+      duplicateSource: null
     _key: '!actors.items!QsYmnq73AiR6BwhD.sDhCWgxPaBzw0M2R'
   - _id: W80yHGyLWk5wrLJW
     name: Giant Strength
@@ -368,13 +382,25 @@ items:
           turns: null
           startRound: null
           startTurn: null
-        icon: icons/svg/aura.svg
         origin: Item.q3wDWkbSqbWYKVNB
-        tint: null
+        tint: '#ffffff'
         transfer: true
         name: Giant Strength
         description: ''
         statuses: []
+        _stats:
+          coreVersion: '12.331'
+          systemId: null
+          systemVersion: null
+          createdTime: null
+          modifiedTime: null
+          lastModifiedBy: null
+          compendiumSource: null
+          duplicateSource: null
+        img: icons/svg/aura.svg
+        type: base
+        system: {}
+        sort: 0
         _key: >-
           !actors.items.effects!QsYmnq73AiR6BwhD.W80yHGyLWk5wrLJW.07KQJUY5nlOb5K7Q
     folder: null
@@ -390,10 +416,12 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: null
+      coreVersion: '12.331'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
+      compendiumSource: Item.q3wDWkbSqbWYKVNB
+      duplicateSource: null
     _key: '!actors.items!QsYmnq73AiR6BwhD.W80yHGyLWk5wrLJW'
   - _id: w5ZFXzswpME4OajM
     name: Vision nocturne
@@ -493,10 +521,12 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: null
+      coreVersion: '12.331'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
+      compendiumSource: Item.JCBCYFMvmpQHFWM4
+      duplicateSource: null
     _key: '!actors.items!QsYmnq73AiR6BwhD.w5ZFXzswpME4OajM'
   - _id: RDjcmGM0lIqKpHUO
     name: Armure draconnique
@@ -527,13 +557,25 @@ items:
           turns: null
           startRound: null
           startTurn: null
-        icon: icons/svg/aura.svg
         origin: Item.yq5AhONJLd10H9EI
-        tint: null
+        tint: '#ffffff'
         transfer: true
         name: Armor (+4)
         description: ''
         statuses: []
+        _stats:
+          coreVersion: '12.331'
+          systemId: null
+          systemVersion: null
+          createdTime: null
+          modifiedTime: null
+          lastModifiedBy: null
+          compendiumSource: null
+          duplicateSource: null
+        img: icons/svg/aura.svg
+        type: base
+        system: {}
+        sort: 0
         _key: >-
           !actors.items.effects!QsYmnq73AiR6BwhD.RDjcmGM0lIqKpHUO.PS0f9cwh4yZcYyBo
     folder: null
@@ -559,10 +601,12 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: null
+      coreVersion: '12.331'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
+      compendiumSource: Item.yq5AhONJLd10H9EI
+      duplicateSource: null
     _key: '!actors.items!QsYmnq73AiR6BwhD.RDjcmGM0lIqKpHUO'
   - _id: LKxM2YXkNPmaj31J
     name: Attaque à mains nues
@@ -588,10 +632,12 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: null
+      coreVersion: '12.331'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
+      compendiumSource: Item.BFGjhDetVDm1xiku
+      duplicateSource: null
     _key: '!actors.items!QsYmnq73AiR6BwhD.LKxM2YXkNPmaj31J'
 effects:
   - _id: xcPZLZIBGvMvU25Z
@@ -610,13 +656,25 @@ effects:
       turns: null
       startRound: null
       startTurn: null
-    icon: icons/svg/aura.svg
-    origin: Actor.ZAjg9c3hJQtwFKOa.OwnedItem.W80yHGyLWk5wrLJW
-    tint: null
+    origin: Actor.ZAjg9c3hJQtwFKOa.Item.W80yHGyLWk5wrLJW
+    tint: '#ffffff'
     transfer: true
     name: Force de géant (+2)
     description: ''
     statuses: []
+    _stats:
+      coreVersion: '12.331'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+    img: icons/svg/aura.svg
+    type: base
+    system: {}
+    sort: 0
     _key: '!actors.effects!QsYmnq73AiR6BwhD.xcPZLZIBGvMvU25Z'
   - _id: faY4cFOXcFgttCeH
     flags: {}
@@ -638,13 +696,25 @@ effects:
       turns: null
       startRound: null
       startTurn: null
-    icon: icons/svg/aura.svg
-    origin: Actor.ZAjg9c3hJQtwFKOa.OwnedItem.RDjcmGM0lIqKpHUO
-    tint: null
+    origin: Actor.ZAjg9c3hJQtwFKOa.Item.RDjcmGM0lIqKpHUO
+    tint: '#ffffff'
     transfer: true
     name: Armure (+4)
     description: ''
     statuses: []
+    _stats:
+      coreVersion: '12.331'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+    img: icons/svg/aura.svg
+    type: base
+    system: {}
+    sort: 0
     _key: '!actors.effects!QsYmnq73AiR6BwhD.faY4cFOXcFgttCeH'
 folder: null
 sort: 100001
@@ -1140,14 +1210,20 @@ prototypeToken:
       max: 1
     color: null
     attenuation: 0.5
+    negative: false
+    priority: 0
   texture:
     src: systems/torgeternity/images/characters/Dragon_Warrior.Token.webp
-    tint: null
+    tint: '#ffffff'
     scaleX: 1
     scaleY: 1
     offsetX: 0
     offsetY: 0
     rotation: 0
+    anchorX: 0.5
+    anchorY: 0.5
+    fit: contain
+    alphaThreshold: 0.75
   sight:
     angle: 360
     enabled: false
@@ -1157,15 +1233,30 @@ prototypeToken:
     attenuation: 0.1
     saturation: 0
     contrast: 0
+    color: null
   appendNumber: false
   prependAdjective: false
   detectionModes: []
+  hexagonalShape: 0
+  occludable:
+    radius: 0
+  ring:
+    enabled: false
+    colors:
+      ring: null
+      background: null
+    effects: 1
+    subject:
+      scale: 1
+      texture: null
 _stats:
   systemId: torgeternity
   systemVersion: 3.8.1
-  coreVersion: '11.315'
+  coreVersion: '12.331'
   createdTime: 1716827809381
   modifiedTime: 1716827809381
   lastModifiedBy: VAnYow5sWS9EJzo0
+  compendiumSource: null
+  duplicateSource: null
 _key: '!actors!QsYmnq73AiR6BwhD'
 

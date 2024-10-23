@@ -1,0 +1,159 @@
+<form class="{{cssClass}} item-sheet" autocomplete="off" height="400">
+    <h3 class="item-type"><span>{{localize "torgeternity.itemSheetDescriptions.race"}}</span></h3>
+
+    <header class="sheet-header">
+        <img src="{{item.img}}" data-edit="img" data-tooltip="{{item.name}}"  />
+        <h1><input name="name" type="text" value="{{item.name}}" placeholder="{{localize "torgeternity.itemSheetDescriptions.race"}} Name"
+                 /></h1>
+    </header>
+
+    <nav class="sheet-tabs item-tabs tabs" data-group="primary" style="{{item.system.navStyle}}">
+        <a class="item" data-tab="stats" >{{localize "torgeternity.sheetLabels.stats"}}</a>
+        <a class="item" data-tab="racialPerks" >{{localize "torgeternity.sheetLabels.racialPerks"}}</a>      
+    </nav>
+
+    <section class="sheet-body">
+        <div class="tab stats" data-group="primary" data-tab="stats">
+            <div class="sheet-content">
+                 <div class="main-content" style="grid-column:1/5;">
+                 <h1 class="raceDescriptionHeadline">{{localize "torgeternity.sheetLabels.description"}}</h1>
+                    <div name="description" class="item-description-textarea">
+                        {{editor description target="system.description" engine="prosemirror" button=true editable=editable}}
+                    </div>
+                 </div>
+            </div>      
+            <div class="raceAttributes">
+                <h1>{{localize "torgeternity.sheetLabels.attributeMaximum"}}</h1>
+                <label for="system.attributeMaximum.charisma" class="item-data-label">
+                    {{localize "torgeternity.attributes.charisma"}}
+                </label>
+                <input
+                    name="system.attributeMaximum.charisma"
+                    type="number"
+                    value="{{item.system.attributeMaximum.charisma}}"
+                    class="input-box"
+                />
+                <label for="system.attributeMaximum.dexterity" class="item-data-label">
+                    {{localize "torgeternity.attributes.dexterity"}}
+                </label>
+                <input
+                    name="system.attributeMaximum.dexterity"
+                    type="number"
+                    value="{{item.system.attributeMaximum.dexterity}}"
+                    class="input-box"
+                />
+                <label for="system.attributeMaximum.mind" class="item-data-label">
+                    {{localize "torgeternity.attributes.mind"}}
+                </label>
+                <input
+                    name="system.attributeMaximum.mind"
+                    type="number"
+                    value="{{item.system.attributeMaximum.mind}}"
+                    class="input-box"
+                />
+                <label for="system.attributeMaximum.spirit" class="item-data-label">
+                    {{localize "torgeternity.attributes.spirit"}}
+                </label>
+                <input
+                    name="system.attributeMaximum.spirit"
+                    type="number"
+                    value="{{item.system.attributeMaximum.spirit}}"
+                    class="input-box"
+                />
+                <label for="system.attributeMaximum.strength" class="item-data-label">
+                    {{localize "torgeternity.attributes.strength"}}
+                </label>
+                <input
+                    name="system.attributeMaximum.strength"
+                    type="number"
+                    value="{{item.system.attributeMaximum.strength}}"
+                    class="input-box"
+                />
+            </div>
+            <hr>
+            <div class="raceSpecs">
+                <label for="system.size" class="item-data-label">
+                    {{localize "torgeternity.sheetLabels.size"}}
+                </label>
+                <select name="system.size" class="input-box">
+                    {{selectOptions config.sizes selected=item.system.size localize=true}}
+                </select>
+                <label for="system.darkvision" class="item-data-label">
+                    {{localize "torgeternity.sheetLabels.darkvision"}}
+                </label>
+                <input name="system.darkvision"
+                id="system.darkvision"
+                type="checkbox"
+                {{checked item.system.darkvision}}
+                data-dtype="Boolean">
+            </div>
+        </div>
+        <div class="tab raceHardcode" data-group="primary", data-tab="racialPerks">
+            {{#if (ne item.system.perksData.size 0)}}
+                <div class="list-section-heading">{{localize "torgeternity.sheetLabels.perks"}}</div>
+                <ol class="race perks-list">
+                    {{#each item.system.perksData as |perk|}}
+                        <li class="item block" data-item-id="{{perk.system.transferenceID}}" data-inheritedType="perk"> 
+                            <div class="item-row flexrow">
+                                <img src="{{perk.img}}" data-tooltip="{{perk.name}}">
+                                <a class="item-name">{{perk.name}}</a>
+                                <div class="item-controls">
+                                    <a class="item-control item-delete" data-tooltip="{{localize 'torgeternity.iconeTitles.delete'}}">
+                                        <i class="fas fa-trash"></i>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="item-detail">
+                                <div class="item-dropdown-description">
+                                    {{{perk.system.description}}}
+                                    <div class="item-dropdown-extras">
+                                        {{localize "torgeternity.gear.cosm"}}: {{localize (concat "torgeternity.cosms." perk.system.cosm)}}
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    {{/each}}
+                </ol>
+            {{else}}
+                <div class="list-section-heading">{{localize "torgeternity.sheetLabels.noPerksAdded"}}</div>
+            {{/if}}
+            {{#if (ne item.system.customAttackData.size 0)}}
+                <div class="list-section-heading">{{localize "torgeternity.sheetLabels.customAttacks"}}</div>
+                <ol class="race perks-list">
+                    {{#each item.system.customAttackData as |attack|}}
+                        <li class="item block" data-item-id="{{attack.system.transferenceID}}" data-inheritedType="attack"> 
+                            <div class="item-row flexrow">
+                                <img src="{{attack.img}}" data-tooltip="{{attack.name}}">
+                                <a class="item-name">{{attack.name}}</a>
+                                <div class="item-controls">
+                                    <a class="item-control item-delete" data-tooltip="{{localize 'torgeternity.iconeTitles.delete'}}">
+                                        <i class="fas fa-trash"></i>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="item-detail">
+                                <div class="item-dropdown-description">
+                                    {{{attack.system.description}}}
+                                    <div class="item-dropdown-extras">
+                                        {{localize "torgeternity.powers.skill"}}: {{localize (concat "torgeternity.skills." attack.system.attackWith)}}
+                                    </div>
+                                    <div class="item-dropdown-extras">
+                                        {{localize "torgeternity.gear.damageType"}}: {{localize (concat "torgeternity.damageTypes." attack.system.damageType)}}
+                                    </div>
+                                    <div class="item-dropdown-extras">
+                                        {{localize "torgeternity.gear.damage"}}: {{attack.system.damage}}
+                                    </div>
+                                    <div class="item-dropdown-extras">
+                                        {{localize "torgeternity.gear.ap"}}: {{attack.system.ap}}
+                                    </div>                                        
+                                </div>
+                            </div>
+                        </li>
+                    {{/each}}
+                </ol>
+            {{/if}}
+        </div>       
+    </section>
+</form>

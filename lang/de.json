@@ -243,6 +243,10 @@
         "content": "Bist du sicher, dass du das löschen willst? Es wird dauerhaft aus deinem Blatt entfernt.",
         "title": "Wirklich löschen?"
       },
+      "raceDeletion": {
+        "content":"Bist du sicher, dass du dies löschen willst? Es wird dauerhaft aus dem Blatt entfernt und alle Vorteile der Kategorie Volk werden ebenfalls gelöscht.",
+        "title":"Wirklich löschen?"
+      },
       "realityCheck": {
         "title": "Reconnecting?",
         "content": "Are you trying to reconnect?"
@@ -282,6 +286,10 @@
         "value":"Wähle die Höhe des Bonus",
         "timeLabel":"Wahl der Dauer",
         "time":"Wähle die Dauer in Runden"
+      },
+      "raceDiminishAttribute": {
+        "maintext": "Das Attribut {attribute} ist größer als das Volksmaximum. Soll das Attribut auf das Volksmaximum gesetzt werden?",
+        "title": "Warnung, Attributsmaximum"
       }
     },
     "dnTypes": {
@@ -394,7 +402,8 @@
       "sendToChat": "An Chat senden",
       "spellRoll": "Zauberwurf",
       "toggle": "Umschalten auf",
-      "toggleEquip": "Ausgerüstet?"
+      "toggleEquip": "Ausgerüstet?",
+      "deleteRace": "Volk löschen"
     },
     "itemSheetDescriptions": {
       "armor": "Rüstung",
@@ -413,6 +422,7 @@
       "missileWeapon": "Projektilwaffe",
       "other": "Allgemeine Ausrüstung",
       "perk": "Vorzug",
+      "race": "Volk",
       "psionicpower": "Psikraft",
       "shield": "Schild",
       "specialability": "Spezialfähigkeit",
@@ -444,6 +454,7 @@
       "noAttrNamed": "Dein Kontrollierter Charakter hat kein Attribut, das heißt: ",
       "noHands": "Keine Kartenhand verfügbar!",
       "noItemNamed": "Dein Kontrollierter Charakter hat keinen Gegenstand der heißt: ",
+      "noRaceToDelete": "Es gibt kein Volk zum löschen.",
       "noSkillNamed": "Dein Kontrollierter Charakter hat keine Fertigkeit, die heißt: ",
       "noTarget": "Kein valides Token anvisiert",
       "noVehicleOperator": "Das anvisierte Fahrzeug {a} hat keinen Fahrer. Der Test kann nicht fortgesetzt werden.",
@@ -456,7 +467,12 @@
       "ammoValueExceedsMax": "Der aktuelle Munitionswert der Waffe {a} übersteigt seinen Maximalwert. Der Wert wird auf sein Maximum reduziert.",
       "noPossibility": "Es sind keine Möglichkeiten mehr übrig.",
       "noCapacity": "{a} kann diese Art von Fahrzeug nicht steuern!",
-      "noFight":"Kein aktiver Kampf, oder noch nicht gestartet"
+      "noFight":"Kein aktiver Kampf, oder noch nicht gestartet",
+      "raceExistent": "Du hast dich bereits für ein Volk entschieden.",
+      "notAPerkItem": "Du hast versucht, diesem Volk einen Vorteil aus der Kategorie {a} zuzuweisen, aber er muss zur Kategorie Volksfähigkeit gehören. Aktion wurde abgebrochen.",
+      "addedRacePerkToActor": "{perkName}-Vorzug dem Charakter hinzugefügt.",
+      "reachedMaximumAttr": "Du hast das Attributsmaximum, dass dein Volk vorgibt, erreicht. Eine weitere Erhöhung ist nicht möglich.",
+      "clipEmpty": "Diese Munition ist leer und kann nicht zum Nachladen verwendet werden."
     },
     "packs": {
       "basicRules": "torgeternity.system-de-basisregeln",
@@ -505,7 +521,7 @@
       "prowess": "Kampfkraft",
       "psionics": "Psionik",
       "pulpPowers": "Pulp Superkräfte",
-      "racial": "Volk",
+      "racial": "Volksfähigkeit",
       "reality": "Realität",
       "savagery": "Wildnis",
       "social": "Sozial",
@@ -551,15 +567,6 @@
       "kinesis": "Kinese",
       "precognition": "Präkognition",
       "telepathy": "Telepatie"
-    },
-    "races": {
-      "aspirants": "Aspirant",
-      "dwarf": "Zwerg",
-      "edeinos": "Edeinos",
-      "elf": "Elf",
-      "human": "Mensch",
-      "other": "Andere",
-      "theRace": "Das Volk"
     },
     "scenes": {
       "HeaderAmbienceHint": "Konfiguriere zusätzliche Integrierungen zwischen dieser Szene und Journaleinträgen, Audio-Playlists oder Wettereffekten.",
@@ -635,6 +642,10 @@
       "unTarget": {
         "hint": "Targets are reseted after an attack by default. Uncheck if you want to keep them.",
         "name": "Cancel targeting"
+      },
+      "useYear1PPTent": {
+        "hint": "Verwende den Pan-Pacifica Tischaufsteller nach Jahr 1.",
+        "name": "Jahr-1 PP Aufsteller"
       }
     },
     "sheetLabels": {
@@ -662,6 +673,8 @@
       "attackOptions": "Angriffsoptionen",
       "attacks": "Angriffe",
       "attribute": "Attribute",
+      "attributeMaximum": "Maximum der Attribute",
+      "max": "Max.",
       "attributes": "Attribute",
       "availableEnhancements": "Verfügbare Verbesserungen",
       "background": "Hintergrund",
@@ -686,8 +699,10 @@
       "coverBonusTooltip": "Bonus, der als Resultat der Deckung auf die Zähigkeit addiert wird",
       "customSkill": "Eigene Fertigkeiten können im Vorzüge-Tab geändert werden",
       "customSkills": "Eigene Fertigkeiten",
+      "customAttacks": "Individuelle Angriffe",
       "damageAP": "Schaden (PB)",
       "damageMod": "Schadensmodifikator",
+      "darkvision": "Dunkelsicht",
       "defense": "Verteidigung",
       "defenses": "Verteidigung",
       "defensesTip": "Klicke, um eine aktive Verteidigung durchzuführen",
@@ -723,6 +738,7 @@
       "generalGear": "Allgemeine Ausrüstung",
       "goodResult": "Gut",
       "gunner": "Schütze",
+      "hardcode": "Hardcode",
       "heavyBurst": "Schwer (+6)",
       "heavyWeapons": "Schwere Waffen",
       "implant": "Implantat",
@@ -760,6 +776,7 @@
       "none": "Keiner",
       "noPoss": " Keine Möglichkeit übrig!",
       "noPossFree": "Keine Möglichkeit!<br>Möchtest du eine Möglichkeit schenken?",
+      "noRace": "Kein Volk hinzugefügt",
       "notes": "Notizen",
       "number": "Nummer",
       "operator": "Fahrzeugpilot:in",
@@ -771,6 +788,7 @@
       "passiveEffects": "Passive Effekte",
       "perks": "Vorzüge",
       "perksAbilities": "Vorzüge/Fähigkeiten",
+      "noPerksAdded": "Keine Vorzüge vorhanden",
       "pool": "Aktionenpool",
       "possibilities": "Möglichkeiten",
       "possibilityByCosm": "Möglichkeiten nach Cosm",
@@ -783,6 +801,7 @@
       "psionicPowers": "Psikräfte",
       "quantity": "Anzahl",
       "race": "Volk",
+      "racialPerks": "Volksfähigkeiten",
       "range": "Reichweite",
       "return": "Zurück",
       "roll": "Würfeln",

@@ -119,10 +119,12 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: null
+      coreVersion: '12.331'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
+      compendiumSource: Item.iAsTMdPbFnFfYbBe
+      duplicateSource: null
     _key: '!actors.items!cdSvyJHbG0GbFzkh.q33jbisDvFLOCyfH'
   - _id: 93G8qxXjw6byrBMI
     name: Loup blanc
@@ -256,10 +258,12 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: null
+      coreVersion: '12.331'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
+      compendiumSource: Item.OibVBWUouOM0VqRS
+      duplicateSource: null
     _key: '!actors.items!cdSvyJHbG0GbFzkh.93G8qxXjw6byrBMI'
   - _id: xSUfyWUYlFvFHbn7
     name: Vision nocturne
@@ -358,10 +362,12 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: null
+      coreVersion: '12.331'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
+      compendiumSource: Item.JCBCYFMvmpQHFWM4
+      duplicateSource: null
     _key: '!actors.items!cdSvyJHbG0GbFzkh.xSUfyWUYlFvFHbn7'
   - _id: 60VM3jzDEEY3SxpK
     name: Gracieux
@@ -466,10 +472,12 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: null
+      coreVersion: '12.331'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
+      compendiumSource: Item.vlDGBvvot6Ig0bzj
+      duplicateSource: null
     _key: '!actors.items!cdSvyJHbG0GbFzkh.60VM3jzDEEY3SxpK'
   - _id: 7vJhgHMYAd6SmA9J
     name: Affinité avec la magie
@@ -576,10 +584,12 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: null
+      coreVersion: '12.331'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
+      compendiumSource: Item.qC6VYYNiTxOLv7L6
+      duplicateSource: null
     _key: '!actors.items!cdSvyJHbG0GbFzkh.7vJhgHMYAd6SmA9J'
   - _id: qSq08wDd7BjOyDUe
     name: Potion de soin
@@ -606,10 +616,12 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: null
+      coreVersion: '12.331'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
+      compendiumSource: Item.sSWLrPCSi2G5jq6S
+      duplicateSource: null
     _key: '!actors.items!cdSvyJHbG0GbFzkh.qSq08wDd7BjOyDUe'
   - _id: ppzqLywwc7NrsWMn
     name: Corde de 10m
@@ -633,10 +645,12 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: null
+      coreVersion: '12.331'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
+      compendiumSource: Item.gzQRZhlLKWBaS49M
+      duplicateSource: null
     _key: '!actors.items!cdSvyJHbG0GbFzkh.ppzqLywwc7NrsWMn'
   - _id: vkDycEA4FyKcqNDp
     name: Carquois
@@ -662,10 +676,12 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: null
+      coreVersion: '12.331'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
+      compendiumSource: Item.LFzKGBpEJvAe6D1t
+      duplicateSource: null
     _key: '!actors.items!cdSvyJHbG0GbFzkh.vkDycEA4FyKcqNDp'
   - _id: 88RG3LRq6IDjebha
     name: Justaucorps en cuir
@@ -696,13 +712,25 @@ items:
           turns: null
           startRound: null
           startTurn: null
-        icon: icons/svg/aura.svg
         origin: Item.2rrg1qTCfjdHFtKl
-        tint: null
+        tint: '#ffffff'
         transfer: true
         name: Armor +1
         description: ''
         statuses: []
+        _stats:
+          coreVersion: '12.331'
+          systemId: null
+          systemVersion: null
+          createdTime: null
+          modifiedTime: null
+          lastModifiedBy: null
+          compendiumSource: null
+          duplicateSource: null
+        img: icons/svg/aura.svg
+        type: base
+        system: {}
+        sort: 0
         _key: >-
           !actors.items.effects!cdSvyJHbG0GbFzkh.88RG3LRq6IDjebha.m4QT8vQ1gc6L97GC
     folder: null
@@ -724,10 +752,12 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: null
+      coreVersion: '12.331'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
+      compendiumSource: Item.2rrg1qTCfjdHFtKl
+      duplicateSource: null
     _key: '!actors.items!cdSvyJHbG0GbFzkh.88RG3LRq6IDjebha'
   - _id: 2SAaQ2J6dbdqjiuu
     name: épée longue
@@ -759,10 +789,12 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: null
+      coreVersion: '12.331'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
+      compendiumSource: Item.LGGaptAxiwJMZLsD
+      duplicateSource: null
     _key: '!actors.items!cdSvyJHbG0GbFzkh.2SAaQ2J6dbdqjiuu'
   - _id: sc5964pofzXsBkEK
     name: Arc long composite
@@ -804,10 +836,12 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: null
+      coreVersion: '12.331'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
+      compendiumSource: Item.95xJ3EnPzdWIOAWh
+      duplicateSource: null
     _key: '!actors.items!cdSvyJHbG0GbFzkh.sc5964pofzXsBkEK'
   - _id: i5pjyJX601Lh6KM5
     name: Attaque à mains nues
@@ -833,10 +867,12 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: null
+      coreVersion: '12.331'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
+      compendiumSource: Item.BFGjhDetVDm1xiku
+      duplicateSource: null
     _key: '!actors.items!cdSvyJHbG0GbFzkh.i5pjyJX601Lh6KM5'
 effects:
   - _id: k9rKjxoCSjltaKB2
@@ -859,13 +895,25 @@ effects:
       turns: null
       startRound: null
       startTurn: null
-    icon: icons/svg/aura.svg
-    origin: Actor.LS0j2kMQe09V0H6L.OwnedItem.88RG3LRq6IDjebha
-    tint: null
+    origin: Actor.LS0j2kMQe09V0H6L.Item.88RG3LRq6IDjebha
+    tint: '#ffffff'
     transfer: true
     name: Armure +1
     description: ''
     statuses: []
+    _stats:
+      coreVersion: '12.331'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+    img: icons/svg/aura.svg
+    type: base
+    system: {}
+    sort: 0
     _key: '!actors.effects!cdSvyJHbG0GbFzkh.k9rKjxoCSjltaKB2'
 folder: null
 sort: 100001
@@ -1361,14 +1409,20 @@ prototypeToken:
       max: 1
     color: null
     attenuation: 0.5
+    negative: false
+    priority: 0
   texture:
     src: systems/torgeternity/images/characters/Elven_Warden.Token.webp
-    tint: null
+    tint: '#ffffff'
     scaleX: 1
     scaleY: 1
     offsetX: 0
     offsetY: 0
     rotation: 0
+    anchorX: 0.5
+    anchorY: 0.5
+    fit: contain
+    alphaThreshold: 0.75
   sight:
     angle: 360
     enabled: false
@@ -1378,15 +1432,30 @@ prototypeToken:
     attenuation: 0.1
     saturation: 0
     contrast: 0
+    color: null
   appendNumber: false
   prependAdjective: false
   detectionModes: []
+  hexagonalShape: 0
+  occludable:
+    radius: 0
+  ring:
+    enabled: false
+    colors:
+      ring: null
+      background: null
+    effects: 1
+    subject:
+      scale: 1
+      texture: null
 _stats:
   systemId: torgeternity
   systemVersion: 3.8.1
-  coreVersion: '11.315'
+  coreVersion: '12.331'
   createdTime: 1716827809619
   modifiedTime: 1716827809619
   lastModifiedBy: VAnYow5sWS9EJzo0
+  compendiumSource: null
+  duplicateSource: null
 _key: '!actors!cdSvyJHbG0GbFzkh'
 

@@ -100,10 +100,12 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: null
+      coreVersion: '12.331'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
     _key: '!actors.items!tbqGzMeQeCA3n1Mt.hGMOwQsVX9hXhB1B'
   - _id: yJtCrW7pRJJ1iIqx
     name: Tenace
@@ -203,10 +205,12 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: null
+      coreVersion: '12.331'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
     _key: '!actors.items!tbqGzMeQeCA3n1Mt.yJtCrW7pRJJ1iIqx'
   - _id: T5PZhlJ3fPdAqTd7
     name: Matériel d'escalade
@@ -234,10 +238,12 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: null
+      coreVersion: '12.331'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
     _key: '!actors.items!tbqGzMeQeCA3n1Mt.T5PZhlJ3fPdAqTd7'
   - _id: fkClaT4EVtrolVh0
     name: Silencieux
@@ -269,10 +275,12 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: null
+      coreVersion: '12.331'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
     _key: '!actors.items!tbqGzMeQeCA3n1Mt.fkClaT4EVtrolVh0'
   - _id: PdWFjwZntFEHyhTf
     name: Machette
@@ -311,10 +319,12 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: null
+      coreVersion: '12.331'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
     _key: '!actors.items!tbqGzMeQeCA3n1Mt.PdWFjwZntFEHyhTf'
   - _id: tFgCXQMcrGDML1lz
     name: Glock 9mm
@@ -353,10 +363,12 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: null
+      coreVersion: '12.331'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
+      compendiumSource: Item.iOnl5BiGmVFaCzma
+      duplicateSource: null
     _key: '!actors.items!tbqGzMeQeCA3n1Mt.tFgCXQMcrGDML1lz'
   - _id: 8AMGcsoi4D8VsBE8
     name: Glock 9mm
@@ -395,10 +407,12 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: null
+      coreVersion: '12.331'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
+      compendiumSource: Item.iOnl5BiGmVFaCzma
+      duplicateSource: null
     _key: '!actors.items!tbqGzMeQeCA3n1Mt.8AMGcsoi4D8VsBE8'
   - _id: ZHCCH7GF1KN0V5RW
     name: Veste en cuir
@@ -425,13 +439,25 @@ items:
           turns: null
           startRound: null
           startTurn: null
-        icon: icons/svg/aura.svg
         origin: Item.2rrg1qTCfjdHFtKl
-        tint: null
+        tint: '#ffffff'
         transfer: true
         name: Armor +1
         description: ''
         statuses: []
+        _stats:
+          coreVersion: '12.331'
+          systemId: null
+          systemVersion: null
+          createdTime: null
+          modifiedTime: null
+          lastModifiedBy: null
+          compendiumSource: null
+          duplicateSource: null
+        img: icons/svg/aura.svg
+        type: base
+        system: {}
+        sort: 0
         _key: >-
           !actors.items.effects!tbqGzMeQeCA3n1Mt.ZHCCH7GF1KN0V5RW.m4QT8vQ1gc6L97GC
     folder: null
@@ -458,10 +484,12 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: null
+      coreVersion: '12.331'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
+      compendiumSource: Item.Ih77xAUJLZwOROR7
+      duplicateSource: null
     _key: '!actors.items!tbqGzMeQeCA3n1Mt.ZHCCH7GF1KN0V5RW'
   - _id: vweQ3DMFNSfo2YxA
     name: Chargeurs supplémentaires (5)
@@ -486,10 +514,12 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: null
+      coreVersion: '12.331'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
+      compendiumSource: Item.qZuQoegFPBYC6tEB
+      duplicateSource: null
     _key: '!actors.items!tbqGzMeQeCA3n1Mt.vweQ3DMFNSfo2YxA'
   - _id: Oo122VOhEfcoQl3l
     name: Torche
@@ -514,10 +544,12 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: null
+      coreVersion: '12.331'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
+      compendiumSource: Item.TE2jmWDyTxhRulgk
+      duplicateSource: null
     _key: '!actors.items!tbqGzMeQeCA3n1Mt.Oo122VOhEfcoQl3l'
   - _id: 2S5Lg83o3W77FIYr
     name: Corde de 30m
@@ -542,10 +574,12 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: null
+      coreVersion: '12.331'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
+      compendiumSource: Item.gzQRZhlLKWBaS49M
+      duplicateSource: null
     _key: '!actors.items!tbqGzMeQeCA3n1Mt.2S5Lg83o3W77FIYr'
   - _id: dLGm2dhMTASDcjCW
     name: Grappin
@@ -572,10 +606,12 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: null
+      coreVersion: '12.331'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
+      compendiumSource: Item.6ApaXink04BzbAAv
+      duplicateSource: null
     _key: '!actors.items!tbqGzMeQeCA3n1Mt.dLGm2dhMTASDcjCW'
   - _id: sCjdjpQHZnleEMW4
     name: Sac à dos
@@ -600,10 +636,12 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: null
+      coreVersion: '12.331'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
+      compendiumSource: Item.th671TeucbJU9ZOl
+      duplicateSource: null
     _key: '!actors.items!tbqGzMeQeCA3n1Mt.sCjdjpQHZnleEMW4'
   - _id: 8mospoKsocKydB4J
     name: Téléphone portable
@@ -634,10 +672,12 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: null
+      coreVersion: '12.331'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
+      compendiumSource: Compendium.te001-core-rulebook.Items.4XLIEkO0JxOkiTxR
+      duplicateSource: null
     _key: '!actors.items!tbqGzMeQeCA3n1Mt.8mospoKsocKydB4J'
   - _id: lsJwNWSawnmGGvR5
     name: Attaque à mains nues
@@ -663,10 +703,12 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: null
+      coreVersion: '12.331'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
+      compendiumSource: Item.BFGjhDetVDm1xiku
+      duplicateSource: null
     _key: '!actors.items!tbqGzMeQeCA3n1Mt.lsJwNWSawnmGGvR5'
 effects:
   - _id: Aftaj7rmCoOvAz2G
@@ -688,15 +730,27 @@ effects:
       turns: null
       startRound: null
       startTurn: null
-    icon: icons/svg/aura.svg
     origin: >-
       Compendium.torgeternity.archetypes-fr.tbqGzMeQeCA3n1Mt.Item.ZHCCH7GF1KN0V5RW
-    tint: null
+    tint: '#ffffff'
     transfer: false
     flags: {}
     name: Armure +1
     description: ''
     statuses: []
+    _stats:
+      coreVersion: '12.331'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+    img: icons/svg/aura.svg
+    type: base
+    system: {}
+    sort: 0
     _key: '!actors.effects!tbqGzMeQeCA3n1Mt.Aftaj7rmCoOvAz2G'
 folder: null
 sort: 100001
@@ -1222,14 +1276,20 @@ prototypeToken:
       max: 1
     color: null
     attenuation: 0.5
+    negative: false
+    priority: 0
   texture:
     src: systems/torgeternity/images/characters/Relic_Raider.Token.webp
-    tint: null
+    tint: '#ffffff'
     scaleX: 1
     scaleY: 1
     offsetX: 0
     offsetY: 0
     rotation: 0
+    anchorX: 0.5
+    anchorY: 0.5
+    fit: contain
+    alphaThreshold: 0.75
   sight:
     angle: 360
     enabled: false
@@ -1239,15 +1299,30 @@ prototypeToken:
     attenuation: 0.1
     saturation: 0
     contrast: 0
+    color: null
   appendNumber: false
   prependAdjective: false
   detectionModes: []
+  hexagonalShape: 0
+  occludable:
+    radius: 0
+  ring:
+    enabled: false
+    colors:
+      ring: null
+      background: null
+    effects: 1
+    subject:
+      scale: 1
+      texture: null
 _stats:
   systemId: torgeternity
   systemVersion: 3.8.1
-  coreVersion: '11.315'
+  coreVersion: '12.331'
   createdTime: 1716827809839
   modifiedTime: 1716827809839
   lastModifiedBy: VAnYow5sWS9EJzo0
+  compendiumSource: null
+  duplicateSource: null
 _key: '!actors!tbqGzMeQeCA3n1Mt'
 

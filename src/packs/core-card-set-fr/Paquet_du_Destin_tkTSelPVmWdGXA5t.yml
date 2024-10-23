@@ -30,8 +30,17 @@ cards:
       number: ''
     width: null
     height: null
-    cards: []
+    _stats:
+      coreVersion: '12.331'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
     _key: '!cards.cards!tkTSelPVmWdGXA5t.sJCQWmGLaxYiVfIm'
+    cards: []
   - _id: tsMT45SOho6Wqq05
     name: Adrénaline
     description: ''
@@ -56,8 +65,17 @@ cards:
       number: ''
     width: null
     height: null
-    cards: []
+    _stats:
+      coreVersion: '12.331'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
     _key: '!cards.cards!tkTSelPVmWdGXA5t.tsMT45SOho6Wqq05'
+    cards: []
   - _id: S7SnpEhrOUjuVPsI
     name: Adrénaline
     description: ''
@@ -82,8 +100,17 @@ cards:
       number: ''
     width: null
     height: null
-    cards: []
+    _stats:
+      coreVersion: '12.331'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
     _key: '!cards.cards!tkTSelPVmWdGXA5t.S7SnpEhrOUjuVPsI'
+    cards: []
   - _id: iVcrshwyxFVZ8aiz
     name: Adrénaline
     description: ''
@@ -108,8 +135,17 @@ cards:
       number: ''
     width: null
     height: null
-    cards: []
+    _stats:
+      coreVersion: '12.331'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
     _key: '!cards.cards!tkTSelPVmWdGXA5t.iVcrshwyxFVZ8aiz'
+    cards: []
   - _id: KR1fBDbu1FAw2nij
     name: Volonté
     description: ''
@@ -134,8 +170,17 @@ cards:
       number: ''
     width: null
     height: null
-    cards: []
+    _stats:
+      coreVersion: '12.331'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
     _key: '!cards.cards!tkTSelPVmWdGXA5t.KR1fBDbu1FAw2nij'
+    cards: []
   - _id: QhhvkA5iyHjIRef0
     name: Volonté
     description: ''
@@ -160,8 +205,17 @@ cards:
       number: ''
     width: null
     height: null
-    cards: []
+    _stats:
+      coreVersion: '12.331'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
     _key: '!cards.cards!tkTSelPVmWdGXA5t.QhhvkA5iyHjIRef0'
+    cards: []
   - _id: klHLdI3VUvLlxOyY
     name: Volonté
     description: ''
@@ -186,8 +240,17 @@ cards:
       number: ''
     width: null
     height: null
-    cards: []
+    _stats:
+      coreVersion: '12.331'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
     _key: '!cards.cards!tkTSelPVmWdGXA5t.klHLdI3VUvLlxOyY'
+    cards: []
   - _id: fhZtsnGHHVJBI4P3
     name: Volonté
     description: ''
@@ -212,8 +275,17 @@ cards:
       number: ''
     width: null
     height: null
-    cards: []
+    _stats:
+      coreVersion: '12.331'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
     _key: '!cards.cards!tkTSelPVmWdGXA5t.fhZtsnGHHVJBI4P3'
+    cards: []
   - _id: BCZJoQelhDwHZL58
     name: Vigilance
     description: ''
@@ -238,8 +310,17 @@ cards:
       number: ''
     width: null
     height: null
-    cards: []
+    _stats:
+      coreVersion: '12.331'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
     _key: '!cards.cards!tkTSelPVmWdGXA5t.BCZJoQelhDwHZL58'
+    cards: []
   - _id: FEyCtwmKVIyiN9vl
     name: Vigilance
     description: ''
@@ -264,8 +345,17 @@ cards:
       number: ''
     width: null
     height: null
-    cards: []
+    _stats:
+      coreVersion: '12.331'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
     _key: '!cards.cards!tkTSelPVmWdGXA5t.FEyCtwmKVIyiN9vl'
+    cards: []
   - _id: ejYTHumAMuGY3Eih
     name: Martyr
     description: ''
@@ -290,8 +380,17 @@ cards:
     value: null
     width: null
     height: null
-    cards: []
+    _stats:
+      coreVersion: '12.331'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
     _key: '!cards.cards!tkTSelPVmWdGXA5t.ejYTHumAMuGY3Eih'
+    cards: []
   - _id: ApYL1oNYYSfgFqPf
     name: Action
     description: ''
@@ -316,8 +415,17 @@ cards:
     value: null
     width: null
     height: null
-    cards: []
+    _stats:
+      coreVersion: '12.331'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
     _key: '!cards.cards!tkTSelPVmWdGXA5t.ApYL1oNYYSfgFqPf'
+    cards: []
   - _id: 4O7Ntm5Nng6IlQPn
     name: Action
     description: ''
@@ -342,8 +450,17 @@ cards:
     value: null
     width: null
     height: null
-    cards: []
+    _stats:
+      coreVersion: '12.331'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
     _key: '!cards.cards!tkTSelPVmWdGXA5t.4O7Ntm5Nng6IlQPn'
+    cards: []
   - _id: EiFibVPhsgpVtnNI
     name: Action
     description: ''
@@ -368,8 +485,17 @@ cards:
     value: null
     width: null
     height: null
-    cards: []
+    _stats:
+      coreVersion: '12.331'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
     _key: '!cards.cards!tkTSelPVmWdGXA5t.EiFibVPhsgpVtnNI'
+    cards: []
   - _id: RUNCdcqrlxojVQhf
     name: Action
     description: ''
@@ -394,8 +520,17 @@ cards:
     value: null
     width: null
     height: null
-    cards: []
+    _stats:
+      coreVersion: '12.331'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
     _key: '!cards.cards!tkTSelPVmWdGXA5t.RUNCdcqrlxojVQhf'
+    cards: []
   - _id: B0luMplHYASzDqo4
     name: Vivacité
     description: ''
@@ -420,8 +555,17 @@ cards:
     value: null
     width: null
     height: null
-    cards: []
+    _stats:
+      coreVersion: '12.331'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
     _key: '!cards.cards!tkTSelPVmWdGXA5t.B0luMplHYASzDqo4'
+    cards: []
   - _id: hC169QR5VNO43SvC
     name: Vivacité
     description: ''
@@ -446,8 +590,17 @@ cards:
     value: null
     width: null
     height: null
-    cards: []
+    _stats:
+      coreVersion: '12.331'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
     _key: '!cards.cards!tkTSelPVmWdGXA5t.hC169QR5VNO43SvC'
+    cards: []
   - _id: PHM1hFYmyOB3lXaW
     name: Plan génial
     description: ''
@@ -472,8 +625,17 @@ cards:
     value: null
     width: null
     height: null
-    cards: []
+    _stats:
+      coreVersion: '12.331'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
     _key: '!cards.cards!tkTSelPVmWdGXA5t.PHM1hFYmyOB3lXaW'
+    cards: []
   - _id: jiHP61QLFK7W1HBZ
     name: Plan génial
     description: ''
@@ -498,8 +660,17 @@ cards:
     value: null
     width: null
     height: null
-    cards: []
+    _stats:
+      coreVersion: '12.331'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
     _key: '!cards.cards!tkTSelPVmWdGXA5t.jiHP61QLFK7W1HBZ'
+    cards: []
   - _id: 8HkNwX2flJGaZ2iA
     name: Inspiration
     description: ''
@@ -524,8 +695,17 @@ cards:
     value: null
     width: null
     height: null
-    cards: []
+    _stats:
+      coreVersion: '12.331'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
     _key: '!cards.cards!tkTSelPVmWdGXA5t.8HkNwX2flJGaZ2iA'
+    cards: []
   - _id: yqlcSKuDzyJ6mnMr
     name: Prise d'initiative
     description: ''
@@ -550,8 +730,17 @@ cards:
     value: null
     width: null
     height: null
-    cards: []
+    _stats:
+      coreVersion: '12.331'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
     _key: '!cards.cards!tkTSelPVmWdGXA5t.yqlcSKuDzyJ6mnMr'
+    cards: []
   - _id: zgzSebcuIDQb6AHj
     name: Prise d'initiative
     description: ''
@@ -576,8 +765,17 @@ cards:
     value: null
     width: null
     height: null
-    cards: []
+    _stats:
+      coreVersion: '12.331'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
     _key: '!cards.cards!tkTSelPVmWdGXA5t.zgzSebcuIDQb6AHj'
+    cards: []
   - _id: drc4kRsOzH69xVCM
     name: Héros
     description: ''
@@ -602,8 +800,17 @@ cards:
     value: null
     width: null
     height: null
-    cards: []
+    _stats:
+      coreVersion: '12.331'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
     _key: '!cards.cards!tkTSelPVmWdGXA5t.drc4kRsOzH69xVCM'
+    cards: []
   - _id: P7UdZz5jclJXFCjI
     name: Héros
     description: ''
@@ -628,8 +835,17 @@ cards:
     value: null
     width: null
     height: null
-    cards: []
+    _stats:
+      coreVersion: '12.331'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
     _key: '!cards.cards!tkTSelPVmWdGXA5t.P7UdZz5jclJXFCjI'
+    cards: []
   - _id: 3FfuJjCc73kIFFTc
     name: Héros
     description: ''
@@ -654,8 +870,17 @@ cards:
     value: null
     width: null
     height: null
-    cards: []
+    _stats:
+      coreVersion: '12.331'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
     _key: '!cards.cards!tkTSelPVmWdGXA5t.3FfuJjCc73kIFFTc'
+    cards: []
   - _id: ea3zAPMbhgRI2sZY
     name: Héros
     description: ''
@@ -680,8 +905,17 @@ cards:
     value: null
     width: null
     height: null
-    cards: []
+    _stats:
+      coreVersion: '12.331'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
     _key: '!cards.cards!tkTSelPVmWdGXA5t.ea3zAPMbhgRI2sZY'
+    cards: []
   - _id: XairNeLk5aqXIHwI
     name: Échec de l'adversaire
     description: ''
@@ -706,8 +940,17 @@ cards:
     value: null
     width: null
     height: null
-    cards: []
+    _stats:
+      coreVersion: '12.331'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
     _key: '!cards.cards!tkTSelPVmWdGXA5t.XairNeLk5aqXIHwI'
+    cards: []
   - _id: gnOpVTTL1owkC5kb
     name: Échec de l'adversaire
     description: ''
@@ -732,8 +975,17 @@ cards:
     value: null
     width: null
     height: null
-    cards: []
+    _stats:
+      coreVersion: '12.331'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
     _key: '!cards.cards!tkTSelPVmWdGXA5t.gnOpVTTL1owkC5kb'
+    cards: []
   - _id: NG1ilaeq049IaVgL
     name: Ralliement
     description: ''
@@ -758,8 +1010,17 @@ cards:
     value: null
     width: null
     height: null
-    cards: []
+    _stats:
+      coreVersion: '12.331'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
     _key: '!cards.cards!tkTSelPVmWdGXA5t.NG1ilaeq049IaVgL'
+    cards: []
   - _id: g0LxPzA5rNQM9Miv
     name: Seconde chance
     description: ''
@@ -784,8 +1045,17 @@ cards:
     value: null
     width: null
     height: null
-    cards: []
+    _stats:
+      coreVersion: '12.331'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
     _key: '!cards.cards!tkTSelPVmWdGXA5t.g0LxPzA5rNQM9Miv'
+    cards: []
   - _id: UsGTLUTwclRYpMrr
     name: Seconde chance
     description: ''
@@ -810,8 +1080,17 @@ cards:
     value: null
     width: null
     height: null
-    cards: []
+    _stats:
+      coreVersion: '12.331'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
     _key: '!cards.cards!tkTSelPVmWdGXA5t.UsGTLUTwclRYpMrr'
+    cards: []
   - _id: chkqYCIuHgScPThc
     name: Seconde chance
     description: ''
@@ -836,8 +1115,17 @@ cards:
     value: null
     width: null
     height: null
-    cards: []
+    _stats:
+      coreVersion: '12.331'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
     _key: '!cards.cards!tkTSelPVmWdGXA5t.chkqYCIuHgScPThc'
+    cards: []
   - _id: oB1nXZKce70FwlG8
     name: Relation
     description: ''
@@ -862,8 +1150,17 @@ cards:
     value: null
     width: null
     height: null
-    cards: []
+    _stats:
+      coreVersion: '12.331'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
     _key: '!cards.cards!tkTSelPVmWdGXA5t.oB1nXZKce70FwlG8'
+    cards: []
   - _id: rr84Qwa7iK8FkyXC
     name: Idée
     description: ''
@@ -888,8 +1185,17 @@ cards:
     value: null
     width: null
     height: null
-    cards: []
+    _stats:
+      coreVersion: '12.331'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
     _key: '!cards.cards!tkTSelPVmWdGXA5t.rr84Qwa7iK8FkyXC'
+    cards: []
   - _id: d1kj08QFD1wfFufG
     name: Harmonisation
     description: ''
@@ -914,8 +1220,17 @@ cards:
     value: null
     width: null
     height: null
-    cards: []
+    _stats:
+      coreVersion: '12.331'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
     _key: '!cards.cards!tkTSelPVmWdGXA5t.d1kj08QFD1wfFufG'
+    cards: []
   - _id: NrNfaX9HCpO5iqKH
     name: Gloire
     description: ''
@@ -940,8 +1255,17 @@ cards:
     value: null
     width: null
     height: null
-    cards: []
+    _stats:
+      coreVersion: '12.331'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
     _key: '!cards.cards!tkTSelPVmWdGXA5t.NrNfaX9HCpO5iqKH'
+    cards: []
   - _id: FVQbslhOUZ5boj1G
     name: Gloire
     description: ''
@@ -966,8 +1290,17 @@ cards:
     value: null
     width: null
     height: null
-    cards: []
+    _stats:
+      coreVersion: '12.331'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
     _key: '!cards.cards!tkTSelPVmWdGXA5t.FVQbslhOUZ5boj1G'
+    cards: []
   - _id: OggMKEVzKRc5Lvol
     name: Gloire
     description: ''
@@ -992,8 +1325,17 @@ cards:
     value: null
     width: null
     height: null
-    cards: []
+    _stats:
+      coreVersion: '12.331'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
     _key: '!cards.cards!tkTSelPVmWdGXA5t.OggMKEVzKRc5Lvol'
+    cards: []
   - _id: 1Pn8wnWiseFrnZhk
     name: Gloire
     description: ''
@@ -1018,8 +1360,17 @@ cards:
     value: null
     width: null
     height: null
-    cards: []
+    _stats:
+      coreVersion: '12.331'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
     _key: '!cards.cards!tkTSelPVmWdGXA5t.1Pn8wnWiseFrnZhk'
+    cards: []
   - _id: M6thotDbtXniVPpU
     name: Coup de grâce
     description: ''
@@ -1044,8 +1395,17 @@ cards:
     value: null
     width: null
     height: null
-    cards: []
+    _stats:
+      coreVersion: '12.331'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
     _key: '!cards.cards!tkTSelPVmWdGXA5t.M6thotDbtXniVPpU'
+    cards: []
   - _id: 4PcJafcPZ1GXY4YZ
     name: Coup de grâce
     description: ''
@@ -1070,8 +1430,17 @@ cards:
     value: null
     width: null
     height: null
-    cards: []
+    _stats:
+      coreVersion: '12.331'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
     _key: '!cards.cards!tkTSelPVmWdGXA5t.4PcJafcPZ1GXY4YZ'
+    cards: []
   - _id: fwqnjjr6M9OihejA
     name: Coup de grâce
     description: ''
@@ -1096,8 +1465,17 @@ cards:
     value: null
     width: null
     height: null
-    cards: []
+    _stats:
+      coreVersion: '12.331'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
     _key: '!cards.cards!tkTSelPVmWdGXA5t.fwqnjjr6M9OihejA'
+    cards: []
   - _id: c4iY1Nq2RphKlboE
     name: Coup de grâce
     description: ''
@@ -1122,8 +1500,17 @@ cards:
     value: null
     width: null
     height: null
-    cards: []
+    _stats:
+      coreVersion: '12.331'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
     _key: '!cards.cards!tkTSelPVmWdGXA5t.c4iY1Nq2RphKlboE'
+    cards: []
   - _id: 3XRryaCCdZyOlpHJ
     name: Romance
     description: ''
@@ -1148,8 +1535,17 @@ cards:
     value: null
     width: null
     height: null
-    cards: []
+    _stats:
+      coreVersion: '12.331'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
     _key: '!cards.cards!tkTSelPVmWdGXA5t.3XRryaCCdZyOlpHJ'
+    cards: []
   - _id: HmjxXEphdnfWDYUF
     name: Némésis
     description: ''
@@ -1174,8 +1570,17 @@ cards:
     value: null
     width: null
     height: null
-    cards: []
+    _stats:
+      coreVersion: '12.331'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
     _key: '!cards.cards!tkTSelPVmWdGXA5t.HmjxXEphdnfWDYUF'
+    cards: []
   - _id: GCztO0NBCjRc8BGr
     name: Drame
     description: ''
@@ -1200,8 +1605,17 @@ cards:
     value: null
     width: null
     height: null
-    cards: []
+    _stats:
+      coreVersion: '12.331'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
     _key: '!cards.cards!tkTSelPVmWdGXA5t.GCztO0NBCjRc8BGr'
+    cards: []
   - _id: Zb4EivpvRpYAf2dv
     name: Drame
     description: ''
@@ -1226,8 +1640,17 @@ cards:
     value: null
     width: null
     height: null
-    cards: []
+    _stats:
+      coreVersion: '12.331'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
     _key: '!cards.cards!tkTSelPVmWdGXA5t.Zb4EivpvRpYAf2dv'
+    cards: []
   - _id: pD3euEBEdxSJ7NFp
     name: Drame
     description: ''
@@ -1252,8 +1675,17 @@ cards:
     value: null
     width: null
     height: null
-    cards: []
+    _stats:
+      coreVersion: '12.331'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
     _key: '!cards.cards!tkTSelPVmWdGXA5t.pD3euEBEdxSJ7NFp'
+    cards: []
   - _id: UHhRItUfaHRgTvlK
     name: Drame
     description: ''
@@ -1278,8 +1710,17 @@ cards:
     value: null
     width: null
     height: null
-    cards: []
+    _stats:
+      coreVersion: '12.331'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
     _key: '!cards.cards!tkTSelPVmWdGXA5t.UHhRItUfaHRgTvlK'
+    cards: []
   - _id: fjo1YnxQMw77evuY
     name: Commandement
     description: ''
@@ -1304,8 +1745,17 @@ cards:
     value: null
     width: null
     height: null
-    cards: []
+    _stats:
+      coreVersion: '12.331'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
     _key: '!cards.cards!tkTSelPVmWdGXA5t.fjo1YnxQMw77evuY'
+    cards: []
   - _id: h9kbs3akSlxP0nTn
     name: Commandement
     description: ''
@@ -1330,8 +1780,17 @@ cards:
     value: null
     width: null
     height: null
-    cards: []
+    _stats:
+      coreVersion: '12.331'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
     _key: '!cards.cards!tkTSelPVmWdGXA5t.h9kbs3akSlxP0nTn'
+    cards: []
   - _id: 9k1ZydTUCrbjIGN9
     name: Soutien
     description: ''
@@ -1356,8 +1815,17 @@ cards:
     value: null
     width: null
     height: null
-    cards: []
+    _stats:
+      coreVersion: '12.331'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
     _key: '!cards.cards!tkTSelPVmWdGXA5t.9k1ZydTUCrbjIGN9'
+    cards: []
   - _id: gulQO68mZAj15zX6
     name: Soutien
     description: ''
@@ -1382,8 +1850,17 @@ cards:
     value: null
     width: null
     height: null
-    cards: []
+    _stats:
+      coreVersion: '12.331'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
     _key: '!cards.cards!tkTSelPVmWdGXA5t.gulQO68mZAj15zX6'
+    cards: []
   - _id: NK0z7D4slsDBFd41
     name: Soutien
     description: ''
@@ -1408,8 +1885,17 @@ cards:
     value: null
     width: null
     height: null
-    cards: []
+    _stats:
+      coreVersion: '12.331'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
     _key: '!cards.cards!tkTSelPVmWdGXA5t.NK0z7D4slsDBFd41'
+    cards: []
   - _id: Ozx45AV2NXfbubXg
     name: Soutien
     description: ''
@@ -1434,8 +1920,17 @@ cards:
     value: null
     width: null
     height: null
-    cards: []
+    _stats:
+      coreVersion: '12.331'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
     _key: '!cards.cards!tkTSelPVmWdGXA5t.Ozx45AV2NXfbubXg'
+    cards: []
   - _id: Q92TcPBrNXt6lta8
     name: Second souffle
     description: ''
@@ -1460,8 +1955,17 @@ cards:
     value: null
     width: null
     height: null
-    cards: []
+    _stats:
+      coreVersion: '12.331'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
     _key: '!cards.cards!tkTSelPVmWdGXA5t.Q92TcPBrNXt6lta8'
+    cards: []
   - _id: Gf2HFInFaNFZqCpL
     name: Second souffle
     description: ''
@@ -1486,8 +1990,17 @@ cards:
     value: null
     width: null
     height: null
-    cards: []
+    _stats:
+      coreVersion: '12.331'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
     _key: '!cards.cards!tkTSelPVmWdGXA5t.Gf2HFInFaNFZqCpL'
+    cards: []
   - _id: xZaaps8KaojcdVKH
     name: Transfert
     description: ''
@@ -1512,8 +2025,17 @@ cards:
     value: null
     width: null
     height: null
-    cards: []
+    _stats:
+      coreVersion: '12.331'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
     _key: '!cards.cards!tkTSelPVmWdGXA5t.xZaaps8KaojcdVKH'
+    cards: []
   - _id: gIqVy0Lw1mq0bhn1
     name: Poussée de réalité
     description: ''
@@ -1538,8 +2060,17 @@ cards:
     system:
       number: ''
     value: null
-    cards: []
+    _stats:
+      coreVersion: '12.331'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
     _key: '!cards.cards!tkTSelPVmWdGXA5t.gIqVy0Lw1mq0bhn1'
+    cards: []
   - _id: 3lq7s2Fbwl2Cvz0l
     name: Maelström
     description: ''
@@ -1564,8 +2095,17 @@ cards:
     value: null
     width: null
     height: null
-    cards: []
+    _stats:
+      coreVersion: '12.331'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
     _key: '!cards.cards!tkTSelPVmWdGXA5t.3lq7s2Fbwl2Cvz0l'
+    cards: []
 rotation: 0
 displayCount: false
 folder: null
@@ -1589,9 +2129,11 @@ height: null
 _stats:
   systemId: torgeternity
   systemVersion: 3.8.1
-  coreVersion: '11.315'
+  coreVersion: '12.331'
   createdTime: 1716827810666
   modifiedTime: 1716827810666
   lastModifiedBy: VAnYow5sWS9EJzo0
+  compendiumSource: Cards.Xx9CCRsurDadGaCi
+  duplicateSource: null
 _key: '!cards!tkTSelPVmWdGXA5t'
 
