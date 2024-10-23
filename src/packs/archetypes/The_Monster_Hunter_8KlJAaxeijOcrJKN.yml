@@ -580,6 +580,45 @@ items:
       modifiedTime: 1722358319260
       lastModifiedBy: 93AMwcGe6H37rcPA
     _key: '!actors.items!8KlJAaxeijOcrJKN.0reE7AXEREP0lHJD'
+  - name: Human
+    type: race
+    img: systems/torgeternity/images/icons/human-icon.webp
+    system:
+      name: ''
+      description: >-
+        <img class="charimg" src="modules/te001-core-rulebook/images/aidan.webp"
+        /><p>Most characters in the Possibility Wars are humans from Core Earth
+        or one of the seven
+        cosms.</p><p>@UUID[Compendium.te001-core-rulebook.rules.JournalEntry.1uWZq6PSVddE1KQs.JournalEntryPage.QGtiReSKzXZa2Tkn#human]{Human
+        Perks}</p>
+      attributeMaximum:
+        charisma: 13
+        dexterity: 13
+        mind: 13
+        spirit: 13
+        strength: 13
+      perksData: []
+      size: normal
+      darkvision: false
+      customAttackData: []
+    effects: []
+    folder: TwzEDO2AmeaaSwtn
+    ownership:
+      default: 0
+      d8YcfsxBOP7RAazk: 3
+    flags: {}
+    _stats:
+      compendiumSource: Compendium.te001-core-rulebook.Items.Item.xu2Vjk8W6NDhkSTv
+      duplicateSource: null
+      coreVersion: '12.331'
+      systemId: torgeternity
+      systemVersion: 12.3.0
+      createdTime: 1729582211851
+      modifiedTime: 1729582211851
+      lastModifiedBy: d8YcfsxBOP7RAazk
+    _id: zw6Wh8zLqHjFZfU8
+    sort: 100000
+    _key: '!actors.items!8KlJAaxeijOcrJKN.zw6Wh8zLqHjFZfU8'
 effects:
   - origin: >-
       Compendium.torgeternity.archetypes.Actor.8KlJAaxeijOcrJKN.Item.0reE7AXEREP0lHJD
@@ -1076,7 +1115,7 @@ prototypeToken:
   displayName: 30
   width: 1
   height: 1
-  lockRotation: false
+  lockRotation: true
   rotation: 0
   actorLink: true
   disposition: 1
@@ -1142,17 +1181,18 @@ prototypeToken:
     colors:
       ring: null
       background: null
-    effects: 1
+    effects: 0
     subject:
       scale: 1
       texture: null
 _stats:
   systemId: torgeternity
   systemVersion: 12.2.0
-  coreVersion: '12.330'
+  coreVersion: '12.331'
   createdTime: 1693895859465
-  modifiedTime: 1722355493847
-  lastModifiedBy: 93AMwcGe6H37rcPA
+  modifiedTime: 1729013454730
+  lastModifiedBy: d8YcfsxBOP7RAazk
   compendiumSource: null
   duplicateSource: null
 _key: '!actors!8KlJAaxeijOcrJKN'
+

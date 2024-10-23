@@ -29,8 +29,17 @@ cards:
     value: null
     width: null
     height: null
-    cards: []
+    _stats:
+      coreVersion: '12.331'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
     _key: '!cards.cards!PzMkt8LOjuMJFRLR.yXpebbsqyp1jPL3g'
+    cards: []
   - _id: wGJSQ33Tw0ZtGqdD
     name: Loi de la déterioration
     description: ''
@@ -56,8 +65,17 @@ cards:
     value: null
     width: null
     height: null
-    cards: []
+    _stats:
+      coreVersion: '12.331'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
     _key: '!cards.cards!PzMkt8LOjuMJFRLR.wGJSQ33Tw0ZtGqdD'
+    cards: []
   - _id: 057taQFfsqZqS4Xp
     name: La meilleur défense
     description: ''
@@ -83,8 +101,17 @@ cards:
     value: null
     width: null
     height: null
-    cards: []
+    _stats:
+      coreVersion: '12.331'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
     _key: '!cards.cards!PzMkt8LOjuMJFRLR.057taQFfsqZqS4Xp'
+    cards: []
   - _id: 65P54L8dMo57MRnj
     name: La survie du plus fort
     description: ''
@@ -110,8 +137,17 @@ cards:
     value: null
     width: null
     height: null
-    cards: []
+    _stats:
+      coreVersion: '12.331'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
     _key: '!cards.cards!PzMkt8LOjuMJFRLR.65P54L8dMo57MRnj'
+    cards: []
   - _id: IV6qehYN0D98qJmc
     name: Les périls de la Terre Vivante
     description: ''
@@ -137,8 +173,17 @@ cards:
     value: null
     width: null
     height: null
-    cards: []
+    _stats:
+      coreVersion: '12.331'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
     _key: '!cards.cards!PzMkt8LOjuMJFRLR.IV6qehYN0D98qJmc'
+    cards: []
   - _id: dhe5In9O3pc8AMG0
     name: La brume dense
     description: ''
@@ -164,8 +209,17 @@ cards:
     value: null
     width: null
     height: null
-    cards: []
+    _stats:
+      coreVersion: '12.331'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
     _key: '!cards.cards!PzMkt8LOjuMJFRLR.dhe5In9O3pc8AMG0'
+    cards: []
   - _id: y2Ao2iMhixIlVCtm
     name: La loi de la vie
     description: ''
@@ -191,8 +245,17 @@ cards:
     value: null
     width: null
     height: null
-    cards: []
+    _stats:
+      coreVersion: '12.331'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
     _key: '!cards.cards!PzMkt8LOjuMJFRLR.y2Ao2iMhixIlVCtm'
+    cards: []
   - _id: r0Ot6dnGBJuiOKE7
     name: Instincts primitifs
     description: ''
@@ -218,8 +281,17 @@ cards:
       number: ''
     width: null
     height: null
-    cards: []
+    _stats:
+      coreVersion: '12.331'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
     _key: '!cards.cards!PzMkt8LOjuMJFRLR.r0Ot6dnGBJuiOKE7'
+    cards: []
   - _id: Pel2Eai3JdUMgH3s
     name: Trésor perdu
     description: ''
@@ -245,8 +317,17 @@ cards:
     value: null
     width: null
     height: null
-    cards: []
+    _stats:
+      coreVersion: '12.331'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
     _key: '!cards.cards!PzMkt8LOjuMJFRLR.Pel2Eai3JdUMgH3s'
+    cards: []
   - _id: 5UUYuIZnQOUY9MZ7
     name: La loi de la déterioration
     description: ''
@@ -272,8 +353,17 @@ cards:
     value: null
     width: null
     height: null
-    cards: []
+    _stats:
+      coreVersion: '12.331'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
     _key: '!cards.cards!PzMkt8LOjuMJFRLR.5UUYuIZnQOUY9MZ7'
+    cards: []
 rotation: 0
 displayCount: false
 folder: null
@@ -297,9 +387,11 @@ height: null
 _stats:
   systemId: torgeternity
   systemVersion: 3.8.1
-  coreVersion: '11.315'
+  coreVersion: '12.331'
   createdTime: 1716827810474
   modifiedTime: 1716827810474
   lastModifiedBy: VAnYow5sWS9EJzo0
+  compendiumSource: Cards.4b8BekWDWpSWF961
+  duplicateSource: null
 _key: '!cards!PzMkt8LOjuMJFRLR'
 

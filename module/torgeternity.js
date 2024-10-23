@@ -17,7 +17,7 @@ import torgeternityNav from './torgeternityNav.js';
 import { registerTorgSettings } from './settings.js';
 import { modifyTokenBars } from './tokenBars.js';
 import { registerHelpers } from './handlebarHelpers.js';
-import torgCombatant from './dramaticScene/torgeternityCombatant.js';
+import TorgCombatant from './dramaticScene/torgeternityCombatant.js';
 import { registerDiceSoNice } from './dice-so-nice.js';
 import torgeternityPlayerHand from './cards/torgeternityPlayerHand.js';
 import torgeternityPile from './cards/torgeternityPile.js';
@@ -70,7 +70,7 @@ Hooks.once('init', async function () {
   CONFIG.Combat.initiative.formula = '1';
   CONFIG.Combat.documentClass = torgeternityCombat;
   CONFIG.ui.combat = torgeternityCombatTracker;
-  CONFIG.Combatant.documentClass = torgCombatant;
+  CONFIG.Combatant.documentClass = TorgCombatant;
   CONFIG.ChatMessage.documentClass = ChatMessageTorg;
 
   // ----scenes
@@ -119,6 +119,7 @@ Hooks.once('init', async function () {
     psionicpower: game.i18n.localize('torgeternity.itemSheetDescriptions.psionicpower'),
     customSkill: game.i18n.localize('torgeternity.itemSheetDescriptions.customSkill'),
     vehicleAddOn: game.i18n.localize('torgeternity.itemSheetDescriptions.vehicleAddOn'),
+    race: game.i18n.localize('torgeternity.itemSheetDescriptions.race'),
   };
 
   ui.GMScreen = new GMScreen();
@@ -1008,6 +1009,7 @@ Hooks.on('deleteCombat', async (combat, dataUpdate) => {
   listHandsReset.forEach((hand) =>
     hand.cards.forEach((card) => card.unsetFlag('torgeternity', 'pooled'))
   );
+  await deleteActiveDefense(combat);
 });
 
 Hooks.on('deleteActor', async (actor, data1, data2) => {
@@ -1020,13 +1022,14 @@ Hooks.on('renderChatLog', (app, html, data) => {
   Chat.addChatListeners(html);
 });
 
-// When a "non-vehicle actor" is drop on a "vehicle actor", proposes to replace the driver and his skill value
-Hooks.on('dropActorSheetData', async (myVehicle, mySheet, dropItem) => {
+Hooks.on('dropActorSheetData', async (myActor, mySheet, dropItem) => {
+  // When a "non-vehicle actor" is dropped on a "vehicle actor", proposes to replace the driver and his skill value
   if (
-    (myVehicle.type === 'vehicle' && fromUuidSync(dropItem.uuid).type === 'stormknight') ||
-    (fromUuidSync(dropItem.uuid).type === 'threat' &&
-      fromUuidSync(dropItem.uuid).type !== 'vehicle')
+    (myActor.type === 'vehicle' && (await fromUuidSync(dropItem.uuid)?.type) === 'stormknight') ||
+    ((await fromUuidSync(dropItem.uuid)?.type) === 'threat' &&
+      (await fromUuidSync(dropItem.uuid)?.type) !== 'vehicle')
   ) {
+    const myVehicle = myActor;
     const driver = fromUuidSync(dropItem.uuid);
     const skill = myVehicle.system.type.toLowerCase();
     const skillValue = driver?.system?.skills[skill + 'Vehicles']?.value ?? 0;
@@ -1040,34 +1043,14 @@ Hooks.on('dropActorSheetData', async (myVehicle, mySheet, dropItem) => {
         await game.i18n.format('torgeternity.notifications.noCapacity', { a: driver.name })
       );
     }
+    return;
   }
-  /* await Dialog.confirm({
-    title: game.i18n.localize('torgeternity.dialogWindow.dragDropDriver.windowTitle'),
-    content: game.i18n.localize('torgeternity.dialogWindow.dragDropDriver.maintext'),
-    yes: async () => {
-      if (skillValue > 0) {
-        myVehicle.update({
-          'system.operator.name': driver.name,
-          'system.operator.skillValue': skillValue,
-        });
-      } else {
-        ui.notifications.warn(
-          await game.i18n.format('torgeternity.notifications.noCapacity', { a: driver.name })
-        );
-        return;
-      }
-    },
-    no: () => {},
-    render: () => {},
-    defaultYes: true,
-    rejectClose: false,
-  });*/
 });
 
 // When the turn taken button is hit, delete "until end of turn" effects (stymied/vulnerable)
-Hooks.on('updateCombatant', async (torgCombatant, dataFlags, dataDiff, userId) => {
+Hooks.on('updateCombatant', async (combatant, dataFlags, dataDiff, userId) => {
   if (game.user.hasRole(4) && dataFlags.flags?.world.turnTaken) {
-    const myActor = torgCombatant.actor;
+    const myActor = combatant.actor;
     for (const ef of myActor.effects.filter((e) => e.duration.type === 'turns')) {
       if (ef.name === 'ActiveDefense') continue;
       await myActor.updateEmbeddedDocuments('ActiveEffect', [
@@ -1080,4 +1063,64 @@ Hooks.on('updateCombatant', async (torgCombatant, dataFlags, dataDiff, userId) =
       if (!ef.duration.remaining) await ef.delete();
     }
   }
+});
+
+// deactivate active defense when the combat round is progressed. End of combat is in the hook above, 'deleteCombat'
+Hooks.on('combatRound', await deleteActiveDefense);
+
+async function deleteActiveDefense(...args) {
+  if (!game.user.isGM) return;
+
+  const combatants = args[0].combatants;
+
+  for (const combatant of combatants) {
+    const activeDefenseEffect = combatant.actor.appliedEffects.find(
+      (eff) => eff.name === 'ActiveDefense'
+    );
+    if (activeDefenseEffect) await activeDefenseEffect.delete();
+  }
+}
+
+Hooks.on('getActorDirectoryEntryContext', async (html, options) => {
+  const newOptions = [];
+
+  newOptions.push({
+    name: 'torgeternity.contextMenu.characterInfo.contextMenuTitle',
+    icon: '<i class="fa-regular fa-circle-info"></i>',
+    callback: async (li) => {
+      const actor = game.actors.get(li.data('documentId'));
+
+      const description =
+        '<div class="charInfoOutput">' + actor.system.details.background ??
+        actor.system.details.description ??
+        actor.system.description ??
+        '' + '</div>';
+
+      new Dialog(
+        {
+          title: game.i18n.format('torgeternity.contextMenu.characterInfo.windowTitle', {
+            a: actor.name,
+          }),
+          content: await TextEditor.enrichHTML(description),
+          buttons: {
+            ok: {
+              label: game.i18n.localize('torgeternity.dialogWindow.buttons.ok'),
+              callback: () => {},
+            },
+            showPlayers: {
+              label: game.i18n.localize('torgeternity.dialogPrompts.showToPlayers'),
+              callback: (html) => {
+                ChatMessage.create({
+                  content: html[0].querySelector('.charInfoOutput').outerHTML,
+                });
+              },
+            },
+          },
+        },
+        { width: 800 }
+      ).render(true);
+    },
+  });
+
+  options.splice(0, 0, ...newOptions);
 });

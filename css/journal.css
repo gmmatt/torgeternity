@@ -575,9 +575,11 @@ div.subtitleleft img {
   float: right;
   shape-margin: 0.5rem !important;
   shape-image-threshold: 0.1;
-  max-width: 50% !important;
-  max-height: 50% !important;
+  height: auto;
+  width: 50% !important;
+  border:none;
   margin-left: 0.5rem !important;
+  shape-outside: url();
 }
 
 /*...................................................................*/

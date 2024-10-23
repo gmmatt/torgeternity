@@ -19,6 +19,7 @@ export async function renderSkillChat(test) {
   test.applyDebuffLabel = 'display:none';
   test.applyDamLabel = 'display:none';
   test.backlashLabel = 'display:none';
+  test.torgDiceStyle = game.settings.get('torgeternity', 'useRenderedTorgDice');
   test.bdDamageLabelStyle = test.bdDamageSum ? 'display:block' : 'display:none';
   let iteratedRoll;
 
@@ -792,7 +793,7 @@ export async function renderSkillChat(test) {
         adjustedDamage += test?.additionalDamage;
       }
       // Check for whether a target is present & turn on display of damage sub-label
-      if (test.target.present === true) {
+      if (test?.target?.present) {
         test.damageSubLabel = 'display:block';
         // If armor and cover can assist, adjust toughness based on AP effects and cover modifier
         if (test.applyArmor === true) {
@@ -939,7 +940,7 @@ export async function renderSkillChat(test) {
     // Cannot pass target array to chat because Bad Things happen when I try it, so we have to clear it out here
     test.targets = '';
     // record adjustedToughness for each flagged target
-    currentTarget.targetAdjustedToughness = test.targetAdjustedToughness;
+    if (currentTarget) currentTarget.targetAdjustedToughness = test.targetAdjustedToughness;
 
     const chatData = {
       user: game.user._id,
@@ -971,9 +972,10 @@ export async function renderSkillChat(test) {
     messages.push(await ChatMessageTorg.create(messageDataIterated));
   }
 
-  // reset tokens targeted, they are printed in the chatCard
-  await game.user.updateTokenTargets();
-  await game.user.broadcastActivity({ targets: [] });
+  if (game.settings.get('torgeternity', 'unTarget')) {
+    await game.user.updateTokenTargets();
+    await game.user.broadcastActivity({ targets: [] });
+  }
   try {
     game.dice3d.messageHookDisabled = false;
   } catch (e) {}

@@ -11,10 +11,18 @@
       {{selectOptions config.cosmTypes selected=actor.system.other.cosm localize=true sort=true}}
     </select>
 
-    <span>{{localize "torgeternity.sheetLabels.race"}}</span>
-    <select style="width: 100%" name="system.details.race" class="input-box">
-      {{selectOptions config.races selected=actor.system.details.race localize=true sort=true}}
-    </select>
+    <span class="raceSpan">
+      <p class="raceSpanHeader">{{localize "torgeternity.sheetLabels.race"}}</p>
+      <p 
+        style="grid-column: 1/
+          {{#if (and actor.flags.torgeternity.editAttributes (ne actor.system.details.race (localize 'torgeternity.sheetLabels.noRace')))}}2{{else}}3{{/if}}" 
+        class="raceSpanRace">
+          {{actor.system.details.race}}
+        </p>
+      {{#if (and actor.flags.torgeternity.editAttributes (ne actor.system.details.race (localize 'torgeternity.sheetLabels.noRace')))}}
+        <a class="deleteRaceButton" data-tooltip="{{localize 'torgeternity.iconeTitles.deleteRace'}}"><i class="fas fa-trash"></i></a>
+      {{/if}}
+    </span>
 
     <span>{{localize "torgeternity.sheetLabels.size"}}</span>
     <select style="width: 100%" name="system.details.sizeBonus" class="input-box">

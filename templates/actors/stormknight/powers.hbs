@@ -33,9 +33,11 @@
           <div class="item-dropdown-extras">
             {{item.system.cosm}}
           </div>
+          {{#if item.system.timestaken}}
           <div class="item-dropdown-extras">
             {{item.system.timestaken}}x
           </div>
+          {{/if}}
         </div>
       </li>
     {{/each}}
@@ -76,9 +78,11 @@
           <div class="item-dropdown-extras">
             {{item.system.cosm}}
           </div>
-          <div class="item-dropdown-extras">
-            {{item.system.timestaken}}x
-          </div>
+          {{#if item.system.timestaken}}
+            <div class="item-dropdown-extras">
+              {{item.system.timestaken}}x
+            </div>
+          {{/if}}
         </div>
       </li>
     {{/each}}
@@ -120,9 +124,11 @@
           <div class="item-dropdown-extras">
             {{item.system.cosm}}
           </div>
-          <div class="item-dropdown-extras">
-            {{item.system.timestaken}}x
-          </div>
+          {{#if item.system.timestaken}}
+            <div class="item-dropdown-extras">
+              {{item.system.timestaken}}x
+            </div>
+          {{/if}}
         </div>
       </li>
     {{/each}}

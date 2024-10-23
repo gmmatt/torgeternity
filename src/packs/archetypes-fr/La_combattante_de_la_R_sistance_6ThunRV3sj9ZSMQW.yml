@@ -114,10 +114,12 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: null
+      coreVersion: '12.331'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
+      compendiumSource: Compendium.te001-core-rulebook.Items.V0Jmybz7WGytQmIM
+      duplicateSource: null
     _key: '!actors.items!6ThunRV3sj9ZSMQW.mkDfDTkeExfM9yZj'
   - _id: t3n2NL6Htq5sswMD
     name: Armure de cuir
@@ -148,13 +150,25 @@ items:
           turns: null
           startRound: null
           startTurn: null
-        icon: icons/svg/aura.svg
         origin: Item.i0UpOMkjfmzW0uFN
-        tint: null
+        tint: '#ffffff'
         transfer: true
         name: Armor +1
         description: ''
         statuses: []
+        _stats:
+          coreVersion: '12.331'
+          systemId: null
+          systemVersion: null
+          createdTime: null
+          modifiedTime: null
+          lastModifiedBy: null
+          compendiumSource: null
+          duplicateSource: null
+        img: icons/svg/aura.svg
+        type: base
+        system: {}
+        sort: 0
         _key: >-
           !actors.items.effects!6ThunRV3sj9ZSMQW.t3n2NL6Htq5sswMD.4FkehvPf5gFKLufu
     folder: null
@@ -180,10 +194,12 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: null
+      coreVersion: '12.331'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
+      compendiumSource: Compendium.te001-core-rulebook.Items.6GTnNpLUtydDJVi1
+      duplicateSource: null
     _key: '!actors.items!6ThunRV3sj9ZSMQW.t3n2NL6Htq5sswMD'
   - _id: T5GcUNDAOu00TRze
     name: Gilet de protection
@@ -214,13 +230,25 @@ items:
           turns: null
           startRound: null
           startTurn: null
-        icon: icons/svg/aura.svg
         origin: Item.muPtAUlFLPCEwhmJ
-        tint: null
+        tint: '#ffffff'
         transfer: true
         name: +3 Armor
         description: ''
         statuses: []
+        _stats:
+          coreVersion: '12.331'
+          systemId: null
+          systemVersion: null
+          createdTime: null
+          modifiedTime: null
+          lastModifiedBy: null
+          compendiumSource: null
+          duplicateSource: null
+        img: icons/svg/aura.svg
+        type: base
+        system: {}
+        sort: 0
         _key: >-
           !actors.items.effects!6ThunRV3sj9ZSMQW.T5GcUNDAOu00TRze.OzihOXYdkQa3KJuz
     folder: null
@@ -246,10 +274,12 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: null
+      coreVersion: '12.331'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
+      compendiumSource: Compendium.te001-core-rulebook.Items.G9m8o4kbueF7EWdt
+      duplicateSource: null
     _key: '!actors.items!6ThunRV3sj9ZSMQW.T5GcUNDAOu00TRze'
   - _id: 29h6SVCn6EMXUikn
     name: Gantelet de souffrance
@@ -286,10 +316,12 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: null
+      coreVersion: '12.331'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
+      compendiumSource: Compendium.te001-core-rulebook.Items.fmwK3vCtQr2PAPtN
+      duplicateSource: null
     _key: '!actors.items!6ThunRV3sj9ZSMQW.29h6SVCn6EMXUikn'
   - _id: rWow8Eu4Xl2rShRt
     name: Thav-9 Pistolet Mitrailleur
@@ -327,10 +359,12 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: null
+      coreVersion: '12.331'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
+      compendiumSource: Compendium.te001-core-rulebook.Items.KlM3lZyDwImrJsGR
+      duplicateSource: null
     _key: '!actors.items!6ThunRV3sj9ZSMQW.rWow8Eu4Xl2rShRt'
   - _id: tzZyWcxOUjPq4oxo
     name: Stimulation
@@ -378,10 +412,12 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: null
+      coreVersion: '12.331'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
+      compendiumSource: Compendium.te001-core-rulebook.Items.E1aOVDM9yrPzXa4p
+      duplicateSource: null
     _key: '!actors.items!6ThunRV3sj9ZSMQW.tzZyWcxOUjPq4oxo'
   - _id: capa9jmSXVQHjYmI
     name: Télékinésie
@@ -431,10 +467,12 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: null
+      coreVersion: '12.331'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
+      compendiumSource: Compendium.te001-core-rulebook.Items.W2UcfbwA52PfFsq0
+      duplicateSource: null
     _key: '!actors.items!6ThunRV3sj9ZSMQW.capa9jmSXVQHjYmI'
   - _id: s63Bnkgoh62Vk0Yt
     name: Barrière télékinétique
@@ -480,10 +518,12 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: null
+      coreVersion: '12.331'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
+      compendiumSource: Compendium.te001-core-rulebook.Items.3Z6PGIn3g8uZmqxl
+      duplicateSource: null
     _key: '!actors.items!6ThunRV3sj9ZSMQW.s63Bnkgoh62Vk0Yt'
   - _id: xVz42Esa7k2roy65
     name: Psionique
@@ -606,10 +646,12 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: null
+      coreVersion: '12.331'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
+      compendiumSource: Compendium.te001-core-rulebook.Items.4ZtIS4h8WRGarKIV
+      duplicateSource: null
     _key: '!actors.items!6ThunRV3sj9ZSMQW.xVz42Esa7k2roy65'
   - _id: HA3ZNV6zpDV4OeJ3
     name: Caltrops
@@ -640,10 +682,12 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: null
+      coreVersion: '12.331'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
     _key: '!actors.items!6ThunRV3sj9ZSMQW.HA3ZNV6zpDV4OeJ3'
   - _id: 54w2eixS1RsNzOer
     name: Chargeurs supplémentaires (5)
@@ -668,10 +712,12 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: null
+      coreVersion: '12.331'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
+      compendiumSource: Item.qZuQoegFPBYC6tEB
+      duplicateSource: null
     _key: '!actors.items!6ThunRV3sj9ZSMQW.54w2eixS1RsNzOer'
   - _id: HuQq8uxNbNpaZR8h
     name: Fusées éclairantes (3)
@@ -696,10 +742,12 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: null
+      coreVersion: '12.331'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
+      compendiumSource: Item.JniN3c3c6HNv7cSp
+      duplicateSource: null
     _key: '!actors.items!6ThunRV3sj9ZSMQW.HuQq8uxNbNpaZR8h'
   - _id: KlCPFk1qWVHG8kGN
     name: Attaque à mains nues
@@ -725,10 +773,12 @@ items:
     _stats:
       systemId: null
       systemVersion: null
-      coreVersion: null
+      coreVersion: '12.331'
       createdTime: null
       modifiedTime: null
       lastModifiedBy: null
+      compendiumSource: Item.BFGjhDetVDm1xiku
+      duplicateSource: null
     _key: '!actors.items!6ThunRV3sj9ZSMQW.KlCPFk1qWVHG8kGN'
 effects:
   - _id: fD9gcuFeLzY5eA8Z
@@ -751,13 +801,25 @@ effects:
       turns: null
       startRound: null
       startTurn: null
-    icon: icons/svg/aura.svg
-    origin: Actor.BhuC9vKlc8lfD982.OwnedItem.t3n2NL6Htq5sswMD
-    tint: null
+    origin: Actor.BhuC9vKlc8lfD982.Item.t3n2NL6Htq5sswMD
+    tint: '#ffffff'
     transfer: true
     name: armure +1
     description: ''
     statuses: []
+    _stats:
+      coreVersion: '12.331'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+    img: icons/svg/aura.svg
+    type: base
+    system: {}
+    sort: 0
     _key: '!actors.effects!6ThunRV3sj9ZSMQW.fD9gcuFeLzY5eA8Z'
   - _id: sukPdeJg9HzjO7xo
     flags: {}
@@ -779,13 +841,25 @@ effects:
       turns: null
       startRound: null
       startTurn: null
-    icon: icons/svg/aura.svg
-    origin: Actor.BhuC9vKlc8lfD982.OwnedItem.T5GcUNDAOu00TRze
-    tint: null
+    origin: Actor.BhuC9vKlc8lfD982.Item.T5GcUNDAOu00TRze
+    tint: '#ffffff'
     transfer: true
     name: armure +3
     description: ''
     statuses: []
+    _stats:
+      coreVersion: '12.331'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
+    img: icons/svg/aura.svg
+    type: base
+    system: {}
+    sort: 0
     _key: '!actors.effects!6ThunRV3sj9ZSMQW.sukPdeJg9HzjO7xo'
 folder: null
 sort: 100001
@@ -1273,14 +1347,20 @@ prototypeToken:
       max: 1
     color: null
     attenuation: 0.5
+    negative: false
+    priority: 0
   texture:
     src: systems/torgeternity/images/characters/Resistance_Fighter.Token.webp
-    tint: null
+    tint: '#ffffff'
     scaleX: 1
     scaleY: 1
     offsetX: 0
     offsetY: 0
     rotation: 0
+    anchorX: 0.5
+    anchorY: 0.5
+    fit: contain
+    alphaThreshold: 0.75
   sight:
     angle: 360
     enabled: false
@@ -1290,15 +1370,30 @@ prototypeToken:
     attenuation: 0.1
     saturation: 0
     contrast: 0
+    color: null
   appendNumber: false
   prependAdjective: false
   detectionModes: []
+  hexagonalShape: 0
+  occludable:
+    radius: 0
+  ring:
+    enabled: false
+    colors:
+      ring: null
+      background: null
+    effects: 1
+    subject:
+      scale: 1
+      texture: null
 _stats:
   systemId: torgeternity
   systemVersion: 3.8.1
-  coreVersion: '11.315'
+  coreVersion: '12.331'
   createdTime: 1716827809021
   modifiedTime: 1716827809021
   lastModifiedBy: VAnYow5sWS9EJzo0
+  compendiumSource: null
+  duplicateSource: null
 _key: '!actors!6ThunRV3sj9ZSMQW'
 

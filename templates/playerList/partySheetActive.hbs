@@ -86,7 +86,7 @@
         <ul>
           {{#each user.character.system.attributes as |attr key|}}
           <li class="attribut-block">
-            <span>{{localize (concatAttributeName key) }}</span>
+            <span>{{localizedAttribute}}</span>
             <span>: {{attr.value}}</span>
           </li>
           {{/each}}
@@ -97,7 +97,7 @@
           {{#each user.character.system.skills as |skill key|}} {{#if skill.adds}}
 
           <li class="attribut-block">
-            <span>{{localize (concatSkillName key) }}</span>
+            <span>{{skill.localizedSkill}}</span>
             <span>: {{skill.value}}</span>
             {{#if skill.isFav}}
             <i class="far fa-star"></i>

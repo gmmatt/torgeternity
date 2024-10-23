@@ -69,9 +69,7 @@
                         class="input-box"
                         />
                     {{/if}}
-
-                </div>
-                
+                </div>                
                 <div class="main-content">                    
                     <div name="description" class="item-description-textarea">
                         {{editor description target="system.description" engine="prosemirror" button=true editable=editable}}
@@ -79,9 +77,10 @@
                     <p style="min-height: 22px; height:auto;" class="item-data-label">
                         {{localize "torgeternity.perks.prerequisites"}}
                     </p>
-                    <input name="system.prerequisites" type="text" value="{{item.system.prerequisites}}" class="input-box" />
+                    <div name="prerequisites" class="item-description-textarea">
+                        {{editor prerequisites target="system.prerequisites" engine="prosemirror" button=true editable=editable}}                    
+                    </div>                    
                 </div>
-
             </div>
         </div>
         
@@ -97,7 +96,8 @@
                 </div>
             </div>
             <ol class="item-list">
-                <li class="item-block" {{hideElement item.system.pulpPowers.enhancementNumber 1}}>
+                {{#if (gt item.system.pulpPowers.enhancementNumber 0)}}
+                <li class="item-block" >
                     <div class="item-row flexrow">
                         <div class="item-name enhancement-check">
                             {{localize "torgeternity.sheetLabels.taken"}}
@@ -106,8 +106,8 @@
                             {{localize "torgeternity.sheetLabels.titleDescription"}}
                         </div>
                     </div>
-                </li>
-                <li class="item-block" {{hideElement item.system.pulpPowers.enhancementNumber 1}}>
+                </li>                
+                <li class="item-block">
                     <div class="item-row flexrow">
                         <div class="item-name enhancement-check">
                             <input name="system.pulpPowers.enhancement01.taken" class="toggle" type="checkbox" id="taken01" {{checked item.system.pulpPowers.enhancement01.taken}} data-tooltip="{{localize "torgeternity.sheetLabels.enhancementTooltip"}}">
@@ -117,8 +117,10 @@
                             <textarea name="system.pulpPowers.enhancement01.description" class="pulp-description">{{item.system.pulpPowers.enhancement01.description}}</textarea>
                         </div>
                     </div>
-                </li>                
-                <li class="item-block" {{hideElement item.system.pulpPowers.enhancementNumber 2}}>
+                </li>
+                {{/if}}         
+                {{#if (gt item.system.pulpPowers.enhancementNumber 1)}}       
+                <li class="item-block">
                     <div class="item-row flexrow">
                         <div class="item-name enhancement-check">
                             <input name="system.pulpPowers.enhancement02.taken" class="toggle" type="checkbox" id="taken02" {{checked item.system.pulpPowers.enhancement02.taken}} data-tooltip="{{localize "torgeternity.sheetLabels.enhancementTooltip"}}">
@@ -129,7 +131,9 @@
                         </div>
                     </div>
                 </li>                
-                <li class="item-block" {{hideElement item.system.pulpPowers.enhancementNumber 3}}>
+                {{/if}}         
+                {{#if (gt item.system.pulpPowers.enhancementNumber 2)}}       
+                <li class="item-block">
                     <div class="item-row flexrow">
                         <div class="item-name enhancement-check">
                             <input name="system.pulpPowers.enhancement03.taken" class="toggle" type="checkbox" id="taken03" {{checked item.system.pulpPowers.enhancement03.taken}} data-tooltip="{{localize "torgeternity.sheetLabels.enhancementTooltip"}}">
@@ -140,7 +144,9 @@
                         </div>
                     </div>
                 </li>                
-                <li class="item-block" {{hideElement item.system.pulpPowers.enhancementNumber 4}}>
+                {{/if}}         
+                {{#if (gt item.system.pulpPowers.enhancementNumber 3)}}       
+                <li class="item-block">
                     <div class="item-row flexrow">
                         <div class="item-name enhancement-check">
                             <input name="system.pulpPowers.enhancement04.taken" class="toggle" type="checkbox" id="taken04" {{checked item.system.pulpPowers.enhancement04.taken}} data-tooltip="{{localize "torgeternity.sheetLabels.enhancementTooltip"}}">
@@ -151,7 +157,9 @@
                         </div>
                     </div>
                 </li>                
-                <li class="item-block" {{hideElement item.system.pulpPowers.enhancementNumber 5}}>
+                {{/if}}         
+                {{#if (gt item.system.pulpPowers.enhancementNumber 4)}}       
+                <li class="item-block">
                     <div class="item-row flexrow">
                         <div class="item-name enhancement-check">
                             <input name="system.pulpPowers.enhancement05.taken" class="toggle" type="checkbox" id="taken05" {{checked item.system.pulpPowers.enhancement05.taken}} data-tooltip="{{localize "torgeternity.sheetLabels.enhancementTooltip"}}">
@@ -162,7 +170,9 @@
                         </div>
                     </div>
                 </li>                
-                <li class="item-block" {{hideElement item.system.pulpPowers.enhancementNumber 6}}>
+                {{/if}}         
+                {{#if (gt item.system.pulpPowers.enhancementNumber 5)}}       
+                <li class="item-block">
                     <div class="item-row flexrow">
                         <div class="item-name enhancement-check">
                             <input name="system.pulpPowers.enhancement06.taken" class="toggle" type="checkbox" id="taken06" {{checked item.system.pulpPowers.enhancement06.taken}} data-tooltip="{{localize "torgeternity.sheetLabels.enhancementTooltip"}}">
@@ -173,7 +183,9 @@
                         </div>
                     </div>
                 </li>                
-                <li class="item-block" {{hideElement item.system.pulpPowers.enhancementNumber 7}}>
+                {{/if}}         
+                {{#if (gt item.system.pulpPowers.enhancementNumber 6)}}       
+                <li class="item-block">
                     <div class="item-row flexrow">
                         <div class="item-name enhancement-check">
                             <input name="system.pulpPowers.enhancement07.taken" class="toggle" type="checkbox" id="taken07" {{checked item.system.pulpPowers.enhancement07.taken}} data-tooltip="{{localize "torgeternity.sheetLabels.enhancementTooltip"}}">
@@ -184,7 +196,9 @@
                         </div>
                     </div>
                 </li>                
-                <li class="item-block" {{hideElement item.system.pulpPowers.enhancementNumber 8}}>
+                {{/if}}         
+                {{#if (gt item.system.pulpPowers.enhancementNumber 7)}}       
+                <li class="item-block">
                     <div class="item-row flexrow">
                         <div class="item-name enhancement-check">
                             <input name="system.pulpPowers.enhancement08.taken" class="toggle" type="checkbox" id="taken08" {{checked item.system.pulpPowers.enhancement08.taken}} data-tooltip="{{localize "torgeternity.sheetLabels.enhancementTooltip"}}">
@@ -195,7 +209,9 @@
                         </div>
                     </div>
                 </li>                
-                <li class="item-block" {{hideElement item.system.pulpPowers.enhancementNumber 9}}>
+                {{/if}}         
+                {{#if (gt item.system.pulpPowers.enhancementNumber 8)}}       
+                <li class="item-block">
                     <div class="item-row flexrow">
                         <div class="item-name enhancement-check">
                             <input name="system.pulpPowers.enhancement09.taken" class="toggle" type="checkbox" id="taken09" {{checked item.system.pulpPowers.enhancement09.taken}} data-tooltip="{{localize "torgeternity.sheetLabels.enhancementTooltip"}}">
@@ -206,7 +222,9 @@
                         </div>
                     </div>
                 </li>                
-                <li class="item-block" {{hideElement item.system.pulpPowers.enhancementNumber 10}}>
+                {{/if}}         
+                {{#if (gt item.system.pulpPowers.enhancementNumber 9)}}       
+                <li class="item-block">
                     <div class="item-row flexrow">
                         <div class="item-name enhancement-check">
                             <input name="system.pulpPowers.enhancement10.taken" class="toggle" type="checkbox" id="taken10" {{checked item.system.pulpPowers.enhancement10.taken}} data-tooltip="{{localize "torgeternity.sheetLabels.enhancementTooltip"}}">
@@ -217,7 +235,9 @@
                         </div>
                     </div>
                 </li>                
-                <li class="item-block" {{hideElement item.system.pulpPowers.enhancementNumber 11}}>
+                {{/if}}         
+                {{#if (gt item.system.pulpPowers.enhancementNumber 10)}}       
+                <li class="item-block">
                     <div class="item-row flexrow">
                         <div class="item-name enhancement-check">
                             <input name="system.pulpPowers.enhancement11.taken" class="toggle" type="checkbox" id="taken11" {{checked item.system.pulpPowers.enhancement11.taken}} data-tooltip="{{localize "torgeternity.sheetLabels.enhancementTooltip"}}">
@@ -228,7 +248,9 @@
                         </div>
                     </div>
                 </li>                
-                <li class="item-block" {{hideElement item.system.pulpPowers.enhancementNumber 12}}>
+                {{/if}}         
+                {{#if (gt item.system.pulpPowers.enhancementNumber 11)}}       
+                <li class="item-block">
                     <div class="item-row flexrow">
                         <div class="item-name enhancement-check">
                             <input name="system.pulpPowers.enhancement12.taken" class="toggle" type="checkbox" id="taken12" {{checked item.system.pulpPowers.enhancement12.taken}} data-tooltip="{{localize "torgeternity.sheetLabels.enhancementTooltip"}}">
@@ -239,7 +261,9 @@
                         </div>
                     </div>
                 </li>                
-                <li class="item-block" {{hideElement item.system.pulpPowers.enhancementNumber 13}}>
+                {{/if}}         
+                {{#if (gt item.system.pulpPowers.enhancementNumber 12)}}       
+                <li class="item-block">
                     <div class="item-row flexrow">
                         <div class="item-name enhancement-check">
                             <input name="system.pulpPowers.enhancement13.taken" class="toggle" type="checkbox" id="taken13" {{checked item.system.pulpPowers.enhancement13.taken}} data-tooltip="{{localize "torgeternity.sheetLabels.enhancementTooltip"}}">
@@ -250,7 +274,9 @@
                         </div>
                     </div>
                 </li>                
-                <li class="item-block" {{hideElement item.system.pulpPowers.enhancementNumber 14}}>
+                {{/if}}         
+                {{#if (gt item.system.pulpPowers.enhancementNumber 13)}}       
+                <li class="item-block">
                     <div class="item-row flexrow">
                         <div class="item-name enhancement-check">
                             <input name="system.pulpPowers.enhancement14.taken" class="toggle" type="checkbox" id="taken14" {{checked item.system.pulpPowers.enhancement14.taken}} data-tooltip="{{localize "torgeternity.sheetLabels.enhancementTooltip"}}">
@@ -261,7 +287,9 @@
                         </div>
                     </div>
                 </li>                
-                <li class="item-block" {{hideElement item.system.pulpPowers.enhancementNumber 15}}>
+                {{/if}}         
+                {{#if (gt item.system.pulpPowers.enhancementNumber 14)}}       
+                <li class="item-block">
                     <div class="item-row flexrow">
                         <div class="item-name enhancement-check">
                             <input name="system.pulpPowers.enhancement15.taken" class="toggle" type="checkbox" id="taken15" {{checked item.system.pulpPowers.enhancement15.taken}} data-tooltip="{{localize "torgeternity.sheetLabels.enhancementTooltip"}}">
@@ -272,7 +300,7 @@
                         </div>
                     </div>
                 </li>                
-
+                {{/if}}
             </ol>
 
         </div>
@@ -289,77 +317,96 @@
                 </div>
             </div>
             <ol class="item-list">
-                <li class="item-block" {{hideElement item.system.pulpPowers.limitationNumber 1}}>
+                {{#if (gt item.system.pulpPowers.limitationNumber 0)}}
+                <li class="item-block">
                     <div class="item-row flexrow">
                         <div class="item-name enhancement-content">
                             <input type="text" name="system.pulpPowers.limitation01" value="{{item.system.pulpPowers.limitation01}}" class="input-box" />
                         </div>
                     </div>
-                </li>                
-                <li class="item-block" {{hideElement item.system.pulpPowers.limitationNumber 2}}>
+                </li> 
+                {{/if}}
+                {{#if (gt item.system.pulpPowers.limitationNumber 1)}}
+                <li class="item-block">
                     <div class="item-row flexrow">
                         <div class="item-name enhancement-content">
                             <input type="text" name="system.pulpPowers.limitation02" value="{{item.system.pulpPowers.limitation02}}" class="input-box" />
                         </div>
                     </div>
-                </li>                
-                <li class="item-block" {{hideElement item.system.pulpPowers.limitationNumber 3}}>
+                </li>
+                {{/if}}
+                {{#if (gt item.system.pulpPowers.limitationNumber 2)}}
+                <li class="item-block">
                     <div class="item-row flexrow">
                         <div class="item-name enhancement-content">
                             <input type="text" name="system.pulpPowers.limitation03" value="{{item.system.pulpPowers.limitation03}}" class="input-box" />
                         </div>
                     </div>
-                </li>                
-                <li class="item-block" {{hideElement item.system.pulpPowers.limitationNumber 4}}>
+                </li>
+                {{/if}}
+                {{#if (gt item.system.pulpPowers.limitationNumber 3)}}
+                <li class="item-block">
                     <div class="item-row flexrow">
                         <div class="item-name enhancement-content">
                             <input type="text" name="system.pulpPowers.limitation04" value="{{item.system.pulpPowers.limitation04}}" class="input-box" />
                         </div>
                     </div>
-                </li>                
-                <li class="item-block" {{hideElement item.system.pulpPowers.limitationNumber 5}}>
+                </li>
+                {{/if}}
+                {{#if (gt item.system.pulpPowers.limitationNumber 4)}}
+                <li class="item-block">
                     <div class="item-row flexrow">
                         <div class="item-name enhancement-content">
                             <input type="text" name="system.pulpPowers.limitation05" value="{{item.system.pulpPowers.limitation05}}" class="input-box" />
                         </div>
                     </div>
-                </li>                
-                <li class="item-block" {{hideElement item.system.pulpPowers.limitationNumber 6}}>
+                </li>
+                {{/if}}
+                {{#if (gt item.system.pulpPowers.limitationNumber 5)}}
+                <li class="item-block">
                     <div class="item-row flexrow">
                         <div class="item-name enhancement-content">
                             <input type="text" name="system.pulpPowers.limitation06" value="{{item.system.pulpPowers.limitation06}}" class="input-box" />
                         </div>
                     </div>
-                </li>                
-                <li class="item-block" {{hideElement item.system.pulpPowers.limitationNumber 7}}>
+                </li>
+                {{/if}}
+                {{#if (gt item.system.pulpPowers.limitationNumber 6)}}
+                <li class="item-block">
                     <div class="item-row flexrow">
                         <div class="item-name enhancement-content">
                             <input type="text" name="system.pulpPowers.limitation07" value="{{item.system.pulpPowers.limitation07}}" class="input-box" />
                         </div>
                     </div>
-                </li>                
-                <li class="item-block" {{hideElement item.system.pulpPowers.limitationNumber 8}}>
+                </li>
+                {{/if}}
+                {{#if (gt item.system.pulpPowers.limitationNumber 7)}}
+                <li class="item-block">
                     <div class="item-row flexrow">
                         <div class="item-name enhancement-content">
                             <input type="text" name="system.pulpPowers.limitation08" value="{{item.system.pulpPowers.limitation08}}" class="input-box" />
                         </div>
                     </div>
-                </li>                
-                <li class="item-block" {{hideElement item.system.pulpPowers.limitationNumber 9}}>
+                </li>
+                {{/if}}
+                {{#if (gt item.system.pulpPowers.limitationNumber 8)}}
+                <li class="item-block">
                     <div class="item-row flexrow">
                         <div class="item-name enhancement-content">
                             <input type="text" name="system.pulpPowers.limitation09" value="{{item.system.pulpPowers.limitation09}}" class="input-box" />
                         </div>
                     </div>
-                </li>                
-                <li class="item-block" {{hideElement item.system.pulpPowers.limitationNumber 10}}>
+                </li>
+                {{/if}}
+                {{#if (gt item.system.pulpPowers.limitationNumber 9)}}
+                <li class="item-block">
                     <div class="item-row flexrow">
                         <div class="item-name enhancement-content">
                             <input type="text" name="system.pulpPowers.limitation10" value="{{item.system.pulpPowers.limitation10}}" class="input-box" />
                         </div>
                     </div>
-                </li>                
-
+                </li>
+                {{/if}}
         </div>
 
         <div class="tab effects" data-group="primary" data-tab="effects">

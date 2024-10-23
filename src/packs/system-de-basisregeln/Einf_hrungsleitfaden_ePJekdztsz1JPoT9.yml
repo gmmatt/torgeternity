@@ -1117,10 +1117,12 @@ pages:
     _stats:
       systemId: torgeternity
       systemVersion: 3.1.1
-      coreVersion: '11.308'
+      coreVersion: '12.331'
       createdTime: 1694882749667
       modifiedTime: 1694882922139
       lastModifiedBy: CtisFurQNe9h7ABb
+      compendiumSource: null
+      duplicateSource: null
     _key: '!journal.pages!ePJekdztsz1JPoT9.n0yd2gGkGgjElI0T'
   - sort: 200000
     name: Über die Basisregeln
@@ -1161,10 +1163,12 @@ pages:
     _stats:
       systemId: torgeternity
       systemVersion: 3.1.1
-      coreVersion: '11.308'
+      coreVersion: '12.331'
       createdTime: 1694882783932
       modifiedTime: 1694882949429
       lastModifiedBy: CtisFurQNe9h7ABb
+      compendiumSource: null
+      duplicateSource: null
     _key: '!journal.pages!ePJekdztsz1JPoT9.H6HOr7tw4MQNcWO9'
   - sort: 300000
     name: Basisregeln
@@ -1189,10 +1193,12 @@ pages:
     _stats:
       systemId: torgeternity
       systemVersion: 3.1.1
-      coreVersion: '11.308'
+      coreVersion: '12.331'
       createdTime: 1694882799084
       modifiedTime: 1694936890399
       lastModifiedBy: CtisFurQNe9h7ABb
+      compendiumSource: null
+      duplicateSource: null
     _key: '!journal.pages!ePJekdztsz1JPoT9.v46rtTLn1xMuJBSz'
   - sort: 400000
     name: Foundry Integration
@@ -1217,10 +1223,12 @@ pages:
     _stats:
       systemId: torgeternity
       systemVersion: 3.2.1
-      coreVersion: '11.313'
+      coreVersion: '12.331'
       createdTime: 1694882812498
       modifiedTime: 1697351071517
       lastModifiedBy: he0IPUNV5pNQSTDz
+      compendiumSource: null
+      duplicateSource: null
     _key: '!journal.pages!ePJekdztsz1JPoT9.NtKJ9vOusDzsnH15'
   - sort: 0
     name: Lies mich zuerst
@@ -1245,10 +1253,12 @@ pages:
     _stats:
       systemId: torgeternity
       systemVersion: 3.1.1
-      coreVersion: '11.308'
+      coreVersion: '12.331'
       createdTime: 1694884123446
       modifiedTime: 1694884528859
       lastModifiedBy: CtisFurQNe9h7ABb
+      compendiumSource: null
+      duplicateSource: null
     _key: '!journal.pages!ePJekdztsz1JPoT9.qpNCgkoE0FyiuK6G'
 ownership:
   default: 0
@@ -1257,9 +1267,11 @@ ownership:
 _stats:
   systemId: torgeternity
   systemVersion: 3.8.1
-  coreVersion: '11.315'
+  coreVersion: '12.331'
   createdTime: 1694882749667
   modifiedTime: 1716827811880
   lastModifiedBy: VAnYow5sWS9EJzo0
+  compendiumSource: null
+  duplicateSource: null
 _key: '!journal!ePJekdztsz1JPoT9'
 

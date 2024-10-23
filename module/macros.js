@@ -613,9 +613,10 @@ export class TorgeternityMacros {
   // create effects related with your choice, Defense/specific Attribute/All attributes
   // if any value change (attribute or add or limitation) erase the effects and redo it
   async torgBuff() {
-    // target is the selected token, mandatory for the GM, or the player's character if no selection
-    const actorID = _token?.actor ?? game.user.character;
-
+    if (game.canvas.tokens.controlled.length === 0 && !game.user.character) {
+      ui.notifications.error(game.i18n.localize('torgeternity.notifications.noTokenNorActor'));
+      return;
+    }
     // Choose the attribute you want to modify
     const mychoice = new Promise((resolve, reject) => {
       new Dialog({
@@ -685,10 +686,12 @@ export class TorgeternityMacros {
 
     if (attr === 'cancel') {
       ui.notifications.warn('MacroEffects removed');
-      const delEffects = actorID.effects
-        .filter((e) => e.name.includes('rd(s)'))
-        .filter((e) => e.name.includes(' / '));
-      delEffects.forEach((e) => e.delete());
+      for (const token of game.canvas.tokens.controlled && game.user.character) {
+        const delEffects = token.effects
+          .filter((e) => e.name.includes('rd(s)'))
+          .filter((e) => e.name.includes(' / '));
+        delEffects.forEach((e) => e.delete());
+      }
       return;
     }
 
@@ -736,9 +739,11 @@ export class TorgeternityMacros {
       return dur;
     });
 
+    let newEffect = {};
+
     if (attr === 'defense') {
       // only Defenses, but ALL defenses
-      const newEffect = {
+      newEffect = {
         name:
           game.i18n.localize('torgeternity.dialogWindow.buffMacro.defenses') +
           ' / ' +
@@ -787,20 +792,12 @@ export class TorgeternityMacros {
         disabled: false,
       };
       // Aspect modifications related to bonus/malus
-      switch (bonu < 0) {
-        case true:
-          newEffect.tint = '#ff0000';
-          newEffect.icon = 'icons/svg/downgrade.svg';
-          break;
-        default:
-          newEffect.tint = '#00ff00';
-          newEffect.icon = 'icons/svg/upgrade.svg';
-      }
-      await actorID.createEmbeddedDocuments('ActiveEffect', [newEffect]);
+      newEffect.tint = bonu < 0 ? '#ff0000' : '#00ff00';
+      newEffect.icon = bonu < 0 ? 'icons/svg/downgrade.svg' : 'icons/svg/upgrade.svg';
     } // ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     else if (attr === 'physicalDefense') {
       // only physical Defenses
-      const newEffect = {
+      newEffect = {
         name:
           game.i18n.localize('torgeternity.dialogWindow.buffMacro.physicalDefenses') +
           ' / ' +
@@ -829,20 +826,12 @@ export class TorgeternityMacros {
         disabled: false,
       };
       // Aspect modifications related to bonus/malus
-      switch (bonu < 0) {
-        case true:
-          newEffect.tint = '#ff0000';
-          newEffect.icon = 'icons/svg/downgrade.svg';
-          break;
-        default:
-          newEffect.tint = '#00ff00';
-          newEffect.icon = 'icons/svg/upgrade.svg';
-      }
-      await actorID.createEmbeddedDocuments('ActiveEffect', [newEffect]);
+      newEffect.tint = bonu < 0 ? '#ff0000' : '#00ff00';
+      newEffect.icon = bonu < 0 ? 'icons/svg/downgrade.svg' : 'icons/svg/upgrade.svg';
     } // ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     else if (attr === 'all') {
       // preparation of attribute effect
-      const newEffect = {
+      newEffect = {
         name:
           game.i18n.localize('torgeternity.dialogWindow.buffMacro.allAttributes') +
           ' / ' +
@@ -881,22 +870,12 @@ export class TorgeternityMacros {
         disabled: false,
       };
       // Aspect modifications related to bonus/malus
-      switch (bonu < 0) {
-        case true:
-          newEffect.tint = '#ff0000';
-          newEffect.icon = 'icons/svg/downgrade.svg';
-          break;
-        default:
-          newEffect.tint = '#00ff00';
-          newEffect.icon = 'icons/svg/upgrade.svg';
-      }
-
-      // at last, create the effect
-      await actorID.createEmbeddedDocuments('ActiveEffect', [newEffect]);
+      newEffect.tint = bonu < 0 ? '#ff0000' : '#00ff00';
+      newEffect.icon = bonu < 0 ? 'icons/svg/downgrade.svg' : 'icons/svg/upgrade.svg';
     } else {
       // One attribute
       // preparation of attribute effect
-      const newEffect = {
+      newEffect = {
         name:
           game.i18n.localize('torgeternity.attributes.' + attr) +
           ' / ' +
@@ -916,18 +895,20 @@ export class TorgeternityMacros {
       };
 
       // Aspect modifications related to bonus/malus
-      switch (bonu < 0) {
-        case true:
-          newEffect.tint = '#ff0000';
-          newEffect.icon = 'icons/svg/downgrade.svg';
-          break;
-        default:
-          newEffect.tint = '#00ff00';
-          newEffect.icon = 'icons/svg/upgrade.svg';
+      newEffect.tint = bonu < 0 ? '#ff0000' : '#00ff00';
+      newEffect.icon = bonu < 0 ? 'icons/svg/downgrade.svg' : 'icons/svg/upgrade.svg';
+    }
+    const actors = [];
+    if (game.canvas.tokens.controlled.length > 0) {
+      for (const token of game.canvas.tokens.controlled) {
+        actors.push(token.actor);
       }
+    } else {
+      actors.push(game.user.character);
+    }
 
-      // at least, create the effect
-      await actorID.createEmbeddedDocuments('ActiveEffect', [newEffect]);
+    for (const actor of actors) {
+      await actor?.createEmbeddedDocuments('ActiveEffect', [newEffect]);
     }
   }
 }

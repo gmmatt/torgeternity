@@ -4,6 +4,7 @@ import { TestDialog } from '../test-dialog.js';
 import TorgeternityItem from '../documents/item/torgeternityItem.js';
 import { reloadAmmo } from './torgeternityItemSheet.js';
 import { PossibilityByCosm } from '../possibilityByCosm.js';
+import { ChatMessageTorg } from '../documents/chat/document.js';
 
 /**
  *
@@ -195,6 +196,13 @@ export default class TorgeternityActorSheet extends ActorSheet {
     if (game.user.isGM || !game.settings.get('torgeternity', 'disableXP')) {
       data.disableXP = false;
     }
+
+    // is the actor actively defending at the moment?
+    data.actor.defenses.isActivelyDefending = this.actor.effects.find(
+      (e) => e.name === 'ActiveDefense'
+    )
+      ? true
+      : false;
 
     return data;
   }
@@ -437,16 +445,90 @@ export default class TorgeternityActorSheet extends ActorSheet {
       }
     });
 
-    // Toggle Skill Edit Visibility
-    // html.find('.skill-list-edit').click(ev => {
-    //    let detail =
-    // });
+    // Delete a race of an actor
+    html.find('a.deleteRaceButton').click(async () => {
+      const raceItem = this.actor.items.find((i) => i.type === 'race');
+      if (!raceItem) {
+        ui.notifications.error(game.i18n.localize('torgeternity.notifications.noRaceToDelete'));
+        return;
+      }
+      await Dialog.confirm({
+        title: game.i18n.localize('torgeternity.dialogWindow.raceDeletion.title'),
+        content: game.i18n.localize('torgeternity.dialogWindow.raceDeletion.content'),
+        yes: async () => {
+          await this.actor.deleteEmbeddedDocuments('Item', [
+            raceItem.id,
+            ...this.actor.items
+              .filter((i) => i.type === 'perk' && i.system.category === 'racial')
+              .map((i) => i.id),
+          ]);
+        },
+        no: () => {
+          return;
+        },
+      });
+    });
 
     // compute adds from total for threats
     if (this.actor.type == 'threat') {
       html.find('.skill-element-edit .inputsFav').change(this.setThreatAdds.bind(this));
     }
   }
+
+  /** @inheritdoc */
+  async _onDrop(event) {
+    if (this.object.type !== 'stormknight') {
+      await super._onDrop(event);
+      return;
+    }
+    const data = TextEditor.getDragEventData(event);
+    const dropedObject = await fromUuid(data.uuid);
+    if (dropedObject.type === 'race') {
+      const raceItem = this.actor.items.find((i) => i.type === 'race');
+      if (raceItem) {
+        await this.actor.deleteEmbeddedDocuments('Item', [
+          raceItem.id,
+          ...this.actor.items
+            .filter((i) => i.type === 'perk' && i.system.category === 'racial')
+            .map((i) => i.id),
+        ]);
+      }
+      await super._onDrop(event);
+
+      await this.actor.createEmbeddedDocuments('Item', [...dropedObject.system.perksData]);
+
+      await this.actor.createEmbeddedDocuments('Item', [...dropedObject.system.customAttackData]);
+
+      for (const [key, value] of Object.entries(dropedObject.system.attributeMaximum)) {
+        if (this.actor.system.attributes[key].base <= value) continue;
+
+        const proceed = await foundry.applications.api.DialogV2.confirm({
+          window: {
+            title: await game.i18n.localize(
+              'torgeternity.dialogWindow.raceDiminishAttribute.title'
+            ),
+          },
+          content: await game.i18n.format(
+            'torgeternity.dialogWindow.raceDiminishAttribute.maintext',
+            {
+              attribute: await game.i18n.localize('torgeternity.attributes.' + key),
+            }
+          ),
+          rejectClose: false,
+          modal: true,
+        });
+        if (!proceed) continue;
+
+        await this.actor.update({ [`system.attributes.${key}.base`]: value });
+      }
+      await this.actor.update({ 'system.details.sizeBonus': dropedObject.system.size });
+
+      if (dropedObject.system.darkvision)
+        await this.actor.update({ 'prototypeToken.sight.visionMode': 'darkvision' });
+    }
+    super._onDrop(event);
+  }
+
   /**
    *
    * @param event
@@ -899,6 +981,7 @@ export default class TorgeternityActorSheet extends ActorSheet {
       actorPic: this.actor.img,
       actorName: this.actor.name,
       actorType: this.actor.type,
+      isActiveDefenseRoll: true,
       isAttack: false,
       skillName: 'activeDefense',
       skillBaseAttribute: 0,
@@ -964,11 +1047,19 @@ export default class TorgeternityActorSheet extends ActorSheet {
    *
    * @param event
    */
-  _onItemChat(event) {
+  async _onItemChat(event) {
     const itemID = event.currentTarget.closest('.item').dataset.itemId;
     const item = this.actor.items.get(itemID);
+    const chatData = {
+      user: game.user._id,
+      speaker: ChatMessage.getSpeaker(),
+      flags: {
+        data: item,
+        template: TorgeternityItem.CHAT_TEMPLATE[item.type],
+      },
+    };
 
-    item.roll();
+    return ChatMessageTorg.create(chatData);
   }
 
   /**

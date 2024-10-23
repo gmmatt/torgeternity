@@ -29,8 +29,17 @@ cards:
     value: null
     width: null
     height: null
-    cards: []
+    _stats:
+      coreVersion: '12.331'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
     _key: '!cards.cards!T2cvinPOHrWCKXud.B4ubfoOu63DSCPxl'
+    cards: []
   - _id: vdjS2VY9rv3U54ld
     name: Bloodbath
     description: ''
@@ -56,8 +65,17 @@ cards:
     value: null
     width: null
     height: null
-    cards: []
+    _stats:
+      coreVersion: '12.331'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
     _key: '!cards.cards!T2cvinPOHrWCKXud.vdjS2VY9rv3U54ld'
+    cards: []
   - _id: 2EWx9NY8NEr0EC6T
     name: Feud!
     description: ''
@@ -83,8 +101,17 @@ cards:
       number: ''
     width: null
     height: null
-    cards: []
+    _stats:
+      coreVersion: '12.331'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
     _key: '!cards.cards!T2cvinPOHrWCKXud.2EWx9NY8NEr0EC6T'
+    cards: []
   - _id: i3vaSMOVHdu1Eoqe
     name: Mutation
     description: ''
@@ -110,8 +137,17 @@ cards:
     value: null
     width: null
     height: null
-    cards: []
+    _stats:
+      coreVersion: '12.331'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
     _key: '!cards.cards!T2cvinPOHrWCKXud.i3vaSMOVHdu1Eoqe'
+    cards: []
   - _id: uke6GjbriDC3i5Ur
     name: Outbreak
     description: ''
@@ -137,8 +173,17 @@ cards:
     value: null
     width: null
     height: null
-    cards: []
+    _stats:
+      coreVersion: '12.331'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
     _key: '!cards.cards!T2cvinPOHrWCKXud.uke6GjbriDC3i5Ur'
+    cards: []
   - _id: cYB0KWxphQBi9lJg
     name: Fists of Fury
     description: ''
@@ -164,8 +209,17 @@ cards:
     value: null
     width: null
     height: null
-    cards: []
+    _stats:
+      coreVersion: '12.331'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
     _key: '!cards.cards!T2cvinPOHrWCKXud.cYB0KWxphQBi9lJg'
+    cards: []
   - _id: 7tZ6qjjxKnmtS8hk
     name: Is That a Bite?
     description: ''
@@ -191,8 +245,17 @@ cards:
     value: null
     width: null
     height: null
-    cards: []
+    _stats:
+      coreVersion: '12.331'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
     _key: '!cards.cards!T2cvinPOHrWCKXud.7tZ6qjjxKnmtS8hk'
+    cards: []
   - _id: AIGkQ6vMbMh57pmS
     name: You Don't Look so Good
     description: ''
@@ -218,8 +281,17 @@ cards:
       number: ''
     width: null
     height: null
-    cards: []
+    _stats:
+      coreVersion: '12.331'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
     _key: '!cards.cards!T2cvinPOHrWCKXud.AIGkQ6vMbMh57pmS'
+    cards: []
   - _id: fLG6KOrCjCN4Rrgx
     name: Sold Out
     description: ''
@@ -245,8 +317,17 @@ cards:
     value: null
     width: null
     height: null
-    cards: []
+    _stats:
+      coreVersion: '12.331'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
     _key: '!cards.cards!T2cvinPOHrWCKXud.fLG6KOrCjCN4Rrgx'
+    cards: []
   - _id: 4aNNOCE4CgzAqz6S
     name: Hardboiled
     description: ''
@@ -272,8 +353,17 @@ cards:
     value: null
     width: null
     height: null
-    cards: []
+    _stats:
+      coreVersion: '12.331'
+      systemId: null
+      systemVersion: null
+      createdTime: null
+      modifiedTime: null
+      lastModifiedBy: null
+      compendiumSource: null
+      duplicateSource: null
     _key: '!cards.cards!T2cvinPOHrWCKXud.4aNNOCE4CgzAqz6S'
+    cards: []
 rotation: 0
 displayCount: false
 folder: null
@@ -298,9 +388,11 @@ height: null
 _stats:
   systemId: torgeternity
   systemVersion: 3.8.1
-  coreVersion: '11.315'
+  coreVersion: '12.331'
   createdTime: 1716827808675
   modifiedTime: 1716827808675
   lastModifiedBy: VAnYow5sWS9EJzo0
+  compendiumSource: Cards.4b8BekWDWpSWF961
+  duplicateSource: null
 _key: '!cards!T2cvinPOHrWCKXud'
 

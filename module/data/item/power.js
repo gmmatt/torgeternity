@@ -1,3 +1,5 @@
+import { torgeternity } from '../../config.js';
+
 const fields = foundry.data.fields;
 /**
  * @inheritdoc
@@ -34,6 +36,15 @@ export class PowerItemData extends foundry.abstract.TypeDataModel {
    */
   prepareBaseData() {
     super.prepareBaseData();
+
+    if (this?.dn.length > 0 && this?.dnType.length === 0) {
+      for (const [key, value] of Object.entries(torgeternity.dnTypes)) {
+        if (key === this?.dn) {
+          this.dnType = game.i18n.localize(value);
+          break;
+        }
+      }
+    }
   }
 
   /**

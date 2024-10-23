@@ -71,45 +71,77 @@ export default class TorgeternityItemSheet extends ItemSheet {
           initial: 'stats',
         },
       ],
-      scrollY: ['.stats', '.effects', '.background'],
-      dragdrop: [
+      dragDrop: [
         {
           dragSelector: '.item-list .item',
           dropSelector: null,
         },
       ],
+      scrollY: ['.stats', '.effects', '.background'],
     });
   }
 
-  /**
-   *
-   */
-  get template() {
-    return `systems/torgeternity/templates/sheets/${this.item.type}-sheet.html`;
+  /** @inheritdoc */
+  _canDragStart(selector) {
+    return this.isEditable;
   }
 
-  /**
+  /** @inheritdoc */
+  _canDragDrop(selector) {
+    return this.isEditable;
+  }
+
+  /** @inheritdoc
    *
-   * @param options
+   * won't be activated due to
    */
-  async getData(options) {
-    const data = await super.getData(options);
 
-    data.effects = prepareActiveEffectCategories(this.document.effects);
+  _onDragStart(event) {
+    console.log(event);
+  }
 
-    data.config = CONFIG.torgeternity;
+  _onDrag(event) {
+    console.log(event);
+  }
 
-    data.description = await TextEditor.enrichHTML(this.object.system.description, { async: true });
+  /** @inheritdoc */
+  async _onDrop(event) {
+    const data = TextEditor.getDragEventData(event);
+    const dropedObject = await fromUuid(data.uuid);
 
-    data.ammunition = this.document.actor?.itemTypes?.ammunition ?? [];
+    if (dropedObject.type === 'perk' && this.item.type === 'race')
+      await this.dropPerkOnRace(dropedObject);
+    if (dropedObject.type === 'customAttack' && this.item.type === 'race')
+      await this.dropAttackOnRace(dropedObject);
+  }
 
-    data.displaySecondaryAxiomValue =
-      !this.document.system?.secondaryAxiom ||
-      this.document.system?.secondaryAxiom.selected === 'none'
-        ? false
-        : true;
+  async dropPerkOnRace(perk) {
+    if (perk.system.category != 'racial') {
+      ui.notifications.error(
+        game.i18n.format('torgeternity.notifications.notAPerkItem', {
+          a: game.i18n.localize('torgeternity.perkTypes.' + perk.system.category),
+        })
+      );
+      return;
+    }
 
-    return data;
+    const currentPerks =
+      this.item.system.perksData instanceof Set ? this.item.system.perksData : new Set();
+
+    currentPerks.add(perk);
+
+    await this.item.update({ 'system.perksData': Array.from(currentPerks) });
+  }
+
+  async dropAttackOnRace(attack) {
+    const currentAttacks =
+      this.item.system.customAttackData instanceof Set
+        ? this.item.system.customAttackData
+        : new Set();
+
+    currentAttacks.add(attack);
+
+    await this.item.update({ 'system.customAttackData': Array.from(currentAttacks) });
   }
 
   /**
@@ -168,6 +200,75 @@ export default class TorgeternityItemSheet extends ItemSheet {
       ev.currentTarget.value === 'none' &&
         this.item.update({ 'system.secondaryAxiom.value': null });
     });
+
+    html.find('.item-name').click((ev) => {
+      const section = ev.currentTarget.closest('.item');
+      const detail = $(section).find('.item-detail').get(0);
+
+      if (!detail) return;
+      detail.style.display =
+        detail.style.display === 'none' || !detail.style.display
+          ? (detail.style.display = 'block')
+          : (detail.style.display = 'none');
+    });
+
+    html.find('.item-control.item-delete').click((ev) => {
+      if (this.item.type === 'race') {
+        const inheritedType = $(ev.currentTarget.closest('.item')).attr('data-inheritedType');
+        const id = $(ev.currentTarget.closest('.item')).attr('data-item-id');
+        const raceItem = this.item;
+        const allThingsOfRaceItem =
+          inheritedType === 'perk' ? raceItem.system.perksData : raceItem.system.customAttackData;
+
+        if (!allThingsOfRaceItem) return; // just for safety
+
+        for (const thing of allThingsOfRaceItem) {
+          if (thing.system.transferenceID === id) {
+            allThingsOfRaceItem.delete(thing);
+            break;
+          }
+        }
+        if (inheritedType === 'perk') {
+          raceItem.update({ 'system.perksData': Array.from(allThingsOfRaceItem) });
+        } else {
+          raceItem.update({ 'system.customAttackData': Array.from(allThingsOfRaceItem) });
+        }
+      }
+    });
+  }
+
+  /**
+   *
+   */
+  get template() {
+    return `systems/torgeternity/templates/sheets/${this.item.type}-sheet.html`;
+  }
+
+  /**
+   *
+   * @param options
+   */
+  async getData(options) {
+    const data = await super.getData(options);
+
+    data.effects = prepareActiveEffectCategories(this.document.effects);
+
+    data.config = CONFIG.torgeternity;
+
+    data.description = await TextEditor.enrichHTML(this.object.system.description, { async: true });
+    data.prerequisites = await TextEditor.enrichHTML(this.object.system.prerequisites, {
+      async: true,
+    });
+
+    data.ammunition = this.document.actor?.itemTypes?.ammunition ?? [];
+
+    data.displaySecondaryAxiomValue =
+      !this.document.system?.secondaryAxiom ||
+      this.document.system?.secondaryAxiom.selected === 'none'
+        ? false
+        : true;
+
+    return data;
   }
 }
 
@@ -244,12 +345,13 @@ async function reloadAmmo(actor, weapon, usedAmmo) {
       });
     }
   }
-
+  if (usedAmmo.system.quantity <= 0) {
+    ui.notifications.error(game.i18n.localize('torgeternity.notifications.clipEmpty'));
+    return;
+  }
   await weapon.update({ 'system.ammo.value': weapon.system.ammo.max });
 
-  usedAmmo.system.quantity === 1
-    ? await actor.deleteEmbeddedDocuments('Item', [usedAmmo.id])
-    : await usedAmmo.update({ 'system.quantity': usedAmmo.system.quantity - 1 });
+  await usedAmmo.update({ 'system.quantity': usedAmmo.system.quantity - 1 });
 
   await ChatMessage.create({
     content: game.i18n.format('torgeternity.chatText.reloaded', { a: weapon.name }),

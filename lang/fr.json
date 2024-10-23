@@ -32,12 +32,6 @@
       "spirit": "Spirituel",
       "tech": "Tech"      
     },
-    "axioms": {      
-      "magic": "Magie",
-      "social": "Social",
-      "spirit": "Spirituel",
-      "tech": "Tech"      
-    },
     "cardTypes": {
       "activeDrama": "Carte Action active",
       "cosm": "Cosm",
@@ -158,6 +152,13 @@
       "vilainsTooltip": "initiative aux méchants",
       "hasPlayedTooltip": "Cocher quand le tour du personnage est fini"
     },
+    "contextMenu": {
+      "characterInfo": {
+        "contextMenuTitle":"Show character information",
+        "windowTitle": "Notes and Backgrounds from {a}",
+        "createChatCard": "Create chat card"
+      }
+    },
     "cosmDecks": {
       "aysle": "Cartes Cosm Aysle",
       "coreEarth": "Cartes Cosm Prime-Terre",
@@ -242,6 +243,10 @@
         "content": "Êtes-vous sûr de vouloir supprimer ceci ? Cela sera effacé de votre fiche de manière permanente.",
         "title": "Confirmer la suppression"
       },
+      "raceDeletion": {
+        "content":"Are you sure you want to delete this? It will be permanently removed from the sheet and all racial perks will be deleted as well.",
+        "title":"Confirm Deletion"
+      },
       "realityCheck": {
         "title": "Reconnection?",
         "content": "Essayez-vous de vous re-connecter?"
@@ -281,6 +286,10 @@
         "value":"Choisissez la valeur de la modification",
         "timeLabel":"Choix de la durée",
         "time":"Saisissez la durée en round(s)"
+      },
+      "raceDiminishAttribute": {
+        "maintext": "L'attribut {attribute} est plus grand que le maximum de population. Doit-on définir l'attribut sur le maximum de population?",
+        "title": "Avertissement, attribut maximum"
       }
     },
     "dnTypes": {
@@ -393,7 +402,8 @@
       "sendToChat": "Envoyer dans la discussion",
       "spellRoll": "Jet de sort",
       "toggle": "Activer/désactiver",
-      "toggleEquip": "Équiper/Déséquiper"
+      "toggleEquip": "Équiper/Déséquiper",
+      "deleteRace": "Delete Race"
     },
     "itemSheetDescriptions": {
       "armor": "Armure",
@@ -413,6 +423,7 @@
       "other": "Équipement général",
       "perk": "Atout",
       "psionicpower": "Pouvoir psionique",
+      "race": "Race",
       "shield": "Bouclier",
       "specialability": "Capacité spéciale",
       "specialabilityRollable": "Capacité spéciale avec jet",
@@ -442,8 +453,10 @@
       "noAttrNamed": "L'acteur que vous contrôlez n'a pas d'attribut nommé ",
       "noHands": "Pas de main de carte disponible!",
       "noItemNamed": "L'acteur que vous contrôlez n'a pas d'objet nommé ",
+      "noRaceToDelete": "There is no race to delete.",
       "noSkillNamed": "L'acteur que vous contrôlez n'a pas de compétence nommée ",
       "noTarget": "Pas de token cible valide.",
+      "noTokenNorActor": "Keine Token ausgewählt und kein zugewiesener Charakter gefunden, das Makro kann nicht fortgesetzt werden.",
       "noVehicleOperator": "Le véhicule {a} ciblé n'a pas d'opérateur. Le test ne peut pas avoir lieu.",
       "notImplemented": "Pas encore implémenté.",
       "onlyReservedCard": "Vous ne pouvez jouer que les cartes en réserve durant une scène dramatique.",
@@ -454,7 +467,12 @@
       "ammoValueExceedsMax": "La quantité de munitions dépasse la capacité du chargeur dans l'arme {a}. La valeur va être réduite à son maximum.",
       "noPossibility": "Pas de possibilités disponibles",
       "noCapacity": "{a} ne sait pas piloter ce type véhicule !",
-      "noFight": "Pas de rencontre active, ou initiée"
+      "noFight": "Pas de rencontre active, ou initiée",
+      "raceExistent": "You have already chosen a race.",
+      "notAPerkItem": "Vous avez tenté d'attribuer un avantage de la catégorie {a} à cette race, mais il doit appartenir à la catégorie raciale. L'action a été annulée.",
+      "addedRacePerkToActor": "Ajouté {perkName}-perk à l'acteur.",
+      "reachedMaximumAttr" : "Tu as atteint le maximum d'attributs que ton peuple a défini. Une augmentation supplémentaire n'est pas possible.",
+      "clipEmpty": "Ces munitions sont vides et ne peuvent pas être utilisées pour recharger."
     },
     "packs": {
       "basicRules": "torgeternity.basic-rules-fr",
@@ -550,15 +568,6 @@
       "precognition": "Précognition",
       "telepathy": "Télépathie"
     },
-    "races": {
-      "aspirants": "Aspirant",
-      "dwarf": "Nain",
-      "edeinos": "Edeinos",
-      "elf": "Elfe",
-      "human": "Humain",
-      "other": "Autre",
-      "theRace": "La Race"
-    },
     "scenes": {
       "HeaderAmbienceHint": "Configure les intégrations supplémentaires entre la scène et les articles, les playlists ou les effets météo.",
       "HeaderDetailsHint": "Configure les détails de base de la scène et les permissions qui contrôlent sa visibilité.",
@@ -629,6 +638,14 @@
       "uniqueDN": {
         "hint": "Si coché, durant une attaque en multi-cibles, garde le DN le plus élevé pour déterminer le résultat sur toutes les cibles (Règle).",
         "name": "DN unique"
+      },
+      "unTarget": {
+        "hint": "Par défaut, vos cibles sont perdues après une attaque. Décochez si vous voulez garder le ciblage.",
+        "name": "Annulation du ciblage"
+      },
+      "useYear1PPTent": {
+        "hint": "Use the Pan-Pacifica tabletent after year 1.",
+        "name": "Year-1 PP TT"
       }
     },
     "sheetLabels": {
@@ -656,6 +673,7 @@
       "attackOptions": "Options d'attaque",
       "attacks": "Attaques",
       "attribute": "Attribut",
+      "attributeMaximum": "Attributs maximum",
       "attributes": "Attributs",
       "availableEnhancements": "Améliorations disponibles",
       "background": "Historique",
@@ -680,6 +698,7 @@
       "coverBonusTooltip": "Bonus appliqué a l'endurance résultant du couvert",
       "customSkill": "Les compétences personnalisées sont modifiables dans l'onglet Atouts",
       "customSkills": "Compétences personnalisées",
+      "customAttacks": "Custom Attacks",
       "damageAP": "Dmg (AP)",
       "damageMod": "Modificateur dommages",
       "defense": "Défense",
@@ -717,7 +736,8 @@
       "generalGear": "Équipement général",
       "goodResult": "Résultat supérieur",
       "gunner": "Artilleur",
-      "heavyBurst": "Nourrie (+6)",
+      "hardcode": "Hardcode",
+      "heavyBurst": "Nourrie (+6)",      
       "heavyWeapons": "Armes lourdes",
       "implant": "Implant",
       "implants": "Implants",
@@ -754,6 +774,7 @@
       "none": "Non",
       "noPoss": " Pas de Possibilité!",
       "noPossFree": "Pas de possibilité !<br>Confirmez le don ?",
+      "noRace": "No race added",
       "notes": "Notes",
       "number": "Nombre",
       "operator": "Opérateur",
@@ -766,6 +787,7 @@
       "perks": "Atouts",
       "perksAbilities": "Atouts/Capa.",
       "pool": "Réserve d'action",
+      "noPerksAdded": "No perks added",
       "possibilities": "Possibilités",
       "possibilityByCosm": "Possibilités de Cosm",
       "possibilitypotential": "Potentiel de Possibilités",
@@ -777,8 +799,10 @@
       "psionicPowers": "Pouvoirs psioniques",
       "quantity": "Quantité",
       "race": "Race",
+      "racialPerks": "Avantages raciaux",
       "range": "Portée",
       "return": "Retour",
+      "darkvision": "Darkvision",
       "roll": "Lancer",
       "run": "Course",
       "running": "Course (-2)",
