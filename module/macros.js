@@ -914,7 +914,7 @@ export class TorgeternityMacros {
 
   async periculum(source = '', value = 10, bds = 0, armored = false, ap = 0) {
     let victims = Array.from(game.user.targets);
-    if (armored) armored="checked";
+    if (armored) armored = 'checked';
     if (!(victims.length > 0))
       return ui.notifications.warn(game.i18n.localize('torgeternity.notifications.noTarget'));
 
@@ -923,14 +923,26 @@ export class TorgeternityMacros {
     let info = await foundry.applications.api.DialogV2.prompt({
       window: { title: 'Periculum' },
       content: `
-          <label>`+game.i18n.localize('torgeternity.macros.periculumSourceName')+`<br><input placeholder=`+game.i18n.localize('torgeternity.macros.periculumSourcePlaceHolder')+` style="color:black" name="source" type="string" value="${source}"></label>
-          <label>`+game.i18n.localize('torgeternity.macros.periculumDamageValue')+`<input name="damageBase" type="number" value=${value} autofocus style="width:35px"></label>
-          <label>`+game.i18n.localize('torgeternity.macros.periculumBds')+`<input name="plusBD" type="number" value=${bds} style="width:35px"></label>
-          <label>`+game.i18n.localize('torgeternity.macros.periculumArmor')+`<input name="armor" type="checkbox" ${armored}></label>
-          <label>`+game.i18n.localize('torgeternity.macros.periculumAp')+`<input name="ap" type="number" style="width:35px" value=${ap}></label>
+          <label>${game.i18n.localize(
+            'torgeternity.macros.periculumSourceName'
+          )}<br><input placeholder=${game.i18n.localize(
+        'torgeternity.macros.periculumSourcePlaceHolder'
+      )} style="color:black" name="source" type="string" value="${source}"></label>
+          <label>${game.i18n.localize(
+            'torgeternity.macros.periculumDamageValue'
+          )}<input name="damageBase" type="number" value=${value} autofocus style="width:35px"></label>
+          <label>${game.i18n.localize(
+            'torgeternity.macros.periculumBds'
+          )}<input name="plusBD" type="number" value=${bds} style="width:35px"></label>
+          <label>${game.i18n.localize(
+            'torgeternity.macros.periculumArmor'
+          )}<input name="armor" type="checkbox" ${armored}></label>
+          <label>${game.i18n.localize(
+            'torgeternity.macros.periculumAp'
+          )}<input name="ap" type="number" style="width:35px" value=${ap}></label>
           `,
       ok: {
-        label: game.i18n.localize('torgeternity.dialogWindow.buttons.execute'),//'Submit Effect',
+        label: game.i18n.localize('torgeternity.dialogWindow.buttons.execute'), //'Submit Effect',
         callback: (event, button, dialog) => [
           button.form.elements.source.value,
           button.form.elements.damageBase.valueAsNumber,

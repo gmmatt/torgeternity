@@ -126,6 +126,7 @@ export async function renderSkillChat(test) {
       : fromUuidSync(test.actor);
     if (
       (testActor.type === 'stormknight') &
+      (test.testType != 'custom') &
       (test.testType != 'attribute') &
       (test.testType != 'activeDefense') &
       (test.testType != 'activeDefenseUpdate') &
