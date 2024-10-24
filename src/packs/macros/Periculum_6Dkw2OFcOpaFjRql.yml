@@ -1,0 +1,27 @@
+name: Periculum
+type: script
+scope: global
+author: bhHZEEhOa3nLzlWn
+img: icons/svg/explosion.svg
+command: game.torgeternity.macros.periculum();
+folder: null
+ownership:
+  default: 0
+  s0Eq742Hj4e1Qv9j: 3
+  bhHZEEhOa3nLzlWn: 3
+flags:
+  core:
+    sourceId: Compendium.torgeternity.macros.Macro.CdoBiDgMPiRHfsIK
+_stats:
+  compendiumSource: Compendium.torgeternity.macros.Macro.CdoBiDgMPiRHfsIK
+  duplicateSource: null
+  coreVersion: '12.331'
+  systemId: torgeternity
+  systemVersion: 12.3.0
+  createdTime: 1729793056711
+  modifiedTime: 1729793056711
+  lastModifiedBy: bhHZEEhOa3nLzlWn
+_id: 6Dkw2OFcOpaFjRql
+sort: 0
+_key: '!macros!6Dkw2OFcOpaFjRql'
+
