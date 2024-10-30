@@ -646,6 +646,10 @@
       "useYear1PPTent": {
         "hint": "Use the Pan-Pacifica tabletent after year 1.",
         "name": "Year-1 PP TT"
+      },
+      "shuffleMessageSurpress": {
+        "hint": "If checked, the Chat Message on shuffling cards will be surpressed.",
+        "name": "Supress Chatmessage on shuffle"
       }
     },
     "sheetLabels": {

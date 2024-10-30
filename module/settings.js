@@ -199,4 +199,13 @@ export function registerTorgSettings() {
     type: Boolean,
     default: true,
   });
+
+  game.settings.register('torgeternity', 'shuffleMessageSurpress', {
+    name: 'torgeternity.settingMenu.shuffleMessageSurpress.name',
+    hint: 'torgeternity.settingMenu.shuffleMessageSurpress.name',
+    scope: 'world',
+    config: true,
+    type: Boolean,
+    default: false,
+  });
 }
