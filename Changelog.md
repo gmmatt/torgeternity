@@ -1,5 +1,9 @@
 # TORG Eternity Changelog
 
+## v.12.3.1
+
+- Fixing a bug that didn't order the cards inside a deck (just on the interface (app), not the cards themself).
+
 ## v. 12.3.0
 
 - Active Defense will now automatically be disposed, when the combat round is over or the combat ends. [#438](https://github.com/gmmatt/torgeternity/issues/438)
