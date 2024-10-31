@@ -874,8 +874,8 @@
       "backlash1Tooltip": "Applique 2 chocs",
       "backlash2Tooltip": "Applique 1 choc",
       "backlash3Tooltip": "Applique Très Déstabilisé",
-      "additionalDamage": "Additional damage preset",
-      "bonusDice": "Rolled Bonus-Dice in advance"
+      "additionalDamage": "Dommages Additionels",
+      "bonusDice": "BDs lancés par avance"
     },
     "sizes": {
       "large": "grande",
@@ -904,7 +904,7 @@
       "disfavored": "Défavorisé",
       "disfavoredTip": "Cochez si le test est défavorisé. Le dé n'explosera sur les 10 et 20",
       "favored": "Favorisé",
-      "favoredanddisfavored": "(Dis-)Favored",
+      "favoredanddisfavored": "(Dé-)Favorisé",
       "favoredTip": "Cochez si le test est favorisé pour une raison ponctuelle.",
       "favoredChoice": "Favorisé ou pas"
     },
@@ -1113,7 +1113,7 @@
       "periculumAp":"Valeur d'AP ",
       "macroHub": {
         "buttonTitle": "MacroHub",
-        "title":"The Torg Eternity Macro Hub"
+        "title":"Répertoire Macro Torg Eternity"
       }
     }    
   }
