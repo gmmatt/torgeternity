@@ -4542,3 +4542,33 @@ form.actor-sheet.threat img.profile-img {
   padding: 0 0 0 10px;
   margin: 0;
 }
+
+.application .window-content {
+  font-family: Alaska;
+  background-image: url(../images/thunder.webp);
+  background-size: cover;
+  color: white;
+}
+
+.application .window-content .form-header {
+  color: white;
+}
+
+.application .window-content div.form-group input {
+  color: white;
+}
+
+.application .window-content input[type="text"],
+.application .window-content input[type="number"],
+.application .window-content input[type="password"],
+.application .window-content input[type="date"],
+.application .window-content input[type="time"] .editor,
+.application .window-content input[type="checkbox"] {
+  background-color: rgba(255, 255, 255, 0.39);
+  /*color:white;*/
+}
+
+.application .window-content form button {
+  color: rgb(233, 233, 233);
+  cursor: pointer;
+}
