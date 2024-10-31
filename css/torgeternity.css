@@ -4572,3 +4572,17 @@ form.actor-sheet.threat img.profile-img {
   color: rgb(233, 233, 233);
   cursor: pointer;
 }
+
+.application .window-header {
+  background: url(../images/tab-header.webp);
+  background-size: 100% 100%;
+  font-family: Alaska;
+  font-weight: bold;
+  color: white;
+  transform: scaleX(1.06);
+  padding-left: 5%;
+  padding-right: 5%;
+  border: none;
+  box-shadow: 0px 15px 30px #00000061;
+  z-index: 100;
+}
