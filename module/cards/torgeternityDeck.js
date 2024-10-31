@@ -121,7 +121,9 @@ export default class torgeternityDeck extends CardsPile {
         return this.object.recall();
       case 'shuffle':
         this._sortStandard = false;
-        return this.object.shuffle({chatNotification: !game.settings.get('torgeternity', 'shuffleMessageSurpress')});
+        return this.object.shuffle({
+          chatNotification: !game.settings.get('torgeternity', 'shuffleMessageSurpress'),
+        });
       case 'toggleSort':
         this._sortStandard = !this._sortStandard;
         return this.render();
