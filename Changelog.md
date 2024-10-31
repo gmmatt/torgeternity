@@ -1,5 +1,9 @@
 # TORG Eternity Changelog
 
+## v.12.4.0
+
+- Now option to surpress chat notifications on card shuffle
+
 ## v.12.3.1
 
 - Fixing a bug that didn't order the cards inside a deck (just on the interface (app), not the cards themself).

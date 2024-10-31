@@ -646,6 +646,10 @@
       "useYear1PPTent": {
         "hint": "Verwende den Pan-Pacifica Tischaufsteller nach Jahr 1.",
         "name": "Jahr-1 PP Aufsteller"
+      },
+      "shuffleMessageSurpress": {
+        "hint": "Wenn diese Option aktiviert ist, wird die Chat-Nachricht beim Mischen der Karten unterdrückt.",
+        "name": "Chatnachrichten beim Mischen unterdrücken"
       }
     },
     "sheetLabels": {
