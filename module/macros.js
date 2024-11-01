@@ -912,15 +912,25 @@ export class TorgeternityMacros {
     }
   }
 
+  /**
+   * Applies damage on targeted tokens
+   *
+   * @param {string} source A description of the source the damage comes from
+   * @param {number} value The actual damage value
+   * @param {number} bds The number of Bonus Dice that ought to take place.
+   * @param {boolean} armored Does armor count?
+   * @param {number} ap The amount of armor piercing.
+   * @returns {null} no Value
+   */
   async periculum(source = '', value = 10, bds = 0, armored = false, ap = 0) {
-    let victims = Array.from(game.user.targets);
+    const victims = Array.from(game.user.targets);
     if (armored) armored = 'checked';
     if (!(victims.length > 0))
       return ui.notifications.warn(game.i18n.localize('torgeternity.notifications.noTarget'));
 
-    //add options for AP and bypass the window
+    // add options for AP and bypass the window
 
-    let info = await foundry.applications.api.DialogV2.prompt({
+    const info = await foundry.applications.api.DialogV2.prompt({
       window: { title: 'Periculum' },
       content: `
           <label>${game.i18n.localize(
@@ -942,7 +952,7 @@ export class TorgeternityMacros {
           )}<input name="ap" type="number" style="width:35px" value=${ap}></label>
           `,
       ok: {
-        label: game.i18n.localize('torgeternity.dialogWindow.buttons.execute'), //'Submit Effect',
+        label: game.i18n.localize('torgeternity.dialogWindow.buttons.execute'), // 'Submit Effect',
         callback: (event, button, dialog) => [
           button.form.elements.source.value,
           button.form.elements.damageBase.valueAsNumber,
@@ -953,63 +963,61 @@ export class TorgeternityMacros {
       },
     });
 
-    const allID = [];
-    const allUUID = [];
+    const allID = victims.map((victim) => victim.actor.id);
+    const allUUID = victims.map((victim) => victim.document.uuid);
     const targetAll = [];
-    victims.forEach((t) => {
-      allID.push(t.actor.id);
-      allUUID.push(t.document.uuid);
-    });
-    victims.forEach((t) => {
-      const target = t.actor;
+
+    for (const victim of victims) {
+      const { actor } = victim;
       // Set vehicle defense if needed
-      if (target.type === 'vehicle') {
+      if (actor.type === 'vehicle') {
         targetAll.push({
           present: true,
           type: 'vehicle',
-          id: target.id,
-          uuid: t.document.uuid,
-          targetPic: target.img,
-          targetName: target.name,
+          id: actor.id,
+          uuid: victim.document.uuid,
+          targetPic: actor.img,
+          targetName: actor.name,
           defenses: {
-            vehicle: target.system.defense,
-            dodge: target.system.defense,
-            unarmedCombat: target.system.defense,
-            meleeWeapons: target.system.defense,
-            intimidation: target.system.defense,
-            maneuver: target.system.defense,
-            taunt: target.system.defense,
-            trick: target.system.defense,
+            vehicle: actor.system.defense,
+            dodge: actor.system.defense,
+            unarmedCombat: actor.system.defense,
+            meleeWeapons: actor.system.defense,
+            intimidation: actor.system.defense,
+            maneuver: actor.system.defense,
+            taunt: actor.system.defense,
+            trick: actor.system.defense,
           },
-          toughness: target.defenses.toughness,
-          armor: target.defenses.armor,
+          toughness: actor.defenses.toughness,
+          armor: actor.defenses.armor,
         });
       } else {
         targetAll.push({
           present: true,
-          type: target.type,
-          id: target.id,
-          uuid: t.document.uuid,
-          targetPic: target.img,
-          targetName: target.name,
-          skills: target.system.skills,
-          attributes: target.system.attributes,
-          toughness: target.defenses.toughness,
-          armor: target.defenses.armor,
+          type: actor.type,
+          id: actor.id,
+          uuid: victim.document.uuid,
+          targetPic: actor.img,
+          targetName: actor.name,
+          skills: actor.system.skills,
+          attributes: actor.system.attributes,
+          toughness: actor.defenses.toughness,
+          armor: actor.defenses.armor,
           defenses: {
-            dodge: target.defenses.dodge.value,
-            unarmedCombat: target.defenses.unarmedCombat.value,
-            meleeWeapons: target.defenses.meleeWeapons.value,
-            intimidation: target.defenses.intimidation.value,
-            maneuver: target.defenses.maneuver.value,
-            taunt: target.defenses.taunt.value,
-            trick: target.defenses.trick.value,
+            dodge: actor.defenses.dodge.value,
+            unarmedCombat: actor.defenses.unarmedCombat.value,
+            meleeWeapons: actor.defenses.meleeWeapons.value,
+            intimidation: actor.defenses.intimidation.value,
+            maneuver: actor.defenses.maneuver.value,
+            taunt: actor.defenses.taunt.value,
+            trick: actor.defenses.trick.value,
           },
         });
       }
-    });
-    let validuuid = Array.from(game.actors)[0].uuid;
-    let test = {
+    }
+
+    const validuuid = Array.from(game.actors)[0].uuid;
+    const test = {
       testType: 'custom',
       actor: validuuid,
       actorPic: 'systems/torgeternity/images/tokens/vulnerable.webp',
