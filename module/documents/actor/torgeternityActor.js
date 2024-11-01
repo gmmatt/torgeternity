@@ -239,6 +239,12 @@ export default class TorgeternityActor extends Actor {
     }
   }
 
+  async _onCreate(data, options, userid) {
+    super._onCreate(data, options, userid);
+
+    if (this.type === 'stormknight') this.setFlag('torgeternity', 'newChar', true);
+  }
+
   async _preUpdate(changed, options, user) {
     const isFullReplace = !((options.diff ?? true) && (options.recursive ?? true));
     if (!changed.system || isFullReplace) {

@@ -50,8 +50,15 @@ export default class TorgeternityActorSheet extends ActorSheet {
    *
    */
   get template() {
-    // modified path => one folder per type
-    return `systems/torgeternity/templates/actors/${this.actor.type}/main.hbs`;
+    if (this.actor.type === 'stormknight' && this.newChar) {
+      return 'systems/torgeternity/templates/actors/stormknight/mainCreate.hbs';
+    } else {
+      return `systems/torgeternity/templates/actors/${this.actor.type}/main.hbs`; // modified path => one folder per type
+    }
+  }
+
+  get newChar() {
+    return this.document.getFlag('torgeternity', 'newChar') ?? false;
   }
 
   /**
