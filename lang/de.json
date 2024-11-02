@@ -1110,6 +1110,12 @@
       "reconnectMacroZoneModifierNotDetectedTitle": "Kein Zonenmodifikator",
       "reconnectMacroZoneModifierNotDetected": "Ein Zonenmodifikator konnte nicht festgestellt werden, da die aktive Szene keine Zonen konfiguriert hat. Ändere den Modifikator im Ergebnis.",
       "reconnectMacroStatusLiftet": "Entkoppelt-Status nach einer erfolgreichen Realitätsprobe aufgehoben.",
+      "periculumSourceName":"Source's damages",
+      "periculumSourcePlaceHolder":"Describe the source of hazard",
+      "periculumDamageValue":"Base damage",
+      "periculumBds":"BDs modifiers",
+      "periculumArmor":"Apply armor ?",
+      "periculumAp":"Armor piercing value",
       "macroHub": {
         "buttonTitle": "MacroHub",
         "title":"Der Torg Eternity Macro Hub"
