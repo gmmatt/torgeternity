@@ -2141,8 +2141,8 @@ p.skill-chat-title.skilled {
 }
 
 .torgeternity.actor .window-content {
-  background-image: url(../images/bg-sheet.webp);
   background-size: cover;
+  background-repeat: no-repeat;
   font-family: Palatino;
   font-size: 12px;
 }
@@ -2310,10 +2310,6 @@ form.actor-sheet header input[name="name"] {
   width: 100%;
   height: 100%;
   opacity: 0.2;
-  background-image: url("../images/TORG_Logo.webp");
-  background-repeat: no-repeat;
-  background-position: 50% 0;
-  background-size: contain;
 }
 
 .window-content .actor-sheet .sksheet.header.totalbox > * {

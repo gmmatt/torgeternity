@@ -945,12 +945,13 @@ Hooks.on('renderActorSheet', (app, html, data) => {
   alphabSort(html, data);
   if (data.actor.type !== 'stormknight') return;
 
-  const windowContent = html.find('.window-content')[0];
-
-  windowContent.style.backgroundImage =
-    data.actor.system.other.cosm !== 'none' || data.actor.system.other.cosm !== 'other'
-      ? `url(../images/cosmBackgrounds/${data.actor.system.other.cosm}.webp)`
-      : 'url(../images/bg-sheet.webp)';
+  const windowContent = html.find('.window-content')[0] ?? html[0].parentElement;
+  windowContent.style.borderStyle = 'solid';
+  windowContent.style.borderWidth = '10px';
+  windowContent.style.borderImage =
+    data.actor.system.other.cosm !== 'none' && data.actor.system.other.cosm !== 'other'
+      ? `url("systems/torgeternity/images/cosmBackgrounds/${data.actor.system.other.cosm}.webp") 26% 38% 28% 39% fill / auto / 0px stretch`
+      : 'url("systems/torgeternity/images/bg-sheet.webp")';
 });
 
 Hooks.on('updateActor', (actor, change, options, userId) => {

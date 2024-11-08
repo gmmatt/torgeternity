@@ -349,6 +349,10 @@ export default class TorgeternityActorSheet extends ActorSheet {
 
       html.find('.base-roll').click(this._onBaseRoll.bind(this));
 
+      /*html.find('system.other.cosm').change((ev) => {
+        console.log(ev);
+      });*/
+
       html.find('.apply-fatigue').click((ev) => {
         const newShock = this.actor.system.shock.value + parseInt(ev.currentTarget.dataset.fatigue);
         this.actor.update({ 'system.shock.value': newShock });
