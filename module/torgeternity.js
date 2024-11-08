@@ -943,6 +943,14 @@ Hooks.on('changeSidebarTab', (tabDirectory) => {
 Hooks.on('renderActorSheet', (app, html, data) => {
   // alphabetical sorting
   alphabSort(html, data);
+  if (data.actor.type !== 'stormknight') return;
+
+  const windowContent = html.find('.window-content')[0];
+
+  windowContent.style.backgroundImage =
+    data.actor.system.other.cosm !== 'none' || data.actor.system.other.cosm !== 'other'
+      ? `url(../images/cosmBackgrounds/${data.actor.system.other.cosm}.webp)`
+      : 'url(../images/bg-sheet.webp)';
 });
 
 Hooks.on('updateActor', (actor, change, options, userId) => {
