@@ -211,6 +211,8 @@ export default class TorgeternityActorSheet extends ActorSheet {
       ? true
       : false;
 
+    data.newChar = this.newChar;
+
     return data;
   }
 
