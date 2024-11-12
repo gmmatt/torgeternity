@@ -358,6 +358,7 @@
       "damageType": "Type de dommages",
       "description": "Description",
       "gunner": "Opérateur",
+      "implantType": "Type d'implant",
       "maxDex": "Dex max",
       "minStrength": "Force min",
       "mr": "MA",
