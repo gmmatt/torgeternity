@@ -61,7 +61,7 @@ export default class TorgeternityItem extends Item {
     eternityshard: 'eternityshard.webp',
     armor: 'armor-icon.webp',
     shield: 'shield.webp',
-    meleeweapon: 'axe-icon.webp',
+    meleeweapon: 'melee-weapon-icon.webp',
     missileweapon: 'missile-weapon-icon.webp',
     firearm: 'firearm-icon.webp',
     implant: 'implant.webp',
@@ -70,11 +70,13 @@ export default class TorgeternityItem extends Item {
     perk: 'reality-icon.webp',
     enhancement: 'enhancement.webp',
     specialability: 'torgeternity-icon.webp',
-    'specialability-rollable': 'specialability-rollable.webp',
+    'specialability-rollable': 'bite-icon.webp',
     spell: 'spell-icon.webp',
     miracle: 'miracles-icon.webp',
     psionicpower: 'psionicpower.webp',
     race: 'race-icon.webp',
+    customSkill: 'custom-skills.webp',
+    // customAttack: '',
   };
 
   /**
