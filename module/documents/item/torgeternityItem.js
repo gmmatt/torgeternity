@@ -61,10 +61,10 @@ export default class TorgeternityItem extends Item {
     eternityshard: 'eternityshard.webp',
     armor: 'armor-icon.webp',
     shield: 'shield.webp',
-    meleeweapon: 'melee-weapon-icon.webp',
+    meleeweapon: 'axe-icon.webp',
     missileweapon: 'missile-weapon-icon.webp',
     firearm: 'firearm-icon.webp',
-    implant: 'implant.webp',
+    implant: 'cyberware-icon.webp',
     heavyweapon: 'explosion-icon.webp',
     vehicle: 'vehicle.webp',
     perk: 'reality-icon.webp',
@@ -76,7 +76,7 @@ export default class TorgeternityItem extends Item {
     psionicpower: 'psionicpower.webp',
     race: 'race-icon.webp',
     customSkill: 'custom-skills.webp',
-    // customAttack: '',
+    customAttack: 'melee-weapon-icon.webp',
   };
 
   /**
@@ -158,6 +158,13 @@ export default class TorgeternityItem extends Item {
         game.i18n.format('torgeternity.notifications.ammoValueExceedsMax', { a: this.name })
       );
     }
+  }
+
+  async _onUpdate(changed, options, userId) {
+    await super._onUpdate(changed, options, userId);
+    
+    if (changed?.system && this.type === 'implant' && Object.keys(changed?.system)[0] === 'implantType' && this.img.includes('systems/torgeternity/images/icons/'))
+      await this.update({img: `systems/torgeternity/images/icons/${this.system.implantType}-icon.webp`});
   }
 
   /**

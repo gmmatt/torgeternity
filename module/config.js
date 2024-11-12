@@ -373,6 +373,12 @@ torgeternity.magnitudes = {
   billions: 'torgeternity.magnitudes.billions',
 };
 
+torgeternity.implantTypes = {
+  cyberware: 'torgeternity.perkTypes.cyberware',
+  occultech: 'torgeternity.perkTypes.occultech',
+  geneMod: 'torgeternity.perkTypes.biotech',
+}
+
 torgeternity.statusEffects = [
   {
     img: 'systems/torgeternity/images/status-markers/stymied.webp',
