@@ -53,9 +53,6 @@ export default class TorgeternityItem extends Item {
   }
 
   static DEFAULT_ICONS = {
-    // genemod:'genemod-icon.webp',
-    // occultech: 'implant.webp',
-    // cyberware: 'cyberware-icon.webp',
     ammunition: 'ammo-icon.webp',
     gear: 'gear-icon.webp',
     eternityshard: 'eternityshard.webp',
@@ -66,7 +63,8 @@ export default class TorgeternityItem extends Item {
     firearm: 'firearm-icon.webp',
     implant: 'cyberware-icon.webp',
     heavyweapon: 'explosion-icon.webp',
-    vehicle: 'vehicle.webp',
+    vehicle: 'vehicle-icon.webp',
+    vehicleAddOn: 'vehicle-addon-icon.webp',
     perk: 'reality-icon.webp',
     enhancement: 'enhancement.webp',
     specialability: 'torgeternity-icon.webp',
