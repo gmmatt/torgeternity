@@ -970,8 +970,8 @@ Hooks.on('preCreateActor', (actor, data, options, userId) => {
   }
   if (data.type === 'vehicle' && actor.img.includes('mystery-man')) {
     actor.updateSource({
-      'prototypeToken.texture.src': 'systems/torgeternity/images/icons/vehicle-Token.webp',
-      img: 'systems/torgeternity/images/icons/vehicle.webp',
+      'prototypeToken.texture.src': 'systems/torgeternity/images/characters/vehicle-land-Token.webp',
+      img: 'systems/torgeternity/images/characters/vehicle-land.webp',
     });
   }
 });
