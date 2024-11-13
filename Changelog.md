@@ -1,5 +1,10 @@
 # TORG Eternity Changelog
 
+## v.12.3.3
+
+- Fixing a bug that fetched attribute maximum for all actor types, though it may take only these for storm knights.
+- Fixed the assignment of newly made vehicle avatar & token
+
 ## v.12.3.2
 
 - Fixing some standard item-icons related things [#483](https://github.com/gmmatt/torgeternity/issues/483)
