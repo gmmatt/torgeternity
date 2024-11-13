@@ -358,6 +358,7 @@
       "damageType": "Damage Type",
       "description": "Description",
       "gunner": "Gunner",
+      "implantType": "Implant Type",
       "maxDex": "Max Dex",
       "minStrength": "Min Str",
       "mr": "Maneuver",

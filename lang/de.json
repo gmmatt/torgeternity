@@ -358,6 +358,7 @@
       "damageType": "Schadensart",
       "description": "Beschreibung",
       "gunner": "Schütze",
+      "implantType": "Implantattyp",
       "maxDex": "Max Ges",
       "minStrength": "Min Stä",
       "mr": "MF",

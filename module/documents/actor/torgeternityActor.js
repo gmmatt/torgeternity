@@ -247,12 +247,12 @@ export default class TorgeternityActor extends Actor {
 
   async _preUpdate(changed, options, user) {
     const isFullReplace = !((options.diff ?? true) && (options.recursive ?? true));
-    if (!changed.system || isFullReplace) {
+    if (!changed.system || isFullReplace || this.type !== 'stormknight') {
       return super._preUpdate(changed, options, user);
     }
 
     // Apply attribute maximums
-    for (const [attribute, { maximum }] of Object.entries(this.system.attributes)) {
+    for (const [attribute, { maximum }] of Object.entries(this?.system?.attributes)) {
       const changedAttribute = changed.system.attributes?.[attribute];
       if (typeof changedAttribute?.base === 'number') {
         const clampedAttribute = Math.clamp(changedAttribute.base, 0, maximum);

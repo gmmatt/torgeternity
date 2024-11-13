@@ -7,6 +7,15 @@
 - A new macro that deals damage to targeted tokens [472](https://github.com/gmmatt/torgeternity/issues/472)
 - A whole new way to create new Storm Knights! Experience the character creation mode, enter game mode and alter your character with XP Tracking [#37](https://github.com/gmmatt/torgeternity/issues/37)
 
+## v.12.3.3
+
+- Fixing a bug that fetched attribute maximum for all actor types, though it may take only these for storm knights.
+- Fixed the assignment of newly made vehicle avatar & token
+
+## v.12.3.2
+
+- Fixing some standard item-icons related things [#483](https://github.com/gmmatt/torgeternity/issues/483)
+
 ## v.12.3.1
 
 - Fixing a bug that didn't order the cards inside a deck (just on the interface (app), not the cards themself).
