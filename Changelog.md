@@ -6,6 +6,10 @@
 - custom attacks are now possible on threats [471](https://github.com/gmmatt/torgeternity/issues/471)
 - A new macro that deals damage to targeted tokens [472](https://github.com/gmmatt/torgeternity/issues/472)
 
+## v.12.3.2
+
+- Fixing some standard item-icons related things [#483](https://github.com/gmmatt/torgeternity/issues/483)
+
 ## v.12.3.1
 
 - Fixing a bug that didn't order the cards inside a deck (just on the interface (app), not the cards themself).

@@ -53,9 +53,6 @@ export default class TorgeternityItem extends Item {
   }
 
   static DEFAULT_ICONS = {
-    // genemod:'genemod-icon.webp',
-    // occultech: 'implant.webp',
-    // cyberware: 'cyberware-icon.webp',
     ammunition: 'ammo-icon.webp',
     gear: 'gear-icon.webp',
     eternityshard: 'eternityshard.webp',
@@ -64,17 +61,20 @@ export default class TorgeternityItem extends Item {
     meleeweapon: 'axe-icon.webp',
     missileweapon: 'missile-weapon-icon.webp',
     firearm: 'firearm-icon.webp',
-    implant: 'implant.webp',
+    implant: 'cyberware-icon.webp',
     heavyweapon: 'explosion-icon.webp',
-    vehicle: 'vehicle.webp',
+    vehicle: 'vehicle-icon.webp',
+    vehicleAddOn: 'vehicle-addon-icon.webp',
     perk: 'reality-icon.webp',
     enhancement: 'enhancement.webp',
     specialability: 'torgeternity-icon.webp',
-    'specialability-rollable': 'specialability-rollable.webp',
+    'specialability-rollable': 'bite-icon.webp',
     spell: 'spell-icon.webp',
     miracle: 'miracles-icon.webp',
     psionicpower: 'psionicpower.webp',
     race: 'race-icon.webp',
+    customSkill: 'custom-skills.webp',
+    customAttack: 'melee-weapon-icon.webp',
   };
 
   /**
@@ -156,6 +156,13 @@ export default class TorgeternityItem extends Item {
         game.i18n.format('torgeternity.notifications.ammoValueExceedsMax', { a: this.name })
       );
     }
+  }
+
+  async _onUpdate(changed, options, userId) {
+    await super._onUpdate(changed, options, userId);
+    
+    if (changed?.system && this.type === 'implant' && Object.keys(changed?.system)[0] === 'implantType' && this.img.includes('systems/torgeternity/images/icons/'))
+      await this.update({img: `systems/torgeternity/images/icons/${this.system.implantType}-icon.webp`});
   }
 
   /**
