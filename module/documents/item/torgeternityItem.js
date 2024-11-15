@@ -160,9 +160,16 @@ export default class TorgeternityItem extends Item {
 
   async _onUpdate(changed, options, userId) {
     await super._onUpdate(changed, options, userId);
-    
-    if (changed?.system && this.type === 'implant' && Object.keys(changed?.system)[0] === 'implantType' && this.img.includes('systems/torgeternity/images/icons/'))
-      await this.update({img: `systems/torgeternity/images/icons/${this.system.implantType}-icon.webp`});
+
+    if (
+      changed?.system &&
+      this.type === 'implant' &&
+      Object.keys(changed?.system)[0] === 'implantType' &&
+      this.img.includes('systems/torgeternity/images/icons/')
+    )
+      await this.update({
+        img: `systems/torgeternity/images/icons/${this.system.implantType}-icon.webp`,
+      });
   }
 
   /**

@@ -4207,10 +4207,6 @@ form.actor-sheet.threat .tab[data-tab].active .editor {
   font-size:14px;
 }
 
-.item-sheet ol.race.perks-list > .item.block  > .item-detail > .item-dropdown-description .item-dropdown-extras{
-
-}
-
 .enhancement-check {
   flex: 10%;
   color: black;
