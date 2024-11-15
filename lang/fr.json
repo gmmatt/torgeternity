@@ -880,7 +880,13 @@
       "backlash2Tooltip": "Applique 1 choc",
       "backlash3Tooltip": "Applique Très Déstabilisé",
       "additionalDamage": "Dommages Additionels",
-      "bonusDice": "BDs lancés par avance"
+      "bonusDice": "BDs lancés par avance",
+      "characterCreation": {
+        "chooseCosm": "Choose a cosm of your herritage:",
+        "chooseRace": "Drop a race item or...",
+        "Human": "Make this character a human",
+        "chosenRace": "You have chosen the following race:"
+      }
     },
     "sizes": {
       "large": "grande",

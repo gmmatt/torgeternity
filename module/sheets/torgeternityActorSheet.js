@@ -5,6 +5,7 @@ import TorgeternityItem from '../documents/item/torgeternityItem.js';
 import { reloadAmmo } from './torgeternityItemSheet.js';
 import { PossibilityByCosm } from '../possibilityByCosm.js';
 import { ChatMessageTorg } from '../documents/chat/document.js';
+import { RaceItemData } from '../data/item/race.js';
 
 /**
  *
@@ -482,6 +483,17 @@ export default class TorgeternityActorSheet extends ActorSheet {
     if (this.actor.type == 'threat') {
       html.find('.skill-element-edit .inputsFav').change(this.setThreatAdds.bind(this));
     }
+
+    // from here on, handlers for the character creation sheet!
+    html.find('.createHumanRace').click(async (ev) => {
+      const humanRace = new TorgeternityItem({
+        type: 'race',
+        name: game.i18n.localize('torgeternity.perkTypes.human'),
+        attributeMaximum: { charisma: 13, dexterity: 13, mind: 13, spirit: 13, strength: 13 },
+        img: 'systems/torgeternity/images/icons/human-icon.webp',
+      });
+      await this.actor.createEmbeddedDocuments('Item', [humanRace]);
+    });
   }
 
   /** @inheritdoc */

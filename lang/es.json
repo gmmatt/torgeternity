@@ -879,7 +879,13 @@
       "backlash2Tooltip": "Aplica 1 shock",
       "backlash3Tooltip": "Aplica Muy Impedido",
       "additionalDamage": "Daños adicionales preestablecidos",
-      "bonusDice": "Tirada de dados de bonificación por adelantado"
+      "bonusDice": "Tirada de dados de bonificación por adelantado",
+      "characterCreation": {
+        "chooseCosm": "Choose a cosm of your herritage:",
+        "chooseRace": "Drop a race item or...",
+        "Human": "Make this character a human",
+        "chosenRace": "You have chosen the following race:"
+      }
     },
     "sizes": {
       "large": "Grande",

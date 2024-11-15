@@ -881,7 +881,13 @@
       "backlash2Tooltip": "Apply 1 shock",
       "backlash3Tooltip": "Apply Very Stymied",
       "additionalDamage": "Additional damage preset",
-      "bonusDice": "Rolled Bonus-Dice in advance"
+      "bonusDice": "Rolled Bonus-Dice in advance",
+      "characterCreation": {
+        "chooseCosm": "Choose a cosm of your herritage:",
+        "chooseRace": "Drop a race item or...",
+        "Human": "Make this character a human",
+        "chosenRace": "You have chosen the following race:"
+      }
     },
     "sizes": {
       "large": "Large",

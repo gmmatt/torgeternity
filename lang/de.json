@@ -881,7 +881,13 @@
       "backlash2Tooltip": "1 Schock anwenden",
       "backlash3Tooltip": "Sehr Angeschlagen anwenden",
       "additionalDamage": "+ Schaden",
-      "bonusDice": "BW im Voraus würfeln"
+      "bonusDice": "BW im Voraus würfeln",
+      "characterCreation": {
+        "chooseCosm": "Wählen Sie einen Cosm deiner Herkunft:",
+        "chooseRace": "Droppe ein Volksitem oder...",
+        "Human": "Mach diesen Charakter zu einem Menschen",
+        "chosenRace": "Du hast folgendes Volk gewählt:"
+      }
     },
     "sizes": {
       "large": "Groß",
