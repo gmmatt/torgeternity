@@ -1,4 +1,5 @@
 import { GeneralItemData } from './general.js';
+import { torgeternity } from '../../config.js';
 
 const fields = foundry.data.fields;
 /**
@@ -16,6 +17,11 @@ export class VehicleItemData extends GeneralItemData {
       topspeed: new fields.StringField({ initial: '' }),
       tough: new fields.StringField({ initial: '' }),
       wounds: new fields.NumberField({ initial: 3, integer: true }),
+      magnitude: new fields.StringField({
+        initial: 'ones',
+        choices: Object.keys(torgeternity.magnitudes),
+        required: true,
+      }),
     };
   }
 

@@ -943,19 +943,19 @@ Hooks.on('changeSidebarTab', (tabDirectory) => {
 Hooks.on('renderActorSheet', (app, html, data) => {
   // alphabetical sorting
   alphabSort(html, data);
-  if (data.actor.type !== 'stormknight') {
-    const windowContent = html.find('.window-content')[0] ?? html[0].parentElement;
+  // Change backgroundimage depending on actor.type and actor cosm
+  const windowContent = html.find('.window-content')[0] ?? html[0].parentElement;
+  if (
+    data.actor.type !== 'stormknight' ||
+    data.actor.system.other.cosm === 'none' ||
+    data.actor.system.other.cosm === 'other'
+  ) {
     windowContent.style.backgroundImage = 'url("systems/torgeternity/images/bg-sheet.webp")';
     windowContent.style.backgroundRepeat = 'unset';
-    return;
   } else {
-    const windowContent = html.find('.window-content')[0] ?? html[0].parentElement;
     windowContent.style.borderStyle = 'solid';
     windowContent.style.borderWidth = '10px';
-    windowContent.style.borderImage =
-      data.actor.system.other.cosm !== 'none' && data.actor.system.other.cosm !== 'other'
-        ? `url("systems/torgeternity/images/cosmBackgrounds/${data.actor.system.other.cosm}.webp") 26% 38% 28% 39% fill / auto / 0px stretch`
-        : 'url("systems/torgeternity/images/bg-sheet.webp")';
+    windowContent.style.borderImage = `url("systems/torgeternity/images/cosmBackgrounds/${data.actor.system.other.cosm}.webp") 26% 38% 28% 39% fill / auto / 0px stretch`;
   }
 });
 

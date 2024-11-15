@@ -3617,7 +3617,22 @@ form.actor-sheet.threat .tab[data-tab].active .editor {
   margin:unset;
 }
 
-.item .window-content form.item-sheet .asside > input[type="number"].price {
+.item .window-content form.item-sheet .asside > span.priceWithValue {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 0.25em;
+  margin-bottom: 1em;
+  height: 2em;
+}
+
+.item .window-content form.item-sheet .asside > span.priceWithValue > .input-box {
+  height: var(--form-field-height);
+}
+
+.item .window-content form.item-sheet .asside > input[type="number"].price,
+.item .window-content form.item-sheet .asside > span > input[type="number"].price {
   width: calc(100% - 2px);
   min-width: 80px;
   background-color: rgba(255,255,255,0.39);

@@ -1,4 +1,5 @@
 import { GeneralItemData } from './general.js';
+import { torgeternity } from '../../config.js';
 
 const fields = foundry.data.fields;
 /**
@@ -12,7 +13,14 @@ export class ImplantItemData extends GeneralItemData {
     return {
       ...super.defineSchema(),
       notes: new fields.StringField({ initial: '' }),
-      implantType: new fields.StringField({ initial: game.i18n.localize('torgeternity.perkTypes.cyberware') })
+      implantType: new fields.StringField({
+        initial: game.i18n.localize('torgeternity.perkTypes.cyberware'),
+      }),
+      magnitude: new fields.StringField({
+        initial: 'ones',
+        choices: Object.keys(torgeternity.magnitudes),
+        required: true,
+      }),
     };
   }
 
