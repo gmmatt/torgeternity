@@ -377,7 +377,7 @@ torgeternity.implantTypes = {
   cyberware: 'torgeternity.perkTypes.cyberware',
   occultech: 'torgeternity.perkTypes.occultech',
   geneMod: 'torgeternity.perkTypes.biotech',
-}
+};
 
 torgeternity.statusEffects = [
   {
