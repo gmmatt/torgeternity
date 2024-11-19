@@ -881,6 +881,7 @@
       "additionalDamage": "Daños adicionales preestablecidos",
       "bonusDice": "Tirada de dados de bonificación por adelantado",
       "characterCreation": {
+        "chooseName": "What's your name?",
         "chooseCosm": "Choose a cosm of your herritage:",
         "chooseRace": "Drop a race item or...",
         "Human": "Make this character a human",

@@ -883,6 +883,7 @@
       "additionalDamage": "+ Schaden",
       "bonusDice": "BW im Voraus würfeln",
       "characterCreation": {
+        "chooseName": "Wie lautet dein Name?",
         "chooseCosm": "Wählen Sie einen Cosm deiner Herkunft:",
         "chooseRace": "Droppe ein Volksitem oder...",
         "Human": "Mach diesen Charakter zu einem Menschen",

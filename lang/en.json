@@ -883,6 +883,7 @@
       "additionalDamage": "Additional damage preset",
       "bonusDice": "Rolled Bonus-Dice in advance",
       "characterCreation": {
+        "chooseName": "What's your name?",
         "chooseCosm": "Choose a cosm of your herritage:",
         "chooseRace": "Drop a race item or...",
         "Human": "Make this character a human",

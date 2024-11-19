@@ -3565,7 +3565,8 @@ form.actor-sheet.threat .tab[data-tab].active .editor {
   color: black;
 }
 
-.item .window-content form.item-sheet .raceAttributes + hr {
+.item .window-content form.item-sheet .raceAttributes + hr,
+.actor-sheet.characterCreation > hr {
   background-image: url(../images/separator.webp);
   /* background-position-y: -8px; */
   background-repeat: no-repeat;
