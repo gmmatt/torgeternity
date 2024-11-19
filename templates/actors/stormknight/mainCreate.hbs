@@ -200,6 +200,87 @@
     <!--#region Skills-->
     <div class="skills">
         <h2>{{localize "torgeternity.sheetLabels.skills"}}</h2>
+        
+        {{#*inline "skillRow" content name attrTypes}}
+            <li>
+                <span>
+                    {{localize (concat 'torgeternity.skills.' name)}}
+                </span>
+                <span class="skill-line skillAttr">
+                    {{localize (concat 'torgeternity.attributes.' content.baseAttribute)}}
+                </span>
+                <span class="skillAdd">
+                    <input
+                        name="system.skills.{{name}}.adds"
+                        type="number"
+                        value="{{content.adds}}"
+                        data-dtype="Number"
+                    />
+                </span>
+                <input class="skill-line" disabled type="number" placeholder="-" value="{{content.value}}"/>
+                <span>
+                <a class="toggleFav {{#if content.isFav}}checked{{/if}}">
+                    <i class="far fa-star"></i>
+                </a>
+                <input
+                    class="favCheck"
+                    type="checkbox"
+                    name="system.skills.{{name}}.isFav"
+                    {{checked
+                    content.isFav}}
+                    data-dtype="Boolean"                    
+                />
+                </span>
+            </li>
+        {{/inline}} 
+        <!-- Combat skills -->
+  <ul class="skill-list">
+    <li class="dark">
+      <span>{{localize "torgeternity.sheetLabels.combatSkills"}}</span>
+      <span class="skillAttr">{{localize "torgeternity.sheetLabels.attribute"}}</span>
+      <span class="skillAdd">{{localize "torgeternity.sheetLabels.adds"}}</span>
+      <span>{{localize "torgeternity.sheetLabels.total"}}</span>
+      <span>{{localize "torgeternity.sheetLabels.favored"}}</span>
+    </li>
+    {{#each actor.system.skills as |content name|}} 
+      {{#if (eq content.groupName "combat")}}
+          {{> skillRow content=content name=name attrTypes=../config.attributeTypes}} 
+      {{/if}} 
+    {{/each}}
+  </ul>
+  <ul class="skill-list">
+    <!-- Interaction skills -->
+    <li class="dark">
+      <span>{{localize "torgeternity.sheetLabels.interactionSkills"}}</span>
+      <span class="skillAttr">{{localize "torgeternity.sheetLabels.attribute"}}</span>
+      <span class="skillAdd">{{localize "torgeternity.sheetLabels.adds"}}</span>
+      <span>{{localize "torgeternity.sheetLabels.total"}}</span>
+      <span>{{localize "torgeternity.sheetLabels.favored"}}</span>
+    </li>
+    {{#each actor.system.skills as |content name|}} 
+      {{#if (eq content.groupName "interaction")}} 
+          {{> skillRow content=content name=name attrTypes=../config.attributeTypes}} 
+      {{/if}} 
+    {{/each}}
+  </ul>
+  <ul class="skill-list">
+    <!-- Other skills (and custom skills) -->
+    <li class="dark">
+      <span>{{localize "torgeternity.sheetLabels.otherSkills"}}</span>
+      <span class="skillAttr">{{localize "torgeternity.sheetLabels.attribute"}}</span>
+      <span class="skillAdd">{{localize "torgeternity.sheetLabels.adds"}}</span>
+      <span>{{localize "torgeternity.sheetLabels.total"}}</span>
+      <span>{{localize "torgeternity.sheetLabels.favored"}}</span>
+    </li>
+    {{#each actor.system.skills as |content name|}} 
+      {{#if (eq content.groupName "other")}} 
+          {{> skillRow content=content name=name attrTypes=../config.attributeTypes}} 
+      {{/if}} 
+    {{/each}} 
     </div>
+    <!--#endregion-->
+    <hr>
+    <!--#region Perks-->
+    
     <!--#endregion-->
 </form>
