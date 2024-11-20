@@ -503,7 +503,7 @@ export default class TorgeternityActorSheet extends ActorSheet {
     }
     const data = TextEditor.getDragEventData(event);
     const dropedObject = await fromUuid(data.uuid);
-    if (dropedObject instanceof TorgeternityItem && dropedObject.system?.category === 'race') {
+    if (dropedObject instanceof TorgeternityItem && dropedObject.type === 'race') {
       const raceItem = this.actor.items.find((i) => i.type === 'race');
       if (raceItem) {
         await this.actor.deleteEmbeddedDocuments('Item', [
