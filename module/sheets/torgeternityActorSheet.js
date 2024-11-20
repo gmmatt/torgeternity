@@ -546,7 +546,7 @@ export default class TorgeternityActorSheet extends ActorSheet {
       if (dropedObject.system.darkvision)
         await this.actor.update({ 'prototypeToken.sight.visionMode': 'darkvision' });
     }
-    super._onDrop(event);
+    await super._onDrop(event);
   }
 
   /**
