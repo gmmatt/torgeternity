@@ -1,5 +1,9 @@
 # TORG Eternity Changelog
 
+## v.12.3.5
+
+- More bugfixing
+
 ## v.12.3.4
 
 - Fixing a bug that prevented dropping perks on actors
