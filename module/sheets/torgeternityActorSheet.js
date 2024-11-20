@@ -5,7 +5,6 @@ import TorgeternityItem from '../documents/item/torgeternityItem.js';
 import { reloadAmmo } from './torgeternityItemSheet.js';
 import { PossibilityByCosm } from '../possibilityByCosm.js';
 import { ChatMessageTorg } from '../documents/chat/document.js';
-import { RaceItemData } from '../data/item/race.js';
 
 /**
  *
