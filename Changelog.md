@@ -7,6 +7,10 @@
 - A new macro that deals damage to targeted tokens [472](https://github.com/gmmatt/torgeternity/issues/472)
 - A whole new way to create new Storm Knights! Experience the character creation mode, enter game mode and alter your character with XP Tracking [#37](https://github.com/gmmatt/torgeternity/issues/37)
 
+## v.12.3.5
+
+- More bugfixing
+
 ## v.12.3.4
 
 - Fixing a bug that prevented dropping perks on actors
