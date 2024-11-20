@@ -1,5 +1,9 @@
 # TORG Eternity Changelog
 
+## v.12.3.4
+
+- Fixing a bug that prevented dropping perks on actors
+
 ## v.12.3.3
 
 - Fixing a bug that fetched attribute maximum for all actor types, though it may take only these for storm knights.
