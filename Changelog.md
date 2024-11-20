@@ -1,5 +1,9 @@
 # TORG Eternity Changelog
 
+## v.12.3.6
+
+- Bugfixing
+
 ## v.12.3.5
 
 - More bugfixing
