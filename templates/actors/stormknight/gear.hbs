@@ -225,7 +225,7 @@
 	{{/each}}
 </ol>
 {{/if}}
-{{#if ammunitions}}
+{{#if (and ammunitions (not ignoreAmmo))}}
 <h2>{{localize "torgeternity.sheetLabels.ammunition"}}</h2>
 <ol class="item-list">
 	{{#each ammunitions as |item id|}}

@@ -204,6 +204,8 @@ export default class TorgeternityActorSheet extends ActorSheet {
       ? true
       : false;
 
+    data.ignoreAmmo = game.settings.get('torgeternity', 'ignoreAmmo');
+
     return data;
   }
 
@@ -1077,7 +1079,7 @@ export default class TorgeternityActorSheet extends ActorSheet {
     let skillValue;
     let skillData;
 
-    if (item?.weaponWithAmmo && !item.hasAmmo) {
+    if (item?.weaponWithAmmo && !item.hasAmmo && !game.settings.get('torgeternity', 'ignoreAmmo')) {
       ui.notifications.warn(game.i18n.localize('torgeternity.chatText.noAmmo'));
       return;
     }

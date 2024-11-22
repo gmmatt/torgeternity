@@ -651,6 +651,10 @@
       "shuffleMessageSurpress": {
         "hint": "Wenn diese Option aktiviert ist, wird die Chat-Nachricht beim Mischen der Karten unterdrückt.",
         "name": "Chatnachrichten beim Mischen unterdrücken"
+      },
+      "ignoreAmmo": {
+        "hint": "Wenn diese Option aktiviert ist, werden sämtliche Mechanismen und Regeln für Munition igorniert.",
+        "name": "Ignoriere Munitionsmechanismen"
       }
     },
     "sheetLabels": {

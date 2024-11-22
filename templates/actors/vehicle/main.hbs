@@ -243,9 +243,11 @@
             <a class="item-control item-edit" data-tooltip="{{localize 'torgeternity.iconeTitles.edit'}}">
               <i class="fas fa-edit"></i>
             </a>
+            {{#if (not ../ignoreAmmo)}}
             <a class="item-control" data-weapon="{{item}}" data-tooltip="{{localize "torgeternity.iconeTitles.reload"}}">
               <i class="fa-solid fa-bullseye reload-weapon"></i>
             </a>
+            {{/if}}
             <a
               class="item-control item-delete"
               data-tooltip="{{localize 'torgeternity.iconeTitles.delete'}}"

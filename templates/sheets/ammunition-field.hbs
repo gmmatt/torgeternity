@@ -1,4 +1,4 @@
-{{#if ammunition.length}}
+{{#if (and ammunition.length (not ../ignoreAmmo))}}
 <fieldset class="ammofield">
     <legend>{{localize "torgeternity.gear.ammunition"}}</legend>
     <ul>
