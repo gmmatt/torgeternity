@@ -202,10 +202,20 @@ export function registerTorgSettings() {
 
   game.settings.register('torgeternity', 'shuffleMessageSurpress', {
     name: 'torgeternity.settingMenu.shuffleMessageSurpress.name',
-    hint: 'torgeternity.settingMenu.shuffleMessageSurpress.name',
+    hint: 'torgeternity.settingMenu.shuffleMessageSurpress.hint',
     scope: 'world',
     config: true,
     type: Boolean,
     default: false,
+  });
+
+  game.settings.register('torgeternity', 'ignoreAmmo', {
+    name: 'torgeternity.settingMenu.ignoreAmmo.name',
+    hint: 'torgeternity.settingMenu.ignoreAmmo.hint',
+    scope: 'world',
+    config: true,
+    type: Boolean,
+    default: false,
+    requiresReload: true,
   });
 }

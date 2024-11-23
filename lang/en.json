@@ -651,6 +651,10 @@
       "shuffleMessageSurpress": {
         "hint": "If checked, the Chat Message on shuffling cards will be surpressed.",
         "name": "Supress Chatmessage on shuffle"
+      },
+      "ignoreAmmo": {
+        "hint": "If checked, rules and mechanics for reloading Ammo are totally ignored.",
+        "name": "Ignore ammo mechanics"
       }
     },
     "sheetLabels": {

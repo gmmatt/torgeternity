@@ -3,9 +3,13 @@
 ## v.12.4.0
 
 - Now option to surpress chat notifications on card shuffle.
+- Miracles now have the skill "Faith" selected on creation.
 - custom attacks are now possible on threats [471](https://github.com/gmmatt/torgeternity/issues/471)
 - A new macro that deals damage to targeted tokens [472](https://github.com/gmmatt/torgeternity/issues/472)
 - A whole new way to create new Storm Knights! Experience the character creation mode, enter game mode and alter your character with XP Tracking [#37](https://github.com/gmmatt/torgeternity/issues/37)
+- Giving an option to ignore ammo mechanics [#490](https://github.com/gmmatt/torgeternity/issues/490)
+- Implants now do have a secondary axiom as well [#487](https://github.com/gmmatt/torgeternity/issues/487)
+- Item price-values are now completely automatically calculated [#486](https://github.com/gmmatt/torgeternity/issues/486)
 
 ## v.12.3.6
 

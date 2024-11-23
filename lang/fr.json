@@ -651,6 +651,10 @@
       "shuffleMessageSurpress": {
         "hint": "Si coché, le message indiquant le mélange d'un deck ne sera pas affiché dans le chat.",
         "name": "Supprimmer le message lors d'un mélange de cartes"
+      },
+      "ignoreAmmo": {
+        "hint": "If checked, rules and mechanics for reloading Ammo are totally ignored.",
+        "name": "Ignore ammo mechanics"
       }
     },
     "sheetLabels": {

@@ -268,6 +268,8 @@ export default class TorgeternityItemSheet extends ItemSheet {
         ? false
         : true;
 
+    data.ignoreAmmo = game.settings.get('torgeternity', 'ignoreAmmo');
+
     return data;
   }
 }

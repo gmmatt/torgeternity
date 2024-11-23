@@ -32,8 +32,8 @@ export async function renderSkillChat(test) {
     }
   }
 
-  // Handle ammo. First, check if there is enough ammo, then reduce it.
-  if (test.item?.weaponWithAmmo) {
+  // Handle ammo, if not opt-out. First, check if there is enough ammo, then reduce it.
+  if (test.item?.weaponWithAmmo && !game.settings.get('torgeternity', 'ignoreAmmo')) {
     await test?.item.reduceAmmo(test.burstModifier, test.targetAll.length);
     test.ammoLabel = 'display:table-row';
   } else {
