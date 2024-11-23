@@ -129,6 +129,8 @@ export default class TorgeternityItem extends Item {
     if (this.type === 'perk' || this.type === 'customAttack') {
       await this.update({ 'system.transferenceID': this.id }); // necessary for saving perks or custom attack data in race items
     }
+
+    if (this.type === 'miracle') await this.update({ 'system.skill': 'faith' });
   }
 
   /**
@@ -160,9 +162,16 @@ export default class TorgeternityItem extends Item {
 
   async _onUpdate(changed, options, userId) {
     await super._onUpdate(changed, options, userId);
-    
-    if (changed?.system && this.type === 'implant' && Object.keys(changed?.system)[0] === 'implantType' && this.img.includes('systems/torgeternity/images/icons/'))
-      await this.update({img: `systems/torgeternity/images/icons/${this.system.implantType}-icon.webp`});
+
+    if (
+      changed?.system &&
+      this.type === 'implant' &&
+      Object.keys(changed?.system)[0] === 'implantType' &&
+      this.img.includes('systems/torgeternity/images/icons/')
+    )
+      await this.update({
+        img: `systems/torgeternity/images/icons/${this.system.implantType}-icon.webp`,
+      });
   }
 
   /**
